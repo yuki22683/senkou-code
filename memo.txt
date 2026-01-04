@@ -1,0 +1,5 @@
+Invoke-RestMethod -Method Post -Uri "http://100.94.143.7:2358/submissions?base64_encoded=false&wait=true" -ContentType
+application/json" -Body '{
+    "source_code": "puts \"Hello World\"",
+    "language_id": 41
+}'

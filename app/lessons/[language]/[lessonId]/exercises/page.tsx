@@ -1,0 +1,161 @@
+import { createClient } from "@/lib/supabase/server";
+import { ExerciseCard } from "@/components/exercises/ExerciseCard";
+import { getLanguageById } from "@/data/languages";
+import { redirect } from "next/navigation";
+import Link from "next/link";
+import { ArrowLeft, BookOpen } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+interface PageProps {
+  params: Promise<{
+    language: string;
+    lessonId: string;
+  }>;
+}
+
+export default async function ExercisesPage({ params }: PageProps) {
+  const { language, lessonId } = await params;
+  const languageInfo = getLanguageById(language);
+
+  if (!languageInfo) {
+    redirect('/');
+  }
+
+  const supabase = await createClient();
+
+  // レッスン情報を取得
+  const { data: lesson, error: lessonError } = await supabase
+    .from('lessons')
+    .select('*')
+    .eq('id', lessonId)
+    .eq('language', language)
+    .single();
+
+  if (lessonError || !lesson) {
+    redirect(`/lessons/${language}`);
+  }
+
+  // 演習一覧を取得
+  const { data: exercises, error: exercisesError } = await supabase
+    .from('exercises')
+    .select('*')
+    .eq('lesson_id', lessonId)
+    .order('order_index', { ascending: true });
+
+  if (exercisesError) {
+    console.error('Error fetching exercises:', exercisesError);
+  }
+
+  // ユーザーの進捗を取得
+  const { data: { user } } = await supabase.auth.getUser();
+  let progressMap: Record<string, any> = {};
+
+  if (user && exercises) {
+    const { data: progressData } = await supabase
+      .from('user_progress')
+      .select('*')
+      .eq('user_id', user.id)
+      .in('exercise_id', exercises.map(e => e.id));
+
+    if (progressData) {
+      progressMap = Object.fromEntries(
+        progressData.map(p => [p.exercise_id, p])
+      );
+    }
+  }
+
+  // 進捗統計
+  const totalExercises = exercises?.length || 0;
+  const completedCount = Object.values(progressMap).filter(
+    (p: any) => p.status === 'completed'
+  ).length;
+  const progressPercent = totalExercises > 0
+    ? Math.round((completedCount / totalExercises) * 100)
+    : 0;
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <div className="max-w-5xl mx-auto">
+        <div className="mb-8">
+          <Button variant="ghost" asChild className="mb-4">
+            <Link href={`/lessons/${language}`}>
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              レッスン一覧に戻る
+            </Link>
+          </Button>
+
+          <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-6 mb-6">
+            <div className="flex items-start space-x-4">
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white">
+                <BookOpen className="w-6 h-6" />
+              </div>
+              <div className="flex-1">
+                <h1 className="text-3xl font-bold mb-2">{lesson.title}</h1>
+                {lesson.description && (
+                  <p className="text-muted-foreground mb-4">{lesson.description}</p>
+                )}
+
+                <div className="flex items-center space-x-6">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-sm text-muted-foreground">言語:</span>
+                    <span className="font-medium">{languageInfo.name}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-sm text-muted-foreground">難易度:</span>
+                    <span className="font-medium">
+                      {lesson.difficulty === 'easy' && '初級'}
+                      {lesson.difficulty === 'medium' && '中級'}
+                      {lesson.difficulty === 'hard' && '上級'}
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-sm text-muted-foreground">演習数:</span>
+                    <span className="font-medium">{totalExercises}</span>
+                  </div>
+                </div>
+
+                {user && totalExercises > 0 && (
+                  <div className="mt-4">
+                    <div className="flex items-center justify-between text-sm mb-2">
+                      <span className="text-muted-foreground">あなたの進捗</span>
+                      <span className="font-medium">
+                        {completedCount} / {totalExercises} 完了 ({progressPercent}%)
+                      </span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div
+                        className="bg-green-500 h-2 rounded-full transition-all"
+                        style={{ width: `${progressPercent}%` }}
+                      />
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {!exercises || exercises.length === 0 ? (
+          <div className="text-center py-12">
+            <p className="text-muted-foreground text-lg">
+              このレッスンの演習は準備中です
+            </p>
+          </div>
+        ) : (
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold mb-4">演習一覧</h2>
+            {exercises.map((exercise) => (
+              <ExerciseCard
+                key={exercise.id}
+                exercise={exercise}
+                language={language}
+                lessonId={lessonId}
+                progress={progressMap[exercise.id]}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
