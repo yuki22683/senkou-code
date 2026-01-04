@@ -244,7 +244,7 @@ export default function ExercisePage() {
                 </div>
 
                 <Button
-                  onClick={handleRunCode}
+                  onClick={() => handleRunCode()}
                   disabled={isRunning}
                   className="bg-green-600 hover:bg-green-700 text-white"
                   size="sm"
