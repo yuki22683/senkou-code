@@ -21,7 +21,7 @@ export const javaData = {
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // 出力\n        System.out.println(\"Hello, Java!\");\n    }\n}",
       "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // 出力\n        System.out.println(\"___\");\n    }\n}",
       "correctLines": ["public class Main {", "    public static void main(String[] args) {", "        // 出力", "        System.out.println(\"Hello, Java!\");", "    }", "}"],
-      "lineHints": [null, null, null, "System.out.println を使用します。"],
+      "lineHints": ["クラス定義です。", "エントリーポイントとなるmainメソッドです。", null, "System.out.println を使用して表示します。", "メソッドの閉じ括弧です。", "クラスの閉じ括弧です。"],
       "candidates": { "functions": ["System.out.println"], "strings": ["Hello, Java!"] },
       "testCases": [{ "input": "", "expected_output": "Hello, Java!\n" }]
     },
@@ -40,7 +40,7 @@ export const javaData = {
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // String変数を定義\n        String name = \"Java\";\n        System.out.println(name);\n    }\n}",
       "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // String変数を定義\n        String name = \"___\";\n        System.out.println(___);\n    }\n}",
       "correctLines": ["public class Main {", "    public static void main(String[] args) {", "        // String変数を定義", "        String name = \"Java\";", "        System.out.println(name);", "    }", "}"],
-      "lineHints": [null, null, null, "String name = \"Java\"; とします。", "変数名 name を出力します。"],
+      "lineHints": ["クラス定義です。", "mainメソッドです。", null, "String name = \"Java\"; と代入します。", "変数名 name を出力します。", "メソッド終了", "クラス終了"],
       "candidates": { "variables": ["name"], "functions": ["System.out.println"], "strings": ["Java"] },
       "testCases": [{ "input": "", "expected_output": "Java\n" }]
     },
@@ -59,7 +59,7 @@ export const javaData = {
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        int x = 10;\n        int y = 5;\n        System.out.println(x + y);\n    }\n}",
       "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        int x = ___ ;\n        int y = ___ ;\n        System.out.println(x ___ y);\n    }\n}",
       "correctLines": ["public class Main {", "    public static void main(String[] args) {", "        int x = 10;", "        int y = 5;", "        System.out.println(x + y);", "    }", "}"],
-      "lineHints": [null, null, "10を代入します。", "5を代入します。", "足し算には + を使います。"],
+      "lineHints": [null, null, "10を代入します。", "5を代入します。", "足し算には + を使います。", null, null],
       "candidates": { "variables": ["x", "y"], "operators": ["+"], "numbers": ["10", "5"] },
       "testCases": [{ "input": "", "expected_output": "15\n" }]
     },
@@ -78,7 +78,7 @@ export const javaData = {
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        int age = 20;\n        System.out.println(\"私は\" + age + \"歳です\");\n    }\n}",
       "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        int age = 20;\n        System.out.println(\"私は\" + ___ + \"歳です\");\n    }\n}",
       "correctLines": ["public class Main {", "    public static void main(String[] args) {", "        int age = 20;", "        System.out.println(\"私は\" + age + \"歳です\");", "    }", "}"],
-      "lineHints": [null, null, null, "+ age + のように変数を挟みます。"],
+      "lineHints": [null, null, "年齢変数を定義します。", "+ age + のように変数を挟んで結合します。", null, null],
       "candidates": { "variables": ["age"], "operators": ["+"] },
       "testCases": [{ "input": "", "expected_output": "私は20歳です\n" }]
     },
@@ -97,7 +97,7 @@ export const javaData = {
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        String[] colors = {\"red\", \"blue\"};\n        System.out.println(colors[1]);\n    }\n}",
       "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        String[] colors = {___, ___};\n        System.out.println(colors[___]);\n    }\n}",
       "correctLines": ["public class Main {", "    public static void main(String[] args) {", "        String[] colors = {\"red\", \"blue\"};", "        System.out.println(colors[1]);", "    }", "}"],
-      "lineHints": [null, null, "{\"red\", \"blue\"} と記述します。", "インデックス1を指定します。"],
+      "lineHints": [null, null, "{\"red\", \"blue\"} と記述して初期化します。", "インデックス1を指定します（0始まり）。", null, null],
       "candidates": { "variables": ["colors"], "strings": ["\"red\"", "\"blue\""], "numbers": ["1"] },
       "testCases": [{ "input": "", "expected_output": "blue\n" }]
     },
@@ -116,7 +116,7 @@ export const javaData = {
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        int score = 100;\n        if (score > 80) {\n            System.out.println(\"満点です！\");\n        }\n    }\n}",
       "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        int score = 100;\n        if (score ___ 80) {\n            System.out.println(\"___\");\n        }\n    }\n}",
       "correctLines": ["public class Main {", "    public static void main(String[] args) {", "        int score = 100;", "        if (score > 80) {", "            System.out.println(\"満点です！\");", "        }", "    }", "}"],
-      "lineHints": [null, null, null, "score > 80 と記述します。", "満点です！ を出力します。"],
+      "lineHints": [null, null, null, "score > 80 と記述します。", "満点です！ を出力します。", "ifブロック終了", null, null],
       "candidates": { "operators": [">"] , "strings": ["満点です！"] },
       "testCases": [{ "input": "", "expected_output": "満点です！\n" }]
     },
@@ -135,7 +135,7 @@ export const javaData = {
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        int age = 18;\n        if (age >= 20) {\n            System.out.println(\"大人\");\n        } else {\n            System.out.println(\"未成年\");\n        }\n    }\n}",
       "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        int age = 18;\n        if (age >= 20) {\n            System.out.println(\"大人\");\n        } ___ {\n            System.out.println(\"___\");\n        }\n    }\n}",
       "correctLines": ["public class Main {", "    public static void main(String[] args) {", "        int age = 18;", "        if (age >= 20) {", "            System.out.println(\"大人\");", "        } else {", "            System.out.println(\"未成年\");", "        }", "    }", "}"],
-      "lineHints": [null, null, null, null, null, "else を記述します。", "未成年 を出力します。"],
+      "lineHints": [null, null, "年齢を設定します。", "条件式 age >= 20 を記述します。", "大人と表示します。", "else を記述します。", "未成年 を出力します。", "elseブロック終了", null, null],
       "candidates": { "keywords": ["else"], "strings": ["未成年"] },
       "testCases": [{ "input": "", "expected_output": "未成年\n" }]
     },
@@ -154,7 +154,7 @@ export const javaData = {
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        String[] names = {\"Alice\", \"Bob\"};\n        for (String name : names) {\n            System.out.println(name);\n        }\n    }\n}",
       "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        String[] names = {\"Alice\", \"Bob\"};\n        for (String ___ : ___) {\n            System.out.println(name);\n        }\n    }\n}",
       "correctLines": ["public class Main {", "    public static void main(String[] args) {", "        String[] names = {\"Alice\", \"Bob\"};", "        for (String name : names) {", "            System.out.println(name);", "        }", "    }", "}"],
-      "lineHints": [null, null, null, "for (String name : names) と記述します。"],
+      "lineHints": [null, null, "配列を定義します。", "for (String name : names) と記述します。", "名前を出力します。", "ループ終了", null, null],
       "candidates": { "variables": ["name", "names"] },
       "testCases": [{ "input": "", "expected_output": "Alice\nBob\n" }]
     },
@@ -173,7 +173,7 @@ export const javaData = {
       "correctCode": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, String> user = new HashMap<>();\n        user.put(\"name\", \"Alice\");\n        System.out.println(user.get(\"name\"));\n    }\n}",
       "holeyCode": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, String> user = new ___<>();\n        user.___(\"name\", \"Alice\");\n        System.out.println(user.___(\"name\"));\n    }\n}",
       "correctLines": ["import java.util.HashMap;", "public class Main {", "    public static void main(String[] args) {", "        HashMap<String, String> user = new HashMap<>();", "        user.put(\"name\", \"Alice\");", "        System.out.println(user.get(\"name\"));", "    }", "}"],
-      "lineHints": [null, null, null, "new HashMap<>(); とします。", "put メソッドで追加します。", "get メソッドで取得します。"],
+      "lineHints": ["HashMapをインポートします。", null, null, "new HashMap<>(); とします。", "put メソッドで追加します。", "get メソッドで取得します。", null, null],
       "candidates": { "functions": ["put", "get"], "strings": ["HashMap"] },
       "testCases": [{ "input": "", "expected_output": "Alice\n" }]
     },
@@ -192,7 +192,7 @@ export const javaData = {
       "correctCode": "public class Main {\n    public static void greet() {\n        System.out.println(\"Good morning\");\n    }\n    public static void main(String[] args) {\n        greet();\n    }\n}",
       "holeyCode": "public class Main {\n    public static void ___() {\n        System.out.println(\"Good morning\");\n    }\n    public static void main(String[] args) {\n        ___();\n    }\n}",
       "correctLines": ["public class Main {", "    public static void greet() {", "        System.out.println(\"Good morning\");", "    }", "    public static void main(String[] args) {", "        greet();", "    }", "}"],
-      "lineHints": [null, "greet() という名前で定義します。", null, null, null, "greet(); で呼び出します。"],
+      "lineHints": [null, "greet() という名前で定義します。", "メッセージを表示します。", "メソッド終了", null, "greet(); で呼び出します。", "mainメソッド終了", "クラス終了"],
       "candidates": { "functions": ["greet"] },
       "testCases": [{ "input": "", "expected_output": "Good morning\n" }]
     }

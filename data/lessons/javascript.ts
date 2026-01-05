@@ -27,7 +27,7 @@ export const javascriptData = {
       "correctCode": "// 「Hello, JavaScript!」と出力\nconsole.log('Hello, JavaScript!');",
       "holeyCode": "// 「Hello, JavaScript!」と出力\nconsole.log('___');",
       "correctLines": ["// 「Hello, JavaScript!」と出力", "console.log('Hello, JavaScript!');"],
-      "lineHints": [null, "console.log を使い、最後はセミコロンで締めます。"],
+      "lineHints": ["コメント行です。プログラムには影響しません。", "console.log を使い、最後はセミコロンで締めます。"],
       "candidates": { "functions": ["console.log"], "strings": ["Hello, JavaScript!"] },
       "testCases": [{ "input": "", "expected_output": "Hello, JavaScript!\n" }]
     },
@@ -46,7 +46,7 @@ export const javascriptData = {
       "correctCode": "// 定数nameを定義\nconst name = 'JavaScript';\n// 出力\nconsole.log(name);",
       "holeyCode": "// 定数nameを定義\nconst name = '___';\n// 出力\nconsole.log(___);",
       "correctLines": ["// 定数nameを定義", "const name = 'JavaScript';", "// 出力", "console.log(name);"],
-      "lineHints": [null, "const name = 'JavaScript'; と代入します。", null, "console.log(name); と出力します。"],
+      "lineHints": ["コメント: 定数nameを定義します。", "const name = 'JavaScript'; と代入します。", "コメント: 変数の中身を表示します。", "console.log(name); と出力します。"],
       "candidates": { "variables": ["name"], "functions": ["console.log"], "strings": ["JavaScript"] },
       "testCases": [{ "input": "", "expected_output": "JavaScript\n" }]
     },
@@ -82,7 +82,7 @@ export const javascriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 定数ageを定義\nconst age = 20;\n// 埋め込み出力\nconsole.log(`私は${age}歳です`);",
-      "holeyCode": "// 定数ageを定義\\nconst age = ___\\n// 埋め込み出力\\nconsole.log(`私は${___}歳です`);",
+      "holeyCode": "// 定数ageを定義\nconst age = ___\n// 埋め込み出力\nconsole.log(`私は${___}歳です`);",
       "correctLines": ["// 定数ageを定義", "const age = 20;", "// 埋め込み出力", "console.log(`私は${age}歳です`);"],
       "lineHints": [null, "age = 20; とします。", null, "変数を ${ } で囲んで埋め込みます。"],
       "candidates": { "variables": ["age"], "functions": ["console.log"], "numbers": ["20"] },
@@ -130,19 +130,20 @@ export const javascriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// scoreを定義\nconst score = 100;\n// 80より大きい場合に実行\nif (score > 80) {\n    console.log('満点です！');\n}",
-      "holeyCode": "// scoreを定義\\nconst score = ___ ;\\n// 80より大きい場合に実行\\nif (score ___ 80) {\\n    console.log('___');\\n}",
+      "holeyCode": "// scoreを定義\nconst score = ___ ;\n// 80より大きい場合に実行\nif (score ___ 80) {\n    console.log('___');\n}",
       "correctLines": ["// scoreを定義", "const score = 100;", "// 80より大きい場合に実行", "if (score > 80) {", "    console.log('満点です！');", "}"],
       "lineHints": [
         null,
         "score = 100; と代入します。",
         null,
         "比較演算子 > を使います。",
-        "console.log('満点です！'); と記述します。"
+        "console.log('満点です！'); と記述します。",
+        "if文の閉じ括弧です。"
       ],
       "candidates": {
         "variables": ["score"],
         "functions": ["console.log"],
-        "operators": [">"],
+        "operators": [" >"],
         "strings": ["満点です！"],
         "numbers": ["100"]
       },
@@ -161,16 +162,17 @@ export const javascriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// ageを定義\nconst age = 18;\n// 条件分岐\nif (age >= 20) {\n    console.log('大人');\n} else {\n    console.log('未成年');\n}",
-      "holeyCode": "// ageを定義\\nconst age = ___ ;\\n// 条件分岐\\nif (age >= 20) {\\n    console.log('大人');\\n} ___ {\\n    console.log('___');\\n}",
+      "holeyCode": "// ageを定義\nconst age = ___ ;\n// 条件分岐\nif (age >= 20) {\n    console.log('大人');\n} ___ {\n    console.log('___');\n}",
       "correctLines": ["// ageを定義", "const age = 18;", "// 条件分岐", "if (age >= 20) {", "    console.log('大人');", "} else {", "    console.log('未成年');", "}"],
       "lineHints": [
         null,
         "age = 18; と代入します。",
         null,
-        null,
-        null,
+        "条件式 age >= 20 を確認します。",
+        "大人と表示します。",
         "else を記述します。",
-        "console.log('未成年'); と出力します。"
+        "console.log('未成年'); と出力します。",
+        "elseブロックの閉じ括弧です。"
       ],
       "candidates": {
         "variables": ["age"],
@@ -193,15 +195,16 @@ export const javascriptData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 配列作成\\nconst names = ['Alice', 'Bob'];\\n// ループ処理\\nfor (const name of names) {\\n    console.log(name);\\n}",
-      "holeyCode": "// 配列作成\\nconst names = ['Alice', 'Bob'];\\n// ループ処理\\nfor (const ___ of ___) {\\n    console.log(___);\\n}",
+      "correctCode": "// 配列作成\nconst names = ['Alice', 'Bob'];\n// ループ処理\nfor (const name of names) {\n    console.log(name);\n}",
+      "holeyCode": "// 配列作成\nconst names = ['Alice', 'Bob'];\n// ループ処理\nfor (const ___ of ___) {\n    console.log(___);\n}",
       "correctLines": ["// 配列作成", "const names = ['Alice', 'Bob'];", "// ループ処理", "for (const name of names) {", "    console.log(name);", "}"],
       "lineHints": [
         null,
-        null,
+        "配列を定義します。",
         null,
         "for (const name of names) { と記述します。",
-        "取り出した名前（name）を出力します。"
+        "取り出した名前（name）を出力します。",
+        "ループの閉じ括弧です。"
       ],
       "candidates": {
         "variables": ["name", "names"],
@@ -250,13 +253,13 @@ export const javascriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 関数greetを定義\nfunction greet() {\n    console.log('Good morning');\n}\n// 関数を呼び出す\ngreet();",
-      "holeyCode": "// 関数greetを定義\\nfunction ___() {\\n    console.log('___');\\n}\\n// 関数を呼び出す\\n___();",
+      "holeyCode": "// 関数greetを定義\nfunction ___() {\n    console.log('___');\n}\n// 関数を呼び出す\n___();",
       "correctLines": ["// 関数greetを定義", "function greet() {", "    console.log('Good morning');", "}", "// 関数を呼び出す", "greet();"],
       "lineHints": [
         null,
         "function greet() { と記述して関数を定義します。",
         "表示したい文字列を console.log します。",
-        null,
+        "関数の閉じ括弧です。",
         null,
         "greet(); と書いて関数を実行します。"
       ],

@@ -277,10 +277,11 @@ export function MobileCodeEditor({
     
     const correctLines = correctCode.split("\n");
     const targetLine = correctLines[cursor.line] || "";
+    const keypadItems = new Set(['=', '+', '-', '/', '*', '%', '(', ')', "'"]);
     
     if (targetLine.trim()) {
       const tokens = tokenize(targetLine);
-      const filtered = tokens.filter(t => t.trim().length > 0);
+      const filtered = tokens.filter(t => t.trim().length > 0 && !keypadItems.has(t));
       const unique = Array.from(new Set(filtered));
       const shuffled = [...unique].sort(() => Math.random() - 0.5);
       setSuggestions(shuffled);
@@ -569,7 +570,7 @@ export function MobileCodeEditor({
             }
 
             return rows.map((row, rowIdx) => (
-              <div key={rowIdx} className="flex flex-wrap gap-1 sm:gap-2 justify-center items-center">
+              <div key={rowIdx} className="flex w-full gap-1 sm:gap-2">
                 {row.map((token, idx) => (
                   <button
                     key={`${token}-${rowIdx}-${idx}`}
@@ -579,7 +580,7 @@ export function MobileCodeEditor({
                       borderColor: COLORS.buttonBorder,
                       ...getTokenStyle(token)
                     }}
-                    className="px-2 py-1.5 sm:px-3 sm:py-2 rounded font-mono font-bold border active:scale-95 transition-transform text-xs sm:text-lg lg:text-2xl"
+                    className="flex-auto px-2 py-1.5 sm:px-3 sm:py-2 rounded font-mono font-bold border active:scale-95 transition-transform text-xs sm:text-lg lg:text-2xl truncate"
                   >
                     {token}
                   </button>
@@ -589,21 +590,37 @@ export function MobileCodeEditor({
           })()}
         </div>
 
-        <div className="grid grid-cols-6 sm:grid-cols-9 lg:grid-cols-18 gap-1 sm:gap-2 mb-2 place-items-center min-h-[32px]">
-          {['1', '2', '3', '4', '5', '6', '7', '8', '9', '=', '+', '-', '/', '*', '%', '(', ')', "'"].map((char) => (
-            <button
-              key={char}
-              onClick={() => handleInsert(char)}
-              style={{
-                backgroundColor: COLORS.buttonBackground,
-                borderColor: COLORS.buttonBorder,
-                ...getTokenStyle(char)
-              }}
-              className="px-1.5 py-1.5 sm:px-2 sm:py-2 lg:px-3 lg:py-2 rounded font-mono font-bold whitespace-nowrap border active:scale-95 transition-transform w-full text-xs sm:text-lg lg:text-2xl"
-            >
-              {char}
-            </button>
-          ))}
+        <div className="flex flex-col gap-1 sm:gap-2 mb-2">
+          {(() => {
+            const keypadItems = ['=', '+', '-', '/', '*', '%', '(', ')', "'"];
+            const count = keypadItems.length;
+            // 9個の場合、2行に分けてバランスを取る（5+4）
+            const numRows = count > 6 ? 2 : 1;
+            const itemsPerRow = Math.ceil(count / numRows);
+            const rows = [];
+            for (let i = 0; i < count; i += itemsPerRow) {
+              rows.push(keypadItems.slice(i, i + itemsPerRow));
+            }
+
+            return rows.map((row, rowIdx) => (
+              <div key={rowIdx} className="flex w-full gap-1 sm:gap-2">
+                {row.map((char) => (
+                  <button
+                    key={char}
+                    onClick={() => handleInsert(char)}
+                    style={{
+                      backgroundColor: COLORS.buttonBackground,
+                      borderColor: COLORS.buttonBorder,
+                      ...getTokenStyle(char)
+                    }}
+                    className="flex-auto px-3 py-1.5 sm:px-4 sm:py-2 rounded font-mono font-bold border active:scale-95 transition-transform text-xs sm:text-lg lg:text-2xl truncate"
+                  >
+                    {char}
+                  </button>
+                ))}
+              </div>
+            ));
+          })()}
         </div>
 
         <div className="grid grid-cols-4 gap-1 sm:gap-2 min-h-[36px]">

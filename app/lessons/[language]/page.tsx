@@ -8,13 +8,13 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 interface PageProps {
-  params: Promise<{
+  params: {
     language: string;
-  }>;
+  };
 }
 
 export default async function LessonsPage({ params }: PageProps) {
-  const { language } = await params;
+  const { language } = params;
   const languageInfo = getLanguageById(language);
 
   if (!languageInfo) {

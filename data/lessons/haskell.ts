@@ -20,10 +20,23 @@ export const haskellData = {
       "initialDisplayMode": "holey",
       "correctCode": "main = putStrLn \"Hello, Haskell!\"",
       "holeyCode": "main = putStrLn \"___\"",
-      "correctLines": ["main = putStrLn \"Hello, Haskell!\""],
-      "lineHints": ["Hello, Haskell! を出力します。"],
-      "candidates": { "strings": ["Hello, Haskell!"] },
-      "testCases": [{ "input": "", "expected_output": "Hello, Haskell!\n" }]
+      "correctLines": [
+        "main = putStrLn \"Hello, Haskell!\""
+      ],
+      "lineHints": [
+        "Hello, Haskell! を出力します。"
+      ],
+      "candidates": {
+        "strings": [
+          "Hello, Haskell!"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello, Haskell!\n"
+        }
+      ]
     },
     {
       "title": "変数（バインディング）",
@@ -39,10 +52,29 @@ export const haskellData = {
       "initialDisplayMode": "holey",
       "correctCode": "main = do\n    let x = 10\n    print x",
       "holeyCode": "main = do\n    let x = ___\n    print ___",
-      "correctLines": ["main = do", "    let x = 10", "    print x"],
-      "lineHints": ["10を定義します。", "xを出力します（printはshowしてputStrLnする関数）。"],
-      "candidates": { "variables": ["x"], "numbers": ["10"] },
-      "testCases": [{ "input": "", "expected_output": "10\n" }]
+      "correctLines": [
+        "main = do",
+        "    let x = 10",
+        "    print x"
+      ],
+      "lineHints": [
+        "10を定義します。",
+        "xを出力します（printはshowしてputStrLnする関数）。"
+      ],
+      "candidates": {
+        "variables": [
+          "x"
+        ],
+        "numbers": [
+          "10"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "10\n"
+        }
+      ]
     },
     {
       "title": "計算",
@@ -58,10 +90,29 @@ export const haskellData = {
       "initialDisplayMode": "holey",
       "correctCode": "main = do\n    let a = 5\n    let b = 3\n    print (a + b)",
       "holeyCode": "main = do\n    let a = 5\n    let b = 3\n    print (a ___ b)",
-      "correctLines": ["main = do", "    let a = 5", "    let b = 3", "    print (a + b)"],
-      "lineHints": [null, null, null, "a + b を出力します。"],
-      "candidates": { "operators": ["+"] },
-      "testCases": [{ "input": "", "expected_output": "8\n" }]
+      "correctLines": [
+        "main = do",
+        "    let a = 5",
+        "    let b = 3",
+        "    print (a + b)"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "a + b を出力します。"
+      ],
+      "candidates": {
+        "operators": [
+          "+"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "8\n"
+        }
+      ]
     },
     {
       "title": "文字列結合",
@@ -71,16 +122,33 @@ export const haskellData = {
       "tutorialSlides": [
         {
           "title": "結合演算子",
-          "content": "# ++\n\n文字列同士を `++` で結合します。数値を文字列にするには `show` を使います。\n\n**コード例：**\n```haskell\nmain = putStrLn (\"Age: \" ++ show 20)\n```"
+          "content": "# ++\n\n文字列同士を ++ で結合します。数値を文字列にするには `show` を使います。\n\n**コード例：**\n```haskell\nmain = putStrLn (\"Age: \" ++ show 20)\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "main = do\n    let age = 20\n    putStrLn (\"Age: \" ++ show age)",
       "holeyCode": "main = do\n    let age = 20\n    putStrLn (\"Age: \" ++ ___ age)",
-      "correctLines": ["main = do", "    let age = 20", "    putStrLn (\"Age: \" ++ show age)"],
-      "lineHints": [null, null, "show関数で文字列化します。"],
-      "candidates": { "functions": ["show"] },
-      "testCases": [{ "input": "", "expected_output": "Age: 20\n" }]
+      "correctLines": [
+        "main = do",
+        "    let age = 20",
+        "    putStrLn (\"Age: \" ++ show age)"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "show関数で文字列化します。"
+      ],
+      "candidates": {
+        "functions": [
+          "show"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Age: 20\n"
+        }
+      ]
     },
     {
       "title": "リスト",
@@ -96,10 +164,27 @@ export const haskellData = {
       "initialDisplayMode": "holey",
       "correctCode": "main = do\n    let nums = [10, 20]\n    print (nums !! 1)",
       "holeyCode": "main = do\n    let nums = [10, 20]\n    print (nums ___ 1)",
-      "correctLines": ["main = do", "    let nums = [10, 20]", "    print (nums !! 1)"],
-      "lineHints": [null, null, "!! 演算子を使います。"],
-      "candidates": { "operators": ["!!"] },
-      "testCases": [{ "input": "", "expected_output": "20\n" }]
+      "correctLines": [
+        "main = do",
+        "    let nums = [10, 20]",
+        "    print (nums !! 1)"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "!! 演算子を使います。"
+      ],
+      "candidates": {
+        "operators": [
+          "!!"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "20\n"
+        }
+      ]
     },
     {
       "title": "if式",
@@ -115,10 +200,31 @@ export const haskellData = {
       "initialDisplayMode": "holey",
       "correctCode": "main = do\n    let score = 100\n    if score > 80\n        then putStrLn \"Great\"\n        else return ()",
       "holeyCode": "main = do\n    let score = 100\n    if score ___ 80\n        then putStrLn \"Great\"\n        else return ()",
-      "correctLines": ["main = do", "    let score = 100", "    if score > 80", "        then putStrLn \"Great\"", "        else return ()"],
-      "lineHints": [null, null, "比較演算子 > を使います。", null, null],
-      "candidates": { "operators": [">"] },
-      "testCases": [{ "input": "", "expected_output": "Great\n" }]
+      "correctLines": [
+        "main = do",
+        "    let score = 100",
+        "    if score > 80",
+        "        then putStrLn \"Great\"",
+        "        else return ()"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "比較演算子 > を使います。",
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": [
+          ">"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Great\n"
+        }
+      ]
     },
     {
       "title": "if-else式",
@@ -134,10 +240,31 @@ export const haskellData = {
       "initialDisplayMode": "holey",
       "correctCode": "main = do\n    let x = 5\n    if x > 10\n        then putStrLn \"Big\"\n        else putStrLn \"Small\"",
       "holeyCode": "main = do\n    let x = 5\n    if x > 10\n        then putStrLn \"Big\"\n        ___ putStrLn \"Small\"",
-      "correctLines": ["main = do", "    let x = 5", "    if x > 10", "        then putStrLn \"Big\"", "        else putStrLn \"Small\""],
-      "lineHints": [null, null, null, null, "else を記述します。"],
-      "candidates": { "keywords": ["else"] },
-      "testCases": [{ "input": "", "expected_output": "Small\n" }]
+      "correctLines": [
+        "main = do",
+        "    let x = 5",
+        "    if x > 10",
+        "        then putStrLn \"Big\"",
+        "        else putStrLn \"Small\""
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        "else を記述します。"
+      ],
+      "candidates": {
+        "keywords": [
+          "else"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Small\n"
+        }
+      ]
     },
     {
       "title": "ループ（mapM_）",
@@ -153,10 +280,27 @@ export const haskellData = {
       "initialDisplayMode": "holey",
       "correctCode": "main = do\n    let nums = [1, 2, 3]\n    mapM_ print nums",
       "holeyCode": "main = do\n    let nums = [1, 2, 3]\n    ___ print nums",
-      "correctLines": ["main = do", "    let nums = [1, 2, 3]", "    mapM_ print nums"],
-      "lineHints": [null, null, "mapM_ 関数を使います。"],
-      "candidates": { "functions": ["mapM_"] },
-      "testCases": [{ "input": "", "expected_output": "1\n2\n3\n" }]
+      "correctLines": [
+        "main = do",
+        "    let nums = [1, 2, 3]",
+        "    mapM_ print nums"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "mapM_ 関数を使います。"
+      ],
+      "candidates": {
+        "functions": [
+          "mapM_"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "1\n2\n3\n"
+        }
+      ]
     },
     {
       "title": "タプル（データ構造）",
@@ -172,10 +316,27 @@ export const haskellData = {
       "initialDisplayMode": "holey",
       "correctCode": "main = do\n    let user = (\"Alice\", 20)\n    putStrLn (fst user)",
       "holeyCode": "main = do\n    let user = (\"Alice\", 20)\n    putStrLn (___ user)",
-      "correctLines": ["main = do", "    let user = (\"Alice\", 20)", "    putStrLn (fst user)"],
-      "lineHints": [null, null, "fst 関数で1つ目の要素を取得します。"],
-      "candidates": { "functions": ["fst"] },
-      "testCases": [{ "input": "", "expected_output": "Alice\n" }]
+      "correctLines": [
+        "main = do",
+        "    let user = (\"Alice\", 20)",
+        "    putStrLn (fst user)"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "fst 関数で1つ目の要素を取得します。"
+      ],
+      "candidates": {
+        "functions": [
+          "fst"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Alice\n"
+        }
+      ]
     },
     {
       "title": "関数定義",
@@ -191,10 +352,27 @@ export const haskellData = {
       "initialDisplayMode": "holey",
       "correctCode": "greet :: IO ()\ngreet = putStrLn \"Hello\"\nmain = greet",
       "holeyCode": "greet :: IO ()\ngreet = putStrLn \"Hello\"\nmain = ___",
-      "correctLines": ["greet :: IO ()", "greet = putStrLn \"Hello\"", "main = greet"],
-      "lineHints": [null, null, "greet を呼び出します。"],
-      "candidates": { "functions": ["greet"] },
-      "testCases": [{ "input": "", "expected_output": "Hello\n" }]
+      "correctLines": [
+        "greet :: IO ()",
+        "greet = putStrLn \"Hello\"",
+        "main = greet"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "greet を呼び出します。"
+      ],
+      "candidates": {
+        "functions": [
+          "greet"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello\n"
+        }
+      ]
     }
   ]
 };

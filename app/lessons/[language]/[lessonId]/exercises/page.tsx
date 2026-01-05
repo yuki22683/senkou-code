@@ -7,14 +7,14 @@ import { ArrowLeft, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface PageProps {
-  params: Promise<{
+  params: {
     language: string;
     lessonId: string;
-  }>;
+  };
 }
 
 export default async function ExercisesPage({ params }: PageProps) {
-  const { language, lessonId } = await params;
+  const { language, lessonId } = params;
   const languageInfo = getLanguageById(language);
 
   if (!languageInfo) {
