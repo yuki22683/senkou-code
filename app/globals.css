@@ -57,3 +57,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom scrollbar styles for code editor */
+.overflow-y-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.overflow-y-scroll::-webkit-scrollbar-track {
+  background: #313335;
+}
+
+.overflow-y-scroll::-webkit-scrollbar-thumb {
+  background: #606366;
+  border-radius: 5px;
+}
+
+.overflow-y-scroll::-webkit-scrollbar-thumb:hover {
+  background: #808080;
+}

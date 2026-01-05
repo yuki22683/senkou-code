@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useAuth, signInWithGoogle, signOut } from "@/hooks/useAuth";
-import { LogIn, LogOut, User } from "lucide-react";
+import { LogIn, LogOut } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -35,9 +35,19 @@ export function LoginButton() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="flex items-center space-x-2">
-          <User className="w-4 h-4" />
-          <span>{user.user_metadata.full_name || user.email}</span>
+        <Button variant="outline" className="flex items-center sm:space-x-2">
+          {user.user_metadata.avatar_url ? (
+            <img
+              src={user.user_metadata.avatar_url}
+              alt="Profile"
+              className="w-6 h-6 rounded-full"
+            />
+          ) : (
+            <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center text-xs">
+              {(user.user_metadata.full_name || user.email || '?')[0].toUpperCase()}
+            </div>
+          )}
+          <span className="hidden sm:inline">{user.user_metadata.full_name || user.email}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

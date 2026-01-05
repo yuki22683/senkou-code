@@ -16,9 +16,6 @@ export function Header() {
           </Link>
 
           <nav className="flex items-center space-x-4">
-            <Button variant="ghost" asChild>
-              <Link href="/">ホーム</Link>
-            </Button>
             <LoginButton />
           </nav>
         </div>
