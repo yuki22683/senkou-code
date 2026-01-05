@@ -111,7 +111,7 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "Pythonは強力な計算機",
-          "content": "# 算術演算子\n\n- + : 足し算\n- - : 引き算\n- * : 掛け算\n- / : 割り算"
+          "content": "# 算術演算子\n\n- **+** : 足し算\n- **-** : 引き算\n- **\\*** : 掛け算\n- **/** : 割り算"
         },
         {
           "title": "この演習の目標",

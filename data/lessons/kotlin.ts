@@ -106,7 +106,7 @@ export const kotlinData = {
       "tutorialSlides": [
         {
           "title": "四則演算",
-          "content": "# 基本的な演算子\n\n- + : 足し算\n- - : 引き算\n- * : 掛け算\n- / : 割り算\n\n```kotlin\nval x = 10\nval y = 5\nprintln(x + y)\n```"
+          "content": "# 基本的な演算子\n\n- **+** : 足し算\n- **-** : 引き算\n- **\\*** : 掛け算\n- **/** : 割り算\n\n```kotlin\nval x = 10\nval y = 5\nprintln(x + y)\n```"
         },
         {
           "title": "この演習の目標",
