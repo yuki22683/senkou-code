@@ -20,10 +20,29 @@ export const csharpData = {
       "initialDisplayMode": "holey",
       "correctCode": "public class Program {\n    public static void Main() {\n        System.Console.WriteLine(\"Hello, C#!\");\n    }\n}",
       "holeyCode": "public class Program {\n    public static void Main() {\n        System.Console.WriteLine(\"___\");\n    }\n}",
-      "correctLines": ["public class Program {", "    public static void Main() {", "        System.Console.WriteLine(\"Hello, C#!\");", "    }", "}"],
-      "lineHints": [null, null, "Hello, C#! を出力します。"],
-      "candidates": { "strings": ["Hello, C#! पुरु"] },
-      "testCases": [{ "input": "", "expected_output": "Hello, C#!\n" }]
+      "correctLines": [
+        "public class Program {",
+        "    public static void Main() {",
+        "        System.Console.WriteLine(\"Hello, C#!\");",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "Hello, C#! を出力します。"
+      ],
+      "candidates": {
+        "strings": [
+          "Hello, C#! पुरु"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello, C#!\n"
+        }
+      ]
     },
     {
       "title": "変数",
@@ -39,10 +58,34 @@ export const csharpData = {
       "initialDisplayMode": "holey",
       "correctCode": "public class Program {\n    public static void Main() {\n        int x = 10;\n        System.Console.WriteLine(x);\n    }\n}",
       "holeyCode": "public class Program {\n    public static void Main() {\n        int x = ___ ;\n        System.Console.WriteLine(___);\n    }\n}",
-      "correctLines": ["public class Program {", "    public static void Main() {", "        int x = 10;", "        System.Console.WriteLine(x);", "    }", "}"],
-      "lineHints": [null, null, "10を代入します。", "xを出力します。"],
-      "candidates": { "variables": ["x"], "numbers": ["10"] },
-      "testCases": [{ "input": "", "expected_output": "10\n" }]
+      "correctLines": [
+        "public class Program {",
+        "    public static void Main() {",
+        "        int x = 10;",
+        "        System.Console.WriteLine(x);",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "10を代入します。",
+        "xを出力します。"
+      ],
+      "candidates": {
+        "variables": [
+          "x"
+        ],
+        "numbers": [
+          "10"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "10\n"
+        }
+      ]
     },
     {
       "title": "計算",
@@ -52,16 +95,39 @@ export const csharpData = {
       "tutorialSlides": [
         {
           "title": "演算",
-          "content": "# 四則演算\n\n`+`, `-`, `*`, `/` などが使えます。\n\n**コード例：**\n```csharp\nint a = 5;\nint b = 3;\nSystem.Console.WriteLine(a + b);\n```"
+          "content": "# 四則演算\n\n+, -, *, / などが使えます。\n\n**コード例：**\n```csharp\nint a = 5;\nint b = 3;\nSystem.Console.WriteLine(a + b);\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Program {\n    public static void Main() {\n        int a = 5;\n        int b = 3;\n        System.Console.WriteLine(a + b);\n    }\n}",
       "holeyCode": "public class Program {\n    public static void Main() {\n        int a = 5;\n        int b = 3;\n        System.Console.WriteLine(a ___ b);\n    }\n}",
-      "correctLines": ["public class Program {", "    public static void Main() {", "        int a = 5;", "        int b = 3;", "        System.Console.WriteLine(a + b);", "    }", "}"],
-      "lineHints": [null, null, null, null, "a + b を出力します。"],
-      "candidates": { "operators": ["+"] },
-      "testCases": [{ "input": "", "expected_output": "8\n" }]
+      "correctLines": [
+        "public class Program {",
+        "    public static void Main() {",
+        "        int a = 5;",
+        "        int b = 3;",
+        "        System.Console.WriteLine(a + b);",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        "a + b を出力します。"
+      ],
+      "candidates": {
+        "operators": [
+          "+"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "8\n"
+        }
+      ]
     },
     {
       "title": "文字列補間",
@@ -77,10 +143,31 @@ export const csharpData = {
       "initialDisplayMode": "holey",
       "correctCode": "public class Program {\n    public static void Main() {\n        int age = 20;\n        System.Console.WriteLine($\"I am {age} years old.\");\n    }\n}",
       "holeyCode": "public class Program {\n    public static void Main() {\n        int age = 20;\n        System.Console.WriteLine($\"I am {___} years old.\");\n    }\n}",
-      "correctLines": ["public class Program {", "    public static void Main() {", "        int age = 20;", "        System.Console.WriteLine($\"I am {age} years old.\");", "    }", "}"],
-      "lineHints": [null, null, null, "age変数を埋め込みます。"],
-      "candidates": { "variables": ["age"] },
-      "testCases": [{ "input": "", "expected_output": "I am 20 years old.\n" }]
+      "correctLines": [
+        "public class Program {",
+        "    public static void Main() {",
+        "        int age = 20;",
+        "        System.Console.WriteLine($\"I am {age} years old.\");",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "age変数を埋め込みます。"
+      ],
+      "candidates": {
+        "variables": [
+          "age"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "I am 20 years old.\n"
+        }
+      ]
     },
     {
       "title": "配列",
@@ -96,10 +183,31 @@ export const csharpData = {
       "initialDisplayMode": "holey",
       "correctCode": "public class Program {\n    public static void Main() {\n        int[] nums = {10, 20};\n        System.Console.WriteLine(nums[1]);\n    }\n}",
       "holeyCode": "public class Program {\n    public static void Main() {\n        int[] nums = {10, 20};\n        System.Console.WriteLine(nums[___]);\n    }\n}",
-      "correctLines": ["public class Program {", "    public static void Main() {", "        int[] nums = {10, 20};", "        System.Console.WriteLine(nums[1]);", "    }", "}"],
-      "lineHints": [null, null, null, "インデックス1を指定します。"],
-      "candidates": { "numbers": ["1"] },
-      "testCases": [{ "input": "", "expected_output": "20\n" }]
+      "correctLines": [
+        "public class Program {",
+        "    public static void Main() {",
+        "        int[] nums = {10, 20};",
+        "        System.Console.WriteLine(nums[1]);",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "インデックス1を指定します。"
+      ],
+      "candidates": {
+        "numbers": [
+          "1"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "20\n"
+        }
+      ]
     },
     {
       "title": "if文",
@@ -115,10 +223,37 @@ export const csharpData = {
       "initialDisplayMode": "holey",
       "correctCode": "public class Program {\n    public static void Main() {\n        int score = 100;\n        if (score > 80) {\n            System.Console.WriteLine(\"Excellent\");\n        }\n    }\n}",
       "holeyCode": "public class Program {\n    public static void Main() {\n        int score = 100;\n        if (score ___ 80) {\n            System.Console.WriteLine(\"___\");\n        }\n    }\n}",
-      "correctLines": ["public class Program {", "    public static void Main() {", "        int score = 100;", "        if (score > 80) {", "            System.Console.WriteLine(\"Excellent\");", "        }", "    }", "}"],
-      "lineHints": [null, null, null, "比較演算子 > を使います。", "Excellent を出力します。"],
-      "candidates": { "operators": [">"], "strings": ["Excellent"] },
-      "testCases": [{ "input": "", "expected_output": "Excellent\n" }]
+      "correctLines": [
+        "public class Program {",
+        "    public static void Main() {",
+        "        int score = 100;",
+        "        if (score > 80) {",
+        "            System.Console.WriteLine(\"Excellent\");",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "比較演算子 > を使います。",
+        "Excellent を出力します。"
+      ],
+      "candidates": {
+        "operators": [
+          ">"
+        ],
+        "strings": [
+          "Excellent"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Excellent\n"
+        }
+      ]
     },
     {
       "title": "if-else文",
@@ -134,10 +269,37 @@ export const csharpData = {
       "initialDisplayMode": "holey",
       "correctCode": "public class Program {\n    public static void Main() {\n        int age = 18;\n        if (age >= 20) {\n            System.Console.WriteLine(\"Adult\");\n        } else {\n            System.Console.WriteLine(\"Minor\");\n        }\n    }\n}",
       "holeyCode": "public class Program {\n    public static void Main() {\n        int age = 18;\n        if (age >= 20) {\n            System.Console.WriteLine(\"Adult\");\n        } ___ {\n            System.Console.WriteLine(\"Minor\");\n        }\n    }\n}",
-      "correctLines": ["public class Program {", "    public static void Main() {", "        int age = 18;", "        if (age >= 20) {", "            System.Console.WriteLine(\"Adult\");", "        } else {", "            System.Console.WriteLine(\"Minor\");", "        }", "    }", "}"],
-      "lineHints": [null, null, null, null, null, "else を記述します。"],
-      "candidates": { "keywords": ["else"] },
-      "testCases": [{ "input": "", "expected_output": "Minor\n" }]
+      "correctLines": [
+        "public class Program {",
+        "    public static void Main() {",
+        "        int age = 18;",
+        "        if (age >= 20) {",
+        "            System.Console.WriteLine(\"Adult\");",
+        "        } else {",
+        "            System.Console.WriteLine(\"Minor\");",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "else を記述します。"
+      ],
+      "candidates": {
+        "keywords": [
+          "else"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Minor\n"
+        }
+      ]
     },
     {
       "title": "foreach文",
@@ -153,10 +315,33 @@ export const csharpData = {
       "initialDisplayMode": "holey",
       "correctCode": "public class Program {\n    public static void Main() {\n        int[] nums = {1, 2, 3};\n        foreach (int n in nums) {\n            System.Console.WriteLine(n);\n        }\n    }\n}",
       "holeyCode": "public class Program {\n    public static void Main() {\n        int[] nums = {1, 2, 3};\n        foreach (int n ___ nums) {\n            System.Console.WriteLine(n);\n        }\n    }\n}",
-      "correctLines": ["public class Program {", "    public static void Main() {", "        int[] nums = {1, 2, 3};", "        foreach (int n in nums) {", "            System.Console.WriteLine(n);", "        }", "    }", "}"],
-      "lineHints": [null, null, null, "in キーワードを使います。"],
-      "candidates": { "keywords": ["in"] },
-      "testCases": [{ "input": "", "expected_output": "1\n2\n3\n" }]
+      "correctLines": [
+        "public class Program {",
+        "    public static void Main() {",
+        "        int[] nums = {1, 2, 3};",
+        "        foreach (int n in nums) {",
+        "            System.Console.WriteLine(n);",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "in キーワードを使います。"
+      ],
+      "candidates": {
+        "keywords": [
+          "in"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "1\n2\n3\n"
+        }
+      ]
     },
     {
       "title": "Dictionary (辞書)",
@@ -172,10 +357,36 @@ export const csharpData = {
       "initialDisplayMode": "holey",
       "correctCode": "using System.Collections.Generic;\npublic class Program {\n    public static void Main() {\n        var scores = new Dictionary<string, int>();\n        scores[\"Math\"] = 90;\n        System.Console.WriteLine(scores[\"Math\"]);\n    }\n}",
       "holeyCode": "using System.Collections.Generic;\npublic class Program {\n    public static void Main() {\n        var scores = new Dictionary<___, int>();\n        scores[\"Math\"] = 90;\n        System.Console.WriteLine(scores[\"___\"]);\n    }\n}",
-      "correctLines": ["using System.Collections.Generic;", "public class Program {", "    public static void Main() {", "        var scores = new Dictionary<string, int>();", "        scores[\"Math\"] = 90;", "        System.Console.WriteLine(scores[\"Math\"]);", "    }", "}"],
-      "lineHints": [null, null, null, "キーは string 型です。", null, "Math キーを指定します。"],
-      "candidates": { "strings": ["string", "Math"] },
-      "testCases": [{ "input": "", "expected_output": "90\n" }]
+      "correctLines": [
+        "using System.Collections.Generic;",
+        "public class Program {",
+        "    public static void Main() {",
+        "        var scores = new Dictionary<string, int>();",
+        "        scores[\"Math\"] = 90;",
+        "        System.Console.WriteLine(scores[\"Math\"]);",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "キーは string 型です。",
+        null,
+        "Math キーを指定します。"
+      ],
+      "candidates": {
+        "strings": [
+          "string",
+          "Math"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "90\n"
+        }
+      ]
     },
     {
       "title": "メソッド",
@@ -191,10 +402,35 @@ export const csharpData = {
       "initialDisplayMode": "holey",
       "correctCode": "public class Program {\n    public static void Greet() {\n        System.Console.WriteLine(\"Hello\");\n    }\n    public static void Main() {\n        Greet();\n    }\n}",
       "holeyCode": "public class Program {\n    public static void Greet() {\n        System.Console.WriteLine(\"Hello\");\n    }\n    public static void Main() {\n        ___();\n    }\n}",
-      "correctLines": ["public class Program {", "    public static void Greet() {", "        System.Console.WriteLine(\"Hello\");", "    }", "    public static void Main() {", "        Greet();", "    }", "}"],
-      "lineHints": [null, null, null, null, null, "Greet(); で呼び出します。"],
-      "candidates": { "functions": ["Greet"] },
-      "testCases": [{ "input": "", "expected_output": "Hello\n" }]
+      "correctLines": [
+        "public class Program {",
+        "    public static void Greet() {",
+        "        System.Console.WriteLine(\"Hello\");",
+        "    }",
+        "    public static void Main() {",
+        "        Greet();",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Greet(); で呼び出します。"
+      ],
+      "candidates": {
+        "functions": [
+          "Greet"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello\n"
+        }
+      ]
     }
   ]
-};
+}

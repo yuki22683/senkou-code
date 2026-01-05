@@ -18,7 +18,7 @@ export const sqlData = {
         },
         {
           "title": "この演習の目標",
-          "content": "# 目標\n\n`SELECT` を使って `'Hello, World!'` と出力してみましょう。\n末尾のセミコロン `;` も忘れずに。\n\n**コード例：**\n```sql\nSELECT 'Hello, World!';\n```"
+          "content": "# 目標\n\n`SELECT` を使って `'Hello, World!'` と出力してみましょう。\n末尾のセミコロン ; も忘れずに。\n\n**コード例：**\n```sql\nSELECT 'Hello, World!';\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -141,7 +141,7 @@ export const sqlData = {
       "tutorialSlides": [
         {
           "title": "条件指定",
-          "content": "# WHERE句\n\n特定の条件に合うデータだけを取得するには `WHERE` を使います。\n数値の比較には `>`, `<`, `>=`, `<=`, `=` などが使えます。\n\n```sql\nSELECT * FROM users WHERE age >= 20;\n```"
+          "content": "# WHERE句\n\n特定の条件に合うデータだけを取得するには `WHERE` を使います。\n数値の比較には >, <, >=, <=, = などが使えます。\n\n```sql\nSELECT * FROM users WHERE age >= 20;\n```"
         },
         {
           "title": "この演習の目標",
@@ -192,7 +192,7 @@ export const sqlData = {
       "tutorialSlides": [
         {
           "title": "文字列の比較",
-          "content": "# シングルクォートで囲む\n\n文字列を条件にする場合は、値をシングルクォート `'` で囲みます。\n\n```sql\nSELECT * FROM users WHERE country = 'USA';\n```"
+          "content": "# シングルクォートで囲む\n\n文字列を条件にする場合は、値をシングルクォート ' で囲みます。\n\n```sql\nSELECT * FROM users WHERE country = 'USA';\n```"
         },
         {
           "title": "この演習の目標",
@@ -346,7 +346,7 @@ export const sqlData = {
         },
         {
           "title": "この演習の目標",
-          "content": "# 目標\n\nusers テーブルから最初の `3` 件だけを取得しましょう。\n\n**コード例：**\n```sql\nSELECT * FROM users LIMIT 3;\n```"
+          "content": "# 目標\n\nusers テーブルから最初の 3 件だけを取得しましょう。\n\n**コード例：**\n```sql\nSELECT * FROM users LIMIT 3;\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -470,4 +470,4 @@ export const sqlData = {
       ]
     }
   ]
-};
+}

@@ -84,7 +84,7 @@ export const haskellData = {
       "tutorialSlides": [
         {
           "title": "演算",
-          "content": "# 通常の演算子\n\n`+`, `-`, `*`, `/` などが使えます。\n\n**コード例：**\n```haskell\nmain = print (5 + 3)\n```"
+          "content": "# 通常の演算子\n\n+, -, *, / などが使えます。\n\n**コード例：**\n```haskell\nmain = print (5 + 3)\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -375,4 +375,4 @@ export const haskellData = {
       ]
     }
   ]
-};
+}

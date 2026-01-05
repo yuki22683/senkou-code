@@ -20,10 +20,23 @@ export const bashData = {
       "initialDisplayMode": "holey",
       "correctCode": "echo \"Hello, Bash!\"",
       "holeyCode": "echo \"___\"",
-      "correctLines": ["echo \"Hello, Bash!\""],
-      "lineHints": ["Hello, Bash! を出力します。"],
-      "candidates": { "strings": ["Hello, Bash!"] },
-      "testCases": [{ "input": "", "expected_output": "Hello, Bash!\n" }]
+      "correctLines": [
+        "echo \"Hello, Bash!\""
+      ],
+      "lineHints": [
+        "Hello, Bash! を出力します。"
+      ],
+      "candidates": {
+        "strings": [
+          "Hello, Bash!"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello, Bash!\n"
+        }
+      ]
     },
     {
       "title": "変数",
@@ -33,16 +46,34 @@ export const bashData = {
       "tutorialSlides": [
         {
           "title": "変数定義",
-          "content": "# スペースを入れない\n\nBashでは代入時に `=` の前後にスペースを入れてはいけません。参照するときは `$` を付けます。\n\n**コード例：**\n```bash\nNAME=\"Bash\"\necho $NAME\n```"
+          "content": "# スペースを入れない\n\nBashでは代入時に = の前後にスペースを入れてはいけません。参照するときは $ を付けます。\n\n**コード例：**\n```bash\nNAME=\"Bash\"\necho $NAME\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "NAME=\"Bash\"\necho $NAME",
       "holeyCode": "NAME=\"___\"\necho $___",
-      "correctLines": ["NAME=\"Bash\"", "echo $NAME"],
-      "lineHints": ["Bashを代入します。", "変数NAMEを出力します。"],
-      "candidates": { "variables": ["NAME"], "strings": ["Bash"] },
-      "testCases": [{ "input": "", "expected_output": "Bash\n" }]
+      "correctLines": [
+        "NAME=\"Bash\"",
+        "echo $NAME"
+      ],
+      "lineHints": [
+        "Bashを代入します。",
+        "変数NAMEを出力します。"
+      ],
+      "candidates": {
+        "variables": [
+          "NAME"
+        ],
+        "strings": [
+          "Bash"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Bash\n"
+        }
+      ]
     },
     {
       "title": "計算",
@@ -58,10 +89,27 @@ export const bashData = {
       "initialDisplayMode": "holey",
       "correctCode": "A=5\nB=3\necho $((A + B))",
       "holeyCode": "A=5\nB=3\necho $((A ___ B))",
-      "correctLines": ["A=5", "B=3", "echo $((A + B))"],
-      "lineHints": [null, null, "+ を使います。"],
-      "candidates": { "operators": ["+"] },
-      "testCases": [{ "input": "", "expected_output": "8\n" }]
+      "correctLines": [
+        "A=5",
+        "B=3",
+        "echo $((A + B))"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "+ を使います。"
+      ],
+      "candidates": {
+        "operators": [
+          "+"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "8\n"
+        }
+      ]
     },
     {
       "title": "変数展開",
@@ -77,10 +125,25 @@ export const bashData = {
       "initialDisplayMode": "holey",
       "correctCode": "AGE=20\necho \"I am $AGE years old.\"",
       "holeyCode": "AGE=20\necho \"I am $___ years old.\"",
-      "correctLines": ["AGE=20", "echo \"I am $AGE years old.\""],
-      "lineHints": [null, "AGE変数を埋め込みます。"],
-      "candidates": { "variables": ["AGE"] },
-      "testCases": [{ "input": "", "expected_output": "I am 20 years old.\n" }]
+      "correctLines": [
+        "AGE=20",
+        "echo \"I am $AGE years old.\""
+      ],
+      "lineHints": [
+        null,
+        "AGE変数を埋め込みます。"
+      ],
+      "candidates": {
+        "variables": [
+          "AGE"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "I am 20 years old.\n"
+        }
+      ]
     },
     {
       "title": "配列",
@@ -96,10 +159,25 @@ export const bashData = {
       "initialDisplayMode": "holey",
       "correctCode": "COLORS=(\"red\" \"blue\")\necho ${COLORS[1]}",
       "holeyCode": "COLORS=(\"red\" \"blue\")\necho ${COLORS[___]}",
-      "correctLines": ["COLORS=(\"red\" \"blue\")", "echo ${COLORS[1]}"],
-      "lineHints": [null, "インデックス1を指定します。"],
-      "candidates": { "numbers": ["1"] },
-      "testCases": [{ "input": "", "expected_output": "blue\n" }]
+      "correctLines": [
+        "COLORS=(\"red\" \"blue\")",
+        "echo ${COLORS[1]}"
+      ],
+      "lineHints": [
+        null,
+        "インデックス1を指定します。"
+      ],
+      "candidates": {
+        "numbers": [
+          "1"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "blue\n"
+        }
+      ]
     },
     {
       "title": "if文",
@@ -115,10 +193,29 @@ export const bashData = {
       "initialDisplayMode": "holey",
       "correctCode": "SCORE=100\nif [ $SCORE -gt 80 ]; then\n    echo \"Great\"\nfi",
       "holeyCode": "SCORE=100\nif [ $SCORE ___ 80 ]; then\n    echo \"Great\"\nfi",
-      "correctLines": ["SCORE=100", "if [ $SCORE -gt 80 ]; then", "    echo \"Great\"", "fi"],
-      "lineHints": [null, "-gt を使います。", null, null],
-      "candidates": { "operators": ["-gt"] },
-      "testCases": [{ "input": "", "expected_output": "Great\n" }]
+      "correctLines": [
+        "SCORE=100",
+        "if [ $SCORE -gt 80 ]; then",
+        "    echo \"Great\"",
+        "fi"
+      ],
+      "lineHints": [
+        null,
+        "-gt を使います。",
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": [
+          "-gt"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Great\n"
+        }
+      ]
     },
     {
       "title": "if-else文",
@@ -134,10 +231,31 @@ export const bashData = {
       "initialDisplayMode": "holey",
       "correctCode": "AGE=18\nif [ $AGE -ge 20 ]; then\n    echo \"Adult\"\nelse\n    echo \"Minor\"\nfi",
       "holeyCode": "AGE=18\nif [ $AGE -ge 20 ]; then\n    echo \"Adult\"\n___ \n    echo \"Minor\"\nfi",
-      "correctLines": ["AGE=18", "if [ $AGE -ge 20 ]; then", "    echo \"Adult\"", "else", "    echo \"Minor\"", "fi"],
-      "lineHints": [null, null, null, "else を記述します。"],
-      "candidates": { "keywords": ["else"] },
-      "testCases": [{ "input": "", "expected_output": "Minor\n" }]
+      "correctLines": [
+        "AGE=18",
+        "if [ $AGE -ge 20 ]; then",
+        "    echo \"Adult\"",
+        "else",
+        "    echo \"Minor\"",
+        "fi"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "else を記述します。"
+      ],
+      "candidates": {
+        "keywords": [
+          "else"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Minor\n"
+        }
+      ]
     },
     {
       "title": "for文",
@@ -153,10 +271,27 @@ export const bashData = {
       "initialDisplayMode": "holey",
       "correctCode": "NAMES=(\"Alice\" \"Bob\")\nfor NAME in \"${NAMES[@]}\"; do\n    echo $NAME\ndone",
       "holeyCode": "NAMES=(\"Alice\" \"Bob\")\nfor NAME in \"${___[@]}\"; do\n    echo $NAME\ndone",
-      "correctLines": ["NAMES=(\"Alice\" \"Bob\")", "for NAME in \"${NAMES[@]}\"; do", "    echo $NAME", "done"],
-      "lineHints": [null, "配列NAMESを指定します。"],
-      "candidates": { "variables": ["NAMES"] },
-      "testCases": [{ "input": "", "expected_output": "Alice\nBob\n" }]
+      "correctLines": [
+        "NAMES=(\"Alice\" \"Bob\")",
+        "for NAME in \"${NAMES[@]}\"; do",
+        "    echo $NAME",
+        "done"
+      ],
+      "lineHints": [
+        null,
+        "配列NAMESを指定します。"
+      ],
+      "candidates": {
+        "variables": [
+          "NAMES"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Alice\nBob\n"
+        }
+      ]
     },
     {
       "title": "連想配列",
@@ -172,10 +307,27 @@ export const bashData = {
       "initialDisplayMode": "holey",
       "correctCode": "declare -A USER\nUSER[name]=\"Alice\"\necho ${USER[name]}",
       "holeyCode": "declare -A USER\nUSER[___]=\"Alice\"\necho ${USER[___]}",
-      "correctLines": ["declare -A USER", "USER[name]=\"Alice\"", "echo ${USER[name]}"],
-      "lineHints": [null, "キー name を使います。", "キー name を使います。"],
-      "candidates": { "strings": ["name"] },
-      "testCases": [{ "input": "", "expected_output": "Alice\n" }]
+      "correctLines": [
+        "declare -A USER",
+        "USER[name]=\"Alice\"",
+        "echo ${USER[name]}"
+      ],
+      "lineHints": [
+        null,
+        "キー name を使います。",
+        "キー name を使います。"
+      ],
+      "candidates": {
+        "strings": [
+          "name"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Alice\n"
+        }
+      ]
     },
     {
       "title": "関数",
@@ -191,10 +343,29 @@ export const bashData = {
       "initialDisplayMode": "holey",
       "correctCode": "greet() {\n    echo \"Hello\"\n}\ngreet",
       "holeyCode": "greet() {\n    echo \"Hello\"\n}\n___",
-      "correctLines": ["greet() {", "    echo \"Hello\"", "}", "greet"],
-      "lineHints": [null, null, null, "greet で呼び出します。"],
-      "candidates": { "functions": ["greet"] },
-      "testCases": [{ "input": "", "expected_output": "Hello\n" }]
+      "correctLines": [
+        "greet() {",
+        "    echo \"Hello\"",
+        "}",
+        "greet"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "greet で呼び出します。"
+      ],
+      "candidates": {
+        "functions": [
+          "greet"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello\n"
+        }
+      ]
     }
   ]
-};
+}

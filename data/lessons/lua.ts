@@ -20,10 +20,23 @@ export const luaData = {
       "initialDisplayMode": "holey",
       "correctCode": "print(\"Hello, Lua!\")",
       "holeyCode": "print(\"___\")",
-      "correctLines": ["print(\"Hello, Lua!\")"],
-      "lineHints": ["Hello, Lua! を出力します。"],
-      "candidates": { "strings": ["Hello, Lua!"] },
-      "testCases": [{ "input": "", "expected_output": "Hello, Lua!\n" }]
+      "correctLines": [
+        "print(\"Hello, Lua!\")"
+      ],
+      "lineHints": [
+        "Hello, Lua! を出力します。"
+      ],
+      "candidates": {
+        "strings": [
+          "Hello, Lua!"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello, Lua!\n"
+        }
+      ]
     },
     {
       "title": "変数",
@@ -39,10 +52,28 @@ export const luaData = {
       "initialDisplayMode": "holey",
       "correctCode": "local x = 10\nprint(x)",
       "holeyCode": "local x = ___\nprint(___)",
-      "correctLines": ["local x = 10", "print(x)"],
-      "lineHints": ["10を代入します。", "変数xを出力します。"],
-      "candidates": { "variables": ["x"], "numbers": ["10"] },
-      "testCases": [{ "input": "", "expected_output": "10\n" }]
+      "correctLines": [
+        "local x = 10",
+        "print(x)"
+      ],
+      "lineHints": [
+        "10を代入します。",
+        "変数xを出力します。"
+      ],
+      "candidates": {
+        "variables": [
+          "x"
+        ],
+        "numbers": [
+          "10"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "10\n"
+        }
+      ]
     },
     {
       "title": "計算",
@@ -52,16 +83,33 @@ export const luaData = {
       "tutorialSlides": [
         {
           "title": "演算",
-          "content": "# 四則演算\n\n`+`, `-`, `*`, `/` などが使えます。\n\n**コード例：**\n```lua\nprint(5 + 3)\n```"
+          "content": "# 四則演算\n\n+, -, *, / などが使えます。\n\n**コード例：**\n```lua\nprint(5 + 3)\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local a = 5\nlocal b = 3\nprint(a + b)",
       "holeyCode": "local a = 5\nlocal b = 3\nprint(a ___ b)",
-      "correctLines": ["local a = 5", "local b = 3", "print(a + b)"],
-      "lineHints": [null, null, "a + b を出力します。"],
-      "candidates": { "operators": ["+"] },
-      "testCases": [{ "input": "", "expected_output": "8\n" }]
+      "correctLines": [
+        "local a = 5",
+        "local b = 3",
+        "print(a + b)"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "a + b を出力します。"
+      ],
+      "candidates": {
+        "operators": [
+          "+"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "8\n"
+        }
+      ]
     },
     {
       "title": "文字列結合",
@@ -77,10 +125,25 @@ export const luaData = {
       "initialDisplayMode": "holey",
       "correctCode": "local age = 20\nprint(\"Age: \" .. age)",
       "holeyCode": "local age = 20\nprint(\"Age: \" ___ age)",
-      "correctLines": ["local age = 20", "print(\"Age: \" .. age)"],
-      "lineHints": [null, ".. 演算子を使います。"],
-      "candidates": { "operators": [".."] },
-      "testCases": [{ "input": "", "expected_output": "Age: 20\n" }]
+      "correctLines": [
+        "local age = 20",
+        "print(\"Age: \" .. age)"
+      ],
+      "lineHints": [
+        null,
+        ".. 演算子を使います。"
+      ],
+      "candidates": {
+        "operators": [
+          ".."
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Age: 20\n"
+        }
+      ]
     },
     {
       "title": "テーブル（配列）",
@@ -96,10 +159,25 @@ export const luaData = {
       "initialDisplayMode": "holey",
       "correctCode": "local t = {10, 20}\nprint(t[2])",
       "holeyCode": "local t = {10, 20}\nprint(t[___])",
-      "correctLines": ["local t = {10, 20}", "print(t[2])"],
-      "lineHints": [null, "2番目の要素を指定します。"],
-      "candidates": { "numbers": ["2"] },
-      "testCases": [{ "input": "", "expected_output": "20\n" }]
+      "correctLines": [
+        "local t = {10, 20}",
+        "print(t[2])"
+      ],
+      "lineHints": [
+        null,
+        "2番目の要素を指定します。"
+      ],
+      "candidates": {
+        "numbers": [
+          "2"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "20\n"
+        }
+      ]
     },
     {
       "title": "if文",
@@ -115,10 +193,29 @@ export const luaData = {
       "initialDisplayMode": "holey",
       "correctCode": "local score = 100\nif score > 80 then\n  print(\"Great\")\nend",
       "holeyCode": "local score = 100\nif score ___ 80 then\n  print(\"Great\")\nend",
-      "correctLines": ["local score = 100", "if score > 80 then", "  print(\"Great\")", "end"],
-      "lineHints": [null, "比較演算子 > を使います。", null, null],
-      "candidates": { "operators": [">"] },
-      "testCases": [{ "input": "", "expected_output": "Great\n" }]
+      "correctLines": [
+        "local score = 100",
+        "if score > 80 then",
+        "  print(\"Great\")",
+        "end"
+      ],
+      "lineHints": [
+        null,
+        "比較演算子 > を使います。",
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": [
+          ">"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Great\n"
+        }
+      ]
     },
     {
       "title": "if-else文",
@@ -134,10 +231,31 @@ export const luaData = {
       "initialDisplayMode": "holey",
       "correctCode": "local x = 5\nif x > 10 then\n  print(\"Big\")\nelse\n  print(\"Small\")\nend",
       "holeyCode": "local x = 5\nif x > 10 then\n  print(\"Big\")\n___\n  print(\"Small\")\nend",
-      "correctLines": ["local x = 5", "if x > 10 then", "  print(\"Big\")", "else", "  print(\"Small\")", "end"],
-      "lineHints": [null, null, null, "else を記述します。"],
-      "candidates": { "keywords": ["else"] },
-      "testCases": [{ "input": "", "expected_output": "Small\n" }]
+      "correctLines": [
+        "local x = 5",
+        "if x > 10 then",
+        "  print(\"Big\")",
+        "else",
+        "  print(\"Small\")",
+        "end"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "else を記述します。"
+      ],
+      "candidates": {
+        "keywords": [
+          "else"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Small\n"
+        }
+      ]
     },
     {
       "title": "ループ（ipairs）",
@@ -153,10 +271,27 @@ export const luaData = {
       "initialDisplayMode": "holey",
       "correctCode": "local nums = {1, 2, 3}\nfor i, n in ipairs(nums) do\n  print(n)\nend",
       "holeyCode": "local nums = {1, 2, 3}\nfor i, n in ipairs(___) do\n  print(n)\nend",
-      "correctLines": ["local nums = {1, 2, 3}", "for i, n in ipairs(nums) do", "  print(n)", "end"],
-      "lineHints": [null, "テーブル nums を指定します。"],
-      "candidates": { "variables": ["nums"] },
-      "testCases": [{ "input": "", "expected_output": "1\n2\n3\n" }]
+      "correctLines": [
+        "local nums = {1, 2, 3}",
+        "for i, n in ipairs(nums) do",
+        "  print(n)",
+        "end"
+      ],
+      "lineHints": [
+        null,
+        "テーブル nums を指定します。"
+      ],
+      "candidates": {
+        "variables": [
+          "nums"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "1\n2\n3\n"
+        }
+      ]
     },
     {
       "title": "テーブル（連想配列）",
@@ -172,10 +307,25 @@ export const luaData = {
       "initialDisplayMode": "holey",
       "correctCode": "local user = {name=\"Alice\"}\nprint(user.name)",
       "holeyCode": "local user = {name=\"Alice\"}\nprint(user.name)",
-      "correctLines": ["local user = {name=\"Alice\"}", "print(user.name)"],
-      "lineHints": [null, "nameプロパティにアクセスします。"],
-      "candidates": { "strings": ["name"] },
-      "testCases": [{ "input": "", "expected_output": "Alice\n" }]
+      "correctLines": [
+        "local user = {name=\"Alice\"}",
+        "print(user.name)"
+      ],
+      "lineHints": [
+        null,
+        "nameプロパティにアクセスします。"
+      ],
+      "candidates": {
+        "strings": [
+          "name"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Alice\n"
+        }
+      ]
     },
     {
       "title": "関数",
@@ -191,10 +341,29 @@ export const luaData = {
       "initialDisplayMode": "holey",
       "correctCode": "function greet()\n  print(\"Hello\")\nend\ngreet()",
       "holeyCode": "function greet()\n  print(\"Hello\")\nend\n___()",
-      "correctLines": ["function greet()", "  print(\"Hello\")", "end", "greet()"],
-      "lineHints": [null, null, null, "greet を呼び出します。"],
-      "candidates": { "functions": ["greet"] },
-      "testCases": [{ "input": "", "expected_output": "Hello\n" }]
+      "correctLines": [
+        "function greet()",
+        "  print(\"Hello\")",
+        "end",
+        "greet()"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "greet を呼び出します。"
+      ],
+      "candidates": {
+        "functions": [
+          "greet"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello\n"
+        }
+      ]
     }
   ]
-};
+}

@@ -20,10 +20,34 @@ export const cData = {
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    printf(\"Hello, World!\\n\");\n    return 0;\n}",
       "holeyCode": "#include <stdio.h>\nint main() {\n    printf(\"___\\n\");\n    return 0;\n}",
-      "correctLines": ["#include <stdio.h>", "int main() {", "    printf(\"Hello, World!\\n\");", "    return 0;", "}"],
-      "lineHints": ["標準入出力ライブラリをインクルードします。", "main関数です。", "Hello, World! を出力します（改行\\nを含めます）。", "正常終了を示す0を返します。", "関数の閉じ括弧です。"],
-      "candidates": { "functions": ["printf"], "strings": ["Hello, World!"] },
-      "testCases": [{ "input": "", "expected_output": "Hello, World!\n" }]
+      "correctLines": [
+        "#include <stdio.h>",
+        "int main() {",
+        "    printf(\"Hello, World!\\n\");",
+        "    return 0;",
+        "}"
+      ],
+      "lineHints": [
+        "標準入出力ライブラリをインクルードします。",
+        "main関数です。",
+        "Hello, World! を出力します（改行\\nを含めます）。",
+        "正常終了を示す0を返します。",
+        "関数の閉じ括弧です。"
+      ],
+      "candidates": {
+        "functions": [
+          "printf"
+        ],
+        "strings": [
+          "Hello, World!"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello, World!\n"
+        }
+      ]
     },
     {
       "title": "変数と整数",
@@ -39,10 +63,36 @@ export const cData = {
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int x = 10;\n    printf(\"%d\\n\", x);\n    return 0;\n}",
       "holeyCode": "#include <stdio.h>\nint main() {\n    int x = ___ ;\n    printf(\"%d\\n\", ___);\n    return 0;\n}",
-      "correctLines": ["#include <stdio.h>", "int main() {", "    int x = 10;", "    printf(\"%d\\n\", x);", "    return 0;", "}"],
-      "lineHints": [null, null, "xに10を代入します。", "xを出力します。", null, null],
-      "candidates": { "variables": ["x"], "numbers": ["10"] },
-      "testCases": [{ "input": "", "expected_output": "10\n" }]
+      "correctLines": [
+        "#include <stdio.h>",
+        "int main() {",
+        "    int x = 10;",
+        "    printf(\"%d\\n\", x);",
+        "    return 0;",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "xに10を代入します。",
+        "xを出力します。",
+        null,
+        null
+      ],
+      "candidates": {
+        "variables": [
+          "x"
+        ],
+        "numbers": [
+          "10"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "10\n"
+        }
+      ]
     },
     {
       "title": "計算",
@@ -52,16 +102,41 @@ export const cData = {
       "tutorialSlides": [
         {
           "title": "演算子",
-          "content": "# 四則演算\n\n`+` `-` `*` `/` が使えます。\n\n**コード例：**\n```c\nint a = 5;\nint b = 3;\nprintf(\"%d\\n\", a + b);\n```"
+          "content": "# 四則演算\n\n+ - * / が使えます。\n\n**コード例：**\n```c\nint a = 5;\nint b = 3;\nprintf(\"%d\\n\", a + b);\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int a = 5;\n    int b = 3;\n    printf(\"%d\\n\", a + b);\n    return 0;\n}",
       "holeyCode": "#include <stdio.h>\nint main() {\n    int a = 5;\n    int b = 3;\n    printf(\"%d\\n\", a ___ b);\n    return 0;\n}",
-      "correctLines": ["#include <stdio.h>", "int main() {", "    int a = 5;", "    int b = 3;", "    printf(\"%d\\n\", a + b);", "    return 0;", "}"],
-      "lineHints": [null, null, "a = 5 を代入します。", "b = 3 を代入します。", "a + b を出力します。", null, null],
-      "candidates": { "operators": ["+"] },
-      "testCases": [{ "input": "", "expected_output": "8\n" }]
+      "correctLines": [
+        "#include <stdio.h>",
+        "int main() {",
+        "    int a = 5;",
+        "    int b = 3;",
+        "    printf(\"%d\\n\", a + b);",
+        "    return 0;",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "a = 5 を代入します。",
+        "b = 3 を代入します。",
+        "a + b を出力します。",
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": [
+          "+"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "8\n"
+        }
+      ]
     },
     {
       "title": "フォーマット出力",
@@ -77,10 +152,33 @@ export const cData = {
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int age = 20;\n    printf(\"I am %d years old.\\n\", age);\n    return 0;\n}",
       "holeyCode": "#include <stdio.h>\nint main() {\n    int age = 20;\n    printf(\"I am %d years old.\\n\", ___);\n    return 0;\n}",
-      "correctLines": ["#include <stdio.h>", "int main() {", "    int age = 20;", "    printf(\"I am %d years old.\\n\", age);", "    return 0;", "}"],
-      "lineHints": [null, null, "年齢変数を定義します。", "変数ageを指定します。", null, null],
-      "candidates": { "variables": ["age"] },
-      "testCases": [{ "input": "", "expected_output": "I am 20 years old.\n" }]
+      "correctLines": [
+        "#include <stdio.h>",
+        "int main() {",
+        "    int age = 20;",
+        "    printf(\"I am %d years old.\\n\", age);",
+        "    return 0;",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "年齢変数を定義します。",
+        "変数ageを指定します。",
+        null,
+        null
+      ],
+      "candidates": {
+        "variables": [
+          "age"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "I am 20 years old.\n"
+        }
+      ]
     },
     {
       "title": "配列",
@@ -96,10 +194,33 @@ export const cData = {
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int nums[] = {10, 20};\n    printf(\"%d\\n\", nums[1]);\n    return 0;\n}",
       "holeyCode": "#include <stdio.h>\nint main() {\n    int nums[] = {10, 20};\n    printf(\"%d\\n\", nums[___]);\n    return 0;\n}",
-      "correctLines": ["#include <stdio.h>", "int main() {", "    int nums[] = {10, 20};", "    printf(\"%d\\n\", nums[1]);", "    return 0;", "}"],
-      "lineHints": [null, null, "配列を初期化します。", "インデックス1を指定します。", null, null],
-      "candidates": { "numbers": ["1"] },
-      "testCases": [{ "input": "", "expected_output": "20\n" }]
+      "correctLines": [
+        "#include <stdio.h>",
+        "int main() {",
+        "    int nums[] = {10, 20};",
+        "    printf(\"%d\\n\", nums[1]);",
+        "    return 0;",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "配列を初期化します。",
+        "インデックス1を指定します。",
+        null,
+        null
+      ],
+      "candidates": {
+        "numbers": [
+          "1"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "20\n"
+        }
+      ]
     },
     {
       "title": "if文",
@@ -115,10 +236,37 @@ export const cData = {
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int score = 90;\n    if (score > 80) {\n        printf(\"Pass\\n\");\n    }\n    return 0;\n}",
       "holeyCode": "#include <stdio.h>\nint main() {\n    int score = 90;\n    if (score ___ 80) {\n        printf(\"Pass\\n\");\n    }\n    return 0;\n}",
-      "correctLines": ["#include <stdio.h>", "int main() {", "    int score = 90;", "    if (score > 80) {", "        printf(\"Pass\\n\");", "    }", "    return 0;", "}"],
-      "lineHints": [null, null, "点数を代入します。", "比較演算子 > を使います。", "Pass を出力します。", "ifブロック終了", null, null],
-      "candidates": { "operators": [">"] },
-      "testCases": [{ "input": "", "expected_output": "Pass\n" }]
+      "correctLines": [
+        "#include <stdio.h>",
+        "int main() {",
+        "    int score = 90;",
+        "    if (score > 80) {",
+        "        printf(\"Pass\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "点数を代入します。",
+        "比較演算子 > を使います。",
+        "Pass を出力します。",
+        "ifブロック終了",
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": [
+          ">"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Pass\n"
+        }
+      ]
     },
     {
       "title": "if-else文",
@@ -134,10 +282,42 @@ export const cData = {
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int x = 5;\n    if (x > 10) {\n        printf(\"Big\\n\");\n    } else {\n        printf(\"Small\\n\");\n    }\n    return 0;\n}",
       "holeyCode": "#include <stdio.h>\nint main() {\n    int x = 5;\n    if (x > 10) {\n        printf(\"Big\\n\");\n    } ___ {\n        printf(\"Small\\n\");\n    }\n    return 0;\n}",
-      "correctLines": ["#include <stdio.h>", "int main() {", "    int x = 5;", "    if (x > 10) {", "        printf(\"Big\\n\");", "    }", "    } else {", "        printf(\"Small\\n\");", "    }", "    return 0;", "}"],
-      "lineHints": [null, null, null, "条件式 x > 10 を書きます。", "Big を出力します。", "else を記述します。", "Small を出力します。", "elseブロック終了", null, null],
-      "candidates": { "keywords": ["else"] },
-      "testCases": [{ "input": "", "expected_output": "Small\n" }]
+      "correctLines": [
+        "#include <stdio.h>",
+        "int main() {",
+        "    int x = 5;",
+        "    if (x > 10) {",
+        "        printf(\"Big\\n\");",
+        "    }",
+        "    } else {",
+        "        printf(\"Small\\n\");",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "条件式 x > 10 を書きます。",
+        "Big を出力します。",
+        "else を記述します。",
+        "Small を出力します。",
+        "elseブロック終了",
+        null,
+        null
+      ],
+      "candidates": {
+        "keywords": [
+          "else"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Small\n"
+        }
+      ]
     },
     {
       "title": "for文",
@@ -153,10 +333,35 @@ export const cData = {
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}",
       "holeyCode": "#include <stdio.h>\nint main() {\n    for (int i = 0; i < 3; ___ ) {\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}",
-      "correctLines": ["#include <stdio.h>", "int main() {", "    for (int i = 0; i < 3; i++) {", "        printf(\"%d\\n\", i);", "    }", "    return 0;", "}"],
-      "lineHints": [null, null, "i++ でインクリメントします。", "変数iを出力します。", "ループ終了", null, null],
-      "candidates": { "operators": ["i++"] },
-      "testCases": [{ "input": "", "expected_output": "0\n1\n2\n" }]
+      "correctLines": [
+        "#include <stdio.h>",
+        "int main() {",
+        "    for (int i = 0; i < 3; i++) {",
+        "        printf(\"%d\\n\", i);",
+        "    }",
+        "    return 0;",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "i++ でインクリメントします。",
+        "変数iを出力します。",
+        "ループ終了",
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": [
+          "i++"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "0\n1\n2\n"
+        }
+      ]
     },
     {
       "title": "構造体 (Struct)",
@@ -172,10 +377,41 @@ export const cData = {
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nstruct Point {\n    int x;\n    int y;\n};\nint main() {\n    struct Point p = {10, 20};\n    printf(\"%d\\n\", p.x);\n    return 0;\n}",
       "holeyCode": "#include <stdio.h>\nstruct Point {\n    int x;\n    int y;\n};\nint main() {\n    struct Point p = {10, 20};\n    printf(\"%d\\n\", p.___ );\n    return 0;\n}",
-      "correctLines": ["#include <stdio.h>", "struct Point {", "    int x;", "    int y;", "};", "int main() {", "    struct Point p = {10, 20};", "    printf(\"%d\\n\", p.x);", "    return 0;", "}"],
-      "lineHints": [null, "構造体を定義します。", "メンバ変数x", "メンバ変数y", "構造体定義の終了", null, "構造体変数を初期化します。", "p.x でアクセスします。", null, null],
-      "candidates": { "strings": ["x"] },
-      "testCases": [{ "input": "", "expected_output": "10\n" }]
+      "correctLines": [
+        "#include <stdio.h>",
+        "struct Point {",
+        "    int x;",
+        "    int y;",
+        "};",
+        "int main() {",
+        "    struct Point p = {10, 20};",
+        "    printf(\"%d\\n\", p.x);",
+        "    return 0;",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        "構造体を定義します。",
+        "メンバ変数x",
+        "メンバ変数y",
+        "構造体定義の終了",
+        null,
+        "構造体変数を初期化します。",
+        "p.x でアクセスします。",
+        null,
+        null
+      ],
+      "candidates": {
+        "strings": [
+          "x"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "10\n"
+        }
+      ]
     },
     {
       "title": "関数",
@@ -191,10 +427,37 @@ export const cData = {
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nvoid greet() {\n    printf(\"Hello\\n\");\n}\nint main() {\n    greet();\n    return 0;\n}",
       "holeyCode": "#include <stdio.h>\nvoid greet() {\n    printf(\"Hello\\n\");\n}\nint main() {\n    ___();\n    return 0;\n}",
-      "correctLines": ["#include <stdio.h>", "void greet() {", "    printf(\"Hello\\n\");", "}", "int main() {", "    greet();", "    return 0;", "}"],
-      "lineHints": [null, "greet関数を定義します。", "メッセージを出力します。", "関数終了", null, "greet(); で呼び出します。", null, null],
-      "candidates": { "functions": ["greet"] },
-      "testCases": [{ "input": "", "expected_output": "Hello\n" }]
+      "correctLines": [
+        "#include <stdio.h>",
+        "void greet() {",
+        "    printf(\"Hello\\n\");",
+        "}",
+        "int main() {",
+        "    greet();",
+        "    return 0;",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        "greet関数を定義します。",
+        "メッセージを出力します。",
+        "関数終了",
+        null,
+        "greet(); で呼び出します。",
+        null,
+        null
+      ],
+      "candidates": {
+        "functions": [
+          "greet"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello\n"
+        }
+      ]
     }
   ]
-};
+}

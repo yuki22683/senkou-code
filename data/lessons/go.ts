@@ -20,10 +20,30 @@ export const goData = {
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, Go!\")\n}",
       "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"___\")\n}",
-      "correctLines": ["package main", "import \"fmt\"", "func main() {", "    fmt.Println(\"Hello, Go!\")", "}"],
-      "lineHints": [null, null, null, "Hello, Go! を出力します。"],
-      "candidates": { "strings": ["Hello, Go!"] },
-      "testCases": [{ "input": "", "expected_output": "Hello, Go!\n" }]
+      "correctLines": [
+        "package main",
+        "import \"fmt\"",
+        "func main() {",
+        "    fmt.Println(\"Hello, Go!\")",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "Hello, Go! を出力します。"
+      ],
+      "candidates": {
+        "strings": [
+          "Hello, Go!"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello, Go!\n"
+        }
+      ]
     },
     {
       "title": "変数",
@@ -39,10 +59,35 @@ export const goData = {
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 10\n    fmt.Println(x)\n}",
       "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := ___\n    fmt.Println(___)\n}",
-      "correctLines": ["package main", "import \"fmt\"", "func main() {", "    x := 10", "    fmt.Println(x)", "}"],
-      "lineHints": [null, null, null, "10を代入します。", "xを出力します。"],
-      "candidates": { "variables": ["x"], "numbers": ["10"] },
-      "testCases": [{ "input": "", "expected_output": "10\n" }]
+      "correctLines": [
+        "package main",
+        "import \"fmt\"",
+        "func main() {",
+        "    x := 10",
+        "    fmt.Println(x)",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "10を代入します。",
+        "xを出力します。"
+      ],
+      "candidates": {
+        "variables": [
+          "x"
+        ],
+        "numbers": [
+          "10"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "10\n"
+        }
+      ]
     },
     {
       "title": "計算",
@@ -52,16 +97,40 @@ export const goData = {
       "tutorialSlides": [
         {
           "title": "計算",
-          "content": "# 四則演算\n\n`+`, `-`, `*`, `/` などが使えます。\n\n**コード例：**\n```go\na := 5\nb := 3\nfmt.Println(a + b)\n```"
+          "content": "# 四則演算\n\n+, -, *, / などが使えます。\n\n**コード例：**\n```go\na := 5\nb := 3\nfmt.Println(a + b)\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    a := 5\n    b := 3\n    fmt.Println(a + b)\n}",
       "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    a := 5\n    b := 3\n    fmt.Println(a ___ b)\n}",
-      "correctLines": ["package main", "import \"fmt\"", "func main() {", "    a := 5", "    b := 3", "    fmt.Println(a + b)", "}"],
-      "lineHints": [null, null, null, null, null, "a + b を出力します。"],
-      "candidates": { "operators": ["+"] },
-      "testCases": [{ "input": "", "expected_output": "8\n" }]
+      "correctLines": [
+        "package main",
+        "import \"fmt\"",
+        "func main() {",
+        "    a := 5",
+        "    b := 3",
+        "    fmt.Println(a + b)",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "a + b を出力します。"
+      ],
+      "candidates": {
+        "operators": [
+          "+"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "8\n"
+        }
+      ]
     },
     {
       "title": "フォーマット出力",
@@ -77,10 +146,32 @@ export const goData = {
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    age := 20\n    fmt.Printf(\"I am %d years old.\\n\", age)\n}",
       "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    age := 20\n    fmt.Printf(\"I am %d years old.\\n\", ___)\n}",
-      "correctLines": ["package main", "import \"fmt\"", "func main() {", "    age := 20", "    fmt.Printf(\"I am %d years old.\\n\", age)", "}"],
-      "lineHints": [null, null, null, null, "age変数を指定します。"],
-      "candidates": { "variables": ["age"] },
-      "testCases": [{ "input": "", "expected_output": "I am 20 years old.\n" }]
+      "correctLines": [
+        "package main",
+        "import \"fmt\"",
+        "func main() {",
+        "    age := 20",
+        "    fmt.Printf(\"I am %d years old.\\n\", age)",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        "age変数を指定します。"
+      ],
+      "candidates": {
+        "variables": [
+          "age"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "I am 20 years old.\n"
+        }
+      ]
     },
     {
       "title": "スライス (可変長配列)",
@@ -96,10 +187,32 @@ export const goData = {
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{10, 20}\n    fmt.Println(nums[1])\n}",
       "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{10, 20}\n    fmt.Println(nums[___])\n}",
-      "correctLines": ["package main", "import \"fmt\"", "func main() {", "    nums := []int{10, 20}", "    fmt.Println(nums[1])", "}"],
-      "lineHints": [null, null, null, null, "インデックス1を指定します。"],
-      "candidates": { "numbers": ["1"] },
-      "testCases": [{ "input": "", "expected_output": "20\n" }]
+      "correctLines": [
+        "package main",
+        "import \"fmt\"",
+        "func main() {",
+        "    nums := []int{10, 20}",
+        "    fmt.Println(nums[1])",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        "インデックス1を指定します。"
+      ],
+      "candidates": {
+        "numbers": [
+          "1"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "20\n"
+        }
+      ]
     },
     {
       "title": "if文",
@@ -115,10 +228,38 @@ export const goData = {
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 100\n    if score > 80 {\n        fmt.Println(\"Great\")\n    }\n}",
       "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 100\n    if score ___ 80 {\n        fmt.Println(\"___\")\n    }\n}",
-      "correctLines": ["package main", "import \"fmt\"", "func main() {", "    score := 100", "    if score > 80 {", "        fmt.Println(\"Great\")", "    }", "}"],
-      "lineHints": [null, null, null, null, "比較演算子 > を使います。", "Great を出力します。"],
-      "candidates": { "operators": [">"], "strings": ["Great"] },
-      "testCases": [{ "input": "", "expected_output": "Great\n" }]
+      "correctLines": [
+        "package main",
+        "import \"fmt\"",
+        "func main() {",
+        "    score := 100",
+        "    if score > 80 {",
+        "        fmt.Println(\"Great\")",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        "比較演算子 > を使います。",
+        "Great を出力します。"
+      ],
+      "candidates": {
+        "operators": [
+          ">"
+        ],
+        "strings": [
+          "Great"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Great\n"
+        }
+      ]
     },
     {
       "title": "if-else文",
@@ -134,10 +275,38 @@ export const goData = {
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    if x > 10 {\n        fmt.Println(\"Big\")\n    } else {\n        fmt.Println(\"Small\")\n    }\n}",
       "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    if x > 10 {\n        fmt.Println(\"Big\")\n    } ___ {\n        fmt.Println(\"Small\")\n    }\n}",
-      "correctLines": ["package main", "import \"fmt\"", "func main() {", "    x := 5", "    if x > 10 {", "        fmt.Println(\"Big\")", "    } else {", "        fmt.Println(\"Small\")", "    }", "}"],
-      "lineHints": [null, null, null, null, null, null, "else を記述します。"],
-      "candidates": { "keywords": ["else"] },
-      "testCases": [{ "input": "", "expected_output": "Small\n" }]
+      "correctLines": [
+        "package main",
+        "import \"fmt\"",
+        "func main() {",
+        "    x := 5",
+        "    if x > 10 {",
+        "        fmt.Println(\"Big\")",
+        "    } else {",
+        "        fmt.Println(\"Small\")",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "else を記述します。"
+      ],
+      "candidates": {
+        "keywords": [
+          "else"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Small\n"
+        }
+      ]
     },
     {
       "title": "for文",
@@ -153,10 +322,34 @@ export const goData = {
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{1, 2, 3}\n    for _, n := range nums {\n        fmt.Println(n)\n    }\n}",
       "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{1, 2, 3}\n    for _, n := ___ nums {\n        fmt.Println(n)\n    }\n}",
-      "correctLines": ["package main", "import \"fmt\"", "func main() {", "    nums := []int{1, 2, 3}", "    for _, n := range nums {", "        fmt.Println(n)", "    }", "}"],
-      "lineHints": [null, null, null, null, "range を使います。"],
-      "candidates": { "keywords": ["range"] },
-      "testCases": [{ "input": "", "expected_output": "1\n2\n3\n" }]
+      "correctLines": [
+        "package main",
+        "import \"fmt\"",
+        "func main() {",
+        "    nums := []int{1, 2, 3}",
+        "    for _, n := range nums {",
+        "        fmt.Println(n)",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        "range を使います。"
+      ],
+      "candidates": {
+        "keywords": [
+          "range"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "1\n2\n3\n"
+        }
+      ]
     },
     {
       "title": "Map",
@@ -172,10 +365,33 @@ export const goData = {
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    scores := map[string]int{\"Math\": 90}\n    fmt.Println(scores[\"Math\"])\n}",
       "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    scores := map[___]int{\"Math\": 90}\n    fmt.Println(scores[\"___\"])\n}",
-      "correctLines": ["package main", "import \"fmt\"", "func main() {", "    scores := map[string]int{\"Math\": 90}", "    fmt.Println(scores[\"Math\"])", "}"],
-      "lineHints": [null, null, null, "キー型は string です。", "Math キーを指定します。"],
-      "candidates": { "strings": ["string", "Math"] },
-      "testCases": [{ "input": "", "expected_output": "90\n" }]
+      "correctLines": [
+        "package main",
+        "import \"fmt\"",
+        "func main() {",
+        "    scores := map[string]int{\"Math\": 90}",
+        "    fmt.Println(scores[\"Math\"])",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "キー型は string です。",
+        "Math キーを指定します。"
+      ],
+      "candidates": {
+        "strings": [
+          "string",
+          "Math"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "90\n"
+        }
+      ]
     },
     {
       "title": "関数",
@@ -191,10 +407,36 @@ export const goData = {
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc greet() {\n    fmt.Println(\"Hello\")\n}\nfunc main() {\n    greet()\n}",
       "holeyCode": "package main\nimport \"fmt\"\nfunc greet() {\n    fmt.Println(\"Hello\")\n}\nfunc main() {\n    ___()\n}",
-      "correctLines": ["package main", "import \"fmt\"", "func greet() {", "    fmt.Println(\"Hello\")", "}", "func main() {", "    greet()", "}"],
-      "lineHints": [null, null, null, null, null, null, "greet() で呼び出します。"],
-      "candidates": { "functions": ["greet"] },
-      "testCases": [{ "input": "", "expected_output": "Hello\n" }]
+      "correctLines": [
+        "package main",
+        "import \"fmt\"",
+        "func greet() {",
+        "    fmt.Println(\"Hello\")",
+        "}",
+        "func main() {",
+        "    greet()",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "greet() で呼び出します。"
+      ],
+      "candidates": {
+        "functions": [
+          "greet"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello\n"
+        }
+      ]
     }
   ]
-};
+}

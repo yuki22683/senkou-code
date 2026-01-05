@@ -237,7 +237,7 @@ export const swiftData = {
       "tutorialSlides": [
         {
           "title": "辞書の作成",
-          "content": "# [Key: Value]\n\n```swift\nvar user = [\"name\": \"Alice\", \"country\": \"USA\"]\nprint(user[\"name\"]!)\n```\n※ `!` は値が存在することを保証する強制アンラップです（ここでは簡単のため使用）。"
+          "content": "# [Key: Value]\n\n```swift\nvar user = [\"name\": \"Alice\", \"country\": \"USA\"]\nprint(user[\"name\"]!)\n``※!` は値が存在することを保証する強制アンラップです（ここでは簡単のため使用）。"
         },
         {
           "title": "この演習の目標",
@@ -426,7 +426,7 @@ export const swiftData = {
       "tutorialSlides": [
         {
           "title": "nilの可能性",
-          "content": "# ? を付ける\n\n型名の後に `?` を付けると、その変数は `nil`（値なし）を入れることができます。\n\n```swift\nvar name: String? = \"Alice\"\nname = nil\nprint(\"OK\")\n```"
+          "content": "# ? を付ける\n\n型名の後に ? を付けると、その変数は `nil`（値なし）を入れることができます。\n\n```swift\nvar name: String? = \"Alice\"\nname = nil\nprint(\"OK\")\n```"
         },
         {
           "title": "この演習の目標",
@@ -467,4 +467,4 @@ export const swiftData = {
       ]
     }
   ]
-};
+}

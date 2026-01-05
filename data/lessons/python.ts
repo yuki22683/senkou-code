@@ -63,7 +63,7 @@ export const pythonData = {
         },
         {
           "title": "代入の書き方",
-          "content": "# = 記号を使う\n\nPythonでは `=` を使って右側の値を左側の変数に入れます（代入）。\n\n```python\nname = 'Python'\n```"
+          "content": "# = 記号を使う\n\nPythonでは = を使って右側の値を左側の変数に入れます（代入）。\n\n```python\nname = 'Python'\n```"
         },
         {
           "title": "この演習の目標",
@@ -111,11 +111,11 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "Pythonは強力な計算機",
-          "content": "# 算術演算子\n\n- `+` : 足し算\n- `-` : 引き算\n- `*` : 掛け算\n- `/` : 割り算"
+          "content": "# 算術演算子\n\n- + : 足し算\n- - : 引き算\n- * : 掛け算\n- / : 割り算"
         },
         {
           "title": "この演習の目標",
-          "content": "# 目標\n\n変数 x に `10`、変数 y に `5` を代入し、その合計を表示してみましょう。\n\n**コード例：**\n```python\nx = 10\ny = 5\nprint(x + y)\n```"
+          "content": "# 目標\n\n変数 x に `10`、変数 y に 5 を代入し、その合計を表示してみましょう。\n\n**コード例：**\n```python\nx = 10\ny = 5\nprint(x + y)\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -168,7 +168,7 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "f-string",
-          "content": "# f-stringの書き方\n\n文字列の前に `f` を付け、中括弧 `{}` の中に変数名を書くことで、値を文字列の中に埋め込むことができます。\n\n```python\nage = 20\nprint(f'私は{age}歳です')\n```"
+          "content": "# f-stringの書き方\n\n文字列の前に f を付け、中括弧 `{}` の中に変数名を書くことで、値を文字列の中に埋め込むことができます。\n\n```python\nage = 20\nprint(f'私は{age}歳です')\n```"
         },
         {
           "title": "この演習の目標",
@@ -268,7 +268,7 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "if文",
-          "content": "# コロン（:）とインデント\n\nPythonでは条件のあとに `:` を書き、次の行をインデント（行頭の空白）します。\n\n```python\nif score > 80:\n    print('合格！')\n```"
+          "content": "# コロン（:）とインデント\n\nPythonでは条件のあとに : を書き、次の行をインデント（行頭の空白）します。\n\n```python\nif score > 80:\n    print('合格！')\n```"
         },
         {
           "title": "この演習の目標",
@@ -519,4 +519,4 @@ export const pythonData = {
       ]
     }
   ]
-};
+}

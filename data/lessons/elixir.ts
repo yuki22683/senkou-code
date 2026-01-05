@@ -20,10 +20,23 @@ export const elixirData = {
       "initialDisplayMode": "holey",
       "correctCode": "IO.puts \"Hello, Elixir!\"",
       "holeyCode": "IO.puts \"___\"",
-      "correctLines": ["IO.puts \"Hello, Elixir!\""],
-      "lineHints": ["Hello, Elixir! を出力します。"],
-      "candidates": { "strings": ["Hello, Elixir!"] },
-      "testCases": [{ "input": "", "expected_output": "Hello, Elixir!\n" }]
+      "correctLines": [
+        "IO.puts \"Hello, Elixir!\""
+      ],
+      "lineHints": [
+        "Hello, Elixir! を出力します。"
+      ],
+      "candidates": {
+        "strings": [
+          "Hello, Elixir!"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello, Elixir!\n"
+        }
+      ]
     },
     {
       "title": "変数",
@@ -39,10 +52,28 @@ export const elixirData = {
       "initialDisplayMode": "holey",
       "correctCode": "x = 10\nIO.puts x",
       "holeyCode": "x = ___\nIO.puts ___",
-      "correctLines": ["x = 10", "IO.puts x"],
-      "lineHints": ["10を代入します。", "変数xを出力します。"],
-      "candidates": { "variables": ["x"], "numbers": ["10"] },
-      "testCases": [{ "input": "", "expected_output": "10\n" }]
+      "correctLines": [
+        "x = 10",
+        "IO.puts x"
+      ],
+      "lineHints": [
+        "10を代入します。",
+        "変数xを出力します。"
+      ],
+      "candidates": {
+        "variables": [
+          "x"
+        ],
+        "numbers": [
+          "10"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "10\n"
+        }
+      ]
     },
     {
       "title": "計算",
@@ -52,16 +83,33 @@ export const elixirData = {
       "tutorialSlides": [
         {
           "title": "演算",
-          "content": "# 四則演算\n\n`+`, `-`, `*`, `/` などが使えます。\n\n**コード例：**\n```elixir\nIO.puts 5 + 3\n```"
+          "content": "# 四則演算\n\n+, -, *, / などが使えます。\n\n**コード例：**\n```elixir\nIO.puts 5 + 3\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "a = 5\nb = 3\nIO.puts a + b",
       "holeyCode": "a = 5\nb = 3\nIO.puts a ___ b",
-      "correctLines": ["a = 5", "b = 3", "IO.puts a + b"],
-      "lineHints": [null, null, "a + b を出力します。"],
-      "candidates": { "operators": ["+"] },
-      "testCases": [{ "input": "", "expected_output": "8\n" }]
+      "correctLines": [
+        "a = 5",
+        "b = 3",
+        "IO.puts a + b"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "a + b を出力します。"
+      ],
+      "candidates": {
+        "operators": [
+          "+"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "8\n"
+        }
+      ]
     },
     {
       "title": "式展開",
@@ -77,10 +125,25 @@ export const elixirData = {
       "initialDisplayMode": "holey",
       "correctCode": "age = 20\nIO.puts \"Age: #{age}\"",
       "holeyCode": "age = 20\nIO.puts \"Age: #{___}\"",
-      "correctLines": ["age = 20", "IO.puts \"Age: #{age}\""],
-      "lineHints": [null, "変数ageを埋め込みます。"],
-      "candidates": { "variables": ["age"] },
-      "testCases": [{ "input": "", "expected_output": "Age: 20\n" }]
+      "correctLines": [
+        "age = 20",
+        "IO.puts \"Age: #{age}\""
+      ],
+      "lineHints": [
+        null,
+        "変数ageを埋め込みます。"
+      ],
+      "candidates": {
+        "variables": [
+          "age"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Age: 20\n"
+        }
+      ]
     },
     {
       "title": "リスト",
@@ -96,10 +159,25 @@ export const elixirData = {
       "initialDisplayMode": "holey",
       "correctCode": "list = [10, 20]\nIO.puts Enum.at(list, 1)",
       "holeyCode": "list = [10, 20]\nIO.puts Enum.at(list, ___)",
-      "correctLines": ["list = [10, 20]", "IO.puts Enum.at(list, 1)"],
-      "lineHints": [null, "インデックス1を指定します。"],
-      "candidates": { "numbers": ["1"] },
-      "testCases": [{ "input": "", "expected_output": "20\n" }]
+      "correctLines": [
+        "list = [10, 20]",
+        "IO.puts Enum.at(list, 1)"
+      ],
+      "lineHints": [
+        null,
+        "インデックス1を指定します。"
+      ],
+      "candidates": {
+        "numbers": [
+          "1"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "20\n"
+        }
+      ]
     },
     {
       "title": "if文",
@@ -115,10 +193,29 @@ export const elixirData = {
       "initialDisplayMode": "holey",
       "correctCode": "score = 100\nif score > 80 do\n  IO.puts \"Great\"\nend",
       "holeyCode": "score = 100\nif score ___ 80 do\n  IO.puts \"Great\"\nend",
-      "correctLines": ["score = 100", "if score > 80 do", "  IO.puts \"Great\"", "end"],
-      "lineHints": [null, "比較演算子 > を使います。", null, null],
-      "candidates": { "operators": [">"] },
-      "testCases": [{ "input": "", "expected_output": "Great\n" }]
+      "correctLines": [
+        "score = 100",
+        "if score > 80 do",
+        "  IO.puts \"Great\"",
+        "end"
+      ],
+      "lineHints": [
+        null,
+        "比較演算子 > を使います。",
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": [
+          ">"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Great\n"
+        }
+      ]
     },
     {
       "title": "if-else文",
@@ -134,10 +231,31 @@ export const elixirData = {
       "initialDisplayMode": "holey",
       "correctCode": "x = 5\nif x > 10 do\n  IO.puts \"Big\"\nelse\n  IO.puts \"Small\"\nend",
       "holeyCode": "x = 5\nif x > 10 do\n  IO.puts \"Big\"\n___ \n  IO.puts \"Small\"\nend",
-      "correctLines": ["x = 5", "if x > 10 do", "  IO.puts \"Big\"", "else", "  IO.puts \"Small\"", "end"],
-      "lineHints": [null, null, null, "else を記述します。"],
-      "candidates": { "keywords": ["else"] },
-      "testCases": [{ "input": "", "expected_output": "Small\n" }]
+      "correctLines": [
+        "x = 5",
+        "if x > 10 do",
+        "  IO.puts \"Big\"",
+        "else",
+        "  IO.puts \"Small\"",
+        "end"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "else を記述します。"
+      ],
+      "candidates": {
+        "keywords": [
+          "else"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Small\n"
+        }
+      ]
     },
     {
       "title": "列挙ング (Enum)",
@@ -153,10 +271,29 @@ export const elixirData = {
       "initialDisplayMode": "holey",
       "correctCode": "list = [1, 2, 3]\nEnum.each(list, fn x -> \n  IO.puts x \nend)",
       "holeyCode": "list = [1, 2, 3]\nEnum.each(list, fn x -> \n  IO.puts ___ \nend)",
-      "correctLines": ["list = [1, 2, 3]", "Enum.each(list, fn x -> ", "  IO.puts x ", "end)"],
-      "lineHints": [null, null, "変数xを出力します。", null],
-      "candidates": { "variables": ["x"] },
-      "testCases": [{ "input": "", "expected_output": "1\n2\n3\n" }]
+      "correctLines": [
+        "list = [1, 2, 3]",
+        "Enum.each(list, fn x -> ",
+        "  IO.puts x ",
+        "end)"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "変数xを出力します。",
+        null
+      ],
+      "candidates": {
+        "variables": [
+          "x"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "1\n2\n3\n"
+        }
+      ]
     },
     {
       "title": "マップ",
@@ -172,10 +309,25 @@ export const elixirData = {
       "initialDisplayMode": "holey",
       "correctCode": "user = %{\"name\" => \"Alice\"}\nIO.puts user[\"name\"]",
       "holeyCode": "user = %{\"name\" => \"Alice\"}\nIO.puts user[\"___\"]",
-      "correctLines": ["user = %{\"name\" => \"Alice\"}", "IO.puts user[\"name\"]"],
-      "lineHints": [null, "キー name を指定します。"],
-      "candidates": { "strings": ["name"] },
-      "testCases": [{ "input": "", "expected_output": "Alice\n" }]
+      "correctLines": [
+        "user = %{\"name\" => \"Alice\"}",
+        "IO.puts user[\"name\"]"
+      ],
+      "lineHints": [
+        null,
+        "キー name を指定します。"
+      ],
+      "candidates": {
+        "strings": [
+          "name"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Alice\n"
+        }
+      ]
     },
     {
       "title": "モジュールと関数",
@@ -191,10 +343,33 @@ export const elixirData = {
       "initialDisplayMode": "holey",
       "correctCode": "defmodule Main do\n  def greet do\n    IO.puts \"Hello\"\n  end\nend\nMain.greet()",
       "holeyCode": "defmodule Main do\n  def greet do\n    IO.puts \"Hello\"\n  end\nend\nMain.___()",
-      "correctLines": ["defmodule Main do", "  def greet do", "    IO.puts \"Hello\"", "  end", "end", "Main.greet()"],
-      "lineHints": [null, null, null, null, null, "greet を呼び出します。"],
-      "candidates": { "functions": ["greet"] },
-      "testCases": [{ "input": "", "expected_output": "Hello\n" }]
+      "correctLines": [
+        "defmodule Main do",
+        "  def greet do",
+        "    IO.puts \"Hello\"",
+        "  end",
+        "end",
+        "Main.greet()"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "greet を呼び出します。"
+      ],
+      "candidates": {
+        "functions": [
+          "greet"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello\n"
+        }
+      ]
     }
   ]
-};
+}

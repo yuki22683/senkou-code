@@ -20,10 +20,25 @@ export const rubyData = {
       "initialDisplayMode": "holey",
       "correctCode": "# 「Hello, Ruby!」と出力\nputs 'Hello, Ruby!'",
       "holeyCode": "# 「Hello, Ruby!」と出力\nputs '___'",
-      "correctLines": ["# 「Hello, Ruby!」と出力", "puts 'Hello, Ruby!'"],
-      "lineHints": [null, "Hello, Ruby! を出力します。"],
-      "candidates": { "strings": ["Hello, Ruby!"] },
-      "testCases": [{ "input": "", "expected_output": "Hello, Ruby!\n" }]
+      "correctLines": [
+        "# 「Hello, Ruby!」と出力",
+        "puts 'Hello, Ruby!'"
+      ],
+      "lineHints": [
+        null,
+        "Hello, Ruby! を出力します。"
+      ],
+      "candidates": {
+        "strings": [
+          "Hello, Ruby!"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello, Ruby!\n"
+        }
+      ]
     },
     {
       "title": "変数",
@@ -39,10 +54,30 @@ export const rubyData = {
       "initialDisplayMode": "holey",
       "correctCode": "# 変数nameを定義\nname = 'Ruby'\nputs name",
       "holeyCode": "# 変数nameを定義\nname = '___'\nputs ___",
-      "correctLines": ["# 変数nameを定義", "name = 'Ruby'", "puts name"],
-      "lineHints": [null, "Rubyを代入します。", "変数nameを出力します。"],
-      "candidates": { "variables": ["name"], "strings": ["Ruby"] },
-      "testCases": [{ "input": "", "expected_output": "Ruby\n" }]
+      "correctLines": [
+        "# 変数nameを定義",
+        "name = 'Ruby'",
+        "puts name"
+      ],
+      "lineHints": [
+        null,
+        "Rubyを代入します。",
+        "変数nameを出力します。"
+      ],
+      "candidates": {
+        "variables": [
+          "name"
+        ],
+        "strings": [
+          "Ruby"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Ruby\n"
+        }
+      ]
     },
     {
       "title": "計算",
@@ -58,10 +93,29 @@ export const rubyData = {
       "initialDisplayMode": "holey",
       "correctCode": "# 計算\na = 5\nb = 3\nputs a + b",
       "holeyCode": "# 計算\na = 5\nb = 3\nputs a ___ b",
-      "correctLines": ["# 計算", "a = 5", "b = 3", "puts a + b"],
-      "lineHints": [null, null, null, "a + b を出力します。"],
-      "candidates": { "operators": ["+"] },
-      "testCases": [{ "input": "", "expected_output": "8\n" }]
+      "correctLines": [
+        "# 計算",
+        "a = 5",
+        "b = 3",
+        "puts a + b"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "a + b を出力します。"
+      ],
+      "candidates": {
+        "operators": [
+          "+"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "8\n"
+        }
+      ]
     },
     {
       "title": "式展開",
@@ -71,16 +125,33 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "式展開",
-          "content": "# #{ }\n\nダブルクォート `\"` で囲んだ文字列の中で `#{変数}` を使います。\n\n**コード例：**\n```ruby\nage = 20\nputs \"年齢は #{age} 歳です\"\n```"
+          "content": "# #{ }\n\nダブルクォート \" で囲んだ文字列の中で `#{変数}` を使います。\n\n**コード例：**\n```ruby\nage = 20\nputs \"年齢は #{age} 歳です\"\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 変数埋め込み\nage = 20\nputs \"I am #{age} years old.\"",
       "holeyCode": "# 変数埋め込み\nage = 20\nputs \"I am #{___} years old.\"",
-      "correctLines": ["# 変数埋め込み", "age = 20", "puts \"I am #{age} years old.\""],
-      "lineHints": [null, null, "age変数を埋め込みます。"],
-      "candidates": { "variables": ["age"] },
-      "testCases": [{ "input": "", "expected_output": "I am 20 years old.\n" }]
+      "correctLines": [
+        "# 変数埋め込み",
+        "age = 20",
+        "puts \"I am #{age} years old.\""
+      ],
+      "lineHints": [
+        null,
+        null,
+        "age変数を埋め込みます。"
+      ],
+      "candidates": {
+        "variables": [
+          "age"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "I am 20 years old.\n"
+        }
+      ]
     },
     {
       "title": "配列",
@@ -96,10 +167,27 @@ export const rubyData = {
       "initialDisplayMode": "holey",
       "correctCode": "# 配列\ncolors = ['red', 'blue']\nputs colors[1]",
       "holeyCode": "# 配列\ncolors = ['red', 'blue']\nputs colors[___]",
-      "correctLines": ["# 配列", "colors = ['red', 'blue']", "puts colors[1]"],
-      "lineHints": [null, null, "インデックス1を指定します。"],
-      "candidates": { "numbers": ["1"] },
-      "testCases": [{ "input": "", "expected_output": "blue\n" }]
+      "correctLines": [
+        "# 配列",
+        "colors = ['red', 'blue']",
+        "puts colors[1]"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "インデックス1を指定します。"
+      ],
+      "candidates": {
+        "numbers": [
+          "1"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "blue\n"
+        }
+      ]
     },
     {
       "title": "if文",
@@ -115,10 +203,34 @@ export const rubyData = {
       "initialDisplayMode": "holey",
       "correctCode": "# 条件分岐\nscore = 100\nif score > 80\n    puts 'Great'\nend",
       "holeyCode": "# 条件分岐\nscore = 100\nif score ___ 80\n    puts 'Great'\n___",
-      "correctLines": ["# 条件分岐", "score = 100", "if score > 80", "    puts 'Great'", "end"],
-      "lineHints": [null, null, "比較演算子 > を使います。", null, "end で閉じます。"],
-      "candidates": { "operators": [">"], "keywords": ["end"] },
-      "testCases": [{ "input": "", "expected_output": "Great\n" }]
+      "correctLines": [
+        "# 条件分岐",
+        "score = 100",
+        "if score > 80",
+        "    puts 'Great'",
+        "end"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "比較演算子 > を使います。",
+        null,
+        "end で閉じます。"
+      ],
+      "candidates": {
+        "operators": [
+          ">"
+        ],
+        "keywords": [
+          "end"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Great\n"
+        }
+      ]
     },
     {
       "title": "if-else文",
@@ -134,10 +246,33 @@ export const rubyData = {
       "initialDisplayMode": "holey",
       "correctCode": "# 分岐\nage = 18\nif age >= 20\n    puts 'Adult'\nelse\n    puts 'Minor'\nend",
       "holeyCode": "# 分岐\nage = 18\nif age >= 20\n    puts 'Adult'\n___ \n    puts 'Minor'\nend",
-      "correctLines": ["# 分岐", "age = 18", "if age >= 20", "    puts 'Adult'", "else", "    puts 'Minor'", "end"],
-      "lineHints": [null, null, null, null, "else を記述します。"],
-      "candidates": { "keywords": ["else"] },
-      "testCases": [{ "input": "", "expected_output": "Minor\n" }]
+      "correctLines": [
+        "# 分岐",
+        "age = 18",
+        "if age >= 20",
+        "    puts 'Adult'",
+        "else",
+        "    puts 'Minor'",
+        "end"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        "else を記述します。"
+      ],
+      "candidates": {
+        "keywords": [
+          "else"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Minor\n"
+        }
+      ]
     },
     {
       "title": "eachメソッド (繰り返し)",
@@ -153,10 +288,31 @@ export const rubyData = {
       "initialDisplayMode": "holey",
       "correctCode": "# ループ\nnames = ['Alice', 'Bob']\nnames.each do |name|\n    puts name\nend",
       "holeyCode": "# ループ\nnames = ['Alice', 'Bob']\nnames.___ do |name|\n    puts name\nend",
-      "correctLines": ["# ループ", "names = ['Alice', 'Bob']", "names.each do |name|", "    puts name", "end"],
-      "lineHints": [null, null, "each メソッドを使います。", null, null],
-      "candidates": { "functions": ["each"] },
-      "testCases": [{ "input": "", "expected_output": "Alice\nBob\n" }]
+      "correctLines": [
+        "# ループ",
+        "names = ['Alice', 'Bob']",
+        "names.each do |name|",
+        "    puts name",
+        "end"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "each メソッドを使います。",
+        null,
+        null
+      ],
+      "candidates": {
+        "functions": [
+          "each"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Alice\nBob\n"
+        }
+      ]
     },
     {
       "title": "ハッシュ (連想配列)",
@@ -172,10 +328,27 @@ export const rubyData = {
       "initialDisplayMode": "holey",
       "correctCode": "# ハッシュ\nuser = { name: 'Alice' }\nputs user[:name]",
       "holeyCode": "# ハッシュ\nuser = { name: 'Alice' }\nputs user[:___]",
-      "correctLines": ["# ハッシュ", "user = { name: 'Alice' }", "puts user[:name]"],
-      "lineHints": [null, null, "シンボル :name を使ってアクセスします。"],
-      "candidates": { "strings": ["name"] },
-      "testCases": [{ "input": "", "expected_output": "Alice\n" }]
+      "correctLines": [
+        "# ハッシュ",
+        "user = { name: 'Alice' }",
+        "puts user[:name]"
+      ],
+      "lineHints": [
+        null,
+        null,
+        "シンボル :name を使ってアクセスします。"
+      ],
+      "candidates": {
+        "strings": [
+          "name"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Alice\n"
+        }
+      ]
     },
     {
       "title": "メソッド定義",
@@ -191,10 +364,36 @@ export const rubyData = {
       "initialDisplayMode": "holey",
       "correctCode": "# 定義\ndef greet\n    puts 'Hello'\nend\n# 呼び出し\ngreet",
       "holeyCode": "# 定義\ndef greet\n    puts 'Hello'\n___\n# 呼び出し\n___",
-      "correctLines": ["# 定義", "def greet", "    puts 'Hello'", "end", "# 呼び出し", "greet"],
-      "lineHints": [null, null, null, "end で閉じます。", null, "greet で呼び出します。"],
-      "candidates": { "keywords": ["end"], "functions": ["greet"] },
-      "testCases": [{ "input": "", "expected_output": "Hello\n" }]
+      "correctLines": [
+        "# 定義",
+        "def greet",
+        "    puts 'Hello'",
+        "end",
+        "# 呼び出し",
+        "greet"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "end で閉じます。",
+        null,
+        "greet で呼び出します。"
+      ],
+      "candidates": {
+        "keywords": [
+          "end"
+        ],
+        "functions": [
+          "greet"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Hello\n"
+        }
+      ]
     }
   ]
-};
+}

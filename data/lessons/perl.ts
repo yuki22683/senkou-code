@@ -18,7 +18,7 @@ export const perlData = {
         },
         {
           "title": "この演習の目標",
-          "content": "# 目標\n\n`Hello, World!` と出力し、最後に改行 `\n` を入れましょう。\nセミコロン `;` も忘れずに。\n\n**コード例：**\n```perl\nprint \"Hello, World!\\n\";\n```"
+          "content": "# 目標\n\n`Hello, World!` と出力し、最後に改行 `\n` を入れましょう。\nセミコロン ; も忘れずに。\n\n**コード例：**\n```perl\nprint \"Hello, World!\\n\";\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -55,7 +55,7 @@ export const perlData = {
       "tutorialSlides": [
         {
           "title": "スカラー変数",
-          "content": "# $記号\n\nPerlでは変数（スカラー変数）の前に `$` を付けます。数値も文字列も入れられます。\n\n```perl\n$name = \"Perl\";\nprint $name;\n```"
+          "content": "# $記号\n\nPerlでは変数（スカラー変数）の前に $ を付けます。数値も文字列も入れられます。\n\n```perl\n$name = \"Perl\";\nprint $name;\n```"
         },
         {
           "title": "この演習の目標",
@@ -100,11 +100,11 @@ export const perlData = {
       "tutorialSlides": [
         {
           "title": "四則演算",
-          "content": "# 基本的な演算子\n\n- `+` : 足し算\n- `-` : 引き算\n- `*` : 掛け算\n- `/` : 割り算\n\n```perl\n$x = 10;\n$y = 5;\nprint $x + $y;\n```"
+          "content": "# 基本的な演算子\n\n- + : 足し算\n- - : 引き算\n- * : 掛け算\n- / : 割り算\n\n```perl\n$x = 10;\n$y = 5;\nprint $x + $y;\n```"
         },
         {
           "title": "この演習の目標",
-          "content": "# 目標\n\n変数 $x に `10`、$y に `5` を代入し、その和を表示しましょう。\n\n**コード例：**\n```perl\n$x = 10;\n$y = 5;\nprint $x + $y;\n```"
+          "content": "# 目標\n\n変数 $x に `10`、$y に 5 を代入し、その和を表示しましょう。\n\n**コード例：**\n```perl\n$x = 10;\n$y = 5;\nprint $x + $y;\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -147,7 +147,7 @@ export const perlData = {
       "tutorialSlides": [
         {
           "title": "ドット演算子",
-          "content": "# . (ドット)で繋ぐ\n\nPerlでは `.` を使って文字列を連結します。\n\n```perl\n$str1 = \"Hello\";\n$str2 = \"World\";\nprint $str1 . \" \" . $str2;\n```"
+          "content": "# . (ドット)で繋ぐ\n\nPerlでは . を使って文字列を連結します。\n\n```perl\n$str1 = \"Hello\";\n$str2 = \"World\";\nprint $str1 . \" \" . $str2;\n```"
         },
         {
           "title": "この演習の目標",
@@ -194,7 +194,7 @@ export const perlData = {
       "tutorialSlides": [
         {
           "title": "配列変数",
-          "content": "# @記号\n\n配列全体を表すときは `@` を使います。\n個別の要素にアクセスするときは `$` を使い、添字（インデックス）を指定します。\n\n```perl\n@colors = (\"red\", \"blue\");\nprint $colors[0]; # red\n```"
+          "content": "# @記号\n\n配列全体を表すときは @ を使います。\n個別の要素にアクセスするときは $ を使い、添字（インデックス）を指定します。\n\n```perl\n@colors = (\"red\", \"blue\");\nprint $colors[0]; # red\n```"
         },
         {
           "title": "この演習の目標",
@@ -239,7 +239,7 @@ export const perlData = {
       "tutorialSlides": [
         {
           "title": "ハッシュ変数",
-          "content": "# %記号\n\nハッシュ全体を表すときは `%` を使います。\n要素にアクセスするときは `$` と `{}` を使います。\n\n```perl\n%ages = (\"Alice\", 25, \"Bob\", 30);\nprint $ages{\"Alice\"};\n```"
+          "content": "# %記号\n\nハッシュ全体を表すときは % を使います。\n要素にアクセスするときは $ と `{}` を使います。\n\n```perl\n%ages = (\"Alice\", 25, \"Bob\", 30);\nprint $ages{\"Alice\"};\n```"
         },
         {
           "title": "この演習の目標",
@@ -470,4 +470,4 @@ export const perlData = {
       ]
     }
   ]
-};
+}

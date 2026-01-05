@@ -246,7 +246,7 @@ export const typescriptData = {
       "tutorialSlides": [
         {
           "title": "条件分岐",
-          "content": "# 比較演算\n\nTypeScriptでも JavaScript と同様に `>` `>=` `<` `<=` `===` などが使えます。\n\n**コード例：**\n```typescript\nconst score: number = 70;\nif (score >= 80) {\n    console.log('合格');\n} else {\n    console.log('不合格');\n}\n```"
+          "content": "# 比較演算\n\nTypeScriptでも JavaScript と同様に > >= < <= `===` などが使えます。\n\n**コード例：**\n```typescript\nconst score: number = 70;\nif (score >= 80) {\n    console.log('合格');\n} else {\n    console.log('不合格');\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -473,4 +473,4 @@ export const typescriptData = {
       ]
     }
   ]
-};
+}
