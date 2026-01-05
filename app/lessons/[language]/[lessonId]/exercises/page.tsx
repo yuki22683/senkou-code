@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { ExerciseCard } from "@/components/exercises/ExerciseCard";
-import { getLanguageById } from "@/data/languages";
+import { getLanguageById, LANGUAGE_COLORS } from "@/data/languages";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, BookOpen } from "lucide-react";
@@ -21,6 +21,7 @@ export default async function ExercisesPage({ params }: PageProps) {
     redirect('/');
   }
 
+  const colorClass = LANGUAGE_COLORS[language] || 'bg-gray-50 border-gray-200';
   const supabase = await createClient();
 
   // レッスン情報を取得
@@ -84,13 +85,13 @@ export default async function ExercisesPage({ params }: PageProps) {
             </Link>
           </Button>
 
-          <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg p-6 mb-6">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center text-white">
-                <BookOpen className="w-6 h-6" />
+          <div className={`rounded-lg p-6 mb-6 border-2 ${colorClass.split(' ').filter(c => !c.startsWith('hover')).join(' ')}`}>
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <BookOpen className="w-8 h-8 text-primary" />
+                <h1 className="text-3xl font-bold">{lesson.title}</h1>
               </div>
-              <div className="flex-1">
-                <h1 className="text-3xl font-bold mb-2">{lesson.title}</h1>
+              <div>
                 {lesson.description && (
                   <p className="text-muted-foreground mb-4">{lesson.description}</p>
                 )}

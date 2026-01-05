@@ -1,5 +1,8 @@
-Invoke-RestMethod -Method Post -Uri "http://100.94.143.7:2358/submissions?base64_encoded=false&wait=true" -ContentType
-application/json" -Body '{
-    "source_code": "puts \"Hello World\"",
-    "language_id": 41
-}'
+・gemini cli ：yuki22683
+
+・SQL、Kotlin、Swift、Perl言語も対応したい。
+
+
+
+pythonの基礎編であるレッスン"Python I"を参考にして、他の全言語でも基礎編となる"(言語名) I"のレッスンを同じ粒度で詳細で分かりやすい解説ページ、演習ページを作成して。
+

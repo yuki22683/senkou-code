@@ -1,192 +1,143 @@
 import fs from 'fs';
 
+// バッククォートを安全に扱うための定数
+const BQ = "`";
+
 const data = [
   {
     "language": "python",
-    "lessonId": "beginner-basics",
-    "lessonTitle": "Python 基礎",
-    "lessonDescription": "Pythonの基本的な文法を学びます",
+    "lessonId": "python-1",
+    "lessonTitle": "Python I",
+    "lessonDescription": "Pythonの基本的な文法を学びます。変数、リスト、条件分岐、ループ、関数など、プログラミングの根幹となる概念を習得しましょう。",
     "lessonDifficulty": "easy",
     "lessonOrder": 1,
     "exercises": [
       {
         "title": "Hello Worldを出力しよう",
-        "description": "print関数を使って「Hello, World!」を出力する演習です",
+        "description": "Pythonプログラミングの第一歩として、画面に「Hello, World!」という文字を表示させる方法を学びましょう。print関数を使ってHello, World!と出力するプログラムを作りましょう。",
         "difficulty": "easy",
         "orderIndex": 1,
         "tutorialSlides": [
-          {
-            "title": "print関数とは",
-            "content": "# print関数\n\nPythonで画面に文字を表示するには`print()`関数を使います。\n\n```python\nprint('Hello')\n```\n\n括弧の中に表示したい文字を入れます。"
-          },
-          {
-            "title": "文字列の書き方",
-            "content": "# 文字列\n\n文字列は`' '`（シングルクォート）または`\"`（ダブルクォート）で囲みます。\n\n```python\nprint('こんにちは')\nprint(\"Hello\")\n```\n\nどちらを使っても同じ結果になります。"
-          },
-          {
-            "title": "演習の目標",
-            "content": "# 目標\n\n`print()`関数を使って「Hello, World!」と表示してみましょう。\n\n正解例：\n```python\nprint('Hello, World!')\n```"
-          }
+          { "title": "Pythonへようこそ！", "content": "Pythonは読みやすく書きやすいことが特徴の言語です。" },
+          { "title": "文字を出力する", "content": "print() 命令を使って括弧の中身を表示します。" }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# \"Hello, World!\"と出力\nprint('Hello, World!')",
-        "holeyCode": "# \"Hello, World!\"と出力\nprint('___')",
-        "correctLines": ["# \"Hello, World!\"と出力", "print('Hello, World!')"],
-        "candidates": {
-          "functions": ["print"],
-          "strings": ["Hello, World!", "Hello", "World"]
-        },
-        "testCases": [
-          {
-            "input": "",
-            "expected_output": "Hello, World!\n"
-          }
-        ],
-        "hints": [
-          {
-            "level": 1,
-            "content": "print関数の中に文字列を入れます"
-          },
-          {
-            "level": 2,
-            "content": "「Hello, World!」という文字列を入れます"
-          },
-          {
-            "level": 3,
-            "content": "答え: print('Hello, World!')"
-          }
-        ]
+        "correctCode": "# 「Hello, World!」と出力\nprint('Hello, World!')",
+        "holeyCode": "# 「Hello, World!」と出力\nprint('___')",
+        "correctLines": ["# 「Hello, World!」と出力", "print('Hello, World!')"],
+        "lineHints": [null, "print命令を使い、文字列を引用符で囲みます。"],
+        "candidates": { "functions": ["print"], "strings": ["Hello, World!"] },
+        "testCases": [{ "input": "", "expected_output": "Hello, World!\n" }]
       },
       {
-        "title": "変数を使ってみよう",
-        "description": "変数に値を代入して表示する演習です",
+        "title": "関数の定義と呼び出し",
+        "description": "処理を一つにまとめる「関数」を作りましょう。挨拶を表示する関数 greet を定義し、中身で「Good morning」と表示させ、最後にその関数を呼び出して実行するプログラムを作りましょう。",
         "difficulty": "easy",
-        "orderIndex": 2,
+        "orderIndex": 10,
         "tutorialSlides": [
-          {
-            "title": "変数とは",
-            "content": "# 変数\n\n変数はデータを入れる箱のようなものです。\n\n```python\nname = 'Alice'\nprint(name)\n```\n\n`=`を使って変数に値を代入します。"
-          },
-          {
-            "title": "変数の使い方",
-            "content": "# 変数を使う\n\n変数を作った後は、その名前を使って値を取り出せます。\n\n```python\nmessage = 'こんにちは'\nprint(message)\n```"
-          }
+          { "title": "関数の定義", "content": "def 関数名(): で定義し、インデントを下げて処理を書きます。" }
         ],
-        "initialDisplayMode": "editable",
-        "correctCode": "# 変数nameに'Python'を代入\nname = 'Python'\n# 変数nameを出力\nprint(name)",
-        "holeyCode": "# 変数nameに'Python'を代入\nname = '___'\n# 変数nameを出力\nprint(___)",
-        "correctLines": ["# 変数nameに'Python'を代入", "name = 'Python'", "# 変数nameを出力", "print(name)"],
-        "candidates": {
-          "variables": ["name", "message", "text"],
-          "functions": ["print"],
-          "strings": ["Python", "Hello", "World"]
-        },
-        "testCases": [
-          {
-            "input": "",
-            "expected_output": "Python\n"
-          }
-        ],
-        "hints": [
-          {
-            "level": 1,
-            "content": "変数nameに文字列を代入します"
-          },
-          {
-            "level": 2,
-            "content": "name = 'Python' と print(name) を書きます"
-          }
-        ]
-      },
-      {
-        "title": "数値の計算",
-        "description": "数値を使って簡単な計算をする演習です",
-        "difficulty": "easy",
-        "orderIndex": 3,
-        "tutorialSlides": [
-          {
-            "title": "数値の計算",
-            "content": "# 計算\n\nPythonでは数値を使って計算ができます。\n\n```python\nprint(5 + 3)\nprint(10 - 2)\nprint(4 * 2)\n```"
-          },
-          {
-            "title": "演算子",
-            "content": "# 演算子\n\n- `+` : 足し算\n- `-` : 引き算\n- `*` : 掛け算\n- `/` : 割り算\n\n```python\nresult = 5 + 3\nprint(result)  # 8\n```"
-          }
-        ],
-        "correctCode": "# xに10を代入\nx = 10\n# yに5を代入\ny = 5\n# x + y を出力\nprint(x + y)",
-        "holeyCode": "# xに10を代入\nx = ___\n# yに5を代入\ny = ___\n# x + y を出力\nprint(x ___ y)",
-        "correctLines": ["# xに10を代入", "x = 10", "# yに5を代入", "y = 5", "# x + y を出力", "print(x + y)"],
-        "candidates": {
-          "variables": ["x", "y", "result"],
-          "functions": ["print"],
-          "numbers": ["10", "5", "3", "2"],
-          "operators": ["+", "-", "*", "/"]
-        },
-        "testCases": [
-          {
-            "input": "",
-            "expected_output": "15\n"
-          }
-        ],
-        "hints": [
-          {
-            "level": 1,
-            "content": "xに10、yに5を代入します"
-          },
-          {
-            "level": 2,
-            "content": "x + y を計算して表示します"
-          }
-        ]
+        "initialDisplayMode": "holey",
+        "correctCode": "# 関数greetを定義\ndef greet():\n    print('Good morning')\n# 関数を呼び出す\ngreet()",
+        "holeyCode": "# 関数greetを定義\ndef ___():\n    print('___')\n# 関数を呼び出す\n___()",
+        "correctLines": ["# 関数greetを定義", "def greet():", "    print('Good morning')", "# 関数を呼び出す", "greet()"],
+        "lineHints": [null, "def greet(): と記述して関数を定義します。", "インデントを下げて print('Good morning') と書きます。", null, "greet() と書いて関数を実行します。"],
+        "candidates": { "functions": ["greet", "print"], "strings": ["Good morning"] },
+        "testCases": [{ "input": "", "expected_output": "Good morning\n" }]
       }
     ]
   },
   {
     "language": "javascript",
-    "lessonId": "beginner-basics",
-    "lessonTitle": "JavaScript 基礎",
-    "lessonDescription": "JavaScriptの基本的な文法を学びます",
+    "lessonId": "javascript-1",
+    "lessonTitle": "JavaScript I",
+    "lessonDescription": "Web開発の必須言語JavaScriptの基本を学びます。",
     "lessonDifficulty": "easy",
     "lessonOrder": 1,
     "exercises": [
       {
-        "title": "console.logで出力しよう",
-        "description": "console.logを使って文字列を出力する演習です",
+        "title": "Hello Worldを出力しよう",
+        "description": "ブラウザのコンソールに文字を表示しましょう。console.logを使って Hello, JavaScript! と出力するプログラムを作りましょう。",
         "difficulty": "easy",
         "orderIndex": 1,
         "tutorialSlides": [
-          {
-            "title": "console.logとは",
-            "content": "# console.log\n\nJavaScriptで画面に文字を表示するには`console.log()`を使います。\n\n```javascript\nconsole.log('Hello');\n```"
-          },
-          {
-            "title": "文字列の書き方",
-            "content": "# 文字列\n\n文字列は`' '`または`\"`で囲みます。文の最後に`;`（セミコロン）を付けます。\n\n```javascript\nconsole.log('こんにちは');\nconsole.log(\"Hello\");\n```"
-          }
+          { "title": "JavaScriptの出力", "content": "console.log() を使って文字を表示します。" }
         ],
-        "correctCode": "// \"Hello, JavaScript!\"と出力\nconsole.log('Hello, JavaScript!');",
-        "holeyCode": "// \"Hello, JavaScript!\"と出力\nconsole.log('___');",
-        "correctLines": ["// \"Hello, JavaScript!\"と出力", "console.log('Hello, JavaScript!');"],
-        "candidates": {
-          "functions": ["console.log"],
-          "strings": ["Hello, JavaScript!", "Hello", "JavaScript"]
-        },
-        "testCases": [
-          {
-            "input": "",
-            "expected_output": "Hello, JavaScript!\n"
-          }
+        "initialDisplayMode": "holey",
+        "correctCode": "// 「Hello, JavaScript!」と出力\nconsole.log('Hello, JavaScript!');",
+        "holeyCode": "// 「Hello, JavaScript!」と出力\nconsole.log('___');",
+        "correctLines": ["// 「Hello, JavaScript!」と出力", "console.log('Hello, JavaScript!');"],
+        "lineHints": [null, "console.log を使い、最後はセミコロン(;)で締めます。"],
+        "candidates": { "functions": ["console.log"], "strings": ["Hello, JavaScript!"] },
+        "testCases": [{ "input": "", "expected_output": "Hello, JavaScript!\n" }]
+      },
+      {
+        "title": "テンプレートリテラル",
+        "description": "文章の中に変数を埋め込みましょう。定数 age に 20 を代入し、バッククォートの文字列の中で ${age} を使って「私は20歳です」と表示するプログラムを作りましょう。",
+        "difficulty": "easy",
+        "orderIndex": 4,
+        "tutorialSlides": [
+          { "title": "埋め込み構文", "content": "バッククォートで囲み、${変数名} で埋め込みます。" }
         ],
-        "hints": [
-          {
-            "level": 1,
-            "content": "console.logの中に文字列を入れます"
-          },
-          {
-            "level": 2,
-            "content": "答え: console.log('Hello, JavaScript!');"
-          }
-        ]
+        "initialDisplayMode": "holey",
+        "correctCode": "const age = 20;\n// 埋め込み出力\nconsole.log(`私は${age}歳です`);",
+        "holeyCode": "const age = ___ ;\n// 埋め込み出力\nconsole.log(`私は${___}歳です`);",
+        "correctLines": ["const age = 20;", "// 埋め込み出力", "console.log(`私は${age}歳です`);"],
+        "lineHints": ["age = 20; と代入します。", null, "`${age}` を使って文字列を組み立てます。"],
+        "candidates": { "variables": ["age"], "functions": ["console.log"], "numbers": ["20"] },
+        "testCases": [{ "input": "", "expected_output": "私は20歳です\n" }]
+      }
+    ]
+  },
+  {
+    "language": "typescript",
+    "lessonId": "typescript-1",
+    "lessonTitle": "TypeScript I",
+    "lessonDescription": "TypeScriptの基礎を学びます。型定義の基本をマスターしましょう。",
+    "lessonDifficulty": "easy",
+    "lessonOrder": 1,
+    "exercises": [
+      {
+        "title": "型を指定した変数宣言",
+        "description": "変数に型を付けて安全に宣言しましょう。string型の変数 message に文字列 'Hello TS' を代入して表示するプログラムを作りましょう。",
+        "difficulty": "easy",
+        "orderIndex": 1,
+        "tutorialSlides": [
+          { "title": "型定義", "content": "変数名の後に : string のように型を書きます。" }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "const message: string = 'Hello TS';\nconsole.log(message);",
+        "holeyCode": "const message: ___ = '___';\nconsole.log(___);",
+        "correctLines": ["const message: string = 'Hello TS';", "console.log(message);"],
+        "lineHints": ["型に string を指定し、値を代入します。", "変数を出力します。"],
+        "candidates": { "variables": ["message"], "functions": ["console.log"], "strings": ["string", "Hello TS"] },
+        "testCases": [{ "input": "", "expected_output": "Hello TS\n" }]
+      }
+    ]
+  },
+  {
+    "language": "java",
+    "lessonId": "java-1",
+    "lessonTitle": "Java I",
+    "lessonDescription": "Javaの基本を学びます。クラスとメソッドの構造を習得しましょう。",
+    "lessonDifficulty": "easy",
+    "lessonOrder": 1,
+    "exercises": [
+      {
+        "title": "Hello Worldを出力しよう",
+        "description": "Javaの標準出力メソッドを使いましょう。System.out.println を使って Hello, Java! と表示するプログラムを作りましょう。",
+        "difficulty": "easy",
+        "orderIndex": 1,
+        "tutorialSlides": [
+          { "title": "Javaの基本", "content": "public class Main { ... } の中にコードを書きます。" }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, Java!\");\n    }\n}",
+        "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"___");\n    }\n}",
+        "correctLines": ["public class Main {", "    public static void main(String[] args) {", "        System.out.println(\"Hello, Java!\");", "    }", "}"],
+        "lineHints": [null, null, "System.out.println を使用します。"],
+        "candidates": { "functions": ["System.out.println"], "strings": ["Hello, Java!"] },
+        "testCases": [{ "input": "", "expected_output": "Hello, Java!\n" }]
       }
     ]
   }

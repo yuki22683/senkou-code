@@ -8,7 +8,7 @@
 
 import { config } from 'dotenv';
 import { createClient } from '@supabase/supabase-js';
-import sampleData from '../data/sample-exercises.json';
+import { allLessons } from '../data/lessons';
 import { getLanguageById } from '../data/languages';
 
 // .env.local を読み込む
@@ -45,7 +45,7 @@ async function seedDatabase() {
   let totalLessons = 0;
   let totalExercises = 0;
 
-  for (const lessonData of sampleData) {
+  for (const lessonData of allLessons) {
     console.log(`Processing lesson: ${lessonData.lessonTitle} (${lessonData.language})`);
 
     // レッスンを挿入または更新
@@ -138,7 +138,7 @@ async function seedDatabase() {
         correct_lines: exercise.correctLines,
         candidates: exercise.candidates,
         test_cases: exercise.testCases,
-        hints: exercise.hints,
+        hints: exercise.lineHints,
         language_id: languageInfo.judge0Id,
         file_extension: languageInfo.extension.replace('.', ''),
         test_input: testInput,

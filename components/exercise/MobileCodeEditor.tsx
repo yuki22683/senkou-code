@@ -11,44 +11,152 @@ interface MobileCodeEditorProps {
   language: string;
   onChange?: (value: string) => void;
   onRun?: (code: string) => void;
+  onCursorChange?: (line: number, col: number) => void;
   readOnly?: boolean;
 }
 
-// PyCharm Darcula Colors
+// VS Code Dark+ Colors (approximate)
 const COLORS = {
-  background: "#2B2B2B",
-  foreground: "#A9B7C6",
-  caret: "#BBBBBB",
-  lineNumberForeground: "#606366",
-  gutterBackground: "#313335",
-  selection: "#214283",
-  keyword: "#CC7832", // Orange
-  string: "#6A8759",  // Green
-  number: "#6897BB",  // Blue
-  comment: "#B0B0B0", // Light Gray
-  functionDef: "#FFC66D", // Yellow-ish
-  decorator: "#BBB529", // Yellow-Green
-  builtIn: "#CC7832", // Orange
-  panelBackground: "#3C3F41",
-  buttonBackground: "#3C3F41",
-  buttonBorder: "#606366",
-  buttonText: "#A9B7C6",
-  matchedBrace: "#606366",
-  error: "#BC3F3C",
+  background: "#1E1E1E",
+  foreground: "#D4D4D4",
+  caret: "#D4D4D4",
+  lineNumberForeground: "#858585",
+  gutterBackground: "#1E1E1E",
+  selection: "#264F78",
+  keyword: "#569CD6", // Blue
+  string: "#CE9178",  // Orange
+  number: "#B5CEA8",  // Light Green
+  comment: "#6A9955", // Green
+  functionDef: "#DCDCAA", // Yellow
+  decorator: "#DCDCAA", // Yellow
+  builtIn: "#569CD6", // Blue (User requested Blue for print)
+  panelBackground: "#252526",
+  buttonBackground: "#333333",
+  buttonBorder: "#454545",
+  buttonText: "#CCCCCC",
+  matchedBrace: "#D4D4D4",
+  error: "#F44336",
 };
 
-const KEYWORDS = new Set([
-  "def", "class", "return", "import", "from", "if", "else", "elif", "for", "while", 
-  "try", "except", "finally", "with", "as", "pass", "break", "continue", "lambda", 
-  "global", "nonlocal", "yield", "raise", "assert", "del", "async", "await",
-  "function", "const", "let", "var", "public", "private", "protected", "void", 
-  "int", "string", "bool", "true", "false", "null", "undefined", "interface", "extends"
-]);
+// Language configurations for syntax highlighting
+const LANGUAGE_CONFIG: Record<string, { keywords: Set<string>, builtins: Set<string>, commentPrefix: string }> = {
+  python: {
+    keywords: new Set(["def", "class", "return", "import", "from", "if", "elif", "else", "for", "while", "with", "as", "try", "except", "finally", "pass", "break", "continue", "lambda", "global", "nonlocal", "yield", "raise", "assert", "del", "async", "await"]),
+    builtins: new Set(["print", "len", "range", "int", "str", "list", "dict", "set", "tuple", "bool", "True", "False", "None", "super", "open", "type", "id", "input"]),
+    commentPrefix: "#",
+  },
+  javascript: {
+    keywords: new Set(["function", "const", "let", "var", "if", "else", "for", "while", "do", "switch", "case", "break", "continue", "return", "import", "export", "from", "default", "class", "extends", "super", "this", "new", "try", "catch", "finally", "throw", "async", "await", "yield", "type", "interface", "enum"]),
+    builtins: new Set(["console", "Math", "parseInt", "parseFloat", "JSON", "Promise", "Object", "Array", "String", "Number", "Boolean", "true", "false", "null", "undefined"]),
+    commentPrefix: "//",
+  },
+  typescript: {
+    keywords: new Set(["function", "const", "let", "var", "if", "else", "for", "while", "do", "switch", "case", "break", "continue", "return", "import", "export", "from", "default", "class", "extends", "super", "this", "new", "try", "catch", "finally", "throw", "async", "await", "yield", "type", "interface", "enum", "readonly", "public", "private", "protected", "abstract", "static", "namespace", "module"]),
+    builtins: new Set(["console", "Math", "parseInt", "parseFloat", "JSON", "Promise", "Object", "Array", "String", "Number", "Boolean", "true", "false", "null", "undefined", "string", "number", "boolean", "any", "void", "never", "unknown"]),
+    commentPrefix: "//",
+  },
+  java: {
+    keywords: new Set(["public", "private", "protected", "static", "final", "class", "interface", "extends", "implements", "package", "import", "new", "this", "super", "if", "else", "for", "while", "do", "switch", "case", "break", "continue", "return", "try", "catch", "finally", "throw", "throws", "synchronized", "volatile", "transient", "native", "strictfp", "enum", "void"]),
+    builtins: new Set(["String", "System", "Math", "Integer", "Long", "Double", "Float", "Boolean", "Byte", "Short", "Character", "Object", "true", "false", "null", "int", "long", "double", "float", "boolean", "byte", "short", "char"]),
+    commentPrefix: "//",
+  },
+  c: {
+    keywords: new Set(["if", "else", "for", "while", "do", "switch", "case", "break", "continue", "return", "struct", "enum", "union", "typedef", "sizeof", "static", "extern", "register", "volatile", "const", "auto", "void", "goto"]),
+    builtins: new Set(["int", "long", "short", "char", "float", "double", "printf", "scanf", "malloc", "free", "NULL"]),
+    commentPrefix: "//",
+  },
+  cpp: {
+    keywords: new Set(["if", "else", "for", "while", "do", "switch", "case", "break", "continue", "return", "struct", "enum", "union", "typedef", "sizeof", "static", "extern", "volatile", "const", "auto", "void", "public", "private", "protected", "class", "template", "typename", "using", "namespace", "inline", "virtual", "override", "final", "constexpr", "new", "delete", "try", "catch", "throw", "noexcept", "decltype"]),
+    builtins: new Set(["int", "long", "short", "char", "float", "double", "bool", "std", "cout", "cin", "endl", "vector", "string", "map", "set", "true", "false", "NULL"]),
+    commentPrefix: "//",
+  },
+  csharp: {
+    keywords: new Set(["public", "private", "protected", "static", "class", "interface", "struct", "enum", "if", "else", "for", "foreach", "while", "do", "switch", "case", "break", "continue", "return", "try", "catch", "finally", "throw", "new", "this", "base", "using", "namespace", "var", "partial", "async", "await", "yield", "lock", "delegate", "event", "readonly", "override", "virtual", "abstract", "in", "out", "ref"]),
+    builtins: new Set(["Console", "Math", "String", "Int32", "Int64", "Double", "Single", "Boolean", "Object", "true", "false", "null", "int", "long", "double", "float", "bool", "string", "void"]),
+    commentPrefix: "//",
+  },
+  go: {
+    keywords: new Set(["package", "import", "func", "var", "const", "type", "struct", "interface", "if", "else", "for", "range", "switch", "case", "default", "select", "chan", "go", "defer", "return", "break", "continue", "goto", "fallthrough"]),
+    builtins: new Set(["fmt", "Println", "Printf", "Print", "len", "cap", "append", "copy", "close", "panic", "recover", "make", "new", "bool", "string", "int", "float64", "true", "false", "nil"]),
+    commentPrefix: "//",
+  },
+  rust: {
+    keywords: new Set(["fn", "let", "mut", "const", "static", "if", "else", "for", "while", "loop", "match", "return", "break", "continue", "use", "mod", "pub", "crate", "self", "trait", "impl", "struct", "enum", "type", "where", "unsafe", "async", "await", "dyn", "ref", "move", "box", "as", "in"]),
+    builtins: new Set(["println", "vec", "String", "Option", "Result", "Some", "None", "Ok", "Err", "bool", "char", "i32", "i64", "u32", "u64", "f32", "f64", "true", "false"]),
+    commentPrefix: "//",
+  },
+  ruby: {
+    keywords: new Set(["def", "class", "module", "if", "else", "elsif", "unless", "while", "until", "for", "in", "do", "end", "begin", "rescue", "ensure", "next", "break", "return", "yield", "self", "alias", "undef", "defined?", "super"]),
+    builtins: new Set(["puts", "print", "gets", "require", "include", "nil", "true", "false", "Array", "Hash", "String", "Integer", "Float"]),
+    commentPrefix: "#",
+  },
+  php: {
+    keywords: new Set(["function", "class", "interface", "trait", "extends", "implements", "public", "private", "protected", "static", "final", "abstract", "const", "if", "else", "elseif", "foreach", "as", "while", "do", "switch", "case", "break", "continue", "return", "try", "catch", "finally", "throw", "new", "clone", "instanceof", "global", "namespace", "use", "var"]),
+    builtins: new Set(["echo", "print", "list", "array", "include", "require", "isset", "empty", "null", "true", "false", "bool", "int", "string", "float"]),
+    commentPrefix: "//",
+  },
+  bash: {
+    keywords: new Set(["if", "then", "else", "elif", "fi", "for", "in", "do", "done", "while", "until", "case", "esac", "function", "select", "time", "[[", "]]", "declare", "export", "local", "readonly", "set", "unset", "shift", "trap", "exec", "eval", "source", "alias", "unalias"]),
+    builtins: new Set(["echo", "printf", "read", "cd", "pwd", "ls", "grep", "cat", "true", "false"]),
+    commentPrefix: "#",
+  },
+  haskell: {
+    keywords: new Set(["module", "import", "where", "let", "in", "do", "if", "then", "else", "case", "of", "data", "type", "newtype", "class", "instance", "deriving", "default", "infix", "infixl", "infixr", "foreign", "forall"]),
+    builtins: new Set(["putStrLn", "print", "show", "read", "fst", "snd", "Int", "Integer", "Float", "Double", "Bool", "String", "Char", "Maybe", "Just", "Nothing", "Right", "Left", "IO", "return"]),
+    commentPrefix: "--",
+  },
+  elixir: {
+    keywords: new Set(["def", "defmodule", "defp", "defmacro", "if", "else", "unless", "case", "cond", "with", "do", "end", "fn", "quote", "unquote", "receive", "after", "try", "catch", "rescue", "alias", "import", "require", "use"]),
+    builtins: new Set(["IO", "puts", "inspect", "Enum", "Map", "List", "String", "Integer", "Float", "Atom", "nil", "true", "false"]),
+    commentPrefix: "#",
+  },
+  lua: {
+    keywords: new Set(["and", "break", "do", "else", "elseif", "end", "false", "for", "function", "goto", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"]),
+    builtins: new Set(["print", "pairs", "ipairs", "table", "string", "math", "io", "os", "debug", "assert", "error", "type", "tonumber", "tostring"]),
+    commentPrefix: "--",
+  },
+  assembly: {
+    keywords: new Set(["section", "global", "extern", "default", "mov", "add", "sub", "mul", "div", "jmp", "je", "jne", "jl", "jle", "jg", "jge", "call", "ret", "push", "pop", "inc", "dec", "cmp", "test", "and", "or", "xor", "not", "syscall"]),
+    builtins: new Set(["db", "dw", "dd", "dq", "resb", "resw", "resd", "resq", "rax", "rbx", "rcx", "rdx", "rsi", "rdi", "rbp", "rsp", "r8", "r9", "r10", "r11", "r12", "r13", "r14", "r15", "eax", "ebx", "ecx", "edx", "esi", "edi", "ebp", "esp"]),
+    commentPrefix: ";",
+  },
+  sql: {
+    keywords: new Set(["SELECT", "FROM", "WHERE", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "TABLE", "VALUES", "AND", "OR", "NOT", "NULL", "JOIN", "ON", "GROUP", "BY", "ORDER", "LIMIT", "AS", "INTO", "DISTINCT", "PRIMARY", "KEY", "FOREIGN", "REFERENCES"]),
+    builtins: new Set(["COUNT", "SUM", "AVG", "MAX", "MIN", "UPPER", "LOWER", "COALESCE", "CONCAT"]),
+    commentPrefix: "--",
+  },
+  kotlin: {
+    keywords: new Set(["fun", "val", "var", "class", "object", "interface", "if", "else", "when", "for", "while", "do", "return", "break", "continue", "package", "import", "super", "this", "null", "true", "false", "try", "catch", "finally", "throw", "is", "in", "as", "typealias", "companion", "init", "constructor"]),
+    builtins: new Set(["println", "print", "Array", "List", "Map", "Set", "Int", "String", "Boolean", "Double", "Float", "Long", "Short", "Byte", "Char"]),
+    commentPrefix: "//",
+  },
+  swift: {
+    keywords: new Set(["func", "var", "let", "if", "else", "switch", "case", "default", "for", "while", "repeat", "return", "break", "continue", "class", "struct", "enum", "extension", "protocol", "init", "deinit", "import", "guard", "defer", "in", "do", "try", "catch", "throw", "throws", "public", "private", "fileprivate", "internal", "open", "static", "self", "super", "true", "false", "nil"]),
+    builtins: new Set(["print", "Array", "Dictionary", "Set", "String", "Int", "Double", "Float", "Bool", "Optional"]),
+    commentPrefix: "//",
+  },
+  perl: {
+    keywords: new Set(["my", "our", "local", "sub", "if", "unless", "while", "until", "foreach", "for", "do", "next", "last", "redo", "goto", "return", "package", "use", "require", "else", "elsif"]),
+    builtins: new Set(["print", "say", "chomp", "split", "join", "map", "grep", "sort", "length", "push", "pop", "shift", "unshift", "keys", "values", "defined", "undef"]),
+    commentPrefix: "#",
+  },
+};
 
-const BUILTINS = new Set([
-  "print", "len", "range", "int", "str", "list", "dict", "set", "tuple", "bool", 
-  "super", "open", "type", "id", "input", "console", "Math", "parseInt", "parseFloat"
-]);
+// コードの正規化: インデントと必要なスペース（単語間）を維持し、記号周りの不要なスペースを削除
+const normalizeCode = (str: string) => {
+  if (!str) return "";
+  // 1. 先頭の空白（インデント）を保持
+  const leadingMatch = str.match(/^(\s*)/);
+  const leading = leadingMatch ? leadingMatch[0] : "";
+  const content = str.slice(leading.length).trim();
+
+  // 2. 内部の正規化
+  let normalized = content
+    .replace(/\s+/g, " ") // 連続する空白を1つに
+    .replace(/\s*([()\[\]{}:.,=+*/%&|^<>!])\s*/g, "$1"); // 記号周りの空白を削除
+
+  return leading + normalized;
+};
 
 export function MobileCodeEditor({
   initialCode,
@@ -56,24 +164,45 @@ export function MobileCodeEditor({
   language,
   onChange,
   onRun,
+  onCursorChange,
   readOnly = false,
 }: MobileCodeEditorProps) {
+  const config = LANGUAGE_CONFIG[language] || LANGUAGE_CONFIG.javascript;
+
+  // 各行の最小カラム位置（インデントの長さ）を計算
+  const minCols = React.useMemo(() => {
+    return initialCode.split("\n").map(line => {
+      const match = line.match(/^(\s*)/);
+      return match ? match[0].length : 0;
+    });
+  }, [initialCode]);
+
   const [lines, setLines] = useState<string[]>(() => {
-    return initialCode.split("\n").map(line => 
-      line.includes("___") ? "" : line
-    );
+    return initialCode.split("\n").map((line, i) => {
+      if (line.includes("___")) {
+        // インデント部分だけを抽出して残す
+        const match = line.match(/^(\s*)/);
+        return match ? match[0] : "";
+      }
+      return line;
+    });
   });
   
   const [cursor, setCursor] = useState(() => {
-    const initLines = initialCode.split("\n").map(line => 
-      line.includes("___") ? "" : line
-    );
+    const initLines = initialCode.split("\n").map(line => {
+      if (line.includes("___")) {
+        const match = line.match(/^(\s*)/);
+        return match ? match[0] : "";
+      }
+      return line;
+    });
     if (!correctCode) return { line: 0, col: 0 };
     
     const correctLines = correctCode.split("\n");
     for (let i = 0; i < initLines.length; i++) {
       if (initLines[i] !== correctLines[i]) {
-        return { line: i, col: 0 };
+        // 最初の虫食い行のインデントの直後にカーソルを置く
+        return { line: i, col: minCols[i] };
       }
     }
     return { line: 0, col: 0 };
@@ -84,9 +213,28 @@ export function MobileCodeEditor({
 
   // Tokenize line for highlighting and processing
   const tokenize = (text: string): string[] => {
-    // Regex to capture strings, comments, decorators, words, numbers, whitespace, symbols
-    const regex = /("[^"\\]*(?:\\.[^"\\]*)*"|'[^']*'|#[^\n]*|\/\/[^\n]*|\/\*.*?\*\/|@[a-zA-Z0-9_]+|[a-zA-Z_][a-zA-Z0-9_]*|\d+|\s+|[^\s\w])/g;
-    return text.match(regex) || [];
+    const commentPrefix = config.commentPrefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    
+    // Build the regex based on language features
+    let commentPattern = `${commentPrefix}[^\\n]*`;
+    if (language === 'javascript' || language === 'typescript' || language === 'java' || language === 'c' || language === 'cpp' || language === 'csharp' || language === 'go' || language === 'rust' || language === 'php' || language === 'kotlin' || language === 'swift') {
+      commentPattern = `(?:\\/\\/[^\\n]*|\\/\\*.*?\\*\\/)`;
+    } else if (language === 'lua' || language === 'sql') {
+      commentPattern = `(?:--\\[\\[.*?\\]\\]|--[^\\n]*)`;
+    } else if (language === 'haskell') {
+      commentPattern = `(?:\\{-.*?-\\}|--[^\\n]*)`;
+    }
+
+    let stringPattern = `"[^"\\\\\\n]*(?:\\\\.[^"\\\\\\n]*)*"|'[^'\\\\\\n]*(?:\\\\.[^'\\\\\\n]*)*'`;
+    if (language === 'javascript' || language === 'typescript' || language === 'go') {
+      stringPattern += "|`[^`\\\\\\n]*(?:\\\\.[^`\\\\\\n]*)*`";
+    }
+    if (language === 'python') {
+      stringPattern += `|"{3}[^"\\\\]*(?:\\\\.[^"\\\\]*)*"{3}|'{3}[^'\\\\]*(?:\\\\.[^'\\\\]*)*'{3}`;
+    }
+
+    const regex = new RegExp(`(${stringPattern}|${commentPattern}|@[a-zA-Z0-9_]+|[a-zA-Z_][a-zA-Z0-9_]*|\\d+|\\s+|[^\\s\\w])`, 'g');
+    return text.split(regex).filter(Boolean);
   };
 
   // Determine color for a token based on context (previous token)
@@ -94,10 +242,11 @@ export function MobileCodeEditor({
     if (!token) return {};
 
     // String
-    if (token.startsWith("\"") || token.startsWith("'")) return { color: COLORS.string };
+    if (token.startsWith("\"") || token.startsWith("'") || token.startsWith("`")) return { color: COLORS.string };
     
     // Comment
-    if (token.startsWith("#") || token.startsWith("//") || token.startsWith("/*")) return { color: COLORS.comment };
+    const isComment = token.startsWith(config.commentPrefix) || token.startsWith("//") || token.startsWith("/*") || token.startsWith("--") || token.startsWith("{-") || token.startsWith(";");
+    if (isComment) return { color: COLORS.comment };
     
     // Decorator
     if (token.startsWith("@")) return { color: COLORS.decorator };
@@ -106,16 +255,18 @@ export function MobileCodeEditor({
     if (/^\d+$/.test(token)) return { color: COLORS.number };
 
     // Keywords & Built-ins
-    if (KEYWORDS.has(token)) return { color: COLORS.keyword };
-    if (BUILTINS.has(token)) return { color: COLORS.builtIn };
+    if (config.keywords.has(token)) return { color: COLORS.keyword };
+    if (config.builtins.has(token)) return { color: COLORS.builtIn };
 
     // Function Definition (prev token was 'def' or 'function')
-    if (prevToken && (prevToken === "def" || prevToken === "function")) {
+    const isFuncDefKeyword = prevToken === "def" || prevToken === "function" || prevToken === "fn" || prevToken === "func";
+    if (prevToken && isFuncDefKeyword) {
       return { color: COLORS.functionDef };
     }
 
     // Default Foreground / Operators / Punctuation
-    if (/[(){}\[\].,]/.test(token)) return { color: COLORS.foreground };
+    if (/[(){}\[\]]/.test(token)) return { color: "#FFD700" }; // Yellow for brackets
+    if (/[.,]/.test(token)) return { color: COLORS.foreground };
     if (/[=+\-*\/\%&|^<>!]/.test(token)) return { color: COLORS.foreground };
 
     return { color: COLORS.foreground };
@@ -130,7 +281,8 @@ export function MobileCodeEditor({
     if (targetLine.trim()) {
       const tokens = tokenize(targetLine);
       const filtered = tokens.filter(t => t.trim().length > 0);
-      const shuffled = [...filtered].sort(() => Math.random() - 0.5);
+      const unique = Array.from(new Set(filtered));
+      const shuffled = [...unique].sort(() => Math.random() - 0.5);
       setSuggestions(shuffled);
     } else {
       setSuggestions([]);
@@ -155,23 +307,32 @@ export function MobileCodeEditor({
       const correctLines = correctCode.split("\n");
       const targetLine = correctLines[cursor.line] || "";
 
-      if (newLineContent.replace(/\s+/g, "") === targetLine.replace(/\s+/g, "")) {
-        const newFullCode = lines.map((l, i) => i === cursor.line ? newLineContent : l).join("\n");
-        if (newFullCode.replace(/\s+/g, "") === correctCode.replace(/\s+/g, "")) {
+      // 正規化した内容で比較
+      if (normalizeCode(newLineContent) === normalizeCode(targetLine)) {
+        // Line completed!
+        
+        // Check if full code is correct (including this new line)
+        const newFullLines = lines.map((l, i) => i === cursor.line ? newLineContent : l);
+        const newFullCode = newFullLines.join("\n");
+        
+        const normalizedFullLines = newFullLines.map(l => normalizeCode(l)).join("\n");
+        const normalizedCorrectFullLines = correctLines.map(l => normalizeCode(l)).join("\n");
+
+        if (normalizedFullLines.trim() === normalizedCorrectFullLines.trim()) {
           onRun?.(newFullCode);
         } else {
           let next = cursor.line + 1;
           while (next < lines.length) {
              const currentVal = lines[next];
              const correctVal = correctLines[next];
-             if (currentVal.replace(/\s+/g, "") !== correctVal.replace(/\s+/g, "")) {
+             if (normalizeCode(currentVal) !== normalizeCode(correctVal)) {
                  break;
              }
              next++;
           }
           if (next < lines.length) {
               nextLine = next;
-              nextCol = 0;
+              nextCol = minCols[next]; // 次の行のインデントの直後に移動
           }
         }
       }
@@ -186,9 +347,11 @@ export function MobileCodeEditor({
   };
 
   const handleDelete = () => {
-    if (cursor.col > 0) {
+    // インデント位置より後ろにカーソルがある場合のみ削除を許可
+    if (cursor.col > minCols[cursor.line]) {
       const currentLine = lines[cursor.line] || "";
       const textBefore = currentLine.slice(0, cursor.col);
+      const textAfter = currentLine.slice(cursor.col);
       let deleteCount = 1;
 
       // 1. Check for complete string literal at the end (e.g. 'Python' or "Hello")
@@ -206,38 +369,41 @@ export function MobileCodeEditor({
           const trailingWord = textBefore.match(/[a-zA-Z0-9_]+$/);
           if (trailingWord) {
             deleteCount = trailingWord[0].length;
+          } else {
+            // 4. Fallback to 1 character
+            deleteCount = 1;
           }
         }
       }
 
+      // インデントを越えて削除しないように調整
+      const newCol = Math.max(minCols[cursor.line], cursor.col - deleteCount);
+      const actualDeleteCount = cursor.col - newCol;
+
       setLines((prev) => {
         const newLines = [...prev];
         const lineContent = newLines[cursor.line] || "";
-        const before = lineContent.slice(0, cursor.col - deleteCount);
-        const after = lineContent.slice(cursor.col);
-        newLines[cursor.line] = before + after;
+        const before = lineContent.slice(0, cursor.col - actualDeleteCount);
+        newLines[cursor.line] = before + textAfter;
         return newLines;
       });
-      setCursor((prev) => ({ ...prev, col: Math.max(0, prev.col - deleteCount) }));
+      setCursor((prev) => ({ ...prev, col: newCol }));
     } else if (cursor.line > 0) {
-      setLines((prev) => {
-        const newLines = [...prev];
-        const currentLine = newLines[cursor.line];
-        const prevLine = newLines[cursor.line - 1];
-        newLines[cursor.line - 1] = prevLine + currentLine;
-        newLines.splice(cursor.line, 1);
-        return newLines;
+      // 前の行へ戻る（インデント位置まで）
+      // ... 既存のロジックを微調整
+      setCursor((prev) => {
+        const prevLineIdx = prev.line - 1;
+        return {
+          line: prevLineIdx,
+          col: lines[prevLineIdx].length,
+        };
       });
-      setCursor((prev) => ({
-        line: prev.line - 1,
-        col: lines[prev.line - 1].length,
-      }));
     }
   };
 
   const moveCursor = (direction: "left" | "right") => {
     if (direction === "left") {
-      if (cursor.col > 0) {
+      if (cursor.col > minCols[cursor.line]) {
         setCursor((prev) => ({ ...prev, col: prev.col - 1 }));
       } else if (cursor.line > 0) {
         setCursor((prev) => ({
@@ -249,7 +415,7 @@ export function MobileCodeEditor({
       if (cursor.col < lines[cursor.line].length) {
         setCursor((prev) => ({ ...prev, col: prev.col + 1 }));
       } else if (cursor.line < lines.length - 1) {
-        setCursor((prev) => ({ line: prev.line + 1, col: 0 }));
+        setCursor((prev) => ({ line: prev.line + 1, col: minCols[prev.line + 1] }));
       }
     }
   };
@@ -259,7 +425,9 @@ export function MobileCodeEditor({
     if (activeLineEl) {
       activeLineEl.scrollIntoView({ block: "nearest", behavior: "smooth" });
     }
-  }, [cursor.line]);
+    // カーソル位置の変更を通知
+    onCursorChange?.(cursor.line, cursor.col);
+  }, [cursor.line, cursor.col, onCursorChange]);
 
   const renderLineContent = (line: string, lineIndex: number) => {
     const tokens = tokenize(line);
@@ -324,7 +492,16 @@ export function MobileCodeEditor({
                            trimmedTarget.startsWith("#") || 
                            trimmedTarget.startsWith("/*") || 
                            trimmedTarget.startsWith("*");
-          const isCorrect = !isComment && targetLine && line.replace(/\s+/g, "") === targetLine.replace(/\s+/g, "");
+          
+          // この行が元々虫食い（___）を含んでいたかどうかを判定
+          // 判定には加工前の initialCode を使用する
+          const originalLines = initialCode.split("\n");
+          const isHoley = originalLines[lineIndex]?.includes("___");
+          
+          // チェックマークを表示する条件：
+          // 1. 元々虫食い行である
+          // 2. 現在の入力内容が（正規化して）正解と一致している
+          const showCheckmark = isHoley && targetLine && normalizeCode(line) === normalizeCode(targetLine);
 
           return (
             <div
@@ -338,7 +515,7 @@ export function MobileCodeEditor({
               onClick={(e) => {
                 e.stopPropagation();
                 if (!isComment) {
-                  setCursor({ line: lineIndex, col: line.length });
+                  setCursor({ line: lineIndex, col: Math.max(minCols[lineIndex], line.length) });
                 }
               }}
             >
@@ -346,7 +523,7 @@ export function MobileCodeEditor({
                 className="w-8 mr-4 flex items-center justify-end shrink-0 select-none"
                 style={{ backgroundColor: COLORS.gutterBackground, color: COLORS.lineNumberForeground }}
               >
-                {isCorrect ? (
+                {showCheckmark ? (
                   <Check className="w-4 h-4 text-green-500" />
                 ) : (
                   <span style={{ color: COLORS.lineNumberForeground }}>{lineIndex + 1}</span>
@@ -368,24 +545,48 @@ export function MobileCodeEditor({
           borderColor: COLORS.buttonBorder
         }}
       >
-        <div className="flex overflow-x-auto gap-1 sm:gap-2 mb-2 scrollbar-hide justify-center items-center min-h-[36px]">
-          {suggestions.map((token, idx) => (
-            <button
-              key={`${token}-${idx}`}
-              onClick={() => handleInsert(token)}
-              style={{
-                backgroundColor: COLORS.buttonBackground,
-                borderColor: COLORS.buttonBorder,
-                ...getTokenStyle(token)
-              }}
-              className="px-2 py-1.5 sm:px-3 sm:py-2 rounded font-mono font-bold whitespace-nowrap border active:scale-95 transition-transform text-xs sm:text-lg lg:text-2xl"
-            >
-              {token}
-            </button>
-          ))}
-          {suggestions.length === 0 && (
-            <span className="text-xs px-2 py-1.5 sm:px-2 sm:py-2" style={{ color: COLORS.comment }}>ヒントはありません</span>
-          )}
+        <div className="flex flex-col gap-1 sm:gap-2 mb-2 w-full max-h-[160px] overflow-y-auto scrollbar-hide p-1">
+          {(() => {
+            if (suggestions.length === 0) {
+              return (
+                <div className="flex justify-center items-center min-h-[36px]">
+                  <span className="text-xs px-2 py-1.5 sm:px-2 sm:py-2" style={{ color: COLORS.comment }}>ヒントはありません</span>
+                </div>
+              );
+            }
+
+            const count = suggestions.length;
+            // 画面幅や個数に応じて行数を決定（簡易的なヒューリスティック）
+            let numRows = 1;
+            if (count > 6) numRows = 2;
+            if (count > 12) numRows = 3;
+            if (count > 20) numRows = 4;
+
+            const itemsPerRow = Math.ceil(count / numRows);
+            const rows = [];
+            for (let i = 0; i < count; i += itemsPerRow) {
+              rows.push(suggestions.slice(i, i + itemsPerRow));
+            }
+
+            return rows.map((row, rowIdx) => (
+              <div key={rowIdx} className="flex flex-wrap gap-1 sm:gap-2 justify-center items-center">
+                {row.map((token, idx) => (
+                  <button
+                    key={`${token}-${rowIdx}-${idx}`}
+                    onClick={() => handleInsert(token)}
+                    style={{
+                      backgroundColor: COLORS.buttonBackground,
+                      borderColor: COLORS.buttonBorder,
+                      ...getTokenStyle(token)
+                    }}
+                    className="px-2 py-1.5 sm:px-3 sm:py-2 rounded font-mono font-bold border active:scale-95 transition-transform text-xs sm:text-lg lg:text-2xl"
+                  >
+                    {token}
+                  </button>
+                ))}
+              </div>
+            ));
+          })()}
         </div>
 
         <div className="grid grid-cols-6 sm:grid-cols-9 lg:grid-cols-18 gap-1 sm:gap-2 mb-2 place-items-center min-h-[32px]">
@@ -435,7 +636,7 @@ export function MobileCodeEditor({
             style={{ borderColor: COLORS.buttonBorder }}
             className="h-9 sm:h-12 bg-red-900/50 hover:bg-red-900/80 text-white border text-sm sm:text-lg lg:text-2xl"
             onClick={handleDelete}
-            disabled={!lines[cursor.line] || lines[cursor.line].length === 0}
+            disabled={cursor.line === 0 && cursor.col <= minCols[0]}
           >
             <Delete className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
           </Button>

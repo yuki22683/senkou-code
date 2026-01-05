@@ -46,17 +46,26 @@ export async function POST(request: NextRequest) {
   } catch (error: any) {
     console.error("Judge0 API Error:", error);
 
-    if (error.code === "ECONNABORTED") {
+    // タイムアウトエラー
+    if (error.code === "ECONNABORTED" || error.message?.includes("timeout")) {
       return NextResponse.json(
-        { error: "実行がタイムアウトしました。再試行してください。" },
+        { error: "実行がタイムアウトしました。サーバーからの応答がありません。" },
         { status: 504 }
+      );
+    }
+
+    // 接続エラー (サーバーがダウンしている等)
+    if (error.code === "ECONNREFUSED" || error.code === "ENOTFOUND") {
+      return NextResponse.json(
+        { error: "実行サーバーに接続できませんでした。しばらく時間をおいてから再試行してください。" },
+        { status: 503 }
       );
     }
 
     if (error.response) {
       return NextResponse.json(
         {
-          error: "Judge0 APIからエラーが返されました",
+          error: error.response.data?.error || "Judge0 APIからエラーが返されました",
           details: error.response.data,
         },
         { status: error.response.status }
@@ -64,7 +73,7 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json(
-      { error: "コードの実行中にエラーが発生しました" },
+      { error: "コードの実行中に予期しないエラーが発生しました" },
       { status: 500 }
     );
   }

@@ -7,6 +7,26 @@ import { ChevronLeft, ChevronRight, Play, ArrowLeft } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import Editor from "@monaco-editor/react";
+
+// 言語IDをMonacoの言語名にマッピング
+const getMonacoLanguage = (lang: string) => {
+      const languageMap: Record<string, string> = {
+        python: "python",
+        javascript: "javascript",
+        java: "java",
+        cpp: "cpp",
+        csharp: "csharp",
+        go: "go",
+        rust: "rust",
+        ruby: "ruby",
+        php: "php",
+        sql: "sql",
+        kotlin: "kotlin",
+        swift: "swift",
+        perl: "perl",
+      };  return languageMap[lang] || "plaintext";
+};
 
 export default function TutorialPage() {
   const params = useParams();
@@ -119,60 +139,71 @@ export default function TutorialPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
-      <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <div className="container mx-auto px-2 py-4 max-w-4xl">
         {/* ヘッダー */}
-        <div className="mb-8">
+        <div className="mb-4 flex items-center gap-2">
           <Button
-            variant="ghost"
+            variant="outline"
+            size="icon"
             onClick={() =>
               router.push(`/lessons/${language}/${lessonId}/exercises`)
             }
-            className="mb-4"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            演習一覧に戻る
+            <ArrowLeft className="w-5 h-5" />
           </Button>
 
-          <div className="bg-white rounded-lg shadow-sm p-6 border">
-            <h1 className="text-2xl font-bold mb-2">{exercise?.title || "読み込み中..."}</h1>
-            <p className="text-gray-600">
-              解説スライド {currentSlide + 1} / {slides.length}
-            </p>
-            <div className="w-full bg-gray-200 rounded-full h-2 mt-4">
-              <div
-                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                style={{
-                  width: `${((currentSlide + 1) / slides.length) * 100}%`,
-                }}
-              />
-            </div>
+          <div className="bg-white rounded-lg shadow-sm p-2 border flex-1">
+            <h1 className="text-lg font-bold">{exercise?.title || "読み込み中..."}</h1>
           </div>
         </div>
 
         {/* スライドコンテンツ */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-8 min-h-[400px] border">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">
+        <div className="bg-white rounded-lg shadow-lg p-4 mb-4 border">
+          <h2 className="text-lg font-bold mb-3 text-gray-800">
             {currentSlideData.title || "タイトルなし"}
           </h2>
 
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-sm max-w-none">
             {typeof currentSlideData.content === 'string' ? (
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
                   // コードブロックのスタイリング
-                  code: ({ node, inline, className, children, ...props }: any) => {
+                  code: ({ node, inline, className, children, style, ...props }: any) => {
                     const match = /language-(\w+)/.exec(className || '');
-                    return !inline ? (
-                      <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-auto text-sm my-4">
-                        <code className={className} {...props}>
+                    const lang = match ? match[1] : language;
+                    const monacoLang = getMonacoLanguage(lang);
+                    const codeString = String(children).replace(/\n$/, '');
+
+                    if (inline) {
+                      return (
+                        <code {...props}>
                           {children}
                         </code>
-                      </pre>
-                    ) : (
-                      <code className="bg-gray-100 text-red-600 px-1 py-0.5 rounded text-sm" {...props}>
-                        {children}
-                      </code>
+                      );
+                    }
+
+                    // ブロックコード
+                    return (
+                      <div className="rounded-lg overflow-hidden my-4">
+                        <Editor
+                          height={`${(codeString.split('\n').length * 19) + 20}px`}
+                          language={monacoLang}
+                          value={codeString}
+                          theme="vs-dark"
+                          options={{
+                            readOnly: true,
+                            minimap: { enabled: false },
+                            scrollbar: { vertical: 'auto', horizontal: 'auto' },
+                            lineNumbers: 'off',
+                            scrollBeyondLastLine: false,
+                            wordWrap: 'off',
+                            fontSize: 14,
+                            padding: { top: 8, bottom: 8 },
+                            tabSize: 2,
+                          }}
+                        />
+                      </div>
                     );
                   },
                   // 見出しのスタイリング（h1は非表示にしてタイトルの重複を避ける）
@@ -183,17 +214,24 @@ export default function TutorialPage() {
                   h3: ({ children }) => (
                     <h3 className="text-lg font-bold mt-4 mb-2">{children}</h3>
                   ),
-                  // リストのスタイリング
+                  // リストのスタイリング（マーカー非表示）
                   ul: ({ children }) => (
-                    <ul className="list-disc list-inside my-4 space-y-2">{children}</ul>
+                    <div className="my-4 space-y-2">{children}</div>
                   ),
                   ol: ({ children }) => (
-                    <ol className="list-decimal list-inside my-4 space-y-2">{children}</ol>
+                    <div className="my-4 space-y-2">{children}</div>
+                  ),
+                  li: ({ children }) => (
+                    <div className="text-gray-700">{children}</div>
                   ),
                   // 段落のスタイリング
                   p: ({ children }) => (
-                    <p className="my-3 leading-relaxed text-gray-700">{children}</p>
+                    <div className="my-0.5 lg:my-3 leading-relaxed text-gray-700">
+                      {children}
+                    </div>
                   ),
+                  // preタグの無効化（コードブロック用）
+                  pre: ({ children }) => <>{children}</>,
                 }}
               >
                 {currentSlideData.content}
@@ -205,10 +243,24 @@ export default function TutorialPage() {
             )}
 
             {currentSlideData.code && (
-              <div className="mt-6">
-                <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-auto text-sm">
-                  {currentSlideData.code}
-                </pre>
+              <div className="mt-6 rounded-lg overflow-hidden">
+                <Editor
+                  height={`${(currentSlideData.code.split('\n').length * 19) + 20}px`}
+                  language={getMonacoLanguage(language)}
+                  value={currentSlideData.code}
+                  theme="vs-dark"
+                  options={{
+                    readOnly: true,
+                    minimap: { enabled: false },
+                    scrollbar: { vertical: 'auto', horizontal: 'auto' },
+                    lineNumbers: 'off',
+                    scrollBeyondLastLine: false,
+                    wordWrap: 'off',
+                    fontSize: 14,
+                    padding: { top: 8, bottom: 8 },
+                    tabSize: 2,
+                  }}
+                />
               </div>
             )}
           </div>

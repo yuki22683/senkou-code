@@ -21,9 +21,22 @@ import {
   MoreVertical,
   AlertCircle,
   CheckCircle2,
+  MoreHorizontal,
+  FileCode,
+  Undo2,
+  Flag,
+  LogOut,
+  ArrowLeft,
 } from "lucide-react";
 import axios from "axios";
 import { createClient } from "@/lib/supabase/client";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function ExercisePage() {
   const params = useParams();
@@ -40,9 +53,17 @@ export default function ExercisePage() {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
+  const [correctOutput, setCorrectOutput] = useState("");
+  const [correctError, setCorrectError] = useState("");
+  const [isCorrectRunning, setIsCorrectRunning] = useState(false);
+  const [activeTab, setActiveTab] = useState("console");
+  const [currentLine, setCurrentLine] = useState(0);
   const [showHintDialog, setShowHintDialog] = useState(false);
   const [showAnswerDialog, setShowAnswerDialog] = useState(false);
   const [showCompleteDialog, setShowCompleteDialog] = useState(false);
+  const [showFeedbackDialog, setShowFeedbackDialog] = useState(false);
+  const [feedbackMessage, setFeedbackMessage] = useState("");
+  const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false);
   const [editorKey, setEditorKey] = useState(0);
   const [showNextButton, setShowNextButton] = useState(false);
   const mainContentRef = useRef<HTMLDivElement>(null);
@@ -89,44 +110,174 @@ export default function ExercisePage() {
   async function handleRunCode(codeOverride?: string) {
     if (!exercise) return;
 
-    setIsRunning(true);
-    setOutput("");
-    setError("");
+    const isExampleMode = activeTab === "examples";
+    const sourceCode = isExampleMode
+      ? exercise.correct_code
+      : typeof codeOverride === "string"
+      ? codeOverride
+      : code;
+
+    if (isExampleMode) {
+      setIsCorrectRunning(true);
+      setCorrectOutput("");
+      setCorrectError("");
+    } else {
+      setIsRunning(true);
+      setOutput("");
+      setError("");
+    }
 
     try {
       const response = await axios.post("/api/judge", {
-        source_code: typeof codeOverride === 'string' ? codeOverride : code,
+        source_code: sourceCode,
         language_id: exercise.language_id,
         stdin: exercise.test_input || "",
+      }, {
+        timeout: 40000 // フロントエンド側でも40秒でタイムアウト
       });
 
       const result = response.data;
 
       if (result.stderr) {
-        setError(result.stderr);
-      } else if (result.compile_output) {
-        setError(result.compile_output);
-      } else {
-        setOutput(result.stdout || "実行完了（出力なし）");
+        // エラー内容をクリーンアップ
+        const stderr = result.stderr;
+        const errorLines = stderr.split("\n");
+        const lineMatches = Array.from(stderr.matchAll(/line (\d+)/g)) as RegExpMatchArray[];
+        let lineNo = lineMatches.length > 0 ? lineMatches[lineMatches.length - 1][1] : null;
 
-        // 正解チェック
-        if (
-          exercise.expected_output &&
-          result.stdout?.trim() === exercise.expected_output.trim()
-        ) {
-          // コンソールが表示されてから5秒後に正解演出を表示
-          setTimeout(async () => {
-            await handleComplete();
-          }, 5000);
+        const errorContent = errorLines
+          .filter((l: string) => {
+            const t = l.trim();
+            return (
+              t !== "" &&
+              t !== "^" &&
+              !t.startsWith('File "') &&
+              !/^line \d+$/.test(t) &&
+              !t.includes("Traceback (most recent call last):")
+            );
+          })
+          .pop()
+          ?.trim();
+
+        let displayError = errorContent || stderr;
+        const totalLines = sourceCode.trimEnd().split("\n").length;
+        if (lineNo && parseInt(lineNo) > totalLines) {
+          lineNo = totalLines.toString();
+        }
+
+        if (lineNo) {
+          displayError = `line ${lineNo}: ${displayError}`;
+        }
+
+        if (isExampleMode) {
+          setCorrectError(displayError);
+        } else {
+          setError(displayError);
+        }
+      } else if (result.compile_output) {
+        if (isExampleMode) {
+          setCorrectError(result.compile_output);
+        } else {
+          setError(result.compile_output);
+        }
+      } else {
+        const stdout = result.stdout || "実行完了（出力なし）";
+        if (isExampleMode) {
+          setCorrectOutput(stdout);
+        } else {
+          setOutput(stdout);
+
+          // 正解チェック
+          if (
+            exercise.expected_output &&
+            result.stdout?.trim() === exercise.expected_output.trim()
+          ) {
+            setTimeout(async () => {
+              await handleComplete();
+            }, 2000);
+          }
         }
       }
     } catch (err: any) {
       console.error("Run code error:", err);
-      setError(
-        err.response?.data?.error || "コードの実行中にエラーが発生しました"
-      );
+      
+      let errorMsg = "コードの実行中にエラーが発生しました";
+      
+      if (err.code === "ECONNABORTED" || err.message?.includes("timeout")) {
+        errorMsg = "実行がタイムアウトしました。サーバーからの応答がありません。";
+      } else if (err.response?.data?.error) {
+        errorMsg = err.response.data.error;
+      } else if (err.message) {
+        errorMsg = err.message;
+      }
+
+      if (isExampleMode) {
+        setCorrectError(errorMsg);
+      } else {
+        setError(errorMsg);
+      }
     } finally {
-      setIsRunning(false);
+      if (isExampleMode) {
+        setIsCorrectRunning(false);
+      } else {
+        setIsRunning(false);
+      }
+    }
+  }
+
+  async function handleShowAnswer() {
+    setShowAnswerDialog(true);
+    
+    // ヒント使用として進捗を保存
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) {
+      await supabase.from("user_progress").upsert({
+        user_id: user.id,
+        exercise_id: exerciseId,
+        status: "hint_used",
+        updated_at: new Date().toISOString(),
+      });
+    }
+  }
+
+  async function handleInterruptLesson() {
+    // 現在の進捗を保存して一覧へ戻る
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) {
+      await supabase.from("user_progress").upsert({
+        user_id: user.id,
+        exercise_id: exerciseId,
+        status: "in_progress",
+        current_code: code,
+        updated_at: new Date().toISOString(),
+      });
+    }
+    router.push(`/lessons/${language}/${lessonId}/exercises`);
+  }
+
+  async function handleSubmitFeedback() {
+    if (!feedbackMessage.trim()) return;
+
+    setIsSubmittingFeedback(true);
+    try {
+      const { data: { user } } = await supabase.auth.getUser();
+      const { error } = await supabase.from("feedback").insert({
+        user_id: user?.id || null,
+        exercise_id: exerciseId,
+        type: "improvement",
+        message: feedbackMessage,
+      });
+
+      if (error) throw error;
+
+      alert("報告ありがとうございます。フィードバックを送信しました。");
+      setFeedbackMessage("");
+      setShowFeedbackDialog(false);
+    } catch (err) {
+      console.error("Feedback error:", err);
+      alert("送信に失敗しました。もう一度お試しください。");
+    } finally {
+      setIsSubmittingFeedback(false);
     }
   }
 
@@ -148,9 +299,17 @@ export default function ExercisePage() {
   }
 
   function handleReset() {
-    setCode(exercise?.starter_code || exercise?.holey_code || "");
+    let initialCode = "";
+    if (exercise?.initial_display_mode === 'editable') {
+      initialCode = exercise.starter_code || "";
+    } else {
+      initialCode = exercise?.holey_code || exercise?.starter_code || "";
+    }
+    setCode(initialCode);
     setOutput("");
     setError("");
+    setCorrectOutput("");
+    setCorrectError("");
     setEditorKey((prev) => prev + 1);
   }
 
@@ -210,19 +369,22 @@ export default function ExercisePage() {
         {/* ヘッダー */}
         <div className="bg-white border-b px-6 flex items-center justify-between flex-shrink-0" style={{ height: '60px' }}>
           <div className="flex items-center space-x-4">
+            <Button
+              variant="outline"
+              size="icon"
+              className="h-8 w-8"
+              onClick={() =>
+                router.push(`/lessons/${language}/${lessonId}/exercises`)
+              }
+            >
+              <ArrowLeft className="w-4 h-4" />
+            </Button>
             <h1 className="text-xl font-bold">{exercise.title}</h1>
             <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">
               {exercise.difficulty === "easy" && "初級"}
               {exercise.difficulty === "medium" && "中級"}
               {exercise.difficulty === "hard" && "上級"}
             </span>
-          </div>
-
-          <div className="flex items-center space-x-2">
-            <Button variant="ghost" size="sm" onClick={handleReset}>
-              <RotateCcw className="w-4 h-4 mr-2" />
-              リセット
-            </Button>
           </div>
         </div>
 
@@ -241,9 +403,39 @@ export default function ExercisePage() {
             {/* エディタ */}
             <div className="order-2 flex flex-col min-h-[700px] lg:min-h-0 lg:h-full">
               <div className="bg-white rounded-t-lg border border-b-0 p-3 flex items-center justify-between flex-shrink-0" style={{ height: '50px' }}>
-                <span className="font-medium text-sm">
-                  main.{exercise.file_extension || "txt"}
-                </span>
+                <div className="flex items-center gap-2">
+                  <FileCode className="w-4 h-4 text-gray-500" />
+                  <span className="font-medium text-sm">
+                    main.{exercise.file_extension || "txt"}
+                  </span>
+                </div>
+
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="ghost" size="icon" className="h-8 w-8">
+                      <MoreHorizontal className="w-5 h-5" />
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="end" className="w-56">
+                    <DropdownMenuItem onClick={handleShowAnswer} className="cursor-pointer">
+                      <CheckCircle2 className="mr-2 h-4 w-4 text-green-600" />
+                      <span>答えを見る</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={handleReset} className="cursor-pointer">
+                      <Undo2 className="mr-2 h-4 w-4 text-blue-600" />
+                      <span>コードをリセット</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem onClick={() => setShowFeedbackDialog(true)} className="cursor-pointer text-orange-600">
+                      <Flag className="mr-2 h-4 w-4" />
+                      <span>問題を報告</span>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={handleInterruptLesson} className="cursor-pointer text-red-600">
+                      <LogOut className="mr-2 h-4 w-4" />
+                      <span>レッスンを中断する</span>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
               <div className="bg-white border rounded-b-lg overflow-hidden flex-1">
                 <MobileCodeEditor
@@ -257,6 +449,7 @@ export default function ExercisePage() {
                   language={language}
                   onChange={(value) => setCode(value || "")}
                   onRun={handleRunCode}
+                  onCursorChange={(line) => setCurrentLine(line)}
                 />
               </div>
             </div>
@@ -278,28 +471,21 @@ export default function ExercisePage() {
                     output={output}
                     error={error}
                     isLoading={isRunning}
-                    testCases={
-                      exercise.test_cases
-                        ? typeof exercise.test_cases === 'string'
-                          ? JSON.parse(exercise.test_cases)
-                          : exercise.test_cases
-                        : [
-                            {
-                              input: exercise.test_input || "",
-                              expectedOutput: exercise.expected_output || "",
-                            },
-                          ]
-                    }
+                    correctOutput={correctOutput}
+                    correctError={correctError}
+                    isCorrectLoading={isCorrectRunning}
+                    activeTab={activeTab}
+                    onTabChange={setActiveTab}
                   />
                 </div>
 
-                {/* コンソール下部のボタン（常に表示） */}
-                <div className="bg-white border border-t-0 rounded-b-lg p-3 flex items-center justify-between gap-2 flex-shrink-0">
-                  <div className="flex gap-2">
+                {/* コンソール下部のボタン */}
+                <div className="bg-white border border-t-0 rounded-b-lg p-3">
+                  <div className="flex items-center gap-2 w-full">
                     <Button
                       variant="outline"
                       size="sm"
-                      className="text-base"
+                      className="text-base flex-1"
                       onClick={() =>
                         router.push(
                           `/lessons/${language}/${lessonId}/exercises/${exerciseId}/tutorial`
@@ -312,20 +498,18 @@ export default function ExercisePage() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="text-base"
+                      className="text-base flex-1"
                       onClick={() => setShowHintDialog(true)}
+                      disabled={!exercise.hints || !exercise.hints[currentLine]}
                     >
                       <Lightbulb className="w-5 h-5 lg:mr-2" />
                       <span className="hidden lg:inline">ヒント</span>
                     </Button>
-                  </div>
-
-                  <div className="flex gap-2">
                     {showNextButton && (
                       <Button
                         onClick={handleNextExercise}
                         size="sm"
-                        className="text-base"
+                        className="text-base flex-1"
                       >
                         次の演習へ
                       </Button>
@@ -333,7 +517,7 @@ export default function ExercisePage() {
                     <Button
                       onClick={() => handleRunCode()}
                       disabled={isRunning}
-                      className="bg-green-600 hover:bg-green-700 text-white text-base"
+                      className="bg-green-600 hover:bg-green-700 text-white text-base flex-1"
                       size="sm"
                     >
                       <Play className="w-5 h-5 mr-2" />
@@ -358,7 +542,9 @@ export default function ExercisePage() {
           </DialogHeader>
           <div className="py-4">
             <p className="text-gray-700 whitespace-pre-wrap">
-              {exercise.hint || "この演習にはヒントがありません"}
+              {exercise.hints && exercise.hints[currentLine]
+                ? exercise.hints[currentLine]
+                : "この行にはヒントがありません"}
             </p>
           </div>
           <DialogFooter>
@@ -407,6 +593,38 @@ export default function ExercisePage() {
               演習を続ける
             </Button>
             <Button onClick={handleNextExercise}>次の演習へ</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* 問題を報告ダイアログ */}
+      <Dialog open={showFeedbackDialog} onOpenChange={setShowFeedbackDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>問題を報告する</DialogTitle>
+            <DialogDescription>
+              演習内容の不備や、使いにくい点などがあれば教えてください。
+            </DialogDescription>
+          </DialogHeader>
+          <div className="py-4">
+            <textarea
+              className="w-full h-32 p-3 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="こちらに内容を入力してください..."
+              value={feedbackMessage}
+              onChange={(e) => setFeedbackMessage(e.target.value)}
+            />
+          </div>
+          <DialogFooter className="gap-2">
+            <Button variant="outline" onClick={() => setShowFeedbackDialog(false)}>
+              キャンセル
+            </Button>
+            <Button 
+              onClick={handleSubmitFeedback} 
+              disabled={isSubmittingFeedback || !feedbackMessage.trim()}
+              className="bg-blue-600 hover:bg-blue-700"
+            >
+              {isSubmittingFeedback ? "送信中..." : "送信する"}
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

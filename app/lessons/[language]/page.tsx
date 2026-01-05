@@ -1,10 +1,11 @@
 import { createClient } from "@/lib/supabase/server";
 import { LessonCard } from "@/components/lessons/LessonCard";
-import { getLanguageById } from "@/data/languages";
+import { getLanguageById, LANGUAGE_COLORS } from "@/data/languages";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 interface PageProps {
   params: Promise<{
@@ -20,6 +21,7 @@ export default async function LessonsPage({ params }: PageProps) {
     redirect('/');
   }
 
+  const colorClass = LANGUAGE_COLORS[language] || 'bg-gray-50 border-gray-200';
   const supabase = await createClient();
 
   // レッスン一覧を取得
@@ -82,8 +84,15 @@ export default async function LessonsPage({ params }: PageProps) {
           </Button>
 
           <div className="flex items-center space-x-4 mb-4">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center text-white font-bold text-2xl">
-              {languageInfo.name[0]}
+            <div className={`w-16 h-16 shadow-md rounded-full flex items-center justify-center p-3 border ${colorClass.split(' ').filter(c => !c.startsWith('hover')).join(' ')}`}>
+              <div className="relative w-full h-full">
+                <Image 
+                  src={languageInfo.icon} 
+                  alt={languageInfo.name}
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
             <div>
               <h1 className="text-3xl font-bold">{languageInfo.name} レッスン</h1>

@@ -35,6 +35,10 @@ export function CodeEditor({
       rust: "rust",
       ruby: "ruby",
       php: "php",
+      sql: "sql",
+      kotlin: "kotlin",
+      swift: "swift",
+      perl: "perl",
     };
     return languageMap[lang] || "plaintext";
   };

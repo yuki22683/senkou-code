@@ -1,0 +1,79 @@
+import fs from 'fs';
+
+const BQ = "`";
+
+const data = [
+  {
+    "language": "python",
+    "lessonId": "python-1",
+    "lessonTitle": "Python I",
+    "lessonDescription": "Pythonの基本的な文法を学びます。変数、リスト、条件分岐、ループ、関数など、プログラミングの根幹となる概念を習得しましょう。",
+    "lessonDifficulty": "easy",
+    "lessonOrder": 1,
+    "exercises": [
+      {
+        "title": "Hello Worldを出力しよう",
+        "description": "Pythonプログラミングの第一歩として、画面に「Hello, World!」という文字を表示させる方法を学びましょう。print関数を使って Hello, World! と表示するプログラムを作りましょう。",
+        "difficulty": "easy",
+        "orderIndex": 1,
+        "tutorialSlides": [
+          { "title": "文字を出力する", "content": "# print()\n\nPythonで文字を表示するには `print()` 関数を使います。括弧の中に表示したい文字を入れます。" }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "print('Hello, World!')",
+        "holeyCode": "print('___')",
+        "correctLines": ["print('Hello, World!')"],
+        "lineHints": ["print('Hello, World!') と記述してください。"],
+        "candidates": { "functions": ["print"], "strings": ["Hello, World!"] },
+        "testCases": [{ "input": "", "expected_output": "Hello, World!\n" }]
+      }
+      // Pythonの残りの9演習は省略（既に存在するため）
+    ]
+  },
+  {
+    "language": "javascript",
+    "lessonId": "javascript-1",
+    "lessonTitle": "JavaScript I",
+    "lessonDescription": "Web開発の必須言語、JavaScriptの基本を学びます。console.log、変数、条件分岐、関数などを習得しましょう。",
+    "lessonDifficulty": "easy",
+    "lessonOrder": 1,
+    "exercises": [
+      {
+        "title": "Hello Worldを出力しよう",
+        "description": "JavaScriptの第一歩として、コンソールに文字を表示する方法を学びましょう。console.log を使って Hello, JavaScript! と表示するプログラムを作りましょう。",
+        "difficulty": "easy",
+        "orderIndex": 1,
+        "tutorialSlides": [
+          { "title": "コンソールに出力する", "content": "# console.log()\n\nJavaScriptで文字を表示するには `console.log()` を使います。文の終わりには `;` （セミコロン）を付けます。" }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "console.log('Hello, JavaScript!');",
+        "holeyCode": "console.log('___');",
+        "correctLines": ["console.log('Hello, JavaScript!');"],
+        "lineHints": ["console.log を使い、最後はセミコロン(;)で締めます。"],
+        "candidates": { "functions": ["console.log"], "strings": ["Hello, JavaScript!"] },
+        "testCases": [{ "input": "", "expected_output": "Hello, JavaScript!\n" }]
+      },
+      {
+        "title": "関数の定義",
+        "description": "挨拶を表示する関数 hello を定義し、中身で Hello! と表示させ、最後にその関数を呼び出して実行するプログラムを作りましょう。",
+        "difficulty": "easy",
+        "orderIndex": 10,
+        "tutorialSlides": [
+          { "title": "関数", "content": "# アロー関数\n\n```javascript\nconst greet = () => {\n    console.log('Hi');\n};\ngreet();\n```" }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "const hello = () => {\n    console.log('Hello!');\n};\n\nhello();",
+        "holeyCode": "const ___ = () => {\n    console.log('___');\n};\n\n___();",
+        "correctLines": ["const hello = () => {", "    console.log('Hello!');", "};", "", "hello();"],
+        "lineHints": ["const hello = () => { と定義を開始します。", "console.log('Hello!'); と記述します。", null, null, "hello(); と呼び出します。"],
+        "candidates": { "functions": ["hello", "console.log"], "strings": ["Hello!"] },
+        "testCases": [{ "input": "", "expected_output": "Hello!\n" }]
+      }
+    ]
+  }
+  // 他の言語も同様の形式で追加...
+];
+
+fs.writeFileSync('data/sample-exercises.json', JSON.stringify(data, null, 2));
+console.log('Successfully generated data/sample-exercises.json');

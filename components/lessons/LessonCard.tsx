@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Lesson } from "@/types/database";
 import { BookOpen, CheckCircle2 } from "lucide-react";
+import { LANGUAGE_COLORS } from "@/data/languages";
 
 interface LessonCardProps {
   lesson: Lesson;
@@ -14,6 +15,7 @@ interface LessonCardProps {
 
 export function LessonCard({ lesson, language, progressCount = 0, totalExercises = 0 }: LessonCardProps) {
   const progressPercent = totalExercises > 0 ? Math.round((progressCount / totalExercises) * 100) : 0;
+  const colorClass = LANGUAGE_COLORS[language] || 'bg-gray-50 border-gray-200';
 
   const difficultyColor = {
     easy: 'bg-green-100 text-green-700',
@@ -23,7 +25,7 @@ export function LessonCard({ lesson, language, progressCount = 0, totalExercises
 
   return (
     <Link href={`/lessons/${language}/${lesson.id}/exercises`}>
-      <Card className="transition-all hover:shadow-lg hover:scale-105 cursor-pointer">
+      <Card className={`transition-all hover:shadow-lg hover:scale-105 cursor-pointer border-2 ${colorClass}`}>
         <CardHeader>
           <div className="flex items-start justify-between">
             <div className="flex items-center space-x-2">

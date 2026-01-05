@@ -62,7 +62,7 @@ export interface Exercise {
   correct_lines: string[];
   candidates: Candidates;
   test_cases: TestCase[];
-  hints: Hint[];
+  hints: (string | null)[];
   language_id: number;
   file_extension: string;
   test_input: string | null;

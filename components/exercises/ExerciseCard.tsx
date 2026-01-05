@@ -52,24 +52,13 @@ export function ExerciseCard({ exercise, language, lessonId, progress }: Exercis
         <CardContent>
           <div className="flex items-center justify-between text-sm">
             {isCompleted ? (
-              <div className="flex items-center space-x-2 text-green-600">
-                <CheckCircle2 className="w-4 h-4" />
-                <span className="font-medium">完了</span>
-              </div>
+              null
             ) : isInProgress ? (
               <div className="flex items-center space-x-2 text-blue-600">
                 <PlayCircle className="w-4 h-4" />
                 <span className="font-medium">進行中</span>
               </div>
-            ) : (
-              <div className="text-muted-foreground">未開始</div>
-            )}
-
-            {exercise.hints && exercise.hints.length > 0 && (
-              <div className="text-xs text-muted-foreground">
-                ヒント {exercise.hints.length}個
-              </div>
-            )}
+            ) : null}
           </div>
 
           {progress?.completed_at && (

@@ -1,46 +1,38 @@
 [
   {
     "language": "python",
-    "lessonId": "beginner-basics",
-    "lessonTitle": "Python 基礎",
-    "lessonDescription": "Pythonの基本的な文法を学びます",
+    "lessonId": "python-1",
+    "lessonTitle": "Python I",
+    "lessonDescription": "Pythonの基本的な文法を学びます。変数、リスト、条件分岐、ループ、関数など、プログラミングの根幹となる概念を習得しましょう。",
     "lessonDifficulty": "easy",
     "lessonOrder": 1,
     "exercises": [
       {
         "title": "Hello Worldを出力しよう",
-        "description": "print関数を使って「Hello, World!」を出力する演習です",
+        "description": "Pythonプログラミングの第一歩として、画面に「Hello, World!」という文字を表示させる方法を学びましょう。print関数を使って Hello, World! と表示するプログラムを作りましょう。",
         "difficulty": "easy",
         "orderIndex": 1,
         "tutorialSlides": [
           {
-            "title": "print関数とは",
-            "content": "# print関数\n\nPythonで画面に文字を表示するには`print()`関数を使います。\n\n```python\nprint('Hello')\n```\n\n括弧の中に表示したい文字を入れます。"
-          },
-          {
-            "title": "文字列の書き方",
-            "content": "# 文字列\n\n文字列は`' '`（シングルクォート）または`\"`（ダブルクォート）で囲みます。\n\n```python\nprint('こんにちは')\nprint(\"Hello\")\n```\n\nどちらを使っても同じ結果になります。"
-          },
-          {
-            "title": "演習の目標",
-            "content": "# 目標\n\n`print()`関数を使って「Hello, World!」と表示してみましょう。\n\n正解例：\n```python\nprint('Hello, World!')\n```"
+            "title": "文字を出力する",
+            "content": "# print()\n\nPythonで文字を表示するには `print()` 関数を使います。括弧の中に表示したい文字を入れます。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# \"Hello, World!\"と出力\nprint('Hello, World!')",
-        "holeyCode": "# \"Hello, World!\"と出力\nprint('___')",
+        "correctCode": "print('Hello, World!')",
+        "holeyCode": "print('___')",
         "correctLines": [
-          "# \"Hello, World!\"と出力",
           "print('Hello, World!')"
+        ],
+        "lineHints": [
+          "print('Hello, World!') と記述してください。"
         ],
         "candidates": {
           "functions": [
             "print"
           ],
           "strings": [
-            "Hello, World!",
-            "Hello",
-            "World"
+            "Hello, World!"
           ]
         },
         "testCases": [
@@ -48,181 +40,44 @@
             "input": "",
             "expected_output": "Hello, World!\n"
           }
-        ],
-        "hints": [
-          {
-            "level": 1,
-            "content": "print関数の中に文字列を入れます"
-          },
-          {
-            "level": 2,
-            "content": "「Hello, World!」という文字列を入れます"
-          },
-          {
-            "level": 3,
-            "content": "答え: print('Hello, World!')"
-          }
-        ]
-      },
-      {
-        "title": "変数を使ってみよう",
-        "description": "変数に値を代入して表示する演習です",
-        "difficulty": "easy",
-        "orderIndex": 2,
-        "tutorialSlides": [
-          {
-            "title": "変数とは",
-            "content": "# 変数\n\n変数はデータを入れる箱のようなものです。\n\n```python\nname = 'Alice'\nprint(name)\n```\n\n`=`を使って変数に値を代入します。"
-          },
-          {
-            "title": "変数の使い方",
-            "content": "# 変数を使う\n\n変数を作った後は、その名前を使って値を取り出せます。\n\n```python\nmessage = 'こんにちは'\nprint(message)\n```"
-          }
-        ],
-        "initialDisplayMode": "editable",
-        "correctCode": "# 変数nameに'Python'を代入\nname = 'Python'\n# 変数nameを出力\nprint(name)",
-        "holeyCode": "# 変数nameに'Python'を代入\nname = '___'\n# 変数nameを出力\nprint(___)",
-        "correctLines": [
-          "# 変数nameに'Python'を代入",
-          "name = 'Python'",
-          "# 変数nameを出力",
-          "print(name)"
-        ],
-        "candidates": {
-          "variables": [
-            "name",
-            "message",
-            "text"
-          ],
-          "functions": [
-            "print"
-          ],
-          "strings": [
-            "Python",
-            "Hello",
-            "World"
-          ]
-        },
-        "testCases": [
-          {
-            "input": "",
-            "expected_output": "Python\n"
-          }
-        ],
-        "hints": [
-          {
-            "level": 1,
-            "content": "変数nameに文字列を代入します"
-          },
-          {
-            "level": 2,
-            "content": "name = 'Python' と print(name) を書きます"
-          }
-        ]
-      },
-      {
-        "title": "数値の計算",
-        "description": "数値を使って簡単な計算をする演習です",
-        "difficulty": "easy",
-        "orderIndex": 3,
-        "tutorialSlides": [
-          {
-            "title": "数値の計算",
-            "content": "# 計算\n\nPythonでは数値を使って計算ができます。\n\n```python\nprint(5 + 3)\nprint(10 - 2)\nprint(4 * 2)\n```"
-          },
-          {
-            "title": "演算子",
-            "content": "# 演算子\n\n- `+` : 足し算\n- `-` : 引き算\n- `*` : 掛け算\n- `/` : 割り算\n\n```python\nresult = 5 + 3\nprint(result)  # 8\n```"
-          }
-        ],
-        "correctCode": "# xに10を代入\nx = 10\n# yに5を代入\ny = 5\n# x + y を出力\nprint(x + y)",
-        "holeyCode": "# xに10を代入\nx = ___\n# yに5を代入\ny = ___\n# x + y を出力\nprint(x ___ y)",
-        "correctLines": [
-          "# xに10を代入",
-          "x = 10",
-          "# yに5を代入",
-          "y = 5",
-          "# x + y を出力",
-          "print(x + y)"
-        ],
-        "candidates": {
-          "variables": [
-            "x",
-            "y",
-            "result"
-          ],
-          "functions": [
-            "print"
-          ],
-          "numbers": [
-            "10",
-            "5",
-            "3",
-            "2"
-          ],
-          "operators": [
-            "+",
-            "-",
-            "*",
-            "/"
-          ]
-        },
-        "testCases": [
-          {
-            "input": "",
-            "expected_output": "15\n"
-          }
-        ],
-        "hints": [
-          {
-            "level": 1,
-            "content": "xに10、yに5を代入します"
-          },
-          {
-            "level": 2,
-            "content": "x + y を計算して表示します"
-          }
         ]
       }
     ]
   },
   {
     "language": "javascript",
-    "lessonId": "beginner-basics",
-    "lessonTitle": "JavaScript 基礎",
-    "lessonDescription": "JavaScriptの基本的な文法を学びます",
+    "lessonId": "javascript-1",
+    "lessonTitle": "JavaScript I",
+    "lessonDescription": "Web開発の必須言語、JavaScriptの基本を学びます。console.log、変数、条件分岐、関数などを習得しましょう。",
     "lessonDifficulty": "easy",
     "lessonOrder": 1,
     "exercises": [
       {
-        "title": "console.logで出力しよう",
-        "description": "console.logを使って文字列を出力する演習です",
+        "title": "Hello Worldを出力しよう",
+        "description": "JavaScriptの第一歩として、コンソールに文字を表示する方法を学びましょう。console.log を使って Hello, JavaScript! と表示するプログラムを作りましょう。",
         "difficulty": "easy",
         "orderIndex": 1,
         "tutorialSlides": [
           {
-            "title": "console.logとは",
-            "content": "# console.log\n\nJavaScriptで画面に文字を表示するには`console.log()`を使います。\n\n```javascript\nconsole.log('Hello');\n```"
-          },
-          {
-            "title": "文字列の書き方",
-            "content": "# 文字列\n\n文字列は`' '`または`\"`で囲みます。文の最後に`;`（セミコロン）を付けます。\n\n```javascript\nconsole.log('こんにちは');\nconsole.log(\"Hello\");\n```"
+            "title": "コンソールに出力する",
+            "content": "# console.log()\n\nJavaScriptで文字を表示するには `console.log()` を使います。文の終わりには `;` （セミコロン）を付けます。"
           }
         ],
-        "correctCode": "// \"Hello, JavaScript!\"と出力\nconsole.log('Hello, JavaScript!');",
-        "holeyCode": "// \"Hello, JavaScript!\"と出力\nconsole.log('___');",
+        "initialDisplayMode": "holey",
+        "correctCode": "console.log('Hello, JavaScript!');",
+        "holeyCode": "console.log('___');",
         "correctLines": [
-          "// \"Hello, JavaScript!\"と出力",
           "console.log('Hello, JavaScript!');"
+        ],
+        "lineHints": [
+          "console.log を使い、最後はセミコロン(;)で締めます。"
         ],
         "candidates": {
           "functions": [
             "console.log"
           ],
           "strings": [
-            "Hello, JavaScript!",
-            "Hello",
-            "JavaScript"
+            "Hello, JavaScript!"
           ]
         },
         "testCases": [
@@ -230,15 +85,49 @@
             "input": "",
             "expected_output": "Hello, JavaScript!\n"
           }
+        ]
+      },
+      {
+        "title": "関数の定義",
+        "description": "挨拶を表示する関数 hello を定義し、中身で Hello! と表示させ、最後にその関数を呼び出して実行するプログラムを作りましょう。",
+        "difficulty": "easy",
+        "orderIndex": 10,
+        "tutorialSlides": [
+          {
+            "title": "関数",
+            "content": "# アロー関数\n\n```javascript\nconst greet = () => {\n    console.log('Hi');\n};\ngreet();\n```"
+          }
         ],
-        "hints": [
+        "initialDisplayMode": "holey",
+        "correctCode": "const hello = () => {\n    console.log('Hello!');\n};\n\nhello();",
+        "holeyCode": "const ___ = () => {\n    console.log('___');\n};\n\n___();",
+        "correctLines": [
+          "const hello = () => {",
+          "    console.log('Hello!');",
+          "};",
+          "",
+          "hello();"
+        ],
+        "lineHints": [
+          "const hello = () => { と定義を開始します。",
+          "console.log('Hello!'); と記述します。",
+          null,
+          null,
+          "hello(); と呼び出します。"
+        ],
+        "candidates": {
+          "functions": [
+            "hello",
+            "console.log"
+          ],
+          "strings": [
+            "Hello!"
+          ]
+        },
+        "testCases": [
           {
-            "level": 1,
-            "content": "console.logの中に文字列を入れます"
-          },
-          {
-            "level": 2,
-            "content": "答え: console.log('Hello, JavaScript!');"
+            "input": "",
+            "expected_output": "Hello!\n"
           }
         ]
       }
