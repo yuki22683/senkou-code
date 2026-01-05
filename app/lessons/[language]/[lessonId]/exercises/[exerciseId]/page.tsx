@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { MobileCodeEditor } from "@/components/exercise/MobileCodeEditor";
 import { ConsolePanel } from "@/components/exercise/ConsolePanel";
@@ -44,10 +44,26 @@ export default function ExercisePage() {
   const [showAnswerDialog, setShowAnswerDialog] = useState(false);
   const [showCompleteDialog, setShowCompleteDialog] = useState(false);
   const [editorKey, setEditorKey] = useState(0);
+  const [showNextButton, setShowNextButton] = useState(false);
+  const mainContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     loadExercise();
   }, [exerciseId]);
+
+  useEffect(() => {
+    // スマホ表示の時のみ、output/errorが更新されたら一番下にスクロール
+    if ((output || error) && mainContentRef.current) {
+      const isMobile = window.innerWidth < 1024; // lg breakpoint
+      if (isMobile) {
+        setTimeout(() => {
+          if (mainContentRef.current) {
+            mainContentRef.current.scrollTop = mainContentRef.current.scrollHeight;
+          }
+        }, 100);
+      }
+    }
+  }, [output, error]);
 
   async function loadExercise() {
     setIsLoading(true);
@@ -98,7 +114,10 @@ export default function ExercisePage() {
           exercise.expected_output &&
           result.stdout?.trim() === exercise.expected_output.trim()
         ) {
-          await handleComplete();
+          // コンソールが表示されてから5秒後に正解演出を表示
+          setTimeout(async () => {
+            await handleComplete();
+          }, 5000);
         }
       }
     } catch (err: any) {
@@ -135,9 +154,31 @@ export default function ExercisePage() {
     setEditorKey((prev) => prev + 1);
   }
 
-  function handleNextExercise() {
-    // 次の演習に遷移するロジック（簡易版）
-    router.push(`/lessons/${language}/${lessonId}/exercises`);
+  async function handleNextExercise() {
+    if (!exercise) {
+      router.push(`/lessons/${language}/${lessonId}/exercises`);
+      return;
+    }
+
+    try {
+      const { data } = await supabase
+        .from("exercises")
+        .select("id")
+        .eq("lesson_id", exercise.lesson_id)
+        .gt("order_index", exercise.order_index)
+        .order("order_index", { ascending: true })
+        .limit(1)
+        .maybeSingle();
+
+      if (data) {
+        router.push(`/lessons/${language}/${lessonId}/exercises/${data.id}/tutorial`);
+      } else {
+        router.push(`/lessons/${language}/${lessonId}/exercises`);
+      }
+    } catch (error) {
+      console.error("Error navigating to next exercise:", error);
+      router.push(`/lessons/${language}/${lessonId}/exercises`);
+    }
   }
 
   if (isLoading) {
@@ -164,120 +205,144 @@ export default function ExercisePage() {
 
   return (
     <div className="bg-gray-100" style={{ height: '90vh', display: 'flex', flexDirection: 'column' }}>
-      {/* ヘッダー */}
-      <div className="bg-white border-b px-6 flex items-center justify-between flex-shrink-0" style={{ height: '60px' }}>
-        <div className="flex items-center space-x-4">
-          <h1 className="text-xl font-bold">{exercise.title}</h1>
-          <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">
-            {exercise.difficulty === "easy" && "初級"}
-            {exercise.difficulty === "medium" && "中級"}
-            {exercise.difficulty === "hard" && "上級"}
-          </span>
-        </div>
-
-        <div className="flex items-center space-x-2">
-          <Button variant="ghost" size="sm" onClick={handleReset}>
-            <RotateCcw className="w-4 h-4 mr-2" />
-            リセット
-          </Button>
-        </div>
-      </div>
-
       {/* メインコンテンツ */}
-      <div className="overflow-hidden px-4 pt-4" style={{ height: 'calc(100vh - 100px)' }}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4" style={{ height: '100%' }}>
-          {/* 左パネル: 問題文 + コンソール */}
-          <div className="flex flex-col" style={{ height: '100%' }}>
-            {/* 問題文 */}
-            <div className="bg-white rounded-lg border p-4 overflow-y-auto flex-shrink-0" style={{ maxHeight: '150px' }}>
-              <h2 className="text-lg font-semibold mb-2">問題</h2>
-              <div className="prose prose-sm max-w-none">
-                <p className="whitespace-pre-wrap text-sm">{exercise.description}</p>
+      <div ref={mainContentRef} className="overflow-y-auto lg:overflow-hidden flex-1">
+        {/* ヘッダー */}
+        <div className="bg-white border-b px-6 flex items-center justify-between flex-shrink-0" style={{ height: '60px' }}>
+          <div className="flex items-center space-x-4">
+            <h1 className="text-xl font-bold">{exercise.title}</h1>
+            <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">
+              {exercise.difficulty === "easy" && "初級"}
+              {exercise.difficulty === "medium" && "中級"}
+              {exercise.difficulty === "hard" && "上級"}
+            </span>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <Button variant="ghost" size="sm" onClick={handleReset}>
+              <RotateCcw className="w-4 h-4 mr-2" />
+              リセット
+            </Button>
+          </div>
+        </div>
+
+        <div className="px-4 pt-4 pb-4 lg:h-[calc(100%-60px)]">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:h-full">
+            {/* 問題文（スマホのみ） */}
+            <div className="order-1 lg:hidden">
+              <div className="bg-white rounded-lg border p-4 overflow-y-auto flex-shrink-0" style={{ maxHeight: '150px' }}>
+                <h2 className="text-lg font-semibold mb-2">問題</h2>
+                <div className="prose prose-sm max-w-none">
+                  <p className="whitespace-pre-wrap text-sm">{exercise.description}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* エディタ */}
+            <div className="order-2 flex flex-col min-h-[700px] lg:min-h-0 lg:h-full">
+              <div className="bg-white rounded-t-lg border border-b-0 p-3 flex items-center justify-between flex-shrink-0" style={{ height: '50px' }}>
+                <span className="font-medium text-sm">
+                  main.{exercise.file_extension || "txt"}
+                </span>
+              </div>
+              <div className="bg-white border rounded-b-lg overflow-hidden flex-1">
+                <MobileCodeEditor
+                  key={editorKey}
+                  initialCode={
+                    exercise.initial_display_mode === "editable"
+                      ? exercise.starter_code || ""
+                      : exercise.holey_code || exercise.starter_code || ""
+                  }
+                  correctCode={exercise.correct_code || ""}
+                  language={language}
+                  onChange={(value) => setCode(value || "")}
+                  onRun={handleRunCode}
+                />
               </div>
             </div>
 
             {/* コンソール + ボタン */}
-            <div className="flex flex-col mt-4 overflow-hidden flex-1 min-h-0">
-              <div className="bg-white rounded-t-lg border border-b-0 overflow-hidden flex-1 min-h-0">
-                <ConsolePanel
-                  output={output}
-                  error={error}
-                  isLoading={isRunning}
-                  testCases={
-                    exercise.test_cases
-                      ? typeof exercise.test_cases === 'string'
-                        ? JSON.parse(exercise.test_cases)
-                        : exercise.test_cases
-                      : [
-                          {
-                            input: exercise.test_input || "",
-                            expectedOutput: exercise.expected_output || "",
-                          },
-                        ]
-                  }
-                />
+            <div className="order-3 lg:order-1 flex flex-col lg:h-full">
+              {/* 問題文（PCのみ） */}
+              <div className="hidden lg:block bg-white rounded-lg border p-4 overflow-y-auto flex-shrink-0" style={{ maxHeight: '150px' }}>
+                <h2 className="text-lg font-semibold mb-2">問題</h2>
+                <div className="prose prose-sm max-w-none">
+                  <p className="whitespace-pre-wrap text-sm">{exercise.description}</p>
+                </div>
               </div>
 
-              {/* コンソール下部のボタン（常に表示） */}
-              <div className="bg-white border border-t-0 rounded-b-lg p-3 flex items-center justify-between gap-2 flex-shrink-0">
-                <div className="flex gap-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() =>
-                      router.push(
-                        `/lessons/${language}/${lessonId}/exercises/${exerciseId}/tutorial`
-                      )
+              {/* コンソール + ボタン */}
+              <div className="flex flex-col lg:mt-4 overflow-hidden lg:flex-1 min-h-0">
+                <div className="bg-white rounded-t-lg border border-b-0 overflow-hidden lg:flex-1 min-h-0 max-h-[200px] lg:max-h-none">
+                  <ConsolePanel
+                    output={output}
+                    error={error}
+                    isLoading={isRunning}
+                    testCases={
+                      exercise.test_cases
+                        ? typeof exercise.test_cases === 'string'
+                          ? JSON.parse(exercise.test_cases)
+                          : exercise.test_cases
+                        : [
+                            {
+                              input: exercise.test_input || "",
+                              expectedOutput: exercise.expected_output || "",
+                            },
+                          ]
                     }
-                  >
-                    <BookOpen className="w-4 h-4 mr-2" />
-                    スライドを見る
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setShowHintDialog(true)}
-                  >
-                    <Lightbulb className="w-4 h-4 mr-2" />
-                    ヒント
-                  </Button>
+                  />
                 </div>
 
-                <Button
-                  onClick={() => handleRunCode()}
-                  disabled={isRunning}
-                  className="bg-green-600 hover:bg-green-700 text-white"
-                  size="sm"
-                >
-                  <Play className="w-4 h-4 mr-2" />
-                  {isRunning ? "実行中..." : "実行"}
-                </Button>
+                {/* コンソール下部のボタン（常に表示） */}
+                <div className="bg-white border border-t-0 rounded-b-lg p-3 flex items-center justify-between gap-2 flex-shrink-0">
+                  <div className="flex gap-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="text-base"
+                      onClick={() =>
+                        router.push(
+                          `/lessons/${language}/${lessonId}/exercises/${exerciseId}/tutorial`
+                        )
+                      }
+                    >
+                      <BookOpen className="w-5 h-5 lg:mr-2" />
+                      <span className="hidden lg:inline">スライドを見る</span>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="text-base"
+                      onClick={() => setShowHintDialog(true)}
+                    >
+                      <Lightbulb className="w-5 h-5 lg:mr-2" />
+                      <span className="hidden lg:inline">ヒント</span>
+                    </Button>
+                  </div>
+
+                  <div className="flex gap-2">
+                    {showNextButton && (
+                      <Button
+                        onClick={handleNextExercise}
+                        size="sm"
+                        className="text-base"
+                      >
+                        次の演習へ
+                      </Button>
+                    )}
+                    <Button
+                      onClick={() => handleRunCode()}
+                      disabled={isRunning}
+                      className="bg-green-600 hover:bg-green-700 text-white text-base"
+                      size="sm"
+                    >
+                      <Play className="w-5 h-5 mr-2" />
+                      {isRunning ? "実行中..." : "実行"}
+                    </Button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* 右パネル: エディタ */}
-          <div className="flex flex-col" style={{ height: '100%' }}>
-            <div className="bg-white rounded-t-lg border border-b-0 p-3 flex items-center justify-between flex-shrink-0" style={{ height: '50px' }}>
-              <span className="font-medium text-sm">
-                main.{exercise.file_extension || "txt"}
-              </span>
-            </div>
-            <div className="bg-white border rounded-b-lg overflow-hidden" style={{ height: 'calc(100% - 50px)' }}>
-              <MobileCodeEditor
-                key={editorKey}
-                initialCode={
-                  exercise.initial_display_mode === "editable"
-                    ? exercise.starter_code || ""
-                    : exercise.holey_code || exercise.starter_code || ""
-                }
-                correctCode={exercise.correct_code || ""}
-                language={language}
-                onChange={(value) => setCode(value || "")}
-                onRun={handleRunCode}
-              />
-            </div>
-
           </div>
         </div>
       </div>
@@ -324,7 +389,7 @@ export default function ExercisePage() {
 
       {/* 完了ダイアログ */}
       <Dialog open={showCompleteDialog} onOpenChange={setShowCompleteDialog}>
-        <DialogContent>
+        <DialogContent overlayClassName="bg-transparent">
           <DialogHeader>
             <DialogTitle className="flex items-center text-green-600">
               <CheckCircle2 className="w-6 h-6 mr-2" />
@@ -335,7 +400,10 @@ export default function ExercisePage() {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setShowCompleteDialog(false)}>
+            <Button variant="outline" onClick={() => {
+              setShowCompleteDialog(false);
+              setShowNextButton(true);
+            }}>
               演習を続ける
             </Button>
             <Button onClick={handleNextExercise}>次の演習へ</Button>
