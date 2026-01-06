@@ -1,32 +1,37 @@
 export const bashData = {
   "language": "bash",
   "lessonId": "bash-1",
-  "lessonTitle": "Bash I",
-  "lessonDescription": "Linux/Unixシステムの操作や自動化に欠かせないBashシェルの基本を学びます。",
+  "lessonTitle": "Bash (バッシュ) にちょうせん！",
+  "lessonDescription": "コンピュータに直接指示（しじ）を出すための言葉「Bash（バッシュ）」のきほんを学びましょう。黒い画面（ターミナル）を自由にあやつれるようになります。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello Worldを出力しよう",
-      "description": "Bashで画面に文字を表示するには echo コマンドを使います。",
+      "title": "画面にメッセージを出しましょう",
+      "description": "Bashを使って画面に「こんにちは」と表示させてみましょう。echo（エコー）という関数を使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "echo",
-          "content": "# 出力コマンド\n\n`echo` コマンドの後ろに文字を書くことで表示できます。\n\n**コード例：**\n```bash\necho \"Hello, Bash!\"\n```"
+          "title": "echo を使いましょう",
+          "content": "# メッセージを表示します\n\nBashで画面に文字を出したいときは、`echo` と入力して、そのあとに表示したい文字を続けます。\n\n**コード例：**\n```bash\necho \"Hello, Bash!\"\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "echo \"Hello, Bash!\"",
-      "holeyCode": "echo \"___\"",
+      "correctCode": "# 画面にメッセージを出す関数\necho \"Hello, Bash!\"",
+      "holeyCode": "# 画面にメッセージを出す関数\necho \"___\"",
       "correctLines": [
+        "# 画面にメッセージを出す関数",
         "echo \"Hello, Bash!\""
       ],
       "lineHints": [
-        "Hello, Bash! を出力します。"
+        null,
+        "echo を使って、そのあとの文字を画面に出します。"
       ],
       "candidates": {
+        "functions": [
+          "echo"
+        ],
         "strings": [
           "Hello, Bash!"
         ]
@@ -39,30 +44,32 @@ export const bashData = {
       ]
     },
     {
-      "title": "変数",
-      "description": "変数を定義して出力しましょう。",
+      "title": "便利な「はこ」",
+      "description": "数字や文字をしまっておく「はこ（変数）」を使ってみましょう。Bashでは = のまわりにスペースを入れてはいけないというルールがあります。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "変数定義",
-          "content": "# スペースを入れない\n\nBashでは代入時に = の前後にスペースを入れてはいけません。参照するときは $ を付けます。\n\n**コード例：**\n```bash\nNAME=\"Bash\"\necho $NAME\n```"
+          "title": "隙間（すきま）に気をつけて",
+          "content": "# 変数の作りかた\n\nBashでは、`名前=中身` というふうに、つなげて入力します。取り出すときは名前の前に `$" をつけますよ。\n\n**コード例：**\n```bash\nname=\"Bash\"\necho $name\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "NAME=\"Bash\"\necho $NAME",
-      "holeyCode": "NAME=\"___\"\necho $___",
+      "correctCode": "# name というはこに Bash と入れる\nname=\"Bash\"\necho $name",
+      "holeyCode": "# name というはこに Bash と入れる\nname=\"___\"\necho $___",
       "correctLines": [
-        "NAME=\"Bash\"",
-        "echo $NAME"
+        "# name というはこに Bash と入れる",
+        "name=\"Bash\"",
+        "echo $name"
       ],
       "lineHints": [
-        "Bashを代入します。",
-        "変数NAMEを出力します。"
+        null,
+        "name=\"Bash\" と入力します。 = のまわりにスペースを入れないでください！",
+        "はこの名前 $name を指定して、表示させます。"
       ],
       "candidates": {
         "variables": [
-          "NAME"
+          "name"
         ],
         "strings": [
           "Bash"
@@ -76,28 +83,30 @@ export const bashData = {
       ]
     },
     {
-      "title": "計算",
-      "description": "計算を行いましょう。",
+      "title": "コンピュータで計算しましょう",
+      "description": "Bashを使って、たし算をしてみましょう。$(( )) という特殊な記号を使います。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "算術式展開",
-          "content": "# $(( ))\n\n二重括弧の中で計算ができます。\n\n**コード例：**\n```bash\nA=5\nB=3\necho $((A + B))\n```"
+          "title": "計算のルール",
+          "content": "# $(( )) を使いましょう\n\nBashで計算をするときは、全体を `$(( ))` で囲む決まりがあります。中では算数と同じ記号が使えますよ。\n\n**コード例：**\n```bash\na=5\nb=3\necho $((a + b))\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "A=5\nB=3\necho $((A + B))",
-      "holeyCode": "A=5\nB=3\necho $((A ___ B))",
+      "correctCode": "a=5\nb=3\n# たし算した答えを出す\necho $((a + b))",
+      "holeyCode": "a=5\nb=3\n# たし算した答えを出す\necho $((a ___ b))",
       "correctLines": [
-        "A=5",
-        "B=3",
-        "echo $((A + B))"
+        "a=5",
+        "b=3",
+        "# たし算した答えを出す",
+        "echo $((a + b))"
       ],
       "lineHints": [
         null,
         null,
-        "+ を使います。"
+        null,
+        "たし算なので `+` を使います。全体を $(( )) で囲みます。"
       ],
       "candidates": {
         "operators": [
@@ -112,102 +121,37 @@ export const bashData = {
       ]
     },
     {
-      "title": "変数展開",
-      "description": "文字列の中に変数を埋め込みましょう。",
-      "difficulty": "easy",
-      "orderIndex": 4,
-      "tutorialSlides": [
-        {
-          "title": "ダブルクォート",
-          "content": "# 文字列内での展開\n\nダブルクォートの中では変数が値に置き換わります。\n\n**コード例：**\n```bash\nAGE=20\necho \"年齢は $AGE です\"\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "AGE=20\necho \"I am $AGE years old.\"",
-      "holeyCode": "AGE=20\necho \"I am $___ years old.\"",
-      "correctLines": [
-        "AGE=20",
-        "echo \"I am $AGE years old.\""
-      ],
-      "lineHints": [
-        null,
-        "AGE変数を埋め込みます。"
-      ],
-      "candidates": {
-        "variables": [
-          "AGE"
-        ]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "I am 20 years old.\n"
-        }
-      ]
-    },
-    {
-      "title": "配列",
-      "description": "配列を作成して要素を取り出しましょう。",
-      "difficulty": "easy",
-      "orderIndex": 5,
-      "tutorialSlides": [
-        {
-          "title": "配列",
-          "content": "# ( )\n\n複数の値を丸括弧で囲んで作成します。アクセス時は `${ }` が必要です。\n\n**コード例：**\n```bash\nARR=(\"red\" \"blue\")\necho ${ARR[1]} # blue を表示\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "COLORS=(\"red\" \"blue\")\necho ${COLORS[1]}",
-      "holeyCode": "COLORS=(\"red\" \"blue\")\necho ${COLORS[___]}",
-      "correctLines": [
-        "COLORS=(\"red\" \"blue\")",
-        "echo ${COLORS[1]}"
-      ],
-      "lineHints": [
-        null,
-        "インデックス1を指定します。"
-      ],
-      "candidates": {
-        "numbers": [
-          "1"
-        ]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "blue\n"
-        }
-      ]
-    },
-    {
-      "title": "if文",
-      "description": "条件分岐を行います。",
+      "title": "「もし〜なら」で分けましょう",
+      "description": "点数によって表示するメッセージを変えてみましょう。 [ ] を使うのがBashのやりかたです。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "if文",
-          "content": "# [ 条件式 ]\n\n数値の比較には `-gt` (より大きい) や `-eq` (等しい) を使います。スペースが重要です。\n\n**コード例：**\n```bash\nif [ $SCORE -gt 80 ]; then\n    echo \"合格\"\nfi\n```"
+          "title": "if と then",
+          "content": "# fi で閉じましょう\n\nBashでは、`if [ 条件 ]; then` と入力し、最後に `fi` と入力して終わらせるのがルールです。\n\n**コード例：**\n```bash\nif [ $score -gt 80 ]; then\n    echo \"合格！\"\nfi\n```\n`-gt` は「〜より大きい（greater than）」という意味ですよ。"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SCORE=100\nif [ $SCORE -gt 80 ]; then\n    echo \"Great\"\nfi",
-      "holeyCode": "SCORE=100\nif [ $SCORE ___ 80 ]; then\n    echo \"Great\"\nfi",
+      "correctCode": "score=100\nif [ $score -gt 80 ]; then\n    echo \"Great\"\nfi",
+      "holeyCode": "score=100\nif [ $score ___ 80 ]; then\n    echo \"Great\"\n___",
       "correctLines": [
-        "SCORE=100",
-        "if [ $SCORE -gt 80 ]; then",
+        "score=100",
+        "if [ $score -gt 80 ]; then",
         "    echo \"Great\"",
         "fi"
       ],
       "lineHints": [
         null,
-        "-gt を使います。",
-        null,
-        null
+        "〜より大きい、をあらわす -gt を入力します。",
+        "Great と表示します。",
+        "if を逆さにした `fi` と入力して終わります。"
       ],
       "candidates": {
         "operators": [
           "-gt"
+        ],
+        "keywords": [
+          "fi"
         ]
       },
       "testCases": [
@@ -218,22 +162,22 @@ export const bashData = {
       ]
     },
     {
-      "title": "if-else文",
-      "description": "elseを使って分岐します。",
+      "title": "ちがう場合はどうしましょう？",
+      "description": "else（エルス）を使って、「そうでなければ」の動きを作りましょう。",
       "difficulty": "easy",
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "else",
-          "content": "# elseブロック\n\n条件に当てはまらない時の処理は `else` を使います。\n\n**コード例：**\n```bash\nif [ $AGE -ge 20 ]; then\n    echo \"大人\"\nelse\n    echo \"子供\"\nfi\n```"
+          "title": "elseブロック",
+          "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```bash\nif [ $age -ge 20 ]; then\n    echo \"大人です\"\nelse\n    echo \"子供です\"\nfi\n```\n`-ge` は「〜以上（greater than or equal）」という意味です。"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "AGE=18\nif [ $AGE -ge 20 ]; then\n    echo \"Adult\"\nelse\n    echo \"Minor\"\nfi",
-      "holeyCode": "AGE=18\nif [ $AGE -ge 20 ]; then\n    echo \"Adult\"\n___ \n    echo \"Minor\"\nfi",
+      "correctCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\nelse\n    echo \"Minor\"\nfi",
+      "holeyCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\n___ \n    echo \"Minor\"\nfi",
       "correctLines": [
-        "AGE=18",
-        "if [ $AGE -ge 20 ]; then",
+        "age=18",
+        "if [ $age -ge 20 ]; then",
         "    echo \"Adult\"",
         "else",
         "    echo \"Minor\"",
@@ -243,7 +187,9 @@ export const bashData = {
         null,
         null,
         null,
-        "else を記述します。"
+        "そうでなければ、をあらわす `else` を入力しましょう。",
+        null,
+        null
       ],
       "candidates": {
         "keywords": [
@@ -258,32 +204,35 @@ export const bashData = {
       ]
     },
     {
-      "title": "for文",
-      "description": "ループを使って配列を走査します。",
+      "title": "中身を全部出してみましょう",
+      "description": "for ループを使って、リストの中身を一つずつ順番に表示します。",
       "difficulty": "easy",
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "forループ",
-          "content": "# 要素の繰り返し\n\n配列の全ての要素を処理します。\n\n**コード例：**\n```bash\nNAMES=(\"Alice\" \"Bob\")\nfor NAME in \"${NAMES[@]}\"; do\n    echo $NAME\ndone\n```"
+          "title": "for と in",
+          "content": "# do と done で囲みましょう\n\n`for 変数 in リスト; do` と入力し、最後に `done` と入力すると、中身を順番に取り出して処理できます。\n\n**コード例：**\n```bash\nfor name in \"たろう\" \"はなこ\"; do\n    echo $name\ndone\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "NAMES=(\"Alice\" \"Bob\")\nfor NAME in \"${NAMES[@]}\"; do\n    echo $NAME\ndone",
-      "holeyCode": "NAMES=(\"Alice\" \"Bob\")\nfor NAME in \"${___[@]}\"; do\n    echo $NAME\ndone",
+      "correctCode": "names=(\"Alice\" \"Bob\")\nfor name in \"${names[@]}\"; do\n    echo $name\ndone",
+      "holeyCode": "names=(\"Alice\" \"Bob\")\nfor name ___ \"${names[@]}\"; do\n    echo $name\n___",
       "correctLines": [
-        "NAMES=(\"Alice\" \"Bob\")",
-        "for NAME in \"${NAMES[@]}\"; do",
-        "    echo $NAME",
+        "names=(\"Alice\" \"Bob\")",
+        "for name in \"${names[@]}\"; do",
+        "    echo $name",
         "done"
       ],
       "lineHints": [
         null,
-        "配列NAMESを指定します。"
+        "「〜の中で」をあらわす `in` を入力しましょう。",
+        null,
+        "終わりの合図 `done` を入力しましょう。"
       ],
       "candidates": {
-        "variables": [
-          "NAMES"
+        "keywords": [
+          "in",
+          "done"
         ]
       },
       "testCases": [
@@ -294,50 +243,14 @@ export const bashData = {
       ]
     },
     {
-      "title": "連想配列",
-      "description": "連想配列を使ってみましょう（Bash 4.0以降）。",
-      "difficulty": "easy",
-      "orderIndex": 9,
-      "tutorialSlides": [
-        {
-          "title": "declare -A",
-          "content": "# キー付き配列\n\n`declare -A` で連想配列を宣言します。\n\n**コード例：**\n```bash\ndeclare -A USER\nUSER[name]=\"Alice\"\necho ${USER[name]}\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "declare -A USER\nUSER[name]=\"Alice\"\necho ${USER[name]}",
-      "holeyCode": "declare -A USER\nUSER[___]=\"Alice\"\necho ${USER[___]}",
-      "correctLines": [
-        "declare -A USER",
-        "USER[name]=\"Alice\"",
-        "echo ${USER[name]}"
-      ],
-      "lineHints": [
-        null,
-        "キー name を使います。",
-        "キー name を使います。"
-      ],
-      "candidates": {
-        "strings": [
-          "name"
-        ]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Alice\n"
-        }
-      ]
-    },
-    {
-      "title": "関数",
-      "description": "関数を定義して呼び出します。",
+      "title": "自分だけの関数を作りましょう",
+      "description": "よく使う手順をまとめて、名前をつけた「関数（かんすう）」を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "関数定義",
-          "content": "# 処理のまとめ\n\n名前を付けて処理を定義します。\n\n**コード例：**\n```bash\ngreet() {\n    echo \"Hello\"\n}\n\ngreet # 呼び出し\n```"
+          "title": "手順をまとめましょう",
+          "content": "# 関数の定義\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせますよ。\n\n**コード例：**\n```bash\naisatsu() {\n    echo \"こんにちは\"\n}\n\naisatsu # 呼び出し\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -350,10 +263,10 @@ export const bashData = {
         "greet"
       ],
       "lineHints": [
-        null,
-        null,
-        null,
-        "greet で呼び出します。"
+        "greet という名前の関数を定義します。",
+        "メッセージを表示します。",
+        "関数の終わりです。",
+        "関数名を入力して、実行します。"
       ],
       "candidates": {
         "functions": [

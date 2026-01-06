@@ -1,25 +1,25 @@
 export const csharpData = {
   "language": "csharp",
   "lessonId": "csharp-1",
-  "lessonTitle": "C# I",
-  "lessonDescription": "Microsoftが開発した汎用プログラミング言語C#の基本を学びます。.NETの強力な機能を体験しましょう。",
+  "lessonTitle": "C# (シーシャープ) にちょうせん！",
+  "lessonDescription": "Microsoft（マイクロソフト）が作った言葉「C#（シーシャープ）」のきほんを学びましょう。いろいろなアプリを作るための土台を身につけます。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello Worldを出力しよう",
-      "description": "C#で画面に文字を表示するには Console.WriteLine を使います。",
+      "title": "画面にメッセージを出しましょう",
+      "description": "C#を使って画面に文字を表示してみましょう。Console.WriteLine という関数を使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "基本構造",
-          "content": "# Class & Main\n\nC#では `class` の中に `Main` メソッドを記述します。\n\n**コード例：**\n```csharp\npublic class Program {\n    public static void Main() {\n        System.Console.WriteLine(\"Hello, C#!\");\n    }\n}\n```"
+          "title": "C#の決まり文句",
+          "content": "# おまじないを入力しましょう\n\nC#でプログラムを入力するときは、必ず入力しなければいけない「決まり文句」があります。\n\n```csharp\npublic class Program {\n    public static void Main() {\n        // ここにやりたいことを入力します\n    }\n}\n```\n\n画面に文字を出したいときは、`System.Console.WriteLine()` という長い名前の関数を使います。"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Program {\n    public static void Main() {\n        System.Console.WriteLine(\"Hello, C#!\");\n    }\n}",
-      "holeyCode": "public class Program {\n    public static void Main() {\n        System.Console.WriteLine(\"___\");\n    }\n}",
+      "correctCode": "public class Program {\n    public static void Main() {\n        // 画面にメッセージを出す関数\n        System.Console.WriteLine(\"Hello, C#!\");\n    }\n}",
+      "holeyCode": "public class Program {\n    public static void Main() {\n        // 画面にメッセージを出す関数\n        System.Console.WriteLine(\"___\");\n    }\n}",
       "correctLines": [
         "public class Program {",
         "    public static void Main() {",
@@ -28,13 +28,15 @@ export const csharpData = {
         "}"
       ],
       "lineHints": [
-        null,
-        null,
-        "Hello, C#! を出力します。"
+        "プログラムをまとめる「クラス」という名前です。",
+        "ここからプログラムがスタートします、という合図ですよ。",
+        "WriteLine 関数を使って、() の中の文字を画面に出します。",
+        "スタート合図の終わりです。",
+        "プログラム全体の終わりです。"
       ],
       "candidates": {
         "strings": [
-          "Hello, C#! पुरु"
+          "Hello, C#!"
         ]
       },
       "testCases": [
@@ -45,14 +47,14 @@ export const csharpData = {
       ]
     },
     {
-      "title": "変数",
-      "description": "変数を宣言して値を代入しましょう。",
+      "title": "数字を入れる「はこ」",
+      "description": "数字をしまっておく「はこ」を作って、中身を表示してみましょう。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "変数の型",
-          "content": "# 静的型付け\n\n変数を宣言するときに型を指定します。\n\n**コード例：**\n```csharp\nint x = 10;\nSystem.Console.WriteLine(x);\n```"
+          "title": "数字のラベル int",
+          "content": "# 整数（せいすう）のラベル\n\n数字を入れたいときは、`int`（イント）というラベルを貼ります。\n\n**コード例：**\n```csharp\nint x = 10;\nSystem.Console.WriteLine(x);\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -69,8 +71,8 @@ export const csharpData = {
       "lineHints": [
         null,
         null,
-        "10を代入します。",
-        "xを出力します。"
+        "x = 10 と入力しましょう。",
+        "はこの名前 x を指定して、表示させます。"
       ],
       "candidates": {
         "variables": [
@@ -88,18 +90,18 @@ export const csharpData = {
       ]
     },
     {
-      "title": "計算",
-      "description": "足し算を行いましょう。",
+      "title": "コンピュータで計算しましょう",
+      "description": "C#を使って、たし算をしてみましょう。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "演算",
-          "content": "# 四則演算\n\n+, -, *, / などが使えます。\n\n**コード例：**\n```csharp\nint a = 5;\nint b = 3;\nSystem.Console.WriteLine(a + b);\n```"
+          "title": "計算の記号",
+          "content": "# 四則演算\n\nC#でも、算数と同じ記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Program {\n    public static void Main() {\n        int a = 5;\n        int b = 3;\n        System.Console.WriteLine(a + b);\n    }\n}",
+      "correctCode": "public class Program {\n    public static void Main() {\n        int a = 5;\n        int b = 3;\n        // たし算した答えを出す\n        System.Console.WriteLine(a + b);\n    }\n}",
       "holeyCode": "public class Program {\n    public static void Main() {\n        int a = 5;\n        int b = 3;\n        System.Console.WriteLine(a ___ b);\n    }\n}",
       "correctLines": [
         "public class Program {",
@@ -113,9 +115,9 @@ export const csharpData = {
       "lineHints": [
         null,
         null,
-        null,
-        null,
-        "a + b を出力します。"
+        "a = 5 と入力しましょう。",
+        "b = 3 と入力しましょう。",
+        "たし算なので `+` を使います。"
       ],
       "candidates": {
         "operators": [
@@ -130,23 +132,23 @@ export const csharpData = {
       ]
     },
     {
-      "title": "文字列補間",
-      "description": "C#の強力な機能である文字列補間（String Interpolation）を使いましょう。",
+      "title": "文章の中に「はこ」を入れましょう",
+      "description": "「文字列補間（ほかん）」という機能を使って、文章の中に「はこ（変数）」の中身を表示します。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "文字列補間",
-          "content": "# $記号\n\n`$\"文字列{変数}\"` と書くことで、変数を埋め込めます。\n\n**コード例：**\n```csharp\nint age = 20;\nSystem.Console.WriteLine($\"年齢は {age} 歳です\");\n```"
+          "title": "$（ダラー）を使いましょう",
+          "content": "# 文字列補間\n\n`$\" \"`（ダラーとダブルクォーテーション）で囲むと、その中で `{း}` と入力するだけで、中身を文章に入れられますよ。\n\n**コード例：**\n```csharp\nint age = 10;\nSystem.Console.WriteLine($\"私は {age} 歳です\");\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Program {\n    public static void Main() {\n        int age = 20;\n        System.Console.WriteLine($\"I am {age} years old.\");\n    }\n}",
-      "holeyCode": "public class Program {\n    public static void Main() {\n        int age = 20;\n        System.Console.WriteLine($\"I am {___} years old.\");\n    }\n}",
+      "correctCode": "public class Program {\n    public static void Main() {\n        int age = 10;\n        System.Console.WriteLine($\"I am {age} years old.\");\n    }\n}",
+      "holeyCode": "public class Program {\n    public static void Main() {\n        int age = 10;\n        System.Console.WriteLine($\"I am {___} years old.\");\n    }\n}",
       "correctLines": [
         "public class Program {",
         "    public static void Main() {",
-        "        int age = 20;",
+        "        int age = 10;",
         "        System.Console.WriteLine($\"I am {age} years old.\");",
         "    }",
         "}"
@@ -154,8 +156,8 @@ export const csharpData = {
       "lineHints": [
         null,
         null,
-        null,
-        "age変数を埋め込みます。"
+        "age に 10 を入力します。",
+        "はこの名前 age を指定します。"
       ],
       "candidates": {
         "variables": [
@@ -165,23 +167,23 @@ export const csharpData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "I am 20 years old.\n"
+          "expected_output": "I am 10 years old.\n"
         }
       ]
     },
     {
-      "title": "配列",
-      "description": "配列を作成して要素にアクセスしましょう。",
+      "title": "データをならべる「配列」",
+      "description": "同じラベルのデータをまとめて並べておける「配列（はいれつ）」を使ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "配列",
-          "content": "# 宣言と初期化\n\n同じ種類のデータをまとめて扱います。インデックスは0から始まります。\n\n**コード例：**\n```csharp\nint[] nums = {10, 20};\nSystem.Console.WriteLine(nums[1]); // 20 を出力\n```"
+          "title": "データの番号は 0 から！",
+          "content": "# [ ]（しかくい かっこ）を使いましょう\n\n配列の中身を取り出すときは、何番目かを指定します。さいしょのデータは **「0番」** から数えるのがルールですよ。\n\n**コード例：**\n```csharp\nint[] nums = {10, 20};\nSystem.Console.WriteLine(nums[0]); // 10 が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Program {\n    public static void Main() {\n        int[] nums = {10, 20};\n        System.Console.WriteLine(nums[1]);\n    }\n}",
+      "correctCode": "public class Program {\n    public static void Main() {\n        int[] nums = {10, 20};\n        // 2番目（番号は1）を出す\n        System.Console.WriteLine(nums[1]);\n    }\n}",
       "holeyCode": "public class Program {\n    public static void Main() {\n        int[] nums = {10, 20};\n        System.Console.WriteLine(nums[___]);\n    }\n}",
       "correctLines": [
         "public class Program {",
@@ -194,8 +196,8 @@ export const csharpData = {
       "lineHints": [
         null,
         null,
-        null,
-        "インデックス1を指定します。"
+        "{10, 20} と入力しましょう。 { } を使うのがルールです。",
+        "2番目のデータの番号は 1 です。 `nums[1]` と入力してください。"
       ],
       "candidates": {
         "numbers": [
@@ -210,19 +212,19 @@ export const csharpData = {
       ]
     },
     {
-      "title": "if文",
-      "description": "条件分岐を行います。",
+      "title": "「もし〜なら」で分けましょう",
+      "description": "点数によって表示するメッセージを変えてみましょう。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
           "title": "if文",
-          "content": "# if (条件)\n\n条件式は丸括弧で囲み、その後ろに `{ }` で処理を書きます。\n\n**コード例：**\n```csharp\nif (score > 80) {\n    System.Console.WriteLine(\"合格\");\n}\n```"
+          "content": "# ( ) と { } を使いましょう\n\nC#でも、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\n\n**コード例：**\n```csharp\nif (score > 80) {\n    System.Console.WriteLine(\"合格！\");\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Program {\n    public static void Main() {\n        int score = 100;\n        if (score > 80) {\n            System.Console.WriteLine(\"Excellent\");\n        }\n    }\n}",
-      "holeyCode": "public class Program {\n    public static void Main() {\n        int score = 100;\n        if (score ___ 80) {\n            System.Console.WriteLine(\"___\");\n        }\n    }\n}",
+      "holeyCode": "public class Program {\n    public static void Main() {\n        int score = 100;\n        if (score ___ 80) {\n            System.Console.WriteLine(\"___");\n        }\n    }\n}",
       "correctLines": [
         "public class Program {",
         "    public static void Main() {",
@@ -236,13 +238,13 @@ export const csharpData = {
       "lineHints": [
         null,
         null,
-        null,
-        "比較演算子 > を使います。",
-        "Excellent を出力します。"
+        "score = 100 と入力しましょう。",
+        "比較するための記号 `>` を入力しましょう。",
+        "Excellent と表示します。"
       ],
       "candidates": {
         "operators": [
-          ">"
+          ">
         ],
         "strings": [
           "Excellent"
@@ -256,14 +258,14 @@ export const csharpData = {
       ]
     },
     {
-      "title": "if-else文",
-      "description": "elseを使って分岐させます。",
+      "title": "ちがう場合はどうしましょう？",
+      "description": "else（エルス）を使って、「そうでなければ」の動きを作りましょう。",
       "difficulty": "easy",
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "else",
-          "content": "# elseブロック\n\n条件に当てはまらない場合の処理は `else` を使います。\n\n**コード例：**\n```csharp\nif (age >= 20) {\n    System.Console.WriteLine(\"大人\");\n} else {\n    System.Console.WriteLine(\"子供\");\n}\n```"
+          "title": "elseブロック",
+          "content": "# どちらかを選びます\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```csharp\nif (age >= 20) {\n    System.Console.WriteLine(\"大人です\");\n} else {\n    System.Console.WriteLine(\"子供です\");\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -284,10 +286,10 @@ export const csharpData = {
       "lineHints": [
         null,
         null,
+        "age に 18 を入力します。",
         null,
         null,
-        null,
-        "else を記述します。"
+        "そうでなければ、をあらわす `else` を入力しましょう。"
       ],
       "candidates": {
         "keywords": [
@@ -302,18 +304,18 @@ export const csharpData = {
       ]
     },
     {
-      "title": "foreach文",
-      "description": "foreachを使って配列の要素を順番に取り出しましょう。",
+      "title": "中身を全部出してみましょう",
+      "description": "foreach（フォーイーチ）という機能を使って、配列の中身を一つずつ順番に表示します。",
       "difficulty": "easy",
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "foreach",
-          "content": "# ループ処理\n\n配列の全ての要素を一つずつ取り出すには `foreach` が便利です。\n\n**コード例：**\n```csharp\nint[] nums = {1, 2, 3};\nforeach (int n in nums) {\n    System.Console.WriteLine(n);\n}\n```"
+          "title": "foreachループ",
+          "content": "# 全部取り出しましょう\n\n「はこ（配列）」の中に入っているものを、最初から最後まで順番に取り出す便利なループです。\n\n**コード例：**\n```csharp\nint[] nums = {1, 2, 3};\nforeach (int n in nums) {\n    System.Console.WriteLine(n);\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Program {\n    public static void Main() {\n        int[] nums = {1, 2, 3};\n        foreach (int n in nums) {\n            System.Console.WriteLine(n);\n        }\n    }\n}",
+      "correctCode": "public class Program {\n    public static void Main() {\n        int[] nums = {1, 2, 3};\n        // 全部取り出すループ\n        foreach (int n in nums) {\n            System.Console.WriteLine(n);\n        }\n    }\n}",
       "holeyCode": "public class Program {\n    public static void Main() {\n        int[] nums = {1, 2, 3};\n        foreach (int n ___ nums) {\n            System.Console.WriteLine(n);\n        }\n    }\n}",
       "correctLines": [
         "public class Program {",
@@ -329,7 +331,7 @@ export const csharpData = {
         null,
         null,
         null,
-        "in キーワードを使います。"
+        "「〜の中で」をあらわす `in` キーワードを入力します。"
       ],
       "candidates": {
         "keywords": [
@@ -344,19 +346,19 @@ export const csharpData = {
       ]
     },
     {
-      "title": "Dictionary (辞書)",
-      "description": "キーと値のペアを扱うDictionaryを使いましょう。",
+      "title": "名前で探す「じしょ」",
+      "description": "Dictionary（ディクショナリ）を使って、名前を指定してデータを取り出してみましょう。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
           "title": "Dictionary",
-          "content": "# 連想配列\n\nキー（名前）を使ってデータを管理します。\n\n**コード例：**\n```csharp\nusing System.Collections.Generic;\nvar scores = new Dictionary<string, int>();\nscores[\"Math\"] = 90;\nSystem.Console.WriteLine(scores[\"Math\"]);\n```"
+          "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。まさに辞書のように使うことができますよ。\n\n**コード例：**\n```csharp\nusing System.Collections.Generic;\nvar scores = new Dictionary<string, int>();\nscores[\"Math\"] = 90;\nSystem.Console.WriteLine(scores[\"Math\"]);\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System.Collections.Generic;\npublic class Program {\n    public static void Main() {\n        var scores = new Dictionary<string, int>();\n        scores[\"Math\"] = 90;\n        System.Console.WriteLine(scores[\"Math\"]);\n    }\n}",
-      "holeyCode": "using System.Collections.Generic;\npublic class Program {\n    public static void Main() {\n        var scores = new Dictionary<___, int>();\n        scores[\"Math\"] = 90;\n        System.Console.WriteLine(scores[\"___\"]);\n    }\n}",
+      "holeyCode": "using System.Collections.Generic;\npublic class Program {\n    public static void Main() {\n        var scores = new Dictionary<___, int>();\n        scores[\"Math\"] = 90;\n        System.Console.WriteLine(scores[\"___"]);\n    }\n}",
       "correctLines": [
         "using System.Collections.Generic;",
         "public class Program {",
@@ -368,12 +370,12 @@ export const csharpData = {
         "}"
       ],
       "lineHints": [
-        null,
+        "辞書機能を使えるように準備します。",
         null,
         null,
         "キーは string 型です。",
         null,
-        "Math キーを指定します。"
+        "\"Math\" という名前を指定してデータを取り出します。"
       ],
       "candidates": {
         "strings": [
@@ -389,14 +391,14 @@ export const csharpData = {
       ]
     },
     {
-      "title": "メソッド",
-      "description": "メソッドを定義して呼び出します。",
+      "title": "自分だけの関数を作りましょう",
+      "description": "一連の手順をまとめて、名前をつけた「関数（メソッド）」を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "メソッド定義",
-          "content": "# 処理の共通化\n\n一連の処理に名前を付けて定義し、後で呼び出します。\n\n**コード例：**\n```csharp\npublic static void Greet() {\n    System.Console.WriteLine(\"Hello\");\n}\n\n// Mainの中で呼び出し\nGreet();\n```"
+          "title": "手順をまとめる",
+          "content": "# メソッドの定義\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせますよ。\n\n**コード例：**\n```csharp\npublic static void Greet() {\n    System.Console.WriteLine(\"こんにちは\");\n}\n\n// Mainの中で呼び出し\nGreet();\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -414,11 +416,11 @@ export const csharpData = {
       ],
       "lineHints": [
         null,
+        "Greet という名前の関数（メソッド）を定義します。",
         null,
+        "関数の終わりです。",
         null,
-        null,
-        null,
-        "Greet(); で呼び出します。"
+        "Greet(); と入力して、関数を実行します。"
       ],
       "candidates": {
         "functions": [

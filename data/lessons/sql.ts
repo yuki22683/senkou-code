@@ -1,24 +1,24 @@
 export const sqlData = {
   "language": "sql",
   "lessonId": "sql-1",
-  "lessonTitle": "SQL I",
-  "lessonDescription": "データベースを操作するための言語SQLの基礎を学びます。データの取得、条件指定、並び替えなどの基本的な操作を習得しましょう。",
+  "lessonTitle": "SQL (エスキューエル) にちょうせん！",
+  "lessonDescription": "たくさんのデータがしまってある「倉庫（そうこ）」から、ほしいデータを取り出すための言葉「SQL（エスキューエル）」のきほんを学びましょう。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello World",
-      "description": "SQLで文字列を表示してみましょう。SELECT文を使って'Hello, World!'という文字を取得（表示）します。",
+      "title": "画面に文字を出してみましょう",
+      "description": "SQLを使って、画面に「こんにちは」と表示させてみましょう。SELECT（セレクト）というキーワードを使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "データの取得",
-          "content": "# SELECT文\n\nデータベースからデータを取り出すには `SELECT` を使います。\n単純な文字列を表示する場合も `SELECT` を使用します。\n\n```sql\nSELECT '表示したい文字';\n```"
+          "title": "ほしいデータを選ぶ SELECT",
+          "content": "# SELECT（セレクト）\n\n「これを選んでください！」とお願いするときは `SELECT` と入力します。ただの文字を表示させたいときもこれを使いますよ。\n\n```sql\nSELECT '表示したい文字';\n```"
         },
         {
-          "title": "この演習の目標",
-          "content": "# 目標\n\n`SELECT` を使って `'Hello, World!'` と出力してみましょう。\n末尾のセミコロン ; も忘れずに。\n\n**コード例：**\n```sql\nSELECT 'Hello, World!';\n```"
+          "title": "やってみよう！",
+          "content": "# 目標\n\n`SELECT` を使って `'Hello, World!'` と表示させてみましょう。さいごに `;`（セミコロン）を入力するのがルールです。\n\n**入力するコードのヒント：**\n```sql\nSELECT 'Hello, World!';\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -29,8 +29,8 @@ export const sqlData = {
         "SELECT 'Hello, World!';"
       ],
       "lineHints": [
-        null,
-        "命令は「SELECT」です。"
+        "ここはメモ（コメント）です。",
+        "やりかたは「SELECT」です。"
       ],
       "candidates": {
         "functions": [
@@ -48,18 +48,18 @@ export const sqlData = {
       ]
     },
     {
-      "title": "全てのカラムを取得",
-      "description": "usersテーブルから全てのデータを取得してみましょう。",
+      "title": "ぜんぶのデータを見ましょう",
+      "description": "「users（ユーザーズ）」という名前の表から、すべてのデータを取り出してみましょう。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "テーブルからの取得",
-          "content": "# FROM句\n\nどこのテーブルからデータを取るかを `FROM` で指定します。\n全てのカラム（列）を取得するにはアスタリスク * を使います。\n\n```sql\nSELECT * FROM テーブル名;\n```"
+          "title": "表から選ぶ FROM",
+          "content": "# FROM（フロム）\n\nどこの表からデータを取るかを `FROM` で指定します。すべてを選びたいときは `*`（アスタリスク）を使いますよ。\n\n```sql\nSELECT * FROM 表の名前;\n```"
         },
         {
-          "title": "この演習の目標",
-          "content": "# 目標\n\nusers テーブルから全てのデータを取得しましょう。\n\n**コード例：**\n```sql\nSELECT * FROM users;\n```"
+          "title": "やってみよう！",
+          "content": "# 目標\n\nusers という名前の表から、すべてのデータを取り出してみましょう。\n\n**入力するコードのヒント：**\n```sql\nSELECT * FROM users;\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -71,7 +71,7 @@ export const sqlData = {
       ],
       "lineHints": [
         null,
-        "全カラム指定は * 、テーブル指定は FROM users です。"
+        "全カラム指定は * 、テーブル（表）指定は FROM users です。"
       ],
       "candidates": {
         "functions": [
@@ -91,18 +91,18 @@ export const sqlData = {
       ]
     },
     {
-      "title": "特定のカラムを取得",
-      "description": "全てのデータではなく、特定のカラム（列）だけを選んで取得する方法を学びましょう。",
+      "title": "名前だけを取り出しましょう",
+      "description": "表の中から、特定の項目（名前など）だけを選んで取り出してみましょう。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "カラムの指定",
-          "content": "# カラム名を指定\n\n`SELECT` の後に取得したいカラム名をカンマ区切りで記述します。\n\n```sql\nSELECT name, age FROM users;\n```"
+          "title": "項目を指定します",
+          "content": "# カンマで区切ります\n\n`SELECT` のあとに取り出したい項目の名前を入力します。複数を指定したいときは `,`（カンマ）でつなげますよ。\n\n```sql\nSELECT name, age FROM users;\n```"
         },
         {
-          "title": "この演習の目標",
-          "content": "# 目標\n\nusers テーブルから name カラムだけを取得してみましょう。\n\n**コード例：**\n```sql\nSELECT name FROM users;\n```"
+          "title": "やってみよう！",
+          "content": "# 目標\n\nusers 表から name（名前）の項目だけを取り出してみましょう。\n\n**入力するコードのヒント：**\n```sql\nSELECT name FROM users;\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -114,7 +114,7 @@ export const sqlData = {
       ],
       "lineHints": [
         null,
-        "取得したいカラム名 name を記述します。"
+        "取り出したい項目の名前 name を入力します。"
       ],
       "candidates": {
         "functions": [
@@ -134,18 +134,18 @@ export const sqlData = {
       ]
     },
     {
-      "title": "条件を指定して取得 (数値)",
-      "description": "usersテーブルから、年齢(age)が25以上のユーザーの情報を取得してみましょう。",
+      "title": "条件で絞り込み（しぼりこみ）",
+      "description": "年齢（age）が 25才以上の人だけを取り出してみましょう。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "条件指定",
-          "content": "# WHERE句\n\n特定の条件に合うデータだけを取得するには `WHERE` を使います。\n数値の比較には >, <, >=, <=, = などが使えます。\n\n```sql\nSELECT * FROM users WHERE age >= 20;\n```"
+          "title": "WHERE（ウェア）を使いましょう",
+          "content": "# 特定のデータだけ選ぶ\n\n条件に合うデータだけを取り出すには `WHERE` を使います。数字のくらべかたは算数と同じですよ。\n\n```sql\nSELECT * FROM users WHERE age >= 20;\n```"
         },
         {
-          "title": "この演習の目標",
-          "content": "# 目標\n\nusers テーブルから age が `25` 以上のユーザーの全カラムを取得しましょう。\n\n**コード例：**\n```sql\nSELECT * FROM users WHERE age >= 25;\n```"
+          "title": "やってみよう！",
+          "content": "# 目標\n\nusers 表から age が `25` 以上の人の全データを取り出してみましょう。\n\n**入力するコードのヒント：**\n```sql\nSELECT * FROM users WHERE age >= 25;\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -157,7 +157,7 @@ export const sqlData = {
       ],
       "lineHints": [
         null,
-        "条件を指定するために WHERE を使います。"
+        "条件を指定するために WHERE と入力します。"
       ],
       "candidates": {
         "functions": [
@@ -185,18 +185,18 @@ export const sqlData = {
       ]
     },
     {
-      "title": "条件を指定して取得 (文字列)",
-      "description": "usersテーブルから、国(country)が 'Japan' のユーザーを取得してみましょう。",
+      "title": "文字で絞り込みましょう",
+      "description": "国（country）が 'Japan'（日本）の人だけを取り出してみましょう。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "文字列の比較",
-          "content": "# シングルクォートで囲む\n\n文字列を条件にする場合は、値をシングルクォート ' で囲みます。\n\n```sql\nSELECT * FROM users WHERE country = 'USA';\n```"
+          "title": "文字は ' ' で囲みます",
+          "content": "# 文字のくらべかた\n\n文字を条件にするときは、値を `' '`（シングルクォート）で囲むのがルールです。\n\n```sql\nSELECT * FROM users WHERE country = 'USA';\n```"
         },
         {
-          "title": "この演習の目標",
-          "content": "# 目標\n\nusers テーブルから country が `'Japan'` のデータを取得しましょう。\n\n**コード例：**\n```sql\nSELECT * FROM users WHERE country = 'Japan';\n```"
+          "title": "やってみよう！",
+          "content": "# 目標\n\nusers 表から country が `'Japan'` のデータを取り出してみましょう。\n\n**入力するコードのヒント：**\n```sql\nSELECT * FROM users WHERE country = 'Japan';\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -208,7 +208,7 @@ export const sqlData = {
       ],
       "lineHints": [
         null,
-        "文字列 Japan を指定します。シングルクォートを忘れずに。"
+        "文字の Japan を指定します。 ' ' で囲むのを忘れないでください。"
       ],
       "candidates": {
         "functions": [
@@ -233,18 +233,18 @@ export const sqlData = {
       ]
     },
     {
-      "title": "複数の条件 (AND)",
-      "description": "複数の条件を組み合わせてみましょう。年齢が20歳以上、かつ国が'Japan'のユーザーを取得します。",
+      "title": "2つの条件を組み合わせましょう",
+      "description": "「20才以上」かつ「日本の人」という、2つの条件をどちらも満たす人を探してみましょう。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "AND演算子",
-          "content": "# 複数の条件を全て満たす\n\n`AND` を使うと、指定した条件を全て満たすデータだけを取得できます。\n\n```sql\nSELECT * FROM users WHERE age >= 20 AND country = 'USA';\n```"
+          "title": "AND（アンド）演算子",
+          "content": "# 「どちらも」のとき\n\n`AND` を使うと、指定した条件をすべて満たすデータだけを取り出すことができます。\n\n```sql\nSELECT * FROM users WHERE age >= 20 AND country = 'Japan';\n```"
         },
         {
-          "title": "この演習の目標",
-          "content": "# 目標\n\nage が `20` 以上、かつ country が `'Japan'` のユーザーを取得しましょう。\n\n**コード例：**\n```sql\nSELECT * FROM users WHERE age >= 20 AND country = 'Japan';\n```"
+          "title": "やってみよう！",
+          "content": "# 目標\n\nage が `20` 以上、かつ country が `'Japan'` の人を取り出してみましょう。\n\n**入力するコードのヒント：**\n```sql\nSELECT * FROM users WHERE age >= 20 AND country = 'Japan';\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -256,7 +256,7 @@ export const sqlData = {
       ],
       "lineHints": [
         null,
-        "「かつ」を表す演算子 AND を使います。"
+        "「かつ」をあらわす AND を入力しましょう。"
       ],
       "candidates": {
         "functions": [
@@ -289,18 +289,18 @@ export const sqlData = {
       ]
     },
     {
-      "title": "データの並び替え",
-      "description": "取得したデータを年齢(age)の順に並び替えてみましょう。",
+      "title": "きれいに並び替えましょう",
+      "description": "取り出したデータを、年齢（age）の順に並び替えて表示してみましょう。",
       "difficulty": "easy",
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "ORDER BY句",
-          "content": "# 並び替え\n\n`ORDER BY カラム名` でデータを並び替えることができます。\nデフォルトは昇順（小さい順）です。降順（大きい順）にする場合は `DESC` を付けます。\n\n```sql\nSELECT * FROM users ORDER BY age DESC;\n```"
+          "title": "ORDER BY（オーダー・バイ）",
+          "content": "# 順番を決めます\n\n`ORDER BY 項目名` と入力すると、データを並び替えることができます。何もしないと小さい順に並びますよ。\n\n```sql\nSELECT * FROM users ORDER BY age;\n```"
         },
         {
-          "title": "この演習の目標",
-          "content": "# 目標\n\nusers テーブルのデータを age の**昇順（小さい順）**で並び替えて取得しましょう。\n\n**コード例：**\n```sql\nSELECT * FROM users ORDER BY age;\n```"
+          "title": "やってみよう！",
+          "content": "# 目標\n\nusers 表のデータを age（年齢）の小さい順に並び替えて取り出してみましょう。\n\n**入力するコードのヒント：**\n```sql\nSELECT * FROM users ORDER BY age;\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -312,7 +312,7 @@ export const sqlData = {
       ],
       "lineHints": [
         null,
-        "並び替えには ORDER BY を使います。"
+        "並び替えには ORDER BY と入力します。"
       ],
       "candidates": {
         "functions": [
@@ -335,18 +335,18 @@ export const sqlData = {
       ]
     },
     {
-      "title": "取得件数の制限",
-      "description": "データの取得件数を制限する方法を学びましょう。最初の3件だけを取得します。",
+      "title": "数をしぼって取り出しましょう",
+      "description": "データの数が多いとき、最初の3つだけを取り出す方法を学びましょう。",
       "difficulty": "easy",
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "LIMIT句",
-          "content": "# 件数制限\n\n`LIMIT 数字` を使うと、取得するデータの最大件数を指定できます。\n\n```sql\nSELECT * FROM users LIMIT 5;\n```"
+          "title": "LIMIT（リミット）",
+          "content": "# 件数を制限します\n\n`LIMIT 数字` と入力すると、取り出すデータの最大数を決めることができます。\n\n```sql\nSELECT * FROM users LIMIT 5;\n```"
         },
         {
-          "title": "この演習の目標",
-          "content": "# 目標\n\nusers テーブルから最初の 3 件だけを取得しましょう。\n\n**コード例：**\n```sql\nSELECT * FROM users LIMIT 3;\n```"
+          "title": "やってみよう！",
+          "content": "# 目標\n\nusers 表から、最初の 3 つのデータだけを取り出してみましょう。\n\n**入力するコードのヒント：**\n```sql\nSELECT * FROM users LIMIT 3;\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -358,7 +358,7 @@ export const sqlData = {
       ],
       "lineHints": [
         null,
-        "件数を制限する命令は LIMIT です。"
+        "数をしぼるキーワードは LIMIT です。"
       ],
       "candidates": {
         "functions": [
@@ -382,18 +382,18 @@ export const sqlData = {
       ]
     },
     {
-      "title": "データの数を数える",
-      "description": "テーブルに保存されているデータの行数を数えてみましょう。",
+      "title": "ぜんぶで何個あるか数えましょう",
+      "description": "表の中に、データがぜんぶで何行あるかを数えてみましょう。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "COUNT関数",
-          "content": "# 行数のカウント\n\n`COUNT(*)` を使うと、データの総数を取得できます。\n\n```sql\nSELECT COUNT(*) FROM users;\n```"
+          "title": "COUNT（カウント）関数",
+          "content": "# 行数を数えます\n\n`COUNT(*)` を使うと、データの合計数を調べることができます。\n\n```sql\nSELECT COUNT(*) FROM users;\n```"
         },
         {
-          "title": "この演習の目標",
-          "content": "# 目標\n\nusers テーブルのデータの総数をカウントして表示しましょう。\n\n**コード例：**\n```sql\nSELECT COUNT(*) FROM users;\n```"
+          "title": "やってみよう！",
+          "content": "# 目標\n\nusers 表にあるデータの合計数を数えて、表示させてみましょう。\n\n**入力するコードのヒント：**\n```sql\nSELECT COUNT(*) FROM users;\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -405,7 +405,7 @@ export const sqlData = {
       ],
       "lineHints": [
         null,
-        "数を数える関数 COUNT を使います。"
+        "数を数える関数 COUNT を入力しましょう。"
       ],
       "candidates": {
         "functions": [
@@ -426,18 +426,18 @@ export const sqlData = {
       ]
     },
     {
-      "title": "重複を除外して取得",
-      "description": "重複しているデータを1つにまとめて取得する方法を学びましょう。",
+      "title": "バラバラの種類を調べましょう",
+      "description": "重複（じゅうふく）しているデータを取り除いて、どんな種類があるか調べましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "DISTINCT",
-          "content": "# 重複の除外\n\n`SELECT DISTINCT カラム名` とすることで、重複する値を除外してユニークな値だけを取得できます。\n\n```sql\nSELECT DISTINCT country FROM users;\n```"
+          "title": "DISTINCT（ディスティンクト）",
+          "content": "# 重なりを消します\n\n`SELECT DISTINCT 項目名` と入力すると、同じ内容のデータを1つにまとめて、ユニーク（唯一）な値だけを取り出せます。\n\n```sql\nSELECT DISTINCT country FROM users;\n```"
         },
         {
-          "title": "この演習の目標",
-          "content": "# 目標\n\nusers テーブルの country カラムから、重複を除いた国名のリストを取得しましょう。\n\n**コード例：**\n```sql\nSELECT DISTINCT country FROM users;\n```"
+          "title": "やってみよう！",
+          "content": "# 目標\n\nusers 表の country（国）項目から、重なりを除いた国のリストを取り出してみましょう。\n\n**入力するコードのヒント：**\n```sql\nSELECT DISTINCT country FROM users;\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -449,7 +449,7 @@ export const sqlData = {
       ],
       "lineHints": [
         null,
-        "重複を除外するキーワード DISTINCT を使います。"
+        "重なりをのぞくキーワード DISTINCT を入力しましょう。"
       ],
       "candidates": {
         "functions": [

@@ -1,20 +1,20 @@
 export const haskellData = {
   "language": "haskell",
   "lessonId": "haskell-1",
-  "lessonTitle": "Haskell I",
-  "lessonDescription": "純粋関数型言語Haskellの基本を学びます。副作用の分離、遅延評価など独特な概念の入り口へ。",
+  "lessonTitle": "Haskell (ハスケル) にちょうせん！",
+  "lessonDescription": "数学のようなきっちりした美しさを持つ言葉「Haskell（ハスケル）」のきほんを学びましょう。計算の答えを次の計算にパスしていくような、独特な作りかたを体験できます。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello Worldを出力しよう",
-      "description": "Haskellで画面に文字を表示するには putStrLn を使います。",
+      "title": "画面に文字を出してみましょう",
+      "description": "Haskellを使って画面に「こんにちは」と表示させてみましょう。putStrLn（プットストラライン）という関数を使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "main関数",
-          "content": "# エントリーポイント\n\nプログラムの実行は `main` から始まります。表示には `putStrLn` を使います。\n\n**コード例：**\n```haskell\nmain = putStrLn \"Hello, Haskell!\"\n```"
+          "title": "メッセージを表示します",
+          "content": "# putStrLn 関数\n\n画面に文字を出して改行したいときは、`putStrLn` と入力して、そのあとに `\" \"` で囲んだ文字を続けます。\n\n**コード例：**\n```haskell\nmain = putStrLn \"Hello, Haskell!\"\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -24,9 +24,12 @@ export const haskellData = {
         "main = putStrLn \"Hello, Haskell!\""
       ],
       "lineHints": [
-        "Hello, Haskell! を出力します。"
+        "putStrLn を使って、そのあとの文字を画面に出します。"
       ],
       "candidates": {
+        "functions": [
+          "putStrLn"
+        ],
         "strings": [
           "Hello, Haskell!"
         ]
@@ -39,27 +42,26 @@ export const haskellData = {
       ]
     },
     {
-      "title": "変数（バインディング）",
-      "description": "letを使って値に名前を付けましょう。",
+      "title": "名前に「あたい」をつけましょう",
+      "description": "数字や文字に名前をつけて、あとで使いやすくしてみましょう。Haskellでは一度決めた名前の中身は変えられないというルールがあります。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "let",
-          "content": "# 不変性\n\nHaskellの変数は一度定義すると変更できません（イミュータブル）。\n\n**コード例：**\n```haskell\nmain = do\n    let x = 10\n    print x\n```"
+          "title": "名前をつけます",
+          "content": "# 変数の定義\n\nHaskellでは、`名前 = 中身` と入力することで、データに名前をつけることができます。\n\n**コード例：**\n```haskell\nname = \"Haskell\"\nmain = putStrLn name\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "main = do\n    let x = 10\n    print x",
-      "holeyCode": "main = do\n    let x = ___\n    print ___",
+      "correctCode": "x = 10\nmain = print x",
+      "holeyCode": "x = ___\nmain = print ___",
       "correctLines": [
-        "main = do",
-        "    let x = 10",
-        "    print x"
+        "x = 10",
+        "main = print x"
       ],
       "lineHints": [
-        "10を定義します。",
-        "xを出力します（printはshowしてputStrLnする関数）。"
+        "x という名前に 10 をセットします。",
+        "print 関数を使って、中身を表示します。"
       ],
       "candidates": {
         "variables": [
@@ -77,30 +79,28 @@ export const haskellData = {
       ]
     },
     {
-      "title": "計算",
-      "description": "計算を行いましょう。",
+      "title": "コンピュータで計算しましょう",
+      "description": "Haskellを使って、たし算をしてみましょう。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "演算",
-          "content": "# 通常の演算子\n\n+, -, *, / などが使えます。\n\n**コード例：**\n```haskell\nmain = print (5 + 3)\n```"
+          "title": "計算の記号",
+          "content": "# そのまま計算できます\n\n算数と同じ記号を使って計算ができますよ。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "main = do\n    let a = 5\n    let b = 3\n    print (a + b)",
-      "holeyCode": "main = do\n    let a = 5\n    let b = 3\n    print (a ___ b)",
+      "correctCode": "a = 5\nb = 3\nmain = print (a + b)",
+      "holeyCode": "a = 5\nb = 3\nmain = print (a ___ b)",
       "correctLines": [
-        "main = do",
-        "    let a = 5",
-        "    let b = 3",
-        "    print (a + b)"
+        "a = 5",
+        "b = 3",
+        "main = print (a + b)"
       ],
       "lineHints": [
         null,
         null,
-        null,
-        "a + b を出力します。"
+        "たし算なので `+` を使います。 ( ) で囲むと計算を先にします。"
       ],
       "candidates": {
         "operators": [
@@ -115,108 +115,64 @@ export const haskellData = {
       ]
     },
     {
-      "title": "文字列結合",
-      "description": "文字列を結合して表示しましょう。",
-      "difficulty": "easy",
-      "orderIndex": 4,
-      "tutorialSlides": [
-        {
-          "title": "結合演算子",
-          "content": "# ++\n\n文字列同士を ++ で結合します。数値を文字列にするには `show` を使います。\n\n**コード例：**\n```haskell\nmain = putStrLn (\"Age: \" ++ show 20)\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "main = do\n    let age = 20\n    putStrLn (\"Age: \" ++ show age)",
-      "holeyCode": "main = do\n    let age = 20\n    putStrLn (\"Age: \" ++ ___ age)",
-      "correctLines": [
-        "main = do",
-        "    let age = 20",
-        "    putStrLn (\"Age: \" ++ show age)"
-      ],
-      "lineHints": [
-        null,
-        null,
-        "show関数で文字列化します。"
-      ],
-      "candidates": {
-        "functions": [
-          "show"
-        ]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Age: 20\n"
-        }
-      ]
-    },
-    {
-      "title": "リスト",
-      "description": "リストを作成し、要素を取り出しましょう。",
+      "title": "データをならべる「リスト」",
+      "description": "たくさんのデータを一つの「列」にまとめて並べられる「リスト」を使ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "リスト",
-          "content": "# [ ]\n\n同じ型の要素を格納します。`!!` 演算子でインデックス指定アクセスができます。\n\n**コード例：**\n```haskell\nlet nums = [10, 20]\nprint (nums !! 1) -- 20 を表示\n```"
+          "title": "リストの作りかた",
+          "content": "# [ ] を使いましょう\n\nリストの中身を取り出すときは、ちょっと難しいですが `!!` という記号を使います。さいしょのデータは **「0番」** から数えるのがルールですよ。\n\n**コード例：**\n```haskell\nnums = [10, 20, 30]\nmain = print (nums !! 1) -- 20 が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "main = do\n    let nums = [10, 20]\n    print (nums !! 1)",
-      "holeyCode": "main = do\n    let nums = [10, 20]\n    print (nums ___ 1)",
+      "correctCode": "colors = [\"red\", \"blue\"]\nmain = putStrLn (colors !! 1)",
+      "holeyCode": "colors = [\"red\", \"blue\"]\nmain = putStrLn (colors !! ___)",
       "correctLines": [
-        "main = do",
-        "    let nums = [10, 20]",
-        "    print (nums !! 1)"
+        "colors = [\"red\", \"blue\"]",
+        "main = putStrLn (colors !! 1)"
       ],
       "lineHints": [
         null,
-        null,
-        "!! 演算子を使います。"
+        "2番目のデータの番号は 1 です。 `!! 1` と入力してください。"
       ],
       "candidates": {
-        "operators": [
-          "!!"
+        "numbers": [
+          "1"
         ]
       },
       "testCases": [
         {
           "input": "",
-          "expected_output": "20\n"
+          "expected_output": "blue\n"
         }
       ]
     },
     {
-      "title": "if式",
-      "description": "条件分岐を行います。Haskellのifは値を返す「式」です。",
+      "title": "「もし〜なら」で分けましょう",
+      "description": "条件によって答えを変えてみましょう。 if then else という言葉を使います。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "if-then-else",
-          "content": "# elseは必須\n\n`if 条件 then 値 else 値` という形になります。\n\n**コード例：**\n```haskell\nif score > 80 then \"Great\" else return ()\n```"
+          "title": "if, then, else",
+          "content": "# 全てセットで入力します\n\nHaskellの `if` は、必ず `then`（そのとき）と `else`（そうでなければ）を一緒に書くルールになっています。\n\n**コード例：**\n```haskell\nresult score = if score > 80 then \"合格\" else \"ざんねん\"\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "main = do\n    let score = 100\n    if score > 80\n        then putStrLn \"Great\"\n        else return ()",
-      "holeyCode": "main = do\n    let score = 100\n    if score ___ 80\n        then putStrLn \"Great\"\n        else return ()",
+      "correctCode": "score = 100\nmain = putStrLn (if score > 80 then \"Great\" else \"Try again\")",
+      "holeyCode": "score = 100\nmain = putStrLn (if score ___ 80 then \"Great\" else \"Try again\")",
       "correctLines": [
-        "main = do",
-        "    let score = 100",
-        "    if score > 80",
-        "        then putStrLn \"Great\"",
-        "        else return ()"
+        "score = 100",
+        "main = putStrLn (if score > 80 then \"Great\" else \"Try again\")"
       ],
       "lineHints": [
         null,
-        null,
-        "比較演算子 > を使います。",
-        null,
-        null
+        "比較するための記号 `>` を入力しましょう。"
       ],
       "candidates": {
         "operators": [
-          ">"
+          ">
         ]
       },
       "testCases": [
@@ -227,140 +183,26 @@ export const haskellData = {
       ]
     },
     {
-      "title": "if-else式",
-      "description": "else側でも処理を行いましょう。",
-      "difficulty": "easy",
-      "orderIndex": 7,
-      "tutorialSlides": [
-        {
-          "title": "分岐",
-          "content": "# 分岐するアクション\n\n条件に応じて実行するアクションを切り替えます。\n\n**コード例：**\n```haskell\nif x > 10 then putStrLn \"Big\" else putStrLn \"Small\"\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "main = do\n    let x = 5\n    if x > 10\n        then putStrLn \"Big\"\n        else putStrLn \"Small\"",
-      "holeyCode": "main = do\n    let x = 5\n    if x > 10\n        then putStrLn \"Big\"\n        ___ putStrLn \"Small\"",
-      "correctLines": [
-        "main = do",
-        "    let x = 5",
-        "    if x > 10",
-        "        then putStrLn \"Big\"",
-        "        else putStrLn \"Small\""
-      ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "else を記述します。"
-      ],
-      "candidates": {
-        "keywords": [
-          "else"
-        ]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Small\n"
-        }
-      ]
-    },
-    {
-      "title": "ループ（mapM_）",
-      "description": "Haskellにはforループがありません。代わりにmapM_などを使います。",
-      "difficulty": "easy",
-      "orderIndex": 8,
-      "tutorialSlides": [
-        {
-          "title": "mapM_",
-          "content": "# リストの各要素に適用\n\nリストの要素を一つずつ取り出して処理を行います。\n\n**コード例：**\n```haskell\nmapM_ print [1, 2, 3]\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "main = do\n    let nums = [1, 2, 3]\n    mapM_ print nums",
-      "holeyCode": "main = do\n    let nums = [1, 2, 3]\n    ___ print nums",
-      "correctLines": [
-        "main = do",
-        "    let nums = [1, 2, 3]",
-        "    mapM_ print nums"
-      ],
-      "lineHints": [
-        null,
-        null,
-        "mapM_ 関数を使います。"
-      ],
-      "candidates": {
-        "functions": [
-          "mapM_"
-        ]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "1\n2\n3\n"
-        }
-      ]
-    },
-    {
-      "title": "タプル（データ構造）",
-      "description": "異なる型のデータをまとめるタプルを使いましょう。",
-      "difficulty": "easy",
-      "orderIndex": 9,
-      "tutorialSlides": [
-        {
-          "title": "タプル",
-          "content": "# ( )\n\n複数の値を一つにまとめます。`fst` で1つ目の要素を取得できます。\n\n**コード例：**\n```haskell\nlet user = (\"Alice\", 20)\nputStrLn (fst user) -- \"Alice\" を表示\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "main = do\n    let user = (\"Alice\", 20)\n    putStrLn (fst user)",
-      "holeyCode": "main = do\n    let user = (\"Alice\", 20)\n    putStrLn (___ user)",
-      "correctLines": [
-        "main = do",
-        "    let user = (\"Alice\", 20)",
-        "    putStrLn (fst user)"
-      ],
-      "lineHints": [
-        null,
-        null,
-        "fst 関数で1つ目の要素を取得します。"
-      ],
-      "candidates": {
-        "functions": [
-          "fst"
-        ]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Alice\n"
-        }
-      ]
-    },
-    {
-      "title": "関数定義",
-      "description": "簡単な関数を定義して呼び出します。",
+      "title": "自分だけの関数を作りましょう",
+      "description": "計算の手順をまとめて、名前をつけた「関数（かんすう）」を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "関数定義",
-          "content": "# 名前 引数 = 本体\n\n処理に名前を付けて定義します。\n\n**コード例：**\n```haskell\ngreet = putStrLn \"Hello\"\n\nmain = greet -- 呼び出し\n```"
+          "title": "関数を定義しましょう",
+          "content": "# 数学の式のように書きます\n\n`関数名 引数 = やりたいこと` のように入力します。\n\n**コード例：**\n```haskell\ndouble x = x * 2\nmain = print (double 5) -- 10 が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "greet :: IO ()\ngreet = putStrLn \"Hello\"\nmain = greet",
-      "holeyCode": "greet :: IO ()\ngreet = putStrLn \"Hello\"\nmain = ___",
+      "correctCode": "greet name = \"Hello, \" ++ name\nmain = putStrLn (greet \"Haskell\")",
+      "holeyCode": "greet name = \"Hello, \" ++ name\nmain = putStrLn (___ \"Haskell\")",
       "correctLines": [
-        "greet :: IO ()",
-        "greet = putStrLn \"Hello\"",
-        "main = greet"
+        "greet name = \"Hello, \" ++ name",
+        "main = putStrLn (greet \"Haskell\")"
       ],
       "lineHints": [
-        null,
-        null,
-        "greet を呼び出します。"
+        "greet という名前の関数を定義します。 `++` は文字をくっつける記号です。",
+        "作った関数 `greet` を呼び出して使います。"
       ],
       "candidates": {
         "functions": [
@@ -370,7 +212,7 @@ export const haskellData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Hello\n"
+          "expected_output": "Hello, Haskell\n"
         }
       ]
     }

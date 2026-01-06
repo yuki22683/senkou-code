@@ -1,35 +1,39 @@
 export const phpData = {
   "language": "php",
   "lessonId": "php-1",
-  "lessonTitle": "PHP I",
-  "lessonDescription": "Webサーバーサイド開発で広く使われているPHPの基本を学びます。HTMLに埋め込みやすく、手軽に始められます。",
+  "lessonTitle": "PHP (ピーエイチピー) にちょうせん！",
+  "lessonDescription": "Webサイトを作るのが得意な言葉「PHP（ピーエイチピー）」のきほんを学びましょう。HTMLという言葉と一緒に使われることが多いですよ。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello Worldを出力しよう",
-      "description": "PHPで画面に文字を表示するには echo を使います。",
+      "title": "画面に文字を出してみましょう",
+      "description": "PHPを使って画面に「こんにちは」と表示させてみましょう。echo（エコー）という関数を使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "PHPタグ",
-          "content": "# <?php ... ?>\n\nPHPのコードは `<?php` と `?>` の間に書きます。表示には `echo` を使います。\n\n**コード例：**\n```php\n<?php\n  echo \"Hello, PHP!\";\n?>\n```"
+          "title": "PHPの「おまじない」",
+          "content": "# <?php ... ?>\n\nPHPのプログラムを入力するときは、`<?php` と `?>` の間に命令を入力するのがルールです。表示には `echo` を使いますよ。\n\n**入力するコードのヒント：**\n```php\n<?php\n  echo \"Hello, PHP!\";\n?>\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "<?php\n  echo \"Hello, PHP!\";\n?>",
-      "holeyCode": "<?php\n  echo \"___\";\n?>",
+      "correctCode": "<?php\n  // 画面にメッセージを出す関数\n  echo \"Hello, PHP!\";\n?>",
+      "holeyCode": "<?php\n  // 画面にメッセージを出す関数\n  echo \"___\";\n?>",
       "correctLines": [
         "<?php",
         "  echo \"Hello, PHP!\";",
         "?>"
       ],
       "lineHints": [
-        null,
-        "Hello, PHP! を出力します。"
+        "PHPを始めるための合図です。",
+        "echo を使って、そのあとの文字を画面に出します。",
+        "PHPを終わるための合図です。"
       ],
       "candidates": {
+        "functions": [
+          "echo"
+        ],
         "strings": [
           "Hello, PHP!"
         ]
@@ -42,14 +46,14 @@ export const phpData = {
       ]
     },
     {
-      "title": "変数",
-      "description": "変数を定義して出力しましょう。",
+      "title": "便利な「はこ」",
+      "description": "数字をしまっておく「はこ（変数）」を使ってみましょう。PHPでは、はこに $（ドル記号）をつけます。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "変数",
-          "content": "# $記号\n\nPHPの変数は必ず $ から始まります。\n\n**コード例：**\n```php\n$name = \"PHP\";\necho $name;\n```"
+          "title": "$ から始めます",
+          "content": "# $記号\n\nPHPでは、はこ（変数）の名前の前に必ず `$` をつける決まりがあります。\n\n**コード例：**\n```php\n$name = \"PHP\";\necho $name;\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -63,8 +67,9 @@ export const phpData = {
       ],
       "lineHints": [
         null,
-        "10を代入します。",
-        "変数xを出力します。"
+        "x という名前のはこに 10 を入力します。",
+        "はこの名前 x を指定して、表示させます。",
+        null
       ],
       "candidates": {
         "variables": [
@@ -82,14 +87,14 @@ export const phpData = {
       ]
     },
     {
-      "title": "計算",
-      "description": "計算を行いましょう。",
+      "title": "コンピュータで計算しましょう",
+      "description": "PHPを使って、たし算をしてみましょう。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "演算",
-          "content": "# 四則演算\n\n+, -, *, / などが使えます。\n\n**コード例：**\n```php\n$a = 5;\n$b = 3;\necho $a + $b;\n```"
+          "title": "計算の記号",
+          "content": "# 算数と同じ記号を使います\n\nPHPでも、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算"
         }
       ],
       "initialDisplayMode": "holey",
@@ -106,7 +111,8 @@ export const phpData = {
         null,
         null,
         null,
-        "$a + $b を出力します。"
+        "たし算なので `+" を入力します。",
+        null
       ],
       "candidates": {
         "operators": [
@@ -121,14 +127,14 @@ export const phpData = {
       ]
     },
     {
-      "title": "変数展開",
-      "description": "ダブルクォートの中で変数を使って値を埋め込みましょう。",
+      "title": "文章の中に「はこ」を入れましょう",
+      "description": "ダブルクォート（\"）の中に「はこ（変数）」を直接入れて、中身を表示してみましょう。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "ダブルクォート",
-          "content": "# 文字列内での展開\n\nダブルクォート \" で囲むと、中の変数がそのまま値に置き換わります。\n\n**コード例：**\n```php\n$age = 20;\necho \"年齢は $age です\";\n```"
+          "title": "変数展開（へんすうてんかい）",
+          "content": "# 文字列の中に入れるだけ\n\n`\" \"` で囲んだ文章の中に `$age` と入力するだけで、その中身を文章に入れられますよ。\n\n**コード例：**\n```php\n$age = 10;\necho \"私は $age 歳です\";\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -142,8 +148,9 @@ export const phpData = {
       ],
       "lineHints": [
         null,
-        null,
-        "age変数を埋め込みます。"
+        "age に 20 を入力します。",
+        "はこの名前 age を指定します。",
+        null
       ],
       "candidates": {
         "variables": [
@@ -158,14 +165,14 @@ export const phpData = {
       ]
     },
     {
-      "title": "配列",
-      "description": "配列を作成して要素にアクセスしましょう。",
+      "title": "データをならべる「配列」",
+      "description": "たくさんのデータを一つの「長い はこ」にまとめて入れられる「配列（はいれつ）」を使ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "配列",
-          "content": "# [ ]\n\n複数のデータをまとめて扱います。インデックスは0から始まります。\n\n**コード例：**\n```php\n$colors = ['red', 'blue'];\necho $colors[1]; // blue を出力\n```"
+          "title": "データの番号は 0 から！",
+          "content": "# [ ]（しかくい かっこ）を使いましょう\n\n配列の中身を取り出すときは、何番目かを指定します。さいしょのデータは **「0番」** から数えるのがルールですよ。\n\n**コード例：**\n```php\n$colors = ['あか', 'あお'];\necho $colors[0]; // 「あか」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -179,8 +186,9 @@ export const phpData = {
       ],
       "lineHints": [
         null,
-        null,
-        "インデックス1を指定します。"
+        "['red', 'blue'] と入力して配列を作ります。",
+        "2番目のデータの番号は 1 です。 `$colors[1]` と入力してください。",
+        null
       ],
       "candidates": {
         "numbers": [
@@ -195,14 +203,14 @@ export const phpData = {
       ]
     },
     {
-      "title": "if文",
-      "description": "条件分岐を行います。",
+      "title": "「もし〜なら」で分けましょう",
+      "description": "点数によって表示するメッセージを変えてみましょう。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
           "title": "if文",
-          "content": "# 構文\n\n条件式を丸括弧 `( )` で囲みます。\n\n**コード例：**\n```php\nif ($score > 80) {\n    echo \"合格\";\n}\n```"
+          "content": "# ( ) と { } を使いましょう\n\nPHPでは、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\n\n**コード例：**\n```php\nif ($score > 80) {\n    echo \"合格！\";\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -218,14 +226,15 @@ export const phpData = {
       ],
       "lineHints": [
         null,
-        null,
-        "比較演算子 > を使います。",
-        null,
+        "score = 100 と入力しましょう。",
+        "比較するための記号 `>" を入力しましょう。",
+        "Excellent と表示します。",
+        "さいごに } で閉じるのを忘れないでください。",
         null
       ],
       "candidates": {
         "operators": [
-          ">"
+          ">
         ]
       },
       "testCases": [
@@ -236,14 +245,14 @@ export const phpData = {
       ]
     },
     {
-      "title": "if-else文",
-      "description": "elseを使って分岐します。",
+      "title": "ちがう場合はどうしましょう？",
+      "description": "else（エルス）を使って、「そうでなければ」の動きを作りましょう。",
       "difficulty": "easy",
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "else",
-          "content": "# elseブロック\n\n条件に当てはまらない時の処理は `else` を使います。\n\n**コード例：**\n```php\nif ($age >= 20) {\n    echo \"大人\";\n} else {\n    echo \"子供\";\n}\n```"
+          "title": "elseブロック",
+          "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```php\nif ($age >= 20) {\n    echo \"大人です\";\n} else {\n    echo \"子供です\";\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -261,10 +270,13 @@ export const phpData = {
       ],
       "lineHints": [
         null,
+        "age に 18 を入力します。",
         null,
         null,
+        "そうでなければ、をあらわす `else` を入力しましょう。",
         null,
-        "else を記述します。"
+        null,
+        null
       ],
       "candidates": {
         "keywords": [
@@ -279,14 +291,14 @@ export const phpData = {
       ]
     },
     {
-      "title": "foreach文",
-      "description": "foreachを使って配列を走査します。",
+      "title": "中身を全部出してみましょう",
+      "description": "foreach（フォーイーチ）という機能を使って、配列の中身を一つずつ順番に表示します。",
       "difficulty": "easy",
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "foreach",
-          "content": "# 配列のループ\n\n`foreach ($配列 as $値)` の形式で、要素を一つずつ取り出します。\n\n**コード例：**\n```php\n$nums = [1, 2, 3];\nforeach ($nums as $n) {\n    echo $n;\n}\n```"
+          "title": "foreachループ",
+          "content": "# as を使いましょう\n\n`foreach ($配列 as $ラベル)` と入力すると、中身を一つずつ取り出して処理できます。PHPで一番よく使われるループですよ。\n\n**コード例：**\n```php\n$nums = [1, 2, 3];\nforeach ($nums as $n) {\n    echo $n;\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -302,8 +314,11 @@ export const phpData = {
       ],
       "lineHints": [
         null,
+        "[1, 2, 3] という配列を作ります。",
+        "「〜を〜として取り出す」をあらわす `as` キーワードを入力します。",
+        "取り出したデータ $n を表示します。",
         null,
-        "as キーワードを使います。"
+        null
       ],
       "candidates": {
         "keywords": [
@@ -318,14 +333,14 @@ export const phpData = {
       ]
     },
     {
-      "title": "連想配列",
-      "description": "キーと値のペアを扱う連想配列を使いましょう。",
+      "title": "名前で探す「じしょ」",
+      "description": "連想配列を使って、名前を指定してデータを取り出してみましょう。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "連想配列",
-          "content": "# => 矢印\n\n名前付きのキーでデータを管理します。\n\n**コード例：**\n```php\n$user = ['name' => 'Alice'];\necho $user['name']; // Alice を表示\n```"
+          "title": "連想配列（れんそうはいれつ）",
+          "content": "# キー => あたい\n\n「名前」と「データ」をセットにして保存できます。矢印のような記号 `=>` を使うのがPHPの特徴ですよ。\n\n**コード例：**\n```php\n$user = ['name' => 'たろう'];\necho $user['name']; // 「たろう」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -339,8 +354,9 @@ export const phpData = {
       ],
       "lineHints": [
         null,
-        null,
-        "キー 'name' を指定します。"
+        "名前（キー）とデータのセットを作ります。",
+        "\"name\" という名前を指定してデータを取り出します。",
+        null
       ],
       "candidates": {
         "strings": [
@@ -355,14 +371,14 @@ export const phpData = {
       ]
     },
     {
-      "title": "関数",
-      "description": "関数を定義して呼び出します。",
+      "title": "自分だけの関数を作りましょう",
+      "description": "一連の手順をまとめて、名前をつけた「関数（かんすう）」を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "関数定義",
-          "content": "# function\n\n処理をまとめて名前を付けます。\n\n**コード例：**\n```php\nfunction greet() {\n    echo \"Hello\";\n}\n\ngreet(); // 呼び出し\n```"
+          "title": "手順をまとめる",
+          "content": "# 関数の定義\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせますよ。\n\n**コード例：**\n```php\nfunction aisatsu() {\n    echo \"こんにちは\";\n}\n\naisatsu(); // 呼び出し\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -378,10 +394,11 @@ export const phpData = {
       ],
       "lineHints": [
         null,
-        null,
-        null,
-        null,
-        "greet(); で呼び出します。"
+        "greet という名前の関数を定義します。",
+        "メッセージを表示します。",
+        "関数の終わりです。",
+        "greet(); と入力して、関数を実行します。",
+        null
       ],
       "candidates": {
         "functions": [

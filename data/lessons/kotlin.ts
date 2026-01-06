@@ -1,36 +1,36 @@
 export const kotlinData = {
   "language": "kotlin",
   "lessonId": "kotlin-1",
-  "lessonTitle": "Kotlin I",
-  "lessonDescription": "Kotlinの基本的な文法を学びます。Androidアプリ開発などで広く使われているモダンな言語です。",
+  "lessonTitle": "Kotlin (コトリン) にちょうせん！",
+  "lessonDescription": "Android（アンドロイド）スマホのアプリ作りなどで大人気の言葉「Kotlin（コトリン）」のきほんを学びましょう。新しくて使いやすい機能がたくさんありますよ。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello World",
-      "description": "Kotlinで画面に文字を表示する方法を学びましょう。「Hello, World!」と出力するプログラムを作ります。",
+      "title": "画面にメッセージを出しましょう",
+      "description": "Kotlinを使って画面に「こんにちは」と表示させてみましょう。println（プリント・ライン）という関数を使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "文字の出力",
-          "content": "# println関数\n\nKotlinで文字を出力して改行するには `println()` を使います。\n\n```kotlin\nprintln(\"表示したい文字\")\n```"
+          "title": "println を使いましょう",
+          "content": "# メッセージを表示します\n\n画面に文字を出して改行（かいぎょう）したいときは、`println()` という名前の関数を使います。カッコの中に表示したいものを入力しましょう。\n\n```kotlin\nprintln(\"表示したい文字\")\n```"
         },
         {
-          "title": "この演習の目標",
-          "content": "# 目標\n\n`println()` を使って `Hello, World!` と表示しましょう。\n\n**コード例：**\n```kotlin\nprintln(\"Hello, World!\")\n```"
+          "title": "やってみよう！",
+          "content": "# 目標\n\n`println()` を使って `Hello, World!` と表示させてみましょう。\n\n**入力するコードのヒント：**\n```kotlin\nprintln(\"Hello, World!\")\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// Hello, World!と出力\nprintln(\"Hello, World!\")",
-      "holeyCode": "// Hello, World!と出力\n___(\"Hello, World!\")",
+      "correctCode": "// Hello, World!と出力する関数\nprintln(\"Hello, World!\")",
+      "holeyCode": "// Hello, World!と出力する関数\n___(\"Hello, World!\")",
       "correctLines": [
-        "// Hello, World!と出力",
+        "// Hello, World!と出力する関数",
         "println(\"Hello, World!\")"
       ],
       "lineHints": [
         null,
-        "命令は println です。"
+        "関数は println です。 L ではなく 小文字の l（エル）ですよ。"
       ],
       "candidates": {
         "functions": [
@@ -48,34 +48,34 @@ export const kotlinData = {
       ]
     },
     {
-      "title": "変数を使う",
-      "description": "データを保存する「変数」の使い方を学びましょう。変更できない変数(val)を使ってみます。",
+      "title": "一度決めたらずっと使う「はこ」",
+      "description": "データをしまっておく「はこ（変数）」を使ってみましょう。Kotlinでは val（バル）というラベルを貼ります。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "変数の定義",
-          "content": "# val キーワード\n\n値を変更しない変数は `val` を使って定義します。\n型推論が効くので、型を書かなくても自動的に判断してくれます。\n\n```kotlin\nval name = \"Kotlin\"\n```"
+          "title": "val を使いましょう",
+          "content": "# 変わらない変数\n\n中身をあとから変えずにずっと使うときは、`val` という言葉をつけて「はこ」を作ります。Kotlinは賢いので、中身を見てラベル（型）を自動で判断してくれますよ。\n\n```kotlin\nval name = \"Kotlin\"\n```"
         },
         {
-          "title": "この演習の目標",
-          "content": "# 目標\n\n変数 name に `\"Kotlin\"` を代入し、それを `println` で表示しましょう。\n\n**コード例：**\n```kotlin\nval name = \"Kotlin\"\nprintln(name)\n```"
+          "title": "やってみよう！",
+          "content": "# 目標\n\n`name` というはこに `\"Kotlin\"` と入れて、そのあとで中身を画面に出してみましょう。\n\n**入力するコードのヒント：**\n```kotlin\nval name = \"Kotlin\"\nprintln(name)\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 変数nameに\"Kotlin\"を代入\nval name = \"Kotlin\"\n// 変数を出力\nprintln(name)",
-      "holeyCode": "// 変数nameに\"Kotlin\"を代入\n___ name = \"Kotlin\"\n// 変数を出力\nprintln(___)",
+      "correctCode": "// name というはこに \"Kotlin\" を入れる\nval name = \"Kotlin\"\n// はこの中身を出す\nprintln(name)",
+      "holeyCode": "// name というはこに \"Kotlin\" を入れる\n___ name = \"Kotlin\"\n// はこの中身を出す\nprintln(___)",
       "correctLines": [
-        "// 変数nameに\"Kotlin\"を代入",
+        "// name というはこに \"Kotlin\" を入れる",
         "val name = \"Kotlin\"",
-        "// 変数を出力",
+        "// はこの中身を出す",
         "println(name)"
       ],
       "lineHints": [
         null,
-        "定数の定義には val を使います。",
+        "変わらないはこを作るには `val` と入力しましょう。",
         null,
-        "変数名 name を指定します。"
+        "はこ の名前 name を指定します。"
       ],
       "candidates": {
         "variables": [
@@ -99,18 +99,14 @@ export const kotlinData = {
       ]
     },
     {
-      "title": "数値の計算",
-      "description": "変数を使って数値の計算を行ってみましょう。",
+      "title": "コンピュータで計算しましょう",
+      "description": "Kotlinを使って、たし算やかかけ算をしてみましょう。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "四則演算",
-          "content": "# 基本的な演算子\n\n- **+** : 足し算\n- **-** : 引き算\n- **\\*** : 掛け算\n- **/** : 割り算\n\n```kotlin\nval x = 10\nval y = 5\nprintln(x + y)\n```"
-        },
-        {
-          "title": "この演習の目標",
-          "content": "# 目標\n\n変数 width に `10`、height に 5 を代入し、面積（掛け算の結果）を表示しましょう。\n\n**コード例：**\n```kotlin\nval width = 10\nval height = 5\nprintln(width * height)\n```"
+          "title": "計算の記号",
+          "content": "# 算数と同じ記号を使います\n\nKotlinでも、こんな記号を使って計算をしますよ。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算（× のかわり）\n- **/** : わり算（÷ のかわり）"
         }
       ],
       "initialDisplayMode": "holey",
@@ -124,7 +120,7 @@ export const kotlinData = {
       "lineHints": [
         null,
         null,
-        "掛け算の演算子 * を使います。"
+        "かけ算なので `*` を入力します。"
       ],
       "candidates": {
         "variables": [
@@ -146,18 +142,14 @@ export const kotlinData = {
       ]
     },
     {
-      "title": "文字列テンプレート",
-      "description": "文字列の中に変数の値を埋め込んで表示する方法を学びましょう。",
+      "title": "文章の中に「はこ」を入れましょう",
+      "description": "$（ドル記号）を使って、文章の中に「はこ（変数）」の中身を表示してみましょう。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "文字列テンプレート",
-          "content": "# $記号\n\n文字列の中で `$変数名` と書くことで、その変数の値を埋め込むことができます。\n\n```kotlin\nval age = 20\nprintln(\"I am $age years old.\")\n```"
-        },
-        {
-          "title": "この演習の目標",
-          "content": "# 目標\n\n変数 age に `20` を代入し、「I am 20 years old.」と表示しましょう。\n\n**コード例：**\n```kotlin\nval age = 20\nprintln(\"I am $age years old.\")\n```"
+          "title": "$（ダラー）を使いましょう",
+          "content": "# 文字列テンプレート\n\n`\" \"` で囲んだ文章の中で `$ はこの名前` と入力すると、中身を文章に入れられますよ。\n\n**コード例：**\n```kotlin\nval age = 10\nprintln(\"私は $age 歳です\")\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -169,7 +161,7 @@ export const kotlinData = {
       ],
       "lineHints": [
         null,
-        "$age と記述して変数を埋め込みます。"
+        "$age と入力して、はこ の中身を文章に入れます。"
       ],
       "candidates": {
         "variables": [
@@ -191,18 +183,14 @@ export const kotlinData = {
       ]
     },
     {
-      "title": "リスト (配列)",
-      "description": "複数のデータをまとめて扱うリストの使い方を学びましょう。",
+      "title": "データをならべる「リスト」",
+      "description": "たくさんのデータを一つの「長い はこ」にまとめて入れられる「リスト」を使ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "listOf関数",
-          "content": "# リストの作成\n\n`listOf()` を使ってリストを作成できます。\n要素には `[インデックス]` でアクセスします。\n\n```kotlin\nval items = listOf(\"A\", \"B\")\nprintln(items[0]) // A\n```"
-        },
-        {
-          "title": "この演習の目標",
-          "content": "# 目標\n\n`\"Apple\"`, `\"Banana\"` が入ったリスト fruits を作成し、2番目の要素（Banana）を表示しましょう。\n\n**コード例：**\n```kotlin\nval fruits = listOf(\"Apple\", \"Banana\")\nprintln(fruits[1])\n```"
+          "title": "listOf（リスト・オブ）関数",
+          "content": "# [ ]（しかくい かっこ）を使います\n\nリストの中身を取り出すときは、何番目かを指定します。さいしょのデータは **「0番」** から数えるのがルールですよ。\n\n**コード例：**\n```kotlin\nval items = listOf(\"あか\", \"あお\")\nprintln(items[0]) // 「あか」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -214,7 +202,7 @@ export const kotlinData = {
       ],
       "lineHints": [
         null,
-        "2番目の要素のインデックスは 1 です。"
+        "2番目のデータの番号は 1 です。 `fruits[1]` と入力してください。"
       ],
       "candidates": {
         "variables": [
@@ -236,18 +224,14 @@ export const kotlinData = {
       ]
     },
     {
-      "title": "条件分岐 (if)",
-      "description": "if文を使って、条件に応じた処理を行ってみましょう。",
+      "title": "「もし〜なら」で分けましょう",
+      "description": "点数によって表示するメッセージを変えてみましょう。 if（イフ）を使います。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
           "title": "if文",
-          "content": "# 条件分岐\n\n条件によって処理を分けるには `if` を使います。\n\n```kotlin\nif (score > 80) {\n    println(\"Great!\")\n}\n```"
-        },
-        {
-          "title": "この演習の目標",
-          "content": "# 目標\n\nscore が `100` のとき、`80` より大きければ `Great!` と表示するコードを完成させましょう。\n\n**コード例：**\n```kotlin\nval score = 100\nif (score > 80) {\n    println(\"Great!\")\n}\n```"
+          "content": "# ( ) と { } を使いましょう\n\nKotlinでは、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\n\n**コード例：**\n```kotlin\nif (score > 80) {\n    println(\"合格！\")\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -261,9 +245,9 @@ export const kotlinData = {
       ],
       "lineHints": [
         null,
-        "比較演算子 > を使います。",
+        "比較するための記号 `>` を入力しましょう。",
         null,
-        null
+        "さいごに } で閉じるのを忘れないでください。"
       ],
       "candidates": {
         "variables": [
@@ -284,18 +268,14 @@ export const kotlinData = {
       ]
     },
     {
-      "title": "条件分岐 (if-else)",
-      "description": "if-elseを使って、条件に当てはまらない場合の処理も書いてみましょう。",
+      "title": "ちがう場合はどうしましょう？",
+      "description": "else（エルス）を使って、「そうでなければ」の動きを作りましょう。",
       "difficulty": "easy",
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "else",
-          "content": "# その他の場合\n\n`else` ブロックを使うと、条件が偽の場合の処理を書くことができます。\n\n```kotlin\nif (score >= 60) {\n    println(\"Pass\")\n} else {\n    println(\"Fail\")\n}\n```"
-        },
-        {
-          "title": "この演習の目標",
-          "content": "# 目標\n\n`score` が `50` のとき、`60` 未満なので `Fail` と表示されるようにコードを完成させましょう。\n\n**コード例：**\n```kotlin\nval score = 50\nif (score >= 60) {\n    println(\"Pass\")\n} else {\n    println(\"Fail\")\n}\n```"
+          "title": "elseブロック",
+          "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```kotlin\nif (score >= 60) {\n    println(\"Pass\")\n} else {\n    println(\"Fail\")\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -313,7 +293,7 @@ export const kotlinData = {
         null,
         null,
         null,
-        "条件に合わない場合は else を使います。",
+        "そうでなければ、をあらわす `else` を入力しましょう。",
         null,
         null
       ],
@@ -333,18 +313,14 @@ export const kotlinData = {
       ]
     },
     {
-      "title": "繰り返し (for)",
-      "description": "forループを使って、リストの要素を順番に処理しましょう。",
+      "title": "中身を全部出してみましょう",
+      "description": "for ループを使って、リストの中身を一つずつ順番に表示しましょう。",
       "difficulty": "easy",
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "forループ",
-          "content": "# リストの反復\n\n`for (変数 in リスト)` でリストの要素を一つずつ取り出せます。\n\n```kotlin\nval nums = listOf(1, 2, 3)\nfor (num in nums) {\n    println(num)\n}\n```"
-        },
-        {
-          "title": "この演習の目標",
-          "content": "# 目標\n\nリスト names の要素を順番に取り出して表示しましょう。\n\n**コード例：**\n```kotlin\nval names = listOf(\"Alice\", \"Bob\")\nfor (name in names) {\n    println(name)\n}\n```"
+          "title": "in を使いましょう",
+          "content": "# 全部取り出します\n\n`for (名前 in リスト)` と入力すると、中身を一つずつ取り出して処理できます。\n\n**コード例：**\n```kotlin\nval nums = listOf(1, 2, 3)\nfor (num in nums) {\n    println(num)\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -358,7 +334,7 @@ export const kotlinData = {
       ],
       "lineHints": [
         null,
-        "for (要素 in リスト) の形式で記述します。",
+        "「〜の中で」をあらわす `in` キーワードを入力します。",
         null,
         null
       ],
@@ -383,18 +359,14 @@ export const kotlinData = {
       ]
     },
     {
-      "title": "関数",
-      "description": "処理をまとめる「関数」の定義と呼び出し方を学びましょう。",
+      "title": "自分だけの関数を作りましょう",
+      "description": "よく使う手順をまとめて、名前をつけた「関数（かんすう）」を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "関数の定義",
-          "content": "# funキーワード\n\n関数は `fun` キーワードを使って定義します。\n\n```kotlin\nfun greet() {\n    println(\"Hello\")\n}\n\ngreet() // 呼び出し\n```"
-        },
-        {
-          "title": "この演習の目標",
-          "content": "# 目標\n\n`Hello` と表示する関数 `sayHello` を定義し、呼び出してみましょう。\n\n**コード例：**\n```kotlin\nfun sayHello() {\n    println(\"Hello\")\n}\nsayHello()\n```"
+          "title": "fun と名前",
+          "content": "# 関数の定義\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせますよ。 Kotlinでは `fun` という言葉を使います。\n\n**コード例：**\n```kotlin\nfun aisatsu() {\n    println(\"こんにちは\")\n}\naisatsu() // 呼び出し\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -407,10 +379,10 @@ export const kotlinData = {
         "sayHello()"
       ],
       "lineHints": [
-        "関数定義のキーワードは fun です。",
+        "関数を定義するための言葉 `fun` と入力します。",
         null,
-        null,
-        "定義した関数名 sayHello を呼び出します。"
+        "関数の終わりです。",
+        "関数名 `sayHello` を入力して、実行します。"
       ],
       "candidates": {
         "keywords": [
@@ -429,18 +401,14 @@ export const kotlinData = {
       ]
     },
     {
-      "title": "クラスの基本",
-      "description": "オブジェクト指向の基本であるクラスの使い方を学びましょう。",
+      "title": "同じ種類をまとめる「クラス」",
+      "description": "「名前」などのデータを持つ、自分だけの新しい種類（クラス）を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "クラスとインスタンス",
-          "content": "# クラスの定義\n\n```kotlin\nclass User(val name: String)\n```\n\n# インスタンス化\n\n```kotlin\nval user = User(\"Alice\")\nprintln(user.name)\n```"
-        },
-        {
-          "title": "この演習の目標",
-          "content": "# 目標\n\nname プロパティを持つ `User` クラスを定義し、インスタンスを作成して name を表示しましょう。\n\n**コード例：**\n```kotlin\nclass User(val name: String)\nval user = User(\"Alice\")\nprintln(user.name)\n```"
+          "title": "class と名前",
+          "content": "# データの設計図\n\n`class` という言葉を使うと、どんなデータを持っているかのルールを自分で決められます。それを使って実際に作ったものを「インスタンス」と呼びますよ。\n\n**コード例：**\n```kotlin\nclass User(val name: String)\nval user = User(\"Alice\")\nprintln(user.name)\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -452,9 +420,9 @@ export const kotlinData = {
         "println(user.name)"
       ],
       "lineHints": [
-        null,
-        "クラス名 User を使ってインスタンスを作ります。",
-        "user変数の name プロパティにアクセスします。"
+        "User という名前のクラス（設計図）です。",
+        "User クラスから、実際にひとつのデータ（インスタンス）を作ります。",
+        "user の中の `name` というデータを取り出して表示させます。"
       ],
       "candidates": {
         "keywords": [

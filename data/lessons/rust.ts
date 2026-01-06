@@ -1,33 +1,34 @@
 export const rustData = {
   "language": "rust",
   "lessonId": "rust-1",
-  "lessonTitle": "Rust I",
-  "lessonDescription": "安全性と速度を兼ね備えたRustの基本を学びます。所有権という独自概念がありますが、まずは基本構文から。",
+  "lessonTitle": "Rust (ラスト) にちょうせん！",
+  "lessonDescription": "間違いを見つけるのがとても得意な言葉「Rust（ラスト）」のきほんを学びましょう。きっちりしたルールを身につけて、安全なプログラムを作れるようになります。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello Worldを出力しよう",
-      "description": "Rustで画面に文字を表示するには println! マクロを使います。",
+      "title": "画面にメッセージを出しましょう",
+      "description": "Rustを使って画面に文字を表示してみましょう。println! という特別な関数を使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "println!",
-          "content": "# マクロ\n\n! が付いているのは関数ではなくマクロと呼ばれます。`fn main()` がエントリーポイントです。\n\n**コード例：**\n```rust\nfn main() {\n    println!(\"Hello, Rust!\");\n}\n```"
+          "title": "Rustの「おまじない」",
+          "content": "# ! がつく関数\n\n画面に文字を出したいときは、`println!()` を使います。さいごに `!` がつくのがRustの面白い特徴ですよ。プログラムは `fn main() { ... }` の中に書いていきます。\n\n**コード例：**\n```rust\nfn main() {\n    println!(\"Hello, Rust!\");\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "fn main() {\n    println!(\"Hello, Rust!\");\n}",
-      "holeyCode": "fn main() {\n    println!(\"___\");\n}",
+      "correctCode": "fn main() {\n    // 画面にメッセージを出す関数\n    println!(\"Hello, Rust!\");\n}",
+      "holeyCode": "fn main() {\n    // 画面にメッセージを出す関数\n    println!(\"___\");\n}",
       "correctLines": [
         "fn main() {",
         "    println!(\"Hello, Rust!\");",
         "}"
       ],
       "lineHints": [
-        null,
-        "Hello, Rust! を出力します。"
+        "ここからプログラムがスタートします、という合図です。",
+        "println! を使って、() の中の文字を画面に出します。",
+        "プログラムの終わりです。"
       ],
       "candidates": {
         "strings": [
@@ -42,19 +43,19 @@ export const rustData = {
       ]
     },
     {
-      "title": "変数",
-      "description": "変数を宣言して値を代入しましょう。",
+      "title": "数字を入れる「はこ」",
+      "description": "数字をしまっておく「はこ」を作って、中身を表示してみましょう。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "let",
-          "content": "# 不変性\n\nRustの変数はデフォルトで値を変更できません。\n\n**コード例：**\n```rust\nlet x = 10;\nprintln!(\"{}\", x);\n```"
+          "title": "let でラベルを貼ります",
+          "content": "# let を使いましょう\n\nRustでは、`let` という言葉を使って「はこ（変数）」を作ります。Rustのはこは、一度入れたら中身を変えないのが基本という、とても慎重なルールがあるのですよ。\n\n**コード例：**\n```rust\nlet x = 10;\nprintln!(\"{}\", x);\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "fn main() {\n    let x = 10;\n    println!(\"{}\", x);\n}",
-      "holeyCode": "fn main() {\n    let x = ___ ;\n    println!(\"{}\", ___);\n}",
+      "correctCode": "fn main() {\n    // x というはこに 10 を入れる\n    let x = 10;\n    println!(\"{}\", x);\n}",
+      "holeyCode": "fn main() {\n    // x というはこに 10 を入れる\n    let x = ___ ;\n    println!(\"{}\", ___);\n}",
       "correctLines": [
         "fn main() {",
         "    let x = 10;",
@@ -63,8 +64,8 @@ export const rustData = {
       ],
       "lineHints": [
         null,
-        "10を代入します。",
-        "変数xを出力します。"
+        "let x = 10 と入力して、はこを作ります。",
+        "はこの名前 x を指定して、表示させます。"
       ],
       "candidates": {
         "variables": [
@@ -82,18 +83,18 @@ export const rustData = {
       ]
     },
     {
-      "title": "計算",
-      "description": "計算を行いましょう。",
+      "title": "コンピュータで計算しましょう",
+      "description": "Rustを使って、たし算をしてみましょう。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "計算",
-          "content": "# 四則演算\n\n他言語と同様に直感的に記述できます。\n\n**コード例：**\n```rust\nlet a = 5;\nlet b = 3;\nprintln!(\"{}\", a + b);\n```"
+          "title": "計算の記号",
+          "content": "# 四則演算\n\nRustでも、算数と同じ記号を使って計算をします。計算結果を出すときは `{}` という窓（プレースホルダー）を使いますよ。\n\n**コード例：**\n```rust\nlet a = 5;\nlet b = 3;\nprintln!(\"{}\", a + b);\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "fn main() {\n    let a = 5;\n    let b = 3;\n    println!(\"{}\", a + b);\n}",
+      "correctCode": "fn main() {\n    let a = 5;\n    let b = 3;\n    // たし算した答えを出す\n    println!(\"{}\", a + b);\n}",
       "holeyCode": "fn main() {\n    let a = 5;\n    let b = 3;\n    println!(\"{}\", a ___ b);\n}",
       "correctLines": [
         "fn main() {",
@@ -104,9 +105,9 @@ export const rustData = {
       ],
       "lineHints": [
         null,
-        null,
-        null,
-        "a + b を出力します。"
+        "a に 5 を入力します。",
+        "b に 3 を入力します。",
+        "たし算なので `+\` を使います。"
       ],
       "candidates": {
         "operators": [
@@ -121,29 +122,29 @@ export const rustData = {
       ]
     },
     {
-      "title": "フォーマット出力",
-      "description": "変数の値を埋め込んで表示しましょう。",
+      "title": "文章の中に「はこ」を入れましょう",
+      "description": "println! の `{}` を使って、文章の中に「はこ（変数）」の中身を表示します。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "プレースホルダー",
-          "content": "# {}\n\n`{}` の部分に変数の値が埋め込まれます。\n\n**コード例：**\n```rust\nlet age = 20;\nprintln!(\"年齢は {} 歳です\", age);\n```"
+          "title": "{}（なみかっこ）を使いましょう",
+          "content": "# データの埋め込み\n\n`\" \"` の中で `{}` と入力したところに、あとの方の変数のなかみが入る仕組みです。\n\n**コード例：**\n```rust\nlet age = 10;\nprintln!(\"私は {} 歳です\", age);\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "fn main() {\n    let age = 20;\n    println!(\"I am {} years old.\", age);\n}",
-      "holeyCode": "fn main() {\n    let age = 20;\n    println!(\"I am {} years old.\", ___);\n}",
+      "correctCode": "fn main() {\n    let age = 10;\n    println!(\"I am {} years old.\", age);\n}",
+      "holeyCode": "fn main() {\n    let age = 10;\n    println!(\"I am {} years old.\", ___);\n}",
       "correctLines": [
         "fn main() {",
-        "    let age = 20;",
+        "    let age = 10;",
         "    println!(\"I am {} years old.\", age);",
         "}"
       ],
       "lineHints": [
         null,
-        null,
-        "age変数を指定します。"
+        "age に 10 を入力します。",
+        "はこの名前 age を指定します。"
       ],
       "candidates": {
         "variables": [
@@ -153,23 +154,23 @@ export const rustData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "I am 20 years old.\n"
+          "expected_output": "I am 10 years old.\n"
         }
       ]
     },
     {
-      "title": "ベクタ (可変長配列)",
-      "description": "可変長配列であるベクタを使いましょう。",
+      "title": "データをならべる「ベクタ」",
+      "description": "「ベクタ」という機能を使うと、たくさんのデータを一つの「長い はこ」にまとめて入れられます。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "vec!マクロ",
-          "content": "# 動的配列\n\n可変長のリストとして使えます。インデックスは0から始まります。\n\n**コード例：**\n```rust\nlet v = vec![10, 20];\nprintln!(\"{}\", v[1]); // 20 を出力\n```"
+          "title": "vec!（ベック）を使いましょう",
+          "content": "# 動的な配列\n\n`vec![ ]` という言葉を使うと、中身を自由に入れ替えられる配列が作れます。インデックスは 0 から数えますよ。\n\n**コード例：**\n```rust\nlet v = vec![10, 20];\nprintln!(\"{}\", v[1]); // 20 が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "fn main() {\n    let nums = vec![10, 20];\n    println!(\"{}\", nums[1]);\n}",
+      "correctCode": "fn main() {\n    let nums = vec![10, 20];\n    // 2番目（番号は1）を出す\n    println!(\"{}\", nums[1]);\n}",
       "holeyCode": "fn main() {\n    let nums = vec![10, 20];\n    println!(\"{}\", nums[___]);\n}",
       "correctLines": [
         "fn main() {",
@@ -179,8 +180,8 @@ export const rustData = {
       ],
       "lineHints": [
         null,
-        null,
-        "インデックス1を指定します。"
+        "vec![10, 20] と入力して配列を作ります。",
+        "2番目のデータの番号は 1 です。 `nums[1]` と入力してください。"
       ],
       "candidates": {
         "numbers": [
@@ -195,19 +196,19 @@ export const rustData = {
       ]
     },
     {
-      "title": "if文",
-      "description": "条件分岐を行います。",
+      "title": "「もし〜なら」で分けましょう",
+      "description": "点数によって表示するメッセージを変えてみましょう。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
           "title": "if文",
-          "content": "# 括弧不要\n\nRustでは条件式の丸括弧は不要です。\n\n**コード例：**\n```rust\nif score > 80 {\n    println!(\"合格\");\n}\n```"
+          "content": "# { } を使いましょう\n\nRustでも、`if 条件` のあとに `{ }` を入力して、その中にやりたいことを入力します。条件のまわりに `( )` は必要ありませんよ。\n\n**コード例：**\n```rust\nif score > 80 {\n    println!(\"合格！\");\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fn main() {\n    let score = 100;\n    if score > 80 {\n        println!(\"Great\");\n    }\n}",
-      "holeyCode": "fn main() {\n    let score = 100;\n    if score ___ 80 {\n        println!(\"___\");\n    }\n}",
+      "holeyCode": "fn main() {\n    let score = 100;\n    if score ___ 80 {\n        println!(\"___");\n    }\n}",
       "correctLines": [
         "fn main() {",
         "    let score = 100;",
@@ -218,13 +219,14 @@ export const rustData = {
       ],
       "lineHints": [
         null,
-        null,
-        "比較演算子 > を使います。",
-        "Great を出力します。"
+        "score = 100 と入力しましょう。",
+        "比較するための記号 `>` を入力しましょう。",
+        "Great と表示します。",
+        "さいごに } で閉じるのを忘れないでください。"
       ],
       "candidates": {
         "operators": [
-          ">"
+          ">
         ],
         "strings": [
           "Great"
@@ -238,14 +240,14 @@ export const rustData = {
       ]
     },
     {
-      "title": "if-else文",
-      "description": "elseを使って分岐します。",
+      "title": "ちがう場合はどうしましょう？",
+      "description": "else（エルス）を使って、「そうでなければ」の動きを作りましょう。",
       "difficulty": "easy",
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "else",
-          "content": "# 分岐\n\n条件に当てはまらない時の処理は `else` を使います。\n\n**コード例：**\n```rust\nif x > 10 {\n    println!(\"Big\");\n} else {\n    println!(\"Small\");\n}\n```"
+          "title": "else で分けます",
+          "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。Rustでは `} else {` というふうに続けて書くのが一般的ですよ。\n\n**コード例：**\n```rust\nif x > 10 {\n    println!(\"大きい\");\n} else {\n    println!(\"小さい\");\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -263,10 +265,12 @@ export const rustData = {
       ],
       "lineHints": [
         null,
+        "x に 5 を入力します。",
         null,
         null,
+        "そうでなければ、をあらわす `else` を入力しましょう。",
         null,
-        "else を記述します。"
+        "なみかっこを閉じます。"
       ],
       "candidates": {
         "keywords": [
@@ -281,18 +285,18 @@ export const rustData = {
       ]
     },
     {
-      "title": "for文",
-      "description": "forループを使ってベクタの要素を走査します。",
+      "title": "中身を全部出してみましょう",
+      "description": "for ループを使って、配列（ベクタ）の中身を一つずつ順番に表示します。",
       "difficulty": "easy",
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "イテレータ",
-          "content": "# 要素の取り出し\n\n`for x in &v` のように要素を一つずつ取り出します。\n\n**コード例：**\n```rust\nlet nums = vec![1, 2, 3];\nfor n in &nums {\n    println!(\"{}\", n);\n}\n```"
+          "title": "in を使いましょう",
+          "content": "# 全部取り出します\n\n`for 名前 in &配列` と入力すると、中身を一つずつ取り出して処理できます。 `&` をつけるのがRustのきっちりしたルールです。\n\n**コード例：**\n```rust\nlet nums = vec![1, 2, 3];\nfor n in &nums {\n    println!(\"{}\", n);\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "fn main() {\n    let nums = vec![1, 2, 3];\n    for n in &nums {\n        println!(\"{}\", n);\n    }\n}",
+      "correctCode": "fn main() {\n    let nums = vec![1, 2, 3];\n    // 全部取り出すループ\n    for n in &nums {\n        println!(\"{}\", n);\n    }\n}",
       "holeyCode": "fn main() {\n    let nums = vec![1, 2, 3];\n    for n in &___ {\n        println!(\"{}\", n);\n    }\n}",
       "correctLines": [
         "fn main() {",
@@ -304,8 +308,8 @@ export const rustData = {
       ],
       "lineHints": [
         null,
-        null,
-        "nums ベクタを指定します。"
+        "vec![1, 2, 3] と入力して配列を作ります。",
+        "取り出したい対象の配列 `nums` を指定します。"
       ],
       "candidates": {
         "variables": [
@@ -320,14 +324,14 @@ export const rustData = {
       ]
     },
     {
-      "title": "HashMap",
-      "description": "キーと値のペアを扱うHashMapを使いましょう。",
+      "title": "名前で探す「じしょ」",
+      "description": "HashMap（ハッシュマップ）を使って、名前を指定してデータを取り出してみましょう。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
           "title": "HashMap",
-          "content": "# 連想配列\n\nキー（名前）を使ってデータを管理します。インポートが必要です。\n\n**コード例：**\n```rust\nuse std::collections::HashMap;\nlet mut scores = HashMap::new();\nscores.insert(\"Math\", 90);\nprintln!(\"{}\", scores[\"Math\"]);\n```"
+          "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。辞書のように使うことができますよ。 Rustでは、さいしょに `use` という準備が必要です。\n\n**コード例：**\n```rust\nuse std::collections::HashMap;\nlet mut scores = HashMap::new();\nscores.insert(\"Math\", 90);\nprintln!(\"{}\", scores[\"Math\"]);\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -342,11 +346,11 @@ export const rustData = {
         "}"
       ],
       "lineHints": [
+        "HashMapを使えるように準備します。",
         null,
-        null,
-        null,
-        "insert メソッドを使います。",
-        "Math キーを指定します。"
+        "新しくはこを作ります。",
+        "insert（インサート）でデータを入れます。",
+        "\"Math\" という名前を指定してデータを取り出します。"
       ],
       "candidates": {
         "functions": [
@@ -364,14 +368,14 @@ export const rustData = {
       ]
     },
     {
-      "title": "関数",
-      "description": "関数を定義して呼び出します。",
+      "title": "自分だけの関数を作りましょう",
+      "description": "一連の手順をまとめて、名前をつけた「関数（かんすう）」を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "関数定義",
-          "content": "# fn キーワード\n\n処理をひとまとめにして名前を付けます。\n\n**コード例：**\n```rust\nfn greet() {\n    println!(\"Hello\");\n}\n\nfn main() {\n    greet();\n}\n```"
+          "title": "fn と名前",
+          "content": "# 関数の定義\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせますよ。 Rustでは `fn` という言葉を使います。\n\n**コード例：**\n```rust\nfn aisatsu() {\n    println!(\"こんにちは\");\n}\n\nfn main() {\n    aisatsu();\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -386,11 +390,11 @@ export const rustData = {
         "}"
       ],
       "lineHints": [
+        "greet という名前の関数を定義します。",
+        "メッセージを表示します。",
+        "関数の終わりです。",
         null,
-        null,
-        null,
-        null,
-        "greet(); で呼び出します。"
+        "greet(); と入力して、関数を実行します。"
       ],
       "candidates": {
         "functions": [

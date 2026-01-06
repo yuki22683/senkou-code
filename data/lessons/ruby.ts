@@ -1,32 +1,32 @@
 export const rubyData = {
   "language": "ruby",
   "lessonId": "ruby-1",
-  "lessonTitle": "Ruby I",
-  "lessonDescription": "日本生まれのプログラミング言語Rubyの基本を学びます。直感的で読みやすいコードが特徴です。",
+  "lessonTitle": "Ruby (ルビー) にちょうせん！",
+  "lessonDescription": "日本で生まれたプログラミング言語「Ruby（ルビー）」のきほんを学びましょう。人間にとって読みやすく、楽しくプログラムを書けるのが特徴です。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello Worldを出力しよう",
-      "description": "Rubyで画面に文字を表示するには puts メソッドを使います。",
+      "title": "画面に文字を出してみましょう",
+      "description": "Rubyを使って画面に「こんにちは」と表示させてみましょう。puts（プッツ）という関数を使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "putsメソッド",
-          "content": "# シンプルな出力\n\nRubyでは `puts` を使うだけで簡単に文字を表示できます。\n\n**コード例：**\n```ruby\nputs 'Hello, Ruby!'\n```"
+          "title": "puts を使いましょう",
+          "content": "# とてもシンプルです\n\nRubyでは `puts` と入力したあとに文字を並べるだけで、簡単に画面に表示させることができます。\n\n**コード例：**\n```ruby\nputs 'Hello, Ruby!'\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 「Hello, Ruby!」と出力\nputs 'Hello, Ruby!'",
-      "holeyCode": "# 「Hello, Ruby!」と出力\nputs '___'",
+      "correctCode": "# 「Hello, Ruby!」と出力する関数\nputs 'Hello, Ruby!'",
+      "holeyCode": "# 「Hello, Ruby!」と出力する関数\nputs '___'",
       "correctLines": [
-        "# 「Hello, Ruby!」と出力",
+        "# 「Hello, Ruby!」と出力する関数",
         "puts 'Hello, Ruby!'"
       ],
       "lineHints": [
         null,
-        "Hello, Ruby! を出力します。"
+        "Hello, Ruby! と入力して、画面に表示させます。"
       ],
       "candidates": {
         "strings": [
@@ -41,28 +41,28 @@ export const rubyData = {
       ]
     },
     {
-      "title": "変数",
-      "description": "変数を定義して出力しましょう。",
+      "title": "便利な「はこ」",
+      "description": "データをしまっておく「はこ（変数）」を使ってみましょう。Rubyではラベルを貼らなくても自由に使えます。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "変数",
-          "content": "# 型宣言不要\n\nRubyは動的型付け言語なので、型を書く必要はありません。\n\n**コード例：**\n```ruby\nname = 'Ruby'\nputs name\n```"
+          "title": "自由な変数",
+          "content": "# そのまま使えます\n\nRubyはとても賢いので、数字や文字など、入れたいものをそのまま「はこ」に入れることができますよ。\n\n**コード例：**\n```ruby\nname = 'Ruby'\nputs name\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 変数nameを定義\nname = 'Ruby'\nputs name",
-      "holeyCode": "# 変数nameを定義\nname = '___'\nputs ___",
+      "correctCode": "# name というはこを作る\nname = 'Ruby'\nputs name",
+      "holeyCode": "# name というはこを作る\nname = '___'\nputs ___",
       "correctLines": [
-        "# 変数nameを定義",
+        "# name というはこを作る",
         "name = 'Ruby'",
         "puts name"
       ],
       "lineHints": [
         null,
-        "Rubyを代入します。",
-        "変数nameを出力します。"
+        "name というはこに 'Ruby' と入力します。",
+        "はこの名前 name を指定して、表示させます。"
       ],
       "candidates": {
         "variables": [
@@ -80,30 +80,30 @@ export const rubyData = {
       ]
     },
     {
-      "title": "計算",
-      "description": "計算を行いましょう。",
+      "title": "コンピュータで計算しましょう",
+      "description": "Rubyを使って、たし算をしてみましょう。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "計算",
-          "content": "# 四則演算\n\n他言語と同様です。\n\n**コード例：**\n```ruby\na = 5\nb = 3\nputs a + b\n```"
+          "title": "計算の記号",
+          "content": "# 算数と同じ記号を使います\n\nRubyでも、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 計算\na = 5\nb = 3\nputs a + b",
-      "holeyCode": "# 計算\na = 5\nb = 3\nputs a ___ b",
+      "correctCode": "# x と y をたした答えを出す\nx = 5\ny = 3\nputs x + y",
+      "holeyCode": "# x と y をたした答えを出す\nx = 5\ny = 3\nputs x ___ y",
       "correctLines": [
-        "# 計算",
-        "a = 5",
-        "b = 3",
-        "puts a + b"
+        "# x と y をたした答えを出す",
+        "x = 5",
+        "y = 3",
+        "puts x + y"
       ],
       "lineHints": [
         null,
-        null,
-        null,
-        "a + b を出力します。"
+        "x に 5 を入力します。",
+        "y に 3 を入力します。",
+        "たし算なので `+` を使います。"
       ],
       "candidates": {
         "operators": [
@@ -118,28 +118,28 @@ export const rubyData = {
       ]
     },
     {
-      "title": "式展開",
-      "description": "文字列の中に変数を埋め込みましょう。",
+      "title": "文章の中に「はこ」を入れましょう",
+      "description": "「式展開（しきてんかい）」という機能を使って、文章の中に「はこ（変数）」の中身を表示します。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "式展開",
-          "content": "# #{ }\n\nダブルクォート \" で囲んだ文字列の中で `#{変数}` を使います。\n\n**コード例：**\n```ruby\nage = 20\nputs \"年齢は #{age} 歳です\"\n```"
+          "title": "#{ } を使いましょう",
+          "content": "# 式展開\n\n`\" \"`（ダブルクォーテーション）で囲んだ文章の中で `#{はその名前}` と入力すると、中身を文章に入れられますよ。\n\n**コード例：**\n```ruby\nage = 10\nputs \"私は #{age} 歳です\"\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 変数埋め込み\nage = 20\nputs \"I am #{age} years old.\"",
-      "holeyCode": "# 変数埋め込み\nage = 20\nputs \"I am #{___} years old.\"",
+      "correctCode": "# 文章の中に age の中身を入れる\nage = 10\nputs \"I am #{age} years old.\"",
+      "holeyCode": "# 文章の中に age の中身を入れる\nage = 10\nputs \"I am #{___} years old.\"",
       "correctLines": [
-        "# 変数埋め込み",
-        "age = 20",
+        "# 文章の中に age の中身を入れる",
+        "age = 10",
         "puts \"I am #{age} years old.\""
       ],
       "lineHints": [
         null,
-        null,
-        "age変数を埋め込みます。"
+        "age に 10 を入力します。",
+        "はこの名前 age を指定します。"
       ],
       "candidates": {
         "variables": [
@@ -149,33 +149,33 @@ export const rubyData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "I am 20 years old.\n"
+          "expected_output": "I am 10 years old.\n"
         }
       ]
     },
     {
-      "title": "配列",
-      "description": "配列を作成して要素を取り出しましょう。",
+      "title": "データをならべる「配列」",
+      "description": "たくさんのデータを一つの「長い はこ」にまとめて入れられる「配列（はいれつ）」を使ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "配列",
-          "content": "# リスト構造\n\n複数のデータをまとめて扱います。インデックスは0から始まります。\n\n**コード例：**\n```ruby\ncolors = ['red', 'blue']\nputs colors[1] # 'blue' を表示\n```"
+          "title": "データの番号は 0 から！",
+          "content": "# [ ]（しかくい かっこ）を使いましょう\n\n配列の中身を取り出すときは、何番目かを指定します。さいしょのデータは **「0番」** から数えるのがルールですよ。\n\n**コード例：**\n```ruby\ncolors = ['あか', 'あお']\nputs colors[0] # 「あか」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 配列\ncolors = ['red', 'blue']\nputs colors[1]",
-      "holeyCode": "# 配列\ncolors = ['red', 'blue']\nputs colors[___]",
+      "correctCode": "# 2番目（番号は1）を出す\ncolors = ['あか', 'あお']\nputs colors[1]",
+      "holeyCode": "# 2番目（番号は1）を出す\ncolors = ['あか', 'あお']\nputs colors[___]",
       "correctLines": [
-        "# 配列",
-        "colors = ['red', 'blue']",
+        "# 2番目（番号は1）を出す",
+        "colors = ['あか', 'あお']",
         "puts colors[1]"
       ],
       "lineHints": [
         null,
-        null,
-        "インデックス1を指定します。"
+        "['あか', 'あお'] と入力して配列を作ります。",
+        "2番目の番号は 1 です。 `colors[1]` と入力してください。"
       ],
       "candidates": {
         "numbers": [
@@ -190,21 +190,21 @@ export const rubyData = {
       ]
     },
     {
-      "title": "if文",
-      "description": "条件分岐を行います。",
+      "title": "「もし〜なら」で分けましょう",
+      "description": "点数によって表示するメッセージを変えてみましょう。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "if文",
-          "content": "# endで閉じる\n\nRubyでは波括弧の代わりに `end` キーワードを使います。\n\n**コード例：**\n```ruby\nif score > 80\n    puts '合格'\nend\n```"
+          "title": "if文と end",
+          "content": "# end で閉じましょう\n\nRubyでは、`if 条件` のあとにやりたいことを入力し、最後に `end` と入力して終わらせるのがルールです。\n\n**コード例：**\n```ruby\nif score > 80\n    puts '合格！'\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 条件分岐\nscore = 100\nif score > 80\n    puts 'Great'\nend",
-      "holeyCode": "# 条件分岐\nscore = 100\nif score ___ 80\n    puts 'Great'\n___",
+      "correctCode": "# 条件で分ける\nscore = 100\nif score > 80\n    puts 'Great'\nend",
+      "holeyCode": "# 条件で分ける\nscore = 100\nif score ___ 80\n    puts 'Great'\n___",
       "correctLines": [
-        "# 条件分岐",
+        "# 条件で分ける",
         "score = 100",
         "if score > 80",
         "    puts 'Great'",
@@ -212,14 +212,14 @@ export const rubyData = {
       ],
       "lineHints": [
         null,
-        null,
-        "比較演算子 > を使います。",
-        null,
-        "end で閉じます。"
+        "score = 100 と入力しましょう。",
+        "比較するための記号 `>` を入力しましょう。",
+        "Great と表示します。",
+        "さいごに `end` と入力するのを忘れないでください。"
       ],
       "candidates": {
         "operators": [
-          ">"
+          ">
         ],
         "keywords": [
           "end"
@@ -233,21 +233,21 @@ export const rubyData = {
       ]
     },
     {
-      "title": "if-else文",
-      "description": "elseを使って分岐します。",
+      "title": "ちがう場合はどうしましょう？",
+      "description": "else（エルス）を使って、「そうでなければ」の動きを作りましょう。",
       "difficulty": "easy",
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "else",
-          "content": "# 分岐\n\n条件に当てはまらない時の処理は `else` を使います。\n\n**コード例：**\n```ruby\nif age >= 20\n    puts '大人'\nelse\n    puts '子供'\nend\n```"
+          "title": "else で分けます",
+          "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```ruby\nif age >= 20\n    puts \"大人です\"\nelse\n    puts \"子供です\"\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 分岐\nage = 18\nif age >= 20\n    puts 'Adult'\nelse\n    puts 'Minor'\nend",
-      "holeyCode": "# 分岐\nage = 18\nif age >= 20\n    puts 'Adult'\n___ \n    puts 'Minor'\nend",
+      "correctCode": "# 条件で分ける\nage = 18\nif age >= 20\n    puts 'Adult'\nelse\n    puts 'Minor'\nend",
+      "holeyCode": "# 条件で分ける\nage = 18\nif age >= 20\n    puts 'Adult'\n___ \n    puts 'Minor'\nend",
       "correctLines": [
-        "# 分岐",
+        "# 条件で分ける",
         "age = 18",
         "if age >= 20",
         "    puts 'Adult'",
@@ -257,10 +257,12 @@ export const rubyData = {
       ],
       "lineHints": [
         null,
+        "age に 18 を入力します。",
         null,
         null,
+        "そうでなければ、をあらわす `else` を入力しましょう。",
         null,
-        "else を記述します。"
+        "さいごに `end` を入力しましょう。"
       ],
       "candidates": {
         "keywords": [
@@ -275,21 +277,21 @@ export const rubyData = {
       ]
     },
     {
-      "title": "eachメソッド (繰り返し)",
-      "description": "Rubyではfor文よりもeachメソッドが一般的です。",
+      "title": "中身を全部出してみましょう",
+      "description": "each（イーチ）という機能を使って、配列の中身を一つずつ順番に表示します。",
       "difficulty": "easy",
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "each",
-          "content": "# 配列.each do |変数|\n\n要素を一つずつ取り出して処理します。\n\n**コード例：**\n```ruby\nnames = ['Alice', 'Bob']\nnames.each do |name|\n    puts name\nend\n```"
+          "title": "each ループ",
+          "content": "# ひとつずつ取り出します\n\n`配列.each do |名前|` と入力すると、中身を一つずつ取り出して処理できます。Rubyでよく使われるループですよ。\n\n**コード例：**\n```ruby\nnames = ['たろう', 'はなこ']\nnames.each do |name|\n    puts name\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# ループ\nnames = ['Alice', 'Bob']\nnames.each do |name|\n    puts name\nend",
-      "holeyCode": "# ループ\nnames = ['Alice', 'Bob']\nnames.___ do |name|\n    puts name\nend",
+      "correctCode": "# 全部取り出すループ\nnames = ['Alice', 'Bob']\nnames.each do |name|\n    puts name\nend",
+      "holeyCode": "# 全部取り出すループ\nnames = ['Alice', 'Bob']\nnames.___ do |name|\n    puts name\nend",
       "correctLines": [
-        "# ループ",
+        "# 全部取り出すループ",
         "names = ['Alice', 'Bob']",
         "names.each do |name|",
         "    puts name",
@@ -297,10 +299,10 @@ export const rubyData = {
       ],
       "lineHints": [
         null,
-        null,
-        "each メソッドを使います。",
-        null,
-        null
+        "['Alice', 'Bob'] と入力して配列を作ります。",
+        "一つずつ取り出す `each` を入力しましょう。",
+        "取り出した名前を表示します。",
+        "ループの終わりです。"
       ],
       "candidates": {
         "functions": [
@@ -315,28 +317,28 @@ export const rubyData = {
       ]
     },
     {
-      "title": "ハッシュ (連想配列)",
-      "description": "キーと値のペアを扱うハッシュを使いましょう。",
+      "title": "名前で探す「じしょ」",
+      "description": "ハッシュを使って、名前（シンボル）を指定してデータを取り出してみましょう。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "Hash",
-          "content": "# キー: 値\n\n名前を付けてデータを管理します。シンボル（`:名前`）をキーにするのが一般的です。\n\n**コード例：**\n```ruby\nuser = { name: 'Alice' }\nputs user[:name] # 'Alice' を表示\n```"
+          "title": "Hash（ハッシュ）",
+          "content": "# キー : あたい\n\n「名前」と「データ」をセットにして保存できます。`:名前`（シンボル）をキーワードにするのがRubyのスタイルですよ。\n\n**コード例：**\n```ruby\nuser = { name: 'たろう' }\nputs user[:name] # 「たろう」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# ハッシュ\nuser = { name: 'Alice' }\nputs user[:name]",
-      "holeyCode": "# ハッシュ\nuser = { name: 'Alice' }\nputs user[:___]",
+      "correctCode": "# 名前でデータを取り出す\nuser = { name: 'Alice' }\nputs user[:name]",
+      "holeyCode": "# 名前でデータを取り出す\nuser = { name: 'Alice' }\nputs user[:___]",
       "correctLines": [
-        "# ハッシュ",
+        "# 名前でデータを取り出す",
         "user = { name: 'Alice' }",
         "puts user[:name]"
       ],
       "lineHints": [
         null,
-        null,
-        "シンボル :name を使ってアクセスします。"
+        "{ name: 'Alice' } と入力してハッシュを作ります。",
+        "シンボル `:name` を指定して、データを取り出します。"
       ],
       "candidates": {
         "strings": [
@@ -351,34 +353,32 @@ export const rubyData = {
       ]
     },
     {
-      "title": "メソッド定義",
-      "description": "メソッドを定義して呼び出します。",
+      "title": "自分だけの関数を作りましょう",
+      "description": "一連の手順をまとめて、名前をつけた「関数（メソッド）」を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "def",
-          "content": "# メソッド\n\n処理をまとめて名前を付けます。\n\n**コード例：**\n```ruby\ndef greet\n    puts 'Hello'\nend\n\ngreet # 呼び出し\n```"
+          "title": "def と名前",
+          "content": "# メソッドの定義\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせますよ。\n\n**コード例：**\n```ruby\ndef aisatsu\n    puts 'こんにちは'\nend\n\naisatsu # 呼び出し\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 定義\ndef greet\n    puts 'Hello'\nend\n# 呼び出し\ngreet",
-      "holeyCode": "# 定義\ndef greet\n    puts 'Hello'\n___\n# 呼び出し\n___",
+      "correctCode": "# 関数を定義して呼び出す\ndef greet\n    puts 'Hello'\nend\ngreet",
+      "holeyCode": "# 関数を定義して呼び出す\ndef greet\n    puts 'Hello'\n___\n# 呼び出す\n___",
       "correctLines": [
-        "# 定義",
+        "# 関数を定義して呼び出す",
         "def greet",
         "    puts 'Hello'",
         "end",
-        "# 呼び出し",
         "greet"
       ],
       "lineHints": [
         null,
-        null,
-        null,
-        "end で閉じます。",
-        null,
-        "greet で呼び出します。"
+        "greet という名前の関数を定義します。",
+        "メッセージを表示します。",
+        "関数の終わりです。",
+        "関数名を入力して、実行します。"
       ],
       "candidates": {
         "keywords": [

@@ -1,40 +1,48 @@
 export const javaData = {
   "language": "java",
   "lessonId": "java-1",
-  "lessonTitle": "Java I",
-  "lessonDescription": "堅牢なオブジェクト指向言語Javaの基本を学びます。クラス、メインメソッド、標準出力などを習得しましょう。",
+  "lessonTitle": "Java (ジャバ) にちょうせん！",
+  "lessonDescription": "きっちりしたルールが特徴の言葉「Java（ジャバ）」のきほんを学びましょう。コンピュータに正しい手順で指示（しじ）を出す方法を身につけます。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello Worldを出力しよう",
-      "description": "Javaの標準的な出力メソッドを使い、画面に文字を表示しましょう。Hello, Java!と表示するプログラムを作りましょう。",
+      "title": "画面にメッセージを出しましょう",
+      "description": "Javaを使って画面に「こんにちは」と表示させてみましょう。Javaを動かすには、いくつかの「決まり文句」が必要です。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "Javaの基本",
-          "content": "# Class & Main\n\nJavaではすべてのコードを `class` の中に書き、`main` メソッドから実行が始まります。\n\n**コード例：**\n```java\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, Java!\");\n    }\n}\n```"
+          "title": "Java（ジャバ）とは？",
+          "content": "# 銀行やスマホアプリでも使われる言葉です\n\nJava（ジャバ）は、世界中で大きなシステムやアプリを作るのに使われている、とても「きっちりした」プログラミング言語です。\nルールが厳しいですが、そのぶん間違いを見つけやすいのが良いところですよ！"
+        },
+        {
+          "title": "Javaを動かす「決まり文句」",
+          "content": "# おまじないの言葉\n\nJavaでプログラムを入力するときは、必ず入力しなければいけない「決まり文句」があります。\n\n```java\npublic class Main {\n    public static void main(String[] args) {\n        // ここにやりたいことを入力します\n    }\n}\n```\n\n画面に文字を出すときは、`System.out.println()` という長い名前の関数（メソッド）を使います。"
+        },
+        {
+          "title": "やってみよう！",
+          "content": "# 目標\n\n`System.out.println()` を使って、画面に `Hello, Java!` と表示させてみましょう。\n\n**入力するコードのヒント：**\n```java\nSystem.out.println(\"Hello, Java!\");\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // 出力\n        System.out.println(\"Hello, Java!\");\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // 出力\n        System.out.println(\"___\");\n    }\n}",
+      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // 画面にメッセージを出す関数\n        System.out.println(\"Hello, Java!\");\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // 画面にメッセージを出す関数\n        System.out.println(\"___");\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
-        "        // 出力",
+        "        // 画面にメッセージを出す関数",
         "        System.out.println(\"Hello, Java!\");",
         "    }",
         "}"
       ],
       "lineHints": [
-        "クラス定義です。",
-        "エントリーポイントとなるmainメソッドです。",
+        "Javaのプログラムをまとめる「クラス」という名前です。",
+        "ここからプログラムがスタートします、という合図です。",
         null,
-        "System.out.println を使用して表示します。",
-        "メソッドの閉じ括弧です。",
-        "クラスの閉じ括弧です。"
+        "System.out.println を使って、() の中の文字を画面に出します。",
+        "ここまでがスタートの合図の終わりです。",
+        "ここまでがプログラム全体の終わりです。"
       ],
       "candidates": {
         "functions": [
@@ -52,36 +60,36 @@ export const javaData = {
       ]
     },
     {
-      "title": "変数とデータ型",
-      "description": "変数を宣言し、値を代入して表示しましょう。String型の変数 name を使います。",
+      "title": "文字を入れる「はこ」String",
+      "description": "文字をしまっておく「はこ」を作ってみましょう。Javaでは、はこに入れるものの種類（ラベル）を先に決める必要があります。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "変数の宣言",
-          "content": "# 型 変数名 = 値;\n\nJavaは静的型付け言語なので、変数の宣言時に型を指定する必要があります。\n文字列は `String` (Sは大文字)です。\n\n**コード例：**\n```java\nString name = \"Java\";\nSystem.out.println(name);\n```"
+          "title": "ラベル（型）が必要です",
+          "content": "# String（ストリング）ラベル\n\nJavaでは、はこ（変数）を作るときに「何を入れるか」のラベルを貼るルールがあります。\n文字を入れたいときは、`String`（Sは大文字！）というラベルを使います。\n\n**コード例：**\n```java\nString name = \"Java\";\nSystem.out.println(name);\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // String変数を定義\n        String name = \"Java\";\n        System.out.println(name);\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // String変数を定義\n        String name = \"___\";\n        System.out.println(___);\n    }\n}",
+      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // String（文字）ラベルを貼ったはこを作る\n        String name = \"Java\";\n        System.out.println(name);\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // String（文字）ラベルを貼ったはこを作る\n        String name = \"___";\n        System.out.println(___);\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
-        "        // String変数を定義",
+        "        // String（文字）ラベルを貼ったはこを作る",
         "        String name = \"Java\";",
         "        System.out.println(name);",
         "    }",
         "}"
       ],
       "lineHints": [
-        "クラス定義です。",
-        "mainメソッドです。",
         null,
-        "String name = \"Java\"; と代入します。",
-        "変数名 name を出力します。",
-        "メソッド終了",
-        "クラス終了"
+        null,
+        null,
+        "String name = \"Java\"; と入力します。最後に ; （セミコロン）を忘れないでください！",
+        "はこの名前 name を入力すると中身が表示されますよ。",
+        null,
+        null
       ],
       "candidates": {
         "variables": [
@@ -102,18 +110,18 @@ export const javaData = {
       ]
     },
     {
-      "title": "数値の計算",
-      "description": "int型（整数）の変数を使って計算を行いましょう。",
+      "title": "数字を入れる「はこ」int",
+      "description": "数字を入れるための「int（イント）ラベル」を使って、計算をしてみましょう。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "整数の型",
-          "content": "# int型\n\n整数を扱うには `int` 型を使います。\n\n**コード例：**\n```java\nint x = 10;\nint y = 5;\nSystem.out.println(x + y);\n```"
+          "title": "数字のラベル",
+          "content": "# int（イント）型\n\n整数（せいすう）をしまっておきたいときは、`int` というラベルを使います。\n\n**コード例：**\n```java\nint x = 10;\nint y = 5;\nSystem.out.println(x + y);\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        int x = 10;\n        int y = 5;\n        System.out.println(x + y);\n    }\n}",
+      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // int（数字）ラベルのはこを作る\n        int x = 10;\n        int y = 5;\n        // たし算した答えを出す\n        System.out.println(x + y);\n    }\n}",
       "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        int x = ___ ;\n        int y = ___ ;\n        System.out.println(x ___ y);\n    }\n}",
       "correctLines": [
         "public class Main {",
@@ -127,9 +135,9 @@ export const javaData = {
       "lineHints": [
         null,
         null,
-        "10を代入します。",
-        "5を代入します。",
-        "足し算には + を使います。",
+        "x = 10 と入力しましょう。",
+        "y = 5 と入力しましょう。",
+        "たし算なので `+` を使います。",
         null,
         null
       ],
@@ -154,23 +162,23 @@ export const javaData = {
       ]
     },
     {
-      "title": "文字列の結合",
-      "description": "プラス演算子を使って、文字列と変数を結合して表示しましょう。",
+      "title": "文字と「はこ」をくっつけましょう",
+      "description": "プラス（+）を使って、文字と「はこ（変数）」をくっつけて表示してみましょう。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "文字列結合",
-          "content": "# + 演算子\n\nJavaでは + を使って文字列同士や、文字列と数値をくっつけることができます。\n\n**コード例：**\n```java\nint age = 20;\nSystem.out.println(\"年齢は\" + age + \"歳です\");\n```"
+          "title": "プラスでつなげましょう",
+          "content": "# + 演算子\n\nJavaでは `+` を使うと、文字と数字をガチャンとくっつけて一つの文章にできますよ。\n\n**コード例：**\n```java\nint age = 10;\nSystem.out.println(\"私は\" + age + \"歳です\");\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        int age = 20;\n        System.out.println(\"私は\" + age + \"歳です\");\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        int age = 20;\n        System.out.println(\"私は\" + ___ + \"歳です\");\n    }\n}",
+      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        int age = 10;\n        System.out.println(\"私は\" + age + \"歳です\");\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        int age = 10;\n        System.out.println(\"私は\" + ___ + \"歳です\");\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
-        "        int age = 20;",
+        "        int age = 10;",
         "        System.out.println(\"私は\" + age + \"歳です\");",
         "    }",
         "}"
@@ -178,8 +186,8 @@ export const javaData = {
       "lineHints": [
         null,
         null,
-        "年齢変数を定義します。",
-        "+ age + のように変数を挟んで結合します。",
+        "age に 10 を入れます。",
+        "\"私は\" + age + \"歳です\" と入力して、文字とはこをくっつけます。",
         null,
         null
       ],
@@ -194,28 +202,28 @@ export const javaData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "私は20歳です\n"
+          "expected_output": "私は10歳です\n"
         }
       ]
     },
     {
-      "title": "配列",
-      "description": "配列を作成し、指定した要素を表示しましょう。",
+      "title": "データをならべる「配列」",
+      "description": "同じラベルのデータをまとめて並べておける「配列（はいれつ）」を使ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "配列の宣言",
-          "content": "# 型[] 変数名\n\n複数のデータをまとめて管理するには配列を使います。\n\n**コード例：**\n```java\nString[] colors = {\"red\", \"blue\"};\nSystem.out.println(colors[1]); // \"blue\" を表示\n```"
+          "title": "データの番号は 0 から！",
+          "content": "# { } を使って作りましょう\n\n配列の中身を取り出すときは、何番目かを指定します。さいしょのデータは **「0番」** から数えるのがルールですよ。\n\n**コード例：**\n```java\nString[] colors = {\"あか\", \"あお\"};\nSystem.out.println(colors[0]); // \"あか\" が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        String[] colors = {\"red\", \"blue\"};\n        System.out.println(colors[1]);\n    }\n}",
+      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // 文字の配列を作る\n        String[] colors = {\"あか\", \"あお\"};\n        // 2番目（番号は1）を出す\n        System.out.println(colors[1]);\n    }\n}",
       "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        String[] colors = {___, ___};\n        System.out.println(colors[___]);\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
-        "        String[] colors = {\"red\", \"blue\"};",
+        "        String[] colors = {\"あか\", \"あお\"};",
         "        System.out.println(colors[1]);",
         "    }",
         "}"
@@ -223,8 +231,8 @@ export const javaData = {
       "lineHints": [
         null,
         null,
-        "{\"red\", \"blue\"} と記述して初期化します。",
-        "インデックス1を指定します（0始まり）。",
+        "{\"あか\", \"あお\"} と入力しましょう。 { } を使うのがルールです。",
+        "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。",
         null,
         null
       ],
@@ -233,8 +241,8 @@ export const javaData = {
           "colors"
         ],
         "strings": [
-          "\"red\"",
-          "\"blue\""
+          "\"あか\"",
+          "\"あお\""
         ],
         "numbers": [
           "1"
@@ -243,30 +251,30 @@ export const javaData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "blue\n"
+          "expected_output": "あお\n"
         }
       ]
     },
     {
-      "title": "if文",
-      "description": "条件分岐を使って、条件を満たす場合のみメッセージを表示しましょう。",
+      "title": "「もし〜なら」で分ける if文",
+      "description": "点数（score）が 80点より高いときだけ、メッセージを出すようにしてみましょう。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "if文",
-          "content": "# if (条件)\n\n条件式を丸括弧 `( )` で囲みます。\n\n**コード例：**\n```java\nif (score > 80) {\n    System.out.println(\"合格！\");\n}\n```"
+          "title": "もし〜なら（if）",
+          "content": "# ( ) と { } を使いましょう\n\nJavaでは、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力しますよ。\n\n**コード例：**\n```java\nif (score > 80) {\n    System.out.println(\"すごい！\");\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        int score = 100;\n        if (score > 80) {\n            System.out.println(\"満点です！\");\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        int score = 100;\n        if (score ___ 80) {\n            System.out.println(\"___\");\n        }\n    }\n}",
+      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        int score = 100;\n        if (score > 80) {\n            System.out.println(\"ごうかく！\");\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        int score = 100;\n        if (score ___ 80) {\n            System.out.println(\"___");\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
         "        int score = 100;",
         "        if (score > 80) {",
-        "            System.out.println(\"満点です！\");",
+        "            System.out.println(\"ごうかく！\");",
         "        }",
         "    }",
         "}"
@@ -275,49 +283,49 @@ export const javaData = {
         null,
         null,
         null,
-        "score > 80 と記述します。",
-        "満点です！ を出力します。",
-        "ifブロック終了",
+        "score > 80 と入力しましょう。",
+        "System.out.println(\"ごうかく！\"); と入力しましょう。",
+        "さいごに } で閉じるのを忘れないでください。",
         null,
         null
       ],
       "candidates": {
         "operators": [
-          ">"
+          ">
         ],
         "strings": [
-          "満点です！"
+          "ごうかく！"
         ]
       },
       "testCases": [
         {
           "input": "",
-          "expected_output": "満点です！\n"
+          "expected_output": "ごうかく！\n"
         }
       ]
     },
     {
-      "title": "if-else文",
-      "description": "条件に応じて処理を分岐させましょう。",
+      "title": "ちがう場合は？ if-else文",
+      "description": "「もし〜なら」のあとに、「そうじゃなければ」という別の動きも作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "else",
-          "content": "# elseブロック\n\n条件に当てはまらない時の処理は `else` を使います。\n\n**コード例：**\n```java\nif (age >= 20) {\n    System.out.println(\"大人\");\n} else {\n    System.out.println(\"未成年\");\n}\n```"
+          "title": "そうじゃなければ（else）",
+          "content": "# else の使い方\n\n条件にあてはまらなかったときの動きは `else` を使って入力します。\n\n**コード例：**\n```java\nif (age >= 20) {\n    System.out.println(\"おとな\");\n} else {\n    System.out.println(\"こども\");\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        int age = 18;\n        if (age >= 20) {\n            System.out.println(\"大人\");\n        } else {\n            System.out.println(\"未成年\");\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        int age = 18;\n        if (age >= 20) {\n            System.out.println(\"大人\");\n        } ___ {\n            System.out.println(\"___\");\n        }\n    }\n}",
+      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        int age = 10;\n        if (age >= 20) {\n            System.out.println(\"おとな\");\n        } else {\n            System.out.println(\"こども\");\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        int age = 10;\n        if (age >= 20) {\n            System.out.println(\"おとな\");\n        } ___ {\n            System.out.println(\"___");\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
-        "        int age = 18;",
+        "        int age = 10;",
         "        if (age >= 20) {",
-        "            System.out.println(\"大人\");",
-        "        } else {",
-        "            System.out.println(\"未成年\");",
+        "            System.out.println(\"おとな\");",
+        "} else {",
+        "            System.out.println(\"こども\");",
         "        }",
         "    }",
         "}"
@@ -325,12 +333,12 @@ export const javaData = {
       "lineHints": [
         null,
         null,
-        "年齢を設定します。",
-        "条件式 age >= 20 を記述します。",
+        "age に 10 を入れます。",
+        "if (age >= 20) { と入力しましょう。",
         "大人と表示します。",
-        "else を記述します。",
-        "未成年 を出力します。",
-        "elseブロック終了",
+        "そうでなければ、を表す else { と入力しましょう。",
+        "System.out.println(\"こども\"); と入力しましょう。",
+        null,
         null,
         null
       ],
@@ -339,34 +347,34 @@ export const javaData = {
           "else"
         ],
         "strings": [
-          "未成年"
+          "こども"
         ]
       },
       "testCases": [
         {
           "input": "",
-          "expected_output": "未成年\n"
+          "expected_output": "こども\n"
         }
       ]
     },
     {
-      "title": "拡張for文",
-      "description": "配列の要素を順番に取り出して表示しましょう。",
+      "title": "順番に取り出す「拡張for文」",
+      "description": "配列に入っているたくさんのデータを、一つずつ順番に表示してみましょう。",
       "difficulty": "easy",
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "拡張for文",
-          "content": "# for (型 変数 : 配列)\n\n配列の全要素をループする便利な書き方です。\n\n**コード例：**\n```java\nString[] names = {\"Alice\", \"Bob\"};\nfor (String name : names) {\n    System.out.println(name);\n}\n```"
+          "title": "くりかえし（拡張for）",
+          "content": "# for (型 変数 : 配列)\n\n配列の中身を順番に取り出して何かをしたいときに使います。 `:`（コロン）を使うのがJavaの面白いところです。\n\n**コード例：**\n```java\nString[] names = {\"たろう\", \"はなこ\"};\nfor (String name : names) {\n    System.out.println(name);\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        String[] names = {\"Alice\", \"Bob\"};\n        for (String name : names) {\n            System.out.println(name);\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        String[] names = {\"Alice\", \"Bob\"};\n        for (String ___ : ___) {\n            System.out.println(name);\n        }\n    }\n}",
+      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        String[] names = {\"たろう\", \"はなこ\"};\n        // 順番に取り出すループ\n        for (String name : names) {\n            System.out.println(name);\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        String[] names = {\"たろう\", \"はなこ\"};\n        for (String ___ : ___) {\n            System.out.println(name);\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
-        "        String[] names = {\"Alice\", \"Bob\"};",
+        "        String[] names = {\"たろう\", \"はなこ\"};",
         "        for (String name : names) {",
         "            System.out.println(name);",
         "        }",
@@ -377,8 +385,8 @@ export const javaData = {
         null,
         null,
         "配列を定義します。",
-        "for (String name : names) と記述します。",
-        "名前を出力します。",
+        "for (String name : names) と入力します。",
+        "取り出した名前を出力します。",
         "ループ終了",
         null,
         null
@@ -392,41 +400,41 @@ export const javaData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Alice\nBob\n"
+          "expected_output": "たろう\nはなこ\n"
         }
       ]
     },
     {
-      "title": "HashMap (辞書)",
-      "description": "キーと値のペアでデータを管理するHashMapを使いましょう。",
+      "title": "名前で探す「HashMap」",
+      "description": "名前（キー）を指定してデータを取り出せる「HashMap（ハッシュマップ）」を使ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "HashMap",
-          "content": "# インポートが必要\n\nキー（名前）を使ってデータを取り出すには `HashMap` を使います。\n\n**コード例：**\n```java\nimport java.util.HashMap;\n\nHashMap<String, String> user = new HashMap<>();\nuser.put(\"name\", \"Alice\");\nSystem.out.println(user.get(\"name\")); // \"Alice\" を表示\n```"
+          "title": "HashMap（ハッシュマップ）",
+          "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。使うときは、さいしょに `import`（インポート）という準備が必要ですよ。\n\n**コード例：**\n```java\nimport java.util.HashMap;\n\nHashMap<String, String> user = new HashMap<>();\nuser.put(\"name\", \"たろう\");\nSystem.out.println(user.get(\"name\")); // 「たろう」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, String> user = new HashMap<>();\n        user.put(\"name\", \"Alice\");\n        System.out.println(user.get(\"name\"));\n    }\n}",
-      "holeyCode": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, String> user = new ___<>();\n        user.___(\"name\", \"Alice\");\n        System.out.println(user.___(\"name\"));\n    }\n}",
+      "correctCode": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, String> user = new HashMap<>();\n        // データを追加する\n        user.put(\"name\", \"たろう\");\n        // データを取り出す\n        System.out.println(user.get(\"name\"));\n    }\n}",
+      "holeyCode": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, String> user = new ___<>();\n        user.___(\"name\", \"たろう\");\n        System.out.println(user.___(\"name\"));\n    }\n}",
       "correctLines": [
         "import java.util.HashMap;",
         "public class Main {",
         "    public static void main(String[] args) {",
         "        HashMap<String, String> user = new HashMap<>();",
-        "        user.put(\"name\", \"Alice\");",
+        "        user.put(\"name\", \"たろう\");",
         "        System.out.println(user.get(\"name\"));",
         "    }",
         "}"
       ],
       "lineHints": [
-        "HashMapをインポートします。",
+        "HashMapを使えるように準備します。",
         null,
         null,
-        "new HashMap<>(); とします。",
-        "put メソッドで追加します。",
-        "get メソッドで取得します。",
+        "new HashMap<>(); で新しくはこを作ります。",
+        "put（プット）でデータを入れます。",
+        "get（ゲット）でデータを取り出します。",
         null,
         null
       ],
@@ -442,28 +450,28 @@ export const javaData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Alice\n"
+          "expected_output": "たろう\n"
         }
       ]
     },
     {
-      "title": "メソッドの定義と呼び出し",
-      "description": "独自のメソッドを作成し、mainメソッドから呼び出しましょう。",
+      "title": "自分だけの関数を作ろう「メソッド」",
+      "description": "自分だけの新しい関数（メソッド）を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "staticメソッド",
-          "content": "# メソッドの定義\n\n処理をまとめて名前を付け、呼び出せるようにします。\n\n**コード例：**\n```java\npublic static void greet() {\n    System.out.println(\"Hello\");\n}\n\n// mainメソッド内で呼び出す\ngreet();\n```"
+          "title": "関数（メソッド）を定義する",
+          "content": "# メソッドの定義\n\nやりたいことをひとまとめにして、名前を付けることができます。Javaでは `public static void 名前() { ... }` のように入力しますよ。\n\n**コード例：**\n```java\npublic static void aisatsu() {\n    System.out.println(\"こんにちは\");\n}\n\n// 使うときは\naisatsu();\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Main {\n    public static void greet() {\n        System.out.println(\"Good morning\");\n    }\n    public static void main(String[] args) {\n        greet();\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void ___() {\n        System.out.println(\"Good morning\");\n    }\n    public static void main(String[] args) {\n        ___();\n    }\n}",
+      "correctCode": "public class Main {\n    // greet というメソッド\n    public static void greet() {\n        System.out.println(\"こんにちは\");\n    }\n    public static void main(String[] args) {\n        // メソッドを動かす\n        greet();\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void ___() {\n        System.out.println(\"こんにちは\");\n    }\n    public static void main(String[] args) {\n        ___();\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void greet() {",
-        "        System.out.println(\"Good morning\");",
+        "        System.out.println(\"こんにちは\");",
         "    }",
         "    public static void main(String[] args) {",
         "        greet();",
@@ -472,13 +480,13 @@ export const javaData = {
       ],
       "lineHints": [
         null,
-        "greet() という名前で定義します。",
-        "メッセージを表示します。",
-        "メソッド終了",
+        "public static void greet() { と入力して、メソッドを定義します。",
+        "System.out.println(\"こんにちは\"); と入力しましょう。",
+        "メソッドの終わりです。",
         null,
-        "greet(); で呼び出します。",
-        "mainメソッド終了",
-        "クラス終了"
+        "greet(); と入力して、メソッドを実行します。",
+        "mainの終わりです。",
+        "クラスの終わりです。"
       ],
       "candidates": {
         "functions": [
@@ -488,7 +496,7 @@ export const javaData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Good morning\n"
+          "expected_output": "こんにちは\n"
         }
       ]
     }

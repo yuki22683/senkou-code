@@ -1,198 +1,158 @@
 export const assemblyData = {
   "language": "assembly",
   "lessonId": "assembly-1",
-  "lessonTitle": "Assembly I",
-  "lessonDescription": "コンピュータの動作原理に最も近いアセンブリ言語(x86-64)を学びます。レジスタ、メモリ、システムコールを直接操作します。",
+  "lessonTitle": "Assembly (アセンブリ) にちょうせん！",
+  "lessonDescription": "コンピュータの「脳みそ」に直接、短い暗号で指示を出す「アセンブリ言語」のきほんを学びましょう。コンピュータがどうやって動いているのか、その秘密がわかりますよ。",
   "lessonDifficulty": "medium",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello Worldを出力しよう",
-      "description": "システムコールを使って画面に文字を表示します。",
+      "title": "画面にメッセージを出してみましょう",
+      "description": "アセンブリ言語を使って画面に「Hello」と表示させてみましょう。コンピュータの「ボス（OS）」に頼みごとをする特別な命令を使います。",
       "difficulty": "medium",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "システムコール",
-          "content": "# sys_write (1)\n\nraxに1(システムコール番号)、rdiに1(stdout)、rsiにアドレス、rdxに長さをセットして `syscall` を呼びます。\n\n**コード例：**\n```assembly\nmov rax, 1\nmov rdi, 1\nmov rsi, msg\nmov rdx, 6\nsyscall\n```"
+          "title": "コンピュータとの直接対話",
+          "content": "# syscall（システムコール）\n\nアセンブリ言語では、`rax` や `rdi` という名前の「小さな机（レジスタ）」に数字を置いてから、`syscall` という合図を送ります。すると、コンピュータのボスが画面に文字を出してくれますよ。\n\n**暗号の意味：**\n- `mov rax, 1` : 「画面に書く」という指示を机に置きます\n- `mov rdi, 1` : 「標準の画面」を指定します\n- `syscall` : 「さあ、やってください！」という合図です"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .data\n  msg db \"Hello\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, msg\n  mov rdx, 6\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
       "holeyCode": "section .data\n  msg db \"Hello\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, ___\n  mov rdx, 6\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
       "correctLines": ["section .data", "  msg db \"Hello\", 0xA", "", "section .text", "  global _start", "", "_start:", "  mov rax, 1", "  mov rdi, 1", "  mov rsi, msg", "  mov rdx, 6", "  syscall", "", "  mov rax, 60", "  xor rdi, rdi", "  syscall"],
-      "lineHints": [null, null, null, null, null, null, null, null, null, "メッセージのアドレス(msg)をrsiにセットします。"],
+      "lineHints": [
+        "ここはおまじない（データの場所）です。",
+        "表示したい文字を準備します。",
+        null,
+        "ここはおまじない（手順の場所）です。",
+        "ここもおまじない（スタートの目印）です。",
+        null,
+        "ここからスタートします！",
+        "指示「1（書く）」を机に置きます。",
+        "場所「1（画面）」を机に置きます。",
+        "表示する文字の名前 `msg` を入力しましょう。",
+        "文字の長さ（6文字分）を机に置きます。",
+        "ボスに実行を頼みます！",
+        null,
+        "プログラムを終わる準備です。",
+        "エラーがないことを報告します。",
+        "最後のお願いをします。"
+      ],
       "candidates": { "variables": ["msg"] },
       "testCases": [{ "input": "", "expected_output": "Hello\n" }]
     },
     {
-      "title": "レジスタと数値出力",
-      "description": "レジスタに値をセットし、文字として出力します（'0'を足してASCIIコードに変換します）。",
+      "title": "机の上に数字を置きましょう",
+      "description": "「レジスタ」という小さな机に数字を置いて、画面に表示させてみましょう。数字を文字に変えるには `48` を足すのがルールです。",
       "difficulty": "medium",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "レジスタ",
-          "content": "# mov命令\n\n`mov rax, 5` でraxレジスタに5を入れます。ASCIIの '0' (48) を足すと、数値の文字になります。\n\n**コード例：**\n```assembly\nmov rax, 5\nadd rax, 48\n```"
+          "title": "mov（ムーブ）命令",
+          "content": "# mov 机, 数字\n\n`mov` は「移動（Move）」の略ですが、実際には「コピーして置く」という意味です。 `rax` という名前の机に数字の `5` を置いてみましょう。\n\n**コード例：**\n```assembly\nmov rax, 5\nadd rax, 48\n```\n※ `48` を足すと、コンピュータがその数字を画面に表示できる「文字」として認識してくれるようになります。"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .bss\n  res resb 1\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 5\n  add rax, 48\n  mov [res], al\n\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
       "holeyCode": "section .bss\n  res resb 1\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 5\n  add rax, 48\n  mov [res], al\n\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, ___\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
       "correctLines": ["section .bss", "  res resb 1", "", "section .text", "  global _start", "", "_start:", "  mov rax, 5", "  add rax, 48", "  mov [res], al", "", "  mov rax, 1", "  mov rdi, 1", "  mov rsi, res", "  mov rdx, 1", "  syscall", "", "  mov rax, 60", "  xor rdi, rdi", "  syscall"],
-      "lineHints": [null, null, null, null, null, null, null, "5をセットします。", "ASCII変換のため48を足します。", null, null, null, null, null, "1バイト出力します。"],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "机 rax に数字の 5 を入力します。",
+        "数字を文字に変えるため 48 を足します。",
+        "結果を一時的に保存します。",
+        null,
+        null,
+        null,
+        null,
+        "1文字分だけ表示するので `1` と入力しましょう。",
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "candidates": { "numbers": ["1"] },
       "testCases": [{ "input": "", "expected_output": "5" }]
     },
     {
-      "title": "足し算",
-      "description": "add命令を使って計算を行います。",
+      "title": "コンピュータでたし算しましょう",
+      "description": "add（アド）という暗号を使って、たし算をしてみましょう。",
       "difficulty": "medium",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "add",
-          "content": "# add <a>, <b>\n\n`a = a + b` の意味になります。\n\n**コード例：**\n```assembly\nmov rax, 3\nadd rax, 2\n```"
+          "title": "add（アド）",
+          "content": "# add 左, 右\n\n`add rax, 2` と入力すると、「机 `rax` に置いてある数字に `2` を足す」という意味になります。\n\n**コード例：**\n```assembly\nmov rax, 3\nadd rax, 2\n```\nこれで `rax` の中身は `5` になりますよ。"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .bss\n  res resb 1\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 3\n  add rax, 2\n  add rax, 48\n  mov [res], al\n\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
       "holeyCode": "section .bss\n  res resb 1\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 3\n  add rax, ___\n  add rax, 48\n  mov [res], al\n\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
       "correctLines": ["section .bss", "  res resb 1", "", "section .text", "  global _start", "", "_start:", "  mov rax, 3", "  add rax, 2", "  add rax, 48", "  mov [res], al", "", "  mov rax, 1", "  mov rdi, 1", "  mov rsi, res", "  mov rdx, 1", "  syscall", "", "  mov rax, 60", "  xor rdi, rdi", "  syscall"],
-      "lineHints": [null, null, null, null, null, null, null, null, "2を足します。", null, null],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "3 に 2 を足したいので `2` を入力しましょう。",
+        null,
+        null
+      ],
       "candidates": { "numbers": ["2"] },
       "testCases": [{ "input": "", "expected_output": "5" }]
     },
     {
-      "title": "引き算",
-      "description": "sub命令を使って引き算を行います。",
-      "difficulty": "medium",
-      "orderIndex": 4,
-      "tutorialSlides": [
-        {
-          "title": "sub",
-          "content": "# sub <a>, <b>\n\n`a = a - b` の意味になります。\n\n**コード例：**\n```assembly\nmov rax, 9\nsub rax, 4\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "section .bss\n  res resb 1\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 9\n  sub rax, 4\n  add rax, 48\n  mov [res], al\n\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .bss\n  res resb 1\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 9\n  sub rax, ___\n  add rax, 48\n  mov [res], al\n\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "correctLines": ["section .bss", "  res resb 1", "", "section .text", "  global _start", "", "_start:", "  mov rax, 9", "  sub rax, 4", "  add rax, 48", "  mov [res], al", "", "  mov rax, 1", "  mov rdi, 1", "  mov rsi, res", "  mov rdx, 1", "  syscall", "", "  mov rax, 60", "  xor rdi, rdi", "  syscall"],
-      "lineHints": [null, null, null, null, null, null, null, null, "4を引きます。", null, null],
-      "candidates": { "numbers": ["4"] },
-      "testCases": [{ "input": "", "expected_output": "5" }]
-    },
-    {
-      "title": "比較と分岐",
-      "description": "cmp命令とje命令を使って、条件分岐を行います。",
-      "difficulty": "medium",
-      "orderIndex": 5,
-      "tutorialSlides": [
-        {
-          "title": "分岐",
-          "content": "# cmp と je\n\n`cmp a, b` で比較し、`je label` で等しい場合にlabelへジャンプします。\n\n**コード例：**\n```assembly\ncmp rax, 5\nje equal_label\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "section .data\n  yes db \"Y\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 5\n  cmp rax, 5\n  je equal\n  \n  mov rax, 60\n  xor rdi, rdi\n  syscall\n\nequal:\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, yes\n  mov rdx, 2\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .data\n  yes db \"Y\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 5\n  cmp rax, 5\n  je ___\n  \n  mov rax, 60\n  xor rdi, rdi\n  syscall\n\nequal:\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, yes\n  mov rdx, 2\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "correctLines": ["section .data", "  yes db \"Y\", 0xA", "", "section .text", "  global _start", "", "_start:", "  mov rax, 5", "  cmp rax, 5", "  je equal", "", "  mov rax, 60", "  xor rdi, rdi", "  syscall", "", "equal:", "  mov rax, 1", "  mov rdi, 1", "  mov rsi, yes", "  mov rdx, 2", "  syscall", "", "  mov rax, 60", "  xor rdi, rdi", "  syscall"],
-      "lineHints": [null, null, null, null, null, null, null, null, null, "equalラベルへジャンプします。"],
-      "candidates": { "strings": ["equal"] },
-      "testCases": [{ "input": "", "expected_output": "Y\n" }]
-    },
-    {
-      "title": "条件ジャンプ（不一致）",
-      "description": "jne (Jump if Not Equal) を使います。",
-      "difficulty": "medium",
-      "orderIndex": 6,
-      "tutorialSlides": [
-        {
-          "title": "jne",
-          "content": "# 等しくない場合\n\n`cmp` の結果が等しくなければジャンプします。\n\n**コード例：**\n```assembly\ncmp rax, 3\njne not_equal_label\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "section .data\n  no db \"N\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 5\n  cmp rax, 3\n  jne not_equal\n  \n  mov rax, 60\n  syscall\n\nnot_equal:\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, no\n  mov rdx, 2\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .data\n  no db \"N\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 5\n  cmp rax, 3\n  jne ___\n  \n  mov rax, 60\n  syscall\n\nnot_equal:\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, no\n  mov rdx, 2\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "correctLines": ["section .data", "  no db \"N\", 0xA", "", "section .text", "  global _start", "", "_start:", "  mov rax, 5", "  cmp rax, 3", "  jne not_equal", "", "  mov rax, 60", "  syscall", "", "not_equal:", "  mov rax, 1", "  mov rdi, 1", "  mov rsi, no", "  mov rdx, 2", "  syscall", "", "  mov rax, 60", "  xor rdi, rdi", "  syscall"],
-      "lineHints": [null, null, null, null, null, null, null, null, null, "not_equalラベルへジャンプします。"],
-      "candidates": { "strings": ["not_equal"] },
-      "testCases": [{ "input": "", "expected_output": "N\n" }]
-    },
-    {
-      "title": "ループ処理",
-      "description": "decとjnzを使ってループ処理を作ります。",
-      "difficulty": "medium",
-      "orderIndex": 7,
-      "tutorialSlides": [
-        {
-          "title": "ループ",
-          "content": "# デクリメントとジャンプ\n\n`dec` で値を減らし、`jnz` (Jump if Not Zero) で0になるまで繰り返します。\n\n**コード例：**\n```assembly\nloop_start:\n  ; 処理\n  dec rbx\n  jnz loop_start\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "section .bss\n  res resb 1\n\nsection .text\n  global _start\n\n_start:\n  mov rbx, 3\nloop_start:\n  mov rax, rbx\n  add rax, 48\n  mov [res], al\n  \n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n\n  dec rbx\n  jnz loop_start\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .bss\n  res resb 1\n\nsection .text\n  global _start\n\n_start:\n  mov rbx, 3\nloop_start:\n  mov rax, rbx\n  add rax, 48\n  mov [res], al\n  \n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n\n  dec rbx\n  jnz ___\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "correctLines": ["section .bss", "  res resb 1", "", "section .text", "  global _start", "", "_start:", "  mov rbx, 3", "loop_start:", "  mov rax, rbx", "  add rax, 48", "  mov [res], al", "", "  mov rax, 1", "  mov rdi, 1", "  mov rsi, res", "  mov rdx, 1", "  syscall", "", "  dec rbx", "  jnz loop_start", "", "  mov rax, 60", "  xor rdi, rdi", "  syscall"],
-      "lineHints": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "loop_startへジャンプします。"],
-      "candidates": { "strings": ["loop_start"] },
-      "testCases": [{ "input": "", "expected_output": "321" }]
-    },
-    {
-      "title": "スタック",
-      "description": "pushとpopを使って値を保存・復元します。",
-      "difficulty": "medium",
-      "orderIndex": 8,
-      "tutorialSlides": [
-        {
-          "title": "Stack",
-          "content": "# LIFO\n\n最後に保存したものが最初に取り出されます。\n\n**コード例：**\n```assembly\npush rax\npop rbx\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "section .bss\n  res resb 1\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 5\n  push rax\n  mov rax, 0\n  pop rax\n\n  add rax, 48\n  mov [res], al\n\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .bss\n  res resb 1\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 5\n  push rax\n  mov rax, 0\n  pop ___\n\n  add rax, 48\n  mov [res], al\n\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "correctLines": ["section .bss", "  res resb 1", "", "section .text", "  global _start", "", "_start:", "  mov rax, 5", "  push rax", "  mov rax, 0", "  pop rax", "", "  add rax, 48", "  mov [res], al", "", "  mov rax, 1", "  mov rdi, 1", "  mov rsi, res", "  mov rdx, 1", "  syscall", "", "  mov rax, 60", "  xor rdi, rdi", "  syscall"],
-      "lineHints": [null, null, null, null, null, null, null, null, null, "raxに復元します。"],
-      "candidates": { "variables": ["rax"] },
-      "testCases": [{ "input": "", "expected_output": "5" }]
-    },
-    {
-      "title": "メモリアクセス",
-      "description": "メモリ上のデータにアクセスします。",
-      "difficulty": "medium",
-      "orderIndex": 9,
-      "tutorialSlides": [
-        {
-          "title": "メモリ",
-          "content": "# [ ]\n\n`[label]` でそのアドレスにある値を取得します。\n\n**コード例：**\n```assembly\nmov al, [data_label]\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "section .data\n  val db 7\n\nsection .bss\n  res resb 1\n\nsection .text\n  global _start\n\n_start:\n  mov al, [val]\n  add rax, 48\n  mov [res], al\n\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .data\n  val db 7\n\nsection .bss\n  res resb 1\n\nsection .text\n  global _start\n\n_start:\n  mov al, [___]\n  add rax, 48\n  mov [res], al\n\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "correctLines": ["section .data", "  val db 7", "", "section .bss", "  res resb 1", "", "section .text", "  global _start", "", "_start:", "  mov al, [val]", "  add rax, 48", "  mov [res], al", "", "  mov rax, 1", "  mov rdi, 1", "  mov rsi, res", "  mov rdx, 1", "  syscall", "", "  mov rax, 60", "  xor rdi, rdi", "  syscall"],
-      "lineHints": [null, null, null, null, null, null, null, null, null, "valアドレスの値を取得します。"],
-      "candidates": { "variables": ["val"] },
-      "testCases": [{ "input": "", "expected_output": "7" }]
-    },
-    {
-      "title": "サブルーチン（関数）",
-      "description": "callとretを使って関数呼び出しを行います。",
+      "title": "暗号をまとめて呼び出しましょう",
+      "description": "よく使う手順をまとめて、名前をつけた「サブルーチン（関数）」を使ってみましょう。",
       "difficulty": "medium",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "call",
-          "content": "# call label\n\n関数を呼び出し、`ret` で戻ります。\n\n**コード例：**\n```assembly\ncall my_function\n\nmy_function:\n  ; 処理\n  ret\n```"
+          "title": "call（コール）",
+          "content": "# call 名前\n\n`call` と入力すると、別の場所に書いた手順を呼び出すことができます。呼び出された先で `ret` と入力すると、元の場所に戻ってきますよ。\n\n**コード例：**\n```assembly\ncall aisatsu\n\naisatsu:\n  ; ここに手順を書きます\n  ret\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .bss\n  res resb 1\n\nsection .text\n  global _start\n\nprint_5:\n  mov rax, 5\n  add rax, 48\n  mov [res], al\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n  ret\n\n_start:\n  call print_5\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
       "holeyCode": "section .bss\n  res resb 1\n\nsection .text\n  global _start\n\nprint_5:\n  mov rax, 5\n  add rax, 48\n  mov [res], al\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, res\n  mov rdx, 1\n  syscall\n  ret\n\n_start:\n  call ___\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
       "correctLines": ["section .bss", "  res resb 1", "", "section .text", "  global _start", "", "print_5:", "  mov rax, 5", "  add rax, 48", "  mov [res], al", "  mov rax, 1", "  mov rdi, 1", "  mov rsi, res", "  mov rdx, 1", "  syscall", "  ret", "", "_start:", "  call print_5", "", "  mov rax, 60", "  xor rdi, rdi", "  syscall"],
-      "lineHints": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, "print_5 を呼び出します。"],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "ここからサブルーチンの手順です。",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "元の場所に戻ります。",
+        null,
+        "メインのスタート地点です。",
+        "さっき作った `print_5` を呼び出します。",
+        null,
+        null,
+        null,
+        null
+      ],
       "candidates": { "functions": ["print_5"] },
       "testCases": [{ "input": "", "expected_output": "5" }]
     }

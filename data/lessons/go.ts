@@ -1,25 +1,29 @@
 export const goData = {
   "language": "go",
   "lessonId": "go-1",
-  "lessonTitle": "Go I",
-  "lessonDescription": "Googleが開発したGo言語の基本を学びます。シンプルで効率的な構文、goroutineなどの特徴がありますが、まずは基本構文から。",
+  "lessonTitle": "Go (ゴー) 言語にちょうせん！",
+  "lessonDescription": "Google（グーグル）が作った言葉「Go（ゴー）言語」のきほんを学びましょう。シンプルですばやく動くプログラムを作れるようになります。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello Worldを出力しよう",
-      "description": "Goで画面に文字を表示するには fmt パッケージを使います。",
+      "title": "画面にメッセージを出しましょう",
+      "description": "Go言語を使って画面に「こんにちは」と表示させてみましょう。fmt（エフエムティー）という機能を使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "基本構造",
-          "content": "# package main\n\nGoのプログラムは `package main` から始まり、`fmt` パッケージをインポートして使います。\n\n**コード例：**\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, Go!\")\n}\n```"
+          "title": "Go言語の「きまり文句」",
+          "content": "# おまじないを入力しましょう\n\nGo言語でプログラムを入力するときは、必ず入力しなければいけない「決まり文句」があります。\n\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    // ここにやりたいことを入力します\n}\n```\n\n画面に文字を出したいときは、`fmt.Println()` という名前の関数を使います。"
+        },
+        {
+          "title": "やってみよう！",
+          "content": "# 目標\n\n`fmt.Println()` を使って、画面に `Hello, Go!` と表示させてみましょう。\n\n**入力するコードのヒント：**\n```go\nfmt.Println(\"Hello, Go!\")\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, Go!\")\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"___\")\n}",
+      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // 画面にメッセージを出す関数\n    fmt.Println(\"Hello, Go!\")\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // 画面にメッセージを出す関数\n    fmt.Println(\"___")\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -28,10 +32,11 @@ export const goData = {
         "}"
       ],
       "lineHints": [
-        null,
-        null,
-        null,
-        "Hello, Go! を出力します。"
+        "プログラムのグループ名を決めます。",
+        "画面に文字を出すための機能を準備します。",
+        "ここからプログラムがスタートします、という合図です。",
+        "fmt.Println を使って、() の中の文字を画面に出します。",
+        "プログラムの終わりです。"
       ],
       "candidates": {
         "strings": [
@@ -46,19 +51,19 @@ export const goData = {
       ]
     },
     {
-      "title": "変数",
-      "description": "変数を宣言して値を代入しましょう。",
+      "title": "便利な「はこ」",
+      "description": "数字をしまっておく「はこ」を作って、中身を表示してみましょう。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "変数宣言",
-          "content": "# := 演算子\n\n型推論を使った短い宣言方法がよく使われます。\n\n**コード例：**\n```go\nx := 10\nfmt.Println(x)\n```"
+          "title": "「:=」を使いましょう",
+          "content": "# 短いはこの作りかた\n\nGo言語では、`:=` という記号を使うと、中身の種類を自動で予想して「はこ」を作ってくれます。\n\n**コード例：**\n```go\nx := 10\nfmt.Println(x)\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 10\n    fmt.Println(x)\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := ___\n    fmt.Println(___)\n}",
+      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // x というはこに 10 を入れる\n    x := 10\n    fmt.Println(x)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // x というはこに 10 を入れる\n    x := ___\n    fmt.Println(___)\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -71,8 +76,8 @@ export const goData = {
         null,
         null,
         null,
-        "10を代入します。",
-        "xを出力します。"
+        "x := 10 と入力して、はこを作ります。",
+        "はこの名前 x を指定して、表示させます。"
       ],
       "candidates": {
         "variables": [
@@ -90,19 +95,19 @@ export const goData = {
       ]
     },
     {
-      "title": "計算",
-      "description": "計算を行いましょう。",
+      "title": "コンピュータで計算しましょう",
+      "description": "Go言語を使って、たし算をしてみましょう。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "計算",
-          "content": "# 四則演算\n\n+, -, *, / などが使えます。\n\n**コード例：**\n```go\na := 5\nb := 3\nfmt.Println(a + b)\n```"
+          "title": "計算の記号",
+          "content": "# 算数と同じ記号を使います\n\nGo言語でも、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    a := 5\n    b := 3\n    fmt.Println(a + b)\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    a := 5\n    b := 3\n    fmt.Println(a ___ b)\n}",
+      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    a := 5\n    b := 3\n    // たし算した答えを出す\n    fmt.Println(a + b)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    a := 5\n    b := 3\n    // たし算した答えを出す\n    fmt.Println(a ___ b)\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -116,9 +121,9 @@ export const goData = {
         null,
         null,
         null,
-        null,
-        null,
-        "a + b を出力します。"
+        "a = 5 と入力しましょう。",
+        "b = 3 と入力しましょう。",
+        "たし算なので `+""""` を使います。"
       ],
       "candidates": {
         "operators": [
@@ -133,24 +138,26 @@ export const goData = {
       ]
     },
     {
-      "title": "フォーマット出力",
-      "description": "fmt.Printfを使ってフォーマット出力を行いましょう。",
+      "title": "文章の中に「はこ」を入れましょう",
+      "description": "Printf（プリントエフ）を使って、文章の中に「はこ（変数）」の中身を表示します。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "Printf",
-          "content": "# 書式指定子\n\n`%d` で整数、`%s` で文字列を埋め込めます。\n\n**コード例：**\n```go\nage := 20\nfmt.Printf(\"Age: %d\\n\", age)\n```"
+          "title": "書式を使いましょう",
+          "content": "# データの埋め込み\n\n`%d` と入力したところに、あとの方の変数のなかみが入る仕組みです。\n\n**コード例：**\n```go\nage := 10\nfmt.Printf(\"私は %d 歳です\\n\", age)
+```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    age := 20\n    fmt.Printf(\"I am %d years old.\\n\", age)\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    age := 20\n    fmt.Printf(\"I am %d years old.\\n\", ___)\n}",
+      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    age := 10\n    fmt.Printf(\"I am %d years old.\\n\", age)
+}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    age := 10\n    fmt.Printf(\"I am %d years old.\\n\", ___)\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
         "func main() {",
-        "    age := 20",
+        "    age := 10",
         "    fmt.Printf(\"I am %d years old.\\n\", age)",
         "}"
       ],
@@ -158,8 +165,8 @@ export const goData = {
         null,
         null,
         null,
-        null,
-        "age変数を指定します。"
+        "age に 10 を入力します。",
+        "はこの名前 age を指定します。"
       ],
       "candidates": {
         "variables": [
@@ -169,24 +176,24 @@ export const goData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "I am 20 years old.\n"
+          "expected_output": "I am 10 years old.\n"
         }
       ]
     },
     {
-      "title": "スライス (可変長配列)",
-      "description": "Goでは配列よりもスライスがよく使われます。",
+      "title": "データをならべる「スライス」",
+      "description": "「スライス」という機能を使うと、たくさんのデータを一つの「長い はこ」にまとめて入れられます。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "スライス",
-          "content": "# データのリスト\n\n同じ種類のデータをまとめて扱います。インデックスは0から始まります。\n\n**コード例：**\n```go\nnums := []int{10, 20}\nfmt.Println(nums[1]) // 20 を出力\n```"
+          "title": "データの番号は 0 から！",
+          "content": "# [ ]（しかくい かっこ）を使いましょう\n\nスライスの中身を取り出すときは、何番目かを指定します。さいしょのデータは **「0番」** から数えるのがルールですよ。\n\n**コード例：**\n```go\nnums := []int{10, 20}\nfmt.Println(nums[0]) // 10 が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{10, 20}\n    fmt.Println(nums[1])\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{10, 20}\n    fmt.Println(nums[___])\n}",
+      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{10, 20}\n    // 2番目（番号は1）を出す\n    fmt.Println(nums[1])\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{10, 20}\n    // 2番目（番号は1）を出す\n    fmt.Println(nums[___])\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -199,8 +206,8 @@ export const goData = {
         null,
         null,
         null,
-        null,
-        "インデックス1を指定します。"
+        "[]int{10, 20} と入力して初期化します。",
+        "2番目のデータの番号は 1 です。 `nums[1]` と入力してください。"
       ],
       "candidates": {
         "numbers": [
@@ -215,19 +222,19 @@ export const goData = {
       ]
     },
     {
-      "title": "if文",
-      "description": "条件分岐を行います。",
+      "title": "「もし〜なら」で分けましょう",
+      "description": "点数によって表示するメッセージを変えてみましょう。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
           "title": "if文",
-          "content": "# 括弧は不要\n\nGoのif文では条件式の周りの丸括弧 `( )` は不要です。\n\n**コード例：**\n```go\nif score > 80 {\n    fmt.Println(\"合格\")\n}\n```"
+          "content": "# { } を使いましょう\n\nGo言語では、`if 条件` のあとに `{ }` を入力して、その中にやりたいことを入力します。条件のまわりに `( )` は必要ありませんよ。\n\n**コード例：**\n```go\nif score > 80 {\n    fmt.Println(\"合格！\")\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 100\n    if score > 80 {\n        fmt.Println(\"Great\")\n    }\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 100\n    if score ___ 80 {\n        fmt.Println(\"___\")\n    }\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 100\n    if score ___ 80 {\n        fmt.Println(\"___")\n    }\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -242,13 +249,14 @@ export const goData = {
         null,
         null,
         null,
-        null,
-        "比較演算子 > を使います。",
-        "Great を出力します。"
+        "score = 100 と入力しましょう。",
+        "比較するための記号 `>` を入力しましょう。",
+        "Great と表示します。",
+        "さいごに } で閉じるのを忘れないでください。"
       ],
       "candidates": {
         "operators": [
-          ">"
+          ">
         ],
         "strings": [
           "Great"
@@ -262,14 +270,14 @@ export const goData = {
       ]
     },
     {
-      "title": "if-else文",
-      "description": "elseを使って分岐します。",
+      "title": "ちがう場合はどうしましょう？",
+      "description": "else（エルス）を使って、「そうでなければ」の動きを作りましょう。",
       "difficulty": "easy",
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "else",
-          "content": "# 書き方の注意\n\nGoでは `} else {` のように、`else` を閉じ括弧と同じ行に書く必要があります。\n\n**コード例：**\n```go\nif x > 10 {\n    fmt.Println(\"Big\")\n} else {\n    fmt.Println(\"Small\")\n}\n```"
+          "title": "else の書きかた",
+          "content": "# } と同じ行に書きましょう\n\nGo言語では、`} else {` というふうに、なみかっこと同じ行に `else` を入力するのがルールです。\n\n**コード例：**\n```go\nif x > 10 {\n    fmt.Println(\"大きい\")\n} else {\n    fmt.Println(\"小さい\")\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -291,10 +299,10 @@ export const goData = {
         null,
         null,
         null,
+        "x に 5 を入力します。",
         null,
         null,
-        null,
-        "else を記述します。"
+        "そうでなければ、をあらわす `else` を入力しましょう。"
       ],
       "candidates": {
         "keywords": [
@@ -309,18 +317,18 @@ export const goData = {
       ]
     },
     {
-      "title": "for文",
-      "description": "Goのループはforのみです。rangeを使ってスライスを走査しましょう。",
+      "title": "中身を全部出してみましょう",
+      "description": "range（レンジ）という機能を使って、スライスの中身を一つずつ順番に表示します。",
       "difficulty": "easy",
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "range",
-          "content": "# ループ処理\n\n`for index, value := range` の形式で、要素を一つずつ取り出します。\n\n**コード例：**\n```go\nnums := []int{1, 2, 3}\nfor _, n := range nums {\n    fmt.Println(n)\n}\n```"
+          "title": "range（レンジ）",
+          "content": "# 全部取り出しましょう\n\n「はこ（スライス）」の中に入っているものを、最初から最後まで順番に取り出す便利なループです。\n\n**コード例：**\n```go\nnums := []int{1, 2, 3}\nfor _, n := range nums {\n    fmt.Println(n)\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{1, 2, 3}\n    for _, n := range nums {\n        fmt.Println(n)\n    }\n}",
+      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{1, 2, 3}\n    // 全部取り出すループ\n    for _, n := range nums {\n        fmt.Println(n)\n    }\n}",
       "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{1, 2, 3}\n    for _, n := ___ nums {\n        fmt.Println(n)\n    }\n}",
       "correctLines": [
         "package main",
@@ -337,7 +345,7 @@ export const goData = {
         null,
         null,
         null,
-        "range を使います。"
+        "範囲をあらわす `range` を入力しましょう。"
       ],
       "candidates": {
         "keywords": [
@@ -352,19 +360,19 @@ export const goData = {
       ]
     },
     {
-      "title": "Map",
-      "description": "キーと値のペアを扱うMapを使いましょう。",
+      "title": "名前で探す「じしょ」",
+      "description": "Map（マップ）を使って、名前を指定してデータを取り出してみましょう。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
           "title": "Map",
-          "content": "# 連想配列\n\nキーを使ってデータを管理します。\n\n**コード例：**\n```go\nscores := map[string]int{\"Math\": 90}\nfmt.Println(scores[\"Math\"])\n```"
+          "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。辞書のように使うことができますよ。\n\n**コード例：**\n```go\nscores := map[string]int{\"Math\": 90}\nfmt.Println(scores[\"Math\"])\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    scores := map[string]int{\"Math\": 90}\n    fmt.Println(scores[\"Math\"])\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    scores := map[___]int{\"Math\": 90}\n    fmt.Println(scores[\"___\"])\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    scores := map[___]int{\"Math\": 90}\n    fmt.Println(scores[\"___"])\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -377,8 +385,8 @@ export const goData = {
         null,
         null,
         null,
-        "キー型は string です。",
-        "Math キーを指定します。"
+        "名前（キー）の種類として `string` と入力しましょう。",
+        "\"Math\" という名前を指定してデータを取り出します。"
       ],
       "candidates": {
         "strings": [
@@ -394,14 +402,14 @@ export const goData = {
       ]
     },
     {
-      "title": "関数",
-      "description": "関数を定義して呼び出します。",
+      "title": "自分だけの関数を作りましょう",
+      "description": "一連の手順をまとめて、名前をつけた「関数（かんすう）」を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "関数",
-          "content": "# 処理のひとまとめ\n\n`func` キーワードを使って定義し、呼び出します。\n\n**コード例：**\n```go\nfunc greet() {\n    fmt.Println(\"Hello\")\n}\n\n// main内で呼び出し\ngreet()\n```"
+          "title": "手順をまとめる",
+          "content": "# func のあとに名前をつける\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせますよ。\n\n**コード例：**\n```go\nfunc greet() {\n    fmt.Println(\"こんにちは\")\n}\n\n// mainの中で\ngreet()\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -420,11 +428,11 @@ export const goData = {
       "lineHints": [
         null,
         null,
+        "greet という名前の関数を定義します。",
+        "メッセージを表示します。",
+        "関数の終わりです。",
         null,
-        null,
-        null,
-        null,
-        "greet() で呼び出します。"
+        "greet(); と入力して、関数を実行します。"
       ],
       "candidates": {
         "functions": [

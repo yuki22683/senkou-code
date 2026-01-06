@@ -1,30 +1,30 @@
 export const luaData = {
   "language": "lua",
   "lessonId": "lua-1",
-  "lessonTitle": "Lua I",
-  "lessonDescription": "ゲーム組み込み言語として有名なLuaの基本を学びます。シンプルで軽量、かつ柔軟なテーブル構造が特徴です。",
+  "lessonTitle": "Lua (ルア) にちょうせん！",
+  "lessonDescription": "ゲーム作りなどでよく使われる、シンプルで軽い言葉「Lua（ルア）」のきほんを学びましょう。いろいろなものを入れることができる「テーブル」という機能が特徴です。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello Worldを出力しよう",
-      "description": "Luaで画面に文字を表示するには print 関数を使います。",
+      "title": "画面にメッセージを出してみましょう",
+      "description": "Luaを使って画面に「こんにちは」と表示させてみましょう。print（プリント）という関数を使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "print",
-          "content": "# 表示関数\n\n`print` 関数の後ろに文字を書くことで表示できます。\n\n**コード例：**\n```lua\nprint(\"Hello, Lua!\")\n```"
+          "title": "print を使いましょう",
+          "content": "# メッセージを表示します\n\n画面に文字を出したいときは、`print` と入力して、そのあとに `\" \"` で囲んだ文字を続けます。\n\n**コード例：**\n```lua\nprint(\"Hello, Lua!\")\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "print(\"Hello, Lua!\")",
-      "holeyCode": "print(\"___\")",
+      "holeyCode": "print(\"___")",
       "correctLines": [
         "print(\"Hello, Lua!\")"
       ],
       "lineHints": [
-        "Hello, Lua! を出力します。"
+        "print を使って、そのあとの文字を画面に出します。"
       ],
       "candidates": {
         "strings": [
@@ -39,14 +39,14 @@ export const luaData = {
       ]
     },
     {
-      "title": "変数",
-      "description": "変数を定義して出力しましょう。",
+      "title": "自分専用の「はこ」",
+      "description": "数字や文字をしまっておく「はこ（変数）」を使ってみましょう。その場だけで使う「local（ローカル）」というラベルを貼ります。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "local",
-          "content": "# ローカル変数\n\n`local` を付けることで、その範囲内だけで有効な変数になります。\n\n**コード例：**\n```lua\nlocal x = 10\nprint(x)\n```"
+          "title": "local をつけましょう",
+          "content": "# 自分だけの変数\n\nLuaでは、`local` という言葉をつけてから「はこ」を作ります。これは「この場所だけで使います」という合図になりますよ。\n\n**コード例：**\n```lua\nlocal x = 10\nprint(x)\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -57,8 +57,8 @@ export const luaData = {
         "print(x)"
       ],
       "lineHints": [
-        "10を代入します。",
-        "変数xを出力します。"
+        "x という名前のはこに 10 を入力します。 `local` を忘れずに入力しましょう。",
+        "はこの名前 x を指定して、中身を表示します。"
       ],
       "candidates": {
         "variables": [
@@ -76,14 +76,14 @@ export const luaData = {
       ]
     },
     {
-      "title": "計算",
-      "description": "計算を行いましょう。",
+      "title": "コンピュータで計算しましょう",
+      "description": "Luaを使って、たし算をしてみましょう。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "演算",
-          "content": "# 四則演算\n\n+, -, *, / などが使えます。\n\n**コード例：**\n```lua\nprint(5 + 3)\n```"
+          "title": "計算の記号",
+          "content": "# 算数と同じ記号を使います\n\nLuaでも、こんな記号を使って計算をしますよ。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算"
         }
       ],
       "initialDisplayMode": "holey",
@@ -97,7 +97,7 @@ export const luaData = {
       "lineHints": [
         null,
         null,
-        "a + b を出力します。"
+        "たし算なので `+` を使います。"
       ],
       "candidates": {
         "operators": [
@@ -112,14 +112,14 @@ export const luaData = {
       ]
     },
     {
-      "title": "文字列結合",
-      "description": "文字列を結合して表示しましょう。",
+      "title": "文字と「はこ」をくっつけましょう",
+      "description": "Luaでは、ドット2つ（..）を使って、文字とはこをくっつけることができます。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "結合演算子",
-          "content": "# .. (ドット2つ)\n\nLuaでの文字列結合は `..` です。\n\n**コード例：**\n```lua\nlocal age = 20\nprint(\"年齢は \" .. age .. \" 歳です\")\n```"
+          "title": ".. （ドット2つ）を使いましょう",
+          "content": "# 文字の合体\n\n`..` と入力すると、左右の文字や数字をくっつけて一つの文章にできますよ。\n\n**コード例：**\n```lua\nlocal age = 10\nprint(\"私は \" .. age .. \" 歳です\")\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -131,7 +131,7 @@ export const luaData = {
       ],
       "lineHints": [
         null,
-        ".. 演算子を使います。"
+        "文字をくっつける記号 `..` を入力します。"
       ],
       "candidates": {
         "operators": [
@@ -146,14 +146,14 @@ export const luaData = {
       ]
     },
     {
-      "title": "テーブル（配列）",
-      "description": "Luaの主要データ構造であるテーブルを配列として使いましょう。",
+      "title": "なんでも入る「テーブル」",
+      "description": "Luaのいちばんの特徴、いろいろなデータをまとめて入れられる「テーブル」を使ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "テーブル",
-          "content": "# { }\n\n複数のデータをまとめて扱います。**Luaのインデックスは1から始まる**ことに注意しましょう。\n\n**コード例：**\n```lua\nlocal t = {10, 20}\nprint(t[2]) -- 20 を表示\n```"
+          "title": "番号は 1 から数えます！",
+          "content": "# { } を使います\n\nテーブルの中身を取り出すときは、何番目かを指定します。他の多くの言葉とちがって、Luaは **「1番」** から数えるのがルールです。日常の数え方と同じですね！\n\n**コード例：**\n```lua\nlocal t = {10, 20}\nprint(t[2]) -- 20 が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -165,7 +165,7 @@ export const luaData = {
       ],
       "lineHints": [
         null,
-        "2番目の要素を指定します。"
+        "2番目のデータの番号は 2 です。 `t[2]` と入力してください。"
       ],
       "candidates": {
         "numbers": [
@@ -180,14 +180,14 @@ export const luaData = {
       ]
     },
     {
-      "title": "if文",
-      "description": "条件分岐を行います。",
+      "title": "「もし〜なら」で分けましょう",
+      "description": "条件によって動きを変えてみましょう。 if（イフ）と then（ゼン）を使います。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "if",
-          "content": "# if ... then ... end\n\n条件を満たす場合のみ処理を実行します。\n\n**コード例：**\n```lua\nif score > 80 then\n  print(\"合格\")\nend\n```"
+          "title": "if と then と end",
+          "content": "# 言葉でまとまりを作ります\n\nLuaでは、`if 条件 then` と入力し、最後に `end` と入力して終わらせるのがルールです。\n\n**コード例：**\n```lua\nif score > 80 then\n  print(\"合格！\")\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -201,13 +201,13 @@ export const luaData = {
       ],
       "lineHints": [
         null,
-        "比較演算子 > を使います。",
+        "比較するための記号 `>` を入力しましょう。",
         null,
         null
       ],
       "candidates": {
         "operators": [
-          ">"
+          ">
         ]
       },
       "testCases": [
@@ -218,14 +218,14 @@ export const luaData = {
       ]
     },
     {
-      "title": "if-else文",
-      "description": "elseを使って分岐します。",
+      "title": "ちがう場合はどうしましょう？",
+      "description": "else（エルス）を使って、「そうでなければ」の動きを作りましょう。",
       "difficulty": "easy",
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "else",
-          "content": "# else\n\n条件に当てはまらない時の処理は `else` を使います。\n\n**コード例：**\n```lua\nif age >= 20 then\n  print(\"大人\")\nelse\n  print(\"子供\")\nend\n```"
+          "title": "elseブロック",
+          "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```lua\nif age >= 20 then\n  print(\"大人です\")\nelse\n  print(\"子供です\")\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -243,7 +243,9 @@ export const luaData = {
         null,
         null,
         null,
-        "else を記述します。"
+        "そうでなければ、をあらわす `else` を入力しましょう。",
+        null,
+        null
       ],
       "candidates": {
         "keywords": [
@@ -258,14 +260,14 @@ export const luaData = {
       ]
     },
     {
-      "title": "ループ（ipairs）",
-      "description": "ipairsを使って配列を走査します。",
+      "title": "中身を全部出してみましょう",
+      "description": "ipairs（アイペアーズ）という機能を使って、テーブルの中身を一つずつ順番に表示します。",
       "difficulty": "easy",
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "ipairs",
-          "content": "# 要素の繰り返し\n\nテーブルの要素を一つずつ取り出して処理します。\n\n**コード例：**\n```lua\nlocal nums = {1, 2, 3}\nfor i, n in ipairs(nums) do\n  print(n)\nend\n```"
+          "title": "テーブルのループ",
+          "content": "# ipairs（アイペアーズ）\n\n`for i, n in ipairs(テーブル) do ... end` という形を使って、中身を一つずつ取り出すことができます。ゲーム内のキャラクター全員を表示するときなどに使われますよ。\n\n**コード例：**\n```lua\nlocal nums = {1, 2, 3}\nfor i, n in ipairs(nums) do\n  print(n)\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -279,7 +281,9 @@ export const luaData = {
       ],
       "lineHints": [
         null,
-        "テーブル nums を指定します。"
+        "対象となるテーブルの名前 `nums` を指定します。",
+        null,
+        null
       ],
       "candidates": {
         "variables": [
@@ -294,26 +298,26 @@ export const luaData = {
       ]
     },
     {
-      "title": "テーブル（連想配列）",
-      "description": "テーブルを連想配列（辞書）として使いましょう。",
+      "title": "名前で探せる「テーブル」",
+      "description": "テーブルを使って、名前を指定してデータを取り出してみましょう。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "連想配列",
-          "content": "# キー指定\n\n名前付きのキーでデータを管理します。ドット記法でアクセスできます。\n\n**コード例：**\n```lua\nlocal user = {name=\"Alice\"}\nprint(user.name) -- \"Alice\" を表示\n```"
+          "title": "キー指定",
+          "content": "# ドット（ . ）でつなげます\n\n「名前」と「データ」をセットにして保存できます。取り出すときは `テーブル名.名前` というふうにドットでつなげるのが一般的です。\n\n**コード例：**\n```lua\nlocal user = {name=\"たろう\"}\nprint(user.name) -- 「たろう」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local user = {name=\"Alice\"}\nprint(user.name)",
-      "holeyCode": "local user = {name=\"Alice\"}\nprint(user.name)",
+      "holeyCode": "local user = {name=\"Alice\"}\nprint(user.___)",
       "correctLines": [
         "local user = {name=\"Alice\"}",
         "print(user.name)"
       ],
       "lineHints": [
         null,
-        "nameプロパティにアクセスします。"
+        "名前 `name` を指定して、データを取り出します。"
       ],
       "candidates": {
         "strings": [
@@ -328,14 +332,14 @@ export const luaData = {
       ]
     },
     {
-      "title": "関数",
-      "description": "関数を定義して呼び出します。",
+      "title": "自分だけの関数を作りましょう",
+      "description": "よく使う手順をまとめて、名前をつけた「関数（かんすう）」を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "function",
-          "content": "# 処理の定義\n\n名前を付けて処理を定義します。\n\n**コード例：**\n```lua\nfunction greet()\n  print(\"Hello\")\nend\n\ngreet() -- 呼び出し\n```"
+          "title": "function と名前",
+          "content": "# 関数の定義\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせますよ。 Luaでは `function` という言葉を使います。\n\n**コード例：**\n```lua\nfunction aisatsu()\n  print(\"こんにちは\")\nend\n\naisatsu() -- 呼び出し\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -348,10 +352,10 @@ export const luaData = {
         "greet()"
       ],
       "lineHints": [
-        null,
-        null,
-        null,
-        "greet を呼び出します。"
+        "greet という名前の関数を定義します。",
+        "メッセージを表示します。",
+        "関数の終わりです。",
+        "greet(); と入力して、関数を実行します。"
       ],
       "candidates": {
         "functions": [

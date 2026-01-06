@@ -1,20 +1,21 @@
 export const elixirData = {
   "language": "elixir",
   "lessonId": "elixir-1",
-  "lessonTitle": "Elixir I",
-  "lessonDescription": "Erlang VM上で動作する並行処理に強い言語Elixirの基本を学びます。Rubyライクな構文で関数型プログラミングを学べます。",
+  "lessonTitle": "Elixir (エリクサー) にちょうせん！",
+  "lessonDescription": "たくさんの指示を同時になおかつ正確にこなすのが得意な言葉「Elixir（エリクサー）」のきほんを学びましょう。データの流れをスムーズに作れるようになります。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello Worldを出力しよう",
-      "description": "Elixirで画面に文字を表示するには IO.puts を使います。",
+      "title": "画面に文字を出してみましょう",
+      "description": "Elixirを使って画面に「こんにちは」と表示させてみましょう。IO.puts（アイオー・プッツ）という関数を使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "IO.puts",
-          "content": "# 出力関数\n\n`IO.puts` の後ろに文字を書くことで表示できます。\n\n**コード例：**\n```elixir\nIO.puts \"Hello, Elixir!\"\n```"
+          "title": "IO.puts を使いましょう",
+          "content": "# メッセージを表示します\n\n画面に文字を出したいときは、`IO.puts` と入力して、そのあとに表示したい文字を続けます。\n\n**コード例：**\n```elixir\nIO.puts \"Hello, Elixir!\"
+```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -24,7 +25,7 @@ export const elixirData = {
         "IO.puts \"Hello, Elixir!\""
       ],
       "lineHints": [
-        "Hello, Elixir! を出力します。"
+        "IO.puts を使って、そのあとの文字を画面に出します。"
       ],
       "candidates": {
         "strings": [
@@ -39,14 +40,14 @@ export const elixirData = {
       ]
     },
     {
-      "title": "変数",
-      "description": "変数を定義して出力しましょう。",
+      "title": "便利な「はこ」",
+      "description": "数字や文字をしまっておく「はこ（変数）」を使ってみましょう。Elixirでは一度決めた名前の中身を変えずに使うのが良いやりかたとされています。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "変数",
-          "content": "# パターンマッチ\n\nElixirの変数は一度値を決めたら、原則そのまま使います（再代入は可能ですが）。\n\n**コード例：**\n```elixir\nx = 10\nIO.puts x\n```"
+          "title": "名前をつけます",
+          "content": "# 変数（へんすう）の作りかた\n\n`名前 = 中身` と入力することで、データに名前をつけることができます。\n\n**コード例：**\n```elixir\nx = 10\nIO.puts x\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -57,8 +58,8 @@ export const elixirData = {
         "IO.puts x"
       ],
       "lineHints": [
-        "10を代入します。",
-        "変数xを出力します。"
+        "x という名前に 10 をセットします。",
+        "はこの名前 x を指定して、表示させます。"
       ],
       "candidates": {
         "variables": [
@@ -76,14 +77,14 @@ export const elixirData = {
       ]
     },
     {
-      "title": "計算",
-      "description": "計算を行いましょう。",
+      "title": "コンピュータで計算しましょう",
+      "description": "Elixirを使って、たし算をしてみましょう。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "演算",
-          "content": "# 四則演算\n\n+, -, *, / などが使えます。\n\n**コード例：**\n```elixir\nIO.puts 5 + 3\n```"
+          "title": "計算の記号",
+          "content": "# 計算の記号\n\nElixirでも、こんな記号を使って計算をしますよ。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算"
         }
       ],
       "initialDisplayMode": "holey",
@@ -97,7 +98,7 @@ export const elixirData = {
       "lineHints": [
         null,
         null,
-        "a + b を出力します。"
+        "たし算なので `+` を使います。"
       ],
       "candidates": {
         "operators": [
@@ -112,14 +113,14 @@ export const elixirData = {
       ]
     },
     {
-      "title": "式展開",
-      "description": "文字列の中に変数を埋め込みましょう。",
+      "title": "文章の中に「はこ」を入れましょう",
+      "description": "文章の中に「はこ（変数）」の中身を表示してみましょう。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "式展開",
-          "content": "# #{ }\n\n文字列の中で `#{変数}` を使うと、変数の値を埋め込めます。\n\n**コード例：**\n```elixir\nage = 20\nIO.puts \"年齢は #{age} です\"\n```"
+          "title": "#{ }（なみかっこ）を使いましょう",
+          "content": "# 文字列の中に入れる方法\n\n`\" \"` で囲んだ文章の中で `#{はその名前}` と入力すると、中身を文章に入れられますよ。\n\n**コード例：**\n```elixir\nage = 10\nIO.puts \"私は #{age} 歳です\"\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -131,7 +132,7 @@ export const elixirData = {
       ],
       "lineHints": [
         null,
-        "変数ageを埋め込みます。"
+        "はこの名前 age を指定します。"
       ],
       "candidates": {
         "variables": [
@@ -146,14 +147,14 @@ export const elixirData = {
       ]
     },
     {
-      "title": "リスト",
-      "description": "リスト（連結リスト）を使いましょう。",
+      "title": "データをならべる「リスト」",
+      "description": "たくさんのデータを一つの「列」にまとめて並べられる「リスト」を使ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "リスト",
-          "content": "# [ ]\n\n複数のデータをまとめて扱います。インデックスは0から始まります。\n\n**コード例：**\n```elixir\nlist = [10, 20]\nIO.puts Enum.at(list, 1) # 20 を表示\n```"
+          "title": "リストの作りかた",
+          "content": "# [ ]（しかくい かっこ）を使います\n\nリストの中身を取り出すときは `Enum.at`（イーナム・アット）という機能を使います。さいしょのデータは **「0番」** から数えるのがルールですよ。\n\n**コード例：**\n```elixir\nlist = [10, 20]\nIO.puts Enum.at(list, 1) # 20 が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -165,7 +166,7 @@ export const elixirData = {
       ],
       "lineHints": [
         null,
-        "インデックス1を指定します。"
+        "2番目のデータの番号は 1 です。"
       ],
       "candidates": {
         "numbers": [
@@ -180,14 +181,14 @@ export const elixirData = {
       ]
     },
     {
-      "title": "if文",
-      "description": "条件分岐を行います。",
+      "title": "「もし〜なら」で分けましょう",
+      "description": "条件によって動きを変えてみましょう。 if（イフ）を使います。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "if",
-          "content": "# if ... do ... end\n\n条件を満たす場合のみ処理を実行します。\n\n**コード例：**\n```elixir\nif score > 80 do\n  IO.puts \"合格\"\nend\n```"
+          "title": "if と do と end",
+          "content": "# まとまりを作りましょう\n\nElixirでは、`if 条件 do` と入力し、最後に `end` と入力して終わらせるのがルールです。\n\n**コード例：**\n```elixir\nif score > 80 do\n  IO.puts \"合格！\"\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -201,13 +202,13 @@ export const elixirData = {
       ],
       "lineHints": [
         null,
-        "比較演算子 > を使います。",
+        "比較するための記号 `>` を入力しましょう。",
         null,
         null
       ],
       "candidates": {
         "operators": [
-          ">"
+          ">
         ]
       },
       "testCases": [
@@ -218,14 +219,14 @@ export const elixirData = {
       ]
     },
     {
-      "title": "if-else文",
-      "description": "elseを使って分岐します。",
+      "title": "ちがう場合はどうしましょう？",
+      "description": "else（エルス）を使って、「そうでなければ」の動きを作りましょう。",
       "difficulty": "easy",
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "else",
-          "content": "# else\n\n条件に当てはまらない時の処理は `else` を使います。\n\n**コード例：**\n```elixir\nif age >= 20 do\n  IO.puts \"大人\"\nelse\n  IO.puts \"子供\"\nend\n```"
+          "title": "elseブロック",
+          "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```elixir\nif age >= 20 do\n  IO.puts \"大人です\"\nelse\n  IO.puts \"子供です\"\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -243,7 +244,9 @@ export const elixirData = {
         null,
         null,
         null,
-        "else を記述します。"
+        "そうでなければ、をあらわす `else` を入力しましょう。",
+        null,
+        null
       ],
       "candidates": {
         "keywords": [
@@ -258,14 +261,14 @@ export const elixirData = {
       ]
     },
     {
-      "title": "列挙ング (Enum)",
-      "description": "Enumモジュールを使ってリストを走査します。",
+      "title": "中身を全部出してみましょう",
+      "description": "Enum（イーナム）という機能を使って、リストの中身を一つずつ順番に表示します。",
       "difficulty": "easy",
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "Enum.each",
-          "content": "# 要素のループ\n\nリストの要素を一つずつ取り出して、匿名関数で処理します。\n\n**コード例：**\n```elixir\nlist = [1, 2, 3]\nEnum.each(list, fn x -> IO.puts x end)\n```"
+          "title": "Enum.each ループ",
+          "content": "# ひとつずつ取り出します\n\n`Enum.each(リスト, fn x -> ... end)` という形を使って、中身を順番に処理します。ちょっと独特な書き方ですが、データの流れを作るのに便利ですよ。\n\n**コード例：**\n```elixir\nlist = [1, 2, 3]\nEnum.each(list, fn x -> IO.puts x end)\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -280,7 +283,7 @@ export const elixirData = {
       "lineHints": [
         null,
         null,
-        "変数xを出力します。",
+        "取り出したデータ x を表示します。",
         null
       ],
       "candidates": {
@@ -296,14 +299,14 @@ export const elixirData = {
       ]
     },
     {
-      "title": "マップ",
-      "description": "キーと値のペアを扱うマップを使いましょう。",
+      "title": "名前で探す「マップ」",
+      "description": "名前を指定してデータを取り出せる「マップ」を使ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "Map",
-          "content": "# %{ }\n\n名前付きのキーでデータを管理します。\n\n**コード例：**\n```elixir\nmap = %{\"name\" => \"Alice\"}\nIO.puts map[\"name\"] # \"Alice\" を表示\n```"
+          "title": "Map（マップ）",
+          "content": "# %{ } を使います\n\n「名前」と「データ」をセットにして保存できます。矢印のような記号 `=>` を使うのがElixirのスタイルです。\n\n**コード例：**\n```elixir\nmap = %{\"name\" => \"たろう\"}\nIO.puts map[\"name\"] # 「たろう」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -315,7 +318,7 @@ export const elixirData = {
       ],
       "lineHints": [
         null,
-        "キー name を指定します。"
+        "\"name\" という名前を指定してデータを取り出します。"
       ],
       "candidates": {
         "strings": [
@@ -330,14 +333,14 @@ export const elixirData = {
       ]
     },
     {
-      "title": "モジュールと関数",
-      "description": "モジュールと関数を定義して呼び出します。",
+      "title": "自分だけの「モジュール」を作りましょう",
+      "description": "いくつかの関数をまとめて、名前をつけた「モジュール」を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "defmodule",
-          "content": "# 処理のグループ化\n\nモジュールの中に複数の関数を定義できます。\n\n**コード例：**\n```elixir\ndefmodule Main do\n  def greet do\n    IO.puts \"Hello\"\n  end\nend\n\nMain.greet() # 呼び出し\n```"
+          "title": "defmodule と def",
+          "content": "# チーム（モジュール）作り\n\nやりたいことをひとまとめにしたものを「モジュール」と呼びます。その中に `def` を使って関数を作りますよ。\n\n**コード例：**\n```elixir\ndefmodule Main do\n  def aisatsu do\n    IO.puts \"こんにちは\"\n  end\nend\n\nMain.aisatsu() # 呼び出し\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -352,12 +355,12 @@ export const elixirData = {
         "Main.greet()"
       ],
       "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "greet を呼び出します。"
+        "Main という名前のモジュールを作ります。",
+        "greet という名前の関数を定義します。",
+        "メッセージを表示します。",
+        "関数の終わりです。",
+        "モジュールの終わりです。",
+        "Main モジュールの greet 関数を実行します。"
       ],
       "candidates": {
         "functions": [

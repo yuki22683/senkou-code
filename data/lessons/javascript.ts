@@ -3,36 +3,36 @@ const bq = String.fromCharCode(96);
 export const javascriptData = {
   "language": "javascript",
   "lessonId": "javascript-1",
-  "lessonTitle": "JavaScript I",
-  "lessonDescription": "Web開発の必須言語、JavaScriptの基本を学びます。console.log、変数、条件分岐、関数などを習得しましょう。",
+  "lessonTitle": "JavaScript (ジャバスクリプト) にちょうせん！",
+  "lessonDescription": "Webサイトを動かす魔法、JavaScript（ジャバスクリプト）のきほんを学びましょう。コンピュータにメッセージを出したり、計算させたりする方法を身につけます。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "Hello Worldを出力しよう",
-      "description": "コンソールに文字を表示する方法を学びましょう。Hello, JavaScript!と表示するプログラムを作りましょう。",
+      "title": "画面にメッセージを出そう",
+      "description": "コンピュータに「こんにちは」とあいさつさせてみましょう。console.log（コンソール・ログ）という関数（かんすう）を使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "JavaScriptの世界へようこそ",
-          "content": "# JavaScriptとは？\n\nWebサイトに動きをつけるために開発された言語ですが、現在はサーバーやアプリ開発など、あらゆる場所で使われています。"
+          "title": "JavaScript（ジャバスクリプト）ってなに？",
+          "content": "# Webサイトを動かす魔法\n\nJavaScript（ジャバスクリプト）は、Webサイトにボタンやアニメーションなどの「動き」をつけるための言葉です。\n今ではアプリやゲーム作りにもたくさん使われている、とても人気の言葉です。"
         },
         {
-          "title": "コンソールに出力する",
-          "content": "# console.log()\n\nJavaScriptで文字を表示するには `console.log()` を使います。文の終わりには ; （セミコロン）を付ける習慣をつけましょう。\n\n**コード例：**\n```javascript\nconsole.log('Hello, JavaScript!');\n```"
+          "title": "メッセージを出す関数 console.log",
+          "content": "# console.log（コンソール・ログ）\n\nコンピュータに何かを表示（ひょうじ）させたいときは、`console.log()` という関数を使います。\n文のさいごには `;`（セミコロン）という記号をつけるのが、JavaScriptのあいさつです。\n\n**入力するコードのヒント：**\n```javascript\nconsole.log('Hello, JavaScript!');\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 「Hello, JavaScript!」と出力\nconsole.log('Hello, JavaScript!');",
-      "holeyCode": "// 「Hello, JavaScript!」と出力\nconsole.log('___');",
+      "correctCode": "// 画面に「Hello, JavaScript!」と出す関数\nconsole.log('Hello, JavaScript!');",
+      "holeyCode": "// 画面に「Hello, JavaScript!」と出す関数\nconsole.log('___');",
       "correctLines": [
-        "// 「Hello, JavaScript!」と出力",
+        "// 画面に「Hello, JavaScript!」と出す関数",
         "console.log('Hello, JavaScript!');"
       ],
       "lineHints": [
-        "コメント行です。プログラムには影響しません。",
-        "console.log を使い、最後はセミコロンで締めます。"
+        "コメントです。プログラムのメモとして使います。",
+        "console.log を使います。さいごの ; （セミコロン）を忘れないでください！"
       ],
       "candidates": {
         "functions": [
@@ -50,30 +50,30 @@ export const javascriptData = {
       ]
     },
     {
-      "title": "定数と変数",
-      "description": "const を使って定数を定義し、表示するプログラムを作りましょう。定数 name に文字列 'JavaScript' を代入して表示するプログラムを作りましょう。",
+      "title": "ずっと変わらない「はこ」const",
+      "description": "const（コンスト）を使って、データをしまっておく「はこ」を作ってみましょう。nameという名前のはこに 'JavaScript' と入れてみます。",
       "difficulty": "easy",
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "定数定義",
-          "content": "# const\n\n一度決めたら変えない値は `const` を使います。後で書き換える必要がある場合は `let` を使いますが、基本は `const` を使います。\n\n**コード例：**\n```javascript\nconst name = 'JavaScript';\nconsole.log(name);\n```"
+          "title": "「はこ」に名前をつけましょう",
+          "content": "# const（コンスト）\n\n一度決めたらずっとそのまま使いたい値（あたい）は、`const` という言葉を使って「はこ」を作ります。\n\n**コード例：**\n```javascript\nconst name = 'JavaScript';\nconsole.log(name);\n```\n`=`（イコール）は「右のものを左のはこに入れる」という意味ですよ。"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 定数nameを定義\nconst name = 'JavaScript';\n// 出力\nconsole.log(name);",
-      "holeyCode": "// 定数nameを定義\nconst name = '___';\n// 出力\nconsole.log(___);",
+      "correctCode": "// nameという名前のはこを作る\nconst name = 'JavaScript';\n// はこの中身を出す\nconsole.log(name);",
+      "holeyCode": "// nameという名前のはこを作る\nconst name = '___';\n// はこの中身を出す\nconsole.log(___);",
       "correctLines": [
-        "// 定数nameを定義",
+        "// nameという名前のはこを作る",
         "const name = 'JavaScript';",
-        "// 出力",
+        "// はこの中身を出す",
         "console.log(name);"
       ],
       "lineHints": [
-        "コメント: 定数nameを定義します。",
-        "const name = 'JavaScript'; と代入します。",
-        "コメント: 変数の中身を表示します。",
-        "console.log(name); と出力します。"
+        null,
+        "const name = 'JavaScript'; と入力します。イコールで中身をしまってください！",
+        null,
+        "console.log の中に、はこの名前 name を入力してください。"
       ],
       "candidates": {
         "variables": [
@@ -94,34 +94,34 @@ export const javascriptData = {
       ]
     },
     {
-      "title": "数値の計算",
-      "description": "JavaScriptで算術演算を行い、その結果を表示するプログラムを作りましょう。定数 x と y の足し算結果を表示するプログラムを作りましょう。",
+      "title": "コンピュータで計算（けいさん）",
+      "description": "JavaScriptを使って、たし算をしてみましょう。x と y という2つのはこの中身をたして、答えを出してみます。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "四則演算",
-          "content": "# 演算子\n\nJavaScriptでも +, -, *, / が使えます。\n\n**コード例：**\n```javascript\nconst x = 10;\nconst y = 5;\nconsole.log(x + y);\n```"
+          "title": "計算の記号",
+          "content": "# 算数と同じ記号を使えますよ\n\nJavaScriptでも、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算（× のかわり）\n- **/** : わり算（÷ のかわり）"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// xに10を代入\nconst x = 10;\n// yに5を代入\nconst y = 5;\n// x + y を出力\nconsole.log(x + y);",
-      "holeyCode": "// xに10を代入\nconst x = ___ ;\n// yに5を代入\nconst y = ___ ;\n// x + y を出力\nconsole.log(x ___ y);",
+      "correctCode": "// xに10を入れる\nconst x = 10;\n// yに5を入れる\nconst y = 5;\n// x + y を表示する\nconsole.log(x + y);",
+      "holeyCode": "// xに10を入れる\nconst x = ___ ;\n// yに5を入れる\nconst y = ___ ;\n// x + y を表示する\nconsole.log(x ___ y);",
       "correctLines": [
-        "// xに10を代入",
+        "// xに10を入れる",
         "const x = 10;",
-        "// yに5を代入",
+        "// yに5を入れる",
         "const y = 5;",
-        "// x + y を出力",
+        "// x + y を表示する",
         "console.log(x + y);"
       ],
       "lineHints": [
         null,
-        "const x = 10; とします。",
+        "const x = 10; と入力しましょう。",
         null,
-        "const y = 5; とします。",
+        "const y = 5; と入力しましょう。",
         null,
-        "x + y を console.log に渡します。"
+        "たし算なので `+` を使います。 `console.log(x + y)` と入力してください。"
       ],
       "candidates": {
         "variables": [
@@ -147,30 +147,30 @@ export const javascriptData = {
       ]
     },
     {
-      "title": "テンプレートリテラル",
-      "description": "文字列の中に変数を埋め込む便利な書き方を学びましょう。テンプレートリテラルを使って変数 age の値を文章の中に埋め込んで表示するプログラムを作りましょう。",
+      "title": "文章の中に「はこ」を入れよう",
+      "description": "「テンプレートリテラル」という書き方を使って、文章の中に「はこ（変数）」の中身を表示してみましょう。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "埋め込み構文",
-          "content": "# バッククォートと${ }\n\nバッククォート( ` )で囲んだ文字列の中で `${変数名}` と書くと、変数の値を埋め込めます。\n\n**コード例：**\n```javascript\nconst age = 20;\nconsole.log(`私は${age}歳です`);\n```"
+          "title": "文章と変数をくっつける",
+          "content": "# バッククォートと ${ }\n\nキーボードの ` という記号（バッククォート）で囲むと、その中で `${Პ}` と入力するだけで、中身を文章に入れられますよ。\n\n**入力するコードのヒント：**\n```javascript\nconst age = 10;\nconsole.log(`私は${age}歳です`);\n```\nこれで「私は10歳です」と表示されます！"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 定数ageを定義\nconst age = 20;\n// 埋め込み出力\nconsole.log(`私は${age}歳です`);",
-      "holeyCode": "// 定数ageを定義\nconst age = ___\n// 埋め込み出力\nconsole.log(`私は${___}歳です`);",
+      "correctCode": "// age というはこに 10 を入れる\nconst age = 10;\n// 文章の中に age の中身を入れる\nconsole.log(`私は${age}歳です`);",
+      "holeyCode": "// age というはこに 10 を入れる\nconst age = ___ ;\n// 文章の中に age の中身を入れる\nconsole.log(`私は${___}歳です`);",
       "correctLines": [
-        "// 定数ageを定義",
-        "const age = 20;",
-        "// 埋め込み出力",
+        "// age というはこに 10 を入れる",
+        "const age = 10;",
+        "// 文章の中に age の中身を入れる",
         "console.log(`私は${age}歳です`);"
       ],
       "lineHints": [
         null,
-        "age = 20; とします。",
+        "const age = 10; と入力しましょう。",
         null,
-        "変数を ${ } で囲んで埋め込みます。"
+        "${ } のなかに、はこの名前 age を入力しましょう。"
       ],
       "candidates": {
         "variables": [
@@ -180,41 +180,41 @@ export const javascriptData = {
           "console.log"
         ],
         "numbers": [
-          "20"
+          "10"
         ]
       },
       "testCases": [
         {
           "input": "",
-          "expected_output": "私は20歳です\n"
+          "expected_output": "私は10歳です\n"
         }
       ]
     },
     {
-      "title": "配列の基本",
-      "description": "配列 colors から 2番目の要素を取り出して表示するプログラムを作りましょう。",
+      "title": "たくさんのデータをまとめる「配列」",
+      "description": "「配列（はいれつ）」を使うと、たくさんのデータを一つの「長い はこ」にまとめて入れられます。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "配列",
-          "content": "# ブラケット[ ]\n\n複数のデータをまとめて管理するには配列を使います。インデックスは0から始まります。\n\n**コード例：**\n```javascript\nconst list = ['A', 'B'];\nconsole.log(list[1]); // 'B' を出力\n```"
+          "title": "データの番号は「0」から！",
+          "content": "# [ ]（しかくい かっこ）を使いましょう\n\n配列の中身を取り出すときは、何番目かを指定します。\nでも気をつけてください！プログラミングでは、**さいしょのデータは「0番」** と数えるルールなのです。\n\n**コード例：**\n```javascript\nconst animals = ['いぬ', 'ねこ'];\nconsole.log(animals[0]); // 「いぬ」が表示されます\nconsole.log(animals[1]); // 「ねこ」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 配列colorsを作成\nconst colors = ['red', 'blue'];\n// 2番目の要素を出力\nconsole.log(colors[1]);",
-      "holeyCode": "// 配列colorsを作成\nconst colors = ['___', '___'];\n// 2番目の要素を出力\nconsole.log(colors[___]);",
+      "correctCode": "// colors という配列を作る\nconst colors = ['あか', 'あお'];\n// 2番目のデータ（番号は1）を出す\nconsole.log(colors[1]);",
+      "holeyCode": "// colors という配列を作る\nconst colors = ['___', '___'];\n// 2番目のデータ（番号は1）を出す\nconsole.log(colors[___]);",
       "correctLines": [
-        "// 配列colorsを作成",
-        "const colors = ['red', 'blue'];",
-        "// 2番目の要素を出力",
+        "// colors という配列を作る",
+        "const colors = ['あか', 'あお'];",
+        "// 2番目のデータ（番号は1）を出す",
         "console.log(colors[1]);"
       ],
       "lineHints": [
         null,
-        "['red', 'blue'] と記述します。",
+        "['あか', 'あお'] と入力しましょう。 [ ] を使うのがルールです。",
         null,
-        "2番目のインデックスは 1 です。"
+        "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"
       ],
       "candidates": {
         "variables": [
@@ -224,8 +224,8 @@ export const javascriptData = {
           "console.log"
         ],
         "strings": [
-          "red",
-          "blue"
+          "あか",
+          "あお"
         ],
         "numbers": [
           "1"
@@ -234,39 +234,39 @@ export const javascriptData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "blue\n"
+          "expected_output": "あお\n"
         }
       ]
     },
     {
-      "title": "if文による条件分岐",
-      "description": "score が 80より大きい場合にのみ合格メッセージを表示するプログラムを作りましょう。",
+      "title": "「もし〜なら」で分ける if文",
+      "description": "点数（score）が 80点より高いときだけ、メッセージを出すようにしてみましょう。",
       "difficulty": "easy",
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "if文",
-          "content": "# 条件式を( )で囲む\n\nJavaScriptのif文は条件を丸括弧 `( )` で囲み、その後に `{ }` で処理を書きます。\n\n**コード例：**\n```javascript\nif (score > 80) {\n    console.log('合格');\n}\n```"
+          "title": "もし〜なら（if）",
+          "content": "# ( ) と { } を使いましょう\n\nJavaScriptでは、`if (条件)` のあとに `{ }`（なみかっこ）を入力して、その中にやりたいことを入力します。\n\n**コード例：**\n```javascript\nif (score > 80) {\n  console.log('すごい！');\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// scoreを定義\nconst score = 100;\n// 80より大きい場合に実行\nif (score > 80) {\n    console.log('満点です！');\n}",
-      "holeyCode": "// scoreを定義\nconst score = ___ ;\n// 80より大きい場合に実行\nif (score ___ 80) {\n    console.log('___');\n}",
+      "correctCode": "// score に 100 を入れる\nconst score = 100;\n// もし 80 より大きかったら\nif (score > 80) {\n    console.log('ごうかく！');\n}",
+      "holeyCode": "// score に 100 を入れる\nconst score = ___ ;\n// もし 80 より大きかったら\nif (score ___ 80) {\n    console.log('___');\n}",
       "correctLines": [
-        "// scoreを定義",
+        "// score に 100 を入れる",
         "const score = 100;",
-        "// 80より大きい場合に実行",
+        "// もし 80 より大きかったら",
         "if (score > 80) {",
-        "    console.log('満点です！');",
+        "    console.log('ごうかく！');",
         "}"
       ],
       "lineHints": [
         null,
-        "score = 100; と代入します。",
+        "const score = 100; と入力しましょう。",
         null,
-        "比較演算子 > を使います。",
-        "console.log('満点です！'); と記述します。",
-        "if文の閉じ括弧です。"
+        "比較するための記号 `>` を使います。",
+        "console.log('ごうかく！'); と入力しましょう。",
+        "さいごに } で閉じるのを忘れないでください。"
       ],
       "candidates": {
         "variables": [
@@ -279,7 +279,7 @@ export const javascriptData = {
           " >"
         ],
         "strings": [
-          "満点です！"
+          "ごうかく！"
         ],
         "numbers": [
           "100"
@@ -288,43 +288,43 @@ export const javascriptData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "満点です！\n"
+          "expected_output": "ごうかく！\n"
         }
       ]
     },
     {
-      "title": "if-else文",
-      "description": "年齢に応じて「大人」か「未成年」かを表示し分けるプログラムを作りましょう。",
+      "title": "ちがう場合は？ if-else文",
+      "description": "「もし〜なら」のあとに、「そうじゃなければ」という別の動きも作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "else文",
-          "content": "# 条件を満たさない場合\n\n条件に当てはまらない時の処理は `else` を使います。\n\n**コード例：**\n```javascript\nif (age >= 20) {\n  console.log('大人');\n} else {\n  console.log('未成年');\n}\n```"
+          "title": "そうじゃなければ（else）",
+          "content": "# else（エルス）の使い方\n\n条件にあてはまらなかったときの動きは `else` を使って入力します。\n\n**コード例：**\n```javascript\nif (age >= 20) {\n  console.log('おとな');\n} else {\n  console.log('こども');\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// ageを定義\nconst age = 18;\n// 条件分岐\nif (age >= 20) {\n    console.log('大人');\n} else {\n    console.log('未成年');\n}",
-      "holeyCode": "// ageを定義\nconst age = ___ ;\n// 条件分岐\nif (age >= 20) {\n    console.log('大人');\n} ___ {\n    console.log('___');\n}",
+      "correctCode": "// age に 10 を入れる\nconst age = 10;\n// 条件で分ける\nif (age >= 20) {\n    console.log('おとな');\n} else {\n    console.log('こども');\n}",
+      "holeyCode": "// age に 10 を入れる\nconst age = ___ ;\n// 条件で分ける\nif (age >= 20) {\n    console.log('おとな');\n} ___ {\n    console.log('___');\n}",
       "correctLines": [
-        "// ageを定義",
-        "const age = 18;",
-        "// 条件分岐",
+        "// age に 10 を入れる",
+        "const age = 10;",
+        "// 条件で分ける",
         "if (age >= 20) {",
-        "    console.log('大人');",
+        "    console.log('おとな');",
         "} else {",
-        "    console.log('未成年');",
+        "    console.log('こども');",
         "}"
       ],
       "lineHints": [
         null,
-        "age = 18; と代入します。",
+        "const age = 10; と入力しましょう。",
         null,
-        "条件式 age >= 20 を確認します。",
-        "大人と表示します。",
-        "else を記述します。",
-        "console.log('未成年'); と出力します。",
-        "elseブロックの閉じ括弧です。"
+        null,
+        null,
+        "} else { と入力しましょう。",
+        "console.log('こども'); と入力しましょう。",
+        null
       ],
       "candidates": {
         "variables": [
@@ -334,10 +334,10 @@ export const javascriptData = {
           "console.log"
         ],
         "strings": [
-          "未成年"
+          "こども"
         ],
         "numbers": [
-          "18"
+          "10"
         ],
         "keywords": [
           "else"
@@ -346,39 +346,39 @@ export const javascriptData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "未成年\n"
+          "expected_output": "こども\n"
         }
       ]
     },
     {
-      "title": "for...of文による繰り返し",
-      "description": "配列 names に入っている名前を一つずつ順番に表示するプログラムを作りましょう。",
+      "title": "順番に取り出す for...of文",
+      "description": "配列に入っているたくさんのデータを、一つずつ順番に表示してみましょう。",
       "difficulty": "easy",
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "for...of文",
-          "content": "# 配列の要素を順に取り出す\n\n配列の中身を一つずつ取り出すには `for...of` が便利です。\n\n**コード例：**\n```javascript\nfor (const name of names) {\n  console.log(name);\n}\n```"
+          "title": "くりかえし（for...of）",
+          "content": "# 配列の中身を全部見ましょう\n\n配列の中身を順番に取り出して何かをしたいときは `for...of` が便利です。\n\n**コード例：**\n```javascript\nfor (const name of names) {\n  console.log(name);\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 配列作成\nconst names = ['Alice', 'Bob'];\n// ループ処理\nfor (const name of names) {\n    console.log(name);\n}",
-      "holeyCode": "// 配列作成\nconst names = ['Alice', 'Bob'];\n// ループ処理\nfor (const ___ of ___) {\n    console.log(___);\n}",
+      "correctCode": "// 配列を作る\nconst names = ['たろう', 'はなこ'];\n// 順番に取り出す\nfor (const name of names) {\n    console.log(name);\n}",
+      "holeyCode": "// 配列を作る\nconst names = ['たろう', 'はなこ'];\n// 順番に取り出す\nfor (const ___ of ___) {\n    console.log(___);\n}",
       "correctLines": [
-        "// 配列作成",
-        "const names = ['Alice', 'Bob'];",
-        "// ループ処理",
+        "// 配列を作る",
+        "const names = ['たろう', 'はなこ'];",
+        "// 順番に取り出す",
         "for (const name of names) {",
         "    console.log(name);",
         "}"
       ],
       "lineHints": [
         null,
-        "配列を定義します。",
+        "['たろう', 'はなこ'] という配列を作ります。",
         null,
-        "for (const name of names) { と記述します。",
-        "取り出した名前（name）を出力します。",
-        "ループの閉じ括弧です。"
+        "for (const name of names) { と入力します。",
+        "取り出した名前（name）を console.log で出力します。",
+        "さいごに } で閉じます。"
       ],
       "candidates": {
         "variables": [
@@ -392,35 +392,35 @@ export const javascriptData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Alice\nBob\n"
+          "expected_output": "たろう\nはなこ\n"
         }
       ]
     },
     {
-      "title": "オブジェクトの基本",
-      "description": "オブジェクト user からプロパティ 'name' の値を取り出して表示するプログラムを作りましょう。",
+      "title": "名前で管理する「オブジェクト」",
+      "description": "「オブジェクト」というものを使うと、名前（キー）を指定してデータを取り出せます。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "オブジェクト",
-          "content": "# 波括弧{ }\n\nキーと値のペアでデータを管理します。ドット記法で値を取り出せます。\n\n**コード例：**\n```javascript\nconst user = { name: 'Alice' };\nconsole.log(user.name);\n```"
+          "title": "ドット（ . ）でつなげましょう",
+          "content": "# { } を使ったデータのまとめ\n\nオブジェクトは、`名前: あたい` のセットを `{ }` で囲んで作ります。取り出すときは `.`（ドット）を使いますよ。\n\n**コード例：**\n```javascript\nconst user = { name: 'たろう' };\nconsole.log(user.name); // 「たろう」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// オブジェクトを作成\nconst user = { name: 'Alice' };\n// 値を表示\nconsole.log(user.name);",
-      "holeyCode": "// オブジェクトを作成\nconst user = { ___: '___' };\n// 値を表示\nconsole.log(user.name);",
+      "correctCode": "// オブジェクトを作る\nconst user = { name: 'たろう' };\n// 名前の中身を出す\nconsole.log(user.name);",
+      "holeyCode": "// オブジェクトを作る\nconst user = { ___: '___' };\n// 名前の中身を出す\nconsole.log(user.name);",
       "correctLines": [
-        "// オブジェクトを作成",
-        "const user = { name: 'Alice' };",
-        "// 値を表示",
+        "// オブジェクトを作る",
+        "const user = { name: 'たろう' };",
+        "// 名前の中身を出す",
         "console.log(user.name);"
       ],
       "lineHints": [
         null,
-        "{ name: 'Alice' } と記述します。",
+        "{ name: 'たろう' } と入力しましょう。",
         null,
-        "ドット記法 .name を使って値を取り出します。"
+        "はこ（user）のあとに `.name` をつけてデータを取り出すことができます。"
       ],
       "candidates": {
         "variables": [
@@ -431,45 +431,45 @@ export const javascriptData = {
         ],
         "strings": [
           "name",
-          "Alice"
+          "たろう"
         ]
       },
       "testCases": [
         {
           "input": "",
-          "expected_output": "Alice\n"
+          "expected_output": "たろう\n"
         }
       ]
     },
     {
-      "title": "関数の定義と呼び出し",
-      "description": "挨拶を表示する関数 greet を定義し、それを呼び出して実行するプログラムを作りましょう。",
+      "title": "自分だけの関数を作ろう",
+      "description": "自分だけの新しい関数（かんすう）を作ってみましょう。",
       "difficulty": "easy",
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "関数",
-          "content": "# functionキーワード\n\n処理をまとめて名前を付け、後で呼び出せるようにします。\n\n**コード例：**\n```javascript\nfunction greet() {\n  console.log('Hello');\n}\n\ngreet();\n```"
+          "title": "関数を定義（ていぎ）する",
+          "content": "# function（ファンクション）\n\n関数を新しく作るときは `function` という言葉を使います。作った関数は、あとで呼び出すと動きますよ！\n\n**コード例：**\n```javascript\nfunction aisatsu() {\n  console.log('おはよう！');\n}\n\naisatsu(); // これで関数が動きます！\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 関数greetを定義\nfunction greet() {\n    console.log('Good morning');\n}\n// 関数を呼び出す\ngreet();",
-      "holeyCode": "// 関数greetを定義\nfunction ___() {\n    console.log('___');\n}\n// 関数を呼び出す\n___();",
+      "correctCode": "// greet という関数を定義する\nfunction greet() {\n    console.log('こんにちは');\n}\n// 関数を動かす\ngreet();",
+      "holeyCode": "// greet という関数を定義する\nfunction ___() {\n    console.log('___');\n}\n// 関数を動かす\n___();",
       "correctLines": [
-        "// 関数greetを定義",
+        "// greet という関数を定義する",
         "function greet() {",
-        "    console.log('Good morning');",
+        "    console.log('こんにちは');",
         "}",
-        "// 関数を呼び出す",
+        "// 関数を動かす",
         "greet();"
       ],
       "lineHints": [
         null,
-        "function greet() { と記述して関数を定義します。",
-        "表示したい文字列を console.log します。",
-        "関数の閉じ括弧です。",
+        "function greet() { と入力して、関数を定義します。",
+        "console.log('こんにちは'); と入力しましょう。",
+        "さいごに } で閉じます。",
         null,
-        "greet(); と書いて関数を実行します。"
+        "greet(); と入力して、関数を実行します。"
       ],
       "candidates": {
         "functions": [
@@ -477,13 +477,13 @@ export const javascriptData = {
           "console.log"
         ],
         "strings": [
-          "Good morning"
+          "こんにちは"
         ]
       },
       "testCases": [
         {
           "input": "",
-          "expected_output": "Good morning\n"
+          "expected_output": "こんにちは\n"
         }
       ]
     }
