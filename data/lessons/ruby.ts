@@ -14,12 +14,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "Ruby（ルビー）とは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# 楽しさを大事にする言葉\n\nRubyは、まつもとゆきひろさんという日本人が作った言葉です。人間が読みやすく、楽しく書けるように設計されています。世界中で大人気の言葉です。"
         },
         {
           "title": "puts を使いましょう",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# メッセージを表示します\n\nRubyでは `puts` と入力したあとに文字を並べるだけで、簡単に画面に表示させることができます。\n\n**コード例：**\n```ruby\nputs 'ヤッホー！'\n```"
         }
       ],

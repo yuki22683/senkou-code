@@ -14,17 +14,17 @@ export const luaData = {
       "tutorialSlides": [
         {
           "title": "Lua（ルア）とは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# ゲーム開発で大人気の言葉\n\nLuaは、とても軽量で動作が速いため、ゲーム制作の現場でよく使われています。プログラムの中の中身を簡単に組み込める「接着剤」のような役割が得意な言葉です。"
         },
         {
           "title": "画面に文字を出すには？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# print（プリント）\n\n画面に文字を出したいときは、`print` 命令を使います。文字は `\" \"`（ダブルクォート）で囲って入力しましょう。"
         },
         {
           "title": "print を使いましょう",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# メッセージを表示します\n\n画面に文字を出したいときは、`print` と入力して、そのあとに `\" \"` で囲んだ文字を続けます。\n\n**コード例：**\n```lua\nprint(\"Hello, Lua!\")\n```"
         }
       ],
@@ -57,12 +57,12 @@ export const luaData = {
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# データを保存する仕組み\n\nプログラムの中で数字や文字を使い回すために、名前をつけて保存する場所を **変数（へんすう）** と呼びます。"
         },
         {
           "title": "local をつけましょう",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# 自分だけの変数\n\nLuaでは、`local` という言葉をつけてから「はこ」を作ります。これは「この場所だけで使います」という合図になります。\n\n**コード例：**\n```lua\nlocal count = 5\nprint(count)\n```"
         }
       ],
@@ -100,12 +100,12 @@ export const luaData = {
       "tutorialSlides": [
         {
           "title": "計算はコンピュータにお任せ",
-          "image": "/illustrations/python/robot_math.png",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 高速な計算処理\n\nコンピュータは人間よりもずっと速く計算できます。プログラミングでは、算数と同じ記号を使って計算の指示を出します。"
         },
         {
           "title": "計算の記号",
-          "image": "/illustrations/python/robot_math.png",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 算数と同じ記号を使います\n\nLuaでも、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\*** : かけ算\n- **/** : わり算"
         }
       ],

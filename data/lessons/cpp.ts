@@ -14,12 +14,12 @@ export const cppData = {
       "tutorialSlides": [
         {
           "title": "C++とは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# パワフルで高速な言葉\n\nC++は、C言語を元にしてさらに便利な機能を追加した言葉です。ゲームエンジンやブラウザなど、とても速い動きが求められるプログラムを作るのに最適です。"
         },
         {
           "title": "C++への入り口",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# std::cout を使いましょう\n\nC++で画面に文字を出したいときは、`std::cout` という命令と `<<` という記号を使います。\n\n**コード例：**\n```cpp\n#include <iostream>\nint main() {\n    std::cout << \"C++最高！\" << std::endl;\n    return 0;\n}\n```\n=> C++最高！\n\n`std::endl` は改行（かいぎょう）を意味します。"
         }
       ],
@@ -45,11 +45,12 @@ export const cppData = {
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# データを保存する場所\n\nプログラムの中で数字や文字に名前をつけて、あとで使いやすくするための仕組みが **変数（へんすう）** です。"
         },
         {
           "title": "数字のラベル int",
+          "image": "/illustrations/common/box.png",
           "content": "# 整数（せいすう）のラベル\n\n数字を入れたいときは、`int`（イント）というラベルを貼ります。\n\n**コード例：**\n```cpp\nint age = 20;\nstd::cout << age << std::endl;\n```\n=> 20"
         }
       ],
@@ -69,11 +70,12 @@ export const cppData = {
       "tutorialSlides": [
         {
           "title": "計算はコンピュータにお任せ",
-          "image": "/illustrations/python/robot_math.png",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 高速な計算処理\n\nコンピュータは人間よりもずっと速く計算できます。プログラミングでは、算数と同じ記号を使って計算の指示を出します。"
         },
         {
           "title": "計算の記号",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 結果をそのまま出せます\n\n`<<` で繋ぐことで、計算した結果をそのまま画面に出すことができます。\n\n**コード例：**\n```cpp\nint cookies = 10;\nint friends = 2;\nstd::cout << cookies / friends << std::endl;\n```\n=> 5"
         }
       ],
@@ -93,12 +95,12 @@ export const cppData = {
       "tutorialSlides": [
         {
           "title": "連結（れんけつ）とは？",
-          "image": "/illustrations/python/fstring.png",
+          "image": "/illustrations/common/fstring.png",
           "content": "# 情報を組み合わせて表示する\n\n文章の途中に、変数（はこ）の中身を流し込んで一つのメッセージにすることを **連結** と呼びます。C++では `<<` を使って情報を繋いでいきます。"
         },
         {
           "title": "<< でつなげましょう",
-          "image": "/illustrations/python/fstring.png",
+          "image": "/illustrations/common/fstring.png",
           "content": "# ストリーム出力\n\n`<<` を何回も使うことで、文字やはこの中身をどんどん並べていくことができます。\n\n**コード例：**\n```cpp\nint hour = 15;\nstd::cout << \"今は \" << hour << \" 時です\" << std::endl;\n```"
         }
       ],
@@ -118,12 +120,12 @@ export const cppData = {
       "tutorialSlides": [
         {
           "title": "動的配列（どうてきはいれつ）とは？",
-          "image": "/illustrations/python/list.png",
+          "image": "/illustrations/common/list.png",
           "content": "# 長さが変わる便利な列\n\nあとから中身を増やしたり減らしたりできる「はこ」の列を **動的配列** と呼びます。C++では `vector` という機能を使ってこれを作ります。"
         },
         {
           "title": "std::vector",
-          "image": "/illustrations/python/list.png",
+          "image": "/illustrations/common/list.png",
           "content": "# 動的な配列\n\nあとからデータを増やしたり減らしたりできる、とても便利な配列です。使い方は普通の配列と同じく、0番から数えます。\n\n**コード例：**\n```cpp\n#include <vector>\nstd::vector<std::string> items = {\"Apple\", \"Orange\"};\nstd::cout << items[0] << std::endl;\n```"
         }
       ],
@@ -143,12 +145,12 @@ export const cppData = {
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# プログラムに判断させる\n\n状況によって動きを変えることを **条件分岐** と呼びます。プログラムに賢い判断をさせてみましょう。"
         },
         {
           "title": "if文",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# ( ) と { } を使いましょう\n\nC++でも、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\n\n**コード例：**\n```cpp\nint temp = 30;\nif (temp > 25) {\n    std::cout << \"暑いですね\" << std::endl;\n}\n```"
         }
       ],
@@ -168,12 +170,12 @@ export const cppData = {
       "tutorialSlides": [
         {
           "title": "それ以外の場合は？",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# else（エルス）の役割\n\n条件に当てはまらなかったときの別のルートを作るのが **else（エルス）** です。「もし〜なら」とセットで使うことで、プログラムのルートを2つに分けることができます。"
         },
                 {
                   "title": "elseブロック",
-                  "image": "/illustrations/python/if.png",
+                  "image": "/illustrations/common/if.png",
                   "content": "# どちらかを選びます\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例 ：**\n```cpp\nint age = 15;\nif (age >= 20) {\n    std::cout << \"大人\" << std::endl;\n} else {\n    std::cout << \"子供\" << std::endl;\n}\n```"
                 }
       ],
@@ -193,12 +195,12 @@ export const cppData = {
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
-          "image": "/illustrations/python/loop.png",
+          "image": "/illustrations/common/loop.png",
           "content": "# 自動で順番に処理する\n\n同じ作業を何度も繰り返すための仕組みが **ループ** です。配列の中身を一つずつ順番に全部チェックしたいときなどに非常に役立ちます。"
         },
         {
           "title": "範囲for文",
-          "image": "/illustrations/python/loop.png",
+          "image": "/illustrations/common/loop.png",
           "content": "# for (変数 : コンテナ)\n\n「はこ（配列）」の中に入っているものを、最初から最後まで順番に取り出す便利なループです。\n\n**コード例：**\n```cpp\nstd::vector<std::string> fruits = {\"Apple\", \"Banana\"};\nfor (std::string f : fruits) {\n    std::cout << f << std::endl;\n}\n```"
         }
       ],
@@ -218,12 +220,12 @@ export const cppData = {
       "tutorialSlides": [
         {
           "title": "マップ（辞書）とは？",
-          "image": "/illustrations/python/dict.png",
+          "image": "/illustrations/common/dict.png",
           "content": "# キーワードで検索できる仕組み\n\n「名前」と「データ」をセットにして保存できるのが **マップ** です。辞書を引くように、キーワードを使って目的のデータをすぐに見つけられます。"
         },
                 {
                   "title": "std::map",
-                  "image": "/illustrations/python/dict.png",
+                  "image": "/illustrations/common/dict.png",
                   "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。辞書のように使うことができ ます。\n\n**コード例：**\n```cpp\n#include <map>\n#include <string>\nstd::map<std::string, std::string> colors;\ncolors[\"red\"] = \"あか\";\nstd::cout << colors[\"red\"] << std::endl;\n```"
                 }
       ],
@@ -243,12 +245,12 @@ export const cppData = {
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",
-          "image": "/illustrations/python/function.png",
+          "image": "/illustrations/common/function.png",
           "content": "# 処理のパッケージ化\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせます。一度作れば名前を呼ぶだけで何度でも実行できる、便利なショートカットのようなものです。"
         },
                 {
                   "title": "手順をまとめる",
-                  "image": "/illustrations/python/function.png",
+                  "image": "/illustrations/common/function.png",
                   "content": "# 関数の定義\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも 動かせます。\n\n**コード例：**\n```cpp\nvoid sayHello() {\n    std::cout << \"ハロー！\" << std::endl;\n}\n\n// mainの中で呼び出し\nsayHello();\n```"
                 }
       ],

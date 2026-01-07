@@ -3,12 +3,12 @@
 import { LANGUAGES } from "@/data/languages";
 import { LanguageCard } from "@/components/home/LanguageCard";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState, Fragment, useMemo } from "react";
+import { useEffect, useState, Fragment, useMemo, Suspense } from "react";
 import HomeWrapper from "@/components/layout/HomeWrapper";
 import RandomAffiliateBanner from "@/components/home/RandomAffiliateBanner";
 import { AmazonAdCard, AmazonAdType } from "@/components/home/AmazonAdCard";
 
-export default function HomePage() {
+function HomePageContent() {
   const searchParams = useSearchParams();
   const [showMessage, setShowMessage] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -29,45 +29,29 @@ export default function HomePage() {
     if (!isMounted) return LANGUAGES.map(lang => ({ type: 'lang', lang }));
     
     const adTypes: AmazonAdType[] = ['book', 'furusato', 'ranking', 'timesale'];
-    // ... (以下同じロジック)
+    
     // Shuffle ad types
     const shuffledAds = [...adTypes].sort(() => Math.random() - 0.5);
     
     const totalLanguages = LANGUAGES.length;
     const totalAds = shuffledAds.length;
     const totalItems = totalLanguages + totalAds;
-    const desktopColumns = 3;
-    const mobileColumns = 2;
-    // We group by a multiple of both 2 and 3 to ensure ads line up with row ends on both mobile and desktop
-    const itemsPerGroup = 6; 
-    const totalGroups = Math.ceil(totalItems / itemsPerGroup);
     
-    const mixedItems: any[] = [];
-    let langIndex = 0;
-    let adIndex = 0;
-    
-    // Distribute ads across groups
-    // Since we have 4 ads and usually ~3-4 groups, we'll put at least one in each group
-    for (let i = 0; i < totalItems; i++) {
-      // Logic to sprinkle ads: every 5th item approx, or random within group
-      // But user wants "at most one ad per row". 
-      // In 6-item group (2 rows desktop, 3 rows mobile):
-      // We'll just keep the original logic but ensure it works with the new structure
-    }
-
-    // Re-implementing simplified sprinkle logic for the mixed grid
     const result: any[] = [];
     const adPositions = new Set<number>();
-    while (adPositions.size < totalAds) {
+    let attempts = 0;
+    while (adPositions.size < totalAds && attempts < 100) {
       const pos = Math.floor(Math.random() * totalItems);
-      // Ensure no more than one ad per 3-item block (approx row)
       let tooClose = false;
       for (const existingPos of Array.from(adPositions)) {
         if (Math.abs(Math.floor(existingPos / 3) - Math.floor(pos / 3)) < 1) tooClose = true;
       }
       if (!tooClose) adPositions.add(pos);
+      attempts++;
     }
 
+    let langIndex = 0;
+    let adIndex = 0;
     for (let i = 0; i < totalItems; i++) {
       if (adPositions.has(i) && adIndex < totalAds) {
         result.push({ type: 'ad', adType: shuffledAds[adIndex++] });
@@ -87,7 +71,7 @@ export default function HomePage() {
       grouped.push(items.slice(i, i + 6));
     }
     return grouped;
-  }, [items, isMounted]);
+  }, [items]);
 
   return (
     <div className="container mx-auto px-2 sm:px-4 py-6 sm:py-12">
@@ -124,7 +108,6 @@ export default function HomePage() {
                   ))}
                 </div>
                 
-                {/* Affiliate Banners Row (except after the last group) */}
                 {groupIndex < rowGroups.length - 1 && (
                   <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 overflow-hidden">
                     <RandomAffiliateBanner 
@@ -143,5 +126,13 @@ export default function HomePage() {
         </HomeWrapper>
       </div>
     </div>
+  );
+}
+
+export default function HomePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomePageContent />
+    </Suspense>
   );
 }

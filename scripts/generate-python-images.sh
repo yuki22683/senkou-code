@@ -4,7 +4,7 @@
 # フラットデザイン、パステルカラー、ミニマルで親しみやすいスタイル
 
 COOKIE="eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..RS0gLBwTIBpLt_bd.XzZ9Z5m6_gqNp4jO_oTE9PGBuJt8Z6442d_gVudHeEbAHBS1WRYYB0FkbVolk0Qa16B6ARc4lVPDaa-UVimRP2YgP07PpvFNC3LaOjRv9F_bEgnOP_an_oCbN3zYLU3vl9TC2--ZnGIuG8PSL-x09Tfy_3CRsj6QwqaLwfv_-Tg4M37KUn7a49dtv2KpzrF7z14ZKcS-aXmHZ9cI_dLVr4ZYmKlvkoA9TSqvheIGTmGT9DDM8C-pWMttUQpBCk-m0g-BOaMjLhY29lqk0kYEdCAgxMRi8_Tf_t2O1bvStRObaztj1KRfcJY7t-IekM1vgi5nDX0uqGivmuQKoiRvlgb4-QOBhAzOuMZynHGK2ojQ3BXUsGBeCTG7RqA74jb74CHF4e0WDHJ_hn5akmlVeOmMe1XHiAVGZdGdw6U_2F0PP5YXB6e80kb4WM9cqQfCTeDooMjaBrClH4eVeWmDSAMIrwsX_HPLS30VHo9N7vjtfaHxDdxIKPPGNQ9nu04KLiE3Ox49u82jXEK_Gggw9_7Zi-MqXH3oJ8mEcfIsWVftX3zcHYSDirqVx7GySOX5r8UJ06jVx1e5czyiYBQjDXpZyKNh4G12b4A8spiecd3QVHFNh_iHHV3_of_jTOMlJ5VbhjxKvevxzAt9tBWCIDxHrfznjp_YhLKHCyLa-3uriL1ZlaZpZSZkqLRzqrBtP9Bz-aMMxVCsGeGF1e8mfioA_jCLV62bKboyiq8ZyO8M-B2qHL-5GGjSI8yGd-b6jB1yROnh6J79SHHTIgqn-Up-mF_jst9txw4L0otc1IpgfhI1s_yDyc9e2NeT2pKA8td5ZRHqJQuD3z2GjtxIYdgH7NNaN28cgljSvjA4sewqR-VfGrWfPM43FARsgBvMTRRT8nI_OHGnt9ECBqKoXe5sZOfIRUpXkhworySuNHJBK4bCaALpsmizWf4OZZwi42nR_ESuA214kaD8Rgw.f9NbcLAdI2Gr6qD_uFMGBg"
-OUTPUT_DIR="public/illustrations/python"
+OUTPUT_DIR="public/illustrations/common"
 STYLE="Flat design, minimalist, pastel colors, friendly and modern illustration style for elementary school students, simple shapes, clean lines, soft gradients, playful but professional"
 
 # 出力ディレクトリを作成
@@ -31,16 +31,6 @@ imagefx --cookie "$COOKIE" \
   --dir "$OUTPUT_DIR" \
   --ratio IMAGE_ASPECT_RATIO_SQUARE
 mv "$OUTPUT_DIR"/*.png "$OUTPUT_DIR/monitor.png" 2>/dev/null || echo "⚠️  Failed to generate monitor.png"
-sleep 3
-
-# 3. magic.png - print関数/魔法
-echo "📸 Generating magic.png..."
-imagefx --cookie "$COOKIE" \
-  --prompt "A magical wand casting sparkles and stars, representing programming magic and print function. $STYLE. Soft pink and purple gradient colors. White background." \
-  --count 1 \
-  --dir "$OUTPUT_DIR" \
-  --ratio IMAGE_ASPECT_RATIO_SQUARE
-mv "$OUTPUT_DIR"/*.png "$OUTPUT_DIR/magic.png" 2>/dev/null || echo "⚠️  Failed to generate magic.png"
 sleep 3
 
 # 4. box.png - 変数/はこ

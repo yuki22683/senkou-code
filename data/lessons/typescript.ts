@@ -14,17 +14,17 @@ export const typescriptData = {
       "tutorialSlides": [
         {
           "title": "TypeScript（タイプスクリプト）とは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# 安心・安全なプログラミング\n\nTypeScriptは、JavaScriptという言葉に「型（かた）」というルールを追加した言葉です。あらかじめデータの種類を決めておくことで、間違いを未然に防ぐことができます。"
         },
         {
           "title": "ラベル（型）とは？",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# はこに中身を教えてあげましょう\n\nTypeScriptでは、はこ（変数）を作るときに「このはこには文字を入れます！」「数字を入れます！」と先に決めることができます。これを **ラベル（型）** と呼びます。"
         },
         {
           "title": "ラベルの貼りかた",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# :（コロン）のあとに種類を書きます\n\nはこ（変数）の名前のあとに、`:` をつけてから種類を書きます。\n\n- **string**（ストリング）: 文字のラベル\n- **number**（ナンバー）: 数字のラベル\n\n**コード例：**\n```typescript\nconst animal: string = 'いぬ';\nconsole.log(animal);\n```\n=> いぬ"
         }
       ],
@@ -70,7 +70,7 @@ export const typescriptData = {
       "tutorialSlides": [
         {
           "title": "数値型（すうちがた）とは？",
-          "image": "/illustrations/python/robot_math.png",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 計算するためのラベル\n\n「10」や「3.14」のような数字を扱うときに使うのが **number** ラベルです。計算をするときは必ずこのラベルを使います。"
         },
         {
@@ -125,12 +125,12 @@ export const typescriptData = {
       "tutorialSlides": [
         {
           "title": "文章と変数を組み合わせる",
-          "image": "/illustrations/python/fstring.png",
+          "image": "/illustrations/common/fstring.png",
           "content": "# テンプレートリテラル\n\n文章の途中に、変数（はこ）の中身を入れたいときに使うのが **テンプレートリテラル** です。ただの文章よりも、状況に合わせて中身が変わる便利な文章を作れます。"
         },
                 {
                   "title": "文章と変数をくっつける",
-                  "image": "/illustrations/python/fstring.png",
+                  "image": "/illustrations/common/fstring.png",
                   "content": "# JavaScriptと同じ書き方ができます\n\n` `（バッククォート）で囲んだ文章の中で `${ }` を使う方法は、TypeScriptでも同じです。\n\n**コード例：**\n```typescript\nconst food: string = 'カレー';\nconsole.log(`今日の夕飯は${food}です`);\n```\n=> 今日の夕飯はカレーです"
                 }
       ],
@@ -175,12 +175,12 @@ export const typescriptData = {
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）とは？",
-          "image": "/illustrations/python/list.png",
+          "image": "/illustrations/common/list.png",
           "content": "# データの行列\n\nたくさんのデータを順番に並べておきたいときに使うのが **配列（はいれつ）** です。例えば、クラスの全員の名前や、買い物リストなどを一つの変数にまとめて管理できます。"
         },
         {
           "title": "ラベルのあとに [] をつけましょう",
-          "image": "/illustrations/python/list.png",
+          "image": "/illustrations/common/list.png",
           "content": "# string[] や number[]\n\n「文字のラベルがついたデータの列」を作りたいときは、`string[]` のようにラベルの名まえのあとに `[]` をつけます。\n\n**コード例：**\n```typescript\nconst items: string[] = ['おにぎり', 'パン'];\nconsole.log(items[0]);\n```"
         }
       ],
@@ -228,12 +228,12 @@ export const typescriptData = {
       "tutorialSlides": [
         {
           "title": "論理型（ろんりがた）とは？",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# スイッチのようなラベル\n\n「はい（正しい）」か「いいえ（間違い）」のどちらかしかない状態を扱うのが **boolean（ブーリアン）** です。テストの合図や、ゲームのON/OFFなどに使われます。"
         },
         {
           "title": "正しいか、間違いか",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# boolean（ブーリアン）型\n\n`true`（正しい）か `false`（間違い）の、どちらかだけを入れられるラベルです。\n\n**コード例：**\n```typescript\nconst isOpen: boolean = false;\nif (!isOpen) {\n    console.log('閉まっています');\n}\n```"
         }
       ],
@@ -280,12 +280,12 @@ export const typescriptData = {
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# もし〜なら、の仕組み\n\n「雨が降ったら傘をさす」「晴れたら外で遊ぶ」のように、状況によって動きを変えることを **条件分岐（じょうけんぶんき）** と呼びます。プログラムに判断をさせてみましょう。"
         },
         {
           "title": "もし〜なら、そうでなければ",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# 条件で分ける\n\nJavaScriptと同じように、`if` と `else` を使って動きを分けることができます。\n\n**コード例：**\n```typescript\nconst hour: number = 15;\nif (hour < 12) {\n    console.log('午前中');\n} else {\n    console.log('お昼すぎ');\n}\n```"
         }
       ],
@@ -343,12 +343,12 @@ export const typescriptData = {
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
-          "image": "/illustrations/python/loop.png",
+          "image": "/illustrations/common/loop.png",
           "content": "# 同じ作業を自動化！\n\n同じことを何回も繰り返すのは大変ですよね。プログラミングでは **ループ** という仕組みを使って、コンピュータに「全部やっておいて！」とお願いできます。"
         },
         {
           "title": "種類を予想してくれる機能",
-          "image": "/illustrations/python/loop.png",
+          "image": "/illustrations/common/loop.png",
           "content": "# 型の予想（すいろん）\n\nTypeScriptはとても賢いので、配列に貼られたラベルを見て、中から取り出したデータの種類も自動で「きっとこれです！」と予想してくれるのです。\n\n**コード例：**\n```typescript\nconst animals: string[] = ['いぬ', 'ねこ'];\nfor (const animal of animals) {\n    console.log(animal);\n}\n```"
         }
       ],
@@ -396,12 +396,12 @@ export const typescriptData = {
       "tutorialSlides": [
         {
           "title": "オリジナルの型とは？",
-          "image": "/illustrations/python/dict.png",
+          "image": "/illustrations/common/dict.png",
           "content": "# 自分だけのルールを作る\n\n「名前（文字）」と「年齢（数字）」のように、複数の情報をセットにした自分だけの新しいラベルを作ることができます。これが **カスタム型** です。"
         },
         {
           "title": "ラベルの組み合わせ（Type Alias）",
-          "image": "/illustrations/python/dict.png",
+          "image": "/illustrations/common/dict.png",
           "content": "# type（タイプ）キーワード\n\n`type` という言葉を使って、新しいラベルの名前を決められます。\n\n**コード例：**\n```typescript\ntype Pet = { type: string; name: string };\nconst myPet: Pet = { type: 'いぬ', name: 'ポチ' };\nconsole.log(myPet.name);\n```"
         }
       ],
@@ -452,12 +452,12 @@ export const typescriptData = {
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",
-          "image": "/illustrations/python/function.png",
+          "image": "/illustrations/common/function.png",
           "content": "# オリジナルの命令\n\nよく使う手順をひとまとめにして、自分だけの新しい命令を作ることができます。一度作っておけば、いつでも呼び出して使えます。"
         },
         {
           "title": "入り口のラベル",
-          "image": "/illustrations/python/function.png",
+          "image": "/illustrations/common/function.png",
           "content": "# 引数（ひきすう）にラベルを貼ります\n\n関数が受け取るデータのことを **引数（ひきすう）** と呼びます。ここにもラベルを貼ることで、間違ったデータを渡さなくなるので安心です！\n\n**コード例：**\n```typescript\nfunction sayHello(msg: string) {\n    console.log(`メッセージ: ${msg}`);\n}\nsayHello('ヤッホー');\n```"
         }
       ],
@@ -504,7 +504,7 @@ export const typescriptData = {
         },
         {
           "title": "void（ボイド）ラベル",
-          "image": "/illustrations/python/function.png",
+          "image": "/illustrations/common/function.png",
           "content": "# 何も返さないときは void です\n\n結果などを「返さない」関数には、`void`（ボイド）というラベルを貼ります。これは「空っぽ」という意味です。\n\n**コード例：**\n```typescript\n function logger(text: string): void {\n    console.log(`LOG: ${text}`);\n}\nlogger('処理開始');\n```"
         }
       ],

@@ -14,12 +14,12 @@ export const javaData = {
       "tutorialSlides": [
         {
           "title": "Java（ジャバ）とは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# 世界中で使われる「きっちりした」言葉\n\nJavaは、銀行のシステムやスマートフォンのアプリなど、間違いが許されない大切な場所でたくさん使われています。ルールが少し厳しいですが、その分、安全なプログラムを作ることができます。"
         },
         {
           "title": "Javaを動かす「決まり文句」",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# おまじないの言葉\n\nJavaでプログラムを入力するときは、必ず入力しなければいけない「決まり文句」があります。\n\n```java\npublic class Main {\n    public static void main(String[] args) {\n        // ここにやりたいことを入力します\n    }\n}\n\n```\n\n画面に文字を出しましょうときは、`System.out.println()` という名前の関数（メソッド）を使います。例えば：\n\n```java\nSystem.out.println(\"Javaプログラミング！\");\n```\n=> Javaプログラミング！"
         }
       ],
@@ -65,7 +65,7 @@ export const javaData = {
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# データを保存する仕組み\n\nプログラムの中では、数字や文字をしまっておく「はこ」を作ることができます。これを **変数（へんすう）** と呼びます。中身が何かわかるように名前をつけてあげましょう！"
         },
         {
@@ -120,7 +120,7 @@ export const javaData = {
       "tutorialSlides": [
         {
           "title": "数値型（すうちがた）とは？",
-          "image": "/illustrations/python/robot_math.png",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 数字を扱うためのラベル\n\n整数（せいすう）を扱うときに使うのが **int** ラベルです。足し算や引き算などの計算をしたいときは、このラベルを使って「はこ」を作ります。"
         },
         {
@@ -181,12 +181,12 @@ export const javaData = {
       "tutorialSlides": [
         {
           "title": "連結（れんけつ）とは？",
-          "image": "/illustrations/python/fstring.png",
+          "image": "/illustrations/common/fstring.png",
           "content": "# 複数の情報を合体させる\n\n文章の途中に、変数（はこ）の中身を流し込んで一つのメッセージにすることを **連結** と呼びます。状況に合わせて変わる便利な文章を作れます。"
         },
         {
           "title": "プラスでつなげましょう",
-          "image": "/illustrations/python/fstring.png",
+          "image": "/illustrations/common/fstring.png",
           "content": "# + 演算子\n\nJavaでは `+` を使うと、文字と数字をガチャンとくっつけて一つの文章にできます。\n\n**コード例：**\n```java\nString weather = \"はれ\";\nSystem.out.println(\"明日は\" + weather + \"です\");\n```"
         }
       ],
@@ -236,12 +236,12 @@ export const javaData = {
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）とは？",
-          "image": "/illustrations/python/list.png",
+          "image": "/illustrations/common/list.png",
           "content": "# データの行列\n\nたくさんのデータを順番に並べておきたいときに使うのが **配列** です。例えば、クラスの全員の名前や、買い物リストなどを一つの変数にまとめて管理できます。"
         },
         {
           "title": "データの番号は 0 から！",
-          "image": "/illustrations/python/list.png",
+          "image": "/illustrations/common/list.png",
           "content": "# { } を使って作りましょう\n\n配列の中身を取り出すときは、何番目かを指定します。さいしょのデータは **「0番」** から数えるのがルールです。\n\n**コード例：**\n```java\nString[] items = {\"おにぎり\", \"パン\"};\nSystem.out.println(items[0]); // \"おにぎり\" が表示されます\n```"
         }
       ],
@@ -295,12 +295,12 @@ export const javaData = {
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# プログラムに判断をさせる\n\n「晴れたら外で遊ぶ」「雨なら家で本を読む」のように、状況によって動きを変えることを **条件分岐** と呼びます。プログラムに賢い判断をさせてみましょう。"
         },
         {
           "title": "もし〜なら（if）",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# ( ) と { } を使いましょう\n\nJavaでは、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\n\n**コード例：**\n```java\nint price = 1200;\nif (price > 1000) {\n    System.out.println(\"ちょっと高いかも？\");\n}\n```"
         }
       ],
@@ -356,12 +356,12 @@ export const javaData = {
       "tutorialSlides": [
         {
           "title": "それ以外の場合は？",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# else（エルス）の役割\n\n「もし〜なら」に当てはまらなかったときの動きを作るのが **else（エルス）** です。「合格でなければ不合格と出す」のように、プログラムのルートを2つに分けることができます。"
         },
         {
           "title": "そうじゃなければ（else）",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# 2つのルート\n\n条件にあてはまらなかったときの動きは `else` を使って入力します。\n\n**コード例：**\n```java\nint hour = 15;\nif (hour < 12) {\n    System.out.println(\"午前中\");\n} else {\n    System.out.println(\"お昼すぎ\");\n}\n```"
         }
       ],
@@ -419,12 +419,12 @@ export const javaData = {
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
-          "image": "/illustrations/python/loop.png",
+          "image": "/illustrations/common/loop.png",
           "content": "# 自動で順番に処理する\n\n同じ作業を何度も繰り返すための仕組みが **ループ** です。配列の中身を一つずつ順番に全部チェックしたいときなどに非常に役立ちます。"
         },
         {
           "title": "くりかえし（拡張for）",
-          "image": "/illustrations/python/loop.png",
+          "image": "/illustrations/common/loop.png",
           "content": "# for (型 変数 : 配列)\n\n配列の中身を順番に取り出して何かをしたいときに使います。 `:`（コロン）を使うのがJavaの面白いところです。\n\n**コード例：**\n```java\nString[] names = {\"たろう\", \"はなこ\"};\nfor (String name : names) {\n    System.out.println(name);\n}\n```"
         }
       ],
@@ -475,12 +475,12 @@ export const javaData = {
       "tutorialSlides": [
         {
           "title": "マップ（辞書）とは？",
-          "image": "/illustrations/python/dict.png",
+          "image": "/illustrations/common/dict.png",
           "content": "# キーワードで検索できる仕組み\n\n「名前」と「電話番号」のように、関連する2つの情報をセットにして保存できるのが **マップ** です。キーワードを使って目的のデータをすぐに見つけられます。"
         },
         {
           "title": "HashMap（ハッシュマップ）",
-          "image": "/illustrations/python/dict.png",
+          "image": "/illustrations/common/dict.png",
           "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。使うときは、さいしょに `import`（インポート）という準備が必要です。\n\n**コード例：**\n```java\nimport java.util.HashMap;\n\nHashMap<String, String> items = new HashMap<>();\nitems.put(\"apple\", \"red\");\nSystem.out.println(items.get(\"apple\"));\n```"
         }
       ],
@@ -537,12 +537,12 @@ export const javaData = {
       "tutorialSlides": [
         {
           "title": "メソッド（関数）とは？",
-          "image": "/illustrations/python/function.png",
+          "image": "/illustrations/common/function.png",
           "content": "# 処理のパッケージ化\n\nやりたいことをひとまとめにして、名前をつけたものを **メソッド** と呼びます。一度作っておけば、どこからでも呼び出せる便利なショートカットのようなものです。"
         },
         {
           "title": "関数（メソッド）を定義する",
-          "image": "/illustrations/python/function.png",
+          "image": "/illustrations/common/function.png",
           "content": "# メソッドの定義\n\nやりたいことをひとまとめにして、名前を付けることができます。Javaでは `public static void 名前() { ... }` のように入力します。\n\n**コード例：**\n```java\npublic static void sayHello() {\n    System.out.println(\"ヤッホー！\");\n}\n\nsayHello();\n```"
         }
       ],

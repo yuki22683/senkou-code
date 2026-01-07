@@ -14,17 +14,17 @@ export const sqlData = {
       "tutorialSlides": [
         {
           "title": "SQL（エスキューエル）とは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# データの倉庫から取り出す言葉\n\nSQLは、データベースという「情報の倉庫」に対して、「このデータをください！」と命令するための言葉です。Webアプリやスマホアプリの裏側で、情報を探すときに必ず使われます。"
         },
         {
           "title": "ほしいデータを選ぶ SELECT",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# SELECT（セレクト）\n\n「これを選んでください！」とお願いするときは `SELECT` と入力します。ただの文字を表示させたいときもこれを使います。\n\n```sql\nSELECT '表示したい文字';\n```"
         },
         {
           "title": "やってみましょう！",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# 目標\n\n`SELECT` を使って `'Hello, World!'` と表示させてみましょう。さいごに `;`（セミコロン）を入力するのがルールです。\n\n**入力するコードのヒント：**\n```sql\nSELECT 'Hello, World!';\n```"
         }
       ],

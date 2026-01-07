@@ -14,12 +14,12 @@ export const rustData = {
       "tutorialSlides": [
         {
           "title": "Rust（ラスト）とは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# 安全で高速な最新の言葉\n\nRustは、メモリの管理がとても厳格で、間違いを未然に防ぐのが非常に得意なプログラミング言語です。世界中のプログラマーから「最も愛されている言語」の一つとして選ばれています。"
         },
         {
           "title": "Rustの「おまじない」",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# ! がつく関数\n\n画面に文字を出したいときは、`println!()` を使います。さいごに `!` がつくのがRustの面白い特徴です。プログラムは `fn main() { ... }` の中に書いていきます。\n\n**コード例：**\n```rust\nfn main() {\n    println!(\"ヤッホー！\");\n}\n```"
         }
       ],

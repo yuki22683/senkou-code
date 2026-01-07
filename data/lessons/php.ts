@@ -14,12 +14,12 @@ export const phpData = {
       "tutorialSlides": [
         {
           "title": "PHP（ピーエイチピー）とは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# Webサイトを裏側で動かす言葉\n\nPHPは、Webサイトの「裏側」で活躍するプログラミング言語です。掲示板やSNSなど、中身が書き換わる動的なWebサイトを作るのに欠かせません。"
         },
         {
           "title": "PHPの「おまじない」",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# <?php ... ?>\n\nPHPのプログラムを入力するときは、`<?php` と `?>` の間に命令を入力するのがルールです。表示には `echo` を使います。\n\n**コード例：**\n```php\n<?php\n  echo \"ヤッホー\";\n?>\n```"
         }
       ],
@@ -59,12 +59,12 @@ export const phpData = {
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# データを保存する場所\n\nプログラムの中で数字や文字に名前をつけて、あとで使いやすくするための仕組みが **変数（へんすう）** です。"
         },
         {
           "title": "$ から始めます",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# $記号\n\nPHPでは、はこ（変数）の名前の前に必ず `$` をつける決まりがあります。\n\n**コード例：**\n```php\n$price = 100;\necho $price;\n```"
         }
       ],
@@ -106,11 +106,12 @@ export const phpData = {
       "tutorialSlides": [
         {
           "title": "計算はコンピュータにお任せ",
-          "image": "/illustrations/python/robot_math.png",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 高速な計算処理\n\nコンピュータは人間よりもずっと速く計算できます。プログラミングでは、算数と同じ記号を使って計算の指示を出します。"
         },
         {
           "title": "計算の記号",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 算数と同じ記号を使います\n\nPHPでも、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\*** : かけ算\n- **/** : わり算\n\n**コード例：**\n```php\n$a = 10;\n$b = 5;\necho $a - $b; // 5 が表示されます\n```"
         }
       ],
@@ -151,11 +152,12 @@ export const phpData = {
       "tutorialSlides": [
         {
           "title": "変数展開（へんすうてんかい）とは？",
-          "image": "/illustrations/python/fstring.png",
+          "image": "/illustrations/common/fstring.png",
           "content": "# 文章の中に変数を入れる\n\n文章の途中に、変数（はこ）の中身を合体させたいときに使うのが **変数展開（へんすうてんかい）** です。PHPでは `\" \"`（ダブルクォート）を使います。"
         },
         {
           "title": "文字列の中に入れるだけ",
+          "image": "/illustrations/common/fstring.png",
           "content": "# $ 記号\n\n`\" \"` で囲んだ文章の中に `$year` と入力するだけで、その中身を文章に入れられます。\n\n**コード例：**\n```php\n$weather = \"はれ\";\necho \"明日は $weather です\";\n```"
         }
       ],
@@ -194,11 +196,12 @@ export const phpData = {
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）とは？",
-          "image": "/illustrations/python/list.png",
+          "image": "/illustrations/common/list.png",
           "content": "# データの行列\n\nたくさんのデータを順番に並べておきたいときに使うのが **配列（はいれつ）** です。順番に 0, 1, 2... と番号をつけて管理します。"
         },
         {
           "title": "データの番号は 0 から！",
+          "image": "/illustrations/common/list.png",
           "content": "# [ ]（しかくい かっこ）を使いましょう\n\n配列の中身を取り出すときは、何番目かを指定します。さいしょのデータは **「0番」** から数えるのがルールです。\n\n**コード例：**\n```php\n$items = ['おにぎり', 'パン'];\necho $items[0]; // 「おにぎり」が表示されます\n```"
         }
       ],
@@ -237,11 +240,12 @@ export const phpData = {
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# プログラムに判断させる\n\n状況によって動きを変えることを **条件分岐** と呼びます。プログラムに賢い判断をさせてみましょう。"
         },
         {
           "title": "if文",
+          "image": "/illustrations/common/if.png",
           "content": "# ( ) と { } を使いましょう\n\nPHPでは、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\n\n**コード例：**\n```php\nif ($score > 80) {\n    echo \"すごい！\";\n}\n```"
         }
       ],
@@ -284,12 +288,12 @@ export const phpData = {
       "tutorialSlides": [
         {
           "title": "それ以外の場合は？",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# else（エルス）の役割\n\n条件に当てはまらなかったときの別のルートを作るのが **else（エルス）** です。「もし〜なら」とセットで使うことで、プログラムのルートを2つに分けることができます。"
         },
         {
           "title": "elseブロック",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```php\nif ($price < 1000) {\n    echo \"安い\";\n} else {\n    echo \"高い\";\n}\n```"
         }
       ],
@@ -336,11 +340,12 @@ export const phpData = {
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
-          "image": "/illustrations/python/loop.png",
+          "image": "/illustrations/common/loop.png",
           "content": "# 自動で順番に処理する\n\n同じ作業を何度も繰り返すための仕組みが **ループ** です。配列の中身を一つずつ順番に全部チェックしたいときなどに非常に役立ちます。"
         },
         {
           "title": "foreachループ",
+          "image": "/illustrations/common/loop.png",
           "content": "# as を使いましょう\n\n`foreach ( $配列 as $ラベル )` と入力すると、中身を一つずつ取り出して処理できます。PHPで一番よく使われるループです。\n\n**コード例：**\n```php\n$members = ['たろう', 'はなこ'];\nforeach ($members as $member) {\n    echo $member;\n}\n```"
         }
       ],
@@ -383,11 +388,12 @@ export const phpData = {
       "tutorialSlides": [
         {
           "title": "辞書（連想配列）とは？",
-          "image": "/illustrations/python/dict.png",
+          "image": "/illustrations/common/dict.png",
           "content": "# キーワードで検索できる仕組み\n\n「名前」と「データ」をセットにして保存できるのが **連想配列** です。辞書を引くように、キーワード（キー）を使って目的のデータをすぐに見つけられます。"
         },
         {
           "title": "連想配列（れんそうはいれつ）",
+          "image": "/illustrations/common/dict.png",
           "content": "# キー => あたい\n\n「名前」と「データ」をセットにして保存できます。矢印のような記号 `=>` を使うのがPHPの特徴です。\n\n**コード例：**\n```php\n$book = ['title' => 'PHP入門'];\necho $book['title']; // 「PHP入門」が表示されます\n```"
         }
       ],
@@ -426,12 +432,12 @@ export const phpData = {
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",
-          "image": "/illustrations/python/function.png",
+          "image": "/illustrations/common/function.png",
           "content": "# 処理のパッケージ化\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせます。一度作れば名前を呼ぶだけで何度でも実行できる、便利なショートカットのようなものです。"
         },
                 {
                   "title": "手順をまとめる",
-                  "image": "/illustrations/python/function.png",
+                  "image": "/illustrations/common/function.png",
                   "content": "# 関数の定義\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも 動かせます。\n\n**コード例：**\n```php\nfunction sayHello() {\n    echo \"ヤッホー！\";\n}\n\nsayHello(); // 呼び出し\n```"
                 }
       ],

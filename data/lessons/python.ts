@@ -14,17 +14,17 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "Python（パイソン）とは？",
-          "image": "/illustrations/python/snake.png",
+          "image": "/illustrations/common/snake.png",
           "content": "# コンピュータとお話ししましょう\n\nPython（パイソン）は、世界中で使われている「プログラミング言語」のひとつです。人間が入力した言葉を、コンピュータにわかるように伝えてくれます。"
         },
         {
           "title": "画面に文字を出すとは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# 出力（しゅつりょく）\n\nコンピュータに何かを教えたり、結果を見たりするために、画面に文字を出すことがあります。これを「出力（しゅつりょく）」と呼びます。"
         },
         {
           "title": "文字を出してくれる関数 print",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# print（プリント）のまほう\n\n画面に何かを表示（ひょうじ）したいときは、`print()` という名前の関数（かんすう）を使います。\n\n```python\nprint(出したいもの)\n```\n\n例えば、こんなふうに書きます。\n```python\nprint('Python最高！')\n```\n=> Python最高！\n\n文字を出したいときは `' '`（引用符：いんようふ）で囲むのがルールです。"
         }
       ],
@@ -62,12 +62,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# データを保存する「はこ」\n\nプログラムの中では、数字や文字をしまっておく「はこ」を作ることができます。これを **変数（へんすう）** と呼びます。"
         },
         {
           "title": "はこに中身を入れる（代入）",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# =（イコール）の使い方\n\n算数では「同じ」という意味の `=` ですが、プログラミングでは **「右のものを左のはこに入れる」** という意味になります。\n\n```python\nanimal = 'いぬ'\nprint(animal)\n```\n=> いぬ\n\nこれだけで、`animal` という名前のはこに `'いぬ'` がしまわれ、画面に表示されました！"
         }
       ],
@@ -112,12 +112,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "算数とプログラミング",
-          "image": "/illustrations/python/robot_math.png",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 計算はコンピュータの得意技\n\nコンピュータの一番の得意なことは「正確で速い計算」です。複雑な計算も、プログラミングで指示を出せば一瞬で解いてくれます。"
         },
         {
           "title": "計算の記号",
-          "image": "/illustrations/python/robot_math.png",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 四則演算（しそくえんざん）\n\nPythonでは、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算\n\n例えば、わり算はこんな感じです。\n```python\ncookies = 10\nfriends = 2\nprint(cookies / friends)\n```\n=> 5.0"
         }
       ],
@@ -171,12 +171,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "f-string（エフストリング）とは？",
-          "image": "/illustrations/python/fstring.png",
+          "image": "/illustrations/common/fstring.png",
           "content": "# 文章と変数を組み合わせる\n\n文章の途中に、変数（はこ）の中身を入れたいときに使うのが **f-string** です。ただの文章よりも、状況に合わせて中身が変わる便利な文章を作れます。"
         },
         {
           "title": "f-string の書き方",
-          "image": "/illustrations/python/fstring.png",
+          "image": "/illustrations/common/fstring.png",
           "content": "# f 記号と { }\n\n文字のまえに `f` をつけて、`{ }`（ちゅうかっこ）の中に「はこ」の名前を入力すると、その中身を文章に入れられます。\n\n```python\nfood = 'カレー'\nprint(f\"今日の夕飯は{food}です\")\n```\n=> 今日の夕飯はカレーです\n\nこれで「今日の夕飯はカレーです」と表示されます！"
         }
       ],
@@ -221,12 +221,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "リストとは？",
-          "image": "/illustrations/python/list.png",
+          "image": "/illustrations/common/list.png",
           "content": "# データの行列\n\nたくさんのデータを順番に並べておきたいときに使うのが **リスト** です。例えば、買い物リストなどを一つの変数にまとめて管理できます。"
         },
         {
           "title": "リストの番号は「0」から！",
-          "image": "/illustrations/python/list.png",
+          "image": "/illustrations/common/list.png",
           "content": "# 番号で指定しましょう\n\nリストの中身を取り出すときは、何番目かを指定します。プログラミングでは、**さいしょのデータは「0番」** と数えるルールなのです。\n\n```python\nmembers = ['勇者', '魔法使い', '戦士']\nprint(members[0])\n```\n=> 勇者"
         }
       ],
@@ -275,12 +275,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# プログラムに判断をさせる\n\n状況によって動きを変えることを **条件分岐（じょうけんぶんき）** と呼びます。「もしテストが100点なら褒める」のように、プログラムに条件を与えてみましょう。"
         },
         {
           "title": "もし〜なら（if）",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# if の使い方\n\nPythonでは、`if` のあとに条件を入力して、最後に `:`（コロン）をつけるのがルールです。\n\n```python\ntemperature = 30\nif temperature >= 25:\n    print('今日はあついですね')\n```\n=> 今日はあついですね"
         }
       ],
@@ -335,12 +335,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "それ以外の場合は？",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# else（エルス）の役割\n\n「もし〜なら」に当てはまらなかったときの動きを作るのが **else（エルス）** です。「合格でなければ不合格と出す」のように、2つのルートを作れます。"
         },
         {
           "title": "else の使い方",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# 2つのルート\n\n条件にあてはまらなかったときの動きは `else:` を使って書きます。\n\n```python\nmoney = 500\nif money >= 1000:\n    print('買えます！')\nelse:\n    print('お金が足りません')\n```\n=> お金が足りません"
         }
       ],
@@ -396,12 +396,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
-          "image": "/illustrations/python/loop.png",
+          "image": "/illustrations/common/loop.png",
           "content": "# 作業を自動化する\n\n同じ処理を何度も繰り返すための仕組みが **ループ** です。リストの中身を一つずつ順番に全部チェックしたいときなどに非常に役立ちます。"
         },
         {
           "title": "くりかえし（for）",
-          "image": "/illustrations/python/loop.png",
+          "image": "/illustrations/common/loop.png",
           "content": "# リストから順番に取り出す\n\nリストの中身を全部見たいときは `for` を使うと便利です。\n\n```python\nstations = ['東京', '品川', '横浜']\nfor s in stations:\n    print(s)\n```\n=> 東京\n=> 品川\n=> 横浜"
         }
       ],
@@ -446,12 +446,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "マップ（辞書）とは？",
-          "image": "/illustrations/python/dict.png",
+          "image": "/illustrations/common/dict.png",
           "content": "# キーワードで検索できる仕組み\n\n「言葉」と「その意味」のように、関連する2つの情報をセットにして保存できるのが **辞書** です。キーワードを使って目的のデータをすぐに見つけられます。"
         },
         {
           "title": "キーワードで取り出しましょう",
-          "image": "/illustrations/python/dict.png",
+          "image": "/illustrations/common/dict.png",
           "content": "# キー : あたい\n\n辞書は、キーワードとデータのセットになっています。\n\n```python\ncity = {'name': '東京', 'population': 1400}\nprint(city['name'])\n```\n=> 東京"
         }
       ],
@@ -497,12 +497,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",
-          "image": "/illustrations/python/function.png",
+          "image": "/illustrations/common/function.png",
           "content": "# 処理のパッケージ化\n\n一連の処理をひとまとめにして、名前をつけたものを **関数** と呼びます。一度作っておけば、何度でも再利用できる便利な「魔法の言葉」になります。"
         },
         {
           "title": "関数を定義（ていぎ）する",
-          "image": "/illustrations/python/function.png",
+          "image": "/illustrations/common/function.png",
           "content": "# def のあとに名前をつける\n\n関数を新しく作るときは `def` を使います。作った関数は、あとで呼び出すと動くのです。\n\n```python\ndef introduce():\n    print('私はロボットです')\n\nintroduce() # これで関数が動きます！\n```\n=> 私はロボットです"
         }
       ],

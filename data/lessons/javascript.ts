@@ -16,12 +16,12 @@ export const javascriptData = {
       "tutorialSlides": [
         {
           "title": "JavaScript（ジャバスクリプト）とは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# Webサイトを動かす魔法\n\nJavaScript（ジャバスクリプト）は、Webサイトにボタンやアニメーションなどの「動き」をつけるための言葉です。\n今ではアプリやゲーム作りにもたくさん使われている、とても人気の言葉です。"
         },
         {
           "title": "メッセージを出す関数 console.log",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# console.log（コンソール・ログ）\n\nコンピュータに何かを表示（ひょうじ）させたいときは、`console.log()` という関数を使います。\n文のさいごには `;`（セミコロン）という記号をつけるのが、JavaScriptのルールです。\n\n例えば、こんなふうに書きます。\n```javascript\nconsole.log('JavaScript楽しい！');\n```\n=> JavaScript楽しい！"
         }
       ],
@@ -59,12 +59,12 @@ export const javascriptData = {
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# データをしまっておく「はこ」\n\nプログラムでは、数字や文字をしまっておく「はこ」を作ることができます。この「はこ」のことを **変数（へんすう）** と呼びます。中身が何かわかるように名前をつけてあげましょう！"
         },
         {
           "title": "「はこ」に名前をつけましょう",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# const（コンスト）\n\n一度決めたらずっとそのまま使いたい値（あたい）は、`const` という言葉を使って「はこ」を作ります。\n\n**コード例：**\n```javascript\nconst fruit = 'りんご';\nconsole.log(fruit);\n```\n`=`（イコール）は「右のものを左のはこに入れる」という意味です。"
         }
       ],
@@ -109,7 +109,7 @@ export const javascriptData = {
       "tutorialSlides": [
         {
           "title": "算数とプログラミング",
-          "image": "/illustrations/python/robot_math.png",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# コンピュータは計算が得意！\n\nコンピュータの一番得意なことは「計算」です。人間だと時間がかかる計算も、一瞬で終わらせてしまいます。プログラミングで計算の指示を出してみましょう。"
         },
         {
@@ -167,12 +167,12 @@ export const javascriptData = {
       "tutorialSlides": [
         {
           "title": "文章と変数を組み合わせる",
-          "image": "/illustrations/python/fstring.png",
+          "image": "/illustrations/common/fstring.png",
           "content": "# テンプレートリテラルとは？\n\n文章の途中に、変数（はこ）の中身を入れたいときに使うのが **テンプレートリテラル** です。ただの文章よりも、状況に合わせて中身が変わる便利な文章を作れます。"
         },
         {
           "title": "文章と変数をくっつける",
-          "image": "/illustrations/python/fstring.png",
+          "image": "/illustrations/common/fstring.png",
           "content": "# バッククォートと ${ }\n\nキーボードの ` という記号（バッククォート）で囲むと、その中で `${ }` と入力するだけで、中身を文章に入れられます。\n\n**コード例：**\n```javascript\nconst weather = 'はれ';\nconsole.log(`明日は${weather}です`);\n```\n=> 明日ははれです\n\nこれで「明日ははれです」と表示されます！"
         }
       ],
@@ -217,12 +217,12 @@ export const javascriptData = {
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）とは？",
-          "image": "/illustrations/python/list.png",
+          "image": "/illustrations/common/list.png",
           "content": "# データの行列\n\nたくさんのデータを順番に並べておきたいときに使うのが **配列（はいれつ）** です。クラスの全員の名前や、買い物リストなどを一つの変数にまとめて管理できます。"
         },
         {
           "title": "データの番号は「0」から！",
-          "image": "/illustrations/python/list.png",
+          "image": "/illustrations/common/list.png",
           "content": "# [ ]（しかくい かっこ）を使いましょう\n\n配列の中身を取り出すときは、何番目かを指定します。\nでも気をつけてください！プログラミングでは、**さいしょのデータは「0番」** と数えるルールなのです。\n\n**コード例：**\n```javascript\nconst fruits = ['りんご', 'みかん'];\nconsole.log(fruits[0]); // 「りんご」が表示されます\n```"
         }
       ],
@@ -271,12 +271,12 @@ export const javascriptData = {
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# もし〜なら、の仕組み\n\n「雨が降ったら傘をさす」「晴れたら外で遊ぶ」のように、状況によって動きを変えることを **条件分岐（じょうけんぶんき）** と呼びます。プログラムに判断をさせてみましょう。"
         },
         {
           "title": "もし〜なら（if）",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# ( ) と { } を使いましょう\n\nJavaScriptでは、`if (条件)` のあとに `{ }`（なみかっこ）を入力して、その中にやりたいことを入力します。\n\n**コード例：**\n```javascript\nconst price = 1200;\nif (price > 1000) {\n  console.log('ちょっと高いかも');\n}\n```"
         }
       ],
@@ -333,12 +333,12 @@ export const javascriptData = {
       "tutorialSlides": [
         {
           "title": "それ以外の場合は？",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# else（エルス）の役割\n\n「もし〜なら」に当てはまらなかったときの動きも作ってみましょう。 `else`（エルス）を使うと、「そうでなければこれをする」という指示が出せます。"
         },
         {
           "title": "そうじゃなければ（else）",
-          "image": "/illustrations/python/if.png",
+          "image": "/illustrations/common/if.png",
           "content": "# 2つのルート\n\n条件にあてはまらなかったときの動きは `else` を使って入力します。\n\n**コード例：**\n```javascript\nconst time = 15;\nif (time < 12) {\n  console.log('午前中');\n} else {\n  console.log('お昼すぎ');\n}\n```"
         }
       ],
@@ -399,12 +399,12 @@ export const javascriptData = {
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
-          "image": "/illustrations/python/loop.png",
+          "image": "/illustrations/common/loop.png",
           "content": "# 作業を自動化する\n\n同じ処理を何度も繰り返すための仕組みが **ループ** です。配列の中身を一つずつ順番に全部チェックしたいときなどに非常に役立ちます。"
         },
         {
           "title": "くりかえし（for...of）",
-          "image": "/illustrations/python/loop.png",
+          "image": "/illustrations/common/loop.png",
           "content": "# 配列から順番に取り出す\n\n配列の中身を全部見たいときは `for...of` を使うと便利です。\n\n**コード例：**\n```javascript\nconst items = ['おにぎり', 'パン'];\nfor (const item of items) {\n  console.log(item);\n}\n```"
         }
       ],
@@ -451,12 +451,12 @@ export const javascriptData = {
       "tutorialSlides": [
         {
           "title": "オブジェクトとは？",
-          "image": "/illustrations/python/dict.png",
+          "image": "/illustrations/common/dict.png",
           "content": "# 情報をセットにする\n\n「名前」と「年齢」のように、関連する情報をまとめて管理するのが **オブジェクト** です。本物の辞書のように、キーワードを使って情報を取り出すことができます。"
         },
         {
           "title": "ドット（ . ）でつなげましょう",
-          "image": "/illustrations/python/dict.png",
+          "image": "/illustrations/common/dict.png",
           "content": "# { } を使ったデータのまとめ\n\nオブジェクトは、`名前: あたい` のセットを `{ }` で囲んで作ります。取り出すときは `.`（ドット）を使います。\n\n**コード例：**\n```javascript\nconst pet = { type: 'いぬ', name: 'ポチ' };\nconsole.log(pet.name);\n```"
         }
       ],
@@ -502,12 +502,12 @@ export const javascriptData = {
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",
-          "image": "/illustrations/python/function.png",
+          "image": "/illustrations/common/function.png",
           "content": "# オリジナルの命令\n\nよく使う手順をひとまとめにして、名前をつけることができます。これを **関数（かんすう）** と呼びます。一度作っておけば、いつでも呼び出して使えます。"
         },
         {
           "title": "関数を定義（ていぎ）する",
-          "image": "/illustrations/python/function.png",
+          "image": "/illustrations/common/function.png",
           "content": "# function（ファンクション）\n\n関数を新しく作るときは `function` という言葉を使います。作った関数は、あとで呼び出すと動きます！\n\n**コード例：**\n```javascript\nfunction sayHello() {\n  console.log('ヤッホー！');\n}\n\nsayHello();\n```"
         }
       ],

@@ -14,17 +14,17 @@ export const elixirData = {
       "tutorialSlides": [
         {
           "title": "Elixir（エリクサー）とは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# 並列処理が得意な現代の言葉\n\nElixirは、大量のアクセスを同時に裁くのが得意なプログラミング言語です。リアルタイムのチャットや、たくさんの人が遊ぶオンラインゲームの裏側などで活躍しています。"
         },
         {
           "title": "画面に文字を出すには？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# IO.puts（アイオー・プッツ）\n\n画面に文字を出したいときは、`IO.puts` という命令を使います。文字は `\" \"`（ダブルクォート）で囲んで入力しましょう。"
         },
         {
           "title": "IO.puts を使いましょう",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# メッセージを表示します\n\n画面に文字を出したいときは、`IO.puts` と入力して、そのあとに表示したい文字を続けます。\n\n**コード例：**\n```elixir\nIO.puts \\\"Hello, Elixir!\\\"\n```"
         }
       ],
@@ -57,12 +57,12 @@ export const elixirData = {
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# データを保存する仕組み\n\nプログラムの中で数字や文字を使い回すために、名前をつけて保存する場所を **変数（へんすう）** と呼びます。"
         },
         {
           "title": "名前をつけます",
-          "image": "/illustrations/python/box.png",
+          "image": "/illustrations/common/box.png",
           "content": "# 変数（へんすう）の作りかた\n\n`名前 = 中身` と入力することで、データに名前をつけることができます。\n\n**コード例：**\n```elixir\ncount = 5\nIO.puts count\n```"
         }
       ],
@@ -100,12 +100,12 @@ export const elixirData = {
       "tutorialSlides": [
         {
           "title": "計算はコンピュータにお任せ",
-          "image": "/illustrations/python/robot_math.png",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 高速な計算処理\n\nコンピュータは人間よりもずっと速く計算できます。プログラミングでは、算数と同じ記号を使って計算の指示を出します。"
         },
         {
           "title": "計算の記号",
-          "image": "/illustrations/python/robot_math.png",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 計算の記号\n\nElixirでも、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算"
         }
       ],

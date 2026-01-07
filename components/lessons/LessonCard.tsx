@@ -25,24 +25,24 @@ export function LessonCard({ lesson, language, progressCount = 0, totalExercises
 
   return (
     <Link href={`/lessons/${language}/${lesson.id}/exercises`}>
-      <Card className={`transition-all hover:shadow-lg hover:scale-105 cursor-pointer border-2 ${colorClass}`}>
-        <CardHeader>
+      <Card className={`transition-all hover:shadow-lg hover:scale-105 cursor-pointer border-2 h-[200px] flex flex-col ${colorClass}`}>
+        <CardHeader className="flex-shrink-0">
           <div className="flex items-start justify-between">
             <div className="flex items-center space-x-2">
               <BookOpen className="w-5 h-5 text-primary" />
-              <CardTitle className="text-lg">{lesson.title}</CardTitle>
+              <CardTitle className="text-lg line-clamp-1">{lesson.title}</CardTitle>
             </div>
-            <span className={`px-2 py-1 rounded text-xs font-medium ${difficultyColor}`}>
+            <span className={`px-2 py-1 rounded text-xs font-medium flex-shrink-0 ${difficultyColor}`}>
               {lesson.difficulty === 'easy' && '初級'}
               {lesson.difficulty === 'medium' && '中級'}
               {lesson.difficulty === 'hard' && '上級'}
             </span>
           </div>
           {lesson.description && (
-            <CardDescription className="mt-2">{lesson.description}</CardDescription>
+            <CardDescription className="mt-2 line-clamp-2">{lesson.description}</CardDescription>
           )}
         </CardHeader>
-        <CardContent>
+        <CardContent className="mt-auto">
           <div className="space-y-2">
             {totalExercises > 0 && (
               <>

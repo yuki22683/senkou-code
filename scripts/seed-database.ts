@@ -133,7 +133,7 @@ async function seedDatabase() {
         tutorial_slides: exercise.tutorialSlides,
         correct_code: exercise.correctCode,
         holey_code: exercise.holeyCode,
-        starter_code: exercise.starterCode || (exercise.initialDisplayMode === 'editable' ? '' : exercise.holeyCode),
+        starter_code: (exercise as any).starterCode || (exercise.initialDisplayMode === 'editable' ? '' : exercise.holeyCode),
         // initial_display_mode: exercise.initialDisplayMode || 'holey',
         correct_lines: exercise.correctLines,
         candidates: exercise.candidates,

@@ -14,17 +14,17 @@ export const assemblyData = {
       "tutorialSlides": [
         {
           "title": "アセンブリ言語とは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# コンピュータの「生（なま）」の言葉\n\nアセンブリ言語は、コンピュータのCPUという脳みそが直接理解できる言葉（機械語）に最も近いプログラミング言語です。ハードウェアを限界まで操ることができます。"
         },
         {
           "title": "画面に文字を出すには？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# システムコール\n\nアセンブリ言語では、OS（オペレーティングシステム）というコンピュータの「ボス」に、「画面にこれを書いてください！」とお願いする命令を送ります。これを「システムコール」と呼びます。"
         },
         {
           "title": "コンピュータとの直接対話",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# syscall（システムコール）\n\nアセンブリ言語では、`rax` や `rdi` という名前の「小さな机（レジスタ）」に数字を置いてから、`syscall` という合図を送ります。すると、コンピュータのボスが画面に文字を出してくれます。\n\n**暗号の意味：**\n- `mov rax, 1` : 「画面に書く」という指示を机に置きます\n- `mov rdi, 1` : 「標準の画面」を指定します\n- `syscall` : 「さあ、やってください！」という合図です"
         }
       ],

@@ -14,22 +14,22 @@ export const kotlinData = {
       "tutorialSlides": [
         {
           "title": "Kotlin（コトリン）とは？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# Androidアプリ開発の主役\n\nKotlinは、Javaという言葉をベースに、より短く安全に書けるように改良されたモダンなプログラミング言語です。Googleも「Androidアプリ開発の推奨言語」として選んでいる、今注目の言葉です。"
         },
         {
           "title": "画面に文字を出すには？",
-          "image": "/illustrations/python/monitor.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# println（プリント・ライン）\n\n画面に文字を出したいときは、`println()` という命令を使います。文字は `\" \"`（ダブルクォート）で囲んで入力しましょう。プログラミングの基本です！"
         },
         {
           "title": "println を使いましょう",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# メッセージを表示します\n\n画面に文字を出して改行（かいぎょう）したいときは、`println()` という名前の関数を使います。カッコの中に表示したいものを入力しましょう。\n\n```kotlin\nprintln(\\\"Hello, World!\\\")\n```"
         },
         {
           "title": "やってみましょう！",
-          "image": "/illustrations/python/magic.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# 目標\n\n`println()` を使って `Hello, World!` と表示させてみましょう。\n\n**入力するコードのヒント：**\n```kotlin\nprintln(\\\"Hello, World!\\\")\n```"
         }
       ],

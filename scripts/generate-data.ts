@@ -133,7 +133,7 @@ const data = [
         ],
         "initialDisplayMode": "holey",
         "correctCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, Java!\");\n    }\n}",
-        "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"___");\n    }\n}",
+        "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"___\");\n    }\n}",
         "correctLines": ["public class Main {", "    public static void main(String[] args) {", "        System.out.println(\"Hello, Java!\");", "    }", "}"],
         "lineHints": [null, null, "System.out.println を使用します。"],
         "candidates": { "functions": ["System.out.println"], "strings": ["Hello, Java!"] },
