@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /b /s \"C:\\\\Work\\\\git\\\\senkou-code\\\\.auto-claude\")",
+      "Bash(rm:*)",
+      "Bash(where:*)",
+      "Bash(git add .claude/ .claude_settings.json nul)",
+      "Bash(git commit:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}
