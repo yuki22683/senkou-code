@@ -1,7 +1,7 @@
 export const haskellData = {
   "language": "haskell",
   "lessonId": "haskell-1",
-  "lessonTitle": "Haskell (ハスケル) にちょうせん！",
+  "lessonTitle": "Haskell (ハスケル) に挑戦！",
   "lessonDescription": "数学のようなきっちりした美しさを持つ言葉「Haskell（ハスケル）」のきほんを学びましょう。計算の答えを次の計算にパスしていくような、独特な作りかたを体験できます。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
@@ -13,7 +13,18 @@ export const haskellData = {
       "orderIndex": 1,
       "tutorialSlides": [
         {
+          "title": "Haskell（ハスケル）とは？",
+          "image": "/illustrations/python/monitor.png",
+          "content": "# 数学のように美しい言葉\n\nHaskellは、数学の考え方をベースにしたプログラミング言語です。一度決めたデータの中身を変えないといった厳格なルールがあり、非常にバグが少ない堅牢なシステムを作ることができます。"
+        },
+        {
+          "title": "画面に文字を出すには？",
+          "image": "/illustrations/python/monitor.png",
+          "content": "# putStrLn（プット・ストラ・ライン）\n\n画面に文字を出して改行したいときは、`putStrLn` という名前の関数を使います。文字は `\" \"` で囲みましょう。"
+        },
+        {
           "title": "メッセージを表示します",
+          "image": "/illustrations/python/magic.png",
           "content": "# putStrLn 関数\n\n画面に文字を出して改行したいときは、`putStrLn` と入力して、そのあとに `\" \"` で囲んだ文字を続けます。\n\n**コード例：**\n```haskell\nmain = putStrLn \"Hello, Haskell!\"\n```"
         }
       ],
@@ -48,7 +59,13 @@ export const haskellData = {
       "orderIndex": 2,
       "tutorialSlides": [
         {
+          "title": "変数（定義）とは？",
+          "image": "/illustrations/python/box.png",
+          "content": "# データの保存と不変性\n\nHaskellでは、データに名前をつけて保存することを「定義」と呼びます。一度決めたら二度と中身を変えられない（不変）というルールが、プログラムを安定させます。"
+        },
+        {
           "title": "名前をつけます",
+          "image": "/illustrations/python/box.png",
           "content": "# 変数の定義\n\nHaskellでは、`名前 = 中身` と入力することで、データに名前をつけることができます。\n\n**コード例：**\n```haskell\nname = \"Haskell\"\nmain = putStrLn name\n```"
         }
       ],
@@ -85,13 +102,19 @@ export const haskellData = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
+          "title": "計算はコンピュータにお任せ",
+          "image": "/illustrations/python/robot_math.png",
+          "content": "# 正確で速い計算\n\nコンピュータは人間よりもずっと速く計算できます。プログラミングでは、算数と同じ記号を使って計算の指示を出します。"
+        },
+        {
           "title": "計算の記号",
-          "content": "# そのまま計算できます\n\n算数と同じ記号を使って計算ができますよ。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算"
+          "image": "/illustrations/python/robot_math.png",
+          "content": "# そのまま計算できます\n\n算数と同じ記号を使って計算ができます。\n\n- **+** : たし算\n- **-** : ひき算\n- **\*** : かけ算\n- **/** : わり算"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "a = 5\nb = 3\nmain = print (a + b)",
-      "holeyCode": "a = 5\nb = 3\nmain = print (a ___ b)",
+      "correctCode": "a = 5\nb = 3\n// たし算した結果を表示する\nmain = print (a + b)",
+      "holeyCode": "a = 5\nb = 3\n// たし算した結果を表示する\nmain = print (a ___ b)",
       "correctLines": [
         "a = 5",
         "b = 3",
@@ -113,108 +136,6 @@ export const haskellData = {
           "expected_output": "8\n"
         }
       ]
-    },
-    {
-      "title": "データをならべる「リスト」",
-      "description": "たくさんのデータを一つの「列」にまとめて並べられる「リスト」を使ってみましょう。",
-      "difficulty": "easy",
-      "orderIndex": 5,
-      "tutorialSlides": [
-        {
-          "title": "リストの作りかた",
-          "content": "# [ ] を使いましょう\n\nリストの中身を取り出すときは、ちょっと難しいですが `!!` という記号を使います。さいしょのデータは **「0番」** から数えるのがルールですよ。\n\n**コード例：**\n```haskell\nnums = [10, 20, 30]\nmain = print (nums !! 1) -- 20 が表示されます\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "colors = [\"red\", \"blue\"]\nmain = putStrLn (colors !! 1)",
-      "holeyCode": "colors = [\"red\", \"blue\"]\nmain = putStrLn (colors !! ___)",
-      "correctLines": [
-        "colors = [\"red\", \"blue\"]",
-        "main = putStrLn (colors !! 1)"
-      ],
-      "lineHints": [
-        null,
-        "2番目のデータの番号は 1 です。 `!! 1` と入力してください。"
-      ],
-      "candidates": {
-        "numbers": [
-          "1"
-        ]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "blue\n"
-        }
-      ]
-    },
-    {
-      "title": "「もし〜なら」で分けましょう",
-      "description": "条件によって答えを変えてみましょう。 if then else という言葉を使います。",
-      "difficulty": "easy",
-      "orderIndex": 6,
-      "tutorialSlides": [
-        {
-          "title": "if, then, else",
-          "content": "# 全てセットで入力します\n\nHaskellの `if` は、必ず `then`（そのとき）と `else`（そうでなければ）を一緒に書くルールになっています。\n\n**コード例：**\n```haskell\nresult score = if score > 80 then \"合格\" else \"ざんねん\"\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "score = 100\nmain = putStrLn (if score > 80 then \"Great\" else \"Try again\")",
-      "holeyCode": "score = 100\nmain = putStrLn (if score ___ 80 then \"Great\" else \"Try again\")",
-      "correctLines": [
-        "score = 100",
-        "main = putStrLn (if score > 80 then \"Great\" else \"Try again\")"
-      ],
-      "lineHints": [
-        null,
-        "比較するための記号 `>` を入力しましょう。"
-      ],
-      "candidates": {
-        "operators": [
-          ">
-        ]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Great\n"
-        }
-      ]
-    },
-    {
-      "title": "自分だけの関数を作りましょう",
-      "description": "計算の手順をまとめて、名前をつけた「関数（かんすう）」を作ってみましょう。",
-      "difficulty": "easy",
-      "orderIndex": 10,
-      "tutorialSlides": [
-        {
-          "title": "関数を定義しましょう",
-          "content": "# 数学の式のように書きます\n\n`関数名 引数 = やりたいこと` のように入力します。\n\n**コード例：**\n```haskell\ndouble x = x * 2\nmain = print (double 5) -- 10 が表示されます\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "greet name = \"Hello, \" ++ name\nmain = putStrLn (greet \"Haskell\")",
-      "holeyCode": "greet name = \"Hello, \" ++ name\nmain = putStrLn (___ \"Haskell\")",
-      "correctLines": [
-        "greet name = \"Hello, \" ++ name",
-        "main = putStrLn (greet \"Haskell\")"
-      ],
-      "lineHints": [
-        "greet という名前の関数を定義します。 `++` は文字をくっつける記号です。",
-        "作った関数 `greet` を呼び出して使います。"
-      ],
-      "candidates": {
-        "functions": [
-          "greet"
-        ]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Hello, Haskell\n"
-        }
-      ]
     }
   ]
-}
+};

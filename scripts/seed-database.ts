@@ -138,7 +138,7 @@ async function seedDatabase() {
         correct_lines: exercise.correctLines,
         candidates: exercise.candidates,
         test_cases: exercise.testCases,
-        line_hints: exercise.lineHints,
+        hints: exercise.lineHints,
         language_id: languageInfo.judge0Id,
         file_extension: languageInfo.extension.replace('.', ''),
         test_input: testInput,

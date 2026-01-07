@@ -1,8 +1,8 @@
 export const phpData = {
   "language": "php",
   "lessonId": "php-1",
-  "lessonTitle": "PHP (ピーエイチピー) にちょうせん！",
-  "lessonDescription": "Webサイトを作るのが得意な言葉「PHP（ピーエイチピー）」のきほんを学びましょう。HTMLという言葉と一緒に使われることが多いですよ。",
+  "lessonTitle": "PHP (ピーエイチピー) に挑戦！",
+  "lessonDescription": "Webサイトを作るのが得意な言葉「PHP（ピーエイチピー）」のきほんを学びましょう。HTMLという言葉と一緒に使われることが多いです。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
@@ -13,8 +13,14 @@ export const phpData = {
       "orderIndex": 1,
       "tutorialSlides": [
         {
+          "title": "PHP（ピーエイチピー）とは？",
+          "image": "/illustrations/python/monitor.png",
+          "content": "# Webサイトを裏側で動かす言葉\n\nPHPは、Webサイトの「裏側」で活躍するプログラミング言語です。掲示板やSNSなど、中身が書き換わる動的なWebサイトを作るのに欠かせません。"
+        },
+        {
           "title": "PHPの「おまじない」",
-          "content": "# <?php ... ?>\n\nPHPのプログラムを入力するときは、`<?php` と `?>` の間に命令を入力するのがルールです。表示には `echo` を使いますよ。\n\n**入力するコードのヒント：**\n```php\n<?php\n  echo \"Hello, PHP!\";\n?>\n```"
+          "image": "/illustrations/python/magic.png",
+          "content": "# <?php ... ?>\n\nPHPのプログラムを入力するときは、`<?php` と `?>` の間に命令を入力するのがルールです。表示には `echo` を使います。\n\n**コード例：**\n```php\n<?php\n  echo \"ヤッホー\";\n?>\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -52,13 +58,19 @@ export const phpData = {
       "orderIndex": 2,
       "tutorialSlides": [
         {
+          "title": "変数（へんすう）とは？",
+          "image": "/illustrations/python/box.png",
+          "content": "# データを保存する場所\n\nプログラムの中で数字や文字に名前をつけて、あとで使いやすくするための仕組みが **変数（へんすう）** です。"
+        },
+        {
           "title": "$ から始めます",
-          "content": "# $記号\n\nPHPでは、はこ（変数）の名前の前に必ず `$` をつける決まりがあります。\n\n**コード例：**\n```php\n$name = \"PHP\";\necho $name;\n```"
+          "image": "/illustrations/python/box.png",
+          "content": "# $記号\n\nPHPでは、はこ（変数）の名前の前に必ず `$` をつける決まりがあります。\n\n**コード例：**\n```php\n$price = 100;\necho $price;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "<?php\n  $x = 10;\n  echo $x;\n?>",
-      "holeyCode": "<?php\n  $x = ___ ;\n  echo $___ ;\n?>",
+      "correctCode": "<?php\n  // x というはこに 10 を入れる\n  $x = 10;\n  // 中身を表示する\n  echo $x;\n?>",
+      "holeyCode": "<?php\n  // x というはこに 10 を入れる\n  $x = ___ ;\n  // 中身を表示する\n  echo $___ ;\n?>",
       "correctLines": [
         "<?php",
         "  $x = 10;",
@@ -93,13 +105,18 @@ export const phpData = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
+          "title": "計算はコンピュータにお任せ",
+          "image": "/illustrations/python/robot_math.png",
+          "content": "# 高速な計算処理\n\nコンピュータは人間よりもずっと速く計算できます。プログラミングでは、算数と同じ記号を使って計算の指示を出します。"
+        },
+        {
           "title": "計算の記号",
-          "content": "# 算数と同じ記号を使います\n\nPHPでも、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算"
+          "content": "# 算数と同じ記号を使います\n\nPHPでも、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\*** : かけ算\n- **/** : わり算\n\n**コード例：**\n```php\n$a = 10;\n$b = 5;\necho $a - $b; // 5 が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "<?php\n  $a = 5;\n  $b = 3;\n  echo $a + $b;\n?>",
-      "holeyCode": "<?php\n  $a = 5;\n  $b = 3;\n  echo $a ___ $b;\n?>",
+      "correctCode": "<?php\n  // はこに数字を入れる\n  $a = 5;\n  $b = 3;\n  // たし算した結果を表示する\n  echo $a + $b;\n?>",
+      "holeyCode": "<?php\n  // はこに数字を入れる\n  $a = 5;\n  $b = 3;\n  // たし算した結果を表示する\n  echo $a ___ $b;\n?>",
       "correctLines": [
         "<?php",
         "  $a = 5;",
@@ -111,7 +128,7 @@ export const phpData = {
         null,
         null,
         null,
-        "たし算なので `+" を入力します。",
+        "たし算なので `+` を入力します。",
         null
       ],
       "candidates": {
@@ -133,13 +150,18 @@ export const phpData = {
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "変数展開（へんすうてんかい）",
-          "content": "# 文字列の中に入れるだけ\n\n`\" \"` で囲んだ文章の中に `$age` と入力するだけで、その中身を文章に入れられますよ。\n\n**コード例：**\n```php\n$age = 10;\necho \"私は $age 歳です\";\n```"
+          "title": "変数展開（へんすうてんかい）とは？",
+          "image": "/illustrations/python/fstring.png",
+          "content": "# 文章の中に変数を入れる\n\n文章の途中に、変数（はこ）の中身を合体させたいときに使うのが **変数展開（へんすうてんかい）** です。PHPでは `\" \"`（ダブルクォート）を使います。"
+        },
+        {
+          "title": "文字列の中に入れるだけ",
+          "content": "# $ 記号\n\n`\" \"` で囲んだ文章の中に `$year` と入力するだけで、その中身を文章に入れられます。\n\n**コード例：**\n```php\n$weather = \"はれ\";\necho \"明日は $weather です\";\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "<?php\n  $age = 20;\n  echo \"I am $age years old.\";\n?>",
-      "holeyCode": "<?php\n  $age = 20;\n  echo \"I am $___ years old.\";\n?>",
+      "correctCode": "<?php\n  // ageに20を入れる\n  $age = 20;\n  // 文章の中に中身を表示する\n  echo \"I am $age years old.\";\n?>",
+      "holeyCode": "<?php\n  // ageに20を入れる\n  $age = 20;\n  // 文章の中に中身を表示する\n  echo \"I am $___ years old.\";\n?>",
       "correctLines": [
         "<?php",
         "  $age = 20;",
@@ -171,13 +193,18 @@ export const phpData = {
       "orderIndex": 5,
       "tutorialSlides": [
         {
+          "title": "配列（はいれつ）とは？",
+          "image": "/illustrations/python/list.png",
+          "content": "# データの行列\n\nたくさんのデータを順番に並べておきたいときに使うのが **配列（はいれつ）** です。順番に 0, 1, 2... と番号をつけて管理します。"
+        },
+        {
           "title": "データの番号は 0 から！",
-          "content": "# [ ]（しかくい かっこ）を使いましょう\n\n配列の中身を取り出すときは、何番目かを指定します。さいしょのデータは **「0番」** から数えるのがルールですよ。\n\n**コード例：**\n```php\n$colors = ['あか', 'あお'];\necho $colors[0]; // 「あか」が表示されます\n```"
+          "content": "# [ ]（しかくい かっこ）を使いましょう\n\n配列の中身を取り出すときは、何番目かを指定します。さいしょのデータは **「0番」** から数えるのがルールです。\n\n**コード例：**\n```php\n$items = ['おにぎり', 'パン'];\necho $items[0]; // 「おにぎり」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "<?php\n  $colors = ['red', 'blue'];\n  echo $colors[1];\n?>",
-      "holeyCode": "<?php\n  $colors = ['red', 'blue'];\n  echo $colors[___];\n?>",
+      "correctCode": "<?php\n  // 配列を作る\n  $colors = ['red', 'blue'];\n  // 2番目のデータを表示する\n  echo $colors[1];\n?>",
+      "holeyCode": "<?php\n  // 配列を作る\n  $colors = ['red', 'blue'];\n  // 2番目のデータを表示する\n  echo $colors[___];\n?>",
       "correctLines": [
         "<?php",
         "  $colors = ['red', 'blue'];",
@@ -187,7 +214,7 @@ export const phpData = {
       "lineHints": [
         null,
         "['red', 'blue'] と入力して配列を作ります。",
-        "2番目のデータの番号は 1 です。 `$colors[1]` と入力してください。",
+        "2番目のデータの番号は 1 です。 ` $colors[1]` と入力してください。",
         null
       ],
       "candidates": {
@@ -209,8 +236,13 @@ export const phpData = {
       "orderIndex": 6,
       "tutorialSlides": [
         {
+          "title": "条件分岐（じょうけんぶんき）とは？",
+          "image": "/illustrations/python/if.png",
+          "content": "# プログラムに判断させる\n\n状況によって動きを変えることを **条件分岐** と呼びます。プログラムに賢い判断をさせてみましょう。"
+        },
+        {
           "title": "if文",
-          "content": "# ( ) と { } を使いましょう\n\nPHPでは、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\n\n**コード例：**\n```php\nif ($score > 80) {\n    echo \"合格！\";\n}\n```"
+          "content": "# ( ) と { } を使いましょう\n\nPHPでは、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\n\n**コード例：**\n```php\nif ($score > 80) {\n    echo \"すごい！\";\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -227,14 +259,14 @@ export const phpData = {
       "lineHints": [
         null,
         "score = 100 と入力しましょう。",
-        "比較するための記号 `>" を入力しましょう。",
+        "比較するための記号 `>` を入力しましょう。",
         "Excellent と表示します。",
         "さいごに } で閉じるのを忘れないでください。",
         null
       ],
       "candidates": {
         "operators": [
-          ">
+          ">"
         ]
       },
       "testCases": [
@@ -251,8 +283,14 @@ export const phpData = {
       "orderIndex": 7,
       "tutorialSlides": [
         {
+          "title": "それ以外の場合は？",
+          "image": "/illustrations/python/if.png",
+          "content": "# else（エルス）の役割\n\n条件に当てはまらなかったときの別のルートを作るのが **else（エルス）** です。「もし〜なら」とセットで使うことで、プログラムのルートを2つに分けることができます。"
+        },
+        {
           "title": "elseブロック",
-          "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```php\nif ($age >= 20) {\n    echo \"大人です\";\n} else {\n    echo \"子供です\";\n}\n```"
+          "image": "/illustrations/python/if.png",
+          "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```php\nif ($price < 1000) {\n    echo \"安い\";\n} else {\n    echo \"高い\";\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -297,8 +335,13 @@ export const phpData = {
       "orderIndex": 8,
       "tutorialSlides": [
         {
+          "title": "繰り返し（ループ）とは？",
+          "image": "/illustrations/python/loop.png",
+          "content": "# 自動で順番に処理する\n\n同じ作業を何度も繰り返すための仕組みが **ループ** です。配列の中身を一つずつ順番に全部チェックしたいときなどに非常に役立ちます。"
+        },
+        {
           "title": "foreachループ",
-          "content": "# as を使いましょう\n\n`foreach ($配列 as $ラベル)` と入力すると、中身を一つずつ取り出して処理できます。PHPで一番よく使われるループですよ。\n\n**コード例：**\n```php\n$nums = [1, 2, 3];\nforeach ($nums as $n) {\n    echo $n;\n}\n```"
+          "content": "# as を使いましょう\n\n`foreach ( $配列 as $ラベル )` と入力すると、中身を一つずつ取り出して処理できます。PHPで一番よく使われるループです。\n\n**コード例：**\n```php\n$members = ['たろう', 'はなこ'];\nforeach ($members as $member) {\n    echo $member;\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -333,14 +376,19 @@ export const phpData = {
       ]
     },
     {
-      "title": "名前で探す「じしょ」",
+      "title": "名前で探しましょう「連想配列」",
       "description": "連想配列を使って、名前を指定してデータを取り出してみましょう。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
+          "title": "辞書（連想配列）とは？",
+          "image": "/illustrations/python/dict.png",
+          "content": "# キーワードで検索できる仕組み\n\n「名前」と「データ」をセットにして保存できるのが **連想配列** です。辞書を引くように、キーワード（キー）を使って目的のデータをすぐに見つけられます。"
+        },
+        {
           "title": "連想配列（れんそうはいれつ）",
-          "content": "# キー => あたい\n\n「名前」と「データ」をセットにして保存できます。矢印のような記号 `=>` を使うのがPHPの特徴ですよ。\n\n**コード例：**\n```php\n$user = ['name' => 'たろう'];\necho $user['name']; // 「たろう」が表示されます\n```"
+          "content": "# キー => あたい\n\n「名前」と「データ」をセットにして保存できます。矢印のような記号 `=>` を使うのがPHPの特徴です。\n\n**コード例：**\n```php\n$book = ['title' => 'PHP入門'];\necho $book['title']; // 「PHP入門」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -377,13 +425,19 @@ export const phpData = {
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "手順をまとめる",
-          "content": "# 関数の定義\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせますよ。\n\n**コード例：**\n```php\nfunction aisatsu() {\n    echo \"こんにちは\";\n}\n\naisatsu(); // 呼び出し\n```"
-        }
+          "title": "関数（かんすう）とは？",
+          "image": "/illustrations/python/function.png",
+          "content": "# 処理のパッケージ化\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせます。一度作れば名前を呼ぶだけで何度でも実行できる、便利なショートカットのようなものです。"
+        },
+                {
+                  "title": "手順をまとめる",
+                  "image": "/illustrations/python/function.png",
+                  "content": "# 関数の定義\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも 動かせます。\n\n**コード例：**\n```php\nfunction sayHello() {\n    echo \"ヤッホー！\";\n}\n\nsayHello(); // 呼び出し\n```"
+                }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "<?php\n  function greet() {\n    echo \"Hello\";\n  }\n  greet();\n?>",
-      "holeyCode": "<?php\n  function greet() {\n    echo \"Hello\";\n  }\n  ___();\n?>",
+      "correctCode": "<?php\n  function greet() {\n    echo \"Hello\";\n  }\n  // 関数を実行する\n  greet();\n?>",
+      "holeyCode": "<?php\n  function greet() {\n    echo \"Hello\";\n  }\n  // 関数を実行する\n  ___();\n?>",
       "correctLines": [
         "<?php",
         "  function greet() {",
@@ -413,4 +467,4 @@ export const phpData = {
       ]
     }
   ]
-}
+};

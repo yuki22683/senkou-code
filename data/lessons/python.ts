@@ -1,28 +1,31 @@
 export const pythonData = {
   "language": "python",
   "lessonId": "python-1",
-  "lessonTitle": "Python (パイソン) にちょうせん！",
+  "lessonTitle": "Python (パイソン) に挑戦！",
   "lessonDescription": "プログラミング言語「Python（パイソン）」のきほんを学びましょう。コンピュータに指示（しじ）を出して、動かす方法を身につけます。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "画面に文字を出してみよう",
+      "title": "画面に文字を出してみましょう",
       "description": "プログラミングのさいしょの一歩です！コンピュータに「こんにちは」とあいさつさせてみましょう。print（プリント）という関数（かんすう）を使います。",
       "difficulty": "easy",
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "Python（パイソン）ってなに？",
-          "content": "# コンピュータとお話ししましょう\n\nPython（パイソン）は、世界中で使われている「プログラミング言語」のひとつです。\n人間が入力した言葉を、コンピュータにわかるように伝えてくれます。\nAI（人工知能）を作ったり、ロボットを動かしたりするのにも使われていますよ！"
+          "title": "Python（パイソン）とは？",
+          "image": "/illustrations/python/snake.png",
+          "content": "# コンピュータとお話ししましょう\n\nPython（パイソン）は、世界中で使われている「プログラミング言語」のひとつです。人間が入力した言葉を、コンピュータにわかるように伝えてくれます。"
+        },
+        {
+          "title": "画面に文字を出すとは？",
+          "image": "/illustrations/python/monitor.png",
+          "content": "# 出力（しゅつりょく）\n\nコンピュータに何かを教えたり、結果を見たりするために、画面に文字を出すことがあります。これを「出力（しゅつりょく）」と呼びます。"
         },
         {
           "title": "文字を出してくれる関数 print",
-          "content": "# print（プリント）のまほう\n\n画面に何かを表示（ひょうじ）したいときは、`print()` という名前の関数（かんすう）を使います。\n\n```python\nprint(出したいもの)\n```\n\n文字を出したいときは `' '`（引用符：いんようふ）で囲むのがルールです。"
-        },
-        {
-          "title": "やってみよう！",
-          "content": "# 目標\n\n`print()` を使って、画面に `Hello, World!` と表示させてみましょう。\n\n**入力するコードのヒント：**\n```python\nprint('Hello, World!')\n```"
+          "image": "/illustrations/python/magic.png",
+          "content": "# print（プリント）のまほう\n\n画面に何かを表示（ひょうじ）したいときは、`print()` という名前の関数（かんすう）を使います。\n\n```python\nprint(出したいもの)\n```\n\n例えば、こんなふうに書きます。\n```python\nprint('Python最高！')\n```\n=> Python最高！\n\n文字を出したいときは `' '`（引用符：いんようふ）で囲むのがルールです。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -34,7 +37,7 @@ export const pythonData = {
       ],
       "lineHints": [
         null,
-        "関数は「print」です。文字を出すときは、左右を '（ちょんちょん）で囲むのを忘れないでください！"
+        "関数は「print」です。文字を出しましょうときは、左右を '（ちょんちょん）で囲むのを忘れないでください！"
       ],
       "candidates": {
         "functions": [
@@ -59,15 +62,13 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
-          "content": "# 変数は「名前がついた はこ」です\n\nプログラミングでは、文字や数字をしまっておく「はこ」を作ることができます。\nこの「はこ」のことを **変数（へんすう）** と呼びます。中身が何かわかるように名前をつけてあげましょう！"
+          "image": "/illustrations/python/box.png",
+          "content": "# データを保存する「はこ」\n\nプログラムの中では、数字や文字をしまっておく「はこ」を作ることができます。これを **変数（へんすう）** と呼びます。"
         },
         {
           "title": "はこに中身を入れる（代入）",
-          "content": "# =（イコール）の使い方\n\n算数では「同じ」という意味の `=` ですが、プログラミングでは **「右のものを左のはこに入れる」** という意味になります。\n\n```python\nname = 'Python'\n```\nこれだけで、`name` という名前のはこに `'Python'` がしまわれましたよ！"
-        },
-        {
-          "title": "やってみよう！",
-          "content": "# 目標\n\n`name` というはこに `'Python'` と入れて、そのあとで中身を画面に出してみましょう。\n\n**入力するコードのヒント：**\n```python\nname = 'Python'\nprint(name)\n```"
+          "image": "/illustrations/python/box.png",
+          "content": "# =（イコール）の使い方\n\n算数では「同じ」という意味の `=` ですが、プログラミングでは **「右のものを左のはこに入れる」** という意味になります。\n\n```python\nanimal = 'いぬ'\nprint(animal)\n```\n=> いぬ\n\nこれだけで、`animal` という名前のはこに `'いぬ'` がしまわれ、画面に表示されました！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -83,7 +84,7 @@ export const pythonData = {
         null,
         "はこ（変数）の名前は `name` です。 `=` のあとに `'Python'` と入力しましょう。",
         null,
-        "print のなかに、はこの名前 `name` を入力すると、中身が表示されますよ！"
+        "print のなかに、はこの名前 `name` を入力すると、中身が表示されます！"
       ],
       "candidates": {
         "variables": [
@@ -104,18 +105,20 @@ export const pythonData = {
       ]
     },
     {
-      "title": "コンピュータで計算（けいさん）",
+      "title": "コンピュータで計算（けいさん）しましょう",
       "description": "Pythonを使って、たし算をしてみましょう。x というはこと y というはこの中身をたして、答えを出してみます。",
       "difficulty": "easy",
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "Pythonは計算が得意です！",
-          "content": "# 計算の記号\n\nPythonでは、こんな記号を使って計算をしますよ。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算（× のかわり）\n- **/** : わり算（÷ のかわり）"
+          "title": "算数とプログラミング",
+          "image": "/illustrations/python/robot_math.png",
+          "content": "# 計算はコンピュータの得意技\n\nコンピュータの一番の得意なことは「正確で速い計算」です。複雑な計算も、プログラミングで指示を出せば一瞬で解いてくれます。"
         },
         {
-          "title": "やってみよう！",
-          "content": "# 目標\n\n`x` に `10`、`y` に `5` を入れて、たし算の答えを出してみましょう。\n\n**入力するコードのヒント：**\n```python\nx = 10\ny = 5\nprint(x + y)\n```"
+          "title": "計算の記号",
+          "image": "/illustrations/python/robot_math.png",
+          "content": "# 四則演算（しそくえんざん）\n\nPythonでは、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算\n\n例えば、わり算はこんな感じです。\n```python\ncookies = 10\nfriends = 2\nprint(cookies / friends)\n```\n=> 5.0"
         }
       ],
       "initialDisplayMode": "holey",
@@ -161,34 +164,36 @@ export const pythonData = {
       ]
     },
     {
-      "title": "文章の中に「はこ」を入れる",
+      "title": "文章の中に「はこ」を入れましょう",
       "description": "f-string（エフストリング）という書き方を使って、文章の中に「はこ（変数）」の中身を表示してみましょう。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "文章と変数をくっつけましょう",
-          "content": "# f-string の書き方\n\n文字のまえに `f` をつけて、`{ }`（ちゅうかっこ）の中に「はこ」の名前を入力すると、その中身を文章に入れられますよ。\n\n```python\nage = 10\nprint(f'私は{age}歳です')\n```\nこれで「私は10歳です」と表示されます！"
+          "title": "f-string（エフストリング）とは？",
+          "image": "/illustrations/python/fstring.png",
+          "content": "# 文章と変数を組み合わせる\n\n文章の途中に、変数（はこ）の中身を入れたいときに使うのが **f-string** です。ただの文章よりも、状況に合わせて中身が変わる便利な文章を作れます。"
         },
         {
-          "title": "やってみよう！",
-          "content": "# 目標\n\n`age` というはこに `10` を入れて、f-stringを使って「私は10歳です」と表示してみましょう。\n\n**入力するコードのヒント：**\n```python\nage = 10\nprint(f'私は{age}歳です')\n```"
+          "title": "f-string の書き方",
+          "image": "/illustrations/python/fstring.png",
+          "content": "# f 記号と { }\n\n文字のまえに `f` をつけて、`{ }`（ちゅうかっこ）の中に「はこ」の名前を入力すると、その中身を文章に入れられます。\n\n```python\nfood = 'カレー'\nprint(f\"今日の夕飯は{food}です\")\n```\n=> 今日の夕飯はカレーです\n\nこれで「今日の夕飯はカレーです」と表示されます！"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# ageというはこに 10 を入れる\nage = 10\n# 文章の中に age の中身を入れる\nprint(f'私は{age}歳です')",
-      "holeyCode": "# ageというはこに 10 を入れる\nage = ___\n# 文章の中に age の中身を入れる\nprint(f'私は{___}歳です')",
+      "correctCode": "# ageというはこに 10 を入れる\nage = 10\n# f-stringを使ってメッセージを出す\nprint(f\"私は{age}歳です\")",
+      "holeyCode": "# ageというはこに 10 を入れる\nage = ___\n# f-stringを使ってメッセージを出す\nprint(f\"私は{___}歳です\")",
       "correctLines": [
         "# ageというはこに 10 を入れる",
         "age = 10",
-        "# 文章の中に age の中身を入れる",
-        "print(f'私は{age}歳です')"
+        "# f-stringを使ってメッセージを出す",
+        "print(f\"私は{age}歳です\")"
       ],
       "lineHints": [
         null,
         "age = 10 と入力しましょう。",
         null,
-        "{ } のなかに、はこの名前 age を入力しましょう。"
+        "print(f\"私は{age}歳です\") と入力しましょう。"
       ],
       "candidates": {
         "variables": [
@@ -209,18 +214,20 @@ export const pythonData = {
       ]
     },
     {
-      "title": "たくさんのデータをまとめる「リスト」",
+      "title": "たくさんのデータをまとめましょう「リスト」",
       "description": "「リスト」というものを使うと、たくさんのデータを一つの「長い はこ」にまとめて入れられます。",
       "difficulty": "easy",
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "リストの番号は「0」から！",
-          "content": "# 番号で指定しましょう\n\nリストの中身を取り出すときは、何番目かを指定します。\nでも気をつけてください！プログラミングでは、**さいしょのデータは「0番」** と数えるルールなのです。\n\n```python\nanimals = ['いぬ', 'ねこ']\nprint(animals[0]) # 「いぬ」が表示されます\nprint(animals[1]) # 「ねこ」が表示されます\n```"
+          "title": "リストとは？",
+          "image": "/illustrations/python/list.png",
+          "content": "# データの行列\n\nたくさんのデータを順番に並べておきたいときに使うのが **リスト** です。例えば、買い物リストなどを一つの変数にまとめて管理できます。"
         },
         {
-          "title": "やってみよう！",
-          "content": "# 目標\n\n`colors` というリストを作って、2番目のデータ（番号は1）を表示してみましょう。\n\n**入力するコードのヒント：**\n```python\ncolors = ['あか', 'あお']\nprint(colors[1])\n```"
+          "title": "リストの番号は「0」から！",
+          "image": "/illustrations/python/list.png",
+          "content": "# 番号で指定しましょう\n\nリストの中身を取り出すときは、何番目かを指定します。プログラミングでは、**さいしょのデータは「0番」** と数えるルールなのです。\n\n```python\nmembers = ['勇者', '魔法使い', '戦士']\nprint(members[0])\n```\n=> 勇者"
         }
       ],
       "initialDisplayMode": "holey",
@@ -267,22 +274,25 @@ export const pythonData = {
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "もし〜なら（if）",
-          "content": "# コロン（:）を忘れずに\n\nPythonでは、`if` のあとに条件を入力して、最後に `:`（コロン）をつけるのがルールです。\n\n```python\nif score > 80:\n    print('すごい！')\n```"
+          "title": "条件分岐（じょうけんぶんき）とは？",
+          "image": "/illustrations/python/if.png",
+          "content": "# プログラムに判断をさせる\n\n状況によって動きを変えることを **条件分岐（じょうけんぶんき）** と呼びます。「もしテストが100点なら褒める」のように、プログラムに条件を与えてみましょう。"
         },
         {
-          "title": "やってみよう！",
-          "content": "# 目標\n\n`score` が `80` より大きいときに「ごうかく！」と表示してみましょう。\n\n**入力するコードのヒント：**\n```python\nscore = 100\nif score > 80:\n    print('ごうかく！')\n```"
+          "title": "もし〜なら（if）",
+          "image": "/illustrations/python/if.png",
+          "content": "# if の使い方\n\nPythonでは、`if` のあとに条件を入力して、最後に `:`（コロン）をつけるのがルールです。\n\n```python\ntemperature = 30\nif temperature >= 25:\n    print('今日はあついですね')\n```\n=> 今日はあついですね"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# score に 100 を入れる\nscore = 100\n# もし 80 より大きかったら\nif score > 80:\n    print('ごうかく！')",
-      "holeyCode": "# score に 100 を入れる\nscore = ___\n# もし 80 より大きかったら\nif score ___ 80:\n    print('___')",
+      "correctCode": "# score に 100 を入れる\nscore = 100\n# もし 80 より大きかったら\nif score > 80:\n    # メッセージを表示する\n    print('ごうかく！')",
+      "holeyCode": "# score に 100 を入れる\nscore = ___\n# もし 80 より大きかったら\nif score ___ 80:\n    # メッセージを表示する\n    print('___')",
       "correctLines": [
         "# score に 100 を入れる",
         "score = 100",
         "# もし 80 より大きかったら",
         "if score > 80:",
+        "    # メッセージを表示する",
         "    print('ごうかく！')"
       ],
       "lineHints": [
@@ -290,6 +300,7 @@ export const pythonData = {
         "score = 100 と入力しましょう。",
         null,
         "`>` を使います。さいごに `:` を忘れないでください！",
+        null,
         "`print('ごうかく！')` と入力しましょう。"
       ],
       "candidates": {
@@ -300,7 +311,7 @@ export const pythonData = {
           "print"
         ],
         "operators": [
-          ">
+          ">"
         ],
         "strings": [
           "ごうかく！"
@@ -323,24 +334,27 @@ export const pythonData = {
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "そうじゃなければ（else）",
-          "content": "# else の使い方\n\n条件にあてはまらなかったときの動きは `else:` を使って書きますよ。\n\n```python\nage = 18\nif age >= 20:\n    print('おとな')\nelse:\n    print('こども')\n```"
+          "title": "それ以外の場合は？",
+          "image": "/illustrations/python/if.png",
+          "content": "# else（エルス）の役割\n\n「もし〜なら」に当てはまらなかったときの動きを作るのが **else（エルス）** です。「合格でなければ不合格と出す」のように、2つのルートを作れます。"
         },
         {
-          "title": "やってみよう！",
-          "content": "# 目標\n\n`age` に `10` を入れて、`20` さい以上かどうかで表示を変えてみましょう。\n\n**入力するコードのヒント：**\n```python\nage = 10\nif age >= 20:\n    print('おとな')\nelse:\n    print('こども')\n```"
+          "title": "else の使い方",
+          "image": "/illustrations/python/if.png",
+          "content": "# 2つのルート\n\n条件にあてはまらなかったときの動きは `else:` を使って書きます。\n\n```python\nmoney = 500\nif money >= 1000:\n    print('買えます！')\nelse:\n    print('お金が足りません')\n```\n=> お金が足りません"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# age に 10 を入れる\nage = 10\n# 条件で分ける\nif age >= 20:\n    print('おとな')\nelse:\n    print('こども')",
-      "holeyCode": "# age に 10 を入れる\nage = ___\n# 条件で分ける\nif age >= 20:\n    print('おとな')\nelse:\n    print('___')",
+      "correctCode": "# age に 10 を入れる\nage = 10\n# 20さい以上かどうかで分ける\nif age >= 20:\n    print('おとな')\nelse:\n    # それ以外の場合\n    print('こども')",
+      "holeyCode": "# age に 10 を入れる\nage = ___\n# 20さい以上かどうかで分ける\nif age >= 20:\n    print('おとな')\nelse:\n    # それ以外の場合\n    print('___')",
       "correctLines": [
         "# age に 10 を入れる",
         "age = 10",
-        "# 条件で分ける",
+        "# 20さい以上かどうかで分ける",
         "if age >= 20:",
         "    print('おとな')",
         "else:",
+        "    # それ以外の場合",
         "    print('こども')"
       ],
       "lineHints": [
@@ -350,6 +364,7 @@ export const pythonData = {
         null,
         null,
         "else: と入力しましょう。 `:` を忘れないでください。",
+        null,
         "print('こども') と入力しましょう。"
       ],
       "candidates": {
@@ -380,21 +395,23 @@ export const pythonData = {
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "くりかえし（for）",
-          "content": "# 順番に取り出しましょう\n\nリストの中身を全部見たいときは `for` を使うと便利ですよ。\n\n```python\nfor 変数名 in リスト名:\n    やりたいこと\n```"
+          "title": "繰り返し（ループ）とは？",
+          "image": "/illustrations/python/loop.png",
+          "content": "# 作業を自動化する\n\n同じ処理を何度も繰り返すための仕組みが **ループ** です。リストの中身を一つずつ順番に全部チェックしたいときなどに非常に役立ちます。"
         },
         {
-          "title": "やってみよう！",
-          "content": "# 目標\n\n`names` というリストの中身を、ループで一つずつ表示してみましょう。\n\n**入力するコードのヒント：**\n```python\nnames = ['たろう', 'はなこ']\nfor name in names:\n    print(name)\n```"
+          "title": "くりかえし（for）",
+          "image": "/illustrations/python/loop.png",
+          "content": "# リストから順番に取り出す\n\nリストの中身を全部見たいときは `for` を使うと便利です。\n\n```python\nstations = ['東京', '品川', '横浜']\nfor s in stations:\n    print(s)\n```\n=> 東京\n=> 品川\n=> 横浜"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# リストを作る\nnames = ['たろう', 'はなこ']\n# 順番に取り出す\nfor name in names:\n    print(name)",
-      "holeyCode": "# リストを作る\nnames = ['たろう', 'はなこ']\n# 順番に取り出す\nfor ___ in ___:\n    print(___)",
+      "correctCode": "# リストを作る\nnames = ['たろう', 'はなこ']\n# 順番に取り出すループ\nfor name in names:\n    print(name)",
+      "holeyCode": "# リストを作る\nnames = ['たろう', 'はなこ']\n# 順番に取り出すループ\nfor ___ in ___:\n    print(___)",
       "correctLines": [
         "# リストを作る",
         "names = ['たろう', 'はなこ']",
-        "# 順番に取り出す",
+        "# 順番に取り出すループ",
         "for name in names:",
         "    print(name)"
       ],
@@ -422,18 +439,20 @@ export const pythonData = {
       ]
     },
     {
-      "title": "名前で探す「じしょ」辞書",
+      "title": "名前で探しましょう「じしょ」辞書",
       "description": "「辞書（じしょ）」というものを使うと、名前（キー）を指定してデータを取り出せます。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "キーワードで取り出しましょう",
-          "content": "# キー : あたい\n\n辞書は、キーワードとデータのセットになっていますよ。\n\n```python\nuser = {'name': 'たろう'}\nprint(user['name']) # 「たろう」が表示されます\n```"
+          "title": "マップ（辞書）とは？",
+          "image": "/illustrations/python/dict.png",
+          "content": "# キーワードで検索できる仕組み\n\n「言葉」と「その意味」のように、関連する2つの情報をセットにして保存できるのが **辞書** です。キーワードを使って目的のデータをすぐに見つけられます。"
         },
         {
-          "title": "やってみよう！",
-          "content": "# 目標\n\n`user` という辞書を作って、`'name'` の中身を表示してみましょう。\n\n**入力するコードのヒント：**\n```python\nuser = {'name': 'たろう'}\nprint(user['name'])\n```"
+          "title": "キーワードで取り出しましょう",
+          "image": "/illustrations/python/dict.png",
+          "content": "# キー : あたい\n\n辞書は、キーワードとデータのセットになっています。\n\n```python\ncity = {'name': '東京', 'population': 1400}\nprint(city['name'])\n```\n=> 東京"
         }
       ],
       "initialDisplayMode": "holey",
@@ -447,7 +466,7 @@ export const pythonData = {
       ],
       "lineHints": [
         null,
-        "{'name': 'たろう'} と入力しましょう。",
+        "{ 'name': 'たろう' } と入力しましょう。",
         null,
         "['name'] をつけて、特定のデータを取り出します。"
       ],
@@ -477,12 +496,14 @@ export const pythonData = {
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "関数を定義（ていぎ）する",
-          "content": "# def のあとに名前をつける\n\n関数を新しく作るときは `def` を使いますよ。作った関数は、あとで呼び出すと動くのです。\n\n```python\ndef aisatsu():\n    print('おはよう！')\n\naisatsu() # これで関数が動きますよ！\n```"
+          "title": "関数（かんすう）とは？",
+          "image": "/illustrations/python/function.png",
+          "content": "# 処理のパッケージ化\n\n一連の処理をひとまとめにして、名前をつけたものを **関数** と呼びます。一度作っておけば、何度でも再利用できる便利な「魔法の言葉」になります。"
         },
         {
-          "title": "やってみよう！",
-          "content": "# 目標\n\n`greet` という関数を定義（ていぎ）して、あとで呼び出してみましょう。\n\n**入力するコードのヒント：**\n```python\ndef greet():\n    print('こんにちは')\n\ngreet()\n```"
+          "title": "関数を定義（ていぎ）する",
+          "image": "/illustrations/python/function.png",
+          "content": "# def のあとに名前をつける\n\n関数を新しく作るときは `def` を使います。作った関数は、あとで呼び出すと動くのです。\n\n```python\ndef introduce():\n    print('私はロボットです')\n\nintroduce() # これで関数が動きます！\n```\n=> 私はロボットです"
         }
       ],
       "initialDisplayMode": "holey",
