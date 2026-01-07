@@ -68,8 +68,7 @@ export const luaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// x というはこに 10 を入れる\nlocal x = 10\n// 中身を表示する\nprint(x)",
-      "holeyCode": "// x というはこに 10 を入れる\nlocal x = ___
-// 中身を表示する\nprint(___)",
+      "holeyCode": "// x というはこに 10 を入れる\nlocal x = ___\n// 中身を表示する\nprint(___)",
       "correctLines": [
         "local x = 10",
         "print(x)"

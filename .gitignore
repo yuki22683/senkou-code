@@ -39,3 +39,6 @@ next-env.d.ts
 # Judge0 data
 judge0-data/
 client_secret_*.json
+
+# Auto Claude data directory
+.auto-claude/

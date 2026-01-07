@@ -25,13 +25,12 @@ export const elixirData = {
         {
           "title": "IO.puts を使いましょう",
           "image": "/illustrations/python/magic.png",
-          "content": "# メッセージを表示します\n\n画面に文字を出したいときは、`IO.puts` と入力して、そのあとに表示したい文字を続けます。\n\n**コード例：**\n```elixir\nIO.puts \"Hello, Elixir!\"
-```"
+          "content": "# メッセージを表示します\n\n画面に文字を出したいときは、`IO.puts` と入力して、そのあとに表示したい文字を続けます。\n\n**コード例：**\n```elixir\nIO.puts \\\"Hello, Elixir!\\\"\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "IO.puts \"Hello, Elixir!\"",
-      "holeyCode": "IO.puts \"___\"",
+      "correctCode": "IO.puts \\\"Hello, Elixir!\\\"",
+      "holeyCode": "IO.puts \\\"___\\\"",
       "correctLines": [
         "IO.puts \"Hello, Elixir!\""
       ],
@@ -69,8 +68,7 @@ export const elixirData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// x というはこに 10 を入れる\nx = 10\n// 中身を表示する\nIO.puts x",
-      "holeyCode": "// x というはこに 10 を入れる\nx = ___
-// 中身を表示する\nIO.puts ___",
+      "holeyCode": "// x というはこに 10 を入れる\nx = ___\n// 中身を表示する\nIO.puts ___",
       "correctLines": [
         "x = 10",
         "IO.puts x"

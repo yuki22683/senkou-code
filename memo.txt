@@ -1,7 +1,5 @@
 ・gemini cli ：yuki22683
 
-・SQL、Kotlin、Swift、Perl言語も対応したい。
 
-
-
+・画像ファイルのフォルダをpythonにしない。
 

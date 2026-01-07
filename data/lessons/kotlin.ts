@@ -25,24 +25,20 @@ export const kotlinData = {
         {
           "title": "println を使いましょう",
           "image": "/illustrations/python/magic.png",
-          "content": "# メッセージを表示します\n\n画面に文字を出して改行（かいぎょう）したいときは、`println()` という名前の関数を使います。カッコの中に表示したいものを入力しましょう。\n\n```kotlin\nprintln(\"Hello, World!\")
-```"
+          "content": "# メッセージを表示します\n\n画面に文字を出して改行（かいぎょう）したいときは、`println()` という名前の関数を使います。カッコの中に表示したいものを入力しましょう。\n\n```kotlin\nprintln(\\\"Hello, World!\\\")\n```"
         },
         {
           "title": "やってみましょう！",
           "image": "/illustrations/python/magic.png",
-          "content": "# 目標\n\n`println()` を使って `Hello, World!` と表示させてみましょう。\n\n**入力するコードのヒント：**
-```kotlin
-println(\"Hello, World!\")
-```"
+          "content": "# 目標\n\n`println()` を使って `Hello, World!` と表示させてみましょう。\n\n**入力するコードのヒント：**\n```kotlin\nprintln(\\\"Hello, World!\\\")\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// Hello, World!と出力する関数\nprintln(\"Hello, World!\")",
-      "holeyCode": "// Hello, World!と出力する関数\n___(\"Hello, World!\")",
+      "correctCode": "// Hello, World!と出力する関数\nprintln(\\\"Hello, World!\\\")",
+      "holeyCode": "// Hello, World!と出力する関数\n___(\\\"Hello, World!\\\")",
       "correctLines": [
         "// Hello, World!と出力する関数",
-        "println(\"Hello, World!\")"
+        "println(\\\"Hello, World!\\\")"
       ],
       "lineHints": [
         null,
