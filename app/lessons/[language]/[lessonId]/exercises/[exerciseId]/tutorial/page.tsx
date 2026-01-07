@@ -163,6 +163,17 @@ export default function TutorialPage() {
             {currentSlideData.title || "タイトルなし"}
           </h2>
 
+          {/* イラスト画像 */}
+          {currentSlideData.image && (
+            <div className="flex justify-center mb-4">
+              <img
+                src={currentSlideData.image}
+                alt={currentSlideData.title || "イラスト"}
+                className="max-w-full h-auto max-h-48 sm:max-h-64 md:max-h-80 object-contain rounded-lg"
+              />
+            </div>
+          )}
+
           <div className="prose prose-sm max-w-none">
             {typeof currentSlideData.content === 'string' ? (
               <ReactMarkdown
