@@ -293,24 +293,34 @@ export function MobileCodeEditor({
           (token.startsWith('`') && token.includes('${'));
 
         if (isStringWithInterpolation) {
-          // 文字列内の{...}や${...}や#{...}パターンを抽出
-          const fstringMatches = token.matchAll(/[#$]?\{([^}]+)\}/g);
-          for (const match of fstringMatches) {
-            const innerContent = match[1];
-            // 内部のドット記法やメソッド呼び出しも分割（例: s.name -> s, name）
-            const parts = innerContent.split(/[.\[\]()]+/).filter(p => p.trim() && /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(p));
-            expandedTokens.push(...parts);
-          }
-          // 中括弧を選択肢に追加（f-string/テンプレートリテラル用）
-          expandedTokens.push('{', '}');
-          // f-string/テンプレートリテラル内の文字列部分も選択肢に追加（{...}や${...}や#{...}を除いた部分）
-          const stringParts = token.replace(/[#$]?\{[^}]+\}/g, '').replace(/^['"`]|['"`]$/g, '');
-          if (stringParts.trim()) {
-            // カンマや記号で分割して個別に追加
-            const textParts = stringParts.split(/([,!?.:;])/);
-            for (const part of textParts) {
-              if (part.trim()) {
-                expandedTokens.push(part.trim());
+          // 文字列内の{...}や${...}や#{...}パターンを抽出して個別に候補に追加
+          // また、それらの前後の文字列も個別に候補に追加する
+          
+          // 分割用の正規表現
+          const splitRegex = /([#$]?\{[^}]+\})/g;
+          const parts = token.split(splitRegex);
+          
+          for (const part of parts) {
+            if (part.match(splitRegex)) {
+              // 中身を抽出 (例: {age} -> age)
+              const innerMatch = part.match(/[#$]?\{([^}]+)\}/);
+              if (innerMatch) {
+                const innerContent = innerMatch[1];
+                const subParts = innerContent.split(/[.\[\]()]+/).filter(p => p.trim() && /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(p));
+                expandedTokens.push(...subParts);
+              }
+              expandedTokens.push('{', '}');
+            } else {
+              // 文字列部分 (例: "私は)
+              const stringPart = part.replace(/^['"`]|['"`]$/g, '');
+              if (stringPart) {
+                // さらに記号などで細かく分ける
+                const textParts = stringPart.split(/([,!?.:;])/);
+                for (const tp of textParts) {
+                  if (tp.trim()) {
+                    expandedTokens.push(tp.trim());
+                  }
+                }
               }
             }
           }
@@ -614,7 +624,7 @@ export function MobileCodeEditor({
 
             // flex-wrapで自動的に折り返し、ボタンは内容に合わせたサイズに
             return (
-              <div className="flex flex-wrap w-full gap-1 sm:gap-2">
+              <div className="flex flex-wrap w-full gap-1 sm:gap-2 justify-center">
                 {suggestions.map((token, idx) => (
                   <button
                     key={`${token}-${idx}`}
