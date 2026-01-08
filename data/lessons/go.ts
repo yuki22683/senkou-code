@@ -71,7 +71,7 @@ export const goData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // 10 を代入する\n    x := 10\n    // x を表示する\n    fmt.Println(x)\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // 10 を代入する\n    x := ___\n    // x を表示する\n    fmt.Println(___)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // 10 を代入する\n    x := 10\n    // x を表示する\n    fmt.Println(x)\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -423,7 +423,7 @@ export const goData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // string をキーの型に指定\n    scores := map[string]int{\"Math\": 90}\n    // Math をキーに指定\n    fmt.Println(scores[\"Math\"])\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // string をキーの型に指定\n    scores := map[___]int{\"Math\": 90}\n    // Math をキーに指定\n    fmt.Println(scores[\"___\"])\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // string をキーの型に指定\n    scores := map[string]int{\"Math\": 90}\n    // 'Math' をキーに指定\n    fmt.Println(scores[\"Math\"])\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",

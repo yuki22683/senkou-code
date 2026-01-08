@@ -223,7 +223,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int nums[] = {10, 20};\n    // 2番目（番号は1）を出す\n    printf(\"%d\\n\", nums[1]);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    int nums[] = {10, 20};\n    // 1 と入力（2番目の番号は1）\n    printf(\"%d\\n\", nums[___]);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\nint main() {\n    int nums[] = {10, 20};\n    // 2番目の要素の番号（1）を入力\n    printf(\"%d\\n\", nums[___]);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",

@@ -166,7 +166,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "function createUser($name, $age) {\n    return ['name' => $name, 'age' => $age];\n}\n// ageとnameで名前付き引数を指定\n$user = createUser(age: 30, name: 'Alice');",
-      "holeyCode": "function createUser($name, $age) {\n    return ['name' => $name, 'age' => $age];\n}\n// ageとnameで名前付き引数を指定\n$user = createUser(___: 30, ___: 'Alice');",
+      "holeyCode": "function createUser($name, $age) {\n    return ['name' => $name, 'age' => $age];\n}\n// age, nameの順で名前付き引数を指定\n$user = createUser(age: 30, name: 'Alice');",
       "correctLines": [
         { "lineNumber": 4, "content": "$user = createUser(age: 30, name: 'Alice');" }
       ],
@@ -253,7 +253,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// name、age、cityに分割代入\n[$name, $age, $city] = ['Alice', 25, 'Tokyo'];",
-      "holeyCode": "// name、age、cityに分割代入\n[$___, $___, $___] = ['Alice', 25, 'Tokyo'];",
+      "holeyCode": "// name、age、cityの順に分割代入\n[$name, $age, $city] = ['Alice', 25, 'Tokyo'];",
       "correctLines": [
         { "lineNumber": 1, "content": "[$name, $age, $city] = ['Alice', 25, 'Tokyo'];" }
       ],

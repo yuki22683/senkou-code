@@ -25,7 +25,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums=(10 20 30)\n# 2で3番目の要素を取得\necho ${nums[2]}",
-      "holeyCode": "nums=(10 20 30)\n# 2で3番目の要素を取得\necho ${nums[___]}",
+      "holeyCode": "nums=(10 20 30)\n# 3番目の要素の番号（2）を取得\necho ${nums[___]}",
       "correctLines": [
         "nums=(10 20 30)",
         "echo ${nums[2]}"

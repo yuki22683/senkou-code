@@ -224,7 +224,7 @@ export const pythonData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 文字列を用意\nword = 'Programming'\n# 最初の4文字を取り出す\nprint(word[0:4])",
-      "holeyCode": "# 文字列を用意\nword = 'Programming'\n# 最初の4文字を取り出す\nprint(word[___:___])",
+      "holeyCode": "# 文字列を用意\nword = 'Programming'\n# 最初の4文字（0から4の手前まで）を取り出す\nprint(word[0:4])",
       "correctLines": [
         "# 文字列を用意",
         "word = 'Programming'",

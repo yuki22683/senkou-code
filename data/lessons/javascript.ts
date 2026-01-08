@@ -228,10 +228,10 @@ export const javascriptData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// colors という配列を作る\nconst colors = ['あか', 'あお'];\n// 2番目のデータ（番号は1）を出す\nconsole.log(colors[1]);",
-      "holeyCode": "// colors という配列を作る\nconst colors = ['___', '___'];\n// 2番目のデータ（番号は1）を出す\nconsole.log(colors[___]);",
+      "correctCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst colors = ['あか', 'あお'];\n// 2番目のデータ（番号は1）を出す\nconsole.log(colors[1]);",
+      "holeyCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst colors = ['___', '___'];\n// 2番目のデータ（番号は1）を出す\nconsole.log(colors[___]);",
       "correctLines": [
-        "// colors という配列を作る",
+        "// 'あか', 'あお' の順で colors という配列を作る",
         "const colors = ['あか', 'あお'];",
         "// 2番目のデータ（1番）を出す",
         "console.log(colors[1]);"
@@ -462,10 +462,10 @@ export const javascriptData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// オブジェクトを作る\nconst user = { name: 'たろう' };\n// 名前の中身を出す\nconsole.log(user.name);",
-      "holeyCode": "// オブジェクトを作る\nconst user = { ___: '___' };\n// 名前の中身を出す\nconsole.log(user.name);",
+      "correctCode": "// オブジェクトを作る（nameは'たろう'）\nconst user = { name: 'たろう' };\n// 名前の中身を出す\nconsole.log(user.name);",
+      "holeyCode": "// オブジェクトを作る（nameは'たろう'）\nconst user = { ___: '___' };\n// 名前の中身を出す\nconsole.log(user.name);",
       "correctLines": [
-        "// オブジェクトを作る",
+        "// オブジェクトを作る（nameは'たろう'）",
         "const user = { name: 'たろう' };",
         "// 名前の中身を出す",
         "console.log(user.name);"
@@ -513,10 +513,10 @@ export const javascriptData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// greet という関数を定義する\nfunction greet() {\n    console.log('こんにちは');\n}\n// 関数を動かす\ngreet();",
-      "holeyCode": "// greet という関数を定義する\nfunction ___() {\n    console.log('___');\n}\n// 関数を動かす\n___();",
+      "correctCode": "// greet という関数を定義する（'こんにちは'と表示）\nfunction greet() {\n    console.log('こんにちは');\n}\n// 関数を動かす\ngreet();",
+      "holeyCode": "// greet という関数を定義する（'こんにちは'と表示）\nfunction ___() {\n    console.log('___');\n}\n// 関数を動かす\n___();",
       "correctLines": [
-        "// greet という関数を定義する",
+        "// greet という関数を定義する（'こんにちは'と表示）",
         "function greet() {",
         "    console.log('こんにちは');",
         "}",

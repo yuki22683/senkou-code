@@ -73,7 +73,7 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Bashと入力する\nname=\"Bash\"\n# nameと入力する\necho $name",
-      "holeyCode": "# Bashと入力する\nname=\"___\"\n# nameと入力する\necho $___",
+      "holeyCode": "# 'Bash' と入力する\nname=\"___\"\n# はこの名前 'name' と入力する\necho $___",
       "correctLines": [
         "# name というはこに Bash と入れる",
         "name=\"Bash\"",

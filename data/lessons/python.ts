@@ -231,10 +231,10 @@ export const pythonData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# colors というリストを作る\ncolors = ['あか', 'あお']\n# 2番目のデータ（1番）を出す\nprint(colors[1])",
-      "holeyCode": "# colors というリストを作る\ncolors = ['___', '___']\n# 2番目のデータ（1番）を出す\nprint(colors[___])",
+      "correctCode": "# colors というリストを作る（'あか', 'あお'の順）\ncolors = ['あか', 'あお']\n# 2番目のデータ（1番）を出す\nprint(colors[1])",
+      "holeyCode": "# colors というリストを作る（'あか', 'あお'の順）\ncolors = ['___', '___']\n# 2番目のデータ（1番）を出す\nprint(colors[___])",
       "correctLines": [
-        "# colors というリストを作る",
+        "# colors というリストを作る（'あか', 'あお'の順）",
         "colors = ['あか', 'あお']",
         "# 2番目のデータ（1番）を出す",
         "print(colors[1])"
@@ -456,10 +456,10 @@ export const pythonData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 辞書を作る\nuser = {'name': 'たろう'}\n# 中身を出す\nprint(user['name'])",
-      "holeyCode": "# 辞書を作る\nuser = {'___': '___'}\n# 中身を出す\nprint(user['___'])",
+      "correctCode": "# 辞書を作る（キーは'name'、値は'たろう'）\nuser = {'name': 'たろう'}\n# 中身を出す\nprint(user['name'])",
+      "holeyCode": "# 辞書を作る（キーは'name'、値は'たろう'）\nuser = {'___': '___'}\n# 中身を出す\nprint(user['___'])",
       "correctLines": [
-        "# 辞書を作る",
+        "# 辞書を作る（キーは'name'、値は'たろう'）",
         "user = {'name': 'たろう'}",
         "# 中身を出す",
         "print(user['name'])"
@@ -507,10 +507,10 @@ export const pythonData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# greet という関数を定義する\ndef greet():\n    print('こんにちは')\n# 関数を呼び出す\ngreet()",
-      "holeyCode": "# greet という関数を定義する\ndef ___():\n    print('___')\n# 関数を呼び出す\n___()",
+      "correctCode": "# greet という関数を定義する（'こんにちは'と表示）\ndef greet():\n    print('こんにちは')\n# 関数を呼び出す\ngreet()",
+      "holeyCode": "# greet という関数を定義する（'こんにちは'と表示）\ndef ___():\n    print('___')\n# 関数を呼び出す\n___()",
       "correctLines": [
-        "# greet という関数を定義する",
+        "# greet という関数を定義する（'こんにちは'と表示）",
         "def greet():",
         "    print('こんにちは')",
         "# 関数を呼び出す",

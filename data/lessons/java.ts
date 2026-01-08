@@ -247,12 +247,12 @@ export const javaData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // 文字の配列を作る\n        String[] colors = {\"あか\", \"あお\"};\n        // 2番目（番号は1）を出す\n        System.out.println(colors[1]);\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // \"あか\" と \"あお\" の配列を作る\n        String[] colors = {___, ___};\n        // 添字 1 で2番目を出す\n        System.out.println(colors[___]);\n    }\n}",
+      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // \"あか\", \"あお\" の順で文字の配列を作る\n        String[] colors = {\"あか\", \"あお\"};\n        // 2番目（番号は1）を出す\n        System.out.println(colors[1]);\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // \"あか\", \"あお\" の順で配列を作る\n        String[] colors = {___, ___};\n        // 添字 1 で2番目を出す\n        System.out.println(colors[___]);\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
-        "        // 文字の配列を作る",
+        "        // \"あか\", \"あお\" の順で文字の配列を作る",
         "        String[] colors = {\"あか\", \"あお\"};",
         "        // 2番目（番号は1）を出す",
         "        System.out.println(colors[1]);",

@@ -408,7 +408,7 @@ export const typescriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// Userという名前のラベルを作る\ntype User = { name: string };\n// Userラベルを貼ったはこを作る\nconst user: User = { name: 'たろう' };\n// 中身を出す\nconsole.log(user.name);",
-      "holeyCode": "// Userという名前のラベルを作る\ntype User = { name: ___ };\n// Userラベルを貼ったはこを作る\nconst user: ___ = { name: 'たろう' };\n// 中身を出す\nconsole.log(user. ___ );",
+      "holeyCode": "// nameはstringであるUserという名前のラベルを作る\ntype User = { name: string };\n// Userラベルを貼ったはこを作る\nconst user: User = { name: 'たろう' };\n// nameプロパティを出す\nconsole.log(user.name);",
       "correctLines": [
         "// Userという名前のラベルを作る",
         "type User = { name: string };",

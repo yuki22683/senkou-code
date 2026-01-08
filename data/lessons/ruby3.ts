@@ -252,8 +252,8 @@ export const ruby3Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# Structで簡易クラス、nameとageは属性名\nPerson = Struct.new(:name, :age)",
-      "holeyCode": "# Structで簡易クラス、nameとageは属性名\nPerson = ___.new(:___, :___)",
+      "correctCode": "# Structで簡易クラス、name, ageの順で属性名\nPerson = Struct.new(:name, :age)",
+      "holeyCode": "# Structで簡易クラス、name, ageの順で属性名\nPerson = ___.new(:___, :___)",
       "correctLines": [
         { "lineNumber": 1, "content": "Person = Struct.new(:name, :age)" }
       ],

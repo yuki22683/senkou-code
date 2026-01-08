@@ -231,7 +231,11 @@ export const cppData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <map>\n#include <string>\nint main() {\n    // マップのはこを作る\n    std::map<std::string, int> scores;\n    scores[\"Math\"] = 90;\n    // キーを指定して表示する\n    std::cout << scores[\"Math\"] << std::endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <map>\n#include <string>\nint main() {\n    std::map<std::string, int> scores;\n    // Math と入力（キー名）\n    scores[\"___\"] = 90;\n    // Math と入力（同じキー名）\n    std::cout << scores[\"___\"] << std::endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <map>\n#include <string>\nint main() {\n    std::map<std::string, int> scores;
+    // 'Math' と入力（キー名）
+    scores["Math"] = 90;
+    // 'Math' と入力（同じキー名）
+    std::cout << scores["Math"] << std::endl;\n    return 0;\n}",
       "correctLines": ["#include <iostream>", "#include <map>", "#include <string>", "int main() {", "    std::map<std::string, int> scores;", "    scores[\"Math\"] = 90;", "    std::cout << scores[\"Math\"] << std::endl;", "    return 0;", "}"],
       "lineHints": [null, null, null, null, null, "名前（キー）として \"Math\" と入力します。", "同じく \"Math\" と入力してデータを取り出します。"],
       "candidates": { "strings": ["Math"] },
