@@ -14,18 +14,18 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "ブロックとは？",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# コードのかたまり\n\n**ブロック** は、メソッドに渡すコードのかたまりです。`do...end` または `{ }` で囲みます。Rubyの強力な機能です。"
         },
         {
           "title": "each メソッド",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# 配列を順番に処理\n\n`each` は、配列の各要素を順番に処理します。`|変数|` で現在の要素を受け取ります。\n\n**コード例：**\n```ruby\n[1, 2, 3].each do |n|\n  puts n\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "nums = [1, 2, 3]\nnums.each do |n|\n  puts n\nend",
-      "holeyCode": "nums = [1, 2, 3]\nnums.___ do |n|\n  puts n\nend",
+      "correctCode": "nums = [1, 2, 3]\n# eachで各要素を処理\nnums.each do |n|\n  puts n\nend",
+      "holeyCode": "nums = [1, 2, 3]\n# eachで各要素を処理\nnums.___ do |n|\n  puts n\nend",
       "correctLines": [
         "nums = [1, 2, 3]",
         "nums.each do |n|",
@@ -56,18 +56,18 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "map とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 各要素を変換\n\n**map** は、配列の各要素を変換して新しい配列を作ります。元の配列は変わりません。"
         },
         {
           "title": "map の使い方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 新しい配列を返す\n\nブロックの結果が新しい配列の要素になります。\n\n**コード例：**\n```ruby\n[1, 2, 3].map { |n| n * 2 }\n# => [2, 4, 6]\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "nums = [1, 2, 3]\ndoubled = nums.map { |n| n * 2 }\nputs doubled",
-      "holeyCode": "nums = [1, 2, 3]\ndoubled = nums.___ { |n| n * 2 }\nputs doubled",
+      "correctCode": "nums = [1, 2, 3]\n# mapで各要素を変換\ndoubled = nums.map { |n| n * 2 }\nputs doubled",
+      "holeyCode": "nums = [1, 2, 3]\n# mapで各要素を変換\ndoubled = nums.___ { |n| n * 2 }\nputs doubled",
       "correctLines": [
         "nums = [1, 2, 3]",
         "doubled = nums.map { |n| n * 2 }",
@@ -96,18 +96,18 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "select とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 条件でフィルタ\n\n**select** は、条件を満たす要素だけを集めた新しい配列を作ります。"
         },
         {
           "title": "select の使い方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 真になる要素を選ぶ\n\nブロックが真を返す要素だけが残ります。\n\n**コード例：**\n```ruby\n[1, 2, 3, 4, 5].select { |n| n > 3 }\n# => [4, 5]\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "nums = [1, 2, 3, 4, 5]\nbig = nums.select { |n| n >= 3 }\nputs big",
-      "holeyCode": "nums = [1, 2, 3, 4, 5]\nbig = nums.___ { |n| n >= 3 }\nputs big",
+      "correctCode": "nums = [1, 2, 3, 4, 5]\n# selectで条件に合う要素を抽出\nbig = nums.select { |n| n >= 3 }\nputs big",
+      "holeyCode": "nums = [1, 2, 3, 4, 5]\n# selectで条件に合う要素を抽出\nbig = nums.___ { |n| n >= 3 }\nputs big",
       "correctLines": [
         "nums = [1, 2, 3, 4, 5]",
         "big = nums.select { |n| n >= 3 }",
@@ -136,18 +136,18 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "シンボルとは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 軽量な名前\n\n**シンボル** は `:名前` で表す軽量な識別子です。文字列より効率的で、ハッシュのキーによく使います。"
         },
         {
           "title": "シンボルの使い方",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# ハッシュのキーに最適\n\nシンボルは同じ名前なら同じオブジェクトを指すため、メモリ効率が良いです。\n\n**コード例：**\n```ruby\nperson = { name: 'Taro', age: 20 }\nputs person[:name] # Taro\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "item = { name: 'Apple', price: 100 }\nputs item[:price]",
-      "holeyCode": "item = { name: 'Apple', price: 100 }\nputs item[___price]",
+      "correctCode": "item = { name: 'Apple', price: 100 }\n# :でシンボルを指定してアクセス\nputs item[:price]",
+      "holeyCode": "item = { name: 'Apple', price: 100 }\n# :でシンボルを指定してアクセス\nputs item[___price]",
       "correctLines": [
         "item = { name: 'Apple', price: 100 }",
         "puts item[:price]"
@@ -174,18 +174,18 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "クラスとは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# オブジェクトの設計図\n\n**クラス** は、データと機能をまとめた設計図です。`class` キーワードで定義します。"
         },
         {
           "title": "initialize メソッド",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# コンストラクタ\n\n`initialize` は、オブジェクト作成時に自動で呼ばれます。`@` で始まるのがインスタンス変数です。\n\n**コード例：**\n```ruby\nclass Dog\n  def initialize(name)\n    @name = name\n  end\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Cat\n  def initialize(name)\n    @name = name\n  end\n  def greet\n    puts @name\n  end\nend\ncat = Cat.new('Tama')\ncat.greet",
-      "holeyCode": "___ Cat\n  def initialize(name)\n    @name = name\n  end\n  def greet\n    puts @name\n  end\nend\ncat = Cat.new('Tama')\ncat.greet",
+      "correctCode": "# classでクラスを定義\nclass Cat\n  def initialize(name)\n    @name = name\n  end\n  def greet\n    puts @name\n  end\nend\ncat = Cat.new('Tama')\ncat.greet",
+      "holeyCode": "# classでクラスを定義\n___ Cat\n  def initialize(name)\n    @name = name\n  end\n  def greet\n    puts @name\n  end\nend\ncat = Cat.new('Tama')\ncat.greet",
       "correctLines": [
         "class Cat",
         "  def initialize(name)",
@@ -228,18 +228,18 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "attr_accessor とは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 自動でメソッドを作成\n\n`attr_accessor` は、インスタンス変数の読み書き用メソッドを自動で作ってくれます。"
         },
         {
           "title": "アクセサの種類",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 3種類のアクセサ\n\n- `attr_reader` : 読み取りのみ\n- `attr_writer` : 書き込みのみ\n- `attr_accessor` : 両方\n\n**コード例：**\n```ruby\nclass Person\n  attr_accessor :name\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Item\n  attr_accessor :price\nend\nitem = Item.new\nitem.price = 200\nputs item.price",
-      "holeyCode": "class Item\n  ___ :price\nend\nitem = Item.new\nitem.price = 200\nputs item.price",
+      "correctCode": "class Item\n  # attr_accessorで読み書き可能に\n  attr_accessor :price\nend\nitem = Item.new\nitem.price = 200\nputs item.price",
+      "holeyCode": "class Item\n  # attr_accessorで読み書き可能に\n  ___ :price\nend\nitem = Item.new\nitem.price = 200\nputs item.price",
       "correctLines": [
         "class Item",
         "  attr_accessor :price",
@@ -274,16 +274,18 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "継承とは？",
+          "image": "/illustrations/3d_advanced/inheritance.png",
           "content": "# クラスの拡張\n\n**継承** を使うと、親クラスの機能を引き継いだ子クラスを作れます。`<` で親クラスを指定します。"
         },
         {
           "title": "継承の書き方",
+          "image": "/illustrations/3d_advanced/inheritance.png",
           "content": "# < で継承\n\n子クラスは親クラスのメソッドを使えます。\n\n**コード例：**\n```ruby\nclass Animal\n  def speak\n    puts 'sound'\n  end\nend\nclass Dog < Animal\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Vehicle\n  def move\n    puts 'moving'\n  end\nend\nclass Car < Vehicle\nend\ncar = Car.new\ncar.move",
-      "holeyCode": "class Vehicle\n  def move\n    puts 'moving'\n  end\nend\nclass Car ___ Vehicle\nend\ncar = Car.new\ncar.move",
+      "correctCode": "class Vehicle\n  def move\n    puts 'moving'\n  end\nend\n# <で親クラスを継承\nclass Car < Vehicle\nend\ncar = Car.new\ncar.move",
+      "holeyCode": "class Vehicle\n  def move\n    puts 'moving'\n  end\nend\n# <で親クラスを継承\nclass Car ___ Vehicle\nend\ncar = Car.new\ncar.move",
       "correctLines": [
         "class Vehicle",
         "  def move",
@@ -324,16 +326,18 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "モジュールとは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 機能の入れ物\n\n**モジュール** は、メソッドをまとめた入れ物です。`include` でクラスに取り込めます。多重継承の代わりに使います。"
         },
         {
           "title": "include でミックスイン",
+          "image": "/illustrations/3d/robot.png",
           "content": "# モジュールを取り込む\n\nクラス内で `include モジュール名` と書きます。\n\n**コード例：**\n```ruby\nmodule Greet\n  def hello\n    puts 'hello'\n  end\nend\nclass Person\n  include Greet\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "module Speakable\n  def speak\n    puts 'speaking'\n  end\nend\nclass Robot\n  include Speakable\nend\nrobot = Robot.new\nrobot.speak",
-      "holeyCode": "___ Speakable\n  def speak\n    puts 'speaking'\n  end\nend\nclass Robot\n  include Speakable\nend\nrobot = Robot.new\nrobot.speak",
+      "correctCode": "# moduleでモジュールを定義\nmodule Speakable\n  def speak\n    puts 'speaking'\n  end\nend\nclass Robot\n  include Speakable\nend\nrobot = Robot.new\nrobot.speak",
+      "holeyCode": "# moduleでモジュールを定義\n___ Speakable\n  def speak\n    puts 'speaking'\n  end\nend\nclass Robot\n  include Speakable\nend\nrobot = Robot.new\nrobot.speak",
       "correctLines": [
         "module Speakable",
         "  def speak",
@@ -376,18 +380,18 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "例外処理とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# エラーに対処\n\n**例外処理** を使うと、エラーが起きてもプログラムを止めずに対処できます。`begin-rescue-end` を使います。"
         },
         {
           "title": "begin-rescue",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# エラーを捕まえる\n\n`begin` ブロックでエラーが起きると、`rescue` ブロックが実行されます。\n\n**コード例：**\n```ruby\nbegin\n  1 / 0\nrescue => e\n  puts 'Error!'\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "begin\n  raise 'oops'\nrescue => e\n  puts 'caught'\nend",
-      "holeyCode": "begin\n  raise 'oops'\n___ => e\n  puts 'caught'\nend",
+      "correctCode": "begin\n  raise 'oops'\n# rescueで例外を捕捉\nrescue => e\n  puts 'caught'\nend",
+      "holeyCode": "begin\n  raise 'oops'\n# rescueで例外を捕捉\n___ => e\n  puts 'caught'\nend",
       "correctLines": [
         "begin",
         "  raise 'oops'",
@@ -420,16 +424,18 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "ラムダとは？",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 無名関数\n\n**ラムダ** は、名前をつけずに定義する関数です。`->` または `lambda` で作ります。"
         },
         {
           "title": "ラムダの使い方",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# -> で定義\n\n`-> { 処理 }` で定義し、`.call` で実行します。\n\n**コード例：**\n```ruby\nadd = ->(a, b) { a + b }\nputs add.call(2, 3) # 5\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "double = ->(n) { n * 2 }\nputs double.call(5)",
-      "holeyCode": "double = ___(n) { n * 2 }\nputs double.call(5)",
+      "correctCode": "# ->でラムダを定義\ndouble = ->(n) { n * 2 }\nputs double.call(5)",
+      "holeyCode": "# ->でラムダを定義\ndouble = ___(n) { n * 2 }\nputs double.call(5)",
       "correctLines": [
         "double = ->(n) { n * 2 }",
         "puts double.call(5)"

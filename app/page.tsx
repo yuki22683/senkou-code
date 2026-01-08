@@ -7,6 +7,11 @@ import { useEffect, useState, Fragment, useMemo, Suspense } from "react";
 import HomeWrapper from "@/components/layout/HomeWrapper";
 import RandomAffiliateBanner from "@/components/home/RandomAffiliateBanner";
 import { AmazonAdCard, AmazonAdType } from "@/components/home/AmazonAdCard";
+import Image from "next/image";
+
+type GridItem =
+  | { type: 'lang'; lang: typeof LANGUAGES[number] }
+  | { type: 'ad'; adType: AmazonAdType };
 
 function HomePageContent() {
   const searchParams = useSearchParams();
@@ -26,7 +31,7 @@ function HomePageContent() {
   // Mix Amazon ads into the language grid
   const items = useMemo(() => {
     // マウント前は空か固定の配列を返す
-    if (!isMounted) return LANGUAGES.map(lang => ({ type: 'lang', lang }));
+    if (!isMounted) return LANGUAGES.map(lang => ({ type: 'lang' as const, lang }));
     
     const adTypes: AmazonAdType[] = ['book', 'furusato', 'ranking', 'timesale'];
     
@@ -37,7 +42,7 @@ function HomePageContent() {
     const totalAds = shuffledAds.length;
     const totalItems = totalLanguages + totalAds;
     
-    const result: any[] = [];
+    const result: GridItem[] = [];
     const adPositions = new Set<number>();
     let attempts = 0;
     while (adPositions.size < totalAds && attempts < 100) {
@@ -84,14 +89,25 @@ function HomePageContent() {
           )}
 
           <div className="text-center mb-8 sm:mb-12">
-            <h1 className="text-3xl sm:text-5xl font-bold mb-2 sm:mb-4 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+            <div className="flex justify-center mb-6">
+              <div className="relative w-48 h-48 sm:w-64 sm:h-64 animate-bounce-slow">
+                <Image 
+                  src="/illustrations/decorations/hero_programming.png" 
+                  alt="Programming Hero" 
+                  fill 
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
+            <h1 className="text-4xl sm:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
               閃光コード
             </h1>
-            <p className="text-base sm:text-xl text-muted-foreground mb-2 sm:mb-4">
+            <p className="text-lg sm:text-2xl text-muted-foreground mb-4 font-medium">
               完全無料のプログラミング演習プラットフォーム
             </p>
-            <p className="text-xs sm:text-sm text-gray-600">
-              学びたい言語を選んで、今すぐ学習を始めましょう！
+            <p className="text-sm sm:text-base text-gray-500">
+              最新のAI技術と直感的なインターフェースで、楽しく学ぼう。
             </p>
           </div>
 

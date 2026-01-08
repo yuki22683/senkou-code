@@ -47,8 +47,9 @@ export default async function ExercisesPage({ params }: PageProps) {
     console.error('Error fetching exercises:', exercisesError);
   }
 
-  // ユーザーの進捗を取得
+  // ユーザーのログイン状態を取得
   const { data: { user } } = await supabase.auth.getUser();
+  const isLoggedIn = !!user;
   let progressMap: Record<string, any> = {};
 
   if (user && exercises) {
@@ -136,7 +137,13 @@ export default async function ExercisesPage({ params }: PageProps) {
           </div>
         </div>
 
-        {!exercises || exercises.length === 0 ? (
+        {!isLoggedIn ? (
+          <div className="text-center py-12">
+            <p className="text-muted-foreground text-lg">
+              レッスンを始めるにはログインが必要です。
+            </p>
+          </div>
+        ) : !exercises || exercises.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-muted-foreground text-lg">
               このレッスンの演習は準備中です

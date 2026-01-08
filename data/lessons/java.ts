@@ -25,7 +25,7 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // 画面にメッセージを出す関数\n        System.out.println(\"Hello, Java!\");\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // 画面にメッセージを出す関数\n        System.out.println(\"___\");\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // Hello, Java! と出力する\n        System.out.println(\"___\");\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -75,7 +75,7 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // String（文字）ラベルを貼ったはこを作る\n        String name = \"Java\";\n        System.out.println(name);\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // String（文字）ラベルを貼ったはこを作る\n        String name = \"___\" ;\n        System.out.println(___);\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // 文字列 Java を代入する\n        String name = \"___\" ;\n        // 変数 name を出力する\n        System.out.println(___);\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -125,12 +125,13 @@ export const javaData = {
         },
         {
           "title": "数字のラベル",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# int（イント）型\n\n整数をしまっておきたいときは、`int` というラベルを使います。\n\n**コード例：**\n```java\nint base = 100;\nint bonus = 50;\nSystem.out.println(base + bonus);\n```\n=> 150"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // int（数字）ラベルのはこを作る\n        int x = 10;\n        int y = 5;\n        // たし算した答えを出す\n        System.out.println(x + y);\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // int（数字）ラベルのはこを作る\n        int x = ___ ;\n        int y = ___ ;\n        // たし算した答えを出す\n        System.out.println(x ___ y);\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // x に 10 を代入する\n        int x = ___ ;\n        // y に 5 を代入する\n        int y = ___ ;\n        // + でたし算した答えを出す\n        System.out.println(x ___ y);\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -192,7 +193,7 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // age というはこに 10 を入れる\n        int age = 10;\n        // 文字と変数をくっつけて表示する\n        System.out.println(\"私は\" + age + \"歳です\");\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // age というはこに 10 を入れる\n        int age = 10;\n        // 文字と変数をくっつけて表示する\n        System.out.println(\"私は\" + ___ + \"歳です\");\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // age というはこに 10 を入れる\n        int age = 10;\n        // 変数 age をくっつけて表示する\n        System.out.println(\"私は\" + ___ + \"歳です\");\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -247,7 +248,7 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // 文字の配列を作る\n        String[] colors = {\"あか\", \"あお\"};\n        // 2番目（番号は1）を出す\n        System.out.println(colors[1]);\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // 文字の配列を作る\n        String[] colors = {___, ___};\n        // 2番目（番号は1）を出す\n        System.out.println(colors[___]);\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // \"あか\" と \"あお\" の配列を作る\n        String[] colors = {___, ___};\n        // 添字 1 で2番目を出す\n        System.out.println(colors[___]);\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -306,7 +307,7 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // score に 100 を入れる\n        int score = 100;\n        // もし 80 より大きかったら\n        if (score > 80) {\n            // メッセージを表示する\n            System.out.println(\"ごうかく！\");\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // score に 100 を入れる\n        int score = 100;\n        // もし 80 より大きかったら\n        if (score ___ 80) {\n            // メッセージを表示する\n            System.out.println(\"___\");\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // score に 100 を入れる\n        int score = 100;\n        // > で80より大きいか比較する\n        if (score ___ 80) {\n            // ごうかく！ と表示する\n            System.out.println(\"___\");\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -367,7 +368,7 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // age に 10 を入れる\n        int age = 10;\n        // 20さい以上かどうかで分ける\n        if (age >= 20) {\n            System.out.println(\"おとな\");\n        } else {\n            // それ以外の場合\n            System.out.println(\"こども\");\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // age に 10 を入れる\n        int age = 10;\n        // 20さい以上かどうかで分ける\n        if (age >= 20) {\n            System.out.println(\"おとな\");\n        } ___ {\n            // それ以外の場合\n            System.out.println(\"___\");\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // age に 10 を入れる\n        int age = 10;\n        // 20さい以上かどうかで分ける\n        if (age >= 20) {\n            System.out.println(\"おとな\");\n        // else でそれ以外の場合\n        } ___ {\n            // こども と表示する\n            System.out.println(\"___\");\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -430,7 +431,7 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // 配列を作る\n        String[] names = {\"たろう\", \"はなこ\"};\n        // 順番に取り出すループ\n        for (String name : names) {\n            System.out.println(name);\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // 配列を作る\n        String[] names = {\"たろう\", \"はなこ\"};\n        // 順番に取り出すループ\n        for (String ___ : ___) {\n            System.out.println(name);\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // 配列を作る\n        String[] names = {\"たろう\", \"はなこ\"};\n        // 変数 name で配列 names を順番に取り出す\n        for (String ___ : ___) {\n            System.out.println(name);\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -480,13 +481,13 @@ export const javaData = {
         },
         {
           "title": "HashMap（ハッシュマップ）",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。使うときは、さいしょに `import`（インポート）という準備が必要です。\n\n**コード例：**\n```java\nimport java.util.HashMap;\n\nHashMap<String, String> items = new HashMap<>();\nitems.put(\"apple\", \"red\");\nSystem.out.println(items.get(\"apple\"));\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        // HashMapのはこを作る\n        HashMap<String, String> user = new HashMap<>();\n        // データを追加する\n        user.put(\"name\", \"たろう\");\n        // データを取り出す\n        System.out.println(user.get(\"name\"));\n    }\n}",
-      "holeyCode": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        // HashMapのはこを作る\n        HashMap<String, String> user = new ___<>();\n        // データを追加する\n        user.___(\"name\", \"たろう\");\n        // データを取り出す\n        System.out.println(user.___(\"name\"));\n    }\n}",
+      "holeyCode": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        // new HashMap で作る\n        HashMap<String, String> user = new ___<>();\n        // put でデータを追加する\n        user.___(\"name\", \"たろう\");\n        // get でデータを取り出す\n        System.out.println(user.___(\"name\"));\n    }\n}",
       "correctLines": [
         "import java.util.HashMap;",
         "public class Main {",
@@ -537,18 +538,18 @@ export const javaData = {
       "tutorialSlides": [
         {
           "title": "メソッド（関数）とは？",
-          "image": "/illustrations/common/function.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# 処理のパッケージ化\n\nやりたいことをひとまとめにして、名前をつけたものを **メソッド** と呼びます。一度作っておけば、どこからでも呼び出せる便利なショートカットのようなものです。"
         },
         {
           "title": "関数（メソッド）を定義する",
-          "image": "/illustrations/common/function.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# メソッドの定義\n\nやりたいことをひとまとめにして、名前を付けることができます。Javaでは `public static void 名前() { ... }` のように入力します。\n\n**コード例：**\n```java\npublic static void sayHello() {\n    System.out.println(\"ヤッホー！\");\n}\n\nsayHello();\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    // greet というメソッドを定義する\n    public static void greet() {\n        System.out.println(\"こんにちは\");\n    }\n    public static void main(String[] args) {\n        // メソッドを動かす\n        greet();\n    }\n}",
-      "holeyCode": "public class Main {\n    // greet というメソッドを定義する\n    public static void ___() {\n        System.out.println(\"こんにちは\");\n    }\n    public static void main(String[] args) {\n        // メソッドを動かす\n        ___();\n    }\n}",
+      "holeyCode": "public class Main {\n    // greet というメソッドを定義する\n    public static void ___() {\n        System.out.println(\"こんにちは\");\n    }\n    public static void main(String[] args) {\n        // greet メソッドを呼び出す\n        ___();\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    // greet というメソッドを定義する",

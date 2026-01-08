@@ -14,18 +14,18 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "Null安全とは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# NullPointerException を防ぐ\n\nKotlinでは、デフォルトで変数に `null` を入れられません。`?` をつけると null を許可します。"
         },
         {
           "title": "nullable 型",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# 型の後に ?\n\n`String?` は null を許可する型です。\n\n**コード例：**\n```kotlin\nvar name: String? = \"Taro\"\nname = null // OK\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "var num: Int? = 42\nif (num != null) {\n    println(num)\n}",
-      "holeyCode": "var num: Int___ = 42\nif (num != null) {\n    println(num)\n}",
+      "holeyCode": "// ? で nullable 型にする\nvar num: Int___ = 42\nif (num != null) {\n    println(num)\n}",
       "correctLines": [
         "var num: Int? = 42",
         "if (num != null) {",
@@ -56,18 +56,18 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "セーフコールとは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# null なら null を返す\n\n**?.** は、左側が null なら null を返し、そうでなければプロパティにアクセスします。"
         },
         {
           "title": "?. の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 安全なアクセス\n\nNullPointerException を防げます。\n\n**コード例：**\n```kotlin\nval name: String? = \"hello\"\nprintln(name?.length) // 5\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val text: String? = \"Hello\"\nprintln(text?.length)",
-      "holeyCode": "val text: String? = \"Hello\"\nprintln(text___length)",
+      "holeyCode": "val text: String? = \"Hello\"\n// ?. で安全にプロパティにアクセスする\nprintln(text___length)",
       "correctLines": [
         "val text: String? = \"Hello\"",
         "println(text?.length)"
@@ -94,18 +94,18 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "エルビス演算子とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# null のときの代替値\n\n**?:** は、左側が null なら右側の値を返します。デフォルト値の設定に便利です。"
         },
         {
           "title": "?: の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# シンプルな null 置換\n\n`a ?: b` は、a が null なら b を返します。\n\n**コード例：**\n```kotlin\nval name: String? = null\nprintln(name ?: \"Guest\") // Guest\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val value: Int? = null\nprintln(value ?: 0)",
-      "holeyCode": "val value: Int? = null\nprintln(value ___ 0)",
+      "holeyCode": "val value: Int? = null\n// ?: でデフォルト値を指定する\nprintln(value ___ 0)",
       "correctLines": [
         "val value: Int? = null",
         "println(value ?: 0)"
@@ -132,18 +132,18 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "データクラスとは？",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# データ用のクラス\n\n**data class** は、equals, hashCode, toString などを自動生成してくれる便利なクラスです。"
         },
         {
           "title": "data class の定義",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# data をつけるだけ\n\n`data class` でデータクラスを定義します。\n\n**コード例：**\n```kotlin\ndata class User(val name: String, val age: Int)\nval u = User(\"Taro\", 20)\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "data class Point(val x: Int, val y: Int)\nval p = Point(3, 4)\nprintln(p)",
-      "holeyCode": "___ class Point(val x: Int, val y: Int)\nval p = Point(3, 4)\nprintln(p)",
+      "holeyCode": "// data でデータクラスを定義する\n___ class Point(val x: Int, val y: Int)\nval p = Point(3, 4)\nprintln(p)",
       "correctLines": [
         "data class Point(val x: Int, val y: Int)",
         "val p = Point(3, 4)",
@@ -172,16 +172,18 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "ラムダ式とは？",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 無名関数\n\n**ラムダ式** は、名前をつけずに定義する関数です。`{ }` で囲んで書きます。"
         },
         {
           "title": "ラムダの書き方",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# { 引数 -> 処理 }\n\n`->` の前が引数、後が処理本体です。\n\n**コード例：**\n```kotlin\nval add = { a: Int, b: Int -> a + b }\nprintln(add(2, 3)) // 5\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val double = { n: Int -> n * 2 }\nprintln(double(5))",
-      "holeyCode": "val double = { n: Int ___ n * 2 }\nprintln(double(5))",
+      "holeyCode": "// -> で引数と処理を区切る\nval double = { n: Int ___ n * 2 }\nprintln(double(5))",
       "correctLines": [
         "val double = { n: Int -> n * 2 }",
         "println(double(5))"
@@ -208,18 +210,18 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "map とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 各要素を変換\n\n**map** は、リストの各要素にラムダを適用して新しいリストを作ります。"
         },
         {
           "title": "map の使い方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# it で暗黙の引数\n\n引数が1つなら `it` で参照できます。\n\n**コード例：**\n```kotlin\nlistOf(1, 2, 3).map { it * 2 }\n// [2, 4, 6]\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val nums = listOf(1, 2, 3)\nval squared = nums.map { it * it }\nprintln(squared)",
-      "holeyCode": "val nums = listOf(1, 2, 3)\nval squared = nums.___ { it * it }\nprintln(squared)",
+      "holeyCode": "val nums = listOf(1, 2, 3)\n// map で各要素を変換する\nval squared = nums.___ { it * it }\nprintln(squared)",
       "correctLines": [
         "val nums = listOf(1, 2, 3)",
         "val squared = nums.map { it * it }",
@@ -248,18 +250,18 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "filter とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 条件でフィルタ\n\n**filter** は、条件を満たす要素だけを残した新しいリストを作ります。"
         },
         {
           "title": "filter の使い方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 真を返す要素を残す\n\nラムダが真を返す要素だけが残ります。\n\n**コード例：**\n```kotlin\nlistOf(1, 2, 3, 4, 5).filter { it > 3 }\n// [4, 5]\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val nums = listOf(1, 2, 3, 4, 5)\nval result = nums.filter { it >= 3 }\nprintln(result)",
-      "holeyCode": "val nums = listOf(1, 2, 3, 4, 5)\nval result = nums.___ { it >= 3 }\nprintln(result)",
+      "holeyCode": "val nums = listOf(1, 2, 3, 4, 5)\n// filter で条件に合う要素を抽出する\nval result = nums.___ { it >= 3 }\nprintln(result)",
       "correctLines": [
         "val nums = listOf(1, 2, 3, 4, 5)",
         "val result = nums.filter { it >= 3 }",
@@ -288,18 +290,18 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "when とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "# 強力な分岐\n\n**when** は、switch に似た式ですが、より柔軟に条件を書けます。"
         },
         {
           "title": "when の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "# 式としても使える\n\n結果を変数に代入できます。\n\n**コード例：**\n```kotlin\nval result = when (x) {\n    1 -> \"one\"\n    2 -> \"two\"\n    else -> \"other\"\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val x = 2\nval result = when (x) {\n    1 -> \"one\"\n    2 -> \"two\"\n    else -> \"other\"\n}\nprintln(result)",
-      "holeyCode": "val x = 2\nval result = ___ (x) {\n    1 -> \"one\"\n    2 -> \"two\"\n    else -> \"other\"\n}\nprintln(result)",
+      "holeyCode": "val x = 2\n// when で分岐する\nval result = ___ (x) {\n    1 -> \"one\"\n    2 -> \"two\"\n    else -> \"other\"\n}\nprintln(result)",
       "correctLines": [
         "val x = 2",
         "val result = when (x) {",
@@ -336,16 +338,18 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "拡張関数とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# クラスに関数を追加\n\n**拡張関数** を使うと、既存のクラスを継承せずにメソッドを追加できます。"
         },
         {
           "title": "拡張関数の定義",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 型.関数名()\n\n`fun 型.関数名()` で定義します。`this` でレシーバを参照します。\n\n**コード例：**\n```kotlin\nfun String.hello() = \"Hello, $this\"\n\"World\".hello() // Hello, World\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fun Int.double() = this * 2\nprintln(5.double())",
-      "holeyCode": "fun Int.double() = ___ * 2\nprintln(5.double())",
+      "holeyCode": "// this でレシーバを参照する\nfun Int.double() = ___ * 2\nprintln(5.double())",
       "correctLines": [
         "fun Int.double() = this * 2",
         "println(5.double())"
@@ -372,16 +376,18 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "let とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# スコープ関数\n\n**let** は、オブジェクトに対してラムダを実行し、結果を返します。null チェックと組み合わせると便利です。"
         },
         {
           "title": "?.let の使い方",
+          "image": "/illustrations/3d/robot.png",
           "content": "# null でなければ実行\n\n`?.let { }` で null でない場合のみ処理を実行します。\n\n**コード例：**\n```kotlin\nval name: String? = \"Taro\"\nname?.let { println(it) }\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val num: Int? = 42\nnum?.let { println(it * 2) }",
-      "holeyCode": "val num: Int? = 42\nnum?.___ { println(it * 2) }",
+      "holeyCode": "val num: Int? = 42\n// let で処理を実行する\nnum?.___ { println(it * 2) }",
       "correctLines": [
         "val num: Int? = 42",
         "num?.let { println(it * 2) }"

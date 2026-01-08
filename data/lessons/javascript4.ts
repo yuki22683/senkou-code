@@ -14,12 +14,13 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "every()とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 全ての要素をチェック\n\n**every()**は、配列の全ての要素が条件を満たすかチェックします。\n\n```javascript\nconst nums = [2, 4, 6, 8];\nconst allEven = nums.every(n => n % 2 === 0);\nconsole.log(allEven); // true\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const scores = [80, 90, 75, 85];\nconst allPassed = scores.every(score => score >= 60);\nconsole.log(allPassed);",
-      "holeyCode": "const scores = [80, 90, 75, 85];\nconst allPassed = scores.___(score => score >= 60);\nconsole.log(allPassed);",
+      "correctCode": "const scores = [80, 90, 75, 85];\n// every で全要素をチェック\nconst allPassed = scores.every(score => score >= 60);\nconsole.log(allPassed);",
+      "holeyCode": "const scores = [80, 90, 75, 85];\n// every で全要素をチェック\nconst allPassed = scores.___(score => score >= 60);\nconsole.log(allPassed);",
       "correctLines": [
         "const scores = [80, 90, 75, 85];",
         "const allPassed = scores.every(score => score >= 60);",
@@ -48,12 +49,13 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "some()とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# いずれかの要素をチェック\n\n**some()**は、配列のいずれかの要素が条件を満たすかチェックします。\n\n```javascript\nconst nums = [1, 3, 5, 8];\nconst hasEven = nums.some(n => n % 2 === 0);\nconsole.log(hasEven); // true\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const ages = [15, 22, 17, 19];\nconst hasAdult = ages.some(age => age >= 20);\nconsole.log(hasAdult);",
-      "holeyCode": "const ages = [15, 22, 17, 19];\nconst hasAdult = ages.___(age => age >= 20);\nconsole.log(hasAdult);",
+      "correctCode": "const ages = [15, 22, 17, 19];\n// some でいずれかの要素をチェック\nconst hasAdult = ages.some(age => age >= 20);\nconsole.log(hasAdult);",
+      "holeyCode": "const ages = [15, 22, 17, 19];\n// some でいずれかの要素をチェック\nconst hasAdult = ages.___(age => age >= 20);\nconsole.log(hasAdult);",
       "correctLines": [
         "const ages = [15, 22, 17, 19];",
         "const hasAdult = ages.some(age => age >= 20);",
@@ -82,12 +84,13 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "flatMap()とは？",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# map + flat を一度に\n\n**flatMap()**は、mapして平坦化を一度に行います。\n\n```javascript\nconst arr = [1, 2, 3];\nconst result = arr.flatMap(x => [x, x * 2]);\nconsole.log(result); // [1, 2, 2, 4, 3, 6]\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const words = ['hello', 'world'];\nconst chars = words.flatMap(w => w.split(''));\nconsole.log(chars);",
-      "holeyCode": "const words = ['hello', 'world'];\nconst chars = words.___(w => w.split(''));\nconsole.log(chars);",
+      "correctCode": "const words = ['hello', 'world'];\n// flatMap でmapと平坦化を同時に行う\nconst chars = words.flatMap(w => w.split(''));\nconsole.log(chars);",
+      "holeyCode": "const words = ['hello', 'world'];\n// flatMap でmapと平坦化を同時に行う\nconst chars = words.___(w => w.split(''));\nconsole.log(chars);",
       "correctLines": [
         "const words = ['hello', 'world'];",
         "const chars = words.flatMap(w => w.split(''));",
@@ -116,12 +119,13 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "Object.entries()とは？",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# キーと値のペアを取得\n\n**Object.entries()**は、オブジェクトを[key, value]の配列に変換します。\n\n```javascript\nconst obj = { a: 1, b: 2 };\nconst entries = Object.entries(obj);\nconsole.log(entries); // [['a', 1], ['b', 2]]\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const user = { name: 'Taro', age: 25 };\nfor (const [key, value] of Object.entries(user)) {\n  console.log(`${key}: ${value}`);\n}",
-      "holeyCode": "const user = { name: 'Taro', age: 25 };\nfor (const [key, value] of Object.___(user)) {\n  console.log(`${key}: ${value}`);\n}",
+      "correctCode": "const user = { name: 'Taro', age: 25 };\n// entries でキーと値のペアを取得\nfor (const [key, value] of Object.entries(user)) {\n  console.log(`${key}: ${value}`);\n}",
+      "holeyCode": "const user = { name: 'Taro', age: 25 };\n// entries でキーと値のペアを取得\nfor (const [key, value] of Object.___(user)) {\n  console.log(`${key}: ${value}`);\n}",
       "correctLines": [
         "const user = { name: 'Taro', age: 25 };",
         "for (const [key, value] of Object.entries(user)) {",
@@ -152,12 +156,13 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "Object.fromEntries()とは？",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# 配列からオブジェクトを作成\n\n**Object.fromEntries()**は、[key, value]の配列をオブジェクトに変換します。\n\n```javascript\nconst entries = [['a', 1], ['b', 2]];\nconst obj = Object.fromEntries(entries);\nconsole.log(obj); // { a: 1, b: 2 }\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const pairs = [['name', 'Python'], ['version', '3.12']];\nconst obj = Object.fromEntries(pairs);\nconsole.log(obj);",
-      "holeyCode": "const pairs = [['name', 'Python'], ['version', '3.12']];\nconst obj = Object.___(pairs);\nconsole.log(obj);",
+      "correctCode": "const pairs = [['name', 'Python'], ['version', '3.12']];\n// fromEntries で配列からオブジェクトを作成\nconst obj = Object.fromEntries(pairs);\nconsole.log(obj);",
+      "holeyCode": "const pairs = [['name', 'Python'], ['version', '3.12']];\n// fromEntries で配列からオブジェクトを作成\nconst obj = Object.___(pairs);\nconsole.log(obj);",
       "correctLines": [
         "const pairs = [['name', 'Python'], ['version', '3.12']];",
         "const obj = Object.fromEntries(pairs);",
@@ -186,12 +191,13 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "カリー化とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 引数を1つずつ受け取る\n\n**カリー化**とは、複数の引数を取る関数を、引数を1つずつ受け取る関数に変換することです。\n\n```javascript\nconst add = a => b => a + b;\nconst add5 = add(5);\nconsole.log(add5(3)); // 8\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const multiply = a => b => a * b;\nconst double = multiply(2);\nconsole.log(double(5));",
-      "holeyCode": "const multiply = a ___ b => a * b;\nconst double = multiply(2);\nconsole.log(double(5));",
+      "correctCode": "// => でアロー関数を連鎖させる\nconst multiply = a => b => a * b;\nconst double = multiply(2);\nconsole.log(double(5));",
+      "holeyCode": "// => でアロー関数を連鎖させる\nconst multiply = a ___ b => a * b;\nconst double = multiply(2);\nconsole.log(double(5));",
       "correctLines": [
         "const multiply = a => b => a * b;",
         "const double = multiply(2);",
@@ -220,12 +226,13 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "関数合成とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 関数を組み合わせる\n\n**関数合成**とは、複数の関数を組み合わせて新しい関数を作ることです。\n\n```javascript\nconst compose = (f, g) => x => f(g(x));\nconst double = x => x * 2;\nconst addOne = x => x + 1;\nconst doubleThenAdd = compose(addOne, double);\nconsole.log(doubleThenAdd(5)); // 11\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const compose = (f, g) => x => f(g(x));\nconst square = x => x * x;\nconst negate = x => -x;\nconst squareThenNegate = compose(negate, square);\nconsole.log(squareThenNegate(3));",
-      "holeyCode": "const compose = (f, g) => x => f(___(x));\nconst square = x => x * x;\nconst negate = x => -x;\nconst squareThenNegate = compose(negate, square);\nconsole.log(squareThenNegate(3));",
+      "correctCode": "// g を先に実行してfに渡す\nconst compose = (f, g) => x => f(g(x));\nconst square = x => x * x;\nconst negate = x => -x;\nconst squareThenNegate = compose(negate, square);\nconsole.log(squareThenNegate(3));",
+      "holeyCode": "// g を先に実行してfに渡す\nconst compose = (f, g) => x => f(___(x));\nconst square = x => x * x;\nconst negate = x => -x;\nconst squareThenNegate = compose(negate, square);\nconsole.log(squareThenNegate(3));",
       "correctLines": [
         "const compose = (f, g) => x => f(g(x));",
         "const square = x => x * x;",
@@ -258,12 +265,13 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "クロージャとは？",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 状態を閉じ込める\n\n**クロージャ**は、関数が定義されたスコープの変数を覚えている機能です。\n\n```javascript\nfunction createCounter() {\n  let count = 0;\n  return () => ++count;\n}\nconst counter = createCounter();\nconsole.log(counter()); // 1\nconsole.log(counter()); // 2\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "function createCounter() {\n  let count = 0;\n  return () => ++count;\n}\nconst counter = createCounter();\nconsole.log(counter());\nconsole.log(counter());\nconsole.log(counter());",
-      "holeyCode": "function createCounter() {\n  let count = 0;\n  return () => ___count;\n}\nconst counter = createCounter();\nconsole.log(counter());\nconsole.log(counter());\nconsole.log(counter());",
+      "correctCode": "function createCounter() {\n  let count = 0;\n  // ++ でインクリメントして返す\n  return () => ++count;\n}\nconst counter = createCounter();\nconsole.log(counter());\nconsole.log(counter());\nconsole.log(counter());",
+      "holeyCode": "function createCounter() {\n  let count = 0;\n  // ++ でインクリメントして返す\n  return () => ___count;\n}\nconst counter = createCounter();\nconsole.log(counter());\nconsole.log(counter());\nconsole.log(counter());",
       "correctLines": [
         "function createCounter() {",
         "  let count = 0;",
@@ -302,12 +310,13 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "メモ化とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 計算結果をキャッシュ\n\n**メモ化**は、関数の結果をキャッシュして同じ引数での再計算を避ける技法です。\n\n```javascript\nfunction memoize(fn) {\n  const cache = {};\n  return (x) => {\n    if (!(x in cache)) {\n      cache[x] = fn(x);\n    }\n    return cache[x];\n  };\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "function memoize(fn) {\n  const cache = {};\n  return (x) => {\n    if (!(x in cache)) {\n      cache[x] = fn(x);\n    }\n    return cache[x];\n  };\n}\nconst square = memoize(x => x * x);\nconsole.log(square(5));\nconsole.log(square(5));",
-      "holeyCode": "function memoize(fn) {\n  const cache = {};\n  return (x) => {\n    if (!(x ___ cache)) {\n      cache[x] = fn(x);\n    }\n    return cache[x];\n  };\n}\nconst square = memoize(x => x * x);\nconsole.log(square(5));\nconsole.log(square(5));",
+      "correctCode": "function memoize(fn) {\n  const cache = {};\n  return (x) => {\n    // in でオブジェクトにキーが存在するかチェック\n    if (!(x in cache)) {\n      cache[x] = fn(x);\n    }\n    return cache[x];\n  };\n}\nconst square = memoize(x => x * x);\nconsole.log(square(5));\nconsole.log(square(5));",
+      "holeyCode": "function memoize(fn) {\n  const cache = {};\n  return (x) => {\n    // in でオブジェクトにキーが存在するかチェック\n    if (!(x ___ cache)) {\n      cache[x] = fn(x);\n    }\n    return cache[x];\n  };\n}\nconst square = memoize(x => x * x);\nconsole.log(square(5));\nconsole.log(square(5));",
       "correctLines": [
         "function memoize(fn) {",
         "  const cache = {};",
@@ -354,12 +363,13 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "パイプラインとは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 関数を順番に適用\n\n**パイプライン**は、複数の関数を順番に適用する技法です。\n\n```javascript\nconst pipe = (...fns) => x =>\n  fns.reduce((v, f) => f(v), x);\n\nconst process = pipe(\n  x => x * 2,\n  x => x + 1,\n  x => x * 3\n);\nconsole.log(process(5)); // 33\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const pipe = (...fns) => x =>\n  fns.reduce((v, f) => f(v), x);\n\nconst process = pipe(\n  x => x + 1,\n  x => x * 2,\n  x => x - 3\n);\nconsole.log(process(5));",
-      "holeyCode": "const pipe = (...fns) => x =>\n  fns.___((___, f) => f(v), x);\n\nconst process = pipe(\n  x => x + 1,\n  x => x * 2,\n  x => x - 3\n);\nconsole.log(process(5));",
+      "correctCode": "const pipe = (...fns) => x =>\n  // reduce で累積値 v を使って関数を連鎖\n  fns.reduce((v, f) => f(v), x);\n\nconst process = pipe(\n  x => x + 1,\n  x => x * 2,\n  x => x - 3\n);\nconsole.log(process(5));",
+      "holeyCode": "const pipe = (...fns) => x =>\n  // reduce で累積値 v を使って関数を連鎖\n  fns.___((___, f) => f(v), x);\n\nconst process = pipe(\n  x => x + 1,\n  x => x * 2,\n  x => x - 3\n);\nconsole.log(process(5));",
       "correctLines": [
         "const pipe = (...fns) => x =>",
         "  fns.reduce((v, f) => f(v), x);",

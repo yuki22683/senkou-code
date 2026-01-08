@@ -14,17 +14,19 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "継承とは？",
+          "image": "/illustrations/3d_advanced/inheritance.png",
           "content": "# 親クラスの機能を引き継ぐ\n\n**継承**を使うと、既存クラスの機能を新しいクラスで再利用できます。\n\n```python\nclass Animal:\n    def speak(self):\n        print('...')\n\nclass Dog(Animal):\n    def speak(self):\n        print('Woof!')\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\nclass Dog(Animal):\n    def bark(self):\n        print(f'{self.name} says Woof!')\n\ndog = Dog('Pochi')\ndog.bark()",
-      "holeyCode": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\nclass Dog(___):\n    def bark(self):\n        print(f'{self.name} says Woof!')\n\ndog = Dog('Pochi')\ndog.bark()",
+      "correctCode": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n# Animalを継承したDogクラス\nclass Dog(Animal):\n    def bark(self):\n        print(f'{self.name} says Woof!')\n\ndog = Dog('Pochi')\ndog.bark()",
+      "holeyCode": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n# Animalを継承したDogクラス\nclass Dog(___):\n    def bark(self):\n        print(f'{self.name} says Woof!')\n\ndog = Dog('Pochi')\ndog.bark()",
       "correctLines": [
         "class Animal:",
         "    def __init__(self, name):",
         "        self.name = name",
         "",
+        "# Animalを継承したDogクラス",
         "class Dog(Animal):",
         "    def bark(self):",
         "        print(f'{self.name} says Woof!')",
@@ -33,6 +35,7 @@ export const pythonData4 = {
         "dog.bark()"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -62,12 +65,13 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "super()とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 親クラスのメソッドを呼ぶ\n\n**super()**を使うと、親クラスのメソッドを呼び出せます。\n\n```python\nclass Parent:\n    def __init__(self, name):\n        self.name = name\n\nclass Child(Parent):\n    def __init__(self, name, age):\n        super().__init__(name)\n        self.age = age\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nclass Student(Person):\n    def __init__(self, name, grade):\n        super().__init__(name)\n        self.grade = grade\n\ns = Student('Taro', 3)\nprint(f'{s.name} is in grade {s.grade}')",
-      "holeyCode": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nclass Student(Person):\n    def __init__(self, name, grade):\n        ___.__init__(name)\n        self.grade = grade\n\ns = Student('Taro', 3)\nprint(f'{s.name} is in grade {s.grade}')",
+      "correctCode": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nclass Student(Person):\n    def __init__(self, name, grade):\n        # super()で親クラスを初期化\n        super().__init__(name)\n        self.grade = grade\n\ns = Student('Taro', 3)\nprint(f'{s.name} is in grade {s.grade}')",
+      "holeyCode": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nclass Student(Person):\n    def __init__(self, name, grade):\n        # super()で親クラスを初期化\n        ___.__init__(name)\n        self.grade = grade\n\ns = Student('Taro', 3)\nprint(f'{s.name} is in grade {s.grade}')",
       "correctLines": [
         "class Person:",
         "    def __init__(self, name):",
@@ -75,6 +79,7 @@ export const pythonData4 = {
         "",
         "class Student(Person):",
         "    def __init__(self, name, grade):",
+        "        # super()で親クラスを初期化",
         "        super().__init__(name)",
         "        self.grade = grade",
         "",
@@ -82,6 +87,7 @@ export const pythonData4 = {
         "print(f'{s.name} is in grade {s.grade}')"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -112,18 +118,20 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "@propertyとは？",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# メソッドを属性のように使う\n\n**@property**を使うと、メソッドを属性のようにアクセスできます。\n\n```python\nclass Circle:\n    def __init__(self, radius):\n        self._radius = radius\n    \n    @property\n    def area(self):\n        return 3.14 * self._radius ** 2\n\nc = Circle(5)\nprint(c.area)  # 78.5 (括弧なし)\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    @property\n    def area(self):\n        return self.width * self.height\n\nr = Rectangle(4, 5)\nprint(r.area)",
-      "holeyCode": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    ___\n    def area(self):\n        return self.width * self.height\n\nr = Rectangle(4, 5)\nprint(r.area)",
+      "correctCode": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    # @propertyで属性のようにアクセス\n    @property\n    def area(self):\n        return self.width * self.height\n\nr = Rectangle(4, 5)\nprint(r.area)",
+      "holeyCode": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    # @propertyで属性のようにアクセス\n    ___\n    def area(self):\n        return self.width * self.height\n\nr = Rectangle(4, 5)\nprint(r.area)",
       "correctLines": [
         "class Rectangle:",
         "    def __init__(self, width, height):",
         "        self.width = width",
         "        self.height = height",
         "    ",
+        "    # @propertyで属性のようにアクセス",
         "    @property",
         "    def area(self):",
         "        return self.width * self.height",
@@ -132,6 +140,7 @@ export const pythonData4 = {
         "print(r.area)"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -162,12 +171,13 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "@classmethodとは？",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# クラス全体に関わるメソッド\n\n**@classmethod**は、インスタンスではなくクラスに対して動作するメソッドを定義します。第一引数は cls です。\n\n```python\nclass Counter:\n    count = 0\n    \n    @classmethod\n    def increment(cls):\n        cls.count += 1\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Dog:\n    count = 0\n    \n    def __init__(self, name):\n        self.name = name\n        Dog.count += 1\n    \n    @classmethod\n    def get_count(cls):\n        return cls.count\n\nd1 = Dog('Pochi')\nd2 = Dog('Hachi')\nprint(Dog.get_count())",
-      "holeyCode": "class Dog:\n    count = 0\n    \n    def __init__(self, name):\n        self.name = name\n        Dog.count += 1\n    \n    ___\n    def get_count(cls):\n        return cls.count\n\nd1 = Dog('Pochi')\nd2 = Dog('Hachi')\nprint(Dog.get_count())",
+      "correctCode": "class Dog:\n    count = 0\n    \n    def __init__(self, name):\n        self.name = name\n        Dog.count += 1\n    \n    # @classmethodでクラスメソッドを定義\n    @classmethod\n    def get_count(cls):\n        return cls.count\n\nd1 = Dog('Pochi')\nd2 = Dog('Hachi')\nprint(Dog.get_count())",
+      "holeyCode": "class Dog:\n    count = 0\n    \n    def __init__(self, name):\n        self.name = name\n        Dog.count += 1\n    \n    # @classmethodでクラスメソッドを定義\n    ___\n    def get_count(cls):\n        return cls.count\n\nd1 = Dog('Pochi')\nd2 = Dog('Hachi')\nprint(Dog.get_count())",
       "correctLines": [
         "class Dog:",
         "    count = 0",
@@ -176,6 +186,7 @@ export const pythonData4 = {
         "        self.name = name",
         "        Dog.count += 1",
         "    ",
+        "    # @classmethodでクラスメソッドを定義",
         "    @classmethod",
         "    def get_count(cls):",
         "        return cls.count",
@@ -185,6 +196,7 @@ export const pythonData4 = {
         "print(Dog.get_count())"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -218,14 +230,16 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "@staticmethodとは？",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# インスタンスに依存しないメソッド\n\n**@staticmethod**は、selfやclsを必要としないメソッドを定義します。\n\n```python\nclass Math:\n    @staticmethod\n    def add(a, b):\n        return a + b\n\nprint(Math.add(3, 5))  # 8\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Validator:\n    @staticmethod\n    def is_positive(n):\n        return n > 0\n\nprint(Validator.is_positive(5))\nprint(Validator.is_positive(-3))",
-      "holeyCode": "class Validator:\n    ___\n    def is_positive(n):\n        return n > 0\n\nprint(Validator.is_positive(5))\nprint(Validator.is_positive(-3))",
+      "correctCode": "class Validator:\n    # @staticmethodで静的メソッドを定義\n    @staticmethod\n    def is_positive(n):\n        return n > 0\n\nprint(Validator.is_positive(5))\nprint(Validator.is_positive(-3))",
+      "holeyCode": "class Validator:\n    # @staticmethodで静的メソッドを定義\n    ___\n    def is_positive(n):\n        return n > 0\n\nprint(Validator.is_positive(5))\nprint(Validator.is_positive(-3))",
       "correctLines": [
         "class Validator:",
+        "    # @staticmethodで静的メソッドを定義",
         "    @staticmethod",
         "    def is_positive(n):",
         "        return n > 0",
@@ -234,6 +248,7 @@ export const pythonData4 = {
         "print(Validator.is_positive(-3))"
       ],
       "lineHints": [
+        null,
         null,
         "静的メソッドデコレータを使います。",
         null,
@@ -260,16 +275,18 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "抽象クラスとは？",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# 実装を強制するクラス\n\n**ABC**（Abstract Base Class）を使うと、サブクラスに特定のメソッドの実装を強制できます。\n\n```python\nfrom abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self):\n        pass\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "from abc import ABC, abstractmethod\n\nclass Animal(ABC):\n    @abstractmethod\n    def speak(self):\n        pass\n\nclass Cat(Animal):\n    def speak(self):\n        return 'Meow'\n\ncat = Cat()\nprint(cat.speak())",
-      "holeyCode": "from abc import ABC, abstractmethod\n\nclass Animal(ABC):\n    ___\n    def speak(self):\n        pass\n\nclass Cat(Animal):\n    def speak(self):\n        return 'Meow'\n\ncat = Cat()\nprint(cat.speak())",
+      "correctCode": "from abc import ABC, abstractmethod\n\nclass Animal(ABC):\n    # @abstractmethodで抽象メソッドを定義\n    @abstractmethod\n    def speak(self):\n        pass\n\nclass Cat(Animal):\n    def speak(self):\n        return 'Meow'\n\ncat = Cat()\nprint(cat.speak())",
+      "holeyCode": "from abc import ABC, abstractmethod\n\nclass Animal(ABC):\n    # @abstractmethodで抽象メソッドを定義\n    ___\n    def speak(self):\n        pass\n\nclass Cat(Animal):\n    def speak(self):\n        return 'Meow'\n\ncat = Cat()\nprint(cat.speak())",
       "correctLines": [
         "from abc import ABC, abstractmethod",
         "",
         "class Animal(ABC):",
+        "    # @abstractmethodで抽象メソッドを定義",
         "    @abstractmethod",
         "    def speak(self):",
         "        pass",
@@ -282,6 +299,7 @@ export const pythonData4 = {
         "print(cat.speak())"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -314,18 +332,20 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "__str__とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# オブジェクトを文字列で表す\n\n**__str__**メソッドを定義すると、print()やstr()での表示をカスタマイズできます。\n\n```python\nclass Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def __str__(self):\n        return f'Point({self.x}, {self.y})'\n\np = Point(3, 4)\nprint(p)  # Point(3, 4)\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n    \n    def __str__(self):\n        return f'{self.title} by {self.author}'\n\nbook = Book('Python Guide', 'Taro')\nprint(book)",
-      "holeyCode": "class Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n    \n    def ___(self):\n        return f'{self.title} by {self.author}'\n\nbook = Book('Python Guide', 'Taro')\nprint(book)",
+      "correctCode": "class Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n    \n    # __str__で文字列表現を定義\n    def __str__(self):\n        return f'{self.title} by {self.author}'\n\nbook = Book('Python Guide', 'Taro')\nprint(book)",
+      "holeyCode": "class Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n    \n    # __str__で文字列表現を定義\n    def ___(self):\n        return f'{self.title} by {self.author}'\n\nbook = Book('Python Guide', 'Taro')\nprint(book)",
       "correctLines": [
         "class Book:",
         "    def __init__(self, title, author):",
         "        self.title = title",
         "        self.author = author",
         "    ",
+        "    # __str__で文字列表現を定義",
         "    def __str__(self):",
         "        return f'{self.title} by {self.author}'",
         "",
@@ -333,6 +353,7 @@ export const pythonData4 = {
         "print(book)"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -362,18 +383,20 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "__eq__とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# オブジェクトの比較方法を定義\n\n**__eq__**メソッドを定義すると、==での比較をカスタマイズできます。\n\n```python\nclass Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def __eq__(self, other):\n        return self.x == other.x and self.y == other.y\n\np1 = Point(1, 2)\np2 = Point(1, 2)\nprint(p1 == p2)  # True\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def __eq__(self, other):\n        return self.x == other.x and self.y == other.y\n\nv1 = Vector(3, 4)\nv2 = Vector(3, 4)\nprint(v1 == v2)",
-      "holeyCode": "class Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def ___(self, other):\n        return self.x == other.x and self.y == other.y\n\nv1 = Vector(3, 4)\nv2 = Vector(3, 4)\nprint(v1 == v2)",
+      "correctCode": "class Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    # __eq__で等価比較を定義\n    def __eq__(self, other):\n        return self.x == other.x and self.y == other.y\n\nv1 = Vector(3, 4)\nv2 = Vector(3, 4)\nprint(v1 == v2)",
+      "holeyCode": "class Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    # __eq__で等価比較を定義\n    def ___(self, other):\n        return self.x == other.x and self.y == other.y\n\nv1 = Vector(3, 4)\nv2 = Vector(3, 4)\nprint(v1 == v2)",
       "correctLines": [
         "class Vector:",
         "    def __init__(self, x, y):",
         "        self.x = x",
         "        self.y = y",
         "    ",
+        "    # __eq__で等価比較を定義",
         "    def __eq__(self, other):",
         "        return self.x == other.x and self.y == other.y",
         "",
@@ -382,6 +405,7 @@ export const pythonData4 = {
         "print(v1 == v2)"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -412,17 +436,19 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "__len__とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# len()を使えるようにする\n\n**__len__**メソッドを定義すると、len()関数が使えるようになります。\n\n```python\nclass Playlist:\n    def __init__(self, songs):\n        self.songs = songs\n    \n    def __len__(self):\n        return len(self.songs)\n\npl = Playlist(['A', 'B', 'C'])\nprint(len(pl))  # 3\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Team:\n    def __init__(self, members):\n        self.members = members\n    \n    def __len__(self):\n        return len(self.members)\n\nteam = Team(['Alice', 'Bob', 'Charlie'])\nprint(len(team))",
-      "holeyCode": "class Team:\n    def __init__(self, members):\n        self.members = members\n    \n    def ___(self):\n        return len(self.members)\n\nteam = Team(['Alice', 'Bob', 'Charlie'])\nprint(len(team))",
+      "correctCode": "class Team:\n    def __init__(self, members):\n        self.members = members\n    \n    # __len__でlen()に対応\n    def __len__(self):\n        return len(self.members)\n\nteam = Team(['Alice', 'Bob', 'Charlie'])\nprint(len(team))",
+      "holeyCode": "class Team:\n    def __init__(self, members):\n        self.members = members\n    \n    # __len__でlen()に対応\n    def ___(self):\n        return len(self.members)\n\nteam = Team(['Alice', 'Bob', 'Charlie'])\nprint(len(team))",
       "correctLines": [
         "class Team:",
         "    def __init__(self, members):",
         "        self.members = members",
         "    ",
+        "    # __len__でlen()に対応",
         "    def __len__(self):",
         "        return len(self.members)",
         "",
@@ -430,6 +456,7 @@ export const pythonData4 = {
         "print(len(team))"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -458,15 +485,17 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "@dataclassとは？",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# データを持つクラスを簡潔に定義\n\n**@dataclass**を使うと、__init__や__repr__が自動生成されます。\n\n```python\nfrom dataclasses import dataclass\n\n@dataclass\nclass Point:\n    x: int\n    y: int\n\np = Point(3, 4)\nprint(p)  # Point(x=3, y=4)\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "from dataclasses import dataclass\n\n@dataclass\nclass Person:\n    name: str\n    age: int\n\np = Person('Taro', 25)\nprint(p)",
-      "holeyCode": "from dataclasses import dataclass\n\n___\nclass Person:\n    name: str\n    age: int\n\np = Person('Taro', 25)\nprint(p)",
+      "correctCode": "from dataclasses import dataclass\n\n# @dataclassでデータクラスを定義\n@dataclass\nclass Person:\n    name: str\n    age: int\n\np = Person('Taro', 25)\nprint(p)",
+      "holeyCode": "from dataclasses import dataclass\n\n# @dataclassでデータクラスを定義\n___\nclass Person:\n    name: str\n    age: int\n\np = Person('Taro', 25)\nprint(p)",
       "correctLines": [
         "from dataclasses import dataclass",
         "",
+        "# @dataclassでデータクラスを定義",
         "@dataclass",
         "class Person:",
         "    name: str",
@@ -476,6 +505,7 @@ export const pythonData4 = {
         "print(p)"
       ],
       "lineHints": [
+        null,
         null,
         null,
         "dataclassデコレータを使います。",

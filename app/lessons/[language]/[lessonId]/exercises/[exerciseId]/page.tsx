@@ -574,8 +574,13 @@ export default function ExercisePage() {
       </Dialog>
 
       {/* 完了ダイアログ */}
-      <Dialog open={showCompleteDialog} onOpenChange={setShowCompleteDialog}>
-        <DialogContent overlayClassName="bg-transparent">
+      <Dialog open={showCompleteDialog} onOpenChange={(open) => {
+        setShowCompleteDialog(open);
+        if (!open) {
+          setShowNextButton(true);
+        }
+      }}>
+        <DialogContent overlayClassName="bg-gray-500/20">
           <DialogHeader>
             <DialogTitle className="flex items-center text-green-600">
               <CheckCircle2 className="w-6 h-6 mr-2" />

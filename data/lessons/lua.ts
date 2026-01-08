@@ -29,8 +29,8 @@ export const luaData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "print(\"Hello, Lua!\")",
-      "holeyCode": "print(\"___\")",
+      "correctCode": "-- Hello, Lua!を表示\nprint(\"Hello, Lua!\")",
+      "holeyCode": "-- Hello, Lua!を表示\nprint(\"___\")",
       "correctLines": [
         "print(\"Hello, Lua!\")"
       ],
@@ -67,8 +67,8 @@ export const luaData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// x というはこに 10 を入れる\nlocal x = 10\n// 中身を表示する\nprint(x)",
-      "holeyCode": "// x というはこに 10 を入れる\nlocal x = ___\n// 中身を表示する\nprint(___)",
+      "correctCode": "-- 10を入力\nlocal x = 10\n-- xを入力\nprint(x)",
+      "holeyCode": "-- 10を入力\nlocal x = ___\n-- xを入力\nprint(___)",
       "correctLines": [
         "local x = 10",
         "print(x)"
@@ -110,8 +110,8 @@ export const luaData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local a = 5\nlocal b = 3\n// たし算した結果を表示する\nprint(a + b)",
-      "holeyCode": "local a = 5\nlocal b = 3\n// たし算した結果を表示する\nprint(a ___ b)",
+      "correctCode": "local a = 5\nlocal b = 3\n-- +でたし算\nprint(a + b)",
+      "holeyCode": "local a = 5\nlocal b = 3\n-- +でたし算\nprint(a ___ b)",
       "correctLines": [
         "local a = 5",
         "local b = 3",

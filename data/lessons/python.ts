@@ -68,7 +68,7 @@ export const pythonData = {
         {
           "title": "はこに中身を入れる（代入）",
           "image": "/illustrations/common/box.png",
-          "content": "# =（イコール）の使い方\n\n算数では「同じ」という意味の `=` ですが、プログラミングでは **「右のものを左のはこに入れる」** という意味になります。\n\n```python\nanimal = 'いぬ'\nprint(animal)\n```\n=> いぬ\n\nこれだけで、`animal` という名前のはこに `'いぬ'` がしまわれ、画面に表示されました！"
+          "content": "# =（イコール）の使い方\n\n算数では「同じ」という意味の `=` ですが、プログラミングでは **「右のものを左のはこに入れる」** という意味になります。\n\n```python\nfruit = 'りんご'\nprint(fruit)\n```\n=> りんご\n\nこれだけで、`fruit` という名前のはこに `'りんご'` がしまわれ、画面に表示されました！"
         }
       ],
       "initialDisplayMode": "holey",

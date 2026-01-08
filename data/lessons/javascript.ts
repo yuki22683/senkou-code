@@ -114,6 +114,7 @@ export const javascriptData = {
         },
         {
           "title": "計算の記号",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# 算数と同じ記号を使います\n\nJavaScriptでも、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算\n\n例えば、ひき算はこんな感じです。\n```javascript\nconst a = 20;\nconst b = 10;\nconsole.log(a - b);\n```"
         }
       ],
@@ -451,7 +452,7 @@ export const javascriptData = {
       "tutorialSlides": [
         {
           "title": "オブジェクトとは？",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# 情報をセットにする\n\n「名前」と「年齢」のように、関連する情報をまとめて管理するのが **オブジェクト** です。本物の辞書のように、キーワードを使って情報を取り出すことができます。"
         },
         {

@@ -14,16 +14,18 @@ export const javascriptData2 = {
       "tutorialSlides": [
         {
           "title": "アロー関数とは？",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# => を使った短い関数\n\n`function` の代わりに `=>` を使うと、関数を短く書けます。\n\n```javascript\n// 通常の関数\nfunction add(a, b) {\n    return a + b;\n}\n\n// アロー関数\nconst add = (a, b) => a + b;\n```"
         },
         {
           "title": "アロー関数の書き方",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 省略できる部分\n\n- 1行の場合、`{}` と `return` を省略可能\n- 引数が1つなら `()` も省略可能\n\n```javascript\nconst double = x => x * 2;\nconst greet = () => console.log('Hi!');\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// アロー関数で2乗を計算\nconst square = x => x * x;\n\n// 使ってみる\nconsole.log(square(5));",
-      "holeyCode": "// アロー関数で2乗を計算\nconst square = x ___ x * x;\n\n// 使ってみる\nconsole.log(square(5));",
+      "correctCode": "// => でアロー関数を定義する\nconst square = x => x * x;\n\n// 使ってみる\nconsole.log(square(5));",
+      "holeyCode": "// => でアロー関数を定義する\nconst square = x ___ x * x;\n\n// 使ってみる\nconsole.log(square(5));",
       "correctLines": [
         "// アロー関数で2乗を計算",
         "const square = x => x * x;",
@@ -56,18 +58,18 @@ export const javascriptData2 = {
       "tutorialSlides": [
         {
           "title": "mapとは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 各要素を変換する\n\n`map` は配列の各要素に関数を適用して、新しい配列を作ります。\n\n```javascript\nconst numbers = [1, 2, 3];\nconst doubled = numbers.map(x => x * 2);\nconsole.log(doubled); // [2, 4, 6]\n```"
         },
         {
           "title": "mapの使い方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 元の配列は変わらない\n\n`map` は新しい配列を返し、元の配列は変更しません。\n\n```javascript\nconst names = ['alice', 'bob'];\nconst upper = names.map(n => n.toUpperCase());\nconsole.log(upper); // ['ALICE', 'BOB']\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 配列の各要素を3倍にする\nconst nums = [1, 2, 3];\nconst tripled = nums.map(n => n * 3);\nconsole.log(tripled);",
-      "holeyCode": "// 配列の各要素を3倍にする\nconst nums = [1, 2, 3];\nconst tripled = nums.___(n => n * 3);\nconsole.log(tripled);",
+      "correctCode": "// 配列の各要素を3倍にする\nconst nums = [1, 2, 3];\n// map メソッドで変換する\nconst tripled = nums.map(n => n * 3);\nconsole.log(tripled);",
+      "holeyCode": "// 配列の各要素を3倍にする\nconst nums = [1, 2, 3];\n// map メソッドで変換する\nconst tripled = nums.___(n => n * 3);\nconsole.log(tripled);",
       "correctLines": [
         "// 配列の各要素を3倍にする",
         "const nums = [1, 2, 3];",
@@ -98,18 +100,18 @@ export const javascriptData2 = {
       "tutorialSlides": [
         {
           "title": "filterとは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 条件でフィルタリング\n\n`filter` は条件に合う要素だけを集めた新しい配列を作ります。\n\n```javascript\nconst numbers = [1, 2, 3, 4, 5];\nconst evens = numbers.filter(x => x % 2 === 0);\nconsole.log(evens); // [2, 4]\n```"
         },
         {
           "title": "filterの使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# trueを返す要素だけ残る\n\n関数が `true` を返す要素だけが新しい配列に入ります。\n\n```javascript\nconst words = ['hi', 'hello', 'hey'];\nconst long = words.filter(w => w.length > 2);\nconsole.log(long); // ['hello', 'hey']\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 10より大きい数だけ取り出す\nconst nums = [5, 15, 8, 20];\nconst big = nums.filter(n => n > 10);\nconsole.log(big);",
-      "holeyCode": "// 10より大きい数だけ取り出す\nconst nums = [5, 15, 8, 20];\nconst big = nums.___(n => n > 10);\nconsole.log(big);",
+      "correctCode": "// 10より大きい数だけ取り出す\nconst nums = [5, 15, 8, 20];\n// filter メソッドで絞り込む\nconst big = nums.filter(n => n > 10);\nconsole.log(big);",
+      "holeyCode": "// 10より大きい数だけ取り出す\nconst nums = [5, 15, 8, 20];\n// filter メソッドで絞り込む\nconst big = nums.___(n => n > 10);\nconsole.log(big);",
       "correctLines": [
         "// 10より大きい数だけ取り出す",
         "const nums = [5, 15, 8, 20];",
@@ -140,18 +142,18 @@ export const javascriptData2 = {
       "tutorialSlides": [
         {
           "title": "reduceとは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 要素をまとめる\n\n`reduce` は配列の全要素を処理して、1つの値にまとめます。\n\n```javascript\nconst numbers = [1, 2, 3, 4];\nconst sum = numbers.reduce((acc, cur) => acc + cur, 0);\nconsole.log(sum); // 10\n```"
         },
         {
           "title": "reduceの仕組み",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 累積値と現在値\n\n- `acc`: 累積値（前回の結果）\n- `cur`: 現在の要素\n- 第2引数: 初期値\n\n```javascript\n// 合計を計算\n[1, 2, 3].reduce((acc, cur) => acc + cur, 0)\n// 0 + 1 = 1, 1 + 2 = 3, 3 + 3 = 6\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 配列の合計を計算\nconst nums = [10, 20, 30];\nconst total = nums.reduce((acc, n) => acc + n, 0);\nconsole.log(total);",
-      "holeyCode": "// 配列の合計を計算\nconst nums = [10, 20, 30];\nconst total = nums.___((___, n) => acc + n, 0);\nconsole.log(total);",
+      "correctCode": "// 配列の合計を計算\nconst nums = [10, 20, 30];\n// reduce メソッドで累積値 acc を使う\nconst total = nums.reduce((acc, n) => acc + n, 0);\nconsole.log(total);",
+      "holeyCode": "// 配列の合計を計算\nconst nums = [10, 20, 30];\n// reduce メソッドで累積値 acc を使う\nconst total = nums.___((___, n) => acc + n, 0);\nconsole.log(total);",
       "correctLines": [
         "// 配列の合計を計算",
         "const nums = [10, 20, 30];",
@@ -183,18 +185,18 @@ export const javascriptData2 = {
       "tutorialSlides": [
         {
           "title": "配列の分割代入",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 一度に複数の変数へ\n\n配列の要素を、対応する変数に一度に代入できます。\n\n```javascript\nconst [a, b] = [1, 2];\nconsole.log(a); // 1\nconsole.log(b); // 2\n```"
         },
         {
           "title": "便利な使い方",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 関数の戻り値にも使える\n\n```javascript\nfunction getPoint() {\n    return [10, 20];\n}\n\nconst [x, y] = getPoint();\nconsole.log(x, y); // 10 20\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 配列から値を取り出す\nconst colors = ['red', 'green', 'blue'];\nconst [first, second] = colors;\nconsole.log(first);\nconsole.log(second);",
-      "holeyCode": "// 配列から値を取り出す\nconst colors = ['red', 'green', 'blue'];\nconst [first, ___] = colors;\nconsole.log(first);\nconsole.log(second);",
+      "correctCode": "// 配列から値を取り出す\nconst colors = ['red', 'green', 'blue'];\n// second で2番目の要素を受け取る\nconst [first, second] = colors;\nconsole.log(first);\nconsole.log(second);",
+      "holeyCode": "// 配列から値を取り出す\nconst colors = ['red', 'green', 'blue'];\n// second で2番目の要素を受け取る\nconst [first, ___] = colors;\nconsole.log(first);\nconsole.log(second);",
       "correctLines": [
         "// 配列から値を取り出す",
         "const colors = ['red', 'green', 'blue'];",
@@ -227,18 +229,18 @@ export const javascriptData2 = {
       "tutorialSlides": [
         {
           "title": "オブジェクトの分割代入",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# プロパティ名で取り出す\n\nオブジェクトのプロパティを、同名の変数に取り出せます。\n\n```javascript\nconst person = { name: 'Taro', age: 20 };\nconst { name, age } = person;\nconsole.log(name); // 'Taro'\n```"
         },
         {
           "title": "よく使うパターン",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 関数の引数でも使える\n\n```javascript\nfunction greet({ name }) {\n    console.log(`Hello, ${name}!`);\n}\n\ngreet({ name: 'Taro', age: 20 });\n// => Hello, Taro!\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// オブジェクトから値を取り出す\nconst user = { name: 'Alice', score: 100 };\nconst { name, score } = user;\nconsole.log(name);\nconsole.log(score);",
-      "holeyCode": "// オブジェクトから値を取り出す\nconst user = { name: 'Alice', score: 100 };\nconst { ___, score } = user;\nconsole.log(name);\nconsole.log(score);",
+      "correctCode": "// オブジェクトから値を取り出す\nconst user = { name: 'Alice', score: 100 };\n// name プロパティを取り出す\nconst { name, score } = user;\nconsole.log(name);\nconsole.log(score);",
+      "holeyCode": "// オブジェクトから値を取り出す\nconst user = { name: 'Alice', score: 100 };\n// name プロパティを取り出す\nconst { ___, score } = user;\nconsole.log(name);\nconsole.log(score);",
       "correctLines": [
         "// オブジェクトから値を取り出す",
         "const user = { name: 'Alice', score: 100 };",
@@ -271,18 +273,18 @@ export const javascriptData2 = {
       "tutorialSlides": [
         {
           "title": "スプレッド演算子とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 配列を展開する\n\n`...` を使うと、配列の要素を個別に展開できます。\n\n```javascript\nconst a = [1, 2];\nconst b = [3, 4];\nconst c = [...a, ...b];\nconsole.log(c); // [1, 2, 3, 4]\n```"
         },
         {
           "title": "コピーにも使える",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 配列のコピー\n\n```javascript\nconst original = [1, 2, 3];\nconst copy = [...original];\ncopy.push(4);\nconsole.log(original); // [1, 2, 3]\nconsole.log(copy);     // [1, 2, 3, 4]\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 2つの配列を合体させる\nconst arr1 = [1, 2];\nconst arr2 = [3, 4];\nconst merged = [...arr1, ...arr2];\nconsole.log(merged);",
-      "holeyCode": "// 2つの配列を合体させる\nconst arr1 = [1, 2];\nconst arr2 = [3, 4];\nconst merged = [___arr1, ...arr2];\nconsole.log(merged);",
+      "correctCode": "// 2つの配列を合体させる\nconst arr1 = [1, 2];\nconst arr2 = [3, 4];\n// ... スプレッド演算子で展開する\nconst merged = [...arr1, ...arr2];\nconsole.log(merged);",
+      "holeyCode": "// 2つの配列を合体させる\nconst arr1 = [1, 2];\nconst arr2 = [3, 4];\n// ... スプレッド演算子で展開する\nconst merged = [___arr1, ...arr2];\nconsole.log(merged);",
       "correctLines": [
         "// 2つの配列を合体させる",
         "const arr1 = [1, 2];",
@@ -315,18 +317,18 @@ export const javascriptData2 = {
       "tutorialSlides": [
         {
           "title": "三項演算子とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 条件 ? 真の値 : 偽の値\n\nif-elseを短く書く方法です。\n\n```javascript\nconst age = 20;\nconst status = age >= 18 ? '成人' : '未成年';\nconsole.log(status); // '成人'\n```"
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 変数への代入に便利\n\n```javascript\nconst score = 85;\nconst result = score >= 60 ? '合格' : '不合格';\n\n// 同じ意味のif文\nlet result2;\nif (score >= 60) {\n    result2 = '合格';\n} else {\n    result2 = '不合格';\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 数値が正か負かを判定\nconst num = 5;\nconst sign = num >= 0 ? 'positive' : 'negative';\nconsole.log(sign);",
-      "holeyCode": "// 数値が正か負かを判定\nconst num = 5;\nconst sign = num >= 0 ___ 'positive' : 'negative';\nconsole.log(sign);",
+      "correctCode": "// 数値が正か負かを判定\nconst num = 5;\n// ? で三項演算子を使う\nconst sign = num >= 0 ? 'positive' : 'negative';\nconsole.log(sign);",
+      "holeyCode": "// 数値が正か負かを判定\nconst num = 5;\n// ? で三項演算子を使う\nconst sign = num >= 0 ___ 'positive' : 'negative';\nconsole.log(sign);",
       "correctLines": [
         "// 数値が正か負かを判定",
         "const num = 5;",
@@ -357,18 +359,18 @@ export const javascriptData2 = {
       "tutorialSlides": [
         {
           "title": "findとは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 条件に合う最初の要素を返す\n\n`find` は条件を満たす最初の要素を返します。見つからなければ `undefined` になります。\n\n```javascript\nconst nums = [1, 5, 10, 15];\nconst found = nums.find(n => n > 7);\nconsole.log(found); // 10\n```"
         },
         {
           "title": "findの使い方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# オブジェクトの配列でも使える\n\n```javascript\nconst users = [\n    { id: 1, name: 'Alice' },\n    { id: 2, name: 'Bob' }\n];\nconst user = users.find(u => u.id === 2);\nconsole.log(user.name); // 'Bob'\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 偶数を見つける\nconst numbers = [1, 3, 4, 7, 8];\nconst firstEven = numbers.find(n => n % 2 === 0);\nconsole.log(firstEven);",
-      "holeyCode": "// 偶数を見つける\nconst numbers = [1, 3, 4, 7, 8];\nconst firstEven = numbers.___(n => n % 2 === 0);\nconsole.log(firstEven);",
+      "correctCode": "// 偶数を見つける\nconst numbers = [1, 3, 4, 7, 8];\n// find メソッドで最初の要素を探す\nconst firstEven = numbers.find(n => n % 2 === 0);\nconsole.log(firstEven);",
+      "holeyCode": "// 偶数を見つける\nconst numbers = [1, 3, 4, 7, 8];\n// find メソッドで最初の要素を探す\nconst firstEven = numbers.___(n => n % 2 === 0);\nconsole.log(firstEven);",
       "correctLines": [
         "// 偶数を見つける",
         "const numbers = [1, 3, 4, 7, 8];",
@@ -399,18 +401,18 @@ export const javascriptData2 = {
       "tutorialSlides": [
         {
           "title": "プロパティの省略",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# 変数名とプロパティ名が同じ場合\n\n変数名とプロパティ名が同じなら、省略できます。\n\n```javascript\nconst name = 'Taro';\nconst age = 20;\n\n// 通常\nconst obj1 = { name: name, age: age };\n\n// ショートハンド\nconst obj2 = { name, age };\n```"
         },
         {
           "title": "メソッドの省略",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# function を省略\n\nオブジェクト内のメソッドも短く書けます。\n\n```javascript\nconst obj = {\n    // 通常\n    greet: function() { console.log('Hi'); },\n    \n    // ショートハンド\n    sayBye() { console.log('Bye'); }\n};\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// ショートハンドでオブジェクトを作る\nconst x = 10;\nconst y = 20;\nconst point = { x, y };\nconsole.log(point.x);\nconsole.log(point.y);",
-      "holeyCode": "// ショートハンドでオブジェクトを作る\nconst x = 10;\nconst y = 20;\nconst point = { ___, y };\nconsole.log(point.x);\nconsole.log(point.y);",
+      "correctCode": "// ショートハンドでオブジェクトを作る\nconst x = 10;\nconst y = 20;\n// x をプロパティとして追加する\nconst point = { x, y };\nconsole.log(point.x);\nconsole.log(point.y);",
+      "holeyCode": "// ショートハンドでオブジェクトを作る\nconst x = 10;\nconst y = 20;\n// x をプロパティとして追加する\nconst point = { ___, y };\nconsole.log(point.x);\nconsole.log(point.y);",
       "correctLines": [
         "// ショートハンドでオブジェクトを作る",
         "const x = 10;",

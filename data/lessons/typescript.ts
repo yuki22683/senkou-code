@@ -75,6 +75,7 @@ export const typescriptData = {
         },
         {
           "title": "数字のラベル",
+          "image": "/illustrations/common/robot_math.png",
           "content": "# number（ナンバー）型\n\n整数（せいすう）や小数（しょうすう）など、数字を入れたいときは `number` ラベルを貼ります。\n\n**コード例：**\n```typescript\nconst base: number = 100;\nconst bonus: number = 50;\nconsole.log(base + bonus);\n```\n=> 150"
         }
       ],
@@ -301,7 +302,7 @@ export const typescriptData = {
         "} else {",
         "    // それ以外の場合",
         "    console.log('ざんねん');",
-        ""
+        "}"
       ],
       "lineHints": [
         null,

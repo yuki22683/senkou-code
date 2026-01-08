@@ -14,16 +14,18 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "サブクエリとは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# クエリの中のクエリ\n\n**サブクエリ** は、別のクエリの中に入れ子になったSELECT文です。\n\n```sql\nSELECT * FROM users\nWHERE age > (SELECT AVG(age) FROM users);\n```"
         },
         {
           "title": "IN を使ったサブクエリ",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 複数の値とマッチ\n\n```sql\nSELECT * FROM products\nWHERE category_id IN (\n  SELECT id FROM categories WHERE name = 'Electronics'\n);\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT 'found' WHERE 5 > (SELECT 3);",
-      "holeyCode": "SELECT 'found' WHERE 5 > (___ 3);",
+      "correctCode": "-- SELECTでサブクエリを作成\nSELECT 'found' WHERE 5 > (SELECT 3);",
+      "holeyCode": "-- SELECTでサブクエリを作成\nSELECT 'found' WHERE 5 > (___ 3);",
       "correctLines": [
         "SELECT 'found' WHERE 5 > (SELECT 3);"
       ],
@@ -48,16 +50,18 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "EXISTS とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 行が存在するか\n\n**EXISTS** は、サブクエリが1行以上返すかをチェックします。\n\n```sql\nSELECT * FROM users u\nWHERE EXISTS (\n  SELECT 1 FROM orders o WHERE o.user_id = u.id\n);\n```"
         },
         {
           "title": "NOT EXISTS",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 存在しない場合\n\n```sql\nSELECT * FROM users u\nWHERE NOT EXISTS (\n  SELECT 1 FROM orders o WHERE o.user_id = u.id\n);\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT 'has data' WHERE EXISTS (SELECT 1);",
-      "holeyCode": "SELECT 'has data' WHERE ___ (SELECT 1);",
+      "correctCode": "-- EXISTSで存在チェック\nSELECT 'has data' WHERE EXISTS (SELECT 1);",
+      "holeyCode": "-- EXISTSで存在チェック\nSELECT 'has data' WHERE ___ (SELECT 1);",
       "correctLines": [
         "SELECT 'has data' WHERE EXISTS (SELECT 1);"
       ],
@@ -82,16 +86,18 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "UNION とは？",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "# 結果を縦に結合\n\n**UNION** は、複数のSELECTの結果を1つに結合します（重複除去）。\n\n```sql\nSELECT name FROM customers\nUNION\nSELECT name FROM suppliers;\n```"
         },
         {
           "title": "UNION ALL",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "# 重複を残す\n\n```sql\nSELECT name FROM table1\nUNION ALL\nSELECT name FROM table2;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT 'A' UNION SELECT 'B' UNION SELECT 'C';",
-      "holeyCode": "SELECT 'A' ___ SELECT 'B' UNION SELECT 'C';",
+      "correctCode": "-- UNIONで結果を結合\nSELECT 'A' UNION SELECT 'B' UNION SELECT 'C';",
+      "holeyCode": "-- UNIONで結果を結合\nSELECT 'A' ___ SELECT 'B' UNION SELECT 'C';",
       "correctLines": [
         "SELECT 'A' UNION SELECT 'B' UNION SELECT 'C';"
       ],
@@ -116,16 +122,18 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "INNER JOIN とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# マッチする行だけ結合\n\n**INNER JOIN** は、両方のテーブルにマッチする行だけを返します。\n\n```sql\nSELECT u.name, o.total\nFROM users u\nINNER JOIN orders o ON u.id = o.user_id;\n```"
         },
         {
           "title": "ON で条件指定",
+          "image": "/illustrations/3d/if.png",
           "content": "# 結合条件\n\n```sql\n-- 複数条件も可能\nFROM a\nINNER JOIN b ON a.id = b.a_id AND a.type = b.type\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  INNER JOIN\n  (SELECT 1 AS id, 'B' AS y) b\n  ON a.id = b.id;",
-      "holeyCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  ___ JOIN\n  (SELECT 1 AS id, 'B' AS y) b\n  ON a.id = b.id;",
+      "correctCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- INNERで内部結合\n  INNER JOIN\n  (SELECT 1 AS id, 'B' AS y) b\n  ON a.id = b.id;",
+      "holeyCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- INNERで内部結合\n  ___ JOIN\n  (SELECT 1 AS id, 'B' AS y) b\n  ON a.id = b.id;",
       "correctLines": [
         "SELECT a.x, b.y FROM",
         "  (SELECT 1 AS id, 'A' AS x) a",
@@ -158,16 +166,18 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "LEFT JOIN とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 左テーブルの全行を返す\n\n**LEFT JOIN** は、左のテーブルの全行を返し、マッチしない場合はNULLになります。\n\n```sql\nSELECT u.name, o.total\nFROM users u\nLEFT JOIN orders o ON u.id = o.user_id;\n```"
         },
         {
           "title": "NULLの扱い",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# マッチしない場合\n\n```sql\n-- 注文がないユーザーも表示\n-- o.total は NULL になる\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  LEFT JOIN\n  (SELECT 2 AS id, 'B' AS y) b\n  ON a.id = b.id;",
-      "holeyCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  ___ JOIN\n  (SELECT 2 AS id, 'B' AS y) b\n  ON a.id = b.id;",
+      "correctCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- LEFTで左外部結合\n  LEFT JOIN\n  (SELECT 2 AS id, 'B' AS y) b\n  ON a.id = b.id;",
+      "holeyCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- LEFTで左外部結合\n  ___ JOIN\n  (SELECT 2 AS id, 'B' AS y) b\n  ON a.id = b.id;",
       "correctLines": [
         "SELECT a.x, b.y FROM",
         "  (SELECT 1 AS id, 'A' AS x) a",
@@ -200,16 +210,18 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "MAX / MIN とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 最大・最小を取得\n\n**MAX** は最大値、**MIN** は最小値を返します。\n\n```sql\nSELECT MAX(price), MIN(price) FROM products;\n```"
         },
         {
           "title": "GROUP BY との組み合わせ",
+          "image": "/illustrations/3d/robot.png",
           "content": "# カテゴリごとの最大値\n\n```sql\nSELECT category, MAX(price)\nFROM products\nGROUP BY category;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT MAX(n) FROM (SELECT 5 AS n UNION SELECT 10 UNION SELECT 3);",
-      "holeyCode": "SELECT ___(n) FROM (SELECT 5 AS n UNION SELECT 10 UNION SELECT 3);",
+      "correctCode": "-- MAXで最大値を取得\nSELECT MAX(n) FROM (SELECT 5 AS n UNION SELECT 10 UNION SELECT 3);",
+      "holeyCode": "-- MAXで最大値を取得\nSELECT ___(n) FROM (SELECT 5 AS n UNION SELECT 10 UNION SELECT 3);",
       "correctLines": [
         "SELECT MAX(n) FROM (SELECT 5 AS n UNION SELECT 10 UNION SELECT 3);"
       ],
@@ -234,16 +246,18 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "DISTINCT とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 重複を除去\n\n**DISTINCT** は、重複した行を1つにまとめます。\n\n```sql\nSELECT DISTINCT category FROM products;\n```"
         },
         {
           "title": "複数列での DISTINCT",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 組み合わせで重複判定\n\n```sql\nSELECT DISTINCT category, brand FROM products;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT DISTINCT n FROM (\n  SELECT 1 AS n UNION ALL\n  SELECT 1 UNION ALL\n  SELECT 2\n);",
-      "holeyCode": "SELECT ___ n FROM (\n  SELECT 1 AS n UNION ALL\n  SELECT 1 UNION ALL\n  SELECT 2\n);",
+      "correctCode": "-- DISTINCTで重複除去\nSELECT DISTINCT n FROM (\n  SELECT 1 AS n UNION ALL\n  SELECT 1 UNION ALL\n  SELECT 2\n);",
+      "holeyCode": "-- DISTINCTで重複除去\nSELECT ___ n FROM (\n  SELECT 1 AS n UNION ALL\n  SELECT 1 UNION ALL\n  SELECT 2\n);",
       "correctLines": [
         "SELECT DISTINCT n FROM (",
         "  SELECT 1 AS n UNION ALL",
@@ -276,16 +290,18 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "LIKE とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# パターンマッチ\n\n**LIKE** は、ワイルドカードを使ったパターン検索ができます。\n\n```sql\n-- % : 任意の文字列\n-- _ : 任意の1文字\nSELECT * FROM users WHERE name LIKE 'A%';\n```"
         },
         {
           "title": "ワイルドカード",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 使用例\n\n```sql\n'A%'    -- Aで始まる\n'%son'  -- sonで終わる\n'%ab%'  -- abを含む\n'_ob'   -- 3文字でobで終わる\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT 'matched' WHERE 'Hello' LIKE 'H%';",
-      "holeyCode": "SELECT 'matched' WHERE 'Hello' ___ 'H%';",
+      "correctCode": "-- LIKEでパターン検索\nSELECT 'matched' WHERE 'Hello' LIKE 'H%';",
+      "holeyCode": "-- LIKEでパターン検索\nSELECT 'matched' WHERE 'Hello' ___ 'H%';",
       "correctLines": [
         "SELECT 'matched' WHERE 'Hello' LIKE 'H%';"
       ],
@@ -310,16 +326,18 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "BETWEEN とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 範囲内の値を検索\n\n**BETWEEN** は、指定した範囲内の値を検索します（両端を含む）。\n\n```sql\nSELECT * FROM products\nWHERE price BETWEEN 100 AND 500;\n```"
         },
         {
           "title": "NOT BETWEEN",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 範囲外を検索\n\n```sql\nSELECT * FROM products\nWHERE price NOT BETWEEN 100 AND 500;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT 'in range' WHERE 5 BETWEEN 1 AND 10;",
-      "holeyCode": "SELECT 'in range' WHERE 5 ___ 1 AND 10;",
+      "correctCode": "-- BETWEENで範囲指定\nSELECT 'in range' WHERE 5 BETWEEN 1 AND 10;",
+      "holeyCode": "-- BETWEENで範囲指定\nSELECT 'in range' WHERE 5 ___ 1 AND 10;",
       "correctLines": [
         "SELECT 'in range' WHERE 5 BETWEEN 1 AND 10;"
       ],
@@ -344,16 +362,18 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "IN とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# リスト内の値にマッチ\n\n**IN** は、指定したリストの値のいずれかにマッチするか確認します。\n\n```sql\nSELECT * FROM users\nWHERE status IN ('active', 'pending');\n```"
         },
         {
           "title": "NOT IN",
+          "image": "/illustrations/3d/robot.png",
           "content": "# リスト外の値\n\n```sql\nSELECT * FROM users\nWHERE status NOT IN ('deleted', 'banned');\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT 'found' WHERE 'B' IN ('A', 'B', 'C');",
-      "holeyCode": "SELECT 'found' WHERE 'B' ___ ('A', 'B', 'C');",
+      "correctCode": "-- INで複数値マッチ\nSELECT 'found' WHERE 'B' IN ('A', 'B', 'C');",
+      "holeyCode": "-- INで複数値マッチ\nSELECT 'found' WHERE 'B' ___ ('A', 'B', 'C');",
       "correctLines": [
         "SELECT 'found' WHERE 'B' IN ('A', 'B', 'C');"
       ],

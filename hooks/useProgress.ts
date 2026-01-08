@@ -27,7 +27,12 @@ export function useProgress(exerciseId: string) {
         .eq('exercise_id', exerciseId)
         .single();
 
-      if (!error && data) {
+      if (error) {
+        // PGRST116 is "no rows returned" which is expected for new exercises
+        if (error.code !== 'PGRST116') {
+          console.error('Error fetching progress:', error);
+        }
+      } else if (data) {
         setProgress(exerciseId, data);
       }
 

@@ -42,3 +42,13 @@ client_secret_*.json
 
 # Auto Claude data directory
 .auto-claude/
+
+# Log files
+dev_server.log
+dev_server_err.log
+tunnel.log
+tunnel.err
+tunnel.out
+
+# Worktrees
+.worktrees/

@@ -250,8 +250,8 @@ export const phpData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "<?php\n  $score = 100;\n  if ($score > 80) {\n    echo \"Excellent\";\n  }\n?>",
-      "holeyCode": "<?php\n  $score = 100;\n  if ($score ___ 80) {\n    echo \"Excellent\";\n  }\n?>",
+      "correctCode": "<?php\n  $score = 100;\n  // >で大きいか比較\n  if ($score > 80) {\n    echo \"Excellent\";\n  }\n?>",
+      "holeyCode": "<?php\n  $score = 100;\n  // >で大きいか比較\n  if ($score ___ 80) {\n    echo \"Excellent\";\n  }\n?>",
       "correctLines": [
         "<?php",
         "  $score = 100;",
@@ -293,13 +293,13 @@ export const phpData = {
         },
         {
           "title": "elseブロック",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```php\nif ($price < 1000) {\n    echo \"安い\";\n} else {\n    echo \"高い\";\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "<?php\n  $age = 18;\n  if ($age >= 20) {\n    echo \"Adult\";\n  } else {\n    echo \"Minor\";\n  }\n?>",
-      "holeyCode": "<?php\n  $age = 18;\n  if ($age >= 20) {\n    echo \"Adult\";\n  } ___ {\n    echo \"Minor\";\n  }\n?>",
+      "correctCode": "<?php\n  $age = 18;\n  if ($age >= 20) {\n    echo \"Adult\";\n  // elseで「そうでなければ」\n  } else {\n    echo \"Minor\";\n  }\n?>",
+      "holeyCode": "<?php\n  $age = 18;\n  if ($age >= 20) {\n    echo \"Adult\";\n  // elseで「そうでなければ」\n  } ___ {\n    echo \"Minor\";\n  }\n?>",
       "correctLines": [
         "<?php",
         "  $age = 18;",
@@ -350,8 +350,8 @@ export const phpData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "<?php\n  $nums = [1, 2, 3];\n  foreach ($nums as $n) {\n    echo $n;\n  }\n?>",
-      "holeyCode": "<?php\n  $nums = [1, 2, 3];\n  foreach ($nums ___ $n) {\n    echo $n;\n  }\n?>",
+      "correctCode": "<?php\n  $nums = [1, 2, 3];\n  // asで各要素を取り出す\n  foreach ($nums as $n) {\n    echo $n;\n  }\n?>",
+      "holeyCode": "<?php\n  $nums = [1, 2, 3];\n  // asで各要素を取り出す\n  foreach ($nums ___ $n) {\n    echo $n;\n  }\n?>",
       "correctLines": [
         "<?php",
         "  $nums = [1, 2, 3];",
@@ -398,8 +398,8 @@ export const phpData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "<?php\n  $user = ['name' => 'Alice'];\n  echo $user['name'];\n?>",
-      "holeyCode": "<?php\n  $user = ['name' => 'Alice'];\n  echo $user['___'];\n?>",
+      "correctCode": "<?php\n  $user = ['name' => 'Alice'];\n  // nameでキーを指定してアクセス\n  echo $user['name'];\n?>",
+      "holeyCode": "<?php\n  $user = ['name' => 'Alice'];\n  // nameでキーを指定してアクセス\n  echo $user['___'];\n?>",
       "correctLines": [
         "<?php",
         "  $user = ['name' => 'Alice'];",

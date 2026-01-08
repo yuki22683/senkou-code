@@ -14,16 +14,18 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "async/await とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 非同期処理を同期的に書く\n\n**async/await** を使うと、非同期処理を同期的なコードのように書けます。\n\n```csharp\nasync Task<string> GetDataAsync() {\n    await Task.Delay(1000);\n    return \"Done!\";\n}\n```"
         },
         {
           "title": "Task を返す",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 戻り値の型\n\n```csharp\nasync Task DoWorkAsync()        // 戻り値なし\nasync Task<int> GetValueAsync() // int を返す\nasync void OnClick()            // イベントハンドラのみ\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Threading.Tasks;\n\nclass Program {\n    static async Task Main() {\n        var result = await GetMessageAsync();\n        Console.WriteLine(result);\n    }\n    \n    static async Task<string> GetMessageAsync() {\n        await Task.Delay(100);\n        return \"Hello Async!\";\n    }\n}",
-      "holeyCode": "using System;\nusing System.Threading.Tasks;\n\nclass Program {\n    static async Task Main() {\n        var result = ___ GetMessageAsync();\n        Console.WriteLine(result);\n    }\n    \n    static async Task<string> GetMessageAsync() {\n        await Task.Delay(100);\n        return \"Hello Async!\";\n    }\n}",
+      "holeyCode": "using System;\nusing System.Threading.Tasks;\n\nclass Program {\n    static async Task Main() {\n        // awaitで非同期処理を待機\n        var result = ___ GetMessageAsync();\n        Console.WriteLine(result);\n    }\n    \n    static async Task<string> GetMessageAsync() {\n        await Task.Delay(100);\n        return \"Hello Async!\";\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Threading.Tasks;",
@@ -74,16 +76,18 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "OrderBy とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 並べ替え\n\n**OrderBy** は、指定したキーで昇順に並べ替えます。\n\n```csharp\nvar sorted = names.OrderBy(x => x.Length);\n```"
         },
         {
           "title": "降順ソート",
+          "image": "/illustrations/3d/robot.png",
           "content": "# OrderByDescending\n\n```csharp\nvar desc = nums.OrderByDescending(x => x);\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 3, 1, 4, 1, 5 };\n        var sorted = nums.OrderBy(x => x);\n        Console.WriteLine(string.Join(\",\", sorted));\n    }\n}",
-      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 3, 1, 4, 1, 5 };\n        var sorted = nums.___(x => x);\n        Console.WriteLine(string.Join(\",\", sorted));\n    }\n}",
+      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 3, 1, 4, 1, 5 };\n        // OrderByでソート\n        var sorted = nums.___(x => x);\n        Console.WriteLine(string.Join(\",\", sorted));\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Linq;",
@@ -126,16 +130,18 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "First vs FirstOrDefault",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 最初の要素\n\n```csharp\nvar first = nums.First();  // 空なら例外\nvar firstOr = nums.FirstOrDefault();  // 空ならデフォルト値\n```"
         },
         {
           "title": "条件付き",
+          "image": "/illustrations/3d/if.png",
           "content": "# 条件を指定\n\n```csharp\nvar even = nums.First(x => x % 2 == 0);\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new int[] {};\n        var result = nums.FirstOrDefault();\n        Console.WriteLine(result);\n    }\n}",
-      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new int[] {};\n        var result = nums.___();\n        Console.WriteLine(result);\n    }\n}",
+      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new int[] {};\n        // FirstOrDefaultで空の場合はデフォルト値\n        var result = nums.___();\n        Console.WriteLine(result);\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Linq;",
@@ -178,16 +184,18 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "Any とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 1つでも条件を満たすか\n\n**Any** は、1つでも条件を満たす要素があれば true。\n\n```csharp\nbool hasNegative = nums.Any(x => x < 0);\n```"
         },
         {
           "title": "All とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 全て条件を満たすか\n\n```csharp\nbool allPositive = nums.All(x => x > 0);\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5 };\n        var allPositive = nums.All(x => x > 0);\n        Console.WriteLine(allPositive);\n    }\n}",
-      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5 };\n        var allPositive = nums.___(x => x > 0);\n        Console.WriteLine(allPositive);\n    }\n}",
+      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5 };\n        // Allで全要素が条件を満たすかチェック\n        var allPositive = nums.___(x => x > 0);\n        Console.WriteLine(allPositive);\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Linq;",
@@ -230,16 +238,18 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "Sum とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 合計を計算\n\n**Sum** は、要素の合計を返します。\n\n```csharp\nvar total = nums.Sum();\nvar totalPrice = items.Sum(x => x.Price);\n```"
         },
         {
           "title": "Average",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 平均を計算\n\n```csharp\nvar avg = nums.Average();\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 10, 20, 30 };\n        var total = nums.Sum();\n        Console.WriteLine(total);\n    }\n}",
-      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 10, 20, 30 };\n        var total = nums.___();\n        Console.WriteLine(total);\n    }\n}",
+      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 10, 20, 30 };\n        // Sumで合計を計算\n        var total = nums.___();\n        Console.WriteLine(total);\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Linq;",
@@ -282,16 +292,18 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "switch式とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 式として値を返す\n\nC# 8.0の **switch式** は、値を返す簡潔なswitch。\n\n```csharp\nvar result = value switch {\n    1 => \"one\",\n    2 => \"two\",\n    _ => \"other\"\n};\n```"
         },
         {
           "title": "パターンマッチング",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "# 型パターン\n\n```csharp\nvar msg = obj switch {\n    int i => $\"int: {i}\",\n    string s => $\"string: {s}\",\n    _ => \"unknown\"\n};\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        int n = 2;\n        var result = n switch {\n            1 => \"one\",\n            2 => \"two\",\n            _ => \"other\"\n        };\n        Console.WriteLine(result);\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        int n = 2;\n        var result = n ___ {\n            1 => \"one\",\n            2 => \"two\",\n            _ => \"other\"\n        };\n        Console.WriteLine(result);\n    }\n}",
+      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        int n = 2;\n        // switchで式を分岐\n        var result = n ___ {\n            1 => \"one\",\n            2 => \"two\",\n            _ => \"other\"\n        };\n        Console.WriteLine(result);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -340,16 +352,18 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "Dictionary とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# キーと値のマップ\n\n**Dictionary** は、キーで値を検索できるコレクション。\n\n```csharp\nvar dict = new Dictionary<string, int> {\n    [\"apple\"] = 100,\n    [\"banana\"] = 80\n};\n```"
         },
         {
           "title": "値の取得",
+          "image": "/illustrations/3d/robot.png",
           "content": "# TryGetValue\n\n```csharp\nif (dict.TryGetValue(\"apple\", out var price)) {\n    Console.WriteLine(price);\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Collections.Generic;\n\nclass Program {\n    static void Main() {\n        var dict = new Dictionary<string, int>();\n        dict[\"a\"] = 1;\n        dict[\"b\"] = 2;\n        Console.WriteLine(dict[\"a\"]);\n    }\n}",
-      "holeyCode": "using System;\nusing System.Collections.Generic;\n\nclass Program {\n    static void Main() {\n        var dict = new ___<string, int>();\n        dict[\"a\"] = 1;\n        dict[\"b\"] = 2;\n        Console.WriteLine(dict[\"a\"]);\n    }\n}",
+      "holeyCode": "using System;\nusing System.Collections.Generic;\n\nclass Program {\n    static void Main() {\n        // Dictionaryでキーと値のマップ\n        var dict = new ___<string, int>();\n        dict[\"a\"] = 1;\n        dict[\"b\"] = 2;\n        Console.WriteLine(dict[\"a\"]);\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Collections.Generic;",
@@ -394,16 +408,18 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "文字列補間とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# $ で始める\n\n**$\"\"** で文字列内に変数を埋め込めます。\n\n```csharp\nvar name = \"Alice\";\nvar msg = $\"Hello, {name}!\";\n```"
         },
         {
           "title": "式も埋め込める",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 計算や呼び出し\n\n```csharp\n$\"Result: {1 + 2}\"      // Result: 3\n$\"Upper: {s.ToUpper()}\" // 式\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        var x = 10;\n        var y = 20;\n        Console.WriteLine($\"Sum: {x + y}\");\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        var x = 10;\n        var y = 20;\n        Console.WriteLine(___\"Sum: {x + y}\");\n    }\n}",
+      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        var x = 10;\n        var y = 20;\n        // $で文字列補間\n        Console.WriteLine(___\"Sum: {x + y}\");\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -444,16 +460,18 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "record とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 値ベースの型\n\nC# 9.0の **record** は、値の等価性を持つ不変の型。\n\n```csharp\nrecord Person(string Name, int Age);\n\nvar p1 = new Person(\"Alice\", 25);\nvar p2 = new Person(\"Alice\", 25);\nConsole.WriteLine(p1 == p2);  // True\n```"
         },
         {
           "title": "with で複製",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 一部だけ変更\n\n```csharp\nvar p2 = p1 with { Age = 26 };\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nrecord Point(int X, int Y);\n\nclass Program {\n    static void Main() {\n        var p = new Point(10, 20);\n        Console.WriteLine(p);\n    }\n}",
-      "holeyCode": "using System;\n\n___ Point(int X, int Y);\n\nclass Program {\n    static void Main() {\n        var p = new Point(10, 20);\n        Console.WriteLine(p);\n    }\n}",
+      "holeyCode": "using System;\n\n// recordで値型を定義\n___ Point(int X, int Y);\n\nclass Program {\n    static void Main() {\n        var p = new Point(10, 20);\n        Console.WriteLine(p);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -496,16 +514,18 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "using とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 自動的にDispose\n\n**using** を使うと、スコープを出たときに自動的にDisposeが呼ばれます。\n\n```csharp\nusing var file = new StreamReader(\"file.txt\");\nvar content = file.ReadToEnd();\n// 自動的にDisposeされる\n```"
         },
         {
           "title": "旧式の書き方",
+          "image": "/illustrations/3d/robot.png",
           "content": "# ブロック構文\n\n```csharp\nusing (var file = new StreamReader(\"file.txt\")) {\n    // ...\n}  // ここでDispose\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.IO;\n\nclass Program {\n    static void Main() {\n        using var writer = new StringWriter();\n        writer.WriteLine(\"Hello\");\n        Console.WriteLine(writer.ToString().Trim());\n    }\n}",
-      "holeyCode": "using System;\nusing System.IO;\n\nclass Program {\n    static void Main() {\n        ___ var writer = new StringWriter();\n        writer.WriteLine(\"Hello\");\n        Console.WriteLine(writer.ToString().Trim());\n    }\n}",
+      "holeyCode": "using System;\nusing System.IO;\n\nclass Program {\n    static void Main() {\n        // usingで自動解放\n        ___ var writer = new StringWriter();\n        writer.WriteLine(\"Hello\");\n        Console.WriteLine(writer.ToString().Trim());\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.IO;",

@@ -34,8 +34,8 @@ export const perlData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# Hello, World!を表示する関数\nprint \"Hello, World!\\n\";",
-      "holeyCode": "# Hello, World!を表示する関数\n___ \"Hello, World!\\n\";",
+      "correctCode": "# printで出力\nprint \"Hello, World!\\n\";",
+      "holeyCode": "# printで出力\n___ \"Hello, World!\\n\";",
       "correctLines": [
         "# Hello, World!を表示する関数",
         "print \"Hello, World!\\n\";"

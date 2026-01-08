@@ -14,16 +14,18 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "関数の定義",
+          "image": "/illustrations/3d/robot.png",
           "content": "# シンプルな定義\n\nHaskellでは、`名前 引数 = 本体` のようにシンプルに関数を定義します。括弧は不要です。"
         },
         {
           "title": "関数の使い方",
+          "image": "/illustrations/3d/robot.png",
           "content": "# スペースで引数を渡す\n\n関数の呼び出しは `関数名 引数` と書きます。\n\n**コード例：**\n```haskell\ndouble x = x * 2\nmain = print (double 5) -- 10\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "triple x = x * 3\nmain = print (triple 4)",
-      "holeyCode": "triple x = x ___ 3\nmain = print (triple 4)",
+      "correctCode": "-- *で掛け算\ntriple x = x * 3\nmain = print (triple 4)",
+      "holeyCode": "-- *で掛け算\ntriple x = x ___ 3\nmain = print (triple 4)",
       "correctLines": [
         "triple x = x * 3",
         "main = print (triple 4)"
@@ -50,18 +52,18 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "型注釈とは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 型を明示する\n\n**型注釈** は、関数や値の型を明示的に書くことです。`::` を使って書きます。"
         },
         {
           "title": "型注釈の書き方",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 名前 :: 型\n\n`関数名 :: 引数型 -> 戻り値型` のように書きます。\n\n**コード例：**\n```haskell\ndouble :: Int -> Int\ndouble x = x * 2\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "square :: Int -> Int\nsquare x = x * x\nmain = print (square 5)",
-      "holeyCode": "square ___ Int -> Int\nsquare x = x * x\nmain = print (square 5)",
+      "correctCode": "-- ::で型注釈\nsquare :: Int -> Int\nsquare x = x * x\nmain = print (square 5)",
+      "holeyCode": "-- ::で型注釈\nsquare ___ Int -> Int\nsquare x = x * x\nmain = print (square 5)",
       "correctLines": [
         "square :: Int -> Int",
         "square x = x * x",
@@ -90,18 +92,18 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "リストとは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 同じ型の要素の列\n\nHaskellのリストは、同じ型の要素を順番に並べたものです。`[ ]` で作成します。"
         },
         {
           "title": "リストの操作",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# head と tail\n\n`head` で先頭、`tail` で残りを取得します。\n\n**コード例：**\n```haskell\nhead [1, 2, 3] -- 1\ntail [1, 2, 3] -- [2, 3]\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "nums = [1, 2, 3]\nmain = print (head nums)",
-      "holeyCode": "nums = [1, 2, 3]\nmain = print (___ nums)",
+      "correctCode": "nums = [1, 2, 3]\n-- headで先頭要素を取得\nmain = print (head nums)",
+      "holeyCode": "nums = [1, 2, 3]\n-- headで先頭要素を取得\nmain = print (___ nums)",
       "correctLines": [
         "nums = [1, 2, 3]",
         "main = print (head nums)"
@@ -128,18 +130,18 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "map とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 各要素を変換\n\n**map** は、リストの各要素に関数を適用して新しいリストを作ります。"
         },
         {
           "title": "map の使い方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# map 関数 リスト\n\n関数とリストを渡します。\n\n**コード例：**\n```haskell\nmap (*2) [1, 2, 3] -- [2, 4, 6]\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "main = print (map (*2) [1, 2, 3])",
-      "holeyCode": "main = print (___ (*2) [1, 2, 3])",
+      "correctCode": "-- mapで各要素を変換\nmain = print (map (*2) [1, 2, 3])",
+      "holeyCode": "-- mapで各要素を変換\nmain = print (___ (*2) [1, 2, 3])",
       "correctLines": [
         "main = print (map (*2) [1, 2, 3])"
       ],
@@ -164,18 +166,18 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "filter とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 条件でフィルタ\n\n**filter** は、条件を満たす要素だけを残した新しいリストを作ります。"
         },
         {
           "title": "filter の使い方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# filter 条件関数 リスト\n\n条件関数が True を返す要素だけが残ります。\n\n**コード例：**\n```haskell\nfilter (>3) [1, 2, 3, 4, 5] -- [4, 5]\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "main = print (filter (>=3) [1, 2, 3, 4, 5])",
-      "holeyCode": "main = print (___ (>=3) [1, 2, 3, 4, 5])",
+      "correctCode": "-- filterで条件に合う要素を抽出\nmain = print (filter (>=3) [1, 2, 3, 4, 5])",
+      "holeyCode": "-- filterで条件に合う要素を抽出\nmain = print (___ (>=3) [1, 2, 3, 4, 5])",
       "correctLines": [
         "main = print (filter (>=3) [1, 2, 3, 4, 5])"
       ],
@@ -200,18 +202,18 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "パターンマッチとは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "# 値の形で分岐\n\n**パターンマッチ** は、引数の値や構造に応じて異なる定義を使う機能です。"
         },
         {
           "title": "パターンマッチの書き方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "# 複数の定義\n\n同じ関数を複数定義し、引数のパターンで選ばせます。\n\n**コード例：**\n```haskell\nfactorial 0 = 1\nfactorial n = n * factorial (n - 1)\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "fib 0 = 0\nfib 1 = 1\nfib n = fib (n - 1) + fib (n - 2)\nmain = print (fib 6)",
-      "holeyCode": "fib 0 = 0\nfib 1 = 1\nfib n = fib (n - 1) + fib (n - ___)\nmain = print (fib 6)",
+      "correctCode": "fib 0 = 0\nfib 1 = 1\n-- 2を引いて再帰\nfib n = fib (n - 1) + fib (n - 2)\nmain = print (fib 6)",
+      "holeyCode": "fib 0 = 0\nfib 1 = 1\n-- 2を引いて再帰\nfib n = fib (n - 1) + fib (n - ___)\nmain = print (fib 6)",
       "correctLines": [
         "fib 0 = 0",
         "fib 1 = 1",
@@ -242,18 +244,18 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "ガードとは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 条件での分岐\n\n**ガード** は、`|` を使って条件ごとに異なる処理を定義する方法です。"
         },
         {
           "title": "ガードの書き方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# | 条件 = 処理\n\n`otherwise` はすべての条件に当てはまらない場合です。\n\n**コード例：**\n```haskell\nabs' x\n  | x < 0     = -x\n  | otherwise = x\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "sign x\n  | x > 0     = \"positive\"\n  | x < 0     = \"negative\"\n  | otherwise = \"zero\"\nmain = putStrLn (sign 5)",
-      "holeyCode": "sign x\n  | x > 0     = \"positive\"\n  | x < 0     = \"negative\"\n  | ___ = \"zero\"\nmain = putStrLn (sign 5)",
+      "correctCode": "sign x\n  | x > 0     = \"positive\"\n  | x < 0     = \"negative\"\n  -- otherwiseはそれ以外の場合\n  | otherwise = \"zero\"\nmain = putStrLn (sign 5)",
+      "holeyCode": "sign x\n  | x > 0     = \"positive\"\n  | x < 0     = \"negative\"\n  -- otherwiseはそれ以外の場合\n  | ___ = \"zero\"\nmain = putStrLn (sign 5)",
       "correctLines": [
         "sign x",
         "  | x > 0     = \"positive\"",
@@ -286,16 +288,18 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "ラムダ式とは？",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 無名関数\n\n**ラムダ式** は、名前をつけずに定義する関数です。`\\引数 -> 本体` と書きます。"
         },
         {
           "title": "ラムダの使い方",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# \\ で始める\n\n`\\` はラムダの記号です。\n\n**コード例：**\n```haskell\nmap (\\x -> x * 2) [1, 2, 3]\n-- [2, 4, 6]\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "main = print (map (\\x -> x * x) [1, 2, 3])",
-      "holeyCode": "main = print (map (___x -> x * x) [1, 2, 3])",
+      "correctCode": "-- \\でラムダ式を開始\nmain = print (map (\\x -> x * x) [1, 2, 3])",
+      "holeyCode": "-- \\でラムダ式を開始\nmain = print (map (___x -> x * x) [1, 2, 3])",
       "correctLines": [
         "main = print (map (\\x -> x * x) [1, 2, 3])"
       ],
@@ -320,18 +324,18 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "リスト内包表記とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 数学的なリスト生成\n\n**リスト内包表記** は、数学の集合表記のようにリストを作る方法です。"
         },
         {
           "title": "内包表記の書き方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# [式 | 変数 <- リスト, 条件]\n\n生成規則と条件を組み合わせられます。\n\n**コード例：**\n```haskell\n[x * 2 | x <- [1..5]] -- [2,4,6,8,10]\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "main = print [x * x | x <- [1..5]]",
-      "holeyCode": "main = print [x * x | x ___ [1..5]]",
+      "correctCode": "-- <-でリストから要素を取り出す\nmain = print [x * x | x <- [1..5]]",
+      "holeyCode": "-- <-でリストから要素を取り出す\nmain = print [x * x | x ___ [1..5]]",
       "correctLines": [
         "main = print [x * x | x <- [1..5]]"
       ],
@@ -356,18 +360,18 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "foldr とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# リストの畳み込み\n\n**foldr** は、リストの要素を右から順に二項演算で畳み込みます。"
         },
         {
           "title": "foldr の使い方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# foldr 関数 初期値 リスト\n\n二項関数、初期値、リストを渡します。\n\n**コード例：**\n```haskell\nfoldr (+) 0 [1, 2, 3] -- 6\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "main = print (foldr (+) 0 [1, 2, 3, 4, 5])",
-      "holeyCode": "main = print (___ (+) 0 [1, 2, 3, 4, 5])",
+      "correctCode": "-- foldrで畳み込み\nmain = print (foldr (+) 0 [1, 2, 3, 4, 5])",
+      "holeyCode": "-- foldrで畳み込み\nmain = print (___ (+) 0 [1, 2, 3, 4, 5])",
       "correctLines": [
         "main = print (foldr (+) 0 [1, 2, 3, 4, 5])"
       ],

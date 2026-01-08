@@ -14,16 +14,18 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "複数の戻り値",
+          "image": "/illustrations/3d/return.png",
           "content": "# 一度に複数の結果を返す\n\nGo言語では、関数から2つ以上の値を返すことができます。エラーと結果を同時に返すのによく使います。"
         },
         {
           "title": "戻り値の書き方",
+          "image": "/illustrations/3d/return.png",
           "content": "# カッコで複数の型を指定\n\n戻り値の型を `(型1, 型2)` のように書きます。\n\n**コード例：**\n```go\nfunc divide(a, b int) (int, int) {\n    return a / b, a % b\n}\nq, r := divide(10, 3)\n// q=3, r=1\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\nfunc minmax(a, b int) (int, int) {\n    if a < b {\n        return a, b\n    }\n    return b, a\n}\nfunc main() {\n    min, max := minmax(5, 3)\n    fmt.Println(min, max)\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc minmax(a, b int) (int, int) {\n    if a < b {\n        ___ a, b\n    }\n    return b, a\n}\nfunc main() {\n    min, max := minmax(5, 3)\n    fmt.Println(min, max)\n}",
+      "correctCode": "package main\nimport \"fmt\"\nfunc minmax(a, b int) (int, int) {\n    if a < b {\n        // return で複数の値を返す\n        return a, b\n    }\n    return b, a\n}\nfunc main() {\n    min, max := minmax(5, 3)\n    fmt.Println(min, max)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc minmax(a, b int) (int, int) {\n    if a < b {\n        // return で複数の値を返す\n        ___ a, b\n    }\n    return b, a\n}\nfunc main() {\n    min, max := minmax(5, 3)\n    fmt.Println(min, max)\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -70,18 +72,18 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "エラーを返す",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# error 型\n\nGo言語では、エラーは `error` 型として返します。エラーがなければ `nil` を返します。"
         },
         {
           "title": "エラーのチェック",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# nil かどうか確認\n\n関数を呼んだ後、エラーが `nil` でないかチェックします。\n\n**コード例：**\n```go\nresult, err := someFunc()\nif err != nil {\n    fmt.Println(\"Error!\")\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport (\n    \"errors\"\n    \"fmt\"\n)\nfunc check(n int) (int, error) {\n    if n < 0 {\n        return 0, errors.New(\"negative\")\n    }\n    return n, nil\n}\nfunc main() {\n    val, err := check(5)\n    if err != nil {\n        fmt.Println(err)\n    } else {\n        fmt.Println(val)\n    }\n}",
-      "holeyCode": "package main\nimport (\n    \"errors\"\n    \"fmt\"\n)\nfunc check(n int) (int, error) {\n    if n < 0 {\n        return 0, errors.New(\"negative\")\n    }\n    return n, ___\n}\nfunc main() {\n    val, err := check(5)\n    if err != nil {\n        fmt.Println(err)\n    } else {\n        fmt.Println(val)\n    }\n}",
+      "correctCode": "package main\nimport (\n    \"errors\"\n    \"fmt\"\n)\nfunc check(n int) (int, error) {\n    if n < 0 {\n        return 0, errors.New(\"negative\")\n    }\n    // nil でエラーなしを表す\n    return n, nil\n}\nfunc main() {\n    val, err := check(5)\n    if err != nil {\n        fmt.Println(err)\n    } else {\n        fmt.Println(val)\n    }\n}",
+      "holeyCode": "package main\nimport (\n    \"errors\"\n    \"fmt\"\n)\nfunc check(n int) (int, error) {\n    if n < 0 {\n        return 0, errors.New(\"negative\")\n    }\n    // nil でエラーなしを表す\n    return n, ___\n}\nfunc main() {\n    val, err := check(5)\n    if err != nil {\n        fmt.Println(err)\n    } else {\n        fmt.Println(val)\n    }\n}",
       "correctLines": [
         "package main",
         "import (",
@@ -142,18 +144,18 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "ポインタとは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/pointer_arrow.png",
           "content": "# メモリの住所\n\n**ポインタ** は、変数が保存されているメモリのアドレスを指します。`&` でアドレスを取得し、`*` で中身にアクセスします。"
         },
         {
           "title": "ポインタの使い方",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/pointer_arrow.png",
           "content": "# & と * の使い分け\n\n`&変数` でアドレスを取得、`*ポインタ` で値にアクセスします。\n\n**コード例：**\n```go\nx := 10\np := &x  // p は x のアドレス\n*p = 20  // x が 20 になる\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    p := &x\n    *p = 10\n    fmt.Println(x)\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    p := ___x\n    *p = 10\n    fmt.Println(x)\n}",
+      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    // & でアドレスを取得\n    p := &x\n    *p = 10\n    fmt.Println(x)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    // & でアドレスを取得\n    p := ___x\n    *p = 10\n    fmt.Println(x)\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -192,18 +194,18 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "構造体とは？",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d_advanced/class_template.png",
           "content": "# データのまとまり\n\n**構造体（struct）** は、関連するデータをひとまとめにする仕組みです。例えば「人」は「名前」と「年齢」を持ちます。"
         },
         {
           "title": "struct の定義",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d_advanced/class_template.png",
           "content": "# type で新しい型を作る\n\n`type 名前 struct { }` で構造体を定義します。\n\n**コード例：**\n```go\ntype Person struct {\n    Name string\n    Age  int\n}\np := Person{Name: \"Taro\", Age: 20}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\ntype Point struct {\n    X int\n    Y int\n}\nfunc main() {\n    p := Point{X: 3, Y: 4}\n    fmt.Println(p.X)\n}",
-      "holeyCode": "package main\nimport \"fmt\"\ntype Point ___ {\n    X int\n    Y int\n}\nfunc main() {\n    p := Point{X: 3, Y: 4}\n    fmt.Println(p.X)\n}",
+      "correctCode": "package main\nimport \"fmt\"\n// struct で構造体を定義\ntype Point struct {\n    X int\n    Y int\n}\nfunc main() {\n    p := Point{X: 3, Y: 4}\n    fmt.Println(p.X)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\n// struct で構造体を定義\ntype Point ___ {\n    X int\n    Y int\n}\nfunc main() {\n    p := Point{X: 3, Y: 4}\n    fmt.Println(p.X)\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -246,16 +248,18 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "メソッドとは？",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# 構造体の関数\n\n**メソッド** は、特定の型に紐づいた関数です。その型の値に対して操作を行えます。"
         },
         {
           "title": "メソッドの定義",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# レシーバを指定\n\n`func (r 型) メソッド名()` のように、関数名の前にレシーバを書きます。\n\n**コード例：**\n```go\nfunc (p Person) Greet() {\n    fmt.Println(\"Hi, I'm\", p.Name)\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\ntype Rect struct {\n    W int\n    H int\n}\nfunc (r Rect) Area() int {\n    return r.W * r.H\n}\nfunc main() {\n    rect := Rect{W: 3, H: 4}\n    fmt.Println(rect.Area())\n}",
-      "holeyCode": "package main\nimport \"fmt\"\ntype Rect struct {\n    W int\n    H int\n}\nfunc (r Rect) Area() int {\n    return r.W ___ r.H\n}\nfunc main() {\n    rect := Rect{W: 3, H: 4}\n    fmt.Println(rect.Area())\n}",
+      "correctCode": "package main\nimport \"fmt\"\ntype Rect struct {\n    W int\n    H int\n}\nfunc (r Rect) Area() int {\n    // * でかけ算\n    return r.W * r.H\n}\nfunc main() {\n    rect := Rect{W: 3, H: 4}\n    fmt.Println(rect.Area())\n}",
+      "holeyCode": "package main\nimport \"fmt\"\ntype Rect struct {\n    W int\n    H int\n}\nfunc (r Rect) Area() int {\n    // * でかけ算\n    return r.W ___ r.H\n}\nfunc main() {\n    rect := Rect{W: 3, H: 4}\n    fmt.Println(rect.Area())\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -304,18 +308,18 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "インターフェースとは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/interface_blueprint.png",
           "content": "# メソッドの約束\n\n**インターフェース** は、型が持つべきメソッドを定義します。明示的な実装宣言は不要で、メソッドがあれば自動的に満たされます。"
         },
         {
           "title": "interface の定義",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/interface_blueprint.png",
           "content": "# 暗黙の実装\n\nメソッドを持っていれば、そのインターフェースを実装したことになります。\n\n**コード例：**\n```go\ntype Greeter interface {\n    Greet()\n}\n// Greet() を持つ型は Greeter\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\ntype Speaker interface {\n    Speak()\n}\ntype Dog struct{}\nfunc (d Dog) Speak() {\n    fmt.Println(\"woof\")\n}\nfunc main() {\n    var s Speaker = Dog{}\n    s.Speak()\n}",
-      "holeyCode": "package main\nimport \"fmt\"\ntype Speaker ___ {\n    Speak()\n}\ntype Dog struct{}\nfunc (d Dog) Speak() {\n    fmt.Println(\"woof\")\n}\nfunc main() {\n    var s Speaker = Dog{}\n    s.Speak()\n}",
+      "correctCode": "package main\nimport \"fmt\"\n// interface でインターフェースを定義\ntype Speaker interface {\n    Speak()\n}\ntype Dog struct{}\nfunc (d Dog) Speak() {\n    fmt.Println(\"woof\")\n}\nfunc main() {\n    var s Speaker = Dog{}\n    s.Speak()\n}",
+      "holeyCode": "package main\nimport \"fmt\"\n// interface でインターフェースを定義\ntype Speaker ___ {\n    Speak()\n}\ntype Dog struct{}\nfunc (d Dog) Speak() {\n    fmt.Println(\"woof\")\n}\nfunc main() {\n    var s Speaker = Dog{}\n    s.Speak()\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -364,16 +368,18 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "defer とは？",
+          "image": "/illustrations/3d_advanced/concurrency.png",
           "content": "# 後始末を予約\n\n**defer** は、関数が終わるときに実行したい処理を予約します。ファイルのクローズなどに便利です。"
         },
         {
           "title": "defer の使い方",
+          "image": "/illustrations/3d_advanced/concurrency.png",
           "content": "# 関数の最後に実行\n\n`defer` をつけた文は、関数の終了時に実行されます。\n\n**コード例：**\n```go\nfunc main() {\n    defer fmt.Println(\"last\")\n    fmt.Println(\"first\")\n}\n// first → last の順で表示\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    defer fmt.Println(\"end\")\n    fmt.Println(\"start\")\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    ___ fmt.Println(\"end\")\n    fmt.Println(\"start\")\n}",
+      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // defer で関数終了時に実行\n    defer fmt.Println(\"end\")\n    fmt.Println(\"start\")\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // defer で関数終了時に実行\n    ___ fmt.Println(\"end\")\n    fmt.Println(\"start\")\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -408,18 +414,18 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "ゴルーチンとは？",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d_advanced/concurrency.png",
           "content": "# 軽量な並行処理\n\n**ゴルーチン** は、Go言語の軽量スレッドです。`go` キーワードで関数を並行に実行できます。"
         },
         {
           "title": "go キーワード",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 並行に実行\n\n`go 関数()` と書くと、その関数が別のゴルーチンで実行されます。\n\n**コード例：**\n```go\ngo fmt.Println(\"hello\")\n// 別のゴルーチンで実行\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport (\n    \"fmt\"\n    \"time\"\n)\nfunc say(msg string) {\n    fmt.Println(msg)\n}\nfunc main() {\n    go say(\"hello\")\n    time.Sleep(100 * time.Millisecond)\n}",
-      "holeyCode": "package main\nimport (\n    \"fmt\"\n    \"time\"\n)\nfunc say(msg string) {\n    fmt.Println(msg)\n}\nfunc main() {\n    ___ say(\"hello\")\n    time.Sleep(100 * time.Millisecond)\n}",
+      "correctCode": "package main\nimport (\n    \"fmt\"\n    \"time\"\n)\nfunc say(msg string) {\n    fmt.Println(msg)\n}\nfunc main() {\n    // go でゴルーチンを起動\n    go say(\"hello\")\n    time.Sleep(100 * time.Millisecond)\n}",
+      "holeyCode": "package main\nimport (\n    \"fmt\"\n    \"time\"\n)\nfunc say(msg string) {\n    fmt.Println(msg)\n}\nfunc main() {\n    // go でゴルーチンを起動\n    ___ say(\"hello\")\n    time.Sleep(100 * time.Millisecond)\n}",
       "correctLines": [
         "package main",
         "import (",
@@ -466,18 +472,18 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "チャネルとは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/concurrency.png",
           "content": "# ゴルーチン間の通信路\n\n**チャネル** は、ゴルーチン間でデータを安全にやり取りするための仕組みです。`make(chan 型)` で作成します。"
         },
         {
           "title": "チャネルの使い方",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/concurrency.png",
           "content": "# 送信と受信\n\n`ch <- 値` で送信、`<-ch` で受信します。\n\n**コード例：**\n```go\nch := make(chan int)\ngo func() { ch <- 42 }()\nval := <-ch // 42 を受信\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    ch := make(chan int)\n    go func() {\n        ch <- 100\n    }()\n    val := <-ch\n    fmt.Println(val)\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    ch := make(___ int)\n    go func() {\n        ch <- 100\n    }()\n    val := <-ch\n    fmt.Println(val)\n}",
+      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // chan でチャネルを作成\n    ch := make(chan int)\n    go func() {\n        ch <- 100\n    }()\n    val := <-ch\n    fmt.Println(val)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // chan でチャネルを作成\n    ch := make(___ int)\n    go func() {\n        ch <- 100\n    }()\n    val := <-ch\n    fmt.Println(val)\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -520,16 +526,18 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "無名関数とは？",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 名前のない関数\n\n**無名関数** は、名前をつけずにその場で定義する関数です。変数に代入したり、すぐに実行したりできます。"
         },
         {
           "title": "クロージャ",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 外の変数を捕捉\n\n無名関数は、外側の変数にアクセスできます。これを **クロージャ** と呼びます。\n\n**コード例：**\n```go\nx := 10\nfn := func() int {\n    return x * 2\n}\nfmt.Println(fn()) // 20\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    n := 5\n    double := func() int {\n        return n * 2\n    }\n    fmt.Println(double())\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    n := 5\n    double := ___() int {\n        return n * 2\n    }\n    fmt.Println(double())\n}",
+      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    n := 5\n    // func で無名関数を定義\n    double := func() int {\n        return n * 2\n    }\n    fmt.Println(double())\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    n := 5\n    // func で無名関数を定義\n    double := ___() int {\n        return n * 2\n    }\n    fmt.Println(double())\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",

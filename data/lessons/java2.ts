@@ -14,16 +14,18 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "継承とは？",
+          "image": "/illustrations/3d_advanced/inheritance.png",
           "content": "# クラスを拡張する\n\n`extends` を使って、既存のクラスの機能を受け継いだ新しいクラスを作れます。\n\n```java\nclass Animal {\n    void eat() {\n        System.out.println(\"食べる\");\n    }\n}\n\nclass Dog extends Animal {\n    void bark() {\n        System.out.println(\"ワン！\");\n    }\n}\n```"
         },
         {
           "title": "親クラスの機能を使う",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# 継承した機能\n\n子クラスは親クラスのメソッドを使えます。\n\n```java\nDog dog = new Dog();\ndog.eat();   // 親のメソッド\ndog.bark();  // 自分のメソッド\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Vehicle {\n    void move() {\n        System.out.println(\"Moving\");\n    }\n}\n\nclass Car extends Vehicle {\n    void honk() {\n        System.out.println(\"Beep!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Car c = new Car();\n        c.move();\n    }\n}",
-      "holeyCode": "class Vehicle {\n    void move() {\n        System.out.println(\"Moving\");\n    }\n}\n\nclass Car ___ Vehicle {\n    void honk() {\n        System.out.println(\"Beep!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Car c = new Car();\n        c.move();\n    }\n}",
+      "holeyCode": "class Vehicle {\n    void move() {\n        System.out.println(\"Moving\");\n    }\n}\n\n// extends で Vehicle を継承する\nclass Car ___ Vehicle {\n    void honk() {\n        System.out.println(\"Beep!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Car c = new Car();\n        c.move();\n    }\n}",
       "correctLines": [
         "class Vehicle {",
         "    void move() {",
@@ -82,16 +84,18 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "オーバーライドとは？",
+          "image": "/illustrations/3d_advanced/inheritance.png",
           "content": "# メソッドを上書き\n\n親クラスのメソッドを子クラスで再定義できます。\n\n```java\nclass Animal {\n    void sound() {\n        System.out.println(\"音\");\n    }\n}\n\nclass Cat extends Animal {\n    @Override\n    void sound() {\n        System.out.println(\"ニャー\");\n    }\n}\n```"
         },
         {
           "title": "@Override アノテーション",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 明示的に宣言\n\n`@Override` をつけると、間違いを防げます。\n\n```java\nclass Cat extends Animal {\n    @Override\n    void sound() {  // 親と同じ名前\n        System.out.println(\"ニャー\");\n    }\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Shape {\n    void draw() {\n        System.out.println(\"Shape\");\n    }\n}\n\nclass Circle extends Shape {\n    @Override\n    void draw() {\n        System.out.println(\"Circle\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Circle c = new Circle();\n        c.draw();\n    }\n}",
-      "holeyCode": "class Shape {\n    void draw() {\n        System.out.println(\"Shape\");\n    }\n}\n\nclass Circle extends Shape {\n    ___\n    void draw() {\n        System.out.println(\"Circle\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Circle c = new Circle();\n        c.draw();\n    }\n}",
+      "holeyCode": "class Shape {\n    void draw() {\n        System.out.println(\"Shape\");\n    }\n}\n\nclass Circle extends Shape {\n    // @Override でメソッドを上書き宣言する\n    ___\n    void draw() {\n        System.out.println(\"Circle\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Circle c = new Circle();\n        c.draw();\n    }\n}",
       "correctLines": [
         "class Shape {",
         "    void draw() {",
@@ -152,18 +156,18 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "インターフェースとは？",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d_advanced/interface_blueprint.png",
           "content": "# 契約を定義する\n\n`interface` でクラスが実装すべきメソッドを宣言します。\n\n```java\ninterface Drawable {\n    void draw();\n}\n\nclass Square implements Drawable {\n    public void draw() {\n        System.out.println(\"四角形\");\n    }\n}\n```"
         },
         {
           "title": "複数のインターフェース",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d_advanced/interface_blueprint.png",
           "content": "# 複数実装できる\n\nクラスは複数のインターフェースを実装できます。\n\n```java\ninterface A { void a(); }\ninterface B { void b(); }\n\nclass C implements A, B {\n    public void a() { }\n    public void b() { }\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "interface Greeting {\n    void sayHello();\n}\n\nclass Person implements Greeting {\n    public void sayHello() {\n        System.out.println(\"Hello!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Person p = new Person();\n        p.sayHello();\n    }\n}",
-      "holeyCode": "interface Greeting {\n    void sayHello();\n}\n\nclass Person ___ Greeting {\n    public void sayHello() {\n        System.out.println(\"Hello!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Person p = new Person();\n        p.sayHello();\n    }\n}",
+      "holeyCode": "interface Greeting {\n    void sayHello();\n}\n\n// implements でインターフェースを実装する\nclass Person ___ Greeting {\n    public void sayHello() {\n        System.out.println(\"Hello!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Person p = new Person();\n        p.sayHello();\n    }\n}",
       "correctLines": [
         "interface Greeting {",
         "    void sayHello();",
@@ -218,16 +222,18 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "抽象クラスとは？",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# 未完成の設計図\n\n`abstract` をつけると、インスタンス化できないクラスになります。\n\n```java\nabstract class Animal {\n    abstract void sound();\n    \n    void sleep() {\n        System.out.println(\"Zzz\");\n    }\n}\n```"
         },
         {
           "title": "抽象メソッド",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# 子クラスで実装必須\n\n抽象メソッドは、子クラスで必ず実装が必要です。\n\n```java\nclass Dog extends Animal {\n    void sound() {\n        System.out.println(\"ワン！\");\n    }\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "abstract class Animal {\n    abstract void speak();\n}\n\nclass Dog extends Animal {\n    void speak() {\n        System.out.println(\"Woof!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Dog d = new Dog();\n        d.speak();\n    }\n}",
-      "holeyCode": "___ class Animal {\n    abstract void speak();\n}\n\nclass Dog extends Animal {\n    void speak() {\n        System.out.println(\"Woof!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Dog d = new Dog();\n        d.speak();\n    }\n}",
+      "holeyCode": "// abstract で抽象クラスを定義する\n___ class Animal {\n    abstract void speak();\n}\n\nclass Dog extends Animal {\n    void speak() {\n        System.out.println(\"Woof!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Dog d = new Dog();\n        d.speak();\n    }\n}",
       "correctLines": [
         "abstract class Animal {",
         "    abstract void speak();",
@@ -282,18 +288,18 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "例外とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# プログラムの問題\n\n実行中に問題が起きると「例外」がスローされます。\n\n```java\nint[] arr = {1, 2, 3};\nSystem.out.println(arr[10]);  // 例外！\n```"
         },
         {
           "title": "try-catchで対処",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# エラーをキャッチ\n\n`try` 内でエラーが起きたら、`catch` で処理します。\n\n```java\ntry {\n    int result = 10 / 0;\n} catch (Exception e) {\n    System.out.println(\"エラー発生\");\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Main {\n    public static void main(String[] args) {\n        try {\n            int x = Integer.parseInt(\"abc\");\n        } catch (Exception e) {\n            System.out.println(\"Error\");\n        }\n    }\n}",
-      "holeyCode": "class Main {\n    public static void main(String[] args) {\n        ___ {\n            int x = Integer.parseInt(\"abc\");\n        } catch (Exception e) {\n            System.out.println(\"Error\");\n        }\n    }\n}",
+      "holeyCode": "class Main {\n    public static void main(String[] args) {\n        // try で例外が起きる可能性のある処理を囲む\n        ___ {\n            int x = Integer.parseInt(\"abc\");\n        } catch (Exception e) {\n            System.out.println(\"Error\");\n        }\n    }\n}",
       "correctLines": [
         "class Main {",
         "    public static void main(String[] args) {",
@@ -334,18 +340,18 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "finallyとは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 必ず実行される\n\n`finally` ブロックは、例外が起きても起きなくても必ず実行されます。\n\n```java\ntry {\n    // 処理\n} catch (Exception e) {\n    // エラー処理\n} finally {\n    // 必ず実行\n}\n```"
         },
         {
           "title": "リソースの解放に",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 後片付け処理\n\nファイルを閉じる、接続を切断するなどの後処理に使います。\n\n```java\ntry {\n    // ファイル操作\n} finally {\n    // ファイルを閉じる\n    System.out.println(\"Clean up\");\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Main {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        } finally {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
-      "holeyCode": "class Main {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        } ___ {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
+      "holeyCode": "class Main {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        // finally で必ず実行する\n        } ___ {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
       "correctLines": [
         "class Main {",
         "    public static void main(String[] args) {",
@@ -390,18 +396,18 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "ArrayListとは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 可変長の配列\n\n`ArrayList` はサイズを動的に変更できるリストです。\n\n```java\nimport java.util.ArrayList;\n\nArrayList<String> list = new ArrayList<>();\nlist.add(\"Apple\");\nlist.add(\"Banana\");\n```"
         },
         {
           "title": "基本操作",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 追加・取得・削除\n\n```java\nArrayList<Integer> nums = new ArrayList<>();\nnums.add(10);       // 追加\nnums.get(0);        // 取得 -> 10\nnums.remove(0);     // 削除\nnums.size();        // サイズ\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.ArrayList;\n\nclass Main {\n    public static void main(String[] args) {\n        ArrayList<String> items = new ArrayList<>();\n        items.add(\"A\");\n        items.add(\"B\");\n        System.out.println(items.get(0));\n    }\n}",
-      "holeyCode": "import java.util.ArrayList;\n\nclass Main {\n    public static void main(String[] args) {\n        ArrayList<String> items = new ArrayList<>();\n        items.___(\"A\");\n        items.add(\"B\");\n        System.out.println(items.get(0));\n    }\n}",
+      "holeyCode": "import java.util.ArrayList;\n\nclass Main {\n    public static void main(String[] args) {\n        ArrayList<String> items = new ArrayList<>();\n        // add で要素を追加する\n        items.___(\"A\");\n        items.add(\"B\");\n        System.out.println(items.get(0));\n    }\n}",
       "correctLines": [
         "import java.util.ArrayList;",
         "",
@@ -444,18 +450,18 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "拡張for文とは？",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d/loop.png",
           "content": "# 簡単な繰り返し\n\n配列やリストの全要素を簡単に処理できます。\n\n```java\nint[] nums = {1, 2, 3};\nfor (int n : nums) {\n    System.out.println(n);\n}\n```"
         },
         {
           "title": "ArrayListでも使える",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# コレクションを処理\n\n```java\nArrayList<String> items = new ArrayList<>();\nitems.add(\"A\");\nitems.add(\"B\");\n\nfor (String item : items) {\n    System.out.println(item);\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Main {\n    public static void main(String[] args) {\n        String[] colors = {\"R\", \"G\", \"B\"};\n        for (String c : colors) {\n            System.out.println(c);\n        }\n    }\n}",
-      "holeyCode": "class Main {\n    public static void main(String[] args) {\n        String[] colors = {\"R\", \"G\", \"B\"};\n        for (String c ___ colors) {\n            System.out.println(c);\n        }\n    }\n}",
+      "holeyCode": "class Main {\n    public static void main(String[] args) {\n        String[] colors = {\"R\", \"G\", \"B\"};\n        // : で配列から順番に取り出す\n        for (String c ___ colors) {\n            System.out.println(c);\n        }\n    }\n}",
       "correctLines": [
         "class Main {",
         "    public static void main(String[] args) {",
@@ -494,16 +500,18 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "staticとは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# クラスに属するメソッド\n\n`static` メソッドはインスタンスを作らずに呼べます。\n\n```java\nclass Math {\n    static int add(int a, int b) {\n        return a + b;\n    }\n}\n\nMath.add(3, 5);  // 8\n```"
         },
         {
           "title": "staticの特徴",
+          "image": "/illustrations/3d/robot.png",
           "content": "# ユーティリティに便利\n\n共通の処理をまとめるのに使います。\n\n```java\nclass Utils {\n    static String upper(String s) {\n        return s.toUpperCase();\n    }\n}\n\nUtils.upper(\"hello\");  // \"HELLO\"\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Calculator {\n    static int multiply(int a, int b) {\n        return a * b;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        int result = Calculator.multiply(4, 5);\n        System.out.println(result);\n    }\n}",
-      "holeyCode": "class Calculator {\n    ___ int multiply(int a, int b) {\n        return a * b;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        int result = Calculator.multiply(4, 5);\n        System.out.println(result);\n    }\n}",
+      "holeyCode": "class Calculator {\n    // static でクラスメソッドを定義する\n    ___ int multiply(int a, int b) {\n        return a * b;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        int result = Calculator.multiply(4, 5);\n        System.out.println(result);\n    }\n}",
       "correctLines": [
         "class Calculator {",
         "    static int multiply(int a, int b) {",
@@ -550,18 +558,18 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "アクセス修飾子とは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 公開範囲を制御\n\n- `public`: どこからでもアクセス可能\n- `private`: 同じクラス内のみ\n- `protected`: 同じパッケージと子クラス\n\n```java\nclass User {\n    public String name;\n    private int id;\n}\n```"
         },
         {
           "title": "カプセル化",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# データを守る\n\n`private` で隠して、メソッドでアクセスします。\n\n```java\nclass User {\n    private String name;\n    \n    public String getName() {\n        return name;\n    }\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Item {\n    private int price;\n    \n    public Item(int p) {\n        price = p;\n    }\n    \n    public int getPrice() {\n        return price;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Item item = new Item(100);\n        System.out.println(item.getPrice());\n    }\n}",
-      "holeyCode": "class Item {\n    ___ int price;\n    \n    public Item(int p) {\n        price = p;\n    }\n    \n    public int getPrice() {\n        return price;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Item item = new Item(100);\n        System.out.println(item.getPrice());\n    }\n}",
+      "holeyCode": "class Item {\n    // private でフィールドを隠蔽する\n    ___ int price;\n    \n    public Item(int p) {\n        price = p;\n    }\n    \n    public int getPrice() {\n        return price;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Item item = new Item(100);\n        System.out.println(item.getPrice());\n    }\n}",
       "correctLines": [
         "class Item {",
         "    private int price;",

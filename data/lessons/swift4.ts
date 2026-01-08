@@ -14,16 +14,18 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "プロトコルとは？",
+          "image": "/illustrations/3d_advanced/interface_blueprint.png",
           "content": "# 振る舞いの契約\n\n**protocol** は、型が実装すべきメソッドやプロパティを定義します。\n\n```swift\nprotocol Greetable {\n    var name: String { get }\n    func greet() -> String\n}\n```"
         },
         {
           "title": "準拠",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 型がプロトコルに準拠\n\n```swift\nstruct Person: Greetable {\n    var name: String\n    func greet() -> String {\n        return \"Hello, \\(name)\"\n    }\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "protocol Speakable {\n    func speak() -> String\n}\n\nstruct Dog: Speakable {\n    func speak() -> String {\n        return \"Woof!\"\n    }\n}\n\nlet dog = Dog()\nprint(dog.speak())",
-      "holeyCode": "___ Speakable {\n    func speak() -> String\n}\n\nstruct Dog: Speakable {\n    func speak() -> String {\n        return \"Woof!\"\n    }\n}\n\nlet dog = Dog()\nprint(dog.speak())",
+      "holeyCode": "// protocolでプロトコルを定義\n___ Speakable {\n    func speak() -> String\n}\n\nstruct Dog: Speakable {\n    func speak() -> String {\n        return \"Woof!\"\n    }\n}\n\nlet dog = Dog()\nprint(dog.speak())",
       "correctLines": [
         "protocol Speakable {",
         "    func speak() -> String",
@@ -70,16 +72,18 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "extension で拡張",
+          "image": "/illustrations/3d/robot.png",
           "content": "# デフォルト実装\n\n**extension** でプロトコルにデフォルト実装を追加できます。\n\n```swift\nprotocol Describable {\n    var description: String { get }\n}\n\nextension Describable {\n    var description: String { \"No description\" }\n}\n```"
         },
         {
           "title": "オーバーライド可能",
+          "image": "/illustrations/3d_advanced/inheritance.png",
           "content": "# 準拠する型で上書き\n\n```swift\nstruct Item: Describable {\n    var description: String { \"Custom\" }\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "protocol Identifiable {\n    var id: Int { get }\n}\n\nextension Identifiable {\n    func display() { print(\"ID: \\(id)\") }\n}\n\nstruct User: Identifiable {\n    var id: Int\n}\n\nlet user = User(id: 42)\nuser.display()",
-      "holeyCode": "protocol Identifiable {\n    var id: Int { get }\n}\n\n___ Identifiable {\n    func display() { print(\"ID: \\(id)\") }\n}\n\nstruct User: Identifiable {\n    var id: Int\n}\n\nlet user = User(id: 42)\nuser.display()",
+      "holeyCode": "protocol Identifiable {\n    var id: Int { get }\n}\n\n// extensionでプロトコルを拡張\n___ Identifiable {\n    func display() { print(\"ID: \\(id)\") }\n}\n\nstruct User: Identifiable {\n    var id: Int\n}\n\nlet user = User(id: 42)\nuser.display()",
       "correctLines": [
         "protocol Identifiable {",
         "    var id: Int { get }",
@@ -130,16 +134,18 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "ジェネリクスとは？",
+          "image": "/illustrations/3d_advanced/generics_glass.png",
           "content": "# 型を後から指定\n\n**ジェネリクス** で、型に依存しない汎用的なコードが書けます。\n\n```swift\nfunc swap<T>(_ a: inout T, _ b: inout T) {\n    let temp = a\n    a = b\n    b = temp\n}\n```"
         },
         {
           "title": "型推論",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 呼び出し時に型が決まる\n\n```swift\nvar x = 1, y = 2\nswap(&x, &y)  // T は Int と推論\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func first<T>(_ array: [T]) -> T? {\n    return array.first\n}\n\nlet nums = [10, 20, 30]\nprint(first(nums) ?? 0)",
-      "holeyCode": "func first___T___(_ array: [T]) -> T? {\n    return array.first\n}\n\nlet nums = [10, 20, 30]\nprint(first(nums) ?? 0)",
+      "holeyCode": "// <T>で型パラメータを定義\nfunc first___T___(_ array: [T]) -> T? {\n    return array.first\n}\n\nlet nums = [10, 20, 30]\nprint(first(nums) ?? 0)",
       "correctLines": [
         "func first<T>(_ array: [T]) -> T? {",
         "    return array.first",
@@ -174,16 +180,18 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "where 制約",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 型の条件を指定\n\n**where** で型パラメータに制約を追加できます。\n\n```swift\nfunc compare<T>(_ a: T, _ b: T) -> Bool where T: Comparable {\n    return a < b\n}\n```"
         },
         {
           "title": "プロトコル準拠",
+          "image": "/illustrations/3d_advanced/interface_blueprint.png",
           "content": "# 型がプロトコルに準拠することを要求\n\n```swift\nfunc print<T: CustomStringConvertible>(_ item: T) {\n    print(item.description)\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func maximum<T: Comparable>(_ a: T, _ b: T) -> T {\n    return a > b ? a : b\n}\n\nprint(maximum(5, 3))",
-      "holeyCode": "func maximum<T: ___>(_ a: T, _ b: T) -> T {\n    return a > b ? a : b\n}\n\nprint(maximum(5, 3))",
+      "holeyCode": "// Comparableで比較可能な型に制限\nfunc maximum<T: ___>(_ a: T, _ b: T) -> T {\n    return a > b ? a : b\n}\n\nprint(maximum(5, 3))",
       "correctLines": [
         "func maximum<T: Comparable>(_ a: T, _ b: T) -> T {",
         "    return a > b ? a : b",
@@ -216,16 +224,18 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "Codable とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# エンコード/デコード\n\n**Codable** に準拠すると、JSONとの変換が簡単です。\n\n```swift\nstruct User: Codable {\n    var name: String\n    var age: Int\n}\n```"
         },
         {
           "title": "JSONEncoder/Decoder",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 変換方法\n\n```swift\nlet encoder = JSONEncoder()\nlet data = try encoder.encode(user)\n\nlet decoder = JSONDecoder()\nlet user = try decoder.decode(User.self, from: data)\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import Foundation\n\nstruct Item: Codable {\n    var name: String\n}\n\nlet item = Item(name: \"Apple\")\nlet encoder = JSONEncoder()\nif let data = try? encoder.encode(item),\n   let json = String(data: data, encoding: .utf8) {\n    print(json)\n}",
-      "holeyCode": "import Foundation\n\nstruct Item: ___ {\n    var name: String\n}\n\nlet item = Item(name: \"Apple\")\nlet encoder = JSONEncoder()\nif let data = try? encoder.encode(item),\n   let json = String(data: data, encoding: .utf8) {\n    print(json)\n}",
+      "holeyCode": "import Foundation\n\n// CodableでJSON変換可能に\nstruct Item: ___ {\n    var name: String\n}\n\nlet item = Item(name: \"Apple\")\nlet encoder = JSONEncoder()\nif let data = try? encoder.encode(item),\n   let json = String(data: data, encoding: .utf8) {\n    print(json)\n}",
       "correctLines": [
         "import Foundation",
         "",
@@ -272,16 +282,18 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "lazy とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 遅延初期化\n\n**lazy** プロパティは、最初にアクセスされたときに初期化されます。\n\n```swift\nclass DataManager {\n    lazy var data: [Int] = {\n        // 重い処理\n        return loadData()\n    }()\n}\n```"
         },
         {
           "title": "使いどころ",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 初期化コストが高い場合\n\n- ファイル読み込み\n- ネットワークリクエスト\n- 計算コストの高い処理"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Calculator {\n    lazy var result: Int = {\n        print(\"Computing...\")\n        return 100\n    }()\n}\n\nlet calc = Calculator()\nprint(calc.result)",
-      "holeyCode": "class Calculator {\n    ___ var result: Int = {\n        print(\"Computing...\")\n        return 100\n    }()\n}\n\nlet calc = Calculator()\nprint(calc.result)",
+      "holeyCode": "class Calculator {\n    // lazyで遅延初期化\n    ___ var result: Int = {\n        print(\"Computing...\")\n        return 100\n    }()\n}\n\nlet calc = Calculator()\nprint(calc.result)",
       "correctLines": [
         "class Calculator {",
         "    lazy var result: Int = {",
@@ -322,16 +334,18 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "defer とは？",
+          "image": "/illustrations/3d_advanced/concurrency.png",
           "content": "# スコープ終了時に実行\n\n**defer** ブロックは、スコープを抜けるときに実行されます。\n\n```swift\nfunc process() {\n    defer { print(\"Cleanup\") }\n    print(\"Processing\")\n}\n// Processing\n// Cleanup\n```"
         },
         {
           "title": "リソース解放",
+          "image": "/illustrations/3d/robot.png",
           "content": "# ファイルのクローズなど\n\n```swift\nfunc readFile() throws {\n    let file = openFile()\n    defer { file.close() }\n    // ファイル処理\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func test() {\n    defer { print(\"end\") }\n    print(\"start\")\n}\n\ntest()",
-      "holeyCode": "func test() {\n    ___ { print(\"end\") }\n    print(\"start\")\n}\n\ntest()",
+      "holeyCode": "func test() {\n    // deferでスコープ終了時に実行\n    ___ { print(\"end\") }\n    print(\"start\")\n}\n\ntest()",
       "correctLines": [
         "func test() {",
         "    defer { print(\"end\") }",
@@ -366,16 +380,18 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "guard とは？",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# 早期リターン\n\n**guard** は、条件が満たされない場合に早期リターンします。\n\n```swift\nfunc process(_ value: Int?) {\n    guard let v = value else {\n        print(\"No value\")\n        return\n    }\n    print(v)\n}\n```"
         },
         {
           "title": "if let との違い",
+          "image": "/illustrations/3d/if.png",
           "content": "# スコープが異なる\n\n```swift\n// guard: アンラップした値はスコープ全体で使える\nguard let x = opt else { return }\nprint(x)  // OK\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func check(_ num: Int?) {\n    guard let n = num else {\n        print(\"nil\")\n        return\n    }\n    print(n * 2)\n}\n\ncheck(5)",
-      "holeyCode": "func check(_ num: Int?) {\n    ___ let n = num else {\n        print(\"nil\")\n        return\n    }\n    print(n * 2)\n}\n\ncheck(5)",
+      "holeyCode": "func check(_ num: Int?) {\n    // guardで早期リターン\n    ___ let n = num else {\n        print(\"nil\")\n        return\n    }\n    print(n * 2)\n}\n\ncheck(5)",
       "correctLines": [
         "func check(_ num: Int?) {",
         "    guard let n = num else {",
@@ -416,16 +432,18 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "associatedtype とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# プロトコルの型パラメータ\n\n**associatedtype** で、プロトコルに関連型を定義できます。\n\n```swift\nprotocol Container {\n    associatedtype Item\n    func add(_ item: Item)\n}\n```"
         },
         {
           "title": "準拠する型で具体化",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 型を具体的に指定\n\n```swift\nstruct IntBox: Container {\n    typealias Item = Int\n    func add(_ item: Int) { }\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "protocol Stack {\n    associatedtype Element\n    mutating func push(_ item: Element)\n}\n\nstruct IntStack: Stack {\n    var items: [Int] = []\n    mutating func push(_ item: Int) {\n        items.append(item)\n    }\n}\n\nvar stack = IntStack()\nstack.push(10)\nprint(stack.items)",
-      "holeyCode": "protocol Stack {\n    ___ Element\n    mutating func push(_ item: Element)\n}\n\nstruct IntStack: Stack {\n    var items: [Int] = []\n    mutating func push(_ item: Int) {\n        items.append(item)\n    }\n}\n\nvar stack = IntStack()\nstack.push(10)\nprint(stack.items)",
+      "holeyCode": "protocol Stack {\n    // associatedtypeで関連型を定義\n    ___ Element\n    mutating func push(_ item: Element)\n}\n\nstruct IntStack: Stack {\n    var items: [Int] = []\n    mutating func push(_ item: Int) {\n        items.append(item)\n    }\n}\n\nvar stack = IntStack()\nstack.push(10)\nprint(stack.items)",
       "correctLines": [
         "protocol Stack {",
         "    associatedtype Element",
@@ -478,16 +496,18 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "some とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 不透明な戻り値型\n\n**some** で、具体的な型を隠して戻り値を返せます。\n\n```swift\nfunc makeSequence() -> some Sequence {\n    return [1, 2, 3]\n}\n```"
         },
         {
           "title": "SwiftUI で多用",
+          "image": "/illustrations/3d/if.png",
           "content": "# View プロトコル\n\n```swift\nvar body: some View {\n    Text(\"Hello\")\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func makeCollection() -> some Collection {\n    return [1, 2, 3]\n}\n\nlet c = makeCollection()\nprint(c.count)",
-      "holeyCode": "func makeCollection() -> ___ Collection {\n    return [1, 2, 3]\n}\n\nlet c = makeCollection()\nprint(c.count)",
+      "holeyCode": "// someで不透明な型を返す\nfunc makeCollection() -> ___ Collection {\n    return [1, 2, 3]\n}\n\nlet c = makeCollection()\nprint(c.count)",
       "correctLines": [
         "func makeCollection() -> some Collection {",
         "    return [1, 2, 3]",

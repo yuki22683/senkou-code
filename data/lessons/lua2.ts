@@ -14,18 +14,18 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "テーブルとは？",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 万能のデータ構造\n\n**テーブル** は、Luaで唯一のデータ構造です。配列としても辞書としても使えます。"
         },
         {
           "title": "テーブルの作成",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# { } で作成\n\n`{ }` でテーブルを作り、キーと値を格納します。\n\n**コード例：**\n```lua\nlocal t = { name = \"Taro\", age = 20 }\nprint(t.name) -- Taro\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local item = { name = \"Apple\", price = 100 }\nprint(item.price)",
-      "holeyCode": "local item = { name = \"Apple\", price = 100 }\nprint(item___price)",
+      "correctCode": "local item = { name = \"Apple\", price = 100 }\n-- .でキーにアクセス\nprint(item.price)",
+      "holeyCode": "local item = { name = \"Apple\", price = 100 }\n-- .でキーにアクセス\nprint(item___price)",
       "correctLines": [
         "local item = { name = \"Apple\", price = 100 }",
         "print(item.price)"
@@ -52,18 +52,18 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "配列風テーブル",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# インデックスは1から\n\nLuaのテーブルを配列として使うとき、インデックスは **1** から始まります。"
         },
         {
           "title": "配列の作成",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# { } に値を並べる\n\n値を並べると自動で番号がつきます。\n\n**コード例：**\n```lua\nlocal nums = {10, 20, 30}\nprint(nums[1]) -- 10\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local nums = {10, 20, 30}\nprint(nums[2])",
-      "holeyCode": "local nums = {10, 20, 30}\nprint(nums[___])",
+      "correctCode": "local nums = {10, 20, 30}\n-- 2番目の要素にアクセス\nprint(nums[2])",
+      "holeyCode": "local nums = {10, 20, 30}\n-- 2番目の要素にアクセス\nprint(nums[___])",
       "correctLines": [
         "local nums = {10, 20, 30}",
         "print(nums[2])"
@@ -90,18 +90,18 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "ipairs とは？",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 配列をループ\n\n**ipairs** は、配列のインデックスと値を順番に取り出します。"
         },
         {
           "title": "ipairs の使い方",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# for i, v in ipairs(t)\n\nインデックス i と値 v を受け取ります。\n\n**コード例：**\n```lua\nfor i, v in ipairs({1, 2, 3}) do\n    print(v)\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local nums = {1, 2, 3}\nfor i, v in ipairs(nums) do\n    print(v)\nend",
-      "holeyCode": "local nums = {1, 2, 3}\nfor i, v in ___(nums) do\n    print(v)\nend",
+      "correctCode": "local nums = {1, 2, 3}\n-- ipairsで配列をループ\nfor i, v in ipairs(nums) do\n    print(v)\nend",
+      "holeyCode": "local nums = {1, 2, 3}\n-- ipairsで配列をループ\nfor i, v in ___(nums) do\n    print(v)\nend",
       "correctLines": [
         "local nums = {1, 2, 3}",
         "for i, v in ipairs(nums) do",
@@ -132,18 +132,18 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "pairs とは？",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# すべてをループ\n\n**pairs** は、テーブルのすべてのキーと値を取り出します。"
         },
         {
           "title": "pairs の使い方",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# for k, v in pairs(t)\n\nキー k と値 v を受け取ります。\n\n**コード例：**\n```lua\nfor k, v in pairs({a = 1, b = 2}) do\n    print(k, v)\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local t = {x = 10}\nfor k, v in pairs(t) do\n    print(k, v)\nend",
-      "holeyCode": "local t = {x = 10}\nfor k, v in ___(t) do\n    print(k, v)\nend",
+      "correctCode": "local t = {x = 10}\n-- pairsでテーブルをループ\nfor k, v in pairs(t) do\n    print(k, v)\nend",
+      "holeyCode": "local t = {x = 10}\n-- pairsでテーブルをループ\nfor k, v in ___(t) do\n    print(k, v)\nend",
       "correctLines": [
         "local t = {x = 10}",
         "for k, v in pairs(t) do",
@@ -174,16 +174,18 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "function とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 関数の定義\n\n**function** キーワードで関数を定義します。`local function` でローカル関数にできます。"
         },
         {
           "title": "function の使い方",
+          "image": "/illustrations/3d/robot.png",
           "content": "# return で値を返す\n\n`return` で値を返します。\n\n**コード例：**\n```lua\nlocal function add(a, b)\n    return a + b\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local function double(n)\n    return n * 2\nend\nprint(double(5))",
-      "holeyCode": "local ___ double(n)\n    return n * 2\nend\nprint(double(5))",
+      "correctCode": "-- functionで関数を定義\nlocal function double(n)\n    return n * 2\nend\nprint(double(5))",
+      "holeyCode": "-- functionで関数を定義\nlocal ___ double(n)\n    return n * 2\nend\nprint(double(5))",
       "correctLines": [
         "local function double(n)",
         "    return n * 2",
@@ -214,16 +216,18 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "複数の return",
+          "image": "/illustrations/3d/return.png",
           "content": "# 複数の値を返せる\n\nLuaでは、関数から複数の値を返すことができます。"
         },
         {
           "title": "複数の戻り値",
+          "image": "/illustrations/3d/return.png",
           "content": "# カンマで区切る\n\n`return a, b` で複数の値を返します。\n\n**コード例：**\n```lua\nlocal function minmax(a, b)\n    if a < b then return a, b end\n    return b, a\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local function swap(a, b)\n    return b, a\nend\nlocal x, y = swap(1, 2)\nprint(x, y)",
-      "holeyCode": "local function swap(a, b)\n    ___ b, a\nend\nlocal x, y = swap(1, 2)\nprint(x, y)",
+      "correctCode": "local function swap(a, b)\n    -- returnで値を返す\n    return b, a\nend\nlocal x, y = swap(1, 2)\nprint(x, y)",
+      "holeyCode": "local function swap(a, b)\n    -- returnで値を返す\n    ___ b, a\nend\nlocal x, y = swap(1, 2)\nprint(x, y)",
       "correctLines": [
         "local function swap(a, b)",
         "    return b, a",
@@ -256,16 +260,18 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "メソッドとは？",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# テーブルの関数\n\nテーブルに関数を格納すると、オブジェクトのようにメソッドを持たせられます。"
         },
         {
           "title": "コロン記法",
+          "image": "/illustrations/3d/robot.png",
           "content": "# : で self を渡す\n\n`obj:method()` と呼ぶと、自動で `self` が渡されます。\n\n**コード例：**\n```lua\nlocal obj = { value = 10 }\nfunction obj:double()\n    return self.value * 2\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local obj = { x = 5 }\nfunction obj:getX()\n    return self.x\nend\nprint(obj:getX())",
-      "holeyCode": "local obj = { x = 5 }\nfunction obj:getX()\n    return ___.x\nend\nprint(obj:getX())",
+      "correctCode": "local obj = { x = 5 }\nfunction obj:getX()\n    -- selfで自分自身を参照\n    return self.x\nend\nprint(obj:getX())",
+      "holeyCode": "local obj = { x = 5 }\nfunction obj:getX()\n    -- selfで自分自身を参照\n    return ___.x\nend\nprint(obj:getX())",
       "correctLines": [
         "local obj = { x = 5 }",
         "function obj:getX()",
@@ -298,18 +304,18 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "メタテーブルとは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 振る舞いをカスタマイズ\n\n**メタテーブル** を使うと、テーブルの演算子や動作をカスタマイズできます。"
         },
         {
           "title": "setmetatable",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# メタテーブルを設定\n\n`setmetatable(t, mt)` でメタテーブルを設定します。\n\n**コード例：**\n```lua\nlocal mt = { __add = function(a, b) ... end }\nsetmetatable(t, mt)\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local t = {}\nlocal mt = { __index = { x = 10 } }\nsetmetatable(t, mt)\nprint(t.x)",
-      "holeyCode": "local t = {}\nlocal mt = { __index = { x = 10 } }\n___(t, mt)\nprint(t.x)",
+      "correctCode": "local t = {}\nlocal mt = { __index = { x = 10 } }\n-- setmetatableでメタテーブルを設定\nsetmetatable(t, mt)\nprint(t.x)",
+      "holeyCode": "local t = {}\nlocal mt = { __index = { x = 10 } }\n-- setmetatableでメタテーブルを設定\n___(t, mt)\nprint(t.x)",
       "correctLines": [
         "local t = {}",
         "local mt = { __index = { x = 10 } }",
@@ -340,16 +346,18 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "クロージャとは？",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 外の変数を覚える\n\n**クロージャ** は、定義時の環境（外側の変数）を捕捉した関数です。"
         },
         {
           "title": "クロージャの使い方",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 状態を保持\n\nクロージャを使って状態を保持できます。\n\n**コード例：**\n```lua\nlocal function counter()\n    local count = 0\n    return function()\n        count = count + 1\n        return count\n    end\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local function makeAdder(n)\n    return function(x)\n        return x + n\n    end\nend\nlocal add5 = makeAdder(5)\nprint(add5(10))",
-      "holeyCode": "local function makeAdder(n)\n    ___ function(x)\n        return x + n\n    end\nend\nlocal add5 = makeAdder(5)\nprint(add5(10))",
+      "correctCode": "local function makeAdder(n)\n    -- returnで関数を返す\n    return function(x)\n        return x + n\n    end\nend\nlocal add5 = makeAdder(5)\nprint(add5(10))",
+      "holeyCode": "local function makeAdder(n)\n    -- returnで関数を返す\n    ___ function(x)\n        return x + n\n    end\nend\nlocal add5 = makeAdder(5)\nprint(add5(10))",
       "correctLines": [
         "local function makeAdder(n)",
         "    return function(x)",
@@ -386,18 +394,18 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "コルーチンとは？",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d_advanced/concurrency.png",
           "content": "# 中断と再開\n\n**コルーチン** は、実行を中断して後で再開できる特殊な関数です。ゲームのアニメーションなどに使います。"
         },
         {
           "title": "coroutine.create",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 基本の使い方\n\n`create` で作成、`resume` で実行、`yield` で中断します。\n\n**コード例：**\n```lua\nlocal co = coroutine.create(function()\n    print(\"start\")\n    coroutine.yield()\n    print(\"end\")\nend)\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local co = coroutine.create(function()\n    print(\"hello\")\nend)\ncoroutine.resume(co)",
-      "holeyCode": "local co = coroutine.___(function()\n    print(\"hello\")\nend)\ncoroutine.resume(co)",
+      "correctCode": "-- createでコルーチンを作成\nlocal co = coroutine.create(function()\n    print(\"hello\")\nend)\ncoroutine.resume(co)",
+      "holeyCode": "-- createでコルーチンを作成\nlocal co = coroutine.___(function()\n    print(\"hello\")\nend)\ncoroutine.resume(co)",
       "correctLines": [
         "local co = coroutine.create(function()",
         "    print(\"hello\")",

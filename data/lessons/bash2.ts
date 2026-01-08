@@ -14,18 +14,18 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "配列とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 複数の値を格納\n\nBashの **配列** は、複数の値を格納できます。`( )` で作成し、インデックスは0から始まります。"
         },
         {
           "title": "配列の使い方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# ${配列[番号]} でアクセス\n\n`${配列[@]}` ですべての要素を取得できます。\n\n**コード例：**\n```bash\narr=(\"a\" \"b\" \"c\")\necho ${arr[1]} # b\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "nums=(10 20 30)\necho ${nums[2]}",
-      "holeyCode": "nums=(10 20 30)\necho ${nums[___]}",
+      "correctCode": "nums=(10 20 30)\n# 2で3番目の要素を取得\necho ${nums[2]}",
+      "holeyCode": "nums=(10 20 30)\n# 2で3番目の要素を取得\necho ${nums[___]}",
       "correctLines": [
         "nums=(10 20 30)",
         "echo ${nums[2]}"
@@ -52,18 +52,18 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "文字列の長さ",
-          "image": "/illustrations/common/fstring.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# ${#変数} で長さを取得\n\n`#` を変数名の前につけると、その長さを取得できます。"
         },
         {
           "title": "長さの取得",
-          "image": "/illustrations/common/fstring.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 文字数を返す\n\n配列の場合は要素数を返します。\n\n**コード例：**\n```bash\ntext=\"Hello\"\necho ${#text} # 5\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "word=\"Bash\"\necho ${#word}",
-      "holeyCode": "word=\"Bash\"\necho ${___word}",
+      "correctCode": "word=\"Bash\"\n# #で文字列の長さを取得\necho ${#word}",
+      "holeyCode": "word=\"Bash\"\n# #で文字列の長さを取得\necho ${___word}",
       "correctLines": [
         "word=\"Bash\"",
         "echo ${#word}"
@@ -90,18 +90,18 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "部分文字列",
-          "image": "/illustrations/common/fstring.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# ${変数:開始:長さ}\n\n開始位置と長さを指定して部分文字列を取得できます。"
         },
         {
           "title": "スライス",
-          "image": "/illustrations/common/fstring.png",
+          "image": "/illustrations/3d_advanced/slicing.png",
           "content": "# 位置は0から\n\n開始位置は0から数えます。\n\n**コード例：**\n```bash\ntext=\"Hello World\"\necho ${text:0:5} # Hello\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "text=\"Hello World\"\necho ${text:6:5}",
-      "holeyCode": "text=\"Hello World\"\necho ${text:___:5}",
+      "correctCode": "text=\"Hello World\"\n# 6で開始位置を指定\necho ${text:6:5}",
+      "holeyCode": "text=\"Hello World\"\n# 6で開始位置を指定\necho ${text:___:5}",
       "correctLines": [
         "text=\"Hello World\"",
         "echo ${text:6:5}"
@@ -128,16 +128,18 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "関数の引数",
+          "image": "/illustrations/3d/arguments.png",
           "content": "# $1, $2, ... で引数\n\n関数内では `$1`, `$2` などで引数を参照します。"
         },
         {
           "title": "引数の使い方",
+          "image": "/illustrations/3d/arguments.png",
           "content": "# 位置パラメータ\n\n`$1` が1番目、`$2` が2番目の引数です。\n\n**コード例：**\n```bash\ngreet() {\n    echo \"Hello, $1\"\n}\ngreet \"Taro\" # Hello, Taro\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "add() {\n    echo $(($1 + $2))\n}\nadd 3 5",
-      "holeyCode": "add() {\n    echo $((___ + $2))\n}\nadd 3 5",
+      "correctCode": "add() {\n    # $1で最初の引数を参照\n    echo $(($1 + $2))\n}\nadd 3 5",
+      "holeyCode": "add() {\n    # $1で最初の引数を参照\n    echo $((___ + $2))\n}\nadd 3 5",
       "correctLines": [
         "add() {",
         "    echo $(($1 + $2))",
@@ -168,16 +170,18 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "戻り値",
+          "image": "/illustrations/3d/return.png",
           "content": "# echo で返す\n\nBashでは `echo` で出力した値を `$()` で受け取るのが一般的です。"
         },
         {
           "title": "値の受け取り",
+          "image": "/illustrations/3d/robot.png",
           "content": "# $(関数) で取得\n\n`result=$(関数)` で関数の出力を受け取ります。\n\n**コード例：**\n```bash\ndouble() {\n    echo $(($1 * 2))\n}\nresult=$(double 5)\necho $result # 10\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "square() {\n    echo $(($1 * $1))\n}\nresult=$(square 4)\necho $result",
-      "holeyCode": "square() {\n    echo $(($1 * $1))\n}\nresult=___(square 4)\necho $result",
+      "correctCode": "square() {\n    echo $(($1 * $1))\n}\n# $で関数の出力を受け取る\nresult=$(square 4)\necho $result",
+      "holeyCode": "square() {\n    echo $(($1 * $1))\n}\n# $で関数の出力を受け取る\nresult=___(square 4)\necho $result",
       "correctLines": [
         "square() {",
         "    echo $(($1 * $1))",
@@ -210,18 +214,18 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "while とは？",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d/loop.png",
           "content": "# 条件が真の間ループ\n\n**while** は、条件が真の間処理を繰り返します。"
         },
         {
           "title": "while の使い方",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d/loop.png",
           "content": "# while [ 条件 ]; do\n\n`do` と `done` で処理を囲みます。\n\n**コード例：**\n```bash\ni=0\nwhile [ $i -lt 3 ]; do\n    echo $i\n    i=$((i + 1))\ndone\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "i=1\nwhile [ $i -le 3 ]; do\n    echo $i\n    i=$((i + 1))\ndone",
-      "holeyCode": "i=1\n___ [ $i -le 3 ]; do\n    echo $i\n    i=$((i + 1))\ndone",
+      "correctCode": "i=1\n# whileで条件ループ\nwhile [ $i -le 3 ]; do\n    echo $i\n    i=$((i + 1))\ndone",
+      "holeyCode": "i=1\n# whileで条件ループ\n___ [ $i -le 3 ]; do\n    echo $i\n    i=$((i + 1))\ndone",
       "correctLines": [
         "i=1",
         "while [ $i -le 3 ]; do",
@@ -254,18 +258,18 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "case とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "# パターンで分岐\n\n**case** は、値がパターンに一致するかで分岐します。"
         },
         {
           "title": "case の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "# パターン) 処理;;\n\n`;;` で各パターンの処理を終えます。`*` はその他すべてです。\n\n**コード例：**\n```bash\ncase $x in\n    1) echo \"one\";;\n    2) echo \"two\";;\n    *) echo \"other\";;\nesac\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "fruit=\"apple\"\ncase $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
-      "holeyCode": "fruit=\"apple\"\n___ $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
+      "correctCode": "fruit=\"apple\"\n# caseで分岐\ncase $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
+      "holeyCode": "fruit=\"apple\"\n# caseで分岐\n___ $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
       "correctLines": [
         "fruit=\"apple\"",
         "case $fruit in",
@@ -300,18 +304,18 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "コマンド置換とは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# コマンドの出力を取得\n\n**$()** を使うと、コマンドの出力を変数に格納できます。"
         },
         {
           "title": "コマンド置換の使い方",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# $(コマンド)\n\n任意のコマンドの出力を取得できます。\n\n**コード例：**\n```bash\ntoday=$(date +%Y-%m-%d)\necho $today\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "files=$(ls)\necho \"Files: $files\"",
-      "holeyCode": "files=___(ls)\necho \"Files: $files\"",
+      "correctCode": "# $でコマンドの出力を取得\nfiles=$(ls)\necho \"Files: $files\"",
+      "holeyCode": "# $でコマンドの出力を取得\nfiles=___(ls)\necho \"Files: $files\"",
       "correctLines": [
         "files=$(ls)",
         "echo \"Files: $files\""
@@ -338,18 +342,18 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "read とは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 入力を変数に格納\n\n**read** は、標準入力から読み取った値を変数に格納します。"
         },
         {
           "title": "read の使い方",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# read 変数名\n\nスペースで区切って複数の変数に分けることもできます。\n\n**コード例：**\n```bash\necho \"Name?\"\nread name\necho \"Hello, $name\"\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "echo \"input:\" && read val && echo \"You entered: $val\"",
-      "holeyCode": "echo \"input:\" && ___ val && echo \"You entered: $val\"",
+      "correctCode": "# readで入力を受け取る\necho \"input:\" && read val && echo \"You entered: $val\"",
+      "holeyCode": "# readで入力を受け取る\necho \"input:\" && ___ val && echo \"You entered: $val\"",
       "correctLines": [
         "echo \"input:\" && read val && echo \"You entered: $val\""
       ],
@@ -374,18 +378,18 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "ヒアドキュメントとは？",
-          "image": "/illustrations/common/fstring.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 複数行のテキスト\n\n**<<** を使うと、複数行のテキストをまとめて扱えます。"
         },
         {
           "title": "ヒアドキュメントの使い方",
-          "image": "/illustrations/common/fstring.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# <<WORD ... WORD\n\n終端文字列までがテキストになります。\n\n**コード例：**\n```bash\ncat <<EOF\nLine 1\nLine 2\nEOF\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "cat <<END\nHello\nWorld\nEND",
-      "holeyCode": "cat ___END\nHello\nWorld\nEND",
+      "correctCode": "# <<でヒアドキュメントを開始\ncat <<END\nHello\nWorld\nEND",
+      "holeyCode": "# <<でヒアドキュメントを開始\ncat ___END\nHello\nWorld\nEND",
       "correctLines": [
         "cat <<END",
         "Hello",

@@ -14,12 +14,13 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "クロージャとは",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "クロージャ（無名関数）は名前を持たない関数です。\n\n```php\n$greet = function($name) {\n    return \"Hello, $name!\";\n};\necho $greet('Alice');\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "$doubler = function($x) {\n    return $x * 2;\n};",
-      "holeyCode": "$doubler = ___($x) {\n    return $x ___ 2;\n};",
+      "correctCode": "// functionで無名関数を定義\n$doubler = function($x) {\n    // *で乗算\n    return $x * 2;\n};",
+      "holeyCode": "// functionで無名関数を定義\n$doubler = ___($x) {\n    // *で乗算\n    return $x ___ 2;\n};",
       "correctLines": [
         { "lineNumber": 1, "content": "$doubler = function($x) {" },
         { "lineNumber": 2, "content": "    return $x * 2;" }
@@ -33,7 +34,7 @@ export const php3Data = {
         "2": ["*", "+", "/", "**"]
       },
       "testCases": [
-        { "input": "$doubler(5)", "expected": "10" }
+        { "input": "$doubler(5)", "expected_output": "10" }
       ]
     },
     {
@@ -44,12 +45,13 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "アロー関数とは",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "アロー関数はクロージャの簡潔な書き方です。\n\n```php\n$add = fn($a, $b) => $a + $b;\necho $add(3, 4);  // 7\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "$cube = fn($x) => $x ** 3;",
-      "holeyCode": "$cube = ___($x) ___ $x ** 3;",
+      "correctCode": "// fnでアロー関数、=>で式を記述\n$cube = fn($x) => $x ** 3;",
+      "holeyCode": "// fnでアロー関数、=>で式を記述\n$cube = ___($x) ___ $x ** 3;",
       "correctLines": [
         { "lineNumber": 1, "content": "$cube = fn($x) => $x ** 3;" }
       ],
@@ -60,7 +62,7 @@ export const php3Data = {
         "1": ["fn", "function", "lambda", "->"]
       },
       "testCases": [
-        { "input": "$cube(3)", "expected": "27" }
+        { "input": "$cube(3)", "expected_output": "27" }
       ]
     },
     {
@@ -71,12 +73,13 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "Null合体演算子とは",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "??演算子は左辺がnullの場合に右辺を返します。\n\n```php\n$name = null;\n$displayName = $name ?? 'Anonymous';\necho $displayName;  // Anonymous\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "$name = null;\n$result = $name ?? 'Guest';",
-      "holeyCode": "$name = null;\n$result = $name ___ 'Guest';",
+      "correctCode": "$name = null;\n// ??でNull合体演算子\n$result = $name ?? 'Guest';",
+      "holeyCode": "$name = null;\n// ??でNull合体演算子\n$result = $name ___ 'Guest';",
       "correctLines": [
         { "lineNumber": 2, "content": "$result = $name ?? 'Guest';" }
       ],
@@ -87,7 +90,7 @@ export const php3Data = {
         "2": ["??", "?:", "||", "&&"]
       },
       "testCases": [
-        { "input": "$result", "expected": "'Guest'" }
+        { "input": "$result", "expected_output": "'Guest'" }
       ]
     },
     {
@@ -98,12 +101,13 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "スプレッド演算子とは",
+          "image": "/illustrations/3d/gear.png",
           "content": "...演算子は配列を展開します。\n\n```php\n$arr1 = [1, 2];\n$arr2 = [3, 4];\n$merged = [...$arr1, ...$arr2];\n// [1, 2, 3, 4]\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "$merged = [...[1, 2], ...[3, 4]];",
-      "holeyCode": "$merged = [___[1, 2], ___[3, 4]];",
+      "correctCode": "// ...で配列を展開\n$merged = [...[1, 2], ...[3, 4]];",
+      "holeyCode": "// ...で配列を展開\n$merged = [___[1, 2], ___[3, 4]];",
       "correctLines": [
         { "lineNumber": 1, "content": "$merged = [...[1, 2], ...[3, 4]];" }
       ],
@@ -114,7 +118,7 @@ export const php3Data = {
         "1": ["...", "**", "&&", "::"]
       },
       "testCases": [
-        { "input": "$merged", "expected": "[1, 2, 3, 4]" }
+        { "input": "$merged", "expected_output": "[1, 2, 3, 4]" }
       ]
     },
     {
@@ -125,12 +129,13 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "match式とは",
+          "image": "/illustrations/3d/robot.png",
           "content": "match式はswitchの強力な代替です。\n\n```php\n$day = 1;\n$name = match($day) {\n    1 => 'Monday',\n    2 => 'Tuesday',\n    default => 'Other'\n};\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "$grade = 'A';\n$message = match($grade) {\n    'A' => 'Excellent',\n    'B' => 'Good',\n    default => 'Try harder'\n};",
-      "holeyCode": "$grade = 'A';\n$message = ___($grade) {\n    'A' => 'Excellent',\n    'B' => 'Good',\n    ___ => 'Try harder'\n};",
+      "correctCode": "$grade = 'A';\n// matchで式によるパターンマッチ\n$message = match($grade) {\n    'A' => 'Excellent',\n    'B' => 'Good',\n    // defaultでデフォルトケース\n    default => 'Try harder'\n};",
+      "holeyCode": "$grade = 'A';\n// matchで式によるパターンマッチ\n$message = ___($grade) {\n    'A' => 'Excellent',\n    'B' => 'Good',\n    // defaultでデフォルトケース\n    ___ => 'Try harder'\n};",
       "correctLines": [
         { "lineNumber": 2, "content": "$message = match($grade) {" },
         { "lineNumber": 5, "content": "    default => 'Try harder'" }
@@ -144,7 +149,7 @@ export const php3Data = {
         "5": ["default", "else", "other", "_"]
       },
       "testCases": [
-        { "input": "$message", "expected": "'Excellent'" }
+        { "input": "$message", "expected_output": "'Excellent'" }
       ]
     },
     {
@@ -155,12 +160,13 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "名前付き引数とは",
+          "image": "/illustrations/3d/arguments.png",
           "content": "名前付き引数は引数名を指定して値を渡す機能です。\n\n```php\nfunction greet($name, $greeting) {\n    return \"$greeting, $name!\";\n}\necho greet(greeting: 'Hi', name: 'Alice');\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "function createUser($name, $age) {\n    return ['name' => $name, 'age' => $age];\n}\n$user = createUser(age: 30, name: 'Alice');",
-      "holeyCode": "function createUser($name, $age) {\n    return ['name' => $name, 'age' => $age];\n}\n$user = createUser(___: 30, ___: 'Alice');",
+      "correctCode": "function createUser($name, $age) {\n    return ['name' => $name, 'age' => $age];\n}\n// ageとnameで名前付き引数を指定\n$user = createUser(age: 30, name: 'Alice');",
+      "holeyCode": "function createUser($name, $age) {\n    return ['name' => $name, 'age' => $age];\n}\n// ageとnameで名前付き引数を指定\n$user = createUser(___: 30, ___: 'Alice');",
       "correctLines": [
         { "lineNumber": 4, "content": "$user = createUser(age: 30, name: 'Alice');" }
       ],
@@ -171,7 +177,7 @@ export const php3Data = {
         "4": ["age", "name", "user", "value"]
       },
       "testCases": [
-        { "input": "$user['name']", "expected": "'Alice'" }
+        { "input": "$user['name']", "expected_output": "'Alice'" }
       ]
     },
     {
@@ -182,12 +188,13 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "トレイトとは",
+          "image": "/illustrations/3d/robot.png",
           "content": "トレイトは複数のクラスでメソッドを共有する仕組みです。\n\n```php\ntrait Greetable {\n    public function greet() {\n        return 'Hello!';\n    }\n}\n\nclass Person {\n    use Greetable;\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "trait HelloTrait {\n    public function sayHello() {\n        return 'Hello!';\n    }\n}\n\nclass Greeter {\n    use HelloTrait;\n}",
-      "holeyCode": "___ HelloTrait {\n    public function sayHello() {\n        return 'Hello!';\n    }\n}\n\nclass Greeter {\n    ___ HelloTrait;\n}",
+      "correctCode": "// traitでトレイトを定義\ntrait HelloTrait {\n    public function sayHello() {\n        return 'Hello!';\n    }\n}\n\nclass Greeter {\n    // useでトレイトを使用\n    use HelloTrait;\n}",
+      "holeyCode": "// traitでトレイトを定義\n___ HelloTrait {\n    public function sayHello() {\n        return 'Hello!';\n    }\n}\n\nclass Greeter {\n    // useでトレイトを使用\n    ___ HelloTrait;\n}",
       "correctLines": [
         { "lineNumber": 1, "content": "trait HelloTrait {" },
         { "lineNumber": 8, "content": "    use HelloTrait;" }
@@ -201,7 +208,7 @@ export const php3Data = {
         "8": ["use", "include", "import", "extend"]
       },
       "testCases": [
-        { "input": "(new Greeter())->sayHello()", "expected": "'Hello!'" }
+        { "input": "(new Greeter())->sayHello()", "expected_output": "'Hello!'" }
       ]
     },
     {
@@ -212,12 +219,13 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "ジェネレータとは",
+          "image": "/illustrations/3d/robot.png",
           "content": "ジェネレータは値を一つずつ生成する関数です。\n\n```php\nfunction countTo($n) {\n    for ($i = 1; $i <= $n; $i++) {\n        yield $i;\n    }\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "function rangeGen($n) {\n    for ($i = 1; $i <= $n; $i++) {\n        yield $i;\n    }\n}",
-      "holeyCode": "function rangeGen($n) {\n    for ($i = 1; $i <= $n; $i++) {\n        ___ $i;\n    }\n}",
+      "correctCode": "function rangeGen($n) {\n    for ($i = 1; $i <= $n; $i++) {\n        // yieldで値を一つずつ返す\n        yield $i;\n    }\n}",
+      "holeyCode": "function rangeGen($n) {\n    for ($i = 1; $i <= $n; $i++) {\n        // yieldで値を一つずつ返す\n        ___ $i;\n    }\n}",
       "correctLines": [
         { "lineNumber": 3, "content": "        yield $i;" }
       ],
@@ -228,7 +236,7 @@ export const php3Data = {
         "3": ["yield", "return", "emit", "output"]
       },
       "testCases": [
-        { "input": "iterator_to_array(rangeGen(5))", "expected": "[1, 2, 3, 4, 5]" }
+        { "input": "iterator_to_array(rangeGen(5))", "expected_output": "[1, 2, 3, 4, 5]" }
       ]
     },
     {
@@ -239,12 +247,13 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "配列の分割代入とは",
+          "image": "/illustrations/3d/robot.png",
           "content": "分割代入で配列の要素を複数の変数に代入できます。\n\n```php\n$arr = [1, 2, 3];\n[$a, $b, $c] = $arr;\necho $a;  // 1\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "[$name, $age, $city] = ['Alice', 25, 'Tokyo'];",
-      "holeyCode": "[$___, $___, $___] = ['Alice', 25, 'Tokyo'];",
+      "correctCode": "// name、age、cityに分割代入\n[$name, $age, $city] = ['Alice', 25, 'Tokyo'];",
+      "holeyCode": "// name、age、cityに分割代入\n[$___, $___, $___] = ['Alice', 25, 'Tokyo'];",
       "correctLines": [
         { "lineNumber": 1, "content": "[$name, $age, $city] = ['Alice', 25, 'Tokyo'];" }
       ],
@@ -255,8 +264,8 @@ export const php3Data = {
         "1": ["name", "age", "city", "value"]
       },
       "testCases": [
-        { "input": "$name", "expected": "'Alice'" },
-        { "input": "$age", "expected": "25" }
+        { "input": "$name", "expected_output": "'Alice'" },
+        { "input": "$age", "expected_output": "25" }
       ]
     },
     {
@@ -267,12 +276,13 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "プロパティ昇格とは",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "プロパティ昇格はコンストラクタでプロパティを簡潔に定義できます。\n\n```php\nclass Person {\n    public function __construct(\n        public string $name,\n        public int $age\n    ) {}\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Person {\n    public function __construct(\n        public string $name,\n        public int $age\n    ) {}\n}",
-      "holeyCode": "class Person {\n    public function __construct(\n        ___ string $name,\n        ___ int $age\n    ) {}\n}",
+      "correctCode": "class Person {\n    public function __construct(\n        // publicでアクセス修飾子\n        public string $name,\n        // publicでアクセス修飾子\n        public int $age\n    ) {}\n}",
+      "holeyCode": "class Person {\n    public function __construct(\n        // publicでアクセス修飾子\n        ___ string $name,\n        // publicでアクセス修飾子\n        ___ int $age\n    ) {}\n}",
       "correctLines": [
         { "lineNumber": 3, "content": "        public string $name," },
         { "lineNumber": 4, "content": "        public int $age" }
@@ -286,7 +296,7 @@ export const php3Data = {
         "4": ["public", "private", "protected", "readonly"]
       },
       "testCases": [
-        { "input": "(new Person('Alice', 30))->name", "expected": "'Alice'" }
+        { "input": "(new Person('Alice', 30))->name", "expected_output": "'Alice'" }
       ]
     }
   ]

@@ -29,8 +29,8 @@ export const bashData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 画面にメッセージを出す関数\necho \"Hello, World!\"",
-      "holeyCode": "# 画面にメッセージを出す関数\necho \"___\"",
+      "correctCode": "# Hello, World!と入力する\necho \"Hello, World!\"",
+      "holeyCode": "# Hello, World!と入力する\necho \"___\"",
       "correctLines": [
         "# 画面にメッセージを出す関数",
         "echo \"Hello, World!\""
@@ -72,8 +72,8 @@ export const bashData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# name というはこに Bash と入れる\nname=\"Bash\"\n# 中身を表示する\necho $name",
-      "holeyCode": "# name というはこに Bash と入れる\nname=\"___\"\n# 中身を表示する\necho $___",
+      "correctCode": "# Bashと入力する\nname=\"Bash\"\n# nameと入力する\necho $name",
+      "holeyCode": "# Bashと入力する\nname=\"___\"\n# nameと入力する\necho $___",
       "correctLines": [
         "# name というはこに Bash と入れる",
         "name=\"Bash\"",
@@ -117,8 +117,8 @@ export const bashData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// はこに数字を入れる\na=5\nb=3\n// たし算した答えを出す\necho $((a + b))",
-      "holeyCode": "// はこに数字を入れる\na=5\nb=3\n// たし算した答えを出す\necho $((a ___ b))",
+      "correctCode": "# はこに数字を入れる\na=5\nb=3\n# +でたし算\necho $((a + b))",
+      "holeyCode": "# はこに数字を入れる\na=5\nb=3\n# +でたし算\necho $((a ___ b))",
       "correctLines": [
         "a=5",
         "b=3",
@@ -147,7 +147,7 @@ export const bashData = {
       "title": "「もし〜なら」で分けましょう",
       "description": "点数によって表示するメッセージを変えてみましょう。 [ ] を使うのがBashのやりかたです。",
       "difficulty": "easy",
-      "orderIndex": 6,
+      "orderIndex": 4,
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -161,8 +161,8 @@ export const bashData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "score=100\nif [ $score -gt 80 ]; then\n    echo \"Great\"\nfi",
-      "holeyCode": "score=100\nif [ $score ___ 80 ]; then\n    echo \"Great\"\n___",
+      "correctCode": "score=100\n# -gtで「より大きい」を指定\nif [ $score -gt 80 ]; then\n    echo \"Great\"\n# fiでif文を閉じる\nfi",
+      "holeyCode": "score=100\n# -gtで「より大きい」を指定\nif [ $score ___ 80 ]; then\n    echo \"Great\"\n# fiでif文を閉じる\n___",
       "correctLines": [
         "score=100",
         "if [ $score -gt 80 ]; then",
@@ -194,7 +194,7 @@ export const bashData = {
       "title": "ちがう場合はどうしましょう？",
       "description": "else（エルス）を使って、「そうでなければ」の動きを作りましょう。",
       "difficulty": "easy",
-      "orderIndex": 7,
+      "orderIndex": 5,
       "tutorialSlides": [
         {
           "title": "それ以外の場合は？",
@@ -203,13 +203,13 @@ export const bashData = {
         },
         {
           "title": "elseブロック",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```bash\nif [ $time -lt 12 ]; then\n    echo \"午前\"\nelse\n    echo \"午後\"\nfi\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\nelse\n    echo \"Minor\"\nfi",
-      "holeyCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\n___ \n    echo \"Minor\"\nfi",
+      "correctCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\n# elseでそれ以外の場合\nelse\n    echo \"Minor\"\nfi",
+      "holeyCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\n# elseでそれ以外の場合\n___\n    echo \"Minor\"\nfi",
       "correctLines": [
         "age=18",
         "if [ $age -ge 20 ]; then",
@@ -242,7 +242,7 @@ export const bashData = {
       "title": "中身を全部出してみましょう",
       "description": "for ループを使って、リストの中身を一つずつ順番に表示します。",
       "difficulty": "easy",
-      "orderIndex": 8,
+      "orderIndex": 6,
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
@@ -256,8 +256,8 @@ export const bashData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "names=(\"Alice\" \"Bob\")\nfor name in \"${names[@]}\"; do\n    echo $name\ndone",
-      "holeyCode": "names=(\"Alice\" \"Bob\")\nfor name ___ \"${names[@]}\"; do\n    echo $name\n___",
+      "correctCode": "names=(\"Alice\" \"Bob\")\n# inで配列の中身を取り出す\nfor name in \"${names[@]}\"; do\n    echo $name\n# doneでループを終了\ndone",
+      "holeyCode": "names=(\"Alice\" \"Bob\")\n# inで配列の中身を取り出す\nfor name ___ \"${names[@]}\"; do\n    echo $name\n# doneでループを終了\n___",
       "correctLines": [
         "names=(\"Alice\" \"Bob\")",
         "for name in \"${names[@]}\"; do",
@@ -287,7 +287,7 @@ export const bashData = {
       "title": "自分だけの関数を作りましょう",
       "description": "よく使う手順をまとめて、名前をつけた「関数（かんすう）」を作ってみましょう。",
       "difficulty": "easy",
-      "orderIndex": 10,
+      "orderIndex": 7,
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",
@@ -301,8 +301,8 @@ export const bashData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "greet() {\n    echo \"Hello\"\n}\n// 関数を実行する\ngreet",
-      "holeyCode": "greet() {\n    echo \"Hello\"\n}\n// 関数を実行する\n___",
+      "correctCode": "greet() {\n    echo \"Hello\"\n}\n# greetで関数を呼び出す\ngreet",
+      "holeyCode": "greet() {\n    echo \"Hello\"\n}\n# greetで関数を呼び出す\n___",
       "correctLines": [
         "greet() {",
         "    echo \"Hello\"",

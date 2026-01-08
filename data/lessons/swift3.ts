@@ -14,16 +14,18 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "Result とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 成功か失敗かを表す\n\n**Result** は、成功(.success)か失敗(.failure)を表す型です。\n\n```swift\nfunc divide(_ a: Int, _ b: Int) -> Result<Int, Error> {\n    if b == 0 { return .failure(MyError.divByZero) }\n    return .success(a / b)\n}\n```"
         },
         {
           "title": "結果の取得",
+          "image": "/illustrations/3d/robot.png",
           "content": "# switch で分岐\n\n```swift\nswitch result {\ncase .success(let value):\n    print(value)\ncase .failure(let error):\n    print(error)\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "enum MyError: Error { case negative }\n\nfunc check(_ n: Int) -> Result<Int, MyError> {\n    if n < 0 { return .failure(.negative) }\n    return .success(n)\n}\n\nlet result = check(10)\nswitch result {\ncase .success(let v): print(v)\ncase .failure(_): print(\"error\")\n}",
-      "holeyCode": "enum MyError: Error { case negative }\n\nfunc check(_ n: Int) -> Result<Int, MyError> {\n    if n < 0 { return .failure(.negative) }\n    return .___(n)\n}\n\nlet result = check(10)\nswitch result {\ncase .success(let v): print(v)\ncase .failure(_): print(\"error\")\n}",
+      "holeyCode": "enum MyError: Error { case negative }\n\nfunc check(_ n: Int) -> Result<Int, MyError> {\n    if n < 0 { return .failure(.negative) }\n    // successで成功を返す\n    return .___(n)\n}\n\nlet result = check(10)\nswitch result {\ncase .success(let v): print(v)\ncase .failure(_): print(\"error\")\n}",
       "correctLines": [
         "enum MyError: Error { case negative }",
         "",
@@ -70,16 +72,18 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "compactMap とは？",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# nilを除外して変換\n\n**compactMap** は、mapと同じく変換しますが、nilを除外します。\n\n```swift\nlet strings = [\"1\", \"2\", \"x\", \"3\"]\nlet nums = strings.compactMap { Int($0) }\n// [1, 2, 3]\n```"
         },
         {
           "title": "map との違い",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# Optional を unwrap\n\n```swift\n// map: [Int?]\nlet a = strings.map { Int($0) }\n\n// compactMap: [Int]\nlet b = strings.compactMap { Int($0) }\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\nlet ints = nums.compactMap { Int($0) }\nprint(ints)",
-      "holeyCode": "let nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\nlet ints = nums.___ { Int($0) }\nprint(ints)",
+      "holeyCode": "let nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\n// compactMapでnilを除外して変換\nlet ints = nums.___ { Int($0) }\nprint(ints)",
       "correctLines": [
         "let nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]",
         "let ints = nums.compactMap { Int($0) }",
@@ -108,16 +112,18 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "reduce とは？",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 畳み込み\n\n**reduce** は、初期値と関数で要素を1つにまとめます。\n\n```swift\nlet sum = [1, 2, 3].reduce(0) { $0 + $1 }\n// 6\n```"
         },
         {
           "title": "様々な集約",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 積や結合\n\n```swift\n// 積\n[1, 2, 3, 4].reduce(1, *)\n\n// 文字列結合\n[\"a\", \"b\", \"c\"].reduce(\"\", +)\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let nums = [1, 2, 3, 4, 5]\nlet product = nums.reduce(1) { $0 * $1 }\nprint(product)",
-      "holeyCode": "let nums = [1, 2, 3, 4, 5]\nlet product = nums._____(1) { $0 * $1 }\nprint(product)",
+      "holeyCode": "let nums = [1, 2, 3, 4, 5]\n// reduceで畳み込み\nlet product = nums._____(1) { $0 * $1 }\nprint(product)",
       "correctLines": [
         "let nums = [1, 2, 3, 4, 5]",
         "let product = nums.reduce(1) { $0 * $1 }",
@@ -146,16 +152,18 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "lazy とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 遅延評価\n\n**lazy** を使うと、必要になるまで計算を遅延させます。\n\n```swift\nlet result = (1...1000).lazy.map { $0 * 2 }.first!\n// 全要素を計算せず、最初の1つだけ計算\n```"
         },
         {
           "title": "パフォーマンス向上",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 大量データの処理\n\n```swift\nlet big = (1...1_000_000).lazy\n    .filter { $0 % 2 == 0 }\n    .map { $0 * 2 }\n    .prefix(5)\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let nums = [1, 2, 3, 4, 5]\nlet result = nums.lazy.map { $0 * 10 }.first!\nprint(result)",
-      "holeyCode": "let nums = [1, 2, 3, 4, 5]\nlet result = nums.___.map { $0 * 10 }.first!\nprint(result)",
+      "holeyCode": "let nums = [1, 2, 3, 4, 5]\n// lazyで遅延評価\nlet result = nums.___.map { $0 * 10 }.first!\nprint(result)",
       "correctLines": [
         "let nums = [1, 2, 3, 4, 5]",
         "let result = nums.lazy.map { $0 * 10 }.first!",
@@ -184,16 +192,18 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "where とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 条件を追加\n\n**where** で、for文やswitch文に条件を追加できます。\n\n```swift\nfor n in nums where n > 0 {\n    print(n)\n}\n```"
         },
         {
           "title": "switch での使用",
+          "image": "/illustrations/3d/robot.png",
           "content": "# case に条件追加\n\n```swift\nswitch value {\ncase let x where x > 0:\n    print(\"positive\")\ndefault:\n    print(\"other\")\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let nums = [1, -2, 3, -4, 5]\nfor n in nums where n > 0 {\n    print(n)\n}",
-      "holeyCode": "let nums = [1, -2, 3, -4, 5]\nfor n in nums ___ n > 0 {\n    print(n)\n}",
+      "holeyCode": "let nums = [1, -2, 3, -4, 5]\n// whereで条件を追加\nfor n in nums ___ n > 0 {\n    print(n)\n}",
       "correctLines": [
         "let nums = [1, -2, 3, -4, 5]",
         "for n in nums where n > 0 {",
@@ -224,16 +234,18 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "defer とは？",
+          "image": "/illustrations/3d_advanced/concurrency.png",
           "content": "# スコープ終了時に実行\n\n**defer** は、現在のスコープを出るときに実行される処理を登録します。\n\n```swift\nfunc process() {\n    defer { print(\"cleanup\") }\n    print(\"working\")\n}  // working, cleanup\n```"
         },
         {
           "title": "リソース管理",
+          "image": "/illustrations/3d/robot.png",
           "content": "# ファイルのクローズなど\n\n```swift\nfunc readFile() {\n    let file = open()\n    defer { file.close() }\n    // ファイル処理\n}  // 自動的にclose\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func test() {\n    defer { print(\"end\") }\n    print(\"start\")\n}\ntest()",
-      "holeyCode": "func test() {\n    ___ { print(\"end\") }\n    print(\"start\")\n}\ntest()",
+      "holeyCode": "func test() {\n    // deferでスコープ終了時に実行\n    ___ { print(\"end\") }\n    print(\"start\")\n}\ntest()",
       "correctLines": [
         "func test() {",
         "    defer { print(\"end\") }",
@@ -266,16 +278,18 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "associatedtype とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# プロトコルの関連型\n\n**associatedtype** で、プロトコルにジェネリックな型を定義できます。\n\n```swift\nprotocol Container {\n    associatedtype Item\n    func add(_ item: Item)\n}\n```"
         },
         {
           "title": "実装側で型を決定",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 具体的な型を指定\n\n```swift\nstruct IntBox: Container {\n    typealias Item = Int\n    func add(_ item: Int) { }\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "protocol Stack {\n    associatedtype Element\n    mutating func push(_ item: Element)\n}\n\nstruct IntStack: Stack {\n    var items: [Int] = []\n    mutating func push(_ item: Int) {\n        items.append(item)\n    }\n}\n\nvar s = IntStack()\ns.push(10)\nprint(s.items)",
-      "holeyCode": "protocol Stack {\n    ___ Element\n    mutating func push(_ item: Element)\n}\n\nstruct IntStack: Stack {\n    var items: [Int] = []\n    mutating func push(_ item: Int) {\n        items.append(item)\n    }\n}\n\nvar s = IntStack()\ns.push(10)\nprint(s.items)",
+      "holeyCode": "protocol Stack {\n    // associatedtypeで関連型を定義\n    ___ Element\n    mutating func push(_ item: Element)\n}\n\nstruct IntStack: Stack {\n    var items: [Int] = []\n    mutating func push(_ item: Int) {\n        items.append(item)\n    }\n}\n\nvar s = IntStack()\ns.push(10)\nprint(s.items)",
       "correctLines": [
         "protocol Stack {",
         "    associatedtype Element",
@@ -328,16 +342,18 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "throws とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# エラーを投げる\n\n**throws** 関数は、エラーを投げる可能性があります。\n\n```swift\nfunc divide(_ a: Int, _ b: Int) throws -> Int {\n    if b == 0 { throw MyError.divByZero }\n    return a / b\n}\n```"
         },
         {
           "title": "try で呼び出し",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# エラーハンドリング\n\n```swift\ndo {\n    let result = try divide(10, 0)\n} catch {\n    print(error)\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "enum MyError: Error { case invalid }\n\nfunc check(_ n: Int) throws -> Int {\n    if n < 0 { throw MyError.invalid }\n    return n\n}\n\ndo {\n    let v = try check(10)\n    print(v)\n} catch {\n    print(\"error\")\n}",
-      "holeyCode": "enum MyError: Error { case invalid }\n\nfunc check(_ n: Int) ___ -> Int {\n    if n < 0 { throw MyError.invalid }\n    return n\n}\n\ndo {\n    let v = try check(10)\n    print(v)\n} catch {\n    print(\"error\")\n}",
+      "holeyCode": "enum MyError: Error { case invalid }\n\n// throwsでエラーを投げる可能性を示す\nfunc check(_ n: Int) ___ -> Int {\n    if n < 0 { throw MyError.invalid }\n    return n\n}\n\ndo {\n    let v = try check(10)\n    print(v)\n} catch {\n    print(\"error\")\n}",
       "correctLines": [
         "enum MyError: Error { case invalid }",
         "",
@@ -386,16 +402,18 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "Set とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 重複なしのコレクション\n\n**Set** は、重複した要素を持たないコレクションです。\n\n```swift\nvar set: Set = [1, 2, 2, 3, 3, 3]\n// {1, 2, 3}\n```"
         },
         {
           "title": "集合演算",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 和、積、差\n\n```swift\nlet a: Set = [1, 2, 3]\nlet b: Set = [2, 3, 4]\na.union(b)        // {1, 2, 3, 4}\na.intersection(b) // {2, 3}\na.subtracting(b)  // {1}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "var s: Set = [1, 2, 2, 3, 3, 3]\nprint(s.count)",
-      "holeyCode": "var s: ___ = [1, 2, 2, 3, 3, 3]\nprint(s.count)",
+      "holeyCode": "// Setで重複なしのコレクション\nvar s: ___ = [1, 2, 2, 3, 3, 3]\nprint(s.count)",
       "correctLines": [
         "var s: Set = [1, 2, 2, 3, 3, 3]",
         "print(s.count)"
@@ -422,16 +440,18 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "mutating とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 構造体を変更するメソッド\n\n**mutating** をつけると、構造体のメソッドで自身を変更できます。\n\n```swift\nstruct Point {\n    var x: Int\n    mutating func moveBy(dx: Int) {\n        x += dx\n    }\n}\n```"
         },
         {
           "title": "なぜ必要？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 値型の特性\n\n構造体は値型なので、デフォルトではメソッド内で自身を変更できません。"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "struct Counter {\n    var count = 0\n    mutating func increment() {\n        count += 1\n    }\n}\n\nvar c = Counter()\nc.increment()\nc.increment()\nprint(c.count)",
-      "holeyCode": "struct Counter {\n    var count = 0\n    ___ func increment() {\n        count += 1\n    }\n}\n\nvar c = Counter()\nc.increment()\nc.increment()\nprint(c.count)",
+      "holeyCode": "struct Counter {\n    var count = 0\n    // mutatingで構造体を変更可能に\n    ___ func increment() {\n        count += 1\n    }\n}\n\nvar c = Counter()\nc.increment()\nc.increment()\nprint(c.count)",
       "correctLines": [
         "struct Counter {",
         "    var count = 0",

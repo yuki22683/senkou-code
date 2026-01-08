@@ -14,18 +14,18 @@ export const cpp2Data = {
       "tutorialSlides": [
         {
           "title": "クラスとは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# データと機能の設計図\n\n**クラス** は、データ（変数）と機能（関数）をひとまとめにした「設計図」です。この設計図から実際のモノ（オブジェクト）を作ります。"
         },
         {
           "title": "クラスの定義",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# class キーワード\n\n`class` を使ってクラスを定義します。`public:` の下に公開する部分を書きます。\n\n**コード例：**\n```cpp\nclass Dog {\npublic:\n    std::string name;\n};\n\nDog d;\nd.name = \"Pochi\";\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <string>\nclass Cat {\npublic:\n    std::string name;\n};\nint main() {\n    Cat c;\n    c.name = \"Tama\";\n    std::cout << c.name << std::endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <string>\n___ Cat {\npublic:\n    std::string name;\n};\nint main() {\n    Cat c;\n    c.name = \"Tama\";\n    std::cout << c.name << std::endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <string>\n// class でクラスを定義\n___ Cat {\npublic:\n    std::string name;\n};\nint main() {\n    Cat c;\n    c.name = \"Tama\";\n    std::cout << c.name << std::endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <string>",
@@ -72,16 +72,18 @@ export const cpp2Data = {
       "tutorialSlides": [
         {
           "title": "コンストラクタとは？",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# 初期化の儀式\n\n**コンストラクタ** は、オブジェクトを作るときに自動的に呼ばれる特別な関数です。初期値を設定するのに使います。"
         },
         {
           "title": "コンストラクタの書き方",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# クラス名と同じ名前\n\nコンストラクタはクラス名と同じ名前で、戻り値の型を書きません。\n\n**コード例：**\n```cpp\nclass Box {\npublic:\n    int size;\n    Box(int s) {\n        size = s;\n    }\n};\nBox b(10); // size が 10 で初期化\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nclass Counter {\npublic:\n    int count;\n    Counter(int c) {\n        count = c;\n    }\n};\nint main() {\n    Counter cnt(5);\n    std::cout << cnt.count << std::endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\nclass Counter {\npublic:\n    int count;\n    ___(int c) {\n        count = c;\n    }\n};\nint main() {\n    Counter cnt(5);\n    std::cout << cnt.count << std::endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\nclass Counter {\npublic:\n    int count;\n    // Counter でコンストラクタを定義\n    ___(int c) {\n        count = c;\n    }\n};\nint main() {\n    Counter cnt(5);\n    std::cout << cnt.count << std::endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "class Counter {",
@@ -130,16 +132,18 @@ export const cpp2Data = {
       "tutorialSlides": [
         {
           "title": "メンバ関数とは？",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# クラスに属する関数\n\n**メンバ関数** は、クラスの中で定義される関数です。そのクラスのデータを使った処理ができます。"
         },
         {
           "title": "メンバ関数の定義",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# クラスの中に関数を書く\n\nクラス定義の中に関数を書くと、そのクラスのメンバ関数になります。\n\n**コード例：**\n```cpp\nclass Circle {\npublic:\n    int radius;\n    int area() {\n        return radius * radius * 3;\n    }\n};\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nclass Rect {\npublic:\n    int w;\n    int h;\n    int area() {\n        return w * h;\n    }\n};\nint main() {\n    Rect r;\n    r.w = 3;\n    r.h = 4;\n    std::cout << r.area() << std::endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\nclass Rect {\npublic:\n    int w;\n    int h;\n    int area() {\n        return w ___ h;\n    }\n};\nint main() {\n    Rect r;\n    r.w = 3;\n    r.h = 4;\n    std::cout << r.area() << std::endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\nclass Rect {\npublic:\n    int w;\n    int h;\n    int area() {\n        // * で掛け算\n        return w ___ h;\n    }\n};\nint main() {\n    Rect r;\n    r.w = 3;\n    r.h = 4;\n    std::cout << r.area() << std::endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "class Rect {",
@@ -194,18 +198,18 @@ export const cpp2Data = {
       "tutorialSlides": [
         {
           "title": "参照とは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/pointer_arrow.png",
           "content": "# 変数の別名\n\n**参照** は、既存の変数に別の名前をつける機能です。参照を通じて元の変数を操作できます。"
         },
         {
           "title": "参照の使い方",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/pointer_arrow.png",
           "content": "# & で参照を作る\n\n型名の後に `&` をつけると参照型になります。参照は宣言時に必ず初期化が必要です。\n\n**コード例：**\n```cpp\nint x = 10;\nint& ref = x;  // ref は x の別名\nref = 20;      // x も 20 になる\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nint main() {\n    int num = 5;\n    int& ref = num;\n    ref = 100;\n    std::cout << num << std::endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\nint main() {\n    int num = 5;\n    int___ ref = num;\n    ref = 100;\n    std::cout << num << std::endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\nint main() {\n    int num = 5;\n    // & で参照を作る\n    int___ ref = num;\n    ref = 100;\n    std::cout << num << std::endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "int main() {",
@@ -244,16 +248,18 @@ export const cpp2Data = {
       "tutorialSlides": [
         {
           "title": "継承とは？",
+          "image": "/illustrations/3d_advanced/inheritance.png",
           "content": "# クラスを拡張する\n\n**継承** を使うと、既存のクラス（親クラス）の機能を引き継いだ新しいクラス（子クラス）を作れます。コードの再利用に便利です。"
         },
         {
           "title": "継承の書き方",
+          "image": "/illustrations/3d_advanced/inheritance.png",
           "content": "# : public 親クラス\n\n子クラス名の後に `: public 親クラス名` と書きます。\n\n**コード例：**\n```cpp\nclass Animal {\npublic:\n    void eat() { std::cout << \"eating\" << std::endl; }\n};\nclass Dog : public Animal {\n};\n// Dog は eat() を使える\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nclass Vehicle {\npublic:\n    void move() {\n        std::cout << \"moving\" << std::endl;\n    }\n};\nclass Car : public Vehicle {\n};\nint main() {\n    Car c;\n    c.move();\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\nclass Vehicle {\npublic:\n    void move() {\n        std::cout << \"moving\" << std::endl;\n    }\n};\nclass Car : ___ Vehicle {\n};\nint main() {\n    Car c;\n    c.move();\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\nclass Vehicle {\npublic:\n    void move() {\n        std::cout << \"moving\" << std::endl;\n    }\n};\n// public で継承\nclass Car : ___ Vehicle {\n};\nint main() {\n    Car c;\n    c.move();\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "class Vehicle {",
@@ -304,16 +310,18 @@ export const cpp2Data = {
       "tutorialSlides": [
         {
           "title": "オーバーライドとは？",
+          "image": "/illustrations/3d_advanced/inheritance.png",
           "content": "# 親の機能を上書き\n\n**オーバーライド** は、親クラスで定義された関数を子クラスで書き換える機能です。`virtual` キーワードを使います。"
         },
         {
           "title": "virtual と override",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 仮想関数の仕組み\n\n親クラスで `virtual` をつけた関数は、子クラスで `override` して上書きできます。\n\n**コード例：**\n```cpp\nclass Animal {\npublic:\n    virtual void speak() { std::cout << \"...\" << std::endl; }\n};\nclass Cat : public Animal {\npublic:\n    void speak() override { std::cout << \"meow\" << std::endl; }\n};\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nclass Shape {\npublic:\n    virtual void draw() {\n        std::cout << \"shape\" << std::endl;\n    }\n};\nclass Circle : public Shape {\npublic:\n    void draw() override {\n        std::cout << \"circle\" << std::endl;\n    }\n};\nint main() {\n    Circle c;\n    c.draw();\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\nclass Shape {\npublic:\n    ___ void draw() {\n        std::cout << \"shape\" << std::endl;\n    }\n};\nclass Circle : public Shape {\npublic:\n    void draw() override {\n        std::cout << \"circle\" << std::endl;\n    }\n};\nint main() {\n    Circle c;\n    c.draw();\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\nclass Shape {\npublic:\n    // virtual で仮想関数を定義\n    ___ void draw() {\n        std::cout << \"shape\" << std::endl;\n    }\n};\nclass Circle : public Shape {\npublic:\n    void draw() override {\n        std::cout << \"circle\" << std::endl;\n    }\n};\nint main() {\n    Circle c;\n    c.draw();\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "class Shape {",
@@ -372,18 +380,18 @@ export const cpp2Data = {
       "tutorialSlides": [
         {
           "title": "テンプレートとは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/generics_glass.png",
           "content": "# 汎用的なコード\n\n**テンプレート** を使うと、どんな型でも使える汎用的な関数やクラスが作れます。コードの再利用性が高まります。"
         },
         {
           "title": "関数テンプレート",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/generics_glass.png",
           "content": "# template<typename T>\n\n`template<typename T>` と書くと、T が任意の型を表します。\n\n**コード例：**\n```cpp\ntemplate<typename T>\nT add(T a, T b) {\n    return a + b;\n}\nadd(1, 2);     // int\nadd(1.5, 2.5); // double\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\ntemplate<typename T>\nT bigger(T a, T b) {\n    if (a > b) return a;\n    return b;\n}\nint main() {\n    std::cout << bigger(3, 7) << std::endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\ntemplate<typename ___>\nT bigger(T a, T b) {\n    if (a > b) return a;\n    return b;\n}\nint main() {\n    std::cout << bigger(3, 7) << std::endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n// T で型パラメータを定義\ntemplate<typename ___>\nT bigger(T a, T b) {\n    if (a > b) return a;\n    return b;\n}\nint main() {\n    std::cout << bigger(3, 7) << std::endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "template<typename T>",
@@ -426,16 +434,18 @@ export const cpp2Data = {
       "tutorialSlides": [
         {
           "title": "ラムダ式とは？",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 無名関数\n\n**ラムダ式** は、名前をつけずにその場で関数を作る方法です。短い処理を簡潔に書けます。"
         },
         {
           "title": "ラムダ式の書き方",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# [ ] ( ) { }\n\n`[]` はキャプチャ、`()` は引数、`{}` は処理本体です。\n\n**コード例：**\n```cpp\nauto add = [](int a, int b) {\n    return a + b;\n};\nstd::cout << add(2, 3) << std::endl; // 5\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nint main() {\n    auto square = [](int x) {\n        return x * x;\n    };\n    std::cout << square(4) << std::endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\nint main() {\n    auto square = [](int x) ___\n        return x * x;\n    };\n    std::cout << square(4) << std::endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\nint main() {\n    // { でラムダ本体を開始\n    auto square = [](int x) ___\n        return x * x;\n    };\n    std::cout << square(4) << std::endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "int main() {",
@@ -474,18 +484,18 @@ export const cpp2Data = {
       "tutorialSlides": [
         {
           "title": "スマートポインタとは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d_advanced/pointer_arrow.png",
           "content": "# 安全なメモリ管理\n\n**スマートポインタ** は、使い終わったら自動的にメモリを解放してくれる便利なポインタです。メモリリークを防ぎます。"
         },
         {
           "title": "unique_ptr の使い方",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# std::make_unique\n\n`std::make_unique<型>()` でスマートポインタを作ります。スコープを抜けると自動で解放されます。\n\n**コード例：**\n```cpp\n#include <memory>\nauto p = std::make_unique<int>(42);\nstd::cout << *p << std::endl; // 42\n// 自動で解放される\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <memory>\nint main() {\n    auto ptr = std::make_unique<int>(100);\n    std::cout << *ptr << std::endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <memory>\nint main() {\n    auto ptr = std::___<int>(100);\n    std::cout << *ptr << std::endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <memory>\nint main() {\n    // make_unique でスマートポインタを作成\n    auto ptr = std::___<int>(100);\n    std::cout << *ptr << std::endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <memory>",
@@ -522,18 +532,18 @@ export const cpp2Data = {
       "tutorialSlides": [
         {
           "title": "例外処理とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# エラーに備える\n\n**例外処理** を使うと、プログラム実行中のエラーに対処できます。エラーが起きてもプログラムがクラッシュしません。"
         },
         {
           "title": "try-catch の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# throw で例外を投げる\n\n`try` ブロックで処理を実行し、エラーは `catch` で捕まえます。\n\n**コード例：**\n```cpp\ntry {\n    throw \"error!\";\n} catch (const char* e) {\n    std::cout << e << std::endl;\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nint main() {\n    try {\n        throw 404;\n    } catch (int e) {\n        std::cout << e << std::endl;\n    }\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\nint main() {\n    try {\n        ___ 404;\n    } catch (int e) {\n        std::cout << e << std::endl;\n    }\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\nint main() {\n    try {\n        // throw で例外を投げる\n        ___ 404;\n    } catch (int e) {\n        std::cout << e << std::endl;\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "int main() {",

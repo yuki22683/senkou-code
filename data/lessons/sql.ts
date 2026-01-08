@@ -19,7 +19,7 @@ export const sqlData = {
         },
         {
           "title": "ほしいデータを選ぶ SELECT",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# SELECT（セレクト）\n\n「これを選んでください！」とお願いするときは `SELECT` と入力します。ただの文字を表示させたいときもこれを使います。\n\n```sql\nSELECT '表示したい文字';\n```"
         },
         {
@@ -29,8 +29,8 @@ export const sqlData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "-- 'Hello, World!'を表示\nSELECT 'Hello, World!';",
-      "holeyCode": "-- 'Hello, World!'を表示\n___ 'Hello, World!';",
+      "correctCode": "-- SELECTでデータを取得\nSELECT 'Hello, World!';",
+      "holeyCode": "-- SELECTでデータを取得\n___ 'Hello, World!';",
       "correctLines": [
         "-- 'Hello, World!'を表示",
         "SELECT 'Hello, World!';"

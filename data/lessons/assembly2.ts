@@ -14,18 +14,18 @@ export const assembly2Data = {
       "tutorialSlides": [
         {
           "title": "レジスタとは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# CPUの小さな机\n\n**レジスタ** は、CPUが直接操作できる超高速な記憶領域です。rax, rbx, rcx, rdxなどがあります。"
         },
         {
           "title": "mov 命令",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# mov 先, 値\n\n`mov` は、値をレジスタや変数に格納します。\n\n**コード例：**\n```asm\nmov rax, 42  ; rax に 42 を入れる\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 60\n  mov rdi, 0\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  ___ rax, 60\n  mov rdi, 0\n  syscall",
+      "correctCode": "section .text\n  global _start\n_start:\n  ; movで値をレジスタに格納\n  mov rax, 60\n  mov rdi, 0\n  syscall",
+      "holeyCode": "section .text\n  global _start\n_start:\n  ; movで値をレジスタに格納\n  ___ rax, 60\n  mov rdi, 0\n  syscall",
       "correctLines": [
         "section .text",
         "  global _start",
@@ -60,18 +60,18 @@ export const assembly2Data = {
       "tutorialSlides": [
         {
           "title": "add 命令",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 足し算\n\n**add** は、2つの値を足してレジスタに格納します。"
         },
         {
           "title": "add の使い方",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# add 先, 値\n\n先のレジスタに値を足します。\n\n**コード例：**\n```asm\nmov rax, 5\nadd rax, 3  ; rax = 8\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 10\n  add rax, 5\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 10\n  ___ rax, 5\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 10\n  ; addで足し算\n  add rax, 5\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 10\n  ; addで足し算\n  ___ rax, 5\n  mov rdi, rax\n  mov rax, 60\n  syscall",
       "correctLines": [
         "section .text",
         "  global _start",
@@ -110,18 +110,18 @@ export const assembly2Data = {
       "tutorialSlides": [
         {
           "title": "sub 命令",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 引き算\n\n**sub** は、レジスタから値を引きます。"
         },
         {
           "title": "sub の使い方",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# sub 先, 値\n\n先のレジスタから値を引きます。\n\n**コード例：**\n```asm\nmov rax, 10\nsub rax, 3  ; rax = 7\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 20\n  sub rax, 5\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 20\n  ___ rax, 5\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 20\n  ; subで引き算\n  sub rax, 5\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 20\n  ; subで引き算\n  ___ rax, 5\n  mov rdi, rax\n  mov rax, 60\n  syscall",
       "correctLines": [
         "section .text",
         "  global _start",
@@ -160,18 +160,18 @@ export const assembly2Data = {
       "tutorialSlides": [
         {
           "title": "mul 命令",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 掛け算\n\n**mul** は、raxの値に指定した値を掛けます。結果はraxに入ります。"
         },
         {
           "title": "mul の使い方",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# mul 値\n\nrax × 値 の結果がraxに入ります。\n\n**コード例：**\n```asm\nmov rax, 5\nmov rbx, 3\nmul rbx  ; rax = 15\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 4\n  mov rbx, 3\n  mul rbx\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 4\n  mov rbx, 3\n  ___ rbx\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 4\n  mov rbx, 3\n  ; mulで掛け算\n  mul rbx\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 4\n  mov rbx, 3\n  ; mulで掛け算\n  ___ rbx\n  mov rdi, rax\n  mov rax, 60\n  syscall",
       "correctLines": [
         "section .text",
         "  global _start",
@@ -212,18 +212,18 @@ export const assembly2Data = {
       "tutorialSlides": [
         {
           "title": "cmp 命令",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 比較\n\n**cmp** は、2つの値を比較してフラグを設定します。条件分岐の前に使います。"
         },
         {
           "title": "cmp の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# cmp A, B\n\nA - B を計算し、結果に応じてフラグを立てます（実際の値は変わりません）。\n\n**コード例：**\n```asm\ncmp rax, 10  ; rax と 10 を比較\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 5\n  cmp rax, 5\n  mov rax, 60\n  mov rdi, 0\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 5\n  ___ rax, 5\n  mov rax, 60\n  mov rdi, 0\n  syscall",
+      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 5\n  ; cmpで比較\n  cmp rax, 5\n  mov rax, 60\n  mov rdi, 0\n  syscall",
+      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 5\n  ; cmpで比較\n  ___ rax, 5\n  mov rax, 60\n  mov rdi, 0\n  syscall",
       "correctLines": [
         "section .text",
         "  global _start",
@@ -262,18 +262,18 @@ export const assembly2Data = {
       "tutorialSlides": [
         {
           "title": "jmp 命令",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 無条件ジャンプ\n\n**jmp** は、指定したラベルに無条件でジャンプします。"
         },
         {
           "title": "jmp の使い方",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# jmp ラベル\n\nプログラムの実行位置をラベルに移動します。\n\n**コード例：**\n```asm\njmp end\n...\nend:\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "section .text\n  global _start\n_start:\n  jmp done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  ___ done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+      "correctCode": "section .text\n  global _start\n_start:\n  ; jmpでジャンプ\n  jmp done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+      "holeyCode": "section .text\n  global _start\n_start:\n  ; jmpでジャンプ\n  ___ done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
       "correctLines": [
         "section .text",
         "  global _start",
@@ -312,18 +312,18 @@ export const assembly2Data = {
       "tutorialSlides": [
         {
           "title": "je 命令",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 等しければジャンプ\n\n**je** (Jump if Equal) は、cmpの結果が等しい場合にジャンプします。"
         },
         {
           "title": "je の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# cmp の後に使う\n\n比較結果に応じて分岐できます。\n\n**コード例：**\n```asm\ncmp rax, 5\nje equal  ; 等しければ equal へ\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 5\n  cmp rax, 5\n  je done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 5\n  cmp rax, 5\n  ___ done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 5\n  cmp rax, 5\n  ; jeで等しければジャンプ\n  je done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 5\n  cmp rax, 5\n  ; jeで等しければジャンプ\n  ___ done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
       "correctLines": [
         "section .text",
         "  global _start",
@@ -366,18 +366,18 @@ export const assembly2Data = {
       "tutorialSlides": [
         {
           "title": "スタックとは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 後入れ先出し\n\n**スタック** は、最後に入れたものを最初に取り出すデータ構造です。関数呼び出しで使います。"
         },
         {
           "title": "push と pop",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# push で入れ、pop で取り出す\n\n`push` でスタックに入れ、`pop` で取り出します。\n\n**コード例：**\n```asm\npush rax  ; スタックに保存\npop rbx   ; スタックから復元\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 42\n  push rax\n  pop rbx\n  mov rax, 60\n  mov rdi, rbx\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 42\n  ___ rax\n  pop rbx\n  mov rax, 60\n  mov rdi, rbx\n  syscall",
+      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 42\n  ; pushでスタックに保存\n  push rax\n  pop rbx\n  mov rax, 60\n  mov rdi, rbx\n  syscall",
+      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 42\n  ; pushでスタックに保存\n  ___ rax\n  pop rbx\n  mov rax, 60\n  mov rdi, rbx\n  syscall",
       "correctLines": [
         "section .text",
         "  global _start",
@@ -418,18 +418,18 @@ export const assembly2Data = {
       "tutorialSlides": [
         {
           "title": "xor 命令",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 排他的論理和\n\n**xor** は、排他的論理和を計算します。同じ値同士のxorは0になります。"
         },
         {
           "title": "ゼロクリアのテクニック",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# xor A, A で 0 に\n\n`xor rax, rax` は rax を 0 にする効率的な方法です。\n\n**コード例：**\n```asm\nxor rax, rax  ; rax = 0\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 60\n  ___ rdi, rdi\n  syscall",
+      "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 60\n  ; xorでrdiを0にする\n  xor rdi, rdi\n  syscall",
+      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 60\n  ; xorでrdiを0にする\n  ___ rdi, rdi\n  syscall",
       "correctLines": [
         "section .text",
         "  global _start",
@@ -464,16 +464,18 @@ export const assembly2Data = {
       "tutorialSlides": [
         {
           "title": "call 命令",
+          "image": "/illustrations/3d/robot.png",
           "content": "# サブルーチン呼び出し\n\n**call** は、サブルーチン（関数）を呼び出します。戻りアドレスがスタックに保存されます。"
         },
         {
           "title": "call と ret",
+          "image": "/illustrations/3d/robot.png",
           "content": "# ret で戻る\n\n`call` で呼び出し、`ret` で呼び出し元に戻ります。\n\n**コード例：**\n```asm\ncall func\n...\nfunc:\n  ...\n  ret\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "section .text\n  global _start\n_start:\n  call done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  ___ done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+      "correctCode": "section .text\n  global _start\n_start:\n  ; callでサブルーチンを呼び出す\n  call done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+      "holeyCode": "section .text\n  global _start\n_start:\n  ; callでサブルーチンを呼び出す\n  ___ done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
       "correctLines": [
         "section .text",
         "  global _start",

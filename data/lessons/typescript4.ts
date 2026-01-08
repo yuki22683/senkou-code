@@ -14,12 +14,13 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "型ガードとは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 型を絞り込む\n\n**型ガード**は、条件分岐で型を絞り込む関数です。\n\n```typescript\nfunction isString(x: unknown): x is string {\n  return typeof x === 'string';\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "function isNumber(x: unknown): x is number {\n  return typeof x === 'number';\n}\n\nconst value: unknown = 42;\nif (isNumber(value)) {\n  console.log(value * 2);\n}",
-      "holeyCode": "function isNumber(x: unknown): x ___ number {\n  return typeof x === 'number';\n}\n\nconst value: unknown = 42;\nif (isNumber(value)) {\n  console.log(value * 2);\n}",
+      "correctCode": "// is で型ガードの戻り値型を定義\nfunction isNumber(x: unknown): x is number {\n  return typeof x === 'number';\n}\n\nconst value: unknown = 42;\nif (isNumber(value)) {\n  console.log(value * 2);\n}",
+      "holeyCode": "// is で型ガードの戻り値型を定義\nfunction isNumber(x: unknown): x ___ number {\n  return typeof x === 'number';\n}\n\nconst value: unknown = 42;\nif (isNumber(value)) {\n  console.log(value * 2);\n}",
       "correctLines": [
         "function isNumber(x: unknown): x is number {",
         "  return typeof x === 'number';",
@@ -58,12 +59,13 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "in演算子",
+          "image": "/illustrations/3d/gear.png",
           "content": "# プロパティで型を絞り込む\n\n**in**演算子でプロパティの存在をチェックし、型を絞り込めます。\n\n```typescript\ntype Fish = { swim: () => void };\ntype Bird = { fly: () => void };\n\nfunction move(animal: Fish | Bird) {\n  if ('swim' in animal) {\n    animal.swim();\n  }\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "type Car = { drive: () => void };\ntype Boat = { sail: () => void };\n\nfunction operate(vehicle: Car | Boat): void {\n  if ('drive' in vehicle) {\n    console.log('Driving');\n  } else {\n    console.log('Sailing');\n  }\n}\n\noperate({ drive: () => {} });",
-      "holeyCode": "type Car = { drive: () => void };\ntype Boat = { sail: () => void };\n\nfunction operate(vehicle: Car | Boat): void {\n  if ('drive' ___ vehicle) {\n    console.log('Driving');\n  } else {\n    console.log('Sailing');\n  }\n}\n\noperate({ drive: () => {} });",
+      "correctCode": "type Car = { drive: () => void };\ntype Boat = { sail: () => void };\n\nfunction operate(vehicle: Car | Boat): void {\n  // in でプロパティの存在をチェック\n  if ('drive' in vehicle) {\n    console.log('Driving');\n  } else {\n    console.log('Sailing');\n  }\n}\n\noperate({ drive: () => {} });",
+      "holeyCode": "type Car = { drive: () => void };\ntype Boat = { sail: () => void };\n\nfunction operate(vehicle: Car | Boat): void {\n  // in でプロパティの存在をチェック\n  if ('drive' ___ vehicle) {\n    console.log('Driving');\n  } else {\n    console.log('Sailing');\n  }\n}\n\noperate({ drive: () => {} });",
       "correctLines": [
         "type Car = { drive: () => void };",
         "type Boat = { sail: () => void };",
@@ -110,12 +112,13 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "Discriminated Unionとは？",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "# 判別プロパティで型を区別\n\n共通のリテラル型プロパティで型を判別できます。\n\n```typescript\ntype Circle = { kind: 'circle'; radius: number };\ntype Square = { kind: 'square'; size: number };\ntype Shape = Circle | Square;\n\nfunction area(s: Shape): number {\n  switch (s.kind) {\n    case 'circle': return Math.PI * s.radius ** 2;\n    case 'square': return s.size ** 2;\n  }\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "type Success = { status: 'success'; data: string };\ntype Failure = { status: 'failure'; error: string };\ntype Result = Success | Failure;\n\nfunction handle(result: Result): void {\n  switch (result.status) {\n    case 'success':\n      console.log(result.data);\n      break;\n    case 'failure':\n      console.log(result.error);\n      break;\n  }\n}\n\nhandle({ status: 'success', data: 'OK' });",
-      "holeyCode": "type Success = { status: 'success'; data: string };\ntype Failure = { status: 'failure'; error: string };\ntype Result = Success | Failure;\n\nfunction handle(result: Result): void {\n  switch (result.___) {\n    case 'success':\n      console.log(result.data);\n      break;\n    case 'failure':\n      console.log(result.error);\n      break;\n  }\n}\n\nhandle({ status: 'success', data: 'OK' });",
+      "correctCode": "type Success = { status: 'success'; data: string };\ntype Failure = { status: 'failure'; error: string };\ntype Result = Success | Failure;\n\nfunction handle(result: Result): void {\n  // status で判別プロパティを使う\n  switch (result.status) {\n    case 'success':\n      console.log(result.data);\n      break;\n    case 'failure':\n      console.log(result.error);\n      break;\n  }\n}\n\nhandle({ status: 'success', data: 'OK' });",
+      "holeyCode": "type Success = { status: 'success'; data: string };\ntype Failure = { status: 'failure'; error: string };\ntype Result = Success | Failure;\n\nfunction handle(result: Result): void {\n  // status で判別プロパティを使う\n  switch (result.___) {\n    case 'success':\n      console.log(result.data);\n      break;\n    case 'failure':\n      console.log(result.error);\n      break;\n  }\n}\n\nhandle({ status: 'success', data: 'OK' });",
       "correctLines": [
         "type Success = { status: 'success'; data: string };",
         "type Failure = { status: 'failure'; error: string };",
@@ -170,12 +173,13 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "never型とは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 到達不能な型\n\n**never**型は値を持たない型です。switch文の網羅性チェックに使えます。\n\n```typescript\nfunction exhaustiveCheck(x: never): never {\n  throw new Error('Unexpected value');\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "type Color = 'red' | 'green' | 'blue';\n\nfunction getHex(color: Color): string {\n  switch (color) {\n    case 'red': return '#ff0000';\n    case 'green': return '#00ff00';\n    case 'blue': return '#0000ff';\n    default:\n      const _exhaustive: never = color;\n      return _exhaustive;\n  }\n}\n\nconsole.log(getHex('red'));",
-      "holeyCode": "type Color = 'red' | 'green' | 'blue';\n\nfunction getHex(color: Color): string {\n  switch (color) {\n    case 'red': return '#ff0000';\n    case 'green': return '#00ff00';\n    case 'blue': return '#0000ff';\n    default:\n      const _exhaustive: ___ = color;\n      return _exhaustive;\n  }\n}\n\nconsole.log(getHex('red'));",
+      "correctCode": "type Color = 'red' | 'green' | 'blue';\n\nfunction getHex(color: Color): string {\n  switch (color) {\n    case 'red': return '#ff0000';\n    case 'green': return '#00ff00';\n    case 'blue': return '#0000ff';\n    default:\n      // never で到達不能な型を表す\n      const _exhaustive: never = color;\n      return _exhaustive;\n  }\n}\n\nconsole.log(getHex('red'));",
+      "holeyCode": "type Color = 'red' | 'green' | 'blue';\n\nfunction getHex(color: Color): string {\n  switch (color) {\n    case 'red': return '#ff0000';\n    case 'green': return '#00ff00';\n    case 'blue': return '#0000ff';\n    default:\n      // never で到達不能な型を表す\n      const _exhaustive: ___ = color;\n      return _exhaustive;\n  }\n}\n\nconsole.log(getHex('red'));",
       "correctLines": [
         "type Color = 'red' | 'green' | 'blue';",
         "",
@@ -226,12 +230,13 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "テンプレートリテラル型",
+          "image": "/illustrations/3d_advanced/generics_glass.png",
           "content": "# 文字列型を組み合わせる\n\nテンプレートリテラル型で文字列パターンを定義できます。\n\n```typescript\ntype Color = 'red' | 'blue';\ntype Size = 'small' | 'large';\ntype Style = `${Size}-${Color}`;\n// 'small-red' | 'small-blue' | 'large-red' | 'large-blue'\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "type Method = 'get' | 'post';\ntype Endpoint = '/users' | '/posts';\ntype Route = `${Method} ${Endpoint}`;\n\nconst route: Route = 'get /users';\nconsole.log(route);",
-      "holeyCode": "type Method = 'get' | 'post';\ntype Endpoint = '/users' | '/posts';\ntype Route = ___${Method} ${Endpoint}`;\n\nconst route: Route = 'get /users';\nconsole.log(route);",
+      "correctCode": "type Method = 'get' | 'post';\ntype Endpoint = '/users' | '/posts';\n// ` でテンプレートリテラル型を定義\ntype Route = `${Method} ${Endpoint}`;\n\nconst route: Route = 'get /users';\nconsole.log(route);",
+      "holeyCode": "type Method = 'get' | 'post';\ntype Endpoint = '/users' | '/posts';\n// ` でテンプレートリテラル型を定義\ntype Route = ___${Method} ${Endpoint}`;\n\nconst route: Route = 'get /users';\nconsole.log(route);",
       "correctLines": [
         "type Method = 'get' | 'post';",
         "type Endpoint = '/users' | '/posts';",
@@ -266,12 +271,13 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "Exclude<T, U>",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 型を除外する\n\n**Exclude**はユニオン型から特定の型を除外します。\n\n```typescript\ntype T = 'a' | 'b' | 'c';\ntype Without_A = Exclude<T, 'a'>;\n// 'b' | 'c'\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "type Status = 'pending' | 'success' | 'error' | 'cancelled';\ntype ActiveStatus = Exclude<Status, 'cancelled'>;\n\nconst status: ActiveStatus = 'pending';\nconsole.log(status);",
-      "holeyCode": "type Status = 'pending' | 'success' | 'error' | 'cancelled';\ntype ActiveStatus = ___<Status, 'cancelled'>;\n\nconst status: ActiveStatus = 'pending';\nconsole.log(status);",
+      "correctCode": "type Status = 'pending' | 'success' | 'error' | 'cancelled';\n// Exclude でユニオン型から特定の型を除外\ntype ActiveStatus = Exclude<Status, 'cancelled'>;\n\nconst status: ActiveStatus = 'pending';\nconsole.log(status);",
+      "holeyCode": "type Status = 'pending' | 'success' | 'error' | 'cancelled';\n// Exclude でユニオン型から特定の型を除外\ntype ActiveStatus = ___<Status, 'cancelled'>;\n\nconst status: ActiveStatus = 'pending';\nconsole.log(status);",
       "correctLines": [
         "type Status = 'pending' | 'success' | 'error' | 'cancelled';",
         "type ActiveStatus = Exclude<Status, 'cancelled'>;",
@@ -304,12 +310,13 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "Extract<T, U>",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 型を抽出する\n\n**Extract**はユニオン型から特定の型を抽出します。\n\n```typescript\ntype T = 'a' | 'b' | 'c';\ntype Only_AB = Extract<T, 'a' | 'b'>;\n// 'a' | 'b'\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "type Event = 'click' | 'scroll' | 'mouseover' | 'keydown';\ntype MouseEvent = Extract<Event, 'click' | 'scroll' | 'mouseover'>;\n\nconst event: MouseEvent = 'click';\nconsole.log(event);",
-      "holeyCode": "type Event = 'click' | 'scroll' | 'mouseover' | 'keydown';\ntype MouseEvent = ___<Event, 'click' | 'scroll' | 'mouseover'>;\n\nconst event: MouseEvent = 'click';\nconsole.log(event);",
+      "correctCode": "type Event = 'click' | 'scroll' | 'mouseover' | 'keydown';\n// Extract でユニオン型から特定の型を抽出\ntype MouseEvent = Extract<Event, 'click' | 'scroll' | 'mouseover'>;\n\nconst event: MouseEvent = 'click';\nconsole.log(event);",
+      "holeyCode": "type Event = 'click' | 'scroll' | 'mouseover' | 'keydown';\n// Extract でユニオン型から特定の型を抽出\ntype MouseEvent = ___<Event, 'click' | 'scroll' | 'mouseover'>;\n\nconst event: MouseEvent = 'click';\nconsole.log(event);",
       "correctLines": [
         "type Event = 'click' | 'scroll' | 'mouseover' | 'keydown';",
         "type MouseEvent = Extract<Event, 'click' | 'scroll' | 'mouseover'>;",
@@ -342,12 +349,13 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "NonNullable<T>",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# null/undefinedを除外\n\n**NonNullable**はnullとundefinedを除外します。\n\n```typescript\ntype T = string | null | undefined;\ntype NonNull = NonNullable<T>;\n// string\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "type MaybeString = string | null | undefined;\ntype DefiniteString = NonNullable<MaybeString>;\n\nconst text: DefiniteString = 'Hello';\nconsole.log(text);",
-      "holeyCode": "type MaybeString = string | null | undefined;\ntype DefiniteString = ___<MaybeString>;\n\nconst text: DefiniteString = 'Hello';\nconsole.log(text);",
+      "correctCode": "type MaybeString = string | null | undefined;\n// NonNullable でnull/undefinedを除外\ntype DefiniteString = NonNullable<MaybeString>;\n\nconst text: DefiniteString = 'Hello';\nconsole.log(text);",
+      "holeyCode": "type MaybeString = string | null | undefined;\n// NonNullable でnull/undefinedを除外\ntype DefiniteString = ___<MaybeString>;\n\nconst text: DefiniteString = 'Hello';\nconsole.log(text);",
       "correctLines": [
         "type MaybeString = string | null | undefined;",
         "type DefiniteString = NonNullable<MaybeString>;",
@@ -380,12 +388,13 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "Parameters<T>",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 関数の引数型を取得\n\n**Parameters**は関数の引数の型をタプルで取得します。\n\n```typescript\ntype Fn = (a: string, b: number) => void;\ntype Params = Parameters<Fn>;\n// [string, number]\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "function greet(name: string, age: number): void {\n  console.log(`${name} is ${age}`);\n}\n\ntype GreetParams = Parameters<typeof greet>;\nconst args: GreetParams = ['Taro', 25];\ngreet(...args);",
-      "holeyCode": "function greet(name: string, age: number): void {\n  console.log(`${name} is ${age}`);\n}\n\ntype GreetParams = ___<typeof greet>;\nconst args: GreetParams = ['Taro', 25];\ngreet(...args);",
+      "correctCode": "function greet(name: string, age: number): void {\n  console.log(`${name} is ${age}`);\n}\n// Parameters で関数の引数型を取得\ntype GreetParams = Parameters<typeof greet>;\nconst args: GreetParams = ['Taro', 25];\ngreet(...args);",
+      "holeyCode": "function greet(name: string, age: number): void {\n  console.log(`${name} is ${age}`);\n}\n// Parameters で関数の引数型を取得\ntype GreetParams = ___<typeof greet>;\nconst args: GreetParams = ['Taro', 25];\ngreet(...args);",
       "correctLines": [
         "function greet(name: string, age: number): void {",
         "  console.log(`${name} is ${age}`);",
@@ -422,12 +431,13 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "Awaited<T>",
+          "image": "/illustrations/3d/robot.png",
           "content": "# Promiseの中身の型を取得\n\n**Awaited**はPromiseが解決する型を取得します。\n\n```typescript\ntype P = Promise<string>;\ntype T = Awaited<P>;\n// string\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "type AsyncResult = Promise<{ data: string }>;\ntype Result = Awaited<AsyncResult>;\n\nconst result: Result = { data: 'success' };\nconsole.log(result.data);",
-      "holeyCode": "type AsyncResult = Promise<{ data: string }>;\ntype Result = ___<AsyncResult>;\n\nconst result: Result = { data: 'success' };\nconsole.log(result.data);",
+      "correctCode": "type AsyncResult = Promise<{ data: string }>;\n// Awaited でPromiseの解決型を取得\ntype Result = Awaited<AsyncResult>;\n\nconst result: Result = { data: 'success' };\nconsole.log(result.data);",
+      "holeyCode": "type AsyncResult = Promise<{ data: string }>;\n// Awaited でPromiseの解決型を取得\ntype Result = ___<AsyncResult>;\n\nconst result: Result = { data: 'success' };\nconsole.log(result.data);",
       "correctLines": [
         "type AsyncResult = Promise<{ data: string }>;",
         "type Result = Awaited<AsyncResult>;",

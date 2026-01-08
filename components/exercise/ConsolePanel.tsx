@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Terminal, FileText } from "lucide-react";
 
@@ -25,6 +25,23 @@ export function ConsolePanel({
   activeTab = "console",
   onTabChange,
 }: ConsolePanelProps) {
+  const consoleContentRef = useRef<HTMLDivElement>(null);
+  const examplesContentRef = useRef<HTMLDivElement>(null);
+
+  // コンソール出力が変わったら最下部にスクロール
+  useEffect(() => {
+    if (consoleContentRef.current && (output || error)) {
+      consoleContentRef.current.scrollTop = consoleContentRef.current.scrollHeight;
+    }
+  }, [output, error]);
+
+  // 見本出力が変わったら最下部にスクロール
+  useEffect(() => {
+    if (examplesContentRef.current && (correctOutput || correctError)) {
+      examplesContentRef.current.scrollTop = examplesContentRef.current.scrollHeight;
+    }
+  }, [correctOutput, correctError]);
+
   return (
     <div className="h-full flex flex-col max-h-full">
       <Tabs 
@@ -43,7 +60,7 @@ export function ConsolePanel({
           </TabsTrigger>
         </TabsList>
 
-        <TabsContent value="console" className="flex-1 min-h-0 overflow-auto p-4 mt-0 bg-gray-50">
+        <TabsContent ref={consoleContentRef} value="console" className="flex-1 min-h-0 overflow-auto p-4 mt-0 bg-gray-50">
           {isLoading ? (
             <div className="flex items-center justify-center h-full">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
@@ -69,7 +86,7 @@ export function ConsolePanel({
           )}
         </TabsContent>
 
-        <TabsContent value="examples" className="flex-1 min-h-0 overflow-auto p-4 mt-0 bg-gray-50">
+        <TabsContent ref={examplesContentRef} value="examples" className="flex-1 min-h-0 overflow-auto p-4 mt-0 bg-gray-50">
           {isCorrectLoading ? (
             <div className="flex items-center justify-center h-full">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>

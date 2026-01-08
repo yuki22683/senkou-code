@@ -14,18 +14,18 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "WHERE とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 条件でフィルタ\n\n**WHERE** は、指定した条件に合うデータだけを取得します。"
         },
         {
           "title": "WHERE の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# SELECT ... WHERE 条件\n\n`=`, `>`, `<` などの比較演算子が使えます。\n\n**コード例：**\n```sql\nSELECT * FROM users\nWHERE age > 20;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT 'found' WHERE 10 > 5;",
-      "holeyCode": "SELECT 'found' ___ 10 > 5;",
+      "correctCode": "-- WHEREで条件を指定\nSELECT 'found' WHERE 10 > 5;",
+      "holeyCode": "-- WHEREで条件を指定\nSELECT 'found' ___ 10 > 5;",
       "correctLines": [
         "SELECT 'found' WHERE 10 > 5;"
       ],
@@ -50,18 +50,18 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "ORDER BY とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 結果を並べ替え\n\n**ORDER BY** は、指定した列で結果を並べ替えます。ASC（昇順）、DESC（降順）を指定できます。"
         },
         {
           "title": "ORDER BY の使い方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# SELECT ... ORDER BY 列 [ASC|DESC]\n\nデフォルトは昇順です。\n\n**コード例：**\n```sql\nSELECT * FROM users\nORDER BY age DESC;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2\nORDER BY num;",
-      "holeyCode": "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2\n___ BY num;",
+      "correctCode": "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2\n-- ORDERで並べ替え\nORDER BY num;",
+      "holeyCode": "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2\n-- ORDERで並べ替え\n___ BY num;",
       "correctLines": [
         "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2",
         "ORDER BY num;"
@@ -88,18 +88,18 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "LIMIT とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 取得行数を制限\n\n**LIMIT** は、取得する行数を制限します。大量データの一部だけを見たいときに便利です。"
         },
         {
           "title": "LIMIT の使い方",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# SELECT ... LIMIT n\n\n最初の n 行だけを取得します。\n\n**コード例：**\n```sql\nSELECT * FROM users\nLIMIT 10;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT 1 UNION SELECT 2 UNION SELECT 3\nLIMIT 2;",
-      "holeyCode": "SELECT 1 UNION SELECT 2 UNION SELECT 3\n___ 2;",
+      "correctCode": "SELECT 1 UNION SELECT 2 UNION SELECT 3\n-- LIMITで件数制限\nLIMIT 2;",
+      "holeyCode": "SELECT 1 UNION SELECT 2 UNION SELECT 3\n-- LIMITで件数制限\n___ 2;",
       "correctLines": [
         "SELECT 1 UNION SELECT 2 UNION SELECT 3",
         "LIMIT 2;"
@@ -126,18 +126,18 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "COUNT とは？",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 行数を数える\n\n**COUNT** は、条件に合う行の数を返す集計関数です。"
         },
         {
           "title": "COUNT の使い方",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# COUNT(*) または COUNT(列)\n\n`*` はすべての行、列名を指定するとNULL以外を数えます。\n\n**コード例：**\n```sql\nSELECT COUNT(*) FROM users;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT COUNT(*) FROM (SELECT 1 UNION SELECT 2 UNION SELECT 3);",
-      "holeyCode": "SELECT ___(*) FROM (SELECT 1 UNION SELECT 2 UNION SELECT 3);",
+      "correctCode": "-- COUNTで行数を数える\nSELECT COUNT(*) FROM (SELECT 1 UNION SELECT 2 UNION SELECT 3);",
+      "holeyCode": "-- COUNTで行数を数える\nSELECT ___(*) FROM (SELECT 1 UNION SELECT 2 UNION SELECT 3);",
       "correctLines": [
         "SELECT COUNT(*) FROM (SELECT 1 UNION SELECT 2 UNION SELECT 3);"
       ],
@@ -162,18 +162,18 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "SUM とは？",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 合計を計算\n\n**SUM** は、指定した列の値の合計を返す集計関数です。"
         },
         {
           "title": "SUM の使い方",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# SUM(列)\n\n数値列の合計を計算します。\n\n**コード例：**\n```sql\nSELECT SUM(price) FROM products;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT SUM(n) FROM (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3);",
-      "holeyCode": "SELECT ___(n) FROM (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3);",
+      "correctCode": "-- SUMで合計を計算\nSELECT SUM(n) FROM (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3);",
+      "holeyCode": "-- SUMで合計を計算\nSELECT ___(n) FROM (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3);",
       "correctLines": [
         "SELECT SUM(n) FROM (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3);"
       ],
@@ -198,18 +198,18 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "AVG とは？",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 平均を計算\n\n**AVG** は、指定した列の値の平均を返す集計関数です。"
         },
         {
           "title": "AVG の使い方",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# AVG(列)\n\n数値列の平均を計算します。\n\n**コード例：**\n```sql\nSELECT AVG(score) FROM exams;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT AVG(n) FROM (SELECT 10 AS n UNION SELECT 20 UNION SELECT 30);",
-      "holeyCode": "SELECT ___(n) FROM (SELECT 10 AS n UNION SELECT 20 UNION SELECT 30);",
+      "correctCode": "-- AVGで平均を計算\nSELECT AVG(n) FROM (SELECT 10 AS n UNION SELECT 20 UNION SELECT 30);",
+      "holeyCode": "-- AVGで平均を計算\nSELECT ___(n) FROM (SELECT 10 AS n UNION SELECT 20 UNION SELECT 30);",
       "correctLines": [
         "SELECT AVG(n) FROM (SELECT 10 AS n UNION SELECT 20 UNION SELECT 30);"
       ],
@@ -234,18 +234,18 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "GROUP BY とは？",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# グループごとに集計\n\n**GROUP BY** は、指定した列の値が同じ行をグループ化し、集計関数と組み合わせて使います。"
         },
         {
           "title": "GROUP BY の使い方",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# SELECT 列, 集計 ... GROUP BY 列\n\nグループごとに集計結果を得られます。\n\n**コード例：**\n```sql\nSELECT category, COUNT(*)\nFROM products\nGROUP BY category;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT category, COUNT(*) FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n) GROUP BY category;",
-      "holeyCode": "SELECT category, COUNT(*) FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n) ___ BY category;",
+      "correctCode": "SELECT category, COUNT(*) FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n-- GROUPでグループ化\n) GROUP BY category;",
+      "holeyCode": "SELECT category, COUNT(*) FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n-- GROUPでグループ化\n) ___ BY category;",
       "correctLines": [
         "SELECT category, COUNT(*) FROM (",
         "  SELECT 'A' AS category UNION ALL",
@@ -276,18 +276,18 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "HAVING とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# グループに条件を付ける\n\n**HAVING** は、GROUP BY の結果に対して条件を指定します。WHERE はグループ化前、HAVING はグループ化後に適用されます。"
         },
         {
           "title": "HAVING の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# GROUP BY ... HAVING 条件\n\n集計関数の結果で絞り込めます。\n\n**コード例：**\n```sql\nSELECT category, COUNT(*)\nFROM products\nGROUP BY category\nHAVING COUNT(*) > 5;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT category, COUNT(*) AS cnt FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n) GROUP BY category HAVING cnt > 1;",
-      "holeyCode": "SELECT category, COUNT(*) AS cnt FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n) GROUP BY category ___ cnt > 1;",
+      "correctCode": "SELECT category, COUNT(*) AS cnt FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n-- HAVINGでグループを絞り込み\n) GROUP BY category HAVING cnt > 1;",
+      "holeyCode": "SELECT category, COUNT(*) AS cnt FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n-- HAVINGでグループを絞り込み\n) GROUP BY category ___ cnt > 1;",
       "correctLines": [
         "SELECT category, COUNT(*) AS cnt FROM (",
         "  SELECT 'A' AS category UNION ALL",
@@ -318,18 +318,18 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "CASE とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "# 条件で値を変える\n\n**CASE** は、条件によって異なる値を返す式です。if-else のようなものです。"
         },
         {
           "title": "CASE の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "# CASE WHEN 条件 THEN 値 END\n\n複数の条件を書けます。\n\n**コード例：**\n```sql\nSELECT CASE\n  WHEN score >= 80 THEN 'A'\n  WHEN score >= 60 THEN 'B'\n  ELSE 'C'\nEND FROM scores;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT CASE\n  WHEN 85 >= 80 THEN 'pass'\n  ELSE 'fail'\nEND;",
-      "holeyCode": "SELECT ___\n  WHEN 85 >= 80 THEN 'pass'\n  ELSE 'fail'\nEND;",
+      "correctCode": "-- CASEで条件分岐\nSELECT CASE\n  WHEN 85 >= 80 THEN 'pass'\n  ELSE 'fail'\nEND;",
+      "holeyCode": "-- CASEで条件分岐\nSELECT ___\n  WHEN 85 >= 80 THEN 'pass'\n  ELSE 'fail'\nEND;",
       "correctLines": [
         "SELECT CASE",
         "  WHEN 85 >= 80 THEN 'pass'",
@@ -360,18 +360,18 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "COALESCE とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# NULLの代替値\n\n**COALESCE** は、引数の中で最初のNULLでない値を返します。NULLのデフォルト値を設定できます。"
         },
         {
           "title": "COALESCE の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/3d/robot.png",
           "content": "# COALESCE(値1, 値2, ...)\n\n左から順に評価し、最初のNULLでない値を返します。\n\n**コード例：**\n```sql\nSELECT COALESCE(name, 'Unknown')\nFROM users;\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "SELECT COALESCE(NULL, 'default');",
-      "holeyCode": "SELECT ___(NULL, 'default');",
+      "correctCode": "-- COALESCEでNULL処理\nSELECT COALESCE(NULL, 'default');",
+      "holeyCode": "-- COALESCEでNULL処理\nSELECT ___(NULL, 'default');",
       "correctLines": [
         "SELECT COALESCE(NULL, 'default');"
       ],

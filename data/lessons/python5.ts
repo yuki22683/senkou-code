@@ -14,15 +14,17 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "with文でファイルを開く",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 安全にファイルを扱う\n\n**with文**を使うと、ファイルが自動的に閉じられます。\n\n```python\nwith open('file.txt', 'r') as f:\n    content = f.read()\n    print(content)\n# ファイルは自動で閉じられる\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# ファイルを読み込む（テスト用）\nfilename = 'test.txt'\nwith open(filename, 'w') as f:\n    f.write('Hello, Python!')\n\nwith open(filename, 'r') as f:\n    print(f.read())",
-      "holeyCode": "# ファイルを読み込む（テスト用）\nfilename = 'test.txt'\nwith ___(filename, 'w') as f:\n    f.write('Hello, Python!')\n\nwith open(filename, 'r') as f:\n    print(f.read())",
+      "correctCode": "# ファイルを読み込む（テスト用）\nfilename = 'test.txt'\n# open関数でファイルを開く\nwith open(filename, 'w') as f:\n    f.write('Hello, Python!')\n\nwith open(filename, 'r') as f:\n    print(f.read())",
+      "holeyCode": "# ファイルを読み込む（テスト用）\nfilename = 'test.txt'\n# open関数でファイルを開く\nwith ___(filename, 'w') as f:\n    f.write('Hello, Python!')\n\nwith open(filename, 'r') as f:\n    print(f.read())",
       "correctLines": [
         "# ファイルを読み込む（テスト用）",
         "filename = 'test.txt'",
+        "# open関数でファイルを開く",
         "with open(filename, 'w') as f:",
         "    f.write('Hello, Python!')",
         "",
@@ -30,6 +32,7 @@ export const pythonData5 = {
         "    print(f.read())"
       ],
       "lineHints": [
+        null,
         null,
         null,
         "open関数を使います。",
@@ -56,22 +59,25 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "1行ずつ読み込む",
+          "image": "/illustrations/3d/robot.png",
           "content": "# forループでファイルを読む\n\nファイルオブジェクトはイテレータなので、forループで1行ずつ読めます。\n\n```python\nwith open('file.txt', 'r') as f:\n    for line in f:\n        print(line.strip())\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# ファイルを1行ずつ読む\nwith open('test.txt', 'w') as f:\n    f.write('line1\\nline2\\nline3')\n\nwith open('test.txt', 'r') as f:\n    for line in f:\n        print(line.strip())",
-      "holeyCode": "# ファイルを1行ずつ読む\nwith open('test.txt', 'w') as f:\n    f.write('line1\\nline2\\nline3')\n\nwith open('test.txt', 'r') as f:\n    for line ___ f:\n        print(line.strip())",
+      "correctCode": "# ファイルを1行ずつ読む\nwith open('test.txt', 'w') as f:\n    f.write('line1\\nline2\\nline3')\n\nwith open('test.txt', 'r') as f:\n    # inでファイルをループ\n    for line in f:\n        print(line.strip())",
+      "holeyCode": "# ファイルを1行ずつ読む\nwith open('test.txt', 'w') as f:\n    f.write('line1\\nline2\\nline3')\n\nwith open('test.txt', 'r') as f:\n    # inでファイルをループ\n    for line ___ f:\n        print(line.strip())",
       "correctLines": [
         "# ファイルを1行ずつ読む",
         "with open('test.txt', 'w') as f:",
         "    f.write('line1\\nline2\\nline3')",
         "",
         "with open('test.txt', 'r') as f:",
+        "    # inでファイルをループ",
         "    for line in f:",
         "        print(line.strip())"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -98,20 +104,23 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "json.loads()",
+          "image": "/illustrations/3d/robot.png",
           "content": "# JSON文字列をPythonに変換\n\n**json.loads()**でJSON文字列を辞書やリストに変換できます。\n\n```python\nimport json\n\ndata = json.loads('{\"name\": \"Taro\", \"age\": 25}')\nprint(data['name'])  # Taro\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import json\n\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\ndata = json.loads(json_str)\nprint(data['name'])",
-      "holeyCode": "import json\n\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\ndata = json.___(json_str)\nprint(data['name'])",
+      "correctCode": "import json\n\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# loadsでJSON文字列を変換\ndata = json.loads(json_str)\nprint(data['name'])",
+      "holeyCode": "import json\n\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# loadsでJSON文字列を変換\ndata = json.___(json_str)\nprint(data['name'])",
       "correctLines": [
         "import json",
         "",
         "json_str = '{\"name\": \"Python\", \"version\": 3.12}'",
+        "# loadsでJSON文字列を変換",
         "data = json.loads(json_str)",
         "print(data['name'])"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -136,20 +145,23 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "json.dumps()",
+          "image": "/illustrations/3d/robot.png",
           "content": "# PythonをJSONに変換\n\n**json.dumps()**でPythonのデータをJSON文字列に変換できます。\n\n```python\nimport json\n\ndata = {'name': 'Taro', 'age': 25}\njson_str = json.dumps(data)\nprint(json_str)  # {\"name\": \"Taro\", \"age\": 25}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import json\n\ndata = {'language': 'Python', 'level': 'advanced'}\njson_str = json.dumps(data)\nprint(json_str)",
-      "holeyCode": "import json\n\ndata = {'language': 'Python', 'level': 'advanced'}\njson_str = json.___(data)\nprint(json_str)",
+      "correctCode": "import json\n\ndata = {'language': 'Python', 'level': 'advanced'}\n# dumpsでJSON文字列に変換\njson_str = json.dumps(data)\nprint(json_str)",
+      "holeyCode": "import json\n\ndata = {'language': 'Python', 'level': 'advanced'}\n# dumpsでJSON文字列に変換\njson_str = json.___(data)\nprint(json_str)",
       "correctLines": [
         "import json",
         "",
         "data = {'language': 'Python', 'level': 'advanced'}",
+        "# dumpsでJSON文字列に変換",
         "json_str = json.dumps(data)",
         "print(json_str)"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -174,21 +186,24 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "re.search()",
+          "image": "/illustrations/3d/robot.png",
           "content": "# パターンを検索\n\n**re.search()**で文字列内のパターンを検索できます。\n\n```python\nimport re\n\ntext = 'my email is test@example.com'\nmatch = re.search(r'\\w+@\\w+\\.\\w+', text)\nif match:\n    print(match.group())  # test@example.com\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import re\n\ntext = 'Call me at 090-1234-5678'\nmatch = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)\nif match:\n    print(match.group())",
-      "holeyCode": "import re\n\ntext = 'Call me at 090-1234-5678'\nmatch = re.___(r'\\d{3}-\\d{4}-\\d{4}', text)\nif match:\n    print(match.group())",
+      "correctCode": "import re\n\ntext = 'Call me at 090-1234-5678'\n# searchでパターン検索\nmatch = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)\nif match:\n    print(match.group())",
+      "holeyCode": "import re\n\ntext = 'Call me at 090-1234-5678'\n# searchでパターン検索\nmatch = re.___(r'\\d{3}-\\d{4}-\\d{4}', text)\nif match:\n    print(match.group())",
       "correctLines": [
         "import re",
         "",
         "text = 'Call me at 090-1234-5678'",
+        "# searchでパターン検索",
         "match = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)",
         "if match:",
         "    print(match.group())"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -214,20 +229,23 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "re.findall()",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 全ての一致を取得\n\n**re.findall()**でパターンに一致する全ての部分をリストで取得できます。\n\n```python\nimport re\n\ntext = 'I have 3 apples and 5 oranges'\nnumbers = re.findall(r'\\d+', text)\nprint(numbers)  # ['3', '5']\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import re\n\ntext = 'email1@test.com and email2@test.com'\nemails = re.findall(r'\\w+@\\w+\\.\\w+', text)\nprint(emails)",
-      "holeyCode": "import re\n\ntext = 'email1@test.com and email2@test.com'\nemails = re.___(r'\\w+@\\w+\\.\\w+', text)\nprint(emails)",
+      "correctCode": "import re\n\ntext = 'email1@test.com and email2@test.com'\n# findallで全ての一致を取得\nemails = re.findall(r'\\w+@\\w+\\.\\w+', text)\nprint(emails)",
+      "holeyCode": "import re\n\ntext = 'email1@test.com and email2@test.com'\n# findallで全ての一致を取得\nemails = re.___(r'\\w+@\\w+\\.\\w+', text)\nprint(emails)",
       "correctLines": [
         "import re",
         "",
         "text = 'email1@test.com and email2@test.com'",
+        "# findallで全ての一致を取得",
         "emails = re.findall(r'\\w+@\\w+\\.\\w+', text)",
         "print(emails)"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -252,20 +270,23 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "re.sub()",
+          "image": "/illustrations/3d/gear.png",
           "content": "# パターンを置換\n\n**re.sub()**でパターンに一致する部分を置換できます。\n\n```python\nimport re\n\ntext = 'I have 3 apples'\nresult = re.sub(r'\\d+', 'many', text)\nprint(result)  # I have many apples\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import re\n\ntext = 'Hello   World   Python'\nresult = re.sub(r'\\s+', ' ', text)\nprint(result)",
-      "holeyCode": "import re\n\ntext = 'Hello   World   Python'\nresult = re.___(r'\\s+', ' ', text)\nprint(result)",
+      "correctCode": "import re\n\ntext = 'Hello   World   Python'\n# subでパターンを置換\nresult = re.sub(r'\\s+', ' ', text)\nprint(result)",
+      "holeyCode": "import re\n\ntext = 'Hello   World   Python'\n# subでパターンを置換\nresult = re.___(r'\\s+', ' ', text)\nprint(result)",
       "correctLines": [
         "import re",
         "",
         "text = 'Hello   World   Python'",
+        "# subでパターンを置換",
         "result = re.sub(r'\\s+', ' ', text)",
         "print(result)"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -290,6 +311,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "Counterとは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 要素を数える\n\n**Counter**を使うと、要素の出現回数を簡単にカウントできます。\n\n```python\nfrom collections import Counter\n\nwords = ['apple', 'banana', 'apple', 'cherry']\ncount = Counter(words)\nprint(count['apple'])  # 2\n```"
         }
       ],
@@ -328,6 +350,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "defaultdictとは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# デフォルト値を持つ辞書\n\n**defaultdict**を使うと、存在しないキーにアクセスしてもエラーになりません。\n\n```python\nfrom collections import defaultdict\n\nd = defaultdict(int)\nd['a'] += 1\nprint(d['a'])  # 1\nprint(d['b'])  # 0（デフォルト値）\n```"
         }
       ],
@@ -368,6 +391,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "itertools.chain()",
+          "image": "/illustrations/3d/robot.png",
           "content": "# イテラブルを連結\n\n**chain()**を使うと、複数のイテラブルを1つに連結できます。\n\n```python\nfrom itertools import chain\n\na = [1, 2, 3]\nb = [4, 5, 6]\nfor x in chain(a, b):\n    print(x)  # 1 2 3 4 5 6\n```"
         }
       ],

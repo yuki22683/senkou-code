@@ -29,8 +29,8 @@ export const haskellData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "main = putStrLn \"Hello, Haskell!\"",
-      "holeyCode": "main = putStrLn \"___\"",
+      "correctCode": "-- Hello, Haskell!を表示\nmain = putStrLn \"Hello, Haskell!\"",
+      "holeyCode": "-- Hello, Haskell!を表示\nmain = putStrLn \"___\"",
       "correctLines": [
         "main = putStrLn \"Hello, Haskell!\""
       ],
@@ -70,8 +70,8 @@ export const haskellData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "x = 10\nmain = print x",
-      "holeyCode": "x = ___\nmain = print ___",
+      "correctCode": "-- 10を入力\nx = 10\n-- xを入力\nmain = print x",
+      "holeyCode": "-- 10を入力\nx = ___\n-- xを入力\nmain = print ___",
       "correctLines": [
         "x = 10",
         "main = print x"
@@ -113,8 +113,8 @@ export const haskellData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "a = 5\nb = 3\n// たし算した結果を表示する\nmain = print (a + b)",
-      "holeyCode": "a = 5\nb = 3\n// たし算した結果を表示する\nmain = print (a ___ b)",
+      "correctCode": "a = 5\nb = 3\n-- +でたし算\nmain = print (a + b)",
+      "holeyCode": "a = 5\nb = 3\n-- +でたし算\nmain = print (a ___ b)",
       "correctLines": [
         "a = 5",
         "b = 3",

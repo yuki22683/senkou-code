@@ -32,6 +32,8 @@ export async function GET(request: Request) {
         });
 
       if (upsertError) {
+        // ユーザー情報の保存に失敗しても認証フロー自体は完了させる
+        // 次回ログイン時に再試行される
         console.error('Error upserting user:', upsertError);
       }
     }

@@ -14,12 +14,13 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "正規表現リテラル",
+          "image": "/illustrations/3d/robot.png",
           "content": "# パターンを定義する\n\n**/pattern/**で正規表現を定義します。\n\n```javascript\nconst pattern = /hello/;\nconsole.log(pattern.test('hello world')); // true\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const pattern = /javascript/i;\nconsole.log(pattern.test('I love JavaScript'));",
-      "holeyCode": "const pattern = ___javascript/i;\nconsole.log(pattern.test('I love JavaScript'));",
+      "correctCode": "// / で正規表現リテラルを定義\nconst pattern = /javascript/i;\nconsole.log(pattern.test('I love JavaScript'));",
+      "holeyCode": "// / で正規表現リテラルを定義\nconst pattern = ___javascript/i;\nconsole.log(pattern.test('I love JavaScript'));",
       "correctLines": [
         "const pattern = /javascript/i;",
         "console.log(pattern.test('I love JavaScript'));"
@@ -46,12 +47,13 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "test()メソッド",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# マッチするかチェック\n\n**test()**は、パターンにマッチするかtrue/falseで返します。\n\n```javascript\nconst pattern = /\\d+/;\nconsole.log(pattern.test('abc123')); // true\nconsole.log(pattern.test('abc')); // false\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const emailPattern = /\\w+@\\w+\\.\\w+/;\nconsole.log(emailPattern.test('test@example.com'));\nconsole.log(emailPattern.test('invalid-email'));",
-      "holeyCode": "const emailPattern = /\\w+@\\w+\\.\\w+/;\nconsole.log(emailPattern.___)('test@example.com'));\nconsole.log(emailPattern.test('invalid-email'));",
+      "correctCode": "const emailPattern = /\\w+@\\w+\\.\\w+/;\n// test( でマッチをテスト\nconsole.log(emailPattern.test('test@example.com'));\nconsole.log(emailPattern.test('invalid-email'));",
+      "holeyCode": "const emailPattern = /\\w+@\\w+\\.\\w+/;\n// test( でマッチをテスト\nconsole.log(emailPattern.___)('test@example.com'));\nconsole.log(emailPattern.test('invalid-email'));",
       "correctLines": [
         "const emailPattern = /\\w+@\\w+\\.\\w+/;",
         "console.log(emailPattern.test('test@example.com'));",
@@ -80,12 +82,13 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "match()メソッド",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# マッチした部分を取得\n\n**match()**は、マッチした部分を配列で返します。\n\n```javascript\nconst text = 'I have 3 apples and 5 oranges';\nconst numbers = text.match(/\\d+/g);\nconsole.log(numbers); // ['3', '5']\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const text = 'Contact: 090-1234-5678 or 080-9876-5432';\nconst phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);\nconsole.log(phones);",
-      "holeyCode": "const text = 'Contact: 090-1234-5678 or 080-9876-5432';\nconst phones = text.___(___\\d{3}-\\d{4}-\\d{4}/g);\nconsole.log(phones);",
+      "correctCode": "const text = 'Contact: 090-1234-5678 or 080-9876-5432';\n// match( と / でパターンマッチ\nconst phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);\nconsole.log(phones);",
+      "holeyCode": "const text = 'Contact: 090-1234-5678 or 080-9876-5432';\n// match( と / でパターンマッチ\nconst phones = text.___(___\\d{3}-\\d{4}-\\d{4}/g);\nconsole.log(phones);",
       "correctLines": [
         "const text = 'Contact: 090-1234-5678 or 080-9876-5432';",
         "const phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);",
@@ -114,12 +117,13 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "replace()メソッド",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# マッチした部分を置換\n\n**replace()**で正規表現にマッチした部分を置換できます。\n\n```javascript\nconst text = 'hello world';\nconst result = text.replace(/world/, 'JavaScript');\nconsole.log(result); // hello JavaScript\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const text = 'Hello   World   JavaScript';\nconst result = text.replace(/\\s+/g, ' ');\nconsole.log(result);",
-      "holeyCode": "const text = 'Hello   World   JavaScript';\nconst result = text.___(___\\s+/g, ' ');\nconsole.log(result);",
+      "correctCode": "const text = 'Hello   World   JavaScript';\n// replace( と / で置換\nconst result = text.replace(/\\s+/g, ' ');\nconsole.log(result);",
+      "holeyCode": "const text = 'Hello   World   JavaScript';\n// replace( と / で置換\nconst result = text.___(___\\s+/g, ' ');\nconsole.log(result);",
       "correctLines": [
         "const text = 'Hello   World   JavaScript';",
         "const result = text.replace(/\\s+/g, ' ');",
@@ -148,12 +152,13 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "try-catch文",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# エラーをキャッチする\n\n**try-catch**でエラーをキャッチして適切に処理できます。\n\n```javascript\ntry {\n  throw new Error('Something went wrong');\n} catch (e) {\n  console.log(e.message);\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "try {\n  const result = JSON.parse('invalid json');\n} catch (e) {\n  console.log('Error:', e.message);\n}",
-      "holeyCode": "try {\n  const result = JSON.parse('invalid json');\n} ___ (e) {\n  console.log('Error:', e.message);\n}",
+      "correctCode": "try {\n  const result = JSON.parse('invalid json');\n// catch でエラーをキャッチ\n} catch (e) {\n  console.log('Error:', e.message);\n}",
+      "holeyCode": "try {\n  const result = JSON.parse('invalid json');\n// catch でエラーをキャッチ\n} ___ (e) {\n  console.log('Error:', e.message);\n}",
       "correctLines": [
         "try {",
         "  const result = JSON.parse('invalid json');",
@@ -186,12 +191,13 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "finally節",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 常に実行される\n\n**finally**はエラーの有無に関わらず必ず実行されます。\n\n```javascript\ntry {\n  // 処理\n} catch (e) {\n  // エラー処理\n} finally {\n  // 必ず実行\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "function process() {\n  try {\n    console.log('Processing...');\n    throw new Error('Error!');\n  } catch (e) {\n    console.log('Caught:', e.message);\n  } finally {\n    console.log('Cleanup done');\n  }\n}\nprocess();",
-      "holeyCode": "function process() {\n  try {\n    console.log('Processing...');\n    throw new Error('Error!');\n  } catch (e) {\n    console.log('Caught:', e.message);\n  } ___ {\n    console.log('Cleanup done');\n  }\n}\nprocess();",
+      "correctCode": "function process() {\n  try {\n    console.log('Processing...');\n    throw new Error('Error!');\n  } catch (e) {\n    console.log('Caught:', e.message);\n  // finally で常に実行されるブロック\n  } finally {\n    console.log('Cleanup done');\n  }\n}\nprocess();",
+      "holeyCode": "function process() {\n  try {\n    console.log('Processing...');\n    throw new Error('Error!');\n  } catch (e) {\n    console.log('Caught:', e.message);\n  // finally で常に実行されるブロック\n  } ___ {\n    console.log('Cleanup done');\n  }\n}\nprocess();",
       "correctLines": [
         "function process() {",
         "  try {",
@@ -236,12 +242,13 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "カスタムエラー",
+          "image": "/illustrations/3d_advanced/safety_net.png",
           "content": "# 独自のエラーを定義\n\nErrorクラスを継承して独自のエラーを作れます。\n\n```javascript\nclass ValidationError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'ValidationError';\n  }\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class ValidationError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'ValidationError';\n  }\n}\n\ntry {\n  throw new ValidationError('Invalid input');\n} catch (e) {\n  console.log(`${e.name}: ${e.message}`);\n}",
-      "holeyCode": "class ValidationError ___ Error {\n  constructor(message) {\n    super(message);\n    this.name = 'ValidationError';\n  }\n}\n\ntry {\n  throw new ValidationError('Invalid input');\n} catch (e) {\n  console.log(`${e.name}: ${e.message}`);\n}",
+      "correctCode": "// extends でErrorクラスを継承\nclass ValidationError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'ValidationError';\n  }\n}\n\ntry {\n  throw new ValidationError('Invalid input');\n} catch (e) {\n  console.log(`${e.name}: ${e.message}`);\n}",
+      "holeyCode": "// extends でErrorクラスを継承\nclass ValidationError ___ Error {\n  constructor(message) {\n    super(message);\n    this.name = 'ValidationError';\n  }\n}\n\ntry {\n  throw new ValidationError('Invalid input');\n} catch (e) {\n  console.log(`${e.name}: ${e.message}`);\n}",
       "correctLines": [
         "class ValidationError extends Error {",
         "  constructor(message) {",
@@ -288,12 +295,13 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "Symbolとは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# ユニークな識別子\n\n**Symbol**は一意の識別子を作成します。\n\n```javascript\nconst id = Symbol('id');\nconst obj = {\n  [id]: 12345\n};\nconsole.log(obj[id]); // 12345\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const secret = Symbol('secret');\nconst user = {\n  name: 'Taro',\n  [secret]: 'password123'\n};\nconsole.log(user.name);\nconsole.log(user[secret]);",
-      "holeyCode": "const secret = ___('secret');\nconst user = {\n  name: 'Taro',\n  [secret]: 'password123'\n};\nconsole.log(user.name);\nconsole.log(user[secret]);",
+      "correctCode": "// Symbol でユニークな識別子を作成\nconst secret = Symbol('secret');\nconst user = {\n  name: 'Taro',\n  [secret]: 'password123'\n};\nconsole.log(user.name);\nconsole.log(user[secret]);",
+      "holeyCode": "// Symbol でユニークな識別子を作成\nconst secret = ___('secret');\nconst user = {\n  name: 'Taro',\n  [secret]: 'password123'\n};\nconsole.log(user.name);\nconsole.log(user[secret]);",
       "correctLines": [
         "const secret = Symbol('secret');",
         "const user = {",
@@ -330,12 +338,13 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "WeakMapとは？",
+          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "# 弱参照のMap\n\n**WeakMap**はキーがオブジェクトで、弱参照のため不要になると自動でガベージコレクションされます。\n\n```javascript\nconst cache = new WeakMap();\nconst obj = {};\ncache.set(obj, 'cached value');\nconsole.log(cache.get(obj));\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const privateData = new WeakMap();\n\nclass User {\n  constructor(name) {\n    privateData.set(this, { password: 'secret' });\n    this.name = name;\n  }\n  getPassword() {\n    return privateData.get(this).password;\n  }\n}\n\nconst user = new User('Taro');\nconsole.log(user.getPassword());",
-      "holeyCode": "const privateData = new ___();\n\nclass User {\n  constructor(name) {\n    privateData.set(this, { password: 'secret' });\n    this.name = name;\n  }\n  getPassword() {\n    return privateData.get(this).password;\n  }\n}\n\nconst user = new User('Taro');\nconsole.log(user.getPassword());",
+      "correctCode": "// WeakMap で弱参照のMapを作成\nconst privateData = new WeakMap();\n\nclass User {\n  constructor(name) {\n    privateData.set(this, { password: 'secret' });\n    this.name = name;\n  }\n  getPassword() {\n    return privateData.get(this).password;\n  }\n}\n\nconst user = new User('Taro');\nconsole.log(user.getPassword());",
+      "holeyCode": "// WeakMap で弱参照のMapを作成\nconst privateData = new ___();\n\nclass User {\n  constructor(name) {\n    privateData.set(this, { password: 'secret' });\n    this.name = name;\n  }\n  getPassword() {\n    return privateData.get(this).password;\n  }\n}\n\nconst user = new User('Taro');\nconsole.log(user.getPassword());",
       "correctLines": [
         "const privateData = new WeakMap();",
         "",
@@ -386,12 +395,13 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "Proxyとは？",
+          "image": "/illustrations/3d/robot.png",
           "content": "# 操作をインターセプト\n\n**Proxy**でオブジェクトの操作をインターセプトできます。\n\n```javascript\nconst handler = {\n  get(target, prop) {\n    return prop in target ? target[prop] : 'not found';\n  }\n};\nconst obj = new Proxy({}, handler);\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const handler = {\n  get(target, prop) {\n    console.log(`Getting ${prop}`);\n    return target[prop];\n  }\n};\n\nconst user = new Proxy({ name: 'Taro' }, handler);\nconsole.log(user.name);",
-      "holeyCode": "const handler = {\n  get(target, prop) {\n    console.log(`Getting ${prop}`);\n    return target[prop];\n  }\n};\n\nconst user = new ___(({ name: 'Taro' }, handler);\nconsole.log(user.name);",
+      "correctCode": "const handler = {\n  get(target, prop) {\n    console.log(`Getting ${prop}`);\n    return target[prop];\n  }\n};\n// Proxy で操作をインターセプト\nconst user = new Proxy({ name: 'Taro' }, handler);\nconsole.log(user.name);",
+      "holeyCode": "const handler = {\n  get(target, prop) {\n    console.log(`Getting ${prop}`);\n    return target[prop];\n  }\n};\n// Proxy で操作をインターセプト\nconst user = new ___(({ name: 'Taro' }, handler);\nconsole.log(user.name);",
       "correctLines": [
         "const handler = {",
         "  get(target, prop) {",

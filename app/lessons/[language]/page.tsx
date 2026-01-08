@@ -35,6 +35,10 @@ export default async function LessonsPage({ params }: PageProps) {
     console.error('Error fetching lessons:', error);
   }
 
+  // ユーザーのログイン状態を取得
+  const { data: { user } } = await supabase.auth.getUser();
+  const isLoggedIn = !!user;
+
   // 各レッスンの演習数を取得
   const lessonsWithExerciseCount = await Promise.all(
     (lessons || []).map(async (lesson) => {
@@ -44,7 +48,6 @@ export default async function LessonsPage({ params }: PageProps) {
         .eq('lesson_id', lesson.id);
 
       // ユーザーの進捗を取得（認証済みの場合）
-      const { data: { user } } = await supabase.auth.getUser();
       let progressCount = 0;
 
       if (user) {
@@ -101,13 +104,42 @@ export default async function LessonsPage({ params }: PageProps) {
           </div>
         </div>
 
-        {!lessons || lessons.length === 0 ? (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground text-lg">
+        {!isLoggedIn ? (
+          <div className="text-center py-12 bg-white rounded-2xl shadow-sm border border-gray-100">
+            <div className="flex justify-center mb-6">
+              <div className="relative w-40 h-40 sm:w-56 sm:h-56">
+                <Image 
+                  src="/illustrations/decorations/login_invite.png" 
+                  alt="Login Invitation" 
+                  fill 
+                  className="object-contain"
+                />
+              </div>
+            </div>
+            <p className="text-gray-600 text-xl font-medium mb-4">
+              新しい冒険（ぼうけん）に出かけよう！
+            </p>
+            <p className="text-muted-foreground text-lg mb-8">
+              レッスンを始めるにはログインが必要です。
+            </p>
+          </div>
+        ) : !lessons || lessons.length === 0 ? (
+          <div className="text-center py-12 bg-gray-50 rounded-2xl border-2 border-dashed border-gray-200">
+            <div className="flex justify-center mb-6">
+              <div className="relative w-40 h-40 sm:w-56 sm:h-56 grayscale opacity-70">
+                <Image 
+                  src="/illustrations/decorations/under_construction.png" 
+                  alt="Under Construction" 
+                  fill 
+                  className="object-contain"
+                />
+              </div>
+            </div>
+            <p className="text-gray-500 text-xl font-medium">
               この言語のレッスンは準備中です
             </p>
-            <p className="text-sm text-gray-500 mt-2">
-              データベースにサンプルデータを投入してください: <code className="bg-gray-100 px-2 py-1 rounded">npm run seed:db</code>
+            <p className="text-sm text-gray-400 mt-2">
+              データベースにサンプルデータを投入してください: <code className="bg-gray-200 px-2 py-1 rounded">npm run seed:db</code>
             </p>
           </div>
         ) : (

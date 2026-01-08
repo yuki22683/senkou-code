@@ -233,7 +233,8 @@ export function MobileCodeEditor({
       stringPattern += `|"{3}[^"\\\\]*(?:\\\\.[^"\\\\]*)*"{3}|'{3}[^'\\\\]*(?:\\\\.[^'\\\\]*)*'{3}`;
     }
 
-    const regex = new RegExp(`(${stringPattern}|${commentPattern}|@[a-zA-Z0-9_]+|[a-zA-Z_][a-zA-Z0-9_]*|\\d+|\\s+|[^\\s\\w])`, 'g');
+    // **を単一トークンとして認識（*argsや**kwargs用）
+    const regex = new RegExp(`(${stringPattern}|${commentPattern}|@[a-zA-Z0-9_]+|[a-zA-Z_][a-zA-Z0-9_]*|\\d+|\\s+|\\*\\*|[^\\s\\w])`, 'g');
     return text.split(regex).filter(Boolean);
   };
 
@@ -274,14 +275,51 @@ export function MobileCodeEditor({
 
   useEffect(() => {
     if (!correctCode) return;
-    
+
     const correctLines = correctCode.split("\n");
     const targetLine = correctLines[cursor.line] || "";
-    const keypadItems = new Set(['=', '+', '-', '/', '*', '%', '(', ')', "'"]);
-    
+    // 選択肢から除外する記号（ただし*は*args/**kwargs用に残す）
+    const keypadItems = new Set(['=', '+', '-', '/', '%', '(', ')']);
+
     if (targetLine.trim()) {
       const tokens = tokenize(targetLine);
-      const filtered = tokens.filter(t => t.trim().length > 0 && !keypadItems.has(t));
+      const expandedTokens: string[] = [];
+
+      for (const token of tokens) {
+        // f-string/テンプレートリテラル内の{...}や${...}や#{...}から変数名を抽出し、文字列部分も選択肢に追加
+        // Python: f'{...}', JavaScript/TypeScript: `${...}`, Ruby/Elixir: "#{...}"
+        const isStringWithInterpolation =
+          ((token.startsWith('"') || token.startsWith("'")) && (token.includes('{') || token.includes('#{'))) ||
+          (token.startsWith('`') && token.includes('${'));
+
+        if (isStringWithInterpolation) {
+          // 文字列内の{...}や${...}や#{...}パターンを抽出
+          const fstringMatches = token.matchAll(/[#$]?\{([^}]+)\}/g);
+          for (const match of fstringMatches) {
+            const innerContent = match[1];
+            // 内部のドット記法やメソッド呼び出しも分割（例: s.name -> s, name）
+            const parts = innerContent.split(/[.\[\]()]+/).filter(p => p.trim() && /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(p));
+            expandedTokens.push(...parts);
+          }
+          // 中括弧を選択肢に追加（f-string/テンプレートリテラル用）
+          expandedTokens.push('{', '}');
+          // f-string/テンプレートリテラル内の文字列部分も選択肢に追加（{...}や${...}や#{...}を除いた部分）
+          const stringParts = token.replace(/[#$]?\{[^}]+\}/g, '').replace(/^['"`]|['"`]$/g, '');
+          if (stringParts.trim()) {
+            // カンマや記号で分割して個別に追加
+            const textParts = stringParts.split(/([,!?.:;])/);
+            for (const part of textParts) {
+              if (part.trim()) {
+                expandedTokens.push(part.trim());
+              }
+            }
+          }
+        } else {
+          expandedTokens.push(token);
+        }
+      }
+
+      const filtered = expandedTokens.filter(t => t.trim().length > 0 && !keypadItems.has(t));
       const unique = Array.from(new Set(filtered));
       const shuffled = [...unique].sort(() => Math.random() - 0.5);
       setSuggestions(shuffled);
@@ -511,12 +549,30 @@ export function MobileCodeEditor({
               className={cn(
                 "flex relative min-h-[1.5rem]",
                 lineIndex === cursor.line ? "bg-[#323232]" : "",
-                isComment ? "cursor-default" : "cursor-text"
+                // 現在の行で虫食い行の場合のみクリック可能
+                isComment || !isHoley || lineIndex !== cursor.line ? "cursor-default" : "cursor-text"
               )}
               onClick={(e) => {
                 e.stopPropagation();
-                if (!isComment) {
-                  setCursor({ line: lineIndex, col: Math.max(minCols[lineIndex], line.length) });
+                // コメント行と完成済みの行、および現在の行以外はクリック不可
+                if (!isComment && isHoley && lineIndex === cursor.line) {
+                  // クリック位置からカラム位置を計算
+                  const target = e.currentTarget;
+                  const textContent = target.querySelector('.whitespace-pre') as HTMLElement;
+                  if (textContent) {
+                    const rect = textContent.getBoundingClientRect();
+                    const clickX = e.clientX - rect.left;
+                    // 文字幅を計算（モノスペースフォントなので均等）
+                    const computedStyle = window.getComputedStyle(textContent);
+                    const fontSize = parseFloat(computedStyle.fontSize);
+                    const charWidth = fontSize * 0.6; // モノスペースフォントの文字幅は約0.6em
+                    const clickedCol = Math.floor(clickX / charWidth);
+                    // 有効な範囲にクランプ（インデント位置〜行末）
+                    const col = Math.max(minCols[lineIndex], Math.min(clickedCol, line.length));
+                    setCursor({ line: lineIndex, col });
+                  } else {
+                    setCursor({ line: lineIndex, col: Math.max(minCols[lineIndex], line.length) });
+                  }
                 }
               }}
             >
@@ -556,37 +612,25 @@ export function MobileCodeEditor({
               );
             }
 
-            const count = suggestions.length;
-            // 画面幅や個数に応じて行数を決定（簡易的なヒューリスティック）
-            let numRows = 1;
-            if (count > 6) numRows = 2;
-            if (count > 12) numRows = 3;
-            if (count > 20) numRows = 4;
-
-            const itemsPerRow = Math.ceil(count / numRows);
-            const rows = [];
-            for (let i = 0; i < count; i += itemsPerRow) {
-              rows.push(suggestions.slice(i, i + itemsPerRow));
-            }
-
-            return rows.map((row, rowIdx) => (
-              <div key={rowIdx} className="flex w-full gap-1 sm:gap-2">
-                {row.map((token, idx) => (
+            // flex-wrapで自動的に折り返し、ボタンは内容に合わせたサイズに
+            return (
+              <div className="flex flex-wrap w-full gap-1 sm:gap-2">
+                {suggestions.map((token, idx) => (
                   <button
-                    key={`${token}-${rowIdx}-${idx}`}
+                    key={`${token}-${idx}`}
                     onClick={() => handleInsert(token)}
                     style={{
                       backgroundColor: COLORS.buttonBackground,
                       borderColor: COLORS.buttonBorder,
                       ...getTokenStyle(token)
                     }}
-                    className="flex-auto px-2 py-1.5 sm:px-3 sm:py-2 rounded font-mono font-bold border active:scale-95 transition-transform text-xs sm:text-lg lg:text-2xl truncate"
+                    className="flex-shrink-0 px-2 py-1.5 sm:px-3 sm:py-2 rounded font-mono font-bold border active:scale-95 transition-transform text-xs sm:text-lg lg:text-2xl whitespace-nowrap"
                   >
                     {token}
                   </button>
                 ))}
               </div>
-            ));
+            );
           })()}
         </div>
 
