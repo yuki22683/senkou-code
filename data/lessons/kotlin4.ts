@@ -25,7 +25,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "sealed class Shape\nclass Circle(val radius: Double) : Shape()\nclass Rectangle(val w: Double, val h: Double) : Shape()\n\nfun area(s: Shape): Double = when (s) {\n    is Circle -> 3.14 * s.radius * s.radius\n    is Rectangle -> s.w * s.h\n}\n\nfun main() {\n    println(area(Circle(2.0)))\n}",
-      "holeyCode": "// sealed で継承を制限する\n___ class Shape\nclass Circle(val radius: Double) : Shape()\nclass Rectangle(val w: Double, val h: Double) : Shape()\n\nfun area(s: Shape): Double = when (s) {\n    is Circle -> 3.14 * s.radius * s.radius\n    is Rectangle -> s.w * s.h\n}\n\nfun main() {\n    println(area(Circle(2.0)))\n}",
+      "holeyCode": "// ここに sealed と入力して、仲間以外は継承できないようにしてね\n___ class Shape\nclass Circle(val radius: Double) : Shape()\nclass Rectangle(val w: Double, val h: Double) : Shape()\n\nfun area(s: Shape): Double = when (s) {\n    is Circle -> 3.14 * s.radius * s.radius\n    is Rectangle -> s.w * s.h\n}\n\nfun main() {\n    println(area(Circle(2.0)))\n}",
       "correctLines": [
         "sealed class Shape",
         "class Circle(val radius: Double) : Shape()",
@@ -83,7 +83,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "object Counter {\n    private var count = 0\n    fun increment() { count++ }\n    fun get() = count\n}\n\nfun main() {\n    Counter.increment()\n    Counter.increment()\n    println(Counter.get())\n}",
-      "holeyCode": "// object でシングルトンを定義する\n___ Counter {\n    private var count = 0\n    fun increment() { count++ }\n    fun get() = count\n}\n\nfun main() {\n    Counter.increment()\n    Counter.increment()\n    println(Counter.get())\n}",
+      "holeyCode": "// ここに object と入力して世界に一つだけのモノを作ってね\n___ Counter {\n    private var count = 0\n    fun increment() { count++ }\n    fun get() = count\n}\n\nfun main() {\n    Counter.increment()\n    Counter.increment()\n    println(Counter.get())\n}",
       "correctLines": [
         "object Counter {",
         "    private var count = 0",
@@ -139,7 +139,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Config {\n    val value: Int by lazy {\n        println(\"Init\")\n        42\n    }\n}\n\nfun main() {\n    val c = Config()\n    println(\"Created\")\n    println(c.value)\n}",
-      "holeyCode": "class Config {\n    // lazy で遅延初期化する\n    val value: Int by ___ {\n        println(\"Init\")\n        42\n    }\n}\n\nfun main() {\n    val c = Config()\n    println(\"Created\")\n    println(c.value)\n}",
+      "holeyCode": "class Config {\n    // ここに lazy と入力して、必要になるまで初期化を待ってね\n    val value: Int by ___ {\n        println(\"Init\")\n        42\n    }\n}\n\nfun main() {\n    val c = Config()\n    println(\"Created\")\n    println(c.value)\n}",
       "correctLines": [
         "class Config {",
         "    val value: Int by lazy {",
@@ -197,7 +197,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Service {\n    lateinit var config: String\n    \n    fun setup(c: String) { config = c }\n}\n\nfun main() {\n    val s = Service()\n    s.setup(\"OK\")\n    println(s.config)\n}",
-      "holeyCode": "class Service {\n    // lateinit で後から初期化を宣言する\n    ___ var config: String\n    \n    fun setup(c: String) { config = c }\n}\n\nfun main() {\n    val s = Service()\n    s.setup(\"OK\")\n    println(s.config)\n}",
+      "holeyCode": "class Service {\n    // ここに lateinit と入力して、あとで準備するよって教えてね\n    ___ var config: String\n    \n    fun setup(c: String) { config = c }\n}\n\nfun main() {\n    val s = Service()\n    s.setup(\"OK\")\n    println(s.config)\n}",
       "correctLines": [
         "class Service {",
         "    lateinit var config: String",
@@ -253,7 +253,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "inline fun repeat(times: Int, action: (Int) -> Unit) {\n    for (i in 0 until times) {\n        action(i)\n    }\n}\n\nfun main() {\n    repeat(3) { println(it) }\n}",
-      "holeyCode": "// inline でインライン展開する\n___ fun repeat(times: Int, action: (Int) -> Unit) {\n    for (i in 0 until times) {\n        action(i)\n    }\n}\n\nfun main() {\n    repeat(3) { println(it) }\n}",
+      "holeyCode": "// ここに inline と入力して、中身を直接埋め込んでね\n___ fun repeat(times: Int, action: (Int) -> Unit) {\n    for (i in 0 until times) {\n        action(i)\n    }\n}\n\nfun main() {\n    repeat(3) { println(it) }\n}",
       "correctLines": [
         "inline fun repeat(times: Int, action: (Int) -> Unit) {",
         "    for (i in 0 until times) {",
@@ -305,7 +305,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "inline fun <reified T> typeOf(): String {\n    return T::class.simpleName ?: \"Unknown\"\n}\n\nfun main() {\n    println(typeOf<String>())\n}",
-      "holeyCode": "// reified で型情報を保持する\ninline fun <___ T> typeOf(): String {\n    return T::class.simpleName ?: \"Unknown\"\n}\n\nfun main() {\n    println(typeOf<String>())\n}",
+      "holeyCode": "// ここに reified と入力して、型をそのまま使えるようにしてね\ninline fun <___ T> typeOf(): String {\n    return T::class.simpleName ?: \"Unknown\"\n}\n\nfun main() {\n    println(typeOf<String>())\n}",
       "correctLines": [
         "inline fun <reified T> typeOf(): String {",
         "    return T::class.simpleName ?: \"Unknown\"",
@@ -353,7 +353,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fun Int.isEven() = this % 2 == 0\n\nfun main() {\n    println(4.isEven())\n    println(7.isEven())\n}",
-      "holeyCode": "// isEven() で拡張関数を定義する\nfun Int.___ = this % 2 == 0\n\nfun main() {\n    println(4.isEven())\n    println(7.isEven())\n}",
+      "holeyCode": "// ここに isEven() と入力してね\nfun Int.___ = this % 2 == 0\n\nfun main() {\n    println(4.isEven())\n    println(7.isEven())\n}",
       "correctLines": [
         "fun Int.isEven() = this % 2 == 0",
         "",
@@ -399,9 +399,10 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fun main() {\n    val result = \"hello\".let {\n        it.uppercase()\n    }\n    println(result)\n}",
-      "holeyCode": "fun main() {\n    // let で変換処理を行う\n    val result = \"hello\".___ {\n        it.uppercase()\n    }\n    println(result)\n}",
+      "holeyCode": "fun main() {\n    // ここに let と入力して、変換してね\n    val result = \"hello\".___ {\n        it.uppercase()\n    }\n    println(result)\n}",
       "correctLines": [
         "fun main() {",
+        "    // ここに let と入力して、変換してね",
         "    val result = \"hello\".let {",
         "        it.uppercase()",
         "    }",
@@ -445,11 +446,12 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "data class Config(var host: String = \"\", var port: Int = 0)\n\nfun main() {\n    val config = Config().apply {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(\"${config.host}:${config.port}\")\n}",
-      "holeyCode": "data class Config(var host: String = \"\", var port: Int = 0)\n\nfun main() {\n    // apply でオブジェクトを設定する\n    val config = Config().___ {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(\"${config.host}:${config.port}\")\n}",
+      "holeyCode": "data class Config(var host: String = \"\", var port: Int = 0)\n\nfun main() {\n    // ここに apply と入力して、設定してね\n    val config = Config().___ {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(\"${config.host}:${config.port}\")\n}",
       "correctLines": [
         "data class Config(var host: String = \"\", var port: Int = 0)",
         "",
         "fun main() {",
+        "    // ここに apply と入力して、設定してね",
         "    val config = Config().apply {",
         "        host = \"localhost\"",
         "        port = 8080",
@@ -497,7 +499,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "typealias StringList = List<String>\n\nfun printAll(items: StringList) {\n    items.forEach { println(it) }\n}\n\nfun main() {\n    printAll(listOf(\"A\", \"B\", \"C\"))\n}",
-      "holeyCode": "// typealias で型に別名をつける\n___ StringList = List<String>\n\nfun printAll(items: StringList) {\n    items.forEach { println(it) }\n}\n\nfun main() {\n    printAll(listOf(\"A\", \"B\", \"C\"))\n}",
+      "holeyCode": "// ここに typealias と入力して、別の名前をつけてね\n___ StringList = List<String>\n\nfun printAll(items: StringList) {\n    items.forEach { println(it) }\n}\n\nfun main() {\n    printAll(listOf(\"A\", \"B\", \"C\"))\n}",
       "correctLines": [
         "typealias StringList = List<String>",
         "",

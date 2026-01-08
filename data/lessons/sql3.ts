@@ -25,7 +25,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- SELECTでサブクエリを作成\nSELECT 'found' WHERE 5 > (SELECT 3);",
-      "holeyCode": "-- SELECTでサブクエリを作成\nSELECT 'found' WHERE 5 > (___ 3);",
+      "holeyCode": "-- ここに SELECT と入力して、カッコの中にクエリを書いてね\nSELECT 'found' WHERE 5 > (___ 3);",
       "correctLines": [
         "SELECT 'found' WHERE 5 > (SELECT 3);"
       ],
@@ -61,7 +61,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- EXISTSで存在チェック\nSELECT 'has data' WHERE EXISTS (SELECT 1);",
-      "holeyCode": "-- EXISTSで存在チェック\nSELECT 'has data' WHERE ___ (SELECT 1);",
+      "holeyCode": "-- ここに EXISTS と入力して、データがあるかチェックしてね\nSELECT 'has data' WHERE ___ (SELECT 1);",
       "correctLines": [
         "SELECT 'has data' WHERE EXISTS (SELECT 1);"
       ],
@@ -97,7 +97,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- UNIONで結果を結合\nSELECT 'A' UNION SELECT 'B' UNION SELECT 'C';",
-      "holeyCode": "-- UNIONで結果を結合\nSELECT 'A' ___ SELECT 'B' UNION SELECT 'C';",
+      "holeyCode": "-- ここに UNION と入力して、結果を合体させてね\nSELECT 'A' ___ SELECT 'B' UNION SELECT 'C';",
       "correctLines": [
         "SELECT 'A' UNION SELECT 'B' UNION SELECT 'C';"
       ],
@@ -133,7 +133,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- INNERで内部結合\n  INNER JOIN\n  (SELECT 1 AS id, 'B' AS y) b\n  ON a.id = b.id;",
-      "holeyCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- INNERで内部結合\n  ___ JOIN\n  (SELECT 1 AS id, 'B' AS y) b\n  ON a.id = b.id;",
+      "holeyCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- ここに INNER と入力して中身が合うものをつなげてね\n  ___ JOIN\n  (SELECT 1 AS id, 'B' AS y) b\n  ON a.id = b.id;",
       "correctLines": [
         "SELECT a.x, b.y FROM",
         "  (SELECT 1 AS id, 'A' AS x) a",
@@ -177,7 +177,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- LEFTで左外部結合\n  LEFT JOIN\n  (SELECT 2 AS id, 'B' AS y) b\n  ON a.id = b.id;",
-      "holeyCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- LEFTで左外部結合\n  ___ JOIN\n  (SELECT 2 AS id, 'B' AS y) b\n  ON a.id = b.id;",
+      "holeyCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- ここに LEFT と入力して左側を優先してつなげてね\n  ___ JOIN\n  (SELECT 2 AS id, 'B' AS y) b\n  ON a.id = b.id;",
       "correctLines": [
         "SELECT a.x, b.y FROM",
         "  (SELECT 1 AS id, 'A' AS x) a",
@@ -221,7 +221,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- MAXで最大値を取得\nSELECT MAX(n) FROM (SELECT 5 AS n UNION SELECT 10 UNION SELECT 3);",
-      "holeyCode": "-- MAXで最大値を取得\nSELECT ___(n) FROM (SELECT 5 AS n UNION SELECT 10 UNION SELECT 3);",
+      "holeyCode": "-- ここに MAX と入力して一番大きい数を見つけてね\nSELECT ___(n) FROM (SELECT 5 AS n UNION SELECT 10 UNION SELECT 3);",
       "correctLines": [
         "SELECT MAX(n) FROM (SELECT 5 AS n UNION SELECT 10 UNION SELECT 3);"
       ],
@@ -257,7 +257,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- DISTINCTで重複除去\nSELECT DISTINCT n FROM (\n  SELECT 1 AS n UNION ALL\n  SELECT 1 UNION ALL\n  SELECT 2\n);",
-      "holeyCode": "-- DISTINCTで重複除去\nSELECT ___ n FROM (\n  SELECT 1 AS n UNION ALL\n  SELECT 1 UNION ALL\n  SELECT 2\n);",
+      "holeyCode": "-- ここに DISTINCT と入力してダブりを取りのぞいてね\nSELECT ___ n FROM (\n  SELECT 1 AS n UNION ALL\n  SELECT 1 UNION ALL\n  SELECT 2\n);",
       "correctLines": [
         "SELECT DISTINCT n FROM (",
         "  SELECT 1 AS n UNION ALL",
@@ -301,7 +301,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- LIKEでパターン検索\nSELECT 'matched' WHERE 'Hello' LIKE 'H%';",
-      "holeyCode": "-- LIKEでパターン検索\nSELECT 'matched' WHERE 'Hello' ___ 'H%';",
+      "holeyCode": "-- ここに LIKE と入力して「〜みたいな」を探してね\nSELECT 'matched' WHERE 'Hello' ___ 'H%';",
       "correctLines": [
         "SELECT 'matched' WHERE 'Hello' LIKE 'H%';"
       ],
@@ -337,7 +337,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- BETWEENで範囲指定\nSELECT 'in range' WHERE 5 BETWEEN 1 AND 10;",
-      "holeyCode": "-- BETWEENで範囲指定\nSELECT 'in range' WHERE 5 ___ 1 AND 10;",
+      "holeyCode": "-- ここに BETWEEN と入力して「〜の間」を探してね\nSELECT 'in range' WHERE 5 ___ 1 AND 10;",
       "correctLines": [
         "SELECT 'in range' WHERE 5 BETWEEN 1 AND 10;"
       ],
@@ -373,7 +373,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- INで複数値マッチ\nSELECT 'found' WHERE 'B' IN ('A', 'B', 'C');",
-      "holeyCode": "-- INで複数値マッチ\nSELECT 'found' WHERE 'B' ___ ('A', 'B', 'C');",
+      "holeyCode": "-- ここに IN と入力して、リストの中にないか探してね\nSELECT 'found' WHERE 'B' ___ ('A', 'B', 'C');",
       "correctLines": [
         "SELECT 'found' WHERE 'B' IN ('A', 'B', 'C');"
       ],

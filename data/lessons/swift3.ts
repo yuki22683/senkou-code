@@ -25,7 +25,7 @@ export const swift3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "enum MyError: Error { case negative }\n\nfunc check(_ n: Int) -> Result<Int, MyError> {\n    if n < 0 { return .failure(.negative) }\n    return .success(n)\n}\n\nlet result = check(10)\nswitch result {\ncase .success(let v): print(v)\ncase .failure(_): print(\"error\")\n}",
-      "holeyCode": "enum MyError: Error { case negative }\n\nfunc check(_ n: Int) -> Result<Int, MyError> {\n    if n < 0 { return .failure(.negative) }\n    // successで成功を返す\n    return .___(n)\n}\n\nlet result = check(10)\nswitch result {\ncase .success(let v): print(v)\ncase .failure(_): print(\"error\")\n}",
+      "holeyCode": "enum MyError: Error { case negative }\n\nfunc check(_ n: Int) -> Result<Int, MyError> {\n    if n < 0 { return .failure(.negative) }\n    // ここに success と入力して、成功したことを教えてね\n    return .___(n)\n}\n\nlet result = check(10)\nswitch result {\ncase .success(let v): print(v)\ncase .failure(_): print(\"error\")\n}",
       "correctLines": [
         "enum MyError: Error { case negative }",
         "",
@@ -83,7 +83,7 @@ export const swift3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\nlet ints = nums.compactMap { Int($0) }\nprint(ints)",
-      "holeyCode": "let nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\n// compactMapでnilを除外して変換\nlet ints = nums.___ { Int($0) }\nprint(ints)",
+      "holeyCode": "let nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\n// ここに compactMap と入力して、空っぽを除外してね\nlet ints = nums.___ { Int($0) }\nprint(ints)",
       "correctLines": [
         "let nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]",
         "let ints = nums.compactMap { Int($0) }",
@@ -123,7 +123,7 @@ export const swift3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let nums = [1, 2, 3, 4, 5]\nlet product = nums.reduce(1) { $0 * $1 }\nprint(product)",
-      "holeyCode": "let nums = [1, 2, 3, 4, 5]\n// reduceで畳み込み\nlet product = nums._____(1) { $0 * $1 }\nprint(product)",
+      "holeyCode": "let nums = [1, 2, 3, 4, 5]\n// ここに reduce と入力して、1つにまとめてね\nlet product = nums.___(1) { $0 * $1 }\nprint(product)",
       "correctLines": [
         "let nums = [1, 2, 3, 4, 5]",
         "let product = nums.reduce(1) { $0 * $1 }",
@@ -163,7 +163,7 @@ export const swift3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let nums = [1, 2, 3, 4, 5]\nlet result = nums.lazy.map { $0 * 10 }.first!\nprint(result)",
-      "holeyCode": "let nums = [1, 2, 3, 4, 5]\n// lazyで遅延評価\nlet result = nums.___.map { $0 * 10 }.first!\nprint(result)",
+      "holeyCode": "let nums = [1, 2, 3, 4, 5]\n// ここに lazy と入力して、のんびり計算してね\nlet result = nums.___.map { $0 * 10 }.first!\nprint(result)",
       "correctLines": [
         "let nums = [1, 2, 3, 4, 5]",
         "let result = nums.lazy.map { $0 * 10 }.first!",
@@ -203,7 +203,7 @@ export const swift3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let nums = [1, -2, 3, -4, 5]\nfor n in nums where n > 0 {\n    print(n)\n}",
-      "holeyCode": "let nums = [1, -2, 3, -4, 5]\n// whereで条件を追加\nfor n in nums ___ n > 0 {\n    print(n)\n}",
+      "holeyCode": "let nums = [1, -2, 3, -4, 5]\n// ここに where と入力して条件を追加してね\nfor n in nums ___ n > 0 {\n    print(n)\n}",
       "correctLines": [
         "let nums = [1, -2, 3, -4, 5]",
         "for n in nums where n > 0 {",
@@ -245,7 +245,7 @@ export const swift3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func test() {\n    defer { print(\"end\") }\n    print(\"start\")\n}\ntest()",
-      "holeyCode": "func test() {\n    // deferでスコープ終了時に実行\n    ___ { print(\"end\") }\n    print(\"start\")\n}\ntest()",
+      "holeyCode": "func test() {\n    // ここに defer と入力して、最後に実行するようにしてね\n    ___ { print(\"end\") }\n    print(\"start\")\n}\ntest()",
       "correctLines": [
         "func test() {",
         "    defer { print(\"end\") }",
@@ -289,7 +289,7 @@ export const swift3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "protocol Stack {\n    associatedtype Element\n    mutating func push(_ item: Element)\n}\n\nstruct IntStack: Stack {\n    var items: [Int] = []\n    mutating func push(_ item: Int) {\n        items.append(item)\n    }\n}\n\nvar s = IntStack()\ns.push(10)\nprint(s.items)",
-      "holeyCode": "protocol Stack {\n    // associatedtypeで関連型を定義\n    ___ Element\n    mutating func push(_ item: Element)\n}\n\nstruct IntStack: Stack {\n    var items: [Int] = []\n    mutating func push(_ item: Int) {\n        items.append(item)\n    }\n}\n\nvar s = IntStack()\ns.push(10)\nprint(s.items)",
+      "holeyCode": "protocol Stack {\n    // ここに associatedtype と入力して、自由な型を使えるようにしてね\n    ___ Element\n    mutating func push(_ item: Element)\n}\n\nstruct IntStack: Stack {\n    var items: [Int] = []\n    mutating func push(_ item: Int) {\n        items.append(item)\n    }\n}\n\nvar s = IntStack()\ns.push(10)\nprint(s.items)",
       "correctLines": [
         "protocol Stack {",
         "    associatedtype Element",
@@ -353,10 +353,11 @@ export const swift3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "enum MyError: Error { case invalid }\n\nfunc check(_ n: Int) throws -> Int {\n    if n < 0 { throw MyError.invalid }\n    return n\n}\n\ndo {\n    let v = try check(10)\n    print(v)\n} catch {\n    print(\"error\")\n}",
-      "holeyCode": "enum MyError: Error { case invalid }\n\n// throwsでエラーを投げる可能性を示す\nfunc check(_ n: Int) ___ -> Int {\n    if n < 0 { throw MyError.invalid }\n    return n\n}\n\ndo {\n    let v = try check(10)\n    print(v)\n} catch {\n    print(\"error\")\n}",
+      "holeyCode": "enum MyError: Error { case invalid }\n\n// ここに throws と入力して、エラーが出るかもしれないよって教えてね\nfunc check(_ n: Int) ___ -> Int {\n    if n < 0 { throw MyError.invalid }\n    return n\n}\n\ndo {\n    let v = try check(10)\n    print(v)\n} catch {\n    print(\"error\")\n}",
       "correctLines": [
         "enum MyError: Error { case invalid }",
         "",
+        "// ここに throws と入力して、エラーが出るかもしれないよって教えてね",
         "func check(_ n: Int) throws -> Int {",
         "    if n < 0 { throw MyError.invalid }",
         "    return n",
@@ -413,7 +414,7 @@ export const swift3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "var s: Set = [1, 2, 2, 3, 3, 3]\nprint(s.count)",
-      "holeyCode": "// Setで重複なしのコレクション\nvar s: ___ = [1, 2, 2, 3, 3, 3]\nprint(s.count)",
+      "holeyCode": "// ここに Set と入力して、ダブりのないコレクションにしてね\nvar s: ___ = [1, 2, 2, 3, 3, 3]\nprint(s.count)",
       "correctLines": [
         "var s: Set = [1, 2, 2, 3, 3, 3]",
         "print(s.count)"
@@ -451,7 +452,7 @@ export const swift3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "struct Counter {\n    var count = 0\n    mutating func increment() {\n        count += 1\n    }\n}\n\nvar c = Counter()\nc.increment()\nc.increment()\nprint(c.count)",
-      "holeyCode": "struct Counter {\n    var count = 0\n    // mutatingで構造体を変更可能に\n    ___ func increment() {\n        count += 1\n    }\n}\n\nvar c = Counter()\nc.increment()\nc.increment()\nprint(c.count)",
+      "holeyCode": "struct Counter {\n    var count = 0\n    // ここに mutating と入力して、自分自身を変えられるようにしてね\n    ___ func increment() {\n        count += 1\n    }\n}\n\nvar c = Counter()\nc.increment()\nc.increment()\nprint(c.count)",
       "correctLines": [
         "struct Counter {",
         "    var count = 0",

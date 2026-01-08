@@ -25,7 +25,7 @@ export const kotlin2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "var num: Int? = 42\nif (num != null) {\n    println(num)\n}",
-      "holeyCode": "// ? で nullable 型にする\nvar num: Int___ = 42\nif (num != null) {\n    println(num)\n}",
+      "holeyCode": "// ここに ? を入力して、nullを入れてもいいよって教えてね\nvar num: Int___ = 42\nif (num != null) {\n    println(num)\n}",
       "correctLines": [
         "var num: Int? = 42",
         "if (num != null) {",
@@ -67,7 +67,7 @@ export const kotlin2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val text: String? = \"Hello\"\nprintln(text?.length)",
-      "holeyCode": "val text: String? = \"Hello\"\n// ?. で安全にプロパティにアクセスする\nprintln(text___length)",
+      "holeyCode": "val text: String? = \"Hello\"\n// ここに ?. と入力して、安全に長さを調べてね\nprintln(text___length)",
       "correctLines": [
         "val text: String? = \"Hello\"",
         "println(text?.length)"
@@ -105,7 +105,7 @@ export const kotlin2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val value: Int? = null\nprintln(value ?: 0)",
-      "holeyCode": "val value: Int? = null\n// ?: でデフォルト値を指定する\nprintln(value ___ 0)",
+      "holeyCode": "val value: Int? = null\n// ここに ?: と入力して、nullだったら 0 にしてね\nprintln(value ___ 0)",
       "correctLines": [
         "val value: Int? = null",
         "println(value ?: 0)"
@@ -143,7 +143,7 @@ export const kotlin2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "data class Point(val x: Int, val y: Int)\nval p = Point(3, 4)\nprintln(p)",
-      "holeyCode": "// data でデータクラスを定義する\n___ class Point(val x: Int, val y: Int)\nval p = Point(3, 4)\nprintln(p)",
+      "holeyCode": "// ここに data と入力してデータクラスを作ってね\n___ class Point(val x: Int, val y: Int)\nval p = Point(3, 4)\nprintln(p)",
       "correctLines": [
         "data class Point(val x: Int, val y: Int)",
         "val p = Point(3, 4)",
@@ -183,7 +183,7 @@ export const kotlin2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val double = { n: Int -> n * 2 }\nprintln(double(5))",
-      "holeyCode": "// -> で引数と処理を区切る\nval double = { n: Int ___ n * 2 }\nprintln(double(5))",
+      "holeyCode": "// ここに -> と入力してね\nval double = { n: Int ___ n * 2 }\nprintln(double(5))",
       "correctLines": [
         "val double = { n: Int -> n * 2 }",
         "println(double(5))"
@@ -221,7 +221,7 @@ export const kotlin2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val nums = listOf(1, 2, 3)\nval squared = nums.map { it * it }\nprintln(squared)",
-      "holeyCode": "val nums = listOf(1, 2, 3)\n// map で各要素を変換する\nval squared = nums.___ { it * it }\nprintln(squared)",
+      "holeyCode": "val nums = listOf(1, 2, 3)\n// ここに map と入力して各要素を変換してね\nval squared = nums.___ { it * it }\nprintln(squared)",
       "correctLines": [
         "val nums = listOf(1, 2, 3)",
         "val squared = nums.map { it * it }",
@@ -261,7 +261,7 @@ export const kotlin2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val nums = listOf(1, 2, 3, 4, 5)\nval result = nums.filter { it >= 3 }\nprintln(result)",
-      "holeyCode": "val nums = listOf(1, 2, 3, 4, 5)\n// filter で条件に合う要素を抽出する\nval result = nums.___ { it >= 3 }\nprintln(result)",
+      "holeyCode": "val nums = listOf(1, 2, 3, 4, 5)\n// ここに filter と入力して条件に合うものを選んでね\nval result = nums.___ { it >= 3 }\nprintln(result)",
       "correctLines": [
         "val nums = listOf(1, 2, 3, 4, 5)",
         "val result = nums.filter { it >= 3 }",
@@ -301,7 +301,7 @@ export const kotlin2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val x = 2\nval result = when (x) {\n    1 -> \"one\"\n    2 -> \"two\"\n    else -> \"other\"\n}\nprintln(result)",
-      "holeyCode": "val x = 2\n// when で分岐する\nval result = ___ (x) {\n    1 -> \"one\"\n    2 -> \"two\"\n    else -> \"other\"\n}\nprintln(result)",
+      "holeyCode": "val x = 2\n// ここに when と入力して分岐させてね\nval result = ___ (x) {\n    1 -> \"one\"\n    2 -> \"two\"\n    else -> \"other\"\n}\nprintln(result)",
       "correctLines": [
         "val x = 2",
         "val result = when (x) {",
@@ -349,7 +349,7 @@ export const kotlin2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fun Int.double() = this * 2\nprintln(5.double())",
-      "holeyCode": "// this でレシーバを参照する\nfun Int.double() = ___ * 2\nprintln(5.double())",
+      "holeyCode": "// ここに this と入力して自分自身の値を参照してね\nfun Int.double() = ___ * 2\nprintln(5.double())",
       "correctLines": [
         "fun Int.double() = this * 2",
         "println(5.double())"
@@ -387,7 +387,7 @@ export const kotlin2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val num: Int? = 42\nnum?.let { println(it * 2) }",
-      "holeyCode": "val num: Int? = 42\n// let で処理を実行する\nnum?.___ { println(it * 2) }",
+      "holeyCode": "val num: Int? = 42\n// ここに let と入力して処理を実行してね\nnum?.___ { println(it * 2) }",
       "correctLines": [
         "val num: Int? = 42",
         "num?.let { println(it * 2) }"

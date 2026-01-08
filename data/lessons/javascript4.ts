@@ -20,9 +20,10 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const scores = [80, 90, 75, 85];\n// every で全要素をチェック\nconst allPassed = scores.every(score => score >= 60);\nconsole.log(allPassed);",
-      "holeyCode": "const scores = [80, 90, 75, 85];\n// every で全要素をチェック\nconst allPassed = scores.___(score => score >= 60);\nconsole.log(allPassed);",
+      "holeyCode": "const scores = [80, 90, 75, 85];\n// ここに every と入力して、全員そうか調べてね\nconst allPassed = scores.___(score => score >= 60);\nconsole.log(allPassed);",
       "correctLines": [
         "const scores = [80, 90, 75, 85];",
+        "// ここに every と入力して、全員そうか調べてね",
         "const allPassed = scores.every(score => score >= 60);",
         "console.log(allPassed);"
       ],
@@ -55,9 +56,10 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const ages = [15, 22, 17, 19];\n// some でいずれかの要素をチェック\nconst hasAdult = ages.some(age => age >= 20);\nconsole.log(hasAdult);",
-      "holeyCode": "const ages = [15, 22, 17, 19];\n// some でいずれかの要素をチェック\nconst hasAdult = ages.___(age => age >= 20);\nconsole.log(hasAdult);",
+      "holeyCode": "const ages = [15, 22, 17, 19];\n// ここに some と入力して、誰か1人でもそうか調べてね\nconst hasAdult = ages.___(age => age >= 20);\nconsole.log(hasAdult);",
       "correctLines": [
         "const ages = [15, 22, 17, 19];",
+        "// ここに some と入力して、誰か1人でもそうか調べてね",
         "const hasAdult = ages.some(age => age >= 20);",
         "console.log(hasAdult);"
       ],
@@ -90,9 +92,10 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const words = ['hello', 'world'];\n// flatMap でmapと平坦化を同時に行う\nconst chars = words.flatMap(w => w.split(''));\nconsole.log(chars);",
-      "holeyCode": "const words = ['hello', 'world'];\n// flatMap でmapと平坦化を同時に行う\nconst chars = words.___(w => w.split(''));\nconsole.log(chars);",
+      "holeyCode": "const words = ['hello', 'world'];\n// ここに flatMap と入力して、文字をバラバラに広げてね\nconst chars = words.___(w => w.split(''));\nconsole.log(chars);",
       "correctLines": [
         "const words = ['hello', 'world'];",
+        "// ここに flatMap と入力して、文字をバラバラに広げてね",
         "const chars = words.flatMap(w => w.split(''));",
         "console.log(chars);"
       ],
@@ -125,9 +128,10 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const user = { name: 'Taro', age: 25 };\n// entries でキーと値のペアを取得\nfor (const [key, value] of Object.entries(user)) {\n  console.log(`${key}: ${value}`);\n}",
-      "holeyCode": "const user = { name: 'Taro', age: 25 };\n// entries でキーと値のペアを取得\nfor (const [key, value] of Object.___(user)) {\n  console.log(`${key}: ${value}`);\n}",
+      "holeyCode": "const user = { name: 'Taro', age: 25 };\n// ここに entries と入力して、キーと値のペアにしてね\nfor (const [key, value] of Object.___(user)) {\n  console.log(`${key}: ${value}`);\n}",
       "correctLines": [
         "const user = { name: 'Taro', age: 25 };",
+        "// ここに entries と入力して、キーと値のペアにしてね",
         "for (const [key, value] of Object.entries(user)) {",
         "  console.log(`${key}: ${value}`);",
         "}"
@@ -162,9 +166,10 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const pairs = [['name', 'Python'], ['version', '3.12']];\n// fromEntries で配列からオブジェクトを作成\nconst obj = Object.fromEntries(pairs);\nconsole.log(obj);",
-      "holeyCode": "const pairs = [['name', 'Python'], ['version', '3.12']];\n// fromEntries で配列からオブジェクトを作成\nconst obj = Object.___(pairs);\nconsole.log(obj);",
+      "holeyCode": "const pairs = [['name', 'Python'], ['version', '3.12']];\n// ここに fromEntries と入力して、オブジェクトに戻してね\nconst obj = Object.___(pairs);\nconsole.log(obj);",
       "correctLines": [
         "const pairs = [['name', 'Python'], ['version', '3.12']];",
+        "// ここに fromEntries と入力して、オブジェクトに戻してね",
         "const obj = Object.fromEntries(pairs);",
         "console.log(obj);"
       ],
@@ -197,8 +202,9 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// => でアロー関数を連鎖させる\nconst multiply = a => b => a * b;\nconst double = multiply(2);\nconsole.log(double(5));",
-      "holeyCode": "// => でアロー関数を連鎖させる\nconst multiply = a ___ b => a * b;\nconst double = multiply(2);\nconsole.log(double(5));",
+      "holeyCode": "// ここに => と入力してね\nconst multiply = a ___ b => a * b;\nconst double = multiply(2);\nconsole.log(double(5));",
       "correctLines": [
+        "// ここに => と入力してね",
         "const multiply = a => b => a * b;",
         "const double = multiply(2);",
         "console.log(double(5));"
@@ -232,8 +238,9 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// g を先に実行してfに渡す\nconst compose = (f, g) => x => f(g(x));\nconst square = x => x * x;\nconst negate = x => -x;\nconst squareThenNegate = compose(negate, square);\nconsole.log(squareThenNegate(3));",
-      "holeyCode": "// g を先に実行してfに渡す\nconst compose = (f, g) => x => f(___(x));\nconst square = x => x * x;\nconst negate = x => -x;\nconst squareThenNegate = compose(negate, square);\nconsole.log(squareThenNegate(3));",
+      "holeyCode": "// ここに g と入力して先に計算してね\nconst compose = (f, g) => x => f(___(x));\nconst square = x => x * x;\nconst negate = x => -x;\nconst squareThenNegate = compose(negate, square);\nconsole.log(squareThenNegate(3));",
       "correctLines": [
+        "// ここに g と入力して先に計算してね",
         "const compose = (f, g) => x => f(g(x));",
         "const square = x => x * x;",
         "const negate = x => -x;",
@@ -271,10 +278,11 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "function createCounter() {\n  let count = 0;\n  // ++ でインクリメントして返す\n  return () => ++count;\n}\nconst counter = createCounter();\nconsole.log(counter());\nconsole.log(counter());\nconsole.log(counter());",
-      "holeyCode": "function createCounter() {\n  let count = 0;\n  // ++ でインクリメントして返す\n  return () => ___count;\n}\nconst counter = createCounter();\nconsole.log(counter());\nconsole.log(counter());\nconsole.log(counter());",
+      "holeyCode": "function createCounter() {\n  let count = 0;\n  // ここに ++ と入力して数を増やしてね\n  return () => ___count;\n}\nconst counter = createCounter();\nconsole.log(counter());\nconsole.log(counter());\nconsole.log(counter());",
       "correctLines": [
         "function createCounter() {",
         "  let count = 0;",
+        "  // ここに ++ と入力して数を増やしてね",
         "  return () => ++count;",
         "}",
         "const counter = createCounter();",
@@ -316,11 +324,12 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "function memoize(fn) {\n  const cache = {};\n  return (x) => {\n    // in でオブジェクトにキーが存在するかチェック\n    if (!(x in cache)) {\n      cache[x] = fn(x);\n    }\n    return cache[x];\n  };\n}\nconst square = memoize(x => x * x);\nconsole.log(square(5));\nconsole.log(square(5));",
-      "holeyCode": "function memoize(fn) {\n  const cache = {};\n  return (x) => {\n    // in でオブジェクトにキーが存在するかチェック\n    if (!(x ___ cache)) {\n      cache[x] = fn(x);\n    }\n    return cache[x];\n  };\n}\nconst square = memoize(x => x * x);\nconsole.log(square(5));\nconsole.log(square(5));",
+      "holeyCode": "function memoize(fn) {\n  const cache = {};\n  return (x) => {\n    // ここに in と入力して、すでに計算したかチェックしてね\n    if (!(x ___ cache)) {\n      cache[x] = fn(x);\n    }\n    return cache[x];\n  };\n}\nconst square = memoize(x => x * x);\nconsole.log(square(5));\nconsole.log(square(5));",
       "correctLines": [
         "function memoize(fn) {",
         "  const cache = {};",
         "  return (x) => {",
+        "    // ここに in と入力して、すでに計算したかチェックしてね",
         "    if (!(x in cache)) {",
         "      cache[x] = fn(x);",
         "    }",
@@ -369,9 +378,10 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const pipe = (...fns) => x =>\n  // reduce で累積値 v を使って関数を連鎖\n  fns.reduce((v, f) => f(v), x);\n\nconst process = pipe(\n  x => x + 1,\n  x => x * 2,\n  x => x - 3\n);\nconsole.log(process(5));",
-      "holeyCode": "const pipe = (...fns) => x =>\n  // reduce で累積値 v を使って関数を連鎖\n  fns.___((___, f) => f(v), x);\n\nconst process = pipe(\n  x => x + 1,\n  x => x * 2,\n  x => x - 3\n);\nconsole.log(process(5));",
+      "holeyCode": "const pipe = (...fns) => x =>\n  // ここに reduce と v を入力してね\n  fns.___((___, f) => f(v), x);\n\nconst process = pipe(\n  x => x + 1,\n  x => x * 2,\n  x => x - 3\n);\nconsole.log(process(5));",
       "correctLines": [
         "const pipe = (...fns) => x =>",
+        "  // ここに reduce と v を入力してね",
         "  fns.reduce((v, f) => f(v), x);",
         "",
         "const process = pipe(",

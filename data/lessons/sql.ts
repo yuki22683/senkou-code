@@ -30,9 +30,9 @@ export const sqlData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- SELECTでデータを取得\nSELECT 'Hello, World!';",
-      "holeyCode": "-- SELECTでデータを取得\n___ 'Hello, World!';",
+      "holeyCode": "-- ここに SELECT と入力して画面に表示してね\n___ 'Hello, World!';",
       "correctLines": [
-        "-- 'Hello, World!'を表示",
+        "// ここに SELECT と入力して画面に表示してね",
         "SELECT 'Hello, World!';"
       ],
       "lineHints": [

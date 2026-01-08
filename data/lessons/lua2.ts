@@ -25,7 +25,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local item = { name = \"Apple\", price = 100 }\n-- .でキーにアクセス\nprint(item.price)",
-      "holeyCode": "local item = { name = \"Apple\", price = 100 }\n-- .でキーにアクセス\nprint(item___price)",
+      "holeyCode": "local item = { name = \"Apple\", price = 100 }\n// ここに . と入力して、値段（price）を取り出してね\nprint(item___price)",
       "correctLines": [
         "local item = { name = \"Apple\", price = 100 }",
         "print(item.price)"
@@ -63,7 +63,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local nums = {10, 20, 30}\n-- 2番目の要素にアクセス\nprint(nums[2])",
-      "holeyCode": "local nums = {10, 20, 30}\n-- 2番目の要素にアクセス\nprint(nums[___])",
+      "holeyCode": "local nums = {10, 20, 30}\n// ここに 2 と入力して、2番目の中身を取り出してね\nprint(nums[___])",
       "correctLines": [
         "local nums = {10, 20, 30}",
         "print(nums[2])"
@@ -101,7 +101,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local nums = {1, 2, 3}\n-- ipairsで配列をループ\nfor i, v in ipairs(nums) do\n    print(v)\nend",
-      "holeyCode": "local nums = {1, 2, 3}\n-- ipairsで配列をループ\nfor i, v in ___(nums) do\n    print(v)\nend",
+      "holeyCode": "local nums = {1, 2, 3}\n// ここに ipairs と入力して、順番に取り出してね\nfor i, v in ___(nums) do\n    print(v)\nend",
       "correctLines": [
         "local nums = {1, 2, 3}",
         "for i, v in ipairs(nums) do",
@@ -143,7 +143,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local t = {x = 10}\n-- pairsでテーブルをループ\nfor k, v in pairs(t) do\n    print(k, v)\nend",
-      "holeyCode": "local t = {x = 10}\n-- pairsでテーブルをループ\nfor k, v in ___(t) do\n    print(k, v)\nend",
+      "holeyCode": "local t = {x = 10}\n// ここに pairs と入力して、すべてのキーと値を調べてね\nfor k, v in ___(t) do\n    print(k, v)\nend",
       "correctLines": [
         "local t = {x = 10}",
         "for k, v in pairs(t) do",
@@ -185,7 +185,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- functionで関数を定義\nlocal function double(n)\n    return n * 2\nend\nprint(double(5))",
-      "holeyCode": "-- functionで関数を定義\nlocal ___ double(n)\n    return n * 2\nend\nprint(double(5))",
+      "holeyCode": "// ここに function と入力して関数を作ってね\nlocal ___ double(n)\n    return n * 2\nend\nprint(double(5))",
       "correctLines": [
         "local function double(n)",
         "    return n * 2",
@@ -227,7 +227,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local function swap(a, b)\n    -- returnで値を返す\n    return b, a\nend\nlocal x, y = swap(1, 2)\nprint(x, y)",
-      "holeyCode": "local function swap(a, b)\n    -- returnで値を返す\n    ___ b, a\nend\nlocal x, y = swap(1, 2)\nprint(x, y)",
+      "holeyCode": "local function swap(a, b)\n    // ここに return と入力して、2つの値を返してね\n    ___ b, a\nend\nlocal x, y = swap(1, 2)\nprint(x, y)",
       "correctLines": [
         "local function swap(a, b)",
         "    return b, a",
@@ -271,7 +271,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local obj = { x = 5 }\nfunction obj:getX()\n    -- selfで自分自身を参照\n    return self.x\nend\nprint(obj:getX())",
-      "holeyCode": "local obj = { x = 5 }\nfunction obj:getX()\n    -- selfで自分自身を参照\n    return ___.x\nend\nprint(obj:getX())",
+      "holeyCode": "local obj = { x = 5 }\nfunction obj:getX()\n    // ここに self と入力して、自分自身の x を使ってね\n    return ___.x\nend\nprint(obj:getX())",
       "correctLines": [
         "local obj = { x = 5 }",
         "function obj:getX()",
@@ -315,7 +315,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local t = {}\nlocal mt = { __index = { x = 10 } }\n-- setmetatableでメタテーブルを設定\nsetmetatable(t, mt)\nprint(t.x)",
-      "holeyCode": "local t = {}\nlocal mt = { __index = { x = 10 } }\n-- setmetatableでメタテーブルを設定\n___(t, mt)\nprint(t.x)",
+      "holeyCode": "local t = {}\nlocal mt = { __index = { x = 10 } }\n// ここに setmetatable と入力して、メタテーブルを設定してね\n___(t, mt)\nprint(t.x)",
       "correctLines": [
         "local t = {}",
         "local mt = { __index = { x = 10 } }",
@@ -357,7 +357,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local function makeAdder(n)\n    -- returnで関数を返す\n    return function(x)\n        return x + n\n    end\nend\nlocal add5 = makeAdder(5)\nprint(add5(10))",
-      "holeyCode": "local function makeAdder(n)\n    -- returnで関数を返す\n    ___ function(x)\n        return x + n\n    end\nend\nlocal add5 = makeAdder(5)\nprint(add5(10))",
+      "holeyCode": "local function makeAdder(n)\n    // ここに return と入力して、関数を返してね\n    ___ function(x)\n        return x + n\n    end\nend\nlocal add5 = makeAdder(5)\nprint(add5(10))",
       "correctLines": [
         "local function makeAdder(n)",
         "    return function(x)",
@@ -405,7 +405,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- createでコルーチンを作成\nlocal co = coroutine.create(function()\n    print(\"hello\")\nend)\ncoroutine.resume(co)",
-      "holeyCode": "-- createでコルーチンを作成\nlocal co = coroutine.___(function()\n    print(\"hello\")\nend)\ncoroutine.resume(co)",
+      "holeyCode": "// ここに create と入力して、コルーチンを作ってね\nlocal co = coroutine.___(function()\n    print(\"hello\")\nend)\ncoroutine.resume(co)",
       "correctLines": [
         "local co = coroutine.create(function()",
         "    print(\"hello\")",

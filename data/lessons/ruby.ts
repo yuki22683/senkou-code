@@ -25,9 +25,9 @@ export const rubyData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 「Hello, Ruby!」と出力する関数\nputs 'Hello, Ruby!'",
-      "holeyCode": "# 「Hello, Ruby!」と出力する関数\nputs '___'",
+      "holeyCode": "# ここに 'Hello, Ruby!' と入力してね\nputs '___'",
       "correctLines": [
-        "# 「Hello, Ruby!」と出力する関数",
+        "# ここに 'Hello, Ruby!' と入力してね",
         "puts 'Hello, Ruby!'"
       ],
       "lineHints": [

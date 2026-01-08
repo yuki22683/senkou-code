@@ -25,7 +25,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "protocol Speakable {\n    func speak() -> String\n}\n\nstruct Dog: Speakable {\n    func speak() -> String {\n        return \"Woof!\"\n    }\n}\n\nlet dog = Dog()\nprint(dog.speak())",
-      "holeyCode": "// protocolでプロトコルを定義\n___ Speakable {\n    func speak() -> String\n}\n\nstruct Dog: Speakable {\n    func speak() -> String {\n        return \"Woof!\"\n    }\n}\n\nlet dog = Dog()\nprint(dog.speak())",
+      "holeyCode": "// ここに protocol と入力して約束を作ってね\n___ Speakable {\n    func speak() -> String\n}\n\nstruct Dog: Speakable {\n    func speak() -> String {\n        return \"Woof!\"\n    }\n}\n\nlet dog = Dog()\nprint(dog.speak())",
       "correctLines": [
         "protocol Speakable {",
         "    func speak() -> String",
@@ -83,12 +83,13 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "protocol Identifiable {\n    var id: Int { get }\n}\n\nextension Identifiable {\n    func display() { print(\"ID: \\(id)\") }\n}\n\nstruct User: Identifiable {\n    var id: Int\n}\n\nlet user = User(id: 42)\nuser.display()",
-      "holeyCode": "protocol Identifiable {\n    var id: Int { get }\n}\n\n// extensionでプロトコルを拡張\n___ Identifiable {\n    func display() { print(\"ID: \\(id)\") }\n}\n\nstruct User: Identifiable {\n    var id: Int\n}\n\nlet user = User(id: 42)\nuser.display()",
+      "holeyCode": "protocol Identifiable {\n    var id: Int { get }\n}\n\n// ここに extension と入力して約束を広げてね\n___ Identifiable {\n    func display() { print(\"ID: \\(id)\") }\n}\n\nstruct User: Identifiable {\n    var id: Int\n}\n\nlet user = User(id: 42)\nuser.display()",
       "correctLines": [
         "protocol Identifiable {",
         "    var id: Int { get }",
         "}",
         "",
+        "// ここに extension と入力して約束を広げてね",
         "extension Identifiable {",
         "    func display() { print(\"ID: \\(id)\") }",
         "}",
@@ -145,7 +146,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func first<T>(_ array: [T]) -> T? {\n    return array.first\n}\n\nlet nums = [10, 20, 30]\nprint(first(nums) ?? 0)",
-      "holeyCode": "// <T>で型パラメータを定義\nfunc first___T___(_ array: [T]) -> T? {\n    return array.first\n}\n\nlet nums = [10, 20, 30]\nprint(first(nums) ?? 0)",
+      "holeyCode": "// ここに < と > を入力して型を包んでね\nfunc first___T___(_ array: [T]) -> T? {\n    return array.first\n}\n\nlet nums = [10, 20, 30]\nprint(first(nums) ?? 0)",
       "correctLines": [
         "func first<T>(_ array: [T]) -> T? {",
         "    return array.first",
@@ -191,7 +192,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func maximum<T: Comparable>(_ a: T, _ b: T) -> T {\n    return a > b ? a : b\n}\n\nprint(maximum(5, 3))",
-      "holeyCode": "// Comparableで比較可能な型に制限\nfunc maximum<T: ___>(_ a: T, _ b: T) -> T {\n    return a > b ? a : b\n}\n\nprint(maximum(5, 3))",
+      "holeyCode": "// ここに Comparable と入力して、比べられる型にしてね\nfunc maximum<T: ___>(_ a: T, _ b: T) -> T {\n    return a > b ? a : b\n}\n\nprint(maximum(5, 3))",
       "correctLines": [
         "func maximum<T: Comparable>(_ a: T, _ b: T) -> T {",
         "    return a > b ? a : b",
@@ -235,10 +236,11 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import Foundation\n\nstruct Item: Codable {\n    var name: String\n}\n\nlet item = Item(name: \"Apple\")\nlet encoder = JSONEncoder()\nif let data = try? encoder.encode(item),\n   let json = String(data: data, encoding: .utf8) {\n    print(json)\n}",
-      "holeyCode": "import Foundation\n\n// CodableでJSON変換可能に\nstruct Item: ___ {\n    var name: String\n}\n\nlet item = Item(name: \"Apple\")\nlet encoder = JSONEncoder()\nif let data = try? encoder.encode(item),\n   let json = String(data: data, encoding: .utf8) {\n    print(json)\n}",
+      "holeyCode": "import Foundation\n\n// ここに Codable と入力してね\nstruct Item: ___ {\n    var name: String\n}\n\nlet item = Item(name: \"Apple\")\nlet encoder = JSONEncoder()\nif let data = try? encoder.encode(item),\n   let json = String(data: data, encoding: .utf8) {\n    print(json)\n}",
       "correctLines": [
         "import Foundation",
         "",
+        "// ここに Codable と入力してね",
         "struct Item: Codable {",
         "    var name: String",
         "}",
@@ -293,9 +295,10 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Calculator {\n    lazy var result: Int = {\n        print(\"Computing...\")\n        return 100\n    }()\n}\n\nlet calc = Calculator()\nprint(calc.result)",
-      "holeyCode": "class Calculator {\n    // lazyで遅延初期化\n    ___ var result: Int = {\n        print(\"Computing...\")\n        return 100\n    }()\n}\n\nlet calc = Calculator()\nprint(calc.result)",
+      "holeyCode": "class Calculator {\n    // ここに lazy と入力して、のんびり準備してね\n    ___ var result: Int = {\n        print(\"Computing...\")\n        return 100\n    }()\n}\n\nlet calc = Calculator()\nprint(calc.result)",
       "correctLines": [
         "class Calculator {",
+        "    // ここに lazy と入力して、のんびり準備してね",
         "    lazy var result: Int = {",
         "        print(\"Computing...\")",
         "        return 100",
@@ -345,7 +348,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func test() {\n    defer { print(\"end\") }\n    print(\"start\")\n}\n\ntest()",
-      "holeyCode": "func test() {\n    // deferでスコープ終了時に実行\n    ___ { print(\"end\") }\n    print(\"start\")\n}\n\ntest()",
+      "holeyCode": "func test() {\n    // ここに defer と入力して、最後に実行するようにしてね\n    ___ { print(\"end\") }\n    print(\"start\")\n}\n\ntest()",
       "correctLines": [
         "func test() {",
         "    defer { print(\"end\") }",
@@ -391,7 +394,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func check(_ num: Int?) {\n    guard let n = num else {\n        print(\"nil\")\n        return\n    }\n    print(n * 2)\n}\n\ncheck(5)",
-      "holeyCode": "func check(_ num: Int?) {\n    // guardで早期リターン\n    ___ let n = num else {\n        print(\"nil\")\n        return\n    }\n    print(n * 2)\n}\n\ncheck(5)",
+      "holeyCode": "func check(_ num: Int?) {\n    // ここに guard と入力してチェックしてね\n    ___ let n = num else {\n        print(\"nil\")\n        return\n    }\n    print(n * 2)\n}\n\ncheck(5)",
       "correctLines": [
         "func check(_ num: Int?) {",
         "    guard let n = num else {",
@@ -443,7 +446,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "protocol Stack {\n    associatedtype Element\n    mutating func push(_ item: Element)\n}\n\nstruct IntStack: Stack {\n    var items: [Int] = []\n    mutating func push(_ item: Int) {\n        items.append(item)\n    }\n}\n\nvar stack = IntStack()\nstack.push(10)\nprint(stack.items)",
-      "holeyCode": "protocol Stack {\n    // associatedtypeで関連型を定義\n    ___ Element\n    mutating func push(_ item: Element)\n}\n\nstruct IntStack: Stack {\n    var items: [Int] = []\n    mutating func push(_ item: Int) {\n        items.append(item)\n    }\n}\n\nvar stack = IntStack()\nstack.push(10)\nprint(stack.items)",
+      "holeyCode": "protocol Stack {\n    // ここに associatedtype と入力して、自由な型を使えるようにしてね\n    ___ Element\n    mutating func push(_ item: Element)\n}\n\nstruct IntStack: Stack {\n    var items: [Int] = []\n    mutating func push(_ item: Int) {\n        items.append(item)\n    }\n}\n\nvar stack = IntStack()\nstack.push(10)\nprint(stack.items)",
       "correctLines": [
         "protocol Stack {",
         "    associatedtype Element",
@@ -507,7 +510,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func makeCollection() -> some Collection {\n    return [1, 2, 3]\n}\n\nlet c = makeCollection()\nprint(c.count)",
-      "holeyCode": "// someで不透明な型を返す\nfunc makeCollection() -> ___ Collection {\n    return [1, 2, 3]\n}\n\nlet c = makeCollection()\nprint(c.count)",
+      "holeyCode": "// ここに some と入力してね\nfunc makeCollection() -> ___ Collection {\n    return [1, 2, 3]\n}\n\nlet c = makeCollection()\nprint(c.count)",
       "correctLines": [
         "func makeCollection() -> some Collection {",
         "    return [1, 2, 3]",
