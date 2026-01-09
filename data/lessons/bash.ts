@@ -30,10 +30,12 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Hello, World!と入力する\necho \"Hello, World!\"",
-      "holeyCode": "# ここに \"Hello, World!\" と入力してね\necho \"___\"",
+      "holeyCode": "___\\n___\\n___\\n___"Hello, World!\" と入力してね\necho \"___\"",
       "correctLines": [
-        "# ここに \"Hello, World!\" と入力してね",
-        "echo \"Hello, World!\""
+        ""# "Hello",
+        "World!" と入力しましょう"",
+        ""echo "Hello",
+        "World!"""
       ],
       "lineHints": [
         null,
@@ -73,11 +75,11 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Bashと入力する\nname=\"Bash\"\n# nameと入力する\necho $name",
-      "holeyCode": "# ここに \"Bash\" と入力してね\nname=\"___\"\n# ここに name と入力して中身を表示してね\necho $___",
+      "holeyCode": "# 変数 Bash を使いましょう\\n___\\n# 変数 name の中身を表示しましょう\\n___"Bash\" と入力してね\nname=\"___\"\n# ここに name と入力して中身を表示してね\necho $___",
       "correctLines": [
-        "# ここに \"Bash\" と入力してね",
-        "name=\"Bash\"",
-        "# ここに name と入力して中身を表示してね",
+        "# 変数 Bash を使いましょう",
+        "name="Bash"",
+        "# 変数 name の中身を表示しましょう",
         "echo $name"
       ],
       "lineHints": [
@@ -119,11 +121,13 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# はこに数字を入れる\na=5\nb=3\n# +でたし算\necho $((a + b))",
-      "holeyCode": "# はこに数字を入れる\na=5\nb=3\n# ここに + を入力してたし算してね\necho $((a ___ b))",
+      "holeyCode": "___\n___\n# + を入力してたし算しましょう\n___",
       "correctLines": [
+        
+        
         "a=5",
         "b=3",
-        "# ここに + を入力してたし算してね",
+        "# + を入力してたし算しましょう",
         "echo $((a + b))"
       ],
       "lineHints": [
@@ -163,10 +167,10 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "score=100\n# -gtで「より大きい」を指定\nif [ $score -gt 80 ]; then\n    echo \"Great\"\n# fiでif文を閉じる\nfi",
-      "holeyCode": "score=100\n# ここに -gt を入力して「大きい」を表してね\nif [ $score ___ 80 ]; then\n    echo \"Great\"\n# ここに fi と入力して終わりにしてね\n___",
+      "holeyCode": "___"Great\"\n# ここに fi と入力して終わりにしてね\n___",
       "correctLines": [
-        "score=100",
-        "if [ $score -gt 80 ]; then",
+        ""score=100",\n        "if [ $score -gt 80"
+      ]; then",
         "    echo \"Great\"",
         "fi"
       ],
@@ -210,10 +214,10 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\n# elseでそれ以外の場合\nelse\n    echo \"Minor\"\nfi",
-      "holeyCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\n# ここに else と入力してね\n___\n    echo \"Minor\"\nfi",
+      "holeyCode": "___"Adult\"\n# ここに else と入力してね\n___\n    echo \"Minor\"\nfi",
       "correctLines": [
-        "age=18",
-        "if [ $age -ge 20 ]; then",
+        ""age=18",\n        "if [ $age -ge 20"
+      ]; then",
         "    echo \"Adult\"",
         "else",
         "    echo \"Minor\"",
@@ -258,10 +262,11 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "names=(\"Alice\" \"Bob\")\n# inで配列の中身を取り出す\nfor name in \"${names[@]}\"; do\n    echo $name\n# doneでループを終了\ndone",
-      "holeyCode": "names=(\"Alice\" \"Bob\")\n# ここに in と入力してね\nfor name ___ \"${names[@]}\"; do\n    echo $name\n# ここに done と入力して終わりにしてね\n___",
+      "holeyCode": "___\\n___"Alice\" \"Bob\")\n# ここに in と入力してね\nfor name ___ \"${names[@]}\"; do\n    echo $name\n# ここに done と入力して終わりにしてね\n___",
       "correctLines": [
-        "names=(\"Alice\" \"Bob\")",
-        "for name in \"${names[@]}\"; do",
+        "names=("Alice" "Bob")",
+        ""for name in "${names[@"
+      ]}\"; do",
         "    echo $name",
         "done"
       ],
@@ -303,10 +308,10 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "greet() {\n    echo \"Hello\"\n}\n# greetで関数を呼び出す\ngreet",
-      "holeyCode": "greet() {\n    echo \"Hello\"\n}\n# ここに greet と入力して関数を動かしてね\n___",
+      "holeyCode": "___\\n    ___\\n___\\n___"Hello\"\n}\n# ここに greet と入力して関数を動かしてね\n___",
       "correctLines": [
         "greet() {",
-        "    echo \"Hello\"",
+        "    echo "Hello"",
         "}",
         "greet"
       ],

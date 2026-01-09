@@ -30,9 +30,10 @@ export const haskellData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- Hello, Haskell!を表示\nmain = putStrLn \"Hello, Haskell!\"",
-      "holeyCode": "// ここに Hello, Haskell! と入力してね\nmain = putStrLn \"___\"",
+      "holeyCode": "___\\n___"___\"",
       "correctLines": [
-        "main = putStrLn \"Hello, Haskell!\""
+        ""main = putStrLn "Hello",
+        "Haskell!"""
       ],
       "lineHints": [
         "putStrLn を使って、そのあとの文字を画面に出します。"
@@ -71,8 +72,10 @@ export const haskellData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- 10を入力\nx = 10\n-- xを入力\nmain = print x",
-      "holeyCode": "// ここに 10 を入力してね\nx = ___\n// ここに x と入力して中身を表示してね\nmain = print ___",
+      "holeyCode": "___\n___",
       "correctLines": [
+        
+        
         "x = 10",
         "main = print x"
       ],
@@ -114,8 +117,10 @@ export const haskellData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "a = 5\nb = 3\n-- +でたし算\nmain = print (a + b)",
-      "holeyCode": "a = 5\nb = 3\n// ここに + を入力してたし算してね\nmain = print (a ___ b)",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
+        
+        
         "a = 5",
         "b = 3",
         "main = print (a + b)"

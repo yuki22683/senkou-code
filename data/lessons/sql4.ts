@@ -25,9 +25,11 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- WITHでCTEを定義\nWITH nums AS (\n  SELECT 1 AS n UNION SELECT 2 UNION SELECT 3\n)\nSELECT * FROM nums;",
-      "holeyCode": "-- ここに WITH と入力して、クエリに名前をつけてね\n___ nums AS (\n  SELECT 1 AS n UNION SELECT 2 UNION SELECT 3\n)\nSELECT * FROM nums;",
+      "holeyCode": "// WITH と入力して、クエリに名前をつけてね\n___\n  ___\n___\n___",
       "correctLines": [
-        "// ここに WITH と入力して、クエリに名前をつけてね",
+        
+        
+        "// WITH と入力して、クエリに名前をつけてね",
         "WITH nums AS (",
         "  SELECT 1 AS n UNION SELECT 2 UNION SELECT 3",
         ")",
@@ -68,11 +70,13 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT\n  val,\n  -- ROW_NUMBERで連番を振る\n  ROW_NUMBER() OVER (ORDER BY val) AS rn\nFROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
-      "holeyCode": "SELECT\n  val,\n  -- ここに ROW_NUMBER と入力して番号を振ってね\n  ___() OVER (ORDER BY val) AS rn\nFROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
+      "holeyCode": "___\n  ___\n  // ROW_NUMBER と入力して番号を振ってね\n  ___\n___",
       "correctLines": [
+        
+        
         "SELECT",
         "  val,",
-        "  // ここに ROW_NUMBER と入力して番号を振ってね",
+        "  // ROW_NUMBER と入力して番号を振ってね",
         "  ROW_NUMBER() OVER (ORDER BY val) AS rn",
         "FROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');"
       ],
@@ -111,11 +115,13 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT\n  val,\n  -- RANKで順位を付ける\n  RANK() OVER (ORDER BY val) AS rnk\nFROM (SELECT 1 AS val UNION ALL SELECT 1 UNION ALL SELECT 2);",
-      "holeyCode": "SELECT\n  val,\n  -- ここに RANK と入力して順位を付けてね\n  ___() OVER (ORDER BY val) AS rnk\nFROM (SELECT 1 AS val UNION ALL SELECT 1 UNION ALL SELECT 2);",
+      "holeyCode": "___\n  ___\n  // RANK と入力して順位を付けてね\n  ___\n___",
       "correctLines": [
+        
+        
         "SELECT",
         "  val,",
-        "  // ここに RANK と入力して順位を付けてね",
+        "  // RANK と入力して順位を付けてね",
         "  RANK() OVER (ORDER BY val) AS rnk",
         "FROM (SELECT 1 AS val UNION ALL SELECT 1 UNION ALL SELECT 2);"
       ],
@@ -154,11 +160,13 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT\n  val,\n  -- SUMで累積合計を計算\n  SUM(val) OVER (ORDER BY val) AS running\nFROM (SELECT 1 AS val UNION ALL SELECT 2 UNION ALL SELECT 3);",
-      "holeyCode": "SELECT\n  val,\n  -- ここに SUM と入力して少しずつ足していってね\n  ___(val) OVER (ORDER BY val) AS running\nFROM (SELECT 1 AS val UNION ALL SELECT 2 UNION ALL SELECT 3);",
+      "holeyCode": "___\n  ___\n  // SUM と入力して少しずつ足していってね\n  ___\n___",
       "correctLines": [
+        
+        
         "SELECT",
         "  val,",
-        "  // ここに SUM と入力して少しずつ足していってね",
+        "  // SUM と入力して少しずつ足していってね",
         "  SUM(val) OVER (ORDER BY val) AS running",
         "FROM (SELECT 1 AS val UNION ALL SELECT 2 UNION ALL SELECT 3);"
       ],
@@ -197,10 +205,12 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT\n  -- CASEで条件分岐\n  CASE WHEN 1 > 0 THEN 'yes' ELSE 'no' END AS result;",
-      "holeyCode": "SELECT\n  -- ここに CASE と入力して、条件でわけてね\n  ___ WHEN 1 > 0 THEN 'yes' ELSE 'no' END AS result;",
+      "holeyCode": "___\n  // CASE と入力して、条件でわけてね\n  ___",
       "correctLines": [
+        
+        
         "SELECT",
-        "  // ここに CASE と入力して、条件でわけてね",
+        "  // CASE と入力して、条件でわけてね",
         "  CASE WHEN 1 > 0 THEN 'yes' ELSE 'no' END AS result;"
       ],
       "lineHints": [
@@ -236,8 +246,10 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- COALESCEで最初の非NULLを返す\nSELECT COALESCE(NULL, NULL, 'default') AS val;",
-      "holeyCode": "-- ここに COALESCE と入力して、最初の「空っぽじゃない値」を見つけてね\nSELECT ___(NULL, NULL, 'default') AS val;",
+      "holeyCode": "___",
       "correctLines": [
+        
+        
         "SELECT COALESCE(NULL, NULL, 'default') AS val;"
       ],
       "lineHints": [
@@ -272,10 +284,12 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "CREATE TABLE test(x TEXT);\n-- INSERTでデータを挿入\nINSERT INTO test VALUES ('hello');\nSELECT * FROM test;",
-      "holeyCode": "CREATE TABLE test(x TEXT);\n-- ここに INSERT と入力して、データをいれてね\n___ INTO test VALUES ('hello');\nSELECT * FROM test;",
+      "holeyCode": "___\n// INSERT と入力して、データをいれてね\n___\n___",
       "correctLines": [
+        
+        
         "CREATE TABLE test(x TEXT);",
-        "// ここに INSERT と入力して、データをいれてね",
+        "// INSERT と入力して、データをいれてね",
         "INSERT INTO test VALUES ('hello');",
         "SELECT * FROM test;"
       ],
@@ -313,11 +327,13 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "CREATE TABLE test(x TEXT);\nINSERT INTO test VALUES ('old');\n-- UPDATEでデータを更新\nUPDATE test SET x = 'new';\nSELECT * FROM test;",
-      "holeyCode": "CREATE TABLE test(x TEXT);\nINSERT INTO test VALUES ('old');\n-- ここに UPDATE と入力して、データを書きかえてね\n___ test SET x = 'new';\nSELECT * FROM test;",
+      "holeyCode": "___\n___\n// UPDATE と入力して、データを書きかえてね\n___\n___",
       "correctLines": [
+        
+        
         "CREATE TABLE test(x TEXT);",
         "INSERT INTO test VALUES ('old');",
-        "// ここに UPDATE と入力して、データを書きかえてね",
+        "// UPDATE と入力して、データを書きかえてね",
         "UPDATE test SET x = 'new';",
         "SELECT * FROM test;"
       ],
@@ -356,11 +372,13 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "CREATE TABLE test(x INT);\nINSERT INTO test VALUES (1), (2), (3);\n-- DELETEでデータを削除\nDELETE FROM test WHERE x = 2;\nSELECT * FROM test;",
-      "holeyCode": "CREATE TABLE test(x INT);\nINSERT INTO test VALUES (1), (2), (3);\n-- ここに DELETE と入力して、データを消してね\n___ FROM test WHERE x = 2;\nSELECT * FROM test;",
+      "holeyCode": "___\n___\n// DELETE と入力して、データを消しましょう\n___\n___",
       "correctLines": [
+        
+        
         "CREATE TABLE test(x INT);",
         "INSERT INTO test VALUES (1), (2), (3);",
-        "// ここに DELETE と入力して、データを消してね",
+        "// DELETE と入力して、データを消しましょう",
         "DELETE FROM test WHERE x = 2;",
         "SELECT * FROM test;"
       ],
@@ -399,9 +417,11 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- GROUP_CONCATで値を結合\nSELECT GROUP_CONCAT(val, '-') FROM\n  (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
-      "holeyCode": "-- ここに GROUP_CONCAT と入力して、文字をつなげてね\nSELECT ___(val, '-') FROM\n  (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
+      "holeyCode": "// GROUP_CONCAT と入力して、文字をつなげてね\n___\n  ___",
       "correctLines": [
-        "// ここに GROUP_CONCAT と入力して、文字をつなげてね",
+        
+        
+        "// GROUP_CONCAT と入力して、文字をつなげてね",
         "SELECT GROUP_CONCAT(val, '-') FROM",
         "  (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');"
       ],

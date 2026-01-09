@@ -20,9 +20,10 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "defmodule Person do\n  # defstructで構造体を定義\n  defstruct name: \"\", email: \"\"\nend\n\nperson = %Person{name: \"Bob\", email: \"bob@example.com\"}",
-      "holeyCode": "defmodule Person do\n  // ここに defstruct と入力して構造体を作ってね\n  ___ name: \"\", email: \"\"\nend\n\nperson = %Person{name: \"Bob\", email: \"bob@example.com\"}",
+      "holeyCode": "___\\n___"\", email: \"\"\nend\n\nperson = %Person{name: \"Bob\", email: \"bob@example.com\"}",
       "correctLines": [
-        { "lineNumber": 3, "content": "  defstruct name: \"\", email: \"\"" }
+        "{ "lineNumber": 3",
+        ""content": "  defstruct name: "", email: """ }"
       ],
       "lineHints": [
         { "lineNumber": 2, "hint": "構造体を定義するマクロです" }
@@ -48,9 +49,10 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "defmodule Product do\n  defstruct name: \"\", price: 0\nend\n\nproduct = %Product{name: \"Book\", price: 1000}\n# |でマップを更新\nupdated = %{product | price: 1200}",
-      "holeyCode": "defmodule Product do\n  defstruct name: \"\", price: 0\nend\n\nproduct = %Product{name: \"Book\", price: 1000}\n// ここに | と入力して、中身を書きかえてね\nupdated = %{product ___ price: 1200}",
+      "holeyCode": "___\\n___"\", price: 0\nend\n\nproduct = %Product{name: \"Book\", price: 1000}\n// ここに | と入力して、中身を書きかえてね\nupdated = %{product ___ price: 1200}",
       "correctLines": [
-        { "lineNumber": 7, "content": "updated = %{product | price: 1200}" }
+        "{ "lineNumber": 7",
+        ""content": "updated = %{product | price: 1200}" }"
       ],
       "lineHints": [
         { "lineNumber": 6, "hint": "マップ更新の構文で使う記号です" }
@@ -76,9 +78,10 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "numbers = [1, 2, 3, 4, 5]\n# reduceで畳み込み\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)",
-      "holeyCode": "numbers = [1, 2, 3, 4, 5]\n// ここに reduce と入力して、1つにまとめてね\nsum = Enum.___(numbers, 0, fn x, acc -> x + acc end)",
+      "holeyCode": "___\\n___",
       "correctLines": [
-        { "lineNumber": 2, "content": "sum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)" }
+        "{ "lineNumber": 2",
+        ""content": "sum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)" }"
       ],
       "lineHints": [
         { "lineNumber": 2, "hint": "リストを畳み込む関数です" }
@@ -104,9 +107,10 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "users = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\n# group_byでグループ化\ngrouped = Enum.group_by(users, fn {_name, age} -> age end)",
-      "holeyCode": "users = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\n// ここに group_by と入力して、グループにわけてね\ngrouped = Enum.___(users, fn {_name, age} -> age end)",
+      "holeyCode": "___\\n___"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\n// ここに group_by と入力して、グループにわけてね\ngrouped = Enum.___(users, fn {_name, age} -> age end)",
       "correctLines": [
-        { "lineNumber": 2, "content": "grouped = Enum.group_by(users, fn {_name, age} -> age end)" }
+        "{ "lineNumber": 2",
+        ""content": "grouped = Enum.group_by(users, fn {_name, age} -> age end)" }"
       ],
       "lineHints": [
         { "lineNumber": 2, "hint": "要素をグループ化する関数です" }
@@ -132,9 +136,10 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# forで内包表記\nsquares = for x <- 1..5, do: x * x",
-      "holeyCode": "// ここに for と入力してね\nsquares = ___ x <- 1..5, do: x * x",
+      "holeyCode": "___\\n___",
       "correctLines": [
-        { "lineNumber": 1, "content": "squares = for x <- 1..5, do: x * x" }
+        "{ "lineNumber": 1",
+        ""content": "squares = for x <- 1..5, do: x * x" }"
       ],
       "lineHints": [
         { "lineNumber": 1, "hint": "リスト内包表記を開始するキーワードです" }
@@ -160,9 +165,10 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "def process(map) do\n  # withでパターンマッチを連鎖\n  with {:ok, name} <- Map.fetch(map, :name),\n       {:ok, age} <- Map.fetch(map, :age) do\n    {:ok, \"#{name} is #{age} years old\"}\n  else\n    :error -> {:error, \"Missing field\"}\n  end\nend",
-      "holeyCode": "def process(map) do\n  // ここに with と入力して、いくつものチェックを同時にしてね\n  ___ {:ok, name} <- Map.fetch(map, :name),\n       {:ok, age} <- Map.fetch(map, :age) do\n    {:ok, \"#{name} is #{age} years old\"}\n  else\n    :error -> {:error, \"Missing field\"}\n  end\nend",
+      "holeyCode": "___\\n___"#{name} is #{age} years old\"}\n  else\n    :error -> {:error, \"Missing field\"}\n  end\nend",
       "correctLines": [
-        { "lineNumber": 3, "content": "  with {:ok, name} <- Map.fetch(map, :name)," }
+        "{ "lineNumber": 3",
+        ""content": "  with {:ok, name} <- Map.fetch(map, :name)," }"
       ],
       "lineHints": [
         { "lineNumber": 2, "hint": "パターンマッチを連鎖させるキーワードです" }
@@ -188,9 +194,10 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# defprotocolでプロトコルを定義\ndefprotocol Describable do\n  def describe(data)\nend",
-      "holeyCode": "// ここに defprotocol と入力して約束を作ってね\n___ Describable do\n  def describe(data)\nend",
+      "holeyCode": "___\\n___",
       "correctLines": [
-        { "lineNumber": 2, "content": "defprotocol Describable do" }
+        "{ "lineNumber": 2",
+        ""content": "defprotocol Describable do" }"
       ],
       "lineHints": [
         { "lineNumber": 1, "hint": "プロトコルを定義するキーワードです" }
@@ -216,9 +223,10 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# defimplでプロトコルを実装\ndefimpl Describable, for: Map do\n  def describe(map) do\n    \"Map with #{map_size(map)} keys\"\n  end\nend",
-      "holeyCode": "// ここに defimpl と入力して、約束を守るための手順を書いてね\n___ Describable, for: Map do\n  def describe(map) do\n    \"Map with #{map_size(map)} keys\"\n  end\nend",
+      "holeyCode": "___\\n___"Map with #{map_size(map)} keys\"\n  end\nend",
       "correctLines": [
-        { "lineNumber": 2, "content": "defimpl Describable, for: Map do" }
+        "{ "lineNumber": 2",
+        ""content": "defimpl Describable, for: Map do" }"
       ],
       "lineHints": [
         { "lineNumber": 1, "hint": "プロトコルを実装するキーワードです" }
@@ -244,9 +252,10 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# start_linkでAgentを開始\n{:ok, counter} = Agent.start_link(fn -> 0 end)\nAgent.update(counter, fn state -> state + 1 end)\nvalue = Agent.get(counter, fn state -> state end)",
-      "holeyCode": "// ここに start_link と入力して、Agent を動かしてね\n{:ok, counter} = Agent.___(fn -> 0 end)\nAgent.update(counter, fn state -> state + 1 end)\nvalue = Agent.get(counter, fn state -> state end)",
+      "holeyCode": "___\\n___",
       "correctLines": [
-        { "lineNumber": 2, "content": "{:ok, counter} = Agent.start_link(fn -> 0 end)" }
+        "{ "lineNumber": 2",
+        ""content": "{:ok, counter} = Agent.start_link(fn -> 0 end)" }"
       ],
       "lineHints": [
         { "lineNumber": 1, "hint": "Agentを開始してプロセスにリンクする関数です" }
@@ -272,9 +281,10 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# asyncで非同期タスクを開始\ntask = Task.async(fn -> 1 + 2 end)\nresult = Task.await(task)",
-      "holeyCode": "// ここに async と入力して、別の仕事をはじめてね\ntask = Task.___(fn -> 1 + 2 end)\nresult = Task.await(task)",
+      "holeyCode": "___\\n___",
       "correctLines": [
-        { "lineNumber": 2, "content": "task = Task.async(fn -> 1 + 2 end)" }
+        "{ "lineNumber": 2",
+        ""content": "task = Task.async(fn -> 1 + 2 end)" }"
       ],
       "lineHints": [
         { "lineNumber": 1, "hint": "非同期タスクを開始する関数です" }

@@ -17,11 +17,11 @@ export async function POST(request: NextRequest) {
 
     // Judge0 に送信
     const submissionResponse = await axios.post(
-      `${JUDGE0_API_URL}/submissions?base64_encoded=false&wait=true`,
+      `${JUDGE0_API_URL}/submissions?base64_encoded=true&wait=true`,
       {
-        source_code,
+        source_code: Buffer.from(source_code).toString("base64"),
         language_id,
-        stdin,
+        stdin: Buffer.from(stdin).toString("base64"),
       },
       {
         headers: {
@@ -33,13 +33,24 @@ export async function POST(request: NextRequest) {
 
     const result = submissionResponse.data;
 
+    // Base64デコード用ユーティリティ
+    const decode = (base64Str: string | null) => {
+      if (!base64Str) return "";
+      try {
+        return Buffer.from(base64Str, "base64").toString("utf8");
+      } catch (e) {
+        console.error("Base64 decode error:", e);
+        return base64Str;
+      }
+    };
+
     // レスポンスを整形
     return NextResponse.json({
       status: result.status?.description || "Unknown",
-      stdout: result.stdout || "",
-      stderr: result.stderr || "",
-      compile_output: result.compile_output || "",
-      message: result.message || "",
+      stdout: decode(result.stdout),
+      stderr: decode(result.stderr),
+      compile_output: decode(result.compile_output),
+      message: decode(result.message),
       time: result.time || null,
       memory: result.memory || null,
     });

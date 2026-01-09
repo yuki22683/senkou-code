@@ -25,11 +25,12 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // 画面にメッセージを出す関数\n    printf(\"Hello, World!\\n\");\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    // ここに \"Hello, World!\" と入力してね\n    printf(\"___\\n\");\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\\n___\\n___\\n    ___\\n___"Hello, World!\" と入力してね\n    printf(\"___\\n\");\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
-        "    printf(\"Hello, World!\\n\");",
+        ""    printf("Hello",
+        "World!\\\n");"",
         "    return 0;",
         "}"
       ],
@@ -74,12 +75,12 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // int（数字）ラベルのはこを作る\n    int x = 10;\n    // 中身を表示する\n    printf(\"%d\\n\", x);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    // ここに 10 を入力してね\n    int x = ___ ;\n    // ここに x と入力して中身を表示してね\n    printf(\"%d\\n\", ___);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n    ___\\n    ___\\n___"%d\\n\", ___);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
         "    int x = 10;",
-        "    printf(\"%d\\n\", x);",
+        "    printf("%d\\\n", x);",
         "    return 0;",
         "}"
       ],
@@ -125,13 +126,13 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // はこに数字を入れる\n    int a = 5;\n    int b = 3;\n    // たし算した結果を表示する\n    printf(\"%d\\n\", a + b);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    int a = 5;\n    int b = 3;\n    // ここに + を入力してたし算してね\n    printf(\"%d\\n\", a ___ b);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n    ___\\n    ___\\n    ___\\n___"%d\\n\", a ___ b);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
         "    int a = 5;",
         "    int b = 3;",
-        "    printf(\"%d\\n\", a + b);",
+        "    printf("%d\\\n", a + b);",
         "    return 0;",
         "}"
       ],
@@ -175,12 +176,12 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // ageに10を入れる\n    int age = 10;\n    // 文章の中に中身を表示する\n    printf(\"私は %d 歳です\\n\", age);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    int age = 10;\n    // ここに age と入力して年齢を表示してね\n    printf(\"私は %d 歳です\\n\", ___);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n    ___\\n    ___\\n___"私は %d 歳です\\n\", ___);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
         "    int age = 10;",
-        "    printf(\"私は %d 歳です\\n\", age);",
+        "    printf("私は %d 歳です\\\n", age);",
         "    return 0;",
         "}"
       ],
@@ -223,11 +224,10 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int nums[] = {10, 20};\n    // 2番目（番号は1）を出す\n    printf(\"%d\\n\", nums[1]);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    int nums[] = {10, 20};\n    // 2番目の中身を取り出すために 1 を入力してね\n    printf(\"%d\\n\", nums[___]);\n    return 0;\n}",
+      "holeyCode": "___"%d\\n\", nums[___]);\n    return 0;\n}",
       "correctLines": [
-        "#include <stdio.h>",
-        "int main() {",
-        "    int nums[] = {10, 20};\n    // 2番目の中身を取り出すために 1 を入力してね\n    printf(\"%d\\n\", nums[1]);\n    return 0;\n}",
+        ""#include <stdio.h>",\n        "int main() {",\n        "    int nums["
+      ] = {10, 20};\n    // 2番目の中身を取り出すために 1 を入力してね\n    printf(\"%d\\n\", nums[1]);\n    return 0;\n}",
       ],
       "lineHints": [
         "",
@@ -268,13 +268,13 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int score = 100;\n    if (score > 80) {\n        printf(\"Pass\\n\");\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    int score = 100;\n    // ここに > を入力して「大きい」を表してね\n    if (score ___ 80) {\n        printf(\"Pass\\n\");\n    }\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n    ___\\n        ___\\n    ___\\n    ___\\n___"Pass\\n\");\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
         "    int score = 100;",
         "    if (score > 80) {",
-        "        printf(\"Pass\\n\");",
+        "        printf("Pass\\\n");",
         "    }",
         "    return 0;",
         "}"
@@ -320,15 +320,15 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int x = 5;\n    if (x > 10) {\n        printf(\"Big\\n\");\n    } else {\n        printf(\"Small\\n\");\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    int x = 5;\n    if (x > 10) {\n        printf(\"Big\\n\");\n    // ここに else と入力してね\n    } ___ {\n        printf(\"Small\\n\");\n    }\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n    ___\\n        ___\\n    ___\\n        ___\\n    ___\\n    ___\\n___"Big\\n\");\n    // ここに else と入力してね\n    } ___ {\n        printf(\"Small\\n\");\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
         "    int x = 5;",
         "    if (x > 10) {",
-        "        printf(\"Big\\n\");",
+        "        printf("Big\\\n");",
         "    } else {",
-        "        printf(\"Small\\n\");",
+        "        printf("Small\\\n");",
         "    }",
         "    return 0;",
         "}"
@@ -376,12 +376,12 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    // ここに i++ と入力して番号を増やしてね\n    for (int i = 0; i < 3; ___ ) {\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n        ___\\n    ___\\n    ___\\n___"%d\\n\", i);\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
         "    for (int i = 0; i < 3; i++) {",
-        "        printf(\"%d\\n\", i);",
+        "        printf("%d\\\n", i);",
         "    }",
         "    return 0;",
         "}"
@@ -426,7 +426,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nstruct Point {\n    int x;\n    int y;\n};\nint main() {\n    struct Point p = {10, 20};\n    printf(\"%d\\n\", p.x);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nstruct Point {\n    int x;\n    int y;\n};\nint main() {\n    struct Point p = {10, 20};\n    // ここに x と入力して中身を表示してね\n    printf(\"%d\\n\", p.___ );\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n    ___\\n___\\n___\\n    ___"%d\\n\", p.___ );\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "struct Point {",
@@ -434,7 +434,7 @@ export const cData = {
         "    int y;",
         "};",
         "int main() {",
-        "    struct Point p = {10, 20};\n    printf(\"%d\\n\", p.x);\n    return 0;\n}"
+        "    struct Point p = {10, 20};\n    printf("%d\\\n", p.x);\n    return 0;\n}"
       ],
       "lineHints": [
         "",
@@ -479,11 +479,11 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nvoid greet() {\n    printf(\"Hello\\n\");\n}\nint main() {\n    // 関数を実行する\n    greet();\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nvoid greet() {\n    printf(\"Hello\\n\");\n}\nint main() {\n    // ここに greet と入力して関数を動かしてね\n    ___();\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n___\\n___\\n    ___\\n    ___\\n___"Hello\\n\");\n}\nint main() {\n    // ここに greet と入力して関数を動かしてね\n    ___();\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "void greet() {",
-        "    printf(\"Hello\\n\");",
+        "    printf("Hello\\\n");",
         "}",
         "int main() {",
         "    greet();",

@@ -25,9 +25,11 @@ export const typescriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// | でユニオン型を定義\nfunction show(value: string | number): void {\n    console.log(value);\n}\n\nshow('Hello');\nshow(42);",
-      "holeyCode": "// ここに | を入力して、文字か数字のどっちでもいいよって教えてね\nfunction show(value: string ___ number): void {\n    console.log(value);\n}\n\nshow('Hello');\nshow(42);",
+      "holeyCode": "// | を入力して、文字か数字のどっちでもいいよって教えてね\n___\n    ___\n___\n\n___\n___",
       "correctLines": [
-        "// ここに | を入力して、文字か数字のどっちでもいいよって教えてね",
+        
+        
+        "// | を入力して、文字か数字のどっちでもいいよって教えてね",
         "function show(value: string | number): void {",
         "    console.log(value);",
         "}",
@@ -73,9 +75,11 @@ export const typescriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// interface キーワードで定義\ninterface Person {\n    name: string;\n    age: number;\n}\n\nconst p: Person = { name: 'Alice', age: 25 };\nconsole.log(p.name);",
-      "holeyCode": "// ここに interface と入力して約束を作ってね\n___ Person {\n    name: string;\n    age: number;\n}\n\nconst p: Person = { name: 'Alice', age: 25 };\nconsole.log(p.name);",
+      "holeyCode": "// interface と入力して約束を作ってね\n___\n    ___\n    ___\n___\n\n___\n___",
       "correctLines": [
-        "// ここに interface と入力して約束を作ってね",
+        
+        
+        "// interface と入力して約束を作ってね",
         "interface Person {",
         "    name: string;",
         "    age: number;",
@@ -123,9 +127,11 @@ export const typescriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// nicknameは省略可能\ninterface Profile {\n    name: string;\n    // ? でオプショナルに\n    nickname?: string;\n}\n\nconst prof: Profile = { name: 'Bob' };\nconsole.log(prof.name);",
-      "holeyCode": "// ここに ? を入力して、あってもなくてもいいよって教えてね\ninterface Profile {\n    name: string;\n    nickname___: string;\n}\n\nconst prof: Profile = { name: 'Bob' };\nconsole.log(prof.name);",
+      "holeyCode": "// ? を入力して、あってもなくてもいいよって教えてね\n___\n    ___\n    ___\n___\n\n___\n___",
       "correctLines": [
-        "// ここに ? を入力して、あってもなくてもいいよって教えてね",
+        
+        
+        "// ? を入力して、あってもなくてもいいよって教えてね",
         "interface Profile {",
         "    name: string;",
         "    nickname?: string;",
@@ -173,9 +179,11 @@ export const typescriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// type キーワードで型エイリアスを定義\ntype Score = number;\n\nconst math: Score = 85;\nconst english: Score = 90;\nconsole.log(math + english);",
-      "holeyCode": "// ここに type と入力して、新しい名前をつけてね\n___ Score = number;\n\nconst math: Score = 85;\nconst english: Score = 90;\nconsole.log(math + english);",
+      "holeyCode": "// type と入力して、新しい名前をつけてね\n___\n\n___\n___\n___",
       "correctLines": [
-        "// ここに type と入力して、新しい名前をつけてね",
+        
+        
+        "// type と入力して、新しい名前をつけてね",
         "type Score = number;",
         "",
         "const math: Score = 85;",
@@ -219,8 +227,10 @@ export const typescriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// idは読み取り専用\ninterface Item {\n    // readonly で読み取り専用に\n    readonly id: number;\n    name: string;\n}\n\nconst item: Item = { id: 1, name: 'Apple' };\nconsole.log(item.id);",
-      "holeyCode": "interface Item {\n    // ここに readonly と入力して、書き換えられないようにしてね\n    ___ id: number;\n    name: string;\n}\n\nconst item: Item = { id: 1, name: 'Apple' };\nconsole.log(item.id);",
+      "holeyCode": "// idは読み取り専用\n___\n    ___\n    ___\n___\n\n___\n___",
       "correctLines": [
+        
+        
         "// idは読み取り専用",
         "interface Item {",
         "    readonly id: number;",
@@ -269,9 +279,11 @@ export const typescriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// enum キーワードで列挙型を定義\nenum Day {\n    Sun,\n    Mon,\n    Tue\n}\n\nconst today: Day = Day.Mon;\nconsole.log(today);",
-      "holeyCode": "// ここに enum と入力して種類を並べてね\n___ Day {\n    Sun,\n    Mon,\n    Tue\n}\n\nconst today: Day = Day.Mon;\nconsole.log(today);",
+      "holeyCode": "// enum と入力して種類を並べてね\n___\n    ___\n    ___\n    ___\n___\n\n___\n___",
       "correctLines": [
-        "// ここに enum と入力して種類を並べてね",
+        
+        
+        "// enum と入力して種類を並べてね",
         "enum Day {",
         "    Sun,",
         "    Mon,",
@@ -321,10 +333,10 @@ export const typescriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// <T> で型パラメータを定義\nfunction wrap<T>(value: T): T[] {\n    return [value];\n}\n\nconst arr = wrap(5);\nconsole.log(arr);",
-      "holeyCode": "// ここに < と > を入力して型を包んでね\nfunction wrap___T___(value: T): T[] {\n    return [value];\n}\n\nconst arr = wrap(5);\nconsole.log(arr);",
+      "holeyCode": "___",
       "correctLines": [
-        "// ここに < と > を入力して型を包んでね",
-        "function wrap<T>(value: T): T[] {",
+        ""// < と > を入力して型を包んでね",\n        "function wrap<T>(value: T): T["
+      ] {",
         "    return [value];",
         "}",
         "",
@@ -369,9 +381,11 @@ export const typescriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// T で型パラメータを定義\ninterface Container<T> {\n    item: T;\n}\n\nconst box: Container<string> = { item: 'Hello' };\nconsole.log(box.item);",
-      "holeyCode": "// ここに T と入力して、どんな型でも使えるようにしてね\ninterface Container<___> {\n    item: T;\n}\n\nconst box: Container<string> = { item: 'Hello' };\nconsole.log(box.item);",
+      "holeyCode": "// T と入力して、どんな型でも使えるようにしましょう\n___\n    ___\n___\n\n___\n___",
       "correctLines": [
-        "// ここに T と入力して、どんな型でも使えるようにしてね",
+        
+        
+        "// T と入力して、どんな型でも使えるようにしましょう",
         "interface Container<T> {",
         "    item: T;",
         "}",
@@ -417,12 +431,14 @@ export const typescriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 変数から型を取得\nconst point = { x: 10, y: 20 };\n// typeof で変数の型を取得\nconst point2: typeof point = { x: 5, y: 15 };\nconsole.log(point2.x);",
-      "holeyCode": "// 変数から型を取得\nconst point = { x: 10, y: 20 };\n// ここに typeof と入力して型の種類を教えてね\nconst point2: ___ point = { x: 5, y: 15 };\nconsole.log(point2.x);",
+      "holeyCode": "// 変数から型を取得\n___\n\n// typeof と入力して型の種類を教えてね\n___\n___",
       "correctLines": [
+        
+        
         "// 変数から型を取得",
         "const point = { x: 10, y: 20 };",
         "",
-        "// ここに typeof と入力して型の種類を教えてね",
+        "// typeof と入力して型の種類を教えてね",
         "const point2: typeof point = { x: 5, y: 15 };",
         "console.log(point2.x);"
       ],
@@ -462,14 +478,16 @@ export const typescriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 基本のインターフェース\ninterface Base {\n    id: number;\n}\n\n// extends でインターフェースを拡張\ninterface User extends Base {\n    name: string;\n}\n\nconst u: User = { id: 1, name: 'Taro' };\nconsole.log(u.name);",
-      "holeyCode": "// 基本のインターフェース\ninterface Base {\n    id: number;\n}\n\n// ここに extends と入力して約束を広げてね\ninterface User ___ Base {\n    name: string;\n}\n\nconst u: User = { id: 1, name: 'Taro' };\nconsole.log(u.name);",
+      "holeyCode": "// 基本のインターフェース\n___\n    ___\n___\n\n// extends と入力して約束を広げてね\n___\n    ___\n___\n\n___\n___",
       "correctLines": [
+        
+        
         "// 基本のインターフェース",
         "interface Base {",
         "    id: number;",
         "}",
         "",
-        "// ここに extends と入力して約束を広げてね",
+        "// extends と入力して約束を広げてね",
         "interface User extends Base {",
         "    name: string;",
         "}",

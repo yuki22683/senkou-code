@@ -25,10 +25,10 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums=(10 20 30)\n# 2で3番目の要素を取得\necho ${nums[2]}",
-      "holeyCode": "nums=(10 20 30)\n# ここに 2 と入力して、3番目の中身を取り出してね\necho ${nums[___]}",
+      "holeyCode": "___",
       "correctLines": [
-        "nums=(10 20 30)",
-        "echo ${nums[2]}"
+        ""nums=(10 20 30)",\n        "echo ${nums[2"
+      ]}"
       ],
       "lineHints": [
         "",
@@ -63,9 +63,9 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "word=\"Bash\"\n# #で文字列の長さを取得\necho ${#word}",
-      "holeyCode": "word=\"Bash\"\n# ここに # と入力して長さを調べてね\necho ${___word}",
+      "holeyCode": "___\\n___"Bash\"\n# ここに # と入力して長さを調べてね\necho ${___word}",
       "correctLines": [
-        "word=\"Bash\"",
+        "word="Bash"",
         "echo ${#word}"
       ],
       "lineHints": [
@@ -101,9 +101,9 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "text=\"Hello World\"\n# 6で開始位置を指定\necho ${text:6:5}",
-      "holeyCode": "text=\"Hello World\"\n# ここに 6 と入力して、7文字目から取り出してね\necho ${text:___:5}",
+      "holeyCode": "___\\n___"Hello World\"\n# ここに 6 と入力して、7文字目から取り出してね\necho ${text:___:5}",
       "correctLines": [
-        "text=\"Hello World\"",
+        "text="Hello World"",
         "echo ${text:6:5}"
       ],
       "lineHints": [
@@ -139,8 +139,10 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "add() {\n    # $1で最初の引数を参照\n    echo $(($1 + $2))\n}\nadd 3 5",
-      "holeyCode": "add() {\n    # ここに $1 と入力して最初の数字を使ってね\n    echo $((___ + $2))\n}\nadd 3 5",
+      "holeyCode": "___\n    ___\n___\n___",
       "correctLines": [
+        
+        
         "add() {",
         "    echo $(($1 + $2))",
         "}",
@@ -181,8 +183,10 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "square() {\n    echo $(($1 * $1))\n}\n# $で関数の出力を受け取る\nresult=$(square 4)\necho $result",
-      "holeyCode": "square() {\n    echo $(($1 * $1))\n}\n# ここに $ と入力して、関数の結果を受け取ってね\nresult=___(square 4)\necho $result",
+      "holeyCode": "___\n    ___\n___\n___\n___",
       "correctLines": [
+        
+        
         "square() {",
         "    echo $(($1 * $1))",
         "}",
@@ -225,10 +229,10 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "i=1\n# whileで条件ループ\nwhile [ $i -le 3 ]; do\n    echo $i\n    i=$((i + 1))\ndone",
-      "holeyCode": "i=1\n# ここに while と入力して、くり返してね\n___ [ $i -le 3 ]; do\n    echo $i\n    i=$((i + 1))\ndone",
+      "holeyCode": "___",
       "correctLines": [
-        "i=1",
-        "while [ $i -le 3 ]; do",
+        ""i=1",\n        "while [ $i -le 3"
+      ]; do",
         "    echo $i",
         "    i=$((i + 1))",
         "done"
@@ -269,13 +273,13 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fruit=\"apple\"\n# caseで分岐\ncase $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
-      "holeyCode": "fruit=\"apple\"\n# ここに case と入力して、条件でわけてね\n___ $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
+      "holeyCode": "___\\n___\\n    ___\\n    ___\\n    *) echo \"unknown\";;\\n___"apple\"\n# ここに case と入力して、条件でわけてね\n___ $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
       "correctLines": [
-        "fruit=\"apple\"",
+        "fruit="apple"",
         "case $fruit in",
-        "    apple) echo \"red\";;",
-        "    banana) echo \"yellow\";;",
-        "    *) echo \"unknown\";;",
+        "    apple) echo "red";;",
+        "    banana) echo "yellow";;",
+        "    *) echo "unknown";;",
         "esac"
       ],
       "lineHints": [
@@ -315,10 +319,10 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# $でコマンドの出力を取得\nfiles=$(ls)\necho \"Files: $files\"",
-      "holeyCode": "# ここに $ と入力して、ls コマンドの結果を受け取ってね\nfiles=___(ls)\necho \"Files: $files\"",
+      "holeyCode": "___\\n___"Files: $files\"",
       "correctLines": [
         "files=$(ls)",
-        "echo \"Files: $files\""
+        "echo "Files: $files""
       ],
       "lineHints": [
         "$() でコマンドの出力を取得します。",
@@ -353,9 +357,9 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# readで入力を受け取る\necho \"input:\" && read val && echo \"You entered: $val\"",
-      "holeyCode": "# ここに read と入力して、言葉を受け取ってね\necho \"input:\" && ___ val && echo \"You entered: $val\"",
+      "holeyCode": "___"input:\" && ___ val && echo \"You entered: $val\"",
       "correctLines": [
-        "echo \"input:\" && read val && echo \"You entered: $val\""
+        "echo "input:" && read val && echo "You entered: $val""
       ],
       "lineHints": [
         "read で入力を受け取ります。"
@@ -389,8 +393,10 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# <<でヒアドキュメントを開始\ncat <<END\nHello\nWorld\nEND",
-      "holeyCode": "# ここに << と入力して、文章をまとめて送ってね\ncat ___END\nHello\nWorld\nEND",
+      "holeyCode": "___\n___\n___\n___",
       "correctLines": [
+        
+        
         "cat <<END",
         "Hello",
         "World",

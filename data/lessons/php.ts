@@ -25,10 +25,11 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  // 画面にメッセージを出す関数\n  echo \"Hello, PHP!\";\n?>",
-      "holeyCode": "<?php\n  // ここに \"Hello, PHP!\" と入力してね\n  echo \"___\";\n?>",
+      "holeyCode": "___\\n___\\n___\\n___"Hello, PHP!\" と入力してね\n  echo \"___\";\n?>",
       "correctLines": [
         "<?php",
-        "  echo \"Hello, PHP!\";",
+        ""  echo "Hello",
+        "PHP!";"",
         "?>"
       ],
       "lineHints": [
@@ -70,8 +71,10 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  // x というはこに 10 を入れる\n  $x = 10;\n  // 中身を表示する\n  echo $x;\n?>",
-      "holeyCode": "<?php\n  // ここに 10 を入力してね\n  $x = ___ ;\n  // ここに x と入力して中身を表示してね\n  echo $___ ;\n?>",
+      "holeyCode": "___\n  ___\n  ___\n___",
       "correctLines": [
+        
+        
         "<?php",
         "  $x = 10;",
         "  echo $x;",
@@ -117,8 +120,10 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  // はこに数字を入れる\n  $a = 5;\n  $b = 3;\n  // たし算した結果を表示する\n  echo $a + $b;\n?>",
-      "holeyCode": "<?php\n  // はこに数字を入れる\n  $a = 5;\n  $b = 3;\n  // ここに + を入力してたし算してね\n  echo $a ___ $b;\n?>",
+      "holeyCode": "___\n  ___\n  ___\n  ___\n___",
       "correctLines": [
+        
+        
         "<?php",
         "  $a = 5;",
         "  $b = 3;",
@@ -163,11 +168,11 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  // ageに20を入れる\n  $age = 20;\n  // 文章の中に中身を表示する\n  echo \"I am $age years old.\";\n?>",
-      "holeyCode": "<?php\n  // ageに20を入れる\n  $age = 20;\n  // ここに age と入力して年齢を表示してね\n  echo \"I am $___ years old.\";\n?>",
+      "holeyCode": "___\\n  ___\\n  ___\\n___"I am $___ years old.\";\n?>",
       "correctLines": [
         "<?php",
         "  $age = 20;",
-        "  echo \"I am $age years old.\";",
+        "  echo "I am $age years old.";",
         "?>"
       ],
       "lineHints": [
@@ -207,10 +212,11 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  // 配列を作る\n  $colors = ['red', 'blue'];\n  // 2番目のデータを表示する\n  echo $colors[1];\n?>",
-      "holeyCode": "<?php\n  // 配列を作る\n  $colors = ['red', 'blue'];\n  // 2番目の中身を取り出すために 1 を入力してね\n  echo $colors[___];\n?>",
+      "holeyCode": "___\\n___",
       "correctLines": [
-        "<?php",
-        "  $colors = ['red', 'blue'];",
+        ""<?php",\n        "  $colors = ['red'",
+        "'blue'"
+      ];",
         "  echo $colors[1];",
         "?>"
       ],
@@ -251,12 +257,12 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  $score = 100;\n  // >で大きいか比較\n  if ($score > 80) {\n    echo \"Excellent\";\n  }\n?>",
-      "holeyCode": "<?php\n  $score = 100;\n  // ここに > を入力して「大きい」を表してね\n  if ($score ___ 80) {\n    echo \"Excellent\";\n  }\n?>",
+      "holeyCode": "___\\n  ___\\n  ___\\n    ___\\n  ___\\n___"Excellent\";\n  }\n?>",
       "correctLines": [
         "<?php",
         "  $score = 100;",
         "  if ($score > 80) {",
-        "    echo \"Excellent\";",
+        "    echo "Excellent";",
         "  }",
         "?>"
       ],
@@ -299,14 +305,14 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  $age = 18;\n  if ($age >= 20) {\n    echo \"Adult\";\n  // elseで「そうでなければ」\n  } else {\n    echo \"Minor\";\n  }\n?>",
-      "holeyCode": "<?php\n  $age = 18;\n  if ($age >= 20) {\n    echo \"Adult\";\n  // ここに else と入力してね\n  } ___ {\n    echo \"Minor\";\n  }\n?>",
+      "holeyCode": "___\\n  ___\\n  ___\\n    ___\\n  ___\\n    ___\\n  ___\\n___"Adult\";\n  // ここに else と入力してね\n  } ___ {\n    echo \"Minor\";\n  }\n?>",
       "correctLines": [
         "<?php",
         "  $age = 18;",
         "  if ($age >= 20) {",
-        "    echo \"Adult\";",
+        "    echo "Adult";",
         "  } else {",
-        "    echo \"Minor\";",
+        "    echo "Minor";",
         "  }",
         "?>"
       ],
@@ -351,10 +357,12 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  $nums = [1, 2, 3];\n  // asで各要素を取り出す\n  foreach ($nums as $n) {\n    echo $n;\n  }\n?>",
-      "holeyCode": "<?php\n  $nums = [1, 2, 3];\n  // ここに as と入力してね\n  foreach ($nums ___ $n) {\n    echo $n;\n  }\n?>",
+      "holeyCode": "___\\n___\\n___",
       "correctLines": [
-        "<?php",
-        "  $nums = [1, 2, 3];",
+        ""<?php",\n        "  $nums = [1",
+        "2",
+        "3"
+      ];",
         "  foreach ($nums as $n) {",
         "    echo $n;",
         "  }",
@@ -399,10 +407,10 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  $user = ['name' => 'Alice'];\n  // nameでキーを指定してアクセス\n  echo $user['name'];\n?>",
-      "holeyCode": "<?php\n  $user = ['name' => 'Alice'];\n  // ここに 'name' と入力してね\n  echo $user['___'];\n?>",
+      "holeyCode": "___",
       "correctLines": [
-        "<?php",
-        "  $user = ['name' => 'Alice'];",
+        ""<?php",\n        "  $user = ['name' => 'Alice'"
+      ];",
         "  echo $user['name'];",
         "?>"
       ],
@@ -443,11 +451,11 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  function greet() {\n    echo \"Hello\";\n  }\n  // 関数を実行する\n  greet();\n?>",
-      "holeyCode": "<?php\n  function greet() {\n    echo \"Hello\";\n  }\n  // ここに greet と入力して関数を動かしてね\n  ___();\n?>",
+      "holeyCode": "___\\n  ___\\n    ___\\n  ___\\n  ___\\n___"Hello\";\n  }\n  // ここに greet と入力して関数を動かしてね\n  ___();\n?>",
       "correctLines": [
         "<?php",
         "  function greet() {",
-        "    echo \"Hello\";",
+        "    echo "Hello";",
         "  }",
         "  greet();",
         "?>"

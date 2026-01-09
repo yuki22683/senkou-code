@@ -25,7 +25,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Container<T> {\n    public T Item { get; set; }\n}\n\nclass Program {\n    static void Main() {\n        var c = new Container<string> { Item = \"Hello\" };\n        Console.WriteLine(c.Item);\n    }\n}",
-      "holeyCode": "using System;\n\n// ここに < と > を入力して型を包んでね\nclass Container___T___ {\n    public T Item { get; set; }\n}\n\nclass Program {\n    static void Main() {\n        var c = new Container<string> { Item = \"Hello\" };\n        Console.WriteLine(c.Item);\n    }\n}",
+      "holeyCode": "___\\n\\n___\\n    ___\\n___\\n\\n___\\n    ___\\n        ___\\n        ___\\n    ___\\n___"Hello\" };\n        Console.WriteLine(c.Item);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -35,7 +35,7 @@ export const csharp4Data = {
         "",
         "class Program {",
         "    static void Main() {",
-        "        var c = new Container<string> { Item = \"Hello\" };",
+        "        var c = new Container<string> { Item = "Hello" };",
         "        Console.WriteLine(c.Item);",
         "    }",
         "}"
@@ -83,8 +83,10 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Comparer<T> where T : IComparable<T> {\n    public int Compare(T a, T b) => a.CompareTo(b);\n}\n\nclass Program {\n    static void Main() {\n        var c = new Comparer<int>();\n        Console.WriteLine(c.Compare(5, 3));\n    }\n}",
-      "holeyCode": "using System;\n\n// ここに where と入力して条件を付けてね\nclass Comparer<T> ___ T : IComparable<T> {\n    public int Compare(T a, T b) => a.CompareTo(b);\n}\n\nclass Program {\n    static void Main() {\n        var c = new Comparer<int>();\n        Console.WriteLine(c.Compare(5, 3));\n    }\n}",
+      "holeyCode": "___\n\n___\n    ___\n___\n\n___\n    ___\n        ___\n        ___\n    ___\n___",
       "correctLines": [
+        
+        
         "using System;",
         "",
         "class Comparer<T> where T : IComparable<T> {",
@@ -141,8 +143,10 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    delegate int MathOp(int x);\n    \n    static int Double(int n) => n * 2;\n    \n    static void Main() {\n        MathOp op = Double;\n        Console.WriteLine(op(5));\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    // ここに delegate と入力して型を定義してね\n    ___ int MathOp(int x);\n    \n    static int Double(int n) => n * 2;\n    \n    static void Main() {\n        MathOp op = Double;\n        Console.WriteLine(op(5));\n    }\n}",
+      "holeyCode": "___\n\n___\n    ___\n    \n    ___\n    \n    ___\n        ___\n        ___\n    ___\n___",
       "correctLines": [
+        
+        
         "using System;",
         "",
         "class Program {",
@@ -199,8 +203,10 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        Func<int, int> triple = x => x * 3;\n        Console.WriteLine(triple(7));\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        // ここに Func と入力してね\n        ___<int, int> triple = x => x * 3;\n        Console.WriteLine(triple(7));\n    }\n}",
+      "holeyCode": "___\n\n___\n    ___\n        ___\n        ___\n    ___\n___",
       "correctLines": [
+        
+        
         "using System;",
         "",
         "class Program {",
@@ -249,14 +255,15 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        Action<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\n        greet(\"World\");\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        // ここに Action と入力してね\n        ___<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\n        greet(\"World\");\n    }\n}",
+      "holeyCode": "___\\n\\n___\\n    ___\\n___\\n___\\n        ___\\n    ___\\n___"Hello, {name}!\");\n        greet(\"World\");\n    }\n}",
       "correctLines": [
         "using System;",
         "",
         "class Program {",
         "    static void Main() {",
-        "        Action<string> greet = name => Console.WriteLine($\"Hello, {name}!\");",
-        "        greet(\"World\");",
+        ""        Action<string> greet = name => Console.WriteLine($"Hello",
+        "{name}!");"",
+        "        greet("World");",
         "    }",
         "}"
       ],
@@ -299,14 +306,10 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5, 6 };\n        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");\n        foreach (var g in groups) {\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\n        }\n    }\n}",
-      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5, 6 };\n        // ここに GroupBy と入力してグループにわけてね\n        var groups = nums.___(n => n % 2 == 0 ? \"even\" : \"odd\");\n        foreach (var g in groups) {\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\n        }\n    }\n}",
+      "holeyCode": "___"even\" : \"odd\");\n        foreach (var g in groups) {\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\n        }\n    }\n}",
       "correctLines": [
-        "using System;",
-        "using System.Linq;",
-        "",
-        "class Program {",
-        "    static void Main() {",
-        "        var nums = new[] { 1, 2, 3, 4, 5, 6 };",
+        ""using System;",\n        "using System.Linq;",\n        "",\n        "class Program {",\n        "    static void Main() {",\n        "        var nums = new["
+      ] { 1, 2, 3, 4, 5, 6 };",
         "        // ここに GroupBy と入力してグループにわけてね",
         "        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");",
         "        foreach (var g in groups) {",
@@ -358,14 +361,16 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? s = null;\n        int? len = s?.Length;\n        Console.WriteLine(len ?? 0);\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? s = null;\n        // ここに ?. と入力してね\n        int? len = s___.Length;\n        Console.WriteLine(len ?? 0);\n    }\n}",
+      "holeyCode": "___\n\n___\n    ___\n        ___\n        // ?. を使いましょう\n        ___\n        ___\n    ___\n___",
       "correctLines": [
+        
+        
         "using System;",
         "",
         "class Program {",
         "    static void Main() {",
         "        string? s = null;",
-        "        // ここに ?. と入力してね",
+        "        // ?. を使いましょう",
         "        int? len = s?.Length;",
         "        Console.WriteLine(len ?? 0);",
         "    }",
@@ -411,15 +416,15 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? value = null;\n        string result = value ?? \"default\";\n        Console.WriteLine(result);\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? value = null;\n        // ここに ?? と入力してデフォルト値を決めてね\n        string result = value ___ \"default\";\n        Console.WriteLine(result);\n    }\n}",
+      "holeyCode": "___\\n\\n___\\n    ___\\n        ___\\n        // ?? と入力してデフォルト値を決めてね\\n        ___\\n        ___\\n    ___\\n___"default\";\n        Console.WriteLine(result);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
         "class Program {",
         "    static void Main() {",
         "        string? value = null;",
-        "        // ここに ?? と入力してデフォルト値を決めてね",
-        "        string result = value ?? \"default\";",
+        "        // ?? と入力してデフォルト値を決めてね",
+        "        string result = value ?? "default";",
         "        Console.WriteLine(result);",
         "    }",
         "}"
@@ -464,11 +469,13 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nrecord Point(int X, int Y);\n\nclass Program {\n    static void Main() {\n        var p = new Point(3, 4);\n        Console.WriteLine(p);\n    }\n}",
-      "holeyCode": "using System;\n\n// ここに record と入力して、新しい型を作ってね\n___ Point(int X, int Y);\n\nclass Program {\n    static void Main() {\n        var p = new Point(3, 4);\n        Console.WriteLine(p);\n    }\n}",
+      "holeyCode": "___\n\n// record と入力して、新しい型を作ってね\n___\n\n___\n    ___\n        ___\n        ___\n    ___\n___",
       "correctLines": [
+        
+        
         "using System;",
         "",
-        "// ここに record と入力して、新しい型を作ってね",
+        "// record と入力して、新しい型を作ってね",
         "record Point(int X, int Y);",
         "",
         "class Program {",
@@ -519,18 +526,18 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Item {\n    public string Name { get; init; }\n}\n\nclass Program {\n    static void Main() {\n        var item = new Item { Name = \"Apple\" };\n        Console.WriteLine(item.Name);\n    }\n}",
-      "holeyCode": "using System;\n\nclass Item {\n    // ここに init と入力して、最初だけ設定できるようにしてね\n    public string Name { get; ___; }\n}\n\nclass Program {\n    static void Main() {\n        var item = new Item { Name = \"Apple\" };\n        Console.WriteLine(item.Name);\n    }\n}",
+      "holeyCode": "___\\n\\n___\\n    // init と入力して、最初だけ設定できるようにしましょう\\n    ___\\n___\\n\\n___\\n    ___\\n        ___\\n        ___\\n    ___\\n___"Apple\" };\n        Console.WriteLine(item.Name);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
         "class Item {",
-        "    // ここに init と入力して、最初だけ設定できるようにしてね",
+        "    // init と入力して、最初だけ設定できるようにしましょう",
         "    public string Name { get; init; }",
         "}",
         "",
         "class Program {",
         "    static void Main() {",
-        "        var item = new Item { Name = \"Apple\" };",
+        "        var item = new Item { Name = "Apple" };",
         "        Console.WriteLine(item.Name);",
         "    }",
         "}"

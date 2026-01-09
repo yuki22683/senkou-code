@@ -25,11 +25,11 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Vehicle {\n    public void Move() {\n        Console.WriteLine(\"moving\");\n    }\n}\nclass Car : Vehicle { }\n\nCar c = new Car();\nc.Move();",
-      "holeyCode": "class Vehicle {\n    public void Move() {\n        Console.WriteLine(\"moving\");\n    }\n}\n// ここに : と入力して Vehicle（親）を継承してね\nclass Car ___ Vehicle { }\n\nCar c = new Car();\nc.Move();",
+      "holeyCode": "___\\n    ___\\n        ___\\n    ___\\n___\\n___\\n\\n___\\n___"moving\");\n    }\n}\n// ここに : と入力して Vehicle（親）を継承してね\nclass Car ___ Vehicle { }\n\nCar c = new Car();\nc.Move();",
       "correctLines": [
         "class Vehicle {",
         "    public void Move() {",
-        "        Console.WriteLine(\"moving\");",
+        "        Console.WriteLine("moving");",
         "    }",
         "}",
         "class Car : Vehicle { }",
@@ -77,16 +77,16 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Shape {\n    public virtual void Draw() {\n        Console.WriteLine(\"shape\");\n    }\n}\nclass Circle : Shape {\n    public override void Draw() {\n        Console.WriteLine(\"circle\");\n    }\n}\n\nCircle c = new Circle();\nc.Draw();",
-      "holeyCode": "class Shape {\n    public virtual void Draw() {\n        Console.WriteLine(\"shape\");\n    }\n}\nclass Circle : Shape {\n    // ここに override と入力してね\n    public ___ void Draw() {\n        Console.WriteLine(\"circle\");\n    }\n}\n\nCircle c = new Circle();\nc.Draw();",
+      "holeyCode": "___\\n    ___\\n        ___\\n    ___\\n___\\n___\\n    ___\\n        ___\\n    ___\\n___\\n\\n___\\n___"shape\");\n    }\n}\nclass Circle : Shape {\n    // ここに override と入力してね\n    public ___ void Draw() {\n        Console.WriteLine(\"circle\");\n    }\n}\n\nCircle c = new Circle();\nc.Draw();",
       "correctLines": [
         "class Shape {",
         "    public virtual void Draw() {",
-        "        Console.WriteLine(\"shape\");",
+        "        Console.WriteLine("shape");",
         "    }",
         "}",
         "class Circle : Shape {",
         "    public override void Draw() {",
-        "        Console.WriteLine(\"circle\");",
+        "        Console.WriteLine("circle");",
         "    }",
         "}",
         "",
@@ -137,14 +137,14 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "interface IRunner {\n    void Run();\n}\nclass Robot : IRunner {\n    public void Run() {\n        Console.WriteLine(\"running\");\n    }\n}\n\nRobot r = new Robot();\nr.Run();",
-      "holeyCode": "// ここに interface と入力してね\n___ IRunner {\n    void Run();\n}\nclass Robot : IRunner {\n    public void Run() {\n        Console.WriteLine(\"running\");\n    }\n}\n\nRobot r = new Robot();\nr.Run();",
+      "holeyCode": "___\\n    ___\\n___\\n___\\n    ___\\n        ___\\n    ___\\n___\\n\\n___\\n___"running\");\n    }\n}\n\nRobot r = new Robot();\nr.Run();",
       "correctLines": [
         "interface IRunner {",
         "    void Run();",
         "}",
         "class Robot : IRunner {",
         "    public void Run() {",
-        "        Console.WriteLine(\"running\");",
+        "        Console.WriteLine("running");",
         "    }",
         "}",
         "",
@@ -193,8 +193,10 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Item {\n    public int Price { get; set; }\n}\n\nItem item = new Item();\nitem.Price = 500;\nConsole.WriteLine(item.Price);",
-      "holeyCode": "class Item {\n    // ここに get と入力して値を受け取れるようにしてね\n    public int Price { ___; set; }\n}\n\nItem item = new Item();\nitem.Price = 500;\nConsole.WriteLine(item.Price);",
+      "holeyCode": "___\n    ___\n___\n\n___\n___\n___",
       "correctLines": [
+        
+        
         "class Item {",
         "    public int Price { get; set; }",
         "}",
@@ -241,12 +243,10 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "List<int> nums = new List<int>();\nnums.Add(10);\nnums.Add(20);\nConsole.WriteLine(nums[1]);",
-      "holeyCode": "List<int> nums = new List<int>();\n// ここに Add と入力して仲間に入れてね\nnums.___(10);\nnums.___(20);\nConsole.WriteLine(nums[1]);",
+      "holeyCode": "___",
       "correctLines": [
-        "List<int> nums = new List<int>();",
-        "nums.Add(10);",
-        "nums.Add(20);",
-        "Console.WriteLine(nums[1]);"
+        ""List<int> nums = new List<int>();",\n        "nums.Add(10);",\n        "nums.Add(20);",\n        "Console.WriteLine(nums[1"
+      ]);"
       ],
       "lineHints": [
         "int型のListを作成します。",
@@ -283,8 +283,10 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "List<int> nums = new List<int> {1, 5, 10, 15, 20};\nvar result = nums.Where(n => n >= 10);\nforeach (var n in result) {\n    Console.WriteLine(n);\n}",
-      "holeyCode": "List<int> nums = new List<int> {1, 5, 10, 15, 20};\n// ここに Where と入力して条件に合うものだけにしてね\nvar result = nums.___(n => n >= 10);\nforeach (var n in result) {\n    Console.WriteLine(n);\n}",
+      "holeyCode": "___\n___\n___\n    ___\n___",
       "correctLines": [
+        
+        
         "List<int> nums = new List<int> {1, 5, 10, 15, 20};",
         "var result = nums.Where(n => n >= 10);",
         "foreach (var n in result) {",
@@ -327,8 +329,10 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "List<int> nums = new List<int> {1, 2, 3};\nvar squared = nums.Select(n => n * n);\nforeach (var n in squared) {\n    Console.WriteLine(n);\n}",
-      "holeyCode": "List<int> nums = new List<int> {1, 2, 3};\n// ここに Select と入力して形を変えてね\nvar squared = nums.___(n => n * n);\nforeach (var n in squared) {\n    Console.WriteLine(n);\n}",
+      "holeyCode": "___\n___\n___\n    ___\n___",
       "correctLines": [
+        
+        
         "List<int> nums = new List<int> {1, 2, 3};",
         "var squared = nums.Select(n => n * n);",
         "foreach (var n in squared) {",
@@ -371,8 +375,10 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "Func<int, int> triple = x => x * 3;\nConsole.WriteLine(triple(7));",
-      "holeyCode": "// ここに => と入力してね\nFunc<int, int> triple = x ___ x * 3;\nConsole.WriteLine(triple(7));",
+      "holeyCode": "___\n___",
       "correctLines": [
+        
+        
         "Func<int, int> triple = x => x * 3;",
         "Console.WriteLine(triple(7));"
       ],
@@ -409,12 +415,12 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "try {\n    throw new Exception(\"oops\");\n} catch (Exception e) {\n    Console.WriteLine(\"caught\");\n}",
-      "holeyCode": "// ここに try と入力して、エラーが起きないか見守ってね\n___ {\n    throw new Exception(\"oops\");\n} catch (Exception e) {\n    Console.WriteLine(\"caught\");\n}",
+      "holeyCode": "___\\n    ___\\n___\\n    ___\\n___"oops\");\n} catch (Exception e) {\n    Console.WriteLine(\"caught\");\n}",
       "correctLines": [
         "try {",
-        "    throw new Exception(\"oops\");",
+        "    throw new Exception("oops");",
         "} catch (Exception e) {",
-        "    Console.WriteLine(\"caught\");",
+        "    Console.WriteLine("caught");",
         "}"
       ],
       "lineHints": [
@@ -453,9 +459,9 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "string text = \"Hello\";\nint? length = text?.Length;\nConsole.WriteLine(length);",
-      "holeyCode": "string text = \"Hello\";\n// ここに ?. と入力して、nullじゃないときだけ教えてね\nint? length = text___Length;\nConsole.WriteLine(length);",
+      "holeyCode": "___\\n___\\n___"Hello\";\n// ここに ?. と入力して、nullじゃないときだけ教えてね\nint? length = text___Length;\nConsole.WriteLine(length);",
       "correctLines": [
-        "string text = \"Hello\";",
+        "string text = "Hello";",
         "int? length = text?.Length;",
         "Console.WriteLine(length);"
       ],

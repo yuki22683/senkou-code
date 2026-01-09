@@ -142,18 +142,36 @@ const LANGUAGE_CONFIG: Record<string, { keywords: Set<string>, builtins: Set<str
   },
 };
 
-// コードの正規化: インデントと必要なスペース（単語間）を維持し、記号周りの不要なスペースを削除
-const normalizeCode = (str: string) => {
+// コードの正規化: コメントを除外し、インデントと必要なスペース（単語間）を維持し、記号周りの不要なスペースを削除
+const normalizeCode = (str: string, language: string) => {
   if (!str) return "";
-  // 1. 先頭の空白（インデント）を保持
-  const leadingMatch = str.match(/^(\s*)/);
-  const leading = leadingMatch ? leadingMatch[0] : "";
-  const content = str.slice(leading.length).trim();
 
-  // 2. 内部の正規化
+  // 1. コメントを除去
+  const config = LANGUAGE_CONFIG[language] || LANGUAGE_CONFIG.python;
+  const commentPrefix = config.commentPrefix;
+  
+  const linesWithoutComments = str.split("\n").map(line => {
+    // 文字列内の引用符を考慮せずに、単純にコメント記号以降を削除
+    // (練習問題のコードは単純なので、これで概ね動作する)
+    const commentIndex = line.indexOf(commentPrefix);
+    if (commentIndex !== -1) {
+      return line.slice(0, commentIndex);
+    }
+    return line;
+  });
+  
+  const contentWithoutComments = linesWithoutComments.join("\n");
+
+  // 2. 先頭の空白（インデント）を保持
+  const leadingMatch = contentWithoutComments.match(/^(\s*)/);
+  const leading = leadingMatch ? leadingMatch[0] : "";
+  const content = contentWithoutComments.slice(leading.length).trim();
+
+  // 3. 内部の正規化
   let normalized = content
     .replace(/\s+/g, " ") // 連続する空白を1つに
-    .replace(/\s*([()\[\]{}:.,=+*/%&|^<>!])\s*/g, "$1"); // 記号周りの空白を削除
+    .replace(/\s*([()\[\]{}:.,=+*/%&|^<>!])\s*/g, "$1") // 記号周りの空白を削除
+    .replace(/['"]/g, '"'); // 引用符をダブルクォートに統一して判定を柔軟にする
 
   return leading + normalized;
 };
@@ -178,9 +196,9 @@ export function MobileCodeEditor({
   }, [initialCode]);
 
   const [lines, setLines] = useState<string[]>(() => {
-    return initialCode.split("\n").map((line, i) => {
+    return initialCode.split("\n").map((line) => {
       if (line.includes("___")) {
-        // インデント部分だけを抽出して残す
+        // インデント部分だけを抽出して残す（白紙状態）
         const match = line.match(/^(\s*)/);
         return match ? match[0] : "";
       }
@@ -189,7 +207,21 @@ export function MobileCodeEditor({
   });
   
   const [cursor, setCursor] = useState(() => {
-    const initLines = initialCode.split("\n").map(line => {
+    const initLinesWithHoles = initialCode.split("\n");
+    
+    // 最初の虫食い（___）がある行を探す
+    for (let i = 0; i < initLinesWithHoles.length; i++) {
+      const holeIndex = initLinesWithHoles[i].indexOf("___");
+      if (holeIndex !== -1) {
+        // 行が白紙化されるため、カーソルはインデントの直後に置く
+        const match = initLinesWithHoles[i].match(/^(\s*)/);
+        const indent = match ? match[0].length : 0;
+        return { line: i, col: indent };
+      }
+    }
+
+    // 虫食いがない場合は、正解と異なる最初の行を探す（従来のフォールバック）
+    const initLines = initLinesWithHoles.map(line => {
       if (line.includes("___")) {
         const match = line.match(/^(\s*)/);
         return match ? match[0] : "";
@@ -200,8 +232,7 @@ export function MobileCodeEditor({
     
     const correctLines = correctCode.split("\n");
     for (let i = 0; i < initLines.length; i++) {
-      if (initLines[i] !== correctLines[i]) {
-        // 最初の虫食い行のインデントの直後にカーソルを置く
+      if (normalizeCode(initLines[i], language) !== normalizeCode(correctLines[i], language)) {
         return { line: i, col: minCols[i] };
       }
     }
@@ -278,8 +309,12 @@ export function MobileCodeEditor({
 
     const correctLines = correctCode.split("\n");
     const targetLine = correctLines[cursor.line] || "";
-    // 選択肢から除外する記号（ただし*は*args/**kwargs用に残す）
-    const keypadItems = new Set(['=', '+', '-', '/', '%', '(', ')']);
+    // 選択肢から除外する記号（キーパッドに配置するもの）
+    const keypadItemsList = ['=', '+', '-', '/', '*', '%', '(', ')', "'", '"', ':', ',', '[', ']', '{', '}', '.', '>', '<'];
+    const filteredKeypadItems = language === 'python' 
+      ? keypadItemsList.filter(item => item !== '"')
+      : keypadItemsList;
+    const keypadItems = new Set(filteredKeypadItems);
 
     if (targetLine.trim()) {
       const tokens = tokenize(targetLine);
@@ -357,15 +392,15 @@ export function MobileCodeEditor({
       const targetLine = correctLines[cursor.line] || "";
 
       // 正規化した内容で比較
-      if (normalizeCode(newLineContent) === normalizeCode(targetLine)) {
+      if (normalizeCode(newLineContent, language) === normalizeCode(targetLine, language)) {
         // Line completed!
         
         // Check if full code is correct (including this new line)
         const newFullLines = lines.map((l, i) => i === cursor.line ? newLineContent : l);
         const newFullCode = newFullLines.join("\n");
         
-        const normalizedFullLines = newFullLines.map(l => normalizeCode(l)).join("\n");
-        const normalizedCorrectFullLines = correctLines.map(l => normalizeCode(l)).join("\n");
+        const normalizedFullLines = newFullLines.map(l => normalizeCode(l, language)).join("\n");
+        const normalizedCorrectFullLines = correctLines.map(l => normalizeCode(l, language)).join("\n");
 
         if (normalizedFullLines.trim() === normalizedCorrectFullLines.trim()) {
           onRun?.(newFullCode);
@@ -374,7 +409,7 @@ export function MobileCodeEditor({
           while (next < lines.length) {
              const currentVal = lines[next];
              const correctVal = correctLines[next];
-             if (normalizeCode(currentVal) !== normalizeCode(correctVal)) {
+             if (normalizeCode(currentVal, language) !== normalizeCode(correctVal, language)) {
                  break;
              }
              next++;
@@ -438,8 +473,17 @@ export function MobileCodeEditor({
       });
       setCursor((prev) => ({ ...prev, col: newCol }));
     } else if (cursor.line > 0) {
+      // 虫食い行で何も入力されていない場合は、前の行に戻らないようにする
+      const originalLines = initialCode.split("\n");
+      const isHoley = originalLines[cursor.line]?.includes("___");
+      const currentLineIsEmpty = lines[cursor.line].length <= minCols[cursor.line];
+
+      if (isHoley && currentLineIsEmpty) {
+        // 何もしない（前の行に戻らない）
+        return;
+      }
+
       // 前の行へ戻る（インデント位置まで）
-      // ... 既存のロジックを微調整
       setCursor((prev) => {
         const prevLineIdx = prev.line - 1;
         return {
@@ -550,7 +594,7 @@ export function MobileCodeEditor({
           // チェックマークを表示する条件：
           // 1. 元々虫食い行である
           // 2. 現在の入力内容が（正規化して）正解と一致している
-          const showCheckmark = isHoley && targetLine && normalizeCode(line) === normalizeCode(targetLine);
+          const showCheckmark = isHoley && targetLine && normalizeCode(line, language) === normalizeCode(targetLine, language);
 
           return (
             <div
@@ -634,7 +678,7 @@ export function MobileCodeEditor({
                       borderColor: COLORS.buttonBorder,
                       ...getTokenStyle(token)
                     }}
-                    className="flex-shrink-0 px-2 py-1.5 sm:px-3 sm:py-2 rounded font-mono font-bold border active:scale-95 transition-transform text-xs sm:text-lg lg:text-2xl whitespace-nowrap"
+                    className="flex-shrink-0 px-2 py-1.5 sm:px-3 sm:py-2 rounded font-mono font-bold border active:scale-95 transition-transform text-xs sm:text-lg lg:text-2xl whitespace-nowrap text-center"
                   >
                     {token}
                   </button>
@@ -646,10 +690,13 @@ export function MobileCodeEditor({
 
         <div className="flex flex-col gap-1 sm:gap-2 mb-2">
           {(() => {
-            const keypadItems = ['=', '+', '-', '/', '*', '%', '(', ')', "'"];
+            const allKeypadItems = ['=', '+', '-', '/', '*', '%', '(', ')', "'", '"', ':', ',', '[', ']', '{', '}', '.', '>', '<'];
+            const keypadItems = language === 'python'
+              ? allKeypadItems.filter(item => item !== '"')
+              : allKeypadItems;
             const count = keypadItems.length;
-            // 9個の場合、2行に分けてバランスを取る（5+4）
-            const numRows = count > 6 ? 2 : 1;
+            // 2行または3行に分けてバランスを取る
+            const numRows = count > 12 ? 3 : (count > 6 ? 2 : 1);
             const itemsPerRow = Math.ceil(count / numRows);
             const rows = [];
             for (let i = 0; i < count; i += itemsPerRow) {
@@ -657,7 +704,7 @@ export function MobileCodeEditor({
             }
 
             return rows.map((row, rowIdx) => (
-              <div key={rowIdx} className="flex w-full gap-1 sm:gap-2">
+              <div key={rowIdx} className="flex w-full gap-1 sm:gap-2 justify-center">
                 {row.map((char) => (
                   <button
                     key={char}
@@ -667,7 +714,7 @@ export function MobileCodeEditor({
                       borderColor: COLORS.buttonBorder,
                       ...getTokenStyle(char)
                     }}
-                    className="flex-auto px-3 py-1.5 sm:px-4 sm:py-2 rounded font-mono font-bold border active:scale-95 transition-transform text-xs sm:text-lg lg:text-2xl truncate"
+                    className="flex-1 px-3 py-1.5 sm:px-4 sm:py-2 rounded font-mono font-bold border active:scale-95 transition-transform text-xs sm:text-lg lg:text-2xl truncate text-center"
                   >
                     {char}
                   </button>

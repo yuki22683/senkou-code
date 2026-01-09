@@ -25,9 +25,11 @@ export const pythonData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# ラムダ式で2乗を計算\nsquare = lambda x: x ** 2\nprint(square(5))",
-      "holeyCode": "# ここに lambda と入力してね\nsquare = ___ x: x ** 2\nprint(square(5))",
+      "holeyCode": "# 変数 lambda を使いましょう\n___\n___",
       "correctLines": [
-        "# ここに lambda と入力してね",
+        
+        
+        "# 変数 lambda を使いましょう",
         "square = lambda x: x ** 2",
         "print(square(5))"
       ],
@@ -65,9 +67,11 @@ export const pythonData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 全ての数を足す関数\ndef add_all(*args):\n    total = 0\n    for n in args:\n        total += n\n    return total\n\nprint(add_all(1, 2, 3, 4))",
-      "holeyCode": "# ここに * を入力してね\ndef add_all(___args):\n    total = 0\n    for n in args:\n        total += n\n    return total\n\nprint(add_all(1, 2, 3, 4))",
+      "holeyCode": "# * を入力しましょう\n___\n    ___\n    ___\n        ___\n    ___\n\n___",
       "correctLines": [
-        "# ここに * を入力してね",
+        
+        
+        "# * を入力しましょう",
         "def add_all(*args):",
         "    total = 0",
         "    for n in args:",
@@ -115,9 +119,11 @@ export const pythonData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# キーワード引数を表示する関数\ndef print_info(**kwargs):\n    for k, v in kwargs.items():\n        print(f'{k} = {v}')\n\nprint_info(x=10, y=20)",
-      "holeyCode": "# ここに ** を入力してね\ndef print_info(___kwargs):\n    for k, v in kwargs.items():\n        print(f'{k} = {v}')\n\nprint_info(x=10, y=20)",
+      "holeyCode": "# ** を入力しましょう\n___\n    ___\n        ___\n\n___",
       "correctLines": [
-        "# ここに ** を入力してね",
+        
+        
+        "# ** を入力しましょう",
         "def print_info(**kwargs):",
         "    for k, v in kwargs.items():",
         "        print(f'{k} = {v}')",
@@ -161,10 +167,12 @@ export const pythonData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 番号付きでリストを表示\ncolors = ['red', 'green', 'blue']\n# enumerateでインデックスと要素を取得\nfor i, color in enumerate(colors):\n    print(f'{i}: {color}')",
-      "holeyCode": "# 番号付きでリストを表示\ncolors = ['red', 'green', 'blue']\n# ここに enumerate と入力してね\nfor i, color in ___(colors):\n    print(f'{i}: {color}')",
+      "holeyCode": "___\\n___\\n___",
       "correctLines": [
-        "# 番号付きでリストを表示",
-        "colors = ['red', 'green', 'blue']",
+        ""# 番号付きでリストを表示",\n        "colors = ['red'",
+        "'green'",
+        "'blue'"
+      ]",
         "# ここに enumerate と入力してね",
         "for i, color in enumerate(colors):",
         "    print(f'{i}: {color}')"
@@ -205,10 +213,12 @@ export const pythonData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 2つのリストを同時にループ\nkeys = ['a', 'b', 'c']\nvalues = [1, 2, 3]\n# zipでペアを作る\nfor k, v in zip(keys, values):\n    print(f'{k}: {v}')",
-      "holeyCode": "# 2つのリストを同時にループ\nkeys = ['a', 'b', 'c']\nvalues = [1, 2, 3]\n# ここに zip と入力してペアを作ってね\nfor k, v in ___(keys, values):\n    print(f'{k}: {v}')",
+      "holeyCode": "___\\n___\\n___",
       "correctLines": [
-        "# 2つのリストを同時にループ",
-        "keys = ['a', 'b', 'c']",
+        ""# 2つのリストを同時にループ",\n        "keys = ['a'",
+        "'b'",
+        "'c'"
+      ]",
         "values = [1, 2, 3]",
         "# ここに zip と入力してペアを作ってね",
         "for k, v in zip(keys, values):",
@@ -251,12 +261,14 @@ export const pythonData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 偶数を生成するジェネレータ\ndef even_numbers(n):\n    for i in range(n):\n        # yieldで値を1つずつ返す\n        yield i * 2\n\nfor num in even_numbers(4):\n    print(num)",
-      "holeyCode": "# 偶数を生成するジェネレータ\ndef even_numbers(n):\n    for i in range(n):\n        # ここに yield と入力してね\n        ___ i * 2\n\nfor num in even_numbers(4):\n    print(num)",
+      "holeyCode": "# 偶数を生成するジェネレータ\n___\n    ___\n        # 変数 yield を使いましょう\n        ___\n\n___\n    ___",
       "correctLines": [
+        
+        
         "# 偶数を生成するジェネレータ",
         "def even_numbers(n):",
         "    for i in range(n):",
-        "        # ここに yield と入力してね",
+        "        # 変数 yield を使いましょう",
         "        yield i * 2",
         "",
         "for num in even_numbers(4):",
@@ -301,11 +313,13 @@ export const pythonData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# ジェネレータ式で合計を計算\nnums = range(1, 6)\n# forでジェネレータ式を作る\ntotal = sum(x * x for x in nums)\nprint(total)",
-      "holeyCode": "# ジェネレータ式で合計を計算\nnums = range(1, 6)\n# ここに for と入力してね\ntotal = sum(x * x ___ x in nums)\nprint(total)",
+      "holeyCode": "# ジェネレータ式で合計を計算\n___\n# 変数 for を使いましょう\n___\n___",
       "correctLines": [
+        
+        
         "# ジェネレータ式で合計を計算",
         "nums = range(1, 6)",
-        "# ここに for と入力してね",
+        "# 変数 for を使いましょう",
         "total = sum(x * x for x in nums)",
         "print(total)"
       ],
@@ -345,8 +359,10 @@ export const pythonData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 実行時間を表示するデコレータ\ndef show_call(func):\n    def wrapper():\n        print('関数を呼び出します')\n        func()\n    return wrapper\n\n# @でデコレータを適用\n@show_call\ndef greet():\n    print('Hello!')\n\ngreet()",
-      "holeyCode": "# 実行時間を表示するデコレータ\ndef show_call(func):\n    def wrapper():\n        print('関数を呼び出します')\n        func()\n    return wrapper\n\n# ここに @ と入力してデコレータを使ってね\n___show_call\ndef greet():\n    print('Hello!')\n\ngreet()",
+      "holeyCode": "# 実行時間を表示するデコレータ\n___\n    ___\n        ___\n        ___\n    ___\n\n# @ と入力してデコレータを使ってね\n___\n___\n    ___\n\n___",
       "correctLines": [
+        
+        
         "# 実行時間を表示するデコレータ",
         "def show_call(func):",
         "    def wrapper():",
@@ -354,7 +370,7 @@ export const pythonData3 = {
         "        func()",
         "    return wrapper",
         "",
-        "# ここに @ と入力してデコレータを使ってね",
+        "# @ と入力してデコレータを使ってね",
         "@show_call",
         "def greet():",
         "    print('Hello!')",
@@ -404,10 +420,14 @@ export const pythonData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 全ての数が正かチェック\nnums = [1, 2, 3, 4, 5]\n# allで全要素の条件チェック\nresult = all(x > 0 for x in nums)\nprint(result)",
-      "holeyCode": "# 全ての数が正かチェック\nnums = [1, 2, 3, 4, 5]\n# ここに all と入力してね\nresult = ___(x > 0 for x in nums)\nprint(result)",
+      "holeyCode": "___\\n___\\n___\\n___\\n___",
       "correctLines": [
-        "# 全ての数が正かチェック",
-        "nums = [1, 2, 3, 4, 5]",
+        ""# 全ての数が正かチェック",\n        "nums = [1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]",
         "# ここに all と入力してね",
         "result = all(x > 0 for x in nums)",
         "print(result)"
@@ -448,8 +468,10 @@ export const pythonData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# with文でファイルを開く（テスト用に模擬）\nclass MockFile:\n    def __enter__(self):\n        print('opened')\n        return self\n    def __exit__(self, *args):\n        print('closed')\n\n# withでコンテキストマネージャを使用\nwith MockFile() as f:\n    print('using')",
-      "holeyCode": "# with文でファイルを開く（テスト用に模擬）\nclass MockFile:\n    def __enter__(self):\n        print('opened')\n        return self\n    def __exit__(self, *args):\n        print('closed')\n\n# ここに with と入力してね\n___ MockFile() as f:\n    print('using')",
+      "holeyCode": "# with文でファイルを開く（テスト用に模擬）\n___\n    ___\n        ___\n        ___\n    ___\n        ___\n\n# 変数 with を使いましょう\n___\n    ___",
       "correctLines": [
+        
+        
         "# with文でファイルを開く（テスト用に模擬）",
         "class MockFile:",
         "    def __enter__(self):",
@@ -458,7 +480,7 @@ export const pythonData3 = {
         "    def __exit__(self, *args):",
         "        print('closed')",
         "",
-        "# ここに with と入力してね",
+        "# 変数 with を使いましょう",
         "with MockFile() as f:",
         "    print('using')"
       ],

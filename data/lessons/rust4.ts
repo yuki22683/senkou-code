@@ -25,7 +25,7 @@ export const rust4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// trait でトレイトを定義\ntrait Speak {\n    fn speak(&self) -> String;\n}\n\nstruct Dog;\n\nimpl Speak for Dog {\n    fn speak(&self) -> String {\n        String::from(\"Woof!\")\n    }\n}\n\nfn main() {\n    let dog = Dog;\n    println!(\"{}\", dog.speak());\n}",
-      "holeyCode": "// ここに trait と入力して約束を作ってね\n___ Speak {\n    fn speak(&self) -> String;\n}\n\nstruct Dog;\n\nimpl Speak for Dog {\n    fn speak(&self) -> String {\n        String::from(\"Woof!\")\n    }\n}\n\nfn main() {\n    let dog = Dog;\n    println!(\"{}\", dog.speak());\n}",
+      "holeyCode": "___\\n    ___\\n___\\n\\n___\\n\\n___\\n    ___\\n        ___\\n    ___\\n___\\n\\n___\\n    ___\\n    ___\\n___"Woof!\")\n    }\n}\n\nfn main() {\n    let dog = Dog;\n    println!(\"{}\", dog.speak());\n}",
       "correctLines": [
         "trait Speak {",
         "    fn speak(&self) -> String;",
@@ -35,13 +35,13 @@ export const rust4Data = {
         "",
         "impl Speak for Dog {",
         "    fn speak(&self) -> String {",
-        "        String::from(\"Woof!\")",
+        "        String::from("Woof!")",
         "    }",
         "}",
         "",
         "fn main() {",
         "    let dog = Dog;",
-        "    println!(\"{}\", dog.speak());",
+        "    println!("{}", dog.speak());",
         "}"
       ],
       "lineHints": [
@@ -91,9 +91,10 @@ export const rust4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// derive でトレイトを自動実装\n#[derive(Debug)]\nstruct User {\n    name: String,\n    age: u32,\n}\n\nfn main() {\n    let user = User { name: String::from(\"Alice\"), age: 30 };\n    println!(\"{:?}\", user);\n}",
-      "holeyCode": "// ここに derive と入力して、自動でお仕事させてね\n#[___(Debug)]\nstruct User {\n    name: String,\n    age: u32,\n}\n\nfn main() {\n    let user = User { name: String::from(\"Alice\"), age: 30 };\n    println!(\"{:?}\", user);\n}",
+      "holeyCode": "___"Alice\"), age: 30 };\n    println!(\"{:?}\", user);\n}",
       "correctLines": [
-        "#[derive(Debug)]",
+        ""#[derive(Debug)"
+      ]",
         "struct User {",
         "    name: String,",
         "    age: u32,",
@@ -145,11 +146,11 @@ export const rust4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fn main() {\n    // Box::new でヒープに格納\n    let x = Box::new(42);\n    println!(\"{}\", *x);\n}",
-      "holeyCode": "fn main() {\n    // ここに Box と入力して、ヒープにしまってね\n    let x = ___::new(42);\n    println!(\"{}\", *x);\n}",
+      "holeyCode": "___\\n    ___\\n    ___\\n___"{}\", *x);\n}",
       "correctLines": [
         "fn main() {",
         "    let x = Box::new(42);",
-        "    println!(\"{}\", *x);",
+        "    println!("{}", *x);",
         "}"
       ],
       "lineHints": [
@@ -187,14 +188,14 @@ export const rust4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "use std::rc::Rc;\n\nfn main() {\n    let a = Rc::new(String::from(\"Hello\"));\n    // clone で参照カウントを増やす\n    let b = Rc::clone(&a);\n    println!(\"{} {}\", a, b);\n}",
-      "holeyCode": "use std::rc::Rc;\n\nfn main() {\n    let a = Rc::new(String::from(\"Hello\"));\n    // ここに clone と入力して、仲間を増やしてね\n    let b = Rc::___(&a);\n    println!(\"{} {}\", a, b);\n}",
+      "holeyCode": "___\\n\\n___\\n    ___\\n    ___\\n    ___\\n___"Hello\"));\n    // ここに clone と入力して、仲間を増やしてね\n    let b = Rc::___(&a);\n    println!(\"{} {}\", a, b);\n}",
       "correctLines": [
         "use std::rc::Rc;",
         "",
         "fn main() {",
-        "    let a = Rc::new(String::from(\"Hello\"));",
+        "    let a = Rc::new(String::from("Hello"));",
         "    let b = Rc::clone(&a);",
-        "    println!(\"{} {}\", a, b);",
+        "    println!("{} {}", a, b);",
         "}"
       ],
       "lineHints": [
@@ -235,15 +236,15 @@ export const rust4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "use std::collections::HashMap;\n\nfn main() {\n    let mut map = HashMap::new();\n    // insert でキーと値を追加\n    map.insert(\"a\", 1);\n    map.insert(\"b\", 2);\n    println!(\"{:?}\", map.get(\"a\"));\n}",
-      "holeyCode": "use std::collections::HashMap;\n\nfn main() {\n    let mut map = HashMap::new();\n    // ここに insert と入力してキーと値を追加してね\n    map.___(\"a\", 1);\n    map.insert(\"b\", 2);\n    println!(\"{:?}\", map.get(\"a\"));\n}",
+      "holeyCode": "___\\n\\n___\\n    ___\\n    ___\\n    ___\\n    ___\\n___"a\", 1);\n    map.insert(\"b\", 2);\n    println!(\"{:?}\", map.get(\"a\"));\n}",
       "correctLines": [
         "use std::collections::HashMap;",
         "",
         "fn main() {",
         "    let mut map = HashMap::new();",
-        "    map.insert(\"a\", 1);",
-        "    map.insert(\"b\", 2);",
-        "    println!(\"{:?}\", map.get(\"a\"));",
+        "    map.insert("a", 1);",
+        "    map.insert("b", 2);",
+        "    println!("{:?}", map.get("a"));",
         "}"
       ],
       "lineHints": [
@@ -285,7 +286,7 @@ export const rust4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// HashSet をインポート\nuse std::collections::HashSet;\n\nfn main() {\n    let mut set = HashSet::new();\n    set.insert(1);\n    set.insert(2);\n    set.insert(1);\n    println!(\"{}\", set.len());\n}",
-      "holeyCode": "// ここに HashSet と入力してね\nuse std::collections::___;\n\nfn main() {\n    let mut set = HashSet::new();\n    set.insert(1);\n    set.insert(2);\n    set.insert(1);\n    println!(\"{}\", set.len());\n}",
+      "holeyCode": "___\\n\\n___\\n    ___\\n    ___\\n    ___\\n    ___\\n    ___\\n___"{}\", set.len());\n}",
       "correctLines": [
         "use std::collections::HashSet;",
         "",
@@ -294,7 +295,7 @@ export const rust4Data = {
         "    set.insert(1);",
         "    set.insert(2);",
         "    set.insert(1);",
-        "    println!(\"{}\", set.len());",
+        "    println!("{}", set.len());",
         "}"
       ],
       "lineHints": [
@@ -337,13 +338,13 @@ export const rust4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fn main() {\n    let num = 7;\n    match num {\n        // if でマッチガードを追加\n        n if n % 2 == 0 => println!(\"even\"),\n        _ => println!(\"odd\"),\n    }\n}",
-      "holeyCode": "fn main() {\n    let num = 7;\n    match num {\n        // ここに if と入力して、追加の条件を付けてね\n        n ___ n % 2 == 0 => println!(\"even\"),\n        _ => println!(\"odd\"),\n    }\n}",
+      "holeyCode": "___\\n    ___\\n    ___\\n        ___\\n        ___\\n    ___\\n___"even\"),\n        _ => println!(\"odd\"),\n    }\n}",
       "correctLines": [
         "fn main() {",
         "    let num = 7;",
         "    match num {",
-        "        n if n % 2 == 0 => println!(\"even\"),",
-        "        _ => println!(\"odd\"),",
+        "        n if n % 2 == 0 => println!("even"),",
+        "        _ => println!("odd"),",
         "    }",
         "}"
       ],
@@ -385,7 +386,7 @@ export const rust4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// impl でトレイトを実装する型を返す\nfn doubles(n: i32) -> impl Iterator<Item = i32> {\n    (0..n).map(|x| x * 2)\n}\n\nfn main() {\n    for x in doubles(3) {\n        println!(\"{}\", x);\n    }\n}",
-      "holeyCode": "// ここに impl と入力して約束を守る型を返してね\nfn doubles(n: i32) -> ___ Iterator<Item = i32> {\n    (0..n).map(|x| x * 2)\n}\n\nfn main() {\n    for x in doubles(3) {\n        println!(\"{}\", x);\n    }\n}",
+      "holeyCode": "___\\n    ___\\n___\\n\\n___\\n    ___\\n        ___\\n    ___\\n___"{}\", x);\n    }\n}",
       "correctLines": [
         "fn doubles(n: i32) -> impl Iterator<Item = i32> {",
         "    (0..n).map(|x| x * 2)",
@@ -393,7 +394,7 @@ export const rust4Data = {
         "",
         "fn main() {",
         "    for x in doubles(3) {",
-        "        println!(\"{}\", x);",
+        "        println!("{}", x);",
         "    }",
         "}"
       ],
@@ -437,11 +438,11 @@ export const rust4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fn main() {\n    // collect で Vec に変換\n    let nums: Vec<i32> = (1..=5).collect();\n    println!(\"{:?}\", nums);\n}",
-      "holeyCode": "fn main() {\n    // ここに collect と入力して Vec に集めてね\n    let nums: Vec<i32> = (1..=5).___();\n    println!(\"{:?}\", nums);\n}",
+      "holeyCode": "___\\n    ___\\n    ___\\n___"{:?}\", nums);\n}",
       "correctLines": [
         "fn main() {",
         "    let nums: Vec<i32> = (1..=5).collect();",
-        "    println!(\"{:?}\", nums);",
+        "    println!("{:?}", nums);",
         "}"
       ],
       "lineHints": [
@@ -479,10 +480,12 @@ export const rust4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fn main() {\n    let items = vec![\"a\", \"b\", \"c\"];\n    // enumerate でインデックスを付ける\n    for (i, item) in items.iter().enumerate() {\n        println!(\"{}: {}\", i, item);\n    }\n}",
-      "holeyCode": "fn main() {\n    let items = vec![\"a\", \"b\", \"c\"];\n    // ここに enumerate と入力して番号を付けてね\n    for (i, item) in items.iter().___() {\n        println!(\"{}: {}\", i, item);\n    }\n}",
+      "holeyCode": "___\\n___\\n___"a\", \"b\", \"c\"];\n    // ここに enumerate と入力して番号を付けてね\n    for (i, item) in items.iter().___() {\n        println!(\"{}: {}\", i, item);\n    }\n}",
       "correctLines": [
-        "fn main() {",
-        "    let items = vec![\"a\", \"b\", \"c\"];",
+        "fn main() {",\n        "    let items = vec!["a\\",
+        ""b"",
+        ""c""
+      ];",
         "    for (i, item) in items.iter().enumerate() {",
         "        println!(\"{}: {}\", i, item);",
         "    }",

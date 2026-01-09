@@ -25,8 +25,10 @@ export const javascriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// Promise コンストラクタで作成\nconst p = new Promise((resolve) => {\n  resolve('Hello Promise!');\n});\n\np.then(msg => console.log(msg));",
-      "holeyCode": "// ここに Promise と入力して、「あとでやる約束」を作ってね\nconst p = new ___((resolve) => {\n  resolve('Hello Promise!');\n});\n\np.then(msg => console.log(msg));",
+      "holeyCode": "// Promiseを作成\n___\n  ___\n___\n\n___",
       "correctLines": [
+        
+        
         "// Promiseを作成",
         "const p = new Promise((resolve) => {",
         "  resolve('Hello Promise!');",
@@ -71,8 +73,10 @@ export const javascriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// resolve で即座に解決するPromise\nPromise.resolve(42)\n  .then(n => console.log(n * 2));",
-      "holeyCode": "// ここに resolve と入力して、すぐに成功させてね\nPromise.___(42)\n  .then(n => console.log(n * 2));",
+      "holeyCode": "// 即座に解決するPromise\n___\n  ___",
       "correctLines": [
+        
+        
         "// 即座に解決するPromise",
         "Promise.resolve(42)",
         "  .then(n => console.log(n * 2));"
@@ -111,8 +115,10 @@ export const javascriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// async キーワードで非同期関数を定義\nasync function getMessage() {\n  return 'Async works!';\n}\n\ngetMessage().then(msg => console.log(msg));",
-      "holeyCode": "// ここに async と入力して非同期関数にしてね\n___ function getMessage() {\n  return 'Async works!';\n}\n\ngetMessage().then(msg => console.log(msg));",
+      "holeyCode": "// async関数を定義\n___\n  ___\n___\n\n___",
       "correctLines": [
+        
+        
         "// async関数を定義",
         "async function getMessage() {",
         "  return 'Async works!';",
@@ -157,8 +163,10 @@ export const javascriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// awaitでPromiseを待つ\nasync function main() {\n  // await でPromiseの結果を待つ\n  const value = await Promise.resolve(100);\n  console.log(value);\n}\n\nmain();",
-      "holeyCode": "async function main() {\n  // ここに await と入力して、終わるまで待ってね\n  const value = ___ Promise.resolve(100);\n  console.log(value);\n}\n\nmain();",
+      "holeyCode": "// awaitでPromiseを待つ\n___\n  ___\n  ___\n___\n\n___",
       "correctLines": [
+        
+        
         "// awaitでPromiseを待つ",
         "async function main() {",
         "  const value = await Promise.resolve(100);",
@@ -205,14 +213,11 @@ export const javascriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 複数のPromiseを同時に実行\nconst p1 = Promise.resolve(10);\nconst p2 = Promise.resolve(20);\n// all で全てのPromiseを待つ\nPromise.all([p1, p2]).then(nums => {\n  console.log(nums[0] + nums[1]);\n});",
-      "holeyCode": "// 複数のPromiseを同時に実行\nconst p1 = Promise.resolve(10);\nconst p2 = Promise.resolve(20);\n// ここに all と入力して、全部終わるのを待ってね\nPromise.___([ p1, p2]).then(nums => {\n  console.log(nums[0] + nums[1]);\n});",
+      "holeyCode": "___\\n___",
       "correctLines": [
-        "// 複数のPromiseを同時に実行",
-        "const p1 = Promise.resolve(10);",
-        "const p2 = Promise.resolve(20);",
-        "",
-        "// ここに all と入力して、全部終わるのを待ってね",
-        "Promise.all([p1, p2]).then(nums => {",
+        ""// 複数のPromiseを同時に実行",\n        "const p1 = Promise.resolve(10);",\n        "const p2 = Promise.resolve(20);",\n        "",\n        "// all と入力して、全部終わるのを待ってね",\n        "Promise.all([p1",
+        "p2"
+      ]).then(nums => {",
         "  console.log(nums[0] + nums[1]);",
         "});"
       ],
@@ -254,8 +259,10 @@ export const javascriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// class キーワードでクラスを定義\nclass Dog {\n  constructor(name) {\n    this.name = name;\n  }\n  bark() {\n    console.log(`${this.name}: Woof!`);\n  }\n}\n\nconst dog = new Dog('Pochi');\ndog.bark();",
-      "holeyCode": "// ここに class と入力してクラスを作ってね\n___ Dog {\n  constructor(name) {\n    this.name = name;\n  }\n  bark() {\n    console.log(`${this.name}: Woof!`);\n  }\n}\n\nconst dog = new Dog('Pochi');\ndog.bark();",
+      "holeyCode": "// クラスを定義\n___\n  ___\n    ___\n  ___\n  ___\n    ___\n  ___\n___\n\n___\n___",
       "correctLines": [
+        
+        
         "// クラスを定義",
         "class Dog {",
         "  constructor(name) {",
@@ -312,14 +319,16 @@ export const javascriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 親クラス\nclass Animal {\n  speak() { console.log('...'); }\n}\n\n// extends で親クラスを継承する\nclass Cat extends Animal {\n  speak() { console.log('Meow!'); }\n}\n\nconst cat = new Cat();\ncat.speak();",
-      "holeyCode": "// 親クラス\nclass Animal {\n  speak() { console.log('...'); }\n}\n\n// ここに extends と入力して親クラスを継承してね\nclass Cat ___ Animal {\n  speak() { console.log('Meow!'); }\n}\n\nconst cat = new Cat();\ncat.speak();",
+      "holeyCode": "// 親クラス\n___\n  ___\n___\n\n// extends と入力して親クラスを継承しましょう\n___\n  ___\n___\n\n___\n___",
       "correctLines": [
+        
+        
         "// 親クラス",
         "class Animal {",
         "  speak() { console.log('...'); }",
         "}",
         "",
-        "// ここに extends と入力して親クラスを継承してね",
+        "// extends と入力して親クラスを継承しましょう",
         "class Cat extends Animal {",
         "  speak() { console.log('Meow!'); }",
         "}",
@@ -370,11 +379,13 @@ export const javascriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 静的メソッドを持つクラス\nclass Calculator {\n  // static でクラスメソッドを定義\n  static multiply(a, b) {\n    return a * b;\n  }\n}\n\nconsole.log(Calculator.multiply(3, 4));",
-      "holeyCode": "// 静的メソッドを持つクラス\nclass Calculator {\n  // ここに static と入力してクラスメソッドにしてね\n  ___ multiply(a, b) {\n    return a * b;\n  }\n}\n\nconsole.log(Calculator.multiply(3, 4));",
+      "holeyCode": "// 静的メソッドを持つクラス\n___\n  // static と入力してクラスメソッドにしましょう\n  ___\n    ___\n  ___\n___\n\n___",
       "correctLines": [
+        
+        
         "// 静的メソッドを持つクラス",
         "class Calculator {",
-        "  // ここに static と入力してクラスメソッドにしてね",
+        "  // static と入力してクラスメソッドにしましょう",
         "  static multiply(a, b) {",
         "    return a * b;",
         "  }",
@@ -421,11 +432,13 @@ export const javascriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// Optional Chainingで安全にアクセス\nconst data = { user: { name: 'Bob' } };\n// ?. で安全にプロパティにアクセス\nconsole.log(data?.user?.name);\nconsole.log(data?.profile?.age);",
-      "holeyCode": "// Optional Chainingで安全にアクセス\nconst data = { user: { name: 'Bob' } };\n// ここに ?. と入力して、安全にプロパティにアクセスしてね\nconsole.log(data___user___name);\nconsole.log(data?.profile?.age);",
+      "holeyCode": "// Optional Chainingで安全にアクセス\n___\n// ?. と入力して、安全にプロパティにアクセスしましょう\n___\n___",
       "correctLines": [
+        
+        
         "// Optional Chainingで安全にアクセス",
         "const data = { user: { name: 'Bob' } };",
-        "// ここに ?. と入力して、安全にプロパティにアクセスしてね",
+        "// ?. と入力して、安全にプロパティにアクセスしましょう",
         "console.log(data?.user?.name);",
         "console.log(data?.profile?.age);"
       ],
@@ -464,11 +477,13 @@ export const javascriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// Nullish Coalescingでデフォルト値\nconst value = undefined;\n// ?? でnull/undefinedのデフォルト値を設定\nconst result = value ?? 'default';\nconsole.log(result);",
-      "holeyCode": "// Nullish Coalescingでデフォルト値\nconst value = undefined;\n// ここに ?? と入力して、デフォルト値を設定してね\nconst result = value ___ 'default';\nconsole.log(result);",
+      "holeyCode": "// Nullish Coalescingでデフォルト値\n___\n// ?? と入力して、デフォルト値を設定しましょう\n___\n___",
       "correctLines": [
+        
+        
         "// Nullish Coalescingでデフォルト値",
         "const value = undefined;",
-        "// ここに ?? と入力して、デフォルト値を設定してね",
+        "// ?? と入力して、デフォルト値を設定しましょう",
         "const result = value ?? 'default';",
         "console.log(result);"
       ],

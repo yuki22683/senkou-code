@@ -25,11 +25,13 @@ export const rustData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fn main() {\n    // Hello, Rust! と表示する\n    println!(\"Hello, Rust!\");\n}",
-      "holeyCode": "fn main() {\n    // ここに \"Hello, Rust!\" と入力してね\n    println!(\"___\");\n}",
+      "holeyCode": "___\\n___\\n___\\n___\\n___\\n___"Hello, Rust!\" と入力してね\n    println!(\"___\");\n}",
       "correctLines": [
         "fn main() {",
-        "    // ここに \"Hello, Rust!\" と入力してね",
-        "    println!(\"Hello, Rust!\");",
+        ""    // "Hello",
+        "Rust!" と入力しましょう"",
+        ""    println!("Hello",
+        "Rust!");"",
         "}"
       ],
       "lineHints": [

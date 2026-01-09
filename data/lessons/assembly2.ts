@@ -25,12 +25,14 @@ export const assembly2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .text\n  global _start\n_start:\n  ; movで値をレジスタに格納\n  mov rax, 60\n  mov rdi, 0\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  ; ここに mov と入力して、机（rax）に 60 を置いてね\n  ___ rax, 60\n  mov rdi, 0\n  syscall",
+      "holeyCode": "___\n  ___\n___\n  // mov と入力して、机（rax）に 60 を置いてね\n  ___\n  ___\n  ___",
       "correctLines": [
+        
+        
         "section .text",
         "  global _start",
         "_start:",
-        "  // ここに mov と入力して、机（rax）に 60 を置いてね",
+        "  // mov と入力して、机（rax）に 60 を置いてね",
         "  mov rax, 60",
         "  mov rdi, 0",
         "  syscall"
@@ -72,13 +74,15 @@ export const assembly2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 10\n  ; addで足し算\n  add rax, 5\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 10\n  ; ここに add と入力してたし算してね\n  ___ rax, 5\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+      "holeyCode": "___\n  ___\n___\n  ___\n  // add と入力してたし算しましょう\n  ___\n  ___\n  ___\n  ___",
       "correctLines": [
+        
+        
         "section .text",
         "  global _start",
         "_start:",
         "  mov rax, 10",
-        "  // ここに add と入力してたし算してね",
+        "  // add と入力してたし算しましょう",
         "  add rax, 5",
         "  mov rdi, rax",
         "  mov rax, 60",
@@ -123,13 +127,15 @@ export const assembly2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 20\n  ; subで引き算\n  sub rax, 5\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 20\n  ; ここに sub と入力してひき算してね\n  ___ rax, 5\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+      "holeyCode": "___\n  ___\n___\n  ___\n  // sub と入力してひき算しましょう\n  ___\n  ___\n  ___\n  ___",
       "correctLines": [
+        
+        
         "section .text",
         "  global _start",
         "_start:",
         "  mov rax, 20",
-        "  // ここに sub と入力してひき算してね",
+        "  // sub と入力してひき算しましょう",
         "  sub rax, 5",
         "  mov rdi, rax",
         "  mov rax, 60",
@@ -174,14 +180,16 @@ export const assembly2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 4\n  mov rbx, 3\n  ; mulで掛け算\n  mul rbx\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 4\n  mov rbx, 3\n  ; ここに mul と入力してかけ算してね\n  ___ rbx\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+      "holeyCode": "___\n  ___\n___\n  ___\n  ___\n  // mul と入力してかけ算しましょう\n  ___\n  ___\n  ___\n  ___",
       "correctLines": [
+        
+        
         "section .text",
         "  global _start",
         "_start:",
         "  mov rax, 4",
         "  mov rbx, 3",
-        "  // ここに mul と入力してかけ算してね",
+        "  // mul と入力してかけ算しましょう",
         "  mul rbx",
         "  mov rdi, rax",
         "  mov rax, 60",
@@ -227,13 +235,15 @@ export const assembly2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 5\n  ; cmpで比較\n  cmp rax, 5\n  mov rax, 60\n  mov rdi, 0\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 5\n  ; ここに cmp と入力して、同じか比べてね\n  ___ rax, 5\n  mov rax, 60\n  mov rdi, 0\n  syscall",
+      "holeyCode": "___\n  ___\n___\n  ___\n  // cmp と入力して、同じか比べてね\n  ___\n  ___\n  ___\n  ___",
       "correctLines": [
+        
+        
         "section .text",
         "  global _start",
         "_start:",
         "  mov rax, 5",
-        "  // ここに cmp と入力して、同じか比べてね",
+        "  // cmp と入力して、同じか比べてね",
         "  cmp rax, 5",
         "  mov rax, 60",
         "  mov rdi, 0",
@@ -278,12 +288,14 @@ export const assembly2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .text\n  global _start\n_start:\n  ; jmpでジャンプ\n  jmp done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  ; ここに jmp と入力して、done に飛んでね\n  ___ done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+      "holeyCode": "___\n  ___\n___\n  // jmp と入力して、done に飛んでね\n  ___\n___\n  ___\n  ___\n  ___",
       "correctLines": [
+        
+        
         "section .text",
         "  global _start",
         "_start:",
-        "  // ここに jmp と入力して、done に飛んでね",
+        "  // jmp と入力して、done に飛んでね",
         "  jmp done",
         "done:",
         "  mov rax, 60",
@@ -329,14 +341,16 @@ export const assembly2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 5\n  cmp rax, 5\n  ; jeで等しければジャンプ\n  je done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 5\n  cmp rax, 5\n  ; ここに je と入力して、同じだったら done に飛んでね\n  ___ done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+      "holeyCode": "___\n  ___\n___\n  ___\n  ___\n  // je と入力して、同じだったら done に飛んでね\n  ___\n___\n  ___\n  ___\n  ___",
       "correctLines": [
+        
+        
         "section .text",
         "  global _start",
         "_start:",
         "  mov rax, 5",
         "  cmp rax, 5",
-        "  // ここに je と入力して、同じだったら done に飛んでね",
+        "  // je と入力して、同じだったら done に飛んでね",
         "  je done",
         "done:",
         "  mov rax, 60",
@@ -384,13 +398,15 @@ export const assembly2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 42\n  ; pushでスタックに保存\n  push rax\n  pop rbx\n  mov rax, 60\n  mov rdi, rbx\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 42\n  ; ここに push と入力して、一時的にしまっておいてね\n  ___ rax\n  pop rbx\n  mov rax, 60\n  mov rdi, rbx\n  syscall",
+      "holeyCode": "___\n  ___\n___\n  ___\n  // push と入力して、一時的にしまっておいてね\n  ___\n  ___\n  ___\n  ___\n  ___",
       "correctLines": [
+        
+        
         "section .text",
         "  global _start",
         "_start:",
         "  mov rax, 42",
-        "  // ここに push と入力して、一時的にしまっておいてね",
+        "  // push と入力して、一時的にしまっておいてね",
         "  push rax",
         "  pop rbx",
         "  mov rax, 60",
@@ -437,13 +453,15 @@ export const assembly2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .text\n  global _start\n_start:\n  mov rax, 60\n  ; xorでrdiを0にする\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  mov rax, 60\n  ; ここに xor と入力して、rdi を 0 にしてね\n  ___ rdi, rdi\n  syscall",
+      "holeyCode": "___\n  ___\n___\n  ___\n  // xor と入力して、rdi を 0 にしましょう\n  ___\n  ___",
       "correctLines": [
+        
+        
         "section .text",
         "  global _start",
         "_start:",
         "  mov rax, 60",
-        "  // ここに xor と入力して、rdi を 0 にしてね",
+        "  // xor と入力して、rdi を 0 にしましょう",
         "  xor rdi, rdi",
         "  syscall"
       ],
@@ -484,12 +502,14 @@ export const assembly2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .text\n  global _start\n_start:\n  ; callでサブルーチンを呼び出す\n  call done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .text\n  global _start\n_start:\n  ; ここに call と入力して、done を呼び出してね\n  ___ done\ndone:\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+      "holeyCode": "___\n  ___\n___\n  // call と入力して、done を呼び出しましょう\n  ___\n___\n  ___\n  ___\n  ___",
       "correctLines": [
+        
+        
         "section .text",
         "  global _start",
         "_start:",
-        "  // ここに call と入力して、done を呼び出してね",
+        "  // call と入力して、done を呼び出しましょう",
         "  call done",
         "done:",
         "  mov rax, 60",
