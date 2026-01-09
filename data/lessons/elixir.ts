@@ -30,7 +30,7 @@ export const elixirData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Hello, Elixir!を表示\nIO.puts \\\"Hello, Elixir!\\\"",
-      "holeyCode": "___\\n___"___\"",
+      "holeyCode": "___\n___"___\"",
       "correctLines": [
         ""IO.puts "Hello",
         "Elixir!"""

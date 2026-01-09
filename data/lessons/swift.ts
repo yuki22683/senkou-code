@@ -35,7 +35,7 @@ export const swiftData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// Hello, World!と出力する関数\nprint(\"Hello, World!\")",
-      "holeyCode": "// print と入力して画面に表示しましょう\\n___\\n___"Hello, World!\")",
+      "holeyCode": "// print と入力して画面に表示しましょう\\n___\n___"Hello, World!\")",
       "correctLines": [
         "// print と入力して画面に表示しましょう",
         ""print("Hello",

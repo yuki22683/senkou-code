@@ -107,7 +107,7 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums = [1, 2, 3]\n-- headで先頭要素を取得\nmain = print (head nums)",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""nums = [1",
         "2",
@@ -148,7 +148,7 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- mapで各要素を変換\nmain = print (map (*2) [1, 2, 3])",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""main = print (map (*2) [1",
         "2",
@@ -187,7 +187,7 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- filterで条件に合う要素を抽出\nmain = print (filter (>=3) [1, 2, 3, 4, 5])",
-      "holeyCode": "___\\n___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___\n___",
       "correctLines": [
         ""main = print (filter (>=3) [1",
         "2",
@@ -272,7 +272,7 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "sign x\n  | x > 0     = \"positive\"\n  | x < 0     = \"negative\"\n  -- otherwiseはそれ以外の場合\n  | otherwise = \"zero\"\nmain = putStrLn (sign 5)",
-      "holeyCode": "___\\n  ___\\n  ___\\n  ___\\n___"positive\"\n  | x < 0     = \"negative\"\n  // ここに otherwise と入力して、どれにも当てはまらないときの結果にしてね\n  | ___ = \"zero\"\nmain = putStrLn (sign 5)",
+      "holeyCode": "___\n  ___\n  ___\n  ___\n___"positive\"\n  | x < 0     = \"negative\"\n  // otherwise と入力して、どれにも当てはまらないときの結果にしましょう\n  | ___ = \"zero\"\nmain = putStrLn (sign 5)",
       "correctLines": [
         "sign x",
         "  | x > 0     = "positive"",
@@ -316,7 +316,7 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- \\でラムダ式を開始\nmain = print (map (\\x -> x * x) [1, 2, 3])",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""main = print (map (\\x -> x * x) [1",
         "2",
@@ -392,7 +392,7 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- foldrで畳み込み\nmain = print (foldr (+) 0 [1, 2, 3, 4, 5])",
-      "holeyCode": "___\\n___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___\n___",
       "correctLines": [
         ""main = print (foldr (+) 0 [1",
         "2",

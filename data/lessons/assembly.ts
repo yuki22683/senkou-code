@@ -20,17 +20,17 @@ export const assemblyData = {
         {
           "title": "画面に文字を出すには？",
           "image": "/illustrations/common/monitor.png",
-          "content": "# システムコール\n\nアセンブリ言語では、OS（オペレーティングシステム）というコンピュータの「ボス」に、「画面にこれを書いてください！」とお願いする命令を送ります。これを「システムコール」と呼びます。"
+          "content": "# システムコール\n\nアセンブリ言語では、OS（オペレーティングシステム）というコンピュータの「ボス」に、「画面にこれを書いてしましょう！」とお願いする命令を送ります。これを「システムコール」と呼びます。"
         },
         {
           "title": "コンピュータとの直接対話",
           "image": "/illustrations/common/monitor.png",
-          "content": "# syscall（システムコール）\n\nアセンブリ言語では、`rax` や `rdi` という名前の「小さな机（レジスタ）」に数字を置いてから、`syscall` という合図を送ります。すると、コンピュータのボスが画面に文字を出してくれます。\n\n**暗号の意味：**\n- `mov rax, 1` : 「画面に書く」という指示を机に置きます\n- `mov rdi, 1` : 「標準の画面」を指定します\n- `syscall` : 「さあ、やってください！」という合図です"
+          "content": "# syscall（システムコール）\n\nアセンブリ言語では、`rax` や `rdi` という名前の「小さな机（レジスタ）」に数字を置いてから、`syscall` という合図を送ります。すると、コンピュータのボスが画面に文字を出してくれます。\n\n**暗号の意味：**\n- `mov rax, 1` : 「画面に書く」という指示を机に置きます\n- `mov rdi, 1` : 「標準の画面」を指定します\n- `syscall` : 「さあ、やってしましょう！」という合図です"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .data\n  msg db \"Hello\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 1\n  mov rdi, 1\n  ; msgで表示する文字を指定\n  mov rsi, msg\n  mov rdx, 6\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "___\\n  ___\\n\\n___\\n  ___\\n\\n___\\n  ___\\n  ___\\n  ___\\n  ___\\n  ___\\n\\n  ___\\n  ___\\n  ___"Hello\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 1\n  mov rdi, 1\n  ; ここに msg と入力して、準備した文字を使ってね\n  mov rsi, ___\n  mov rdx, 6\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+      "holeyCode": "___\n  ___\n\\n___\n  ___\n\\n___\n  ___\n  ___\n  ___\n  ___\n  ___\n\\n  ___\n  ___\n  ___"Hello\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 1\n  mov rdi, 1\n  ; msg と入力して、準備した文字を使ってね\n  mov rsi, ___\n  mov rdx, 6\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
       "correctLines": [
         "section .data",
         "  msg db "Hello", 0xA",

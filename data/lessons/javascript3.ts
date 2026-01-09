@@ -213,7 +213,7 @@ export const javascriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 複数のPromiseを同時に実行\nconst p1 = Promise.resolve(10);\nconst p2 = Promise.resolve(20);\n// all で全てのPromiseを待つ\nPromise.all([p1, p2]).then(nums => {\n  console.log(nums[0] + nums[1]);\n});",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         ""// 複数のPromiseを同時に実行",\n        "const p1 = Promise.resolve(10);",\n        "const p2 = Promise.resolve(20);",\n        "",\n        "// all と入力して、全部終わるのを待ってね",\n        "Promise.all([p1",
         "p2"

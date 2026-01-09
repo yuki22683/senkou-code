@@ -143,7 +143,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Config {\n    val value: Int by lazy {\n        println(\"Init\")\n        42\n    }\n}\n\nfun main() {\n    val c = Config()\n    println(\"Created\")\n    println(c.value)\n}",
-      "holeyCode": "___\\n    ___\\n        ___\\n        ___\\n    ___\\n___\\n\\n___\\n    ___\\n    ___\\n    ___\\n___"Init\")\n        42\n    }\n}\n\nfun main() {\n    val c = Config()\n    println(\"Created\")\n    println(c.value)\n}",
+      "holeyCode": "___\n    ___\n        ___\n        ___\n    ___\n___\n\\n___\n    ___\n    ___\n    ___\n___"Init\")\n        42\n    }\n}\n\nfun main() {\n    val c = Config()\n    println(\"Created\")\n    println(c.value)\n}",
       "correctLines": [
         "class Config {",
         "    val value: Int by lazy {",
@@ -201,7 +201,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Service {\n    lateinit var config: String\n    \n    fun setup(c: String) { config = c }\n}\n\nfun main() {\n    val s = Service()\n    s.setup(\"OK\")\n    println(s.config)\n}",
-      "holeyCode": "___\\n    ___\\n    \\n    ___\\n___\\n\\n___\\n    ___\\n    ___\\n    ___\\n___"OK\")\n    println(s.config)\n}",
+      "holeyCode": "___\n    ___\n    \\n    ___\n___\n\\n___\n    ___\n    ___\n    ___\n___"OK\")\n    println(s.config)\n}",
       "correctLines": [
         "class Service {",
         "    lateinit var config: String",
@@ -311,7 +311,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "inline fun <reified T> typeOf(): String {\n    return T::class.simpleName ?: \"Unknown\"\n}\n\nfun main() {\n    println(typeOf<String>())\n}",
-      "holeyCode": "___\\n    ___\\n___\\n\\n___\\n    ___\\n___"Unknown\"\n}\n\nfun main() {\n    println(typeOf<String>())\n}",
+      "holeyCode": "___\n    ___\n___\n\\n___\n    ___\n___"Unknown\"\n}\n\nfun main() {\n    println(typeOf<String>())\n}",
       "correctLines": [
         "inline fun <reified T> typeOf(): String {",
         "    return T::class.simpleName ?: "Unknown"",
@@ -407,7 +407,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fun main() {\n    val result = \"hello\".let {\n        it.uppercase()\n    }\n    println(result)\n}",
-      "holeyCode": "___\\n    // let と入力して、変換しましょう\\n    ___\\n        ___\\n    ___\\n    ___\\n___"hello\".___ {\n        it.uppercase()\n    }\n    println(result)\n}",
+      "holeyCode": "___\n    // let と入力して、変換しましょう\\n    ___\n        ___\n    ___\n    ___\n___"hello\".___ {\n        it.uppercase()\n    }\n    println(result)\n}",
       "correctLines": [
         "fun main() {",
         "    // let と入力して、変換しましょう",
@@ -454,7 +454,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "data class Config(var host: String = \"\", var port: Int = 0)\n\nfun main() {\n    val config = Config().apply {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(\"${config.host}:${config.port}\")\n}",
-      "holeyCode": "___\\n\\n___\\n    // apply と入力して、設定しましょう\\n    ___\\n        ___\\n        ___\\n    ___\\n    ___\\n___"\", var port: Int = 0)\n\nfun main() {\n    // ここに apply と入力して、設定してね\n    val config = Config().___ {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(\"${config.host}:${config.port}\")\n}",
+      "holeyCode": "___\n\\n___\n    // apply と入力して、設定しましょう\\n    ___\n        ___\n        ___\n    ___\n    ___\n___"\", var port: Int = 0)\n\nfun main() {\n    // apply と入力して、設定しましょう\n    val config = Config().___ {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(\"${config.host}:${config.port}\")\n}",
       "correctLines": [
         "data class Config(var host: String = "", var port: Int = 0)",
         "",
@@ -507,7 +507,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "typealias StringList = List<String>\n\nfun printAll(items: StringList) {\n    items.forEach { println(it) }\n}\n\nfun main() {\n    printAll(listOf(\"A\", \"B\", \"C\"))\n}",
-      "holeyCode": "___\\n\\n___\\n    ___\\n___\\n\\n___\\n    ___\\n___"A\", \"B\", \"C\"))\n}",
+      "holeyCode": "___\n\\n___\n    ___\n___\n\\n___\n    ___\n___"A\", \"B\", \"C\"))\n}",
       "correctLines": [
         "typealias StringList = List<String>",
         "",

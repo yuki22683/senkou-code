@@ -197,7 +197,7 @@ export const typescriptData = {
       "correctLines": [
         ""// 文字の配列なので、string と入力しましょう",\n        "const colors: string["
       ] = ['あか', 'あお'];",
-        "// 2番目の中身を取り出すために 1 を入力してね",
+        "// 2番目の中身を取り出すために 1 を入力しましょう",
         "console.log(colors[1]);"
       ],
       "lineHints": [
@@ -369,7 +369,7 @@ export const typescriptData = {
       "correctLines": [
         ""// 文字の配列なので、string と入力しましょう",\n        "const names: string["
       ] = ['たろう', 'はなこ'];",
-        "// name と names を入力して、配列から順番に取り出してね",
+        "// name と names を入力して、配列から順番に取り出しましょう",
         "for (const name of names) {",
         "    console.log(name);",
         "}"
@@ -471,7 +471,7 @@ export const typescriptData = {
         {
           "title": "入り口のラベル",
           "image": "/illustrations/common/function.png",
-          "content": "# 引数（ひきすう）にラベルを貼ります\n\n関数が受け取るデータのことを **引数（ひきすう）** と呼びます。ここにもラベルを貼ることで、間違ったデータを渡さなくなるので安心です！\n\n**コード例：**\n```typescript\nfunction sayHello(msg: string) {\n    console.log(`メッセージ: ${msg}`);\n}\nsayHello('ヤッホー');\n```"
+          "content": "# 引数（ひきすう）にラベルを貼ります\n\n関数が受け取るデータのことを **引数（ひきすう）** と呼びます。もラベルを貼ることで、間違ったデータを渡さなくなるので安心です！\n\n**コード例：**\n```typescript\nfunction sayHello(msg: string) {\n    console.log(`メッセージ: ${msg}`);\n}\nsayHello('ヤッホー');\n```"
         }
       ],
       "initialDisplayMode": "holey",

@@ -146,7 +146,7 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# mapで各要素を変換\nresult = Enum.map([1, 2, 3], fn x -> x * x end)\nIO.inspect result",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""result = Enum.map([1",
         "2",
@@ -187,7 +187,7 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# filterで条件に合う要素を抽出\nresult = Enum.filter([1, 2, 3, 4, 5], fn x -> x >= 3 end)\nIO.inspect result",
-      "holeyCode": "___\\n___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___\n___",
       "correctLines": [
         ""result = Enum.filter([1",
         "2",
@@ -230,7 +230,7 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "x = 2\n# caseでパターンマッチ\nresult = case x do\n  1 -> \"one\"\n  2 -> \"two\"\n  _ -> \"other\"\nend\nIO.puts result",
-      "holeyCode": "___\\n___\\n  ___\\n  ___\\n  ___\\n___\\n___"one\"\n  2 -> \"two\"\n  _ -> \"other\"\nend\nIO.puts result",
+      "holeyCode": "___\n___\n  ___\n  ___\n  ___\n___\n___"one\"\n  2 -> \"two\"\n  _ -> \"other\"\nend\nIO.puts result",
       "correctLines": [
         "x = 2",
         "result = case x do",
@@ -369,7 +369,7 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# spawnでプロセスを作成\nspawn(fn -> IO.puts \"hello\" end)\nProcess.sleep(100)",
-      "holeyCode": "___\\n___"hello\" end)\nProcess.sleep(100)",
+      "holeyCode": "___\n___"hello\" end)\nProcess.sleep(100)",
       "correctLines": [
         "spawn(fn -> IO.puts "hello" end)",
         "Process.sleep(100)"

@@ -20,7 +20,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "def twice\n  # yieldでブロックを実行\n  yield\n  # yieldでブロックを実行\n  yield\nend",
-      "holeyCode": "___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___",
       "correctLines": [
         "{ "lineNumber": 2",
         ""content": "  yield" }",
@@ -53,7 +53,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Procでブロックをオブジェクト化、*で乗算\ndoubler = Proc.new { |x| x * 2 }",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         "{ "lineNumber": 1",
         ""content": "doubler = Proc.new { |x| x * 2 }" }"
@@ -82,7 +82,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# ->でラムダを定義、**で累乗\ncube = ->(x) { x ** 3 }",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         "{ "lineNumber": 1",
         ""content": "cube = ->(x) { x ** 3 }" }"
@@ -111,7 +111,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# mapで変換、upcaseで大文字化\nresult = ['ruby', 'python', 'go'].map(&:upcase)",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         "{ "lineNumber": 1, "content": "result = ['ruby'",
         "'python'",
@@ -142,7 +142,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# reduceで畳み込み、+で加算\nsum = [1, 2, 3, 4, 5].reduce(0) { |acc, n| acc + n }",
-      "holeyCode": "___\\n___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___\n___",
       "correctLines": [
         "{ "lineNumber": 1, "content": "sum = [1",
         "2",
@@ -175,7 +175,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# selectでフィルタ、evenで偶数判定\nevens = [1, 2, 3, 4, 5, 6].select { |n| n.even? }",
-      "holeyCode": "___\\n___\\n___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___\n___\n___",
       "correctLines": [
         "{ "lineNumber": 1, "content": "evens = [1",
         "2",
@@ -209,7 +209,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# *で可変長引数を受け取る\ndef sum_all(*numbers)\n  # reduceで畳み込み\n  numbers.reduce(0) { |acc, n| acc + n }\nend",
-      "holeyCode": "___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___",
       "correctLines": [
         "{ "lineNumber": 1",
         ""content": "def sum_all(*numbers)" }",
@@ -242,7 +242,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class FlexibleClass\n  # method_missingで未定義メソッドを捕捉\n  def method_missing(name, *args)\n    # nameでメソッド名を参照\n    \"Unknown method: #{name}\"\n  end\nend",
-      "holeyCode": "___\\n___\\n___\\n___"Unknown method: #{___}\"\n  end\nend",
+      "holeyCode": "___\n___\n___\n___"Unknown method: #{___}\"\n  end\nend",
       "correctLines": [
         "{ "lineNumber": 2",
         ""content": "  def method_missing(name, *args)" }",
@@ -275,7 +275,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Structで簡易クラス、name, ageの順で属性名\nPerson = Struct.new(:name, :age)",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         "{ "lineNumber": 1",
         ""content": "Person = Struct.new(:name, :age)" }"
@@ -304,7 +304,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# tapで自身を返す、pushで要素追加\nresult = [1, 2, 3].tap { |arr| arr.push(4) }",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         "{ "lineNumber": 1, "content": "result = [1",
         "2",

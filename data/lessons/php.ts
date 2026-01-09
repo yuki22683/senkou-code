@@ -25,7 +25,7 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  // 画面にメッセージを出す関数\n  echo \"Hello, PHP!\";\n?>",
-      "holeyCode": "___\\n___\\n___\\n___"Hello, PHP!\" と入力してね\n  echo \"___\";\n?>",
+      "holeyCode": "___\n___\n___\n___"Hello, PHP!\" と入力しましょう\n  echo \"___\";\n?>",
       "correctLines": [
         "<?php",
         ""  echo "Hello",
@@ -168,7 +168,7 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  // ageに20を入れる\n  $age = 20;\n  // 文章の中に中身を表示する\n  echo \"I am $age years old.\";\n?>",
-      "holeyCode": "___\\n  ___\\n  ___\\n___"I am $___ years old.\";\n?>",
+      "holeyCode": "___\n  ___\n  ___\n___"I am $___ years old.\";\n?>",
       "correctLines": [
         "<?php",
         "  $age = 20;",
@@ -212,7 +212,7 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  // 配列を作る\n  $colors = ['red', 'blue'];\n  // 2番目のデータを表示する\n  echo $colors[1];\n?>",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         ""<?php",\n        "  $colors = ['red'",
         "'blue'"
@@ -223,7 +223,7 @@ export const phpData = {
       "lineHints": [
         null,
         "['red', 'blue'] と入力して配列を作ります。",
-        "2番目のデータの番号は 1 です。 ` $colors[1]` と入力してください。",
+        "2番目のデータの番号は 1 です。 ` $colors[1]` と入力してしましょう。",
         null
       ],
       "candidates": {
@@ -257,7 +257,7 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  $score = 100;\n  // >で大きいか比較\n  if ($score > 80) {\n    echo \"Excellent\";\n  }\n?>",
-      "holeyCode": "___\\n  ___\\n  ___\\n    ___\\n  ___\\n___"Excellent\";\n  }\n?>",
+      "holeyCode": "___\n  ___\n  ___\n    ___\n  ___\n___"Excellent\";\n  }\n?>",
       "correctLines": [
         "<?php",
         "  $score = 100;",
@@ -271,7 +271,7 @@ export const phpData = {
         "score = 100 と入力しましょう。",
         "比較するための記号 `>` を入力しましょう。",
         "Excellent と表示します。",
-        "さいごに } で閉じるのを忘れないでください。",
+        "さいごに } で閉じるのを忘れないでしましょう。",
         null
       ],
       "candidates": {
@@ -305,7 +305,7 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  $age = 18;\n  if ($age >= 20) {\n    echo \"Adult\";\n  // elseで「そうでなければ」\n  } else {\n    echo \"Minor\";\n  }\n?>",
-      "holeyCode": "___\\n  ___\\n  ___\\n    ___\\n  ___\\n    ___\\n  ___\\n___"Adult\";\n  // ここに else と入力してね\n  } ___ {\n    echo \"Minor\";\n  }\n?>",
+      "holeyCode": "___\n  ___\n  ___\n    ___\n  ___\n    ___\n  ___\n___"Adult\";\n  // 変数 else を使いましょう\n  } ___ {\n    echo \"Minor\";\n  }\n?>",
       "correctLines": [
         "<?php",
         "  $age = 18;",
@@ -357,7 +357,7 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  $nums = [1, 2, 3];\n  // asで各要素を取り出す\n  foreach ($nums as $n) {\n    echo $n;\n  }\n?>",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""<?php",\n        "  $nums = [1",
         "2",
@@ -451,7 +451,7 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  function greet() {\n    echo \"Hello\";\n  }\n  // 関数を実行する\n  greet();\n?>",
-      "holeyCode": "___\\n  ___\\n    ___\\n  ___\\n  ___\\n___"Hello\";\n  }\n  // ここに greet と入力して関数を動かしてね\n  ___();\n?>",
+      "holeyCode": "___\n  ___\n    ___\n  ___\n  ___\n___"Hello\";\n  }\n  // greet と入力して関数を動かしましょう\n  ___();\n?>",
       "correctLines": [
         "<?php",
         "  function greet() {",

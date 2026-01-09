@@ -467,7 +467,7 @@ export const typescriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "interface Person {\n  name: string;\n  age: number;\n}\n// keyof でオブジェクトのキーを取得\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\n  return p[key];\n}\n\nconst person = { name: 'Bob', age: 30 };\nconsole.log(getProperty(person, 'name'));",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         ""interface Person {",\n        "  name: string;",\n        "  age: number;",\n        "}",\n        "",\n        "// keyof と入力して、オブジェクトのキーを取得しましょう",\n        "function getProperty<K extends keyof Person>(p: Person",
         "key: K) {",\n        "  return p[key"

@@ -63,7 +63,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "word=\"Bash\"\n# #で文字列の長さを取得\necho ${#word}",
-      "holeyCode": "___\\n___"Bash\"\n# ここに # と入力して長さを調べてね\necho ${___word}",
+      "holeyCode": "___\n___"Bash\"\n# # と入力して長さを調べてね\necho ${___word}",
       "correctLines": [
         "word="Bash"",
         "echo ${#word}"
@@ -101,7 +101,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "text=\"Hello World\"\n# 6で開始位置を指定\necho ${text:6:5}",
-      "holeyCode": "___\\n___"Hello World\"\n# ここに 6 と入力して、7文字目から取り出してね\necho ${text:___:5}",
+      "holeyCode": "___\n___"Hello World\"\n# 6 と入力して、7文字目から取り出しましょう\necho ${text:___:5}",
       "correctLines": [
         "text="Hello World"",
         "echo ${text:6:5}"
@@ -273,7 +273,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fruit=\"apple\"\n# caseで分岐\ncase $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
-      "holeyCode": "___\\n___\\n    ___\\n    ___\\n    *) echo \"unknown\";;\\n___"apple\"\n# ここに case と入力して、条件でわけてね\n___ $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
+      "holeyCode": "___\n___\n    ___\n    ___\n    *) echo \"unknown\";;\\n___"apple\"\n# case と入力して、条件でわけてね\n___ $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
       "correctLines": [
         "fruit="apple"",
         "case $fruit in",
@@ -319,7 +319,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# $でコマンドの出力を取得\nfiles=$(ls)\necho \"Files: $files\"",
-      "holeyCode": "___\\n___"Files: $files\"",
+      "holeyCode": "___\n___"Files: $files\"",
       "correctLines": [
         "files=$(ls)",
         "echo "Files: $files""

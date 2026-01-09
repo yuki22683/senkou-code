@@ -30,7 +30,7 @@ export const luaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- Hello, Lua!を表示\nprint(\"Hello, Lua!\")",
-      "holeyCode": "___\\n___"___\")",
+      "holeyCode": "___\n___"___\")",
       "correctLines": [
         ""print("Hello",
         "Lua!")""

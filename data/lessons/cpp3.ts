@@ -139,7 +139,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int* p = nullptr;\n    if (p == nullptr) {\n        cout << \"null\" << endl;\n    }\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\\n___\\n\\n___\\n    // nullptr と入力して「空っぽ」にしましょう\\n    ___\\n    ___\\n        ___\\n    ___\\n    ___\\n___"null\" << endl;\n    }\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\\n___\n\\n___\n    // nullptr と入力して「空っぽ」にしましょう\\n    ___\n    ___\n        ___\n    ___\n    ___\n___"null\" << endl;\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "using namespace std;",
@@ -255,7 +255,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v{1, 2, 3, 4, 5};\n    for (int n : v) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\\n#include <vector>\\n___\\n\\n___\\n    // { と入力して、仲間をまとめてね\\n    ___\\n    ___\\n    ___\\n    ___\\n___" \";\n    cout << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\\n#include <vector>\\n___\n\\n___\n    // { と入力して、仲間をまとめてね\\n    ___\n    ___\n    ___\n    ___\n___" \";\n    cout << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <vector>",
@@ -365,7 +365,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <string>\n#include <utility>\nusing namespace std;\n\nint main() {\n    string s1 = \"Hello\";\n    string s2 = move(s1);\n    cout << s2 << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\\n#include <string>\\n#include <utility>\\n___\\n\\n___\\n    ___\\n    // move と入力して、中身を移動しましょう\\n    ___\\n    ___\\n    ___\\n___"Hello\";\n    // ここに move と入力して、中身を移動してね\n    string s2 = ___(s1);\n    cout << s2 << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\\n#include <string>\\n#include <utility>\\n___\n\\n___\n    ___\n    // move と入力して、中身を移動しましょう\\n    ___\n    ___\n    ___\n___"Hello\";\n    // move と入力して、中身を移動しましょう\n    string s2 = ___(s1);\n    cout << s2 << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <string>",
@@ -481,7 +481,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <array>\nusing namespace std;\n\nint main() {\n    array<int, 3> arr = {10, 20, 30};\n    for (int n : arr) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\\n#include <array>\\n___\\n\\n___\\n    // array と入力して、決まった長さの配列を作ってね\\n    ___\\n    ___\\n    ___\\n    ___\\n___" \";\n    cout << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\\n#include <array>\\n___\n\\n___\n    // array と入力して、決まった長さの配列を作ってね\\n    ___\n    ___\n    ___\n    ___\n___" \";\n    cout << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <array>",

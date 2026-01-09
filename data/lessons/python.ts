@@ -1,6 +1,4 @@
-import { Lesson } from '../types';
-
-export const pythonData: Lesson = {
+export const pythonData = {
   "language": "python",
   "lessonId": "python-1",
   "lessonTitle": "Python (パイソン) に挑戦！",
@@ -39,7 +37,7 @@ export const pythonData: Lesson = {
       ],
       "lineHints": [
         null,
-        "関数は「print」です。文字を出しましょうときは、左右を '（ちょんちょん）で囲むのを忘れないでください！"
+        "関数は「print」です。文字を出しましょうときは、左右を '（ちょんちょん）で囲むのを忘れないでしましょう！"
       ],
       "candidates": {
         "functions": [
@@ -140,7 +138,7 @@ export const pythonData: Lesson = {
         null,
         "y = 5 と入力しましょう。",
         null,
-        "たし算なので `+` を使います。 `print(x + y)` と入力してください。"
+        "たし算なので `+` を使います。 `print(x + y)` と入力してしましょう。"
       ],
       "candidates": {
         "variables": [
@@ -245,7 +243,7 @@ export const pythonData: Lesson = {
         null,
         "['あか', 'あお'] と入力しましょう。",
         null,
-        "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"
+        "2番目のデータの番号は 1 です。 `colors[1]` と入力してしましょう。"
       ],
       "candidates": {
         "variables": [
@@ -301,7 +299,7 @@ export const pythonData: Lesson = {
         null,
         "score = 100 と入力しましょう。",
         null,
-        "`>` を使います。さいごに `:` を忘れないでください！",
+        "`>` を使います。さいごに `:` を忘れないでしましょう！",
         null,
         "`print('ごうかく！')` と入力しましょう。"
       ],
@@ -365,7 +363,7 @@ export const pythonData: Lesson = {
         null,
         null,
         null,
-        "else: と入力しましょう。 `:` を忘れないでください。",
+        "else: と入力しましょう。 `:` を忘れないでしましょう。",
         null,
         "print('こども') と入力しましょう。"
       ],
@@ -422,7 +420,7 @@ export const pythonData: Lesson = {
         null,
         null,
         null,
-        "for name in names: と入力します。さいごの `:` も忘れないでください！",
+        "for name in names: と入力します。さいごの `:` も忘れないでしましょう！",
         "取り出した名前（name）を print で表示します。"
       ],
       "candidates": {
@@ -448,7 +446,7 @@ export const pythonData: Lesson = {
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "マップ（辞書）とは？",
+          "title": "辞書とは？",
           "image": "/illustrations/common/dict.png",
           "content": "# キーワードで検索できる仕組み\n\n「言葉」と「その意味」のように、関連する2つの情報をセットにして保存できるのが **辞書** です。キーワードを使って目的のデータをすぐに見つけられます。"
         },

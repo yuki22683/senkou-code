@@ -25,7 +25,7 @@ export const go3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\n\nimport \"fmt\"\n\n// any で任意の型を受け入れる\nfunc First[T any](slice []T) T {\n    return slice[0]\n}\n\nfunc main() {\n    nums := []int{10, 20, 30}\n    fmt.Println(First(nums))\n}",
-      "holeyCode": "___"fmt\"\n\n// ここに any と入力してね\nfunc First[T ___](slice []T) T {\n    return slice[0]\n}\n\nfunc main() {\n    nums := []int{10, 20, 30}\n    fmt.Println(First(nums))\n}",
+      "holeyCode": "___"fmt\"\n\n// 変数 any を使いましょう\nfunc First[T ___](slice []T) T {\n    return slice[0]\n}\n\nfunc main() {\n    nums := []int{10, 20, 30}\n    fmt.Println(First(nums))\n}",
       "correctLines": [
         ""package main",\n        "",\n        "import "fmt"",\n        "",\n        "// 変数 any を使いましょう",\n        "func First[T any"
       ](slice []T) T {",
@@ -80,7 +80,7 @@ export const go3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\n\nimport \"fmt\"\n\n// comparable で比較可能な型に制限\nfunc IndexOf[T comparable](slice []T, v T) int {\n    for i, x := range slice {\n        if x == v {\n            return i\n        }\n    }\n    return -1\n}\n\nfunc main() {\n    names := []string{\"a\", \"b\", \"c\"}\n    fmt.Println(IndexOf(names, \"b\"))\n}",
-      "holeyCode": "___"fmt\"\n\n// ここに comparable と入力してね\nfunc IndexOf[T ___](slice []T, v T) int {\n    for i, x := range slice {\n        if x == v {\n            return i\n        }\n    }\n    return -1\n}\n\nfunc main() {\n    names := []string{\"a\", \"b\", \"c\"}\n    fmt.Println(IndexOf(names, \"b\"))\n}",
+      "holeyCode": "___"fmt\"\n\n// 変数 comparable を使いましょう\nfunc IndexOf[T ___](slice []T, v T) int {\n    for i, x := range slice {\n        if x == v {\n            return i\n        }\n    }\n    return -1\n}\n\nfunc main() {\n    names := []string{\"a\", \"b\", \"c\"}\n    fmt.Println(IndexOf(names, \"b\"))\n}",
       "correctLines": [
         ""package main",\n        "",\n        "import "fmt"",\n        "",\n        "// 変数 comparable を使いましょう",\n        "func IndexOf[T comparable"
       ](slice []T, v T) int {",
@@ -145,7 +145,7 @@ export const go3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    // make でスライスを作成\n    nums := make([]int, 3)\n    nums[0] = 10\n    nums[1] = 20\n    nums[2] = 30\n    fmt.Println(nums)\n}",
-      "holeyCode": "___"fmt\"\n\nfunc main() {\n    // ここに make と入力してスライスを作ってね\n    nums := ___([]int, 3)\n    nums[0] = 10\n    nums[1] = 20\n    nums[2] = 30\n    fmt.Println(nums)\n}",
+      "holeyCode": "___"fmt\"\n\nfunc main() {\n    // make と入力してスライスを作ってね\n    nums := ___([]int, 3)\n    nums[0] = 10\n    nums[1] = 20\n    nums[2] = 30\n    fmt.Println(nums)\n}",
       "correctLines": [
         ""package main",\n        "",\n        "import "fmt"",\n        "",\n        "func main() {",\n        "    // make と入力してスライスを作ってね",\n        "    nums := make(["
       ]int, 3)",
@@ -197,12 +197,12 @@ export const go3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    a := []int{1, 2}\n    b := []int{3, 4}\n    // ... でスライスを展開\n    c := append(a, b...)\n    fmt.Println(c)\n}",
-      "holeyCode": "___"fmt\"\n\nfunc main() {\n    a := []int{1, 2}\n    b := []int{3, 4}\n    // ここに ... と入力してスライスを広げてね\n    c := append(a, b___)\n    fmt.Println(c)\n}",
+      "holeyCode": "___"fmt\"\n\nfunc main() {\n    a := []int{1, 2}\n    b := []int{3, 4}\n    // ... と入力してスライスを広げてね\n    c := append(a, b___)\n    fmt.Println(c)\n}",
       "correctLines": [
         ""package main",\n        "",\n        "import "fmt"",\n        "",\n        "func main() {",\n        "    a := ["
       ]int{1, 2}",
         "    b := []int{3, 4}",
-        "    // ここに ... と入力してスライスを広げてね",
+        "    // ... と入力してスライスを広げてね",
         "    c := append(a, b...)",
         "    fmt.Println(c)",
         "}"
@@ -248,12 +248,12 @@ export const go3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    src := []int{10, 20, 30}\n    dst := make([]int, len(src))\n    // copy でスライスをコピー\n    copy(dst, src)\n    fmt.Println(dst)\n}",
-      "holeyCode": "___"fmt\"\n\nfunc main() {\n    src := []int{10, 20, 30}\n    dst := make([]int, len(src))\n    // ここに copy と入力してコピーしてね\n    ___(dst, src)\n    fmt.Println(dst)\n}",
+      "holeyCode": "___"fmt\"\n\nfunc main() {\n    src := []int{10, 20, 30}\n    dst := make([]int, len(src))\n    // copy と入力してコピーしましょう\n    ___(dst, src)\n    fmt.Println(dst)\n}",
       "correctLines": [
         ""package main",\n        "",\n        "import "fmt"",\n        "",\n        "func main() {",\n        "    src := ["
       ]int{10, 20, 30}",
         "    dst := make([]int, len(src))",
-        "    // ここに copy と入力してコピーしてね",
+        "    // copy と入力してコピーしましょう",
         "    copy(dst, src)",
         "    fmt.Println(dst)",
         "}"
@@ -299,7 +299,7 @@ export const go3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    ch1 := make(chan int, 1)\n    ch2 := make(chan int, 1)\n    ch1 <- 10\n    \n    // select で複数チャネルを待機\n    select {\n    case v := <-ch1:\n        fmt.Println(v)\n    case v := <-ch2:\n        fmt.Println(v)\n    }\n}",
-      "holeyCode": "___\\n\\n___\\n\\n___\\n    ___\\n    ___\\n    ___\\n    \\n    // select と入力して待機しましょう\\n    ___\\n    ___\\n        ___\\n    ___\\n        ___\\n    ___\\n___"fmt\"\n\nfunc main() {\n    ch1 := make(chan int, 1)\n    ch2 := make(chan int, 1)\n    ch1 <- 10\n    \n    // ここに select と入力して待機してね\n    ___ {\n    case v := <-ch1:\n        fmt.Println(v)\n    case v := <-ch2:\n        fmt.Println(v)\n    }\n}",
+      "holeyCode": "___\n\\n___\n\\n___\n    ___\n    ___\n    ___\n    \\n    // select と入力して待機しましょう\\n    ___\n    ___\n        ___\n    ___\n        ___\n    ___\n___"fmt\"\n\nfunc main() {\n    ch1 := make(chan int, 1)\n    ch2 := make(chan int, 1)\n    ch1 <- 10\n    \n    // select と入力して待機しましょう\n    ___ {\n    case v := <-ch1:\n        fmt.Println(v)\n    case v := <-ch2:\n        fmt.Println(v)\n    }\n}",
       "correctLines": [
         "package main",
         "",
@@ -366,11 +366,11 @@ export const go3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    scores := map[string]int{\"math\": 90, \"english\": 85}\n    // range でマップをイテレート\n    for k, v := range scores {\n        fmt.Printf(\"%s: %d\\n\", k, v)\n    }\n}",
-      "holeyCode": "___"fmt\"\n\nfunc main() {\n    scores := map[string]int{\"math\": 90, \"english\": 85}\n    // ここに range と入力してね\n    for k, v := ___ scores {\n        fmt.Printf(\"%s: %d\\n\", k, v)\n    }\n}",
+      "holeyCode": "___"fmt\"\n\nfunc main() {\n    scores := map[string]int{\"math\": 90, \"english\": 85}\n    // 変数 range を使いましょう\n    for k, v := ___ scores {\n        fmt.Printf(\"%s: %d\\n\", k, v)\n    }\n}",
       "correctLines": [
         ""package main",\n        "",\n        "import "fmt"",\n        "",\n        "func main() {",\n        "    scores := map[string"
       ]int{\"math\": 90, \"english\": 85}",
-        "    // ここに range と入力してね",
+        "    // 変数 range を使いましょう",
         "    for k, v := range scores {",
         "        fmt.Printf(\"%s: %d\\n\", k, v)",
         "    }",
@@ -417,7 +417,7 @@ export const go3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\n\nimport \"fmt\"\n\n// type で新しい型を定義\ntype Age int\n\nfunc main() {\n    var age Age = 25\n    fmt.Println(age)\n}",
-      "holeyCode": "___\\n\\n___\\n\\n// type と入力して新しい型を作ってね\\n___\\n\\n___\\n    ___\\n    ___\\n___"fmt\"\n\n// ここに type と入力して新しい型を作ってね\n___ Age int\n\nfunc main() {\n    var age Age = 25\n    fmt.Println(age)\n}",
+      "holeyCode": "___\n\\n___\n\\n// type と入力して新しい型を作ってね\\n___\n\\n___\n    ___\n    ___\n___"fmt\"\n\n// type と入力して新しい型を作ってね\n___ Age int\n\nfunc main() {\n    var age Age = 25\n    fmt.Println(age)\n}",
       "correctLines": [
         "package main",
         "",
@@ -472,7 +472,7 @@ export const go3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\n\nimport \"fmt\"\n\ntype Base struct {\n    Value int\n}\n\ntype Extended struct {\n    // Base を埋め込む\n    Base\n    Extra string\n}\n\nfunc main() {\n    e := Extended{Base: Base{Value: 100}, Extra: \"test\"}\n    fmt.Println(e.Value)\n}",
-      "holeyCode": "___\\n\\n___\\n\\n___\\n    ___\\n___\\n\\n___\\n    // Base と入力して埋め込んでね\\n    ___\\n    ___\\n___\\n\\n___\\n    ___\\n    ___\\n___"fmt\"\n\ntype Base struct {\n    Value int\n}\n\ntype Extended struct {\n    // ここに Base と入力して埋め込んでね\n    ___\n    Extra string\n}\n\nfunc main() {\n    e := Extended{Base: Base{Value: 100}, Extra: \"test\"}\n    fmt.Println(e.Value)\n}",
+      "holeyCode": "___\n\\n___\n\\n___\n    ___\n___\n\\n___\n    // Base と入力して埋め込んでね\\n    ___\n    ___\n___\n\\n___\n    ___\n    ___\n___"fmt\"\n\ntype Base struct {\n    Value int\n}\n\ntype Extended struct {\n    // Base と入力して埋め込んでね\n    ___\n    Extra string\n}\n\nfunc main() {\n    e := Extended{Base: Base{Value: 100}, Extra: \"test\"}\n    fmt.Println(e.Value)\n}",
       "correctLines": [
         "package main",
         "",
@@ -541,7 +541,7 @@ export const go3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    defer func() {\n        // recover でパニックを捕捉\n        if r := recover(); r != nil {\n            fmt.Println(\"caught\")\n        }\n    }()\n    panic(\"error\")\n}",
-      "holeyCode": "___\\n\\n___\\n\\n___\\n    ___\\n        // recover と入力してパニックを捕まえてね\\n        ___\\n            ___\\n        ___\\n    ___\\n    ___\\n___"fmt\"\n\nfunc main() {\n    defer func() {\n        // ここに recover と入力してパニックを捕まえてね\n        if r := ___(); r != nil {\n            fmt.Println(\"caught\")\n        }\n    }()\n    panic(\"error\")\n}",
+      "holeyCode": "___\n\\n___\n\\n___\n    ___\n        // recover と入力してパニックを捕まえてね\\n        ___\n            ___\n        ___\n    ___\n    ___\n___"fmt\"\n\nfunc main() {\n    defer func() {\n        // recover と入力してパニックを捕まえてね\n        if r := ___(); r != nil {\n            fmt.Println(\"caught\")\n        }\n    }()\n    panic(\"error\")\n}",
       "correctLines": [
         "package main",
         "",

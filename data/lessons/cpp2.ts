@@ -25,7 +25,7 @@ export const cpp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <string>\nclass Cat {\npublic:\n    std::string name;\n};\nint main() {\n    Cat c;\n    c.name = \"Tama\";\n    std::cout << c.name << std::endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\\n#include <string>\\n___\\n___\\n    ___\\n___\\n___\\n    ___\\n    ___\\n    ___\\n    ___\\n___"Tama\";\n    std::cout << c.name << std::endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\\n#include <string>\\n___\n___\n    ___\n___\n___\n    ___\n    ___\n    ___\n    ___\n___"Tama\";\n    std::cout << c.name << std::endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <string>",
@@ -268,7 +268,7 @@ export const cpp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nclass Vehicle {\npublic:\n    void move() {\n        std::cout << \"moving\" << std::endl;\n    }\n};\nclass Car : public Vehicle {\n};\nint main() {\n    Car c;\n    c.move();\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\\n___\\n___\\n    ___\\n        ___\\n    ___\\n___\\n___\\n___\\n___\\n    ___\\n    ___\\n    ___\\n___"moving\" << std::endl;\n    }\n};\n// ここに public と入力して継承してね\nclass Car : ___ Vehicle {\n};\nint main() {\n    Car c;\n    c.move();\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\\n___\n___\n    ___\n        ___\n    ___\n___\n___\n___\n___\n    ___\n    ___\n    ___\n___"moving\" << std::endl;\n    }\n};\n// public と入力して継承しましょう\nclass Car : ___ Vehicle {\n};\nint main() {\n    Car c;\n    c.move();\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "class Vehicle {",
@@ -330,7 +330,7 @@ export const cpp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nclass Shape {\npublic:\n    virtual void draw() {\n        std::cout << \"shape\" << std::endl;\n    }\n};\nclass Circle : public Shape {\npublic:\n    void draw() override {\n        std::cout << \"circle\" << std::endl;\n    }\n};\nint main() {\n    Circle c;\n    c.draw();\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\\n___\\n___\\n    // virtual と入力して、あとで上書きできるようにしましょう\\n    ___\\n        ___\\n    ___\\n___\\n___\\n___\\n    ___\\n        ___\\n    ___\\n___\\n___\\n    ___\\n    ___\\n    ___\\n___"shape\" << std::endl;\n    }\n};\nclass Circle : public Shape {\npublic:\n    void draw() override {\n        std::cout << \"circle\" << std::endl;\n    }\n};\nint main() {\n    Circle c;\n    c.draw();\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\\n___\n___\n    // virtual と入力して、あとで上書きできるようにしましょう\\n    ___\n        ___\n    ___\n___\n___\n___\n    ___\n        ___\n    ___\n___\n___\n    ___\n    ___\n    ___\n___"shape\" << std::endl;\n    }\n};\nclass Circle : public Shape {\npublic:\n    void draw() override {\n        std::cout << \"circle\" << std::endl;\n    }\n};\nint main() {\n    Circle c;\n    c.draw();\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "class Shape {",

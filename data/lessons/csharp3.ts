@@ -25,7 +25,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Threading.Tasks;\n\nclass Program {\n    static async Task Main() {\n        var result = await GetMessageAsync();\n        Console.WriteLine(result);\n    }\n    \n    static async Task<string> GetMessageAsync() {\n        await Task.Delay(100);\n        return \"Hello Async!\";\n    }\n}",
-      "holeyCode": "___\\n___\\n\\n___\\n    ___\\n        // await と入力して、終わるまで待ってね\\n        ___\\n        ___\\n    ___\\n    \\n    ___\\n        ___\\n        ___\\n    ___\\n___"Hello Async!\";\n    }\n}",
+      "holeyCode": "___\n___\n\\n___\n    ___\n        // await と入力して、終わるまで待ってね\\n        ___\n        ___\n    ___\n    \\n    ___\n        ___\n        ___\n    ___\n___"Hello Async!\";\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Threading.Tasks;",
@@ -92,7 +92,7 @@ export const csharp3Data = {
       "correctLines": [
         ""using System;",\n        "using System.Linq;",\n        "",\n        "class Program {",\n        "    static void Main() {",\n        "        var nums = new["
       ] { 3, 1, 4, 1, 5 };",
-        "        // ここに OrderBy と入力して順番に並べてね",
+        "        // OrderBy と入力して順番に並べてね",
         "        var sorted = nums.OrderBy(x => x);",
         "        Console.WriteLine(string.Join(\",\", sorted));",
         "    }",
@@ -143,7 +143,7 @@ export const csharp3Data = {
       "correctLines": [
         ""using System;",\n        "using System.Linq;",\n        "",\n        "class Program {",\n        "    static void Main() {",\n        "        var nums = new int["
       ] {};",
-        "        // ここに FirstOrDefault と入力して、なければ 0 にしてね",
+        "        // FirstOrDefault と入力して、なければ 0 にしましょう",
         "        var result = nums.FirstOrDefault();",
         "        Console.WriteLine(result);",
         "    }",
@@ -194,7 +194,7 @@ export const csharp3Data = {
       "correctLines": [
         ""using System;",\n        "using System.Linq;",\n        "",\n        "class Program {",\n        "    static void Main() {",\n        "        var nums = new["
       ] { 1, 2, 3, 4, 5 };",
-        "        // ここに All と入力して、全部そうか調べてね",
+        "        // All と入力して、全部そうか調べてね",
         "        var allPositive = nums.All(x => x > 0);",
         "        Console.WriteLine(allPositive);",
         "    }",
@@ -245,7 +245,7 @@ export const csharp3Data = {
       "correctLines": [
         ""using System;",\n        "using System.Linq;",\n        "",\n        "class Program {",\n        "    static void Main() {",\n        "        var nums = new["
       ] { 10, 20, 30 };",
-        "        // ここに Sum と入力して、全部たしてね",
+        "        // Sum と入力して、全部たしましょう",
         "        var total = nums.Sum();",
         "        Console.WriteLine(total);",
         "    }",
@@ -292,7 +292,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        int n = 2;\n        var result = n switch {\n            1 => \"one\",\n            2 => \"two\",\n            _ => \"other\"\n        };\n        Console.WriteLine(result);\n    }\n}",
-      "holeyCode": "___\\n\\n___\\n    ___\\n        ___\\n        // 変数 switch を使いましょう\\n        ___\\n            ___\\n            ___\\n            ___\\n        ___\\n        ___\\n    ___\\n___"one\",\n            2 => \"two\",\n            _ => \"other\"\n        };\n        Console.WriteLine(result);\n    }\n}",
+      "holeyCode": "___\n\\n___\n    ___\n        ___\n        // 変数 switch を使いましょう\\n        ___\n            ___\n            ___\n            ___\n        ___\n        ___\n    ___\n___"one\",\n            2 => \"two\",\n            _ => \"other\"\n        };\n        Console.WriteLine(result);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -353,7 +353,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Collections.Generic;\n\nclass Program {\n    static void Main() {\n        var dict = new Dictionary<string, int>();\n        dict[\"a\"] = 1;\n        dict[\"b\"] = 2;\n        Console.WriteLine(dict[\"a\"]);\n    }\n}",
-      "holeyCode": "___\\n___"a\"] = 1;\n        dict[\"b\"] = 2;\n        Console.WriteLine(dict[\"a\"]);\n    }\n}",
+      "holeyCode": "___\n___"a\"] = 1;\n        dict[\"b\"] = 2;\n        Console.WriteLine(dict[\"a\"]);\n    }\n}",
       "correctLines": [
         ""using System;",\n        "using System.Collections.Generic;",\n        "",\n        "class Program {",\n        "    static void Main() {",\n        "        // Dictionary と入力して、じしょを作ってね",\n        "        var dict = new Dictionary<string",
         "int>();",\n        "        dict["a""
@@ -405,7 +405,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        var x = 10;\n        var y = 20;\n        Console.WriteLine($\"Sum: {x + y}\");\n    }\n}",
-      "holeyCode": "___\\n\\n___\\n    ___\\n        ___\\n        ___\\n        // $ を入力して、文字の中に数字を埋め込んでね\\n        ___\\n    ___\\n___"Sum: {x + y}\");\n    }\n}",
+      "holeyCode": "___\n\\n___\n    ___\n        ___\n        ___\n        // $ を入力して、文字の中に数字を埋め込んでね\\n        ___\n    ___\n___"Sum: {x + y}\");\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -515,7 +515,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.IO;\n\nclass Program {\n    static void Main() {\n        using var writer = new StringWriter();\n        writer.WriteLine(\"Hello\");\n        Console.WriteLine(writer.ToString().Trim());\n    }\n}",
-      "holeyCode": "___\\n___\\n\\n___\\n    ___\\n        // using と入力して、自動でお片付け（解放）しましょう\\n        ___\\n        ___\\n        ___\\n    ___\\n___"Hello\");\n        Console.WriteLine(writer.ToString().Trim());\n    }\n}",
+      "holeyCode": "___\n___\n\\n___\n    ___\n        // using と入力して、自動でお片付け（解放）しましょう\\n        ___\n        ___\n        ___\n    ___\n___"Hello\");\n        Console.WriteLine(writer.ToString().Trim());\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.IO;",

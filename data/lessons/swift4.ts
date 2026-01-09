@@ -25,7 +25,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "protocol Speakable {\n    func speak() -> String\n}\n\nstruct Dog: Speakable {\n    func speak() -> String {\n        return \"Woof!\"\n    }\n}\n\nlet dog = Dog()\nprint(dog.speak())",
-      "holeyCode": "___\\n    ___\\n___\\n\\n___\\n    ___\\n        ___\\n    ___\\n___\\n\\n___\\n___"Woof!\"\n    }\n}\n\nlet dog = Dog()\nprint(dog.speak())",
+      "holeyCode": "___\n    ___\n___\n\\n___\n    ___\n        ___\n    ___\n___\n\\n___\n___"Woof!\"\n    }\n}\n\nlet dog = Dog()\nprint(dog.speak())",
       "correctLines": [
         "protocol Speakable {",
         "    func speak() -> String",
@@ -83,7 +83,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "protocol Identifiable {\n    var id: Int { get }\n}\n\nextension Identifiable {\n    func display() { print(\"ID: \\(id)\") }\n}\n\nstruct User: Identifiable {\n    var id: Int\n}\n\nlet user = User(id: 42)\nuser.display()",
-      "holeyCode": "___\\n    ___\\n___\\n\\n// extension と入力して約束を広げてね\\n___\\n    ___\\n___\\n\\n___\\n    ___\\n___\\n\\n___\\n___"ID: \\(id)\") }\n}\n\nstruct User: Identifiable {\n    var id: Int\n}\n\nlet user = User(id: 42)\nuser.display()",
+      "holeyCode": "___\n    ___\n___\n\\n// extension と入力して約束を広げてね\\n___\n    ___\n___\n\\n___\n    ___\n___\n\\n___\n___"ID: \\(id)\") }\n}\n\nstruct User: Identifiable {\n    var id: Int\n}\n\nlet user = User(id: 42)\nuser.display()",
       "correctLines": [
         "protocol Identifiable {",
         "    var id: Int { get }",
@@ -239,7 +239,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import Foundation\n\nstruct Item: Codable {\n    var name: String\n}\n\nlet item = Item(name: \"Apple\")\nlet encoder = JSONEncoder()\nif let data = try? encoder.encode(item),\n   let json = String(data: data, encoding: .utf8) {\n    print(json)\n}",
-      "holeyCode": "___\\n\\n// 変数 Codable を使いましょう\\n___\\n    ___\\n___\\n\\n___\\n___\\n___\\n   ___\\n    ___\\n___"Apple\")\nlet encoder = JSONEncoder()\nif let data = try? encoder.encode(item),\n   let json = String(data: data, encoding: .utf8) {\n    print(json)\n}",
+      "holeyCode": "___\n\\n// 変数 Codable を使いましょう\\n___\n    ___\n___\n\\n___\n___\n___\n   ___\n    ___\n___"Apple\")\nlet encoder = JSONEncoder()\nif let data = try? encoder.encode(item),\n   let json = String(data: data, encoding: .utf8) {\n    print(json)\n}",
       "correctLines": [
         "import Foundation",
         "",
@@ -298,7 +298,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Calculator {\n    lazy var result: Int = {\n        print(\"Computing...\")\n        return 100\n    }()\n}\n\nlet calc = Calculator()\nprint(calc.result)",
-      "holeyCode": "___\\n    // lazy と入力して、のんびり準備しましょう\\n    ___\\n        ___\\n        ___\\n    ___\\n___\\n\\n___\\n___"Computing...\")\n        return 100\n    }()\n}\n\nlet calc = Calculator()\nprint(calc.result)",
+      "holeyCode": "___\n    // lazy と入力して、のんびり準備しましょう\\n    ___\n        ___\n        ___\n    ___\n___\n\\n___\n___"Computing...\")\n        return 100\n    }()\n}\n\nlet calc = Calculator()\nprint(calc.result)",
       "correctLines": [
         "class Calculator {",
         "    // lazy と入力して、のんびり準備しましょう",
@@ -351,7 +351,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func test() {\n    defer { print(\"end\") }\n    print(\"start\")\n}\n\ntest()",
-      "holeyCode": "___\\n    ___\\n    ___\\n___\\n\\n___"end\") }\n    print(\"start\")\n}\n\ntest()",
+      "holeyCode": "___\n    ___\n    ___\n___\n\\n___"end\") }\n    print(\"start\")\n}\n\ntest()",
       "correctLines": [
         "func test() {",
         "    defer { print("end") }",
@@ -397,7 +397,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func check(_ num: Int?) {\n    guard let n = num else {\n        print(\"nil\")\n        return\n    }\n    print(n * 2)\n}\n\ncheck(5)",
-      "holeyCode": "___\\n    ___\\n        ___\\n        ___\\n    ___\\n    ___\\n___\\n\\n___"nil\")\n        return\n    }\n    print(n * 2)\n}\n\ncheck(5)",
+      "holeyCode": "___\n    ___\n        ___\n        ___\n    ___\n    ___\n___\n\\n___"nil\")\n        return\n    }\n    print(n * 2)\n}\n\ncheck(5)",
       "correctLines": [
         "func check(_ num: Int?) {",
         "    guard let n = num else {",
@@ -508,7 +508,7 @@ export const swift4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func makeCollection() -> some Collection {\n    return [1, 2, 3]\n}\n\nlet c = makeCollection()\nprint(c.count)",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""func makeCollection() -> some Collection {",\n        "    return [1",
         "2",

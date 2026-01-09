@@ -20,12 +20,12 @@ export const cData = {
         {
           "title": "C言語の「きまり文句」",
           "image": "/illustrations/common/monitor.png",
-          "content": "# おまじないを入力しましょう\n\nC言語を動かすには、必ず入力しなければいけない「決まり文句」があります。\n\n```c\n#include <stdio.h>\nint main() {\n    // ここにやりたいことを入力します\n    return 0;\n}\n```\n\n画面に文字を出しましょうときは、`printf()` という名前の関数を使います。例えば：\n\n```c\nprintf(\"C言語は楽しい！\\n\");\n```\n=> C言語は楽しい！"
+          "content": "# おまじないを入力しましょう\n\nC言語を動かすには、必ず入力しなければいけない「決まり文句」があります。\n\n```c\n#include <stdio.h>\nint main() {\n    // やりたいことを入力します\n    return 0;\n}\n```\n\n画面に文字を出しましょうときは、`printf()` という名前の関数を使います。例えば：\n\n```c\nprintf(\"C言語は楽しい！\\n\");\n```\n=> C言語は楽しい！"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // 画面にメッセージを出す関数\n    printf(\"Hello, World!\\n\");\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n___\\n___\\n___\\n    ___\\n___"Hello, World!\" と入力してね\n    printf(\"___\\n\");\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\n___\n___\n    ___\n___"Hello, World!\" と入力しましょう\n    printf(\"___\\n\");\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -75,7 +75,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // int（数字）ラベルのはこを作る\n    int x = 10;\n    // 中身を表示する\n    printf(\"%d\\n\", x);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n    ___\\n    ___\\n___"%d\\n\", ___);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\n    ___\n    ___\n    ___\n___"%d\\n\", ___);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -126,7 +126,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // はこに数字を入れる\n    int a = 5;\n    int b = 3;\n    // たし算した結果を表示する\n    printf(\"%d\\n\", a + b);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n    ___\\n    ___\\n    ___\\n___"%d\\n\", a ___ b);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\n    ___\n    ___\n    ___\n    ___\n___"%d\\n\", a ___ b);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -166,7 +166,7 @@ export const cData = {
         {
           "title": "書式指定（しょきしてい）とは？",
           "image": "/illustrations/common/fstring.png",
-          "content": "# 文字列の中にはめ込む\n\n文章の途中に、変数（はこ）の中身を流し込みたいときに使う仕組みです。C言語では、あらかじめ「ここに数字が入りますよ」という目印を文章の中に置く必要があります。"
+          "content": "# 文字列の中にはめ込む\n\n文章の途中に、変数（はこ）の中身を流し込みたいときに使う仕組みです。C言語では、あらかじめ「数字が入りますよ」という目印を文章の中に置く必要があります。"
         },
         {
           "title": "%d を使いましょう",
@@ -176,7 +176,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // ageに10を入れる\n    int age = 10;\n    // 文章の中に中身を表示する\n    printf(\"私は %d 歳です\\n\", age);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n    ___\\n    ___\\n___"私は %d 歳です\\n\", ___);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\n    ___\n    ___\n    ___\n___"私は %d 歳です\\n\", ___);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -227,13 +227,13 @@ export const cData = {
       "holeyCode": "___"%d\\n\", nums[___]);\n    return 0;\n}",
       "correctLines": [
         ""#include <stdio.h>",\n        "int main() {",\n        "    int nums["
-      ] = {10, 20};\n    // 2番目の中身を取り出すために 1 を入力してね\n    printf(\"%d\\n\", nums[1]);\n    return 0;\n}",
+      ] = {10, 20};\n    // 2番目の中身を取り出すために 1 を入力しましょう\n    printf(\"%d\\n\", nums[1]);\n    return 0;\n}",
       ],
       "lineHints": [
         "",
         "",
         "{10, 20} と入力しましょう。 { } を使うのがルールです。",
-        "2番目のデータの番号は 1 です. `nums[1]` と入力してください。",
+        "2番目のデータの番号は 1 です. `nums[1]` と入力してしましょう。",
         "",
         ""
       ],
@@ -268,7 +268,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int score = 100;\n    if (score > 80) {\n        printf(\"Pass\\n\");\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n    ___\\n        ___\\n    ___\\n    ___\\n___"Pass\\n\");\n    }\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\n    ___\n    ___\n        ___\n    ___\n    ___\n___"Pass\\n\");\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -285,7 +285,7 @@ export const cData = {
         "score = 100 と入力しましょう。",
         "比較するための記号 `>` を入力しましょう。",
         "printf(\"Pass\\n\"); と入力しましょう。",
-        "さいごに } で閉じるのを忘れないでください。",
+        "さいごに } で閉じるのを忘れないでしましょう。",
         "",
         ""
       ],
@@ -320,7 +320,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int x = 5;\n    if (x > 10) {\n        printf(\"Big\\n\");\n    } else {\n        printf(\"Small\\n\");\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n    ___\\n        ___\\n    ___\\n        ___\\n    ___\\n    ___\\n___"Big\\n\");\n    // ここに else と入力してね\n    } ___ {\n        printf(\"Small\\n\");\n    }\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\n    ___\n    ___\n        ___\n    ___\n        ___\n    ___\n    ___\n___"Big\\n\");\n    // 変数 else を使いましょう\n    } ___ {\n        printf(\"Small\\n\");\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -376,7 +376,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n        ___\\n    ___\\n    ___\\n___"%d\\n\", i);\n    }\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\n    ___\n        ___\n    ___\n    ___\n___"%d\\n\", i);\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -426,7 +426,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nstruct Point {\n    int x;\n    int y;\n};\nint main() {\n    struct Point p = {10, 20};\n    printf(\"%d\\n\", p.x);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n    ___\\n___\\n___\\n    ___"%d\\n\", p.___ );\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\n    ___\n    ___\n___\n___\n    ___"%d\\n\", p.___ );\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "struct Point {",
@@ -479,7 +479,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nvoid greet() {\n    printf(\"Hello\\n\");\n}\nint main() {\n    // 関数を実行する\n    greet();\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n___\\n    ___\\n___\\n___\\n    ___\\n    ___\\n___"Hello\\n\");\n}\nint main() {\n    // ここに greet と入力して関数を動かしてね\n    ___();\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n___\n    ___\n___\n___\n    ___\n    ___\n___"Hello\\n\");\n}\nint main() {\n    // greet と入力して関数を動かしましょう\n    ___();\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "void greet() {",

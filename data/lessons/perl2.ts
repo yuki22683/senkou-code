@@ -25,7 +25,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "my $text = \"hello world\";\n# =~でパターンマッチング\nif ($text =~ /world/) {\n    print \"found\\n\";\n}",
-      "holeyCode": "___\\n// =~ と入力して、パターンに合っているか調べてね\\n___\\n    ___\\n___"hello world\";\n// ここに =~ と入力して、パターンに合っているか調べてね\nif ($text ___ /world/) {\n    print \"found\\n\";\n}",
+      "holeyCode": "___\n// =~ と入力して、パターンに合っているか調べてね\\n___\n    ___\n___"hello world\";\n// =~ と入力して、パターンに合っているか調べてね\nif ($text ___ /world/) {\n    print \"found\\n\";\n}",
       "correctLines": [
         "my $text = "hello world";",
         "// =~ と入力して、パターンに合っているか調べてね",
@@ -68,7 +68,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "my $text = \"cat\";\n# sで置換\n$text =~ s/cat/dog/;\nprint \"$text\\n\";",
-      "holeyCode": "___\\n// s と入力して、文字を置きかえてね\\n___\\n___"cat\";\n// ここに s と入力して、文字を置きかえてね\n$text =~ ___/cat/dog/;\nprint \"$text\\n\";",
+      "holeyCode": "___\n// s と入力して、文字を置きかえてね\\n___\n___"cat\";\n// s と入力して、文字を置きかえてね\n$text =~ ___/cat/dog/;\nprint \"$text\\n\";",
       "correctLines": [
         "my $text = "cat";",
         "// s と入力して、文字を置きかえてね",
@@ -149,7 +149,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# %でハッシュを宣言\nmy %scores = (\"math\" => 90);\nprint $scores{\"math\"} . \"\\n\";",
-      "holeyCode": "// % を入力して、ハッシュ（じしょ）を作ってね\\n___\\n___"math\" => 90);\nprint $scores{\"math\"} . \"\\n\";",
+      "holeyCode": "// % を入力して、ハッシュ（じしょ）を作ってね\\n___\n___"math\" => 90);\nprint $scores{\"math\"} . \"\\n\";",
       "correctLines": [
         "// % を入力して、ハッシュ（じしょ）を作ってね",
         "my %scores = ("math" => 90);",
@@ -188,7 +188,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "my @nums = (1, 2, 3);\n# foreachで各要素を処理\nforeach my $n (@nums) {\n    print \"$n\\n\";\n}",
-      "holeyCode": "___\\n// foreach と入力して、順番に取り出しましょう\\n___\\n    ___\\n___"$n\\n\";\n}",
+      "holeyCode": "___\n// foreach と入力して、順番に取り出しましょう\\n___\n    ___\n___"$n\\n\";\n}",
       "correctLines": [
         "my @nums = (1, 2, 3);",
         "// foreach と入力して、順番に取り出しましょう",
@@ -231,7 +231,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# subでサブルーチンを定義\nsub double {\n    my $n = shift;\n    return $n * 2;\n}\nprint double(5) . \"\\n\";",
-      "holeyCode": "// sub と入力して、サブルーチン（関数）を作ってね\\n___\\n    ___\\n    ___\\n___\\n___"\\n\";",
+      "holeyCode": "// sub と入力して、サブルーチン（関数）を作ってね\\n___\n    ___\n    ___\n___\n___"\\n\";",
       "correctLines": [
         "// sub と入力して、サブルーチン（関数）を作ってね",
         "sub double {",
@@ -276,7 +276,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "my @nums = (10, 20);\n# \\でリファレンスを作成\nmy $ref = \\@nums;\nprint $ref->[1] . \"\\n\";",
-      "holeyCode": "___\\n___"\\n\";",
+      "holeyCode": "___\n___"\\n\";",
       "correctLines": [
         ""my @nums = (10",
         "20);",\n        "// \\ を入力して、住所（リファレンス）を教えてね",\n        "my $ref = \\@nums;",\n        "print $ref->[1"
@@ -316,7 +316,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# [で無名配列を作成\nmy $ref = [5, 10, 15];\nprint $ref->[2] . \"\\n\";",
-      "holeyCode": "___\\n___\\n___"\\n\";",
+      "holeyCode": "___\n___\n___"\\n\";",
       "correctLines": [
         ""// [ を入力して、名前のない配列を作ってね",\n        "my $ref = [5",
         "10",
@@ -357,7 +357,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "my @nums = (1, 2, 3);\n# mapで各要素を変換\nmy @squared = map { $_ * $_ } @nums;\nprint \"@squared\\n\";",
-      "holeyCode": "___\\n// map と入力して、各要素を変換しましょう\\n___\\n___"@squared\\n\";",
+      "holeyCode": "___\n// map と入力して、各要素を変換しましょう\\n___\n___"@squared\\n\";",
       "correctLines": [
         "my @nums = (1, 2, 3);",
         "// map と入力して、各要素を変換しましょう",
@@ -398,7 +398,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "my @nums = (1, 2, 3, 4, 5);\n# grepで条件に合う要素を抽出\nmy @result = grep { $_ >= 3 } @nums;\nprint \"@result\\n\";",
-      "holeyCode": "___\\n// grep と入力して、条件に合うものを探しましょう\\n___\\n___"@result\\n\";",
+      "holeyCode": "___\n// grep と入力して、条件に合うものを探しましょう\\n___\n___"@result\\n\";",
       "correctLines": [
         "my @nums = (1, 2, 3, 4, 5);",
         "// grep と入力して、条件に合うものを探しましょう",

@@ -36,7 +36,7 @@ export const javascriptData = {
       ],
       "lineHints": [
         "コメントです。プログラムのメモとして使います。",
-        "console.log を使います。さいごの ; （セミコロン）を忘れないでください！"
+        "console.log を使います。さいごの ; （セミコロン）を忘れないでしましょう！"
       ],
       "candidates": {
         "functions": [
@@ -83,9 +83,9 @@ export const javascriptData = {
       ],
       "lineHints": [
         "null",
-        "const name = 'JavaScript'; と入力します。イコールで中身をしまってください！",
+        "const name = 'JavaScript'; と入力します。イコールで中身をしまってしましょう！",
         "null",
-        "console.log の中に、はこの名前 name を入力してください。"
+        "console.log の中に、はこの名前 name を入力してしましょう。"
       ],
       "candidates": {
         "variables": [
@@ -141,7 +141,7 @@ export const javascriptData = {
         "null",
         "const y = 5; と入力しましょう。",
         "null",
-        "たし算なので `+` を使います。 `console.log(x + y)` と入力してください。"
+        "たし算なので `+` を使います。 `console.log(x + y)` と入力してしましょう。"
       ],
       "candidates": {
         "variables": [
@@ -232,25 +232,25 @@ export const javascriptData = {
         {
           "title": "データの番号は「0」から！",
           "image": "/illustrations/common/list.png",
-          "content": "# [ ]（しかくい かっこ）を使いましょう\n\n配列の中身を取り出すときは、何番目かを指定します。\nでも気をつけてください！プログラミングでは、**さいしょのデータは「0番」** と数えるルールなのです。\n\n**コード例：**\n```javascript\nconst fruits = ['りんご', 'みかん'];\nconsole.log(fruits[0]); // 「りんご」が表示されます\n```"
+          "content": "# [ ]（しかくい かっこ）を使いましょう\n\n配列の中身を取り出すときは、何番目かを指定します。\nでも気をつけてしましょう！プログラミングでは、**さいしょのデータは「0番」** と数えるルールなのです。\n\n**コード例：**\n```javascript\nconst fruits = ['りんご', 'みかん'];\nconsole.log(fruits[0]); // 「りんご」が表示されます\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst colors = ['あか', 'あお'];\n// 2番目のデータ（番号は1）を出す\nconsole.log(colors[1]);",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""// 'あか'",
         "'あお' と入力しましょう",\n        "const colors = ['あか'",
         "'あお'"
       ];",
-        "// 2番目の中身を取り出すために 1 を入力してね",
+        "// 2番目の中身を取り出すために 1 を入力しましょう",
         "console.log(colors[1]);"
       ],
       "lineHints": [
         "null",
         "['あか', 'あお'] と入力しましょう。",
         "null",
-        "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"
+        "2番目のデータの番号は 1 です。 `colors[1]` と入力してしましょう。"
       ],
       "candidates": {
         "variables": [
@@ -312,7 +312,7 @@ export const javascriptData = {
         "比較するための記号 `>` を使います。",
         "null",
         "console.log('ごうかく！'); と入力しましょう。",
-        "さいごに } で閉じるのを忘れないでください。"
+        "さいごに } で閉じるのを忘れないでしましょう。"
       ],
       "candidates": {
         "variables": [
@@ -425,12 +425,12 @@ export const javascriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 配列を作る\nconst names = ['たろう', 'はなこ'];\n// 順番に取り出すループ\nfor (const name of names) {\n    console.log(name);\n}",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         ""// 配列を作る",\n        "const names = ['たろう'",
         "'はなこ'"
       ];",
-        "// name と names を入力して、配列から順番に取り出してね",
+        "// name と names を入力して、配列から順番に取り出しましょう",
         "for (const name of names) {",
         "    console.log(name);",
         "}"

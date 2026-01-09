@@ -25,7 +25,7 @@ export const c3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nint square(int x) { return x * x; }\n\nint main() {\n    int (*fp)(int) = square;\n    printf(\"%d\\n\", fp(5));\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n\\n___\\n    // *fp と入力して関数ポインタを宣言しましょう\\n    ___\\n    ___\\n    ___\\n___"%d\\n\", fp(5));\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n\\n___\n    // *fp と入力して関数ポインタを宣言しましょう\\n    ___\n    ___\n    ___\n___"%d\\n\", fp(5));\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -78,7 +78,7 @@ export const c3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nvoid apply(int n, void (*f)(int)) {\n    f(n);\n}\n\nvoid show(int x) {\n    printf(\"Value: %d\\n\", x);\n}\n\nint main() {\n    apply(42, show);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n    // f と入力して関数を動かしましょう\\n    ___\\n___\\n\\n___\\n    ___\\n___\\n\\n___\\n    ___\\n    ___\\n___"Value: %d\\n\", x);\n}\n\nint main() {\n    apply(42, show);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n    // f と入力して関数を動かしましょう\\n    ___\n___\n\\n___\n    ___\n___\n\\n___\n    ___\n    ___\n___"Value: %d\\n\", x);\n}\n\nint main() {\n    apply(42, show);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -141,7 +141,7 @@ export const c3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nint main() {\n    int a = 12;  // 1100\n    int b = 10;  // 1010\n    printf(\"%d\\n\", a & b);  // 8 (1000)\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n    ___\\n    ___\\n    // & を入力してビットANDしましょう\\n    ___\\n    ___\\n___"%d\\n\", a ___ b);  // 8 (1000)\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n    ___\n    ___\n    // & を入力してビットANDしましょう\\n    ___\n    ___\n___"%d\\n\", a ___ b);  // 8 (1000)\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -192,7 +192,7 @@ export const c3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nint main() {\n    int a = 12;  // 1100\n    int b = 10;  // 1010\n    printf(\"%d\\n\", a | b);  // 14 (1110)\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n    ___\\n    ___\\n    // | を入力してビットORしましょう\\n    ___\\n    ___\\n___"%d\\n\", a ___ b);  // 14 (1110)\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n    ___\n    ___\n    // | を入力してビットORしましょう\\n    ___\n    ___\n___"%d\\n\", a ___ b);  // 14 (1110)\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -243,7 +243,7 @@ export const c3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nint main() {\n    int x = 3;\n    printf(\"%d\\n\", x << 2);  // 12\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n    ___\\n    // << と入力して、左にずらして（シフトして）ね\\n    ___\\n    ___\\n___"%d\\n\", x ___ 2);  // 12\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n    ___\n    // << と入力して、左にずらして（シフトして）ね\\n    ___\n    ___\n___"%d\\n\", x ___ 2);  // 12\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -296,7 +296,7 @@ export const c3Data = {
       "correctLines": [
         ""#include <stdio.h>",\n        "",\n        "int main() {",\n        "    int arr["
       ] = {10, 20, 30};",
-        "    // ここに sizeof と入力して大きさを調べてね",
+        "    // sizeof と入力して大きさを調べてね",
         "    int count = sizeof(arr) / sizeof(arr[0]);",
         "    printf(\"%d\\n\", count);",
         "    return 0;",
@@ -341,7 +341,7 @@ export const c3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\ntypedef int Number;\n\nint main() {\n    Number x = 100;\n    printf(\"%d\\n\", x);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n// typedef と入力して、新しい名前を付けてね\\n___\\n\\n___\\n    ___\\n    ___\\n    ___\\n___"%d\\n\", x);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n// typedef と入力して、新しい名前を付けてね\\n___\n\\n___\n    ___\n    ___\n    ___\n___"%d\\n\", x);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -394,7 +394,7 @@ export const c3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nvoid show(const int *p) {\n    printf(\"%d\\n\", *p);\n}\n\nint main() {\n    int x = 42;\n    show(&x);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n// const と入力して、中身を変えないようにしましょう\\n___\\n    ___\\n___\\n\\n___\\n    ___\\n    ___\\n    ___\\n___"%d\\n\", *p);\n}\n\nint main() {\n    int x = 42;\n    show(&x);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n// const と入力して、中身を変えないようにしましょう\\n___\n    ___\n___\n\\n___\n    ___\n    ___\n    ___\n___"%d\\n\", *p);\n}\n\nint main() {\n    int x = 42;\n    show(&x);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -451,7 +451,7 @@ export const c3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nvoid counter() {\n    static int count = 0;\n    count++;\n    printf(\"%d\\n\", count);\n}\n\nint main() {\n    counter();\n    counter();\n    counter();\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n    // static と入力して、ずっと覚えておいてね\\n    ___\\n    ___\\n    ___\\n___\\n\\n___\\n    ___\\n    ___\\n    ___\\n    ___\\n___"%d\\n\", count);\n}\n\nint main() {\n    counter();\n    counter();\n    counter();\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n    // static と入力して、ずっと覚えておいてね\\n    ___\n    ___\n    ___\n___\n\\n___\n    ___\n    ___\n    ___\n    ___\n___"%d\\n\", count);\n}\n\nint main() {\n    counter();\n    counter();\n    counter();\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -514,7 +514,7 @@ export const c3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\n#define DOUBLE(x) ((x) * 2)\n\nint main() {\n    printf(\"%d\\n\", DOUBLE(7));\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n// define と入力して名前をつけてね\\n#define DOUBLE(x) ((x) * 2)\\n\\n___\\n    ___\\n    ___\\n___"%d\\n\", DOUBLE(7));\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n// define と入力して名前をつけてね\\n#define DOUBLE(x) ((x) * 2)\\n\\n___\n    ___\n    ___\n___"%d\\n\", DOUBLE(7));\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",

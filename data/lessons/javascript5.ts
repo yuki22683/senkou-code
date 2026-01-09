@@ -319,7 +319,7 @@ export const javascriptData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// Symbol でユニークな識別子を作成\nconst secret = Symbol('secret');\nconst user = {\n  name: 'Taro',\n  [secret]: 'password123'\n};\nconsole.log(user.name);\nconsole.log(user[secret]);",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         ""const secret = Symbol('secret');",\n        "const user = {",\n        "  name: 'Taro'",
         "",\n        "  [secret"
@@ -420,7 +420,7 @@ export const javascriptData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const handler = {\n  get(target, prop) {\n    console.log(`Getting ${prop}`);\n    return target[prop];\n  }\n};\n// Proxy で操作をインターセプト\nconst user = new Proxy({ name: 'Taro' }, handler);\nconsole.log(user.name);",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         ""const handler = {",\n        "  get(target",
         "prop) {",\n        "    console.log(`Getting ${prop}`);",\n        "    return target[prop"
@@ -428,7 +428,7 @@ export const javascriptData5 = {
         "  }",
         "};",
         "",
-        "// ここに Proxy と入力して、見張り役を作ってね",
+        "// Proxy と入力して、見張り役を作ってね",
         "const user = new Proxy({ name: 'Taro' }, handler);",
         "console.log(user.name);"
       ],

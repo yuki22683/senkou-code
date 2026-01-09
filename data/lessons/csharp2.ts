@@ -25,7 +25,7 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Vehicle {\n    public void Move() {\n        Console.WriteLine(\"moving\");\n    }\n}\nclass Car : Vehicle { }\n\nCar c = new Car();\nc.Move();",
-      "holeyCode": "___\\n    ___\\n        ___\\n    ___\\n___\\n___\\n\\n___\\n___"moving\");\n    }\n}\n// ここに : と入力して Vehicle（親）を継承してね\nclass Car ___ Vehicle { }\n\nCar c = new Car();\nc.Move();",
+      "holeyCode": "___\n    ___\n        ___\n    ___\n___\n___\n\\n___\n___"moving\");\n    }\n}\n// : と入力して Vehicle（親）を継承しましょう\nclass Car ___ Vehicle { }\n\nCar c = new Car();\nc.Move();",
       "correctLines": [
         "class Vehicle {",
         "    public void Move() {",
@@ -77,7 +77,7 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Shape {\n    public virtual void Draw() {\n        Console.WriteLine(\"shape\");\n    }\n}\nclass Circle : Shape {\n    public override void Draw() {\n        Console.WriteLine(\"circle\");\n    }\n}\n\nCircle c = new Circle();\nc.Draw();",
-      "holeyCode": "___\\n    ___\\n        ___\\n    ___\\n___\\n___\\n    ___\\n        ___\\n    ___\\n___\\n\\n___\\n___"shape\");\n    }\n}\nclass Circle : Shape {\n    // ここに override と入力してね\n    public ___ void Draw() {\n        Console.WriteLine(\"circle\");\n    }\n}\n\nCircle c = new Circle();\nc.Draw();",
+      "holeyCode": "___\n    ___\n        ___\n    ___\n___\n___\n    ___\n        ___\n    ___\n___\n\\n___\n___"shape\");\n    }\n}\nclass Circle : Shape {\n    // 変数 override を使いましょう\n    public ___ void Draw() {\n        Console.WriteLine(\"circle\");\n    }\n}\n\nCircle c = new Circle();\nc.Draw();",
       "correctLines": [
         "class Shape {",
         "    public virtual void Draw() {",
@@ -137,7 +137,7 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "interface IRunner {\n    void Run();\n}\nclass Robot : IRunner {\n    public void Run() {\n        Console.WriteLine(\"running\");\n    }\n}\n\nRobot r = new Robot();\nr.Run();",
-      "holeyCode": "___\\n    ___\\n___\\n___\\n    ___\\n        ___\\n    ___\\n___\\n\\n___\\n___"running\");\n    }\n}\n\nRobot r = new Robot();\nr.Run();",
+      "holeyCode": "___\n    ___\n___\n___\n    ___\n        ___\n    ___\n___\n\\n___\n___"running\");\n    }\n}\n\nRobot r = new Robot();\nr.Run();",
       "correctLines": [
         "interface IRunner {",
         "    void Run();",
@@ -415,7 +415,7 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "try {\n    throw new Exception(\"oops\");\n} catch (Exception e) {\n    Console.WriteLine(\"caught\");\n}",
-      "holeyCode": "___\\n    ___\\n___\\n    ___\\n___"oops\");\n} catch (Exception e) {\n    Console.WriteLine(\"caught\");\n}",
+      "holeyCode": "___\n    ___\n___\n    ___\n___"oops\");\n} catch (Exception e) {\n    Console.WriteLine(\"caught\");\n}",
       "correctLines": [
         "try {",
         "    throw new Exception("oops");",
@@ -459,7 +459,7 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "string text = \"Hello\";\nint? length = text?.Length;\nConsole.WriteLine(length);",
-      "holeyCode": "___\\n___\\n___"Hello\";\n// ここに ?. と入力して、nullじゃないときだけ教えてね\nint? length = text___Length;\nConsole.WriteLine(length);",
+      "holeyCode": "___\n___\n___"Hello\";\n// ?. と入力して、nullじゃないときだけ教えてね\nint? length = text___Length;\nConsole.WriteLine(length);",
       "correctLines": [
         "string text = "Hello";",
         "int? length = text?.Length;",

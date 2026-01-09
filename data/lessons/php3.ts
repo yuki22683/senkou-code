@@ -20,7 +20,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// functionで無名関数を定義\n$doubler = function($x) {\n    // *で乗算\n    return $x * 2;\n};",
-      "holeyCode": "___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___",
       "correctLines": [
         "{ "lineNumber": 1",
         ""content": "$doubler = function($x) {" }",
@@ -53,7 +53,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// fnでアロー関数、=>で式を記述\n$cube = fn($x) => $x ** 3;",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         "{ "lineNumber": 1",
         ""content": "$cube = fn($x) => $x ** 3;" }"
@@ -82,7 +82,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "$name = null;\n// ??でNull合体演算子\n$result = $name ?? 'Guest';",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         "{ "lineNumber": 2",
         ""content": "$result = $name ?? 'Guest';" }"
@@ -111,7 +111,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// ...で配列を展開\n$merged = [...[1, 2], ...[3, 4]];",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         "{ "lineNumber": 1, "content": "$merged = [...[1",
         "2"
@@ -141,7 +141,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "$grade = 'A';\n// matchで式によるパターンマッチ\n$message = match($grade) {\n    'A' => 'Excellent',\n    'B' => 'Good',\n    // defaultでデフォルトケース\n    default => 'Try harder'\n};",
-      "holeyCode": "___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___",
       "correctLines": [
         "{ "lineNumber": 2",
         ""content": "$message = match($grade) {" }",
@@ -174,7 +174,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "function createUser($name, $age) {\n    return ['name' => $name, 'age' => $age];\n}\n// ageとnameで名前付き引数を指定\n$user = createUser(age: 30, name: 'Alice');",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         "{ "lineNumber": 4",
         ""content": "$user = createUser(age: 30, name: 'Alice');" }"
@@ -203,7 +203,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// traitでトレイトを定義\ntrait HelloTrait {\n    public function sayHello() {\n        return 'Hello!';\n    }\n}\n\nclass Greeter {\n    // useでトレイトを使用\n    use HelloTrait;\n}",
-      "holeyCode": "___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___",
       "correctLines": [
         "{ "lineNumber": 2",
         ""content": "trait HelloTrait {" }",
@@ -236,7 +236,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "function rangeGen($n) {\n    for ($i = 1; $i <= $n; $i++) {\n        // yieldで値を一つずつ返す\n        yield $i;\n    }\n}",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         "{ "lineNumber": 4",
         ""content": "        yield $i;" }"
@@ -265,7 +265,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// name、age、cityに分割代入\n[$name, $age, $city] = ['Alice', 25, 'Tokyo'];",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         "{ "lineNumber": 1, "content": "[$name",
         "$age",
@@ -297,7 +297,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Person {\n    public function __construct(\n        // publicでアクセス修飾子\n        public string $name,\n        // publicでアクセス修飾子\n        public int $age\n    ) {}\n}",
-      "holeyCode": "___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___",
       "correctLines": [
         "{ "lineNumber": 4",
         ""content": "        public string $name," }",

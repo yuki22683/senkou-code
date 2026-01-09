@@ -161,7 +161,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Cat {\n    var name: String\n    init(name: String) {\n        self.name = name\n    }\n}\nlet cat = Cat(name: \"Tama\")\nprint(cat.name)",
-      "holeyCode": "___\\n    ___\\n    ___\\n        ___\\n    ___\\n___\\n___\\n___"Tama\")\nprint(cat.name)",
+      "holeyCode": "___\n    ___\n    ___\n        ___\n    ___\n___\n___\n___"Tama\")\nprint(cat.name)",
       "correctLines": [
         "class Cat {",
         "    var name: String",
@@ -211,7 +211,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "protocol Speaker {\n    func speak()\n}\nstruct Dog: Speaker {\n    func speak() {\n        print(\"woof\")\n    }\n}\nlet d = Dog()\nd.speak()",
-      "holeyCode": "___\\n    ___\\n___\\n___\\n    ___\\n        ___\\n    ___\\n___\\n___\\n___"woof\")\n    }\n}\nlet d = Dog()\nd.speak()",
+      "holeyCode": "___\n    ___\n___\n___\n    ___\n        ___\n    ___\n___\n___\n___"woof\")\n    }\n}\nlet d = Dog()\nd.speak()",
       "correctLines": [
         "protocol Speaker {",
         "    func speak()",
@@ -309,7 +309,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let nums = [1, 2, 3]\nlet squared = nums.map { $0 * $0 }\nprint(squared)",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""let nums = [1",
         "2",
@@ -352,7 +352,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let nums = [1, 2, 3, 4, 5]\nlet result = nums.filter { $0 >= 3 }\nprint(result)",
-      "holeyCode": "___\\n___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___\n___",
       "correctLines": [
         ""let nums = [1",
         "2",
@@ -397,7 +397,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func check(_ val: Int?) {\n    guard let n = val else {\n        print(\"nil\")\n        return\n    }\n    print(n)\n}\ncheck(10)",
-      "holeyCode": "___\\n    ___\\n        ___\\n        ___\\n    ___\\n    ___\\n___\\n___"nil\")\n        return\n    }\n    print(n)\n}\ncheck(10)",
+      "holeyCode": "___\n    ___\n        ___\n        ___\n    ___\n    ___\n___\n___"nil\")\n        return\n    }\n    print(n)\n}\ncheck(10)",
       "correctLines": [
         "func check(_ val: Int?) {",
         "    guard let n = val else {",
@@ -447,7 +447,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "enum Color {\n    case red, green, blue\n}\nlet c = Color.red\nswitch c {\ncase .red:\n    print(\"red\")\ncase .green:\n    print(\"green\")\ncase .blue:\n    print(\"blue\")\n}",
-      "holeyCode": "___\\n    ___\\n___\\n___\\n___\\n___\\n    ___\\n___\\n    ___\\n___\\n    ___\\n___"red\")\ncase .green:\n    print(\"green\")\ncase .blue:\n    print(\"blue\")\n}",
+      "holeyCode": "___\n    ___\n___\n___\n___\n___\n    ___\n___\n    ___\n___\n    ___\n___"red\")\ncase .green:\n    print(\"green\")\ncase .blue:\n    print(\"blue\")\n}",
       "correctLines": [
         "enum Color {",
         "    case red, green, blue",

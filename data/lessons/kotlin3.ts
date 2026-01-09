@@ -25,7 +25,7 @@ export const kotlin3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import kotlinx.coroutines.*\n\nsuspend fun getMessage(): String {\n    delay(100)\n    return \"Hello\"\n}\n\nfun main() = runBlocking {\n    println(getMessage())\n}",
-      "holeyCode": "___\\n\\n// suspend と入力して一時停止できるようにしましょう\\n___\\n    ___\\n    ___\\n___\\n\\n___\\n    ___\\n___"Hello\"\n}\n\nfun main() = runBlocking {\n    println(getMessage())\n}",
+      "holeyCode": "___\n\\n// suspend と入力して一時停止できるようにしましょう\\n___\n    ___\n    ___\n___\n\\n___\n    ___\n___"Hello\"\n}\n\nfun main() = runBlocking {\n    println(getMessage())\n}",
       "correctLines": [
         "import kotlinx.coroutines.*",
         "",
@@ -180,7 +180,7 @@ export const kotlin3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "inline fun <reified T> checkType(value: Any): Boolean {\n    return value is T\n}\n\nfun main() {\n    println(checkType<String>(\"test\"))\n    println(checkType<Int>(\"test\"))\n}",
-      "holeyCode": "// reified と入力して型の種類を教えてね\\n___\\n    ___\\n___\\n\\n___\\n    ___\\n    ___\\n___"test\"))\n    println(checkType<Int>(\"test\"))\n}",
+      "holeyCode": "// reified と入力して型の種類を教えてね\\n___\n    ___\n___\n\\n___\n    ___\n    ___\n___"test\"))\n    println(checkType<Int>(\"test\"))\n}",
       "correctLines": [
         "// reified と入力して型の種類を教えてね",
         "inline fun <reified T> checkType(value: Any): Boolean {",
@@ -231,7 +231,7 @@ export const kotlin3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "data class Config(var host: String = \"\", var port: Int = 0)\n\nfun main() {\n    val cfg = Config().apply {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(cfg)\n}",
-      "holeyCode": "___\\n\\n___\\n    // apply と入力して中身を設定しましょう\\n    ___\\n        ___\\n        ___\\n    ___\\n    ___\\n___"\", var port: Int = 0)\n\nfun main() {\n    // ここに apply と入力して中身を設定してね\n    val cfg = Config().___ {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(cfg)\n}",
+      "holeyCode": "___\n\\n___\n    // apply と入力して中身を設定しましょう\\n    ___\n        ___\n        ___\n    ___\n    ___\n___"\", var port: Int = 0)\n\nfun main() {\n    // apply と入力して中身を設定しましょう\n    val cfg = Config().___ {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(cfg)\n}",
       "correctLines": [
         "data class Config(var host: String = "", var port: Int = 0)",
         "",
@@ -284,7 +284,7 @@ export const kotlin3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fun main() {\n    val num = 42.also {\n        println(\"Value: $it\")\n    }\n    println(num)\n}",
-      "holeyCode": "___\\n    // 変数 also を使いましょう\\n    ___\\n        ___\\n    ___\\n    ___\\n___"Value: $it\")\n    }\n    println(num)\n}",
+      "holeyCode": "___\n    // 変数 also を使いましょう\\n    ___\n        ___\n    ___\n    ___\n___"Value: $it\")\n    }\n    println(num)\n}",
       "correctLines": [
         "fun main() {",
         "    // 変数 also を使いましょう",
@@ -331,7 +331,7 @@ export const kotlin3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fun main() {\n    val result = \"Hello World\".run {\n        split(\" \").size\n    }\n    println(result)\n}",
-      "holeyCode": "___\\n    // run と入力して処理を実行しましょう\\n    ___\\n        ___\\n    ___\\n    ___\\n___"Hello World\".___ {\n        split(\" \").size\n    }\n    println(result)\n}",
+      "holeyCode": "___\n    // run と入力して処理を実行しましょう\\n    ___\n        ___\n    ___\n    ___\n___"Hello World\".___ {\n        split(\" \").size\n    }\n    println(result)\n}",
       "correctLines": [
         "fun main() {",
         "    // run と入力して処理を実行しましょう",

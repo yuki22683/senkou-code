@@ -114,7 +114,7 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import json\n\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# loadsでJSON文字列を変換\ndata = json.loads(json_str)\nprint(data['name'])",
-      "holeyCode": "___\\n___"name\": \"Python\", \"version\": 3.12}'\n# ここに loads と入力してね\ndata = json.___(json_str)\nprint(data['name'])",
+      "holeyCode": "___\n___"name\": \"Python\", \"version\": 3.12}'\n# 変数 loads を使いましょう\ndata = json.___(json_str)\nprint(data['name'])",
       "correctLines": [
         "import json",\n        "",\n        "json_str = '{"name": "Python\\",
         ""version": 3.12}'",\n        "# 変数 loads を使いましょう",\n        "data = json.loads(json_str)",\n        "print(data['name'"
@@ -407,14 +407,14 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "from itertools import chain\n\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\nresult = list(chain(list1, list2))\nprint(result)",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""from itertools import chain",\n        "",\n        "list1 = [1",
         "2",
         "3"
       ]",
         "list2 = [4, 5, 6]",
-        "# ここに chain と入力してね",
+        "# 変数 chain を使いましょう",
         "result = list(chain(list1, list2))",
         "print(result)"
       ],

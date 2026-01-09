@@ -25,7 +25,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums = [1, 2, 3]\n# eachで各要素を処理\nnums.each do |n|\n  puts n\nend",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""nums = [1",
         "2",
@@ -70,7 +70,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums = [1, 2, 3]\n# mapで各要素を変換\ndoubled = nums.map { |n| n * 2 }\nputs doubled",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""nums = [1",
         "2",
@@ -113,7 +113,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums = [1, 2, 3, 4, 5]\n# selectで条件に合う要素を抽出\nbig = nums.select { |n| n >= 3 }\nputs big",
-      "holeyCode": "___\\n___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___\n___",
       "correctLines": [
         ""nums = [1",
         "2",
@@ -158,7 +158,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "item = { name: 'Apple', price: 100 }\n# :でシンボルを指定してアクセス\nputs item[:price]",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         ""item = { name: 'Apple'",
         "price: 100 }",\n        "puts item[:price"

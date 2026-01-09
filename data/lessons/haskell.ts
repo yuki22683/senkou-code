@@ -30,7 +30,7 @@ export const haskellData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- Hello, Haskell!を表示\nmain = putStrLn \"Hello, Haskell!\"",
-      "holeyCode": "___\\n___"___\"",
+      "holeyCode": "___\n___"___\"",
       "correctLines": [
         ""main = putStrLn "Hello",
         "Haskell!"""

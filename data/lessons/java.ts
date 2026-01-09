@@ -20,16 +20,16 @@ export const javaData = {
         {
           "title": "Javaを動かす「決まり文句」",
           "image": "/illustrations/common/monitor.png",
-          "content": "# おまじないの言葉\n\nJavaでプログラムを入力するときは、必ず入力しなければいけない「決まり文句」があります。\n\n```java\npublic class Main {\n    public static void main(String[] args) {\n        // ここにやりたいことを入力します\n    }\n}\n\n```\n\n画面に文字を出しましょうときは、`System.out.println()` という名前の関数（メソッド）を使います。例えば：\n\n```java\nSystem.out.println(\"Javaプログラミング！\");\n```\n=> Javaプログラミング！"
+          "content": "# おまじないの言葉\n\nJavaでプログラムを入力するときは、必ず入力しなければいけない「決まり文句」があります。\n\n```java\npublic class Main {\n    public static void main(String[] args) {\n        // やりたいことを入力します\n    }\n}\n\n```\n\n画面に文字を出しましょうときは、`System.out.println()` という名前の関数（メソッド）を使います。例えば：\n\n```java\nSystem.out.println(\"Javaプログラミング！\");\n```\n=> Javaプログラミング！"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // 画面にメッセージを出す関数\n        System.out.println(\"Hello, Java!\");\n    }\n}",
-      "holeyCode": "___"Hello, Java!\" と入力してね\n        System.out.println(\"___\");\n    }\n}",
+      "holeyCode": "___"Hello, Java!\" と入力しましょう\n        System.out.println(\"___\");\n    }\n}",
       "correctLines": [
         ""public class Main {",\n        "    public static void main(String["
       ] args) {",
-        "        // ここに \"Hello, Java!\" と入力してね",
+        "        // \"Hello, Java!\" と入力しましょう",
         "        System.out.println(\"Hello, Java!\");",
         "    }",
         "}"
@@ -75,13 +75,13 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // String（文字）ラベルを貼ったはこを作る\n        String name = \"Java\";\n        System.out.println(name);\n    }\n}",
-      "holeyCode": "___"Java\" と入力してね\n        String name = \"___\" ;\n        // ここに name と入力して中身を表示してね\n        System.out.println(___);\n    }\n}",
+      "holeyCode": "___"Java\" と入力しましょう\n        String name = \"___\" ;\n        // 変数 name の中身を表示しましょう\n        System.out.println(___);\n    }\n}",
       "correctLines": [
         ""public class Main {",\n        "    public static void main(String["
       ] args) {",
-        "        // ここに \"Java\" と入力してね",
+        "        // \"Java\" と入力しましょう",
         "        String name = \"Java\";",
-        "        // ここに name と入力して中身を表示してね",
+        "        // 変数 name の中身を表示しましょう",
         "        System.out.println(name);",
         "    }",
         "}"
@@ -90,7 +90,7 @@ export const javaData = {
         null,
         null,
         null,
-        "String name = \"Java\"; と入力します。最後に ; （セミコロン）を忘れないでください！",
+        "String name = \"Java\"; と入力します。最後に ; （セミコロン）を忘れないでしましょう！",
         "はこの名前 name を入力すると中身が表示されます。",
         null,
         null
@@ -136,11 +136,11 @@ export const javaData = {
       "correctLines": [
         ""public class Main {",\n        "    public static void main(String["
       ] args) {",
-        "        // ここに 10 を入力してね",
+        "        // 10 を入力しましょう",
         "        int x = 10;",
-        "        // ここに 5 を入力してね",
+        "        // 5 を入力しましょう",
         "        int y = 5;",
-        "        // ここに + を入力してたし算してね",
+        "        // + を入力してたし算しましょう",
         "        System.out.println(x + y);",
         "    }",
         "}"
@@ -201,7 +201,7 @@ export const javaData = {
       ] args) {",
         "        // age というはこに 10 を入れる",
         "        int age = 10;",
-        "        // ここに age と入力して年齢を表示してね",
+        "        // age と入力して年齢を表示しましょう",
         "        System.out.println(\"私は\" + age + \"歳です\");",
         "    }",
         "}"
@@ -250,13 +250,13 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // \"あか\", \"あお\" の順で文字の配列を作る\n        String[] colors = {\"あか\", \"あお\"};\n        // 2番目（番号は1）を出す\n        System.out.println(colors[1]);\n    }\n}",
-      "holeyCode": "___"あか\", \"あお\" と入力してね\n        String[] colors = {___, ___};\n        // 2番目の中身を取り出すために 1 を入力してね\n        System.out.println(colors[___]);\n    }\n}",
+      "holeyCode": "___"あか\", \"あお\" と入力しましょう\n        String[] colors = {___, ___};\n        // 2番目の中身を取り出すために 1 を入力しましょう\n        System.out.println(colors[___]);\n    }\n}",
       "correctLines": [
         ""public class Main {",\n        "    public static void main(String["
       ] args) {",
-        "        // ここに \"あか\", \"あお\" と入力してね",
+        "        // \"あか\", \"あお\" と入力しましょう",
         "        String[] colors = {\"あか\", \"あお\"};",
-        "        // 2番目の中身を取り出すために 1 を入力してね",
+        "        // 2番目の中身を取り出すために 1 を入力しましょう",
         "        System.out.println(colors[1]);",
         "    }",
         "}"
@@ -267,7 +267,7 @@ export const javaData = {
         null,
         "{\"あか\", \"あお\"} と入力しましょう。 { } を使うのがルールです。",
         null,
-        "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。",
+        "2番目のデータの番号は 1 です。 `colors[1]` と入力してしましょう。",
         null,
         null
       ],
@@ -309,14 +309,14 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // score に 100 を入れる\n        int score = 100;\n        // もし 80 より大きかったら\n        if (score > 80) {\n            // メッセージを表示する\n            System.out.println(\"ごうかく！\");\n        }\n    }\n}",
-      "holeyCode": "___"ごうかく！\" と入力してね\n            System.out.println(\"___\");\n        }\n    }\n}",
+      "holeyCode": "___"ごうかく！\" と入力しましょう\n            System.out.println(\"___\");\n        }\n    }\n}",
       "correctLines": [
         ""public class Main {",\n        "    public static void main(String["
       ] args) {",
         "        // score に 100 を入れる",
         "        int score = 100;",
-        "        // ここに > を入力して「大きい」を表してね",
-        "        if (score > 80) {\n            // ここに \"ごうかく！\" と入力してね\n            System.out.println(\"ごうかく！\");\n        }\n    }\n}"
+        "        // > を入力して「大きい」を表しましょう",
+        "        if (score > 80) {\n            // \"ごうかく！\" と入力しましょう\n            System.out.println(\"ごうかく！\");\n        }\n    }\n}"
       ],
       "lineHints": [
         null,
@@ -327,7 +327,7 @@ export const javaData = {
         "score > 80 と入力しましょう。",
         null,
         "System.out.println(\"ごうかく！\"); と入力しましょう。",
-        "さいごに } で閉じるのを忘れないでください。",
+        "さいごに } で閉じるのを忘れないでしましょう。",
         null,
         null
       ],
@@ -365,7 +365,7 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // age に 10 を入れる\n        int age = 10;\n        // 20さい以上かどうかで分ける\n        if (age >= 20) {\n            System.out.println(\"おとな\");\n        } else {\n            // それ以外の場合\n            System.out.println(\"こども\");\n        }\n    }\n}",
-      "holeyCode": "___"おとな\");\n        // ここに else と入力してね\n        } ___ {\n            // ここに \"こども\" と入力してね\n            System.out.println(\"___\");\n        }\n    }\n}",
+      "holeyCode": "___"おとな\");\n        // 変数 else を使いましょう\n        } ___ {\n            // \"こども\" と入力しましょう\n            System.out.println(\"___\");\n        }\n    }\n}",
       "correctLines": [
         ""public class Main {",\n        "    public static void main(String["
       ] args) {",
@@ -375,7 +375,7 @@ export const javaData = {
         "        if (age >= 20) {",
         "            System.out.println(\"おとな\");",
         "        } else {",
-        "            // ここに \"こども\" と入力してね",
+        "            // \"こども\" と入力しましょう",
         "            System.out.println(\"こども\");",
         "        }",
         "    }",
@@ -429,13 +429,13 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // 配列を作る\n        String[] names = {\"たろう\", \"はなこ\"};\n        // 順番に取り出すループ\n        for (String name : names) {\n            System.out.println(name);\n        }\n    }\n}",
-      "holeyCode": "___"たろう\", \"はなこ\"};\n        // name と names を入力して、配列から順番に取り出してね\n        for (String ___ : ___) {\n            System.out.println(name);\n        }\n    }\n}",
+      "holeyCode": "___"たろう\", \"はなこ\"};\n        // name と names を入力して、配列から順番に取り出しましょう\n        for (String ___ : ___) {\n            System.out.println(name);\n        }\n    }\n}",
       "correctLines": [
         ""public class Main {",\n        "    public static void main(String["
       ] args) {",
         "        // 配列を作る",
         "        String[] names = {\"たろう\", \"はなこ\"};",
-        "        // name と names を入力して、配列から順番に取り出してね",
+        "        // name と names を入力して、配列から順番に取り出しましょう",
         "        for (String name : names) {",
         "            System.out.println(name);",
         "        }",
@@ -485,15 +485,15 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        // HashMapのはこを作る\n        HashMap<String, String> user = new HashMap<>();\n        // データを追加する\n        user.put(\"name\", \"たろう\");\n        // データを取り出す\n        System.out.println(user.get(\"name\"));\n    }\n}",
-      "holeyCode": "___"name\", \"たろう\");\n        // ここに get と入力してデータを取り出してね\n        System.out.println(user.___(\"name\"));\n    }\n}",
+      "holeyCode": "___"name\", \"たろう\");\n        // get と入力してデータを取り出しましょう\n        System.out.println(user.___(\"name\"));\n    }\n}",
       "correctLines": [
         ""import java.util.HashMap;",\n        "public class Main {",\n        "    public static void main(String["
       ] args) {",
-        "        // ここに HashMap と入力してね",
+        "        // 変数 HashMap を使いましょう",
         "        HashMap<String, String> user = new HashMap<>();",
-        "        // ここに put と入力してデータを追加してね",
+        "        // put と入力してデータを追加しましょう",
         "        user.put(\"name\", \"たろう\");",
-        "        // ここに get と入力してデータを取り出してね",
+        "        // get と入力してデータを取り出しましょう",
         "        System.out.println(user.get(\"name\"));",
         "    }",
         "}"
@@ -546,11 +546,11 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    // greet というメソッドを定義する\n    public static void greet() {\n        System.out.println(\"こんにちは\");\n    }\n    public static void main(String[] args) {\n        // メソッドを動かす\n        greet();\n    }\n}",
-      "holeyCode": "___"こんにちは\");\n    }\n    public static void main(String[] args) {\n        // ここに greet と入力してメソッドを動かしてね\n        ___();\n    }\n}",
+      "holeyCode": "___"こんにちは\");\n    }\n    public static void main(String[] args) {\n        // greet と入力してメソッドを動かしましょう\n        ___();\n    }\n}",
       "correctLines": [
         ""public class Main {",\n        "    // greet と入力してメソッドを作ってね",\n        "    public static void greet() {",\n        "        System.out.println("こんにちは");",\n        "    }",\n        "    public static void main(String["
       ] args) {",
-        "        // ここに greet と入力してメソッドを動かしてね",
+        "        // greet と入力してメソッドを動かしましょう",
         "        greet();",
         "    }",
         "}"

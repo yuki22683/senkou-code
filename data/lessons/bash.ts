@@ -30,7 +30,7 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Hello, World!と入力する\necho \"Hello, World!\"",
-      "holeyCode": "___\\n___\\n___\\n___"Hello, World!\" と入力してね\necho \"___\"",
+      "holeyCode": "___\n___\n___\n___"Hello, World!\" と入力しましょう\necho \"___\"",
       "correctLines": [
         ""# "Hello",
         "World!" と入力しましょう"",
@@ -75,7 +75,7 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Bashと入力する\nname=\"Bash\"\n# nameと入力する\necho $name",
-      "holeyCode": "# 変数 Bash を使いましょう\\n___\\n# 変数 name の中身を表示しましょう\\n___"Bash\" と入力してね\nname=\"___\"\n# ここに name と入力して中身を表示してね\necho $___",
+      "holeyCode": "# 変数 Bash を使いましょう\\n___\n# 変数 name の中身を表示しましょう\\n___"Bash\" と入力しましょう\nname=\"___\"\n# 変数 name の中身を表示しましょう\necho $___",
       "correctLines": [
         "# 変数 Bash を使いましょう",
         "name="Bash"",
@@ -84,7 +84,7 @@ export const bashData = {
       ],
       "lineHints": [
         null,
-        "name=\"Bash\" と入力します。 = のまわりにスペースを入れないでください！",
+        "name=\"Bash\" と入力します。 = のまわりにスペースを入れないでしましょう！",
         "はこの名前 $name を指定して、表示させます。"
       ],
       "candidates": {
@@ -167,7 +167,7 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "score=100\n# -gtで「より大きい」を指定\nif [ $score -gt 80 ]; then\n    echo \"Great\"\n# fiでif文を閉じる\nfi",
-      "holeyCode": "___"Great\"\n# ここに fi と入力して終わりにしてね\n___",
+      "holeyCode": "___"Great\"\n# fi と入力して終わりにしましょう\n___",
       "correctLines": [
         ""score=100",\n        "if [ $score -gt 80"
       ]; then",
@@ -214,7 +214,7 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\n# elseでそれ以外の場合\nelse\n    echo \"Minor\"\nfi",
-      "holeyCode": "___"Adult\"\n# ここに else と入力してね\n___\n    echo \"Minor\"\nfi",
+      "holeyCode": "___"Adult\"\n# 変数 else を使いましょう\n___\n    echo \"Minor\"\nfi",
       "correctLines": [
         ""age=18",\n        "if [ $age -ge 20"
       ]; then",
@@ -262,7 +262,7 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "names=(\"Alice\" \"Bob\")\n# inで配列の中身を取り出す\nfor name in \"${names[@]}\"; do\n    echo $name\n# doneでループを終了\ndone",
-      "holeyCode": "___\\n___"Alice\" \"Bob\")\n# ここに in と入力してね\nfor name ___ \"${names[@]}\"; do\n    echo $name\n# ここに done と入力して終わりにしてね\n___",
+      "holeyCode": "___\n___"Alice\" \"Bob\")\n# 変数 in を使いましょう\nfor name ___ \"${names[@]}\"; do\n    echo $name\n# done と入力して終わりにしましょう\n___",
       "correctLines": [
         "names=("Alice" "Bob")",
         ""for name in "${names[@"
@@ -308,7 +308,7 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "greet() {\n    echo \"Hello\"\n}\n# greetで関数を呼び出す\ngreet",
-      "holeyCode": "___\\n    ___\\n___\\n___"Hello\"\n}\n# ここに greet と入力して関数を動かしてね\n___",
+      "holeyCode": "___\n    ___\n___\n___"Hello\"\n}\n# greet と入力して関数を動かしましょう\n___",
       "correctLines": [
         "greet() {",
         "    echo "Hello"",

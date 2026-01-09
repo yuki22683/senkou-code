@@ -249,7 +249,7 @@ export const php2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n$nums = [1, 2, 3];\n// array_mapで各要素を変換\n$squared = array_map(fn($n) => $n * $n, $nums);\nprint_r($squared);\n?>",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""<?php",\n        "$nums = [1",
         "2",
@@ -295,7 +295,7 @@ export const php2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n$nums = [1, 2, 3, 4, 5];\n// array_filterで条件に合う要素を抽出\n$result = array_filter($nums, fn($n) => $n >= 3);\nprint_r($result);\n?>",
-      "holeyCode": "___\\n___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___\n___",
       "correctLines": [
         ""<?php",\n        "$nums = [1",
         "2",

@@ -25,7 +25,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local item = { name = \"Apple\", price = 100 }\n-- .でキーにアクセス\nprint(item.price)",
-      "holeyCode": "___\\n___"Apple\", price = 100 }\n// ここに . と入力して、値段（price）を取り出してね\nprint(item___price)",
+      "holeyCode": "___\n___"Apple\", price = 100 }\n// . と入力して、値段（price）を取り出しましょう\nprint(item___price)",
       "correctLines": [
         "local item = { name = "Apple", price = 100 }",
         "print(item.price)"
@@ -63,7 +63,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local nums = {10, 20, 30}\n-- 2番目の要素にアクセス\nprint(nums[2])",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""local nums = {10",
         "20",
@@ -421,7 +421,7 @@ export const lua2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- createでコルーチンを作成\nlocal co = coroutine.create(function()\n    print(\"hello\")\nend)\ncoroutine.resume(co)",
-      "holeyCode": "___\\n    ___\\n___\\n___"hello\")\nend)\ncoroutine.resume(co)",
+      "holeyCode": "___\n    ___\n___\n___"hello\")\nend)\ncoroutine.resume(co)",
       "correctLines": [
         "local co = coroutine.create(function()",
         "    print("hello")",

@@ -25,7 +25,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Container<T> {\n    public T Item { get; set; }\n}\n\nclass Program {\n    static void Main() {\n        var c = new Container<string> { Item = \"Hello\" };\n        Console.WriteLine(c.Item);\n    }\n}",
-      "holeyCode": "___\\n\\n___\\n    ___\\n___\\n\\n___\\n    ___\\n        ___\\n        ___\\n    ___\\n___"Hello\" };\n        Console.WriteLine(c.Item);\n    }\n}",
+      "holeyCode": "___\n\\n___\n    ___\n___\n\\n___\n    ___\n        ___\n        ___\n    ___\n___"Hello\" };\n        Console.WriteLine(c.Item);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -255,7 +255,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        Action<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\n        greet(\"World\");\n    }\n}",
-      "holeyCode": "___\\n\\n___\\n    ___\\n___\\n___\\n        ___\\n    ___\\n___"Hello, {name}!\");\n        greet(\"World\");\n    }\n}",
+      "holeyCode": "___\n\\n___\n    ___\n___\n___\n        ___\n    ___\n___"Hello, {name}!\");\n        greet(\"World\");\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -310,7 +310,7 @@ export const csharp4Data = {
       "correctLines": [
         ""using System;",\n        "using System.Linq;",\n        "",\n        "class Program {",\n        "    static void Main() {",\n        "        var nums = new["
       ] { 1, 2, 3, 4, 5, 6 };",
-        "        // ここに GroupBy と入力してグループにわけてね",
+        "        // GroupBy と入力してグループにわけてね",
         "        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");",
         "        foreach (var g in groups) {",
         "            Console.WriteLine($\"{g.Key}: {g.Count()}\");",
@@ -416,7 +416,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? value = null;\n        string result = value ?? \"default\";\n        Console.WriteLine(result);\n    }\n}",
-      "holeyCode": "___\\n\\n___\\n    ___\\n        ___\\n        // ?? と入力してデフォルト値を決めてね\\n        ___\\n        ___\\n    ___\\n___"default\";\n        Console.WriteLine(result);\n    }\n}",
+      "holeyCode": "___\n\\n___\n    ___\n        ___\n        // ?? と入力してデフォルト値を決めてね\\n        ___\n        ___\n    ___\n___"default\";\n        Console.WriteLine(result);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -526,7 +526,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Item {\n    public string Name { get; init; }\n}\n\nclass Program {\n    static void Main() {\n        var item = new Item { Name = \"Apple\" };\n        Console.WriteLine(item.Name);\n    }\n}",
-      "holeyCode": "___\\n\\n___\\n    // init と入力して、最初だけ設定できるようにしましょう\\n    ___\\n___\\n\\n___\\n    ___\\n        ___\\n        ___\\n    ___\\n___"Apple\" };\n        Console.WriteLine(item.Name);\n    }\n}",
+      "holeyCode": "___\n\\n___\n    // init と入力して、最初だけ設定できるようにしましょう\\n    ___\n___\n\\n___\n    ___\n        ___\n        ___\n    ___\n___"Apple\" };\n        Console.WriteLine(item.Name);\n    }\n}",
       "correctLines": [
         "using System;",
         "",

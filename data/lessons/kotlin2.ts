@@ -69,7 +69,7 @@ export const kotlin2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val text: String? = \"Hello\"\nprintln(text?.length)",
-      "holeyCode": "___\\n___"Hello\"\n// ここに ?. と入力して、安全に長さを調べてね\nprintln(text___length)",
+      "holeyCode": "___\n___"Hello\"\n// ?. と入力して、安全に長さを調べてね\nprintln(text___length)",
       "correctLines": [
         "val text: String? = "Hello"",
         "println(text?.length)"
@@ -313,7 +313,7 @@ export const kotlin2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "val x = 2\nval result = when (x) {\n    1 -> \"one\"\n    2 -> \"two\"\n    else -> \"other\"\n}\nprintln(result)",
-      "holeyCode": "___\\n___\\n    ___\\n    ___\\n    ___\\n___\\n___"one\"\n    2 -> \"two\"\n    else -> \"other\"\n}\nprintln(result)",
+      "holeyCode": "___\n___\n    ___\n    ___\n    ___\n___\n___"one\"\n    2 -> \"two\"\n    else -> \"other\"\n}\nprintln(result)",
       "correctLines": [
         "val x = 2",
         "val result = when (x) {",

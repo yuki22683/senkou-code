@@ -20,14 +20,14 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const scores = [80, 90, 75, 85];\n// every で全要素をチェック\nconst allPassed = scores.every(score => score >= 60);\nconsole.log(allPassed);",
-      "holeyCode": "___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___",
       "correctLines": [
         ""const scores = [80",
         "90",
         "75",
         "85"
       ];",
-        "// ここに every と入力して、全員そうか調べてね",
+        "// every と入力して、全員そうか調べてね",
         "const allPassed = scores.every(score => score >= 60);",
         "console.log(allPassed);"
       ],
@@ -60,14 +60,14 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const ages = [15, 22, 17, 19];\n// some でいずれかの要素をチェック\nconst hasAdult = ages.some(age => age >= 20);\nconsole.log(hasAdult);",
-      "holeyCode": "___\\n___\\n___\\n___",
+      "holeyCode": "___\n___\n___\n___",
       "correctLines": [
         ""const ages = [15",
         "22",
         "17",
         "19"
       ];",
-        "// ここに some と入力して、誰か1人でもそうか調べてね",
+        "// some と入力して、誰か1人でもそうか調べてね",
         "const hasAdult = ages.some(age => age >= 20);",
         "console.log(hasAdult);"
       ],
@@ -100,12 +100,12 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const words = ['hello', 'world'];\n// flatMap でmapと平坦化を同時に行う\nconst chars = words.flatMap(w => w.split(''));\nconsole.log(chars);",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         ""const words = ['hello'",
         "'world'"
       ];",
-        "// ここに flatMap と入力して、文字をバラバラに広げてね",
+        "// flatMap と入力して、文字をバラバラに広げてね",
         "const chars = words.flatMap(w => w.split(''));",
         "console.log(chars);"
       ],
@@ -138,7 +138,7 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const user = { name: 'Taro', age: 25 };\n// entries でキーと値のペアを取得\nfor (const [key, value] of Object.entries(user)) {\n  console.log(`${key}: ${value}`);\n}",
-      "holeyCode": "___\\n___\\n___",
+      "holeyCode": "___\n___\n___",
       "correctLines": [
         ""const user = { name: 'Taro'",
         "age: 25 };",\n        "// entries と入力して、キーと値のペアにしましょう",\n        "for (const [key",
@@ -177,12 +177,12 @@ export const javascriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const pairs = [['name', 'Python'], ['version', '3.12']];\n// fromEntries で配列からオブジェクトを作成\nconst obj = Object.fromEntries(pairs);\nconsole.log(obj);",
-      "holeyCode": "___\\n___",
+      "holeyCode": "___\n___",
       "correctLines": [
         ""const pairs = [['name'",
         "'Python'"
       ], ['version', '3.12']];",
-        "// ここに fromEntries と入力して、オブジェクトに戻してね",
+        "// fromEntries と入力して、オブジェクトに戻しましょう",
         "const obj = Object.fromEntries(pairs);",
         "console.log(obj);"
       ],

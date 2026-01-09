@@ -29,7 +29,7 @@ export const javaData5 = {
       "correctLines": [
         ""public class Main {",\n        "    public static void main(String["
       ] args) {",
-        "        // ここに try と入力してね",
+        "        // 変数 try を使いましょう",
         "        try {",
         "            int result = 10 / 0;",
         "        } catch (ArithmeticException e) {",
@@ -78,7 +78,7 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        } finally {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
-      "holeyCode": "___"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        // ここに finally と入力してね\n        } ___ {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
+      "holeyCode": "___"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        // 変数 finally を使いましょう\n        } ___ {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
       "correctLines": [
         ""class Main {",\n        "    public static void main(String["
       ] args) {",
@@ -303,7 +303,7 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        String content = \"Line1\\nLine2\";\n        BufferedReader br = new BufferedReader(new StringReader(content));\n        String line = br.readLine();\n        System.out.println(line);\n        br.close();\n    }\n}",
-      "holeyCode": "___"Line1\\nLine2\";\n        BufferedReader br = new BufferedReader(new StringReader(content));\n        // ここに readLine と入力して1行読んでね\n        String line = br.___();\n        System.out.println(line);\n        br.close();\n    }\n}",
+      "holeyCode": "___"Line1\\nLine2\";\n        BufferedReader br = new BufferedReader(new StringReader(content));\n        // readLine と入力して1行読んでね\n        String line = br.___();\n        System.out.println(line);\n        br.close();\n    }\n}",
       "correctLines": [
         ""import java.io.*;",\n        "",\n        "public class Main {",\n        "    public static void main(String["
       ] args) throws IOException {",
@@ -411,12 +411,12 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"42 Hello\");\n        int num = sc.nextInt();\n        String word = sc.next();\n        System.out.println(num + \" \" + word);\n    }\n}",
-      "holeyCode": "___"42 Hello\");\n        // ここに nextInt と入力して数字を読み込んでね\n        int num = sc.___();\n        String word = sc.next();\n        System.out.println(num + \" \" + word);\n    }\n}",
+      "holeyCode": "___"42 Hello\");\n        // nextInt と入力して数字を読み込んでね\n        int num = sc.___();\n        String word = sc.next();\n        System.out.println(num + \" \" + word);\n    }\n}",
       "correctLines": [
         ""import java.util.*;",\n        "",\n        "public class Main {",\n        "    public static void main(String["
       ] args) {",
         "        Scanner sc = new Scanner(\"42 Hello\");",
-        "        // ここに nextInt と入力して数字を読み込んでね",
+        "        // nextInt と入力して数字を読み込んでね",
         "        int num = sc.nextInt();",
         "        String word = sc.next();",
         "        System.out.println(num + \" \" + word);",
@@ -468,7 +468,7 @@ export const javaData5 = {
       "correctLines": [
         ""import java.nio.file.*;",\n        "import java.util.*;",\n        "",\n        "public class Main {",\n        "    public static void main(String["
       ] args) throws Exception {",
-        "        // ここに get と入力して場所（パス）を教えてね",
+        "        // get と入力して場所（パス）を教えてね",
         "        Path path = Paths.get(\".\");",
         "        boolean exists = Files.exists(path);",
         "        System.out.println(exists);",

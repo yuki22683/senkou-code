@@ -25,7 +25,7 @@ export const c4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nint main() {\n    FILE *fp = fopen(\"test.txt\", \"w\");\n    if (fp != NULL) {\n        fprintf(fp, \"Hello\\n\");\n        fclose(fp);\n        printf(\"Done\\n\");\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n    // fopen と入力して、ファイルを開いてね\\n    ___\\n    ___\\n        ___\\n        ___\\n        ___\\n    ___\\n    ___\\n___"test.txt\", \"w\");\n    if (fp != NULL) {\n        fprintf(fp, \"Hello\\n\");\n        fclose(fp);\n        printf(\"Done\\n\");\n    }\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n    // fopen と入力して、ファイルを開いてね\\n    ___\n    ___\n        ___\n        ___\n        ___\n    ___\n    ___\n___"test.txt\", \"w\");\n    if (fp != NULL) {\n        fprintf(fp, \"Hello\\n\");\n        fclose(fp);\n        printf(\"Done\\n\");\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -82,7 +82,7 @@ export const c4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nint main() {\n    FILE *fp = fopen(\"data.txt\", \"w\");\n    if (fp != NULL) {\n        fputs(\"Data\\n\", fp);\n        fclose(fp);\n        printf(\"Closed\\n\");\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n    ___\\n    ___\\n        ___\\n        // fclose と入力して、ファイルを閉じてね\\n        ___\\n        ___\\n    ___\\n    ___\\n___"data.txt\", \"w\");\n    if (fp != NULL) {\n        fputs(\"Data\\n\", fp);\n        // ここに fclose と入力して、ファイルを閉じてね\n        ___(fp);\n        printf(\"Closed\\n\");\n    }\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n    ___\n    ___\n        ___\n        // fclose と入力して、ファイルを閉じてね\\n        ___\n        ___\n    ___\n    ___\n___"data.txt\", \"w\");\n    if (fp != NULL) {\n        fputs(\"Data\\n\", fp);\n        // fclose と入力して、ファイルを閉じてね\n        ___(fp);\n        printf(\"Closed\\n\");\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -139,7 +139,7 @@ export const c4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nint main() {\n    FILE *fp = fopen(\"log.txt\", \"w\");\n    if (fp != NULL) {\n        fprintf(fp, \"Score: %d\\n\", 100);\n        fclose(fp);\n        printf(\"Written\\n\");\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n    ___\\n    ___\\n        // fprintf と入力してファイルに書き込んでね\\n        ___\\n        ___\\n        ___\\n    ___\\n    ___\\n___"log.txt\", \"w\");\n    if (fp != NULL) {\n        // ここに fprintf と入力してファイルに書き込んでね\n        ___(fp, \"Score: %d\\n\", 100);\n        fclose(fp);\n        printf(\"Written\\n\");\n    }\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n    ___\n    ___\n        // fprintf と入力してファイルに書き込んでね\\n        ___\n        ___\n        ___\n    ___\n    ___\n___"log.txt\", \"w\");\n    if (fp != NULL) {\n        // fprintf と入力してファイルに書き込んでね\n        ___(fp, \"Score: %d\\n\", 100);\n        fclose(fp);\n        printf(\"Written\\n\");\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -196,7 +196,7 @@ export const c4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char line[100];\n    FILE *fp = fopen(\"test.txt\", \"w\");\n    fprintf(fp, \"Hello World\\n\");\n    fclose(fp);\n    fp = fopen(\"test.txt\", \"r\");\n    fgets(line, sizeof(line), fp);\n    line[strcspn(line, \"\\n\")] = 0;\n    printf(\"%s\\n\", line);\n    fclose(fp);\n    return 0;\n}",
-      "holeyCode": "___"test.txt\", \"w\");\n    fprintf(fp, \"Hello World\\n\");\n    fclose(fp);\n    fp = fopen(\"test.txt\", \"r\");\n    // ここに fgets と入力して、1行読み込んでね\n    ___(line, sizeof(line), fp);\n    line[strcspn(line, \"\\n\")] = 0;\n    printf(\"%s\\n\", line);\n    fclose(fp);\n    return 0;\n}",
+      "holeyCode": "___"test.txt\", \"w\");\n    fprintf(fp, \"Hello World\\n\");\n    fclose(fp);\n    fp = fopen(\"test.txt\", \"r\");\n    // fgets と入力して、1行読み込んでね\n    ___(line, sizeof(line), fp);\n    line[strcspn(line, \"\\n\")] = 0;\n    printf(\"%s\\n\", line);\n    fclose(fp);\n    return 0;\n}",
       "correctLines": [
         ""#include <stdio.h>",\n        "#include <string.h>",\n        "",\n        "int main() {",\n        "    char line[100"
       ];",
@@ -204,7 +204,7 @@ export const c4Data = {
         "    fprintf(fp, \"Hello World\\n\");",
         "    fclose(fp);",
         "    fp = fopen(\"test.txt\", \"r\");",
-        "    // ここに fgets と入力して、1行読み込んでね",
+        "    // fgets と入力して、1行読み込んでね",
         "    fgets(line, sizeof(line), fp);",
         "    line[strcspn(line, \"\\n\")] = 0;",
         "    printf(\"%s\\n\", line);",
@@ -258,7 +258,7 @@ export const c4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nint main() {\n    FILE *fp = fopen(\"pos.txt\", \"w+\");\n    fputs(\"ABCDEFGHIJ\", fp);\n    fseek(fp, 0, SEEK_SET);\n    printf(\"%c\\n\", fgetc(fp));\n    fclose(fp);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n    ___\\n    ___\\n    // fseek と入力して、読み書きする場所を動かしましょう\\n    ___\\n    ___\\n    ___\\n    ___\\n___"pos.txt\", \"w+\");\n    fputs(\"ABCDEFGHIJ\", fp);\n    // ここに fseek と入力して、読み書きする場所を動かしてね\n    ___(fp, 0, SEEK_SET);\n    printf(\"%c\\n\", fgetc(fp));\n    fclose(fp);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n    ___\n    ___\n    // fseek と入力して、読み書きする場所を動かしましょう\\n    ___\n    ___\n    ___\n    ___\n___"pos.txt\", \"w+\");\n    fputs(\"ABCDEFGHIJ\", fp);\n    // fseek と入力して、読み書きする場所を動かしましょう\n    ___(fp, 0, SEEK_SET);\n    printf(\"%c\\n\", fgetc(fp));\n    fclose(fp);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -313,7 +313,7 @@ export const c4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nint main() {\n    FILE *fp = fopen(\"size.txt\", \"w+\");\n    fputs(\"12345\", fp);\n    fseek(fp, 0, SEEK_END);\n    long size = ftell(fp);\n    printf(\"%ld\\n\", size);\n    fclose(fp);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n    ___\\n    ___\\n    ___\\n    // ftell と入力して、今の場所（バイト数）を教えてね\\n    ___\\n    ___\\n    ___\\n    ___\\n___"size.txt\", \"w+\");\n    fputs(\"12345\", fp);\n    fseek(fp, 0, SEEK_END);\n    // ここに ftell と入力して、今の場所（バイト数）を教えてね\n    long size = ___(fp);\n    printf(\"%ld\\n\", size);\n    fclose(fp);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n    ___\n    ___\n    ___\n    // ftell と入力して、今の場所（バイト数）を教えてね\\n    ___\n    ___\n    ___\n    ___\n___"size.txt\", \"w+\");\n    fputs(\"12345\", fp);\n    fseek(fp, 0, SEEK_END);\n    // ftell と入力して、今の場所（バイト数）を教えてね\n    long size = ___(fp);\n    printf(\"%ld\\n\", size);\n    fclose(fp);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -370,7 +370,7 @@ export const c4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nenum Day { MON, TUE, WED, THU, FRI };\n\nint main() {\n    enum Day today = WED;\n    printf(\"%d\\n\", today);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n\\n___\\n    ___\\n    ___\\n    ___\\n___"%d\\n\", today);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n\\n___\n    ___\n    ___\n    ___\n___"%d\\n\", today);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -422,7 +422,7 @@ export const c4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nunion Value {\n    int i;\n    double d;\n};\n\nint main() {\n    union Value v;\n    v.i = 42;\n    printf(\"%d\\n\", v.i);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n    ___\\n    ___\\n___\\n\\n___\\n    ___\\n    ___\\n    ___\\n    ___\\n___"%d\\n\", v.i);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n    ___\n    ___\n___\n\\n___\n    ___\n    ___\n    ___\n    ___\n___"%d\\n\", v.i);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -482,7 +482,7 @@ export const c4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n\nint main() {\n    int x = 100;\n    int *p = &x;\n    int **pp = &p;\n    printf(\"%d\\n\", **pp);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n\\n___\\n    ___\\n    ___\\n    ___\\n    ___\\n    ___\\n___"%d\\n\", **pp);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n\\n___\n    ___\n    ___\n    ___\n    ___\n    ___\n___"%d\\n\", **pp);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "",
@@ -534,7 +534,7 @@ export const c4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\n#include <stdarg.h>\n\nint sum(int count, ...) {\n    va_list args;\n    va_start(args, count);\n    int total = 0;\n    for (int i = 0; i < count; i++) {\n        total += va_arg(args, int);\n    }\n    va_end(args);\n    return total;\n}\n\nint main() {\n    printf(\"%d\\n\", sum(3, 10, 20, 30));\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\\n#include <stdarg.h>\\n\\n___\\n    ___\\n    // va_start と入力して、たくさんの引数を使えるようにしましょう\\n    ___\\n    ___\\n    ___\\n        ___\\n    ___\\n    ___\\n    ___\\n___\\n\\n___\\n    ___\\n    ___\\n___"%d\\n\", sum(3, 10, 20, 30));\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\\n#include <stdarg.h>\\n\\n___\n    ___\n    // va_start と入力して、たくさんの引数を使えるようにしましょう\\n    ___\n    ___\n    ___\n        ___\n    ___\n    ___\n    ___\n___\n\\n___\n    ___\n    ___\n___"%d\\n\", sum(3, 10, 20, 30));\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "#include <stdarg.h>",
