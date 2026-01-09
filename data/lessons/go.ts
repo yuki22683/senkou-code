@@ -20,18 +20,17 @@ export const goData = {
         {
           "title": "Go言語の「きまり文句」",
           "image": "/illustrations/common/monitor.png",
-          "content": "# おまじないを入力しましょう\n\nGo言語でプログラムを入力するときは、必ず入力しなければいけない「決まり文句」があります。\n\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    // やりたいことを入力します\n}\n```\n\n画面に文字を出したいときは、`fmt.Println()` という名前の関数を使います。例えば：\n\n```go\nfmt.Println(\"ヤッホー\")\n```"
+          "content": "# おまじないを入力しましょう\n\nGo言語でプログラムを入力するときは、必ず入力しなければいけない「決まり文句」があります。\n\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    // ここにやりたいことを入力します\n}\n```\n\n画面に文字を出したいときは、`fmt.Println()` という名前の関数を使います。例えば：\n\n```go\nfmt.Println(\"ヤッホー\")\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // Hello, Go! と表示する\n    fmt.Println(\"Hello, Go!\")\n}",
-      "holeyCode": "___\n___\n___\n___\n___\n___"fmt\"\nfunc main() {\n    // \"Hello, Go!\" と入力しましょう\n    fmt.Println(\"___\")\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // Hello, Go! と表示する\n    fmt.Println(\"___\")\n}",
       "correctLines": [
         "package main",
-        "import "fmt"",
+        "import \"fmt\"",
         "func main() {",
-        ""    fmt.Println("Hello",
-        "Go!")"",
+        "    fmt.Println(\"Hello, Go!\")",
         "}"
       ],
       "lineHints": [
@@ -71,15 +70,14 @@ export const goData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // 10 を代入する\n    x := 10\n    // x を表示する\n    fmt.Println(x)\n}",
-      "holeyCode": "___\n___\n___\n    ___\n    ___\n___"fmt\"\nfunc main() {\n    // 変数 10 を入力しましょう\n    x := ___\n    // x の中身を表示しましょう\n    fmt.Println(___)\n}",
+      "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // x に 10 を代入する\n    x := 10\n    // x を表示する\n    fmt.Println(x)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // x に 10 を代入する\n    ___ := ___\n    // x を表示する\n    fmt.Println(___)\n}",
       "correctLines": [
         "package main",
-        "import "fmt"",
+        "import \"fmt\"",
         "func main() {",
         "    x := 10",
-        "    fmt.Println(x)",
-        "}"
+        "    fmt.Println(x)"
       ],
       "lineHints": [
         null,
@@ -122,15 +120,14 @@ export const goData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // はこに数字を入れる\n    a := 5\n    b := 3\n    // + でたし算する\n    fmt.Println(a + b)\n}",
-      "holeyCode": "___\n___\n___\n    ___\n    ___\n    ___\n___"fmt\"\nfunc main() {\n    // はこに数字を入れる\n    a := 5\n    b := 3\n    // + を入力してたし算しましょう\n    fmt.Println(a ___ b)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // はこに数字を入れる\n    a := 5\n    b := 3\n    // + でたし算する\n    fmt.Println(a ___ b)\n}",
       "correctLines": [
         "package main",
-        "import "fmt"",
+        "import \"fmt\"",
         "func main() {",
         "    a := 5",
         "    b := 3",
-        "    fmt.Println(a + b)",
-        "}"
+        "    fmt.Println(a + b)"
       ],
       "lineHints": [
         null,
@@ -171,14 +168,13 @@ export const goData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // ageに10を入れる\n    age := 10\n    // age を埋め込む\n    fmt.Printf(\"I am %d years old.\\n\", age)\n}",
-      "holeyCode": "___\n___\n___\n    ___\n    ___\n___"fmt\"\nfunc main() {\n    // ageに10を入れる\n    age := 10\n    // age と入力して年齢を表示しましょう\n    fmt.Printf(\"I am %d years old.\\n\", ___)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // ageに10を入れる\n    age := 10\n    // age を埋め込む\n    fmt.Printf(\"I am %d years old.\\n\", ___)\n}",
       "correctLines": [
         "package main",
-        "import "fmt"",
+        "import \"fmt\"",
         "func main() {",
         "    age := 10",
-        "    fmt.Printf("I am %d years old.\\\n", age)",
-        "}"
+        "    fmt.Printf(\"I am %d years old.\\n\", age)"
       ],
       "lineHints": [
         null,
@@ -218,19 +214,20 @@ export const goData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{10, 20}\n    // インデックス 1 で2番目を取得\n    fmt.Println(nums[1])\n}",
-      "holeyCode": "___"fmt\"\nfunc main() {\n    nums := []int{10, 20}\n    // 2番目の中身を取り出すために 1 を入力しましょう\n    fmt.Println(nums[___])\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{10, 20}\n    // インデックス 1 で2番目を取得\n    fmt.Println(nums[___])\n}",
       "correctLines": [
-        ""package main",\n        "import "fmt"",\n        "func main() {",\n        "    nums := ["
-      ]int{10, 20}",
-        "    fmt.Println(nums[1])",
-        "}"
+        "package main",
+        "import \"fmt\"",
+        "func main() {",
+        "    nums := []int{10, 20}",
+        "    fmt.Println(nums[1])"
       ],
       "lineHints": [
         null,
         null,
         null,
         null,
-        "2番目のデータの番号は 1 です。 `nums[1]` と入力してしましょう。"
+        "2番目のデータの番号は 1 です。 `nums[1]` と入力してください。"
       ],
       "candidates": {
         "numbers": [
@@ -263,14 +260,14 @@ export const goData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 100\n    // > で比較する\n    if score > 80 {\n        // Great と表示する\n        fmt.Println(\"Great\")\n    }\n}",
-      "holeyCode": "___\n___\n___\n    ___\n    ___\n        ___\n    ___\n___"fmt\"\nfunc main() {\n    score := 100\n    // > を入力して「大きい」を表しましょう\n    if score ___ 80 {\n        // \"Great\" と入力しましょう\n        fmt.Println(\"___\" )\n    }\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 100\n    // > で比較する\n    if score ___ 80 {\n        // Great と表示する\n        fmt.Println(\"___\" )\n    }\n}",
       "correctLines": [
         "package main",
-        "import "fmt"",
+        "import \"fmt\"",
         "func main() {",
         "    score := 100",
         "    if score > 80 {",
-        "        fmt.Println("Great")",
+        "        fmt.Println(\"Great\")",
         "    }",
         "}"
       ],
@@ -318,16 +315,16 @@ export const goData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    if x > 10 {\n        fmt.Println(\"Big\")\n    // else で「そうでなければ」\n    } else {\n        fmt.Println(\"Small\")\n    }\n}",
-      "holeyCode": "___\n___\n___\n    ___\n    ___\n        ___\n    ___\n        ___\n    ___\n___"fmt\"\nfunc main() {\n    x := 5\n    if x > 10 {\n        fmt.Println(\"Big\")\n    // 変数 else を使いましょう\n    } ___ {\n        fmt.Println(\"Small\")\n    }\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    if x > 10 {\n        fmt.Println(\"Big\")\n    // else で「そうでなければ」\n    } ___ {\n        fmt.Println(\"Small\")\n    }\n}",
       "correctLines": [
         "package main",
-        "import "fmt"",
+        "import \"fmt\"",
         "func main() {",
         "    x := 5",
         "    if x > 10 {",
-        "        fmt.Println("Big")",
+        "        fmt.Println(\"Big\")",
         "    } else {",
-        "        fmt.Println("Small")",
+        "        fmt.Println(\"Small\")",
         "    }",
         "}"
       ],
@@ -374,10 +371,12 @@ export const goData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{1, 2, 3}\n    // range で全要素をループ\n    for _, n := range nums {\n        fmt.Println(n)\n    }\n}",
-      "holeyCode": "___"fmt\"\nfunc main() {\n    nums := []int{1, 2, 3}\n    // range と入力して順番に取り出しましょう\n    for _, n := ___ nums {\n        fmt.Println(n)\n    }\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{1, 2, 3}\n    // range で全要素をループ\n    for _, n := ___ nums {\n        fmt.Println(n)\n    }\n}",
       "correctLines": [
-        ""package main",\n        "import "fmt"",\n        "func main() {",\n        "    nums := ["
-      ]int{1, 2, 3}",
+        "package main",
+        "import \"fmt\"",
+        "func main() {",
+        "    nums := []int{1, 2, 3}",
         "    for _, n := range nums {",
         "        fmt.Println(n)",
         "    }",
@@ -407,29 +406,30 @@ export const goData = {
     },
     {
       "title": "名前で探しましょう「じしょ」",
-      "description": "Map（マップ）を使って、名前を指定してデータを取り出してみましょう。",
+      "description": "Map（辞書）を使って、名前を指定してデータを取り出してみましょう。",
       "difficulty": "easy",
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "マップとは？",
+          "title": "辞書とは？",
           "image": "/illustrations/common/dict.png",
           "content": "# キーワードで検索できる仕組み\n\n「名前」と「データ」をセットにして保存できるのが **Map** です。辞書を引くように、キーワードを使って目的のデータをすぐに見つけられます。"
         },
         {
           "title": "Map",
-          "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。辞書のように使うことができます。\n\n**コード例：**\n```go\ncolors := map[string]string{\"red\": \"あか\"}\nfmt.Println(colors[\"red\"])\n```"
+          "image": "/illustrations/common/dict.png",
+          "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。辞書のように使うことができます。\n\n**コード例：**\n```go\ncolors := map[string]string{\"りんご\": \"あか\"}\nfmt.Println(colors[\"りんご\"])\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // string をキーの型に指定\n    scores := map[string]int{\"Math\": 90}\n    // Math をキーに指定\n    fmt.Println(scores[\"Math\"])\n}",
-      "holeyCode": "___"fmt\"\nfunc main() {\n    // 変数 string を使いましょう\n    scores := map[___]int{\"Math\": 90}\n    // \"Math\" と入力しましょう\n    fmt.Println(scores[\"___\"])\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // string をキーの型に指定\n    scores := map[___]int{\"Math\": 90}\n    // 'Math' をキーに指定\n    fmt.Println(scores[\"___\"])\n}",
       "correctLines": [
-        ""package main",\n        "import "fmt"",\n        "func main() {",\n        "    scores := map[string"
-      ]int{\"Math\": 90}",
-        "    fmt.Println(scores[\"Math\"])",
-        "}"
+        "package main",
+        "import \"fmt\"",
+        "func main() {",
+        "    scores := map[string]int{\"Math\": 90}",
+        "    fmt.Println(scores[\"Math\"])"
       ],
       "lineHints": [
         null,
@@ -470,12 +470,12 @@ export const goData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc greet() {\n    fmt.Println(\"Hello\")\n}\nfunc main() {\n    // greet 関数を呼び出す\n    greet()\n}",
-      "holeyCode": "___\n___\n___\n    ___\n___\n___\n    ___\n___"fmt\"\nfunc greet() {\n    fmt.Println(\"Hello\")\n}\nfunc main() {\n    // greet と入力して関数を動かしましょう\n    ___()\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc greet() {\n    fmt.Println(\"Hello\")\n}\nfunc main() {\n    // greet 関数を呼び出す\n    ___()\n}",
       "correctLines": [
         "package main",
-        "import "fmt"",
+        "import \"fmt\"",
         "func greet() {",
-        "    fmt.Println("Hello")",
+        "    fmt.Println(\"Hello\")",
         "}",
         "func main() {",
         "    greet()",

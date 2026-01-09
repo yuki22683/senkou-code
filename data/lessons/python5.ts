@@ -20,13 +20,11 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# ファイルを読み込む（テスト用）\nfilename = 'test.txt'\n# open関数でファイルを開く\nwith open(filename, 'w') as f:\n    f.write('Hello, Python!')\n\nwith open(filename, 'r') as f:\n    print(f.read())",
-      "holeyCode": "# ファイルを読み込む（テスト用）\n___\n# open と入力してファイルを開いてね\n___\n    ___\n\n___\n    ___",
+      "holeyCode": "# ファイルを読み込む（テスト用）\nfilename = 'test.txt'\n# open関数でファイルを開く\nwith ___(filename, 'w') as f:\n    f.write('Hello, Python!')\n\nwith open(filename, 'r') as f:\n    print(f.read())",
       "correctLines": [
-        
-        
         "# ファイルを読み込む（テスト用）",
         "filename = 'test.txt'",
-        "# open と入力してファイルを開いてね",
+        "# open関数でファイルを開く",
         "with open(filename, 'w') as f:",
         "    f.write('Hello, Python!')",
         "",
@@ -67,16 +65,14 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# ファイルを1行ずつ読む\nwith open('test.txt', 'w') as f:\n    f.write('line1\\nline2\\nline3')\n\nwith open('test.txt', 'r') as f:\n    # inでファイルをループ\n    for line in f:\n        print(line.strip())",
-      "holeyCode": "# ファイルを1行ずつ読む\n___\n    ___\n\n___\n    # in と入力して1行ずつ取り出しましょう\n    ___\n        ___",
+      "holeyCode": "# ファイルを1行ずつ読む\nwith open('test.txt', 'w') as f:\n    f.write('line1\\nline2\\nline3')\n\nwith open('test.txt', 'r') as f:\n    # inでファイルをループ\n    for line ___ f:\n        print(line.strip())",
       "correctLines": [
-        
-        
         "# ファイルを1行ずつ読む",
         "with open('test.txt', 'w') as f:",
-        "    f.write('line1\\\nline2\\\nline3')",
+        "    f.write('line1\\nline2\\nline3')",
         "",
         "with open('test.txt', 'r') as f:",
-        "    # in と入力して1行ずつ取り出しましょう",
+        "    # inでファイルをループ",
         "    for line in f:",
         "        print(line.strip())"
       ],
@@ -114,11 +110,14 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import json\n\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# loadsでJSON文字列を変換\ndata = json.loads(json_str)\nprint(data['name'])",
-      "holeyCode": "___\n___"name\": \"Python\", \"version\": 3.12}'\n# 変数 loads を使いましょう\ndata = json.___(json_str)\nprint(data['name'])",
+      "holeyCode": "import json\n\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# loadsでJSON文字列を変換\ndata = json.___(json_str)\nprint(data['name'])",
       "correctLines": [
-        "import json",\n        "",\n        "json_str = '{"name": "Python\\",
-        ""version": 3.12}'",\n        "# 変数 loads を使いましょう",\n        "data = json.loads(json_str)",\n        "print(data['name'"
-      ])"
+        "import json",
+        "",
+        "json_str = '{\"name\": \"Python\", \"version\": 3.12}'",
+        "# loadsでJSON文字列を変換",
+        "data = json.loads(json_str)",
+        "print(data['name'])"
       ],
       "lineHints": [
         null,
@@ -152,14 +151,12 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import json\n\ndata = {'language': 'Python', 'level': 'advanced'}\n# dumpsでJSON文字列に変換\njson_str = json.dumps(data)\nprint(json_str)",
-      "holeyCode": "___\n\n___\n# 変数 dumps を使いましょう\n___\n___",
+      "holeyCode": "import json\n\ndata = {'language': 'Python', 'level': 'advanced'}\n# dumpsでJSON文字列に変換\njson_str = json.___(data)\nprint(json_str)",
       "correctLines": [
-        
-        
         "import json",
         "",
         "data = {'language': 'Python', 'level': 'advanced'}",
-        "# 変数 dumps を使いましょう",
+        "# dumpsでJSON文字列に変換",
         "json_str = json.dumps(data)",
         "print(json_str)"
       ],
@@ -195,14 +192,12 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import re\n\ntext = 'Call me at 090-1234-5678'\n# searchでパターン検索\nmatch = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)\nif match:\n    print(match.group())",
-      "holeyCode": "___\n\n___\n# 変数 search を使いましょう\n___\n___\n    ___",
+      "holeyCode": "import re\n\ntext = 'Call me at 090-1234-5678'\n# searchでパターン検索\nmatch = re.___(r'\\d{3}-\\d{4}-\\d{4}', text)\nif match:\n    print(match.group())",
       "correctLines": [
-        
-        
         "import re",
         "",
         "text = 'Call me at 090-1234-5678'",
-        "# 変数 search を使いましょう",
+        "# searchでパターン検索",
         "match = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)",
         "if match:",
         "    print(match.group())"
@@ -240,14 +235,12 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import re\n\ntext = 'email1@test.com and email2@test.com'\n# findallで全ての一致を取得\nemails = re.findall(r'\\w+@\\w+\\.\\w+', text)\nprint(emails)",
-      "holeyCode": "___\n\n___\n# 変数 findall を使いましょう\n___\n___",
+      "holeyCode": "import re\n\ntext = 'email1@test.com and email2@test.com'\n# findallで全ての一致を取得\nemails = re.___(r'\\w+@\\w+\\.\\w+', text)\nprint(emails)",
       "correctLines": [
-        
-        
         "import re",
         "",
         "text = 'email1@test.com and email2@test.com'",
-        "# 変数 findall を使いましょう",
+        "# findallで全ての一致を取得",
         "emails = re.findall(r'\\w+@\\w+\\.\\w+', text)",
         "print(emails)"
       ],
@@ -283,14 +276,12 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import re\n\ntext = 'Hello   World   Python'\n# subでパターンを置換\nresult = re.sub(r'\\s+', ' ', text)\nprint(result)",
-      "holeyCode": "___\n\n___\n# 変数 sub を使いましょう\n___\n___",
+      "holeyCode": "import re\n\ntext = 'Hello   World   Python'\n# subでパターンを置換\nresult = re.___(r'\\s+', ' ', text)\nprint(result)",
       "correctLines": [
-        
-        
         "import re",
         "",
         "text = 'Hello   World   Python'",
-        "# 変数 sub を使いましょう",
+        "# subでパターンを置換",
         "result = re.sub(r'\\s+', ' ', text)",
         "print(result)"
       ],
@@ -326,14 +317,11 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "from collections import Counter\n\ntext = 'hello world'\ncount = Counter(text)\nprint(count.most_common(3))",
-      "holeyCode": "___\n\n___\n# 変数 Counter を使いましょう\n___\n___",
+      "holeyCode": "from collections import ___\n\ntext = 'hello world'\ncount = Counter(text)\nprint(count.most_common(3))",
       "correctLines": [
-        
-        
         "from collections import Counter",
         "",
         "text = 'hello world'",
-        "# 変数 Counter を使いましょう",
         "count = Counter(text)",
         "print(count.most_common(3))"
       ],
@@ -368,10 +356,12 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "from collections import defaultdict\n\nd = defaultdict(list)\nd['fruits'].append('apple')\nd['fruits'].append('banana')\nprint(d['fruits'])",
-      "holeyCode": "___",
+      "holeyCode": "from collections import ___\n\nd = defaultdict(list)\nd['fruits'].append('apple')\nd['fruits'].append('banana')\nprint(d['fruits'])",
       "correctLines": [
-        ""from collections import defaultdict",\n        "",\n        "# 変数 defaultdict を使いましょう",\n        "d = defaultdict(list)",\n        "d['fruits'"
-      ].append('apple')",
+        "from collections import defaultdict",
+        "",
+        "d = defaultdict(list)",
+        "d['fruits'].append('apple')",
         "d['fruits'].append('banana')",
         "print(d['fruits'])"
       ],
@@ -407,14 +397,12 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "from itertools import chain\n\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\nresult = list(chain(list1, list2))\nprint(result)",
-      "holeyCode": "___\n___\n___",
+      "holeyCode": "from itertools import ___\n\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\nresult = list(chain(list1, list2))\nprint(result)",
       "correctLines": [
-        ""from itertools import chain",\n        "",\n        "list1 = [1",
-        "2",
-        "3"
-      ]",
+        "from itertools import chain",
+        "",
+        "list1 = [1, 2, 3]",
         "list2 = [4, 5, 6]",
-        "# 変数 chain を使いましょう",
         "result = list(chain(list1, list2))",
         "print(result)"
       ],

@@ -2,7 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import { useAuth, signInWithGoogle, signOut } from "@/hooks/useAuth";
-import { LogIn, LogOut } from "lucide-react";
+import { LogIn, LogOut, RefreshCw } from "lucide-react";
+import { usePathname } from "next/navigation";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,6 +15,8 @@ import {
 
 export function LoginButton() {
   const { user, loading } = useAuth();
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   if (loading) {
     return (
@@ -58,12 +61,21 @@ export function LoginButton() {
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem
-          onClick={() => signOut()}
-          className="text-red-600 cursor-pointer"
+          onClick={() => signInWithGoogle()}
+          className="cursor-pointer"
         >
-          <LogOut className="w-4 h-4 mr-2" />
-          ログアウト
+          <RefreshCw className="w-4 h-4 mr-2" />
+          アカウントを切り替える
         </DropdownMenuItem>
+        {isHomePage && (
+          <DropdownMenuItem
+            onClick={() => signOut()}
+            className="text-red-600 cursor-pointer"
+          >
+            <LogOut className="w-4 h-4 mr-2" />
+            ログアウト
+          </DropdownMenuItem>
+        )}
       </DropdownMenuContent>
     </DropdownMenu>
   );

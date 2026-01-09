@@ -30,12 +30,10 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Hello, World!と入力する\necho \"Hello, World!\"",
-      "holeyCode": "___\n___\n___\n___"Hello, World!\" と入力しましょう\necho \"___\"",
+      "holeyCode": "# Hello, World!と入力する\necho \"___\"",
       "correctLines": [
-        ""# "Hello",
-        "World!" と入力しましょう"",
-        ""echo "Hello",
-        "World!"""
+        "# 画面にメッセージを出す関数",
+        "echo \"Hello, World!\""
       ],
       "lineHints": [
         null,
@@ -75,16 +73,15 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Bashと入力する\nname=\"Bash\"\n# nameと入力する\necho $name",
-      "holeyCode": "# 変数 Bash を使いましょう\\n___\n# 変数 name の中身を表示しましょう\\n___"Bash\" と入力しましょう\nname=\"___\"\n# 変数 name の中身を表示しましょう\necho $___",
+      "holeyCode": "# 'Bash' と入力する\nname=\"___\"\n# はこの名前 'name' と入力する\necho $___",
       "correctLines": [
-        "# 変数 Bash を使いましょう",
-        "name="Bash"",
-        "# 変数 name の中身を表示しましょう",
+        "# name というはこに Bash と入れる",
+        "name=\"Bash\"",
         "echo $name"
       ],
       "lineHints": [
         null,
-        "name=\"Bash\" と入力します。 = のまわりにスペースを入れないでしましょう！",
+        "name=\"Bash\" と入力します。 = のまわりにスペースを入れないでください！",
         "はこの名前 $name を指定して、表示させます。"
       ],
       "candidates": {
@@ -121,13 +118,11 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# はこに数字を入れる\na=5\nb=3\n# +でたし算\necho $((a + b))",
-      "holeyCode": "___\n___\n# + を入力してたし算しましょう\n___",
+      "holeyCode": "# はこに数字を入れる\na=5\nb=3\n# +でたし算\necho $((a ___ b))",
       "correctLines": [
-        
-        
         "a=5",
         "b=3",
-        "# + を入力してたし算しましょう",
+        "# たし算した答えを出す",
         "echo $((a + b))"
       ],
       "lineHints": [
@@ -167,10 +162,10 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "score=100\n# -gtで「より大きい」を指定\nif [ $score -gt 80 ]; then\n    echo \"Great\"\n# fiでif文を閉じる\nfi",
-      "holeyCode": "___"Great\"\n# fi と入力して終わりにしましょう\n___",
+      "holeyCode": "score=100\n# -gtで「より大きい」を指定\nif [ $score ___ 80 ]; then\n    echo \"Great\"\n# fiでif文を閉じる\n___",
       "correctLines": [
-        ""score=100",\n        "if [ $score -gt 80"
-      ]; then",
+        "score=100",
+        "if [ $score -gt 80 ]; then",
         "    echo \"Great\"",
         "fi"
       ],
@@ -208,16 +203,16 @@ export const bashData = {
         },
         {
           "title": "elseブロック",
-          "image": "/illustrations/3d_advanced/lambda_spark.png",
+          "image": "/illustrations/common/if.png",
           "content": "# 二つの動き\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例：**\n```bash\nif [ $time -lt 12 ]; then\n    echo \"午前\"\nelse\n    echo \"午後\"\nfi\n```"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\n# elseでそれ以外の場合\nelse\n    echo \"Minor\"\nfi",
-      "holeyCode": "___"Adult\"\n# 変数 else を使いましょう\n___\n    echo \"Minor\"\nfi",
+      "holeyCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\n# elseでそれ以外の場合\n___\n    echo \"Minor\"\nfi",
       "correctLines": [
-        ""age=18",\n        "if [ $age -ge 20"
-      ]; then",
+        "age=18",
+        "if [ $age -ge 20 ]; then",
         "    echo \"Adult\"",
         "else",
         "    echo \"Minor\"",
@@ -262,11 +257,10 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "names=(\"Alice\" \"Bob\")\n# inで配列の中身を取り出す\nfor name in \"${names[@]}\"; do\n    echo $name\n# doneでループを終了\ndone",
-      "holeyCode": "___\n___"Alice\" \"Bob\")\n# 変数 in を使いましょう\nfor name ___ \"${names[@]}\"; do\n    echo $name\n# done と入力して終わりにしましょう\n___",
+      "holeyCode": "names=(\"Alice\" \"Bob\")\n# inで配列の中身を取り出す\nfor name ___ \"${names[@]}\"; do\n    echo $name\n# doneでループを終了\n___",
       "correctLines": [
-        "names=("Alice" "Bob")",
-        ""for name in "${names[@"
-      ]}\"; do",
+        "names=(\"Alice\" \"Bob\")",
+        "for name in \"${names[@]}\"; do",
         "    echo $name",
         "done"
       ],
@@ -308,10 +302,10 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "greet() {\n    echo \"Hello\"\n}\n# greetで関数を呼び出す\ngreet",
-      "holeyCode": "___\n    ___\n___\n___"Hello\"\n}\n# greet と入力して関数を動かしましょう\n___",
+      "holeyCode": "greet() {\n    echo \"Hello\"\n}\n# greetで関数を呼び出す\n___",
       "correctLines": [
         "greet() {",
-        "    echo "Hello"",
+        "    echo \"Hello\"",
         "}",
         "greet"
       ],

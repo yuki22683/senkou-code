@@ -20,11 +20,8 @@ export const typescriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// is で型ガードの戻り値型を定義\nfunction isNumber(x: unknown): x is number {\n  return typeof x === 'number';\n}\n\nconst value: unknown = 42;\nif (isNumber(value)) {\n  console.log(value * 2);\n}",
-      "holeyCode": "// is と入力して、x が number かどうか教えてね\n___\n  ___\n___\n\n___\n___\n  ___\n___",
+      "holeyCode": "// is で型ガードの戻り値型を定義\nfunction isNumber(x: unknown): x ___ number {\n  return typeof x === 'number';\n}\n\nconst value: unknown = 42;\nif (isNumber(value)) {\n  console.log(value * 2);\n}",
       "correctLines": [
-        
-        
-        "// is と入力して、x が number かどうか教えてね",
         "function isNumber(x: unknown): x is number {",
         "  return typeof x === 'number';",
         "}",
@@ -68,15 +65,12 @@ export const typescriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "type Car = { drive: () => void };\ntype Boat = { sail: () => void };\n\nfunction operate(vehicle: Car | Boat): void {\n  // in でプロパティの存在をチェック\n  if ('drive' in vehicle) {\n    console.log('Driving');\n  } else {\n    console.log('Sailing');\n  }\n}\n\noperate({ drive: () => {} });",
-      "holeyCode": "___\n___\n\n___\n  // in と入力して、プロパティがあるかチェックしましょう\n  ___\n    ___\n  ___\n    ___\n  ___\n___\n\n___",
+      "holeyCode": "type Car = { drive: () => void };\ntype Boat = { sail: () => void };\n\nfunction operate(vehicle: Car | Boat): void {\n  // in でプロパティの存在をチェック\n  if ('drive' ___ vehicle) {\n    console.log('Driving');\n  } else {\n    console.log('Sailing');\n  }\n}\n\noperate({ drive: () => {} });",
       "correctLines": [
-        
-        
         "type Car = { drive: () => void };",
         "type Boat = { sail: () => void };",
         "",
         "function operate(vehicle: Car | Boat): void {",
-        "  // in と入力して、プロパティがあるかチェックしましょう",
         "  if ('drive' in vehicle) {",
         "    console.log('Driving');",
         "  } else {",
@@ -124,16 +118,13 @@ export const typescriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "type Success = { status: 'success'; data: string };\ntype Failure = { status: 'failure'; error: string };\ntype Result = Success | Failure;\n\nfunction handle(result: Result): void {\n  // status で判別プロパティを使う\n  switch (result.status) {\n    case 'success':\n      console.log(result.data);\n      break;\n    case 'failure':\n      console.log(result.error);\n      break;\n  }\n}\n\nhandle({ status: 'success', data: 'OK' });",
-      "holeyCode": "___\n___\n___\n\n___\n  // status と入力して、今の状態をチェックしましょう\n  ___\n    ___\n      ___\n      ___\n    ___\n      ___\n      ___\n  ___\n___\n\n___",
+      "holeyCode": "type Success = { status: 'success'; data: string };\ntype Failure = { status: 'failure'; error: string };\ntype Result = Success | Failure;\n\nfunction handle(result: Result): void {\n  // status で判別プロパティを使う\n  switch (result.___) {\n    case 'success':\n      console.log(result.data);\n      break;\n    case 'failure':\n      console.log(result.error);\n      break;\n  }\n}\n\nhandle({ status: 'success', data: 'OK' });",
       "correctLines": [
-        
-        
         "type Success = { status: 'success'; data: string };",
         "type Failure = { status: 'failure'; error: string };",
         "type Result = Success | Failure;",
         "",
         "function handle(result: Result): void {",
-        "  // status と入力して、今の状態をチェックしましょう",
         "  switch (result.status) {",
         "    case 'success':",
         "      console.log(result.data);",
@@ -188,10 +179,8 @@ export const typescriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "type Color = 'red' | 'green' | 'blue';\n\nfunction getHex(color: Color): string {\n  switch (color) {\n    case 'red': return '#ff0000';\n    case 'green': return '#00ff00';\n    case 'blue': return '#0000ff';\n    default:\n      // never で到達不能な型を表す\n      const _exhaustive: never = color;\n      return _exhaustive;\n  }\n}\n\nconsole.log(getHex('red'));",
-      "holeyCode": "___\n\n___\n  ___\n    ___\n    ___\n    ___\n    ___\n      // never と入力して、絶対に来ないことを教えてね\n      ___\n      ___\n  ___\n___\n\n___",
+      "holeyCode": "type Color = 'red' | 'green' | 'blue';\n\nfunction getHex(color: Color): string {\n  switch (color) {\n    case 'red': return '#ff0000';\n    case 'green': return '#00ff00';\n    case 'blue': return '#0000ff';\n    default:\n      // never で到達不能な型を表す\n      const _exhaustive: ___ = color;\n      return _exhaustive;\n  }\n}\n\nconsole.log(getHex('red'));",
       "correctLines": [
-        
-        
         "type Color = 'red' | 'green' | 'blue';",
         "",
         "function getHex(color: Color): string {",
@@ -200,7 +189,6 @@ export const typescriptData4 = {
         "    case 'green': return '#00ff00';",
         "    case 'blue': return '#0000ff';",
         "    default:",
-        "      // never と入力して、絶対に来ないことを教えてね",
         "      const _exhaustive: never = color;",
         "      return _exhaustive;",
         "  }",
@@ -248,13 +236,10 @@ export const typescriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "type Method = 'get' | 'post';\ntype Endpoint = '/users' | '/posts';\n// ` でテンプレートリテラル型を定義\ntype Route = `${Method} ${Endpoint}`;\n\nconst route: Route = 'get /users';\nconsole.log(route);",
-      "holeyCode": "___\n___\n// ` を入力して、文字を組み合わせてね\n___\n\n___\n___",
+      "holeyCode": "type Method = 'get' | 'post';\ntype Endpoint = '/users' | '/posts';\n// ` でテンプレートリテラル型を定義\ntype Route = ___${Method} ${Endpoint}`;\n\nconst route: Route = 'get /users';\nconsole.log(route);",
       "correctLines": [
-        
-        
         "type Method = 'get' | 'post';",
         "type Endpoint = '/users' | '/posts';",
-        "// ` を入力して、文字を組み合わせてね",
         "type Route = `${Method} ${Endpoint}`;",
         "",
         "const route: Route = 'get /users';",
@@ -292,12 +277,9 @@ export const typescriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "type Status = 'pending' | 'success' | 'error' | 'cancelled';\n// Exclude でユニオン型から特定の型を除外\ntype ActiveStatus = Exclude<Status, 'cancelled'>;\n\nconst status: ActiveStatus = 'pending';\nconsole.log(status);",
-      "holeyCode": "___\n// Exclude と入力して、特定の型をのぞいてね\n___\n\n___\n___",
+      "holeyCode": "type Status = 'pending' | 'success' | 'error' | 'cancelled';\n// Exclude でユニオン型から特定の型を除外\ntype ActiveStatus = ___<Status, 'cancelled'>;\n\nconst status: ActiveStatus = 'pending';\nconsole.log(status);",
       "correctLines": [
-        
-        
         "type Status = 'pending' | 'success' | 'error' | 'cancelled';",
-        "// Exclude と入力して、特定の型をのぞいてね",
         "type ActiveStatus = Exclude<Status, 'cancelled'>;",
         "",
         "const status: ActiveStatus = 'pending';",
@@ -334,12 +316,9 @@ export const typescriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "type Event = 'click' | 'scroll' | 'mouseover' | 'keydown';\n// Extract でユニオン型から特定の型を抽出\ntype MouseEvent = Extract<Event, 'click' | 'scroll' | 'mouseover'>;\n\nconst event: MouseEvent = 'click';\nconsole.log(event);",
-      "holeyCode": "___\n// Extract と入力して、特定の型だけ取り出しましょう\n___\n\n___\n___",
+      "holeyCode": "type Event = 'click' | 'scroll' | 'mouseover' | 'keydown';\n// Extract でユニオン型から特定の型を抽出\ntype MouseEvent = ___<Event, 'click' | 'scroll' | 'mouseover'>;\n\nconst event: MouseEvent = 'click';\nconsole.log(event);",
       "correctLines": [
-        
-        
         "type Event = 'click' | 'scroll' | 'mouseover' | 'keydown';",
-        "// Extract と入力して、特定の型だけ取り出しましょう",
         "type MouseEvent = Extract<Event, 'click' | 'scroll' | 'mouseover'>;",
         "",
         "const event: MouseEvent = 'click';",
@@ -376,12 +355,9 @@ export const typescriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "type MaybeString = string | null | undefined;\n// NonNullable でnull/undefinedを除外\ntype DefiniteString = NonNullable<MaybeString>;\n\nconst text: DefiniteString = 'Hello';\nconsole.log(text);",
-      "holeyCode": "___\n// NonNullable と入力して、空っぽじゃないようにしましょう\n___\n\n___\n___",
+      "holeyCode": "type MaybeString = string | null | undefined;\n// NonNullable でnull/undefinedを除外\ntype DefiniteString = ___<MaybeString>;\n\nconst text: DefiniteString = 'Hello';\nconsole.log(text);",
       "correctLines": [
-        
-        
         "type MaybeString = string | null | undefined;",
-        "// NonNullable と入力して、空っぽじゃないようにしましょう",
         "type DefiniteString = NonNullable<MaybeString>;",
         "",
         "const text: DefiniteString = 'Hello';",
@@ -418,12 +394,14 @@ export const typescriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "function greet(name: string, age: number): void {\n  console.log(`${name} is ${age}`);\n}\n// Parameters で関数の引数型を取得\ntype GreetParams = Parameters<typeof greet>;\nconst args: GreetParams = ['Taro', 25];\ngreet(...args);",
-      "holeyCode": "___\n___\n___",
+      "holeyCode": "function greet(name: string, age: number): void {\n  console.log(`${name} is ${age}`);\n}\n// Parameters で関数の引数型を取得\ntype GreetParams = ___<typeof greet>;\nconst args: GreetParams = ['Taro', 25];\ngreet(...args);",
       "correctLines": [
-        ""function greet(name: string",
-        "age: number): void {",\n        "  console.log(`${name} is ${age}`);",\n        "}",\n        "",\n        "// Parameters と入力して、引数の型を取得しましょう",\n        "type GreetParams = Parameters<typeof greet>;",\n        "const args: GreetParams = ['Taro'",
-        "25"
-      ];",
+        "function greet(name: string, age: number): void {",
+        "  console.log(`${name} is ${age}`);",
+        "}",
+        "",
+        "type GreetParams = Parameters<typeof greet>;",
+        "const args: GreetParams = ['Taro', 25];",
         "greet(...args);"
       ],
       "lineHints": [
@@ -459,12 +437,9 @@ export const typescriptData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "type AsyncResult = Promise<{ data: string }>;\n// Awaited でPromiseの解決型を取得\ntype Result = Awaited<AsyncResult>;\n\nconst result: Result = { data: 'success' };\nconsole.log(result.data);",
-      "holeyCode": "___\n// Awaited と入力して、Promise の中身の型を教えてね\n___\n\n___\n___",
+      "holeyCode": "type AsyncResult = Promise<{ data: string }>;\n// Awaited でPromiseの解決型を取得\ntype Result = ___<AsyncResult>;\n\nconst result: Result = { data: 'success' };\nconsole.log(result.data);",
       "correctLines": [
-        
-        
         "type AsyncResult = Promise<{ data: string }>;",
-        "// Awaited と入力して、Promise の中身の型を教えてね",
         "type Result = Awaited<AsyncResult>;",
         "",
         "const result: Result = { data: 'success' };",

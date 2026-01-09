@@ -20,11 +20,8 @@ export const javascriptData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// / で正規表現リテラルを定義\nconst pattern = /javascript/i;\nconsole.log(pattern.test('I love JavaScript'));",
-      "holeyCode": "// / と入力して、文字のパターンを囲んでね\n___\n___",
+      "holeyCode": "// / で正規表現リテラルを定義\nconst pattern = ___javascript/i;\nconsole.log(pattern.test('I love JavaScript'));",
       "correctLines": [
-        
-        
-        "// / と入力して、文字のパターンを囲んでね",
         "const pattern = /javascript/i;",
         "console.log(pattern.test('I love JavaScript'));"
       ],
@@ -56,12 +53,9 @@ export const javascriptData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const emailPattern = /\\w+@\\w+\\.\\w+/;\n// test( でマッチをテスト\nconsole.log(emailPattern.test('test@example.com'));\nconsole.log(emailPattern.test('invalid-email'));",
-      "holeyCode": "___\n// test と入力して、合ってるか調べてね\n___\n___",
+      "holeyCode": "const emailPattern = /\\w+@\\w+\\.\\w+/;\n// test( でマッチをテスト\nconsole.log(emailPattern.___)('test@example.com'));\nconsole.log(emailPattern.test('invalid-email'));",
       "correctLines": [
-        
-        
         "const emailPattern = /\\w+@\\w+\\.\\w+/;",
-        "// test と入力して、合ってるか調べてね",
         "console.log(emailPattern.test('test@example.com'));",
         "console.log(emailPattern.test('invalid-email'));"
       ],
@@ -94,12 +88,9 @@ export const javascriptData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const text = 'Contact: 090-1234-5678 or 080-9876-5432';\n// match( と / でパターンマッチ\nconst phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);\nconsole.log(phones);",
-      "holeyCode": "___\n// match と / を入力して、番号を探しましょう\n___\n___",
+      "holeyCode": "const text = 'Contact: 090-1234-5678 or 080-9876-5432';\n// match( と / でパターンマッチ\nconst phones = text.___(___\\d{3}-\\d{4}-\\d{4}/g);\nconsole.log(phones);",
       "correctLines": [
-        
-        
         "const text = 'Contact: 090-1234-5678 or 080-9876-5432';",
-        "// match と / を入力して、番号を探しましょう",
         "const phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);",
         "console.log(phones);"
       ],
@@ -132,12 +123,9 @@ export const javascriptData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const text = 'Hello   World   JavaScript';\n// replace( と / で置換\nconst result = text.replace(/\\s+/g, ' ');\nconsole.log(result);",
-      "holeyCode": "___\n// replace と / を入力して、入れかえてね\n___\n___",
+      "holeyCode": "const text = 'Hello   World   JavaScript';\n// replace( と / で置換\nconst result = text.___(___\\s+/g, ' ');\nconsole.log(result);",
       "correctLines": [
-        
-        
         "const text = 'Hello   World   JavaScript';",
-        "// replace と / を入力して、入れかえてね",
         "const result = text.replace(/\\s+/g, ' ');",
         "console.log(result);"
       ],
@@ -170,10 +158,8 @@ export const javascriptData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "try {\n  const result = JSON.parse('invalid json');\n// catch でエラーをキャッチ\n} catch (e) {\n  console.log('Error:', e.message);\n}",
-      "holeyCode": "___\n  ___\n___\n  ___\n___",
+      "holeyCode": "try {\n  const result = JSON.parse('invalid json');\n// catch でエラーをキャッチ\n} ___ (e) {\n  console.log('Error:', e.message);\n}",
       "correctLines": [
-        
-        
         "try {",
         "  const result = JSON.parse('invalid json');",
         "} catch (e) {",
@@ -211,10 +197,8 @@ export const javascriptData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "function process() {\n  try {\n    console.log('Processing...');\n    throw new Error('Error!');\n  } catch (e) {\n    console.log('Caught:', e.message);\n  // finally で常に実行されるブロック\n  } finally {\n    console.log('Cleanup done');\n  }\n}\nprocess();",
-      "holeyCode": "___\n  ___\n    ___\n    ___\n  ___\n    ___\n  ___\n    ___\n  ___\n___\n___",
+      "holeyCode": "function process() {\n  try {\n    console.log('Processing...');\n    throw new Error('Error!');\n  } catch (e) {\n    console.log('Caught:', e.message);\n  // finally で常に実行されるブロック\n  } ___ {\n    console.log('Cleanup done');\n  }\n}\nprocess();",
       "correctLines": [
-        
-        
         "function process() {",
         "  try {",
         "    console.log('Processing...');",
@@ -264,10 +248,8 @@ export const javascriptData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// extends でErrorクラスを継承\nclass ValidationError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'ValidationError';\n  }\n}\n\ntry {\n  throw new ValidationError('Invalid input');\n} catch (e) {\n  console.log(`${e.name}: ${e.message}`);\n}",
-      "holeyCode": "___\n  ___\n    ___\n    ___\n  ___\n___\n\n___\n  ___\n___\n  ___\n___",
+      "holeyCode": "// extends でErrorクラスを継承\nclass ValidationError ___ Error {\n  constructor(message) {\n    super(message);\n    this.name = 'ValidationError';\n  }\n}\n\ntry {\n  throw new ValidationError('Invalid input');\n} catch (e) {\n  console.log(`${e.name}: ${e.message}`);\n}",
       "correctLines": [
-        
-        
         "class ValidationError extends Error {",
         "  constructor(message) {",
         "    super(message);",
@@ -319,11 +301,12 @@ export const javascriptData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// Symbol でユニークな識別子を作成\nconst secret = Symbol('secret');\nconst user = {\n  name: 'Taro',\n  [secret]: 'password123'\n};\nconsole.log(user.name);\nconsole.log(user[secret]);",
-      "holeyCode": "___\n___",
+      "holeyCode": "// Symbol でユニークな識別子を作成\nconst secret = ___('secret');\nconst user = {\n  name: 'Taro',\n  [secret]: 'password123'\n};\nconsole.log(user.name);\nconsole.log(user[secret]);",
       "correctLines": [
-        ""const secret = Symbol('secret');",\n        "const user = {",\n        "  name: 'Taro'",
-        "",\n        "  [secret"
-      ]: 'password123'",
+        "const secret = Symbol('secret');",
+        "const user = {",
+        "  name: 'Taro',",
+        "  [secret]: 'password123'",
         "};",
         "console.log(user.name);",
         "console.log(user[secret]);"
@@ -361,10 +344,8 @@ export const javascriptData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// WeakMap で弱参照のMapを作成\nconst privateData = new WeakMap();\n\nclass User {\n  constructor(name) {\n    privateData.set(this, { password: 'secret' });\n    this.name = name;\n  }\n  getPassword() {\n    return privateData.get(this).password;\n  }\n}\n\nconst user = new User('Taro');\nconsole.log(user.getPassword());",
-      "holeyCode": "___\n\n___\n  ___\n    ___\n    ___\n  ___\n  ___\n    ___\n  ___\n___\n\n___\n___",
+      "holeyCode": "// WeakMap で弱参照のMapを作成\nconst privateData = new ___();\n\nclass User {\n  constructor(name) {\n    privateData.set(this, { password: 'secret' });\n    this.name = name;\n  }\n  getPassword() {\n    return privateData.get(this).password;\n  }\n}\n\nconst user = new User('Taro');\nconsole.log(user.getPassword());",
       "correctLines": [
-        
-        
         "const privateData = new WeakMap();",
         "",
         "class User {",
@@ -420,15 +401,15 @@ export const javascriptData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "const handler = {\n  get(target, prop) {\n    console.log(`Getting ${prop}`);\n    return target[prop];\n  }\n};\n// Proxy で操作をインターセプト\nconst user = new Proxy({ name: 'Taro' }, handler);\nconsole.log(user.name);",
-      "holeyCode": "___\n___",
+      "holeyCode": "const handler = {\n  get(target, prop) {\n    console.log(`Getting ${prop}`);\n    return target[prop];\n  }\n};\n// Proxy で操作をインターセプト\nconst user = new ___(({ name: 'Taro' }, handler);\nconsole.log(user.name);",
       "correctLines": [
-        ""const handler = {",\n        "  get(target",
-        "prop) {",\n        "    console.log(`Getting ${prop}`);",\n        "    return target[prop"
-      ];",
+        "const handler = {",
+        "  get(target, prop) {",
+        "    console.log(`Getting ${prop}`);",
+        "    return target[prop];",
         "  }",
         "};",
         "",
-        "// Proxy と入力して、見張り役を作ってね",
         "const user = new Proxy({ name: 'Taro' }, handler);",
         "console.log(user.name);"
       ],

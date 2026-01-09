@@ -25,12 +25,10 @@ export const csharpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 画面にメッセージを出す関数\nConsole.WriteLine(\"Hello, C#!\");",
-      "holeyCode": "___\n___\n___\n___"Hello, C#!\" と入力しましょう\nConsole.WriteLine(\"___\");",
+      "holeyCode": "// 画面にメッセージを出す関数\nConsole.WriteLine(\"___\");",
       "correctLines": [
-        ""// "Hello",
-        "C#!" と入力しましょう"",
-        ""Console.WriteLine("Hello",
-        "C#!");""
+        "// 画面にメッセージを出す関数",
+        "Console.WriteLine(\"Hello, C#!\");"
       ],
       "lineHints": [
         null,

@@ -7,7 +7,6 @@ import { useEffect, useState, Fragment, useMemo, Suspense } from "react";
 import HomeWrapper from "@/components/layout/HomeWrapper";
 import RandomAffiliateBanner from "@/components/home/RandomAffiliateBanner";
 import { AmazonAdCard, AmazonAdType } from "@/components/home/AmazonAdCard";
-import Image from "next/image";
 
 type GridItem =
   | { type: 'lang'; lang: typeof LANGUAGES[number] }
@@ -89,25 +88,11 @@ function HomePageContent() {
           )}
 
           <div className="text-center mb-8 sm:mb-12">
-            <div className="flex justify-center mb-6">
-              <div className="relative w-48 h-48 sm:w-64 sm:h-64 animate-bounce-slow">
-                <Image 
-                  src="/illustrations/decorations/hero_programming.png" 
-                  alt="Programming Hero" 
-                  fill 
-                  className="object-contain"
-                  priority
-                />
-              </div>
-            </div>
-            <h1 className="text-4xl sm:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-600 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
-              閃光コード
-            </h1>
             <p className="text-lg sm:text-2xl text-muted-foreground mb-4 font-medium">
               完全無料のプログラミング演習プラットフォーム
             </p>
             <p className="text-sm sm:text-base text-gray-500">
-              最新のAI技術と直感的なインターフェースで、楽しく学ぼう。
+              プログラミングの第一歩を、ここから。
             </p>
           </div>
 

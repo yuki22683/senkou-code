@@ -6,6 +6,9 @@ import Link from "next/link";
 import { ArrowLeft, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// キャッシュを無効化して、常に最新の進捗データを取得する
+export const dynamic = 'force-dynamic';
+
 interface PageProps {
   params: {
     language: string;

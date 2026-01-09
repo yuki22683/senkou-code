@@ -25,10 +25,8 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "sealed class Shape\nclass Circle(val radius: Double) : Shape()\nclass Rectangle(val w: Double, val h: Double) : Shape()\n\nfun area(s: Shape): Double = when (s) {\n    is Circle -> 3.14 * s.radius * s.radius\n    is Rectangle -> s.w * s.h\n}\n\nfun main() {\n    println(area(Circle(2.0)))\n}",
-      "holeyCode": "___\n___\n___\n\n___\n    ___\n    ___\n___\n\n___\n    ___\n___",
+      "holeyCode": "// sealed で継承を制限する\n___ class Shape\nclass Circle(val radius: Double) : Shape()\nclass Rectangle(val w: Double, val h: Double) : Shape()\n\nfun area(s: Shape): Double = when (s) {\n    is Circle -> 3.14 * s.radius * s.radius\n    is Rectangle -> s.w * s.h\n}\n\nfun main() {\n    println(area(Circle(2.0)))\n}",
       "correctLines": [
-        
-        
         "sealed class Shape",
         "class Circle(val radius: Double) : Shape()",
         "class Rectangle(val w: Double, val h: Double) : Shape()",
@@ -85,10 +83,8 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "object Counter {\n    private var count = 0\n    fun increment() { count++ }\n    fun get() = count\n}\n\nfun main() {\n    Counter.increment()\n    Counter.increment()\n    println(Counter.get())\n}",
-      "holeyCode": "___\n    ___\n    ___\n    ___\n___\n\n___\n    ___\n    ___\n    ___\n___",
+      "holeyCode": "// object でシングルトンを定義する\n___ Counter {\n    private var count = 0\n    fun increment() { count++ }\n    fun get() = count\n}\n\nfun main() {\n    Counter.increment()\n    Counter.increment()\n    println(Counter.get())\n}",
       "correctLines": [
-        
-        
         "object Counter {",
         "    private var count = 0",
         "    fun increment() { count++ }",
@@ -143,18 +139,18 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Config {\n    val value: Int by lazy {\n        println(\"Init\")\n        42\n    }\n}\n\nfun main() {\n    val c = Config()\n    println(\"Created\")\n    println(c.value)\n}",
-      "holeyCode": "___\n    ___\n        ___\n        ___\n    ___\n___\n\\n___\n    ___\n    ___\n    ___\n___"Init\")\n        42\n    }\n}\n\nfun main() {\n    val c = Config()\n    println(\"Created\")\n    println(c.value)\n}",
+      "holeyCode": "class Config {\n    // lazy で遅延初期化する\n    val value: Int by ___ {\n        println(\"Init\")\n        42\n    }\n}\n\nfun main() {\n    val c = Config()\n    println(\"Created\")\n    println(c.value)\n}",
       "correctLines": [
         "class Config {",
         "    val value: Int by lazy {",
-        "        println("Init")",
+        "        println(\"Init\")",
         "        42",
         "    }",
         "}",
         "",
         "fun main() {",
         "    val c = Config()",
-        "    println("Created")",
+        "    println(\"Created\")",
         "    println(c.value)",
         "}"
       ],
@@ -201,7 +197,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Service {\n    lateinit var config: String\n    \n    fun setup(c: String) { config = c }\n}\n\nfun main() {\n    val s = Service()\n    s.setup(\"OK\")\n    println(s.config)\n}",
-      "holeyCode": "___\n    ___\n    \\n    ___\n___\n\\n___\n    ___\n    ___\n    ___\n___"OK\")\n    println(s.config)\n}",
+      "holeyCode": "class Service {\n    // lateinit で後から初期化を宣言する\n    ___ var config: String\n    \n    fun setup(c: String) { config = c }\n}\n\nfun main() {\n    val s = Service()\n    s.setup(\"OK\")\n    println(s.config)\n}",
       "correctLines": [
         "class Service {",
         "    lateinit var config: String",
@@ -211,7 +207,7 @@ export const kotlin4Data = {
         "",
         "fun main() {",
         "    val s = Service()",
-        "    s.setup("OK")",
+        "    s.setup(\"OK\")",
         "    println(s.config)",
         "}"
       ],
@@ -257,10 +253,8 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "inline fun repeat(times: Int, action: (Int) -> Unit) {\n    for (i in 0 until times) {\n        action(i)\n    }\n}\n\nfun main() {\n    repeat(3) { println(it) }\n}",
-      "holeyCode": "___\n    ___\n        ___\n    ___\n___\n\n___\n    ___\n___",
+      "holeyCode": "// inline でインライン展開する\n___ fun repeat(times: Int, action: (Int) -> Unit) {\n    for (i in 0 until times) {\n        action(i)\n    }\n}\n\nfun main() {\n    repeat(3) { println(it) }\n}",
       "correctLines": [
-        
-        
         "inline fun repeat(times: Int, action: (Int) -> Unit) {",
         "    for (i in 0 until times) {",
         "        action(i)",
@@ -311,10 +305,10 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "inline fun <reified T> typeOf(): String {\n    return T::class.simpleName ?: \"Unknown\"\n}\n\nfun main() {\n    println(typeOf<String>())\n}",
-      "holeyCode": "___\n    ___\n___\n\\n___\n    ___\n___"Unknown\"\n}\n\nfun main() {\n    println(typeOf<String>())\n}",
+      "holeyCode": "// reified で型情報を保持する\ninline fun <___ T> typeOf(): String {\n    return T::class.simpleName ?: \"Unknown\"\n}\n\nfun main() {\n    println(typeOf<String>())\n}",
       "correctLines": [
         "inline fun <reified T> typeOf(): String {",
-        "    return T::class.simpleName ?: "Unknown"",
+        "    return T::class.simpleName ?: \"Unknown\"",
         "}",
         "",
         "fun main() {",
@@ -359,10 +353,8 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fun Int.isEven() = this % 2 == 0\n\nfun main() {\n    println(4.isEven())\n    println(7.isEven())\n}",
-      "holeyCode": "___\n\n___\n    ___\n    ___\n___",
+      "holeyCode": "// isEven() で拡張関数を定義する\nfun Int.___ = this % 2 == 0\n\nfun main() {\n    println(4.isEven())\n    println(7.isEven())\n}",
       "correctLines": [
-        
-        
         "fun Int.isEven() = this % 2 == 0",
         "",
         "fun main() {",
@@ -407,11 +399,10 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fun main() {\n    val result = \"hello\".let {\n        it.uppercase()\n    }\n    println(result)\n}",
-      "holeyCode": "___\n    // let と入力して、変換しましょう\\n    ___\n        ___\n    ___\n    ___\n___"hello\".___ {\n        it.uppercase()\n    }\n    println(result)\n}",
+      "holeyCode": "fun main() {\n    // let で変換処理を行う\n    val result = \"hello\".___ {\n        it.uppercase()\n    }\n    println(result)\n}",
       "correctLines": [
         "fun main() {",
-        "    // let と入力して、変換しましょう",
-        "    val result = "hello".let {",
+        "    val result = \"hello\".let {",
         "        it.uppercase()",
         "    }",
         "    println(result)",
@@ -454,17 +445,16 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "data class Config(var host: String = \"\", var port: Int = 0)\n\nfun main() {\n    val config = Config().apply {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(\"${config.host}:${config.port}\")\n}",
-      "holeyCode": "___\n\\n___\n    // apply と入力して、設定しましょう\\n    ___\n        ___\n        ___\n    ___\n    ___\n___"\", var port: Int = 0)\n\nfun main() {\n    // apply と入力して、設定しましょう\n    val config = Config().___ {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(\"${config.host}:${config.port}\")\n}",
+      "holeyCode": "data class Config(var host: String = \"\", var port: Int = 0)\n\nfun main() {\n    // apply でオブジェクトを設定する\n    val config = Config().___ {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(\"${config.host}:${config.port}\")\n}",
       "correctLines": [
-        "data class Config(var host: String = "", var port: Int = 0)",
+        "data class Config(var host: String = \"\", var port: Int = 0)",
         "",
         "fun main() {",
-        "    // apply と入力して、設定しましょう",
         "    val config = Config().apply {",
-        "        host = "localhost"",
+        "        host = \"localhost\"",
         "        port = 8080",
         "    }",
-        "    println("${config.host}:${config.port}")",
+        "    println(\"${config.host}:${config.port}\")",
         "}"
       ],
       "lineHints": [
@@ -507,7 +497,7 @@ export const kotlin4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "typealias StringList = List<String>\n\nfun printAll(items: StringList) {\n    items.forEach { println(it) }\n}\n\nfun main() {\n    printAll(listOf(\"A\", \"B\", \"C\"))\n}",
-      "holeyCode": "___\n\\n___\n    ___\n___\n\\n___\n    ___\n___"A\", \"B\", \"C\"))\n}",
+      "holeyCode": "// typealias で型に別名をつける\n___ StringList = List<String>\n\nfun printAll(items: StringList) {\n    items.forEach { println(it) }\n}\n\nfun main() {\n    printAll(listOf(\"A\", \"B\", \"C\"))\n}",
       "correctLines": [
         "typealias StringList = List<String>",
         "",
@@ -516,7 +506,7 @@ export const kotlin4Data = {
         "}",
         "",
         "fun main() {",
-        "    printAll(listOf("A", "B", "C"))",
+        "    printAll(listOf(\"A\", \"B\", \"C\"))",
         "}"
       ],
       "lineHints": [

@@ -7,26 +7,7 @@ import { ChevronLeft, ChevronRight, Play, ArrowLeft } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
-import Editor from "@monaco-editor/react";
-
-// 言語IDをMonacoの言語名にマッピング
-const getMonacoLanguage = (lang: string) => {
-      const languageMap: Record<string, string> = {
-        python: "python",
-        javascript: "javascript",
-        java: "java",
-        cpp: "cpp",
-        csharp: "csharp",
-        go: "go",
-        rust: "rust",
-        ruby: "ruby",
-        php: "php",
-        sql: "sql",
-        kotlin: "kotlin",
-        swift: "swift",
-        perl: "perl",
-      };  return languageMap[lang] || "plaintext";
-};
+import { SyntaxHighlightedCode } from "@/components/exercise/SyntaxHighlightedCode";
 
 export default function TutorialPage() {
   const params = useParams();
@@ -180,10 +161,10 @@ export default function TutorialPage() {
                 remarkPlugins={[remarkGfm]}
                 components={{
                   // コードブロックのスタイリング
+                  // eslint-disable-next-line @typescript-eslint/no-unused-vars
                   code: ({ node, inline, className, children, style, ...props }: any) => {
                     const match = /language-(\w+)/.exec(className || '');
                     const lang = match ? match[1] : language;
-                    const monacoLang = getMonacoLanguage(lang);
                     const codeString = String(children).replace(/\n$/, '');
 
                     if (inline) {
@@ -197,22 +178,9 @@ export default function TutorialPage() {
                     // ブロックコード
                     return (
                       <div className="rounded-lg overflow-hidden my-4">
-                        <Editor
-                          height={`${(codeString.split('\n').length * 19) + 20}px`}
-                          language={monacoLang}
-                          value={codeString}
-                          theme="vs-dark"
-                          options={{
-                            readOnly: true,
-                            minimap: { enabled: false },
-                            scrollbar: { vertical: 'auto', horizontal: 'auto' },
-                            lineNumbers: 'off',
-                            scrollBeyondLastLine: false,
-                            wordWrap: 'off',
-                            fontSize: 14,
-                            padding: { top: 8, bottom: 8 },
-                            tabSize: 2,
-                          }}
+                        <SyntaxHighlightedCode
+                          code={codeString}
+                          language={lang}
                         />
                       </div>
                     );
@@ -255,22 +223,9 @@ export default function TutorialPage() {
 
             {currentSlideData.code && (
               <div className="mt-6 rounded-lg overflow-hidden">
-                <Editor
-                  height={`${(currentSlideData.code.split('\n').length * 19) + 20}px`}
-                  language={getMonacoLanguage(language)}
-                  value={currentSlideData.code}
-                  theme="vs-dark"
-                  options={{
-                    readOnly: true,
-                    minimap: { enabled: false },
-                    scrollbar: { vertical: 'auto', horizontal: 'auto' },
-                    lineNumbers: 'off',
-                    scrollBeyondLastLine: false,
-                    wordWrap: 'off',
-                    fontSize: 14,
-                    padding: { top: 8, bottom: 8 },
-                    tabSize: 2,
-                  }}
+                <SyntaxHighlightedCode
+                  code={currentSlideData.code}
+                  language={language}
                 />
               </div>
             )}

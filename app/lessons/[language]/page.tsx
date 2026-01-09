@@ -7,6 +7,9 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
+// キャッシュを無効化して、常に最新の進捗データを取得する
+export const dynamic = 'force-dynamic';
+
 interface PageProps {
   params: {
     language: string;

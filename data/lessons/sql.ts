@@ -15,12 +15,12 @@ export const sqlData = {
         {
           "title": "SQL（エスキューエル）とは？",
           "image": "/illustrations/common/monitor.png",
-          "content": "# データの倉庫から取り出す言葉\n\nSQLは、データベースという「情報の倉庫」に対して、「このデータをしましょう！」と命令するための言葉です。Webアプリやスマホアプリの裏側で、情報を探すときに必ず使われます。"
+          "content": "# データの倉庫から取り出す言葉\n\nSQLは、データベースという「情報の倉庫」に対して、「このデータをください！」と命令するための言葉です。Webアプリやスマホアプリの裏側で、情報を探すときに必ず使われます。"
         },
         {
           "title": "ほしいデータを選ぶ SELECT",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# SELECT（セレクト）\n\n「これを選んでしましょう！」とお願いするときは `SELECT` と入力します。ただの文字を表示させたいときもこれを使います。\n\n```sql\nSELECT '表示したい文字';\n```"
+          "content": "# SELECT（セレクト）\n\n「これを選んでください！」とお願いするときは `SELECT` と入力します。ただの文字を表示させたいときもこれを使います。\n\n```sql\nSELECT '表示したい文字';\n```"
         },
         {
           "title": "やってみましょう！",
@@ -30,11 +30,9 @@ export const sqlData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- SELECTでデータを取得\nSELECT 'Hello, World!';",
-      "holeyCode": "// SELECT と入力して画面に表示しましょう\n___",
+      "holeyCode": "-- SELECTでデータを取得\n___ 'Hello, World!';",
       "correctLines": [
-        
-        
-        "// SELECT と入力して画面に表示しましょう",
+        "-- 'Hello, World!'を表示",
         "SELECT 'Hello, World!';"
       ],
       "lineHints": [

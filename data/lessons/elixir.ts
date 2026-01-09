@@ -30,10 +30,9 @@ export const elixirData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Hello, Elixir!を表示\nIO.puts \\\"Hello, Elixir!\\\"",
-      "holeyCode": "___\n___"___\"",
+      "holeyCode": "# Hello, Elixir!を表示\nIO.puts \\\"___\\\"",
       "correctLines": [
-        ""IO.puts "Hello",
-        "Elixir!"""
+        "IO.puts \"Hello, Elixir!\""
       ],
       "lineHints": [
         "IO.puts を使って、そのあとの文字を画面に出します。"
@@ -69,10 +68,8 @@ export const elixirData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 10を入力\nx = 10\n# xを入力\nIO.puts x",
-      "holeyCode": "___\n___",
+      "holeyCode": "# 10を入力\nx = ___\n# xを入力\nIO.puts ___",
       "correctLines": [
-        
-        
         "x = 10",
         "IO.puts x"
       ],
@@ -114,10 +111,8 @@ export const elixirData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "a = 5\nb = 3\n# +でたし算\nIO.puts a + b",
-      "holeyCode": "___\n___\n___",
+      "holeyCode": "a = 5\nb = 3\n# +でたし算\nIO.puts a ___ b",
       "correctLines": [
-        
-        
         "a = 5",
         "b = 3",
         "IO.puts a + b"

@@ -194,7 +194,7 @@ export default function ExercisePage() {
           ) {
             setTimeout(async () => {
               await handleComplete();
-            }, 2000);
+            }, 1000);
           }
         }
       }
@@ -236,7 +236,7 @@ export default function ExercisePage() {
         exercise_id: exerciseId,
         status: "hint_used",
         updated_at: new Date().toISOString(),
-      });
+      }, { onConflict: 'user_id,exercise_id' });
     }
   }
 
@@ -250,7 +250,7 @@ export default function ExercisePage() {
         status: "in_progress",
         current_code: code,
         updated_at: new Date().toISOString(),
-      });
+      }, { onConflict: 'user_id,exercise_id' });
     }
     router.push(`/lessons/${language}/${lessonId}/exercises`);
   }
@@ -292,7 +292,7 @@ export default function ExercisePage() {
         exercise_id: exerciseId,
         status: "completed",
         completed_at: new Date().toISOString(),
-      });
+      }, { onConflict: 'user_id,exercise_id' });
 
       setShowCompleteDialog(true);
     }

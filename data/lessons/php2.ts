@@ -25,10 +25,8 @@ export const php2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n// classでクラスを定義\nclass Cat {\n    public $name;\n}\n$cat = new Cat();\n$cat->name = 'Tama';\necho $cat->name;\n?>",
-      "holeyCode": "___\n___\n    ___\n___\n___\n___\n___\n___",
+      "holeyCode": "<?php\n// classでクラスを定義\n___ Cat {\n    public $name;\n}\n$cat = new Cat();\n$cat->name = 'Tama';\necho $cat->name;\n?>",
       "correctLines": [
-        
-        
         "<?php",
         "class Cat {",
         "    public $name;",
@@ -77,10 +75,8 @@ export const php2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\nclass Counter {\n    public $count;\n    // __constructでコンストラクタを定義\n    public function __construct($c) {\n        $this->count = $c;\n    }\n}\n$cnt = new Counter(5);\necho $cnt->count;\n?>",
-      "holeyCode": "___\n___\n    ___\n    ___\n        ___\n    ___\n___\n___\n___\n___",
+      "holeyCode": "<?php\nclass Counter {\n    public $count;\n    // __constructでコンストラクタを定義\n    public function ___($ c) {\n        $this->count = $c;\n    }\n}\n$cnt = new Counter(5);\necho $cnt->count;\n?>",
       "correctLines": [
-        
-        
         "<?php",
         "class Counter {",
         "    public $count;",
@@ -133,10 +129,8 @@ export const php2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\nclass Vehicle {\n    public function move() {\n        echo 'moving';\n    }\n}\n// extendsで継承\nclass Car extends Vehicle { }\n$car = new Car();\n$car->move();\n?>",
-      "holeyCode": "___\n___\n    ___\n        ___\n    ___\n___\n___\n___\n___\n___",
+      "holeyCode": "<?php\nclass Vehicle {\n    public function move() {\n        echo 'moving';\n    }\n}\n// extendsで継承\nclass Car ___ Vehicle { }\n$car = new Car();\n$car->move();\n?>",
       "correctLines": [
-        
-        
         "<?php",
         "class Vehicle {",
         "    public function move() {",
@@ -189,10 +183,8 @@ export const php2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n// interfaceでインターフェースを定義\ninterface Runner {\n    public function run();\n}\nclass Robot implements Runner {\n    public function run() {\n        echo 'running';\n    }\n}\n$r = new Robot();\n$r->run();\n?>",
-      "holeyCode": "___\n___\n    ___\n___\n___\n    ___\n        ___\n    ___\n___\n___\n___\n___",
+      "holeyCode": "<?php\n// interfaceでインターフェースを定義\n___ Runner {\n    public function run();\n}\nclass Robot implements Runner {\n    public function run() {\n        echo 'running';\n    }\n}\n$r = new Robot();\n$r->run();\n?>",
       "correctLines": [
-        
-        
         "<?php",
         "interface Runner {",
         "    public function run();",
@@ -249,12 +241,10 @@ export const php2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n$nums = [1, 2, 3];\n// array_mapで各要素を変換\n$squared = array_map(fn($n) => $n * $n, $nums);\nprint_r($squared);\n?>",
-      "holeyCode": "___\n___\n___",
+      "holeyCode": "<?php\n$nums = [1, 2, 3];\n// array_mapで各要素を変換\n$squared = ___(fn($n) => $n * $n, $nums);\nprint_r($squared);\n?>",
       "correctLines": [
-        ""<?php",\n        "$nums = [1",
-        "2",
-        "3"
-      ];",
+        "<?php",
+        "$nums = [1, 2, 3];",
         "$squared = array_map(fn($n) => $n * $n, $nums);",
         "print_r($squared);",
         "?>"
@@ -295,14 +285,10 @@ export const php2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n$nums = [1, 2, 3, 4, 5];\n// array_filterで条件に合う要素を抽出\n$result = array_filter($nums, fn($n) => $n >= 3);\nprint_r($result);\n?>",
-      "holeyCode": "___\n___\n___\n___\n___",
+      "holeyCode": "<?php\n$nums = [1, 2, 3, 4, 5];\n// array_filterで条件に合う要素を抽出\n$result = ___($nums, fn($n) => $n >= 3);\nprint_r($result);\n?>",
       "correctLines": [
-        ""<?php",\n        "$nums = [1",
-        "2",
-        "3",
-        "4",
-        "5"
-      ];",
+        "<?php",
+        "$nums = [1, 2, 3, 4, 5];",
         "$result = array_filter($nums, fn($n) => $n >= 3);",
         "print_r($result);",
         "?>"
@@ -343,10 +329,8 @@ export const php2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n// fnでアロー関数を定義\n$triple = fn($n) => $n * 3;\necho $triple(7);\n?>",
-      "holeyCode": "___\n___\n___\n___",
+      "holeyCode": "<?php\n// fnでアロー関数を定義\n$triple = ___($n) => $n * 3;\necho $triple(7);\n?>",
       "correctLines": [
-        
-        
         "<?php",
         "$triple = fn($n) => $n * 3;",
         "echo $triple(7);",
@@ -387,10 +371,8 @@ export const php2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\ntry {\n    throw new Exception('oops');\n// catchで例外を捕捉\n} catch (Exception $e) {\n    echo 'caught';\n}\n?>",
-      "holeyCode": "___\n___\n    ___\n___\n    ___\n___\n___",
+      "holeyCode": "<?php\ntry {\n    throw new Exception('oops');\n// catchで例外を捕捉\n} ___ (Exception $e) {\n    echo 'caught';\n}\n?>",
       "correctLines": [
-        
-        
         "<?php",
         "try {",
         "    throw new Exception('oops');",
@@ -437,10 +419,8 @@ export const php2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n// namespaceで名前空間を宣言\nnamespace App;\nclass Hello {\n    public function say() {\n        echo 'hello';\n    }\n}\n$h = new Hello();\n$h->say();\n?>",
-      "holeyCode": "___\n___\n___\n    ___\n        ___\n    ___\n___\n___\n___\n___",
+      "holeyCode": "<?php\n// namespaceで名前空間を宣言\n___ App;\nclass Hello {\n    public function say() {\n        echo 'hello';\n    }\n}\n$h = new Hello();\n$h->say();\n?>",
       "correctLines": [
-        
-        
         "<?php",
         "namespace App;",
         "class Hello {",
@@ -493,10 +473,8 @@ export const php2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n$value = null;\n// ??でnullの場合のデフォルト値を指定\necho $value ?? 'default';\n?>",
-      "holeyCode": "___\n___\n___\n___",
+      "holeyCode": "<?php\n$value = null;\n// ??でnullの場合のデフォルト値を指定\necho $value ___ 'default';\n?>",
       "correctLines": [
-        
-        
         "<?php",
         "$value = null;",
         "echo $value ?? 'default';",

@@ -25,10 +25,8 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- *で掛け算\ntriple x = x * 3\nmain = print (triple 4)",
-      "holeyCode": "___\n___",
+      "holeyCode": "-- *で掛け算\ntriple x = x ___ 3\nmain = print (triple 4)",
       "correctLines": [
-        
-        
         "triple x = x * 3",
         "main = print (triple 4)"
       ],
@@ -65,10 +63,8 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- ::で型注釈\nsquare :: Int -> Int\nsquare x = x * x\nmain = print (square 5)",
-      "holeyCode": "___\n___\n___",
+      "holeyCode": "-- ::で型注釈\nsquare ___ Int -> Int\nsquare x = x * x\nmain = print (square 5)",
       "correctLines": [
-        
-        
         "square :: Int -> Int",
         "square x = x * x",
         "main = print (square 5)"
@@ -107,12 +103,9 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums = [1, 2, 3]\n-- headで先頭要素を取得\nmain = print (head nums)",
-      "holeyCode": "___\n___\n___",
+      "holeyCode": "nums = [1, 2, 3]\n-- headで先頭要素を取得\nmain = print (___ nums)",
       "correctLines": [
-        ""nums = [1",
-        "2",
-        "3"
-      ]",
+        "nums = [1, 2, 3]",
         "main = print (head nums)"
       ],
       "lineHints": [
@@ -148,12 +141,9 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- mapで各要素を変換\nmain = print (map (*2) [1, 2, 3])",
-      "holeyCode": "___\n___\n___",
+      "holeyCode": "-- mapで各要素を変換\nmain = print (___ (*2) [1, 2, 3])",
       "correctLines": [
-        ""main = print (map (*2) [1",
-        "2",
-        "3"
-      ])"
+        "main = print (map (*2) [1, 2, 3])"
       ],
       "lineHints": [
         "map で各要素を変換します。"
@@ -187,14 +177,9 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- filterで条件に合う要素を抽出\nmain = print (filter (>=3) [1, 2, 3, 4, 5])",
-      "holeyCode": "___\n___\n___\n___\n___",
+      "holeyCode": "-- filterで条件に合う要素を抽出\nmain = print (___ (>=3) [1, 2, 3, 4, 5])",
       "correctLines": [
-        ""main = print (filter (>=3) [1",
-        "2",
-        "3",
-        "4",
-        "5"
-      ])"
+        "main = print (filter (>=3) [1, 2, 3, 4, 5])"
       ],
       "lineHints": [
         "filter で条件に合う要素を抽出します。"
@@ -228,10 +213,8 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fib 0 = 0\nfib 1 = 1\n-- 2を引いて再帰\nfib n = fib (n - 1) + fib (n - 2)\nmain = print (fib 6)",
-      "holeyCode": "___\n___\n___\n___",
+      "holeyCode": "fib 0 = 0\nfib 1 = 1\n-- 2を引いて再帰\nfib n = fib (n - 1) + fib (n - ___)\nmain = print (fib 6)",
       "correctLines": [
-        
-        
         "fib 0 = 0",
         "fib 1 = 1",
         "fib n = fib (n - 1) + fib (n - 2)",
@@ -272,12 +255,12 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "sign x\n  | x > 0     = \"positive\"\n  | x < 0     = \"negative\"\n  -- otherwiseはそれ以外の場合\n  | otherwise = \"zero\"\nmain = putStrLn (sign 5)",
-      "holeyCode": "___\n  ___\n  ___\n  ___\n___"positive\"\n  | x < 0     = \"negative\"\n  // otherwise と入力して、どれにも当てはまらないときの結果にしましょう\n  | ___ = \"zero\"\nmain = putStrLn (sign 5)",
+      "holeyCode": "sign x\n  | x > 0     = \"positive\"\n  | x < 0     = \"negative\"\n  -- otherwiseはそれ以外の場合\n  | ___ = \"zero\"\nmain = putStrLn (sign 5)",
       "correctLines": [
         "sign x",
-        "  | x > 0     = "positive"",
-        "  | x < 0     = "negative"",
-        "  | otherwise = "zero"",
+        "  | x > 0     = \"positive\"",
+        "  | x < 0     = \"negative\"",
+        "  | otherwise = \"zero\"",
         "main = putStrLn (sign 5)"
       ],
       "lineHints": [
@@ -316,12 +299,9 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- \\でラムダ式を開始\nmain = print (map (\\x -> x * x) [1, 2, 3])",
-      "holeyCode": "___\n___\n___",
+      "holeyCode": "-- \\でラムダ式を開始\nmain = print (map (___x -> x * x) [1, 2, 3])",
       "correctLines": [
-        ""main = print (map (\\x -> x * x) [1",
-        "2",
-        "3"
-      ])"
+        "main = print (map (\\x -> x * x) [1, 2, 3])"
       ],
       "lineHints": [
         "\\ でラムダ式を始めます。"
@@ -355,10 +335,9 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- <-でリストから要素を取り出す\nmain = print [x * x | x <- [1..5]]",
-      "holeyCode": "___",
+      "holeyCode": "-- <-でリストから要素を取り出す\nmain = print [x * x | x ___ [1..5]]",
       "correctLines": [
-        ""main = print [x * x | x <- [1..5"
-      ]]"
+        "main = print [x * x | x <- [1..5]]"
       ],
       "lineHints": [
         "<- でリストから要素を取り出します。"
@@ -392,14 +371,9 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- foldrで畳み込み\nmain = print (foldr (+) 0 [1, 2, 3, 4, 5])",
-      "holeyCode": "___\n___\n___\n___\n___",
+      "holeyCode": "-- foldrで畳み込み\nmain = print (___ (+) 0 [1, 2, 3, 4, 5])",
       "correctLines": [
-        ""main = print (foldr (+) 0 [1",
-        "2",
-        "3",
-        "4",
-        "5"
-      ])"
+        "main = print (foldr (+) 0 [1, 2, 3, 4, 5])"
       ],
       "lineHints": [
         "foldr で畳み込みます。"

@@ -35,11 +35,10 @@ export const perlData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# printで出力\nprint \"Hello, World!\\n\";",
-      "holeyCode": "// print と入力して画面に表示しましょう\\n___\n___"Hello, World!\\n\";",
+      "holeyCode": "# printで出力\n___ \"Hello, World!\\n\";",
       "correctLines": [
-        "// print と入力して画面に表示しましょう",
-        ""print "Hello",
-        "World!\\\n";""
+        "# Hello, World!を表示する関数",
+        "print \"Hello, World!\\n\";"
       ],
       "lineHints": [
         null,

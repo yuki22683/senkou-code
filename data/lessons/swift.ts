@@ -35,11 +35,10 @@ export const swiftData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// Hello, World!と出力する関数\nprint(\"Hello, World!\")",
-      "holeyCode": "// print と入力して画面に表示しましょう\\n___\n___"Hello, World!\")",
+      "holeyCode": "// Hello, World!と出力する関数\n___(\"Hello, World!\")",
       "correctLines": [
-        "// print と入力して画面に表示しましょう",
-        ""print("Hello",
-        "World!")""
+        "// Hello, World!と出力する関数",
+        "print(\"Hello, World!\")"
       ],
       "lineHints": [
         null,
@@ -57,6 +56,111 @@ export const swiftData = {
         {
           "input": "",
           "expected_output": "Hello, World!\n"
+        }
+      ]
+    },
+    {
+      "title": "たくさんのデータをまとめましょう「配列」",
+      "description": "「配列（はいれつ）」を使うと、たくさんのデータを一つの「長い はこ」にまとめて入れられます。",
+      "difficulty": "easy",
+      "orderIndex": 2,
+      "tutorialSlides": [
+        {
+          "title": "配列（はいれつ）とは？",
+          "image": "/illustrations/common/list.png",
+          "content": "# データの行列\n\nたくさんのデータを順番に並べておきたいときに使うのが **配列（はいれつ）** です。買い物リストなどを一つの変数にまとめて管理できます。"
+        },
+        {
+          "title": "配列の番号は「0」から！",
+          "image": "/illustrations/common/list.png",
+          "content": "# 番号で指定しましょう\n\n配列の中身を取り出すときは、何番目かを指定します。プログラミングでは、**さいしょのデータは「0番」** と数えるルールなのです。\n\n```swift\nlet fruits = [\"りんご\", \"バナナ\", \"みかん\"]\nprint(fruits[0])\n```\n=> りんご"
+        }
+      ],
+      "initialDisplayMode": "holey",
+      "correctCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet colors = [\"あか\", \"あお\"]\n// 2番目のデータ（1番）を出す\nprint(colors[1])",
+      "holeyCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet colors = [\"___\", \"___\"]\n// 2番目のデータ（1番）を出す\nprint(colors[___])",
+      "correctLines": [
+        "// colors という配列を作る（'あか', 'あお'の順）",
+        "let colors = [\"あか\", \"あお\"]",
+        "// 2番目のデータ（1番）を出す",
+        "print(colors[1])"
+      ],
+      "lineHints": [
+        null,
+        "[\"あか\", \"あお\"] と入力しましょう。",
+        null,
+        "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"
+      ],
+      "candidates": {
+        "variables": [
+          "colors"
+        ],
+        "functions": [
+          "print"
+        ],
+        "strings": [
+          "あか",
+          "あお"
+        ],
+        "numbers": [
+          "1"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "あお\n"
+        }
+      ]
+    },
+    {
+      "title": "名前で引き出す「辞書」",
+      "description": "「辞書（じしょ）」を使うと、名前をつけてデータを保存し、その名前で取り出せます。",
+      "difficulty": "easy",
+      "orderIndex": 3,
+      "tutorialSlides": [
+        {
+          "title": "辞書（じしょ）とは？",
+          "image": "/illustrations/common/dict.png",
+          "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。辞書のように使うことができます。\n\n**コード例：**\n```swift\nlet fruits = [\"りんご\": \"あか\", \"バナナ\": \"きいろ\"]\nprint(fruits[\"りんご\"]!)\n```"
+        },
+        {
+          "title": "辞書の使い方",
+          "image": "/illustrations/common/dict.png",
+          "content": "# [ ] で取り出しましょう\n\n辞書から値を取り出すには `[キー]` を使います。\n\n```swift\nlet fruits = [\"りんご\": \"あか\"]\nprint(fruits[\"りんご\"]!)\n```\n=> あか"
+        }
+      ],
+      "initialDisplayMode": "holey",
+      "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet colors = [\"みかん\": \"オレンジ\"]\n// 中身を出す\nprint(colors[\"みかん\"]!)",
+      "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet colors = [\"___\": \"___\"]\n// 中身を出す\nprint(colors[\"___\"]!)",
+      "correctLines": [
+        "// 辞書を作る（キーは'みかん'、値は'オレンジ'）",
+        "let colors = [\"みかん\": \"オレンジ\"]",
+        "// 中身を出す",
+        "print(colors[\"みかん\"]!)"
+      ],
+      "lineHints": [
+        null,
+        "[\"みかん\": \"オレンジ\"] と入力しましょう。",
+        null,
+        "colors[\"みかん\"]! と入力しましょう。"
+      ],
+      "candidates": {
+        "variables": [
+          "colors"
+        ],
+        "functions": [
+          "print"
+        ],
+        "strings": [
+          "みかん",
+          "オレンジ"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "オレンジ\n"
         }
       ]
     }

@@ -25,10 +25,8 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# yでタプルの2番目を受け取る\n{x, y} = {10, 20}\nIO.puts x",
-      "holeyCode": "___\n___",
+      "holeyCode": "# yでタプルの2番目を受け取る\n{x, ___} = {10, 20}\nIO.puts x",
       "correctLines": [
-        
-        
         "{x, y} = {10, 20}",
         "IO.puts x"
       ],
@@ -65,10 +63,9 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# |でリストを分解\n[head | tail] = [1, 2, 3]\nIO.puts head",
-      "holeyCode": "___",
+      "holeyCode": "# |でリストを分解\n[head ___ tail] = [1, 2, 3]\nIO.puts head",
       "correctLines": [
-        ""[head | tail"
-      ] = [1, 2, 3]",
+        "[head | tail] = [1, 2, 3]",
         "IO.puts head"
       ],
       "lineHints": [
@@ -104,10 +101,8 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "1..5\n# |>でパイプ\n|> Enum.sum()\n|> IO.puts()",
-      "holeyCode": "___\n___\n___",
+      "holeyCode": "1..5\n# |>でパイプ\n___ Enum.sum()\n|> IO.puts()",
       "correctLines": [
-        
-        
         "1..5",
         "|> Enum.sum()",
         "|> IO.puts()"
@@ -146,12 +141,9 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# mapで各要素を変換\nresult = Enum.map([1, 2, 3], fn x -> x * x end)\nIO.inspect result",
-      "holeyCode": "___\n___\n___",
+      "holeyCode": "# mapで各要素を変換\nresult = Enum.___ ([1, 2, 3], fn x -> x * x end)\nIO.inspect result",
       "correctLines": [
-        ""result = Enum.map([1",
-        "2",
-        "3"
-      ], fn x -> x * x end)",
+        "result = Enum.map([1, 2, 3], fn x -> x * x end)",
         "IO.inspect result"
       ],
       "lineHints": [
@@ -187,14 +179,9 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# filterで条件に合う要素を抽出\nresult = Enum.filter([1, 2, 3, 4, 5], fn x -> x >= 3 end)\nIO.inspect result",
-      "holeyCode": "___\n___\n___\n___\n___",
+      "holeyCode": "# filterで条件に合う要素を抽出\nresult = Enum.___ ([1, 2, 3, 4, 5], fn x -> x >= 3 end)\nIO.inspect result",
       "correctLines": [
-        ""result = Enum.filter([1",
-        "2",
-        "3",
-        "4",
-        "5"
-      ], fn x -> x >= 3 end)",
+        "result = Enum.filter([1, 2, 3, 4, 5], fn x -> x >= 3 end)",
         "IO.inspect result"
       ],
       "lineHints": [
@@ -230,13 +217,13 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "x = 2\n# caseでパターンマッチ\nresult = case x do\n  1 -> \"one\"\n  2 -> \"two\"\n  _ -> \"other\"\nend\nIO.puts result",
-      "holeyCode": "___\n___\n  ___\n  ___\n  ___\n___\n___"one\"\n  2 -> \"two\"\n  _ -> \"other\"\nend\nIO.puts result",
+      "holeyCode": "x = 2\n# caseでパターンマッチ\nresult = ___ x do\n  1 -> \"one\"\n  2 -> \"two\"\n  _ -> \"other\"\nend\nIO.puts result",
       "correctLines": [
         "x = 2",
         "result = case x do",
-        "  1 -> "one"",
-        "  2 -> "two"",
-        "  _ -> "other"",
+        "  1 -> \"one\"",
+        "  2 -> \"two\"",
+        "  _ -> \"other\"",
         "end",
         "IO.puts result"
       ],
@@ -278,12 +265,9 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "defmodule Calc do\n  # defで関数を定義\n  def triple(x), do: x * 3\nend\nIO.puts Calc.triple(4)",
-      "holeyCode": "___\n  // def と入力して、関数を作ってね\n  ___\n___\n___",
+      "holeyCode": "defmodule Calc do\n  # defで関数を定義\n  ___ triple(x), do: x * 3\nend\nIO.puts Calc.triple(4)",
       "correctLines": [
-        
-        
         "defmodule Calc do",
-        "  // def と入力して、関数を作ってね",
         "  def triple(x), do: x * 3",
         "end",
         "IO.puts Calc.triple(4)"
@@ -323,10 +307,8 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "defmodule Math do\n  def factorial(0), do: 1\n  # factorialを再帰的に呼び出す\n  def factorial(n), do: n * factorial(n - 1)\nend\nIO.puts Math.factorial(5)",
-      "holeyCode": "___\n  ___\n  ___\n___\n___",
+      "holeyCode": "defmodule Math do\n  def factorial(0), do: 1\n  # factorialを再帰的に呼び出す\n  def factorial(n), do: n * ___(n - 1)\nend\nIO.puts Math.factorial(5)",
       "correctLines": [
-        
-        
         "defmodule Math do",
         "  def factorial(0), do: 1",
         "  def factorial(n), do: n * factorial(n - 1)",
@@ -369,9 +351,9 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# spawnでプロセスを作成\nspawn(fn -> IO.puts \"hello\" end)\nProcess.sleep(100)",
-      "holeyCode": "___\n___"hello\" end)\nProcess.sleep(100)",
+      "holeyCode": "# spawnでプロセスを作成\n___(fn -> IO.puts \"hello\" end)\nProcess.sleep(100)",
       "correctLines": [
-        "spawn(fn -> IO.puts "hello" end)",
+        "spawn(fn -> IO.puts \"hello\" end)",
         "Process.sleep(100)"
       ],
       "lineHints": [
@@ -407,10 +389,8 @@ export const elixir2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# sendでメッセージを送る\nsend(self(), {:msg, 42})\nreceive do\n  {:msg, n} -> IO.puts n\nend",
-      "holeyCode": "___\n___\n  ___\n___",
+      "holeyCode": "# sendでメッセージを送る\n___(self(), {:msg, 42})\nreceive do\n  {:msg, n} -> IO.puts n\nend",
       "correctLines": [
-        
-        
         "send(self(), {:msg, 42})",
         "receive do",
         "  {:msg, n} -> IO.puts n",

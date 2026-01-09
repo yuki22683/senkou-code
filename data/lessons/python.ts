@@ -25,19 +25,19 @@ export const pythonData = {
         {
           "title": "文字を出してくれる関数 print",
           "image": "/illustrations/common/monitor.png",
-          "content": "# print（プリント）のまほう\n\n画面に何かを表示（ひょうじ）したいときは、`print()` という名前の関数（かんすう）を使います。\n\n```python\nprint(出出ししたいもの)\n```\n\n例えば、こんなふうに書きます。\n```python\nprint('Python最高！')\n```\n=> Python最高！\n\n文字を出したいときは `' '`（引用符：いんようふ）で囲むのがルールです。"
+          "content": "# print（プリント）のまほう\n\n画面に何かを表示（ひょうじ）したいときは、`print()` という名前の関数（かんすう）を使います。\n\n```python\nprint(出したいもの)\n```\n\n例えば、こんなふうに書きます。\n```python\nprint('Python最高！')\n```\n=> Python最高！\n\n文字を出したいときは `' '`（引用符：いんようふ）で囲むのがルールです。"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 画面に「Hello, World!」と出す関数\nprint('Hello, World!')",
-      "holeyCode": "# print関数を使って、画面に 'Hello, World!' と表示しましょう\n___",
+      "holeyCode": "# 画面に「Hello, World!」と出す関数\nprint('___')",
       "correctLines": [
-        "# print関数を使って、画面に 'Hello, World!' と表示しましょう",
+        "# 画面に「Hello, World!」と出す関数",
         "print('Hello, World!')"
       ],
       "lineHints": [
         null,
-        "関数は「print」です。文字を出しましょうときは、左右を '（ちょんちょん）で囲むのを忘れないでしましょう！"
+        "関数は「print」です。文字を出しましょうときは、左右を '（ちょんちょん）で囲むのを忘れないでください！"
       ],
       "candidates": {
         "functions": [
@@ -73,11 +73,11 @@ export const pythonData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# nameというはこに 'Python' を入れる\nname = 'Python'\n# はこの中身を画面に出す\nprint(name)",
-      "holeyCode": "# 変数 name に文字列 'Python' を代入しましょう\n___\n# 変数 name の中身を画面に表示しましょう\n___",
+      "holeyCode": "# nameというはこに 'Python' を入れる\nname = '___'\n# はこの中身を画面に出す\nprint(___)",
       "correctLines": [
-        "# 変数 name に文字列 'Python' を代入しましょう",
+        "# nameというはこに 'Python' を入れる",
         "name = 'Python'",
-        "# 変数 name の中身を画面に表示しましょう",
+        "# はこの中身を画面に出す",
         "print(name)"
       ],
       "lineHints": [
@@ -123,13 +123,13 @@ export const pythonData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# xというはこに 10 を入れる\nx = 10\n# yというはこに 5 を入れる\ny = 5\n# x と y をたした答えを出す\nprint(x + y)",
-      "holeyCode": "# 変数 x に数字の 10 を代入しましょう\n___\n# 変数 y に数字の 5 を代入しましょう\n___\n# 変数 x と y を足した結果を表示しましょう\n___",
+      "holeyCode": "# xというはこに 10 を入れる\nx = ___\n# yというはこに 5 を入れる\ny = ___\n# x と y をたした答えを出す\nprint(x ___ y)",
       "correctLines": [
-        "# 変数 x に数字の 10 を代入しましょう",
+        "# xというはこに 10 を入れる",
         "x = 10",
-        "# 変数 y に数字の 5 を代入しましょう",
+        "# yというはこに 5 を入れる",
         "y = 5",
-        "# 変数 x と y を足した結果を表示しましょう",
+        "# x と y をたした答えを出す",
         "print(x + y)"
       ],
       "lineHints": [
@@ -138,7 +138,7 @@ export const pythonData = {
         null,
         "y = 5 と入力しましょう。",
         null,
-        "たし算なので `+` を使います。 `print(x + y)` と入力してしましょう。"
+        "たし算なので `+` を使います。 `print(x + y)` と入力してください。"
       ],
       "candidates": {
         "variables": [
@@ -177,16 +177,16 @@ export const pythonData = {
         {
           "title": "f-string の書き方",
           "image": "/illustrations/common/fstring.png",
-          "content": "# f 記号と { }\n\n文字のまえに `f` をつけて、`{ }`（ちゅうかっこ）の中に「はこ」の名前を入力すると、その中身を文章に入れられます。\n\n```python\nfood = 'カレー'\nprint(f\"今日の夕飯は{food}です\")\n```\n=> 今日の夕飯はカレーです\n\nこれで「今日の夕飯はカレーです」と表示されます！"
+          "content": "# f 記号と { }\n\n文字のまえに `f` をつけて、`{ }`（ちゅうかっこ）の中に「はこ」の名前を入力すると、その中身を文章に入れられます。\n\n```python\nfruit = 'りんご'\nprint(f'私は{fruit}が好きです')\n```\n=> 私はりんごが好きです\n\nこれで「私はりんごが好きです」と表示されます！"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# ageというはこに 10 を入れる\nage = 10\n# f-stringを使ってメッセージを出す\nprint(f'私は{age}歳です')",
-      "holeyCode": "# 変数 age に数字の 10 を代入しましょう\n___\n# f-stringを使って「私は10歳です」と表示しましょう\n___",
+      "holeyCode": "# ageというはこに 10 を入れる\nage = ___\n# f-stringを使ってメッセージを出す\nprint(f'私は{___}歳です')",
       "correctLines": [
-        "# 変数 age に数字の 10 を代入しましょう",
+        "# ageというはこに 10 を入れる",
         "age = 10",
-        "# f-stringを使って「私は10歳です」と表示しましょう",
+        "# f-stringを使ってメッセージを出す",
         "print(f'私は{age}歳です')"
       ],
       "lineHints": [
@@ -227,23 +227,23 @@ export const pythonData = {
         {
           "title": "リストの番号は「0」から！",
           "image": "/illustrations/common/list.png",
-          "content": "# 番号で指定しましょう\n\nリストの中身を取り出すときは、何番目かを指定します。プログラミングでは、**さいしょのデータは「0番」** と数えるルールなのです。\n\n```python\nmembers = ['勇者', '魔法使い', '戦士']\nprint(members[0])\n```\n=> 勇者"
+          "content": "# 番号で指定しましょう\n\nリストの中身を取り出すときは、何番目かを指定します。プログラミングでは、**さいしょのデータは「0番」** と数えるルールなのです。\n\n```python\nfruits = ['りんご', 'バナナ', 'みかん']\nprint(fruits[0])\n```\n=> りんご"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# colors というリストを作る（'あか', 'あお'の順）\ncolors = ['あか', 'あお']\n# 2番目のデータ（1番）を出す\nprint(colors[1])",
-      "holeyCode": "# 変数 colors に 'あか' と 'あお' の2つの要素を持つリストを代入しましょう\n___\n# リスト colors の2番目の要素（インデックス 1）を表示しましょう\n___",
+      "holeyCode": "# colors というリストを作る（'あか', 'あお'の順）\ncolors = ['___', '___']\n# 2番目のデータ（1番）を出す\nprint(colors[___])",
       "correctLines": [
-        "# 変数 colors に 'あか' と 'あお' の2つの要素を持つリストを代入しましょう",
+        "# colors というリストを作る（'あか', 'あお'の順）",
         "colors = ['あか', 'あお']",
-        "# リスト colors の2番目の要素（インデックス 1）を表示しましょう",
+        "# 2番目のデータ（1番）を出す",
         "print(colors[1])"
       ],
       "lineHints": [
         null,
         "['あか', 'あお'] と入力しましょう。",
         null,
-        "2番目のデータの番号は 1 です。 `colors[1]` と入力してしましょう。"
+        "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"
       ],
       "candidates": {
         "variables": [
@@ -286,20 +286,20 @@ export const pythonData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# score に 100 を入れる\nscore = 100\n# もし 80 より大きかったら\nif score > 80:\n    # メッセージを表示する\n    print('ごうかく！')",
-      "holeyCode": "# 変数 score に数字の 100 を代入しましょう\n___\n# 「大きい」を表す記号 > を使いましょう\n___\n    # 文字列 'ごうかく！' を表示しましょう\n    ___",
+      "holeyCode": "# score に 100 を入れる\nscore = ___\n# もし 80 より大きかったら\nif score ___ 80:\n    # メッセージを表示する\n    print('___')",
       "correctLines": [
-        "# 変数 score に数字の 100 を代入しましょう",
+        "# score に 100 を入れる",
         "score = 100",
-        "# 「大きい」を表す記号 > を使いましょう",
+        "# もし 80 より大きかったら",
         "if score > 80:",
-        "    # 文字列 'ごうかく！' を表示しましょう",
+        "    # メッセージを表示する",
         "    print('ごうかく！')"
       ],
       "lineHints": [
         null,
         "score = 100 と入力しましょう。",
         null,
-        "`>` を使います。さいごに `:` を忘れないでしましょう！",
+        "`>` を使います。さいごに `:` を忘れないでください！",
         null,
         "`print('ごうかく！')` と入力しましょう。"
       ],
@@ -346,15 +346,15 @@ export const pythonData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# age に 10 を入れる\nage = 10\n# 20さい以上かどうかで分ける\nif age >= 20:\n    print('おとな')\nelse:\n    # それ以外の場合\n    print('こども')",
-      "holeyCode": "# 変数 age に数字の 10 を代入しましょう\n___\n# 20さい以上かどうかで分ける\nif age >= 20:\n    print('おとな')\nelse:\n    # 文字列 'こども' を表示しましょう\n    ___",
+      "holeyCode": "# age に 10 を入れる\nage = ___\n# 20さい以上かどうかで分ける\nif age >= 20:\n    print('おとな')\nelse:\n    # それ以外の場合\n    print('___')",
       "correctLines": [
-        "# 変数 age に数字の 10 を代入しましょう",
+        "# age に 10 を入れる",
         "age = 10",
         "# 20さい以上かどうかで分ける",
         "if age >= 20:",
         "    print('おとな')",
         "else:",
-        "    # 文字列 'こども' を表示しましょう",
+        "    # それ以外の場合",
         "    print('こども')"
       ],
       "lineHints": [
@@ -363,7 +363,7 @@ export const pythonData = {
         null,
         null,
         null,
-        "else: と入力しましょう。 `:` を忘れないでしましょう。",
+        "else: と入力しましょう。 `:` を忘れないでください。",
         null,
         "print('こども') と入力しましょう。"
       ],
@@ -406,21 +406,21 @@ export const pythonData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# リストを作る\nnames = ['たろう', 'はなこ']\n# 順番に取り出すループ\nfor name in names:\n    print(name)",
-      "holeyCode": "# リストを作る\nnames = ['たろう', 'はなこ']\n# names（リスト）から name（中身）を順番に取り出すループを作りましょう\n___\n# 取り出した名前を表示しましょう\n    ___",
+      "correctCode": "# リストを作る\nnames = ['たろう', 'はなこ']\n# 順番に取り出すループ\nfor name in names:\n    # 取り出した名前を表示\n    print(name)",
+      "holeyCode": "# リストを作る\nnames = ['たろう', 'はなこ']\n# 順番に取り出すループ\nfor ___ in ___:\n    # 取り出した名前を表示\n    print(___)",
       "correctLines": [
         "# リストを作る",
         "names = ['たろう', 'はなこ']",
-        "# names（リスト）から name（中身）を順番に取り出すループを作りましょう",
+        "# 順番に取り出すループ",
         "for name in names:",
-        "    # 取り出した名前を表示しましょう",
+        "    # 取り出した名前を表示",
         "    print(name)"
       ],
       "lineHints": [
         null,
         null,
         null,
-        "for name in names: と入力します。さいごの `:` も忘れないでしましょう！",
+        "for name in names: と入力します。さいごの `:` も忘れないでください！",
         "取り出した名前（name）を print で表示します。"
       ],
       "candidates": {
@@ -453,40 +453,40 @@ export const pythonData = {
         {
           "title": "キーワードで取り出しましょう",
           "image": "/illustrations/common/dict.png",
-          "content": "# キー : あたい\n\n辞書は、キーワードとデータのセットになっています。\n\n```python\ncity = {'name': '東京', 'population': 1400}\nprint(city['name'])\n```\n=> 東京"
+          "content": "# キー : あたい\n\n辞書は、キーワードとデータのセットになっています。\n\n```python\ncolors = {'りんご': 'あか', 'バナナ': 'きいろ'}\nprint(colors['りんご'])\n```\n=> あか"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 辞書を作る（キーは'name'、値は'たろう'）\nuser = {'name': 'たろう'}\n# 中身を出す\nprint(user['name'])",
-      "holeyCode": "# 変数 user にキー 'name' 、値 'たろう' の辞書を代入しましょう\n___\n# 辞書 user から 'name' の値を取り出して表示しましょう\n___",
+      "correctCode": "# 辞書を作る（キーは'みかん'、値は'オレンジ'）\ncolors = {'みかん': 'オレンジ'}\n# 中身を出す\nprint(colors['みかん'])",
+      "holeyCode": "# 辞書を作る（キーは'みかん'、値は'オレンジ'）\ncolors = {'___': '___'}\n# 中身を出す\nprint(colors['___'])",
       "correctLines": [
-        "# 変数 user にキー 'name' 、値 'たろう' の辞書を代入しましょう",
-        "user = {'name': 'たろう'}",
-        "# 辞書 user から 'name' の値を取り出して表示しましょう",
-        "print(user['name'])"
+        "# 辞書を作る（キーは'みかん'、値は'オレンジ'）",
+        "colors = {'みかん': 'オレンジ'}",
+        "# 中身を出す",
+        "print(colors['みかん'])"
       ],
       "lineHints": [
         null,
-        "{ 'name': 'たろう' } と入力しましょう。",
+        "{ 'みかん': 'オレンジ' } と入力しましょう。",
         null,
-        "['name'] をつけて、特定のデータを取り出します。"
+        "['みかん'] をつけて、特定のデータを取り出します。"
       ],
       "candidates": {
         "variables": [
-          "user"
+          "colors"
         ],
         "functions": [
           "print"
         ],
         "strings": [
-          "name",
-          "たろう"
+          "みかん",
+          "オレンジ"
         ]
       },
       "testCases": [
         {
           "input": "",
-          "expected_output": "たろう\n"
+          "expected_output": "オレンジ\n"
         }
       ]
     },
@@ -508,14 +508,14 @@ export const pythonData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# greet という関数を定義する（'こんにちは'と表示）\ndef greet():\n    print('こんにちは')\n# 関数を呼び出す\ngreet()",
-      "holeyCode": "# greet という名前の関数を定義しましょう\n___\n    # 文字列 'こんにちは' を表示しましょう\n    ___\n# 関数 greet を実行（呼び出し）しましょう\n___",
+      "correctCode": "# greet という関数を定義する（'こんにちは'と表示）\ndef greet():\n    # 'こんにちは'と表示\n    print('こんにちは')\n# 関数を呼び出す\ngreet()",
+      "holeyCode": "# greet という関数を定義する（'こんにちは'と表示）\ndef ___():\n    # 'こんにちは'と表示\n    print('___')\n# 関数を呼び出す\n___()",
       "correctLines": [
-        "# greet という名前の関数を定義しましょう",
+        "# greet という関数を定義する（'こんにちは'と表示）",
         "def greet():",
-        "    # 文字列 'こんにちは' を表示しましょう",
+        "    # 'こんにちは'と表示",
         "    print('こんにちは')",
-        "# 関数 greet を実行（呼び出し）しましょう",
+        "# 関数を呼び出す",
         "greet()"
       ],
       "lineHints": [

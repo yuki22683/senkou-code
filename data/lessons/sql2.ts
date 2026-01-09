@@ -25,10 +25,8 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- WHEREで条件を指定\nSELECT 'found' WHERE 10 > 5;",
-      "holeyCode": "___",
+      "holeyCode": "-- WHEREで条件を指定\nSELECT 'found' ___ 10 > 5;",
       "correctLines": [
-        
-        
         "SELECT 'found' WHERE 10 > 5;"
       ],
       "lineHints": [
@@ -63,10 +61,8 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2\n-- ORDERで並べ替え\nORDER BY num;",
-      "holeyCode": "___\n___",
+      "holeyCode": "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2\n-- ORDERで並べ替え\n___ BY num;",
       "correctLines": [
-        
-        
         "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2",
         "ORDER BY num;"
       ],
@@ -103,10 +99,8 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT 1 UNION SELECT 2 UNION SELECT 3\n-- LIMITで件数制限\nLIMIT 2;",
-      "holeyCode": "___\n___",
+      "holeyCode": "SELECT 1 UNION SELECT 2 UNION SELECT 3\n-- LIMITで件数制限\n___ 2;",
       "correctLines": [
-        
-        
         "SELECT 1 UNION SELECT 2 UNION SELECT 3",
         "LIMIT 2;"
       ],
@@ -143,10 +137,8 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- COUNTで行数を数える\nSELECT COUNT(*) FROM (SELECT 1 UNION SELECT 2 UNION SELECT 3);",
-      "holeyCode": "___",
+      "holeyCode": "-- COUNTで行数を数える\nSELECT ___(*) FROM (SELECT 1 UNION SELECT 2 UNION SELECT 3);",
       "correctLines": [
-        
-        
         "SELECT COUNT(*) FROM (SELECT 1 UNION SELECT 2 UNION SELECT 3);"
       ],
       "lineHints": [
@@ -181,10 +173,8 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- SUMで合計を計算\nSELECT SUM(n) FROM (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3);",
-      "holeyCode": "___",
+      "holeyCode": "-- SUMで合計を計算\nSELECT ___(n) FROM (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3);",
       "correctLines": [
-        
-        
         "SELECT SUM(n) FROM (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3);"
       ],
       "lineHints": [
@@ -219,10 +209,8 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- AVGで平均を計算\nSELECT AVG(n) FROM (SELECT 10 AS n UNION SELECT 20 UNION SELECT 30);",
-      "holeyCode": "___",
+      "holeyCode": "-- AVGで平均を計算\nSELECT ___(n) FROM (SELECT 10 AS n UNION SELECT 20 UNION SELECT 30);",
       "correctLines": [
-        
-        
         "SELECT AVG(n) FROM (SELECT 10 AS n UNION SELECT 20 UNION SELECT 30);"
       ],
       "lineHints": [
@@ -257,10 +245,8 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT category, COUNT(*) FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n-- GROUPでグループ化\n) GROUP BY category;",
-      "holeyCode": "___\n  ___\n  ___\n___",
+      "holeyCode": "SELECT category, COUNT(*) FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n-- GROUPでグループ化\n) ___ BY category;",
       "correctLines": [
-        
-        
         "SELECT category, COUNT(*) FROM (",
         "  SELECT 'A' AS category UNION ALL",
         "  SELECT 'A' UNION ALL SELECT 'B'",
@@ -301,10 +287,8 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT category, COUNT(*) AS cnt FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n-- HAVINGでグループを絞り込み\n) GROUP BY category HAVING cnt > 1;",
-      "holeyCode": "___\n  ___\n  ___\n___",
+      "holeyCode": "SELECT category, COUNT(*) AS cnt FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n-- HAVINGでグループを絞り込み\n) GROUP BY category ___ cnt > 1;",
       "correctLines": [
-        
-        
         "SELECT category, COUNT(*) AS cnt FROM (",
         "  SELECT 'A' AS category UNION ALL",
         "  SELECT 'A' UNION ALL SELECT 'B'",
@@ -345,10 +329,8 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- CASEで条件分岐\nSELECT CASE\n  WHEN 85 >= 80 THEN 'pass'\n  ELSE 'fail'\nEND;",
-      "holeyCode": "___\n  ___\n  ___\n___",
+      "holeyCode": "-- CASEで条件分岐\nSELECT ___\n  WHEN 85 >= 80 THEN 'pass'\n  ELSE 'fail'\nEND;",
       "correctLines": [
-        
-        
         "SELECT CASE",
         "  WHEN 85 >= 80 THEN 'pass'",
         "  ELSE 'fail'",
@@ -389,10 +371,8 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- COALESCEでNULL処理\nSELECT COALESCE(NULL, 'default');",
-      "holeyCode": "___",
+      "holeyCode": "-- COALESCEでNULL処理\nSELECT ___(NULL, 'default');",
       "correctLines": [
-        
-        
         "SELECT COALESCE(NULL, 'default');"
       ],
       "lineHints": [

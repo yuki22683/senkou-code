@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { LoginButton } from "@/components/auth/LoginButton";
 import Image from "next/image";
 
@@ -12,10 +11,10 @@ export function Header() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="relative w-8 h-8 transition-transform group-hover:rotate-12">
-              <Image 
-                src="/illustrations/decorations/logo_spark.png" 
-                alt="Logo Spark" 
-                fill 
+              <Image
+                src="/illustrations/decorations/logo_spark.png"
+                alt="Logo Spark"
+                fill
                 className="object-contain"
               />
             </div>
