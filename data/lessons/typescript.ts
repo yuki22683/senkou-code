@@ -30,7 +30,7 @@ export const typescriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// string（文字）ラベルを貼ったはこを作る\nconst message: string = 'Hello TS';\n// はこの中身を出す\nconsole.log(message);",
-      "holeyCode": "// string（文字）ラベルを貼ったはこを作る\nconst message: ___ = '___';\n// はこの中身を出す\nconsole.log(___);",
+      "holeyCode": "// 文字を入れるためのラベルを貼ったはこを作る\nconst message: ___ = '___';\n// はこの中身を出す\nconsole.log(___);",
       "correctLines": [
         "// string（文字）ラベルを貼ったはこを作る",
         "const message: string = 'Hello TS';",
@@ -81,7 +81,7 @@ export const typescriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// number（数字）ラベルのはこを作る\nconst x: number = 10;\nconst y: number = 5;\n// たし算した答えを出す\nconsole.log(x + y);",
-      "holeyCode": "// number（数字）ラベルのはこを作る\nconst x: ___ = 10;\n// yにも同じラベルを貼る\nconst y: ___ = 5;\n// たし算した答えを出す\nconsole.log(x ___ y);",
+      "holeyCode": "// 数字を入れるためのラベルのはこを作る\nconst x: ___ = 10;\n// yにも同じラベルを貼る\nconst y: ___ = 5;\n// たし算した答えを出す\nconsole.log(x ___ y);",
       "correctLines": [
         "// number（数字）ラベルのはこを作る",
         "const x: number = 10;",
@@ -241,7 +241,7 @@ export const typescriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// boolean（はい/いいえ）ラベルを貼る\nconst isAdult: boolean = true;\n// もし 正しかったら（trueなら）\nif (isAdult) {\n    console.log('おとなです');\n}",
-      "holeyCode": "// boolean（はい/いいえ）ラベルを貼る\nconst isAdult: ___ = true;\n// もし 正しかったら（trueなら）\nif (___) {\n    console.log('おとなです');\n}",
+      "holeyCode": "// 真偽値（はい/いいえ）を入れるためのラベルを貼る\nconst isAdult: ___ = true;\n// もし 正しかったら（trueなら）\nif (___) {\n    console.log('おとなです');\n}",
       "correctLines": [
         "// boolean（はい/いいえ）ラベルを貼る",
         "const isAdult: boolean = true;",
@@ -293,7 +293,7 @@ export const typescriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// score というはこに 75 を入れる\nconst score: number = 75;\n// 判定する\nif (score >= 80) {\n    console.log('ごうかく');\n} else {\n    // それ以外の場合\n    console.log('ざんねん');\n}",
-      "holeyCode": "// score というはこに 75 を入れる\nconst score: ___ = 75;\n// 判定する\nif (score >= 80) {\n    console.log('ごうかく');\n// elseで「そうでなければ」\n} ___ {\n    // それ以外の場合\n    console.log('ざんねん');\n}",
+      "holeyCode": "// score というはこに 75 を入れる\nconst score: ___ = 75;\n// 判定する\nif (score >= 80) {\n    console.log('ごうかく');\n// 「そうでなければ」を表すキーワード\n} ___ {\n    // それ以外の場合\n    console.log('ざんねん');\n}",
       "correctLines": [
         "// score というはこに 75 を入れる",
         "const score: number = 75;",
@@ -356,10 +356,10 @@ export const typescriptData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 配列を作る\nconst names: string[] = ['たろう', 'はなこ'];\n// 順番にループする\nfor (const name of names) {\n    console.log(name);\n}",
-      "holeyCode": "// 配列を作る\nconst names: ___[] = ['たろう', 'はなこ'];\n// 順番にループする\nfor (const ___ of ___) {\n    console.log(name);\n}",
+      "correctCode": "// 配列を作る（'たろう', 'はなこ'の順）\nconst names: string[] = ['たろう', 'はなこ'];\n// 順番にループする\nfor (const name of names) {\n    console.log(name);\n}",
+      "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\nconst names: ___[] = ['___', '___'];\n// 順番にループする\nfor (const ___ of ___) {\n    console.log(name);\n}",
       "correctLines": [
-        "// 配列を作る",
+        "// 配列を作る（'たろう', 'はなこ'の順）",
         "const names: string[] = ['たろう', 'はなこ'];",
         "// 順番にループする",
         "for (const name of names) {",
@@ -410,7 +410,7 @@ export const typescriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// Userという名前のラベルを作る\ntype User = { name: string };\n// Userラベルを貼ったはこを作る\nconst user: User = { name: 'たろう' };\n// 中身を出す\nconsole.log(user.name);",
-      "holeyCode": "// nameはstringであるUserという名前のラベルを作る\ntype User = { name: ___ };\n// Userラベルを貼ったはこを作る\nconst user: ___ = { name: 'たろう' };\n// nameプロパティを出す\nconsole.log(user.___);",
+      "holeyCode": "// nameは文字列であるUserという名前のラベルを作る\ntype User = { name: ___ };\n// Userラベルを貼ったはこを作る\nconst user: ___ = { name: 'たろう' };\n// nameプロパティを出す\nconsole.log(user.___);",
       "correctLines": [
         "// Userという名前のラベルを作る",
         "type User = { name: string };",
@@ -513,7 +513,7 @@ export const typescriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 何も返さないときは void ラベル\nfunction showDate(): void {\n    console.log('今日の日付');\n}\n// 関数を実行する\nshowDate();",
-      "holeyCode": "// 何も返さないときは void ラベル\nfunction showDate(): ___ {\n    console.log('今日の日付');\n}\n// 関数を実行する\nshowDate();",
+      "holeyCode": "// 何も返さないときに使うラベル\nfunction showDate(): ___ {\n    console.log('今日の日付');\n}\n// 関数を実行する\nshowDate();",
       "correctLines": [
         "// 何も返さないときは void ラベル",
         "function showDate(): void {",

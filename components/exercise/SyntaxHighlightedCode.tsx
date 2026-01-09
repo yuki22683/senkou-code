@@ -28,6 +28,20 @@ export function SyntaxHighlightedCode({
       {lines.map((line, i) => {
         const tokens = tokenize(line, language);
         let lastNonWhitespace = "";
+
+        // スペースを可視化するヘルパー関数
+        const renderToken = (token: string, key: number, style: React.CSSProperties) => {
+          // スペースのみのトークンの場合、ドットで表示
+          if (token === ' ') {
+            return <span key={key} style={{ ...style, color: 'rgba(255,255,255,0.25)' }}>·</span>;
+          }
+          if (/^\s+$/.test(token)) {
+            // 複数スペースの場合、各スペースをドットに
+            return <span key={key} style={{ ...style, color: 'rgba(255,255,255,0.25)' }}>{token.replace(/ /g, '·')}</span>;
+          }
+          return <span key={key} style={style}>{token}</span>;
+        };
+
         return (
           <div key={i} className="min-h-[1.5rem] whitespace-pre">
             {tokens.map((token, j) => {
@@ -41,11 +55,7 @@ export function SyntaxHighlightedCode({
               }
               const style = getTokenStyle(token, language, lastNonWhitespace, nextToken);
               if (token.trim()) lastNonWhitespace = token;
-              return (
-                <span key={j} style={style}>
-                  {token}
-                </span>
-              );
+              return renderToken(token, j, style);
             })}
           </div>
         );

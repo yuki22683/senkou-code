@@ -1,4 +1,4 @@
--- 閃光コード - 初期データベーススキーマ
+-- 令和プログラミング - 初期データベーススキーマ
 
 -- Users テーブル (Supabase Auth と連携)
 CREATE TABLE IF NOT EXISTS users (

@@ -1,6 +1,6 @@
 📌 Claude Code への依頼プロンプト（詳細版・深掘り拡張版）
 
-・アプリ名は"閃光コード"(senkou code)
+・アプリ名は"令和プログラミング"(reiwa programming)
 
 🔸パスワードなど
 ・supabase project Database password: RGVBxPDuJYCvcR57

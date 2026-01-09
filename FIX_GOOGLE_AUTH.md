@@ -37,7 +37,7 @@ Google Cloud Console側で、SupabaseのコールバックURLが許可されて�
 
 5. アプリケーションの種類: **Web application** を選択
 
-6. 名前: `Senkou Code - Supabase Auth`
+6. 名前: `Reiwa Programming - Supabase Auth`
 
 7. **承認済みのリダイレクト URI** に以下を追加:
    ```
@@ -135,7 +135,7 @@ https://mxvqiympzlkcgnywaabq.supabase.co/auth/v1/callback
 1. Google Cloud Console → **APIs & Services** → **OAuth consent screen**
 2. User Type: **External** を選択
 3. 必要な情報を入力:
-   - App name: `閃光コード`
+   - App name: `令和プログラミング`
    - User support email: あなたのメールアドレス
    - Developer contact information: あなたのメールアドレス
 4. **Save and Continue**

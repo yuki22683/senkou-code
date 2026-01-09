@@ -525,6 +525,19 @@ export function MobileCodeEditor({
       let lastNonWhitespace = "";
       let cursorRendered = false;
 
+      // スペースを可視化するヘルパー関数
+      const renderToken = (token: string, key: string | number, style: React.CSSProperties) => {
+        // スペースのみのトークンの場合、ドットで表示
+        if (token === ' ') {
+          return <span key={key} style={{ ...style, color: 'rgba(255,255,255,0.25)' }}>·</span>;
+        }
+        if (/^\s+$/.test(token)) {
+          // 複数スペースの場合、各スペースをドットに
+          return <span key={key} style={{ ...style, color: 'rgba(255,255,255,0.25)' }}>{token.replace(/ /g, '·')}</span>;
+        }
+        return <span key={key} style={style}>{token}</span>;
+      };
+
       tokenList.forEach((token, i) => {
         const nextLen = currentLen + token.length;
         // Find next non-whitespace token for string prefix detection
@@ -543,13 +556,13 @@ export function MobileCodeEditor({
             const before = token.slice(0, splitIndex);
             const after = token.slice(splitIndex);
 
-            if (before) result.push(<span key={`${i}-b`} style={style}>{before}</span>);
+            if (before) result.push(renderToken(before, `${i}-b`, style));
             result.push(<span key="cursor" className="inline-block w-[2px] h-[1.2em] bg-blue-500 align-middle animate-pulse -mb-1"></span>);
-            if (after) result.push(<span key={`${i}-a`} style={style}>{after}</span>);
+            if (after) result.push(renderToken(after, `${i}-a`, style));
 
             cursorRendered = true;
         } else {
-            result.push(<span key={i} style={style}>{token}</span>);
+            result.push(renderToken(token, i, style));
         }
         currentLen = nextLen;
       });

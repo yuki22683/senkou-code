@@ -20,7 +20,7 @@ export const haskell3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "double :: Int -> Int\ndouble x = x * 2\n\n-- mapで各要素に関数を適用\ndoubled = map double [1, 2, 3, 4, 5]",
-      "holeyCode": "double :: Int -> Int\ndouble x = x * 2\n\n-- mapで各要素に関数を適用\ndoubled = ___ double [1, 2, 3, 4, 5]",
+      "holeyCode": "double :: Int -> Int\ndouble x = x * 2\n\n-- 各要素に関数を適用してリストを変換する関数\ndoubled = ___ double [1, 2, 3, 4, 5]",
       "correctLines": [
         { "lineNumber": 4, "content": "doubled = map double [1, 2, 3, 4, 5]" }
       ],
@@ -48,7 +48,7 @@ export const haskell3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "isEven :: Int -> Bool\nisEven x = x `mod` 2 == 0\n\n-- filterで条件を満たす要素を抽出\nevens = filter isEven [1, 2, 3, 4, 5, 6]",
-      "holeyCode": "isEven :: Int -> Bool\nisEven x = x `mod` 2 == 0\n\n-- filterで条件を満たす要素を抽出\nevens = ___ isEven [1, 2, 3, 4, 5, 6]",
+      "holeyCode": "isEven :: Int -> Bool\nisEven x = x `mod` 2 == 0\n\n-- 条件を満たす要素だけを抽出する関数\nevens = ___ isEven [1, 2, 3, 4, 5, 6]",
       "correctLines": [
         { "lineNumber": 4, "content": "evens = filter isEven [1, 2, 3, 4, 5, 6]" }
       ],
@@ -76,7 +76,7 @@ export const haskell3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- \\でラムダ式を開始\nsquared = map (\\x -> x * x) [1, 2, 3, 4, 5]",
-      "holeyCode": "-- \\でラムダ式を開始\nsquared = map (___x -> x * x) [1, 2, 3, 4, 5]",
+      "holeyCode": "-- ラムダ式を開始する記号\nsquared = map (___x -> x * x) [1, 2, 3, 4, 5]",
       "correctLines": [
         { "lineNumber": 1, "content": "squared = map (\\x -> x * x) [1, 2, 3, 4, 5]" }
       ],
@@ -104,7 +104,7 @@ export const haskell3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "sumList :: [Int] -> Int\n-- foldrで右から畳み込み\nsumList xs = foldr (+) 0 xs\n\ntotal = sumList [1, 2, 3, 4, 5]",
-      "holeyCode": "sumList :: [Int] -> Int\n-- foldrで右から畳み込み\nsumList xs = ___ (+) 0 xs\n\ntotal = sumList [1, 2, 3, 4, 5]",
+      "holeyCode": "sumList :: [Int] -> Int\n-- リストを右から畳み込む関数\nsumList xs = ___ (+) 0 xs\n\ntotal = sumList [1, 2, 3, 4, 5]",
       "correctLines": [
         { "lineNumber": 2, "content": "sumList xs = foldr (+) 0 xs" }
       ],
@@ -132,7 +132,7 @@ export const haskell3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "squareDouble :: Int -> Int\n-- .で関数合成\nsquareDouble = (^2) . (*2)\n\nresult = squareDouble 3",
-      "holeyCode": "squareDouble :: Int -> Int\n-- .で関数合成\nsquareDouble = (^2) ___ (*2)\n\nresult = squareDouble 3",
+      "holeyCode": "squareDouble :: Int -> Int\n-- 2つの関数を合成する演算子\nsquareDouble = (^2) ___ (*2)\n\nresult = squareDouble 3",
       "correctLines": [
         { "lineNumber": 2, "content": "squareDouble = (^2) . (*2)" }
       ],
@@ -160,7 +160,7 @@ export const haskell3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "safeDiv :: Int -> Int -> Maybe Int\n-- Nothingで値がないことを表す\nsafeDiv _ 0 = Nothing\nsafeDiv x y = Just (x `div` y)",
-      "holeyCode": "safeDiv :: Int -> Int -> Maybe Int\n-- Nothingで値がないことを表す\nsafeDiv _ 0 = ___\nsafeDiv x y = Just (x `div` y)",
+      "holeyCode": "safeDiv :: Int -> Int -> Maybe Int\n-- 値がないことを表すMaybeのコンストラクタ\nsafeDiv _ 0 = ___\nsafeDiv x y = Just (x `div` y)",
       "correctLines": [
         { "lineNumber": 2, "content": "safeDiv _ 0 = Nothing" }
       ],
@@ -189,7 +189,7 @@ export const haskell3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "validateAge :: Int -> Either String Int\nvalidateAge age\n  -- Leftでエラーを表す\n  | age < 0   = Left \"Age cannot be negative\"\n  | otherwise = Right age",
-      "holeyCode": "validateAge :: Int -> Either String Int\nvalidateAge age\n  -- Leftでエラーを表す\n  | age < 0   = ___ \"Age cannot be negative\"\n  | otherwise = Right age",
+      "holeyCode": "validateAge :: Int -> Either String Int\nvalidateAge age\n  -- 失敗・エラーを表すEitherのコンストラクタ\n  | age < 0   = ___ \"Age cannot be negative\"\n  | otherwise = Right age",
       "correctLines": [
         { "lineNumber": 3, "content": "  | age < 0   = Left \"Age cannot be negative\"" }
       ],
@@ -218,7 +218,7 @@ export const haskell3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "doubleJust :: Maybe Int -> Maybe Int\n-- fmapでFunctor内の値に関数を適用\ndoubleJust = fmap (*2)\n\nresult = doubleJust (Just 5)",
-      "holeyCode": "doubleJust :: Maybe Int -> Maybe Int\n-- fmapでFunctor内の値に関数を適用\ndoubleJust = ___ (*2)\n\nresult = doubleJust (Just 5)",
+      "holeyCode": "doubleJust :: Maybe Int -> Maybe Int\n-- Functor内の値に関数を適用する関数\ndoubleJust = ___ (*2)\n\nresult = doubleJust (Just 5)",
       "correctLines": [
         { "lineNumber": 2, "content": "doubleJust = fmap (*2)" }
       ],
@@ -246,7 +246,7 @@ export const haskell3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "addMaybe :: Maybe Int -> Maybe Int -> Maybe Int\n-- doでモナド操作を順次実行\naddMaybe mx my = do\n  x <- mx\n  y <- my\n  return (x + y)",
-      "holeyCode": "addMaybe :: Maybe Int -> Maybe Int -> Maybe Int\n-- doでモナド操作を順次実行\naddMaybe mx my = ___\n  x <- mx\n  y <- my\n  return (x + y)",
+      "holeyCode": "addMaybe :: Maybe Int -> Maybe Int -> Maybe Int\n-- モナド操作を順次実行する記法\naddMaybe mx my = ___\n  x <- mx\n  y <- my\n  return (x + y)",
       "correctLines": [
         { "lineNumber": 2, "content": "addMaybe mx my = do" }
       ],
@@ -275,7 +275,7 @@ export const haskell3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "squares :: [Int]\n-- |で生成器の前を区切る\nsquares = [x * x | x <- [1..5]]",
-      "holeyCode": "squares :: [Int]\n-- |で生成器の前を区切る\nsquares = [x * x ___ x <- [1..5]]",
+      "holeyCode": "squares :: [Int]\n-- リスト内包表記で式と生成器を区切る記号\nsquares = [x * x ___ x <- [1..5]]",
       "correctLines": [
         { "lineNumber": 2, "content": "squares = [x * x | x <- [1..5]]" }
       ],

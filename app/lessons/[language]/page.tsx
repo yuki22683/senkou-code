@@ -80,7 +80,7 @@ export default async function LessonsPage({ params }: PageProps) {
   );
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-6 sm:px-10 lg:px-16 py-10 sm:py-12">
       <div className="max-w-5xl mx-auto">
         <div className="mb-8">
           <Button variant="ghost" asChild className="mb-4">

@@ -1,4 +1,4 @@
-# 閃光コード (Senkou Code)
+# 令和プログラミング (Reiwa Programming)
 
 完全無料のプログラミング演習プラットフォーム
 
@@ -76,7 +76,7 @@ npm run dev
 ## プロジェクト構造
 
 ```
-senkoucode/
+reiwaprograming/
 ├── app/                    # Next.js App Router
 │   ├── layout.tsx
 │   ├── page.tsx           # ホーム画面

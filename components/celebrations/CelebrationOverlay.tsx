@@ -90,9 +90,6 @@ export function CelebrationOverlay({
             <span className="text-lg font-bold text-yellow-700">+{earnedXp} XP</span>
           </div>
         )}
-        <p className="mt-6 text-xs text-gray-400 text-center">
-          タップで閉じる
-        </p>
       </div>
     </div>
   );

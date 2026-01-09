@@ -25,7 +25,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Container<T> {\n    public T Item { get; set; }\n}\n\nclass Program {\n    static void Main() {\n        var c = new Container<string> { Item = \"Hello\" };\n        Console.WriteLine(c.Item);\n    }\n}",
-      "holeyCode": "using System;\n\n// <T>で型パラメータを定義\nclass Container___T___ {\n    public T Item { get; set; }\n}\n\nclass Program {\n    static void Main() {\n        var c = new Container<string> { Item = \"Hello\" };\n        Console.WriteLine(c.Item);\n    }\n}",
+      "holeyCode": "using System;\n\n// 型パラメータを定義する記号\nclass Container___T___ {\n    public T Item { get; set; }\n}\n\nclass Program {\n    static void Main() {\n        var c = new Container<string> { Item = \"Hello\" };\n        Console.WriteLine(c.Item);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -83,7 +83,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Comparer<T> where T : IComparable<T> {\n    public int Compare(T a, T b) => a.CompareTo(b);\n}\n\nclass Program {\n    static void Main() {\n        var c = new Comparer<int>();\n        Console.WriteLine(c.Compare(5, 3));\n    }\n}",
-      "holeyCode": "using System;\n\n// whereで型制約を指定\nclass Comparer<T> ___ T : IComparable<T> {\n    public int Compare(T a, T b) => a.CompareTo(b);\n}\n\nclass Program {\n    static void Main() {\n        var c = new Comparer<int>();\n        Console.WriteLine(c.Compare(5, 3));\n    }\n}",
+      "holeyCode": "using System;\n\n// 型パラメータに制約を付けるキーワード\nclass Comparer<T> ___ T : IComparable<T> {\n    public int Compare(T a, T b) => a.CompareTo(b);\n}\n\nclass Program {\n    static void Main() {\n        var c = new Comparer<int>();\n        Console.WriteLine(c.Compare(5, 3));\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -141,7 +141,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    delegate int MathOp(int x);\n    \n    static int Double(int n) => n * 2;\n    \n    static void Main() {\n        MathOp op = Double;\n        Console.WriteLine(op(5));\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    // delegateでデリゲート型を定義\n    ___ int MathOp(int x);\n    \n    static int Double(int n) => n * 2;\n    \n    static void Main() {\n        MathOp op = Double;\n        Console.WriteLine(op(5));\n    }\n}",
+      "holeyCode": "using System;\n\nclass Program {\n    // メソッドを参照できる型を定義するキーワード\n    ___ int MathOp(int x);\n    \n    static int Double(int n) => n * 2;\n    \n    static void Main() {\n        MathOp op = Double;\n        Console.WriteLine(op(5));\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -199,7 +199,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        Func<int, int> triple = x => x * 3;\n        Console.WriteLine(triple(7));\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        // Funcで戻り値ありのデリゲート\n        ___<int, int> triple = x => x * 3;\n        Console.WriteLine(triple(7));\n    }\n}",
+      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        // 戻り値を持つ汎用デリゲート型\n        ___<int, int> triple = x => x * 3;\n        Console.WriteLine(triple(7));\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -249,7 +249,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        Action<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\n        greet(\"World\");\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        // Actionで戻り値なしのデリゲート\n        ___<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\n        greet(\"World\");\n    }\n}",
+      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        // 戻り値を持たない汎用デリゲート型\n        ___<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\n        greet(\"World\");\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -299,7 +299,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5, 6 };\n        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");\n        foreach (var g in groups) {\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\n        }\n    }\n}",
-      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5, 6 };\n        // GroupByでグループ化\n        var groups = nums.___(n => n % 2 == 0 ? \"even\" : \"odd\");\n        foreach (var g in groups) {\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\n        }\n    }\n}",
+      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5, 6 };\n        // キーでグループ分けするLINQメソッド\n        var groups = nums.___(n => n % 2 == 0 ? \"even\" : \"odd\");\n        foreach (var g in groups) {\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\n        }\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Linq;",
@@ -357,7 +357,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? s = null;\n        int? len = s?.Length;\n        Console.WriteLine(len ?? 0);\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? s = null;\n        // ?.でnull安全にアクセス\n        int? len = s___.Length;\n        Console.WriteLine(len ?? 0);\n    }\n}",
+      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? s = null;\n        // nullでなければアクセスする演算子\n        int? len = s___.Length;\n        Console.WriteLine(len ?? 0);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -409,7 +409,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? value = null;\n        string result = value ?? \"default\";\n        Console.WriteLine(result);\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? value = null;\n        // ??でnullの場合のデフォルト値\n        string result = value ___ \"default\";\n        Console.WriteLine(result);\n    }\n}",
+      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? value = null;\n        // nullなら右側を返す演算子\n        string result = value ___ \"default\";\n        Console.WriteLine(result);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -461,7 +461,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nrecord Point(int X, int Y);\n\nclass Program {\n    static void Main() {\n        var p = new Point(3, 4);\n        Console.WriteLine(p);\n    }\n}",
-      "holeyCode": "using System;\n\n// recordで不変データ型を定義\n___ Point(int X, int Y);\n\nclass Program {\n    static void Main() {\n        var p = new Point(3, 4);\n        Console.WriteLine(p);\n    }\n}",
+      "holeyCode": "using System;\n\n// イミュータブルなデータ型を定義するキーワード\n___ Point(int X, int Y);\n\nclass Program {\n    static void Main() {\n        var p = new Point(3, 4);\n        Console.WriteLine(p);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -515,7 +515,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Item {\n    public string Name { get; init; }\n}\n\nclass Program {\n    static void Main() {\n        var item = new Item { Name = \"Apple\" };\n        Console.WriteLine(item.Name);\n    }\n}",
-      "holeyCode": "using System;\n\nclass Item {\n    // initで初期化専用プロパティ\n    public string Name { get; ___; }\n}\n\nclass Program {\n    static void Main() {\n        var item = new Item { Name = \"Apple\" };\n        Console.WriteLine(item.Name);\n    }\n}",
+      "holeyCode": "using System;\n\nclass Item {\n    // 初期化時のみ値を設定できるアクセサ\n    public string Name { get; ___; }\n}\n\nclass Program {\n    static void Main() {\n        var item = new Item { Name = \"Apple\" };\n        Console.WriteLine(item.Name);\n    }\n}",
       "correctLines": [
         "using System;",
         "",

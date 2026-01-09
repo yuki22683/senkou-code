@@ -59,6 +59,7 @@ export function CodeEditor({
           automaticLayout: true,
           readOnly,
           tabSize: 2,
+          renderWhitespace: "all",
         }}
       />
     </div>

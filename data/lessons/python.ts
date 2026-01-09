@@ -406,10 +406,10 @@ export const pythonData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# リストを作る\nnames = ['たろう', 'はなこ']\n# 順番に取り出すループ\nfor name in names:\n    # 取り出した名前を表示\n    print(name)",
-      "holeyCode": "# リストを作る\nnames = ['たろう', 'はなこ']\n# 順番に取り出すループ\nfor ___ in ___:\n    # 取り出した名前を表示\n    print(___)",
+      "correctCode": "# リストを作る（'たろう', 'はなこ'の順）\nnames = ['たろう', 'はなこ']\n# 順番に取り出すループ\nfor name in names:\n    # 取り出した名前を表示\n    print(name)",
+      "holeyCode": "# リストを作る（'たろう', 'はなこ'の順）\nnames = ['___', '___']\n# 順番に取り出すループ\nfor ___ in ___:\n    # 取り出した名前を表示\n    print(___)",
       "correctLines": [
-        "# リストを作る",
+        "# リストを作る（'たろう', 'はなこ'の順）",
         "names = ['たろう', 'はなこ']",
         "# 順番に取り出すループ",
         "for name in names:",

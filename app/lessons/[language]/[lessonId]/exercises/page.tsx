@@ -80,7 +80,7 @@ export default async function ExercisesPage({ params }: PageProps) {
     : 0;
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-6 sm:px-10 lg:px-16 py-10 sm:py-12">
       <div className="max-w-5xl mx-auto">
         <div className="mb-8">
           <Button variant="ghost" asChild className="mb-4">
@@ -159,17 +159,40 @@ export default async function ExercisesPage({ params }: PageProps) {
             </p>
           </div>
         ) : (
-          <div className="space-y-4">
-            <h2 className="text-xl font-semibold mb-4">演習一覧</h2>
-            {exercises.map((exercise) => (
-              <ExerciseCard
-                key={exercise.id}
-                exercise={exercise}
-                language={language}
-                lessonId={lessonId}
-                progress={progressMap[exercise.id]}
-              />
-            ))}
+          <div className="space-y-6">
+            <h2 className="text-xl font-semibold mb-6">演習一覧</h2>
+            {(() => {
+              // 次に実施すべき演習のインデックスを特定
+              let nextExerciseIndex = -1;
+              for (let i = 0; i < exercises.length; i++) {
+                const isLocked = i > 0 && progressMap[exercises[i - 1].id]?.status !== 'completed';
+                const isCompleted = progressMap[exercises[i].id]?.status === 'completed';
+                if (!isLocked && !isCompleted) {
+                  nextExerciseIndex = i;
+                  break;
+                }
+              }
+
+              return exercises.map((exercise, index) => {
+                // 最初の演習はロックしない
+                // それ以降は前の演習が完了している場合のみアンロック
+                const isLocked = index > 0 && progressMap[exercises[index - 1].id]?.status !== 'completed';
+                const isNext = index === nextExerciseIndex;
+
+                return (
+                  <div key={exercise.id} className="mb-6">
+                    <ExerciseCard
+                      exercise={exercise}
+                      language={language}
+                      lessonId={lessonId}
+                      progress={progressMap[exercise.id]}
+                      isLocked={isLocked}
+                      isNext={isNext}
+                    />
+                  </div>
+                );
+              });
+            })()}
           </div>
         )}
       </div>

@@ -9,7 +9,7 @@ import HomeWrapper from "@/components/layout/HomeWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "閃光コード - プログラミング学習アプリ",
+  title: "令和プログラミング - プログラミング学習アプリ",
   description: "完全無料で楽しく学ぶプログラミング演習アプリ",
 };
 

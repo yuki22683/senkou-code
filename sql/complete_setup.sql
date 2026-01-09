@@ -1,7 +1,8 @@
--- 令和プログラミング - データベース完全セットアップ
+-- 令和プログラミング - 完全データベースセットアップ
+-- このSQLをSupabaseのSQL Editorで実行してください
 
 -- ==========================================
--- 1. テーブル作成 (存在しない場合のみ)
+-- 1. テーブル作成
 -- ==========================================
 
 -- Users テーブル
@@ -10,6 +11,10 @@ CREATE TABLE IF NOT EXISTS users (
   email TEXT NOT NULL UNIQUE,
   display_name TEXT,
   avatar_url TEXT,
+  total_xp INTEGER NOT NULL DEFAULT 0,
+  completed_exercises_count INTEGER NOT NULL DEFAULT 0,
+  completed_lessons_count INTEGER NOT NULL DEFAULT 0,
+  is_admin BOOLEAN DEFAULT FALSE,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
@@ -35,73 +40,64 @@ CREATE TABLE IF NOT EXISTS exercises (
   description TEXT,
   difficulty TEXT CHECK (difficulty IN ('easy', 'medium', 'hard')),
   order_index INTEGER NOT NULL,
-
-  -- 解説スライド (JSONB配列)
   tutorial_slides JSONB NOT NULL DEFAULT '[]',
-
-  -- コード関連
   correct_code TEXT NOT NULL,
   holey_code TEXT NOT NULL,
   correct_lines JSONB NOT NULL DEFAULT '[]',
-
-  -- 候補データ (JSONB)
   candidates JSONB NOT NULL DEFAULT '{}',
-
-  -- テストケース (Judge0用)
   test_cases JSONB DEFAULT '[]',
-
-  -- ヒント
   hints JSONB DEFAULT '[]',
-
+  language_id INTEGER NOT NULL DEFAULT 71,
+  file_extension TEXT NOT NULL DEFAULT 'py',
+  starter_code TEXT,
+  test_input TEXT,
+  expected_output TEXT,
+  initial_display_mode TEXT DEFAULT 'holey',
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   UNIQUE(lesson_id, order_index)
 );
 
--- User Progress テーブル (進捗管理)
+-- User Progress テーブル
 CREATE TABLE IF NOT EXISTS user_progress (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   exercise_id UUID NOT NULL REFERENCES exercises(id) ON DELETE CASCADE,
-
   status TEXT CHECK (status IN ('not_started', 'in_progress', 'completed', 'hint_used')) DEFAULT 'not_started',
   current_code TEXT,
   completed_at TIMESTAMP WITH TIME ZONE,
-
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   UNIQUE(user_id, exercise_id)
 );
 
--- Feedback テーブル (問題報告)
+-- Feedback テーブル
 CREATE TABLE IF NOT EXISTS feedback (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id UUID REFERENCES users(id) ON DELETE SET NULL,
   exercise_id UUID REFERENCES exercises(id) ON DELETE CASCADE,
-
-  type TEXT CHECK (type IN ('bug', 'improvement', 'other')),
+  type TEXT CHECK (type IN ('bug', 'improvement', 'other', 'inquiry')),
   message TEXT NOT NULL,
-
+  status TEXT DEFAULT 'pending' CHECK (status IN ('pending', 'resolved', 'ignored')),
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
+-- XP履歴テーブル
+CREATE TABLE IF NOT EXISTS xp_history (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  exercise_id UUID NOT NULL REFERENCES exercises(id) ON DELETE CASCADE,
+  xp_amount INTEGER NOT NULL,
+  reason TEXT NOT NULL DEFAULT 'exercise_completion',
+  earned_date DATE NOT NULL DEFAULT CURRENT_DATE,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  UNIQUE(user_id, exercise_id, earned_date)
+);
+
 -- ==========================================
--- 2. カラム追加 (Judge0対応用)
+-- 2. インデックス作成
 -- ==========================================
 
-ALTER TABLE exercises
-ADD COLUMN IF NOT EXISTS language_id INTEGER NOT NULL DEFAULT 71,
-ADD COLUMN IF NOT EXISTS file_extension TEXT NOT NULL DEFAULT 'py',
-ADD COLUMN IF NOT EXISTS starter_code TEXT,
-ADD COLUMN IF NOT EXISTS test_input TEXT,
-ADD COLUMN IF NOT EXISTS expected_output TEXT,
-ADD COLUMN IF NOT EXISTS initial_display_mode TEXT DEFAULT 'holey';
-
--- ==========================================
--- 3. インデックスとコメント
--- ==========================================
-
--- インデックス
 CREATE INDEX IF NOT EXISTS idx_lessons_language ON lessons(language);
 CREATE INDEX IF NOT EXISTS idx_lessons_order ON lessons(language, order_index);
 CREATE INDEX IF NOT EXISTS idx_exercises_lesson_id ON exercises(lesson_id);
@@ -111,16 +107,16 @@ CREATE INDEX IF NOT EXISTS idx_user_progress_user_id ON user_progress(user_id);
 CREATE INDEX IF NOT EXISTS idx_user_progress_exercise_id ON user_progress(exercise_id);
 CREATE INDEX IF NOT EXISTS idx_user_progress_status ON user_progress(user_id, status);
 CREATE INDEX IF NOT EXISTS idx_feedback_exercise_id ON feedback(exercise_id);
-
--- コメント
-COMMENT ON COLUMN exercises.language_id IS 'Judge0 language ID';
-COMMENT ON COLUMN exercises.file_extension IS 'File extension without dot (e.g., py, js, java)';
-COMMENT ON COLUMN exercises.starter_code IS 'Initial code shown in editor';
-COMMENT ON COLUMN exercises.test_input IS 'Input for code execution test';
-COMMENT ON COLUMN exercises.expected_output IS 'Expected output for test validation';
+CREATE INDEX IF NOT EXISTS idx_feedback_status ON feedback(status);
+CREATE INDEX IF NOT EXISTS idx_xp_history_user_id ON xp_history(user_id);
+CREATE INDEX IF NOT EXISTS idx_xp_history_created_at ON xp_history(created_at);
+CREATE INDEX IF NOT EXISTS idx_users_total_xp ON users(total_xp DESC);
+CREATE INDEX IF NOT EXISTS idx_users_is_admin ON users(is_admin);
+CREATE INDEX IF NOT EXISTS idx_users_completed_exercises ON users(completed_exercises_count DESC);
+CREATE INDEX IF NOT EXISTS idx_users_completed_lessons ON users(completed_lessons_count DESC);
 
 -- ==========================================
--- 4. RLS (Row Level Security) 設定
+-- 3. RLS (Row Level Security) 有効化
 -- ==========================================
 
 ALTER TABLE users ENABLE ROW LEVEL SECURITY;
@@ -128,6 +124,11 @@ ALTER TABLE user_progress ENABLE ROW LEVEL SECURITY;
 ALTER TABLE feedback ENABLE ROW LEVEL SECURITY;
 ALTER TABLE lessons ENABLE ROW LEVEL SECURITY;
 ALTER TABLE exercises ENABLE ROW LEVEL SECURITY;
+ALTER TABLE xp_history ENABLE ROW LEVEL SECURITY;
+
+-- ==========================================
+-- 4. RLS ポリシー設定
+-- ==========================================
 
 -- Users ポリシー
 DROP POLICY IF EXISTS "Users can view own data" ON users;
@@ -139,6 +140,21 @@ CREATE POLICY "Users can update own data" ON users FOR UPDATE USING (auth.uid() 
 DROP POLICY IF EXISTS "Users can insert own data" ON users;
 CREATE POLICY "Users can insert own data" ON users FOR INSERT WITH CHECK (auth.uid() = id);
 
+DROP POLICY IF EXISTS "Anyone can view user xp for ranking" ON users;
+CREATE POLICY "Anyone can view user xp for ranking" ON users FOR SELECT USING (true);
+
+DROP POLICY IF EXISTS "Admins can view all users" ON users;
+CREATE POLICY "Admins can view all users" ON users
+  FOR SELECT
+  USING (
+    auth.uid() = id OR
+    EXISTS (
+      SELECT 1 FROM users AS u
+      WHERE u.id = auth.uid()
+      AND u.is_admin = TRUE
+    )
+  );
+
 -- User Progress ポリシー
 DROP POLICY IF EXISTS "Users can view own progress" ON user_progress;
 CREATE POLICY "Users can view own progress" ON user_progress FOR SELECT USING (auth.uid() = user_id);
@@ -149,29 +165,65 @@ CREATE POLICY "Users can insert own progress" ON user_progress FOR INSERT WITH C
 DROP POLICY IF EXISTS "Users can update own progress" ON user_progress;
 CREATE POLICY "Users can update own progress" ON user_progress FOR UPDATE USING (auth.uid() = user_id);
 
+DROP POLICY IF EXISTS "Users can delete own progress" ON user_progress;
+CREATE POLICY "Users can delete own progress" ON user_progress FOR DELETE USING (auth.uid() = user_id);
+
 -- Feedback ポリシー
-DROP POLICY IF EXISTS "Users can submit feedback" ON feedback;
-CREATE POLICY "Users can submit feedback" ON feedback FOR INSERT WITH CHECK (auth.uid() = user_id);
+DROP POLICY IF EXISTS "Anyone can submit feedback" ON feedback;
+CREATE POLICY "Anyone can submit feedback" ON feedback FOR INSERT WITH CHECK (TRUE);
 
 DROP POLICY IF EXISTS "Users can view own feedback" ON feedback;
 CREATE POLICY "Users can view own feedback" ON feedback FOR SELECT USING (auth.uid() = user_id);
 
--- Lessons/Exercises (全認証ユーザー閲覧可)
-DROP POLICY IF EXISTS "Authenticated users can view lessons" ON lessons;
-CREATE POLICY "Authenticated users can view lessons" ON lessons FOR SELECT TO authenticated USING (true);
+DROP POLICY IF EXISTS "Admins can view all feedback" ON feedback;
+CREATE POLICY "Admins can view all feedback" ON feedback
+  FOR SELECT
+  USING (
+    EXISTS (
+      SELECT 1 FROM users
+      WHERE users.id = auth.uid()
+      AND users.is_admin = TRUE
+    )
+  );
 
-DROP POLICY IF EXISTS "Authenticated users can view exercises" ON exercises;
-CREATE POLICY "Authenticated users can view exercises" ON exercises FOR SELECT TO authenticated USING (true);
+DROP POLICY IF EXISTS "Admins can update feedback" ON feedback;
+CREATE POLICY "Admins can update feedback" ON feedback
+  FOR UPDATE
+  USING (
+    EXISTS (
+      SELECT 1 FROM users
+      WHERE users.id = auth.uid()
+      AND users.is_admin = TRUE
+    )
+  );
 
--- 匿名ユーザー(未ログイン)のアクセス許可（必要に応じて）
+DROP POLICY IF EXISTS "Admins can delete feedback" ON feedback;
+CREATE POLICY "Admins can delete feedback" ON feedback
+  FOR DELETE
+  USING (
+    EXISTS (
+      SELECT 1 FROM users
+      WHERE users.id = auth.uid()
+      AND users.is_admin = TRUE
+    )
+  );
+
+-- Lessons/Exercises (全ユーザー閲覧可)
 DROP POLICY IF EXISTS "Public lessons access" ON lessons;
 CREATE POLICY "Public lessons access" ON lessons FOR SELECT USING (true);
 
 DROP POLICY IF EXISTS "Public exercises access" ON exercises;
 CREATE POLICY "Public exercises access" ON exercises FOR SELECT USING (true);
 
+-- XP履歴ポリシー
+DROP POLICY IF EXISTS "Users can view own xp history" ON xp_history;
+CREATE POLICY "Users can view own xp history" ON xp_history FOR SELECT USING (auth.uid() = user_id);
+
+DROP POLICY IF EXISTS "Users can insert own xp history" ON xp_history;
+CREATE POLICY "Users can insert own xp history" ON xp_history FOR INSERT WITH CHECK (auth.uid() = user_id);
+
 -- ==========================================
--- 5. トリガー関数 (更新日時用)
+-- 5. トリガー関数
 -- ==========================================
 
 CREATE OR REPLACE FUNCTION update_updated_at_column()
@@ -193,3 +245,27 @@ CREATE TRIGGER update_exercises_updated_at BEFORE UPDATE ON exercises FOR EACH R
 
 DROP TRIGGER IF EXISTS update_user_progress_updated_at ON user_progress;
 CREATE TRIGGER update_user_progress_updated_at BEFORE UPDATE ON user_progress FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+-- ==========================================
+-- 6. ユーザー作成時の自動登録関数
+-- ==========================================
+
+CREATE OR REPLACE FUNCTION public.handle_new_user()
+RETURNS trigger AS $$
+BEGIN
+  INSERT INTO public.users (id, email, display_name)
+  VALUES (new.id, new.email, COALESCE(new.raw_user_meta_data->>'name', split_part(new.email, '@', 1)))
+  ON CONFLICT (id) DO NOTHING;
+  RETURN new;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
+CREATE TRIGGER on_auth_user_created
+  AFTER INSERT ON auth.users
+  FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
+
+-- ==========================================
+-- 完了メッセージ
+-- ==========================================
+SELECT 'データベースセットアップ完了!' AS message;
