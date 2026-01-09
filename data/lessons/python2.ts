@@ -25,7 +25,7 @@ export const pythonData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 名前を受け取ってあいさつする関数\ndef hello(name):\n    # f'Hello, {name}!'を出力\n    print(f'Hello, {name}!')\n\n# 関数を呼び出す\nhello('Python')",
-      "holeyCode": "# 名前を受け取ってあいさつする関数\ndef hello(___):\n    # f'Hello, {name}!'を出力\n    print(f'Hello, {___}!')\n\n# 関数を呼び出す\n___",
+      "holeyCode": "# 名前を受け取ってあいさつする関数\ndef hello(___):\n    # f'Hello, {name}!'を出力\n    print(f'Hello, {___}!')\n\n# 関数を'Python'を渡して呼び出す\n___",
       "correctLines": [
         "# 名前を受け取ってあいさつする関数",
         "def hello(name):",
