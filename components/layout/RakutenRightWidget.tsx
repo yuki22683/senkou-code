@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import RakutenWidgetList from './RakutenWidgetList'
 
 interface Props {
@@ -9,6 +10,10 @@ interface Props {
 
 export default function RakutenRightWidget({ uniqueKey }: Props) {
   const [columns, setColumns] = useState<number[]>([])
+  const pathname = usePathname()
+
+  // 演習ページでは非表示（チュートリアルページは表示）
+  const isExercisePage = pathname?.match(/\/exercises\/[^/]+$/)
 
   useEffect(() => {
     const calculateCols = () => {
@@ -37,7 +42,7 @@ export default function RakutenRightWidget({ uniqueKey }: Props) {
     return () => window.removeEventListener('resize', calculateCols)
   }, [])
 
-  if (columns.length === 0) return null
+  if (columns.length === 0 || isExercisePage) return null
 
   return (
     <>

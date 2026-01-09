@@ -546,8 +546,8 @@ export default function ExercisePage() {
           </div>
         </div>
 
-        <div className="px-4 pt-4 pb-4 lg:h-[calc(100%-60px)]">
-          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:h-full">
+        <div className="px-1 sm:px-4 pt-2 sm:pt-4 pb-2 sm:pb-4 lg:h-[calc(100%-60px)]">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-2 sm:gap-4 lg:h-full">
             {/* 問題文（スマホのみ） */}
             <div className="order-1 lg:hidden">
               <div className="bg-white rounded-lg border p-4 overflow-y-auto flex-shrink-0" style={{ maxHeight: '150px' }}>
@@ -559,8 +559,8 @@ export default function ExercisePage() {
             </div>
 
             {/* エディタ */}
-            <div className="order-2 flex flex-col min-h-[700px] lg:min-h-0 lg:h-full">
-              <div className="bg-white rounded-t-lg border border-b-0 p-3 flex items-center justify-between flex-shrink-0" style={{ height: '50px' }}>
+            <div className="order-2 flex flex-col min-h-[500px] sm:min-h-[700px] lg:min-h-0 lg:h-full">
+              <div className="bg-white rounded-t-lg border border-b-0 p-2 sm:p-3 flex items-center justify-between flex-shrink-0" style={{ height: '50px' }}>
                 <div className="flex items-center gap-2">
                   <FileCode className="w-4 h-4 text-gray-500" />
                   <span className="font-medium text-sm">

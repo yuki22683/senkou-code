@@ -576,7 +576,7 @@ export function MobileCodeEditor({
     <div className="flex flex-col h-full overflow-hidden" style={{ backgroundColor: SYNTAX_COLORS.background, color: SYNTAX_COLORS.foreground }}>
       <div
         ref={containerRef}
-        className="overflow-y-scroll overflow-x-auto p-2 sm:p-4 font-mono text-sm leading-6 flex-1 min-h-[400px] lg:min-h-0"
+        className="overflow-y-scroll overflow-x-auto p-0 sm:p-4 font-mono text-sm leading-6 flex-1 min-h-[400px] lg:min-h-0"
         style={{ scrollbarWidth: 'thin', scrollbarColor: `${SYNTAX_COLORS.buttonBorder} ${SYNTAX_COLORS.gutterBackground}` }}
         onClick={() => {}}
       >
@@ -656,7 +656,7 @@ export function MobileCodeEditor({
               }}
             >
               <div
-                className="w-8 mr-4 flex items-center justify-end shrink-0 select-none"
+                className="w-6 sm:w-8 mr-2 sm:mr-4 flex items-center justify-end shrink-0 select-none"
                 style={{ backgroundColor: SYNTAX_COLORS.gutterBackground, color: SYNTAX_COLORS.lineNumberForeground }}
               >
                 {showCheckmark ? (
