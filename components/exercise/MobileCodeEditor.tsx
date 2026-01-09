@@ -168,7 +168,7 @@ const normalizeCode = (str: string, language: string) => {
   const content = contentWithoutComments.slice(leading.length).trim();
 
   // 3. 内部の正規化
-  let normalized = content
+  const normalized = content
     .replace(/\s+/g, " ") // 連続する空白を1つに
     .replace(/\s*([()\[\]{}:.,=+*/%&|^<>!])\s*/g, "$1") // 記号周りの空白を削除
     .replace(/['"]/g, '"'); // 引用符をダブルクォートに統一して判定を柔軟にする
@@ -183,6 +183,7 @@ export function MobileCodeEditor({
   onChange,
   onRun,
   onCursorChange,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   readOnly = false,
 }: MobileCodeEditorProps) {
   const config = LANGUAGE_CONFIG[language] || LANGUAGE_CONFIG.javascript;
@@ -269,17 +270,32 @@ export function MobileCodeEditor({
     return text.split(regex).filter(Boolean);
   };
 
-  // Determine color for a token based on context (previous token)
-  const getTokenStyle = (token: string, prevToken?: string) => {
+  // String prefixes for various languages
+  // Python: f-string, raw string, byte string (f, r, b, u, fr, rf, br, rb)
+  // C#: interpolated ($), verbatim (@), raw ($@, @$)
+  // Rust: raw (r, r#), byte (b, br, b#)
+  const STRING_PREFIXES = new Set([
+    'f', 'r', 'b', 'u', 'fr', 'rf', 'br', 'rb',  // Python (lowercase)
+    'F', 'R', 'B', 'U', 'FR', 'RF', 'BR', 'RB',  // Python (uppercase)
+    '$', '@', '$@', '@$',                         // C#
+  ]);
+
+  // Determine color for a token based on context (previous token and next token)
+  const getTokenStyle = (token: string, prevToken?: string, nextToken?: string) => {
     if (!token) return {};
+
+    // String prefixes (f, r, b, fr, rf, br, rb) - color same as string when followed by quote
+    if (STRING_PREFIXES.has(token) && nextToken && (nextToken.startsWith("\"") || nextToken.startsWith("'") || nextToken.startsWith("`"))) {
+      return { color: COLORS.string };
+    }
 
     // String
     if (token.startsWith("\"") || token.startsWith("'") || token.startsWith("`")) return { color: COLORS.string };
-    
+
     // Comment
     const isComment = token.startsWith(config.commentPrefix) || token.startsWith("//") || token.startsWith("/*") || token.startsWith("--") || token.startsWith("{-") || token.startsWith(";");
     if (isComment) return { color: COLORS.comment };
-    
+
     // Decorator
     if (token.startsWith("@")) return { color: COLORS.decorator };
 
@@ -533,7 +549,15 @@ export function MobileCodeEditor({
 
       tokenList.forEach((token, i) => {
         const nextLen = currentLen + token.length;
-        const style = getTokenStyle(token, lastNonWhitespace);
+        // Find next non-whitespace token for string prefix detection
+        let nextToken: string | undefined;
+        for (let j = i + 1; j < tokenList.length; j++) {
+          if (tokenList[j].trim()) {
+            nextToken = tokenList[j];
+            break;
+          }
+        }
+        const style = getTokenStyle(token, lastNonWhitespace, nextToken);
         if (token.trim()) lastNonWhitespace = token;
 
         if (insertCursorAt !== undefined && !cursorRendered && insertCursorAt >= currentLen && insertCursorAt < nextLen) {
