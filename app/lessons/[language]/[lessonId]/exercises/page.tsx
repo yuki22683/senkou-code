@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { ExerciseCard } from "@/components/exercises/ExerciseCard";
+import { ResetProgressButton } from "@/components/lessons/ResetProgressButton";
 import { getLanguageById, LANGUAGE_COLORS } from "@/data/languages";
 import { redirect } from "next/navigation";
 import Link from "next/link";
@@ -95,12 +96,17 @@ export default async function ExercisesPage({ params }: PageProps) {
                 <BookOpen className="w-8 h-8 text-primary" />
                 <h1 className="text-3xl font-bold">{lesson.title}</h1>
               </div>
+              {isLoggedIn && (
+                <div className="mb-4">
+                  <ResetProgressButton lessonId={lessonId} lessonTitle={lesson.title} />
+                </div>
+              )}
               <div>
                 {lesson.description && (
                   <p className="text-muted-foreground mb-4">{lesson.description}</p>
                 )}
 
-                <div className="flex items-center space-x-6">
+                <div className="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:items-center sm:space-x-6">
                   <div className="flex items-center space-x-2">
                     <span className="text-sm text-muted-foreground">言語:</span>
                     <span className="font-medium">{languageInfo.name}</span>

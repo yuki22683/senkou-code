@@ -4,33 +4,35 @@ import { useEffect, useState } from 'react'
 import { rakutenWidgets } from '@/lib/rakutenWidgets'
 
 interface Props {
-  containerHeight?: number
   uniqueKey?: string
 }
 
-export default function RakutenWidgetList({ containerHeight = 0, uniqueKey }: Props) {
+export default function RakutenWidgetList({ uniqueKey }: Props) {
   const [widgets, setWidgets] = useState<typeof rakutenWidgets>([])
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
     setIsMounted(true)
-    if (containerHeight === 0) {
-        setWidgets([])
-        return
-    }
 
-    const widgetHeight = 600
-    const gap = 16
-    let count = Math.max(0, Math.floor((containerHeight + gap) / (widgetHeight + gap)))
+    const calculateWidgets = () => {
+      // Use viewport height minus header offset
+      const availableHeight = window.innerHeight - 80
 
-    // Select 'count' random widgets
-    const selected = []
-    for (let i = 0; i < count; i++) {
+      const widgetHeight = 600
+      const gap = 16
+      const count = Math.max(1, Math.floor((availableHeight + gap) / (widgetHeight + gap)))
+
+      // Select 'count' random widgets
+      const selected = []
+      for (let i = 0; i < count; i++) {
         const randomIndex = Math.floor(Math.random() * rakutenWidgets.length)
         selected.push(rakutenWidgets[randomIndex])
+      }
+      setWidgets(selected)
     }
-    setWidgets(selected)
-  }, [containerHeight, uniqueKey])
+
+    calculateWidgets()
+  }, [uniqueKey])
 
   if (!isMounted || widgets.length === 0) return null
 

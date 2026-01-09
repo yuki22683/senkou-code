@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { LoginButton } from "@/components/auth/LoginButton";
+import { UserXpDisplay } from "@/components/auth/UserXpDisplay";
 import Image from "next/image";
+import { Trophy } from "lucide-react";
 
 export function Header() {
   return (
@@ -23,7 +25,15 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="flex items-center space-x-4">
+          <nav className="flex items-center space-x-2 sm:space-x-4">
+            <Link
+              href="/ranking"
+              className="flex items-center gap-1 px-2 sm:px-3 py-1.5 text-sm text-gray-600 hover:text-yellow-600 hover:bg-yellow-50 rounded-lg transition-colors"
+            >
+              <Trophy className="w-4 h-4" />
+              <span className="hidden sm:inline">ランキング</span>
+            </Link>
+            <UserXpDisplay />
             <LoginButton />
           </nav>
         </div>

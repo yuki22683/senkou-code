@@ -15,10 +15,8 @@ import {
 } from "@/components/ui/dialog";
 import {
   Play,
-  RotateCcw,
   Lightbulb,
   BookOpen,
-  MoreVertical,
   AlertCircle,
   CheckCircle2,
   MoreHorizontal,
@@ -37,6 +35,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Confetti } from "@/components/celebrations/Confetti";
+import { CelebrationOverlay } from "@/components/celebrations/CelebrationOverlay";
+import { getRandomMessage, CelebrationType, CelebrationMessage } from "@/lib/celebrations/messages";
+import { parseExecutionError, ParsedError } from "@/lib/parse-execution-errors";
+import { getXpForDifficulty } from "@/lib/xp";
+import type { Difficulty } from "@/types/database";
 
 export default function ExercisePage() {
   const params = useParams();
@@ -56,6 +60,8 @@ export default function ExercisePage() {
   const [correctOutput, setCorrectOutput] = useState("");
   const [correctError, setCorrectError] = useState("");
   const [isCorrectRunning, setIsCorrectRunning] = useState(false);
+  const [parsedError, setParsedError] = useState<ParsedError | null>(null);
+  const [correctParsedError, setCorrectParsedError] = useState<ParsedError | null>(null);
   const [activeTab, setActiveTab] = useState("console");
   const [currentLine, setCurrentLine] = useState(0);
   const [showHintDialog, setShowHintDialog] = useState(false);
@@ -68,23 +74,31 @@ export default function ExercisePage() {
   const [showNextButton, setShowNextButton] = useState(false);
   const mainContentRef = useRef<HTMLDivElement>(null);
 
+  // お祝い演出用の状態
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [showCelebration, setShowCelebration] = useState(false);
+  const [celebrationType, setCelebrationType] = useState<CelebrationType>("exercise");
+  const [celebrationMessage, setCelebrationMessage] = useState<CelebrationMessage | null>(null);
+  const [earnedXp, setEarnedXp] = useState<number>(0);
+
   useEffect(() => {
     loadExercise();
   }, [exerciseId]);
 
   useEffect(() => {
     // スマホ表示の時のみ、output/errorが更新されたら一番下にスクロール
-    if ((output || error) && mainContentRef.current) {
+    // ただし、演習完了演出中はスクロールしない
+    if ((output || error) && mainContentRef.current && !showCelebration && !showCompleteDialog) {
       const isMobile = window.innerWidth < 1024; // lg breakpoint
       if (isMobile) {
         setTimeout(() => {
-          if (mainContentRef.current) {
+          if (mainContentRef.current && !showCelebration && !showCompleteDialog) {
             mainContentRef.current.scrollTop = mainContentRef.current.scrollHeight;
           }
         }, 100);
       }
     }
-  }, [output, error]);
+  }, [output, error, showCelebration, showCompleteDialog]);
 
   async function loadExercise() {
     setIsLoading(true);
@@ -121,10 +135,12 @@ export default function ExercisePage() {
       setIsCorrectRunning(true);
       setCorrectOutput("");
       setCorrectError("");
+      setCorrectParsedError(null);
     } else {
       setIsRunning(true);
       setOutput("");
       setError("");
+      setParsedError(null);
     }
 
     try {
@@ -138,47 +154,21 @@ export default function ExercisePage() {
 
       const result = response.data;
 
-      if (result.stderr) {
-        // エラー内容をクリーンアップ
-        const stderr = result.stderr;
-        const errorLines = stderr.split("\n");
-        const lineMatches = Array.from(stderr.matchAll(/line (\d+)/g)) as RegExpMatchArray[];
-        let lineNo = lineMatches.length > 0 ? lineMatches[lineMatches.length - 1][1] : null;
-
-        const errorContent = errorLines
-          .filter((l: string) => {
-            const t = l.trim();
-            return (
-              t !== "" &&
-              t !== "^" &&
-              !t.startsWith('File "') &&
-              !/^line \d+$/.test(t) &&
-              !t.includes("Traceback (most recent call last):")
-            );
-          })
-          .pop()
-          ?.trim();
-
-        let displayError = errorContent || stderr;
-        const totalLines = sourceCode.trimEnd().split("\n").length;
-        if (lineNo && parseInt(lineNo) > totalLines) {
-          lineNo = totalLines.toString();
-        }
-
-        if (lineNo) {
-          displayError = `line ${lineNo}: ${displayError}`;
-        }
+      if (result.stderr || result.compile_output) {
+        // エラーをパース
+        const parsed = parseExecutionError(
+          result.stderr || "",
+          result.compile_output || null,
+          language,
+          sourceCode
+        );
 
         if (isExampleMode) {
-          setCorrectError(displayError);
+          setCorrectError(parsed.formattedMessage || result.stderr || result.compile_output);
+          setCorrectParsedError(parsed);
         } else {
-          setError(displayError);
-        }
-      } else if (result.compile_output) {
-        if (isExampleMode) {
-          setCorrectError(result.compile_output);
-        } else {
-          setError(result.compile_output);
+          setError(parsed.formattedMessage || result.stderr || result.compile_output);
+          setParsedError(parsed);
         }
       } else {
         const stdout = result.stdout || "実行完了（出力なし）";
@@ -287,6 +277,16 @@ export default function ExercisePage() {
     } = await supabase.auth.getUser();
 
     if (user) {
+      // この演習が初めて完了かチェック
+      const { data: existingProgress } = await supabase
+        .from("user_progress")
+        .select("status")
+        .eq("user_id", user.id)
+        .eq("exercise_id", exerciseId)
+        .single();
+
+      const isFirstCompletion = !existingProgress || existingProgress.status !== "completed";
+
       await supabase.from("user_progress").upsert({
         user_id: user.id,
         exercise_id: exerciseId,
@@ -294,6 +294,162 @@ export default function ExercisePage() {
         completed_at: new Date().toISOString(),
       }, { onConflict: 'user_id,exercise_id' });
 
+      // XPを付与（1日1回まで同じ演習でXPを獲得可能）
+      const difficulty = (exercise?.difficulty || "easy") as Difficulty;
+      const xpAmount = getXpForDifficulty(difficulty);
+
+      try {
+        // XP履歴に追加（同じ日・同じ演習の場合はユニーク制約でエラー→無視）
+        const { error: xpError } = await supabase.from("xp_history").insert({
+          user_id: user.id,
+          exercise_id: exerciseId,
+          xp_amount: xpAmount,
+          reason: "exercise_completion",
+        });
+
+        // XP履歴の追加に成功した場合のみ、total_xpを更新
+        if (!xpError) {
+          // ユーザーの総XPを更新
+          const { data: userData } = await supabase
+            .from("users")
+            .select("total_xp, completed_exercises_count, completed_lessons_count")
+            .eq("id", user.id)
+            .single();
+
+          const currentXp = userData?.total_xp || 0;
+          const currentExercisesCount = userData?.completed_exercises_count || 0;
+
+          // XPと演習クリア数を更新（初回完了の場合のみカウントを増加）
+          const updateData: { total_xp: number; completed_exercises_count?: number } = {
+            total_xp: currentXp + xpAmount,
+          };
+          if (isFirstCompletion) {
+            updateData.completed_exercises_count = currentExercisesCount + 1;
+          }
+
+          await supabase
+            .from("users")
+            .update(updateData)
+            .eq("id", user.id);
+
+          setEarnedXp(xpAmount);
+        } else {
+          // 既に今日XPを獲得済みの場合でも、初回完了ならカウントを増加
+          if (isFirstCompletion) {
+            const { data: userData } = await supabase
+              .from("users")
+              .select("completed_exercises_count")
+              .eq("id", user.id)
+              .single();
+
+            await supabase
+              .from("users")
+              .update({ completed_exercises_count: (userData?.completed_exercises_count || 0) + 1 })
+              .eq("id", user.id);
+          }
+          setEarnedXp(0);
+        }
+      } catch (err) {
+        console.error("Error awarding XP:", err);
+        setEarnedXp(0);
+      }
+
+      // レッスン完了・言語完了をチェック
+      let type: CelebrationType = "exercise";
+      let isFirstLessonCompletion = false;
+
+      try {
+        // このレッスンの全演習を取得
+        const { data: lessonExercises } = await supabase
+          .from("exercises")
+          .select("id")
+          .eq("lesson_id", exercise?.lesson_id);
+
+        if (lessonExercises && lessonExercises.length > 0) {
+          // ユーザーの進捗を取得（更新前の状態）
+          const exerciseIds = lessonExercises.map((e) => e.id);
+          const { data: progress } = await supabase
+            .from("user_progress")
+            .select("exercise_id, status")
+            .eq("user_id", user.id)
+            .in("exercise_id", exerciseIds)
+            .eq("status", "completed");
+
+          // 今完了した演習を含めてカウント
+          const completedIds = new Set(progress?.map((p) => p.exercise_id) || []);
+          const previousCompletedCount = completedIds.size;
+          completedIds.add(exerciseId);
+
+          // レッスン完了かチェック
+          if (completedIds.size >= lessonExercises.length) {
+            // 初めてレッスン完了かチェック（以前はレッスン未完了だった）
+            isFirstLessonCompletion = previousCompletedCount < lessonExercises.length;
+            type = "lesson";
+
+            // 初回レッスン完了の場合、completed_lessons_countを増加
+            if (isFirstLessonCompletion) {
+              const { data: userData } = await supabase
+                .from("users")
+                .select("completed_lessons_count")
+                .eq("id", user.id)
+                .single();
+
+              await supabase
+                .from("users")
+                .update({ completed_lessons_count: (userData?.completed_lessons_count || 0) + 1 })
+                .eq("id", user.id);
+            }
+
+            // 言語の全レッスン完了もチェック
+            const { data: allLessons } = await supabase
+              .from("lessons")
+              .select("id")
+              .eq("language", language);
+
+            if (allLessons && allLessons.length > 0) {
+              // 各レッスンの完了状況をチェック
+              let allLessonsComplete = true;
+              for (const lesson of allLessons) {
+                if (lesson.id === exercise?.lesson_id) continue; // 今完了したレッスンはスキップ
+
+                const { data: lessonExs } = await supabase
+                  .from("exercises")
+                  .select("id")
+                  .eq("lesson_id", lesson.id);
+
+                if (lessonExs && lessonExs.length > 0) {
+                  const lessonExIds = lessonExs.map((e) => e.id);
+                  const { data: lessonProgress } = await supabase
+                    .from("user_progress")
+                    .select("exercise_id")
+                    .eq("user_id", user.id)
+                    .in("exercise_id", lessonExIds)
+                    .eq("status", "completed");
+
+                  if (!lessonProgress || lessonProgress.length < lessonExs.length) {
+                    allLessonsComplete = false;
+                    break;
+                  }
+                }
+              }
+
+              if (allLessonsComplete) {
+                type = "language";
+              }
+            }
+          }
+        }
+      } catch (err) {
+        console.error("Error checking completion status:", err);
+      }
+
+      // お祝い演出を表示
+      setCelebrationType(type);
+      setCelebrationMessage(getRandomMessage(type));
+      setShowConfetti(true);
+      setShowCelebration(true);
+    } else {
+      // 未ログインの場合は完了ダイアログを直接表示
       setShowCompleteDialog(true);
     }
   }
@@ -310,6 +466,8 @@ export default function ExercisePage() {
     setError("");
     setCorrectOutput("");
     setCorrectError("");
+    setParsedError(null);
+    setCorrectParsedError(null);
     setEditorKey((prev) => prev + 1);
   }
 
@@ -476,6 +634,9 @@ export default function ExercisePage() {
                     isCorrectLoading={isCorrectRunning}
                     activeTab={activeTab}
                     onTabChange={setActiveTab}
+                    onRetry={() => handleRunCode()}
+                    parsedError={parsedError}
+                    correctParsedError={correctParsedError}
                   />
                 </div>
 
@@ -623,8 +784,8 @@ export default function ExercisePage() {
             <Button variant="outline" onClick={() => setShowFeedbackDialog(false)}>
               キャンセル
             </Button>
-            <Button 
-              onClick={handleSubmitFeedback} 
+            <Button
+              onClick={handleSubmitFeedback}
               disabled={isSubmittingFeedback || !feedbackMessage.trim()}
               className="bg-blue-600 hover:bg-blue-700"
             >
@@ -633,6 +794,27 @@ export default function ExercisePage() {
           </DialogFooter>
         </DialogContent>
       </Dialog>
+
+      {/* お祝い演出 */}
+      <Confetti
+        isActive={showConfetti}
+        particleCount={celebrationType === "language" ? 100 : celebrationType === "lesson" ? 70 : 50}
+        duration={celebrationType === "language" ? 5000 : celebrationType === "lesson" ? 4000 : 3000}
+        onComplete={() => setShowConfetti(false)}
+      />
+      {celebrationMessage && (
+        <CelebrationOverlay
+          isOpen={showCelebration}
+          type={celebrationType}
+          message={celebrationMessage}
+          onClose={() => {
+            setShowCelebration(false);
+            setShowCompleteDialog(true);
+          }}
+          autoDismissDelay={celebrationType === "language" ? 5000 : celebrationType === "lesson" ? 4000 : 3000}
+          earnedXp={earnedXp}
+        />
+      )}
     </div>
   );
 }

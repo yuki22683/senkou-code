@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { LessonCard } from "@/components/lessons/LessonCard";
+import { ResetProgressButton } from "@/components/lessons/ResetProgressButton";
 import { getLanguageById, LANGUAGE_COLORS } from "@/data/languages";
 import { redirect } from "next/navigation";
 import Link from "next/link";
@@ -92,8 +93,8 @@ export default async function LessonsPage({ params }: PageProps) {
           <div className="flex items-center space-x-4 mb-4">
             <div className={`w-16 h-16 shadow-md rounded-full flex items-center justify-center p-3 border ${colorClass.split(' ').filter(c => !c.startsWith('hover')).join(' ')}`}>
               <div className="relative w-full h-full">
-                <Image 
-                  src={languageInfo.icon} 
+                <Image
+                  src={languageInfo.icon}
                   alt={languageInfo.name}
                   fill
                   className="object-contain"
@@ -103,6 +104,11 @@ export default async function LessonsPage({ params }: PageProps) {
             <div>
               <h1 className="text-3xl font-bold">{languageInfo.name} レッスン</h1>
               <p className="text-muted-foreground">{languageInfo.description}</p>
+              {isLoggedIn && (
+                <div className="mt-2">
+                  <ResetProgressButton language={language} languageName={languageInfo.name} />
+                </div>
+              )}
             </div>
           </div>
         </div>

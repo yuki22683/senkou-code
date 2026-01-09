@@ -9,8 +9,25 @@ export interface User {
   email: string;
   display_name: string | null;
   avatar_url: string | null;
+  total_xp: number;
+  completed_exercises_count: number;
+  completed_lessons_count: number;
   created_at: string;
   updated_at: string;
+}
+
+export interface XpHistory {
+  id: string;
+  user_id: string;
+  exercise_id: string;
+  xp_amount: number;
+  reason: string;
+  earned_date: string;
+  created_at: string;
+}
+
+export interface UserWithRank extends User {
+  rank?: number;
 }
 
 export interface Lesson {

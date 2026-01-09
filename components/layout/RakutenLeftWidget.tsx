@@ -4,26 +4,32 @@ import { useEffect, useState } from 'react'
 import RakutenWidgetList from './RakutenWidgetList'
 
 interface Props {
-  containerHeight?: number
   uniqueKey?: string
 }
 
-export default function RakutenLeftWidget({ containerHeight, uniqueKey }: Props) {
-  const [extraCols, setExtraCols] = useState(0)
-  const [showStandard, setShowStandard] = useState(false)
+export default function RakutenLeftWidget({ uniqueKey }: Props) {
+  const [columns, setColumns] = useState<number[]>([])
 
   useEffect(() => {
     const calculateCols = () => {
       const containerWidth = 1024 // max-w-5xl
       const windowWidth = window.innerWidth
       const spacePerSide = (windowWidth - containerWidth) / 2
-      
-      // Check if there is enough space for the standard column (needs ~220px)
-      setShowStandard(spacePerSide >= 220)
 
-      // Calculate extra columns
-      const totalCols = Math.floor(spacePerSide / 220)
-      setExtraCols(Math.max(0, totalCols - 1))
+      // Calculate how many 220px columns fit in the left space
+      const numCols = Math.floor(spacePerSide / 220)
+
+      if (numCols > 0) {
+        // Calculate left edge position of centered container
+        const containerLeft = (windowWidth - containerWidth) / 2
+        // Position columns from the left edge of the container going left
+        const cols = Array.from({ length: numCols }, (_, i) => {
+          return containerLeft - 220 * (i + 1)
+        })
+        setColumns(cols)
+      } else {
+        setColumns([])
+      }
     }
 
     calculateCols()
@@ -31,23 +37,17 @@ export default function RakutenLeftWidget({ containerHeight, uniqueKey }: Props)
     return () => window.removeEventListener('resize', calculateCols)
   }, [])
 
+  if (columns.length === 0) return null
+
   return (
     <>
-      {/* Standard Column */}
-      {showStandard && (
-        <div className="hidden lg:block absolute top-0 left-[-220px] z-10 w-[200px]">
-          <RakutenWidgetList containerHeight={containerHeight} uniqueKey={uniqueKey} />
-        </div>
-      )}
-
-      {/* Extra Columns */}
-      {Array.from({ length: extraCols }).map((_, i) => (
-        <div 
-            key={`left-extra-${i}`}
-            className="hidden lg:block absolute top-0 z-10 w-[200px]"
-            style={{ left: `${-220 * (i + 2)}px` }}
+      {columns.map((leftPos, i) => (
+        <div
+          key={`left-col-${i}`}
+          className="hidden lg:block fixed top-[80px] z-10 w-[200px]"
+          style={{ left: `${leftPos}px` }}
         >
-          <RakutenWidgetList containerHeight={containerHeight} uniqueKey={`${uniqueKey}-left-${i}`} />
+          <RakutenWidgetList uniqueKey={`${uniqueKey}-left-${i}`} />
         </div>
       ))}
     </>
