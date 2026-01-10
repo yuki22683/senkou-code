@@ -260,7 +260,7 @@ export const goData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 100\n    // > で比較する\n    if score > 80 {\n        // Great と表示する\n        fmt.Println(\"Great\")\n    }\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 100\n    // > で比較する\n    if score ___ 80 {\n        // Great と表示する\n        fmt.Println(\"___\" )\n    }\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // scoreに100を入れる\n    score := ___\n    // > で比較する\n    if score ___ 80 {\n        // Great と表示する\n        fmt.Println(\"___\" )\n    }\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -315,7 +315,7 @@ export const goData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    if x > 10 {\n        fmt.Println(\"Big\")\n    // else で「そうでなければ」\n    } else {\n        fmt.Println(\"Small\")\n    }\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    if x > 10 {\n        fmt.Println(\"Big\")\n    // else で「そうでなければ」\n    } ___ {\n        fmt.Println(\"Small\")\n    }\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // xに5を入れる\n    x := ___\n    // 10より大きいかを比較する演算子\n    if x ___ 10 {\n        // 10より大きいときのメッセージ（'Big'）\n        fmt.Println(\"___\")\n    // else で「そうでなければ」\n    } ___ {\n        // それ以外のメッセージ（'Small'）\n        fmt.Println(\"___\")\n    }\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",

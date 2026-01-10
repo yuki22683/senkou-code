@@ -162,7 +162,7 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "score=100\n# -gtで「より大きい」を指定\nif [ $score -gt 80 ]; then\n    echo \"Great\"\n# fiでif文を閉じる\nfi",
-      "holeyCode": "score=100\n# -gtで「より大きい」を指定\nif [ $score ___ 80 ]; then\n    echo \"Great\"\n# fiでif文を閉じる\n___",
+      "holeyCode": "# scoreに100を入れる\nscore=___\n# -gtで「より大きい」を指定\nif [ $score ___ 80 ]; then\n    # メッセージ（'Great'）\n    echo \"___\"\n# fiでif文を閉じる\n___",
       "correctLines": [
         "score=100",
         "if [ $score -gt 80 ]; then",
@@ -209,7 +209,7 @@ export const bashData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\n# elseでそれ以外の場合\nelse\n    echo \"Minor\"\nfi",
-      "holeyCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\n# elseでそれ以外の場合\n___\n    echo \"Minor\"\nfi",
+      "holeyCode": "# ageに18を入れる\nage=___\n# 20以上かを比較する演算子\nif [ $age ___ 20 ]; then\n    # 20歳以上のときのメッセージ（'Adult'）\n    echo \"___\"\n# elseでそれ以外の場合\n___\n    # それ以外のメッセージ（'Minor'）\n    echo \"___\"\nfi",
       "correctLines": [
         "age=18",
         "if [ $age -ge 20 ]; then",
