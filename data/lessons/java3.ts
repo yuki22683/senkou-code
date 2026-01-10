@@ -187,7 +187,7 @@ export const javaData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);\n        nums.stream()\n            .filter(n -> n > 2)\n            .forEach(System.out::println);\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);\n        nums.stream()\n            // 条件に合う要素だけを残すメソッド\n            .___(n -> n > 2)\n            .forEach(System.out::println);\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(1, 2, 3, 4, 5);\n        nums.stream()\n            // 条件に合う要素だけを残すメソッド\n            .___(n -> n > 2)\n            .forEach(System.out::println);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -206,14 +206,16 @@ export const javaData3 = {
         null,
         null,
         null,
+        "`asList` でリストを作成します。",
         null,
-        "filter で条件に合う要素を絞り込みます。",
+        null,
+        "`filter` で条件に合う要素を絞り込みます。",
         null,
         null,
         null
       ],
       "candidates": {
-        "methods": ["filter", "map", "reduce"]
+        "methods": ["filter", "map", "reduce", "asList"]
       },
       "testCases": [
         {
@@ -241,7 +243,7 @@ export const javaData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3);\n        List<Integer> doubled = nums.stream()\n            .map(n -> n * 2)\n            .collect(Collectors.toList());\n        System.out.println(doubled);\n    }\n}",
-      "holeyCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3);\n        List<Integer> doubled = nums.stream()\n            .map(n -> n * 2)\n            // Streamをコレクションに変換するメソッドとユーティリティクラス\n            .___(___.toList());\n        System.out.println(doubled);\n    }\n}",
+      "holeyCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(1, 2, 3);\n        List<Integer> doubled = nums.stream()\n            .map(n -> n * 2)\n            // Streamをコレクションに変換するメソッドとユーティリティクラス\n            .___(___.toList());\n        // println で出力する\n        System.out.___(doubled);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "import java.util.stream.*;",

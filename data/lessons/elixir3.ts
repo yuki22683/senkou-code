@@ -280,7 +280,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# asyncで非同期タスクを開始\ntask = Task.async(fn -> 1 + 2 end)\nresult = Task.await(task)",
-      "holeyCode": "# asyncで非同期タスクを開始\ntask = Task.___(fn -> 1 + 2 end)\nresult = Task.await(task)",
+      "holeyCode": "# asyncで非同期タスクを開始\ntask = Task.___(fn -> 1 + 2 end)\n# awaitでタスクの結果を待機\nresult = Task.___(task)",
       "correctLines": [
         { "lineNumber": 1, "content": "task = Task.async(fn -> 1 + 2 end)" }
       ],
@@ -288,7 +288,7 @@ export const elixir3Data = {
         { "lineNumber": 1, "hint": "非同期タスクを開始する関数です" }
       ],
       "candidates": {
-        "1": ["async", "start", "spawn", "run"]
+        "functions": ["async", "await"]
       },
       "testCases": [
         { "input": "result", "expected_output": "3" }
