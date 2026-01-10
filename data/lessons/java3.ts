@@ -41,13 +41,15 @@ export const javaData3 = {
         null,
         null,
         null,
+        null,
         "-> でラムダ式を定義します。",
         null,
+        "`apply` でラムダ式を実行します。",
         null,
         null
       ],
       "candidates": {
-        "operators": ["->", "=>", "::"]
+        "operators": ["->", "=>", "::", "apply"]
       },
       "testCases": [
         {
@@ -75,7 +77,7 @@ export const javaData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3);\n        nums.stream().forEach(System.out::println);\n    }\n}",
-      "holeyCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3);\n        // コレクションからStreamを作成するメソッド\n        nums.___().forEach(System.out::println);\n    }\n}",
+      "holeyCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(1, 2, 3);\n        // コレクションからStreamを作成するメソッド\n        nums.___().forEach(System.out::println);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "import java.util.stream.*;",

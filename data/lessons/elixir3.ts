@@ -204,7 +204,7 @@ export const elixir3Data = {
         { "lineNumber": 1, "hint": "プロトコルを定義するキーワードです" }
       ],
       "candidates": {
-        "1": ["defprotocol", "protocol", "definterface", "behaviour"]
+        "keywords": ["defprotocol", "def", "end"]
       },
       "testCases": [
         { "input": "true", "expected_output": "true" }
@@ -224,7 +224,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# defimplでプロトコルを実装\ndefimpl Describable, for: Map do\n  def describe(map) do\n    \"Map with #{map_size(map)} keys\"\n  end\nend",
-      "holeyCode": "# defimplでプロトコルを実装\n___ Describable, for: Map do\n  def describe(map) do\n    \"Map with #{map_size(map)} keys\"\n  end\nend",
+      "holeyCode": "# defimplでプロトコルを実装\n___ Describable, for: Map do\n  # defで関数を定義\n  ___ describe(map) do\n    \"Map with #{map_size(map)} keys\"\n  # endで関数を閉じる\n  ___\n# endでブロックを閉じる\n___",
       "correctLines": [
         { "lineNumber": 1, "content": "defimpl Describable, for: Map do" }
       ],
@@ -232,7 +232,7 @@ export const elixir3Data = {
         { "lineNumber": 1, "hint": "プロトコルを実装するキーワードです" }
       ],
       "candidates": {
-        "1": ["defimpl", "impl", "implement", "defprotocol"]
+        "keywords": ["defimpl", "def", "end"]
       },
       "testCases": [
         { "input": "true", "expected_output": "true" }
