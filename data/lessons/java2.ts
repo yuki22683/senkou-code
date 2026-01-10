@@ -632,22 +632,23 @@ export const javaData2 = {
         null,
         null,
         null,
+        "`price` に値を代入します。",
+        null,
+        null,
+        null,
+        "`return` で値を返します。",
         null,
         null,
         null,
         null,
+        "`new` でインスタンスを作成します。",
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        "`getPrice` メソッドを呼び出します。",
         null,
         null
       ],
       "candidates": {
-        "keywords": ["private", "public", "protected", "static"]
+        "keywords": ["private", "public", "protected", "static", "price", "return", "new", "getPrice"]
       },
       "testCases": [
         {

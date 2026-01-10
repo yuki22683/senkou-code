@@ -25,7 +25,7 @@ export const javaData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.function.Function;\n\npublic class Main {\n    public static void main(String[] args) {\n        Function<Integer, Integer> square = x -> x * x;\n        System.out.println(square.apply(5));\n    }\n}",
-      "holeyCode": "import java.util.function.Function;\n\npublic class Main {\n    public static void main(String[] args) {\n        // ラムダ式で引数と本体を区切る演算子\n        Function<Integer, Integer> square = x ___ x * x;\n        System.out.println(square.apply(5));\n    }\n}",
+      "holeyCode": "import java.util.function.Function;\n\npublic class Main {\n    public static void main(String[] args) {\n        // ラムダ式で引数と本体を区切る演算子\n        Function<Integer, Integer> square = x ___ x * x;\n        // apply でラムダ式を実行する\n        System.out.println(square.___(5));\n    }\n}",
       "correctLines": [
         "import java.util.function.Function;",
         "",

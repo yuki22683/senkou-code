@@ -176,7 +176,7 @@ export const elixir3Data = {
         { "lineNumber": 2, "hint": "パターンマッチを連鎖させるキーワードです" }
       ],
       "candidates": {
-        "2": ["with", "when", "match", "case"]
+        "keywords": ["def", "with", "else", "end"]
       },
       "testCases": [
         { "input": "process(%{name: \"Alice\", age: 25})", "expected_output": "{:ok, \"Alice is 25 years old\"}" }
@@ -196,7 +196,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# defprotocolでプロトコルを定義\ndefprotocol Describable do\n  def describe(data)\nend",
-      "holeyCode": "# defprotocolでプロトコルを定義\n___ Describable do\n  def describe(data)\nend",
+      "holeyCode": "# defprotocolでプロトコルを定義\n___ Describable do\n  # defで関数を宣言\n  ___ describe(data)\n# endでプロトコルを閉じる\n___",
       "correctLines": [
         { "lineNumber": 1, "content": "defprotocol Describable do" }
       ],
