@@ -24,7 +24,7 @@ export const javaData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.function.Function;\n\npublic class Main {\n    public static void main(String[] args) {\n        Function<Integer, Integer> square = x -> x * x;\n        System.out.println(square.apply(5));\n    }\n}",
+      "correctCode": "import java.util.function.Function;\n\npublic class Main {\n    public static void main(String[] args) {\n        // ラムダ式で引数と本体を区切る演算子\n        Function<Integer, Integer> square = x -> x * x;\n        // apply でラムダ式を実行する\n        System.out.println(square.apply(5));\n    }\n}",
       "holeyCode": "import java.util.function.Function;\n\npublic class Main {\n    public static void main(String[] args) {\n        // ラムダ式で引数と本体を区切る演算子\n        Function<Integer, Integer> square = x ___ x * x;\n        // apply でラムダ式を実行する\n        System.out.println(square.___(5));\n    }\n}",
       "correctLines": [
         "import java.util.function.Function;",
@@ -76,7 +76,7 @@ export const javaData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3);\n        nums.stream().forEach(System.out::println);\n    }\n}",
+      "correctCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.asList(1, 2, 3);\n        // コレクションからStreamを作成するメソッド\n        nums.stream().forEach(System.out::println);\n    }\n}",
       "holeyCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(1, 2, 3);\n        // コレクションからStreamを作成するメソッド\n        nums.___().forEach(System.out::println);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -130,7 +130,7 @@ export const javaData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3);\n        nums.stream()\n            .map(n -> n * 10)\n            .forEach(System.out::println);\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.asList(1, 2, 3);\n        nums.stream()\n            // 各要素を変換するメソッド\n            .map(n -> n * 10)\n            .forEach(System.out::println);\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(1, 2, 3);\n        nums.stream()\n            // 各要素を変換するメソッド\n            .___(n -> n * 10)\n            .forEach(System.out::println);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -186,7 +186,7 @@ export const javaData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);\n        nums.stream()\n            .filter(n -> n > 2)\n            .forEach(System.out::println);\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);\n        nums.stream()\n            // 条件に合う要素だけを残すメソッド\n            .filter(n -> n > 2)\n            .forEach(System.out::println);\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(1, 2, 3, 4, 5);\n        nums.stream()\n            // 条件に合う要素だけを残すメソッド\n            .___(n -> n > 2)\n            .forEach(System.out::println);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -242,7 +242,7 @@ export const javaData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3);\n        List<Integer> doubled = nums.stream()\n            .map(n -> n * 2)\n            .collect(Collectors.toList());\n        System.out.println(doubled);\n    }\n}",
+      "correctCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.asList(1, 2, 3);\n        List<Integer> doubled = nums.stream()\n            .map(n -> n * 2)\n            // Streamをコレクションに変換するメソッドとユーティリティクラス\n            .collect(Collectors.toList());\n        // println で出力する\n        System.out.println(doubled);\n    }\n}",
       "holeyCode": "import java.util.*;\nimport java.util.stream.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(1, 2, 3);\n        List<Integer> doubled = nums.stream()\n            .map(n -> n * 2)\n            // Streamをコレクションに変換するメソッドとユーティリティクラス\n            .___(___.toList());\n        // println で出力する\n        System.out.___(doubled);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -303,7 +303,7 @@ export const javaData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4);\n        int product = nums.stream()\n            .reduce(1, (a, b) -> a * b);\n        System.out.println(product);\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4);\n        int product = nums.stream()\n            // 全要素を1つの値にまとめるメソッド\n            .reduce(1, (a, b) -> a * b);\n        // println で出力する\n        System.out.println(product);\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(1, 2, 3, 4);\n        int product = nums.stream()\n            // 全要素を1つの値にまとめるメソッド\n            .___(1, (a, b) -> a * b);\n        // println で出力する\n        System.out.___(product);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -360,7 +360,7 @@ export const javaData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Optional<String> opt = Optional.of(\"Hello\");\n        String value = opt.orElse(\"default\");\n        System.out.println(value);\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // 値を持つOptionalを作成するメソッド\n        Optional<String> opt = Optional.of(\"Hello\");\n        // orElse でデフォルト値を指定して取得する\n        String value = opt.orElse(\"default\");\n        // println で出力する\n        System.out.println(value);\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // 値を持つOptionalを作成するメソッド\n        Optional<String> opt = Optional.___(\"Hello\");\n        // orElse でデフォルト値を指定して取得する\n        String value = opt.___(\"default\");\n        // println で出力する\n        System.out.___(value);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -415,7 +415,7 @@ export const javaData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> names = Arrays.asList(\"Alice\", \"Bob\");\n        names.forEach(System.out::println);\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<String> names = Arrays.asList(\"Alice\", \"Bob\");\n        // メソッド参照を表す演算子\n        names.forEach(System.out::println);\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<String> names = Arrays.___(\"Alice\", \"Bob\");\n        // メソッド参照を表す演算子\n        names.forEach(System.out___println);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -467,7 +467,7 @@ export const javaData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(5, 2, 8, 1);\n        nums.stream()\n            .sorted()\n            .forEach(System.out::println);\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.asList(5, 2, 8, 1);\n        nums.stream()\n            // 要素を昇順に並べ替えるメソッド\n            .sorted()\n            .forEach(System.out::println);\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(5, 2, 8, 1);\n        nums.stream()\n            // 要素を昇順に並べ替えるメソッド\n            .___()\n            .forEach(System.out::println);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -523,7 +523,7 @@ export const javaData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 1, 2, 2, 3);\n        nums.stream()\n            .distinct()\n            .forEach(System.out::println);\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.asList(1, 1, 2, 2, 3);\n        nums.stream()\n            // 重複した要素を取り除くメソッド\n            .distinct()\n            .forEach(System.out::println);\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(1, 1, 2, 2, 3);\n        nums.stream()\n            // 重複した要素を取り除くメソッド\n            .___()\n            .forEach(System.out::println);\n    }\n}",
       "correctLines": [
         "import java.util.*;",

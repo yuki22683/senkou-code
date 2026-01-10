@@ -87,7 +87,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 3, 1, 4, 1, 5 };\n        var sorted = nums.OrderBy(x => x);\n        Console.WriteLine(string.Join(\",\", sorted));\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 配列を定義\n        var nums = new[] { ___, 1, 4, 1, 5 };\n        // OrderByでソート\n        var sorted = nums.___(x => x);\n        // 結果を表示\n        Console.WriteLine(string.___(\"___\", sorted));\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 3 を含む配列を定義\n        var nums = new[] { ___, 1, 4, 1, 5 };\n        // OrderByでソート\n        var sorted = nums.___(x => x);\n        // Joinで \",\" を区切り文字として結果を表示\n        Console.WriteLine(string.___(\"___\", sorted));\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Linq;",
@@ -195,7 +195,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5 };\n        var allPositive = nums.All(x => x > 0);\n        Console.WriteLine(allPositive);\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 配列を定義\n        var nums = new[] { ___, 2, 3, 4, 5 };\n        // Allで全要素が条件を満たすかチェック\n        var allPositive = nums.___(x => x > 0);\n        // 結果を表示\n        Console.___(allPositive);\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 1 を含む配列を定義\n        var nums = new[] { ___, 2, 3, 4, 5 };\n        // Allで全要素が条件を満たすかチェック\n        var allPositive = nums.___(x => x > 0);\n        // 結果を表示\n        Console.___(allPositive);\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Linq;",
@@ -249,7 +249,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 10, 20, 30 };\n        var total = nums.Sum();\n        Console.WriteLine(total);\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 配列を定義\n        var nums = new[] { ___, 20, 30 };\n        // Sumで合計を計算\n        var total = nums.___();\n        // 結果を表示\n        Console.___(total);\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 10 を含む配列を定義\n        var nums = new[] { ___, 20, 30 };\n        // Sumで合計を計算\n        var total = nums.___();\n        // 結果を表示\n        Console.___(total);\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Linq;",

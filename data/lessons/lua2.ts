@@ -62,8 +62,8 @@ export const lua2Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local nums = {10, 20, 30}\n-- 2番目の要素にアクセス\nprint(nums[2])",
-      "holeyCode": "-- 配列を作成\nlocal nums = {___, 20, ___}\n-- 2番目の要素にアクセス\nprint(nums[___])",
+      "correctCode": "-- 配列を作成（10, 20, 30の順）\nlocal nums = {10, 20, 30}\n-- 2番目の要素にアクセス\nprint(nums[2])",
+      "holeyCode": "-- 配列を作成（10, 20, 30の順）\nlocal nums = {___, 20, ___}\n-- 2番目の要素にアクセス\nprint(nums[___])",
       "correctLines": [
         "local nums = {10, 20, 30}",
         "print(nums[2])"
@@ -100,8 +100,8 @@ export const lua2Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local nums = {1, 2, 3}\n-- ipairsで配列をループ\nfor i, v in ipairs(nums) do\n    print(v)\nend",
-      "holeyCode": "-- 配列を作成\nlocal nums = {___, 2, ___}\n-- ipairsで配列をループ\nfor i, v in ___(nums) do\n    -- vを表示\n    print(___)\nend",
+      "correctCode": "-- 配列を作成（1, 2, 3の順）\nlocal nums = {1, 2, 3}\n-- ipairsで配列をループ\nfor i, v in ipairs(nums) do\n    print(v)\nend",
+      "holeyCode": "-- 配列を作成（1, 2, 3の順）\nlocal nums = {___, 2, ___}\n-- ipairsで配列をループ\nfor i, v in ___(nums) do\n    -- vを表示\n    print(___)\nend",
       "correctLines": [
         "local nums = {1, 2, 3}",
         "for i, v in ipairs(nums) do",
@@ -226,8 +226,8 @@ export const lua2Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local function swap(a, b)\n    -- returnで値を返す\n    return b, a\nend\nlocal x, y = swap(1, 2)\nprint(x, y)",
-      "holeyCode": "-- swap関数を定義\nlocal function ___(a, b)\n    -- returnで値を返す\n    ___ b, a\nend\n-- swap(1, 2)を呼び出す\nlocal x, y = swap(___, ___)\n-- xとyを表示\nprint(___, ___)",
+      "correctCode": "local function swap(a, b)\n    -- returnで値を返す\n    return b, a\nend\nlocal x, y = swap(1, 2)\n-- xとyを表示（x, yの順）\nprint(x, y)",
+      "holeyCode": "-- swap関数を定義\nlocal function ___(a, b)\n    -- returnで値を返す\n    ___ b, a\nend\n-- swap(1, 2)を呼び出す\nlocal x, y = swap(___, ___)\n-- xとyを表示（x, yの順）\nprint(___, ___)\n",
       "correctLines": [
         "local function swap(a, b)",
         "    return b, a",
@@ -236,14 +236,14 @@ export const lua2Data = {
         "print(x, y)"
       ],
       "lineHints": [
-        "",
+        "swap という関数を定義します。",
         "return で複数の値を返します。",
         "",
-        "",
-        ""
+        "1, 2 を渡して呼び出します。",
+        "x と y を表示します。"
       ],
       "candidates": {
-        "keywords": ["return"]
+        "keywords": ["return", "swap"]
       },
       "testCases": [
         {

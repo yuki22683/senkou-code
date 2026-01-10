@@ -455,7 +455,7 @@ export const csharp2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "string text = \"Hello\";\nint? length = text?.Length;\nConsole.WriteLine(length);",
-      "holeyCode": "// 文字列を定義\nstring text = \"___\";\n// ?.でnull安全にアクセス\nint? length = text___Length;\n// 画面に出力\nConsole.___(length);",
+      "holeyCode": "// 文字列を定義（\"Hello\"）\nstring text = \"___\" ;\n// ?.でnull安全にアクセス\nint? length = text___Length;\n// 画面に出力\nConsole.___(length);",
       "correctLines": [
         "string text = \"Hello\";",
         "int? length = text?.Length;",

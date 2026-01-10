@@ -24,7 +24,7 @@ export const javaData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Vehicle {\n    void move() {\n        System.out.println(\"Moving\");\n    }\n}\n\n// extends で Vehicle を継承する\nclass Car extends Vehicle {\n    void honk() {\n        System.out.println(\"Beep!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Car c = new Car();\n        c.move();\n    }\n}",
+      "correctCode": "class Vehicle {\n    void move() {\n        System.out.println(\"Moving\");\n    }\n}\n\n// extends で Vehicle を継承する\nclass Car extends Vehicle {\n    void honk() {\n        System.out.println(\"Beep!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Car c = new Car();\n        // move メソッドを呼び出す\n        c.move();\n    }\n}",
       "holeyCode": "class Vehicle {\n    void move() {\n        System.out.println(\"Moving\");\n    }\n}\n\n// extends で Vehicle を継承する\nclass Car ___ Vehicle {\n    void honk() {\n        System.out.println(\"Beep!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Car c = ___ Car();\n        // move メソッドを呼び出す\n        c.___();\n    }\n}",
       "correctLines": [
         "class Vehicle {",
@@ -98,7 +98,7 @@ export const javaData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Shape {\n    void draw() {\n        System.out.println(\"Shape\");\n    }\n}\n\nclass Circle extends Shape {\n    // @Override でメソッドを上書き宣言する\n    @Override\n    void draw() {\n        System.out.println(\"Circle\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Circle c = new Circle();\n        c.draw();\n    }\n}",
+      "correctCode": "class Shape {\n    void draw() {\n        System.out.println(\"Shape\");\n    }\n}\n\nclass Circle extends Shape {\n    // @Override でメソッドを上書き宣言する\n    @Override\n    void draw() {\n        System.out.println(\"Circle\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Circle c = new Circle();\n        // draw メソッドを呼び出す\n        c.draw();\n    }\n}",
       "holeyCode": "class Shape {\n    void draw() {\n        System.out.println(\"Shape\");\n    }\n}\n\nclass Circle extends Shape {\n    // @Override でメソッドを上書き宣言する\n    ___\n    void draw() {\n        System.out.println(\"Circle\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Circle c = ___ Circle();\n        // draw メソッドを呼び出す\n        c.___();\n    }\n}",
       "correctLines": [
         "class Shape {",
@@ -174,7 +174,7 @@ export const javaData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "interface Greeting {\n    void sayHello();\n}\n\n// implements でインターフェースを実装する\nclass Person implements Greeting {\n    public void sayHello() {\n        System.out.println(\"Hello!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Person p = new Person();\n        p.sayHello();\n    }\n}",
+      "correctCode": "interface Greeting {\n    void sayHello();\n}\n\n// implements でインターフェースを実装する\nclass Person implements Greeting {\n    public void sayHello() {\n        System.out.println(\"Hello!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Person p = new Person();\n        // sayHello メソッドを呼び出す\n        p.sayHello();\n    }\n}",
       "holeyCode": "interface Greeting {\n    void sayHello();\n}\n\n// implements でインターフェースを実装する\nclass Person ___ Greeting {\n    public void sayHello() {\n        System.out.println(\"Hello!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Person p = ___ Person();\n        // sayHello メソッドを呼び出す\n        p.___();\n    }\n}",
       "correctLines": [
         "interface Greeting {",
@@ -244,7 +244,7 @@ export const javaData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// abstract で抽象クラスを定義する\nabstract class Animal {\n    abstract void speak();\n}\n\nclass Dog extends Animal {\n    void speak() {\n        System.out.println(\"Woof!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Dog d = new Dog();\n        d.speak();\n    }\n}",
+      "correctCode": "// abstract で抽象クラスを定義する\nabstract class Animal {\n    abstract void speak();\n}\n\nclass Dog extends Animal {\n    void speak() {\n        System.out.println(\"Woof!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Dog d = new Dog();\n        // speak メソッドを呼び出す\n        d.speak();\n    }\n}",
       "holeyCode": "// abstract で抽象クラスを定義する\n___ class Animal {\n    abstract void speak();\n}\n\nclass Dog extends Animal {\n    void speak() {\n        System.out.println(\"Woof!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Dog d = ___ Dog();\n        // speak メソッドを呼び出す\n        d.___();\n    }\n}",
       "correctLines": [
         "// abstract で抽象クラスを定義する",
@@ -313,7 +313,7 @@ export const javaData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Main {\n    public static void main(String[] args) {\n        // try で例外が起きる可能性のある処理を囲む\n        try {\n            int x = Integer.parseInt(\"abc\");\n        } catch (Exception e) {\n            System.out.println(\"Error\");\n        }\n    }\n}",
+      "correctCode": "class Main {\n    public static void main(String[] args) {\n        // try で例外が起きる可能性のある処理を囲む\n        try {\n            // parseInt で文字列を整数に変換する\n            int x = Integer.parseInt(\"abc\");\n        } catch (Exception e) {\n            System.out.println(\"Error\");\n        }\n    }\n}",
       "holeyCode": "class Main {\n    public static void main(String[] args) {\n        // try で例外が起きる可能性のある処理を囲む\n        ___ {\n            // parseInt で文字列を整数に変換する\n            int x = Integer.___(\"abc\");\n        } catch (Exception e) {\n            System.out.println(\"Error\");\n        }\n    }\n}",
       "correctLines": [
         "class Main {",
@@ -368,7 +368,7 @@ export const javaData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Main {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        // finally で必ず実行する\n        } finally {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
+      "correctCode": "class Main {\n    public static void main(String[] args) {\n        try {\n            // println で出力する\n            System.out.println(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        // finally で必ず実行する\n        } finally {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
       "holeyCode": "class Main {\n    public static void main(String[] args) {\n        try {\n            // println で出力する\n            System.out.___(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        // finally で必ず実行する\n        } ___ {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
       "correctLines": [
         "class Main {",
@@ -427,7 +427,7 @@ export const javaData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.ArrayList;\n\nclass Main {\n    public static void main(String[] args) {\n        ArrayList<String> items = new ArrayList<>();\n        // add で要素を追加する\n        items.add(\"A\");\n        items.add(\"B\");\n        System.out.println(items.get(0));\n    }\n}",
+      "correctCode": "import java.util.ArrayList;\n\nclass Main {\n    public static void main(String[] args) {\n        // new でArrayListを作成する\n        ArrayList<String> items = new ArrayList<>();\n        // add で要素を追加する\n        items.add(\"A\");\n        // add で要素を追加する\n        items.add(\"B\");\n        // get で要素を取得する\n        System.out.println(items.get(0));\n    }\n}",
       "holeyCode": "import java.util.ArrayList;\n\nclass Main {\n    public static void main(String[] args) {\n        // new でArrayListを作成する\n        ArrayList<String> items = ___ ArrayList<>();\n        // add で要素を追加する\n        items.___(\"A\");\n        // add で要素を追加する\n        items.___(\"B\");\n        // get で要素を取得する\n        System.out.println(items.___(0));\n    }\n}",
       "correctLines": [
         "import java.util.ArrayList;",
@@ -486,7 +486,7 @@ export const javaData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Main {\n    public static void main(String[] args) {\n        String[] colors = {\"R\", \"G\", \"B\"};\n        // : で配列から順番に取り出す\n        for (String c : colors) {\n            System.out.println(c);\n        }\n    }\n}",
+      "correctCode": "class Main {\n    public static void main(String[] args) {\n        // 配列を初期化する\n        String[] colors = {\"R\", \"G\", \"B\"};\n        // : で配列から順番に取り出す\n        for (String c : colors) {\n            // println で出力する\n            System.out.println(c);\n        }\n    }\n}",
       "holeyCode": "class Main {\n    public static void main(String[] args) {\n        // 配列を初期化する\n        String[] colors = {\"___\", \"G\", \"B\"};\n        // : で配列から順番に取り出す\n        for (String c ___ colors) {\n            // println で出力する\n            System.out.___(c);\n        }\n    }\n}",
       "correctLines": [
         "class Main {",
@@ -540,7 +540,7 @@ export const javaData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Calculator {\n    // static でクラスメソッドを定義する\n    static int multiply(int a, int b) {\n        return a * b;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        int result = Calculator.multiply(4, 5);\n        System.out.println(result);\n    }\n}",
+      "correctCode": "class Calculator {\n    // static でクラスメソッドを定義する\n    static int multiply(int a, int b) {\n        // return で値を返す\n        return a * b;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // multiply メソッドを呼び出す\n        int result = Calculator.multiply(4, 5);\n        // println で出力する\n        System.out.println(result);\n    }\n}",
       "holeyCode": "class Calculator {\n    // static でクラスメソッドを定義する\n    ___ int multiply(int a, int b) {\n        // return で値を返す\n        ___ a * b;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // multiply メソッドを呼び出す\n        int result = Calculator.___(4, 5);\n        // println で出力する\n        System.out.___(result);\n    }\n}",
       "correctLines": [
         "class Calculator {",
@@ -602,7 +602,7 @@ export const javaData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Item {\n    // private でフィールドを隠蔽する\n    private int price;\n    \n    public Item(int p) {\n        price = p;\n    }\n    \n    public int getPrice() {\n        return price;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Item item = new Item(100);\n        System.out.println(item.getPrice());\n    }\n}",
+      "correctCode": "class Item {\n    // private でフィールドを隠蔽する\n    private int price;\n    \n    public Item(int p) {\n        // price に値を代入する\n        price = p;\n    }\n    \n    public int getPrice() {\n        // return で値を返す\n        return price;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Item item = new Item(100);\n        // getPrice メソッドを呼び出す\n        System.out.println(item.getPrice());\n    }\n}",
       "holeyCode": "class Item {\n    // private でフィールドを隠蔽する\n    ___ int price;\n    \n    public Item(int p) {\n        // price に値を代入する\n        ___ = p;\n    }\n    \n    public int getPrice() {\n        // return で値を返す\n        ___ price;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Item item = ___ Item(100);\n        // getPrice メソッドを呼び出す\n        System.out.println(item.___());\n    }\n}",
       "correctLines": [
         "class Item {",

@@ -182,8 +182,8 @@ export const perl2Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "my @nums = (1, 2, 3);\n# foreachで各要素を処理\nforeach my $n (@nums) {\n    print \"$n\\n\";\n}",
-      "holeyCode": "# 配列を宣言\nmy @nums = (1, 2, ___);\n# foreachで各要素を処理\n___ my $n (@nums) {\n    # printで出力\n    ___ \"$n\\n\";\n}",
+      "correctCode": "# 配列を宣言（1, 2, 3）\nmy @nums = (1, 2, 3);\n# foreachで各要素を処理\nforeach my $n (@nums) {\n    print \"$n\\n\";\n}",
+      "holeyCode": "# 配列を宣言（1, 2, 3）\nmy @nums = (1, 2, ___);\n# foreachで各要素を処理\n___ my $n (@nums) {\n    # printで出力\n    ___ \"$n\\n\";\n}",
       "correctLines": [
         "my @nums = (1, 2, 3);",
         "foreach my $n (@nums) {",
@@ -268,8 +268,8 @@ export const perl2Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "my @nums = (10, 20);\n# \\でリファレンスを作成\nmy $ref = \\@nums;\nprint $ref->[1] . \"\\n\";",
-      "holeyCode": "# 配列を宣言\nmy @nums = (10, ___);\n# \\でリファレンスを作成\nmy $ref = ___@nums;\n# printで出力\n___ $ref->[1] . \"\\n\";",
+      "correctCode": "# 配列を宣言（10, 20）\nmy @nums = (10, 20);\n# \\でリファレンスを作成\nmy $ref = \\@nums;\nprint $ref->[1] . \"\\n\";",
+      "holeyCode": "# 配列を宣言（10, 20）\nmy @nums = (10, ___);\n# \\でリファレンスを作成\nmy $ref = ___@nums;\n# printで出力\n___ $ref->[1] . \"\\n\";",
       "correctLines": [
         "my @nums = (10, 20);",
         "my $ref = \\@nums;",
@@ -346,8 +346,8 @@ export const perl2Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "my @nums = (1, 2, 3);\n# mapで各要素を変換\nmy @squared = map { $_ * $_ } @nums;\nprint \"@squared\\n\";",
-      "holeyCode": "# 配列を宣言\nmy @nums = (1, 2, ___);\n# mapで各要素を変換\nmy @squared = ___ { $_ * $_ } @nums;\n# printで出力\n___ \"@squared\\n\";",
+      "correctCode": "# 配列を宣言（1, 2, 3）\nmy @nums = (1, 2, 3);\n# mapで各要素を変換\nmy @squared = map { $_ * $_ } @nums;\nprint \"@squared\\n\";",
+      "holeyCode": "# 配列を宣言（1, 2, 3）\nmy @nums = (1, 2, ___);\n# mapで各要素を変換\nmy @squared = ___ { $_ * $_ } @nums;\n# printで出力\n___ \"@squared\\n\";",
       "correctLines": [
         "my @nums = (1, 2, 3);",
         "my @squared = map { $_ * $_ } @nums;",
@@ -386,8 +386,8 @@ export const perl2Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "my @nums = (1, 2, 3, 4, 5);\n# grepで条件に合う要素を抽出\nmy @result = grep { $_ >= 3 } @nums;\nprint \"@result\\n\";",
-      "holeyCode": "# 配列を宣言\nmy @nums = (1, 2, 3, 4, ___);\n# grepで条件に合う要素を抽出\nmy @result = ___ { $_ >= 3 } @nums;\n# printで出力\n___ \"@result\\n\";",
+      "correctCode": "# 配列を宣言（1, 2, 3, 4, 5）\nmy @nums = (1, 2, 3, 4, 5);\n# grepで条件に合う要素を抽出\nmy @result = grep { $_ >= 3 } @nums;\nprint \"@result\\n\";",
+      "holeyCode": "# 配列を宣言（1, 2, 3, 4, 5）\nmy @nums = (1, 2, 3, 4, ___);\n# grepで条件に合う要素を抽出\nmy @result = ___ { $_ >= 3 } @nums;\n# printで出力\n___ \"@result\\n\";",
       "correctLines": [
         "my @nums = (1, 2, 3, 4, 5);",
         "my @result = grep { $_ >= 3 } @nums;",

@@ -490,11 +490,11 @@ export default function ExercisePage() {
       if (data) {
         router.push(`/lessons/${language}/${lessonId}/exercises/${data.id}/tutorial`);
       } else {
-        router.push(`/lessons/${language}/${lessonId}/exercises`);
+        router.push(`/lessons/${language}`);
       }
     } catch (error) {
       console.error("Error navigating to next exercise:", error);
-      router.push(`/lessons/${language}/${lessonId}/exercises`);
+      router.push(`/lessons/${language}`);
     }
   }
 
@@ -672,7 +672,9 @@ export default function ExercisePage() {
                         size="sm"
                         className="text-base flex-1"
                       >
-                        次の演習へ
+                        {celebrationType === "lesson" || celebrationType === "language"
+                          ? "レッスン一覧へ"
+                          : "次の演習へ"}
                       </Button>
                     )}
                     <Button
@@ -748,7 +750,9 @@ export default function ExercisePage() {
               正解です！
             </DialogTitle>
             <DialogDescription>
-              おめでとうございます！この演習をクリアしました。
+              {celebrationType === "lesson" || celebrationType === "language"
+                ? "おめでとうございます！このレッスンの演習をすべてクリアしました。"
+                : "おめでとうございます！この演習をクリアしました。"}
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -758,7 +762,11 @@ export default function ExercisePage() {
             }}>
               演習を続ける
             </Button>
-            <Button onClick={handleNextExercise}>次の演習へ</Button>
+            <Button onClick={handleNextExercise}>
+              {celebrationType === "lesson" || celebrationType === "language"
+                ? "レッスン一覧へ"
+                : "次の演習へ"}
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

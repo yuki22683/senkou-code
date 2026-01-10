@@ -222,8 +222,8 @@ export const kotlin3Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "data class Config(var host: String = \"\", var port: Int = 0)\n\nfun main() {\n    val cfg = Config().apply {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(cfg)\n}",
-      "holeyCode": "// data class を定義する\n___ class Config(var host: String = \"\", var port: Int = 0)\n\n// main 関数を定義する\nfun ___() {\n    // apply で設定してオブジェクトを返す\n    val cfg = Config().___ {\n        // host を設定する\n        host = \"___\"\n        // port を設定する\n        port = ___\n    }\n    // cfg を出力する\n    ___(cfg)\n}",
+      "correctCode": "data class Config(var host: String = \"\", var port: Int = 0)\n\nfun main() {\n    val cfg = Config().apply {\n        // hostに\"localhost\"、portに8080を設定\n        host = \"localhost\"\n        port = 8080\n    }\n    println(cfg)\n}",
+      "holeyCode": "// data class を定義する\n___ class Config(var host: String = \"\", var port: Int = 0)\n\n// main 関数を定義する\nfun ___() {\n    // apply で設定してオブジェクトを返す\n    val cfg = Config().___ {\n        // hostに\"localhost\"、portに8080を設定\n        host = \"___\"\n        port = ___\n    }\n    // cfg を出力する\n    ___(cfg)\n}",
       "correctLines": [
         "data class Config(var host: String = \"\", var port: Int = 0)",
         "",
@@ -357,12 +357,12 @@ export const kotlin3Data = {
         {
           "title": "takeIf とは？",
           "image": "/illustrations/3d/if.png",
-          "content": "# 条件を満たせば値を返す\n\n**takeIf** は、条件が true なら値を、false なら null を返します。\n\n```kotlin\nval num = 10.takeIf { it > 5 }  // 10\nval num2 = 3.takeIf { it > 5 }  // null\n```"
+          "content": "# 条件を満たせば値を返す\n\n**takeIf** は、条件が true なら値を、false なら null を返します。\n\n```kotlin\val num = 10.takeIf { it > 5 }  // 10\nval num2 = 3.takeIf { it > 5 }  // null\n```"
         },
         {
           "title": "takeUnless",
           "image": "/illustrations/3d/robot.png",
-          "content": "# 条件を満たさなければ値を返す\n\n```kotlin\nval num = 10.takeUnless { it > 5 }  // null\nval num2 = 3.takeUnless { it > 5 }  // 3\n```"
+          "content": "# 条件を満たさなければ値を返す\n\n```kotlin\val num = 10.takeUnless { it > 5 }  // null\nval num2 = 3.takeUnless { it > 5 }  // 3\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -452,8 +452,8 @@ export const kotlin3Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "fun main() {\n    val nums = listOf(1, 2, 3, 4)\n    val product = nums.fold(1) { acc, n -> acc * n }\n    println(product)\n}",
-      "holeyCode": "// main 関数を定義する\nfun ___() {\n    // listOf でリストを作成する\n    val nums = ___(1, 2, 3, 4)\n    // fold で畳み込む\n    val product = nums.___(1) { acc, n -> acc * n }\n    // product を出力する\n    ___(product)\n}",
+      "correctCode": "fun main() {\n    // listOf でリスト(1, 2, 3, 4)を作成する\n    val nums = listOf(1, 2, 3, 4)\n    val product = nums.fold(1) { acc, n -> acc * n }\n    println(product)\n}",
+      "holeyCode": "// main 関数を定義する\nfun ___() {\n    // listOf でリスト(1, 2, 3, 4)を作成する\n    val nums = ___(1, 2, 3, 4)\n    // fold で畳み込む\n    val product = nums.___(1) { acc, n -> acc * n }\n    // product を出力する\n    ___(product)\n}",
       "correctLines": [
         "fun main() {",
         "    val nums = listOf(1, 2, 3, 4)",

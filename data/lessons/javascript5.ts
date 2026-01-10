@@ -52,8 +52,8 @@ export const javascriptData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const emailPattern = /\\w+@\\w+\\.\\w+/;\n// test( でマッチをテスト\nconsole.log(emailPattern.test('test@example.com'));\nconsole.log(emailPattern.test('invalid-email'));",
-      "holeyCode": "// 正規表現パターンを定義\nconst emailPattern = ___\\w+@\\w+\\.\\w+/;\n// test( でマッチをテスト\nconsole.log(emailPattern.___)('test@example.com'));\n// 無効なメールをテスト\nconsole.log(emailPattern.test('___'));",
+      "correctCode": "const emailPattern = /\\w+@\\w+\\.\\w+/;\n// test() で 'test@example.com' と 'invalid-email' をテスト\nconsole.log(emailPattern.test('test@example.com'));\nconsole.log(emailPattern.test('invalid-email'));",
+      "holeyCode": "// 正規表現パターンを定義\nconst emailPattern = ___\\w+@\\w+\\.\\w+/;\n// test() で 'test@example.com' と 'invalid-email' をテスト\nconsole.log(emailPattern.___)('test@example.com'));\n// 無効なメールをテスト\nconsole.log(emailPattern.test('___'));",
       "correctLines": [
         "const emailPattern = /\\w+@\\w+\\.\\w+/;",
         "console.log(emailPattern.test('test@example.com'));",
@@ -87,8 +87,8 @@ export const javascriptData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const text = 'Contact: 090-1234-5678 or 080-9876-5432';\n// match( と / でパターンマッチ\nconst phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);\nconsole.log(phones);",
-      "holeyCode": "// 文字列を定義\nconst text = 'Contact: ___-1234-5678 or 080-9876-5432';\n// match( と / でパターンマッチ\nconst phones = text.___(___\\d{3}-\\d{4}-\\d{4}/g);\n// 結果を出力\nconsole.___(phones);",
+      "correctCode": "const text = 'Contact: 090-1234-5678 or 080-9876-5432';\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\nconst phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);\nconsole.log(phones);",
+      "holeyCode": "// 090-1234-5678 を含む文字列を定義\nconst text = 'Contact: ___-1234-5678 or 080-9876-5432';\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\nconst phones = text.___(___\\d{3}-\\d{4}-\\d{4}/g);\n// 結果を出力\nconsole.___(phones);",
       "correctLines": [
         "const text = 'Contact: 090-1234-5678 or 080-9876-5432';",
         "const phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);",
@@ -122,8 +122,8 @@ export const javascriptData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const text = 'Hello   World   JavaScript';\n// replace( と / で置換\nconst result = text.replace(/\\s+/g, ' ');\nconsole.log(result);",
-      "holeyCode": "// 文字列を定義\nconst text = '___   World   JavaScript';\n// replace( と / で置換\nconst result = text.___(___\\s+/g, ' ');\n// 結果を出力\nconsole.___(result);",
+      "correctCode": "const text = 'Hello   World   JavaScript';\n// replace() で連続する空白を1つの空白に置換\nconst result = text.replace(/\\s+/g, ' ');\nconsole.log(result);",
+      "holeyCode": "// 'Hello   World   JavaScript' を定義\nconst text = '___   World   JavaScript';\n// replace() で連続する空白を1つの空白に置換\nconst result = text.___(___\\s+/g, ' ');\n// 結果を出力\nconsole.___(result);",
       "correctLines": [
         "const text = 'Hello   World   JavaScript';",
         "const result = text.replace(/\\s+/g, ' ');",
@@ -300,8 +300,8 @@ export const javascriptData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// Symbol でユニークな識別子を作成\nconst secret = Symbol('secret');\nconst user = {\n  name: 'Taro',\n  [secret]: 'password123'\n};\nconsole.log(user.name);\nconsole.log(user[secret]);",
-      "holeyCode": "// Symbol でユニークな識別子を作成\nconst secret = ___('secret');\n// オブジェクトを定義\nconst user = {\n  // name プロパティ\n  name: '___',\n  // 計算プロパティ名でシークレットを設定\n  [secret]: '___'\n};\n// name を出力\nconsole.log(user.___);\n// secret を出力\nconsole.log(user[___]);",
+      "correctCode": "// Symbol でユニークな識別子を作成し、name: 'Taro', secret: 'password123' を持つオブジェクトを定義\nconst secret = Symbol('secret');\nconst user = {\n  name: 'Taro',\n  [secret]: 'password123'\n};\nconsole.log(user.name);\nconsole.log(user[secret]);",
+      "holeyCode": "// Symbol でユニークな識別子を作成し、name: 'Taro', secret: 'password123' を持つオブジェクトを定義\nconst secret = ___('secret');\n// オブジェクトを定義\nconst user = {\n  // name プロパティ\n  name: '___',\n  // 計算プロパティ名でシークレットを設定\n  [secret]: '___'\n};\n// name を出力\nconsole.log(user.___);\n// secret を出力\nconsole.log(user[___]);",
       "correctLines": [
         "const secret = Symbol('secret');",
         "const user = {",
@@ -400,8 +400,8 @@ export const javascriptData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "const handler = {\n  get(target, prop) {\n    console.log(`Getting ${prop}`);\n    return target[prop];\n  }\n};\n// Proxy で操作をインターセプト\nconst user = new Proxy({ name: 'Taro' }, handler);\nconsole.log(user.name);",
-      "holeyCode": "// ハンドラオブジェクトを定義\nconst handler = {\n  // get トラップを定義\n  ___(target, prop) {\n    // アクセスをログ出力\n    console.log(`Getting ${___}`);\n    // return でプロパティ値を返す\n    ___ target[prop];\n  }\n};\n// Proxy で操作をインターセプト\nconst user = new ___({ name: 'Taro' }, handler);\n// name プロパティにアクセス\nconsole.log(user.___);",
+      "correctCode": "const handler = {\n  get(target, prop) {\n    console.log(`Getting ${prop}`);\n    return target[prop];\n  }\n};\n// name: 'Taro' を持つオブジェクトの操作をインターセプト\nconst user = new Proxy({ name: 'Taro' }, handler);\nconsole.log(user.name);",
+      "holeyCode": "// ハンドラオブジェクトを定義\nconst handler = {\n  // get トラップを定義\n  ___(target, prop) {\n    // アクセスをログ出力\n    console.log(`Getting ${___}`);\n    // return でプロパティ値を返す\n    ___ target[prop];\n  }\n};\n// name: 'Taro' を持つオブジェクトの操作をインターセプト\nconst user = new ___({ name: 'Taro' }, handler);\n// name プロパティにアクセス\nconsole.log(user.___);",
       "correctLines": [
         "const handler = {",
         "  get(target, prop) {",

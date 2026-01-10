@@ -20,7 +20,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "defmodule Person do\n  # defstructで構造体を定義\n  defstruct name: \"\", email: \"\"\nend\n\nperson = %Person{name: \"Bob\", email: \"bob@example.com\"}",
-      "holeyCode": "# defmoduleでモジュールを定義\n___ Person do\n  # defstructで構造体を定義\n  ___ name: \"\", email: \"\"\n# endでモジュールを閉じる\n___\n\n# %Person{...}で構造体を作成\nperson = %Person{name: \"___\", email: \"___\"}",
+      "holeyCode": "# defmoduleでモジュールを定義\n___ Person do\n  # defstructで構造体を定義\n  ___ name: \"\", email: \"\"\n# endでモジュールを閉じる\n___\n\n# nameに\"Bob\"、emailに\"bob@example.com\"を指定して構造体を作成\nperson = %Person{name: \"___\", email: \"___\"}",
       "correctLines": [
         { "lineNumber": 2, "content": "  defstruct name: \"\", email: \"\"" }
       ],
@@ -49,7 +49,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "defmodule Product do\n  defstruct name: \"\", price: 0\nend\n\nproduct = %Product{name: \"Book\", price: 1000}\n# |で辞書を更新\nupdated = %{product | price: 1200}",
-      "holeyCode": "# defmoduleでモジュールを定義\n___ Product do\n  # defstructで構造体を定義\n  ___ name: \"\", price: 0\n# endでモジュールを閉じる\n___\n\n# %Product{...}で構造体を作成\nproduct = %Product{name: \"___\", price: ___}\n# |で辞書を更新\nupdated = %{product ___ price: ___}",
+      "holeyCode": "# defmoduleでモジュールを定義\n___ Product do\n  # defstructで構造体を定義\n  ___ name: \"\", price: 0\n# endでモジュールを閉じる\n___\n\n# nameに\"Book\"、priceに1000を指定して構造体を作成\nproduct = %Product{name: \"___\", price: ___}\n# |で辞書を更新（priceを1200に）\nupdated = %{product ___ price: ___}",
       "correctLines": [
         { "lineNumber": 6, "content": "updated = %{product | price: 1200}" }
       ],
@@ -109,7 +109,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "users = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\n# group_byでグループ化\ngrouped = Enum.group_by(users, fn {_name, age} -> age end)",
-      "holeyCode": "# タプルのリストを定義\nusers = [{\"___\", ___}, {\"___\", ___}, {\"___\", ___}]\n# group_byでグループ化\ngrouped = Enum.___(users, fn {_name, age} -> age end)",
+      "holeyCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\nusers = [{\"___\", ___}, {\"___\", ___}, {\"___\", ___}]\n# group_byでグループ化\ngrouped = Enum.___(users, fn {_name, age} -> age end)",
       "correctLines": [
         { "lineNumber": 2, "content": "grouped = Enum.group_by(users, fn {_name, age} -> age end)" }
       ],

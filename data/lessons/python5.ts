@@ -19,23 +19,33 @@ export const pythonData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# ファイルを読み込む（テスト用）\nfilename = 'test.txt'\n# open関数でファイルを開く\nwith open(filename, 'w') as f:\n    f.write('Hello, Python!')\n\nwith open(filename, 'r') as f:\n    print(f.read())",
+      "correctCode": "# 'test.txt' と入力してファイル名を定義\nfilename = 'test.txt'\n# open と入力してファイルを開く\nwith open(filename, 'w') as f:\n    # f.write('Hello, Python!') と入力\n    f.write('Hello, Python!')\n\n# open(filename, 'r') と入力\nwith open(filename, 'r') as f:\n    # f.read() と入力\n    print(f.read())",
       "holeyCode": "# ファイルを読み込む（テスト用）\n# 'test.txt' と入力\nfilename = ___\n# open関数でファイルを開く\n# open と入力\nwith ___(filename, 'w') as f:\n    # f.write('Hello, Python!') と入力\n    ___\n\n# open(filename, 'r') と入力\nwith ___ as f:\n    # f.read() と入力\n    print(___)",
       "correctLines": [
         "# ファイルを読み込む（テスト用）",
+        "# 'test.txt' と入力",
         "filename = 'test.txt'",
         "# open関数でファイルを開く",
+        "# open と入力",
         "with open(filename, 'w') as f:",
+        "    # f.write('Hello, Python!') と入力",
         "    f.write('Hello, Python!')",
         "",
+        "# open(filename, 'r') と入力",
         "with open(filename, 'r') as f:",
+        "    # f.read() と入力",
         "    print(f.read())"
       ],
       "lineHints": [
         null,
         null,
         null,
+        null,
+        null,
         "open関数を使います。",
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -64,16 +74,21 @@ export const pythonData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# ファイルを1行ずつ読む\nwith open('test.txt', 'w') as f:\n    f.write('line1\\nline2\\nline3')\n\nwith open('test.txt', 'r') as f:\n    # inでファイルをループ\n    for line in f:\n        print(line.strip())",
+      "correctCode": "# ファイルを1行ずつ読む\n# open('test.txt', 'w') と入力\nwith open('test.txt', 'w') as f:\n    # f.write('line1\\\\nline2\\\\nline3') と入力\n    f.write('line1\\nline2\\nline3')\n\n# open('test.txt', 'r') と入力\nwith open('test.txt', 'r') as f:\n    # in と入力してファイルをループ\n    for line in f:\n        # line.strip() と入力\n        print(line.strip())",
       "holeyCode": "# ファイルを1行ずつ読む\n# open('test.txt', 'w') と入力\nwith ___ as f:\n    # f.write('line1\\\\nline2\\\\nline3') と入力\n    ___\n\n# open('test.txt', 'r') と入力\nwith ___ as f:\n    # inでファイルをループ\n    # in と入力\n    for line ___ f:\n        # line.strip() と入力\n        print(___)",
       "correctLines": [
         "# ファイルを1行ずつ読む",
+        "# open('test.txt', 'w') と入力",
         "with open('test.txt', 'w') as f:",
+        "    # f.write('line1\\\\nline2\\\\nline3') と入力",
         "    f.write('line1\\nline2\\nline3')",
         "",
+        "# open('test.txt', 'r') と入力",
         "with open('test.txt', 'r') as f:",
         "    # inでファイルをループ",
+        "    # in と入力",
         "    for line in f:",
+        "        # line.strip() と入力",
         "        print(line.strip())"
       ],
       "lineHints": [
@@ -83,7 +98,12 @@ export const pythonData5 = {
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        null,
         "inキーワードを使います。",
+        null,
         null
       ],
       "candidates": {
@@ -109,14 +129,18 @@ export const pythonData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import json\n\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# loadsでJSON文字列を変換\ndata = json.loads(json_str)\nprint(data['name'])",
+      "correctCode": "# json と入力\nimport json\n\n# '{\"name\": \"Python\", \"version\": 3.12}' と入力\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# loads と入力してJSON文字列を変換\ndata = json.loads(json_str)\n# data['name'] と入力\nprint(data['name'])",
       "holeyCode": "# json と入力\nimport ___\n\n# '{\"name\": \"Python\", \"version\": 3.12}' と入力\njson_str = ___\n# loadsでJSON文字列を変換\n# loads と入力\ndata = json.___(json_str)\n# data['name'] と入力\nprint(___)",
       "correctLines": [
+        "# json と入力",
         "import json",
         "",
+        "# '{\"name\": \"Python\", \"version\": 3.12}' と入力",
         "json_str = '{\"name\": \"Python\", \"version\": 3.12}'",
         "# loadsでJSON文字列を変換",
+        "# loads と入力",
         "data = json.loads(json_str)",
+        "# data['name'] と入力",
         "print(data['name'])"
       ],
       "lineHints": [
@@ -124,7 +148,11 @@ export const pythonData5 = {
         null,
         null,
         null,
+        null,
+        null,
+        null,
         "JSON文字列を読み込むメソッドです。",
+        null,
         null
       ],
       "candidates": {
@@ -150,14 +178,18 @@ export const pythonData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import json\n\ndata = {'language': 'Python', 'level': 'advanced'}\n# dumpsでJSON文字列に変換\njson_str = json.dumps(data)\nprint(json_str)",
+      "correctCode": "# json と入力\nimport json\n\n# {'language': 'Python', 'level': 'advanced'} と入力\ndata = {'language': 'Python', 'level': 'advanced'}\n# dumps と入力してJSON文字列に変換\njson_str = json.dumps(data)\n# json_str と入力\nprint(json_str)",
       "holeyCode": "# json と入力\nimport ___\n\n# {'language': 'Python', 'level': 'advanced'} と入力\ndata = ___\n# dumpsでJSON文字列に変換\n# dumps と入力\njson_str = json.___(data)\n# json_str と入力\nprint(___)",
       "correctLines": [
+        "# json と入力",
         "import json",
         "",
+        "# {'language': 'Python', 'level': 'advanced'} と入力",
         "data = {'language': 'Python', 'level': 'advanced'}",
         "# dumpsでJSON文字列に変換",
+        "# dumps と入力",
         "json_str = json.dumps(data)",
+        "# json_str と入力",
         "print(json_str)"
       ],
       "lineHints": [
@@ -165,7 +197,11 @@ export const pythonData5 = {
         null,
         null,
         null,
+        null,
+        null,
+        null,
         "JSONに変換するメソッドです。",
+        null,
         null
       ],
       "candidates": {
@@ -191,15 +227,20 @@ export const pythonData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import re\n\ntext = 'Call me at 090-1234-5678'\n# searchでパターン検索\nmatch = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)\nif match:\n    print(match.group())",
+      "correctCode": "# re と入力\nimport re\n\n# 'Call me at 090-1234-5678' と入力\ntext = 'Call me at 090-1234-5678'\n# search と入力してパターン検索\nmatch = re.search(r'\d{3}-\d{4}-\d{4}', text)\n# match と入力\nif match:\n    # match.group() と入力\n    print(match.group())",
       "holeyCode": "# re と入力\nimport ___\n\n# 'Call me at 090-1234-5678' と入力\ntext = ___\n# searchでパターン検索\n# search と入力\nmatch = re.___(r'\\d{3}-\\d{4}-\\d{4}', text)\n# match と入力\nif ___:\n    # match.group() と入力\n    print(___)",
       "correctLines": [
+        "# re と入力",
         "import re",
         "",
+        "# 'Call me at 090-1234-5678' と入力",
         "text = 'Call me at 090-1234-5678'",
         "# searchでパターン検索",
+        "# search と入力",
         "match = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)",
+        "# match と入力",
         "if match:",
+        "    # match.group() と入力",
         "    print(match.group())"
       ],
       "lineHints": [
@@ -207,7 +248,12 @@ export const pythonData5 = {
         null,
         null,
         null,
+        null,
+        null,
+        null,
         "パターンを検索するメソッドです。",
+        null,
+        null,
         null,
         null
       ],
@@ -234,14 +280,18 @@ export const pythonData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import re\n\ntext = 'email1@test.com and email2@test.com'\n# findallで全ての一致を取得\nemails = re.findall(r'\\w+@\\w+\\.\\w+', text)\nprint(emails)",
+      "correctCode": "# re と入力\nimport re\n\n# 'email1@test.com and email2@test.com' と入力\ntext = 'email1@test.com and email2@test.com'\n# findall と入力して全ての一致を取得\nemails = re.findall(r'\\w+@\\w+\\.\\w+', text)\n# emails と入力\nprint(emails)",
       "holeyCode": "# re と入力\nimport ___\n\n# 'email1@test.com and email2@test.com' と入力\ntext = ___\n# findallで全ての一致を取得\n# findall と入力\nemails = re.___(r'\\w+@\\w+\\.\\w+', text)\n# emails と入力\nprint(___)",
       "correctLines": [
+        "# re と入力",
         "import re",
         "",
+        "# 'email1@test.com and email2@test.com' と入力",
         "text = 'email1@test.com and email2@test.com'",
         "# findallで全ての一致を取得",
+        "# findall と入力",
         "emails = re.findall(r'\\w+@\\w+\\.\\w+', text)",
+        "# emails と入力",
         "print(emails)"
       ],
       "lineHints": [
@@ -249,7 +299,11 @@ export const pythonData5 = {
         null,
         null,
         null,
+        null,
+        null,
+        null,
         "全ての一致を取得するメソッドです。",
+        null,
         null
       ],
       "candidates": {
@@ -275,14 +329,18 @@ export const pythonData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import re\n\ntext = 'Hello   World   Python'\n# subでパターンを置換\nresult = re.sub(r'\\s+', ' ', text)\nprint(result)",
+      "correctCode": "# re と入力\nimport re\n\n# 'Hello   World   Python' と入力\ntext = 'Hello   World   Python'\n# sub と入力してパターンを置換\nresult = re.sub(r'\\s+', ' ', text)\n# result と入力\nprint(result)",
       "holeyCode": "# re と入力\nimport ___\n\n# 'Hello   World   Python' と入力\ntext = ___\n# subでパターンを置換\n# sub と入力\nresult = re.___(r'\\s+', ' ', text)\n# result と入力\nprint(___)",
       "correctLines": [
+        "# re と入力",
         "import re",
         "",
+        "# 'Hello   World   Python' と入力",
         "text = 'Hello   World   Python'",
         "# subでパターンを置換",
+        "# sub と入力",
         "result = re.sub(r'\\s+', ' ', text)",
+        "# result と入力",
         "print(result)"
       ],
       "lineHints": [
@@ -290,7 +348,11 @@ export const pythonData5 = {
         null,
         null,
         null,
+        null,
+        null,
+        null,
         "置換するメソッドです。",
+        null,
         null
       ],
       "candidates": {
@@ -316,17 +378,25 @@ export const pythonData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "from collections import Counter\n\ntext = 'hello world'\ncount = Counter(text)\nprint(count.most_common(3))",
+      "correctCode": "# Counter と入力\nfrom collections import Counter\n\n# 'hello world' と入力\ntext = 'hello world'\n# Counter(text) と入力\ncount = Counter(text)\n# count.most_common(3) と入力\nprint(count.most_common(3))",
       "holeyCode": "# Counter と入力\nfrom collections import ___\n\n# 'hello world' と入力\ntext = ___\n# Counter(text) と入力\ncount = ___\n# count.most_common(3) と入力\nprint(___)",
       "correctLines": [
+        "# Counter と入力",
         "from collections import Counter",
         "",
+        "# 'hello world' と入力",
         "text = 'hello world'",
+        "# Counter(text) と入力",
         "count = Counter(text)",
+        "# count.most_common(3) と入力",
         "print(count.most_common(3))"
       ],
       "lineHints": [
+        null,
         "Counterをインポートします。",
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -355,18 +425,28 @@ export const pythonData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "from collections import defaultdict\n\nd = defaultdict(list)\nd['fruits'].append('apple')\nd['fruits'].append('banana')\nprint(d['fruits'])",
+      "correctCode": "# defaultdict と入力\nfrom collections import defaultdict\n\n# defaultdict(list) と入力\nd = defaultdict(list)\n# d['fruits'].append('apple') と入力\nd['fruits'].append('apple')\n# d['fruits'].append('banana') と入力\nd['fruits'].append('banana')\n# d['fruits'] と入力\nprint(d['fruits'])",
       "holeyCode": "# defaultdict と入力\nfrom collections import ___\n\n# defaultdict(list) と入力\nd = ___\n# d['fruits'].append('apple') と入力\n___\n# d['fruits'].append('banana') と入力\n___\n# d['fruits'] と入力\nprint(___)",
       "correctLines": [
+        "# defaultdict と入力",
         "from collections import defaultdict",
         "",
+        "# defaultdict(list) と入力",
         "d = defaultdict(list)",
+        "# d['fruits'].append('apple') と入力",
         "d['fruits'].append('apple')",
+        "# d['fruits'].append('banana') と入力",
         "d['fruits'].append('banana')",
+        "# d['fruits'] と入力",
         "print(d['fruits'])"
       ],
       "lineHints": [
+        null,
         "defaultdictをインポートします。",
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -396,18 +476,28 @@ export const pythonData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "from itertools import chain\n\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\nresult = list(chain(list1, list2))\nprint(result)",
+      "correctCode": "# chain と入力\nfrom itertools import chain\n\n# [1, 2, 3] と入力\nlist1 = [1, 2, 3]\n# [4, 5, 6] と入力\nlist2 = [4, 5, 6]\n# list(chain(list1, list2)) と入力\nresult = list(chain(list1, list2))\n# result と入力\nprint(result)",
       "holeyCode": "# chain と入力\nfrom itertools import ___\n\n# [1, 2, 3] と入力\nlist1 = ___\n# [4, 5, 6] と入力\nlist2 = ___\n# list(chain(list1, list2)) と入力\nresult = ___\n# result と入力\nprint(___)",
       "correctLines": [
+        "# chain と入力",
         "from itertools import chain",
         "",
+        "# [1, 2, 3] と入力",
         "list1 = [1, 2, 3]",
+        "# [4, 5, 6] と入力",
         "list2 = [4, 5, 6]",
+        "# list(chain(list1, list2)) と入力",
         "result = list(chain(list1, list2))",
+        "# result と入力",
         "print(result)"
       ],
       "lineHints": [
+        null,
         "chainをインポートします。",
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,

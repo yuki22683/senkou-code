@@ -24,8 +24,8 @@ export const kotlin4Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "sealed class Shape\nclass Circle(val radius: Double) : Shape()\nclass Rectangle(val w: Double, val h: Double) : Shape()\n\nfun area(s: Shape): Double = when (s) {\n    is Circle -> 3.14 * s.radius * s.radius\n    is Rectangle -> s.w * s.h\n}\n\nfun main() {\n    println(area(Circle(2.0)))\n}",
-      "holeyCode": "// sealed で継承を制限する\n___ class Shape\n// Circle クラスを定義する\nclass ___(val radius: Double) : Shape()\n// Rectangle クラスを定義する\nclass ___(val w: Double, val h: Double) : Shape()\n\n// 面積を計算する関数\nfun area(s: ___): Double = when (s) {\n    // Circle の場合\n    is Circle -> 3.14 * s.___ * s.radius\n    // Rectangle の場合\n    is Rectangle -> s.___ * s.h\n}\n\n// main 関数を定義する\nfun ___() {\n    // area を出力する\n    ___(area(Circle(2.0)))\n}",
+      "correctCode": "sealed class Shape\nclass Circle(val radius: Double) : Shape()\nclass Rectangle(val w: Double, val h: Double) : Shape()\n\nfun area(s: Shape): Double = when (s) {\n    // Circle の場合 (radius * radius)\n    is Circle -> 3.14 * s.radius * s.radius\n    // Rectangle の場合 (w * h)\n    is Rectangle -> s.w * s.h\n}\n\nfun main() {\n    println(area(Circle(2.0)))\n}",
+      "holeyCode": "// sealed で継承を制限する\n___ class Shape\n// Circle クラスを定義する\nclass ___(val radius: Double) : Shape()\n// Rectangle クラスを定義する\nclass ___(val w: Double, val h: Double) : Shape()\n\n// 面積を計算する関数\nfun area(s: ___): Double = when (s) {\n    // Circle の場合 (radius * radius)\n    is Circle -> 3.14 * s.___ * s.radius\n    // Rectangle の場合 (w * h)\n    is Rectangle -> s.___ * s.h\n}\n\n// main 関数を定義する\nfun ___() {\n    // area を出力する\n    ___(area(Circle(2.0)))\n}",
       "correctLines": [
         "sealed class Shape",
         "class Circle(val radius: Double) : Shape()",
@@ -444,8 +444,8 @@ export const kotlin4Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "data class Config(var host: String = \"\", var port: Int = 0)\n\nfun main() {\n    val config = Config().apply {\n        host = \"localhost\"\n        port = 8080\n    }\n    println(\"${config.host}:${config.port}\")\n}",
-      "holeyCode": "// data class を定義する\n___ class Config(var host: String = \"\", var port: Int = 0)\n\n// main 関数を定義する\nfun ___() {\n    // apply でオブジェクトを設定する\n    val config = Config().___ {\n        // host を設定する\n        host = \"___\"\n        // port を設定する\n        port = ___\n    }\n    // config を出力する\n    println(\"${config.___}:${config.___}\")\n}",
+      "correctCode": "data class Config(var host: String = \"\", var port: Int = 0)\n\nfun main() {\n    val config = Config().apply {\n        // hostに\"localhost\"、portに8080を設定\n        host = \"localhost\"\n        port = 8080\n    }\n    println(\"${config.host}:${config.port}\")\n}",
+      "holeyCode": "// data class を定義する\n___ class Config(var host: String = \"\", var port: Int = 0)\n\n// main 関数を定義する\nfun ___() {\n    // apply でオブジェクトを設定する\n    val config = Config().___ {\n        // hostに\"localhost\"、portに8080を設定\n        host = \"___\"\n        // port を設定する\n        port = ___\n    }\n    // config を出力する\n    println(\"${config.___}:${config.___}\")\n}",
       "correctLines": [
         "data class Config(var host: String = \"\", var port: Int = 0)",
         "",

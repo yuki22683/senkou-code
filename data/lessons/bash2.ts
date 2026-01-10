@@ -25,7 +25,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums=(10 20 30)\n# 2で3番目の要素を取得\necho ${nums[2]}",
-      "holeyCode": "# 配列を定義\nnums=(___ 20 30)\n# 3番目の要素にアクセスするインデックス（0から数える）\necho ${nums[___]}",
+      "holeyCode": "# 配列を定義（10, 20, 30）\nnums=(___ 20 30)\n# 3番目の要素にアクセスするインデックス（0から数える）\necho ${nums[___]}",
       "correctLines": [
         "nums=(10 20 30)",
         "echo ${nums[2]}"
@@ -389,7 +389,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# <<でヒアドキュメントを開始\ncat <<END\nHello\nWorld\nEND",
-      "holeyCode": "# ヒアドキュメントを開始する演算子\ncat ___END\n# 1行目のテキスト\n___\n# 2行目のテキスト\n___\nEND",
+      "holeyCode": "# ヒアドキュメントを開始する演算子\ncat ___END\n# 1行目（Hello）と2行目（World）のテキストを入力\n___\n___\nEND",
       "correctLines": [
         "cat <<END",
         "Hello",

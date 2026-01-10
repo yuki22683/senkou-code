@@ -257,7 +257,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- DISTINCTで重複除去\nSELECT DISTINCT n FROM (\n  SELECT 1 AS n UNION ALL\n  SELECT 1 UNION ALL\n  SELECT 2\n);",
-      "holeyCode": "-- DISTINCTで重複除去\n___ ___ n FROM (\n  -- データを作成\n  ___ 1 AS n UNION ALL\n  -- 重複データを追加\n  ___ 1 UNION ALL\n  -- 異なるデータを追加\n  ___ 2\n);",
+      "holeyCode": "-- SELECT DISTINCT と入力して重複除去\n___ ___ n FROM (\n  -- データを作成\n  ___ 1 AS n UNION ALL\n  -- 重複データを追加\n  ___ 1 UNION ALL\n  -- 異なるデータを追加\n  ___ 2\n);",
       "correctLines": [
         "SELECT DISTINCT n FROM (",
         "  SELECT 1 AS n UNION ALL",

@@ -24,7 +24,7 @@ export const pythonData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 名前を受け取ってあいさつする関数\ndef hello(name):\n    # f'Hello, {name}!'を出力\n    print(f'Hello, {name}!')\n\n# 関数を呼び出す\nhello('Python')",
+      "correctCode": "# 名前を受け取ってあいさつする関数\ndef hello(name):\n    # f'Hello, {name}!'を出力\n    print(f'Hello, {name}!')\n\n# 関数を'Python'を渡して呼び出す\nhello('Python')",
       "holeyCode": "# 名前を受け取ってあいさつする関数\ndef hello(___):\n    # f'Hello, {name}!'を出力\n    print(f'Hello, {___}!')\n\n# 関数を'Python'を渡して呼び出す\n___",
       "correctLines": [
         "# 名前を受け取ってあいさつする関数",
@@ -74,11 +74,12 @@ export const pythonData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# デフォルト引数を持つ関数\ndef say_hi(name='World'):\n    print(f'Hi, {name}!')\n\n# 引数なしで呼び出す\nsay_hi()",
+      "correctCode": "# デフォルト引数を持つ関数\ndef say_hi(name='World'):\n    # メッセージを表示\n    print(f'Hi, {name}!')\n\n# 引数なしで呼び出す\nsay_hi()",
       "holeyCode": "# デフォルト引数を持つ関数\ndef say_hi(name=___):\n    # メッセージを表示\n    print(f'Hi, {___}!')\n\n# 引数なしで呼び出す\n___()",
       "correctLines": [
         "# デフォルト引数を持つ関数",
         "def say_hi(name='World'):",
+        "    # メッセージを表示",
         "    print(f'Hi, {name}!')",
         "",
         "# 引数なしで呼び出す",
@@ -87,6 +88,7 @@ export const pythonData2 = {
       "lineHints": [
         null,
         "デフォルト値として `'World'` を設定しましょう。",
+        null,
         null,
         null,
         null,
@@ -121,7 +123,7 @@ export const pythonData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 2つの数を足して返す関数\ndef add(a, b):\n    # 計算結果をreturnで返す\n    return a + b\n\n# 結果を変数に入れて表示\nresult = add(10, 20)\nprint(result)",
+      "correctCode": "# 2つの数を足して返す関数\ndef add(a, b):\n    # 計算結果をreturnで返す\n    return a + b\n\n# 結果を変数に入れて表示（引数は10と20）\nresult = add(10, 20)\n# resultを表示\nprint(result)",
       "holeyCode": "# 2つの数を足して返す関数\ndef add(a, b):\n    # 計算結果をreturnで返す\n    ___ a + b\n\n# 結果を変数に入れて表示（引数は10と20）\nresult = add(___, ___)\n# resultを表示\nprint(___)",
       "correctLines": [
         "# 2つの数を足して返す関数",
@@ -129,8 +131,9 @@ export const pythonData2 = {
         "    # 計算結果をreturnで返す",
         "    return a + b",
         "",
-        "# 結果を変数に入れて表示",
+        "# 結果を変数に入れて表示（引数は10と20）",
         "result = add(10, 20)",
+        "# resultを表示",
         "print(result)"
       ],
       "lineHints": [
@@ -138,6 +141,7 @@ export const pythonData2 = {
         null,
         null,
         "`return` を使って計算結果を返します。",
+        null,
         null,
         null,
         null,
@@ -172,7 +176,7 @@ export const pythonData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 2つの値を返す関数\ndef calc(x):\n    # x+1 と x*2 を返す\n    return x + 1, x * 2\n\n# 2つの変数で受け取る\na, b = calc(5)\nprint(a)\nprint(b)",
+      "correctCode": "# 2つの値を返す関数\ndef calc(x):\n    # x+1 と x*2 を返す\n    return x + 1, x * 2\n\n# 2つの変数で受け取る（引数は5）\na, b = calc(5)\n# aを表示\nprint(a)\n# bを表示\nprint(b)",
       "holeyCode": "# 2つの値を返す関数\ndef calc(x):\n    # x+1 と x*2 を返す\n    return x + 1, x ___ 2\n\n# 2つの変数で受け取る（引数は5）\na, b = calc(___)\n# aを表示\nprint(___)\n# bを表示\nprint(___)",
       "correctLines": [
         "# 2つの値を返す関数",
@@ -180,15 +184,20 @@ export const pythonData2 = {
         "    # x+1 と x*2 を返す",
         "    return x + 1, x * 2",
         "",
-        "# 2つの変数で受け取る",
+        "# 2つの変数で受け取る（引数は5）",
         "a, b = calc(5)",
+        "# aを表示",
         "print(a)",
+        "# bを表示",
         "print(b)"
       ],
       "lineHints": [
         null,
         null,
+        null,
         "かけ算の記号 `*` を使います。",
+        null,
+        null,
         null,
         null,
         null,
@@ -223,12 +232,12 @@ export const pythonData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 文字列を用意\nword = 'Programming'\n# 最初の4文字を取り出す\nprint(word[0:4])",
+      "correctCode": "# 文字列を用意（'Programming'）\nword = 'Programming'\n# 最初の4文字（0から4の手前まで）を取り出す\nprint(word[0:4])",
       "holeyCode": "# 文字列を用意（'Programming'）\nword = '___'\n# 最初の4文字（0から4の手前まで）を取り出す\nprint(word[___:___])",
       "correctLines": [
-        "# 文字列を用意",
+        "# 文字列を用意（'Programming'）",
         "word = 'Programming'",
-        "# 最初の4文字を取り出す",
+        "# 最初の4文字（0から4の手前まで）を取り出す",
         "print(word[0:4])"
       ],
       "lineHints": [
@@ -345,19 +354,25 @@ export const pythonData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# エラーが起きる可能性のある処理\ntry:\n    num = int('abc')\nexcept:\n    print('Error')",
+      "correctCode": "# エラーが起きる可能性のある処理\ntry:\n    # 文字列'abc'を数値に変換（エラー発生）\n    num = int('abc')\n# 例外をキャッチするキーワード\nexcept:\n    # エラーメッセージ（'Error'）\n    print('Error')",
       "holeyCode": "# エラーが起きる可能性のある処理\n___:\n    # 文字列'abc'を数値に変換（エラー発生）\n    num = int('___')\n# 例外をキャッチするキーワード\n___:\n    # エラーメッセージ（'Error'）\n    print('___')",
       "correctLines": [
         "# エラーが起きる可能性のある処理",
         "try:",
+        "    # 文字列'abc'を数値に変換（エラー発生）",
         "    num = int('abc')",
+        "# 例外をキャッチするキーワード",
         "except:",
+        "    # エラーメッセージ（'Error'）",
         "    print('Error')"
       ],
       "lineHints": [
         null,
         "`try` キーワードでエラーを捕まえる準備をします。",
         null,
+        null,
+        null,
+        "`except` キーワードで例外をキャッチします。",
         null,
         null
       ],
@@ -389,17 +404,19 @@ export const pythonData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# Catクラスを定義\nclass Cat:\n    # メソッドの第一引数はself\n    def meow(self):\n        print('Meow!')\n\n# インスタンスを作って呼び出す\ncat = Cat()\ncat.meow()",
+      "correctCode": "# Catクラスを定義\nclass Cat:\n    # メソッドの第一引数はself\n    def meow(self):\n        # メッセージ（'Meow!'）\n        print('Meow!')\n\n# インスタンスを作って呼び出す\ncat = Cat()\n# meowメソッドを呼び出す\ncat.meow()",
       "holeyCode": "# Catクラスを定義\nclass ___:\n    # メソッドの第一引数はself\n    def meow(___):\n        # メッセージ（'Meow!'）\n        print('___')\n\n# インスタンスを作って呼び出す\ncat = ___()\n# meowメソッドを呼び出す\ncat.___()",
       "correctLines": [
         "# Catクラスを定義",
         "class Cat:",
         "    # メソッドの第一引数はself",
         "    def meow(self):",
+        "        # メッセージ（'Meow!'）",
         "        print('Meow!')",
         "",
         "# インスタンスを作って呼び出す",
         "cat = Cat()",
+        "# meowメソッドを呼び出す",
         "cat.meow()"
       ],
       "lineHints": [
@@ -407,6 +424,8 @@ export const pythonData2 = {
         null,
         null,
         "メソッドの最初の引数は必ず `self` です。",
+        null,
+        null,
         null,
         null,
         null,
@@ -442,28 +461,34 @@ export const pythonData2 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# Robotクラスを定義\nclass Robot:\n    def __init__(self, name):\n        # selfを使って属性を保存\n        self.name = name\n    \n    def say_name(self):\n        print(self.name)\n\n# インスタンスを作る\nr = Robot('R2D2')\nr.say_name()",
+      "correctCode": "# Robotクラスを定義\nclass Robot:\n    # コンストラクタを定義\n    def __init__(self, name):\n        # selfを使って属性を保存\n        self.name = name\n    \n    def say_name(self):\n        # self.nameを表示\n        print(self.name)\n\n# インスタンスを作る（名前は'R2D2'）\nr = Robot('R2D2')\n# say_nameメソッドを呼び出す\nr.say_name()",
       "holeyCode": "# Robotクラスを定義\nclass ___:\n    # コンストラクタを定義\n    def ___(self, name):\n        # selfを使って属性を保存\n        ___.name = name\n    \n    def say_name(self):\n        # self.nameを表示\n        print(self.___)\n\n# インスタンスを作る（名前は'R2D2'）\nr = Robot('___')\n# say_nameメソッドを呼び出す\nr.___()",
       "correctLines": [
         "# Robotクラスを定義",
         "class Robot:",
+        "    # コンストラクタを定義",
         "    def __init__(self, name):",
         "        # selfを使って属性を保存",
         "        self.name = name",
         "    ",
         "    def say_name(self):",
+        "        # self.nameを表示",
         "        print(self.name)",
         "",
-        "# インスタンスを作る",
+        "# インスタンスを作る（名前は'R2D2'）",
         "r = Robot('R2D2')",
+        "# say_nameメソッドを呼び出す",
         "r.say_name()"
       ],
       "lineHints": [
         null,
         null,
         null,
+        "`__init__` はコンストラクタです。",
         null,
         "`self` を使ってオブジェクトに属性を保存します。",
+        null,
+        null,
         null,
         null,
         null,

@@ -25,7 +25,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums = [1, 2, 3]\n# eachで各要素を処理\nnums.each do |n|\n  puts n\nend",
-      "holeyCode": "# numsに配列を代入\nnums = [___, ___, ___]\n# eachで各要素を処理\nnums.___ do |n|\n  # putsで出力\n  puts ___\n# endで終了\n___",
+      "holeyCode": "# numsに配列を代入（1, 2, 3）\nnums = [___, ___, ___]\n# eachで各要素を処理\nnums.___ do |n|\n  # putsで出力\n  puts ___\n# endで終了\n___",
       "correctLines": [
         "nums = [1, 2, 3]",
         "nums.each do |n|",
@@ -67,7 +67,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums = [1, 2, 3]\n# mapで各要素を変換\ndoubled = nums.map { |n| n * 2 }\nputs doubled",
-      "holeyCode": "# numsに配列を代入\nnums = [___, ___, ___]\n# mapで各要素を変換\ndoubled = nums.___ { |n| n * 2 }\n# putsで出力\nputs ___",
+      "holeyCode": "# numsに配列を代入（1, 2, 3）\nnums = [___, ___, ___]\n# mapで各要素を変換\ndoubled = nums.___ { |n| n * 2 }\n# putsで出力\nputs ___",
       "correctLines": [
         "nums = [1, 2, 3]",
         "doubled = nums.map { |n| n * 2 }",
@@ -107,7 +107,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums = [1, 2, 3, 4, 5]\n# selectで条件に合う要素を抽出\nbig = nums.select { |n| n >= 3 }\nputs big",
-      "holeyCode": "# numsに配列を代入\nnums = [___, ___, ___, ___, ___]\n# selectで条件に合う要素を抽出\nbig = nums.___ { |n| n >= 3 }\n# putsで出力\nputs ___",
+      "holeyCode": "# numsに配列を代入（1, 2, 3, 4, 5）\nnums = [___, ___, ___, ___, ___]\n# selectで条件に合う要素を抽出\nbig = nums.___ { |n| n >= 3 }\n# putsで出力\nputs ___",
       "correctLines": [
         "nums = [1, 2, 3, 4, 5]",
         "big = nums.select { |n| n >= 3 }",

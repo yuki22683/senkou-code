@@ -24,7 +24,7 @@ export const javaData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\nclass Box<T> {\n    private T value;\n    public void set(T v) { value = v; }\n    public T get() { return value; }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Box<String> box = new Box<>();\n        box.set(\"Java\");\n        System.out.println(box.get());\n    }\n}",
+      "correctCode": "import java.util.*;\n\n// <T> で型パラメータを定義する\nclass Box<T> {\n    private T value;\n    public void set(T v) { value = v; }\n    public T get() { return value; }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Box<String> box = new Box<>();\n        // set で値を設定する\n        box.set(\"Java\");\n        // get で値を取得して出力する\n        System.out.println(box.get());\n    }\n}",
       "holeyCode": "import java.util.*;\n\n// <T> で型パラメータを定義する\nclass Box___T___ {\n    private T value;\n    public void set(T v) { value = v; }\n    public T get() { return value; }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Box<String> box = ___ Box<>();\n        // set で値を設定する\n        box.___(\"Java\");\n        // get で値を取得して出力する\n        System.out.println(box.___());\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -91,7 +91,7 @@ export const javaData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "class Calculator<T extends Number> {\n    private T value;\n    public Calculator(T v) { value = v; }\n    public double getDouble() { return value.doubleValue(); }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Calculator<Integer> calc = new Calculator<>(42);\n        System.out.println(calc.getDouble());\n    }\n}",
+      "correctCode": "// extends で型の上限を Number に制限する\nclass Calculator<T extends Number> {\n    private T value;\n    public Calculator(T v) { value = v; }\n    public double getDouble() { return value.doubleValue(); }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Calculator<Integer> calc = new Calculator<>(42);\n        // getDouble メソッドを呼び出す\n        System.out.println(calc.getDouble());\n    }\n}",
       "holeyCode": "// extends で型の上限を Number に制限する\nclass Calculator<T ___ Number> {\n    private T value;\n    public Calculator(T v) { value = v; }\n    public double getDouble() { return value.doubleValue(); }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Calculator<Integer> calc = ___ Calculator<>(42);\n        // getDouble メソッドを呼び出す\n        System.out.println(calc.___());\n    }\n}",
       "correctLines": [
         "class Calculator<T extends Number> {",
@@ -151,7 +151,7 @@ export const javaData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void printAll(List<?> list) {\n        for (Object item : list) {\n            System.out.println(item);\n        }\n    }\n    public static void main(String[] args) {\n        List<String> names = Arrays.asList(\"A\", \"B\");\n        printAll(names);\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    // ? で任意の型を表すワイルドカード\n    public static void printAll(List<?> list) {\n        for (Object item : list) {\n            // println で出力する\n            System.out.println(item);\n        }\n    }\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<String> names = Arrays.asList(\"A\", \"B\");\n        // printAll メソッドを呼び出す\n        printAll(names);\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    // ? で任意の型を表すワイルドカード\n    public static void printAll(List<___> list) {\n        for (Object item : list) {\n            // println で出力する\n            System.out.___(item);\n        }\n    }\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<String> names = Arrays.___(\"A\", \"B\");\n        // printAll メソッドを呼び出す\n        ___(names);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -214,7 +214,7 @@ export const javaData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Map<String, Integer> scores = new HashMap<>();\n        scores.put(\"Math\", 90);\n        scores.put(\"English\", 85);\n        System.out.println(scores.get(\"Math\"));\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で HashMap を作成する\n        Map<String, Integer> scores = new HashMap<>();\n        // put でキーと値を追加する\n        scores.put(\"Math\", 90);\n        // put でキーと値を追加する\n        scores.put(\"English\", 85);\n        // get で値を取得する\n        System.out.println(scores.get(\"Math\"));\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で HashMap を作成する\n        Map<String, Integer> scores = ___ HashMap<>();\n        // put でキーと値を追加する\n        scores.___(\"Math\", 90);\n        // put でキーと値を追加する\n        scores.___(\"English\", 85);\n        // get で値を取得する\n        System.out.println(scores.___(\"Math\"));\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -272,7 +272,7 @@ export const javaData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Map<String, Integer> map = new HashMap<>();\n        map.put(\"A\", 1);\n        map.put(\"B\", 2);\n        for (Map.Entry<String, Integer> e : map.entrySet()) {\n            System.out.println(e.getKey());\n        }\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で HashMap を作成する\n        Map<String, Integer> map = new HashMap<>();\n        // put でキーと値を追加する\n        map.put(\"A\", 1);\n        // put でキーと値を追加する\n        map.put(\"B\", 2);\n        // entrySet でエントリを取得する\n        for (Map.Entry<String, Integer> e : map.entrySet()) {\n            // getKey でキーを取得する\n            System.out.println(e.getKey());\n        }\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で HashMap を作成する\n        Map<String, Integer> map = ___ HashMap<>();\n        // put でキーと値を追加する\n        map.___(\"A\", 1);\n        // put でキーと値を追加する\n        map.___(\"B\", 2);\n        // entrySet でエントリを取得する\n        for (Map.Entry<String, Integer> e : map.___()) {\n            // getKey でキーを取得する\n            System.out.println(e.___());\n        }\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -334,7 +334,7 @@ export const javaData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> words = new ArrayList<>(Arrays.asList(\"cat\", \"a\", \"elephant\"));\n        words.sort(Comparator.comparing(String::length));\n        System.out.println(words);\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new と asList でリストを作成する\n        List<String> words = new ArrayList<>(Arrays.asList(\"cat\", \"a\", \"elephant\"));\n        // comparing でプロパティを基準に比較する\n        words.sort(Comparator.comparing(String::length));\n        // println で出力する\n        System.out.println(words);\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new と asList でリストを作成する\n        List<String> words = ___ ArrayList<>(Arrays.___(\"cat\", \"a\", \"elephant\"));\n        // comparing でプロパティを基準に比較する\n        words.sort(Comparator.___(String::length));\n        // println で出力する\n        System.out.___(words);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -389,7 +389,7 @@ export const javaData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\nclass Score implements Comparable<Score> {\n    int value;\n    Score(int v) { value = v; }\n    public int compareTo(Score other) {\n        return this.value - other.value;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Score> scores = Arrays.asList(new Score(80), new Score(60));\n        Collections.sort(scores);\n        System.out.println(scores.get(0).value);\n    }\n}",
+      "correctCode": "import java.util.*;\n\n// Comparable を実装して自然順序を定義する\nclass Score implements Comparable<Score> {\n    int value;\n    Score(int v) { value = v; }\n    public int compareTo(Score other) {\n        // return で比較結果を返す\n        return this.value - other.value;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Score> scores = Arrays.asList(new Score(80), new Score(60));\n        // sort でソートする\n        Collections.sort(scores);\n        // get で要素を取得する\n        System.out.println(scores.get(0).value);\n    }\n}",
       "holeyCode": "import java.util.*;\n\n// Comparable を実装して自然順序を定義する\nclass Score implements ___<Score> {\n    int value;\n    Score(int v) { value = v; }\n    public int compareTo(Score other) {\n        // return で比較結果を返す\n        ___ this.value - other.value;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Score> scores = Arrays.___(new Score(80), new Score(60));\n        // sort でソートする\n        Collections.___(scores);\n        // get で要素を取得する\n        System.out.println(scores.___(0).value);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -460,7 +460,7 @@ export const javaData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "enum Day {\n    MON, TUE, WED, THU, FRI, SAT, SUN\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Day today = Day.MON;\n        System.out.println(today);\n    }\n}",
+      "correctCode": "// enum で列挙型を定義する\nenum Day {\n    MON, TUE, WED, THU, FRI, SAT, SUN\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // Day.MON で列挙値を取得する\n        Day today = Day.MON;\n        // println で出力する\n        System.out.println(today);\n    }\n}",
       "holeyCode": "// enum で列挙型を定義する\n___ Day {\n    MON, TUE, WED, THU, FRI, SAT, SUN\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // Day.MON で列挙値を取得する\n        Day today = Day.___;\n        // println で出力する\n        System.out.___(today);\n    }\n}",
       "correctLines": [
         "enum Day {",
@@ -516,7 +516,7 @@ export const javaData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Queue<String> queue = new LinkedList<>();\n        queue.offer(\"First\");\n        queue.offer(\"Second\");\n        System.out.println(queue.poll());\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で LinkedList を作成する\n        Queue<String> queue = new LinkedList<>();\n        // offer でキューに要素を追加する\n        queue.offer(\"First\");\n        // offer でキューに要素を追加する\n        queue.offer(\"Second\");\n        // poll で要素を取り出す\n        System.out.println(queue.poll());\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で LinkedList を作成する\n        Queue<String> queue = ___ LinkedList<>();\n        // offer でキューに要素を追加する\n        queue.___(\"First\");\n        // offer でキューに要素を追加する\n        queue.___(\"Second\");\n        // poll で要素を取り出す\n        System.out.println(queue.___());\n    }\n}",
       "correctLines": [
         "import java.util.*;",
@@ -574,7 +574,7 @@ export const javaData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Deque<Integer> stack = new ArrayDeque<>();\n        stack.push(10);\n        stack.push(20);\n        System.out.println(stack.pop());\n    }\n}",
+      "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で ArrayDeque を作成する\n        Deque<Integer> stack = new ArrayDeque<>();\n        // push でスタックに積む\n        stack.push(10);\n        // push でスタックに積む\n        stack.push(20);\n        // pop でスタックから取り出す\n        System.out.println(stack.pop());\n    }\n}",
       "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で ArrayDeque を作成する\n        Deque<Integer> stack = ___ ArrayDeque<>();\n        // push でスタックに積む\n        stack.___(10);\n        // push でスタックに積む\n        stack.___(20);\n        // pop でスタックから取り出す\n        System.out.println(stack.___());\n    }\n}",
       "correctLines": [
         "import java.util.*;",

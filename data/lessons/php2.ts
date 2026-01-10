@@ -240,8 +240,8 @@ export const php2Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "<?php\n$nums = [1, 2, 3];\n// array_mapで各要素を変換\n$squared = array_map(fn($n) => $n * $n, $nums);\nprint_r($squared);\n?>",
-      "holeyCode": "<?php\n// 配列を定義\n$nums = [1, 2, ___];\n// array_mapで各要素を変換\n$squared = ___(fn($n) => $n * $n, $nums);\n// print_rで配列を出力\n___ ($squared);\n?>",
+      "correctCode": "<?php\n// 配列を定義（1, 2, 3）\n$nums = [1, 2, 3];\n// array_mapで各要素を変換\n$squared = array_map(fn($n) => $n * $n, $nums);\nprint_r($squared);\n?>",
+      "holeyCode": "<?php\n// 配列を定義（1, 2, 3）\n$nums = [1, 2, ___];\n// array_mapで各要素を変換\n$squared = ___(fn($n) => $n * $n, $nums);\n// print_rで配列を出力\n___ ($squared);\n?>",
       "correctLines": [
         "<?php",
         "$nums = [1, 2, 3];",

@@ -23,11 +23,6 @@ export default function TutorialPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
-  // スワイプ用の状態
-  const touchStartX = useRef<number | null>(null);
-  const touchEndX = useRef<number | null>(null);
-  const minSwipeDistance = 50;
-
   useEffect(() => {
     loadExercise();
   }, [exerciseId]);
@@ -118,33 +113,6 @@ export default function TutorialPage() {
     router.push(`/lessons/${language}/${lessonId}/exercises/${exerciseId}`);
   }
 
-  // スワイプハンドラー
-  const onTouchStart = useCallback((e: React.TouchEvent) => {
-    touchEndX.current = null;
-    touchStartX.current = e.targetTouches[0].clientX;
-  }, []);
-
-  const onTouchMove = useCallback((e: React.TouchEvent) => {
-    touchEndX.current = e.targetTouches[0].clientX;
-  }, []);
-
-  const onTouchEnd = useCallback(() => {
-    if (!touchStartX.current || !touchEndX.current) return;
-
-    const distance = touchStartX.current - touchEndX.current;
-    const isLeftSwipe = distance > minSwipeDistance;
-    const isRightSwipe = distance < -minSwipeDistance;
-
-    if (isLeftSwipe && currentSlide < slides.length - 1) {
-      setCurrentSlide(currentSlide + 1);
-    } else if (isRightSwipe && currentSlide > 0) {
-      setCurrentSlide(currentSlide - 1);
-    }
-
-    touchStartX.current = null;
-    touchEndX.current = null;
-  }, [currentSlide, slides.length]);
-
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -194,9 +162,6 @@ export default function TutorialPage() {
         {/* スライドコンテンツ */}
         <div
           className="bg-white rounded-lg shadow-lg p-4 mb-4 border"
-          onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
-          onTouchEnd={onTouchEnd}
         >
           <h2 className="text-lg font-bold mb-3 text-gray-800">
             {currentSlideData.title || "タイトルなし"}

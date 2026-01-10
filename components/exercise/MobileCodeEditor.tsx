@@ -704,23 +704,34 @@ export function MobileCodeEditor({
               );
             }
 
-            // 選択肢を均等に複数行に配分
+            // 選択肢をできるだけ均等な数で複数行に配分
             const count = suggestions.length;
-            const maxPerRow = 6; // 1行あたりの最大数
+            const maxPerRow = 4; 
             const numRows = Math.ceil(count / maxPerRow);
-            const itemsPerRow = Math.ceil(count / numRows);
-
+            
             const rows: string[][] = [];
-            for (let i = 0; i < count; i += itemsPerRow) {
-              rows.push(suggestions.slice(i, i + itemsPerRow));
+            let startIndex = 0;
+
+            for (let i = 0; i < numRows; i++) {
+              // 残りのアイテムを残りの行数で割って、現在の行の個数を決定
+              // これにより、余りが各行に分散され、行ごとの個数差が1以内になる
+              // 例: 13個, 3行 -> 5, 4, 4
+              const itemsForThisRow = Math.ceil((count - startIndex) / (numRows - i));
+              const endIndex = startIndex + itemsForThisRow;
+              rows.push(suggestions.slice(startIndex, endIndex));
+              startIndex = endIndex;
             }
 
             return (
-              <div className="flex flex-col gap-1 sm:gap-2 w-full">
+              <div className="flex flex-col gap-1 sm:gap-2 w-full items-center">
                 {rows.map((row, rowIdx) => (
-                  <div key={rowIdx} className="flex w-full gap-1 sm:gap-2 justify-center">
+                  <div 
+                    key={rowIdx} 
+                    className="grid grid-flow-col gap-1 sm:gap-2 w-full"
+                    style={{ gridAutoColumns: "minmax(max-content, 1fr)" }}
+                  >
                     {row.map((token, colIdx) => {
-                      const idx = rowIdx * itemsPerRow + colIdx;
+                      const idx = suggestions.indexOf(token);
                       return (
                         <button
                           key={`${token}-${idx}`}
@@ -735,7 +746,7 @@ export function MobileCodeEditor({
                             color: SYNTAX_COLORS.foreground,
                             transition: 'background-color 0.15s ease-out'
                           }}
-                          className="h-10 sm:h-14 px-4 sm:px-5 rounded font-mono font-bold border active:scale-95 text-base sm:text-xl lg:text-2xl whitespace-nowrap text-center"
+                          className="w-full h-9 sm:h-12 px-3 sm:px-6 rounded font-mono font-bold border active:scale-95 text-sm sm:text-lg lg:text-2xl whitespace-nowrap min-w-[60px] sm:min-w-[100px] text-center"
                         >
                           {token}
                         </button>

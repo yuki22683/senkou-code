@@ -329,7 +329,7 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- CASEで条件分岐\nSELECT CASE\n  WHEN 85 >= 80 THEN 'pass'\n  ELSE 'fail'\nEND;",
-      "holeyCode": "-- CASEで条件分岐\n___ ___\n  -- 条件を指定\n  ___ 85 >= 80 THEN 'pass'\n  -- それ以外の場合\n  ___ 'fail'\n___;",
+      "holeyCode": "-- SELECT CASE と入力して条件分岐\n___ ___\n  -- 条件を指定\n  ___ 85 >= 80 THEN 'pass'\n  -- それ以外の場合\n  ___ 'fail'\n___;",
       "correctLines": [
         "SELECT CASE",
         "  WHEN 85 >= 80 THEN 'pass'",

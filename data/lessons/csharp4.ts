@@ -25,7 +25,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Container<T> {\n    public T Item { get; set; }\n}\n\nclass Program {\n    static void Main() {\n        var c = new Container<string> { Item = \"Hello\" };\n        Console.WriteLine(c.Item);\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// 型パラメータを定義する記号\nclass Container___T___ {\n    // プロパティを定義\n    public T Item { ___; set; }\n}\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // Containerインスタンスを作成\n        var c = new Container<string> { Item = \"___\" };\n        // 結果を表示\n        Console.___(c.Item);\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// 型パラメータを定義する記号\nclass Container___T___ {\n    // プロパティを定義\n    public T Item { ___; set; }\n}\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // \"Hello\" を持つ Container インスタンスを作成\n        var c = new Container<string> { Item = \"___\" };\n        // 結果を表示\n        Console.___(c.Item);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -515,7 +515,7 @@ export const csharp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Item {\n    public string Name { get; init; }\n}\n\nclass Program {\n    static void Main() {\n        var item = new Item { Name = \"Apple\" };\n        Console.WriteLine(item.Name);\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Itemクラスを定義\nclass ___ {\n    // 初期化時のみ値を設定できるアクセサ\n    public string Name { get; ___; }\n}\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // Itemインスタンスを作成\n        var item = new Item { Name = \"___\" };\n        // 結果を表示\n        Console.___(item.Name);\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Itemクラスを定義\nclass ___ {\n    // 初期化時のみ値を設定できるアクセサ\n    public string Name { get; ___; }\n}\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // \"Apple\" を持つ Item インスタンスを作成\n        var item = new Item { Name = \"___\" };\n        // 結果を表示\n        Console.___(item.Name);\n    }\n}",
       "correctLines": [
         "using System;",
         "",

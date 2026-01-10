@@ -391,7 +391,7 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- GROUP_CONCATで値を結合\nSELECT GROUP_CONCAT(val, '-') FROM\n  (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
-      "holeyCode": "-- GROUP_CONCATで値を結合\n___ ___(val, '-') FROM\n  -- データを作成\n  (___ 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
+      "holeyCode": "-- SELECT GROUP_CONCAT と入力して値を結合\n___ ___(val, '-') FROM (___ 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
       "correctLines": [
         "SELECT GROUP_CONCAT(val, '-') FROM",
         "  (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');"

@@ -393,8 +393,8 @@ export const typescriptData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "function greet(name: string, age: number): void {\n  console.log(`${name} is ${age}`);\n}\n// Parameters で関数の引数型を取得\ntype GreetParams = Parameters<typeof greet>;\nconst args: GreetParams = ['Taro', 25];\ngreet(...args);",
-      "holeyCode": "function greet(name: string, age: number): void {\n  // テンプレート文字列で出力\n  console.log(`${name} is ${___}`);\n}\n// Parameters で関数の引数型を取得\ntype GreetParams = ___<typeof greet>;\n// 引数の配列を定義\nconst args: GreetParams = ['Taro', ___];\n// 関数を呼び出し\ngreet(...___);",
+      "correctCode": "function greet(name: string, age: number): void {\n  console.log(`${name} is ${age}`);\n}\n// Parameters で関数の引数型を取得\ntype GreetParams = Parameters<typeof greet>;\nconst args: GreetParams = ['Taro', 25];\n// 引数の配列 args を渡して呼び出し\ngreet(...args);",
+      "holeyCode": "function greet(name: string, age: number): void {\n  // テンプレート文字列で出力\n  console.log(`${name} is ${___}`);\n}\n// Parameters で関数の引数型を取得\ntype GreetParams = ___<typeof greet>;\n// 引数の配列を定義\nconst args: GreetParams = ['Taro', ___];\n// 引数の配列 args を渡して呼び出し\ngreet(...___);",
       "correctLines": [
         "function greet(name: string, age: number): void {",
         "  console.log(`${name} is ${age}`);",
