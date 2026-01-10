@@ -390,7 +390,7 @@ export const javaData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\nclass Score implements Comparable<Score> {\n    int value;\n    Score(int v) { value = v; }\n    public int compareTo(Score other) {\n        return this.value - other.value;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Score> scores = Arrays.asList(new Score(80), new Score(60));\n        Collections.sort(scores);\n        System.out.println(scores.get(0).value);\n    }\n}",
-      "holeyCode": "import java.util.*;\n\n// Comparable を実装して自然順序を定義する\nclass Score implements ___<Score> {\n    int value;\n    Score(int v) { value = v; }\n    public int compareTo(Score other) {\n        return this.value - other.value;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Score> scores = Arrays.asList(new Score(80), new Score(60));\n        Collections.sort(scores);\n        System.out.println(scores.get(0).value);\n    }\n}",
+      "holeyCode": "import java.util.*;\n\n// Comparable を実装して自然順序を定義する\nclass Score implements ___<Score> {\n    int value;\n    Score(int v) { value = v; }\n    public int compareTo(Score other) {\n        // return で比較結果を返す\n        ___ this.value - other.value;\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Score> scores = Arrays.___(new Score(80), new Score(60));\n        // sort でソートする\n        Collections.___(scores);\n        // get で要素を取得する\n        System.out.println(scores.___(0).value);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -413,23 +413,27 @@ export const javaData4 = {
       "lineHints": [
         null,
         null,
-        "Comparable を実装して自然順序を定義します。",
+        null,
+        "`Comparable` を実装して自然順序を定義します。",
         null,
         null,
         null,
         null,
+        "`return` で比較結果を返します。",
         null,
         null,
         null,
         null,
+        "`asList` でリストを作成します。",
         null,
+        "`sort` でソートします。",
         null,
-        null,
+        "`get` で要素を取得します。",
         null,
         null
       ],
       "candidates": {
-        "interfaces": ["Comparable", "Comparator", "Sortable"]
+        "interfaces": ["Comparable", "Comparator", "Sortable", "return", "asList", "sort", "get"]
       },
       "testCases": [
         {
@@ -457,7 +461,7 @@ export const javaData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "enum Day {\n    MON, TUE, WED, THU, FRI, SAT, SUN\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Day today = Day.MON;\n        System.out.println(today);\n    }\n}",
-      "holeyCode": "// enum で列挙型を定義する\n___ Day {\n    MON, TUE, WED, THU, FRI, SAT, SUN\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Day today = Day.MON;\n        System.out.println(today);\n    }\n}",
+      "holeyCode": "// enum で列挙型を定義する\n___ Day {\n    MON, TUE, WED, THU, FRI, SAT, SUN\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // Day.MON で列挙値を取得する\n        Day today = Day.___;\n        // println で出力する\n        System.out.___(today);\n    }\n}",
       "correctLines": [
         "enum Day {",
         "    MON, TUE, WED, THU, FRI, SAT, SUN",
@@ -471,19 +475,21 @@ export const javaData4 = {
         "}"
       ],
       "lineHints": [
-        "enum で列挙型を定義します。",
+        null,
+        "`enum` で列挙型を定義します。",
         null,
         null,
         null,
         null,
         null,
+        "`MON` で列挙値を取得します。",
         null,
-        null,
+        "`println` で出力します。",
         null,
         null
       ],
       "candidates": {
-        "keywords": ["enum", "class", "interface"]
+        "keywords": ["enum", "class", "interface", "MON", "println"]
       },
       "testCases": [
         {
@@ -511,7 +517,7 @@ export const javaData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Queue<String> queue = new LinkedList<>();\n        queue.offer(\"First\");\n        queue.offer(\"Second\");\n        System.out.println(queue.poll());\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Queue<String> queue = new LinkedList<>();\n        // offer でキューに要素を追加する\n        queue.___(\"First\");\n        queue.offer(\"Second\");\n        System.out.println(queue.poll());\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で LinkedList を作成する\n        Queue<String> queue = ___ LinkedList<>();\n        // offer でキューに要素を追加する\n        queue.___(\"First\");\n        // offer でキューに要素を追加する\n        queue.___(\"Second\");\n        // poll で要素を取り出す\n        System.out.println(queue.___());\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -530,14 +536,18 @@ export const javaData4 = {
         null,
         null,
         null,
-        "offer でキューに要素を追加します。",
+        "`new` で LinkedList を作成します。",
         null,
+        "`offer` でキューに要素を追加します。",
         null,
+        "`offer` でキューに要素を追加します。",
+        null,
+        "`poll` で要素を取り出します。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["offer", "add", "push"]
+        "methods": ["offer", "add", "push", "new", "poll"]
       },
       "testCases": [
         {
@@ -565,7 +575,7 @@ export const javaData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Deque<Integer> stack = new ArrayDeque<>();\n        stack.push(10);\n        stack.push(20);\n        System.out.println(stack.pop());\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Deque<Integer> stack = new ArrayDeque<>();\n        stack.push(10);\n        // push でスタックに積む\n        stack.___(20);\n        System.out.println(stack.pop());\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で ArrayDeque を作成する\n        Deque<Integer> stack = ___ ArrayDeque<>();\n        // push でスタックに積む\n        stack.___(10);\n        // push でスタックに積む\n        stack.___(20);\n        // pop でスタックから取り出す\n        System.out.println(stack.___());\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -584,14 +594,18 @@ export const javaData4 = {
         null,
         null,
         null,
+        "`new` で ArrayDeque を作成します。",
         null,
-        "push でスタックに積みます。",
+        "`push` でスタックに積みます。",
         null,
+        "`push` でスタックに積みます。",
+        null,
+        "`pop` でスタックから取り出します。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["push", "add", "offer"]
+        "methods": ["push", "add", "offer", "new", "pop"]
       },
       "testCases": [
         {

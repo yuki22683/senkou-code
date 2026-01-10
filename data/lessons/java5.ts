@@ -25,7 +25,7 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        try {\n            int result = 10 / 0;\n        } catch (ArithmeticException e) {\n            System.out.println(\"Error\");\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // try で例外が起きる可能性のある処理を囲む\n        ___ {\n            int result = 10 / 0;\n        } catch (ArithmeticException e) {\n            System.out.println(\"Error\");\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // try で例外が起きる可能性のある処理を囲む\n        ___ {\n            // 0で割ると例外が発生する\n            int result = 10 / ___;\n        } catch (ArithmeticException e) {\n            // println でエラーメッセージを出力する\n            System.out.___(\"Error\");\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -40,16 +40,18 @@ export const javaData5 = {
       "lineHints": [
         null,
         null,
-        "try で例外が起きる可能性のある処理を囲みます。",
+        null,
+        "`try` で例外が起きる可能性のある処理を囲みます。",
+        null,
+        "`0` で割ると例外が発生します。",
         null,
         null,
-        null,
-        null,
+        "`println` でエラーメッセージを出力します。",
         null,
         null
       ],
       "candidates": {
-        "keywords": ["try", "catch", "throw"]
+        "keywords": ["try", "catch", "throw", "0", "println"]
       },
       "testCases": [
         {
