@@ -79,7 +79,7 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        } finally {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        // finally で必ず実行する\n        } ___ {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        try {\n            // println で出力する\n            System.out.___(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        // finally で必ず実行する\n        } ___ {\n            // println で出力する\n            System.out.___(\"Finally\");\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -98,16 +98,18 @@ export const javaData5 = {
         null,
         null,
         null,
+        "`println` で出力します。",
         null,
         null,
-        "finally は必ず実行されます。",
         null,
+        "`finally` は必ず実行されます。",
         null,
+        "`println` で出力します。",
         null,
         null
       ],
       "candidates": {
-        "keywords": ["finally", "catch", "end"]
+        "keywords": ["finally", "catch", "end", "println"]
       },
       "testCases": [
         {
@@ -135,7 +137,7 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.io.*;\n\npublic class Main {\n    public static void riskyMethod() throws Exception {\n        throw new Exception(\"Error!\");\n    }\n    public static void main(String[] args) {\n        try {\n            riskyMethod();\n        } catch (Exception e) {\n            System.out.println(\"Caught\");\n        }\n    }\n}",
-      "holeyCode": "import java.io.*;\n\npublic class Main {\n    // throws で例外をスローすることを宣言する\n    public static void riskyMethod() ___ Exception {\n        throw new Exception(\"Error!\");\n    }\n    public static void main(String[] args) {\n        try {\n            riskyMethod();\n        } catch (Exception e) {\n            System.out.println(\"Caught\");\n        }\n    }\n}",
+      "holeyCode": "import java.io.*;\n\npublic class Main {\n    // throws で例外をスローすることを宣言する\n    public static void riskyMethod() ___ Exception {\n        // throw で例外をスローする\n        ___ new Exception(\"Error!\");\n    }\n    public static void main(String[] args) {\n        try {\n            // riskyMethod を呼び出す\n            ___();\n        } catch (Exception e) {\n            // println で出力する\n            System.out.___(\"Caught\");\n        }\n    }\n}",
       "correctLines": [
         "import java.io.*;",
         "",
@@ -156,20 +158,23 @@ export const javaData5 = {
         null,
         null,
         null,
-        "throws で例外をスローすることを宣言します。",
+        null,
+        "`throws` で例外をスローすることを宣言します。",
+        null,
+        "`throw` で例外をスローします。",
         null,
         null,
         null,
         null,
+        "`riskyMethod` を呼び出します。",
         null,
         null,
-        null,
-        null,
+        "`println` で出力します。",
         null,
         null
       ],
       "candidates": {
-        "keywords": ["throws", "throw", "catch"]
+        "keywords": ["throws", "throw", "catch", "riskyMethod", "println"]
       },
       "testCases": [
         {
@@ -197,7 +202,7 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class InvalidAgeException extends Exception {\n    public InvalidAgeException(String msg) {\n        super(msg);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        try {\n            throw new InvalidAgeException(\"Invalid\");\n        } catch (InvalidAgeException e) {\n            System.out.println(e.getMessage());\n        }\n    }\n}",
-      "holeyCode": "// extends で Exception を継承する\nclass InvalidAgeException ___ Exception {\n    public InvalidAgeException(String msg) {\n        super(msg);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        try {\n            throw new InvalidAgeException(\"Invalid\");\n        } catch (InvalidAgeException e) {\n            System.out.println(e.getMessage());\n        }\n    }\n}",
+      "holeyCode": "// extends で Exception を継承する\nclass InvalidAgeException ___ Exception {\n    public InvalidAgeException(String msg) {\n        // super で親クラスのコンストラクタを呼び出す\n        ___(msg);\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        try {\n            // throw で例外をスローする\n            ___ new InvalidAgeException(\"Invalid\");\n        } catch (InvalidAgeException e) {\n            // getMessage でメッセージを取得する\n            System.out.println(e.___());\n        }\n    }\n}",
       "correctLines": [
         "class InvalidAgeException extends Exception {",
         "    public InvalidAgeException(String msg) {",
@@ -216,24 +221,26 @@ export const javaData5 = {
         "}"
       ],
       "lineHints": [
-        "extends で Exception を継承します。",
+        null,
+        "`extends` で Exception を継承します。",
+        null,
+        null,
+        "`super` で親クラスのコンストラクタを呼び出します。",
         null,
         null,
         null,
         null,
         null,
         null,
+        "`throw` で例外をスローします。",
         null,
         null,
-        null,
-        null,
-        null,
-        null,
+        "`getMessage` でメッセージを取得します。",
         null,
         null
       ],
       "candidates": {
-        "keywords": ["extends", "implements", "throws"]
+        "keywords": ["extends", "implements", "throws", "super", "throw", "getMessage"]
       },
       "testCases": [
         {
@@ -261,7 +268,7 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        try (StringReader reader = new StringReader(\"Hello\")) {\n            System.out.println((char) reader.read());\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}",
-      "holeyCode": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // ( でリソースを宣言する try-with-resources\n        try ___ StringReader reader = new StringReader(\"Hello\")) {\n            System.out.println((char) reader.read());\n        } catch (IOException e) {\n            e.printStackTrace();\n        }\n    }\n}",
+      "holeyCode": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // ( でリソースを宣言する try-with-resources\n        try ___ StringReader reader = new StringReader(\"Hello\")) {\n            // read で1文字読み込む\n            System.out.println((char) reader.___());\n        } catch (IOException e) {\n            // printStackTrace でスタックトレースを出力する\n            e.___();\n        }\n    }\n}",
       "correctLines": [
         "import java.io.*;",
         "",
@@ -280,16 +287,18 @@ export const javaData5 = {
         null,
         null,
         null,
-        "( でリソースを宣言します。",
+        null,
+        "`(` でリソースを宣言します。",
+        null,
+        "`read` で1文字読み込みます。",
         null,
         null,
-        null,
-        null,
+        "`printStackTrace` でスタックトレースを出力します。",
         null,
         null
       ],
       "candidates": {
-        "symbols": ["(", "{", "["]
+        "symbols": ["(", "{", "[", "read", "printStackTrace"]
       },
       "testCases": [
         {
@@ -317,7 +326,7 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        String content = \"Line1\\nLine2\";\n        BufferedReader br = new BufferedReader(new StringReader(content));\n        String line = br.readLine();\n        System.out.println(line);\n        br.close();\n    }\n}",
-      "holeyCode": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        String content = \"Line1\\nLine2\";\n        BufferedReader br = new BufferedReader(new StringReader(content));\n        // readLine で1行ずつ読み込む\n        String line = br.___();\n        System.out.println(line);\n        br.close();\n    }\n}",
+      "holeyCode": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        String content = \"Line1\\nLine2\";\n        // new で BufferedReader を作成する\n        BufferedReader br = ___ BufferedReader(new StringReader(content));\n        // readLine で1行ずつ読み込む\n        String line = br.___();\n        // println で出力する\n        System.out.___(line);\n        // close でリソースを閉じる\n        br.___();\n    }\n}",
       "correctLines": [
         "import java.io.*;",
         "",
@@ -338,14 +347,18 @@ export const javaData5 = {
         null,
         null,
         null,
-        "readLine で1行ずつ読み込みます。",
+        "`new` で BufferedReader を作成します。",
         null,
+        "`readLine` で1行ずつ読み込みます。",
         null,
+        "`println` で出力します。",
+        null,
+        "`close` でリソースを閉じます。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["readLine", "read", "readline"]
+        "methods": ["readLine", "read", "readline", "new", "println", "close"]
       },
       "testCases": [
         {
@@ -373,7 +386,7 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        StringWriter sw = new StringWriter();\n        BufferedWriter bw = new BufferedWriter(sw);\n        bw.write(\"Hello\");\n        bw.flush();\n        System.out.println(sw.toString());\n    }\n}",
-      "holeyCode": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        StringWriter sw = new StringWriter();\n        BufferedWriter bw = new BufferedWriter(sw);\n        // write で文字列を書き込む\n        bw.___(\"Hello\");\n        bw.flush();\n        System.out.println(sw.toString());\n    }\n}",
+      "holeyCode": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        // new で StringWriter を作成する\n        StringWriter sw = ___ StringWriter();\n        // new で BufferedWriter を作成する\n        BufferedWriter bw = ___ BufferedWriter(sw);\n        // write で文字列を書き込む\n        bw.___(\"Hello\");\n        // flush でバッファをフラッシュする\n        bw.___();\n        // toString で文字列に変換する\n        System.out.println(sw.___());\n    }\n}",
       "correctLines": [
         "import java.io.*;",
         "",
@@ -393,15 +406,20 @@ export const javaData5 = {
         null,
         null,
         null,
+        "`new` で StringWriter を作成します。",
         null,
-        "write で文字列を書き込みます。",
+        "`new` で BufferedWriter を作成します。",
         null,
+        "`write` で文字列を書き込みます。",
         null,
+        "`flush` でバッファをフラッシュします。",
+        null,
+        "`toString` で文字列に変換します。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["write", "print", "append"]
+        "methods": ["write", "print", "append", "new", "flush", "toString"]
       },
       "testCases": [
         {
@@ -429,7 +447,7 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"42 Hello\");\n        int num = sc.nextInt();\n        String word = sc.next();\n        System.out.println(num + \" \" + word);\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(\"42 Hello\");\n        // nextInt で整数を読み込む\n        int num = sc.___();\n        String word = sc.next();\n        System.out.println(num + \" \" + word);\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で Scanner を作成する\n        Scanner sc = ___ Scanner(\"42 Hello\");\n        // nextInt で整数を読み込む\n        int num = sc.___();\n        // next で文字列を読み込む\n        String word = sc.___();\n        // println で出力する\n        System.out.___(num + \" \" + word);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -448,14 +466,18 @@ export const javaData5 = {
         null,
         null,
         null,
-        "nextInt で整数を読み込みます。",
+        "`new` で Scanner を作成します。",
         null,
+        "`nextInt` で整数を読み込みます。",
         null,
+        "`next` で文字列を読み込みます。",
+        null,
+        "`println` で出力します。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["nextInt", "readInt", "getInt"]
+        "methods": ["nextInt", "readInt", "getInt", "new", "next", "println"]
       },
       "testCases": [
         {
@@ -483,7 +505,7 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.nio.file.*;\nimport java.util.*;\n\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        Path path = Paths.get(\".\");\n        boolean exists = Files.exists(path);\n        System.out.println(exists);\n    }\n}",
-      "holeyCode": "import java.nio.file.*;\nimport java.util.*;\n\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        // get でパスを作成する\n        Path path = Paths.___(\".\");\n        boolean exists = Files.exists(path);\n        System.out.println(exists);\n    }\n}",
+      "holeyCode": "import java.nio.file.*;\nimport java.util.*;\n\npublic class Main {\n    public static void main(String[] args) throws Exception {\n        // get でパスを作成する\n        Path path = Paths.___(\".\");\n        // exists でファイルの存在を確認する\n        boolean exists = Files.___(path);\n        // println で出力する\n        System.out.___(exists);\n    }\n}",
       "correctLines": [
         "import java.nio.file.*;",
         "import java.util.*;",
@@ -502,14 +524,17 @@ export const javaData5 = {
         null,
         null,
         null,
-        "Paths.get でパスを作成します。",
         null,
+        "`get` でパスを作成します。",
         null,
+        "`exists` でファイルの存在を確認します。",
+        null,
+        "`println` で出力します。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["get", "of", "create"]
+        "methods": ["get", "of", "create", "exists", "println"]
       },
       "testCases": [
         {
@@ -537,7 +562,7 @@ export const javaData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        try {\n            String s = null;\n            s.length();\n        } catch (NullPointerException | ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"Caught\");\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        try {\n            String s = null;\n            s.length();\n        // | で複数の例外をまとめてキャッチする\n        } catch (NullPointerException ___ ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"Caught\");\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        try {\n            // null を代入する\n            String s = ___;\n            // length メソッドを呼び出す\n            s.___();\n        // | で複数の例外をまとめてキャッチする\n        } catch (NullPointerException ___ ArrayIndexOutOfBoundsException e) {\n            // println で出力する\n            System.out.___(\"Caught\");\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
