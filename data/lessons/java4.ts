@@ -273,7 +273,7 @@ export const javaData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Map<String, Integer> map = new HashMap<>();\n        map.put(\"A\", 1);\n        map.put(\"B\", 2);\n        for (Map.Entry<String, Integer> e : map.entrySet()) {\n            System.out.println(e.getKey());\n        }\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Map<String, Integer> map = new HashMap<>();\n        map.put(\"A\", 1);\n        map.put(\"B\", 2);\n        // entrySet でエントリを取得する\n        for (Map.Entry<String, Integer> e : map.___()) {\n            System.out.println(e.getKey());\n        }\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で HashMap を作成する\n        Map<String, Integer> map = ___ HashMap<>();\n        // put でキーと値を追加する\n        map.___(\"A\", 1);\n        // put でキーと値を追加する\n        map.___(\"B\", 2);\n        // entrySet でエントリを取得する\n        for (Map.Entry<String, Integer> e : map.___()) {\n            // getKey でキーを取得する\n            System.out.println(e.___());\n        }\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -294,16 +294,20 @@ export const javaData4 = {
         null,
         null,
         null,
+        "`new` で HashMap を作成します。",
         null,
+        "`put` でキーと値を追加します。",
         null,
-        "entrySet でエントリを取得します。",
+        "`put` でキーと値を追加します。",
         null,
+        "`entrySet` でエントリを取得します。",
         null,
+        "`getKey` でキーを取得します。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["entrySet", "keySet", "values"]
+        "methods": ["entrySet", "keySet", "values", "new", "put", "getKey"]
       },
       "testCases": [
         {
@@ -331,7 +335,7 @@ export const javaData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> words = new ArrayList<>(Arrays.asList(\"cat\", \"a\", \"elephant\"));\n        words.sort(Comparator.comparing(String::length));\n        System.out.println(words);\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> words = new ArrayList<>(Arrays.asList(\"cat\", \"a\", \"elephant\"));\n        // comparing でプロパティを基準に比較する\n        words.sort(Comparator.___(String::length));\n        System.out.println(words);\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new と asList でリストを作成する\n        List<String> words = ___ ArrayList<>(Arrays.___(\"cat\", \"a\", \"elephant\"));\n        // comparing でプロパティを基準に比較する\n        words.sort(Comparator.___(String::length));\n        // println で出力する\n        System.out.___(words);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
