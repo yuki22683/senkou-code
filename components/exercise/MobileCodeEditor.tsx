@@ -175,6 +175,52 @@ export function MobileCodeEditor({
   const [clickedButtonIdx, setClickedButtonIdx] = useState<number | null>(null);
   const [clickedControlBtn, setClickedControlBtn] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const suggestionsContainerRef = useRef<HTMLDivElement>(null);
+  const [suggestionsContainerWidth, setSuggestionsContainerWidth] = useState<number>(0);
+  const [suggestionsContainerMaxHeight, setSuggestionsContainerMaxHeight] = useState<number>(180);
+  const [baseFontSize, setBaseFontSize] = useState<number>(14);
+
+  // 選択肢コンテナの幅とベースフォントサイズを監視
+  useEffect(() => {
+    const container = suggestionsContainerRef.current;
+
+    const updateSizes = () => {
+      if (container) {
+        setSuggestionsContainerWidth(container.clientWidth);
+      }
+      // 画面サイズに応じたコンテナの最大高さ
+      if (typeof window !== 'undefined') {
+        if (window.innerWidth >= 640) {
+          setSuggestionsContainerMaxHeight(160); // sm
+        } else {
+          setSuggestionsContainerMaxHeight(180); // default
+        }
+      }
+      // 画面サイズに応じたベースフォントサイズ
+      if (typeof window !== 'undefined') {
+        if (window.innerWidth >= 1024) {
+          setBaseFontSize(24); // lg
+        } else if (window.innerWidth >= 640) {
+          setBaseFontSize(18); // sm
+        } else {
+          setBaseFontSize(14); // default
+        }
+      }
+    };
+
+    updateSizes();
+
+    window.addEventListener('resize', updateSizes);
+    const resizeObserver = container ? new ResizeObserver(updateSizes) : null;
+    if (container && resizeObserver) {
+      resizeObserver.observe(container);
+    }
+
+    return () => {
+      window.removeEventListener('resize', updateSizes);
+      resizeObserver?.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     if (!correctCode) return;
@@ -694,7 +740,10 @@ export function MobileCodeEditor({
           borderColor: SYNTAX_COLORS.buttonBorder
         }}
       >
-        <div className="flex flex-col gap-1 sm:gap-2 mb-2 w-full max-h-[180px] sm:max-h-[160px] overflow-y-auto scrollbar-hide p-1">
+        <div
+          ref={suggestionsContainerRef}
+          className="flex flex-col gap-1 sm:gap-2 mb-2 w-full max-h-[180px] sm:max-h-[160px] overflow-hidden p-1"
+        >
           {(() => {
             if (suggestions.length === 0) {
               return (
@@ -706,9 +755,9 @@ export function MobileCodeEditor({
 
             // 選択肢をできるだけ均等な数で複数行に配分
             const count = suggestions.length;
-            const maxPerRow = 4; 
+            const maxPerRow = 4;
             const numRows = Math.ceil(count / maxPerRow);
-            
+
             const rows: string[][] = [];
             let startIndex = 0;
 
@@ -722,38 +771,91 @@ export function MobileCodeEditor({
               startIndex = endIndex;
             }
 
+            // 行ごとにフォントサイズを計算（コンテナ幅を超えないように）
+            const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+            const calculateRowFontSize = (tokens: string[]): number => {
+              if (suggestionsContainerWidth <= 0) return baseFontSize;
+
+              const gapBetweenButtons = isMobile ? 4 : 8; // gap-1 sm:gap-2
+              const containerPadding = 8; // p-1 = 4px * 2
+              const margin = isMobile ? 16 : 48; // スマホではマージンを小さく
+              const availableWidth = suggestionsContainerWidth - containerPadding - margin;
+              const totalGaps = (tokens.length - 1) * gapBetweenButtons;
+              const availableForButtons = availableWidth - totalGaps;
+
+              // 各ボタンの最小幅を計算（フォントサイズ * 文字数 * 係数 + パディング）
+              const charWidthFactor = 0.75; // モノスペースフォントの文字幅係数
+              const buttonPadding = 4; // ボタンのパディング（px-0 + border）
+
+              const estimateRowWidth = (fontSize: number) => {
+                return tokens.reduce((sum, t) => sum + t.length * fontSize * charWidthFactor + buttonPadding, 0);
+              };
+
+              // 利用可能な幅に収まる最大フォントサイズを計算
+              let currentFontSize = 24; // 開始サイズ
+              const minFontSize = 8;
+
+              // 幅が収まるまでフォントサイズを縮小
+              while (estimateRowWidth(currentFontSize) > availableForButtons && currentFontSize > minFontSize) {
+                currentFontSize--;
+              }
+
+              return currentFontSize;
+            };
+
+            // 行の高さを計算（コンテナの高さに収まるように）
+            const containerPadding = 8; // p-1 = 4px * 2
+            const rowGap = isMobile ? 4 : 8; // gap-1 sm:gap-2
+            const availableHeight = suggestionsContainerMaxHeight - containerPadding;
+            const totalRowGaps = (numRows - 1) * rowGap;
+            const availableForRows = availableHeight - totalRowGaps;
+            const baseRowHeight = isMobile ? 36 : 48; // h-9 sm:h-12
+            const calculatedRowHeight = Math.min(baseRowHeight, Math.floor(availableForRows / numRows));
+            const rowHeight = Math.max(20, calculatedRowHeight); // 最小20px
+
             return (
               <div className="flex flex-col gap-1 sm:gap-2 w-full items-center">
-                {rows.map((row, rowIdx) => (
-                  <div 
-                    key={rowIdx} 
-                    className="grid grid-flow-col gap-1 sm:gap-2 w-full"
-                    style={{ gridAutoColumns: "minmax(max-content, 1fr)" }}
-                  >
-                    {row.map((token, colIdx) => {
-                      const idx = suggestions.indexOf(token);
-                      return (
-                        <button
-                          key={`${token}-${idx}`}
-                          onClick={() => {
-                            setClickedButtonIdx(idx);
-                            setTimeout(() => setClickedButtonIdx(null), 500);
-                            handleInsert(token);
-                          }}
-                          style={{
-                            backgroundColor: clickedButtonIdx === idx ? '#4a9eff' : SYNTAX_COLORS.buttonBackground,
-                            borderColor: SYNTAX_COLORS.buttonBorder,
-                            color: SYNTAX_COLORS.foreground,
-                            transition: 'background-color 0.15s ease-out'
-                          }}
-                          className="w-full h-9 sm:h-12 px-3 sm:px-6 rounded font-mono font-bold border active:scale-95 text-sm sm:text-lg lg:text-2xl whitespace-nowrap min-w-[60px] sm:min-w-[100px] text-center"
-                        >
-                          {token}
-                        </button>
-                      );
-                    })}
-                  </div>
-                ))}
+                {rows.map((row, rowIdx) => {
+                  const widthBasedFontSize = calculateRowFontSize(row);
+                  // ボタンの高さに基づくフォントサイズ（高さの60%程度）
+                  const heightBasedFontSize = Math.floor(rowHeight * 0.6);
+                  // 幅と高さの両方に収まるフォントサイズを選択
+                  const fontSize = Math.min(widthBasedFontSize, heightBasedFontSize);
+                  const isScaled = fontSize < baseFontSize;
+
+                  return (
+                    <div
+                      key={rowIdx}
+                      className="grid grid-flow-col gap-1 sm:gap-2 w-full"
+                      style={{ gridAutoColumns: isScaled ? "minmax(0, 1fr)" : "minmax(max-content, 1fr)" }}
+                    >
+                      {row.map((token) => {
+                        const idx = suggestions.indexOf(token);
+                        return (
+                          <button
+                            key={`${token}-${idx}`}
+                            onClick={() => {
+                              setClickedButtonIdx(idx);
+                              setTimeout(() => setClickedButtonIdx(null), 500);
+                              handleInsert(token);
+                            }}
+                            style={{
+                              backgroundColor: clickedButtonIdx === idx ? '#4a9eff' : SYNTAX_COLORS.buttonBackground,
+                              borderColor: SYNTAX_COLORS.buttonBorder,
+                              color: SYNTAX_COLORS.foreground,
+                              transition: 'background-color 0.15s ease-out',
+                              fontSize: `${fontSize}px`,
+                              height: `${rowHeight}px`
+                            }}
+                            className="w-full rounded font-mono font-bold border active:scale-95 whitespace-nowrap overflow-hidden px-0 py-0 leading-none flex items-center justify-center"
+                          >
+                            {token}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  );
+                })}
               </div>
             );
           })()}
