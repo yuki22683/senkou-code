@@ -75,7 +75,7 @@ export const pythonData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# デフォルト引数を持つ関数\ndef say_hi(name='World'):\n    print(f'Hi, {name}!')\n\n# 引数なしで呼び出す\nsay_hi()",
-      "holeyCode": "# デフォルト引数を持つ関数\ndef say_hi(name=___):\n    print(f'Hi, {name}!')\n\n# 引数なしで呼び出す\nsay_hi()",
+      "holeyCode": "# デフォルト引数を持つ関数\ndef say_hi(name=___):\n    # メッセージを表示\n    print(f'Hi, {___}!')\n\n# 引数なしで呼び出す\n___()",
       "correctLines": [
         "# デフォルト引数を持つ関数",
         "def say_hi(name='World'):",
@@ -122,7 +122,7 @@ export const pythonData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 2つの数を足して返す関数\ndef add(a, b):\n    # 計算結果をreturnで返す\n    return a + b\n\n# 結果を変数に入れて表示\nresult = add(10, 20)\nprint(result)",
-      "holeyCode": "# 2つの数を足して返す関数\ndef add(a, b):\n    # 計算結果をreturnで返す\n    ___ a + b\n\n# 結果を変数に入れて表示\nresult = add(10, 20)\nprint(result)",
+      "holeyCode": "# 2つの数を足して返す関数\ndef add(a, b):\n    # 計算結果をreturnで返す\n    ___ a + b\n\n# 結果を変数に入れて表示（引数は10と20）\nresult = add(___, ___)\n# resultを表示\nprint(___)",
       "correctLines": [
         "# 2つの数を足して返す関数",
         "def add(a, b):",
@@ -173,7 +173,7 @@ export const pythonData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 2つの値を返す関数\ndef calc(x):\n    # x+1 と x*2 を返す\n    return x + 1, x * 2\n\n# 2つの変数で受け取る\na, b = calc(5)\nprint(a)\nprint(b)",
-      "holeyCode": "# 2つの値を返す関数\ndef calc(x):\n    # x+1 と x*2 を返す\n    return x + 1, x ___ 2\n\n# 2つの変数で受け取る\na, b = calc(5)\nprint(a)\nprint(b)",
+      "holeyCode": "# 2つの値を返す関数\ndef calc(x):\n    # x+1 と x*2 を返す\n    return x + 1, x ___ 2\n\n# 2つの変数で受け取る（引数は5）\na, b = calc(___)\n# aを表示\nprint(___)\n# bを表示\nprint(___)",
       "correctLines": [
         "# 2つの値を返す関数",
         "def calc(x):",
@@ -224,7 +224,7 @@ export const pythonData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 文字列を用意\nword = 'Programming'\n# 最初の4文字を取り出す\nprint(word[0:4])",
-      "holeyCode": "# 文字列を用意\nword = 'Programming'\n# 最初の4文字（0から4の手前まで）を取り出す\nprint(word[___:___])",
+      "holeyCode": "# 文字列を用意（'Programming'）\nword = '___'\n# 最初の4文字（0から4の手前まで）を取り出す\nprint(word[___:___])",
       "correctLines": [
         "# 文字列を用意",
         "word = 'Programming'",
@@ -346,7 +346,7 @@ export const pythonData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# エラーが起きる可能性のある処理\ntry:\n    num = int('abc')\nexcept:\n    print('Error')",
-      "holeyCode": "# エラーが起きる可能性のある処理\n___:\n    num = int('abc')\nexcept:\n    print('Error')",
+      "holeyCode": "# エラーが起きる可能性のある処理\n___:\n    # 文字列'abc'を数値に変換（エラー発生）\n    num = int('___')\n# 例外をキャッチするキーワード\n___:\n    # エラーメッセージ（'Error'）\n    print('___')",
       "correctLines": [
         "# エラーが起きる可能性のある処理",
         "try:",
@@ -390,7 +390,7 @@ export const pythonData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Catクラスを定義\nclass Cat:\n    # メソッドの第一引数はself\n    def meow(self):\n        print('Meow!')\n\n# インスタンスを作って呼び出す\ncat = Cat()\ncat.meow()",
-      "holeyCode": "# Catクラスを定義\nclass Cat:\n    # メソッドの第一引数はself\n    def meow(___):\n        print('Meow!')\n\n# インスタンスを作って呼び出す\ncat = Cat()\ncat.meow()",
+      "holeyCode": "# Catクラスを定義\nclass ___:\n    # メソッドの第一引数はself\n    def meow(___):\n        # メッセージ（'Meow!'）\n        print('___')\n\n# インスタンスを作って呼び出す\ncat = ___()\n# meowメソッドを呼び出す\ncat.___()",
       "correctLines": [
         "# Catクラスを定義",
         "class Cat:",
@@ -443,7 +443,7 @@ export const pythonData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# Robotクラスを定義\nclass Robot:\n    def __init__(self, name):\n        # selfを使って属性を保存\n        self.name = name\n    \n    def say_name(self):\n        print(self.name)\n\n# インスタンスを作る\nr = Robot('R2D2')\nr.say_name()",
-      "holeyCode": "# Robotクラスを定義\nclass Robot:\n    def __init__(self, name):\n        # selfを使って属性を保存\n        ___.name = name\n    \n    def say_name(self):\n        print(self.name)\n\n# インスタンスを作る\nr = Robot('R2D2')\nr.say_name()",
+      "holeyCode": "# Robotクラスを定義\nclass ___:\n    # コンストラクタを定義\n    def ___(self, name):\n        # selfを使って属性を保存\n        ___.name = name\n    \n    def say_name(self):\n        # self.nameを表示\n        print(self.___)\n\n# インスタンスを作る（名前は'R2D2'）\nr = Robot('___')\n# say_nameメソッドを呼び出す\nr.___()",
       "correctLines": [
         "# Robotクラスを定義",
         "class Robot:",
