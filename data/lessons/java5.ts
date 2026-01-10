@@ -580,15 +580,18 @@ export const javaData5 = {
         null,
         null,
         null,
+        "`null` を代入します。",
         null,
-        "| で複数の例外をまとめてキャッチします。",
+        "`length` メソッドを呼び出します。",
         null,
+        "`|` で複数の例外をまとめてキャッチします。",
         null,
+        "`println` で出力します。",
         null,
         null
       ],
       "candidates": {
-        "symbols": ["|", "&", ","]
+        "symbols": ["|", "&", ",", "null", "length", "println"]
       },
       "testCases": [
         {
