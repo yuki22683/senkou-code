@@ -25,7 +25,7 @@ export const javascriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// => でアロー関数を定義する\nconst square = x => x * x;\n\n// 使ってみる\nconsole.log(square(5));",
-      "holeyCode": "// => でアロー関数を定義する\nconst square = x ___ x * x;\n\n// 使ってみる\nconsole.log(square(5));",
+      "holeyCode": "// => でアロー関数を定義する\nconst square = x ___ x * x;\n\n// 使ってみる（引数は5）\nconsole.log(square(___));",
       "correctLines": [
         "// => でアロー関数を定義する",
         "const square = x => x * x;",
@@ -69,7 +69,7 @@ export const javascriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 配列の各要素を3倍にする\nconst nums = [1, 2, 3];\n// map メソッドで変換する\nconst tripled = nums.map(n => n * 3);\nconsole.log(tripled);",
-      "holeyCode": "// 配列の各要素を3倍にする\nconst nums = [1, 2, 3];\n// map メソッドで変換する\nconst tripled = nums.___(n => n * 3);\nconsole.log(tripled);",
+      "holeyCode": "// 配列の各要素を3倍にする（[1, 2, 3]）\nconst nums = [___, ___, ___];\n// map メソッドで変換する\nconst tripled = nums.___(n => n * 3);\n// tripledを表示\nconsole.log(___);",
       "correctLines": [
         "// 配列の各要素を3倍にする",
         "const nums = [1, 2, 3];",
@@ -113,7 +113,7 @@ export const javascriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 10より大きい数だけ取り出す\nconst nums = [5, 15, 8, 20];\n// filter メソッドで絞り込む\nconst big = nums.filter(n => n > 10);\nconsole.log(big);",
-      "holeyCode": "// 10より大きい数だけ取り出す\nconst nums = [5, 15, 8, 20];\n// filter メソッドで絞り込む\nconst big = nums.___(n => n > 10);\nconsole.log(big);",
+      "holeyCode": "// 10より大きい数だけ取り出す（[5, 15, 8, 20]）\nconst nums = [___, ___, ___, ___];\n// filter メソッドで絞り込む\nconst big = nums.___(n => n > 10);\n// bigを表示\nconsole.log(___);",
       "correctLines": [
         "// 10より大きい数だけ取り出す",
         "const nums = [5, 15, 8, 20];",
@@ -157,7 +157,7 @@ export const javascriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 配列の合計を計算\nconst nums = [10, 20, 30];\n// reduce メソッドで累積値 acc を使う\nconst total = nums.reduce((acc, n) => acc + n, 0);\nconsole.log(total);",
-      "holeyCode": "// 配列の合計を計算\nconst nums = [10, 20, 30];\n// reduce メソッドで累積値 acc を使う\nconst total = nums.___((___, n) => acc + n, 0);\nconsole.log(total);",
+      "holeyCode": "// 配列の合計を計算（[10, 20, 30]）\nconst nums = [___, ___, ___];\n// reduce メソッドで累積値 acc を使う\nconst total = nums.___((___, n) => acc + n, 0);\n// totalを表示\nconsole.log(___);",
       "correctLines": [
         "// 配列の合計を計算",
         "const nums = [10, 20, 30];",
@@ -202,7 +202,7 @@ export const javascriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 配列から値を取り出す\nconst colors = ['red', 'green', 'blue'];\n// second で2番目の要素を受け取る\nconst [first, second] = colors;\nconsole.log(first);\nconsole.log(second);",
-      "holeyCode": "// 配列から値を取り出す\nconst colors = ['red', 'green', 'blue'];\n// second で2番目の要素を受け取る\nconst [first, ___] = colors;\nconsole.log(first);\nconsole.log(second);",
+      "holeyCode": "// 配列から値を取り出す（['red', 'green', 'blue']）\nconst colors = ['___', '___', '___'];\n// second で2番目の要素を受け取る\nconst [first, ___] = colors;\n// firstを表示\nconsole.log(___);\n// secondを表示\nconsole.log(___);",
       "correctLines": [
         "// 配列から値を取り出す",
         "const colors = ['red', 'green', 'blue'];",
@@ -248,7 +248,7 @@ export const javascriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// オブジェクトから値を取り出す\nconst user = { name: 'Alice', score: 100 };\n// name プロパティを取り出す\nconst { name, score } = user;\nconsole.log(name);\nconsole.log(score);",
-      "holeyCode": "// オブジェクトから値を取り出す\nconst user = { name: 'Alice', score: 100 };\n// name プロパティを取り出す\nconst { ___, score } = user;\nconsole.log(name);\nconsole.log(score);",
+      "holeyCode": "// オブジェクトから値を取り出す（name: 'Alice', score: 100）\nconst user = { name: '___', score: ___ };\n// name プロパティを取り出す\nconst { ___, score } = user;\n// nameを表示\nconsole.log(___);\n// scoreを表示\nconsole.log(___);",
       "correctLines": [
         "// オブジェクトから値を取り出す",
         "const user = { name: 'Alice', score: 100 };",
@@ -294,7 +294,7 @@ export const javascriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 2つの配列を合体させる\nconst arr1 = [1, 2];\nconst arr2 = [3, 4];\n// ... スプレッド演算子で展開する\nconst merged = [...arr1, ...arr2];\nconsole.log(merged);",
-      "holeyCode": "// 2つの配列を合体させる\nconst arr1 = [1, 2];\nconst arr2 = [3, 4];\n// ... スプレッド演算子で展開する\nconst merged = [___arr1, ...arr2];\nconsole.log(merged);",
+      "holeyCode": "// 2つの配列を合体させる（[1, 2]）\nconst arr1 = [___, ___];\n// arr2を定義する（[3, 4]）\nconst arr2 = [___, ___];\n// ... スプレッド演算子で展開する\nconst merged = [___arr1, ...arr2];\n// mergedを表示\nconsole.log(___);",
       "correctLines": [
         "// 2つの配列を合体させる",
         "const arr1 = [1, 2];",
@@ -340,7 +340,7 @@ export const javascriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 数値が正か負かを判定\nconst num = 5;\n// ? で三項演算子を使う\nconst sign = num >= 0 ? 'positive' : 'negative';\nconsole.log(sign);",
-      "holeyCode": "// 数値が正か負かを判定\nconst num = 5;\n// ? で三項演算子を使う\nconst sign = num >= 0 ___ 'positive' : 'negative';\nconsole.log(sign);",
+      "holeyCode": "// 数値が正か負かを判定（5）\nconst num = ___;\n// ? で三項演算子を使う\nconst sign = num >= 0 ___ 'positive' : 'negative';\n// signを表示\nconsole.log(___);",
       "correctLines": [
         "// 数値が正か負かを判定",
         "const num = 5;",
@@ -384,7 +384,7 @@ export const javascriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 偶数を見つける\nconst numbers = [1, 3, 4, 7, 8];\n// find メソッドで最初の要素を探す\nconst firstEven = numbers.find(n => n % 2 === 0);\nconsole.log(firstEven);",
-      "holeyCode": "// 偶数を見つける\nconst numbers = [1, 3, 4, 7, 8];\n// find メソッドで最初の要素を探す\nconst firstEven = numbers.___(n => n % 2 === 0);\nconsole.log(firstEven);",
+      "holeyCode": "// 偶数を見つける（[1, 3, 4, 7, 8]）\nconst numbers = [___, ___, ___, ___, ___];\n// find メソッドで最初の要素を探す\nconst firstEven = numbers.___(n => n % 2 === 0);\n// firstEvenを表示\nconsole.log(___);",
       "correctLines": [
         "// 偶数を見つける",
         "const numbers = [1, 3, 4, 7, 8];",
@@ -428,7 +428,7 @@ export const javascriptData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// ショートハンドでオブジェクトを作る\nconst x = 10;\nconst y = 20;\n// x をプロパティとして追加する\nconst point = { x, y };\nconsole.log(point.x);\nconsole.log(point.y);",
-      "holeyCode": "// ショートハンドでオブジェクトを作る\nconst x = 10;\nconst y = 20;\n// x をプロパティとして追加する\nconst point = { ___, y };\nconsole.log(point.x);\nconsole.log(point.y);",
+      "holeyCode": "// ショートハンドでオブジェクトを作る（x = 10）\nconst x = ___;\n// y = 20\nconst y = ___;\n// x をプロパティとして追加する\nconst point = { ___, y };\n// point.xを表示\nconsole.log(point.___);\n// point.yを表示\nconsole.log(point.___);",
       "correctLines": [
         "// ショートハンドでオブジェクトを作る",
         "const x = 10;",

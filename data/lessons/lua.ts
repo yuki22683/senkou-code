@@ -111,7 +111,7 @@ export const luaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "local a = 5\nlocal b = 3\n-- +でたし算\nprint(a + b)",
-      "holeyCode": "local a = 5\nlocal b = 3\n-- +でたし算\nprint(a ___ b)",
+      "holeyCode": "-- 5を入力\nlocal a = ___\n-- 3を入力\nlocal b = ___\n-- +でたし算\nprint(a ___ b)",
       "correctLines": [
         "local a = 5",
         "local b = 3",

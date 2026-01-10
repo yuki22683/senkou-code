@@ -114,7 +114,7 @@ export const haskellData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "a = 5\nb = 3\n-- +でたし算\nmain = print (a + b)",
-      "holeyCode": "a = 5\nb = 3\n-- +でたし算\nmain = print (a ___ b)",
+      "holeyCode": "-- 5を入力\na = ___\n-- 3を入力\nb = ___\n-- +でたし算\nmain = print (a ___ b)",
       "correctLines": [
         "a = 5",
         "b = 3",

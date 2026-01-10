@@ -20,7 +20,7 @@ export const pythonData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n# Animalを継承したDogクラス\nclass Dog(Animal):\n    def bark(self):\n        print(f'{self.name} says Woof!')\n\ndog = Dog('Pochi')\ndog.bark()",
-      "holeyCode": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n# Animalを継承したDogクラス\nclass Dog(___):\n    def bark(self):\n        print(f'{self.name} says Woof!')\n\ndog = Dog('Pochi')\ndog.bark()",
+      "holeyCode": "# Animal と入力\nclass ___:\n    # __init__(self, name) と入力\n    def ___:\n        # name と入力\n        self.name = ___\n\n# Animalを継承したDogクラス\n# Animal と入力\nclass Dog(___):\n    # bark(self) と入力\n    def ___:\n        # f'{self.name} says Woof!' と入力\n        print(___)\n\n# Dog('Pochi') と入力\ndog = ___\n# dog.bark() と入力\n___",
       "correctLines": [
         "class Animal:",
         "    def __init__(self, name):",
@@ -71,7 +71,7 @@ export const pythonData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nclass Student(Person):\n    def __init__(self, name, grade):\n        # super()で親クラスを初期化\n        super().__init__(name)\n        self.grade = grade\n\ns = Student('Taro', 3)\nprint(f'{s.name} is in grade {s.grade}')",
-      "holeyCode": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nclass Student(Person):\n    def __init__(self, name, grade):\n        # super()で親クラスを初期化\n        ___.__init__(name)\n        self.grade = grade\n\ns = Student('Taro', 3)\nprint(f'{s.name} is in grade {s.grade}')",
+      "holeyCode": "# Person と入力\nclass ___:\n    # __init__(self, name) と入力\n    def ___:\n        # name と入力\n        self.name = ___\n\n# Student(Person) と入力\nclass ___:\n    # __init__(self, name, grade) と入力\n    def ___:\n        # super()で親クラスを初期化\n        # super() と入力\n        ___.__init__(name)\n        # grade と入力\n        self.grade = ___\n\n# Student('Taro', 3) と入力\ns = ___\n# f'{s.name} is in grade {s.grade}' と入力\nprint(___)",
       "correctLines": [
         "class Person:",
         "    def __init__(self, name):",
@@ -124,7 +124,7 @@ export const pythonData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    # @propertyで属性のようにアクセス\n    @property\n    def area(self):\n        return self.width * self.height\n\nr = Rectangle(4, 5)\nprint(r.area)",
-      "holeyCode": "class Rectangle:\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    # @propertyで属性のようにアクセス\n    ___\n    def area(self):\n        return self.width * self.height\n\nr = Rectangle(4, 5)\nprint(r.area)",
+      "holeyCode": "# Rectangle と入力\nclass ___:\n    # __init__(self, width, height) と入力\n    def ___:\n        # width と入力\n        self.width = ___\n        # height と入力\n        self.height = ___\n    \n    # @propertyで属性のようにアクセス\n    # @property と入力\n    ___\n    # area(self) と入力\n    def ___:\n        # self.width * self.height と入力\n        return ___\n\n# Rectangle(4, 5) と入力\nr = ___\n# r.area と入力\nprint(___)",
       "correctLines": [
         "class Rectangle:",
         "    def __init__(self, width, height):",
@@ -177,7 +177,7 @@ export const pythonData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Dog:\n    count = 0\n    \n    def __init__(self, name):\n        self.name = name\n        Dog.count += 1\n    \n    # @classmethodでクラスメソッドを定義\n    @classmethod\n    def get_count(cls):\n        return cls.count\n\nd1 = Dog('Pochi')\nd2 = Dog('Hachi')\nprint(Dog.get_count())",
-      "holeyCode": "class Dog:\n    count = 0\n    \n    def __init__(self, name):\n        self.name = name\n        Dog.count += 1\n    \n    # @classmethodでクラスメソッドを定義\n    ___\n    def get_count(cls):\n        return cls.count\n\nd1 = Dog('Pochi')\nd2 = Dog('Hachi')\nprint(Dog.get_count())",
+      "holeyCode": "# Dog と入力\nclass ___:\n    # 0 と入力\n    count = ___\n    \n    # __init__(self, name) と入力\n    def ___:\n        # name と入力\n        self.name = ___\n        # Dog.count += 1 と入力\n        ___\n    \n    # @classmethodでクラスメソッドを定義\n    # @classmethod と入力\n    ___\n    # get_count(cls) と入力\n    def ___:\n        # cls.count と入力\n        return ___\n\n# Dog('Pochi') と入力\nd1 = ___\n# Dog('Hachi') と入力\nd2 = ___\n# Dog.get_count() と入力\nprint(___)",
       "correctLines": [
         "class Dog:",
         "    count = 0",
@@ -236,7 +236,7 @@ export const pythonData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Validator:\n    # @staticmethodで静的メソッドを定義\n    @staticmethod\n    def is_positive(n):\n        return n > 0\n\nprint(Validator.is_positive(5))\nprint(Validator.is_positive(-3))",
-      "holeyCode": "class Validator:\n    # @staticmethodで静的メソッドを定義\n    ___\n    def is_positive(n):\n        return n > 0\n\nprint(Validator.is_positive(5))\nprint(Validator.is_positive(-3))",
+      "holeyCode": "# Validator と入力\nclass ___:\n    # @staticmethodで静的メソッドを定義\n    # @staticmethod と入力\n    ___\n    # is_positive(n) と入力\n    def ___:\n        # n > 0 と入力\n        return ___\n\n# Validator.is_positive(5) と入力\nprint(___)\n# Validator.is_positive(-3) と入力\nprint(___)",
       "correctLines": [
         "class Validator:",
         "    # @staticmethodで静的メソッドを定義",
@@ -281,7 +281,7 @@ export const pythonData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "from abc import ABC, abstractmethod\n\nclass Animal(ABC):\n    # @abstractmethodで抽象メソッドを定義\n    @abstractmethod\n    def speak(self):\n        pass\n\nclass Cat(Animal):\n    def speak(self):\n        return 'Meow'\n\ncat = Cat()\nprint(cat.speak())",
-      "holeyCode": "from abc import ABC, abstractmethod\n\nclass Animal(ABC):\n    # @abstractmethodで抽象メソッドを定義\n    ___\n    def speak(self):\n        pass\n\nclass Cat(Animal):\n    def speak(self):\n        return 'Meow'\n\ncat = Cat()\nprint(cat.speak())",
+      "holeyCode": "# ABC, abstractmethod と入力\nfrom abc import ___\n\n# Animal(ABC) と入力\nclass ___:\n    # @abstractmethodで抽象メソッドを定義\n    # @abstractmethod と入力\n    ___\n    # speak(self) と入力\n    def ___:\n        # pass と入力\n        ___\n\n# Cat(Animal) と入力\nclass ___:\n    # speak(self) と入力\n    def ___:\n        # 'Meow' と入力\n        return ___\n\n# Cat() と入力\ncat = ___\n# cat.speak() と入力\nprint(___)",
       "correctLines": [
         "from abc import ABC, abstractmethod",
         "",
@@ -338,7 +338,7 @@ export const pythonData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n    \n    # __str__で文字列表現を定義\n    def __str__(self):\n        return f'{self.title} by {self.author}'\n\nbook = Book('Python Guide', 'Taro')\nprint(book)",
-      "holeyCode": "class Book:\n    def __init__(self, title, author):\n        self.title = title\n        self.author = author\n    \n    # __str__で文字列表現を定義\n    def ___(self):\n        return f'{self.title} by {self.author}'\n\nbook = Book('Python Guide', 'Taro')\nprint(book)",
+      "holeyCode": "# Book と入力\nclass ___:\n    # __init__(self, title, author) と入力\n    def ___:\n        # title と入力\n        self.title = ___\n        # author と入力\n        self.author = ___\n    \n    # __str__で文字列表現を定義\n    # __str__ と入力\n    def ___(self):\n        # f'{self.title} by {self.author}' と入力\n        return ___\n\n# Book('Python Guide', 'Taro') と入力\nbook = ___\n# book と入力\nprint(___)",
       "correctLines": [
         "class Book:",
         "    def __init__(self, title, author):",
@@ -389,7 +389,7 @@ export const pythonData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    # __eq__で等価比較を定義\n    def __eq__(self, other):\n        return self.x == other.x and self.y == other.y\n\nv1 = Vector(3, 4)\nv2 = Vector(3, 4)\nprint(v1 == v2)",
-      "holeyCode": "class Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    # __eq__で等価比較を定義\n    def ___(self, other):\n        return self.x == other.x and self.y == other.y\n\nv1 = Vector(3, 4)\nv2 = Vector(3, 4)\nprint(v1 == v2)",
+      "holeyCode": "# Vector と入力\nclass ___:\n    # __init__(self, x, y) と入力\n    def ___:\n        # x と入力\n        self.x = ___\n        # y と入力\n        self.y = ___\n    \n    # __eq__で等価比較を定義\n    # __eq__ と入力\n    def ___(self, other):\n        # self.x == other.x and self.y == other.y と入力\n        return ___\n\n# Vector(3, 4) と入力\nv1 = ___\n# Vector(3, 4) と入力\nv2 = ___\n# v1 == v2 と入力\nprint(___)",
       "correctLines": [
         "class Vector:",
         "    def __init__(self, x, y):",
@@ -442,7 +442,7 @@ export const pythonData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Team:\n    def __init__(self, members):\n        self.members = members\n    \n    # __len__でlen()に対応\n    def __len__(self):\n        return len(self.members)\n\nteam = Team(['Alice', 'Bob', 'Charlie'])\nprint(len(team))",
-      "holeyCode": "class Team:\n    def __init__(self, members):\n        self.members = members\n    \n    # __len__でlen()に対応\n    def ___(self):\n        return len(self.members)\n\nteam = Team(['Alice', 'Bob', 'Charlie'])\nprint(len(team))",
+      "holeyCode": "# Team と入力\nclass ___:\n    # __init__(self, members) と入力\n    def ___:\n        # members と入力\n        self.members = ___\n    \n    # __len__でlen()に対応\n    # __len__ と入力\n    def ___(self):\n        # len(self.members) と入力\n        return ___\n\n# Team(['Alice', 'Bob', 'Charlie']) と入力\nteam = ___\n# len(team) と入力\nprint(___)",
       "correctLines": [
         "class Team:",
         "    def __init__(self, members):",
@@ -491,7 +491,7 @@ export const pythonData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "from dataclasses import dataclass\n\n# @dataclassでデータクラスを定義\n@dataclass\nclass Person:\n    name: str\n    age: int\n\np = Person('Taro', 25)\nprint(p)",
-      "holeyCode": "from dataclasses import dataclass\n\n# @dataclassでデータクラスを定義\n___\nclass Person:\n    name: str\n    age: int\n\np = Person('Taro', 25)\nprint(p)",
+      "holeyCode": "# dataclass と入力\nfrom dataclasses import ___\n\n# @dataclassでデータクラスを定義\n# @dataclass と入力\n___\n# Person と入力\nclass ___:\n    # str と入力\n    name: ___\n    # int と入力\n    age: ___\n\n# Person('Taro', 25) と入力\np = ___\n# p と入力\nprint(___)",
       "correctLines": [
         "from dataclasses import dataclass",
         "",

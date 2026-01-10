@@ -25,7 +25,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "my $text = \"hello world\";\n# =~でパターンマッチング\nif ($text =~ /world/) {\n    print \"found\\n\";\n}",
-      "holeyCode": "my $text = \"hello world\";\n# =~でパターンマッチング\nif ($text ___ /world/) {\n    print \"found\\n\";\n}",
+      "holeyCode": "# 変数に文字列を代入\nmy $text = ___;\n# =~でパターンマッチング\nif ($text ___ /world/) {\n    # printで出力\n    ___ \"found\\n\";\n}",
       "correctLines": [
         "my $text = \"hello world\";",
         "if ($text =~ /world/) {",
@@ -67,7 +67,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "my $text = \"cat\";\n# sで置換\n$text =~ s/cat/dog/;\nprint \"$text\\n\";",
-      "holeyCode": "my $text = \"cat\";\n# sで置換\n$text =~ ___/cat/dog/;\nprint \"$text\\n\";",
+      "holeyCode": "# 変数に文字列を代入\nmy $text = ___;\n# sで置換\n$text =~ ___/cat/dog/;\n# printで出力\n___ \"$text\\n\";",
       "correctLines": [
         "my $text = \"cat\";",
         "$text =~ s/cat/dog/;",
@@ -107,7 +107,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# @で配列を宣言\nmy @fruits = (\"apple\", \"banana\");\nprint $fruits[1] . \"\\n\";",
-      "holeyCode": "# @で配列を宣言\nmy ___fruits = (\"apple\", \"banana\");\nprint $fruits[1] . \"\\n\";",
+      "holeyCode": "# @で配列を宣言\nmy ___fruits = (\"apple\", \"banana\");\n# printで出力\n___ $fruits[1] . \"\\n\";",
       "correctLines": [
         "my @fruits = (\"apple\", \"banana\");",
         "print $fruits[1] . \"\\n\";"
@@ -145,7 +145,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# %でハッシュを宣言\nmy %scores = (\"math\" => 90);\nprint $scores{\"math\"} . \"\\n\";",
-      "holeyCode": "# %でハッシュを宣言\nmy ___scores = (\"math\" => 90);\nprint $scores{\"math\"} . \"\\n\";",
+      "holeyCode": "# %でハッシュを宣言\nmy ___scores = (\"math\" => 90);\n# printで出力\n___ $scores{\"math\"} . \"\\n\";",
       "correctLines": [
         "my %scores = (\"math\" => 90);",
         "print $scores{\"math\"} . \"\\n\";"
@@ -183,7 +183,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "my @nums = (1, 2, 3);\n# foreachで各要素を処理\nforeach my $n (@nums) {\n    print \"$n\\n\";\n}",
-      "holeyCode": "my @nums = (1, 2, 3);\n# foreachで各要素を処理\n___ my $n (@nums) {\n    print \"$n\\n\";\n}",
+      "holeyCode": "# 配列を宣言\nmy @nums = (1, 2, ___);\n# foreachで各要素を処理\n___ my $n (@nums) {\n    # printで出力\n    ___ \"$n\\n\";\n}",
       "correctLines": [
         "my @nums = (1, 2, 3);",
         "foreach my $n (@nums) {",
@@ -225,7 +225,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# subでサブルーチンを定義\nsub double {\n    my $n = shift;\n    return $n * 2;\n}\nprint double(5) . \"\\n\";",
-      "holeyCode": "# subでサブルーチンを定義\n___ double {\n    my $n = shift;\n    return $n * 2;\n}\nprint double(5) . \"\\n\";",
+      "holeyCode": "# subでサブルーチンを定義\n___ double {\n    # shiftで引数を取得\n    my $n = ___;\n    # returnで戻り値を返す\n    ___ $n * 2;\n}\n# printで出力\n___ double(5) . \"\\n\";",
       "correctLines": [
         "sub double {",
         "    my $n = shift;",
@@ -269,7 +269,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "my @nums = (10, 20);\n# \\でリファレンスを作成\nmy $ref = \\@nums;\nprint $ref->[1] . \"\\n\";",
-      "holeyCode": "my @nums = (10, 20);\n# \\でリファレンスを作成\nmy $ref = ___@nums;\nprint $ref->[1] . \"\\n\";",
+      "holeyCode": "# 配列を宣言\nmy @nums = (10, ___);\n# \\でリファレンスを作成\nmy $ref = ___@nums;\n# printで出力\n___ $ref->[1] . \"\\n\";",
       "correctLines": [
         "my @nums = (10, 20);",
         "my $ref = \\@nums;",
@@ -309,7 +309,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# [で無名配列を作成\nmy $ref = [5, 10, 15];\nprint $ref->[2] . \"\\n\";",
-      "holeyCode": "# [で無名配列を作成\nmy $ref = ___5, 10, 15];\nprint $ref->[2] . \"\\n\";",
+      "holeyCode": "# [で無名配列を作成\nmy $ref = ___5, 10, 15];\n# printで出力\n___ $ref->[2] . \"\\n\";",
       "correctLines": [
         "my $ref = [5, 10, 15];",
         "print $ref->[2] . \"\\n\";"
@@ -347,7 +347,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "my @nums = (1, 2, 3);\n# mapで各要素を変換\nmy @squared = map { $_ * $_ } @nums;\nprint \"@squared\\n\";",
-      "holeyCode": "my @nums = (1, 2, 3);\n# mapで各要素を変換\nmy @squared = ___ { $_ * $_ } @nums;\nprint \"@squared\\n\";",
+      "holeyCode": "# 配列を宣言\nmy @nums = (1, 2, ___);\n# mapで各要素を変換\nmy @squared = ___ { $_ * $_ } @nums;\n# printで出力\n___ \"@squared\\n\";",
       "correctLines": [
         "my @nums = (1, 2, 3);",
         "my @squared = map { $_ * $_ } @nums;",
@@ -387,7 +387,7 @@ export const perl2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "my @nums = (1, 2, 3, 4, 5);\n# grepで条件に合う要素を抽出\nmy @result = grep { $_ >= 3 } @nums;\nprint \"@result\\n\";",
-      "holeyCode": "my @nums = (1, 2, 3, 4, 5);\n# grepで条件に合う要素を抽出\nmy @result = ___ { $_ >= 3 } @nums;\nprint \"@result\\n\";",
+      "holeyCode": "# 配列を宣言\nmy @nums = (1, 2, 3, 4, ___);\n# grepで条件に合う要素を抽出\nmy @result = ___ { $_ >= 3 } @nums;\n# printで出力\n___ \"@result\\n\";",
       "correctLines": [
         "my @nums = (1, 2, 3, 4, 5);",
         "my @result = grep { $_ >= 3 } @nums;",

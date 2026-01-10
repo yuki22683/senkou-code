@@ -20,7 +20,7 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# ファイルを読み込む（テスト用）\nfilename = 'test.txt'\n# open関数でファイルを開く\nwith open(filename, 'w') as f:\n    f.write('Hello, Python!')\n\nwith open(filename, 'r') as f:\n    print(f.read())",
-      "holeyCode": "# ファイルを読み込む（テスト用）\nfilename = 'test.txt'\n# open関数でファイルを開く\nwith ___(filename, 'w') as f:\n    f.write('Hello, Python!')\n\nwith open(filename, 'r') as f:\n    print(f.read())",
+      "holeyCode": "# ファイルを読み込む（テスト用）\n# 'test.txt' と入力\nfilename = ___\n# open関数でファイルを開く\n# open と入力\nwith ___(filename, 'w') as f:\n    # f.write('Hello, Python!') と入力\n    ___\n\n# open(filename, 'r') と入力\nwith ___ as f:\n    # f.read() と入力\n    print(___)",
       "correctLines": [
         "# ファイルを読み込む（テスト用）",
         "filename = 'test.txt'",
@@ -65,7 +65,7 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# ファイルを1行ずつ読む\nwith open('test.txt', 'w') as f:\n    f.write('line1\\nline2\\nline3')\n\nwith open('test.txt', 'r') as f:\n    # inでファイルをループ\n    for line in f:\n        print(line.strip())",
-      "holeyCode": "# ファイルを1行ずつ読む\nwith open('test.txt', 'w') as f:\n    f.write('line1\\nline2\\nline3')\n\nwith open('test.txt', 'r') as f:\n    # inでファイルをループ\n    for line ___ f:\n        print(line.strip())",
+      "holeyCode": "# ファイルを1行ずつ読む\n# open('test.txt', 'w') と入力\nwith ___ as f:\n    # f.write('line1\\\\nline2\\\\nline3') と入力\n    ___\n\n# open('test.txt', 'r') と入力\nwith ___ as f:\n    # inでファイルをループ\n    # in と入力\n    for line ___ f:\n        # line.strip() と入力\n        print(___)",
       "correctLines": [
         "# ファイルを1行ずつ読む",
         "with open('test.txt', 'w') as f:",
@@ -110,7 +110,7 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import json\n\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# loadsでJSON文字列を変換\ndata = json.loads(json_str)\nprint(data['name'])",
-      "holeyCode": "import json\n\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# loadsでJSON文字列を変換\ndata = json.___(json_str)\nprint(data['name'])",
+      "holeyCode": "# json と入力\nimport ___\n\n# '{\"name\": \"Python\", \"version\": 3.12}' と入力\njson_str = ___\n# loadsでJSON文字列を変換\n# loads と入力\ndata = json.___(json_str)\n# data['name'] と入力\nprint(___)",
       "correctLines": [
         "import json",
         "",
@@ -151,7 +151,7 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import json\n\ndata = {'language': 'Python', 'level': 'advanced'}\n# dumpsでJSON文字列に変換\njson_str = json.dumps(data)\nprint(json_str)",
-      "holeyCode": "import json\n\ndata = {'language': 'Python', 'level': 'advanced'}\n# dumpsでJSON文字列に変換\njson_str = json.___(data)\nprint(json_str)",
+      "holeyCode": "# json と入力\nimport ___\n\n# {'language': 'Python', 'level': 'advanced'} と入力\ndata = ___\n# dumpsでJSON文字列に変換\n# dumps と入力\njson_str = json.___(data)\n# json_str と入力\nprint(___)",
       "correctLines": [
         "import json",
         "",
@@ -192,7 +192,7 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import re\n\ntext = 'Call me at 090-1234-5678'\n# searchでパターン検索\nmatch = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)\nif match:\n    print(match.group())",
-      "holeyCode": "import re\n\ntext = 'Call me at 090-1234-5678'\n# searchでパターン検索\nmatch = re.___(r'\\d{3}-\\d{4}-\\d{4}', text)\nif match:\n    print(match.group())",
+      "holeyCode": "# re と入力\nimport ___\n\n# 'Call me at 090-1234-5678' と入力\ntext = ___\n# searchでパターン検索\n# search と入力\nmatch = re.___(r'\\d{3}-\\d{4}-\\d{4}', text)\n# match と入力\nif ___:\n    # match.group() と入力\n    print(___)",
       "correctLines": [
         "import re",
         "",
@@ -235,7 +235,7 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import re\n\ntext = 'email1@test.com and email2@test.com'\n# findallで全ての一致を取得\nemails = re.findall(r'\\w+@\\w+\\.\\w+', text)\nprint(emails)",
-      "holeyCode": "import re\n\ntext = 'email1@test.com and email2@test.com'\n# findallで全ての一致を取得\nemails = re.___(r'\\w+@\\w+\\.\\w+', text)\nprint(emails)",
+      "holeyCode": "# re と入力\nimport ___\n\n# 'email1@test.com and email2@test.com' と入力\ntext = ___\n# findallで全ての一致を取得\n# findall と入力\nemails = re.___(r'\\w+@\\w+\\.\\w+', text)\n# emails と入力\nprint(___)",
       "correctLines": [
         "import re",
         "",
@@ -276,7 +276,7 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import re\n\ntext = 'Hello   World   Python'\n# subでパターンを置換\nresult = re.sub(r'\\s+', ' ', text)\nprint(result)",
-      "holeyCode": "import re\n\ntext = 'Hello   World   Python'\n# subでパターンを置換\nresult = re.___(r'\\s+', ' ', text)\nprint(result)",
+      "holeyCode": "# re と入力\nimport ___\n\n# 'Hello   World   Python' と入力\ntext = ___\n# subでパターンを置換\n# sub と入力\nresult = re.___(r'\\s+', ' ', text)\n# result と入力\nprint(___)",
       "correctLines": [
         "import re",
         "",
@@ -317,7 +317,7 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "from collections import Counter\n\ntext = 'hello world'\ncount = Counter(text)\nprint(count.most_common(3))",
-      "holeyCode": "from collections import ___\n\ntext = 'hello world'\ncount = Counter(text)\nprint(count.most_common(3))",
+      "holeyCode": "# Counter と入力\nfrom collections import ___\n\n# 'hello world' と入力\ntext = ___\n# Counter(text) と入力\ncount = ___\n# count.most_common(3) と入力\nprint(___)",
       "correctLines": [
         "from collections import Counter",
         "",

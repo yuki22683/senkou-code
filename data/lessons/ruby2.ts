@@ -25,7 +25,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums = [1, 2, 3]\n# eachで各要素を処理\nnums.each do |n|\n  puts n\nend",
-      "holeyCode": "nums = [1, 2, 3]\n# eachで各要素を処理\nnums.___ do |n|\n  puts n\nend",
+      "holeyCode": "# numsに配列を代入\nnums = [___, ___, ___]\n# eachで各要素を処理\nnums.___ do |n|\n  # putsで出力\n  puts ___\n# endで終了\n___",
       "correctLines": [
         "nums = [1, 2, 3]",
         "nums.each do |n|",
@@ -67,7 +67,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums = [1, 2, 3]\n# mapで各要素を変換\ndoubled = nums.map { |n| n * 2 }\nputs doubled",
-      "holeyCode": "nums = [1, 2, 3]\n# mapで各要素を変換\ndoubled = nums.___ { |n| n * 2 }\nputs doubled",
+      "holeyCode": "# numsに配列を代入\nnums = [___, ___, ___]\n# mapで各要素を変換\ndoubled = nums.___ { |n| n * 2 }\n# putsで出力\nputs ___",
       "correctLines": [
         "nums = [1, 2, 3]",
         "doubled = nums.map { |n| n * 2 }",
@@ -107,7 +107,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums = [1, 2, 3, 4, 5]\n# selectで条件に合う要素を抽出\nbig = nums.select { |n| n >= 3 }\nputs big",
-      "holeyCode": "nums = [1, 2, 3, 4, 5]\n# selectで条件に合う要素を抽出\nbig = nums.___ { |n| n >= 3 }\nputs big",
+      "holeyCode": "# numsに配列を代入\nnums = [___, ___, ___, ___, ___]\n# selectで条件に合う要素を抽出\nbig = nums.___ { |n| n >= 3 }\n# putsで出力\nputs ___",
       "correctLines": [
         "nums = [1, 2, 3, 4, 5]",
         "big = nums.select { |n| n >= 3 }",
@@ -147,7 +147,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "item = { name: 'Apple', price: 100 }\n# :でシンボルを指定してアクセス\nputs item[:price]",
-      "holeyCode": "item = { name: 'Apple', price: 100 }\n# :でシンボルを指定してアクセス\nputs item[___price]",
+      "holeyCode": "# itemにハッシュを代入\nitem = { name: '___', price: ___ }\n# :でシンボルを指定してアクセス\nputs item[___price]",
       "correctLines": [
         "item = { name: 'Apple', price: 100 }",
         "puts item[:price]"
@@ -185,7 +185,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# classでクラスを定義\nclass Cat\n  def initialize(name)\n    @name = name\n  end\n  def greet\n    puts @name\n  end\nend\ncat = Cat.new('Tama')\ncat.greet",
-      "holeyCode": "# classでクラスを定義\n___ Cat\n  def initialize(name)\n    @name = name\n  end\n  def greet\n    puts @name\n  end\nend\ncat = Cat.new('Tama')\ncat.greet",
+      "holeyCode": "# classでクラスを定義\n___ Cat\n  # initializeを定義\n  def ___(name)\n    # @nameに代入\n    @name = ___\n  # endで終了\n  ___\n  # greetを定義\n  def ___\n    # @nameを出力\n    puts ___\n  # endで終了\n  ___\n# endで終了\n___\n# catにインスタンスを代入\ncat = Cat.___('Tama')\n# greetを呼び出し\ncat.___",
       "correctLines": [
         "class Cat",
         "  def initialize(name)",
@@ -239,7 +239,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Item\n  # attr_accessorで読み書き可能に\n  attr_accessor :price\nend\nitem = Item.new\nitem.price = 200\nputs item.price",
-      "holeyCode": "class Item\n  # attr_accessorで読み書き可能に\n  ___ :price\nend\nitem = Item.new\nitem.price = 200\nputs item.price",
+      "holeyCode": "# classでクラスを定義\n___ Item\n  # attr_accessorで読み書き可能に\n  ___ :price\n# endで終了\n___\n# itemにインスタンスを代入\nitem = Item.___\n# priceに値を代入\nitem.price = ___\n# priceを出力\nputs item.___",
       "correctLines": [
         "class Item",
         "  attr_accessor :price",
@@ -285,7 +285,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Vehicle\n  def move\n    puts 'moving'\n  end\nend\n# <で親クラスを継承\nclass Car < Vehicle\nend\ncar = Car.new\ncar.move",
-      "holeyCode": "class Vehicle\n  def move\n    puts 'moving'\n  end\nend\n# <で親クラスを継承\nclass Car ___ Vehicle\nend\ncar = Car.new\ncar.move",
+      "holeyCode": "# classでクラスを定義\n___ Vehicle\n  # moveを定義\n  def ___\n    # movingを出力\n    puts '___'\n  # endで終了\n  ___\n# endで終了\n___\n# <で親クラスを継承\nclass Car ___ Vehicle\n# endで終了\n___\n# carにインスタンスを代入\ncar = Car.___\n# moveを呼び出し\ncar.___",
       "correctLines": [
         "class Vehicle",
         "  def move",
@@ -337,7 +337,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# moduleでモジュールを定義\nmodule Speakable\n  def speak\n    puts 'speaking'\n  end\nend\nclass Robot\n  include Speakable\nend\nrobot = Robot.new\nrobot.speak",
-      "holeyCode": "# moduleでモジュールを定義\n___ Speakable\n  def speak\n    puts 'speaking'\n  end\nend\nclass Robot\n  include Speakable\nend\nrobot = Robot.new\nrobot.speak",
+      "holeyCode": "# moduleでモジュールを定義\n___ Speakable\n  # speakを定義\n  def ___\n    # speakingを出力\n    puts '___'\n  # endで終了\n  ___\n# endで終了\n___\n# classでクラスを定義\n___ Robot\n  # includeでモジュールを取り込み\n  include ___\n# endで終了\n___\n# robotにインスタンスを代入\nrobot = Robot.___\n# speakを呼び出し\nrobot.___",
       "correctLines": [
         "module Speakable",
         "  def speak",
@@ -391,7 +391,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "begin\n  raise 'oops'\n# rescueで例外を捕捉\nrescue => e\n  puts 'caught'\nend",
-      "holeyCode": "begin\n  raise 'oops'\n# rescueで例外を捕捉\n___ => e\n  puts 'caught'\nend",
+      "holeyCode": "# beginで開始\n___\n  # raiseでエラーを発生\n  raise '___'\n# rescueで例外を捕捉\n___ => e\n  # caughtを出力\n  puts '___'\n# endで終了\n___",
       "correctLines": [
         "begin",
         "  raise 'oops'",
@@ -435,7 +435,7 @@ export const ruby2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# ->でラムダを定義\ndouble = ->(n) { n * 2 }\nputs double.call(5)",
-      "holeyCode": "# ->でラムダを定義\ndouble = ___(n) { n * 2 }\nputs double.call(5)",
+      "holeyCode": "# ->でラムダを定義\ndouble = ___(n) { n * 2 }\n# callで実行\nputs double.___(5)",
       "correctLines": [
         "double = ->(n) { n * 2 }",
         "puts double.call(5)"

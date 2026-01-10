@@ -25,7 +25,7 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- WITHでCTEを定義\nWITH nums AS (\n  SELECT 1 AS n UNION SELECT 2 UNION SELECT 3\n)\nSELECT * FROM nums;",
-      "holeyCode": "-- WITHでCTEを定義\n___ nums AS (\n  SELECT 1 AS n UNION SELECT 2 UNION SELECT 3\n)\nSELECT * FROM nums;",
+      "holeyCode": "-- WITHでCTEを定義\n___ nums AS (\n  -- データを作成\n  ___ 1 AS n UNION SELECT 2 UNION SELECT 3\n)\n-- CTEからデータを取得\n___ * FROM nums;",
       "correctLines": [
         "WITH nums AS (",
         "  SELECT 1 AS n UNION SELECT 2 UNION SELECT 3",
@@ -67,7 +67,7 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT\n  val,\n  -- ROW_NUMBERで連番を振る\n  ROW_NUMBER() OVER (ORDER BY val) AS rn\nFROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
-      "holeyCode": "SELECT\n  val,\n  -- ROW_NUMBERで連番を振る\n  ___() OVER (ORDER BY val) AS rn\nFROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
+      "holeyCode": "-- SELECTで列を取得\n___\n  -- 値の列\n  ___,\n  -- ROW_NUMBERで連番を振る\n  ___() OVER (ORDER BY val) AS rn\n-- データソースを指定\n___ (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
       "correctLines": [
         "SELECT",
         "  val,",
@@ -109,7 +109,7 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT\n  val,\n  -- RANKで順位を付ける\n  RANK() OVER (ORDER BY val) AS rnk\nFROM (SELECT 1 AS val UNION ALL SELECT 1 UNION ALL SELECT 2);",
-      "holeyCode": "SELECT\n  val,\n  -- RANKで順位を付ける\n  ___() OVER (ORDER BY val) AS rnk\nFROM (SELECT 1 AS val UNION ALL SELECT 1 UNION ALL SELECT 2);",
+      "holeyCode": "-- SELECTで列を取得\n___\n  -- 値の列\n  ___,\n  -- RANKで順位を付ける\n  ___() OVER (ORDER BY val) AS rnk\n-- データソースを指定\n___ (SELECT 1 AS val UNION ALL SELECT 1 UNION ALL SELECT 2);",
       "correctLines": [
         "SELECT",
         "  val,",
@@ -151,7 +151,7 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT\n  val,\n  -- SUMで累積合計を計算\n  SUM(val) OVER (ORDER BY val) AS running\nFROM (SELECT 1 AS val UNION ALL SELECT 2 UNION ALL SELECT 3);",
-      "holeyCode": "SELECT\n  val,\n  -- SUMで累積合計を計算\n  ___(val) OVER (ORDER BY val) AS running\nFROM (SELECT 1 AS val UNION ALL SELECT 2 UNION ALL SELECT 3);",
+      "holeyCode": "-- SELECTで列を取得\n___\n  -- 値の列\n  ___,\n  -- SUMで累積合計を計算\n  ___(val) OVER (ORDER BY val) AS running\n-- データソースを指定\n___ (SELECT 1 AS val UNION ALL SELECT 2 UNION ALL SELECT 3);",
       "correctLines": [
         "SELECT",
         "  val,",
@@ -193,7 +193,7 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT\n  -- CASEで条件分岐\n  CASE WHEN 1 > 0 THEN 'yes' ELSE 'no' END AS result;",
-      "holeyCode": "SELECT\n  -- CASEで条件分岐\n  ___ WHEN 1 > 0 THEN 'yes' ELSE 'no' END AS result;",
+      "holeyCode": "-- SELECTで取得\n___\n  -- CASEで条件分岐\n  ___ WHEN 1 > 0 THEN 'yes' ELSE 'no' END AS result;",
       "correctLines": [
         "SELECT",
         "  CASE WHEN 1 > 0 THEN 'yes' ELSE 'no' END AS result;"
@@ -267,7 +267,7 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "CREATE TABLE test(x TEXT);\n-- INSERTでデータを挿入\nINSERT INTO test VALUES ('hello');\nSELECT * FROM test;",
-      "holeyCode": "CREATE TABLE test(x TEXT);\n-- INSERTでデータを挿入\n___ INTO test VALUES ('hello');\nSELECT * FROM test;",
+      "holeyCode": "-- CREATE TABLEでテーブルを作成\n___ TABLE test(x TEXT);\n-- INSERTでデータを挿入\n___ INTO test VALUES ('hello');\n-- SELECTでデータを取得\n___ * FROM test;",
       "correctLines": [
         "CREATE TABLE test(x TEXT);",
         "INSERT INTO test VALUES ('hello');",
@@ -307,7 +307,7 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "CREATE TABLE test(x TEXT);\nINSERT INTO test VALUES ('old');\n-- UPDATEでデータを更新\nUPDATE test SET x = 'new';\nSELECT * FROM test;",
-      "holeyCode": "CREATE TABLE test(x TEXT);\nINSERT INTO test VALUES ('old');\n-- UPDATEでデータを更新\n___ test SET x = 'new';\nSELECT * FROM test;",
+      "holeyCode": "-- CREATE TABLEでテーブルを作成\n___ TABLE test(x TEXT);\n-- INSERTでデータを挿入\n___ INTO test VALUES ('old');\n-- UPDATEでデータを更新\n___ test SET x = 'new';\n-- SELECTでデータを取得\n___ * FROM test;",
       "correctLines": [
         "CREATE TABLE test(x TEXT);",
         "INSERT INTO test VALUES ('old');",
@@ -349,7 +349,7 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "CREATE TABLE test(x INT);\nINSERT INTO test VALUES (1), (2), (3);\n-- DELETEでデータを削除\nDELETE FROM test WHERE x = 2;\nSELECT * FROM test;",
-      "holeyCode": "CREATE TABLE test(x INT);\nINSERT INTO test VALUES (1), (2), (3);\n-- DELETEでデータを削除\n___ FROM test WHERE x = 2;\nSELECT * FROM test;",
+      "holeyCode": "-- CREATE TABLEでテーブルを作成\n___ TABLE test(x INT);\n-- INSERTでデータを挿入\n___ INTO test VALUES (1), (2), (3);\n-- DELETEでデータを削除\n___ FROM test WHERE x = 2;\n-- SELECTでデータを取得\n___ * FROM test;",
       "correctLines": [
         "CREATE TABLE test(x INT);",
         "INSERT INTO test VALUES (1), (2), (3);",
@@ -391,7 +391,7 @@ export const sql4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- GROUP_CONCATで値を結合\nSELECT GROUP_CONCAT(val, '-') FROM\n  (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
-      "holeyCode": "-- GROUP_CONCATで値を結合\nSELECT ___(val, '-') FROM\n  (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
+      "holeyCode": "-- GROUP_CONCATで値を結合\n___ ___(val, '-') FROM\n  -- データを作成\n  (___ 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
       "correctLines": [
         "SELECT GROUP_CONCAT(val, '-') FROM",
         "  (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');"

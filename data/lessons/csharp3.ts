@@ -25,7 +25,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Threading.Tasks;\n\nclass Program {\n    static async Task Main() {\n        var result = await GetMessageAsync();\n        Console.WriteLine(result);\n    }\n    \n    static async Task<string> GetMessageAsync() {\n        await Task.Delay(100);\n        return \"Hello Async!\";\n    }\n}",
-      "holeyCode": "using System;\nusing System.Threading.Tasks;\n\nclass Program {\n    static async Task Main() {\n        // awaitで非同期処理を待機\n        var result = ___ GetMessageAsync();\n        Console.WriteLine(result);\n    }\n    \n    static async Task<string> GetMessageAsync() {\n        await Task.Delay(100);\n        return \"Hello Async!\";\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでTasks名前空間をインポート\nusing System.Threading.___;\n\n// Programクラスを定義\nclass ___ {\n    // async Taskでエントリーポイント\n    static ___ Task Main() {\n        // awaitで非同期処理を待機\n        var result = ___ GetMessageAsync();\n        // 結果を表示\n        Console.___(result);\n    }\n    \n    // 非同期メソッドを定義\n    static async Task<string> ___() {\n        // 遅延を待機\n        await Task.___(100);\n        // 結果を返す\n        return \"___\";\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Threading.Tasks;",
@@ -87,7 +87,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 3, 1, 4, 1, 5 };\n        var sorted = nums.OrderBy(x => x);\n        Console.WriteLine(string.Join(\",\", sorted));\n    }\n}",
-      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 3, 1, 4, 1, 5 };\n        // OrderByでソート\n        var sorted = nums.___(x => x);\n        Console.WriteLine(string.Join(\",\", sorted));\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 配列を定義\n        var nums = new[] { ___, 1, 4, 1, 5 };\n        // OrderByでソート\n        var sorted = nums.___(x => x);\n        // 結果を表示\n        Console.WriteLine(string.___(\"___\", sorted));\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Linq;",
@@ -141,7 +141,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new int[] {};\n        var result = nums.FirstOrDefault();\n        Console.WriteLine(result);\n    }\n}",
-      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new int[] {};\n        // FirstOrDefaultで空の場合はデフォルト値\n        var result = nums.___();\n        Console.WriteLine(result);\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 空の配列を定義\n        var nums = new ___[] {};\n        // FirstOrDefaultで空の場合はデフォルト値\n        var result = nums.___();\n        // 結果を表示\n        Console.___(result);\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Linq;",
@@ -195,7 +195,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5 };\n        var allPositive = nums.All(x => x > 0);\n        Console.WriteLine(allPositive);\n    }\n}",
-      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5 };\n        // Allで全要素が条件を満たすかチェック\n        var allPositive = nums.___(x => x > 0);\n        Console.WriteLine(allPositive);\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 配列を定義\n        var nums = new[] { ___, 2, 3, 4, 5 };\n        // Allで全要素が条件を満たすかチェック\n        var allPositive = nums.___(x => x > 0);\n        // 結果を表示\n        Console.___(allPositive);\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Linq;",
@@ -249,7 +249,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 10, 20, 30 };\n        var total = nums.Sum();\n        Console.WriteLine(total);\n    }\n}",
-      "holeyCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 10, 20, 30 };\n        // Sumで合計を計算\n        var total = nums.___();\n        Console.WriteLine(total);\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 配列を定義\n        var nums = new[] { ___, 20, 30 };\n        // Sumで合計を計算\n        var total = nums.___();\n        // 結果を表示\n        Console.___(total);\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Linq;",
@@ -303,7 +303,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        int n = 2;\n        var result = n switch {\n            1 => \"one\",\n            2 => \"two\",\n            _ => \"other\"\n        };\n        Console.WriteLine(result);\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        int n = 2;\n        // switchで式を分岐\n        var result = n ___ {\n            1 => \"one\",\n            2 => \"two\",\n            _ => \"other\"\n        };\n        Console.WriteLine(result);\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 変数を定義\n        int n = ___;\n        // switchで式を分岐\n        var result = n ___ {\n            // 1の場合\n            1 => \"___\",\n            // 2の場合\n            2 => \"___\",\n            // その他の場合\n            _ => \"___\"\n        };\n        // 結果を表示\n        Console.___(result);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -363,7 +363,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.Collections.Generic;\n\nclass Program {\n    static void Main() {\n        var dict = new Dictionary<string, int>();\n        dict[\"a\"] = 1;\n        dict[\"b\"] = 2;\n        Console.WriteLine(dict[\"a\"]);\n    }\n}",
-      "holeyCode": "using System;\nusing System.Collections.Generic;\n\nclass Program {\n    static void Main() {\n        // Dictionaryでキーと値の辞書\n        var dict = new ___<string, int>();\n        dict[\"a\"] = 1;\n        dict[\"b\"] = 2;\n        Console.WriteLine(dict[\"a\"]);\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでCollections.Generic名前空間をインポート\nusing System.Collections.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // Dictionaryでキーと値の辞書\n        var dict = new ___<string, int>();\n        // キー\"a\"に値を設定\n        dict[\"___\"] = 1;\n        // キー\"b\"に値を設定\n        dict[\"___\"] = 2;\n        // キー\"a\"の値を表示\n        Console.___(dict[\"a\"]);\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.Collections.Generic;",
@@ -419,7 +419,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        var x = 10;\n        var y = 20;\n        Console.WriteLine($\"Sum: {x + y}\");\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        var x = 10;\n        var y = 20;\n        // $で文字列補間\n        Console.WriteLine(___\"Sum: {x + y}\");\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 変数xを定義\n        var x = ___;\n        // 変数yを定義\n        var y = ___;\n        // $で文字列補間\n        Console.WriteLine(___\"Sum: {x + y}\");\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -471,7 +471,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nrecord Point(int X, int Y);\n\nclass Program {\n    static void Main() {\n        var p = new Point(10, 20);\n        Console.WriteLine(p);\n    }\n}",
-      "holeyCode": "using System;\n\n// recordで値型を定義\n___ Point(int X, int Y);\n\nclass Program {\n    static void Main() {\n        var p = new Point(10, 20);\n        Console.WriteLine(p);\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// recordで値型を定義\n___ Point(int X, int Y);\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // Pointインスタンスを作成\n        var p = new ___(10, 20);\n        // 結果を表示\n        Console.___(p);\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -525,7 +525,7 @@ export const csharp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\nusing System.IO;\n\nclass Program {\n    static void Main() {\n        using var writer = new StringWriter();\n        writer.WriteLine(\"Hello\");\n        Console.WriteLine(writer.ToString().Trim());\n    }\n}",
-      "holeyCode": "using System;\nusing System.IO;\n\nclass Program {\n    static void Main() {\n        // usingで自動解放\n        ___ var writer = new StringWriter();\n        writer.WriteLine(\"Hello\");\n        Console.WriteLine(writer.ToString().Trim());\n    }\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでIO名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // usingで自動解放\n        ___ var writer = new StringWriter();\n        // 文字列を書き込む\n        writer.___(\"Hello\");\n        // 結果を表示\n        Console.WriteLine(writer.ToString().___());\n    }\n}",
       "correctLines": [
         "using System;",
         "using System.IO;",

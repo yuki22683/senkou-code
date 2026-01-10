@@ -25,7 +25,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums=(10 20 30)\n# 2で3番目の要素を取得\necho ${nums[2]}",
-      "holeyCode": "nums=(10 20 30)\n# 3番目の要素にアクセスするインデックス（0から数える）\necho ${nums[___]}",
+      "holeyCode": "# 配列を定義\nnums=(___ 20 30)\n# 3番目の要素にアクセスするインデックス（0から数える）\necho ${nums[___]}",
       "correctLines": [
         "nums=(10 20 30)",
         "echo ${nums[2]}"
@@ -63,7 +63,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "word=\"Bash\"\n# #で文字列の長さを取得\necho ${#word}",
-      "holeyCode": "word=\"Bash\"\n# 文字列の長さを取得する記号\necho ${___word}",
+      "holeyCode": "# 変数に文字列を代入\nword=\"___\"\n# 文字列の長さを取得する記号\necho ${___word}",
       "correctLines": [
         "word=\"Bash\"",
         "echo ${#word}"
@@ -101,7 +101,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "text=\"Hello World\"\n# 6で開始位置を指定\necho ${text:6:5}",
-      "holeyCode": "text=\"Hello World\"\n# Worldが始まる位置（0から数える）\necho ${text:___:5}",
+      "holeyCode": "# 変数に文字列を代入\ntext=\"___\"\n# Worldが始まる位置（0から数える）\necho ${text:___:5}",
       "correctLines": [
         "text=\"Hello World\"",
         "echo ${text:6:5}"
@@ -139,7 +139,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "add() {\n    # $1で最初の引数を参照\n    echo $(($1 + $2))\n}\nadd 3 5",
-      "holeyCode": "add() {\n    # 最初の引数を参照する変数\n    echo $((___ + $2))\n}\nadd 3 5",
+      "holeyCode": "# 関数を定義\n___() {\n    # 最初の引数を参照する変数\n    echo $((___ + $2))\n}\n# 関数を呼び出す\nadd ___ 5",
       "correctLines": [
         "add() {",
         "    echo $(($1 + $2))",
@@ -181,7 +181,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "square() {\n    echo $(($1 * $1))\n}\n# $で関数の出力を受け取る\nresult=$(square 4)\necho $result",
-      "holeyCode": "square() {\n    echo $(($1 * $1))\n}\n# コマンドの出力を取得する構文\nresult=___(square 4)\necho $result",
+      "holeyCode": "# 関数を定義\n___() {\n    # 引数を2乗する\n    echo $(($1 * _____))\n}\n# コマンドの出力を取得する構文\nresult=___(square 4)\n# 結果を表示\necho $___",
       "correctLines": [
         "square() {",
         "    echo $(($1 * $1))",
@@ -225,7 +225,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "i=1\n# whileで条件ループ\nwhile [ $i -le 3 ]; do\n    echo $i\n    i=$((i + 1))\ndone",
-      "holeyCode": "i=1\n# 条件が真の間繰り返すキーワード\n___ [ $i -le 3 ]; do\n    echo $i\n    i=$((i + 1))\ndone",
+      "holeyCode": "# 変数を初期化\ni=___\n# 条件が真の間繰り返すキーワード\n___ [ $i -le 3 ]; do\n    # 変数を表示\n    echo $___\n    # 変数をインクリメント\n    i=$((___ + 1))\ndone",
       "correctLines": [
         "i=1",
         "while [ $i -le 3 ]; do",
@@ -269,7 +269,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fruit=\"apple\"\n# caseで分岐\ncase $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
-      "holeyCode": "fruit=\"apple\"\n# パターンマッチで分岐するキーワード\n___ $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
+      "holeyCode": "# 変数に値を代入\nfruit=\"___\"\n# パターンマッチで分岐するキーワード\n___ $fruit in\n    # appleの場合\n    apple) echo \"___\";;\n    # bananaの場合\n    banana) echo \"yellow\";;\n    # その他の場合\n    *) echo \"___\";;\nesac",
       "correctLines": [
         "fruit=\"apple\"",
         "case $fruit in",
@@ -315,7 +315,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# $でコマンドの出力を取得\nfiles=$(ls)\necho \"Files: $files\"",
-      "holeyCode": "# コマンドの出力を変数に格納する構文\nfiles=___(ls)\necho \"Files: $files\"",
+      "holeyCode": "# コマンドの出力を変数に格納する構文\nfiles=___(___)\n# 変数を表示\necho \"Files: $___\"",
       "correctLines": [
         "files=$(ls)",
         "echo \"Files: $files\""
@@ -389,7 +389,7 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# <<でヒアドキュメントを開始\ncat <<END\nHello\nWorld\nEND",
-      "holeyCode": "# ヒアドキュメントを開始する演算子\ncat ___END\nHello\nWorld\nEND",
+      "holeyCode": "# ヒアドキュメントを開始する演算子\ncat ___END\n# 1行目のテキスト\n___\n# 2行目のテキスト\n___\nEND",
       "correctLines": [
         "cat <<END",
         "Hello",

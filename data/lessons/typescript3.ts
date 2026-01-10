@@ -25,7 +25,7 @@ export const typescriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "interface Config {\n  host: string;\n  port: number;\n}\n// Partial で全プロパティをオプショナルに\nfunction update(config: Config, patch: Partial<Config>): Config {\n  return { ...config, ...patch };\n}\n\nconst cfg = { host: 'localhost', port: 3000 };\nconsole.log(update(cfg, { port: 8080 }).port);",
-      "holeyCode": "interface Config {\n  host: string;\n  port: number;\n}\n// Partial で全プロパティをオプショナルに\nfunction update(config: Config, patch: ___<Config>): Config {\n  return { ...config, ...patch };\n}\n\nconst cfg = { host: 'localhost', port: 3000 };\nconsole.log(update(cfg, { port: 8080 }).port);",
+      "holeyCode": "interface Config {\n  // ホスト名の型\n  host: ___;\n  // ポート番号の型\n  port: ___;\n}\n// Partial で全プロパティをオプショナルに\nfunction update(config: Config, patch: ___<Config>): Config {\n  return { ...config, ...patch };\n}\n\n// 設定オブジェクトを作成\nconst cfg = { host: 'localhost', port: ___ };\n// 更新してポートを出力\nconsole.log(update(cfg, { port: 8080 }).___);",
       "correctLines": [
         "interface Config {",
         "  host: string;",
@@ -81,7 +81,7 @@ export const typescriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "interface Options {\n  debug?: boolean;\n  verbose?: boolean;\n}\n// Required で全プロパティを必須に\nfunction init(opts: Required<Options>) {\n  console.log(opts.debug);\n}\n\ninit({ debug: true, verbose: false });",
-      "holeyCode": "interface Options {\n  debug?: boolean;\n  verbose?: boolean;\n}\n// Required で全プロパティを必須に\nfunction init(opts: ___<Options>) {\n  console.log(opts.debug);\n}\n\ninit({ debug: true, verbose: false });",
+      "holeyCode": "interface Options {\n  // デバッグ設定の型\n  debug?: ___;\n  // 詳細出力設定の型\n  verbose?: ___;\n}\n// Required で全プロパティを必須に\nfunction init(opts: ___<Options>) {\n  // debugを出力\n  console.log(opts.___);\n}\n\n// オプションを渡して初期化\ninit({ debug: true, verbose: ___ });",
       "correctLines": [
         "interface Options {",
         "  debug?: boolean;",
@@ -135,7 +135,7 @@ export const typescriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "interface Product {\n  id: number;\n  name: string;\n  price: number;\n}\n// Pick で特定のプロパティを選択\ntype ProductName = Pick<Product, 'name'>;\n\nconst item: ProductName = { name: 'Apple' };\nconsole.log(item.name);",
-      "holeyCode": "interface Product {\n  id: number;\n  name: string;\n  price: number;\n}\n// Pick で特定のプロパティを選択\ntype ProductName = ___<Product, 'name'>;\n\nconst item: ProductName = { name: 'Apple' };\nconsole.log(item.name);",
+      "holeyCode": "interface Product {\n  // IDの型\n  id: ___;\n  // 名前の型\n  name: ___;\n  // 価格の型\n  price: ___;\n}\n// Pick で特定のプロパティを選択\ntype ProductName = ___<Product, 'name'>;\n\n// 商品名のみを持つオブジェクト\nconst item: ProductName = { name: ___ };\n// 名前を出力\nconsole.log(item.___);",
       "correctLines": [
         "interface Product {",
         "  id: number;",
@@ -189,7 +189,7 @@ export const typescriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "interface User {\n  id: number;\n  name: string;\n  secret: string;\n}\n// Omit で特定のプロパティを除外\ntype SafeUser = Omit<User, 'secret'>;\n\nconst user: SafeUser = { id: 1, name: 'Alice' };\nconsole.log(user.name);",
-      "holeyCode": "interface User {\n  id: number;\n  name: string;\n  secret: string;\n}\n// Omit で特定のプロパティを除外\ntype SafeUser = ___<User, 'secret'>;\n\nconst user: SafeUser = { id: 1, name: 'Alice' };\nconsole.log(user.name);",
+      "holeyCode": "interface User {\n  // IDの型\n  id: ___;\n  // 名前の型\n  name: ___;\n  // 秘密情報の型\n  secret: ___;\n}\n// Omit で特定のプロパティを除外\ntype SafeUser = ___<User, 'secret'>;\n\n// secretを除いたユーザー\nconst user: SafeUser = { id: 1, name: ___ };\n// 名前を出力\nconsole.log(user.___);",
       "correctLines": [
         "interface User {",
         "  id: number;",
@@ -243,7 +243,7 @@ export const typescriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "type Fruit = 'apple' | 'banana';\n// Record でキーと値の型を指定\ntype Prices = Record<Fruit, number>;\n\nconst prices: Prices = {\n  apple: 100,\n  banana: 80\n};\n\nconsole.log(prices.apple);",
-      "holeyCode": "type Fruit = 'apple' | 'banana';\n// Record でキーと値の型を指定\ntype Prices = ___<Fruit, number>;\n\nconst prices: Prices = {\n  apple: 100,\n  banana: 80\n};\n\nconsole.log(prices.apple);",
+      "holeyCode": "// フルーツのユニオン型\ntype Fruit = 'apple' ___ 'banana';\n// Record でキーと値の型を指定\ntype Prices = ___<Fruit, number>;\n\n// 価格オブジェクト\nconst prices: Prices = {\n  // りんごの価格\n  apple: ___,\n  // バナナの価格\n  banana: ___\n};\n\n// りんごの価格を出力\nconsole.log(prices.___);",
       "correctLines": [
         "type Fruit = 'apple' | 'banana';",
         "type Prices = Record<Fruit, number>;",
@@ -295,7 +295,7 @@ export const typescriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "function createPoint() {\n  return { x: 10, y: 20 };\n}\n// ReturnType で戻り値の型を取得\ntype Point = ReturnType<typeof createPoint>;\n\nconst p: Point = { x: 5, y: 15 };\nconsole.log(p.x + p.y);",
-      "holeyCode": "function createPoint() {\n  return { x: 10, y: 20 };\n}\n// ReturnType で戻り値の型を取得\ntype Point = ___<typeof createPoint>;\n\nconst p: Point = { x: 5, y: 15 };\nconsole.log(p.x + p.y);",
+      "holeyCode": "function createPoint() {\n  // 座標オブジェクトを返す\n  return { x: 10, y: ___ };\n}\n// ReturnType で戻り値の型を取得\ntype Point = ___<typeof createPoint>;\n\n// Pointオブジェクトを作成\nconst p: Point = { x: 5, y: ___ };\n// 座標の合計を出力\nconsole.log(p.___ + p.y);",
       "correctLines": [
         "function createPoint() {",
         "  return { x: 10, y: 20 };",
@@ -345,7 +345,7 @@ export const typescriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// extends で条件型を定義\ntype IsArray<T> = T extends any[] ? true : false;\n\ntype A = IsArray<number[]>;\ntype B = IsArray<string>;\n\nconst a: A = true;\nconst b: B = false;\nconsole.log(a, b);",
-      "holeyCode": "// extends で条件型を定義\ntype IsArray<T> = T ___ any[] ? true : false;\n\ntype A = IsArray<number[]>;\ntype B = IsArray<string>;\n\nconst a: A = true;\nconst b: B = false;\nconsole.log(a, b);",
+      "holeyCode": "// extends で条件型を定義\ntype IsArray<T> = T ___ any[] ? true : false;\n\n// 配列型をチェック\ntype A = IsArray<___[]>;\n// 非配列型をチェック\ntype B = IsArray<___>;\n\n// 結果を変数に代入\nconst a: A = ___;\nconst b: B = ___;\n// 出力\nconsole.log(a, ___);",
       "correctLines": [
         "type IsArray<T> = T extends any[] ? true : false;",
         "",
@@ -395,7 +395,7 @@ export const typescriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// infer で型を推論して抽出\ntype Unwrap<T> = T extends Promise<infer U> ? U : T;\n\ntype A = Unwrap<Promise<string>>;\ntype B = Unwrap<number>;\n\nconst a: A = 'hello';\nconst b: B = 42;\nconsole.log(a, b);",
-      "holeyCode": "// infer で型を推論して抽出\ntype Unwrap<T> = T extends Promise<___ U> ? U : T;\n\ntype A = Unwrap<Promise<string>>;\ntype B = Unwrap<number>;\n\nconst a: A = 'hello';\nconst b: B = 42;\nconsole.log(a, b);",
+      "holeyCode": "// infer で型を推論して抽出\ntype Unwrap<T> = T extends Promise<___ U> ? U : T;\n\n// Promise<string>をアンラップ\ntype A = Unwrap<Promise<___>>;\n// numberはそのまま\ntype B = Unwrap<___>;\n\n// 値を代入\nconst a: A = ___;\nconst b: B = ___;\n// 出力\nconsole.log(a, ___);",
       "correctLines": [
         "type Unwrap<T> = T extends Promise<infer U> ? U : T;",
         "",
@@ -445,7 +445,7 @@ export const typescriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "interface Person {\n  name: string;\n  age: number;\n}\n// keyof でオブジェクトのキーを取得\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\n  return p[key];\n}\n\nconst person = { name: 'Bob', age: 30 };\nconsole.log(getProperty(person, 'name'));",
-      "holeyCode": "interface Person {\n  name: string;\n  age: number;\n}\n// keyof でオブジェクトのキーを取得\nfunction getProperty<K extends ___ Person>(p: Person, key: K) {\n  return p[key];\n}\n\nconst person = { name: 'Bob', age: 30 };\nconsole.log(getProperty(person, 'name'));",
+      "holeyCode": "interface Person {\n  // 名前の型\n  name: ___;\n  // 年齢の型\n  age: ___;\n}\n// keyof でオブジェクトのキーを取得\nfunction getProperty<K extends ___ Person>(p: Person, key: K) {\n  return p[___];\n}\n\n// Personオブジェクトを作成\nconst person = { name: 'Bob', age: ___ };\n// 名前を取得して出力\nconsole.log(getProperty(person, ___));",
       "correctLines": [
         "interface Person {",
         "  name: string;",
@@ -501,7 +501,7 @@ export const typescriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// in でキーをイテレートするマップ型\ntype Optional<T> = {\n  [K in keyof T]?: T[K];\n};\n\ninterface Config {\n  host: string;\n  port: number;\n}\n\nconst partial: Optional<Config> = { host: 'localhost' };\nconsole.log(partial.host);",
-      "holeyCode": "// in でキーをイテレートするマップ型\ntype Optional<T> = {\n  [K ___ keyof T]?: T[K];\n};\n\ninterface Config {\n  host: string;\n  port: number;\n}\n\nconst partial: Optional<Config> = { host: 'localhost' };\nconsole.log(partial.host);",
+      "holeyCode": "// in でキーをイテレートするマップ型\ntype Optional<T> = {\n  [K ___ keyof T]?: T[K];\n};\n\ninterface Config {\n  // ホスト名の型\n  host: ___;\n  // ポート番号の型\n  port: ___;\n}\n\n// 部分的なConfigオブジェクト\nconst partial: Optional<Config> = { host: ___ };\n// ホスト名を出力\nconsole.log(partial.___);",
       "correctLines": [
         "type Optional<T> = {",
         "  [K in keyof T]?: T[K];",

@@ -30,7 +30,7 @@ export const assemblyData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "section .data\n  msg db \"Hello\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 1\n  mov rdi, 1\n  ; msgで表示する文字を指定\n  mov rsi, msg\n  mov rdx, 6\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-      "holeyCode": "section .data\n  msg db \"Hello\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 1\n  mov rdi, 1\n  ; msgで表示する文字を指定\n  mov rsi, ___\n  mov rdx, 6\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+      "holeyCode": "; データセクションを宣言\nsection ___\n  ; 文字列msgを定義\n  msg db \"___\", 0xA\n\n; テキストセクションを宣言\nsection ___\n  ; エントリーポイントを公開\n  global ___\n\n; プログラムの開始地点\n___:\n  ; 1は「書く」という命令\n  mov rax, ___\n  ; 1は標準出力\n  mov rdi, ___\n  ; msgで表示する文字を指定\n  mov rsi, ___\n  ; 文字の長さを指定\n  mov rdx, ___\n  ; システムコールを実行\n  ___\n\n  ; 60は「終了」という命令\n  mov rax, ___\n  ; エラーコード0\n  xor ___, rdi\n  ; システムコールを実行\n  ___",
       "correctLines": ["section .data", "  msg db \"Hello\", 0xA", "", "section .text", "  global _start", "", "_start:", "  mov rax, 1", "  mov rdi, 1", "  mov rsi, msg", "  mov rdx, 6", "  syscall", "", "  mov rax, 60", "  xor rdi, rdi", "  syscall"],
       "lineHints": [
         "ここはおまじない（データの場所）です。",

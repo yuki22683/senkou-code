@@ -25,7 +25,7 @@ export const javaData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Vehicle {\n    void move() {\n        System.out.println(\"Moving\");\n    }\n}\n\n// extends で Vehicle を継承する\nclass Car extends Vehicle {\n    void honk() {\n        System.out.println(\"Beep!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Car c = new Car();\n        c.move();\n    }\n}",
-      "holeyCode": "class Vehicle {\n    void move() {\n        System.out.println(\"Moving\");\n    }\n}\n\n// extends で Vehicle を継承する\nclass Car ___ Vehicle {\n    void honk() {\n        System.out.println(\"Beep!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Car c = new Car();\n        c.move();\n    }\n}",
+      "holeyCode": "class Vehicle {\n    void move() {\n        System.out.println(\"Moving\");\n    }\n}\n\n// extends で Vehicle を継承する\nclass Car ___ Vehicle {\n    void honk() {\n        System.out.println(\"Beep!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Car c = ___ Car();\n        // move メソッドを呼び出す\n        c.___();\n    }\n}",
       "correctLines": [
         "class Vehicle {",
         "    void move() {",
@@ -63,13 +63,15 @@ export const javaData2 = {
         null,
         null,
         null,
+        "`new` でインスタンスを作成します。",
         null,
+        "`move` メソッドを呼び出します。",
         null,
         null,
         null
       ],
       "candidates": {
-        "keywords": ["extends", "implements", "super", "this"]
+        "keywords": ["extends", "implements", "super", "this", "new", "move"]
       },
       "testCases": [
         {
@@ -97,7 +99,7 @@ export const javaData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Shape {\n    void draw() {\n        System.out.println(\"Shape\");\n    }\n}\n\nclass Circle extends Shape {\n    // @Override でメソッドを上書き宣言する\n    @Override\n    void draw() {\n        System.out.println(\"Circle\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Circle c = new Circle();\n        c.draw();\n    }\n}",
-      "holeyCode": "class Shape {\n    void draw() {\n        System.out.println(\"Shape\");\n    }\n}\n\nclass Circle extends Shape {\n    // @Override でメソッドを上書き宣言する\n    ___\n    void draw() {\n        System.out.println(\"Circle\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Circle c = new Circle();\n        c.draw();\n    }\n}",
+      "holeyCode": "class Shape {\n    void draw() {\n        System.out.println(\"Shape\");\n    }\n}\n\nclass Circle extends Shape {\n    // @Override でメソッドを上書き宣言する\n    ___\n    void draw() {\n        System.out.println(\"Circle\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Circle c = ___ Circle();\n        // draw メソッドを呼び出す\n        c.___();\n    }\n}",
       "correctLines": [
         "class Shape {",
         "    void draw() {",
@@ -137,13 +139,15 @@ export const javaData2 = {
         null,
         null,
         null,
+        "`new` でインスタンスを作成します。",
         null,
+        "`draw` メソッドを呼び出します。",
         null,
         null,
         null
       ],
       "candidates": {
-        "keywords": ["@Override", "@override", "override", "@Overwrite"]
+        "keywords": ["@Override", "@override", "override", "@Overwrite", "new", "draw"]
       },
       "testCases": [
         {
@@ -171,7 +175,7 @@ export const javaData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "interface Greeting {\n    void sayHello();\n}\n\n// implements でインターフェースを実装する\nclass Person implements Greeting {\n    public void sayHello() {\n        System.out.println(\"Hello!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Person p = new Person();\n        p.sayHello();\n    }\n}",
-      "holeyCode": "interface Greeting {\n    void sayHello();\n}\n\n// implements でインターフェースを実装する\nclass Person ___ Greeting {\n    public void sayHello() {\n        System.out.println(\"Hello!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Person p = new Person();\n        p.sayHello();\n    }\n}",
+      "holeyCode": "interface Greeting {\n    void sayHello();\n}\n\n// implements でインターフェースを実装する\nclass Person ___ Greeting {\n    public void sayHello() {\n        System.out.println(\"Hello!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Person p = ___ Person();\n        // sayHello メソッドを呼び出す\n        p.___();\n    }\n}",
       "correctLines": [
         "interface Greeting {",
         "    void sayHello();",
@@ -205,13 +209,15 @@ export const javaData2 = {
         null,
         null,
         null,
+        "`new` でインスタンスを作成します。",
         null,
+        "`sayHello` メソッドを呼び出します。",
         null,
         null,
         null
       ],
       "candidates": {
-        "keywords": ["implements", "extends", "interface", "abstract"]
+        "keywords": ["implements", "extends", "interface", "abstract", "new", "sayHello"]
       },
       "testCases": [
         {
@@ -239,7 +245,7 @@ export const javaData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// abstract で抽象クラスを定義する\nabstract class Animal {\n    abstract void speak();\n}\n\nclass Dog extends Animal {\n    void speak() {\n        System.out.println(\"Woof!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Dog d = new Dog();\n        d.speak();\n    }\n}",
-      "holeyCode": "// abstract で抽象クラスを定義する\n___ class Animal {\n    abstract void speak();\n}\n\nclass Dog extends Animal {\n    void speak() {\n        System.out.println(\"Woof!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Dog d = new Dog();\n        d.speak();\n    }\n}",
+      "holeyCode": "// abstract で抽象クラスを定義する\n___ class Animal {\n    abstract void speak();\n}\n\nclass Dog extends Animal {\n    void speak() {\n        System.out.println(\"Woof!\");\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Dog d = ___ Dog();\n        // speak メソッドを呼び出す\n        d.___();\n    }\n}",
       "correctLines": [
         "// abstract で抽象クラスを定義する",
         "abstract class Animal {",
@@ -273,12 +279,14 @@ export const javaData2 = {
         null,
         null,
         null,
+        "`new` でインスタンスを作成します。",
         null,
+        "`speak` メソッドを呼び出します。",
         null,
         null
       ],
       "candidates": {
-        "keywords": ["abstract", "interface", "virtual", "static"]
+        "keywords": ["abstract", "interface", "virtual", "static", "new", "speak"]
       },
       "testCases": [
         {
@@ -306,7 +314,7 @@ export const javaData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Main {\n    public static void main(String[] args) {\n        // try で例外が起きる可能性のある処理を囲む\n        try {\n            int x = Integer.parseInt(\"abc\");\n        } catch (Exception e) {\n            System.out.println(\"Error\");\n        }\n    }\n}",
-      "holeyCode": "class Main {\n    public static void main(String[] args) {\n        // try で例外が起きる可能性のある処理を囲む\n        ___ {\n            int x = Integer.parseInt(\"abc\");\n        } catch (Exception e) {\n            System.out.println(\"Error\");\n        }\n    }\n}",
+      "holeyCode": "class Main {\n    public static void main(String[] args) {\n        // try で例外が起きる可能性のある処理を囲む\n        ___ {\n            // parseInt で文字列を整数に変換する\n            int x = Integer.___(\"abc\");\n        } catch (Exception e) {\n            System.out.println(\"Error\");\n        }\n    }\n}",
       "correctLines": [
         "class Main {",
         "    public static void main(String[] args) {",
@@ -325,6 +333,7 @@ export const javaData2 = {
         null,
         "`try` キーワードを使います。",
         null,
+        "`parseInt` メソッドを使います。",
         null,
         null,
         null,
@@ -332,7 +341,7 @@ export const javaData2 = {
         null
       ],
       "candidates": {
-        "keywords": ["try", "catch", "throw", "finally"]
+        "keywords": ["try", "catch", "throw", "finally", "parseInt"]
       },
       "testCases": [
         {
@@ -360,7 +369,7 @@ export const javaData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Main {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        // finally で必ず実行する\n        } finally {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
-      "holeyCode": "class Main {\n    public static void main(String[] args) {\n        try {\n            System.out.println(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        // finally で必ず実行する\n        } ___ {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
+      "holeyCode": "class Main {\n    public static void main(String[] args) {\n        try {\n            // println で出力する\n            System.out.___(\"Try\");\n        } catch (Exception e) {\n            System.out.println(\"Catch\");\n        // finally で必ず実行する\n        } ___ {\n            System.out.println(\"Finally\");\n        }\n    }\n}",
       "correctLines": [
         "class Main {",
         "    public static void main(String[] args) {",
@@ -380,6 +389,7 @@ export const javaData2 = {
         null,
         null,
         null,
+        "`println` メソッドを使います。",
         null,
         null,
         null,
@@ -390,7 +400,7 @@ export const javaData2 = {
         null
       ],
       "candidates": {
-        "keywords": ["finally", "final", "finish", "end"]
+        "keywords": ["finally", "final", "finish", "end", "println"]
       },
       "testCases": [
         {

@@ -20,7 +20,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "def twice\n  # yieldでブロックを実行\n  yield\n  # yieldでブロックを実行\n  yield\nend",
-      "holeyCode": "def twice\n  # yieldでブロックを実行\n  ___\n  # yieldでブロックを実行\n  ___\nend",
+      "holeyCode": "# defでメソッドを定義\n___ twice\n  # yieldでブロックを実行\n  ___\n  # yieldでブロックを実行\n  ___\n# endで終了\n___",
       "correctLines": [
         { "lineNumber": 2, "content": "  yield" },
         { "lineNumber": 3, "content": "  yield" }
@@ -191,7 +191,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# *で可変長引数を受け取る\ndef sum_all(*numbers)\n  # reduceで畳み込み\n  numbers.reduce(0) { |acc, n| acc + n }\nend",
-      "holeyCode": "# *で可変長引数を受け取る\ndef sum_all(___numbers)\n  # reduceで畳み込み\n  numbers.___(0) { |acc, n| acc + n }\nend",
+      "holeyCode": "# *で可変長引数を受け取る\n___ sum_all(___numbers)\n  # reduceで畳み込み\n  numbers.___(0) { |acc, n| acc + n }\n# endで終了\n___",
       "correctLines": [
         { "lineNumber": 1, "content": "def sum_all(*numbers)" },
         { "lineNumber": 2, "content": "  numbers.reduce(0) { |acc, n| acc + n }" }
@@ -222,7 +222,7 @@ export const ruby3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class FlexibleClass\n  # method_missingで未定義メソッドを捕捉\n  def method_missing(name, *args)\n    # nameでメソッド名を参照\n    \"Unknown method: #{name}\"\n  end\nend",
-      "holeyCode": "class FlexibleClass\n  # method_missingで未定義メソッドを捕捉\n  def ___(name, *args)\n    # nameでメソッド名を参照\n    \"Unknown method: #{___}\"\n  end\nend",
+      "holeyCode": "# classでクラスを定義\n___ FlexibleClass\n  # method_missingで未定義メソッドを捕捉\n  def ___(name, *args)\n    # nameでメソッド名を参照\n    \"Unknown method: #{___}\"\n  # endで終了\n  ___\n# endで終了\n___",
       "correctLines": [
         { "lineNumber": 2, "content": "  def method_missing(name, *args)" },
         { "lineNumber": 3, "content": "    \"Unknown method: #{name}\"" }

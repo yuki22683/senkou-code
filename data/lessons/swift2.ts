@@ -25,7 +25,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "var num: Int? = 42\nif num != nil {\n    print(num!)\n}",
-      "holeyCode": "// ?でオプショナル型\nvar num: Int___ = 42\nif num != nil {\n    print(num!)\n}",
+      "holeyCode": "// ?でオプショナル型\nvar num: Int___ = 42\n// nilチェック\nif num != ___ {\n    // !でアンラップ\n    print(num___)\n}",
       "correctLines": [
         "var num: Int? = 42",
         "if num != nil {",
@@ -67,7 +67,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "var val: Int? = 100\nif let n = val {\n    print(n)\n}",
-      "holeyCode": "var val: Int? = 100\n// letで値を取り出す\nif ___ n = val {\n    print(n)\n}",
+      "holeyCode": "// ?でオプショナル型\nvar val: Int___ = 100\n// letで値を取り出す\nif ___ n = val {\n    // 値を出力\n    ___(n)\n}",
       "correctLines": [
         "var val: Int? = 100",
         "if let n = val {",
@@ -109,7 +109,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "struct Rect {\n    var width: Int\n    var height: Int\n}\nlet r = Rect(width: 3, height: 4)\nprint(r.width)",
-      "holeyCode": "// structで構造体を定義\n___ Rect {\n    var width: Int\n    var height: Int\n}\nlet r = Rect(width: 3, height: 4)\nprint(r.width)",
+      "holeyCode": "// structで構造体を定義\n___ Rect {\n    // widthプロパティ\n    var ___: Int\n    // heightプロパティ\n    var ___: Int\n}\n// インスタンスを作成\nlet r = ___(width: 3, height: 4)\n// widthを出力\nprint(r.___)",
       "correctLines": [
         "struct Rect {",
         "    var width: Int",
@@ -155,7 +155,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Cat {\n    var name: String\n    init(name: String) {\n        self.name = name\n    }\n}\nlet cat = Cat(name: \"Tama\")\nprint(cat.name)",
-      "holeyCode": "// classでクラスを定義\n___ Cat {\n    var name: String\n    init(name: String) {\n        self.name = name\n    }\n}\nlet cat = Cat(name: \"Tama\")\nprint(cat.name)",
+      "holeyCode": "// classでクラスを定義\n___ Cat {\n    // nameプロパティ\n    var ___: String\n    // initでイニシャライザ\n    ___(name: String) {\n        // selfで自身のプロパティにアクセス\n        ___.name = name\n    }\n}\n// インスタンスを作成\nlet cat = Cat(name: \"___\")\n// nameを出力\nprint(cat.___)",
       "correctLines": [
         "class Cat {",
         "    var name: String",
@@ -205,7 +205,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "protocol Speaker {\n    func speak()\n}\nstruct Dog: Speaker {\n    func speak() {\n        print(\"woof\")\n    }\n}\nlet d = Dog()\nd.speak()",
-      "holeyCode": "// protocolでプロトコルを定義\n___ Speaker {\n    func speak()\n}\nstruct Dog: Speaker {\n    func speak() {\n        print(\"woof\")\n    }\n}\nlet d = Dog()\nd.speak()",
+      "holeyCode": "// protocolでプロトコルを定義\n___ Speaker {\n    // speakメソッドを宣言\n    func ___()\n}\n// Speakerに準拠\nstruct Dog: ___ {\n    // speakメソッドを実装\n    func ___() {\n        // woofと出力\n        print(\"___\")\n    }\n}\n// インスタンスを作成\nlet d = ___()\n// speakを呼び出し\nd.___()",
       "correctLines": [
         "protocol Speaker {",
         "    func speak()",
@@ -259,7 +259,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let double = { (n: Int) in\n    return n * 2\n}\nprint(double(5))",
-      "holeyCode": "// inで引数と処理を分ける\nlet double = { (n: Int) ___\n    return n * 2\n}\nprint(double(5))",
+      "holeyCode": "// inで引数と処理を分ける\nlet double = { (n: Int) ___\n    // n * 2を返す\n    return n ___ 2\n}\n// doubleを呼び出し\nprint(___(5))",
       "correctLines": [
         "let double = { (n: Int) in",
         "    return n * 2",
@@ -301,7 +301,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let nums = [1, 2, 3]\nlet squared = nums.map { $0 * $0 }\nprint(squared)",
-      "holeyCode": "let nums = [1, 2, 3]\n// mapで各要素を変換\nlet squared = nums.___ { $0 * $0 }\nprint(squared)",
+      "holeyCode": "// 配列を作成\nlet nums = [___, 2, 3]\n// mapで各要素を変換\nlet squared = nums.___ { $0 * $0 }\n// 結果を出力\nprint(___)",
       "correctLines": [
         "let nums = [1, 2, 3]",
         "let squared = nums.map { $0 * $0 }",
@@ -341,7 +341,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let nums = [1, 2, 3, 4, 5]\nlet result = nums.filter { $0 >= 3 }\nprint(result)",
-      "holeyCode": "let nums = [1, 2, 3, 4, 5]\n// filterで条件に合う要素を抽出\nlet result = nums.___ { $0 >= 3 }\nprint(result)",
+      "holeyCode": "// 配列を作成\nlet nums = [___, 2, 3, 4, 5]\n// filterで条件に合う要素を抽出\nlet result = nums.___ { $0 >= 3 }\n// 結果を出力\nprint(___)",
       "correctLines": [
         "let nums = [1, 2, 3, 4, 5]",
         "let result = nums.filter { $0 >= 3 }",
@@ -381,7 +381,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "func check(_ val: Int?) {\n    guard let n = val else {\n        print(\"nil\")\n        return\n    }\n    print(n)\n}\ncheck(10)",
-      "holeyCode": "func check(_ val: Int?) {\n    // guardで早期リターン\n    ___ let n = val else {\n        print(\"nil\")\n        return\n    }\n    print(n)\n}\ncheck(10)",
+      "holeyCode": "// 関数を定義\nfunc ___(_ val: Int?) {\n    // guardで早期リターン\n    ___ let n = val else {\n        // nilと出力\n        print(\"___\")\n        // 早期リターン\n        ___\n    }\n    // nを出力\n    print(___)\n}\n// 関数を呼び出し\n___(10)",
       "correctLines": [
         "func check(_ val: Int?) {",
         "    guard let n = val else {",
@@ -431,7 +431,7 @@ export const swift2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "enum Color {\n    case red, green, blue\n}\nlet c = Color.red\nswitch c {\ncase .red:\n    print(\"red\")\ncase .green:\n    print(\"green\")\ncase .blue:\n    print(\"blue\")\n}",
-      "holeyCode": "// enumで列挙型を定義\n___ Color {\n    case red, green, blue\n}\nlet c = Color.red\nswitch c {\ncase .red:\n    print(\"red\")\ncase .green:\n    print(\"green\")\ncase .blue:\n    print(\"blue\")\n}",
+      "holeyCode": "// enumで列挙型を定義\n___ Color {\n    // caseでケースを定義\n    case ___, green, blue\n}\n// Color.redを代入\nlet c = Color.___\n// switchでパターンマッチ\nswitch ___ {\ncase .red:\n    print(\"___\")\ncase .green:\n    print(\"___\")\ncase .blue:\n    print(\"___\")\n}",
       "correctLines": [
         "enum Color {",
         "    case red, green, blue",

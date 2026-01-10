@@ -111,7 +111,7 @@ export const elixirData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "a = 5\nb = 3\n# +でたし算\nIO.puts a + b",
-      "holeyCode": "a = 5\nb = 3\n# +でたし算\nIO.puts a ___ b",
+      "holeyCode": "# 5を入力\na = ___\n# 3を入力\nb = ___\n# +でたし算\nIO.puts a ___ b",
       "correctLines": [
         "a = 5",
         "b = 3",
@@ -123,6 +123,10 @@ export const elixirData = {
         "たし算なので `+\` を使います。"
       ],
       "candidates": {
+        "numbers": [
+          "5",
+          "3"
+        ],
         "operators": [
           "+"
         ]

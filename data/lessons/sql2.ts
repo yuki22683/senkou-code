@@ -61,7 +61,7 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2\n-- ORDERで並べ替え\nORDER BY num;",
-      "holeyCode": "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2\n-- ORDERで並べ替え\n___ BY num;",
+      "holeyCode": "-- SELECT文でデータを作成\n___ 1 AS num UNION SELECT 3 UNION SELECT 2\n-- ORDERで並べ替え\n___ BY num;",
       "correctLines": [
         "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2",
         "ORDER BY num;"
@@ -99,7 +99,7 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT 1 UNION SELECT 2 UNION SELECT 3\n-- LIMITで件数制限\nLIMIT 2;",
-      "holeyCode": "SELECT 1 UNION SELECT 2 UNION SELECT 3\n-- LIMITで件数制限\n___ 2;",
+      "holeyCode": "-- SELECT文でデータを作成\n___ 1 UNION SELECT 2 UNION SELECT 3\n-- LIMITで件数制限\n___ 2;",
       "correctLines": [
         "SELECT 1 UNION SELECT 2 UNION SELECT 3",
         "LIMIT 2;"
@@ -245,7 +245,7 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT category, COUNT(*) FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n-- GROUPでグループ化\n) GROUP BY category;",
-      "holeyCode": "SELECT category, COUNT(*) FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n-- GROUPでグループ化\n) ___ BY category;",
+      "holeyCode": "-- SELECT文でデータを取得\n___ category, COUNT(*) FROM (\n  -- カテゴリを定義\n  ___ 'A' AS category UNION ALL\n  -- データを追加\n  ___ 'A' UNION ALL SELECT 'B'\n-- GROUPでグループ化\n) ___ BY category;",
       "correctLines": [
         "SELECT category, COUNT(*) FROM (",
         "  SELECT 'A' AS category UNION ALL",
@@ -287,7 +287,7 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT category, COUNT(*) AS cnt FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n-- HAVINGでグループを絞り込み\n) GROUP BY category HAVING cnt > 1;",
-      "holeyCode": "SELECT category, COUNT(*) AS cnt FROM (\n  SELECT 'A' AS category UNION ALL\n  SELECT 'A' UNION ALL SELECT 'B'\n-- HAVINGでグループを絞り込み\n) GROUP BY category ___ cnt > 1;",
+      "holeyCode": "-- SELECT文でデータを取得\n___ category, COUNT(*) AS cnt FROM (\n  -- カテゴリを定義\n  ___ 'A' AS category UNION ALL\n  -- データを追加\n  ___ 'A' UNION ALL SELECT 'B'\n-- HAVINGでグループを絞り込み\n) GROUP BY category ___ cnt > 1;",
       "correctLines": [
         "SELECT category, COUNT(*) AS cnt FROM (",
         "  SELECT 'A' AS category UNION ALL",
@@ -329,7 +329,7 @@ export const sql2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- CASEで条件分岐\nSELECT CASE\n  WHEN 85 >= 80 THEN 'pass'\n  ELSE 'fail'\nEND;",
-      "holeyCode": "-- CASEで条件分岐\nSELECT ___\n  WHEN 85 >= 80 THEN 'pass'\n  ELSE 'fail'\nEND;",
+      "holeyCode": "-- CASEで条件分岐\n___ ___\n  -- 条件を指定\n  ___ 85 >= 80 THEN 'pass'\n  -- それ以外の場合\n  ___ 'fail'\n___;",
       "correctLines": [
         "SELECT CASE",
         "  WHEN 85 >= 80 THEN 'pass'",

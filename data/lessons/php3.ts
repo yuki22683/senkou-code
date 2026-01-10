@@ -79,7 +79,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "$name = null;\n// ??でNull合体演算子\n$result = $name ?? 'Guest';",
-      "holeyCode": "$name = null;\n// ??でNull合体演算子\n$result = $name ___ 'Guest';",
+      "holeyCode": "// nullを代入\n$name = ___;\n// ??でNull合体演算子\n$result = $name ___ 'Guest';",
       "correctLines": [
         { "lineNumber": 2, "content": "$result = $name ?? 'Guest';" }
       ],
@@ -135,7 +135,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "$grade = 'A';\n// matchで式によるパターンマッチ\n$message = match($grade) {\n    'A' => 'Excellent',\n    'B' => 'Good',\n    // defaultでデフォルトケース\n    default => 'Try harder'\n};",
-      "holeyCode": "$grade = 'A';\n// matchで式によるパターンマッチ\n$message = ___($grade) {\n    'A' => 'Excellent',\n    'B' => 'Good',\n    // defaultでデフォルトケース\n    ___ => 'Try harder'\n};",
+      "holeyCode": "// 変数を定義\n$grade = ___;\n// matchで式によるパターンマッチ\n$message = ___($grade) {\n    // =>で値をマッピング\n    'A' ___ 'Excellent',\n    // =>で値をマッピング\n    'B' ___ 'Good',\n    // defaultでデフォルトケース\n    ___ => 'Try harder'\n};",
       "correctLines": [
         { "lineNumber": 2, "content": "$message = match($grade) {" },
         { "lineNumber": 5, "content": "    default => 'Try harder'" }
@@ -166,7 +166,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "function createUser($name, $age) {\n    return ['name' => $name, 'age' => $age];\n}\n// ageとnameで名前付き引数を指定\n$user = createUser(age: 30, name: 'Alice');",
-      "holeyCode": "function createUser($name, $age) {\n    return ['name' => $name, 'age' => $age];\n}\n// age, nameの順で名前付き引数を指定\n$user = createUser(___: 30, ___: 'Alice');",
+      "holeyCode": "// functionで関数を定義\n___ createUser($name, $age) {\n    // returnで連想配列を返す\n    ___ ['name' => $name, 'age' => $age];\n}\n// age, nameの順で名前付き引数を指定\n$user = createUser(___: 30, ___: 'Alice');",
       "correctLines": [
         { "lineNumber": 4, "content": "$user = createUser(age: 30, name: 'Alice');" }
       ],
@@ -194,7 +194,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// traitでトレイトを定義\ntrait HelloTrait {\n    public function sayHello() {\n        return 'Hello!';\n    }\n}\n\nclass Greeter {\n    // useでトレイトを使用\n    use HelloTrait;\n}",
-      "holeyCode": "// traitでトレイトを定義\n___ HelloTrait {\n    public function sayHello() {\n        return 'Hello!';\n    }\n}\n\nclass Greeter {\n    // useでトレイトを使用\n    ___ HelloTrait;\n}",
+      "holeyCode": "// traitでトレイトを定義\n___ HelloTrait {\n    // functionでメソッドを定義\n    public ___ sayHello() {\n        // returnで値を返す\n        ___ 'Hello!';\n    }\n}\n// classでクラスを定義\n___ Greeter {\n    // useでトレイトを使用\n    ___ HelloTrait;\n}",
       "correctLines": [
         { "lineNumber": 1, "content": "trait HelloTrait {" },
         { "lineNumber": 8, "content": "    use HelloTrait;" }
@@ -225,7 +225,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "function rangeGen($n) {\n    for ($i = 1; $i <= $n; $i++) {\n        // yieldで値を一つずつ返す\n        yield $i;\n    }\n}",
-      "holeyCode": "function rangeGen($n) {\n    for ($i = 1; $i <= $n; $i++) {\n        // yieldで値を一つずつ返す\n        ___ $i;\n    }\n}",
+      "holeyCode": "// functionで関数を定義\n___ rangeGen($n) {\n    // forでループ\n    ___ ($i = 1; $i <= $n; $i++) {\n        // yieldで値を一つずつ返す\n        ___ $i;\n    }\n}",
       "correctLines": [
         { "lineNumber": 3, "content": "        yield $i;" }
       ],
@@ -282,7 +282,7 @@ export const php3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Person {\n    public function __construct(\n        // publicでアクセス修飾子\n        public string $name,\n        // publicでアクセス修飾子\n        public int $age\n    ) {}\n}",
-      "holeyCode": "class Person {\n    public function __construct(\n        // publicでアクセス修飾子\n        ___ string $name,\n        // publicでアクセス修飾子\n        ___ int $age\n    ) {}\n}",
+      "holeyCode": "// classでクラスを定義\n___ Person {\n    // __constructでコンストラクタを定義\n    public function ___(\n        // publicでアクセス修飾子\n        ___ string $name,\n        // publicでアクセス修飾子\n        ___ int $age\n    ) {}\n}",
       "correctLines": [
         { "lineNumber": 3, "content": "        public string $name," },
         { "lineNumber": 4, "content": "        public int $age" }

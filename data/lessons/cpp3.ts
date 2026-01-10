@@ -25,7 +25,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    auto x = 100;\n    auto y = 2.5;\n    cout << x * y << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // auto で型を推論\n    ___ x = 100;\n    auto y = 2.5;\n    cout << x * y << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // auto で型を推論\n    ___ x = 100;\n    // auto で型を推論\n    ___ y = 2.5;\n    cout << x * y << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "using namespace std;",
@@ -77,7 +77,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> nums = {10, 20, 30};\n    for (int n : nums) {\n        cout << n << endl;\n    }\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> nums = {10, 20, 30};\n    // : で範囲for文\n    for (int n ___ nums) {\n        cout << n << endl;\n    }\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    // vector で配列を作成\n    ___<int> nums = {10, 20, 30};\n    // : で範囲for文\n    for (int n ___ nums) {\n        cout << n << endl;\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <vector>",
@@ -133,7 +133,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int* p = nullptr;\n    if (p == nullptr) {\n        cout << \"null\" << endl;\n    }\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // nullptr でヌルポインタを設定\n    int* p = ___;\n    if (p == nullptr) {\n        cout << \"null\" << endl;\n    }\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // nullptr でヌルポインタを設定\n    int* p = ___;\n    // nullptr と比較\n    if (p == ___) {\n        cout << \"null\" << endl;\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "using namespace std;",
@@ -187,7 +187,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nusing namespace std;\n\nconstexpr int cube(int x) {\n    return x * x * x;\n}\n\nint main() {\n    constexpr int val = cube(3);\n    cout << val << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\nusing namespace std;\n\n// constexpr でコンパイル時計算\n___ int cube(int x) {\n    return x * x * x;\n}\n\nint main() {\n    constexpr int val = cube(3);\n    cout << val << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\nusing namespace std;\n\n// constexpr でコンパイル時計算\n___ int cube(int x) {\n    return x * x * x;\n}\n\nint main() {\n    // constexpr でコンパイル時計算\n    ___ int val = cube(3);\n    cout << val << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "using namespace std;",
@@ -245,7 +245,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    vector<int> v{1, 2, 3, 4, 5};\n    for (int n : v) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    // { で初期化子リスト\n    vector<int> v___{1, 2, 3, 4, 5};\n    for (int n : v) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <vector>\nusing namespace std;\n\nint main() {\n    // { で初期化子リスト\n    vector<int> v___{1, 2, 3, 4, 5};\n    // : で範囲for文\n    for (int n ___ v) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <vector>",
@@ -299,7 +299,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <memory>\nusing namespace std;\n\nint main() {\n    auto p = make_shared<int>(100);\n    cout << *p << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <memory>\nusing namespace std;\n\nint main() {\n    // make_shared で共有ポインタを作成\n    auto p = ___<int>(100);\n    cout << *p << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <memory>\nusing namespace std;\n\nint main() {\n    // make_shared で共有ポインタを作成\n    auto p = ___<int>(100);\n    // *p で中身にアクセス\n    cout << ___p << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <memory>",
@@ -351,7 +351,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <string>\n#include <utility>\nusing namespace std;\n\nint main() {\n    string s1 = \"Hello\";\n    string s2 = move(s1);\n    cout << s2 << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <string>\n#include <utility>\nusing namespace std;\n\nint main() {\n    string s1 = \"Hello\";\n    // move で所有権を移動\n    string s2 = ___(s1);\n    cout << s2 << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <string>\n#include <utility>\nusing namespace std;\n\nint main() {\n    // string で文字列を作成\n    ___ s1 = \"Hello\";\n    // move で所有権を移動\n    string s2 = ___(s1);\n    cout << s2 << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <string>",
@@ -407,7 +407,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <optional>\nusing namespace std;\n\nint main() {\n    optional<int> opt = 42;\n    if (opt.has_value()) {\n        cout << opt.value() << endl;\n    }\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <optional>\nusing namespace std;\n\nint main() {\n    optional<int> opt = 42;\n    // has_value で値の有無をチェック\n    if (opt.___()) {\n        cout << opt.value() << endl;\n    }\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <optional>\nusing namespace std;\n\nint main() {\n    // optional で値を保持\n    ___<int> opt = 42;\n    // has_value で値の有無をチェック\n    if (opt.___()) {\n        cout << opt.value() << endl;\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <optional>",
@@ -463,7 +463,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <array>\nusing namespace std;\n\nint main() {\n    array<int, 3> arr = {10, 20, 30};\n    for (int n : arr) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <array>\nusing namespace std;\n\nint main() {\n    // array で固定長配列を定義\n    ___<int, 3> arr = {10, 20, 30};\n    for (int n : arr) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <array>\nusing namespace std;\n\nint main() {\n    // array で固定長配列を定義\n    ___<int, 3> arr = {10, 20, 30};\n    // : で範囲for文\n    for (int n ___ arr) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <array>",
@@ -517,7 +517,7 @@ export const cpp3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 5;\n    auto f = [x]() { return x * x; };\n    cout << f() << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int x = 5;\n    // x でコピーキャプチャ\n    auto f = [___]() { return x * x; };\n    cout << f() << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\nusing namespace std;\n\nint main() {\n    // int で変数を宣言\n    ___ x = 5;\n    // x でコピーキャプチャ\n    auto f = [___]() { return x * x; };\n    cout << f() << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "using namespace std;",

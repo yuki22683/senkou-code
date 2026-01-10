@@ -20,7 +20,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "defmodule Person do\n  # defstructで構造体を定義\n  defstruct name: \"\", email: \"\"\nend\n\nperson = %Person{name: \"Bob\", email: \"bob@example.com\"}",
-      "holeyCode": "defmodule Person do\n  # defstructで構造体を定義\n  ___ name: \"\", email: \"\"\nend\n\nperson = %Person{name: \"Bob\", email: \"bob@example.com\"}",
+      "holeyCode": "# defmoduleでモジュールを定義\n___ Person do\n  # defstructで構造体を定義\n  ___ name: \"\", email: \"\"\n# endでモジュールを閉じる\n___\n\n# %Person{...}で構造体を作成\nperson = %Person{name: \"___\", email: \"___\"}",
       "correctLines": [
         { "lineNumber": 2, "content": "  defstruct name: \"\", email: \"\"" }
       ],
@@ -28,7 +28,8 @@ export const elixir3Data = {
         { "lineNumber": 2, "hint": "構造体を定義するマクロです" }
       ],
       "candidates": {
-        "2": ["defstruct", "struct", "defmap", "record"]
+        "keywords": ["defmodule", "defstruct", "end"],
+        "strings": ["Bob", "bob@example.com"]
       },
       "testCases": [
         { "input": "person.name", "expected_output": "\"Bob\"" }

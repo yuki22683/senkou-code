@@ -25,7 +25,7 @@ export const go2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc minmax(a, b int) (int, int) {\n    if a < b {\n        // return で複数の値を返す\n        return a, b\n    }\n    return b, a\n}\nfunc main() {\n    min, max := minmax(5, 3)\n    fmt.Println(min, max)\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc minmax(a, b int) (int, int) {\n    if a < b {\n        // return で複数の値を返す\n        ___ a, b\n    }\n    return b, a\n}\nfunc main() {\n    min, max := minmax(5, 3)\n    fmt.Println(min, max)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc minmax(a, b int) (int, int) {\n    if a < b {\n        // return で複数の値を返す\n        ___ a, b\n    }\n    // return で2つの値を返す\n    ___ b, a\n}\nfunc main() {\n    // 関数から2つの戻り値を受け取る\n    min, max := ___(5, 3)\n    fmt.Println(min, max)\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -83,7 +83,7 @@ export const go2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport (\n    \"errors\"\n    \"fmt\"\n)\nfunc check(n int) (int, error) {\n    if n < 0 {\n        return 0, errors.New(\"negative\")\n    }\n    // nil でエラーなしを表す\n    return n, nil\n}\nfunc main() {\n    val, err := check(5)\n    if err != nil {\n        fmt.Println(err)\n    } else {\n        fmt.Println(val)\n    }\n}",
-      "holeyCode": "package main\nimport (\n    \"errors\"\n    \"fmt\"\n)\nfunc check(n int) (int, error) {\n    if n < 0 {\n        return 0, errors.New(\"negative\")\n    }\n    // nil でエラーなしを表す\n    return n, ___\n}\nfunc main() {\n    val, err := check(5)\n    if err != nil {\n        fmt.Println(err)\n    } else {\n        fmt.Println(val)\n    }\n}",
+      "holeyCode": "package main\nimport (\n    \"errors\"\n    \"fmt\"\n)\nfunc check(n int) (int, error) {\n    if n < 0 {\n        // errors.New でエラーを作成\n        return 0, errors.___(\"negative\")\n    }\n    // nil でエラーなしを表す\n    return n, ___\n}\nfunc main() {\n    // 関数から2つの戻り値を受け取る\n    val, err := ___(5)\n    if err != nil {\n        fmt.Println(err)\n    } else {\n        fmt.Println(val)\n    }\n}",
       "correctLines": [
         "package main",
         "import (",
@@ -155,7 +155,7 @@ export const go2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    // & でアドレスを取得\n    p := &x\n    *p = 10\n    fmt.Println(x)\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    // & でアドレスを取得\n    p := ___x\n    *p = 10\n    fmt.Println(x)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    // & でアドレスを取得\n    p := ___x\n    // *p でポインタの値を変更\n    ___p = 10\n    fmt.Println(x)\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -205,7 +205,7 @@ export const go2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\n// struct で構造体を定義\ntype Point struct {\n    X int\n    Y int\n}\nfunc main() {\n    p := Point{X: 3, Y: 4}\n    fmt.Println(p.X)\n}",
-      "holeyCode": "package main\nimport \"fmt\"\n// struct で構造体を定義\ntype Point ___ {\n    X int\n    Y int\n}\nfunc main() {\n    p := Point{X: 3, Y: 4}\n    fmt.Println(p.X)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\n// struct で構造体を定義\ntype Point ___ {\n    // フィールド名と型を定義\n    X ___\n    Y int\n}\nfunc main() {\n    // 構造体を初期化\n    p := Point{X: 3, Y: ___}\n    fmt.Println(p.X)\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -259,7 +259,7 @@ export const go2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\ntype Rect struct {\n    W int\n    H int\n}\nfunc (r Rect) Area() int {\n    // * でかけ算\n    return r.W * r.H\n}\nfunc main() {\n    rect := Rect{W: 3, H: 4}\n    fmt.Println(rect.Area())\n}",
-      "holeyCode": "package main\nimport \"fmt\"\ntype Rect struct {\n    W int\n    H int\n}\nfunc (r Rect) Area() int {\n    // * でかけ算\n    return r.W ___ r.H\n}\nfunc main() {\n    rect := Rect{W: 3, H: 4}\n    fmt.Println(rect.Area())\n}",
+      "holeyCode": "package main\nimport \"fmt\"\ntype Rect struct {\n    W int\n    H int\n}\nfunc (r Rect) Area() int {\n    // * でかけ算\n    return r.W ___ r.H\n}\nfunc main() {\n    // 構造体を初期化\n    rect := Rect{W: 3, H: ___}\n    // メソッドを呼び出す\n    fmt.Println(rect.___())\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -319,7 +319,7 @@ export const go2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\n// interface でインターフェースを定義\ntype Speaker interface {\n    Speak()\n}\ntype Dog struct{}\nfunc (d Dog) Speak() {\n    fmt.Println(\"woof\")\n}\nfunc main() {\n    var s Speaker = Dog{}\n    s.Speak()\n}",
-      "holeyCode": "package main\nimport \"fmt\"\n// interface でインターフェースを定義\ntype Speaker ___ {\n    Speak()\n}\ntype Dog struct{}\nfunc (d Dog) Speak() {\n    fmt.Println(\"woof\")\n}\nfunc main() {\n    var s Speaker = Dog{}\n    s.Speak()\n}",
+      "holeyCode": "package main\nimport \"fmt\"\n// interface でインターフェースを定義\ntype Speaker ___ {\n    Speak()\n}\ntype Dog struct{}\nfunc (d Dog) Speak() {\n    fmt.Println(\"woof\")\n}\nfunc main() {\n    // インターフェース型の変数に代入\n    var s Speaker = ___\n    // インターフェースのメソッドを呼び出す\n    s.___()\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -379,7 +379,7 @@ export const go2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // defer で関数終了時に実行\n    defer fmt.Println(\"end\")\n    fmt.Println(\"start\")\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // defer で関数終了時に実行\n    ___ fmt.Println(\"end\")\n    fmt.Println(\"start\")\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // defer で関数終了時に実行\n    ___ fmt.Println(\"end\")\n    // これが先に実行される\n    fmt.___(\"start\")\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -425,7 +425,7 @@ export const go2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport (\n    \"fmt\"\n    \"time\"\n)\nfunc say(msg string) {\n    fmt.Println(msg)\n}\nfunc main() {\n    // go でゴルーチンを起動\n    go say(\"hello\")\n    time.Sleep(100 * time.Millisecond)\n}",
-      "holeyCode": "package main\nimport (\n    \"fmt\"\n    \"time\"\n)\nfunc say(msg string) {\n    fmt.Println(msg)\n}\nfunc main() {\n    // go でゴルーチンを起動\n    ___ say(\"hello\")\n    time.Sleep(100 * time.Millisecond)\n}",
+      "holeyCode": "package main\nimport (\n    \"fmt\"\n    \"time\"\n)\nfunc say(msg string) {\n    fmt.Println(msg)\n}\nfunc main() {\n    // go でゴルーチンを起動\n    ___ say(\"hello\")\n    // ゴルーチンの完了を待つ\n    time.___(100 * time.Millisecond)\n}",
       "correctLines": [
         "package main",
         "import (",
@@ -483,7 +483,7 @@ export const go2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // chan でチャネルを作成\n    ch := make(chan int)\n    go func() {\n        ch <- 100\n    }()\n    val := <-ch\n    fmt.Println(val)\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // chan でチャネルを作成\n    ch := make(___ int)\n    go func() {\n        ch <- 100\n    }()\n    val := <-ch\n    fmt.Println(val)\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // chan でチャネルを作成\n    ch := make(___ int)\n    go func() {\n        // チャネルに値を送信\n        ch ___ 100\n    }()\n    // チャネルから値を受信\n    val := ___ch\n    fmt.Println(val)\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",
@@ -537,7 +537,7 @@ export const go2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    n := 5\n    // func で無名関数を定義\n    double := func() int {\n        return n * 2\n    }\n    fmt.Println(double())\n}",
-      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    n := 5\n    // func で無名関数を定義\n    double := ___() int {\n        return n * 2\n    }\n    fmt.Println(double())\n}",
+      "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    n := 5\n    // func で無名関数を定義\n    double := ___() int {\n        // 外側の変数 n を参照\n        return n ___ 2\n    }\n    fmt.Println(double())\n}",
       "correctLines": [
         "package main",
         "import \"fmt\"",

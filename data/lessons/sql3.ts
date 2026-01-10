@@ -133,7 +133,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- INNERで内部結合\n  INNER JOIN\n  (SELECT 1 AS id, 'B' AS y) b\n  ON a.id = b.id;",
-      "holeyCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- INNERで内部結合\n  ___ JOIN\n  (SELECT 1 AS id, 'B' AS y) b\n  ON a.id = b.id;",
+      "holeyCode": "-- SELECTで列を取得\n___ a.x, b.y FROM\n  -- テーブルaを作成\n  (___ 1 AS id, 'A' AS x) a\n  -- INNERで内部結合\n  ___ JOIN\n  -- テーブルbを作成\n  (___ 1 AS id, 'B' AS y) b\n  -- 結合条件を指定\n  ___ a.id = b.id;",
       "correctLines": [
         "SELECT a.x, b.y FROM",
         "  (SELECT 1 AS id, 'A' AS x) a",
@@ -177,7 +177,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- LEFTで左外部結合\n  LEFT JOIN\n  (SELECT 2 AS id, 'B' AS y) b\n  ON a.id = b.id;",
-      "holeyCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- LEFTで左外部結合\n  ___ JOIN\n  (SELECT 2 AS id, 'B' AS y) b\n  ON a.id = b.id;",
+      "holeyCode": "-- SELECTで列を取得\n___ a.x, b.y FROM\n  -- テーブルaを作成\n  (___ 1 AS id, 'A' AS x) a\n  -- LEFTで左外部結合\n  ___ JOIN\n  -- テーブルbを作成\n  (___ 2 AS id, 'B' AS y) b\n  -- 結合条件を指定\n  ___ a.id = b.id;",
       "correctLines": [
         "SELECT a.x, b.y FROM",
         "  (SELECT 1 AS id, 'A' AS x) a",
@@ -257,7 +257,7 @@ export const sql3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- DISTINCTで重複除去\nSELECT DISTINCT n FROM (\n  SELECT 1 AS n UNION ALL\n  SELECT 1 UNION ALL\n  SELECT 2\n);",
-      "holeyCode": "-- DISTINCTで重複除去\nSELECT ___ n FROM (\n  SELECT 1 AS n UNION ALL\n  SELECT 1 UNION ALL\n  SELECT 2\n);",
+      "holeyCode": "-- DISTINCTで重複除去\n___ ___ n FROM (\n  -- データを作成\n  ___ 1 AS n UNION ALL\n  -- 重複データを追加\n  ___ 1 UNION ALL\n  -- 異なるデータを追加\n  ___ 2\n);",
       "correctLines": [
         "SELECT DISTINCT n FROM (",
         "  SELECT 1 AS n UNION ALL",

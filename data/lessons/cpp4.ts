@@ -25,7 +25,7 @@ export const cpp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <memory>\nusing namespace std;\n\nint main() {\n    auto p = make_unique<int>(99);\n    cout << *p << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <memory>\nusing namespace std;\n\nint main() {\n    // make_unique で排他的ポインタを作成\n    auto p = ___<int>(99);\n    cout << *p << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <memory>\nusing namespace std;\n\nint main() {\n    // make_unique で排他的ポインタを作成\n    auto p = ___<int>(99);\n    // *p で中身にアクセス\n    cout << ___p << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <memory>",
@@ -77,7 +77,7 @@ export const cpp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <variant>\nusing namespace std;\n\nint main() {\n    variant<int, double> v = 3.14;\n    cout << get<double>(v) << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <variant>\nusing namespace std;\n\nint main() {\n    variant<int, double> v = 3.14;\n    // get<型> で値を取得\n    cout << ___<double>(v) << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <variant>\nusing namespace std;\n\nint main() {\n    // variant で複数型のうち1つを保持\n    ___<int, double> v = 3.14;\n    // get<型> で値を取得\n    cout << ___<double>(v) << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <variant>",
@@ -129,7 +129,7 @@ export const cpp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <tuple>\nusing namespace std;\n\nint main() {\n    tuple<int, double, string> t{1, 2.5, \"hi\"};\n    auto [a, b, c] = t;\n    cout << a << \" \" << b << \" \" << c << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <tuple>\nusing namespace std;\n\nint main() {\n    tuple<int, double, string> t{1, 2.5, \"hi\"};\n    // auto で構造化束縛\n    ___ [a, b, c] = t;\n    cout << a << \" \" << b << \" \" << c << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <tuple>\nusing namespace std;\n\nint main() {\n    // tuple で複数の値をまとめる\n    ___<int, double, string> t{1, 2.5, \"hi\"};\n    // auto で構造化束縛\n    ___ [a, b, c] = t;\n    cout << a << \" \" << b << \" \" << c << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <tuple>",
@@ -183,7 +183,7 @@ export const cpp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <string_view>\nusing namespace std;\n\nvoid greet(string_view name) {\n    cout << \"Hello, \" << name << endl;\n}\n\nint main() {\n    greet(\"World\");\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <string_view>\nusing namespace std;\n\n// string_view で文字列ビューを受け取る\nvoid greet(___ name) {\n    cout << \"Hello, \" << name << endl;\n}\n\nint main() {\n    greet(\"World\");\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <string_view>\nusing namespace std;\n\n// string_view で文字列ビューを受け取る\nvoid greet(___ name) {\n    cout << \"Hello, \" << name << endl;\n}\n\nint main() {\n    // greet で関数を呼び出し\n    ___(\"World\");\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <string_view>",
@@ -241,7 +241,7 @@ export const cpp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    vector<int> v = {1, 2, 3};\n    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });\n    for (int n : v) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    vector<int> v = {1, 2, 3};\n    // transform で各要素を変換\n    ___(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });\n    for (int n : v) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    // vector で配列を作成\n    ___<int> v = {1, 2, 3};\n    // transform で各要素を変換\n    ___(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });\n    for (int n : v) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <vector>",
@@ -299,7 +299,7 @@ export const cpp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <vector>\n#include <numeric>\nusing namespace std;\n\nint main() {\n    vector<int> v = {1, 2, 3, 4, 5};\n    int sum = accumulate(v.begin(), v.end(), 0);\n    cout << sum << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <vector>\n#include <numeric>\nusing namespace std;\n\nint main() {\n    vector<int> v = {1, 2, 3, 4, 5};\n    // accumulate で要素を集約\n    int sum = ___(v.begin(), v.end(), 0);\n    cout << sum << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <vector>\n#include <numeric>\nusing namespace std;\n\nint main() {\n    // vector で配列を作成\n    ___<int> v = {1, 2, 3, 4, 5};\n    // accumulate で要素を集約\n    int sum = ___(v.begin(), v.end(), 0);\n    cout << sum << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <vector>",
@@ -355,7 +355,7 @@ export const cpp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    vector<int> v = {1, 2, 3, 4, 5};\n    auto it = find_if(v.begin(), v.end(), [](int x) { return x > 3; });\n    cout << *it << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    vector<int> v = {1, 2, 3, 4, 5};\n    // find_if で条件に合う要素を検索\n    auto it = ___(v.begin(), v.end(), [](int x) { return x > 3; });\n    cout << *it << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    // vector で配列を作成\n    ___<int> v = {1, 2, 3, 4, 5};\n    // find_if で条件に合う要素を検索\n    auto it = ___(v.begin(), v.end(), [](int x) { return x > 3; });\n    cout << *it << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <vector>",
@@ -411,7 +411,7 @@ export const cpp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    vector<int> v = {3, 1, 4, 1, 5};\n    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });\n    for (int n : v) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    vector<int> v = {3, 1, 4, 1, 5};\n    // sort でソート\n    ___(v.begin(), v.end(), [](int a, int b) { return a > b; });\n    for (int n : v) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    // vector で配列を作成\n    ___<int> v = {3, 1, 4, 1, 5};\n    // sort でソート\n    ___(v.begin(), v.end(), [](int a, int b) { return a > b; });\n    for (int n : v) cout << n << \" \";\n    cout << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <vector>",
@@ -469,7 +469,7 @@ export const cpp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    try {\n        throw runtime_error(\"Oops!\");\n    } catch (const exception& e) {\n        cout << e.what() << endl;\n    }\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    try {\n        // throw で例外を投げる\n        ___ runtime_error(\"Oops!\");\n    } catch (const exception& e) {\n        cout << e.what() << endl;\n    }\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\n#include <stdexcept>\nusing namespace std;\n\nint main() {\n    try {\n        // throw で例外を投げる\n        ___ runtime_error(\"Oops!\");\n    // catch で例外を捕まえる\n    } ___ (const exception& e) {\n        cout << e.what() << endl;\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "#include <stdexcept>",
@@ -527,7 +527,7 @@ export const cpp4Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nusing namespace std;\n\nint add(int a, int b) noexcept {\n    return a + b;\n}\n\nint main() {\n    cout << add(10, 20) << endl;\n    return 0;\n}",
-      "holeyCode": "#include <iostream>\nusing namespace std;\n\n// noexcept で例外を投げないことを宣言\nint add(int a, int b) ___ {\n    return a + b;\n}\n\nint main() {\n    cout << add(10, 20) << endl;\n    return 0;\n}",
+      "holeyCode": "#include <iostream>\nusing namespace std;\n\n// noexcept で例外を投げないことを宣言\nint add(int a, int b) ___ {\n    // + で足し算\n    return a ___ b;\n}\n\nint main() {\n    cout << add(10, 20) << endl;\n    return 0;\n}",
       "correctLines": [
         "#include <iostream>",
         "using namespace std;",

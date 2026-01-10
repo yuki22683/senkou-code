@@ -25,7 +25,7 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- *で掛け算\ntriple x = x * 3\nmain = print (triple 4)",
-      "holeyCode": "-- *で掛け算\ntriple x = x ___ 3\nmain = print (triple 4)",
+      "holeyCode": "-- *で掛け算\ntriple x = x ___ 3\n-- tripleを入力\nmain = print (___ 4)",
       "correctLines": [
         "triple x = x * 3",
         "main = print (triple 4)"
@@ -63,7 +63,7 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- ::で型注釈\nsquare :: Int -> Int\nsquare x = x * x\nmain = print (square 5)",
-      "holeyCode": "-- ::で型注釈\nsquare ___ Int -> Int\nsquare x = x * x\nmain = print (square 5)",
+      "holeyCode": "-- ::で型注釈\nsquare ___ Int -> Int\n-- *で掛け算\nsquare x = x ___ x\n-- squareを入力\nmain = print (___ 5)",
       "correctLines": [
         "square :: Int -> Int",
         "square x = x * x",
@@ -103,7 +103,7 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "nums = [1, 2, 3]\n-- headで先頭要素を取得\nmain = print (head nums)",
-      "holeyCode": "nums = [1, 2, 3]\n-- headで先頭要素を取得\nmain = print (___ nums)",
+      "holeyCode": "-- [1, 2, 3]を入力\nnums = ___\n-- headで先頭要素を取得\nmain = print (___ nums)",
       "correctLines": [
         "nums = [1, 2, 3]",
         "main = print (head nums)"
@@ -213,7 +213,7 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fib 0 = 0\nfib 1 = 1\n-- 2を引いて再帰\nfib n = fib (n - 1) + fib (n - 2)\nmain = print (fib 6)",
-      "holeyCode": "fib 0 = 0\nfib 1 = 1\n-- 2を引いて再帰\nfib n = fib (n - 1) + fib (n - ___)\nmain = print (fib 6)",
+      "holeyCode": "-- 0を入力\nfib 0 = ___\n-- 1を入力\nfib 1 = ___\n-- 2を引いて再帰\nfib n = fib (n - 1) + fib (n - ___)\n-- fibを入力\nmain = print (___ 6)",
       "correctLines": [
         "fib 0 = 0",
         "fib 1 = 1",
@@ -255,7 +255,7 @@ export const haskell2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "sign x\n  | x > 0     = \"positive\"\n  | x < 0     = \"negative\"\n  -- otherwiseはそれ以外の場合\n  | otherwise = \"zero\"\nmain = putStrLn (sign 5)",
-      "holeyCode": "sign x\n  | x > 0     = \"positive\"\n  | x < 0     = \"negative\"\n  -- otherwiseはそれ以外の場合\n  | ___ = \"zero\"\nmain = putStrLn (sign 5)",
+      "holeyCode": "-- xを入力\nsign ___\n  -- >で大なり比較\n  | x ___ 0     = \"positive\"\n  -- <で小なり比較\n  | x ___ 0     = \"negative\"\n  -- otherwiseはそれ以外の場合\n  | ___ = \"zero\"\n-- signを入力\nmain = putStrLn (___ 5)",
       "correctLines": [
         "sign x",
         "  | x > 0     = \"positive\"",
