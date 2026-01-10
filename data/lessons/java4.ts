@@ -25,7 +25,7 @@ export const javaData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\nclass Box<T> {\n    private T value;\n    public void set(T v) { value = v; }\n    public T get() { return value; }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Box<String> box = new Box<>();\n        box.set(\"Java\");\n        System.out.println(box.get());\n    }\n}",
-      "holeyCode": "import java.util.*;\n\n// <T> で型パラメータを定義する\nclass Box___T___ {\n    private T value;\n    public void set(T v) { value = v; }\n    public T get() { return value; }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Box<String> box = new Box<>();\n        box.set(\"Java\");\n        System.out.println(box.get());\n    }\n}",
+      "holeyCode": "import java.util.*;\n\n// <T> で型パラメータを定義する\nclass Box___T___ {\n    private T value;\n    public void set(T v) { value = v; }\n    public T get() { return value; }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Box<String> box = ___ Box<>();\n        // set で値を設定する\n        box.___(\"Java\");\n        // get で値を取得して出力する\n        System.out.println(box.___());\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -46,6 +46,7 @@ export const javaData4 = {
       "lineHints": [
         null,
         null,
+        null,
         "<T> で型パラメータを定義します。",
         null,
         null,
@@ -54,14 +55,16 @@ export const javaData4 = {
         null,
         null,
         null,
+        "`new` でインスタンスを作成します。",
         null,
+        "`set` で値を設定します。",
         null,
-        null,
+        "`get` で値を取得します。",
         null,
         null
       ],
       "candidates": {
-        "operators": ["<", ">"]
+        "operators": ["<", ">", "new", "set", "get"]
       },
       "testCases": [
         {
@@ -89,7 +92,7 @@ export const javaData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Calculator<T extends Number> {\n    private T value;\n    public Calculator(T v) { value = v; }\n    public double getDouble() { return value.doubleValue(); }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Calculator<Integer> calc = new Calculator<>(42);\n        System.out.println(calc.getDouble());\n    }\n}",
-      "holeyCode": "// extends で型の上限を Number に制限する\nclass Calculator<T ___ Number> {\n    private T value;\n    public Calculator(T v) { value = v; }\n    public double getDouble() { return value.doubleValue(); }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        Calculator<Integer> calc = new Calculator<>(42);\n        System.out.println(calc.getDouble());\n    }\n}",
+      "holeyCode": "// extends で型の上限を Number に制限する\nclass Calculator<T ___ Number> {\n    private T value;\n    public Calculator(T v) { value = v; }\n    public double getDouble() { return value.doubleValue(); }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Calculator<Integer> calc = ___ Calculator<>(42);\n        // getDouble メソッドを呼び出す\n        System.out.println(calc.___());\n    }\n}",
       "correctLines": [
         "class Calculator<T extends Number> {",
         "    private T value;",
@@ -105,7 +108,8 @@ export const javaData4 = {
         "}"
       ],
       "lineHints": [
-        "extends で型の上限を指定します。",
+        null,
+        "`extends` で型の上限を指定します。",
         null,
         null,
         null,
@@ -113,13 +117,14 @@ export const javaData4 = {
         null,
         null,
         null,
+        "`new` でインスタンスを作成します。",
         null,
-        null,
+        "`getDouble` メソッドを呼び出します。",
         null,
         null
       ],
       "candidates": {
-        "keywords": ["extends", "implements", "super"]
+        "keywords": ["extends", "implements", "super", "new", "getDouble"]
       },
       "testCases": [
         {
@@ -147,7 +152,7 @@ export const javaData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void printAll(List<?> list) {\n        for (Object item : list) {\n            System.out.println(item);\n        }\n    }\n    public static void main(String[] args) {\n        List<String> names = Arrays.asList(\"A\", \"B\");\n        printAll(names);\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    // ? で任意の型を表すワイルドカード\n    public static void printAll(List<___> list) {\n        for (Object item : list) {\n            System.out.println(item);\n        }\n    }\n    public static void main(String[] args) {\n        List<String> names = Arrays.asList(\"A\", \"B\");\n        printAll(names);\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    // ? で任意の型を表すワイルドカード\n    public static void printAll(List<___> list) {\n        for (Object item : list) {\n            // println で出力する\n            System.out.___(item);\n        }\n    }\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<String> names = Arrays.___(\"A\", \"B\");\n        // printAll メソッドを呼び出す\n        ___(names);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -167,19 +172,22 @@ export const javaData4 = {
         null,
         null,
         null,
-        "? で任意の型を表します。",
+        null,
+        "`?` で任意の型を表します。",
+        null,
+        null,
+        "`println` で出力します。",
         null,
         null,
         null,
+        "`asList` でリストを作成します。",
         null,
-        null,
-        null,
-        null,
+        "`printAll` メソッドを呼び出します。",
         null,
         null
       ],
       "candidates": {
-        "symbols": ["?", "*", "T"]
+        "symbols": ["?", "*", "T", "println", "asList", "printAll"]
       },
       "testCases": [
         {
@@ -207,7 +215,7 @@ export const javaData4 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Map<String, Integer> scores = new HashMap<>();\n        scores.put(\"Math\", 90);\n        scores.put(\"English\", 85);\n        System.out.println(scores.get(\"Math\"));\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Map<String, Integer> scores = new HashMap<>();\n        // put でキーと値を追加する\n        scores.___(\"Math\", 90);\n        scores.put(\"English\", 85);\n        System.out.println(scores.get(\"Math\"));\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // new で HashMap を作成する\n        Map<String, Integer> scores = ___ HashMap<>();\n        // put でキーと値を追加する\n        scores.___(\"Math\", 90);\n        // put でキーと値を追加する\n        scores.___(\"English\", 85);\n        // get で値を取得する\n        System.out.println(scores.___(\"Math\"));\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -226,14 +234,18 @@ export const javaData4 = {
         null,
         null,
         null,
-        "put でキーと値を追加します。",
+        "`new` で HashMap を作成します。",
         null,
+        "`put` でキーと値を追加します。",
         null,
+        "`put` でキーと値を追加します。",
+        null,
+        "`get` で値を取得します。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["put", "set", "add"]
+        "methods": ["put", "set", "add", "new", "get"]
       },
       "testCases": [
         {

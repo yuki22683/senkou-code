@@ -543,14 +543,16 @@ export const javaData3 = {
         null,
         null,
         null,
+        "`asList` でリストを作成します。",
         null,
-        "distinct で重複を除去します。",
+        null,
+        "`distinct` で重複を除去します。",
         null,
         null,
         null
       ],
       "candidates": {
-        "methods": ["distinct", "unique", "dedupe"]
+        "methods": ["distinct", "unique", "dedupe", "asList"]
       },
       "testCases": [
         {
