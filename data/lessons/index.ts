@@ -45,6 +45,7 @@ import { php2Data } from './php2';
 import { php3Data } from './php3';
 import { bashData } from './bash';
 import { bash2Data } from './bash2';
+import { bash3Data } from './bash3';
 import { haskellData } from './haskell';
 import { haskell2Data } from './haskell2';
 import { haskell3Data } from './haskell3';
@@ -53,8 +54,10 @@ import { elixir2Data } from './elixir2';
 import { elixir3Data } from './elixir3';
 import { luaData } from './lua';
 import { lua2Data } from './lua2';
+import { lua3Data } from './lua3';
 import { assemblyData } from './assembly';
 import { assembly2Data } from './assembly2';
+import { assembly3Data } from './assembly3';
 import { sqlData } from './sql';
 import { sql2Data } from './sql2';
 import { sql3Data } from './sql3';
@@ -69,6 +72,7 @@ import { swift3Data } from './swift3';
 import { swift4Data } from './swift4';
 import { perlData } from './perl';
 import { perl2Data } from './perl2';
+import { perl3Data } from './perl3';
 
 export const allLessons = [
   pythonData,
@@ -118,6 +122,7 @@ export const allLessons = [
   php3Data,
   bashData,
   bash2Data,
+  bash3Data,
   haskellData,
   haskell2Data,
   haskell3Data,
@@ -126,8 +131,10 @@ export const allLessons = [
   elixir3Data,
   luaData,
   lua2Data,
+  lua3Data,
   assemblyData,
   assembly2Data,
+  assembly3Data,
   sqlData,
   sql2Data,
   sql3Data,
@@ -142,4 +149,5 @@ export const allLessons = [
   swift4Data,
   perlData,
   perl2Data,
+  perl3Data,
 ];
