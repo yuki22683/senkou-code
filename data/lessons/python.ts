@@ -346,7 +346,7 @@ export const pythonData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# age に 10 を入れる\nage = 10\n# 20さい以上かどうかで分ける\nif age >= 20:\n    print('おとな')\nelse:\n    # それ以外の場合\n    print('こども')",
-      "holeyCode": "# age に 10 を入れる\nage = ___\n# 20さい以上かどうかで分ける\nif age >= 20:\n    print('おとな')\nelse:\n    # それ以外の場合\n    print('___')",
+      "holeyCode": "# age に 10 を入れる\nage = ___\n# 20以上かを比較する演算子\nif age ___ 20:\n    # 20歳以上のときのメッセージ（'おとな'）\n    print('___')\n# 「そうでなければ」のキーワード\n___:\n    # それ以外の場合（'こども'）\n    print('___')",
       "correctLines": [
         "# age に 10 を入れる",
         "age = 10",

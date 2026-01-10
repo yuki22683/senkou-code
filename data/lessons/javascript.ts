@@ -345,7 +345,7 @@ export const javascriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// age に 10 を入れる\nconst age = 10;\n// 20さい以上かどうかで分ける\nif (age >= 20) {\n    console.log('おとな');\n} else {\n    // それ以外の場合\n    console.log('こども');\n}",
-      "holeyCode": "// age に 10 を入れる\nconst age = ___ ;\n// 20さい以上かどうかで分ける\nif (age >= 20) {\n    console.log('おとな');\n// 「そうでなければ」を表すキーワード\n} ___ {\n    // それ以外の場合\n    console.log('___');\n}",
+      "holeyCode": "// age に 10 を入れる\nconst age = ___ ;\n// 20以上かを比較する演算子\nif (age ___ 20) {\n    // 20歳以上のときのメッセージ（'おとな'）\n    console.log('___');\n// 「そうでなければ」を表すキーワード\n} ___ {\n    // それ以外の場合（'こども'）\n    console.log('___');\n}",
       "correctLines": [
         "// age に 10 を入れる",
         "const age = 10;",
@@ -465,7 +465,7 @@ export const javascriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// オブジェクトを作る（nameは'たろう'）\nconst user = { name: 'たろう' };\n// 名前の中身を出す\nconsole.log(user.name);",
-      "holeyCode": "// オブジェクトを作る（nameは'たろう'）\nconst user = { ___: '___' };\n// 名前の中身を出す\nconsole.log(user.name);",
+      "holeyCode": "// オブジェクトを作る（nameは'たろう'）\nconst user = { ___: '___' };\n// nameプロパティを取り出す\nconsole.log(user.___);",
       "correctLines": [
         "// オブジェクトを作る（nameは'たろう'）",
         "const user = { name: 'たろう' };",

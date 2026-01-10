@@ -241,7 +241,7 @@ export const typescriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// boolean（はい/いいえ）ラベルを貼る\nconst isAdult: boolean = true;\n// もし 正しかったら（trueなら）\nif (isAdult) {\n    console.log('おとなです');\n}",
-      "holeyCode": "// 真偽値（はい/いいえ）を入れるためのラベルを貼る\nconst isAdult: ___ = true;\n// もし 正しかったら（trueなら）\nif (___) {\n    console.log('おとなです');\n}",
+      "holeyCode": "// 真偽値（はい/いいえ）を入れるためのラベルを貼る\nconst isAdult: ___ = true;\n// もし 正しかったら（trueなら）\nif (___) {\n    // メッセージ（'おとなです'）\n    console.log('___');\n}",
       "correctLines": [
         "// boolean（はい/いいえ）ラベルを貼る",
         "const isAdult: boolean = true;",
@@ -293,7 +293,7 @@ export const typescriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// score というはこに 75 を入れる\nconst score: number = 75;\n// 判定する\nif (score >= 80) {\n    console.log('ごうかく');\n} else {\n    // それ以外の場合\n    console.log('ざんねん');\n}",
-      "holeyCode": "// score というはこに 75 を入れる\nconst score: ___ = 75;\n// 判定する\nif (score >= 80) {\n    console.log('ごうかく');\n// 「そうでなければ」を表すキーワード\n} ___ {\n    // それ以外の場合\n    console.log('ざんねん');\n}",
+      "holeyCode": "// score というはこに 75 を入れる\nconst score: ___ = 75;\n// 80以上かを比較する演算子\nif (score ___ 80) {\n    // 80点以上のときのメッセージ（'ごうかく'）\n    console.log('___');\n// 「そうでなければ」を表すキーワード\n} ___ {\n    // それ以外の場合（'ざんねん'）\n    console.log('___');\n}",
       "correctLines": [
         "// score というはこに 75 を入れる",
         "const score: number = 75;",
