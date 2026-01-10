@@ -175,7 +175,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // ageに10を入れる\n    int age = 10;\n    // 文章の中に中身を表示する\n    printf(\"私は %d 歳です\\n\", age);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    int age = 10;\n    // age と入力\n    printf(\"私は %d 歳です\\n\", ___);\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\nint main() {\n    // ageに10を入れる\n    int age = ___;\n    // age と入力\n    printf(\"私は %d 歳です\\n\", ___);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -271,7 +271,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int score = 100;\n    if (score > 80) {\n        printf(\"Pass\\n\");\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    int score = 100;\n    // > で「より大きい」を比較\n    if (score ___ 80) {\n        printf(\"Pass\\n\");\n    }\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\nint main() {\n    // scoreに100を入れる\n    int score = ___;\n    // > で「より大きい」を比較\n    if (score ___ 80) {\n        // メッセージ（'Pass'）\n        printf(\"___\\n\");\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -323,7 +323,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int x = 5;\n    if (x > 10) {\n        printf(\"Big\\n\");\n    } else {\n        printf(\"Small\\n\");\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    int x = 5;\n    if (x > 10) {\n        printf(\"Big\\n\");\n    // else で「それ以外」\n    } ___ {\n        printf(\"Small\\n\");\n    }\n    return 0;\n}",
+      "holeyCode": "#include <stdio.h>\nint main() {\n    // xに5を入れる\n    int x = ___;\n    // 10より大きいかを比較する演算子\n    if (x ___ 10) {\n        // 10より大きいときのメッセージ（'Big'）\n        printf(\"___\\n\");\n    // else で「それ以外」\n    } ___ {\n        // それ以外のメッセージ（'Small'）\n        printf(\"___\\n\");\n    }\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
