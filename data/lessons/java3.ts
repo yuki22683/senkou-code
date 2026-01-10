@@ -265,15 +265,18 @@ export const javaData3 = {
         null,
         null,
         null,
+        "`asList` でリストを作成します。",
         null,
         null,
-        "collect と Collectors でリストに変換します。",
         null,
+        "`collect` と `Collectors` でリストに変換します。",
+        null,
+        "`println` メソッドを使います。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["collect", "Collectors"]
+        "methods": ["collect", "Collectors", "asList", "println"]
       },
       "testCases": [
         {
@@ -301,7 +304,7 @@ export const javaData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4);\n        int product = nums.stream()\n            .reduce(1, (a, b) -> a * b);\n        System.out.println(product);\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4);\n        int product = nums.stream()\n            // 全要素を1つの値にまとめるメソッド\n            .___(1, (a, b) -> a * b);\n        System.out.println(product);\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(1, 2, 3, 4);\n        int product = nums.stream()\n            // 全要素を1つの値にまとめるメソッド\n            .___(1, (a, b) -> a * b);\n        // println で出力する\n        System.out.___(product);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -320,14 +323,17 @@ export const javaData3 = {
         null,
         null,
         null,
+        "`asList` でリストを作成します。",
         null,
-        "reduce で要素を1つに集約します。",
         null,
+        "`reduce` で要素を1つに集約します。",
+        null,
+        "`println` メソッドを使います。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["reduce", "collect", "count"]
+        "methods": ["reduce", "collect", "count", "asList", "println"]
       },
       "testCases": [
         {
@@ -355,7 +361,7 @@ export const javaData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        Optional<String> opt = Optional.of(\"Hello\");\n        String value = opt.orElse(\"default\");\n        System.out.println(value);\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // 値を持つOptionalを作成するメソッド\n        Optional<String> opt = Optional.___(\"Hello\");\n        String value = opt.orElse(\"default\");\n        System.out.println(value);\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // 値を持つOptionalを作成するメソッド\n        Optional<String> opt = Optional.___(\"Hello\");\n        // orElse でデフォルト値を指定して取得する\n        String value = opt.___(\"default\");\n        // println で出力する\n        System.out.___(value);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -372,14 +378,17 @@ export const javaData3 = {
         null,
         null,
         null,
-        "of で値を持つOptionalを作成します。",
         null,
+        "`of` で値を持つOptionalを作成します。",
         null,
+        "`orElse` でデフォルト値を指定して取得します。",
+        null,
+        "`println` メソッドを使います。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["of", "empty", "ofNullable"]
+        "methods": ["of", "empty", "ofNullable", "orElse", "println"]
       },
       "testCases": [
         {
@@ -407,7 +416,7 @@ export const javaData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> names = Arrays.asList(\"Alice\", \"Bob\");\n        names.forEach(System.out::println);\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<String> names = Arrays.asList(\"Alice\", \"Bob\");\n        // メソッド参照を表す演算子\n        names.forEach(System.out___println);\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<String> names = Arrays.___(\"Alice\", \"Bob\");\n        // メソッド参照を表す演算子\n        names.forEach(System.out___println);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -424,12 +433,14 @@ export const javaData3 = {
         null,
         null,
         null,
+        "`asList` でリストを作成します。",
+        null,
         ":: でメソッド参照を使います。",
         null,
         null
       ],
       "candidates": {
-        "operators": ["::", "->", "."]
+        "operators": ["::", "->", ".", "asList"]
       },
       "testCases": [
         {
@@ -457,7 +468,7 @@ export const javaData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(5, 2, 8, 1);\n        nums.stream()\n            .sorted()\n            .forEach(System.out::println);\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(5, 2, 8, 1);\n        nums.stream()\n            // 要素を昇順に並べ替えるメソッド\n            .___()\n            .forEach(System.out::println);\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(5, 2, 8, 1);\n        nums.stream()\n            // 要素を昇順に並べ替えるメソッド\n            .___()\n            .forEach(System.out::println);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -476,14 +487,16 @@ export const javaData3 = {
         null,
         null,
         null,
+        "`asList` でリストを作成します。",
         null,
-        "sorted でソートします。",
+        null,
+        "`sorted` でソートします。",
         null,
         null,
         null
       ],
       "candidates": {
-        "methods": ["sorted", "reversed", "ordered"]
+        "methods": ["sorted", "reversed", "ordered", "asList"]
       },
       "testCases": [
         {
@@ -511,7 +524,7 @@ export const javaData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 1, 2, 2, 3);\n        nums.stream()\n            .distinct()\n            .forEach(System.out::println);\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 1, 2, 2, 3);\n        nums.stream()\n            // 重複した要素を取り除くメソッド\n            .___()\n            .forEach(System.out::println);\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(1, 1, 2, 2, 3);\n        nums.stream()\n            // 重複した要素を取り除くメソッド\n            .___()\n            .forEach(System.out::println);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
