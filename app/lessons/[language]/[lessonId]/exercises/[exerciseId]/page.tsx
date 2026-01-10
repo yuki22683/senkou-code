@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { MobileCodeEditor } from "@/components/exercise/MobileCodeEditor";
 import { ConsolePanel } from "@/components/exercise/ConsolePanel";
+import { SyntaxHighlightedCode } from "@/components/exercise/SyntaxHighlightedCode";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -718,17 +719,23 @@ export default function ExercisePage() {
 
       {/* 答えダイアログ */}
       <Dialog open={showAnswerDialog} onOpenChange={setShowAnswerDialog}>
-        <DialogContent className="max-w-3xl">
+        <DialogContent className="max-w-3xl w-[calc(100vw-2rem)] sm:w-auto">
           <DialogHeader>
             <DialogTitle>正解コード</DialogTitle>
             <DialogDescription>
               参考のため正解コードを表示します
             </DialogDescription>
           </DialogHeader>
-          <div className="py-4">
-            <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-auto text-sm">
-              {exercise.correct_code || "正解コードが設定されていません"}
-            </pre>
+          <div className="py-4 overflow-hidden">
+            {exercise.correct_code ? (
+              <SyntaxHighlightedCode
+                code={exercise.correct_code}
+                language={language}
+                className="max-w-full"
+              />
+            ) : (
+              <p className="text-gray-500">正解コードが設定されていません</p>
+            )}
           </div>
           <DialogFooter>
             <Button onClick={() => setShowAnswerDialog(false)}>閉じる</Button>
