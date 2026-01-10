@@ -428,7 +428,7 @@ export const javaData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.ArrayList;\n\nclass Main {\n    public static void main(String[] args) {\n        ArrayList<String> items = new ArrayList<>();\n        // add で要素を追加する\n        items.add(\"A\");\n        items.add(\"B\");\n        System.out.println(items.get(0));\n    }\n}",
-      "holeyCode": "import java.util.ArrayList;\n\nclass Main {\n    public static void main(String[] args) {\n        ArrayList<String> items = new ArrayList<>();\n        // add で要素を追加する\n        items.___(\"A\");\n        items.add(\"B\");\n        System.out.println(items.get(0));\n    }\n}",
+      "holeyCode": "import java.util.ArrayList;\n\nclass Main {\n    public static void main(String[] args) {\n        // new でArrayListを作成する\n        ArrayList<String> items = ___ ArrayList<>();\n        // add で要素を追加する\n        items.___(\"A\");\n        // add で要素を追加する\n        items.___(\"B\");\n        // get で要素を取得する\n        System.out.println(items.___(0));\n    }\n}",
       "correctLines": [
         "import java.util.ArrayList;",
         "",
@@ -448,15 +448,18 @@ export const javaData2 = {
         null,
         null,
         null,
+        "`new` でインスタンスを作成します。",
         null,
         "`add` メソッドで要素を追加します。",
         null,
+        "`add` メソッドで要素を追加します。",
         null,
+        "`get` メソッドで要素を取得します。",
         null,
         null
       ],
       "candidates": {
-        "functions": ["add", "push", "append", "insert"]
+        "functions": ["add", "push", "append", "insert", "new", "get"]
       },
       "testCases": [
         {
@@ -484,7 +487,7 @@ export const javaData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Main {\n    public static void main(String[] args) {\n        String[] colors = {\"R\", \"G\", \"B\"};\n        // : で配列から順番に取り出す\n        for (String c : colors) {\n            System.out.println(c);\n        }\n    }\n}",
-      "holeyCode": "class Main {\n    public static void main(String[] args) {\n        String[] colors = {\"R\", \"G\", \"B\"};\n        // : で配列から順番に取り出す\n        for (String c ___ colors) {\n            System.out.println(c);\n        }\n    }\n}",
+      "holeyCode": "class Main {\n    public static void main(String[] args) {\n        // 配列を初期化する\n        String[] colors = {\"___\", \"G\", \"B\"};\n        // : で配列から順番に取り出す\n        for (String c ___ colors) {\n            // println で出力する\n            System.out.___(c);\n        }\n    }\n}",
       "correctLines": [
         "class Main {",
         "    public static void main(String[] args) {",
@@ -500,15 +503,17 @@ export const javaData2 = {
         null,
         null,
         null,
+        "配列の最初の要素を入力します。",
         null,
         "拡張for文は `:` を使います。",
         null,
+        "`println` メソッドを使います。",
         null,
         null,
         null
       ],
       "candidates": {
-        "operators": [":", "in", "of", "->"]
+        "operators": [":", "in", "of", "->", "R", "println"]
       },
       "testCases": [
         {

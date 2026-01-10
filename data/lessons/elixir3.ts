@@ -49,7 +49,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "defmodule Product do\n  defstruct name: \"\", price: 0\nend\n\nproduct = %Product{name: \"Book\", price: 1000}\n# |で辞書を更新\nupdated = %{product | price: 1200}",
-      "holeyCode": "defmodule Product do\n  defstruct name: \"\", price: 0\nend\n\nproduct = %Product{name: \"Book\", price: 1000}\n# |で辞書を更新\nupdated = %{product ___ price: 1200}",
+      "holeyCode": "# defmoduleでモジュールを定義\n___ Product do\n  # defstructで構造体を定義\n  ___ name: \"\", price: 0\n# endでモジュールを閉じる\n___\n\n# %Product{...}で構造体を作成\nproduct = %Product{name: \"___\", price: ___}\n# |で辞書を更新\nupdated = %{product ___ price: ___}",
       "correctLines": [
         { "lineNumber": 6, "content": "updated = %{product | price: 1200}" }
       ],
@@ -57,7 +57,10 @@ export const elixir3Data = {
         { "lineNumber": 6, "hint": "辞書更新の構文で使う記号です" }
       ],
       "candidates": {
-        "6": ["|", ":", "=>", ","]
+        "keywords": ["defmodule", "defstruct", "end"],
+        "strings": ["Book"],
+        "numbers": ["1000", "1200"],
+        "operators": ["|"]
       },
       "testCases": [
         { "input": "updated.price", "expected_output": "1200" }
@@ -77,7 +80,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "numbers = [1, 2, 3, 4, 5]\n# reduceで畳み込み\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)",
-      "holeyCode": "numbers = [1, 2, 3, 4, 5]\n# reduceで畳み込み\nsum = Enum.___(numbers, 0, fn x, acc -> x + acc end)",
+      "holeyCode": "# リストを定義\nnumbers = [___, ___, ___, ___, ___]\n# reduceで畳み込み\nsum = Enum.___(numbers, 0, fn x, acc -> x + acc end)",
       "correctLines": [
         { "lineNumber": 2, "content": "sum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)" }
       ],
@@ -85,7 +88,8 @@ export const elixir3Data = {
         { "lineNumber": 2, "hint": "リストを畳み込む関数です" }
       ],
       "candidates": {
-        "2": ["reduce", "fold", "aggregate", "sum"]
+        "numbers": ["1", "2", "3", "4", "5"],
+        "functions": ["reduce"]
       },
       "testCases": [
         { "input": "sum", "expected_output": "15" }
@@ -105,7 +109,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "users = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\n# group_byでグループ化\ngrouped = Enum.group_by(users, fn {_name, age} -> age end)",
-      "holeyCode": "users = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\n# group_byでグループ化\ngrouped = Enum.___(users, fn {_name, age} -> age end)",
+      "holeyCode": "# タプルのリストを定義\nusers = [{\"___\", ___}, {\"___\", ___}, {\"___\", ___}]\n# group_byでグループ化\ngrouped = Enum.___(users, fn {_name, age} -> age end)",
       "correctLines": [
         { "lineNumber": 2, "content": "grouped = Enum.group_by(users, fn {_name, age} -> age end)" }
       ],

@@ -356,7 +356,7 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "from collections import defaultdict\n\nd = defaultdict(list)\nd['fruits'].append('apple')\nd['fruits'].append('banana')\nprint(d['fruits'])",
-      "holeyCode": "from collections import ___\n\nd = defaultdict(list)\nd['fruits'].append('apple')\nd['fruits'].append('banana')\nprint(d['fruits'])",
+      "holeyCode": "# defaultdict と入力\nfrom collections import ___\n\n# defaultdict(list) と入力\nd = ___\n# d['fruits'].append('apple') と入力\n___\n# d['fruits'].append('banana') と入力\n___\n# d['fruits'] と入力\nprint(___)",
       "correctLines": [
         "from collections import defaultdict",
         "",
@@ -397,7 +397,7 @@ export const pythonData5 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "from itertools import chain\n\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\nresult = list(chain(list1, list2))\nprint(result)",
-      "holeyCode": "from itertools import ___\n\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\nresult = list(chain(list1, list2))\nprint(result)",
+      "holeyCode": "# chain と入力\nfrom itertools import ___\n\n# [1, 2, 3] と入力\nlist1 = ___\n# [4, 5, 6] と入力\nlist2 = ___\n# list(chain(list1, list2)) と入力\nresult = ___\n# result と入力\nprint(___)",
       "correctLines": [
         "from itertools import chain",
         "",
