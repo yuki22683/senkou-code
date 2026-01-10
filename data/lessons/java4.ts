@@ -353,13 +353,16 @@ export const javaData4 = {
         null,
         null,
         null,
-        "comparing でプロパティを基準に比較します。",
+        "`new` と `asList` でリストを作成します。",
         null,
+        "`comparing` でプロパティを基準に比較します。",
+        null,
+        "`println` で出力します。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["comparing", "compare", "compareTo"]
+        "methods": ["comparing", "compare", "compareTo", "new", "asList", "println"]
       },
       "testCases": [
         {
