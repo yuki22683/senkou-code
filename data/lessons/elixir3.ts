@@ -147,7 +147,8 @@ export const elixir3Data = {
         { "lineNumber": 1, "hint": "リスト内包表記を開始するキーワードです" }
       ],
       "candidates": {
-        "1": ["for", "each", "map", "list"]
+        "keywords": ["for"],
+        "numbers": ["1", "5"]
       },
       "testCases": [
         { "input": "squares", "expected_output": "[1, 4, 9, 16, 25]" }
@@ -167,7 +168,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "def process(map) do\n  # withでパターンマッチを連鎖\n  with {:ok, name} <- Map.fetch(map, :name),\n       {:ok, age} <- Map.fetch(map, :age) do\n    {:ok, \"#{name} is #{age} years old\"}\n  else\n    :error -> {:error, \"Missing field\"}\n  end\nend",
-      "holeyCode": "def process(map) do\n  # withでパターンマッチを連鎖\n  ___ {:ok, name} <- Map.fetch(map, :name),\n       {:ok, age} <- Map.fetch(map, :age) do\n    {:ok, \"#{name} is #{age} years old\"}\n  else\n    :error -> {:error, \"Missing field\"}\n  end\nend",
+      "holeyCode": "# defで関数を定義\n___ process(map) do\n  # withでパターンマッチを連鎖\n  ___ {:ok, name} <- Map.fetch(map, :name),\n       {:ok, age} <- Map.fetch(map, :age) do\n    {:ok, \"#{name} is #{age} years old\"}\n  # elseでエラー処理\n  ___\n    :error -> {:error, \"Missing field\"}\n  # endでブロックを閉じる\n  ___\n# endで関数を閉じる\n___",
       "correctLines": [
         { "lineNumber": 2, "content": "  with {:ok, name} <- Map.fetch(map, :name)," }
       ],

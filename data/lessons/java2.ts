@@ -603,7 +603,7 @@ export const javaData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Item {\n    // private でフィールドを隠蔽する\n    private int price;\n    \n    public Item(int p) {\n        price = p;\n    }\n    \n    public int getPrice() {\n        return price;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Item item = new Item(100);\n        System.out.println(item.getPrice());\n    }\n}",
-      "holeyCode": "class Item {\n    // private でフィールドを隠蔽する\n    ___ int price;\n    \n    public Item(int p) {\n        price = p;\n    }\n    \n    public int getPrice() {\n        return price;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        Item item = new Item(100);\n        System.out.println(item.getPrice());\n    }\n}",
+      "holeyCode": "class Item {\n    // private でフィールドを隠蔽する\n    ___ int price;\n    \n    public Item(int p) {\n        // price に値を代入する\n        ___ = p;\n    }\n    \n    public int getPrice() {\n        // return で値を返す\n        ___ price;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // new でインスタンスを作成する\n        Item item = ___ Item(100);\n        // getPrice メソッドを呼び出す\n        System.out.println(item.___());\n    }\n}",
       "correctLines": [
         "class Item {",
         "    // private でフィールドを隠蔽する",
