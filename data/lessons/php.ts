@@ -251,7 +251,7 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  $score = 100;\n  // >で大きいか比較\n  if ($score > 80) {\n    echo \"Excellent\";\n  }\n?>",
-      "holeyCode": "<?php\n  $score = 100;\n  // >で大きいか比較\n  if ($score ___ 80) {\n    echo \"Excellent\";\n  }\n?>",
+      "holeyCode": "<?php\n  // scoreに100を入れる\n  $score = ___;\n  // >で大きいか比較\n  if ($score ___ 80) {\n    // メッセージ（'Excellent'）\n    echo \"___\";\n  }\n?>",
       "correctLines": [
         "<?php",
         "  $score = 100;",
@@ -299,7 +299,7 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  $age = 18;\n  if ($age >= 20) {\n    echo \"Adult\";\n  // elseで「そうでなければ」\n  } else {\n    echo \"Minor\";\n  }\n?>",
-      "holeyCode": "<?php\n  $age = 18;\n  if ($age >= 20) {\n    echo \"Adult\";\n  // elseで「そうでなければ」\n  } ___ {\n    echo \"Minor\";\n  }\n?>",
+      "holeyCode": "<?php\n  // ageに18を入れる\n  $age = ___;\n  // 20以上かを比較する演算子\n  if ($age ___ 20) {\n    // 20歳以上のときのメッセージ（'Adult'）\n    echo \"___\";\n  // elseで「そうでなければ」\n  } ___ {\n    // それ以外のメッセージ（'Minor'）\n    echo \"___\";\n  }\n?>",
       "correctLines": [
         "<?php",
         "  $age = 18;",
