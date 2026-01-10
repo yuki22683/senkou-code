@@ -96,12 +96,14 @@ export const javaData3 = {
         null,
         null,
         null,
-        "stream() でStreamを作成します。",
+        "`asList` でリストを作成します。",
+        null,
+        "`stream` でStreamを作成します。",
         null,
         null
       ],
       "candidates": {
-        "methods": ["stream", "iterator", "toArray"]
+        "methods": ["stream", "iterator", "toArray", "asList"]
       },
       "testCases": [
         {
@@ -129,7 +131,7 @@ export const javaData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3);\n        nums.stream()\n            .map(n -> n * 10)\n            .forEach(System.out::println);\n    }\n}",
-      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        List<Integer> nums = Arrays.asList(1, 2, 3);\n        nums.stream()\n            // 各要素を変換するメソッド\n            .___(n -> n * 10)\n            .forEach(System.out::println);\n    }\n}",
+      "holeyCode": "import java.util.*;\n\npublic class Main {\n    public static void main(String[] args) {\n        // asList でリストを作成する\n        List<Integer> nums = Arrays.___(1, 2, 3);\n        nums.stream()\n            // 各要素を変換するメソッド\n            .___(n -> n * 10)\n            .forEach(System.out::println);\n    }\n}",
       "correctLines": [
         "import java.util.*;",
         "",
@@ -148,14 +150,16 @@ export const javaData3 = {
         null,
         null,
         null,
+        "`asList` でリストを作成します。",
         null,
-        "map で各要素を変換します。",
+        null,
+        "`map` で各要素を変換します。",
         null,
         null,
         null
       ],
       "candidates": {
-        "methods": ["map", "filter", "flatMap"]
+        "methods": ["map", "filter", "flatMap", "asList"]
       },
       "testCases": [
         {

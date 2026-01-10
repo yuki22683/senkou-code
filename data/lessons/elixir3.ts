@@ -252,7 +252,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# start_linkでAgentを開始\n{:ok, counter} = Agent.start_link(fn -> 0 end)\nAgent.update(counter, fn state -> state + 1 end)\nvalue = Agent.get(counter, fn state -> state end)",
-      "holeyCode": "# start_linkでAgentを開始\n{:ok, counter} = Agent.___(fn -> 0 end)\nAgent.update(counter, fn state -> state + 1 end)\nvalue = Agent.get(counter, fn state -> state end)",
+      "holeyCode": "# start_linkでAgentを開始\n{:ok, counter} = Agent.___(fn -> 0 end)\n# updateでAgentの状態を更新\nAgent.___(counter, fn state -> state + 1 end)\n# getでAgentの状態を取得\nvalue = Agent.___(counter, fn state -> state end)",
       "correctLines": [
         { "lineNumber": 1, "content": "{:ok, counter} = Agent.start_link(fn -> 0 end)" }
       ],
@@ -260,7 +260,7 @@ export const elixir3Data = {
         { "lineNumber": 1, "hint": "Agentを開始してプロセスにリンクする関数です" }
       ],
       "candidates": {
-        "1": ["start_link", "start", "new", "create"]
+        "functions": ["start_link", "update", "get"]
       },
       "testCases": [
         { "input": "value", "expected_output": "1" }
