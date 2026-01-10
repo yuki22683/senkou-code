@@ -541,7 +541,7 @@ export const javaData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "class Calculator {\n    // static でクラスメソッドを定義する\n    static int multiply(int a, int b) {\n        return a * b;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        int result = Calculator.multiply(4, 5);\n        System.out.println(result);\n    }\n}",
-      "holeyCode": "class Calculator {\n    // static でクラスメソッドを定義する\n    ___ int multiply(int a, int b) {\n        return a * b;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        int result = Calculator.multiply(4, 5);\n        System.out.println(result);\n    }\n}",
+      "holeyCode": "class Calculator {\n    // static でクラスメソッドを定義する\n    ___ int multiply(int a, int b) {\n        // return で値を返す\n        ___ a * b;\n    }\n}\n\nclass Main {\n    public static void main(String[] args) {\n        // multiply メソッドを呼び出す\n        int result = Calculator.___(4, 5);\n        // println で出力する\n        System.out.___(result);\n    }\n}",
       "correctLines": [
         "class Calculator {",
         "    // static でクラスメソッドを定義する",
@@ -562,18 +562,20 @@ export const javaData2 = {
         null,
         "`static` キーワードを使います。",
         null,
+        "`return` で値を返します。",
         null,
         null,
         null,
         null,
         null,
+        "`multiply` メソッドを呼び出します。",
         null,
-        null,
+        "`println` メソッドを使います。",
         null,
         null
       ],
       "candidates": {
-        "keywords": ["static", "public", "private", "final"]
+        "keywords": ["static", "public", "private", "final", "return", "multiply", "println"]
       },
       "testCases": [
         {

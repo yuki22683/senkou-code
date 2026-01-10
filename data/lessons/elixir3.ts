@@ -117,7 +117,9 @@ export const elixir3Data = {
         { "lineNumber": 2, "hint": "要素をグループ化する関数です" }
       ],
       "candidates": {
-        "2": ["group_by", "partition", "chunk_by", "categorize"]
+        "strings": ["Alice", "Bob", "Carol"],
+        "numbers": ["25", "30"],
+        "functions": ["group_by"]
       },
       "testCases": [
         { "input": "Map.keys(grouped) |> Enum.sort()", "expected_output": "[25, 30]" }
@@ -137,7 +139,7 @@ export const elixir3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# forで内包表記\nsquares = for x <- 1..5, do: x * x",
-      "holeyCode": "# forで内包表記\nsquares = ___ x <- 1..5, do: x * x",
+      "holeyCode": "# forで内包表記\nsquares = ___ x <- ___...___, do: x * x",
       "correctLines": [
         { "lineNumber": 1, "content": "squares = for x <- 1..5, do: x * x" }
       ],
