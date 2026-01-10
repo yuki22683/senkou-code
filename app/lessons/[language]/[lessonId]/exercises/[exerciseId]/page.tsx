@@ -69,10 +69,12 @@ export default function ExercisePage() {
   const [showAnswerDialog, setShowAnswerDialog] = useState(false);
   const [showCompleteDialog, setShowCompleteDialog] = useState(false);
   const [showFeedbackDialog, setShowFeedbackDialog] = useState(false);
+  const [showExitDialog, setShowExitDialog] = useState(false);
   const [feedbackMessage, setFeedbackMessage] = useState("");
   const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false);
   const [editorKey, setEditorKey] = useState(0);
   const [showNextButton, setShowNextButton] = useState(false);
+  const [savedInitialCode, setSavedInitialCode] = useState<string | null>(null);
   const mainContentRef = useRef<HTMLDivElement>(null);
 
   // お祝い演出用の状態
@@ -113,7 +115,20 @@ export default function ExercisePage() {
       if (error) throw error;
 
       setExercise(data);
-      setCode(data.starter_code || data.holey_code || "");
+
+      // sessionStorageから一時保存されたコードを取得
+      const savedCodeKey = `exercise_temp_code_${exerciseId}`;
+      const savedCode = sessionStorage.getItem(savedCodeKey);
+
+      if (savedCode) {
+        // 一時保存されたコードがあれば使用し、sessionStorageから削除
+        setSavedInitialCode(savedCode);
+        setCode(savedCode);
+        sessionStorage.removeItem(savedCodeKey);
+      } else {
+        setSavedInitialCode(null);
+        setCode(data.starter_code || data.holey_code || "");
+      }
     } catch (err) {
       console.error("Error loading exercise:", err);
       setError("演習の読み込みに失敗しました");
@@ -235,13 +250,23 @@ export default function ExercisePage() {
     // 現在の進捗を保存して一覧へ戻る
     const { data: { user } } = await supabase.auth.getUser();
     if (user) {
-      await supabase.from("user_progress").upsert({
-        user_id: user.id,
-        exercise_id: exerciseId,
-        status: "in_progress",
-        current_code: code,
-        updated_at: new Date().toISOString(),
-      }, { onConflict: 'user_id,exercise_id' });
+      // 既に完了している場合はステータスを上書きしない
+      const { data: existingProgress } = await supabase
+        .from("user_progress")
+        .select("status")
+        .eq("user_id", user.id)
+        .eq("exercise_id", exerciseId)
+        .single();
+
+      if (existingProgress?.status !== "completed") {
+        await supabase.from("user_progress").upsert({
+          user_id: user.id,
+          exercise_id: exerciseId,
+          status: "in_progress",
+          current_code: code,
+          updated_at: new Date().toISOString(),
+        }, { onConflict: 'user_id,exercise_id' });
+      }
     }
     router.push(`/lessons/${language}/${lessonId}/exercises`);
   }
@@ -463,6 +488,7 @@ export default function ExercisePage() {
       initialCode = exercise?.holey_code || exercise?.starter_code || "";
     }
     setCode(initialCode);
+    setSavedInitialCode(null); // 一時保存をクリア
     setOutput("");
     setError("");
     setCorrectOutput("");
@@ -532,9 +558,7 @@ export default function ExercisePage() {
               variant="outline"
               size="icon"
               className="h-8 w-8"
-              onClick={() =>
-                router.push(`/lessons/${language}/${lessonId}/exercises`)
-              }
+              onClick={() => setShowExitDialog(true)}
             >
               <ArrowLeft className="w-4 h-4" />
             </Button>
@@ -600,9 +624,11 @@ export default function ExercisePage() {
                 <MobileCodeEditor
                   key={editorKey}
                   initialCode={
-                    exercise.initial_display_mode === "editable"
-                      ? exercise.starter_code || ""
-                      : exercise.holey_code || exercise.starter_code || ""
+                    savedInitialCode !== null
+                      ? savedInitialCode
+                      : exercise.initial_display_mode === "editable"
+                        ? exercise.starter_code || ""
+                        : exercise.holey_code || exercise.starter_code || ""
                   }
                   correctCode={exercise.correct_code || ""}
                   language={language}
@@ -648,11 +674,14 @@ export default function ExercisePage() {
                       variant="outline"
                       size="sm"
                       className="text-base flex-1"
-                      onClick={() =>
+                      onClick={() => {
+                        // 現在のコードを一時保存
+                        const savedCodeKey = `exercise_temp_code_${exerciseId}`;
+                        sessionStorage.setItem(savedCodeKey, code);
                         router.push(
                           `/lessons/${language}/${lessonId}/exercises/${exerciseId}/tutorial`
-                        )
-                      }
+                        );
+                      }}
                     >
                       <BookOpen className="w-5 h-5 lg:mr-2" />
                       <span className="hidden lg:inline">スライドを見る</span>
@@ -758,8 +787,8 @@ export default function ExercisePage() {
             </DialogTitle>
             <DialogDescription>
               {celebrationType === "lesson" || celebrationType === "language"
-                ? "おめでとうございます！このレッスンの演習をすべてクリアしました。"
-                : "おめでとうございます！この演習をクリアしました。"}
+                ? "おめでとうございます！\nこのレッスンの演習をすべてクリアしました。"
+                : "おめでとうございます！\nこの演習をクリアしました。"}
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -805,6 +834,31 @@ export default function ExercisePage() {
               className="bg-blue-600 hover:bg-blue-700"
             >
               {isSubmittingFeedback ? "送信中..." : "送信する"}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      {/* 終了確認ダイアログ */}
+      <Dialog open={showExitDialog} onOpenChange={setShowExitDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>演習を終了しますか？</DialogTitle>
+            <DialogDescription>
+              入力された内容は破棄されます。\nこの演習を終了しますか？
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="gap-2">
+            <Button variant="outline" onClick={() => setShowExitDialog(false)}>
+              キャンセル
+            </Button>
+            <Button
+              onClick={() => {
+                setShowExitDialog(false);
+                router.push(`/lessons/${language}/${lessonId}/exercises`);
+              }}
+            >
+              終了する
             </Button>
           </DialogFooter>
         </DialogContent>

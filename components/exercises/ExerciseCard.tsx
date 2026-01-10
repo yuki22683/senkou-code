@@ -56,8 +56,14 @@ export function ExerciseCard({ exercise, language, lessonId, progress, isLocked 
     );
   }
 
+  const handleClick = () => {
+    // 一時保存されたコードをクリア
+    const savedCodeKey = `exercise_temp_code_${exercise.id}`;
+    sessionStorage.removeItem(savedCodeKey);
+  };
+
   return (
-    <Link href={`/lessons/${language}/${lessonId}/exercises/${exercise.id}/tutorial`}>
+    <Link href={`/lessons/${language}/${lessonId}/exercises/${exercise.id}/tutorial`} onClick={handleClick}>
       <Card className={`transition-all hover:shadow-lg hover:scale-105 cursor-pointer ${
         isCompleted ? 'border-green-500 border-2' : isNext ? 'border-orange-400 border-2 shadow-md' : ''
       }`}>
