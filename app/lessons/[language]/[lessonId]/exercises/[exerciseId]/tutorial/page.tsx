@@ -208,7 +208,7 @@ export default function TutorialPage() {
               <img
                 src={currentSlideData.image}
                 alt={currentSlideData.title || "イラスト"}
-                className="max-w-full h-auto max-h-48 sm:max-h-64 md:max-h-80 object-contain rounded-lg"
+                className="max-w-[50%] h-auto max-h-24 sm:max-h-32 md:max-h-40 object-contain rounded-lg"
               />
             </div>
           )}
