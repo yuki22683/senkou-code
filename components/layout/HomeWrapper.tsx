@@ -1,5 +1,6 @@
 'use client'
 
+import { useRef, useState, useEffect } from 'react'
 import RakutenLeftWidget from './RakutenLeftWidget'
 import RakutenRightWidget from './RakutenRightWidget'
 
@@ -9,26 +10,30 @@ interface Props {
 }
 
 export default function HomeWrapper({ children, uniqueKey }: Props) {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [containerHeight, setContainerHeight] = useState(0)
+
+  useEffect(() => {
+    if (!containerRef.current) return
+
+    const updateHeight = () => {
+      if (containerRef.current) {
+          setContainerHeight(containerRef.current.clientHeight)
+      }
+    }
+
+    updateHeight()
+    const observer = new ResizeObserver(updateHeight)
+    observer.observe(containerRef.current)
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <div className="flex justify-center w-full">
-      {/* 左サイドウィジェット */}
-      <aside className="hidden xl:block w-[220px] flex-shrink-0">
-        <div className="sticky top-[80px]">
-          <RakutenLeftWidget uniqueKey={uniqueKey} />
-        </div>
-      </aside>
-
-      {/* メインコンテンツ */}
-      <div className="flex-1 max-w-5xl min-w-0">
-        {children}
-      </div>
-
-      {/* 右サイドウィジェット */}
-      <aside className="hidden xl:block w-[220px] flex-shrink-0">
-        <div className="sticky top-[80px]">
-          <RakutenRightWidget uniqueKey={uniqueKey} />
-        </div>
-      </aside>
+    <div ref={containerRef} className="relative min-h-[600px]">
+      <RakutenLeftWidget containerHeight={containerHeight} uniqueKey={uniqueKey} />
+      <RakutenRightWidget containerHeight={containerHeight} uniqueKey={uniqueKey} />
+      {children}
     </div>
   )
 }

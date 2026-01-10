@@ -478,8 +478,8 @@ export const rust4Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "fn main() {\n    let items = vec![\"a\", \"b\", \"c\"];\n    // enumerate でインデックスを付ける\n    for (i, item) in items.iter().enumerate() {\n        println!(\"{}: {}\", i, item);\n    }\n}",
-      "holeyCode": "fn main() {\n    let items = vec![\"a\", \"b\", \"c\"];\n    // enumerate でインデックスを付ける\n    for (i, item) in items.iter().___() {\n        println!(\"{}: {}\", i, item);\n    }\n}",
+      "correctCode": "fn main() {\n    let items = vec![\"a\", \"b\", \"c\"];\n    // 1番目の i にインデックス、2番目の item に要素が入る\n    for (i, item) in items.iter().enumerate() {\n        println!(\"{}: {}\", i, item);\n    }\n}",
+      "holeyCode": "fn main() {\n    let items = vec![\"a\", \"b\", \"c\"];\n    // 1番目の i にインデックス、2番目の item に要素が入る\n    for (i, item) in items.iter().___() {\n        println!(\"{}: {}\", i, item);\n    }\n}",
       "correctLines": [
         "fn main() {",
         "    let items = vec![\"a\", \"b\", \"c\"];",

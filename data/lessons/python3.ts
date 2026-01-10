@@ -127,12 +127,12 @@ export const pythonData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# キーワード引数を受け取って表示する関数を定義\ndef print_info(**kwargs):\n    # 辞書のキーと値をペアで取得してループ\n    for k, v in kwargs.items():\n        # キーと値をイコールで繋いで表示\n        print(f'{k} = {v}')\n\n# x=10, y=20 を指定して実行\nprint_info(x=10, y=20)",
-      "holeyCode": "# キーワード引数を受け取って表示する関数を定義\ndef print_info(___kwargs):\n    # 辞書のキーと値をペアで取得してループ\n    for k, v in ___:\n        # キーと値をイコールで繋いで表示\n        print(___)\n\n# x=10, y=20 を指定して実行\n___",
+      "correctCode": "# キーワード引数を受け取って表示する関数を定義\ndef print_info(**kwargs):\n    # 1番目の k にキー、2番目の v に値が入る\n    for k, v in kwargs.items():\n        # キーと値をイコールで繋いで表示\n        print(f'{k} = {v}')\n\n# x=10, y=20 を指定して実行\nprint_info(x=10, y=20)",
+      "holeyCode": "# キーワード引数を受け取って表示する関数を定義\ndef print_info(___kwargs):\n    # 1番目の k にキー、2番目の v に値が入る\n    for k, v in ___:\n        # キーと値をイコールで繋いで表示\n        print(___)\n\n# x=10, y=20 を指定して実行\n___",
       "correctLines": [
         "# キーワード引数を受け取って表示する関数を定義",
         "def print_info(**kwargs):",
-        "    # 辞書のキーと値をペアで取得してループ",
+        "    # 1番目の k にキー、2番目の v に値が入る",
         "    for k, v in kwargs.items():",
         "        # キーと値をイコールで繋いで表示",
         "        print(f'{k} = {v}')",
@@ -179,12 +179,12 @@ export const pythonData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 赤、緑、青の3色を含むリストを作成\ncolors = ['red', 'green', 'blue']\n# 要素とその番号を同時に取得しながら処理\nfor i, color in enumerate(colors):\n    # 「番号: 色」の形式で画面に出力\n    print(f'{i}: {color}')",
-      "holeyCode": "# 赤、緑、青の3色を含むリストを作成\ncolors = ___\n# 要素とその番号を同時に取得しながら処理\nfor i, color in ___(colors):\n    # 「番号: 色」の形式で画面に出力\n    print(___)",
+      "correctCode": "# 赤、緑、青の3色を含むリストを作成\ncolors = ['red', 'green', 'blue']\n# 1番目の i に番号、2番目の color に要素が入る\nfor i, color in enumerate(colors):\n    # 「番号: 色」の形式で画面に出力\n    print(f'{i}: {color}')",
+      "holeyCode": "# 赤、緑、青の3色を含むリストを作成\ncolors = ___\n# 1番目の i に番号、2番目の color に要素が入る\nfor i, color in ___(colors):\n    # 「番号: 色」の形式で画面に出力\n    print(___)",
       "correctLines": [
         "# 赤、緑、青の3色を含むリストを作成",
         "colors = ['red', 'green', 'blue']",
-        "# 要素とその番号を同時に取得しながら処理",
+        "# 1番目の i に番号、2番目の color に要素が入る",
         "for i, color in enumerate(colors):",
         "    # 「番号: 色」の形式で画面に出力",
         "    print(f'{i}: {color}')"
@@ -227,14 +227,14 @@ export const pythonData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 英単語 a, b, c のリストを定義\nkeys = ['a', 'b', 'c']\n# 数値 1, 2, 3 のリストを定義\nvalues = [1, 2, 3]\n# 2つのリストからペアを作ってループ\nfor k, v in zip(keys, values):\n    # 「キー: 値」の形式で画面に出力\n    print(f'{k}: {v}')",
-      "holeyCode": "# 英単語 a, b, c のリストを定義\nkeys = ___\n# 数値 1, 2, 3 のリストを定義\nvalues = ___\n# 2つのリストからペアを作ってループ\nfor k, v in ___(keys, values):\n    # 「キー: 値」の形式で画面に出力\n    print(___)",
+      "correctCode": "# 英単語 a, b, c のリストを定義\nkeys = ['a', 'b', 'c']\n# 数値 1, 2, 3 のリストを定義\nvalues = [1, 2, 3]\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\nfor k, v in zip(keys, values):\n    # 「キー: 値」の形式で画面に出力\n    print(f'{k}: {v}')",
+      "holeyCode": "# 英単語 a, b, c のリストを定義\nkeys = ___\n# 数値 1, 2, 3 のリストを定義\nvalues = ___\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\nfor k, v in ___(keys, values):\n    # 「キー: 値」の形式で画面に出力\n    print(___)",
       "correctLines": [
         "# 英単語 a, b, c のリストを定義",
         "keys = ['a', 'b', 'c']",
         "# 数値 1, 2, 3 のリストを定義",
         "values = [1, 2, 3]",
-        "# 2つのリストからペアを作ってループ",
+        "# 1番目の k, 2番目の v で、zip の引数も keys, values の順",
         "for k, v in zip(keys, values):",
         "    # 「キー: 値」の形式で画面に出力",
         "    print(f'{k}: {v}')"

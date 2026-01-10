@@ -29,8 +29,8 @@ export function LoginButton() {
   if (!user) {
     return (
       <Button onClick={() => signInWithGoogle()}>
-        <LogIn className="w-4 h-4 mr-2" />
-        Googleでログイン
+        <LogIn className="w-4 h-4 sm:mr-2" />
+        <span className="hidden sm:inline">Googleでログイン</span>
       </Button>
     );
   }

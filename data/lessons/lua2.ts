@@ -100,8 +100,8 @@ export const lua2Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "-- 配列を作成（1, 2, 3の順）\nlocal nums = {1, 2, 3}\n-- ipairsで配列をループ\nfor i, v in ipairs(nums) do\n    print(v)\nend",
-      "holeyCode": "-- 配列を作成（1, 2, 3の順）\nlocal nums = {___, 2, ___}\n-- ipairsで配列をループ\nfor i, v in ___(nums) do\n    -- vを表示\n    print(___)\nend",
+      "correctCode": "-- 配列を作成（1, 2, 3の順）\nlocal nums = {1, 2, 3}\n-- 1番目の i にインデックス、2番目の v に値が入る\nfor i, v in ipairs(nums) do\n    print(v)\nend",
+      "holeyCode": "-- 配列を作成（1, 2, 3の順）\nlocal nums = {___, 2, ___}\n-- 1番目の i にインデックス、2番目の v に値が入る\nfor i, v in ___(nums) do\n    -- vを表示\n    print(___)\nend",
       "correctLines": [
         "local nums = {1, 2, 3}",
         "for i, v in ipairs(nums) do",
@@ -142,8 +142,8 @@ export const lua2Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "local t = {x = 10}\n-- pairsでテーブルをループ\nfor k, v in pairs(t) do\n    print(k, v)\nend",
-      "holeyCode": "-- テーブルを作成\nlocal t = {x = ___}\n-- pairsでテーブルをループ\nfor k, v in ___(t) do\n    -- kとvを表示\n    print(___, ___)\nend",
+      "correctCode": "local t = {x = 10}\n-- 1番目の k にキー、2番目の v に値が入る\nfor k, v in pairs(t) do\n    print(k, v)\nend",
+      "holeyCode": "-- テーブルを作成\nlocal t = {x = ___}\n-- 1番目の k にキー、2番目の v に値が入る\nfor k, v in ___(t) do\n    -- kとvを表示\n    print(___, ___)\nend",
       "correctLines": [
         "local t = {x = 10}",
         "for k, v in pairs(t) do",

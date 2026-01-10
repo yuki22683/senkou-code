@@ -4,37 +4,36 @@ import { useEffect, useState } from 'react'
 import { rakutenWidgets } from '@/lib/rakutenWidgets'
 
 interface Props {
+  containerHeight?: number
   uniqueKey?: string
 }
 
-export default function RakutenWidgetList({ uniqueKey }: Props) {
+export default function RakutenWidgetList({ containerHeight = 0, uniqueKey }: Props) {
   const [widgets, setWidgets] = useState<typeof rakutenWidgets>([])
-  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    setIsMounted(true)
-
-    const calculateWidgets = () => {
-      // Use viewport height minus header offset
-      const availableHeight = window.innerHeight - 80
-
-      const widgetHeight = 600
-      const gap = 16
-      const count = Math.max(1, Math.floor((availableHeight + gap) / (widgetHeight + gap)))
-
-      // Select 'count' random widgets
-      const selected = []
-      for (let i = 0; i < count; i++) {
-        const randomIndex = Math.floor(Math.random() * rakutenWidgets.length)
-        selected.push(rakutenWidgets[randomIndex])
-      }
-      setWidgets(selected)
+    if (containerHeight === 0) {
+        setWidgets([])
+        return
     }
 
-    calculateWidgets()
-  }, [uniqueKey])
+    const widgetHeight = 600
+    const gap = 16
+    // Calculate how many widgets fit.
+    // totalHeight = count * widgetHeight + (count - 1) * gap
+    // totalHeight = count * (widgetHeight + gap) - gap
+    let count = Math.max(0, Math.floor((containerHeight + gap) / (widgetHeight + gap)))
 
-  if (!isMounted || widgets.length === 0) return null
+    // Select 'count' random widgets
+    const selected = []
+    for (let i = 0; i < count; i++) {
+        const randomIndex = Math.floor(Math.random() * rakutenWidgets.length)
+        selected.push(rakutenWidgets[randomIndex])
+    }
+    setWidgets(selected)
+  }, [containerHeight, uniqueKey])
+
+  if (widgets.length === 0) return null
 
   return (
     <div className="flex flex-col gap-4">
