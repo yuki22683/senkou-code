@@ -52,4 +52,7 @@ export async function signOut() {
     console.error('Error signing out:', error);
     throw error;
   }
+
+  // ログアウト後にページをリロードしてサーバーキャッシュをクリア
+  window.location.href = '/';
 }

@@ -22,7 +22,7 @@ export default function RakutenWidgetList({ containerHeight = 0, uniqueKey }: Pr
     // Calculate how many widgets fit.
     // totalHeight = count * widgetHeight + (count - 1) * gap
     // totalHeight = count * (widgetHeight + gap) - gap
-    let count = Math.max(0, Math.floor((containerHeight + gap) / (widgetHeight + gap)))
+    const count = Math.max(0, Math.floor((containerHeight + gap) / (widgetHeight + gap)))
 
     // Select 'count' random widgets
     const selected = []

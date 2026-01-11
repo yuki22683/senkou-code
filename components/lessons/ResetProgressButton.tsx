@@ -52,9 +52,11 @@ export function ResetProgressButton({
 
       setShowConfirmDialog(false);
       router.refresh();
-    } catch (error: any) {
-      console.error("Reset error:", error);
-      alert(error.message || "リセットに失敗しました");
+    } catch (error: unknown) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const anyError = error as any;
+      console.error("Reset error:", anyError);
+      alert(anyError.message || "リセットに失敗しました");
     } finally {
       setIsResetting(false);
     }

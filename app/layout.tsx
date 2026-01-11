@@ -24,7 +24,7 @@ export default function RootLayout({
         <AffiliateLinkProvider>
           <Header />
           <HomeWrapper>
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 w-full">{children}</main>
           </HomeWrapper>
           <Footer />
         </AffiliateLinkProvider>

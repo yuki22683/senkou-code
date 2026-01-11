@@ -11,21 +11,18 @@ interface Props {
 export default function RakutenRightWidget({ containerHeight, uniqueKey }: Props) {
   const [extraCols, setExtraCols] = useState(0)
   const [showStandard, setShowStandard] = useState(false)
-  const [baseRight, setBaseRight] = useState(0)
 
   useEffect(() => {
     const calculateCols = () => {
-      const containerWidth = 1024 // max-w-5xl
-      const windowWidth = window.innerWidth
-      const spacePerSide = (windowWidth - containerWidth) / 2
+      // HomeWrapperはmax-w-content (1080px)
+      const containerWidth = 1080
+      const clientWidth = document.documentElement.clientWidth
+      const spacePerSide = (clientWidth - containerWidth) / 2
 
-      setShowStandard(spacePerSide >= 220)
+      // ウィジェット200px分の余白があれば表示
+      setShowStandard(spacePerSide >= 200)
 
-      // Calculate the right position for the first widget column
-      // This should be at the right edge of where the virtual container ends
-      setBaseRight(spacePerSide - 220) // 220 = widget width (200) + gap (20)
-
-      const totalCols = Math.floor(spacePerSide / 220)
+      const totalCols = Math.floor(spacePerSide / 200)
       setExtraCols(Math.max(0, totalCols - 1))
     }
 
@@ -39,8 +36,8 @@ export default function RakutenRightWidget({ containerHeight, uniqueKey }: Props
       {/* Standard Column */}
       {showStandard && (
         <div
-          className="hidden lg:block fixed top-[100px] z-10 w-[200px]"
-          style={{ right: `${baseRight}px` }}
+          className="hidden lg:block absolute top-0 z-10 w-[200px]"
+          style={{ right: '-200px' }}
         >
           <RakutenWidgetList containerHeight={containerHeight} uniqueKey={uniqueKey} />
         </div>
@@ -50,8 +47,8 @@ export default function RakutenRightWidget({ containerHeight, uniqueKey }: Props
       {Array.from({ length: extraCols }).map((_, i) => (
         <div
             key={`right-extra-${i}`}
-            className="hidden lg:block fixed top-[100px] z-10 w-[200px]"
-            style={{ right: `${baseRight - 220 * (i + 1)}px` }}
+            className="hidden lg:block absolute top-0 z-10 w-[200px]"
+            style={{ right: `${-200 - 200 * (i + 1)}px` }}
         >
           <RakutenWidgetList containerHeight={containerHeight} uniqueKey={`${uniqueKey}-right-${i}`} />
         </div>

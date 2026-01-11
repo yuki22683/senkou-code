@@ -41,7 +41,7 @@ import { CelebrationOverlay } from "@/components/celebrations/CelebrationOverlay
 import { getRandomMessage, CelebrationType, CelebrationMessage } from "@/lib/celebrations/messages";
 import { parseExecutionError, ParsedError } from "@/lib/parse-execution-errors";
 import { getXpForDifficulty } from "@/lib/xp";
-import type { Difficulty } from "@/types/database";
+import type { Difficulty, Exercise } from "@/types/database";
 
 export default function ExercisePage() {
   const params = useParams();
@@ -52,7 +52,7 @@ export default function ExercisePage() {
   const router = useRouter();
   const supabase = createClient();
 
-  const [exercise, setExercise] = useState<any>(null);
+  const [exercise, setExercise] = useState<Exercise | null>(null);
   const [code, setCode] = useState("");
   const [output, setOutput] = useState("");
   const [error, setError] = useState("");
@@ -85,7 +85,42 @@ export default function ExercisePage() {
   const [earnedXp, setEarnedXp] = useState<number>(0);
 
   useEffect(() => {
+    const loadExercise = async () => {
+      setIsLoading(true);
+      try {
+        const { data, error } = await supabase
+          .from("exercises")
+          .select("*")
+          .eq("id", exerciseId)
+          .single();
+
+        if (error) throw error;
+
+        setExercise(data);
+
+        // sessionStorageから一時保存されたコードを取得
+        const savedCodeKey = `exercise_temp_code_${exerciseId}`;
+        const savedCode = sessionStorage.getItem(savedCodeKey);
+
+        if (savedCode) {
+          // 一時保存されたコードがあれば使用し、sessionStorageから削除
+          setSavedInitialCode(savedCode);
+          setCode(savedCode);
+          sessionStorage.removeItem(savedCodeKey);
+        } else {
+          setSavedInitialCode(null);
+          setCode(data.starter_code || data.holey_code || "");
+        }
+      } catch (err) {
+        console.error("Error loading exercise:", err);
+        setError("演習の読み込みに失敗しました");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
     loadExercise();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [exerciseId]);
 
   useEffect(() => {
@@ -102,40 +137,6 @@ export default function ExercisePage() {
       }
     }
   }, [output, error, showCelebration, showCompleteDialog]);
-
-  async function loadExercise() {
-    setIsLoading(true);
-    try {
-      const { data, error } = await supabase
-        .from("exercises")
-        .select("*")
-        .eq("id", exerciseId)
-        .single();
-
-      if (error) throw error;
-
-      setExercise(data);
-
-      // sessionStorageから一時保存されたコードを取得
-      const savedCodeKey = `exercise_temp_code_${exerciseId}`;
-      const savedCode = sessionStorage.getItem(savedCodeKey);
-
-      if (savedCode) {
-        // 一時保存されたコードがあれば使用し、sessionStorageから削除
-        setSavedInitialCode(savedCode);
-        setCode(savedCode);
-        sessionStorage.removeItem(savedCodeKey);
-      } else {
-        setSavedInitialCode(null);
-        setCode(data.starter_code || data.holey_code || "");
-      }
-    } catch (err) {
-      console.error("Error loading exercise:", err);
-      setError("演習の読み込みに失敗しました");
-    } finally {
-      setIsLoading(false);
-    }
-  }
 
   async function handleRunCode(codeOverride?: string) {
     if (!exercise) return;
@@ -204,17 +205,19 @@ export default function ExercisePage() {
           }
         }
       }
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Run code error:", err);
       
       let errorMsg = "コードの実行中にエラーが発生しました";
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const anyErr = err as any;
       
-      if (err.code === "ECONNABORTED" || err.message?.includes("timeout")) {
+      if (anyErr.code === "ECONNABORTED" || anyErr.message?.includes("timeout")) {
         errorMsg = "実行がタイムアウトしました。サーバーからの応答がありません。";
-      } else if (err.response?.data?.error) {
-        errorMsg = err.response.data.error;
-      } else if (err.message) {
-        errorMsg = err.message;
+      } else if (anyErr.response?.data?.error) {
+        errorMsg = anyErr.response.data.error;
+      } else if (anyErr.message) {
+        errorMsg = anyErr.message;
       }
 
       if (isExampleMode) {
@@ -691,7 +694,7 @@ export default function ExercisePage() {
                       size="sm"
                       className="text-base flex-1"
                       onClick={() => setShowHintDialog(true)}
-                      disabled={!exercise.hints || !exercise.hints[currentLine]}
+                      disabled={!exercise.line_hints || !exercise.line_hints[currentLine]}
                     >
                       <Lightbulb className="w-5 h-5 lg:mr-2" />
                       <span className="hidden lg:inline">ヒント</span>
@@ -735,8 +738,8 @@ export default function ExercisePage() {
           </DialogHeader>
           <div className="py-4">
             <p className="text-gray-700 whitespace-pre-wrap">
-              {exercise.hints && exercise.hints[currentLine]
-                ? exercise.hints[currentLine]
+              {exercise.line_hints && exercise.line_hints[currentLine]
+                ? exercise.line_hints[currentLine]
                 : "この行にはヒントがありません"}
             </p>
           </div>

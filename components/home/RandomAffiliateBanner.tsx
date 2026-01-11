@@ -10,7 +10,7 @@ interface Props {
 
 export default function RandomAffiliateBanner({ className = "", index = 0 }: Props) {
   const { getLink } = useAffiliateLinks()
-  const [link, setLink] = useState<any>(null)
+  const [link, setLink] = useState<{ href: string; img: string } | null>(null)
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {

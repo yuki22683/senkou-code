@@ -155,8 +155,10 @@ export async function POST(request: NextRequest) {
       success: true,
       deletedCount: count || 0,
     });
-  } catch (error: any) {
-    console.error("Reset progress error:", error);
+  } catch (error: unknown) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const anyError = error as any;
+    console.error("Reset progress error:", anyError);
     return NextResponse.json(
       { error: "進捗のリセット中にエラーが発生しました" },
       { status: 500 }

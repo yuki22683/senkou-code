@@ -50,13 +50,13 @@ const ERROR_PATTERNS = {
 };
 
 // スタックトレースのマーカー
-const STACK_TRACE_MARKERS = [
-  "Traceback (most recent call last):",
-  "    at ",
-  "Exception in thread",
-  "Stack trace:",
-  "Call stack:",
-];
+// const STACK_TRACE_MARKERS = [
+//   "Traceback (most recent call last):",
+//   "    at ",
+//   "Exception in thread",
+//   "Stack trace:",
+//   "Call stack:",
+// ];
 
 /**
  * エラーメッセージをパースして構造化されたエラー情報を返す

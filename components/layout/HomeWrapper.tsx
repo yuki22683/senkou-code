@@ -30,7 +30,7 @@ export default function HomeWrapper({ children, uniqueKey }: Props) {
   }, [])
 
   return (
-    <div ref={containerRef} className="relative min-h-[600px]">
+    <div ref={containerRef} className="relative min-h-[600px] w-full max-w-content mx-auto px-4 overflow-visible">
       <RakutenLeftWidget containerHeight={containerHeight} uniqueKey={uniqueKey} />
       <RakutenRightWidget containerHeight={containerHeight} uniqueKey={uniqueKey} />
       {children}

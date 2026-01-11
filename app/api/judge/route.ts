@@ -54,11 +54,14 @@ export async function POST(request: NextRequest) {
       time: result.time || null,
       memory: result.memory || null,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Judge0 API Error:", error);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const anyError = error as any;
+
     // タイムアウトエラー
-    if (error.code === "ECONNABORTED" || error.message?.includes("timeout")) {
+    if (anyError.code === "ECONNABORTED" || anyError.message?.includes("timeout")) {
       return NextResponse.json(
         { error: "実行がタイムアウトしました。サーバーからの応答がありません。" },
         { status: 504 }
@@ -66,20 +69,20 @@ export async function POST(request: NextRequest) {
     }
 
     // 接続エラー (サーバーがダウンしている等)
-    if (error.code === "ECONNREFUSED" || error.code === "ENOTFOUND") {
+    if (anyError.code === "ECONNREFUSED" || anyError.code === "ENOTFOUND") {
       return NextResponse.json(
         { error: "実行サーバーに接続できませんでした。しばらく時間をおいてから再試行してください。" },
         { status: 503 }
       );
     }
 
-    if (error.response) {
+    if (anyError.response) {
       return NextResponse.json(
         {
-          error: error.response.data?.error || "Judge0 APIからエラーが返されました",
-          details: error.response.data,
+          error: anyError.response.data?.error || "Judge0 APIからエラーが返されました",
+          details: anyError.response.data,
         },
-        { status: error.response.status }
+        { status: anyError.response.status }
       );
     }
 

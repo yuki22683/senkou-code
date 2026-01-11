@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
-import { AlertTriangle, CheckCircle, Clock, Trash2, Mail, MessageSquare } from 'lucide-react'
+import { AlertTriangle, Trash2, Mail, MessageSquare } from 'lucide-react'
 
 type Feedback = {
   id: string
@@ -32,6 +32,7 @@ export default function AdminPage() {
 
   useEffect(() => {
     checkAdminAndFetchData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const checkAdminAndFetchData = async () => {

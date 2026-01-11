@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Play, ArrowLeft } from "lucide-react";
@@ -8,6 +8,8 @@ import { createClient } from "@/lib/supabase/client";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { SyntaxHighlightedCode } from "@/components/exercise/SyntaxHighlightedCode";
+import Image from "next/image";
+import type { Exercise, TutorialSlide } from "@/types/database";
 
 export default function TutorialPage() {
   const params = useParams();
@@ -18,13 +20,64 @@ export default function TutorialPage() {
   const router = useRouter();
   const supabase = createClient();
 
-  const [exercise, setExercise] = useState<any>(null);
-  const [slides, setSlides] = useState<any[]>([]);
+  const [exercise, setExercise] = useState<Exercise | null>(null);
+  const [slides, setSlides] = useState<TutorialSlide[]>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    const loadExercise = async () => {
+      setIsLoading(true);
+      try {
+        const { data, error } = await supabase
+          .from("exercises")
+          .select("*")
+          .eq("id", exerciseId)
+          .single();
+
+        if (error) throw error;
+
+        setExercise(data);
+
+        // tutorial_slides を処理
+        if (data.tutorial_slides) {
+          // Supabaseは自動的にJSONBをパースするので、
+          // すでに配列の場合とJSON文字列の場合の両方に対応
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          let parsedSlides: any = data.tutorial_slides;
+
+          if (typeof data.tutorial_slides === 'string') {
+            try {
+              parsedSlides = JSON.parse(data.tutorial_slides);
+            } catch (e) {
+              console.error("Failed to parse tutorial slides:", e);
+              parsedSlides = [
+                {
+                  title: "解説",
+                  content: data.tutorial_slides,
+                },
+              ];
+            }
+          }
+
+          setSlides(Array.isArray(parsedSlides) ? parsedSlides : [parsedSlides]);
+        } else {
+          setSlides([
+            {
+              title: "この演習について",
+              content: data.description || "解説スライドが準備中です。",
+            },
+          ]);
+        }
+      } catch (err) {
+        console.error("Error loading exercise:", err);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
     loadExercise();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [exerciseId]);
 
   // スライド進捗をlocalStorageから復元
@@ -47,55 +100,6 @@ export default function TutorialPage() {
       localStorage.setItem(`tutorial-slide-${exerciseId}`, currentSlide.toString());
     }
   }, [currentSlide, exerciseId, slides.length]);
-
-  async function loadExercise() {
-    setIsLoading(true);
-    try {
-      const { data, error } = await supabase
-        .from("exercises")
-        .select("*")
-        .eq("id", exerciseId)
-        .single();
-
-      if (error) throw error;
-
-      setExercise(data);
-
-      // tutorial_slides を処理
-      if (data.tutorial_slides) {
-        // Supabaseは自動的にJSONBをパースするので、
-        // すでに配列の場合とJSON文字列の場合の両方に対応
-        let parsedSlides = data.tutorial_slides;
-
-        if (typeof data.tutorial_slides === 'string') {
-          try {
-            parsedSlides = JSON.parse(data.tutorial_slides);
-          } catch (e) {
-            console.error("Failed to parse tutorial slides:", e);
-            parsedSlides = [
-              {
-                title: "解説",
-                content: data.tutorial_slides,
-              },
-            ];
-          }
-        }
-
-        setSlides(Array.isArray(parsedSlides) ? parsedSlides : [parsedSlides]);
-      } else {
-        setSlides([
-          {
-            title: "この演習について",
-            content: data.description || "解説スライドが準備中です。",
-          },
-        ]);
-      }
-    } catch (err) {
-      console.error("Error loading exercise:", err);
-    } finally {
-      setIsLoading(false);
-    }
-  }
 
   function handlePrevSlide() {
     if (currentSlide > 0) {
@@ -124,7 +128,8 @@ export default function TutorialPage() {
     );
   }
 
-  const currentSlideData = slides[currentSlide] || { title: "", content: "" };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const currentSlideData: any = slides[currentSlide] || { title: "", content: "" };
   const isLastSlide = currentSlide === slides.length - 1;
 
   // スライドがない場合
@@ -140,8 +145,7 @@ export default function TutorialPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
-      <div className="container mx-auto px-2 py-4 max-w-4xl">
+    <div className="w-full py-6 sm:py-8">
         {/* ヘッダー */}
         <div className="mb-4 flex items-center gap-2">
           <Button
@@ -169,11 +173,12 @@ export default function TutorialPage() {
 
           {/* イラスト画像 */}
           {currentSlideData.image && (
-            <div className="flex justify-center mb-4">
-              <img
+            <div className="flex justify-center mb-4 relative h-40">
+              <Image
                 src={currentSlideData.image}
                 alt={currentSlideData.title || "イラスト"}
-                className="max-w-[50%] h-auto max-h-24 sm:max-h-32 md:max-h-40 object-contain rounded-lg"
+                fill
+                className="object-contain rounded-lg"
               />
             </div>
           )}
@@ -185,7 +190,8 @@ export default function TutorialPage() {
                 components={{
                   // コードブロックのスタイリング
                   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-                  code: ({ node, inline, className, children, style, ...props }: any) => {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                  code: ({ inline, className, children, ...props }: any) => {
                     const match = /language-(\w+)/.exec(className || '');
                     const lang = match ? match[1] : language;
                     const codeString = String(children).replace(/\n$/, '');
@@ -302,7 +308,6 @@ export default function TutorialPage() {
             解説をスキップして演習へ
           </Button>
         </div>
-      </div>
     </div>
   );
 }

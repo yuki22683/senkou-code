@@ -6,6 +6,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import type { UserProgress } from "@/types/database";
 
 // キャッシュを無効化して、常に最新の進捗データを取得する
 export const dynamic = 'force-dynamic';
@@ -54,7 +55,7 @@ export default async function ExercisesPage({ params }: PageProps) {
   // ユーザーのログイン状態を取得
   const { data: { user } } = await supabase.auth.getUser();
   const isLoggedIn = !!user;
-  let progressMap: Record<string, any> = {};
+  let progressMap: Record<string, UserProgress> = {};
 
   if (user && exercises) {
     const { data: progressData } = await supabase
@@ -73,7 +74,7 @@ export default async function ExercisesPage({ params }: PageProps) {
   // 進捗統計
   const totalExercises = exercises?.length || 0;
   const completedCount = Object.values(progressMap).filter(
-    (p: any) => p.status === 'completed'
+    (p) => p.status === 'completed'
   ).length;
   const progressPercent = totalExercises > 0
     ? Math.round((completedCount / totalExercises) * 100)

@@ -64,7 +64,7 @@ export function ExerciseCard({ exercise, language, lessonId, progress, isLocked 
 
   return (
     <Link href={`/lessons/${language}/${lessonId}/exercises/${exercise.id}/tutorial`} onClick={handleClick}>
-      <Card className={`transition-all hover:shadow-lg hover:scale-105 cursor-pointer ${
+      <Card className={`transition-all hover:shadow-lg hover:scale-[1.02] cursor-pointer ${
         isCompleted ? 'border-green-500 border-2' : isNext ? 'border-orange-400 border-2 shadow-md' : ''
       }`}>
         <CardHeader className="p-6">
