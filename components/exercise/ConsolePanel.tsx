@@ -284,7 +284,7 @@ export function ConsolePanel({
                 <ErrorDisplay error={correctError} parsedError={correctParsedError} />
               ) : correctOutput ? (
                 <div className="bg-green-50 border border-green-200 rounded p-3">
-                  <div className="text-green-700 font-semibold mb-2">お手本出力</div>
+                  <div className="text-green-700 font-semibold mb-2">見本</div>
                   <pre className="text-gray-800 whitespace-pre-wrap break-words">{correctOutput}</pre>
                 </div>
               ) : (
