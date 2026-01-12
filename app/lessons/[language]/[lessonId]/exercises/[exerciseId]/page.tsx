@@ -195,10 +195,13 @@ export default function ExercisePage() {
           setOutput(stdout);
 
           // 正解チェック
-          if (
-            exercise.expected_output &&
-            result.stdout?.trim() === exercise.expected_output.trim()
-          ) {
+          // 1. MobileCodeEditorから全行正解で呼ばれた場合（codeOverrideが渡された場合）
+          // 2. または、expected_outputと出力が一致した場合
+          const isAllLinesCorrect = typeof codeOverride === "string";
+          const isOutputMatch = exercise.expected_output &&
+            result.stdout?.trim() === exercise.expected_output.trim();
+
+          if (isAllLinesCorrect || isOutputMatch) {
             setTimeout(async () => {
               await handleComplete();
             }, 1000);
