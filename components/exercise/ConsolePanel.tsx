@@ -265,7 +265,7 @@ export function ConsolePanel({
                 </div>
               ) : (
                 <div className="text-gray-500 text-center py-8">
-                  コードを実行すると、ここに結果が表示されます
+                  全ての行が正解になると、ここに実行結果が表示されます
                 </div>
               )}
             </div>
@@ -289,7 +289,7 @@ export function ConsolePanel({
                 </div>
               ) : (
                 <div className="text-gray-500 text-center py-8 leading-relaxed">
-                  実行すると、ここに正解の結果が表示されます
+                  正解コードの実行結果を表示しています...
                 </div>
               )}
             </div>

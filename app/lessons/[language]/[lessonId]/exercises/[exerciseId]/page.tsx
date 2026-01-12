@@ -15,7 +15,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import {
-  Play,
   Lightbulb,
   BookOpen,
   AlertCircle,
@@ -27,7 +26,6 @@ import {
   LogOut,
   ArrowLeft,
 } from "lucide-react";
-import axios from "axios";
 import { createClient } from "@/lib/supabase/client";
 import {
   DropdownMenu,
@@ -39,7 +37,7 @@ import {
 import { Confetti } from "@/components/celebrations/Confetti";
 import { CelebrationOverlay } from "@/components/celebrations/CelebrationOverlay";
 import { getRandomMessage, CelebrationType, CelebrationMessage } from "@/lib/celebrations/messages";
-import { parseExecutionError, ParsedError } from "@/lib/parse-execution-errors";
+import type { ParsedError } from "@/lib/parse-execution-errors";
 import { getXpForDifficulty } from "@/lib/xp";
 import type { Difficulty, Exercise } from "@/types/database";
 
@@ -138,102 +136,42 @@ export default function ExercisePage() {
     }
   }, [output, error, showCelebration, showCompleteDialog]);
 
-  async function handleRunCode(codeOverride?: string) {
+  async function handleRunCode() {
     if (!exercise) return;
 
     const isExampleMode = activeTab === "examples";
-    const sourceCode = isExampleMode
-      ? exercise.correct_code
-      : typeof codeOverride === "string"
-      ? codeOverride
-      : code;
 
     if (isExampleMode) {
+      // 見本タブ: expected_outputを表示
       setIsCorrectRunning(true);
       setCorrectOutput("");
       setCorrectError("");
       setCorrectParsedError(null);
+
+      // 少し遅延させて実行している風に見せる
+      await new Promise(resolve => setTimeout(resolve, 300));
+
+      const output = exercise.expected_output || "実行完了（出力なし）";
+      setCorrectOutput(output);
+      setIsCorrectRunning(false);
     } else {
+      // 全行正解で呼ばれた場合: expected_outputを表示
       setIsRunning(true);
       setOutput("");
       setError("");
       setParsedError(null);
-    }
 
-    try {
-      const response = await axios.post("/api/judge", {
-        source_code: sourceCode,
-        language_id: exercise.language_id,
-        stdin: exercise.test_input || "",
-      }, {
-        timeout: 40000 // フロントエンド側でも40秒でタイムアウト
-      });
+      // 少し遅延させて実行している風に見せる
+      await new Promise(resolve => setTimeout(resolve, 500));
 
-      const result = response.data;
+      const output = exercise.expected_output || "実行完了（出力なし）";
+      setOutput(output);
+      setIsRunning(false);
 
-      if (result.stderr || result.compile_output) {
-        // エラーをパース
-        const parsed = parseExecutionError(
-          result.stderr || "",
-          result.compile_output || null,
-          language,
-          sourceCode
-        );
-
-        if (isExampleMode) {
-          setCorrectError(parsed.formattedMessage || result.stderr || result.compile_output);
-          setCorrectParsedError(parsed);
-        } else {
-          setError(parsed.formattedMessage || result.stderr || result.compile_output);
-          setParsedError(parsed);
-        }
-      } else {
-        const stdout = result.stdout || "実行完了（出力なし）";
-        if (isExampleMode) {
-          setCorrectOutput(stdout);
-        } else {
-          setOutput(stdout);
-
-          // 正解チェック
-          // 1. MobileCodeEditorから全行正解で呼ばれた場合（codeOverrideが渡された場合）
-          // 2. または、expected_outputと出力が一致した場合
-          const isAllLinesCorrect = typeof codeOverride === "string";
-          const isOutputMatch = exercise.expected_output &&
-            result.stdout?.trim() === exercise.expected_output.trim();
-
-          if (isAllLinesCorrect || isOutputMatch) {
-            setTimeout(async () => {
-              await handleComplete();
-            }, 1000);
-          }
-        }
-      }
-    } catch (err: unknown) {
-      console.error("Run code error:", err);
-      
-      let errorMsg = "コードの実行中にエラーが発生しました";
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const anyErr = err as any;
-      
-      if (anyErr.code === "ECONNABORTED" || anyErr.message?.includes("timeout")) {
-        errorMsg = "実行がタイムアウトしました。サーバーからの応答がありません。";
-      } else if (anyErr.response?.data?.error) {
-        errorMsg = anyErr.response.data.error;
-      } else if (anyErr.message) {
-        errorMsg = anyErr.message;
-      }
-
-      if (isExampleMode) {
-        setCorrectError(errorMsg);
-      } else {
-        setError(errorMsg);
-      }
-    } finally {
-      if (isExampleMode) {
-        setIsCorrectRunning(false);
-      } else {
-        setIsRunning(false);
-      }
+      // 正解処理
+      setTimeout(async () => {
+        await handleComplete();
+      }, 1000);
     }
   }
 
@@ -682,7 +620,13 @@ export default function ExercisePage() {
                     correctError={correctError}
                     isCorrectLoading={isCorrectRunning}
                     activeTab={activeTab}
-                    onTabChange={setActiveTab}
+                    onTabChange={(tab) => {
+                      setActiveTab(tab);
+                      // 見本タブに切り替えた時に自動的にexpected_outputを表示
+                      if (tab === "examples" && !correctOutput && !isCorrectRunning) {
+                        handleRunCode();
+                      }
+                    }}
                     onRetry={() => handleRunCode()}
                     parsedError={parsedError}
                     correctParsedError={correctParsedError}
@@ -724,15 +668,6 @@ export default function ExercisePage() {
                     >
                       <Lightbulb className="w-5 h-5 lg:mr-2" />
                       <span className="hidden lg:inline">ヒント</span>
-                    </Button>
-                    <Button
-                      onClick={() => handleRunCode()}
-                      disabled={isRunning}
-                      className="bg-green-600 hover:bg-green-700 text-white text-base flex-1"
-                      size="sm"
-                    >
-                      <Play className="w-5 h-5 mr-2" />
-                      {isRunning ? "実行中..." : "実行"}
                     </Button>
                   </div>
                 </div>
