@@ -305,12 +305,11 @@ export const pythonData3 = {
         null,
         null,
         null,
-        null,
-        null,
         null
       ],
       "candidates": {
-        "keywords": ["yield", "return"]
+        "keywords": ["yield", "return"],
+        "variables": ["num"]
       },
       "testCases": [
         {
