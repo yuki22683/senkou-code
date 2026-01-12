@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { CelebrationMessage, CelebrationType } from "@/lib/celebrations/messages";
 import { Zap } from "lucide-react";
 
@@ -13,22 +13,37 @@ interface CelebrationOverlayProps {
   earnedXp?: number;
 }
 
+// ランダムなRGB色を生成（暗めの色で透明度付き）
+function generateRandomColor(opacity: number = 0.85): string {
+  // 暗めの色にするため、各成分を0-180の範囲に制限
+  const r = Math.floor(Math.random() * 180);
+  const g = Math.floor(Math.random() * 180);
+  const b = Math.floor(Math.random() * 180);
+  return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+}
+
+// ランダムなグラデーション背景を生成
+function generateRandomGradient(type: CelebrationType): string {
+  const opacity = type === "language" ? 0.9 : type === "lesson" ? 0.85 : 0.8;
+  const color1 = generateRandomColor(opacity);
+  const color2 = generateRandomColor(opacity);
+  const color3 = generateRandomColor(opacity);
+  return `linear-gradient(to bottom right, ${color1}, ${color2}, ${color3})`;
+}
+
 function getStyles(type: CelebrationType) {
   switch (type) {
     case "language":
       return {
-        overlay: "bg-gradient-to-br from-purple-900/90 via-pink-900/90 to-amber-900/90",
         title: "text-4xl sm:text-5xl text-amber-300",
       };
     case "lesson":
       return {
-        overlay: "bg-gradient-to-br from-blue-900/85 via-indigo-900/85 to-purple-900/85",
         title: "text-3xl sm:text-4xl text-blue-300",
       };
     case "exercise":
     default:
       return {
-        overlay: "bg-black/75",
         title: "text-2xl sm:text-3xl text-green-300",
       };
   }
@@ -42,6 +57,15 @@ export function CelebrationOverlay({
   autoDismissDelay = 3000,
   earnedXp = 0,
 }: CelebrationOverlayProps) {
+  // isOpenがtrueになるたびに新しいランダムグラデーションを生成
+  const [backgroundGradient, setBackgroundGradient] = useState<string>("");
+
+  useEffect(() => {
+    if (isOpen) {
+      setBackgroundGradient(generateRandomGradient(type));
+    }
+  }, [isOpen, type]);
+
   useEffect(() => {
     if (!isOpen || !autoDismissDelay) return;
 
@@ -70,8 +94,8 @@ export function CelebrationOverlay({
     <div
       role="dialog"
       aria-modal="true"
-      className={`fixed inset-0 flex items-center justify-center ${styles.overlay}`}
-      style={{ zIndex: 10000 }}
+      className="fixed inset-0 flex items-center justify-center"
+      style={{ zIndex: 10000, background: backgroundGradient }}
       onClick={onClose}
     >
       <div
