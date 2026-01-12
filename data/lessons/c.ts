@@ -131,7 +131,7 @@ export const cData = {
         "int main() {",
         "    int a = 5;",
         "    int b = 3;",
-        "    printf(\"%d\\n\", a + b);",
+        ["    printf(\"%d\\n\", a + b);", "    printf(\"%d\\n\", b + a);"],
         "    return 0;",
         "}"
       ],

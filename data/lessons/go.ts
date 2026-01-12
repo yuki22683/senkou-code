@@ -127,7 +127,7 @@ export const goData = {
         "func main() {",
         "    a := 5",
         "    b := 3",
-        "    fmt.Println(a + b)"
+        ["    fmt.Println(a + b)", "    fmt.Println(b + a)"]
       ],
       "lineHints": [
         null,

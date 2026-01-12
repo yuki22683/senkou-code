@@ -123,7 +123,7 @@ export const bashData = {
         "a=5",
         "b=3",
         "# たし算した答えを出す",
-        "echo $((a + b))"
+        ["echo $((a + b))", "echo $((b + a))"]
       ],
       "lineHints": [
         null,

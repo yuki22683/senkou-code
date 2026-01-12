@@ -82,7 +82,7 @@ export const cppData = {
       "initialDisplayMode": "holey",
       "correctCode": "#include <iostream>\nint main() {\n    // はこに数字を入れる\n    int a = 5;\n    int b = 3;\n    // たし算した結果を表示する\n    std::cout << a + b << std::endl;\n    return 0;\n}",
       "holeyCode": "#include <iostream>\nint main() {\n    int a = 5;\n    int b = 3;\n    // + でたし算\n    std::cout << a ___ b << std::endl;\n    return 0;\n}",
-      "correctLines": ["#include <iostream>", "int main() {", "    int a = 5;", "    int b = 3;", "    std::cout << a + b << std::endl;", "    return 0;", "}"],
+      "correctLines": ["#include <iostream>", "int main() {", "    int a = 5;", "    int b = 3;", ["    std::cout << a + b << std::endl;", "    std::cout << b + a << std::endl;"], "    return 0;", "}"],
       "lineHints": [null, null, "a = 5 と入力しましょう。", "b = 3 と入力しましょう。", "たし算なので `+` を使います。"],
       "candidates": { "operators": ["+"] },
       "testCases": [{ "input": "", "expected_output": "8\n" }]

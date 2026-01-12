@@ -427,7 +427,7 @@ export const csharp3Data = {
         "    static void Main() {",
         "        var x = 10;",
         "        var y = 20;",
-        "        Console.WriteLine($\"Sum: {x + y}\");",
+        ["        Console.WriteLine($\"Sum: {x + y}\");", "        Console.WriteLine($\"Sum: {y + x}\");"],
         "    }",
         "}"
       ],

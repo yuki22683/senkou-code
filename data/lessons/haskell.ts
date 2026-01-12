@@ -118,7 +118,7 @@ export const haskellData = {
       "correctLines": [
         "a = 5",
         "b = 3",
-        "main = print (a + b)"
+        ["main = print (a + b)", "main = print (b + a)"]
       ],
       "lineHints": [
         null,

@@ -115,7 +115,7 @@ export const luaData = {
       "correctLines": [
         "local a = 5",
         "local b = 3",
-        "print(a + b)"
+        ["print(a + b)", "print(b + a)"]
       ],
       "lineHints": [
         null,
