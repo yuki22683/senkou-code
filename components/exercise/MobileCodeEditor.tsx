@@ -159,26 +159,47 @@ export function MobileCodeEditor({
   const [lines, setLines] = useState<string[]>(() => {
     const cfg = getLanguageConfig(language);
     const originalLines = initialCode.split("\n");
-    return originalLines.map((_, index) => getInitialDisplayLine(originalLines, index, cfg.commentPrefix));
+    // 虫食い（___）が含まれている場合は初期表示用に処理、そうでなければそのまま使用（復元コード）
+    const hasHoley = originalLines.some(line => line.includes("___"));
+    if (hasHoley) {
+      return originalLines.map((_, index) => getInitialDisplayLine(originalLines, index, cfg.commentPrefix));
+    }
+    return originalLines;
   });
 
   const [cursor, setCursor] = useState(() => {
     const cfg = getLanguageConfig(language);
     const originalLines = initialCode.split("\n");
+    const hasHoley = originalLines.some(line => line.includes("___"));
 
-    // 最初の編集対象行を探す
-    for (let i = 0; i < originalLines.length; i++) {
-      if (isEditableLine(originalLines, i, cfg.commentPrefix)) {
-        // インデントの直後にカーソルを置く
-        const col = originalLines[i].match(/^(\s*)/)?.[0].length || 0;
-        return { line: i, col };
+    if (hasHoley) {
+      // 虫食いコードの場合：最初の編集対象行を探す
+      for (let i = 0; i < originalLines.length; i++) {
+        if (isEditableLine(originalLines, i, cfg.commentPrefix)) {
+          // インデントの直後にカーソルを置く
+          const col = originalLines[i].match(/^(\s*)/)?.[0].length || 0;
+          return { line: i, col };
+        }
+      }
+    } else {
+      // 復元コードの場合：最初の未完成行（正解と異なる行）を探す
+      if (correctLines && correctLines.length > 0) {
+        for (let i = 0; i < originalLines.length; i++) {
+          const correctLine = correctLines[i];
+          if (correctLine && !matchesCorrectLine(originalLines[i], correctLine, language)) {
+            // その行の末尾にカーソルを置く
+            return { line: i, col: originalLines[i].length };
+          }
+        }
       }
     }
 
-    // 編集対象がない場合は、正解と異なる最初の行を探す（フォールバック）
+    // フォールバック
     if (!correctLines || correctLines.length === 0) return { line: 0, col: 0 };
 
-    const initLines = originalLines.map((_, index) => getInitialDisplayLine(originalLines, index, cfg.commentPrefix));
+    const initLines = hasHoley
+      ? originalLines.map((_, index) => getInitialDisplayLine(originalLines, index, cfg.commentPrefix))
+      : originalLines;
     for (let i = 0; i < initLines.length; i++) {
       const correctLine = correctLines[i];
       if (correctLine && !matchesCorrectLine(initLines[i], correctLine, language)) {
