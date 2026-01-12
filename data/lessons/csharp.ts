@@ -115,7 +115,7 @@ export const csharpData = {
         "// yというはこに 5 を入れる",
         "int y = 5;",
         "// x と y をたした答えを出す",
-        "Console.WriteLine(x + y);"
+        ["Console.WriteLine(x + y);", "Console.WriteLine(y + x);"]
       ],
       "lineHints": [
         null,

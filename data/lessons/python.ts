@@ -130,7 +130,7 @@ export const pythonData = {
         "# yというはこに 5 を入れる",
         "y = 5",
         "# x と y をたした答えを出す",
-        "print(x + y)"
+        ["print(x + y)", "print(y + x)"]
       ],
       "lineHints": [
         null,

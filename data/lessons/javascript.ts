@@ -127,7 +127,7 @@ export const javascriptData = {
         "// yに5を入れる",
         "const y = 5;",
         "// x + y を表示する",
-        "console.log(x + y);"
+        ["console.log(x + y);", "console.log(y + x);"]
       ],
       "lineHints": [
         "null",

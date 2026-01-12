@@ -88,7 +88,7 @@ export const typescriptData = {
         "// yにも同じラベルを貼る",
         "const y: number = 5;",
         "// たし算した答えを出す",
-        "console.log(x + y);"
+        ["console.log(x + y);", "console.log(y + x);"]
       ],
       "lineHints": [
         null,

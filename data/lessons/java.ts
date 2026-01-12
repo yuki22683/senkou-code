@@ -141,7 +141,7 @@ export const javaData = {
         "        // y に 5 を代入する",
         "        int y = 5;",
         "        // + でたし算した答えを出す",
-        "        System.out.println(x + y);",
+        ["        System.out.println(x + y);", "        System.out.println(y + x);"],
         "    }",
         "}"
       ],
