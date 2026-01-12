@@ -380,7 +380,9 @@ export function MobileCodeEditor({
         // 全行が正解と一致しているか確認
         const allLinesCorrect = newFullLines.every((line, i) => {
           const correctLine = correctLines[i];
-          return correctLine && matchesCorrectLine(line, correctLine, language);
+          // correctLineがundefinedの場合はその行をスキップ（正解とみなす）
+          if (correctLine === undefined) return true;
+          return matchesCorrectLine(line, correctLine, language);
         });
 
         if (allLinesCorrect) {
@@ -428,26 +430,66 @@ export function MobileCodeEditor({
       const textAfter = currentLine.slice(cursor.col);
       let deleteCount = 1;
 
-      // 1. Check for complete string literal at the end (e.g. 'Python' or "Hello")
+      // 1. まず末尾の文字列リテラルをチェック (e.g. 'Python' or "Hello")
       const stringMatch = textBefore.match(/(['"])[^'"]+\1$/);
-
       if (stringMatch) {
         deleteCount = stringMatch[0].length;
       } else {
-        // 2. Check for trailing whitespace
+        // 2. 末尾の空白をチェック
         const trailingSpace = textBefore.match(/\s+$/);
         if (trailingSpace) {
           deleteCount = trailingSpace[0].length;
         } else {
-          // 3. Check for trailing word (alphanumeric + underscore)
-          const trailingWord = textBefore.match(/[a-zA-Z0-9_]+$/);
-          if (trailingWord) {
-            deleteCount = trailingWord[0].length;
+          // 3. 末尾の英数字列から既知の単語（キーワード/組み込み関数）を探す
+          const trailingIdentifier = textBefore.match(/[a-zA-Z_][a-zA-Z0-9_]*$/);
+          if (trailingIdentifier) {
+            const identifier = trailingIdentifier[0];
+            const keywords = config.keywords;
+            const builtins = config.builtins;
+
+            // 末尾から既知の単語を探す（最長マッチ）
+            let foundLength = 0;
+            for (const word of [...keywords, ...builtins]) {
+              if (identifier.endsWith(word) && word.length > foundLength) {
+                foundLength = word.length;
+              }
+            }
+
+            if (foundLength > 0) {
+              // 既知の単語が見つかった
+              deleteCount = foundLength;
+            } else {
+              // 既知の単語がない場合は、トークナイザーで境界を探す
+              const tokens = tokenize(currentLine, language);
+              const boundaries: number[] = [0];
+              let pos = 0;
+              for (const token of tokens) {
+                pos += token.length;
+                boundaries.push(pos);
+              }
+
+              let prevBoundary = 0;
+              for (const boundary of boundaries) {
+                if (boundary < cursor.col) {
+                  prevBoundary = boundary;
+                } else {
+                  break;
+                }
+              }
+
+              const targetCol = Math.max(prevBoundary, minCols[cursor.line]);
+              deleteCount = cursor.col - targetCol;
+            }
           } else {
-            // 4. Fallback to 1 character
+            // 4. その他の文字は1文字ずつ削除
             deleteCount = 1;
           }
         }
+      }
+
+      // 削除するものがない場合は1文字削除（フォールバック）
+      if (deleteCount <= 0) {
+        deleteCount = 1;
       }
 
       // インデントを越えて削除しないように調整
@@ -475,7 +517,9 @@ export function MobileCodeEditor({
           // 全行が正解と一致しているか確認
           const allLinesCorrect = newFullLines.every((line, i) => {
             const correctLine = correctLines[i];
-            return correctLine && matchesCorrectLine(line, correctLine, language);
+            // correctLineがundefinedの場合はその行をスキップ（正解とみなす）
+            if (correctLine === undefined) return true;
+            return matchesCorrectLine(line, correctLine, language);
           });
 
           if (allLinesCorrect) {
