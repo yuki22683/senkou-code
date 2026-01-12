@@ -145,35 +145,37 @@ export default function TutorialPage() {
   }
 
   return (
-    <div className="w-full py-6 sm:py-8">
+    <div className="w-full py-6 sm:py-8 lg:py-12 lg:flex lg:justify-center">
+      <div className="w-full lg:w-[800px] lg:max-w-[90vw]">
         {/* ヘッダー */}
-        <div className="mb-4 flex items-center gap-2">
+        <div className="mb-4 lg:mb-8 flex items-center gap-2 lg:gap-4">
           <Button
             variant="outline"
             size="icon"
+            className="lg:h-12 lg:w-12"
             onClick={() =>
               router.push(`/lessons/${language}/${lessonId}/exercises`)
             }
           >
-            <ArrowLeft className="w-5 h-5" />
+            <ArrowLeft className="w-5 h-5 lg:w-6 lg:h-6" />
           </Button>
 
-          <div className="bg-white rounded-lg shadow-sm p-2 border flex-1">
-            <h1 className="text-lg font-bold">{exercise?.title || "読み込み中..."}</h1>
+          <div className="bg-white rounded-lg shadow-sm p-2 lg:p-4 border flex-1">
+            <h1 className="text-lg lg:text-2xl font-bold">{exercise?.title || "読み込み中..."}</h1>
           </div>
         </div>
 
         {/* スライドコンテンツ */}
         <div
-          className="bg-white rounded-lg shadow-lg p-4 mb-4 border"
+          className="bg-white rounded-lg shadow-lg p-4 lg:p-8 mb-4 lg:mb-8 border"
         >
-          <h2 className="text-lg font-bold mb-3 text-gray-800">
+          <h2 className="text-lg lg:text-2xl font-bold mb-3 lg:mb-6 text-gray-800">
             {currentSlideData.title || "タイトルなし"}
           </h2>
 
           {/* イラスト画像 */}
           {currentSlideData.image && (
-            <div className="flex justify-center mb-4 relative h-40">
+            <div className="flex justify-center mb-4 lg:mb-8 relative h-40 lg:h-80">
               <Image
                 src={currentSlideData.image}
                 alt={currentSlideData.title || "イラスト"}
@@ -183,7 +185,7 @@ export default function TutorialPage() {
             </div>
           )}
 
-          <div className="prose prose-sm max-w-none">
+          <div className="prose prose-sm lg:prose-lg max-w-none">
             {typeof currentSlideData.content === 'string' ? (
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
@@ -206,7 +208,7 @@ export default function TutorialPage() {
 
                     // ブロックコード
                     return (
-                      <div className="rounded-lg overflow-hidden my-4">
+                      <div className="rounded-lg overflow-hidden my-4 lg:my-8">
                         <SyntaxHighlightedCode
                           code={codeString}
                           language={lang}
@@ -217,24 +219,24 @@ export default function TutorialPage() {
                   // 見出しのスタイリング（h1は非表示にしてタイトルの重複を避ける）
                   h1: () => null,
                   h2: ({ children }) => (
-                    <h2 className="text-xl font-bold mt-5 mb-3">{children}</h2>
+                    <h2 className="text-xl lg:text-2xl font-bold mt-5 lg:mt-10 mb-3 lg:mb-6">{children}</h2>
                   ),
                   h3: ({ children }) => (
-                    <h3 className="text-lg font-bold mt-4 mb-2">{children}</h3>
+                    <h3 className="text-lg lg:text-xl font-bold mt-4 lg:mt-8 mb-2 lg:mb-4">{children}</h3>
                   ),
                   // リストのスタイリング（マーカー非表示）
                   ul: ({ children }) => (
-                    <div className="my-4 space-y-2">{children}</div>
+                    <div className="my-4 lg:my-8 space-y-2 lg:space-y-4">{children}</div>
                   ),
                   ol: ({ children }) => (
-                    <div className="my-4 space-y-2">{children}</div>
+                    <div className="my-4 lg:my-8 space-y-2 lg:space-y-4">{children}</div>
                   ),
                   li: ({ children }) => (
-                    <div className="text-gray-700">{children}</div>
+                    <div className="text-gray-700 lg:text-lg">{children}</div>
                   ),
                   // 段落のスタイリング
                   p: ({ children }) => (
-                    <div className="my-0.5 lg:my-3 leading-relaxed text-gray-700">
+                    <div className="my-0.5 lg:my-4 leading-relaxed lg:leading-loose text-gray-700 lg:text-lg">
                       {children}
                     </div>
                   ),
@@ -245,13 +247,13 @@ export default function TutorialPage() {
                 {currentSlideData.content}
               </ReactMarkdown>
             ) : (
-              <div className="text-gray-700 whitespace-pre-wrap leading-relaxed">
+              <div className="text-gray-700 lg:text-lg whitespace-pre-wrap leading-relaxed lg:leading-loose">
                 {JSON.stringify(currentSlideData.content, null, 2)}
               </div>
             )}
 
             {currentSlideData.code && (
-              <div className="mt-6 rounded-lg overflow-hidden">
+              <div className="mt-6 lg:mt-12 rounded-lg overflow-hidden">
                 <SyntaxHighlightedCode
                   code={currentSlideData.code}
                   language={language}
@@ -267,19 +269,20 @@ export default function TutorialPage() {
             variant="outline"
             onClick={handlePrevSlide}
             disabled={currentSlide === 0}
+            className="lg:h-12 lg:px-6 lg:text-lg"
           >
-            <ChevronLeft className="w-4 h-4 mr-2" />
+            <ChevronLeft className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
             前へ
           </Button>
 
-          <div className="flex gap-2">
+          <div className="flex gap-2 lg:gap-3">
             {slides.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-all ${
+                className={`w-2 h-2 lg:w-3 lg:h-3 rounded-full transition-all ${
                   index === currentSlide
-                    ? "bg-blue-600 w-8"
+                    ? "bg-blue-600 w-8 lg:w-12"
                     : "bg-gray-300 hover:bg-gray-400"
                 }`}
               />
@@ -289,25 +292,26 @@ export default function TutorialPage() {
           {isLastSlide ? (
             <Button
               onClick={handleStartExercise}
-              className="bg-green-600 hover:bg-green-700"
+              className="bg-green-600 hover:bg-green-700 lg:h-12 lg:px-6 lg:text-lg"
             >
-              <Play className="w-4 h-4 mr-2" />
+              <Play className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
               演習を始める
             </Button>
           ) : (
-            <Button onClick={handleNextSlide}>
+            <Button onClick={handleNextSlide} className="lg:h-12 lg:px-6 lg:text-lg">
               次へ
-              <ChevronRight className="w-4 h-4 ml-2" />
+              <ChevronRight className="w-4 h-4 lg:w-5 lg:h-5 ml-2" />
             </Button>
           )}
         </div>
 
         {/* スキップボタン */}
-        <div className="mt-6 text-center">
-          <Button variant="ghost" onClick={handleStartExercise} className="text-gray-500">
+        <div className="mt-6 lg:mt-10 text-center">
+          <Button variant="ghost" onClick={handleStartExercise} className="text-gray-500 lg:text-lg">
             解説をスキップして演習へ
           </Button>
         </div>
+      </div>
     </div>
   );
 }
