@@ -262,7 +262,7 @@ export const swift2Data = {
       "holeyCode": "// inで引数と処理を分ける\nlet double = { (n: Int) ___\n    // n * 2を返す\n    return n ___ 2\n}\n// doubleを呼び出し\nprint(___(5))",
       "correctLines": [
         "let double = { (n: Int) in",
-        "    return n * 2",
+        ["    return n * 2", "    return 2 * n"],
         "}",
         "print(double(5))"
       ],

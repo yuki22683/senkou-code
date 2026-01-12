@@ -8,7 +8,7 @@ import { SYNTAX_COLORS, tokenize, getTokenStyle, getLanguageConfig } from "@/lib
 
 interface MobileCodeEditorProps {
   initialCode: string;
-  correctCode?: string;
+  correctLines?: (string | string[])[];  // Each line can have multiple correct answers
   language: string;
   onChange?: (value: string) => void;
   onRun?: (code: string) => void;
@@ -116,9 +116,27 @@ const getInitialDisplayLine = (lines: string[], index: number, commentPrefix: st
   return line;
 };
 
+// Helper function to check if a line matches any correct answer
+const matchesCorrectLine = (
+  userLine: string,
+  correctLine: string | string[],
+  language: string
+): boolean => {
+  const normalizedUser = normalizeCode(userLine, language);
+  if (Array.isArray(correctLine)) {
+    return correctLine.some(answer => normalizeCode(answer, language) === normalizedUser);
+  }
+  return normalizeCode(correctLine, language) === normalizedUser;
+};
+
+// Helper function to get the first correct answer for display/suggestions
+const getFirstCorrectAnswer = (correctLine: string | string[]): string => {
+  return Array.isArray(correctLine) ? correctLine[0] : correctLine;
+};
+
 export function MobileCodeEditor({
   initialCode,
-  correctCode = "",
+  correctLines = [],
   language,
   onChange,
   onRun,
@@ -158,12 +176,12 @@ export function MobileCodeEditor({
     }
 
     // 編集対象がない場合は、正解と異なる最初の行を探す（フォールバック）
-    if (!correctCode) return { line: 0, col: 0 };
+    if (!correctLines || correctLines.length === 0) return { line: 0, col: 0 };
 
-    const correctLines = correctCode.split("\n");
     const initLines = originalLines.map((_, index) => getInitialDisplayLine(originalLines, index, cfg.commentPrefix));
     for (let i = 0; i < initLines.length; i++) {
-      if (normalizeCode(initLines[i], language) !== normalizeCode(correctLines[i], language)) {
+      const correctLine = correctLines[i];
+      if (correctLine && !matchesCorrectLine(initLines[i], correctLine, language)) {
         const col = originalLines[i].match(/^(\s*)/)?.[0].length || 0;
         return { line: i, col };
       }
@@ -223,25 +241,24 @@ export function MobileCodeEditor({
   }, []);
 
   useEffect(() => {
-    if (!correctCode) return;
+    if (!correctLines || correctLines.length === 0) return;
 
-    const correctLines = correctCode.split("\n");
     const originalLines = initialCode.split("\n");
     const holeyLine = originalLines[cursor.line] || "";
 
-    // holeyCodeとcorrectCodeの行数が異なる場合があるため、
-    // holeyLineのパターンにマッチするcorrectCode行を探す
+    // holeyCodeとcorrectLinesの行数が異なる場合があるため、
+    // holeyLineのパターンにマッチする行を探す
     let targetLine = "";
 
     if (holeyLine.includes("___")) {
       // ___で分割して固定部分を取得
       const parts = holeyLine.split("___").map(p => p.trim()).filter(p => p.length > 0);
 
-      // 全ての固定部分を正しい順序で含むcorrectCode行を探す
+      // 全ての固定部分を正しい順序で含む行を探す
       // 同じパターンの行が複数ある場合は、cursor.lineに近い行を優先
       const candidates: { line: string; index: number }[] = [];
       for (let i = 0; i < correctLines.length; i++) {
-        const correctLine = correctLines[i];
+        const correctLine = getFirstCorrectAnswer(correctLines[i]);
         // 各パーツが順番通りに現れるかチェック
         let pos = 0;
         let allPartsInOrder = true;
@@ -269,7 +286,8 @@ export function MobileCodeEditor({
 
     // マッチしなかった場合はインデックスで取得（フォールバック）
     if (!targetLine) {
-      targetLine = correctLines[cursor.line] || "";
+      const correctLine = correctLines[cursor.line];
+      targetLine = correctLine ? getFirstCorrectAnswer(correctLine) : "";
     }
 
     if (targetLine.trim()) {
@@ -327,7 +345,7 @@ export function MobileCodeEditor({
     } else {
       setSuggestions([]);
     }
-  }, [cursor.line, correctCode, initialCode, language]);
+  }, [cursor.line, correctLines, initialCode, language]);
 
   // 行が変わったときにクリック状態をリセット
   useEffect(() => {
@@ -348,22 +366,24 @@ export function MobileCodeEditor({
     let nextLine = cursor.line;
     let nextCol = cursor.col + text.length;
 
-    if (correctCode) {
-      const correctLines = correctCode.split("\n");
-      const targetLine = correctLines[cursor.line] || "";
+    if (correctLines && correctLines.length > 0) {
+      const targetLine = correctLines[cursor.line];
 
-      // 正規化した内容で比較
-      if (normalizeCode(newLineContent, language) === normalizeCode(targetLine, language)) {
+      // 正規化した内容で比較（複数正解対応）
+      if (targetLine && matchesCorrectLine(newLineContent, targetLine, language)) {
         // Line completed!
 
         // Check if full code is correct (including this new line)
         const newFullLines = lines.map((l, i) => i === cursor.line ? newLineContent : l);
         const newFullCode = newFullLines.join("\n");
 
-        const normalizedFullLines = newFullLines.map(l => normalizeCode(l, language)).join("\n");
-        const normalizedCorrectFullLines = correctLines.map(l => normalizeCode(l, language)).join("\n");
+        // 全行が正解と一致しているか確認
+        const allLinesCorrect = newFullLines.every((line, i) => {
+          const correctLine = correctLines[i];
+          return correctLine && matchesCorrectLine(line, correctLine, language);
+        });
 
-        if (normalizedFullLines.trim() === normalizedCorrectFullLines.trim()) {
+        if (allLinesCorrect) {
           onRun?.(newFullCode);
         } else {
           // 次の未完成の編集対象行を探す
@@ -379,7 +399,7 @@ export function MobileCodeEditor({
              // 編集対象行で、まだ正解と一致していない場合はここに移動
              const currentVal = lines[next];
              const correctVal = correctLines[next];
-             if (normalizeCode(currentVal, language) !== normalizeCode(correctVal, language)) {
+             if (correctVal && !matchesCorrectLine(currentVal, correctVal, language)) {
                  break;
              }
              next++;
@@ -440,23 +460,25 @@ export function MobileCodeEditor({
       let nextLine = cursor.line;
       let nextCol = newCol;
 
-      // 正解判定ロジック（handleInsertと同様）
-      if (correctCode) {
-        const correctLines = correctCode.split("\n");
-        const targetLine = correctLines[cursor.line] || "";
+      // 正解判定ロジック（handleInsertと同様、複数正解対応）
+      if (correctLines && correctLines.length > 0) {
+        const targetLine = correctLines[cursor.line];
 
-        // 正規化した内容で比較
-        if (normalizeCode(newLineContent, language) === normalizeCode(targetLine, language)) {
+        // 正規化した内容で比較（複数正解対応）
+        if (targetLine && matchesCorrectLine(newLineContent, targetLine, language)) {
           // Line completed!
 
           // Check if full code is correct (including this new line)
           const newFullLines = lines.map((l, i) => i === cursor.line ? newLineContent : l);
           const newFullCode = newFullLines.join("\n");
 
-          const normalizedFullLines = newFullLines.map(l => normalizeCode(l, language)).join("\n");
-          const normalizedCorrectFullLines = correctLines.map(l => normalizeCode(l, language)).join("\n");
+          // 全行が正解と一致しているか確認
+          const allLinesCorrect = newFullLines.every((line, i) => {
+            const correctLine = correctLines[i];
+            return correctLine && matchesCorrectLine(line, correctLine, language);
+          });
 
-          if (normalizedFullLines.trim() === normalizedCorrectFullLines.trim()) {
+          if (allLinesCorrect) {
             onRun?.(newFullCode);
           } else {
             // 次の未完成の編集対象行を探す
@@ -472,7 +494,7 @@ export function MobileCodeEditor({
                // 編集対象行で、まだ正解と一致していない場合はここに移動
                const currentVal = lines[next];
                const correctVal = correctLines[next];
-               if (normalizeCode(currentVal, language) !== normalizeCode(correctVal, language)) {
+               if (correctVal && !matchesCorrectLine(currentVal, correctVal, language)) {
                    break;
                }
                next++;
@@ -640,7 +662,8 @@ export function MobileCodeEditor({
         onClick={() => {}}
       >
         {lines.map((line, lineIndex) => {
-          const targetLine = correctCode ? correctCode.split("\n")[lineIndex] || "" : "";
+          const correctLine = correctLines && correctLines[lineIndex];
+          const targetLine = correctLine ? getFirstCorrectAnswer(correctLine) : "";
           const trimmedTarget = targetLine.trim();
           const isComment = trimmedTarget.startsWith("//") ||
                            trimmedTarget.startsWith("#") ||
@@ -654,8 +677,8 @@ export function MobileCodeEditor({
 
           // チェックマークを表示する条件：
           // 1. 編集対象行である
-          // 2. 現在の入力内容が（正規化して）正解と一致している
-          const showCheckmark = isEditable && targetLine && normalizeCode(line, language) === normalizeCode(targetLine, language);
+          // 2. 現在の入力内容が（正規化して）正解のいずれかと一致している
+          const showCheckmark = isEditable && correctLine && matchesCorrectLine(line, correctLine, language);
 
           return (
             <div
@@ -773,12 +796,13 @@ export function MobileCodeEditor({
 
             // 行ごとにフォントサイズを計算（コンテナ幅を超えないように）
             const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+            const isPC = typeof window !== 'undefined' && window.innerWidth >= 1024;
             const calculateRowFontSize = (tokens: string[]): number => {
               if (suggestionsContainerWidth <= 0) return baseFontSize;
 
               const gapBetweenButtons = isMobile ? 4 : 8; // gap-1 sm:gap-2
               const containerPadding = 8; // p-1 = 4px * 2
-              const margin = isMobile ? 16 : 48; // スマホではマージンを小さく
+              const margin = isMobile ? 16 : 48; // スマホ/PCではマージンを小さく
               const availableWidth = suggestionsContainerWidth - containerPadding - margin;
               const totalGaps = (tokens.length - 1) * gapBetweenButtons;
               const availableForButtons = availableWidth - totalGaps;
@@ -814,7 +838,7 @@ export function MobileCodeEditor({
             const rowHeight = Math.max(20, calculatedRowHeight); // 最小20px
 
             return (
-              <div className="flex flex-col gap-1 sm:gap-2 w-full items-center">
+              <div className={`flex flex-col w-full items-center ${isMobile ? 'gap-1' : 'gap-1 sm:gap-2'}`}>
                 {rows.map((row, rowIdx) => {
                   const widthBasedFontSize = calculateRowFontSize(row);
                   // ボタンの高さに基づくフォントサイズ（高さの60%程度）
@@ -822,12 +846,14 @@ export function MobileCodeEditor({
                   // 幅と高さの両方に収まるフォントサイズを選択
                   const fontSize = Math.min(widthBasedFontSize, heightBasedFontSize);
                   const isScaled = fontSize < baseFontSize;
+                  // PC表示ではスマホと同じくテキストに合わせた幅を使用
+                  const useMaxContent = isPC || !isScaled;
 
                   return (
                     <div
                       key={rowIdx}
-                      className="grid grid-flow-col gap-1 sm:gap-2 w-full"
-                      style={{ gridAutoColumns: isScaled ? "minmax(0, 1fr)" : "minmax(max-content, 1fr)" }}
+                      className={`grid grid-flow-col w-full ${isMobile ? 'gap-1' : 'gap-1 sm:gap-2'}`}
+                      style={{ gridAutoColumns: useMaxContent ? "minmax(max-content, 1fr)" : "minmax(0, 1fr)" }}
                     >
                       {row.map((token) => {
                         const idx = suggestions.indexOf(token);

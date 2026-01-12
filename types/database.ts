@@ -76,7 +76,7 @@ export interface Exercise {
   correct_code: string;
   holey_code: string;
   starter_code: string | null;
-  correct_lines: string[];
+  correct_lines: (string | string[])[];  // Each line can have multiple correct answers
   candidates: Candidates;
   test_cases: TestCase[];
   line_hints: (string | null)[];

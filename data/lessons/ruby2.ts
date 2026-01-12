@@ -70,7 +70,7 @@ export const ruby2Data = {
       "holeyCode": "# numsに配列を代入（1, 2, 3）\nnums = [___, ___, ___]\n# mapで各要素を変換\ndoubled = nums.___ { |n| n * 2 }\n# putsで出力\nputs ___",
       "correctLines": [
         "nums = [1, 2, 3]",
-        "doubled = nums.map { |n| n * 2 }",
+        ["doubled = nums.map { |n| n * 2 }", "doubled = nums.map { |n| 2 * n }"],
         "puts doubled"
       ],
       "lineHints": [
@@ -437,7 +437,7 @@ export const ruby2Data = {
       "correctCode": "# ->でラムダを定義\ndouble = ->(n) { n * 2 }\nputs double.call(5)",
       "holeyCode": "# ->でラムダを定義\ndouble = ___(n) { n * 2 }\n# callで実行\nputs double.___(5)",
       "correctLines": [
-        "double = ->(n) { n * 2 }",
+        ["double = ->(n) { n * 2 }", "double = ->(n) { 2 * n }"],
         "puts double.call(5)"
       ],
       "lineHints": [

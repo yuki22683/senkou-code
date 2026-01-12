@@ -115,7 +115,7 @@ export const elixirData = {
       "correctLines": [
         "a = 5",
         "b = 3",
-        "IO.puts a + b"
+        ["IO.puts a + b", "IO.puts b + a"]
       ],
       "lineHints": [
         null,

@@ -517,7 +517,7 @@ export const pythonData4 = {
         "    # 等価比較を定義するメソッドを定義",
         "    def __eq__(self, other):",
         "        # 両座標が一致するかを返す",
-        "        return self.x == other.x and self.y == other.y",
+        ["        return self.x == other.x and self.y == other.y", "        return other.x == self.x and other.y == self.y", "        return self.y == other.y and self.x == other.x"],
         "",
         "# 座標(3, 4)でインスタンスを作成",
         "v1 = Vector(3, 4)",

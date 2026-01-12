@@ -74,7 +74,7 @@ export const javascriptData2 = {
         "// [1, 2, 3] の各要素を3倍にする",
         "const nums = [1, 2, 3];",
         "// map メソッドで変換する",
-        "const tripled = nums.map(n => n * 3);",
+        ["const tripled = nums.map(n => n * 3);", "const tripled = nums.map(n => 3 * n);"],
         "console.log(tripled);"
       ],
       "lineHints": [

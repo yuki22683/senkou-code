@@ -91,7 +91,7 @@ export const go3Data = {
         "",
         "func IndexOf[T comparable](slice []T, v T) int {",
         "    for i, x := range slice {",
-        "        if x == v {",
+        ["        if x == v {", "        if v == x {"],
         "            return i",
         "        }",
         "    }",

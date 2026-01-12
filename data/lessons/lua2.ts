@@ -188,7 +188,7 @@ export const lua2Data = {
       "holeyCode": "-- functionで関数を定義\nlocal ___ double(n)\n    -- n * 2を返す\n    return n ___ 2\nend\n-- double(5)を呼び出す\nprint(double(___))",
       "correctLines": [
         "local function double(n)",
-        "    return n * 2",
+        ["    return n * 2", "    return 2 * n"],
         "end",
         "print(double(5))"
       ],
@@ -361,7 +361,7 @@ export const lua2Data = {
       "correctLines": [
         "local function makeAdder(n)",
         "    return function(x)",
-        "        return x + n",
+        ["        return x + n", "        return n + x"],
         "    end",
         "end",
         "local add5 = makeAdder(5)",

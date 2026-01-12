@@ -287,7 +287,7 @@ export const pythonData3 = {
         "    # 指定された回数ループ",
         "    for i in range(n):",
         "        # 値を1つずつ返す",
-        "        yield i * 2",
+        ["        yield i * 2", "        yield 2 * i"],
         "",
         "# ジェネレータから値を取り出して表示",
         "for num in even_numbers(4):",

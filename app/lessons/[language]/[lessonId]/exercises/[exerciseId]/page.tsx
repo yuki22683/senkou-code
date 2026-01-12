@@ -507,6 +507,12 @@ export default function ExercisePage() {
       return;
     }
 
+    // レッスン完了または言語完了の場合は直接レッスン一覧へ
+    if (celebrationType === "lesson" || celebrationType === "language") {
+      router.push(`/lessons/${language}`);
+      return;
+    }
+
     try {
       const { data } = await supabase
         .from("exercises")
@@ -633,7 +639,7 @@ export default function ExercisePage() {
                         ? exercise.starter_code || ""
                         : exercise.holey_code || exercise.starter_code || ""
                   }
-                  correctCode={exercise.correct_code || ""}
+                  correctLines={exercise.correct_lines || exercise.correct_code?.split("\n") || []}
                   language={language}
                   onChange={(value) => setCode(value || "")}
                   onRun={handleRunCode}
@@ -667,6 +673,13 @@ export default function ExercisePage() {
                     onRetry={() => handleRunCode()}
                     parsedError={parsedError}
                     correctParsedError={correctParsedError}
+                    showNextButton={showNextButton}
+                    nextButtonLabel={
+                      celebrationType === "lesson" || celebrationType === "language"
+                        ? "レッスン一覧へ"
+                        : "次の演習へ"
+                    }
+                    onNextClick={handleNextExercise}
                   />
                 </div>
 
@@ -699,17 +712,6 @@ export default function ExercisePage() {
                       <Lightbulb className="w-5 h-5 lg:mr-2" />
                       <span className="hidden lg:inline">ヒント</span>
                     </Button>
-                    {showNextButton && (
-                      <Button
-                        onClick={handleNextExercise}
-                        size="sm"
-                        className="text-base flex-1"
-                      >
-                        {celebrationType === "lesson" || celebrationType === "language"
-                          ? "レッスン一覧へ"
-                          : "次の演習へ"}
-                      </Button>
-                    )}
                     <Button
                       onClick={() => handleRunCode()}
                       disabled={isRunning}
@@ -789,9 +791,10 @@ export default function ExercisePage() {
               正解です！
             </DialogTitle>
             <DialogDescription>
+              おめでとうございます！<br />
               {celebrationType === "lesson" || celebrationType === "language"
-                ? "おめでとうございます！\nこのレッスンの演習をすべてクリアしました。"
-                : "おめでとうございます！\nこの演習をクリアしました。"}
+                ? "このレッスンの演習をすべてクリアしました。"
+                : "この演習をクリアしました。"}
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
@@ -848,7 +851,8 @@ export default function ExercisePage() {
           <DialogHeader>
             <DialogTitle>演習を終了しますか？</DialogTitle>
             <DialogDescription>
-              入力された内容は破棄されます。\nこの演習を終了しますか？
+              入力された内容は破棄されます。<br />
+              この演習を終了しますか？
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="gap-2">

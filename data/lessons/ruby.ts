@@ -115,7 +115,7 @@ export const rubyData = {
         "# yというはこに 5 を入れる",
         "y = 5",
         "# x と y をたした答えを出す",
-        "puts x + y"
+        ["puts x + y", "puts y + x"]
       ],
       "lineHints": [
         null,

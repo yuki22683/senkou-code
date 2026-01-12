@@ -544,7 +544,7 @@ export const go2Data = {
         "func main() {",
         "    n := 5",
         "    double := func() int {",
-        "        return n * 2",
+        ["        return n * 2", "        return 2 * n"],
         "    }",
         "    fmt.Println(double())",
         "}"

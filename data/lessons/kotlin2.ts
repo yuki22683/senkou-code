@@ -185,7 +185,7 @@ export const kotlin2Data = {
       "correctCode": "val double = { n: Int -> n * 2 }\nprintln(double(5))",
       "holeyCode": "// -> で引数と処理を区切る\nval double = { n: Int ___ n * 2 }\n// double(5) を出力する\nprintln(___(5))",
       "correctLines": [
-        "val double = { n: Int -> n * 2 }",
+        ["val double = { n: Int -> n * 2 }", "val double = { n: Int -> 2 * n }"],
         "println(double(5))"
       ],
       "lineHints": [
@@ -351,7 +351,7 @@ export const kotlin2Data = {
       "correctCode": "fun Int.double() = this * 2\nprintln(5.double())",
       "holeyCode": "// this でレシーバを参照する\nfun Int.double() = ___ * 2\n// 5.double() を出力する\nprintln(5.___())",
       "correctLines": [
-        "fun Int.double() = this * 2",
+        ["fun Int.double() = this * 2", "fun Int.double() = 2 * this"],
         "println(5.double())"
       ],
       "lineHints": [

@@ -274,7 +274,7 @@ export const elixir2Data = {
       "holeyCode": "# defmoduleでモジュールを定義\n___ Calc do\n  # defで関数を定義\n  ___ triple(x), do: x * 3\nend\n# Calc.triple(4)を入力\nIO.puts ___",
       "correctLines": [
         "defmodule Calc do",
-        "  def triple(x), do: x * 3",
+        ["  def triple(x), do: x * 3", "  def triple(x), do: 3 * x"],
         "end",
         "IO.puts Calc.triple(4)"
       ],

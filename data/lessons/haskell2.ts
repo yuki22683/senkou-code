@@ -27,7 +27,7 @@ export const haskell2Data = {
       "correctCode": "-- *で掛け算\ntriple x = x * 3\nmain = print (triple 4)",
       "holeyCode": "-- *で掛け算\ntriple x = x ___ 3\n-- tripleを入力\nmain = print (___ 4)",
       "correctLines": [
-        "triple x = x * 3",
+        ["triple x = x * 3", "triple x = 3 * x"],
         "main = print (triple 4)"
       ],
       "lineHints": [
