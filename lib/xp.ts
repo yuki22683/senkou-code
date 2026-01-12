@@ -11,12 +11,15 @@ export const XP_VALUES: Record<Difficulty, number> = {
   hard: 30,
 };
 
-// レベルごとの必要累計XP（累進的に増加）
-// レベルN到達に必要な累計XP = 50 * (N-1) * N
-// レベル1: 0, レベル2: 100, レベル3: 300, レベル4: 600, ...
+// レベルごとの必要累計XP（線形増加）
+// レベルN到達に必要な累計XP = 90 * (N-1)
+// レベル1: 0, レベル10: 810, レベル100: 8910
+// 1430 XP（初級全クリア）→ レベル16（中級者）
+// 5160 XP（中級全クリア）→ レベル58（上級者）
+// 9120 XP付近 → レベル100（マスター）
 export const LEVEL_THRESHOLDS: number[] = [];
 for (let level = 1; level <= 100; level++) {
-  LEVEL_THRESHOLDS.push(50 * (level - 1) * level);
+  LEVEL_THRESHOLDS.push(90 * (level - 1));
 }
 
 /**
@@ -63,15 +66,15 @@ export function getXpForDifficulty(difficulty: Difficulty): number {
 
 /**
  * レベルに応じた称号を取得
+ * - 初級演習全クリア（1430 XP）→ レベル16 → 中級者
+ * - 中級演習全クリア（5160 XP）→ レベル58 → 上級者
+ * - 上級演習全クリア（9120 XP）→ レベル100 → マスター
  */
 export function getLevelTitle(level: number): string {
-  if (level >= 50) return "マスター";
-  if (level >= 40) return "エキスパート";
-  if (level >= 30) return "プロフェッショナル";
-  if (level >= 20) return "アドバンス";
-  if (level >= 10) return "インターミディエイト";
-  if (level >= 5) return "ビギナー";
-  return "ルーキー";
+  if (level >= 100) return "マスター";
+  if (level >= 58) return "上級者";
+  if (level >= 16) return "中級者";
+  return "初心者";
 }
 
 /**
