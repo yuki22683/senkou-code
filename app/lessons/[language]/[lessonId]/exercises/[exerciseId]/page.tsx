@@ -395,7 +395,7 @@ export default function ExercisePage() {
           .eq("lesson_id", exercise?.lesson_id);
 
         if (lessonExercises && lessonExercises.length > 0) {
-          // ユーザーの進捗を取得（更新前の状態）
+          // ユーザーの進捗を取得（upsert後なので今完了した演習も含まれる）
           const exerciseIds = lessonExercises.map((e) => e.id);
           const { data: progress } = await supabase
             .from("user_progress")
@@ -404,9 +404,13 @@ export default function ExercisePage() {
             .in("exercise_id", exerciseIds)
             .eq("status", "completed");
 
-          // 今完了した演習を含めてカウント
+          // 完了済み演習のセットを作成
           const completedIds = new Set(progress?.map((p) => p.exercise_id) || []);
-          const previousCompletedCount = completedIds.size;
+          // 今完了した演習を除いた数（upsert前の状態を再現）
+          const previousCompletedCount = completedIds.has(exerciseId) && isFirstCompletion
+            ? completedIds.size - 1
+            : completedIds.size;
+          // 今完了した演習を含める
           completedIds.add(exerciseId);
 
           // レッスン完了かチェック
