@@ -37,11 +37,12 @@ export default function RankingPage() {
       setCurrentUserId(user.id);
     }
 
-    // ランキングを取得（上位100名）
+    // ランキングを取得（上位100名、管理者アカウントは除外）
     const { data, error } = await supabase
       .from("users")
       .select("id, display_name, avatar_url, total_xp, completed_exercises_count, completed_lessons_count")
       .gt("total_xp", 0)
+      .neq("email", "yuki22683@gmail.com")
       .order("total_xp", { ascending: false })
       .limit(100);
 
