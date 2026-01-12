@@ -314,10 +314,10 @@ export const bash2Data = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# $でコマンドの出力を取得\nfiles=$(ls)\necho \"Files: $files\"",
+      "correctCode": "# $でコマンドの出力を取得\nfiles=$(echo \"test\")\necho \"Files: $files\"",
       "holeyCode": "# コマンドの出力を変数に格納する構文\nfiles=___(___)\n# 変数を表示\necho \"Files: $___\"",
       "correctLines": [
-        "files=$(ls)",
+        "files=$(echo \"test\")",
         "echo \"Files: $files\""
       ],
       "lineHints": [
@@ -330,7 +330,7 @@ export const bash2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Files: \n"
+          "expected_output": "Files: test\n"
         }
       ]
     },

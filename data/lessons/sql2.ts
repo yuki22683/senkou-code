@@ -222,7 +222,7 @@ export const sql2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "20\n"
+          "expected_output": "20.0\n"
         }
       ]
     },

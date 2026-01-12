@@ -34,11 +34,11 @@ export const kotlinData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// Hello, World!と出力する関数\nprintln(\\\"Hello, World!\\\")",
-      "holeyCode": "// println で出力する\n___(\\\"Hello, World!\\\")",
+      "correctCode": "// Hello, World!と出力する関数\nprintln(\"Hello, World!\")",
+      "holeyCode": "// println で出力する\n___(\"Hello, World!\")",
       "correctLines": [
         "// Hello, World!と出力する関数",
-        "println(\\\"Hello, World!\\\")"
+        "println(\"Hello, World!\")"
       ],
       "lineHints": [
         null,

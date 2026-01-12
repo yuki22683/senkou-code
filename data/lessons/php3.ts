@@ -90,7 +90,7 @@ export const php3Data = {
         "2": ["??", "?:", "||", "&&"]
       },
       "testCases": [
-        { "input": "$result", "expected_output": "'Guest'" }
+        { "input": "$result", "expected_output": "Guest" }
       ]
     },
     {
@@ -149,7 +149,7 @@ export const php3Data = {
         "5": ["default", "else", "other", "_"]
       },
       "testCases": [
-        { "input": "$message", "expected_output": "'Excellent'" }
+        { "input": "$message", "expected_output": "Excellent" }
       ]
     },
     {
@@ -177,7 +177,7 @@ export const php3Data = {
         "4": ["age", "name", "user", "value"]
       },
       "testCases": [
-        { "input": "$user['name']", "expected_output": "'Alice'" }
+        { "input": "$user['name']", "expected_output": "Alice" }
       ]
     },
     {
@@ -208,7 +208,7 @@ export const php3Data = {
         "8": ["use", "include", "import", "extend"]
       },
       "testCases": [
-        { "input": "(new Greeter())->sayHello()", "expected_output": "'Hello!'" }
+        { "input": "(new Greeter())->sayHello()", "expected_output": "Hello!" }
       ]
     },
     {
@@ -264,7 +264,7 @@ export const php3Data = {
         "1": ["name", "age", "city", "value"]
       },
       "testCases": [
-        { "input": "$name", "expected_output": "'Alice'" },
+        { "input": "$name", "expected_output": "Alice" },
         { "input": "$age", "expected_output": "25" }
       ]
     },
@@ -296,7 +296,7 @@ export const php3Data = {
         "4": ["public", "private", "protected", "readonly"]
       },
       "testCases": [
-        { "input": "(new Person('Alice', 30))->name", "expected_output": "'Alice'" }
+        { "input": "(new Person('Alice', 30))->name", "expected_output": "Alice" }
       ]
     }
   ]

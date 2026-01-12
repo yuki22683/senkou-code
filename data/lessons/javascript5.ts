@@ -179,7 +179,7 @@ export const javascriptData5 = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Error: Unexpected token 'i', \"invalid json\" is not valid JSON\n"
+          "expected_output": "Error: Unexpected token i in JSON at position 0\n"
         }
       ]
     },

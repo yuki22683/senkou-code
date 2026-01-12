@@ -222,7 +222,7 @@ export const pythonData5 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 正規表現モジュールをインポート\nimport re\n\n# 電話番号を含む文字列を定義\ntext = 'Call me at 090-1234-5678'\n# パターンに一致する部分を検索\nmatch = re.search(r'\d{3}-\d{4}-\d{4}', text)\n# 一致した場合\nif match:\n    # 一致した文字列を表示\n    print(match.group())",
+      "correctCode": "# 正規表現モジュールをインポート\nimport re\n\n# 電話番号を含む文字列を定義\ntext = 'Call me at 090-1234-5678'\n# パターンに一致する部分を検索\nmatch = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)\n# 一致した場合\nif match:\n    # 一致した文字列を表示\n    print(match.group())",
       "holeyCode": "# 正規表現モジュールをインポート\nimport ___\n\n# 電話番号を含む文字列を定義\ntext = ___\n# パターンに一致する部分を検索\nmatch = re.___(r'\\d{3}-\\d{4}-\\d{4}', text)\n# 一致した場合\nif ___:\n    # 一致した文字列を表示\n    print(___)",
       "correctLines": [
         "# 正規表現モジュールをインポート",

@@ -136,10 +136,11 @@ export default function ExercisePage() {
     }
   }, [output, error, showCelebration, showCompleteDialog]);
 
-  async function handleRunCode() {
+  async function handleRunCode(forExampleTab?: boolean) {
     if (!exercise) return;
 
-    const isExampleMode = activeTab === "examples";
+    // forExampleTabが明示的に渡された場合はそれを使用、そうでなければactiveTabから判断
+    const isExampleMode = forExampleTab !== undefined ? forExampleTab : activeTab === "examples";
 
     if (isExampleMode) {
       // 見本タブ: expected_outputを表示
@@ -593,7 +594,7 @@ export default function ExercisePage() {
                   correctLines={exercise.correct_lines || exercise.correct_code?.split("\n") || []}
                   language={language}
                   onChange={(value) => setCode(value || "")}
-                  onRun={handleRunCode}
+                  onRun={() => handleRunCode(false)}
                   onCursorChange={(line) => setCurrentLine(line)}
                 />
               </div>
@@ -624,7 +625,7 @@ export default function ExercisePage() {
                       setActiveTab(tab);
                       // 見本タブに切り替えた時に自動的にexpected_outputを表示
                       if (tab === "examples" && !correctOutput && !isCorrectRunning) {
-                        handleRunCode();
+                        handleRunCode(true); // 見本タブであることを明示的に渡す
                       }
                     }}
                     onRetry={() => handleRunCode()}
