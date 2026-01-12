@@ -274,7 +274,8 @@ export default function ExercisePage() {
         }, { onConflict: 'user_id,exercise_id' });
       }
     }
-    router.push(`/lessons/${language}/${lessonId}/exercises`);
+    // キャッシュを無効化するためハードナビゲーション
+    window.location.href = `/lessons/${language}/${lessonId}/exercises`;
   }
 
   async function handleSubmitFeedback() {
@@ -510,13 +511,15 @@ export default function ExercisePage() {
 
   async function handleNextExercise() {
     if (!exercise) {
-      router.push(`/lessons/${language}/${lessonId}/exercises`);
+      // キャッシュを無効化するためハードナビゲーション
+      window.location.href = `/lessons/${language}/${lessonId}/exercises`;
       return;
     }
 
     // レッスン完了または言語完了の場合は直接レッスン一覧へ
     if (celebrationType === "lesson" || celebrationType === "language") {
-      router.push(`/lessons/${language}`);
+      // キャッシュを無効化するためハードナビゲーション
+      window.location.href = `/lessons/${language}`;
       return;
     }
 
@@ -531,13 +534,16 @@ export default function ExercisePage() {
         .maybeSingle();
 
       if (data) {
+        // 次の演習のチュートリアルへ（キャッシュ無効化不要）
         router.push(`/lessons/${language}/${lessonId}/exercises/${data.id}/tutorial`);
       } else {
-        router.push(`/lessons/${language}`);
+        // キャッシュを無効化するためハードナビゲーション
+        window.location.href = `/lessons/${language}`;
       }
     } catch (error) {
       console.error("Error navigating to next exercise:", error);
-      router.push(`/lessons/${language}`);
+      // キャッシュを無効化するためハードナビゲーション
+      window.location.href = `/lessons/${language}`;
     }
   }
 
@@ -869,7 +875,8 @@ export default function ExercisePage() {
             <Button
               onClick={() => {
                 setShowExitDialog(false);
-                router.push(`/lessons/${language}/${lessonId}/exercises`);
+                // キャッシュを無効化するためハードナビゲーション
+                window.location.href = `/lessons/${language}/${lessonId}/exercises`;
               }}
             >
               終了する
