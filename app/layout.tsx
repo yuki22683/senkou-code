@@ -11,6 +11,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "令和プログラミング - プログラミング学習アプリ",
   description: "完全無料で楽しく学ぶプログラミング演習アプリ",
+  icons: {
+    icon: "/icons/logo_icon.png",
+    apple: "/icons/logo_icon.png",
+  },
 };
 
 export default function RootLayout({
