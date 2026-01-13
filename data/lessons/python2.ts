@@ -257,10 +257,187 @@ export const pythonData2 = {
       ]
     },
     {
+      "title": "range() で数列を作る",
+      "description": "連続した数の列を簡単に作れる range() 関数を学びましょう。",
+      "difficulty": "medium",
+      "orderIndex": 6,
+      "tutorialSlides": [
+        {
+          "title": "range() とは？",
+          "image": "/illustrations/3d/list.png",
+          "content": "# 数の列を作る\n\n`range()` を使うと、連続した数の列を簡単に作れます。\n\n```python\nfor i in range(5):\n    print(i)\n# 0, 1, 2, 3, 4 が順に出力される\n```"
+        },
+        {
+          "title": "range() の使い方",
+          "image": "/illustrations/3d/list.png",
+          "content": "# 開始と終了を指定\n\n`range(開始, 終了)` で、開始から終了の手前までの数を作ります。\n\n```python\nrange(5)      # 0, 1, 2, 3, 4\nrange(1, 6)   # 1, 2, 3, 4, 5\nrange(0, 10, 2)  # 0, 2, 4, 6, 8（2ずつ増える）\n```"
+        }
+      ],
+      "initialDisplayMode": "holey",
+      "correctCode": "# 1から5までの数を順番に表示\nfor i in range(1, 6):\n    print(i)",
+      "holeyCode": "# 1から5までの数を順番に表示\nfor i in ___(1, 6):\n    print(___)",
+      "correctLines": [
+        "# 1から5までの数を順番に表示",
+        "for i in range(1, 6):",
+        "    print(i)"
+      ],
+      "lineHints": [
+        null,
+        "`range()` を使って1から5までの数を作ります。",
+        null
+      ],
+      "candidates": {
+        "functions": ["range", "list", "len"],
+        "variables": ["i"]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "1\n2\n3\n4\n5\n"
+        }
+      ]
+    },
+    {
+      "title": "累算代入演算子（+=、-=）",
+      "description": "変数の値を増やしたり減らしたりする便利な書き方を学びましょう。",
+      "difficulty": "medium",
+      "orderIndex": 7,
+      "tutorialSlides": [
+        {
+          "title": "+= とは？",
+          "image": "/illustrations/3d/box.png",
+          "content": "# 変数に足し算する\n\n`+=` を使うと、変数の値に足し算して上書きできます。\n\n```python\ncount = 0\ncount += 1  # count = count + 1 と同じ\nprint(count)  # => 1\n\ncount += 5\nprint(count)  # => 6\n```"
+        },
+        {
+          "title": "-= と他の演算子",
+          "image": "/illustrations/3d/box.png",
+          "content": "# 引き算や掛け算も\n\n同じように `-=`、`*=`、`/=` も使えます。\n\n```python\nx = 10\nx -= 3   # x = x - 3 → 7\nx *= 2   # x = x * 2 → 14\nx /= 7   # x = x / 7 → 2.0\n```"
+        }
+      ],
+      "initialDisplayMode": "holey",
+      "correctCode": "# 初期値を設定\ntotal = 0\n# totalに10を足す\ntotal += 10\n# totalに5を足す\ntotal += 5\n# 結果を表示\nprint(total)",
+      "holeyCode": "# 初期値を設定\ntotal = 0\n# totalに10を足す\ntotal ___ 10\n# totalに5を足す\ntotal ___ 5\n# 結果を表示\nprint(total)",
+      "correctLines": [
+        "# 初期値を設定",
+        "total = 0",
+        "# totalに10を足す",
+        "total += 10",
+        "# totalに5を足す",
+        "total += 5",
+        "# 結果を表示",
+        "print(total)"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "`+=` で値を足し算します。",
+        null,
+        null,
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": ["+=", "-=", "*=", "/="]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "15\n"
+        }
+      ]
+    },
+    {
+      "title": "剰余演算子（%）",
+      "description": "割り算の「余り」を求める演算子を学びましょう。偶数・奇数の判定などに便利です。",
+      "difficulty": "medium",
+      "orderIndex": 8,
+      "tutorialSlides": [
+        {
+          "title": "% とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 余りを求める\n\n`%` は割り算の余りを求める演算子です。\n\n```python\nprint(7 % 3)   # => 1（7÷3=2 余り1）\nprint(10 % 5)  # => 0（10÷5=2 余り0）\nprint(8 % 3)   # => 2（8÷3=2 余り2）\n```"
+        },
+        {
+          "title": "倍数の判定",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 割り切れるかチェック\n\n余りが0なら割り切れる（倍数）と判定できます。\n\n```python\n# 偶数かどうか判定\nif 6 % 2 == 0:\n    print('偶数です')\n\n# 3の倍数かどうか判定\nif 9 % 3 == 0:\n    print('3の倍数です')\n```"
+        }
+      ],
+      "initialDisplayMode": "holey",
+      "correctCode": "# 10を3で割った余りを計算\nremainder = 10 % 3\n# 結果を表示\nprint(remainder)",
+      "holeyCode": "# 10を3で割った余りを計算\nremainder = 10 ___ 3\n# 結果を表示\nprint(remainder)",
+      "correctLines": [
+        "# 10を3で割った余りを計算",
+        "remainder = 10 % 3",
+        "# 結果を表示",
+        "print(remainder)"
+      ],
+      "lineHints": [
+        null,
+        "`%` で余りを求めます。",
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": ["%", "/", "//", "*"]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "1\n"
+        }
+      ]
+    },
+    {
+      "title": "論理演算子（and, or, not）",
+      "description": "複数の条件を組み合わせる論理演算子を学びましょう。",
+      "difficulty": "medium",
+      "orderIndex": 9,
+      "tutorialSlides": [
+        {
+          "title": "and と or",
+          "image": "/illustrations/3d/if.png",
+          "content": "# 条件を組み合わせる\n\n`and` は両方が True のとき True、`or` はどちらかが True のとき True です。\n\n```python\nx = 5\n# 両方の条件を満たすか\nif x > 0 and x < 10:\n    print('0より大きく10より小さい')\n\n# どちらかの条件を満たすか\nif x < 0 or x > 3:\n    print('0未満か3より大きい')\n```"
+        },
+        {
+          "title": "not で否定",
+          "image": "/illustrations/3d/if.png",
+          "content": "# 条件を反転する\n\n`not` は True と False を反転させます。\n\n```python\nis_raining = False\n\nif not is_raining:\n    print('雨は降っていません')\n\n# not True → False\n# not False → True\n```"
+        }
+      ],
+      "initialDisplayMode": "holey",
+      "correctCode": "# 年齢を設定\nage = 25\n# 20以上かつ30未満かどうか判定\nif age >= 20 and age < 30:\n    print('20代です')",
+      "holeyCode": "# 年齢を設定\nage = 25\n# 20以上かつ30未満かどうか判定\nif age >= 20 ___ age < 30:\n    print('20代です')",
+      "correctLines": [
+        "# 年齢を設定",
+        "age = 25",
+        "# 20以上かつ30未満かどうか判定",
+        "if age >= 20 and age < 30:",
+        "    print('20代です')"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "`and` で両方の条件を満たすかチェックします。",
+        null
+      ],
+      "candidates": {
+        "keywords": ["and", "or", "not"]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "20代です\n"
+        }
+      ]
+    },
+    {
       "title": "リスト内包表記",
       "description": "リストを短いコードで作る「リスト内包表記」を学びましょう。Pythonならではの便利な書き方です。",
       "difficulty": "medium",
-      "orderIndex": 6,
+      "orderIndex": 10,
       "tutorialSlides": [
         {
           "title": "リスト内包表記とは？",
@@ -300,7 +477,7 @@ export const pythonData2 = {
       "title": "条件付きリスト内包表記",
       "description": "リスト内包表記に条件を追加して、特定の値だけを取り出しましょう。",
       "difficulty": "medium",
-      "orderIndex": 7,
+      "orderIndex": 11,
       "tutorialSlides": [
         {
           "title": "条件でフィルタリング",
@@ -340,7 +517,7 @@ export const pythonData2 = {
       "title": "例外処理（try-except）",
       "description": "プログラムでエラーが起きたときに、クラッシュせずに対処する方法を学びましょう。",
       "difficulty": "medium",
-      "orderIndex": 8,
+      "orderIndex": 12,
       "tutorialSlides": [
         {
           "title": "例外（エラー）とは？",
@@ -390,7 +567,7 @@ export const pythonData2 = {
       "title": "クラスの基本",
       "description": "データと処理をまとめた「クラス」を作ってみましょう。オブジェクト指向プログラミングの入門です。",
       "difficulty": "medium",
-      "orderIndex": 9,
+      "orderIndex": 13,
       "tutorialSlides": [
         {
           "title": "クラスとは？",
@@ -447,7 +624,7 @@ export const pythonData2 = {
       "title": "コンストラクタ（__init__）",
       "description": "オブジェクトを作るときに自動で呼ばれる特別なメソッド「コンストラクタ」を学びましょう。",
       "difficulty": "medium",
-      "orderIndex": 10,
+      "orderIndex": 14,
       "tutorialSlides": [
         {
           "title": "__init__ メソッド",
