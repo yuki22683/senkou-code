@@ -220,7 +220,7 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "@classmethodとは？",
-          "image": "/illustrations/3d_advanced/class_to_instance.png",
+          "image": "/illustrations/3d/classmethod_cls.png",
           "content": "# クラス全体に関わるメソッド\n\n**@classmethod**は、インスタンスではなくクラスに対して動作するメソッドを定義します。第一引数は cls です。\n\n```python\nclass Counter:\n    count = 0\n    \n    @classmethod\n    def increment(cls):\n        cls.count += 1\n```"
         }
       ],
