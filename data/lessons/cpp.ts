@@ -20,7 +20,7 @@ export const cppData = {
         {
           "title": "C++への入り口",
           "image": "/illustrations/common/monitor.png",
-          "content": "# std::cout を使いましょう\n\nC++で画面に文字を出したいときは、`std::cout` という命令と `<<` という記号を使います。\n\n**コード例：**\n```cpp\n#include <iostream>\nint main() {\n    std::cout << \"C++最高！\" << std::endl;\n    return 0;\n}\n```\n=> C++最高！\n\n`std::endl` は改行（かいぎょう）を意味します。"
+          "content": "# std::cout を使いましょう\n\nC++で画面に文字を出すには、`std::cout` と `<<` を使います。\n\n- `#include <iostream>`：入出力の機能を使う準備\n- `std::`：標準ライブラリの機能であることを示す\n\n```cpp\n#include <iostream>\nint main() {\n    std::cout << \"C++最高！\" << std::endl;\n    return 0;\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -126,7 +126,7 @@ export const cppData = {
         {
           "title": "std::vector",
           "image": "/illustrations/common/list.png",
-          "content": "# 動的な配列\n\nあとからデータを増やしたり減らしたりできる、とても便利な配列です。使い方は普通の配列と同じく、0番から数えます。\n\n**コード例：**\n```cpp\n#include <vector>\nstd::vector<std::string> items = {\"Apple\", \"Orange\"};\nstd::cout << items[0] << std::endl;\n```"
+          "content": "# 動的な配列\n\nあとからデータを増やしたり減らしたりできる、とても便利な配列です。`<型>` で何を入れるかを指定します（例：`<std::string>` は文字列）。\n\n**コード例：**\n```cpp\n#include <vector>\nstd::vector<std::string> items = {\"Apple\", \"Orange\"};\nstd::cout << items[0] << std::endl;\n```"
         }
       ],
       "initialDisplayMode": "holey",

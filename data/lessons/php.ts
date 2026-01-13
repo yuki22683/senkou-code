@@ -47,7 +47,7 @@ export const phpData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Hello, PHP!\n"
+          "expected_output": "Hello, PHP!"
         }
       ]
     },

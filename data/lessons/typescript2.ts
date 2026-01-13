@@ -311,12 +311,12 @@ export const typescriptData2 = {
         {
           "title": "ジェネリクスとは？",
           "image": "/illustrations/3d_advanced/generics_glass.png",
-          "content": "# 型を変数のように使う\n\n`<T>` を使うと、型をパラメータとして受け取れます。\n\n```typescript\nfunction identity<T>(arg: T): T {\n    return arg;\n}\n\nidentity<string>('hello');  // string\nidentity<number>(42);       // number\n```"
+          "content": "# 型を変数のように使う\n\n**ジェネリクス**とは、関数やクラスで扱う型を後から指定できる仕組みです。`<T>` のように型パラメータ（型の変数）を定義します。\n\n```typescript\nfunction identity<T>(arg: T): T {\n    return arg;\n}\n\nidentity<string>('hello');  // string\nidentity<number>(42);       // number\n```"
         },
         {
           "title": "型推論と一緒に",
           "image": "/illustrations/3d/robot.png",
-          "content": "# TypeScriptが型を推測\n\n多くの場合、型引数を省略できます。\n\n```typescript\nfunction identity<T>(arg: T): T {\n    return arg;\n}\n\nconst str = identity('hello');  // string と推論\nconst num = identity(42);       // number と推論\n```"
+          "content": "# TypeScriptが型を推測\n\n型推論（TypeScriptが値から型を自動的に判断する機能）により、多くの場合、型引数を省略できます。\n\n```typescript\nfunction identity<T>(arg: T): T {\n    return arg;\n}\n\nconst str = identity('hello');  // string と推論\nconst num = identity(42);       // number と推論\n```"
         }
       ],
       "initialDisplayMode": "holey",

@@ -127,7 +127,7 @@ export const swiftData = {
         {
           "title": "辞書の使い方",
           "image": "/illustrations/common/dict.png",
-          "content": "# [ ] で取り出しましょう\n\n辞書から値を取り出すには `[キー]` を使います。\n\n```swift\nlet fruits = [\"りんご\": \"あか\"]\nprint(fruits[\"りんご\"]!)\n```\n=> あか"
+          "content": "# [ ] で取り出しましょう\n\n辞書から値を取り出すには `[キー]` を使います。末尾の `!` は「値が必ずある」ことを示す記号です。\n\n```swift\nlet fruits = [\"りんご\": \"あか\"]\nprint(fruits[\"りんご\"]!)\n```\n=> あか"
         }
       ],
       "initialDisplayMode": "holey",

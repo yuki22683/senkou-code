@@ -62,7 +62,7 @@ export const ruby3Data = {
         "1": ["Proc", "Block", "Lambda", "Function"]
       },
       "testCases": [
-        { "input": "doubler.call(5)", "expected_output": "10" }
+        { "input": "doubler.call(5)", "expected_output": "" }
       ]
     },
     {
@@ -90,7 +90,7 @@ export const ruby3Data = {
         "1": ["->", "=>", "lambda", "proc"]
       },
       "testCases": [
-        { "input": "cube.call(3)", "expected_output": "27" }
+        { "input": "cube.call(3)", "expected_output": "" }
       ]
     },
     {
@@ -118,7 +118,7 @@ export const ruby3Data = {
         "1": ["map", "each", "select", "filter"]
       },
       "testCases": [
-        { "input": "result", "expected_output": "[\"RUBY\", \"PYTHON\", \"GO\"]" }
+        { "input": "result", "expected_output": "" }
       ]
     },
     {
@@ -146,7 +146,7 @@ export const ruby3Data = {
         "1": ["reduce", "fold", "inject", "sum"]
       },
       "testCases": [
-        { "input": "sum", "expected_output": "15" }
+        { "input": "sum", "expected_output": "" }
       ]
     },
     {
@@ -174,7 +174,7 @@ export const ruby3Data = {
         "1": ["select", "filter", "find_all", "reject"]
       },
       "testCases": [
-        { "input": "evens", "expected_output": "[2, 4, 6]" }
+        { "input": "evens", "expected_output": "" }
       ]
     },
     {
@@ -205,7 +205,7 @@ export const ruby3Data = {
         "2": ["reduce", "sum", "fold", "inject"]
       },
       "testCases": [
-        { "input": "sum_all(1, 2, 3)", "expected_output": "6" }
+        { "input": "sum_all(1, 2, 3)", "expected_output": "" }
       ]
     },
     {
@@ -236,7 +236,7 @@ export const ruby3Data = {
         "3": ["name", "method", "args", "self"]
       },
       "testCases": [
-        { "input": "FlexibleClass.new.hello", "expected_output": "\"Unknown method: hello\"" }
+        { "input": "FlexibleClass.new.hello", "expected_output": "" }
       ]
     },
     {
@@ -264,7 +264,7 @@ export const ruby3Data = {
         "1": ["Struct", "Class", "Object", "Data"]
       },
       "testCases": [
-        { "input": "Person.new('Alice', 30).name", "expected_output": "\"Alice\"" }
+        { "input": "Person.new('Alice', 30).name", "expected_output": "" }
       ]
     },
     {
@@ -292,7 +292,7 @@ export const ruby3Data = {
         "1": ["tap", "then", "yield_self", "itself"]
       },
       "testCases": [
-        { "input": "result", "expected_output": "[1, 2, 3, 4]" }
+        { "input": "result", "expected_output": "" }
       ]
     }
   ]

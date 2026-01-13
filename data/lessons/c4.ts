@@ -58,7 +58,7 @@ export const c4Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Done\n"
+          "expected_output": "Done"
         }
       ]
     },
@@ -114,7 +114,7 @@ export const c4Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Closed\n"
+          "expected_output": "Closed"
         }
       ]
     },
@@ -170,7 +170,7 @@ export const c4Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Written\n"
+          "expected_output": "Written"
         }
       ]
     },
@@ -234,7 +234,7 @@ export const c4Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Hello World\n"
+          "expected_output": "Hello World"
         }
       ]
     },
@@ -288,7 +288,7 @@ export const c4Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "A\n"
+          "expected_output": "A"
         }
       ]
     },
@@ -344,7 +344,7 @@ export const c4Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "5\n"
+          "expected_output": "5"
         }
       ]
     },
@@ -396,7 +396,7 @@ export const c4Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "2\n"
+          "expected_output": "2"
         }
       ]
     },
@@ -456,7 +456,7 @@ export const c4Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "42\n"
+          "expected_output": "42"
         }
       ]
     },
@@ -508,7 +508,7 @@ export const c4Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "100\n"
+          "expected_output": "100"
         }
       ]
     },
@@ -578,7 +578,7 @@ export const c4Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "60\n"
+          "expected_output": "60"
         }
       ]
     }

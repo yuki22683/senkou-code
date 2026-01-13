@@ -15,7 +15,7 @@ export const javaData2 = {
         {
           "title": "継承とは？",
           "image": "/illustrations/3d_advanced/inheritance.png",
-          "content": "# クラスを拡張する\n\n`extends` を使って、既存のクラスの機能を受け継いだ新しいクラスを作れます。\n\n```java\nclass Animal {\n    void eat() {\n        System.out.println(\"食べる\");\n    }\n}\n\nclass Dog extends Animal {\n    void bark() {\n        System.out.println(\"ワン！\");\n    }\n}\n```"
+          "content": "# クラスを拡張する\n\n**継承**とは、既存のクラス（親クラス）の機能を引き継いで新しいクラス（子クラス）を作る仕組みです。`extends` キーワードを使います。\n\n```java\nclass Animal {  // 親クラス\n    void eat() {\n        System.out.println(\"食べる\");\n    }\n}\n\nclass Dog extends Animal {  // 子クラス\n    void bark() {\n        System.out.println(\"ワン！\");\n    }\n}\n```"
         },
         {
           "title": "親クラスの機能を使う",
@@ -165,7 +165,7 @@ export const javaData2 = {
         {
           "title": "インターフェースとは？",
           "image": "/illustrations/3d_advanced/interface_blueprint.png",
-          "content": "# 契約を定義する\n\n`interface` でクラスが実装すべきメソッドを宣言します。\n\n```java\ninterface Drawable {\n    void draw();\n}\n\nclass Square implements Drawable {\n    public void draw() {\n        System.out.println(\"四角形\");\n    }\n}\n```"
+          "content": "# 契約を定義する\n\n**インターフェース**とは、クラスが持つべきメソッドの「約束事」を定義したものです。`implements` で実装（約束を守る）します。\n\n```java\ninterface Drawable {\n    void draw();  // 約束\n}\n\nclass Square implements Drawable {\n    public void draw() {  // 約束を実装\n        System.out.println(\"四角形\");\n    }\n}\n```"
         },
         {
           "title": "複数のインターフェース",
@@ -235,7 +235,7 @@ export const javaData2 = {
         {
           "title": "抽象クラスとは？",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# 未完成の設計図\n\n`abstract` をつけると、インスタンス化できないクラスになります。\n\n```java\nabstract class Animal {\n    abstract void sound();\n    \n    void sleep() {\n        System.out.println(\"Zzz\");\n    }\n}\n```"
+          "content": "# 未完成の設計図\n\n**抽象クラス**は、`abstract` をつけた未完成のクラスです。直接インスタンス化（new で実体を作ること）できず、子クラスで完成させます。\n\n```java\nabstract class Animal {\n    abstract void sound();  // 未完成\n    \n    void sleep() {\n        System.out.println(\"Zzz\");\n    }\n}\n```"
         },
         {
           "title": "抽象メソッド",

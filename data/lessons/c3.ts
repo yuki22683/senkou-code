@@ -54,7 +54,7 @@ export const c3Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "25\n"
+          "expected_output": "25"
         }
       ]
     },
@@ -116,7 +116,7 @@ export const c3Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Value: 42\n"
+          "expected_output": "Value: 42"
         }
       ]
     },
@@ -166,7 +166,7 @@ export const c3Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "8\n"
+          "expected_output": "8"
         }
       ]
     },
@@ -216,7 +216,7 @@ export const c3Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "14\n"
+          "expected_output": "14"
         }
       ]
     },
@@ -264,7 +264,7 @@ export const c3Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "12\n"
+          "expected_output": "12"
         }
       ]
     },
@@ -314,7 +314,7 @@ export const c3Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "3\n"
+          "expected_output": "3"
         }
       ]
     },
@@ -366,7 +366,7 @@ export const c3Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "100\n"
+          "expected_output": "100"
         }
       ]
     },
@@ -422,7 +422,7 @@ export const c3Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "42\n"
+          "expected_output": "42"
         }
       ]
     },
@@ -484,7 +484,7 @@ export const c3Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "1\n2\n3\n"
+          "expected_output": "123"
         }
       ]
     },
@@ -534,7 +534,7 @@ export const c3Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "14\n"
+          "expected_output": "14"
         }
       ]
     }

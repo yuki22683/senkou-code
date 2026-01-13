@@ -162,7 +162,7 @@ export const lua2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "x\t10\n"
+          "expected_output": "x	10\n"
         }
       ]
     },
@@ -248,7 +248,7 @@ export const lua2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "2\t1\n"
+          "expected_output": "2	1\n"
         }
       ]
     },

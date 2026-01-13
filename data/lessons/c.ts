@@ -20,7 +20,7 @@ export const cData = {
         {
           "title": "C言語の「きまり文句」",
           "image": "/illustrations/common/monitor.png",
-          "content": "# おまじないを入力しましょう\n\nC言語を動かすには、必ず入力しなければいけない「決まり文句」があります。\n\n```c\n#include <stdio.h>\nint main() {\n    // ここにやりたいことを入力します\n    return 0;\n}\n```\n\n画面に文字を出しましょうときは、`printf()` という名前の関数を使います。例えば：\n\n```c\nprintf(\"C言語は楽しい！\\n\");\n```\n=> C言語は楽しい！"
+          "content": "# おまじないを入力しましょう\n\nC言語を動かすには、必ず入力しなければいけない「決まり文句」があります。\n\n- `#include <stdio.h>`：画面表示などの機能を使う準備\n- `int main() { }`：プログラムの開始地点\n\n```c\n#include <stdio.h>\nint main() {\n    printf(\"C言語は楽しい！\\n\");\n    return 0;\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -51,7 +51,7 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Hello, World!\n"
+          "expected_output": "Hello, World!"
         }
       ]
     },
@@ -102,7 +102,7 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "10\n"
+          "expected_output": "10"
         }
       ]
     },
@@ -152,7 +152,7 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "8\n"
+          "expected_output": "8"
         }
       ]
     },
@@ -200,7 +200,7 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "私は 10 歳です\n"
+          "expected_output": "私は 10 歳です"
         }
       ]
     },
@@ -248,7 +248,7 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "20\n"
+          "expected_output": "20"
         }
       ]
     },
@@ -300,7 +300,7 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Pass\n"
+          "expected_output": "Pass"
         }
       ]
     },
@@ -356,7 +356,7 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Small\n"
+          "expected_output": "Small"
         }
       ]
     },
@@ -406,7 +406,7 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "0\n1\n2\n"
+          "expected_output": "012"
         }
       ]
     },
@@ -462,7 +462,7 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "10\n"
+          "expected_output": "10"
         }
       ]
     },
@@ -514,7 +514,7 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Hello\n"
+          "expected_output": "Hello"
         }
       ]
     }

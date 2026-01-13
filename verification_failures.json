@@ -1,0 +1,1242 @@
+[
+  {
+    "lessonId": "javascript-3",
+    "lesson": "JavaScript III - 非同期処理",
+    "exercise": "Optional Chaining",
+    "status": "Runtime Error (NZEC)",
+    "expected": "Bob\nundefined\n",
+    "actual": "",
+    "stderr": "/box/script.js:4\nconsole.log(data?.user?.name);\n                 ^\n\nSyntaxError: Unexpected token '.'\n    at Module._compile (internal/modules/cjs/loader.js:895:18)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)\n    at Module.load (internal/modules/cjs/loader.js:815:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:727:14)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)\n    at internal/main/run_main_module.js:17:11\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "javascript-3",
+    "lesson": "JavaScript III - 非同期処理",
+    "exercise": "Nullish Coalescing",
+    "status": "Runtime Error (NZEC)",
+    "expected": "default\n",
+    "actual": "",
+    "stderr": "/box/script.js:4\nconst result = value ?? 'default';\n                      ^\n\nSyntaxError: Unexpected token '?'\n    at Module._compile (internal/modules/cjs/loader.js:895:18)\n    at Object.Module._extensions..js (internal/modules/cjs/loader.js:995:10)\n    at Module.load (internal/modules/cjs/loader.js:815:32)\n    at Function.Module._load (internal/modules/cjs/loader.js:727:14)\n    at Function.Module.runMain (internal/modules/cjs/loader.js:1047:10)\n    at internal/main/run_main_module.js:17:11\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "typescript-4",
+    "lesson": "TypeScript IV - デコレータと高度なパターン",
+    "exercise": "テンプレートリテラル型",
+    "status": "Compilation Error",
+    "expected": "get /users\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "script.ts(4,14): error TS1110: Type expected.\n"
+  },
+  {
+    "lessonId": "typescript-4",
+    "lesson": "TypeScript IV - デコレータと高度なパターン",
+    "exercise": "Exclude型",
+    "status": "Compilation Error",
+    "expected": "pending\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "script.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'status'.\n../usr/lib/node_modules/typescript/lib/lib.dom.d.ts(19614,13): error TS2451: Cannot redeclare block-scoped variable 'status'.\n"
+  },
+  {
+    "lessonId": "typescript-4",
+    "lesson": "TypeScript IV - デコレータと高度なパターン",
+    "exercise": "Extract型",
+    "status": "Compilation Error",
+    "expected": "click\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "script.ts(1,6): error TS2300: Duplicate identifier 'Event'.\nscript.ts(3,6): error TS2300: Duplicate identifier 'MouseEvent'.\nscript.ts(5,7): error TS2322: Type '\"click\"' is not assignable to type 'MouseEvent'.\nscript.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'event'.\n../usr/lib/node_modules/typescript/lib/lib.dom.d.ts(5383,11): error TS2300: Duplicate identifier 'Event'.\n../usr/lib/node_modules/typescript/lib/lib.dom.d.ts(5451,13): error TS2300: Duplicate identifier 'Event'.\n../usr/lib/node_modules/typescript/lib/lib.dom.d.ts(10726,11): error TS2300: Duplicate identifier 'MouseEvent'.\n../usr/lib/node_modules/typescript/lib/lib.dom.d.ts(10750,13): error TS2300: Duplicate identifier 'MouseEvent'.\n../usr/lib/node_modules/typescript/lib/lib.dom.d.ts(19544,13): error TS2451: Cannot redeclare block-scoped variable 'event'.\n"
+  },
+  {
+    "lessonId": "typescript-4",
+    "lesson": "TypeScript IV - デコレータと高度なパターン",
+    "exercise": "Awaited型",
+    "status": "Compilation Error",
+    "expected": "success\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "script.ts(3,15): error TS2304: Cannot find name 'Awaited'.\n"
+  },
+  {
+    "lessonId": "cpp-3",
+    "lesson": "C++ III - モダンC++",
+    "exercise": "std::optional",
+    "status": "Compilation Error",
+    "expected": "42\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "main.cpp: In function ‘int main()’:\nmain.cpp:6:5: error: ‘optional’ was not declared in this scope\n     optional<int> opt = 42;\n     ^~~~~~~~\nmain.cpp:6:14: error: expected primary-expression before ‘int’\n     optional<int> opt = 42;\n              ^~~\nmain.cpp:7:9: error: ‘opt’ was not declared in this scope\n     if (opt.has_value()) {\n         ^~~\n"
+  },
+  {
+    "lessonId": "cpp-4",
+    "lesson": "C++ IV - STLアルゴリズムと高度な機能",
+    "exercise": "std::variant",
+    "status": "Compilation Error",
+    "expected": "3.14\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "main.cpp: In function ‘int main()’:\nmain.cpp:6:5: error: ‘variant’ was not declared in this scope\n     variant<int, double> v = 3.14;\n     ^~~~~~~\nmain.cpp:6:5: note: suggested alternative: ‘vprintf’\n     variant<int, double> v = 3.14;\n     ^~~~~~~\n     vprintf\nmain.cpp:6:13: error: expected primary-expression before ‘int’\n     variant<int, double> v = 3.14;\n             ^~~\nmain.cpp:7:13: error: ‘get’ was not declared in this scope\n     cout << get<double>(v) << endl;\n             ^~~\nmain.cpp:7:13: note: suggested alternative: ‘getw’\n     cout << get<double>(v) << endl;\n             ^~~\n             getw\nmain.cpp:7:17: error: expected primary-expression before ‘double’\n     cout << get<double>(v) << endl;\n                 ^~~~~~\n"
+  },
+  {
+    "lessonId": "cpp-4",
+    "lesson": "C++ IV - STLアルゴリズムと高度な機能",
+    "exercise": "std::string_view",
+    "status": "Compilation Error",
+    "expected": "Hello, World\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "main.cpp:5:12: error: variable or field ‘greet’ declared void\n void greet(string_view name) {\n            ^~~~~~~~~~~\nmain.cpp:5:12: error: ‘string_view’ was not declared in this scope\nmain.cpp: In function ‘int main()’:\nmain.cpp:10:5: error: ‘greet’ was not declared in this scope\n     greet(\"World\");\n     ^~~~~\nmain.cpp:10:5: note: suggested alternative: ‘free’\n     greet(\"World\");\n     ^~~~~\n     free\n"
+  },
+  {
+    "lessonId": "csharp-1",
+    "lesson": "C# (シーシャープ) に挑戦！",
+    "exercise": "画面にメッセージを出しましょう",
+    "status": "Compilation Error",
+    "expected": "Hello, C#!\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(2,0): error CS1525: Unexpected symbol `Console'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-1",
+    "lesson": "C# (シーシャープ) に挑戦！",
+    "exercise": "便利な「はこ」変数（へんすう）",
+    "status": "Compilation Error",
+    "expected": "CSharp\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(2,0): error CS1525: Unexpected symbol `string'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-1",
+    "lesson": "C# (シーシャープ) に挑戦！",
+    "exercise": "コンピュータで計算しましょう",
+    "status": "Compilation Error",
+    "expected": "15\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(2,0): error CS1525: Unexpected symbol `int'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-1",
+    "lesson": "C# (シーシャープ) に挑戦！",
+    "exercise": "文章の中に変数を入れましょう",
+    "status": "Compilation Error",
+    "expected": "私は10歳です\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(2,0): error CS1525: Unexpected symbol `int'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-1",
+    "lesson": "C# (シーシャープ) に挑戦！",
+    "exercise": "たくさんのデータをまとめましょう「配列」",
+    "status": "Compilation Error",
+    "expected": "青\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(2,0): error CS1525: Unexpected symbol `string'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-1",
+    "lesson": "C# (シーシャープ) に挑戦！",
+    "exercise": "「もし〜なら」で分ける if文",
+    "status": "Compilation Error",
+    "expected": "合格！\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(2,0): error CS1525: Unexpected symbol `int'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-1",
+    "lesson": "C# (シーシャープ) に挑戦！",
+    "exercise": "ちがう場合は？ if-else文",
+    "status": "Compilation Error",
+    "expected": "子供\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(2,0): error CS1525: Unexpected symbol `int'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-1",
+    "lesson": "C# (シーシャープ) に挑戦！",
+    "exercise": "ぐるぐる回す foreach",
+    "status": "Compilation Error",
+    "expected": "太郎\n花子\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(2,0): error CS1525: Unexpected symbol `string'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-1",
+    "lesson": "C# (シーシャープ) に挑戦！",
+    "exercise": "名前で探しましょう「Dictionary」",
+    "status": "Compilation Error",
+    "expected": "オレンジ\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(2,0): error CS1525: Unexpected symbol `var'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-1",
+    "lesson": "C# (シーシャープ) に挑戦！",
+    "exercise": "自分だけの関数を作ろう「メソッド」",
+    "status": "Compilation Error",
+    "expected": "こんにちは\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(2,7): error CS1525: Unexpected symbol `void', expecting `class', `delegate', `enum', `interface', `partial', `ref', or `struct'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-2",
+    "lesson": "C# II - オブジェクト指向とLINQ",
+    "exercise": "クラスの継承",
+    "status": "Compilation Error",
+    "expected": "moving\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(8,0): error CS1525: Unexpected symbol `Car'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-2",
+    "lesson": "C# II - オブジェクト指向とLINQ",
+    "exercise": "メソッドのオーバーライド",
+    "status": "Compilation Error",
+    "expected": "circle\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(12,0): error CS1525: Unexpected symbol `Circle'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-2",
+    "lesson": "C# II - オブジェクト指向とLINQ",
+    "exercise": "インターフェースを使おう",
+    "status": "Compilation Error",
+    "expected": "running\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(10,0): error CS1525: Unexpected symbol `Robot'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-2",
+    "lesson": "C# II - オブジェクト指向とLINQ",
+    "exercise": "プロパティを使おう",
+    "status": "Compilation Error",
+    "expected": "500\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(5,0): error CS1525: Unexpected symbol `Item'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-2",
+    "lesson": "C# II - オブジェクト指向とLINQ",
+    "exercise": "List<T> を使おう",
+    "status": "Compilation Error",
+    "expected": "20\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(1,0): error CS1525: Unexpected symbol `List'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-2",
+    "lesson": "C# II - オブジェクト指向とLINQ",
+    "exercise": "LINQ - Where で絞り込み",
+    "status": "Compilation Error",
+    "expected": "10\n15\n20\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(1,0): error CS1525: Unexpected symbol `List'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-2",
+    "lesson": "C# II - オブジェクト指向とLINQ",
+    "exercise": "LINQ - Select で変換",
+    "status": "Compilation Error",
+    "expected": "1\n4\n9\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(1,0): error CS1525: Unexpected symbol `List'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-2",
+    "lesson": "C# II - オブジェクト指向とLINQ",
+    "exercise": "ラムダ式を使おう",
+    "status": "Compilation Error",
+    "expected": "21\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(1,0): error CS1525: Unexpected symbol `Func'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-2",
+    "lesson": "C# II - オブジェクト指向とLINQ",
+    "exercise": "例外処理 try-catch",
+    "status": "Compilation Error",
+    "expected": "caught\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(1,0): error CS1525: Unexpected symbol `try'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-2",
+    "lesson": "C# II - オブジェクト指向とLINQ",
+    "exercise": "null条件演算子 ?.",
+    "status": "Compilation Error",
+    "expected": "5\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(1,0): error CS1525: Unexpected symbol `string'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-3",
+    "lesson": "C# III - 非同期とLINQ応用",
+    "exercise": "async/await の基本",
+    "status": "Compilation Error",
+    "expected": "Hello Async!\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(5,23): warning CS0028: `Program.Main()' has the wrong signature to be an entry point\nerror CS5001: Program `Main.exe' does not contain a static `Main' method suitable for an entry point\nCompilation failed: 1 error(s), 1 warnings\n"
+  },
+  {
+    "lessonId": "csharp-3",
+    "lesson": "C# III - 非同期とLINQ応用",
+    "exercise": "switch式（パターンマッチ）",
+    "status": "Compilation Error",
+    "expected": "two\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(6,23): error CS1525: Unexpected symbol `switch'\nMain.cs(8,12): error CS1525: Unexpected symbol `2'\nMain.cs(9,14): error CS1525: Unexpected symbol `=>'\nCompilation failed: 3 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-3",
+    "lesson": "C# III - 非同期とLINQ応用",
+    "exercise": "record 型",
+    "status": "Compilation Error",
+    "expected": "Point { X = 10, Y = 20 }\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(3,0): error CS1525: Unexpected symbol `record'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-3",
+    "lesson": "C# III - 非同期とLINQ応用",
+    "exercise": "using で自動解放",
+    "status": "Compilation Error",
+    "expected": "Hello\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(6,14): error CS1525: Unexpected symbol `var', expecting `('\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-4",
+    "lesson": "C# IV - ジェネリクスとデリゲート",
+    "exercise": "null条件演算子 ?.",
+    "status": "Compilation Error",
+    "expected": "0\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(5,9): error CS0453: The type `string' must be a non-nullable value type in order to use it as type parameter `T' in the generic type or method `System.Nullable<T>'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-4",
+    "lesson": "C# IV - ジェネリクスとデリゲート",
+    "exercise": "null合体演算子 ??",
+    "status": "Compilation Error",
+    "expected": "default\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(5,9): error CS0453: The type `string' must be a non-nullable value type in order to use it as type parameter `T' in the generic type or method `System.Nullable<T>'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-4",
+    "lesson": "C# IV - ジェネリクスとデリゲート",
+    "exercise": "record 型",
+    "status": "Compilation Error",
+    "expected": "Point { X = 3, Y = 4 }\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(3,0): error CS1525: Unexpected symbol `record'\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "csharp-4",
+    "lesson": "C# IV - ジェネリクスとデリゲート",
+    "exercise": "init プロパティ",
+    "status": "Compilation Error",
+    "expected": "Apple\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "Main.cs(4,31): error CS1014: A get or set accessor expected\nCompilation failed: 1 error(s), 0 warnings\n"
+  },
+  {
+    "lessonId": "go-3",
+    "lesson": "Go III - ジェネリクスとテスト",
+    "exercise": "ジェネリクスの基本",
+    "status": "Compilation Error",
+    "expected": "10\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "# command-line-arguments\n./main.go:6:6: missing function body\n./main.go:6:11: syntax error: unexpected [, expecting (\n"
+  },
+  {
+    "lessonId": "go-3",
+    "lesson": "Go III - ジェネリクスとテスト",
+    "exercise": "型制約 comparable",
+    "status": "Compilation Error",
+    "expected": "1\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "# command-line-arguments\n./main.go:6:6: missing function body\n./main.go:6:13: syntax error: unexpected [, expecting (\n"
+  },
+  {
+    "lessonId": "ruby-3",
+    "lesson": "Ruby III - メタプログラミングと関数型スタイル",
+    "exercise": "yieldとブロック",
+    "status": "Accepted",
+    "expected": "[1, 1]",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "ruby-3",
+    "lesson": "Ruby III - メタプログラミングと関数型スタイル",
+    "exercise": "Procオブジェクト",
+    "status": "Accepted",
+    "expected": "10",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "ruby-3",
+    "lesson": "Ruby III - メタプログラミングと関数型スタイル",
+    "exercise": "ラムダ",
+    "status": "Accepted",
+    "expected": "27",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "ruby-3",
+    "lesson": "Ruby III - メタプログラミングと関数型スタイル",
+    "exercise": "シンボルとProc変換",
+    "status": "Accepted",
+    "expected": "[\"RUBY\", \"PYTHON\", \"GO\"]",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "ruby-3",
+    "lesson": "Ruby III - メタプログラミングと関数型スタイル",
+    "exercise": "reduceメソッド",
+    "status": "Accepted",
+    "expected": "15",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "ruby-3",
+    "lesson": "Ruby III - メタプログラミングと関数型スタイル",
+    "exercise": "selectとreject",
+    "status": "Accepted",
+    "expected": "[2, 4, 6]",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "ruby-3",
+    "lesson": "Ruby III - メタプログラミングと関数型スタイル",
+    "exercise": "スプラット演算子",
+    "status": "Accepted",
+    "expected": "6",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "ruby-3",
+    "lesson": "Ruby III - メタプログラミングと関数型スタイル",
+    "exercise": "method_missing",
+    "status": "Accepted",
+    "expected": "\"Unknown method: hello\"",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "ruby-3",
+    "lesson": "Ruby III - メタプログラミングと関数型スタイル",
+    "exercise": "Struct",
+    "status": "Accepted",
+    "expected": "\"Alice\"",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "ruby-3",
+    "lesson": "Ruby III - メタプログラミングと関数型スタイル",
+    "exercise": "tapメソッド",
+    "status": "Accepted",
+    "expected": "[1, 2, 3, 4]",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "php-3",
+    "lesson": "PHP III - モダンPHPとクロージャ",
+    "exercise": "クロージャ（無名関数）",
+    "status": "Accepted",
+    "expected": "10",
+    "actual": "// functionで無名関数を定義\n$doubler = function($x) {\n    // *で乗算\n    return $x * 2;\n};",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "php-3",
+    "lesson": "PHP III - モダンPHPとクロージャ",
+    "exercise": "アロー関数",
+    "status": "Accepted",
+    "expected": "27",
+    "actual": "// fnでアロー関数、=>で式を記述\n$cube = fn($x) => $x ** 3;",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "php-3",
+    "lesson": "PHP III - モダンPHPとクロージャ",
+    "exercise": "Null合体演算子",
+    "status": "Accepted",
+    "expected": "Guest",
+    "actual": "$name = null;\n// ??でNull合体演算子\n$result = $name ?? 'Guest';",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "php-3",
+    "lesson": "PHP III - モダンPHPとクロージャ",
+    "exercise": "スプレッド演算子",
+    "status": "Accepted",
+    "expected": "[1, 2, 3, 4]",
+    "actual": "// ...で配列を展開\n$merged = [...[1, 2], ...[3, 4]];",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "php-3",
+    "lesson": "PHP III - モダンPHPとクロージャ",
+    "exercise": "match式",
+    "status": "Accepted",
+    "expected": "Excellent",
+    "actual": "$grade = 'A';\n// matchで式によるパターンマッチ\n$message = match($grade) {\n    'A' => 'Excellent',\n    'B' => 'Good',\n    // defaultでデフォルトケース\n    default => 'Try harder'\n};",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "php-3",
+    "lesson": "PHP III - モダンPHPとクロージャ",
+    "exercise": "名前付き引数",
+    "status": "Accepted",
+    "expected": "Alice",
+    "actual": "function createUser($name, $age) {\n    return ['name' => $name, 'age' => $age];\n}\n// ageとnameで名前付き引数を指定\n$user = createUser(age: 30, name: 'Alice');",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "php-3",
+    "lesson": "PHP III - モダンPHPとクロージャ",
+    "exercise": "トレイト",
+    "status": "Accepted",
+    "expected": "Hello!",
+    "actual": "// traitでトレイトを定義\ntrait HelloTrait {\n    public function sayHello() {\n        return 'Hello!';\n    }\n}\n\nclass Greeter {\n    // useでトレイトを使用\n    use HelloTrait;\n}",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "php-3",
+    "lesson": "PHP III - モダンPHPとクロージャ",
+    "exercise": "ジェネレータ",
+    "status": "Accepted",
+    "expected": "[1, 2, 3, 4, 5]",
+    "actual": "function rangeGen($n) {\n    for ($i = 1; $i <= $n; $i++) {\n        // yieldで値を一つずつ返す\n        yield $i;\n    }\n}",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "php-3",
+    "lesson": "PHP III - モダンPHPとクロージャ",
+    "exercise": "配列の分割代入",
+    "status": "Accepted",
+    "expected": "Alice",
+    "actual": "// name、age、cityに分割代入\n[$name, $age, $city] = ['Alice', 25, 'Tokyo'];",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "php-3",
+    "lesson": "PHP III - モダンPHPとクロージャ",
+    "exercise": "コンストラクタプロパティ昇格",
+    "status": "Accepted",
+    "expected": "Alice",
+    "actual": "class Person {\n    public function __construct(\n        // publicでアクセス修飾子\n        public string $name,\n        // publicでアクセス修飾子\n        public int $age\n    ) {}\n}",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "haskell-3",
+    "lesson": "Haskell III - 高階関数とモナド",
+    "exercise": "map関数",
+    "status": "Compilation Error",
+    "expected": "[2, 4, 6, 8, 10]",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "[1 of 1] Compiling Main             ( main.hs, main.o )\n\nmain.hs:1:1: error:\n    The IO action ‘main’ is not defined in module ‘Main’\n  |\n1 | double :: Int -> Int\n  | ^\n"
+  },
+  {
+    "lessonId": "haskell-3",
+    "lesson": "Haskell III - 高階関数とモナド",
+    "exercise": "filter関数",
+    "status": "Compilation Error",
+    "expected": "[2, 4, 6]",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "[1 of 1] Compiling Main             ( main.hs, main.o )\n\nmain.hs:1:1: error:\n    The IO action ‘main’ is not defined in module ‘Main’\n  |\n1 | isEven :: Int -> Bool\n  | ^\n"
+  },
+  {
+    "lessonId": "haskell-3",
+    "lesson": "Haskell III - 高階関数とモナド",
+    "exercise": "ラムダ式",
+    "status": "Compilation Error",
+    "expected": "[1, 4, 9, 16, 25]",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "[1 of 1] Compiling Main             ( main.hs, main.o )\n\nmain.hs:1:1: error:\n    The IO action ‘main’ is not defined in module ‘Main’\n  |\n1 | -- \\でラムダ式を開始\n  | ^\n"
+  },
+  {
+    "lessonId": "haskell-3",
+    "lesson": "Haskell III - 高階関数とモナド",
+    "exercise": "foldr（右畳み込み）",
+    "status": "Compilation Error",
+    "expected": "15",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "[1 of 1] Compiling Main             ( main.hs, main.o )\n\nmain.hs:1:1: error:\n    The IO action ‘main’ is not defined in module ‘Main’\n  |\n1 | sumList :: [Int] -> Int\n  | ^\n"
+  },
+  {
+    "lessonId": "haskell-3",
+    "lesson": "Haskell III - 高階関数とモナド",
+    "exercise": "関数合成",
+    "status": "Compilation Error",
+    "expected": "36",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "[1 of 1] Compiling Main             ( main.hs, main.o )\n\nmain.hs:1:1: error:\n    The IO action ‘main’ is not defined in module ‘Main’\n  |\n1 | squareDouble :: Int -> Int\n  | ^\n"
+  },
+  {
+    "lessonId": "haskell-3",
+    "lesson": "Haskell III - 高階関数とモナド",
+    "exercise": "Maybe型",
+    "status": "Compilation Error",
+    "expected": "Just 5",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "[1 of 1] Compiling Main             ( main.hs, main.o )\n\nmain.hs:1:1: error:\n    The IO action ‘main’ is not defined in module ‘Main’\n  |\n1 | safeDiv :: Int -> Int -> Maybe Int\n  | ^\n"
+  },
+  {
+    "lessonId": "haskell-3",
+    "lesson": "Haskell III - 高階関数とモナド",
+    "exercise": "Either型",
+    "status": "Compilation Error",
+    "expected": "Right 25",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "[1 of 1] Compiling Main             ( main.hs, main.o )\n\nmain.hs:1:1: error:\n    The IO action ‘main’ is not defined in module ‘Main’\n  |\n1 | validateAge :: Int -> Either String Int\n  | ^\n"
+  },
+  {
+    "lessonId": "haskell-3",
+    "lesson": "Haskell III - 高階関数とモナド",
+    "exercise": "fmap（ファンクタ）",
+    "status": "Compilation Error",
+    "expected": "Just 10",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "[1 of 1] Compiling Main             ( main.hs, main.o )\n\nmain.hs:1:1: error:\n    The IO action ‘main’ is not defined in module ‘Main’\n  |\n1 | doubleJust :: Maybe Int -> Maybe Int\n  | ^\n"
+  },
+  {
+    "lessonId": "haskell-3",
+    "lesson": "Haskell III - 高階関数とモナド",
+    "exercise": "do記法",
+    "status": "Compilation Error",
+    "expected": "Just 8",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "[1 of 1] Compiling Main             ( main.hs, main.o )\n\nmain.hs:1:1: error:\n    The IO action ‘main’ is not defined in module ‘Main’\n  |\n1 | addMaybe :: Maybe Int -> Maybe Int -> Maybe Int\n  | ^\n"
+  },
+  {
+    "lessonId": "haskell-3",
+    "lesson": "Haskell III - 高階関数とモナド",
+    "exercise": "リスト内包表記",
+    "status": "Compilation Error",
+    "expected": "[1, 4, 9, 16, 25]",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "[1 of 1] Compiling Main             ( main.hs, main.o )\n\nmain.hs:1:1: error:\n    The IO action ‘main’ is not defined in module ‘Main’\n  |\n1 | squares :: [Int]\n  | ^\n"
+  },
+  {
+    "lessonId": "elixir-1",
+    "lesson": "Elixir (エリクサー) に挑戦！",
+    "exercise": "画面に文字を出してみましょう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "Hello, Elixir!\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-1",
+    "lesson": "Elixir (エリクサー) に挑戦！",
+    "exercise": "便利な「はこ」",
+    "status": "Runtime Error (NZEC)",
+    "expected": "10\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-1",
+    "lesson": "Elixir (エリクサー) に挑戦！",
+    "exercise": "コンピュータで計算しましょう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "8\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-2",
+    "lesson": "Elixir II - パターンマッチと並行処理",
+    "exercise": "パターンマッチングの基本",
+    "status": "Time Limit Exceeded",
+    "expected": "10\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-2",
+    "lesson": "Elixir II - パターンマッチと並行処理",
+    "exercise": "リストのパターンマッチ",
+    "status": "Runtime Error (NZEC)",
+    "expected": "1\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-2",
+    "lesson": "Elixir II - パターンマッチと並行処理",
+    "exercise": "パイプ演算子を使おう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "15\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-2",
+    "lesson": "Elixir II - パターンマッチと並行処理",
+    "exercise": "Enum.map で変換",
+    "status": "Time Limit Exceeded",
+    "expected": "[1, 4, 9]\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-2",
+    "lesson": "Elixir II - パターンマッチと並行処理",
+    "exercise": "Enum.filter で絞り込み",
+    "status": "Runtime Error (NZEC)",
+    "expected": "[3, 4, 5]\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-2",
+    "lesson": "Elixir II - パターンマッチと並行処理",
+    "exercise": "case でパターンマッチ",
+    "status": "Runtime Error (NZEC)",
+    "expected": "two\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-2",
+    "lesson": "Elixir II - パターンマッチと並行処理",
+    "exercise": "関数を定義しよう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "12\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-2",
+    "lesson": "Elixir II - パターンマッチと並行処理",
+    "exercise": "再帰で計算しよう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "120\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-2",
+    "lesson": "Elixir II - パターンマッチと並行処理",
+    "exercise": "プロセスを作ろう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "hello\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-2",
+    "lesson": "Elixir II - パターンマッチと並行処理",
+    "exercise": "メッセージを送ろう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "42\n",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-3",
+    "lesson": "Elixir III - 構造体とプロトコル",
+    "exercise": "構造体（Struct）",
+    "status": "Runtime Error (NZEC)",
+    "expected": "\"Bob\"",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-3",
+    "lesson": "Elixir III - 構造体とプロトコル",
+    "exercise": "構造体の更新",
+    "status": "Runtime Error (NZEC)",
+    "expected": "1200",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-3",
+    "lesson": "Elixir III - 構造体とプロトコル",
+    "exercise": "Enum.reduce",
+    "status": "Runtime Error (NZEC)",
+    "expected": "15",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-3",
+    "lesson": "Elixir III - 構造体とプロトコル",
+    "exercise": "Enum.group_by",
+    "status": "Runtime Error (NZEC)",
+    "expected": "[25, 30]",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-3",
+    "lesson": "Elixir III - 構造体とプロトコル",
+    "exercise": "内包表記（for）",
+    "status": "Runtime Error (NZEC)",
+    "expected": "[1, 4, 9, 16, 25]",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-3",
+    "lesson": "Elixir III - 構造体とプロトコル",
+    "exercise": "with式",
+    "status": "Runtime Error (NZEC)",
+    "expected": "{:ok, \"Alice is 25 years old\"}",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-3",
+    "lesson": "Elixir III - 構造体とプロトコル",
+    "exercise": "プロトコルの定義",
+    "status": "Runtime Error (NZEC)",
+    "expected": "true",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-3",
+    "lesson": "Elixir III - 構造体とプロトコル",
+    "exercise": "プロトコルの実装",
+    "status": "Runtime Error (NZEC)",
+    "expected": "true",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-3",
+    "lesson": "Elixir III - 構造体とプロトコル",
+    "exercise": "Agent",
+    "status": "Runtime Error (NZEC)",
+    "expected": "1",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "elixir-3",
+    "lesson": "Elixir III - 構造体とプロトコル",
+    "exercise": "Task",
+    "status": "Runtime Error (NZEC)",
+    "expected": "3",
+    "actual": "",
+    "stderr": "Failed to create dirty cpu scheduler thread 26, error = 11\r\nrun: line 1:     3 Aborted                 (core dumped) /usr/local/elixir-1.9.4/bin/elixir script.exs\n",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-1",
+    "lesson": "Assembly (アセンブリ) に挑戦！",
+    "exercise": "数字を足し算しましょう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-1",
+    "lesson": "Assembly (アセンブリ) に挑戦！",
+    "exercise": "数字を引き算しましょう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-1",
+    "lesson": "Assembly (アセンブリ) に挑戦！",
+    "exercise": "レジスタ間でコピーしましょう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-1",
+    "lesson": "Assembly (アセンブリ) に挑戦！",
+    "exercise": "値を増やしましょう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-2",
+    "lesson": "Assembly II - レジスタと演算",
+    "exercise": "add で足し算",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-2",
+    "lesson": "Assembly II - レジスタと演算",
+    "exercise": "sub で引き算",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-2",
+    "lesson": "Assembly II - レジスタと演算",
+    "exercise": "mul で掛け算",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-2",
+    "lesson": "Assembly II - レジスタと演算",
+    "exercise": "push と pop でスタック操作",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-3",
+    "lesson": "Assembly III - メモリとスタック",
+    "exercise": "値を減らしましょう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-3",
+    "lesson": "Assembly III - メモリとスタック",
+    "exercise": "掛け算をしましょう",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-3",
+    "lesson": "Assembly III - メモリとスタック",
+    "exercise": "スタックに保存",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-3",
+    "lesson": "Assembly III - メモリとスタック",
+    "exercise": "スタックから取り出す",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-3",
+    "lesson": "Assembly III - メモリとスタック",
+    "exercise": "論理AND演算",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-3",
+    "lesson": "Assembly III - メモリとスタック",
+    "exercise": "論理OR演算",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-3",
+    "lesson": "Assembly III - メモリとスタック",
+    "exercise": "左シフト演算",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-3",
+    "lesson": "Assembly III - メモリとスタック",
+    "exercise": "右シフト演算",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "assembly-3",
+    "lesson": "Assembly III - メモリとスタック",
+    "exercise": "test命令で検査",
+    "status": "Runtime Error (NZEC)",
+    "expected": "",
+    "actual": "",
+    "stderr": "",
+    "compile_output": ""
+  },
+  {
+    "lessonId": "kotlin-1",
+    "lesson": "Kotlin (コトリン) に挑戦！",
+    "exercise": "画面にメッセージを出しましょう",
+    "status": "Compilation Error",
+    "expected": "Hello, World!\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:2:1: error: expecting a top level declaration\nprintln(\"Hello, World!\")\n^\nMain.kt:2:8: error: expecting a top level declaration\nprintln(\"Hello, World!\")\n       ^\nMain.kt:2:9: error: expecting a top level declaration\nprintln(\"Hello, World!\")\n        ^\nMain.kt:2:10: error: expecting a top level declaration\nprintln(\"Hello, World!\")\n         ^\nMain.kt:2:23: error: expecting a top level declaration\nprintln(\"Hello, World!\")\n                      ^\nMain.kt:2:24: error: expecting a top level declaration\nprintln(\"Hello, World!\")\n                       ^\n"
+  },
+  {
+    "lessonId": "kotlin-1",
+    "lesson": "Kotlin (コトリン) に挑戦！",
+    "exercise": "たくさんのデータをまとめましょう「リスト」",
+    "status": "Compilation Error",
+    "expected": "あお\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:4:1: error: expecting a top level declaration\nprintln(colors[1])\n^\nMain.kt:4:8: error: expecting a top level declaration\nprintln(colors[1])\n       ^\nMain.kt:4:9: error: expecting a top level declaration\nprintln(colors[1])\n        ^\nMain.kt:4:15: error: expecting a top level declaration\nprintln(colors[1])\n              ^\nMain.kt:4:16: error: expecting a top level declaration\nprintln(colors[1])\n               ^\nMain.kt:4:17: error: expecting a top level declaration\nprintln(colors[1])\n                ^\nMain.kt:4:18: error: expecting a top level declaration\nprintln(colors[1])\n                 ^\n"
+  },
+  {
+    "lessonId": "kotlin-1",
+    "lesson": "Kotlin (コトリン) に挑戦！",
+    "exercise": "名前で引き出す「辞書」",
+    "status": "Compilation Error",
+    "expected": "オレンジ\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:4:1: error: expecting a top level declaration\nprintln(colors[\"みかん\"])\n^\nMain.kt:4:8: error: expecting a top level declaration\nprintln(colors[\"みかん\"])\n       ^\nMain.kt:4:9: error: expecting a top level declaration\nprintln(colors[\"みかん\"])\n        ^\nMain.kt:4:15: error: expecting a top level declaration\nprintln(colors[\"みかん\"])\n              ^\nMain.kt:4:16: error: expecting a top level declaration\nprintln(colors[\"みかん\"])\n               ^\nMain.kt:4:17: error: expecting a top level declaration\nprintln(colors[\"みかん\"])\n                ^\nMain.kt:4:20: error: expecting a top level declaration\nprintln(colors[\"みかん\"])\n                   ^\nMain.kt:4:21: error: expecting a top level declaration\nprintln(colors[\"みかん\"])\n                    ^\nMain.kt:4:22: error: expecting a top level declaration\nprintln(colors[\"みかん\"])\n                     ^\n"
+  },
+  {
+    "lessonId": "kotlin-2",
+    "lesson": "Kotlin II - Null安全とラムダ",
+    "exercise": "Null安全を学ぼう",
+    "status": "Compilation Error",
+    "expected": "42\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:2:1: error: expecting a top level declaration\nif (num != null) {\n^\nMain.kt:2:4: error: expecting a top level declaration\nif (num != null) {\n   ^\nMain.kt:2:5: error: expecting a top level declaration\nif (num != null) {\n    ^\nMain.kt:2:9: error: expecting a top level declaration\nif (num != null) {\n        ^\nMain.kt:2:12: error: expecting a top level declaration\nif (num != null) {\n           ^\nMain.kt:2:16: error: expecting a top level declaration\nif (num != null) {\n               ^\nMain.kt:2:18: error: expecting a top level declaration\nif (num != null) {\n                 ^\nMain.kt:2:18: error: function declaration must have a name\nif (num != null) {\n                 ^\n"
+  },
+  {
+    "lessonId": "kotlin-2",
+    "lesson": "Kotlin II - Null安全とラムダ",
+    "exercise": "セーフコール演算子 ?.",
+    "status": "Compilation Error",
+    "expected": "5\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:2:1: error: expecting a top level declaration\nprintln(text?.length)\n^\nMain.kt:2:8: error: expecting a top level declaration\nprintln(text?.length)\n       ^\nMain.kt:2:9: error: expecting a top level declaration\nprintln(text?.length)\n        ^\nMain.kt:2:13: error: expecting a top level declaration\nprintln(text?.length)\n            ^\nMain.kt:2:15: error: expecting a top level declaration\nprintln(text?.length)\n              ^\nMain.kt:2:21: error: expecting a top level declaration\nprintln(text?.length)\n                    ^\n"
+  },
+  {
+    "lessonId": "kotlin-2",
+    "lesson": "Kotlin II - Null安全とラムダ",
+    "exercise": "エルビス演算子 ?:",
+    "status": "Compilation Error",
+    "expected": "0\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:2:1: error: expecting a top level declaration\nprintln(value ?: 0)\n^\nMain.kt:2:8: error: expecting a top level declaration\nprintln(value ?: 0)\n       ^\nMain.kt:2:9: error: expecting a top level declaration\nprintln(value ?: 0)\n        ^\nMain.kt:2:15: error: expecting a top level declaration\nprintln(value ?: 0)\n              ^\nMain.kt:2:18: error: expecting a top level declaration\nprintln(value ?: 0)\n                 ^\nMain.kt:2:19: error: expecting a top level declaration\nprintln(value ?: 0)\n                  ^\n"
+  },
+  {
+    "lessonId": "kotlin-2",
+    "lesson": "Kotlin II - Null安全とラムダ",
+    "exercise": "データクラスを使おう",
+    "status": "Compilation Error",
+    "expected": "Point(x=3, y=4)\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:3:1: error: expecting a top level declaration\nprintln(p)\n^\nMain.kt:3:8: error: expecting a top level declaration\nprintln(p)\n       ^\nMain.kt:3:9: error: expecting a top level declaration\nprintln(p)\n        ^\nMain.kt:3:10: error: expecting a top level declaration\nprintln(p)\n         ^\n"
+  },
+  {
+    "lessonId": "kotlin-2",
+    "lesson": "Kotlin II - Null安全とラムダ",
+    "exercise": "ラムダ式を使おう",
+    "status": "Compilation Error",
+    "expected": "10\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:2:1: error: expecting a top level declaration\nprintln(double(5))\n^\nMain.kt:2:8: error: expecting a top level declaration\nprintln(double(5))\n       ^\nMain.kt:2:9: error: expecting a top level declaration\nprintln(double(5))\n        ^\nMain.kt:2:15: error: expecting a top level declaration\nprintln(double(5))\n              ^\nMain.kt:2:16: error: expecting a top level declaration\nprintln(double(5))\n               ^\nMain.kt:2:17: error: expecting a top level declaration\nprintln(double(5))\n                ^\nMain.kt:2:18: error: expecting a top level declaration\nprintln(double(5))\n                 ^\n"
+  },
+  {
+    "lessonId": "kotlin-2",
+    "lesson": "Kotlin II - Null安全とラムダ",
+    "exercise": "map で変換しよう",
+    "status": "Compilation Error",
+    "expected": "[1, 4, 9]\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:3:1: error: expecting a top level declaration\nprintln(squared)\n^\nMain.kt:3:8: error: expecting a top level declaration\nprintln(squared)\n       ^\nMain.kt:3:9: error: expecting a top level declaration\nprintln(squared)\n        ^\nMain.kt:3:16: error: expecting a top level declaration\nprintln(squared)\n               ^\n"
+  },
+  {
+    "lessonId": "kotlin-2",
+    "lesson": "Kotlin II - Null安全とラムダ",
+    "exercise": "filter で絞り込もう",
+    "status": "Compilation Error",
+    "expected": "[3, 4, 5]\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:3:1: error: expecting a top level declaration\nprintln(result)\n^\nMain.kt:3:8: error: expecting a top level declaration\nprintln(result)\n       ^\nMain.kt:3:9: error: expecting a top level declaration\nprintln(result)\n        ^\nMain.kt:3:15: error: expecting a top level declaration\nprintln(result)\n              ^\n"
+  },
+  {
+    "lessonId": "kotlin-2",
+    "lesson": "Kotlin II - Null安全とラムダ",
+    "exercise": "when 式を使おう",
+    "status": "Compilation Error",
+    "expected": "two\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:7:1: error: expecting a top level declaration\nprintln(result)\n^\nMain.kt:7:8: error: expecting a top level declaration\nprintln(result)\n       ^\nMain.kt:7:9: error: expecting a top level declaration\nprintln(result)\n        ^\nMain.kt:7:15: error: expecting a top level declaration\nprintln(result)\n              ^\n"
+  },
+  {
+    "lessonId": "kotlin-2",
+    "lesson": "Kotlin II - Null安全とラムダ",
+    "exercise": "拡張関数を作ろう",
+    "status": "Compilation Error",
+    "expected": "10\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:2:1: error: expecting a top level declaration\nprintln(5.double())\n^\nMain.kt:2:8: error: expecting a top level declaration\nprintln(5.double())\n       ^\nMain.kt:2:9: error: expecting a top level declaration\nprintln(5.double())\n        ^\nMain.kt:2:10: error: expecting a top level declaration\nprintln(5.double())\n         ^\nMain.kt:2:11: error: expecting a top level declaration\nprintln(5.double())\n          ^\nMain.kt:2:17: error: expecting a top level declaration\nprintln(5.double())\n                ^\nMain.kt:2:18: error: expecting a top level declaration\nprintln(5.double())\n                 ^\nMain.kt:2:19: error: expecting a top level declaration\nprintln(5.double())\n                  ^\n"
+  },
+  {
+    "lessonId": "kotlin-2",
+    "lesson": "Kotlin II - Null安全とラムダ",
+    "exercise": "スコープ関数 let",
+    "status": "Compilation Error",
+    "expected": "84\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:2:1: error: expecting a top level declaration\nnum?.let { println(it * 2) }\n^\nMain.kt:2:4: error: expecting a top level declaration\nnum?.let { println(it * 2) }\n   ^\nMain.kt:2:6: error: expecting a top level declaration\nnum?.let { println(it * 2) }\n     ^\nMain.kt:2:10: error: expecting a top level declaration\nnum?.let { println(it * 2) }\n         ^\nMain.kt:2:10: error: function declaration must have a name\nnum?.let { println(it * 2) }\n         ^\nMain.kt:2:20: error: unresolved reference: it\nnum?.let { println(it * 2) }\n                   ^\n"
+  },
+  {
+    "lessonId": "kotlin-3",
+    "lesson": "Kotlin III - コルーチンとDSL",
+    "exercise": "suspend 関数",
+    "status": "Compilation Error",
+    "expected": "Hello\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:1:8: error: unresolved reference: kotlinx\nimport kotlinx.coroutines.*\n       ^\nMain.kt:4:5: error: unresolved reference: delay\n    delay(100)\n    ^\nMain.kt:8:14: error: unresolved reference: runBlocking\nfun main() = runBlocking {\n             ^\nMain.kt:9:13: error: suspend function 'getMessage' should be called only from a coroutine or another suspend function\n    println(getMessage())\n            ^\n"
+  },
+  {
+    "lessonId": "kotlin-4",
+    "lesson": "Kotlin IV - Sealed ClassとDelegation",
+    "exercise": "scope 関数 let",
+    "status": "Compilation Error",
+    "expected": "HELLO\n",
+    "actual": "",
+    "stderr": "",
+    "compile_output": "OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.\nMain.kt:3:12: error: unresolved reference: uppercase\n        it.uppercase()\n           ^\n"
+  }
+]

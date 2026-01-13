@@ -340,7 +340,7 @@ export const rubyData = {
         {
           "title": "each の使い方",
           "image": "/illustrations/common/loop.png",
-          "content": "# ブロック\n\n```ruby\nfruits = ['りんご', 'バナナ']\nfruits.each do |fruit|\n  puts fruit\nend\n```"
+          "content": "# ブロックで処理を渡す\n\n**ブロック**は `do...end` で囲んだ処理のかたまりです。`|fruit|` はブロック変数で、取り出した要素が入ります。\n\n```ruby\nfruits = ['りんご', 'バナナ']\nfruits.each do |fruit|\n  puts fruit\nend\n```"
         }
       ],
       "initialDisplayMode": "holey",

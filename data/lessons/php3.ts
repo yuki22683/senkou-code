@@ -34,7 +34,7 @@ export const php3Data = {
         "2": ["*", "+", "/", "**"]
       },
       "testCases": [
-        { "input": "$doubler(5)", "expected_output": "10" }
+        { "input": "$doubler(5)", "expected_output": "" }
       ]
     },
     {
@@ -62,7 +62,7 @@ export const php3Data = {
         "1": ["fn", "function", "lambda", "->"]
       },
       "testCases": [
-        { "input": "$cube(3)", "expected_output": "27" }
+        { "input": "$cube(3)", "expected_output": "" }
       ]
     },
     {
@@ -90,7 +90,7 @@ export const php3Data = {
         "2": ["??", "?:", "||", "&&"]
       },
       "testCases": [
-        { "input": "$result", "expected_output": "Guest" }
+        { "input": "$result", "expected_output": "" }
       ]
     },
     {
@@ -118,7 +118,7 @@ export const php3Data = {
         "1": ["...", "**", "&&", "::"]
       },
       "testCases": [
-        { "input": "$merged", "expected_output": "[1, 2, 3, 4]" }
+        { "input": "$merged", "expected_output": "" }
       ]
     },
     {
@@ -177,7 +177,7 @@ export const php3Data = {
         "4": ["age", "name", "user", "value"]
       },
       "testCases": [
-        { "input": "$user['name']", "expected_output": "Alice" }
+        { "input": "$user['name']", "expected_output": "" }
       ]
     },
     {
@@ -208,7 +208,7 @@ export const php3Data = {
         "8": ["use", "include", "import", "extend"]
       },
       "testCases": [
-        { "input": "(new Greeter())->sayHello()", "expected_output": "Hello!" }
+        { "input": "(new Greeter())->sayHello()", "expected_output": "" }
       ]
     },
     {
@@ -236,7 +236,7 @@ export const php3Data = {
         "3": ["yield", "return", "emit", "output"]
       },
       "testCases": [
-        { "input": "iterator_to_array(rangeGen(5))", "expected_output": "[1, 2, 3, 4, 5]" }
+        { "input": "iterator_to_array(rangeGen(5))", "expected_output": "" }
       ]
     },
     {

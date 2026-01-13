@@ -270,7 +270,7 @@ export const pythonData2 = {
         {
           "title": "内包表記の書き方",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# [式 for 変数 in イテラブル]\n\n`[ ]` の中に、作りたい値の式とfor文を書きます。\n\n```python\n# 0から4の2乗を作る\nsquares = [x ** 2 for x in range(5)]\nprint(squares)  # => [0, 1, 4, 9, 16]\n```"
+          "content": "# [式 for 変数 in イテラブル]\n\nイテラブルとは、リストやrangeなど繰り返し処理できるオブジェクトのことです。`[ ]` の中に、作りたい値の式とfor文を書きます。\n\n```python\n# 0から4の2乗を作る\nsquares = [x ** 2 for x in range(5)]\nprint(squares)  # => [0, 1, 4, 9, 16]\n```"
         }
       ],
       "initialDisplayMode": "holey",

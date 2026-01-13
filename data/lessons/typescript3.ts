@@ -15,7 +15,7 @@ export const typescriptData3 = {
         {
           "title": "Partial とは？",
           "image": "/illustrations/3d/robot.png",
-          "content": "# 全プロパティをオプショナルに\n\n**Partial<T>** は、型Tの全てのプロパティをオプショナル（?）にします。\n\n```typescript\ninterface User {\n  name: string;\n  age: number;\n}\n\ntype PartialUser = Partial<User>;\n// { name?: string; age?: number; }\n```"
+          "content": "# 全プロパティをオプショナルに\n\n**Partial<T>** は、TypeScriptに組み込まれたユーティリティ型（便利な型変換ツール）の1つで、型Tの全てのプロパティをオプショナル（省略可能）にします。\n\n```typescript\ninterface User {\n  name: string;\n  age: number;\n}\n\ntype PartialUser = Partial<User>;\n// { name?: string; age?: number; }\n```"
         },
         {
           "title": "使いどころ",

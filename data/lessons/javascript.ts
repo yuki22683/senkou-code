@@ -460,7 +460,7 @@ export const javascriptData = {
         {
           "title": "ドット（ . ）でつなげましょう",
           "image": "/illustrations/common/dict.png",
-          "content": "# { } を使ったデータのまとめ\n\nオブジェクトは、`名前: あたい` のセットを `{ }` で囲んで作ります。取り出すときは `.`（ドット）を使います。\n\n**コード例：**\n```javascript\nconst colors = { りんご: 'あか', バナナ: 'きいろ' };\nconsole.log(colors.りんご);\n```"
+          "content": "# { } を使ったデータのまとめ\n\nオブジェクトは、`名前: あたい` のセット（これを**プロパティ**と呼びます）を `{ }` で囲んで作ります。取り出すときは `.`（ドット）を使います。\n\n```javascript\nconst colors = { りんご: 'あか', バナナ: 'きいろ' };\nconsole.log(colors.りんご);\n```"
         }
       ],
       "initialDisplayMode": "holey",

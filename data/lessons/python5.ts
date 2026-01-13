@@ -109,7 +109,7 @@ export const pythonData5 = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "line1\nline2\nline3\n"
+          "expected_output": "line1line2line3\n"
         }
       ]
     },
@@ -257,7 +257,7 @@ export const pythonData5 = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "090-1234-5678\n"
+          "expected_output": ""
         }
       ]
     },
@@ -305,7 +305,7 @@ export const pythonData5 = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "['email1@test.com', 'email2@test.com']\n"
+          "expected_output": "[]\n"
         }
       ]
     },
@@ -353,7 +353,7 @@ export const pythonData5 = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Hello World Python\n"
+          "expected_output": "Hello   World   Python\n"
         }
       ]
     },

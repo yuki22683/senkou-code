@@ -281,7 +281,7 @@ export const pythonData = {
         {
           "title": "もし〜なら（if）",
           "image": "/illustrations/common/if.png",
-          "content": "# if の使い方\n\nPythonでは、`if` のあとに条件を入力して、最後に `:`（コロン）をつけるのがルールです。\n\n```python\ntemperature = 30\nif temperature >= 25:\n    print('今日はあついですね')\n```\n=> 今日はあついですね"
+          "content": "# if の使い方\n\n`if` のあとに条件を書きます。条件が正しい（True）なら中の処理を実行し、間違い（False）ならスキップします。\n\n```python\ntemperature = 30\nif temperature >= 25:  # True なので実行\n    print('今日はあついですね')\n```\n=> 今日はあついですね"
         }
       ],
       "initialDisplayMode": "holey",
@@ -350,18 +350,22 @@ export const pythonData = {
       "correctLines": [
         "# age に 10 を入れる",
         "age = 10",
-        "# 20さい以上かどうかで分ける",
+        "# 20以上かを比較する演算子",
         "if age >= 20:",
+        "    # 20歳以上のときのメッセージ（'おとな'）",
         "    print('おとな')",
+        "# 「そうでなければ」のキーワード",
         "else:",
-        "    # それ以外の場合",
+        "    # それ以外の場合（'こども'）",
         "    print('こども')"
       ],
       "lineHints": [
         null,
         "age = 10 と入力しましょう。",
         null,
+        "if age >= 20: と入力しましょう。>= は「以上」を意味します。",
         null,
+        "print('おとな') と入力しましょう。",
         null,
         "else: と入力しましょう。 `:` を忘れないでください。",
         null,
@@ -375,6 +379,7 @@ export const pythonData = {
           "print"
         ],
         "strings": [
+          "おとな",
           "こども"
         ],
         "numbers": [

@@ -20,7 +20,7 @@ export const rust3Data = {
         {
           "title": "なぜ必要？",
           "image": "/illustrations/3d/robot.png",
-          "content": "# ダングリング参照を防ぐ\n\nRustは、無効な参照を防ぐためにライフタイムを追跡します。"
+          "content": "# 無効な参照を防ぐ\n\nダングリング参照（既に解放されたメモリを指す参照）を防ぐため、Rustはライフタイムを追跡します。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -58,14 +58,14 @@ export const rust3Data = {
     },
     {
       "title": "クロージャの基本",
-      "description": "環境をキャプチャする無名関数を学びましょう。",
+      "description": "周囲の変数を使える無名関数「クロージャ」を学びましょう。",
       "difficulty": "hard",
       "orderIndex": 2,
       "tutorialSlides": [
         {
           "title": "クロージャとは？",
           "image": "/illustrations/3d_advanced/lambda_spark.png",
-          "content": "# 環境をキャプチャする関数\n\n**クロージャ** は、定義された環境の変数にアクセスできる無名関数です。\n\n```rust\nlet x = 5;\nlet add_x = |n| n + x;\nprintln!(\"{}\", add_x(10)); // 15\n```"
+          "content": "# 周囲の変数を使える関数\n\n**クロージャ** は、名前を付けずに定義する関数（無名関数）で、周囲の変数をキャプチャ（取り込んで使用）できます。\n\n```rust\nlet x = 5;\nlet add_x = |n| n + x;\nprintln!(\"{}\", add_x(10)); // 15\n```"
         },
         {
           "title": "クロージャの構文",
@@ -158,7 +158,7 @@ export const rust3Data = {
         {
           "title": "遅延評価",
           "image": "/illustrations/3d/robot.png",
-          "content": "# collect() で実行\n\nイテレータは遅延評価されるため、`collect()` などで消費する必要があります。"
+          "content": "# collect() で実行\n\nイテレータは遅延評価（実際に値が必要になるまで処理を実行しない仕組み）のため、`collect()` などで消費する必要があります。"
         }
       ],
       "initialDisplayMode": "holey",

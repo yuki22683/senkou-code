@@ -263,14 +263,14 @@ export const pythonData3 = {
     },
     {
       "title": "ジェネレータ（yield）",
-      "description": "メモリ効率の良いイテレータを作りましょう。",
+      "description": "値を1つずつ生成するジェネレータを学びましょう。",
       "difficulty": "hard",
       "orderIndex": 6,
       "tutorialSlides": [
         {
           "title": "ジェネレータとは？",
           "image": "/illustrations/python3/yield.png",
-          "content": "# yield で値を1つずつ返す\n\n**yield** を使うと、値を1つずつ返す関数が作れます。メモリ効率が良いです。\n\n```python\ndef count_up(n):\n    for i in range(n):\n        yield i\n\nfor num in count_up(3):\n    print(num)  # 0, 1, 2\n```"
+          "content": "# yield で値を1つずつ返す\n\n**ジェネレータ**とは、値を一度に全て作らず、必要な時に1つずつ生成する特別な関数です。**yield** キーワードを使って定義します。\n\n```python\ndef count_up(n):\n    for i in range(n):\n        yield i\n\nfor num in count_up(3):\n    print(num)  # 0, 1, 2\n```"
         },
         {
           "title": "ジェネレータの利点",
@@ -449,7 +449,7 @@ export const pythonData3 = {
         {
           "title": "any とは？",
           "image": "/illustrations/python3/any_all.png",
-          "content": "# 1つでも True なら True\n\n**any** は、イテラブルの中に1つでも True があれば True を返します。\n\n```python\nnums = [0, 0, 1, 0]\nprint(any(nums))  # True\n\nprint(any(x > 5 for x in [1, 2, 10]))  # True\n```"
+          "content": "# 1つでも True なら True\n\n**any** は、イテラブル（リストなどの繰り返し可能なオブジェクト）の中に1つでも True があれば True を返します。\n\n```python\nnums = [0, 0, 1, 0]\nprint(any(nums))  # True\n\nprint(any(x > 5 for x in [1, 2, 10]))  # True\n```"
         },
         {
           "title": "all とは？",
@@ -458,12 +458,12 @@ export const pythonData3 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 1から5までの数値リストを作成\nnums = [1, 2, 3, 4, 5]\n# 全要素が条件を満たすか判定する関数を使用\nresult = all(x > 0 for x in nums)\n# 判定結果を画面に表示\nprint(result)",
-      "holeyCode": "# 1から5までの数値リストを作成\nnums = ___\n# 全要素が条件を満たすか判定する関数を使用\nresult = ___(x > 0 for x in nums)\n# 判定結果を画面に表示\nprint(___)",
+      "correctCode": "# 1から5までの数値リストを作成\nnums = [1, 2, 3, 4, 5]\n# 全要素が0より大きいか判定する関数を使用\nresult = all(x > 0 for x in nums)\n# 判定結果を画面に表示\nprint(result)",
+      "holeyCode": "# 1から5までの数値リストを作成\nnums = ___\n# 全要素が0より大きいか判定する関数を使用\nresult = ___(x > 0 for x in nums)\n# 判定結果を画面に表示\nprint(___)",
       "correctLines": [
         "# 1から5までの数値リストを作成",
         "nums = [1, 2, 3, 4, 5]",
-        "# 全要素が条件を満たすか判定する関数を使用",
+        "# 全要素が0より大きいか判定する関数を使用",
         "result = all(x > 0 for x in nums)",
         "# 判定結果を画面に表示",
         "print(result)"

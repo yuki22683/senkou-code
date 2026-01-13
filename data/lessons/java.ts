@@ -486,7 +486,7 @@ export const javaData = {
         {
           "title": "HashMap（辞書）",
           "image": "/illustrations/common/dict.png",
-          "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。使うときは、さいしょに `import`（インポート）という準備が必要です。\n\n**コード例：**\n```java\nimport java.util.HashMap;\n\nHashMap<String, String> colors = new HashMap<>();\ncolors.put(\"りんご\", \"あか\");\nSystem.out.println(colors.get(\"りんご\"));\n```"
+          "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。\n\n- `import`：外部の機能を使う準備\n- `new`：新しいオブジェクト（実体）を作る\n- `<String, String>`：キーと値の型を指定\n\n```java\nimport java.util.HashMap;\nHashMap<String, String> colors = new HashMap<>();\ncolors.put(\"りんご\", \"あか\");\n```"
         }
       ],
       "initialDisplayMode": "holey",

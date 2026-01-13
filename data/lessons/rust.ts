@@ -62,7 +62,7 @@ export const rustData = {
         {
           "title": "ベクタの番号は「0」から！",
           "image": "/illustrations/common/list.png",
-          "content": "# 番号で指定しましょう\n\nベクタの中身を取り出すときは、何番目かを指定します。プログラミングでは、**さいしょのデータは「0番」** と数えるルールなのです。\n\n```rust\nfn main() {\n    let fruits = vec![\"りんご\", \"バナナ\", \"みかん\"];\n    println!(\"{}\", fruits[0]);\n}\n```\n=> りんご"
+          "content": "# 番号で指定しましょう\n\nベクタの中身を取り出すときは、何番目かを指定します。`let` で変数を作り、**さいしょのデータは「0番」** から数えます。\n\n```rust\nfn main() {\n    let fruits = vec![\"りんご\", \"バナナ\", \"みかん\"];\n    println!(\"{}\", fruits[0]);\n}\n```\n=> りんご"
         }
       ],
       "initialDisplayMode": "holey",
@@ -116,7 +116,7 @@ export const rustData = {
         {
           "title": "辞書（HashMap）とは？",
           "image": "/illustrations/common/dict.png",
-          "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。辞書のように使うことができます。\n\n**コード例：**\n```rust\nuse std::collections::HashMap;\nfn main() {\n    let mut fruits = HashMap::new();\n    fruits.insert(\"りんご\", \"あか\");\n    println!(\"{}\", fruits[\"りんご\"]);\n}\n```"
+          "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。\n\n- `use`：外部の機能を使う準備\n- `let mut`：変更可能な変数を作る（mutは「変更できる」の意味）\n\n```rust\nuse std::collections::HashMap;\nfn main() {\n    let mut fruits = HashMap::new();\n    fruits.insert(\"りんご\", \"あか\");\n}\n```"
         },
         {
           "title": "辞書の使い方",

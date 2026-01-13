@@ -15,7 +15,7 @@ export const javascriptData3 = {
         {
           "title": "Promise とは？",
           "image": "/illustrations/3d/robot.png",
-          "content": "# 非同期処理の約束\n\n**Promise** は、将来完了する処理を表すオブジェクトです。\n\n```javascript\nconst promise = new Promise((resolve, reject) => {\n  // 非同期処理\n  resolve('成功！');\n});\n```"
+          "content": "# 非同期処理の約束\n\n非同期処理とは、時間のかかる処理（通信やファイル読み込みなど）を待たずに次の処理を進める仕組みです。**Promise** は、その処理が将来完了することを表すオブジェクトです。\n\n```javascript\nconst promise = new Promise((resolve, reject) => {\n  resolve('成功！');\n});\n```"
         },
         {
           "title": "then で結果を受け取る",

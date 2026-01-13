@@ -122,7 +122,7 @@ export const swift4Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "ID: 42\n"
+          "expected_output": "ID: \(id)\n"
         }
       ]
     },

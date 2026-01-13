@@ -20,7 +20,7 @@ export const goData = {
         {
           "title": "Go言語の「きまり文句」",
           "image": "/illustrations/common/monitor.png",
-          "content": "# おまじないを入力しましょう\n\nGo言語でプログラムを入力するときは、必ず入力しなければいけない「決まり文句」があります。\n\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    // ここにやりたいことを入力します\n}\n```\n\n画面に文字を出したいときは、`fmt.Println()` という名前の関数を使います。例えば：\n\n```go\nfmt.Println(\"ヤッホー\")\n```"
+          "content": "# おまじないを入力しましょう\n\nGo言語でプログラムを入力するときは、必ず入力しなければいけない「決まり文句」があります。\n\n- `package main`：実行可能なプログラムであることを示す\n- `import \"fmt\"`：画面表示の機能を使う準備\n- `func main()`：プログラムの開始地点\n\n```go\npackage main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"ヤッホー\")\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",

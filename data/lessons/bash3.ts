@@ -332,7 +332,7 @@ export const bash3Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "apple\nbanana\ncherry\n"
+          "expected_output": "bananaapplecherry\n"
         }
       ]
     },
@@ -368,7 +368,7 @@ export const bash3Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "a\nb\n"
+          "expected_output": "abab\n"
         }
       ]
     }

@@ -50,7 +50,7 @@ export const c2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "42\n"
+          "expected_output": "42"
         }
       ]
     },
@@ -100,7 +100,7 @@ export const c2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "99\n"
+          "expected_output": "99"
         }
       ]
     },
@@ -150,7 +150,7 @@ export const c2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "25\n"
+          "expected_output": "25"
         }
       ]
     },
@@ -202,7 +202,7 @@ export const c2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "14\n"
+          "expected_output": "14"
         }
       ]
     },
@@ -250,7 +250,7 @@ export const c2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "25\n"
+          "expected_output": "25"
         }
       ]
     },
@@ -296,7 +296,7 @@ export const c2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Hello\n"
+          "expected_output": "Hello"
         }
       ]
     },
@@ -350,7 +350,7 @@ export const c2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "12\n"
+          "expected_output": "12"
         }
       ]
     },
@@ -402,7 +402,7 @@ export const c2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "50\n"
+          "expected_output": "50"
         }
       ]
     },
@@ -456,7 +456,7 @@ export const c2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "200\n"
+          "expected_output": "200"
         }
       ]
     },
@@ -504,7 +504,7 @@ export const c2Data = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "2\n"
+          "expected_output": "2"
         }
       ]
     }

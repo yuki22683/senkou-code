@@ -24,11 +24,17 @@ export const csharpData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "// 画面にメッセージを出す関数\nConsole.WriteLine(\"Hello, C#!\");",
-      "holeyCode": "// 画面にメッセージを出す関数\nConsole.WriteLine(\"___\");",
+      "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        // 画面にメッセージを出す関数\n        Console.WriteLine(\"Hello, C#!\");\n    }\n}",
+      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        // 画面にメッセージを出す関数\n        Console.WriteLine(\"___\");\n    }\n}",
       "correctLines": [
-        "// 画面にメッセージを出す関数",
-        "Console.WriteLine(\"Hello, C#!\");"
+        "using System;",
+        "",
+        "class Program {",
+        "    static void Main() {",
+        "        // 画面にメッセージを出す関数",
+        "        Console.WriteLine(\"Hello, C#!\");",
+        "    }",
+        "}"
       ],
       "lineHints": [
         null,

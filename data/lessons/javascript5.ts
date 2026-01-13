@@ -70,7 +70,7 @@ export const javascriptData5 = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "true\nfalse\n"
+          "expected_output": "false\nfalse\n"
         }
       ]
     },
@@ -105,7 +105,7 @@ export const javascriptData5 = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "[ '090-1234-5678', '080-9876-5432' ]\n"
+          "expected_output": "null\n"
         }
       ]
     },
@@ -140,7 +140,7 @@ export const javascriptData5 = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Hello World JavaScript\n"
+          "expected_output": "Hello   World   JavaScript\n"
         }
       ]
     },

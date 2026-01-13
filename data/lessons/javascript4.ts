@@ -266,7 +266,7 @@ export const javascriptData4 = {
         {
           "title": "クロージャとは？",
           "image": "/illustrations/3d_advanced/lambda_spark.png",
-          "content": "# 状態を閉じ込める\n\n**クロージャ**は、関数が定義されたスコープの変数を覚えている機能です。\n\n```javascript\nfunction createCounter() {\n  let count = 0;\n  return () => ++count;\n}\nconst counter = createCounter();\nconsole.log(counter()); // 1\nconsole.log(counter()); // 2\n```"
+          "content": "# 状態を閉じ込める\n\n**クロージャ**は、関数が定義されたスコープ（変数が有効な範囲）の変数を記憶し、後から参照できる機能です。\n\n```javascript\nfunction createCounter() {\n  let count = 0;\n  return () => ++count;\n}\nconst counter = createCounter();\nconsole.log(counter()); // 1\nconsole.log(counter()); // 2\n```"
         }
       ],
       "initialDisplayMode": "holey",
