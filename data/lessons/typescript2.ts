@@ -67,7 +67,7 @@ export const typescriptData2 = {
         },
         {
           "title": "型チェックの恩恵",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 間違いを防ぐ\n\nインターフェースに合わないオブジェクトはエラーになります。\n\n```typescript\ninterface User {\n    name: string;\n    age: number;\n}\n\n// エラー: 'age' がない\nconst user: User = { name: 'Taro' };\n```"
         }
       ],
@@ -112,12 +112,12 @@ export const typescriptData2 = {
       "tutorialSlides": [
         {
           "title": "? でオプショナルに",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/optional_declaration.png",
           "content": "# 省略可能なプロパティ\n\nプロパティ名の後に `?` をつけると、そのプロパティは省略可能になります。\n\n```typescript\ninterface User {\n    name: string;\n    email?: string;  // あってもなくてもOK\n}\n```"
         },
         {
           "title": "オプショナルの使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/optional_concept.png",
           "content": "# 柔軟なオブジェクト\n\n```typescript\ninterface User {\n    name: string;\n    email?: string;\n}\n\nconst user1: User = { name: 'Taro' };  // OK\nconst user2: User = { name: 'Hanako', email: 'h@example.com' };  // OK\n```"
         }
       ],
@@ -162,12 +162,12 @@ export const typescriptData2 = {
       "tutorialSlides": [
         {
           "title": "型エイリアスとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/box.png",
           "content": "# 型に別名をつける\n\n`type` を使って型に名前をつけられます。\n\n```typescript\ntype ID = string | number;\n\nlet userId: ID = 'abc';\nlet orderId: ID = 123;\n```"
         },
         {
           "title": "複雑な型を整理",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/box.png",
           "content": "# 読みやすいコードに\n\n```typescript\ntype Point = {\n    x: number;\n    y: number;\n};\n\nconst origin: Point = { x: 0, y: 0 };\n```"
         }
       ],
@@ -208,12 +208,12 @@ export const typescriptData2 = {
       "tutorialSlides": [
         {
           "title": "readonlyとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 書き換え禁止\n\n`readonly` をつけると、そのプロパティは変更できなくなります。\n\n```typescript\ninterface Config {\n    readonly apiKey: string;\n}\n\nconst config: Config = { apiKey: 'abc123' };\nconfig.apiKey = 'xyz';  // エラー！\n```"
         },
         {
           "title": "readonlyの活用",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 安全なコード\n\n変更されたくない値を守れます。\n\n```typescript\ninterface User {\n    readonly id: number;\n    name: string;\n}\n\nconst user: User = { id: 1, name: 'Taro' };\nuser.name = 'Jiro';  // OK\nuser.id = 2;         // エラー！\n```"
         }
       ],
@@ -315,7 +315,7 @@ export const typescriptData2 = {
         },
         {
           "title": "型推論と一緒に",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# TypeScriptが型を推測\n\n型推論（TypeScriptが値から型を自動的に判断する機能）により、多くの場合、型引数を省略できます。\n\n```typescript\nfunction identity<T>(arg: T): T {\n    return arg;\n}\n\nconst str = identity('hello');  // string と推論\nconst num = identity(42);       // number と推論\n```"
         }
       ],
@@ -363,7 +363,7 @@ export const typescriptData2 = {
         },
         {
           "title": "実践的な例",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# APIレスポンスなどに\n\n```typescript\ninterface Response<T> {\n    data: T;\n    status: number;\n}\n\ninterface User { name: string; }\n\nconst res: Response<User> = {\n    data: { name: 'Taro' },\n    status: 200\n};\n```"
         }
       ],
@@ -411,7 +411,7 @@ export const typescriptData2 = {
         },
         {
           "title": "同じ型の変数を作る",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型の再利用\n\n```typescript\nconst config = {\n    api: 'https://...',\n    timeout: 5000\n};\n\nconst config2: typeof config = {\n    api: 'https://other...',\n    timeout: 3000\n};\n```"
         }
       ],
@@ -455,7 +455,7 @@ export const typescriptData2 = {
         },
         {
           "title": "複数の拡張",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 複数から継承\n\n```typescript\ninterface A { a: string; }\ninterface B { b: number; }\n\ninterface C extends A, B {\n    c: boolean;\n}\n\nconst obj: C = { a: 'hi', b: 1, c: true };\n```"
         }
       ],

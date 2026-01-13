@@ -80,13 +80,13 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "super()とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/super_parent_call.png",
           "content": "# 親クラスのメソッドを呼ぶ\n\n**super()**を使うと、親クラスのメソッドを呼び出せます。\n\n```python\nclass Parent:\n    def __init__(self, name):\n        self.name = name\n\nclass Child(Parent):\n    def __init__(self, name, age):\n        super().__init__(name)\n        self.age = age\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 人を表す親クラスを定義\nclass Person:\n    # 名前を初期設定するメソッドを定義\n    def __init__(self, name):\n        # 名前を属性に保存\n        self.name = name\n\n# Personを継承してStudentクラスを定義\nclass Student(Person):\n    # 名前と学年を初期設定するメソッドを定義\n    def __init__(self, name, grade):\n        # 親クラスの初期化メソッドを呼び出し\n        super().__init__(name)\n        # 学年を属性に保存\n        self.grade = grade\n\n# 'Taro'、3年生としてインスタンスを作成\ns = Student('Taro', 3)\n# インスタンスの情報を表示\nprint(f'{s.name} is in grade {s.grade}')",
-      "holeyCode": "# 人を表す親クラスを定義\nclass ___:\n    # 名前を初期設定するメソッドを定義\n    def ___:\n        # 名前を属性に保存\n        self.name = ___\n\n# Personを継承してStudentクラスを定義\nclass ___:\n    # 名前と学年を初期設定するメソッドを定義\n    def ___:\n        # 親クラスの初期化メソッドを呼び出し\n        ___.__init__(name)\n        # 学年を属性に保存\n        self.grade = ___\n\n# 'Taro'、3年生としてインスタンスを作成\ns = ___\n# インスタンスの情報を表示\nprint(___)",
+      "correctCode": "# 人を表す親クラスを定義\nclass Person:\n    # 名前を初期設定するメソッドを定義\n    def __init__(self, name):\n        # 名前を属性に保存\n        self.name = name\n\n# Personを継承してStudentクラスを定義\nclass Student(Person):\n    # name（名前）、grade（学年）の順で初期設定\n    def __init__(self, name, grade):\n        # 親クラスの初期化メソッドを呼び出し\n        super().__init__(name)\n        # 学年を属性に保存\n        self.grade = grade\n\n# 'Taro'、3年生としてインスタンスを作成\ns = Student('Taro', 3)\n# インスタンスの情報を表示\nprint(f'{s.name} is in grade {s.grade}')",
+      "holeyCode": "# 人を表す親クラスを定義\nclass ___:\n    # 名前を初期設定するメソッドを定義\n    def ___:\n        # 名前を属性に保存\n        self.name = ___\n\n# Personを継承してStudentクラスを定義\nclass ___:\n    # name（名前）、grade（学年）の順で初期設定\n    def ___:\n        # 親クラスの初期化メソッドを呼び出し\n        ___.__init__(name)\n        # 学年を属性に保存\n        self.grade = ___\n\n# 'Taro'、3年生としてインスタンスを作成\ns = ___\n# インスタンスの情報を表示\nprint(___)",
       "correctLines": [
         "# 人を表す親クラスを定義",
         "class Person:",
@@ -97,7 +97,7 @@ export const pythonData4 = {
         "",
         "# Personを継承してStudentクラスを定義",
         "class Student(Person):",
-        "    # 名前と学年を初期設定するメソッドを定義",
+        "    # name（名前）、grade（学年）の順で初期設定",
         "    def __init__(self, name, grade):",
         "        # 親クラスの初期化メソッドを呼び出し",
         "        super().__init__(name)",
@@ -155,12 +155,12 @@ export const pythonData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 長方形を表すクラスを定義\nclass Rectangle:\n    # 幅と高さを初期設定するメソッドを定義\n    def __init__(self, width, height):\n        # 幅を保存\n        self.width = width\n        # 高さを保存\n        self.height = height\n    \n    # メソッドを属性のように扱えるように設定\n    @property\n    # 面積を計算して返すメソッドを定義\n    def area(self):\n        # 幅と高さの積を計算\n        return self.width * self.height\n\n# 幅4、高さ5のインスタンスを作成\nr = Rectangle(4, 5)\n# 面積を表示（プロパティなので括弧なし）\nprint(r.area)",
-      "holeyCode": "# 長方形を表すクラスを定義\nclass ___:\n    # 幅と高さを初期設定するメソッドを定義\n    def ___:\n        # 幅を保存\n        self.width = ___\n        # 高さを保存\n        self.height = ___\n    \n    # メソッドを属性のように扱えるように設定\n    ___\n    # 面積を計算して返すメソッドを定義\n    def ___:\n        # 幅と高さの積を計算\n        return ___\n\n# 幅4、高さ5のインスタンスを作成\nr = ___\n# 面積を表示（プロパティなので括弧なし）\nprint(___)",
+      "correctCode": "# 長方形を表すクラスを定義\nclass Rectangle:\n    # width（幅）、height（高さ）の順で初期設定\n    def __init__(self, width, height):\n        # 幅を保存\n        self.width = width\n        # 高さを保存\n        self.height = height\n    \n    # メソッドを属性のように扱えるように設定\n    @property\n    # 面積を計算して返すメソッドを定義\n    def area(self):\n        # 幅と高さの積を計算\n        return self.width * self.height\n\n# 幅4、高さ5のインスタンスを作成\nr = Rectangle(4, 5)\n# 面積を表示（プロパティなので括弧なし）\nprint(r.area)",
+      "holeyCode": "# 長方形を表すクラスを定義\nclass ___:\n    # width（幅）、height（高さ）の順で初期設定\n    def ___:\n        # 幅を保存\n        self.width = ___\n        # 高さを保存\n        self.height = ___\n    \n    # メソッドを属性のように扱えるように設定\n    ___\n    # 面積を計算して返すメソッドを定義\n    def ___:\n        # 幅と高さの積を計算\n        return ___\n\n# 幅4、高さ5のインスタンスを作成\nr = ___\n# 面積を表示（プロパティなので括弧なし）\nprint(___)",
       "correctLines": [
         "# 長方形を表すクラスを定義",
         "class Rectangle:",
-        "    # 幅と高さを初期設定するメソッドを定義",
+        "    # width（幅）、height（高さ）の順で初期設定",
         "    def __init__(self, width, height):",
         "        # 幅を保存",
         "        self.width = width",
@@ -431,17 +431,17 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "__str__とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/str_representation.png",
           "content": "# オブジェクトを文字列で表す\n\n**__str__**メソッドを定義すると、print()やstr()での表示をカスタマイズできます。\n\n```python\nclass Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def __str__(self):\n        return f'Point({self.x}, {self.y})'\n\np = Point(3, 4)\nprint(p)  # Point(3, 4)\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# 本を表すクラスを定義\nclass Book:\n    # タイトルと著者で初期化するメソッドを定義\n    def __init__(self, title, author):\n        # タイトルを属性に保存\n        self.title = title\n        # 著者を属性に保存\n        self.author = author\n    \n    # 文字列表現を定義するメソッドを定義\n    def __str__(self):\n        # 「タイトル by 著者」の形式で返す\n        return f'{self.title} by {self.author}'\n\n# タイトルと著者を指定してインスタンスを作成\nbook = Book('Python Guide', 'Taro')\n# インスタンスを表示\nprint(book)",
-      "holeyCode": "# 本を表すクラスを定義\nclass ___:\n    # タイトルと著者で初期化するメソッドを定義\n    def ___:\n        # タイトルを属性に保存\n        self.title = ___\n        # 著者を属性に保存\n        self.author = ___\n    \n    # 文字列表現を定義するメソッドを定義\n    def ___(self):\n        # 「タイトル by 著者」の形式で返す\n        return ___\n\n# タイトルと著者を指定してインスタンスを作成\nbook = ___\n# インスタンスを表示\nprint(___)",
+      "correctCode": "# 本を表すクラスを定義\nclass Book:\n    # title（タイトル）、author（著者）の順で初期化\n    def __init__(self, title, author):\n        # タイトルを属性に保存\n        self.title = title\n        # 著者を属性に保存\n        self.author = author\n    \n    # 文字列表現を定義するメソッドを定義\n    def __str__(self):\n        # 「タイトル by 著者」の形式で返す\n        return f'{self.title} by {self.author}'\n\n# title（タイトル）、author（著者）の順でインスタンスを作成\nbook = Book('Python Guide', 'Taro')\n# インスタンスを表示\nprint(book)",
+      "holeyCode": "# 本を表すクラスを定義\nclass ___:\n    # title（タイトル）、author（著者）の順で初期化\n    def ___:\n        # タイトルを属性に保存\n        self.title = ___\n        # 著者を属性に保存\n        self.author = ___\n    \n    # 文字列表現を定義するメソッドを定義\n    def ___(self):\n        # 「タイトル by 著者」の形式で返す\n        return ___\n\n# title（タイトル）、author（著者）の順でインスタンスを作成\nbook = ___\n# インスタンスを表示\nprint(___)",
       "correctLines": [
         "# 本を表すクラスを定義",
         "class Book:",
-        "    # タイトルと著者で初期化するメソッドを定義",
+        "    # title（タイトル）、author（著者）の順で初期化",
         "    def __init__(self, title, author):",
         "        # タイトルを属性に保存",
         "        self.title = title",
@@ -453,7 +453,7 @@ export const pythonData4 = {
         "        # 「タイトル by 著者」の形式で返す",
         "        return f'{self.title} by {self.author}'",
         "",
-        "# タイトルと著者を指定してインスタンスを作成",
+        "# title（タイトル）、author（著者）の順でインスタンスを作成",
         "book = Book('Python Guide', 'Taro')",
         "# インスタンスを表示",
         "print(book)"
@@ -497,17 +497,17 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "__eq__とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/equality_compare.png",
           "content": "# オブジェクトの比較方法を定義\n\n**__eq__**メソッドを定義すると、==での比較をカスタマイズできます。\n\n```python\nclass Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    \n    def __eq__(self, other):\n        return self.x == other.x and self.y == other.y\n\np1 = Point(1, 2)\np2 = Point(1, 2)\nprint(p1 == p2)  # True\n```"
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# ベクトルを表すクラスを定義\nclass Vector:\n    # x座標とy座標で初期化するメソッドを定義\n    def __init__(self, x, y):\n        # x座標を属性に保存\n        self.x = x\n        # y座標を属性に保存\n        self.y = y\n    \n    # 等価比較を定義するメソッドを定義\n    def __eq__(self, other):\n        # 両座標が一致するかを返す\n        return self.x == other.x and self.y == other.y\n\n# 座標(3, 4)でインスタンスを作成\nv1 = Vector(3, 4)\n# 同じ座標で別のインスタンスを作成\nv2 = Vector(3, 4)\n# 2つのベクトルが等しいか比較\nprint(v1 == v2)",
-      "holeyCode": "# ベクトルを表すクラスを定義\nclass ___:\n    # x座標とy座標で初期化するメソッドを定義\n    def ___:\n        # x座標を属性に保存\n        self.x = ___\n        # y座標を属性に保存\n        self.y = ___\n    \n    # 等価比較を定義するメソッドを定義\n    def ___(self, other):\n        # 両座標が一致するかを返す\n        return ___\n\n# 座標(3, 4)でインスタンスを作成\nv1 = ___\n# 同じ座標で別のインスタンスを作成\nv2 = ___\n# 2つのベクトルが等しいか比較\nprint(___)",
+      "correctCode": "# ベクトルを表すクラスを定義\nclass Vector:\n    # x、yの順で座標を初期化\n    def __init__(self, x, y):\n        # x座標を属性に保存\n        self.x = x\n        # y座標を属性に保存\n        self.y = y\n    \n    # 等価比較を定義するメソッドを定義\n    def __eq__(self, other):\n        # 両座標が一致するかを返す\n        return self.x == other.x and self.y == other.y\n\n# 座標(3, 4)でインスタンスを作成\nv1 = Vector(3, 4)\n# 同じ座標で別のインスタンスを作成\nv2 = Vector(3, 4)\n# 2つのベクトルが等しいか比較\nprint(v1 == v2)",
+      "holeyCode": "# ベクトルを表すクラスを定義\nclass ___:\n    # x、yの順で座標を初期化\n    def ___:\n        # x座標を属性に保存\n        self.x = ___\n        # y座標を属性に保存\n        self.y = ___\n    \n    # 等価比較を定義するメソッドを定義\n    def ___(self, other):\n        # 両座標が一致するかを返す\n        return ___\n\n# 座標(3, 4)でインスタンスを作成\nv1 = ___\n# 同じ座標で別のインスタンスを作成\nv2 = ___\n# 2つのベクトルが等しいか比較\nprint(___)",
       "correctLines": [
         "# ベクトルを表すクラスを定義",
         "class Vector:",
-        "    # x座標とy座標で初期化するメソッドを定義",
+        "    # x、yの順で座標を初期化",
         "    def __init__(self, x, y):",
         "        # x座標を属性に保存",
         "        self.x = x",
@@ -567,7 +567,7 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "__len__とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/length_measure.png",
           "content": "# len()を使えるようにする\n\n**__len__**メソッドを定義すると、len()関数が使えるようになります。\n\n```python\nclass Playlist:\n    def __init__(self, songs):\n        self.songs = songs\n    \n    def __len__(self):\n        return len(self.songs)\n\npl = Playlist(['A', 'B', 'C'])\nprint(len(pl))  # 3\n```"
         }
       ],
@@ -634,8 +634,8 @@ export const pythonData4 = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "# dataclassデコレータをインポート\nfrom dataclasses import dataclass\n\n# データクラスとして定義するデコレータを適用\n@dataclass\n# 人物を表すクラスを定義\nclass Person:\n    # 名前の型を文字列で指定\n    name: str\n    # 年齢の型を整数で指定\n    age: int\n\n# 名前と年齢を指定してインスタンスを作成\np = Person('Taro', 25)\n# インスタンスを表示\nprint(p)",
-      "holeyCode": "# dataclassデコレータをインポート\nfrom dataclasses import ___\n\n# データクラスとして定義するデコレータを適用\n___\n# 人物を表すクラスを定義\nclass ___:\n    # 名前の型を文字列で指定\n    name: ___\n    # 年齢の型を整数で指定\n    age: ___\n\n# 名前と年齢を指定してインスタンスを作成\np = ___\n# インスタンスを表示\nprint(___)",
+      "correctCode": "# dataclassデコレータをインポート\nfrom dataclasses import dataclass\n\n# データクラスとして定義するデコレータを適用\n@dataclass\n# 人物を表すクラスを定義\nclass Person:\n    # 名前の型を文字列で指定\n    name: str\n    # 年齢の型を整数で指定\n    age: int\n\n# name（名前）、age（年齢）の順でインスタンスを作成\np = Person('Taro', 25)\n# インスタンスを表示\nprint(p)",
+      "holeyCode": "# dataclassデコレータをインポート\nfrom dataclasses import ___\n\n# データクラスとして定義するデコレータを適用\n___\n# 人物を表すクラスを定義\nclass ___:\n    # 名前の型を文字列で指定\n    name: ___\n    # 年齢の型を整数で指定\n    age: ___\n\n# name（名前）、age（年齢）の順でインスタンスを作成\np = ___\n# インスタンスを表示\nprint(___)",
       "correctLines": [
         "# dataclassデコレータをインポート",
         "from dataclasses import dataclass",
@@ -649,7 +649,7 @@ export const pythonData4 = {
         "    # 年齢の型を整数で指定",
         "    age: int",
         "",
-        "# 名前と年齢を指定してインスタンスを作成",
+        "# name（名前）、age（年齢）の順でインスタンスを作成",
         "p = Person('Taro', 25)",
         "# インスタンスを表示",
         "print(p)"

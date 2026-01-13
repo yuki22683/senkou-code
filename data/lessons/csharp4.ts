@@ -72,12 +72,12 @@ export const csharp4Data = {
       "tutorialSlides": [
         {
           "title": "where 制約",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型の条件を指定\n\n**where** で型パラメータに制約を付けられます。\n\n```csharp\nclass Repo<T> where T : class, new() {\n    public T Create() => new T();\n}\n```"
         },
         {
           "title": "制約の種類",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# よく使う制約\n\n```csharp\nwhere T : class      // 参照型\nwhere T : struct     // 値型\nwhere T : new()      // 引数なしコンストラクタ\nwhere T : IComparable // インターフェース\n```"
         }
       ],
@@ -130,12 +130,12 @@ export const csharp4Data = {
       "tutorialSlides": [
         {
           "title": "デリゲートとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# メソッドの参照\n\n**デリゲート** は、メソッドを参照できる型です。\n\n```csharp\ndelegate int Operation(int a, int b);\n\nint Add(int a, int b) => a + b;\nOperation op = Add;\nint result = op(2, 3);  // 5\n```"
         },
         {
           "title": "組み込みデリゲート",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# Func と Action\n\n```csharp\nFunc<int, int, int> add = (a, b) => a + b;\nAction<string> print = s => Console.WriteLine(s);\n```"
         }
       ],
@@ -188,7 +188,7 @@ export const csharp4Data = {
       "tutorialSlides": [
         {
           "title": "Func とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 戻り値ありのデリゲート\n\n**Func<>** は、戻り値を持つメソッドを参照します。\n\n```csharp\nFunc<int, int> square = x => x * x;\nFunc<int, int, int> add = (a, b) => a + b;\n```"
         },
         {
@@ -238,7 +238,7 @@ export const csharp4Data = {
       "tutorialSlides": [
         {
           "title": "Action とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 戻り値なしのデリゲート\n\n**Action<>** は、戻り値を持たないメソッドを参照します。\n\n```csharp\nAction greet = () => Console.WriteLine(\"Hi\");\nAction<string> print = s => Console.WriteLine(s);\n```"
         },
         {
@@ -288,12 +288,12 @@ export const csharp4Data = {
       "tutorialSlides": [
         {
           "title": "GroupBy とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# グループ化\n\n**GroupBy** は、キーでグループ分けします。\n\n```csharp\nvar groups = people.GroupBy(p => p.City);\nforeach (var g in groups) {\n    Console.WriteLine($\"{g.Key}: {g.Count()}\");\n}\n```"
         },
         {
           "title": "IGrouping",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# キーと要素\n\n```csharp\n// g.Key でグループのキー\n// g でグループの要素（IEnumerable）\n```"
         }
       ],
@@ -346,12 +346,12 @@ export const csharp4Data = {
       "tutorialSlides": [
         {
           "title": "?. とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# null安全なアクセス\n\n**?.** は、nullでなければアクセス、nullならnullを返します。\n\n```csharp\nstring? name = person?.Name;\nint? length = str?.Length;\n```"
         },
         {
           "title": "?? と組み合わせ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# デフォルト値\n\n```csharp\nstring name = person?.Name ?? \"Unknown\";\n```"
         }
       ],
@@ -398,12 +398,12 @@ export const csharp4Data = {
       "tutorialSlides": [
         {
           "title": "?? とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# nullならデフォルト\n\n**??** は、左側がnullなら右側を返します。\n\n```csharp\nstring name = inputName ?? \"Guest\";\n```"
         },
         {
           "title": "??= 代入",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# nullの場合だけ代入\n\n```csharp\nname ??= \"Default\";  // nameがnullなら代入\n```"
         }
       ],
@@ -450,12 +450,12 @@ export const csharp4Data = {
       "tutorialSlides": [
         {
           "title": "record とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 不変データ型\n\n**record** は、イミュータブルなデータ型を簡潔に定義します。\n\n```csharp\nrecord Person(string Name, int Age);\n\nvar p = new Person(\"Alice\", 30);\n```"
         },
         {
           "title": "with 式",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 一部を変更したコピー\n\n```csharp\nvar p2 = p with { Age = 31 };\n```"
         }
       ],
@@ -504,12 +504,12 @@ export const csharp4Data = {
       "tutorialSlides": [
         {
           "title": "init とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 初期化時のみ設定可能\n\n**init** アクセサは、オブジェクト初期化時のみ値を設定できます。\n\n```csharp\nclass Person {\n    public string Name { get; init; }\n}\n\nvar p = new Person { Name = \"Alice\" };\n// p.Name = \"Bob\";  // エラー！\n```"
         },
         {
           "title": "不変性の確保",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 作成後は読み取り専用\n\n```csharp\npublic int Id { get; init; }\npublic string Name { get; init; }\n```"
         }
       ],

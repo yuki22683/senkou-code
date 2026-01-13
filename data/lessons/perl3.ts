@@ -14,12 +14,12 @@ export const perl3Data = {
       "tutorialSlides": [
         {
           "title": "open とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ファイルを開く\n\n**open** 関数を使ってファイルを開きます。ファイルハンドルを使ってデータを読み書きします。"
         },
         {
           "title": "open の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# open(FH, モード, ファイル)\n\nモードには `<`（読み込み）、`>`（書き込み）、`>>`（追記）があります。\n\n**コード例：**\n```perl\nopen(my $fh, \"<\", \"file.txt\");\n```"
         }
       ],
@@ -56,12 +56,12 @@ export const perl3Data = {
       "tutorialSlides": [
         {
           "title": "close とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ファイルを閉じる\n\n**close** 関数でファイルハンドルを閉じます。リソースを解放するために重要です。"
         },
         {
           "title": "close の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# close(ファイルハンドル)\n\n使い終わったファイルは必ず閉じましょう。\n\n**コード例：**\n```perl\nclose($fh);\n```"
         }
       ],
@@ -98,12 +98,12 @@ export const perl3Data = {
       "tutorialSlides": [
         {
           "title": "chomp とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 改行を除去\n\n**chomp** は、文字列の末尾にある改行文字を除去します。ファイル読み込み時によく使います。"
         },
         {
           "title": "chomp の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# chomp($変数)\n\n変数の内容を直接変更します。\n\n**コード例：**\n```perl\nmy $line = \"hello\\n\";\nchomp($line);\nprint $line; # hello\n```"
         }
       ],
@@ -138,12 +138,12 @@ export const perl3Data = {
       "tutorialSlides": [
         {
           "title": "split とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 文字列を分割\n\n**split** は、パターンで文字列を分割してリストを返します。"
         },
         {
           "title": "split の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# split(/パターン/, 文字列)\n\n区切り文字で分割します。\n\n**コード例：**\n```perl\nmy @parts = split(/,/, \"a,b,c\");\nprint $parts[1]; # b\n```"
         }
       ],
@@ -178,12 +178,12 @@ export const perl3Data = {
       "tutorialSlides": [
         {
           "title": "join とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 配列を結合\n\n**join** は、区切り文字を使って配列の要素を一つの文字列に結合します。"
         },
         {
           "title": "join の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# join(区切り, @配列)\n\n区切り文字で要素をつなぎます。\n\n**コード例：**\n```perl\nmy @arr = (\"a\", \"b\", \"c\");\nmy $str = join(\"-\", @arr);\nprint $str; # a-b-c\n```"
         }
       ],
@@ -218,12 +218,12 @@ export const perl3Data = {
       "tutorialSlides": [
         {
           "title": "push とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 配列に追加\n\n**push** は、配列の末尾に要素を追加します。"
         },
         {
           "title": "push の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# push(@配列, 値)\n\n一度に複数の値も追加できます。\n\n**コード例：**\n```perl\nmy @arr = (1, 2);\npush(@arr, 3);\nprint $arr[2]; # 3\n```"
         }
       ],
@@ -258,12 +258,12 @@ export const perl3Data = {
       "tutorialSlides": [
         {
           "title": "pop とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 末尾から取り出す\n\n**pop** は、配列の末尾から要素を取り出して返します。配列は短くなります。"
         },
         {
           "title": "pop の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# pop(@配列)\n\n末尾の要素を取り出します。\n\n**コード例：**\n```perl\nmy @arr = (1, 2, 3);\nmy $last = pop(@arr);\nprint $last; # 3\n```"
         }
       ],
@@ -298,12 +298,12 @@ export const perl3Data = {
       "tutorialSlides": [
         {
           "title": "sort とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 配列を並べ替え\n\n**sort** は、配列の要素を並べ替えた新しいリストを返します。"
         },
         {
           "title": "sort の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# sort @配列\n\nデフォルトは文字列順です。数値順にするには比較関数を使います。\n\n**コード例：**\n```perl\nmy @sorted = sort @arr;\nmy @nums = sort { $a <=> $b } @nums;\n```"
         }
       ],
@@ -338,12 +338,12 @@ export const perl3Data = {
       "tutorialSlides": [
         {
           "title": "reverse とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 配列を逆順に\n\n**reverse** は、配列の要素を逆順にした新しいリストを返します。"
         },
         {
           "title": "reverse の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# reverse @配列\n\n文字列にも使えます。\n\n**コード例：**\n```perl\nmy @rev = reverse @arr;\nmy $str = reverse \"hello\"; # olleh\n```"
         }
       ],
@@ -378,12 +378,12 @@ export const perl3Data = {
       "tutorialSlides": [
         {
           "title": "length とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 文字列の長さ\n\n**length** は、文字列の長さを返します。"
         },
         {
           "title": "length の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# length(文字列)\n\n文字数を返します。\n\n**コード例：**\n```perl\nmy $len = length(\"hello\");\nprint $len; # 5\n```"
         }
       ],

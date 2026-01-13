@@ -14,12 +14,12 @@ export const rust3Data = {
       "tutorialSlides": [
         {
           "title": "ライフタイムとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 参照の有効期間\n\n**ライフタイム** は、参照が有効な範囲を示します。`'a` のように表記します。\n\n```rust\nfn longest<'a>(x: &'a str, y: &'a str) -> &'a str {\n    if x.len() > y.len() { x } else { y }\n}\n```"
         },
         {
           "title": "なぜ必要？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 無効な参照を防ぐ\n\nダングリング参照（既に解放されたメモリを指す参照）を防ぐため、Rustはライフタイムを追跡します。"
         }
       ],
@@ -106,12 +106,12 @@ export const rust3Data = {
       "tutorialSlides": [
         {
           "title": "イテレータとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 順番に処理\n\n**イテレータ** は、要素を1つずつ取り出して処理します。\n\n```rust\nlet v = vec![1, 2, 3];\nlet iter = v.iter();\nfor x in iter {\n    println!(\"{}\", x);\n}\n```"
         },
         {
           "title": "iter() と into_iter()",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 参照 vs 所有権\n\n```rust\nv.iter()      // &T を返す\nv.iter_mut()  // &mut T を返す\nv.into_iter() // T を返す（所有権を移動）\n```"
         }
       ],
@@ -157,7 +157,7 @@ export const rust3Data = {
         },
         {
           "title": "遅延評価",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# collect() で実行\n\nイテレータは遅延評価（実際に値が必要になるまで処理を実行しない仕組み）のため、`collect()` などで消費する必要があります。"
         }
       ],
@@ -240,12 +240,12 @@ export const rust3Data = {
       "tutorialSlides": [
         {
           "title": "fold とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 累積処理\n\n**fold** は、初期値と関数で要素を1つずつ畳み込みます。\n\n```rust\nlet v = vec![1, 2, 3];\nlet sum = v.iter().fold(0, |acc, x| acc + x);\n// 6\n```"
         },
         {
           "title": "様々な畳み込み",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 合計、積、結合など\n\n```rust\n// 積\nv.iter().fold(1, |acc, x| acc * x)\n\n// 文字列結合\nwords.iter().fold(String::new(), |acc, s| acc + s)\n```"
         }
       ],
@@ -289,7 +289,7 @@ export const rust3Data = {
         },
         {
           "title": "match の省略形",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 簡潔なエラー処理\n\n```rust\n// ? を使わない場合\nmatch result {\n    Ok(v) => v,\n    Err(e) => return Err(e),\n}\n\n// ? を使う\nresult?\n```"
         }
       ],
@@ -350,12 +350,12 @@ export const rust3Data = {
       "tutorialSlides": [
         {
           "title": "unwrap_or とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# None/Err の場合のデフォルト\n\n**unwrap_or** は、None や Err の場合にデフォルト値を返します。\n\n```rust\nlet x: Option<i32> = None;\nlet value = x.unwrap_or(0);  // 0\n```"
         },
         {
           "title": "unwrap_or_else",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 遅延評価\n\n```rust\n// クロージャで計算\nlet value = x.unwrap_or_else(|| expensive_computation());\n```"
         }
       ],
@@ -394,12 +394,12 @@ export const rust3Data = {
       "tutorialSlides": [
         {
           "title": "push とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 末尾に追加\n\n**push** は、Vecの末尾に要素を追加します。\n\n```rust\nlet mut v = vec![1, 2];\nv.push(3);\n// [1, 2, 3]\n```"
         },
         {
           "title": "mut が必要",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 可変参照\n\n```rust\n// mut が必要\nlet mut v = Vec::new();\nv.push(1);\nv.push(2);\n```"
         }
       ],
@@ -440,7 +440,7 @@ export const rust3Data = {
       "tutorialSlides": [
         {
           "title": "String vs &str",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 所有権の違い\n\n**String** は所有権を持つヒープ上の文字列、**&str** は参照です。\n\n```rust\nlet s1: String = String::from(\"hello\");\nlet s2: &str = \"hello\";\n```"
         },
         {

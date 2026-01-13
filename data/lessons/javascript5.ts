@@ -14,7 +14,7 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "正規表現リテラル",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/regex_search.png",
           "content": "# パターンを定義する\n\n**/pattern/**で正規表現を定義します。\n\n```javascript\nconst pattern = /hello/;\nconsole.log(pattern.test('hello world')); // true\n```"
         }
       ],
@@ -191,7 +191,7 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "finally節",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/finally_always.png",
           "content": "# 常に実行される\n\n**finally**はエラーの有無に関わらず必ず実行されます。\n\n```javascript\ntry {\n  // 処理\n} catch (e) {\n  // エラー処理\n} finally {\n  // 必ず実行\n}\n```"
         }
       ],
@@ -295,7 +295,7 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "Symbolとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/symbol_unique.png",
           "content": "# ユニークな識別子\n\n**Symbol**は一意の識別子を作成します。\n\n```javascript\nconst id = Symbol('id');\nconst obj = {\n  [id]: 12345\n};\nconsole.log(obj[id]); // 12345\n```"
         }
       ],
@@ -395,7 +395,7 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "Proxyとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/proxy_intercept.png",
           "content": "# 操作をインターセプト\n\n**Proxy**でオブジェクトの操作をインターセプトできます。\n\n```javascript\nconst handler = {\n  get(target, prop) {\n    return prop in target ? target[prop] : 'not found';\n  }\n};\nconst obj = new Proxy({}, handler);\n```"
         }
       ],

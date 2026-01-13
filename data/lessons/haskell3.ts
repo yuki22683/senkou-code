@@ -98,7 +98,7 @@ export const haskell3Data = {
       "tutorialSlides": [
         {
           "title": "foldr（右畳み込み）",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/foldr_fold.png",
           "content": "foldrはリストを右から畳み込みます。\n\n```haskell\n-- foldr :: (a -> b -> b) -> b -> [a] -> b\n-- foldr f init [x1, x2, x3]\n-- = f x1 (f x2 (f x3 init))\n\nsum' = foldr (+) 0 [1, 2, 3]\n-- = 1 + (2 + (3 + 0)) = 6\n```"
         }
       ],
@@ -126,7 +126,7 @@ export const haskell3Data = {
       "tutorialSlides": [
         {
           "title": "関数合成",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/compose_gear.png",
           "content": "関数合成(.)は2つの関数を組み合わせます。\n\n```haskell\n-- (.) :: (b -> c) -> (a -> b) -> a -> c\n-- (f . g) x = f (g x)\n\ndoubleNegate = negate . (*2)\n-- doubleNegate 3 = negate (3 * 2) = -6\n\nabs' = abs . negate\n-- abs' 5 = abs (negate 5) = 5\n```"
         }
       ],
@@ -154,7 +154,7 @@ export const haskell3Data = {
       "tutorialSlides": [
         {
           "title": "Maybe型",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/maybe_box.png",
           "content": "Maybe型は値が存在するかもしれない（Just）、存在しないかもしれない（Nothing）を表します。\n\n```haskell\n-- data Maybe a = Nothing | Just a\n\nsafeHead :: [a] -> Maybe a\nsafeHead [] = Nothing\nsafeHead (x:_) = Just x\n\n-- safeHead [1,2,3] = Just 1\n-- safeHead [] = Nothing\n```"
         }
       ],
@@ -183,7 +183,7 @@ export const haskell3Data = {
       "tutorialSlides": [
         {
           "title": "Either型",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/either_fork.png",
           "content": "Either型は失敗（Left）または成功（Right）を表します。\n\n```haskell\n-- data Either a b = Left a | Right b\n\nsafeDiv :: Int -> Int -> Either String Int\nsafeDiv _ 0 = Left \"Division by zero\"\nsafeDiv x y = Right (x `div` y)\n\n-- safeDiv 10 2 = Right 5\n-- safeDiv 10 0 = Left \"Division by zero\"\n```"
         }
       ],
@@ -240,7 +240,7 @@ export const haskell3Data = {
       "tutorialSlides": [
         {
           "title": "do記法",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/do_sequence.png",
           "content": "do記法はモナド操作を命令型風に書けます。\n\n```haskell\n-- バインド(>>=)を使った書き方\nresult = Just 5 >>= \\x -> Just (x + 1)\n\n-- do記法\nresult = do\n  x <- Just 5\n  return (x + 1)\n-- 結果: Just 6\n```"
         }
       ],

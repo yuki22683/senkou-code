@@ -14,12 +14,12 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "async/await とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 非同期処理を同期的に書く\n\n**async/await** を使うと、非同期処理を同期的なコードのように書けます。\n\n```csharp\nasync Task<string> GetDataAsync() {\n    await Task.Delay(1000);\n    return \"Done!\";\n}\n```"
         },
         {
           "title": "Task を返す",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 戻り値の型\n\n```csharp\nasync Task DoWorkAsync()        // 戻り値なし\nasync Task<int> GetValueAsync() // int を返す\nasync void OnClick()            // イベントハンドラのみ\n```"
         }
       ],
@@ -76,12 +76,12 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "OrderBy とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 並べ替え\n\n**OrderBy** は、指定したキーで昇順に並べ替えます。\n\n```csharp\nvar sorted = names.OrderBy(x => x.Length);\n```"
         },
         {
           "title": "降順ソート",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# OrderByDescending\n\n```csharp\nvar desc = nums.OrderByDescending(x => x);\n```"
         }
       ],
@@ -130,7 +130,7 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "First vs FirstOrDefault",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 最初の要素\n\n```csharp\nvar first = nums.First();  // 空なら例外\nvar firstOr = nums.FirstOrDefault();  // 空ならデフォルト値\n```"
         },
         {
@@ -184,12 +184,12 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "Any とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 1つでも条件を満たすか\n\n**Any** は、1つでも条件を満たす要素があれば true。\n\n```csharp\nbool hasNegative = nums.Any(x => x < 0);\n```"
         },
         {
           "title": "All とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 全て条件を満たすか\n\n```csharp\nbool allPositive = nums.All(x => x > 0);\n```"
         }
       ],
@@ -238,12 +238,12 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "Sum とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 合計を計算\n\n**Sum** は、要素の合計を返します。\n\n```csharp\nvar total = nums.Sum();\nvar totalPrice = items.Sum(x => x.Price);\n```"
         },
         {
           "title": "Average",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 平均を計算\n\n```csharp\nvar avg = nums.Average();\n```"
         }
       ],
@@ -292,7 +292,7 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "switch式とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 式として値を返す\n\nC# 8.0の **switch式** は、値を返す簡潔なswitch。\n\n```csharp\nvar result = value switch {\n    1 => \"one\",\n    2 => \"two\",\n    _ => \"other\"\n};\n```"
         },
         {
@@ -352,12 +352,12 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "Dictionary とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# キーと値の辞書\n\n**Dictionary** は、キーで値を検索できるコレクション。\n\n```csharp\nvar dict = new Dictionary<string, int> {\n    [\"apple\"] = 100,\n    [\"banana\"] = 80\n};\n```"
         },
         {
           "title": "値の取得",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# TryGetValue\n\n```csharp\nif (dict.TryGetValue(\"apple\", out var price)) {\n    Console.WriteLine(price);\n}\n```"
         }
       ],
@@ -408,12 +408,12 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "文字列補間とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# $ で始める\n\n**$\"\"** で文字列内に変数を埋め込めます。\n\n```csharp\nvar name = \"Alice\";\nvar msg = $\"Hello, {name}!\";\n```"
         },
         {
           "title": "式も埋め込める",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 計算や呼び出し\n\n```csharp\n$\"Result: {1 + 2}\"      // Result: 3\n$\"Upper: {s.ToUpper()}\" // 式\n```"
         }
       ],
@@ -460,12 +460,12 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "record とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 値ベースの型\n\nC# 9.0の **record** は、値の等価性を持つ不変の型。\n\n```csharp\nrecord Person(string Name, int Age);\n\nvar p1 = new Person(\"Alice\", 25);\nvar p2 = new Person(\"Alice\", 25);\nConsole.WriteLine(p1 == p2);  // True\n```"
         },
         {
           "title": "with で複製",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 一部だけ変更\n\n```csharp\nvar p2 = p1 with { Age = 26 };\n```"
         }
       ],
@@ -514,12 +514,12 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "using とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 自動的にDispose\n\n**using** を使うと、スコープを出たときに自動的にDisposeが呼ばれます。\n\n```csharp\nusing var file = new StreamReader(\"file.txt\");\nvar content = file.ReadToEnd();\n// 自動的にDisposeされる\n```"
         },
         {
           "title": "旧式の書き方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ブロック構文\n\n```csharp\nusing (var file = new StreamReader(\"file.txt\")) {\n    // ...\n}  // ここでDispose\n```"
         }
       ],

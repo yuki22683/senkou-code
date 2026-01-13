@@ -14,7 +14,7 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "every()とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/every_check.png",
           "content": "# 全ての要素をチェック\n\n**every()**は、配列の全ての要素が条件を満たすかチェックします。\n\n```javascript\nconst nums = [2, 4, 6, 8];\nconst allEven = nums.every(n => n % 2 === 0);\nconsole.log(allEven); // true\n```"
         }
       ],
@@ -49,7 +49,7 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "some()とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/some_check.png",
           "content": "# いずれかの要素をチェック\n\n**some()**は、配列のいずれかの要素が条件を満たすかチェックします。\n\n```javascript\nconst nums = [1, 3, 5, 8];\nconst hasEven = nums.some(n => n % 2 === 0);\nconsole.log(hasEven); // true\n```"
         }
       ],
@@ -191,7 +191,7 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "カリー化とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/curry_step.png",
           "content": "# 引数を1つずつ受け取る\n\n**カリー化**とは、複数の引数を取る関数を、引数を1つずつ受け取る関数に変換することです。\n\n```javascript\nconst add = a => b => a + b;\nconst add5 = add(5);\nconsole.log(add5(3)); // 8\n```"
         }
       ],
@@ -226,7 +226,7 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "関数合成とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/compose_pipe.png",
           "content": "# 関数を組み合わせる\n\n**関数合成**とは、複数の関数を組み合わせて新しい関数を作ることです。\n\n```javascript\nconst compose = (f, g) => x => f(g(x));\nconst double = x => x * 2;\nconst addOne = x => x + 1;\nconst doubleThenAdd = compose(addOne, double);\nconsole.log(doubleThenAdd(5)); // 11\n```"
         }
       ],
@@ -310,7 +310,7 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "メモ化とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/memoize_cache.png",
           "content": "# 計算結果をキャッシュ\n\n**メモ化**は、関数の結果をキャッシュして同じ引数での再計算を避ける技法です。\n\n```javascript\nfunction memoize(fn) {\n  const cache = {};\n  return (x) => {\n    if (!(x in cache)) {\n      cache[x] = fn(x);\n    }\n    return cache[x];\n  };\n}\n```"
         }
       ],
@@ -363,7 +363,7 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "パイプラインとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/pipeline_flow.png",
           "content": "# 関数を順番に適用\n\n**パイプライン**は、複数の関数を順番に適用する技法です。\n\n```javascript\nconst pipe = (...fns) => x =>\n  fns.reduce((v, f) => f(v), x);\n\nconst process = pipe(\n  x => x * 2,\n  x => x + 1,\n  x => x * 3\n);\nconsole.log(process(5)); // 33\n```"
         }
       ],

@@ -136,12 +136,12 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "シンボルとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/symbol_ruby.png",
           "content": "# 軽量な名前\n\n**シンボル** は `:名前` で表す軽量な識別子です。文字列より効率的で、ハッシュのキーによく使います。"
         },
         {
           "title": "シンボルの使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/symbol_ruby.png",
           "content": "# ハッシュのキーに最適\n\nシンボルは同じ名前なら同じオブジェクトを指すため、メモリ効率が良いです。\n\n**コード例：**\n```ruby\nperson = { name: 'Taro', age: 20 }\nputs person[:name] # Taro\n```"
         }
       ],
@@ -228,12 +228,12 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "attr_accessor とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/attr_accessor.png",
           "content": "# 自動でメソッドを作成\n\n`attr_accessor` は、インスタンス変数の読み書き用メソッドを自動で作ってくれます。"
         },
         {
           "title": "アクセサの種類",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/attr_accessor.png",
           "content": "# 3種類のアクセサ\n\n- `attr_reader` : 読み取りのみ\n- `attr_writer` : 書き込みのみ\n- `attr_accessor` : 両方\n\n**コード例：**\n```ruby\nclass Person\n  attr_accessor :name\nend\n```"
         }
       ],
@@ -326,12 +326,12 @@ export const ruby2Data = {
       "tutorialSlides": [
         {
           "title": "モジュールとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/module_mixin.png",
           "content": "# 機能の入れ物\n\n**モジュール** は、メソッドをまとめた入れ物です。`include` でクラスに取り込めます。多重継承の代わりに使います。"
         },
         {
           "title": "include でミックスイン",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/module_mixin.png",
           "content": "# モジュールを取り込む\n\nクラス内で `include モジュール名` と書きます。\n\n**コード例：**\n```ruby\nmodule Greet\n  def hello\n    puts 'hello'\n  end\nend\nclass Person\n  include Greet\nend\n```"
         }
       ],

@@ -14,12 +14,12 @@ export const rust2Data = {
       "tutorialSlides": [
         {
           "title": "所有権とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# メモリの「持ち主」\n\n**所有権** は、値の「持ち主」を明確にする仕組みです。各値には1つの所有者だけが存在し、所有者がスコープ（変数が有効な範囲）を抜けると値は自動的に破棄されます。"
         },
         {
           "title": "ムーブ（移動）",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 所有権の移動\n\n代入すると所有権が移動（ムーブ）します。元の変数は使えなくなります。\n\n**コード例：**\n```rust\nlet s1 = String::from(\"hello\");\nlet s2 = s1; // 所有権が s2 に移動\n// s1 は使えない\n```"
         }
       ],
@@ -110,7 +110,7 @@ export const rust2Data = {
         },
         {
           "title": "&mut の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 変更を許可\n\n変数自体も `mut` で宣言し、参照も `&mut` で作ります。\n\n**コード例：**\n```rust\nlet mut s = String::from(\"hello\");\nchange(&mut s);\n```"
         }
       ],
@@ -205,7 +205,7 @@ export const rust2Data = {
       "tutorialSlides": [
         {
           "title": "impl とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 実装ブロック\n\n**impl** ブロックで、構造体にメソッドを追加できます。`self` で自分自身を参照します。"
         },
         {
@@ -319,12 +319,12 @@ export const rust2Data = {
       "tutorialSlides": [
         {
           "title": "Option とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 値があるかもしれない\n\n**Option<T>** は、値があれば `Some(値)`、なければ `None` を表します。null の代わりに使います。"
         },
         {
           "title": "Option の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# Some と None\n\nmatch で安全に値を取り出せます。\n\n**コード例：**\n```rust\nlet x: Option<i32> = Some(5);\nmatch x {\n    Some(n) => println!(\"{}\", n),\n    None => println!(\"none\"),\n}\n```"
         }
       ],
@@ -367,12 +367,12 @@ export const rust2Data = {
       "tutorialSlides": [
         {
           "title": "Result とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 成功か失敗か\n\n**Result<T, E>** は、成功なら `Ok(値)`、失敗なら `Err(エラー)` を表します。エラー処理に使います。"
         },
         {
           "title": "Result の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# Ok と Err\n\nmatch で成功と失敗を分岐できます。\n\n**コード例：**\n```rust\nfn divide(a: i32, b: i32) -> Result<i32, String> {\n    if b == 0 {\n        return Err(\"zero\".to_string());\n    }\n    Ok(a / b)\n}\n```"
         }
       ],
@@ -425,12 +425,12 @@ export const rust2Data = {
       "tutorialSlides": [
         {
           "title": "トレイトとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 共通の機能を定義\n\n**トレイト** は、型が持つべきメソッドを定義します。インターフェースに似ています。"
         },
         {
           "title": "trait の定義",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# trait キーワード\n\n`trait 名前 { メソッド }` で定義し、`impl 型 for トレイト` で実装します。\n\n**コード例：**\n```rust\ntrait Greet {\n    fn greet(&self);\n}\nimpl Greet for Person {\n    fn greet(&self) { ... }\n}\n```"
         }
       ],
@@ -490,7 +490,7 @@ export const rust2Data = {
         },
         {
           "title": "ジェネリック関数",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# <T> で型を抽象化\n\n関数名の後に `<T>` をつけて、T を型として使います。\n\n**コード例：**\n```rust\nfn first<T>(arr: &[T]) -> &T {\n    &arr[0]\n}\n```"
         }
       ],

@@ -14,7 +14,7 @@ export const go4Data = {
       "tutorialSlides": [
         {
           "title": "Mutex とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 排他的ロック\n\n**sync.Mutex** は、共有データへの排他的アクセスを保証します。\n\n```go\nvar mu sync.Mutex\nvar count int\n\nmu.Lock()\ncount++\nmu.Unlock()\n```"
         },
         {
@@ -82,7 +82,7 @@ export const go4Data = {
       "tutorialSlides": [
         {
           "title": "WaitGroup とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ゴルーチンの同期\n\n**sync.WaitGroup** で複数のゴルーチンの完了を待てます。\n\n```go\nvar wg sync.WaitGroup\nwg.Add(1)\ngo func() {\n    defer wg.Done()\n    // 処理\n}()\nwg.Wait()\n```"
         },
         {
@@ -154,12 +154,12 @@ export const go4Data = {
       "tutorialSlides": [
         {
           "title": "context とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# リクエストスコープの値\n\n**context** パッケージは、リクエストのキャンセルやタイムアウトを管理します。\n\n```go\nctx := context.Background()\n```"
         },
         {
           "title": "派生コンテキスト",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# WithCancel, WithTimeout\n\n```go\nctx, cancel := context.WithCancel(context.Background())\ndefer cancel()\n\nctx, cancel := context.WithTimeout(ctx, 5*time.Second)\n```"
         }
       ],
@@ -210,12 +210,12 @@ export const go4Data = {
       "tutorialSlides": [
         {
           "title": "WithCancel とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# キャンセル可能なコンテキスト\n\n**WithCancel** でキャンセル可能なコンテキストを作成できます。\n\n```go\nctx, cancel := context.WithCancel(context.Background())\ndefer cancel()\n```"
         },
         {
           "title": "キャンセルの確認",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# Done チャネル\n\n```go\nselect {\ncase <-ctx.Done():\n    return ctx.Err()\ndefault:\n    // 処理続行\n}\n```"
         }
       ],
@@ -268,12 +268,12 @@ export const go4Data = {
       "tutorialSlides": [
         {
           "title": "Duration とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 時間の長さ\n\n**time.Duration** は、ナノ秒単位の時間を表します。\n\n```go\nd := 5 * time.Second\nd := 100 * time.Millisecond\nd := 2 * time.Hour\n```"
         },
         {
           "title": "Sleep で一時停止",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 処理を一時停止\n\n```go\ntime.Sleep(1 * time.Second)\n```"
         }
       ],
@@ -324,12 +324,12 @@ export const go4Data = {
       "tutorialSlides": [
         {
           "title": "Marshal とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# Go → JSON\n\n**json.Marshal** で Go の値を JSON に変換します。\n\n```go\ntype User struct {\n    Name string `json:\"name\"`\n    Age  int    `json:\"age\"`\n}\n\ndata, _ := json.Marshal(user)\n```"
         },
         {
           "title": "タグ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# JSON キー名を指定\n\n```go\ntype Person struct {\n    Name string `json:\"name\"`\n    Age  int    `json:\"age,omitempty\"`\n}\n```"
         }
       ],
@@ -390,7 +390,7 @@ export const go4Data = {
       "tutorialSlides": [
         {
           "title": "Unmarshal とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# JSON → Go\n\n**json.Unmarshal** で JSON を Go の値に変換します。\n\n```go\nvar user User\nerr := json.Unmarshal(data, &user)\n```"
         },
         {
@@ -458,12 +458,12 @@ export const go4Data = {
       "tutorialSlides": [
         {
           "title": "strings パッケージ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 文字列操作\n\n**strings** パッケージには便利な関数があります。\n\n```go\nstrings.Contains(s, \"hello\")\nstrings.HasPrefix(s, \"pre\")\nstrings.Split(s, \",\")\n```"
         },
         {
           "title": "よく使う関数",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 変換と検索\n\n```go\nstrings.ToUpper(s)\nstrings.ToLower(s)\nstrings.TrimSpace(s)\nstrings.Replace(s, \"old\", \"new\", -1)\n```"
         }
       ],
@@ -516,7 +516,7 @@ export const go4Data = {
       "tutorialSlides": [
         {
           "title": "strconv パッケージ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 文字列と数値の変換\n\n**strconv.Atoi** で文字列を整数に変換します。\n\n```go\nnum, err := strconv.Atoi(\"123\")\nif err != nil {\n    // エラー処理\n}\n```"
         },
         {
@@ -572,7 +572,7 @@ export const go4Data = {
       "tutorialSlides": [
         {
           "title": "os.Args とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# コマンドライン引数\n\n**os.Args** でコマンドライン引数を取得できます。\n\n```go\n// go run main.go arg1 arg2\nos.Args[0]  // \"main\" (プログラム名)\nos.Args[1]  // \"arg1\"\nos.Args[2]  // \"arg2\"\n```"
         },
         {

@@ -14,12 +14,12 @@ export const sql4Data = {
       "tutorialSlides": [
         {
           "title": "CTE とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 共通テーブル式\n\n**WITH** 句で名前付きサブクエリを定義できます。\n\n```sql\nWITH high_sales AS (\n  SELECT * FROM orders WHERE total > 1000\n)\nSELECT * FROM high_sales;\n```"
         },
         {
           "title": "複数のCTE",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# カンマで区切る\n\n```sql\nWITH\n  cte1 AS (SELECT ...),\n  cte2 AS (SELECT ...)\nSELECT * FROM cte1 JOIN cte2;\n```"
         }
       ],
@@ -56,12 +56,12 @@ export const sql4Data = {
       "tutorialSlides": [
         {
           "title": "ROW_NUMBER とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 行番号を付ける\n\n**ROW_NUMBER()** は、各行に一意の番号を振ります。\n\n```sql\nSELECT name,\n       ROW_NUMBER() OVER (ORDER BY score DESC) AS rank\nFROM students;\n```"
         },
         {
           "title": "PARTITION BY",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# グループごとに番号\n\n```sql\nROW_NUMBER() OVER (\n  PARTITION BY department\n  ORDER BY salary DESC\n)\n```"
         }
       ],
@@ -98,12 +98,12 @@ export const sql4Data = {
       "tutorialSlides": [
         {
           "title": "RANK とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 同順位を許容\n\n**RANK()** は、同じ値に同じ順位を付け、次の順位を飛ばします。\n\n```sql\n-- 90, 90, 80 → 1, 1, 3\nRANK() OVER (ORDER BY score DESC)\n```"
         },
         {
           "title": "DENSE_RANK",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 順位を飛ばさない\n\n```sql\n-- 90, 90, 80 → 1, 1, 2\nDENSE_RANK() OVER (ORDER BY score DESC)\n```"
         }
       ],
@@ -140,12 +140,12 @@ export const sql4Data = {
       "tutorialSlides": [
         {
           "title": "ウィンドウ集計",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# グループ化せずに集計\n\n**SUM() OVER** で、行ごとに累積合計を計算できます。\n\n```sql\nSELECT date, amount,\n       SUM(amount) OVER (ORDER BY date) AS running_total\nFROM sales;\n```"
         },
         {
           "title": "ウィンドウフレーム",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 範囲を指定\n\n```sql\nSUM(amount) OVER (\n  ORDER BY date\n  ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW\n)\n```"
         }
       ],
@@ -220,12 +220,12 @@ export const sql4Data = {
       "tutorialSlides": [
         {
           "title": "COALESCE とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 最初の非NULLを返す\n\n**COALESCE** は、引数の中で最初のNULLでない値を返します。\n\n```sql\nSELECT COALESCE(nickname, name, 'Anonymous') AS display_name\nFROM users;\n```"
         },
         {
           "title": "デフォルト値",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# NULLの代わりに\n\n```sql\nSELECT COALESCE(phone, 'N/A') FROM contacts;\n```"
         }
       ],
@@ -256,12 +256,12 @@ export const sql4Data = {
       "tutorialSlides": [
         {
           "title": "INSERT とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 行を追加\n\n**INSERT** でテーブルに新しい行を追加します。\n\n```sql\nINSERT INTO users (name, email)\nVALUES ('Alice', 'alice@example.com');\n```"
         },
         {
           "title": "複数行挿入",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# VALUES を複数\n\n```sql\nINSERT INTO users (name)\nVALUES ('Alice'), ('Bob'), ('Carol');\n```"
         }
       ],
@@ -296,12 +296,12 @@ export const sql4Data = {
       "tutorialSlides": [
         {
           "title": "UPDATE とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 行を更新\n\n**UPDATE** で既存の行を変更します。\n\n```sql\nUPDATE users\nSET email = 'new@example.com'\nWHERE id = 1;\n```"
         },
         {
           "title": "WHERE を忘れずに",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 全行更新に注意\n\n```sql\n-- WHEREがないと全行更新！\nUPDATE users SET status = 'inactive';\n```"
         }
       ],
@@ -338,12 +338,12 @@ export const sql4Data = {
       "tutorialSlides": [
         {
           "title": "DELETE とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 行を削除\n\n**DELETE** でテーブルから行を削除します。\n\n```sql\nDELETE FROM users WHERE id = 1;\n```"
         },
         {
           "title": "全件削除",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# TRUNCATE との違い\n\n```sql\n-- 全行削除（ログあり）\nDELETE FROM users;\n\n-- 全行削除（高速）\nTRUNCATE TABLE users;\n```"
         }
       ],
@@ -380,12 +380,12 @@ export const sql4Data = {
       "tutorialSlides": [
         {
           "title": "GROUP_CONCAT とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 値を文字列結合\n\n**GROUP_CONCAT** で、グループ内の値を1つの文字列に結合します。\n\n```sql\nSELECT category, GROUP_CONCAT(name, ', ')\nFROM products\nGROUP BY category;\n```"
         },
         {
           "title": "区切り文字",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# デフォルトはカンマ\n\n```sql\nGROUP_CONCAT(name, '-')  -- ハイフン区切り\n```"
         }
       ],

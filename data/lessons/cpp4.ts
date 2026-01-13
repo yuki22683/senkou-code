@@ -14,12 +14,12 @@ export const cpp4Data = {
       "tutorialSlides": [
         {
           "title": "unique_ptr とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 排他的所有権\n\n**unique_ptr** は、1つのオブジェクトを1つのポインタだけが所有します。\n\n```cpp\nauto p = make_unique<int>(42);\n// スコープを出ると自動解放\n```"
         },
         {
           "title": "コピー不可",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ムーブのみ可能\n\n```cpp\nauto p1 = make_unique<int>(10);\n// auto p2 = p1;  // エラー！\nauto p2 = move(p1);  // OK\n```"
         }
       ],
@@ -66,12 +66,12 @@ export const cpp4Data = {
       "tutorialSlides": [
         {
           "title": "variant とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型安全なunion\n\nC++17の **std::variant** は、複数の型のうち1つを保持できます。\n\n```cpp\nvariant<int, string> v;\nv = 42;      // int を保持\nv = \"hello\"; // string を保持\n```"
         },
         {
           "title": "値の取得",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# get と holds_alternative\n\n```cpp\nif (holds_alternative<int>(v)) {\n    cout << get<int>(v) << endl;\n}\n```"
         }
       ],
@@ -118,7 +118,7 @@ export const cpp4Data = {
       "tutorialSlides": [
         {
           "title": "構造化束縛とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 複数の値を分解\n\nC++17の **構造化束縛** で、複数の値を一度に取得できます。\n\n```cpp\npair<int, string> p = {1, \"hello\"};\nauto [num, str] = p;\ncout << num << \", \" << str << endl;\n```"
         },
         {
@@ -172,12 +172,12 @@ export const cpp4Data = {
       "tutorialSlides": [
         {
           "title": "string_view とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 文字列への軽量ビュー\n\n**string_view** は、コピーなしで文字列を参照します。\n\n```cpp\nvoid print(string_view sv) {\n    cout << sv << endl;\n}\nprint(\"hello\");  // コピーなし\n```"
         },
         {
           "title": "メリット",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# パフォーマンス向上\n\n```cpp\n// const string& より効率的\n// C文字列もstringも受け取れる\nstring s = \"world\";\nprint(s);      // OK\nprint(\"hello\"); // OK\n```"
         }
       ],
@@ -235,7 +235,7 @@ export const cpp4Data = {
         },
         {
           "title": "使用例",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 文字列を大文字に\n\n```cpp\nstring s = \"hello\";\ntransform(s.begin(), s.end(), s.begin(), ::toupper);\n// s = \"HELLO\"\n```"
         }
       ],
@@ -349,7 +349,7 @@ export const cpp4Data = {
         },
         {
           "title": "見つからない場合",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# end() との比較\n\n```cpp\nif (it != v.end()) {\n    cout << \"Found: \" << *it << endl;\n} else {\n    cout << \"Not found\" << endl;\n}\n```"
         }
       ],
@@ -400,7 +400,7 @@ export const cpp4Data = {
       "tutorialSlides": [
         {
           "title": "カスタムソート",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ラムダで比較\n\n**sort** にラムダを渡してカスタム順序でソートできます。\n\n```cpp\nvector<int> v = {3, 1, 4, 1, 5};\nsort(v.begin(), v.end(), [](int a, int b) {\n    return a > b;  // 降順\n});\n```"
         },
         {
@@ -521,7 +521,7 @@ export const cpp4Data = {
         },
         {
           "title": "メリット",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 最適化とムーブ\n\n- コンパイラが最適化できる\n- ムーブコンストラクタに重要\n\n```cpp\nMyClass(MyClass&&) noexcept = default;\n```"
         }
       ],

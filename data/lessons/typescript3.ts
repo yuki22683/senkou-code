@@ -14,12 +14,12 @@ export const typescriptData3 = {
       "tutorialSlides": [
         {
           "title": "Partial とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 全プロパティをオプショナルに\n\n**Partial<T>** は、TypeScriptに組み込まれたユーティリティ型（便利な型変換ツール）の1つで、型Tの全てのプロパティをオプショナル（省略可能）にします。\n\n```typescript\ninterface User {\n  name: string;\n  age: number;\n}\n\ntype PartialUser = Partial<User>;\n// { name?: string; age?: number; }\n```"
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 部分的な更新に便利\n\n```typescript\nfunction updateUser(user: User, updates: Partial<User>) {\n  return { ...user, ...updates };\n}\n\nupdateUser(user, { name: 'Bob' }); // age は省略OK\n```"
         }
       ],
@@ -70,12 +70,12 @@ export const typescriptData3 = {
       "tutorialSlides": [
         {
           "title": "Required とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 全プロパティを必須に\n\n**Required<T>** は、Partialの逆で、全てのプロパティを必須にします。\n\n```typescript\ninterface Props {\n  name?: string;\n  age?: number;\n}\n\ntype RequiredProps = Required<Props>;\n// { name: string; age: number; }\n```"
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# オプショナルを必須に変換\n\n```typescript\nfunction processUser(user: Required<User>) {\n  // 全プロパティが存在することが保証される\n  console.log(user.name.toUpperCase());\n}\n```"
         }
       ],
@@ -124,12 +124,12 @@ export const typescriptData3 = {
       "tutorialSlides": [
         {
           "title": "Pick とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 特定のプロパティを選択\n\n**Pick<T, K>** は、型Tから指定したプロパティKだけを取り出します。\n\n```typescript\ninterface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\ntype UserPreview = Pick<User, 'id' | 'name'>;\n// { id: number; name: string; }\n```"
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 必要な情報だけを抽出\n\n```typescript\nfunction getPreview(user: User): Pick<User, 'name'> {\n  return { name: user.name };\n}\n```"
         }
       ],
@@ -178,12 +178,12 @@ export const typescriptData3 = {
       "tutorialSlides": [
         {
           "title": "Omit とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 特定のプロパティを除外\n\n**Omit<T, K>** は、Pickの逆で、指定したプロパティを除外します。\n\n```typescript\ninterface User {\n  id: number;\n  name: string;\n  password: string;\n}\n\ntype PublicUser = Omit<User, 'password'>;\n// { id: number; name: string; }\n```"
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 機密情報を除外\n\n```typescript\nfunction toPublic(user: User): Omit<User, 'password'> {\n  const { password, ...rest } = user;\n  return rest;\n}\n```"
         }
       ],
@@ -232,12 +232,12 @@ export const typescriptData3 = {
       "tutorialSlides": [
         {
           "title": "Record とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/box.png",
           "content": "# キーと値の型を指定\n\n**Record<K, V>** は、キーの型Kと値の型Vを持つオブジェクト型を作ります。\n\n```typescript\ntype Scores = Record<string, number>;\n\nconst scores: Scores = {\n  math: 90,\n  english: 85\n};\n```"
         },
         {
           "title": "リテラル型と組み合わせ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/box.png",
           "content": "# 特定のキーに限定\n\n```typescript\ntype Status = 'pending' | 'done' | 'error';\ntype StatusColors = Record<Status, string>;\n\nconst colors: StatusColors = {\n  pending: 'yellow',\n  done: 'green',\n  error: 'red'\n};\n```"
         }
       ],
@@ -289,7 +289,7 @@ export const typescriptData3 = {
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/return.png",
           "content": "# 型を二重管理しない\n\n```typescript\n// 関数の実装から型を自動導出\ntype Result = ReturnType<typeof fetchData>;\n\nfunction processResult(result: Result) {\n  // ...\n}\n```"
         }
       ],
@@ -339,7 +339,7 @@ export const typescriptData3 = {
         },
         {
           "title": "実用例",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/if.png",
           "content": "# 型に応じた変換\n\n```typescript\ntype Flatten<T> = T extends Array<infer U> ? U : T;\n\ntype A = Flatten<string[]>;  // string\ntype B = Flatten<number>;    // number\n```"
         }
       ],
@@ -384,7 +384,7 @@ export const typescriptData3 = {
       "tutorialSlides": [
         {
           "title": "infer とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型を推論して抽出\n\n**infer** を使うと、条件型の中で型を推論して使えます。\n\n```typescript\ntype GetArrayElement<T> = \n  T extends (infer U)[] ? U : never;\n\ntype A = GetArrayElement<string[]>; // string\n```"
         },
         {
@@ -434,7 +434,7 @@ export const typescriptData3 = {
       "tutorialSlides": [
         {
           "title": "keyof とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# オブジェクトのキーをUnion型に\n\n**keyof** は、オブジェクト型のキーをUnion型として取得します。\n\n```typescript\ninterface User {\n  id: number;\n  name: string;\n}\n\ntype UserKeys = keyof User; // 'id' | 'name'\n```"
         },
         {
@@ -490,12 +490,12 @@ export const typescriptData3 = {
       "tutorialSlides": [
         {
           "title": "マップ型とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# プロパティを変換\n\n**マップ型** は、既存の型の各プロパティを変換して新しい型を作ります。\n\n```typescript\ntype Readonly<T> = {\n  readonly [K in keyof T]: T[K];\n};\n```"
         },
         {
           "title": "カスタムマップ型",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 独自の変換を定義\n\n```typescript\ntype Nullable<T> = {\n  [K in keyof T]: T[K] | null;\n};\n\ninterface User {\n  name: string;\n}\n\ntype NullableUser = Nullable<User>;\n// { name: string | null; }\n```"
         }
       ],

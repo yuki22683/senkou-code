@@ -129,7 +129,7 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "match式とは",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/match_expression.png",
           "content": "match式はswitchの強力な代替です。\n\n```php\n$day = 1;\n$name = match($day) {\n    1 => 'Monday',\n    2 => 'Tuesday',\n    default => 'Other'\n};\n```"
         }
       ],
@@ -188,7 +188,7 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "トレイトとは",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/trait_sharing.png",
           "content": "トレイトは複数のクラスでメソッドを共有する仕組みです。\n\n```php\ntrait Greetable {\n    public function greet() {\n        return 'Hello!';\n    }\n}\n\nclass Person {\n    use Greetable;\n}\n```"
         }
       ],
@@ -219,7 +219,7 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "ジェネレータとは",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/generator_yield.png",
           "content": "ジェネレータは値を一つずつ生成する関数です。\n\n```php\nfunction countTo($n) {\n    for ($i = 1; $i <= $n; $i++) {\n        yield $i;\n    }\n}\n```"
         }
       ],
@@ -247,7 +247,7 @@ export const php3Data = {
       "tutorialSlides": [
         {
           "title": "配列の分割代入とは",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/array_destructuring.png",
           "content": "分割代入で配列の要素を複数の変数に代入できます。\n\n```php\n$arr = [1, 2, 3];\n[$a, $b, $c] = $arr;\necho $a;  // 1\n```"
         }
       ],

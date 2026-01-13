@@ -14,12 +14,12 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "配列とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 複数の値を格納\n\nBashの **配列** は、複数の値を格納できます。`( )` で作成し、インデックスは0から始まります。"
         },
         {
           "title": "配列の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ${配列[番号]} でアクセス\n\n`${配列[@]}` ですべての要素を取得できます。\n\n**コード例：**\n```bash\narr=(\"a\" \"b\" \"c\")\necho ${arr[1]} # b\n```"
         }
       ],
@@ -52,12 +52,12 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "文字列の長さ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ${#変数} で長さを取得\n\n`#` を変数名の前につけると、その長さを取得できます。"
         },
         {
           "title": "長さの取得",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 文字数を返す\n\n配列の場合は要素数を返します。\n\n**コード例：**\n```bash\ntext=\"Hello\"\necho ${#text} # 5\n```"
         }
       ],
@@ -90,7 +90,7 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "部分文字列",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ${変数:開始:長さ}\n\n開始位置と長さを指定して部分文字列を取得できます。"
         },
         {
@@ -175,7 +175,7 @@ export const bash2Data = {
         },
         {
           "title": "値の受け取り",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# $(関数) で取得\n\n`result=$(関数)` で関数の出力を受け取ります。\n\n**コード例：**\n```bash\ndouble() {\n    echo $(($1 * 2))\n}\nresult=$(double 5)\necho $result # 10\n```"
         }
       ],
@@ -304,12 +304,12 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "コマンド置換とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# コマンドの出力を取得\n\n**$()** を使うと、コマンドの出力を変数に格納できます。"
         },
         {
           "title": "コマンド置換の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# $(コマンド)\n\n任意のコマンドの出力を取得できます。\n\n**コード例：**\n```bash\ntoday=$(date +%Y-%m-%d)\necho $today\n```"
         }
       ],
@@ -342,12 +342,12 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "read とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 入力を変数に格納\n\n**read** は、標準入力から読み取った値を変数に格納します。"
         },
         {
           "title": "read の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# read 変数名\n\nスペースで区切って複数の変数に分けることもできます。\n\n**コード例：**\n```bash\necho \"Name?\"\nread name\necho \"Hello, $name\"\n```"
         }
       ],
@@ -378,12 +378,12 @@ export const bash2Data = {
       "tutorialSlides": [
         {
           "title": "ヒアドキュメントとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 複数行のテキスト\n\n**<<** を使うと、複数行のテキストをまとめて扱えます。"
         },
         {
           "title": "ヒアドキュメントの使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# <<WORD ... WORD\n\n終端文字列までがテキストになります。\n\n**コード例：**\n```bash\ncat <<EOF\nLine 1\nLine 2\nEOF\n```"
         }
       ],

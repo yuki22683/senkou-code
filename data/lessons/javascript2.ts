@@ -191,12 +191,12 @@ export const javascriptData2 = {
       "tutorialSlides": [
         {
           "title": "配列の分割代入",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/array_destructuring.png",
           "content": "# 一度に複数の変数へ\n\n配列の要素を、対応する変数に一度に代入できます。\n\n```javascript\nconst [a, b] = [1, 2];\nconsole.log(a); // 1\nconsole.log(b); // 2\n```"
         },
         {
           "title": "便利な使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/array_destructuring.png",
           "content": "# 関数の戻り値にも使える\n\n```javascript\nfunction getPoint() {\n    return [10, 20];\n}\n\nconst [x, y] = getPoint();\nconsole.log(x, y); // 10 20\n```"
         }
       ],
@@ -242,7 +242,7 @@ export const javascriptData2 = {
         },
         {
           "title": "よく使うパターン",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/box.png",
           "content": "# 関数の引数でも使える\n\n```javascript\nfunction greet({ name }) {\n    console.log(`Hello, ${name}!`);\n}\n\ngreet({ name: 'Taro', age: 20 });\n// => Hello, Taro!\n```"
         }
       ],
@@ -288,7 +288,7 @@ export const javascriptData2 = {
         },
         {
           "title": "コピーにも使える",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/list.png",
           "content": "# 配列のコピー\n\n```javascript\nconst original = [1, 2, 3];\nconst copy = [...original];\ncopy.push(4);\nconsole.log(original); // [1, 2, 3]\nconsole.log(copy);     // [1, 2, 3, 4]\n```"
         }
       ],
@@ -334,7 +334,7 @@ export const javascriptData2 = {
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/if.png",
           "content": "# 変数への代入に便利\n\n```javascript\nconst score = 85;\nconst result = score >= 60 ? '合格' : '不合格';\n\n// 同じ意味のif文\nlet result2;\nif (score >= 60) {\n    result2 = '合格';\n} else {\n    result2 = '不合格';\n}\n```"
         }
       ],
@@ -373,12 +373,12 @@ export const javascriptData2 = {
       "tutorialSlides": [
         {
           "title": "findとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/regex_search.png",
           "content": "# 条件に合う最初の要素を返す\n\n`find` は条件を満たす最初の要素を返します。見つからなければ `undefined` になります。\n\n```javascript\nconst nums = [1, 5, 10, 15];\nconst found = nums.find(n => n > 7);\nconsole.log(found); // 10\n```"
         },
         {
           "title": "findの使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/regex_search.png",
           "content": "# オブジェクトの配列でも使える\n\n```javascript\nconst users = [\n    { id: 1, name: 'Alice' },\n    { id: 2, name: 'Bob' }\n];\nconst user = users.find(u => u.id === 2);\nconsole.log(user.name); // 'Bob'\n```"
         }
       ],

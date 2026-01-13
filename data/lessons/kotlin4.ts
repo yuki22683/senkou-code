@@ -128,12 +128,12 @@ export const kotlin4Data = {
       "tutorialSlides": [
         {
           "title": "by lazy とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 遅延初期化\n\n**by lazy** で、最初のアクセス時に初期化されるプロパティを定義できます。\n\n```kotlin\nval data: String by lazy {\n    println(\"Loading...\")\n    \"Data\"\n}\n```"
         },
         {
           "title": "スレッドセーフ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# デフォルトで同期\n\n```kotlin\n// 単一スレッドでのみ使う場合\nby lazy(LazyThreadSafetyMode.NONE) { ... }\n```"
         }
       ],
@@ -186,7 +186,7 @@ export const kotlin4Data = {
       "tutorialSlides": [
         {
           "title": "lateinit とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 後から初期化\n\n**lateinit** で、初期化を遅らせることができます（varのみ）。\n\n```kotlin\nclass Service {\n    lateinit var name: String\n    \n    fun setup(n: String) { name = n }\n}\n```"
         },
         {
@@ -242,12 +242,12 @@ export const kotlin4Data = {
       "tutorialSlides": [
         {
           "title": "inline とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 関数をインライン展開\n\n**inline** で、関数呼び出しをインライン展開します。\n\n```kotlin\ninline fun measure(block: () -> Unit) {\n    val start = System.currentTimeMillis()\n    block()\n    println(\"Time: ${System.currentTimeMillis() - start}\")\n}\n```"
         },
         {
           "title": "効果",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# パフォーマンス向上\n\n- ラムダのオブジェクト生成を避ける\n- 関数呼び出しのオーバーヘッドを削減"
         }
       ],
@@ -299,7 +299,7 @@ export const kotlin4Data = {
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型チェックやキャスト\n\n```kotlin\ninline fun <reified T> filterByType(list: List<Any>): List<T> {\n    return list.filterIsInstance<T>()\n}\n```"
         }
       ],
@@ -342,12 +342,12 @@ export const kotlin4Data = {
       "tutorialSlides": [
         {
           "title": "拡張関数とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# クラスを拡張\n\n**拡張関数** で、既存クラスに新しいメソッドを追加できます。\n\n```kotlin\nfun String.addExclamation() = this + \"!\"\n\n\"Hello\".addExclamation()  // \"Hello!\"\n```"
         },
         {
           "title": "標準ライブラリでも多用",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 便利な拡張\n\n```kotlin\nlist.firstOrNull()\nstring.isNotBlank()\n```"
         }
       ],
@@ -388,7 +388,7 @@ export const kotlin4Data = {
       "tutorialSlides": [
         {
           "title": "let とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# オブジェクトを it で参照\n\n**let** は、オブジェクトを `it` として参照し、結果を返します。\n\n```kotlin\nval result = \"hello\".let {\n    it.uppercase()\n}\n```"
         },
         {
@@ -434,12 +434,12 @@ export const kotlin4Data = {
       "tutorialSlides": [
         {
           "title": "apply とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# オブジェクトを this で参照\n\n**apply** は、オブジェクトを設定して自身を返します。\n\n```kotlin\nval person = Person().apply {\n    name = \"Alice\"\n    age = 30\n}\n```"
         },
         {
           "title": "ビルダーパターン",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 初期化に便利\n\n```kotlin\nStringBuilder().apply {\n    append(\"Hello\")\n    append(\" World\")\n}.toString()\n```"
         }
       ],
@@ -486,12 +486,12 @@ export const kotlin4Data = {
       "tutorialSlides": [
         {
           "title": "typealias とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型の別名\n\n**typealias** で、型に別名をつけられます。\n\n```kotlin\ntypealias UserMap = Map<Int, String>\ntypealias Handler = (String) -> Unit\n```"
         },
         {
           "title": "可読性向上",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 長い型を短く\n\n```kotlin\ntypealias OnClick = (View, Int) -> Boolean\n```"
         }
       ],

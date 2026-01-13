@@ -14,12 +14,12 @@ export const bash3Data = {
       "tutorialSlides": [
         {
           "title": "パイプとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# コマンドを連結\n\n**パイプ（|）** は、あるコマンドの出力を次のコマンドの入力に渡します。"
         },
         {
           "title": "パイプの使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# コマンド1 | コマンド2\n\n左のコマンドの出力が右のコマンドに渡されます。\n\n**コード例：**\n```bash\necho \"hello\" | tr 'a-z' 'A-Z'\n# HELLO\n```"
         }
       ],
@@ -50,12 +50,12 @@ export const bash3Data = {
       "tutorialSlides": [
         {
           "title": "リダイレクトとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 出力をファイルに\n\n**リダイレクト（>）** を使うと、コマンドの出力をファイルに保存できます。"
         },
         {
           "title": "リダイレクトの使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# > で上書き、>> で追記\n\n`>` は上書き、`>>` は追記です。\n\n**コード例：**\n```bash\necho \"hello\" > file.txt\necho \"world\" >> file.txt\n```"
         }
       ],
@@ -86,12 +86,12 @@ export const bash3Data = {
       "tutorialSlides": [
         {
           "title": "入力リダイレクト",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ファイルから入力\n\n**入力リダイレクト（<）** を使うと、ファイルの内容をコマンドに渡せます。"
         },
         {
           "title": "入力リダイレクトの使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# コマンド < ファイル\n\nファイルの内容が標準入力として渡されます。\n\n**コード例：**\n```bash\nwc -l < file.txt\n```"
         }
       ],
@@ -124,12 +124,12 @@ export const bash3Data = {
       "tutorialSlides": [
         {
           "title": "標準エラー出力",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# エラーメッセージの出力先\n\nコマンドのエラーは **標準エラー出力（stderr）** に送られます。ファイル記述子は **2** です。"
         },
         {
           "title": "2> の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 2> でエラーをリダイレクト\n\nエラー出力だけをファイルに保存できます。\n\n**コード例：**\n```bash\nls /nonexistent 2> error.txt\n```"
         }
       ],
@@ -160,12 +160,12 @@ export const bash3Data = {
       "tutorialSlides": [
         {
           "title": "ファイルテスト",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ファイルの状態を調べる\n\nBashでは **テスト** を使ってファイルの存在や種類を確認できます。"
         },
         {
           "title": "テストオプション",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# -f, -d, -e など\n\n- `-f` : 通常ファイル\n- `-d` : ディレクトリ\n- `-e` : 存在する\n\n**コード例：**\n```bash\nif [ -f file.txt ]; then\n    echo \"exists\"\nfi\n```"
         }
       ],
@@ -200,12 +200,12 @@ export const bash3Data = {
       "tutorialSlides": [
         {
           "title": "xargs とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 入力を引数に変換\n\n**xargs** は、標準入力からデータを読み取り、それを別のコマンドの引数として渡します。"
         },
         {
           "title": "xargs の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# パイプと組み合わせる\n\nパイプで渡されたデータを引数として使えます。\n\n**コード例：**\n```bash\necho \"file1 file2\" | xargs ls\n```"
         }
       ],
@@ -236,12 +236,12 @@ export const bash3Data = {
       "tutorialSlides": [
         {
           "title": "sed とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ストリームエディタ\n\n**sed** は、テキストを行ごとに処理・変換するコマンドです。置換でよく使います。"
         },
         {
           "title": "sed の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# s/古い/新しい/\n\n`s` コマンドで置換します。\n\n**コード例：**\n```bash\necho \"hello\" | sed 's/hello/hi/'\n```"
         }
       ],
@@ -272,12 +272,12 @@ export const bash3Data = {
       "tutorialSlides": [
         {
           "title": "awk とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# テキスト処理の強力なツール\n\n**awk** は、テキストをフィールドに分割して処理できる強力なコマンドです。"
         },
         {
           "title": "awk の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# $1, $2 でフィールド\n\n`$1` が1番目、`$2` が2番目のフィールドです。\n\n**コード例：**\n```bash\necho \"a b c\" | awk '{print $2}'\n# b\n```"
         }
       ],
@@ -308,12 +308,12 @@ export const bash3Data = {
       "tutorialSlides": [
         {
           "title": "sort とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 行を並べ替える\n\n**sort** は、テキストの行をアルファベット順や数値順に並べ替えます。"
         },
         {
           "title": "sort の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# オプションで動作を変更\n\n- `-n` : 数値順\n- `-r` : 逆順\n\n**コード例：**\n```bash\necho -e \"3\\n1\\n2\" | sort -n\n```"
         }
       ],
@@ -344,12 +344,12 @@ export const bash3Data = {
       "tutorialSlides": [
         {
           "title": "uniq とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 重複行を除去\n\n**uniq** は、連続する重複行を除去します。通常は `sort` と組み合わせて使います。"
         },
         {
           "title": "uniq の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# sort | uniq\n\n先にソートしてから重複を除去します。\n\n**コード例：**\n```bash\necho -e \"a\\nb\\na\" | sort | uniq\n```"
         }
       ],

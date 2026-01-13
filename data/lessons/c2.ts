@@ -62,7 +62,7 @@ export const c2Data = {
       "tutorialSlides": [
         {
           "title": "間接的に値を変える",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/pointer_indirect.png",
           "content": "# ポインタ経由で書き換え\n\nポインタが指す先の値は `*p = 新しい値` で変更できます。これにより、元の変数の中身が変わります。"
         },
         {
@@ -262,12 +262,12 @@ export const c2Data = {
       "tutorialSlides": [
         {
           "title": "C言語の文字列",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/string_letters.png",
           "content": "# 文字の配列 + ヌル終端\n\nC言語の文字列は `char` 型の配列で、最後に `\\0`（ヌル文字）が入ります。これが文字列の終わりの目印です。"
         },
         {
           "title": "文字列の表示",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/string_letters.png",
           "content": "# %s を使って表示\n\n文字列を表示するには `%s` を使います。ダブルクォートで囲んだ文字列は自動的にヌル終端されます。\n\n**コード例：**\n```c\nchar name[] = \"Taro\";\nprintf(\"%s\\n\", name); // Taro\n```"
         }
       ],
@@ -362,7 +362,7 @@ export const c2Data = {
       "tutorialSlides": [
         {
           "title": "動的メモリとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/malloc_memory.png",
           "content": "# 実行時にメモリを確保\n\n配列のサイズを実行時に決めたいときは **動的メモリ確保** を使います。`malloc` 関数でメモリを確保し、使い終わったら `free` で解放します。"
         },
         {

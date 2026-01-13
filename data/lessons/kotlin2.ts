@@ -56,12 +56,12 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "セーフコールとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# null なら null を返す\n\n**?.** は、左側が null なら null を返し、そうでなければプロパティにアクセスします。"
         },
         {
           "title": "?. の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 安全なアクセス\n\nNullPointerException を防げます。\n\n**コード例：**\n```kotlin\nval name: String? = \"hello\"\nprintln(name?.length) // 5\n```"
         }
       ],
@@ -99,7 +99,7 @@ export const kotlin2Data = {
         },
         {
           "title": "?: の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# シンプルな null 置換\n\n`a ?: b` は、a が null なら b を返します。\n\n**コード例：**\n```kotlin\nval name: String? = null\nprintln(name ?: \"Guest\") // Guest\n```"
         }
       ],
@@ -338,12 +338,12 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "拡張関数とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# クラスに関数を追加\n\n**拡張関数** を使うと、既存のクラスを継承せずにメソッドを追加できます。"
         },
         {
           "title": "拡張関数の定義",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型.関数名()\n\n`fun 型.関数名()` で定義します。`this` でレシーバを参照します。\n\n**コード例：**\n```kotlin\nfun String.hello() = \"Hello, $this\"\n\"World\".hello() // Hello, World\n```"
         }
       ],
@@ -376,12 +376,12 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "let とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# スコープ関数\n\n**let** は、オブジェクトに対してラムダを実行し、結果を返します。null チェックと組み合わせると便利です。"
         },
         {
           "title": "?.let の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# null でなければ実行\n\n`?.let { }` で null でない場合のみ処理を実行します。\n\n**コード例：**\n```kotlin\nval name: String? = \"Taro\"\nname?.let { println(it) }\n```"
         }
       ],

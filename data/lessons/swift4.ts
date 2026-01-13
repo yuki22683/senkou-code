@@ -19,7 +19,7 @@ export const swift4Data = {
         },
         {
           "title": "準拠",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型がプロトコルに準拠\n\n```swift\nstruct Person: Greetable {\n    var name: String\n    func greet() -> String {\n        return \"Hello, \\(name)\"\n    }\n}\n```"
         }
       ],
@@ -72,7 +72,7 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "extension で拡張",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# デフォルト実装\n\n**extension** でプロトコルにデフォルト実装を追加できます。\n\n```swift\nprotocol Describable {\n    var description: String { get }\n}\n\nextension Describable {\n    var description: String { \"No description\" }\n}\n```"
         },
         {
@@ -139,7 +139,7 @@ export const swift4Data = {
         },
         {
           "title": "型推論",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 呼び出し時に型が決まる\n\n```swift\nvar x = 1, y = 2\nswap(&x, &y)  // T は Int と推論\n```"
         }
       ],
@@ -180,7 +180,7 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "where 制約",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型の条件を指定\n\n**where** で型パラメータに制約を追加できます。\n\n```swift\nfunc compare<T>(_ a: T, _ b: T) -> Bool where T: Comparable {\n    return a < b\n}\n```"
         },
         {
@@ -224,12 +224,12 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "Codable とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# エンコード/デコード\n\n**Codable** に準拠すると、JSONとの変換が簡単です。\n\n```swift\nstruct User: Codable {\n    var name: String\n    var age: Int\n}\n```"
         },
         {
           "title": "JSONEncoder/Decoder",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 変換方法\n\n```swift\nlet encoder = JSONEncoder()\nlet data = try encoder.encode(user)\n\nlet decoder = JSONDecoder()\nlet user = try decoder.decode(User.self, from: data)\n```"
         }
       ],
@@ -282,12 +282,12 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "lazy とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 遅延初期化\n\n**lazy** プロパティは、最初にアクセスされたときに初期化されます。\n\n```swift\nclass DataManager {\n    lazy var data: [Int] = {\n        // 重い処理\n        return loadData()\n    }()\n}\n```"
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 初期化コストが高い場合\n\n- ファイル読み込み\n- ネットワークリクエスト\n- 計算コストの高い処理"
         }
       ],
@@ -339,7 +339,7 @@ export const swift4Data = {
         },
         {
           "title": "リソース解放",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ファイルのクローズなど\n\n```swift\nfunc readFile() throws {\n    let file = openFile()\n    defer { file.close() }\n    // ファイル処理\n}\n```"
         }
       ],
@@ -432,12 +432,12 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "associatedtype とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# プロトコルの型パラメータ\n\n**associatedtype** で、プロトコルに関連型を定義できます。\n\n```swift\nprotocol Container {\n    associatedtype Item\n    func add(_ item: Item)\n}\n```"
         },
         {
           "title": "準拠する型で具体化",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型を具体的に指定\n\n```swift\nstruct IntBox: Container {\n    typealias Item = Int\n    func add(_ item: Int) { }\n}\n```"
         }
       ],
@@ -496,7 +496,7 @@ export const swift4Data = {
       "tutorialSlides": [
         {
           "title": "some とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 不透明な戻り値型\n\n**some** で、具体的な型を隠して戻り値を返せます。\n\n```swift\nfunc makeSequence() -> some Sequence {\n    return [1, 2, 3]\n}\n```"
         },
         {

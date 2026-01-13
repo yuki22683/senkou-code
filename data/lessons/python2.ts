@@ -166,12 +166,12 @@ export const pythonData2 = {
       "tutorialSlides": [
         {
           "title": "複数の値を返す",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/multiple_return.png",
           "content": "# カンマで区切って返す\n\n`return` でカンマ区切りにすると、複数の値をまとめて返せます。\n\n```python\ndef min_max(numbers):\n    return min(numbers), max(numbers)\n```"
         },
         {
           "title": "複数の変数で受け取る",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/multiple_variables.png",
           "content": "# 同時に代入\n\n返ってきた複数の値を、別々の変数で受け取れます。\n\n```python\ndef min_max(numbers):\n    return min(numbers), max(numbers)\n\nsmallest, largest = min_max([3, 1, 4])\nprint(smallest)  # => 1\nprint(largest)   # => 4\n```"
         }
       ],

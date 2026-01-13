@@ -14,12 +14,12 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "Result とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 成功か失敗かを表す\n\n**Result** は、成功(.success)か失敗(.failure)を表す型です。\n\n```swift\nfunc divide(_ a: Int, _ b: Int) -> Result<Int, Error> {\n    if b == 0 { return .failure(MyError.divByZero) }\n    return .success(a / b)\n}\n```"
         },
         {
           "title": "結果の取得",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# switch で分岐\n\n```swift\nswitch result {\ncase .success(let value):\n    print(value)\ncase .failure(let error):\n    print(error)\n}\n```"
         }
       ],
@@ -117,7 +117,7 @@ export const swift3Data = {
         },
         {
           "title": "様々な集約",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 積や結合\n\n```swift\n// 積\n[1, 2, 3, 4].reduce(1, *)\n\n// 文字列結合\n[\"a\", \"b\", \"c\"].reduce(\"\", +)\n```"
         }
       ],
@@ -152,12 +152,12 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "lazy とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 遅延評価\n\n**lazy** を使うと、必要になるまで計算を遅延させます。\n\n```swift\nlet result = (1...1000).lazy.map { $0 * 2 }.first!\n// 全要素を計算せず、最初の1つだけ計算\n```"
         },
         {
           "title": "パフォーマンス向上",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 大量データの処理\n\n```swift\nlet big = (1...1_000_000).lazy\n    .filter { $0 % 2 == 0 }\n    .map { $0 * 2 }\n    .prefix(5)\n```"
         }
       ],
@@ -192,12 +192,12 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "where とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 条件を追加\n\n**where** で、for文やswitch文に条件を追加できます。\n\n```swift\nfor n in nums where n > 0 {\n    print(n)\n}\n```"
         },
         {
           "title": "switch での使用",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# case に条件追加\n\n```swift\nswitch value {\ncase let x where x > 0:\n    print(\"positive\")\ndefault:\n    print(\"other\")\n}\n```"
         }
       ],
@@ -239,7 +239,7 @@ export const swift3Data = {
         },
         {
           "title": "リソース管理",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ファイルのクローズなど\n\n```swift\nfunc readFile() {\n    let file = open()\n    defer { file.close() }\n    // ファイル処理\n}  // 自動的にclose\n```"
         }
       ],
@@ -278,12 +278,12 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "associatedtype とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# プロトコルの関連型\n\n**associatedtype** で、プロトコルにジェネリックな型を定義できます。\n\n```swift\nprotocol Container {\n    associatedtype Item\n    func add(_ item: Item)\n}\n```"
         },
         {
           "title": "実装側で型を決定",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 具体的な型を指定\n\n```swift\nstruct IntBox: Container {\n    typealias Item = Int\n    func add(_ item: Int) { }\n}\n```"
         }
       ],
@@ -342,7 +342,7 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "throws とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# エラーを投げる\n\n**throws** 関数は、エラーを投げる可能性があります。\n\n```swift\nfunc divide(_ a: Int, _ b: Int) throws -> Int {\n    if b == 0 { throw MyError.divByZero }\n    return a / b\n}\n```"
         },
         {
@@ -402,7 +402,7 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "Set とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 重複なしのコレクション\n\n**Set** は、重複した要素を持たないコレクションです。\n\n```swift\nvar set: Set = [1, 2, 2, 3, 3, 3]\n// {1, 2, 3}\n```"
         },
         {
@@ -440,12 +440,12 @@ export const swift3Data = {
       "tutorialSlides": [
         {
           "title": "mutating とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 構造体を変更するメソッド\n\n**mutating** をつけると、構造体のメソッドで自身を変更できます。\n\n```swift\nstruct Point {\n    var x: Int\n    mutating func moveBy(dx: Int) {\n        x += dx\n    }\n}\n```"
         },
         {
           "title": "なぜ必要？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 値型の特性\n\n構造体は値型なので、デフォルトではメソッド内で自身を変更できません。"
         }
       ],

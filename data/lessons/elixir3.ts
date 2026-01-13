@@ -162,7 +162,7 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "with式",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/with_chain.png",
           "content": "with式は複数のパターンマッチを連鎖させ、すべて成功した場合のみdoブロックを実行します。\n\n```elixir\nwith {:ok, file} <- File.read(\"test.txt\"),\n     {:ok, json} <- Jason.decode(file) do\n  {:ok, json}\nelse\n  {:error, reason} -> {:error, reason}\nend\n```"
         }
       ],
@@ -246,7 +246,7 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "Agent",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/agent_state.png",
           "content": "Agentはシンプルな状態管理を提供します。\n\n```elixir\n{:ok, agent} = Agent.start_link(fn -> 0 end)\nAgent.get(agent, & &1)      # 0\nAgent.update(agent, &(&1 + 1))\nAgent.get(agent, & &1)      # 1\n```"
         }
       ],
@@ -274,7 +274,7 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "Task",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/task_async.png",
           "content": "Taskは非同期処理を簡単に実行できます。\n\n```elixir\ntask = Task.async(fn -> expensive_computation() end)\n# 他の処理を実行\nresult = Task.await(task)\n\n# 複数のTaskを並列実行\ntasks = Enum.map(1..5, fn i -> Task.async(fn -> i * 2 end) end)\nresults = Task.await_many(tasks)  # [2, 4, 6, 8, 10]\n```"
         }
       ],

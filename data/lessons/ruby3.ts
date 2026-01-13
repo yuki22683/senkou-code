@@ -14,7 +14,7 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "yieldとは",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/yield_block.png",
           "content": "yieldはメソッドに渡されたブロックを実行するキーワードです。\n\n```ruby\ndef greet\n  yield\nend\n\ngreet { puts 'こんにちは' }\n# => こんにちは\n```"
         }
       ],
@@ -45,7 +45,7 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "Procとは",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/proc_callable.png",
           "content": "Procはブロックをオブジェクト化したものです。変数に代入できます。\n\n```ruby\nmy_proc = Proc.new { puts 'Hello' }\nmy_proc.call  # => Hello\n```"
         }
       ],
@@ -101,7 +101,7 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "&:記法",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/symbol_to_proc.png",
           "content": "&:を使うと、シンボルをProcに変換してブロックとして渡せます。\n\n```ruby\n[1, 2, 3].map(&:to_s)\n# => ['1', '2', '3']\n```"
         }
       ],
@@ -275,7 +275,7 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "tapとは",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/tap_bounce.png",
           "content": "tapはブロックを実行した後、レシーバ自身を返すメソッドです。\n\n```ruby\n[1, 2].tap { |arr| arr << 3 }\n# => [1, 2, 3]\n```"
         }
       ],

@@ -419,7 +419,7 @@ export const go2Data = {
         },
         {
           "title": "go キーワード",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/goroutine_concurrent.png",
           "content": "# 並行に実行\n\n`go 関数()` と書くと、その関数が別のゴルーチンで実行されます。\n\n**コード例：**\n```go\ngo fmt.Println(\"hello\")\n// 別のゴルーチンで実行\n```"
         }
       ],

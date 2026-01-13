@@ -14,12 +14,12 @@ export const swift2Data = {
       "tutorialSlides": [
         {
           "title": "オプショナルとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/optional_concept.png",
           "content": "# 値があるかもしれない\n\n**オプショナル** は、値があるか `nil`（ない）かを表す型です。`?` をつけて宣言します。"
         },
         {
           "title": "オプショナルの宣言",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/optional_declaration.png",
           "content": "# 型の後に ?\n\n`Int?` のように書くと、Int または nil になります。\n\n**コード例：**\n```swift\nvar name: String? = \"Taro\"\nname = nil // OK\n```"
         }
       ],

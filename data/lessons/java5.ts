@@ -68,12 +68,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "finally とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 必ず実行される処理\n\n**finally** ブロックは、例外の有無にかかわらず必ず実行されます。\n\n```java\ntry {\n    // 処理\n} catch (Exception e) {\n    // 例外処理\n} finally {\n    // 必ず実行される\n}\n```"
         },
         {
           "title": "リソースの解放",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# クリーンアップ処理に使う\n\n```java\nFileReader reader = null;\ntry {\n    reader = new FileReader(\"file.txt\");\n    // 読み込み処理\n} finally {\n    if (reader != null) reader.close();\n}\n```"
         }
       ],
@@ -126,12 +126,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "throws とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 例外を呼び出し元に伝える\n\n**throws** は、メソッドが例外を投げる可能性があることを宣言します。\n\n```java\npublic void readFile() throws IOException {\n    // ファイル読み込み処理\n    // IOExceptionが起きる可能性\n}\n```"
         },
         {
           "title": "呼び出し側の責任",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# キャッチか再スロー\n\n```java\n// キャッチする\ntry {\n    readFile();\n} catch (IOException e) {\n    // 処理\n}\n\n// または再スローする\npublic void caller() throws IOException {\n    readFile();\n}\n```"
         }
       ],
@@ -196,7 +196,7 @@ export const javaData5 = {
         },
         {
           "title": "使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# throw で投げる\n\n```java\nif (age < 0) {\n    throw new MyException(\"年齢は正の数です\");\n}\n```"
         }
       ],
@@ -257,12 +257,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "自動リソース管理",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# try-with-resources\n\nJava 7以降、リソースを自動でクローズできます。\n\n```java\ntry (FileReader reader = new FileReader(\"file.txt\")) {\n    // reader を使う処理\n} // 自動で close() が呼ばれる\n```"
         },
         {
           "title": "メリット",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# finallyが不要\n\n```java\n// 従来の書き方\nFileReader r = null;\ntry {\n    r = new FileReader(\"file.txt\");\n} finally {\n    if (r != null) r.close();\n}\n\n// try-with-resources\ntry (FileReader r = new FileReader(\"file.txt\")) {\n    // シンプル！\n}\n```"
         }
       ],
@@ -315,12 +315,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "BufferedReader",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# バッファ付き読み込み\n\n**BufferedReader** は効率的にテキストを読み込みます。\n\n```java\nBufferedReader br = new BufferedReader(\n    new FileReader(\"file.txt\")\n);\nString line = br.readLine();\n```"
         },
         {
           "title": "全行読み込み",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ループで読み込み\n\n```java\nString line;\nwhile ((line = br.readLine()) != null) {\n    System.out.println(line);\n}\n```"
         }
       ],
@@ -375,12 +375,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "BufferedWriter",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# バッファ付き書き込み\n\n**BufferedWriter** は効率的にテキストを書き込みます。\n\n```java\nBufferedWriter bw = new BufferedWriter(\n    new FileWriter(\"file.txt\")\n);\nbw.write(\"Hello\");\nbw.newLine();\nbw.close();\n```"
         },
         {
           "title": "newLine()",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 改行を追加\n\n```java\nbw.write(\"Line1\");\nbw.newLine();  // 改行\nbw.write(\"Line2\");\n```"
         }
       ],
@@ -436,12 +436,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "Scanner とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# テキストのパース\n\n**Scanner** は、テキストをトークンに分割して読み込みます。\n\n```java\nScanner sc = new Scanner(\"10 20 30\");\nint a = sc.nextInt(); // 10\nint b = sc.nextInt(); // 20\n```"
         },
         {
           "title": "様々な読み込み",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# メソッド\n\n```java\nnextInt()    // 整数\nnextDouble() // 小数\nnext()       // 単語（空白区切り）\nnextLine()   // 1行\nhasNext()    // 次があるか\n```"
         }
       ],
@@ -494,7 +494,7 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "NIO2 API",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# モダンなファイル操作\n\nJava 7以降の **Files** クラスは便利なメソッドを提供します。\n\n```java\nPath path = Paths.get(\"file.txt\");\nList<String> lines = Files.readAllLines(path);\n```"
         },
         {
@@ -551,12 +551,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "マルチキャッチ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 複数の例外をまとめて\n\nJava 7以降、**|** で複数の例外をまとめてキャッチできます。\n\n```java\ntry {\n    // 処理\n} catch (IOException | SQLException e) {\n    // 両方の例外を処理\n}\n```"
         },
         {
           "title": "個別にキャッチ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 順番にキャッチ\n\n```java\ntry {\n    // 処理\n} catch (FileNotFoundException e) {\n    // より具体的な例外を先に\n} catch (IOException e) {\n    // 一般的な例外を後に\n}\n```"
         }
       ],

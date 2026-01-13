@@ -315,7 +315,7 @@ export const cpp2Data = {
         },
         {
           "title": "virtual と override",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/virtual_override.png",
           "content": "# 仮想関数の仕組み\n\n親クラスで `virtual` をつけた関数は、子クラスで `override` して上書きできます。\n\n**コード例：**\n```cpp\nclass Animal {\npublic:\n    virtual void speak() { std::cout << \"...\" << std::endl; }\n};\nclass Cat : public Animal {\npublic:\n    void speak() override { std::cout << \"meow\" << std::endl; }\n};\n```"
         }
       ],
@@ -489,7 +489,7 @@ export const cpp2Data = {
         },
         {
           "title": "unique_ptr の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/smart_pointer.png",
           "content": "# std::make_unique\n\n`std::make_unique<型>()` でスマートポインタを作ります。スコープを抜けると自動で解放されます。\n\n**コード例：**\n```cpp\n#include <memory>\nauto p = std::make_unique<int>(42);\nstd::cout << *p << std::endl; // 42\n// 自動で解放される\n```"
         }
       ],

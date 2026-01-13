@@ -14,12 +14,12 @@ export const rust4Data = {
       "tutorialSlides": [
         {
           "title": "トレイトとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 共通のインターフェース\n\n**トレイト** は、型が持つべきメソッドを定義します。\n\n```rust\ntrait Greet {\n    fn greet(&self) -> String;\n}\n```"
         },
         {
           "title": "実装",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# impl で実装\n\n```rust\nstruct Person { name: String }\n\nimpl Greet for Person {\n    fn greet(&self) -> String {\n        format!(\"Hello, {}\", self.name)\n    }\n}\n```"
         }
       ],
@@ -80,12 +80,12 @@ export const rust4Data = {
       "tutorialSlides": [
         {
           "title": "derive とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 自動実装\n\n**#[derive(...)]** で標準トレイトを自動実装できます。\n\n```rust\n#[derive(Debug, Clone, PartialEq)]\nstruct Point {\n    x: i32,\n    y: i32,\n}\n```"
         },
         {
           "title": "よく使うトレイト",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 標準 derive\n\n```rust\nDebug     // {:?} で表示\nClone     // .clone() で複製\nCopy      // コピーセマンティクス\nPartialEq // == で比較\nDefault   // デフォルト値\n```"
         }
       ],
@@ -134,12 +134,12 @@ export const rust4Data = {
       "tutorialSlides": [
         {
           "title": "Box とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ヒープアロケーション\n\n**Box<T>** は、データをヒープに格納するスマートポインタです。\n\n```rust\nlet b = Box::new(5);\nprintln!(\"{}\", *b);\n```"
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 再帰型など\n\n```rust\n// コンパイル時にサイズ不明な型\nenum List {\n    Cons(i32, Box<List>),\n    Nil,\n}\n```"
         }
       ],
@@ -176,7 +176,7 @@ export const rust4Data = {
       "tutorialSlides": [
         {
           "title": "Rc とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 参照カウント\n\n**Rc<T>** は、複数の所有者でデータを共有できます。\n\n```rust\nuse std::rc::Rc;\n\nlet a = Rc::new(5);\nlet b = Rc::clone(&a);\n```"
         },
         {
@@ -229,7 +229,7 @@ export const rust4Data = {
         },
         {
           "title": "値の取得",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# get メソッド\n\n```rust\nif let Some(score) = scores.get(\"Blue\") {\n    println!(\"{}\", score);\n}\n```"
         }
       ],
@@ -274,7 +274,7 @@ export const rust4Data = {
       "tutorialSlides": [
         {
           "title": "HashSet とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 一意な値の集合\n\n**HashSet** は、重複のない値の集合です。\n\n```rust\nuse std::collections::HashSet;\n\nlet mut set = HashSet::new();\nset.insert(1);\nset.insert(2);\nset.insert(1); // 重複は無視\n```"
         },
         {
@@ -326,12 +326,12 @@ export const rust4Data = {
       "tutorialSlides": [
         {
           "title": "match ガードとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 追加条件\n\n**if** でパターンに追加条件をつけられます。\n\n```rust\nmatch x {\n    n if n < 0 => println!(\"negative\"),\n    n if n > 0 => println!(\"positive\"),\n    _ => println!(\"zero\"),\n}\n```"
         },
         {
           "title": "使用例",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 複雑な条件分岐\n\n```rust\nmatch Some(5) {\n    Some(x) if x % 2 == 0 => println!(\"even\"),\n    Some(x) => println!(\"odd: {}\", x),\n    None => println!(\"none\"),\n}\n```"
         }
       ],
@@ -374,7 +374,7 @@ export const rust4Data = {
       "tutorialSlides": [
         {
           "title": "impl Trait とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 戻り値の型を抽象化\n\n**impl Trait** で、トレイトを実装する型を返せます。\n\n```rust\nfn make_iter() -> impl Iterator<Item = i32> {\n    vec![1, 2, 3].into_iter()\n}\n```"
         },
         {
@@ -426,12 +426,12 @@ export const rust4Data = {
       "tutorialSlides": [
         {
           "title": "collect とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# イテレータをコレクションに\n\n**collect** は、イテレータをVecやHashMapなどに変換します。\n\n```rust\nlet v: Vec<_> = (0..5).collect();\nlet s: String = vec!['a', 'b'].into_iter().collect();\n```"
         },
         {
           "title": "型ヒント",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 変換先を指定\n\n```rust\n// ターボフィッシュ構文\nlet v = (0..5).collect::<Vec<_>>();\n\n// 変数の型注釈\nlet v: Vec<i32> = (0..5).collect();\n```"
         }
       ],
@@ -473,7 +473,7 @@ export const rust4Data = {
         },
         {
           "title": "使用例",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 位置情報が必要なとき\n\n```rust\nlet v = vec![10, 20, 30];\nfor (idx, val) in v.iter().enumerate() {\n    println!(\"Index {}: {}\", idx, val);\n}\n```"
         }
       ],

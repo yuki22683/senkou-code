@@ -19,7 +19,7 @@ export const javaData3 = {
         },
         {
           "title": "構文",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# (引数) -> 処理\n\n```java\n// 引数なし\n() -> System.out.println(\"Hello\")\n\n// 引数1つ（カッコ省略可）\nx -> x * 2\n\n// 引数複数\n(a, b) -> a + b\n```"
         }
       ],
@@ -66,12 +66,12 @@ export const javaData3 = {
       "tutorialSlides": [
         {
           "title": "Stream とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# データの流れを処理\n\n**Stream** は、コレクションの要素を順番に処理するためのAPIです。\n\n```java\nList<String> list = Arrays.asList(\"a\", \"b\", \"c\");\nStream<String> stream = list.stream();\n```"
         },
         {
           "title": "Stream の作り方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# いろいろな作成方法\n\n```java\n// コレクションから\nlist.stream()\n\n// 配列から\nArrays.stream(array)\n\n// 値から直接\nStream.of(1, 2, 3)\n```"
         }
       ],
@@ -232,12 +232,12 @@ export const javaData3 = {
       "tutorialSlides": [
         {
           "title": "collect とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# Streamをコレクションに\n\n**collect** は、Streamの結果をリストなどに変換します。\n\n```java\nList<Integer> result = nums.stream()\n    .filter(n -> n > 0)\n    .collect(Collectors.toList());\n```"
         },
         {
           "title": "様々なコレクタ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# Collectorsのメソッド\n\n```java\n// リストに\nCollectors.toList()\n\n// セットに\nCollectors.toSet()\n\n// 文字列結合\nCollectors.joining(\", \")\n```"
         }
       ],
@@ -298,7 +298,7 @@ export const javaData3 = {
         },
         {
           "title": "様々な集約",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 合計、最大値など\n\n```java\n// 合計\n.reduce(0, Integer::sum)\n\n// 積\n.reduce(1, (a, b) -> a * b)\n```"
         }
       ],
@@ -350,12 +350,12 @@ export const javaData3 = {
       "tutorialSlides": [
         {
           "title": "Optional とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 値があるかもしれない容器\n\n**Optional** は、値が存在するかもしれないことを表す型です。\n\n```java\nOptional<String> name = Optional.of(\"Alice\");\nOptional<String> empty = Optional.empty();\n```"
         },
         {
           "title": "値の取得",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 安全に値を取り出す\n\n```java\nOptional<String> opt = Optional.of(\"Hello\");\n\n// 値があれば取得、なければデフォルト\nString s = opt.orElse(\"default\");\n\n// 値があれば処理\nopt.ifPresent(System.out::println);\n```"
         }
       ],
@@ -457,12 +457,12 @@ export const javaData3 = {
       "tutorialSlides": [
         {
           "title": "sorted とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 要素を並べ替え\n\n**sorted** は、要素を自然順序でソートします。\n\n```java\nList<Integer> nums = Arrays.asList(3, 1, 2);\nnums.stream()\n    .sorted()\n    .forEach(System.out::println);\n// 1, 2, 3\n```"
         },
         {
           "title": "カスタムソート",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# Comparator を指定\n\n```java\n// 逆順\n.sorted(Comparator.reverseOrder())\n\n// 長さでソート\n.sorted(Comparator.comparing(String::length))\n```"
         }
       ],
@@ -513,7 +513,7 @@ export const javaData3 = {
       "tutorialSlides": [
         {
           "title": "distinct とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 重複を除去\n\n**distinct** は、重複した要素を取り除きます。\n\n```java\nList<Integer> nums = Arrays.asList(1, 2, 2, 3, 3, 3);\nnums.stream()\n    .distinct()\n    .forEach(System.out::println);\n// 1, 2, 3\n```"
         },
         {

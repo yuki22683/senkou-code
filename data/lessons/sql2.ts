@@ -14,12 +14,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "WHERE とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 条件でフィルタ\n\n**WHERE** は、指定した条件に合うデータだけを取得します。"
         },
         {
           "title": "WHERE の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# SELECT ... WHERE 条件\n\n`=`, `>`, `<` などの比較演算子が使えます。\n\n**コード例：**\n```sql\nSELECT * FROM users\nWHERE age > 20;\n```"
         }
       ],
@@ -50,12 +50,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "ORDER BY とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 結果を並べ替え\n\n**ORDER BY** は、指定した列で結果を並べ替えます。ASC（昇順）、DESC（降順）を指定できます。"
         },
         {
           "title": "ORDER BY の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# SELECT ... ORDER BY 列 [ASC|DESC]\n\nデフォルトは昇順です。\n\n**コード例：**\n```sql\nSELECT * FROM users\nORDER BY age DESC;\n```"
         }
       ],
@@ -88,12 +88,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "LIMIT とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 取得行数を制限\n\n**LIMIT** は、取得する行数を制限します。大量データの一部だけを見たいときに便利です。"
         },
         {
           "title": "LIMIT の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# SELECT ... LIMIT n\n\n最初の n 行だけを取得します。\n\n**コード例：**\n```sql\nSELECT * FROM users\nLIMIT 10;\n```"
         }
       ],
@@ -126,12 +126,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "COUNT とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 行数を数える\n\n**COUNT** は、条件に合う行の数を返す集計関数です。"
         },
         {
           "title": "COUNT の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# COUNT(*) または COUNT(列)\n\n`*` はすべての行、列名を指定するとNULL以外を数えます。\n\n**コード例：**\n```sql\nSELECT COUNT(*) FROM users;\n```"
         }
       ],
@@ -162,12 +162,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "SUM とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 合計を計算\n\n**SUM** は、指定した列の値の合計を返す集計関数です。"
         },
         {
           "title": "SUM の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# SUM(列)\n\n数値列の合計を計算します。\n\n**コード例：**\n```sql\nSELECT SUM(price) FROM products;\n```"
         }
       ],
@@ -198,12 +198,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "AVG とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 平均を計算\n\n**AVG** は、指定した列の値の平均を返す集計関数です。"
         },
         {
           "title": "AVG の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# AVG(列)\n\n数値列の平均を計算します。\n\n**コード例：**\n```sql\nSELECT AVG(score) FROM exams;\n```"
         }
       ],
@@ -234,12 +234,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "GROUP BY とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# グループごとに集計\n\n**GROUP BY** は、指定した列の値が同じ行をグループ化し、集計関数と組み合わせて使います。"
         },
         {
           "title": "GROUP BY の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# SELECT 列, 集計 ... GROUP BY 列\n\nグループごとに集計結果を得られます。\n\n**コード例：**\n```sql\nSELECT category, COUNT(*)\nFROM products\nGROUP BY category;\n```"
         }
       ],
@@ -276,12 +276,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "HAVING とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# グループに条件を付ける\n\n**HAVING** は、GROUP BY の結果に対して条件を指定します。WHERE はグループ化前、HAVING はグループ化後に適用されます。"
         },
         {
           "title": "HAVING の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# GROUP BY ... HAVING 条件\n\n集計関数の結果で絞り込めます。\n\n**コード例：**\n```sql\nSELECT category, COUNT(*)\nFROM products\nGROUP BY category\nHAVING COUNT(*) > 5;\n```"
         }
       ],
@@ -360,12 +360,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "COALESCE とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# NULLの代替値\n\n**COALESCE** は、引数の中で最初のNULLでない値を返します。NULLのデフォルト値を設定できます。"
         },
         {
           "title": "COALESCE の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# COALESCE(値1, 値2, ...)\n\n左から順に評価し、最初のNULLでない値を返します。\n\n**コード例：**\n```sql\nSELECT COALESCE(name, 'Unknown')\nFROM users;\n```"
         }
       ],

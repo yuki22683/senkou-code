@@ -14,7 +14,7 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "型ガードとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/if.png",
           "content": "# 型を絞り込む\n\n**型ガード**は、条件分岐で型を絞り込む関数です。\n\n```typescript\nfunction isString(x: unknown): x is string {\n  return typeof x === 'string';\n}\n```"
         }
       ],
@@ -173,7 +173,7 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "never型とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/error.png",
           "content": "# 到達不能な型\n\n**never**型は値を持たない型です。switch文の網羅性チェックに使えます。\n\n```typescript\nfunction exhaustiveCheck(x: never): never {\n  throw new Error('Unexpected value');\n}\n```"
         }
       ],
@@ -271,7 +271,7 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "Exclude<T, U>",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型を除外する\n\n**Exclude**はユニオン型から特定の型を除外します。\n\n```typescript\ntype T = 'a' | 'b' | 'c';\ntype Without_A = Exclude<T, 'a'>;\n// 'b' | 'c'\n```"
         }
       ],
@@ -310,7 +310,7 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "Extract<T, U>",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型を抽出する\n\n**Extract**はユニオン型から特定の型を抽出します。\n\n```typescript\ntype T = 'a' | 'b' | 'c';\ntype Only_AB = Extract<T, 'a' | 'b'>;\n// 'a' | 'b'\n```"
         }
       ],
@@ -388,7 +388,7 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "Parameters<T>",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/arguments.png",
           "content": "# 関数の引数型を取得\n\n**Parameters**は関数の引数の型をタプルで取得します。\n\n```typescript\ntype Fn = (a: string, b: number) => void;\ntype Params = Parameters<Fn>;\n// [string, number]\n```"
         }
       ],
@@ -431,7 +431,7 @@ export const typescriptData4 = {
       "tutorialSlides": [
         {
           "title": "Awaited<T>",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/task_async.png",
           "content": "# Promiseの中身の型を取得\n\n**Awaited**はPromiseが解決する型を取得します。\n\n```typescript\ntype P = Promise<string>;\ntype T = Awaited<P>;\n// string\n```"
         }
       ],

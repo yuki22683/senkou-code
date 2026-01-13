@@ -93,7 +93,7 @@ export const javaData2 = {
         },
         {
           "title": "@Override アノテーション",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 明示的に宣言\n\n`@Override` をつけると、間違いを防げます。\n\n```java\nclass Cat extends Animal {\n    @Override\n    void sound() {  // 親と同じ名前\n        System.out.println(\"ニャー\");\n    }\n}\n```"
         }
       ],
@@ -358,12 +358,12 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "finallyとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 必ず実行される\n\n`finally` ブロックは、例外が起きても起きなくても必ず実行されます。\n\n```java\ntry {\n    // 処理\n} catch (Exception e) {\n    // エラー処理\n} finally {\n    // 必ず実行\n}\n```"
         },
         {
           "title": "リソースの解放に",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 後片付け処理\n\nファイルを閉じる、接続を切断するなどの後処理に使います。\n\n```java\ntry {\n    // ファイル操作\n} finally {\n    // ファイルを閉じる\n    System.out.println(\"Clean up\");\n}\n```"
         }
       ],
@@ -417,12 +417,12 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "ArrayListとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 可変長の配列\n\n`ArrayList` はサイズを動的に変更できるリストです。\n\n```java\nimport java.util.ArrayList;\n\nArrayList<String> list = new ArrayList<>();\nlist.add(\"Apple\");\nlist.add(\"Banana\");\n```"
         },
         {
           "title": "基本操作",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 追加・取得・削除\n\n```java\nArrayList<Integer> nums = new ArrayList<>();\nnums.add(10);       // 追加\nnums.get(0);        // 取得 -> 10\nnums.remove(0);     // 削除\nnums.size();        // サイズ\n```"
         }
       ],
@@ -481,7 +481,7 @@ export const javaData2 = {
         },
         {
           "title": "ArrayListでも使える",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# コレクションを処理\n\n```java\nArrayList<String> items = new ArrayList<>();\nitems.add(\"A\");\nitems.add(\"B\");\n\nfor (String item : items) {\n    System.out.println(item);\n}\n```"
         }
       ],
@@ -530,12 +530,12 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "staticとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# クラスに属するメソッド\n\n`static` メソッドはインスタンスを作らずに呼べます。\n\n```java\nclass Math {\n    static int add(int a, int b) {\n        return a + b;\n    }\n}\n\nMath.add(3, 5);  // 8\n```"
         },
         {
           "title": "staticの特徴",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ユーティリティに便利\n\n共通の処理をまとめるのに使います。\n\n```java\nclass Utils {\n    static String upper(String s) {\n        return s.toUpperCase();\n    }\n}\n\nUtils.upper(\"hello\");  // \"HELLO\"\n```"
         }
       ],
@@ -592,12 +592,12 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "アクセス修飾子とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 公開範囲を制御\n\n- `public`: どこからでもアクセス可能\n- `private`: 同じクラス内のみ\n- `protected`: 同じパッケージと子クラス\n\n```java\nclass User {\n    public String name;\n    private int id;\n}\n```"
         },
         {
           "title": "カプセル化",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# データを守る\n\n`private` で隠して、メソッドでアクセスします。\n\n```java\nclass User {\n    private String name;\n    \n    public String getName() {\n        return name;\n    }\n}\n```"
         }
       ],

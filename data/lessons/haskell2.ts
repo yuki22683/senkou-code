@@ -14,12 +14,12 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "関数の定義",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# シンプルな定義\n\nHaskellでは、`名前 引数 = 本体` のようにシンプルに関数を定義します。括弧は不要です。"
         },
         {
           "title": "関数の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# スペースで引数を渡す\n\n関数の呼び出しは `関数名 引数` と書きます。\n\n**コード例：**\n```haskell\ndouble x = x * 2\nmain = print (double 5) -- 10\n```"
         }
       ],
@@ -52,12 +52,12 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "型注釈とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型を明示する\n\n**型注釈** は、関数や値の型を明示的に書くことです。`::` を使って書きます。"
         },
         {
           "title": "型注釈の書き方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 名前 :: 型\n\n`関数名 :: 引数型 -> 戻り値型` のように書きます。\n\n**コード例：**\n```haskell\ndouble :: Int -> Int\ndouble x = x * 2\n```"
         }
       ],
@@ -92,12 +92,12 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "リストとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 同じ型の要素の列\n\nHaskellのリストは、同じ型の要素を順番に並べたものです。`[ ]` で作成します。"
         },
         {
           "title": "リストの操作",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# head と tail\n\n`head` で先頭、`tail` で残りを取得します。\n\n**コード例：**\n```haskell\nhead [1, 2, 3] -- 1\ntail [1, 2, 3] -- [2, 3]\n```"
         }
       ],
@@ -244,12 +244,12 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "ガードとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 条件での分岐\n\n**ガード** は、`|` を使って条件ごとに異なる処理を定義する方法です。"
         },
         {
           "title": "ガードの書き方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# | 条件 = 処理\n\n`otherwise` はすべての条件に当てはまらない場合です。\n\n**コード例：**\n```haskell\nabs' x\n  | x < 0     = -x\n  | otherwise = x\n```"
         }
       ],
@@ -360,12 +360,12 @@ export const haskell2Data = {
       "tutorialSlides": [
         {
           "title": "foldr とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# リストの畳み込み\n\n**foldr** は、リストの要素を右から順に二項演算で畳み込みます。"
         },
         {
           "title": "foldr の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# foldr 関数 初期値 リスト\n\n二項関数、初期値、リストを渡します。\n\n**コード例：**\n```haskell\nfoldr (+) 0 [1, 2, 3] -- 6\n```"
         }
       ],

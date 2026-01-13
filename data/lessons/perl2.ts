@@ -14,7 +14,7 @@ export const perl2Data = {
       "tutorialSlides": [
         {
           "title": "正規表現とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# パターンマッチング\n\n**正規表現** は、文字列のパターンを表す特殊な記法です。Perlは正規表現が最も得意な言語の一つです。"
         },
         {
@@ -56,12 +56,12 @@ export const perl2Data = {
       "tutorialSlides": [
         {
           "title": "置換とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 文字列の書き換え\n\n**s/// 演算子** を使うと、パターンに合った部分を別の文字列に置き換えられます。"
         },
         {
           "title": "s/パターン/置換/",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 置換の書き方\n\n`s/古い/新しい/` で置換します。\n\n**コード例：**\n```perl\nmy $text = \"hello\";\n$text =~ s/hello/hi/;\nprint $text; # hi\n```"
         }
       ],
@@ -96,12 +96,12 @@ export const perl2Data = {
       "tutorialSlides": [
         {
           "title": "配列とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# データのリスト\n\n**配列** は、複数の値を順番に格納するデータ構造です。`@` で始まる名前を使います。"
         },
         {
           "title": "配列の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# @array と $array[n]\n\n配列全体は `@array`、個別の要素は `$array[番号]` でアクセスします。\n\n**コード例：**\n```perl\nmy @nums = (1, 2, 3);\nprint $nums[0]; # 1\n```"
         }
       ],
@@ -134,12 +134,12 @@ export const perl2Data = {
       "tutorialSlides": [
         {
           "title": "ハッシュとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# キーと値のペア\n\n**ハッシュ** は、キーと値を組み合わせて格納するデータ構造です。`%` で始まる名前を使います。"
         },
         {
           "title": "ハッシュの使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# %hash と $hash{key}\n\nハッシュ全体は `%hash`、個別の値は `$hash{キー}` でアクセスします。\n\n**コード例：**\n```perl\nmy %person = (\"name\" => \"Taro\");\nprint $person{\"name\"}; # Taro\n```"
         }
       ],
@@ -214,7 +214,7 @@ export const perl2Data = {
       "tutorialSlides": [
         {
           "title": "サブルーチンとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 関数のこと\n\nPerlでは関数を **サブルーチン** と呼びます。`sub` で定義します。"
         },
         {
@@ -298,12 +298,12 @@ export const perl2Data = {
       "tutorialSlides": [
         {
           "title": "無名配列とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# [ ] で直接作る\n\n**[ ]** を使うと、名前のない配列のリファレンスを直接作れます。"
         },
         {
           "title": "[ ] の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 配列リファレンスを返す\n\n`[ ]` は配列リファレンスを返します。\n\n**コード例：**\n```perl\nmy $ref = [1, 2, 3];\nprint $ref->[0]; # 1\n```"
         }
       ],
@@ -376,12 +376,12 @@ export const perl2Data = {
       "tutorialSlides": [
         {
           "title": "grep とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 条件でフィルタ\n\n**grep** は、条件を満たす要素だけを残した新しいリストを作ります。"
         },
         {
           "title": "grep の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# grep { } @array\n\n`$_` が各要素を表し、真を返す要素だけが残ります。\n\n**コード例：**\n```perl\nmy @big = grep { $_ > 3 } (1, 2, 3, 4, 5);\n# (4, 5)\n```"
         }
       ],

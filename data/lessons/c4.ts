@@ -14,12 +14,12 @@ export const c4Data = {
       "tutorialSlides": [
         {
           "title": "fopen とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ファイルを開く\n\n**fopen** は、ファイルを開いてFILEポインタを返します。\n\n```c\nFILE *fp = fopen(\"file.txt\", \"r\");\nif (fp == NULL) {\n    printf(\"Error!\\n\");\n}\n```"
         },
         {
           "title": "モードの種類",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# オープンモード\n\n```c\n\"r\"  // 読み込み\n\"w\"  // 書き込み（上書き）\n\"a\"  // 追記\n\"rb\" // バイナリ読み込み\n\"wb\" // バイナリ書き込み\n```"
         }
       ],
@@ -70,12 +70,12 @@ export const c4Data = {
       "tutorialSlides": [
         {
           "title": "fclose とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ファイルを閉じる\n\n**fclose** は、開いたファイルを閉じてリソースを解放します。\n\n```c\nFILE *fp = fopen(\"file.txt\", \"r\");\n// 処理...\nfclose(fp);\n```"
         },
         {
           "title": "重要性",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 必ず閉じる\n\n- バッファの内容がファイルに書き込まれる\n- システムリソースが解放される\n- 他のプログラムがアクセスできるようになる"
         }
       ],
@@ -126,12 +126,12 @@ export const c4Data = {
       "tutorialSlides": [
         {
           "title": "fprintf とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# フォーマット付き出力\n\n**fprintf** は、printf のファイル版です。\n\n```c\nFILE *fp = fopen(\"out.txt\", \"w\");\nfprintf(fp, \"Name: %s, Age: %d\\n\", \"Alice\", 25);\n```"
         },
         {
           "title": "printf との違い",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 出力先の指定\n\n```c\nprintf(\"Hello\\n\");         // 標準出力\nfprintf(fp, \"Hello\\n\");    // ファイル\nfprintf(stderr, \"Error\\n\"); // 標準エラー\n```"
         }
       ],
@@ -182,7 +182,7 @@ export const c4Data = {
       "tutorialSlides": [
         {
           "title": "fgets とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 1行読み込み\n\n**fgets** は、改行までの文字列を読み込みます。\n\n```c\nchar buf[256];\nfgets(buf, 256, fp);\n// buf に1行分が格納される\n```"
         },
         {
@@ -246,12 +246,12 @@ export const c4Data = {
       "tutorialSlides": [
         {
           "title": "fseek とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ファイル位置を移動\n\n**fseek** は、ファイルの読み書き位置を移動します。\n\n```c\nfseek(fp, 10, SEEK_SET);  // 先頭から10バイト\nfseek(fp, -5, SEEK_CUR);  // 現在から-5バイト\nfseek(fp, 0, SEEK_END);   // 末尾へ\n```"
         },
         {
           "title": "基準位置",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# SEEK定数\n\n```c\nSEEK_SET  // ファイル先頭\nSEEK_CUR  // 現在位置\nSEEK_END  // ファイル末尾\n```"
         }
       ],
@@ -300,12 +300,12 @@ export const c4Data = {
       "tutorialSlides": [
         {
           "title": "ftell とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 現在位置を取得\n\n**ftell** は、ファイルの現在位置をバイト数で返します。\n\n```c\nlong pos = ftell(fp);\nprintf(\"Position: %ld\\n\", pos);\n```"
         },
         {
           "title": "ファイルサイズの取得",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# サイズを調べる\n\n```c\nfseek(fp, 0, SEEK_END);\nlong size = ftell(fp);\nfseek(fp, 0, SEEK_SET);\n```"
         }
       ],
@@ -361,7 +361,7 @@ export const c4Data = {
         },
         {
           "title": "値の指定",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 明示的な値\n\n```c\nenum Status {\n    OK = 200,\n    NOT_FOUND = 404,\n    ERROR = 500\n};\n```"
         }
       ],
@@ -413,7 +413,7 @@ export const c4Data = {
         },
         {
           "title": "使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 一度に1つだけ有効\n\n```c\nunion Data d;\nd.i = 10;\nprintf(\"%d\\n\", d.i);\nd.f = 3.14;  // i の値は失われる\n```"
         }
       ],
@@ -473,7 +473,7 @@ export const c4Data = {
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 関数でポインタを変更\n\n```c\nvoid allocate(int **pp) {\n    *pp = malloc(sizeof(int));\n}\n\nint *p;\nallocate(&p);  // p にメモリを割り当て\n```"
         }
       ],
@@ -525,7 +525,7 @@ export const c4Data = {
         },
         {
           "title": "va_マクロ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 引数を取得\n\n```c\nva_list args;\nva_start(args, count);  // 初期化\nint n = va_arg(args, int); // 取得\nva_end(args);  // 終了\n```"
         }
       ],

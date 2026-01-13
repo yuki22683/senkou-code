@@ -408,12 +408,12 @@ export const php2Data = {
       "tutorialSlides": [
         {
           "title": "名前空間とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/namespace_concept.png",
           "content": "# クラスの整理\n\n**名前空間（namespace）** を使うと、クラスをグループ分けして名前の衝突を防げます。"
         },
         {
           "title": "namespace の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/namespace_declaration.png",
           "content": "# namespace キーワード\n\nファイルの先頭で `namespace` を宣言します。\n\n**コード例：**\n```php\nnamespace App\\Models;\nclass User { }\n```"
         }
       ],
@@ -467,7 +467,7 @@ export const php2Data = {
         },
         {
           "title": "?? の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/null_coalescing.png",
           "content": "# シンプルな null チェック\n\n`$a ?? $b` は、$a が null なら $b を返します。\n\n**コード例：**\n```php\n$name = null;\necho $name ?? 'Guest'; // Guest\n```"
         }
       ],

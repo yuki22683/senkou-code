@@ -14,7 +14,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "with文でファイルを開く",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/with_chain.png",
           "content": "# 安全にファイルを扱う\n\n**with文**を使うと、ファイルが自動的に閉じられます。\n\n```python\nwith open('file.txt', 'r') as f:\n    content = f.read()\n    print(content)\n# ファイルは自動で閉じられる\n```"
         }
       ],
@@ -67,7 +67,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "1行ずつ読み込む",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/generator_yield.png",
           "content": "# forループでファイルを読む\n\nファイルオブジェクトはイテレータなので、forループで1行ずつ読めます。\n\n```python\nwith open('file.txt', 'r') as f:\n    for line in f:\n        print(line.strip())\n```"
         }
       ],
@@ -121,7 +121,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "json.loads()",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/box.png",
           "content": "# JSON文字列をPythonに変換\n\n**json.loads()**でJSON文字列を辞書やリストに変換できます。\n\n```python\nimport json\n\ndata = json.loads('{\"name\": \"Taro\", \"age\": 25}')\nprint(data['name'])  # Taro\n```"
         }
       ],
@@ -169,7 +169,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "json.dumps()",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/str_representation.png",
           "content": "# PythonをJSONに変換\n\n**json.dumps()**でPythonのデータをJSON文字列に変換できます。\n\n```python\nimport json\n\ndata = {'name': 'Taro', 'age': 25}\njson_str = json.dumps(data)\nprint(json_str)  # {\"name\": \"Taro\", \"age\": 25}\n```"
         }
       ],
@@ -217,7 +217,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "re.search()",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/regex_search.png",
           "content": "# パターンを検索\n\n**re.search()**で文字列内のパターンを検索できます。\n\n```python\nimport re\n\ntext = 'my email is test@example.com'\nmatch = re.search(r'\\w+@\\w+\\.\\w+', text)\nif match:\n    print(match.group())  # test@example.com\n```"
         }
       ],
@@ -269,7 +269,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "re.findall()",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/regex_pattern.png",
           "content": "# 全ての一致を取得\n\n**re.findall()**でパターンに一致する全ての部分をリストで取得できます。\n\n```python\nimport re\n\ntext = 'I have 3 apples and 5 oranges'\nnumbers = re.findall(r'\\d+', text)\nprint(numbers)  # ['3', '5']\n```"
         }
       ],
@@ -365,7 +365,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "Counterとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/list.png",
           "content": "# 要素を数える\n\n**Counter**を使うと、要素の出現回数を簡単にカウントできます。\n\n```python\nfrom collections import Counter\n\nwords = ['apple', 'banana', 'apple', 'cherry']\ncount = Counter(words)\nprint(count['apple'])  # 2\n```"
         }
       ],
@@ -412,7 +412,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "defaultdictとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/box.png",
           "content": "# デフォルト値を持つ辞書\n\n**defaultdict**を使うと、存在しないキーにアクセスしてもエラーになりません。\n\n```python\nfrom collections import defaultdict\n\nd = defaultdict(int)\nd['a'] += 1\nprint(d['a'])  # 1\nprint(d['b'])  # 0（デフォルト値）\n```"
         }
       ],
@@ -463,7 +463,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "itertools.chain()",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/pipeline_flow.png",
           "content": "# イテラブルを連結\n\n**chain()**を使うと、複数のイテラブルを1つに連結できます。\n\n```python\nfrom itertools import chain\n\na = [1, 2, 3]\nb = [4, 5, 6]\nfor x in chain(a, b):\n    print(x)  # 1 2 3 4 5 6\n```"
         }
       ],

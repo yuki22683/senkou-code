@@ -19,7 +19,7 @@ export const javaData4 = {
         },
         {
           "title": "使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型を指定して使う\n\n```java\nBox<String> box = new Box<>();\nbox.set(\"Hello\");\nString s = box.get(); // キャスト不要\n\nBox<Integer> numBox = new Box<>();\nnumBox.set(42);\n```"
         }
       ],
@@ -86,7 +86,7 @@ export const javaData4 = {
         },
         {
           "title": "メリット",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 型固有のメソッドが使える\n\n```java\nNumBox<Integer> box = new NumBox<>();\n// OK: Integer は Number のサブクラス\n\nNumBox<String> box2; \n// コンパイルエラー！\n```"
         }
       ],
@@ -141,12 +141,12 @@ export const javaData4 = {
       "tutorialSlides": [
         {
           "title": "? ワイルドカード",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 不明な型を表す\n\n**?** は任意の型を表すワイルドカードです。\n\n```java\n// どんな型のリストも受け取れる\npublic void printList(List<?> list) {\n    for (Object o : list) {\n        System.out.println(o);\n    }\n}\n```"
         },
         {
           "title": "境界付きワイルドカード",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 上限・下限の指定\n\n```java\n// Number以下の型 (上限)\nList<? extends Number>\n\n// Integer以上の型 (下限)\nList<? super Integer>\n```"
         }
       ],
@@ -324,7 +324,7 @@ export const javaData4 = {
       "tutorialSlides": [
         {
           "title": "Comparator とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 比較のルールを定義\n\n**Comparator** は、オブジェクトの比較方法を定義するインターフェースです。\n\n```java\nList<String> list = Arrays.asList(\"bb\", \"a\", \"ccc\");\nlist.sort(Comparator.comparing(String::length));\n// [a, bb, ccc] - 長さ順\n```"
         },
         {
@@ -379,12 +379,12 @@ export const javaData4 = {
       "tutorialSlides": [
         {
           "title": "Comparable とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 自然順序の定義\n\n**Comparable** を実装すると、オブジェクトに自然な順序を定義できます。\n\n```java\nclass Person implements Comparable<Person> {\n    String name;\n    public int compareTo(Person other) {\n        return this.name.compareTo(other.name);\n    }\n}\n```"
         },
         {
           "title": "compareTo のルール",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 戻り値の意味\n\n```java\n// this < other → 負の数\n// this == other → 0\n// this > other → 正の数\n\nreturn this.age - other.age;\n```"
         }
       ],
@@ -506,7 +506,7 @@ export const javaData4 = {
       "tutorialSlides": [
         {
           "title": "Queue とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 先入れ先出し（FIFO）\n\n**Queue** は、最初に追加した要素が最初に取り出されるデータ構造です。\n\n```java\nQueue<String> queue = new LinkedList<>();\nqueue.offer(\"A\"); // 追加\nqueue.offer(\"B\");\nqueue.poll();     // A を取り出し\n```"
         },
         {
@@ -564,12 +564,12 @@ export const javaData4 = {
       "tutorialSlides": [
         {
           "title": "Deque とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 両端から操作できるキュー\n\n**Deque** は、先頭と末尾の両方から追加・削除ができます。\n\n```java\nDeque<String> deque = new ArrayDeque<>();\ndeque.addFirst(\"A\");\ndeque.addLast(\"B\");\n```"
         },
         {
           "title": "スタックとしても使える",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 後入れ先出し（LIFO）\n\n```java\nDeque<Integer> stack = new ArrayDeque<>();\nstack.push(1);  // 先頭に追加\nstack.push(2);\nstack.pop();    // 2 を取り出し\n```"
         }
       ],

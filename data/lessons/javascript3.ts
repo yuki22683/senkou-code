@@ -14,12 +14,12 @@ export const javascriptData3 = {
       "tutorialSlides": [
         {
           "title": "Promise とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/task_async.png",
           "content": "# 非同期処理の約束\n\n非同期処理とは、時間のかかる処理（通信やファイル読み込みなど）を待たずに次の処理を進める仕組みです。**Promise** は、その処理が将来完了することを表すオブジェクトです。\n\n```javascript\nconst promise = new Promise((resolve, reject) => {\n  resolve('成功！');\n});\n```"
         },
         {
           "title": "then で結果を受け取る",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/task_async.png",
           "content": "# then メソッド\n\n`.then()` で成功時の処理、`.catch()` で失敗時の処理を書きます。\n\n```javascript\npromise\n  .then(result => console.log(result))\n  .catch(error => console.log(error));\n```"
         }
       ],
@@ -60,12 +60,12 @@ export const javascriptData3 = {
       "tutorialSlides": [
         {
           "title": "Promise.resolve とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/task_async.png",
           "content": "# 即座に解決するPromise\n\n`Promise.resolve()` は、すぐに成功状態のPromiseを作ります。\n\n```javascript\nPromise.resolve('即座に完了')\n  .then(msg => console.log(msg));\n```"
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/task_async.png",
           "content": "# 統一的なインターフェース\n\n同期的な値もPromiseとして扱いたいときに便利です。\n\n```javascript\nfunction getData(useCache) {\n  if (useCache) {\n    return Promise.resolve(cachedData);\n  }\n  return fetch('/api/data');\n}\n```"
         }
       ],
@@ -100,12 +100,12 @@ export const javascriptData3 = {
       "tutorialSlides": [
         {
           "title": "async とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/task_async.png",
           "content": "# 非同期関数を定義\n\n**async** を付けると、関数は自動的にPromiseを返します。\n\n```javascript\nasync function hello() {\n  return 'Hello!';\n}\n// hello() は Promise を返す\n```"
         },
         {
           "title": "async の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/task_async.png",
           "content": "# 戻り値は自動でPromiseに包まれる\n\n```javascript\nasync function getData() {\n  return { name: 'Alice' };\n}\n\ngetData().then(data => console.log(data.name));\n// Alice\n```"
         }
       ],
@@ -146,12 +146,12 @@ export const javascriptData3 = {
       "tutorialSlides": [
         {
           "title": "await とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/task_async.png",
           "content": "# Promiseの完了を待つ\n\n**await** を使うと、Promiseの結果を待ってから次の処理に進みます。\n\n```javascript\nasync function main() {\n  const result = await Promise.resolve('完了');\n  console.log(result);\n}\n```"
         },
         {
           "title": "await の注意点",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/task_async.png",
           "content": "# async関数内でのみ使用可能\n\nawait は async 関数の中でしか使えません。\n\n```javascript\nasync function fetchData() {\n  const data = await fetch('/api');\n  const json = await data.json();\n  return json;\n}\n```"
         }
       ],
@@ -196,7 +196,7 @@ export const javascriptData3 = {
       "tutorialSlides": [
         {
           "title": "Promise.all とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/goroutine_concurrent.png",
           "content": "# 複数のPromiseを同時に待つ\n\n**Promise.all** は、全てのPromiseが完了するまで待ちます。\n\n```javascript\nconst p1 = Promise.resolve(1);\nconst p2 = Promise.resolve(2);\n\nPromise.all([p1, p2]).then(results => {\n  console.log(results); // [1, 2]\n});\n```"
         },
         {
@@ -307,7 +307,7 @@ export const javascriptData3 = {
         },
         {
           "title": "super の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/super_parent_call.png",
           "content": "# 親クラスのメソッドを呼ぶ\n\n```javascript\nclass Cat extends Animal {\n  constructor(name) {\n    super(); // 親のconstructor\n    this.name = name;\n  }\n}\n```"
         }
       ],
@@ -360,12 +360,12 @@ export const javascriptData3 = {
       "tutorialSlides": [
         {
           "title": "static とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# インスタンスなしで呼べるメソッド\n\n**static** メソッドは、クラス自体から直接呼べます。\n\n```javascript\nclass MathUtil {\n  static add(a, b) {\n    return a + b;\n  }\n}\n\nconsole.log(MathUtil.add(1, 2)); // 3\n```"
         },
         {
           "title": "static の使いどころ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ユーティリティ関数として\n\nインスタンスに依存しない処理に使います。\n\n```javascript\nclass DateUtil {\n  static today() {\n    return new Date().toLocaleDateString();\n  }\n}\n```"
         }
       ],
@@ -412,12 +412,12 @@ export const javascriptData3 = {
       "tutorialSlides": [
         {
           "title": "Optional Chaining とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/null_safe.png",
           "content": "# 安全なプロパティアクセス\n\n**?.** を使うと、null や undefined でもエラーにならずに undefined を返します。\n\n```javascript\nconst user = { name: 'Alice' };\nconsole.log(user?.name);    // Alice\nconsole.log(user?.address?.city); // undefined\n```"
         },
         {
           "title": "従来の方法との比較",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/null_safe.png",
           "content": "# コードがシンプルに\n\n```javascript\n// 従来\nconst city = user && user.address && user.address.city;\n\n// Optional Chaining\nconst city = user?.address?.city;\n```"
         }
       ],
@@ -456,12 +456,12 @@ export const javascriptData3 = {
       "tutorialSlides": [
         {
           "title": "?? とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/null_coalescing.png",
           "content": "# null/undefinedの時だけデフォルト値\n\n**??** は、左辺が null または undefined の場合のみ右辺を返します。\n\n```javascript\nconst name = null ?? 'Guest';\nconsole.log(name); // Guest\n\nconst count = 0 ?? 10;\nconsole.log(count); // 0 (0はnullでない)\n```"
         },
         {
           "title": "|| との違い",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/null_coalescing.png",
           "content": "# || は falsy 全てに反応\n\n```javascript\n// || は 0, '', false も置き換える\nconst a = 0 || 10;   // 10\nconst b = '' || 'default'; // 'default'\n\n// ?? は null/undefined のみ\nconst c = 0 ?? 10;   // 0\nconst d = '' ?? 'default'; // ''\n```"
         }
       ],

@@ -71,7 +71,7 @@ export const csharp2Data = {
         },
         {
           "title": "virtual と override",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/virtual_override_cs.png",
           "content": "# 仮想メソッドの仕組み\n\n親クラスで `virtual` をつけたメソッドは、子クラスで `override` して上書きできます。\n\n**コード例：**\n```csharp\nclass Animal {\n    public virtual void Speak() {\n        Console.WriteLine(\"...\");\n    }\n}\nclass Cat : Animal {\n    public override void Speak() {\n        Console.WriteLine(\"meow\");\n    }\n}\n```"
         }
       ],
@@ -235,7 +235,7 @@ export const csharp2Data = {
         },
         {
           "title": "List の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/list_add.png",
           "content": "# Add で追加\n\n`Add()` メソッドで要素を追加し、インデックスでアクセスします。\n\n**コード例：**\n```csharp\nList<string> fruits = new List<string>();\nfruits.Add(\"Apple\");\nfruits.Add(\"Banana\");\nConsole.WriteLine(fruits[0]); // Apple\n```"
         }
       ],
@@ -274,12 +274,12 @@ export const csharp2Data = {
       "tutorialSlides": [
         {
           "title": "LINQ とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/linq_query.png",
           "content": "# データ操作の強力なツール\n\n**LINQ** は、コレクションを簡単に操作できる機能です。SQL のようにデータを検索・変換できます。"
         },
         {
           "title": "Where でフィルタリング",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/linq_query.png",
           "content": "# 条件に合う要素を抽出\n\n`Where()` を使って、条件を満たす要素だけを取り出せます。\n\n**コード例：**\n```csharp\nList<int> nums = new List<int> {1, 2, 3, 4, 5};\nvar big = nums.Where(n => n > 3);\nforeach (var n in big) {\n    Console.WriteLine(n); // 4, 5\n}\n```"
         }
       ],
@@ -449,7 +449,7 @@ export const csharp2Data = {
         },
         {
           "title": "?. の使い方",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/null_safe.png",
           "content": "# null なら null を返す\n\n`?.` は、左側が `null` なら `null` を返し、そうでなければメンバにアクセスします。\n\n**コード例：**\n```csharp\nstring name = null;\nint? len = name?.Length; // null\n```"
         }
       ],

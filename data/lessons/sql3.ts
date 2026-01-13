@@ -14,12 +14,12 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "サブクエリとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# クエリの中のクエリ\n\n**サブクエリ** は、別のクエリの中に入れ子になったSELECT文です。\n\n```sql\nSELECT * FROM users\nWHERE age > (SELECT AVG(age) FROM users);\n```"
         },
         {
           "title": "IN を使ったサブクエリ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 複数の値とマッチ\n\n```sql\nSELECT * FROM products\nWHERE category_id IN (\n  SELECT id FROM categories WHERE name = 'Electronics'\n);\n```"
         }
       ],
@@ -50,12 +50,12 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "EXISTS とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 行が存在するか\n\n**EXISTS** は、サブクエリが1行以上返すかをチェックします。\n\n```sql\nSELECT * FROM users u\nWHERE EXISTS (\n  SELECT 1 FROM orders o WHERE o.user_id = u.id\n);\n```"
         },
         {
           "title": "NOT EXISTS",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 存在しない場合\n\n```sql\nSELECT * FROM users u\nWHERE NOT EXISTS (\n  SELECT 1 FROM orders o WHERE o.user_id = u.id\n);\n```"
         }
       ],
@@ -122,7 +122,7 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "INNER JOIN とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# マッチする行だけ結合\n\n**INNER JOIN** は、両方のテーブルにマッチする行だけを返します。\n\n```sql\nSELECT u.name, o.total\nFROM users u\nINNER JOIN orders o ON u.id = o.user_id;\n```"
         },
         {
@@ -166,7 +166,7 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "LEFT JOIN とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 左テーブルの全行を返す\n\n**LEFT JOIN** は、左のテーブルの全行を返し、マッチしない場合はNULLになります。\n\n```sql\nSELECT u.name, o.total\nFROM users u\nLEFT JOIN orders o ON u.id = o.user_id;\n```"
         },
         {
@@ -210,12 +210,12 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "MAX / MIN とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 最大・最小を取得\n\n**MAX** は最大値、**MIN** は最小値を返します。\n\n```sql\nSELECT MAX(price), MIN(price) FROM products;\n```"
         },
         {
           "title": "GROUP BY との組み合わせ",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# カテゴリごとの最大値\n\n```sql\nSELECT category, MAX(price)\nFROM products\nGROUP BY category;\n```"
         }
       ],
@@ -246,12 +246,12 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "DISTINCT とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 重複を除去\n\n**DISTINCT** は、重複した行を1つにまとめます。\n\n```sql\nSELECT DISTINCT category FROM products;\n```"
         },
         {
           "title": "複数列での DISTINCT",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 組み合わせで重複判定\n\n```sql\nSELECT DISTINCT category, brand FROM products;\n```"
         }
       ],
@@ -290,12 +290,12 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "LIKE とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# パターンマッチ\n\n**LIKE** は、ワイルドカードを使ったパターン検索ができます。\n\n```sql\n-- % : 任意の文字列\n-- _ : 任意の1文字\nSELECT * FROM users WHERE name LIKE 'A%';\n```"
         },
         {
           "title": "ワイルドカード",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 使用例\n\n```sql\n'A%'    -- Aで始まる\n'%son'  -- sonで終わる\n'%ab%'  -- abを含む\n'_ob'   -- 3文字でobで終わる\n```"
         }
       ],
@@ -326,12 +326,12 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "BETWEEN とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 範囲内の値を検索\n\n**BETWEEN** は、指定した範囲内の値を検索します（両端を含む）。\n\n```sql\nSELECT * FROM products\nWHERE price BETWEEN 100 AND 500;\n```"
         },
         {
           "title": "NOT BETWEEN",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 範囲外を検索\n\n```sql\nSELECT * FROM products\nWHERE price NOT BETWEEN 100 AND 500;\n```"
         }
       ],
@@ -362,12 +362,12 @@ export const sql3Data = {
       "tutorialSlides": [
         {
           "title": "IN とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# リスト内の値にマッチ\n\n**IN** は、指定したリストの値のいずれかにマッチするか確認します。\n\n```sql\nSELECT * FROM users\nWHERE status IN ('active', 'pending');\n```"
         },
         {
           "title": "NOT IN",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# リスト外の値\n\n```sql\nSELECT * FROM users\nWHERE status NOT IN ('deleted', 'banned');\n```"
         }
       ],

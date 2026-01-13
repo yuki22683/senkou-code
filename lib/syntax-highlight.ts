@@ -30,7 +30,7 @@ export const LANGUAGE_CONFIG: Record<string, { keywords: Set<string>, builtins: 
   python: {
     // True, False, None are technically keywords in Python 3, but kept in builtins for coloring consistency
     keywords: new Set(["def", "class", "return", "import", "from", "if", "elif", "else", "for", "in", "while", "with", "as", "try", "except", "finally", "pass", "break", "continue", "lambda", "global", "nonlocal", "yield", "raise", "assert", "del", "async", "await", "and", "or", "not", "is"]),
-    builtins: new Set(["print", "len", "range", "int", "str", "list", "dict", "set", "tuple", "bool", "True", "False", "None", "super", "open", "type", "id", "input"]),
+    builtins: new Set(["print", "len", "range", "int", "str", "list", "dict", "set", "tuple", "bool", "True", "False", "None", "self", "cls", "super", "open", "type", "id", "input"]),
     commentPrefix: "#",
   },
   javascript: {
@@ -100,7 +100,7 @@ export const LANGUAGE_CONFIG: Record<string, { keywords: Set<string>, builtins: 
   },
   lua: {
     keywords: new Set(["and", "break", "do", "else", "elseif", "end", "false", "for", "function", "goto", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"]),
-    builtins: new Set(["print", "pairs", "ipairs", "table", "string", "math", "io", "os", "debug", "assert", "error", "type", "tonumber", "tostring", "require", "pcall", "xpcall", "setmetatable", "getmetatable", "rawget", "rawset", "next", "select", "collectgarbage", "coroutine"]),
+    builtins: new Set(["print", "pairs", "ipairs", "table", "string", "math", "io", "os", "debug", "assert", "error", "type", "tonumber", "tostring", "require", "pcall", "xpcall", "setmetatable", "getmetatable", "rawget", "rawset", "next", "select", "collectgarbage", "coroutine", "self"]),
     commentPrefix: "--",
   },
   assembly: {

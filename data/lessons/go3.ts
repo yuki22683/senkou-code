@@ -19,7 +19,7 @@ export const go3Data = {
         },
         {
           "title": "型制約",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# comparable や constraints\n\n```go\nfunc Equal[T comparable](a, b T) bool {\n    return a == b\n}\n```"
         }
       ],
@@ -72,12 +72,12 @@ export const go3Data = {
       "tutorialSlides": [
         {
           "title": "comparable とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# == で比較できる型\n\n**comparable** は、== や != で比較できる型に制限します。\n\n```go\nfunc Contains[T comparable](slice []T, v T) bool {\n    for _, x := range slice {\n        if x == v {\n            return true\n        }\n    }\n    return false\n}\n```"
         },
         {
           "title": "使用例",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 要素の検索\n\n```go\nnums := []int{1, 2, 3}\nfmt.Println(Contains(nums, 2))  // true\nfmt.Println(Contains(nums, 5))  // false\n```"
         }
       ],
@@ -140,12 +140,12 @@ export const go3Data = {
       "tutorialSlides": [
         {
           "title": "make とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# スライスの初期化\n\n**make** でスライスの長さと容量を指定できます。\n\n```go\n// 長さ5、容量5のスライス\ns1 := make([]int, 5)\n\n// 長さ0、容量10のスライス\ns2 := make([]int, 0, 10)\n```"
         },
         {
           "title": "パフォーマンス向上",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 再アロケーションを防ぐ\n\n```go\n// 容量を事前確保\nresult := make([]int, 0, 100)\nfor i := 0; i < 100; i++ {\n    result = append(result, i)\n}\n```"
         }
       ],
@@ -196,7 +196,7 @@ export const go3Data = {
       "tutorialSlides": [
         {
           "title": "append とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# スライスに追加\n\n**append** でスライスに要素を追加できます。\n\n```go\nnums := []int{1, 2}\nnums = append(nums, 3)      // [1, 2, 3]\nnums = append(nums, 4, 5)   // [1, 2, 3, 4, 5]\n```"
         },
         {
@@ -250,12 +250,12 @@ export const go3Data = {
       "tutorialSlides": [
         {
           "title": "copy とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 要素をコピー\n\n**copy** は、スライスの要素を別のスライスにコピーします。\n\n```go\nsrc := []int{1, 2, 3}\ndst := make([]int, len(src))\ncopy(dst, src)\n```"
         },
         {
           "title": "部分コピー",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 短い方に合わせる\n\n```go\nsrc := []int{1, 2, 3, 4, 5}\ndst := make([]int, 3)\nn := copy(dst, src)  // n = 3\n// dst = [1, 2, 3]\n```"
         }
       ],
@@ -309,7 +309,7 @@ export const go3Data = {
         },
         {
           "title": "default ケース",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# ノンブロッキング\n\n```go\nselect {\ncase v := <-ch:\n    fmt.Println(v)\ndefault:\n    fmt.Println(\"no data\")\n}\n```"
         }
       ],
@@ -370,12 +370,12 @@ export const go3Data = {
       "tutorialSlides": [
         {
           "title": "辞書の range",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# キーと値を取得\n\n**range** で辞書のキーと値を取得できます。\n\n```go\nm := map[string]int{\"a\": 1, \"b\": 2}\nfor k, v := range m {\n    fmt.Println(k, v)\n}\n```"
         },
         {
           "title": "キーだけ取得",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 値を無視\n\n```go\nfor k := range m {\n    fmt.Println(k)\n}\n```"
         }
       ],
@@ -424,7 +424,7 @@ export const go3Data = {
       "tutorialSlides": [
         {
           "title": "型定義",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 新しい型を作る\n\n**type** で既存の型を基に新しい型を定義できます。\n\n```go\ntype UserID int\ntype Email string\n\nvar id UserID = 123\nvar email Email = \"test@example.com\"\n```"
         },
         {
@@ -478,7 +478,7 @@ export const go3Data = {
       "tutorialSlides": [
         {
           "title": "埋め込みとは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# 構造体の継承的な機能\n\nGoでは **埋め込み** で構造体を合成できます。\n\n```go\ntype Person struct {\n    Name string\n}\n\ntype Employee struct {\n    Person  // 埋め込み\n    ID int\n}\n```"
         },
         {
@@ -546,12 +546,12 @@ export const go3Data = {
       "tutorialSlides": [
         {
           "title": "panic とは？",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# プログラムの異常終了\n\n**panic** は、回復不能なエラーを発生させます。\n\n```go\nfunc main() {\n    panic(\"something went wrong\")\n    // この行は実行されない\n}\n```"
         },
         {
           "title": "recover で回復",
-          "image": "/illustrations/3d/robot.png",
+          "image": "/illustrations/3d/gear.png",
           "content": "# defer 内で回復\n\n```go\nfunc main() {\n    defer func() {\n        if r := recover(); r != nil {\n            fmt.Println(\"Recovered:\", r)\n        }\n    }()\n    panic(\"error!\")\n}\n```"
         }
       ],
