@@ -95,10 +95,148 @@ export const javascriptData2 = {
       ]
     },
     {
+      "title": "剰余演算子（%）",
+      "description": "割り算の「余り」を求める演算子を学びましょう。偶数・奇数の判定などに便利です。",
+      "difficulty": "medium",
+      "orderIndex": 3,
+      "tutorialSlides": [
+        {
+          "title": "% とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 余りを求める\n\n`%` は割り算の余りを求める演算子です。\n\n```javascript\nconsole.log(7 % 3);   // 1（7÷3=2 余り1）\nconsole.log(10 % 5);  // 0（10÷5=2 余り0）\nconsole.log(8 % 3);   // 2（8÷3=2 余り2）\n```"
+        },
+        {
+          "title": "偶数・奇数の判定",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 2で割った余りで判定\n\n余りが0なら偶数、1なら奇数と判定できます。\n\n```javascript\nconst num = 6;\nif (num % 2 === 0) {\n  console.log('偶数です');\n} else {\n  console.log('奇数です');\n}\n```"
+        }
+      ],
+      "initialDisplayMode": "holey",
+      "correctCode": "// 10を3で割った余りを計算\nconst remainder = 10 % 3;\n// 結果を表示\nconsole.log(remainder);",
+      "holeyCode": "// 10を3で割った余りを計算\nconst remainder = 10 ___ 3;\n// 結果を表示\nconsole.log(remainder);",
+      "correctLines": [
+        "// 10を3で割った余りを計算",
+        "const remainder = 10 % 3;",
+        "// 結果を表示",
+        "console.log(remainder);"
+      ],
+      "lineHints": [
+        null,
+        "`%` で余りを求めます。",
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": ["%", "/", "*", "+"]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "1\n"
+        }
+      ]
+    },
+    {
+      "title": "累算代入演算子（+=、-=）",
+      "description": "変数の値を増やしたり減らしたりする便利な書き方を学びましょう。",
+      "difficulty": "medium",
+      "orderIndex": 4,
+      "tutorialSlides": [
+        {
+          "title": "+= とは？",
+          "image": "/illustrations/3d/box.png",
+          "content": "# 変数に足し算する\n\n`+=` を使うと、変数の値に足し算して上書きできます。\n\n```javascript\nlet count = 0;\ncount += 1;  // count = count + 1 と同じ\nconsole.log(count);  // 1\n\ncount += 5;\nconsole.log(count);  // 6\n```"
+        },
+        {
+          "title": "-= と他の演算子",
+          "image": "/illustrations/3d/box.png",
+          "content": "# 引き算や掛け算も\n\n同じように `-=`、`*=`、`/=` も使えます。\n\n```javascript\nlet x = 10;\nx -= 3;   // x = x - 3 → 7\nx *= 2;   // x = x * 2 → 14\nx /= 7;   // x = x / 7 → 2\n```"
+        }
+      ],
+      "initialDisplayMode": "holey",
+      "correctCode": "// 初期値を設定\nlet total = 0;\n// totalに10を足す\ntotal += 10;\n// totalに5を足す\ntotal += 5;\n// 結果を表示\nconsole.log(total);",
+      "holeyCode": "// 初期値を設定\nlet total = 0;\n// totalに10を足す\ntotal ___ 10;\n// totalに5を足す\ntotal ___ 5;\n// 結果を表示\nconsole.log(total);",
+      "correctLines": [
+        "// 初期値を設定",
+        "let total = 0;",
+        "// totalに10を足す",
+        "total += 10;",
+        "// totalに5を足す",
+        "total += 5;",
+        "// 結果を表示",
+        "console.log(total);"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "`+=` で値を足し算します。",
+        null,
+        null,
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": ["+=", "-=", "*=", "/="]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "15\n"
+        }
+      ]
+    },
+    {
+      "title": "論理演算子（&&、||）",
+      "description": "複数の条件を組み合わせる論理演算子を学びましょう。",
+      "difficulty": "medium",
+      "orderIndex": 5,
+      "tutorialSlides": [
+        {
+          "title": "&& と ||",
+          "image": "/illustrations/3d/if.png",
+          "content": "# 条件を組み合わせる\n\n`&&`（AND）は両方がtrueのときtrue、`||`（OR）はどちらかがtrueのときtrueです。\n\n```javascript\nconst x = 5;\n// 両方の条件を満たすか\nif (x > 0 && x < 10) {\n  console.log('0より大きく10より小さい');\n}\n\n// どちらかの条件を満たすか\nif (x < 0 || x > 3) {\n  console.log('0未満か3より大きい');\n}\n```"
+        },
+        {
+          "title": "! で否定",
+          "image": "/illustrations/3d/if.png",
+          "content": "# 条件を反転する\n\n`!` はtrue/falseを反転させます。\n\n```javascript\nconst isRaining = false;\n\nif (!isRaining) {\n  console.log('雨は降っていません');\n}\n\n// !true → false\n// !false → true\n```"
+        }
+      ],
+      "initialDisplayMode": "holey",
+      "correctCode": "// 年齢を設定\nconst age = 25;\n// 20以上かつ30未満かどうか判定\nif (age >= 20 && age < 30) {\n    console.log('20代です');\n}",
+      "holeyCode": "// 年齢を設定\nconst age = 25;\n// 20以上かつ30未満かどうか判定\nif (age >= 20 ___ age < 30) {\n    console.log('20代です');\n}",
+      "correctLines": [
+        "// 年齢を設定",
+        "const age = 25;",
+        "// 20以上かつ30未満かどうか判定",
+        "if (age >= 20 && age < 30) {",
+        "    console.log('20代です');",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "`&&` で両方の条件を満たすかチェックします。",
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": ["&&", "||", "!"]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "20代です\n"
+        }
+      ]
+    },
+    {
       "title": "配列のfilter",
       "description": "条件に合う要素だけを取り出す `filter` メソッドを学びましょう。",
       "difficulty": "medium",
-      "orderIndex": 3,
+      "orderIndex": 6,
       "tutorialSlides": [
         {
           "title": "filterとは？",
@@ -142,7 +280,7 @@ export const javascriptData2 = {
       "title": "配列のreduce",
       "description": "配列の要素を1つの値にまとめる `reduce` メソッドを学びましょう。",
       "difficulty": "medium",
-      "orderIndex": 4,
+      "orderIndex": 7,
       "tutorialSlides": [
         {
           "title": "reduceとは？",
@@ -187,7 +325,7 @@ export const javascriptData2 = {
       "title": "分割代入（配列）",
       "description": "配列の要素を個別の変数に簡単に取り出す「分割代入」を学びましょう。",
       "difficulty": "medium",
-      "orderIndex": 5,
+      "orderIndex": 8,
       "tutorialSlides": [
         {
           "title": "配列の分割代入",
@@ -233,7 +371,7 @@ export const javascriptData2 = {
       "title": "分割代入（オブジェクト）",
       "description": "オブジェクトのプロパティを個別の変数に取り出す方法を学びましょう。",
       "difficulty": "medium",
-      "orderIndex": 6,
+      "orderIndex": 9,
       "tutorialSlides": [
         {
           "title": "オブジェクトの分割代入",
@@ -279,7 +417,7 @@ export const javascriptData2 = {
       "title": "スプレッド演算子（配列）",
       "description": "配列を展開する `...` （スプレッド演算子）を学びましょう。",
       "difficulty": "medium",
-      "orderIndex": 7,
+      "orderIndex": 10,
       "tutorialSlides": [
         {
           "title": "スプレッド演算子とは？",
@@ -325,7 +463,7 @@ export const javascriptData2 = {
       "title": "三項演算子",
       "description": "if-elseを1行で書ける「三項演算子」を学びましょう。",
       "difficulty": "medium",
-      "orderIndex": 8,
+      "orderIndex": 11,
       "tutorialSlides": [
         {
           "title": "三項演算子とは？",
@@ -369,7 +507,7 @@ export const javascriptData2 = {
       "title": "配列のfind",
       "description": "条件に合う最初の要素を見つける `find` メソッドを学びましょう。",
       "difficulty": "medium",
-      "orderIndex": 9,
+      "orderIndex": 12,
       "tutorialSlides": [
         {
           "title": "findとは？",
@@ -413,7 +551,7 @@ export const javascriptData2 = {
       "title": "オブジェクトのショートハンド",
       "description": "オブジェクトを作るときの便利な省略記法を学びましょう。",
       "difficulty": "medium",
-      "orderIndex": 10,
+      "orderIndex": 13,
       "tutorialSlides": [
         {
           "title": "プロパティの省略",
