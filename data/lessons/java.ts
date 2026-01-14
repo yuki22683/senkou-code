@@ -15,12 +15,12 @@ export const javaData = {
         {
           "title": "Java（ジャバ）とは？",
           "image": "/illustrations/common/monitor.png",
-          "content": "# 世界中で使われる「きっちりした」言葉\n\nJavaは、銀行のシステムやスマートフォンのアプリなど、間違いが許されない大切な場所でたくさん使われています。ルールが少し厳しいですが、その分、安全なプログラムを作ることができます。"
+          "content": "# 世界中で使われる「きっちりした」言葉\n\nJava（ジャバ）は、世界中の銀行（ぎんこう）や、Androidスマホのアプリなどで使われている、とても信頼（しんらい）できるプログラミング言語です。\n\n**たとえ話：** Javaは「厳格（げんかく）な先生」のようなものです。ルールは厳しいけれど、そのおかげで間違いの少ない安全なプログラムを作ることができます。"
         },
         {
-          "title": "Javaを動かす「決まり文句」",
+          "title": "Javaを動かす「お約束」",
           "image": "/illustrations/common/monitor.png",
-          "content": "# おまじないの言葉\n\nJavaでプログラムを入力するときは、必ず入力しなければいけない「決まり文句」があります。\n\n```java\npublic class Main {\n    public static void main(String[] args) {\n        // ここにやりたいことを入力します\n    }\n}\n\n```\n\n画面に文字を出しましょうときは、`System.out.println()` という名前の関数（メソッド）を使います。例えば：\n\n```java\nSystem.out.println(\"Javaプログラミング！\");\n```\n=> Javaプログラミング！"
+          "content": "# 最初に書く「おまじない」\n\nJavaでプログラムを書くときは、必ず書かなければいけない「お約束」があります。\n\n**たとえ話：** 手紙を書くときに「拝啓（はいけい）」から始めるように、Javaにも決まった書き出しがあるんです。\n\n```java\npublic class Main {\n    public static void main(String[] args) {\n        // ここにやりたいことを書くよ！\n    }\n}\n```\n\n**何をしているの？**\n- `public class Main` → プログラムに「Main」という名前をつけています\n- `public static void main` → 「ここからスタート！」という合図です\n\n画面に文字を出したいときは、`System.out.println(\"出したい文字\");` と書きます。長いですね！でも、これがJavaの流儀（りゅうぎ）なんです。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -66,11 +66,12 @@ export const javaData = {
         {
           "title": "変数（へんすう）とは？",
           "image": "/illustrations/common/box.png",
-          "content": "# データを保存する仕組み\n\nプログラムの中では、数字や文字をしまっておく「はこ」を作ることができます。これを **変数（へんすう）** と呼びます。中身が何かわかるように名前をつけてあげましょう！"
+          "content": "# データを保存する「はこ」\n\nプログラムの中では、数字や文字をしまっておく「はこ」を作ることができます。これを **変数（へんすう）** と呼びます。\n\n**たとえ話：** 変数は「名前のついた引き出し」のようなものです。「おかしの引き出し」「おもちゃの引き出し」のように、中身がわかる名前をつけてあげましょう！"
         },
         {
-          "title": "ラベル（型）が必要です",
-          "content": "# String（ストリング）ラベル\n\nJavaでは、はこ（変数）を作るときに「何を入れるか」のラベルを貼るルールがあります。文字を入れたいたいときは、`String`（Sは大文字！）というラベルを使います。\n\n**コード例：**\n```java\nString animal = \"いぬ\";\nSystem.out.println(animal);\n```\n=> いぬ"
+          "title": "はこに「ラベル」を貼ろう",
+          "image": "/illustrations/common/box.png",
+          "content": "# String（ストリング）ラベル\n\nJavaでは、はこを作るときに「このはこには何を入れますか？」と聞かれます。\n\n**たとえ話：** おもちゃ箱には「おもちゃ」、本棚には「本」と書いてあるように、Javaの変数にも「何を入れるか」を教えてあげる必要があります。\n\n「文字を入れたい！」というときは、`String`（ストリング＝文字列という意味）というラベルを使います。**Sが大文字** なので気をつけてくださいね！\n\n**コード例：** 下のコードが何をしているか見てみましょう\n```java\nString animal = \"いぬ\";  // 「animal」という名前の箱に「いぬ」を入れる\nSystem.out.println(animal);  // 箱の中身を画面に出す\n```\n=> いぬ"
         }
       ],
       "initialDisplayMode": "holey",
@@ -120,14 +121,14 @@ export const javaData = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "数値型（すうちがた）とは？",
+          "title": "数字用のラベル",
           "image": "/illustrations/common/robot_math.png",
-          "content": "# 数字を扱うためのラベル\n\n整数（せいすう）を扱うときに使うのが **int** ラベルです。足し算や引き算などの計算をしたいときは、このラベルを使って「はこ」を作ります。"
+          "content": "# int（イント）ラベル\n\n数字（整数＝せいすう：小数点のない数字のこと）を扱いたいときは、**int**（イント）というラベルを使います。\n\n**覚え方：** int は「integer（インテジャー＝整数）」の略です。\n\n**使い分けのルール：**\n- 文字を入れたい → `String`\n- 数字を入れたい → `int`\n\nこの使い分けがJavaの大事なルールです！"
         },
         {
-          "title": "数字のラベル",
+          "title": "計算してみよう",
           "image": "/illustrations/common/robot_math.png",
-          "content": "# int（イント）型\n\n整数をしまっておきたいときは、`int` というラベルを使います。\n\n**コード例：**\n```java\nint base = 100;\nint bonus = 50;\nSystem.out.println(base + bonus);\n```\n=> 150"
+          "content": "# 計算もできます\n\n`int` のはこに入れた数字は、たし算やひき算ができます。コンピュータは計算がとっても得意なんです！\n\n**コード例：** りんごとみかんの値段を足してみましょう\n```java\nint apple = 100;   // りんごは100円\nint orange = 50;   // みかんは50円\nSystem.out.println(apple + orange);  // 合計を表示\n```\n=> 150\n\n`+` を使うと、変数どうしを足し算できます。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -177,25 +178,137 @@ export const javaData = {
       ]
     },
     {
-      "title": "文字と「はこ」をくっつけましょう",
-      "description": "プラス（+）を使って、文字と「はこ（変数）」をくっつけて表示してみましょう。",
+      "title": "剰余演算子（%）",
+      "description": "割り算の「あまり」を求める「%」（パーセント）演算子を学びましょう。",
       "difficulty": "easy",
       "orderIndex": 4,
       "tutorialSlides": [
         {
+          "title": "あまりを求める",
+          "image": "/illustrations/common/robot_math.png",
+          "content": "# 割り算の「あまり」を知りたい！\n\n割り算をしたときに、割り切れなくて「あまり」が出ることがありますよね。\n\n**たとえ話：** 10個のあめを3人で分けると、1人3個ずつで、1個あまります。この「あまり」を計算してくれるのが `%`（パーセント）記号です。\n\nこの計算を「剰余（じょうよ）」と呼びます。難しい言葉ですが、「あまりを求める計算」と覚えておけばOKです！"
+        },
+        {
+          "title": "% の使い方",
+          "image": "/illustrations/common/robot_math.png",
+          "content": "# あまりを計算してみよう\n\n**例1：あまりが出る場合**\n```java\nSystem.out.println(10 % 3);  // 結果: 1\n```\n10 ÷ 3 = 3 あまり **1** なので、「1」が表示されます。\n\n**例2：割り切れる場合**\n```java\nSystem.out.println(8 % 2);   // 結果: 0\n```\n8 ÷ 2 = 4 あまり **0** なので、「0」になります。\n\n**ポイント：** あまりが0なら「割り切れる」ということです！偶数（ぐうすう）かどうかの判定などに使えます。"
+        }
+      ],
+      "initialDisplayMode": "holey",
+      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // 10 を 3 で割ったあまりを出力する\n        System.out.println(10 % 3);\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // 10 を 3 で割ったあまりを出力する\n        System.out.println(10 ___ 3);\n    }\n}",
+      "correctLines": [
+        "public class Main {",
+        "    public static void main(String[] args) {",
+        "        // 10 を 3 で割ったあまりを出力する",
+        "        System.out.println(10 % 3);",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        "あまりを求める `%` 演算子を使います。",
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": [
+          "%",
+          "/",
+          "*",
+          "-"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "1\n"
+        }
+      ]
+    },
+    {
+      "title": "累算代入演算子（+=、-=）",
+      "description": "変数の値を手軽に増やしたり減らしたりする「+=」「-=」を学びましょう。",
+      "difficulty": "easy",
+      "orderIndex": 5,
+      "tutorialSlides": [
+        {
+          "title": "中身を増やしたいとき",
+          "image": "/illustrations/common/robot_math.png",
+          "content": "# はこの中身をパワーアップ\n\n**たとえ話：** ゲームで「今の点数に10点プラスしたい！」というとき、`+=` を使うととっても便利です。\n\nこれは「今の数字に足して、そのまま保存する」という合体技（がったいわざ）です。\n\n**コード例：**\n```java\nint score = 100;   // 最初は100点\nscore += 10;       // 10点プラス！\n// score は 110 になる\n```\n\n**書き方の意味：**\n`score += 10` は `score = score + 10` と同じ意味です。短くて便利ですね！"
+        },
+        {
+          "title": "-= も使える",
+          "image": "/illustrations/common/robot_math.png",
+          "content": "# 引き算バージョン\n\n`-=` を使えば、「今の数字から引いて保存」ができます。\n\n**たとえ話：** ゲームでダメージを受けてHP（体力）が減るときに使えます！\n\n**コード例：**\n```java\nint hp = 100;   // 最初のHP（体力）は100\nhp -= 30;       // 30のダメージを受けた！\n// hp は 70 になる\n```\n\n**ほかにも：**\n- `*=` → かけ算して保存\n- `/=` → 割り算して保存"
+        }
+      ],
+      "initialDisplayMode": "holey",
+      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // hp に 100 を入れる\n        int hp = 100;\n        // += で 20 を足す\n        hp += 20;\n        // -= で 50 を引く\n        hp -= 50;\n        System.out.println(hp);\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // hp に 100 を入れる\n        int hp = 100;\n        // += で 20 を足す\n        hp ___ 20;\n        // -= で 50 を引く\n        hp ___ 50;\n        System.out.println(hp);\n    }\n}",
+      "correctLines": [
+        "public class Main {",
+        "    public static void main(String[] args) {",
+        "        // hp に 100 を入れる",
+        "        int hp = 100;",
+        "        // += で 20 を足す",
+        "        hp += 20;",
+        "        // -= で 50 を引く",
+        "        hp -= 50;",
+        "        System.out.println(hp);",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "`+=` で値を足します。",
+        null,
+        "`-=` で値を引きます。",
+        null,
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": [
+          "+=",
+          "-=",
+          "*=",
+          "/="
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "70\n"
+        }
+      ]
+    },
+    {
+      "title": "文字と「はこ」をくっつけましょう",
+      "description": "プラス（+）を使って、文字と「はこ（変数）」をくっつけて表示してみましょう。",
+      "difficulty": "easy",
+      "orderIndex": 6,
+      "tutorialSlides": [
+        {
           "title": "連結（れんけつ）とは？",
           "image": "/illustrations/common/fstring.png",
-          "content": "# 複数の情報を合体させる\n\n文章の途中に、変数（はこ）の中身を流し込んで一つのメッセージにすることを **連結** と呼びます。状況に合わせて変わる便利な文章を作れます。"
+          "content": "# 複数の情報を合体させる\n\n「私は〇〇歳です」の「〇〇」のところに、変数（はこ）の中身を入れたいことがありますよね。\n\n**たとえ話：** パズルのピースをつなげるように、文字と変数を `+` でくっつけることができます。\n\nこれを **連結（れんけつ）** と呼びます。「つなげる」という意味です。"
         },
         {
           "title": "プラスでつなげましょう",
           "image": "/illustrations/common/fstring.png",
-          "content": "# + 演算子\n\nJavaでは `+` を使うと、文字と数字をガチャンとくっつけて一つの文章にできます。\n\n**コード例：**\n```java\nString weather = \"はれ\";\nSystem.out.println(\"明日は\" + weather + \"です\");\n```"
+          "content": "# ガチャンと合体！\n\n文字と文字、文字と数字を `+` でつなぐと、ひとつの長い文章になります。\n\n**コード例：** 天気を表示してみましょう\n```java\nString weather = \"はれ\";  // 天気を変数に入れる\nSystem.out.println(\"明日は\" + weather + \"です\");  // つなげて表示\n```\n=> 明日ははれです\n\n**何が起きているの？**\n1. 「明日は」という文字\n2. weatherの中身「はれ」\n3. 「です」という文字\n\nこの3つが `+` でつながって「明日ははれです」になります！"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // age というはこに 10 を入れる\n        int age = 10;\n        // 変数 age をくっつけて表示する\n        System.out.println(\"私は\" + age + \"歳です\");\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // age というはこに 10 を入れる\n        int age = ___;\n        // 変数 age をくっつけて表示する\n        System.out.println(\"私は\" + ___ + \"歳です\");\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // age というはこに 10 を入れる\n        int age = ___ ;\n        // 変数 age をくっつけて表示する\n        System.out.println(\"私は\" + ___ + \"歳です\");\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -235,17 +348,17 @@ export const javaData = {
       "title": "データをならべる「配列」",
       "description": "同じラベルのデータをまとめて並べておける「配列（はいれつ）」を使ってみましょう。",
       "difficulty": "easy",
-      "orderIndex": 5,
+      "orderIndex": 7,
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）とは？",
           "image": "/illustrations/common/list.png",
-          "content": "# データの行列\n\nたくさんのデータを順番に並べておきたいときに使うのが **配列** です。例えば、クラスの全員の名前や、買い物リストなどを一つの変数にまとめて管理できます。"
+          "content": "# データをまとめて整理整頓\n\nたくさんのデータを順番に並べておきたいときに使うのが **配列（はいれつ）** です。\n\n**たとえ話：** 配列は「ロッカー」のようなものです。1番のロッカー、2番のロッカー...というように、番号のついた場所にデータをしまっておけます。\n\n「買い物リスト」や「クラスの名簿（めいぼ）」のように、関連するものを一つの変数にまとめて管理（かんり）できます。"
         },
         {
           "title": "データの番号は 0 から！",
           "image": "/illustrations/common/list.png",
-          "content": "# { } を使って作りましょう\n\n配列の中身を取り出すときは、何番目かを指定します。さいしょのデータは **「0番」** から数えるのがルールです。\n\n**コード例：**\n```java\nString[] items = {\"おにぎり\", \"パン\"};\nSystem.out.println(items[0]); // \"おにぎり\" が表示されます\n```"
+          "content": "# { } を使って作りましょう\n\n`String[]` のように、ラベルの後ろに `[]`（角カッコ）をつけると配列になります。\n\n**大事なルール：** 配列の番号は **0番から** 始まります！1番からではないので注意してね。\n\n**コード例：**\n```java\nString[] items = {\"おにぎり\", \"パン\"};\n//                  0番目      1番目\nSystem.out.println(items[0]); // \"おにぎり\" が表示されます\nSystem.out.println(items[1]); // \"パン\" が表示されます\n```\n\n**覚え方：** コンピュータは0から数えるのが好きなんです！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -294,22 +407,22 @@ export const javaData = {
       "title": "「もし〜なら」で分ける if文",
       "description": "点数（score）が 80点より高いときだけ、メッセージを出すようにしてみましょう。",
       "difficulty": "easy",
-      "orderIndex": 6,
+      "orderIndex": 8,
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
           "image": "/illustrations/common/if.png",
-          "content": "# プログラムに判断をさせる\n\n「晴れたら外で遊ぶ」「雨なら家で本を読む」のように、状況によって動きを変えることを **条件分岐** と呼びます。プログラムに賢い判断をさせてみましょう。"
+          "content": "# プログラムに判断させてみよう\n\n「もし雨が降ったら傘をさす」「もし晴れたら外で遊ぶ」\n\nこんなふうに、状況（じょうきょう）によって動きを変えることを **条件分岐（じょうけんぶんき）** と呼びます。\n\n**たとえ話：** 条件分岐は「分かれ道」のようなものです。「テストで80点以上なら合格、そうでなければ不合格」のように、条件によって進む道が変わります。\n\nプログラムに「もし〜なら、これをしてね」と教えてあげましょう！"
         },
         {
           "title": "もし〜なら（if）",
           "image": "/illustrations/common/if.png",
-          "content": "# ( ) と { } を使いましょう\n\nJavaでは、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\n\n**コード例：**\n```java\nint price = 1200;\nif (price > 1000) {\n    System.out.println(\"ちょっと高いかも？\");\n}\n```"
+          "content": "# if（イフ）の使い方\n\n`if` は英語で「もし」という意味です。Javaでは、`if (条件)` のあとに `{ }` を書いて、その中にやりたいことを書きます。\n\n**コード例：** 値段が1000円より高いかチェックしてみよう\n```java\nint price = 1200;  // 値段は1200円\nif (price > 1000) {  // もし1000円より高いなら...\n    System.out.println(\"ちょっと高いかも？\");\n}\n```\n\n**ポイント：**\n- `>` は「より大きい」という意味\n- 条件が正しいときだけ `{ }` の中が実行されます"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // score に 100 を入れる\n        int score = 100;\n        // > で80より大きいか比較する\n        if (score > 80) {\n            // ごうかく！ と表示する\n            System.out.println(\"ごうかく！\");\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // score に 100 を入れる\n        int score = ___;\n        // > で80より大きいか比較する\n        if (score ___ 80) {\n            // ごうかく！ と表示する\n            System.out.println(\"___\");\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // score に 100 を入れる\n        int score = ___ ;\n        // > で80より大きいか比較する\n        if (score ___ 80) {\n            // ごうかく！ と表示する\n            System.out.println(\"___");\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -338,7 +451,7 @@ export const javaData = {
       ],
       "candidates": {
         "operators": [
-          ">"
+          ">
         ],
         "strings": [
           "ごうかく！"
@@ -355,22 +468,22 @@ export const javaData = {
       "title": "ちがう場合は？ if-else文",
       "description": "「もし〜なら」のあとに、「そうじゃなければ」という別の動きも作ってみましょう。",
       "difficulty": "easy",
-      "orderIndex": 7,
+      "orderIndex": 9,
       "tutorialSlides": [
         {
           "title": "それ以外の場合は？",
           "image": "/illustrations/common/if.png",
-          "content": "# else（エルス）の役割\n\n「もし〜なら」に当てはまらなかったときの動きを作るのが **else（エルス）** です。「合格でなければ不合格と出す」のように、プログラムのルートを2つに分けることができます。"
+          "content": "# 2つの道を作る\n\n「もし〜なら」に当てはまらなかったときの動きも作ってみましょう。\n\n**たとえ話：** 「もし晴れなら外で遊ぶ、**そうでなければ**家でゲーム」のように、条件に当てはまらない場合の行動も決めておきたいですよね。\n\n**else（エルス）** を使うと、「そうじゃなければ、こっちをしてね」という指示が出せます。elseは英語で「そうでなければ」という意味です。"
         },
         {
           "title": "そうじゃなければ（else）",
           "image": "/illustrations/common/if.png",
-          "content": "# 2つのルート\n\n条件にあてはまらなかったときの動きは `else` を使って入力します。\n\n**コード例：**\n```java\nint hour = 15;\nif (hour < 12) {\n    System.out.println(\"午前中\");\n} else {\n    System.out.println(\"お昼すぎ\");\n}\n```"
+          "content": "# 2つのルート\n\n条件にあてはまらなかったときの動きは `else` を使って書きます。\n\n**コード例：** 今は午前中かな？お昼すぎかな？\n```java\nint hour = 15;  // 今は15時\nif (hour < 12) {  // もし12時より前なら...\n    System.out.println(\"午前中\");\n} else {  // そうでなければ...\n    System.out.println(\"お昼すぎ\");\n}\n```\n=> お昼すぎ\n\n**ポイント：**\n- 15時は12時より前ではないので、`else` の中が実行されます\n- `<` は「より小さい」という意味です"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // age に 10 を入れる\n        int age = 10;\n        // 20さい以上かどうかで分ける\n        if (age >= 20) {\n            System.out.println(\"おとな\");\n        // else でそれ以外の場合\n        } else {\n            // こども と表示する\n            System.out.println(\"こども\");\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // age に 10 を入れる\n        int age = ___;\n        // 20以上かを比較する演算子\n        if (age ___ 20) {\n            // 20歳以上のときのメッセージ（'おとな'）\n            System.out.println(\"___\");\n        // else でそれ以外の場合\n        } ___ {\n            // こども と表示する\n            System.out.println(\"___\");\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // age に 10 を入れる\n        int age = ___ ;\n        // 20以上かを比較する演算子\n        if (age ___ 20) {\n            // 20歳以上のときのメッセージ（'おとな'）\n            System.out.println(\"___");\n        // else でそれ以外の場合\n        } ___ {\n            // こども と表示する\n            System.out.println(\"___");\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -417,25 +530,86 @@ export const javaData = {
       ]
     },
     {
+      "title": "論理演算子（&&、||）",
+      "description": "複数の条件を組み合わせる「&&（かつ）」と「||（または）」を学びましょう。",
+      "difficulty": "easy",
+      "orderIndex": 10,
+      "tutorialSlides": [
+        {
+          "title": "条件を組み合わせる",
+          "image": "/illustrations/common/if.png",
+          "content": "# もっと細かい条件で\n\n「10歳以上、**かつ**、20歳未満」のように、2つの条件を**両方**クリアしているかチェックしたいときがあります。\n\n**たとえ話：** 遊園地で「身長120cm以上**かつ**10歳以上なら乗れる」というルールがあるように、複数の条件を組み合わせたいことがありますよね。\n\n- 両方満たす必要がある → `&&`（アンド＝かつ）\n- どちらか片方でもOK → `||`（オア＝または）"
+        },
+        {
+          "title": "&&（かつ）と ||（または）",
+          "image": "/illustrations/common/if.png",
+          "content": "# 使い分け\n\n**例1：両方の条件を満たす（かつ）**\n```java\n// 点数80点以上、かつ、出席率90%以上なら...\nif (score >= 80 && attendance >= 90) {\n    System.out.println(\"優秀！\");\n}\n```\n\n**例2：どちらかを満たす（または）**\n```java\n// 土曜日、または、日曜日なら...\nif (day == \"土曜日\" || day == \"日曜日\") {\n    System.out.println(\"お休み\");\n}\n```\n\n**覚え方：**\n- `&&` → 「**かつ**」両方必要\n- `||` → 「**または**」どちらか1つでOK"
+        }
+      ],
+      "initialDisplayMode": "holey",
+      "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // score と bonus を定義する\n        int score = 80;\n        int bonus = 10;\n        // && で両方の条件をチェックする\n        if (score >= 70 && bonus > 0) {\n            System.out.println(\"ボーナスあり合格\");\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // score と bonus を定義する\n        int score = 80;\n        int bonus = 10;\n        // && で両方の条件をチェックする\n        if (score >= 70 ___ bonus > 0) {\n            System.out.println(\"ボーナスあり合格\");\n        }\n    }\n}",
+      "correctLines": [
+        "public class Main {",
+        "    public static void main(String[] args) {",
+        "        // score と bonus を定義する",
+        "        int score = 80;",
+        "        int bonus = 10;",
+        "        // && で両方の条件をチェックする",
+        "        if (score >= 70 && bonus > 0) {",
+        "            System.out.println(\"ボーナスあり合格\");",
+        "        }",
+        "    }",
+        "}"
+      ],
+      "lineHints": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "両方の条件を満たすには `&&` を使います。",
+        null,
+        null,
+        null,
+        null
+      ],
+      "candidates": {
+        "operators": [
+          "&&",
+          "||",
+          "&",
+          "|"
+        ]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "ボーナスあり合格\n"
+        }
+      ]
+    },
+    {
       "title": "順番に取り出す「拡張for文」",
       "description": "配列に入っているたくさんのデータを、一つずつ順番に表示してみましょう。",
       "difficulty": "easy",
-      "orderIndex": 8,
+      "orderIndex": 11,
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
           "image": "/illustrations/common/loop.png",
-          "content": "# 自動で順番に処理する\n\n同じ作業を何度も繰り返すための仕組みが **ループ** です。配列の中身を一つずつ順番に全部チェックしたいときなどに非常に役立ちます。"
+          "content": "# 面倒なことはコンピュータにおまかせ\n\n同じ作業を何度も繰り返すための仕組みが **ループ（繰り返し）** です。\n\n**たとえ話：** クラス全員の名前を呼ぶとき、「たろうくん」「はなこさん」「けんたくん」...と一人ずつ名前を書くのは大変ですよね。ループを使えば「全員の名前を順番に呼ぶ」と1回書くだけでOKです！\n\n配列の中身を一つずつ順番に全部チェックしたいときに非常に役立ちます。"
         },
         {
           "title": "くりかえし（拡張for）",
           "image": "/illustrations/common/loop.png",
-          "content": "# for (型 変数 : 配列)\n\n配列の中身を順番に取り出して何かをしたいときに使います。 `:`（コロン）を使うのがJavaの面白いところです。\n\n**コード例：**\n```java\nString[] names = {\"たろう\", \"はなこ\"};\nfor (String name : names) {\n    System.out.println(name);\n}\n```"
+          "content": "# 全部まとめて取り出す\n\n配列の中身を最初から最後まで順番に取り出すときは、**拡張for文（かくちょうフォーぶん）** が便利です。\n\n`:`（コロン）を使うのがJavaの面白いところです。「〜の中から」という意味だと思ってください。\n\n**コード例：**\n```java\nString[] names = {\"たろう\", \"はなこ\"};\nfor (String name : names) {  // namesの中から順番に取り出してnameに入れる\n    System.out.println(name);  // 取り出した名前を表示\n}\n```\n=> たろう\n=> はなこ\n\n**読み方：** 「namesの中の各nameについて」"
         }
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // 配列を作る\n        String[] names = {\"たろう\", \"はなこ\"};\n        // 変数 name で配列 names を順番に取り出す\n        for (String name : names) {\n            System.out.println(name);\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // 配列を作る\n        String[] names = {\"たろう\", \"はなこ\"};\n        // 変数 name で配列 names を順番に取り出す\n        for (String ___ : ___) {\n            System.out.println(name);\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // 配列を作る\n        String[] names = {\"たろう\", \"はなこ\"};\n        // 変数 name で配列 names を順番に取り出す\n        for (String name : names) {\n            System.out.println(name);\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -476,17 +650,17 @@ export const javaData = {
       "title": "名前で探しましょう「HashMap」",
       "description": "名前（キー）を指定してデータを取り出せる「HashMap（辞書）」を使ってみましょう。",
       "difficulty": "easy",
-      "orderIndex": 9,
+      "orderIndex": 12,
       "tutorialSlides": [
         {
-          "title": "辞書とは？",
+          "title": "辞書（じしょ）とは？",
           "image": "/illustrations/common/dict.png",
-          "content": "# キーワードで検索できる仕組み\n\n「名前」と「電話番号」のように、関連する2つの情報をセットにして保存できるのが **辞書** です。キーワードを使って目的のデータをすぐに見つけられます。"
+          "content": "# キーワードで検索！\n\n**たとえ話：** 国語辞典で「りんご」を調べると「赤い果物」と出てくるように、「言葉」と「その意味」をセットにして保存できるのが **HashMap（ハッシュマップ）** です。\n\nJavaでは「辞書」のことを HashMap と呼びます。\n\n**使える場面：**\n- 「名前」と「電話番号」のペア\n- 「商品名」と「値段」のペア\n- 「英単語」と「日本語訳」のペア"
         },
         {
-          "title": "HashMap（辞書）",
+          "title": "HashMapの使い方",
           "image": "/illustrations/common/dict.png",
-          "content": "# キーとあたいのペア\n\n「名前」と「データ」をセットにして保存できます。\n\n- `import`：外部の機能を使う準備\n- `new`：新しいオブジェクト（実体）を作る\n- `<String, String>`：キーと値の型を指定\n\n```java\nimport java.util.HashMap;\nHashMap<String, String> colors = new HashMap<>();\ncolors.put(\"りんご\", \"あか\");\n```"
+          "content": "# ちょっと準備が大変かも？\n\nJavaで辞書を使うのは少し準備が必要です。3ステップで覚えましょう！\n\n**ステップ1：** `import` で道具箱から出してくる\n**ステップ2：** `new` で新しく作る\n**ステップ3：** `put`（プット）で中身を入れる\n\n**コード例：**\n```java\nimport java.util.HashMap;  // ステップ1：道具を準備\nHashMap<String, String> colors = new HashMap<>();  // ステップ2：辞書を作る\ncolors.put(\"りんご\", \"あか\");  // ステップ3：データを入れる\nSystem.out.println(colors.get(\"りんご\"));  // getで取り出す\n```\n=> あか"
         }
       ],
       "initialDisplayMode": "holey",
@@ -538,17 +712,17 @@ export const javaData = {
       "title": "自分だけの関数を作ろう「メソッド」",
       "description": "自分だけの新しい関数（メソッド）を作ってみましょう。",
       "difficulty": "easy",
-      "orderIndex": 10,
+      "orderIndex": 13,
       "tutorialSlides": [
         {
           "title": "メソッド（関数）とは？",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# 処理のパッケージ化\n\nやりたいことをひとまとめにして、名前をつけたものを **メソッド** と呼びます。一度作っておけば、どこからでも呼び出せる便利なショートカットのようなものです。"
+          "content": "# オリジナルの技を作ろう\n\nよく使う処理をひとまとめにして、名前をつけることができます。これを **メソッド（関数・かんすう）** と呼びます。\n\n**たとえ話：** メソッドは「必殺技（ひっさつわざ）」のようなものです。「かめはめ波」と叫べば同じ技が出るように、メソッドも名前を呼べば同じ処理が実行されます。\n\n一度作っておけば、何度でも呼び出して使えます！"
         },
         {
-          "title": "関数（メソッド）を定義する",
+          "title": "メソッドを定義する",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# メソッドの定義\n\nやりたいことをひとまとめにして、名前を付けることができます。Javaでは `public static void 名前() { ... }` のように入力します。\n\n**コード例：**\n```java\npublic static void sayHello() {\n    System.out.println(\"ヤッホー！\");\n}\n\nsayHello();\n```"
+          "content": "# 作り方\n\nJavaでメソッドを作るときは、`public static void`（パブリック・スタティック・ボイド）という呪文（じゅもん）を使います。今は「おまじない」だと思ってそのまま書きましょう！\n\n**コード例：** あいさつするメソッドを作ってみよう\n```java\n// メソッドを作る（定義する）\npublic static void aisatsu() {\n    System.out.println(\"こんにちは！\");\n}\n\n// メソッドを使う（呼び出す）\naisatsu();  // 「こんにちは！」と表示される\n```\n\n**ポイント：**\n- メソッド名のあとに `()` をつけて呼び出します\n- 同じメソッドを何回でも呼び出せます"
         }
       ],
       "initialDisplayMode": "holey",

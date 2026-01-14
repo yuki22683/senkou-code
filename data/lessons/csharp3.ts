@@ -13,14 +13,14 @@ export const csharp3Data = {
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "async/await とは？",
+          "title": "async/await（アシンク/アウェイト）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 非同期処理を同期的に書く\n\n**async/await** を使うと、非同期処理を同期的なコードのように書けます。\n\n```csharp\nasync Task<string> GetDataAsync() {\n    await Task.Delay(1000);\n    return \"Done!\";\n}\n```"
+          "content": "# 非同期処理（ひどうきしょり）を簡単に書く\n\n**非同期処理**とは、時間がかかる処理を「待っている間に他のことをする」仕組みです。**async/await**を使うと、この非同期処理を普通のコードのように書けます。\n\n**身近な例え：**\nレストランで料理を注文したとき、料理ができるまでスマホを見たり、おしゃべりしたりできますよね。ずっと立って待っている必要はありません。非同期処理も同じで、「待っている間に他の処理を進める」ことができます。\n\n**用語：**\n- `async`（アシンク）: 「このメソッドは非同期です」という宣言\n- `await`（アウェイト）: 「この処理が終わるまで待つ」という指示"
         },
         {
-          "title": "Task を返す",
+          "title": "Task（タスク）を返す",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 戻り値の型\n\n```csharp\nasync Task DoWorkAsync()        // 戻り値なし\nasync Task<int> GetValueAsync() // int を返す\nasync void OnClick()            // イベントハンドラのみ\n```"
+          "content": "# 非同期メソッドの戻り値の型\n\n非同期メソッドは**Task**（タスク）という型を返します。Taskは「処理中」か「完了」かを表す「約束」のようなものです。\n\n**戻り値のパターン：**\n```csharp\n// 戻り値なし（voidの代わり）\nasync Task DoWorkAsync()\n\n// 値を返す（Task<型>）\nasync Task<int> GetValueAsync()\n\n// イベントハンドラ用（特殊）\nasync void OnClick()\n```\n\n**コード例：**\n```csharp\nasync Task<string> GetDataAsync() {\n    await Task.Delay(1000);  // 1秒待つ\n    return \"Done!\";          // 結果を返す\n}\n```\n\n**ポイント：**\n- asyncメソッドの中でawaitを使う\n- awaitで待っている間、他の処理が進められる"
         }
       ],
       "initialDisplayMode": "holey",
@@ -75,14 +75,14 @@ export const csharp3Data = {
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "OrderBy とは？",
+          "title": "OrderBy（オーダーバイ）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 並べ替え\n\n**OrderBy** は、指定したキーで昇順に並べ替えます。\n\n```csharp\nvar sorted = names.OrderBy(x => x.Length);\n```"
+          "content": "# データを並べ替える\n\n**OrderBy**（オーダーバイ）は、データを指定した基準（キー）で**昇順（しょうじゅん：小さい順）**に並べ替えます。\n\n**身近な例え：**\nテストの点数を低い順に並べたり、名前をあいうえお順に並べたりするのと同じです。\n\n**コード例（文字の長さで並べ替え）：**\n```csharp\nvar sorted = names.OrderBy(x => x.Length);\n```\n\n**解説：**\n`x => x.Length` は「各要素の長さをキーにして並べ替える」という意味です。短い文字列から順に並びます。"
         },
         {
-          "title": "降順ソート",
+          "title": "降順（こうじゅん）ソート",
           "image": "/illustrations/3d/gear.png",
-          "content": "# OrderByDescending\n\n```csharp\nvar desc = nums.OrderByDescending(x => x);\n```"
+          "content": "# OrderByDescending（大きい順）\n\n**降順（こうじゅん）**は「大きい順」のことです。`OrderByDescending`（オーダーバイ・ディセンディング）を使います。\n\n**昇順と降順の違い：**\n- `OrderBy` : 1, 2, 3, 4, 5（小さい順）\n- `OrderByDescending` : 5, 4, 3, 2, 1（大きい順）\n\n**コード例：**\n```csharp\nvar nums = new[] { 3, 1, 4, 1, 5 };\n\n// 昇順（小さい順）\nvar asc = nums.OrderBy(x => x);      // 1,1,3,4,5\n\n// 降順（大きい順）\nvar desc = nums.OrderByDescending(x => x);  // 5,4,3,1,1\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -129,14 +129,14 @@ export const csharp3Data = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "First vs FirstOrDefault",
+          "title": "First と FirstOrDefault の違い",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 最初の要素\n\n```csharp\nvar first = nums.First();  // 空なら例外\nvar firstOr = nums.FirstOrDefault();  // 空ならデフォルト値\n```"
+          "content": "# 最初の要素を取得する\n\nコレクションから最初の要素を取り出すには、**First**（ファースト）または**FirstOrDefault**（ファーストオアデフォルト）を使います。\n\n**2つの違い：**\n- `First()` : 最初の要素を返す。空だとエラー！\n- `FirstOrDefault()` : 最初の要素を返す。空なら「デフォルト値」を返す（エラーにならない）\n\n**コード例：**\n```csharp\nvar nums = new List<int>();  // 空のリスト\n\nvar first = nums.First();  // エラー発生！\nvar firstOr = nums.FirstOrDefault();  // 0（intのデフォルト値）\n```\n\n**身近な例え：**\n「クラスで一番背が高い人は？」と聞いたとき、クラスに誰もいなければ答えられませんよね（First）。「いなければ『該当なし』と答える」のがFirstOrDefaultです。"
         },
         {
-          "title": "条件付き",
+          "title": "条件付きで取得",
           "image": "/illustrations/3d/if.png",
-          "content": "# 条件を指定\n\n```csharp\nvar even = nums.First(x => x % 2 == 0);\n```"
+          "content": "# 条件を指定して最初の要素を取得\n\n`First()` や `FirstOrDefault()` には条件を指定することもできます。\n\n**コード例（最初の偶数を取得）：**\n```csharp\nvar nums = new[] { 1, 3, 4, 6, 7 };\nvar even = nums.First(x => x % 2 == 0);  // 4\n```\n\n**解説：**\n1. `x => x % 2 == 0` は「2で割ったあまりが0（＝偶数）」という条件\n2. 条件に合う最初の要素「4」が返される\n\n**デフォルト値の種類：**\n- int : 0\n- string : null\n- bool : false"
         }
       ],
       "initialDisplayMode": "holey",
@@ -183,14 +183,14 @@ export const csharp3Data = {
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "Any とは？",
+          "title": "Any（エニー）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 1つでも条件を満たすか\n\n**Any** は、1つでも条件を満たす要素があれば true。\n\n```csharp\nbool hasNegative = nums.Any(x => x < 0);\n```"
+          "content": "# 1つでも条件を満たすか確認する\n\n**Any**（エニー）は「1つでも条件を満たす要素があるか？」をチェックします。1つでもあればtrue、なければfalseを返します。\n\n**身近な例え：**\n「クラスに風邪をひいている人は**いますか**？」という質問と同じです。1人でもいれば「はい（true）」、誰もいなければ「いいえ（false）」です。\n\n**コード例（マイナスの数があるか確認）：**\n```csharp\nvar nums = new[] { 1, -2, 3 };\nbool hasNegative = nums.Any(x => x < 0);  // true\n```\n\n-2 があるので true が返ります。"
         },
         {
-          "title": "All とは？",
+          "title": "All（オール）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 全て条件を満たすか\n\n```csharp\nbool allPositive = nums.All(x => x > 0);\n```"
+          "content": "# 全ての要素が条件を満たすか確認\n\n**All**（オール）は「**全ての**要素が条件を満たすか？」をチェックします。全部満たせばtrue、1つでも満たさなければfalseです。\n\n**身近な例え：**\n「クラス**全員**が宿題を出しましたか？」という質問と同じです。全員出していれば「はい」、1人でも出していなければ「いいえ」です。\n\n**コード例（全部プラスの数か確認）：**\n```csharp\nvar nums = new[] { 1, 2, 3 };\nbool allPositive = nums.All(x => x > 0);  // true\n```\n\n**Any と All の違い：**\n- Any : 1つでもOKなら true\n- All : 全部OKなら true"
         }
       ],
       "initialDisplayMode": "holey",
@@ -237,14 +237,14 @@ export const csharp3Data = {
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "Sum とは？",
+          "title": "Sum（サム）で合計を計算",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 合計を計算\n\n**Sum** は、要素の合計を返します。\n\n```csharp\nvar total = nums.Sum();\nvar totalPrice = items.Sum(x => x.Price);\n```"
+          "content": "# 全部足し合わせる\n\n**Sum**（サム）は、全ての要素を足し合わせた「合計」を返します。\n\n**身近な例え：**\nテストの点数を全部足して合計点を出すのと同じです。\n\n**コード例：**\n```csharp\n// 数字の合計\nvar nums = new[] { 10, 20, 30 };\nvar total = nums.Sum();  // 60\n\n// オブジェクトの特定のプロパティの合計\nvar totalPrice = items.Sum(x => x.Price);  // 全商品の価格合計\n```\n\n**解説：**\n- `nums.Sum()` : 配列の全要素を足す\n- `items.Sum(x => x.Price)` : 各アイテムのPrice（価格）だけを足す"
         },
         {
-          "title": "Average",
+          "title": "Average（アベレージ）で平均を計算",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 平均を計算\n\n```csharp\nvar avg = nums.Average();\n```"
+          "content": "# 平均値を出す\n\n**Average**（アベレージ）は、全ての要素の「平均」を返します。\n\n**身近な例え：**\nクラス全員のテストの点数を足して、人数で割って平均点を出すのと同じです。\n\n**コード例：**\n```csharp\nvar nums = new[] { 10, 20, 30 };\nvar avg = nums.Average();  // 20.0\n```\n\n**ポイント：**\n- Averageの結果は小数（double型）で返される\n- 空のコレクションでAverageを呼ぶとエラーになる\n\n**その他の集計メソッド：**\n- `Sum()` : 合計\n- `Average()` : 平均\n- `Max()` : 最大値\n- `Min()` : 最小値\n- `Count()` : 要素数"
         }
       ],
       "initialDisplayMode": "holey",
@@ -291,14 +291,14 @@ export const csharp3Data = {
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "switch式とは？",
+          "title": "switch式（スイッチしき）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 式として値を返す\n\nC# 8.0の **switch式** は、値を返す簡潔なswitch。\n\n```csharp\nvar result = value switch {\n    1 => \"one\",\n    2 => \"two\",\n    _ => \"other\"\n};\n```"
+          "content": "# 値を返す新しいswitch\n\nC# 8.0で追加された**switch式**は、従来のswitch文よりも短く書ける新しい書き方です。値を返すことができます。\n\n**身近な例え：**\n「1番なら『one』、2番なら『two』、それ以外なら『other』と答える」という選択を、簡潔に書けます。\n\n**コード例：**\n```csharp\nvar result = value switch {\n    1 => \"one\",\n    2 => \"two\",\n    _ => \"other\"  // _ は「それ以外全部」\n};\n```\n\n**解説：**\n- `value switch { }` で「valueの値によって分岐」\n- `1 => \"one\"` は「1なら\"one\"を返す」\n- `_` は「どれにも当てはまらないとき」（ワイルドカード）"
         },
         {
           "title": "パターンマッチング",
           "image": "/illustrations/3d_advanced/union_funnel.png",
-          "content": "# 型パターン\n\n```csharp\nvar msg = obj switch {\n    int i => $\"int: {i}\",\n    string s => $\"string: {s}\",\n    _ => \"unknown\"\n};\n```"
+          "content": "# 型（かた）によって分岐する\n\nswitch式では、値だけでなく**型**によっても分岐できます。これを「パターンマッチング」と呼びます。\n\n**コード例（型によって違うメッセージ）：**\n```csharp\nvar msg = obj switch {\n    int i => $\"数字: {i}\",\n    string s => $\"文字列: {s}\",\n    _ => \"その他\"\n};\n```\n\n**解説：**\n- `int i` : 「objがint型なら、その値をiとして使う」\n- `string s` : 「objがstring型なら、その値をsとして使う」\n- 型をチェックしながら、その値も取り出せる便利な機能！\n\n**ポイント：**\nif文を何個も書くより、switch式で書いた方がスッキリします。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -351,14 +351,14 @@ export const csharp3Data = {
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "Dictionary とは？",
+          "title": "Dictionary（ディクショナリー）の復習",
           "image": "/illustrations/3d/gear.png",
-          "content": "# キーと値の辞書\n\n**Dictionary** は、キーで値を検索できるコレクション。\n\n```csharp\nvar dict = new Dictionary<string, int> {\n    [\"apple\"] = 100,\n    [\"banana\"] = 80\n};\n```"
+          "content": "# キーと値のペアを管理する\n\n**Dictionary**（ディクショナリー、辞書）は、キー（検索用の名前）と値（データ）をペアで管理するコレクションです。\n\n**身近な例え：**\n電話帳のように、「名前」を探すと「電話番号」がわかる仕組みです。\n\n**初期化の書き方：**\n```csharp\n// 作成時に値を入れる方法\nvar dict = new Dictionary<string, int> {\n    [\"apple\"] = 100,   // りんご: 100円\n    [\"banana\"] = 80    // バナナ: 80円\n};\n\n// あとから追加する方法\ndict[\"orange\"] = 120;  // みかん: 120円を追加\n```"
         },
         {
-          "title": "値の取得",
+          "title": "安全に値を取得する",
           "image": "/illustrations/3d/gear.png",
-          "content": "# TryGetValue\n\n```csharp\nif (dict.TryGetValue(\"apple\", out var price)) {\n    Console.WriteLine(price);\n}\n```"
+          "content": "# TryGetValue（トライゲットバリュー）\n\n存在しないキーでアクセスするとエラーになります。`TryGetValue` を使うと安全に取得できます。\n\n**コード例：**\n```csharp\n// 安全に値を取得\nif (dict.TryGetValue(\"apple\", out var price)) {\n    Console.WriteLine(price);  // あったら表示\n} else {\n    Console.WriteLine(\"見つかりません\");\n}\n```\n\n**解説：**\n- `TryGetValue` は「キーがあればtrue、なければfalse」を返す\n- `out var price` で、見つかった値を `price` に入れる\n- エラーにならず、安全にキーの有無をチェックできる\n\n**ポイント：**\n`dict[\"存在しないキー\"]` はエラー！`TryGetValue` なら安全。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -407,14 +407,14 @@ export const csharp3Data = {
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "文字列補間とは？",
+          "title": "文字列補間（もじれつほかん）の復習",
           "image": "/illustrations/3d/gear.png",
-          "content": "# $ で始める\n\n**$\"\"** で文字列内に変数を埋め込めます。\n\n```csharp\nvar name = \"Alice\";\nvar msg = $\"Hello, {name}!\";\n```"
+          "content": "# $記号で変数を埋め込む\n\n**文字列補間**は、文字列の中に変数の値を埋め込む便利な機能です。`$`（ドルマーク）で始めて、`{}`の中に変数を書きます。\n\n**身近な例え：**\n手紙のテンプレートで「○○様」の○○部分に名前を入れるようなものです。\n\n**コード例：**\n```csharp\nvar name = \"Alice\";\nvar msg = $\"Hello, {name}!\";\n// 結果: \"Hello, Alice!\"\n```\n\n**解説：**\n1. `$\"...\"` で「この文字列には変数を埋め込むよ」と宣言\n2. `{name}` の部分が、変数nameの値「Alice」に置き換わる"
         },
         {
           "title": "式も埋め込める",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 計算や呼び出し\n\n```csharp\n$\"Result: {1 + 2}\"      // Result: 3\n$\"Upper: {s.ToUpper()}\" // 式\n```"
+          "content": "# { } の中で計算もできる\n\n`{}` の中には、変数だけでなく**計算式**や**メソッド呼び出し**も書けます。\n\n**コード例：**\n```csharp\n// 計算式を埋め込む\n$\"Result: {1 + 2}\"      // Result: 3\n\n// メソッドを呼び出す\nvar s = \"hello\";\n$\"Upper: {s.ToUpper()}\" // Upper: HELLO\n\n// 複数の変数を使う\nvar x = 10;\nvar y = 20;\n$\"Sum: {x + y}\"         // Sum: 30\n```\n\n**ポイント：**\n- `{}` の中は何でも書ける（計算、メソッド呼び出し、条件式など）\n- 複雑すぎる式は読みにくくなるので、適度に使おう"
         }
       ],
       "initialDisplayMode": "holey",
@@ -459,14 +459,14 @@ export const csharp3Data = {
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "record とは？",
+          "title": "record（レコード）型とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 値ベースの型\n\nC# 9.0の **record** は、値の等価性を持つ不変の型。\n\n```csharp\nrecord Person(string Name, int Age);\n\nvar p1 = new Person(\"Alice\", 25);\nvar p2 = new Person(\"Alice\", 25);\nConsole.WriteLine(p1 == p2);  // True\n```"
+          "content": "# 値で比較できるデータ型\n\nC# 9.0で追加された**record**（レコード）は、データを簡潔に定義できる特別な型です。\n\n**classとの違い：**\n- class : 同じ内容でも、別々に作ったら「違うもの」と判定される（参照で比較）\n- record : 中身が同じなら「同じもの」と判定される（値で比較）\n\n**コード例：**\n```csharp\nrecord Person(string Name, int Age);\n\nvar p1 = new Person(\"Alice\", 25);\nvar p2 = new Person(\"Alice\", 25);\nConsole.WriteLine(p1 == p2);  // True！\n```\n\n**身近な例え：**\n「住所が同じなら同じ家」と判断するようなものです。別々に書いた住所でも、内容が同じなら「同じ」と見なします。"
         },
         {
-          "title": "with で複製",
+          "title": "with（ウィズ）で一部だけ変更",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 一部だけ変更\n\n```csharp\nvar p2 = p1 with { Age = 26 };\n```"
+          "content": "# 元のデータを変えずにコピー\n\n`with` を使うと、一部のプロパティだけ変更した**新しいコピー**を作れます。元のデータは変わりません（イミュータブル：不変）。\n\n**コード例：**\n```csharp\nvar p1 = new Person(\"Alice\", 25);\nvar p2 = p1 with { Age = 26 };  // 年齢だけ変更\n\n// p1 は (\"Alice\", 25) のまま\n// p2 は (\"Alice\", 26)\n```\n\n**解説：**\n1. `p1 with { Age = 26 }` で「p1をコピーして、Ageだけ26に変える」\n2. p1自体は変更されない（不変）\n3. 新しいオブジェクト p2 が作られる\n\n**ポイント：**\nrecordはデータを安全に扱いたいときに便利！うっかり変更してしまう心配がありません。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -513,14 +513,14 @@ export const csharp3Data = {
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "using とは？",
+          "title": "using宣言（せんげん）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 自動的にDispose\n\n**using** を使うと、スコープを出たときに自動的にDisposeが呼ばれます。\n\n```csharp\nusing var file = new StreamReader(\"file.txt\");\nvar content = file.ReadToEnd();\n// 自動的にDisposeされる\n```"
+          "content": "# リソースを自動的に解放（かいほう）する\n\nファイルやデータベース接続など、使い終わったら「閉じる」必要があるものを**リソース**と呼びます。**using宣言**を使うと、自動的に閉じてくれます。\n\n**身近な例え：**\n水道の蛇口を使い終わったら閉めますよね。usingは「使い終わったら自動で蛇口を閉める」ような仕組みです。\n\n**コード例：**\n```csharp\nusing var file = new StreamReader(\"file.txt\");\nvar content = file.ReadToEnd();\n// ここでfileは自動的に閉じられる（Disposeされる）\n```\n\n**Dispose（ディスポーズ）とは：**\n「片付ける」「解放する」という意味で、使い終わったリソースを閉じる処理のことです。"
         },
         {
-          "title": "旧式の書き方",
+          "title": "ブロック構文（旧式の書き方）",
           "image": "/illustrations/3d/gear.png",
-          "content": "# ブロック構文\n\n```csharp\nusing (var file = new StreamReader(\"file.txt\")) {\n    // ...\n}  // ここでDispose\n```"
+          "content": "# { } で範囲を明確にする\n\n昔のC#では、`using` を `{ }` ブロックで囲む書き方が主流でした。今でも使えます。\n\n**ブロック構文（旧式）：**\n```csharp\nusing (var file = new StreamReader(\"file.txt\")) {\n    var content = file.ReadToEnd();\n    // この中でfileを使う\n}  // } を出たらDispose\n```\n\n**using宣言（新式）：**\n```csharp\nusing var file = new StreamReader(\"file.txt\");\nvar content = file.ReadToEnd();\n// メソッドの終わりでDispose\n```\n\n**違い：**\n- 旧式: `{ }` を出たらDispose\n- 新式: メソッドの終わりでDispose\n\n新しい書き方の方がシンプルですが、どちらも正しいです！"
         }
       ],
       "initialDisplayMode": "holey",

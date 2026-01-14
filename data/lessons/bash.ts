@@ -63,12 +63,17 @@ export const bashData = {
         {
           "title": "変数（へんすう）とは？",
           "image": "/illustrations/common/box.png",
-          "content": "# データを保存する仕組み\n\nプログラムの中で数字や文字を使い回すために、名前をつけて保存する場所を **変数（へんすう）** と呼びます。"
+          "content": "# データを保存する「はこ」\n\nプログラムの中で数字や文字を使い回すために、名前をつけて保存する場所を **変数（へんすう）** と呼びます。\n\n**たとえば：** 「おかし入れ」という箱に、いろんなおかしを出し入れできるように、変数には好きなデータを入れておけます。"
         },
         {
-          "title": "隙間（すきま）に気をつけて",
+          "title": "Bashの変数は特別ルール！",
           "image": "/illustrations/common/box.png",
-          "content": "# 変数の作りかた\n\nBashでは、`名前=中身` というふうに、つなげて入力します。取り出すときは名前の前に `$` をつけます。\n\n**コード例：**\n```bash\nname=\"Bash\"\necho $name\n```"
+          "content": "# スペースを入れないで！\n\nBashでは、`名前=中身` というふうに、**くっつけて**入力します。= の前後にスペースを入れるとエラーになります！\n\n**正しい例：**\n```bash\nname=\"Bash\"  # OK！\n```\n\n**間違った例：**\n```bash\nname = \"Bash\"  # エラー！\n```"
+        },
+        {
+          "title": "変数の使い方",
+          "image": "/illustrations/common/box.png",
+          "content": "# $をつけて取り出す\n\n変数の中身を取り出すときは、名前の前に `$`（ドルマーク）をつけます。\n\n**コード例：**\n```bash\nname=\"Bash\"\necho $name\n```\n\n**このコードは何をしているの？**\n1. nameという箱に「Bash」を入れる\n2. nameの中身を表示する"
         }
       ],
       "initialDisplayMode": "holey",
@@ -108,12 +113,12 @@ export const bashData = {
         {
           "title": "計算はコンピュータにお任せ",
           "image": "/illustrations/common/robot_math.png",
-          "content": "# 高速な計算処理\n\nコンピュータは人間よりもずっと速く計算できます。プログラミングでは、特別な記号を使って計算の指示を出します。"
+          "content": "# 高速な計算処理\n\nコンピュータは人間よりもずっと速く計算できます。プログラミングでは、特別な記号を使って計算の指示を出します。\n\n**使える記号：**\n- `+` たし算\n- `-` ひき算\n- `*` かけ算\n- `/` わり算"
         },
         {
-          "title": "計算のルール",
+          "title": "Bashの計算ルール",
           "image": "/illustrations/common/robot_math.png",
-          "content": "# $(( )) を使いましょう\n\nBashで計算をするときは、全体を `$(( ))` で囲む決まりがあります。中では算数と同じ記号が使えます。\n\n**コード例：**\n```bash\nx=10\ny=2\necho $((x + y))\n```"
+          "content": "# $(( )) で囲む\n\nBashで計算をするときは、計算式を `$(( ))` で囲みます。この中では $（ドルマーク）なしで変数名を使えます。\n\n**コード例：**\n```bash\nx=10\ny=2\necho $((x + y))\n```\n\n**このコードは何をしているの？**\n1. xに10、yに2を入れる\n2. xとyを足した結果（12）を表示"
         }
       ],
       "initialDisplayMode": "holey",
@@ -152,12 +157,17 @@ export const bashData = {
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
           "image": "/illustrations/common/if.png",
-          "content": "# プログラムに判断させる\n\n状況によって動きを変えることを **条件分岐** と呼びます。Bashでは少し特殊な記号（-gt など）を使って条件を指定します。"
+          "content": "# プログラムに判断させる\n\n状況によって動きを変えることを **条件分岐** と呼びます。\n\n**たとえば：** 「テストが80点以上ならご褒美」のように、条件によって結果を変えられます。"
         },
         {
-          "title": "if と then",
+          "title": "Bashの比較記号",
           "image": "/illustrations/common/if.png",
-          "content": "# fi で閉じましょう\n\nBashでは、`if [ 条件 ]; then` と入力し、最後に `fi` と入力して終わらせるのがルールです。\n\n**コード例：**\n```bash\nif [ $score -gt 1000 ]; then\n    echo \"高い！\"\nfi\n```\n`-gt` は「〜より大きい」という意味です。"
+          "content": "# 特別な記号を使う\n\nBashでは数字の比較に特別な記号を使います：\n\n- `-gt` : より大きい（greater than）\n- `-lt` : より小さい（less than）\n- `-ge` : 以上（greater or equal）\n- `-le` : 以下（less or equal）\n- `-eq` : 等しい（equal）"
+        },
+        {
+          "title": "if文の書き方",
+          "image": "/illustrations/common/if.png",
+          "content": "# if で始まり fi で終わる\n\n**コード例：**\n```bash\nif [ $score -gt 80 ]; then\n    echo \"Great\"\nfi\n```\n\n**このコードは何をしているの？**\n1. scoreが80より大きいか確認\n2. 大きければ「Great」と表示\n3. `fi`（ifの逆）で終わる"
         }
       ],
       "initialDisplayMode": "holey",
@@ -247,12 +257,12 @@ export const bashData = {
         {
           "title": "繰り返し（ループ）とは？",
           "image": "/illustrations/common/loop.png",
-          "content": "# 作業を自動化する\n\n同じ処理を何度も繰り返すための仕組みが **ループ** です。たくさんのファイルやデータを一つずつ順番に処理したいときに役立ちます。"
+          "content": "# 作業を自動化する\n\n同じ処理を何度も繰り返すための仕組みが **ループ** です。\n\n**たとえば：** クラス全員の名前を呼ぶとき、一人ずつ手作業で呼ぶより、名簿を順番に読み上げるほうが楽ですよね。それがループです。"
         },
         {
-          "title": "for と in",
+          "title": "for文の書き方",
           "image": "/illustrations/common/loop.png",
-          "content": "# do と done で囲みましょう\n\n`for 変数 in リスト; do` と入力し、最後に `done` と入力すると、中身を順番に取り出して処理できます。\n\n**コード例：**\n```bash\nfor name in \"たろう\" \"はなこ\"; do\n    echo $name\ndone\n```"
+          "content": "# for と in と do と done\n\n**コード例：**\n```bash\nfor name in \"たろう\" \"はなこ\"; do\n    echo $name\ndone\n```\n\n**このコードは何をしているの？**\n1. 「たろう」「はなこ」を順番にnameに入れる\n2. それぞれのnameを表示\n3. 全員分終わったら `done` で終了"
         }
       ],
       "initialDisplayMode": "holey",
@@ -292,12 +302,12 @@ export const bashData = {
         {
           "title": "関数（かんすう）とは？",
           "image": "/illustrations/common/function.png",
-          "content": "# 処理のパッケージ化\n\n何度も使う手順をまとめて名前をつけたものを **関数** と呼びます。一度作れば名前を呼ぶだけで何度でも実行できる、便利なショートカットのようなものです。"
+          "content": "# 処理をまとめた「技（わざ）」\n\n何度も使う手順をまとめて名前をつけたものを **関数** と呼びます。\n\n**たとえば：** 「挨拶する」という技を一度作れば、「挨拶！」と言うだけで毎回同じ動きができます。便利なショートカットのようなものです。"
         },
         {
-          "title": "手順をまとめましょう",
+          "title": "関数の作り方",
           "image": "/illustrations/common/function.png",
-          "content": "# 関数の定義\n\nやりたいことをひとまとめにして、名前をつけることができます。呼び出すだけでいつでも動かせます。\n\n**コード例：**\n```bash\naisatsu() {\n    echo \"こんにちは\"\n}\n\naisatsu # 呼び出し\n```"
+          "content": "# 名前() { } で定義\n\n**コード例：**\n```bash\naisatsu() {\n    echo \"こんにちは\"\n}\n\naisatsu  # 呼び出し\n```\n\n**このコードは何をしているの？**\n1. `aisatsu`という関数を作る（中身は「こんにちは」を表示）\n2. `aisatsu` と書くだけで実行できる"
         }
       ],
       "initialDisplayMode": "holey",

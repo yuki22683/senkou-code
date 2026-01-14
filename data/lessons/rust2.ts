@@ -13,14 +13,14 @@ export const rust2Data = {
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "所有権とは？",
+          "title": "所有権（しょゆうけん）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# メモリの「持ち主」\n\n**所有権** は、値の「持ち主」を明確にする仕組みです。各値には1つの所有者だけが存在し、所有者がスコープ（変数が有効な範囲）を抜けると値は自動的に破棄されます。"
+          "content": "# データの「持ち主」を決めるルール\n\n**所有権** は、Rust最大の特徴です。「このデータの持ち主は誰か」をはっきりさせる仕組みです。\n\n**ルール：**\n- データには必ず1人だけ「持ち主」がいる\n- 持ち主がいなくなると、データは自動的に片付けられる\n\n**たとえるなら：**\n- おもちゃは1人しか持てない\n- 持ち主が部屋を出たら、おもちゃは片付けられる\n\nこのルールのおかげで、Rustは「メモリリーク」（データが片付けられないバグ）を防げます！"
         },
         {
           "title": "ムーブ（移動）",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 所有権の移動\n\n代入すると所有権が移動（ムーブ）します。元の変数は使えなくなります。\n\n**コード例：**\n```rust\nlet s1 = String::from(\"hello\");\nlet s2 = s1; // 所有権が s2 に移動\n// s1 は使えない\n```"
+          "content": "# 所有権は「移動」する\n\n変数を別の変数に代入すると、所有権が **移動（ムーブ）** します。元の変数は使えなくなります。\n\n**コード例：**\n```rust\nlet s1 = String::from(\"hello\");  // s1 が持ち主\nlet s2 = s1;  // 所有権が s2 に移動！\n// ↓ s1 はもう使えない（エラーになる）\n// println!(\"{}\", s1);  // ダメ！\nprintln!(\"{}\", s2);  // OK！\n```\n\n**イメージ：**\nおもちゃを友だちにあげたら、自分はもう使えない。これがムーブです。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -57,14 +57,14 @@ export const rust2Data = {
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "参照とは？",
+          "title": "参照（さんしょう）とは？",
           "image": "/illustrations/3d_advanced/pointer_arrow.png",
-          "content": "# 借りる仕組み\n\n**参照** を使うと、所有権を移さずに値を「借りる」ことができます。`&` で参照を作ります。"
+          "content": "# 所有権を渡さずに「借りる」\n\n**参照** を使うと、所有権を移さずにデータを「見せてもらう」ことができます。\n\n**たとえるなら：**\n- ムーブ = おもちゃをあげる（自分は使えない）\n- 参照 = おもちゃを見せる（自分も使える）\n\n**作り方：**\n`&`（アンパサンド）をつけると参照を作れます。\n\n```rust\nlet s = String::from(\"hello\");\nlet r = &s;  // sを借りる（見せてもらう）\n// s も r も使える！\n```"
         },
         {
           "title": "参照の使い方",
           "image": "/illustrations/3d_advanced/pointer_arrow.png",
-          "content": "# & で借用\n\n`&` をつけると参照を作成できます。元の変数はそのまま使えます。\n\n**コード例：**\n```rust\nlet s = String::from(\"hello\");\nlet len = calc_len(&s);\n// s はまだ使える\n```"
+          "content": "# 関数に借りてもらう\n\n関数にデータを渡すとき、`&` をつけると「借りる」形になります。元の変数はそのまま使い続けられます。\n\n**コード例：**\n```rust\nfn calc_len(s: &String) -> usize {\n    s.len()  // 長さを返す\n}\n\nfn main() {\n    let text = String::from(\"hello\");\n    let len = calc_len(&text);  // textを貸す\n    // text はまだ使える！\n    println!(\"{}の長さは{}\", text, len);\n}\n```\n\n`&String` は「Stringを借りる」という意味です。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -104,14 +104,14 @@ export const rust2Data = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "可変参照とは？",
+          "title": "可変参照（かへんさんしょう）とは？",
           "image": "/illustrations/3d_advanced/pointer_arrow.png",
-          "content": "# 書き換え可能な参照\n\n**可変参照** `&mut` を使うと、借りた値を変更できます。ただし、同時に1つだけです。"
+          "content": "# 「書き換えできる」借り方\n\n普通の参照 `&` は「見るだけ」ですが、**可変参照** `&mut` は「変更もできる」借り方です。\n\n**たとえるなら：**\n- `&` = 本を見せてもらう（読むだけ）\n- `&mut` = ノートを借りる（書き込みOK）\n\n**大事なルール：**\n- 可変参照は同時に1つだけ！\n- 「みんなで見る」か「1人で書く」かのどちらか\n\nこのルールで、データが同時に書き換えられるバグを防いでいます。"
         },
         {
           "title": "&mut の使い方",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 変更を許可\n\n変数自体も `mut` で宣言し、参照も `&mut` で作ります。\n\n**コード例：**\n```rust\nlet mut s = String::from(\"hello\");\nchange(&mut s);\n```"
+          "content": "# mut が2か所に必要\n\n変更できるようにするには、変数と参照の両方に `mut` が必要です。\n\n**コード例：**\n```rust\n// 1. 変数を mut で作る\nlet mut s = String::from(\"hello\");\n\n// 2. &mut で可変参照を渡す\nchange(&mut s);\n\nfn change(s: &mut String) {\n    s.push_str(\" world\");  // 変更できる！\n}\n```\n\n**ポイント：**\n- `let mut 変数` で変数を変更可能に\n- `&mut 変数` で可変参照を作る\n- 両方ないと変更できない！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -154,14 +154,14 @@ export const rust2Data = {
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "構造体とは？",
+          "title": "構造体（こうぞうたい）とは？",
           "image": "/illustrations/3d_advanced/class_template.png",
-          "content": "# データのまとまり\n\n**構造体（struct）** は、関連するデータをまとめる仕組みです。それぞれのデータにはフィールド名をつけます。"
+          "content": "# 関係あるデータをまとめる「設計図」\n\n**構造体（struct）** は、いくつかのデータをひとまとめにする仕組みです。\n\n**たとえば「点（座標）」のデータ：**\n- x座標\n- y座標\n\nこの2つは関係があるので、「Point（点）」としてまとめると便利です。\n\n**たとえば「人」のデータ：**\n- 名前\n- 年齢\n\nこれも「Person（人）」としてまとめられます。\n\n構造体は「こういうデータを持つ」という設計図です。"
         },
         {
-          "title": "struct の定義",
+          "title": "struct の定義のしかた",
           "image": "/illustrations/3d_advanced/class_template.png",
-          "content": "# struct キーワード\n\n`struct 名前 { フィールド }` で定義します。\n\n**コード例：**\n```rust\nstruct Point {\n    x: i32,\n    y: i32,\n}\nlet p = Point { x: 10, y: 20 };\n```"
+          "content": "# struct キーワードで定義\n\n`struct 名前 { フィールド }` で構造体を定義します。フィールドには名前と型を書きます。\n\n**コード例：**\n```rust\n// Point 構造体を定義\nstruct Point {\n    x: i32,  // xフィールド（整数）\n    y: i32,  // yフィールド（整数）\n}\n\n// 使い方\nlet p = Point { x: 10, y: 20 };\nprintln!(\"x={}, y={}\", p.x, p.y);\n```\n\n**ポイント：**\n- `struct 名前` で構造体を作る\n- `{ フィールド名: 型 }` でどんなデータを持つか決める\n- `.フィールド名` でアクセス"
         }
       ],
       "initialDisplayMode": "holey",
@@ -318,14 +318,14 @@ export const rust2Data = {
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "Option とは？",
+          "title": "Option（オプション）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 値があるかもしれない\n\n**Option<T>** は、値があれば `Some(値)`、なければ `None` を表します。null の代わりに使います。"
+          "content": "# 「あるかもしれない、ないかもしれない」\n\n**Option<T>** は、値が「あるかもしれないし、ないかもしれない」ことを表す型です。\n\n**たとえば：**\n- 辞書で単語を探す → 見つかるかもしれないし、ないかもしれない\n- ゲームでアイテムを拾う → 落ちてるかもしれないし、ないかもしれない\n\n**2つの状態：**\n- `Some(値)` → 値がある！\n- `None` → 値がない...\n\n他の言語では `null` を使いますが、Rustでは `Option` で安全に扱います。"
         },
         {
           "title": "Option の使い方",
           "image": "/illustrations/3d/gear.png",
-          "content": "# Some と None\n\nmatch で安全に値を取り出せます。\n\n**コード例：**\n```rust\nlet x: Option<i32> = Some(5);\nmatch x {\n    Some(n) => println!(\"{}\", n),\n    None => println!(\"none\"),\n}\n```"
+          "content": "# match で安全に取り出す\n\n`match` を使って「ある場合」と「ない場合」で処理を分けます。\n\n**コード例：**\n```rust\nlet x: Option<i32> = Some(5);  // 値あり\n\nmatch x {\n    Some(n) => println!(\"値は{}です\", n),  // 5\n    None => println!(\"値がありません\"),\n}\n```\n\n**なぜ安全？**\n- `null` のように「あるつもりでアクセスしたら無かった」エラーが起きない\n- 「ない場合」の処理を書かないとコンパイルエラーになる\n- 強制的に両方のケースを考えることになる！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -366,14 +366,14 @@ export const rust2Data = {
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "Result とは？",
+          "title": "Result（リザルト）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 成功か失敗か\n\n**Result<T, E>** は、成功なら `Ok(値)`、失敗なら `Err(エラー)` を表します。エラー処理に使います。"
+          "content": "# 「成功」か「失敗」かを表す\n\n**Result<T, E>** は、処理が「成功したか失敗したか」を表す型です。\n\n**たとえば：**\n- ファイルを開く → 成功（内容）か失敗（エラー）\n- 0で割り算 → 成功（答え）か失敗（0で割れない！）\n\n**2つの状態：**\n- `Ok(値)` → 成功！値が入っている\n- `Err(エラー)` → 失敗...エラー情報が入っている\n\n`Option` は「あるか・ないか」、`Result` は「成功か・失敗か」という違いです。"
         },
         {
           "title": "Result の使い方",
           "image": "/illustrations/3d/gear.png",
-          "content": "# Ok と Err\n\nmatch で成功と失敗を分岐できます。\n\n**コード例：**\n```rust\nfn divide(a: i32, b: i32) -> Result<i32, String> {\n    if b == 0 {\n        return Err(\"zero\".to_string());\n    }\n    Ok(a / b)\n}\n```"
+          "content": "# match で成功と失敗を分ける\n\n`match` で「成功したら」「失敗したら」の処理を書き分けます。\n\n**コード例：**\n```rust\nfn divide(a: i32, b: i32) -> Result<i32, String> {\n    if b == 0 {\n        return Err(\"0で割れません\".to_string());\n    }\n    Ok(a / b)  // 成功なら答えを返す\n}\n\nmatch divide(10, 2) {\n    Ok(v) => println!(\"答えは{}\", v),\n    Err(e) => println!(\"エラー: {}\", e),\n}\n```\n\n**ポイント：**\n- `Ok(値)` で成功を返す\n- `Err(エラー)` で失敗を返す"
         }
       ],
       "initialDisplayMode": "holey",
@@ -426,12 +426,12 @@ export const rust2Data = {
         {
           "title": "トレイトとは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 共通の機能を定義\n\n**トレイト** は、型が持つべきメソッドを定義します。インターフェースに似ています。"
+          "content": "# 「できること」の約束\n\n**トレイト** は、「この型はこういうことができる」という約束を定義します。\n\n**たとえば「鳴ける」という約束：**\n- 犬は「ワン」と鳴く\n- 猫は「ニャー」と鳴く\n- 両方とも「鳴ける」能力がある\n\nトレイトは「鳴ける動物は、鳴き声を出すメソッドを持つ」という約束です。\n\n**他の言語との比較：**\n- Java: インターフェース\n- TypeScript: インターフェース\n\nに似た概念です。"
         },
         {
-          "title": "trait の定義",
+          "title": "trait の定義と実装",
           "image": "/illustrations/3d/gear.png",
-          "content": "# trait キーワード\n\n`trait 名前 { メソッド }` で定義し、`impl 型 for トレイト` で実装します。\n\n**コード例：**\n```rust\ntrait Greet {\n    fn greet(&self);\n}\nimpl Greet for Person {\n    fn greet(&self) { ... }\n}\n```"
+          "content": "# 約束を作って、守る\n\n1. `trait` で「約束」を定義\n2. `impl トレイト for 型` で「約束を守る」実装をする\n\n**コード例：**\n```rust\n// 1. トレイト（約束）を定義\ntrait Speak {\n    fn speak(&self);  // 鳴くメソッドを持つ約束\n}\n\n// 2. Dog構造体がトレイトを実装\nstruct Dog;\nimpl Speak for Dog {\n    fn speak(&self) {\n        println!(\"woof\");\n    }\n}\n```\n\n「DogはSpeakができる」ということになります。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -486,12 +486,12 @@ export const rust2Data = {
         {
           "title": "ジェネリクスとは？",
           "image": "/illustrations/3d_advanced/generics_glass.png",
-          "content": "# 汎用的な型\n\n**ジェネリクス** を使うと、どんな型でも使える関数や構造体を作れます。`<T>` で型パラメータを定義します。"
+          "content": "# どんな型でも使える「万能」の仕組み\n\n**ジェネリクス** は、型を後から決められる仕組みです。\n\n**なぜ便利？**\n同じような関数を何度も書かなくてすみます。\n\n**たとえば：**\n- 数字の配列の最初の要素を取る関数\n- 文字列の配列の最初の要素を取る関数\n\n両方とも「最初の要素を取る」のは同じなのに、型が違うだけで別の関数を書くのは大変！\n\nジェネリクスなら、`<T>` で「型は後で決める」と書くだけで、どんな型でも使える関数が作れます。"
         },
         {
-          "title": "ジェネリック関数",
+          "title": "ジェネリック関数の書き方",
           "image": "/illustrations/3d/gear.png",
-          "content": "# <T> で型を抽象化\n\n関数名の後に `<T>` をつけて、T を型として使います。\n\n**コード例：**\n```rust\nfn first<T>(arr: &[T]) -> &T {\n    &arr[0]\n}\n```"
+          "content": "# <T> で型を「あとで決める」\n\n関数名の後に `<T>` をつけて、`T` を「型」として使います。\n\n**コード例：**\n```rust\n// Tはどんな型でもOK\nfn first<T>(arr: &[T]) -> &T {\n    &arr[0]  // 最初の要素を返す\n}\n\n// 使い方\nfirst(&[1, 2, 3]);         // Tはi32\nfirst(&[\"a\", \"b\", \"c\"]);   // Tは&str\n```\n\n**読み方：**\n- `<T>` → 「Tという名前の型を使うよ」\n- `T` は慣習で「Type（型）」の頭文字\n- 複数の型が必要なら `<T, U>` のように書く"
         }
       ],
       "initialDisplayMode": "holey",

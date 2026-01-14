@@ -13,9 +13,9 @@ export const javascriptData5 = {
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "正規表現リテラル",
+          "title": "正規表現（せいきひょうげん）リテラルとは？",
           "image": "/illustrations/3d/regex_search.png",
-          "content": "# パターンを定義する\n\n**/pattern/**で正規表現を定義します。\n\n```javascript\nconst pattern = /hello/;\nconsole.log(pattern.test('hello world')); // true\n```"
+          "content": "# 文字のパターンを定義する\n\n**正規表現** は、文字列の「パターン」を表現する方法です。\n\n**身近なたとえ：**\n「『あ』で始まる言葉を探して」とお願いするイメージです。正規表現を使えば、もっと複雑なパターンも探せます。\n\n**書き方：**\nパターンを `/` で囲みます。\n\n**コード例：**\n```javascript\nconst pattern = /hello/;\n// 'hello world' に 'hello' が含まれる？\nconsole.log(pattern.test('hello world'));\n```\n**実行結果：**\n```\ntrue\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -46,9 +46,9 @@ export const javascriptData5 = {
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "test()メソッド",
+          "title": "test()メソッドとは？",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# マッチするかチェック\n\n**test()**は、パターンにマッチするかtrue/falseで返します。\n\n```javascript\nconst pattern = /\\d+/;\nconsole.log(pattern.test('abc123')); // true\nconsole.log(pattern.test('abc')); // false\n```"
+          "content": "# パターンに合うかチェック\n\n**test()** は、文字列がパターンに合うかどうかを true/false で返します。\n\n**身近なたとえ：**\n「この文章に数字は含まれている？」と質問して、「はい」か「いいえ」で答えてもらうイメージです。\n\n**よく使う記号：**\n- `\\d` ... 数字（0-9）\n- `+` ... 1回以上の繰り返し\n\n**コード例：**\n```javascript\nconst pattern = /\\d+/;  // 1個以上の数字\nconsole.log(pattern.test('abc123'));  // true（数字あり）\nconsole.log(pattern.test('abc'));     // false（数字なし）\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -81,9 +81,9 @@ export const javascriptData5 = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "match()メソッド",
+          "title": "match()メソッドとは？",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# マッチした部分を取得\n\n**match()**は、マッチした部分を配列で返します。\n\n```javascript\nconst text = 'I have 3 apples and 5 oranges';\nconst numbers = text.match(/\\d+/g);\nconsole.log(numbers); // ['3', '5']\n```"
+          "content": "# パターンに合う部分を取り出す\n\n**match()** は、パターンに合った部分を配列で返します。\n\n**身近なたとえ：**\n「この文章から数字を全部抜き出して」とお願いするイメージです。\n\n**フラグ g について：**\n`/g` をつけると「全部探す」（global）という意味になります。\n\n**コード例：**\n```javascript\nconst text = 'I have 3 apples and 5 oranges';\nconst numbers = text.match(/\\d+/g);\nconsole.log(numbers);\n```\n**実行結果：**\n```\n['3', '5']\n```\n\n**ポイント：**\n見つからなかった場合は `null` が返ります。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -116,9 +116,9 @@ export const javascriptData5 = {
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "replace()メソッド",
+          "title": "replace()メソッドとは？",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# マッチした部分を置換\n\n**replace()**で正規表現にマッチした部分を置換できます。\n\n```javascript\nconst text = 'hello world';\nconst result = text.replace(/world/, 'JavaScript');\nconsole.log(result); // hello JavaScript\n```"
+          "content": "# パターンに合う部分を置き換える\n\n**replace()** は、パターンに合った部分を別の文字列に置き換えます。\n\n**身近なたとえ：**\n「この文章の『りんご』を全部『みかん』に変えて」とお願いするイメージです。\n\n**書き方：**\n```\n文字列.replace(/パターン/g, '置き換え後')\n```\n\n**コード例：**\n```javascript\nconst text = 'hello world';\nconst result = text.replace(/world/, 'JavaScript');\nconsole.log(result);\n```\n**実行結果：**\n```\nhello JavaScript\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -151,9 +151,9 @@ export const javascriptData5 = {
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "try-catch文",
+          "title": "try-catch文とは？",
           "image": "/illustrations/3d_advanced/safety_net.png",
-          "content": "# エラーをキャッチする\n\n**try-catch**でエラーをキャッチして適切に処理できます。\n\n```javascript\ntry {\n  throw new Error('Something went wrong');\n} catch (e) {\n  console.log(e.message);\n}\n```"
+          "content": "# エラーを捕まえて対処する\n\n**try-catch** は、エラーが起きてもプログラムが止まらないようにする仕組みです。\n\n**身近なたとえ：**\nサッカーのゴールキーパーを想像してください。シュートが来たら（エラーが起きたら）キャッチする！\n\n**仕組み：**\n- `try` ... 「試してみる」処理を書く\n- `catch` ... エラーが起きたときの処理を書く\n\n**コード例：**\n```javascript\ntry {\n  throw new Error('Something went wrong');\n} catch (e) {\n  console.log(e.message);  // エラーメッセージを表示\n}\n```\n\n**ポイント：**\nエラーが起きても catch で処理すれば、プログラムは続行できます！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -190,9 +190,9 @@ export const javascriptData5 = {
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "finally節",
+          "title": "finally節とは？",
           "image": "/illustrations/3d/finally_always.png",
-          "content": "# 常に実行される\n\n**finally**はエラーの有無に関わらず必ず実行されます。\n\n```javascript\ntry {\n  // 処理\n} catch (e) {\n  // エラー処理\n} finally {\n  // 必ず実行\n}\n```"
+          "content": "# 必ず実行される処理\n\n**finally** は、エラーが起きても起きなくても **必ず** 実行される部分です。\n\n**身近なたとえ：**\n「試合に勝っても負けても、最後に握手する」というルールのようなものです。\n\n**使いどころ：**\n- ファイルを閉じる処理\n- データベース接続を切る処理\n- 「お片付け」的な処理\n\n**コード例：**\n```javascript\ntry {\n  // 処理を試す\n} catch (e) {\n  // エラーがあれば処理\n} finally {\n  // 必ずここを通る！\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -241,9 +241,9 @@ export const javascriptData5 = {
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "カスタムエラー",
+          "title": "カスタムエラーとは？",
           "image": "/illustrations/3d_advanced/safety_net.png",
-          "content": "# 独自のエラーを定義\n\nErrorクラスを継承して独自のエラーを作れます。\n\n```javascript\nclass ValidationError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'ValidationError';\n  }\n}\n```"
+          "content": "# 自分だけのエラーを作る\n\n**カスタムエラー** は、Error クラスを継承して作る独自のエラーです。\n\n**なぜ作る？**\n- エラーの種類を区別できる（「入力エラー」「ネットワークエラー」など）\n- エラーの原因が分かりやすくなる\n\n**作り方：**\n```javascript\nclass ValidationError extends Error {\n  constructor(message) {\n    super(message);  // 親クラスを呼ぶ\n    this.name = 'ValidationError';  // エラー名を設定\n  }\n}\n```\n\n**使い方：**\n```javascript\nthrow new ValidationError('入力が無効です');\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -296,7 +296,7 @@ export const javascriptData5 = {
         {
           "title": "Symbolとは？",
           "image": "/illustrations/3d/symbol_unique.png",
-          "content": "# ユニークな識別子\n\n**Symbol**は一意の識別子を作成します。\n\n```javascript\nconst id = Symbol('id');\nconst obj = {\n  [id]: 12345\n};\nconsole.log(obj[id]); // 12345\n```"
+          "content": "# 絶対に重複しないユニークな値\n\n**Symbol** は、世界に一つだけの「印」を作る機能です。\n\n**身近なたとえ：**\n指紋は人それぞれ違いますよね。Symbol も同じで、作るたびに必ず違う値になります。同じ名前で作っても、中身は別物です！\n\n**なぜ使う？**\n- プロパティ名の衝突を避けられる\n- 「隠し」プロパティを作れる\n\n**コード例：**\n```javascript\nconst id = Symbol('id');\nconst obj = {\n  [id]: 12345  // [id] で Symbol をキーにする\n};\nconsole.log(obj[id]);  // 12345\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -339,7 +339,7 @@ export const javascriptData5 = {
         {
           "title": "WeakMapとは？",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# 弱参照のMap\n\n**WeakMap**はキーがオブジェクトで、弱参照のため不要になると自動でガベージコレクションされます。\n\n```javascript\nconst cache = new WeakMap();\nconst obj = {};\ncache.set(obj, 'cached value');\nconsole.log(cache.get(obj));\n```"
+          "content": "# 弱参照（じゃくさんしょう）のMap\n\n**WeakMap** は、オブジェクトをキーにできる特殊な Map です。\n\n**「弱参照」って何？**\nオブジェクトが不要になったら、自動で片付けられる（ガベージコレクション）という意味です。メモリを節約できます！\n\n**身近なたとえ：**\n付箋（メモ）を本に貼るイメージです。本を捨てたら、付箋も一緒に捨てられます。\n\n**コード例：**\n```javascript\nconst cache = new WeakMap();\nconst obj = {};\ncache.set(obj, 'cached value');  // キーはオブジェクト\nconsole.log(cache.get(obj));     // 'cached value'\n```\n\n**使いどころ：**\nプライベートなデータを安全に保存したいとき"
         }
       ],
       "initialDisplayMode": "holey",
@@ -396,7 +396,7 @@ export const javascriptData5 = {
         {
           "title": "Proxyとは？",
           "image": "/illustrations/3d/proxy_intercept.png",
-          "content": "# 操作をインターセプト\n\n**Proxy**でオブジェクトの操作をインターセプトできます。\n\n```javascript\nconst handler = {\n  get(target, prop) {\n    return prop in target ? target[prop] : 'not found';\n  }\n};\nconst obj = new Proxy({}, handler);\n```"
+          "content": "# 操作を「横取り」する\n\n**Proxy** は、オブジェクトへの操作を途中でキャッチして、カスタマイズできる機能です。\n\n**身近なたとえ：**\n「受付係」を想像してください。お客さん（コード）が社員（オブジェクト）に会いたいとき、受付係が間に入って「名前を聞く」「記録を残す」などができます。\n\n**できること：**\n- プロパティにアクセスしたときの処理を変える\n- 存在しないプロパティに「デフォルト値」を返す\n- アクセスをログに残す\n\n**コード例：**\n```javascript\nconst handler = {\n  get(target, prop) {\n    // ない場合は 'not found' を返す\n    return prop in target ? target[prop] : 'not found';\n  }\n};\nconst obj = new Proxy({}, handler);\n```"
         }
       ],
       "initialDisplayMode": "holey",

@@ -15,12 +15,12 @@ export const rust3Data = {
         {
           "title": "ライフタイムとは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 参照の有効期間\n\n**ライフタイム** は、参照が有効な範囲を示します。`'a` のように表記します。\n\n```rust\nfn longest<'a>(x: &'a str, y: &'a str) -> &'a str {\n    if x.len() > y.len() { x } else { y }\n}\n```"
+          "content": "# 参照の「寿命」を示す印\n\n**ライフタイム** は、参照がいつまで使えるかを示す印です。`'a`（アポストロフィ・エー）のように書きます。\n\n**なぜ必要？**\n参照は「借りている」状態。借りた元のデータが消えたら、参照も使えなくなります。\n\n**たとえば：**\n- 図書館で借りた本 → 図書館が閉まったら読めない\n- 参照で借りたデータ → 元のデータが消えたら使えない\n\nライフタイムは「この参照はこの範囲で有効だよ」とコンパイラに伝える仕組みです。"
         },
         {
           "title": "なぜ必要？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 無効な参照を防ぐ\n\nダングリング参照（既に解放されたメモリを指す参照）を防ぐため、Rustはライフタイムを追跡します。"
+          "content": "# 危険なバグを防ぐ\n\n**ダングリング参照** という危険なバグがあります。これは「もう存在しないデータ」を指し続けている参照のことです。\n\n**例：**\n```rust\nfn longest<'a>(x: &'a str, y: &'a str) -> &'a str {\n    if x.len() > y.len() { x } else { y }\n}\n```\n\n**`'a` の意味：**\n- 引数 `x` と `y` は同じライフタイム `'a` を持つ\n- 戻り値も同じライフタイム `'a` を持つ\n- つまり「xとyが両方有効な間、戻り値も有効」という約束\n\nRustはこれを自動でチェックしてくれます！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -65,12 +65,12 @@ export const rust3Data = {
         {
           "title": "クロージャとは？",
           "image": "/illustrations/3d_advanced/lambda_spark.png",
-          "content": "# 周囲の変数を使える関数\n\n**クロージャ** は、名前を付けずに定義する関数（無名関数）で、周囲の変数をキャプチャ（取り込んで使用）できます。\n\n```rust\nlet x = 5;\nlet add_x = |n| n + x;\nprintln!(\"{}\", add_x(10)); // 15\n```"
+          "content": "# 名前のない「即席」関数\n\n**クロージャ** は、名前をつけずにその場で作る関数です。そして特別な能力があります：**周りの変数を使える**のです！\n\n**たとえば：**\n```rust\nlet x = 5;  // 外側の変数\nlet add_x = |n| n + x;  // xを使えるクロージャ\nprintln!(\"{}\", add_x(10));  // 15\n```\n\n**普通の関数との違い：**\n- 普通の関数：引数しか使えない\n- クロージャ：引数 + 周りの変数も使える\n\n「その場の空気を読める」関数というイメージです！"
         },
         {
-          "title": "クロージャの構文",
+          "title": "クロージャの書き方",
           "image": "/illustrations/3d_advanced/lambda_spark.png",
-          "content": "# | | で引数を囲む\n\n```rust\n// 引数なし\n|| println!(\"Hello\")\n\n// 引数あり\n|x, y| x + y\n\n// ブロック\n|x| {\n    let y = x * 2;\n    y + 1\n}\n```"
+          "content": "# | | で引数を囲む\n\nクロージャは `|引数| 処理` という形で書きます。`||` は「パイプ」と呼ばれます。\n\n**いろいろな書き方：**\n```rust\n// 引数なし\n|| println!(\"Hello\")\n\n// 引数あり\n|x, y| x + y\n\n// 複数行のブロック\n|x| {\n    let y = x * 2;\n    y + 1\n}\n```\n\n**ポイント：**\n- 引数を `| |` で囲む（関数の `()` の代わり）\n- 型は省略できることが多い（Rustが推測してくれる）"
         }
       ],
       "initialDisplayMode": "holey",
@@ -107,12 +107,12 @@ export const rust3Data = {
         {
           "title": "イテレータとは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 順番に処理\n\n**イテレータ** は、要素を1つずつ取り出して処理します。\n\n```rust\nlet v = vec![1, 2, 3];\nlet iter = v.iter();\nfor x in iter {\n    println!(\"{}\", x);\n}\n```"
+          "content": "# 要素を1つずつ取り出す仕組み\n\n**イテレータ** は、ベクタなどのデータを「1つずつ順番に」取り出す仕組みです。\n\n**たとえば：**\n- 行列に並んでいる人を1人ずつ呼ぶ\n- 引き出しの中身を1つずつ出す\n\n**コード例：**\n```rust\nlet v = vec![1, 2, 3];\nfor x in v.iter() {\n    println!(\"{}\", x);  // 1, 2, 3 と順番に表示\n}\n```\n\n`iter()` で「順番に取り出す準備」をして、`for` で1つずつ処理します。"
         },
         {
-          "title": "iter() と into_iter()",
+          "title": "3つの iter メソッド",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 参照 vs 所有権\n\n```rust\nv.iter()      // &T を返す\nv.iter_mut()  // &mut T を返す\nv.into_iter() // T を返す（所有権を移動）\n```"
+          "content": "# 借りるか、もらうか\n\n3種類の iter があり、所有権の扱いが違います。\n\n**3つの違い：**\n```rust\nv.iter()       // 参照で借りる（&T）\nv.iter_mut()   // 変更可能で借りる（&mut T）\nv.into_iter()  // 所有権をもらう（T）\n```\n\n**使い分け：**\n- `iter()` → 見るだけ（元のベクタも使える）\n- `iter_mut()` → 中身を変更したい\n- `into_iter()` → ベクタごともらう（元は使えない）\n\n普通は `iter()` を使うことが多いです。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -151,14 +151,14 @@ export const rust3Data = {
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "map とは？",
+          "title": "map（マップ）とは？",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# 要素を変換\n\n**map** は、各要素にクロージャを適用して新しいイテレータを作ります。\n\n```rust\nlet v = vec![1, 2, 3];\nlet doubled: Vec<_> = v.iter().map(|x| x * 2).collect();\n// [2, 4, 6]\n```"
+          "content": "# 全部を同じように変換する\n\n**map** は、イテレータの各要素を「同じ方法で」変換します。\n\n**たとえば：**\n- 全員の身長を2倍にする\n- 全員の名前を大文字にする\n- 全部の数を2乗する\n\n**コード例：**\n```rust\nlet v = vec![1, 2, 3];\nlet doubled: Vec<_> = v.iter()\n    .map(|x| x * 2)  // 各要素を2倍に\n    .collect();      // ベクタに戻す\n// [2, 4, 6]\n```\n\n`|x| x * 2` は「xを受け取って、x*2を返す」クロージャです。"
         },
         {
-          "title": "遅延評価",
+          "title": "遅延評価（ちえんひょうか）",
           "image": "/illustrations/3d/gear.png",
-          "content": "# collect() で実行\n\nイテレータは遅延評価（実際に値が必要になるまで処理を実行しない仕組み）のため、`collect()` などで消費する必要があります。"
+          "content": "# map だけでは実行されない！\n\nRustのイテレータは **遅延評価** といって、「本当に必要になるまで処理しない」仕組みです。\n\n**なぜ？**\n無駄な計算を省けるから。100万件あっても、最初の10件だけ欲しいなら10件だけ処理すればいい。\n\n**collect() で実行：**\n```rust\n// これだけでは何も起きない\nv.iter().map(|x| x * 2);\n\n// collect() で実行してベクタに変換\nlet result: Vec<_> = v.iter().map(|x| x * 2).collect();\n```\n\n`collect()` は「今すぐ全部処理して結果をちょうだい」という意味です。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -195,14 +195,14 @@ export const rust3Data = {
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "filter とは？",
+          "title": "filter（フィルター）とは？",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# 条件で絞り込み\n\n**filter** は、条件を満たす要素だけを通します。\n\n```rust\nlet v = vec![1, 2, 3, 4, 5];\nlet evens: Vec<_> = v.iter().filter(|x| *x % 2 == 0).collect();\n// [2, 4]\n```"
+          "content": "# 条件に合うものだけ残す\n\n**filter** は、条件を満たす要素だけを残し、他を捨てます。\n\n**たとえば：**\n- 80点以上の人だけ残す\n- 偶数だけ残す\n- 「あ」から始まる名前だけ残す\n\n**コード例：**\n```rust\nlet v = vec![1, 2, 3, 4, 5];\nlet evens: Vec<_> = v.iter()\n    .filter(|x| **x % 2 == 0)  // 偶数だけ\n    .collect();\n// [2, 4]\n```\n\n条件が `true` の要素だけが残ります。"
         },
         {
-          "title": "参照に注意",
+          "title": "** に注意！",
           "image": "/illustrations/3d_advanced/pointer_arrow.png",
-          "content": "# クロージャは参照を受け取る\n\n`filter` のクロージャは `&&T` を受け取るため、`**x` でデリファレンスが必要な場合があります。"
+          "content": "# filter は参照の参照を受け取る\n\n`filter` のクロージャは、参照の参照（`&&T`）を受け取ります。そのため、値を使うには `**x` と2回参照を外す必要があります。\n\n**なぜ？**\n- `iter()` は参照（`&T`）を返す\n- `filter` はそれをさらに参照で渡す（`&&T`）\n\n**書き方：**\n```rust\n// **x で値を取り出す\n.filter(|x| **x > 2)\n\n// または * を引数につける\n.filter(|&x| *x > 2)\n```\n\n最初は混乱しますが、慣れれば大丈夫！"
         }
       ],
       "initialDisplayMode": "holey",

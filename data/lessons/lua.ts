@@ -15,17 +15,17 @@ export const luaData = {
         {
           "title": "Lua（ルア）とは？",
           "image": "/illustrations/common/monitor.png",
-          "content": "# ゲーム開発で大人気の言葉\n\nLuaは、とても軽量で動作が速いため、ゲーム制作の現場でよく使われています。プログラムの中の中身を簡単に組み込める「接着剤」のような役割が得意な言葉です。"
+          "content": "# ゲーム開発で大人気の言葉！\n\n**Lua**（ルア）は、とても軽くて速いプログラミング言語です。\n\n**名前の由来：** ポルトガル語で「月」という意味です。\n\n**どこで使われてる？**\n- ゲーム（Roblox、World of Warcraftなど）\n- 組み込みシステム\n- Webサーバー\n\n**たとえば：** 大きなゲームの中に Lua を組み込んで、簡単にカスタマイズできるようにすることが多いです。まるで「接着剤」のような役割をします。"
         },
         {
-          "title": "画面に文字を出すには？",
+          "title": "print で画面に文字を出す",
           "image": "/illustrations/common/monitor.png",
-          "content": "# print（プリント）\n\n画面に文字を出したいときは、`print` 命令を使います。文字は `\" \"`（ダブルクォート）で囲って入力しましょう。"
+          "content": "# print（プリント）＝「印刷する」\n\n画面に文字を出したいときは、`print`（プリント）を使います。\n\n**書き方：**\n1. `print` と書く\n2. カッコ `( )` で囲む\n3. 文字は `\" \"` で囲む\n\n**ポイント：** Lua ではセミコロン `;` は必須ではありません！"
         },
         {
-          "title": "print を使いましょう",
+          "title": "コードを書いてみよう",
           "image": "/illustrations/common/monitor.png",
-          "content": "# メッセージを表示します\n\n画面に文字を出したいときは、`print` と入力して、そのあとに `\" \"` で囲んだ文字を続けます。\n\n**コード例：**\n```lua\nprint(\"Hello, Lua!\")\n```"
+          "content": "# メッセージを表示\n\n**このコードは何をしているの？**\n```lua\nprint(\"Hello, Lua!\")\n```\n\n**解説：**\n1. `print` で画面に出力\n2. `\"Hello, Lua!\"` が表示される\n\n**Luaの特徴：** 他の言語と比べてシンプル！余計な記号がほとんどありません。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -58,12 +58,12 @@ export const luaData = {
         {
           "title": "変数（へんすう）とは？",
           "image": "/illustrations/common/box.png",
-          "content": "# データを保存する仕組み\n\nプログラムの中で数字や文字を使い回すために、名前をつけて保存する場所を **変数（へんすう）** と呼びます。"
+          "content": "# データを入れておく「箱」\n\n**変数**（Variable＝ヴァリアブル）は、数字や文字を入れておく箱のようなものです。\n\n**たとえば：** 名前を書いた箱に物を入れておくと、後で「あの箱の中身は？」と取り出せますよね。\n\nプログラムでも同じように、データに名前をつけて保存できます。"
         },
         {
-          "title": "local をつけましょう",
+          "title": "local で変数を作る",
           "image": "/illustrations/common/box.png",
-          "content": "# 自分だけの変数\n\nLuaでは、`local` という言葉をつけてから「はこ」を作ります。これは「この場所だけで使います」という合図になります。\n\n**コード例：**\n```lua\nlocal count = 5\nprint(count)\n```"
+          "content": "# local（ローカル）＝「この場所だけ」\n\nLuaでは `local`（ローカル＝「地元の」）をつけて変数を作ります。\n\n**このコードは何をしているの？**\n```lua\nlocal count = 5\nprint(count)\n```\n\n**解説：**\n1. `local count = 5` で count という箱に 5 を入れる\n2. `print(count)` で count の中身（5）を表示\n\n**なぜ local をつけるの？**\n- 「この範囲だけで使う」という意味\n- local をつけないと、どこからでも使える（混乱の元になることも）"
         }
       ],
       "initialDisplayMode": "holey",
@@ -99,14 +99,14 @@ export const luaData = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "計算はコンピュータにお任せ",
+          "title": "Luaで計算しよう",
           "image": "/illustrations/common/robot_math.png",
-          "content": "# 高速な計算処理\n\nコンピュータは人間よりもずっと速く計算できます。プログラミングでは、算数と同じ記号を使って計算の指示を出します。"
+          "content": "# コンピュータは計算が得意！\n\nコンピュータは人間よりもずっと速く計算できます。\n\n**たとえば：** 1秒間に何億回もの計算ができます。電卓のように使えますが、もっと複雑なことも自動でできます。\n\nLuaでも、算数と同じ記号を使って計算します。"
         },
         {
           "title": "計算の記号",
           "image": "/illustrations/common/robot_math.png",
-          "content": "# 算数と同じ記号を使います\n\nLuaでも、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\*** : かけ算\n- **/** : わり算"
+          "content": "# 算数と同じ記号！\n\n| 記号 | 意味 | 例 |\n|------|------|----|\n| `+` | たし算 | 5 + 3 = 8 |\n| `-` | ひき算 | 5 - 3 = 2 |\n| `*` | かけ算 | 5 * 3 = 15 |\n| `/` | わり算 | 6 / 3 = 2 |\n\n**このコードは何をしているの？**\n```lua\nlocal a = 5\nlocal b = 3\nprint(a + b)  -- 8が表示される\n```\n\n**解説：** a（5）と b（3）を足して結果（8）を表示します。"
         }
       ],
       "initialDisplayMode": "holey",

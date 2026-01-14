@@ -15,22 +15,22 @@ export const perlData = {
         {
           "title": "Perl（パール）とは？",
           "image": "/illustrations/common/monitor.png",
-          "content": "# テキスト処理の達人\n\nPerlは、文字情報の処理が非常に得意なプログラミング言語です。「ラクダ」がトレードマークで、昔からWebサーバーの管理や、情報の整理に広く使われてきました。"
+          "content": "# テキスト処理の達人！\n\n**Perl**（パール）は、文字や文章を扱うのがとても得意なプログラミング言語です。\n\n**名前の由来：** 「Pearl（真珠）」ではなく、「Practical Extraction and Report Language（実用的なデータ取り出しとレポートの言語）」の略です。\n\n**たとえば：** 大量のファイルの中から特定の言葉を探したり、文章を自動で書き換えたりするのが得意です。まるで文章整理の達人のようです。\n\n**トレードマーク：** ラクダ（キャメル）がシンボルです。"
         },
         {
-          "title": "画面に文字を出すには？",
+          "title": "print で画面に文字を出す",
           "image": "/illustrations/common/monitor.png",
-          "content": "# print（プリント）\n\n画面に文字を出したいときは、`print` 命令を使います。文字は `\" \"`（ダブルクォート）で囲んで入力しましょう。最後に `;`（セミコロン）を忘れないように！"
+          "content": "# print（プリント）＝「印刷する」\n\n画面に文字を出したいときは、`print`（プリント＝印刷する）を使います。\n\n**書き方のルール：**\n1. `print` と書く\n2. 文字は `\" \"` で囲む\n3. 最後に `;`（セミコロン）をつける\n\n**大事なポイント：** Perlでは、命令の終わりに必ず `;` をつけます。日本語の「。」のようなものです。"
         },
         {
-          "title": "print を使いましょう",
+          "title": "\\n は改行の記号",
           "image": "/illustrations/common/monitor.png",
-          "content": "# メッセージを表示します\n\n画面に文字を出したいときは、`print` と入力して、そのあとに `\" \"` で囲んだ文字を入力します。さいごに `\\n` と入力すると、改行（かいぎょう）されます。\n\n```perl\nprint \"表示したい文字\\n\";\n```"
+          "content": "# 改行（かいぎょう）って何？\n\n`\\n` は「改行」を意味する特別な記号です。\n\n**たとえば：** 作文で次の行に移るとき、Enterキーを押しますよね。`\\n` はそれと同じ役割をします。\n\n**このコードは何をしているの？**\n```perl\nprint \"表示したい文字\\n\";\n```\n\n**解説：**\n1. `print` で画面に出力\n2. \"表示したい文字\" が表示される\n3. `\\n` で次の行に移動\n4. `;` で命令終了"
         },
         {
           "title": "やってみましょう！",
           "image": "/illustrations/common/monitor.png",
-          "content": "# 目標\n\n`print` を使って `Hello, World!` と表示させてみましょう。さいごに改行 `\\n` とセミコロン `;` を入力するのがルールです。\n\n**入力するコードのヒント：**\n```perl\nprint \"Hello, World!\\n\";\n```"
+          "content": "# 目標\n\n`print` を使って `Hello, World!` と表示させてみましょう。\n\n**完成形：**\n```perl\nprint \"Hello, World!\\n\";\n```\n\n**チェックポイント：**\n- `print` は小文字で書く\n- 文字は `\"` で囲む\n- 最後に `\\n` と `;` を忘れずに！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -66,14 +66,19 @@ export const perlData = {
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "スカラー変数",
+          "title": "変数（へんすう）とは？",
           "image": "/illustrations/common/pencil.png",
-          "content": "# $で始まる変数\n\nPerlでは、1つの値を入れる変数を「スカラー変数」といい、名前の前に `$` をつけます。\n\n```perl\nmy $name = \"太郎\";\n```\n\n`my` は「新しい変数を作ります」という宣言です。"
+          "content": "# データを入れる箱\n\n**変数**（Variable＝ヴァリアブル）は、データを入れておく箱のようなものです。\n\n**たとえば：** 名前を書いた付箋を貼った箱に、中身を入れておくイメージです。後で「あの箱の中身は何だっけ？」と取り出せます。\n\nPerlには変数が3種類あり、それぞれ頭につける記号が違います。"
+        },
+        {
+          "title": "スカラー変数 $",
+          "image": "/illustrations/common/pencil.png",
+          "content": "# $ で始まる変数\n\n**スカラー変数**（Scalar＝スカラー＝「1つの」）は、1つの値だけを入れる変数です。\n\n名前の前に `$`（ドル記号）をつけます。\n\n**このコードは何をしているの？**\n```perl\nmy $name = \"太郎\";\n```\n\n**解説：**\n- `my` → 「新しい変数を作ります」という宣言\n- `$name` → 変数の名前（$がついてる）\n- `=` → 代入（右の値を左に入れる）\n- `\"太郎\"` → 入れる値"
         },
         {
           "title": "やってみましょう！",
           "image": "/illustrations/common/monitor.png",
-          "content": "# 目標\n\n変数 `$message` に `'Perl'` を入れて、それを表示しましょう。"
+          "content": "# 目標\n\n変数 `$message` に `\"Perl\"` を入れて、それを表示しましょう。\n\n**ポイント：** `print` の中で変数を使うと、中身が表示されます。\n```perl\nprint \"$message\\n\";  # Perlと表示される\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -106,14 +111,19 @@ export const perlData = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "数字の計算",
+          "title": "Perlで計算しよう",
           "image": "/illustrations/3d_advanced/science.png",
-          "content": "# 計算してみよう\n\nPerlでも普通の計算ができます。\n\n```perl\nmy $sum = 10 + 5;\nprint $sum;  # 15が表示される\n```"
+          "content": "# 数字の計算もできる！\n\nPerlでは、普通の算数と同じように計算ができます。\n\n| 記号 | 意味 | 例 |\n|------|------|----|\n| `+` | 足し算 | 5 + 3 = 8 |\n| `-` | 引き算 | 5 - 3 = 2 |\n| `*` | かけ算 | 5 * 3 = 15 |\n| `/` | わり算 | 6 / 3 = 2 |\n\n**たとえば：** 電卓と同じように使えます！"
+        },
+        {
+          "title": "計算結果を変数に入れる",
+          "image": "/illustrations/3d_advanced/science.png",
+          "content": "# 計算して保存\n\n**このコードは何をしているの？**\n```perl\nmy $sum = 10 + 5;\nprint $sum;  # 15が表示される\n```\n\n**解説：**\n1. `10 + 5` を計算 → 15になる\n2. その結果を `$sum` に入れる\n3. `print $sum` で 15 を表示"
         },
         {
           "title": "やってみましょう！",
           "image": "/illustrations/common/monitor.png",
-          "content": "# 目標\n\n`$a` に7、`$b` に3を入れて、足し算の結果を `$sum` に入れて表示しましょう。"
+          "content": "# 目標\n\n`$a` に7、`$b` に3を入れて、足し算の結果を `$sum` に入れて表示しましょう。\n\n**ヒント：** 変数同士の計算もできます！\n```perl\nmy $sum = $a + $b;  # 7 + 3 = 10\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -150,14 +160,19 @@ export const perlData = {
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "文字の連結",
+          "title": "文字の連結（れんけつ）",
           "image": "/illustrations/common/pencil.png",
-          "content": "# ドットで文字をつなげる\n\nPerlでは `.`（ドット）で文字をつなげます。\n\n```perl\nmy $result = \"Hello\" . \"World\";\n# 結果: \"HelloWorld\"\n```"
+          "content": "# 文字と文字をつなげる\n\n**連結**（Concatenation＝コンカテネーション）とは、文字と文字をくっつけることです。\n\n**たとえば：** 「おはよう」と「ございます」をつなげて「おはようございます」にするイメージです。\n\nPerlでは `.`（ドット）を使ってつなげます。"
+        },
+        {
+          "title": ". でつなげる",
+          "image": "/illustrations/common/pencil.png",
+          "content": "# ドットは文字連結の記号\n\n**このコードは何をしているの？**\n```perl\nmy $result = \"Hello\" . \"World\";\n# 結果: \"HelloWorld\"\n```\n\n**解説：**\n1. \"Hello\" と \"World\" を `.` でつなげる\n2. 結果は \"HelloWorld\" になる\n3. それを `$result` に入れる\n\n**注意：** 数字の足し算は `+`、文字のつなげは `.` です。間違えないように！"
         },
         {
           "title": "やってみましょう！",
           "image": "/illustrations/common/monitor.png",
-          "content": "# 目標\n\n`'Hello, '` と `'Perl!'` をつなげて表示しましょう。"
+          "content": "# 目標\n\n`\"Hello, \"` と `\"Perl!\"` をつなげて表示しましょう。\n\n**ヒント：** `.` を使って2つの文字列をつなげます。\n```perl\n\"Hello, \" . \"Perl!\"  # Hello, Perl!\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -190,14 +205,19 @@ export const perlData = {
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "配列とは？",
+          "title": "配列（はいれつ）とは？",
           "image": "/illustrations/common/book.png",
-          "content": "# @で始まる配列\n\n複数の値をまとめて入れるものを「配列」といいます。Perlでは名前の前に `@` をつけます。\n\n```perl\nmy @colors = (\"赤\", \"青\", \"緑\");\n```"
+          "content": "# 複数の値をまとめて入れる箱\n\n**配列**（Array＝アレイ）は、複数の値をまとめて入れられる特別な変数です。\n\n**たとえば：** 引き出しが何段もあるタンスのようなものです。1段目に「りんご」、2段目に「みかん」、3段目に「ぶどう」...と入れられます。\n\nPerlでは配列の名前の前に `@`（アットマーク）をつけます。"
         },
         {
-          "title": "やってみましょう！",
+          "title": "@ で配列を作る",
+          "image": "/illustrations/common/book.png",
+          "content": "# 配列の作り方\n\n**このコードは何をしているの？**\n```perl\nmy @colors = (\"赤\", \"青\", \"緑\");\n```\n\n**解説：**\n- `@colors` → 配列の名前（@がついてる）\n- `( )` → カッコで囲む\n- `\"赤\", \"青\", \"緑\"` → カンマで区切って値を並べる\n\n**Perlの変数記号：**\n- `$` → スカラー（1つの値）\n- `@` → 配列（複数の値）"
+        },
+        {
+          "title": "配列から値を取り出す",
           "image": "/illustrations/common/monitor.png",
-          "content": "# 目標\n\n配列 `@fruits` に `'りんご'`, `'みかん'`, `'ぶどう'` を入れて、最初の要素を表示しましょう。\n\n配列の要素は `$配列名[番号]` で取り出します（最初は0番目）。"
+          "content": "# $配列名[番号] で取り出す\n\n配列から1つの値を取り出すときは `$` を使います（1つの値だから）。\n\n**番号（インデックス）：**\n```\n@fruits = (\"りんご\", \"みかん\", \"ぶどう\")\n           [0]        [1]       [2]\n```\n\n**注意：** 番号は **0から** 始まります！\n\n**目標：** `@fruits` の最初の要素（りんご）を表示しましょう。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -230,14 +250,19 @@ export const perlData = {
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "if文（イフぶん）",
+          "title": "if文（イフぶん）とは？",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# 条件で分ける\n\n「もし〜なら」という条件をつけたいときは `if` を使います。\n\n```perl\nif ($age >= 18) {\n  print \"大人です\\n\";\n}\n```"
+          "content": "# 「もし〜なら」の条件分岐\n\n**if**（イフ＝「もし」）は、条件が正しいときだけ処理を実行します。\n\n**たとえば：** 「もし晴れたら、公園に行く」のような判断をコンピュータにさせることができます。\n\n日常の「もし〜なら〜する」をプログラムで書けるようになります！"
+        },
+        {
+          "title": "if の書き方",
+          "image": "/illustrations/3d_advanced/comprehension.png",
+          "content": "# if (条件) { 処理 }\n\n**このコードは何をしているの？**\n```perl\nif ($age >= 18) {\n  print \"大人です\\n\";\n}\n```\n\n**解説：**\n1. `$age >= 18` が条件（18以上かどうか）\n2. 条件が正しければ `{ }` の中を実行\n3. 正しくなければスキップ\n\n**比較の記号：**\n- `==` 等しい\n- `>=` 以上\n- `<=` 以下\n- `>` より大きい\n- `<` より小さい"
         },
         {
           "title": "やってみましょう！",
           "image": "/illustrations/common/monitor.png",
-          "content": "# 目標\n\n`$score` が100のとき、`'満点！'` と表示しましょう。"
+          "content": "# 目標\n\n`$score` が100のとき、`'満点！'` と表示しましょう。\n\n**ヒント：** 「等しい」は `==` を使います（`=` は代入なので注意！）\n```perl\nif ($score == 100) { ... }\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -274,14 +299,19 @@ export const perlData = {
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "else（エルス）",
+          "title": "else（エルス）とは？",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# 条件に合わないとき\n\n条件に合わないときの処理は `else` で書きます。\n\n```perl\nif ($age >= 18) {\n  print \"大人\\n\";\n} else {\n  print \"子供\\n\";\n}\n```"
+          "content": "# 「そうでなければ」の処理\n\n**else**（エルス＝「それ以外」）は、if の条件に合わなかったときの処理を書きます。\n\n**たとえば：** 「もし晴れたら公園に行く、**そうでなければ**家で本を読む」のように、どちらの場合も対応できます。\n\nこれで「AかBか」の2択の処理が書けます！"
+        },
+        {
+          "title": "if-else の書き方",
+          "image": "/illustrations/3d_advanced/comprehension.png",
+          "content": "# if ... else の構造\n\n**このコードは何をしているの？**\n```perl\nif ($age >= 18) {\n  print \"大人\\n\";\n} else {\n  print \"子供\\n\";\n}\n```\n\n**解説：**\n1. `$age >= 18` をチェック\n2. 条件が正しい → \"大人\" を表示\n3. 条件が間違い → \"子供\" を表示\n\n**ポイント：** 必ずどちらかが実行されます。"
         },
         {
           "title": "やってみましょう！",
           "image": "/illustrations/common/monitor.png",
-          "content": "# 目標\n\n`$num` が10以上なら `'大きい'`、そうでなければ `'小さい'` と表示しましょう。"
+          "content": "# 目標\n\n`$num` が10以上なら `'大きい'`、そうでなければ `'小さい'` と表示しましょう。\n\n**ヒント：** `$num = 5` なので、10以上ではありません。「小さい」が表示されるはずです。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -322,14 +352,19 @@ export const perlData = {
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "foreach（フォーイーチ）",
+          "title": "foreach（フォーイーチ）とは？",
           "image": "/illustrations/common/book.png",
-          "content": "# 配列を繰り返し処理\n\n`foreach` を使うと、配列の要素を1つずつ取り出して処理できます。\n\n```perl\nforeach my $item (@list) {\n  print \"$item\\n\";\n}\n```"
+          "content": "# 配列を1つずつ処理する\n\n**foreach**（フォーイーチ＝「それぞれについて」）は、配列の要素を1つずつ取り出して処理します。\n\n**たとえば：** クラスの出席を取るとき、「田中さん」「佐藤さん」「鈴木さん」...と順番に名前を呼ぶようなイメージです。\n\n同じ処理を繰り返したいときに便利です。"
+        },
+        {
+          "title": "foreach の書き方",
+          "image": "/illustrations/common/book.png",
+          "content": "# foreach my $変数 (@配列) { 処理 }\n\n**このコードは何をしているの？**\n```perl\nforeach my $item (@list) {\n  print \"$item\\n\";\n}\n```\n\n**解説：**\n1. `@list` から要素を1つ取り出す\n2. それを `$item` に入れる\n3. `{ }` の中の処理を実行\n4. 次の要素に進む\n5. 全部終わるまで繰り返す\n\n**ポイント：** 配列は `@` で始まりますが、1つの要素は `$` で受け取ります。"
         },
         {
           "title": "やってみましょう！",
           "image": "/illustrations/common/monitor.png",
-          "content": "# 目標\n\n配列 `@animals` の動物を順番に表示しましょう。"
+          "content": "# 目標\n\n配列 `@animals` の動物を順番に表示しましょう。\n\n**期待される結果：**\n```\n犬\n猫\n鳥\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -368,12 +403,17 @@ export const perlData = {
         {
           "title": "ハッシュとは？",
           "image": "/illustrations/common/book.png",
-          "content": "# %で始まるハッシュ\n\nハッシュは、名前（キー）と値のペアを保存できます。名前の前に `%` をつけます。\n\n```perl\nmy %person = (\n  \"name\" => \"太郎\",\n  \"age\" => 10\n);\n```"
+          "content": "# 名前と値のペアで保存\n\n**ハッシュ**（Hash＝ハッシュ）は、「名前（キー）」と「値」のペアでデータを保存できます。\n\n**たとえば：** 連絡帳のようなものです。「田中さん」→「090-xxxx」のように、名前をキーにして情報を探せます。\n\nPerlではハッシュの名前の前に `%`（パーセント）をつけます。\n\n**Perlの3つの変数記号：**\n- `$` → スカラー（1つの値）\n- `@` → 配列（複数の値、番号で管理）\n- `%` → ハッシュ（複数の値、名前で管理）"
+        },
+        {
+          "title": "% でハッシュを作る",
+          "image": "/illustrations/common/book.png",
+          "content": "# ハッシュの作り方\n\n**このコードは何をしているの？**\n```perl\nmy %person = (\n  \"name\" => \"太郎\",\n  \"age\" => 10\n);\n```\n\n**解説：**\n- `%person` → ハッシュの名前\n- `\"name\" => \"太郎\"` → nameキーに\"太郎\"を保存\n- `=>` は「矢印」と呼び、キーと値をつなげます\n\n**値の取り出し方：**\n```perl\n$person{name}  # \"太郎\"\n$person{age}   # 10\n```"
         },
         {
           "title": "やってみましょう！",
           "image": "/illustrations/common/monitor.png",
-          "content": "# 目標\n\nハッシュ `%fruit` に `color => '赤'` を入れて、colorの値を表示しましょう。\n\nハッシュの値は `$ハッシュ名{キー}` で取り出します。"
+          "content": "# 目標\n\nハッシュ `%fruit` に `color => '赤'` を入れて、colorの値を表示しましょう。\n\n**ヒント：** 1つの値を取り出すときは `$` を使います。\n```perl\n$fruit{color}  # \"赤\"\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -406,14 +446,19 @@ export const perlData = {
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "サブルーチン",
+          "title": "サブルーチンとは？",
           "image": "/illustrations/common/monitor.png",
-          "content": "# 処理をまとめる\n\n`sub` を使うと、処理をまとめて名前をつけられます。これを「サブルーチン」といいます。\n\n```perl\nsub greet {\n  print \"こんにちは！\\n\";\n}\n\ngreet();  # 呼び出し\n```"
+          "content": "# 処理をまとめて名前をつける\n\n**サブルーチン**（Subroutine＝サブルーチン）は、処理をまとめて名前をつけたものです。他の言語では「関数」と呼ばれることもあります。\n\n**たとえば：** 料理のレシピのようなものです。「カレーの作り方」というレシピを書いておけば、「カレーを作って！」と言うだけで同じ料理ができます。\n\n同じ処理を何度も書かなくて済むようになります！"
+        },
+        {
+          "title": "sub でサブルーチンを作る",
+          "image": "/illustrations/common/monitor.png",
+          "content": "# sub 名前 { 処理 }\n\n**このコードは何をしているの？**\n```perl\nsub greet {\n  print \"こんにちは！\\n\";\n}\n\ngreet();  # 呼び出し\n```\n\n**解説：**\n1. `sub greet { ... }` でサブルーチンを定義（作る）\n2. この時点ではまだ実行されない\n3. `greet();` で呼び出すと実行される\n\n**ポイント：** `sub` は subroutine の略です。"
         },
         {
           "title": "やってみましょう！",
           "image": "/illustrations/common/monitor.png",
-          "content": "# 目標\n\n`'Welcome!'` と表示するサブルーチン `welcome` を作って呼び出しましょう。"
+          "content": "# 目標\n\n`'Welcome!'` と表示するサブルーチン `welcome` を作って呼び出しましょう。\n\n**手順：**\n1. `sub welcome { ... }` で定義\n2. `welcome();` で呼び出し"
         }
       ],
       "initialDisplayMode": "holey",

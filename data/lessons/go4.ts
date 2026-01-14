@@ -13,14 +13,14 @@ export const go4Data = {
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "Mutex とは？",
+          "title": "Mutex（ミューテックス）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 排他的ロック\n\n**sync.Mutex** は、共有データへの排他的アクセスを保証します。\n\n```go\nvar mu sync.Mutex\nvar count int\n\nmu.Lock()\ncount++\nmu.Unlock()\n```"
+          "content": "# 「今は私だけ！」と宣言する仕組み\n\n**Mutex** は、複数のゴルーチンが同じデータを同時に変更しないようにする「鍵」です。\n\n**たとえるなら：**\n- トイレの個室のカギ\n- 入る前に「Lock（ロック）」→ 使用中\n- 出るときに「Unlock（アンロック）」→ 次の人どうぞ\n\n**コード例：**\n```go\nvar mu sync.Mutex  // カギを用意\nvar count int\n\nmu.Lock()    // カギを閉める（他の人は待つ）\ncount++      // 安全にデータを変更\nmu.Unlock()  // カギを開ける（次の人OK）\n```"
         },
         {
-          "title": "defer と組み合わせ",
+          "title": "defer と組み合わせると安全",
           "image": "/illustrations/3d_advanced/concurrency.png",
-          "content": "# 安全なアンロック\n\n```go\nmu.Lock()\ndefer mu.Unlock()\n// 処理...\n```"
+          "content": "# ロック忘れを防ぐ\n\n`defer` と組み合わせると、関数を抜けるときに必ず Unlock されます。\n\n**コード例：**\n```go\nmu.Lock()\ndefer mu.Unlock()  // 関数を抜けるとき必ずUnlock\n\n// ここで何か処理...\n// エラーが起きても、returnしても、Unlockされる！\n```\n\n**なぜ大事？**\n- Unlock を忘れると他のゴルーチンが永遠に待ち続ける\n- defer を使えば忘れる心配なし！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -81,14 +81,14 @@ export const go4Data = {
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "WaitGroup とは？",
+          "title": "WaitGroup（ウェイトグループ）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# ゴルーチンの同期\n\n**sync.WaitGroup** で複数のゴルーチンの完了を待てます。\n\n```go\nvar wg sync.WaitGroup\nwg.Add(1)\ngo func() {\n    defer wg.Done()\n    // 処理\n}()\nwg.Wait()\n```"
+          "content": "# 「みんな終わるまで待つ」仕組み\n\n**WaitGroup** は、複数のゴルーチンが全部終わるまで待つための仕組みです。\n\n**たとえるなら：**\n- 遠足で全員がバスに戻るまで出発しない\n- 「あと何人？」をカウントする先生役\n\n**コード例：**\n```go\nvar wg sync.WaitGroup\nwg.Add(1)  // 「1人出発するよ」\n\ngo func() {\n    defer wg.Done()  // 「1人戻ったよ」\n    // 処理...\n}()\n\nwg.Wait()  // 全員戻るまで待つ\n```"
         },
         {
-          "title": "メソッド",
+          "title": "3つのメソッド",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# 3つのメソッド\n\n```go\nwg.Add(n)  // カウンタを増やす\nwg.Done()  // カウンタを減らす\nwg.Wait()  // カウンタが0になるまで待つ\n```"
+          "content": "# Add, Done, Wait を覚えよう\n\n**3つのメソッドの役割：**\n\n- `Add(n)` → 「n人出発するよ」カウントを増やす\n- `Done()` → 「1人終わったよ」カウントを1減らす\n- `Wait()` → カウントが0になるまで待つ\n\n**使い方の流れ：**\n```go\nwg.Add(3)  // 3つのゴルーチンを待つ\n\ngo func() { defer wg.Done(); /* 処理1 */ }()\ngo func() { defer wg.Done(); /* 処理2 */ }()\ngo func() { defer wg.Done(); /* 処理3 */ }()\n\nwg.Wait()  // 3つ全部終わるまでここで止まる\nfmt.Println(\"全員完了！\")\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -153,14 +153,14 @@ export const go4Data = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "context とは？",
+          "title": "context（コンテキスト）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# リクエストスコープの値\n\n**context** パッケージは、リクエストのキャンセルやタイムアウトを管理します。\n\n```go\nctx := context.Background()\n```"
+          "content": "# 処理を「キャンセル」したり「制限時間」をつける仕組み\n\n**context** は、処理を途中で止めたり、時間制限をつけたりするための仕組みです。\n\n**たとえるなら：**\n- レストランで注文したけど「やっぱりキャンセル」\n- 「5分待っても料理が来なかったら帰る」\n\n**なぜ必要？**\n- ユーザーがページを閉じたら、データ取得も止めたい\n- 時間がかかりすぎたら諦めたい\n\n**基本のコンテキスト：**\n```go\nctx := context.Background()  // 一番基本のコンテキスト\n```"
         },
         {
-          "title": "派生コンテキスト",
+          "title": "色々なコンテキスト",
           "image": "/illustrations/3d/gear.png",
-          "content": "# WithCancel, WithTimeout\n\n```go\nctx, cancel := context.WithCancel(context.Background())\ndefer cancel()\n\nctx, cancel := context.WithTimeout(ctx, 5*time.Second)\n```"
+          "content": "# キャンセルや時間制限をつける\n\n基本のコンテキストから、機能を追加したコンテキストを作れます。\n\n**WithCancel：キャンセルできる**\n```go\nctx, cancel := context.WithCancel(context.Background())\ndefer cancel()  // 関数を抜けるときキャンセル\n```\n\n**WithTimeout：時間制限をつける**\n```go\n// 5秒で自動的にキャンセル\nctx, cancel := context.WithTimeout(ctx, 5*time.Second)\ndefer cancel()\n```\n\n**ポイント：**\n`cancel()` を呼ぶと、そのコンテキストを使っている処理に「もう止めて」と伝えられます。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -323,14 +323,14 @@ export const go4Data = {
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "Marshal とは？",
+          "title": "json.Marshal（マーシャル）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# Go → JSON\n\n**json.Marshal** で Go の値を JSON に変換します。\n\n```go\ntype User struct {\n    Name string `json:\"name\"`\n    Age  int    `json:\"age\"`\n}\n\ndata, _ := json.Marshal(user)\n```"
+          "content": "# Goのデータ → JSON に変換\n\n**JSON** は、データをやり取りするときによく使われる形式です。`json.Marshal` で Go のデータを JSON に変換できます。\n\n**たとえるなら：**\n- Go のデータ = 日本語のメモ\n- JSON = 世界共通語のメモ\n- Marshal = 翻訳する\n\n**コード例：**\n```go\ntype User struct {\n    Name string `json:\"name\"`\n    Age  int    `json:\"age\"`\n}\n\nuser := User{Name: \"Taro\", Age: 20}\ndata, _ := json.Marshal(user)\n// → {\"name\":\"Taro\",\"age\":20}\n```"
         },
         {
-          "title": "タグ",
+          "title": "タグでJSONの名前を指定",
           "image": "/illustrations/3d/gear.png",
-          "content": "# JSON キー名を指定\n\n```go\ntype Person struct {\n    Name string `json:\"name\"`\n    Age  int    `json:\"age,omitempty\"`\n}\n```"
+          "content": "# バッククォートでタグをつける\n\n構造体のフィールドに「タグ」をつけると、JSONでの名前を指定できます。\n\n**コード例：**\n```go\ntype Person struct {\n    Name string `json:\"name\"`      // JSONでは\"name\"\n    Age  int    `json:\"age\"`       // JSONでは\"age\"\n}\n```\n\n**タグの書き方：**\n- フィールド名のあとに `` `json:\"名前\"` `` と書く\n- バッククォート（`）で囲む（シングルクォートではない）\n\n**なぜ使う？**\nGoでは「Name」だけど、JSONでは「name」（小文字）にしたい、など。"
         }
       ],
       "initialDisplayMode": "holey",

@@ -14,13 +14,13 @@ export const cpp2Data = {
       "tutorialSlides": [
         {
           "title": "クラスとは？",
-          "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# データと機能の設計図\n\n**クラス** は、データ（変数）と機能（関数）をひとまとめにした「設計図」です。この設計図から実際のモノ（オブジェクト）を作ります。"
+          "image": "/illustrations/3d_advanced/class_blueprint.png",
+          "content": "# データと機能の設計図（せっけいず）\n\n**クラス**は、データ（変数）と機能（関数）をひとまとめにした「設計図」です。\n\n**身近な例え：**\n「犬」の設計図を考えてみましょう。\n- データ: 名前、年齢、毛の色\n- 機能: 吠（ほ）える、走る、食べる\n\nこの設計図（クラス）から、「ポチ」「タロウ」「ハチ」という実際の犬（オブジェクト）を作れます。\n\n設計図は1つでも、そこから何匹でも犬を作れるのがポイントです！"
         },
         {
           "title": "クラスの定義",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# class キーワード\n\n`class` を使ってクラスを定義します。`public:` の下に公開する部分を書きます。\n\n**コード例：**\n```cpp\nclass Dog {\npublic:\n    std::string name;\n};\n\nDog d;\nd.name = \"Pochi\";\n```"
+          "content": "# class キーワード\n\n`class`（クラス）を使ってクラスを定義（ていぎ）します。\n`public:`（パブリック）の下に、外から使える部分を書きます。\n\n**実際のコードを見てみましょう：**\n```cpp\nclass Dog {       // Dogという設計図を作る\npublic:           // ここから下は外から使える\n    std::string name;  // 名前を入れる場所\n};\n\n// 設計図から実際の犬を作る\nDog d;            // dという犬を作成\nd.name = \"Pochi\"; // 名前をつける\n```\n\n**用語解説：**\n- `public`: 公開（こうかい）という意味。外からアクセスできる\n- `.`（ドット）: オブジェクトの中身にアクセスする記号"
         }
       ],
       "initialDisplayMode": "holey",
@@ -73,12 +73,12 @@ export const cpp2Data = {
         {
           "title": "コンストラクタとは？",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# 初期化の儀式\n\n**コンストラクタ** は、オブジェクトを作るときに自動的に呼ばれる特別な関数です。初期値を設定するのに使います。"
+          "content": "# 初期化（しょきか）の儀式（ぎしき）\n\n**コンストラクタ**は、オブジェクトを作るときに自動的に呼ばれる特別な関数です。\n\n**身近な例え：**\n新しいスマホを買ったとき、最初に「言語設定」「名前登録」などの初期設定をしますよね。コンストラクタは、オブジェクトが生まれたときに自動で行われる「初期設定」のようなものです。\n\nオブジェクトの初期値（さいしょの値）を設定するのに使います。"
         },
         {
           "title": "コンストラクタの書き方",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# クラス名と同じ名前\n\nコンストラクタはクラス名と同じ名前で、戻り値の型を書きません。\n\n**コード例：**\n```cpp\nclass Box {\npublic:\n    int size;\n    Box(int s) {\n        size = s;\n    }\n};\nBox b(10); // size が 10 で初期化\n```"
+          "content": "# クラス名と同じ名前\n\nコンストラクタには特別なルールがあります：\n1. **クラス名と同じ名前**にする\n2. **戻り値の型を書かない**（voidも書かない）\n\n**実際のコードを見てみましょう：**\n```cpp\nclass Box {\npublic:\n    int size;        // サイズを入れる場所\n    Box(int s) {     // コンストラクタ（クラス名と同じ）\n        size = s;    // 受け取った値で初期化\n    }\n};\n\nBox b(10);  // Boxを作ると同時にsize=10で初期化！\n```\n\n**ポイント：**\n`Box b(10)` と書くと、コンストラクタが自動で呼ばれ、size に 10 が入ります。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -247,14 +247,14 @@ export const cpp2Data = {
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "継承とは？",
+          "title": "継承（けいしょう）とは？",
           "image": "/illustrations/3d_advanced/inheritance.png",
-          "content": "# クラスを拡張する\n\n**継承** を使うと、既存のクラス（親クラス）の機能を引き継いだ新しいクラス（子クラス）を作れます。コードの再利用に便利です。"
+          "content": "# クラスを拡張（かくちょう）する\n\n**継承（けいしょう）** を使うと、既存（きそん）のクラス（親クラス）の機能を引き継いだ新しいクラス（子クラス）を作れます。\n\n**身近な例え：**\n「動物」という親クラスがあるとします。\n- 動物は「食べる」「寝る」ができる\n\n「犬」は動物の子クラスです。\n- 犬は動物なので「食べる」「寝る」ができる（親から継承）\n- さらに「吠える」という独自の機能を追加できる\n\n一から作り直さなくても、親の機能を受け継げるので、コードの再利用（さいりよう）に便利です！"
         },
         {
           "title": "継承の書き方",
           "image": "/illustrations/3d_advanced/inheritance.png",
-          "content": "# : public 親クラス\n\n子クラス名の後に `: public 親クラス名` と書きます。\n\n**コード例：**\n```cpp\nclass Animal {\npublic:\n    void eat() { std::cout << \"eating\" << std::endl; }\n};\nclass Dog : public Animal {\n};\n// Dog は eat() を使える\n```"
+          "content": "# : public 親クラス\n\n子クラス名の後に `: public 親クラス名` と書きます。\n\n**実際のコードを見てみましょう：**\n```cpp\n// 親クラス（動物）\nclass Animal {\npublic:\n    void eat() { std::cout << \"eating\" << std::endl; }\n};\n\n// 子クラス（犬）- Animalを継承\nclass Dog : public Animal {\n    // 何も書かなくても eat() が使える！\n};\n\nDog d;\nd.eat();  // \"eating\" と表示される（親から継承した機能）\n```\n\n**ポイント：**\n子クラスは、親クラスの `public` な機能を自動的に使えるようになります。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -381,12 +381,12 @@ export const cpp2Data = {
         {
           "title": "テンプレートとは？",
           "image": "/illustrations/3d_advanced/generics_glass.png",
-          "content": "# 汎用的なコード\n\n**テンプレート** を使うと、どんな型でも使える汎用的な関数やクラスが作れます。コードの再利用性が高まります。"
+          "content": "# 汎用的（はんようてき）なコード\n\n**テンプレート**を使うと、どんな型（かた）でも使える汎用的な関数やクラスが作れます。\n\n**身近な例え：**\n「2つの数を足す」関数を作りたいとき、整数用、小数用...と別々に作るのは大変ですよね。\n\nテンプレートを使えば、**型を後から決められる**「万能な設計図」が作れます。\n\n1つのコードで、int でも double でも使える！これがテンプレートの力です。"
         },
         {
           "title": "関数テンプレート",
           "image": "/illustrations/3d_advanced/generics_glass.png",
-          "content": "# template<typename T>\n\n`template<typename T>` と書くと、T が任意の型を表します。\n\n**コード例：**\n```cpp\ntemplate<typename T>\nT add(T a, T b) {\n    return a + b;\n}\nadd(1, 2);     // int\nadd(1.5, 2.5); // double\n```"
+          "content": "# template<typename T>\n\n`template<typename T>`（テンプレート・タイプネーム・ティー）と書くと、`T` が「後から決まる型」を表します。\n\n**実際のコードを見てみましょう：**\n```cpp\n// T はどんな型にもなれる\ntemplate<typename T>\nT add(T a, T b) {\n    return a + b;\n}\n\n// 使うとき、型が自動で決まる\nadd(1, 2);       // T = int として動く\nadd(1.5, 2.5);   // T = double として動く\n```\n\n**ポイント：**\n- `T` は「型のための変数」のようなもの\n- 使われるときに、自動で適切な型に置き換わります\n- 同じコードで、いろいろな型に対応できます！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -435,12 +435,12 @@ export const cpp2Data = {
         {
           "title": "ラムダ式とは？",
           "image": "/illustrations/3d_advanced/lambda_spark.png",
-          "content": "# 無名関数\n\n**ラムダ式** は、名前をつけずにその場で関数を作る方法です。短い処理を簡潔に書けます。"
+          "content": "# 無名関数（むめいかんすう）\n\n**ラムダ式（しき）** は、名前をつけずにその場で関数を作る方法です。\n\n**身近な例え：**\n普通の関数は「料理のレシピに名前をつけて保存」するようなものです。\nラムダ式は「その場でちょっと作るメモ書きレシピ」のようなもの。\n\n**いつ使うの？**\n- 一度しか使わない短い処理\n- 関数に渡す小さな処理\n\n短い処理を簡潔（かんけつ）に書けるのが魅力です！"
         },
         {
           "title": "ラムダ式の書き方",
           "image": "/illustrations/3d_advanced/lambda_spark.png",
-          "content": "# [ ] ( ) { }\n\n`[]` はキャプチャ、`()` は引数、`{}` は処理本体です。\n\n**コード例：**\n```cpp\nauto add = [](int a, int b) {\n    return a + b;\n};\nstd::cout << add(2, 3) << std::endl; // 5\n```"
+          "content": "# [ ] ( ) { }\n\nラムダ式は3つの部分でできています：\n- `[]`（キャプチャ）: 外の変数を使うかどうか\n- `()`（引数）: 関数に渡すデータ\n- `{}`（本体）: 実際の処理\n\n**実際のコードを見てみましょう：**\n```cpp\n// ラムダ式を変数 add に入れる\nauto add = [](int a, int b) {\n    return a + b;\n};\n\n// 普通の関数のように使える\nstd::cout << add(2, 3) << std::endl; // 5\n```\n\n**ポイント：**\n- `auto` で受け取る（型は自動で決まる）\n- `[]` から始まるのがラムダ式の目印"
         }
       ],
       "initialDisplayMode": "holey",
@@ -485,12 +485,12 @@ export const cpp2Data = {
         {
           "title": "スマートポインタとは？",
           "image": "/illustrations/3d_advanced/pointer_arrow.png",
-          "content": "# 安全なメモリ管理\n\n**スマートポインタ** は、使い終わったら自動的にメモリを解放してくれる便利なポインタです。メモリリークを防ぎます。"
+          "content": "# 安全なメモリ管理（かんり）\n\n**スマートポインタ**は、使い終わったら自動的にメモリを解放（かいほう）してくれる便利なポインタです。\n\n**身近な例え：**\n普通のポインタは「借りた本を自分で返さないといけない」状態です。返し忘れると大変！\n\nスマートポインタは「自動返却システム」がついた本のようなもの。使い終わったら勝手に返してくれます。\n\n**メモリリーク**（メモリの解放忘れ）を防ぐことができます。"
         },
         {
           "title": "unique_ptr の使い方",
           "image": "/illustrations/3d/smart_pointer.png",
-          "content": "# std::make_unique\n\n`std::make_unique<型>()` でスマートポインタを作ります。スコープを抜けると自動で解放されます。\n\n**コード例：**\n```cpp\n#include <memory>\nauto p = std::make_unique<int>(42);\nstd::cout << *p << std::endl; // 42\n// 自動で解放される\n```"
+          "content": "# std::make_unique\n\n`std::make_unique<型>()` でスマートポインタを作ります。\n\n**実際のコードを見てみましょう：**\n```cpp\n#include <memory>  // スマートポインタを使う準備\n\n// 整数を入れるスマートポインタを作る\nauto p = std::make_unique<int>(42);\n\n// 中身を見る（*をつける）\nstd::cout << *p << std::endl; // 42\n\n// ここでブロックを抜けると、自動でメモリが解放される！\n```\n\n**用語解説：**\n- `unique_ptr`: 1つのポインタだけが所有する（独占）\n- **スコープを抜ける**: `{ }` の外に出ること\n- 自動解放なので、`delete` を書く必要がない！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -531,14 +531,14 @@ export const cpp2Data = {
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "例外処理とは？",
+          "title": "例外処理（れいがいしょり）とは？",
           "image": "/illustrations/3d_advanced/safety_net.png",
-          "content": "# エラーに備える\n\n**例外処理** を使うと、プログラム実行中のエラーに対処できます。エラーが起きてもプログラムがクラッシュしません。"
+          "content": "# エラーに備（そな）える\n\n**例外処理（れいがいしょり）** を使うと、プログラム実行中のエラーに対処（たいしょ）できます。\n\n**身近な例え：**\nサーカスの空中ブランコには、下に「安全ネット」がありますよね。万が一落ちても大丈夫なように。\n\n例外処理も同じです。プログラムで「万が一のエラー」が起きても、クラッシュせずに対処できる「安全ネット」を用意します。\n\nエラーが起きてもプログラムが止まらず、適切に対応できます！"
         },
         {
           "title": "try-catch の使い方",
           "image": "/illustrations/3d_advanced/safety_net.png",
-          "content": "# throw で例外を投げる\n\n`try` ブロックで処理を実行し、エラーは `catch` で捕まえます。\n\n**コード例：**\n```cpp\ntry {\n    throw \"error!\";\n} catch (const char* e) {\n    std::cout << e << std::endl;\n}\n```"
+          "content": "# throw で例外を投げる\n\n**基本の形：**\n- `try { }`: エラーが起きるかもしれない処理\n- `throw`: エラーを「投げる」\n- `catch { }`: 投げられたエラーを「捕まえる」\n\n**実際のコードを見てみましょう：**\n```cpp\ntry {\n    // エラーを投げる\n    throw \"error!\";\n} catch (const char* e) {\n    // 投げられたエラーを捕まえて処理\n    std::cout << e << std::endl;\n}\n```\n=> \"error!\" と表示されます\n\n**ポイント：**\n- `throw` でエラーを投げると、すぐに `catch` に移動します\n- `catch` でエラーに対処した後、プログラムは続行できます"
         }
       ],
       "initialDisplayMode": "holey",

@@ -15,12 +15,12 @@ export const javaData4 = {
         {
           "title": "ジェネリクスとは？",
           "image": "/illustrations/3d_advanced/generics_glass.png",
-          "content": "# 型を後から指定\n\n**ジェネリクス** は、クラスやメソッドの型を後から指定できる機能です。\n\n```java\n// 型パラメータ T を使用\nclass Box<T> {\n    private T value;\n    public void set(T v) { value = v; }\n    public T get() { return value; }\n}\n```"
+          "content": "# 型を後から指定\n\n**ジェネリクス** は、クラスやメソッドの「型」を後から指定できる機能です。\n\n**たとえ話：** 「何でも入る箱」を作っておいて、使うときに「この箱は文字列専用」「この箱は数字専用」と決められます。\n\n```java\n// T は「型の入れ物」（後で決める）\nclass Box<T> {\n    private T value;  // T型の値を保存\n    public void set(T v) { value = v; }\n    public T get() { return value; }\n}\n```\n\n`<T>` は「型パラメータ」と呼ばれ、後で String や Integer に置き換えます"
         },
         {
           "title": "使い方",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 型を指定して使う\n\n```java\nBox<String> box = new Box<>();\nbox.set(\"Hello\");\nString s = box.get(); // キャスト不要\n\nBox<Integer> numBox = new Box<>();\nnumBox.set(42);\n```"
+          "content": "# 型を指定して使う\n\n使うときに `<>` の中に具体的な型を書きます。\n\n**文字列用の箱**\n```java\nBox<String> box = new Box<>();  // String専用の箱\nbox.set(\"Hello\");  // 文字列を入れる\nString s = box.get();  // 文字列で取り出せる（キャスト不要！）\n```\n\n**数字用の箱**\n```java\nBox<Integer> numBox = new Box<>();  // Integer専用の箱\nnumBox.set(42);  // 数字を入れる\n```\n\n**メリット：** 間違った型を入れようとするとエラーで教えてくれます"
         }
       ],
       "initialDisplayMode": "holey",
@@ -80,14 +80,14 @@ export const javaData4 = {
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "extends で制約",
+          "title": "extends で制約（せいやく）",
           "image": "/illustrations/3d_advanced/inheritance.png",
-          "content": "# 特定の型のサブタイプに限定\n\n**extends** を使うと、型パラメータに制約を設けられます。\n\n```java\n// Number のサブクラスのみ\nclass NumBox<T extends Number> {\n    private T value;\n    public double doubleValue() {\n        return value.doubleValue();\n    }\n}\n```"
+          "content": "# 特定の型のサブタイプに限定\n\n**extends** を使うと、「このジェネリクスには〇〇の仲間だけ入れられます」という制限をつけられます。\n\n**たとえ話：** 「動物園の檻」には動物しか入れられないように、「Number（数字）の箱」には数字系の型しか入れられません。\n\n```java\n// T は Number か、その子クラスだけOK\nclass NumBox<T extends Number> {\n    private T value;\n    public double doubleValue() {\n        return value.doubleValue();  // Numberのメソッドが使える！\n    }\n}\n```"
         },
         {
           "title": "メリット",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 型固有のメソッドが使える\n\n```java\nNumBox<Integer> box = new NumBox<>();\n// OK: Integer は Number のサブクラス\n\nNumBox<String> box2; \n// コンパイルエラー！\n```"
+          "content": "# 型固有（かたこゆう）のメソッドが使える\n\n制限をつけると、その型のメソッドが使えるようになります。\n\n**OKな例**\n```java\nNumBox<Integer> box = new NumBox<>();\n// OK: Integer は Number の仲間\n```\n\n**NGな例**\n```java\nNumBox<String> box2; \n// コンパイルエラー！Stringは数字じゃない\n```\n\n**メリット：**\n- 間違った型を入れるのを防げる\n- Number系のメソッド（doubleValue など）が使える"
         }
       ],
       "initialDisplayMode": "holey",
@@ -140,14 +140,14 @@ export const javaData4 = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "? ワイルドカード",
+          "title": "? ワイルドカードとは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 不明な型を表す\n\n**?** は任意の型を表すワイルドカードです。\n\n```java\n// どんな型のリストも受け取れる\npublic void printList(List<?> list) {\n    for (Object o : list) {\n        System.out.println(o);\n    }\n}\n```"
+          "content": "# 不明な型を表す\n\n**?**（クエスチョンマーク）は「どんな型でもOK」を表す特別な記号です。これを **ワイルドカード** と呼びます。\n\n**たとえ話：** トランプのジョーカーのように、どんなカードの代わりにもなれます。\n\n```java\n// どんな型のリストも受け取れるメソッド\npublic void printList(List<?> list) {\n    for (Object o : list) {\n        System.out.println(o);\n    }\n}\n```\n\nこのメソッドは `List<String>` でも `List<Integer>` でも受け取れます！"
         },
         {
           "title": "境界付きワイルドカード",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 上限・下限の指定\n\n```java\n// Number以下の型 (上限)\nList<? extends Number>\n\n// Integer以上の型 (下限)\nList<? super Integer>\n```"
+          "content": "# 上限・下限の指定\n\nワイルドカードにも制限をつけられます。\n\n**上限（じょうげん）を指定：extends**\n```java\nList<? extends Number>  // Numberか、その子クラス\n// Integer, Double などはOK、StringはNG\n```\n\n**下限（かげん）を指定：super**\n```java\nList<? super Integer>  // Integerか、その親クラス\n// Integer, Number, Object などがOK\n```\n\n**覚え方：**\n- extends → 「〜以下」（Numberから下）\n- super → 「〜以上」（Integerから上）"
         }
       ],
       "initialDisplayMode": "holey",
@@ -203,14 +203,14 @@ export const javaData4 = {
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "Map とは？",
+          "title": "Map（マップ）とは？",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# キーと値の対応\n\n**Map** は、キーと値のペアを格納するデータ構造です。\n\n```java\nMap<String, Integer> ages = new HashMap<>();\nages.put(\"Alice\", 25);\nages.put(\"Bob\", 30);\n\nint age = ages.get(\"Alice\"); // 25\n```"
+          "content": "# キーと値の対応（たいおう）\n\n**Map**（マップ＝対応表）は、「キー（名前）」と「値（データ）」のペアを保存できるデータ構造です。\n\n**たとえ話：** 電話帳のようなものです。「名前」で検索すると「電話番号」が分かりますよね。それがMapです。\n\n```java\nMap<String, Integer> ages = new HashMap<>();  // 電話帳を作る\nages.put(\"Alice\", 25);  // Aliceの年齢は25\nages.put(\"Bob\", 30);    // Bobの年齢は30\n\nint age = ages.get(\"Alice\"); // Aliceで検索→25が返る\n```"
         },
         {
           "title": "便利なメソッド",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# よく使うメソッド\n\n```java\nages.containsKey(\"Alice\"); // true\nages.getOrDefault(\"Carol\", 0); // 0\nages.keySet(); // [Alice, Bob]\nages.values(); // [25, 30]\n```"
+          "content": "# よく使うメソッド\n\nMapにはたくさん便利なメソッドがあります。\n\n**キーがあるかチェック**\n```java\nages.containsKey(\"Alice\"); // true（Aliceはいる）\n```\n\n**なければデフォルト値を使う**\n```java\nages.getOrDefault(\"Carol\", 0); // Carolがいないので0を返す\n```\n\n**全部のキー・値を取得**\n```java\nages.keySet(); // [Alice, Bob]（全ての名前）\nages.values(); // [25, 30]（全ての年齢）\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -261,14 +261,14 @@ export const javaData4 = {
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "entrySet",
+          "title": "entrySet（エントリーセット）",
           "image": "/illustrations/3d_advanced/safety_net.png",
-          "content": "# キーと値のセットを取得\n\n**entrySet** でキーと値のペアを取得できます。\n\n```java\nfor (Map.Entry<String, Integer> e : map.entrySet()) {\n    System.out.println(e.getKey() + \": \" + e.getValue());\n}\n```"
+          "content": "# キーと値のセットを取得\n\n**entrySet** を使うと、Mapの全てのペア（キーと値のセット）を順番に取り出せます。\n\n**たとえ話：** 電話帳の全ページをめくりながら、「名前と電話番号」を一組ずつ読み上げるイメージです。\n\n```java\nfor (Map.Entry<String, Integer> e : map.entrySet()) {\n    // getKey()でキー、getValue()で値を取得\n    System.out.println(e.getKey() + \": \" + e.getValue());\n}\n// Alice: 25\n// Bob: 30\n```"
         },
         {
           "title": "forEach メソッド",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# Java 8以降の書き方\n\n```java\nmap.forEach((key, value) -> {\n    System.out.println(key + \": \" + value);\n});\n```"
+          "content": "# Java 8以降の書き方\n\nもっと短く書けるforEachメソッドもあります。ラムダ式と組み合わせて使います。\n\n```java\nmap.forEach((key, value) -> {\n    System.out.println(key + \": \" + value);\n});\n```\n\n**何をしているの？**\n- 「keyとvalueを受け取って、それを表示する」という処理を全ペアに対して実行します\n\n**どちらを使う？**\n- entrySet：古いJavaでも動く\n- forEach：短くて読みやすい（Java 8以降）"
         }
       ],
       "initialDisplayMode": "holey",
@@ -323,14 +323,14 @@ export const javaData4 = {
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "Comparator とは？",
+          "title": "Comparator（コンパレーター）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 比較のルールを定義\n\n**Comparator** は、オブジェクトの比較方法を定義するインターフェースです。\n\n```java\nList<String> list = Arrays.asList(\"bb\", \"a\", \"ccc\");\nlist.sort(Comparator.comparing(String::length));\n// [a, bb, ccc] - 長さ順\n```"
+          "content": "# 比較のルールを定義\n\n**Comparator**（コンパレーター＝比較する人）は、「どうやって並べ替えるか」のルールを決めるものです。\n\n**たとえ話：** 本を並べるとき、「タイトル順」「著者順」「出版年順」など、いろんな並べ方がありますよね。Comparatorで「どの基準で並べるか」を指定します。\n\n```java\nList<String> list = Arrays.asList(\"bb\", \"a\", \"ccc\");\nlist.sort(Comparator.comparing(String::length));\n// 結果: [a, bb, ccc] - 文字列の長さ順に！\n```"
         },
         {
           "title": "便利なメソッド",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# Comparatorの作成方法\n\n```java\n// 自然順序\nComparator.naturalOrder()\n\n// 逆順\nComparator.reverseOrder()\n\n// プロパティで比較\nComparator.comparing(Person::getName)\n```"
+          "content": "# Comparatorの作成方法\n\nいろいろな比較方法を簡単に作れます。\n\n**自然順序（しぜんじゅんじょ）**\n```java\nComparator.naturalOrder()  // あいうえお順、数字なら小さい順\n```\n\n**逆順（ぎゃくじゅん）**\n```java\nComparator.reverseOrder()  // 自然順序の逆\n```\n\n**特定の値で比較**\n```java\nComparator.comparing(Person::getName)  // 名前で比較\nComparator.comparing(Person::getAge)   // 年齢で比較\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -378,14 +378,14 @@ export const javaData4 = {
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "Comparable とは？",
+          "title": "Comparable（コンパラブル）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 自然順序の定義\n\n**Comparable** を実装すると、オブジェクトに自然な順序を定義できます。\n\n```java\nclass Person implements Comparable<Person> {\n    String name;\n    public int compareTo(Person other) {\n        return this.name.compareTo(other.name);\n    }\n}\n```"
+          "content": "# 自然順序（しぜんじゅんじょ）の定義\n\n**Comparable**（コンパラブル＝比較可能な）を実装すると、オブジェクトに「自然な並び順」を定義できます。\n\n**たとえ話：** 数字には「1<2<3」という自然な順番があるように、自分で作ったクラスにも「この順番で並べてね」と教えられます。\n\n```java\nclass Person implements Comparable<Person> {\n    String name;\n    public int compareTo(Person other) {\n        // 名前のあいうえお順で比較\n        return this.name.compareTo(other.name);\n    }\n}\n```"
         },
         {
           "title": "compareTo のルール",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 戻り値の意味\n\n```java\n// this < other → 負の数\n// this == other → 0\n// this > other → 正の数\n\nreturn this.age - other.age;\n```"
+          "content": "# 戻り値（もどりち）の意味\n\n`compareTo` メソッドは、比較結果を数字で返します。\n\n**ルール：**\n- `this < other` → マイナスの数を返す（自分が先）\n- `this == other` → 0を返す（同じ順番）\n- `this > other` → プラスの数を返す（相手が先）\n\n**例：年齢で比較する場合**\n```java\nreturn this.age - other.age;\n// 25 - 30 = -5 （マイナス→自分が先）\n// 30 - 30 = 0  （0→同じ）\n// 35 - 30 = 5  （プラス→相手が先）\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -449,14 +449,14 @@ export const javaData4 = {
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "Enum とは？",
+          "title": "Enum（イーナム）とは？",
           "image": "/illustrations/3d_advanced/union_funnel.png",
-          "content": "# 固定の値の集合\n\n**Enum** は、固定された値の集合を定義します。\n\n```java\nenum Color {\n    RED, GREEN, BLUE\n}\n\nColor c = Color.RED;\n```"
+          "content": "# 固定の値の集合（しゅうごう）\n\n**Enum**（イーナム＝列挙型・れっきょがた）は、「決まった選択肢」を定義するものです。\n\n**たとえ話：** 信号機の色は「赤・黄・青」の3つだけですよね。それ以外はありません。Enumはこのように「限られた選択肢」を表します。\n\n```java\nenum Color {  // 色の選択肢を定義\n    RED, GREEN, BLUE  // 赤、緑、青の3つだけ\n}\n\nColor c = Color.RED;  // 赤を選択\n```"
         },
         {
           "title": "Enum のメリット",
           "image": "/illustrations/3d_advanced/union_funnel.png",
-          "content": "# 型安全で明確\n\n```java\n// switch文で使える\nswitch (color) {\n    case RED: System.out.println(\"赤\");\n    case GREEN: System.out.println(\"緑\");\n}\n\n// 全値を取得\nColor.values()\n```"
+          "content": "# 型安全（かたあんぜん）で明確\n\nEnumを使うと、間違った値を入れることができなくなります。\n\n**switch文で使える**\n```java\nswitch (color) {\n    case RED: System.out.println(\"赤\"); break;\n    case GREEN: System.out.println(\"緑\"); break;\n    case BLUE: System.out.println(\"青\"); break;\n}\n```\n\n**全ての値を取得**\n```java\nColor.values()  // [RED, GREEN, BLUE]\n```\n\n**メリット：** 「PURPRE」のようなタイプミスがあるとエラーになるので、間違いを防げます！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -505,14 +505,14 @@ export const javaData4 = {
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "Queue とは？",
+          "title": "Queue（キュー）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 先入れ先出し（FIFO）\n\n**Queue** は、最初に追加した要素が最初に取り出されるデータ構造です。\n\n```java\nQueue<String> queue = new LinkedList<>();\nqueue.offer(\"A\"); // 追加\nqueue.offer(\"B\");\nqueue.poll();     // A を取り出し\n```"
+          "content": "# 先入れ先出し（FIFO：ファイフォー）\n\n**Queue**（キュー＝待ち行列）は、「最初に入れたものが最初に出る」データ構造です。\n\n**たとえ話：** 遊園地のアトラクションの行列のようなものです。先に並んだ人が先に乗れますよね。これを**FIFO**（First In, First Out＝先入れ先出し）と言います。\n\n```java\nQueue<String> queue = new LinkedList<>();  // 行列を作る\nqueue.offer(\"A\");  // Aが並ぶ\nqueue.offer(\"B\");  // Bが並ぶ\nqueue.poll();      // Aが出る（先に並んだから）\n```"
         },
         {
-          "title": "メソッド",
+          "title": "主なメソッド",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# 主なメソッド\n\n```java\noffer(e)  // 要素を追加\npoll()    // 先頭を取り出し（空ならnull）\npeek()    // 先頭を見る（削除しない）\n```"
+          "content": "# よく使うメソッド\n\n**offer（オファー）：列に追加**\n```java\noffer(e)  // 列の最後に並ぶ\n```\n\n**poll（ポール）：先頭を取り出す**\n```java\npoll()    // 列の先頭から出る（空ならnull）\n```\n\n**peek（ピーク）：先頭を見る（出ない）**\n```java\npeek()    // 次は誰？と確認するだけ（列からは出ない）\n```\n\n**覚え方：** 行列に並ぶ(offer)→出る(poll)→確認する(peek)"
         }
       ],
       "initialDisplayMode": "holey",
@@ -563,14 +563,14 @@ export const javaData4 = {
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "Deque とは？",
+          "title": "Deque（デック）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 両端から操作できるキュー\n\n**Deque** は、先頭と末尾の両方から追加・削除ができます。\n\n```java\nDeque<String> deque = new ArrayDeque<>();\ndeque.addFirst(\"A\");\ndeque.addLast(\"B\");\n```"
+          "content": "# 両端（りょうたん）から操作できるキュー\n\n**Deque**（デック＝Double-Ended Queue）は、先頭からも末尾からも追加・削除ができるキューです。\n\n**たとえ話：** 両開きドアのある電車のようなものです。前からも後ろからも乗り降りできます！\n\n```java\nDeque<String> deque = new ArrayDeque<>();  // 両開きキューを作る\ndeque.addFirst(\"A\");  // 先頭に追加\ndeque.addLast(\"B\");   // 末尾に追加\n```"
         },
         {
           "title": "スタックとしても使える",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 後入れ先出し（LIFO）\n\n```java\nDeque<Integer> stack = new ArrayDeque<>();\nstack.push(1);  // 先頭に追加\nstack.push(2);\nstack.pop();    // 2 を取り出し\n```"
+          "content": "# 後入れ先出し（LIFO：ライフォー）\n\nDequeは**スタック**としても使えます。「最後に入れたものが最初に出る」構造です。\n\n**たとえ話：** お皿を積み重ねたイメージです。最後に置いたお皿が一番上にあるので、最初に取れますよね。\n\n```java\nDeque<Integer> stack = new ArrayDeque<>();\nstack.push(1);  // 1を積む\nstack.push(2);  // 2を積む（1の上に）\nstack.pop();    // 2を取り出す（一番上だから）\n```\n\n**覚え方：**\n- Queue（キュー）→ FIFO（先入れ先出し）：行列\n- Stack（スタック）→ LIFO（後入れ先出し）：積み重ね"
         }
       ],
       "initialDisplayMode": "holey",

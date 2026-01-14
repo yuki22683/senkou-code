@@ -15,12 +15,12 @@ export const bash3Data = {
         {
           "title": "パイプとは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# コマンドを連結\n\n**パイプ（|）** は、あるコマンドの出力を次のコマンドの入力に渡します。"
+          "content": "# コマンドをつなぐ「管（くだ）」\n\n**パイプ**（Pipe＝パイプ＝「管」）の記号 `|` は、あるコマンドの出力を次のコマンドの入力に渡します。\n\n**たとえば：** 水道管で水が流れるように、データが左のコマンドから右のコマンドへ流れていきます。\n\n工場のベルトコンベアで、製品が次の工程に渡されるイメージです。"
         },
         {
           "title": "パイプの使い方",
           "image": "/illustrations/3d/gear.png",
-          "content": "# コマンド1 | コマンド2\n\n左のコマンドの出力が右のコマンドに渡されます。\n\n**コード例：**\n```bash\necho \"hello\" | tr 'a-z' 'A-Z'\n# HELLO\n```"
+          "content": "# コマンド1 | コマンド2\n\n左のコマンドの出力が、右のコマンドの入力になります。\n\n**このコードは何をしているの？**\n```bash\necho \"hello\" | tr 'a-z' 'A-Z'\n# HELLO\n```\n\n**解説：**\n1. `echo \"hello\"` で \"hello\" を出力\n2. `|` でその出力を次に渡す\n3. `tr 'a-z' 'A-Z'` で小文字→大文字に変換\n4. 結果は \"HELLO\"\n\n**ポイント：** パイプは何個でもつなげられます！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -51,12 +51,12 @@ export const bash3Data = {
         {
           "title": "リダイレクトとは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 出力をファイルに\n\n**リダイレクト（>）** を使うと、コマンドの出力をファイルに保存できます。"
+          "content": "# 出力の行き先を変える\n\n**リダイレクト**（Redirect＝リダイレクト＝「方向を変える」）は、コマンドの出力を画面ではなくファイルに保存する機能です。\n\n**たとえば：** 普通は水道の蛇口をひねると水が流しに落ちますが、ホースをつなげばバケツに水をためられます。リダイレクトはその「ホース」のようなものです。\n\n`>` 記号を使います。"
         },
         {
-          "title": "リダイレクトの使い方",
+          "title": "> と >> の違い",
           "image": "/illustrations/3d/gear.png",
-          "content": "# > で上書き、>> で追記\n\n`>` は上書き、`>>` は追記です。\n\n**コード例：**\n```bash\necho \"hello\" > file.txt\necho \"world\" >> file.txt\n```"
+          "content": "# 上書き vs 追記\n\n| 記号 | 意味 | 動作 |\n|------|------|------|\n| `>` | 上書き | ファイルを新しく作り直す |\n| `>>` | 追記 | ファイルの末尾に追加する |\n\n**このコードは何をしているの？**\n```bash\necho \"hello\" > file.txt\necho \"world\" >> file.txt\n```\n\n**解説：**\n1. `> file.txt` で file.txt を作成し、\"hello\" を書き込む\n2. `>> file.txt` で file.txt の末尾に \"world\" を追加\n3. 結果：ファイルには \"hello\" と \"world\" の2行\n\n**注意：** `>` は既存の内容を消してしまうので気をつけて！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -85,14 +85,14 @@ export const bash3Data = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "入力リダイレクト",
+          "title": "入力リダイレクトとは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# ファイルから入力\n\n**入力リダイレクト（<）** を使うと、ファイルの内容をコマンドに渡せます。"
+          "content": "# ファイルから入力を受け取る\n\n**入力リダイレクト**（`<`）は、ファイルの内容をコマンドに渡す機能です。\n\n**たとえば：** キーボードで入力する代わりに、メモに書いてある内容を読み上げてもらうようなイメージです。\n\n`>` が出力の行き先を変えるのに対し、`<` は入力の元を変えます。"
         },
         {
-          "title": "入力リダイレクトの使い方",
+          "title": "< の使い方",
           "image": "/illustrations/3d/gear.png",
-          "content": "# コマンド < ファイル\n\nファイルの内容が標準入力として渡されます。\n\n**コード例：**\n```bash\nwc -l < file.txt\n```"
+          "content": "# コマンド < ファイル\n\nファイルの内容が、コマンドの「標準入力」として渡されます。\n\n**このコードは何をしているの？**\n```bash\nwc -l < file.txt\n```\n\n**解説：**\n1. `wc -l` は行数を数えるコマンド\n2. `< file.txt` で file.txt の内容を渡す\n3. ファイルの行数が表示される\n\n**リダイレクトの向き：**\n- `>` → 出力をファイルへ（右向き）\n- `<` → ファイルから入力（左向き）"
         }
       ],
       "initialDisplayMode": "holey",
@@ -123,14 +123,14 @@ export const bash3Data = {
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "標準エラー出力",
+          "title": "標準エラー出力とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# エラーメッセージの出力先\n\nコマンドのエラーは **標準エラー出力（stderr）** に送られます。ファイル記述子は **2** です。"
+          "content": "# エラーメッセージ専用の出口\n\nコンピュータには出力が2種類あります：\n\n| 番号 | 名前 | 用途 |\n|------|------|------|\n| 1 | 標準出力（stdout） | 通常の結果 |\n| 2 | 標準エラー出力（stderr） | エラーメッセージ |\n\n**たとえば：** 学校の放送室に2つのスピーカーがあって、1つは通常連絡用、もう1つは緊急放送用、みたいなイメージです。\n\nエラーを別の場所に送りたいときは `2>` を使います。"
         },
         {
           "title": "2> の使い方",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 2> でエラーをリダイレクト\n\nエラー出力だけをファイルに保存できます。\n\n**コード例：**\n```bash\nls /nonexistent 2> error.txt\n```"
+          "content": "# 2> でエラーだけリダイレクト\n\n**このコードは何をしているの？**\n```bash\nls /nonexistent 2> error.txt\n```\n\n**解説：**\n1. `ls /nonexistent` は存在しないファイルを表示しようとする\n2. エラーが発生する（「そんなファイルはない！」）\n3. `2>` でエラーメッセージだけを error.txt に保存\n\n**便利な使い方：**\n```bash\nコマンド 2> /dev/null\n```\n`/dev/null` は「ゴミ箱」のような特別な場所。エラーを捨てて見えなくできます。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -159,14 +159,14 @@ export const bash3Data = {
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "ファイルテスト",
+          "title": "ファイルテストとは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# ファイルの状態を調べる\n\nBashでは **テスト** を使ってファイルの存在や種類を確認できます。"
+          "content": "# ファイルの状態を調べる\n\nBashでは **ファイルテスト** を使って、ファイルが存在するか、どんな種類かを確認できます。\n\n**たとえば：** 冷蔵庫を開ける前に「牛乳ある？」と確認するように、ファイルを操作する前に「このファイルある？」と確認できます。\n\n`[ ]` の中にテストオプションを書きます。"
         },
         {
-          "title": "テストオプション",
+          "title": "主なテストオプション",
           "image": "/illustrations/3d/gear.png",
-          "content": "# -f, -d, -e など\n\n- `-f` : 通常ファイル\n- `-d` : ディレクトリ\n- `-e` : 存在する\n\n**コード例：**\n```bash\nif [ -f file.txt ]; then\n    echo \"exists\"\nfi\n```"
+          "content": "# -f, -d, -e の違い\n\n| オプション | 意味 | チェック内容 |\n|------------|------|------------|\n| `-e` | exists（存在） | ファイルが存在するか |\n| `-f` | file（ファイル） | 通常のファイルか |\n| `-d` | directory（ディレクトリ） | フォルダか |\n| `-r` | readable（読める） | 読み取り権限があるか |\n\n**このコードは何をしているの？**\n```bash\nif [ -f file.txt ]; then\n    echo \"exists\"\nfi\n```\n\n**解説：** file.txt が「通常のファイル」として存在すれば \"exists\" と表示します。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -201,12 +201,12 @@ export const bash3Data = {
         {
           "title": "xargs とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 入力を引数に変換\n\n**xargs** は、標準入力からデータを読み取り、それを別のコマンドの引数として渡します。"
+          "content": "# 入力を引数に変換するツール\n\n**xargs**（エックスアーグス＝「引数に変換」）は、パイプで受け取ったデータを、コマンドの引数として渡すツールです。\n\n**たとえば：** 友達から「りんご、みかん、バナナを買ってきて」とメモをもらったら、お店で「りんごください」「みかんください」「バナナください」と注文しますよね。xargs はこの「メモの内容を注文に変える」役割をします。"
         },
         {
           "title": "xargs の使い方",
           "image": "/illustrations/3d/gear.png",
-          "content": "# パイプと組み合わせる\n\nパイプで渡されたデータを引数として使えます。\n\n**コード例：**\n```bash\necho \"file1 file2\" | xargs ls\n```"
+          "content": "# パイプ | xargs コマンド\n\n**このコードは何をしているの？**\n```bash\necho \"file1 file2\" | xargs ls\n```\n\n**解説：**\n1. `echo \"file1 file2\"` で \"file1 file2\" を出力\n2. `|` でパイプに渡す\n3. `xargs ls` が受け取って `ls file1 file2` として実行\n\n**パイプとの違い：**\n- `|` だけ → データを「入力」として渡す\n- `| xargs` → データを「引数」として渡す\n\nコマンドによっては引数でしか受け取れないものがあるので、xargs が必要になります。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -237,12 +237,12 @@ export const bash3Data = {
         {
           "title": "sed とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# ストリームエディタ\n\n**sed** は、テキストを行ごとに処理・変換するコマンドです。置換でよく使います。"
+          "content": "# テキストを自動で書き換えるツール\n\n**sed**（セド＝Stream Editor＝ストリームエディタ）は、テキストを流れるように処理して書き換えるコマンドです。\n\n**たとえば：** 作文で「りんご」を全部「みかん」に書き換えたいとき、1つずつ消して書き直すのは大変ですよね。sed は自動で全部書き換えてくれます。\n\n特に「置換」（ちかん＝文字を入れ替えること）でよく使います。"
         },
         {
-          "title": "sed の使い方",
+          "title": "sed で置換する",
           "image": "/illustrations/3d/gear.png",
-          "content": "# s/古い/新しい/\n\n`s` コマンドで置換します。\n\n**コード例：**\n```bash\necho \"hello\" | sed 's/hello/hi/'\n```"
+          "content": "# s/古い/新しい/ の書き方\n\n`s` は substitute（サブスティチュート＝置換する）の略です。\n\n**このコードは何をしているの？**\n```bash\necho \"hello\" | sed 's/hello/hi/'\n```\n\n**解説：**\n1. `echo \"hello\"` で \"hello\" を出力\n2. `|` でパイプに渡す\n3. `sed 's/hello/hi/'` で \"hello\" を \"hi\" に置き換え\n4. 結果は \"hi\"\n\n**全部置換するには：** 最後に `g` をつける\n```bash\nsed 's/a/b/g'  # 全ての a を b に\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -273,12 +273,12 @@ export const bash3Data = {
         {
           "title": "awk とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# テキスト処理の強力なツール\n\n**awk** は、テキストをフィールドに分割して処理できる強力なコマンドです。"
+          "content": "# テキストを区切って取り出すツール\n\n**awk**（オーク）は、テキストをスペースなどで区切って、欲しい部分だけ取り出せる強力なコマンドです。\n\n**たとえば：** 「りんご 100円 赤」という文字列から「100円」だけ取り出したいとき、awk を使えば簡単にできます。\n\n各区切りを **フィールド**（Field＝項目）と呼びます。"
         },
         {
-          "title": "awk の使い方",
+          "title": "awk でフィールドを取り出す",
           "image": "/illustrations/3d/gear.png",
-          "content": "# $1, $2 でフィールド\n\n`$1` が1番目、`$2` が2番目のフィールドです。\n\n**コード例：**\n```bash\necho \"a b c\" | awk '{print $2}'\n# b\n```"
+          "content": "# $1, $2, $3 でフィールド番号\n\n| 変数 | 意味 |\n|------|------|\n| `$1` | 1番目のフィールド |\n| `$2` | 2番目のフィールド |\n| `$0` | 行全体 |\n\n**このコードは何をしているの？**\n```bash\necho \"a b c\" | awk '{print $2}'\n# b\n```\n\n**解説：**\n1. \"a b c\" がスペースで3つに区切られる\n2. `$1`=\"a\", `$2`=\"b\", `$3`=\"c\"\n3. `{print $2}` で2番目の \"b\" だけ表示\n\n**ポイント：** デフォルトはスペース区切り。CSVなどは `-F,` でカンマ区切りに変更できます。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -309,12 +309,12 @@ export const bash3Data = {
         {
           "title": "sort とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 行を並べ替える\n\n**sort** は、テキストの行をアルファベット順や数値順に並べ替えます。"
+          "content": "# 行を順番に並べ替える\n\n**sort**（ソート＝「並べ替える」）は、テキストの各行をアルファベット順や数字順に並べ替えるコマンドです。\n\n**たとえば：** トランプのカードをばらばらに置いて、小さい順に並べ直すようなイメージです。\n\nデータを整理したいときに便利です。"
         },
         {
-          "title": "sort の使い方",
+          "title": "sort のオプション",
           "image": "/illustrations/3d/gear.png",
-          "content": "# オプションで動作を変更\n\n- `-n` : 数値順\n- `-r` : 逆順\n\n**コード例：**\n```bash\necho -e \"3\\n1\\n2\" | sort -n\n```"
+          "content": "# 並べ替え方を指定する\n\n| オプション | 意味 | 動作 |\n|------------|------|------|\n| （なし） | デフォルト | アルファベット順（辞書順） |\n| `-n` | numeric | 数値として並べ替え |\n| `-r` | reverse | 逆順（大きい順） |\n\n**このコードは何をしているの？**\n```bash\necho -e \"3\\n1\\n2\" | sort -n\n```\n\n**解説：**\n1. `echo -e \"3\\n1\\n2\"` で3行（3, 1, 2）を出力\n2. `sort -n` で数値として並べ替え\n3. 結果は 1, 2, 3 の順\n\n**注意：** `-n` がないと \"10\" が \"2\" より前に来てしまいます（文字として比較するため）。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -345,12 +345,12 @@ export const bash3Data = {
         {
           "title": "uniq とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 重複行を除去\n\n**uniq** は、連続する重複行を除去します。通常は `sort` と組み合わせて使います。"
+          "content": "# 重複を取り除く\n\n**uniq**（ユニーク＝「唯一の」）は、連続する同じ行を1つにまとめるコマンドです。\n\n**たとえば：** 「りんご、りんご、みかん、みかん、みかん」を「りんご、みかん」だけにするイメージです。\n\n**重要：** uniq は「連続する」重複だけを消します。なので、先に `sort` で並べ替えてから使うのが基本です。"
         },
         {
-          "title": "uniq の使い方",
+          "title": "sort | uniq の組み合わせ",
           "image": "/illustrations/3d/gear.png",
-          "content": "# sort | uniq\n\n先にソートしてから重複を除去します。\n\n**コード例：**\n```bash\necho -e \"a\\nb\\na\" | sort | uniq\n```"
+          "content": "# 並べ替えてから重複除去\n\n**このコードは何をしているの？**\n```bash\necho -e \"a\\nb\\na\" | sort | uniq\n```\n\n**解説：**\n1. \"a\", \"b\", \"a\" の3行がある\n2. `sort` で並べ替え → \"a\", \"a\", \"b\"\n3. `uniq` で連続する重複を除去 → \"a\", \"b\"\n\n**sort なしだとどうなる？**\n```bash\necho -e \"a\\nb\\na\" | uniq\n# a, b, a のまま！（連続してないから消えない）\n```\n\n**便利なオプション：**\n- `-c` で重複回数を表示\n- `-d` で重複した行だけ表示"
         }
       ],
       "initialDisplayMode": "holey",

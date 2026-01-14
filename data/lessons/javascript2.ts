@@ -15,12 +15,12 @@ export const javascriptData2 = {
         {
           "title": "アロー関数とは？",
           "image": "/illustrations/3d_advanced/lambda_spark.png",
-          "content": "# => を使った短い関数\n\n`function` の代わりに `=>` を使うと、関数を短く書けます。\n\n```javascript\n// 通常の関数\nfunction add(a, b) {\n    return a + b;\n}\n\n// アロー関数\nconst add = (a, b) => a + b;\n```"
+          "content": "# 短く書ける関数の書き方\n\n**アロー関数** は、`function` を使わずに関数を短く書く方法です。\n`=>`（イコールと大なり）が矢印（アロー）に見えることから名付けられました。\n\n**身近なたとえ：**\n同じ文章でも、長い言い方と短い言い方がありますよね。\n「私はお腹が空きました」→「腹ペコ」のような感じです！\n\n**比較してみよう：**\n```javascript\n// 通常の関数（長い書き方）\nfunction add(a, b) {\n    return a + b;\n}\n\n// アロー関数（短い書き方）\nconst add = (a, b) => a + b;\n```"
         },
         {
           "title": "アロー関数の書き方",
           "image": "/illustrations/3d_advanced/lambda_spark.png",
-          "content": "# 省略できる部分\n\n- 1行の場合、`{}` と `return` を省略可能\n- 引数が1つなら `()` も省略可能\n\n```javascript\nconst double = x => x * 2;\nconst greet = () => console.log('Hi!');\n```"
+          "content": "# 省略できるルール\n\n**基本の形：**\n```\nconst 関数名 = (引数) => 処理;\n```\n\n**省略ルール：**\n1. 処理が1行なら `{ }` と `return` を省略できる\n2. 引数が1つなら `( )` も省略できる\n\n**コード例：**\n```javascript\n// 引数1つ → ()省略可能\nconst double = x => x * 2;\n\n// 引数なし → ()は必要\nconst greet = () => console.log('Hi!');\n\n// 引数2つ以上 → ()は必要\nconst add = (a, b) => a + b;\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -59,12 +59,12 @@ export const javascriptData2 = {
         {
           "title": "mapとは？",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# 各要素を変換する\n\n`map` は配列の各要素に関数を適用して、新しい配列を作ります。\n\n```javascript\nconst numbers = [1, 2, 3];\nconst doubled = numbers.map(x => x * 2);\nconsole.log(doubled); // [2, 4, 6]\n```"
+          "content": "# 配列の全ての要素を変換する\n\n**map（マップ）** は、配列の中身を一つずつ変換して、新しい配列を作るメソッドです。\n\n**身近なたとえ：**\n工場のベルトコンベアを想像してください。原料が流れてきて、全部同じ加工をして製品になりますよね。mapも同じで、配列の要素を全部同じルールで変換します！\n\n**コード例：**\n```javascript\nconst numbers = [1, 2, 3];\nconst doubled = numbers.map(x => x * 2);\nconsole.log(doubled);\n```\n**実行結果：**\n```\n[2, 4, 6]\n```"
         },
         {
           "title": "mapの使い方",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# 元の配列は変わらない\n\n`map` は新しい配列を返し、元の配列は変更しません。\n\n```javascript\nconst names = ['alice', 'bob'];\nconst upper = names.map(n => n.toUpperCase());\nconsole.log(upper); // ['ALICE', 'BOB']\n```"
+          "content": "# 元の配列は変わらない！\n\n**大事なポイント：**\n`map` は新しい配列を作って返します。元の配列はそのまま残ります。\n\n**書き方：**\n```\n配列.map(要素 => 変換処理)\n```\n\n**コード例：**\n```javascript\nconst names = ['alice', 'bob'];\n// 全部大文字に変換\nconst upper = names.map(n => n.toUpperCase());\nconsole.log(upper);  // ['ALICE', 'BOB']\nconsole.log(names);  // ['alice', 'bob']（元のまま！）\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -101,14 +101,14 @@ export const javascriptData2 = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "% とは？",
+          "title": "剰余演算子（%）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 余りを求める\n\n`%` は割り算の余りを求める演算子です。\n\n```javascript\nconsole.log(7 % 3);   // 1（7÷3=2 余り1）\nconsole.log(10 % 5);  // 0（10÷5=2 余り0）\nconsole.log(8 % 3);   // 2（8÷3=2 余り2）\n```"
+          "content": "# 割り算の「余り」を求める\n\n**剰余演算子（じょうよえんざんし）** `%` は、割り算の余りを計算します。\n\n**身近なたとえ：**\n7個のお菓子を3人で分けると、一人2個ずつで **1個余る** よね？\nこの「余り」を計算するのが `%` です！\n\n**コード例：**\n```javascript\nconsole.log(7 % 3);   // 1（7÷3=2 余り1）\nconsole.log(10 % 5);  // 0（10÷5=2 余り0）\nconsole.log(8 % 3);   // 2（8÷3=2 余り2）\n```"
         },
         {
           "title": "偶数・奇数の判定",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 2で割った余りで判定\n\n余りが0なら偶数、1なら奇数と判定できます。\n\n```javascript\nconst num = 6;\nif (num % 2 === 0) {\n  console.log('偶数です');\n} else {\n  console.log('奇数です');\n}\n```"
+          "content": "# 2で割った余りで判定しよう\n\n**偶数（ぐうすう）と奇数（きすう）：**\n- 偶数：2で割り切れる数（2, 4, 6, 8...）\n- 奇数：2で割ると1余る数（1, 3, 5, 7...）\n\n**判定の仕組み：**\n- `数 % 2 === 0` → 偶数！\n- `数 % 2 === 1` → 奇数！\n\n**コード例：**\n```javascript\nconst num = 6;\nif (num % 2 === 0) {\n  console.log('偶数です');\n} else {\n  console.log('奇数です');\n}\n```\n**実行結果：** 6 ÷ 2 = 3 余り0 なので...\n```\n偶数です\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -143,14 +143,14 @@ export const javascriptData2 = {
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "+= とは？",
+          "title": "累算代入演算子（+=）とは？",
           "image": "/illustrations/3d/box.png",
-          "content": "# 変数に足し算する\n\n`+=` を使うと、変数の値に足し算して上書きできます。\n\n```javascript\nlet count = 0;\ncount += 1;  // count = count + 1 と同じ\nconsole.log(count);  // 1\n\ncount += 5;\nconsole.log(count);  // 6\n```"
+          "content": "# 変数に足し算する省略記法\n\n**累算代入演算子（るいさんだいにゅうえんざんし）** は、変数の値を更新する短い書き方です。\n\n**身近なたとえ：**\n貯金箱にお金を入れるとき、「今ある金額 + 新しいお金」になりますよね。\n`+=` はまさにこれ！「今の値に足して更新」します。\n\n**比較してみよう：**\n```javascript\nlet count = 0;\ncount = count + 1;  // 長い書き方\ncount += 1;         // 短い書き方（同じ意味！）\n```\n\n**実行例：**\n```javascript\nlet count = 0;\ncount += 1;  // 0 + 1 = 1\ncount += 5;  // 1 + 5 = 6\nconsole.log(count);  // 6\n```"
         },
         {
           "title": "-= と他の演算子",
           "image": "/illustrations/3d/box.png",
-          "content": "# 引き算や掛け算も\n\n同じように `-=`、`*=`、`/=` も使えます。\n\n```javascript\nlet x = 10;\nx -= 3;   // x = x - 3 → 7\nx *= 2;   // x = x * 2 → 14\nx /= 7;   // x = x / 7 → 2\n```"
+          "content": "# 引き算・かけ算・割り算も同じ！\n\n| 演算子 | 意味 | 例 |\n|:---:|:---:|:---:|\n| `+=` | 足して更新 | x += 3 → x = x + 3 |\n| `-=` | 引いて更新 | x -= 3 → x = x - 3 |\n| `*=` | かけて更新 | x *= 3 → x = x * 3 |\n| `/=` | 割って更新 | x /= 3 → x = x / 3 |\n\n**コード例：**\n```javascript\nlet x = 10;\nx -= 3;   // 10 - 3 = 7\nx *= 2;   // 7 * 2 = 14\nx /= 7;   // 14 / 7 = 2\nconsole.log(x);  // 2\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -193,14 +193,14 @@ export const javascriptData2 = {
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "&& と ||",
+          "title": "論理演算子（&&と||）とは？",
           "image": "/illustrations/3d/if.png",
-          "content": "# 条件を組み合わせる\n\n`&&`（AND）は両方がtrueのときtrue、`||`（OR）はどちらかがtrueのときtrueです。\n\n```javascript\nconst x = 5;\n// 両方の条件を満たすか\nif (x > 0 && x < 10) {\n  console.log('0より大きく10より小さい');\n}\n\n// どちらかの条件を満たすか\nif (x < 0 || x > 3) {\n  console.log('0未満か3より大きい');\n}\n```"
+          "content": "# 複数の条件を組み合わせる\n\n**論理演算子（ろんりえんざんし）** は、条件を組み合わせるときに使います。\n\n**身近なたとえ：**\n- 「晴れ **かつ** 暖かい」→ 両方OK ならお出かけ（**&&**）\n- 「土曜日 **または** 日曜日」→ どちらかならお休み（**||**）\n\n| 記号 | 読み方 | 意味 |\n|:---:|:---:|:---:|\n| `&&` | アンド | 両方true → true |\n| `\\|\\|` | オア | どちらかtrue → true |\n\n**コード例：**\n```javascript\nconst x = 5;\nif (x > 0 && x < 10) {\n  console.log('0より大きく10より小さい');\n}\n```"
         },
         {
-          "title": "! で否定",
+          "title": "! で否定（ひてい）",
           "image": "/illustrations/3d/if.png",
-          "content": "# 条件を反転する\n\n`!` はtrue/falseを反転させます。\n\n```javascript\nconst isRaining = false;\n\nif (!isRaining) {\n  console.log('雨は降っていません');\n}\n\n// !true → false\n// !false → true\n```"
+          "content": "# 条件を反転させる\n\n`!`（エクスクラメーション）は、true と false を **ひっくり返す** 演算子です。\n\n**変換ルール：**\n- `!true` → `false`\n- `!false` → `true`\n\n**身近なたとえ：**\n「雨が降っていない」= 「雨が降っている」の反対！\n\n**コード例：**\n```javascript\nconst isRaining = false;\n\nif (!isRaining) {\n  // isRaining が false なので\n  // !false → true となり、この中が実行される\n  console.log('雨は降っていません');\n}\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -241,12 +241,12 @@ export const javascriptData2 = {
         {
           "title": "filterとは？",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# 条件でフィルタリング\n\n`filter` は条件に合う要素だけを集めた新しい配列を作ります。\n\n```javascript\nconst numbers = [1, 2, 3, 4, 5];\nconst evens = numbers.filter(x => x % 2 === 0);\nconsole.log(evens); // [2, 4]\n```"
+          "content": "# 条件に合うものだけ選ぶ\n\n**filter（フィルター）** は、条件に合う要素だけを選んで新しい配列を作るメソッドです。\n\n**身近なたとえ：**\nコーヒーのフィルターは、コーヒーの粉を通さずに液体だけを通しますよね。プログラムの filter も同じで、条件に合うものだけを通して残します！\n\n**コード例：**\n```javascript\nconst numbers = [1, 2, 3, 4, 5];\n// 偶数だけを選ぶ\nconst evens = numbers.filter(x => x % 2 === 0);\nconsole.log(evens);\n```\n**実行結果：**\n```\n[2, 4]\n```"
         },
         {
           "title": "filterの使い方",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# trueを返す要素だけ残る\n\n関数が `true` を返す要素だけが新しい配列に入ります。\n\n```javascript\nconst words = ['hi', 'hello', 'hey'];\nconst long = words.filter(w => w.length > 2);\nconsole.log(long); // ['hello', 'hey']\n```"
+          "content": "# true を返す要素だけ残る\n\n**filterの仕組み：**\n1. 配列の要素を一つずつチェック\n2. 条件が `true` の要素だけ新しい配列に入る\n3. `false` の要素は捨てられる\n\n**書き方：**\n```\n配列.filter(要素 => 条件)\n```\n\n**コード例：**\n```javascript\nconst words = ['hi', 'hello', 'hey'];\n// 文字数が2より多いものだけ選ぶ\nconst long = words.filter(w => w.length > 2);\nconsole.log(long);\n```\n**実行結果：**\n```\n['hello', 'hey']\n```\n'hi' は2文字なので除外されました！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -285,12 +285,12 @@ export const javascriptData2 = {
         {
           "title": "reduceとは？",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# 要素をまとめる\n\n`reduce` は配列の全要素を処理して、1つの値にまとめます。\n\n```javascript\nconst numbers = [1, 2, 3, 4];\nconst sum = numbers.reduce((acc, cur) => acc + cur, 0);\nconsole.log(sum); // 10\n```"
+          "content": "# 配列を1つの値にまとめる\n\n**reduce（リデュース）** は、配列の全要素を処理して、1つの値にまとめるメソッドです。\n\n**身近なたとえ：**\n買い物かごの中身の合計金額を計算するイメージです。\n100円 + 200円 + 300円 = 600円 のように、一つずつ足していって最終的に1つの数字にまとめます。\n\n**コード例：**\n```javascript\nconst numbers = [1, 2, 3, 4];\nconst sum = numbers.reduce((acc, cur) => acc + cur, 0);\nconsole.log(sum);  // 10\n```"
         },
         {
           "title": "reduceの仕組み",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# 累積値と現在値\n\n- `acc`: 累積値（前回の結果）\n- `cur`: 現在の要素\n- 第2引数: 初期値\n\n```javascript\n// 合計を計算\n[1, 2, 3].reduce((acc, cur) => acc + cur, 0)\n// 0 + 1 = 1, 1 + 2 = 3, 3 + 3 = 6\n```"
+          "content": "# 累積値（るいせきち）と現在値（げんざいち）\n\n**2つの大事な値：**\n- `acc`（アキュムレーター）：これまでの合計（累積値）\n- `cur`（カレント）：今見ている要素（現在値）\n\n**書き方：**\n```\n配列.reduce((累積値, 現在値) => 計算, 初期値)\n```\n\n**実行の流れ：**\n```javascript\n[1, 2, 3].reduce((acc, cur) => acc + cur, 0)\n```\n1. 初期値 0 からスタート\n2. 0 + 1 = 1\n3. 1 + 2 = 3\n4. 3 + 3 = 6 ← これが答え！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -328,14 +328,14 @@ export const javascriptData2 = {
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "配列の分割代入",
+          "title": "分割代入（ぶんかつだいにゅう）とは？",
           "image": "/illustrations/3d/array_destructuring.png",
-          "content": "# 一度に複数の変数へ\n\n配列の要素を、対応する変数に一度に代入できます。\n\n```javascript\nconst [a, b] = [1, 2];\nconsole.log(a); // 1\nconsole.log(b); // 2\n```"
+          "content": "# 配列から一度に取り出す\n\n**分割代入** は、配列の中身を一度に複数の変数に取り出す便利な書き方です。\n\n**身近なたとえ：**\nプレゼントの箱を開けたら、中に3つのおもちゃが入っていて、それぞれ違う人にあげるイメージです。\n\n**比較してみよう：**\n```javascript\n// 普通の書き方（長い）\nconst arr = [1, 2];\nconst a = arr[0];\nconst b = arr[1];\n\n// 分割代入（短い！）\nconst [a, b] = [1, 2];\nconsole.log(a); // 1\nconsole.log(b); // 2\n```"
         },
         {
-          "title": "便利な使い方",
+          "title": "分割代入の便利な使い方",
           "image": "/illustrations/3d/array_destructuring.png",
-          "content": "# 関数の戻り値にも使える\n\n```javascript\nfunction getPoint() {\n    return [10, 20];\n}\n\nconst [x, y] = getPoint();\nconsole.log(x, y); // 10 20\n```"
+          "content": "# 関数の戻り値にも使える！\n\n関数が配列を返すとき、分割代入を使うと一度に受け取れます。\n\n**コード例：**\n```javascript\nfunction getPoint() {\n    return [10, 20];\n}\n\n// 戻り値を一度に受け取る\nconst [x, y] = getPoint();\nconsole.log(x); // 10\nconsole.log(y); // 20\n```\n\n**ポイント：**\n左側の `[ ]` の中に、受け取りたい変数名を順番に書きます。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -376,12 +376,12 @@ export const javascriptData2 = {
         {
           "title": "オブジェクトの分割代入",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# プロパティ名で取り出す\n\nオブジェクトのプロパティを、同名の変数に取り出せます。\n\n```javascript\nconst person = { name: 'Taro', age: 20 };\nconst { name, age } = person;\nconsole.log(name); // 'Taro'\n```"
+          "content": "# プロパティ名で取り出す\n\nオブジェクトでも分割代入が使えます。**プロパティ名と同じ名前の変数** に自動で入ります。\n\n**身近なたとえ：**\n名刺から「名前」と「年齢」の情報を取り出すイメージです。「名前」という項目は「名前」という変数に入ります。\n\n**コード例：**\n```javascript\nconst person = { name: 'Taro', age: 20 };\n// { } を使って取り出す\nconst { name, age } = person;\nconsole.log(name); // 'Taro'\nconsole.log(age);  // 20\n```"
         },
         {
           "title": "よく使うパターン",
           "image": "/illustrations/3d/box.png",
-          "content": "# 関数の引数でも使える\n\n```javascript\nfunction greet({ name }) {\n    console.log(`Hello, ${name}!`);\n}\n\ngreet({ name: 'Taro', age: 20 });\n// => Hello, Taro!\n```"
+          "content": "# 関数の引数でも使える！\n\n関数にオブジェクトを渡すとき、必要なプロパティだけ取り出せます。\n\n**コード例：**\n```javascript\nfunction greet({ name }) {\n    // オブジェクトから name だけ取り出す\n    console.log(`Hello, ${name}!`);\n}\n\ngreet({ name: 'Taro', age: 20 });\n```\n**実行結果：**\n```\nHello, Taro!\n```\n\n**ポイント：**\n`{ }` の中に欲しいプロパティ名を書くだけ！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -422,12 +422,12 @@ export const javascriptData2 = {
         {
           "title": "スプレッド演算子とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 配列を展開する\n\n`...` を使うと、配列の要素を個別に展開できます。\n\n```javascript\nconst a = [1, 2];\nconst b = [3, 4];\nconst c = [...a, ...b];\nconsole.log(c); // [1, 2, 3, 4]\n```"
+          "content": "# 配列を「展開」する魔法の記号\n\n**スプレッド演算子** `...` は、配列の中身を一つずつ展開（てんかい）する記号です。\n\n**身近なたとえ：**\nトランプの束をテーブルに広げるイメージです。束（配列）を `...` で広げると、1枚1枚のカードになります。\n\n**コード例：**\n```javascript\nconst a = [1, 2];\nconst b = [3, 4];\n// 両方の配列を展開して合体！\nconst c = [...a, ...b];\nconsole.log(c);\n```\n**実行結果：**\n```\n[1, 2, 3, 4]\n```"
         },
         {
-          "title": "コピーにも使える",
+          "title": "配列のコピーにも使える",
           "image": "/illustrations/3d/list.png",
-          "content": "# 配列のコピー\n\n```javascript\nconst original = [1, 2, 3];\nconst copy = [...original];\ncopy.push(4);\nconsole.log(original); // [1, 2, 3]\nconsole.log(copy);     // [1, 2, 3, 4]\n```"
+          "content": "# 配列を安全にコピーする\n\n`...` を使うと、配列のコピーを簡単に作れます。\n\n**なぜコピーが必要？**\n普通に `=` で代入すると、同じ配列を指してしまいます。\n`...` でコピーすれば、元の配列に影響を与えません！\n\n**コード例：**\n```javascript\nconst original = [1, 2, 3];\nconst copy = [...original];  // コピーを作る\ncopy.push(4);  // コピーに追加\nconsole.log(original); // [1, 2, 3]（元のまま！）\nconsole.log(copy);     // [1, 2, 3, 4]\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -466,14 +466,14 @@ export const javascriptData2 = {
       "orderIndex": 11,
       "tutorialSlides": [
         {
-          "title": "三項演算子とは？",
+          "title": "三項演算子（さんこうえんざんし）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 条件 ? 真の値 : 偽の値\n\nif-elseを短く書く方法です。\n\n```javascript\nconst age = 20;\nconst status = age >= 18 ? '成人' : '未成年';\nconsole.log(status); // '成人'\n```"
+          "content": "# if-else を1行で書く方法\n\n**三項演算子** は、if-else を短く書ける便利な書き方です。\n\n**書き方：**\n```\n条件 ? trueのときの値 : falseのときの値\n```\n\n**身近なたとえ：**\n「晴れ？傘いらない：傘いる」のように、条件によって2つのうちどちらかを選びます。\n\n**コード例：**\n```javascript\nconst age = 20;\nconst status = age >= 18 ? '成人' : '未成年';\nconsole.log(status); // '成人'\n```"
         },
         {
-          "title": "使いどころ",
+          "title": "三項演算子の使いどころ",
           "image": "/illustrations/3d/if.png",
-          "content": "# 変数への代入に便利\n\n```javascript\nconst score = 85;\nconst result = score >= 60 ? '合格' : '不合格';\n\n// 同じ意味のif文\nlet result2;\nif (score >= 60) {\n    result2 = '合格';\n} else {\n    result2 = '不合格';\n}\n```"
+          "content": "# 変数への代入に便利！\n\n**if-else と比較：**\n```javascript\n// if-else（長い）\nlet result;\nif (score >= 60) {\n    result = '合格';\n} else {\n    result = '不合格';\n}\n\n// 三項演算子（短い！）\nconst result = score >= 60 ? '合格' : '不合格';\n```\n\n**ポイント：**\n- `?` の左に条件\n- `?` の右に true のときの値\n- `:` の右に false のときの値"
         }
       ],
       "initialDisplayMode": "holey",
@@ -512,12 +512,12 @@ export const javascriptData2 = {
         {
           "title": "findとは？",
           "image": "/illustrations/3d/regex_search.png",
-          "content": "# 条件に合う最初の要素を返す\n\n`find` は条件を満たす最初の要素を返します。見つからなければ `undefined` になります。\n\n```javascript\nconst nums = [1, 5, 10, 15];\nconst found = nums.find(n => n > 7);\nconsole.log(found); // 10\n```"
+          "content": "# 条件に合う最初の要素を見つける\n\n**find（ファインド）** は、条件に合う **最初の** 要素を返すメソッドです。\n\n**身近なたとえ：**\nクラスで「身長150cm以上の人」を探すとき、最初に見つかった人を答えるイメージです。\n\n**ポイント：**\n- 最初の1つだけ返す（filter は全部返す）\n- 見つからなかったら `undefined`\n\n**コード例：**\n```javascript\nconst nums = [1, 5, 10, 15];\nconst found = nums.find(n => n > 7);\nconsole.log(found); // 10（最初に見つかった）\n```"
         },
         {
           "title": "findの使い方",
           "image": "/illustrations/3d/regex_search.png",
-          "content": "# オブジェクトの配列でも使える\n\n```javascript\nconst users = [\n    { id: 1, name: 'Alice' },\n    { id: 2, name: 'Bob' }\n];\nconst user = users.find(u => u.id === 2);\nconsole.log(user.name); // 'Bob'\n```"
+          "content": "# オブジェクトの配列でも使える！\n\nユーザーリストから特定のIDの人を探すときなどに便利です。\n\n**コード例：**\n```javascript\nconst users = [\n    { id: 1, name: 'Alice' },\n    { id: 2, name: 'Bob' }\n];\n// id が 2 のユーザーを探す\nconst user = users.find(u => u.id === 2);\nconsole.log(user.name);\n```\n**実行結果：**\n```\nBob\n```"
         }
       ],
       "initialDisplayMode": "holey",
@@ -554,14 +554,14 @@ export const javascriptData2 = {
       "orderIndex": 13,
       "tutorialSlides": [
         {
-          "title": "プロパティの省略",
+          "title": "プロパティのショートハンド",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# 変数名とプロパティ名が同じ場合\n\n変数名とプロパティ名が同じなら、省略できます。\n\n```javascript\nconst name = 'Taro';\nconst age = 20;\n\n// 通常\nconst obj1 = { name: name, age: age };\n\n// ショートハンド\nconst obj2 = { name, age };\n```"
+          "content": "# 同じ名前なら省略できる！\n\n変数名とプロパティ名が同じなら、省略（ショートハンド）できます。\n\n**身近なたとえ：**\n「名前は『名前』です」と言わなくても「名前」だけで伝わりますよね。それと同じです！\n\n**比較してみよう：**\n```javascript\nconst name = 'Taro';\nconst age = 20;\n\n// 通常の書き方（長い）\nconst obj1 = { name: name, age: age };\n\n// ショートハンド（短い！同じ意味）\nconst obj2 = { name, age };\n```"
         },
         {
-          "title": "メソッドの省略",
+          "title": "メソッドのショートハンド",
           "image": "/illustrations/3d_advanced/class_to_instance.png",
-          "content": "# function を省略\n\nオブジェクト内のメソッドも短く書けます。\n\n```javascript\nconst obj = {\n    // 通常\n    greet: function() { console.log('Hi'); },\n    \n    // ショートハンド\n    sayBye() { console.log('Bye'); }\n};\n```"
+          "content": "# メソッドも短く書ける！\n\nオブジェクトの中にメソッド（関数）を書くときも省略できます。\n\n**比較してみよう：**\n```javascript\nconst obj = {\n    // 通常の書き方\n    greet: function() { \n        console.log('Hi'); \n    },\n    \n    // ショートハンド（: function を省略）\n    sayBye() { \n        console.log('Bye'); \n    }\n};\n```\n\n**ポイント：**\n`: function` を省略して、関数名のあとに直接 `()` を書けます。"
         }
       ],
       "initialDisplayMode": "holey",

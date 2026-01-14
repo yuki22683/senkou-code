@@ -13,14 +13,24 @@ export const swift3Data = {
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "Result とは？",
+          "title": "Result型（リザルトがた）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 成功か失敗かを表す\n\n**Result** は、成功(.success)か失敗(.failure)を表す型です。\n\n```swift\nfunc divide(_ a: Int, _ b: Int) -> Result<Int, Error> {\n    if b == 0 { return .failure(MyError.divByZero) }\n    return .success(a / b)\n}\n```"
+          "content": "# 「成功」か「失敗」かを表す型\n\n**Result（リザルト）** は、処理の結果が「成功」か「失敗」かを表す型です。\n\n例えば、ネットワークからデータを取得するとき、うまくいくこともあれば、接続エラーで失敗することもありますよね。\n\nResult型を使うと、この2つの状態を明確に表現できます。"
         },
         {
-          "title": "結果の取得",
+          "title": "Result型の使い方",
           "image": "/illustrations/3d/gear.png",
-          "content": "# switch で分岐\n\n```swift\nswitch result {\ncase .success(let value):\n    print(value)\ncase .failure(let error):\n    print(error)\n}\n```"
+          "content": "# .success と .failure\n\nResult型には2つの状態があります。\n\n- **.success（サクセス）**: 成功。結果の値を持つ\n- **.failure（フェイリャー）**: 失敗。エラー情報を持つ\n\n```swift\n// 成功を返す\nreturn .success(計算結果)\n\n// 失敗を返す\nreturn .failure(エラー)\n```"
+        },
+        {
+          "title": "switch で結果を処理",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 成功・失敗で分岐\n\n```swift\nswitch result {\ncase .success(let value):\n    print(\"成功: \\(value)\")\ncase .failure(let error):\n    print(\"失敗: \\(error)\")\n}\n```\n\n`let value` で成功時の値を、`let error` で失敗時のエラーを取り出せます。"
+        },
+        {
+          "title": "やってみましょう！",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 目標（もくひょう）\n\n数が負（マイナス）なら失敗、そうでなければ成功を返す関数を作りましょう。\n\n1. `MyError` というエラー型を定義\n2. `check` 関数を作る\n3. 負の数なら `.failure`、そうでなければ `.success` を返す"
         }
       ],
       "initialDisplayMode": "holey",
@@ -71,14 +81,19 @@ export const swift3Data = {
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "compactMap とは？",
+          "title": "compactMap（コンパクトマップ）とは？",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# nilを除外して変換\n\n**compactMap** は、mapと同じく変換しますが、nilを除外します。\n\n```swift\nlet strings = [\"1\", \"2\", \"x\", \"3\"]\nlet nums = strings.compactMap { Int($0) }\n// [1, 2, 3]\n```"
+          "content": "# nilを取り除きながら変換\n\n**compactMap（コンパクトマップ）** は、mapと似ていますが、結果が nil のものを自動的に取り除いてくれます。\n\n「compact」は「ぎゅっと詰める」という意味。nilを取り除いて詰めるイメージです。\n\n文字列を数値に変換するとき、変換できない文字は無視したいときに便利です。"
         },
         {
           "title": "map との違い",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# Optional を unwrap\n\n```swift\n// map: [Int?]\nlet a = strings.map { Int($0) }\n\n// compactMap: [Int]\nlet b = strings.compactMap { Int($0) }\n```"
+          "content": "# nilが混ざるかどうか\n\n```swift\nlet strings = [\"1\", \"a\", \"2\"]  // \"a\"は数値に変換できない\n\n// mapの場合: nilが混ざる\nlet a = strings.map { Int($0) }\n// [1, nil, 2]（Int?型の配列）\n\n// compactMapの場合: nilを除外\nlet b = strings.compactMap { Int($0) }\n// [1, 2]（Int型の配列、nilなし）\n```"
+        },
+        {
+          "title": "やってみましょう！",
+          "image": "/illustrations/3d_advanced/comprehension.png",
+          "content": "# 目標（もくひょう）\n\n文字列の配列から、数値に変換できるものだけを取り出しましょう。\n\n- `[\"1\", \"a\", \"2\", \"b\", \"3\"]` を\n- compactMapで `[1, 2, 3]` に変換\n\n「a」や「b」は数値に変換できないので、自動的に除外されます。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -111,14 +126,24 @@ export const swift3Data = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "reduce とは？",
+          "title": "reduce（リデュース）とは？",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# 畳み込み\n\n**reduce** は、初期値と関数で要素を1つにまとめます。\n\n```swift\nlet sum = [1, 2, 3].reduce(0) { $0 + $1 }\n// 6\n```"
+          "content": "# 配列を1つの値にまとめる\n\n**reduce（リデュース）** は、配列の全要素を計算して1つの値にまとめる機能です。\n\n「reduce」は「減らす」という意味。たくさんの要素を1つに減らすイメージです。\n\n例えば、テストの点数リストの合計点を計算するときに使えます。"
         },
         {
-          "title": "様々な集約",
+          "title": "reduce の使い方",
+          "image": "/illustrations/3d_advanced/comprehension.png",
+          "content": "# 初期値と処理を指定\n\n```swift\n配列.reduce(初期値) { 途中の結果, 次の要素 in\n    // 新しい結果を返す\n}\n```\n\n**合計の例：**\n```swift\nlet sum = [1, 2, 3].reduce(0) { $0 + $1 }\n// 0 + 1 = 1\n// 1 + 2 = 3\n// 3 + 3 = 6 （結果）\n```\n\n`$0` は途中の結果、`$1` は次の要素です。"
+        },
+        {
+          "title": "いろいろな集約",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 積や結合\n\n```swift\n// 積\n[1, 2, 3, 4].reduce(1, *)\n\n// 文字列結合\n[\"a\", \"b\", \"c\"].reduce(\"\", +)\n```"
+          "content": "# かけ算や文字列結合も\n\n```swift\n// 全部をかける（積）\n[1, 2, 3, 4].reduce(1) { $0 * $1 }\n// 1 * 1 * 2 * 3 * 4 = 24\n\n// 文字を全部つなげる\n[\"a\", \"b\", \"c\"].reduce(\"\") { $0 + $1 }\n// \"\" + \"a\" + \"b\" + \"c\" = \"abc\"\n```"
+        },
+        {
+          "title": "やってみましょう！",
+          "image": "/illustrations/3d_advanced/comprehension.png",
+          "content": "# 目標（もくひょう）\n\n配列の全要素をかけ算して、積（せき）を求めましょう。\n\n- `[1, 2, 3, 4, 5]` の全要素をかける\n- 初期値は `1`（かけ算なので）\n- 結果は `120`（1*2*3*4*5）になるはず"
         }
       ],
       "initialDisplayMode": "holey",
@@ -151,14 +176,19 @@ export const swift3Data = {
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "lazy とは？",
+          "title": "lazy（レイジー）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 遅延評価\n\n**lazy** を使うと、必要になるまで計算を遅延させます。\n\n```swift\nlet result = (1...1000).lazy.map { $0 * 2 }.first!\n// 全要素を計算せず、最初の1つだけ計算\n```"
+          "content": "# 必要になるまで計算しない\n\n**lazy（レイジー）** は「怠け者」という意味です。\n\n普通、mapやfilterは配列全体を一度に処理します。でもlazyを使うと、本当に必要になるまで計算を先延ばしにします。\n\n100万件のデータがあっても、最初の1件だけ欲しいなら、最初の1件だけ計算すればいいですよね。"
         },
         {
-          "title": "パフォーマンス向上",
+          "title": "lazy の効果",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 大量データの処理\n\n```swift\nlet big = (1...1_000_000).lazy\n    .filter { $0 % 2 == 0 }\n    .map { $0 * 2 }\n    .prefix(5)\n```"
+          "content": "# 効率アップ\n\n```swift\n// 普通のmap: 全部計算してから最初を取る\nlet result = [1, 2, 3, 4, 5].map { $0 * 10 }.first!\n\n// lazy: 最初だけ計算\nlet result = [1, 2, 3, 4, 5].lazy.map { $0 * 10 }.first!\n```\n\n大量のデータを扱うとき、lazyを使うとプログラムが速くなります。"
+        },
+        {
+          "title": "やってみましょう！",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 目標（もくひょう）\n\nlazyを使って、配列の最初の要素だけを10倍しましょう。\n\n1. 配列に `.lazy` をつける\n2. `.map { $0 * 10 }` で10倍\n3. `.first!` で最初の1つを取得\n\n結果は `10`（1 * 10）になります。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -191,14 +221,19 @@ export const swift3Data = {
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "where とは？",
+          "title": "where（ウェア）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 条件を追加\n\n**where** で、for文やswitch文に条件を追加できます。\n\n```swift\nfor n in nums where n > 0 {\n    print(n)\n}\n```"
+          "content": "# 「〜の場合だけ」という条件を追加\n\n**where（ウェア）** は、for文やswitch文に「追加の条件」をつけられる便利な機能です。\n\n「where」は英語で「〜の場所」という意味ですが、プログラミングでは「〜の場合」という条件を表します。\n\nfilterを使わなくても、for文に直接条件をつけられます。"
         },
         {
-          "title": "switch での使用",
+          "title": "for文で使う",
           "image": "/illustrations/3d/gear.png",
-          "content": "# case に条件追加\n\n```swift\nswitch value {\ncase let x where x > 0:\n    print(\"positive\")\ndefault:\n    print(\"other\")\n}\n```"
+          "content": "# 条件に合う要素だけ処理\n\n```swift\nlet nums = [1, -2, 3, -4, 5]\n\n// whereで条件を追加\nfor n in nums where n > 0 {\n    print(n)  // 1, 3, 5 だけ表示\n}\n```\n\n負の数はスキップして、正の数だけ処理されます。"
+        },
+        {
+          "title": "やってみましょう！",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 目標（もくひょう）\n\n配列の中から、正の数（0より大きい数）だけを表示しましょう。\n\n- `[1, -2, 3, -4, 5]` の中から\n- `where n > 0` で正の数だけ選ぶ\n- 結果は `1, 3, 5` が表示される"
         }
       ],
       "initialDisplayMode": "holey",
@@ -233,14 +268,24 @@ export const swift3Data = {
       "orderIndex": 6,
       "tutorialSlides": [
         {
-          "title": "defer とは？",
+          "title": "defer（ディファー）とは？",
           "image": "/illustrations/3d_advanced/concurrency.png",
-          "content": "# スコープ終了時に実行\n\n**defer** は、現在のスコープを出るときに実行される処理を登録します。\n\n```swift\nfunc process() {\n    defer { print(\"cleanup\") }\n    print(\"working\")\n}  // working, cleanup\n```"
+          "content": "# 「後片付け」を予約する\n\n**defer（ディファー）** は、「関数が終わるときに必ず実行する」処理を予約する仕組みです。\n\n「defer」は「延期する」という意味。処理を後回しにして、最後に実行します。\n\n部屋を出るときに「電気を消す」ことを先に予約しておくようなイメージです。"
         },
         {
-          "title": "リソース管理",
+          "title": "defer の実行順序",
+          "image": "/illustrations/3d_advanced/concurrency.png",
+          "content": "# 最後に実行される\n\n```swift\nfunc process() {\n    defer { print(\"後片付け\") }\n    print(\"作業中\")\n}\n\nprocess()\n// 出力:\n// 作業中\n// 後片付け\n```\n\n`defer` の中身は、関数の最後（`}` の直前）で実行されます。"
+        },
+        {
+          "title": "defer が便利な場面",
           "image": "/illustrations/3d/gear.png",
-          "content": "# ファイルのクローズなど\n\n```swift\nfunc readFile() {\n    let file = open()\n    defer { file.close() }\n    // ファイル処理\n}  // 自動的にclose\n```"
+          "content": "# ファイルを閉じるなど\n\n```swift\nfunc readFile() {\n    let file = open()\n    defer { file.close() }  // 必ずファイルを閉じる\n    \n    // ファイルの処理...\n    // エラーが起きても defer は実行される\n}\n```\n\nどんな状況でも必ず実行されるので、後片付け処理に最適です。"
+        },
+        {
+          "title": "やってみましょう！",
+          "image": "/illustrations/3d_advanced/concurrency.png",
+          "content": "# 目標（もくひょう）\n\ndeferを使って「start」の後に「end」と表示する関数を作りましょう。\n\n1. `test` 関数を作る\n2. `defer { print(\"end\") }` を書く\n3. `print(\"start\")` を書く\n\n実行すると「start」→「end」の順に表示されます。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -277,14 +322,24 @@ export const swift3Data = {
       "orderIndex": 7,
       "tutorialSlides": [
         {
-          "title": "associatedtype とは？",
+          "title": "associatedtype（アソシエイテッドタイプ）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# プロトコルの関連型\n\n**associatedtype** で、プロトコルにジェネリックな型を定義できます。\n\n```swift\nprotocol Container {\n    associatedtype Item\n    func add(_ item: Item)\n}\n```"
+          "content": "# プロトコルで「型を後で決める」仕組み\n\n**associatedtype（アソシエイテッドタイプ）** は、プロトコルの中で「型を後から決める」ための仕組みです。\n\n「associated」は「関連した」という意味。プロトコルに関連する型を表します。\n\n例えば「入れ物」というプロトコルで、中身の型（数字なのか文字なのか）は後から決めたいときに使います。"
         },
         {
-          "title": "実装側で型を決定",
+          "title": "associatedtype の定義",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 具体的な型を指定\n\n```swift\nstruct IntBox: Container {\n    typealias Item = Int\n    func add(_ item: Int) { }\n}\n```"
+          "content": "# プロトコル内で宣言\n\n```swift\nprotocol Container {\n    associatedtype Item  // 「Item」という型を後で決める\n    func add(_ item: Item)\n}\n```\n\n`Item` が何の型かは、このプロトコルに準拠する型が決めます。"
+        },
+        {
+          "title": "準拠する側で型を決める",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 実際の型を指定\n\n```swift\n// 整数を入れるコンテナ\nstruct IntBox: Container {\n    func add(_ item: Int) { }  // ItemはIntに決定\n}\n\n// 文字列を入れるコンテナ\nstruct StringBox: Container {\n    func add(_ item: String) { }  // ItemはStringに決定\n}\n```"
+        },
+        {
+          "title": "やってみましょう！",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 目標（もくひょう）\n\nスタック（積み重ね）のプロトコルを作りましょう。\n\n1. `Stack` プロトコルを作る\n2. `associatedtype Element` を宣言\n3. `push` メソッドを宣言\n4. `IntStack` 構造体で準拠を実装"
         }
       ],
       "initialDisplayMode": "holey",
@@ -341,14 +396,24 @@ export const swift3Data = {
       "orderIndex": 8,
       "tutorialSlides": [
         {
-          "title": "throws とは？",
+          "title": "throws（スローズ）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# エラーを投げる\n\n**throws** 関数は、エラーを投げる可能性があります。\n\n```swift\nfunc divide(_ a: Int, _ b: Int) throws -> Int {\n    if b == 0 { throw MyError.divByZero }\n    return a / b\n}\n```"
+          "content": "# 「エラーを投げる可能性がある」宣言\n\n**throws（スローズ）** は、関数が「エラーを投げる可能性がある」ことを宣言します。\n\n「throw」は「投げる」という意味。野球でボールを投げるように、問題が起きたときにエラーを「投げ」ます。\n\n例えば、0で割り算しようとしたときにエラーを投げるような関数です。"
         },
         {
-          "title": "try で呼び出し",
+          "title": "throws関数の作り方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# -> の前に throws\n\n```swift\nfunc divide(_ a: Int, _ b: Int) throws -> Int {\n    if b == 0 {\n        throw MyError.divByZero  // エラーを投げる\n    }\n    return a / b\n}\n```\n\n`throws` を書くことで「この関数はエラーを投げるかもしれないよ」と伝えます。"
+        },
+        {
+          "title": "try と do-catch",
           "image": "/illustrations/3d_advanced/safety_net.png",
-          "content": "# エラーハンドリング\n\n```swift\ndo {\n    let result = try divide(10, 0)\n} catch {\n    print(error)\n}\n```"
+          "content": "# エラーを受け止める\n\n```swift\ndo {\n    let result = try divide(10, 0)  // tryで呼び出し\n    print(result)\n} catch {\n    print(\"エラー発生: \\(error)\")  // エラーを処理\n}\n```\n\n- **try**: 「エラーが起きるかも」と覚悟して呼び出す\n- **do-catch**: エラーが起きたときの処理を書く"
+        },
+        {
+          "title": "やってみましょう！",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 目標（もくひょう）\n\n数が負のときにエラーを投げる関数を作りましょう。\n\n1. `MyError` エラー型を定義（invalid case）\n2. `check` 関数を `throws` で作る\n3. 負の数なら `throw` でエラー\n4. `try` と `do-catch` で呼び出す"
         }
       ],
       "initialDisplayMode": "holey",
@@ -401,14 +466,24 @@ export const swift3Data = {
       "orderIndex": 9,
       "tutorialSlides": [
         {
-          "title": "Set とは？",
+          "title": "Set（セット）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 重複なしのコレクション\n\n**Set** は、重複した要素を持たないコレクションです。\n\n```swift\nvar set: Set = [1, 2, 2, 3, 3, 3]\n// {1, 2, 3}\n```"
+          "content": "# 重複しないデータの集まり\n\n**Set（セット）** は、同じ値を持たないデータの集まりです。\n\n配列と違って、同じ値を入れても1つにまとめられます。\n\nクラスの出席番号のように、同じ番号が2つあるとおかしいですよね。そういうデータにSetを使います。"
         },
         {
-          "title": "集合演算",
+          "title": "Setの特徴",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 和、積、差\n\n```swift\nlet a: Set = [1, 2, 3]\nlet b: Set = [2, 3, 4]\na.union(b)        // {1, 2, 3, 4}\na.intersection(b) // {2, 3}\na.subtracting(b)  // {1}\n```"
+          "content": "# 重複が自動的に除かれる\n\n```swift\nvar set: Set = [1, 2, 2, 3, 3, 3]\nprint(set.count)  // 3（重複は1つになる）\n// setの中身は {1, 2, 3}\n```\n\n2を2回、3を3回入れても、それぞれ1つずつになります。"
+        },
+        {
+          "title": "集合演算（しゅうごうえんざん）",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 数学の集合と同じ計算ができる\n\n```swift\nlet a: Set = [1, 2, 3]\nlet b: Set = [2, 3, 4]\n\na.union(b)        // 合わせる → {1, 2, 3, 4}\na.intersection(b) // 共通部分 → {2, 3}\na.subtracting(b)  // 差（aだけ） → {1}\n```"
+        },
+        {
+          "title": "やってみましょう！",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 目標（もくひょう）\n\n重複のあるデータをSetに入れて、実際の要素数を確認しましょう。\n\n- `[1, 2, 2, 3, 3, 3]` をSetに入れる\n- `.count` で要素数を表示\n- 答えは `3` になる（重複が除かれるから）"
         }
       ],
       "initialDisplayMode": "holey",
@@ -439,14 +514,24 @@ export const swift3Data = {
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "mutating とは？",
+          "title": "mutating（ミューテイティング）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 構造体を変更するメソッド\n\n**mutating** をつけると、構造体のメソッドで自身を変更できます。\n\n```swift\nstruct Point {\n    var x: Int\n    mutating func moveBy(dx: Int) {\n        x += dx\n    }\n}\n```"
+          "content": "# 「自分を変更する」宣言\n\n**mutating（ミューテイティング）** は、構造体のメソッドで「自分自身を変更します」と宣言するキーワードです。\n\n「mutate」は「変化する」という意味。自分自身を変化させるメソッドに必要です。\n\n構造体は「値型」なので、普通は自分自身を変更できません。でも `mutating` をつけると変更できるようになります。"
         },
         {
-          "title": "なぜ必要？",
+          "title": "mutating の使い方",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 値型の特性\n\n構造体は値型なので、デフォルトではメソッド内で自身を変更できません。"
+          "content": "# func の前に mutating\n\n```swift\nstruct Counter {\n    var count = 0\n    \n    mutating func increment() {\n        count += 1  // 自分のcountを変更\n    }\n}\n```\n\n`mutating` がないと、`count += 1` でエラーになります。"
+        },
+        {
+          "title": "なぜ mutating が必要？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 構造体は「値型」だから\n\n構造体は、変数にコピーすると別々の値になります（値型）。\n\n自分自身を変更するのは特別なことなので、「このメソッドは自分を変えますよ」と宣言する必要があります。\n\nクラスは「参照型」なので mutating は不要です。"
+        },
+        {
+          "title": "やってみましょう！",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 目標（もくひょう）\n\nカウンターの構造体を作って、数を増やせるようにしましょう。\n\n1. `Counter` 構造体を作る\n2. `count` プロパティを持つ\n3. `mutating func increment()` で1増やす\n4. 2回呼び出して `2` と表示されるか確認"
         }
       ],
       "initialDisplayMode": "holey",

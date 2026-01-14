@@ -13,14 +13,14 @@ export const rust4Data = {
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "トレイトとは？",
+          "title": "トレイトとは？（復習）",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 共通のインターフェース\n\n**トレイト** は、型が持つべきメソッドを定義します。\n\n```rust\ntrait Greet {\n    fn greet(&self) -> String;\n}\n```"
+          "content": "# 「できること」の約束\n\n**トレイト** は、型が持つべきメソッドを定義する仕組みです。\n\n**たとえば：**\n- 「あいさつできる」トレイト → greet() メソッドを持つ\n- 「表示できる」トレイト → display() メソッドを持つ\n\n**コード例：**\n```rust\ntrait Greet {\n    fn greet(&self) -> String;  // メソッドの「約束」\n}\n```\n\nこれは「Greetできる型は、greet()メソッドを持つ」という約束です。"
         },
         {
-          "title": "実装",
+          "title": "トレイトの実装",
           "image": "/illustrations/3d/gear.png",
-          "content": "# impl で実装\n\n```rust\nstruct Person { name: String }\n\nimpl Greet for Person {\n    fn greet(&self) -> String {\n        format!(\"Hello, {}\", self.name)\n    }\n}\n```"
+          "content": "# impl で約束を守る\n\n構造体にトレイトを実装すると、その構造体は「約束を守る」ことになります。\n\n**コード例：**\n```rust\nstruct Person { name: String }\n\nimpl Greet for Person {\n    fn greet(&self) -> String {\n        format!(\"Hello, {}\", self.name)\n    }\n}\n```\n\n**読み方：**\n- `impl Greet for Person` → 「PersonはGreetを実装する」\n- これでPersonは「あいさつできる」ようになった！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -79,14 +79,14 @@ export const rust4Data = {
       "orderIndex": 2,
       "tutorialSlides": [
         {
-          "title": "derive とは？",
+          "title": "derive（デライブ）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 自動実装\n\n**#[derive(...)]** で標準トレイトを自動実装できます。\n\n```rust\n#[derive(Debug, Clone, PartialEq)]\nstruct Point {\n    x: i32,\n    y: i32,\n}\n```"
+          "content": "# トレイトを「自動で」実装\n\n**#[derive(...)]** を使うと、よく使うトレイトを自分で書かなくても自動で実装してくれます。\n\n**たとえば：**\n構造体を `println!` で表示したいとき、普通は Display トレイトを実装する必要がありますが、`#[derive(Debug)]` を書くだけでOK！\n\n**コード例：**\n```rust\n#[derive(Debug)]  // Debug トレイトを自動実装\nstruct Point {\n    x: i32,\n    y: i32,\n}\n\nlet p = Point { x: 1, y: 2 };\nprintln!(\"{:?}\", p);  // Point { x: 1, y: 2 }\n```"
         },
         {
-          "title": "よく使うトレイト",
+          "title": "よく使う derive トレイト",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 標準 derive\n\n```rust\nDebug     // {:?} で表示\nClone     // .clone() で複製\nCopy      // コピーセマンティクス\nPartialEq // == で比較\nDefault   // デフォルト値\n```"
+          "content": "# 覚えておくと便利な5つ\n\n**よく使うderiveトレイト：**\n```rust\nDebug     // {:?} でデバッグ表示できる\nClone     // .clone() でコピーを作れる\nCopy      // 代入時に自動でコピー（小さい型向け）\nPartialEq // == で比較できる\nDefault   // 初期値を自動で作れる\n```\n\n**複数指定もOK：**\n```rust\n#[derive(Debug, Clone, PartialEq)]\nstruct User {\n    name: String,\n    age: u32,\n}\n```\n\n`Debug` は特によく使います。デバッグ時に構造体の中身を見れて便利！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -133,14 +133,14 @@ export const rust4Data = {
       "orderIndex": 3,
       "tutorialSlides": [
         {
-          "title": "Box とは？",
+          "title": "Box（ボックス）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# ヒープアロケーション\n\n**Box<T>** は、データをヒープに格納するスマートポインタです。\n\n```rust\nlet b = Box::new(5);\nprintln!(\"{}\", *b);\n```"
+          "content": "# データを「ヒープ」に置く箱\n\n**Box<T>** は、データを「ヒープ」という特別な場所に置くための箱です。\n\n**メモリの2つの場所：**\n- **スタック**：小さくて速い。サイズが決まっているデータ向け\n- **ヒープ**：大きくて柔軟。サイズが大きいor変わるデータ向け\n\n**コード例：**\n```rust\nlet b = Box::new(5);  // 5をヒープに置く\nprintln!(\"{}\", *b);   // *で中身を取り出す → 5\n```\n\n`*` は「箱を開けて中身を見る」操作です。"
         },
         {
-          "title": "使いどころ",
+          "title": "いつ使う？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 再帰型など\n\n```rust\n// コンパイル時にサイズ不明な型\nenum List {\n    Cons(i32, Box<List>),\n    Nil,\n}\n```"
+          "content": "# サイズが決まらないとき\n\nBoxは、コンパイル時にサイズがわからない型に使います。\n\n**たとえば再帰的な型：**\n```rust\n// リストは「値 + 次のリスト」の繰り返し\nenum List {\n    Cons(i32, Box<List>),  // Boxで次を指す\n    Nil,                   // 終わり\n}\n```\n\n**なぜBoxが必要？**\n- `List` の中に `List` がある → 無限に大きくなる？\n- `Box` を使うと、サイズが固定（ポインタのサイズ）になる\n\n「中身」ではなく「中身への矢印」を持つイメージです。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -175,14 +175,14 @@ export const rust4Data = {
       "orderIndex": 4,
       "tutorialSlides": [
         {
-          "title": "Rc とは？",
+          "title": "Rc（アールシー）とは？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 参照カウント\n\n**Rc<T>** は、複数の所有者でデータを共有できます。\n\n```rust\nuse std::rc::Rc;\n\nlet a = Rc::new(5);\nlet b = Rc::clone(&a);\n```"
+          "content": "# 複数の「持ち主」を許可する仕組み\n\n**Rc<T>** は「Reference Counted（参照カウント）」の略で、複数の所有者でデータを共有できます。\n\n**普通の所有権：**\n1人だけが持ち主。渡したら元の人は使えない。\n\n**Rc を使うと：**\n複数人が同じデータの「持ち主」になれる！\n\n**コード例：**\n```rust\nuse std::rc::Rc;\n\nlet a = Rc::new(5);       // Rcでラップ\nlet b = Rc::clone(&a);    // bも持ち主になる\n// a も b も使える！\n```"
         },
         {
-          "title": "参照カウントの確認",
+          "title": "参照カウントの仕組み",
           "image": "/illustrations/3d_advanced/pointer_arrow.png",
-          "content": "# strong_count\n\n```rust\nprintln!(\"{}\", Rc::strong_count(&a)); // 2\n```"
+          "content": "# 「何人が持っているか」を数える\n\nRcは「今何人がこのデータを持っているか」を数えています。\n\n**コード例：**\n```rust\nlet a = Rc::new(5);\nprintln!(\"{}\", Rc::strong_count(&a));  // 1\n\nlet b = Rc::clone(&a);\nprintln!(\"{}\", Rc::strong_count(&a));  // 2\n```\n\n**いつデータが消える？**\n- カウントが0になったとき（誰も持っていないとき）\n- 最後の持ち主がいなくなると自動で片付けられる\n\n`Rc::clone` は「持ち主を1人増やす」操作です。"
         }
       ],
       "initialDisplayMode": "holey",
@@ -223,14 +223,14 @@ export const rust4Data = {
       "orderIndex": 5,
       "tutorialSlides": [
         {
-          "title": "HashMap とは？",
+          "title": "HashMap（ハッシュマップ）とは？",
           "image": "/illustrations/3d_advanced/comprehension.png",
-          "content": "# キーと値の辞書\n\n**HashMap** は、キーと値のペアを格納します。\n\n```rust\nuse std::collections::HashMap;\n\nlet mut scores = HashMap::new();\nscores.insert(\"Blue\", 10);\n```"
+          "content": "# 名前で引ける「辞書」\n\n**HashMap** は、「キー（名前）」と「値（データ）」をセットで保存する辞書です。\n\n**たとえば：**\n- 「青チーム」→ 10点\n- 「赤チーム」→ 15点\n\n**コード例：**\n```rust\nuse std::collections::HashMap;\n\nlet mut scores = HashMap::new();\nscores.insert(\"Blue\", 10);   // 追加\nscores.insert(\"Red\", 15);    // 追加\n```\n\n`use` で機能を読み込んでから使います。"
         },
         {
           "title": "値の取得",
           "image": "/illustrations/3d/gear.png",
-          "content": "# get メソッド\n\n```rust\nif let Some(score) = scores.get(\"Blue\") {\n    println!(\"{}\", score);\n}\n```"
+          "content": "# get で安全に取り出す\n\n`get()` メソッドで値を取り出せます。見つからない可能性があるので、`Option` が返ってきます。\n\n**コード例：**\n```rust\n// getはOption<&V>を返す\nif let Some(score) = scores.get(\"Blue\") {\n    println!(\"青チームは{}点\", score);\n}\n```\n\n**ポイント：**\n- キーがあれば `Some(値)` が返る\n- キーがなければ `None` が返る\n- `if let` で安全に取り出せる\n\n存在しないキーでアクセスしてもプログラムが落ちない！"
         }
       ],
       "initialDisplayMode": "holey",
@@ -467,14 +467,14 @@ export const rust4Data = {
       "orderIndex": 10,
       "tutorialSlides": [
         {
-          "title": "enumerate とは？",
+          "title": "enumerate（イニュメレート）とは？",
           "image": "/illustrations/3d_advanced/union_funnel.png",
-          "content": "# インデックスと要素\n\n**enumerate** は、(インデックス, 要素) のタプルを返します。\n\n```rust\nfor (i, x) in vec![\"a\", \"b\", \"c\"].iter().enumerate() {\n    println!(\"{}: {}\", i, x);\n}\n```"
+          "content": "# 番号と要素を一緒にもらう\n\n**enumerate** は、「何番目か」と「その要素」をセットで取り出せるメソッドです。\n\n**たとえば：**\n- 0番目: りんご\n- 1番目: バナナ\n- 2番目: みかん\n\n**コード例：**\n```rust\nfor (i, x) in vec![\"a\", \"b\", \"c\"].iter().enumerate() {\n    println!(\"{}: {}\", i, x);\n}\n// 0: a\n// 1: b\n// 2: c\n```"
         },
         {
-          "title": "使用例",
+          "title": "いつ使う？",
           "image": "/illustrations/3d/gear.png",
-          "content": "# 位置情報が必要なとき\n\n```rust\nlet v = vec![10, 20, 30];\nfor (idx, val) in v.iter().enumerate() {\n    println!(\"Index {}: {}\", idx, val);\n}\n```"
+          "content": "# 「何番目か」が必要なとき\n\n番号（インデックス）と要素の両方が必要なときに便利です。\n\n**コード例：**\n```rust\nlet v = vec![10, 20, 30];\nfor (idx, val) in v.iter().enumerate() {\n    println!(\"{}番目の値は{}\", idx, val);\n}\n// 0番目の値は10\n// 1番目の値は20\n// 2番目の値は30\n```\n\n**ポイント：**\n- `(i, x)` でタプル（2つのセット）を受け取る\n- `i` にインデックス、`x` に要素が入る\n- インデックスは0から始まる"
         }
       ],
       "initialDisplayMode": "holey",
