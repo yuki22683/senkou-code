@@ -709,7 +709,7 @@ export default function ExercisePage() {
               参考のため正解コードを表示します
             </DialogDescription>
           </DialogHeader>
-          <div className="py-4 overflow-hidden">
+          <div className="py-4 overflow-x-hidden max-h-[50vh] sm:max-h-none overflow-y-auto">
             {exercise.correct_code ? (
               <SyntaxHighlightedCode
                 code={exercise.correct_code}
