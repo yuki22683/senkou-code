@@ -447,81 +447,30 @@ export function MobileCodeEditor({
     // インデント位置より後ろにカーソルがある場合のみ削除を許可
     if (cursor.col > minCols[cursor.line]) {
       const currentLine = lines[cursor.line] || "";
-      const textBefore = currentLine.slice(0, cursor.col);
       const textAfter = currentLine.slice(cursor.col);
-      let deleteCount = 1;
 
-      // 1. まず末尾の文字列リテラルをチェック (e.g. 'Python' or "Hello")
-      const stringMatch = textBefore.match(/(['"])[^'"]+\1$/);
-      if (stringMatch) {
-        deleteCount = stringMatch[0].length;
-      } else {
-        // 2. 末尾の空白をチェック
-        const trailingSpace = textBefore.match(/\s+$/);
-        if (trailingSpace) {
-          deleteCount = trailingSpace[0].length;
+      // トークナイザーで境界を計算
+      const tokens = tokenize(currentLine, language);
+      const boundaries: number[] = [0];
+      let pos = 0;
+      for (const token of tokens) {
+        pos += token.length;
+        boundaries.push(pos);
+      }
+
+      // カーソル位置から最も近い前の境界を探す
+      let prevBoundary = 0;
+      for (const boundary of boundaries) {
+        if (boundary < cursor.col) {
+          prevBoundary = boundary;
         } else {
-          // 3. 末尾の英数字列から既知の単語（キーワード/組み込み関数）を探す
-          const trailingIdentifier = textBefore.match(/[a-zA-Z_][a-zA-Z0-9_]*$/);
-          if (trailingIdentifier) {
-            const identifier = trailingIdentifier[0];
-            const keywords = config.keywords;
-            const builtins = config.builtins;
-            const knownWords = [...keywords, ...builtins];
-
-            // 末尾から既知の単語を探す（最長マッチ）
-            let foundLength = 0;
-            for (const word of knownWords) {
-              if (identifier.endsWith(word) && word.length > foundLength) {
-                foundLength = word.length;
-              }
-            }
-
-            if (foundLength > 0) {
-              // 既知の単語が見つかった（末尾）
-              deleteCount = foundLength;
-            } else {
-              // 先頭から既知の単語を探す（最長マッチ）
-              // 例: selfwidth → self + width なので width だけ削除
-              let prefixLength = 0;
-              for (const word of knownWords) {
-                if (identifier.startsWith(word) && word.length > prefixLength) {
-                  prefixLength = word.length;
-                }
-              }
-
-              if (prefixLength > 0 && prefixLength < identifier.length) {
-                // 既知の単語の後ろの部分を削除
-                deleteCount = identifier.length - prefixLength;
-              } else {
-                // 既知の単語がない場合は、トークナイザーで境界を探す
-                const tokens = tokenize(currentLine, language);
-                const boundaries: number[] = [0];
-                let pos = 0;
-                for (const token of tokens) {
-                  pos += token.length;
-                  boundaries.push(pos);
-                }
-
-                let prevBoundary = 0;
-                for (const boundary of boundaries) {
-                  if (boundary < cursor.col) {
-                    prevBoundary = boundary;
-                  } else {
-                    break;
-                  }
-                }
-
-                const targetCol = Math.max(prevBoundary, minCols[cursor.line]);
-                deleteCount = cursor.col - targetCol;
-              }
-            }
-          } else {
-            // 4. その他の文字は1文字ずつ削除
-            deleteCount = 1;
-          }
+          break;
         }
       }
+
+      // インデントを越えないように調整
+      const targetCol = Math.max(prevBoundary, minCols[cursor.line]);
+      let deleteCount = cursor.col - targetCol;
 
       // 削除するものがない場合は1文字削除（フォールバック）
       if (deleteCount <= 0) {
@@ -737,7 +686,7 @@ export function MobileCodeEditor({
     <div className="flex flex-col h-full overflow-hidden" style={{ backgroundColor: SYNTAX_COLORS.background, color: SYNTAX_COLORS.foreground }}>
       <div
         ref={containerRef}
-        className="overflow-y-scroll overflow-x-auto p-0 sm:p-4 font-mono text-sm leading-6 flex-1 max-h-[50vh] sm:max-h-none min-h-0 sm:min-h-[400px] lg:min-h-0"
+        className="overflow-y-scroll overflow-x-auto p-0 sm:p-4 font-mono text-sm leading-6 flex-1 max-h-[50vh] sm:max-h-none min-h-[7.5rem] sm:min-h-[400px] lg:min-h-[7.5rem]"
         style={{ scrollbarWidth: 'thin', scrollbarColor: `${SYNTAX_COLORS.buttonBorder} ${SYNTAX_COLORS.gutterBackground}` }}
         onClick={() => {}}
       >
