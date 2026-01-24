@@ -545,7 +545,7 @@ export default function ExercisePage() {
             </div>
 
             {/* エディタ */}
-            <div className="order-2 flex flex-col min-h-[500px] sm:min-h-[700px] lg:min-h-0 lg:h-full">
+            <div className="order-2 flex flex-col min-h-[200px] sm:min-h-[700px] lg:min-h-0 lg:h-full">
               <div className="bg-white rounded-t-lg border border-b-0 p-2 sm:p-3 flex items-center justify-between flex-shrink-0" style={{ height: '50px' }}>
                 <div className="flex items-center gap-2">
                   <FileCode className="w-4 h-4 text-gray-500" />

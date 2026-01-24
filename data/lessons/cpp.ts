@@ -330,8 +330,7 @@ export const cppData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "#include <iostream>\nvoid greet() {\n    std::cout << \"Hello\" << std::endl;\n}
-int main() {\n    // 関数を実行する\n    greet();\n    return 0;\n}",
+      "correctCode": "#include <iostream>\nvoid greet() {\n    std::cout << \"Hello\" << std::endl;\n}\nint main() {\n    // 関数を実行する\n    greet();\n    return 0;\n}",
       "holeyCode": "#include <iostream>\nvoid greet() {\n    std::cout << \"Hello\" << std::endl;\n}\nint main() {\n    // greet で関数を呼び出す\n    ___();\n    return 0;\n}",
       "correctLines": ["#include <iostream>", "void greet() {", "    std::cout << \"Hello\" << std::endl;", "}", "int main() {", "    greet();", "    return 0;", "}"],
       "lineHints": [null, "greet という名前の関数を定義します。", null, "関数の終わりです。", null, "greet(); と入力して、関数を実行します。"],

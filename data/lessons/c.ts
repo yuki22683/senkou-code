@@ -25,20 +25,30 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // 画面にメッセージを出す関数\n    printf(\"Hello, World!\\n\");\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    // Hello, World! と入力\n    printf(\"___\\n\");\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// プログラムのエントリーポイントを定義する\n___\n    // printf関数でHello, World!を表示する\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
+        "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
+        "// プログラムのエントリーポイントを定義する",
         "int main() {",
+        "    // printf関数でHello, World!を表示する",
         "    printf(\"Hello, World!\\n\");",
+        "    // 正常終了を示す値0を返す",
         "    return 0;",
+        "// 関数の終わり",
         "}"
       ],
       "lineHints": [
-        "関数を使えるように準備します。",
-        "ここからプログラムがスタートします、という合図です。",
-        "printf を使って、() の中の文字を画面に出します。",
-        "プログラムが無事に終わったことを報告します。",
-        "プログラムの終わりです。"
+        null,
+        "#include <stdio.h> で標準入出力を読み込みます。",
+        null,
+        "int main() { でプログラムの開始を宣言します。",
+        null,
+        "printf関数で文字列を表示します。",
+        null,
+        "return 0; で正常終了を返します。",
+        null,
+        "} で関数を閉じます。"
       ],
       "candidates": {
         "functions": [
@@ -74,31 +84,36 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // int（数字）ラベルのはこを作る\n    int x = 10;\n    // 中身を表示する\n    printf(\"%d\\n\", x);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    // 10 と入力\n    int x = ___ ;\n    // x と入力\n    printf(\"%d\\n\", ___);\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// プログラムのエントリーポイントを定義する\n___\n    // int型の変数xに10を代入する\n    ___\n    // xの値を%d形式で表示する\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
+        "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
+        "// プログラムのエントリーポイントを定義する",
         "int main() {",
+        "    // int型の変数xに10を代入する",
         "    int x = 10;",
-        "    printf(\" %d\\n\", x);",
+        "    // xの値を%d形式で表示する",
+        "    printf(\"%d\\n\", x);",
+        "    // 正常終了を示す値0を返す",
         "    return 0;",
-        ""
+        "// 関数の終わり",
+        "}"
       ],
       "lineHints": [
-        "",
-        "",
-        "x = 10 と入力しましょう。",
-        "はこの名前 x を指定して、中身を表示します。",
-        "",
-        ""
+        null,
+        "#include <stdio.h> で標準入出力を読み込みます。",
+        null,
+        "int main() { でプログラムの開始を宣言します。",
+        null,
+        "int x = 10; で変数xに10を代入します。",
+        null,
+        "printf(\"%d\\n\", x); で変数xの値を表示します。",
+        null,
+        "return 0; で正常終了を返します。",
+        null,
+        "} で関数を閉じます。"
       ],
-      "candidates": {
-        "variables": [
-          "x"
-        ],
-        "numbers": [
-          "10"
-        ]
-      },
+      "candidates": {},
       "testCases": [
         {
           "input": "",
@@ -125,7 +140,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // はこに数字を入れる\n    int a = 5;\n    int b = 3;\n    // たし算した結果を表示する\n    printf(\"%d\\n\", a + b);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    int a = 5;\n    int b = 3;\n    // + でたし算\n    printf(\"%d\\n\", a ___ b);\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// プログラムのエントリーポイントを定義する\n___\n    // int型の変数aに5を代入する\n    ___\n    // int型の変数bに3を代入する\n    ___\n    // a + b の結果を表示する\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -175,7 +190,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // 10 を 3 で割ったあまりを出力する\n    printf(\"%d\\n\", 10 % 3);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    // 10 を 3 で割ったあまりを出力する\n    printf(\"%d\\n\", 10 ___ 3);\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// プログラムのエントリーポイントを定義する\n___\n    // 10 % 3（10を3で割った余り）を表示する\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -219,7 +234,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // scoreに50を入れる\n    int score = 50;\n    // 10点プラスする\n    score += 10;\n    // 結果を表示\n    printf(\"%d\\n\", score);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    // scoreに50を入れる\n    int score = ___ ;\n    // 10点プラスする\n    score ___ 10;\n    // 結果を表示\n    printf(\"%d\\n\", score);\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// プログラムのエントリーポイントを定義する\n___\n    // int型の変数scoreに50を代入する\n    ___\n    // scoreに10を加算する（score += 10）\n    ___\n    // scoreの値を表示する\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -268,7 +283,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // ageに10を入れる\n    int age = 10;\n    // 文章の中に中身を表示する\n    printf(\"私は %d 歳です\\n\", age);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    // ageに10を入れる\n    int age = ___ ;\n    // age と入力\n    printf(\"私は %d 歳です\\n\", ___);\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// プログラムのエントリーポイントを定義する\n___\n    // int型の変数ageに10を代入する\n    ___\n    // 「私は○歳です」と表示（○にageの値）\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -316,7 +331,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int nums[] = {10, 20};\n    // 2番目（番号は1）を出す\n    printf(\"%d\\n\", nums[1]);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    int nums[] = {10, 20};\n    // 2番目の要素の番号（1）を入力\n    printf(\"%d\\n\", nums[___]);\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// プログラムのエントリーポイントを定義する\n___\n    // int型配列numsに{10, 20}を代入する\n    ___\n    // nums[1]（2番目の要素）を表示する\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -364,7 +379,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int score = 100;\n    if (score > 80) {\n        printf(\"Pass\\n\");\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    // scoreに100を入れる\n    int score = ___ ;\n    // > で「より大きい」を比較\n    if (score ___ 80) {\n        // メッセージ（'Pass'）\n        printf(\"___\\n\");\n    }\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// プログラムのエントリーポイントを定義する\n___\n    // int型の変数scoreに100を代入する\n    ___\n    // もしscoreが80より大きければ\n    ___\n        // Passと表示する\n        ___\n    // if文の終わり\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -415,7 +430,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    int x = 5;\n    if (x > 10) {\n        printf(\"Big\\n\");\n    } else {\n        printf(\"Small\\n\");\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    // xに5を入れる\n    int x = ___ ;\n    // 10より大きいかを比較する演算子\n    if (x ___ 10) {\n        // 10より大きいときのメッセージ（'Big'）\n        printf(\"___\\n\");\n    // else で「それ以外」\n    } ___ {\n        // それ以外のメッセージ（'Small'）\n        printf(\"___\\n\");\n    }\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// プログラムのエントリーポイントを定義する\n___\n    // int型の変数xに5を代入する\n    ___\n    // もしxが10より大きければ\n    ___\n        // Bigと表示する\n        ___\n    // それ以外の場合\n    ___\n        // Smallと表示する\n        ___\n    // if-else文の終わり\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -469,22 +484,28 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    // scoreに85を入れる\n    int score = 85;\n    // 80以上 かつ 100以下 ならメッセージを出す\n    if (score >= 80 && score <= 100) {\n        printf(\"Pass\\n\");\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    // scoreに85を入れる\n    int score = ___ ;\n    // 80以上 かつ 100以下 ならメッセージを出す\n    if (score >= 80 ___ score <= 100) {\n        printf(\"___\\n\");\n    }\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// プログラムのエントリーポイントを定義する\n___\n    // int型の変数scoreに85を代入する\n    ___\n    // もしscoreが80以上かつ100以下なら\n    ___\n        // Passと表示する\n        ___\n    // if文の終わり\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
+        "    // scoreに85を入れる",
         "    int score = 85;",
+        "    // 80以上 かつ 100以下 ならメッセージを出す",
         "    if (score >= 80 && score <= 100) {",
+        "        // 結果を出力",
         "        printf(\"Pass\\n\");",
         "    }",
         "    return 0;",
-        ""
+        "}"
       ],
       "lineHints": [
         null,
         null,
+        null,
         "85 と入力しましょう。",
+        null,
         "両方の条件を満たすので && を使います。",
+        null,
         "Pass と入力しましょう。",
         null,
         null,
@@ -521,7 +542,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nint main() {\n    for (int i = 0; i < 3; i++) {\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nint main() {\n    // i++ で1つ増やす\n    for (int i = 0; i < 3; ___ ) {\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// プログラムのエントリーポイントを定義する\n___\n    // iを0から3未満まで1ずつ増やしながら繰り返す\n    ___\n        // iの値を表示する\n        ___\n    // for文の終わり\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
         "#include <stdio.h>",
         "int main() {",
@@ -569,7 +590,7 @@ export const cData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "#include <stdio.h>\nstruct Point {\n    int x;\n    int y;\n};\nint main() {\n    struct Point p = {10, 20};\n    printf(\"%d\\n\", p.x);\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nstruct Point {\n    int x;\n    int y;\n};\nint main() {\n    struct Point p = {10, 20};\n    // x でメンバにアクセス\n    printf(\"%d\\n\", p.___ );\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// 構造体Pointを定義する\n___\n    // int型のメンバxを宣言する\n    ___\n    // int型のメンバyを宣言する\n    ___\n// 構造体定義の終わり\n___\n// プログラムのエントリーポイントを定義する\n___\n    // Point型の変数pを{10, 20}で初期化する\n    ___\n    // p.xの値を表示する\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
         "#include <stdio.h>",
         "struct Point {",
@@ -621,10 +642,8 @@ export const cData = {
         }
       ],
       "initialDisplayMode": "holey",
-      "correctCode": "#include <stdio.h>\nvoid greet() {\n    printf(\"Hello\\n\");\n}
-int main() {\n    // 関数を実行する\n    greet();\n    return 0;\n}",
-      "holeyCode": "#include <stdio.h>\nvoid greet() {\n    printf(\"Hello\\n\");\n}
-int main() {\n    // greet で関数を呼び出す\n    ___();\n    return 0;\n}",
+      "correctCode": "#include <stdio.h>\nvoid greet() {\n    printf(\"Hello\\n\");\n}\nint main() {\n    // 関数を実行する\n    greet();\n    return 0;\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\n___\n// void型のgreet関数を定義する\n___\n    // Helloと表示する\n    ___\n// greet関数の終わり\n___\n// プログラムのエントリーポイントを定義する\n___\n    // greet関数を呼び出す\n    ___\n    // 正常終了を示す値0を返す\n    ___\n// 関数の終わり\n___",
       "correctLines": [
         "#include <stdio.h>",
         "void greet() {",

@@ -422,7 +422,7 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // score に 100 を入れる\n        int score = 100;\n        // > で80より大きいか比較する\n        if (score > 80) {\n            // ごうかく！ と表示する\n            System.out.println(\"ごうかく！\");\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // score に 100 を入れる\n        int score = ___ ;\n        // > で80より大きいか比較する\n        if (score ___ 80) {\n            // ごうかく！ と表示する\n            System.out.println(\"___");\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // score に 100 を入れる\n        int score = ___ ;\n        // > で80より大きいか比較する\n        if (score ___ 80) {\n            // ごうかく！ と表示する\n            System.out.println(\"___\");\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",
@@ -451,7 +451,7 @@ export const javaData = {
       ],
       "candidates": {
         "operators": [
-          ">
+          ">"
         ],
         "strings": [
           "ごうかく！"
@@ -483,7 +483,7 @@ export const javaData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // age に 10 を入れる\n        int age = 10;\n        // 20さい以上かどうかで分ける\n        if (age >= 20) {\n            System.out.println(\"おとな\");\n        // else でそれ以外の場合\n        } else {\n            // こども と表示する\n            System.out.println(\"こども\");\n        }\n    }\n}",
-      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // age に 10 を入れる\n        int age = ___ ;\n        // 20以上かを比較する演算子\n        if (age ___ 20) {\n            // 20歳以上のときのメッセージ（'おとな'）\n            System.out.println(\"___");\n        // else でそれ以外の場合\n        } ___ {\n            // こども と表示する\n            System.out.println(\"___");\n        }\n    }\n}",
+      "holeyCode": "public class Main {\n    public static void main(String[] args) {\n        // age に 10 を入れる\n        int age = ___ ;\n        // 20以上かを比較する演算子\n        if (age ___ 20) {\n            // 20歳以上のときのメッセージ（'おとな'）\n            System.out.println(\"___\");\n        // else でそれ以外の場合\n        } ___ {\n            // こども と表示する\n            System.out.println(\"___\");\n        }\n    }\n}",
       "correctLines": [
         "public class Main {",
         "    public static void main(String[] args) {",

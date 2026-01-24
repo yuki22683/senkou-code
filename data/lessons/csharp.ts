@@ -25,7 +25,7 @@ export const csharpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        // 画面にメッセージを出す関数\n        Console.WriteLine(\"Hello, C#!\");\n    }\n}",
-      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        // 画面にメッセージを出す関数\n        Console.WriteLine(\"___");\n    }\n}",
+      "holeyCode": "using System;\n\nclass Program {\n    static void Main() {\n        // 画面にメッセージを出す関数\n        Console.WriteLine(\"___\");\n    }\n}",
       "correctLines": [
         "using System;",
         "",
@@ -70,7 +70,7 @@ export const csharpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// nameというはこに \"CSharp\" を入れる\nstring name = \"CSharp\";\n// はこの中身を画面に出す\nConsole.WriteLine(name);",
-      "holeyCode": "// nameというはこに \"CSharp\" を入れる\n___ name = \"___";\n// はこの中身を画面に出す\nConsole.WriteLine(___);",
+      "holeyCode": "// nameというはこに \"CSharp\" を入れる\n___ name = \"___\";\n// はこの中身を画面に出す\nConsole.WriteLine(___);",
       "correctLines": [
         "// nameというはこに \"CSharp\" を入れる",
         "string name = \"CSharp\";",
@@ -292,7 +292,7 @@ export const csharpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// colorsという配列を作る\nstring[] colors = {\"赤\", \"青\", \"緑\"};\n// 2番目のデータを出す\nConsole.WriteLine(colors[1]);",
-      "holeyCode": "// colorsという配列を作る\nstring[] colors = {\"___", \"___", \"___\"};\n// 2番目のデータを出す\nConsole.WriteLine(colors[___]);",
+      "holeyCode": "// colorsという配列を作る\nstring[] colors = {\"___\", \"___\", \"___\"};\n// 2番目のデータを出す\nConsole.WriteLine(colors[___]);",
       "correctLines": [
         "// colorsという配列を作る",
         "string[] colors = {\"赤\", \"青\", \"緑\"};",
@@ -335,7 +335,7 @@ export const csharpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// scoreに100を入れる\nint score = 100;\n// もし80より大きかったら\nif (score > 80)\n{\n    // メッセージを表示する\n    Console.WriteLine(\"合格！\");\n}",
-      "holeyCode": "// scoreに100を入れる\nint score = ___i\n// もし80より大きかったら\n___ (score > 80)\n{\n    // メッセージを表示する\n    Console.WriteLine(\"___");\n}",
+      "holeyCode": "// scoreに100を入れる\nint score = ___i\n// もし80より大きかったら\n___ (score > 80)\n{\n    // メッセージを表示する\n    Console.WriteLine(\"___\");\n}",
       "correctLines": [
         "// scoreに100を入れる",
         "int score = 100;",
@@ -387,7 +387,7 @@ export const csharpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// ageに10を入れる\nint age = 10;\n// 20歳以上かどうかで分ける\nif (age >= 20)\n{\n    Console.WriteLine(\"大人\");\n}\nelse\n{\n    // それ以外の場合\n    Console.WriteLine(\"子供\");\n}",
-      "holeyCode": "// ageに10を入れる\nint age = ___i\n// 20歳以上かどうかで分ける\nif (age >= 20)\n{\n    Console.WriteLine(\"___");\n}\n___\n{\n    // それ以外の場合\n    Console.WriteLine(\"___");\n}",
+      "holeyCode": "// ageに10を入れる\nint age = ___i\n// 20歳以上かどうかで分ける\nif (age >= 20)\n{\n    Console.WriteLine(\"___\");\n}\n___\n{\n    // それ以外の場合\n    Console.WriteLine(\"___\");\n}",
       "correctLines": [
         "// ageに10を入れる",
         "int age = 10;",
@@ -497,7 +497,7 @@ export const csharpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// 名前の配列を作る\nstring[] names = {\"太郎\", \"花子\"};\n// 順番に取り出すループ\nforeach (string name in names)\n{\n    // 取り出した名前を表示\n    Console.WriteLine(name);\n}",
-      "holeyCode": "// 名前の配列を作る\nstring[] names = {\"___", \"___\"};\n// 順番に取り出すループ\n___ (string name in names)\n{\n    // 取り出した名前を表示\n    Console.WriteLine(___);\n}",
+      "holeyCode": "// 名前の配列を作る\nstring[] names = {\"___\", \"___\"};\n// 順番に取り出すループ\n___ (string name in names)\n{\n    // 取り出した名前を表示\n    Console.WriteLine(___);\n}",
       "correctLines": [
         "// 名前の配列を作る",
         "string[] names = {\"太郎\", \"花子\"};",
@@ -549,7 +549,7 @@ export const csharpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// Dictionaryを作る\nvar fruits = new Dictionary<string, string>();\n// キーと値を追加\nfruits[\"みかん\"] = \"オレンジ\";\n// キーを指定して値を取り出す\nConsole.WriteLine(fruits[\"みかん\"]);",
-      "holeyCode": "// Dictionaryを作る\nvar fruits = new ___<string, string>();\n// キーと値を追加\nfruits[\"___"] = \"___";\n// キーを指定して値を取り出す\nConsole.WriteLine(fruits[\"___"]);",
+      "holeyCode": "// Dictionaryを作る\nvar fruits = new ___<string, string>();\n// キーと値を追加\nfruits[\"___\"] = \"___\";\n// キーを指定して値を取り出す\nConsole.WriteLine(fruits[\"___\"]);",
       "correctLines": [
         "// Dictionaryを作る",
         "var fruits = new Dictionary<string, string>();",
@@ -596,7 +596,7 @@ export const csharpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// Greetというメソッドを定義\nstatic void Greet()\n{\n    // こんにちは と表示\n    Console.WriteLine(\"こんにちは\");\n}\n// メソッドを呼び出す\nGreet();",
-      "holeyCode": "// Greetというメソッドを定義\nstatic ___ Greet()\n{\n    // こんにちは と表示\n    Console.WriteLine(\"___");\n}\n// メソッドを呼び出す\n___();",
+      "holeyCode": "// Greetというメソッドを定義\nstatic ___ Greet()\n{\n    // こんにちは と表示\n    Console.WriteLine(\"___\");\n}\n// メソッドを呼び出す\n___();",
       "correctLines": [
         "// Greetというメソッドを定義",
         "static void Greet()",

@@ -1,28 +1,28 @@
 // 共通シンタックスハイライト定義
 // 全てのコード表示コンポーネントで使用
 
-// VS Code Dark+ Colors (approximate)
+// JetBrains Darcula Theme Colors
 export const SYNTAX_COLORS = {
-  background: "#1E1E1E",
-  foreground: "#D4D4D4",
-  keyword: "#569CD6",      // Blue
-  string: "#CE9178",       // Orange
-  number: "#B5CEA8",       // Light Green
-  comment: "#6A9955",      // Green
-  functionDef: "#DCDCAA",  // Yellow
-  decorator: "#DCDCAA",    // Yellow
-  builtIn: "#569CD6",      // Blue
-  variable: "#9CDCFE",     // Light Blue
-  bracket: "#FFD700",      // Yellow
+  background: "#2B2B2B",
+  foreground: "#D0D0D0",
+  keyword: "#CC7832",      // Orange
+  string: "#6A8759",       // Green
+  number: "#6897BB",       // Blue
+  comment: "#D0D0D0",      // Gray
+  functionDef: "#FFC66D",  // Yellow
+  decorator: "#BBB529",    // Yellow-olive
+  builtIn: "#9876AA",      // Purple (Darcula Builtin)
+  variable: "#D0D0D0",     // Foreground
+  bracket: "#D0D0D0",      // Foreground
   // UI関連
-  lineNumberForeground: "#858585",
-  gutterBackground: "#1E1E1E",
-  selection: "#264F78",
-  panelBackground: "#252526",
-  buttonBackground: "#333333",
-  buttonBorder: "#454545",
-  buttonText: "#CCCCCC",
-  error: "#F44336",
+  lineNumberForeground: "#606366",
+  gutterBackground: "#313335",
+  selection: "#214283",
+  panelBackground: "#2B2B2B",
+  buttonBackground: "#4B4D4D",
+  buttonBorder: "#5E6060",
+  buttonText: "#BBBBBB",
+  error: "#BC3F3C",
 };
 
 // 言語設定

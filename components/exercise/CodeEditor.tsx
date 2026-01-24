@@ -18,6 +18,32 @@ export function CodeEditor({
 }: CodeEditorProps) {
   const [code, setCode] = useState(initialCode);
 
+  const handleEditorWillMount = (monaco: any) => {
+    monaco.editor.defineTheme("darcula", {
+      base: "vs-dark",
+      inherit: true,
+      rules: [
+        { token: "keyword", foreground: "CC7832" },
+        { token: "string", foreground: "6A8759" },
+        { token: "number", foreground: "6897BB" },
+        { token: "comment", foreground: "D0D0D0" },
+        { token: "type", foreground: "D0D0D0" },
+        { token: "class", foreground: "FFC66D" },
+        { token: "function", foreground: "FFC66D" },
+        { token: "variable", foreground: "D0D0D0" },
+      ],
+      colors: {
+        "editor.background": "#2B2B2B",
+        "editor.foreground": "#D0D0D0",
+        "editorLineNumber.foreground": "#606366",
+        "editor.selectionBackground": "#214283",
+        "editor.lineHighlightBackground": "#323232",
+        "editorCursor.foreground": "#BBBBBB",
+        "editorWhitespace.foreground": "#404040",
+      },
+    });
+  };
+
   const handleEditorChange = (value: string | undefined) => {
     setCode(value || "");
     onChange?.(value);
@@ -50,7 +76,8 @@ export function CodeEditor({
         language={getMonacoLanguage(language)}
         value={code}
         onChange={handleEditorChange}
-        theme="vs-dark"
+        beforeMount={handleEditorWillMount}
+        theme="darcula"
         options={{
           minimap: { enabled: false },
           fontSize: 14,

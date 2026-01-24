@@ -310,7 +310,7 @@ export const javascriptData = {
           "console.log"
         ],
         "operators": [
-          ">
+          ">"
         ],
         "strings": [
           "ごうかく！"

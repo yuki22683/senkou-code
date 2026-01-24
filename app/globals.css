@@ -73,7 +73,7 @@
 }
 
 .overflow-y-scroll::-webkit-scrollbar-thumb:hover {
-  background: #808080;
+  background: #D0D0D0;
 }
 
 @layer utilities {
