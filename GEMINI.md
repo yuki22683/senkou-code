@@ -93,6 +93,8 @@ To prevent the recurrence of incomplete or non-functional exercises, the followi
 
 6.  **Abstract Hints:** Comments and hints should explain the "what" and "why" (concept/purpose), not the "how" (specific syntax/answer), unless absolutely necessary. Avoid instructions like "Type X" or hints that contain the exact code to be typed.
 
+7.  **Database Seeding:** After any modification to lesson files (`data/lessons/*.ts`), you must run `npm run seed:db` to apply the changes to the database.
+
 # CLAUDE.md - プロジェクトルール
 
 ## 修正ミス発生時のルール
