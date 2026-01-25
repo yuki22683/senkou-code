@@ -14,7 +14,7 @@ export const bashData = {
       "tutorialSlides": [
         {
           "title": "Bash（バッシュ）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/bash.png",
           "content": "# コンピュータと対話する言葉\n\nBashは、キーボードから直接コンピュータに命令を出すためのツールです。マウスを使わずに、たくさんのファイルを一気に処理したり、システムの設定を変えたりするのが得意です。"
         },
         {

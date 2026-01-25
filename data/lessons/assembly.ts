@@ -13,8 +13,8 @@ export const assemblyData = {
       "orderIndex": 1,
       "tutorialSlides": [
         {
-          "title": "アセンブリ言語とは？",
-          "image": "/illustrations/common/monitor.png",
+          "title": "Assembly（アセンブリ）とは？",
+          "image": "/illustrations/languages/assembly.png",
           "content": "# コンピュータの「生（なま）」の言葉\n\nアセンブリ言語は、コンピュータのCPUという脳みそが直接理解できる言葉（機械語）に最も近いプログラミング言語です。ハードウェアを限界まで操ることができます。"
         },
         {

@@ -14,7 +14,7 @@ export const csharpData = {
       "tutorialSlides": [
         {
           "title": "C#（シーシャープ）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/csharp.png",
           "content": "# ゲーム作りにも使われるプログラミング言語（げんご）\n\nC#（シーシャープ）は、Microsoft（マイクロソフト）という大きな会社が作ったプログラミング言語です。\n\n**C#でできること：**\n- パソコンのアプリを作る\n- Unity（ユニティ）というツールでゲームを作る\n- ウェブサイトを作る\n\nC#は書き方のルールがしっかりしているので、間違いの少ない安全なプログラムが作れます。まるでレゴブロックのように、決まったパーツを組み合わせてプログラムを作っていきます。"
         },
         {

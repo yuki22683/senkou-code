@@ -14,7 +14,7 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "Ruby（ルビー）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/ruby.png",
           "content": "# 楽しさを大事（だいじ）にするプログラミング言語（げんご）\n\nRuby（ルビー）は、**まつもとゆきひろ**さんという日本人（にほんじん）が作ったプログラミング言語です。\n\n宝石（ほうせき）の「ルビー」から名前がつけられました。\n\n**Rubyの特徴（とくちょう）：**\n- 人間が読みやすく、楽しく書ける\n- 世界中（せかいじゅう）で大人気（だいにんき）\n- TwitterやCookpadなど有名（ゆうめい）なサービスで使われている"
         },
         {

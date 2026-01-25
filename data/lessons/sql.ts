@@ -14,7 +14,7 @@ export const sqlData = {
       "tutorialSlides": [
         {
           "title": "SQL（エスキューエル）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/sql.png",
           "content": "# データの倉庫から取り出す言葉\n\nSQLは、データベースという「情報の倉庫」に対して、「このデータをください！」と命令するための言葉です。Webアプリやスマホアプリの裏側で、情報を探すときに必ず使われます。"
         },
         {

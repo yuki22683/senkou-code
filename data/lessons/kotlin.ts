@@ -14,7 +14,7 @@ export const kotlinData = {
       "tutorialSlides": [
         {
           "title": "Kotlin（コトリン）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/kotlin.png",
           "content": "# Android（アンドロイド）アプリを作る言葉\n\n**Kotlin（コトリン）** は、Android（アンドロイド）スマホのアプリを作るための **プログラミング言語（げんご）** です。\n\nGoogleという会社が「Androidアプリを作るならKotlinがおすすめ！」と言っているほど、人気のある言葉です。\n\n短くてわかりやすいコードが書けるのが特徴（とくちょう）です。"
         },
         {

@@ -16,7 +16,7 @@ export const javascriptData = {
       "tutorialSlides": [
         {
           "title": "JavaScript（ジャバスクリプト）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/javascript.png",
           "content": "# Webサイトを動かす魔法の言葉\n\nJavaScript（ジャバスクリプト）は、Webサイトに「動き」をつけるためのプログラミング言語（げんご）です。\n\n**たとえば、こんなことができます：**\n- ボタンをクリックしたら何かが起きる\n- 画面がキラキラ動くアニメーション\n- ゲームのキャラクターを動かす\n\n世界中（せかいじゅう）でとても人気があり、ゲームやスマホアプリ作りにも使われています。"
         },
         {

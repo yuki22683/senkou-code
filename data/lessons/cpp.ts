@@ -14,7 +14,7 @@ export const cppData = {
       "tutorialSlides": [
         {
           "title": "C++（シープラスプラス）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/cpp.png",
           "content": "# パワフルで高速な言語（げんご）\n\nC++（シープラスプラス）は、C言語を元にしてさらに便利な機能を追加した言語です。\n\n**身近な例え：**\nC言語が「普通の車」だとしたら、C++は「スーパーカー」のような存在です！速さはそのままに、もっと便利な機能がついています。\n\n**どんなところで使われているの？**\n- ゲーム（速さが命！）\n- ブラウザ（ChromeやFirefoxなど）\n- 3DCGソフト\n\nなど、**スピードが求められる場所**で大活躍しています。"
         },
         {

@@ -14,7 +14,7 @@ export const haskellData = {
       "tutorialSlides": [
         {
           "title": "Haskell（ハスケル）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/haskell.png",
           "content": "# 数学のように美しい言葉\n\nHaskellは、数学の考え方をベースにしたプログラミング言語です。一度決めたデータの中身を変えないといった厳格なルールがあり、非常にバグが少ない堅牢なシステムを作ることができます。"
         },
         {

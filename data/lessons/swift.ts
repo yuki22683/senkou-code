@@ -14,7 +14,7 @@ export const swiftData = {
       "tutorialSlides": [
         {
           "title": "Swift（スウィフト）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/swift.png",
           "content": "# Apple（アップル）製品を動かす言葉\n\n**Swift（スウィフト）** は、Apple（アップル）という会社が作った **プログラミング言語（げんご）** です。\n\niPhone（アイフォーン）やMac（マック）のアプリを作るときに使います。\n\n「Swift」は英語で「すばやい」という意味で、その名前のとおり、とても速く動くのが特徴（とくちょう）です。"
         },
         {

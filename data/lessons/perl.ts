@@ -14,7 +14,7 @@ export const perlData = {
       "tutorialSlides": [
         {
           "title": "Perl（パール）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/perl.png",
           "content": "# テキスト処理の達人！\n\n**Perl**（パール）は、文字や文章を扱うのがとても得意なプログラミング言語です。\n\n**名前の由来：** 「Pearl（真珠）」ではなく、「Practical Extraction and Report Language（実用的なデータ取り出しとレポートの言語）」の略です。\n\n**たとえば：** 大量のファイルの中から特定の言葉を探したり、文章を自動で書き換えたりするのが得意です。まるで文章整理の達人のようです。\n\n**トレードマーク：** ラクダ（キャメル）がシンボルです。"
         },
         {

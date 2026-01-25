@@ -14,7 +14,7 @@ export const elixirData = {
       "tutorialSlides": [
         {
           "title": "Elixir（エリクサー）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/elixir.png",
           "content": "# 並列処理が得意な現代の言葉\n\nElixirは、大量のアクセスを同時に裁くのが得意なプログラミング言語です。リアルタイムのチャットや、たくさんの人が遊ぶオンラインゲームの裏側などで活躍しています。"
         },
         {

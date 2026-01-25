@@ -14,7 +14,7 @@ export const typescriptData = {
       "tutorialSlides": [
         {
           "title": "TypeScript（タイプスクリプト）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/typescript.png",
           "content": "# 安心・安全なプログラミング\n\nTypeScript（タイプスクリプト）は、JavaScript（ジャバスクリプト）というプログラミング言語に「型（かた）」というルールを追加した言葉です。\n\n## どうして便利なの？\n\n想像してみてください。お弁当箱に「おにぎり専用」と書いてあったら、間違えてサンドイッチを入れようとしたとき「あれ、違うかも？」と気づけますよね。\n\nTypeScriptも同じで、「ここには文字だけ入れてね」「数字だけ入れてね」と決めておくと、間違った種類のデータを入れようとしたときに「ここ間違ってるよ！」と先に教えてくれます。"
         },
         {

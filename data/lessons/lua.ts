@@ -14,7 +14,7 @@ export const luaData = {
       "tutorialSlides": [
         {
           "title": "Lua（ルア）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/lua.png",
           "content": "# ゲーム開発で大人気の言葉！\n\n**Lua**（ルア）は、とても軽くて速いプログラミング言語です。\n\n**名前の由来：** ポルトガル語で「月」という意味です。\n\n**どこで使われてる？**\n- ゲーム（Roblox、World of Warcraftなど）\n- 組み込みシステム\n- Webサーバー\n\n**たとえば：** 大きなゲームの中に Lua を組み込んで、簡単にカスタマイズできるようにすることが多いです。まるで「接着剤」のような役割をします。"
         },
         {

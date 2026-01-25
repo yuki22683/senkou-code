@@ -14,12 +14,12 @@ export const cData = {
       "tutorialSlides": [
         {
           "title": "C言語とは？",
-          "image": "/illustrations/common/c_intro_rubber.png",
+          "image": "/illustrations/languages/c.png",
           "content": "# すべての言語の「お父さん」\n\nC言語（シーげんご）は、今から50年以上前に作られたとても歴史（れきし）のあるプログラミング言語です。\n\n**身近な例え：**\nC言語は「プログラミング言語の家系図」でいうと、一番上のご先祖様のような存在です！\n\n今のスマホやパソコンを動かしている「OS（オーエス）」という、コンピュータの「脳みそ」のような大事な部分は、ほとんどこのC言語で作られています。\n\nまさに、コンピュータ界の「お父さん」のような存在です！"
         },
         {
           "title": "C言語の「きまり文句」",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/boilerplate.png",
           "content": "# 最初に書く「おまじない」\n\nC言語を動かすには、必ず書かなければいけない「お約束」があります。\n\n**1. `#include <stdio.h>`（インクルード・スタンダード・アイオー・エイチ）：**\n「画面に文字を出す道具」を用意する呪文（じゅもん）です。図書館から本を借りてくるようなイメージです！\n\n**2. `int main() { ... }`（イント・メイン）：**\n「ここからプログラムが始まりますよ！」という合図です。本の「第1章」のようなものです。\n\n**実際のコードを見てみましょう：**\n```c\n#include <stdio.h>\nint main() {\n    printf(\"C言語は楽しい！\\n\");\n    return 0;\n}\n```\n\n`printf`（プリントエフ）は「画面に文字を表示してね」という命令です。\n`return 0`（リターン・ゼロ）は「うまくいきました！」という報告です。\n\nこの形を覚えてしまいましょう！"
         }
       ],

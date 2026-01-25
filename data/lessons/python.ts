@@ -14,7 +14,7 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "Python（パイソン）とは？",
-          "image": "/illustrations/common/snake.png",
+          "image": "/illustrations/languages/python.png",
           "content": "# コンピュータとお話ししよう！\n\n**Python（パイソン）** は、世界中で大人気の「プログラミング言語（げんご）」です。\n\n**プログラミング言語** というのは、コンピュータにお願いごとを伝えるための「ことば」のことです。\n\nみんなが日本語でお友だちと話すように、プログラマー（プログラムを作る人）はPythonでコンピュータと会話します。\n\n例えば「計算して！」「画面に文字を出して！」とお願いすると、コンピュータがちゃんと答えてくれますよ。"
         },
         {

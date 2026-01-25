@@ -14,7 +14,7 @@ export const phpData = {
       "tutorialSlides": [
         {
           "title": "PHP（ピーエイチピー）とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/languages/php.png",
           "content": "# Webサイトを裏側（うらがわ）で動かす言葉\n\nPHPは、Webサイトの「裏側」で活躍（かつやく）するプログラミング言語です。\n\n**身近（みぢか）な例（れい）：**\n- お店のホームページ → 静的（せいてき）（いつも同じ）\n- TwitterやInstagram → 動的（どうてき）（毎回内容が変わる）\n\n**PHPでできること：**\n- 掲示板（けいじばん）やブログの投稿（とうこう）\n- ログイン機能（きのう）\n- お問い合わせフォーム\n\n世界で最も使われているWeb言語の一つです。"
         },
         {
