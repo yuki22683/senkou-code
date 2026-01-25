@@ -32,22 +32,13 @@ export const c3Data = {
         "int square(int x) { return x * x; }",
         "",
         "int main() {",
+        "    // 関数ポインタを宣言する記法",
         "    int (*fp)(int) = square;",
         "    printf(\"%d\\n\", fp(5));",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "*fp で関数ポインタを宣言します。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "*fp で関数ポインタを宣言します。", null, null, null],
       "candidates": {
         "variables": ["*fp", "fp", "&fp"]
       },
@@ -82,6 +73,7 @@ export const c3Data = {
         "#include <stdio.h>",
         "",
         "void apply(int n, void (*f)(int)) {",
+        "    // 引数で受け取った関数ポインタを呼び出す",
         "    f(n);",
         "}",
         "",
@@ -94,22 +86,7 @@ export const c3Data = {
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "f で関数ポインタを呼び出します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, "f で関数ポインタを呼び出します。", null, null, null, null, null, null, null, null, null, null],
       "candidates": {
         "variables": ["f", "n", "apply"]
       },
@@ -146,20 +123,12 @@ export const c3Data = {
         "int main() {",
         "    int a = 12;  // 1100",
         "    int b = 10;  // 1010",
+        "    // 両方のビットが1の場合のみ1になる演算子",
         "    printf(\"%d\\n\", a & b);  // 8 (1000)",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "& でビットANDを行います。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "変数の値を指定された形式で画面に表示します。", null, null],
       "candidates": {
         "operators": ["&", "|", "^"]
       },
@@ -196,20 +165,12 @@ export const c3Data = {
         "int main() {",
         "    int a = 12;  // 1100",
         "    int b = 10;  // 1010",
+        "    // どちらかのビットが1なら1になる演算子",
         "    printf(\"%d\\n\", a | b);  // 14 (1110)",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "| でビットORを行います。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "変数の値を指定された形式で画面に表示します。", null, null],
       "candidates": {
         "operators": ["|", "&", "^"]
       },
@@ -245,19 +206,12 @@ export const c3Data = {
         "",
         "int main() {",
         "    int x = 3;",
+        "    // ビットを左に移動する演算子",
         "    printf(\"%d\\n\", x << 2);  // 12",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "<< で左シフトします。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "変数の値を指定された形式で画面に表示します。", null, null],
       "candidates": {
         "operators": ["<<", ">>", "<"]
       },
@@ -293,21 +247,13 @@ export const c3Data = {
         "",
         "int main() {",
         "    int arr[] = {10, 20, 30};",
+        "    // 型や変数のバイト数を取得する演算子",
         "    int count = sizeof(arr) / sizeof(arr[0]);",
         "    printf(\"%d\\n\", count);",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "sizeof で配列のサイズを取得します。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "sizeof で配列のサイズを取得します。", null, null, null],
       "candidates": {
         "keywords": ["sizeof", "strlen", "length"]
       },
@@ -341,6 +287,7 @@ export const c3Data = {
       "correctLines": [
         "#include <stdio.h>",
         "",
+        "// 型に別名をつけるキーワード",
         "typedef int Number;",
         "",
         "int main() {",
@@ -349,17 +296,7 @@ export const c3Data = {
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "typedef で型に別名をつけます。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "typedef で型に別名をつけます。", null, null, null, null, null, null],
       "candidates": {
         "keywords": ["typedef", "define", "alias"]
       },
@@ -393,6 +330,7 @@ export const c3Data = {
       "correctLines": [
         "#include <stdio.h>",
         "",
+        "// 指す先を変更不可にするキーワード",
         "void show(const int *p) {",
         "    printf(\"%d\\n\", *p);",
         "}",
@@ -403,19 +341,7 @@ export const c3Data = {
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "const で指す先を変更不可にします。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "void型の値を返す関数（show）を定義します。", null, null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["const", "static", "volatile"]
       },
@@ -450,6 +376,7 @@ export const c3Data = {
         "#include <stdio.h>",
         "",
         "void counter() {",
+        "    // 関数を抜けても値を保持するキーワード",
         "    static int count = 0;",
         "    count++;",
         "    printf(\"%d\\n\", count);",
@@ -462,22 +389,7 @@ export const c3Data = {
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "static で値を保持します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, "static で値を保持します。", null, null, null, null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["static", "const", "extern"]
       },
@@ -511,6 +423,7 @@ export const c3Data = {
       "correctLines": [
         "#include <stdio.h>",
         "",
+        "// プリプロセッサでマクロを定義するディレクティブ",
         "#define DOUBLE(x) ((x) * 2)",
         "",
         "int main() {",
@@ -518,16 +431,7 @@ export const c3Data = {
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "define でマクロを定義します。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "define でマクロを定義します。", null, null, null, null, null],
       "candidates": {
         "keywords": ["define", "include", "ifdef"]
       },

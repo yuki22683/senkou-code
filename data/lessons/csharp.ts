@@ -36,10 +36,7 @@ export const csharpData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        "Console.WriteLine を使って文字を出します。"
-      ],
+      "lineHints": [null, null, null, null, null, "文字列をコンソールに出力し、改行します。", null, null],
       "candidates": {
         "functions": ["Console.WriteLine"],
         "strings": ["Hello, C#!"]
@@ -77,12 +74,7 @@ export const csharpData = {
         "// はこの中身を画面に出す",
         "Console.WriteLine(name);"
       ],
-      "lineHints": [
-        null,
-        "文字列型は string です。CSharp と入力しましょう。",
-        null,
-        "変数名 name を入力します。"
-      ],
+      "lineHints": [null, "文字列型の変数を宣言し、文字列データを代入します。", null, "変数名 name を入力します。"],
       "candidates": {
         "types": ["string", "int"],
         "variables": ["name"],
@@ -123,14 +115,7 @@ export const csharpData = {
         "// x と y をたした答えを出す",
         ["Console.WriteLine(x + y);", "Console.WriteLine(y + x);"]
       ],
-      "lineHints": [
-        null,
-        "整数型は int です。10 と入力しましょう。",
-        null,
-        "整数型は int です。5 と入力しましょう。",
-        null,
-        "たし算なので + を使います。"
-      ],
+      "lineHints": [null, "整数型の変数を宣言し、初期値を代入します。", null, "整数型の変数を宣言し、初期値を代入します。", null, "たし算なので + を使います。", null],
       "candidates": {
         "types": ["int", "string"],
         "numbers": ["10", "5"],
@@ -167,10 +152,7 @@ export const csharpData = {
         "// 10 を 3 で割ったあまりを出力する",
         "Console.WriteLine(10 % 3);"
       ],
-      "lineHints": [
-        null,
-        "あまりを求める `%` 演算子を使います。"
-      ],
+      "lineHints": [null, "あまりを求める `%` 演算子を使います。"],
       "candidates": {
         "operators": ["%", "/", "*", "-"]
       },
@@ -210,15 +192,7 @@ export const csharpData = {
         "hp -= 50;",
         "Console.WriteLine(hp);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "`+=` で値を足します。",
-        null,
-        "`-=` で値を引きます。",
-        null
-      ],
+      "lineHints": [null, null, null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, "変数の値を計算して、その結果を同じ変数に再代入します。", null],
       "candidates": {
         "operators": ["+=", "-=", "*=", "/="]
       },
@@ -255,12 +229,7 @@ export const csharpData = {
         "// 文字列補間を使ってメッセージを出す",
         "Console.WriteLine($\"私は{age}歳です\");"
       ],
-      "lineHints": [
-        null,
-        "10 と入力しましょう。",
-        null,
-        "$ を先頭につけて、age を {} の中に入力します。"
-      ],
+      "lineHints": [null, "整数型の変数を宣言し、初期値を代入します。", null, "$ を先頭につけて、age を {} の中に入力します。"],
       "candidates": {
         "variables": ["age"],
         "numbers": ["10"],
@@ -299,12 +268,7 @@ export const csharpData = {
         "// 2番目のデータを出す",
         "Console.WriteLine(colors[1]);"
       ],
-      "lineHints": [
-        null,
-        "赤、青、緑 の順で入力しましょう。",
-        null,
-        "2番目のデータのインデックスは 1 です。"
-      ],
+      "lineHints": [null, "赤、青、緑 の順で入力しましょう。", null, "2番目のデータのインデックスは 1 です。"],
       "candidates": {
         "strings": ["赤", "青", "緑"],
         "numbers": ["0", "1", "2"]
@@ -346,16 +310,7 @@ export const csharpData = {
         "    Console.WriteLine(\"合格！\");",
         "}"
       ],
-      "lineHints": [
-        null,
-        "100 と入力しましょう。",
-        null,
-        "条件分岐のキーワード if を使います。",
-        null,
-        null,
-        "合格！ と入力しましょう。",
-        null
-      ],
+      "lineHints": [null, "整数型の変数を宣言し、初期値を代入します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, null, "文字列をコンソールに出力し、改行します。", null],
       "candidates": {
         "keywords": ["if", "while"],
         "numbers": ["100"],
@@ -387,35 +342,24 @@ export const csharpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// ageに10を入れる\nint age = 10;\n// 20歳以上かどうかで分ける\nif (age >= 20)\n{\n    Console.WriteLine(\"大人\");\n}\nelse\n{\n    // それ以外の場合\n    Console.WriteLine(\"子供\");\n}",
-      "holeyCode": "// ageに10を入れる\nint age = ___i\n// 20歳以上かどうかで分ける\nif (age >= 20)\n{\n    Console.WriteLine(\"___\");\n}\n___\n{\n    // それ以外の場合\n    Console.WriteLine(\"___\");\n}",
+      "holeyCode": "// ageに10を入れる\nint age = ___i\n// 20歳以上かどうかで分ける\nif (age >= 20)\n{\n    // 大人というメッセージを出力\n    Console.WriteLine(\"___\");\n}\n// else でそれ以外の場合\n___\n{\n    // それ以外の場合\n    Console.WriteLine(\"___\");\n}",
       "correctLines": [
         "// ageに10を入れる",
         "int age = 10;",
         "// 20歳以上かどうかで分ける",
         "if (age >= 20)",
         "{",
+        "    // 大人というメッセージを出力",
         "    Console.WriteLine(\"大人\");",
         "}",
+        "// else でそれ以外の場合",
         "else",
         "{",
         "    // それ以外の場合",
         "    Console.WriteLine(\"子供\");",
         "}"
       ],
-      "lineHints": [
-        null,
-        "10 と入力しましょう。",
-        null,
-        null,
-        null,
-        "大人 と入力しましょう。",
-        null,
-        "else を入力しましょう。",
-        null,
-        null,
-        "子供 と入力しましょう。",
-        null
-      ],
+      "lineHints": [null, "整数型の変数を宣言し、初期値を代入します。", null, null, null, null, "文字列をコンソールに出力し、改行します。", null, null, "もし条件が満たされなかった場合に実行する処理を記述します。", null, null, "文字列をコンソールに出力し、改行します。", null],
       "candidates": {
         "keywords": ["else", "elif"],
         "numbers": ["10"],
@@ -458,16 +402,7 @@ export const csharpData = {
         "    Console.WriteLine(\"ボーナスあり合格\");",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "両方の条件を満たすには `&&` を使います。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, null, null],
       "candidates": {
         "operators": ["&&", "||", "&", "|"]
       },
@@ -508,16 +443,7 @@ export const csharpData = {
         "    Console.WriteLine(name);",
         "}"
       ],
-      "lineHints": [
-        null,
-        "太郎、花子 の順で入力しましょう。",
-        null,
-        "foreach を使います。",
-        null,
-        null,
-        "変数名 name を入力します。",
-        null
-      ],
+      "lineHints": [null, "太郎、花子 の順で入力しましょう。", null, "foreach を使います。", null, null, "変数名 name を入力します。", null],
       "candidates": {
         "keywords": ["foreach", "for"],
         "variables": ["name"],
@@ -558,14 +484,7 @@ export const csharpData = {
         "// キーを指定して値を取り出す",
         "Console.WriteLine(fruits[\"みかん\"]);"
       ],
-      "lineHints": [
-        null,
-        "Dictionary を使います。",
-        null,
-        "キーは みかん、値は オレンジ です。",
-        null,
-        "キー みかん を入力します。"
-      ],
+      "lineHints": [null, "Dictionary を使います。", null, "キーは みかん、値は オレンジ です。", null, "キー みかん を入力します。"],
       "candidates": {
         "types": ["Dictionary", "List"],
         "strings": ["みかん", "オレンジ"]
@@ -607,16 +526,7 @@ export const csharpData = {
         "// メソッドを呼び出す",
         "Greet();"
       ],
-      "lineHints": [
-        null,
-        "戻り値がないので void を使います。",
-        null,
-        null,
-        "こんにちは と入力しましょう。",
-        null,
-        null,
-        "メソッド名 Greet を入力して呼び出します。"
-      ],
+      "lineHints": [null, "戻り値がないので void を使います。", null, null, "文字列をコンソールに出力し、改行します。", null, null, "関数（Greet）を呼び出して実行します。"],
       "candidates": {
         "keywords": ["void", "int"],
         "methods": ["Greet"],

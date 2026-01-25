@@ -30,16 +30,10 @@ export const javascriptData2 = {
         "// => でアロー関数を定義する",
         "const square = x => x * x;",
         "",
-        "// 使ってみる",
+        "// 使ってみる（引数は5）",
         "console.log(square(5));"
       ],
-      "lineHints": [
-        null,
-        "アロー関数は `=>` を使います。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "アロー関数は `=>` を使います。", null, null, "square(5) で5の2乗を計算します。"],
       "candidates": {
         "operators": ["=>", "->", "=", ":"]
       },
@@ -75,15 +69,10 @@ export const javascriptData2 = {
         "const nums = [1, 2, 3];",
         "// map メソッドで変換する",
         ["const tripled = nums.map(n => n * 3);", "const tripled = nums.map(n => 3 * n);"],
+        "// tripledを表示",
         "console.log(tripled);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "`map` メソッドを使います。",
-        null
-      ],
+      "lineHints": [null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "`map` メソッドを使います。", null, "tripled を出力します。", null],
       "candidates": {
         "functions": ["map", "filter", "forEach", "reduce"]
       },
@@ -120,12 +109,7 @@ export const javascriptData2 = {
         "// 結果を表示",
         "console.log(remainder);"
       ],
-      "lineHints": [
-        null,
-        "`%` で余りを求めます。",
-        null,
-        null
-      ],
+      "lineHints": [null, "定数を宣言し、数値を代入します。", null, null],
       "candidates": {
         "operators": ["%", "/", "*", "+"]
       },
@@ -166,16 +150,7 @@ export const javascriptData2 = {
         "// 結果を表示",
         "console.log(total);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "`+=` で値を足し算します。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, null, null, null],
       "candidates": {
         "operators": ["+=", "-=", "*=", "/="]
       },
@@ -214,14 +189,7 @@ export const javascriptData2 = {
         "    console.log('20代です');",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "`&&` で両方の条件を満たすかチェックします。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, null],
       "candidates": {
         "operators": ["&&", "||", "!"]
       },
@@ -257,15 +225,10 @@ export const javascriptData2 = {
         "const nums = [5, 15, 8, 20];",
         "// filter メソッドで絞り込む",
         "const big = nums.filter(n => n > 10);",
+        "// bigを表示",
         "console.log(big);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "`filter` メソッドを使います。",
-        null
-      ],
+      "lineHints": [null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "`filter` メソッドを使います。", null, "big を出力します。"],
       "candidates": {
         "functions": ["filter", "map", "find", "some"]
       },
@@ -301,15 +264,10 @@ export const javascriptData2 = {
         "const nums = [10, 20, 30];",
         "// reduce メソッドで累積値 acc を使う",
         "const total = nums.reduce((acc, n) => acc + n, 0);",
+        "// totalを表示",
         "console.log(total);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "`reduce` を使い、累積値は `acc` です。",
-        null
-      ],
+      "lineHints": [null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "`reduce` を使い、累積値は `acc` です。", null, "total を出力します。"],
       "candidates": {
         "functions": ["reduce"],
         "variables": ["acc", "sum", "total"]
@@ -346,17 +304,12 @@ export const javascriptData2 = {
         "const colors = ['red', 'green', 'blue'];",
         "// second で2番目の要素を受け取る",
         "const [first, second] = colors;",
+        "// firstを表示",
         "console.log(first);",
+        "// secondを表示",
         "console.log(second);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "2番目の変数名は `second` です。",
-        null,
-        null
-      ],
+      "lineHints": [null, "['red', 'green', 'blue'] の配列を作ります。", null, "2番目の変数名は `second` です。", null, "first を出力します。", null, "second を出力します。"],
       "candidates": {
         "variables": ["second", "third", "last", "next"]
       },
@@ -392,17 +345,12 @@ export const javascriptData2 = {
         "const user = { name: 'Alice', score: 100 };",
         "// name プロパティを取り出す",
         "const { name, score } = user;",
+        "// nameを表示",
         "console.log(name);",
+        "// scoreを表示",
         "console.log(score);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "プロパティ名と同じ `name` を使います。",
-        null,
-        null
-      ],
+      "lineHints": [null, "{ name: 'Alice', score: 100 } のオブジェクトを作ります。", null, "プロパティ名と同じ `name` を使います。", null, "name を出力します。", null, "score を出力します。"],
       "candidates": {
         "variables": ["name", "user", "value", "key"]
       },
@@ -436,19 +384,14 @@ export const javascriptData2 = {
       "correctLines": [
         "// [1, 2] と [3, 4] の2つの配列を合体させる",
         "const arr1 = [1, 2];",
+        "// arr2を定義する",
         "const arr2 = [3, 4];",
         "// ... スプレッド演算子で展開する",
         "const merged = [...arr1, ...arr2];",
+        "// mergedを表示",
         "console.log(merged);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "スプレッド演算子は `...` です。",
-        null
-      ],
+      "lineHints": [null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "スプレッド演算子は `...` です。", null, "merged を出力します。"],
       "candidates": {
         "operators": ["...", "..", "***", "::"]
       },
@@ -484,15 +427,10 @@ export const javascriptData2 = {
         "const num = 5;",
         "// ? で三項演算子を使う",
         "const sign = num >= 0 ? 'positive' : 'negative';",
+        "// signを表示",
         "console.log(sign);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "三項演算子は `?` で真の値を、`:` で偽の値を指定します。",
-        null
-      ],
+      "lineHints": [null, "定数を宣言し、数値を代入します。", null, "三項演算子は `?` で真の値を、`:` で偽の値を指定します。", null, "sign を出力します。"],
       "candidates": {
         "operators": ["?", ":", "&&", "||"]
       },
@@ -528,15 +466,10 @@ export const javascriptData2 = {
         "const numbers = [1, 3, 4, 7, 8];",
         "// find メソッドで最初の要素を探す",
         "const firstEven = numbers.find(n => n % 2 === 0);",
+        "// firstEvenを表示",
         "console.log(firstEven);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "`find` メソッドを使います。",
-        null
-      ],
+      "lineHints": [null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "`find` メソッドを使います。", null, "firstEven を出力します。"],
       "candidates": {
         "functions": ["find", "filter", "some", "findIndex"]
       },
@@ -570,21 +503,16 @@ export const javascriptData2 = {
       "correctLines": [
         "// x = 10, y = 20 をプロパティとして持つオブジェクトを作る",
         "const x = 10;",
+        "// y = 20",
         "const y = 20;",
         "// ショートハンドで x をプロパティとして追加する",
         "const point = { x, y };",
+        "// point.xを表示",
         "console.log(point.x);",
+        "// point.yを表示",
         "console.log(point.y);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "変数名がそのままプロパティ名になる `x` を使います。",
-        null,
-        null
-      ],
+      "lineHints": [null, "定数を宣言し、数値を代入します。", null, "定数を宣言し、数値を代入します。", null, "変数名がそのままプロパティ名になる `x` を使います。", null, "point.x を出力します。", null, "point.y を出力します。"],
       "candidates": {
         "variables": ["x", "x: x", "point", "value"]
       },

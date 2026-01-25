@@ -22,11 +22,15 @@ export const haskell3Data = {
       "correctCode": "double :: Int -> Int\ndouble x = x * 2\n\n-- mapで各要素に関数を適用\ndoubled = map double [1, 2, 3, 4, 5]",
       "holeyCode": "-- Intを入力\ndouble :: Int -> ___\n-- *で掛け算\ndouble x = x ___ 2\n\n-- 各要素に関数を適用してリストを変換する関数\ndoubled = ___ double [1, 2, 3, 4, 5]",
       "correctLines": [
-        { "lineNumber": 4, "content": "doubled = map double [1, 2, 3, 4, 5]" }
+        "-- Intを入力",
+        "double :: Int -> Int",
+        "-- *で掛け算",
+        "double x = x * 2",
+        "",
+        "-- 各要素に関数を適用してリストを変換する関数",
+        "doubled = map double [1, 2, 3, 4, 5]"
       ],
-      "lineHints": [
-        { "lineNumber": 4, "hint": "リストの各要素に関数を適用する関数です" }
-      ],
+      "lineHints": [null, "型を指定します。", null, "掛け算で2倍にします。", null, null, "複数の値をまとめて格納する配列（またはリスト）を作成します。"],
       "candidates": {
         "4": ["map", "filter", "fold", "apply"]
       },
@@ -50,11 +54,15 @@ export const haskell3Data = {
       "correctCode": "isEven :: Int -> Bool\nisEven x = x `mod` 2 == 0\n\n-- filterで条件を満たす要素を抽出\nevens = filter isEven [1, 2, 3, 4, 5, 6]",
       "holeyCode": "-- Boolを入力\nisEven :: Int -> ___\n-- ==で等価比較\nisEven x = x `mod` 2 ___ 0\n\n-- 条件を満たす要素だけを抽出する関数\nevens = ___ isEven [1, 2, 3, 4, 5, 6]",
       "correctLines": [
-        { "lineNumber": 4, "content": "evens = filter isEven [1, 2, 3, 4, 5, 6]" }
+        "-- Boolを入力",
+        "isEven :: Int -> Bool",
+        "-- ==で等価比較",
+        "isEven x = x `mod` 2 == 0",
+        "",
+        "-- 条件を満たす要素だけを抽出する関数",
+        "evens = filter isEven [1, 2, 3, 4, 5, 6]"
       ],
-      "lineHints": [
-        { "lineNumber": 4, "hint": "条件を満たす要素だけを抽出する関数です" }
-      ],
+      "lineHints": [null, "型を指定します。", null, "== で等価比較をします。", null, null, "複数の値をまとめて格納する配列（またはリスト）を作成します。"],
       "candidates": {
         "4": ["filter", "map", "select", "where"]
       },
@@ -78,11 +86,10 @@ export const haskell3Data = {
       "correctCode": "-- \\でラムダ式を開始\nsquared = map (\\x -> x * x) [1, 2, 3, 4, 5]",
       "holeyCode": "-- ラムダ式を開始する記号\nsquared = map (___x -> x * x) [1, 2, 3, 4, 5]",
       "correctLines": [
-        { "lineNumber": 1, "content": "squared = map (\\x -> x * x) [1, 2, 3, 4, 5]" }
+        "-- ラムダ式を開始する記号",
+        "squared = map (\\x -> x * x) [1, 2, 3, 4, 5]"
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "ラムダ式はバックスラッシュで始まります" }
-      ],
+      "lineHints": [null, "複数の値をまとめて格納する配列（またはリスト）を作成します。"],
       "candidates": {
         "1": ["\\", "lambda", "fn", "->"]
       },
@@ -106,11 +113,14 @@ export const haskell3Data = {
       "correctCode": "sumList :: [Int] -> Int\n-- foldrで右から畳み込み\nsumList xs = foldr (+) 0 xs\n\ntotal = sumList [1, 2, 3, 4, 5]",
       "holeyCode": "-- Intを入力\nsumList :: [Int] -> ___\n-- リストを右から畳み込む関数\nsumList xs = ___ (+) 0 xs\n-- sumListを入力\ntotal = ___ [1, 2, 3, 4, 5]",
       "correctLines": [
-        { "lineNumber": 2, "content": "sumList xs = foldr (+) 0 xs" }
+        "-- Intを入力",
+        "sumList :: [Int] -> Int",
+        "-- リストを右から畳み込む関数",
+        "sumList xs = foldr (+) 0 xs",
+        "-- sumListを入力",
+        "total = sumList [1, 2, 3, 4, 5]"
       ],
-      "lineHints": [
-        { "lineNumber": 2, "hint": "右から畳み込む関数です" }
-      ],
+      "lineHints": [null, "型を指定します。", null, "右から畳み込む関数です。", null, "複数の値をまとめて格納する配列（またはリスト）を作成します。"],
       "candidates": {
         "2": ["foldr", "foldl", "reduce", "sum"]
       },
@@ -134,11 +144,14 @@ export const haskell3Data = {
       "correctCode": "squareDouble :: Int -> Int\n-- .で関数合成\nsquareDouble = (^2) . (*2)\n\nresult = squareDouble 3",
       "holeyCode": "-- Intを入力\nsquareDouble :: Int -> ___\n-- 2つの関数を合成する演算子\nsquareDouble = (^2) ___ (*2)\n-- squareDoubleを入力\nresult = ___ 3",
       "correctLines": [
-        { "lineNumber": 2, "content": "squareDouble = (^2) . (*2)" }
+        "-- Intを入力",
+        "squareDouble :: Int -> Int",
+        "-- 2つの関数を合成する演算子",
+        "squareDouble = (^2) . (*2)",
+        "-- squareDoubleを入力",
+        "result = squareDouble 3"
       ],
-      "lineHints": [
-        { "lineNumber": 2, "hint": "関数合成演算子はドットです" }
-      ],
+      "lineHints": [null, "型を指定します。", null, "関数合成演算子はドットです。", null, "squareDouble関数を呼び出します。"],
       "candidates": {
         "2": [".", "|>", ">>", "->"]
       },
@@ -162,11 +175,14 @@ export const haskell3Data = {
       "correctCode": "safeDiv :: Int -> Int -> Maybe Int\n-- Nothingで値がないことを表す\nsafeDiv _ 0 = Nothing\nsafeDiv x y = Just (x `div` y)",
       "holeyCode": "-- Maybe Intを入力\nsafeDiv :: Int -> Int -> ___\n-- 値がないことを表すMaybeのコンストラクタ\nsafeDiv _ 0 = ___\n-- Justを入力\nsafeDiv x y = ___ (x `div` y)",
       "correctLines": [
-        { "lineNumber": 2, "content": "safeDiv _ 0 = Nothing" }
+        "-- Maybe Intを入力",
+        "safeDiv :: Int -> Int -> Maybe Int",
+        "-- 値がないことを表すMaybeのコンストラクタ",
+        "safeDiv _ 0 = Nothing",
+        "-- Justを入力",
+        "safeDiv x y = Just (x `div` y)"
       ],
-      "lineHints": [
-        { "lineNumber": 2, "hint": "値がないことを表すMaybeのコンストラクタです" }
-      ],
+      "lineHints": [null, "型を指定します。", null, "値がないことを表すMaybeのコンストラクタです。", null, "Justで値を包みます。"],
       "candidates": {
         "2": ["Nothing", "None", "Null", "Empty"]
       },
@@ -191,11 +207,16 @@ export const haskell3Data = {
       "correctCode": "validateAge :: Int -> Either String Int\nvalidateAge age\n  -- Leftでエラーを表す\n  | age < 0   = Left \"Age cannot be negative\"\n  | otherwise = Right age",
       "holeyCode": "-- Either String Intを入力\nvalidateAge :: Int -> ___\n-- ageを入力\nvalidateAge ___\n  -- 失敗・エラーを表すEitherのコンストラクタ\n  | age < 0   = ___ \"Age cannot be negative\"\n  -- Rightを入力\n  | otherwise = ___ age",
       "correctLines": [
-        { "lineNumber": 3, "content": "  | age < 0   = Left \"Age cannot be negative\"" }
+        "-- Either String Intを入力",
+        "validateAge :: Int -> Either String Int",
+        "-- ageを入力",
+        "validateAge age",
+        "  -- 失敗・エラーを表すEitherのコンストラクタ",
+        "  | age < 0   = Left \"Age cannot be negative\"",
+        "  -- Rightを入力",
+        "  | otherwise = Right age"
       ],
-      "lineHints": [
-        { "lineNumber": 3, "hint": "エラーを表すEitherのコンストラクタです" }
-      ],
+      "lineHints": [null, "型を指定します。", null, "関数の引数を定義します。", null, "エラーを表すEitherのコンストラクタです。", null, "Rightで成功値を包みます。"],
       "candidates": {
         "3": ["Left", "Error", "Fail", "None"]
       },
@@ -220,11 +241,14 @@ export const haskell3Data = {
       "correctCode": "doubleJust :: Maybe Int -> Maybe Int\n-- fmapでFunctor内の値に関数を適用\ndoubleJust = fmap (*2)\n\nresult = doubleJust (Just 5)",
       "holeyCode": "-- Maybe Intを入力\ndoubleJust :: Maybe Int -> ___\n-- Functor内の値に関数を適用する関数\ndoubleJust = ___ (*2)\n-- doubleJustを入力\nresult = ___ (Just 5)",
       "correctLines": [
-        { "lineNumber": 2, "content": "doubleJust = fmap (*2)" }
+        "-- Maybe Intを入力",
+        "doubleJust :: Maybe Int -> Maybe Int",
+        "-- Functor内の値に関数を適用する関数",
+        "doubleJust = fmap (*2)",
+        "-- doubleJustを入力",
+        "result = doubleJust (Just 5)"
       ],
-      "lineHints": [
-        { "lineNumber": 2, "hint": "Functor内の値に関数を適用する関数です" }
-      ],
+      "lineHints": [null, "型を指定します。", null, "Functor内の値に関数を適用する関数です。", null, "doubleJust関数を呼び出します。"],
       "candidates": {
         "2": ["fmap", "map", "apply", "bind"]
       },
@@ -248,11 +272,18 @@ export const haskell3Data = {
       "correctCode": "addMaybe :: Maybe Int -> Maybe Int -> Maybe Int\n-- doでモナド操作を順次実行\naddMaybe mx my = do\n  x <- mx\n  y <- my\n  return (x + y)",
       "holeyCode": "-- Maybe Intを入力\naddMaybe :: Maybe Int -> Maybe Int -> ___\n-- モナド操作を順次実行する記法\naddMaybe mx my = ___\n  -- mxを入力\n  x <- ___\n  -- myを入力\n  y <- ___\n  -- +で足し算\n  return (x ___ y)",
       "correctLines": [
-        { "lineNumber": 2, "content": "addMaybe mx my = do" }
+        "-- Maybe Intを入力",
+        "addMaybe :: Maybe Int -> Maybe Int -> Maybe Int",
+        "-- モナド操作を順次実行する記法",
+        "addMaybe mx my = do",
+        "  -- mxを入力",
+        "  x <- mx",
+        "  -- myを入力",
+        "  y <- my",
+        "  -- +で足し算",
+        "  return (x + y)"
       ],
-      "lineHints": [
-        { "lineNumber": 2, "hint": "モナド操作を順次実行する記法です" }
-      ],
+      "lineHints": [null, "型を指定します。", null, "モナド操作を順次実行する記法です。", null, "mxから値を取り出します。", null, "myから値を取り出します。", null, "+ で足し算します。"],
       "candidates": {
         "2": ["do", "begin", "block", "run"]
       },
@@ -277,11 +308,12 @@ export const haskell3Data = {
       "correctCode": "squares :: [Int]\n-- |で生成器の前を区切る\nsquares = [x * x | x <- [1..5]]",
       "holeyCode": "-- [Int]を入力\nsquares :: ___\n-- リスト内包表記で式と生成器を区切る記号\nsquares = [x * x ___ x <- [1..5]]",
       "correctLines": [
-        { "lineNumber": 2, "content": "squares = [x * x | x <- [1..5]]" }
+        "-- [Int]を入力",
+        "squares :: [Int]",
+        "-- リスト内包表記で式と生成器を区切る記号",
+        "squares = [x * x | x <- [1..5]]"
       ],
-      "lineHints": [
-        { "lineNumber": 2, "hint": "生成器の前に置く区切り記号です" }
-      ],
+      "lineHints": [null, "型を指定します。", null, "生成器の前に置く区切り記号です。"],
       "candidates": {
         "2": ["|", "for", "where", ";"]
       },

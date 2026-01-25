@@ -32,11 +32,10 @@ export const luaData = {
       "correctCode": "-- Hello, Lua!を表示\nprint(\"Hello, Lua!\")",
       "holeyCode": "-- Hello, Lua!を表示\nprint(\"___\")",
       "correctLines": [
+        "-- Hello, Lua!を表示",
         "print(\"Hello, Lua!\")"
       ],
-      "lineHints": [
-        "print を使って、そのあとの文字を画面に出します。"
-      ],
+      "lineHints": [null, "print を使って、そのあとの文字を画面に出します。"],
       "candidates": {
         "strings": [
           "Hello, Lua!"
@@ -70,13 +69,12 @@ export const luaData = {
       "correctCode": "-- 10を入力\nlocal x = 10\n-- xを入力\nprint(x)",
       "holeyCode": "-- 10を入力\nlocal x = ___\n-- xを入力\nprint(___)",
       "correctLines": [
+        "-- 10を入力",
         "local x = 10",
+        "-- xを入力",
         "print(x)"
       ],
-      "lineHints": [
-        "x という名前のはこに 10 を入力します。 `local` を忘れずに入力しましょう。",
-        "はこの名前 x を指定して、中身を表示します。"
-      ],
+      "lineHints": [null, "x という名前のはこに 10 を入力します。 `local` を忘れずに入力しましょう。", null, "変数の内容を画面に出力します。"],
       "candidates": {
         "variables": [
           "x"
@@ -113,15 +111,14 @@ export const luaData = {
       "correctCode": "local a = 5\nlocal b = 3\n-- +でたし算\nprint(a + b)",
       "holeyCode": "-- 5を入力\nlocal a = ___\n-- 3を入力\nlocal b = ___\n-- +でたし算\nprint(a ___ b)",
       "correctLines": [
+        "-- 5を入力",
         "local a = 5",
+        "-- 3を入力",
         "local b = 3",
+        "-- +でたし算",
         ["print(a + b)", "print(b + a)"]
       ],
-      "lineHints": [
-        null,
-        null,
-        "たし算なので `+\` を使います。"
-      ],
+      "lineHints": [null, "a に 5 を入力します。", null, "b に 3 を入力します。", null, "たし算なので `+` を使います。", null],
       "candidates": {
         "operators": [
           "+"

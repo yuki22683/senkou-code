@@ -32,22 +32,14 @@ export const cpp4Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // make_unique で排他的ポインタを作成",
         "    auto p = make_unique<int>(99);",
+        "    // *p で中身にアクセス",
         "    cout << *p << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "make_unique で排他的ポインタを作成します。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "排他的所有権のスマートポインタを作成する関数です。", null, "ポインタの中身を参照するための間接参照演算子です。", null, null],
       "candidates": {
         "functions": ["make_unique", "make_shared", "unique_ptr"]
       },
@@ -84,22 +76,14 @@ export const cpp4Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // variant で複数型のうち1つを保持",
         "    variant<int, double> v = 3.14;",
+        "    // get<型> で値を取得",
         "    cout << get<double>(v) << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "get<型> で値を取得します。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "複数の型のうち1つを安全に保持できる型です。", null, "variantから指定した型の値を取り出す関数です。", null, null],
       "candidates": {
         "functions": ["get", "value", "extract"]
       },
@@ -136,24 +120,15 @@ export const cpp4Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // tuple で複数の値をまとめる",
         "    tuple<int, double, string> t{1, 2.5, \"hi\"};",
+        "    // auto で構造化束縛",
         "    auto [a, b, c] = t;",
         "    cout << a << \" \" << b << \" \" << c << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "auto で構造化束縛を使います。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "型を自動推論して複数の変数に分解するキーワードです。", null, null, null],
       "candidates": {
         "keywords": ["auto", "var", "let"]
       },
@@ -189,29 +164,18 @@ export const cpp4Data = {
         "#include <string_view>",
         "using namespace std;",
         "",
+        "// string_view で文字列ビューを受け取る",
         "void greet(string_view name) {",
         "    cout << \"Hello, \" << name << endl;",
         "}",
         "",
         "int main() {",
+        "    // greet で関数を呼び出し",
         "    greet(\"World\");",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "string_view で文字列ビューを受け取ります。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "void型の値を返す関数（greet）を定義します。", null, null, null, null, null, "定義した関数を呼び出します。", null, null],
       "candidates": {
         "types": ["string_view", "string", "const char*"]
       },
@@ -249,27 +213,16 @@ export const cpp4Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // vector で配列を作成",
         "    vector<int> v = {1, 2, 3};",
+        "    // transform で各要素を変換",
         "    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });",
         "    for (int n : v) cout << n << \" \";",
         "    cout << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "transform で各要素を変換します。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "各要素に関数を適用して変換するアルゴリズムです。", null, null, null, null],
       "candidates": {
         "algorithms": ["transform", "for_each", "copy"]
       },
@@ -307,25 +260,15 @@ export const cpp4Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // vector で配列を作成",
         "    vector<int> v = {1, 2, 3, 4, 5};",
+        "    // accumulate で要素を集約",
         "    int sum = accumulate(v.begin(), v.end(), 0);",
         "    cout << sum << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "accumulate で要素を集約します。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "要素を累積して1つの値にまとめるアルゴリズムです。", null, null, null],
       "candidates": {
         "algorithms": ["accumulate", "reduce", "sum"]
       },
@@ -363,25 +306,15 @@ export const cpp4Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // vector で配列を作成",
         "    vector<int> v = {1, 2, 3, 4, 5};",
+        "    // find_if で条件に合う要素を検索",
         "    auto it = find_if(v.begin(), v.end(), [](int x) { return x > 3; });",
         "    cout << *it << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "find_if で条件に合う要素を検索します。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "条件に合う最初の要素を検索するアルゴリズムです。", null, null, null],
       "candidates": {
         "algorithms": ["find_if", "find", "search"]
       },
@@ -419,27 +352,16 @@ export const cpp4Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // vector で配列を作成",
         "    vector<int> v = {3, 1, 4, 1, 5};",
+        "    // sort でソート",
         "    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });",
         "    for (int n : v) cout << n << \" \";",
         "    cout << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "sort でカスタム順序でソートします。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "要素を並べ替えるアルゴリズムです。", null, null, null, null],
       "candidates": {
         "algorithms": ["sort", "stable_sort", "partial_sort"]
       },
@@ -477,27 +399,16 @@ export const cpp4Data = {
         "",
         "int main() {",
         "    try {",
+        "        // throw で例外を投げる",
         "        throw runtime_error(\"Oops!\");",
+        "    // catch で例外を捕まえる",
         "    } catch (const exception& e) {",
         "        cout << e.what() << endl;",
         "    }",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "throw で例外を投げます。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "例外オブジェクトを投げるキーワードです。", null, "エラー（例外）が発生した場合の処理を記述します。", null, null, null, null],
       "candidates": {
         "keywords": ["throw", "raise", "error"]
       },
@@ -532,7 +443,9 @@ export const cpp4Data = {
         "#include <iostream>",
         "using namespace std;",
         "",
+        "// noexcept で例外を投げないことを宣言",
         "int add(int a, int b) noexcept {",
+        "    // + で足し算",
         "    return a + b;",
         "}",
         "",
@@ -541,19 +454,7 @@ export const cpp4Data = {
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "noexcept で例外を投げないことを宣言します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, "int型の値を返す関数（add）を定義します。", null, "2つの数値を加算する演算子です。", null, null, null, null, null, null],
       "candidates": {
         "keywords": ["noexcept", "nothrow", "safe"]
       },

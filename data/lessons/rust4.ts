@@ -27,6 +27,7 @@ export const rust4Data = {
       "correctCode": "// trait でトレイトを定義\ntrait Speak {\n    fn speak(&self) -> String;\n}\n\nstruct Dog;\n\nimpl Speak for Dog {\n    fn speak(&self) -> String {\n        String::from(\"Woof!\")\n    }\n}\n\nfn main() {\n    let dog = Dog;\n    println!(\"{}\", dog.speak());\n}",
       "holeyCode": "// trait でトレイトを定義\n___ Speak {\n    fn speak(&self) -> String;\n}\n\nstruct Dog;\n\nimpl Speak for Dog {\n    fn speak(&self) -> String {\n        String::from(\"Woof!\")\n    }\n}\n\nfn main() {\n    let dog = Dog;\n    println!(\"{}\", dog.speak());\n}",
       "correctLines": [
+        "// trait でトレイトを定義",
         "trait Speak {",
         "    fn speak(&self) -> String;",
         "}",
@@ -44,24 +45,7 @@ export const rust4Data = {
         "    println!(\"{}\", dog.speak());",
         "}"
       ],
-      "lineHints": [
-        "trait でトレイトを定義します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "trait でトレイトを定義します。", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["trait", "impl", "struct"]
       },
@@ -93,6 +77,7 @@ export const rust4Data = {
       "correctCode": "// derive でトレイトを自動実装\n#[derive(Debug)]\nstruct User {\n    name: String,\n    age: u32,\n}\n\nfn main() {\n    let user = User { name: String::from(\"Alice\"), age: 30 };\n    println!(\"{:?}\", user);\n}",
       "holeyCode": "// derive でトレイトを自動実装\n#[___(Debug)]\nstruct User {\n    name: String,\n    age: u32,\n}\n\nfn main() {\n    let user = User { name: String::from(\"Alice\"), age: 30 };\n    println!(\"{:?}\", user);\n}",
       "correctLines": [
+        "// derive でトレイトを自動実装",
         "#[derive(Debug)]",
         "struct User {",
         "    name: String,",
@@ -104,18 +89,7 @@ export const rust4Data = {
         "    println!(\"{:?}\", user);",
         "}"
       ],
-      "lineHints": [
-        "derive でトレイトを自動実装します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "derive でトレイトを自動実装します。", null, null, null, null, null, null, null, null, null],
       "candidates": {
         "attributes": ["derive", "cfg", "allow"]
       },
@@ -148,16 +122,12 @@ export const rust4Data = {
       "holeyCode": "fn main() {\n    // Box::new でヒープに格納\n    let x = ___::new(42);\n    println!(\"{}\", *x);\n}",
       "correctLines": [
         "fn main() {",
+        "    // Box::new でヒープに格納",
         "    let x = Box::new(42);",
         "    println!(\"{}\", *x);",
         "}"
       ],
-      "lineHints": [
-        null,
-        "Box::new でヒープに格納します。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, "Box::new でヒープに格納します。", null, null],
       "candidates": {
         "types": ["Box", "Rc", "Arc"]
       },
@@ -193,19 +163,12 @@ export const rust4Data = {
         "",
         "fn main() {",
         "    let a = Rc::new(String::from(\"Hello\"));",
+        "    // clone で参照カウントを増やす",
         "    let b = Rc::clone(&a);",
         "    println!(\"{} {}\", a, b);",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "Rc::clone で参照カウントを増やします。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "Rc::clone で参照カウントを増やします。", null, null],
       "candidates": {
         "methods": ["clone", "new", "copy"]
       },
@@ -241,21 +204,13 @@ export const rust4Data = {
         "",
         "fn main() {",
         "    let mut map = HashMap::new();",
+        "    // insert でキーと値を追加",
         "    map.insert(\"a\", 1);",
         "    map.insert(\"b\", 2);",
         "    println!(\"{:?}\", map.get(\"a\"));",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "insert でキーと値を追加します。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "insert でキーと値を追加します。", null, null, null],
       "candidates": {
         "methods": ["insert", "put", "add"]
       },
@@ -287,6 +242,7 @@ export const rust4Data = {
       "correctCode": "// HashSet をインポート\nuse std::collections::HashSet;\n\nfn main() {\n    let mut set = HashSet::new();\n    set.insert(1);\n    set.insert(2);\n    set.insert(1);\n    println!(\"{}\", set.len());\n}",
       "holeyCode": "// HashSet をインポート\nuse std::collections::___;\n\nfn main() {\n    let mut set = HashSet::new();\n    set.insert(1);\n    set.insert(2);\n    set.insert(1);\n    println!(\"{}\", set.len());\n}",
       "correctLines": [
+        "// HashSet をインポート",
         "use std::collections::HashSet;",
         "",
         "fn main() {",
@@ -297,17 +253,7 @@ export const rust4Data = {
         "    println!(\"{}\", set.len());",
         "}"
       ],
-      "lineHints": [
-        "HashSet をインポートします。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "HashSet をインポートします。", null, null, null, null, null, null, null, null],
       "candidates": {
         "types": ["HashSet", "HashMap", "BTreeSet"]
       },
@@ -342,20 +288,13 @@ export const rust4Data = {
         "fn main() {",
         "    let num = 7;",
         "    match num {",
+        "        // if でマッチガードを追加",
         "        n if n % 2 == 0 => println!(\"even\"),",
         "        _ => println!(\"odd\"),",
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "if でマッチガードを追加します。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, "マクロを使用して、文字列と改行を標準出力に出力します。", null, null, null],
       "candidates": {
         "keywords": ["if", "when", "where"]
       },
@@ -387,6 +326,7 @@ export const rust4Data = {
       "correctCode": "// impl でトレイトを実装する型を返す\nfn doubles(n: i32) -> impl Iterator<Item = i32> {\n    (0..n).map(|x| x * 2)\n}\n\nfn main() {\n    for x in doubles(3) {\n        println!(\"{}\", x);\n    }\n}",
       "holeyCode": "// impl でトレイトを実装する型を返す\nfn doubles(n: i32) -> ___ Iterator<Item = i32> {\n    (0..n).map(|x| x * 2)\n}\n\nfn main() {\n    for x in doubles(3) {\n        println!(\"{}\", x);\n    }\n}",
       "correctLines": [
+        "// impl でトレイトを実装する型を返す",
         "fn doubles(n: i32) -> impl Iterator<Item = i32> {",
         "    (0..n).map(|x| x * 2)",
         "}",
@@ -397,17 +337,7 @@ export const rust4Data = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        "impl でトレイトを実装する型を返します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "関数（doubles）を定義します。", null, null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["impl", "dyn", "type"]
       },
@@ -440,16 +370,12 @@ export const rust4Data = {
       "holeyCode": "fn main() {\n    // collect で Vec に変換\n    let nums: Vec<i32> = (1..=5).___();\n    println!(\"{:?}\", nums);\n}",
       "correctLines": [
         "fn main() {",
+        "    // collect で Vec に変換",
         "    let nums: Vec<i32> = (1..=5).collect();",
         "    println!(\"{:?}\", nums);",
         "}"
       ],
-      "lineHints": [
-        null,
-        "collect でVecに変換します。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, "collect でVecに変換します。", null, null],
       "candidates": {
         "methods": ["collect", "into", "to_vec"]
       },
@@ -483,19 +409,13 @@ export const rust4Data = {
       "correctLines": [
         "fn main() {",
         "    let items = vec![\"a\", \"b\", \"c\"];",
+        "    // 1番目の i にインデックス、2番目の item に要素が入る",
         "    for (i, item) in items.iter().enumerate() {",
         "        println!(\"{}: {}\", i, item);",
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "enumerate でインデックスを付けます。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "指定された回数や範囲で、繰り返し処理（ループ）を行います。", null, null, null],
       "candidates": {
         "methods": ["enumerate", "zip", "indexed"]
       },

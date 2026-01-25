@@ -32,12 +32,7 @@ export const pythonData3 = {
         "# 定義した関数に数値 5 を渡して実行結果を表示",
         "print(square(5))"
       ],
-      "lineHints": [
-        null,
-        "lambda キーワードを使います。",
-        null,
-        null
-      ],
+      "lineHints": [null, "lambda キーワードを使います。", null, null],
       "candidates": {
         "keywords": ["lambda", "def"]
       },
@@ -83,22 +78,7 @@ export const pythonData3 = {
         "# 1, 2, 3, 4 を渡して合計を表示",
         "print(add_all(1, 2, 3, 4))"
       ],
-      "lineHints": [
-        null,
-        null,
-        "* を付けて可変長引数にします。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "関数（add_all）を新しく定義します。", null, null, null, null, null, null, null, null, null, null, null],
       "candidates": {
         "operators": ["*", "**"]
       },
@@ -140,17 +120,7 @@ export const pythonData3 = {
         "# x=10, y=20 を指定して実行",
         "print_info(x=10, y=20)"
       ],
-      "lineHints": [
-        null,
-        "** を付けてキーワード引数にします。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "関数（print_info）を新しく定義します。", null, null, null, null, null, null, null],
       "candidates": {
         "operators": ["*", "**"]
       },
@@ -189,16 +159,7 @@ export const pythonData3 = {
         "    # 「番号: 色」の形式で画面に出力",
         "    print(f'{i}: {color}')"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "enumerate でインデックスと要素を取得します。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "enumerate でインデックスと要素を取得します。", null, null],
       "candidates": {
         "functions": ["enumerate", "range", "zip"]
       },
@@ -239,18 +200,7 @@ export const pythonData3 = {
         "    # 「キー: 値」の形式で画面に出力",
         "    print(f'{k}: {v}')"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "zip で複数のリストを同時にループします。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "zip で複数のリストを同時にループします。", null, null],
       "candidates": {
         "functions": ["zip", "enumerate", "map"]
       },
@@ -294,19 +244,7 @@ export const pythonData3 = {
         "    # 取り出した値を表示",
         "    print(num)"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "yield で値を1つずつ返します。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "yield で値を1つずつ返します。", null, null, null, null, null, null],
       "candidates": {
         "keywords": ["yield", "return"],
         "variables": ["num"]
@@ -346,14 +284,7 @@ export const pythonData3 = {
         "# 合計を表示",
         "print(total)"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "for を使ってジェネレータ式を作ります。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "for を使ってジェネレータ式を作ります。", null, null],
       "candidates": {
         "keywords": ["for", "in", "if"]
       },
@@ -406,30 +337,7 @@ export const pythonData3 = {
         "# 関数を呼び出して実行",
         "greet()"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "@ でデコレータを適用します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, null, null, null, null, "@ でデコレータを適用します。", null, null, null, null, null, null, null, null],
       "candidates": {
         "operators": ["@", "#", "$"]
       },
@@ -468,16 +376,7 @@ export const pythonData3 = {
         "# 判定結果を画面に表示",
         "print(result)"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "all で全ての要素が条件を満たすかチェックします。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "all で全ての要素が条件を満たすかチェックします。", null, null],
       "candidates": {
         "functions": ["all", "any", "sum"]
       },
@@ -527,27 +426,7 @@ export const pythonData3 = {
         "    # 使用中のメッセージを表示",
         "    print('using')"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "with でコンテキストマネージャを使います。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, "with でコンテキストマネージャを使います。", null, null],
       "candidates": {
         "keywords": ["with", "for", "if"]
       },

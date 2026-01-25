@@ -27,13 +27,12 @@ export const bash2Data = {
       "correctCode": "nums=(10 20 30)\n# 2で3番目の要素を取得\necho ${nums[2]}",
       "holeyCode": "# 配列を定義（10, 20, 30）\nnums=(___ 20 30)\n# 3番目の要素にアクセスするインデックス（0から数える）\necho ${nums[___]}",
       "correctLines": [
+        "# 配列を定義（10, 20, 30）",
         "nums=(10 20 30)",
+        "# 3番目の要素にアクセスするインデックス（0から数える）",
         "echo ${nums[2]}"
       ],
-      "lineHints": [
-        "",
-        "インデックス 2 で3番目の要素にアクセスします。"
-      ],
+      "lineHints": [null, null, null, "インデックス 2 で3番目の要素にアクセスします。"],
       "candidates": {
         "numbers": ["2"]
       },
@@ -65,13 +64,12 @@ export const bash2Data = {
       "correctCode": "word=\"Bash\"\n# #で文字列の長さを取得\necho ${#word}",
       "holeyCode": "# 変数に文字列を代入\nword=\"___\"\n# 文字列の長さを取得する記号\necho ${___word}",
       "correctLines": [
+        "# 変数に文字列を代入",
         "word=\"Bash\"",
+        "# 文字列の長さを取得する記号",
         "echo ${#word}"
       ],
-      "lineHints": [
-        "",
-        "# で長さを取得します。"
-      ],
+      "lineHints": [null, null, null, "# で長さを取得します。"],
       "candidates": {
         "operators": ["#"]
       },
@@ -103,13 +101,12 @@ export const bash2Data = {
       "correctCode": "text=\"Hello World\"\n# 6で開始位置を指定\necho ${text:6:5}",
       "holeyCode": "# 変数に文字列を代入\ntext=\"___\"\n# Worldが始まる位置（0から数える）\necho ${text:___:5}",
       "correctLines": [
+        "# 変数に文字列を代入",
         "text=\"Hello World\"",
+        "# Worldが始まる位置（0から数える）",
         "echo ${text:6:5}"
       ],
-      "lineHints": [
-        "",
-        "6 から始めて World を取得します。"
-      ],
+      "lineHints": [null, null, null, "6 から始めて World を取得します。"],
       "candidates": {
         "numbers": ["6"]
       },
@@ -141,17 +138,15 @@ export const bash2Data = {
       "correctCode": "add() {\n    # $1で最初の引数を参照\n    echo $(($1 + $2))\n}\nadd 3 5",
       "holeyCode": "# 関数を定義\n___() {\n    # 最初の引数を参照する変数\n    echo $((___ + $2))\n}\n# 関数を呼び出す\nadd ___ 5",
       "correctLines": [
+        "# 関数を定義",
         "add() {",
+        "    # 最初の引数を参照する変数",
         "    echo $(($1 + $2))",
         "}",
+        "# 関数を呼び出す",
         "add 3 5"
       ],
-      "lineHints": [
-        "",
-        "$1 で最初の引数を参照します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, "$1 で最初の引数を参照します。", null, null, null],
       "candidates": {
         "variables": ["$1"]
       },
@@ -183,19 +178,17 @@ export const bash2Data = {
       "correctCode": "square() {\n    echo $(($1 * $1))\n}\n# $で関数の出力を受け取る\nresult=$(square 4)\necho $result",
       "holeyCode": "# 関数を定義\n___() {\n    # 引数を2乗する\n    echo $(($1 * _____))\n}\n# コマンドの出力を取得する構文\nresult=___(square 4)\n# 結果を表示\necho $___",
       "correctLines": [
+        "# 関数を定義",
         "square() {",
+        "    # 引数を2乗する",
         "    echo $(($1 * $1))",
         "}",
+        "# コマンドの出力を取得する構文",
         "result=$(square 4)",
+        "# 結果を表示",
         "echo $result"
       ],
-      "lineHints": [
-        "",
-        "",
-        "",
-        "$() で関数の出力を受け取ります。",
-        ""
-      ],
+      "lineHints": [null, null, null, null, null, null, "$() で関数の出力を受け取ります。", null, null],
       "candidates": {
         "operators": ["$"]
       },
@@ -227,19 +220,17 @@ export const bash2Data = {
       "correctCode": "i=1\n# whileで条件ループ\nwhile [ $i -le 3 ]; do\n    echo $i\n    i=$((i + 1))\ndone",
       "holeyCode": "# 変数を初期化\ni=___\n# 条件が真の間繰り返すキーワード\n___ [ $i -le 3 ]; do\n    # 変数を表示\n    echo $___\n    # 変数をインクリメント\n    i=$((___ + 1))\ndone",
       "correctLines": [
+        "# 変数を初期化",
         "i=1",
+        "# 条件が真の間繰り返すキーワード",
         "while [ $i -le 3 ]; do",
+        "    # 変数を表示",
         "    echo $i",
+        "    # 変数をインクリメント",
         "    i=$((i + 1))",
         "done"
       ],
-      "lineHints": [
-        "",
-        "while で条件ループします。",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, "条件が満たされている間、処理を繰り返します。", null, null, null, null, null],
       "candidates": {
         "keywords": ["while"]
       },
@@ -271,21 +262,19 @@ export const bash2Data = {
       "correctCode": "fruit=\"apple\"\n# caseで分岐\ncase $fruit in\n    apple) echo \"red\";;\n    banana) echo \"yellow\";;\n    *) echo \"unknown\";;\nesac",
       "holeyCode": "# 変数に値を代入\nfruit=\"___\"\n# パターンマッチで分岐するキーワード\n___ $fruit in\n    # appleの場合\n    apple) echo \"___\";;\n    # bananaの場合\n    banana) echo \"yellow\";;\n    # その他の場合\n    *) echo \"___\";;\nesac",
       "correctLines": [
+        "# 変数に値を代入",
         "fruit=\"apple\"",
+        "# パターンマッチで分岐するキーワード",
         "case $fruit in",
+        "    # appleの場合",
         "    apple) echo \"red\";;",
+        "    # bananaの場合",
         "    banana) echo \"yellow\";;",
+        "    # その他の場合",
         "    *) echo \"unknown\";;",
         "esac"
       ],
-      "lineHints": [
-        "",
-        "case で分岐します。",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, "case で分岐します。", null, "red と表示します。", null, null, null, "unknown と表示します。", null],
       "candidates": {
         "keywords": ["case"]
       },
@@ -317,13 +306,12 @@ export const bash2Data = {
       "correctCode": "# $でコマンドの出力を取得\nfiles=$(echo \"test\")\necho \"Files: $files\"",
       "holeyCode": "# コマンドの出力を変数に格納する構文\nfiles=___(___)\n# 変数を表示\necho \"Files: $___\"",
       "correctLines": [
+        "# コマンドの出力を変数に格納する構文",
         "files=$(echo \"test\")",
+        "# 変数を表示",
         "echo \"Files: $files\""
       ],
-      "lineHints": [
-        "$() でコマンドの出力を取得します。",
-        ""
-      ],
+      "lineHints": [null, "$() でコマンドの出力を取得します。", null, null],
       "candidates": {
         "operators": ["$"]
       },
@@ -355,11 +343,10 @@ export const bash2Data = {
       "correctCode": "# readで入力を受け取る\necho \"input:\" && read val && echo \"You entered: $val\"",
       "holeyCode": "# 標準入力を変数に読み込むコマンド\necho \"input:\" && ___ val && echo \"You entered: $val\"",
       "correctLines": [
+        "# 標準入力を変数に読み込むコマンド",
         "echo \"input:\" && read val && echo \"You entered: $val\""
       ],
-      "lineHints": [
-        "read で入力を受け取ります。"
-      ],
+      "lineHints": [null, "文字列を標準出力に表示します。"],
       "candidates": {
         "keywords": ["read"]
       },
@@ -389,19 +376,17 @@ export const bash2Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# <<でヒアドキュメントを開始\ncat <<END\nHello\nWorld\nEND",
-      "holeyCode": "# ヒアドキュメントを開始する演算子\ncat ___END\n# 1行目（Hello）と2行目（World）のテキストを入力\n___\n___\nEND",
+      "holeyCode": "# ヒアドキュメントを開始する演算子\ncat ___END\n# 1行目のテキストを入力\n___\n# 2行目のテキストを入力\n___\nEND",
       "correctLines": [
+        "# ヒアドキュメントを開始する演算子",
         "cat <<END",
+        "# 1行目のテキストを入力",
         "Hello",
+        "# 2行目のテキストを入力",
         "World",
         "END"
       ],
-      "lineHints": [
-        "<< でヒアドキュメントを始めます。",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, "<< でヒアドキュメントを始めます。", null, "Hello と入力しましょう。", null, "World と入力しましょう。", null],
       "candidates": {
         "operators": ["<<"]
       },

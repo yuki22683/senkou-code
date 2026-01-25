@@ -37,13 +37,10 @@ export const perlData = {
       "correctCode": "# printで出力\nprint \"Hello, World!\\n\";",
       "holeyCode": "# printで出力\n___ \"Hello, World!\\n\";",
       "correctLines": [
-        "# Hello, World!を表示する関数",
+        "# printで出力",
         "print \"Hello, World!\\n\";"
       ],
-      "lineHints": [
-        null,
-        "画面に出す関数は `print` です。"
-      ],
+      "lineHints": [null, "画面に出す関数は `print` です。"],
       "candidates": {
         "functions": [
           "print"
@@ -89,11 +86,7 @@ export const perlData = {
         "my $message = \"Perl\";",
         "print \"$message\\n\";"
       ],
-      "lineHints": [
-        null,
-        "変数を宣言するキーワードを入力しましょう。",
-        null
-      ],
+      "lineHints": [null, "変数を宣言するキーワードを入力しましょう。", null],
       "candidates": {
         "keywords": ["my", "our", "local", "var"]
       },
@@ -128,21 +121,16 @@ export const perlData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 足し算する\nmy $a = 7;\nmy $b = 3;\nmy $sum = $a + $b;\nprint \"$sum\\n\";",
-      "holeyCode": "# 足し算する\nmy $a = 7;\nmy $b = 3;\nmy $sum = $a ___ $b;\nprint \"$sum\\n\";",
+      "holeyCode": "# 足し算する\nmy $a = 7;\nmy $b = 3;\n# 2つの変数を足し算する\nmy $sum = $a ___ $b;\nprint \"$sum\\n\";",
       "correctLines": [
         "# 足し算する",
         "my $a = 7;",
         "my $b = 3;",
+        "# 2つの変数を足し算する",
         "my $sum = $a + $b;",
         "print \"$sum\\n\";"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "足し算の記号を入力しましょう。",
-        null
-      ],
+      "lineHints": [null, null, null, null, "足し算の記号を入力しましょう。", null],
       "candidates": {
         "operators": ["+", "-", "*", "/"]
       },
@@ -183,11 +171,7 @@ export const perlData = {
         "my $greeting = \"Hello, \" . \"Perl!\";",
         "print \"$greeting\\n\";"
       ],
-      "lineHints": [
-        null,
-        "文字をつなげる記号を入力しましょう。",
-        null
-      ],
+      "lineHints": [null, "文字をつなげる記号を入力しましょう。", null],
       "candidates": {
         "operators": [".", "+", ",", "&"]
       },
@@ -228,11 +212,7 @@ export const perlData = {
         "my @fruits = (\"りんご\", \"みかん\", \"ぶどう\");",
         "print \"$fruits[0]\\n\";"
       ],
-      "lineHints": [
-        null,
-        "配列名を入力しましょう。@をつけます。",
-        null
-      ],
+      "lineHints": [null, "配列名を入力しましょう。@をつけます。", null],
       "candidates": {
         "variables": ["@fruits", "@colors", "$fruits", "$colors"]
       },
@@ -267,21 +247,16 @@ export const perlData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 条件分岐\nmy $score = 100;\nif ($score == 100) {\n  print \"満点！\\n\";\n}",
-      "holeyCode": "# 条件分岐\nmy $score = 100;\n___ ($score == 100) {\n  print \"満点！\\n\";\n}",
+      "holeyCode": "# 条件分岐\nmy $score = 100;\n# もしスコアが100なら\n___ ($score == 100) {\n  print \"満点！\\n\";\n}",
       "correctLines": [
         "# 条件分岐",
         "my $score = 100;",
+        "# もしスコアが100なら",
         "if ($score == 100) {",
         "  print \"満点！\\n\";",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "条件分岐のキーワードを入力しましょう。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "条件分岐のキーワードを入力しましょう。", null, null],
       "candidates": {
         "keywords": ["if", "unless", "while", "for"]
       },
@@ -316,25 +291,18 @@ export const perlData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# if-else\nmy $num = 5;\nif ($num >= 10) {\n  print \"大きい\\n\";\n} else {\n  print \"小さい\\n\";\n}",
-      "holeyCode": "# if-else\nmy $num = 5;\nif ($num >= 10) {\n  print \"大きい\\n\";\n} ___ {\n  print \"小さい\\n\";\n}",
+      "holeyCode": "# if-else\nmy $num = 5;\nif ($num >= 10) {\n  print \"大きい\\n\";\n# そうでなければ\n} ___ {\n  print \"小さい\\n\";\n}",
       "correctLines": [
         "# if-else",
         "my $num = 5;",
         "if ($num >= 10) {",
         "  print \"大きい\\n\";",
+        "# そうでなければ",
         "} else {",
         "  print \"小さい\\n\";",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "条件に合わないときのキーワードを入力しましょう。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "もし条件が満たされなかった場合に実行する処理を記述します。", null, null],
       "candidates": {
         "keywords": ["else", "elsif", "then", "otherwise"]
       },
@@ -369,21 +337,16 @@ export const perlData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 配列をループ\nmy @animals = (\"犬\", \"猫\", \"鳥\");\nforeach my $animal (@animals) {\n  print \"$animal\\n\";\n}",
-      "holeyCode": "# 配列をループ\nmy @animals = (\"犬\", \"猫\", \"鳥\");\n___ my $animal (@animals) {\n  print \"$animal\\n\";\n}",
+      "holeyCode": "# 配列をループ\nmy @animals = (\"犬\", \"猫\", \"鳥\");\n# 配列の各要素について繰り返す\n___ my $animal (@animals) {\n  print \"$animal\\n\";\n}",
       "correctLines": [
         "# 配列をループ",
         "my @animals = (\"犬\", \"猫\", \"鳥\");",
+        "# 配列の各要素について繰り返す",
         "foreach my $animal (@animals) {",
         "  print \"$animal\\n\";",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "配列をループするキーワードを入力しましょう。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "配列をループするキーワードを入力しましょう。", null, null],
       "candidates": {
         "keywords": ["foreach", "for", "while", "until"]
       },
@@ -424,11 +387,7 @@ export const perlData = {
         "my %fruit = (\"color\" => \"赤\");",
         "print \"$fruit{color}\\n\";"
       ],
-      "lineHints": [
-        null,
-        "ハッシュ名を入力しましょう。%をつけます。",
-        null
-      ],
+      "lineHints": [null, "ハッシュ名を入力しましょう。%をつけます。", null],
       "candidates": {
         "variables": ["%fruit", "%color", "@fruit", "$fruit"]
       },
@@ -473,15 +432,7 @@ export const perlData = {
         "# 呼び出し",
         "welcome();"
       ],
-      "lineHints": [
-        null,
-        "サブルーチンを定義するキーワードを入力しましょう。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "サブルーチンを定義するキーワードを入力しましょう。", null, null, null, null, null],
       "candidates": {
         "keywords": ["sub", "def", "function", "fn"]
       },

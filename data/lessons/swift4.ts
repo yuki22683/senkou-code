@@ -50,20 +50,7 @@ export const swift4Data = {
         "let dog = Dog()",
         "print(dog.speak())"
       ],
-      "lineHints": [
-        "protocol でプロトコルを定義します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": ["protocol でプロトコルを定義します。", null, null, null, null, null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["protocol", "struct", "class"]
       },
@@ -120,22 +107,7 @@ export const swift4Data = {
         "let user = User(id: 42)",
         "user.display()"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "extension でプロトコルを拡張します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, "extension でプロトコルを拡張します。", null, null, null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["extension", "protocol", "struct"]
       },
@@ -184,14 +156,7 @@ export const swift4Data = {
         "let nums = [10, 20, 30]",
         "print(first(nums) ?? 0)"
       ],
-      "lineHints": [
-        "<T> で型パラメータを定義します。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": ["<T> で型パラメータを定義します。", null, null, null, null, null],
       "candidates": {
         "symbols": ["<", ">"]
       },
@@ -239,13 +204,7 @@ export const swift4Data = {
         "",
         "print(maximum(5, 3))"
       ],
-      "lineHints": [
-        "Comparable で比較可能な型に制限します。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": ["Comparable で比較可能な型に制限します。", null, null, null, null],
       "candidates": {
         "protocols": ["Comparable", "Equatable", "Hashable"]
       },
@@ -300,20 +259,7 @@ export const swift4Data = {
         "    print(json)",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "Codable でJSON変換可能にします。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, "構造体（Item）を定義します。", null, null, null, null, null, null, null, null, null],
       "candidates": {
         "protocols": ["Codable", "Encodable", "Decodable"]
       },
@@ -365,17 +311,7 @@ export const swift4Data = {
         "let calc = Calculator()",
         "print(calc.result)"
       ],
-      "lineHints": [
-        null,
-        "lazy で遅延初期化します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "lazy で遅延初期化します。", null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["lazy", "static", "computed"]
       },
@@ -424,14 +360,7 @@ export const swift4Data = {
         "",
         "test()"
       ],
-      "lineHints": [
-        null,
-        "defer でスコープ終了時の処理を登録します。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "defer でスコープ終了時の処理を登録します。", null, null, null, null],
       "candidates": {
         "keywords": ["defer", "finally", "cleanup"]
       },
@@ -483,17 +412,7 @@ export const swift4Data = {
         "",
         "check(5)"
       ],
-      "lineHints": [
-        null,
-        "guard で早期リターンします。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "guard で早期リターンします。", null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["guard", "if", "unless"]
       },
@@ -551,23 +470,7 @@ export const swift4Data = {
         "stack.push(10)",
         "print(stack.items)"
       ],
-      "lineHints": [
-        null,
-        "associatedtype で関連型を定義します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "associatedtype で関連型を定義します。", null, null, null, null, null, null, null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["associatedtype", "typealias", "type"]
       },
@@ -616,14 +519,7 @@ export const swift4Data = {
         "let c = makeCollection()",
         "print(c.count)"
       ],
-      "lineHints": [
-        "some で不透明な型を返します。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": ["関数（makeCollection）を定義します。", null, null, null, null, null],
       "candidates": {
         "keywords": ["some", "any", "opaque"]
       },

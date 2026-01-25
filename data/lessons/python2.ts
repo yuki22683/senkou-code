@@ -35,15 +35,7 @@ export const pythonData2 = {
         "# 関数を呼び出す",
         "hello('Python')"
       ],
-      "lineHints": [
-        null,
-        "引数の名前を `name` にしましょう。",
-        null,
-        "f-string の中で `name` を使います。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "関数（hello）を新しく定義します。", null, "f-string の中で `name` を使います。", null, null, null],
       "candidates": {
         "variables": ["name"],
         "functions": ["hello", "print"],
@@ -85,15 +77,7 @@ export const pythonData2 = {
         "# 引数なしで呼び出す",
         "say_hi()"
       ],
-      "lineHints": [
-        null,
-        "デフォルト値として `'World'` を設定しましょう。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "関数（say_hi）を新しく定義します。", null, null, null, null, null],
       "candidates": {
         "variables": ["name"],
         "strings": ["'World'", "World"]
@@ -136,17 +120,7 @@ export const pythonData2 = {
         "# resultを表示",
         "print(result)"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "`return` を使って計算結果を返します。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "`return` を使って計算結果を返します。", null, null, null, null, null, null],
       "candidates": {
         "keywords": ["return"],
         "variables": ["a", "b", "result"]
@@ -191,19 +165,7 @@ export const pythonData2 = {
         "# bを表示",
         "print(b)"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "かけ算の記号 `*` を使います。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "かけ算の記号 `*` を使います。", null, null, null, null, null, null, null, null],
       "candidates": {
         "operators": ["*", "+", "-", "/"]
       },
@@ -240,12 +202,7 @@ export const pythonData2 = {
         "# 最初の4文字（0から4の手前まで）を取り出す",
         "print(word[0:4])"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "開始は `0`、終了は `4` です。"
-      ],
+      "lineHints": [null, null, null, "開始は `0`、終了は `4` です。"],
       "candidates": {
         "numbers": ["0", "4", "1", "3"]
       },
@@ -275,17 +232,14 @@ export const pythonData2 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# 1から5までの数を順番に表示\nfor i in range(1, 6):\n    print(i)",
-      "holeyCode": "# 1から5までの数を順番に表示\nfor i in ___(1, 6):\n    print(___)",
+      "holeyCode": "# 1から5までの数を順番に表示\nfor i in ___(1, 6):\n    # 変数iを出力\n    print(___)",
       "correctLines": [
         "# 1から5までの数を順番に表示",
         "for i in range(1, 6):",
+        "    # 変数iを出力",
         "    print(i)"
       ],
-      "lineHints": [
-        null,
-        "`range()` を使って1から5までの数を作ります。",
-        null
-      ],
+      "lineHints": [null, "指定された回数や範囲で、繰り返し処理（ループ）を行います。", null, "変数の内容を画面に出力します。"],
       "candidates": {
         "functions": ["range", "list", "len"],
         "variables": ["i"]
@@ -327,16 +281,7 @@ export const pythonData2 = {
         "# 結果を表示",
         "print(total)"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "`+=` で値を足し算します。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, null, null, null],
       "candidates": {
         "operators": ["+=", "-=", "*=", "/="]
       },
@@ -373,12 +318,7 @@ export const pythonData2 = {
         "# 結果を表示",
         "print(remainder)"
       ],
-      "lineHints": [
-        null,
-        "`%` で余りを求めます。",
-        null,
-        null
-      ],
+      "lineHints": [null, "`%` で余りを求めます。", null, null],
       "candidates": {
         "operators": ["%", "/", "//", "*"]
       },
@@ -416,13 +356,7 @@ export const pythonData2 = {
         "if age >= 20 and age < 30:",
         "    print('20代です')"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "`and` で両方の条件を満たすかチェックします。",
-        null
-      ],
+      "lineHints": [null, null, null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null],
       "candidates": {
         "keywords": ["and", "or", "not"]
       },
@@ -458,11 +392,7 @@ export const pythonData2 = {
         "doubled = [x * 2 for x in range(1, 6)]",
         "print(doubled)"
       ],
-      "lineHints": [
-        null,
-        "内包表記では `for` キーワードを使います。",
-        null
-      ],
+      "lineHints": [null, "内包表記では `for` キーワードを使います。", null],
       "candidates": {
         "keywords": ["for", "in", "if"]
       },
@@ -498,11 +428,7 @@ export const pythonData2 = {
         "multiples = [n for n in range(1, 11) if n % 3 == 0]",
         "print(multiples)"
       ],
-      "lineHints": [
-        null,
-        "条件を追加するには `if` を使います。",
-        null
-      ],
+      "lineHints": [null, "条件を追加するには `if` を使います。", null],
       "candidates": {
         "keywords": ["if", "for", "in"]
       },
@@ -543,16 +469,7 @@ export const pythonData2 = {
         "    # エラーメッセージ（'Error'）",
         "    print('Error')"
       ],
-      "lineHints": [
-        null,
-        "`try` キーワードでエラーを捕まえる準備をします。",
-        null,
-        null,
-        null,
-        "`except` キーワードで例外をキャッチします。",
-        null,
-        null
-      ],
+      "lineHints": [null, "エラーが発生する可能性のある処理をここから記述します。", null, null, null, "`except` キーワードで例外をキャッチします。", null, null],
       "candidates": {
         "keywords": ["try", "except", "finally"]
       },
@@ -596,19 +513,7 @@ export const pythonData2 = {
         "# meowメソッドを呼び出す",
         "cat.meow()"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "メソッドの最初の引数は必ず `self` です。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "関数（meow）を新しく定義します。", null, null, null, null, null, null, null],
       "candidates": {
         "variables": ["self", "cat"],
         "keywords": ["class", "def"]
@@ -657,23 +562,7 @@ export const pythonData2 = {
         "# say_nameメソッドを呼び出す",
         "r.say_name()"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "`__init__` はコンストラクタです。",
-        null,
-        "`self` を使ってオブジェクトに属性を保存します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "関数（__init__）を新しく定義します。", null, "`self` を使ってオブジェクトに属性を保存します。", null, null, null, null, null, null, null, null, null],
       "candidates": {
         "variables": ["self", "name", "r"]
       },

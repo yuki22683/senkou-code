@@ -27,9 +27,11 @@ export const sql3Data = {
       "correctCode": "-- SELECTでサブクエリを作成\nSELECT 'found' WHERE 5 > (SELECT 3);",
       "holeyCode": "-- SELECTでサブクエリを作成\nSELECT 'found' WHERE 5 > (___ 3);",
       "correctLines": [
+        "-- SELECTでサブクエリを作成",
         "SELECT 'found' WHERE 5 > (SELECT 3);"
       ],
       "lineHints": [
+        null,
         "SELECT でサブクエリを作ります。"
       ],
       "candidates": {
@@ -63,9 +65,11 @@ export const sql3Data = {
       "correctCode": "-- EXISTSで存在チェック\nSELECT 'has data' WHERE EXISTS (SELECT 1);",
       "holeyCode": "-- EXISTSで存在チェック\nSELECT 'has data' WHERE ___ (SELECT 1);",
       "correctLines": [
+        "-- EXISTSで存在チェック",
         "SELECT 'has data' WHERE EXISTS (SELECT 1);"
       ],
       "lineHints": [
+        null,
         "EXISTS で存在をチェックします。"
       ],
       "candidates": {
@@ -99,9 +103,11 @@ export const sql3Data = {
       "correctCode": "-- UNIONで結果を結合\nSELECT 'A' UNION SELECT 'B' UNION SELECT 'C';",
       "holeyCode": "-- UNIONで結果を結合\nSELECT 'A' ___ SELECT 'B' UNION SELECT 'C';",
       "correctLines": [
+        "-- UNIONで結果を結合",
         "SELECT 'A' UNION SELECT 'B' UNION SELECT 'C';"
       ],
       "lineHints": [
+        null,
         "UNION で結果を結合します。"
       ],
       "candidates": {
@@ -135,16 +141,26 @@ export const sql3Data = {
       "correctCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- INNERで内部結合\n  INNER JOIN\n  (SELECT 1 AS id, 'B' AS y) b\n  ON a.id = b.id;",
       "holeyCode": "-- SELECTで列を取得\n___ a.x, b.y FROM\n  -- テーブルaを作成\n  (___ 1 AS id, 'A' AS x) a\n  -- INNERで内部結合\n  ___ JOIN\n  -- テーブルbを作成\n  (___ 1 AS id, 'B' AS y) b\n  -- 結合条件を指定\n  ___ a.id = b.id;",
       "correctLines": [
+        "-- SELECTで列を取得",
         "SELECT a.x, b.y FROM",
+        "  -- テーブルaを作成",
         "  (SELECT 1 AS id, 'A' AS x) a",
+        "  -- INNERで内部結合",
         "  INNER JOIN",
+        "  -- テーブルbを作成",
         "  (SELECT 1 AS id, 'B' AS y) b",
+        "  -- 結合条件を指定",
         "  ON a.id = b.id;"
       ],
       "lineHints": [
         null,
         null,
+        null,
+        null,
+        null,
         "INNER JOIN で内部結合します。",
+        null,
+        null,
         null,
         null
       ],
@@ -179,16 +195,26 @@ export const sql3Data = {
       "correctCode": "SELECT a.x, b.y FROM\n  (SELECT 1 AS id, 'A' AS x) a\n  -- LEFTで左外部結合\n  LEFT JOIN\n  (SELECT 2 AS id, 'B' AS y) b\n  ON a.id = b.id;",
       "holeyCode": "-- SELECTで列を取得\n___ a.x, b.y FROM\n  -- テーブルaを作成\n  (___ 1 AS id, 'A' AS x) a\n  -- LEFTで左外部結合\n  ___ JOIN\n  -- テーブルbを作成\n  (___ 2 AS id, 'B' AS y) b\n  -- 結合条件を指定\n  ___ a.id = b.id;",
       "correctLines": [
+        "-- SELECTで列を取得",
         "SELECT a.x, b.y FROM",
+        "  -- テーブルaを作成",
         "  (SELECT 1 AS id, 'A' AS x) a",
+        "  -- LEFTで左外部結合",
         "  LEFT JOIN",
+        "  -- テーブルbを作成",
         "  (SELECT 2 AS id, 'B' AS y) b",
+        "  -- 結合条件を指定",
         "  ON a.id = b.id;"
       ],
       "lineHints": [
         null,
         null,
+        null,
+        null,
+        null,
         "LEFT JOIN で左外部結合します。",
+        null,
+        null,
         null,
         null
       ],
@@ -223,9 +249,11 @@ export const sql3Data = {
       "correctCode": "-- MAXで最大値を取得\nSELECT MAX(n) FROM (SELECT 5 AS n UNION SELECT 10 UNION SELECT 3);",
       "holeyCode": "-- MAXで最大値を取得\nSELECT ___(n) FROM (SELECT 5 AS n UNION SELECT 10 UNION SELECT 3);",
       "correctLines": [
+        "-- MAXで最大値を取得",
         "SELECT MAX(n) FROM (SELECT 5 AS n UNION SELECT 10 UNION SELECT 3);"
       ],
       "lineHints": [
+        null,
         "MAX で最大値を取得します。"
       ],
       "candidates": {
@@ -259,14 +287,22 @@ export const sql3Data = {
       "correctCode": "-- DISTINCTで重複除去\nSELECT DISTINCT n FROM (\n  SELECT 1 AS n UNION ALL\n  SELECT 1 UNION ALL\n  SELECT 2\n);",
       "holeyCode": "-- SELECT DISTINCT と入力して重複除去\n___ ___ n FROM (\n  -- データを作成\n  ___ 1 AS n UNION ALL\n  -- 重複データを追加\n  ___ 1 UNION ALL\n  -- 異なるデータを追加\n  ___ 2\n);",
       "correctLines": [
+        "-- SELECT DISTINCT と入力して重複除去",
         "SELECT DISTINCT n FROM (",
+        "  -- データを作成",
         "  SELECT 1 AS n UNION ALL",
+        "  -- 重複データを追加",
         "  SELECT 1 UNION ALL",
+        "  -- 異なるデータを追加",
         "  SELECT 2",
         ");"
       ],
       "lineHints": [
+        null,
         "DISTINCT で重複を除去します。",
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -303,9 +339,11 @@ export const sql3Data = {
       "correctCode": "-- LIKEでパターン検索\nSELECT 'matched' WHERE 'Hello' LIKE 'H%';",
       "holeyCode": "-- LIKEでパターン検索\nSELECT 'matched' WHERE 'Hello' ___ 'H%';",
       "correctLines": [
+        "-- LIKEでパターン検索",
         "SELECT 'matched' WHERE 'Hello' LIKE 'H%';"
       ],
       "lineHints": [
+        null,
         "LIKE でパターンマッチします。"
       ],
       "candidates": {
@@ -339,9 +377,11 @@ export const sql3Data = {
       "correctCode": "-- BETWEENで範囲指定\nSELECT 'in range' WHERE 5 BETWEEN 1 AND 10;",
       "holeyCode": "-- BETWEENで範囲指定\nSELECT 'in range' WHERE 5 ___ 1 AND 10;",
       "correctLines": [
+        "-- BETWEENで範囲指定",
         "SELECT 'in range' WHERE 5 BETWEEN 1 AND 10;"
       ],
       "lineHints": [
+        null,
         "BETWEEN で範囲を指定します。"
       ],
       "candidates": {
@@ -375,9 +415,11 @@ export const sql3Data = {
       "correctCode": "-- INで複数値マッチ\nSELECT 'found' WHERE 'B' IN ('A', 'B', 'C');",
       "holeyCode": "-- INで複数値マッチ\nSELECT 'found' WHERE 'B' ___ ('A', 'B', 'C');",
       "correctLines": [
+        "-- INで複数値マッチ",
         "SELECT 'found' WHERE 'B' IN ('A', 'B', 'C');"
       ],
       "lineHints": [
+        null,
         "IN でリスト内の値を検索します。"
       ],
       "candidates": {

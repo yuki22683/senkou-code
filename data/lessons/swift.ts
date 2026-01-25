@@ -40,10 +40,7 @@ export const swiftData = {
         "// Hello, World!と出力する関数",
         "print(\"Hello, World!\")"
       ],
-      "lineHints": [
-        null,
-        "画面に出す関数は `print` です。"
-      ],
+      "lineHints": [null, "画面に出す関数は `print` です。"],
       "candidates": {
         "functions": [
           "print"
@@ -97,14 +94,7 @@ export const swiftData = {
         "// + でたし算する",
         ["print(x + y)", "print(y + x)"]
       ],
-      "lineHints": [
-        null,
-        "10 と入力しましょう。",
-        null,
-        "5 と入力しましょう。",
-        null,
-        "たし算なので + を使います。"
-      ],
+      "lineHints": [null, "再代入可能な変数を宣言し、数値を代入します。", null, "再代入可能な変数を宣言し、数値を代入します。", null, "たし算なので + を使います。", null],
       "candidates": {
         "numbers": ["10", "5"],
         "operators": ["+", "-", "*", "/"]
@@ -145,10 +135,7 @@ export const swiftData = {
         "// 10 を 3 で割ったあまりを出力する",
         "print(10 % 3)"
       ],
-      "lineHints": [
-        null,
-        "あまりを求める `%` 演算子を使います。"
-      ],
+      "lineHints": [null, "あまりを求める `%` 演算子を使います。"],
       "candidates": {
         "operators": ["%", "/", "*", "-"]
       },
@@ -198,15 +185,7 @@ export const swiftData = {
         "hp -= 50",
         "print(hp)"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "`+=` で値を足します。",
-        null,
-        "`-=` で値を引きます。",
-        null
-      ],
+      "lineHints": [null, null, null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, "変数の値を計算して、その結果を同じ変数に再代入します。", null],
       "candidates": {
         "operators": ["+=", "-=", "*=", "/="]
       },
@@ -246,21 +225,16 @@ export const swiftData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "let score = 100\n// > で比較する\nif score > 80 {\n    print(\"Great!\")\n}",
-      "holeyCode": "let score = ___\n// > で比較する\nif score ___ 80 {\n    print(\"Great!\")\n}",
+      "holeyCode": "// score に 100 を入れる\nlet score = ___\n// > で比較する\nif score ___ 80 {\n    print(\"Great!\")\n}",
       "correctLines": [
+        "// score に 100 を入れる",
         "let score = 100",
         "// > で比較する",
         "if score > 80 {",
         "    print(\"Great!\")",
         "}"
       ],
-      "lineHints": [
-        "100 と入力しましょう。",
-        null,
-        "比較するための記号 `>` を入力しましょう。",
-        null,
-        null
-      ],
+      "lineHints": [null, "再代入可能な変数を宣言し、数値を代入します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, null],
       "candidates": {
         "numbers": ["100"],
         "operators": [">", "<", ">=", "<="]
@@ -310,14 +284,7 @@ export const swiftData = {
         "    print(\"Bonus Pass\")",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "両方の条件を満たすには `&&` を使います。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, null],
       "candidates": {
         "operators": ["&&", "||", "&", "|"]
       },
@@ -364,12 +331,7 @@ export const swiftData = {
         "// 2番目のデータ（1番）を出す",
         "print(colors[1])"
       ],
-      "lineHints": [
-        null,
-        "[\"あか\", \"あお\"] と入力しましょう。",
-        null,
-        "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"
-      ],
+      "lineHints": [null, "[\"あか\", \"あお\"] と入力しましょう。", null, "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"],
       "candidates": {
         "variables": [
           "colors"
@@ -428,12 +390,7 @@ export const swiftData = {
         "// 中身を出す",
         "print(colors[\"みかん\"]!)"
       ],
-      "lineHints": [
-        null,
-        "[\"みかん\": \"オレンジ\"] と入力しましょう。",
-        null,
-        "colors[\"みかん\"]! と入力しましょう。"
-      ],
+      "lineHints": [null, "[\"みかん\": \"オレンジ\"] と入力しましょう。", null, "colors[\"みかん\"]! と入力しましょう。"],
       "candidates": {
         "variables": [
           "colors"

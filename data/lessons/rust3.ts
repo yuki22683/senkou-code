@@ -27,6 +27,7 @@ export const rust3Data = {
       "correctCode": "// 'a でライフタイムを定義\nfn first<'a>(s: &'a str) -> &'a str {\n    &s[..1]\n}\n\nfn main() {\n    let s = String::from(\"Hello\");\n    println!(\"{}\", first(&s));\n}",
       "holeyCode": "// 'a でライフタイムを定義\nfn first<___>(s: &'a str) -> &'a str {\n    &s[..1]\n}\n\nfn main() {\n    let s = String::from(\"Hello\");\n    println!(\"{}\", first(&s));\n}",
       "correctLines": [
+        "// 'a でライフタイムを定義",
         "fn first<'a>(s: &'a str) -> &'a str {",
         "    &s[..1]",
         "}",
@@ -36,16 +37,7 @@ export const rust3Data = {
         "    println!(\"{}\", first(&s));",
         "}"
       ],
-      "lineHints": [
-        "'a でライフタイムを定義します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "'a でライフタイムを定義します。", null, null, null, null, null, null, null],
       "candidates": {
         "lifetimes": ["'a", "'b", "'static"]
       },
@@ -78,16 +70,12 @@ export const rust3Data = {
       "holeyCode": "fn main() {\n    // |x| でクロージャの引数を定義\n    let double = ___x___ x * 2;\n    println!(\"{}\", double(5));\n}",
       "correctLines": [
         "fn main() {",
+        "    // |x| でクロージャの引数を定義",
         "    let double = |x| x * 2;",
         "    println!(\"{}\", double(5));",
         "}"
       ],
-      "lineHints": [
-        null,
-        "|x| でクロージャの引数を定義します。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, "|x| でクロージャの引数を定義します。", null, null],
       "candidates": {
         "operators": ["|", "(", "["]
       },
@@ -121,19 +109,13 @@ export const rust3Data = {
       "correctLines": [
         "fn main() {",
         "    let nums = vec![1, 2, 3];",
+        "    // iter でイテレータを取得",
         "    for n in nums.iter() {",
         "        println!(\"{}\", n);",
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "iter() でイテレータを取得します。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "指定された回数や範囲で、繰り返し処理（ループ）を行います。", null, null, null],
       "candidates": {
         "methods": ["iter", "into_iter", "iter_mut"]
       },
@@ -167,17 +149,12 @@ export const rust3Data = {
       "correctLines": [
         "fn main() {",
         "    let nums = vec![1, 2, 3];",
+        "    // map で各要素を変換",
         "    let squared: Vec<_> = nums.iter().map(|x| x * x).collect();",
         "    println!(\"{:?}\", squared);",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "map で各要素を変換します。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "map で各要素を変換します。", null, null],
       "candidates": {
         "methods": ["map", "filter", "fold"]
       },
@@ -211,17 +188,12 @@ export const rust3Data = {
       "correctLines": [
         "fn main() {",
         "    let nums = vec![1, 2, 3, 4, 5];",
+        "    // filter で条件に合う要素を絞り込む",
         "    let big: Vec<_> = nums.iter().filter(|x| **x > 2).collect();",
         "    println!(\"{:?}\", big);",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "filter で条件に合う要素を絞り込みます。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "filter で条件に合う要素を絞り込みます。", null, null],
       "candidates": {
         "methods": ["filter", "map", "find"]
       },
@@ -255,17 +227,12 @@ export const rust3Data = {
       "correctLines": [
         "fn main() {",
         "    let nums = vec![1, 2, 3, 4];",
+        "    // fold で畳み込み",
         "    let product = nums.iter().fold(1, |acc, x| acc * x);",
         "    println!(\"{}\", product);",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "fold で畳み込みます。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "fold で畳み込みます。", null, null],
       "candidates": {
         "methods": ["fold", "reduce", "sum"]
       },
@@ -306,6 +273,7 @@ export const rust3Data = {
         "}",
         "",
         "fn calc() -> Result<i32, &'static str> {",
+        "    // ? でエラーを伝播",
         "    let x = divide(10, 2)?;",
         "    Ok(x * 2)",
         "}",
@@ -314,24 +282,7 @@ export const rust3Data = {
         "    println!(\"{:?}\", calc());",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "? でエラーを伝播します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, null, null, null, "? でエラーを伝播します。", null, null, null, null, null, null],
       "candidates": {
         "operators": ["?", "!", "."]
       },
@@ -365,17 +316,12 @@ export const rust3Data = {
       "correctLines": [
         "fn main() {",
         "    let x: Option<i32> = None;",
+        "    // unwrap_or でデフォルト値を設定",
         "    let value = x.unwrap_or(42);",
         "    println!(\"{}\", value);",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "unwrap_or でデフォルト値を設定します。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "unwrap_or でデフォルト値を設定します。", null, null],
       "candidates": {
         "methods": ["unwrap_or", "unwrap", "expect"]
       },
@@ -409,19 +355,13 @@ export const rust3Data = {
       "correctLines": [
         "fn main() {",
         "    let mut nums = Vec::new();",
+        "    // push で要素を追加",
         "    nums.push(10);",
         "    nums.push(20);",
         "    println!(\"{:?}\", nums);",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "push で要素を追加します。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "push で要素を追加します。", null, null, null],
       "candidates": {
         "methods": ["push", "append", "add"]
       },
@@ -455,17 +395,12 @@ export const rust3Data = {
       "correctLines": [
         "fn main() {",
         "    let s: &str = \"Hello\";",
+        "    // to_string で String に変換",
         "    let owned: String = s.to_string();",
         "    println!(\"{}\", owned);",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "to_string で String に変換します。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "to_string で String に変換します。", null, null],
       "candidates": {
         "methods": ["to_string", "to_owned", "into"]
       },

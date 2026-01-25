@@ -28,14 +28,11 @@ export const rustData = {
       "holeyCode": "fn main() {\n    // Hello, Rust! と表示する\n    println!(\"___\");\n}",
       "correctLines": [
         "fn main() {",
+        "    // Hello, Rust! と表示する",
         "    println!(\"Hello, Rust!\");",
         "}"
       ],
-      "lineHints": [
-        "ここからプログラムがスタートします、という合図です。",
-        "println! を使って、() の中の文字を画面に出します。",
-        "プログラムの終わりです。"
-      ],
+      "lineHints": ["プログラムの実行開始地点（main関数）を定義します。", null, "マクロを使用して、文字列と改行を標準出力に出力します。", "プログラムの終わりです。"],
       "candidates": {
         "strings": [
           "Hello, Rust!"
@@ -78,16 +75,7 @@ export const rustData = {
         ["    println!(\"{}\", x + y);", "    println!(\"{}\", y + x);"],
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "10 と入力しましょう。",
-        null,
-        "5 と入力しましょう。",
-        null,
-        "たし算なので + を使います。",
-        null
-      ],
+      "lineHints": [null, null, "再代入可能な変数を宣言し、数値を代入します。", null, "再代入可能な変数を宣言し、数値を代入します。", null, "マクロを使用して、文字列と改行を標準出力に出力します。", null, null],
       "candidates": {
         "numbers": ["10", "5"],
         "operators": ["+", "-", "*", "/"]
@@ -120,12 +108,7 @@ export const rustData = {
         "    println!(\"{}\", 10 % 3);",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "あまりを求める `%` 演算子を使います。",
-        null
-      ],
+      "lineHints": [null, null, "マクロを使用して、文字列と改行を標準出力に出力します。", null],
       "candidates": {
         "operators": ["%", "/", "*", "-"]
       },
@@ -162,17 +145,7 @@ export const rustData = {
         "    println!(\"{}\", hp);",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "`+=` で値を足します。",
-        null,
-        "`-=` で値を引きます。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, null],
       "candidates": {
         "operators": ["+=", "-=", "*=", "/="]
       },
@@ -197,23 +170,18 @@ export const rustData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "fn main() {\n    let score = 100;\n    // > で比較する\n    if score > 80 {\n        println!(\"Great!\");\n    }\n}",
-      "holeyCode": "fn main() {\n    let score = ___;\n    // > で比較する\n    if score ___ 80 {\n        println!(\"Great!\");\n    }\n}",
+      "holeyCode": "fn main() {\n    // score に 100 を入れる\n    let score = ___;\n    // > で比較する\n    if score ___ 80 {\n        println!(\"Great!\");\n    }\n}",
       "correctLines": [
         "fn main() {",
+        "    // score に 100 を入れる",
         "    let score = 100;",
+        "    // > で比較する",
         "    if score > 80 {",
         "        println!(\"Great!\");",
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        "100 と入力しましょう。",
-        "比較するための記号 `>` を入力しましょう。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, "再代入可能な変数を宣言し、数値を代入します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, null, null],
       "candidates": {
         "numbers": ["100"],
         "operators": [">", "<", ">=", "<="]
@@ -244,20 +212,13 @@ export const rustData = {
         "fn main() {",
         "    let score = 80;",
         "    let bonus = 10;",
+        "    // && で両方の条件をチェック",
         "    if score >= 70 && bonus > 0 {",
         "        println!(\"Bonus Pass\");",
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "両方の条件を満たすには `&&` を使います。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, null, null],
       "candidates": {
         "operators": ["&&", "||", "&", "|"]
       },
@@ -296,14 +257,7 @@ export const rustData = {
         "    println!(\"{}\", colors[1]);",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "vec![\"あか\", \"あお\"] と入力しましょう。",
-        null,
-        "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。",
-        null
-      ],
+      "lineHints": [null, null, "vec![\"あか\", \"あお\"] と入力しましょう。", null, "マクロを使用して、文字列と改行を標準出力に出力します。", null],
       "candidates": {
         "variables": [
           "colors"
@@ -346,27 +300,19 @@ export const rustData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "use std::collections::HashMap;\nfn main() {\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\n    let mut colors = HashMap::new();\n    colors.insert(\"みかん\", \"オレンジ\");\n    // 中身を出す\n    println!(\"{}\", colors[\"みかん\"]);\n}",
-      "holeyCode": "use std::collections::HashMap;\nfn main() {\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\n    let mut colors = HashMap::new();\n    colors.insert(\"___\", \"___\");\n    // 中身を出す\n    println!(\"{}\", colors[\"___\"]);\n}",
+      "holeyCode": "use std::collections::HashMap;\nfn main() {\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\n    let mut colors = HashMap::new();\n    // キーと値を追加\n    colors.insert(\"___\", \"___\");\n    // 中身を出す\n    println!(\"{}\", colors[\"___\"]);\n}",
       "correctLines": [
         "use std::collections::HashMap;",
         "fn main() {",
         "    // 辞書を作る（キーは'みかん'、値は'オレンジ'）",
         "    let mut colors = HashMap::new();",
+        "    // キーと値を追加",
         "    colors.insert(\"みかん\", \"オレンジ\");",
         "    // 中身を出す",
         "    println!(\"{}\", colors[\"みかん\"]);",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "insert(\"みかん\", \"オレンジ\") と入力しましょう。",
-        null,
-        "colors[\"みかん\"] と入力しましょう。",
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "insert(\"みかん\", \"オレンジ\") と入力しましょう。", null, "マクロを使用して、文字列と改行を標準出力に出力します。", null],
       "candidates": {
         "variables": [
           "colors"

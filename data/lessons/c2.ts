@@ -30,20 +30,13 @@ export const c2Data = {
         "#include <stdio.h>",
         "int main() {",
         "    int x = 42;",
+        "    // xのアドレスを取得する演算子",
         "    int *p = &x;",
         "    printf(\"%d\\n\", *p);",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "x に 42 を入れます。",
-        "& を使って x のアドレスを取得します。",
-        "*p で中身を取り出します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, "整数型の変数を宣言し、初期値を代入します。", null, "& を使って x のアドレスを取得します。", "*p で中身を取り出します。", null, null],
       "candidates": {
         "operators": ["&"]
       },
@@ -79,21 +72,13 @@ export const c2Data = {
         "int main() {",
         "    int n = 10;",
         "    int *ptr = &n;",
+        "    // ptrが指す先の値にアクセスする演算子",
         "    *ptr = 99;",
         "    printf(\"%d\\n\", n);",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "n に 10 を入れます。",
-        "ptr に n のアドレスを入れます。",
-        "* を使って ptr の指す先に 99 を代入します。",
-        "n の値が変わったことを確認します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, "整数型の変数を宣言し、初期値を代入します。", "ptr に n のアドレスを入れます。", null, "* を使って ptr の指す先に 99 を代入します。", "変数の値を指定された形式で画面に表示します。", null, null],
       "candidates": {
         "operators": ["*"]
       },
@@ -126,6 +111,7 @@ export const c2Data = {
       "holeyCode": "#include <stdio.h>\n// printfで使っている引数名を定義\nvoid show(int ___) {\n    printf(\"%d\\n\", num);\n}\nint main() {\n    show(25);\n    return 0;\n}",
       "correctLines": [
         "#include <stdio.h>",
+        "// printfで使っている引数名を定義",
         "void show(int num) {",
         "    printf(\"%d\\n\", num);",
         "}",
@@ -134,16 +120,7 @@ export const c2Data = {
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        "",
-        "引数の名前 num を定義します。",
-        "num を表示します。",
-        "",
-        "",
-        "25 を渡して関数を呼び出します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, "void型の値を返す関数（show）を定義します。", "変数の値を指定された形式で画面に表示します。", null, null, "25 を渡して関数を呼び出します。", null, null],
       "candidates": {
         "variables": ["num"]
       },
@@ -177,6 +154,7 @@ export const c2Data = {
       "correctLines": [
         "#include <stdio.h>",
         "int double_it(int x) {",
+        "    // 計算結果を呼び出し元に返すキーワード",
         "    return x * 2;",
         "}",
         "int main() {",
@@ -185,17 +163,7 @@ export const c2Data = {
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        "",
-        "int型を返す関数を定義します。",
-        "return を使って計算結果を返します。",
-        "",
-        "",
-        "関数の戻り値を result に受け取ります。",
-        "結果を表示します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, "int型の値を返す関数（double_it）を定義します。", null, "return を使って計算結果を返します。", null, null, "関数の戻り値を result に受け取ります。", "変数の値を指定された形式で画面に表示します。", null, null],
       "candidates": {
         "keywords": ["return"]
       },
@@ -230,20 +198,13 @@ export const c2Data = {
         "#include <stdio.h>",
         "int main() {",
         "    int arr[] = {5, 15, 25};",
+        "    // 配列の先頭アドレスを代入",
         "    int *p = arr;",
         "    printf(\"%d\\n\", *(p + 2));",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "配列を作成します。",
-        "配列名 arr を p に代入します（先頭アドレス）。",
-        "p + 2 で3番目の要素にアクセスします。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "配列名 arr を p に代入します（先頭アドレス）。", "p + 2 で3番目の要素にアクセスします。", null, null],
       "candidates": {
         "variables": ["arr"]
       },
@@ -278,18 +239,12 @@ export const c2Data = {
         "#include <stdio.h>",
         "int main() {",
         "    char msg[] = \"Hello\";",
+        "    // 文字列を表示する書式指定子",
         "    printf(\"%s\\n\", msg);",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "char型の配列に文字列を入れます。",
-        "%s を使って文字列を表示します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, "char型の配列に文字列を入れます。", null, "変数の値を指定された形式で画面に表示します。", null, null],
       "candidates": {
         "strings": ["s"]
       },
@@ -327,23 +282,13 @@ export const c2Data = {
         "}",
         "int main() {",
         "    int val = 4;",
+        "    // valのアドレスを取得する演算子",
         "    triple(&val);",
         "    printf(\"%d\\n\", val);",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        "",
-        "ポインタを引数として受け取ります。",
-        "ポインタ経由で値を3倍にします。",
-        "",
-        "",
-        "val に 4 を入れます。",
-        "& を使って val のアドレスを渡します。",
-        "val の値が変わっています。",
-        "",
-        ""
-      ],
+      "lineHints": [null, "void型の値を返す関数（triple）を定義します。", "ポインタ経由で値を3倍にします。", null, null, "整数型の変数を宣言し、初期値を代入します。", null, "& を使って val のアドレスを渡します。", "変数の値を指定された形式で画面に表示します。", null, null],
       "candidates": {
         "operators": ["&"]
       },
@@ -381,21 +326,12 @@ export const c2Data = {
         "    int *p = malloc(sizeof(int));",
         "    *p = 50;",
         "    printf(\"%d\\n\", *p);",
+        "    // 確保したメモリを解放する関数",
         "    free(p);",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        "",
-        "stdlib.h をインクルードします。",
-        "",
-        "malloc で int サイズのメモリを確保します。",
-        "確保したメモリに 50 を代入します。",
-        "値を表示します。",
-        "free でメモリを解放します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, "標準ライブラリを読み込み、使用可能にします。", null, "malloc で int サイズのメモリを確保します。", "確保したメモリに 50 を代入します。", "値を表示します。", null, "free でメモリを解放します。", null, null],
       "candidates": {
         "functions": ["free"]
       },
@@ -434,22 +370,12 @@ export const c2Data = {
         "int main() {",
         "    struct Item item = {200};",
         "    struct Item *p = &item;",
+        "    // ポインタからメンバにアクセスする演算子",
         "    printf(\"%d\\n\", p->price);",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        "",
-        "Item 構造体を定義します。",
-        "price メンバを持ちます。",
-        "",
-        "",
-        "item を初期化します。",
-        "p に item のアドレスを入れます。",
-        "-> を使ってメンバにアクセスします。",
-        "",
-        ""
-      ],
+      "lineHints": [null, "構造体（Item）を定義します。", "price メンバを持ちます。", null, null, "構造体（Item）を定義します。", "構造体（Item）を定義します。", null, "変数の値を指定された形式で画面に表示します。", null, null],
       "candidates": {
         "operators": ["->"]
       },
@@ -484,20 +410,13 @@ export const c2Data = {
         "#include <stdio.h>",
         "enum Day { MON, TUE, WED };",
         "int main() {",
+        "    // 列挙型の変数を宣言するキーワード",
         "    enum Day today = WED;",
         "    printf(\"%d\\n\", today);",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        "",
-        "Day という列挙型を定義します。",
-        "",
-        "enum Day 型の変数を作ります。",
-        "WED は 2 と表示されます。",
-        "",
-        ""
-      ],
+      "lineHints": [null, "Day という列挙型を定義します。", null, null, "enum Day 型の変数を作ります。", "変数の値を指定された形式で画面に表示します。", null, null],
       "candidates": {
         "keywords": ["enum"]
       },

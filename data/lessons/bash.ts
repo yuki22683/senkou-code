@@ -35,10 +35,7 @@ export const bashData = {
         "# 画面にメッセージを出す関数",
         "echo \"Hello, World!\""
       ],
-      "lineHints": [
-        null,
-        "echo を使って、そのあとの文字を画面に出します。"
-      ],
+      "lineHints": [null, "文字列を標準出力に表示します。"],
       "candidates": {
         "functions": [
           "echo"
@@ -80,15 +77,12 @@ export const bashData = {
       "correctCode": "# Bashと入力する\nname=\"Bash\"\n# nameと入力する\necho $name",
       "holeyCode": "# 'Bash' と入力する\nname=\"___\"\n# はこの名前 'name' と入力する\necho $___",
       "correctLines": [
-        "# name というはこに Bash と入れる",
+        "# 'Bash' と入力する",
         "name=\"Bash\"",
+        "# はこの名前 'name' と入力する",
         "echo $name"
       ],
-      "lineHints": [
-        null,
-        "name=\"Bash\" と入力します。 = のまわりにスペースを入れないでください！",
-        "はこの名前 $name を指定して、表示させます。"
-      ],
+      "lineHints": [null, "name=\"Bash\" と入力します。 = のまわりにスペースを入れないでください！", null, "変数の内容を展開して表示します。"],
       "candidates": {
         "variables": [
           "name"
@@ -125,17 +119,13 @@ export const bashData = {
       "correctCode": "# はこに数字を入れる\na=5\nb=3\n# +でたし算\necho $((a + b))",
       "holeyCode": "# はこに数字を入れる\na=5\nb=3\n# +でたし算\necho $((a ___ b))",
       "correctLines": [
+        "# はこに数字を入れる",
         "a=5",
         "b=3",
-        "# たし算した答えを出す",
+        "# +でたし算",
         ["echo $((a + b))", "echo $((b + a))"]
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "たし算なので `+` を使います。全体を $(( )) で囲みます。"
-      ],
+      "lineHints": [null, null, null, null, "たし算なので `+` を使います。全体を $(( )) で囲みます。", null],
       "candidates": {
         "operators": [
           "+"
@@ -174,17 +164,16 @@ export const bashData = {
       "correctCode": "score=100\n# -gtで「より大きい」を指定\nif [ $score -gt 80 ]; then\n    echo \"Great\"\n# fiでif文を閉じる\nfi",
       "holeyCode": "# scoreに100を入れる\nscore=___\n# -gtで「より大きい」を指定\nif [ $score ___ 80 ]; then\n    # メッセージ（'Great'）\n    echo \"___\"\n# fiでif文を閉じる\n___",
       "correctLines": [
+        "# scoreに100を入れる",
         "score=100",
+        "# -gtで「より大きい」を指定",
         "if [ $score -gt 80 ]; then",
+        "    # メッセージ（'Great'）",
         "    echo \"Great\"",
+        "# fiでif文を閉じる",
         "fi"
       ],
-      "lineHints": [
-        null,
-        "〜より大きい、をあらわす -gt を入力します。",
-        "Great と表示します。",
-        "if を逆さにした `fi` と入力して終わります。"
-      ],
+      "lineHints": [null, null, null, "〜より大きい、をあらわす -gt を入力します。", null, "文字列を標準出力に表示します。", null, "if文（条件分岐）のブロックを終了します。"],
       "candidates": {
         "operators": [
           "-gt"
@@ -221,21 +210,19 @@ export const bashData = {
       "correctCode": "age=18\nif [ $age -ge 20 ]; then\n    echo \"Adult\"\n# elseでそれ以外の場合\nelse\n    echo \"Minor\"\nfi",
       "holeyCode": "# ageに18を入れる\nage=___\n# 20以上かを比較する演算子\nif [ $age ___ 20 ]; then\n    # 20歳以上のときのメッセージ（'Adult'）\n    echo \"___\"\n# elseでそれ以外の場合\n___\n    # それ以外のメッセージ（'Minor'）\n    echo \"___\"\nfi",
       "correctLines": [
+        "# ageに18を入れる",
         "age=18",
+        "# 20以上かを比較する演算子",
         "if [ $age -ge 20 ]; then",
+        "    # 20歳以上のときのメッセージ（'Adult'）",
         "    echo \"Adult\"",
+        "# elseでそれ以外の場合",
         "else",
+        "    # それ以外のメッセージ（'Minor'）",
         "    echo \"Minor\"",
         "fi"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "そうでなければ、をあらわす `else` を入力しましょう。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "以上、をあらわす -ge を入力します。", null, "文字列を標準出力に表示します。", null, "もし条件が満たされなかった場合に実行する処理を記述します。", null, "文字列を標準出力に表示します。", null],
       "candidates": {
         "keywords": [
           "else"
@@ -270,16 +257,13 @@ export const bashData = {
       "holeyCode": "names=(\"Alice\" \"Bob\")\n# inで配列の中身を取り出す\nfor name ___ \"${names[@]}\"; do\n    echo $name\n# doneでループを終了\n___",
       "correctLines": [
         "names=(\"Alice\" \"Bob\")",
+        "# inで配列の中身を取り出す",
         "for name in \"${names[@]}\"; do",
         "    echo $name",
+        "# doneでループを終了",
         "done"
       ],
-      "lineHints": [
-        null,
-        "「〜の中で」をあらわす `in` を入力しましょう。",
-        null,
-        "終わりの合図 `done` を入力しましょう。"
-      ],
+      "lineHints": [null, null, "指定された回数や範囲で、繰り返し処理（ループ）を行います。", null, null, "ループ処理のブロックを終了します。"],
       "candidates": {
         "keywords": [
           "in",
@@ -317,14 +301,10 @@ export const bashData = {
         "greet() {",
         "    echo \"Hello\"",
         "}",
+        "# greetで関数を呼び出す",
         "greet"
       ],
-      "lineHints": [
-        "greet という名前の関数を定義します。",
-        "メッセージを表示します。",
-        "関数の終わりです。",
-        "関数名を入力して、実行します。"
-      ],
+      "lineHints": ["greet という名前の関数を定義します。", "文字列を標準出力に表示します。", "関数の終わりです。", null, "関数名を入力して、実行します。"],
       "candidates": {
         "functions": [
           "greet"

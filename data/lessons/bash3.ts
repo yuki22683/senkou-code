@@ -27,11 +27,10 @@ export const bash3Data = {
       "correctCode": "# |でパイプを使う\necho \"hello world\" | wc -w",
       "holeyCode": "# |でパイプを使う\necho \"hello world\" ___ wc -w",
       "correctLines": [
+        "# |でパイプを使う",
         "echo \"hello world\" | wc -w"
       ],
-      "lineHints": [
-        "| でコマンドをつなぎます。"
-      ],
+      "lineHints": [null, "文字列を標準出力に表示します。"],
       "candidates": {
         "operators": ["|", "&", ">", "<"]
       },
@@ -63,11 +62,10 @@ export const bash3Data = {
       "correctCode": "# >でファイルに出力\necho \"test\" > /tmp/out.txt && cat /tmp/out.txt",
       "holeyCode": "# >でファイルに出力\necho \"test\" ___ /tmp/out.txt && cat /tmp/out.txt",
       "correctLines": [
+        "# >でファイルに出力",
         "echo \"test\" > /tmp/out.txt && cat /tmp/out.txt"
       ],
-      "lineHints": [
-        "> でファイルに出力します。"
-      ],
+      "lineHints": [null, "文字列を標準出力に表示します。"],
       "candidates": {
         "operators": [">", ">>", "|", "<"]
       },
@@ -100,12 +98,10 @@ export const bash3Data = {
       "holeyCode": "echo \"line1\" > /tmp/in.txt\n# <でファイルから読み込む\nwc -l ___ /tmp/in.txt",
       "correctLines": [
         "echo \"line1\" > /tmp/in.txt",
+        "# <でファイルから読み込む",
         "wc -l < /tmp/in.txt"
       ],
-      "lineHints": [
-        null,
-        "< でファイルから読み込みます。"
-      ],
+      "lineHints": [null, null, "< でファイルから読み込みます。"],
       "candidates": {
         "operators": ["<", ">", "|", "<<"]
       },
@@ -137,11 +133,10 @@ export const bash3Data = {
       "correctCode": "# 2>でエラー出力をリダイレクト\nls /nonexistent 2> /dev/null && echo \"ok\" || echo \"error hidden\"",
       "holeyCode": "# 2>でエラー出力をリダイレクト\nls /nonexistent ___> /dev/null && echo \"ok\" || echo \"error hidden\"",
       "correctLines": [
+        "# 2>でエラー出力をリダイレクト",
         "ls /nonexistent 2> /dev/null && echo \"ok\" || echo \"error hidden\""
       ],
-      "lineHints": [
-        "2 でエラー出力を指定します。"
-      ],
+      "lineHints": [null, "2 でエラー出力を指定します。"],
       "candidates": {
         "numbers": ["2", "1", "0", "3"]
       },
@@ -173,15 +168,12 @@ export const bash3Data = {
       "correctCode": "# -fでファイルが存在するか確認\nif [ -f /etc/passwd ]; then\n    echo \"file exists\"\nfi",
       "holeyCode": "# -fでファイルが存在するか確認\nif [ ___ /etc/passwd ]; then\n    echo \"file exists\"\nfi",
       "correctLines": [
+        "# -fでファイルが存在するか確認",
         "if [ -f /etc/passwd ]; then",
         "    echo \"file exists\"",
         "fi"
       ],
-      "lineHints": [
-        "-f でファイルの存在を確認します。",
-        null,
-        null
-      ],
+      "lineHints": [null, "-f でファイルの存在を確認します。", null, null],
       "candidates": {
         "operators": ["-f", "-d", "-e", "-r"]
       },
@@ -213,11 +205,10 @@ export const bash3Data = {
       "correctCode": "# xargsで引数に変換\necho \"hello world\" | xargs echo \"Message:\"",
       "holeyCode": "# xargsで引数に変換\necho \"hello world\" | ___ echo \"Message:\"",
       "correctLines": [
+        "# xargsで引数に変換",
         "echo \"hello world\" | xargs echo \"Message:\""
       ],
-      "lineHints": [
-        "xargs で引数に変換します。"
-      ],
+      "lineHints": [null, "文字列を標準出力に表示します。"],
       "candidates": {
         "commands": ["xargs", "exec", "eval", "args"]
       },
@@ -249,11 +240,10 @@ export const bash3Data = {
       "correctCode": "# sedで置換\necho \"cat\" | sed 's/cat/dog/'",
       "holeyCode": "# sedで置換\necho \"cat\" | ___ 's/cat/dog/'",
       "correctLines": [
+        "# sedで置換",
         "echo \"cat\" | sed 's/cat/dog/'"
       ],
-      "lineHints": [
-        "sed で置換します。"
-      ],
+      "lineHints": [null, "文字列を標準出力に表示します。"],
       "candidates": {
         "commands": ["sed", "awk", "tr", "grep"]
       },
@@ -285,11 +275,10 @@ export const bash3Data = {
       "correctCode": "# awkでフィールドを抽出\necho \"apple 100 yen\" | awk '{print $2}'",
       "holeyCode": "# awkでフィールドを抽出\necho \"apple 100 yen\" | ___ '{print $2}'",
       "correctLines": [
+        "# awkでフィールドを抽出",
         "echo \"apple 100 yen\" | awk '{print $2}'"
       ],
-      "lineHints": [
-        "awk でフィールドを抽出します。"
-      ],
+      "lineHints": [null, "文字列を標準出力に表示します。"],
       "candidates": {
         "commands": ["awk", "sed", "cut", "tr"]
       },
@@ -321,11 +310,10 @@ export const bash3Data = {
       "correctCode": "# sortで並べ替え\necho -e \"banana\\napple\\ncherry\" | sort",
       "holeyCode": "# sortで並べ替え\necho -e \"banana\\napple\\ncherry\" | ___",
       "correctLines": [
+        "# sortで並べ替え",
         "echo -e \"banana\\napple\\ncherry\" | sort"
       ],
-      "lineHints": [
-        "sort で並べ替えます。"
-      ],
+      "lineHints": [null, "sort で並べ替えます。"],
       "candidates": {
         "commands": ["sort", "uniq", "head", "tail"]
       },
@@ -357,11 +345,10 @@ export const bash3Data = {
       "correctCode": "# uniqで重複を除去\necho -e \"a\\nb\\na\\nb\" | sort | uniq",
       "holeyCode": "# uniqで重複を除去\necho -e \"a\\nb\\na\\nb\" | sort | ___",
       "correctLines": [
+        "# uniqで重複を除去",
         "echo -e \"a\\nb\\na\\nb\" | sort | uniq"
       ],
-      "lineHints": [
-        "uniq で重複を除去します。"
-      ],
+      "lineHints": [null, "uniq で重複を除去します。"],
       "candidates": {
         "commands": ["uniq", "sort", "head", "tail"]
       },

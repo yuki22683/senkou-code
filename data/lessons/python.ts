@@ -35,10 +35,7 @@ export const pythonData = {
         "# 画面に「Hello, World!」と出す関数",
         "print('Hello, World!')"
       ],
-      "lineHints": [
-        null,
-        "関数は「print」です。文字を出しましょうときは、左右を '（ちょんちょん）で囲むのを忘れないでください！"
-      ],
+      "lineHints": [null, "指定された文字列を画面に出力する関数を使用します。"],
       "candidates": {
         "functions": [
           "print"
@@ -80,12 +77,7 @@ export const pythonData = {
         "# はこの中身を画面に出す",
         "print(name)"
       ],
-      "lineHints": [
-        null,
-        "はこ（変数）の名前は `name` です。 `=` のあとに `'Python'` と入力しましょう。",
-        null,
-        "print のなかに、はこの名前 `name` を入力すると、中身が表示されます！"
-      ],
+      "lineHints": [null, "変数に文字列データを代入（保存）します。", null, "変数の内容を画面に出力します。"],
       "candidates": {
         "variables": [
           "name"
@@ -132,14 +124,7 @@ export const pythonData = {
         "# x と y をたした答えを出す",
         ["print(x + y)", "print(y + x)"]
       ],
-      "lineHints": [
-        null,
-        "x = 10 と入力しましょう。",
-        null,
-        "y = 5 と入力しましょう。",
-        null,
-        "たし算なので `+` を使います。 `print(x + y)` と入力してください。"
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "変数に数値を代入（保存）します。", null, "たし算なので `+` を使います。 `print(x + y)` と入力してください。", null],
       "candidates": {
         "variables": [
           "x",
@@ -187,10 +172,7 @@ export const pythonData = {
         "# 10 を 3 で割ったあまりを出力する",
         "print(10 % 3)"
       ],
-      "lineHints": [
-        null,
-        "あまりを求める % 演算子を使います。"
-      ],
+      "lineHints": [null, "あまりを求める % 演算子を使います。"],
       "candidates": {
         "operators": ["%", "+", "-", "*", "/"]
       },
@@ -229,14 +211,7 @@ export const pythonData = {
         "# 結果を表示",
         "print(score)"
       ],
-      "lineHints": [
-        null,
-        "50 と入力しましょう。",
-        null,
-        "+= を使って加算します。",
-        null,
-        null
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, null],
       "candidates": {
         "operators": ["+=", "-=", "*=", "/="],
         "numbers": ["50", "10"]
@@ -274,12 +249,7 @@ export const pythonData = {
         "# f-stringを使ってメッセージを出す",
         "print(f'私は{age}歳です')"
       ],
-      "lineHints": [
-        null,
-        "age = 10 と入力しましょう。",
-        null,
-        "print(f'私は{age}歳です') と入力しましょう。"
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "print(f'私は{age}歳です') と入力しましょう。"],
       "candidates": {
         "variables": [
           "age"
@@ -324,12 +294,7 @@ export const pythonData = {
         "# 2番目のデータ（1番）を出す",
         "print(colors[1])"
       ],
-      "lineHints": [
-        null,
-        "['あか', 'あお'] と入力しましょう。",
-        null,
-        "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"
-      ],
+      "lineHints": [null, "['あか', 'あお'] と入力しましょう。", null, "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"],
       "candidates": {
         "variables": [
           "colors"
@@ -380,14 +345,7 @@ export const pythonData = {
         "    # メッセージを表示する",
         "    print('ごうかく！')"
       ],
-      "lineHints": [
-        null,
-        "score = 100 と入力しましょう。",
-        null,
-        "`>` を使います。さいごに `:` を忘れないでください！",
-        null,
-        "`print('ごうかく！')` と入力しましょう。"
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "指定された文字列を画面に出力する関数を使用します。"],
       "candidates": {
         "variables": [
           "score"
@@ -396,7 +354,7 @@ export const pythonData = {
           "print"
         ],
         "operators": [
-          ">"]
+          ">"
         ],
         "strings": [
           "ごうかく！"
@@ -444,18 +402,7 @@ export const pythonData = {
         "    # それ以外の場合（'こども'）",
         "    print('こども')"
       ],
-      "lineHints": [
-        null,
-        "age = 10 と入力しましょう。",
-        null,
-        "if age >= 20: と入力しましょう。>= は「以上」を意味します。",
-        null,
-        "print('おとな') と入力しましょう。",
-        null,
-        "else: と入力しましょう。 `:` を忘れないでください。",
-        null,
-        "print('こども') と入力しましょう。"
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "指定された文字列を画面に出力する関数を使用します。", null, "もし条件が満たされなかった場合に実行する処理を記述します。", null, "指定された文字列を画面に出力する関数を使用します。"],
       "candidates": {
         "variables": [
           "age"
@@ -497,21 +444,16 @@ export const pythonData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# scoreに85を入れる\nscore = 85\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 and score <= 100:\n    print('ごうかく！')",
-      "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 ___ score <= 100:\n    print('___')",
+      "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 ___ score <= 100:\n    # 結果を出力\n    print('___')",
       "correctLines": [
         "# scoreに85を入れる",
         "score = 85",
         "# 80以上 かつ 100以下 ならメッセージを出す",
         "if score >= 80 and score <= 100:",
+        "    # 結果を出力",
         "    print('ごうかく！')"
       ],
-      "lineHints": [
-        null,
-        "85 と入力しましょう。",
-        null,
-        "両方の条件を満たすので and を使います。",
-        "ごうかく！ と入力しましょう。"
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "指定された文字列を画面に出力する関数を使用します。"],
       "candidates": {
         "keywords": ["and", "or"],
         "numbers": ["85"],
@@ -552,13 +494,7 @@ export const pythonData = {
         "    # 取り出した名前を表示",
         "    print(name)"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "for name in names: と入力します。さいごの `:` も忘れないでください！",
-        "取り出した名前（name）を print で表示します。"
-      ],
+      "lineHints": [null, null, null, "指定された回数や範囲で、繰り返し処理（ループ）を行います。", null, "変数の内容を画面に出力します。"],
       "candidates": {
         "variables": [
           "name",
@@ -601,12 +537,7 @@ export const pythonData = {
         "# 中身を出す",
         "print(colors['みかん'])"
       ],
-      "lineHints": [
-        null,
-        "{ 'みかん': 'オレンジ' } と入力しましょう。",
-        null,
-        "['みかん'] をつけて、特定のデータを取り出します。"
-      ],
+      "lineHints": [null, "{ 'みかん': 'オレンジ' } と入力しましょう。", null, "['みかん'] をつけて、特定のデータを取り出します。"],
       "candidates": {
         "variables": [
           "colors"
@@ -654,13 +585,7 @@ export const pythonData = {
         "# 関数を呼び出す",
         "greet()"
       ],
-      "lineHints": [
-        null,
-        "def greet(): と入力して、関数を定義します。",
-        "print('こんにちは') と入力しましょう。",
-        null,
-        "greet() と入力して、関数を実行します。"
-      ],
+      "lineHints": [null, "関数（greet）を新しく定義します。", null, "指定された文字列を画面に出力する関数を使用します。", null, "関数（greet）を呼び出して実行します。"],
       "candidates": {
         "functions": [
           "greet",

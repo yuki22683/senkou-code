@@ -29,17 +29,12 @@ export const rust2Data = {
       "correctLines": [
         "fn main() {",
         "    let s1 = String::from(\"hello\");",
+        "    // s1 の所有権を移動",
         "    let s2 = s1;",
         "    println!(\"{}\", s2);",
         "}"
       ],
-      "lineHints": [
-        "",
-        "String を作成します。",
-        "s1 の所有権を s2 に移動します。",
-        "s2 を表示します。",
-        ""
-      ],
+      "lineHints": [null, "String を作成します。", null, "s1 の所有権を s2 に移動します。", "マクロを使用して、文字列と改行を標準出力に出力します。", null],
       "candidates": {
         "variables": ["s1"]
       },
@@ -76,17 +71,11 @@ export const rust2Data = {
         "}",
         "fn main() {",
         "    let text = String::from(\"hello\");",
+        "    // & で参照を渡す",
         "    print_len(&text);",
         "}"
       ],
-      "lineHints": [
-        "&String で参照を受け取ります。",
-        "",
-        "",
-        "",
-        "",
-        "& で参照を渡します。"
-      ],
+      "lineHints": ["関数（print_len）を定義します。", null, null, null, null, null, "& で参照を渡します。", null],
       "candidates": {
         "operators": ["&"]
       },
@@ -122,21 +111,13 @@ export const rust2Data = {
         "    s.push_str(\" world\");",
         "}",
         "fn main() {",
+        "    // mut で可変変数にする",
         "    let mut text = String::from(\"hello\");",
         "    add_world(&mut text);",
         "    println!(\"{}\", text);",
         "}"
       ],
-      "lineHints": [
-        "可変参照を受け取ります。",
-        "参照先を変更します。",
-        "",
-        "",
-        "mut で可変変数にします。",
-        "&mut で可変参照を渡します。",
-        "",
-        ""
-      ],
+      "lineHints": ["関数（add_world）を定義します。", "参照先を変更します。", null, null, null, "mut で可変変数にします。", "&mut で可変参照を渡します。", null, null],
       "candidates": {
         "keywords": ["mut"]
       },
@@ -168,6 +149,7 @@ export const rust2Data = {
       "correctCode": "// struct で構造体を定義\nstruct Rect {\n    width: i32,\n    height: i32,\n}\nfn main() {\n    let r = Rect { width: 3, height: 4 };\n    println!(\"{}\", r.width);\n}",
       "holeyCode": "// struct で構造体を定義\n___ Rect {\n    width: i32,\n    height: i32,\n}\nfn main() {\n    let r = Rect { width: 3, height: 4 };\n    println!(\"{}\", r.width);\n}",
       "correctLines": [
+        "// struct で構造体を定義",
         "struct Rect {",
         "    width: i32,",
         "    height: i32,",
@@ -177,16 +159,7 @@ export const rust2Data = {
         "    println!(\"{}\", r.width);",
         "}"
       ],
-      "lineHints": [
-        "struct で構造体を定義します。",
-        "",
-        "",
-        "",
-        "",
-        "構造体のインスタンスを作成します。",
-        "フィールドにアクセスします。",
-        ""
-      ],
+      "lineHints": [null, "構造体（Rect）を定義します。", null, null, null, null, "構造体のインスタンスを作成します。", "マクロを使用して、文字列と改行を標準出力に出力します。", null],
       "candidates": {
         "keywords": ["struct"]
       },
@@ -221,6 +194,7 @@ export const rust2Data = {
         "struct Square {",
         "    side: i32,",
         "}",
+        "// impl でメソッドを実装",
         "impl Square {",
         "    fn area(&self) -> i32 {",
         "        self.side * self.side",
@@ -231,20 +205,7 @@ export const rust2Data = {
         "    println!(\"{}\", s.area());",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "",
-        "impl でメソッドを実装します。",
-        "&self で自分自身を参照します。",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "s.area() でメソッドを呼びます。",
-        ""
-      ],
+      "lineHints": [null, null, null, null, "impl でメソッドを実装します。", "関数（area）を定義します。", null, null, null, null, null, "マクロを使用して、文字列と改行を標準出力に出力します。", null],
       "candidates": {
         "keywords": ["impl"]
       },
@@ -276,6 +237,7 @@ export const rust2Data = {
       "correctCode": "// enum で列挙型を定義\nenum Direction {\n    Up,\n    Down,\n}\nfn main() {\n    let d = Direction::Up;\n    match d {\n        Direction::Up => println!(\"up\"),\n        Direction::Down => println!(\"down\"),\n    }\n}",
       "holeyCode": "// enum で列挙型を定義\n___ Direction {\n    Up,\n    Down,\n}\nfn main() {\n    let d = Direction::Up;\n    match d {\n        Direction::Up => println!(\"up\"),\n        Direction::Down => println!(\"down\"),\n    }\n}",
       "correctLines": [
+        "// enum で列挙型を定義",
         "enum Direction {",
         "    Up,",
         "    Down,",
@@ -288,19 +250,7 @@ export const rust2Data = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        "enum で列挙型を定義します。",
-        "",
-        "",
-        "",
-        "",
-        "Direction::Up を使います。",
-        "match でパターンマッチングします。",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, "enum で列挙型を定義します。", null, null, null, null, "Direction::Up を使います。", "match でパターンマッチングします。", null, null, null, null],
       "candidates": {
         "keywords": ["enum"]
       },
@@ -333,6 +283,7 @@ export const rust2Data = {
       "holeyCode": "fn main() {\n    // Some で値があることを示す\n    let val: Option<i32> = ___(42);\n    match val {\n        Some(n) => println!(\"{}\", n),\n        None => println!(\"none\"),\n    }\n}",
       "correctLines": [
         "fn main() {",
+        "    // Some で値があることを示す",
         "    let val: Option<i32> = Some(42);",
         "    match val {",
         "        Some(n) => println!(\"{}\", n),",
@@ -340,15 +291,7 @@ export const rust2Data = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        "",
-        "Some で値があることを示します。",
-        "",
-        "Some の中身を取り出します。",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, "Some で値があることを示します。", null, "マクロを使用して、文字列と改行を標準出力に出力します。", null, null, null],
       "candidates": {
         "keywords": ["Some"]
       },
@@ -384,6 +327,7 @@ export const rust2Data = {
         "    if n % 2 != 0 {",
         "        return Err(\"odd\".to_string());",
         "    }",
+        "    // Ok で成功を返す",
         "    Ok(n / 2)",
         "}",
         "fn main() {",
@@ -393,20 +337,7 @@ export const rust2Data = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "Err でエラーを返します。",
-        "",
-        "Ok で成功を返します。",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, "Err でエラーを返します。", null, null, "Ok で成功を返します。", null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["Ok"]
       },
@@ -438,6 +369,7 @@ export const rust2Data = {
       "correctCode": "// trait でトレイトを定義\ntrait Speak {\n    fn speak(&self);\n}\nstruct Dog;\nimpl Speak for Dog {\n    fn speak(&self) {\n        println!(\"woof\");\n    }\n}\nfn main() {\n    let d = Dog;\n    d.speak();\n}",
       "holeyCode": "// trait でトレイトを定義\n___ Speak {\n    fn speak(&self);\n}\nstruct Dog;\nimpl Speak for Dog {\n    fn speak(&self) {\n        println!(\"woof\");\n    }\n}\nfn main() {\n    let d = Dog;\n    d.speak();\n}",
       "correctLines": [
+        "// trait でトレイトを定義",
         "trait Speak {",
         "    fn speak(&self);",
         "}",
@@ -452,21 +384,7 @@ export const rust2Data = {
         "    d.speak();",
         "}"
       ],
-      "lineHints": [
-        "trait でトレイトを定義します。",
-        "",
-        "",
-        "",
-        "Dog に Speak を実装します。",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, "trait でトレイトを定義します。", null, null, null, "Dog に Speak を実装します。", null, null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["trait"]
       },
@@ -498,6 +416,7 @@ export const rust2Data = {
       "correctCode": "// T を型パラメータとして使う\nfn print_val<T: std::fmt::Display>(val: T) {\n    println!(\"{}\", val);\n}\nfn main() {\n    print_val(42);\n    print_val(\"hello\");\n}",
       "holeyCode": "// T を型パラメータとして使う\nfn print_val<___: std::fmt::Display>(val: T) {\n    println!(\"{}\", val);\n}\nfn main() {\n    print_val(42);\n    print_val(\"hello\");\n}",
       "correctLines": [
+        "// T を型パラメータとして使う",
         "fn print_val<T: std::fmt::Display>(val: T) {",
         "    println!(\"{}\", val);",
         "}",
@@ -506,15 +425,7 @@ export const rust2Data = {
         "    print_val(\"hello\");",
         "}"
       ],
-      "lineHints": [
-        "T を型パラメータとして使います。",
-        "",
-        "",
-        "",
-        "i32 型で呼び出します。",
-        "&str 型で呼び出します。",
-        ""
-      ],
+      "lineHints": [null, "T を型パラメータとして使います。", null, null, null, "i32 型で呼び出します。", "&str 型で呼び出します。", null],
       "candidates": {
         "variables": ["T"]
       },

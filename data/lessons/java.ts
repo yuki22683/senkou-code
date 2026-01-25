@@ -34,14 +34,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        "Javaのプログラムをまとめる「クラス」という名前です。",
-        "ここからプログラムがスタートします、という合図です。",
-        null,
-        "System.out.println を使って、() の中の文字を画面に出します。",
-        "ここまでがスタートの合図の終わりです。",
-        "ここまでがプログラム全体の終わりです。"
-      ],
+      "lineHints": ["外部からアクセス可能なクラス（Main）を定義します。", "Javaプログラムの実行開始地点（メインメソッド）を定義します。", null, "文字列をコンソールに出力し、改行します。", "ここまでがスタートの合図の終わりです。", "ここまでがプログラム全体の終わりです。"],
       "candidates": {
         "functions": [
           "System.out.println"
@@ -87,15 +80,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "String name = \"Java\"; と入力します。最後に ; （セミコロン）を忘れないでください！",
-        "はこの名前 name を入力すると中身が表示されます。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "文字列型の変数を宣言し、文字列データを代入します。", null, "変数の値をコンソールに出力し、改行します。", null, null],
       "candidates": {
         "variables": [
           "name"
@@ -146,17 +131,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "x = 10 と入力しましょう。",
-        "y = 5 と入力しましょう。",
-        null,
-        "たし算なので `+` を使います。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "整数型の変数を宣言し、初期値を代入します。", null, "整数型の変数を宣言し、初期値を代入します。", null, "たし算なので `+` を使います。", null, null, null],
       "candidates": {
         "variables": [
           "x",
@@ -205,14 +180,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "あまりを求める `%` 演算子を使います。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "あまりを求める `%` 演算子を使います。", null, null],
       "candidates": {
         "operators": [
           "%",
@@ -261,19 +229,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "`+=` で値を足します。",
-        null,
-        "`-=` で値を引きます。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, null, null],
       "candidates": {
         "operators": [
           "+=",
@@ -319,16 +275,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "age に 10 を入れます。",
-        null,
-        "\"私は\" + age + \"歳です\" と入力して、文字とはこをくっつけます。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "整数型の変数を宣言し、初期値を代入します。", null, "文字列をコンソールに出力し、改行します。", null, null],
       "candidates": {
         "variables": [
           "age"
@@ -374,16 +321,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "{\"あか\", \"あお\"} と入力しましょう。 { } を使うのがルールです。",
-        null,
-        "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "{\"あか\", \"あお\"} と入力しましょう。 { } を使うのがルールです。", null, "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。", null, null],
       "candidates": {
         "variables": [
           "colors"
@@ -436,19 +374,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "score = 100 と入力しましょう。",
-        null,
-        "score > 80 と入力しましょう。",
-        null,
-        "System.out.println(\"ごうかく！\"); と入力しましょう。",
-        "さいごに } で閉じるのを忘れないでください。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "整数型の変数を宣言し、初期値を代入します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "文字列をコンソールに出力し、改行します。", "さいごに } で閉じるのを忘れないでください。", null, null],
       "candidates": {
         "operators": [
           ">"
@@ -500,20 +426,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "age に 10 を入れます。",
-        "if (age >= 20) { と入力しましょう。",
-        "大人と表示します。",
-        "そうでなければ、を表す else { と入力しましょう。",
-        null,
-        "System.out.println(\"こども\"); と入力しましょう。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "整数型の変数を宣言し、初期値を代入します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "「おとな」と表示します。", null, "`else` で「そうでなければ」を表します。", null, "「こども」と表示します。", null, null],
       "candidates": {
         "keywords": [
           "else"
@@ -562,19 +475,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "両方の条件を満たすには `&&` を使います。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, null, null, null],
       "candidates": {
         "operators": [
           "&&",
@@ -622,17 +523,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "配列を定義します。",
-        null,
-        "for (String name : names) と入力します。",
-        "取り出した名前を出力します。",
-        "ループ終了",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, null, null, null],
       "candidates": {
         "variables": [
           "name",
@@ -679,19 +570,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        "HashMapを使えるように準備します。",
-        null,
-        null,
-        null,
-        "new HashMap<>(); で新しくはこを作ります。",
-        null,
-        "put（プット）でデータを入れます。",
-        null,
-        "get（ゲット）でデータを取り出します。",
-        null,
-        null
-      ],
+      "lineHints": ["HashMapクラスをインポートします。", null, null, null, "new HashMap<>(); で新しくはこを作ります。", null, "put（プット）でデータを入れます。", null, "get（ゲット）でデータを取り出します。", null, null],
       "candidates": {
         "functions": [
           "put",
@@ -740,18 +619,7 @@ export const javaData = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "public static void greet() { と入力して、メソッドを定義します。",
-        "System.out.println(\"こんにちは\"); と入力しましょう。",
-        "メソッドの終わりです。",
-        null,
-        null,
-        "greet(); と入力して、メソッドを実行します。",
-        "mainの終わりです。",
-        "クラスの終わりです。"
-      ],
+      "lineHints": [null, null, "public static void greet() { と入力して、メソッドを定義します。", "文字列をコンソールに出力し、改行します。", "メソッドの終わりです。", null, null, "関数（greet）を呼び出して実行します。", "mainの終わりです。", "クラスの終わりです。"],
       "candidates": {
         "functions": [
           "greet"

@@ -37,12 +37,7 @@ export const typescriptData = {
         "// はこの中身を出す",
         "console.log(message);"
       ],
-      "lineHints": [
-        null,
-        "文字を入れるラベルは `string` です。 '=' のあとに `'Hello TS'` と入力しましょう。",
-        null,
-        "console.log の中に、はこの名前 `message` を入力します。"
-      ],
+      "lineHints": [null, "文字を入れるラベルは `string` です。 '=' のあとに `'Hello TS'` と入力しましょう。", null, "console.log の中に、はこの名前 `message` を入力します。"],
       "candidates": {
         "variables": [
           "message"
@@ -90,13 +85,7 @@ export const typescriptData = {
         "// たし算した答えを出す",
         ["console.log(x + y);", "console.log(y + x);"]
       ],
-      "lineHints": [
-        null,
-        "x に `number` ラベルを貼ります。",
-        "y にも `number` ラベルを貼ります。",
-        null,
-        "たし算なので `+` を使います。"
-      ],
+      "lineHints": [null, "x に `number` ラベルを貼ります。", null, "y にも `number` ラベルを貼ります。", null, "たし算なので `+` を使います。", null],
       "candidates": {
         "variables": [
           "x",
@@ -143,10 +132,7 @@ export const typescriptData = {
         "// 10 を 3 で割ったあまりを出力する",
         "console.log(10 % 3);"
       ],
-      "lineHints": [
-        null,
-        "あまりを求める % 演算子を使います。"
-      ],
+      "lineHints": [null, "あまりを求める % 演算子を使います。"],
       "candidates": {
         "operators": ["%", "+", "-", "*", "/"]
       },
@@ -185,14 +171,7 @@ export const typescriptData = {
         "// 結果を表示",
         "console.log(score);"
       ],
-      "lineHints": [
-        null,
-        "50 と入力しましょう。",
-        null,
-        "+= を使って加算します。",
-        null,
-        null
-      ],
+      "lineHints": [null, "50 と入力しましょう。", null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, null],
       "candidates": {
         "operators": ["+=", "-=", "*=", "/="],
         "numbers": ["50", "10"]
@@ -230,12 +209,7 @@ export const typescriptData = {
         "// 文章の中に中身を入れる",
         "console.log(`私は${age}歳です`);"
       ],
-      "lineHints": [
-        null,
-        "数字を入れるので、ラベルは `number` です。",
-        null,
-        "${ } の中に、はこの名前 `age` を入力しましょう。"
-      ],
+      "lineHints": [null, "数字を入れるので、ラベルは `number` です。", null, "デバッグ用コンソールなどに文字列を出力します。"],
       "candidates": {
         "variables": [
           "age"
@@ -280,12 +254,7 @@ export const typescriptData = {
         "// 2番目（番号は1）を出す",
         "console.log(colors[1]);"
       ],
-      "lineHints": [
-        null,
-        "文字の配列なので `string` です。",
-        null,
-        "2番目のデータの番号は 1 です。"
-      ],
+      "lineHints": [null, "文字の配列なので `string` です。", null, "2番目のデータの番号は 1 です。"],
       "candidates": {
         "variables": [
           "colors"
@@ -335,12 +304,7 @@ export const typescriptData = {
         "    console.log('おとなです');",
         "}"
       ],
-      "lineHints": [
-        null,
-        "ラベルの名前は `boolean` です。",
-        null,
-        "() のなかに、はこの名前 `isAdult` を入力します。"
-      ],
+      "lineHints": [null, "ラベルの名前は `boolean` です。", null, "() のなかに、はこの名前 `isAdult` を入力します。", null, null],
       "candidates": {
         "variables": [
           "isAdult"
@@ -382,26 +346,17 @@ export const typescriptData = {
       "correctLines": [
         "// score というはこに 75 を入れる",
         "const score: number = 75;",
-        "// 判定する",
+        "// 80以上かを比較する演算子",
         "if (score >= 80) {",
+        "    // 80点以上のときのメッセージ（'ごうかく'）",
         "    console.log('ごうかく');",
-        "// elseで「そうでなければ」",
+        "// 「そうでなければ」を表すキーワード",
         "} else {",
-        "    // それ以外の場合",
+        "    // それ以外の場合（'ざんねん'）",
         "    console.log('ざんねん');",
         "}"
       ],
-      "lineHints": [
-        null,
-        "数字を入れるので `number` ラベルを貼ります。",
-        null,
-        null,
-        null,
-        "「そうでなければ」は `else` です。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "数字を入れるので `number` ラベルを貼ります。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "デバッグ用コンソールなどに文字列を出力します。", null, "もし条件が満たされなかった場合に実行する処理を記述します。", null, "デバッグ用コンソールなどに文字列を出力します。", null],
       "candidates": {
         "variables": [
           "score"
@@ -442,23 +397,17 @@ export const typescriptData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// scoreに85を入れる\nconst score: number = 85;\n// 80以上 かつ 100以下 ならメッセージを出す\nif (score >= 80 && score <= 100) {\n    console.log('ごうかく');\n}",
-      "holeyCode": "// scoreに85を入れる\nconst score: number = ___ ;\n// 80以上 かつ 100以下 ならメッセージを出す\nif (score >= 80 ___ score <= 100) {\n    console.log('___');\n}",
+      "holeyCode": "// scoreに85を入れる\nconst score: number = ___ ;\n// 80以上 かつ 100以下 ならメッセージを出す\nif (score >= 80 ___ score <= 100) {\n    // 結果を出力\n    console.log('___');\n}",
       "correctLines": [
         "// scoreに85を入れる",
         "const score: number = 85;",
         "// 80以上 かつ 100以下 ならメッセージを出す",
         "if (score >= 80 && score <= 100) {",
+        "    // 結果を出力",
         "    console.log('ごうかく');",
         "}"
       ],
-      "lineHints": [
-        null,
-        "85 と入力しましょう。",
-        null,
-        "両方の条件を満たすので && を使います。",
-        "ごうかく と入力しましょう。",
-        null
-      ],
+      "lineHints": [null, "scoreの初期値を設定します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "デバッグ用コンソールなどに文字列を出力します。", null],
       "candidates": {
         "operators": ["&&", "||"],
         "numbers": ["85"],
@@ -504,12 +453,7 @@ export const typescriptData = {
         "    console.log(name);",
         "}"
       ],
-      "lineHints": [
-        null,
-        "文字の配列なので `string[]` です。",
-        null,
-        "JavaScriptと同じ `for (const name of names)` の形を使います。"
-      ],
+      "lineHints": [null, "文字の配列なので `string[]` です。", null, "指定された回数や範囲で、繰り返し処理（ループ）を行います。", null, null],
       "candidates": {
         "variables": [
           "name",
@@ -557,14 +501,7 @@ export const typescriptData = {
         "// 中身を出す",
         "console.log(user.name);"
       ],
-      "lineHints": [
-        null,
-        "name は文字なので `string` です。",
-        null,
-        "自分で作ったラベル `User` を指定します。",
-        null,
-        "ドット `.` を使って、userの中の `name` を取り出します。"
-      ],
+      "lineHints": [null, "name は文字なので `string` です。", null, "自分で作ったラベル `User` を指定します。", null, "ドット `.` を使って、userの中の `name` を取り出します。"],
       "candidates": {
         "variables": [
           "user"
@@ -613,10 +550,7 @@ export const typescriptData = {
         "// 関数を実行する",
         "greet('TypeScript');"
       ],
-      "lineHints": [
-        null,
-        "受け取る `name` は文字なので `string` です。"
-      ],
+      "lineHints": [null, "受け取る `name` は文字なので `string` です。", null, null, null, null],
       "candidates": {
         "functions": [
           "greet",
@@ -661,10 +595,7 @@ export const typescriptData = {
         "// 関数を実行する",
         "showDate();"
       ],
-      "lineHints": [
-        null,
-        "「なにも返さない」ことをあらわす `void` と入力しましょう。"
-      ],
+      "lineHints": [null, "「なにも返さない」ことをあらわす `void` と入力しましょう。", null, null, null, null],
       "candidates": {
         "functions": [
           "showDate",

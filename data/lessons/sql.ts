@@ -32,11 +32,11 @@ export const sqlData = {
       "correctCode": "-- SELECTでデータを取得\nSELECT 'Hello, World!';",
       "holeyCode": "-- SELECTでデータを取得\n___ 'Hello, World!';",
       "correctLines": [
-        "-- 'Hello, World!'を表示",
+        "-- SELECTでデータを取得",
         "SELECT 'Hello, World!';"
       ],
       "lineHints": [
-        "ここはメモ（コメント）です。",
+        null,
         "やりかたは「SELECT」です。"
       ],
       "candidates": {

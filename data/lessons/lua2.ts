@@ -27,13 +27,12 @@ export const lua2Data = {
       "correctCode": "local item = { name = \"Apple\", price = 100 }\n-- .でキーにアクセス\nprint(item.price)",
       "holeyCode": "-- nameとpriceを持つテーブルを作成\nlocal item = { name = \"___\", price = ___ }\n-- .でキーにアクセス\nprint(item___price)",
       "correctLines": [
+        "-- nameとpriceを持つテーブルを作成",
         "local item = { name = \"Apple\", price = 100 }",
+        "-- .でキーにアクセス",
         "print(item.price)"
       ],
-      "lineHints": [
-        "",
-        ". でキーにアクセスします。"
-      ],
+      "lineHints": [null, "テーブルを作成します。", null, ". でキーにアクセスします。"],
       "candidates": {
         "operators": ["."]
       },
@@ -65,13 +64,12 @@ export const lua2Data = {
       "correctCode": "-- 配列を作成（10, 20, 30の順）\nlocal nums = {10, 20, 30}\n-- 2番目の要素にアクセス\nprint(nums[2])",
       "holeyCode": "-- 配列を作成（10, 20, 30の順）\nlocal nums = {___, 20, ___}\n-- 2番目の要素にアクセス\nprint(nums[___])",
       "correctLines": [
+        "-- 配列を作成（10, 20, 30の順）",
         "local nums = {10, 20, 30}",
+        "-- 2番目の要素にアクセス",
         "print(nums[2])"
       ],
-      "lineHints": [
-        "",
-        "2番目の要素にアクセスします。"
-      ],
+      "lineHints": [null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "2番目の要素にアクセスします。"],
       "candidates": {
         "numbers": ["2"]
       },
@@ -103,17 +101,15 @@ export const lua2Data = {
       "correctCode": "-- 配列を作成（1, 2, 3の順）\nlocal nums = {1, 2, 3}\n-- 1番目の i にインデックス、2番目の v に値が入る\nfor i, v in ipairs(nums) do\n    print(v)\nend",
       "holeyCode": "-- 配列を作成（1, 2, 3の順）\nlocal nums = {___, 2, ___}\n-- 1番目の i にインデックス、2番目の v に値が入る\nfor i, v in ___(nums) do\n    -- vを表示\n    print(___)\nend",
       "correctLines": [
+        "-- 配列を作成（1, 2, 3の順）",
         "local nums = {1, 2, 3}",
+        "-- 1番目の i にインデックス、2番目の v に値が入る",
         "for i, v in ipairs(nums) do",
+        "    -- vを表示",
         "    print(v)",
         "end"
       ],
-      "lineHints": [
-        "",
-        "ipairs で配列をループします。",
-        "",
-        ""
-      ],
+      "lineHints": [null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "ipairs で配列をループします。", null, "変数の内容を画面に出力します。", null],
       "candidates": {
         "functions": ["ipairs"]
       },
@@ -145,17 +141,15 @@ export const lua2Data = {
       "correctCode": "local t = {x = 10}\n-- 1番目の k にキー、2番目の v に値が入る\nfor k, v in pairs(t) do\n    print(k, v)\nend",
       "holeyCode": "-- テーブルを作成\nlocal t = {x = ___}\n-- 1番目の k にキー、2番目の v に値が入る\nfor k, v in ___(t) do\n    -- kとvを表示\n    print(___, ___)\nend",
       "correctLines": [
+        "-- テーブルを作成",
         "local t = {x = 10}",
+        "-- 1番目の k にキー、2番目の v に値が入る",
         "for k, v in pairs(t) do",
+        "    -- kとvを表示",
         "    print(k, v)",
         "end"
       ],
-      "lineHints": [
-        "",
-        "pairs ですべてのキーと値をループします。",
-        "",
-        ""
-      ],
+      "lineHints": [null, "テーブルを作成します。", null, "pairs ですべてのキーと値をループします。", null, "k と v を表示します。", null],
       "candidates": {
         "functions": ["pairs"]
       },
@@ -187,17 +181,15 @@ export const lua2Data = {
       "correctCode": "-- functionで関数を定義\nlocal function double(n)\n    return n * 2\nend\nprint(double(5))",
       "holeyCode": "-- functionで関数を定義\nlocal ___ double(n)\n    -- n * 2を返す\n    return n ___ 2\nend\n-- double(5)を呼び出す\nprint(double(___))",
       "correctLines": [
+        "-- functionで関数を定義",
         "local function double(n)",
+        "    -- n * 2を返す",
         ["    return n * 2", "    return 2 * n"],
         "end",
+        "-- double(5)を呼び出す",
         "print(double(5))"
       ],
-      "lineHints": [
-        "function で関数を定義します。",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, "function で関数を定義します。", null, "* で掛け算します。", null, null, "double関数を呼び出します。", null],
       "candidates": {
         "keywords": ["function"]
       },
@@ -229,19 +221,18 @@ export const lua2Data = {
       "correctCode": "local function swap(a, b)\n    -- returnで値を返す\n    return b, a\nend\nlocal x, y = swap(1, 2)\n-- xとyを表示（x, yの順）\nprint(x, y)",
       "holeyCode": "-- swap関数を定義\nlocal function ___(a, b)\n    -- returnで値を返す\n    ___ b, a\nend\n-- swap(1, 2)を呼び出す\nlocal x, y = swap(___, ___)\n-- xとyを表示（x, yの順）\nprint(___, ___)\n",
       "correctLines": [
+        "-- swap関数を定義",
         "local function swap(a, b)",
+        "    -- returnで値を返す",
         "    return b, a",
         "end",
+        "-- swap(1, 2)を呼び出す",
         "local x, y = swap(1, 2)",
-        "print(x, y)"
+        "-- xとyを表示（x, yの順）",
+        "print(x, y)",
+        ""
       ],
-      "lineHints": [
-        "swap という関数を定義します。",
-        "return で複数の値を返します。",
-        "",
-        "1, 2 を渡して呼び出します。",
-        "x と y を表示します。"
-      ],
+      "lineHints": [null, "swap という関数を定義します。", null, "return で複数の値を返します。", null, null, "1, 2 を渡して呼び出します。", null, "x と y を表示します。", null],
       "candidates": {
         "keywords": ["return", "swap"]
       },
@@ -273,19 +264,17 @@ export const lua2Data = {
       "correctCode": "local obj = { x = 5 }\nfunction obj:getX()\n    -- selfで自分自身を参照\n    return self.x\nend\nprint(obj:getX())",
       "holeyCode": "-- objテーブルを作成\nlocal obj = { x = ___ }\n-- メソッドを定義\nfunction obj:___()\n    -- selfで自分自身を参照\n    return ___.x\nend\n-- getXを呼び出す\nprint(obj:___())",
       "correctLines": [
+        "-- objテーブルを作成",
         "local obj = { x = 5 }",
+        "-- メソッドを定義",
         "function obj:getX()",
+        "    -- selfで自分自身を参照",
         "    return self.x",
         "end",
+        "-- getXを呼び出す",
         "print(obj:getX())"
       ],
-      "lineHints": [
-        "",
-        "",
-        "self で自分自身を参照します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, "テーブルを作成します。", null, "メソッドを定義します。", null, "self で自分自身を参照します。", null, null, "getX メソッドを呼び出します。"],
       "candidates": {
         "keywords": ["self"]
       },
@@ -317,17 +306,16 @@ export const lua2Data = {
       "correctCode": "local t = {}\nlocal mt = { __index = { x = 10 } }\n-- setmetatableでメタテーブルを設定\nsetmetatable(t, mt)\nprint(t.x)",
       "holeyCode": "-- 空のテーブルを作成\nlocal t = {___}\n-- メタテーブルを作成\nlocal mt = { __index = { x = ___ } }\n-- setmetatableでメタテーブルを設定\n___(t, mt)\n-- t.xを表示\nprint(t___x)",
       "correctLines": [
+        "-- 空のテーブルを作成",
         "local t = {}",
+        "-- メタテーブルを作成",
         "local mt = { __index = { x = 10 } }",
+        "-- setmetatableでメタテーブルを設定",
         "setmetatable(t, mt)",
+        "-- t.xを表示",
         "print(t.x)"
       ],
-      "lineHints": [
-        "",
-        "__index でデフォルト値を設定します。",
-        "setmetatable でメタテーブルを設定します。",
-        ""
-      ],
+      "lineHints": [null, "空のテーブルを作成します。", null, "__index でデフォルト値を設定します。", null, "setmetatable でメタテーブルを設定します。", null, "t.x の値を表示します。"],
       "candidates": {
         "functions": ["setmetatable"]
       },
@@ -359,23 +347,20 @@ export const lua2Data = {
       "correctCode": "local function makeAdder(n)\n    -- returnで関数を返す\n    return function(x)\n        return x + n\n    end\nend\nlocal add5 = makeAdder(5)\nprint(add5(10))",
       "holeyCode": "-- makeAdder関数を定義\nlocal function ___(n)\n    -- returnで関数を返す\n    ___ function(x)\n        -- x + nを返す\n        return x ___ n\n    end\nend\n-- makeAdder(5)を呼び出す\nlocal add5 = makeAdder(___)\n-- add5(10)を呼び出す\nprint(add5(___))",
       "correctLines": [
+        "-- makeAdder関数を定義",
         "local function makeAdder(n)",
+        "    -- returnで関数を返す",
         "    return function(x)",
+        "        -- x + nを返す",
         ["        return x + n", "        return n + x"],
         "    end",
         "end",
+        "-- makeAdder(5)を呼び出す",
         "local add5 = makeAdder(5)",
+        "-- add5(10)を呼び出す",
         "print(add5(10))"
       ],
-      "lineHints": [
-        "",
-        "return で関数を返します。",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, "makeAdder 関数を定義します。", null, "return で関数を返します。", null, "x + n を返します。", null, null, null, "makeAdder(5) を呼び出します。", null, "add5(10) を呼び出します。", null],
       "candidates": {
         "keywords": ["return"]
       },
@@ -407,17 +392,15 @@ export const lua2Data = {
       "correctCode": "-- createでコルーチンを作成\nlocal co = coroutine.create(function()\n    print(\"hello\")\nend)\ncoroutine.resume(co)",
       "holeyCode": "-- createでコルーチンを作成\nlocal co = coroutine.___(function()\n    -- helloを表示\n    print(\"___\")\nend)\n-- resumeでコルーチンを実行\ncoroutine.___(co)",
       "correctLines": [
+        "-- createでコルーチンを作成",
         "local co = coroutine.create(function()",
+        "    -- helloを表示",
         "    print(\"hello\")",
         "end)",
+        "-- resumeでコルーチンを実行",
         "coroutine.resume(co)"
       ],
-      "lineHints": [
-        "create でコルーチンを作成します。",
-        "",
-        "",
-        "resume で実行します。"
-      ],
+      "lineHints": [null, "create でコルーチンを作成します。", null, "hello を表示します。", null, null, "resume で実行します。"],
       "candidates": {
         "functions": ["create"]
       },

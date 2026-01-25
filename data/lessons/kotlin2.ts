@@ -37,16 +37,22 @@ export const kotlin2Data = {
       "correctCode": "var num: Int? = 42\nif (num != null) {\n    println(num)\n}",
       "holeyCode": "// ? で nullable 型にする\nvar num: Int___ = ___\n// null チェックをする\nif (num != ___) {\n    // num を出力する\n    ___(num)\n}",
       "correctLines": [
+        "// ? で nullable 型にする",
         "var num: Int? = 42",
+        "// null チェックをする",
         "if (num != null) {",
+        "    // num を出力する",
         "    println(num)",
         "}"
       ],
       "lineHints": [
+        null,
         "? で nullable 型にします。",
+        null,
         "null チェックをします。",
-        "",
-        ""
+        null,
+        "println で出力します。",
+        null
       ],
       "candidates": {
         "operators": ["?"]
@@ -84,11 +90,15 @@ export const kotlin2Data = {
       "correctCode": "val text: String? = \"Hello\"\nprintln(text?.length)",
       "holeyCode": "// nullable 型の変数を宣言する\nval text: ___? = \"Hello\"\n// ?. で安全にプロパティにアクセスする\nprintln(text___length)",
       "correctLines": [
+        "// nullable 型の変数を宣言する",
         "val text: String? = \"Hello\"",
+        "// ?. で安全にプロパティにアクセスする",
         "println(text?.length)"
       ],
       "lineHints": [
-        "",
+        null,
+        "型名の後に ? をつけると nullable 型になります。",
+        null,
         "?. で安全にアクセスします。"
       ],
       "candidates": {
@@ -127,11 +137,15 @@ export const kotlin2Data = {
       "correctCode": "val value: Int? = null\nprintln(value ?: 0)",
       "holeyCode": "// nullable 型の変数を宣言する\nval value: Int? = ___\n// ?: でデフォルト値を指定する\nprintln(value ___ 0)",
       "correctLines": [
+        "// nullable 型の変数を宣言する",
         "val value: Int? = null",
+        "// ?: でデフォルト値を指定する",
         "println(value ?: 0)"
       ],
       "lineHints": [
-        "",
+        null,
+        "null を入力しましょう。",
+        null,
         "?: でデフォルト値を指定します。"
       ],
       "candidates": {
@@ -170,14 +184,20 @@ export const kotlin2Data = {
       "correctCode": "data class Point(val x: Int, val y: Int)\nval p = Point(3, 4)\nprintln(p)",
       "holeyCode": "// data でデータクラスを定義する\n___ class Point(val x: Int, val y: Int)\n// Point のインスタンスを作成する\nval p = ___(3, 4)\n// p を出力する\n___(p)",
       "correctLines": [
+        "// data でデータクラスを定義する",
         "data class Point(val x: Int, val y: Int)",
+        "// Point のインスタンスを作成する",
         "val p = Point(3, 4)",
+        "// p を出力する",
         "println(p)"
       ],
       "lineHints": [
+        null,
         "data でデータクラスにします。",
-        "",
-        ""
+        null,
+        "Point と入力しましょう。",
+        null,
+        "println と入力しましょう。"
       ],
       "candidates": {
         "keywords": ["data"]
@@ -220,12 +240,16 @@ export const kotlin2Data = {
       "correctCode": "val double = { n: Int -> n * 2 }\nprintln(double(5))",
       "holeyCode": "// -> で引数と処理を区切る\nval double = { n: Int ___ n * 2 }\n// double(5) を出力する\nprintln(___(5))",
       "correctLines": [
+        "// -> で引数と処理を区切る",
         ["val double = { n: Int -> n * 2 }", "val double = { n: Int -> 2 * n }"],
+        "// double(5) を出力する",
         "println(double(5))"
       ],
       "lineHints": [
+        null,
         "-> で引数と処理を区切ります。",
-        ""
+        null,
+        "double と入力しましょう。"
       ],
       "candidates": {
         "operators": ["->"]
@@ -268,14 +292,20 @@ export const kotlin2Data = {
       "correctCode": "val nums = listOf(1, 2, 3)\nval squared = nums.map { it * it }\nprintln(squared)",
       "holeyCode": "// listOf でリストを作成する\nval nums = ___(1, 2, 3)\n// map で各要素を変換する\nval squared = nums.___ { it * it }\n// squared を出力する\n___(squared)",
       "correctLines": [
+        "// listOf でリストを作成する",
         "val nums = listOf(1, 2, 3)",
+        "// map で各要素を変換する",
         "val squared = nums.map { it * it }",
+        "// squared を出力する",
         "println(squared)"
       ],
       "lineHints": [
-        "",
+        null,
+        "listOf と入力しましょう。",
+        null,
         "map で各要素を2乗します。",
-        ""
+        null,
+        "println と入力しましょう。"
       ],
       "candidates": {
         "functions": ["map"]
@@ -318,14 +348,20 @@ export const kotlin2Data = {
       "correctCode": "val nums = listOf(1, 2, 3, 4, 5)\nval result = nums.filter { it >= 3 }\nprintln(result)",
       "holeyCode": "// listOf でリストを作成する\nval nums = ___(1, 2, 3, 4, 5)\n// filter で条件に合う要素を抽出する\nval result = nums.___ { it >= 3 }\n// result を出力する\n___(result)",
       "correctLines": [
+        "// listOf でリストを作成する",
         "val nums = listOf(1, 2, 3, 4, 5)",
+        "// filter で条件に合う要素を抽出する",
         "val result = nums.filter { it >= 3 }",
+        "// result を出力する",
         "println(result)"
       ],
       "lineHints": [
-        "",
+        null,
+        "listOf と入力しましょう。",
+        null,
         "filter で 3 以上を抽出します。",
-        ""
+        null,
+        "println と入力しましょう。"
       ],
       "candidates": {
         "functions": ["filter"]
@@ -368,22 +404,34 @@ export const kotlin2Data = {
       "correctCode": "val x = 2\nval result = when (x) {\n    1 -> \"one\"\n    2 -> \"two\"\n    else -> \"other\"\n}\nprintln(result)",
       "holeyCode": "// x に 2 を代入する\nval x = ___\n// when で分岐する\nval result = ___ (x) {\n    // 1 の場合\n    1 -> \"___\"\n    // 2 の場合\n    2 -> \"___\"\n    // その他の場合\n    else -> \"___\"\n}\n// result を出力する\n___(result)",
       "correctLines": [
+        "// x に 2 を代入する",
         "val x = 2",
+        "// when で分岐する",
         "val result = when (x) {",
+        "    // 1 の場合",
         "    1 -> \"one\"",
+        "    // 2 の場合",
         "    2 -> \"two\"",
+        "    // その他の場合",
         "    else -> \"other\"",
         "}",
+        "// result を出力する",
         "println(result)"
       ],
       "lineHints": [
-        "",
+        null,
+        "2 と入力しましょう。",
+        null,
         "when で分岐します。",
-        "",
-        "",
-        "",
-        "",
-        ""
+        null,
+        "one と入力しましょう。",
+        null,
+        "two と入力しましょう。",
+        null,
+        "other と入力しましょう。",
+        null,
+        null,
+        "println と入力しましょう。"
       ],
       "candidates": {
         "keywords": ["when"]
@@ -426,12 +474,16 @@ export const kotlin2Data = {
       "correctCode": "fun Int.double() = this * 2\nprintln(5.double())",
       "holeyCode": "// this でレシーバを参照する\nfun Int.double() = ___ * 2\n// 5.double() を出力する\nprintln(5.___())",
       "correctLines": [
+        "// this でレシーバを参照する",
         ["fun Int.double() = this * 2", "fun Int.double() = 2 * this"],
+        "// 5.double() を出力する",
         "println(5.double())"
       ],
       "lineHints": [
+        null,
         "this でレシーバを参照します。",
-        ""
+        null,
+        "double と入力しましょう。"
       ],
       "candidates": {
         "keywords": ["this"]
@@ -474,11 +526,15 @@ export const kotlin2Data = {
       "correctCode": "val num: Int? = 42\nnum?.let { println(it * 2) }",
       "holeyCode": "// nullable 型の変数を宣言する\nval num: Int? = ___\n// let で処理を実行する\nnum?.___ { println(it * 2) }",
       "correctLines": [
+        "// nullable 型の変数を宣言する",
         "val num: Int? = 42",
+        "// let で処理を実行する",
         "num?.let { println(it * 2) }"
       ],
       "lineHints": [
-        "",
+        null,
+        "42 と入力しましょう。",
+        null,
         "let で処理を実行します。"
       ],
       "candidates": {

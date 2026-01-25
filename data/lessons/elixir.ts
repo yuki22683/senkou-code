@@ -32,11 +32,10 @@ export const elixirData = {
       "correctCode": "# Hello, Elixir!を表示\nIO.puts \\\"Hello, Elixir!\\\"",
       "holeyCode": "# Hello, Elixir!を表示\nIO.puts \\\"___\\\"",
       "correctLines": [
+        "# Hello, Elixir!を表示",
         "IO.puts \"Hello, Elixir!\""
       ],
-      "lineHints": [
-        "IO.puts を使って、そのあとの文字を画面に出します。"
-      ],
+      "lineHints": [null, "IO.puts を使って、そのあとの文字を画面に出します。"],
       "candidates": {
         "strings": [
           "Hello, Elixir!"
@@ -70,13 +69,12 @@ export const elixirData = {
       "correctCode": "# 10を入力\nx = 10\n# xを入力\nIO.puts x",
       "holeyCode": "# 10を入力\nx = ___\n# xを入力\nIO.puts ___",
       "correctLines": [
+        "# 10を入力",
         "x = 10",
+        "# xを入力",
         "IO.puts x"
       ],
-      "lineHints": [
-        "x という名前に 10 をセットします。",
-        "はこの名前 x を指定して、表示させます。"
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "はこの名前 x を指定して、表示させます。"],
       "candidates": {
         "variables": [
           "x"
@@ -113,15 +111,14 @@ export const elixirData = {
       "correctCode": "a = 5\nb = 3\n# +でたし算\nIO.puts a + b",
       "holeyCode": "# 5を入力\na = ___\n# 3を入力\nb = ___\n# +でたし算\nIO.puts a ___ b",
       "correctLines": [
+        "# 5を入力",
         "a = 5",
+        "# 3を入力",
         "b = 3",
+        "# +でたし算",
         ["IO.puts a + b", "IO.puts b + a"]
       ],
-      "lineHints": [
-        null,
-        null,
-        "たし算なので `+\` を使います。"
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "変数に数値を代入（保存）します。", null, "たし算なので `+` を使います。", null],
       "candidates": {
         "numbers": [
           "5",

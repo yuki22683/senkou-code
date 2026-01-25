@@ -27,27 +27,23 @@ export const csharp2Data = {
       "correctCode": "class Vehicle {\n    public void Move() {\n        Console.WriteLine(\"moving\");\n    }\n}\nclass Car : Vehicle { }\n\nCar c = new Car();\nc.Move();",
       "holeyCode": "// Vehicleクラスを定義\n___ Vehicle {\n    // Moveメソッドを定義\n    public ___ Move() {\n        // 画面に出力\n        Console.WriteLine(\"___\");\n    }\n}\n// :で継承\nclass Car ___ Vehicle { }\n\n// Carインスタンスを作成\nCar c = ___ Car();\n// Moveメソッドを呼び出し\nc.___();",
       "correctLines": [
+        "// Vehicleクラスを定義",
         "class Vehicle {",
+        "    // Moveメソッドを定義",
         "    public void Move() {",
+        "        // 画面に出力",
         "        Console.WriteLine(\"moving\");",
         "    }",
         "}",
+        "// :で継承",
         "class Car : Vehicle { }",
         "",
+        "// Carインスタンスを作成",
         "Car c = new Car();",
+        "// Moveメソッドを呼び出し",
         "c.Move();"
       ],
-      "lineHints": [
-        "親クラス Vehicle を定義します。",
-        "Move メソッドを定義します。",
-        "",
-        "",
-        "",
-        ": を使って継承します。",
-        "",
-        "",
-        "Car は Move() を使えます。"
-      ],
+      "lineHints": [null, "新しいクラス（Vehicle）を定義します。", null, "voidは戻り値がないメソッドを表します。", null, "文字列をコンソールに出力し、改行します。", null, null, null, "新しいクラス（Car）を定義します。", null, null, "newキーワードでインスタンスを作成します。", null, "継承したMoveメソッドを呼び出します。"],
       "candidates": {
         "operators": [":"]
       },
@@ -79,35 +75,29 @@ export const csharp2Data = {
       "correctCode": "class Shape {\n    public virtual void Draw() {\n        Console.WriteLine(\"shape\");\n    }\n}\nclass Circle : Shape {\n    public override void Draw() {\n        Console.WriteLine(\"circle\");\n    }\n}\n\nCircle c = new Circle();\nc.Draw();",
       "holeyCode": "// Shapeクラスを定義\n___ Shape {\n    // virtualで仮想メソッド\n    public ___ void Draw() {\n        // 画面に出力\n        Console.WriteLine(\"___\");\n    }\n}\n// Shapeを継承\nclass Circle ___ Shape {\n    // overrideで親メソッドを上書き\n    public ___ void Draw() {\n        // 画面に出力\n        Console.WriteLine(\"___\");\n    }\n}\n\n// Circleインスタンスを作成\nCircle c = ___ Circle();\n// Drawメソッドを呼び出し\nc.___();",
       "correctLines": [
+        "// Shapeクラスを定義",
         "class Shape {",
+        "    // virtualで仮想メソッド",
         "    public virtual void Draw() {",
+        "        // 画面に出力",
         "        Console.WriteLine(\"shape\");",
         "    }",
         "}",
+        "// Shapeを継承",
         "class Circle : Shape {",
+        "    // overrideで親メソッドを上書き",
         "    public override void Draw() {",
+        "        // 画面に出力",
         "        Console.WriteLine(\"circle\");",
         "    }",
         "}",
         "",
+        "// Circleインスタンスを作成",
         "Circle c = new Circle();",
+        "// Drawメソッドを呼び出し",
         "c.Draw();"
       ],
-      "lineHints": [
-        "",
-        "virtual で仮想メソッドにします。",
-        "",
-        "",
-        "",
-        "",
-        "override で上書きします。",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "Circle の Draw が呼ばれます。"
-      ],
+      "lineHints": [null, "新しいクラス（Shape）を定義します。", null, "virtualで子クラスでの上書きを許可します。", null, "文字列をコンソールに出力し、改行します。", null, null, null, "新しいクラス（Circle）を定義します。", null, "overrideで親クラスのメソッドを上書きします。", null, "文字列をコンソールに出力し、改行します。", null, null, null, null, "newキーワードでインスタンスを作成します。", null, "上書きされたDrawメソッドが呼ばれます。"],
       "candidates": {
         "keywords": ["override"]
       },
@@ -139,31 +129,26 @@ export const csharp2Data = {
       "correctCode": "interface IRunner {\n    void Run();\n}\nclass Robot : IRunner {\n    public void Run() {\n        Console.WriteLine(\"running\");\n    }\n}\n\nRobot r = new Robot();\nr.Run();",
       "holeyCode": "// interfaceでインターフェースを定義\n___ IRunner {\n    // Runメソッドを宣言\n    ___ Run();\n}\n// IRunnerを実装\nclass Robot ___ IRunner {\n    // Runメソッドを実装\n    public ___ Run() {\n        // 画面に出力\n        Console.WriteLine(\"___\");\n    }\n}\n\n// Robotインスタンスを作成\nRobot r = ___ Robot();\n// Runメソッドを呼び出し\nr.___();",
       "correctLines": [
+        "// interfaceでインターフェースを定義",
         "interface IRunner {",
+        "    // Runメソッドを宣言",
         "    void Run();",
         "}",
+        "// IRunnerを実装",
         "class Robot : IRunner {",
+        "    // Runメソッドを実装",
         "    public void Run() {",
+        "        // 画面に出力",
         "        Console.WriteLine(\"running\");",
         "    }",
         "}",
         "",
+        "// Robotインスタンスを作成",
         "Robot r = new Robot();",
+        "// Runメソッドを呼び出し",
         "r.Run();"
       ],
-      "lineHints": [
-        "interface でインターフェースを定義します。",
-        "Run メソッドの宣言です。",
-        "",
-        "IRunner を実装します。",
-        "Run メソッドを実装します。",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, "interfaceでインターフェースを定義します。", null, "void型の値を返す関数（Run）を定義します。", null, null, "新しいクラス（Robot）を定義します。", null, "voidは戻り値がないメソッドを表します。", null, "文字列をコンソールに出力し、改行します。", null, null, null, null, "newキーワードでインスタンスを作成します。", null, "実装したRunメソッドを呼び出します。"],
       "candidates": {
         "keywords": ["interface"]
       },
@@ -195,23 +180,20 @@ export const csharp2Data = {
       "correctCode": "class Item {\n    public int Price { get; set; }\n}\n\nItem item = new Item();\nitem.Price = 500;\nConsole.WriteLine(item.Price);",
       "holeyCode": "// Itemクラスを定義\n___ Item {\n    // getで値を取得\n    public int Price { ___; set; }\n}\n\n// Itemインスタンスを作成\nItem item = ___ Item();\n// Priceに値を設定\nitem.___ = 500;\n// Priceを表示\nConsole.WriteLine(item.___);",
       "correctLines": [
+        "// Itemクラスを定義",
         "class Item {",
+        "    // getで値を取得",
         "    public int Price { get; set; }",
         "}",
         "",
+        "// Itemインスタンスを作成",
         "Item item = new Item();",
+        "// Priceに値を設定",
         "item.Price = 500;",
+        "// Priceを表示",
         "Console.WriteLine(item.Price);"
       ],
-      "lineHints": [
-        "",
-        "get で値を取得できるようにします。",
-        "",
-        "",
-        "",
-        "Price に 500 を設定します。",
-        "Price の値を表示します。"
-      ],
+      "lineHints": [null, "新しいクラス（Item）を定義します。", null, "getで値の取得、setで値の設定ができます。", null, null, null, "newキーワードでインスタンスを作成します。", null, "Priceプロパティに500を設定します。", null, "Priceプロパティの値を表示します。"],
       "candidates": {
         "keywords": ["get"]
       },
@@ -243,19 +225,16 @@ export const csharp2Data = {
       "correctCode": "List<int> nums = new List<int>();\nnums.Add(10);\nnums.Add(20);\nConsole.WriteLine(nums[1]);",
       "holeyCode": "// int型のListを作成\nList<int> nums = new ___<int>();\n// Addで要素を追加\nnums.___(10);\n// 2つ目の要素も追加\nnums.___(20);\n// インデックス1の要素を表示\nConsole.WriteLine(nums[___]);",
       "correctLines": [
+        "// int型のListを作成",
         "List<int> nums = new List<int>();",
         "// Addで要素を追加",
         "nums.Add(10);",
         "// 2つ目の要素も追加",
         "nums.Add(20);",
+        "// インデックス1の要素を表示",
         "Console.WriteLine(nums[1]);"
       ],
-      "lineHints": [
-        "int型のListを作成します。",
-        "Add で要素を追加します。",
-        "",
-        "インデックス1の要素（20）を表示します。"
-      ],
+      "lineHints": [null, "Listで動的な配列を作成します。", null, "Addメソッドで要素を追加します。", null, "Addメソッドで2つ目の要素を追加します。", null, "インデックス1（2番目）の要素20を表示します。"],
       "candidates": {
         "functions": ["Add"]
       },
@@ -287,19 +266,17 @@ export const csharp2Data = {
       "correctCode": "List<int> nums = new List<int> {1, 5, 10, 15, 20};\nvar result = nums.Where(n => n >= 10);\nforeach (var n in result) {\n    Console.WriteLine(n);\n}",
       "holeyCode": "// int型のListを作成\nList<int> nums = new ___<int> {1, 5, 10, 15, 20};\n// Whereで条件に合う要素を抽出\nvar result = nums.___(n => n >= 10);\n// foreachでループ\nforeach (var n ___ result) {\n    // 画面に出力\n    Console.___(n);\n}",
       "correctLines": [
+        "// int型のListを作成",
         "List<int> nums = new List<int> {1, 5, 10, 15, 20};",
+        "// Whereで条件に合う要素を抽出",
         "var result = nums.Where(n => n >= 10);",
+        "// foreachでループ",
         "foreach (var n in result) {",
+        "    // 画面に出力",
         "    Console.WriteLine(n);",
         "}"
       ],
-      "lineHints": [
-        "リストを作成します。",
-        "Where で 10 以上の要素を抽出します。",
-        "結果をループで表示します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "Whereで条件（10以上）に合う要素を抽出します。", null, "inキーワードでコレクションを反復します。", null, "WriteLineで各要素を表示します。", null],
       "candidates": {
         "functions": ["Where"]
       },
@@ -331,19 +308,17 @@ export const csharp2Data = {
       "correctCode": "List<int> nums = new List<int> {1, 2, 3};\nvar squared = nums.Select(n => n * n);\nforeach (var n in squared) {\n    Console.WriteLine(n);\n}",
       "holeyCode": "// int型のListを作成\nList<int> nums = new ___<int> {1, 2, 3};\n// Selectで各要素を変換\nvar squared = nums.___(n => n * n);\n// foreachでループ\nforeach (var n ___ squared) {\n    // 画面に出力\n    Console.___(n);\n}",
       "correctLines": [
+        "// int型のListを作成",
         "List<int> nums = new List<int> {1, 2, 3};",
+        "// Selectで各要素を変換",
         "var squared = nums.Select(n => n * n);",
+        "// foreachでループ",
         "foreach (var n in squared) {",
+        "    // 画面に出力",
         "    Console.WriteLine(n);",
         "}"
       ],
-      "lineHints": [
-        "",
-        "Select で各要素を2乗します。",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "Selectで各要素を2乗に変換します。", null, "inキーワードでコレクションを反復します。", null, "WriteLineで各要素を表示します。", null],
       "candidates": {
         "functions": ["Select"]
       },
@@ -375,13 +350,12 @@ export const csharp2Data = {
       "correctCode": "Func<int, int> triple = x => x * 3;\nConsole.WriteLine(triple(7));",
       "holeyCode": "// =>でラムダ式を定義\nFunc<int, int> triple = x ___ x * 3;\n// tripleを呼び出して表示\nConsole.WriteLine(triple(___));",
       "correctLines": [
+        "// =>でラムダ式を定義",
         "Func<int, int> triple = x => x * 3;",
+        "// tripleを呼び出して表示",
         "Console.WriteLine(triple(7));"
       ],
-      "lineHints": [
-        "=> でラムダ式を定義します。",
-        "triple(7) は 21 を返します。"
-      ],
+      "lineHints": [null, "=>（アロー演算子）でラムダ式を定義します。", null, "triple(7)は7*3=21を返します。"],
       "candidates": {
         "operators": ["=>"]
       },
@@ -413,19 +387,17 @@ export const csharp2Data = {
       "correctCode": "try {\n    throw new Exception(\"oops\");\n} catch (Exception e) {\n    Console.WriteLine(\"caught\");\n}",
       "holeyCode": "// tryで例外処理を開始\n___ {\n    // 例外を投げる\n    throw new ___(\"\");\n// catchで例外を捕捉\n} ___ (Exception e) {\n    // 画面に出力\n    Console.WriteLine(\"___\");\n}",
       "correctLines": [
+        "// tryで例外処理を開始",
         "try {",
-        "    throw new Exception(\"oops\");",
+        "    // 例外を投げる",
+        "    throw new Exception(\"\");",
+        "// catchで例外を捕捉",
         "} catch (Exception e) {",
+        "    // 画面に出力",
         "    Console.WriteLine(\"caught\");",
         "}"
       ],
-      "lineHints": [
-        "try ブロックを開始します。",
-        "例外を投げます。",
-        "catch で例外を捕まえます。",
-        "",
-        ""
-      ],
+      "lineHints": [null, "エラーが発生する可能性のある処理をここから記述します。", null, "Exceptionは例外の型です。", null, "エラー（例外）が発生した場合の処理を記述します。", null, "文字列をコンソールに出力し、改行します。", null],
       "candidates": {
         "keywords": ["try"]
       },
@@ -457,15 +429,14 @@ export const csharp2Data = {
       "correctCode": "string text = \"Hello\";\nint? length = text?.Length;\nConsole.WriteLine(length);",
       "holeyCode": "// 文字列を定義（\"Hello\"）\nstring text = \"___\" ;\n// ?.でnull安全にアクセス\nint? length = text___Length;\n// 画面に出力\nConsole.___(length);",
       "correctLines": [
-        "string text = \"Hello\";",
+        "// 文字列を定義（\"Hello\"）",
+        "string text = \"Hello\" ;",
+        "// ?.でnull安全にアクセス",
         "int? length = text?.Length;",
+        "// 画面に出力",
         "Console.WriteLine(length);"
       ],
-      "lineHints": [
-        "",
-        "?. で安全にアクセスします。",
-        "5 が表示されます。"
-      ],
+      "lineHints": [null, "文字列型の変数を宣言し、文字列データを代入します。", null, "?.でnullの場合もエラーにならず安全にアクセスします。", null, "文字列の長さ5が表示されます。"],
       "candidates": {
         "operators": ["?."]
       },

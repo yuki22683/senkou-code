@@ -32,11 +32,10 @@ export const haskellData = {
       "correctCode": "-- Hello, Haskell!を表示\nmain = putStrLn \"Hello, Haskell!\"",
       "holeyCode": "-- Hello, Haskell!を表示\nmain = putStrLn \"___\"",
       "correctLines": [
+        "-- Hello, Haskell!を表示",
         "main = putStrLn \"Hello, Haskell!\""
       ],
-      "lineHints": [
-        "putStrLn を使って、そのあとの文字を画面に出します。"
-      ],
+      "lineHints": [null, "putStrLn を使って、そのあとの文字を画面に出します。"],
       "candidates": {
         "functions": [
           "putStrLn"
@@ -73,13 +72,12 @@ export const haskellData = {
       "correctCode": "-- 10を入力\nx = 10\n-- xを入力\nmain = print x",
       "holeyCode": "-- 10を入力\nx = ___\n-- xを入力\nmain = print ___",
       "correctLines": [
+        "-- 10を入力",
         "x = 10",
+        "-- xを入力",
         "main = print x"
       ],
-      "lineHints": [
-        "x という名前に 10 をセットします。",
-        "print 関数を使って、中身を表示します。"
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "print 関数を使って、中身を表示します。"],
       "candidates": {
         "variables": [
           "x"
@@ -116,15 +114,14 @@ export const haskellData = {
       "correctCode": "a = 5\nb = 3\n-- +でたし算\nmain = print (a + b)",
       "holeyCode": "-- 5を入力\na = ___\n-- 3を入力\nb = ___\n-- +でたし算\nmain = print (a ___ b)",
       "correctLines": [
+        "-- 5を入力",
         "a = 5",
+        "-- 3を入力",
         "b = 3",
+        "-- +でたし算",
         ["main = print (a + b)", "main = print (b + a)"]
       ],
-      "lineHints": [
-        null,
-        null,
-        "たし算なので `+` を使います。 ( ) で囲むと計算を先にします。"
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "変数に数値を代入（保存）します。", null, "たし算なので `+` を使います。 ( ) で囲むと計算を先にします。", null],
       "candidates": {
         "operators": [
           "+"

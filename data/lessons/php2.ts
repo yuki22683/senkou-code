@@ -28,24 +28,20 @@ export const php2Data = {
       "holeyCode": "<?php\n// classでクラスを定義\n___ Cat {\n    // publicでアクセス修飾子\n    ___ $name;\n}\n// newでインスタンスを作成\n$cat = ___ Cat();\n// ->でプロパティにアクセス\n$cat___name = 'Tama';\n// echoで出力\n___ $cat->name;\n?>",
       "correctLines": [
         "<?php",
+        "// classでクラスを定義",
         "class Cat {",
+        "    // publicでアクセス修飾子",
         "    public $name;",
         "}",
+        "// newでインスタンスを作成",
         "$cat = new Cat();",
+        "// ->でプロパティにアクセス",
         "$cat->name = 'Tama';",
+        "// echoで出力",
         "echo $cat->name;",
         "?>"
       ],
-      "lineHints": [
-        "",
-        "class でクラスを定義します。",
-        "public で外からアクセスできます。",
-        "",
-        "new でインスタンスを作成します。",
-        "-> でプロパティにアクセスします。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, "新しいクラス（Cat）を定義します。", null, "public で外からアクセスできます。", null, null, "new でインスタンスを作成します。", null, "-> でプロパティにアクセスします。", null, null, null],
       "candidates": {
         "keywords": ["class"]
       },
@@ -78,28 +74,23 @@ export const php2Data = {
       "holeyCode": "<?php\n// classでクラスを定義\n___ Counter {\n    // publicでアクセス修飾子\n    ___ $count;\n    // __constructでコンストラクタを定義\n    public function ___($c) {\n        // $thisで自分自身を参照\n        ___->count = $c;\n    }\n}\n// newでインスタンスを作成\n$cnt = ___ Counter(5);\n// echoで出力\n___ $cnt->count;\n?>",
       "correctLines": [
         "<?php",
+        "// classでクラスを定義",
         "class Counter {",
+        "    // publicでアクセス修飾子",
         "    public $count;",
+        "    // __constructでコンストラクタを定義",
         "    public function __construct($c) {",
+        "        // $thisで自分自身を参照",
         "        $this->count = $c;",
         "    }",
         "}",
+        "// newでインスタンスを作成",
         "$cnt = new Counter(5);",
+        "// echoで出力",
         "echo $cnt->count;",
         "?>"
       ],
-      "lineHints": [
-        "",
-        "",
-        "",
-        "__construct でコンストラクタを定義します。",
-        "$this で自分自身を参照します。",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, null, null, null, "__construct でコンストラクタを定義します。", null, "$this で自分自身を参照します。", null, null, null, null, null, null, null],
       "candidates": {
         "functions": ["__construct"]
       },
@@ -132,28 +123,23 @@ export const php2Data = {
       "holeyCode": "<?php\n// classでクラスを定義\n___ Vehicle {\n    // functionで関数を定義\n    public ___ move() {\n        // echoで出力\n        ___ 'moving';\n    }\n}\n// extendsで継承\nclass Car ___ Vehicle { }\n// newでインスタンスを作成\n$car = ___ Car();\n// ->でメソッドを呼び出し\n$car___move();\n?>",
       "correctLines": [
         "<?php",
+        "// classでクラスを定義",
         "class Vehicle {",
+        "    // functionで関数を定義",
         "    public function move() {",
+        "        // echoで出力",
         "        echo 'moving';",
         "    }",
         "}",
+        "// extendsで継承",
         "class Car extends Vehicle { }",
+        "// newでインスタンスを作成",
         "$car = new Car();",
+        "// ->でメソッドを呼び出し",
         "$car->move();",
         "?>"
       ],
-      "lineHints": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "extends で継承します。",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, null, null, null, null, null, null, null, "新しいクラス（Car）を定義します。", null, null, null, null, null],
       "candidates": {
         "keywords": ["extends"]
       },
@@ -186,32 +172,26 @@ export const php2Data = {
       "holeyCode": "<?php\n// interfaceでインターフェースを定義\n___ Runner {\n    // functionでメソッドを宣言\n    public ___ run();\n}\n// implementsでインターフェースを実装\nclass Robot ___ Runner {\n    // functionでメソッドを実装\n    public ___ run() {\n        // echoで出力\n        ___ 'running';\n    }\n}\n// newでインスタンスを作成\n$r = ___ Robot();\n// ->でメソッドを呼び出し\n$r___run();\n?>",
       "correctLines": [
         "<?php",
+        "// interfaceでインターフェースを定義",
         "interface Runner {",
+        "    // functionでメソッドを宣言",
         "    public function run();",
         "}",
+        "// implementsでインターフェースを実装",
         "class Robot implements Runner {",
+        "    // functionでメソッドを実装",
         "    public function run() {",
+        "        // echoで出力",
         "        echo 'running';",
         "    }",
         "}",
+        "// newでインスタンスを作成",
         "$r = new Robot();",
+        "// ->でメソッドを呼び出し",
         "$r->run();",
         "?>"
       ],
-      "lineHints": [
-        "",
-        "interface でインターフェースを定義します。",
-        "",
-        "",
-        "implements で実装します。",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, "interface でインターフェースを定義します。", null, null, null, null, "新しいクラス（Robot）を定義します。", null, null, null, null, null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["interface"]
       },
@@ -244,18 +224,15 @@ export const php2Data = {
       "holeyCode": "<?php\n// 配列を定義（1, 2, 3）\n$nums = [1, 2, ___];\n// array_mapで各要素を変換\n$squared = ___(fn($n) => $n * $n, $nums);\n// print_rで配列を出力\n___ ($squared);\n?>",
       "correctLines": [
         "<?php",
+        "// 配列を定義（1, 2, 3）",
         "$nums = [1, 2, 3];",
+        "// array_mapで各要素を変換",
         "$squared = array_map(fn($n) => $n * $n, $nums);",
+        "// print_rで配列を出力",
         "print_r($squared);",
         "?>"
       ],
-      "lineHints": [
-        "",
-        "",
-        "array_map で各要素を2乗します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, null, "array_map で各要素を2乗します。", null, null, null],
       "candidates": {
         "functions": ["array_map"]
       },
@@ -288,18 +265,15 @@ export const php2Data = {
       "holeyCode": "<?php\n// 配列を定義\n$nums = [1, 2, 3, 4, ___];\n// array_filterで条件に合う要素を抽出\n$result = ___($nums, fn($n) => $n >= 3);\n// print_rで配列を出力\n___($result);\n?>",
       "correctLines": [
         "<?php",
+        "// 配列を定義",
         "$nums = [1, 2, 3, 4, 5];",
+        "// array_filterで条件に合う要素を抽出",
         "$result = array_filter($nums, fn($n) => $n >= 3);",
+        "// print_rで配列を出力",
         "print_r($result);",
         "?>"
       ],
-      "lineHints": [
-        "",
-        "",
-        "array_filter で 3 以上を抽出します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, null, "array_filter で 3 以上を抽出します。", null, null, null],
       "candidates": {
         "functions": ["array_filter"]
       },
@@ -332,16 +306,13 @@ export const php2Data = {
       "holeyCode": "<?php\n// fnでアロー関数を定義\n$triple = ___($n) => $n * 3;\n// echoで出力\n___ $triple(7);\n?>",
       "correctLines": [
         "<?php",
+        "// fnでアロー関数を定義",
         "$triple = fn($n) => $n * 3;",
+        "// echoで出力",
         "echo $triple(7);",
         "?>"
       ],
-      "lineHints": [
-        "",
-        "fn でアロー関数を定義します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, "fn でアロー関数を定義します。", null, null, null],
       "candidates": {
         "keywords": ["fn"]
       },
@@ -374,22 +345,18 @@ export const php2Data = {
       "holeyCode": "<?php\n// tryで例外を発生させる可能性があるコードを囲む\n___ {\n    // throwで例外を投げる\n    ___ new Exception('oops');\n// catchで例外を捕捉\n} ___ (Exception $e) {\n    // echoで出力\n    ___ 'caught';\n}\n?>",
       "correctLines": [
         "<?php",
+        "// tryで例外を発生させる可能性があるコードを囲む",
         "try {",
+        "    // throwで例外を投げる",
         "    throw new Exception('oops');",
+        "// catchで例外を捕捉",
         "} catch (Exception $e) {",
+        "    // echoで出力",
         "    echo 'caught';",
         "}",
         "?>"
       ],
-      "lineHints": [
-        "",
-        "",
-        "throw で例外を投げます。",
-        "catch で例外を捕まえます。",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, null, "throw で例外を投げます。", null, "エラー（例外）が発生した場合の処理を記述します。", null, null, null, null],
       "candidates": {
         "keywords": ["catch"]
       },
@@ -422,28 +389,23 @@ export const php2Data = {
       "holeyCode": "<?php\n// namespaceで名前空間を宣言\n___ App;\n// classでクラスを定義\n___ Hello {\n    // functionでメソッドを定義\n    public ___ say() {\n        // echoで出力\n        ___ 'hello';\n    }\n}\n// newでインスタンスを作成\n$h = ___ Hello();\n// ->でメソッドを呼び出し\n$h___say();\n?>",
       "correctLines": [
         "<?php",
+        "// namespaceで名前空間を宣言",
         "namespace App;",
+        "// classでクラスを定義",
         "class Hello {",
+        "    // functionでメソッドを定義",
         "    public function say() {",
+        "        // echoで出力",
         "        echo 'hello';",
         "    }",
         "}",
+        "// newでインスタンスを作成",
         "$h = new Hello();",
+        "// ->でメソッドを呼び出し",
         "$h->say();",
         "?>"
       ],
-      "lineHints": [
-        "",
-        "namespace で名前空間を宣言します。",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, "namespace で名前空間を宣言します。", null, null, null, null, null, null, null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["namespace"]
       },
@@ -476,16 +438,13 @@ export const php2Data = {
       "holeyCode": "<?php\n// nullを代入\n$value = ___;\n// ??でnullの場合のデフォルト値を指定\necho $value ___ 'default';\n?>",
       "correctLines": [
         "<?php",
+        "// nullを代入",
         "$value = null;",
+        "// ??でnullの場合のデフォルト値を指定",
         "echo $value ?? 'default';",
         "?>"
       ],
-      "lineHints": [
-        "",
-        "",
-        "?? で null の場合のデフォルト値を指定します。",
-        ""
-      ],
+      "lineHints": [null, null, null, null, "変数の内容を展開して表示します。", null],
       "candidates": {
         "operators": ["??"]
       },

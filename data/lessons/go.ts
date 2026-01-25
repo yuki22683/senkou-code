@@ -30,16 +30,11 @@ export const goData = {
         "package main",
         "import \"fmt\"",
         "func main() {",
+        "    // Hello, Go! と表示する",
         "    fmt.Println(\"Hello, Go!\")",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "fmt.Println を使って、() の中の文字を画面に出します。",
-        null
-      ],
+      "lineHints": [null, null, null, null, "フォーマットパッケージを使って文字列を出力します。", null],
       "candidates": {
         "strings": [
           "Hello, Go!"
@@ -76,16 +71,13 @@ export const goData = {
         "package main",
         "import \"fmt\"",
         "func main() {",
+        "    // x に 10 を代入する",
         "    x := 10",
-        "    fmt.Println(x)"
+        "    // x を表示する",
+        "    fmt.Println(x)",
+        "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "x := 10 と入力して、はこを作ります。",
-        "はこの名前 x を指定して、表示させます。"
-      ],
+      "lineHints": [null, null, null, null, "変数を宣言し、同時に数値を代入します（型推論を使用）。", null, "はこの名前 x を指定して、表示させます。", null],
       "candidates": {
         "variables": [
           "x"
@@ -125,18 +117,14 @@ export const goData = {
         "package main",
         "import \"fmt\"",
         "func main() {",
+        "    // はこに数字を入れる",
         "    a := 5",
         "    b := 3",
-        ["    fmt.Println(a + b)", "    fmt.Println(b + a)"]
+        "    // + でたし算する",
+        ["    fmt.Println(a + b)", "    fmt.Println(b + a)"],
+        "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "たし算なので `+` を使います。"
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "たし算なので `+` を使います。", null, null],
       "candidates": {
         "operators": [
           "+"
@@ -173,16 +161,11 @@ export const goData = {
         "package main",
         "import \"fmt\"",
         "func main() {",
+        "    // 10 を 3 で割ったあまりを出力する",
         "    fmt.Println(10 % 3)",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "あまりを求める `%` 演算子を使います。",
-        null
-      ],
+      "lineHints": [null, null, null, null, "あまりを求める `%` 演算子を使います。", null],
       "candidates": {
         "operators": [
           "%",
@@ -223,21 +206,14 @@ export const goData = {
         "import \"fmt\"",
         "func main() {",
         "    hp := 100",
+        "    // += で 20 を足す",
         "    hp += 20",
+        "    // -= で 50 を引く",
         "    hp -= 50",
         "    fmt.Println(hp)",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "`+=` で値を足します。",
-        null,
-        "`-=` で値を引きます。",
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, null],
       "candidates": {
         "operators": [
           "+=",
@@ -277,16 +253,13 @@ export const goData = {
         "package main",
         "import \"fmt\"",
         "func main() {",
+        "    // ageに10を入れる",
         "    age := 10",
-        "    fmt.Printf(\"I am %d years old.\\n\", age)"
+        "    // age を埋め込む",
+        "    fmt.Printf(\"I am %d years old.\\n\", age)",
+        "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "はこの名前 age を指定します。"
-      ],
+      "lineHints": [null, null, null, null, null, null, "フォーマットパッケージを使って文字列を出力します。", null],
       "candidates": {
         "variables": [
           "age"
@@ -324,15 +297,11 @@ export const goData = {
         "import \"fmt\"",
         "func main() {",
         "    nums := []int{10, 20}",
-        "    fmt.Println(nums[1])"
+        "    // インデックス 1 で2番目を取得",
+        "    fmt.Println(nums[1])",
+        "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "2番目のデータの番号は 1 です。 `nums[1]` と入力してください。"
-      ],
+      "lineHints": [null, null, null, null, null, "2番目のデータの番号は 1 です。 `nums[1]` と入力してください。", null],
       "candidates": {
         "numbers": [
           "1"
@@ -369,22 +338,16 @@ export const goData = {
         "package main",
         "import \"fmt\"",
         "func main() {",
+        "    // scoreに100を入れる",
         "    score := 100",
+        "    // > で比較する",
         "    if score > 80 {",
+        "        // Great と表示する",
         "        fmt.Println(\"Great\")",
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "比較するための記号 `>` を入力しましょう。",
-        "Great と表示します。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, "変数を宣言し、同時に数値を代入します（型推論を使用）。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "フォーマットパッケージを使って文字列を出力します。", null, null],
       "candidates": {
         "operators": [
           ">"
@@ -424,26 +387,20 @@ export const goData = {
         "package main",
         "import \"fmt\"",
         "func main() {",
+        "    // xに5を入れる",
         "    x := 5",
+        "    // 10より大きいかを比較する演算子",
         "    if x > 10 {",
+        "        // 10より大きいときのメッセージ（'Big'）",
         "        fmt.Println(\"Big\")",
+        "    // else で「そうでなければ」",
         "    } else {",
+        "        // それ以外のメッセージ（'Small'）",
         "        fmt.Println(\"Small\")",
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "そうでなければ、をあらわす `else` を入力しましょう。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, "変数を宣言し、同時に数値を代入します（型推論を使用）。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "フォーマットパッケージを使って文字列を出力します。", null, "もし条件が満たされなかった場合に実行する処理を記述します。", null, "フォーマットパッケージを使って文字列を出力します。", null, null],
       "candidates": {
         "keywords": [
           "else"
@@ -482,22 +439,13 @@ export const goData = {
         "func main() {",
         "    score := 80",
         "    bonus := 10",
+        "    // && で両方の条件をチェック",
         "    if score >= 70 && bonus > 0 {",
         "        fmt.Println(\"Bonus Pass\")",
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "両方の条件を満たすには `&&` を使います。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, null, null],
       "candidates": {
         "operators": [
           "&&",
@@ -538,21 +486,13 @@ export const goData = {
         "import \"fmt\"",
         "func main() {",
         "    nums := []int{1, 2, 3}",
+        "    // range で全要素をループ",
         "    for _, n := range nums {",
         "        fmt.Println(n)",
         "    }",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "範囲をあらわす `range` を入力しましょう。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "範囲をあらわす `range` を入力しましょう。", null, null, null],
       "candidates": {
         "keywords": [
           "range"
@@ -589,16 +529,13 @@ export const goData = {
         "package main",
         "import \"fmt\"",
         "func main() {",
+        "    // string をキーの型に指定",
         "    scores := map[string]int{\"Math\": 90}",
-        "    fmt.Println(scores[\"Math\"])"
+        "    // 'Math' をキーに指定",
+        "    fmt.Println(scores[\"Math\"])",
+        "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "名前（キー）の種類として `string` と入力しましょう。",
-        "\"Math\" という名前を指定してデータを取り出します。"
-      ],
+      "lineHints": [null, null, null, null, "名前（キー）の種類として `string` と入力しましょう。", null, "\"Math\" という名前を指定してデータを取り出します。", null],
       "candidates": {
         "strings": [
           "string",
@@ -639,18 +576,11 @@ export const goData = {
         "    fmt.Println(\"Hello\")",
         "}",
         "func main() {",
+        "    // greet 関数を呼び出す",
         "    greet()",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "greet という名前の関数を定義します。",
-        null,
-        null,
-        null,
-        "関数名 `greet` を入力して、実行します。"
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "関数（greet）を呼び出して実行します。", null],
       "candidates": {
         "functions": [
           "greet"

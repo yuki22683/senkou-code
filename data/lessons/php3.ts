@@ -27,16 +27,16 @@ export const php3Data = {
       "correctCode": "// functionで無名関数を定義\n$doubler = function($x) {\n    // *で乗算\n    return $x * 2;\n};",
       "holeyCode": "// functionで無名関数を定義\n$doubler = ___($x) {\n    // *で乗算\n    return $x ___ 2;\n};",
       "correctLines": [
-        { "lineNumber": 1, "content": "$doubler = function($x) {" },
-        { "lineNumber": 2, "content": "    return $x * 2;" }
+        "// functionで無名関数を定義",
+        "$doubler = function($x) {",
+        "    // *で乗算",
+        "    return $x * 2;",
+        "};"
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "無名関数を定義するキーワード" },
-        { "lineNumber": 2, "hint": "2倍にする演算子" }
-      ],
+      "lineHints": [null, "無名関数を定義するキーワードです。", null, "2倍にする演算子です。", null],
       "candidates": {
-        "1": ["function", "fn", "lambda", "closure"],
-        "2": ["*", "+", "/", "**"]
+        "keywords": ["function", "fn", "lambda", "closure"],
+        "operators": ["*", "+", "/", "**"]
       },
       "testCases": [
         { "input": "$doubler(5)", "expected_output": "" }
@@ -63,13 +63,13 @@ export const php3Data = {
       "correctCode": "// fnでアロー関数、=>で式を記述\n$cube = fn($x) => $x ** 3;",
       "holeyCode": "// fnでアロー関数、=>で式を記述\n$cube = ___($x) ___ $x ** 3;",
       "correctLines": [
-        { "lineNumber": 1, "content": "$cube = fn($x) => $x ** 3;" }
+        "// fnでアロー関数、=>で式を記述",
+        "$cube = fn($x) => $x ** 3;"
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "アロー関数のキーワードと記号" }
-      ],
+      "lineHints": [null, "アロー関数のキーワードと記号です。"],
       "candidates": {
-        "1": ["fn", "function", "lambda", "->"]
+        "keywords": ["fn", "function", "lambda"],
+        "operators": ["=>", "->"]
       },
       "testCases": [
         { "input": "$cube(3)", "expected_output": "" }
@@ -96,13 +96,15 @@ export const php3Data = {
       "correctCode": "$name = null;\n// ??でNull合体演算子\n$result = $name ?? 'Guest';",
       "holeyCode": "// nullを代入\n$name = ___;\n// ??でNull合体演算子\n$result = $name ___ 'Guest';",
       "correctLines": [
-        { "lineNumber": 2, "content": "$result = $name ?? 'Guest';" }
+        "// nullを代入",
+        "$name = null;",
+        "// ??でNull合体演算子",
+        "$result = $name ?? 'Guest';"
       ],
-      "lineHints": [
-        { "lineNumber": 2, "hint": "Null合体演算子" }
-      ],
+      "lineHints": [null, null, null, "Null合体演算子です。"],
       "candidates": {
-        "2": ["??", "?:", "||", "&&"]
+        "keywords": ["null"],
+        "operators": ["??", "?:", "||", "&&"]
       },
       "testCases": [
         { "input": "$result", "expected_output": "" }
@@ -129,13 +131,12 @@ export const php3Data = {
       "correctCode": "// ...で配列を展開\n$merged = [...[1, 2], ...[3, 4]];",
       "holeyCode": "// ...で配列を展開\n$merged = [___[1, 2], ___[3, 4]];",
       "correctLines": [
-        { "lineNumber": 1, "content": "$merged = [...[1, 2], ...[3, 4]];" }
+        "// ...で配列を展開",
+        "$merged = [...[1, 2], ...[3, 4]];"
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "配列を展開する演算子" }
-      ],
+      "lineHints": [null, "複数の値をまとめて格納する配列（またはリスト）を作成します。"],
       "candidates": {
-        "1": ["...", "**", "&&", "::"]
+        "operators": ["...", "**", "&&", "::"]
       },
       "testCases": [
         { "input": "$merged", "expected_output": "" }
@@ -162,16 +163,23 @@ export const php3Data = {
       "correctCode": "$grade = 'A';\n// matchで式によるパターンマッチ\n$message = match($grade) {\n    'A' => 'Excellent',\n    'B' => 'Good',\n    // defaultでデフォルトケース\n    default => 'Try harder'\n};",
       "holeyCode": "// 変数を定義\n$grade = ___;\n// matchで式によるパターンマッチ\n$message = ___($grade) {\n    // =>で値をマッピング\n    'A' ___ 'Excellent',\n    // =>で値をマッピング\n    'B' ___ 'Good',\n    // defaultでデフォルトケース\n    ___ => 'Try harder'\n};",
       "correctLines": [
-        { "lineNumber": 2, "content": "$message = match($grade) {" },
-        { "lineNumber": 5, "content": "    default => 'Try harder'" }
+        "// 変数を定義",
+        "$grade = 'A';",
+        "// matchで式によるパターンマッチ",
+        "$message = match($grade) {",
+        "    // =>で値をマッピング",
+        "    'A' => 'Excellent',",
+        "    // =>で値をマッピング",
+        "    'B' => 'Good',",
+        "    // defaultでデフォルトケース",
+        "    default => 'Try harder'",
+        "};"
       ],
-      "lineHints": [
-        { "lineNumber": 2, "hint": "switchの代替となる式" },
-        { "lineNumber": 5, "hint": "デフォルトケースのキーワード" }
-      ],
+      "lineHints": [null, null, null, "switchの代替となる式です。", null, "値をマッピングする演算子です。", null, "値をマッピングする演算子です。", null, "デフォルトケースのキーワードです。", null],
       "candidates": {
-        "2": ["match", "switch", "case", "when"],
-        "5": ["default", "else", "other", "_"]
+        "keywords": ["match", "switch", "case", "when", "default", "else"],
+        "strings": ["A"],
+        "operators": ["=>"]
       },
       "testCases": [
         { "input": "$message", "expected_output": "Excellent" }
@@ -198,13 +206,18 @@ export const php3Data = {
       "correctCode": "function createUser($name, $age) {\n    return ['name' => $name, 'age' => $age];\n}\n// ageとnameで名前付き引数を指定\n$user = createUser(age: 30, name: 'Alice');",
       "holeyCode": "// functionで関数を定義\n___ createUser($name, $age) {\n    // returnで連想配列を返す\n    ___ ['name' => $name, 'age' => $age];\n}\n// age, nameの順で名前付き引数を指定\n$user = createUser(___: 30, ___: 'Alice');",
       "correctLines": [
-        { "lineNumber": 4, "content": "$user = createUser(age: 30, name: 'Alice');" }
+        "// functionで関数を定義",
+        "function createUser($name, $age) {",
+        "    // returnで連想配列を返す",
+        "    return ['name' => $name, 'age' => $age];",
+        "}",
+        "// age, nameの順で名前付き引数を指定",
+        "$user = createUser(age: 30, name: 'Alice');"
       ],
-      "lineHints": [
-        { "lineNumber": 4, "hint": "年齢と名前の引数名" }
-      ],
+      "lineHints": [null, null, null, null, null, null, "年齢と名前の引数名を指定します。"],
       "candidates": {
-        "4": ["age", "name", "user", "value"]
+        "keywords": ["function", "return"],
+        "variables": ["age", "name", "user", "value"]
       },
       "testCases": [
         { "input": "$user['name']", "expected_output": "" }
@@ -231,16 +244,23 @@ export const php3Data = {
       "correctCode": "// traitでトレイトを定義\ntrait HelloTrait {\n    public function sayHello() {\n        return 'Hello!';\n    }\n}\n\nclass Greeter {\n    // useでトレイトを使用\n    use HelloTrait;\n}",
       "holeyCode": "// traitでトレイトを定義\n___ HelloTrait {\n    // functionでメソッドを定義\n    public ___ sayHello() {\n        // returnで値を返す\n        ___ 'Hello!';\n    }\n}\n// classでクラスを定義\n___ Greeter {\n    // useでトレイトを使用\n    ___ HelloTrait;\n}",
       "correctLines": [
-        { "lineNumber": 1, "content": "trait HelloTrait {" },
-        { "lineNumber": 8, "content": "    use HelloTrait;" }
+        "// traitでトレイトを定義",
+        "trait HelloTrait {",
+        "    // functionでメソッドを定義",
+        "    public function sayHello() {",
+        "        // returnで値を返す",
+        "        return 'Hello!';",
+        "    }",
+        "}",
+        "// classでクラスを定義",
+        "class Greeter {",
+        "    // useでトレイトを使用",
+        "    use HelloTrait;",
+        "}"
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "トレイトを定義するキーワード" },
-        { "lineNumber": 8, "hint": "トレイトを使用するキーワード" }
-      ],
+      "lineHints": [null, "トレイトを定義するキーワードです。", null, null, null, null, null, null, null, null, null, "トレイトを使用するキーワードです。", null],
       "candidates": {
-        "1": ["trait", "interface", "abstract", "mixin"],
-        "8": ["use", "include", "import", "extend"]
+        "keywords": ["trait", "interface", "abstract", "mixin", "use", "include", "import", "extend", "class", "function", "return"]
       },
       "testCases": [
         { "input": "(new Greeter())->sayHello()", "expected_output": "" }
@@ -267,13 +287,18 @@ export const php3Data = {
       "correctCode": "function rangeGen($n) {\n    for ($i = 1; $i <= $n; $i++) {\n        // yieldで値を一つずつ返す\n        yield $i;\n    }\n}",
       "holeyCode": "// functionで関数を定義\n___ rangeGen($n) {\n    // forでループ\n    ___ ($i = 1; $i <= $n; $i++) {\n        // yieldで値を一つずつ返す\n        ___ $i;\n    }\n}",
       "correctLines": [
-        { "lineNumber": 3, "content": "        yield $i;" }
+        "// functionで関数を定義",
+        "function rangeGen($n) {",
+        "    // forでループ",
+        "    for ($i = 1; $i <= $n; $i++) {",
+        "        // yieldで値を一つずつ返す",
+        "        yield $i;",
+        "    }",
+        "}"
       ],
-      "lineHints": [
-        { "lineNumber": 3, "hint": "値を一つずつ返すキーワード" }
-      ],
+      "lineHints": [null, null, null, null, null, "値を一つずつ返すキーワードです。", null, null],
       "candidates": {
-        "3": ["yield", "return", "emit", "output"]
+        "keywords": ["function", "for", "yield", "return", "emit", "output"]
       },
       "testCases": [
         { "input": "iterator_to_array(rangeGen(5))", "expected_output": "" }
@@ -300,13 +325,12 @@ export const php3Data = {
       "correctCode": "// name、age、cityに分割代入\n[$name, $age, $city] = ['Alice', 25, 'Tokyo'];",
       "holeyCode": "// name、age、cityの順に分割代入\n[$___, $___, $___] = ['Alice', 25, 'Tokyo'];",
       "correctLines": [
-        { "lineNumber": 1, "content": "[$name, $age, $city] = ['Alice', 25, 'Tokyo'];" }
+        "// name、age、cityに分割代入",
+        "[$name, $age, $city] = ['Alice', 25, 'Tokyo'];"
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "名前、年齢、都市の変数名" }
-      ],
+      "lineHints": [null, "名前、年齢、都市の変数名です。"],
       "candidates": {
-        "1": ["name", "age", "city", "value"]
+        "variables": ["name", "age", "city", "value"]
       },
       "testCases": [
         { "input": "$name", "expected_output": "Alice" },
@@ -334,16 +358,20 @@ export const php3Data = {
       "correctCode": "class Person {\n    public function __construct(\n        // publicでアクセス修飾子\n        public string $name,\n        // publicでアクセス修飾子\n        public int $age\n    ) {}\n}",
       "holeyCode": "// classでクラスを定義\n___ Person {\n    // __constructでコンストラクタを定義\n    public function ___(\n        // publicでアクセス修飾子\n        ___ string $name,\n        // publicでアクセス修飾子\n        ___ int $age\n    ) {}\n}",
       "correctLines": [
-        { "lineNumber": 3, "content": "        public string $name," },
-        { "lineNumber": 4, "content": "        public int $age" }
+        "// classでクラスを定義",
+        "class Person {",
+        "    // __constructでコンストラクタを定義",
+        "    public function __construct(",
+        "        // publicでアクセス修飾子",
+        "        public string $name,",
+        "        // publicでアクセス修飾子",
+        "        public int $age",
+        "    ) {}",
+        "}"
       ],
-      "lineHints": [
-        { "lineNumber": 3, "hint": "アクセス修飾子" },
-        { "lineNumber": 4, "hint": "同じアクセス修飾子" }
-      ],
+      "lineHints": [null, null, null, null, null, "アクセス修飾子です。", null, "同じアクセス修飾子です。", null, null],
       "candidates": {
-        "3": ["public", "private", "protected", "readonly"],
-        "4": ["public", "private", "protected", "readonly"]
+        "keywords": ["class", "__construct", "public", "private", "protected", "readonly", "function"]
       },
       "testCases": [
         { "input": "(new Person('Alice', 30))->name", "expected_output": "Alice" }

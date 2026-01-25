@@ -32,10 +32,7 @@ export const javascriptData = {
         "// 画面に「Hello, JavaScript!」と出す関数",
         "console.log('Hello, JavaScript!');"
       ],
-      "lineHints": [
-        "コメントです。プログラムのメモとして使います。",
-        "console.log を使います。さいごの ; （セミコロン）を忘れないでください！"
-      ],
+      "lineHints": ["コメントです。プログラムのメモとして使います。", "デバッグ用コンソールなどに文字列を出力します。"],
       "candidates": {
         "functions": [
           "console.log"
@@ -77,12 +74,7 @@ export const javascriptData = {
         "// はこの中身を出す",
         "console.log(name);"
       ],
-      "lineHints": [
-        "null",
-        "const name = 'JavaScript'; と入力します。イコールで中身をしまってください！",
-        "null",
-        "console.log の中に、はこの名前 name を入力してください。"
-      ],
+      "lineHints": [null, "定数を宣言し、文字列を代入します。", null, "console.log の中に、はこの名前 name を入力してください。"],
       "candidates": {
         "variables": [
           "name"
@@ -129,14 +121,7 @@ export const javascriptData = {
         "// x + y を表示する",
         ["console.log(x + y);", "console.log(y + x);"]
       ],
-      "lineHints": [
-        "null",
-        "const x = 10; と入力しましょう。",
-        "null",
-        "const y = 5; と入力しましょう。",
-        "null",
-        "たし算なので `+` を使います。 `console.log(x + y)` と入力してください。"
-      ],
+      "lineHints": [null, "定数を宣言し、数値を代入します。", null, "定数を宣言し、数値を代入します。", null, "たし算なので `+` を使います。 `console.log(x + y)` と入力してください。", null],
       "candidates": {
         "variables": [
           "x",
@@ -186,12 +171,7 @@ export const javascriptData = {
         "// 文章の中に age の中身を入れる",
         "console.log(`私は${age}歳です`);"
       ],
-      "lineHints": [
-        "null",
-        "const age = 10; と入力しましょう。",
-        "null",
-        "${ } のなかに、はこの名前 age を入力しましょう。"
-      ],
+      "lineHints": [null, "定数を宣言し、数値を代入します。", null, "デバッグ用コンソールなどに文字列を出力します。"],
       "candidates": {
         "variables": [
           "age"
@@ -236,12 +216,7 @@ export const javascriptData = {
         "// 2番目のデータ（1番）を出す",
         "console.log(colors[1]);"
       ],
-      "lineHints": [
-        "null",
-        "['あか', 'あお'] と入力しましょう。",
-        "null",
-        "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"
-      ],
+      "lineHints": [null, "['あか', 'あお'] と入力しましょう。", null, "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"],
       "candidates": {
         "variables": [
           "colors"
@@ -293,15 +268,7 @@ export const javascriptData = {
         "    console.log('ごうかく！');",
         "}"
       ],
-      "lineHints": [
-        "null",
-        "const score = 100; と入力しましょう。",
-        "null",
-        "比較するための記号 `>` を使います。",
-        "null",
-        "console.log('ごうかく！'); と入力しましょう。",
-        "さいごに } で閉じるのを忘れないでください。"
-      ],
+      "lineHints": [null, "定数を宣言し、数値を代入します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "デバッグ用コンソールなどに文字列を出力します。", null],
       "candidates": {
         "variables": [
           "score"
@@ -349,26 +316,17 @@ export const javascriptData = {
       "correctLines": [
         "// age に 10 を入れる",
         "const age = 10;",
-        "// 20さい以上かどうかで分ける",
+        "// 20以上かを比較する演算子",
         "if (age >= 20) {",
+        "    // 20歳以上のときのメッセージ（'おとな'）",
         "    console.log('おとな');",
         "// 「そうでなければ」を表すキーワード",
         "} else {",
-        "    // それ以外の場合",
+        "    // それ以外の場合（'こども'）",
         "    console.log('こども');",
         "}"
       ],
-      "lineHints": [
-        "null",
-        "const age = 10; と入力しましょう。",
-        "null",
-        "null",
-        "null",
-        "} else { と入力しましょう。",
-        "null",
-        "console.log('こども'); と入力しましょう。",
-        "null"
-      ],
+      "lineHints": [null, "定数を宣言し、数値を代入します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "デバッグ用コンソールなどに文字列を出力します。", null, "もし条件が満たされなかった場合に実行する処理を記述します。", null, "デバッグ用コンソールなどに文字列を出力します。", null],
       "candidates": {
         "variables": [
           "age"
@@ -422,14 +380,7 @@ export const javascriptData = {
         "    console.log(name);",
         "}"
       ],
-      "lineHints": [
-        "null",
-        "['たろう', 'はなこ'] という配列を作ります。",
-        "null",
-        "for (const name of names) { と入力します。",
-        "取り出した名前（name）を console.log で出力します。",
-        "さいごに } で閉じます。"
-      ],
+      "lineHints": [null, "['たろう', 'はなこ'] という配列を作ります。", null, "指定された回数や範囲で、繰り返し処理（ループ）を行います。", null, "取り出した名前（name）を console.log で出力します。", null],
       "candidates": {
         "variables": [
           "name",
@@ -472,12 +423,7 @@ export const javascriptData = {
         "// 名前の中身を出す",
         "console.log(user.name);"
       ],
-      "lineHints": [
-        "null",
-        "{ name: 'たろう' } と入力しましょう。",
-        "null",
-        "はこ（user）のあとに `.name` をつけてデータを取り出すことができます。"
-      ],
+      "lineHints": [null, "{ name: 'たろう' } と入力しましょう。", null, "はこ（user）のあとに `.name` をつけてデータを取り出すことができます。"],
       "candidates": {
         "variables": [
           "user"
@@ -526,14 +472,7 @@ export const javascriptData = {
         "// 関数を動かす",
         "greet();"
       ],
-      "lineHints": [
-        "null",
-        "function greet() { と入力して、関数を定義します。",
-        "console.log('こんにちは'); と入力しましょう。",
-        "さいごに } で閉じます。",
-        "null",
-        "greet(); と入力して、関数を実行します。"
-      ],
+      "lineHints": [null, "function greet() { と入力して、関数を定義します。", null, "デバッグ用コンソールなどに文字列を出力します。", null, null, "関数（greet）を呼び出して実行します。"],
       "candidates": {
         "functions": [
           "greet",

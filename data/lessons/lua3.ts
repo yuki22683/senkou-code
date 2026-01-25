@@ -25,23 +25,19 @@ export const lua3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- pcallでエラーを捕捉\nlocal ok, result = pcall(function()\n    return 10 + 5\nend)\nif ok then\n    print(result)\nend",
-      "holeyCode": "-- pcallでエラーを捕捉\nlocal ok, result = ___(function()\n    return 10 + 5\nend)\nif ___ then\n    print(___)\nend",
+      "holeyCode": "-- pcallでエラーを捕捉\nlocal ok, result = ___(function()\n    return 10 + 5\nend)\n-- 成功したら出力\nif ___ then\n    -- 結果を出力\n    print(___)\nend",
       "correctLines": [
+        "-- pcallでエラーを捕捉",
         "local ok, result = pcall(function()",
         "    return 10 + 5",
         "end)",
+        "-- 成功したら出力",
         "if ok then",
+        "    -- 結果を出力",
         "    print(result)",
         "end"
       ],
-      "lineHints": [
-        "pcall でエラーを捕捉します。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "pcall でエラーを捕捉します。", null, null, null, "ok と入力しましょう。", null, "変数の内容を画面に出力します。", null],
       "candidates": {
         "functions": ["pcall", "xpcall", "call", "try"]
       },
@@ -74,16 +70,12 @@ export const lua3Data = {
       "holeyCode": "local ok, msg = pcall(function()\n    -- errorでエラーを発生\n    ___(\"test error\")\nend)\nprint(msg:match(\"test error\") and \"caught\" or \"not caught\")",
       "correctLines": [
         "local ok, msg = pcall(function()",
+        "    -- errorでエラーを発生",
         "    error(\"test error\")",
         "end)",
         "print(msg:match(\"test error\") and \"caught\" or \"not caught\")"
       ],
-      "lineHints": [
-        null,
-        "error でエラーを発生させます。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, "error でエラーを発生させます。", null, null],
       "candidates": {
         "functions": ["error", "throw", "raise", "fail"]
       },
@@ -115,13 +107,11 @@ export const lua3Data = {
       "correctCode": "-- assertで検証\nlocal value = assert(10 > 5, \"should be true\")\nprint(value and \"pass\" or \"fail\")",
       "holeyCode": "-- assertで検証\nlocal value = ___(10 > 5, \"should be true\")\nprint(value and \"pass\" or \"fail\")",
       "correctLines": [
+        "-- assertで検証",
         "local value = assert(10 > 5, \"should be true\")",
         "print(value and \"pass\" or \"fail\")"
       ],
-      "lineHints": [
-        "assert で検証します。",
-        null
-      ],
+      "lineHints": [null, "assert で検証します。", null],
       "candidates": {
         "functions": ["assert", "check", "verify", "validate"]
       },
@@ -151,15 +141,14 @@ export const lua3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- typeで型を確認\nlocal t = {}\nprint(type(t))",
-      "holeyCode": "-- typeで型を確認\nlocal t = {}\nprint(___(t))",
+      "holeyCode": "-- typeで型を確認\nlocal t = {}\n-- 型を出力\nprint(___(t))",
       "correctLines": [
+        "-- typeで型を確認",
         "local t = {}",
+        "-- 型を出力",
         "print(type(t))"
       ],
-      "lineHints": [
-        null,
-        "type で型を確認します。"
-      ],
+      "lineHints": [null, null, null, "type で型を確認します。"],
       "candidates": {
         "functions": ["type", "typeof", "kind", "class"]
       },
@@ -189,15 +178,14 @@ export const lua3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- tostringで文字列に変換\nlocal n = 100\nprint(\"Value: \" .. tostring(n))",
-      "holeyCode": "-- tostringで文字列に変換\nlocal n = 100\nprint(\"Value: \" .. ___(n))",
+      "holeyCode": "-- tostringで文字列に変換\nlocal n = 100\n-- 文字列に変換して連結\nprint(\"Value: \" .. ___(n))",
       "correctLines": [
+        "-- tostringで文字列に変換",
         "local n = 100",
+        "-- 文字列に変換して連結",
         "print(\"Value: \" .. tostring(n))"
       ],
-      "lineHints": [
-        null,
-        "tostring で文字列に変換します。"
-      ],
+      "lineHints": [null, null, null, "tostring で文字列に変換します。"],
       "candidates": {
         "functions": ["tostring", "string", "str", "toString"]
       },
@@ -227,17 +215,15 @@ export const lua3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- tonumberで数値に変換\nlocal s = \"50\"\nlocal n = tonumber(s)\nprint(n + 10)",
-      "holeyCode": "-- tonumberで数値に変換\nlocal s = \"50\"\nlocal n = ___(s)\nprint(n + 10)",
+      "holeyCode": "-- tonumberで数値に変換\nlocal s = \"50\"\n-- 数値に変換\nlocal n = ___(s)\nprint(n + 10)",
       "correctLines": [
+        "-- tonumberで数値に変換",
         "local s = \"50\"",
+        "-- 数値に変換",
         "local n = tonumber(s)",
         "print(n + 10)"
       ],
-      "lineHints": [
-        null,
-        "tonumber で数値に変換します。",
-        null
-      ],
+      "lineHints": [null, null, null, "tonumber で数値に変換します。", null],
       "candidates": {
         "functions": ["tonumber", "number", "int", "toNumber"]
       },
@@ -267,17 +253,15 @@ export const lua3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- ..で文字列を連結\nlocal a = \"Lua\"\nlocal b = \"Script\"\nprint(a .. b)",
-      "holeyCode": "-- ..で文字列を連結\nlocal a = \"Lua\"\nlocal b = \"Script\"\nprint(a ___ b)",
+      "holeyCode": "-- ..で文字列を連結\nlocal a = \"Lua\"\nlocal b = \"Script\"\n-- 連結して出力\nprint(a ___ b)",
       "correctLines": [
+        "-- ..で文字列を連結",
         "local a = \"Lua\"",
         "local b = \"Script\"",
+        "-- 連結して出力",
         "print(a .. b)"
       ],
-      "lineHints": [
-        null,
-        null,
-        ".. で連結します。"
-      ],
+      "lineHints": [null, null, null, null, ".. で連結します。"],
       "candidates": {
         "operators": ["..", "+", "&", "||"]
       },
@@ -307,15 +291,14 @@ export const lua3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- #で長さを取得\nlocal s = \"Lua\"\nprint(#s)",
-      "holeyCode": "-- #で長さを取得\nlocal s = \"Lua\"\nprint(___s)",
+      "holeyCode": "-- #で長さを取得\nlocal s = \"Lua\"\n-- 長さを出力\nprint(___s)",
       "correctLines": [
+        "-- #で長さを取得",
         "local s = \"Lua\"",
+        "-- 長さを出力",
         "print(#s)"
       ],
-      "lineHints": [
-        null,
-        "# で長さを取得します。"
-      ],
+      "lineHints": [null, null, null, "# で長さを取得します。"],
       "candidates": {
         "operators": ["#", "$", "@", "&"]
       },
@@ -345,17 +328,15 @@ export const lua3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- and/orで条件分岐\nlocal age = 20\nlocal status = age >= 18 and \"adult\" or \"child\"\nprint(status)",
-      "holeyCode": "-- and/orで条件分岐\nlocal age = 20\nlocal status = age >= 18 ___ \"adult\" ___ \"child\"\nprint(status)",
+      "holeyCode": "-- and/orで条件分岐\nlocal age = 20\n-- 条件に応じて値を決める\nlocal status = age >= 18 ___ \"adult\" ___ \"child\"\nprint(status)",
       "correctLines": [
+        "-- and/orで条件分岐",
         "local age = 20",
+        "-- 条件に応じて値を決める",
         "local status = age >= 18 and \"adult\" or \"child\"",
         "print(status)"
       ],
-      "lineHints": [
-        null,
-        "and と or を使います。",
-        null
-      ],
+      "lineHints": [null, null, null, "and と or を使います。", null],
       "candidates": {
         "keywords": ["and", "or", "if", "then"]
       },
@@ -385,19 +366,16 @@ export const lua3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "-- breakでループを抜ける\nfor i = 1, 10 do\n    if i > 3 then break end\n    print(i)\nend",
-      "holeyCode": "-- breakでループを抜ける\nfor i = 1, 10 do\n    if i > 3 then ___ end\n    print(i)\nend",
+      "holeyCode": "-- breakでループを抜ける\nfor i = 1, 10 do\n    -- 3を超えたらループを抜ける\n    if i > 3 then ___ end\n    print(i)\nend",
       "correctLines": [
+        "-- breakでループを抜ける",
         "for i = 1, 10 do",
+        "    -- 3を超えたらループを抜ける",
         "    if i > 3 then break end",
         "    print(i)",
         "end"
       ],
-      "lineHints": [
-        null,
-        "break でループを抜けます。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, null],
       "candidates": {
         "keywords": ["break", "continue", "return", "exit"]
       },

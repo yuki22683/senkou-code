@@ -29,19 +29,14 @@ export const javascriptData3 = {
       "correctLines": [
         "// Promise コンストラクタで作成",
         "const p = new Promise((resolve) => {",
+        "  // 'Hello Promise!' で解決",
         "  resolve('Hello Promise!');",
         "});",
         "",
+        "// then でコールバックを登録",
         "p.then(msg => console.log(msg));"
       ],
-      "lineHints": [
-        null,
-        "Promise コンストラクタを使います。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "Promise コンストラクタを使います。", null, "resolve で Promise を解決します。", null, null, null, "then でコールバックを登録します。"],
       "candidates": {
         "keywords": ["Promise", "Function", "Object"]
       },
@@ -75,13 +70,10 @@ export const javascriptData3 = {
       "correctLines": [
         "// resolve で即座に解決するPromise",
         "Promise.resolve(42)",
+        "  // then で結果を処理",
         "  .then(n => console.log(n * 2));"
       ],
-      "lineHints": [
-        null,
-        "resolve で即座に解決します。",
-        null
-      ],
+      "lineHints": [null, "resolve で即座に解決します。", null, "then でコールバックを登録します。"],
       "candidates": {
         "methods": ["resolve", "reject", "all"]
       },
@@ -115,19 +107,14 @@ export const javascriptData3 = {
       "correctLines": [
         "// async キーワードで非同期関数を定義",
         "async function getMessage() {",
+        "  // return で値を返す",
         "  return 'Async works!';",
         "}",
         "",
+        "// then でメッセージを出力",
         "getMessage().then(msg => console.log(msg));"
       ],
-      "lineHints": [
-        null,
-        "async キーワードで非同期関数にします。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "async キーワードで非同期関数にします。", null, "return で値を返します。", null, null, null, "then でコールバックを登録します。"],
       "candidates": {
         "keywords": ["async", "await", "function"]
       },
@@ -160,24 +147,18 @@ export const javascriptData3 = {
       "holeyCode": "// awaitでPromiseを待つ\n// async で非同期関数を宣言\n___ function main() {\n  // await でPromiseの結果を待つ\n  const value = ___ Promise.resolve(100);\n  // console.log で出力\n  console.___(value);\n}\n\n// main() で関数を呼び出す\n___();",
       "correctLines": [
         "// awaitでPromiseを待つ",
+        "// async で非同期関数を宣言",
         "async function main() {",
         "  // await でPromiseの結果を待つ",
         "  const value = await Promise.resolve(100);",
+        "  // console.log で出力",
         "  console.log(value);",
         "}",
         "",
+        "// main() で関数を呼び出す",
         "main();"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "await でPromiseの結果を待ちます。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, "async キーワードで非同期関数にします。", null, "await でPromiseの結果を待ちます。", null, "console.log で出力します。", null, null, null, "関数（main）を呼び出して実行します。"],
       "candidates": {
         "keywords": ["await", "async", "return"]
       },
@@ -207,25 +188,19 @@ export const javascriptData3 = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "// p1 = 10, p2 = 20 で解決し、複数のPromiseを同時に実行\nconst p1 = Promise.resolve(10);\nconst p2 = Promise.resolve(20);\n// all で全てのPromiseを待つ\nPromise.all([p1, p2]).then(nums => {\n  // nums[0] + nums[1] で合計を計算\n  console.log(nums[0] + nums[1]);\n});",
-      "holeyCode": "// p1 = 10, p2 = 20 で解決し、複数のPromiseを同時に実行\nconst p1 = Promise.___(10);\nconst p2 = Promise.___(20);\n// all で全てのPromiseを待つ\nPromise.___([p1, p2]).then(nums => {\n  // nums[0] + nums[1] で合計を計算\n  console.log(nums[___] + nums[1]);\n});",
+      "holeyCode": "// p1 = 10 で解決するPromiseを作成\nconst p1 = Promise.___(10);\n// p2 = 20 で解決するPromiseを作成\nconst p2 = Promise.___(20);\n// all で全てのPromiseを待つ\nPromise.___([p1, p2]).then(nums => {\n  // nums[0] + nums[1] で合計を計算\n  console.log(nums[___] + nums[1]);\n});",
       "correctLines": [
-        "// 複数のPromiseを同時に実行",
+        "// p1 = 10 で解決するPromiseを作成",
         "const p1 = Promise.resolve(10);",
+        "// p2 = 20 で解決するPromiseを作成",
         "const p2 = Promise.resolve(20);",
         "// all で全てのPromiseを待つ",
         "Promise.all([p1, p2]).then(nums => {",
+        "  // nums[0] + nums[1] で合計を計算",
         "  console.log(nums[0] + nums[1]);",
         "});"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "all で全てのPromiseを待ちます。",
-        null,
-        null
-      ],
+      "lineHints": [null, "resolve で即座に解決するPromiseを作ります。", null, "resolve で即座に解決するPromiseを作ります。", null, "all で全てのPromiseを待ちます。", null, "0番目の要素にアクセスします。", null],
       "candidates": {
         "methods": ["all", "race", "resolve"]
       },
@@ -259,31 +234,23 @@ export const javascriptData3 = {
       "correctLines": [
         "// class キーワードでクラスを定義",
         "class Dog {",
+        "  // constructor でインスタンスを初期化",
         "  constructor(name) {",
+        "    // this.name にnameを代入",
         "    this.name = name;",
         "  }",
         "  bark() {",
+        "    // テンプレートリテラルで出力",
         "    console.log(`${this.name}: Woof!`);",
         "  }",
         "}",
         "",
+        "// new でインスタンスを作成",
         "const dog = new Dog('Pochi');",
+        "// bark() メソッドを呼び出し",
         "dog.bark();"
       ],
-      "lineHints": [
-        null,
-        "class キーワードでクラスを定義します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "新しいクラス（Dog）を定義します。", null, "constructor でインスタンスを初期化します。", null, "this.name に名前を代入します。", null, null, null, "デバッグ用コンソールなどに文字列を出力します。", null, null, null, null, "new でインスタンスを作成します。", null, "bark メソッドを呼び出します。"],
       "candidates": {
         "keywords": ["class", "function", "const"]
       },
@@ -316,32 +283,24 @@ export const javascriptData3 = {
       "holeyCode": "// 親クラス\n// class でクラスを定義\n___ Animal {\n  // speak メソッドを定義\n  ___() { console.log('...'); }\n}\n\n// extends で親クラスを継承する\nclass Cat ___ Animal {\n  // speak メソッドをオーバーライド\n  speak() { console.log('___'); }\n}\n\n// new でインスタンスを作成\nconst cat = ___ Cat();\n// speak() を呼び出し\ncat.___();",
       "correctLines": [
         "// 親クラス",
+        "// class でクラスを定義",
         "class Animal {",
+        "  // speak メソッドを定義",
         "  speak() { console.log('...'); }",
         "}",
         "",
         "// extends で親クラスを継承する",
         "class Cat extends Animal {",
+        "  // speak メソッドをオーバーライド",
         "  speak() { console.log('Meow!'); }",
         "}",
         "",
+        "// new でインスタンスを作成",
         "const cat = new Cat();",
+        "// speak() を呼び出し",
         "cat.speak();"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "extends で継承します。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, "新しいクラス（Animal）を定義します。", null, "デバッグ用コンソールなどに文字列を出力します。", null, null, null, "新しいクラス（Cat）を定義します。", null, "デバッグ用コンソールなどに文字列を出力します。", null, null, null, "new でインスタンスを作成します。", null, "speak メソッドを呼び出します。"],
       "candidates": {
         "keywords": ["extends", "implements", "with"]
       },
@@ -374,26 +333,19 @@ export const javascriptData3 = {
       "holeyCode": "// 静的メソッドを持つクラス\n// class でクラスを定義\n___ Calculator {\n  // static でクラスメソッドを定義\n  ___ multiply(a, b) {\n    // return で戻り値\n    ___ a * b;\n  }\n}\n\n// クラス名.メソッド名() で静的メソッドを呼び出し\nconsole.log(___.multiply(3, 4));",
       "correctLines": [
         "// 静的メソッドを持つクラス",
+        "// class でクラスを定義",
         "class Calculator {",
         "  // static でクラスメソッドを定義",
         "  static multiply(a, b) {",
+        "    // return で戻り値",
         "    return a * b;",
         "  }",
         "}",
         "",
+        "// クラス名.メソッド名() で静的メソッドを呼び出し",
         "console.log(Calculator.multiply(3, 4));"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "static でクラスメソッドにします。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, "新しいクラス（Calculator）を定義します。", null, "static でクラスメソッドにします。", null, "return で戻り値を返します。", null, null, null, null, "Calculator.multiply で静的メソッドを呼び出します。"],
       "candidates": {
         "keywords": ["static", "public", "private"]
       },
@@ -425,19 +377,14 @@ export const javascriptData3 = {
       "correctCode": "// user: { name: 'Bob' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス\nconst data = { user: { name: 'Bob' } };\n// ?. で安全にプロパティにアクセス\nconsole.log(data?.user?.name);\n// 存在しないプロパティにアクセス\nconsole.log(data?.profile?.age);",
       "holeyCode": "// user: { name: 'Bob' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス\nconst data = { user: { name: '___' } };\n// ?. で安全にプロパティにアクセス\nconsole.log(data___user___name);\n// 存在しないプロパティにアクセス\nconsole.log(data___profile?.age);",
       "correctLines": [
-        "// Optional Chainingで安全にアクセス",
+        "// user: { name: 'Bob' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス",
         "const data = { user: { name: 'Bob' } };",
         "// ?. で安全にプロパティにアクセス",
         "console.log(data?.user?.name);",
+        "// 存在しないプロパティにアクセス",
         "console.log(data?.profile?.age);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "?. で安全にアクセスします。",
-        null
-      ],
+      "lineHints": [null, "{ user: { name: 'Bob' } } のオブジェクトを作ります。", null, "?. で安全にアクセスします。", null, "?. で安全にアクセスします。"],
       "candidates": {
         "operators": ["?.", ".", "?."]
       },
@@ -469,19 +416,14 @@ export const javascriptData3 = {
       "correctCode": "// undefined を代入し、Nullish Coalescingでデフォルト値\nconst value = undefined;\n// ?? でnull/undefinedのデフォルト値を設定\nconst result = value ?? 'default';\n// console.log で結果を出力\nconsole.log(result);",
       "holeyCode": "// undefined を代入し、Nullish Coalescingでデフォルト値\nconst value = ___;\n// ?? でnull/undefinedのデフォルト値を設定\nconst result = value ___ 'default';\n// console.log で結果を出力\nconsole.___(result);",
       "correctLines": [
-        "// Nullish Coalescingでデフォルト値",
+        "// undefined を代入し、Nullish Coalescingでデフォルト値",
         "const value = undefined;",
         "// ?? でnull/undefinedのデフォルト値を設定",
         "const result = value ?? 'default';",
+        "// console.log で結果を出力",
         "console.log(result);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "?? で null/undefined のデフォルト値を設定します。",
-        null
-      ],
+      "lineHints": [null, "undefined を代入します。", null, "?? で null/undefined のデフォルト値を設定します。", null, "console.log で出力します。"],
       "candidates": {
         "operators": ["??", "||", "&&"]
       },

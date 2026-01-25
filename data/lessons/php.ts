@@ -28,14 +28,11 @@ export const phpData = {
       "holeyCode": "<?php\n  // 画面にメッセージを出す関数\n  echo \"___\";\n?>",
       "correctLines": [
         "<?php",
+        "  // 画面にメッセージを出す関数",
         "  echo \"Hello, PHP!\";",
         "?>"
       ],
-      "lineHints": [
-        "PHPを始めるための合図です。",
-        "echo を使って、そのあとの文字を画面に出します。",
-        "PHPを終わるための合図です。"
-      ],
+      "lineHints": ["PHPのコードがここから始まることを宣言します。", null, "文字列を標準出力に表示します。", "PHPを終わるための合図です。"],
       "candidates": {
         "functions": [
           "echo"
@@ -73,16 +70,13 @@ export const phpData = {
       "holeyCode": "<?php\n  // x というはこに 10 を入れる\n  $x = ___ ;\n  // 中身を表示する\n  echo $___ ;\n?>",
       "correctLines": [
         "<?php",
+        "  // x というはこに 10 を入れる",
         "  $x = 10;",
+        "  // 中身を表示する",
         "  echo $x;",
         "?>"
       ],
-      "lineHints": [
-        null,
-        "x という名前のはこに 10 を入力します。",
-        "はこの名前 x を指定して、表示させます。",
-        null
-      ],
+      "lineHints": [null, null, "x という名前のはこに 10 を入力します。", null, "変数の内容を展開して表示します。", null],
       "candidates": {
         "variables": [
           "x"
@@ -120,18 +114,14 @@ export const phpData = {
       "holeyCode": "<?php\n  // はこに数字を入れる\n  $a = 5;\n  $b = 3;\n  // たし算した結果を表示する\n  echo $a ___ $b;\n?>",
       "correctLines": [
         "<?php",
+        "  // はこに数字を入れる",
         "  $a = 5;",
         "  $b = 3;",
+        "  // たし算した結果を表示する",
         "  echo $a + $b;",
         "?>"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "たし算なので `+` を入力します。",
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "変数の内容を展開して表示します。", null],
       "candidates": {
         "operators": [
           "+"
@@ -166,14 +156,11 @@ export const phpData = {
       "holeyCode": "<?php\n  // 10 を 3 で割ったあまりを出力する\n  echo 10 ___ 3;\n?>",
       "correctLines": [
         "<?php",
+        "  // 10 を 3 で割ったあまりを出力する",
         "  echo 10 % 3;",
         "?>"
       ],
-      "lineHints": [
-        null,
-        "あまりを求める % 演算子を使います。",
-        null
-      ],
+      "lineHints": [null, null, "あまりを求める % 演算子を使います。", null],
       "candidates": {
         "operators": ["%", "+", "-", "*", "/"]
       },
@@ -206,18 +193,15 @@ export const phpData = {
       "holeyCode": "<?php\n  // scoreに50を入れる\n  $score = ___;\n  // 10点プラスする\n  $score ___ 10;\n  // 結果を表示\n  echo $score;\n?>",
       "correctLines": [
         "<?php",
+        "  // scoreに50を入れる",
         "  $score = 50;",
+        "  // 10点プラスする",
         "  $score += 10;",
+        "  // 結果を表示",
         "  echo $score;",
         "?>"
       ],
-      "lineHints": [
-        null,
-        "50 と入力しましょう。",
-        "+= を使って加算します。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, "50 と入力しましょう。", null, "+= を使って加算します。", null, null, null],
       "candidates": {
         "operators": ["+=", "-=", "*=", "/="],
         "numbers": ["50", "10"]
@@ -251,16 +235,13 @@ export const phpData = {
       "holeyCode": "<?php\n  // ageに20を入れる\n  $age = 20;\n  // 文章の中に中身を表示する\n  echo \"I am $___ years old.\";\n?>",
       "correctLines": [
         "<?php",
+        "  // ageに20を入れる",
         "  $age = 20;",
+        "  // 文章の中に中身を表示する",
         "  echo \"I am $age years old.\";",
         "?>"
       ],
-      "lineHints": [
-        null,
-        "age に 20 を入力します。",
-        "はこの名前 age を指定します。",
-        null
-      ],
+      "lineHints": [null, null, "age に 20 を入力します。", null, "文字列を標準出力に表示します。", null],
       "candidates": {
         "variables": [
           "age"
@@ -295,16 +276,13 @@ export const phpData = {
       "holeyCode": "<?php\n  // 配列を作る\n  $fruits = ['りんご', 'バナナ'];\n  // 2番目のデータを表示する\n  echo $fruits[___];\n?>",
       "correctLines": [
         "<?php",
+        "  // 配列を作る",
         "  $fruits = ['りんご', 'バナナ'];",
+        "  // 2番目のデータを表示する",
         "  echo $fruits[1];",
         "?>"
       ],
-      "lineHints": [
-        null,
-        "['りんご', 'バナナ'] と入力して配列を作ります。",
-        "2番目のデータの番号は 1 です。 ` $fruits[1]` と入力してください。",
-        null
-      ],
+      "lineHints": [null, null, "['りんご', 'バナナ'] と入力して配列を作ります。", null, "変数の内容を展開して表示します。", null],
       "candidates": {
         "numbers": [
           "1"
@@ -339,20 +317,16 @@ export const phpData = {
       "holeyCode": "<?php\n  // scoreに100を入れる\n  $score = ___;\n  // >で大きいか比較\n  if ($score ___ 80) {\n    // メッセージ（'Excellent'）\n    echo \"___\";\n  }\n?>",
       "correctLines": [
         "<?php",
+        "  // scoreに100を入れる",
         "  $score = 100;",
+        "  // >で大きいか比較",
         "  if ($score > 80) {",
+        "    // メッセージ（'Excellent'）",
         "    echo \"Excellent\";",
         "  }",
         "?>"
       ],
-      "lineHints": [
-        null,
-        "score = 100 と入力しましょう。",
-        "比較するための記号 `>` を入力しましょう。",
-        "Excellent と表示します。",
-        "さいごに } で閉じるのを忘れないでください。",
-        null
-      ],
+      "lineHints": [null, null, "score = 100 と入力しましょう。", null, "比較するための記号 `>` を入力しましょう。", null, "文字列を標準出力に表示します。", "さいごに } で閉じるのを忘れないでください。", null],
       "candidates": {
         "operators": [
           ">"
@@ -387,24 +361,20 @@ export const phpData = {
       "holeyCode": "<?php\n  // ageに18を入れる\n  $age = ___;\n  // 20以上かを比較する演算子\n  if ($age ___ 20) {\n    // 20歳以上のときのメッセージ（'Adult'）\n    echo \"___\";\n  // elseで「そうでなければ」\n  } ___ {\n    // それ以外のメッセージ（'Minor'）\n    echo \"___\";\n  }\n?>",
       "correctLines": [
         "<?php",
+        "  // ageに18を入れる",
         "  $age = 18;",
+        "  // 20以上かを比較する演算子",
         "  if ($age >= 20) {",
+        "    // 20歳以上のときのメッセージ（'Adult'）",
         "    echo \"Adult\";",
+        "  // elseで「そうでなければ」",
         "  } else {",
+        "    // それ以外のメッセージ（'Minor'）",
         "    echo \"Minor\";",
         "  }",
         "?>"
       ],
-      "lineHints": [
-        null,
-        "age に 18 を入力します。",
-        null,
-        null,
-        "そうでなければ、をあらわす `else` を入力しましょう。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, "age に 18 を入力します。", null, ">=演算子を使って比較します。", null, "文字列を標準出力に表示します。", null, "もし条件が満たされなかった場合に実行する処理を記述します。", null, "文字列を標準出力に表示します。", null, null],
       "candidates": {
         "keywords": [
           "else"
@@ -436,23 +406,19 @@ export const phpData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "<?php\n  // scoreに85を入れる\n  $score = 85;\n  // 80以上 かつ 100以下 ならメッセージを出す\n  if ($score >= 80 && $score <= 100) {\n    echo \"Pass\";\n  }\n?>",
-      "holeyCode": "<?php\n  // scoreに85を入れる\n  $score = ___;\n  // 80以上 かつ 100以下 ならメッセージを出す\n  if ($score >= 80 ___ $score <= 100) {\n    echo \"___\";\n  }\n?>",
+      "holeyCode": "<?php\n  // scoreに85を入れる\n  $score = ___;\n  // 80以上 かつ 100以下 ならメッセージを出す\n  if ($score >= 80 ___ $score <= 100) {\n    // 結果を出力\n    echo \"___\";\n  }\n?>",
       "correctLines": [
         "<?php",
+        "  // scoreに85を入れる",
         "  $score = 85;",
+        "  // 80以上 かつ 100以下 ならメッセージを出す",
         "  if ($score >= 80 && $score <= 100) {",
+        "    // 結果を出力",
         "    echo \"Pass\";",
         "  }",
         "?>"
       ],
-      "lineHints": [
-        null,
-        "85 と入力しましょう。",
-        "両方の条件を満たすので && を使います。",
-        "Pass と入力しましょう。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, "85 と入力しましょう。", null, "複数の条件がすべて満たされているか（論理積）を判定します。", null, "文字列を標準出力に表示します。", null, null],
       "candidates": {
         "operators": ["&&", "||"],
         "numbers": ["85"],
@@ -488,19 +454,13 @@ export const phpData = {
       "correctLines": [
         "<?php",
         "  $nums = [1, 2, 3];",
+        "  // asで各要素を取り出す",
         "  foreach ($nums as $n) {",
         "    echo $n;",
         "  }",
         "?>"
       ],
-      "lineHints": [
-        null,
-        "[1, 2, 3] という配列を作ります。",
-        "「〜を〜として取り出す」をあらわす `as` キーワードを入力します。",
-        "取り出したデータ $n を表示します。",
-        null,
-        null
-      ],
+      "lineHints": [null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "「〜を〜として取り出す」をあらわす `as` キーワードを入力します。", "変数の内容を展開して表示します。", null, null],
       "candidates": {
         "keywords": [
           "as"
@@ -536,15 +496,11 @@ export const phpData = {
       "correctLines": [
         "<?php",
         "  $user = ['name' => 'Alice'];",
+        "  // nameでキーを指定してアクセス",
         "  echo $user['name'];",
         "?>"
       ],
-      "lineHints": [
-        null,
-        "名前（キー）とデータのセットを作ります。",
-        "\"name\" という名前を指定してデータを取り出します。",
-        null
-      ],
+      "lineHints": [null, "名前（キー）とデータのセットを作ります。", null, "変数の内容を展開して表示します。", null],
       "candidates": {
         "strings": [
           "name"
@@ -582,17 +538,11 @@ export const phpData = {
         "  function greet() {",
         "    echo \"Hello\";",
         "  }",
+        "  // 関数を実行する",
         "  greet();",
         "?>"
       ],
-      "lineHints": [
-        null,
-        "greet という名前の関数を定義します。",
-        "メッセージを表示します。",
-        "関数の終わりです。",
-        "greet(); と入力して、関数を実行します。",
-        null
-      ],
+      "lineHints": [null, "greet という名前の関数を定義します。", "文字列を標準出力に表示します。", "関数の終わりです。", null, "関数（greet）を呼び出して実行します。", null],
       "candidates": {
         "functions": [
           "greet"

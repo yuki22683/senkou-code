@@ -34,21 +34,7 @@ export const pythonData5 = {
         "    # ファイルの内容を読み込んで表示",
         "    print(f.read())"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "open関数を使います。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "open関数を使います。", null, null, null, null, null],
       "candidates": {
         "keywords": ["open", "file", "read"]
       },
@@ -88,21 +74,7 @@ export const pythonData5 = {
         "        # 前後の空白を除去して表示",
         "        print(line.strip())"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "inキーワードを使います。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, null, null, null, "inキーワードを使います。", null],
       "candidates": {
         "keywords": ["in", "from", "of"]
       },
@@ -139,18 +111,7 @@ export const pythonData5 = {
         "# 辞書からnameキーの値を取得して表示",
         "print(data['name'])"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "JSON文字列を読み込むメソッドです。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "JSON文字列を読み込むメソッドです。", null],
       "candidates": {
         "keywords": ["loads", "load", "parse"]
       },
@@ -187,18 +148,7 @@ export const pythonData5 = {
         "# JSON文字列を表示",
         "print(json_str)"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "JSONに変換するメソッドです。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "JSONに変換するメソッドです。", null],
       "candidates": {
         "keywords": ["dumps", "dump", "stringify"]
       },
@@ -237,20 +187,7 @@ export const pythonData5 = {
         "    # 一致した文字列を表示",
         "    print(match.group())"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "パターンを検索するメソッドです。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "パターンを検索するメソッドです。", null, null, null],
       "candidates": {
         "keywords": ["search", "match", "find"]
       },
@@ -287,18 +224,7 @@ export const pythonData5 = {
         "# 取得したメールアドレスのリストを表示",
         "print(emails)"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "全ての一致を取得するメソッドです。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "全ての一致を取得するメソッドです。", null],
       "candidates": {
         "keywords": ["findall", "finditer", "search"]
       },
@@ -335,18 +261,7 @@ export const pythonData5 = {
         "# 置換結果を表示",
         "print(result)"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "置換するメソッドです。",
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "置換するメソッドです。", null],
       "candidates": {
         "keywords": ["sub", "replace", "swap"]
       },
@@ -383,17 +298,7 @@ export const pythonData5 = {
         "# 最も多い3つを取得して表示",
         "print(count.most_common(3))"
       ],
-      "lineHints": [
-        null,
-        "Counterをインポートします。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "collectionsモジュールから特定の機能（Counter）を読み込みます。", null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["Counter", "Count", "Dict"]
       },
@@ -432,19 +337,7 @@ export const pythonData5 = {
         "# fruitsキーの値を表示",
         "print(d['fruits'])"
       ],
-      "lineHints": [
-        null,
-        "defaultdictをインポートします。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "collectionsモジュールから特定の機能（defaultdict）を読み込みます。", null, null, null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["defaultdict", "dict", "OrderedDict"]
       },
@@ -483,19 +376,7 @@ export const pythonData5 = {
         "# 連結結果を表示",
         "print(result)"
       ],
-      "lineHints": [
-        null,
-        "chainをインポートします。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "itertoolsモジュールから特定の機能（chain）を読み込みます。", null, null, null, null, null, null, null, null, null],
       "candidates": {
         "keywords": ["chain", "concat", "merge"]
       },

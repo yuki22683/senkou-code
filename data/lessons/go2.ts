@@ -31,29 +31,19 @@ export const go2Data = {
         "import \"fmt\"",
         "func minmax(a, b int) (int, int) {",
         "    if a < b {",
+        "        // return で複数の値を返す",
         "        return a, b",
         "    }",
+        "    // return で2つの値を返す",
         "    return b, a",
         "}",
         "func main() {",
+        "    // 関数から2つの戻り値を受け取る",
         "    min, max := minmax(5, 3)",
         "    fmt.Println(min, max)",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "2つの int を返す関数です。",
-        "",
-        "return で複数の値を返します。",
-        "",
-        "",
-        "",
-        "",
-        "2つの値を受け取ります。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, null, null, "return で複数の値を返します。", null, null, "return で複数の値を返します。", null, null, null, "関数名 minmax を入力して呼び出します。", null, null],
       "candidates": {
         "keywords": ["return"]
       },
@@ -92,11 +82,14 @@ export const go2Data = {
         ")",
         "func check(n int) (int, error) {",
         "    if n < 0 {",
+        "        // errors.New でエラーを作成",
         "        return 0, errors.New(\"negative\")",
         "    }",
+        "    // nil でエラーなしを表す",
         "    return n, nil",
         "}",
         "func main() {",
+        "    // 関数から2つの戻り値を受け取る",
         "    val, err := check(5)",
         "    if err != nil {",
         "        fmt.Println(err)",
@@ -105,27 +98,7 @@ export const go2Data = {
         "    }",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "エラーがないときは nil を返します。",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, null, null, null, null, null, "errors.New でエラーオブジェクトを作成します。", null, null, "エラーがないときは nil を返します。", null, null, null, "関数名 check を入力して呼び出します。", null, null, null, null, null, null],
       "candidates": {
         "keywords": ["nil"]
       },
@@ -161,21 +134,14 @@ export const go2Data = {
         "import \"fmt\"",
         "func main() {",
         "    x := 5",
+        "    // & でアドレスを取得",
         "    p := &x",
+        "    // *p でポインタの値を変更",
         "    *p = 10",
         "    fmt.Println(x)",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "",
-        "",
-        "& でアドレスを取得します。",
-        "*p で値を変更します。",
-        "x が 10 になっています。",
-        ""
-      ],
+      "lineHints": [null, null, null, null, null, "& でアドレスを取得します。", null, "*p で値を変更します。", null, null],
       "candidates": {
         "operators": ["&"]
       },
@@ -209,27 +175,19 @@ export const go2Data = {
       "correctLines": [
         "package main",
         "import \"fmt\"",
+        "// struct で構造体を定義",
         "type Point struct {",
+        "    // フィールド名と型を定義",
         "    X int",
         "    Y int",
         "}",
         "func main() {",
+        "    // 構造体を初期化",
         "    p := Point{X: 3, Y: 4}",
         "    fmt.Println(p.X)",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "struct で構造体を定義します。",
-        "",
-        "",
-        "",
-        "",
-        "構造体を初期化します。",
-        "p.X でフィールドにアクセスします。",
-        ""
-      ],
+      "lineHints": [null, null, null, "struct で構造体を定義します。", null, "int 型のフィールドを定義します。", null, null, null, null, "Y に 4 を指定して構造体を初期化します。", null, null],
       "candidates": {
         "keywords": ["struct"]
       },
@@ -268,28 +226,17 @@ export const go2Data = {
         "    H int",
         "}",
         "func (r Rect) Area() int {",
+        "    // * でかけ算",
         "    return r.W * r.H",
         "}",
         "func main() {",
+        "    // 構造体を初期化",
         "    rect := Rect{W: 3, H: 4}",
+        "    // メソッドを呼び出す",
         "    fmt.Println(rect.Area())",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "(r Rect) がレシーバです。",
-        "* で掛け算します。",
-        "",
-        "",
-        "",
-        "rect.Area() でメソッドを呼びます。",
-        ""
-      ],
+      "lineHints": [null, null, null, null, null, null, null, null, "* で掛け算します。", null, null, null, "H に 4 を指定して構造体を初期化します。", null, "メソッド名 Area を入力して呼び出します。", null],
       "candidates": {
         "operators": ["*"]
       },
@@ -323,6 +270,7 @@ export const go2Data = {
       "correctLines": [
         "package main",
         "import \"fmt\"",
+        "// interface でインターフェースを定義",
         "type Speaker interface {",
         "    Speak()",
         "}",
@@ -331,25 +279,13 @@ export const go2Data = {
         "    fmt.Println(\"woof\")",
         "}",
         "func main() {",
+        "    // インターフェース型の変数に代入",
         "    var s Speaker = Dog{}",
+        "    // インターフェースのメソッドを呼び出す",
         "    s.Speak()",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "interface でインターフェースを定義します。",
-        "",
-        "",
-        "",
-        "Dog が Speak() を実装します。",
-        "",
-        "",
-        "",
-        "Speaker 型の変数に Dog を代入できます。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, "interface でインターフェースを定義します。", null, null, null, null, null, null, null, null, "Dog{} でインスタンスを作成して代入します。", null, "メソッド名 Speak を入力して呼び出します。", null],
       "candidates": {
         "keywords": ["interface"]
       },
@@ -384,18 +320,13 @@ export const go2Data = {
         "package main",
         "import \"fmt\"",
         "func main() {",
+        "    // defer で関数終了時に実行",
         "    defer fmt.Println(\"end\")",
+        "    // これが先に実行される",
         "    fmt.Println(\"start\")",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "",
-        "defer で関数終了時に実行を予約します。",
-        "これが先に実行されます。",
-        ""
-      ],
+      "lineHints": [null, null, null, null, "フォーマットパッケージを使って文字列を出力します。", null, "フォーマットパッケージを使って文字列を出力します。", null],
       "candidates": {
         "keywords": ["defer"]
       },
@@ -436,24 +367,13 @@ export const go2Data = {
         "    fmt.Println(msg)",
         "}",
         "func main() {",
+        "    // go でゴルーチンを起動",
         "    go say(\"hello\")",
+        "    // ゴルーチンの完了を待つ",
         "    time.Sleep(100 * time.Millisecond)",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "go でゴルーチンを起動します。",
-        "ゴルーチンの完了を待ちます。",
-        ""
-      ],
+      "lineHints": [null, null, null, null, null, null, null, null, null, null, "go でゴルーチンを起動します。", null, "Sleep でゴルーチンの完了を待ちます。", null],
       "candidates": {
         "keywords": ["go"]
       },
@@ -488,26 +408,18 @@ export const go2Data = {
         "package main",
         "import \"fmt\"",
         "func main() {",
+        "    // chan でチャネルを作成",
         "    ch := make(chan int)",
         "    go func() {",
+        "        // チャネルに値を送信",
         "        ch <- 100",
         "    }()",
+        "    // チャネルから値を受信",
         "    val := <-ch",
         "    fmt.Println(val)",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "",
-        "chan でチャネルを作成します。",
-        "無名関数をゴルーチンで実行します。",
-        "チャネルに値を送信します。",
-        "",
-        "チャネルから値を受信します。",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, null, "chan でチャネルを作成します。", null, null, "<- でチャネルに値を送信します。", null, null, "<- でチャネルから値を受信します。", null, null],
       "candidates": {
         "keywords": ["chan"]
       },
@@ -543,23 +455,15 @@ export const go2Data = {
         "import \"fmt\"",
         "func main() {",
         "    n := 5",
+        "    // func で無名関数を定義",
         "    double := func() int {",
+        "        // 外側の変数 n を参照",
         ["        return n * 2", "        return 2 * n"],
         "    }",
         "    fmt.Println(double())",
         "}"
       ],
-      "lineHints": [
-        "",
-        "",
-        "",
-        "",
-        "func で無名関数を定義します。",
-        "外側の n にアクセスできます。",
-        "",
-        "",
-        ""
-      ],
+      "lineHints": [null, null, null, null, null, "func で無名関数を定義します。", null, "* で掛け算をして外側の n にアクセスします。", null, null, null, null],
       "candidates": {
         "keywords": ["func"]
       },

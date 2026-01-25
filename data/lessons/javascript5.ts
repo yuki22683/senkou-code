@@ -22,13 +22,12 @@ export const javascriptData5 = {
       "correctCode": "// / で正規表現リテラルを定義\nconst pattern = /javascript/i;\nconsole.log(pattern.test('I love JavaScript'));",
       "holeyCode": "// / で正規表現リテラルを定義\nconst pattern = ___javascript/i;\n// test でマッチをテスト\nconsole.log(pattern.___('I love JavaScript'));",
       "correctLines": [
+        "// / で正規表現リテラルを定義",
         "const pattern = /javascript/i;",
+        "// test でマッチをテスト",
         "console.log(pattern.test('I love JavaScript'));"
       ],
-      "lineHints": [
-        "正規表現はスラッシュで囲みます。",
-        null
-      ],
+      "lineHints": [null, "正規表現はスラッシュで囲みます。", null, "test でパターンにマッチするかテストします。"],
       "candidates": {
         "keywords": ["/", "\"", "'"]
       },
@@ -55,15 +54,14 @@ export const javascriptData5 = {
       "correctCode": "const emailPattern = /\\w+@\\w+\\.\\w+/;\n// test() で 'test@example.com' と 'invalid-email' をテスト\nconsole.log(emailPattern.test('test@example.com'));\nconsole.log(emailPattern.test('invalid-email'));",
       "holeyCode": "// 正規表現パターンを定義\nconst emailPattern = ___\\w+@\\w+\\.\\w+/;\n// test() で 'test@example.com' と 'invalid-email' をテスト\nconsole.log(emailPattern.___)('test@example.com'));\n// 無効なメールをテスト\nconsole.log(emailPattern.test('___'));",
       "correctLines": [
+        "// 正規表現パターンを定義",
         "const emailPattern = /\\w+@\\w+\\.\\w+/;",
+        "// test() で 'test@example.com' と 'invalid-email' をテスト",
         "console.log(emailPattern.test('test@example.com'));",
+        "// 無効なメールをテスト",
         "console.log(emailPattern.test('invalid-email'));"
       ],
-      "lineHints": [
-        null,
-        "マッチをテストするメソッドです。",
-        null
-      ],
+      "lineHints": [null, "正規表現はスラッシュで囲みます。", null, "マッチをテストするメソッドです。", null, "invalid-email でテストします。"],
       "candidates": {
         "keywords": ["test(", "match(", "exec("]
       },
@@ -90,15 +88,14 @@ export const javascriptData5 = {
       "correctCode": "const text = 'Contact: 090-1234-5678 or 080-9876-5432';\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\nconst phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);\nconsole.log(phones);",
       "holeyCode": "// 090-1234-5678 を含む文字列を定義\nconst text = 'Contact: ___-1234-5678 or 080-9876-5432';\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\nconst phones = text.___(___\\d{3}-\\d{4}-\\d{4}/g);\n// 結果を出力\nconsole.___(phones);",
       "correctLines": [
+        "// 090-1234-5678 を含む文字列を定義",
         "const text = 'Contact: 090-1234-5678 or 080-9876-5432';",
+        "// match() で 090-1234-5678 と 080-9876-5432 を抽出",
         "const phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);",
+        "// 結果を出力",
         "console.log(phones);"
       ],
-      "lineHints": [
-        null,
-        "match()と正規表現リテラルを使います。",
-        null
-      ],
+      "lineHints": [null, "定数を宣言し、文字列を代入します。", null, "match()と正規表現リテラルを使います。", null, "phones を出力します。"],
       "candidates": {
         "keywords": ["match(", "/"]
       },
@@ -125,15 +122,14 @@ export const javascriptData5 = {
       "correctCode": "const text = 'Hello   World   JavaScript';\n// replace() で連続する空白を1つの空白に置換\nconst result = text.replace(/\\s+/g, ' ');\nconsole.log(result);",
       "holeyCode": "// 'Hello   World   JavaScript' を定義\nconst text = '___   World   JavaScript';\n// replace() で連続する空白を1つの空白に置換\nconst result = text.___(___\\s+/g, ' ');\n// 結果を出力\nconsole.___(result);",
       "correctLines": [
+        "// 'Hello   World   JavaScript' を定義",
         "const text = 'Hello   World   JavaScript';",
+        "// replace() で連続する空白を1つの空白に置換",
         "const result = text.replace(/\\s+/g, ' ');",
+        "// 結果を出力",
         "console.log(result);"
       ],
-      "lineHints": [
-        null,
-        "replace()と正規表現を使います。",
-        null
-      ],
+      "lineHints": [null, "定数を宣言し、文字列を代入します。", null, "replace()と正規表現を使います。", null, "result を出力します。"],
       "candidates": {
         "keywords": ["replace(", "/"]
       },
@@ -160,19 +156,16 @@ export const javascriptData5 = {
       "correctCode": "try {\n  const result = JSON.parse('invalid json');\n// catch でエラーをキャッチ\n} catch (e) {\n  console.log('Error:', e.message);\n}",
       "holeyCode": "// try ブロックを開始\n___ {\n  // JSON.parse でパース\n  const result = JSON.___('invalid json');\n// catch でエラーをキャッチ\n} ___ (e) {\n  // エラーメッセージを出力\n  console.log('Error:', e.___);",
       "correctLines": [
+        "// try ブロックを開始",
         "try {",
+        "  // JSON.parse でパース",
         "  const result = JSON.parse('invalid json');",
+        "// catch でエラーをキャッチ",
         "} catch (e) {",
-        "  console.log('Error:', e.message);",
-        "}"
+        "  // エラーメッセージを出力",
+        "  console.log('Error:', e.message);"
       ],
-      "lineHints": [
-        null,
-        null,
-        "エラーをキャッチするキーワードです。",
-        null,
-        null
-      ],
+      "lineHints": [null, "エラーが発生する可能性のある処理をここから記述します。", null, "JSON.parse でJSONをパースします。", null, "エラー（例外）が発生した場合の処理を記述します。", null, "デバッグ用コンソールなどに文字列を出力します。"],
       "candidates": {
         "keywords": ["catch", "except", "handle"]
       },
@@ -199,31 +192,25 @@ export const javascriptData5 = {
       "correctCode": "function process() {\n  try {\n    console.log('Processing...');\n    throw new Error('Error!');\n  } catch (e) {\n    console.log('Caught:', e.message);\n  // finally で常に実行されるブロック\n  } finally {\n    console.log('Cleanup done');\n  }\n}\nprocess();",
       "holeyCode": "// function で関数を定義\n___ process() {\n  // try ブロック\n  ___ {\n    console.log('Processing...');\n    // throw でエラーを投げる\n    ___ new Error('Error!');\n  } catch (e) {\n    // エラーメッセージを出力\n    console.log('Caught:', e.___);\n  // finally で常に実行されるブロック\n  } ___ {\n    console.log('Cleanup done');\n  }\n}\n// 関数を呼び出し\n___();",
       "correctLines": [
+        "// function で関数を定義",
         "function process() {",
+        "  // try ブロック",
         "  try {",
         "    console.log('Processing...');",
+        "    // throw でエラーを投げる",
         "    throw new Error('Error!');",
         "  } catch (e) {",
+        "    // エラーメッセージを出力",
         "    console.log('Caught:', e.message);",
+        "  // finally で常に実行されるブロック",
         "  } finally {",
         "    console.log('Cleanup done');",
         "  }",
         "}",
+        "// 関数を呼び出し",
         "process();"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "常に実行されるブロックです。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "function で関数を定義します。", null, "エラーが発生する可能性のある処理をここから記述します。", null, null, "throw でエラーを投げます。", null, null, "デバッグ用コンソールなどに文字列を出力します。", null, "エラーの有無に関わらず、最後に必ず実行する処理を記述します。", null, null, null, null, "関数（process）を呼び出して実行します。"],
       "candidates": {
         "keywords": ["finally", "always", "end"]
       },
@@ -250,33 +237,26 @@ export const javascriptData5 = {
       "correctCode": "// extends でErrorクラスを継承\nclass ValidationError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'ValidationError';\n  }\n}\n\ntry {\n  throw new ValidationError('Invalid input');\n} catch (e) {\n  console.log(`${e.name}: ${e.message}`);\n}",
       "holeyCode": "// extends でErrorクラスを継承\nclass ValidationError ___ Error {\n  // constructor で初期化\n  ___(message) {\n    // super で親クラスのコンストラクタを呼び出し\n    ___(message);\n    // this.name にクラス名を設定\n    this.___ = 'ValidationError';\n  }\n}\n\n// try でエラーを試行\n___ {\n  // throw でエラーを投げる\n  ___ new ValidationError('Invalid input');\n} catch (e) {\n  // エラー情報を出力\n  console.log(`${e.___}: ${e.message}`);\n}",
       "correctLines": [
+        "// extends でErrorクラスを継承",
         "class ValidationError extends Error {",
+        "  // constructor で初期化",
         "  constructor(message) {",
+        "    // super で親クラスのコンストラクタを呼び出し",
         "    super(message);",
+        "    // this.name にクラス名を設定",
         "    this.name = 'ValidationError';",
         "  }",
         "}",
         "",
+        "// try でエラーを試行",
         "try {",
+        "  // throw でエラーを投げる",
         "  throw new ValidationError('Invalid input');",
         "} catch (e) {",
-        "  console.log(`${e.name}: ${e.message}`);",
-        "}"
+        "  // エラー情報を出力",
+        "  console.log(`${e.name}: ${e.message}`);"
       ],
-      "lineHints": [
-        "クラスを継承するキーワードです。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "新しいクラス（ValidationError）を定義します。", null, "constructor で初期化します。", null, "super で親クラスを呼び出します。", null, "this.name に名前を設定します。", null, null, null, null, "エラーが発生する可能性のある処理をここから記述します。", null, "throw でエラーを投げます。", null, null, "デバッグ用コンソールなどに文字列を出力します。"],
       "candidates": {
         "keywords": ["extends", "implements", "inherits"]
       },
@@ -303,23 +283,21 @@ export const javascriptData5 = {
       "correctCode": "// Symbol でユニークな識別子を作成し、name: 'Taro', secret: 'password123' を持つオブジェクトを定義\nconst secret = Symbol('secret');\nconst user = {\n  name: 'Taro',\n  [secret]: 'password123'\n};\nconsole.log(user.name);\nconsole.log(user[secret]);",
       "holeyCode": "// Symbol でユニークな識別子を作成し、name: 'Taro', secret: 'password123' を持つオブジェクトを定義\nconst secret = ___('secret');\n// オブジェクトを定義\nconst user = {\n  // name プロパティ\n  name: '___',\n  // 計算プロパティ名でシークレットを設定\n  [secret]: '___'\n};\n// name を出力\nconsole.log(user.___);\n// secret を出力\nconsole.log(user[___]);",
       "correctLines": [
+        "// Symbol でユニークな識別子を作成し、name: 'Taro', secret: 'password123' を持つオブジェクトを定義",
         "const secret = Symbol('secret');",
+        "// オブジェクトを定義",
         "const user = {",
+        "  // name プロパティ",
         "  name: 'Taro',",
+        "  // 計算プロパティ名でシークレットを設定",
         "  [secret]: 'password123'",
         "};",
+        "// name を出力",
         "console.log(user.name);",
+        "// secret を出力",
         "console.log(user[secret]);"
       ],
-      "lineHints": [
-        "ユニークな識別子を作る関数です。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "ユニークな識別子を作る関数です。", null, null, null, "Taro を設定します。", null, "password123 を設定します。", null, null, "user.name を出力します。", null, "secret でアクセスします。"],
       "candidates": {
         "keywords": ["Symbol", "Unique", "Key"]
       },
@@ -346,37 +324,30 @@ export const javascriptData5 = {
       "correctCode": "// WeakMap で弱参照のMapを作成\nconst privateData = new WeakMap();\n\nclass User {\n  constructor(name) {\n    privateData.set(this, { password: 'secret' });\n    this.name = name;\n  }\n  getPassword() {\n    return privateData.get(this).password;\n  }\n}\n\nconst user = new User('Taro');\nconsole.log(user.getPassword());",
       "holeyCode": "// WeakMap で弱参照のMapを作成\nconst privateData = new ___();\n\n// class でクラスを定義\n___ User {\n  // constructor で初期化\n  ___(name) {\n    // set でプライベートデータを設定\n    privateData.___(this, { password: 'secret' });\n    // this.name に名前を代入\n    this.___ = name;\n  }\n  getPassword() {\n    // get でプライベートデータを取得\n    return privateData.___(this).password;\n  }\n}\n\n// new でインスタンスを作成\nconst user = ___ User('Taro');\n// getPassword() を呼び出し\nconsole.log(user.___());",
       "correctLines": [
+        "// WeakMap で弱参照のMapを作成",
         "const privateData = new WeakMap();",
         "",
+        "// class でクラスを定義",
         "class User {",
+        "  // constructor で初期化",
         "  constructor(name) {",
+        "    // set でプライベートデータを設定",
         "    privateData.set(this, { password: 'secret' });",
+        "    // this.name に名前を代入",
         "    this.name = name;",
         "  }",
         "  getPassword() {",
+        "    // get でプライベートデータを取得",
         "    return privateData.get(this).password;",
         "  }",
         "}",
         "",
+        "// new でインスタンスを作成",
         "const user = new User('Taro');",
+        "// getPassword() を呼び出し",
         "console.log(user.getPassword());"
       ],
-      "lineHints": [
-        "弱参照のMapを作成します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "弱参照のMapを作成します。", null, null, "新しいクラス（User）を定義します。", null, "constructor で初期化します。", null, "set でデータを設定します。", null, "this.name に名前を代入します。", null, null, null, "get でデータを取得します。", null, null, null, null, "new でインスタンスを作成します。", null, "getPassword を呼び出します。"],
       "candidates": {
         "keywords": ["WeakMap", "Map", "HashMap"]
       },
@@ -403,27 +374,22 @@ export const javascriptData5 = {
       "correctCode": "const handler = {\n  get(target, prop) {\n    console.log(`Getting ${prop}`);\n    return target[prop];\n  }\n};\n// name: 'Taro' を持つオブジェクトの操作をインターセプト\nconst user = new Proxy({ name: 'Taro' }, handler);\nconsole.log(user.name);",
       "holeyCode": "// ハンドラオブジェクトを定義\nconst handler = {\n  // get トラップを定義\n  ___(target, prop) {\n    // アクセスをログ出力\n    console.log(`Getting ${___}`);\n    // return でプロパティ値を返す\n    ___ target[prop];\n  }\n};\n// name: 'Taro' を持つオブジェクトの操作をインターセプト\nconst user = new ___({ name: 'Taro' }, handler);\n// name プロパティにアクセス\nconsole.log(user.___);",
       "correctLines": [
+        "// ハンドラオブジェクトを定義",
         "const handler = {",
+        "  // get トラップを定義",
         "  get(target, prop) {",
+        "    // アクセスをログ出力",
         "    console.log(`Getting ${prop}`);",
+        "    // return でプロパティ値を返す",
         "    return target[prop];",
         "  }",
         "};",
-        "",
+        "// name: 'Taro' を持つオブジェクトの操作をインターセプト",
         "const user = new Proxy({ name: 'Taro' }, handler);",
+        "// name プロパティにアクセス",
         "console.log(user.name);"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "Proxyを作成します。",
-        null
-      ],
+      "lineHints": [null, null, null, "get トラップを定義します。", null, "デバッグ用コンソールなどに文字列を出力します。", null, "return でプロパティ値を返します。", null, null, null, "Proxyを作成します。", null, "user.name でアクセスします。"],
       "candidates": {
         "keywords": ["Proxy", "Handler", "Wrapper"]
       },

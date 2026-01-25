@@ -30,10 +30,7 @@ export const rubyData = {
         "# 「Hello, Ruby!」と出力する関数",
         "puts 'Hello, Ruby!'"
       ],
-      "lineHints": [
-        null,
-        "Hello, Ruby! と入力して、画面に表示させます。"
-      ],
+      "lineHints": [null, "文字列を出力し、最後に改行を加えます。"],
       "candidates": {
         "strings": [
           "Hello, Ruby!"
@@ -72,12 +69,7 @@ export const rubyData = {
         "# はこの中身を画面に出す",
         "puts name"
       ],
-      "lineHints": [
-        null,
-        "Ruby と入力しましょう。",
-        null,
-        "変数名 name を入力します。"
-      ],
+      "lineHints": [null, "変数に文字列データを代入（保存）します。", null, "変数名 name を入力します。"],
       "candidates": {
         "variables": ["name"],
         "strings": ["Ruby"]
@@ -117,14 +109,7 @@ export const rubyData = {
         "# x と y をたした答えを出す",
         ["puts x + y", "puts y + x"]
       ],
-      "lineHints": [
-        null,
-        "10 と入力しましょう。",
-        null,
-        "5 と入力しましょう。",
-        null,
-        "たし算なので + を使います。"
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "変数に数値を代入（保存）します。", null, "たし算なので + を使います。", null],
       "candidates": {
         "numbers": ["10", "5"],
         "operators": ["+", "-", "*", "/"]
@@ -160,10 +145,7 @@ export const rubyData = {
         "# 10 を 3 で割ったあまりを出力する",
         "puts 10 % 3"
       ],
-      "lineHints": [
-        null,
-        "あまりを求める % 演算子を使います。"
-      ],
+      "lineHints": [null, "あまりを求める % 演算子を使います。"],
       "candidates": {
         "operators": ["%", "+", "-", "*", "/"]
       },
@@ -202,14 +184,7 @@ export const rubyData = {
         "# 結果を表示",
         "puts score"
       ],
-      "lineHints": [
-        null,
-        "50 と入力しましょう。",
-        null,
-        "+= を使って加算します。",
-        null,
-        null
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, null],
       "candidates": {
         "operators": ["+=", "-=", "*=", "/="],
         "numbers": ["50", "10"]
@@ -247,12 +222,7 @@ export const rubyData = {
         "# 式展開を使ってメッセージを出す",
         "puts \"私は#{age}歳です\""
       ],
-      "lineHints": [
-        null,
-        "10 と入力しましょう。",
-        null,
-        "変数名 age を #{} の中に入力します。"
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "変数名 age を #{} の中に入力します。"],
       "candidates": {
         "variables": ["age"],
         "numbers": ["10"]
@@ -290,12 +260,7 @@ export const rubyData = {
         "# 2番目のデータ（インデックス1）を出す",
         "puts colors[1]"
       ],
-      "lineHints": [
-        null,
-        "赤、青、緑 の順で入力しましょう。",
-        null,
-        "2番目のデータのインデックスは 1 です。"
-      ],
+      "lineHints": [null, "赤、青、緑 の順で入力しましょう。", null, "2番目のデータのインデックスは 1 です。"],
       "candidates": {
         "strings": ["赤", "青", "緑"],
         "numbers": ["0", "1", "2"]
@@ -336,15 +301,7 @@ export const rubyData = {
         "  puts '合格！'",
         "end"
       ],
-      "lineHints": [
-        null,
-        "100 と入力しましょう。",
-        null,
-        "条件分岐のキーワード if を使います。",
-        null,
-        "合格！ と入力しましょう。",
-        null
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "文字列を出力し、最後に改行を加えます。", null],
       "candidates": {
         "keywords": ["if", "unless"],
         "numbers": ["100"],
@@ -376,29 +333,21 @@ export const rubyData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# ageに10を入れる\nage = 10\n# 20歳以上かどうかで分ける\nif age >= 20\n  puts '大人'\nelse\n  # それ以外の場合\n  puts '子供'\nend",
-      "holeyCode": "# ageに10を入れる\nage = ___\n# 20歳以上かどうかで分ける\nif age >= 20\n  puts '___'\n___\n  # それ以外の場合\n  puts '___'\nend",
+      "holeyCode": "# ageに10を入れる\nage = ___\n# 20歳以上かどうかで分ける\nif age >= 20\n  # 大人と表示\n  puts '___'\n# else でそれ以外の場合\n___\n  # それ以外の場合\n  puts '___'\nend",
       "correctLines": [
         "# ageに10を入れる",
         "age = 10",
         "# 20歳以上かどうかで分ける",
         "if age >= 20",
+        "  # 大人と表示",
         "  puts '大人'",
+        "# else でそれ以外の場合",
         "else",
         "  # それ以外の場合",
         "  puts '子供'",
         "end"
       ],
-      "lineHints": [
-        null,
-        "10 と入力しましょう。",
-        null,
-        null,
-        "大人 と入力しましょう。",
-        "else を入力しましょう。",
-        null,
-        "子供 と入力しましょう。",
-        null
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, null, null, "文字列を出力し、最後に改行を加えます。", null, "もし条件が満たされなかった場合に実行する処理を記述します。", null, "文字列を出力し、最後に改行を加えます。", null],
       "candidates": {
         "keywords": ["else", "elsif"],
         "numbers": ["10"],
@@ -430,23 +379,17 @@ export const rubyData = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "# scoreに85を入れる\nscore = 85\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 and score <= 100\n  puts '合格！'\nend",
-      "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 ___ score <= 100\n  puts '___'\nend",
+      "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 ___ score <= 100\n  # 結果を表示\n  puts '___'\nend",
       "correctLines": [
         "# scoreに85を入れる",
         "score = 85",
         "# 80以上 かつ 100以下 ならメッセージを出す",
         "if score >= 80 and score <= 100",
+        "  # 結果を表示",
         "  puts '合格！'",
         "end"
       ],
-      "lineHints": [
-        null,
-        "85 と入力しましょう。",
-        null,
-        "両方の条件を満たすので and を使います。",
-        "合格！ と入力しましょう。",
-        null
-      ],
+      "lineHints": [null, "変数に数値を代入（保存）します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, "文字列を出力し、最後に改行を加えます。", null],
       "candidates": {
         "keywords": ["and", "or"],
         "numbers": ["85"],
@@ -488,15 +431,7 @@ export const rubyData = {
         "  puts name",
         "end"
       ],
-      "lineHints": [
-        null,
-        "太郎、花子 の順で入力しましょう。",
-        null,
-        "each を使います。",
-        null,
-        "ブロック変数 name を入力します。",
-        null
-      ],
+      "lineHints": [null, "太郎、花子 の順で入力しましょう。", null, "each を使います。", null, "ブロック変数 name を入力します。", null],
       "candidates": {
         "methods": ["each", "map"],
         "variables": ["name"],
@@ -535,12 +470,7 @@ export const rubyData = {
         "# キーを指定して値を取り出す",
         "puts fruits['みかん']"
       ],
-      "lineHints": [
-        null,
-        "キーは みかん、値は オレンジ です。",
-        null,
-        "キー みかん を入力します。"
-      ],
+      "lineHints": [null, "キーは みかん、値は オレンジ です。", null, "キー みかん を入力します。"],
       "candidates": {
         "strings": ["みかん", "オレンジ"]
       },
@@ -580,15 +510,7 @@ export const rubyData = {
         "# メソッドを呼び出す",
         "greet"
       ],
-      "lineHints": [
-        null,
-        "def でメソッドを定義します。",
-        null,
-        "こんにちは と入力しましょう。",
-        null,
-        null,
-        "メソッド名 greet を入力して呼び出します。"
-      ],
+      "lineHints": [null, "def でメソッドを定義します。", null, "文字列を出力し、最後に改行を加えます。", null, null, "メソッド名 greet を入力して呼び出します。"],
       "candidates": {
         "keywords": ["def", "end"],
         "methods": ["greet"],

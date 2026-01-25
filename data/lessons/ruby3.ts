@@ -30,10 +30,7 @@ export const ruby3Data = {
         { "lineNumber": 2, "content": "  yield" },
         { "lineNumber": 3, "content": "  yield" }
       ],
-      "lineHints": [
-        { "lineNumber": 2, "hint": "ブロックを呼び出すキーワード" },
-        { "lineNumber": 3, "hint": "もう一度呼び出す" }
-      ],
+      "lineHints": ["lineNumber", "hint", "ブロックを呼び出すキーワード", "lineNumber", "hint", "もう一度呼び出す"],
       "candidates": {
         "2": ["yield", "call", "block", "return"],
         "3": ["yield", "call", "block", "return"]
@@ -65,9 +62,7 @@ export const ruby3Data = {
       "correctLines": [
         { "lineNumber": 1, "content": "doubler = Proc.new { |x| x * 2 }" }
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "ブロックをオブジェクト化するクラスと演算子" }
-      ],
+      "lineHints": ["lineNumber", "hint", "ブロックをオブジェクト化するクラスと演算子"],
       "candidates": {
         "1": ["Proc", "Block", "Lambda", "Function"]
       },
@@ -98,9 +93,7 @@ export const ruby3Data = {
       "correctLines": [
         { "lineNumber": 1, "content": "cube = ->(x) { x ** 3 }" }
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "ラムダのアロー記法と累乗演算子" }
-      ],
+      "lineHints": ["lineNumber", "hint", "ラムダのアロー記法と累乗演算子"],
       "candidates": {
         "1": ["->", "=>", "lambda", "proc"]
       },
@@ -131,9 +124,7 @@ export const ruby3Data = {
       "correctLines": [
         { "lineNumber": 1, "content": "result = ['ruby', 'python', 'go'].map(&:upcase)" }
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "変換メソッドと大文字化メソッド" }
-      ],
+      "lineHints": ["lineNumber", "hint", "変換メソッドと大文字化メソッド"],
       "candidates": {
         "1": ["map", "each", "select", "filter"]
       },
@@ -164,9 +155,7 @@ export const ruby3Data = {
       "correctLines": [
         { "lineNumber": 1, "content": "sum = [1, 2, 3, 4, 5].reduce(0) { |acc, n| acc + n }" }
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "畳み込みメソッドと加算演算子" }
-      ],
+      "lineHints": ["lineNumber", "hint", "複数の値をまとめて格納する配列（またはリスト）を作成します。"],
       "candidates": {
         "1": ["reduce", "fold", "inject", "sum"]
       },
@@ -197,9 +186,7 @@ export const ruby3Data = {
       "correctLines": [
         { "lineNumber": 1, "content": "evens = [1, 2, 3, 4, 5, 6].select { |n| n.even? }" }
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "フィルタリングメソッドと偶数判定メソッド" }
-      ],
+      "lineHints": ["lineNumber", "hint", "複数の値をまとめて格納する配列（またはリスト）を作成します。"],
       "candidates": {
         "1": ["select", "filter", "find_all", "reject"]
       },
@@ -231,10 +218,7 @@ export const ruby3Data = {
         { "lineNumber": 1, "content": "def sum_all(*numbers)" },
         { "lineNumber": 2, "content": "  numbers.reduce(0) { |acc, n| acc + n }" }
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "可変長引数を受け取る演算子" },
-        { "lineNumber": 2, "hint": "畳み込みメソッド" }
-      ],
+      "lineHints": ["lineNumber", "hint", "関数（sum_all）を新しく定義します。", "lineNumber", "hint", "畳み込みメソッド"],
       "candidates": {
         "1": ["*", "**", "&", "..."],
         "2": ["reduce", "sum", "fold", "inject"]
@@ -267,10 +251,7 @@ export const ruby3Data = {
         { "lineNumber": 2, "content": "  def method_missing(name, *args)" },
         { "lineNumber": 3, "content": "    \"Unknown method: #{name}\"" }
       ],
-      "lineHints": [
-        { "lineNumber": 2, "hint": "存在しないメソッドを捕捉する特殊メソッド" },
-        { "lineNumber": 3, "hint": "メソッド名を表す引数" }
-      ],
+      "lineHints": ["lineNumber", "hint", "関数（method_missing）を新しく定義します。", "lineNumber", "hint", "メソッド名を表す引数"],
       "candidates": {
         "2": ["method_missing", "missing_method", "no_method", "undefined"],
         "3": ["name", "method", "args", "self"]
@@ -302,9 +283,7 @@ export const ruby3Data = {
       "correctLines": [
         { "lineNumber": 1, "content": "Person = Struct.new(:name, :age)" }
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "簡易クラスを作成するクラスと属性名" }
-      ],
+      "lineHints": ["lineNumber", "hint", "簡易クラスを作成するクラスと属性名"],
       "candidates": {
         "1": ["Struct", "Class", "Object", "Data"]
       },
@@ -335,9 +314,7 @@ export const ruby3Data = {
       "correctLines": [
         { "lineNumber": 1, "content": "result = [1, 2, 3].tap { |arr| arr.push(4) }" }
       ],
-      "lineHints": [
-        { "lineNumber": 1, "hint": "自身を返すメソッドと要素追加メソッド" }
-      ],
+      "lineHints": ["lineNumber", "hint", "複数の値をまとめて格納する配列（またはリスト）を作成します。"],
       "candidates": {
         "1": ["tap", "then", "yield_self", "itself"]
       },

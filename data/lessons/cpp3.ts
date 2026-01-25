@@ -31,23 +31,15 @@ export const cpp3Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // auto で型を推論",
         "    auto x = 100;",
+        "    // auto で型を推論",
         "    auto y = 2.5;",
         "    cout << x * y << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "auto で型を推論させます。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "auto で型を推論させます。", null, "auto で型を推論させます。", null, null, null],
       "candidates": {
         "keywords": ["auto", "var", "let"]
       },
@@ -84,26 +76,16 @@ export const cpp3Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // vector で配列を作成",
         "    vector<int> nums = {10, 20, 30};",
+        "    // : で範囲for文",
         "    for (int n : nums) {",
         "        cout << n << endl;",
         "    }",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        ": で範囲for文を使います。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "指定された回数や範囲で、繰り返し処理（ループ）を行います。", null, null, null, null],
       "candidates": {
         "operators": [":", "in", "of"]
       },
@@ -139,25 +121,16 @@ export const cpp3Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // nullptr でヌルポインタを設定",
         "    int* p = nullptr;",
+        "    // nullptr と比較",
         "    if (p == nullptr) {",
         "        cout << \"null\" << endl;",
         "    }",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        "nullptr で型安全なヌルを表します。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "型安全なヌルポインタを表すキーワードです。", null, "型安全なヌルポインタを表すキーワードです。", null, null, null, null],
       "candidates": {
         "keywords": ["nullptr", "NULL", "0"]
       },
@@ -192,30 +165,19 @@ export const cpp3Data = {
         "#include <iostream>",
         "using namespace std;",
         "",
+        "// constexpr でコンパイル時計算",
         "constexpr int cube(int x) {",
         "    return x * x * x;",
         "}",
         "",
         "int main() {",
+        "    // constexpr でコンパイル時計算",
         "    constexpr int val = cube(3);",
         "    cout << val << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "constexpr でコンパイル時計算を可能にします。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, "コンパイル時に計算を行うためのキーワードです。", null, null, null, null, null, "コンパイル時に計算を行うためのキーワードです。", null, null, null],
       "candidates": {
         "keywords": ["constexpr", "const", "static"]
       },
@@ -252,24 +214,15 @@ export const cpp3Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // { で初期化子リスト",
         "    vector<int> v{1, 2, 3, 4, 5};",
+        "    // : で範囲for文",
         "    for (int n : v) cout << n << \" \";",
         "    cout << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "{} で初期化します。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "指定された回数や範囲で、繰り返し処理（ループ）を行います。", null, null, null],
       "candidates": {
         "operators": ["{", "(", "["]
       },
@@ -306,22 +259,14 @@ export const cpp3Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // make_shared で共有ポインタを作成",
         "    auto p = make_shared<int>(100);",
+        "    // *p で中身にアクセス",
         "    cout << *p << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "make_shared で共有ポインタを作成します。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "共有所有権のスマートポインタを作成する関数です。", null, "ポインタの中身を参照するための間接参照演算子です。", null, null],
       "candidates": {
         "functions": ["make_shared", "make_unique", "shared_ptr"]
       },
@@ -359,25 +304,15 @@ export const cpp3Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // string で文字列を作成",
         "    string s1 = \"Hello\";",
+        "    // move で所有権を移動",
         "    string s2 = move(s1);",
         "    cout << s2 << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "move で所有権を移動します。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, null, "文字列型の変数を宣言し、文字列データを代入します。", null, "所有権を別の変数に移動させる関数です。", null, null, null],
       "candidates": {
         "functions": ["move", "forward", "swap"]
       },
@@ -414,26 +349,16 @@ export const cpp3Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // optional で値を保持",
         "    optional<int> opt = 42;",
+        "    // has_value で値の有無をチェック",
         "    if (opt.has_value()) {",
         "        cout << opt.value() << endl;",
         "    }",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "has_value で値の有無をチェックします。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "値があるかもしれない状態を表現できる型です。", null, "値が存在するかどうかを確認するメソッドです。", null, null, null, null],
       "candidates": {
         "methods": ["has_value", "empty", "valid"]
       },
@@ -470,24 +395,15 @@ export const cpp3Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // array で固定長配列を定義",
         "    array<int, 3> arr = {10, 20, 30};",
+        "    // : で範囲for文",
         "    for (int n : arr) cout << n << \" \";",
         "    cout << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "array で固定長配列を使います。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "指定された回数や範囲で、繰り返し処理（ループ）を行います。", null, null, null],
       "candidates": {
         "types": ["array", "vector", "list"]
       },
@@ -523,23 +439,15 @@ export const cpp3Data = {
         "using namespace std;",
         "",
         "int main() {",
+        "    // int で変数を宣言",
         "    int x = 5;",
+        "    // x でコピーキャプチャ",
         "    auto f = [x]() { return x * x; };",
         "    cout << f() << endl;",
         "    return 0;",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        "[x] で x をコピーキャプチャします。",
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, null, null, null, null, "整数型の変数を宣言し、初期値を代入します。", null, "変数をコピーしてラムダ内で使えるようにします。", null, null, null],
       "candidates": {
         "captures": ["x", "&x", "="]
       },

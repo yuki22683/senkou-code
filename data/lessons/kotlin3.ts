@@ -42,29 +42,24 @@ export const kotlin3Data = {
       "correctCode": "import kotlinx.coroutines.*\n\nsuspend fun getMessage(): String {\n    delay(100)\n    return \"Hello\"\n}\n\nfun main() = runBlocking {\n    println(getMessage())\n}",
       "holeyCode": "// coroutines をインポートする\nimport kotlinx.coroutines.___\n\n// suspend で一時停止可能な関数にする\n___ fun getMessage(): String {\n    // 100ミリ秒待機する\n    ___(100)\n    // \"Hello\" を返す\n    return \"___\"\n}\n\n// main 関数を定義する\nfun ___() = runBlocking {\n    // getMessage() を出力する\n    ___(getMessage())\n}",
       "correctLines": [
+        "// coroutines をインポートする",
         "import kotlinx.coroutines.*",
         "",
+        "// suspend で一時停止可能な関数にする",
         "suspend fun getMessage(): String {",
+        "    // 100ミリ秒待機する",
         "    delay(100)",
+        "    // \"Hello\" を返す",
         "    return \"Hello\"",
         "}",
         "",
+        "// main 関数を定義する",
         "fun main() = runBlocking {",
+        "    // getMessage() を出力する",
         "    println(getMessage())",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "suspend で一時停止可能な関数にします。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "* でワイルドカードインポートします。", null, null, "suspend で一時停止可能な関数にします。", null, "delay で待機します。", null, "Hello と入力しましょう。", null, null, null, "main と入力しましょう。", null, "println と入力しましょう。", null],
       "candidates": {
         "keywords": ["suspend", "async", "await"]
       },
@@ -111,21 +106,19 @@ export const kotlin3Data = {
       "correctCode": "fun main() {\n    val nums = generateSequence(1) { it * 2 }\n        .take(4)\n        .toList()\n    println(nums)\n}",
       "holeyCode": "// main 関数を定義する\nfun ___() {\n    // generateSequence で無限シーケンスを生成する\n    val nums = ___(1) { it * 2 }\n        // 4つ取得する\n        .take(___)\n        // リストに変換する\n        .___\n    // nums を出力する\n    ___(nums)\n}",
       "correctLines": [
+        "// main 関数を定義する",
         "fun main() {",
+        "    // generateSequence で無限シーケンスを生成する",
         "    val nums = generateSequence(1) { it * 2 }",
+        "        // 4つ取得する",
         "        .take(4)",
+        "        // リストに変換する",
         "        .toList()",
+        "    // nums を出力する",
         "    println(nums)",
         "}"
       ],
-      "lineHints": [
-        null,
-        "generateSequence で無限シーケンスを生成します。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "main と入力しましょう。", null, "generateSequence で無限シーケンスを生成します。", null, "4 と入力しましょう。", null, "toList() と入力しましょう。", null, "println と入力しましょう。", null],
       "candidates": {
         "functions": ["generateSequence", "sequence", "listOf"]
       },
@@ -172,23 +165,19 @@ export const kotlin3Data = {
       "correctCode": "inline fun repeat(times: Int, action: (Int) -> Unit) {\n    for (i in 0 until times) action(i)\n}\n\nfun main() {\n    repeat(3) { println(it) }\n}",
       "holeyCode": "// inline で関数をインライン化する\n___ fun repeat(times: Int, action: (Int) -> Unit) {\n    // 0 から times まで繰り返す\n    for (i in 0 until times) ___(i)\n}\n\n// main 関数を定義する\nfun ___() {\n    // repeat を呼び出す\n    ___(3) { println(it) }\n}",
       "correctLines": [
+        "// inline で関数をインライン化する",
         "inline fun repeat(times: Int, action: (Int) -> Unit) {",
+        "    // 0 から times まで繰り返す",
         "    for (i in 0 until times) action(i)",
         "}",
         "",
+        "// main 関数を定義する",
         "fun main() {",
+        "    // repeat を呼び出す",
         "    repeat(3) { println(it) }",
         "}"
       ],
-      "lineHints": [
-        "inline で関数をインライン化します。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "inline で関数をインライン化します。", null, "指定された回数や範囲で、繰り返し処理（ループ）を行います。", null, null, null, "main と入力しましょう。", null, "repeat と入力しましょう。", null],
       "candidates": {
         "keywords": ["inline", "noinline", "crossinline"]
       },
@@ -235,25 +224,21 @@ export const kotlin3Data = {
       "correctCode": "inline fun <reified T> checkType(value: Any): Boolean {\n    return value is T\n}\n\nfun main() {\n    println(checkType<String>(\"test\"))\n    println(checkType<Int>(\"test\"))\n}",
       "holeyCode": "// reified で実行時に型情報を使う\ninline fun <___ T> checkType(value: Any): Boolean {\n    // value が T 型かチェックする\n    return value ___ T\n}\n\n// main 関数を定義する\nfun ___() {\n    // String 型かチェックする\n    println(checkType<___>(\"test\"))\n    // Int 型かチェックする\n    println(checkType<___>(\"test\"))\n}",
       "correctLines": [
+        "// reified で実行時に型情報を使う",
         "inline fun <reified T> checkType(value: Any): Boolean {",
+        "    // value が T 型かチェックする",
         "    return value is T",
         "}",
         "",
+        "// main 関数を定義する",
         "fun main() {",
+        "    // String 型かチェックする",
         "    println(checkType<String>(\"test\"))",
+        "    // Int 型かチェックする",
         "    println(checkType<Int>(\"test\"))",
         "}"
       ],
-      "lineHints": [
-        "reified で実行時に型情報を使えます。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "reified で実行時に型情報を使えます。", null, "is と入力しましょう。", null, null, null, "main と入力しましょう。", null, "String と入力しましょう。", null, "Int と入力しましょう。", null],
       "candidates": {
         "keywords": ["reified", "inline", "generic"]
       },
@@ -298,29 +283,25 @@ export const kotlin3Data = {
       ],
       "initialDisplayMode": "holey",
       "correctCode": "data class Config(var host: String = \"\", var port: Int = 0)\n\nfun main() {\n    val cfg = Config().apply {\n        // hostに\"localhost\"、portに8080を設定\n        host = \"localhost\"\n        port = 8080\n    }\n    println(cfg)\n}",
-      "holeyCode": "// data class を定義する\n___ class Config(var host: String = \"\", var port: Int = 0)\n\n// main 関数を定義する\nfun ___() {\n    // apply で設定してオブジェクトを返す\n    val cfg = Config().___ {\n        // hostに\"localhost\"、portに8080を設定\n        host = \"___\"\n        port = ___\n    }\n    // cfg を出力する\n    ___(cfg)\n}",
+      "holeyCode": "// data class を定義する\n___ class Config(var host: String = \"\", var port: Int = 0)\n\n// main 関数を定義する\nfun ___() {\n    // apply で設定してオブジェクトを返す\n    val cfg = Config().___ {\n        // hostを設定する\n        host = \"___\"\n        // portを設定する\n        port = ___\n    }\n    // cfg を出力する\n    ___(cfg)\n}",
       "correctLines": [
+        "// data class を定義する",
         "data class Config(var host: String = \"\", var port: Int = 0)",
         "",
+        "// main 関数を定義する",
         "fun main() {",
+        "    // apply で設定してオブジェクトを返す",
         "    val cfg = Config().apply {",
+        "        // hostを設定する",
         "        host = \"localhost\"",
+        "        // portを設定する",
         "        port = 8080",
         "    }",
+        "    // cfg を出力する",
         "    println(cfg)",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        null,
-        "apply で設定してオブジェクトを返します。",
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "data で data class を定義します。", null, null, "main と入力しましょう。", null, "apply で設定してオブジェクトを返します。", null, "localhost と入力しましょう。", null, "変数に数値を代入（保存）します。", null, null, "println で出力します。", null],
       "candidates": {
         "methods": ["apply", "also", "run"]
       },
@@ -367,21 +348,18 @@ export const kotlin3Data = {
       "correctCode": "fun main() {\n    val num = 42.also {\n        println(\"Value: $it\")\n    }\n    println(num)\n}",
       "holeyCode": "// main 関数を定義する\nfun ___() {\n    // also で副作用を実行してオブジェクトを返す\n    val num = ___.___ {\n        // 値を出力する\n        println(\"Value: $___\")\n    }\n    // num を出力する\n    ___(num)\n}",
       "correctLines": [
+        "// main 関数を定義する",
         "fun main() {",
+        "    // also で副作用を実行してオブジェクトを返す",
         "    val num = 42.also {",
+        "        // 値を出力する",
         "        println(\"Value: $it\")",
         "    }",
+        "    // num を出力する",
         "    println(num)",
         "}"
       ],
-      "lineHints": [
-        null,
-        "also で副作用を実行してオブジェクトを返します。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "main と入力しましょう。", null, "also で副作用を実行してオブジェクトを返します。", null, "it と入力しましょう。", null, null, "println と入力しましょう。", null],
       "candidates": {
         "methods": ["also", "apply", "let"]
       },
@@ -428,21 +406,18 @@ export const kotlin3Data = {
       "correctCode": "fun main() {\n    val result = \"Hello World\".run {\n        split(\" \").size\n    }\n    println(result)\n}",
       "holeyCode": "// main 関数を定義する\nfun ___() {\n    // run でブロックを実行して結果を返す\n    val result = \"Hello World\".___ {\n        // スペースで分割してサイズを取得する\n        split(\"___\").___\n    }\n    // result を出力する\n    ___(result)\n}",
       "correctLines": [
+        "// main 関数を定義する",
         "fun main() {",
+        "    // run でブロックを実行して結果を返す",
         "    val result = \"Hello World\".run {",
+        "        // スペースで分割してサイズを取得する",
         "        split(\" \").size",
         "    }",
+        "    // result を出力する",
         "    println(result)",
         "}"
       ],
-      "lineHints": [
-        null,
-        "run でブロックを実行して結果を返します。",
-        null,
-        null,
-        null,
-        null
-      ],
+      "lineHints": [null, "main と入力しましょう。", null, "run でブロックを実行して結果を返します。", null, "スペース1文字を入力しましょう。", null, null, "println と入力しましょう。", null],
       "candidates": {
         "methods": ["run", "let", "with"]
       },
@@ -489,17 +464,15 @@ export const kotlin3Data = {
       "correctCode": "fun main() {\n    val num = 10.takeIf { it > 5 }\n    println(num)\n}",
       "holeyCode": "// main 関数を定義する\nfun ___() {\n    // takeIf で条件を満たせば値を返す\n    val num = ___.___ { it > 5 }\n    // num を出力する\n    ___(num)\n}",
       "correctLines": [
+        "// main 関数を定義する",
         "fun main() {",
+        "    // takeIf で条件を満たせば値を返す",
         "    val num = 10.takeIf { it > 5 }",
+        "    // num を出力する",
         "    println(num)",
         "}"
       ],
-      "lineHints": [
-        null,
-        "takeIf で条件を満たせば値を返します。",
-        null,
-        null
-      ],
+      "lineHints": [null, "main と入力しましょう。", null, "takeIf で条件を満たせば値を返します。", null, "println と入力しましょう。", null],
       "candidates": {
         "methods": ["takeIf", "takeUnless", "filter"]
       },
@@ -546,19 +519,17 @@ export const kotlin3Data = {
       "correctCode": "fun main() {\n    val nums = listOf(1, 2, 3, 4, 5)\n    val grouped = nums.groupBy { it % 2 }\n    println(grouped)\n}",
       "holeyCode": "// main 関数を定義する\nfun ___() {\n    // listOf でリストを作成する\n    val nums = ___(1, 2, 3, 4, 5)\n    // groupBy でグループ化する\n    val grouped = nums.___ { it % 2 }\n    // grouped を出力する\n    ___(grouped)\n}",
       "correctLines": [
+        "// main 関数を定義する",
         "fun main() {",
+        "    // listOf でリストを作成する",
         "    val nums = listOf(1, 2, 3, 4, 5)",
+        "    // groupBy でグループ化する",
         "    val grouped = nums.groupBy { it % 2 }",
+        "    // grouped を出力する",
         "    println(grouped)",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "groupBy でグループ化します。",
-        null,
-        null
-      ],
+      "lineHints": [null, "main と入力しましょう。", null, "listOf と入力しましょう。", null, "groupBy でグループ化します。", null, "println と入力しましょう。", null],
       "candidates": {
         "methods": ["groupBy", "partition", "associate"]
       },
@@ -605,19 +576,17 @@ export const kotlin3Data = {
       "correctCode": "fun main() {\n    // listOf でリスト(1, 2, 3, 4)を作成する\n    val nums = listOf(1, 2, 3, 4)\n    val product = nums.fold(1) { acc, n -> acc * n }\n    println(product)\n}",
       "holeyCode": "// main 関数を定義する\nfun ___() {\n    // listOf でリスト(1, 2, 3, 4)を作成する\n    val nums = ___(1, 2, 3, 4)\n    // fold で畳み込む\n    val product = nums.___(1) { acc, n -> acc * n }\n    // product を出力する\n    ___(product)\n}",
       "correctLines": [
+        "// main 関数を定義する",
         "fun main() {",
+        "    // listOf でリスト(1, 2, 3, 4)を作成する",
         "    val nums = listOf(1, 2, 3, 4)",
+        "    // fold で畳み込む",
         "    val product = nums.fold(1) { acc, n -> acc * n }",
+        "    // product を出力する",
         "    println(product)",
         "}"
       ],
-      "lineHints": [
-        null,
-        null,
-        "fold で畳み込みます。",
-        null,
-        null
-      ],
+      "lineHints": [null, "main と入力しましょう。", null, "listOf と入力しましょう。", null, "fold で畳み込みます。", null, "println と入力しましょう。", null],
       "candidates": {
         "methods": ["fold", "reduce", "aggregate"]
       },

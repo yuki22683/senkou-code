@@ -30,6 +30,7 @@ export const c4Data = {
         "#include <stdio.h>",
         "",
         "int main() {",
+        "    // fopen でファイルを開く",
         "    FILE *fp = fopen(\"test.txt\", \"w\");",
         "    if (fp != NULL) {",
         "        fprintf(fp, \"Hello\\n\");",
@@ -40,6 +41,7 @@ export const c4Data = {
         "}"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -89,6 +91,7 @@ export const c4Data = {
         "    FILE *fp = fopen(\"data.txt\", \"w\");",
         "    if (fp != NULL) {",
         "        fputs(\"Data\\n\", fp);",
+        "        // fclose でファイルを閉じる",
         "        fclose(fp);",
         "        printf(\"Closed\\n\");",
         "    }",
@@ -96,6 +99,7 @@ export const c4Data = {
         "}"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -144,6 +148,7 @@ export const c4Data = {
         "int main() {",
         "    FILE *fp = fopen(\"log.txt\", \"w\");",
         "    if (fp != NULL) {",
+        "        // fprintf でファイルに書き込む",
         "        fprintf(fp, \"Score: %d\\n\", 100);",
         "        fclose(fp);",
         "        printf(\"Written\\n\");",
@@ -152,6 +157,7 @@ export const c4Data = {
         "}"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -204,6 +210,7 @@ export const c4Data = {
         "    fprintf(fp, \"Hello World\\n\");",
         "    fclose(fp);",
         "    fp = fopen(\"test.txt\", \"r\");",
+        "    // fgets で1行読み込む",
         "    fgets(line, sizeof(line), fp);",
         "    line[strcspn(line, \"\\n\")] = 0;",
         "    printf(\"%s\\n\", line);",
@@ -212,6 +219,7 @@ export const c4Data = {
         "}"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -264,6 +272,7 @@ export const c4Data = {
         "int main() {",
         "    FILE *fp = fopen(\"pos.txt\", \"w+\");",
         "    fputs(\"ABCDEFGHIJ\", fp);",
+        "    // fseek でファイル位置を移動",
         "    fseek(fp, 0, SEEK_SET);",
         "    printf(\"%c\\n\", fgetc(fp));",
         "    fclose(fp);",
@@ -271,6 +280,7 @@ export const c4Data = {
         "}"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -319,6 +329,7 @@ export const c4Data = {
         "    FILE *fp = fopen(\"size.txt\", \"w+\");",
         "    fputs(\"12345\", fp);",
         "    fseek(fp, 0, SEEK_END);",
+        "    // ftell で現在位置を取得",
         "    long size = ftell(fp);",
         "    printf(\"%ld\\n\", size);",
         "    fclose(fp);",
@@ -326,6 +337,7 @@ export const c4Data = {
         "}"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -371,6 +383,7 @@ export const c4Data = {
       "correctLines": [
         "#include <stdio.h>",
         "",
+        "// enum で列挙型を定義",
         "enum Day { MON, TUE, WED, THU, FRI };",
         "",
         "int main() {",
@@ -380,6 +393,7 @@ export const c4Data = {
         "}"
       ],
       "lineHints": [
+        null,
         null,
         null,
         "enum で列挙型を定義します。",
@@ -423,6 +437,7 @@ export const c4Data = {
       "correctLines": [
         "#include <stdio.h>",
         "",
+        "// union で共用体を定義",
         "union Value {",
         "    int i;",
         "    double d;",
@@ -436,6 +451,7 @@ export const c4Data = {
         "}"
       ],
       "lineHints": [
+        null,
         null,
         null,
         "union で共用体を定義します。",
@@ -486,12 +502,14 @@ export const c4Data = {
         "int main() {",
         "    int x = 100;",
         "    int *p = &x;",
+        "    // ** で二重ポインタを宣言",
         "    int **pp = &p;",
         "    printf(\"%d\\n\", **pp);",
         "    return 0;",
         "}"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
@@ -538,6 +556,7 @@ export const c4Data = {
         "",
         "int sum(int count, ...) {",
         "    va_list args;",
+        "    // va_start で可変長引数を初期化",
         "    va_start(args, count);",
         "    int total = 0;",
         "    for (int i = 0; i < count; i++) {",
@@ -553,6 +572,7 @@ export const c4Data = {
         "}"
       ],
       "lineHints": [
+        null,
         null,
         null,
         null,
