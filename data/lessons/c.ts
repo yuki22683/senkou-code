@@ -14,7 +14,7 @@ export const cData = {
       "tutorialSlides": [
         {
           "title": "C言語とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/c_intro_rubber.png",
           "content": "# すべての言語の「お父さん」\n\nC言語（シーげんご）は、今から50年以上前に作られたとても歴史（れきし）のあるプログラミング言語です。\n\n**身近な例え：**\nC言語は「プログラミング言語の家系図」でいうと、一番上のご先祖様のような存在です！\n\n今のスマホやパソコンを動かしている「OS（オーエス）」という、コンピュータの「脳みそ」のような大事な部分は、ほとんどこのC言語で作られています。\n\nまさに、コンピュータ界の「お父さん」のような存在です！"
         },
         {
