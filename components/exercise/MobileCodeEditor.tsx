@@ -60,6 +60,15 @@ const normalizeCode = (str: string, language: string) => {
     normalized = normalized.replace(keywordParenRegex, '$1(');
   }
 
+  // === スペース任意: 識別子と(の間（関数呼び出し・定義） ===
+  normalized = normalized.replace(/([a-zA-Z_][a-zA-Z0-9_]*)\s+\(/g, "$1(");
+
+  // === スペース任意: 閉じ括弧と波括弧の間 ===
+  normalized = normalized.replace(/\)\s+\{/g, "){");
+
+  // === スペース任意: 波括弧の前のスペース ===
+  normalized = normalized.replace(/\s+\{/g, "{");
+
   // === スペース任意: 演算子の周り ===
   // 複数文字の演算子を先に処理
   normalized = normalized.replace(/\s*(==|!=|<=|>=|<>|->|=>|&&|\|\||\+=|-=|\*=|\/=|%=|&=|\|=|\^=|<<|>>)\s*/g, "$1");
@@ -71,8 +80,7 @@ const normalizeCode = (str: string, language: string) => {
   normalized = normalized.replace(/\s*,\s*/g, ",");
   normalized = normalized.replace(/\s*\.\s*/g, ".");
 
-  // === スペースNG: 括弧周りはそのまま保持 ===
-  // 関数呼び出し: identifier( の間のスペースは正規化しない（スペースあると不正解）
+  // === スペースNG: 括弧内部などはそのまま保持 ===
   // 括弧内部: ( の直後、) の直前のスペースも正規化しない（スペースあると不正解）
   // 配列: [ ] も同様
   // → これらは何もしないことで、スペースがあれば不一致になる
@@ -80,7 +88,7 @@ const normalizeCode = (str: string, language: string) => {
   // === 引用符の正規化 ===
   normalized = normalized.replace(/['"]/g, '"');
 
-  return leading + normalized;
+  return leading + normalized.trim();
 };
 
 // 編集対象の行かどうかを判定するヘルパー関数
