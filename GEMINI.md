@@ -95,6 +95,10 @@ To prevent the recurrence of incomplete or non-functional exercises, the followi
 
 7.  **Database Seeding:** After any modification to lesson files (`data/lessons/*.ts`), you must run `npm run seed:db` to apply the changes to the database.
 
+8.  **Regex Safety:** When using regular expressions in code (especially in `replace` tools or script logic), ensure special characters like `]`, `-`, and `\` are correctly escaped within character classes `[]`. Always verify the code's syntactical correctness after modification.
+
+9.  **Language-Aware Normalization:** Code normalization must respect the specific syntax and conventions of each programming language. For example, in C-style languages, distinguish between "keywords" (where spaces after them may be optional) and "identifiers/functions" (where spacing rules may be strict). Do not apply generic, language-agnostic space-stripping logic that could break these rules.
+
 # CLAUDE.md - プロジェクトルール
 
 ## 修正ミス発生時のルール
