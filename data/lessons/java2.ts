@@ -14,12 +14,12 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "継承（けいしょう）とは？",
-          "image": "/illustrations/3d_advanced/inheritance.png",
+          "image": "/illustrations/common/hierarchy_tree.png",
           "content": "# クラスを拡張（かくちょう）する\n\n**継承（けいしょう）** とは、すでにあるクラス（親クラス）の機能（きのう）を引き継いで新しいクラス（子クラス）を作る仕組みです。\n\n**たとえ話：** 親から子へ「目の色」や「髪の色」が受け継がれるように、プログラムでも親クラスの機能が子クラスに受け継がれます。\n\n`extends`（エクステンズ＝拡張する）というキーワードを使います。\n\n```java\nclass Animal {  // 親クラス（動物）\n    void eat() { System.out.println(\"食べる\"); }\n}\n\nclass Dog extends Animal {  // 子クラス（犬）はAnimalを継承\n    void bark() { System.out.println(\"ワン！\"); }\n}\n```"
         },
         {
           "title": "親クラスの機能を使う",
-          "image": "/illustrations/3d_advanced/inheritance_features.png",
+          "image": "/illustrations/common/hierarchy_tree.png",
           "content": "# 継承した機能\n\n子クラスは親クラスのメソッドをそのまま使えます。犬（Dog）は動物（Animal）なので、「食べる」ことができますね！\n\n**コード例：**\n```java\nDog dog = new Dog();  // 犬を作る\ndog.eat();   // 親のメソッド → 「食べる」\ndog.bark();  // 自分のメソッド → 「ワン！」\n```\n\n**ポイント：** 子クラスは親の機能＋自分だけの機能を持てます。Dogは「食べる」も「ほえる」もできます！"
         }
       ],
@@ -68,12 +68,12 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "オーバーライドとは？",
-          "image": "/illustrations/3d_advanced/inheritance.png",
+          "image": "/illustrations/common/hierarchy_tree.png",
           "content": "# メソッドを上書き（うわがき）\n\n**オーバーライド** とは、親クラスのメソッドを子クラスで書き換えることです。\n\n**たとえ話：** 動物は「音を出す」ことができますが、犬は「ワン！」、猫は「ニャー」と、動物の種類によって音が違いますよね。オーバーライドを使えば、子クラスごとに違う動きを定義できます。\n\n```java\nclass Animal {\n    void sound() { System.out.println(\"音\"); }\n}\n\nclass Cat extends Animal {\n    @Override  // ←「上書きするよ」という印\n    void sound() { System.out.println(\"ニャー\"); }\n}\n```"
         },
         {
           "title": "@Override アノテーション",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/hierarchy_tree.png",
           "content": "# 明示的（めいじてき）に宣言\n\n`@Override`（アット・オーバーライド）は「このメソッドは親のメソッドを上書きしますよ」という印（しるし）です。\n\n**アノテーション** とは、プログラムに追加情報を与える「ふせん」のようなものです。\n\n**なぜ使うの？**\n- 間違いを防げます（スペルミスがあるとエラーで教えてくれる）\n- コードが読みやすくなります\n\n```java\nclass Cat extends Animal {\n    @Override  // 「これは上書きです」と宣言\n    void sound() {  // 親と同じメソッド名\n        System.out.println(\"ニャー\");\n    }\n}\n```"
         }
       ],
@@ -123,12 +123,12 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "インターフェースとは？",
-          "image": "/illustrations/3d_advanced/interface_blueprint.png",
+          "image": "/illustrations/common/shield_private.png",
           "content": "# 契約（けいやく）を定義する\n\n**インターフェース** とは、クラスが持つべきメソッドの「約束事（やくそくごと）」を定義したものです。\n\n**たとえ話：** 「運転免許を持っている人は車を運転できる」という約束のようなものです。免許を持っている（implements）なら、運転できる（メソッドを持っている）ことが保証されます。\n\n`implements`（インプリメンツ＝実装する）で約束を守ります。\n\n```java\ninterface Drawable {  // 「描ける」という約束\n    void draw();  // このメソッドを持つこと！\n}\n\nclass Square implements Drawable {  // 約束を守ります！\n    public void draw() {  // 約束通りのメソッドを実装\n        System.out.println(\"四角形\");\n    }\n}\n```"
         },
         {
           "title": "複数のインターフェース",
-          "image": "/illustrations/3d_advanced/interface_blueprint.png",
+          "image": "/illustrations/common/shield_private.png",
           "content": "# 複数実装（じっそう）できる\n\nクラスは複数のインターフェースを実装できます。\n\n**たとえ話：** 一人の人が「運転免許」と「調理師免許」の両方を持てるように、クラスも複数の約束を守ることができます。\n\n```java\ninterface A { void a(); }  // 約束A\ninterface B { void b(); }  // 約束B\n\nclass C implements A, B {  // 両方の約束を守る\n    public void a() { }  // 約束Aを実装\n    public void b() { }  // 約束Bを実装\n}\n```\n\n**ポイント：** 継承（extends）は1つだけですが、インターフェース（implements）は何個でもOKです！"
         }
       ],
@@ -175,12 +175,12 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "抽象（ちゅうしょう）クラスとは？",
-          "image": "/illustrations/3d_advanced/class_to_instance.png",
+          "image": "/illustrations/common/hierarchy_tree.png",
           "content": "# 未完成の設計図（せっけいず）\n\n**抽象クラス** は、`abstract`（アブストラクト＝抽象的な）をつけた「未完成のクラス」です。\n\n**たとえ話：** 「動物」は存在しますが、実際には「犬」「猫」「鳥」など具体的な動物がいますよね。「動物」自体を作ることはできないけど、「動物としての共通点」は定義できます。それが抽象クラスです。\n\n- 直接 new で作れない（実体がない）\n- 子クラスで完成させる\n\n```java\nabstract class Animal {  // 抽象クラス\n    abstract void sound();  // 「音を出す」は未定義\n    void sleep() { System.out.println(\"Zzz\"); }  // 「寝る」は定義済み\n}\n```"
         },
         {
           "title": "抽象メソッド",
-          "image": "/illustrations/3d_advanced/class_to_instance.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 子クラスで実装必須（ひっす）\n\n**抽象メソッド** は中身のないメソッドです。子クラスで**必ず**実装しなければなりません。\n\n**たとえ話：** 「動物は音を出す」というルールだけ決めておいて、「どんな音か」は犬や猫に任せる、という感じです。\n\n```java\nclass Dog extends Animal {\n    void sound() {  // 必ず実装する！\n        System.out.println(\"ワン！\");\n    }\n}\n```\n\n**インターフェースとの違い：**\n- インターフェース：全部が約束（実装なし）\n- 抽象クラス：一部は完成、一部は約束"
         }
       ],
@@ -232,7 +232,7 @@ export const javaData2 = {
         },
         {
           "title": "try-catchで対処",
-          "image": "/illustrations/3d_advanced/safety_net.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# エラーをキャッチ\n\n**try-catch**（トライ・キャッチ）を使うと、例外をキャッチ（捕まえる）して対処できます。\n\n**たとえ話：** サーカスの網のように、落ちてきた（例外が起きた）ときに受け止めてくれます。\n\n```java\ntry {  // 「試してみる」ブロック\n    int result = 10 / 0;  // 0で割ると例外！\n} catch (Exception e) {  // 「捕まえる」ブロック\n    System.out.println(\"エラー発生\");  // 対処する\n}\n```\n\n**ポイント：** try の中で問題が起きたら、catch の中が実行されます"
         }
       ],
@@ -271,12 +271,12 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "finally（ファイナリー）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 必ず実行される\n\n`finally`（ファイナリー＝最後に）ブロックは、例外が起きても起きなくても**必ず**実行されます。\n\n**たとえ話：** 料理が成功しても失敗しても、最後は必ずキッチンを片付けますよね。それが finally です。\n\n```java\ntry {\n    // 処理（うまくいくかも、失敗するかも）\n} catch (Exception e) {\n    // エラー処理（失敗したときだけ）\n} finally {\n    // 必ず実行（成功でも失敗でも）\n}\n```"
         },
         {
           "title": "リソースの解放に",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 後片付け処理\n\nファイルを閉じる、接続（せつぞく）を切断（せつだん）するなどの後片付けに使います。\n\n**たとえ話：** 本を読み終わったら本棚に戻す、電気を使ったら消す、というように「終わったら必ずやること」を書きます。\n\n```java\ntry {\n    // ファイルを開いて操作する\n} finally {\n    // ファイルを閉じる（必ず実行）\n    System.out.println(\"Clean up\");\n}\n```\n\n**ポイント：** finally があれば、エラーが起きても後片付けを忘れません！"
         }
       ],
@@ -317,12 +317,12 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "ArrayList（アレイリスト）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/ruler_measure.png",
           "content": "# 可変長（かへんちょう）の配列\n\n**ArrayList** は、サイズを自由に変えられるリストです。\n\n**たとえ話：** 普通の配列は「固定サイズの本棚」で、本の数が決まっています。でもArrayListは「伸び縮みする本棚」で、本を増やしたり減らしたりできます！\n\n```java\nimport java.util.ArrayList;  // 道具を準備\n\nArrayList<String> list = new ArrayList<>();  // リストを作る\nlist.add(\"Apple\");   // リンゴを追加\nlist.add(\"Banana\");  // バナナを追加\n// 好きなだけ追加できる！\n```"
         },
         {
           "title": "基本操作（きほんそうさ）",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 追加・取得・削除\n\nArrayListでよく使うメソッドを覚えましょう！\n\n```java\nArrayList<Integer> nums = new ArrayList<>();\nnums.add(10);       // 追加 → [10]\nnums.add(20);       // 追加 → [10, 20]\nnums.get(0);        // 取得 → 10（0番目を取り出す）\nnums.remove(0);     // 削除 → [20]（0番目を消す）\nnums.size();        // サイズ → 1（今何個あるか）\n```\n\n**覚え方：**\n- `add`（アド）= 追加する\n- `get`（ゲット）= 取得する\n- `remove`（リムーブ）= 削除する\n- `size`（サイズ）= 大きさ"
         }
       ],
@@ -369,7 +369,7 @@ export const javaData2 = {
         },
         {
           "title": "ArrayListでも使える",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/abacus.png",
           "content": "# コレクションを処理\n\n拡張for文は ArrayList（アレイリスト）でも同じように使えます！\n\n```java\nArrayList<String> items = new ArrayList<>();\nitems.add(\"A\");\nitems.add(\"B\");\n\nfor (String item : items) {  // itemsの中の各itemについて\n    System.out.println(item);  // A, B が順番に表示\n}\n```\n\n**ポイント：** 配列でもArrayListでも、書き方は同じです。便利ですね！"
         }
       ],
@@ -408,12 +408,12 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "static（スタティック）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/abacus.png",
           "content": "# クラスに属するメソッド\n\n**static**（スタティック＝静的な）メソッドは、インスタンス（実体）を作らなくても呼び出せるメソッドです。\n\n**たとえ話：** 普通のメソッドは「犬を飼ってから、その犬にお座りさせる」イメージ。staticメソッドは「犬を飼わなくても使える共通の技」のようなものです。\n\n```java\nclass Math {\n    static int add(int a, int b) {  // staticメソッド\n        return a + b;\n    }\n}\n\nMath.add(3, 5);  // newしなくても呼べる！→ 8\n```"
         },
         {
           "title": "staticの特徴（とくちょう）",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/abacus.png",
           "content": "# ユーティリティに便利\n\n**ユーティリティ**（便利ツール）をまとめるのに使います。みんなで共有する道具箱のようなものです。\n\n```java\nclass Utils {\n    static String upper(String s) {  // 大文字に変換\n        return s.toUpperCase();\n    }\n}\n\nUtils.upper(\"hello\");  // \"HELLO\"\n```\n\n**いつ使う？**\n- 計算だけするメソッド（足し算、引き算など）\n- 文字列を変換するメソッド\n- 共通で使う便利機能"
         }
       ],
@@ -457,12 +457,12 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "アクセス修飾子（しゅうしょくし）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/shield_private.png",
           "content": "# 公開範囲（こうかいはんい）を制御\n\n**アクセス修飾子** は、「誰がこのデータを見れるか」を決めるキーワードです。\n\n**たとえ話：** 日記帳には「自分だけの秘密」があって、友達には見せませんよね。プログラムでも「見せていい情報」と「秘密にしたい情報」を分けられます。\n\n- `public`（パブリック）: 誰でもアクセスOK\n- `private`（プライベート）: 自分のクラスだけ\n- `protected`（プロテクテッド）: 子クラスもOK\n\n```java\nclass User {\n    public String name;   // 誰でも見れる\n    private int id;       // 秘密！\n}\n```"
         },
         {
           "title": "カプセル化（かぷせるか）",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/shield_private.png",
           "content": "# データを守る\n\n**カプセル化** とは、大事なデータを `private` で隠して、メソッド経由でアクセスする方法です。\n\n**たとえ話：** 銀行口座の残高は直接変更できません。必ず「入金」「出金」という手続き（メソッド）を通しますよね。それがカプセル化です。\n\n```java\nclass User {\n    private String name;  // 直接触れないようにする\n    \n    public String getName() {  // 取得用のメソッド\n        return name;\n    }\n}\n```\n\n**メリット：** データを勝手に変更されるのを防げます"
         }
       ],

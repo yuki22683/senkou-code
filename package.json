@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "audit:lessons": "tsx scripts/audit-lessons.ts",
     "seed:db": "tsx scripts/seed-database.ts",
     "seed:python": "tsx scripts/seed-python-only.ts"
   },

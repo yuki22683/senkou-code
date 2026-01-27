@@ -14,12 +14,12 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "複数の戻り値（もどりち）",
-          "image": "/illustrations/3d/return.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# 関数から2つ以上の結果を返す\n\n普通の関数は結果を1つだけ返しますが、Go言語では **2つ以上の値** を同時に返すことができます！\n\n**たとえば：**\n- わり算の「答え」と「あまり」を同時に返す\n- 「結果」と「うまくいったかどうか」を同時に返す\n\nこれは他の言語にはあまりない、Go言語の便利な機能です。"
         },
         {
           "title": "戻り値の書き方",
-          "image": "/illustrations/3d/return.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# カッコで複数の型を指定\n\n戻り値（もどりち）の型を `(型1, 型2)` のように、かっこで囲んで書きます。\n\n**コード例：**\n```go\n// わり算の答えとあまりを両方返す関数\nfunc divide(a, b int) (int, int) {\n    return a / b, a % b  // 2つの値を返す\n}\n\n// 2つの変数で受け取る\nq, r := divide(10, 3)\n// q=3（答え）, r=1（あまり）\n```\n\n**ポイント：**\n- `return` のあとにカンマで区切って複数の値を書く\n- 受け取るときもカンマで区切った変数で受ける"
         }
       ],
@@ -62,12 +62,12 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "エラーを返す",
-          "image": "/illustrations/3d_advanced/safety_net.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# error（エラー）型で問題を伝える\n\nプログラムは時々うまくいかないことがあります。Go言語では、問題が起きたことを `error`（エラー）型で伝えます。\n\n**たとえば：**\n- ファイルが見つからない\n- 0で割り算しようとした\n- ネットワークがつながらない\n\n**Go言語のルール：**\n- 問題がなければ `nil`（ニル＝「何もない」という意味）を返す\n- 問題があれば `error` を返す\n\n`nil` は「空っぽ」「何もない」という特別な値です。"
         },
         {
           "title": "エラーのチェック",
-          "image": "/illustrations/3d_advanced/safety_net.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# エラーがあるかどうか確認しよう\n\n関数を呼んだあと、エラーが起きていないかチェックするのがGo言語の作法です。\n\n**コード例：**\n```go\n// 結果とエラーの両方を受け取る\nresult, err := someFunc()\n\n// err が nil じゃなければエラーが起きている\nif err != nil {\n    fmt.Println(\"エラーが起きました！\")\n}\n```\n\n**チェックの流れ：**\n1. 関数から「結果」と「エラー」を受け取る\n2. `err != nil` でエラーがあるか確認\n3. エラーがあれば対処、なければ続行"
         }
       ],
@@ -117,12 +117,12 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "ポインタとは？",
-          "image": "/illustrations/3d_advanced/pointer_arrow.png",
+          "image": "/illustrations/common/compass_path.png",
           "content": "# 変数の「住所」を覚えておく\n\n**ポインタ** は、変数がコンピュータのどこに保存されているかを指し示す「住所」のようなものです。\n\n**たとえるなら：**\n- 変数 = 家\n- ポインタ = その家の住所\n\n住所を知っていれば、直接その家に行って中身を変えることができます。\n\n**2つの記号：**\n- `&`（アンパサンド）：変数の「住所」を取得\n- `*`（アスタリスク）：住所を使って「中身」にアクセス"
         },
         {
           "title": "ポインタの使い方",
-          "image": "/illustrations/3d_advanced/pointer_arrow.png",
+          "image": "/illustrations/common/compass_path.png",
           "content": "# & と * の使い分け\n\n`&` は「住所を調べる」、`*` は「住所を使って中身を見る・変える」という意味です。\n\n**コード例：**\n```go\nx := 10      // x という変数に 10 を入れる\np := &x      // p に x の住所を入れる\n*p = 20      // 住所を使って中身を 20 に変更\nfmt.Println(x)  // 20 が表示される！\n```\n\n**なぜ便利？**\n- 関数に変数を渡すとき、コピーではなく本体を渡せる\n- 大きなデータをコピーせずに扱える\n- 「中身を変更できる」関数が作れる"
         }
       ],
@@ -160,12 +160,12 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "構造体（こうぞうたい）とは？",
-          "image": "/illustrations/3d_advanced/class_template.png",
+          "image": "/illustrations/common/compass_path.png",
           "content": "# いくつかのデータをまとめる「設計図」\n\n**構造体（struct・ストラクト）** は、関係のあるデータをひとまとめにする仕組みです。\n\n**たとえば「人」のデータ：**\n- 名前（Name）\n- 年齢（Age）\n- 身長（Height）\n\nこれらをバラバラに管理するのは大変です。構造体を使えば「人」という1つの入れ物にまとめられます。\n\n**イメージ：**\n構造体は「データの設計図」のようなもの。どんな情報を持つかを決めておきます。"
         },
         {
           "title": "struct の定義のしかた",
-          "image": "/illustrations/3d_advanced/class_template.png",
+          "image": "/illustrations/common/compass_path.png",
           "content": "# type で新しい型を作る\n\n`type 名前 struct { }` で構造体を定義します。中にはフィールド（項目）を書きます。\n\n**コード例：**\n```go\n// Person という構造体を定義\ntype Person struct {\n    Name string  // 名前フィールド（文字列）\n    Age  int     // 年齢フィールド（整数）\n}\n\n// 構造体を使ってデータを作る\np := Person{Name: \"Taro\", Age: 20}\nfmt.Println(p.Name)  // Taro が表示される\n```\n\n**ポイント：**\n- `type 名前 struct` で設計図を作る\n- `{ }` の中にフィールド名と型を書く\n- `.フィールド名` でデータにアクセス"
         }
       ],
@@ -206,12 +206,12 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "メソッドとは？",
-          "image": "/illustrations/3d_advanced/class_to_instance.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# 構造体に「できること」を追加\n\n**メソッド** は、構造体に関連づけられた特別な関数です。「この構造体は何ができるか」を定義します。\n\n**たとえば「四角形」構造体なら：**\n- 面積を計算する\n- 周囲の長さを計算する\n- 大きさを2倍にする\n\nこれらの「できること」をメソッドとして追加できます。\n\n**普通の関数との違い：**\n- 普通の関数：単独で動く\n- メソッド：特定の構造体と一緒に動く"
         },
         {
           "title": "メソッドの定義のしかた",
-          "image": "/illustrations/3d_advanced/class_to_instance.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# レシーバ（受け取り手）を指定\n\n`func (r 型) メソッド名()` と書きます。`(r 型)` の部分を「レシーバ（受け取り手）」と呼びます。\n\n**コード例：**\n```go\n// Rect構造体に Area メソッドを追加\nfunc (r Rect) Area() int {\n    return r.W * r.H  // 幅 × 高さ\n}\n\n// 使い方\nrect := Rect{W: 3, H: 4}\nfmt.Println(rect.Area())  // 12 が表示される\n```\n\n**読み方：**\n- `(r Rect)` → 「Rect型のrが」\n- `Area()` → 「Area というメソッドを持つ」\n- `r.W * r.H` → 「自分のWとHを使って計算」"
         }
       ],
@@ -255,12 +255,12 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "インターフェースとは？",
-          "image": "/illustrations/3d_advanced/interface_blueprint.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# 「約束事」を決める仕組み\n\n**インターフェース** は、「この型には絶対このメソッドがあるよ」という約束を定義します。\n\n**たとえば「鳴ける動物」：**\n- 犬は「ワン」と鳴く\n- 猫は「ニャー」と鳴く\n- 鳥は「ピヨピヨ」と鳴く\n\n全部違う鳴き方だけど、「鳴ける」という共通点があります。この「鳴ける」がインターフェースです。\n\n**Go言語の特徴：**\n「このメソッドを持っていれば、自動的にそのインターフェースを満たす」という仕組みです。"
         },
         {
           "title": "interface の定義のしかた",
-          "image": "/illustrations/3d_advanced/interface_blueprint.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# メソッドの名前だけ書く\n\nインターフェースには「中身」は書きません。「こういうメソッドがあるはず」という約束だけです。\n\n**コード例：**\n```go\n// Speaker インターフェースを定義\ntype Speaker interface {\n    Speak()  // Speak メソッドを持っている約束\n}\n\n// Dog は Speak() を持つので Speaker として使える\ntype Dog struct{}\nfunc (d Dog) Speak() {\n    fmt.Println(\"woof\")\n}\n```\n\n**ポイント：**\n- `interface { }` の中にメソッド名だけ書く\n- そのメソッドを持つ型は自動的にインターフェースを満たす\n- 「implements」などの宣言は不要（Go言語の特徴！）"
         }
       ],
@@ -304,12 +304,12 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "defer（ディファー）とは？",
-          "image": "/illustrations/3d_advanced/concurrency.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# 「あとでやること」を予約する\n\n**defer**（ディファー）は、「関数が終わるときに必ずやること」を予約する仕組みです。\n\n**たとえば：**\n- 冷蔵庫を開けたら → 必ず閉める\n- ファイルを開いたら → 必ず閉じる\n- 部屋に入ったら → 出るとき電気を消す\n\n`defer` を使うと、「開いたらすぐ横に閉じる処理を書ける」ので、閉じ忘れを防げます！"
         },
         {
           "title": "defer の使い方",
-          "image": "/illustrations/3d_advanced/concurrency.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# 書いた瞬間ではなく、最後に実行\n\n`defer` をつけた文は、その行を通り過ぎても実行されず、関数が終わるときに実行されます。\n\n**コード例：**\n```go\nfunc main() {\n    defer fmt.Println(\"last\")   // あとで実行\n    fmt.Println(\"first\")        // 先に実行\n}\n// 出力: first → last\n```\n\n**実行の流れ：**\n1. `defer` の行を通る → 「lastを表示」を予約\n2. 「first」を表示\n3. 関数が終わる → 予約していた「last」を表示\n\n`defer` は「関数の出口で必ず実行」と覚えましょう！"
         }
       ],
@@ -345,12 +345,12 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "ゴルーチンとは？",
-          "image": "/illustrations/3d_advanced/concurrency.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# 同時にいくつもの仕事をする\n\n**ゴルーチン** は、複数の処理を「同時に」実行する仕組みです。Go言語の大きな特徴の1つです。\n\n**たとえば料理：**\n- パスタを茹でながら\n- ソースを作りながら\n- サラダを準備する\n\n1つずつやるより、同時にやった方が早いですよね！\n\n**プログラミングでも同じ：**\n- ファイルをダウンロードしながら\n- 画面を表示しながら\n- ユーザーの入力を待つ\n\nこれを「並行処理（へいこうしょり）」と呼びます。"
         },
         {
           "title": "go キーワードで並行実行",
-          "image": "/illustrations/3d/goroutine_concurrent.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# 「go」をつけるだけ！\n\n関数を呼び出すときに `go` をつけると、その関数が別のゴルーチン（別の流れ）で実行されます。\n\n**コード例：**\n```go\nfunc say(msg string) {\n    fmt.Println(msg)\n}\n\nfunc main() {\n    go say(\"hello\")  // 別のゴルーチンで実行\n    say(\"world\")     // こちらは普通に実行\n}\n```\n\n**ポイント：**\n- `go 関数名()` で別のゴルーチンで実行\n- 元の処理は待たずに次に進む\n- 終了を待ちたい場合は別の仕組みが必要"
         }
       ],
@@ -392,12 +392,12 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "チャネルとは？",
-          "image": "/illustrations/3d_advanced/concurrency.png",
+          "image": "/illustrations/common/envelope_message.png",
           "content": "# ゴルーチン同士の「通信パイプ」\n\n**チャネル** は、ゴルーチン同士がデータをやり取りするための「パイプ」のようなものです。\n\n**たとえるなら：**\n- 筒（パイプ）の片方から手紙を入れる\n- もう片方から手紙を受け取る\n\n**なぜ必要？**\nゴルーチンは別々に動いているので、直接データを渡せません。チャネルを使えば安全にやり取りできます。\n\n**チャネルの作り方：**\n```go\nch := make(chan int)  // int型を送れるチャネル\n```"
         },
         {
           "title": "チャネルの使い方",
-          "image": "/illustrations/3d_advanced/concurrency.png",
+          "image": "/illustrations/common/envelope_message.png",
           "content": "# <- で送信と受信\n\n矢印 `<-` の向きでデータの流れを表します。\n\n**送信と受信：**\n- `ch <- 値` → チャネルに値を送る（入れる）\n- `<-ch` → チャネルから値を受け取る（取り出す）\n\n**コード例：**\n```go\nch := make(chan int)  // チャネルを作成\n\n// 別のゴルーチンで送信\ngo func() { \n    ch <- 42  // チャネルに42を送る\n}()\n\nval := <-ch  // チャネルから受け取る\n// val は 42 になる\n```\n\n**ポイント：**\n受信側は、データが届くまで待ちます。これで同期（タイミングを合わせる）ができます！"
         }
       ],
@@ -438,12 +438,12 @@ export const go2Data = {
       "tutorialSlides": [
         {
           "title": "無名関数（むめいかんすう）とは？",
-          "image": "/illustrations/3d_advanced/lambda_spark.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# 名前をつけない「使い捨て」の関数\n\n**無名関数** は、名前をつけずにその場で作る関数です。「今だけ使いたい」ときに便利です。\n\n**たとえば：**\n- 1回しか使わない処理\n- ゴルーチンですぐ実行したい処理\n- 他の関数に渡す小さな処理\n\n**コード例：**\n```go\n// 普通の関数\nfunc add(a, b int) int {\n    return a + b\n}\n\n// 無名関数（その場で定義）\nresult := func(a, b int) int {\n    return a + b\n}(3, 5)  // すぐに実行もできる\n```"
         },
         {
           "title": "クロージャ：外の変数を使える",
-          "image": "/illustrations/3d_advanced/lambda_spark.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# 周りの変数を「覚えている」関数\n\n無名関数は、自分の外側にある変数を使うことができます。この仕組みを **クロージャ** と呼びます。\n\n**コード例：**\n```go\nx := 10\nfn := func() int {\n    return x * 2  // 外側の x を使っている！\n}\nfmt.Println(fn())  // 20\n```\n\n**イメージ：**\n無名関数が作られたとき、周りの変数を「写真に撮って覚えておく」ようなものです。\n\n**使いどころ：**\n- カウンターを作る\n- 設定を保持したまま何度も使う関数\n- ゴルーチンで外のデータを使う"
         }
       ],

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Editor from "@monaco-editor/react";
+import type { Monaco } from "@monaco-editor/react";
 
 interface CodeEditorProps {
   initialCode: string;
@@ -18,7 +19,7 @@ export function CodeEditor({
 }: CodeEditorProps) {
   const [code, setCode] = useState(initialCode);
 
-  const handleEditorWillMount = (monaco: any) => {
+  const handleEditorWillMount = (monaco: Monaco) => {
     monaco.editor.defineTheme("darcula", {
       base: "vs-dark",
       inherit: true,

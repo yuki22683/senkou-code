@@ -80,27 +80,6 @@ export default function TutorialPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [exerciseId]);
 
-  // スライド進捗をlocalStorageから復元
-  useEffect(() => {
-    if (typeof window !== "undefined" && exerciseId && slides.length > 0) {
-      const savedSlide = localStorage.getItem(`tutorial-slide-${exerciseId}`);
-      if (savedSlide !== null) {
-        const slideIndex = parseInt(savedSlide, 10);
-        if (!isNaN(slideIndex) && slideIndex >= 0) {
-          // スライド数を超えている場合は最後のスライドに設定
-          setCurrentSlide(Math.min(slideIndex, slides.length - 1));
-        }
-      }
-    }
-  }, [exerciseId, slides.length]);
-
-  // スライド進捗をlocalStorageに保存
-  useEffect(() => {
-    if (typeof window !== "undefined" && exerciseId && slides.length > 0) {
-      localStorage.setItem(`tutorial-slide-${exerciseId}`, currentSlide.toString());
-    }
-  }, [currentSlide, exerciseId, slides.length]);
-
   function handlePrevSlide() {
     if (currentSlide > 0) {
       setCurrentSlide(currentSlide - 1);

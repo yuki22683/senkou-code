@@ -83,6 +83,8 @@ To prevent the recurrence of incomplete or non-functional exercises, the followi
 
     -   Every line with `___` is preceded by a comment line.
 
+    -   **All images referenced in `tutorialSlides` exist in the `public` directory.**
+
 2.  **Field Synchronization Verification:** Double-check that `correctCode` and `correctLines` are identical in structure (including all comments and newlines) to `holeyCode`, with the `___` replaced by the correct values.
 
 3.  **Database Seeding:** Always run `npm run seed:db` after making changes to lesson data and verify that it completes without errors.
@@ -98,6 +100,9 @@ To prevent the recurrence of incomplete or non-functional exercises, the followi
 8.  **Regex Safety:** When using regular expressions in code (especially in `replace` tools or script logic), ensure special characters like `]`, `-`, and `\` are correctly escaped within character classes `[]`. Always verify the code's syntactical correctness after modification.
 
 9.  **Language-Aware Normalization:** Code normalization must respect the specific syntax and conventions of each programming language. For example, in C-style languages, distinguish between "keywords" (where spaces after them may be optional) and "identifiers/functions" (where spacing rules may be strict). Do not apply generic, language-agnostic space-stripping logic that could break these rules.
+
+10. **Image Asset Integrity:** Before any commit involving lesson data changes, run `npm run audit:lessons` to ensure all referenced illustrations exist. If an image is missing, do not use a non-existent path; instead, generate the asset or use a valid fallback illustration.
+
 
 # CLAUDE.md - プロジェクトルール
 

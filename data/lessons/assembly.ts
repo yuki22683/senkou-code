@@ -14,17 +14,17 @@ export const assemblyData = {
       "tutorialSlides": [
         {
           "title": "Assembly（アセンブリ）とは？",
-          "image": "/illustrations/languages/assembly.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# コンピュータの「生（なま）」の言葉\n\nアセンブリ言語は、コンピュータのCPUという脳みそが直接理解できる言葉（機械語）に最も近いプログラミング言語です。ハードウェアを限界まで操ることができます。"
         },
         {
           "title": "画面に文字を出すには？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# システムコール\n\nアセンブリ言語では、OS（オペレーティングシステム）というコンピュータの「ボス」に、「画面にこれを書いてください！」とお願いする命令を送ります。これを「システムコール」と呼びます。"
         },
         {
           "title": "コンピュータとの直接対話",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# syscall（システムコール）\n\nアセンブリ言語では、`rax` や `rdi` という名前の「小さな机（レジスタ）」に数字を置いてから、`syscall` という合図を送ります。すると、コンピュータのボスが画面に文字を出してくれます。\n\n**暗号の意味：**\n- `mov rax, 1` : 「画面に書く」という指示を机に置きます\n- `mov rdi, 1` : 「標準の画面」を指定します\n- `syscall` : 「さあ、やってください！」という合図です"
         }
       ],
@@ -104,12 +104,12 @@ export const assemblyData = {
       "tutorialSlides": [
         {
           "title": "文字列の長さ",
-          "image": "/illustrations/common/pencil.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 文字の長さを数える\n\nアセンブリでは、文字の長さを正確に指定する必要があります。`Hi` は2文字ですが、改行 `0xA` を含めて3バイトになります。\n\n`rdx` レジスタに長さを指定します。"
         },
         {
           "title": "やってみましょう！",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 目標\n\n`Hi` という文字を表示させましょう。長さは3（Hi + 改行）です。"
         }
       ],
@@ -167,12 +167,12 @@ export const assemblyData = {
       "tutorialSlides": [
         {
           "title": "終了コード",
-          "image": "/illustrations/common/book.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# プログラムの結果を報告\n\n終了コードは、プログラムが正常に終わったかどうかを報告する数字です。\n\n- `0` : 正常終了（成功）\n- それ以外 : エラー\n\n`xor rdi, rdi` は `rdi = 0` と同じ意味です。"
         },
         {
           "title": "やってみましょう！",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 目標\n\n何も表示せず、終了コード0で正常終了するプログラムを作りましょう。\n\n`mov rax, 60` は「終了」という命令です。"
         }
       ],
@@ -212,12 +212,12 @@ export const assemblyData = {
       "tutorialSlides": [
         {
           "title": "add命令（アッド）",
-          "image": "/illustrations/3d_advanced/science.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 足し算をする\n\n`add` 命令は、2つの値を足し算します。\n\n```asm\nmov rax, 5   ; raxに5を入れる\nadd rax, 3   ; raxに3を足す（結果：8）\n```"
         },
         {
           "title": "やってみましょう！",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 目標\n\n`rax` に10を入れて、5を足して15にしましょう。\n\n結果は終了コードとして返します。"
         }
       ],
@@ -265,12 +265,12 @@ export const assemblyData = {
       "tutorialSlides": [
         {
           "title": "sub命令（サブ）",
-          "image": "/illustrations/3d_advanced/science.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 引き算をする\n\n`sub` 命令は、値を引き算します。\n\n```asm\nmov rax, 10  ; raxに10を入れる\nsub rax, 3   ; raxから3を引く（結果：7）\n```"
         },
         {
           "title": "やってみましょう！",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 目標\n\n`rax` に20を入れて、8を引いて12にしましょう。"
         }
       ],
@@ -318,12 +318,12 @@ export const assemblyData = {
       "tutorialSlides": [
         {
           "title": "レジスタ間のコピー",
-          "image": "/illustrations/common/pencil.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 値を移動する\n\n`mov` 命令はレジスタ間で値をコピーできます。\n\n```asm\nmov rax, 42   ; raxに42を入れる\nmov rbx, rax  ; raxの値をrbxにコピー\n```"
         },
         {
           "title": "やってみましょう！",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 目標\n\n`rax` に25を入れて、それを `rdi` にコピーしてから終了しましょう。"
         }
       ],
@@ -369,12 +369,12 @@ export const assemblyData = {
       "tutorialSlides": [
         {
           "title": "cmp命令（コンペア）",
-          "image": "/illustrations/3d_advanced/comprehension.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 比較をする\n\n`cmp` 命令は、2つの値を比較して結果を「フラグ」に保存します。\n\n```asm\ncmp rax, 10  ; raxと10を比較\n```\n\n比較結果は、次のジャンプ命令で使えます。"
         },
         {
           "title": "やってみましょう！",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 目標\n\n`rax` に5を入れて、10と比較してみましょう。"
         }
       ],
@@ -420,12 +420,12 @@ export const assemblyData = {
       "tutorialSlides": [
         {
           "title": "条件ジャンプ",
-          "image": "/illustrations/common/book.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 条件付きジャンプ\n\n`je` は「等しければジャンプ」という命令です。\n\n- `je` : 等しい（Jump if Equal）\n- `jne` : 等しくない\n- `jg` : より大きい\n- `jl` : より小さい"
         },
         {
           "title": "やってみましょう！",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 目標\n\n`rax` が5と等しければ `equal` ラベルにジャンプしましょう。"
         }
       ],
@@ -481,12 +481,12 @@ export const assemblyData = {
       "tutorialSlides": [
         {
           "title": "無条件ジャンプ",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# jmp命令（ジャンプ）\n\n`jmp` は無条件で指定したラベルにジャンプします。\n\n```asm\njmp done  ; doneラベルに飛ぶ\n```"
         },
         {
           "title": "やってみましょう！",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 目標\n\n`skip` ラベルを飛び越えて `done` ラベルに直接ジャンプしましょう。"
         }
       ],
@@ -536,12 +536,12 @@ export const assemblyData = {
       "tutorialSlides": [
         {
           "title": "inc命令（インクリメント）",
-          "image": "/illustrations/3d_advanced/science.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 値を1増やす\n\n`inc` 命令は、レジスタの値を1だけ増やします。\n\n```asm\nmov rax, 5  ; raxに5\ninc rax     ; raxが6になる\n```\n\n`add rax, 1` と同じ意味ですが、より短く書けます。"
         },
         {
           "title": "やってみましょう！",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# 目標\n\n`rax` に9を入れて、`inc` で10にしましょう。"
         }
       ],

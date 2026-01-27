@@ -14,12 +14,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "WHERE（ホエア）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/modular_blocks.png",
           "content": "# 条件でフィルタ（絞り込み）\n\n**WHERE**（ホエア＝「どこ」という意味）は、指定した条件に合うデータだけを取得します。\n\n**たとえば：** 本棚から「赤い表紙の本だけ」を探すように、条件を指定してデータを絞り込めます。"
         },
         {
           "title": "WHERE の使い方",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/modular_blocks.png",
           "content": "# SELECT ... WHERE 条件\n\n比較演算子（ひかくえんざんし）が使えます：\n- `=` 等しい\n- `>` より大きい\n- `<` より小さい\n- `>=` 以上\n- `<=` 以下\n\n**コード例：**\n```sql\nSELECT * FROM users\nWHERE age > 20;\n```\n\n**このコードは何をしているの？**\n- usersテーブルから\n- age（年齢）が20より大きい人だけを選びます"
         }
       ],
@@ -52,17 +52,17 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "ORDER BY（オーダーバイ）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# 結果を並べ替え\n\n**ORDER BY**（オーダーバイ＝「〜で並べる」）は、指定した列（カラム）で結果を並べ替えます。\n\n**たとえば：** クラスの名簿を「あいうえお順」や「身長順」に並べ替えるようなイメージです。"
         },
         {
           "title": "昇順と降順",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# ASC と DESC\n\n- `ASC`（アセンディング＝昇順）: 小さい順（1,2,3...）\n- `DESC`（デセンディング＝降順）: 大きい順（3,2,1...）\n\n何も書かないとASC（昇順）になります。"
         },
         {
           "title": "ORDER BY の使い方",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# SELECT ... ORDER BY 列 [ASC|DESC]\n\n**コード例：**\n```sql\nSELECT * FROM users\nORDER BY age DESC;\n```\n\n**このコードは何をしているの？**\n- usersテーブルの全員を\n- age（年齢）の大きい順に並べ替えます"
         }
       ],
@@ -99,12 +99,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "LIMIT（リミット）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# 取得行数を制限（せいげん）\n\n**LIMIT**（リミット＝「制限」）は、取得する行数を制限します。\n\n**たとえば：** 100人の名簿から「最初の10人だけ見たい」というときに使います。大量のデータを全部見ると時間がかかるので、一部だけ取り出すのに便利です。"
         },
         {
           "title": "LIMIT の使い方",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# SELECT ... LIMIT n\n\n最初の n 行だけを取得します。\n\n**コード例：**\n```sql\nSELECT * FROM users\nLIMIT 10;\n```\n\n**このコードは何をしているの？**\n- usersテーブルから\n- 最初の10行だけを取り出します"
         }
       ],
@@ -141,12 +141,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "COUNT（カウント）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# 行数を数える\n\n**COUNT**（カウント＝「数える」）は、条件に合う行の数を返す集計関数（しゅうけいかんすう）です。\n\n**たとえば：** クラスの人数を数えたり、特定の条件を満たす人が何人いるかを調べるのに使います。"
         },
         {
           "title": "COUNT の使い方",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# COUNT(*) または COUNT(列)\n\n- `COUNT(*)` : すべての行を数える\n- `COUNT(列名)` : その列がNULL（空っぽ）でない行を数える\n\n**コード例：**\n```sql\nSELECT COUNT(*) FROM users;\n```\n\n**このコードは何をしているの？**\n- usersテーブルの\n- 全員の人数を数えます"
         }
       ],
@@ -179,12 +179,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "SUM（サム）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# 合計を計算\n\n**SUM**（サム＝「合計」）は、指定した列の値の合計を返す集計関数（しゅうけいかんすう）です。\n\n**たとえば：** お店の売上を全部足して「今月の売上合計」を出すようなイメージです。"
         },
         {
           "title": "SUM の使い方",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# SUM(列)\n\n数値の列（カラム）の合計を計算します。\n\n**コード例：**\n```sql\nSELECT SUM(price) FROM products;\n```\n\n**このコードは何をしているの？**\n- productsテーブルの\n- price（価格）列の値を全部足します"
         }
       ],
@@ -217,12 +217,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "AVG（アベレージ）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# 平均を計算\n\n**AVG**（アベレージ＝「平均」）は、指定した列の値の平均を返す集計関数（しゅうけいかんすう）です。\n\n**たとえば：** テストの点数を全員分足して、人数で割った「平均点」を出すようなイメージです。"
         },
         {
           "title": "AVG の使い方",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# AVG(列)\n\n数値の列（カラム）の平均を計算します。\n\n**コード例：**\n```sql\nSELECT AVG(score) FROM exams;\n```\n\n**このコードは何をしているの？**\n- examsテーブルの\n- score（点数）の平均値を計算します"
         }
       ],
@@ -255,12 +255,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "GROUP BY（グループバイ）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# グループごとに集計（しゅうけい）\n\n**GROUP BY**（グループバイ＝「〜でグループ化」）は、同じ値を持つデータをまとめます。\n\n**たとえば：** クラスの生徒を「男子」「女子」に分けて、それぞれの人数を数えるようなイメージです。"
         },
         {
           "title": "GROUP BY の使い方",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# SELECT 列, 集計 ... GROUP BY 列\n\nグループごとに集計結果（合計、平均、件数など）を得られます。\n\n**コード例：**\n```sql\nSELECT category, COUNT(*)\nFROM products\nGROUP BY category;\n```\n\n**このコードは何をしているの？**\n- productsテーブルを\n- category（カテゴリ）ごとにまとめて\n- それぞれの商品数を数えます"
         }
       ],
@@ -305,12 +305,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "HAVING（ハビング）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# グループに条件を付ける\n\n**HAVING**（ハビング＝「持っている」）は、GROUP BY の結果に対して条件を指定します。\n\n**WHEREとの違い：**\n- `WHERE` : グループ化する**前**に絞り込む\n- `HAVING` : グループ化した**後**に絞り込む"
         },
         {
           "title": "HAVING の使い方",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# GROUP BY ... HAVING 条件\n\n集計した結果（合計、件数など）で絞り込めます。\n\n**コード例：**\n```sql\nSELECT category, COUNT(*)\nFROM products\nGROUP BY category\nHAVING COUNT(*) > 5;\n```\n\n**このコードは何をしているの？**\n- カテゴリごとにグループ化した後\n- 5件より多いカテゴリだけを表示します"
         }
       ],
@@ -355,17 +355,17 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "CASE（ケース）とは？",
-          "image": "/illustrations/3d_advanced/union_funnel.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# 条件で値を変える\n\n**CASE**（ケース＝「場合」）は、条件によって異なる値を返す式です。\n\n**たとえば：** テストの点数で「80点以上ならA、60点以上ならB、それ以外はC」のように、条件で結果を変えられます。プログラミングの if-else と同じ考え方です。"
         },
         {
           "title": "CASE の書き方",
-          "image": "/illustrations/3d_advanced/union_funnel.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# CASE WHEN 条件 THEN 値 END\n\n複数の条件を順番に書けます。\n\n**各部分の意味：**\n- `CASE` : 「場合分けを始めます」\n- `WHEN 条件 THEN 値` : 「〜のとき、〇〇を返す」\n- `ELSE 値` : 「どれにも当てはまらなければ〇〇」\n- `END` : 「場合分けを終わります」"
         },
         {
           "title": "CASE の例",
-          "image": "/illustrations/3d_advanced/union_funnel.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "**コード例：**\n```sql\nSELECT CASE\n  WHEN score >= 80 THEN 'A'\n  WHEN score >= 60 THEN 'B'\n  ELSE 'C'\nEND FROM scores;\n```\n\n**このコードは何をしているの？**\n- 80点以上 → 'A'を返す\n- 60点以上 → 'B'を返す\n- それ以外 → 'C'を返す"
         }
       ],
@@ -410,12 +410,12 @@ export const sql2Data = {
       "tutorialSlides": [
         {
           "title": "COALESCE（コアレス）とは？",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# NULLの代替値（だいたいち）\n\n**COALESCE**（コアレス＝「合体する」）は、引数の中で最初のNULLでない値を返します。\n\n**たとえば：** 電話番号が空っぽ（NULL）の人には「未登録」と表示したい場合などに使います。空っぽのときの「代わりの値」を指定できます。"
         },
         {
           "title": "COALESCE の使い方",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/option_lightbulb.png",
           "content": "# COALESCE(値1, 値2, ...)\n\n左から順にチェックして、最初のNULLでない値を返します。\n\n**コード例：**\n```sql\nSELECT COALESCE(name, 'Unknown')\nFROM users;\n```\n\n**このコードは何をしているの？**\n- nameがNULLでなければnameを返す\n- nameがNULLなら'Unknown'を返す"
         }
       ],

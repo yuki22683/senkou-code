@@ -16,18 +16,23 @@ interface MobileCodeEditorProps {
   readOnly?: boolean;
 }
 
-// コードの正規化: スペースのルールを厳密に適用
-// 1. スペースNG: 関数呼び出し `func(`, 括弧内部 `( x )`, 配列アクセス `arr[`
-// 2. スペース任意: 演算子周り, コロン, カンマ, キーワード+括弧
-// 3. スペース必須: 単語間 `for i in`
+// コードの正規化: 言語の構文規則に基づいた判定
+// 1. スペース必須: 単語と単語の間（例: `int x`, `return 0`）
+// 2. スペース任意:
+//    - キーワード（if, for等）と括弧の間
+//    - 演算子の前後
+//    - 括弧の内側、閉じ括弧の前後
+//    - カンマ、セミコロン、コロンの前後
+// 3. スペース厳格（正解に合わせる）:
+//    - 関数名と括弧の間（例: `printf(`）※キーワードでない識別子
 const normalizeCode = (str: string, language: string) => {
   if (!str) return "";
 
-  // 1. コメントを除去
   const config = getLanguageConfig(language);
   const commentPrefix = config.commentPrefix;
   const keywords = config.keywords;
 
+  // 1. コメントを除去
   const linesWithoutComments = str.split("\n").map(line => {
     const commentIndex = line.indexOf(commentPrefix);
     if (commentIndex !== -1) {
@@ -43,49 +48,40 @@ const normalizeCode = (str: string, language: string) => {
   const leading = leadingMatch ? leadingMatch[0] : "";
   const content = contentWithoutComments.slice(leading.length).trim();
 
-  // 3. 正規化
+  // 3. 正規化ロジック
   let normalized = content;
 
-  // 連続する空白を1つに（単語間のスペースを保持）
+  // 連続する空白を1つにする
   normalized = normalized.replace(/\s+/g, " ");
 
-  // === スペース任意: キーワードと(の間 ===
-  // if ( -> if(, for ( -> for( など（キーワード後のスペースはどちらでもOK）
+  // === A. キーワード直後のスペースを「任意（削除）」にする ===
+  // 例: if ( -> if(, return ( -> return(
   if (keywords.size > 0) {
     const keywordArray = Array.from(keywords);
-    // 正規表現の特殊文字をエスケープ
-    const escapedKeywords = keywordArray.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    const escapedKeywords = keywordArray.map(k => k.replace(/[.*+?^${}()|[\\]/g, '\\$&'));
     const keywordPattern = escapedKeywords.join('|');
-    const keywordParenRegex = new RegExp(`\\b(${keywordPattern})\\s+\\(`, 'g');
-    normalized = normalized.replace(keywordParenRegex, '$1(');
+    // キーワードの後にスペースがあり、その次に括弧が来るパターンを置換
+    const keywordParenRegex = new RegExp(`(\b(${keywordPattern}))\s+(?=[({])`, 'g');
+    normalized = normalized.replace(keywordParenRegex, '$1');
   }
 
-  // === スペース任意: 識別子と(の間（関数呼び出し・定義） ===
-  normalized = normalized.replace(/([a-zA-Z_][a-zA-Z0-9_]*)\s+\(/g, "$1(");
-
-  // === スペース任意: 閉じ括弧と波括弧の間 ===
-  normalized = normalized.replace(/\)\s+\{/g, "){");
-
-  // === スペース任意: 波括弧の前のスペース ===
-  normalized = normalized.replace(/\s+\{/g, "{");
-
-  // === スペース任意: 演算子の周り ===
-  // 複数文字の演算子を先に処理
+  // === B. 演算子および構造記号（括弧、区切り文字）の周りのスペースを「任意（削除）」にする ===
+  // ただし、開き括弧 '(' の「前」については、直前が識別子の場合は保持したいので除外する
+  
+  // 1. 2文字以上の演算子/記号 (->, ==, &&, += など) の前後を詰める
   normalized = normalized.replace(/\s*(==|!=|<=|>=|<>|->|=>|&&|\|\||\+=|-=|\*=|\/=|%=|&=|\|=|\^=|<<|>>)\s*/g, "$1");
-  // 単一文字の演算子
-  normalized = normalized.replace(/\s*([=+\-*/%<>&|^!])\s*/g, "$1");
 
-  // === スペース任意: コロン、カンマ、ドットの周り ===
-  normalized = normalized.replace(/\s*:\s*/g, ":");
-  normalized = normalized.replace(/\s*,\s*/g, ",");
-  normalized = normalized.replace(/\s*\.\s*/g, ".");
+  // 2. 閉じ括弧 ')' ']' '}' および 区切り文字 ',' ';' ':' '.' 演算子 '+' '-' '*' '/' '%' '<' '>' '&' '|' '^' '!' '?' '~'
+  // 前後のスペースを除去
+  normalized = normalized.replace(/\s*([)\]};,.:=+\-*/%<>&|^!?~])\s*/g, "$1");
 
-  // === スペースNG: 括弧内部などはそのまま保持 ===
-  // 括弧内部: ( の直後、) の直前のスペースも正規化しない（スペースあると不正解）
-  // 配列: [ ] も同様
-  // → これらは何もしないことで、スペースがあれば不一致になる
+  // 3. 開き括弧 '(' '[' '{' の「後ろ」のスペースを除去
+  normalized = normalized.replace(/([([{])\s+/g, "$1");
 
-  // === 引用符の正規化 ===
+  // ※注意: 開き括弧 '(' の「前」のスペースはここでは処理しない。
+  // これにより、キーワードでない識別子（関数名など）の後のスペースが保持される。
+
+  // === C. 引用符の正規化 ===
   normalized = normalized.replace(/['"]/g, '"');
 
   return leading + normalized.trim();
@@ -327,8 +323,8 @@ export function MobileCodeEditor({
         // f-string/テンプレートリテラル内の{...}や${...}や#{...}から変数名を抽出し、文字列部分も選択肢に追加
         // Python: f'{...}', JavaScript/TypeScript: `${...}`, Ruby/Elixir: "#{...}"
         const isStringWithInterpolation =
-          ((token.startsWith('"') || token.startsWith("'")) && (token.includes('{') || token.includes('#{'))) ||
-          (token.startsWith('`') && token.includes('${'));
+          ((token.startsWith('"') || token.startsWith("'")) && (token.includes('{') || token.includes('#{')))
+          || (token.startsWith('`') && token.includes('${'));
 
         if (isStringWithInterpolation) {
           // 文字列内の{...}や${...}や#{...}パターンを抽出して個別に候補に追加
@@ -344,7 +340,7 @@ export function MobileCodeEditor({
               const innerMatch = part.match(/[#$]?\{([^}]+)\}/);
               if (innerMatch) {
                 const innerContent = innerMatch[1];
-                const subParts = innerContent.split(/[.\[\]()]+/).filter(p => p.trim() && /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(p));
+                const subParts = innerContent.split(/[.[\]()]+/ ).filter(p => p.trim() && /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(p));
                 expandedTokens.push(...subParts);
               }
               expandedTokens.push('{', '}');

@@ -14,12 +14,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "Ruby（ルビー）とは？",
-          "image": "/illustrations/languages/ruby.png",
+          "image": "/illustrations/common/split_road.png",
           "content": "# 楽しさを大事（だいじ）にするプログラミング言語（げんご）\n\nRuby（ルビー）は、**まつもとゆきひろ**さんという日本人（にほんじん）が作ったプログラミング言語です。\n\n宝石（ほうせき）の「ルビー」から名前がつけられました。\n\n**Rubyの特徴（とくちょう）：**\n- 人間が読みやすく、楽しく書ける\n- 世界中（せかいじゅう）で大人気（だいにんき）\n- TwitterやCookpadなど有名（ゆうめい）なサービスで使われている"
         },
         {
           "title": "puts（プッツ）を使いましょう",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/split_road.png",
           "content": "# 画面（がめん）に文字を表示（ひょうじ）する方法（ほうほう）\n\n**puts（プッツ）** は「put string（プット ストリング）」の略（りゃく）で、「文字を置く」という意味（いみ）です。\n\n画面にメッセージを出したいときに使います。\n\n**書き方：**\n```ruby\nputs 'ヤッホー！'\n```\n\n**ポイント：**\n- `puts` のあとに半角（はんかく）スペースを入れる\n- 表示したい文字は `'　'`（シングルクォート）で囲（かこ）む\n\n実行（じっこう）すると、画面に「ヤッホー！」と表示されます。"
         }
       ],
@@ -51,12 +51,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/common/split_road.png",
           "content": "# データを保存（ほぞん）する「はこ」\n\n変数（へんすう）は、数字や文字をしまっておける **「はこ」** のようなものです。\n\n**身近（みぢか）な例（れい）で考えてみよう：**\n- 筆箱（ふでばこ）に「えんぴつ」を入れるように\n- 変数という「はこ」に「データ」を入れておける\n\n一度（いちど）しまったデータは、あとで何度（なんど）でも取り出して使えます。"
         },
         {
           "title": "はこに中身を入れる方法",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/common/split_road.png",
           "content": "# =（イコール）の使い方\n\nRubyでは **`=`（イコール）** を使って、はこ（変数）に値（あたい）を入れます。\n\nこれを **代入（だいにゅう）** と呼びます。\n\n**書き方：**\n```ruby\nfruit = 'りんご'\nputs fruit\n```\n\n**何をしているの？**\n1. `fruit` という名前のはこを用意（ようい）する\n2. そのはこに `'りんご'` という文字を入れる\n3. `puts fruit` で、はこの中身を画面に表示する\n\n**結果（けっか）：** りんご と表示されます"
         }
       ],
@@ -89,12 +89,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "算数とプログラミング",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# 計算はコンピュータの得意技（とくいわざ）\n\nコンピュータの一番（いちばん）の得意（とくい）なことは **「正確（せいかく）で速い計算」** です。\n\n**すごいところ：**\n- どんなに大きな数字でも間違（まちが）えない\n- 人間が何時間もかかる計算を一瞬（いっしゅん）で解（と）いてくれる\n\nプログラミングで「計算して！」と指示（しじ）を出すだけで、コンピュータが代（か）わりにやってくれます。"
         },
         {
           "title": "計算の記号（きごう）",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# 四則演算（しそくえんざん）\n\nRubyでは、算数と同じような記号を使って計算します。\n\n**演算子（えんざんし）の一覧（いちらん）：**\n- **+** : たし算（例：5 + 3 = 8）\n- **-** : ひき算（例：10 - 4 = 6）\n- **\\*** : かけ算（例：3 * 4 = 12）\n- **/** : わり算（例：20 / 5 = 4）\n\n**コード例：**\n```ruby\nputs 10 + 5  # => 15 と表示される\n```\n\n`#` より右に書いたものは **コメント** といって、メモ書きになります。プログラムには影響（えいきょう）しません。"
         }
       ],
@@ -129,12 +129,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "あまりを求（もと）める",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/common/modulo_percent.png",
           "content": "# 剰余（じょうよ）演算子（えんざんし）\n\n**`%`（パーセント）** を使うと、割（わ）り算の **あまり** を求められます。\n\n**身近（みぢか）な例（れい）で考えよう：**\n- 10個（こ）のあめを3人で分けると...\n- 1人3個ずつで、**1個あまる**\n- この「あまり」を計算するのが `%` です！\n\nあまりを求める計算を **剰余（じょうよ）** と呼びます。"
         },
         {
           "title": "% の使い方",
-          "image": "/illustrations/common/robot_math.png",
+          "image": "/illustrations/common/modulo_percent.png",
           "content": "# あまりを計算してみよう\n\n**コード例：**\n```ruby\nputs 10 % 3  # => 1（10÷3=3あまり1）\nputs 8 % 2   # => 0（割り切れる）\n```\n\n**便利（べんり）な使い方：**\n- **偶数（ぐうすう）**：2で割ってあまりが0\n- **奇数（きすう）**：2で割ってあまりが1\n\n```ruby\nputs 6 % 2   # => 0（6は偶数）\nputs 7 % 2   # => 1（7は奇数）\n```\n\nゲームで「3回ごとにボーナス」といった処理（しょり）にも使えます。"
         }
       ],
@@ -164,12 +164,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "累算代入（るいさんだいにゅう）とは？",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/common/hose_bucket.png",
           "content": "# 計算してそのまま代入（だいにゅう）\n\n**累算代入（るいさんだいにゅう）** は、「計算して、結果（けっか）を同じはこに戻（もど）す」便利（べんり）な書き方です。\n\n**身近（みぢか）な例（れい）：**\n- 貯金箱（ちょきんばこ）に100円入っている\n- さらに50円を追加（ついか）する\n- 貯金箱の中身は150円になる\n\n**`+=` を使うと：**\n```ruby\nx = 10\nx += 5  # x = x + 5 と同じ意味\nputs x  # => 15 と表示される\n```\n\n`x += 5` は「xに5を足して、結果をxに入れ直（なお）す」という意味です。"
         },
         {
           "title": "-= も使える",
-          "image": "/illustrations/common/box.png",
+          "image": "/illustrations/common/hose_bucket.png",
           "content": "# 引き算バージョン\n\n`-=` を使えば引き算もできます。\n\n**コード例：**\n```ruby\nx = 10\nx -= 3  # x = x - 3 と同じ意味\nputs x  # => 7 と表示される\n```\n\n**他にもある演算子（えんざんし）：**\n- `*=` : かけ算して代入\n- `/=` : わり算して代入\n\n```ruby\nx = 6\nx *= 2  # x = x * 2 と同じ → 12になる\n```\n\nゲームのスコアを増（ふ）やしたり減（へ）らしたりするのに便利です。"
         }
       ],
@@ -204,12 +204,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "式展開（しきてんかい）とは？",
-          "image": "/illustrations/common/fstring.png",
+          "image": "/illustrations/common/split_road.png",
           "content": "# 文章と変数（へんすう）を組み合わせる\n\n文章の途中（とちゅう）に、変数の中身を入れたいときに使うのが **式展開（しきてんかい）** です。\n\n**身近（みぢか）な例（れい）：**\n- 「こんにちは、○○さん！」の○○を変えたい\n- 名前が入った変数を文章に組み込（こ）める\n\n**書き方のポイント：**\n- `#{　}` の中に変数名を入れる\n- 変数の中身が自動的（じどうてき）に文章に入る"
         },
         {
           "title": "式展開（しきてんかい）の書き方",
-          "image": "/illustrations/common/fstring.png",
+          "image": "/illustrations/common/split_road.png",
           "content": "# ダブルクォートで囲（かこ）む\n\n式展開を使うときは **ダブルクォート `\"　\"`** で文章を囲みます。\n\n**コード例：**\n```ruby\nage = 10\nputs \"私は#{age}歳です\"\n```\n\n**何が起こるの？**\n1. `age` という変数には `10` が入っている\n2. `#{age}` の部分が `10` に置（お）き換（か）わる\n3. 「私は10歳です」と表示される\n\n**注意（ちゅうい）：**\n- シングルクォート `' '` だと式展開できません\n- 必ずダブルクォート `\" \"` を使いましょう"
         }
       ],
@@ -242,12 +242,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）とは？",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/common/split_road.png",
           "content": "# データの行列（ぎょうれつ）\n\nたくさんのデータを順番（じゅんばん）に並（なら）べておきたいときに使うのが **配列（はいれつ）** です。\n\n**身近（みぢか）な例（れい）：**\n- ロッカーが横（よこ）に並んでいるイメージ\n- 1番目のロッカー、2番目のロッカー...とデータを入れる\n\n**書き方：**\n```ruby\nfruits = ['りんご', 'バナナ', 'みかん']\n```\n\n- `[　]`（角（かく）かっこ）で囲む\n- データは `,`（カンマ）で区切（くぎ）る"
         },
         {
           "title": "配列の番号は0から",
-          "image": "/illustrations/common/list.png",
+          "image": "/illustrations/common/pipeline.png",
           "content": "# インデックス（番号）\n\nプログラミングでは、**最初（さいしょ）の番号は「0」から数（かぞ）えます**。これを **インデックス** と呼びます。\n\n**イメージしてみよう：**\n| 番号（インデックス） | 0番目 | 1番目 | 2番目 |\n| --- | --- | --- | --- |\n| 中身 | りんご | バナナ | みかん |\n\n**コード例：**\n```ruby\nfruits = ['りんご', 'バナナ', 'みかん']\nputs fruits[0]  # => りんご（1番目）\nputs fruits[1]  # => バナナ（2番目）\n```\n\n**大事（だいじ）なポイント：**\n- 1番目のデータは `[0]` で取り出す\n- 2番目のデータは `[1]` で取り出す"
         }
       ],
@@ -280,12 +280,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/common/pipeline.png",
           "content": "# プログラムに判断（はんだん）させる\n\n状況（じょうきょう）によって動きを変（か）えることを **条件分岐（じょうけんぶんき）** と呼びます。\n\n**身近（みぢか）な例（れい）：**\n- **もし**雨が降（ふ）っていたら → かさを持っていく\n- **もし**テストで80点以上だったら → ごほうびをもらえる\n\nプログラムも同じように「もし〜なら、〜する」という判断ができます。"
         },
         {
           "title": "if の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/common/pipeline.png",
           "content": "# もし〜なら\n\nRubyでは **`if`（イフ）** のあとに条件（じょうけん）を書きます。最後（さいご）に **`end`（エンド）** で閉（と）じます。\n\n**コード例：**\n```ruby\nif score > 80\n  puts '合格！'\nend\n```\n\n**何をしているの？**\n1. `if score > 80` → もしscoreが80より大きかったら\n2. `puts '合格！'` → 「合格！」と表示する\n3. `end` → if文（ぶん）の終わり\n\n**比較（ひかく）の記号：**\n- `>` : より大きい\n- `<` : より小さい\n- `>=` : 以上（いじょう）\n- `<=` : 以下（いか）\n- `==` : 等（ひと）しい"
         }
       ],
@@ -322,12 +322,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "else（エルス）とは？",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/common/hose_bucket.png",
           "content": "# それ以外（いがい）の場合（ばあい）\n\n条件（じょうけん）に当（あ）てはまらなかったときの動きを作るのが **else（エルス）** です。\n\n**身近（みぢか）な例（れい）：**\n- **もし**晴れだったら → 公園に行く\n- **そうでなければ** → 家で遊ぶ\n\n「もし〜なら」と「そうでなければ」の2つのルートを作れます。"
         },
         {
           "title": "if-else の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/common/hose_bucket.png",
           "content": "# 2つのルートを作る\n\n**コード例：**\n```ruby\nage = 10\nif age >= 20\n  puts '大人'\nelse\n  puts '子供'\nend\n```\n\n**何が起こるの？**\n1. `age` は `10` です\n2. `if age >= 20` → 10は20以上？ → いいえ（条件に合わない）\n3. `else` のルートに進む\n4. 「子供」と表示される\n\n**結果（けっか）：** 子供 と表示されます\n\n条件が当てはまれば上のルート、当てはまらなければ下のルートを通ります。"
         }
       ],
@@ -368,12 +368,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "条件（じょうけん）を組み合わせる",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/common/pipeline.png",
           "content": "# 複数（ふくすう）の条件\n\n2つ以上の条件を組み合わせることができます。\n\n**身近（みぢか）な例（れい）：**\n- 遊園地（ゆうえんち）の乗り物に乗れる条件\n- 「身長120cm以上」**かつ**「年齢6歳以上」の両方を満（み）たす必要（ひつよう）がある\n\n**`and`（アンド）**：「〜かつ〜」両方の条件を満たす\n**`or`（オア）**：「〜または〜」どちらか一方を満たす"
         },
         {
           "title": "and と or の使い方",
-          "image": "/illustrations/common/if.png",
+          "image": "/illustrations/common/pipeline.png",
           "content": "# 条件（じょうけん）の組み合わせ\n\n**and の例（両方の条件を満たす）：**\n```ruby\nage = 15\nif age >= 10 and age < 20\n  puts '10代です'\nend\n```\n→ 15は「10以上」**かつ**「20より小さい」ので表示される\n\n**or の例（どちらかを満たす）：**\n```ruby\nday = '土曜'\nif day == '土曜' or day == '日曜'\n  puts 'お休みです'\nend\n```\n→ 「土曜」**または**「日曜」なので表示される\n\n**別（べつ）の書き方：**\n- `&&` は `and` と同じ意味\n- `||` は `or` と同じ意味"
         }
       ],
@@ -410,12 +410,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "繰（く）り返し処理（しょり）",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/common/pipeline.png",
           "content": "# 同じ処理（しょり）を何度も\n\n配列（はいれつ）の中身を全部（ぜんぶ）見たいときは **each（イーチ）** を使うと便利（べんり）です。\n\n**身近（みぢか）な例（れい）：**\n- 出席（しゅっせき）をとるとき、名簿（めいぼ）の名前を1人ずつ呼ぶ\n- 買い物リストの商品（しょうひん）を1つずつチェックする\n\n**each** を使うと、配列の中身を **1つずつ順番（じゅんばん）に取り出して** 同じ処理ができます。"
         },
         {
           "title": "each の使い方",
-          "image": "/illustrations/common/loop.png",
+          "image": "/illustrations/common/pipeline.png",
           "content": "# ブロックで処理（しょり）を渡（わた）す\n\n**ブロック** は `do...end` で囲（かこ）んだ処理のかたまりです。\n\n**コード例：**\n```ruby\nfruits = ['りんご', 'バナナ']\nfruits.each do |fruit|\n  puts fruit\nend\n```\n\n**何をしているの？**\n1. `fruits` という配列に「りんご」と「バナナ」が入っている\n2. `each do |fruit|` → 配列から1つずつ取り出して `fruit` に入れる\n3. `puts fruit` → 取り出したものを表示\n4. 全部表示したら終わり\n\n**`|fruit|`（パイプで囲む）とは？**\n- 配列から取り出した1つのデータが入る「一時的（いちじてき）なはこ」\n- これを **ブロック変数（へんすう）** と呼びます"
         }
       ],
@@ -452,12 +452,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "ハッシュとは？",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/common/hose_bucket.png",
           "content": "# キー（名前）と値（あたい）のペア\n\n**ハッシュ** は、「名前」と「データ」をセットで保存（ほぞん）できる仕組（しく）みです。\n\n**身近（みぢか）な例（れい）：**\n- 電話帳（でんわちょう）のイメージ\n- 「たろう」という名前で調べると「090-1234」が出てくる\n- 「はなこ」という名前で調べると「080-5678」が出てくる\n\n配列（はいれつ）は番号で探（さが）すのに対（たい）して、ハッシュは **名前（キー）で探せる** のが便利（べんり）なところです。"
         },
         {
           "title": "ハッシュの使い方",
-          "image": "/illustrations/common/dict.png",
+          "image": "/illustrations/common/hose_bucket.png",
           "content": "# キーで取り出す\n\n**書き方：**\n- `{　}` で囲（かこ）む\n- `=>`（ロケット）でキーと値（あたい）を結（むす）ぶ\n\n**コード例：**\n```ruby\ncolors = {'りんご' => '赤', 'バナナ' => '黄'}\nputs colors['りんご']  # => 赤\n```\n\n**何をしているの？**\n1. `colors` というハッシュを作る\n2. 「りんご」というキーに「赤」という値をセット\n3. 「バナナ」というキーに「黄」という値をセット\n4. `colors['りんご']` で「りんご」の値を取り出す → 「赤」\n\n**`=>`（ダブルアロー/ロケット）：**\n「〜は〜です」という意味で覚（おぼ）えよう。「りんごは赤です」"
         }
       ],
@@ -489,12 +489,12 @@ export const rubyData = {
       "tutorialSlides": [
         {
           "title": "メソッド（関数）とは？",
-          "image": "/illustrations/common/function.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# 処理（しょり）をまとめる\n\n一連（いちれん）の処理をひとまとめにして、名前をつけたものを **メソッド**（または **関数（かんすう）**）と呼びます。\n\n**身近（みぢか）な例（れい）：**\n- 料理（りょうり）のレシピのようなもの\n- 「カレーの作り方」というレシピがあれば、何度でもカレーが作れる\n- プログラムも同じように「手順書（てじゅんしょ）」を作っておける\n\n**メソッドの便利（べんり）なところ：**\n- 一度作れば、何度でも呼び出せる\n- 同じコードを何回も書かなくていい"
         },
         {
           "title": "def でメソッドを定義（ていぎ）",
-          "image": "/illustrations/common/function.png",
+          "image": "/illustrations/common/blueprint.png",
           "content": "# 関数を作る\n\n**書き方：**\n- `def`（デフ）でメソッドを作り始（はじ）める\n- `end`（エンド）で終わる\n\n**コード例：**\n```ruby\ndef greet\n  puts 'こんにちは'\nend\n\ngreet  # => こんにちは と表示される\n```\n\n**何をしているの？**\n1. `def greet` → 「greet」という名前のメソッドを作り始める\n2. `puts 'こんにちは'` → このメソッドがやる処理\n3. `end` → メソッドの終わり\n4. `greet` → メソッドを呼び出す（名前を呼ぶだけでOK）\n\n**def は「define（定義する）」の略（りゃく）** と覚えましょう。"
         }
       ],

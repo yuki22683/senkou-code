@@ -14,12 +14,12 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "yield（イールド）とは",
-          "image": "/illustrations/3d/yield_block.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# メソッドにブロックを渡（わた）して実行（じっこう）\n\n**yield（イールド）** は、メソッドに渡されたブロックを **その場所で実行する** キーワードです。\n\n**身近（みぢか）な例（れい）：**\n- メソッド = 「〇〇をやってね」という指示（しじ）を待っている人\n- ブロック = 具体的（ぐたいてき）な「やること」リスト\n- yield = 「さあ、渡された指示を今やって！」という合図\n\nyield を使うと、メソッドを呼ぶときに **やることを自由に変えられる** のが便利です。"
         },
         {
           "title": "yield の使い方",
-          "image": "/illustrations/3d/yield_block.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# ブロックを実行する\n\n**コード例：**\n```ruby\ndef greet\n  yield\nend\n\ngreet { puts 'こんにちは' }\n# => こんにちは\n```\n\n**何が起こるの？**\n1. `greet` メソッドを呼ぶ\n2. `{ puts 'こんにちは' }` というブロックを渡す\n3. メソッド内の `yield` に到達（とうたつ）\n4. 渡されたブロックが実行される\n5. 「こんにちは」と表示される\n\n**ポイント：**\n- ブロックの内容を変えれば、同じメソッドで違う処理ができる\n- `yield` は何回でも呼べる（その度にブロックが実行される）"
         }
       ],
@@ -47,12 +47,12 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "Proc（プロック）とは",
-          "image": "/illustrations/3d/proc_callable.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# ブロックを「モノ」として保存（ほぞん）\n\n**Proc（プロック）** は、ブロック（処理のかたまり）を **オブジェクト** にしたものです。\n\n**身近（みぢか）な例（れい）：**\n- ブロック = 「やること」を口で言う（その場かぎり）\n- Proc = 「やること」をメモに書いて保存する（あとで何回でも見られる）\n\n**Procの便利なところ：**\n- 変数に入れておける\n- 他のメソッドに渡せる\n- あとで何回でも呼び出せる"
         },
         {
           "title": "Proc の使い方",
-          "image": "/illustrations/3d/proc_callable.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# Proc.new で作成\n\n**コード例：**\n```ruby\nmy_proc = Proc.new { puts 'Hello' }\nmy_proc.call  # => Hello\n```\n\n**何をしているの？**\n1. `Proc.new { puts 'Hello' }` → 「Hello と表示する」というProcを作る\n2. `my_proc` という変数に入れる\n3. `my_proc.call` → Procを実行（じっこう）する\n4. 「Hello」と表示される\n\n**引数（ひきすう）も渡せる：**\n```ruby\ndoubler = Proc.new { |x| x * 2 }\nputs doubler.call(5)  # => 10\n```\n\n`|x|` の部分で、渡された値を受け取ります。"
         }
       ],
@@ -78,12 +78,12 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "ラムダとは",
-          "image": "/illustrations/3d_advanced/lambda_spark.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# Procの「厳密（げんみつ）バージョン」\n\n**ラムダ** は Proc の一種（いっしゅ）ですが、より **厳格（げんかく）なルール** を持っています。\n\n**Proc との違（ちが）い：**\n\n| 比較（ひかく） | Proc | ラムダ |\n|-------|------|--------|\n| 引数の数 | 足りなくてもOK | 必ず正しい数が必要 |\n| return | メソッド全体から抜（ぬ）ける | ラムダ内だけから抜ける |\n\n**いつラムダを使う？**\n- 引数の数を間違（まちが）えたときにエラーにしたい\n- より「関数らしい」動きをさせたい"
         },
         {
           "title": "ラムダの使い方",
-          "image": "/illustrations/3d_advanced/lambda_spark.png",
+          "image": "/illustrations/common/key_mutex.png",
           "content": "# -> で簡単（かんたん）に作れる\n\n**コード例：**\n```ruby\nmy_lambda = ->(x) { x * 2 }\nmy_lambda.call(5)  # => 10\n```\n\n**何をしているの？**\n1. `->(x) { x * 2 }` → 「xを2倍にする」というラムダを作る\n2. `my_lambda` という変数に入れる\n3. `my_lambda.call(5)` → 5を渡して実行\n4. 結果（けっか）は10\n\n**書き方は2種類：**\n```ruby\n# アロー記法（->）\nadd = ->(a, b) { a + b }\n\n# lambda キーワード\nadd = lambda { |a, b| a + b }\n```\n\nどちらも同じ動きですが、`->` の方が短く書けます。"
         }
       ],
@@ -109,7 +109,7 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "&:（アンパサンドコロン）記法とは",
-          "image": "/illustrations/3d/symbol_to_proc.png",
+          "image": "/illustrations/common/sorting_cards.png",
           "content": "# シンボルを Proc に変換（へんかん）する魔法（まほう）\n\n**`&:`** を使うと、シンボル（メソッド名）を **Proc に変換** してブロックとして渡せます。\n\n**身近（みぢか）な例（れい）：**\n- 普通（ふつう）は「各要素（ようそ）を文字列にして」と細かく書く\n- `&:to_s` なら「文字列化よろしく！」と一言で済む\n\nRubyらしい **短くてエレガント** な書き方です。"
         },
         {
@@ -140,7 +140,7 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "reduce（リデュース）とは",
-          "image": "/illustrations/3d_advanced/comprehension.png",
+          "image": "/illustrations/common/magnifying_data.png",
           "content": "# 配列を「1つの値」にまとめる\n\n**reduce（リデュース）** は、配列の全要素（ようそ）を **1つの値** にまとめるメソッドです。「畳（たた）み込み」とも呼ばれます。\n\n**身近（みぢか）な例（れい）：**\n- 買い物リストの全商品（しょうひん）の **合計金額（ごうけいきんがく）** を出す\n- テストの点数を全部 **足（た）して** 平均（へいきん）を計算する\n\n複数（ふくすう）のデータを「まとめて」1つの結果を出したいときに使います。"
         },
         {
@@ -171,7 +171,7 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "select と reject",
-          "image": "/illustrations/3d_advanced/class_to_instance.png",
+          "image": "/illustrations/common/sorting_cards.png",
           "content": "# 条件（じょうけん）で要素（ようそ）を選ぶ\n\n**select（セレクト）** と **reject（リジェクト）** は、条件に合う要素を選ぶメソッドです。\n\n**2つの違（ちが）い：**\n- `select` → 条件に **合う** ものを集める（選ぶ）\n- `reject` → 条件に **合わない** ものを集める（除く）\n\n**身近（みぢか）な例（れい）：**\n- select = 「赤いもの」だけ選ぶ\n- reject = 「赤いもの」以外を選ぶ（赤を除く）"
         },
         {
@@ -202,12 +202,12 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "スプラット演算子（*）とは",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/magnifying_data.png",
           "content": "# いくつでも引数（ひきすう）を受け取れる\n\n**スプラット演算子（*）** を使うと、**いくつでも引数を受け取れる** メソッドが作れます。\n\n**身近（みぢか）な例（れい）：**\n- 普通のメソッド：「2つの数を足す」（数が決まっている）\n- スプラット：「渡された数を全部足す」（何個でもOK）\n\n**「可変長引数（かへんちょうひきすう）」** と呼ばれ、引数の数が決まっていないときに便利です。"
         },
         {
           "title": "スプラット演算子の使い方",
-          "image": "/illustrations/3d/gear.png",
+          "image": "/illustrations/common/magnifying_data.png",
           "content": "# * で複数（ふくすう）の引数を受け取る\n\n**コード例：**\n```ruby\ndef greet(*names)\n  names.each { |name| puts name }\nend\n\ngreet('Alice', 'Bob', 'Carol')\n# => Alice\n# => Bob\n# => Carol\n```\n\n**何が起こるの？**\n1. `*names` → 渡された引数をすべて配列にまとめる\n2. 3つの名前を渡すと `names = ['Alice', 'Bob', 'Carol']` になる\n3. `.each` で1つずつ表示\n\n**配列を展開（てんかい）するときにも使える：**\n```ruby\nnums = [1, 2, 3]\nsome_method(*nums)  # some_method(1, 2, 3) と同じ\n```\n\n`*` は配列を「バラバラ」にする魔法（まほう）です。"
         }
       ],
@@ -235,12 +235,12 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "method_missing とは",
-          "image": "/illustrations/3d_advanced/class_to_instance.png",
+          "image": "/illustrations/common/sorting_cards.png",
           "content": "# 存在（そんざい）しないメソッドをキャッチ\n\n**method_missing（メソッドミッシング）** は、**存在しないメソッドが呼ばれたとき** に自動で実行される特別なメソッドです。\n\n**身近（みぢか）な例（れい）：**\n- 受付（うけつけ）で「〇〇さんをお願いします」と言う\n- その人がいなければ「〇〇さんはいません」と答える\n- method_missing = 「いない人を呼ばれたときの対応（たいおう）」\n\n**メタプログラミング** の基本（きほん）で、Rubyの強力（きょうりょく）な機能です。"
         },
         {
           "title": "method_missing の使い方",
-          "image": "/illustrations/3d_advanced/class_to_instance.png",
+          "image": "/illustrations/common/sorting_cards.png",
           "content": "# 存在しないメソッドを捕（つか）まえる\n\n**コード例：**\n```ruby\nclass MyClass\n  def method_missing(name, *args)\n    puts \"#{name} が呼ばれました\"\n  end\nend\n\nobj = MyClass.new\nobj.hello  # => hello が呼ばれました\nobj.foo    # => foo が呼ばれました\n```\n\n**何が起こるの？**\n1. `obj.hello` を呼ぶ\n2. `hello` メソッドは定義されていない\n3. `method_missing` が代わりに実行される\n4. `name` には `:hello` が入る\n\n**引数の意味：**\n- `name` → 呼ばれたメソッド名（シンボル）\n- `*args` → 渡された引数（あれば）\n\n**注意：** 便利ですが、使いすぎるとデバッグが難（むずか）しくなります。"
         }
       ],
@@ -268,12 +268,12 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "Struct（ストラクト）とは",
-          "image": "/illustrations/3d_advanced/class_template.png",
+          "image": "/illustrations/common/sorting_cards.png",
           "content": "# 簡単（かんたん）にクラスを作る\n\n**Struct（ストラクト）** は、**データだけを持つ簡易的（かんいてき）なクラス** を作れます。\n\n**身近（みぢか）な例（れい）：**\n- 普通のクラス = 部屋（へや）を一から設計して建てる\n- Struct = 「〇〇を入れる場所」だけ決めた収納（しゅうのう）ボックス\n\n**いつ使う？**\n- データをまとめて持ちたいだけのとき\n- クラスを書くほどでもない簡単なデータ構造（こうぞう）"
         },
         {
           "title": "Struct の使い方",
-          "image": "/illustrations/3d_advanced/class_template.png",
+          "image": "/illustrations/common/sorting_cards.png",
           "content": "# Struct.new で簡単作成\n\n**コード例：**\n```ruby\nPoint = Struct.new(:x, :y)\np = Point.new(10, 20)\nputs p.x  # => 10\nputs p.y  # => 20\n```\n\n**何をしているの？**\n1. `Struct.new(:x, :y)` → x と y という属性（ぞくせい）を持つクラスを作る\n2. `Point` という名前で保存\n3. `Point.new(10, 20)` → x=10, y=20 のオブジェクトを作る\n4. `.x` や `.y` でデータにアクセス\n\n**普通のクラスで書くと：**\n```ruby\nclass Point\n  attr_accessor :x, :y\n  def initialize(x, y)\n    @x = x\n    @y = y\n  end\nend\n```\n\nStructを使えば **1行で同じことができます！**"
         }
       ],
@@ -299,7 +299,7 @@ export const ruby3Data = {
       "tutorialSlides": [
         {
           "title": "tap（タップ）とは",
-          "image": "/illustrations/3d/tap_bounce.png",
+          "image": "/illustrations/common/sorting_cards.png",
           "content": "# 処理（しょり）しつつ自分を返す\n\n**tap（タップ）** は、ブロックを実行した後、**元のオブジェクト自身を返す** メソッドです。\n\n**身近（みぢか）な例（れい）：**\n- お弁当箱（べんとうばこ）に「おかずを入れる」（処理）\n- でも最後は「お弁当箱」が手元に返ってくる\n\n**いつ使う？**\n- メソッドチェーン（連続呼び出し）の途中（とちゅう）でデバッグしたいとき\n- オブジェクトを操作（そうさ）しつつ、そのオブジェクトを返したいとき"
         },
         {

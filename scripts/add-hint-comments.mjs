@@ -239,6 +239,7 @@ function generateDescription(correctLine, language, holeyLine) {
 
   // console.log(xxx) - 変数
   if (/console\.log\s*\(\s*(\w+)\s*\)/.test(trimmed) && !/['"`]/.test(trimmed)) {
+    const match = trimmed.match(/console\.log\s*\(\s*(\w+)\s*\)/);
     return `${prefix} 変数${match[1]}の値をコンソールに出力します`;
   }
 
@@ -432,10 +433,10 @@ function generateDescription(correctLine, language, holeyLine) {
   return null;
 }
 
-// コメント行かどうか
+// コメント行かどうか（空行は含めない）
 function isCommentLine(line, language) {
   const trimmed = line.trim();
-  if (trimmed === '') return true;
+  if (trimmed === '') return false;
   if (trimmed.startsWith('//')) return true;
   if (trimmed.startsWith('#') && ['python', 'ruby', 'bash', 'perl', 'elixir'].includes(language)) return true;
   if (trimmed.startsWith('--') && ['sql', 'lua', 'haskell'].includes(language)) return true;
@@ -512,6 +513,7 @@ function findArrayEnd(content, startIdx) {
 function processFile(filePath) {
   let content = fs.readFileSync(filePath, 'utf-8');
   const language = path.basename(filePath, '.ts').replace(/\d+$/, '');
+  const prefix = commentPrefix[language] || '//';
 
   let totalInserted = 0;
   let searchStart = 0;
@@ -554,7 +556,7 @@ function processFile(filePath) {
     }
 
     const holeyCode = content.substring(holeyStart, holeyEnd);
-    const holeyLines = holeyCode.split('\\n');
+    const holeyLines = holeyCode.split(/(?<!\\)\\n|\r?\n/);
 
     const clContent = content.substring(clStart, clEnd);
     const correctLines = [];
@@ -585,7 +587,7 @@ function processFile(filePath) {
       const line = holeyLines[i];
       const correctLine = i < correctLines.length ? correctLines[i] : '';
 
-      if (isHoleyLine(line) && !isCommentLine(line, language) && !isStructuralLine(line)) {
+      if (isHoleyLine(line) && !isCommentLine(line, language)) {
         const prevLine = newHoleyLines[newHoleyLines.length - 1];
         if (!prevLine || !isCommentLine(prevLine, language)) {
           const indent = getIndent(line);
@@ -594,6 +596,13 @@ function processFile(filePath) {
           if (desc) {
             newHoleyLines.push(indent + desc);
             newCorrectLines.push(indent + desc);
+            newLineHints.push(null);
+            inserted++;
+          } else {
+            // フォールバック：汎用的なコメントを追加
+            const fallbackDesc = `${prefix} ここを正しく入力してください`;
+            newHoleyLines.push(indent + fallbackDesc);
+            newCorrectLines.push(indent + fallbackDesc);
             newLineHints.push(null);
             inserted++;
           }
@@ -625,7 +634,7 @@ function processFile(filePath) {
 
     totalInserted += inserted;
 
-    const newHoleyCode = newHoleyLines.join('\\n');
+    const newHoleyCode = newHoleyLines.join('\\\\n');
     const newClContent = newCorrectLines.map(l => '"' + l + '"').join(', ');
     const newLhContent = newLineHints.map(h => h === null ? 'null' : '"' + h + '"').join(', ');
 
