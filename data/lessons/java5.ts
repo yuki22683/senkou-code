@@ -14,12 +14,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "例外（れいがい）とは？",
-          "image": "/illustrations/3d_advanced/safety_net.png",
+          "image": "/illustrations/common/light_bulb_hint.png",
           "content": "# プログラムの異常事態（いじょうじたい）\n\n**例外** は、プログラム実行中に発生する「予期しない問題」です。\n\n**たとえ話：** 料理中に「お皿が割れた！」というようなアクシデントです。レシピ通りには進められなくなりますよね。\n\n```java\nint[] arr = {1, 2, 3};  // 3つのデータ\narr[10];  // 10番目？そんなのない！\n// → ArrayIndexOutOfBoundsException（配列の範囲外エラー）\n```\n\n例外が起きると、そのままではプログラムが止まってしまいます。"
         },
         {
           "title": "try-catch（トライ・キャッチ）",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/shield_gold.png",
           "content": "# 例外をキャッチ\n\n**try-catch** を使うと、例外をキャッチ（捕まえて）対処できます。\n\n**たとえ話：** サーカスの安全ネットのように、落ちても（エラーが起きても）受け止めてくれます。\n\n```java\ntry {  // 「試す」ブロック\n    int x = 10 / 0;  // 0で割る→例外！\n} catch (ArithmeticException e) {  // 「捕まえる」ブロック\n    System.out.println(\"エラー!\");  // 対処する\n}\n```\n\n**ポイント：** tryの中で例外が起きたら、catchの中が実行されます"
         }
       ],
@@ -59,12 +59,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "finally（ファイナリー）とは？",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# 必ず実行される処理\n\n**finally**（ファイナリー＝最後に）ブロックは、例外が起きても起きなくても**必ず**実行されます。\n\n**たとえ話：** 料理が成功しても失敗しても、最後は必ずキッチンを片付けますよね。それがfinallyです。\n\n```java\ntry {\n    // 処理（成功するかも、失敗するかも）\n} catch (Exception e) {\n    // 例外処理（失敗したときだけ）\n} finally {\n    // 必ず実行される（成功でも失敗でも！）\n}\n```"
         },
         {
           "title": "リソースの解放（かいほう）",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/crossroad.png",
           "content": "# クリーンアップ処理に使う\n\nファイルを開いたら閉じる、接続（せつぞく）を切るなど、「後片付け」をfinallyに書きます。\n\n**たとえ話：** 本を読み終わったら本棚に戻す、電気を使ったら消す、ということを忘れずにできます。\n\n```java\nFileReader reader = null;\ntry {\n    reader = new FileReader(\"file.txt\");\n    // ファイルを読む処理\n} finally {\n    if (reader != null) reader.close();  // 必ず閉じる！\n}\n```\n\n**メリット：** エラーが起きても後片付けを忘れません"
         }
       ],
@@ -106,12 +106,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "throws（スローズ）とは？",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/traffic_light.png",
           "content": "# 例外を呼び出し元に伝える\n\n**throws**（スローズ＝投げる）は、「このメソッドは例外を投げるかもしれません」と宣言（せんげん）するキーワードです。\n\n**たとえ話：** 「このボールは爆発するかもしれないので、受け取る人は気をつけてね」と注意書きをつけるようなものです。\n\n```java\npublic void readFile() throws IOException {\n    // ファイル読み込み処理\n    // IOException（入出力エラー）が起きる可能性あり！\n}\n```"
         },
         {
           "title": "呼び出し側の責任（せきにん）",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/decision_tree.png",
           "content": "# キャッチか再スロー（投げ渡し）\n\nthrowsがついたメソッドを呼ぶ側は、「キャッチする」か「さらに上に投げる」かを選びます。\n\n**方法1：自分でキャッチする**\n```java\ntry {\n    readFile();  // 例外が起きるかも\n} catch (IOException e) {\n    // 自分で対処する\n}\n```\n\n**方法2：さらに上に投げる**\n```java\npublic void caller() throws IOException {\n    readFile();  // 自分は対処せず、呼び出し元に任せる\n}\n```\n\n**たとえ話：** 問題が起きたら「自分で解決する」か「上司に報告する」かの選択です"
         }
       ],
@@ -157,12 +157,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "カスタム例外（れいがい）",
-          "image": "/illustrations/common/hierarchy_tree.png",
+          "image": "/illustrations/common/intro_robot.png",
           "content": "# 独自（どくじ）の例外を定義\n\n**Exception** を継承（けいしょう）して、自分だけのオリジナル例外を作れます。\n\n**たとえ話：** 標準の例外は「一般的なエラー」ですが、カスタム例外は「このアプリ専用のエラー」です。「年齢がマイナスはおかしい！」という特別なエラーを作れます。\n\n```java\nclass MyException extends Exception {  // Exceptionを継承\n    public MyException(String msg) {\n        super(msg);  // 親クラスにメッセージを渡す\n    }\n}\n```"
         },
         {
           "title": "使い方",
-          "image": "/illustrations/common/hierarchy_tree.png",
+          "image": "/illustrations/3d/either_fork.png",
           "content": "# throw（スロー）で投げる\n\n`throw`（スロー＝投げる）を使って、自分で例外を発生させられます。\n\n**コード例：** 年齢がマイナスならエラーにする\n```java\nif (age < 0) {\n    throw new MyException(\"年齢は正の数です\");\n}\n```\n\n**何が起きる？**\n1. 年齢が0より小さいかチェック\n2. 小さければ例外を「投げる」\n3. どこかでcatchされるまで上に伝わる\n\n**注意：** throw は「投げる」、throws は「投げるかもしれないと宣言」で違います"
         }
       ],
@@ -209,12 +209,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "自動リソース管理（かんり）",
-          "image": "/illustrations/common/hierarchy_tree.png",
+          "image": "/illustrations/common/pencil.png",
           "content": "# try-with-resources（トライ・ウィズ・リソーシズ）\n\nJava 7以降、リソース（ファイルなど）を自動で閉じてくれる便利な書き方ができます。\n\n**たとえ話：** 図書館で本を借りると、返却期限が来たら自動で返却される仕組みのようなものです。\n\n```java\ntry (FileReader reader = new FileReader(\"file.txt\")) {\n    // reader を使う処理\n}  // ここで自動で close() が呼ばれる！\n```\n\n`()`（カッコ）の中でリソースを宣言するのがポイントです"
         },
         {
           "title": "メリット",
-          "image": "/illustrations/common/hierarchy_tree.png",
+          "image": "/illustrations/common/logic_gate_or.png",
           "content": "# finally が不要\n\n従来は finally で手動で閉じる必要がありましたが、try-with-resources なら自動です。\n\n**従来の書き方（長い）**\n```java\nFileReader r = null;\ntry {\n    r = new FileReader(\"file.txt\");\n} finally {\n    if (r != null) r.close();  // 手動で閉じる\n}\n```\n\n**try-with-resources（短い！）**\n```java\ntry (FileReader r = new FileReader(\"file.txt\")) {\n    // 処理\n}  // 自動で閉じる！\n```\n\n**メリット：** 閉じ忘れがなくなり、コードもシンプルに！"
         }
       ],
@@ -256,12 +256,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "BufferedReader（バッファードリーダー）",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/book.png",
           "content": "# バッファ付き読み込み\n\n**BufferedReader** は効率的（こうりつてき）にテキストを読み込むためのクラスです。\n\n**たとえ話：** 本を読むとき、1文字ずつ読むより、1行ずつ読む方が速いですよね。BufferedReaderは「1行ずつ」まとめて読めます。\n\n```java\nBufferedReader br = new BufferedReader(\n    new FileReader(\"file.txt\")  // ファイルを読む準備\n);\nString line = br.readLine();  // 1行読み込む\n```"
         },
         {
           "title": "全行（ぜんぎょう）読み込み",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/loading_spinner.png",
           "content": "# ループで読み込み\n\nファイルの全部の行を読みたいときは、whileループを使います。\n\n```java\nString line;\nwhile ((line = br.readLine()) != null) {  // 読めなくなるまで\n    System.out.println(line);  // 1行ずつ表示\n}\n```\n\n**何が起きている？**\n1. `readLine()` で1行読む\n2. 読めたら表示して、次の行へ\n3. 読めなくなったら（null）ループ終了\n\n**ポイント：** readLine() は行がなくなると null を返します"
         }
       ],
@@ -304,12 +304,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "BufferedWriter（バッファードライター）",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/select.png",
           "content": "# バッファ付き書き込み\n\n**BufferedWriter** は効率的にテキストを書き込むためのクラスです。\n\n**たとえ話：** 手紙を書くとき、1文字書くたびにポストに入れるより、書き終わってからまとめて送る方が効率的ですよね。BufferedWriterは「まとめて書く」ことで高速になります。\n\n```java\nBufferedWriter bw = new BufferedWriter(\n    new FileWriter(\"file.txt\")  // ファイルに書く準備\n);\nbw.write(\"Hello\");  // 文字列を書く\nbw.close();         // 閉じる（忘れずに！）\n```"
         },
         {
           "title": "newLine（ニューライン）で改行",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/puzzle_pieces.png",
           "content": "# 改行（かいぎょう）を追加\n\n`newLine()`を使うと、改行（次の行に移る）を追加できます。\n\n```java\nbw.write(\"Line1\");  // 1行目を書く\nbw.newLine();       // 改行！\nbw.write(\"Line2\");  // 2行目を書く\n```\n\n**結果のファイル：**\n```\nLine1\nLine2\n```\n\n**ポイント：** write() だけでは改行されません。改行したいときは newLine() を使いましょう"
         }
       ],
@@ -353,12 +353,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "Scanner（スキャナー）とは？",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/modular_blocks.png",
           "content": "# テキストのパース（解析）\n\n**Scanner**（スキャナー＝読み取り機）は、テキストを単語や数字に分けて読み込みます。\n\n**たとえ話：** 文章を「スキャン」して、必要な情報を取り出すイメージです。「10 20 30」という文字列から、10、20、30という数字を取り出せます。\n\n```java\nScanner sc = new Scanner(\"10 20 30\");  // 文字列をスキャン\nint a = sc.nextInt();  // 最初の数字 → 10\nint b = sc.nextInt();  // 次の数字 → 20\n```"
         },
         {
           "title": "様々な読み込み方法",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/package_delivery.png",
           "content": "# 便利なメソッド\n\n読み込みたいデータの種類によって、使うメソッドが違います。\n\n**数字を読む**\n```java\nnextInt()    // 整数（1, 2, 3 など）\nnextDouble() // 小数（1.5, 3.14 など）\n```\n\n**文字を読む**\n```java\nnext()       // 単語1つ（空白で区切り）\nnextLine()   // 1行まるごと\n```\n\n**まだ読めるかチェック**\n```java\nhasNext()    // 次のデータがあるか？\n```\n\n**覚え方：** next〇〇 で「次の〇〇を読む」です"
         }
       ],
@@ -400,12 +400,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "NIO2 API（エヌアイオーツー）",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/database_aggregate.png",
           "content": "# モダンなファイル操作（そうさ）\n\nJava 7以降の **Files**（ファイルズ）クラスは、ファイル操作を簡単にする便利なメソッドを提供します。\n\n**たとえ話：** 従来のファイル操作は「手動でドアを開け閉め」するイメージでしたが、NIO2は「自動ドア」のように楽に操作できます。\n\n```java\nPath path = Paths.get(\"file.txt\");  // ファイルのパス（場所）を指定\nList<String> lines = Files.readAllLines(path);  // 全行を一気に読む！\n```"
         },
         {
           "title": "便利なメソッド",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/sql_query_magnifier.png",
           "content": "# Files クラスのメソッド\n\nFilesクラスには便利なメソッドがたくさんあります。\n\n**読み込み**\n```java\nFiles.readAllLines(path)  // 全行をリストで取得\nFiles.readString(path)    // 全内容を文字列で取得\n```\n\n**書き込み**\n```java\nFiles.write(path, lines)  // リストの内容を書き込み\n```\n\n**チェック**\n```java\nFiles.exists(path)        // ファイルがあるか確認\n```\n\n**メリット：** 1行で読み書きできて、とても便利！"
         }
       ],
@@ -446,12 +446,12 @@ export const javaData5 = {
       "tutorialSlides": [
         {
           "title": "マルチキャッチ",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/magnifying_glass_search.png",
           "content": "# 複数（ふくすう）の例外をまとめて\n\nJava 7以降、**|**（パイプ記号）を使って複数の例外をまとめてキャッチできます。\n\n**たとえ話：** 「りんごかみかんが落ちてきたら拾う」のように、複数の種類をまとめて対処できます。\n\n```java\ntry {\n    // 処理\n} catch (IOException | SQLException e) {  // どちらかが起きたら\n    // 両方の例外を同じように処理\n}\n```\n\n同じ処理をする例外は、まとめて書くとスッキリします！"
         },
         {
           "title": "個別（こべつ）にキャッチ",
-          "image": "/illustrations/common/toolbox_static.png",
+          "image": "/illustrations/common/data_storage.png",
           "content": "# 順番にキャッチ\n\n例外の種類ごとに違う処理をしたい場合は、catchを複数書きます。\n\n```java\ntry {\n    // 処理\n} catch (FileNotFoundException e) {\n    // ファイルがない場合の処理\n} catch (IOException e) {\n    // その他の入出力エラーの処理\n}\n```\n\n**大事なルール：** 具体的な例外を先に、一般的な例外を後に書きます。\n\n**なぜ？** 先に一般的なものを書くと、具体的なものまでキャッチされてしまい、区別できなくなるからです"
         }
       ],

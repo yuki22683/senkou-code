@@ -14,12 +14,12 @@ export const lua3Data = {
       "tutorialSlides": [
         {
           "title": "pcall とは？",
-          "image": "/illustrations/common/rescue_buoy.png",
+          "image": "/illustrations/common/function_gear.png",
           "content": "# 保護された呼び出し\n\n**pcall** は、関数をエラーから保護して呼び出します。エラーが発生してもプログラムは停止しません。"
         },
         {
           "title": "pcall の使い方",
-          "image": "/illustrations/common/rescue_buoy.png",
+          "image": "/illustrations/common/decision_tree.png",
           "content": "# success, result = pcall(関数)\n\n成功すると `true` と結果、失敗すると `false` とエラーメッセージを返します。\n\n**コード例：**\n```lua\nlocal ok, err = pcall(function()\n    error(\"oops\")\nend)\nprint(ok) -- false\n```"
         }
       ],
@@ -56,12 +56,12 @@ export const lua3Data = {
       "tutorialSlides": [
         {
           "title": "error とは？",
-          "image": "/illustrations/common/rescue_buoy.png",
+          "image": "/illustrations/3d/either_fork.png",
           "content": "# エラーを発生させる\n\n**error** 関数を使うと、意図的にエラーを発生させることができます。"
         },
         {
           "title": "error の使い方",
-          "image": "/illustrations/common/rescue_buoy.png",
+          "image": "/illustrations/common/logic_gate_or.png",
           "content": "# error(メッセージ)\n\nエラーメッセージを指定してエラーを発生させます。\n\n**コード例：**\n```lua\nif x < 0 then\n    error(\"負の値は許可されません\")\nend\n```"
         }
       ],
@@ -94,12 +94,12 @@ export const lua3Data = {
       "tutorialSlides": [
         {
           "title": "assert とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/action_button.png",
           "content": "# 条件を検証する\n\n**assert** は、条件が偽の場合にエラーを発生させます。"
         },
         {
           "title": "assert の使い方",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/robot_greet.png",
           "content": "# assert(条件, メッセージ)\n\n条件が真なら値を返し、偽ならエラーになります。\n\n**コード例：**\n```lua\nlocal x = assert(tonumber(\"42\"))\nprint(x) -- 42\n```"
         }
       ],
@@ -130,12 +130,12 @@ export const lua3Data = {
       "tutorialSlides": [
         {
           "title": "type とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/gear_cogs.png",
           "content": "# 型を調べる\n\n**type** 関数は、値の型を文字列で返します。"
         },
         {
           "title": "type の使い方",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/passing_value.png",
           "content": "# 主な型\n\n- `\"nil\"`, `\"boolean\"`, `\"number\"`, `\"string\"`, `\"table\"`, `\"function\"`\n\n**コード例：**\n```lua\nprint(type(42)) -- number\nprint(type({})) -- table\n```"
         }
       ],
@@ -167,12 +167,12 @@ export const lua3Data = {
       "tutorialSlides": [
         {
           "title": "tostring とは？",
-          "image": "/illustrations/common/blueprint.png",
+          "image": "/illustrations/common/return_value.png",
           "content": "# 文字列に変換\n\n**tostring** は、任意の値を文字列に変換します。"
         },
         {
           "title": "tostring の使い方",
-          "image": "/illustrations/common/blueprint.png",
+          "image": "/illustrations/3d/compose_gear.png",
           "content": "# tostring(値)\n\n数値やテーブルを文字列に変換できます。\n\n**コード例：**\n```lua\nprint(tostring(42)) -- \"42\"\nprint(tostring(true)) -- \"true\"\n```"
         }
       ],
@@ -204,12 +204,12 @@ export const lua3Data = {
       "tutorialSlides": [
         {
           "title": "tonumber とは？",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/function_gear.png",
           "content": "# 数値に変換\n\n**tonumber** は、文字列を数値に変換します。変換できない場合は `nil` を返します。"
         },
         {
           "title": "tonumber の使い方",
-          "image": "/illustrations/common/monitor.png",
+          "image": "/illustrations/common/light_bulb_hint.png",
           "content": "# tonumber(文字列)\n\n数値として解釈できる文字列を変換します。\n\n**コード例：**\n```lua\nprint(tonumber(\"42\")) -- 42\nprint(tonumber(\"abc\")) -- nil\n```"
         }
       ],
@@ -242,12 +242,12 @@ export const lua3Data = {
       "tutorialSlides": [
         {
           "title": "文字列の連結",
-          "image": "/illustrations/common/pipeline.png",
+          "image": "/illustrations/common/action_button.png",
           "content": "# .. で連結\n\nLuaでは **..** 演算子で文字列を連結します。"
         },
         {
           "title": ".. の使い方",
-          "image": "/illustrations/common/pipeline.png",
+          "image": "/illustrations/common/puzzle_pieces.png",
           "content": "# 文字列1 .. 文字列2\n\n複数の文字列をつなげます。\n\n**コード例：**\n```lua\nlocal s = \"Hello\" .. \" \" .. \"World\"\nprint(s) -- Hello World\n```"
         }
       ],
@@ -280,12 +280,12 @@ export const lua3Data = {
       "tutorialSlides": [
         {
           "title": "# 演算子",
-          "image": "/illustrations/common/ruler_measure.png",
+          "image": "/illustrations/common/database_table_3d.png",
           "content": "# 長さを取得\n\n**#** 演算子は、文字列やテーブルの長さを返します。"
         },
         {
           "title": "# の使い方",
-          "image": "/illustrations/common/ruler_measure.png",
+          "image": "/illustrations/common/database_aggregate.png",
           "content": "# #文字列 / #テーブル\n\n文字列のバイト数や配列の要素数を返します。\n\n**コード例：**\n```lua\nprint(#\"hello\") -- 5\nprint(#{1, 2, 3}) -- 3\n```"
         }
       ],
@@ -317,12 +317,12 @@ export const lua3Data = {
       "tutorialSlides": [
         {
           "title": "条件式パターン",
-          "image": "/illustrations/common/abacus.png",
+          "image": "/illustrations/common/monitor.png",
           "content": "# and と or の活用\n\nLuaには三項演算子がありませんが、`and` と `or` で同様のことができます。"
         },
         {
           "title": "and/or パターン",
-          "image": "/illustrations/common/abacus.png",
+          "image": "/illustrations/common/branching_paths.png",
           "content": "# 条件 and 真の値 or 偽の値\n\n条件が真なら左側、偽なら右側の値を返します。\n\n**コード例：**\n```lua\nlocal x = 10 > 5 and \"yes\" or \"no\"\nprint(x) -- yes\n```"
         }
       ],
@@ -355,12 +355,12 @@ export const lua3Data = {
       "tutorialSlides": [
         {
           "title": "break とは？",
-          "image": "/illustrations/common/circular_arrow.png",
+          "image": "/illustrations/common/split_road.png",
           "content": "# ループを抜ける\n\n**break** を使うと、ループを途中で抜けることができます。"
         },
         {
           "title": "break の使い方",
-          "image": "/illustrations/common/circular_arrow.png",
+          "image": "/illustrations/common/crossroad.png",
           "content": "# ループ内で break\n\n条件を満たしたらループを終了します。\n\n**コード例：**\n```lua\nfor i = 1, 10 do\n    if i > 5 then break end\n    print(i)\nend\n```"
         }
       ],

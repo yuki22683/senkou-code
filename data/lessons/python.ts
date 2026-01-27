@@ -14,17 +14,17 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "Python（パイソン）とは？",
-          "image": "/illustrations/common/split_road.png",
+          "image": "/illustrations/common/passing_value.png",
           "content": "# コンピュータとお話ししよう！\n\n**Python（パイソン）** は、世界中で大人気の「プログラミング言語（げんご）」です。\n\n**プログラミング言語** というのは、コンピュータにお願いごとを伝えるための「ことば」のことです。\n\nみんなが日本語でお友だちと話すように、プログラマー（プログラムを作る人）はPythonでコンピュータと会話します。\n\n例えば「計算して！」「画面に文字を出して！」とお願いすると、コンピュータがちゃんと答えてくれますよ。"
         },
         {
           "title": "画面に文字を出す「出力（しゅつりょく）」",
-          "image": "/illustrations/common/split_road.png",
+          "image": "/illustrations/common/return_value.png",
           "content": "# 出力（しゅつりょく）ってなに？\n\nコンピュータにお願いした結果を、画面で見たいときがありますよね。\n\n文字や数字を **画面に出すこと** を、プログラミングでは **出力（しゅつりょく）** と呼びます。\n\nたとえば、友だちに「今日のテストの点数、何点だった？」と聞くと、友だちが「100点！」と答えてくれますよね。\n\nそれと同じで、コンピュータに「結果を教えて！」とお願いすると、画面に答えを出してくれるのです。"
         },
         {
           "title": "魔法の言葉「print（プリント）」",
-          "image": "/illustrations/common/split_road.png",
+          "image": "/illustrations/3d/compose_gear.png",
           "content": "# print（プリント）を使ってみよう\n\n画面に文字を出したいときは、`print()` という **魔法（まほう）の言葉**（これを「関数（かんすう）」と呼びます）を使います。\n\n**関数** というのは、コンピュータへの「おねがいカード」のようなものです。\n\n**書き方：** カッコの中に、出したい文字を入れます。\n\n```python\nprint('こんにちは！')\n```\n\n**だいじなルール：**\n文字を出すときは、ちょんちょん `'` （**クォート**、または **シングルクォート** と呼びます）で文字を囲んでください。\n\nこれは「ここからここまでが文字だよ」とコンピュータに教えるためのしるしです。"
         }
       ],
@@ -59,12 +59,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/variable_label.png",
           "content": "# データを保存する「はこ」\n\nプログラムの中では、数字や文字を **しまっておく「はこ」** を作ることができます。\n\nこれを **変数（へんすう）** と呼びます。\n\nたとえば、おもちゃ箱に「ブロック」と書いておけば、「ブロック箱から取って！」と言うだけでブロックが出てきますよね。\n\n変数も同じです。はこに名前をつけておけば、あとで「あのはこ持ってきて！」とお願いするだけで中身を取り出せます。"
         },
         {
           "title": "はこに中身を入れる（代入）",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/box_container_open.png",
           "content": "# =（イコール）の使い方\n\n算数では「同じ」という意味の `=`（イコール）ですが、プログラミングでは **「右のものを左のはこに入れる」** という意味になります。\n\nこれを **代入（だいにゅう）** と呼びます。\n\n**例：** りんごをしまってみよう！\n\n```python\nfruit = 'りんご'\nprint(fruit)\n```\n=> りんご\n\n**何をしているか：**\n1. `fruit`（フルーツ）という名前のはこを作る\n2. そこに `'りんご'` という文字を入れる\n3. `print(fruit)` ではこの中身を画面に出す\n\nこれだけで、`fruit` という名前のはこに `'りんご'` がしまわれ、画面に表示されました！"
         }
       ],
@@ -104,12 +104,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "算数とプログラミング",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/cpu_chip.png",
           "content": "# 計算はコンピュータの得意技（とくいわざ）\n\nコンピュータの一番得意なことは **「正確（せいかく）で速い計算」** です。\n\n人間が計算すると間違えることもありますが、コンピュータは絶対に間違えません！\n\nどんなに大きな数字でも、プログラミングで指示を出せば **一瞬で答えを出してくれます**。\n\nたとえば、1234567 + 9876543 のような大きな計算も、一瞬です！"
         },
         {
           "title": "計算の記号",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/binary_code.png",
           "content": "# 四則演算（しそくえんざん）\n\n**四則演算** とは、たし算・ひき算・かけ算・わり算の4つの計算のことです。\n\nPythonでは、こんな記号（**演算子（えんざんし）**）を使って計算をします。\n\n- **+** : たし算（たす）\n- **-** : ひき算（ひく）\n- **\\*** : かけ算（かける）※ キーボードの「*」を使います\n- **/** : わり算（わる）\n\n**例：** クッキーを分けてみよう！\n\n```python\ncookies = 10\nfriends = 2\nprint(cookies / friends)\n```\n=> 5.0\n\n**何をしているか：**\n- 10枚のクッキーを2人で分けると、1人5枚になりました！\n- `.0` がついているのは、わり算の答えは小数（しょうすう）で出るからです。"
         }
       ],
@@ -156,12 +156,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "あまりを求める",
-          "image": "/illustrations/common/modulo_percent.png",
+          "image": "/illustrations/common/magnifying_glass_search.png",
           "content": "# 割り算の「あまり」を知りたい！\n\n割り算をしたときに、割り切れなくて **「あまり」** が出ることがありますよね。\n\nたとえば、7個のあめを3人で分けると、1人2個ずつで **あまりが1個** になります。\n\nPythonでは `%`（パーセント）という記号を使うと、その **あまりだけ** を計算してくれます。\n\nこれを **「剰余（じょうよ）」** または **「余り（あまり）」** と呼びます。"
         },
         {
           "title": "% の使い方",
-          "image": "/illustrations/common/modulo_percent.png",
+          "image": "/illustrations/common/data_storage.png",
           "content": "# あまりを計算してみよう\n\n**例1：** 10 ÷ 3 のあまりは？\n\n```python\nprint(10 % 3)  # => 1\n```\n\n10 ÷ 3 は **3 あまり 1** なので、「1」が表示されます。\n\n**例2：** 8 ÷ 2 のあまりは？\n\n```python\nprint(8 % 2)   # => 0\n```\n\n8 ÷ 2 は **4 あまり 0** なので、「0」になります。\n\n**ポイント：** あまりが「0」ということは、割り切れたということです！"
         }
       ],
@@ -191,12 +191,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "中身を増やしたいとき",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/clipboard_list.png",
           "content": "# はこの中身をパワーアップ\n\n「今の点数に10点プラスしたい！」というときがありますよね。\n\nそんなときに `+=`（プラスイコール）を使うと便利です。\n\nこれは **「今の数字に足して、そのまま保存する」** という合体技（がったいわざ）です。\n\n**例：** 貯金（ちょきん）箱にお金を足そう！\n\n```python\nx = 10\nx += 5  # x に 5 を足して保存\nprint(x)  # => 15\n```\n\n**何をしているか：**\n1. 最初は `x` に 10 が入っている\n2. `x += 5` で 5 を足す（10 + 5 = 15）\n3. 結果の 15 が `x` に保存される"
         },
         {
           "title": "-= も使える",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/function_gear.png",
           "content": "# 引き算バージョン\n\n`-=`（マイナスイコール）を使えば、**「今の数字から引いて保存」** ができます。\n\n**例：** おこづかいを使ったよ！\n\n```python\nx = 10\nx -= 3  # x から 3 を引いて保存\nprint(x)  # => 7\n```\n\n**何をしているか：**\n1. 最初は `x` に 10 が入っている\n2. `x -= 3` で 3 を引く（10 - 3 = 7）\n3. 結果の 7 が `x` に保存される\n\n**まとめ：**\n- `+=` は「足してから保存」\n- `-=` は「引いてから保存」"
         }
       ],
@@ -231,12 +231,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "f-string（エフストリング）とは？",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/beads_chain.png",
           "content": "# 文章と変数をドッキング！\n\n「私は〇〇歳です」の「〇〇」のところに、変数（はこ）の中身を入れたいことがあります。\n\nそんなときに使うのが **f-string（エフストリング）** です。\n\n**f-string** を使うと、文章の中に変数の中身を **自動で入れてくれます**。\n\nたとえば、自己紹介カードを作るとき、名前や年齢の部分だけ変わると便利ですよね。\n\nそれと同じことが、f-stringでできるのです！"
         },
         {
           "title": "f-string の書き方",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/nested_boxes.png",
           "content": "# f 記号と { }\n\n**書き方：**\n1. 文字のまえに `f` をつける\n2. `{ }`（ちゅうかっこ）の中に「はこ」の名前を入力する\n\nそうすると、魔法（まほう）のように中身が文章に入ります！\n\n**例：** 好きなくだものを紹介しよう！\n\n```python\nfruit = 'りんご'\nprint(f'私は{fruit}が好きです')\n```\n=> 私はりんごが好きです\n\n**何をしているか：**\n1. `fruit` という「はこ」に `'りんご'` が入っている\n2. `f'私は{fruit}が好きです'` で、`{fruit}` の部分が「りんご」に置き換わる\n3. 結果として「私はりんごが好きです」と表示される\n\n`{ }` の中には、変数の名前をそのまま書くだけでOKです！"
         }
       ],
@@ -276,12 +276,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "リストとは？",
-          "image": "/illustrations/common/split_road.png",
+          "image": "/illustrations/common/struct_block.png",
           "content": "# データをまとめて整理整頓！\n\nたくさんのデータを **順番に並べておきたい** ときに使うのが **リスト** です。\n\nたとえば、こんなものを想像してみてください：\n- 買い物リスト（牛乳、パン、卵…）\n- クラスの名簿（たろう、はなこ、けんた…）\n- お気に入りのゲームリスト\n\nこのように、関連（かんれん）するものを **一つの変数にまとめて管理** できるのがリストです。\n\n**書き方：** `[ ]`（かくカッコ）の中に、データをカンマ（,）で区切って並べます。"
         },
         {
           "title": "リストの番号は「0」から！",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/box.png",
           "content": "# 番号で呼び出そう\n\nリストの中身を取り出すときは、**「何番目のデータ？」** と番号（**インデックス**）を指定します。\n\n**ここで大事なルール！**\n\nプログラミングの世界では、**さいしょのデータは「0番」** と数えます。\n\n1番目じゃなくて0番から始まるのは最初はふしぎに感じますが、これがプログラミングのルールなのです。\n\n**例：** くだものリストから取り出そう！\n\n```python\n# 0番が「りんご」、1番が「バナナ」、2番が「みかん」\nfruits = ['りんご', 'バナナ', 'みかん']\nprint(fruits[0])\n```\n=> りんご\n\n**ポイント：** `[0]` で最初（1番目）のデータ、`[1]` で2番目のデータが取れます！"
         }
       ],
@@ -325,12 +325,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/split_road.png",
           "content": "# プログラムに判断（はんだん）させてみよう\n\n毎日の生活でも、こんなことを考えていますよね：\n\n- 「**もし** 雨が降ったら、傘（かさ）をさす」\n- 「**もし** 晴れたら、外で遊ぶ」\n- 「**もし** お腹がすいたら、ごはんを食べる」\n\nこんなふうに、**状況（じょうきょう）によって動きを変えること** を **条件分岐（じょうけんぶんき）** と呼びます。\n\nプログラムにも「**もし〜なら、これをしてね**」と教えてあげることができるのです！"
         },
         {
           "title": "もし〜なら（if）",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/crossroad.png",
           "content": "# if（イフ）の使い方\n\n**if**（イフ）は英語で「もし」という意味です。\n\n`if` という言葉のあとに **条件（じょうけん）** を書きます。\nその条件が正しければ、その下の指示を実行してくれます。\n\n**例：** 今日は暑（あつ）いかな？\n\n```python\ntemperature = 30\nif temperature >= 25:\n    print('今日はあついですね')\n```\n=> 今日はあついですね\n\n**何をしているか：**\n1. `temperature`（気温）に 30 を入れる\n2. `if temperature >= 25:` で「もし気温が25度以上なら」と条件を書く\n3. 30度は25度以上なので、メッセージが表示される！\n\n**大事なポイント：** 条件のあとには `:`（コロン）を忘れずに！"
         }
       ],
@@ -378,12 +378,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "それ以外の場合は？",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/traffic_light.png",
           "content": "# 2つの道を作る\n\n「もし〜なら」に **当てはまらなかった** ときの動きも作ってみましょう。\n\nたとえば：\n- 「もし晴れたら外で遊ぶ、**そうじゃなければ** 家でゲームする」\n- 「もしテストで80点以上なら合格、**そうじゃなければ** もう一度チャレンジ」\n\n**else（エルス）** を使うと、「**そうじゃなければ、こっちをしてね**」という指示が出せます。\n\n**else** は英語で「そうでなければ」という意味です。"
         },
         {
           "title": "else の使い方",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/decision_tree.png",
           "content": "# どっちか片方だけ実行される\n\n**例：** お買い物ができるかな？\n\n```python\nmoney = 500\nif money >= 1000:\n    print('買えます！')\nelse:\n    print('お金が足りません')\n```\n=> お金が足りません\n\n**何をしているか：**\n1. `money`（お金）に 500 を入れる\n2. `if money >= 1000:` で「もし1000円以上なら」とチェック\n3. 500円は1000円より少ないので、条件に合わない\n4. `else:` のほう（お金が足りません）が選ばれる！\n\n**ポイント：** `if` と `else` は、どちらか片方だけが実行されます。両方は実行されません！"
         }
       ],
@@ -433,12 +433,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "条件を組み合わせる",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/pencil.png",
           "content": "# もっと細かい条件で判断しよう\n\n「10歳以上、**かつ**、20歳未満」のように、**2つの条件を両方クリアしているか** チェックしたいときがあります。\n\nたとえば：\n- 「身長（しんちょう）が120cm以上 **かつ** 10歳以上ならジェットコースターに乗れる」\n- 「国語が80点以上 **または** 算数が80点以上なら表彰（ひょうしょう）」\n\n**and（アンド）** = 「**かつ**」= 両方の条件を満（み）たす\n**or（オア）** = 「**または**」= どちらか片方でもOK"
         },
         {
           "title": "and と or の使い方",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/3d/either_fork.png",
           "content": "# 条件の合体技（がったいわざ）\n\n**例：** 10代かどうかチェックしよう！\n\n```python\nage = 15\n# 10以上、かつ、20より小さい\nif age >= 10 and age < 20:\n    print('10代です')\n```\n=> 10代です\n\n**何をしているか：**\n1. `age` に 15 を入れる\n2. `age >= 10` → 15は10以上なので OK\n3. `age < 20` → 15は20より小さいので OK\n4. **両方OK** なので、「10代です」と表示される！\n\n**ポイント：**\n- `and` は両方の条件が OK のときだけ True（正しい）\n- `or` はどちらか一方が OK なら True（正しい）"
         }
       ],
@@ -474,12 +474,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/cycle_arrows.png",
           "content": "# 面倒（めんどう）なことはコンピュータにおまかせ！\n\n同じことを何度もするのは大変ですよね。\n\nたとえば、クラスメイト全員の名前を1人ずつ呼ぶとき、\n100人いたら100回書かないといけません…大変！\n\n**ループ（繰り返し）** を使えば、たった数行で「**リストの中身を全部出して！**」と指示できます。\n\nコンピュータは同じことを何度でも、疲（つか）れずにやってくれます！"
         },
         {
           "title": "くりかえし（for）",
-          "image": "/illustrations/common/hose_bucket.png",
+          "image": "/illustrations/common/loading_spinner.png",
           "content": "# 順番に取り出す魔法\n\n`for`（フォー）を使うと、リストから **順番にデータを取り出して** くれます。\n\n**例：** 駅の名前を順番に呼ぼう！\n\n```python\nstations = ['東京', '品川', '横浜']\nfor s in stations:\n    print(s)\n```\n=> 東京\n=> 品川\n=> 横浜\n\n**何をしているか：**\n1. `stations` というリストに3つの駅名が入っている\n2. `for s in stations:` で「リストから1つずつ取り出して `s` に入れる」\n3. 取り出すたびに `print(s)` が実行される\n4. 全部取り出し終わったらループ終了！\n\n**ポイント：** `s` は取り出したデータを入れる「仮（かり）の名前」です。`station` など、わかりやすい名前にするといいですね。"
         }
       ],
@@ -519,12 +519,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "辞書（じしょ）とは？",
-          "image": "/illustrations/common/magnifying_data.png",
+          "image": "/illustrations/common/action_button.png",
           "content": "# キーワードで検索（けんさく）！\n\n国語辞典（じてん）のように、「**言葉**」と「**その意味**」を **セットにして保存** できるのが **辞書（じしょ）** です。\n\nたとえば：\n- 「りんご」と言えば「赤」\n- 「バナナ」と言えば「黄色」\n- 「ぶどう」と言えば「紫（むらさき）」\n\nこのように、**名前（キー）とデータ（値）をペアで管理** します。\n\nリストは番号（0, 1, 2...）で探しますが、辞書は **名前で探せる** ので便利です！"
         },
         {
           "title": "キーワードで取り出そう",
-          "image": "/illustrations/common/magnifying_data.png",
+          "image": "/illustrations/common/book.png",
           "content": "# キー : 値（あたい）\n\n**書き方：** `{ }` の中に、`キーワード: データ` の形で書きます。\n\n**例：** くだものの色を調べよう！\n\n```python\ncolors = {'りんご': 'あか', 'バナナ': 'きいろ'}\nprint(colors['りんご'])\n```\n=> あか\n\n**何をしているか：**\n1. `colors` という辞書を作る\n2. 「りんご」には「あか」、「バナナ」には「きいろ」を登録\n3. `colors['りんご']` で「りんごに対応するデータ」を取り出す\n4. 「あか」が表示される！\n\n**用語：**\n- **キー（key）** = 探すときの「名前」（りんご、バナナ）\n- **値（value）** = その名前に対応する「データ」（あか、きいろ）"
         }
       ],
@@ -565,12 +565,12 @@ export const pythonData = {
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",
-          "image": "/illustrations/common/book_reference.png",
+          "image": "/illustrations/common/gear_cogs.png",
           "content": "# オリジナルの技（わざ）を作ろう！\n\n**関数（かんすう）** とは、よく使う処理（しょり）をひとまとめにして、名前をつけたものです。\n\n自分だけの **「必殺技（ひっさつわざ）」** を作るようなものです！\n\nたとえば：\n- 「あいさつ」という関数を作っておく\n- 使いたいときに「あいさつ！」と呼ぶだけで動く\n\n一度作っておけば、**何度でも呼び出して使えます**。\n\n同じコードを何回も書かなくてすむので、とっても便利です！"
         },
         {
           "title": "関数を定義（ていぎ）する",
-          "image": "/illustrations/common/book_reference.png",
+          "image": "/illustrations/common/passing_value.png",
           "content": "# def（デフ）で名前をつける\n\n関数を新しく作ることを **定義（ていぎ）する** と言います。\n\n`def`（define＝定義する、の略）を使います。\n\n**例：** あいさつ関数を作ろう！\n\n```python\ndef aisatsu():\n    print('こんにちは！')\n\naisatsu()  # これで関数が動きます！\n```\n=> こんにちは！\n\n**何をしているか：**\n1. `def aisatsu():` で「aisatsu」という名前の関数を作る\n2. その中に `print('こんにちは！')` を書いておく\n3. `aisatsu()` と呼ぶと、中身の処理が実行される！\n\n**ポイント：**\n- 関数名のあとに `()` と `:` を忘れずに！\n- 関数の中身は **スペースを入れて（インデント）** 書きます"
         }
       ],
