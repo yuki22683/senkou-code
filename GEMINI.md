@@ -103,6 +103,10 @@ To prevent the recurrence of incomplete or non-functional exercises, the followi
 
 10. **Image Asset Integrity:** Before any commit involving lesson data changes, run `npm run audit:lessons` to ensure all referenced illustrations exist. If an image is missing, do not use a non-existent path; instead, generate the asset or use a valid fallback illustration.
 
+11. **Image Diversity Policy (滥用防止):** No single illustration should be used more than 40-50 times across the entire lesson set. Use content-specific keywords to map unique images to each concept. Avoid generic placeholders like `gear.png` or `blueprint.png` for multiple distinct topics.
+
+12. **Syntax-Safe Modification Policy:** When performing mass replacements in `.ts` lesson files, never use naive string splitting or global regex that can break object boundaries (e.g., deleting braces). Always target specific fields (like `"image": ...`) and verify the result with a syntax parser or database seeding test before committing.
+
 
 # CLAUDE.md - プロジェクトルール
 
