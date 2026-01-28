@@ -7,453 +7,655 @@ export const php2Data = {
   "lessonOrder": 2,
   "exercises": [
     {
-      "title": "クラスを定義しよう",
-      "description": "オブジェクトの設計図「クラス」を学びましょう。",
-      "difficulty": "medium",
-      "orderIndex": 1,
-      "tutorialSlides": [
-        {
-          "title": "クラスとは？",
-          "image": "/illustrations/common/variable_label.png",
-          "content": "# オブジェクトの設計図（せっけいず）\n\n**クラス** は、データ（プロパティ）と機能（きのう）（メソッド）をまとめた **設計図** です。\n\n**身近（みぢか）な例（れい）：**\n- たい焼き（やき）の「型（かた）」のようなもの\n- 型（クラス）があれば、何個でも同じ形のたい焼き（オブジェクト）が作れる\n\n**クラスの役割（やくわり）：**\n- どんなデータを持つか決める（名前、年齢など）\n- どんな動きができるか決める（歩く、話すなど）"
+        "title": "クラスを定義しよう",
+        "description": "オブジェクトの設計図「クラス」を学びましょう。",
+        "difficulty": "medium",
+        "orderIndex": 1,
+        "tutorialSlides": [
+          {
+            "title": "クラスとは？",
+            "image": "/illustrations/common/variable_label.png",
+            "content": "# オブジェクトの設計図（せっけいず）\n\n**クラス** は、データ（プロパティ）と機能（きのう）（メソッド）をまとめた **設計図** です。\n\n**身近（みぢか）な例（れい）：**\n- たい焼き（やき）の「型（かた）」のようなもの\n- 型（クラス）があれば、何個でも同じ形のたい焼き（オブジェクト）が作れる\n\n**クラスの役割（やくわり）：**\n- どんなデータを持つか決める（名前、年齢など）\n- どんな動きができるか決める（歩く、話すなど）"
+          },
+          {
+            "title": "クラスの定義（ていぎ）",
+            "image": "/illustrations/common/return_value.png",
+            "content": "# class キーワードで作る\n\n`class 名前 { }` で定義します。`new` でインスタンス（実体）を作成します。\n\n**コード例：**\n```php\nclass Dog {\n    public $name;\n}\n$dog = new Dog();\n```\n\n**何をしているの？**\n1. `class Dog { }` → Dogという名前のクラスを作る\n2. `public $name;` → nameというデータ（プロパティ）を持たせる\n3. `new Dog()` → Dogクラスから実際（じっさい）のオブジェクトを作る\n\n**public とは？**\n- 「外からアクセスできる」という意味\n- プロパティやメソッドの前につける"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "<?php\n// classでクラスを定義\nclass Cat {\n    // publicでアクセス修飾子\n    public $name;\n}\n// newでインスタンスを作成\n$cat = new Cat();\n// ->でプロパティにアクセス\n$cat->name = 'Tama';\n// echoで出力\necho $cat->name;\n?>",
+        "holeyCode": "<?php\n// classでクラスを定義\n___ Cat {\n    // publicでアクセス修飾子\n    ___ $name;\n}\n// newでインスタンスを作成\n$cat = ___ Cat();\n// ->でプロパティにアクセス\n$cat___name = 'Tama';\n// echoで出力\n___ $cat->name;\n?>",
+        "correctLines": [
+          "<?php",
+          "// classでクラスを定義",
+          "class Cat {",
+          "    // publicでアクセス修飾子",
+          "    public $name;",
+          "}",
+          "// newでインスタンスを作成",
+          "$cat = new Cat();",
+          "// ->でプロパティにアクセス",
+          "$cat->name = 'Tama';",
+          "// echoで出力",
+          "echo $cat->name;",
+          "?>"
+        ],
+        "lineHints": [
+          "新しいクラス（Cat）を定義します。",
+          null,
+          "public で外からアクセスできます。",
+          null,
+          "new でインスタンスを作成します。",
+          "-> でプロパティにアクセスします。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "class"
+          ],
+          "others": [
+            "public",
+            "new",
+            "->",
+            "echo"
+          ]
         },
-        {
-          "title": "クラスの定義（ていぎ）",
-          "image": "/illustrations/common/return_value.png",
-          "content": "# class キーワードで作る\n\n`class 名前 { }` で定義します。`new` でインスタンス（実体）を作成します。\n\n**コード例：**\n```php\nclass Dog {\n    public $name;\n}\n$dog = new Dog();\n```\n\n**何をしているの？**\n1. `class Dog { }` → Dogという名前のクラスを作る\n2. `public $name;` → nameというデータ（プロパティ）を持たせる\n3. `new Dog()` → Dogクラスから実際（じっさい）のオブジェクトを作る\n\n**public とは？**\n- 「外からアクセスできる」という意味\n- プロパティやメソッドの前につける"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "<?php\n// classでクラスを定義\nclass Cat {\n    public $name;\n}\n$cat = new Cat();\n$cat->name = 'Tama';\necho $cat->name;\n?>",
-      "holeyCode": "<?php\n// classでクラスを定義\n___ Cat {\n    // publicでアクセス修飾子\n    ___ $name;\n}\n// newでインスタンスを作成\n$cat = ___ Cat();\n// ->でプロパティにアクセス\n$cat___name = 'Tama';\n// echoで出力\n___ $cat->name;\n?>",
-      "correctLines": [
-        "<?php",
-        "// classでクラスを定義",
-        "class Cat {",
-        "    // publicでアクセス修飾子",
-        "    public $name;",
-        "}",
-        "// newでインスタンスを作成",
-        "$cat = new Cat();",
-        "// ->でプロパティにアクセス",
-        "$cat->name = 'Tama';",
-        "// echoで出力",
-        "echo $cat->name;",
-        "?>"
-      ],
-      "lineHints": [null, null, "新しいクラス（Cat）を定義します。", null, "public で外からアクセスできます。", null, null, "new でインスタンスを作成します。", null, "-> でプロパティにアクセスします。", null, null, null],
-      "candidates": {
-        "keywords": ["class"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "Tama"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Tama"
-        }
-      ]
-    },
     {
-      "title": "コンストラクタを使おう",
-      "description": "オブジェクト作成時に自動で呼ばれる「コンストラクタ」を学びましょう。",
-      "difficulty": "medium",
-      "orderIndex": 2,
-      "tutorialSlides": [
-        {
-          "title": "コンストラクタとは？",
-          "image": "/illustrations/3d/compose_gear.png",
-          "content": "# 初期化（しょきか）の儀式（ぎしき）\n\n**コンストラクタ** `__construct` は、オブジェクトが作られたときに **自動的（じどうてき）に呼ばれる** 特別なメソッドです。\n\n**身近（みぢか）な例（れい）：**\n- ロボットの電源（でんげん）を入れたときの「起動音（きどうおん）」\n- 作られた瞬間（しゅんかん）に決まった動きをする\n\n**コンストラクタの役割（やくわり）：**\n- オブジェクトを作ると同時に、最初の設定（せってい）を行う\n- 名前や初期値（しょきち）を渡して保存する"
+        "title": "コンストラクタを使おう",
+        "description": "オブジェクト作成時に自動で呼ばれる「コンストラクタ」を学びましょう。",
+        "difficulty": "medium",
+        "orderIndex": 2,
+        "tutorialSlides": [
+          {
+            "title": "コンストラクタとは？",
+            "image": "/illustrations/3d/compose_gear.png",
+            "content": "# 初期化（しょきか）の儀式（ぎしき）\n\n**コンストラクタ** `__construct` は、オブジェクトが作られたときに **自動的（じどうてき）に呼ばれる** 特別なメソッドです。\n\n**身近（みぢか）な例（れい）：**\n- ロボットの電源（でんげん）を入れたときの「起動音（きどうおん）」\n- 作られた瞬間（しゅんかん）に決まった動きをする\n\n**コンストラクタの役割（やくわり）：**\n- オブジェクトを作ると同時に、最初の設定（せってい）を行う\n- 名前や初期値（しょきち）を渡して保存する"
+          },
+          {
+            "title": "__construct の使い方",
+            "image": "/illustrations/common/box_container_open.png",
+            "content": "# 初期値（しょきち）を設定（せってい）\n\n`__construct` で初期化処理（しょきかしょり）を行います。\n\n**コード例：**\n```php\nclass Box {\n    public function __construct($size) {\n        $this->size = $size;\n    }\n}\n$box = new Box(10);\n```\n\n**何をしているの？**\n1. `new Box(10)` → Boxオブジェクトを作成、10を渡す\n2. `__construct($size)` が自動で呼ばれる（$sizeに10が入る）\n3. `$this->size = $size` → オブジェクトのsizeプロパティに保存\n\n**$this とは？**\n- 「自分自身（じぶんじしん）」を指（さ）す特別な変数\n- クラスの中で「自分のデータ」にアクセスするときに使う"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "<?php\n// classでクラスを定義\nclass Counter {\n    // publicでアクセス修飾子\n    public $count;\n    // __constructでコンストラクタを定義\n    public function __construct($c) {\n        // $thisで自分自身を参照\n        $this->count = $c;\n    }\n}\n// newでインスタンスを作成\n$cnt = new Counter(5);\n// echoで出力\necho $cnt->count;\n?>",
+        "holeyCode": "<?php\n// classでクラスを定義\n___ Counter {\n    // publicでアクセス修飾子\n    ___ $count;\n    // __constructでコンストラクタを定義\n    public function ___($c) {\n        // $thisで自分自身を参照\n        ___->count = $c;\n    }\n}\n// newでインスタンスを作成\n$cnt = ___ Counter(5);\n// echoで出力\n___ $cnt->count;\n?>",
+        "correctLines": [
+          "<?php",
+          "// classでクラスを定義",
+          "class Counter {",
+          "    // publicでアクセス修飾子",
+          "    public $count;",
+          "    // __constructでコンストラクタを定義",
+          "    public function __construct($c) {",
+          "        // $thisで自分自身を参照",
+          "        $this->count = $c;",
+          "    }",
+          "}",
+          "// newでインスタンスを作成",
+          "$cnt = new Counter(5);",
+          "// echoで出力",
+          "echo $cnt->count;",
+          "?>"
+        ],
+        "lineHints": [
+          "__construct でコンストラクタを定義します。",
+          null,
+          "$this で自分自身を参照します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "functions": [
+            "__construct"
+          ],
+          "others": [
+            "class",
+            "public",
+            "$this",
+            "new",
+            "echo"
+          ]
         },
-        {
-          "title": "__construct の使い方",
-          "image": "/illustrations/common/box_container_open.png",
-          "content": "# 初期値（しょきち）を設定（せってい）\n\n`__construct` で初期化処理（しょきかしょり）を行います。\n\n**コード例：**\n```php\nclass Box {\n    public function __construct($size) {\n        $this->size = $size;\n    }\n}\n$box = new Box(10);\n```\n\n**何をしているの？**\n1. `new Box(10)` → Boxオブジェクトを作成、10を渡す\n2. `__construct($size)` が自動で呼ばれる（$sizeに10が入る）\n3. `$this->size = $size` → オブジェクトのsizeプロパティに保存\n\n**$this とは？**\n- 「自分自身（じぶんじしん）」を指（さ）す特別な変数\n- クラスの中で「自分のデータ」にアクセスするときに使う"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "<?php\nclass Counter {\n    public $count;\n    // __constructでコンストラクタを定義\n    public function __construct($c) {\n        $this->count = $c;\n    }\n}\n$cnt = new Counter(5);\necho $cnt->count;\n?>",
-      "holeyCode": "<?php\n// classでクラスを定義\n___ Counter {\n    // publicでアクセス修飾子\n    ___ $count;\n    // __constructでコンストラクタを定義\n    public function ___($c) {\n        // $thisで自分自身を参照\n        ___->count = $c;\n    }\n}\n// newでインスタンスを作成\n$cnt = ___ Counter(5);\n// echoで出力\n___ $cnt->count;\n?>",
-      "correctLines": [
-        "<?php",
-        "// classでクラスを定義",
-        "class Counter {",
-        "    // publicでアクセス修飾子",
-        "    public $count;",
-        "    // __constructでコンストラクタを定義",
-        "    public function __construct($c) {",
-        "        // $thisで自分自身を参照",
-        "        $this->count = $c;",
-        "    }",
-        "}",
-        "// newでインスタンスを作成",
-        "$cnt = new Counter(5);",
-        "// echoで出力",
-        "echo $cnt->count;",
-        "?>"
-      ],
-      "lineHints": [null, null, null, null, null, null, "__construct でコンストラクタを定義します。", null, "$this で自分自身を参照します。", null, null, null, null, null, null, null],
-      "candidates": {
-        "functions": ["__construct"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "5"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "5"
-        }
-      ]
-    },
     {
-      "title": "継承を学ぼう",
-      "description": "既存のクラスを拡張する「継承」を学びましょう。",
-      "difficulty": "medium",
-      "orderIndex": 3,
-      "tutorialSlides": [
-        {
-          "title": "継承（けいしょう）とは？",
-          "image": "/illustrations/common/function_gear.png",
-          "content": "# クラスの拡張（かくちょう）\n\n**継承（けいしょう）** を使うと、親（おや）クラスの機能を引き継（つ）いだ子クラスを作れます。\n\n**身近（みぢか）な例（れい）：**\n- 「動物（どうぶつ）」という親クラス（歩く、食べるができる）\n- 「犬」という子クラス（動物の機能 + 吠（ほ）えるができる）\n- 「猫」という子クラス（動物の機能 + ニャーと鳴（な）くができる）\n\n親の機能をそのまま使えて、さらに **新しい機能を追加（ついか）** できます。"
+        "title": "継承を学ぼう",
+        "description": "既存のクラスを拡張する「継承」を学びましょう。",
+        "difficulty": "medium",
+        "orderIndex": 3,
+        "tutorialSlides": [
+          {
+            "title": "継承（けいしょう）とは？",
+            "image": "/illustrations/common/function_gear.png",
+            "content": "# クラスの拡張（かくちょう）\n\n**継承（けいしょう）** を使うと、親（おや）クラスの機能を引き継（つ）いだ子クラスを作れます。\n\n**身近（みぢか）な例（れい）：**\n- 「動物（どうぶつ）」という親クラス（歩く、食べるができる）\n- 「犬」という子クラス（動物の機能 + 吠（ほ）えるができる）\n- 「猫」という子クラス（動物の機能 + ニャーと鳴（な）くができる）\n\n親の機能をそのまま使えて、さらに **新しい機能を追加（ついか）** できます。"
+          },
+          {
+            "title": "extends で継承（けいしょう）",
+            "image": "/illustrations/common/action_button.png",
+            "content": "# 親クラスを拡張（かくちょう）\n\n`extends`（エクステンズ）キーワードで親クラスを指定（してい）します。子クラスは親クラスのメソッドを使えます。\n\n**コード例：**\n```php\nclass Animal {\n    public function eat() { echo 'eating'; }\n}\nclass Dog extends Animal { }\n\n$dog = new Dog();\n$dog->eat();  // => eating（親のメソッドが使える！）\n```\n\n**何が起こるの？**\n1. `Animal` クラスに `eat` メソッドがある\n2. `Dog extends Animal` → DogはAnimalを継承\n3. Dogは自分で `eat` を作らなくても、Animalの `eat` が使える\n\n**extends = 「拡張する」** という意味です。"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "<?php\n// classでクラスを定義\nclass Vehicle {\n    // functionで関数を定義\n    public function move() {\n        // echoで出力\n        echo 'moving';\n    }\n}\n// extendsで継承\nclass Car extends Vehicle { }\n// newでインスタンスを作成\n$car = new Car();\n// ->でメソッドを呼び出し\n$car->move();\n?>",
+        "holeyCode": "<?php\n// classでクラスを定義\n___ Vehicle {\n    // functionで関数を定義\n    public ___ move() {\n        // echoで出力\n        ___ 'moving';\n    }\n}\n// extendsで継承\nclass Car ___ Vehicle { }\n// newでインスタンスを作成\n$car = ___ Car();\n// ->でメソッドを呼び出し\n$car___move();\n?>",
+        "correctLines": [
+          "<?php",
+          "// classでクラスを定義",
+          "class Vehicle {",
+          "    // functionで関数を定義",
+          "    public function move() {",
+          "        // echoで出力",
+          "        echo 'moving';",
+          "    }",
+          "}",
+          "// extendsで継承",
+          "class Car extends Vehicle { }",
+          "// newでインスタンスを作成",
+          "$car = new Car();",
+          "// ->でメソッドを呼び出し",
+          "$car->move();",
+          "?>"
+        ],
+        "lineHints": [
+          "新しいクラス（Car）を定義します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "extends"
+          ],
+          "others": [
+            "class",
+            "function",
+            "echo",
+            "new",
+            "->"
+          ]
         },
-        {
-          "title": "extends で継承（けいしょう）",
-          "image": "/illustrations/common/action_button.png",
-          "content": "# 親クラスを拡張（かくちょう）\n\n`extends`（エクステンズ）キーワードで親クラスを指定（してい）します。子クラスは親クラスのメソッドを使えます。\n\n**コード例：**\n```php\nclass Animal {\n    public function eat() { echo 'eating'; }\n}\nclass Dog extends Animal { }\n\n$dog = new Dog();\n$dog->eat();  // => eating（親のメソッドが使える！）\n```\n\n**何が起こるの？**\n1. `Animal` クラスに `eat` メソッドがある\n2. `Dog extends Animal` → DogはAnimalを継承\n3. Dogは自分で `eat` を作らなくても、Animalの `eat` が使える\n\n**extends = 「拡張する」** という意味です。"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "<?php\nclass Vehicle {\n    public function move() {\n        echo 'moving';\n    }\n}\n// extendsで継承\nclass Car extends Vehicle { }\n$car = new Car();\n$car->move();\n?>",
-      "holeyCode": "<?php\n// classでクラスを定義\n___ Vehicle {\n    // functionで関数を定義\n    public ___ move() {\n        // echoで出力\n        ___ 'moving';\n    }\n}\n// extendsで継承\nclass Car ___ Vehicle { }\n// newでインスタンスを作成\n$car = ___ Car();\n// ->でメソッドを呼び出し\n$car___move();\n?>",
-      "correctLines": [
-        "<?php",
-        "// classでクラスを定義",
-        "class Vehicle {",
-        "    // functionで関数を定義",
-        "    public function move() {",
-        "        // echoで出力",
-        "        echo 'moving';",
-        "    }",
-        "}",
-        "// extendsで継承",
-        "class Car extends Vehicle { }",
-        "// newでインスタンスを作成",
-        "$car = new Car();",
-        "// ->でメソッドを呼び出し",
-        "$car->move();",
-        "?>"
-      ],
-      "lineHints": [null, null, null, null, null, null, null, null, null, null, "新しいクラス（Car）を定義します。", null, null, null, null, null],
-      "candidates": {
-        "keywords": ["extends"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "moving"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "moving"
-        }
-      ]
-    },
     {
-      "title": "インターフェースを使おう",
-      "description": "メソッドの約束を定義する「インターフェース」を学びましょう。",
-      "difficulty": "medium",
-      "orderIndex": 4,
-      "tutorialSlides": [
-        {
-          "title": "インターフェースとは？",
-          "image": "/illustrations/common/gear_cogs.png",
-          "content": "# メソッドの約束（やくそく）事（ごと）\n\n**インターフェース** は、「このメソッドを必（かなら）ず作ってね」という **約束** を決めるものです。\n\n**身近（みぢか）な例（れい）：**\n- 「充電器（じゅうでんき）」のインターフェース\n- USB-Cの形なら、どのメーカーの充電器でも使える\n- 「この形（メソッド）を持っていること」が約束\n\n**インターフェースの役割（やくわり）：**\n- クラスに「このメソッドを必ず作れ」と指示（しじ）する\n- 違（ちが）うクラスでも同じ使い方ができるようになる"
+        "title": "インターフェースを使おう",
+        "description": "メソッドの約束を定義する「インターフェース」を学びましょう。",
+        "difficulty": "medium",
+        "orderIndex": 4,
+        "tutorialSlides": [
+          {
+            "title": "インターフェースとは？",
+            "image": "/illustrations/common/gear_cogs.png",
+            "content": "# メソッドの約束（やくそく）事（ごと）\n\n**インターフェース** は、「このメソッドを必（かなら）ず作ってね」という **約束** を決めるものです。\n\n**身近（みぢか）な例（れい）：**\n- 「充電器（じゅうでんき）」のインターフェース\n- USB-Cの形なら、どのメーカーの充電器でも使える\n- 「この形（メソッド）を持っていること」が約束\n\n**インターフェースの役割（やくわり）：**\n- クラスに「このメソッドを必ず作れ」と指示（しじ）する\n- 違（ちが）うクラスでも同じ使い方ができるようになる"
+          },
+          {
+            "title": "interface と implements",
+            "image": "/illustrations/common/clipboard_list.png",
+            "content": "# 約束（やくそく）を守（まも）る\n\n`interface`（インターフェース）で約束を定義（ていぎ）し、`implements`（インプリメンツ）で「その約束を守ります」と宣言（せんげん）します。\n\n**コード例：**\n```php\ninterface Greet {\n    public function hello();\n}\nclass Person implements Greet {\n    public function hello() { echo 'hi'; }\n}\n```\n\n**何をしているの？**\n1. `interface Greet` → 「helloメソッドを持つこと」という約束を作る\n2. `class Person implements Greet` → Personは「Greetの約束を守る」と宣言\n3. `public function hello()` → 約束通りhelloメソッドを作る（作らないとエラー！）\n\n**ポイント：**\n- interface = 「約束」の定義\n- implements = 「約束を守る」という宣言"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "<?php\n// interfaceでインターフェースを定義\ninterface Runner {\n    // functionでメソッドを宣言\n    public function run();\n}\n// implementsでインターフェースを実装\nclass Robot implements Runner {\n    // functionでメソッドを実装\n    public function run() {\n        // echoで出力\n        echo 'running';\n    }\n}\n// newでインスタンスを作成\n$r = new Robot();\n// ->でメソッドを呼び出し\n$r->run();\n?>",
+        "holeyCode": "<?php\n// interfaceでインターフェースを定義\n___ Runner {\n    // functionでメソッドを宣言\n    public ___ run();\n}\n// implementsでインターフェースを実装\nclass Robot ___ Runner {\n    // functionでメソッドを実装\n    public ___ run() {\n        // echoで出力\n        ___ 'running';\n    }\n}\n// newでインスタンスを作成\n$r = ___ Robot();\n// ->でメソッドを呼び出し\n$r___run();\n?>",
+        "correctLines": [
+          "<?php",
+          "// interfaceでインターフェースを定義",
+          "interface Runner {",
+          "    // functionでメソッドを宣言",
+          "    public function run();",
+          "}",
+          "// implementsでインターフェースを実装",
+          "class Robot implements Runner {",
+          "    // functionでメソッドを実装",
+          "    public function run() {",
+          "        // echoで出力",
+          "        echo 'running';",
+          "    }",
+          "}",
+          "// newでインスタンスを作成",
+          "$r = new Robot();",
+          "// ->でメソッドを呼び出し",
+          "$r->run();",
+          "?>"
+        ],
+        "lineHints": [
+          "interface でインターフェースを定義します。",
+          null,
+          "新しいクラス（Robot）を定義します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "interface"
+          ],
+          "others": [
+            "function",
+            "implements",
+            "echo",
+            "new",
+            "->"
+          ]
         },
-        {
-          "title": "interface と implements",
-          "image": "/illustrations/common/clipboard_list.png",
-          "content": "# 約束（やくそく）を守（まも）る\n\n`interface`（インターフェース）で約束を定義（ていぎ）し、`implements`（インプリメンツ）で「その約束を守ります」と宣言（せんげん）します。\n\n**コード例：**\n```php\ninterface Greet {\n    public function hello();\n}\nclass Person implements Greet {\n    public function hello() { echo 'hi'; }\n}\n```\n\n**何をしているの？**\n1. `interface Greet` → 「helloメソッドを持つこと」という約束を作る\n2. `class Person implements Greet` → Personは「Greetの約束を守る」と宣言\n3. `public function hello()` → 約束通りhelloメソッドを作る（作らないとエラー！）\n\n**ポイント：**\n- interface = 「約束」の定義\n- implements = 「約束を守る」という宣言"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "<?php\n// interfaceでインターフェースを定義\ninterface Runner {\n    public function run();\n}\nclass Robot implements Runner {\n    public function run() {\n        echo 'running';\n    }\n}\n$r = new Robot();\n$r->run();\n?>",
-      "holeyCode": "<?php\n// interfaceでインターフェースを定義\n___ Runner {\n    // functionでメソッドを宣言\n    public ___ run();\n}\n// implementsでインターフェースを実装\nclass Robot ___ Runner {\n    // functionでメソッドを実装\n    public ___ run() {\n        // echoで出力\n        ___ 'running';\n    }\n}\n// newでインスタンスを作成\n$r = ___ Robot();\n// ->でメソッドを呼び出し\n$r___run();\n?>",
-      "correctLines": [
-        "<?php",
-        "// interfaceでインターフェースを定義",
-        "interface Runner {",
-        "    // functionでメソッドを宣言",
-        "    public function run();",
-        "}",
-        "// implementsでインターフェースを実装",
-        "class Robot implements Runner {",
-        "    // functionでメソッドを実装",
-        "    public function run() {",
-        "        // echoで出力",
-        "        echo 'running';",
-        "    }",
-        "}",
-        "// newでインスタンスを作成",
-        "$r = new Robot();",
-        "// ->でメソッドを呼び出し",
-        "$r->run();",
-        "?>"
-      ],
-      "lineHints": [null, null, "interface でインターフェースを定義します。", null, null, null, null, "新しいクラス（Robot）を定義します。", null, null, null, null, null, null, null, null, null, null, null],
-      "candidates": {
-        "keywords": ["interface"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "running"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "running"
-        }
-      ]
-    },
     {
-      "title": "配列の array_map",
-      "description": "配列の各要素を変換する「array_map」を学びましょう。",
-      "difficulty": "medium",
-      "orderIndex": 5,
-      "tutorialSlides": [
-        {
-          "title": "array_map とは？",
-          "image": "/illustrations/3d/loop.png",
-          "content": "# 各要素（ようそ）を変換（へんかん）\n\n**array_map**（アレイマップ）は、配列（はいれつ）の **全（すべ）ての要素に同じ処理（しょり）をする** 関数（かんすう）です。\n\n**身近（みぢか）な例（れい）：**\n- お菓子（かし）工場（こうじょう）のベルトコンベア\n- 流れてくるクッキーに、全部（ぜんぶ）チョコをかける\n- 入力: プレーンクッキー → 出力: チョコクッキー\n\n**array_mapの役割（やくわり）：**\n- 配列の各要素を「変身」させる\n- 元の配列は変えずに、新しい配列を作る"
+        "title": "配列の array_map",
+        "description": "配列の各要素を変換する「array_map」を学びましょう。",
+        "difficulty": "medium",
+        "orderIndex": 5,
+        "tutorialSlides": [
+          {
+            "title": "array_map とは？",
+            "image": "/illustrations/3d/loop.png",
+            "content": "# 各要素（ようそ）を変換（へんかん）\n\n**array_map**（アレイマップ）は、配列（はいれつ）の **全（すべ）ての要素に同じ処理（しょり）をする** 関数（かんすう）です。\n\n**身近（みぢか）な例（れい）：**\n- お菓子（かし）工場（こうじょう）のベルトコンベア\n- 流れてくるクッキーに、全部（ぜんぶ）チョコをかける\n- 入力: プレーンクッキー → 出力: チョコクッキー\n\n**array_mapの役割（やくわり）：**\n- 配列の各要素を「変身」させる\n- 元の配列は変えずに、新しい配列を作る"
+          },
+          {
+            "title": "array_map の使い方",
+            "image": "/illustrations/common/loop_gears.png",
+            "content": "# コールバック関数（かんすう）を渡（わた）す\n\n`array_map(関数, 配列)` の形で使います。\n\n**コード例：**\n```php\n$nums = [1, 2, 3];\n$doubled = array_map(fn($n) => $n * 2, $nums);\n// [2, 4, 6]\n```\n\n**何をしているの？**\n1. `$nums = [1, 2, 3]` → 元の配列を用意\n2. `fn($n) => $n * 2` → 「2倍にする」という処理を定義\n3. `array_map(...)` → 各要素に処理を適用（てきよう）\n4. 結果: [2, 4, 6] という新しい配列ができる\n\n**ポイント：**\n- 第1引数（ひきすう）: 処理する関数\n- 第2引数: 処理したい配列\n- 元の配列 `$nums` は変わらない"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "<?php\n// 配列を定義（1, 2, 3）\n$nums = [1, 2, 3];\n// array_mapで各要素を変換\n$squared = array_map(fn($n) => $n * $n, $nums);\n// print_rで配列を出力\nprint_r($squared);\n?>",
+        "holeyCode": "<?php\n// 配列を定義（1, 2, 3）\n$nums = [1, 2, ___];\n// array_mapで各要素を変換\n$squared = ___(fn($n) => $n * $n, $nums);\n// print_rで配列を出力\n___ ($squared);\n?>",
+        "correctLines": [
+          "<?php",
+          "// 配列を定義（1, 2, 3）",
+          "$nums = [1, 2, 3];",
+          "// array_mapで各要素を変換",
+          "$squared = array_map(fn($n) => $n * $n, $nums);",
+          "// print_rで配列を出力",
+          "print_r($squared);",
+          "?>"
+        ],
+        "lineHints": [
+          "array_map で各要素を2乗します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "functions": [
+            "array_map"
+          ],
+          "others": [
+            "3",
+            "print_r($squared);"
+          ]
         },
-        {
-          "title": "array_map の使い方",
-          "image": "/illustrations/common/loop_gears.png",
-          "content": "# コールバック関数（かんすう）を渡（わた）す\n\n`array_map(関数, 配列)` の形で使います。\n\n**コード例：**\n```php\n$nums = [1, 2, 3];\n$doubled = array_map(fn($n) => $n * 2, $nums);\n// [2, 4, 6]\n```\n\n**何をしているの？**\n1. `$nums = [1, 2, 3]` → 元の配列を用意\n2. `fn($n) => $n * 2` → 「2倍にする」という処理を定義\n3. `array_map(...)` → 各要素に処理を適用（てきよう）\n4. 結果: [2, 4, 6] という新しい配列ができる\n\n**ポイント：**\n- 第1引数（ひきすう）: 処理する関数\n- 第2引数: 処理したい配列\n- 元の配列 `$nums` は変わらない"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "<?php\n// 配列を定義（1, 2, 3）\n$nums = [1, 2, 3];\n// array_mapで各要素を変換\n$squared = array_map(fn($n) => $n * $n, $nums);\nprint_r($squared);\n?>",
-      "holeyCode": "<?php\n// 配列を定義（1, 2, 3）\n$nums = [1, 2, ___];\n// array_mapで各要素を変換\n$squared = ___(fn($n) => $n * $n, $nums);\n// print_rで配列を出力\n___ ($squared);\n?>",
-      "correctLines": [
-        "<?php",
-        "// 配列を定義（1, 2, 3）",
-        "$nums = [1, 2, 3];",
-        "// array_mapで各要素を変換",
-        "$squared = array_map(fn($n) => $n * $n, $nums);",
-        "// print_rで配列を出力",
-        "print_r($squared);",
-        "?>"
-      ],
-      "lineHints": [null, null, null, null, "array_map で各要素を2乗します。", null, null, null],
-      "candidates": {
-        "functions": ["array_map"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "Array\n(\n    [0] => 1\n    [1] => 4\n    [2] => 9\n)\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Array\n(\n    [0] => 1\n    [1] => 4\n    [2] => 9\n)\n"
-        }
-      ]
-    },
     {
-      "title": "配列の array_filter",
-      "description": "条件に合う要素だけを抽出する「array_filter」を学びましょう。",
-      "difficulty": "medium",
-      "orderIndex": 6,
-      "tutorialSlides": [
-        {
-          "title": "array_filter とは？",
-          "image": "/illustrations/common/circular_arrow.png",
-          "content": "# 条件（じょうけん）でフィルタ（選別）\n\n**array_filter**（アレイフィルター）は、配列（はいれつ）から **条件に合うものだけを選（えら）び出す** 関数です。\n\n**身近（みぢか）な例（れい）：**\n- 果物（くだもの）の選別（せんべつ）機械（きかい）\n- 「大きいリンゴだけ通（とお）す」というフィルター\n- 小さいリンゴは通らない\n\n**array_filterの役割（やくわり）：**\n- 条件に合う要素だけを残す\n- 条件に合わない要素は捨（す）てる"
+        "title": "配列の array_filter",
+        "description": "条件に合う要素だけを抽出する「array_filter」を学びましょう。",
+        "difficulty": "medium",
+        "orderIndex": 6,
+        "tutorialSlides": [
+          {
+            "title": "array_filter とは？",
+            "image": "/illustrations/common/circular_arrow.png",
+            "content": "# 条件（じょうけん）でフィルタ（選別）\n\n**array_filter**（アレイフィルター）は、配列（はいれつ）から **条件に合うものだけを選（えら）び出す** 関数です。\n\n**身近（みぢか）な例（れい）：**\n- 果物（くだもの）の選別（せんべつ）機械（きかい）\n- 「大きいリンゴだけ通（とお）す」というフィルター\n- 小さいリンゴは通らない\n\n**array_filterの役割（やくわり）：**\n- 条件に合う要素だけを残す\n- 条件に合わない要素は捨（す）てる"
+          },
+          {
+            "title": "array_filter の使い方",
+            "image": "/illustrations/common/beads_chain.png",
+            "content": "# 真（true）を返す要素を残す\n\n`array_filter(配列, 条件の関数)` の形で使います。\n\n**コード例：**\n```php\n$nums = [1, 2, 3, 4, 5];\n$big = array_filter($nums, fn($n) => $n > 3);\n// [4, 5]\n```\n\n**何をしているの？**\n1. `$nums = [1, 2, 3, 4, 5]` → 元の配列を用意\n2. `fn($n) => $n > 3` → 「3より大きい？」という条件\n3. 各要素をチェック: 1→No, 2→No, 3→No, 4→Yes, 5→Yes\n4. Yesだった要素だけ残る: [4, 5]\n\n**ポイント：**\n- 第1引数: フィルタしたい配列\n- 第2引数: 条件を判定（はんてい）する関数\n- trueを返した要素だけが残る"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "<?php\n// 配列を定義\n$nums = [1, 2, 3, 4, 5];\n// array_filterで条件に合う要素を抽出\n$result = array_filter($nums, fn($n) => $n >= 3);\n// print_rで配列を出力\nprint_r($result);\n?>",
+        "holeyCode": "<?php\n// 配列を定義\n$nums = [1, 2, 3, 4, ___];\n// array_filterで条件に合う要素を抽出\n$result = ___($nums, fn($n) => $n >= 3);\n// print_rで配列を出力\n___($result);\n?>",
+        "correctLines": [
+          "<?php",
+          "// 配列を定義",
+          "$nums = [1, 2, 3, 4, 5];",
+          "// array_filterで条件に合う要素を抽出",
+          "$result = array_filter($nums, fn($n) => $n >= 3);",
+          "// print_rで配列を出力",
+          "print_r($result);",
+          "?>"
+        ],
+        "lineHints": [
+          "array_filter で 3 以上を抽出します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "functions": [
+            "array_filter"
+          ],
+          "others": [
+            "5",
+            "print_r"
+          ]
         },
-        {
-          "title": "array_filter の使い方",
-          "image": "/illustrations/common/beads_chain.png",
-          "content": "# 真（true）を返す要素を残す\n\n`array_filter(配列, 条件の関数)` の形で使います。\n\n**コード例：**\n```php\n$nums = [1, 2, 3, 4, 5];\n$big = array_filter($nums, fn($n) => $n > 3);\n// [4, 5]\n```\n\n**何をしているの？**\n1. `$nums = [1, 2, 3, 4, 5]` → 元の配列を用意\n2. `fn($n) => $n > 3` → 「3より大きい？」という条件\n3. 各要素をチェック: 1→No, 2→No, 3→No, 4→Yes, 5→Yes\n4. Yesだった要素だけ残る: [4, 5]\n\n**ポイント：**\n- 第1引数: フィルタしたい配列\n- 第2引数: 条件を判定（はんてい）する関数\n- trueを返した要素だけが残る"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "<?php\n$nums = [1, 2, 3, 4, 5];\n// array_filterで条件に合う要素を抽出\n$result = array_filter($nums, fn($n) => $n >= 3);\nprint_r($result);\n?>",
-      "holeyCode": "<?php\n// 配列を定義\n$nums = [1, 2, 3, 4, ___];\n// array_filterで条件に合う要素を抽出\n$result = ___($nums, fn($n) => $n >= 3);\n// print_rで配列を出力\n___($result);\n?>",
-      "correctLines": [
-        "<?php",
-        "// 配列を定義",
-        "$nums = [1, 2, 3, 4, 5];",
-        "// array_filterで条件に合う要素を抽出",
-        "$result = array_filter($nums, fn($n) => $n >= 3);",
-        "// print_rで配列を出力",
-        "print_r($result);",
-        "?>"
-      ],
-      "lineHints": [null, null, null, null, "array_filter で 3 以上を抽出します。", null, null, null],
-      "candidates": {
-        "functions": ["array_filter"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "Array\n(\n    [2] => 3\n    [3] => 4\n    [4] => 5\n)\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Array\n(\n    [2] => 3\n    [3] => 4\n    [4] => 5\n)\n"
-        }
-      ]
-    },
     {
-      "title": "アロー関数を使おう",
-      "description": "短く関数を書ける「アロー関数」を学びましょう。",
-      "difficulty": "medium",
-      "orderIndex": 7,
-      "tutorialSlides": [
-        {
-          "title": "アロー関数（かんすう）とは？",
-          "image": "/illustrations/common/cycle_arrows.png",
-          "content": "# 短（みじか）く書（か）ける関数\n\n**アロー関数** `fn() =>` は、無名（むめい）関数（名前のない関数）を **とても短く書く** 方法です。\n\n**身近（みぢか）な例（れい）：**\n- メモ用紙（ようし）に一言（ひとこと）だけ書く感じ\n- 「3倍にする」→ `fn($n) => $n * 3`\n- 短くてスッキリ！\n\n**なぜ便利（べんり）？**\n- 1行で書けるから読みやすい\n- array_map や array_filter と一緒（いっしょ）に使うと便利"
+        "title": "アロー関数を使おう",
+        "description": "短く関数を書ける「アロー関数」を学びましょう。",
+        "difficulty": "medium",
+        "orderIndex": 7,
+        "tutorialSlides": [
+          {
+            "title": "アロー関数（かんすう）とは？",
+            "image": "/illustrations/common/cycle_arrows.png",
+            "content": "# 短（みじか）く書（か）ける関数\n\n**アロー関数** `fn() =>` は、無名（むめい）関数（名前のない関数）を **とても短く書く** 方法です。\n\n**身近（みぢか）な例（れい）：**\n- メモ用紙（ようし）に一言（ひとこと）だけ書く感じ\n- 「3倍にする」→ `fn($n) => $n * 3`\n- 短くてスッキリ！\n\n**なぜ便利（べんり）？**\n- 1行で書けるから読みやすい\n- array_map や array_filter と一緒（いっしょ）に使うと便利"
+          },
+          {
+            "title": "アロー関数の書き方",
+            "image": "/illustrations/common/loading_spinner.png",
+            "content": "# fn と =>（矢印）\n\n`fn(引数) => 式` の形で書きます。矢印（やじるし）の右側が戻（もど）り値（ち）になります。\n\n**コード例：**\n```php\n$add = fn($a, $b) => $a + $b;\necho $add(2, 3); // 5\n```\n\n**何をしているの？**\n1. `fn($a, $b)` → 引数（ひきすう）を2つ受け取る\n2. `=> $a + $b` → 2つを足した結果を返す\n3. `$add(2, 3)` → 2と3を渡すと、5が返ってくる\n\n**普通（ふつう）の書き方との比較（ひかく）：**\n```php\n// 普通の書き方（長い）\nfunction($n) { return $n * 3; }\n\n// アロー関数（短い）\nfn($n) => $n * 3\n```\n\n**ポイント：**\n- `fn` = function の短縮形（たんしゅくけい）\n- `=>` = 「矢印」で結果を指す\n- `return` は書かなくてOK（自動で返される）"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "<?php\n// fnでアロー関数を定義\n$triple = fn($n) => $n * 3;\n// echoで出力\necho $triple(7);\n?>",
+        "holeyCode": "<?php\n// fnでアロー関数を定義\n$triple = ___($n) => $n * 3;\n// echoで出力\n___ $triple(7);\n?>",
+        "correctLines": [
+          "<?php",
+          "// fnでアロー関数を定義",
+          "$triple = fn($n) => $n * 3;",
+          "// echoで出力",
+          "echo $triple(7);",
+          "?>"
+        ],
+        "lineHints": [
+          "fn でアロー関数を定義します。",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "fn"
+          ],
+          "others": [
+            "echo"
+          ]
         },
-        {
-          "title": "アロー関数の書き方",
-          "image": "/illustrations/common/loading_spinner.png",
-          "content": "# fn と =>（矢印）\n\n`fn(引数) => 式` の形で書きます。矢印（やじるし）の右側が戻（もど）り値（ち）になります。\n\n**コード例：**\n```php\n$add = fn($a, $b) => $a + $b;\necho $add(2, 3); // 5\n```\n\n**何をしているの？**\n1. `fn($a, $b)` → 引数（ひきすう）を2つ受け取る\n2. `=> $a + $b` → 2つを足した結果を返す\n3. `$add(2, 3)` → 2と3を渡すと、5が返ってくる\n\n**普通（ふつう）の書き方との比較（ひかく）：**\n```php\n// 普通の書き方（長い）\nfunction($n) { return $n * 3; }\n\n// アロー関数（短い）\nfn($n) => $n * 3\n```\n\n**ポイント：**\n- `fn` = function の短縮形（たんしゅくけい）\n- `=>` = 「矢印」で結果を指す\n- `return` は書かなくてOK（自動で返される）"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "<?php\n// fnでアロー関数を定義\n$triple = fn($n) => $n * 3;\necho $triple(7);\n?>",
-      "holeyCode": "<?php\n// fnでアロー関数を定義\n$triple = ___($n) => $n * 3;\n// echoで出力\n___ $triple(7);\n?>",
-      "correctLines": [
-        "<?php",
-        "// fnでアロー関数を定義",
-        "$triple = fn($n) => $n * 3;",
-        "// echoで出力",
-        "echo $triple(7);",
-        "?>"
-      ],
-      "lineHints": [null, null, "fn でアロー関数を定義します。", null, null, null],
-      "candidates": {
-        "keywords": ["fn"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "21"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "21"
-        }
-      ]
-    },
     {
-      "title": "例外処理 try-catch",
-      "description": "エラーを捕まえる「例外処理」を学びましょう。",
-      "difficulty": "medium",
-      "orderIndex": 8,
-      "tutorialSlides": [
-        {
-          "title": "例外処理（れいがいしょり）とは？",
-          "image": "/illustrations/common/passing_value.png",
-          "content": "# エラーに対処（たいしょ）する\n\n**例外処理（れいがいしょり）** を使うと、エラーが起きても **プログラムを止めずに対処** できます。\n\n**身近（みぢか）な例（れい）：**\n- サーカスの空中（くうちゅう）ブランコの下に張（は）る「安全（あんぜん）ネット」\n- 落ちても（エラーが起きても）大丈夫（だいじょうぶ）\n- ネットがあるから安心して挑戦（ちょうせん）できる\n\n**なぜ必要（ひつよう）？**\n- ファイルが見つからない\n- ネットワークがつながらない\n- 想定外（そうていがい）のデータが来た\n→ こんなとき、例外処理があれば安全に対処できる"
+        "title": "例外処理 try-catch",
+        "description": "エラーを捕まえる「例外処理」を学びましょう。",
+        "difficulty": "medium",
+        "orderIndex": 8,
+        "tutorialSlides": [
+          {
+            "title": "例外処理（れいがいしょり）とは？",
+            "image": "/illustrations/common/passing_value.png",
+            "content": "# エラーに対処（たいしょ）する\n\n**例外処理（れいがいしょり）** を使うと、エラーが起きても **プログラムを止めずに対処** できます。\n\n**身近（みぢか）な例（れい）：**\n- サーカスの空中（くうちゅう）ブランコの下に張（は）る「安全（あんぜん）ネット」\n- 落ちても（エラーが起きても）大丈夫（だいじょうぶ）\n- ネットがあるから安心して挑戦（ちょうせん）できる\n\n**なぜ必要（ひつよう）？**\n- ファイルが見つからない\n- ネットワークがつながらない\n- 想定外（そうていがい）のデータが来た\n→ こんなとき、例外処理があれば安全に対処できる"
+          },
+          {
+            "title": "try-catch（トライ・キャッチ）",
+            "image": "/illustrations/common/return_value.png",
+            "content": "# 例外（れいがい）を捕（つか）まえる\n\n`try`（トライ）ブロックでエラーが起きると、`catch`（キャッチ）ブロックが実行（じっこう）されます。\n\n**コード例：**\n```php\ntry {\n    throw new Exception('error');\n} catch (Exception $e) {\n    echo 'caught';\n}\n```\n\n**何をしているの？**\n1. `try { }` → 「この中でエラーが起きるかも」と囲（かこ）む\n2. `throw new Exception('error')` → わざとエラー（例外）を投げる\n3. `catch (Exception $e)` → 投げられた例外をキャッチ\n4. `echo 'caught'` → キャッチしたら、この処理を実行\n\n**ポイント：**\n- try = 「試（ため）す」\n- catch = 「捕まえる」\n- throw = 「投げる」\n- エラーが起きなければ、catchは実行されない"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "<?php\n// tryで例外を発生させる可能性があるコードを囲む\ntry {\n    // throwで例外を投げる\n    throw new Exception('oops');\n// catchで例外を捕捉\n} catch (Exception $e) {\n    // echoで出力\n    echo 'caught';\n}\n?>",
+        "holeyCode": "<?php\n// tryで例外を発生させる可能性があるコードを囲む\n___ {\n    // throwで例外を投げる\n    ___ new Exception('oops');\n// catchで例外を捕捉\n} ___ (Exception $e) {\n    // echoで出力\n    ___ 'caught';\n}\n?>",
+        "correctLines": [
+          "<?php",
+          "// tryで例外を発生させる可能性があるコードを囲む",
+          "try {",
+          "    // throwで例外を投げる",
+          "    throw new Exception('oops');",
+          "// catchで例外を捕捉",
+          "} catch (Exception $e) {",
+          "    // echoで出力",
+          "    echo 'caught';",
+          "}",
+          "?>"
+        ],
+        "lineHints": [
+          "throw で例外を投げます。",
+          null,
+          "エラー（例外）が発生した場合の処理を記述します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "catch"
+          ],
+          "others": [
+            "try",
+            "throw",
+            "echo"
+          ]
         },
-        {
-          "title": "try-catch（トライ・キャッチ）",
-          "image": "/illustrations/common/return_value.png",
-          "content": "# 例外（れいがい）を捕（つか）まえる\n\n`try`（トライ）ブロックでエラーが起きると、`catch`（キャッチ）ブロックが実行（じっこう）されます。\n\n**コード例：**\n```php\ntry {\n    throw new Exception('error');\n} catch (Exception $e) {\n    echo 'caught';\n}\n```\n\n**何をしているの？**\n1. `try { }` → 「この中でエラーが起きるかも」と囲（かこ）む\n2. `throw new Exception('error')` → わざとエラー（例外）を投げる\n3. `catch (Exception $e)` → 投げられた例外をキャッチ\n4. `echo 'caught'` → キャッチしたら、この処理を実行\n\n**ポイント：**\n- try = 「試（ため）す」\n- catch = 「捕まえる」\n- throw = 「投げる」\n- エラーが起きなければ、catchは実行されない"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "<?php\ntry {\n    throw new Exception('oops');\n// catchで例外を捕捉\n} catch (Exception $e) {\n    echo 'caught';\n}\n?>",
-      "holeyCode": "<?php\n// tryで例外を発生させる可能性があるコードを囲む\n___ {\n    // throwで例外を投げる\n    ___ new Exception('oops');\n// catchで例外を捕捉\n} ___ (Exception $e) {\n    // echoで出力\n    ___ 'caught';\n}\n?>",
-      "correctLines": [
-        "<?php",
-        "// tryで例外を発生させる可能性があるコードを囲む",
-        "try {",
-        "    // throwで例外を投げる",
-        "    throw new Exception('oops');",
-        "// catchで例外を捕捉",
-        "} catch (Exception $e) {",
-        "    // echoで出力",
-        "    echo 'caught';",
-        "}",
-        "?>"
-      ],
-      "lineHints": [null, null, null, null, "throw で例外を投げます。", null, "エラー（例外）が発生した場合の処理を記述します。", null, null, null, null],
-      "candidates": {
-        "keywords": ["catch"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "caught"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "caught"
-        }
-      ]
-    },
     {
-      "title": "名前空間を使おう",
-      "description": "クラスを整理する「名前空間」を学びましょう。",
-      "difficulty": "medium",
-      "orderIndex": 9,
-      "tutorialSlides": [
-        {
-          "title": "名前空間（なまえくうかん）とは？",
-          "image": "/illustrations/common/loop_infinity.png",
-          "content": "# クラスの整理棚（せいりだな）\n\n**名前空間（namespace）** を使うと、クラスを **グループ分け** して名前の衝突（しょうとつ）を防（ふせ）げます。\n\n**身近（みぢか）な例（れい）：**\n- 学校の「クラス分け」\n- 「1年A組の田中さん」と「2年B組の田中さん」は別人\n- 同じ名前でも、グループが違（ちが）えば区別（くべつ）できる\n\n**なぜ必要（ひつよう）？**\n- 大きなプログラムには、たくさんのクラスがある\n- 同じ名前のクラスがあっても、衝突しない\n- 整理されて見つけやすくなる"
+        "title": "名前空間を使おう",
+        "description": "クラスを整理する「名前空間」を学びましょう。",
+        "difficulty": "medium",
+        "orderIndex": 9,
+        "tutorialSlides": [
+          {
+            "title": "名前空間（なまえくうかん）とは？",
+            "image": "/illustrations/common/loop_infinity.png",
+            "content": "# クラスの整理棚（せいりだな）\n\n**名前空間（namespace）** を使うと、クラスを **グループ分け** して名前の衝突（しょうとつ）を防（ふせ）げます。\n\n**身近（みぢか）な例（れい）：**\n- 学校の「クラス分け」\n- 「1年A組の田中さん」と「2年B組の田中さん」は別人\n- 同じ名前でも、グループが違（ちが）えば区別（くべつ）できる\n\n**なぜ必要（ひつよう）？**\n- 大きなプログラムには、たくさんのクラスがある\n- 同じ名前のクラスがあっても、衝突しない\n- 整理されて見つけやすくなる"
+          },
+          {
+            "title": "namespace の使い方",
+            "image": "/illustrations/3d/loop.png",
+            "content": "# namespace キーワード\n\nファイルの先頭（せんとう）で `namespace`（ネームスペース）を宣言（せんげん）します。\n\n**コード例：**\n```php\nnamespace App\\Models;\nclass User { }\n```\n\n**何をしているの？**\n1. `namespace App\\Models;` → 「App\\Models」というグループに所属（しょぞく）\n2. `class User { }` → このUserクラスは「App\\Models\\User」になる\n\n**別のファイルにも同じ名前があったら？**\n```php\n// ファイル1: App\\Models\\User\n// ファイル2: App\\Admin\\User\n// → 違うグループだから衝突しない！\n```\n\n**ポイント：**\n- `\\`（バックスラッシュ）でグループを区切（くぎ）る\n- 「フォルダ」のような階層構造（かいそうこうぞう）が作れる"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "<?php\n// namespaceで名前空間を宣言\nnamespace App;\n// classでクラスを定義\nclass Hello {\n    // functionでメソッドを定義\n    public function say() {\n        // echoで出力\n        echo 'hello';\n    }\n}\n// newでインスタンスを作成\n$h = new Hello();\n// ->でメソッドを呼び出し\n$h->say();\n?>",
+        "holeyCode": "<?php\n// namespaceで名前空間を宣言\n___ App;\n// classでクラスを定義\n___ Hello {\n    // functionでメソッドを定義\n    public ___ say() {\n        // echoで出力\n        ___ 'hello';\n    }\n}\n// newでインスタンスを作成\n$h = ___ Hello();\n// ->でメソッドを呼び出し\n$h___say();\n?>",
+        "correctLines": [
+          "<?php",
+          "// namespaceで名前空間を宣言",
+          "namespace App;",
+          "// classでクラスを定義",
+          "class Hello {",
+          "    // functionでメソッドを定義",
+          "    public function say() {",
+          "        // echoで出力",
+          "        echo 'hello';",
+          "    }",
+          "}",
+          "// newでインスタンスを作成",
+          "$h = new Hello();",
+          "// ->でメソッドを呼び出し",
+          "$h->say();",
+          "?>"
+        ],
+        "lineHints": [
+          "namespace で名前空間を宣言します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "namespace"
+          ],
+          "others": [
+            "class",
+            "function",
+            "echo",
+            "new",
+            "->"
+          ]
         },
-        {
-          "title": "namespace の使い方",
-          "image": "/illustrations/3d/loop.png",
-          "content": "# namespace キーワード\n\nファイルの先頭（せんとう）で `namespace`（ネームスペース）を宣言（せんげん）します。\n\n**コード例：**\n```php\nnamespace App\\Models;\nclass User { }\n```\n\n**何をしているの？**\n1. `namespace App\\Models;` → 「App\\Models」というグループに所属（しょぞく）\n2. `class User { }` → このUserクラスは「App\\Models\\User」になる\n\n**別のファイルにも同じ名前があったら？**\n```php\n// ファイル1: App\\Models\\User\n// ファイル2: App\\Admin\\User\n// → 違うグループだから衝突しない！\n```\n\n**ポイント：**\n- `\\`（バックスラッシュ）でグループを区切（くぎ）る\n- 「フォルダ」のような階層構造（かいそうこうぞう）が作れる"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "<?php\n// namespaceで名前空間を宣言\nnamespace App;\nclass Hello {\n    public function say() {\n        echo 'hello';\n    }\n}\n$h = new Hello();\n$h->say();\n?>",
-      "holeyCode": "<?php\n// namespaceで名前空間を宣言\n___ App;\n// classでクラスを定義\n___ Hello {\n    // functionでメソッドを定義\n    public ___ say() {\n        // echoで出力\n        ___ 'hello';\n    }\n}\n// newでインスタンスを作成\n$h = ___ Hello();\n// ->でメソッドを呼び出し\n$h___say();\n?>",
-      "correctLines": [
-        "<?php",
-        "// namespaceで名前空間を宣言",
-        "namespace App;",
-        "// classでクラスを定義",
-        "class Hello {",
-        "    // functionでメソッドを定義",
-        "    public function say() {",
-        "        // echoで出力",
-        "        echo 'hello';",
-        "    }",
-        "}",
-        "// newでインスタンスを作成",
-        "$h = new Hello();",
-        "// ->でメソッドを呼び出し",
-        "$h->say();",
-        "?>"
-      ],
-      "lineHints": [null, null, "namespace で名前空間を宣言します。", null, null, null, null, null, null, null, null, null, null, null, null, null],
-      "candidates": {
-        "keywords": ["namespace"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "hello"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "hello"
-        }
-      ]
-    },
     {
-      "title": "Null合体演算子 ??",
-      "description": "nullの場合のデフォルト値を設定する「??」演算子を学びましょう。",
-      "difficulty": "medium",
-      "orderIndex": 10,
-      "tutorialSlides": [
-        {
-          "title": "Null合体演算子（がったいえんざんし）とは？",
-          "image": "/illustrations/common/filter.png",
-          "content": "# null のときの代（か）わり\n\n**??**（Null合体演算子）は、左側が `null`（ヌル＝空っぽ）のときに **右側の値を返す** 演算子です。\n\n**身近（みぢか）な例（れい）：**\n- 「名前がなければ『ゲスト』と呼ぶ」\n- 予備（よび）の計画（けいかく）を用意しておく\n- Aがダメなら、Bを使う\n\n**なぜ便利（べんり）？**\n- ユーザーが名前を入力しなかったとき → デフォルト名を使う\n- データがなかったとき → 初期値（しょきち）を使う"
+        "title": "Null合体演算子 ??",
+        "description": "nullの場合のデフォルト値を設定する「??」演算子を学びましょう。",
+        "difficulty": "medium",
+        "orderIndex": 10,
+        "tutorialSlides": [
+          {
+            "title": "Null合体演算子（がったいえんざんし）とは？",
+            "image": "/illustrations/common/filter.png",
+            "content": "# null のときの代（か）わり\n\n**??**（Null合体演算子）は、左側が `null`（ヌル＝空っぽ）のときに **右側の値を返す** 演算子です。\n\n**身近（みぢか）な例（れい）：**\n- 「名前がなければ『ゲスト』と呼ぶ」\n- 予備（よび）の計画（けいかく）を用意しておく\n- Aがダメなら、Bを使う\n\n**なぜ便利（べんり）？**\n- ユーザーが名前を入力しなかったとき → デフォルト名を使う\n- データがなかったとき → 初期値（しょきち）を使う"
+          },
+          {
+            "title": "?? の使い方",
+            "image": "/illustrations/common/crossroad.png",
+            "content": "# シンプルな null チェック\n\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\n\n**コード例：**\n```php\n$name = null;\necho $name ?? 'Guest'; // Guest\n```\n\n**何をしているの？**\n1. `$name = null` → $name は空っぽ\n2. `$name ?? 'Guest'` → $name が null かチェック\n3. null だったので → 'Guest' を返す\n\n**もし値があったら？**\n```php\n$name = 'Taro';\necho $name ?? 'Guest'; // Taro（nullじゃないから$nameを使う）\n```\n\n**ポイント：**\n- `??` の左側が null → 右側を返す\n- `??` の左側が null じゃない → 左側をそのまま返す\n- デフォルト値の設定（せってい）にとても便利"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "<?php\n// nullを代入\n$value = null;\n// ??でnullの場合のデフォルト値を指定\necho $value ?? 'default';\n?>",
+        "holeyCode": "<?php\n// nullを代入\n$value = ___;\n// ??でnullの場合のデフォルト値を指定\necho $value ___ 'default';\n?>",
+        "correctLines": [
+          "<?php",
+          "// nullを代入",
+          "$value = null;",
+          "// ??でnullの場合のデフォルト値を指定",
+          "echo $value ?? 'default';",
+          "?>"
+        ],
+        "lineHints": [
+          "変数の内容を展開して表示します。",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "operators": [
+            "??"
+          ],
+          "others": [
+            "null"
+          ]
         },
-        {
-          "title": "?? の使い方",
-          "image": "/illustrations/common/crossroad.png",
-          "content": "# シンプルな null チェック\n\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\n\n**コード例：**\n```php\n$name = null;\necho $name ?? 'Guest'; // Guest\n```\n\n**何をしているの？**\n1. `$name = null` → $name は空っぽ\n2. `$name ?? 'Guest'` → $name が null かチェック\n3. null だったので → 'Guest' を返す\n\n**もし値があったら？**\n```php\n$name = 'Taro';\necho $name ?? 'Guest'; // Taro（nullじゃないから$nameを使う）\n```\n\n**ポイント：**\n- `??` の左側が null → 右側を返す\n- `??` の左側が null じゃない → 左側をそのまま返す\n- デフォルト値の設定（せってい）にとても便利"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "<?php\n$value = null;\n// ??でnullの場合のデフォルト値を指定\necho $value ?? 'default';\n?>",
-      "holeyCode": "<?php\n// nullを代入\n$value = ___;\n// ??でnullの場合のデフォルト値を指定\necho $value ___ 'default';\n?>",
-      "correctLines": [
-        "<?php",
-        "// nullを代入",
-        "$value = null;",
-        "// ??でnullの場合のデフォルト値を指定",
-        "echo $value ?? 'default';",
-        "?>"
-      ],
-      "lineHints": [null, null, null, null, "変数の内容を展開して表示します。", null],
-      "candidates": {
-        "operators": ["??"]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "default"
-        }
-      ]
-    }
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "default"
+          }
+        ]
+      }
   ]
 }

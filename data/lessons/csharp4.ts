@@ -7,502 +7,794 @@ export const csharp4Data = {
   "lessonOrder": 4,
   "exercises": [
     {
-      "title": "ジェネリッククラス",
-      "description": "型パラメータを使ったクラスを作りましょう。",
-      "difficulty": "hard",
-      "orderIndex": 1,
-      "tutorialSlides": [
-        {
-          "title": "ジェネリクスとは？",
-          "image": "/illustrations/common/padlock_open.png",
-          "content": "# 型を後から指定\n\n**ジェネリクス** で、型を後から指定できるクラスを作れます。\n\n```csharp\nclass Box<T> {\n    public T Value { get; set; }\n}\n\nvar intBox = new Box<int> { Value = 42 };\nvar strBox = new Box<string> { Value = \"Hello\" };\n```"
+        "title": "ジェネリッククラス",
+        "description": "型パラメータを使ったクラスを作りましょう。",
+        "difficulty": "hard",
+        "orderIndex": 1,
+        "tutorialSlides": [
+          {
+            "title": "ジェネリクスとは？",
+            "image": "/illustrations/common/padlock_open.png",
+            "content": "# 型を後から指定\n\n**ジェネリクス** で、型を後から指定できるクラスを作れます。\n\n```csharp\nclass Box<T> {\n    public T Value { get; set; }\n}\n\nvar intBox = new Box<int> { Value = 42 };\nvar strBox = new Box<string> { Value = \"Hello\" };\n```"
+          },
+          {
+            "title": "型安全",
+            "image": "/illustrations/common/shield_gold.png",
+            "content": "# コンパイル時チェック\n\n```csharp\nBox<int> box = new Box<int>();\nbox.Value = \"text\";  // コンパイルエラー！\n```"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// 型パラメータを定義する記号\nclass Container<T> {\n    // プロパティを定義\n    public T Item { get; set; }\n}\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // \"Hello\" を持つ Container インスタンスを作成\n        var c = new Container<string> { Item = \"Hello\" };\n        // 結果を表示\n        Console.WriteLine(c.Item);\n    }\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// 型パラメータを定義する記号\nclass Container___T___ {\n    // プロパティを定義\n    public T Item { ___; set; }\n}\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // \"Hello\" を持つ Container インスタンスを作成\n        var c = new Container<string> { Item = \"___\" };\n        // 結果を表示\n        Console.___(c.Item);\n    }\n}",
+        "correctLines": [
+          "// usingでSystem名前空間をインポート",
+          "using System;",
+          "",
+          "// 型パラメータを定義する記号",
+          "class Container<T> {",
+          "    // プロパティを定義",
+          "    public T Item { get; set; }",
+          "}",
+          "",
+          "// Programクラスを定義",
+          "class Program {",
+          "    // Mainメソッドを定義",
+          "    static void Main() {",
+          "        // \"Hello\" を持つ Container インスタンスを作成",
+          "        var c = new Container<string> { Item = \"Hello\" };",
+          "        // 結果を表示",
+          "        Console.WriteLine(c.Item);",
+          "    }",
+          "}"
+        ],
+        "lineHints": [
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          "新しいクラス（Container）を定義します。",
+          null,
+          "getで値を取得できるようにします。",
+          null,
+          "新しいクラス（Program）を定義します。",
+          "Mainはプログラムの開始地点です。",
+          "Helloという文字列をItemに設定します。",
+          null,
+          "WriteLineでItemの値を表示します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "symbols": [
+            "<",
+            ">"
+          ],
+          "others": [
+            "System",
+            "get",
+            "Program",
+            "Main",
+            "Hello",
+            "WriteLine"
+          ]
         },
-        {
-          "title": "型安全",
-          "image": "/illustrations/common/shield_gold.png",
-          "content": "# コンパイル時チェック\n\n```csharp\nBox<int> box = new Box<int>();\nbox.Value = \"text\";  // コンパイルエラー！\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "using System;\n\nclass Container<T> {\n    public T Item { get; set; }\n}\n\nclass Program {\n    static void Main() {\n        var c = new Container<string> { Item = \"Hello\" };\n        Console.WriteLine(c.Item);\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// 型パラメータを定義する記号\nclass Container___T___ {\n    // プロパティを定義\n    public T Item { ___; set; }\n}\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // \"Hello\" を持つ Container インスタンスを作成\n        var c = new Container<string> { Item = \"___\" };\n        // 結果を表示\n        Console.___(c.Item);\n    }\n}",
-      "correctLines": [
-        "// usingでSystem名前空間をインポート",
-        "using System;",
-        "",
-        "// 型パラメータを定義する記号",
-        "class Container<T> {",
-        "    // プロパティを定義",
-        "    public T Item { get; set; }",
-        "}",
-        "",
-        "// Programクラスを定義",
-        "class Program {",
-        "    // Mainメソッドを定義",
-        "    static void Main() {",
-        "        // \"Hello\" を持つ Container インスタンスを作成",
-        "        var c = new Container<string> { Item = \"Hello\" };",
-        "        // 結果を表示",
-        "        Console.WriteLine(c.Item);",
-        "    }",
-        "}"
-      ],
-      "lineHints": [null, "基本クラスライブラリを利用可能にします。", null, null, "新しいクラス（Container）を定義します。", null, "getで値を取得できるようにします。", null, null, null, "新しいクラス（Program）を定義します。", null, "Mainはプログラムの開始地点です。", null, "Helloという文字列をItemに設定します。", null, "WriteLineでItemの値を表示します。", null, null],
-      "candidates": {
-        "symbols": ["<", ">"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "Hello\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Hello\n"
-        }
-      ]
-    },
     {
-      "title": "ジェネリック制約 where",
-      "description": "型パラメータに制約を設けましょう。",
-      "difficulty": "hard",
-      "orderIndex": 2,
-      "tutorialSlides": [
-        {
-          "title": "where 制約",
-          "image": "/illustrations/common/filter.png",
-          "content": "# 型の条件を指定\n\n**where** で型パラメータに制約を付けられます。\n\n```csharp\nclass Repo<T> where T : class, new() {\n    public T Create() => new T();\n}\n```"
+        "title": "ジェネリック制約 where",
+        "description": "型パラメータに制約を設けましょう。",
+        "difficulty": "hard",
+        "orderIndex": 2,
+        "tutorialSlides": [
+          {
+            "title": "where 制約",
+            "image": "/illustrations/common/filter.png",
+            "content": "# 型の条件を指定\n\n**where** で型パラメータに制約を付けられます。\n\n```csharp\nclass Repo<T> where T : class, new() {\n    public T Create() => new T();\n}\n```"
+          },
+          {
+            "title": "制約の種類",
+            "image": "/illustrations/common/speech_bubble_code.png",
+            "content": "# よく使う制約\n\n```csharp\nwhere T : class      // 参照型\nwhere T : struct     // 値型\nwhere T : new()      // 引数なしコンストラクタ\nwhere T : IComparable // インターフェース\n```"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// 型パラメータに制約を付けるキーワード\nclass Comparer<T> where T : IComparable<T> {\n    // Compareメソッドを定義\n    public int Compare(T a, T b) => a.CompareTo(b);\n}\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // Comparerインスタンスを作成\n        var c = new Comparer<int>();\n        // 比較結果を表示\n        Console.WriteLine(c.Compare(5, 3));\n    }\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// 型パラメータに制約を付けるキーワード\nclass Comparer<T> ___ T : IComparable<T> {\n    // Compareメソッドを定義\n    public int Compare(T a, T b) => a.___(b);\n}\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // Comparerインスタンスを作成\n        var c = new Comparer<___>();\n        // 比較結果を表示\n        Console.___(c.Compare(5, 3));\n    }\n}",
+        "correctLines": [
+          "// usingでSystem名前空間をインポート",
+          "using System;",
+          "",
+          "// 型パラメータに制約を付けるキーワード",
+          "class Comparer<T> where T : IComparable<T> {",
+          "    // Compareメソッドを定義",
+          "    public int Compare(T a, T b) => a.CompareTo(b);",
+          "}",
+          "",
+          "// Programクラスを定義",
+          "class Program {",
+          "    // Mainメソッドを定義",
+          "    static void Main() {",
+          "        // Comparerインスタンスを作成",
+          "        var c = new Comparer<int>();",
+          "        // 比較結果を表示",
+          "        Console.WriteLine(c.Compare(5, 3));",
+          "    }",
+          "}"
+        ],
+        "lineHints": [
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          "新しいクラス（Comparer）を定義します。",
+          null,
+          "CompareToで2つの値を比較します。",
+          null,
+          "新しいクラス（Program）を定義します。",
+          "Mainはプログラムの開始地点です。",
+          "int型のComparerを作成します。",
+          null,
+          "WriteLineで比較結果を表示します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "where",
+            "when",
+            "if"
+          ],
+          "others": [
+            "System",
+            "CompareTo",
+            "Program",
+            "Main",
+            "int",
+            "WriteLine"
+          ]
         },
-        {
-          "title": "制約の種類",
-          "image": "/illustrations/common/speech_bubble_code.png",
-          "content": "# よく使う制約\n\n```csharp\nwhere T : class      // 参照型\nwhere T : struct     // 値型\nwhere T : new()      // 引数なしコンストラクタ\nwhere T : IComparable // インターフェース\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "using System;\n\nclass Comparer<T> where T : IComparable<T> {\n    public int Compare(T a, T b) => a.CompareTo(b);\n}\n\nclass Program {\n    static void Main() {\n        var c = new Comparer<int>();\n        Console.WriteLine(c.Compare(5, 3));\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// 型パラメータに制約を付けるキーワード\nclass Comparer<T> ___ T : IComparable<T> {\n    // Compareメソッドを定義\n    public int Compare(T a, T b) => a.___(b);\n}\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // Comparerインスタンスを作成\n        var c = new Comparer<___>();\n        // 比較結果を表示\n        Console.___(c.Compare(5, 3));\n    }\n}",
-      "correctLines": [
-        "// usingでSystem名前空間をインポート",
-        "using System;",
-        "",
-        "// 型パラメータに制約を付けるキーワード",
-        "class Comparer<T> where T : IComparable<T> {",
-        "    // Compareメソッドを定義",
-        "    public int Compare(T a, T b) => a.CompareTo(b);",
-        "}",
-        "",
-        "// Programクラスを定義",
-        "class Program {",
-        "    // Mainメソッドを定義",
-        "    static void Main() {",
-        "        // Comparerインスタンスを作成",
-        "        var c = new Comparer<int>();",
-        "        // 比較結果を表示",
-        "        Console.WriteLine(c.Compare(5, 3));",
-        "    }",
-        "}"
-      ],
-      "lineHints": [null, "基本クラスライブラリを利用可能にします。", null, null, "新しいクラス（Comparer）を定義します。", null, "CompareToで2つの値を比較します。", null, null, null, "新しいクラス（Program）を定義します。", null, "Mainはプログラムの開始地点です。", null, "int型のComparerを作成します。", null, "WriteLineで比較結果を表示します。", null, null],
-      "candidates": {
-        "keywords": ["where", "when", "if"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "1\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "1\n"
-        }
-      ]
-    },
     {
-      "title": "デリゲートの基本",
-      "description": "メソッドを参照するデリゲートを学びましょう。",
-      "difficulty": "hard",
-      "orderIndex": 3,
-      "tutorialSlides": [
-        {
-          "title": "デリゲートとは？",
-          "image": "/illustrations/common/robot_greet.png",
-          "content": "# メソッドの参照\n\n**デリゲート** は、メソッドを参照できる型です。\n\n```csharp\ndelegate int Operation(int a, int b);\n\nint Add(int a, int b) => a + b;\nOperation op = Add;\nint result = op(2, 3);  // 5\n```"
+        "title": "デリゲートの基本",
+        "description": "メソッドを参照するデリゲートを学びましょう。",
+        "difficulty": "hard",
+        "orderIndex": 3,
+        "tutorialSlides": [
+          {
+            "title": "デリゲートとは？",
+            "image": "/illustrations/common/robot_greet.png",
+            "content": "# メソッドの参照\n\n**デリゲート** は、メソッドを参照できる型です。\n\n```csharp\ndelegate int Operation(int a, int b);\n\nint Add(int a, int b) => a + b;\nOperation op = Add;\nint result = op(2, 3);  // 5\n```"
+          },
+          {
+            "title": "組み込みデリゲート",
+            "image": "/illustrations/common/light_bulb_hint.png",
+            "content": "# Func と Action\n\n```csharp\nFunc<int, int, int> add = (a, b) => a + b;\nAction<string> print = s => Console.WriteLine(s);\n```"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // メソッドを参照できる型を定義するキーワード\n    delegate int MathOp(int x);\n    \n    // Doubleメソッドを定義\n    static int Double(int n) => n * 2;\n    \n    // Mainメソッドを定義\n    static void Main() {\n        // デリゲートにメソッドを代入\n        MathOp op = Double;\n        // 結果を表示\n        Console.WriteLine(op(5));\n    }\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // メソッドを参照できる型を定義するキーワード\n    ___ int MathOp(int x);\n    \n    // Doubleメソッドを定義\n    static int Double(int n) => n * ___;\n    \n    // Mainメソッドを定義\n    static void ___() {\n        // デリゲートにメソッドを代入\n        MathOp op = ___;\n        // 結果を表示\n        Console.___(op(5));\n    }\n}",
+        "correctLines": [
+          "// usingでSystem名前空間をインポート",
+          "using System;",
+          "",
+          "// Programクラスを定義",
+          "class Program {",
+          "    // メソッドを参照できる型を定義するキーワード",
+          "    delegate int MathOp(int x);",
+          "    ",
+          "    // Doubleメソッドを定義",
+          "    static int Double(int n) => n * 2;",
+          "    ",
+          "    // Mainメソッドを定義",
+          "    static void Main() {",
+          "        // デリゲートにメソッドを代入",
+          "        MathOp op = Double;",
+          "        // 結果を表示",
+          "        Console.WriteLine(op(5));",
+          "    }",
+          "}"
+        ],
+        "lineHints": [
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          "新しいクラス（Program）を定義します。",
+          null,
+          "delegateでメソッドを参照できる型を定義します。",
+          null,
+          "2を掛けて結果を返します。",
+          "Mainはプログラムの開始地点です。",
+          null,
+          "Doubleメソッドをデリゲートに代入します。",
+          "WriteLineで計算結果を表示します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "delegate",
+            "event",
+            "func"
+          ],
+          "others": [
+            "System",
+            "Program",
+            "2",
+            "Main",
+            "Double",
+            "WriteLine"
+          ]
         },
-        {
-          "title": "組み込みデリゲート",
-          "image": "/illustrations/common/light_bulb_hint.png",
-          "content": "# Func と Action\n\n```csharp\nFunc<int, int, int> add = (a, b) => a + b;\nAction<string> print = s => Console.WriteLine(s);\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "using System;\n\nclass Program {\n    delegate int MathOp(int x);\n    \n    static int Double(int n) => n * 2;\n    \n    static void Main() {\n        MathOp op = Double;\n        Console.WriteLine(op(5));\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // メソッドを参照できる型を定義するキーワード\n    ___ int MathOp(int x);\n    \n    // Doubleメソッドを定義\n    static int Double(int n) => n * ___;\n    \n    // Mainメソッドを定義\n    static void ___() {\n        // デリゲートにメソッドを代入\n        MathOp op = ___;\n        // 結果を表示\n        Console.___(op(5));\n    }\n}",
-      "correctLines": [
-        "// usingでSystem名前空間をインポート",
-        "using System;",
-        "",
-        "// Programクラスを定義",
-        "class Program {",
-        "    // メソッドを参照できる型を定義するキーワード",
-        "    delegate int MathOp(int x);",
-        "    ",
-        "    // Doubleメソッドを定義",
-        "    static int Double(int n) => n * 2;",
-        "    ",
-        "    // Mainメソッドを定義",
-        "    static void Main() {",
-        "        // デリゲートにメソッドを代入",
-        "        MathOp op = Double;",
-        "        // 結果を表示",
-        "        Console.WriteLine(op(5));",
-        "    }",
-        "}"
-      ],
-      "lineHints": [null, "基本クラスライブラリを利用可能にします。", null, null, "新しいクラス（Program）を定義します。", null, "delegateでメソッドを参照できる型を定義します。", null, null, "2を掛けて結果を返します。", null, null, "Mainはプログラムの開始地点です。", null, "Doubleメソッドをデリゲートに代入します。", null, "WriteLineで計算結果を表示します。", null, null],
-      "candidates": {
-        "keywords": ["delegate", "event", "func"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "10\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "10\n"
-        }
-      ]
-    },
     {
-      "title": "Func デリゲート",
-      "description": "汎用のFunc<>デリゲートを使いましょう。",
-      "difficulty": "hard",
-      "orderIndex": 4,
-      "tutorialSlides": [
-        {
-          "title": "Func とは？",
-          "image": "/illustrations/common/monitor.png",
-          "content": "# 戻り値ありのデリゲート\n\n**Func<>** は、戻り値を持つメソッドを参照します。\n\n```csharp\nFunc<int, int> square = x => x * x;\nFunc<int, int, int> add = (a, b) => a + b;\n```"
+        "title": "Func デリゲート",
+        "description": "汎用のFunc<>デリゲートを使いましょう。",
+        "difficulty": "hard",
+        "orderIndex": 4,
+        "tutorialSlides": [
+          {
+            "title": "Func とは？",
+            "image": "/illustrations/common/monitor.png",
+            "content": "# 戻り値ありのデリゲート\n\n**Func<>** は、戻り値を持つメソッドを参照します。\n\n```csharp\nFunc<int, int> square = x => x * x;\nFunc<int, int, int> add = (a, b) => a + b;\n```"
+          },
+          {
+            "title": "最後が戻り値",
+            "image": "/illustrations/common/intro_robot.png",
+            "content": "# 型パラメータの意味\n\n```csharp\nFunc<int>           // () => int\nFunc<int, string>   // (int) => string\nFunc<int, int, int> // (int, int) => int\n```"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // 戻り値を持つ汎用デリゲート型\n        Func<int, int> triple = x => x * 3;\n        // 結果を表示\n        Console.WriteLine(triple(7));\n    }\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 戻り値を持つ汎用デリゲート型\n        ___<int, int> triple = x => x * 3;\n        // 結果を表示\n        Console.___(triple(7));\n    }\n}",
+        "correctLines": [
+          "// usingでSystem名前空間をインポート",
+          "using System;",
+          "",
+          "// Programクラスを定義",
+          "class Program {",
+          "    // Mainメソッドを定義",
+          "    static void Main() {",
+          "        // 戻り値を持つ汎用デリゲート型",
+          "        Func<int, int> triple = x => x * 3;",
+          "        // 結果を表示",
+          "        Console.WriteLine(triple(7));",
+          "    }",
+          "}"
+        ],
+        "lineHints": [
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          "新しいクラス（Program）を定義します。",
+          null,
+          "Mainはプログラムの開始地点です。",
+          null,
+          "Funcで引数int、戻り値intの関数を定義します。",
+          null,
+          "WriteLineで計算結果（21）を表示します。",
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "types": [
+            "Func",
+            "Action",
+            "Predicate"
+          ],
+          "others": [
+            "System",
+            "Program",
+            "Main",
+            "WriteLine"
+          ]
         },
-        {
-          "title": "最後が戻り値",
-          "image": "/illustrations/common/intro_robot.png",
-          "content": "# 型パラメータの意味\n\n```csharp\nFunc<int>           // () => int\nFunc<int, string>   // (int) => string\nFunc<int, int, int> // (int, int) => int\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        Func<int, int> triple = x => x * 3;\n        Console.WriteLine(triple(7));\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 戻り値を持つ汎用デリゲート型\n        ___<int, int> triple = x => x * 3;\n        // 結果を表示\n        Console.___(triple(7));\n    }\n}",
-      "correctLines": [
-        "// usingでSystem名前空間をインポート",
-        "using System;",
-        "",
-        "// Programクラスを定義",
-        "class Program {",
-        "    // Mainメソッドを定義",
-        "    static void Main() {",
-        "        // 戻り値を持つ汎用デリゲート型",
-        "        Func<int, int> triple = x => x * 3;",
-        "        // 結果を表示",
-        "        Console.WriteLine(triple(7));",
-        "    }",
-        "}"
-      ],
-      "lineHints": [null, "基本クラスライブラリを利用可能にします。", null, null, "新しいクラス（Program）を定義します。", null, "Mainはプログラムの開始地点です。", null, "Funcで引数int、戻り値intの関数を定義します。", null, "WriteLineで計算結果（21）を表示します。", null, null],
-      "candidates": {
-        "types": ["Func", "Action", "Predicate"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "21\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "21\n"
-        }
-      ]
-    },
     {
-      "title": "Action デリゲート",
-      "description": "戻り値なしのActionデリゲートを使いましょう。",
-      "difficulty": "hard",
-      "orderIndex": 5,
-      "tutorialSlides": [
-        {
-          "title": "Action とは？",
-          "image": "/illustrations/common/pencil.png",
-          "content": "# 戻り値なしのデリゲート\n\n**Action<>** は、戻り値を持たないメソッドを参照します。\n\n```csharp\nAction greet = () => Console.WriteLine(\"Hi\");\nAction<string> print = s => Console.WriteLine(s);\n```"
+        "title": "Action デリゲート",
+        "description": "戻り値なしのActionデリゲートを使いましょう。",
+        "difficulty": "hard",
+        "orderIndex": 5,
+        "tutorialSlides": [
+          {
+            "title": "Action とは？",
+            "image": "/illustrations/common/pencil.png",
+            "content": "# 戻り値なしのデリゲート\n\n**Action<>** は、戻り値を持たないメソッドを参照します。\n\n```csharp\nAction greet = () => Console.WriteLine(\"Hi\");\nAction<string> print = s => Console.WriteLine(s);\n```"
+          },
+          {
+            "title": "void メソッド用",
+            "image": "/illustrations/common/book.png",
+            "content": "# 戻り値がない場合\n\n```csharp\nAction<int, int> log = (a, b) => {\n    Console.WriteLine($\"{a} + {b}\");\n};\n```"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // 戻り値を持たない汎用デリゲート型\n        Action<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\n        // 関数を呼び出し\n        greet(\"World\");\n    }\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 戻り値を持たない汎用デリゲート型\n        ___<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\n        // 関数を呼び出し\n        greet(\"___\");\n    }\n}",
+        "correctLines": [
+          "// usingでSystem名前空間をインポート",
+          "using System;",
+          "",
+          "// Programクラスを定義",
+          "class Program {",
+          "    // Mainメソッドを定義",
+          "    static void Main() {",
+          "        // 戻り値を持たない汎用デリゲート型",
+          "        Action<string> greet = name => Console.WriteLine($\"Hello, {name}!\");",
+          "        // 関数を呼び出し",
+          "        greet(\"World\");",
+          "    }",
+          "}"
+        ],
+        "lineHints": [
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          "新しいクラス（Program）を定義します。",
+          null,
+          "Mainはプログラムの開始地点です。",
+          null,
+          "Actionで戻り値なしの関数を定義します。",
+          null,
+          "Worldを引数としてgreetを呼び出します。",
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "types": [
+            "Action",
+            "Func",
+            "Predicate"
+          ],
+          "others": [
+            "System",
+            "Program",
+            "Main",
+            "World"
+          ]
         },
-        {
-          "title": "void メソッド用",
-          "image": "/illustrations/common/book.png",
-          "content": "# 戻り値がない場合\n\n```csharp\nAction<int, int> log = (a, b) => {\n    Console.WriteLine($\"{a} + {b}\");\n};\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        Action<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\n        greet(\"World\");\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 戻り値を持たない汎用デリゲート型\n        ___<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\n        // 関数を呼び出し\n        greet(\"___\");\n    }\n}",
-      "correctLines": [
-        "// usingでSystem名前空間をインポート",
-        "using System;",
-        "",
-        "// Programクラスを定義",
-        "class Program {",
-        "    // Mainメソッドを定義",
-        "    static void Main() {",
-        "        // 戻り値を持たない汎用デリゲート型",
-        "        Action<string> greet = name => Console.WriteLine($\"Hello, {name}!\");",
-        "        // 関数を呼び出し",
-        "        greet(\"World\");",
-        "    }",
-        "}"
-      ],
-      "lineHints": [null, "基本クラスライブラリを利用可能にします。", null, null, "新しいクラス（Program）を定義します。", null, "Mainはプログラムの開始地点です。", null, "Actionで戻り値なしの関数を定義します。", null, "Worldを引数としてgreetを呼び出します。", null, null],
-      "candidates": {
-        "types": ["Action", "Func", "Predicate"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "Hello, World!\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Hello, World!\n"
-        }
-      ]
-    },
     {
-      "title": "LINQ GroupBy",
-      "description": "要素をグループ化しましょう。",
-      "difficulty": "hard",
-      "orderIndex": 6,
-      "tutorialSlides": [
-        {
-          "title": "GroupBy とは？",
-          "image": "/illustrations/common/database_table_3d.png",
-          "content": "# グループ化\n\n**GroupBy** は、キーでグループ分けします。\n\n```csharp\nvar groups = people.GroupBy(p => p.City);\nforeach (var g in groups) {\n    Console.WriteLine($\"{g.Key}: {g.Count()}\");\n}\n```"
+        "title": "LINQ GroupBy",
+        "description": "要素をグループ化しましょう。",
+        "difficulty": "hard",
+        "orderIndex": 6,
+        "tutorialSlides": [
+          {
+            "title": "GroupBy とは？",
+            "image": "/illustrations/common/database_table_3d.png",
+            "content": "# グループ化\n\n**GroupBy** は、キーでグループ分けします。\n\n```csharp\nvar groups = people.GroupBy(p => p.City);\nforeach (var g in groups) {\n    Console.WriteLine($\"{g.Key}: {g.Count()}\");\n}\n```"
+          },
+          {
+            "title": "IGrouping",
+            "image": "/illustrations/common/database_aggregate.png",
+            "content": "# キーと要素\n\n```csharp\n// g.Key でグループのキー\n// g でグループの要素（IEnumerable）\n```"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n// usingでLinq名前空間をインポート\nusing System.Linq;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // 配列を定義\n        var nums = new[] { 1, 2, 3, 4, 5, 6 };\n        // キーでグループ分けするLINQメソッド\n        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");\n        // foreachでループ\n        foreach (var g in groups) {\n            // グループを表示\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\n        }\n    }\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 配列を定義\n        var nums = new[] { ___, 2, 3, 4, 5, 6 };\n        // キーでグループ分けするLINQメソッド\n        var groups = nums.___(n => n % 2 == 0 ? \"even\" : \"odd\");\n        // foreachでループ\n        foreach (var g ___ groups) {\n            // グループを表示\n            Console.WriteLine($\"{g.Key}: {g.___()}\");\n        }\n    }\n}",
+        "correctLines": [
+          "// usingでSystem名前空間をインポート",
+          "using System;",
+          "// usingでLinq名前空間をインポート",
+          "using System.Linq;",
+          "",
+          "// Programクラスを定義",
+          "class Program {",
+          "    // Mainメソッドを定義",
+          "    static void Main() {",
+          "        // 配列を定義",
+          "        var nums = new[] { 1, 2, 3, 4, 5, 6 };",
+          "        // キーでグループ分けするLINQメソッド",
+          "        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");",
+          "        // foreachでループ",
+          "        foreach (var g in groups) {",
+          "            // グループを表示",
+          "            Console.WriteLine($\"{g.Key}: {g.Count()}\");",
+          "        }",
+          "    }",
+          "}"
+        ],
+        "lineHints": [
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          null,
+          "System.Linq名前空間を利用可能にします。",
+          "新しいクラス（Program）を定義します。",
+          null,
+          "Mainはプログラムの開始地点です。",
+          null,
+          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          null,
+          "GroupByで偶数(even)と奇数(odd)にグループ分けします。",
+          null,
+          "inキーワードでグループを反復します。",
+          null,
+          "Countで各グループの要素数を表示します。",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "methods": [
+            "GroupBy",
+            "OrderBy",
+            "SelectMany"
+          ],
+          "others": [
+            "System",
+            "Linq",
+            "Program",
+            "Main",
+            "1",
+            "in",
+            "Count"
+          ]
         },
-        {
-          "title": "IGrouping",
-          "image": "/illustrations/common/database_aggregate.png",
-          "content": "# キーと要素\n\n```csharp\n// g.Key でグループのキー\n// g でグループの要素（IEnumerable）\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "using System;\nusing System.Linq;\n\nclass Program {\n    static void Main() {\n        var nums = new[] { 1, 2, 3, 4, 5, 6 };\n        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");\n        foreach (var g in groups) {\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\n        }\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing System.___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 配列を定義\n        var nums = new[] { ___, 2, 3, 4, 5, 6 };\n        // キーでグループ分けするLINQメソッド\n        var groups = nums.___(n => n % 2 == 0 ? \"even\" : \"odd\");\n        // foreachでループ\n        foreach (var g ___ groups) {\n            // グループを表示\n            Console.WriteLine($\"{g.Key}: {g.___()}\");\n        }\n    }\n}",
-      "correctLines": [
-        "// usingでSystem名前空間をインポート",
-        "using System;",
-        "// usingでLinq名前空間をインポート",
-        "using System.Linq;",
-        "",
-        "// Programクラスを定義",
-        "class Program {",
-        "    // Mainメソッドを定義",
-        "    static void Main() {",
-        "        // 配列を定義",
-        "        var nums = new[] { 1, 2, 3, 4, 5, 6 };",
-        "        // キーでグループ分けするLINQメソッド",
-        "        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");",
-        "        // foreachでループ",
-        "        foreach (var g in groups) {",
-        "            // グループを表示",
-        "            Console.WriteLine($\"{g.Key}: {g.Count()}\");",
-        "        }",
-        "    }",
-        "}"
-      ],
-      "lineHints": [null, "基本クラスライブラリを利用可能にします。", null, "System.Linq名前空間を利用可能にします。", null, null, "新しいクラス（Program）を定義します。", null, "Mainはプログラムの開始地点です。", null, "複数の値をまとめて格納する配列（またはリスト）を作成します。", null, "GroupByで偶数(even)と奇数(odd)にグループ分けします。", null, "inキーワードでグループを反復します。", null, "Countで各グループの要素数を表示します。", null, null, null],
-      "candidates": {
-        "methods": ["GroupBy", "OrderBy", "SelectMany"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "odd: 3\neven: 3\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "odd: 3\neven: 3\n"
-        }
-      ]
-    },
     {
-      "title": "null条件演算子 ?.",
-      "description": "nullチェックを簡潔に書きましょう。",
-      "difficulty": "hard",
-      "orderIndex": 7,
-      "tutorialSlides": [
-        {
-          "title": "?. とは？",
-          "image": "/illustrations/common/sql_query_magnifier.png",
-          "content": "# null安全なアクセス\n\n**?.** は、nullでなければアクセス、nullならnullを返します。\n\n```csharp\nstring? name = person?.Name;\nint? length = str?.Length;\n```"
+        "title": "null条件演算子 ?.",
+        "description": "nullチェックを簡潔に書きましょう。",
+        "difficulty": "hard",
+        "orderIndex": 7,
+        "tutorialSlides": [
+          {
+            "title": "?. とは？",
+            "image": "/illustrations/common/sql_query_magnifier.png",
+            "content": "# null安全なアクセス\n\n**?.** は、nullでなければアクセス、nullならnullを返します。\n\n```csharp\nstring? name = person?.Name;\nint? length = str?.Length;\n```"
+          },
+          {
+            "title": "?? と組み合わせ",
+            "image": "/illustrations/common/magnifying_glass_search.png",
+            "content": "# デフォルト値\n\n```csharp\nstring name = person?.Name ?? \"Unknown\";\n```"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // null許容型の変数を定義\n        string? s = null;\n        // nullでなければアクセスする演算子\n        int? len = s?.Length;\n        // null合体演算子でデフォルト値\n        Console.WriteLine(len ?? 0);\n    }\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // null許容型の変数を定義\n        string? s = ___;\n        // nullでなければアクセスする演算子\n        int? len = s___.Length;\n        // null合体演算子でデフォルト値\n        Console.___(len ?? 0);\n    }\n}",
+        "correctLines": [
+          "// usingでSystem名前空間をインポート",
+          "using System;",
+          "",
+          "// Programクラスを定義",
+          "class Program {",
+          "    // Mainメソッドを定義",
+          "    static void Main() {",
+          "        // null許容型の変数を定義",
+          "        string? s = null;",
+          "        // nullでなければアクセスする演算子",
+          "        int? len = s?.Length;",
+          "        // null合体演算子でデフォルト値",
+          "        Console.WriteLine(len ?? 0);",
+          "    }",
+          "}"
+        ],
+        "lineHints": [
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          "新しいクラス（Program）を定義します。",
+          null,
+          "Mainはプログラムの開始地点です。",
+          null,
+          "nullを代入してnull状態を作ります。",
+          null,
+          "?.でnullの場合もエラーにならずnullを返します。",
+          null,
+          "WriteLineで結果を表示します。",
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "operators": [
+            "?.",
+            "!.",
+            "."
+          ],
+          "others": [
+            "System",
+            "Program",
+            "Main",
+            "null",
+            "?",
+            "WriteLine"
+          ]
         },
-        {
-          "title": "?? と組み合わせ",
-          "image": "/illustrations/common/magnifying_glass_search.png",
-          "content": "# デフォルト値\n\n```csharp\nstring name = person?.Name ?? \"Unknown\";\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? s = null;\n        int? len = s?.Length;\n        Console.WriteLine(len ?? 0);\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // null許容型の変数を定義\n        string? s = ___;\n        // nullでなければアクセスする演算子\n        int? len = s___.Length;\n        // null合体演算子でデフォルト値\n        Console.___(len ?? 0);\n    }\n}",
-      "correctLines": [
-        "// usingでSystem名前空間をインポート",
-        "using System;",
-        "",
-        "// Programクラスを定義",
-        "class Program {",
-        "    // Mainメソッドを定義",
-        "    static void Main() {",
-        "        // null許容型の変数を定義",
-        "        string? s = null;",
-        "        // nullでなければアクセスする演算子",
-        "        int? len = s?.Length;",
-        "        // null合体演算子でデフォルト値",
-        "        Console.WriteLine(len ?? 0);",
-        "    }",
-        "}"
-      ],
-      "lineHints": [null, "基本クラスライブラリを利用可能にします。", null, null, "新しいクラス（Program）を定義します。", null, "Mainはプログラムの開始地点です。", null, "nullを代入してnull状態を作ります。", null, "?.でnullの場合もエラーにならずnullを返します。", null, "WriteLineで結果を表示します。", null, null],
-      "candidates": {
-        "operators": ["?.", "!.", "."]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "0\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "0\n"
-        }
-      ]
-    },
     {
-      "title": "null合体演算子 ??",
-      "description": "nullの場合のデフォルト値を設定しましょう。",
-      "difficulty": "hard",
-      "orderIndex": 8,
-      "tutorialSlides": [
-        {
-          "title": "?? とは？",
-          "image": "/illustrations/common/select.png",
-          "content": "# nullならデフォルト\n\n**??** は、左側がnullなら右側を返します。\n\n```csharp\nstring name = inputName ?? \"Guest\";\n```"
+        "title": "null合体演算子 ??",
+        "description": "nullの場合のデフォルト値を設定しましょう。",
+        "difficulty": "hard",
+        "orderIndex": 8,
+        "tutorialSlides": [
+          {
+            "title": "?? とは？",
+            "image": "/illustrations/common/select.png",
+            "content": "# nullならデフォルト\n\n**??** は、左側がnullなら右側を返します。\n\n```csharp\nstring name = inputName ?? \"Guest\";\n```"
+          },
+          {
+            "title": "??= 代入",
+            "image": "/illustrations/common/filter.png",
+            "content": "# nullの場合だけ代入\n\n```csharp\nname ??= \"Default\";  // nameがnullなら代入\n```"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // null許容型の変数を定義\n        string? value = null;\n        // nullなら右側を返す演算子\n        string result = value ?? \"default\";\n        // 結果を表示\n        Console.WriteLine(result);\n    }\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // null許容型の変数を定義\n        string? value = ___;\n        // nullなら右側を返す演算子\n        string result = value ___ \"default\";\n        // 結果を表示\n        Console.___(result);\n    }\n}",
+        "correctLines": [
+          "// usingでSystem名前空間をインポート",
+          "using System;",
+          "",
+          "// Programクラスを定義",
+          "class Program {",
+          "    // Mainメソッドを定義",
+          "    static void Main() {",
+          "        // null許容型の変数を定義",
+          "        string? value = null;",
+          "        // nullなら右側を返す演算子",
+          "        string result = value ?? \"default\";",
+          "        // 結果を表示",
+          "        Console.WriteLine(result);",
+          "    }",
+          "}"
+        ],
+        "lineHints": [
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          "新しいクラス（Program）を定義します。",
+          null,
+          "Mainはプログラムの開始地点です。",
+          null,
+          "nullを代入してnull状態を作ります。",
+          null,
+          "??でnullの場合はdefaultを返します。",
+          null,
+          "WriteLineで結果を表示します。",
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "operators": [
+            "??",
+            "?:",
+            "||"
+          ],
+          "others": [
+            "System",
+            "Program",
+            "Main",
+            "null",
+            "WriteLine"
+          ]
         },
-        {
-          "title": "??= 代入",
-          "image": "/illustrations/common/filter.png",
-          "content": "# nullの場合だけ代入\n\n```csharp\nname ??= \"Default\";  // nameがnullなら代入\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "using System;\n\nclass Program {\n    static void Main() {\n        string? value = null;\n        string result = value ?? \"default\";\n        Console.WriteLine(result);\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // null許容型の変数を定義\n        string? value = ___;\n        // nullなら右側を返す演算子\n        string result = value ___ \"default\";\n        // 結果を表示\n        Console.___(result);\n    }\n}",
-      "correctLines": [
-        "// usingでSystem名前空間をインポート",
-        "using System;",
-        "",
-        "// Programクラスを定義",
-        "class Program {",
-        "    // Mainメソッドを定義",
-        "    static void Main() {",
-        "        // null許容型の変数を定義",
-        "        string? value = null;",
-        "        // nullなら右側を返す演算子",
-        "        string result = value ?? \"default\";",
-        "        // 結果を表示",
-        "        Console.WriteLine(result);",
-        "    }",
-        "}"
-      ],
-      "lineHints": [null, "基本クラスライブラリを利用可能にします。", null, null, "新しいクラス（Program）を定義します。", null, "Mainはプログラムの開始地点です。", null, "nullを代入してnull状態を作ります。", null, "??でnullの場合はdefaultを返します。", null, "WriteLineで結果を表示します。", null, null],
-      "candidates": {
-        "operators": ["??", "?:", "||"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "default\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "default\n"
-        }
-      ]
-    },
     {
-      "title": "record 型",
-      "description": "不変なデータクラスを簡潔に定義しましょう。",
-      "difficulty": "hard",
-      "orderIndex": 9,
-      "tutorialSlides": [
-        {
-          "title": "record とは？",
-          "image": "/illustrations/common/speech_bubble_code.png",
-          "content": "# 不変データ型\n\n**record** は、イミュータブルなデータ型を簡潔に定義します。\n\n```csharp\nrecord Person(string Name, int Age);\n\nvar p = new Person(\"Alice\", 30);\n```"
+        "title": "record 型",
+        "description": "不変なデータクラスを簡潔に定義しましょう。",
+        "difficulty": "hard",
+        "orderIndex": 9,
+        "tutorialSlides": [
+          {
+            "title": "record とは？",
+            "image": "/illustrations/common/speech_bubble_code.png",
+            "content": "# 不変データ型\n\n**record** は、イミュータブルなデータ型を簡潔に定義します。\n\n```csharp\nrecord Person(string Name, int Age);\n\nvar p = new Person(\"Alice\", 30);\n```"
+          },
+          {
+            "title": "with 式",
+            "image": "/illustrations/common/robot_greet.png",
+            "content": "# 一部を変更したコピー\n\n```csharp\nvar p2 = p with { Age = 31 };\n```"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// イミュータブルなデータ型を定義するキーワード\nrecord Point(int X, int Y);\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // Pointインスタンスを作成\n        var p = new Point(3, 4);\n        // 結果を表示\n        Console.WriteLine(p);\n    }\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// イミュータブルなデータ型を定義するキーワード\n___ Point(int X, int Y);\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // Pointインスタンスを作成\n        var p = new ___(3, 4);\n        // 結果を表示\n        Console.___(p);\n    }\n}",
+        "correctLines": [
+          "// usingでSystem名前空間をインポート",
+          "using System;",
+          "",
+          "// イミュータブルなデータ型を定義するキーワード",
+          "record Point(int X, int Y);",
+          "",
+          "// Programクラスを定義",
+          "class Program {",
+          "    // Mainメソッドを定義",
+          "    static void Main() {",
+          "        // Pointインスタンスを作成",
+          "        var p = new Point(3, 4);",
+          "        // 結果を表示",
+          "        Console.WriteLine(p);",
+          "    }",
+          "}"
+        ],
+        "lineHints": [
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          "recordで値の等価性を持つ不変データ型を定義します。",
+          null,
+          "新しいクラス（Program）を定義します。",
+          "Mainはプログラムの開始地点です。",
+          null,
+          "Pointインスタンスを座標(3,4)で作成します。",
+          null,
+          "WriteLineでPoint情報を表示します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "record",
+            "struct",
+            "class"
+          ],
+          "others": [
+            "System",
+            "Program",
+            "Main",
+            "Point",
+            "WriteLine"
+          ]
         },
-        {
-          "title": "with 式",
-          "image": "/illustrations/common/robot_greet.png",
-          "content": "# 一部を変更したコピー\n\n```csharp\nvar p2 = p with { Age = 31 };\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "using System;\n\nrecord Point(int X, int Y);\n\nclass Program {\n    static void Main() {\n        var p = new Point(3, 4);\n        Console.WriteLine(p);\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// イミュータブルなデータ型を定義するキーワード\n___ Point(int X, int Y);\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // Pointインスタンスを作成\n        var p = new ___(3, 4);\n        // 結果を表示\n        Console.___(p);\n    }\n}",
-      "correctLines": [
-        "// usingでSystem名前空間をインポート",
-        "using System;",
-        "",
-        "// イミュータブルなデータ型を定義するキーワード",
-        "record Point(int X, int Y);",
-        "",
-        "// Programクラスを定義",
-        "class Program {",
-        "    // Mainメソッドを定義",
-        "    static void Main() {",
-        "        // Pointインスタンスを作成",
-        "        var p = new Point(3, 4);",
-        "        // 結果を表示",
-        "        Console.WriteLine(p);",
-        "    }",
-        "}"
-      ],
-      "lineHints": [null, "基本クラスライブラリを利用可能にします。", null, null, "recordで値の等価性を持つ不変データ型を定義します。", null, null, "新しいクラス（Program）を定義します。", null, "Mainはプログラムの開始地点です。", null, "Pointインスタンスを座標(3,4)で作成します。", null, "WriteLineでPoint情報を表示します。", null, null],
-      "candidates": {
-        "keywords": ["record", "struct", "class"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "Point { X = 3, Y = 4 }\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Point { X = 3, Y = 4 }\n"
-        }
-      ]
-    },
     {
-      "title": "init プロパティ",
-      "description": "初期化専用のプロパティを定義しましょう。",
-      "difficulty": "hard",
-      "orderIndex": 10,
-      "tutorialSlides": [
-        {
-          "title": "init とは？",
-          "image": "/illustrations/common/light_bulb_hint.png",
-          "content": "# 初期化時のみ設定可能\n\n**init** アクセサは、オブジェクト初期化時のみ値を設定できます。\n\n```csharp\nclass Person {\n    public string Name { get; init; }\n}\n\nvar p = new Person { Name = \"Alice\" };\n// p.Name = \"Bob\";  // エラー！\n```"
+        "title": "init プロパティ",
+        "description": "初期化専用のプロパティを定義しましょう。",
+        "difficulty": "hard",
+        "orderIndex": 10,
+        "tutorialSlides": [
+          {
+            "title": "init とは？",
+            "image": "/illustrations/common/light_bulb_hint.png",
+            "content": "# 初期化時のみ設定可能\n\n**init** アクセサは、オブジェクト初期化時のみ値を設定できます。\n\n```csharp\nclass Person {\n    public string Name { get; init; }\n}\n\nvar p = new Person { Name = \"Alice\" };\n// p.Name = \"Bob\";  // エラー！\n```"
+          },
+          {
+            "title": "不変性の確保",
+            "image": "/illustrations/common/monitor.png",
+            "content": "# 作成後は読み取り専用\n\n```csharp\npublic int Id { get; init; }\npublic string Name { get; init; }\n```"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Itemクラスを定義\nclass Item {\n    // 初期化時のみ値を設定できるアクセサ\n    public string Name { get; init; }\n}\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // \"Apple\" を持つ Item インスタンスを作成\n        var item = new Item { Name = \"Apple\" };\n        // 結果を表示\n        Console.WriteLine(item.Name);\n    }\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Itemクラスを定義\nclass ___ {\n    // 初期化時のみ値を設定できるアクセサ\n    public string Name { get; ___; }\n}\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // \"Apple\" を持つ Item インスタンスを作成\n        var item = new Item { Name = \"___\" };\n        // 結果を表示\n        Console.___(item.Name);\n    }\n}",
+        "correctLines": [
+          "// usingでSystem名前空間をインポート",
+          "using System;",
+          "",
+          "// Itemクラスを定義",
+          "class Item {",
+          "    // 初期化時のみ値を設定できるアクセサ",
+          "    public string Name { get; init; }",
+          "}",
+          "",
+          "// Programクラスを定義",
+          "class Program {",
+          "    // Mainメソッドを定義",
+          "    static void Main() {",
+          "        // \"Apple\" を持つ Item インスタンスを作成",
+          "        var item = new Item { Name = \"Apple\" };",
+          "        // 結果を表示",
+          "        Console.WriteLine(item.Name);",
+          "    }",
+          "}"
+        ],
+        "lineHints": [
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          "新しいクラス（Item）を定義します。",
+          null,
+          "initで初期化時のみ値を設定できるようにします。",
+          null,
+          "新しいクラス（Program）を定義します。",
+          "Mainはプログラムの開始地点です。",
+          "Appleという文字列をNameに設定します。",
+          null,
+          "WriteLineでNameの値を表示します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "init",
+            "set",
+            "private set"
+          ],
+          "others": [
+            "System",
+            "Item",
+            "Program",
+            "Main",
+            "Apple",
+            "WriteLine"
+          ]
         },
-        {
-          "title": "不変性の確保",
-          "image": "/illustrations/common/monitor.png",
-          "content": "# 作成後は読み取り専用\n\n```csharp\npublic int Id { get; init; }\npublic string Name { get; init; }\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "using System;\n\nclass Item {\n    public string Name { get; init; }\n}\n\nclass Program {\n    static void Main() {\n        var item = new Item { Name = \"Apple\" };\n        Console.WriteLine(item.Name);\n    }\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Itemクラスを定義\nclass ___ {\n    // 初期化時のみ値を設定できるアクセサ\n    public string Name { get; ___; }\n}\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // \"Apple\" を持つ Item インスタンスを作成\n        var item = new Item { Name = \"___\" };\n        // 結果を表示\n        Console.___(item.Name);\n    }\n}",
-      "correctLines": [
-        "// usingでSystem名前空間をインポート",
-        "using System;",
-        "",
-        "// Itemクラスを定義",
-        "class Item {",
-        "    // 初期化時のみ値を設定できるアクセサ",
-        "    public string Name { get; init; }",
-        "}",
-        "",
-        "// Programクラスを定義",
-        "class Program {",
-        "    // Mainメソッドを定義",
-        "    static void Main() {",
-        "        // \"Apple\" を持つ Item インスタンスを作成",
-        "        var item = new Item { Name = \"Apple\" };",
-        "        // 結果を表示",
-        "        Console.WriteLine(item.Name);",
-        "    }",
-        "}"
-      ],
-      "lineHints": [null, "基本クラスライブラリを利用可能にします。", null, null, "新しいクラス（Item）を定義します。", null, "initで初期化時のみ値を設定できるようにします。", null, null, null, "新しいクラス（Program）を定義します。", null, "Mainはプログラムの開始地点です。", null, "Appleという文字列をNameに設定します。", null, "WriteLineでNameの値を表示します。", null, null],
-      "candidates": {
-        "keywords": ["init", "set", "private set"]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Apple\n"
-        }
-      ]
-    }
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "Apple\n"
+          }
+        ]
+      }
   ]
 }

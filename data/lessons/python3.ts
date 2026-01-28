@@ -7,435 +7,638 @@ export const pythonData3 = {
   "lessonOrder": 3,
   "exercises": [
     {
-      "title": "ラムダ式（無名関数）",
-      "description": "名前のない小さな関数「ラムダ式」を学びましょう。",
-      "difficulty": "hard",
-      "orderIndex": 1,
-      "tutorialSlides": [
-        {
-          "title": "ラムダ式とは？",
-          "image": "/illustrations/common/struct_block.png",
-          "content": "# 名前のない「ミニ関数」を作ろう！\n\n**ラムダ式**（または **無名関数**）は、**名前をつけない小さな関数** を1行で書く方法です。\n\n普通の関数は `def` を使って名前をつけますが、ラムダ式は名前なしで **サッと作ってすぐ使える** 関数です。\n\n**比較：** 同じことをする2つの書き方\n\n```python\n# 通常の関数（名前つき）\ndef double(x):\n    return x * 2\n\n# ラムダ式（名前なし）\ndouble = lambda x: x * 2\n```\n\nどちらも「xを2倍にする」という同じ働きをします。\n\n**ポイント：** ラムダ式は **1行で済む簡単な計算** に向いています！"
+        "title": "ラムダ式（無名関数）",
+        "description": "名前のない小さな関数「ラムダ式」を学びましょう。",
+        "difficulty": "hard",
+        "orderIndex": 1,
+        "tutorialSlides": [
+          {
+            "title": "ラムダ式とは？",
+            "image": "/illustrations/common/struct_block.png",
+            "content": "# 名前のない「ミニ関数」を作ろう！\n\n**ラムダ式**（または **無名関数**）は、**名前をつけない小さな関数** を1行で書く方法です。\n\n普通の関数は `def` を使って名前をつけますが、ラムダ式は名前なしで **サッと作ってすぐ使える** 関数です。\n\n**比較：** 同じことをする2つの書き方\n\n```python\n# 通常の関数（名前つき）\ndef double(x):\n    return x * 2\n\n# ラムダ式（名前なし）\ndouble = lambda x: x * 2\n```\n\nどちらも「xを2倍にする」という同じ働きをします。\n\n**ポイント：** ラムダ式は **1行で済む簡単な計算** に向いています！"
+          },
+          {
+            "title": "ラムダ式の使い方",
+            "image": "/illustrations/common/circular_arrow.png",
+            "content": "# lambda 引数: 戻り値\n\n**書き方：** `lambda 引数: 計算式`\n\nラムダ式は `map` や `filter` などの関数と組み合わせると特に便利です。\n\n**例：** リストの全ての数を2倍にしよう！\n\n```python\nnums = [1, 2, 3]\ndoubled = list(map(lambda x: x * 2, nums))\nprint(doubled)  # [2, 4, 6]\n```\n\n**何をしているか：**\n1. `nums` は [1, 2, 3] というリスト\n2. `map()` でリストの各要素に関数を適用する\n3. `lambda x: x * 2` で「xを2倍にする」関数を定義\n4. 結果として [2, 4, 6] ができる！\n\n**使いどころ：** 1回しか使わない簡単な関数を、わざわざ名前をつけずにサッと作りたいとき！"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "# 2乗を計算する無名関数を定義\nsquare = lambda x: x ** 2\n# 定義した関数に数値 5 を渡して実行結果を表示\nprint(square(5))",
+        "holeyCode": "# 2乗を計算する無名関数を定義\nsquare = ___ x: x ** 2\n# 定義した関数に数値 5 を渡して実行結果を表示\nprint(___)",
+        "correctLines": [
+          "# 2乗を計算する無名関数を定義",
+          "square = lambda x: x ** 2",
+          "# 定義した関数に数値 5 を渡して実行結果を表示",
+          "print(square(5))"
+        ],
+        "lineHints": [
+          null,
+          "lambda キーワードを使います。",
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "lambda",
+            "def"
+          ],
+          "others": [
+            "square(5"
+          ]
         },
-        {
-          "title": "ラムダ式の使い方",
-          "image": "/illustrations/common/circular_arrow.png",
-          "content": "# lambda 引数: 戻り値\n\n**書き方：** `lambda 引数: 計算式`\n\nラムダ式は `map` や `filter` などの関数と組み合わせると特に便利です。\n\n**例：** リストの全ての数を2倍にしよう！\n\n```python\nnums = [1, 2, 3]\ndoubled = list(map(lambda x: x * 2, nums))\nprint(doubled)  # [2, 4, 6]\n```\n\n**何をしているか：**\n1. `nums` は [1, 2, 3] というリスト\n2. `map()` でリストの各要素に関数を適用する\n3. `lambda x: x * 2` で「xを2倍にする」関数を定義\n4. 結果として [2, 4, 6] ができる！\n\n**使いどころ：** 1回しか使わない簡単な関数を、わざわざ名前をつけずにサッと作りたいとき！"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "# 2乗を計算する無名関数を定義\nsquare = lambda x: x ** 2\n# 定義した関数に数値 5 を渡して実行結果を表示\nprint(square(5))",
-      "holeyCode": "# 2乗を計算する無名関数を定義\nsquare = ___ x: x ** 2\n# 定義した関数に数値 5 を渡して実行結果を表示\nprint(___)",
-      "correctLines": [
-        "# 2乗を計算する無名関数を定義",
-        "square = lambda x: x ** 2",
-        "# 定義した関数に数値 5 を渡して実行結果を表示",
-        "print(square(5))"
-      ],
-      "lineHints": [null, "lambda キーワードを使います。", null, null],
-      "candidates": {
-        "keywords": ["lambda", "def"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "25\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "25\n"
-        }
-      ]
-    },
     {
-      "title": "*args（可変長引数）",
-      "description": "いくつでも引数を受け取れる関数を作りましょう。",
-      "difficulty": "hard",
-      "orderIndex": 2,
-      "tutorialSlides": [
-        {
-          "title": "*args とは？",
-          "image": "/illustrations/common/action_button.png",
-          "content": "# いくつでも引数を受け取れる！\n\n**\\*args（アスタリスク・アーグス）** を使うと、**何個でも引数を受け取れる** 関数が作れます。\n\n「args」は「arguments（引数）」の略です。\n\nたとえば、「1個でも、10個でも、100個でも数を受け取って合計する」という関数が作れます！\n\n**例：** 全部足し算しよう！\n\n```python\ndef sum_all(*args):\n    return sum(args)\n\nprint(sum_all(1, 2, 3))  # => 6\nprint(sum_all(1, 2, 3, 4, 5))  # => 15\n```\n\n**ポイント：** 受け取った引数は **タプル**（リストに似たデータ）として扱われます。"
+        "title": "*args（可変長引数）",
+        "description": "いくつでも引数を受け取れる関数を作りましょう。",
+        "difficulty": "hard",
+        "orderIndex": 2,
+        "tutorialSlides": [
+          {
+            "title": "*args とは？",
+            "image": "/illustrations/common/action_button.png",
+            "content": "# いくつでも引数を受け取れる！\n\n**\\*args（アスタリスク・アーグス）** を使うと、**何個でも引数を受け取れる** 関数が作れます。\n\n「args」は「arguments（引数）」の略です。\n\nたとえば、「1個でも、10個でも、100個でも数を受け取って合計する」という関数が作れます！\n\n**例：** 全部足し算しよう！\n\n```python\ndef sum_all(*args):\n    return sum(args)\n\nprint(sum_all(1, 2, 3))  # => 6\nprint(sum_all(1, 2, 3, 4, 5))  # => 15\n```\n\n**ポイント：** 受け取った引数は **タプル**（リストに似たデータ）として扱われます。"
+          },
+          {
+            "title": "*args の使い方",
+            "image": "/illustrations/common/cycle_arrows.png",
+            "content": "# 引数名は自由につけられる！\n\n`*args` の「args」の部分は、好きな名前に変えてOKです。\n\n大事なのは **「*」（アスタリスク）** をつけることです！\n\n**例：** みんなにあいさつしよう！\n\n```python\ndef greet(*names):\n    for name in names:\n        print(f'Hello, {name}!')\n\ngreet('Alice', 'Bob', 'Charlie')\n```\n=> Hello, Alice!\n=> Hello, Bob!\n=> Hello, Charlie!\n\n**何をしているか：**\n1. `greet('Alice', 'Bob', 'Charlie')` で3人の名前を渡す\n2. `*names` で全ての名前をまとめて受け取る\n3. `for` ループで1人ずつあいさつする\n\n**使いどころ：** 引数の数が決まっていない関数を作りたいとき！"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "# 全ての数値を受け取って合計を出す関数を定義\ndef add_all(*args):\n    # 合計値を保持する変数を初期化\n    total = 0\n    # 渡された全ての引数をループで処理\n    for n in args:\n        # 各要素を合計に加算\n        total += n\n    # 最終的な合計値を返す\n    return total\n\n# 1, 2, 3, 4 を渡して合計を表示\nprint(add_all(1, 2, 3, 4))",
+        "holeyCode": "# 全ての数値を受け取って合計を出す関数を定義\ndef add_all(___args):\n    # 合計値を保持する変数を初期化\n    total = ___\n    # 渡された全ての引数をループで処理\n    for n in ___:\n        # 各要素を合計に加算\n        total += ___\n    # 最終的な合計値を返す\n    return ___\n\n# 1, 2, 3, 4 を渡して合計を表示\nprint(___)",
+        "correctLines": [
+          "# 全ての数値を受け取って合計を出す関数を定義",
+          "def add_all(*args):",
+          "    # 合計値を保持する変数を初期化",
+          "    total = 0",
+          "    # 渡された全ての引数をループで処理",
+          "    for n in args:",
+          "        # 各要素を合計に加算",
+          "        total += n",
+          "    # 最終的な合計値を返す",
+          "    return total",
+          "",
+          "# 1, 2, 3, 4 を渡して合計を表示",
+          "print(add_all(1, 2, 3, 4))"
+        ],
+        "lineHints": [
+          null,
+          "関数（add_all）を新しく定義します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "operators": [
+            "*",
+            "**"
+          ],
+          "others": [
+            "0",
+            "args",
+            "n",
+            "total",
+            "add_all(1, 2, 3, 4"
+          ]
         },
-        {
-          "title": "*args の使い方",
-          "image": "/illustrations/common/cycle_arrows.png",
-          "content": "# 引数名は自由につけられる！\n\n`*args` の「args」の部分は、好きな名前に変えてOKです。\n\n大事なのは **「*」（アスタリスク）** をつけることです！\n\n**例：** みんなにあいさつしよう！\n\n```python\ndef greet(*names):\n    for name in names:\n        print(f'Hello, {name}!')\n\ngreet('Alice', 'Bob', 'Charlie')\n```\n=> Hello, Alice!\n=> Hello, Bob!\n=> Hello, Charlie!\n\n**何をしているか：**\n1. `greet('Alice', 'Bob', 'Charlie')` で3人の名前を渡す\n2. `*names` で全ての名前をまとめて受け取る\n3. `for` ループで1人ずつあいさつする\n\n**使いどころ：** 引数の数が決まっていない関数を作りたいとき！"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "# 全ての数値を受け取って合計を出す関数を定義\ndef add_all(*args):\n    # 合計値を保持する変数を初期化\n    total = 0\n    # 渡された全ての引数をループで処理\n    for n in args:\n        # 各要素を合計に加算\n        total += n\n    # 最終的な合計値を返す\n    return total\n\n# 1, 2, 3, 4 を渡して合計を表示\nprint(add_all(1, 2, 3, 4))",
-      "holeyCode": "# 全ての数値を受け取って合計を出す関数を定義\ndef add_all(___args):\n    # 合計値を保持する変数を初期化\n    total = ___\n    # 渡された全ての引数をループで処理\n    for n in ___:\n        # 各要素を合計に加算\n        total += ___\n    # 最終的な合計値を返す\n    return ___\n\n# 1, 2, 3, 4 を渡して合計を表示\nprint(___)",
-      "correctLines": [
-        "# 全ての数値を受け取って合計を出す関数を定義",
-        "def add_all(*args):",
-        "    # 合計値を保持する変数を初期化",
-        "    total = 0",
-        "    # 渡された全ての引数をループで処理",
-        "    for n in args:",
-        "        # 各要素を合計に加算",
-        "        total += n",
-        "    # 最終的な合計値を返す",
-        "    return total",
-        "",
-        "# 1, 2, 3, 4 を渡して合計を表示",
-        "print(add_all(1, 2, 3, 4))"
-      ],
-      "lineHints": [null, "関数（add_all）を新しく定義します。", null, null, null, null, null, null, null, null, null, null, null],
-      "candidates": {
-        "operators": ["*", "**"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "10\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "10\n"
-        }
-      ]
-    },
     {
-      "title": "**kwargs（キーワード引数）",
-      "description": "名前付きの引数をいくつでも受け取りましょう。",
-      "difficulty": "hard",
-      "orderIndex": 3,
-      "tutorialSlides": [
-        {
-          "title": "**kwargs とは？",
-          "image": "/illustrations/common/loading_spinner.png",
-          "content": "# 「名前付き」の引数をいくつでも受け取れる！\n\n**\\*\\*kwargs（ダブルアスタリスク・クワーグス）** を使うと、**名前付きの引数** をいくつでも受け取れます。\n\n「kwargs」は「keyword arguments（キーワード引数）」の略です。\n\n**\\*args** は「1, 2, 3」のような **値だけ** を受け取りますが、\n**\\*\\*kwargs** は「name='太郎', age=20」のような **名前と値のペア** を受け取ります。\n\n**例：** 情報を表示しよう！\n\n```python\ndef show_info(**kwargs):\n    for key, value in kwargs.items():\n        print(f'{key}: {value}')\n\nshow_info(name='太郎', age=20)\n```\n=> name: 太郎\n=> age: 20"
+        "title": "**kwargs（キーワード引数）",
+        "description": "名前付きの引数をいくつでも受け取りましょう。",
+        "difficulty": "hard",
+        "orderIndex": 3,
+        "tutorialSlides": [
+          {
+            "title": "**kwargs とは？",
+            "image": "/illustrations/common/loading_spinner.png",
+            "content": "# 「名前付き」の引数をいくつでも受け取れる！\n\n**\\*\\*kwargs（ダブルアスタリスク・クワーグス）** を使うと、**名前付きの引数** をいくつでも受け取れます。\n\n「kwargs」は「keyword arguments（キーワード引数）」の略です。\n\n**\\*args** は「1, 2, 3」のような **値だけ** を受け取りますが、\n**\\*\\*kwargs** は「name='太郎', age=20」のような **名前と値のペア** を受け取ります。\n\n**例：** 情報を表示しよう！\n\n```python\ndef show_info(**kwargs):\n    for key, value in kwargs.items():\n        print(f'{key}: {value}')\n\nshow_info(name='太郎', age=20)\n```\n=> name: 太郎\n=> age: 20"
+          },
+          {
+            "title": "**kwargs の使い方",
+            "image": "/illustrations/common/loop_infinity.png",
+            "content": "# 辞書（じしょ）として扱える！\n\n受け取った `kwargs` は **辞書** として使えます。\n\n`.items()`, `.keys()`, `.values()` などのメソッドが使えます！\n\n**例：** ユーザー情報を作ろう！\n\n```python\ndef create_user(**kwargs):\n    return kwargs\n\nuser = create_user(name='花子', email='hanako@example.com')\nprint(user['name'])  # => 花子\n```\n\n**何をしているか：**\n1. `create_user(name='花子', email='...')` で名前付き引数を渡す\n2. `**kwargs` でそれらを辞書として受け取る\n3. `{'name': '花子', 'email': '...'}` という辞書が返される\n4. `user['name']` で「花子」が取り出せる！\n\n**使いどころ：** 設定項目（オプション）をたくさん渡したいとき！"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "# キーワード引数を受け取って表示する関数を定義\ndef print_info(**kwargs):\n    # 1番目の k にキー、2番目の v に値が入る\n    for k, v in kwargs.items():\n        # キーと値をイコールで繋いで表示\n        print(f'{k} = {v}')\n\n# x=10, y=20 を指定して実行\nprint_info(x=10, y=20)",
+        "holeyCode": "# キーワード引数を受け取って表示する関数を定義\ndef print_info(___kwargs):\n    # 1番目の k にキー、2番目の v に値が入る\n    for k, v in ___:\n        # キーと値をイコールで繋いで表示\n        print(___)\n\n# x=10, y=20 を指定して実行\n___",
+        "correctLines": [
+          "# キーワード引数を受け取って表示する関数を定義",
+          "def print_info(**kwargs):",
+          "    # 1番目の k にキー、2番目の v に値が入る",
+          "    for k, v in kwargs.items():",
+          "        # キーと値をイコールで繋いで表示",
+          "        print(f'{k} = {v}')",
+          "",
+          "# x=10, y=20 を指定して実行",
+          "print_info(x=10, y=20)"
+        ],
+        "lineHints": [
+          null,
+          "関数（print_info）を新しく定義します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "operators": [
+            "*",
+            "**"
+          ],
+          "others": [
+            "kwargs.items()",
+            "f'{k} = {v}'",
+            "print_info(x=10, y=20)"
+          ]
         },
-        {
-          "title": "**kwargs の使い方",
-          "image": "/illustrations/common/loop_infinity.png",
-          "content": "# 辞書（じしょ）として扱える！\n\n受け取った `kwargs` は **辞書** として使えます。\n\n`.items()`, `.keys()`, `.values()` などのメソッドが使えます！\n\n**例：** ユーザー情報を作ろう！\n\n```python\ndef create_user(**kwargs):\n    return kwargs\n\nuser = create_user(name='花子', email='hanako@example.com')\nprint(user['name'])  # => 花子\n```\n\n**何をしているか：**\n1. `create_user(name='花子', email='...')` で名前付き引数を渡す\n2. `**kwargs` でそれらを辞書として受け取る\n3. `{'name': '花子', 'email': '...'}` という辞書が返される\n4. `user['name']` で「花子」が取り出せる！\n\n**使いどころ：** 設定項目（オプション）をたくさん渡したいとき！"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "# キーワード引数を受け取って表示する関数を定義\ndef print_info(**kwargs):\n    # 1番目の k にキー、2番目の v に値が入る\n    for k, v in kwargs.items():\n        # キーと値をイコールで繋いで表示\n        print(f'{k} = {v}')\n\n# x=10, y=20 を指定して実行\nprint_info(x=10, y=20)",
-      "holeyCode": "# キーワード引数を受け取って表示する関数を定義\ndef print_info(___kwargs):\n    # 1番目の k にキー、2番目の v に値が入る\n    for k, v in ___:\n        # キーと値をイコールで繋いで表示\n        print(___)\n\n# x=10, y=20 を指定して実行\n___",
-      "correctLines": [
-        "# キーワード引数を受け取って表示する関数を定義",
-        "def print_info(**kwargs):",
-        "    # 1番目の k にキー、2番目の v に値が入る",
-        "    for k, v in kwargs.items():",
-        "        # キーと値をイコールで繋いで表示",
-        "        print(f'{k} = {v}')",
-        "",
-        "# x=10, y=20 を指定して実行",
-        "print_info(x=10, y=20)"
-      ],
-      "lineHints": [null, "関数（print_info）を新しく定義します。", null, null, null, null, null, null, null],
-      "candidates": {
-        "operators": ["*", "**"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "x = 10\ny = 20\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "x = 10\ny = 20\n"
-        }
-      ]
-    },
     {
-      "title": "enumerate で番号付きループ",
-      "description": "ループで要素と一緒にインデックスを取得しましょう。",
-      "difficulty": "hard",
-      "orderIndex": 4,
-      "tutorialSlides": [
-        {
-          "title": "enumerate とは？",
-          "image": "/illustrations/3d/loop.png",
-          "content": "# 番号と要素を一緒に取得しよう！\n\n**enumerate（イニュメレイト）** を使うと、ループで **番号（インデックス）と要素を同時に** 取得できます。\n\n「enumerate」は「番号をつける」という意味です。\n\nたとえば、「1番目のりんご、2番目のバナナ...」と番号付きで表示したいときに便利です！\n\n**例：** くだものに番号をつけよう！\n\n```python\nfruits = ['apple', 'banana', 'cherry']\nfor i, fruit in enumerate(fruits):\n    print(f'{i}: {fruit}')\n```\n=> 0: apple\n=> 1: banana\n=> 2: cherry\n\n`i` に番号、`fruit` に要素が入ります！"
+        "title": "enumerate で番号付きループ",
+        "description": "ループで要素と一緒にインデックスを取得しましょう。",
+        "difficulty": "hard",
+        "orderIndex": 4,
+        "tutorialSlides": [
+          {
+            "title": "enumerate とは？",
+            "image": "/illustrations/3d/loop.png",
+            "content": "# 番号と要素を一緒に取得しよう！\n\n**enumerate（イニュメレイト）** を使うと、ループで **番号（インデックス）と要素を同時に** 取得できます。\n\n「enumerate」は「番号をつける」という意味です。\n\nたとえば、「1番目のりんご、2番目のバナナ...」と番号付きで表示したいときに便利です！\n\n**例：** くだものに番号をつけよう！\n\n```python\nfruits = ['apple', 'banana', 'cherry']\nfor i, fruit in enumerate(fruits):\n    print(f'{i}: {fruit}')\n```\n=> 0: apple\n=> 1: banana\n=> 2: cherry\n\n`i` に番号、`fruit` に要素が入ります！"
+          },
+          {
+            "title": "開始番号を指定する",
+            "image": "/illustrations/common/loop_gears.png",
+            "content": "# start で開始番号を変えられる！\n\nデフォルトでは0から始まりますが、`start=1` で **1から始める** こともできます。\n\n人間は「1番目、2番目...」と数えることが多いですよね。そんなときに便利です！\n\n**例：** 1番目から始めよう！\n\n```python\nfruits = ['apple', 'banana', 'cherry']\nfor i, fruit in enumerate(fruits, start=1):\n    print(f'{i}番目: {fruit}')\n```\n=> 1番目: apple\n=> 2番目: banana\n=> 3番目: cherry\n\n**何をしているか：**\n- `start=1` で開始番号を1に設定\n- ループするたびに番号が1ずつ増える\n\n**ポイント：** `start` を使わないと0から始まります！"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "# 赤、緑、青の3色を含むリストを作成\ncolors = ['red', 'green', 'blue']\n# 1番目の i に番号、2番目の color に要素が入る\nfor i, color in enumerate(colors):\n    # 「番号: 色」の形式で画面に出力\n    print(f'{i}: {color}')",
+        "holeyCode": "# 赤、緑、青の3色を含むリストを作成\ncolors = ___\n# 1番目の i に番号、2番目の color に要素が入る\nfor i, color in ___(colors):\n    # 「番号: 色」の形式で画面に出力\n    print(___)",
+        "correctLines": [
+          "# 赤、緑、青の3色を含むリストを作成",
+          "colors = ['red', 'green', 'blue']",
+          "# 1番目の i に番号、2番目の color に要素が入る",
+          "for i, color in enumerate(colors):",
+          "    # 「番号: 色」の形式で画面に出力",
+          "    print(f'{i}: {color}')"
+        ],
+        "lineHints": [
+          null,
+          "enumerate でインデックスと要素を取得します。",
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "functions": [
+            "enumerate",
+            "range",
+            "zip"
+          ],
+          "others": [
+            "['red', 'green', 'blue']",
+            "f'{i}: {color}'"
+          ]
         },
-        {
-          "title": "開始番号を指定する",
-          "image": "/illustrations/common/loop_gears.png",
-          "content": "# start で開始番号を変えられる！\n\nデフォルトでは0から始まりますが、`start=1` で **1から始める** こともできます。\n\n人間は「1番目、2番目...」と数えることが多いですよね。そんなときに便利です！\n\n**例：** 1番目から始めよう！\n\n```python\nfruits = ['apple', 'banana', 'cherry']\nfor i, fruit in enumerate(fruits, start=1):\n    print(f'{i}番目: {fruit}')\n```\n=> 1番目: apple\n=> 2番目: banana\n=> 3番目: cherry\n\n**何をしているか：**\n- `start=1` で開始番号を1に設定\n- ループするたびに番号が1ずつ増える\n\n**ポイント：** `start` を使わないと0から始まります！"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "# 赤、緑、青の3色を含むリストを作成\ncolors = ['red', 'green', 'blue']\n# 1番目の i に番号、2番目の color に要素が入る\nfor i, color in enumerate(colors):\n    # 「番号: 色」の形式で画面に出力\n    print(f'{i}: {color}')",
-      "holeyCode": "# 赤、緑、青の3色を含むリストを作成\ncolors = ___\n# 1番目の i に番号、2番目の color に要素が入る\nfor i, color in ___(colors):\n    # 「番号: 色」の形式で画面に出力\n    print(___)",
-      "correctLines": [
-        "# 赤、緑、青の3色を含むリストを作成",
-        "colors = ['red', 'green', 'blue']",
-        "# 1番目の i に番号、2番目の color に要素が入る",
-        "for i, color in enumerate(colors):",
-        "    # 「番号: 色」の形式で画面に出力",
-        "    print(f'{i}: {color}')"
-      ],
-      "lineHints": [null, null, null, "enumerate でインデックスと要素を取得します。", null, null],
-      "candidates": {
-        "functions": ["enumerate", "range", "zip"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "0: red\n1: green\n2: blue\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "0: red\n1: green\n2: blue\n"
-        }
-      ]
-    },
     {
-      "title": "zip で複数リストを同時にループ",
-      "description": "複数のリストを同時に処理しましょう。",
-      "difficulty": "hard",
-      "orderIndex": 5,
-      "tutorialSlides": [
-        {
-          "title": "zip とは？",
-          "image": "/illustrations/common/circular_arrow.png",
-          "content": "# 複数のリストを「ジッパー」でつなごう！\n\n**zip（ジップ）** を使うと、**複数のリストの要素を同時に** 取り出せます。\n\n「zip」はジッパー（ファスナー）のことです。2つのものを噛（か）み合わせるイメージです！\n\nたとえば、「名前のリスト」と「年齢のリスト」を **ペアにして** 処理したいときに便利です。\n\n**例：** 名前と年齢をペアにしよう！\n\n```python\nnames = ['Alice', 'Bob']\nages = [20, 25]\nfor name, age in zip(names, ages):\n    print(f'{name} is {age}')\n```\n=> Alice is 20\n=> Bob is 25\n\n1番目どうし、2番目どうしがペアになります！"
+        "title": "zip で複数リストを同時にループ",
+        "description": "複数のリストを同時に処理しましょう。",
+        "difficulty": "hard",
+        "orderIndex": 5,
+        "tutorialSlides": [
+          {
+            "title": "zip とは？",
+            "image": "/illustrations/common/circular_arrow.png",
+            "content": "# 複数のリストを「ジッパー」でつなごう！\n\n**zip（ジップ）** を使うと、**複数のリストの要素を同時に** 取り出せます。\n\n「zip」はジッパー（ファスナー）のことです。2つのものを噛（か）み合わせるイメージです！\n\nたとえば、「名前のリスト」と「年齢のリスト」を **ペアにして** 処理したいときに便利です。\n\n**例：** 名前と年齢をペアにしよう！\n\n```python\nnames = ['Alice', 'Bob']\nages = [20, 25]\nfor name, age in zip(names, ages):\n    print(f'{name} is {age}')\n```\n=> Alice is 20\n=> Bob is 25\n\n1番目どうし、2番目どうしがペアになります！"
+          },
+          {
+            "title": "zip の使い方",
+            "image": "/illustrations/common/cycle_arrows.png",
+            "content": "# 短い方に合わせる！\n\nリストの長さが違う場合、**短い方に合わせて** ループが終了します。\n\n**例：** 長さの違うリストを zip しよう！\n\n```python\na = [1, 2, 3]\nb = ['x', 'y']\nprint(list(zip(a, b)))  # [(1, 'x'), (2, 'y')]\n```\n\n**何をしているか：**\n- `a` は3つ、`b` は2つの要素がある\n- 短い `b` に合わせて2ペアだけ作られる\n- 3番目の「3」は相手がいないので含まれない\n\n**注意：** はみ出した要素は無視されます！\n\n**使いどころ：** 2つ以上のリストを **並行して（同時に）** 処理したいとき！"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "# 英単語 a, b, c のリストを定義\nkeys = ['a', 'b', 'c']\n# 数値 1, 2, 3 のリストを定義\nvalues = [1, 2, 3]\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\nfor k, v in zip(keys, values):\n    # 「キー: 値」の形式で画面に出力\n    print(f'{k}: {v}')",
+        "holeyCode": "# 英単語 a, b, c のリストを定義\nkeys = ___\n# 数値 1, 2, 3 のリストを定義\nvalues = ___\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\nfor k, v in ___(keys, values):\n    # 「キー: 値」の形式で画面に出力\n    print(___)",
+        "correctLines": [
+          "# 英単語 a, b, c のリストを定義",
+          "keys = ['a', 'b', 'c']",
+          "# 数値 1, 2, 3 のリストを定義",
+          "values = [1, 2, 3]",
+          "# 1番目の k, 2番目の v で、zip の引数も keys, values の順",
+          "for k, v in zip(keys, values):",
+          "    # 「キー: 値」の形式で画面に出力",
+          "    print(f'{k}: {v}')"
+        ],
+        "lineHints": [
+          null,
+          "zip で複数のリストを同時にループします。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "functions": [
+            "zip",
+            "enumerate",
+            "map"
+          ],
+          "others": [
+            "['a', 'b', 'c']",
+            "[1, 2, 3]",
+            "f'{k}: {v}'"
+          ]
         },
-        {
-          "title": "zip の使い方",
-          "image": "/illustrations/common/cycle_arrows.png",
-          "content": "# 短い方に合わせる！\n\nリストの長さが違う場合、**短い方に合わせて** ループが終了します。\n\n**例：** 長さの違うリストを zip しよう！\n\n```python\na = [1, 2, 3]\nb = ['x', 'y']\nprint(list(zip(a, b)))  # [(1, 'x'), (2, 'y')]\n```\n\n**何をしているか：**\n- `a` は3つ、`b` は2つの要素がある\n- 短い `b` に合わせて2ペアだけ作られる\n- 3番目の「3」は相手がいないので含まれない\n\n**注意：** はみ出した要素は無視されます！\n\n**使いどころ：** 2つ以上のリストを **並行して（同時に）** 処理したいとき！"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "# 英単語 a, b, c のリストを定義\nkeys = ['a', 'b', 'c']\n# 数値 1, 2, 3 のリストを定義\nvalues = [1, 2, 3]\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\nfor k, v in zip(keys, values):\n    # 「キー: 値」の形式で画面に出力\n    print(f'{k}: {v}')",
-      "holeyCode": "# 英単語 a, b, c のリストを定義\nkeys = ___\n# 数値 1, 2, 3 のリストを定義\nvalues = ___\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\nfor k, v in ___(keys, values):\n    # 「キー: 値」の形式で画面に出力\n    print(___)",
-      "correctLines": [
-        "# 英単語 a, b, c のリストを定義",
-        "keys = ['a', 'b', 'c']",
-        "# 数値 1, 2, 3 のリストを定義",
-        "values = [1, 2, 3]",
-        "# 1番目の k, 2番目の v で、zip の引数も keys, values の順",
-        "for k, v in zip(keys, values):",
-        "    # 「キー: 値」の形式で画面に出力",
-        "    print(f'{k}: {v}')"
-      ],
-      "lineHints": [null, null, null, null, null, "zip で複数のリストを同時にループします。", null, null],
-      "candidates": {
-        "functions": ["zip", "enumerate", "map"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "a: 1\nb: 2\nc: 3\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "a: 1\nb: 2\nc: 3\n"
-        }
-      ]
-    },
     {
-      "title": "ジェネレータ（yield）",
-      "description": "値を1つずつ生成するジェネレータを学びましょう。",
-      "difficulty": "hard",
-      "orderIndex": 6,
-      "tutorialSlides": [
-        {
-          "title": "ジェネレータとは？",
-          "image": "/illustrations/common/loading_spinner.png",
-          "content": "# 値を「1つずつ」作る工場！\n\n**ジェネレータ** とは、値を **一度に全部作らず、必要なときに1つずつ生成する** 特別な関数です。\n\nたとえば、パン工場で1000個のパンを作るとき：\n- **リスト** = 1000個全部作ってから渡す（場所をたくさん使う）\n- **ジェネレータ** = 1個作って渡す、1個作って渡す...（場所を節約）\n\n**yield（イールド）** キーワードを使って定義します。「yield」は「生み出す」という意味です。\n\n**例：** 数を1つずつ生成しよう！\n\n```python\ndef count_up(n):\n    for i in range(n):\n        yield i\n\nfor num in count_up(3):\n    print(num)  # 0, 1, 2\n```"
+        "title": "ジェネレータ（yield）",
+        "description": "値を1つずつ生成するジェネレータを学びましょう。",
+        "difficulty": "hard",
+        "orderIndex": 6,
+        "tutorialSlides": [
+          {
+            "title": "ジェネレータとは？",
+            "image": "/illustrations/common/loading_spinner.png",
+            "content": "# 値を「1つずつ」作る工場！\n\n**ジェネレータ** とは、値を **一度に全部作らず、必要なときに1つずつ生成する** 特別な関数です。\n\nたとえば、パン工場で1000個のパンを作るとき：\n- **リスト** = 1000個全部作ってから渡す（場所をたくさん使う）\n- **ジェネレータ** = 1個作って渡す、1個作って渡す...（場所を節約）\n\n**yield（イールド）** キーワードを使って定義します。「yield」は「生み出す」という意味です。\n\n**例：** 数を1つずつ生成しよう！\n\n```python\ndef count_up(n):\n    for i in range(n):\n        yield i\n\nfor num in count_up(3):\n    print(num)  # 0, 1, 2\n```"
+          },
+          {
+            "title": "ジェネレータの利点（りてん）",
+            "image": "/illustrations/common/loop_infinity.png",
+            "content": "# 大量のデータを効率よく処理！\n\nリストは全データを **メモリ（コンピュータの記憶場所）** に保持しますが、ジェネレータは **1つずつ作るのでメモリを節約** できます。\n\n**例：** 1億個の数を生成しても大丈夫！\n\n```python\ndef big_range(n):\n    i = 0\n    while i < n:\n        yield i\n        i += 1\n```\n\n**何をしているか：**\n- `yield i` で値を1つ返す\n- 次に呼ばれるまで **一時停止**\n- 次に呼ばれたら `i += 1` して続きを実行\n\n**ポイント：**\n- `return` は関数を終了して値を返す\n- `yield` は値を返すけど関数は **一時停止** するだけ（終了しない）\n\n**使いどころ：** 大量のデータを扱うとき、メモリを節約したいとき！"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "# 偶数を生成するジェネレータ関数を定義\ndef even_numbers(n):\n    # 指定された回数ループ\n    for i in range(n):\n        # 値を1つずつ返す\n        yield i * 2\n\n# ジェネレータから値を取り出して表示\nfor num in even_numbers(4):\n    # 取り出した値を表示\n    print(num)",
+        "holeyCode": "# 偶数を生成するジェネレータ関数を定義\ndef ___:\n    # 指定された回数ループ\n    for i in ___:\n        # 値を1つずつ返す\n        ___ i * 2\n\n# ジェネレータから値を取り出して表示\nfor num in ___:\n    # 取り出した値を表示\n    print(___)",
+        "correctLines": [
+          "# 偶数を生成するジェネレータ関数を定義",
+          "def even_numbers(n):",
+          "    # 指定された回数ループ",
+          "    for i in range(n):",
+          "        # 値を1つずつ返す",
+          "        yield i * 2",
+          "",
+          "# ジェネレータから値を取り出して表示",
+          "for num in even_numbers(4):",
+          "    # 取り出した値を表示",
+          "    print(num)"
+        ],
+        "lineHints": [
+          null,
+          "yield で値を1つずつ返します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "yield",
+            "return"
+          ],
+          "variables": [
+            "num"
+          ],
+          "others": [
+            "even_numbers(n)",
+            "range(n)",
+            "even_numbers(4)"
+          ]
         },
-        {
-          "title": "ジェネレータの利点（りてん）",
-          "image": "/illustrations/common/loop_infinity.png",
-          "content": "# 大量のデータを効率よく処理！\n\nリストは全データを **メモリ（コンピュータの記憶場所）** に保持しますが、ジェネレータは **1つずつ作るのでメモリを節約** できます。\n\n**例：** 1億個の数を生成しても大丈夫！\n\n```python\ndef big_range(n):\n    i = 0\n    while i < n:\n        yield i\n        i += 1\n```\n\n**何をしているか：**\n- `yield i` で値を1つ返す\n- 次に呼ばれるまで **一時停止**\n- 次に呼ばれたら `i += 1` して続きを実行\n\n**ポイント：**\n- `return` は関数を終了して値を返す\n- `yield` は値を返すけど関数は **一時停止** するだけ（終了しない）\n\n**使いどころ：** 大量のデータを扱うとき、メモリを節約したいとき！"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "# 偶数を生成するジェネレータ関数を定義\ndef even_numbers(n):\n    # 指定された回数ループ\n    for i in range(n):\n        # 値を1つずつ返す\n        yield i * 2\n\n# ジェネレータから値を取り出して表示\nfor num in even_numbers(4):\n    # 取り出した値を表示\n    print(num)",
-      "holeyCode": "# 偶数を生成するジェネレータ関数を定義\ndef ___:\n    # 指定された回数ループ\n    for i in ___:\n        # 値を1つずつ返す\n        ___ i * 2\n\n# ジェネレータから値を取り出して表示\nfor num in ___:\n    # 取り出した値を表示\n    print(___)",
-      "correctLines": [
-        "# 偶数を生成するジェネレータ関数を定義",
-        "def even_numbers(n):",
-        "    # 指定された回数ループ",
-        "    for i in range(n):",
-        "        # 値を1つずつ返す",
-        ["        yield i * 2", "        yield 2 * i"],
-        "",
-        "# ジェネレータから値を取り出して表示",
-        "for num in even_numbers(4):",
-        "    # 取り出した値を表示",
-        "    print(num)"
-      ],
-      "lineHints": [null, null, null, null, null, "yield で値を1つずつ返します。", null, null, null, null, null, null],
-      "candidates": {
-        "keywords": ["yield", "return"],
-        "variables": ["num"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "0\n2\n4\n6\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "0\n2\n4\n6\n"
-        }
-      ]
-    },
     {
-      "title": "ジェネレータ式",
-      "description": "リスト内包表記のジェネレータ版を学びましょう。",
-      "difficulty": "hard",
-      "orderIndex": 7,
-      "tutorialSlides": [
-        {
-          "title": "ジェネレータ式とは？",
-          "image": "/illustrations/3d/loop.png",
-          "content": "# カッコを変えるだけでジェネレータに！\n\n**ジェネレータ式** は、リスト内包表記の `[ ]` を `( )` に変えるだけで作れます。\n\nとても簡単！\n\n**比較：** リスト内包表記 vs ジェネレータ式\n\n```python\n# リスト内包表記 → 全部作ってメモリに保存\nsquares = [x**2 for x in range(5)]\n\n# ジェネレータ式 → 必要なときに1つずつ作る\nsquares = (x**2 for x in range(5))\n```\n\n見た目はほとんど同じですが、カッコが違うだけで **動きが全然違います**！\n\n**使い分け：**\n- 全データを何度も使う → リスト `[ ]`\n- 1回だけ順番に使う → ジェネレータ `( )`"
+        "title": "ジェネレータ式",
+        "description": "リスト内包表記のジェネレータ版を学びましょう。",
+        "difficulty": "hard",
+        "orderIndex": 7,
+        "tutorialSlides": [
+          {
+            "title": "ジェネレータ式とは？",
+            "image": "/illustrations/3d/loop.png",
+            "content": "# カッコを変えるだけでジェネレータに！\n\n**ジェネレータ式** は、リスト内包表記の `[ ]` を `( )` に変えるだけで作れます。\n\nとても簡単！\n\n**比較：** リスト内包表記 vs ジェネレータ式\n\n```python\n# リスト内包表記 → 全部作ってメモリに保存\nsquares = [x**2 for x in range(5)]\n\n# ジェネレータ式 → 必要なときに1つずつ作る\nsquares = (x**2 for x in range(5))\n```\n\n見た目はほとんど同じですが、カッコが違うだけで **動きが全然違います**！\n\n**使い分け：**\n- 全データを何度も使う → リスト `[ ]`\n- 1回だけ順番に使う → ジェネレータ `( )`"
+          },
+          {
+            "title": "ジェネレータ式の使い方",
+            "image": "/illustrations/common/loop_gears.png",
+            "content": "# sum や max と組み合わせると便利！\n\n`sum()`（合計）や `max()`（最大値）などの関数に **直接渡す** と効率的です。\n\n**例：** 2乗の合計を計算しよう！\n\n```python\ntotal = sum(x**2 for x in range(5))\nprint(total)  # => 30\n```\n\n**何をしているか：**\n1. `range(5)` で 0, 1, 2, 3, 4 を生成\n2. 各数を2乗（0, 1, 4, 9, 16）\n3. `sum()` で合計 → 0+1+4+9+16 = 30\n\n**ポイント：** `sum()` に渡すとき、外側のカッコを省略できます！\n\n```python\n# これでOK（カッコを省略）\nsum(x**2 for x in range(5))\n\n# こう書かなくてもいい\nsum((x**2 for x in range(5)))\n```"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "# 1から5までの範囲オブジェクトを作成\nnums = range(1, 6)\n# ジェネレータ式で各要素の2乗を計算し、その合計を出す\ntotal = sum(x * x for x in nums)\n# 合計を表示\nprint(total)",
+        "holeyCode": "# 1から5までの範囲オブジェクトを作成\nnums = ___\n# ジェネレータ式で各要素の2乗を計算し、その合計を出す\ntotal = sum(x * x ___ x in nums)\n# 合計を表示\nprint(___)",
+        "correctLines": [
+          "# 1から5までの範囲オブジェクトを作成",
+          "nums = range(1, 6)",
+          "# ジェネレータ式で各要素の2乗を計算し、その合計を出す",
+          "total = sum(x * x for x in nums)",
+          "# 合計を表示",
+          "print(total)"
+        ],
+        "lineHints": [
+          null,
+          "for を使ってジェネレータ式を作ります。",
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "for",
+            "in",
+            "if"
+          ],
+          "others": [
+            "range(1, 6)",
+            "total"
+          ]
         },
-        {
-          "title": "ジェネレータ式の使い方",
-          "image": "/illustrations/common/loop_gears.png",
-          "content": "# sum や max と組み合わせると便利！\n\n`sum()`（合計）や `max()`（最大値）などの関数に **直接渡す** と効率的です。\n\n**例：** 2乗の合計を計算しよう！\n\n```python\ntotal = sum(x**2 for x in range(5))\nprint(total)  # => 30\n```\n\n**何をしているか：**\n1. `range(5)` で 0, 1, 2, 3, 4 を生成\n2. 各数を2乗（0, 1, 4, 9, 16）\n3. `sum()` で合計 → 0+1+4+9+16 = 30\n\n**ポイント：** `sum()` に渡すとき、外側のカッコを省略できます！\n\n```python\n# これでOK（カッコを省略）\nsum(x**2 for x in range(5))\n\n# こう書かなくてもいい\nsum((x**2 for x in range(5)))\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "# 1から5までの範囲オブジェクトを作成\nnums = range(1, 6)\n# ジェネレータ式で各要素の2乗を計算し、その合計を出す\ntotal = sum(x * x for x in nums)\n# 合計を表示\nprint(total)",
-      "holeyCode": "# 1から5までの範囲オブジェクトを作成\nnums = ___\n# ジェネレータ式で各要素の2乗を計算し、その合計を出す\ntotal = sum(x * x ___ x in nums)\n# 合計を表示\nprint(___)",
-      "correctLines": [
-        "# 1から5までの範囲オブジェクトを作成",
-        "nums = range(1, 6)",
-        "# ジェネレータ式で各要素の2乗を計算し、その合計を出す",
-        "total = sum(x * x for x in nums)",
-        "# 合計を表示",
-        "print(total)"
-      ],
-      "lineHints": [null, null, null, "for を使ってジェネレータ式を作ります。", null, null],
-      "candidates": {
-        "keywords": ["for", "in", "if"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "55\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "55\n"
-        }
-      ]
-    },
     {
-      "title": "デコレータの基本",
-      "description": "関数を拡張するデコレータを学びましょう。",
-      "difficulty": "hard",
-      "orderIndex": 8,
-      "tutorialSlides": [
-        {
-          "title": "デコレータとは？",
-          "image": "/illustrations/common/circular_arrow.png",
-          "content": "# 関数を「飾（かざ）り付け」しよう！\n\n**デコレータ** は、関数に **追加の機能をつける** 仕組みです。\n\n「デコレーション」は「飾り付け」という意味ですね。ケーキにクリームで飾りをつけるように、関数に機能を追加します！\n\n**例：** 関数の前後にメッセージを追加！\n\n```python\ndef my_decorator(func):\n    def wrapper():\n        print('Before')  # 前に追加\n        func()           # 元の関数を実行\n        print('After')   # 後に追加\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    print('Hello!')\n```\n\n**仕組み：**\n- デコレータは「関数を受け取って、新しい関数を返す関数」\n- 元の関数を「包んで」、追加の処理をつける"
+        "title": "デコレータの基本",
+        "description": "関数を拡張するデコレータを学びましょう。",
+        "difficulty": "hard",
+        "orderIndex": 8,
+        "tutorialSlides": [
+          {
+            "title": "デコレータとは？",
+            "image": "/illustrations/common/circular_arrow.png",
+            "content": "# 関数を「飾（かざ）り付け」しよう！\n\n**デコレータ** は、関数に **追加の機能をつける** 仕組みです。\n\n「デコレーション」は「飾り付け」という意味ですね。ケーキにクリームで飾りをつけるように、関数に機能を追加します！\n\n**例：** 関数の前後にメッセージを追加！\n\n```python\ndef my_decorator(func):\n    def wrapper():\n        print('Before')  # 前に追加\n        func()           # 元の関数を実行\n        print('After')   # 後に追加\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    print('Hello!')\n```\n\n**仕組み：**\n- デコレータは「関数を受け取って、新しい関数を返す関数」\n- 元の関数を「包んで」、追加の処理をつける"
+          },
+          {
+            "title": "デコレータの使い方",
+            "image": "/illustrations/common/gear_cogs.png",
+            "content": "# @ で関数に適用しよう！\n\n`@デコレータ名` を関数の上に書くだけで適用できます。\n\n**例：** デコレータを使ってみよう！\n\n```python\n@my_decorator\ndef say_hello():\n    print('Hello!')\n\nsay_hello()\n```\n=> Before\n=> Hello!\n=> After\n\n**何をしているか：**\n1. `@my_decorator` で `say_hello` 関数にデコレータを適用\n2. `say_hello()` を呼ぶと、まず「Before」が表示される\n3. 次に元の `say_hello`（「Hello!」）が実行される\n4. 最後に「After」が表示される\n\n**使いどころ：**\n- ログ（記録）を残したいとき\n- 実行時間を計りたいとき\n- 権限チェックをしたいとき"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef show_call(func):\n    # 実行内容を包む内部関数を定義\n    def wrapper():\n        # 実行前のメッセージを表示\n        print('関数を呼び出します')\n        # 本来の関数を実行\n        func()\n    # 新しく作った関数を返す\n    return wrapper\n\n# デコレータを関数に適用\n@show_call\n# 挨拶を表示する関数を定義\ndef greet():\n    # メッセージを表示\n    print('Hello!')\n\n# 関数を呼び出して実行\ngreet()",
+        "holeyCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef ___:\n    # 実行内容を包む内部関数を定義\n    def ___:\n        # 実行前のメッセージを表示\n        print(___)\n        # 本来の関数を実行\n        ___\n    # 新しく作った関数を返す\n    return ___\n\n# デコレータを関数に適用\n___show_call\n# 挨拶を表示する関数を定義\ndef ___:\n    # メッセージを表示\n    print(___)\n\n# 関数を呼び出して実行\n___",
+        "correctLines": [
+          "# 関数の実行前後でメッセージを表示するデコレータを定義",
+          "def show_call(func):",
+          "    # 実行内容を包む内部関数を定義",
+          "    def wrapper():",
+          "        # 実行前のメッセージを表示",
+          "        print('関数を呼び出します')",
+          "        # 本来の関数を実行",
+          "        func()",
+          "    # 新しく作った関数を返す",
+          "    return wrapper",
+          "",
+          "# デコレータを関数に適用",
+          "@show_call",
+          "# 挨拶を表示する関数を定義",
+          "def greet():",
+          "    # メッセージを表示",
+          "    print('Hello!')",
+          "",
+          "# 関数を呼び出して実行",
+          "greet()"
+        ],
+        "lineHints": [
+          null,
+          "@ でデコレータを適用します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "operators": [
+            "@",
+            "#",
+            "$"
+          ],
+          "others": [
+            "show_call(func)",
+            "wrapper()",
+            "'関数を呼び出します'",
+            "func()",
+            "wrapper",
+            "greet()",
+            "'Hello!'"
+          ]
         },
-        {
-          "title": "デコレータの使い方",
-          "image": "/illustrations/common/gear_cogs.png",
-          "content": "# @ で関数に適用しよう！\n\n`@デコレータ名` を関数の上に書くだけで適用できます。\n\n**例：** デコレータを使ってみよう！\n\n```python\n@my_decorator\ndef say_hello():\n    print('Hello!')\n\nsay_hello()\n```\n=> Before\n=> Hello!\n=> After\n\n**何をしているか：**\n1. `@my_decorator` で `say_hello` 関数にデコレータを適用\n2. `say_hello()` を呼ぶと、まず「Before」が表示される\n3. 次に元の `say_hello`（「Hello!」）が実行される\n4. 最後に「After」が表示される\n\n**使いどころ：**\n- ログ（記録）を残したいとき\n- 実行時間を計りたいとき\n- 権限チェックをしたいとき"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef show_call(func):\n    # 実行内容を包む内部関数を定義\n    def wrapper():\n        # 実行前のメッセージを表示\n        print('関数を呼び出します')\n        # 本来の関数を実行\n        func()\n    # 新しく作った関数を返す\n    return wrapper\n\n# デコレータを関数に適用\n@show_call\n# 挨拶を表示する関数を定義\ndef greet():\n    # メッセージを表示\n    print('Hello!')\n\n# 関数を呼び出して実行\ngreet()",
-      "holeyCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef ___:\n    # 実行内容を包む内部関数を定義\n    def ___:\n        # 実行前のメッセージを表示\n        print(___)\n        # 本来の関数を実行\n        ___\n    # 新しく作った関数を返す\n    return ___\n\n# デコレータを関数に適用\n___show_call\n# 挨拶を表示する関数を定義\ndef ___:\n    # メッセージを表示\n    print(___)\n\n# 関数を呼び出して実行\n___",
-      "correctLines": [
-        "# 関数の実行前後でメッセージを表示するデコレータを定義",
-        "def show_call(func):",
-        "    # 実行内容を包む内部関数を定義",
-        "    def wrapper():",
-        "        # 実行前のメッセージを表示",
-        "        print('関数を呼び出します')",
-        "        # 本来の関数を実行",
-        "        func()",
-        "    # 新しく作った関数を返す",
-        "    return wrapper",
-        "",
-        "# デコレータを関数に適用",
-        "@show_call",
-        "# 挨拶を表示する関数を定義",
-        "def greet():",
-        "    # メッセージを表示",
-        "    print('Hello!')",
-        "",
-        "# 関数を呼び出して実行",
-        "greet()"
-      ],
-      "lineHints": [null, null, null, null, null, null, null, null, null, null, null, "@ でデコレータを適用します。", null, null, null, null, null, null, null, null],
-      "candidates": {
-        "operators": ["@", "#", "$"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "関数を呼び出します\nHello!\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "関数を呼び出します\nHello!\n"
-        }
-      ]
-    },
     {
-      "title": "any と all",
-      "description": "リストの条件チェックを簡単に行いましょう。",
-      "difficulty": "hard",
-      "orderIndex": 9,
-      "tutorialSlides": [
-        {
-          "title": "any とは？",
-          "image": "/illustrations/common/cycle_arrows.png",
-          "content": "# 「1つでもOKならOK！」をチェック\n\n**any（エニー）** は、リストの中に **1つでも True（正しい）があれば True** を返します。\n\n「any」は「どれか」という意味です。「どれか1つでも当てはまる？」とチェックします。\n\n**例：** 合格者がいるかチェック！\n\n```python\nnums = [0, 0, 1, 0]\nprint(any(nums))  # => True（1が True）\n\n# 5より大きい数はある？\nprint(any(x > 5 for x in [1, 2, 10]))  # => True（10が該当）\n```\n\n**ポイント：** 0は False、0以外の数は True として扱われます。"
+        "title": "any と all",
+        "description": "リストの条件チェックを簡単に行いましょう。",
+        "difficulty": "hard",
+        "orderIndex": 9,
+        "tutorialSlides": [
+          {
+            "title": "any とは？",
+            "image": "/illustrations/common/cycle_arrows.png",
+            "content": "# 「1つでもOKならOK！」をチェック\n\n**any（エニー）** は、リストの中に **1つでも True（正しい）があれば True** を返します。\n\n「any」は「どれか」という意味です。「どれか1つでも当てはまる？」とチェックします。\n\n**例：** 合格者がいるかチェック！\n\n```python\nnums = [0, 0, 1, 0]\nprint(any(nums))  # => True（1が True）\n\n# 5より大きい数はある？\nprint(any(x > 5 for x in [1, 2, 10]))  # => True（10が該当）\n```\n\n**ポイント：** 0は False、0以外の数は True として扱われます。"
+          },
+          {
+            "title": "all とは？",
+            "image": "/illustrations/common/loading_spinner.png",
+            "content": "# 「全部OKならOK！」をチェック\n\n**all（オール）** は、リストの **全てが True のときだけ True** を返します。\n\n「all」は「全て」という意味です。「全部当てはまる？」とチェックします。\n\n**例：** 全員合格かチェック！\n\n```python\nnums = [1, 2, 3]\nprint(all(nums))  # => True（全部0以外）\n\n# 全部0より大きい？\nprint(all(x > 0 for x in [1, 2, 3]))   # => True\nprint(all(x > 0 for x in [1, -1, 3]))  # => False（-1がNG）\n```\n\n**any vs all の違い：**\n- **any** = 1つでも True なら True（「または」的）\n- **all** = 全部 True なら True（「かつ」的）"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "# 1から5までの数値リストを作成\nnums = [1, 2, 3, 4, 5]\n# 全要素が0より大きいか判定する関数を使用\nresult = all(x > 0 for x in nums)\n# 判定結果を画面に表示\nprint(result)",
+        "holeyCode": "# 1から5までの数値リストを作成\nnums = ___\n# 全要素が0より大きいか判定する関数を使用\nresult = ___(x > 0 for x in nums)\n# 判定結果を画面に表示\nprint(___)",
+        "correctLines": [
+          "# 1から5までの数値リストを作成",
+          "nums = [1, 2, 3, 4, 5]",
+          "# 全要素が0より大きいか判定する関数を使用",
+          "result = all(x > 0 for x in nums)",
+          "# 判定結果を画面に表示",
+          "print(result)"
+        ],
+        "lineHints": [
+          null,
+          "all で全ての要素が条件を満たすかチェックします。",
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "functions": [
+            "all",
+            "any",
+            "sum"
+          ],
+          "others": [
+            "[1, 2, 3, 4, 5]",
+            "result"
+          ]
         },
-        {
-          "title": "all とは？",
-          "image": "/illustrations/common/loading_spinner.png",
-          "content": "# 「全部OKならOK！」をチェック\n\n**all（オール）** は、リストの **全てが True のときだけ True** を返します。\n\n「all」は「全て」という意味です。「全部当てはまる？」とチェックします。\n\n**例：** 全員合格かチェック！\n\n```python\nnums = [1, 2, 3]\nprint(all(nums))  # => True（全部0以外）\n\n# 全部0より大きい？\nprint(all(x > 0 for x in [1, 2, 3]))   # => True\nprint(all(x > 0 for x in [1, -1, 3]))  # => False（-1がNG）\n```\n\n**any vs all の違い：**\n- **any** = 1つでも True なら True（「または」的）\n- **all** = 全部 True なら True（「かつ」的）"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "# 1から5までの数値リストを作成\nnums = [1, 2, 3, 4, 5]\n# 全要素が0より大きいか判定する関数を使用\nresult = all(x > 0 for x in nums)\n# 判定結果を画面に表示\nprint(result)",
-      "holeyCode": "# 1から5までの数値リストを作成\nnums = ___\n# 全要素が0より大きいか判定する関数を使用\nresult = ___(x > 0 for x in nums)\n# 判定結果を画面に表示\nprint(___)",
-      "correctLines": [
-        "# 1から5までの数値リストを作成",
-        "nums = [1, 2, 3, 4, 5]",
-        "# 全要素が0より大きいか判定する関数を使用",
-        "result = all(x > 0 for x in nums)",
-        "# 判定結果を画面に表示",
-        "print(result)"
-      ],
-      "lineHints": [null, null, null, "all で全ての要素が条件を満たすかチェックします。", null, null],
-      "candidates": {
-        "functions": ["all", "any", "sum"]
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "True\n"
+          }
+        ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "True\n"
-        }
-      ]
-    },
     {
-      "title": "with文（コンテキストマネージャ）",
-      "description": "リソースを安全に管理するwith文を学びましょう。",
-      "difficulty": "hard",
-      "orderIndex": 10,
-      "tutorialSlides": [
-        {
-          "title": "with文とは？",
-          "image": "/illustrations/common/box.png",
-          "content": "# 「後片付け」を自動でしてくれる！\n\n**with文** を使うと、ファイルなどの **リソース（資源）を自動的に閉じて** くれます。\n\nたとえば、本を読んだ後は本棚に戻しますよね。with文を使うと、**自動で本棚に戻してくれる** ようなものです！\n\n**例：** ファイルを安全に開こう！\n\n```python\nwith open('file.txt', 'r') as f:\n    content = f.read()\n# ここで自動的にファイルが閉じられる\n```\n\n**何をしているか：**\n- `with` でファイルを開く\n- `as f` で開いたファイルに「f」という名前をつける\n- ブロックを抜けると **自動で** ファイルが閉じられる！"
+        "title": "with文（コンテキストマネージャ）",
+        "description": "リソースを安全に管理するwith文を学びましょう。",
+        "difficulty": "hard",
+        "orderIndex": 10,
+        "tutorialSlides": [
+          {
+            "title": "with文とは？",
+            "image": "/illustrations/common/box.png",
+            "content": "# 「後片付け」を自動でしてくれる！\n\n**with文** を使うと、ファイルなどの **リソース（資源）を自動的に閉じて** くれます。\n\nたとえば、本を読んだ後は本棚に戻しますよね。with文を使うと、**自動で本棚に戻してくれる** ようなものです！\n\n**例：** ファイルを安全に開こう！\n\n```python\nwith open('file.txt', 'r') as f:\n    content = f.read()\n# ここで自動的にファイルが閉じられる\n```\n\n**何をしているか：**\n- `with` でファイルを開く\n- `as f` で開いたファイルに「f」という名前をつける\n- ブロックを抜けると **自動で** ファイルが閉じられる！"
+          },
+          {
+            "title": "with文の利点（りてん）",
+            "image": "/illustrations/common/key_security_lock.png",
+            "content": "# エラーが起きても安全！\n\nwith文は、**エラーが発生しても確実にリソースを解放** します。\n\n**比較：** 従来の方法 vs with文\n\n```python\n# 従来の方法（close忘れの危険）\nf = open('file.txt')\ntry:\n    content = f.read()\nfinally:\n    f.close()  # 忘れるとファイルが開きっぱなし！\n\n# with文（安全で簡潔！）\nwith open('file.txt') as f:\n    content = f.read()\n# 自動で閉じてくれる\n```\n\n**with文のメリット：**\n1. **安全** - エラーが起きても後片付けされる\n2. **簡潔** - `close()` を書く必要がない\n3. **読みやすい** - コードがスッキリする\n\n**ポイント：** with文で使えるものを **コンテキストマネージャ** と呼びます。"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "# ファイル操作を模擬するクラスを定義\nclass MockFile:\n    # ブロック開始時に呼ばれるメソッドを定義\n    def __enter__(self):\n        # 開始メッセージを表示\n        print('opened')\n        # 自身を返す\n        return self\n    # ブロック終了時に呼ばれるメソッドを定義\n    def __exit__(self, *args):\n        # 終了メッセージを表示\n        print('closed')\n\n# コンテキストマネージャを使用してブロックを開始\nwith MockFile() as f:\n    # 使用中のメッセージを表示\n    print('using')",
+        "holeyCode": "# ファイル操作を模擬するクラスを定義\nclass ___:\n    # ブロック開始時に呼ばれるメソッドを定義\n    def ___:\n        # 開始メッセージを表示\n        print(___)\n        # 自身を返す\n        return ___\n    # ブロック終了時に呼ばれるメソッドを定義\n    def ___:\n        # 終了メッセージを表示\n        print(___)\n\n# コンテキストマネージャを使用してブロックを開始\n___ MockFile() as f:\n    # 使用中のメッセージを表示\n    print(___)",
+        "correctLines": [
+          "# ファイル操作を模擬するクラスを定義",
+          "class MockFile:",
+          "    # ブロック開始時に呼ばれるメソッドを定義",
+          "    def __enter__(self):",
+          "        # 開始メッセージを表示",
+          "        print('opened')",
+          "        # 自身を返す",
+          "        return self",
+          "    # ブロック終了時に呼ばれるメソッドを定義",
+          "    def __exit__(self, *args):",
+          "        # 終了メッセージを表示",
+          "        print('closed')",
+          "",
+          "# コンテキストマネージャを使用してブロックを開始",
+          "with MockFile() as f:",
+          "    # 使用中のメッセージを表示",
+          "    print('using')"
+        ],
+        "lineHints": [
+          null,
+          "with でコンテキストマネージャを使います。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "keywords": [
+            "with",
+            "for",
+            "if"
+          ],
+          "others": [
+            "MockFile",
+            "__enter__(self)",
+            "'opened'",
+            "self",
+            "__exit__(self, *args)",
+            "'closed'",
+            "'using'"
+          ]
         },
-        {
-          "title": "with文の利点（りてん）",
-          "image": "/illustrations/common/key_security_lock.png",
-          "content": "# エラーが起きても安全！\n\nwith文は、**エラーが発生しても確実にリソースを解放** します。\n\n**比較：** 従来の方法 vs with文\n\n```python\n# 従来の方法（close忘れの危険）\nf = open('file.txt')\ntry:\n    content = f.read()\nfinally:\n    f.close()  # 忘れるとファイルが開きっぱなし！\n\n# with文（安全で簡潔！）\nwith open('file.txt') as f:\n    content = f.read()\n# 自動で閉じてくれる\n```\n\n**with文のメリット：**\n1. **安全** - エラーが起きても後片付けされる\n2. **簡潔** - `close()` を書く必要がない\n3. **読みやすい** - コードがスッキリする\n\n**ポイント：** with文で使えるものを **コンテキストマネージャ** と呼びます。"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "# ファイル操作を模擬するクラスを定義\nclass MockFile:\n    # ブロック開始時に呼ばれるメソッドを定義\n    def __enter__(self):\n        # 開始メッセージを表示\n        print('opened')\n        # 自身を返す\n        return self\n    # ブロック終了時に呼ばれるメソッドを定義\n    def __exit__(self, *args):\n        # 終了メッセージを表示\n        print('closed')\n\n# コンテキストマネージャを使用してブロックを開始\nwith MockFile() as f:\n    # 使用中のメッセージを表示\n    print('using')",
-      "holeyCode": "# ファイル操作を模擬するクラスを定義\nclass ___:\n    # ブロック開始時に呼ばれるメソッドを定義\n    def ___:\n        # 開始メッセージを表示\n        print(___)\n        # 自身を返す\n        return ___\n    # ブロック終了時に呼ばれるメソッドを定義\n    def ___:\n        # 終了メッセージを表示\n        print(___)\n\n# コンテキストマネージャを使用してブロックを開始\n___ MockFile() as f:\n    # 使用中のメッセージを表示\n    print(___)",
-      "correctLines": [
-        "# ファイル操作を模擬するクラスを定義",
-        "class MockFile:",
-        "    # ブロック開始時に呼ばれるメソッドを定義",
-        "    def __enter__(self):",
-        "        # 開始メッセージを表示",
-        "        print('opened')",
-        "        # 自身を返す",
-        "        return self",
-        "    # ブロック終了時に呼ばれるメソッドを定義",
-        "    def __exit__(self, *args):",
-        "        # 終了メッセージを表示",
-        "        print('closed')",
-        "",
-        "# コンテキストマネージャを使用してブロックを開始",
-        "with MockFile() as f:",
-        "    # 使用中のメッセージを表示",
-        "    print('using')"
-      ],
-      "lineHints": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, "with でコンテキストマネージャを使います。", null, null],
-      "candidates": {
-        "keywords": ["with", "for", "if"]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "opened\nusing\nclosed\n"
-        }
-      ]
-    }
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "opened\nusing\nclosed\n"
+          }
+        ]
+      }
   ]
 }

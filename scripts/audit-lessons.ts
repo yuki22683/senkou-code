@@ -1,4 +1,4 @@
-import { allLessons } from '../data/lessons';
+import { allLessons } from '../data/lessons/index';
 import fs from 'fs';
 import path from 'path';
 
@@ -46,20 +46,20 @@ allLessons.forEach(lesson => {
     }
 
     const lines = ex.holeyCode.split(/\\n|\r?\n/);
-    const correctLinesForHoley = ex.correctCode.split('\n');
+    const correctLinesForHoley = ex.correctCode.split(/\\n|\r?\n/);
     
     // 3. Check for candidate completeness
-    const allCandidates = [
-      ...(ex.candidates?.functions || []),
-      ...(ex.candidates?.variables || []),
-      ...(ex.candidates?.operators || []),
-      ...(ex.candidates?.types || []),
-      ...(ex.candidates?.keywords || []),
-      ...(ex.candidates?.macros || []),
-      ...(ex.candidates?.strings || []),
-      ...(ex.candidates?.numbers || []),
-      ...(ex.candidates?.others || []),
-    ];
+    const cand = ex.candidates as Record<string, string[] | undefined>;
+    // Collect all candidates from all keys (including numeric keys for Ruby etc.)
+    const allCandidates: string[] = [];
+    if (cand) {
+      for (const key of Object.keys(cand)) {
+        const arr = cand[key];
+        if (Array.isArray(arr)) {
+          allCandidates.push(...arr);
+        }
+      }
+    }
 
     lines.forEach((line, i) => {
       const trimmed = line.trim();
@@ -102,7 +102,7 @@ allLessons.forEach(lesson => {
                c === '"' // Explicitly allow if quote is a candidate
              );
 
-             if (!isPresent && trimmedPart !== '{' && trimmedPart !== '}') {
+             if (!isPresent && trimmedPart !== '{' && trimmedPart !== '}' && !trimmedPart.includes('___')) {
                console.log(`[VIOLATION] ${lesson.language} - ${ex.title} (Line ${i+1}): Missing candidate for hole content: '${trimmedPart}'`);
                totalViolations++;
              }

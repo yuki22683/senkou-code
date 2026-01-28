@@ -7,408 +7,483 @@ export const swiftData = {
   "lessonOrder": 1,
   "exercises": [
     {
-      "title": "画面にメッセージを出しましょう",
-      "description": "Swiftを使って画面に「こんにちは」と表示させてみましょう。print（プリント）という関数を使います。",
-      "difficulty": "easy",
-      "orderIndex": 1,
-      "tutorialSlides": [
-        {
-          "title": "Swift（スウィフト）とは？",
-          "image": "/illustrations/common/return_value.png",
-          "content": "# Apple（アップル）製品を動かす言葉\n\n**Swift（スウィフト）** は、Apple（アップル）という会社が作った **プログラミング言語（げんご）** です。\n\niPhone（アイフォーン）やMac（マック）のアプリを作るときに使います。\n\n「Swift」は英語で「すばやい」という意味で、その名前のとおり、とても速く動くのが特徴（とくちょう）です。"
-        },
-        {
-          "title": "画面に文字を出すには？",
-          "image": "/illustrations/3d/compose_gear.png",
-          "content": "# print（プリント）という命令\n\nプログラムから画面に文字を出すには、**print（プリント）** という命令を使います。\n\n「print」は英語で「印刷する（いんさつする）」という意味です。画面に文字を「印刷」するイメージですね。\n\n文字は `\" \"`（ダブルクォート）という記号で囲みます。これは「ここからここまでが文字だよ」と教えるための目印です。"
-        },
-        {
-          "title": "print を使いましょう",
-          "image": "/illustrations/common/function_gear.png",
-          "content": "# 関数（かんすう）とは？\n\n`print()` のように、何かの仕事をしてくれる命令のまとまりを **関数（かんすう）** と呼びます。\n\n電子レンジのボタンを押すと温めてくれるように、`print()` を使うと文字を画面に出してくれます。\n\n**書き方：**\n```swift\nprint(\"表示したい文字\")\n```\n\nカッコ `( )` の中に、表示したい文字を入れましょう。"
-        },
-        {
-          "title": "やってみましょう！",
-          "image": "/illustrations/common/action_button.png",
-          "content": "# 目標（もくひょう）\n\n`print()` を使って `Hello, World!` と画面に表示させましょう。\n\nこれはプログラミングを始めるときの「おまじない」のようなもので、世界中のプログラマーが最初に書くコードです。\n\n**入力するコード：**\n```swift\nprint(\"Hello, World!\")\n```"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "// Hello, World!と出力する関数\nprint(\"Hello, World!\")",
-      "holeyCode": "// Hello, World!と出力する関数\n___(\"Hello, World!\")",
-      "correctLines": [
-        "// Hello, World!と出力する関数",
-        "print(\"Hello, World!\")"
-      ],
-      "lineHints": [null, "画面に出す関数は `print` です。"],
-      "candidates": {
-        "functions": [
-          "print"
+        "title": "画面にメッセージを出しましょう",
+        "description": "Swiftを使って画面に「こんにちは」と表示させてみましょう。print（プリント）という関数を使います。",
+        "difficulty": "easy",
+        "orderIndex": 1,
+        "tutorialSlides": [
+          {
+            "title": "Swift（スウィフト）とは？",
+            "image": "/illustrations/common/return_value.png",
+            "content": "# Apple（アップル）製品を動かす言葉\n\n**Swift（スウィフト）** は、Apple（アップル）という会社が作った **プログラミング言語（げんご）** です。\n\niPhone（アイフォーン）やMac（マック）のアプリを作るときに使います。\n\n「Swift」は英語で「すばやい」という意味で、その名前のとおり、とても速く動くのが特徴（とくちょう）です。"
+          },
+          {
+            "title": "画面に文字を出すには？",
+            "image": "/illustrations/3d/compose_gear.png",
+            "content": "# print（プリント）という命令\n\nプログラムから画面に文字を出すには、**print（プリント）** という命令を使います。\n\n「print」は英語で「印刷する（いんさつする）」という意味です。画面に文字を「印刷」するイメージですね。\n\n文字は `\" \"`（ダブルクォート）という記号で囲みます。これは「ここからここまでが文字だよ」と教えるための目印です。"
+          },
+          {
+            "title": "print を使いましょう",
+            "image": "/illustrations/common/function_gear.png",
+            "content": "# 関数（かんすう）とは？\n\n`print()` のように、何かの仕事をしてくれる命令のまとまりを **関数（かんすう）** と呼びます。\n\n電子レンジのボタンを押すと温めてくれるように、`print()` を使うと文字を画面に出してくれます。\n\n**書き方：**\n```swift\nprint(\"表示したい文字\")\n```\n\nカッコ `( )` の中に、表示したい文字を入れましょう。"
+          },
+          {
+            "title": "やってみましょう！",
+            "image": "/illustrations/common/action_button.png",
+            "content": "# 目標（もくひょう）\n\n`print()` を使って `Hello, World!` と画面に表示させましょう。\n\nこれはプログラミングを始めるときの「おまじない」のようなもので、世界中のプログラマーが最初に書くコードです。\n\n**入力するコード：**\n```swift\nprint(\"Hello, World!\")\n```"
+          }
         ],
-        "strings": [
-          "\"Hello, World!\""
+        "initialDisplayMode": "holey",
+        "correctCode": "// Hello, World!と出力する関数\nprint(\"Hello, World!\")",
+        "holeyCode": "// Hello, World!と出力する関数\n___(\"Hello, World!\")",
+        "correctLines": [
+          "// Hello, World!と出力する関数",
+          "print(\"Hello, World!\")"
+        ],
+        "lineHints": [
+          null,
+          "画面に出す関数は `print` です。"
+        ],
+        "candidates": {
+          "functions": [
+            "print"
+          ],
+          "strings": [
+            "\"Hello, World!\""
+          ]
+        },
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "Hello, World!\n"
+          }
         ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Hello, World!\n"
-        }
-      ]
-    },
     {
-      "title": "便利な「はこ」変数（へんすう）",
-      "description": "データに名前をつけて保存できる「変数（へんすう）」を使ってみましょう。",
-      "difficulty": "easy",
-      "orderIndex": 2,
-      "tutorialSlides": [
-        {
-          "title": "変数（へんすう）とは？",
-          "image": "/illustrations/common/beads_chain.png",
-          "content": "# データを保存する「はこ」\n\nプログラムでは、数字や文字をしまっておく「はこ」を作れます。この「はこ」を **変数（へんすう）** と呼びます。\n\n本棚に本をしまうように、変数にはデータをしまえます。\n\nSwiftでは `let`（レット）を使って変数を作ります。\n\n```swift\nlet x = 10\nprint(x)  // 10と表示される\n```\n\n`let x = 10` は「xという名前のはこに10を入れる」という意味です。"
-        },
-        {
-          "title": "let と var の違い",
-          "image": "/illustrations/common/nested_boxes.png",
-          "content": "# 中身を変えられる？変えられない？\n\nSwiftには2種類の変数があります。\n\n- **let（レット）**: 中身を変えられない変数（定数とも呼びます）\n- **var（バー）**: 中身を後から変えられる変数\n\n金庫のように一度しまったら変えられないのが `let`、引き出しのように出し入れ自由なのが `var` です。\n\n今回は `let` を使って練習しましょう。"
-        },
-        {
-          "title": "計算の記号",
-          "image": "/illustrations/common/struct_block.png",
-          "content": "# 四則演算（しそくえんざん）\n\nプログラムでも算数と同じように計算ができます。\n\n- **+** : たし算（例：5 + 3 = 8）\n- **-** : ひき算（例：5 - 3 = 2）\n- **\\*** : かけ算（例：5 * 3 = 15）\n- **/** : わり算（例：6 / 3 = 2）\n\n```swift\nlet a = 10\nlet b = 5\nprint(a + b)  // 15と表示される\n```"
-        },
-        {
-          "title": "やってみましょう！",
-          "image": "/illustrations/common/box.png",
-          "content": "# 目標（もくひょう）\n\n2つの変数を作って、たし算をしてみましょう。\n\n1. `x` という変数に `10` を入れる\n2. `y` という変数に `5` を入れる\n3. `x + y` の結果を画面に表示する\n\n答えは `15` になるはずです。"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "// x に 10 を入れる\nlet x = 10\n// y に 5 を入れる\nlet y = 5\n// + でたし算する\nprint(x + y)",
-      "holeyCode": "// x に 10 を入れる\nlet x = ___\n// y に 5 を入れる\nlet y = ___\n// + でたし算する\nprint(x ___ y)",
-      "correctLines": [
-        "// x に 10 を入れる",
-        "let x = 10",
-        "// y に 5 を入れる",
-        "let y = 5",
-        "// + でたし算する",
-        ["print(x + y)", "print(y + x)"]
-      ],
-      "lineHints": [null, "再代入可能な変数を宣言し、数値を代入します。", null, "再代入可能な変数を宣言し、数値を代入します。", null, "たし算なので + を使います。", null],
-      "candidates": {
-        "numbers": ["10", "5"],
-        "operators": ["+", "-", "*", "/"]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "15\n"
-        }
-      ]
-    },
-    {
-      "title": "剰余演算子（%）",
-      "description": "割り算の「あまり」を求める「%」（パーセント）演算子を学びましょう。",
-      "difficulty": "easy",
-      "orderIndex": 3,
-      "tutorialSlides": [
-        {
-          "title": "あまりを求める演算子（えんざんし）",
-          "image": "/illustrations/common/light_bulb_hint.png",
-          "content": "# 剰余演算子（じょうよえんざんし）とは？\n\n**%（パーセント）** は割り算の **あまり** を計算する記号です。\n\n「剰余（じょうよ）」は難しい言葉ですが、「あまり」のことです。\n\n例えば、10このアメを3人で分けると、1人3こずつもらえて、1こあまりますよね。\n\n`10 % 3` は、この「1こあまる」の **1** を計算してくれます。"
-        },
-        {
-          "title": "% の使い方",
-          "image": "/illustrations/common/monitor.png",
-          "content": "# コードで見てみよう\n\n```swift\nprint(10 % 3)  // 1（10÷3=3あまり1）\nprint(8 % 4)   // 0（8÷4=2あまり0、割り切れる）\nprint(7 % 2)   // 1（7÷2=3あまり1）\n```\n\n**あまりが0** のときは、割り切れたということです。\n\n偶数（ぐうすう）か奇数（きすう）かを調べるときにも便利です。\n`数字 % 2` が `0` なら偶数、`1` なら奇数です。"
-        },
-        {
-          "title": "やってみましょう！",
-          "image": "/illustrations/common/intro_robot.png",
-          "content": "# 目標（もくひょう）\n\n10を3で割ったあまりを画面に表示しましょう。\n\n答えは `1` になるはずです。\n\n**ヒント：** `%` 記号を使います。"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "// 10 を 3 で割ったあまりを出力する\nprint(10 % 3)",
-      "holeyCode": "// 10 を 3 で割ったあまりを出力する\nprint(10 ___ 3)",
-      "correctLines": [
-        "// 10 を 3 で割ったあまりを出力する",
-        "print(10 % 3)"
-      ],
-      "lineHints": [null, "あまりを求める `%` 演算子を使います。"],
-      "candidates": {
-        "operators": ["%", "/", "*", "-"]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "1\n"
-        }
-      ]
-    },
-    {
-      "title": "累算代入演算子（+=、-=）",
-      "description": "変数の値を手軽に増やしたり減らしたりする「+=」「-=」を学びましょう。",
-      "difficulty": "easy",
-      "orderIndex": 4,
-      "tutorialSlides": [
-        {
-          "title": "累算代入演算子（るいさんだいにゅうえんざんし）とは？",
-          "image": "/illustrations/common/labeled_box.png",
-          "content": "# 値を増やしたり減らしたりする便利な記号\n\n**累算代入演算子（るいさんだいにゅうえんざんし）** は、変数の値を増やしたり減らしたりする便利な記号です。\n\n- **+=** : 今の値に足す（プラスイコール）\n- **-=** : 今の値から引く（マイナスイコール）\n\n貯金箱にお金を入れたり出したりするイメージです。"
-        },
-        {
-          "title": "var を使って変えられる変数を作る",
-          "image": "/illustrations/common/variable_label.png",
-          "content": "# var（バー）で変更できる変数を作る\n\n値を変えるには、`let` ではなく **var（バー）** を使います。\n\n```swift\nvar score = 100   // スコアは100点\nscore += 10       // 10点プラス！\n// scoreは110になる\n```\n\n`score += 10` は `score = score + 10` と同じ意味ですが、短く書けて便利です。"
-        },
-        {
-          "title": "ゲームのHP（体力）で考えてみよう",
-          "image": "/illustrations/common/box_container_open.png",
-          "content": "# 実際に使ってみよう\n\nゲームのキャラクターのHP（体力）を想像してください。\n\n```swift\nvar hp = 100   // 最初の体力は100\nhp += 20       // 回復して20増える → 120\nhp -= 50       // ダメージで50減る → 70\n```\n\n最終的なHPは **70** になります。"
-        },
-        {
-          "title": "やってみましょう！",
-          "image": "/illustrations/common/clipboard_list.png",
-          "content": "# 目標（もくひょう）\n\n1. `var hp = 100` でHPを100にする\n2. `+=` を使って20を足す\n3. `-=` を使って50を引く\n4. 最後のHPを表示する\n\n答えは `70` になるはずです。"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "// var で変更可能な変数を作る\nvar hp = 100\n// += で 20 を足す\nhp += 20\n// -= で 50 を引く\nhp -= 50\nprint(hp)",
-      "holeyCode": "// var で変更可能な変数を作る\nvar hp = 100\n// += で 20 を足す\nhp ___ 20\n// -= で 50 を引く\nhp ___ 50\nprint(hp)",
-      "correctLines": [
-        "// var で変更可能な変数を作る",
-        "var hp = 100",
-        "// += で 20 を足す",
-        "hp += 20",
-        "// -= で 50 を引く",
-        "hp -= 50",
-        "print(hp)"
-      ],
-      "lineHints": [null, null, null, "変数の値を計算して、その結果を同じ変数に再代入します。", null, "変数の値を計算して、その結果を同じ変数に再代入します。", null],
-      "candidates": {
-        "operators": ["+=", "-=", "*=", "/="]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "70\n"
-        }
-      ]
-    },
-    {
-      "title": "「もし〜なら」で分けましょう",
-      "description": "条件によって動きを変える if文を学びましょう。",
-      "difficulty": "easy",
-      "orderIndex": 5,
-      "tutorialSlides": [
-        {
-          "title": "条件分岐（じょうけんぶんき）とは？",
-          "image": "/illustrations/common/logic_gate_or.png",
-          "content": "# プログラムに判断させよう\n\n**条件分岐（じょうけんぶんき）** とは、「もし〜なら、こうする」という判断をプログラムにさせることです。\n\n例えば、信号が青なら渡る、赤なら止まる、というように状況によって行動を変えますよね。\n\nプログラムも同じように、条件によって動きを変えられます。"
-        },
-        {
-          "title": "if（イフ）文の使い方",
-          "image": "/illustrations/common/branching_paths.png",
-          "content": "# if は「もし」という意味\n\n**if（イフ）** は英語で「もし」という意味です。\n\n```swift\nif score > 80 {\n    print(\"合格！\")\n}\n```\n\nこのコードは「もしスコアが80より大きいなら、『合格！』と表示する」という意味です。\n\n`{ }` の中に、条件が合ったときに実行したい処理を書きます。"
-        },
-        {
-          "title": "比較の記号",
-          "image": "/illustrations/common/split_road.png",
-          "content": "# 大きい？小さい？を比べる記号\n\n- **>** : より大きい（例：100 > 80 は「100は80より大きい」）\n- **<** : より小さい（例：50 < 80 は「50は80より小さい」）\n- **>=** : 以上（例：80 >= 80 は「80は80以上」）\n- **<=** : 以下（例：70 <= 80 は「70は80以下」）\n- **==** : 等しい（例：10 == 10 は「10は10と等しい」）"
-        },
-        {
-          "title": "やってみましょう！",
-          "image": "/illustrations/common/crossroad.png",
-          "content": "# 目標（もくひょう）\n\nスコアが80点より大きいときに「Great!」と表示するプログラムを作りましょう。\n\n1. `score` に `100` を入れる\n2. `if` を使って `score > 80` かチェックする\n3. 条件が合えば「Great!」と表示する\n\nスコアは100点なので、条件に合って「Great!」と表示されます。"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "let score = 100\n// > で比較する\nif score > 80 {\n    print(\"Great!\")\n}",
-      "holeyCode": "// score に 100 を入れる\nlet score = ___\n// > で比較する\nif score ___ 80 {\n    print(\"Great!\")\n}",
-      "correctLines": [
-        "// score に 100 を入れる",
-        "let score = 100",
-        "// > で比較する",
-        "if score > 80 {",
-        "    print(\"Great!\")",
-        "}"
-      ],
-      "lineHints": [null, "再代入可能な変数を宣言し、数値を代入します。", null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, null],
-      "candidates": {
-        "numbers": ["100"],
-        "operators": [">", "<", ">=", "<="]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Great!\n"
-        }
-      ]
-    },
-    {
-      "title": "論理演算子（&&、||）",
-      "description": "複数の条件を組み合わせる「&&（かつ）」と「||（または）」を学びましょう。",
-      "difficulty": "easy",
-      "orderIndex": 6,
-      "tutorialSlides": [
-        {
-          "title": "論理演算子（ろんりえんざんし）とは？",
-          "image": "/illustrations/common/pencil.png",
-          "content": "# 複数の条件を組み合わせよう\n\n**論理演算子（ろんりえんざんし）** を使うと、2つ以上の条件を組み合わせられます。\n\n例えば「晴れていて、かつ、休みの日ならピクニックに行く」のように、複数の条件を同時に確認したいときがありますよね。"
-        },
-        {
-          "title": "&& と || の意味",
-          "image": "/illustrations/common/traffic_light.png",
-          "content": "# 「かつ」と「または」\n\n- **&&（アンド）**: 「かつ」という意味。両方の条件が成り立つとき\n- **||（オア）**: 「または」という意味。どちらかの条件が成り立つとき\n\n**例えで考えると：**\n- 「晴れ **かつ** 休み」→ 両方そろわないとダメ\n- 「雨 **または** 雪」→ どちらかあればOK"
-        },
-        {
-          "title": "コードで見てみよう",
-          "image": "/illustrations/common/decision_tree.png",
-          "content": "# && を使った例\n\n```swift\nif age >= 18 && hasTicket {\n    print(\"入場できます\")\n}\n```\n\n「18歳以上 **かつ** チケットを持っている」の両方が成り立つときだけ、入場できます。\n\n片方だけでは入場できません。"
-        },
-        {
-          "title": "やってみましょう！",
-          "image": "/illustrations/3d/either_fork.png",
-          "content": "# 目標（もくひょう）\n\nスコアが70以上、かつボーナスが0より大きいときに「Bonus Pass」と表示しましょう。\n\n- `score = 80`（70以上なのでOK）\n- `bonus = 10`（0より大きいのでOK）\n\n両方の条件を満たしているので、「Bonus Pass」と表示されます。"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "let score = 80\nlet bonus = 10\n// && で両方の条件をチェック\nif score >= 70 && bonus > 0 {\n    print(\"Bonus Pass\")\n}",
-      "holeyCode": "let score = 80\nlet bonus = 10\n// && で両方の条件をチェック\nif score >= 70 ___ bonus > 0 {\n    print(\"Bonus Pass\")\n}",
-      "correctLines": [
-        "let score = 80",
-        "let bonus = 10",
-        "// && で両方の条件をチェック",
-        "if score >= 70 && bonus > 0 {",
-        "    print(\"Bonus Pass\")",
-        "}"
-      ],
-      "lineHints": [null, null, null, "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。", null, null],
-      "candidates": {
-        "operators": ["&&", "||", "&", "|"]
-      },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "Bonus Pass\n"
-        }
-      ]
-    },
-    {
-      "title": "たくさんのデータをまとめましょう「配列」",
-      "description": "「配列（はいれつ）」を使うと、たくさんのデータを一つの「長い はこ」にまとめて入れられます。",
-      "difficulty": "easy",
-      "orderIndex": 7,
-      "tutorialSlides": [
-        {
-          "title": "配列（はいれつ）とは？",
-          "image": "/illustrations/common/beads_chain.png",
-          "content": "# たくさんのデータを入れる「長いはこ」\n\n**配列（はいれつ）** は、たくさんのデータを順番に並べて保存できる「長いはこ」です。\n\nロッカーのように、1つ1つの場所にデータをしまうイメージです。\n\n買い物リストや、クラスの名簿など、複数のデータをまとめて管理するのに便利です。"
-        },
-        {
-          "title": "配列の作り方",
-          "image": "/illustrations/common/nested_boxes.png",
-          "content": "# [ ] で囲む\n\n配列を作るには、データを `[ ]` で囲んで、カンマ `,` で区切ります。\n\n```swift\nlet fruits = [\"りんご\", \"バナナ\", \"みかん\"]\n```\n\nこれで `fruits` という名前の配列に、3つのくだものの名前が入りました。"
-        },
-        {
-          "title": "配列の番号は「0」から始まる！",
-          "image": "/illustrations/common/struct_block.png",
-          "content": "# インデックス（番号）のルール\n\n配列の中身を取り出すときは、番号を指定します。\n\n**重要：** プログラミングでは、最初のデータは **0番** から数えます！\n\n```swift\nlet fruits = [\"りんご\", \"バナナ\", \"みかん\"]\n//             0番      1番       2番\nprint(fruits[0])  // りんご\nprint(fruits[1])  // バナナ\n```"
-        },
-        {
-          "title": "やってみましょう！",
-          "image": "/illustrations/common/box.png",
-          "content": "# 目標（もくひょう）\n\n色の配列を作って、2番目のデータを取り出しましょう。\n\n1. `colors` という配列に「あか」「あお」を入れる\n2. 2番目のデータ（番号は1）を表示する\n\n答えは「あお」になります。\n\n**注意：** 2番目のデータは `colors[1]` です（0番から数えるから）。"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet colors = [\"あか\", \"あお\"]\n// 2番目のデータ（1番）を出す\nprint(colors[1])",
-      "holeyCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet colors = [\"___\", \"___\"]\n// 2番目のデータ（1番）を出す\nprint(colors[___])",
-      "correctLines": [
-        "// colors という配列を作る（'あか', 'あお'の順）",
-        "let colors = [\"あか\", \"あお\"]",
-        "// 2番目のデータ（1番）を出す",
-        "print(colors[1])"
-      ],
-      "lineHints": [null, "[\"あか\", \"あお\"] と入力しましょう。", null, "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"],
-      "candidates": {
-        "variables": [
-          "colors"
+        "title": "便利な「はこ」変数（へんすう）",
+        "description": "データに名前をつけて保存できる「変数（へんすう）」を使ってみましょう。",
+        "difficulty": "easy",
+        "orderIndex": 2,
+        "tutorialSlides": [
+          {
+            "title": "変数（へんすう）とは？",
+            "image": "/illustrations/common/beads_chain.png",
+            "content": "# データを保存する「はこ」\n\nプログラムでは、数字や文字をしまっておく「はこ」を作れます。この「はこ」を **変数（へんすう）** と呼びます。\n\n本棚に本をしまうように、変数にはデータをしまえます。\n\nSwiftでは `let`（レット）を使って変数を作ります。\n\n```swift\nlet x = 10\nprint(x)  // 10と表示される\n```\n\n`let x = 10` は「xという名前のはこに10を入れる」という意味です。"
+          },
+          {
+            "title": "let と var の違い",
+            "image": "/illustrations/common/nested_boxes.png",
+            "content": "# 中身を変えられる？変えられない？\n\nSwiftには2種類の変数があります。\n\n- **let（レット）**: 中身を変えられない変数（定数とも呼びます）\n- **var（バー）**: 中身を後から変えられる変数\n\n金庫のように一度しまったら変えられないのが `let`、引き出しのように出し入れ自由なのが `var` です。\n\n今回は `let` を使って練習しましょう。"
+          },
+          {
+            "title": "計算の記号",
+            "image": "/illustrations/common/struct_block.png",
+            "content": "# 四則演算（しそくえんざん）\n\nプログラムでも算数と同じように計算ができます。\n\n- **+** : たし算（例：5 + 3 = 8）\n- **-** : ひき算（例：5 - 3 = 2）\n- **\\*** : かけ算（例：5 * 3 = 15）\n- **/** : わり算（例：6 / 3 = 2）\n\n```swift\nlet a = 10\nlet b = 5\nprint(a + b)  // 15と表示される\n```"
+          },
+          {
+            "title": "やってみましょう！",
+            "image": "/illustrations/common/box.png",
+            "content": "# 目標（もくひょう）\n\n2つの変数を作って、たし算をしてみましょう。\n\n1. `x` という変数に `10` を入れる\n2. `y` という変数に `5` を入れる\n3. `x + y` の結果を画面に表示する\n\n答えは `15` になるはずです。"
+          }
         ],
-        "functions": [
-          "print"
+        "initialDisplayMode": "holey",
+        "correctCode": "// x に 10 を入れる\nlet x = 10\n// y に 5 を入れる\nlet y = 5\n// + でたし算する\nprint(x + y)",
+        "holeyCode": "// x に 10 を入れる\nlet x = ___\n// y に 5 を入れる\nlet y = ___\n// + でたし算する\nprint(x ___ y)",
+        "correctLines": [
+          "// x に 10 を入れる",
+          "let x = 10",
+          "// y に 5 を入れる",
+          "let y = 5",
+          "// + でたし算する",
+          "print(x + y)"
         ],
-        "strings": [
-          "あか",
-          "あお"
+        "lineHints": [
+          null,
+          "再代入可能な変数を宣言し、数値を代入します。",
+          null,
+          "再代入可能な変数を宣言し、数値を代入します。",
+          null,
+          "たし算なので + を使います。"
         ],
-        "numbers": [
-          "1"
+        "candidates": {
+          "numbers": [
+            "10",
+            "5"
+          ],
+          "operators": [
+            "+",
+            "-",
+            "*",
+            "/"
+          ]
+        },
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "15\n"
+          }
         ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "あお\n"
-        }
-      ]
-    },
     {
-      "title": "名前で引き出す「辞書」",
-      "description": "「辞書（じしょ）」を使うと、名前をつけてデータを保存し、その名前で取り出せます。",
-      "difficulty": "easy",
-      "orderIndex": 8,
-      "tutorialSlides": [
-        {
-          "title": "辞書（じしょ）とは？",
-          "image": "/illustrations/common/labeled_box.png",
-          "content": "# 名前で探せる「しおり付きノート」\n\n**辞書（じしょ）** は、「名前」と「データ」をペアにして保存できる仕組みです。\n\n本物の辞書のように、「りんご」と調べれば「赤い果物」と出てくるイメージです。\n\n- **キー（名前）**: 探すときに使う名前\n- **バリュー（値）**: 実際のデータ"
-        },
-        {
-          "title": "辞書の作り方",
-          "image": "/illustrations/common/variable_label.png",
-          "content": "# キー: 値 の形で書く\n\n辞書は `[ ]` の中に `キー: 値` の形で書きます。\n\n```swift\nlet fruits = [\"りんご\": \"あか\", \"バナナ\": \"きいろ\"]\n```\n\nこれで「りんご」を調べると「あか」、「バナナ」を調べると「きいろ」が出てきます。"
-        },
-        {
-          "title": "辞書から取り出す方法",
-          "image": "/illustrations/common/box_container_open.png",
-          "content": "# [ ] と ! を使う\n\n辞書から値を取り出すには `[キー]` を使い、最後に `!` をつけます。\n\n```swift\nprint(fruits[\"りんご\"]!)  // あか\n```\n\n**!（エクスクラメーション）** は「値が絶対あるよ！」と教える記号です。Swiftは安全のため「ないかも」と考えるので、`!` で「大丈夫、あるよ」と伝えます。"
-        },
-        {
-          "title": "やってみましょう！",
-          "image": "/illustrations/common/clipboard_list.png",
-          "content": "# 目標（もくひょう）\n\nくだものの辞書を作って、色を調べましょう。\n\n1. `colors` という辞書を作る\n2. キーは「みかん」、値は「オレンジ」\n3. 「みかん」の色を表示する\n\n答えは「オレンジ」になります。"
-        }
-      ],
-      "initialDisplayMode": "holey",
-      "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet colors = [\"みかん\": \"オレンジ\"]\n// 中身を出す\nprint(colors[\"みかん\"]!)",
-      "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet colors = [\"___\": \"___\"]\n// 中身を出す\nprint(colors[\"___\"]!)",
-      "correctLines": [
-        "// 辞書を作る（キーは'みかん'、値は'オレンジ'）",
-        "let colors = [\"みかん\": \"オレンジ\"]",
-        "// 中身を出す",
-        "print(colors[\"みかん\"]!)"
-      ],
-      "lineHints": [null, "[\"みかん\": \"オレンジ\"] と入力しましょう。", null, "colors[\"みかん\"]! と入力しましょう。"],
-      "candidates": {
-        "variables": [
-          "colors"
+        "title": "剰余演算子（%）",
+        "description": "割り算の「あまり」を求める「%」（パーセント）演算子を学びましょう。",
+        "difficulty": "easy",
+        "orderIndex": 3,
+        "tutorialSlides": [
+          {
+            "title": "あまりを求める演算子（えんざんし）",
+            "image": "/illustrations/common/light_bulb_hint.png",
+            "content": "# 剰余演算子（じょうよえんざんし）とは？\n\n**%（パーセント）** は割り算の **あまり** を計算する記号です。\n\n「剰余（じょうよ）」は難しい言葉ですが、「あまり」のことです。\n\n例えば、10このアメを3人で分けると、1人3こずつもらえて、1こあまりますよね。\n\n`10 % 3` は、この「1こあまる」の **1** を計算してくれます。"
+          },
+          {
+            "title": "% の使い方",
+            "image": "/illustrations/common/monitor.png",
+            "content": "# コードで見てみよう\n\n```swift\nprint(10 % 3)  // 1（10÷3=3あまり1）\nprint(8 % 4)   // 0（8÷4=2あまり0、割り切れる）\nprint(7 % 2)   // 1（7÷2=3あまり1）\n```\n\n**あまりが0** のときは、割り切れたということです。\n\n偶数（ぐうすう）か奇数（きすう）かを調べるときにも便利です。\n`数字 % 2` が `0` なら偶数、`1` なら奇数です。"
+          },
+          {
+            "title": "やってみましょう！",
+            "image": "/illustrations/common/intro_robot.png",
+            "content": "# 目標（もくひょう）\n\n10を3で割ったあまりを画面に表示しましょう。\n\n答えは `1` になるはずです。\n\n**ヒント：** `%` 記号を使います。"
+          }
         ],
-        "functions": [
-          "print"
+        "initialDisplayMode": "holey",
+        "correctCode": "// 10 を 3 で割ったあまりを出力する\nprint(10 % 3)",
+        "holeyCode": "// 10 を 3 で割ったあまりを出力する\nprint(10 ___ 3)",
+        "correctLines": [
+          "// 10 を 3 で割ったあまりを出力する",
+          "print(10 % 3)"
         ],
-        "strings": [
-          "みかん",
-          "オレンジ"
+        "lineHints": [
+          null,
+          "あまりを求める `%` 演算子を使います。"
+        ],
+        "candidates": {
+          "operators": [
+            "%",
+            "/",
+            "*",
+            "-"
+          ]
+        },
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "1\n"
+          }
         ]
       },
-      "testCases": [
-        {
-          "input": "",
-          "expected_output": "オレンジ\n"
-        }
-      ]
-    }
+    {
+        "title": "累算代入演算子（+=、-=）",
+        "description": "変数の値を手軽に増やしたり減らしたりする「+=」「-=」を学びましょう。",
+        "difficulty": "easy",
+        "orderIndex": 4,
+        "tutorialSlides": [
+          {
+            "title": "累算代入演算子（るいさんだいにゅうえんざんし）とは？",
+            "image": "/illustrations/common/variable_label.png",
+            "content": "# 値を増やしたり減らしたりする便利な記号\n\n**累算代入演算子（るいさんだいにゅうえんざんし）** は、変数の値を増やしたり減らしたりする便利な記号です。\n\n- **+=** : 今の値に足す（プラスイコール）\n- **-=** : 今の値から引く（マイナスイコール）\n\n貯金箱にお金を入れたり出したりするイメージです。"
+          },
+          {
+            "title": "var を使って変えられる変数を作る",
+            "image": "/illustrations/common/variable_label.png",
+            "content": "# var（バー）で変更できる変数を作る\n\n値を変えるには、`let` ではなく **var（バー）** を使います。\n\n```swift\nvar score = 100   // スコアは100点\nscore += 10       // 10点プラス！\n// scoreは110になる\n```\n\n`score += 10` は `score = score + 10` と同じ意味ですが、短く書けて便利です。"
+          },
+          {
+            "title": "ゲームのHP（体力）で考えてみよう",
+            "image": "/illustrations/common/box_container_open.png",
+            "content": "# 実際に使ってみよう\n\nゲームのキャラクターのHP（体力）を想像してください。\n\n```swift\nvar hp = 100   // 最初の体力は100\nhp += 20       // 回復して20増える → 120\nhp -= 50       // ダメージで50減る → 70\n```\n\n最終的なHPは **70** になります。"
+          },
+          {
+            "title": "やってみましょう！",
+            "image": "/illustrations/common/clipboard_list.png",
+            "content": "# 目標（もくひょう）\n\n1. `var hp = 100` でHPを100にする\n2. `+=` を使って20を足す\n3. `-=` を使って50を引く\n4. 最後のHPを表示する\n\n答えは `70` になるはずです。"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// var で変更可能な変数を作る\nvar hp = 100\n// += で 20 を足す\nhp += 20\n// -= で 50 を引く\nhp -= 50\nprint(hp)",
+        "holeyCode": "// var で変更可能な変数を作る\nvar hp = 100\n// += で 20 を足す\nhp ___ 20\n// -= で 50 を引く\nhp ___ 50\nprint(hp)",
+        "correctLines": [
+          "// var で変更可能な変数を作る",
+          "var hp = 100",
+          "// += で 20 を足す",
+          "hp += 20",
+          "// -= で 50 を引く",
+          "hp -= 50",
+          "print(hp)"
+        ],
+        "lineHints": [
+          null,
+          "変数の値を計算して、その結果を同じ変数に再代入します。",
+          null,
+          "変数の値を計算して、その結果を同じ変数に再代入します。",
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "operators": [
+            "+=",
+            "-=",
+            "*=",
+            "/="
+          ]
+        },
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "70\n"
+          }
+        ]
+      },
+    {
+        "title": "「もし〜なら」で分けましょう",
+        "description": "条件によって動きを変える if文を学びましょう。",
+        "difficulty": "easy",
+        "orderIndex": 5,
+        "tutorialSlides": [
+          {
+            "title": "条件分岐（じょうけんぶんき）とは？",
+            "image": "/illustrations/common/logic_gate_or.png",
+            "content": "# プログラムに判断させよう\n\n**条件分岐（じょうけんぶんき）** とは、「もし〜なら、こうする」という判断をプログラムにさせることです。\n\n例えば、信号が青なら渡る、赤なら止まる、というように状況によって行動を変えますよね。\n\nプログラムも同じように、条件によって動きを変えられます。"
+          },
+          {
+            "title": "if（イフ）文の使い方",
+            "image": "/illustrations/common/branching_paths.png",
+            "content": "# if は「もし」という意味\n\n**if（イフ）** は英語で「もし」という意味です。\n\n```swift\nif score > 80 {\n    print(\"合格！\")\n}\n```\n\nこのコードは「もしスコアが80より大きいなら、『合格！』と表示する」という意味です。\n\n`{ }` の中に、条件が合ったときに実行したい処理を書きます。"
+          },
+          {
+            "title": "比較の記号",
+            "image": "/illustrations/common/split_road.png",
+            "content": "# 大きい？小さい？を比べる記号\n\n- **>** : より大きい（例：100 > 80 は「100は80より大きい」）\n- **<** : より小さい（例：50 < 80 は「50は80より小さい」）\n- **>=** : 以上（例：80 >= 80 は「80は80以上」）\n- **<=** : 以下（例：70 <= 80 は「70は80以下」）\n- **==** : 等しい（例：10 == 10 は「10は10と等しい」）"
+          },
+          {
+            "title": "やってみましょう！",
+            "image": "/illustrations/common/crossroad.png",
+            "content": "# 目標（もくひょう）\n\nスコアが80点より大きいときに「Great!」と表示するプログラムを作りましょう。\n\n1. `score` に `100` を入れる\n2. `if` を使って `score > 80` かチェックする\n3. 条件が合えば「Great!」と表示する\n\nスコアは100点なので、条件に合って「Great!」と表示されます。"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// score に 100 を入れる\nlet score = 100\n// > で比較する\nif score > 80 {\n    print(\"Great!\")\n}",
+        "holeyCode": "// score に 100 を入れる\nlet score = ___\n// > で比較する\nif score ___ 80 {\n    print(\"Great!\")\n}",
+        "correctLines": [
+          "// score に 100 を入れる",
+          "let score = 100",
+          "// > で比較する",
+          "if score > 80 {",
+          "    print(\"Great!\")",
+          "}"
+        ],
+        "lineHints": [
+          null,
+          "再代入可能な変数を宣言し、数値を代入します。",
+          null,
+          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          null,
+          null
+        ],
+        "candidates": {
+          "numbers": [
+            "100"
+          ],
+          "operators": [
+            ">",
+            "<",
+            ">=",
+            "<="
+          ]
+        },
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "Great!\n"
+          }
+        ]
+      },
+    {
+        "title": "論理演算子（&&、||）",
+        "description": "複数の条件を組み合わせる「&&（かつ）」と「||（または）」を学びましょう。",
+        "difficulty": "easy",
+        "orderIndex": 6,
+        "tutorialSlides": [
+          {
+            "title": "論理演算子（ろんりえんざんし）とは？",
+            "image": "/illustrations/common/pencil.png",
+            "content": "# 複数の条件を組み合わせよう\n\n**論理演算子（ろんりえんざんし）** を使うと、2つ以上の条件を組み合わせられます。\n\n例えば「晴れていて、かつ、休みの日ならピクニックに行く」のように、複数の条件を同時に確認したいときがありますよね。"
+          },
+          {
+            "title": "&& と || の意味",
+            "image": "/illustrations/common/traffic_light.png",
+            "content": "# 「かつ」と「または」\n\n- **&&（アンド）**: 「かつ」という意味。両方の条件が成り立つとき\n- **||（オア）**: 「または」という意味。どちらかの条件が成り立つとき\n\n**例えで考えると：**\n- 「晴れ **かつ** 休み」→ 両方そろわないとダメ\n- 「雨 **または** 雪」→ どちらかあればOK"
+          },
+          {
+            "title": "コードで見てみよう",
+            "image": "/illustrations/common/decision_tree.png",
+            "content": "# && を使った例\n\n```swift\nif age >= 18 && hasTicket {\n    print(\"入場できます\")\n}\n```\n\n「18歳以上 **かつ** チケットを持っている」の両方が成り立つときだけ、入場できます。\n\n片方だけでは入場できません。"
+          },
+          {
+            "title": "やってみましょう！",
+            "image": "/illustrations/3d/either_fork.png",
+            "content": "# 目標（もくひょう）\n\nスコアが70以上、かつボーナスが0より大きいときに「Bonus Pass」と表示しましょう。\n\n- `score = 80`（70以上なのでOK）\n- `bonus = 10`（0より大きいのでOK）\n\n両方の条件を満たしているので、「Bonus Pass」と表示されます。"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "let score = 80\nlet bonus = 10\n// && で両方の条件をチェック\nif score >= 70 && bonus > 0 {\n    print(\"Bonus Pass\")\n}",
+        "holeyCode": "let score = 80\nlet bonus = 10\n// && で両方の条件をチェック\nif score >= 70 ___ bonus > 0 {\n    print(\"Bonus Pass\")\n}",
+        "correctLines": [
+          "let score = 80",
+          "let bonus = 10",
+          "// && で両方の条件をチェック",
+          "if score >= 70 && bonus > 0 {",
+          "    print(\"Bonus Pass\")",
+          "}"
+        ],
+        "lineHints": [
+          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "candidates": {
+          "operators": [
+            "&&",
+            "||",
+            "&",
+            "|"
+          ]
+        },
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "Bonus Pass\n"
+          }
+        ]
+      },
+    {
+        "title": "たくさんのデータをまとめましょう「配列」",
+        "description": "「配列（はいれつ）」を使うと、たくさんのデータを一つの「長い はこ」にまとめて入れられます。",
+        "difficulty": "easy",
+        "orderIndex": 7,
+        "tutorialSlides": [
+          {
+            "title": "配列（はいれつ）とは？",
+            "image": "/illustrations/common/beads_chain.png",
+            "content": "# たくさんのデータを入れる「長いはこ」\n\n**配列（はいれつ）** は、たくさんのデータを順番に並べて保存できる「長いはこ」です。\n\nロッカーのように、1つ1つの場所にデータをしまうイメージです。\n\n買い物リストや、クラスの名簿など、複数のデータをまとめて管理するのに便利です。"
+          },
+          {
+            "title": "配列の作り方",
+            "image": "/illustrations/common/nested_boxes.png",
+            "content": "# [ ] で囲む\n\n配列を作るには、データを `[ ]` で囲んで、カンマ `,` で区切ります。\n\n```swift\nlet fruits = [\"りんご\", \"バナナ\", \"みかん\"]\n```\n\nこれで `fruits` という名前の配列に、3つのくだものの名前が入りました。"
+          },
+          {
+            "title": "配列の番号は「0」から始まる！",
+            "image": "/illustrations/common/struct_block.png",
+            "content": "# インデックス（番号）のルール\n\n配列の中身を取り出すときは、番号を指定します。\n\n**重要：** プログラミングでは、最初のデータは **0番** から数えます！\n\n```swift\nlet fruits = [\"りんご\", \"バナナ\", \"みかん\"]\n//             0番      1番       2番\nprint(fruits[0])  // りんご\nprint(fruits[1])  // バナナ\n```"
+          },
+          {
+            "title": "やってみましょう！",
+            "image": "/illustrations/common/box.png",
+            "content": "# 目標（もくひょう）\n\n色の配列を作って、2番目のデータを取り出しましょう。\n\n1. `colors` という配列に「あか」「あお」を入れる\n2. 2番目のデータ（番号は1）を表示する\n\n答えは「あお」になります。\n\n**注意：** 2番目のデータは `colors[1]` です（0番から数えるから）。"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet colors = [\"あか\", \"あお\"]\n// 2番目のデータ（1番）を出す\nprint(colors[1])",
+        "holeyCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet colors = [\"___\", \"___\"]\n// 2番目のデータ（1番）を出す\nprint(colors[___])",
+        "correctLines": [
+          "// colors という配列を作る（'あか', 'あお'の順）",
+          "let colors = [\"あか\", \"あお\"]",
+          "// 2番目のデータ（1番）を出す",
+          "print(colors[1])"
+        ],
+        "lineHints": [
+          null,
+          "[\"あか\", \"あお\"] と入力しましょう。",
+          null,
+          "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"
+        ],
+        "candidates": {
+          "variables": [
+            "colors"
+          ],
+          "functions": [
+            "print"
+          ],
+          "strings": [
+            "あか",
+            "あお"
+          ],
+          "numbers": [
+            "1"
+          ]
+        },
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "あお\n"
+          }
+        ]
+      },
+    {
+        "title": "名前で引き出す「辞書」",
+        "description": "「辞書（じしょ）」を使うと、名前をつけてデータを保存し、その名前で取り出せます。",
+        "difficulty": "easy",
+        "orderIndex": 8,
+        "tutorialSlides": [
+          {
+            "title": "辞書（じしょ）とは？",
+            "image": "/illustrations/common/variable_label.png",
+            "content": "# 名前で探せる「しおり付きノート」\n\n**辞書（じしょ）** は、「名前」と「データ」をペアにして保存できる仕組みです。\n\n本物の辞書のように、「りんご」と調べれば「赤い果物」と出てくるイメージです。\n\n- **キー（名前）**: 探すときに使う名前\n- **バリュー（値）**: 実際のデータ"
+          },
+          {
+            "title": "辞書の作り方",
+            "image": "/illustrations/common/variable_label.png",
+            "content": "# キー: 値 の形で書く\n\n辞書は `[ ]` の中に `キー: 値` の形で書きます。\n\n```swift\nlet fruits = [\"りんご\": \"あか\", \"バナナ\": \"きいろ\"]\n```\n\nこれで「りんご」を調べると「あか」、「バナナ」を調べると「きいろ」が出てきます。"
+          },
+          {
+            "title": "辞書から取り出す方法",
+            "image": "/illustrations/common/box_container_open.png",
+            "content": "# [ ] と ! を使う\n\n辞書から値を取り出すには `[キー]` を使い、最後に `!` をつけます。\n\n```swift\nprint(fruits[\"りんご\"]!)  // あか\n```\n\n**!（エクスクラメーション）** は「値が絶対あるよ！」と教える記号です。Swiftは安全のため「ないかも」と考えるので、`!` で「大丈夫、あるよ」と伝えます。"
+          },
+          {
+            "title": "やってみましょう！",
+            "image": "/illustrations/common/clipboard_list.png",
+            "content": "# 目標（もくひょう）\n\nくだものの辞書を作って、色を調べましょう。\n\n1. `colors` という辞書を作る\n2. キーは「みかん」、値は「オレンジ」\n3. 「みかん」の色を表示する\n\n答えは「オレンジ」になります。"
+          }
+        ],
+        "initialDisplayMode": "holey",
+        "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet colors = [\"みかん\": \"オレンジ\"]\n// 中身を出す\nprint(colors[\"みかん\"]!)",
+        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet colors = [\"___\": \"___\"]\n// 中身を出す\nprint(colors[\"___\"]!)",
+        "correctLines": [
+          "// 辞書を作る（キーは'みかん'、値は'オレンジ'）",
+          "let colors = [\"みかん\": \"オレンジ\"]",
+          "// 中身を出す",
+          "print(colors[\"みかん\"]!)"
+        ],
+        "lineHints": [
+          null,
+          "[\"みかん\": \"オレンジ\"] と入力しましょう。",
+          null,
+          "colors[\"みかん\"]! と入力しましょう。"
+        ],
+        "candidates": {
+          "variables": [
+            "colors"
+          ],
+          "functions": [
+            "print"
+          ],
+          "strings": [
+            "みかん",
+            "オレンジ"
+          ]
+        },
+        "testCases": [
+          {
+            "input": "",
+            "expected_output": "オレンジ\n"
+          }
+        ]
+      }
   ]
 };
