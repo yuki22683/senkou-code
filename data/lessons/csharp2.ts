@@ -14,12 +14,10 @@ export const csharp2Data = {
         "tutorialSlides": [
           {
             "title": "継承（けいしょう）とは？",
-            "image": "/illustrations/common/intro_robot.png",
             "content": "# クラスを拡張（かくちょう）する\n\n**継承（けいしょう）**を使うと、すでにあるクラスの機能を引き継いで、新しいクラスを作れます。\n\n**身近な例え：**\n「乗り物」という設計図があって、そこから「車」「自転車」「バイク」を作ることを想像してください。どれも「動く」という共通の機能を持っていますが、それぞれ独自の特徴もあります。\n\n**用語：**\n- **親クラス（おやくらす）**: 元になるクラス（「乗り物」のこと）\n- **子クラス（こくらす）**: 親クラスを元に作る新しいクラス（「車」のこと）\n\n**メリット：**\n- 同じコードを何度も書かなくていい\n- 共通の機能を1か所で管理できる"
           },
           {
             "title": "継承の書き方",
-            "image": "/illustrations/common/pencil.png",
             "content": "# コロン「:」で継承を表す\n\n子クラスを作るときは、クラス名の後に `: 親クラス名` と書きます。\n\n**コード例（動物クラスを継承）：**\n```csharp\n// 親クラス：動物\nclass Animal {\n    public void Eat() {\n        Console.WriteLine(\"eating\");\n    }\n}\n\n// 子クラス：犬（Animalを継承）\nclass Dog : Animal { }\n```\n\n**解説：**\n1. `Animal` クラスに `Eat()` メソッドを定義\n2. `Dog : Animal` で「DogはAnimalを継承する」と宣言\n3. Dog は何も書かなくても、自動的に `Eat()` が使える！\n\nこれが継承の力です。親クラスの機能を、子クラスがそのまま使えます。"
           }
         ],
@@ -87,12 +85,10 @@ export const csharp2Data = {
         "tutorialSlides": [
           {
             "title": "オーバーライドとは？",
-            "image": "/illustrations/common/book.png",
             "content": "# 親の機能を上書きする\n\n**オーバーライド（override）**は、親クラスで定義されたメソッドを子クラスで「書き換える」機能です。\n\n**身近な例え：**\n「動物」クラスには「鳴く」メソッドがあるとします。でも、犬は「ワン！」、猫は「ニャー」と、動物によって鳴き方は違いますよね。オーバーライドを使うと、子クラスごとに違う動きを定義できます。\n\n**使うキーワード：**\n- `virtual`（バーチャル）: 親クラスで「上書きしてもいいよ」と許可する\n- `override`（オーバーライド）: 子クラスで「上書きするよ」と宣言する"
           },
           {
             "title": "virtual と override",
-            "image": "/illustrations/common/select.png",
             "content": "# 仮想メソッド（かそうメソッド）の仕組み\n\n親クラスで `virtual` をつけたメソッドは、子クラスで `override` して上書きできます。\n\n**コード例（動物の鳴き声を変える）：**\n```csharp\n// 親クラス\nclass Animal {\n    public virtual void Speak() {\n        Console.WriteLine(\"...\");\n    }\n}\n\n// 子クラス：猫\nclass Cat : Animal {\n    public override void Speak() {\n        Console.WriteLine(\"meow\");\n    }\n}\n```\n\n**解説：**\n1. 親の `Speak()` に `virtual` をつけて「上書きOK」にする\n2. 子クラスで `override` をつけて、違う動きを定義する\n3. Cat の `Speak()` を呼ぶと「meow」と表示される！"
           }
         ],
@@ -176,12 +172,10 @@ export const csharp2Data = {
         "tutorialSlides": [
           {
             "title": "インターフェースとは？",
-            "image": "/illustrations/common/filter.png",
             "content": "# 約束事（やくそくごと）を決める\n\n**インターフェース（interface）**は、クラスが「このメソッドを必ず持っていないとダメだよ」という約束事を定義します。\n\n**身近な例え：**\nUSBポートを思い浮かべてください。どんなUSB機器も「差し込める」という共通のルールを守っています。インターフェースも同じで、「このメソッドを持っていること」というルールを決めます。\n\n**メリット：**\n- 複数のクラスに同じ機能を持たせられる\n- 「このインターフェースを持っている」＝「この機能が使える」と保証できる\n- 違うクラスでも同じように扱える"
           },
           {
             "title": "interface の使い方",
-            "image": "/illustrations/common/speech_bubble_code.png",
             "content": "# interfaceキーワードで定義する\n\n`interface` で定義し、クラスで実装（じっそう：実際に中身を作る）します。\n\n**命名ルール：**\n名前は `I`（アイ）から始めるのがC#のお約束です（例：IGreeter、IRunner）\n\n**コード例（あいさつインターフェース）：**\n```csharp\n// インターフェースを定義\ninterface IGreeter {\n    void Greet();  // 中身は書かない（約束だけ）\n}\n\n// インターフェースを実装\nclass Person : IGreeter {\n    public void Greet() {\n        Console.WriteLine(\"Hello!\");\n    }\n}\n```\n\n**解説：**\n1. `interface IGreeter` で「Greet()を持つこと」という約束を定義\n2. `Person : IGreeter` で「Personはこの約束を守る」と宣言\n3. Person は必ず `Greet()` を実装しないとエラーになる"
           }
         ],
@@ -257,12 +251,10 @@ export const csharp2Data = {
         "tutorialSlides": [
           {
             "title": "プロパティとは？",
-            "image": "/illustrations/common/key_silver.png",
             "content": "# データへのアクセスを制御する\n\n**プロパティ**は、クラスのデータ（フィールド）へのアクセスを制御する仕組みです。\n\n**身近な例え：**\n銀行口座を思い浮かべてください。お金を預けたり引き出したりするとき、直接金庫に触れるのではなく、窓口を通しますよね。プロパティも同じで、データに直接アクセスするのではなく、「窓口」を通してアクセスします。\n\n**2つの機能：**\n- `get`（ゲット）: データを取得する（読み取る）\n- `set`（セット）: データを設定する（書き込む）\n\nこれにより、不正な値が入るのを防いだり、値を変えるときに追加の処理をしたりできます。"
           },
           {
             "title": "自動プロパティ",
-            "image": "/illustrations/common/shield_private.png",
             "content": "# { get; set; } で簡単に作る\n\n`{ get; set; }` と書くだけで、シンプルなプロパティが作れます。これを「自動プロパティ」と呼びます。\n\n**コード例（名前を持つPersonクラス）：**\n```csharp\nclass Person {\n    public string Name { get; set; }\n}\n\nPerson p = new Person();\np.Name = \"Taro\";           // set で値を設定\nConsole.WriteLine(p.Name); // get で値を取得\n```\n=> Taro\n\n**解説：**\n1. `string Name { get; set; }` で「名前」プロパティを定義\n2. `p.Name = \"Taro\"` で値を設定（setが動く）\n3. `p.Name` で値を取得（getが動く）\n\n**ポイント：**\n変数のように使えるけど、実は裏でgetとsetが動いています！"
           }
         ],
@@ -322,12 +314,10 @@ export const csharp2Data = {
         "tutorialSlides": [
           {
             "title": "List<T>（リスト）とは？",
-            "image": "/illustrations/common/robot_greet.png",
             "content": "# サイズが変わるリスト\n\n**List<T>**（リスト）は、要素を自由に追加したり削除したりできる「動的（どうてき）な配列」です。\n\n**配列との違い：**\n- 配列：最初にサイズを決める、後から変更できない\n- List：サイズを決めなくていい、自由に追加・削除できる\n\n**身近な例え：**\n配列は「固定の棚」、Listは「伸び縮みする本棚」のようなものです。本が増えたら棚も伸びます！\n\n**<T>って何？：**\n`<T>` には「何を入れるか」を指定します（ジェネリクスと呼びます）\n- `List<string>` → 文字列のリスト\n- `List<int>` → 数字のリスト"
           },
           {
             "title": "List の使い方",
-            "image": "/illustrations/common/data_storage.png",
             "content": "# Add（アッド）で要素を追加\n\n`Add()` メソッドで要素を追加し、配列と同じように `[番号]` でアクセスします。\n\n**コード例（くだものリストを作る）：**\n```csharp\n// 文字列のListを作る\nList<string> fruits = new List<string>();\n\n// 要素を追加\nfruits.Add(\"Apple\");   // 0番目\nfruits.Add(\"Banana\");  // 1番目\n\n// アクセス\nConsole.WriteLine(fruits[0]); // Apple\nConsole.WriteLine(fruits[1]); // Banana\n```\n\n**よく使うメソッド：**\n- `Add(値)` : 末尾に追加\n- `Remove(値)` : 値を削除\n- `Count` : 要素数を取得"
           }
         ],
@@ -378,12 +368,10 @@ export const csharp2Data = {
         "tutorialSlides": [
           {
             "title": "LINQ（リンク）とは？",
-            "image": "/illustrations/common/database_table_3d.png",
             "content": "# データ操作の強力なツール\n\n**LINQ**（リンク、Language Integrated Query）は、コレクション（配列やList）を簡単に操作できる機能です。\n\n**身近な例え：**\nスマホの連絡先アプリで「東京に住んでいる人だけ表示」「名前順に並べる」といった検索・絞り込みができますよね。LINQを使うと、プログラムでも同じようなことが簡単にできます！\n\n**LINQでできること：**\n- Where : 条件で絞り込む\n- Select : データを変換する\n- OrderBy : 並べ替える\n- Sum, Average : 合計・平均を計算"
           },
           {
             "title": "Where（ウェア）でフィルタリング",
-            "image": "/illustrations/common/database_aggregate.png",
             "content": "# 条件に合う要素だけを取り出す\n\n`Where()` を使って、条件を満たす要素だけを取り出せます。\n\n**コード例（3より大きい数だけ取り出す）：**\n```csharp\nList<int> nums = new List<int> {1, 2, 3, 4, 5};\nvar big = nums.Where(n => n > 3);\nforeach (var n in big) {\n    Console.WriteLine(n); // 4, 5\n}\n```\n\n**解説：**\n1. `nums.Where(n => n > 3)` で「3より大きい」という条件で絞り込み\n2. `n => n > 3` はラムダ式（後で詳しく学びます）で、各要素をチェックする\n3. 条件を満たす 4 と 5 だけが残る\n\n**`=>` って何？：**\n「〜するもの」という意味で、`n => n > 3` は「nが3より大きいかチェックする」と読みます。"
           }
         ],
@@ -437,12 +425,10 @@ export const csharp2Data = {
         "tutorialSlides": [
           {
             "title": "Select（セレクト）とは？",
-            "image": "/illustrations/common/key_security_lock.png",
             "content": "# 要素を変換する\n\n**Select**（セレクト）は、コレクションの各要素を別の形に変換します。\n\n**身近な例え：**\n「全員の点数を10点ずつ加算する」「全員の名前の前に『さん』をつける」のように、リストの全員に同じ処理を適用したいときに使います。\n\n**Whereとの違い：**\n- **Where** : 条件で絞り込む（数が減ることがある）\n- **Select** : 全部の要素を変換する（数は変わらない）\n\n**他の言語では：**\nJavaScriptの `map`、Pythonの `map` と同じ機能です。"
           },
           {
             "title": "Select の使い方",
-            "image": "/illustrations/common/key_mutex.png",
             "content": "# 各要素を加工する\n\n`Select()` で各要素に処理を適用し、新しいコレクションを作ります。\n\n**コード例（すべての数を2倍にする）：**\n```csharp\nList<int> nums = new List<int> {1, 2, 3};\nvar doubled = nums.Select(n => n * 2);\n// 結果: 2, 4, 6\n```\n\n**解説：**\n1. `nums.Select(n => n * 2)` で「各要素を2倍にする」と指示\n2. 1 → 2、2 → 4、3 → 6 と変換される\n3. 元のnumsは変わらず、新しいコレクションが作られる\n\n**ポイント：**\n元のデータは変わらない！変換した結果が新しく作られます。"
           }
         ],
@@ -496,12 +482,10 @@ export const csharp2Data = {
         "tutorialSlides": [
           {
             "title": "ラムダ式（しき）とは？",
-            "image": "/illustrations/common/light_bulb_hint.png",
             "content": "# 名前のない関数を短く書く\n\n**ラムダ式**は、名前のない関数（無名関数：むめいかんすう）を短く書く方法です。`=>`（アロー演算子）を使って引数と処理を結びます。\n\n**身近な例え：**\n普通のメソッドは「名前付きのレシピ」のようなもの。ラムダ式は「その場限りの簡単なメモ書きレシピ」のようなものです。\n\n**なぜ使う？：**\n- LINQのWhere、Selectなどで使う\n- 短い処理を簡潔に書ける\n- 一度しか使わない処理に便利\n\n**読み方：**\n`=>` は「〜を受け取って」「〜を返す」と読みます。"
           },
           {
             "title": "ラムダ式の書き方",
-            "image": "/illustrations/common/monitor.png",
             "content": "# 基本の形：(引数) => 処理\n\n引数が1つなら `()` を省略できます。\n\n**コード例（数を2乗する関数）：**\n```csharp\n// ラムダ式で関数を定義\nFunc<int, int> square = x => x * x;\n\n// 使う\nConsole.WriteLine(square(5)); // 25\n```\n\n**解説：**\n1. `Func<int, int>` は「intを受け取ってintを返す関数」の型\n2. `x => x * x` は「xを受け取って、x * x を返す」という意味\n3. `square(5)` で5を渡すと、5 * 5 = 25 が返る\n\n**いろいろな書き方：**\n- `x => x * 2` : xを2倍にする\n- `(a, b) => a + b` : aとbを足す（引数が複数のとき）\n- `() => \"Hello\"` : 引数なしで\"Hello\"を返す"
           }
         ],
@@ -543,12 +527,10 @@ export const csharp2Data = {
         "tutorialSlides": [
           {
             "title": "例外処理（れいがいしょり）とは？",
-            "image": "/illustrations/common/padlock_open.png",
             "content": "# エラーに備える\n\n**例外処理（れいがいしょり）**を使うと、プログラム実行中のエラーに対処できます。例外（エラー）が起きてもプログラムがクラッシュ（強制終了）しません。\n\n**身近な例え：**\nサーカスの空中ブランコを思い浮かべてください。万が一落ちても、セーフティネットがあれば大丈夫ですよね。例外処理は、プログラムの「セーフティネット」のようなものです。\n\n**なぜ必要？：**\n- ファイルが見つからない\n- ネットワークがつながらない\n- ユーザーが変な値を入力した\n\nこういう「予想外のこと」が起きても、プログラムを安全に動かし続けられます。"
           },
           {
             "title": "try-catch の使い方",
-            "image": "/illustrations/common/shield_gold.png",
             "content": "# try で試し、catch で捕まえる\n\n`try`（トライ：試す）ブロックで処理を実行し、エラーは `catch`（キャッチ：捕まえる）で捕まえます。\n\n**コード例（数字に変換できないとき）：**\n```csharp\ntry {\n    // \"abc\" は数字に変換できない！\n    int x = int.Parse(\"abc\");\n} catch (Exception e) {\n    // エラーが起きたらここに来る\n    Console.WriteLine(\"Error!\");\n}\n```\n=> Error!\n\n**解説：**\n1. `try { }` の中で「エラーが起きるかもしれない処理」を実行\n2. エラーが起きたら、すぐに `catch { }` に移動\n3. `catch` の中でエラーへの対処を書く\n4. プログラムはクラッシュせずに続行できる"
           }
         ],
@@ -602,12 +584,10 @@ export const csharp2Data = {
         "tutorialSlides": [
           {
             "title": "null参照（さんしょう）の問題",
-            "image": "/illustrations/common/key_silver.png",
             "content": "# NullReferenceException を防ぐ\n\n`null`（ヌル）は「何もない」という特別な値です。nullのオブジェクトのメンバ（プロパティやメソッド）にアクセスしようとすると、「NullReferenceException（ヌルリファレンスエクセプション）」というエラーが発生します。\n\n**身近な例え：**\n「太郎さんの電話番号を教えて」と言われたとき、太郎さんがそもそも存在しなければ答えられませんよね。nullにアクセスするのは、存在しない人に質問するようなものです。\n\n**解決策：**\n`?.`（null条件演算子）を使うと、nullかどうかを安全にチェックできます。"
           },
           {
             "title": "?. の使い方",
-            "image": "/illustrations/common/shield_private.png",
             "content": "# null なら null を返す\n\n`?.`（クエスチョンドット）は、左側が `null` なら `null` を返し、そうでなければメンバにアクセスします。\n\n**コード例（文字列の長さを安全に取得）：**\n```csharp\nstring name = null;\nint? len = name?.Length; // null（エラーにならない！）\n\nstring name2 = \"Hello\";\nint? len2 = name2?.Length; // 5\n```\n\n**解説：**\n1. `name` が null なので、普通に `.Length` を使うとエラー\n2. `name?.Length` なら、nullのときはnullを返して終わり\n3. エラーを起こさず安全に処理できる\n\n**ポイント：**\n結果が null になる可能性があるので、`int?`（null許容型）で受け取ります。"
           }
         ],

@@ -14,12 +14,10 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "パターンマッチとは？",
-            "image": "/illustrations/common/light_bulb_hint.png",
             "content": "# = は代入ではない\n\nElixirの `=` は **マッチ演算子** です。左辺と右辺が一致するかを確認し、変数を束縛します。"
           },
           {
             "title": "パターンマッチの使い方",
-            "image": "/illustrations/common/monitor.png",
             "content": "# 構造で分解\n\nタプルやリストを分解して変数に代入できます。\n\n**コード例：**\n```elixir\n{a, b} = {1, 2}\n# a = 1, b = 2\n```"
           }
         ],
@@ -59,12 +57,10 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "head | tail",
-            "image": "/illustrations/common/intro_robot.png",
             "content": "# リストの分解\n\n`[head | tail]` パターンで、リストの先頭と残りに分解できます。"
           },
           {
             "title": "| の使い方",
-            "image": "/illustrations/common/pencil.png",
             "content": "# 先頭と残り\n\n`|` の左が先頭要素、右が残りのリストです。\n\n**コード例：**\n```elixir\n[first | rest] = [1, 2, 3]\n# first = 1, rest = [2, 3]\n```"
           }
         ],
@@ -106,12 +102,10 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "パイプ演算子とは？",
-            "image": "/illustrations/common/book.png",
             "content": "# データを流す\n\n**|>** は、左側の結果を右側の関数の第1引数に渡します。処理の流れが読みやすくなります。"
           },
           {
             "title": "|> の使い方",
-            "image": "/illustrations/common/database_table_3d.png",
             "content": "# 連鎖させる\n\n複数の関数を連鎖させて処理できます。\n\n**コード例：**\n```elixir\n\"hello\"\n|> String.upcase()\n|> IO.puts()\n# HELLO\n```"
           }
         ],
@@ -157,12 +151,10 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "Enum.map とは？",
-            "image": "/illustrations/common/select.png",
             "content": "# 各要素を変換\n\n**Enum.map** は、リストの各要素に関数を適用して新しいリストを作ります。"
           },
           {
             "title": "Enum.map の使い方",
-            "image": "/illustrations/common/filter.png",
             "content": "# 無名関数を渡す\n\n`fn x -> x * 2 end` のような無名関数を渡します。\n\n**コード例：**\n```elixir\nEnum.map([1, 2, 3], fn x -> x * 2 end)\n# [2, 4, 6]\n```"
           }
         ],
@@ -207,12 +199,10 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "Enum.filter とは？",
-            "image": "/illustrations/common/speech_bubble_code.png",
             "content": "# 条件でフィルタ\n\n**Enum.filter** は、条件を満たす要素だけを残した新しいリストを作ります。"
           },
           {
             "title": "Enum.filter の使い方",
-            "image": "/illustrations/common/robot_greet.png",
             "content": "# 真を返す要素を残す\n\n関数が真を返す要素だけが残ります。\n\n**コード例：**\n```elixir\nEnum.filter([1, 2, 3, 4, 5], fn x -> x > 3 end)\n# [4, 5]\n```"
           }
         ],
@@ -257,12 +247,10 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "case とは？",
-            "image": "/illustrations/common/light_bulb_hint.png",
             "content": "# パターンで分岐\n\n**case** は、値をパターンとマッチさせて分岐する構文です。"
           },
           {
             "title": "case の使い方",
-            "image": "/illustrations/common/monitor.png",
             "content": "# 複数のパターン\n\n`->` で各パターンの処理を書きます。\n\n**コード例：**\n```elixir\ncase x do\n  1 -> \"one\"\n  2 -> \"two\"\n  _ -> \"other\"\nend\n```"
           }
         ],
@@ -319,12 +307,10 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "defmodule と def",
-            "image": "/illustrations/common/package_delivery.png",
             "content": "# モジュールと関数\n\n**defmodule** でモジュールを定義し、**def** で公開関数を定義します。"
           },
           {
             "title": "関数の定義",
-            "image": "/illustrations/common/data_flow_nodes.png",
             "content": "# def 関数名 do ... end\n\nパターンマッチを使った複数の関数定義もできます。\n\n**コード例：**\n```elixir\ndefmodule Math do\n  def double(x), do: x * 2\nend\n```"
           }
         ],
@@ -373,12 +359,10 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "再帰とは？",
-            "image": "/illustrations/common/database_aggregate.png",
             "content": "# 自分自身を呼び出す\n\n**再帰** は、関数が自分自身を呼び出す手法です。ループの代わりに使います。"
           },
           {
             "title": "再帰の書き方",
-            "image": "/illustrations/common/sql_query_magnifier.png",
             "content": "# 終了条件を忘れずに\n\n必ず終了条件を設定します。\n\n**コード例：**\n```elixir\ndef sum(0), do: 0\ndef sum(n), do: n + sum(n - 1)\n```"
           }
         ],
@@ -429,12 +413,10 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "プロセスとは？",
-            "image": "/illustrations/common/shield_gold.png",
             "content": "# 軽量な並行処理\n\nElixirの **プロセス** は、非常に軽量で大量に作成できます。`spawn` で新しいプロセスを作ります。"
           },
           {
             "title": "spawn の使い方",
-            "image": "/illustrations/common/key_silver.png",
             "content": "# 関数を渡す\n\n`spawn` に関数を渡すと、新しいプロセスで実行されます。\n\n**コード例：**\n```elixir\nspawn(fn -> IO.puts \"hello\" end)\n```"
           }
         ],
@@ -476,12 +458,10 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "send と receive",
-            "image": "/illustrations/common/intro_robot.png",
             "content": "# プロセス間通信\n\n**send** でメッセージを送り、**receive** で受け取ります。アクターモデルの基本です。"
           },
           {
             "title": "メッセージの送受信",
-            "image": "/illustrations/common/pencil.png",
             "content": "# self() で自分のPID\n\n`self()` で自分のプロセスIDを取得できます。\n\n**コード例：**\n```elixir\nsend(self(), :hello)\nreceive do\n  :hello -> IO.puts \"got hello\"\nend\n```"
           }
         ],

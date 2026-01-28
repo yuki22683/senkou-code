@@ -14,12 +14,10 @@ export const perl3Data = {
         "tutorialSlides": [
           {
             "title": "open（オープン）とは？",
-            "image": "/illustrations/common/robot_greet.png",
             "content": "# ファイルを開く\n\n**open**（オープン＝「開く」）は、ファイルを開いてプログラムから読み書きできるようにします。\n\n**たとえば：** 本を読むには、まず本を開かなければいけません。ファイルも同じで、読み書きする前に「開く」操作が必要です。\n\n開いたファイルは **ファイルハンドル** という「つまみ」を使って操作します。"
           },
           {
             "title": "open のモード",
-            "image": "/illustrations/common/light_bulb_hint.png",
             "content": "# 読む？書く？を指定する\n\n| モード | 意味 | 動作 |\n|--------|------|------|\n| `<` | 読み込み | ファイルの内容を読む |\n| `>` | 書き込み | 新しく書く（上書き） |\n| `>>` | 追記 | 末尾に追加する |\n\n**このコードは何をしているの？**\n```perl\nopen(my $fh, \"<\", \"file.txt\");\n```\n\n**解説：**\n- `my $fh` → ファイルハンドル（操作用のつまみ）\n- `\"<\"` → 読み込みモード\n- `\"file.txt\"` → 開くファイル名"
           }
         ],
@@ -67,12 +65,10 @@ export const perl3Data = {
         "tutorialSlides": [
           {
             "title": "close（クローズ）とは？",
-            "image": "/illustrations/common/gear_cogs.png",
             "content": "# ファイルを閉じる\n\n**close**（クローズ＝「閉じる」）は、開いたファイルを閉じて、使用を終了します。\n\n**たとえば：** 本を読み終わったら本を閉じますよね。閉じないと他の人が使えなかったり、本が傷んだりします。\n\nファイルも同じで、使い終わったら **必ず閉じる** のがマナーです。"
           },
           {
             "title": "close の使い方",
-            "image": "/illustrations/common/monitor.png",
             "content": "# close(ファイルハンドル)\n\n**このコードは何をしているの？**\n```perl\nclose($fh);\n```\n\n**解説：**\n- `$fh`（ファイルハンドル）で開いたファイルを閉じる\n\n**なぜ閉じるの？**\n1. 書き込んだデータを確実に保存するため\n2. コンピュータのリソース（メモリなど）を解放するため\n3. 他のプログラムがファイルを使えるようにするため"
           }
         ],
@@ -120,12 +116,10 @@ export const perl3Data = {
         "tutorialSlides": [
           {
             "title": "chomp（チョンプ）とは？",
-            "image": "/illustrations/common/passing_value.png",
             "content": "# 末尾の改行を取り除く\n\n**chomp**（チョンプ＝「かじり取る」）は、文字列の末尾にある改行文字（`\\n`）を取り除きます。\n\n**たとえば：** ファイルから1行読み込むと、行末に改行がついてきます。これを取り除かないと余計な空行が入ってしまいます。\n\nファイル処理でとてもよく使う関数です！"
           },
           {
             "title": "chomp の使い方",
-            "image": "/illustrations/common/return_value.png",
             "content": "# chomp($変数)\n\n**このコードは何をしているの？**\n```perl\nmy $line = \"hello\\n\";\nchomp($line);\nprint $line; # hello\n```\n\n**解説：**\n1. `$line` に \"hello\\n\"（改行付き）を入れる\n2. `chomp($line)` で末尾の `\\n` を除去\n3. `$line` は \"hello\" になる\n\n**ポイント：** chompは変数の中身を直接変更します。戻り値は使いません。"
           }
         ],
@@ -171,12 +165,10 @@ export const perl3Data = {
         "tutorialSlides": [
           {
             "title": "split（スプリット）とは？",
-            "image": "/illustrations/3d/compose_gear.png",
             "content": "# 文字列をバラバラに分ける\n\n**split**（スプリット＝「分割する」）は、文字列を指定した区切り文字で分けて配列にします。\n\n**たとえば：** \"りんご,みかん,バナナ\" という文字列をカンマで分けて、3つの果物の配列を作れます。\n\nCSVファイル（カンマ区切りのデータ）を読むときによく使います。"
           },
           {
             "title": "split の使い方",
-            "image": "/illustrations/common/function_gear.png",
             "content": "# split(/区切り/, 文字列)\n\n**このコードは何をしているの？**\n```perl\nmy @parts = split(/,/, \"a,b,c\");\nprint $parts[1]; # b\n```\n\n**解説：**\n1. \"a,b,c\" をカンマ `,` で分割\n2. 結果は (\"a\", \"b\", \"c\") の配列\n3. `$parts[1]` で2番目の要素 \"b\" を取得\n\n**区切り文字いろいろ：**\n- `/,/` → カンマで分割\n- `/::/` → コロンで分割\n- `/\\s+/` → 空白で分割"
           }
         ],
@@ -220,12 +212,10 @@ export const perl3Data = {
         "tutorialSlides": [
           {
             "title": "join（ジョイン）とは？",
-            "image": "/illustrations/common/action_button.png",
             "content": "# 配列を1つの文字列につなげる\n\n**join**（ジョイン＝「結合する」）は、配列の要素を区切り文字でつなげて1つの文字列にします。\n\n**たとえば：** (\"りんご\", \"みかん\", \"バナナ\") という配列を \"りんご,みかん,バナナ\" という1つの文字列にできます。\n\nsplit の反対の操作です！"
           },
           {
             "title": "join の使い方",
-            "image": "/illustrations/common/gear_cogs.png",
             "content": "# join(区切り文字, @配列)\n\n**このコードは何をしているの？**\n```perl\nmy @arr = (\"a\", \"b\", \"c\");\nmy $str = join(\"-\", @arr);\nprint $str; # a-b-c\n```\n\n**解説：**\n1. (\"a\", \"b\", \"c\") の配列を `-` でつなげる\n2. 結果は \"a-b-c\" という文字列\n\n**split と join の関係：**\n- split → 文字列を配列に分解\n- join → 配列を文字列にまとめる"
           }
         ],
@@ -269,12 +259,10 @@ export const perl3Data = {
         "tutorialSlides": [
           {
             "title": "push（プッシュ）とは？",
-            "image": "/illustrations/common/passing_value.png",
             "content": "# 配列の末尾に追加する\n\n**push**（プッシュ＝「押し込む」）は、配列の末尾に新しい要素を追加します。\n\n**たとえば：** 行列の最後に人が並ぶようなイメージです。(1, 2) という配列に 3 を push すると (1, 2, 3) になります。"
           },
           {
             "title": "push の使い方",
-            "image": "/illustrations/common/intro_robot.png",
             "content": "# push(@配列, 追加する値)\n\n**このコードは何をしているの？**\n```perl\nmy @arr = (1, 2);\npush(@arr, 3);\nprint $arr[2]; # 3\n```\n\n**解説：**\n1. @arr は (1, 2)\n2. push で 3 を末尾に追加\n3. @arr は (1, 2, 3) になる\n4. `$arr[2]` は 3\n\n**複数追加：** `push(@arr, 3, 4, 5)` で一度に複数追加できます。"
           }
         ],
@@ -318,12 +306,10 @@ export const perl3Data = {
         "tutorialSlides": [
           {
             "title": "pop（ポップ）とは？",
-            "image": "/illustrations/common/return_value.png",
             "content": "# 配列の末尾から取り出す\n\n**pop**（ポップ＝「ポンと取り出す」）は、配列の末尾から要素を取り出します。取り出した要素は配列からなくなります。\n\n**たとえば：** トランプの山札から1枚取るようなイメージです。(1, 2, 3) から pop すると 3 が取れて、配列は (1, 2) になります。\n\npush の反対の操作です！"
           },
           {
             "title": "pop の使い方",
-            "image": "/illustrations/common/pencil.png",
             "content": "# pop(@配列)\n\n**このコードは何をしているの？**\n```perl\nmy @arr = (1, 2, 3);\nmy $last = pop(@arr);\nprint $last; # 3\n```\n\n**解説：**\n1. @arr は (1, 2, 3)\n2. pop で末尾の 3 を取り出す\n3. `$last` に 3 が入る\n4. @arr は (1, 2) になる\n\n**push と pop の関係：**\n- push → 末尾に追加\n- pop → 末尾から取り出し"
           }
         ],
@@ -367,12 +353,10 @@ export const perl3Data = {
         "tutorialSlides": [
           {
             "title": "sort（ソート）とは？",
-            "image": "/illustrations/3d/compose_gear.png",
             "content": "# 配列を順番に並べ替える\n\n**sort**（ソート＝「並べ替える」）は、配列の要素を順番に並べ替えた新しいリストを返します。\n\n**たとえば：** バラバラのトランプを小さい順に並べ直すようなイメージです。\n\nデフォルトはアルファベット順（辞書順）で並べます。"
           },
           {
             "title": "sort の使い方",
-            "image": "/illustrations/common/book.png",
             "content": "# sort @配列\n\n**このコードは何をしているの？**\n```perl\nmy @sorted = sort @arr;\nmy @nums = sort { $a <=> $b } @nums;\n```\n\n**解説：**\n- `sort @arr` → 文字列順に並べ替え\n- `sort { $a <=> $b } @nums` → 数値順に並べ替え\n\n**なぜ数値順は違う書き方？**\n- デフォルトは文字列比較（\"10\" < \"2\" になる）\n- `<=>` は数値比較（10 > 2 になる）\n- `$a` と `$b` は比較する2つの値を表す特別な変数"
           }
         ],
@@ -416,12 +400,10 @@ export const perl3Data = {
         "tutorialSlides": [
           {
             "title": "reverse（リバース）とは？",
-            "image": "/illustrations/common/function_gear.png",
             "content": "# 順番をひっくり返す\n\n**reverse**（リバース＝「逆にする」）は、配列の要素を逆順にした新しいリストを返します。\n\n**たとえば：** (1, 2, 3) を reverse すると (3, 2, 1) になります。トランプの山を裏返すようなイメージです。\n\n文字列にも使えます（\"hello\" → \"olleh\"）。"
           },
           {
             "title": "reverse の使い方",
-            "image": "/illustrations/common/action_button.png",
             "content": "# reverse @配列 または reverse 文字列\n\n**このコードは何をしているの？**\n```perl\nmy @rev = reverse @arr;\nmy $str = reverse \"hello\"; # olleh\n```\n\n**解説：**\n- `reverse @arr` → 配列を逆順に\n- `reverse \"hello\"` → 文字列を逆順に（\"olleh\"）\n\n**sort と reverse を組み合わせ：**\n```perl\nmy @desc = reverse sort @arr;  # 降順\n```"
           }
         ],
@@ -465,12 +447,10 @@ export const perl3Data = {
         "tutorialSlides": [
           {
             "title": "length（レングス）とは？",
-            "image": "/illustrations/common/gear_cogs.png",
             "content": "# 文字列の長さを調べる\n\n**length**（レングス＝「長さ」）は、文字列が何文字あるかを返します。\n\n**たとえば：**\n- \"hello\" → 5文字\n- \"Perl\" → 4文字\n- \"\" → 0文字（空文字列）\n\n入力チェック（「5文字以上入力してください」など）によく使います。"
           },
           {
             "title": "length の使い方",
-            "image": "/illustrations/common/passing_value.png",
             "content": "# length(文字列)\n\n**このコードは何をしているの？**\n```perl\nmy $len = length(\"hello\");\nprint $len; # 5\n```\n\n**解説：**\n1. \"hello\" の文字数を数える\n2. 結果は 5\n3. `$len` に 5 が入る\n\n**配列の要素数を知りたいとき：**\n- 配列は `scalar(@arr)` または `@arr` を数値として使う\n- `length` は文字列専用です"
           }
         ],
