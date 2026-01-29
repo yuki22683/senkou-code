@@ -314,13 +314,13 @@ export const rustData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "fn main() {\n    // colors というベクタを作る（'あか', 'あお'の順）\n    let colors = vec![\"あか\", \"あお\"];\n    // 2番目のデータ（1番）を出す\n    println!(\"{}\", colors[1]);\n}",
-        "holeyCode": "fn main() {\n    // colors というベクタを作る（'あか', 'あお'の順）\n    let colors = vec![\"___\", \"___\"];\n    // 2番目のデータ（1番）を出す\n    println!(\"{}\", colors[___]);\n}",
+        "correctCode": "fn main() {\n    // colors というベクタを作る（'あか', 'あお'の順）\n    let colors = vec![\"あか\", \"あお\"];\n    // 2番目のデータ（インデックス1）を出す\n    println!(\"{}\", colors[1]);\n}",
+        "holeyCode": "fn main() {\n    // colors というベクタを作る（'あか', 'あお'の順）\n    let colors = vec![\"___\", \"___\"];\n    // 2番目のデータ（インデックス1）を出す\n    println!(\"{}\", colors[___]);\n}",
         "correctLines": [
           "fn main() {",
           "    // colors というベクタを作る（'あか', 'あお'の順）",
           "    let colors = vec![\"あか\", \"あお\"];",
-          "    // 2番目のデータ（1番）を出す",
+          "    // 2番目のデータ（インデックス1）を出す",
           "    println!(\"{}\", colors[1]);",
           "}"
         ],

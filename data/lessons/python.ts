@@ -315,19 +315,19 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# colors というリストを作る（'あか', 'あお'の順）\ncolors = ['あか', 'あお']\n# 2番目のデータ（1番）を出す\nprint(colors[1])",
-        "holeyCode": "# colors というリストを作る（'あか', 'あお'の順）\ncolors = ['___', '___']\n# 2番目のデータ（1番）を出す\nprint(colors[___])",
+        "correctCode": "# colors というリストを作る（'あか', 'あお'の順）\ncolors = ['あか', 'あお']\n# 2番目のデータ（インデックス1）を出す\nprint(colors[1])",
+        "holeyCode": "# colors というリストを作る（'あか', 'あお'の順）\ncolors = ['___', '___']\n# 2番目のデータ（インデックス1）を出す\nprint(colors[___])",
         "correctLines": [
           "# colors というリストを作る（'あか', 'あお'の順）",
           "colors = ['あか', 'あお']",
-          "# 2番目のデータ（1番）を出す",
+          "# 2番目のデータ（インデックス1）を出す",
           "print(colors[1])"
         ],
         "lineHints": [
           null,
           "['あか', 'あお'] と入力しましょう。",
           null,
-          "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"
+          "2番目のデータはインデックス1です。 `colors[1]` と入力してください。"
         ],
         "candidates": {
           "variables": [

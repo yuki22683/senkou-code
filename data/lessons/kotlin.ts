@@ -357,23 +357,23 @@ export const kotlinData = {
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標（もくひょう）\n\n色のリストを作って、2番目のデータを取り出しましょう。\n\n1. `colors` というリストに「あか」「あお」を入れる\n2. 2番目のデータ（番号は1）を表示する\n\n答えは「あお」になります。\n\n**注意：** 2番目のデータは `colors[1]` です（0番から数えるから）。"
+            "content": "# 目標（もくひょう）\n\n色のリストを作って、2番目のデータを取り出しましょう。\n\n1. `colors` というリストに「あか」「あお」を入れる\n2. 2番目のデータ（インデックス1）を表示する\n\n答えは「あお」になります。\n\n**注意：** 2番目のデータは `colors[1]` です（0番から数えるから）。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// colors というリストを作る（'あか', 'あお'の順）\nval colors = listOf(\"あか\", \"あお\")\n// 2番目のデータ（1番）を出す\nprintln(colors[1])",
-        "holeyCode": "// colors というリストを作る（'あか', 'あお'の順）\nval colors = listOf(\"___\", \"___\")\n// 2番目のデータ（1番）を出す\nprintln(colors[___])",
+        "correctCode": "// colors というリストを作る（'あか', 'あお'の順）\nval colors = listOf(\"あか\", \"あお\")\n// 2番目のデータ（インデックス1）を出す\nprintln(colors[1])",
+        "holeyCode": "// colors というリストを作る（'あか', 'あお'の順）\nval colors = listOf(\"___\", \"___\")\n// 2番目のデータ（インデックス1）を出す\nprintln(colors[___])",
         "correctLines": [
           "// colors というリストを作る（'あか', 'あお'の順）",
           "val colors = listOf(\"あか\", \"あお\")",
-          "// 2番目のデータ（1番）を出す",
+          "// 2番目のデータ（インデックス1）を出す",
           "println(colors[1])"
         ],
         "lineHints": [
           null,
           "listOf(\"あか\", \"あお\") と入力しましょう。",
           null,
-          "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"
+          "2番目のデータはインデックス1です。 `colors[1]` と入力してください。"
         ],
         "candidates": {
           "variables": [

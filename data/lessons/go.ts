@@ -343,7 +343,7 @@ export const goData = {
           "}"
         ],
         "lineHints": [
-          "2番目のデータの番号は 1 です。 `nums[1]` と入力してください。",
+          "2番目のデータはインデックス1です。 `nums[1]` と入力してください。",
           null,
           null,
           null,

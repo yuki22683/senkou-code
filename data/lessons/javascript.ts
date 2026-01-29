@@ -225,19 +225,19 @@ export const javascriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst colors = ['あか', 'あお'];\n// 2番目のデータ（番号は1）を出す\nconsole.log(colors[1]);",
-        "holeyCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst colors = ['___', '___'];\n// 2番目のデータ（番号は1）を出す\nconsole.log(colors[___]);",
+        "correctCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst colors = ['あか', 'あお'];\n// 2番目のデータ（インデックス1）を出す\nconsole.log(colors[1]);",
+        "holeyCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst colors = ['___', '___'];\n// 2番目のデータ（インデックス1）を出す\nconsole.log(colors[___]);",
         "correctLines": [
           "// 'あか', 'あお' の順で colors という配列を作る",
           "const colors = ['あか', 'あお'];",
-          "// 2番目のデータ（番号は1）を出す",
+          "// 2番目のデータ（インデックス1）を出す",
           "console.log(colors[1]);"
         ],
         "lineHints": [
           null,
           "['あか', 'あお'] と入力しましょう。",
           null,
-          "2番目のデータの番号は 1 です。 `colors[1]` と入力してください。"
+          "2番目のデータはインデックス1です。 `colors[1]` と入力してください。"
         ],
         "candidates": {
           "variables": [

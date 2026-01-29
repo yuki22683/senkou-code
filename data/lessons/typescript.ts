@@ -289,7 +289,7 @@ export const typescriptData = {
           null,
           "文字の配列なので `string` です。",
           null,
-          "2番目のデータの番号は 1 です。"
+          "2番目のデータはインデックス1です。"
         ],
         "candidates": {
           "variables": [
