@@ -493,14 +493,14 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに85を入れる\nscore = 85\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 and score <= 100:\n    # 結果を出力\n    print('ごうかく！')",
-        "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 ___ score <= 100:\n    # 結果を出力\n    print('___')",
+        "correctCode": "# scoreに85を入れる\nscore = 85\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 and score <= 100:\n    # 「ごうかく！」と出力\n    print('ごうかく！')",
+        "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 ___ score <= 100:\n    # 「ごうかく！」と出力\n    print('___')",
         "correctLines": [
           "# scoreに85を入れる",
           "score = 85",
           "# 80以上 かつ 100以下 ならメッセージを出す",
           "if score >= 80 and score <= 100:",
-          "    # 結果を出力",
+          "    # 「ごうかく！」と出力",
           "    print('ごうかく！')"
         ],
         "lineHints": [

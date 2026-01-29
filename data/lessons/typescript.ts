@@ -455,14 +455,14 @@ export const typescriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// scoreに85を入れる\nconst score: number = 85;\n// 80以上 かつ 100以下 ならメッセージを出す\nif (score >= 80 && score <= 100) {\n    // 結果を出力\n    console.log('ごうかく');\n}",
-        "holeyCode": "// scoreに85を入れる\nconst score: number = ___ ;\n// 80以上 かつ 100以下 ならメッセージを出す\nif (score >= 80 ___ score <= 100) {\n    // 結果を出力\n    console.log('___');\n}",
+        "correctCode": "// scoreに85を入れる\nconst score: number = 85;\n// 80以上 かつ 100以下 ならメッセージを出す\nif (score >= 80 && score <= 100) {\n    // 「ごうかく」と出力\n    console.log('ごうかく');\n}",
+        "holeyCode": "// scoreに85を入れる\nconst score: number = ___ ;\n// 80以上 かつ 100以下 ならメッセージを出す\nif (score >= 80 ___ score <= 100) {\n    // 「ごうかく」と出力\n    console.log('___');\n}",
         "correctLines": [
           "// scoreに85を入れる",
           "const score: number = 85;",
           "// 80以上 かつ 100以下 ならメッセージを出す",
           "if (score >= 80 && score <= 100) {",
-          "    // 結果を出力",
+          "    // 「ごうかく」と出力",
           "    console.log('ごうかく');",
           "}"
         ],

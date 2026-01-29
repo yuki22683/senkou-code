@@ -402,18 +402,18 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ageに10を入れる\nage = 10\n# 20歳以上かどうかで分ける\nif age >= 20\n  # 大人と表示\n  puts '大人'\n# else でそれ以外の場合\nelse\n  # それ以外の場合\n  puts '子供'\nend",
-        "holeyCode": "# ageに10を入れる\nage = ___\n# 20歳以上かどうかで分ける\nif age >= 20\n  # 大人と表示\n  puts '___'\n# else でそれ以外の場合\n___\n  # それ以外の場合\n  puts '___'\nend",
+        "correctCode": "# ageに10を入れる\nage = 10\n# 20歳以上かどうかで分ける\nif age >= 20\n  # 「大人」と表示\n  puts '大人'\n# else でそれ以外の場合\nelse\n  # 「子供」と表示\n  puts '子供'\nend",
+        "holeyCode": "# ageに10を入れる\nage = ___\n# 20歳以上かどうかで分ける\nif age >= 20\n  # 「大人」と表示\n  puts '___'\n# else でそれ以外の場合\n___\n  # 「子供」と表示\n  puts '___'\nend",
         "correctLines": [
           "# ageに10を入れる",
           "age = 10",
           "# 20歳以上かどうかで分ける",
           "if age >= 20",
-          "  # 大人と表示",
+          "  # 「大人」と表示",
           "  puts '大人'",
           "# else でそれ以外の場合",
           "else",
-          "  # それ以外の場合",
+          "  # 「子供」と表示",
           "  puts '子供'",
           "end"
         ],
@@ -466,14 +466,14 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに85を入れる\nscore = 85\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 and score <= 100\n  # 結果を表示\n  puts '合格！'\nend",
-        "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 ___ score <= 100\n  # 結果を表示\n  puts '___'\nend",
+        "correctCode": "# scoreに85を入れる\nscore = 85\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 and score <= 100\n  # 「合格！」と表示\n  puts '合格！'\nend",
+        "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 ___ score <= 100\n  # 「合格！」と表示\n  puts '___'\nend",
         "correctLines": [
           "# scoreに85を入れる",
           "score = 85",
           "# 80以上 かつ 100以下 ならメッセージを出す",
           "if score >= 80 and score <= 100",
-          "  # 結果を表示",
+          "  # 「合格！」と表示",
           "  puts '合格！'",
           "end"
         ],
