@@ -332,6 +332,17 @@ export function getTokenStyle(
   if (config.keywords.has(token)) return { color: SYNTAX_COLORS.keyword };
   if (config.builtins.has(token)) return { color: SYNTAX_COLORS.builtIn };
 
+  // Python dunder methods (__init__, __str__, etc.) - builtin color (purple)
+  if (language === 'python' && /^__\w+__$/.test(token)) {
+    return { color: SYNTAX_COLORS.builtIn };
+  }
+
+  // PHP magic methods (__construct, __destruct, __toString, etc.) - builtin color (purple)
+  // Lua metamethods (__index, __newindex, __call, __add, etc.) - builtin color (purple)
+  if ((language === 'php' || language === 'lua') && /^__\w+$/.test(token)) {
+    return { color: SYNTAX_COLORS.builtIn };
+  }
+
   // Other Brackets (not interpolation related)
   if (/^[()[\]]$/.test(token) || token === '#{' || token === '{$' || token === '\\(') {
     return { color: SYNTAX_COLORS.bracket };
