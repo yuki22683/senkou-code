@@ -106,3 +106,10 @@
 - **禁止**：`import { javaData3 } from './Java3';`
 - **正しい**：`import { javaData3 } from './java3';`
 - Windowsはファイル名の大文字小文字を区別しないが、Linux/macOSでは区別するため、ビルドエラーや本番環境でのエラーの原因になる。
+
+### 15. holeyCodeの全コード行に虫食い（___）を含める
+- `holeyCode` フィールドの**すべてのコード行**には必ず `___` を含めること。
+- コメント行と空行のみ例外。構造的な行（`{`, `}`, `end`等）も虫食いにする。
+- レッスンファイルを修正した後は必ず `node scripts/fix-holey-v2.mjs` を実行して虫食い化を確認すること。
+- **禁止**：`package main` `import "fmt"` `using System;` など、虫食いのないコード行
+- **正しい**：`package ___` `import "___"` `using ___;`
