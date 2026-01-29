@@ -284,9 +284,9 @@ export function getTokenStyle(
 
   const config = getLanguageConfig(language);
 
-  // String prefixes (f, r, b, etc.) - keyword color when followed by quote
+  // String prefixes (f, r, b, etc.) - string color when followed by quote
   if (STRING_PREFIXES.has(token) && nextToken && (nextToken.startsWith("\"") || nextToken.startsWith("'") || nextToken.startsWith("`"))) {
-    return { color: SYNTAX_COLORS.keyword };
+    return { color: SYNTAX_COLORS.string };
   }
 
   // Interpolation brackets: { } ${ in f-strings and template literals
