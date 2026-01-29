@@ -336,15 +336,15 @@ export const cppData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\n#include <vector>\n#include <string>\nint main() {\n    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\n    // 1 と入力（2番目の番号は1）\n    std::cout << fruits[1] << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\n#include <vector>\n#include <string>\nint main() {\n    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\n    // 1 と入力（2番目の番号は1）\n    std::cout << fruits[___] << std::endl;\n    return 0;\n}",
+        "correctCode": "#include <iostream>\n#include <vector>\n#include <string>\nint main() {\n    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\n    // 1 と入力（2番目のデータはインデックス1）\n    std::cout << fruits[1] << std::endl;\n    return 0;\n}",
+        "holeyCode": "#include <iostream>\n#include <vector>\n#include <string>\nint main() {\n    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\n    // 1 と入力（2番目のデータはインデックス1）\n    std::cout << fruits[___] << std::endl;\n    return 0;\n}",
         "correctLines": [
           "#include <iostream>",
           "#include <vector>",
           "#include <string>",
           "int main() {",
           "    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};",
-          "    // 1 と入力（2番目の番号は1）",
+          "    // 1 と入力（2番目のデータはインデックス1）",
           "    std::cout << fruits[1] << std::endl;",
           "    return 0;",
           "}"

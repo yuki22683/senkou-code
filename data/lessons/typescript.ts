@@ -277,12 +277,12 @@ export const typescriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 文字列のラベルがついた配列を作る\nconst colors: string[] = ['あか', 'あお'];\n// 2番目（番号は1）を出す\nconsole.log(colors[1]);",
-        "holeyCode": "// 文字列のラベルがついた配列を作る\nconst colors: ___[] = ['あか', 'あお'];\n// 2番目（番号は1）を出す\nconsole.log(colors[___]);",
+        "correctCode": "// 文字列のラベルがついた配列を作る\nconst colors: string[] = ['あか', 'あお'];\n// 2番目のデータ（インデックス1）を出す\nconsole.log(colors[1]);",
+        "holeyCode": "// 文字列のラベルがついた配列を作る\nconst colors: ___[] = ['あか', 'あお'];\n// 2番目のデータ（インデックス1）を出す\nconsole.log(colors[___]);",
         "correctLines": [
           "// 文字列のラベルがついた配列を作る",
           "const colors: string[] = ['あか', 'あお'];",
-          "// 2番目（番号は1）を出す",
+          "// 2番目のデータ（インデックス1）を出す",
           "console.log(colors[1]);"
         ],
         "lineHints": [
