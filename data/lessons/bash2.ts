@@ -68,7 +68,7 @@ export const bash2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 変数に文字列を代入\nword=\"Bash\"\n# 文字列の長さを取得する記号\necho ${#word}",
-        "holeyCode": "# 変数に文字列を代入\nword=\"___\"\n# 文字列の長さを取得する記号\necho ${#___}",
+        "holeyCode": "# 変数に文字列を代入\nword=\"___\"\n# 文字列の長さを取得する記号\necho ${___word}",
         "correctLines": [
           "# 変数に文字列を代入",
           "word=\"Bash\"",
@@ -158,7 +158,7 @@ export const bash2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 関数を定義\nadd() {\n    # 最初の引数を参照する変数\n    echo $(($1 + $2))\n}\n# 関数を呼び出す\nadd 3 5",
-        "holeyCode": "# 関数を定義\n___() {\n    # 最初の引数を参照する変数\n    echo $(($___ + $2))\n___\n# 関数を呼び出す\nadd ___ 5",
+        "holeyCode": "# 関数を定義\n___() {\n    # 最初の引数を参照する変数\n    echo $((___ + $2))\n}\n# 関数を呼び出す\nadd ___ 5",
         "correctLines": [
           "# 関数を定義",
           "add() {",
@@ -210,7 +210,7 @@ export const bash2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 関数を定義\nsquare() {\n    # 引数を2乗する\n    echo $(($1 * $1))\n}\n# コマンドの出力を取得する構文\nresult=$(square 4)\n# 結果を表示\necho $result",
-        "holeyCode": "# 関数を定義\n___() {\n    # 引数を2乗する\n    echo $(($___ * # 関数を定義\n___() {\n    # 引数を2乗する\n    echo $(($1 * _____))\n}\n# コマンドの出力を取得する構文\nresult=___(square 4)\n# 結果を表示\necho $___))\n___\n# コマンドの出力を取得する構文\nresult=$(square ___)\n# 結果を表示\necho ___",
+        "holeyCode": "# 関数を定義\n___() {\n    # 引数を2乗する\n    echo $(($1 * ___))\n___\n# コマンドの出力を取得する構文\nresult=$(___ ___)\n# 結果を表示\necho ___",
         "correctLines": [
           "# 関数を定義",
           "square() {",
@@ -267,7 +267,7 @@ export const bash2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 変数を初期化\ni=1\n# 条件が真の間繰り返すキーワード\nwhile [ $i -le 3 ]; do\n    # 変数を表示\n    echo $i\n    # 変数をインクリメント\n    i=$((i + 1))\ndone",
-        "holeyCode": "# 変数を初期化\ni=___\n# 条件が真の間繰り返すキーワード\nwhile [ $i -le ___ ]; do\n    # 変数を表示\n    echo ___\n    # 変数をインクリメント\n    i=$((i + ___))\n___",
+        "holeyCode": "# 変数を初期化\ni=___\n# 条件が真の間繰り返すキーワード\n___ [ $i -le 3 ]; do\n    # 変数を表示\n    echo $___\n    # 変数をインクリメント\n    i=$((___ + 1))\ndone",
         "correctLines": [
           "# 変数を初期化",
           "i=1",
@@ -323,7 +323,7 @@ export const bash2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 変数に値を代入\nfruit=\"apple\"\n# パターンマッチで分岐するキーワード\ncase $fruit in\n    # appleの場合\n    apple) echo \"red\";;\n    # bananaの場合\n    banana) echo \"yellow\";;\n    # その他の場合\n    *) echo \"unknown\";;\nesac",
-        "holeyCode": "# 変数に値を代入\nfruit=\"___\"\n# パターンマッチで分岐するキーワード\ncase $fruit ___\n    # appleの場合\n    apple) echo \"___\";;\n    # bananaの場合\n    banana) echo \"___\";;\n    # その他の場合\n    *) echo \"___\";;\n___",
+        "holeyCode": "# 変数に値を代入\nfruit=\"___\"\n# パターンマッチで分岐するキーワード\n___ $fruit in\n    # appleの場合\n    apple) echo \"___\";;\n    # bananaの場合\n    banana) echo \"yellow\";;\n    # その他の場合\n    *) echo \"___\";;\nesac",
         "correctLines": [
           "# 変数に値を代入",
           "fruit=\"apple\"",
@@ -384,7 +384,7 @@ export const bash2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# コマンドの出力を変数に格納する構文\nfiles=$(echo \"test\")\n# 変数を表示\necho \"Files: $files\"",
-        "holeyCode": "# コマンドの出力を変数に格納する構文\nfiles=$(echo \"___\")\n# 変数を表示\necho \"___\"",
+        "holeyCode": "# コマンドの出力を変数に格納する構文\nfiles=___(___)\n# 変数を表示\necho \"Files: $___\"",
         "correctLines": [
           "# コマンドの出力を変数に格納する構文",
           "files=$(echo \"test\")",
@@ -430,7 +430,7 @@ export const bash2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 標準入力を変数に読み込むコマンド\necho \"input:\" && read val && echo \"You entered: $val\"",
-        "holeyCode": "# 標準入力を変数に読み込むコマンド\necho \"___\" && read val && echo \"You entered: $val\"",
+        "holeyCode": "# 標準入力を変数に読み込むコマンド\necho \"input:\" && ___ val && echo \"You entered: $val\"",
         "correctLines": [
           "# 標準入力を変数に読み込むコマンド",
           "echo \"input:\" && read val && echo \"You entered: $val\""
@@ -468,7 +468,7 @@ export const bash2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# ヒアドキュメントを開始する演算子\ncat <<END\n# 1行目のテキストを入力\nHello\n# 2行目のテキストを入力\nWorld\nEND",
-        "holeyCode": "# ヒアドキュメントを開始する演算子\ncat <<___\n# 1行目のテキストを入力\n___\n# 2行目のテキストを入力\n___\n___",
+        "holeyCode": "# ヒアドキュメントを開始する演算子\ncat ___END\n# 1行目のテキストを入力\n___\n# 2行目のテキストを入力\n___\nEND",
         "correctLines": [
           "# ヒアドキュメントを開始する演算子",
           "cat <<END",
