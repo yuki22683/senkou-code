@@ -67,13 +67,13 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\n  // x というはこに 10 を入れる\n  $x = 10;\n  // 中身を表示する\n  echo $x;\n?>",
-        "holeyCode": "<?php\n  // x というはこに 10 を入れる\n  $x = ___ ;\n  // 中身を表示する\n  echo $___ ;\n?>",
+        "correctCode": "<?php\n  // x というはこに 10 を入れる\n  $x = 10;\n  // $x の中身を表示する\n  echo $x;\n?>",
+        "holeyCode": "<?php\n  // x というはこに 10 を入れる\n  $x = ___ ;\n  // $x の中身を表示する\n  echo $___ ;\n?>",
         "correctLines": [
           "<?php",
           "  // x というはこに 10 を入れる",
           "  $x = 10;",
-          "  // 中身を表示する",
+          "  // $x の中身を表示する",
           "  echo $x;",
           "?>"
         ],
@@ -271,13 +271,13 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\n  // ageに20を入れる\n  $age = 20;\n  // 文章の中に中身を表示する\n  echo \"I am $age years old.\";\n?>",
-        "holeyCode": "<?php\n  // ageに20を入れる\n  $age = 20;\n  // 文章の中に中身を表示する\n  echo \"I am $___ years old.\";\n?>",
+        "correctCode": "<?php\n  // ageに20を入れる\n  $age = 20;\n  // $ageを文章に埋め込んで表示する\n  echo \"I am $age years old.\";\n?>",
+        "holeyCode": "<?php\n  // ageに20を入れる\n  $age = 20;\n  // $ageを文章に埋め込んで表示する\n  echo \"I am $___ years old.\";\n?>",
         "correctLines": [
           "<?php",
           "  // ageに20を入れる",
           "  $age = 20;",
-          "  // 文章の中に中身を表示する",
+          "  // $ageを文章に埋め込んで表示する",
           "  echo \"I am $age years old.\";",
           "?>"
         ],
