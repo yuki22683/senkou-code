@@ -377,15 +377,15 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// scoreに100を入れる\nint score = 100;\n// もし80より大きかったら\nif (score > 80)\n{\n    // メッセージを表示する\n    Console.WriteLine(\"合格！\");\n}",
-        "holeyCode": "// scoreに100を入れる\nint score = ___i\n// もし80より大きかったら\n___ (score > 80)\n{\n    // メッセージを表示する\n    Console.WriteLine(\"___\");\n}",
+        "correctCode": "// scoreに100を入れる\nint score = 100;\n// もし80より大きかったら\nif (score > 80)\n{\n    // 「合格！」と表示する\n    Console.WriteLine(\"合格！\");\n}",
+        "holeyCode": "// scoreに100を入れる\nint score = ___i\n// もし80より大きかったら\n___ (score > 80)\n{\n    // 「合格！」と表示する\n    Console.WriteLine(\"___\");\n}",
         "correctLines": [
           "// scoreに100を入れる",
           "int score = 100;",
           "// もし80より大きかったら",
           "if (score > 80)",
           "{",
-          "    // メッセージを表示する",
+          "    // 「合格！」と表示する",
           "    Console.WriteLine(\"合格！\");",
           "}"
         ],

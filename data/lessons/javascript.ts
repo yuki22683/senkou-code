@@ -277,14 +277,14 @@ export const javascriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// score に 100 を入れる\nconst score = 100;\n// もし 80 より大きかったら\nif (score > 80) {\n    // メッセージを表示する\n    console.log('ごうかく！');\n}",
-        "holeyCode": "// score に 100 を入れる\nconst score = ___ ;\n// もし 80 より大きかったら\nif (score ___ 80) {\n    // メッセージを表示する\n    console.log('___');\n}",
+        "correctCode": "// score に 100 を入れる\nconst score = 100;\n// もし 80 より大きかったら\nif (score > 80) {\n    // 「ごうかく！」と表示する\n    console.log('ごうかく！');\n}",
+        "holeyCode": "// score に 100 を入れる\nconst score = ___ ;\n// もし 80 より大きかったら\nif (score ___ 80) {\n    // 「ごうかく！」と表示する\n    console.log('___');\n}",
         "correctLines": [
           "// score に 100 を入れる",
           "const score = 100;",
           "// もし 80 より大きかったら",
           "if (score > 80) {",
-          "    // メッセージを表示する",
+          "    // 「ごうかく！」と表示する",
           "    console.log('ごうかく！');",
           "}"
         ],

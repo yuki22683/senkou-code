@@ -81,12 +81,12 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# デフォルト引数を持つ関数\ndef say_hi(name='World'):\n    # メッセージを表示\n    print(f'Hi, {name}!')\n\n# 引数なしで呼び出す\nsay_hi()",
-        "holeyCode": "# デフォルト引数を持つ関数\ndef say_hi(name=___):\n    # メッセージを表示\n    print(f'Hi, {___}!')\n\n# 引数なしで呼び出す\n___()",
+        "correctCode": "# デフォルト引数を持つ関数\ndef say_hi(name='World'):\n    # 「Hi, 名前!」の形式で表示\n    print(f'Hi, {name}!')\n\n# 引数なしで呼び出す\nsay_hi()",
+        "holeyCode": "# デフォルト引数を持つ関数\ndef say_hi(name=___):\n    # 「Hi, 名前!」の形式で表示\n    print(f'Hi, {___}!')\n\n# 引数なしで呼び出す\n___()",
         "correctLines": [
           "# デフォルト引数を持つ関数",
           "def say_hi(name='World'):",
-          "    # メッセージを表示",
+          "    # 「Hi, 名前!」の形式で表示",
           "    print(f'Hi, {name}!')",
           "",
           "# 引数なしで呼び出す",

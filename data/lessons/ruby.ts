@@ -347,14 +347,14 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに100を入れる\nscore = 100\n# もし80より大きかったら\nif score > 80\n  # メッセージを表示する\n  puts '合格！'\nend",
-        "holeyCode": "# scoreに100を入れる\nscore = ___\n# もし80より大きかったら\n___ score > 80\n  # メッセージを表示する\n  puts '___'\nend",
+        "correctCode": "# scoreに100を入れる\nscore = 100\n# もし80より大きかったら\nif score > 80\n  # 「合格！」と表示する\n  puts '合格！'\nend",
+        "holeyCode": "# scoreに100を入れる\nscore = ___\n# もし80より大きかったら\n___ score > 80\n  # 「合格！」と表示する\n  puts '___'\nend",
         "correctLines": [
           "# scoreに100を入れる",
           "score = 100",
           "# もし80より大きかったら",
           "if score > 80",
-          "  # メッセージを表示する",
+          "  # 「合格！」と表示する",
           "  puts '合格！'",
           "end"
         ],
