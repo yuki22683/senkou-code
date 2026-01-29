@@ -284,6 +284,16 @@ export function getTokenStyle(
 
   const config = getLanguageConfig(language);
 
+  // Comment - check FIRST to avoid matching comments ending with quotes as strings
+  // e.g., "# => 'ell'" should be comment, not string
+  const isComment = token.startsWith(config.commentPrefix) ||
+                    token.startsWith("//") ||
+                    token.startsWith("/*") ||
+                    token.startsWith("--") ||
+                    token.startsWith("{-") ||
+                    token.startsWith(";");
+  if (isComment) return { color: SYNTAX_COLORS.comment };
+
   // String prefixes (f, r, b, etc.) - string color when followed by quote
   if (STRING_PREFIXES.has(token) && nextToken && (nextToken.startsWith("\"") || nextToken.startsWith("'") || nextToken.startsWith("`"))) {
     return { color: SYNTAX_COLORS.string };
@@ -311,15 +321,6 @@ export function getTokenStyle(
   if (prevIsClosingBrace && nextIsOpeningBrace) {
     return { color: SYNTAX_COLORS.string };
   }
-
-  // Comment
-  const isComment = token.startsWith(config.commentPrefix) ||
-                    token.startsWith("//") ||
-                    token.startsWith("/*") ||
-                    token.startsWith("--") ||
-                    token.startsWith("{-") ||
-                    token.startsWith(";");
-  if (isComment) return { color: SYNTAX_COLORS.comment };
 
   // Decorator
   if (token.startsWith("@")) return { color: SYNTAX_COLORS.decorator };
