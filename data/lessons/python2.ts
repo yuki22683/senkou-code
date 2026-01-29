@@ -23,7 +23,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 名前を受け取ってあいさつする関数\ndef hello(name):\n    # f'Hello, {name}!'を出力\n    print(f'Hello, {name}!')\n\n# 関数を'Python'を渡して呼び出す\nhello('Python')",
-        "holeyCode": "# 名前を受け取ってあいさつする関数\ndef hello(___):\n    # f'Hello, {name}!'を出力\n    print(f'Hello, {___}!')\n\n# 関数を'Python'を渡して呼び出す\n___",
+        "holeyCode": "# 名前を受け取ってあいさつする関数\ndef ___(name):\n    # f'Hello, {name}!'を出力\n    ___(f'Hello, {name}!')\n\n# 関数を'Python'を渡して呼び出す\nhello('___')",
         "correctLines": [
           "# 名前を受け取ってあいさつする関数",
           "def hello(name):",
@@ -82,7 +82,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# デフォルト引数を持つ関数\ndef say_hi(name='World'):\n    # 「Hi, 名前!」の形式で表示\n    print(f'Hi, {name}!')\n\n# 引数なしで呼び出す\nsay_hi()",
-        "holeyCode": "# デフォルト引数を持つ関数\ndef say_hi(name=___):\n    # 「Hi, 名前!」の形式で表示\n    print(f'Hi, {___}!')\n\n# 引数なしで呼び出す\n___()",
+        "holeyCode": "# デフォルト引数を持つ関数\ndef ___(name='World'):\n    # 「Hi, 名前!」の形式で表示\n    ___(f'Hi, {name}!')\n\n# 引数なしで呼び出す\n___()",
         "correctLines": [
           "# デフォルト引数を持つ関数",
           "def say_hi(name='World'):",
@@ -137,7 +137,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 2つの数を足して返す関数\ndef add(a, b):\n    # 計算結果をreturnで返す\n    return a + b\n\n# 結果を変数に入れて表示（引数は10と20）\nresult = add(10, 20)\n# resultを表示\nprint(result)",
-        "holeyCode": "# 2つの数を足して返す関数\ndef add(a, b):\n    # 計算結果をreturnで返す\n    ___ a + b\n\n# 結果を変数に入れて表示（引数は10と20）\nresult = add(___, ___)\n# resultを表示\nprint(___)",
+        "holeyCode": "# 2つの数を足して返す関数\ndef ___(a, b):\n    # 計算結果をreturnで返す\n    return a + ___\n\n# 結果を変数に入れて表示（引数は10と20）\nresult = add(___, 20)\n# resultを表示\n___(result)",
         "correctLines": [
           "# 2つの数を足して返す関数",
           "def add(a, b):",
@@ -198,7 +198,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 2つの値を返す関数\ndef calc(x):\n    # x+1 と x*2 を返す\n    return x + 1, x * 2\n\n# 2つの変数で受け取る（引数は5）\na, b = calc(5)\n# aを表示\nprint(a)\n# bを表示\nprint(b)",
-        "holeyCode": "# 2つの値を返す関数\ndef calc(x):\n    # x+1 と x*2 を返す\n    return x + 1, x ___ 2\n\n# 2つの変数で受け取る（引数は5）\na, b = calc(___)\n# aを表示\nprint(___)\n# bを表示\nprint(___)",
+        "holeyCode": "# 2つの値を返す関数\ndef ___(x):\n    # x+1 と x*2 を返す\n    return x + ___, x * 2\n\n# 2つの変数で受け取る（引数は5）\na, b = calc(___)\n# aを表示\n___(a)\n# bを表示\n___(b)",
         "correctLines": [
           "# 2つの値を返す関数",
           "def calc(x):",
@@ -262,7 +262,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 文字列を用意（'Programming'）\nword = 'Programming'\n# 最初の4文字（0から4の手前まで）を取り出す\nprint(word[0:4])",
-        "holeyCode": "# 文字列を用意（'Programming'）\nword = '___'\n# 最初の4文字（0から4の手前まで）を取り出す\nprint(word[___:___])",
+        "holeyCode": "# 文字列を用意（'Programming'）\nword = '___'\n# 最初の4文字（0から4の手前まで）を取り出す\n___(word[0:4])",
         "correctLines": [
           "# 文字列を用意（'Programming'）",
           "word = 'Programming'",
@@ -310,7 +310,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 1から5までの数を順番に表示\nfor i in range(1, 6):\n    # 変数iを出力\n    print(i)",
-        "holeyCode": "# 1から5までの数を順番に表示\nfor i in ___(1, 6):\n    # 変数iを出力\n    print(___)",
+        "holeyCode": "# 1から5までの数を順番に表示\nfor i in range(___, 6):\n    # 変数iを出力\n    ___(i)",
         "correctLines": [
           "# 1から5までの数を順番に表示",
           "for i in range(1, 6):",
@@ -357,7 +357,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 初期値を設定\ntotal = 0\n# totalに10を足す\ntotal += 10\n# totalに5を足す\ntotal += 5\n# 結果を表示\nprint(total)",
-        "holeyCode": "# 初期値を設定\ntotal = 0\n# totalに10を足す\ntotal ___ 10\n# totalに5を足す\ntotal ___ 5\n# 結果を表示\nprint(total)",
+        "holeyCode": "# 初期値を設定\ntotal = ___\n# totalに10を足す\ntotal += ___\n# totalに5を足す\ntotal += ___\n# 結果を表示\n___(total)",
         "correctLines": [
           "# 初期値を設定",
           "total = 0",
@@ -410,7 +410,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 10を3で割った余りを計算\nremainder = 10 % 3\n# 結果を表示\nprint(remainder)",
-        "holeyCode": "# 10を3で割った余りを計算\nremainder = 10 ___ 3\n# 結果を表示\nprint(remainder)",
+        "holeyCode": "# 10を3で割った余りを計算\nremainder = ___ % 3\n# 結果を表示\n___(remainder)",
         "correctLines": [
           "# 10を3で割った余りを計算",
           "remainder = 10 % 3",
@@ -455,7 +455,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 年齢を設定\nage = 25\n# 20以上かつ30未満かどうか判定\nif age >= 20 and age < 30:\n    print('20代です')",
-        "holeyCode": "# 年齢を設定\nage = 25\n# 20以上かつ30未満かどうか判定\nif age >= 20 ___ age < 30:\n    print('20代です')",
+        "holeyCode": "# 年齢を設定\nage = ___\n# 20以上かつ30未満かどうか判定\nif age ___ 20 and age < 30:\n    ___('20代です')",
         "correctLines": [
           "# 年齢を設定",
           "age = 25",
@@ -501,7 +501,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 1から5までの数を2倍にしたリストを作る\ndoubled = [x * 2 for x in range(1, 6)]\nprint(doubled)",
-        "holeyCode": "# 1から5までの数を2倍にしたリストを作る\ndoubled = [x * 2 ___ x in range(1, 6)]\nprint(doubled)",
+        "holeyCode": "# 1から5までの数を2倍にしたリストを作る\ndoubled = [x * ___ for x in range(1, 6)]\n___(doubled)",
         "correctLines": [
           "# 1から5までの数を2倍にしたリストを作る",
           "doubled = [x * 2 for x in range(1, 6)]",
@@ -543,7 +543,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 1から10で3の倍数だけを集める\nmultiples = [n for n in range(1, 11) if n % 3 == 0]\nprint(multiples)",
-        "holeyCode": "# 1から10で3の倍数だけを集める\nmultiples = [n for n in range(1, 11) ___ n % 3 == 0]\nprint(multiples)",
+        "holeyCode": "# 1から10で3の倍数だけを集める\nmultiples = [n for n in range(___, 11) if n % 3 == 0]\n___(multiples)",
         "correctLines": [
           "# 1から10で3の倍数だけを集める",
           "multiples = [n for n in range(1, 11) if n % 3 == 0]",
@@ -585,7 +585,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# エラーが起きる可能性のある処理\ntry:\n    # 文字列'abc'を数値に変換（エラー発生）\n    num = int('abc')\n# 例外をキャッチするキーワード\nexcept:\n    # エラーメッセージ（'Error'）\n    print('Error')",
-        "holeyCode": "# エラーが起きる可能性のある処理\n___:\n    # 文字列'abc'を数値に変換（エラー発生）\n    num = int('___')\n# 例外をキャッチするキーワード\n___:\n    # エラーメッセージ（'Error'）\n    print('___')",
+        "holeyCode": "# エラーが起きる可能性のある処理\n___:\n    # 文字列'abc'を数値に変換（エラー発生）\n    num = int('___')\n# 例外をキャッチするキーワード\n___:\n    # エラーメッセージ（'Error'）\n    ___('Error')",
         "correctLines": [
           "# エラーが起きる可能性のある処理",
           "try:",
@@ -641,7 +641,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# Catクラスを定義\nclass Cat:\n    # メソッドの第一引数はself\n    def meow(self):\n        # メッセージ（'Meow!'）\n        print('Meow!')\n\n# インスタンスを作って呼び出す\ncat = Cat()\n# meowメソッドを呼び出す\ncat.meow()",
-        "holeyCode": "# Catクラスを定義\nclass ___:\n    # メソッドの第一引数はself\n    def meow(___):\n        # メッセージ（'Meow!'）\n        print('___')\n\n# インスタンスを作って呼び出す\ncat = ___()\n# meowメソッドを呼び出す\ncat.___()",
+        "holeyCode": "# Catクラスを定義\nclass ___:\n    # メソッドの第一引数はself\n    def ___(self):\n        # メッセージ（'Meow!'）\n        ___('Meow!')\n\n# インスタンスを作って呼び出す\ncat = ___()\n# meowメソッドを呼び出す\ncat.___()",
         "correctLines": [
           "# Catクラスを定義",
           "class Cat:",
@@ -707,7 +707,7 @@ export const pythonData2 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# Robotクラスを定義\nclass Robot:\n    # コンストラクタを定義\n    def __init__(self, name):\n        # selfを使って属性を保存\n        self.name = name\n    \n    def say_name(self):\n        # self.nameを表示\n        print(self.name)\n\n# インスタンスを作る（名前は'R2D2'）\nr = Robot('R2D2')\n# say_nameメソッドを呼び出す\nr.say_name()",
-        "holeyCode": "# Robotクラスを定義\nclass ___:\n    # コンストラクタを定義\n    def ___(self, name):\n        # selfを使って属性を保存\n        ___.name = name\n    \n    def say_name(self):\n        # self.nameを表示\n        print(self.___)\n\n# インスタンスを作る（名前は'R2D2'）\nr = Robot('___')\n# say_nameメソッドを呼び出す\nr.___()",
+        "holeyCode": "# Robotクラスを定義\nclass ___:\n    # コンストラクタを定義\n    def ___(self, name):\n        # selfを使って属性を保存\n        self.___ = name\n    \n    def ___(self):\n        # self.nameを表示\n        ___(self.name)\n\n# インスタンスを作る（名前は'R2D2'）\nr = Robot('R___D2')\n# say_nameメソッドを呼び出す\nr.___()",
         "correctLines": [
           "# Robotクラスを定義",
           "class Robot:",

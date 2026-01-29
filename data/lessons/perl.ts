@@ -31,7 +31,7 @@ export const perlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# printで出力\\nprint \"Hello, World!\\n\";",
-        "holeyCode": "# printで出力\n___ \"Hello, World!\\n\";",
+        "holeyCode": "# printで出力\\\n___ \"Hello, World!\\\n\";",
         "correctLines": [
           "# printで出力",
           "print \"Hello, World!",
@@ -78,7 +78,7 @@ export const perlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 変数に文字を入れる\\nmy $message = \"Perl\";\\nprint \"$message\\n\";",
-        "holeyCode": "# 変数に文字を入れる\n___ $message = \"Perl\";\nprint \"$message\\n\";",
+        "holeyCode": "# 変数に文字を入れる\\\nmy $___ = \"Perl\";\\\n___ \"$message\\\n\";",
         "correctLines": [
           "# 変数に文字を入れる",
           "my $message = \"Perl\";",
@@ -127,7 +127,7 @@ export const perlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 足し算する\\nmy $a = 7;\\nmy $b = 3;\\n# 2つの変数を足し算する\\nmy $sum = $a + $b;\\nprint \"$sum\\n\";",
-        "holeyCode": "# 足し算する\nmy $a = 7;\nmy $b = 3;\n# 2つの変数を足し算する\nmy $sum = $a ___ $b;\nprint \"$sum\\n\";",
+        "holeyCode": "# 足し算する\\\nmy $___ = 7;\\\nmy $___ = 3;\\\n# 2つの変数を足し算する\\\nmy $___ = $a + $b;\\\n___ \"$sum\\\n\";",
         "correctLines": [
           "# 足し算する",
           "my $a = 7;",
@@ -182,7 +182,7 @@ export const perlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 文字をつなげる\\nmy $greeting = \"Hello, \" . \"Perl!\";\\nprint \"$greeting\\n\";",
-        "holeyCode": "# 文字をつなげる\nmy $greeting = \"Hello, \" ___ \"Perl!\";\nprint \"$greeting\\n\";",
+        "holeyCode": "# 文字をつなげる\\\nmy $___ = \"Hello, \" . \"Perl!\";\\\n___ \"$greeting\\\n\";",
         "correctLines": [
           "# 文字をつなげる",
           "my $greeting = \"Hello, \" . \"Perl!\";",
@@ -231,7 +231,7 @@ export const perlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 配列を作る\\nmy @fruits = (\"りんご\", \"みかん\", \"ぶどう\");\\nprint \"$fruits[0]\\n\";",
-        "holeyCode": "# 配列を作る\nmy ___ = (\"りんご\", \"みかん\", \"ぶどう\");\nprint \"$fruits[0]\\n\";",
+        "holeyCode": "# 配列を作る\\\nmy @___ = (\"りんご\", \"みかん\", \"ぶどう\");\\\n___ \"$fruits[0]\\\n\";",
         "correctLines": [
           "# 配列を作る",
           "my @fruits = (\"りんご\", \"みかん\", \"ぶどう\");",
@@ -280,7 +280,7 @@ export const perlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 条件分岐\\nmy $score = 100;\\n# もしスコアが100なら\\nif ($score == 100) {\\n  print \"満点！\\n\";\\n}",
-        "holeyCode": "# 条件分岐\nmy $score = 100;\n# もしスコアが100なら\n___ ($score == 100) {\n  print \"満点！\\n\";\n}",
+        "holeyCode": "# 条件分岐\\\nmy $___ = 100;\\\n# もしスコアが100なら\\\nif ($score ___ == ___) {\\\n  ___ \"満点！\\\n\";\\\n___",
         "correctLines": [
           "# 条件分岐",
           "my $score = 100;",
@@ -335,7 +335,7 @@ export const perlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# if-else\\nmy $num = 5;\\nif ($num >= 10) {\\n  print \"大きい\\n\";\\n# そうでなければ\\n} else {\\n  print \"小さい\\n\";\\n}",
-        "holeyCode": "# if-else\nmy $num = 5;\nif ($num >= 10) {\n  print \"大きい\\n\";\n# そうでなければ\n} ___ {\n  print \"小さい\\n\";\n}",
+        "holeyCode": "# if-else\\\nmy $___ = 5;\\\nif ($num ___ >= ___) {\\\n  ___ \"大きい\\\n\";\\\n# そうでなければ\\\n} ___ {\\\n  ___ \"小さい\\\n\";\\\n___",
         "correctLines": [
           "# if-else",
           "my $num = 5;",
@@ -396,7 +396,7 @@ export const perlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 配列をループ\\nmy @animals = (\"犬\", \"猫\", \"鳥\");\\n# 配列の各要素について繰り返す\\nforeach my $animal (@animals) {\\n  print \"$animal\\n\";\\n}",
-        "holeyCode": "# 配列をループ\nmy @animals = (\"犬\", \"猫\", \"鳥\");\n# 配列の各要素について繰り返す\n___ my $animal (@animals) {\n  print \"$animal\\n\";\n}",
+        "holeyCode": "# 配列をループ\\\nmy @___ = (\"犬\", \"猫\", \"鳥\");\\\n# 配列の各要素について繰り返す\\\nforeach my $animal (@___) {\\\n  ___ \"$animal\\\n\";\\\n___",
         "correctLines": [
           "# 配列をループ",
           "my @animals = (\"犬\", \"猫\", \"鳥\");",
@@ -451,7 +451,7 @@ export const perlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# ハッシュを作る\\nmy %fruit = (\"color\" => \"赤\");\\nprint \"$fruit{color}\\n\";",
-        "holeyCode": "# ハッシュを作る\nmy ___ = (\"color\" => \"赤\");\nprint \"$fruit{color}\\n\";",
+        "holeyCode": "# ハッシュを作る\\\nmy %fruit = (\"___\" => \"赤\");\\\n___ \"$fruit{color}\\\n\";",
         "correctLines": [
           "# ハッシュを作る",
           "my %fruit = (\"color\" => \"赤\");",
@@ -500,7 +500,7 @@ export const perlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# サブルーチンを定義\\nsub welcome {\\n  print \"Welcome!\\n\";\\n}\\n\\n# 呼び出し\\nwelcome();",
-        "holeyCode": "# サブルーチンを定義\n___ welcome {\n  print \"Welcome!\\n\";\n}\n\n# 呼び出し\nwelcome();",
+        "holeyCode": "# サブルーチンを定義\\\nsub ___ {\\\n  ___ \"Welcome!\\\n\";\\\n___\\\n\\ ___\n# 呼び出し\\\n___();",
         "correctLines": [
           "# サブルーチンを定義",
           "sub welcome {",

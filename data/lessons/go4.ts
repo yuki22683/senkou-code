@@ -23,7 +23,7 @@ export const go4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\n\nimport (\n    \"fmt\"\n    \"sync\"\n)\n\nfunc main() {\n    var mu sync.Mutex\n    count := 0\n    \n    // Lock でロックを取得\n    mu.Lock()\n    count++\n    // Unlock でロックを解放\n    mu.Unlock()\n    \n    fmt.Println(count)\n}",
-        "holeyCode": "package main\n\nimport (\n    \"fmt\"\n    \"sync\"\n)\n\nfunc main() {\n    var mu sync.Mutex\n    count := 0\n    \n    // Lock でロックを取得\n    mu.___()\n    count++\n    // Unlock でロックを解放\n    mu.___()\n    \n    fmt.Println(count)\n}",
+        "holeyCode": "package ___\n\nimport ___\n    \\\"___\\\"\n    \"___\"\n___\n\nfunc ___ () {\n    var mu sync.___\n    ___ := 0\n    \n    // Lock でロックを取得\n    mu.___()\n    ___++\n    // Unlock でロックを解放\n    mu.___()\n    \n    fmt.___(count)\n___",
         "correctLines": [
           "package main",
           "",
@@ -100,7 +100,7 @@ export const go4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\n\nimport (\n    \"fmt\"\n    \"sync\"\n)\n\nfunc main() {\n    var wg sync.WaitGroup\n    // Add でカウンタを増やす\n    wg.Add(1)\n    \n    go func() {\n        // Done でカウンタを減らす\n        defer wg.Done()\n        fmt.Println(\"goroutine\")\n    }()\n    \n    // Wait でカウンタが0になるまで待つ\n    wg.Wait()\n    fmt.Println(\"done\")\n}",
-        "holeyCode": "package main\n\nimport (\n    \"fmt\"\n    \"sync\"\n)\n\nfunc main() {\n    var wg sync.WaitGroup\n    // Add でカウンタを増やす\n    wg.___(1)\n    \n    go func() {\n        // Done でカウンタを減らす\n        defer wg.___()\n        fmt.Println(\"goroutine\")\n    }()\n    \n    // Wait でカウンタが0になるまで待つ\n    wg.___()\n    fmt.Println(\"done\")\n}",
+        "holeyCode": "package ___\n\nimport ___\n    \\\"___\\\"\n    \"___\"\n___\n\nfunc ___ () {\n    var wg sync.___\n    // Add でカウンタを増やす\n    wg.Add(___)\n    \n    go ___() {\n        // Done でカウンタを減らす\n        defer wg.___()\n        fmt.___(\"goroutine\")\n    ___()\n    \n    // Wait でカウンタが0になるまで待つ\n    wg.___()\n    fmt.___(\"done\")\n___",
         "correctLines": [
           "package main",
           "",
@@ -184,7 +184,7 @@ export const go4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n)\n\nfunc main() {\n    // Background でルートコンテキストを作成\n    ctx := context.Background()\n    // Err でエラーを取得\n    fmt.Println(ctx.Err())\n}",
-        "holeyCode": "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n)\n\nfunc main() {\n    // Background でルートコンテキストを作成\n    ctx := context.___()\n    // Err でエラーを取得\n    fmt.Println(ctx.___())\n}",
+        "holeyCode": "package ___\n\nimport ___\n    \"___\"\n    \\\"___\\\"\n___\n\nfunc ___ () {\n    // Background でルートコンテキストを作成\n    ___ := context.Background()\n    // Err でエラーを取得\n    fmt.___(ctx.Err())\n___",
         "correctLines": [
           "package main",
           "",
@@ -249,7 +249,7 @@ export const go4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n)\n\nfunc main() {\n    // WithCancel でキャンセル可能に\n    ctx, cancel := context.WithCancel(context.Background())\n    // cancel でキャンセル\n    cancel()\n    fmt.Println(ctx.Err())\n}",
-        "holeyCode": "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n)\n\nfunc main() {\n    // WithCancel でキャンセル可能に\n    ctx, cancel := context.___(context.Background())\n    // cancel でキャンセル\n    ___()\n    fmt.Println(ctx.Err())\n}",
+        "holeyCode": "package ___\n\nimport ___\n    \"___\"\n    \\\"___\\\"\n___\n\nfunc ___ () {\n    // WithCancel でキャンセル可能に\n    ctx, cancel := context.WithCancel(context.___())\n    // cancel でキャンセル\n    ___()\n    fmt.___(ctx.Err())\n___",
         "correctLines": [
           "package main",
           "",
@@ -316,7 +316,7 @@ export const go4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\n\nimport (\n    \"fmt\"\n    \"time\"\n)\n\nfunc main() {\n    // Millisecond でミリ秒を表す\n    d := 500 * time.Millisecond\n    fmt.Println(d)\n}",
-        "holeyCode": "package main\n\nimport (\n    \"fmt\"\n    \"time\"\n)\n\nfunc main() {\n    // Millisecond でミリ秒を表す\n    d := 500 * time.___\n    fmt.Println(d)\n}",
+        "holeyCode": "package ___\n\nimport ___\n    \\\"___\\\"\n    \\\"___\\\"\n___\n\nfunc ___ () {\n    // Millisecond でミリ秒を表す\n    ___ := 500 * time.Millisecond\n    fmt.___(d)\n___",
         "correctLines": [
           "package main",
           "",
@@ -376,7 +376,7 @@ export const go4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\n\nimport (\n    \"encoding/json\"\n    \"fmt\"\n)\n\ntype Item struct {\n    Name string `json:\"name\"`\n}\n\nfunc main() {\n    // \"Apple\" で構造体を初期化\n    item := Item{Name: \"Apple\"}\n    // Marshal で JSON に変換\n    data, _ := json.Marshal(item)\n    fmt.Println(string(data))\n}",
-        "holeyCode": "package main\n\nimport (\n    \"encoding/json\"\n    \"fmt\"\n)\n\ntype Item struct {\n    Name string `json:\"name\"`\n}\n\nfunc main() {\n    // \"Apple\" で構造体を初期化\n    item := Item{Name: ___}\n    // Marshal で JSON に変換\n    data, _ := json.___(item)\n    fmt.Println(string(data))\n}",
+        "holeyCode": "package ___\n\nimport ___\n    \"___\"\n    \\\"___\\\"\n___\n\ntype Item ___ {\n    Name string `json:\"___\"`\n___\n\nfunc ___ () {\n    // \"Apple\" で構造体を初期化\n    ___ := Item{Name: \"Apple\"}\n    // Marshal で JSON に変換\n    data, _ := json.Marshal(___)\n    fmt.___(string(data))\n___",
         "correctLines": [
           "package main",
           "",
@@ -451,7 +451,7 @@ export const go4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\n\nimport (\n    \"encoding/json\"\n    \"fmt\"\n)\n\ntype Item struct {\n    Name string `json:\"name\"`\n}\n\nfunc main() {\n    // \"Banana\" を含むJSON文字列をバイト列に変換\n    data := []byte(`{\"name\":\"Banana\"}`)\n    var item Item\n    // Unmarshal で JSON をパース\n    json.Unmarshal(data, &item)\n    fmt.Println(item.Name)\n}",
-        "holeyCode": "package main\n\nimport (\n    \"encoding/json\"\n    \"fmt\"\n)\n\ntype Item struct {\n    Name string `json:\"name\"`\n}\n\nfunc main() {\n    // \"Banana\" を含むJSON文字列をバイト列に変換\n    data := []byte(`{\"name\":___}`)\n    var item Item\n    // Unmarshal で JSON をパース\n    json.___(data, &item)\n    fmt.Println(item.Name)\n}",
+        "holeyCode": "package ___\n\nimport ___\n    \"___\"\n    \\\"___\\\"\n___\n\ntype Item ___ {\n    Name string `json:\"___\"`\n___\n\nfunc ___ () {\n    // \"Banana\" を含むJSON文字列をバイト列に変換\n    ___ := []byte(`{\"name\":\"Banana\"}`)\n    var item ___\n    // Unmarshal で JSON をパース\n    json.Unmarshal(data, &___)\n    fmt.___(item.Name)\n___",
         "correctLines": [
           "package main",
           "",
@@ -528,7 +528,7 @@ export const go4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\n\nimport (\n    \"fmt\"\n    \"strings\"\n)\n\nfunc main() {\n    // 分割する文字列 \"hello,world\"\n    s := \"hello,world\"\n    // Split で文字列を分割\n    parts := strings.Split(s, \",\")\n    fmt.Println(parts[0])\n}",
-        "holeyCode": "package main\n\nimport (\n    \"fmt\"\n    \"strings\"\n)\n\nfunc main() {\n    // 分割する文字列 \"hello,world\"\n    s := ___\n    // Split で文字列を分割\n    parts := strings.___(s, \",\")\n    fmt.Println(parts[0])\n}",
+        "holeyCode": "package ___\n\nimport ___\n    \\\"___\\\"\n    \"___\"\n___\n\nfunc ___ () {\n    // 分割する文字列 \"hello,world\"\n    ___ := \"hello,world\"\n    // Split で文字列を分割\n    ___ := strings.Split(s, \",\")\n    fmt.___(parts[0])\n___",
         "correctLines": [
           "package main",
           "",
@@ -595,7 +595,7 @@ export const go4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\n\nimport (\n    \"fmt\"\n    \"strconv\"\n)\n\nfunc main() {\n    // Atoi で文字列を整数に変換\n    num, _ := strconv.Atoi(\"42\")\n    fmt.Println(num * 2)\n}",
-        "holeyCode": "package main\n\nimport (\n    \"fmt\"\n    \"strconv\"\n)\n\nfunc main() {\n    // Atoi で文字列を整数に変換\n    num, _ := strconv.___(\"42\")\n    fmt.Println(num * 2)\n}",
+        "holeyCode": "package ___\n\nimport ___\n    \\\"___\\\"\n    \\\"___\\\"\n___\n\nfunc ___ () {\n    // Atoi で文字列を整数に変換\n    num, _ := strconv.Atoi(\"___\")\n    fmt.___(num * 2)\n___",
         "correctLines": [
           "package main",
           "",
@@ -655,7 +655,7 @@ export const go4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\n\nimport (\n    \"fmt\"\n    \"os\"\n)\n\nfunc main() {\n    // Args でコマンドライン引数を取得\n    fmt.Println(len(os.Args))\n}",
-        "holeyCode": "package main\n\nimport (\n    \"fmt\"\n    \"os\"\n)\n\nfunc main() {\n    // Args でコマンドライン引数を取得\n    fmt.Println(len(os.___))\n}",
+        "holeyCode": "package ___\n\nimport ___\n    \\\"___\\\"\n    \\\"___\\\"\n___\n\nfunc ___ () {\n    // Args でコマンドライン引数を取得\n    fmt.___(len(os.Args))\n___",
         "correctLines": [
           "package main",
           "",

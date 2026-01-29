@@ -23,7 +23,7 @@ export const rust2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn main() {\n    let s1 = String::from(\"hello\");\n    // s1 の所有権を移動\n    let s2 = s1;\n    println!(\"{}\", s2);\n}",
-        "holeyCode": "fn main() {\n    let s1 = String::from(\"hello\");\n    // s1 の所有権を移動\n    let s2 = ___;\n    println!(\"{}\", s2);\n}",
+        "holeyCode": "fn ___ () {\n    let ___ = String::from(\"hello\");\n    // s1 の所有権を移動\n    let ___ = s1;\n    ___!(\"{}\", s2);\n___",
         "correctLines": [
           "fn main() {",
           "    let s1 = String::from(\"hello\");",
@@ -69,7 +69,7 @@ export const rust2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn print_len(s: &String) {\n    println!(\"{}\", s.len());\n}\nfn main() {\n    let text = String::from(\"hello\");\n    // & で参照を渡す\n    print_len(&text);\n}",
-        "holeyCode": "fn print_len(s: &String) {\n    println!(\"{}\", s.len());\n}\nfn main() {\n    let text = String::from(\"hello\");\n    // & で参照を渡す\n    print_len(___text);\n}",
+        "holeyCode": "fn ___ (s: &String) {\n    ___!(\"{}\", s.len());\n___\nfn ___ () {\n    let ___ = String::from(\"hello\");\n    // & で参照を渡す\n    ___(&text);\n___",
         "correctLines": [
           "fn print_len(s: &String) {",
           "    println!(\"{}\", s.len());",
@@ -119,7 +119,7 @@ export const rust2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn add_world(s: &mut String) {\n    s.push_str(\" world\");\n}\nfn main() {\n    // mut で可変変数にする\n    let mut text = String::from(\"hello\");\n    add_world(&mut text);\n    println!(\"{}\", text);\n}",
-        "holeyCode": "fn add_world(s: &mut String) {\n    s.push_str(\" world\");\n}\nfn main() {\n    // mut で可変変数にする\n    let ___ text = String::from(\"hello\");\n    add_world(&mut text);\n    println!(\"{}\", text);\n}",
+        "holeyCode": "fn ___ (s: &mut String) {\n    s.___(\" world\");\n___\nfn ___ () {\n    // mut で可変変数にする\n    let mut ___ = String::from(\"hello\");\n    ___(&mut text);\n    ___!(\"{}\", text);\n___",
         "correctLines": [
           "fn add_world(s: &mut String) {",
           "    s.push_str(\" world\");",
@@ -171,7 +171,7 @@ export const rust2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// struct で構造体を定義\nstruct Rect {\n    width: i32,\n    height: i32,\n}\nfn main() {\n    let r = Rect { width: 3, height: 4 };\n    println!(\"{}\", r.width);\n}",
-        "holeyCode": "// struct で構造体を定義\n___ Rect {\n    width: i32,\n    height: i32,\n}\nfn main() {\n    let r = Rect { width: 3, height: 4 };\n    println!(\"{}\", r.width);\n}",
+        "holeyCode": "// struct で構造体を定義\nstruct ___ {\n    width: ___,\n    height: ___,\n___\nfn ___ () {\n    let ___ = Rect { width: 3, height: 4 };\n    ___!(\"{}\", r.width);\n___",
         "correctLines": [
           "// struct で構造体を定義",
           "struct Rect {",
@@ -223,7 +223,7 @@ export const rust2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "struct Square {\n    side: i32,\n}\n// impl でメソッドを実装\nimpl Square {\n    fn area(&self) -> i32 {\n        self.side * self.side\n    }\n}\nfn main() {\n    let s = Square { side: 5 };\n    println!(\"{}\", s.area());\n}",
-        "holeyCode": "struct Square {\n    side: i32,\n}\n// impl でメソッドを実装\n___ Square {\n    fn area(&self) -> i32 {\n        self.side * self.side\n    }\n}\nfn main() {\n    let s = Square { side: 5 };\n    println!(\"{}\", s.area());\n}",
+        "holeyCode": "struct ___ {\n    side: ___,\n___\n// impl でメソッドを実装\nimpl ___ {\n    fn ___ (&self) -> i32 {\n        self.___ * self.___\n    ___\n___\nfn ___ () {\n    let ___ = Square { side: 5 };\n    ___!(\"{}\", s.area());\n___",
         "correctLines": [
           "struct Square {",
           "    side: i32,",
@@ -283,7 +283,7 @@ export const rust2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// enum で列挙型を定義\nenum Direction {\n    Up,\n    Down,\n}\nfn main() {\n    let d = Direction::Up;\n    match d {\n        Direction::Up => println!(\"up\"),\n        Direction::Down => println!(\"down\"),\n    }\n}",
-        "holeyCode": "// enum で列挙型を定義\n___ Direction {\n    Up,\n    Down,\n}\nfn main() {\n    let d = Direction::Up;\n    match d {\n        Direction::Up => println!(\"up\"),\n        Direction::Down => println!(\"down\"),\n    }\n}",
+        "holeyCode": "// enum で列挙型を定義\nenum ___ {\n    ___,\n    ___,\n___\nfn ___ () {\n    let ___ = Direction::Up;\n    match ___ {\n        Direction::Up => ___!(\"up\"),\n        Direction::Down => ___!(\"down\"),\n    ___\n___",
         "correctLines": [
           "// enum で列挙型を定義",
           "enum Direction {",
@@ -341,7 +341,7 @@ export const rust2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn main() {\n    // Some で値があることを示す\n    let val: Option<i32> = Some(42);\n    match val {\n        Some(n) => println!(\"{}\", n),\n        None => println!(\"none\"),\n    }\n}",
-        "holeyCode": "fn main() {\n    // Some で値があることを示す\n    let val: Option<i32> = ___(42);\n    match val {\n        Some(n) => println!(\"{}\", n),\n        None => println!(\"none\"),\n    }\n}",
+        "holeyCode": "fn ___ () {\n    // Some で値があることを示す\n    let val: ___ = ___(42);\n    match ___ {\n        Some(n) => ___!(\"{}\", n),\n        None => ___!(\"none\"),\n    ___\n___",
         "correctLines": [
           "fn main() {",
           "    // Some で値があることを示す",
@@ -391,7 +391,7 @@ export const rust2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn half(n: i32) -> Result<i32, String> {\n    if n % 2 != 0 {\n        return Err(\"odd\".to_string());\n    }\n    // Ok で成功を返す\n    Ok(n / 2)\n}\nfn main() {\n    match half(10) {\n        Ok(v) => println!(\"{}\", v),\n        Err(e) => println!(\"{}\", e),\n    }\n}",
-        "holeyCode": "fn half(n: i32) -> Result<i32, String> {\n    if n % 2 != 0 {\n        return Err(\"odd\".to_string());\n    }\n    // Ok で成功を返す\n    ___(n / 2)\n}\nfn main() {\n    match half(10) {\n        Ok(v) => println!(\"{}\", v),\n        Err(e) => println!(\"{}\", e),\n    }\n}",
+        "holeyCode": "fn ___ (n: i32) -> Result<i32, String> {\n    if n % 2 ___ != ___ {\n        return Err(___));\n    ___\n    // Ok で成功を返す\n    ___(n / 2)\n___\nfn ___ () {\n    match ___(10) {\n        Ok(v) => ___!(\"{}\", v),\n        Err(e) => ___!(\"{}\", e),\n    ___\n___",
         "correctLines": [
           "fn half(n: i32) -> Result<i32, String> {",
           "    if n % 2 != 0 {",
@@ -451,7 +451,7 @@ export const rust2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// trait でトレイトを定義\ntrait Speak {\n    fn speak(&self);\n}\nstruct Dog;\nimpl Speak for Dog {\n    fn speak(&self) {\n        println!(\"woof\");\n    }\n}\nfn main() {\n    let d = Dog;\n    d.speak();\n}",
-        "holeyCode": "// trait でトレイトを定義\n___ Speak {\n    fn speak(&self);\n}\nstruct Dog;\nimpl Speak for Dog {\n    fn speak(&self) {\n        println!(\"woof\");\n    }\n}\nfn main() {\n    let d = Dog;\n    d.speak();\n}",
+        "holeyCode": "// trait でトレイトを定義\ntrait ___ {\n    fn ___ (&self);\n___\nstruct ___;\nimpl ___ for ___ {\n    fn ___ (&self) {\n        ___!(\"woof\");\n    ___\n___\nfn ___ () {\n    let ___ = Dog;\n    d.___();\n___",
         "correctLines": [
           "// trait でトレイトを定義",
           "trait Speak {",
@@ -513,7 +513,7 @@ export const rust2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// T を型パラメータとして使う\nfn print_val<T: std::fmt::Display>(val: T) {\n    println!(\"{}\", val);\n}\nfn main() {\n    print_val(42);\n    print_val(\"hello\");\n}",
-        "holeyCode": "// T を型パラメータとして使う\nfn print_val<___: std::fmt::Display>(val: T) {\n    println!(\"{}\", val);\n}\nfn main() {\n    print_val(42);\n    print_val(\"hello\");\n}",
+        "holeyCode": "// T を型パラメータとして使う\nfn print_val<___: std::fmt::Display>(val: T) {\n    ___!(\"{}\", val);\n___\nfn ___ () {\n    ___(42);\n    ___(\"hello\");\n___",
         "correctLines": [
           "// T を型パラメータとして使う",
           "fn print_val<T: std::fmt::Display>(val: T) {",

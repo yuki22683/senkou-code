@@ -23,7 +23,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // Hello, Go! と表示する\n    fmt.Println(\"Hello, Go!\")\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // Hello, Go! と表示する\n    fmt.Println(\"___\")\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // Hello, Go! と表示する\n    fmt.___(\"Hello, Go!\")\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -69,7 +69,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // x に 10 を代入する\n    x := 10\n    // x を表示する\n    fmt.Println(x)\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // x に 10 を代入する\n    ___ := ___\n    // x を表示する\n    fmt.Println(___)\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // x に 10 を代入する\n    ___ := 10\n    // x を表示する\n    fmt.___(x)\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -122,7 +122,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // はこに数字を入れる\n    a := 5\n    b := 3\n    // + でたし算する\n    fmt.Println(a + b)\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // はこに数字を入れる\n    a := 5\n    b := 3\n    // + でたし算する\n    fmt.Println(a ___ b)\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // はこに数字を入れる\n    ___ := 5\n    ___ := 3\n    // + でたし算する\n    fmt.___(a + b)\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -174,7 +174,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // 10 を 3 で割ったあまりを出力する\n    fmt.Println(10 % 3)\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // 10 を 3 で割ったあまりを出力する\n    fmt.Println(10 ___ 3)\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // 10 を 3 で割ったあまりを出力する\n    fmt.___(10 % 3)\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -223,7 +223,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    hp := 100\n    // += で 20 を足す\n    hp += 20\n    // -= で 50 を引く\n    hp -= 50\n    fmt.Println(hp)\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    hp := 100\n    // += で 20 を足す\n    hp ___ 20\n    // -= で 50 を引く\n    hp ___ 50\n    fmt.Println(hp)\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    ___ := 100\n    // += で 20 を足す\n    hp += ___\n    // -= で 50 を引く\n    hp -= ___\n    fmt.___(hp)\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -280,7 +280,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // ageに10を入れる\\n    age := 10\\n    // age を埋め込む\\n    fmt.Printf(\"I am %d years old.\\n\", age)\\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // ageに10を入れる\n    age := 10\n    // age を埋め込む\n    fmt.Printf(\"I am %d years old.\\n\", ___)\n}",
+        "holeyCode": "package ___\\\nimport \\\"___\\\"\\\nfunc ___ () {\\\n    // ageに10を入れる\\\n    ___ := 10\\\n    // age を埋め込む\\\n    fmt.___(\"I am %d years old.\\\n\", age)\\\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -332,7 +332,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{10, 20}\n    // インデックス 1 で2番目を取得\n    fmt.Println(nums[1])\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{10, 20}\n    // インデックス 1 で2番目を取得\n    fmt.Println(nums[___])\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    ___ := []int{10, 20}\n    // インデックス 1 で2番目を取得\n    fmt.___(nums[1])\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -380,7 +380,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // scoreに100を入れる\n    score := 100\n    // > で比較する\n    if score > 80 {\n        // Great と表示する\n        fmt.Println(\"Great\")\n    }\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // scoreに100を入れる\n    score := ___\n    // > で比較する\n    if score ___ 80 {\n        // Great と表示する\n        fmt.Println(\"___\" )\n    }\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // scoreに100を入れる\n    ___ := 100\n    // > で比較する\n    if score ___ 80 {\n        // Great と表示する\n        fmt.___(\"Great\")\n    ___\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -443,7 +443,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // xに5を入れる\n    x := 5\n    // 10より大きいかを比較する演算子\n    if x > 10 {\n        // 10より大きいときのメッセージ（'Big'）\n        fmt.Println(\"Big\")\n    // else で「そうでなければ」\n    } else {\n        // それ以外のメッセージ（'Small'）\n        fmt.Println(\"Small\")\n    }\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // xに5を入れる\n    x := ___\n    // 10より大きいかを比較する演算子\n    if x ___ 10 {\n        // 10より大きいときのメッセージ（'Big'）\n        fmt.Println(\"___\")\n    // else で「そうでなければ」\n    } ___ {\n        // それ以外のメッセージ（'Small'）\n        fmt.Println(\"___\")\n    }\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // xに5を入れる\n    ___ := 5\n    // 10より大きいかを比較する演算子\n    if x ___ 10 {\n        // 10より大きいときのメッセージ（'Big'）\n        fmt.___(\"Big\")\n    // else で「そうでなければ」\n    } ___ {\n        // それ以外のメッセージ（'Small'）\n        fmt.___(\"Small\")\n    ___\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -513,7 +513,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 80\n    bonus := 10\n    // && で両方の条件をチェック\n    if score >= 70 && bonus > 0 {\n        fmt.Println(\"Bonus Pass\")\n    }\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 80\n    bonus := 10\n    // && で両方の条件をチェック\n    if score >= 70 ___ bonus > 0 {\n        fmt.Println(\"Bonus Pass\")\n    }\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    ___ := 80\n    ___ := 10\n    // && で両方の条件をチェック\n    if score ___ 70 && bonus > 0 {\n        fmt.___(\"Bonus Pass\")\n    ___\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -570,7 +570,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{1, 2, 3}\n    // range で全要素をループ\n    for _, n := range nums {\n        fmt.Println(n)\n    }\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{1, 2, 3}\n    // range で全要素をループ\n    for _, n := ___ nums {\n        fmt.Println(n)\n    }\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    ___ := []int{1, 2, 3}\n    // range で全要素をループ\n    for _, n := range ___ {\n        fmt.___(n)\n    ___\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -622,7 +622,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // string をキーの型に指定\n    scores := map[string]int{\"Math\": 90}\n    // 'Math' をキーに指定\n    fmt.Println(scores[\"Math\"])\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc main() {\n    // string をキーの型に指定\n    scores := map[___]int{\"Math\": 90}\n    // 'Math' をキーに指定\n    fmt.Println(scores[\"___\"])\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // string をキーの型に指定\n    ___ := map[string]int{\"Math\": 90}\n    // 'Math' をキーに指定\n    fmt.___(scores[\"Math\"])\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -673,7 +673,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\nimport \"fmt\"\nfunc greet() {\n    fmt.Println(\"Hello\")\n}\nfunc main() {\n    // greet 関数を呼び出す\n    greet()\n}",
-        "holeyCode": "package main\nimport \"fmt\"\nfunc greet() {\n    fmt.Println(\"Hello\")\n}\nfunc main() {\n    // greet 関数を呼び出す\n    ___()\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    fmt.___(\"Hello\")\n___\nfunc ___ () {\n    // greet 関数を呼び出す\n    ___()\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",

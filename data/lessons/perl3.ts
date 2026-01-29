@@ -23,7 +23,7 @@ export const perl3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# openでファイルを開く\\nopen(my $fh, \">\", \"/tmp/test.txt\") or die;\\nprint $fh \"hello\\n\";\\nclose($fh);\\nprint \"written\\n\";",
-        "holeyCode": "# openでファイルを開く\n___(my $fh, \">\", \"/tmp/test.txt\") or die;\nprint $fh \"hello\\n\";\nclose($fh);\nprint \"written\\n\";",
+        "holeyCode": "# openでファイルを開く\\\n___\\(my $fh, \">\", \"/tmp/test.txt\") or die;\\\nprint $fh ___hello\\\n\";\\\nclose($___);\\\n___ \"written\\\n\";",
         "correctLines": [
           "# openでファイルを開く",
           "open(my $fh, \">\", \"/tmp/test.txt\") or die;",
@@ -74,7 +74,7 @@ export const perl3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "open(my $fh, \">\", \"/tmp/test2.txt\") or die;\\nprint $fh \"data\\n\";\\n# closeでファイルを閉じる\\nclose($fh);\\nprint \"closed\\n\";",
-        "holeyCode": "open(my $fh, \">\", \"/tmp/test2.txt\") or die;\nprint $fh \"data\\n\";\n# closeでファイルを閉じる\n___($fh);\nprint \"closed\\n\";",
+        "holeyCode": "___\\(my $fh, \">\", \"/tmp/test2.txt\") or die;\\\nprint $fh ___data\\\n\";\\\n# closeでファイルを閉じる\\\nclose($___);\\\n___ \"closed\\\n\";",
         "correctLines": [
           "open(my $fh, \">\", \"/tmp/test2.txt\") or die;",
           "print $fh \"data",
@@ -125,7 +125,7 @@ export const perl3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "my $text = \"hello\\n\";\\n# chompで改行を除去\\nchomp($text);\\nprint \"[$text]\\n\";",
-        "holeyCode": "my $text = \"hello\\n\";\n# chompで改行を除去\n___($text);\nprint \"[$text]\\n\";",
+        "holeyCode": "my $___ = \"hello\\\n\";\\\n# chompで改行を除去\\\nchomp($___);\\\n___ \"[$text]\\\n\";",
         "correctLines": [
           "my $text = \"hello",
           "\";",
@@ -174,7 +174,7 @@ export const perl3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "my $data = \"apple:banana:cherry\";\\n# splitで分割\\nmy @fruits = split(/:/, $data);\\nprint $fruits[1] . \"\\n\";",
-        "holeyCode": "my $data = \"apple:banana:cherry\";\n# splitで分割\nmy @fruits = ___(/:/, $data);\nprint $fruits[1] . \"\\n\";",
+        "holeyCode": "my $___ = \"apple:banana:cherry\";\\\n# splitで分割\\\nmy @___ = split(/:/, $data);\\\n___ $fruits[1] . \"\\\n\";",
         "correctLines": [
           "my $data = \"apple:banana:cherry\";",
           "# splitで分割",
@@ -221,7 +221,7 @@ export const perl3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "my @words = (\"Hello\", \"World\");\\n# joinで結合\\nmy $sentence = join(\" \", @words);\\nprint \"$sentence\\n\";",
-        "holeyCode": "my @words = (\"Hello\", \"World\");\n# joinで結合\nmy $sentence = ___(\" \", @words);\nprint \"$sentence\\n\";",
+        "holeyCode": "my @___ = (\"Hello\", \"World\");\\\n# joinで結合\\\nmy $___ = join(\" \", @words);\\\n___ \"$sentence\\\n\";",
         "correctLines": [
           "my @words = (\"Hello\", \"World\");",
           "# joinで結合",
@@ -268,7 +268,7 @@ export const perl3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "my @nums = (1, 2);\\n# pushで追加\\npush(@nums, 3);\\nprint \"@nums\\n\";",
-        "holeyCode": "my @nums = (1, 2);\n# pushで追加\n___(@nums, 3);\nprint \"@nums\\n\";",
+        "holeyCode": "my @___ = (1, 2);\\\n# pushで追加\\\npush(@nums, ___);\\\n___ \"@nums\\\n\";",
         "correctLines": [
           "my @nums = (1, 2);",
           "# pushで追加",
@@ -315,7 +315,7 @@ export const perl3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "my @nums = (10, 20, 30);\\n# popで取り出す\\nmy $last = pop(@nums);\\nprint \"$last\\n\";",
-        "holeyCode": "my @nums = (10, 20, 30);\n# popで取り出す\nmy $last = ___(@nums);\nprint \"$last\\n\";",
+        "holeyCode": "my @___ = (10, 20, 30);\\\n# popで取り出す\\\nmy $___ = pop(@nums);\\\n___ \"$last\\\n\";",
         "correctLines": [
           "my @nums = (10, 20, 30);",
           "# popで取り出す",
@@ -362,7 +362,7 @@ export const perl3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "my @words = (\"banana\", \"apple\", \"cherry\");\\n# sortで並べ替え\\nmy @sorted = sort @words;\\nprint \"$sorted[0]\\n\";",
-        "holeyCode": "my @words = (\"banana\", \"apple\", \"cherry\");\n# sortで並べ替え\nmy @sorted = ___ @words;\nprint \"$sorted[0]\\n\";",
+        "holeyCode": "my @___ = (\"banana\", \"apple\", \"cherry\");\\\n# sortで並べ替え\\\nmy @___ = sort @words;\\\n___ \"$sorted[0]\\\n\";",
         "correctLines": [
           "my @words = (\"banana\", \"apple\", \"cherry\");",
           "# sortで並べ替え",
@@ -409,7 +409,7 @@ export const perl3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "my @nums = (1, 2, 3);\\n# reverseで逆順に\\nmy @rev = reverse @nums;\\nprint \"@rev\\n\";",
-        "holeyCode": "my @nums = (1, 2, 3);\n# reverseで逆順に\nmy @rev = ___ @nums;\nprint \"@rev\\n\";",
+        "holeyCode": "my @___ = (1, 2, 3);\\\n# reverseで逆順に\\\nmy @___ = reverse @nums;\\\n___ \"@rev\\\n\";",
         "correctLines": [
           "my @nums = (1, 2, 3);",
           "# reverseで逆順に",
@@ -456,7 +456,7 @@ export const perl3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "my $text = \"Perl\";\\n# lengthで長さを取得\\nmy $len = length($text);\\nprint \"$len\\n\";",
-        "holeyCode": "my $text = \"Perl\";\n# lengthで長さを取得\nmy $len = ___($text);\nprint \"$len\\n\";",
+        "holeyCode": "my $___ = \"Perl\";\\\n# lengthで長さを取得\\\nmy $___ = length($text);\\\n___ \"$len\\\n\";",
         "correctLines": [
           "my $text = \"Perl\";",
           "# lengthで長さを取得",

@@ -31,7 +31,7 @@ export const kotlin2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// ? で nullable 型にする\nvar num: Int? = 42\n// null チェックをする\nif (num != null) {\n    // num を出力する\n    println(num)\n}",
-        "holeyCode": "// ? で nullable 型にする\nvar num: Int___ = ___\n// null チェックをする\nif (num != ___) {\n    // num を出力する\n    ___(num)\n}",
+        "holeyCode": "// ? で nullable 型にする\nvar num: Int? = ___\n// null チェックをする\nif (num != ___) {\n    // num を出力する\n    println(___)\n___",
         "correctLines": [
           "// ? で nullable 型にする",
           "var num: Int? = 42",
@@ -88,7 +88,7 @@ export const kotlin2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// nullable 型の変数を宣言する\nval text: String? = \"Hello\"\n// ?. で安全にプロパティにアクセスする\nprintln(text?.length)",
-        "holeyCode": "// nullable 型の変数を宣言する\nval text: ___? = \"Hello\"\n// ?. で安全にプロパティにアクセスする\nprintln(text___length)",
+        "holeyCode": "// nullable 型の変数を宣言する\nval text: String? = \"___\"\n// ?. で安全にプロパティにアクセスする\n___(text?.length)",
         "correctLines": [
           "// nullable 型の変数を宣言する",
           "val text: String? = \"Hello\"",
@@ -137,7 +137,7 @@ export const kotlin2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// nullable 型の変数を宣言する\nval value: Int? = null\n// ?: でデフォルト値を指定する\nprintln(value ?: 0)",
-        "holeyCode": "// nullable 型の変数を宣言する\nval value: Int? = ___\n// ?: でデフォルト値を指定する\nprintln(value ___ 0)",
+        "holeyCode": "// nullable 型の変数を宣言する\nval value: Int? = ___\n// ?: でデフォルト値を指定する\n___(value ?: 0)",
         "correctLines": [
           "// nullable 型の変数を宣言する",
           "val value: Int? = null",
@@ -186,7 +186,7 @@ export const kotlin2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// data でデータクラスを定義する\ndata class Point(val x: Int, val y: Int)\n// Point のインスタンスを作成する\nval p = Point(3, 4)\n// p を出力する\nprintln(p)",
-        "holeyCode": "// data でデータクラスを定義する\n___ class Point(val x: Int, val y: Int)\n// Point のインスタンスを作成する\nval p = ___(3, 4)\n// p を出力する\n___(p)",
+        "holeyCode": "// data でデータクラスを定義する\ndata class Point(val x: ___, val y: Int)\n// Point のインスタンスを作成する\nval p = Point(___, 4)\n// p を出力する\nprintln(___)",
         "correctLines": [
           "// data でデータクラスを定義する",
           "data class Point(val x: Int, val y: Int)",
@@ -244,7 +244,7 @@ export const kotlin2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// -> で引数と処理を区切る\nval double = { n: Int -> n * 2 }\n// double(5) を出力する\nprintln(double(5))",
-        "holeyCode": "// -> で引数と処理を区切る\nval double = { n: Int ___ n * 2 }\n// double(5) を出力する\nprintln(___(5))",
+        "holeyCode": "// -> で引数と処理を区切る\nval double = { n: Int -> n * ___ }\n// double(5) を出力する\n___(double(5))",
         "correctLines": [
           "// -> で引数と処理を区切る",
           "val double = { n: Int -> n * 2 }",
@@ -297,7 +297,7 @@ export const kotlin2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// listOf でリストを作成する\nval nums = listOf(1, 2, 3)\n// map で各要素を変換する\nval squared = nums.map { it * it }\n// squared を出力する\nprintln(squared)",
-        "holeyCode": "// listOf でリストを作成する\nval nums = ___(1, 2, 3)\n// map で各要素を変換する\nval squared = nums.___ { it * it }\n// squared を出力する\n___(squared)",
+        "holeyCode": "// listOf でリストを作成する\nval nums = listOf(___, 2, 3)\n// map で各要素を変換する\nval squared = nums.map { ___ * it }\n// squared を出力する\nprintln(___)",
         "correctLines": [
           "// listOf でリストを作成する",
           "val nums = listOf(1, 2, 3)",
@@ -355,7 +355,7 @@ export const kotlin2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// listOf でリストを作成する\nval nums = listOf(1, 2, 3, 4, 5)\n// filter で条件に合う要素を抽出する\nval result = nums.filter { it >= 3 }\n// result を出力する\nprintln(result)",
-        "holeyCode": "// listOf でリストを作成する\nval nums = ___(1, 2, 3, 4, 5)\n// filter で条件に合う要素を抽出する\nval result = nums.___ { it >= 3 }\n// result を出力する\n___(result)",
+        "holeyCode": "// listOf でリストを作成する\nval nums = listOf(___, 2, 3, 4, 5)\n// filter で条件に合う要素を抽出する\nval result = nums.filter { it >= ___ }\n// result を出力する\nprintln(___)",
         "correctLines": [
           "// listOf でリストを作成する",
           "val nums = listOf(1, 2, 3, 4, 5)",
@@ -413,7 +413,7 @@ export const kotlin2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// x に 2 を代入する\nval x = 2\n// when で分岐する\nval result = when (x) {\n    // 1 の場合\n    1 -> \"one\"\n    // 2 の場合\n    2 -> \"two\"\n    // その他の場合\n    else -> \"other\"\n}\n// result を出力する\nprintln(result)",
-        "holeyCode": "// x に 2 を代入する\nval x = ___\n// when で分岐する\nval result = ___ (x) {\n    // 1 の場合\n    1 -> \"___\"\n    // 2 の場合\n    2 -> \"___\"\n    // その他の場合\n    else -> \"___\"\n}\n// result を出力する\n___(result)",
+        "holeyCode": "// x に 2 を代入する\nval x = ___\n// when で分岐する\nval result = when (___) {\n    // 1 の場合\n    1 -> \"___\"\n    // 2 の場合\n    2 -> \"___\"\n    // その他の場合\n    else -> \"___\"\n___\n// result を出力する\nprintln(___)",
         "correctLines": [
           "// x に 2 を代入する",
           "val x = 2",
@@ -488,7 +488,7 @@ export const kotlin2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// this でレシーバを参照する\nfun Int.double() = this * 2\n// 5.double() を出力する\nprintln(5.double())",
-        "holeyCode": "// this でレシーバを参照する\nfun Int.double() = ___ * 2\n// 5.double() を出力する\nprintln(5.___())",
+        "holeyCode": "// this でレシーバを参照する\nfun Int.double() = this * ___\n// 5.double() を出力する\n___(5.double())",
         "correctLines": [
           "// this でレシーバを参照する",
           "fun Int.double() = this * 2",
@@ -541,7 +541,7 @@ export const kotlin2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// nullable 型の変数を宣言する\nval num: Int? = 42\n// let で処理を実行する\nnum?.let { println(it * 2) }",
-        "holeyCode": "// nullable 型の変数を宣言する\nval num: Int? = ___\n// let で処理を実行する\nnum?.___ { println(it * 2) }",
+        "holeyCode": "// nullable 型の変数を宣言する\nval num: Int? = ___\n// let で処理を実行する\nnum?.let { println(it * ___) }",
         "correctLines": [
           "// nullable 型の変数を宣言する",
           "val num: Int? = 42",

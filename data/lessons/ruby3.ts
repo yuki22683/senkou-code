@@ -23,7 +23,7 @@ export const ruby3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# defでメソッドを定義\ndef twice\n  # yieldでブロックを実行\n  yield\n  # yieldでブロックを実行\n  yield\n# endで終了\nend",
-        "holeyCode": "# defでメソッドを定義\n___ twice\n  # yieldでブロックを実行\n  ___\n  # yieldでブロックを実行\n  ___\n# endで終了\n___",
+        "holeyCode": "# defでメソッドを定義\ndef ___\n  # yieldでブロックを実行\n  ___\n  # yieldでブロックを実行\n  ___\n# endで終了\n___",
         "correctLines": [
           "# defでメソッドを定義",
           "def twice",
@@ -86,7 +86,7 @@ export const ruby3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# Procでブロックをオブジェクト化、*で乗算\ndoubler = Proc.new { |x| x * 2 }",
-        "holeyCode": "# Procでブロックをオブジェクト化、*で乗算\ndoubler = ___.new { |x| x ___ 2 }",
+        "holeyCode": "# Procでブロックをオブジェクト化、*で乗算\ndoubler = Proc.new { |x| x * ___ }",
         "correctLines": [
           "# Procでブロックをオブジェクト化、*で乗算",
           "doubler = Proc.new { |x| x * 2 }"
@@ -130,7 +130,7 @@ export const ruby3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# ->でラムダを定義、**で累乗\ncube = ->(x) { x ** 3 }",
-        "holeyCode": "# ->でラムダを定義、**で累乗\ncube = ___(x) { x ___ 3 }",
+        "holeyCode": "# ->でラムダを定義、**で累乗\ncube = ->(x) { x ** ___ }",
         "correctLines": [
           "# ->でラムダを定義、**で累乗",
           "cube = ->(x) { x ** 3 }"
@@ -174,7 +174,7 @@ export const ruby3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# mapで変換、upcaseで大文字化\nresult = ['ruby', 'python', 'go'].map(&:upcase)",
-        "holeyCode": "# mapで変換、upcaseで大文字化\nresult = ['ruby', 'python', 'go'].___(&:___)",
+        "holeyCode": "# mapで変換、upcaseで大文字化\nresult = ['ruby', 'python', 'go'].map(&:___)",
         "correctLines": [
           "# mapで変換、upcaseで大文字化",
           "result = ['ruby', 'python', 'go'].map(&:upcase)"
@@ -218,7 +218,7 @@ export const ruby3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# reduceで畳み込み、+で加算\nsum = [1, 2, 3, 4, 5].reduce(0) { |acc, n| acc + n }",
-        "holeyCode": "# reduceで畳み込み、+で加算\nsum = [1, 2, 3, 4, 5].___(0) { |acc, n| acc ___ n }",
+        "holeyCode": "# reduceで畳み込み、+で加算\nsum = [___, 2, 3, 4, 5].reduce(0) { |acc, n| acc + n }",
         "correctLines": [
           "# reduceで畳み込み、+で加算",
           "sum = [1, 2, 3, 4, 5].reduce(0) { |acc, n| acc + n }"
@@ -262,7 +262,7 @@ export const ruby3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# selectでフィルタ、evenで偶数判定\nevens = [1, 2, 3, 4, 5, 6].select { |n| n.even? }",
-        "holeyCode": "# selectでフィルタ、evenで偶数判定\nevens = [1, 2, 3, 4, 5, 6].___ { |n| n.___? }",
+        "holeyCode": "# selectでフィルタ、evenで偶数判定\nevens = [___, 2, 3, 4, 5, 6].select { |n| n.even? }",
         "correctLines": [
           "# selectでフィルタ、evenで偶数判定",
           "evens = [1, 2, 3, 4, 5, 6].select { |n| n.even? }"
@@ -306,7 +306,7 @@ export const ruby3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# *で可変長引数を受け取る\ndef sum_all(*numbers)\n  # reduceで畳み込み\n  numbers.reduce(0) { |acc, n| acc + n }\n# endで終了\nend",
-        "holeyCode": "# *で可変長引数を受け取る\n___ sum_all(___numbers)\n  # reduceで畳み込み\n  numbers.___(0) { |acc, n| acc + n }\n# endで終了\n___",
+        "holeyCode": "# *で可変長引数を受け取る\ndef sum_all(*___)\n  # reduceで畳み込み\n  numbers.reduce(___) { |acc, n| acc + n }\n# endで終了\n___",
         "correctLines": [
           "# *で可変長引数を受け取る",
           "def sum_all(*numbers)",
@@ -365,7 +365,7 @@ export const ruby3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# classでクラスを定義\nclass FlexibleClass\n  # method_missingで未定義メソッドを捕捉\n  def method_missing(name, *args)\n    # nameでメソッド名を参照\n    \"Unknown method: #{name}\"\n  # endで終了\n  end\n# endで終了\nend",
-        "holeyCode": "# classでクラスを定義\n___ FlexibleClass\n  # method_missingで未定義メソッドを捕捉\n  def ___(name, *args)\n    # nameでメソッド名を参照\n    \"Unknown method: #{___}\"\n  # endで終了\n  ___\n# endで終了\n___",
+        "holeyCode": "# classでクラスを定義\nclass ___\n  # method_missingで未定義メソッドを捕捉\n  def method_missing(name, *___)\n    # nameでメソッド名を参照\n    \"___\"\n  # endで終了\n  ___\n# endで終了\n___",
         "correctLines": [
           "# classでクラスを定義",
           "class FlexibleClass",
@@ -432,7 +432,7 @@ export const ruby3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# Structで簡易クラス、name, ageの順で属性名\nPerson = Struct.new(:name, :age)",
-        "holeyCode": "# Structで簡易クラス、name, ageの順で属性名\nPerson = ___.new(:___, :___)",
+        "holeyCode": "# Structで簡易クラス、name, ageの順で属性名\nPerson = Struct.new(:name, :___)",
         "correctLines": [
           "# Structで簡易クラス、name, ageの順で属性名",
           "Person = Struct.new(:name, :age)"
@@ -477,7 +477,7 @@ export const ruby3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# tapで自身を返す、pushで要素追加\nresult = [1, 2, 3].tap { |arr| arr.push(4) }",
-        "holeyCode": "# tapで自身を返す、pushで要素追加\nresult = [1, 2, 3].___ { |arr| arr.___(4) }",
+        "holeyCode": "# tapで自身を返す、pushで要素追加\nresult = [___, 2, 3].tap { |arr| arr.push(4) }",
         "correctLines": [
           "# tapで自身を返す、pushで要素追加",
           "result = [1, 2, 3].tap { |arr| arr.push(4) }"

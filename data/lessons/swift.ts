@@ -80,7 +80,7 @@ export const swiftData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// x に 10 を入れる\nlet x = 10\n// y に 5 を入れる\nlet y = 5\n// + でたし算する\nprint(x + y)",
-        "holeyCode": "// x に 10 を入れる\nlet x = ___\n// y に 5 を入れる\nlet y = ___\n// + でたし算する\nprint(x ___ y)",
+        "holeyCode": "// x に 10 を入れる\nlet ___ = 10\n// y に 5 を入れる\nlet ___ = 5\n// + でたし算する\nprint(x + ___)",
         "correctLines": [
           "// x に 10 を入れる",
           "let x = 10",
@@ -137,7 +137,7 @@ export const swiftData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// 10 を 3 で割ったあまりを出力する\nprint(10 % 3)",
-        "holeyCode": "// 10 を 3 で割ったあまりを出力する\nprint(10 ___ 3)",
+        "holeyCode": "// 10 を 3 で割ったあまりを出力する\nprint(___ % 3)",
         "correctLines": [
           "// 10 を 3 で割ったあまりを出力する",
           "print(10 % 3)"
@@ -186,7 +186,7 @@ export const swiftData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// var で変更可能な変数を作る\nvar hp = 100\n// += で 20 を足す\nhp += 20\n// -= で 50 を引く\nhp -= 50\nprint(hp)",
-        "holeyCode": "// var で変更可能な変数を作る\nvar hp = 100\n// += で 20 を足す\nhp ___ 20\n// -= で 50 を引く\nhp ___ 50\nprint(hp)",
+        "holeyCode": "// var で変更可能な変数を作る\nvar ___ = 100\n// += で 20 を足す\nhp += ___\n// -= で 50 を引く\nhp -= ___\nprint(___)",
         "correctLines": [
           "// var で変更可能な変数を作る",
           "var hp = 100",
@@ -245,7 +245,7 @@ export const swiftData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// score に 100 を入れる\nlet score = 100\n// > で比較する\nif score > 80 {\n    print(\"Great!\")\n}",
-        "holeyCode": "// score に 100 を入れる\nlet score = ___\n// > で比較する\nif score ___ 80 {\n    print(\"Great!\")\n}",
+        "holeyCode": "// score に 100 を入れる\nlet ___ = 100\n// > で比較する\nif score ___ 80 {\n    ___(\"Great!\")\n___",
         "correctLines": [
           "// score に 100 を入れる",
           "let score = 100",
@@ -305,7 +305,7 @@ export const swiftData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "let score = 80\nlet bonus = 10\n// && で両方の条件をチェック\nif score >= 70 && bonus > 0 {\n    print(\"Bonus Pass\")\n}",
-        "holeyCode": "let score = 80\nlet bonus = 10\n// && で両方の条件をチェック\nif score >= 70 ___ bonus > 0 {\n    print(\"Bonus Pass\")\n}",
+        "holeyCode": "let ___ = 80\nlet ___ = 10\n// && で両方の条件をチェック\nif score ___ 70 && bonus > 0 {\n    ___(\"Bonus Pass\")\n___",
         "correctLines": [
           "let score = 80",
           "let bonus = 10",
@@ -362,7 +362,7 @@ export const swiftData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet colors = [\"あか\", \"あお\"]\n// 2番目のデータ（インデックス1）を出す\nprint(colors[1])",
-        "holeyCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet colors = [\"___\", \"___\"]\n// 2番目のデータ（インデックス1）を出す\nprint(colors[___])",
+        "holeyCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet ___ = [\"あか\", \"あお\"]\n// 2番目のデータ（インデックス1）を出す\nprint(colors[___])",
         "correctLines": [
           "// colors という配列を作る（'あか', 'あお'の順）",
           "let colors = [\"あか\", \"あお\"]",
@@ -422,7 +422,7 @@ export const swiftData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet colors = [\"みかん\": \"オレンジ\"]\n// 中身を出す\nprint(colors[\"みかん\"]!)",
-        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet colors = [\"___\": \"___\"]\n// 中身を出す\nprint(colors[\"___\"]!)",
+        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet ___ = [\"みかん\": \"オレンジ\"]\n// 中身を出す\nprint(colors[\"___\"]!)",
         "correctLines": [
           "// 辞書を作る（キーは'みかん'、値は'オレンジ'）",
           "let colors = [\"みかん\": \"オレンジ\"]",

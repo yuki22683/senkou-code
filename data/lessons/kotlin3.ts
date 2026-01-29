@@ -35,7 +35,7 @@ export const kotlin3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// coroutines をインポートする\nimport kotlinx.coroutines.*\n\n// suspend で一時停止可能な関数にする\nsuspend fun getMessage(): String {\n    // 100ミリ秒待機する\n    delay(100)\n    // \"Hello\" を返す\n    return \"Hello\"\n}\n\n// main 関数を定義する\nfun main() = runBlocking {\n    // getMessage() を出力する\n    println(getMessage())\n}",
-        "holeyCode": "// coroutines をインポートする\nimport kotlinx.coroutines.___\n\n// suspend で一時停止可能な関数にする\n___ fun getMessage(): String {\n    // 100ミリ秒待機する\n    ___(100)\n    // \"Hello\" を返す\n    return \"___\"\n}\n\n// main 関数を定義する\nfun ___() = runBlocking {\n    // getMessage() を出力する\n    ___(getMessage())\n}",
+        "holeyCode": "// coroutines をインポートする\nimport kotlinx.___.*\n\n// suspend で一時停止可能な関数にする\nsuspend fun getMessage(): ___ {\n    // 100ミリ秒待機する\n    delay(___)\n    // \"Hello\" を返す\n    return \"___\"\n___\n\n// main 関数を定義する\nfun main() = ___ {\n    // getMessage() を出力する\n    ___(getMessage())\n___",
         "correctLines": [
           "// coroutines をインポートする",
           "import kotlinx.coroutines.*",
@@ -122,7 +122,7 @@ export const kotlin3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// main 関数を定義する\nfun main() {\n    // generateSequence で無限シーケンスを生成する\n    val nums = generateSequence(1) { it * 2 }\n        // 4つ取得する\n        .take(4)\n        // リストに変換する\n        .toList()\n    // nums を出力する\n    println(nums)\n}",
-        "holeyCode": "// main 関数を定義する\nfun ___() {\n    // generateSequence で無限シーケンスを生成する\n    val nums = ___(1) { it * 2 }\n        // 4つ取得する\n        .take(___)\n        // リストに変換する\n        .___\n    // nums を出力する\n    ___(nums)\n}",
+        "holeyCode": "// main 関数を定義する\nfun ___() {\n    // generateSequence で無限シーケンスを生成する\n    val nums = generateSequence(___) { it * 2 }\n        // 4つ取得する\n        .take(___)\n        // リストに変換する\n        .___()\n    // nums を出力する\n    println(___)\n___",
         "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
@@ -198,7 +198,7 @@ export const kotlin3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// inline で関数をインライン化する\ninline fun repeat(times: Int, action: (Int) -> Unit) {\n    // 0 から times まで繰り返す\n    for (i in 0 until times) action(i)\n}\n\n// main 関数を定義する\nfun main() {\n    // repeat を呼び出す\n    repeat(3) { println(it) }\n}",
-        "holeyCode": "// inline で関数をインライン化する\n___ fun repeat(times: Int, action: (Int) -> Unit) {\n    // 0 から times まで繰り返す\n    for (i in 0 until times) ___(i)\n}\n\n// main 関数を定義する\nfun ___() {\n    // repeat を呼び出す\n    ___(3) { println(it) }\n}",
+        "holeyCode": "// inline で関数をインライン化する\ninline fun repeat(times: Int, action: (Int) -> ___) {\n    // 0 から times まで繰り返す\n    for (i in ___ until times) action(i)\n___\n\n// main 関数を定義する\nfun ___() {\n    // repeat を呼び出す\n    repeat(___) { println(it) }\n___",
         "correctLines": [
           "// inline で関数をインライン化する",
           "inline fun repeat(times: Int, action: (Int) -> Unit) {",
@@ -273,7 +273,7 @@ export const kotlin3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// reified で実行時に型情報を使う\ninline fun <reified T> checkType(value: Any): Boolean {\n    // value が T 型かチェックする\n    return value is T\n}\n\n// main 関数を定義する\nfun main() {\n    // String 型かチェックする\n    println(checkType<String>(\"test\"))\n    // Int 型かチェックする\n    println(checkType<Int>(\"test\"))\n}",
-        "holeyCode": "// reified で実行時に型情報を使う\ninline fun <___ T> checkType(value: Any): Boolean {\n    // value が T 型かチェックする\n    return value ___ T\n}\n\n// main 関数を定義する\nfun ___() {\n    // String 型かチェックする\n    println(checkType<___>(\"test\"))\n    // Int 型かチェックする\n    println(checkType<___>(\"test\"))\n}",
+        "holeyCode": "// reified で実行時に型情報を使う\ninline fun <reified T> checkType(value: Any): ___ {\n    // value が T 型かチェックする\n    return value is ___\n___\n\n// main 関数を定義する\nfun ___() {\n    // String 型かチェックする\n    ___(checkType<String>(\"test\"))\n    // Int 型かチェックする\n    ___(checkType<Int>(\"test\"))\n___",
         "correctLines": [
           "// reified で実行時に型情報を使う",
           "inline fun <reified T> checkType(value: Any): Boolean {",
@@ -353,7 +353,7 @@ export const kotlin3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// data class を定義する\ndata class Config(var host: String = \"\", var port: Int = 0)\n\n// main 関数を定義する\nfun main() {\n    // apply で設定してオブジェクトを返す\n    val cfg = Config().apply {\n        // hostを設定する\n        host = \"localhost\"\n        // portを設定する\n        port = 8080\n    }\n    // cfg を出力する\n    println(cfg)\n}",
-        "holeyCode": "// data class を定義する\n___ class Config(var host: String = \"\", var port: Int = 0)\n\n// main 関数を定義する\nfun ___() {\n    // apply で設定してオブジェクトを返す\n    val cfg = Config().___ {\n        // hostを設定する\n        host = \"___\"\n        // portを設定する\n        port = ___\n    }\n    // cfg を出力する\n    ___(cfg)\n}",
+        "holeyCode": "// data class を定義する\ndata class Config(var host: String = \"\", var port: Int = 0)\n\n// main 関数を定義する\nfun ___() {\n    // apply で設定してオブジェクトを返す\n    val cfg = Config().___ {\n        // hostを設定する\n        host = \"___\"\n        // portを設定する\n        port = ___\n    ___\n    // cfg を出力する\n    println(___)\n___",
         "correctLines": [
           "// data class を定義する",
           "data class Config(var host: String = \"\", var port: Int = 0)",
@@ -438,7 +438,7 @@ export const kotlin3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// main 関数を定義する\nfun main() {\n    // also で副作用を実行してオブジェクトを返す\n    val num = 42.also {\n        // 値を出力する\n        println(\"Value: $it\")\n    }\n    // num を出力する\n    println(num)\n}",
-        "holeyCode": "// main 関数を定義する\nfun ___() {\n    // also で副作用を実行してオブジェクトを返す\n    val num = ___.___ {\n        // 値を出力する\n        println(\"Value: $___\")\n    }\n    // num を出力する\n    ___(num)\n}",
+        "holeyCode": "// main 関数を定義する\nfun ___() {\n    // also で副作用を実行してオブジェクトを返す\n    val num = ___.also {\n        // 値を出力する\n        ___(\"Value: $it\")\n    ___\n    // num を出力する\n    println(___)\n___",
         "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
@@ -512,7 +512,7 @@ export const kotlin3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// main 関数を定義する\nfun main() {\n    // run でブロックを実行して結果を返す\n    val result = \"Hello World\".run {\n        // スペースで分割してサイズを取得する\n        split(\" \").size\n    }\n    // result を出力する\n    println(result)\n}",
-        "holeyCode": "// main 関数を定義する\nfun ___() {\n    // run でブロックを実行して結果を返す\n    val result = \"Hello World\".___ {\n        // スペースで分割してサイズを取得する\n        split(\"___\").___\n    }\n    // result を出力する\n    ___(result)\n}",
+        "holeyCode": "// main 関数を定義する\nfun ___() {\n    // run でブロックを実行して結果を返す\n    val result = \"___\".run {\n        // スペースで分割してサイズを取得する\n        split(\"___\").size\n    ___\n    // result を出力する\n    println(___)\n___",
         "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
@@ -585,7 +585,7 @@ export const kotlin3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// main 関数を定義する\nfun main() {\n    // takeIf で条件を満たせば値を返す\n    val num = 10.takeIf { it > 5 }\n    // num を出力する\n    println(num)\n}",
-        "holeyCode": "// main 関数を定義する\nfun ___() {\n    // takeIf で条件を満たせば値を返す\n    val num = ___.___ { it > 5 }\n    // num を出力する\n    ___(num)\n}",
+        "holeyCode": "// main 関数を定義する\nfun ___() {\n    // takeIf で条件を満たせば値を返す\n    val num = ___.takeIf { it > 5 }\n    // num を出力する\n    println(___)\n___",
         "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
@@ -652,7 +652,7 @@ export const kotlin3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// main 関数を定義する\nfun main() {\n    // listOf でリストを作成する\n    val nums = listOf(1, 2, 3, 4, 5)\n    // groupBy でグループ化する\n    val grouped = nums.groupBy { it % 2 }\n    // grouped を出力する\n    println(grouped)\n}",
-        "holeyCode": "// main 関数を定義する\nfun ___() {\n    // listOf でリストを作成する\n    val nums = ___(1, 2, 3, 4, 5)\n    // groupBy でグループ化する\n    val grouped = nums.___ { it % 2 }\n    // grouped を出力する\n    ___(grouped)\n}",
+        "holeyCode": "// main 関数を定義する\nfun ___() {\n    // listOf でリストを作成する\n    val nums = listOf(___, 2, 3, 4, 5)\n    // groupBy でグループ化する\n    val grouped = nums.groupBy { it % ___ }\n    // grouped を出力する\n    println(___)\n___",
         "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
@@ -723,7 +723,7 @@ export const kotlin3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// main 関数を定義する\nfun main() {\n    // listOf でリスト(1, 2, 3, 4)を作成する\n    val nums = listOf(1, 2, 3, 4)\n    // fold で畳み込む\n    val product = nums.fold(1) { acc, n -> acc * n }\n    // product を出力する\n    println(product)\n}",
-        "holeyCode": "// main 関数を定義する\nfun ___() {\n    // listOf でリスト(1, 2, 3, 4)を作成する\n    val nums = ___(1, 2, 3, 4)\n    // fold で畳み込む\n    val product = nums.___(1) { acc, n -> acc * n }\n    // product を出力する\n    ___(product)\n}",
+        "holeyCode": "// main 関数を定義する\nfun ___() {\n    // listOf でリスト(1, 2, 3, 4)を作成する\n    val nums = listOf(___, 2, 3, 4)\n    // fold で畳み込む\n    val product = nums.fold(___) { acc, n -> acc * n }\n    // product を出力する\n    println(___)\n___",
         "correctLines": [
           "// main 関数を定義する",
           "fun main() {",

@@ -19,7 +19,7 @@ export const pythonData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 動物を表す親クラスを定義\nclass Animal:\n    # インスタンスを初期設定するメソッドを定義\n    def __init__(self, name):\n        # 名前を属性に保存\n        self.name = name\n\n# Animalを継承してDogクラスを定義\nclass Dog(Animal):\n    # 鳴き声を表示するメソッドを定義\n    def bark(self):\n        # 名前を含めたメッセージを表示\n        print(f'{self.name} says Woof!')\n\n# 'Pochi'という名前で犬のインスタンスを作成\ndog = Dog('Pochi')\n# インスタンスのメソッドを実行\ndog.bark()",
-        "holeyCode": "# 動物を表す親クラスを定義\nclass ___:\n    # インスタンスを初期設定するメソッドを定義\n    def ___:\n        # 名前を属性に保存\n        self.name = ___\n\n# Animalを継承してDogクラスを定義\nclass Dog(___):\n    # 鳴き声を表示するメソッドを定義\n    def ___:\n        # 名前を含めたメッセージを表示\n        print(___)\n\n# 'Pochi'という名前で犬のインスタンスを作成\ndog = ___\n# インスタンスのメソッドを実行\n___",
+        "holeyCode": "# 動物を表す親クラスを定義\nclass ___:\n    # インスタンスを初期設定するメソッドを定義\n    def ___(self, name):\n        # 名前を属性に保存\n        self.___ = name\n\n# Animalを継承してDogクラスを定義\nclass ___(Animal):\n    # 鳴き声を表示するメソッドを定義\n    def ___(self):\n        # 名前を含めたメッセージを表示\n        ___(f'{self.name} says Woof!')\n\n# 'Pochi'という名前で犬のインスタンスを作成\ndog = Dog('___')\n# インスタンスのメソッドを実行\ndog.___()",
         "correctLines": [
           "# 動物を表す親クラスを定義",
           "class Animal:",
@@ -95,7 +95,7 @@ export const pythonData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 人を表す親クラスを定義\nclass Person:\n    # 名前を初期設定するメソッドを定義\n    def __init__(self, name):\n        # 名前を属性に保存\n        self.name = name\n\n# Personを継承してStudentクラスを定義\nclass Student(Person):\n    # name（名前）、grade（学年）の順で初期設定\n    def __init__(self, name, grade):\n        # 親クラスの初期化メソッドを呼び出し\n        super().__init__(name)\n        # 学年を属性に保存\n        self.grade = grade\n\n# 'Taro'、3年生としてインスタンスを作成\ns = Student('Taro', 3)\n# インスタンスの情報を表示\nprint(f'{s.name} is in grade {s.grade}')",
-        "holeyCode": "# 人を表す親クラスを定義\nclass ___:\n    # 名前を初期設定するメソッドを定義\n    def ___:\n        # 名前を属性に保存\n        self.name = ___\n\n# Personを継承してStudentクラスを定義\nclass ___:\n    # name（名前）、grade（学年）の順で初期設定\n    def ___:\n        # 親クラスの初期化メソッドを呼び出し\n        ___.__init__(name)\n        # 学年を属性に保存\n        self.grade = ___\n\n# 'Taro'、3年生としてインスタンスを作成\ns = ___\n# インスタンスの情報を表示\nprint(___)",
+        "holeyCode": "# 人を表す親クラスを定義\nclass ___:\n    # 名前を初期設定するメソッドを定義\n    def ___(self, name):\n        # 名前を属性に保存\n        self.___ = name\n\n# Personを継承してStudentクラスを定義\nclass ___(Person):\n    # name（名前）、grade（学年）の順で初期設定\n    def ___(self, name, grade):\n        # 親クラスの初期化メソッドを呼び出し\n        super().__init__(___)\n        # 学年を属性に保存\n        self.___ = grade\n\n# 'Taro'、3年生としてインスタンスを作成\ns = Student('Taro', ___)\n# インスタンスの情報を表示\n___(f'{s.name} is in grade {s.grade}')",
         "correctLines": [
           "# 人を表す親クラスを定義",
           "class Person:",
@@ -177,7 +177,7 @@ export const pythonData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 長方形を表すクラスを定義\nclass Rectangle:\n    # width（幅）、height（高さ）の順で初期設定\n    def __init__(self, width, height):\n        # 幅を保存\n        self.width = width\n        # 高さを保存\n        self.height = height\n    \n    # メソッドを属性のように扱えるように設定\n    @property\n    # 面積を計算して返すメソッドを定義\n    def area(self):\n        # 幅と高さの積を計算\n        return self.width * self.height\n\n# 幅4、高さ5のインスタンスを作成\nr = Rectangle(4, 5)\n# 面積を表示（プロパティなので括弧なし）\nprint(r.area)",
-        "holeyCode": "# 長方形を表すクラスを定義\nclass ___:\n    # width（幅）、height（高さ）の順で初期設定\n    def ___:\n        # 幅を保存\n        self.width = ___\n        # 高さを保存\n        self.height = ___\n    \n    # メソッドを属性のように扱えるように設定\n    ___\n    # 面積を計算して返すメソッドを定義\n    def ___:\n        # 幅と高さの積を計算\n        return ___\n\n# 幅4、高さ5のインスタンスを作成\nr = ___\n# 面積を表示（プロパティなので括弧なし）\nprint(___)",
+        "holeyCode": "# 長方形を表すクラスを定義\nclass ___:\n    # width（幅）、height（高さ）の順で初期設定\n    def ___(self, width, height):\n        # 幅を保存\n        self.___ = width\n        # 高さを保存\n        self.___ = height\n    \n    # メソッドを属性のように扱えるように設定\n    @___\n    # 面積を計算して返すメソッドを定義\n    def ___(self):\n        # 幅と高さの積を計算\n        return self.___ * self.___\n\n# 幅4、高さ5のインスタンスを作成\nr = Rectangle(___, 5)\n# 面積を表示（プロパティなので括弧なし）\n___(r.area)",
         "correctLines": [
           "# 長方形を表すクラスを定義",
           "class Rectangle:",
@@ -259,7 +259,7 @@ export const pythonData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 犬を表すクラスを定義\nclass Dog:\n    # 生成された数をカウントするクラス変数を定義\n    count = 0\n    \n    # 名前を初期設定するメソッドを定義\n    def __init__(self, name):\n        # 名前を保存\n        self.name = name\n        # インスタンスが作られるたびにカウントを増やす\n        Dog.count += 1\n    \n    # クラス全体に関する処理を行うメソッドを定義\n    @classmethod\n    # カウントされている数を取得するメソッドを定義\n    def get_count(cls):\n        # クラス変数を参照して返す\n        return cls.count\n\n# 1つ目のインスタンスを作成\nd1 = Dog('Pochi')\n# 2つ目のインスタンスを作成\nd2 = Dog('Hachi')\n# クラスメソッドを呼び出して合計数を表示\nprint(Dog.get_count())",
-        "holeyCode": "# 犬を表すクラスを定義\nclass ___:\n    # 生成された数をカウントするクラス変数を定義\n    count = ___\n    \n    # 名前を初期設定するメソッドを定義\n    def ___:\n        # 名前を保存\n        self.name = ___\n        # インスタンスが作られるたびにカウントを増やす\n        ___\n    \n    # クラス全体に関する処理を行うメソッドを定義\n    ___\n    # カウントされている数を取得するメソッドを定義\n    def ___:\n        # クラス変数を参照して返す\n        return ___\n\n# 1つ目のインスタンスを作成\nd1 = ___\n# 2つ目のインスタンスを作成\nd2 = ___\n# クラスメソッドを呼び出して合計数を表示\nprint(___)",
+        "holeyCode": "# 犬を表すクラスを定義\nclass ___:\n    # 生成された数をカウントするクラス変数を定義\n    count = ___\n    \n    # 名前を初期設定するメソッドを定義\n    def ___(self, name):\n        # 名前を保存\n        self.___ = name\n        # インスタンスが作られるたびにカウントを増やす\n        Dog.count += ___\n    \n    # クラス全体に関する処理を行うメソッドを定義\n    @___\n    # カウントされている数を取得するメソッドを定義\n    def ___(cls):\n        # クラス変数を参照して返す\n        return cls.___\n\n# 1つ目のインスタンスを作成\nd___ = Dog('Pochi')\n# 2つ目のインスタンスを作成\nd___ = Dog('Hachi')\n# クラスメソッドを呼び出して合計数を表示\n___(Dog.get_count())",
         "correctLines": [
           "# 犬を表すクラスを定義",
           "class Dog:",
@@ -353,7 +353,7 @@ export const pythonData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# バリデータクラスを定義\nclass Validator:\n    # 状態に依存しない静的メソッドを定義\n    @staticmethod\n    # 数値が正かどうかを判定するメソッドを定義\n    def is_positive(n):\n        # 0より大きいかどうかを返す\n        return n > 0\n\n# クラスから直接メソッドを呼び出して結果を表示\nprint(Validator.is_positive(5))\n# 負の数値を渡して結果を表示\nprint(Validator.is_positive(-3))",
-        "holeyCode": "# バリデータクラスを定義\nclass ___:\n    # 状態に依存しない静的メソッドを定義\n    ___\n    # 数値が正かどうかを判定するメソッドを定義\n    def ___:\n        # 0より大きいかどうかを返す\n        return ___\n\n# クラスから直接メソッドを呼び出して結果を表示\nprint(___)\n# 負の数値を渡して結果を表示\nprint(___)",
+        "holeyCode": "# バリデータクラスを定義\nclass ___:\n    # 状態に依存しない静的メソッドを定義\n    @___\n    # 数値が正かどうかを判定するメソッドを定義\n    def ___(n):\n        # 0より大きいかどうかを返す\n        return n > ___\n\n# クラスから直接メソッドを呼び出して結果を表示\n___(Validator.is_positive(5))\n# 負の数値を渡して結果を表示\n___(Validator.is_positive(-3))",
         "correctLines": [
           "# バリデータクラスを定義",
           "class Validator:",
@@ -418,7 +418,7 @@ export const pythonData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 抽象クラス関連の機能を読み込み\nfrom abc import ABC, abstractmethod\n\n# 動物を表す抽象クラスを定義\nclass Animal(ABC):\n    # 子クラスで実装必須のメソッドを定義\n    @abstractmethod\n    # 鳴き声を出すメソッドの枠組みを定義\n    def speak(self):\n        # 抽象メソッドなので処理はなし\n        pass\n\n# 抽象クラスを継承して実装クラスを作成\nclass Cat(Animal):\n    # speakメソッドを具体的に実装\n    def speak(self):\n        # 鳴き声を返す\n        return 'Meow'\n\n# インスタンスを作成\ncat = Cat()\n# 実装したメソッドを実行して表示\nprint(cat.speak())",
-        "holeyCode": "# 抽象クラス関連の機能を読み込み\nfrom abc import ___\n\n# 動物を表す抽象クラスを定義\nclass ___:\n    # 子クラスで実装必須のメソッドを定義\n    ___\n    # 鳴き声を出すメソッドの枠組みを定義\n    def ___:\n        # 抽象メソッドなので処理はなし\n        ___\n\n# 抽象クラスを継承して実装クラスを作成\nclass ___:\n    # speakメソッドを具体的に実装\n    def ___:\n        # 鳴き声を返す\n        return ___\n\n# インスタンスを作成\ncat = ___\n# 実装したメソッドを実行して表示\nprint(___)",
+        "holeyCode": "# 抽象クラス関連の機能を読み込み\nfrom abc import ABC, ___\n\n# 動物を表す抽象クラスを定義\nclass ___(ABC):\n    # 子クラスで実装必須のメソッドを定義\n    @___\n    # 鳴き声を出すメソッドの枠組みを定義\n    def ___(self):\n        # 抽象メソッドなので処理はなし\n        ___\n\n# 抽象クラスを継承して実装クラスを作成\nclass ___(Animal):\n    # speakメソッドを具体的に実装\n    def ___(self):\n        # 鳴き声を返す\n        return '___'\n\n# インスタンスを作成\ncat = ___()\n# 実装したメソッドを実行して表示\n___(cat.speak())",
         "correctLines": [
           "# 抽象クラス関連の機能を読み込み",
           "from abc import ABC, abstractmethod",
@@ -506,7 +506,7 @@ export const pythonData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 本を表すクラスを定義\nclass Book:\n    # title（タイトル）、author（著者）の順で初期化\n    def __init__(self, title, author):\n        # タイトルを属性に保存\n        self.title = title\n        # 著者を属性に保存\n        self.author = author\n    \n    # 文字列表現を定義するメソッドを定義\n    def __str__(self):\n        # 「タイトル by 著者」の形式で返す\n        return f'{self.title} by {self.author}'\n\n# title（タイトル）、author（著者）の順でインスタンスを作成\nbook = Book('Python Guide', 'Taro')\n# インスタンスを表示\nprint(book)",
-        "holeyCode": "# 本を表すクラスを定義\nclass ___:\n    # title（タイトル）、author（著者）の順で初期化\n    def ___:\n        # タイトルを属性に保存\n        self.title = ___\n        # 著者を属性に保存\n        self.author = ___\n    \n    # 文字列表現を定義するメソッドを定義\n    def ___(self):\n        # 「タイトル by 著者」の形式で返す\n        return ___\n\n# title（タイトル）、author（著者）の順でインスタンスを作成\nbook = ___\n# インスタンスを表示\nprint(___)",
+        "holeyCode": "# 本を表すクラスを定義\nclass ___:\n    # title（タイトル）、author（著者）の順で初期化\n    def ___(self, title, author):\n        # タイトルを属性に保存\n        self.___ = title\n        # 著者を属性に保存\n        self.___ = author\n    \n    # 文字列表現を定義するメソッドを定義\n    def ___(self):\n        # 「タイトル by 著者」の形式で返す\n        return f'{self.title} by {self.___}'\n\n# title（タイトル）、author（著者）の順でインスタンスを作成\nbook = Book('Python Guide', '___')\n# インスタンスを表示\n___(book)",
         "correctLines": [
           "# 本を表すクラスを定義",
           "class Book:",
@@ -583,7 +583,7 @@ export const pythonData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# ベクトルを表すクラスを定義\nclass Vector:\n    # x、yの順で座標を初期化\n    def __init__(self, x, y):\n        # x座標を属性に保存\n        self.x = x\n        # y座標を属性に保存\n        self.y = y\n    \n    # 等価比較を定義するメソッドを定義\n    def __eq__(self, other):\n        # 両座標が一致するかを返す\n        return self.x == other.x and self.y == other.y\n\n# 座標(3, 4)でインスタンスを作成\nv1 = Vector(3, 4)\n# 同じ座標で別のインスタンスを作成\nv2 = Vector(3, 4)\n# 2つのベクトルが等しいか比較\nprint(v1 == v2)",
-        "holeyCode": "# ベクトルを表すクラスを定義\nclass ___:\n    # x、yの順で座標を初期化\n    def ___:\n        # x座標を属性に保存\n        self.x = ___\n        # y座標を属性に保存\n        self.y = ___\n    \n    # 等価比較を定義するメソッドを定義\n    def ___(self, other):\n        # 両座標が一致するかを返す\n        return ___\n\n# 座標(3, 4)でインスタンスを作成\nv1 = ___\n# 同じ座標で別のインスタンスを作成\nv2 = ___\n# 2つのベクトルが等しいか比較\nprint(___)",
+        "holeyCode": "# ベクトルを表すクラスを定義\nclass ___:\n    # x、yの順で座標を初期化\n    def ___(self, x, y):\n        # x座標を属性に保存\n        self.___ = x\n        # y座標を属性に保存\n        self.___ = y\n    \n    # 等価比較を定義するメソッドを定義\n    def ___(self, other):\n        # 両座標が一致するかを返す\n        return self.x == other.x and self.___ == other.y\n\n# 座標(3, 4)でインスタンスを作成\nv___ = Vector(3, 4)\n# 同じ座標で別のインスタンスを作成\nv___ = Vector(3, 4)\n# 2つのベクトルが等しいか比較\n___(v1 == v2)",
         "correctLines": [
           "# ベクトルを表すクラスを定義",
           "class Vector:",
@@ -664,7 +664,7 @@ export const pythonData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# チームを表すクラスを定義\nclass Team:\n    # メンバーリストで初期化するメソッドを定義\n    def __init__(self, members):\n        # メンバーリストを属性に保存\n        self.members = members\n    \n    # len()関数に対応するメソッドを定義\n    def __len__(self):\n        # メンバーの数を返す\n        return len(self.members)\n\n# 3人のメンバーでチームを作成\nteam = Team(['Alice', 'Bob', 'Charlie'])\n# チームの人数を表示\nprint(len(team))",
-        "holeyCode": "# チームを表すクラスを定義\nclass ___:\n    # メンバーリストで初期化するメソッドを定義\n    def ___:\n        # メンバーリストを属性に保存\n        self.members = ___\n    \n    # len()関数に対応するメソッドを定義\n    def ___(self):\n        # メンバーの数を返す\n        return ___\n\n# 3人のメンバーでチームを作成\nteam = ___\n# チームの人数を表示\nprint(___)",
+        "holeyCode": "# チームを表すクラスを定義\nclass ___:\n    # メンバーリストで初期化するメソッドを定義\n    def ___(self, members):\n        # メンバーリストを属性に保存\n        self.___ = members\n    \n    # len()関数に対応するメソッドを定義\n    def ___(self):\n        # メンバーの数を返す\n        return len(self.___)\n\n# 3人のメンバーでチームを作成\nteam = Team(['Alice', 'Bob', '___'])\n# チームの人数を表示\n___(len(team))",
         "correctLines": [
           "# チームを表すクラスを定義",
           "class Team:",
@@ -736,7 +736,7 @@ export const pythonData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# dataclassデコレータをインポート\nfrom dataclasses import dataclass\n\n# データクラスとして定義するデコレータを適用\n@dataclass\n# 人物を表すクラスを定義\nclass Person:\n    # 名前の型を文字列で指定\n    name: str\n    # 年齢の型を整数で指定\n    age: int\n\n# name（名前）、age（年齢）の順でインスタンスを作成\np = Person('Taro', 25)\n# インスタンスを表示\nprint(p)",
-        "holeyCode": "# dataclassデコレータをインポート\nfrom dataclasses import ___\n\n# データクラスとして定義するデコレータを適用\n___\n# 人物を表すクラスを定義\nclass ___:\n    # 名前の型を文字列で指定\n    name: ___\n    # 年齢の型を整数で指定\n    age: ___\n\n# name（名前）、age（年齢）の順でインスタンスを作成\np = ___\n# インスタンスを表示\nprint(___)",
+        "holeyCode": "# dataclassデコレータをインポート\nfrom dataclasses import ___\n\n# データクラスとして定義するデコレータを適用\n@___\n# 人物を表すクラスを定義\nclass ___:\n    # 名前の型を文字列で指定\n    name: ___\n    # 年齢の型を整数で指定\n    age: ___\n\n# name（名前）、age（年齢）の順でインスタンスを作成\np = Person('Taro', ___)\n# インスタンスを表示\n___(p)",
         "correctLines": [
           "# dataclassデコレータをインポート",
           "from dataclasses import dataclass",

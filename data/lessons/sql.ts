@@ -27,7 +27,7 @@ export const sqlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "-- SELECTでデータを取得\nSELECT 'Hello, World!';",
-        "holeyCode": "-- SELECTでデータを取得\n___ 'Hello, World!';",
+        "holeyCode": "-- SELECTでデータを取得\nSELECT 'Hello, ___!';",
         "correctLines": [
           "-- SELECTでデータを取得",
           "SELECT 'Hello, World!';"
@@ -72,7 +72,7 @@ export const sqlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "-- 文字にgreetingという名前をつける\nSELECT 'こんにちは' AS greeting;",
-        "holeyCode": "-- 文字にgreetingという名前をつける\nSELECT 'こんにちは' ___ ___;",
+        "holeyCode": "-- 文字にgreetingという名前をつける\nSELECT 'こんにちは' AS ___;",
         "correctLines": [
           "-- 文字にgreetingという名前をつける",
           "SELECT 'こんにちは' AS greeting;"
@@ -118,7 +118,7 @@ export const sqlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "-- 100と50を足し算する\nSELECT 100 + 50 AS total;",
-        "holeyCode": "-- 100と50を足し算する\nSELECT 100 ___ 50 AS total;",
+        "holeyCode": "-- 100と50を足し算する\nSELECT ___ + 50 AS total;",
         "correctLines": [
           "-- 100と50を足し算する",
           "SELECT 100 + 50 AS total;"
@@ -163,7 +163,7 @@ export const sqlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "-- 名前と年齢を表示\nSELECT 'Taro' AS name, 10 AS age;",
-        "holeyCode": "-- 名前と年齢を表示\nSELECT 'Taro' AS name___ 10 AS age;",
+        "holeyCode": "-- 名前と年齢を表示\nSELECT 'Taro' AS name, ___ AS age;",
         "correctLines": [
           "-- 名前と年齢を表示",
           "SELECT 'Taro' AS name, 10 AS age;"
@@ -207,7 +207,7 @@ export const sqlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "-- 10より大きいかチェック\nSELECT 1 WHERE 15 > 10;",
-        "holeyCode": "-- 10より大きいかチェック\nSELECT 1 ___ 15 > 10;",
+        "holeyCode": "-- 10より大きいかチェック\nSELECT ___ WHERE 15 > 10;",
         "correctLines": [
           "-- 10より大きいかチェック",
           "SELECT 1 WHERE 15 > 10;"
@@ -251,7 +251,7 @@ export const sqlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "-- 文字をつなげる\nSELECT 'SQL' || 'は楽しい！';",
-        "holeyCode": "-- 文字をつなげる\nSELECT 'SQL' ___ 'は楽しい！';",
+        "holeyCode": "-- 文字をつなげる\nSELECT '___' || 'は楽しい！';",
         "correctLines": [
           "-- 文字をつなげる",
           "SELECT 'SQL' || 'は楽しい！';"
@@ -295,7 +295,7 @@ export const sqlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "-- 降順で並べる\nSELECT 1 AS num ORDER BY num DESC;",
-        "holeyCode": "-- 降順で並べる\nSELECT 1 AS num ___ ___ num DESC;",
+        "holeyCode": "-- 降順で並べる\nSELECT ___ AS num ORDER BY num DESC;",
         "correctLines": [
           "-- 降順で並べる",
           "SELECT 1 AS num ORDER BY num DESC;"
@@ -340,7 +340,7 @@ export const sqlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "-- 両方の条件をチェック\nSELECT 1 WHERE 10 > 5 AND 20 > 10;",
-        "holeyCode": "-- 両方の条件をチェック\nSELECT 1 WHERE 10 > 5 ___ 20 > 10;",
+        "holeyCode": "-- 両方の条件をチェック\nSELECT ___ WHERE 10 > 5 AND 20 > 10;",
         "correctLines": [
           "-- 両方の条件をチェック",
           "SELECT 1 WHERE 10 > 5 AND 20 > 10;"
@@ -384,7 +384,7 @@ export const sqlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "-- 条件分岐\nSELECT CASE WHEN 10 > 5 THEN '大きい' ELSE '小さい' END;",
-        "holeyCode": "-- 条件分岐\nSELECT ___ WHEN 10 > 5 ___ '大きい' ELSE '小さい' ___;",
+        "holeyCode": "-- 条件分岐\nSELECT CASE WHEN ___ > 5 THEN '大きい' ELSE '小さい' END;",
         "correctLines": [
           "-- 条件分岐",
           "SELECT CASE WHEN 10 > 5 THEN '大きい' ELSE '小さい' END;"
@@ -430,7 +430,7 @@ export const sqlData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "-- NULLチェック\nSELECT CASE WHEN NULL IS NULL THEN 1 ELSE 0 END;",
-        "holeyCode": "-- NULLチェック\nSELECT CASE WHEN NULL ___ ___ THEN 1 ELSE 0 END;",
+        "holeyCode": "-- NULLチェック\nSELECT CASE WHEN NULL IS NULL THEN ___ ELSE 0 END;",
         "correctLines": [
           "-- NULLチェック",
           "SELECT CASE WHEN NULL IS NULL THEN 1 ELSE 0 END;"

@@ -23,7 +23,7 @@ export const rubyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 「Hello, Ruby!」と出力する関数\nputs 'Hello, Ruby!'",
-        "holeyCode": "# 「Hello, Ruby!」と出力する関数\nputs '___'",
+        "holeyCode": "# 「Hello, Ruby!」と出力する関数\nputs 'Hello, ___!'",
         "correctLines": [
           "# 「Hello, Ruby!」と出力する関数",
           "puts 'Hello, Ruby!'"
@@ -106,7 +106,7 @@ export const rubyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# xというはこに 10 を入れる\nx = 10\n# yというはこに 5 を入れる\ny = 5\n# x と y をたした答えを出す\nputs x + y",
-        "holeyCode": "# xというはこに 10 を入れる\nx = ___\n# yというはこに 5 を入れる\ny = ___\n# x と y をたした答えを出す\nputs x ___ y",
+        "holeyCode": "# xというはこに 10 を入れる\nx = ___\n# yというはこに 5 を入れる\ny = ___\n# x と y をたした答えを出す\nputs x + ___",
         "correctLines": [
           "# xというはこに 10 を入れる",
           "x = 10",
@@ -159,7 +159,7 @@ export const rubyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 10 を 3 で割ったあまりを出力する\nputs 10 % 3",
-        "holeyCode": "# 10 を 3 で割ったあまりを出力する\nputs 10 ___ 3",
+        "holeyCode": "# 10 を 3 で割ったあまりを出力する\nputs ___ % 3",
         "correctLines": [
           "# 10 を 3 で割ったあまりを出力する",
           "puts 10 % 3"
@@ -201,7 +201,7 @@ export const rubyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# scoreに50を入れる\nscore = 50\n# 10点プラスする\nscore += 10\n# 結果を表示\nputs score",
-        "holeyCode": "# scoreに50を入れる\nscore = ___\n# 10点プラスする\nscore ___ 10\n# 結果を表示\nputs score",
+        "holeyCode": "# scoreに50を入れる\nscore = ___\n# 10点プラスする\nscore += ___\n# 結果を表示\nputs ___",
         "correctLines": [
           "# scoreに50を入れる",
           "score = 50",
@@ -254,7 +254,7 @@ export const rubyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# ageというはこに 10 を入れる\nage = 10\n# 式展開を使ってメッセージを出す\nputs \"私は#{age}歳です\"",
-        "holeyCode": "# ageというはこに 10 を入れる\nage = ___\n# 式展開を使ってメッセージを出す\nputs \"私は#{___}歳です\"",
+        "holeyCode": "# ageというはこに 10 を入れる\nage = ___\n# 式展開を使ってメッセージを出す\nputs \"___\"",
         "correctLines": [
           "# ageというはこに 10 を入れる",
           "age = 10",
@@ -299,7 +299,7 @@ export const rubyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# colorsという配列を作る\ncolors = ['赤', '青', '緑']\n# 2番目のデータ（インデックス1）を出す\nputs colors[1]",
-        "holeyCode": "# colorsという配列を作る\ncolors = ['___', '___', '___']\n# 2番目のデータ（インデックス1）を出す\nputs colors[___]",
+        "holeyCode": "# colorsという配列を作る\n___ = ['赤', '青', '緑']\n# 2番目のデータ（インデックス1）を出す\nputs colors[___]",
         "correctLines": [
           "# colorsという配列を作る",
           "colors = ['赤', '青', '緑']",
@@ -348,7 +348,7 @@ export const rubyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# scoreに100を入れる\nscore = 100\n# もし80より大きかったら\nif score > 80\n  # 「合格！」と表示する\n  puts '合格！'\nend",
-        "holeyCode": "# scoreに100を入れる\nscore = ___\n# もし80より大きかったら\n___ score > 80\n  # 「合格！」と表示する\n  puts '___'\nend",
+        "holeyCode": "# scoreに100を入れる\nscore = ___\n# もし80より大きかったら\nif score ___ 80\n  # 「合格！」と表示する\n  ___ '合格！'\n___",
         "correctLines": [
           "# scoreに100を入れる",
           "score = 100",
@@ -403,7 +403,7 @@ export const rubyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# ageに10を入れる\nage = 10\n# 20歳以上かどうかで分ける\nif age >= 20\n  # 「大人」と表示\n  puts '大人'\n# else でそれ以外の場合\nelse\n  # 「子供」と表示\n  puts '子供'\nend",
-        "holeyCode": "# ageに10を入れる\nage = ___\n# 20歳以上かどうかで分ける\nif age >= 20\n  # 「大人」と表示\n  puts '___'\n# else でそれ以外の場合\n___\n  # 「子供」と表示\n  puts '___'\nend",
+        "holeyCode": "# ageに10を入れる\nage = ___\n# 20歳以上かどうかで分ける\nif age ___ 20\n  # 「大人」と表示\n  ___ '大人'\n# else でそれ以外の場合\n___\n  # 「子供」と表示\n  ___ '子供'\n___",
         "correctLines": [
           "# ageに10を入れる",
           "age = 10",
@@ -467,7 +467,7 @@ export const rubyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# scoreに85を入れる\nscore = 85\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 and score <= 100\n  # 「合格！」と表示\n  puts '合格！'\nend",
-        "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 ___ score <= 100\n  # 「合格！」と表示\n  puts '___'\nend",
+        "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score ___ 80 and score <= 100\n  # 「合格！」と表示\n  ___ '合格！'\n___",
         "correctLines": [
           "# scoreに85を入れる",
           "score = 85",
@@ -522,7 +522,7 @@ export const rubyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 名前の配列を作る\nnames = ['太郎', '花子']\n# 順番に取り出すループ\nnames.each do |name|\n  # 取り出した名前を表示\n  puts name\nend",
-        "holeyCode": "# 名前の配列を作る\nnames = ['___', '___']\n# 順番に取り出すループ\nnames.___ do |name|\n  # 取り出した名前を表示\n  puts ___\nend",
+        "holeyCode": "# 名前の配列を作る\n___ = ['太郎', '花子']\n# 順番に取り出すループ\nnames.each do |___|\n  # 取り出した名前を表示\n  puts ___\n___",
         "correctLines": [
           "# 名前の配列を作る",
           "names = ['太郎', '花子']",
@@ -578,7 +578,7 @@ export const rubyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# ハッシュを作る\nfruits = {'みかん' => 'オレンジ'}\n# キーを指定して値を取り出す\nputs fruits['みかん']",
-        "holeyCode": "# ハッシュを作る\nfruits = {'___' => '___'}\n# キーを指定して値を取り出す\nputs fruits['___']",
+        "holeyCode": "# ハッシュを作る\n___ = {'みかん' => 'オレンジ'}\n# キーを指定して値を取り出す\nputs ___['みかん']",
         "correctLines": [
           "# ハッシュを作る",
           "fruits = {'みかん' => 'オレンジ'}",
@@ -621,7 +621,7 @@ export const rubyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# greetというメソッドを定義\ndef greet\n  # こんにちは と表示\n  puts 'こんにちは'\nend\n# メソッドを呼び出す\ngreet",
-        "holeyCode": "# greetというメソッドを定義\n___ greet\n  # こんにちは と表示\n  puts '___'\nend\n# メソッドを呼び出す\n___",
+        "holeyCode": "# greetというメソッドを定義\ndef ___\n  # こんにちは と表示\n  ___ 'こんにちは'\n___\n# メソッドを呼び出す\n___",
         "correctLines": [
           "# greetというメソッドを定義",
           "def greet",

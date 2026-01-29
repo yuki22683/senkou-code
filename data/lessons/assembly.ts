@@ -27,7 +27,7 @@ export const assemblyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "; データセクションを宣言\nsection .data\n  ; 文字列msgを定義\n  msg db \"Hello\", 0xA\n\n; テキストセクションを宣言\nsection .text\n  ; エントリーポイントを公開\n  global _start\n\n; プログラムの開始地点\n_start:\n  ; 1は「書く」という命令\n  mov rax, 1\n  ; 1は標準出力\n  mov rdi, 1\n  ; msgで表示する文字を指定\n  mov rsi, msg\n  ; 文字の長さを指定\n  mov rdx, 6\n  ; システムコールを実行\n  syscall\n\n  ; 60は「終了」という命令\n  mov rax, 60\n  ; エラーコード0\n  xor rdi, rdi\n  ; システムコールを実行\n  syscall",
-        "holeyCode": "; データセクションを宣言\nsection ___\n  ; 文字列msgを定義\n  msg db \"___\", 0xA\n\n; テキストセクションを宣言\nsection ___\n  ; エントリーポイントを公開\n  global ___\n\n; プログラムの開始地点\n___:\n  ; 1は「書く」という命令\n  mov rax, ___\n  ; 1は標準出力\n  mov rdi, ___\n  ; msgで表示する文字を指定\n  mov rsi, ___\n  ; 文字の長さを指定\n  mov rdx, ___\n  ; システムコールを実行\n  ___\n\n  ; 60は「終了」という命令\n  mov rax, ___\n  ; エラーコード0\n  xor ___, rdi\n  ; システムコールを実行\n  ___",
+        "holeyCode": "; データセクションを宣言\nsection .___\n  ; 文字列msgを定義\n  msg db \"___\", 0xA\n\n; テキストセクションを宣言\nsection .___\n  ; エントリーポイントを公開\n  global ___\n\n; プログラムの開始地点\n___:\n  ; 1は「書く」という命令\n  mov ___, ___\n  ; 1は標準出力\n  mov ___, ___\n  ; msgで表示する文字を指定\n  mov ___, ___\n  ; 文字の長さを指定\n  mov ___, ___\n  ; システムコールを実行\n  ___\n\n  ; 60は「終了」という命令\n  mov ___, ___\n  ; エラーコード0\n  xor ___, ___\n  ; システムコールを実行\n  ___",
         "correctLines": [
           "; データセクションを宣言",
           "section .data",
@@ -130,7 +130,7 @@ export const assemblyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .data\n  ; 表示したい文字列を定義\n  msg db \"Hi\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, msg\n  ; Hiは2文字+改行で3バイト\n  mov rdx, 3\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-        "holeyCode": "section .data\n  ; 表示したい文字列を定義\n  msg db \"___\", 0xA\n\nsection .text\n  global _start\n\n_start:\n  mov rax, 1\n  mov rdi, 1\n  mov rsi, msg\n  ; Hiは2文字+改行で3バイト\n  mov rdx, ___\n  syscall\n\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+        "holeyCode": "section .___\n  ; 表示したい文字列を定義\n  msg db \"___\", 0xA\n\nsection .___\n  global ___\n\n___:\n  mov ___, ___\n  mov ___, ___\n  mov ___, ___\n  ; Hiは2文字+改行で3バイト\n  mov ___, ___\n  ___\n\n  mov ___, ___\n  xor ___, ___\n  ___",
         "correctLines": [
           "section .data",
           "  ; 表示したい文字列を定義",
@@ -206,7 +206,7 @@ export const assemblyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  ; 終了システムコール\n  mov rax, 60\n  ; 終了コード0\n  xor rdi, rdi\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  ; 終了システムコール\n  mov rax, ___\n  ; 終了コード0\n  ___ rdi, rdi\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  ; 終了システムコール\n  mov ___, ___\n  ; 終了コード0\n  xor ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -265,7 +265,7 @@ export const assemblyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  ; 10を入れる\n  mov rax, 10\n  ; 5を足す\n  add rax, 5\n\n  ; 結果を終了コードに\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  ; 10を入れる\n  mov rax, 10\n  ; 5を足す\n  ___ rax, 5\n\n  ; 結果を終了コードに\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  ; 10を入れる\n  mov ___, ___\n  ; 5を足す\n  add rax, ___\n\n  ; 結果を終了コードに\n  mov ___, ___\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -328,7 +328,7 @@ export const assemblyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  ; 20を入れる\n  mov rax, 20\n  ; 8を引く\n  sub rax, 8\n\n  ; 結果を終了コードに\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  ; 20を入れる\n  mov rax, 20\n  ; 8を引く\n  ___ rax, 8\n\n  ; 結果を終了コードに\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  ; 20を入れる\n  mov ___, ___\n  ; 8を引く\n  sub rax, ___\n\n  ; 結果を終了コードに\n  mov ___, ___\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -391,7 +391,7 @@ export const assemblyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  ; 25を入れる\n  mov rax, 25\n  ; raxをrdiにコピー\n  mov rdi, rax\n\n  ; 終了\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  ; 25を入れる\n  mov rax, 25\n  ; raxをrdiにコピー\n  mov ___, rax\n\n  ; 終了\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  ; 25を入れる\n  mov ___, ___\n  ; raxをrdiにコピー\n  mov ___, ___\n\n  ; 終了\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -452,7 +452,7 @@ export const assemblyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  mov rax, 5\n  ; raxと10を比較\n  cmp rax, 10\n\n  ; 終了\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  mov rax, 5\n  ; raxと10を比較\n  ___ rax, 10\n\n  ; 終了\n  mov rax, 60\n  xor rdi, rdi\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  mov ___, ___\n  ; raxと10を比較\n  cmp ___, ___\n\n  ; 終了\n  mov ___, ___\n  xor ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -513,7 +513,7 @@ export const assemblyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  mov rax, 5\n  cmp rax, 5\n  ; 等しければジャンプ\n  je equal\n  mov rdi, 1\n  jmp done\n\nequal:\n  mov rdi, 0\n\ndone:\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  mov rax, 5\n  cmp rax, 5\n  ; 等しければジャンプ\n  ___ equal\n  mov rdi, 1\n  jmp done\n\nequal:\n  mov rdi, 0\n\ndone:\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  mov ___, ___\n  cmp ___, ___\n  ; 等しければジャンプ\n  je ___\n  mov ___, ___\n  jmp ___\n\n___:\n  mov ___, ___\n\n___:\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -585,7 +585,7 @@ export const assemblyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  ; doneに直接ジャンプ\n  jmp done\n\nskip:\n  mov rdi, 1\n\ndone:\n  xor rdi, rdi\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  ; doneに直接ジャンプ\n  ___ done\n\nskip:\n  mov rdi, 1\n\ndone:\n  xor rdi, rdi\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  ; doneに直接ジャンプ\n  jmp ___\n\n___:\n  mov ___, ___\n\n___:\n  xor ___, ___\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -650,7 +650,7 @@ export const assemblyData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  mov rax, 9\n  ; 1増やす\n  inc rax\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  mov rax, 9\n  ; 1増やす\n  ___ rax\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  mov ___, ___\n  ; 1増やす\n  inc ___\n\n  mov ___, ___\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",

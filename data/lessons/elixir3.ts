@@ -19,7 +19,7 @@ export const elixir3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# defmoduleでモジュールを定義\ndefmodule Person do\n  # defstructで構造体を定義\n  defstruct name: \"\", email: \"\"\n# endでモジュールを閉じる\nend\n\n# nameに\"Bob\"、emailに\"bob@example.com\"を指定して構造体を作成\nperson = %Person{name: \"Bob\", email: \"bob@example.com\"}",
-        "holeyCode": "# defmoduleでモジュールを定義\n___ Person do\n  # defstructで構造体を定義\n  ___ name: \"\", email: \"\"\n# endでモジュールを閉じる\n___\n\n# nameに\"Bob\"、emailに\"bob@example.com\"を指定して構造体を作成\nperson = %Person{name: \"___\", email: \"___\"}",
+        "holeyCode": "# ___でモジュールを定義\ndefmodule Person ___\n  # ___で構造体を定義\n  defstruct name: \"___\"\"\n# ___でモジュールを閉じる\n___\n\n# nameに\"___\"、emailに\"bob@example.com\"を指定して構造体を作成\nperson = %Person{name: \"___\", email: \"bob@example.com\"}",
         "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Person do",
@@ -73,7 +73,7 @@ export const elixir3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# defmoduleでモジュールを定義\ndefmodule Product do\n  # defstructで構造体を定義\n  defstruct name: \"\", price: 0\n# endでモジュールを閉じる\nend\n\n# nameに\"Book\"、priceに1000を指定して構造体を作成\nproduct = %Product{name: \"Book\", price: 1000}\n# |で辞書を更新（priceを1200に）\nupdated = %{product | price: 1200}",
-        "holeyCode": "# defmoduleでモジュールを定義\n___ Product do\n  # defstructで構造体を定義\n  ___ name: \"\", price: 0\n# endでモジュールを閉じる\n___\n\n# nameに\"Book\"、priceに1000を指定して構造体を作成\nproduct = %Product{name: \"___\", price: ___}\n# |で辞書を更新（priceを1200に）\nupdated = %{product ___ price: ___}",
+        "holeyCode": "# ___でモジュールを定義\ndefmodule Product ___\n  # ___で構造体を定義\n  defstruct name: \"\", price: 0\n# ___でモジュールを閉じる\n___\n\n# nameに\"___\"、priceに1000を指定して構造体を作成\nproduct = %Product{name: \"___\", price: 1000}\n# |で辞書を更新（priceを___に）\nupdated = %{product | price: ___}",
         "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Product do",
@@ -137,7 +137,7 @@ export const elixir3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# リストを定義\nnumbers = [1, 2, 3, 4, 5]\n# reduceで畳み込み\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)",
-        "holeyCode": "# リストを定義\nnumbers = [___, ___, ___, ___, ___]\n# reduceで畳み込み\nsum = Enum.___(numbers, 0, fn x, acc -> x + acc end)",
+        "holeyCode": "# リストを定義 ___\nnumbers = [___, 2, 3, 4, 5]\n# ___で畳み込み\nsum = Enum.reduce(numbers, ___, fn x, acc -> x + acc end)",
         "correctLines": [
           "# リストを定義",
           "numbers = [1, 2, 3, 4, 5]",
@@ -182,7 +182,7 @@ export const elixir3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\nusers = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\n# group_byでグループ化\ngrouped = Enum.group_by(users, fn {_name, age} -> age end)",
-        "holeyCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\nusers = [{\"___\", ___}, {\"___\", ___}, {\"___\", ___}]\n# group_byでグループ化\ngrouped = Enum.___(users, fn {_name, age} -> age end)",
+        "holeyCode": "# Alice(___), Bob(30), Carol(25) のタプルのリストを定義\nusers = [{\"___\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\n# ___でグループ化\ngrouped = Enum.group_by(users, fn {_name, age} -> age ___)",
         "correctLines": [
           "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義",
           "users = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]",
@@ -229,7 +229,7 @@ export const elixir3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# forで内包表記\nsquares = for x <- 1..5, do: x * x",
-        "holeyCode": "# forで内包表記\nsquares = ___ x <- ___...___, do: x * x",
+        "holeyCode": "# ___で内包表記\nsquares = for x <- ___..5, do: x * x",
         "correctLines": [
           "# forで内包表記",
           "squares = for x <- 1..5, do: x * x"
@@ -270,7 +270,7 @@ export const elixir3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# defで関数を定義\ndef process(map) do\n  # withでパターンマッチを連鎖\n  with {:ok, name} <- Map.fetch(map, :name),\n       {:ok, age} <- Map.fetch(map, :age) do\n    {:ok, \"#{name} is #{age} years old\"}\n  # elseでエラー処理\n  else\n    :error -> {:error, \"Missing field\"}\n  # endでブロックを閉じる\n  end\n# endで関数を閉じる\nend",
-        "holeyCode": "# defで関数を定義\n___ process(map) do\n  # withでパターンマッチを連鎖\n  ___ {:ok, name} <- Map.fetch(map, :name),\n       {:ok, age} <- Map.fetch(map, :age) do\n    {:ok, \"#{name} is #{age} years old\"}\n  # elseでエラー処理\n  ___\n    :error -> {:error, \"Missing field\"}\n  # endでブロックを閉じる\n  ___\n# endで関数を閉じる\n___",
+        "holeyCode": "# ___で関数を定義\ndef process(map) ___\n  # ___でパターンマッチを連鎖\n  with {:ok, ___} <- Map.fetch(map, :name),\n       {:ok, age} <- Map.fetch(map, :age) ___\n    {:ok, \"___\"}\n  # ___でエラー処理\n  ___\n    :error -> {:error, \"___\"}\n  # ___でブロックを閉じる\n  ___\n# ___で関数を閉じる\n___",
         "correctLines": [
           "# defで関数を定義",
           "def process(map) do",
@@ -329,7 +329,7 @@ export const elixir3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# defprotocolでプロトコルを定義\ndefprotocol Describable do\n  # defで関数を宣言\n  def describe(data)\n# endでプロトコルを閉じる\nend",
-        "holeyCode": "# defprotocolでプロトコルを定義\n___ Describable do\n  # defで関数を宣言\n  ___ describe(data)\n# endでプロトコルを閉じる\n___",
+        "holeyCode": "# ___でプロトコルを定義\ndefprotocol Describable ___\n  # ___で関数を宣言\n  def describe(___)\n# ___でプロトコルを閉じる\n___",
         "correctLines": [
           "# defprotocolでプロトコルを定義",
           "defprotocol Describable do",
@@ -373,7 +373,7 @@ export const elixir3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# defimplでプロトコルを実装\ndefimpl Describable, for: Map do\n  # defで関数を定義\n  def describe(map) do\n    \"Map with #{map_size(map)} keys\"\n  # endで関数を閉じる\n  end\n# endでブロックを閉じる\nend",
-        "holeyCode": "# defimplでプロトコルを実装\n___ Describable, for: Map do\n  # defで関数を定義\n  ___ describe(map) do\n    \"Map with #{map_size(map)} keys\"\n  # endで関数を閉じる\n  ___\n# endでブロックを閉じる\n___",
+        "holeyCode": "# ___でプロトコルを実装\ndefimpl Describable, for: Map ___\n  # ___で関数を定義\n  def describe(map) ___\n    \"___\"\n  # ___で関数を閉じる\n  ___\n# ___でブロックを閉じる\n___",
         "correctLines": [
           "# defimplでプロトコルを実装",
           "defimpl Describable, for: Map do",
@@ -423,7 +423,7 @@ export const elixir3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# start_linkでAgentを開始\n{:ok, counter} = Agent.start_link(fn -> 0 end)\n# updateでAgentの状態を更新\nAgent.update(counter, fn state -> state + 1 end)\n# getでAgentの状態を取得\nvalue = Agent.get(counter, fn state -> state end)",
-        "holeyCode": "# start_linkでAgentを開始\n{:ok, counter} = Agent.___(fn -> 0 end)\n# updateでAgentの状態を更新\nAgent.___(counter, fn state -> state + 1 end)\n# getでAgentの状態を取得\nvalue = Agent.___(counter, fn state -> state end)",
+        "holeyCode": "# start_linkで___を開始\n{:ok, counter} = Agent.start_link(fn -> ___ end)\n# updateで___の状態を更新\nAgent.update(counter, fn state -> state + ___ end)\n# getで___の状態を取得\nvalue = Agent.get(counter, fn state -> state ___)",
         "correctLines": [
           "# start_linkでAgentを開始",
           "{:ok, counter} = Agent.start_link(fn -> 0 end)",
@@ -467,7 +467,7 @@ export const elixir3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# asyncで非同期タスクを開始\ntask = Task.async(fn -> 1 + 2 end)\n# awaitでタスクの結果を待機\nresult = Task.await(task)",
-        "holeyCode": "# asyncで非同期タスクを開始\ntask = Task.___(fn -> 1 + 2 end)\n# awaitでタスクの結果を待機\nresult = Task.___(task)",
+        "holeyCode": "# ___で非同期タスクを開始\ntask = Task.async(fn -> ___ + 2 end)\n# ___でタスクの結果を待機\nresult = Task.await(___)",
         "correctLines": [
           "# asyncで非同期タスクを開始",
           "task = Task.async(fn -> 1 + 2 end)",

@@ -72,7 +72,7 @@ export const bashData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 'Bash' と入力する\nname=\"Bash\"\n# はこの名前 'name' と入力する\necho $name",
-        "holeyCode": "# 'Bash' と入力する\nname=\"___\"\n# はこの名前 'name' と入力する\necho $___",
+        "holeyCode": "# 'Bash' と入力する\nname=\"___\"\n# はこの名前 'name' と入力する\necho ___",
         "correctLines": [
           "# 'Bash' と入力する",
           "name=\"Bash\"",
@@ -117,7 +117,7 @@ export const bashData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# はこに数字を入れる\na=5\nb=3\n# +でたし算\necho $((a + b))",
-        "holeyCode": "# はこに数字を入れる\na=5\nb=3\n# +でたし算\necho $((a ___ b))",
+        "holeyCode": "# はこに数字を入れる\na=___\nb=___\n# +でたし算\necho $((a + ___))",
         "correctLines": [
           "# はこに数字を入れる",
           "a=5",
@@ -165,7 +165,7 @@ export const bashData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# scoreに100を入れる\nscore=100\n# -gtで「より大きい」を指定\nif [ $score -gt 80 ]; then\n    # メッセージ（'Great'）\n    echo \"Great\"\n# fiでif文を閉じる\nfi",
-        "holeyCode": "# scoreに100を入れる\nscore=___\n# -gtで「より大きい」を指定\nif [ $score ___ 80 ]; then\n    # メッセージ（'Great'）\n    echo \"___\"\n# fiでif文を閉じる\n___",
+        "holeyCode": "# scoreに100を入れる\nscore=___\n# -gtで「より大きい」を指定\nif [ $score -gt ___ ]; then\n    # メッセージ（'Great'）\n    echo \"___\"\n# fiでif文を閉じる\n___",
         "correctLines": [
           "# scoreに100を入れる",
           "score=100",
@@ -222,7 +222,7 @@ export const bashData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# ageに18を入れる\nage=18\n# 20以上かを比較する演算子\nif [ $age -ge 20 ]; then\n    # 20歳以上のときのメッセージ（'Adult'）\n    echo \"Adult\"\n# elseでそれ以外の場合\nelse\n    # それ以外のメッセージ（'Minor'）\n    echo \"Minor\"\nfi",
-        "holeyCode": "# ageに18を入れる\nage=___\n# 20以上かを比較する演算子\nif [ $age ___ 20 ]; then\n    # 20歳以上のときのメッセージ（'Adult'）\n    echo \"___\"\n# elseでそれ以外の場合\n___\n    # それ以外のメッセージ（'Minor'）\n    echo \"___\"\nfi",
+        "holeyCode": "# ageに18を入れる\nage=___\n# 20以上かを比較する演算子\nif [ $age -ge ___ ]; then\n    # 20歳以上のときのメッセージ（'Adult'）\n    echo \"___\"\n# elseでそれ以外の場合\n___\n    # それ以外のメッセージ（'Minor'）\n    echo \"___\"\n___",
         "correctLines": [
           "# ageに18を入れる",
           "age=18",
@@ -284,7 +284,7 @@ export const bashData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "names=(\"Alice\" \"Bob\")\n# inで配列の中身を取り出す\nfor name in \"${names[@]}\"; do\n    echo $name\n# doneでループを終了\ndone",
-        "holeyCode": "names=(\"Alice\" \"Bob\")\n# inで配列の中身を取り出す\nfor name ___ \"${names[@]}\"; do\n    echo $name\n# doneでループを終了\n___",
+        "holeyCode": "names=(\\\"___\\\" \\\"___\\\")\n# inで配列の中身を取り出す\nfor name in \"___\"; do\n    echo ___\n# doneでループを終了\n___",
         "correctLines": [
           "names=(\"Alice\" \"Bob\")",
           "# inで配列の中身を取り出す",
@@ -331,7 +331,7 @@ export const bashData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "greet() {\n    echo \"Hello\"\n}\n# greetで関数を呼び出す\ngreet",
-        "holeyCode": "greet() {\n    echo \"Hello\"\n}\n# greetで関数を呼び出す\n___",
+        "holeyCode": "___() {\n    echo \"___\"\n___\n# greetで関数を呼び出す\n___",
         "correctLines": [
           "greet() {",
           "    echo \"Hello\"",

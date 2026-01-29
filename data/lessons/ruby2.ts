@@ -23,7 +23,7 @@ export const ruby2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# numsに配列を代入（1, 2, 3）\nnums = [1, 2, 3]\n# eachで各要素を処理\nnums.each do |n|\n  # putsで出力\n  puts n\n# endで終了\nend",
-        "holeyCode": "# numsに配列を代入（1, 2, 3）\nnums = [___, ___, ___]\n# eachで各要素を処理\nnums.___ do |n|\n  # putsで出力\n  puts ___\n# endで終了\n___",
+        "holeyCode": "# numsに配列を代入（1, 2, 3）\nnums = [___, 2, 3]\n# eachで各要素を処理\nnums.each do |___|\n  # putsで出力\n  puts ___\n# endで終了\n___",
         "correctLines": [
           "# numsに配列を代入（1, 2, 3）",
           "nums = [1, 2, 3]",
@@ -80,7 +80,7 @@ export const ruby2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# numsに配列を代入（1, 2, 3）\nnums = [1, 2, 3]\n# mapで各要素を変換\ndoubled = nums.map { |n| n * 2 }\n# putsで出力\nputs doubled",
-        "holeyCode": "# numsに配列を代入（1, 2, 3）\nnums = [___, ___, ___]\n# mapで各要素を変換\ndoubled = nums.___ { |n| n * 2 }\n# putsで出力\nputs ___",
+        "holeyCode": "# numsに配列を代入（1, 2, 3）\nnums = [___, 2, 3]\n# mapで各要素を変換\ndoubled = nums.map { |n| n * ___ }\n# putsで出力\nputs ___",
         "correctLines": [
           "# numsに配列を代入（1, 2, 3）",
           "nums = [1, 2, 3]",
@@ -132,7 +132,7 @@ export const ruby2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# numsに配列を代入（1, 2, 3, 4, 5）\nnums = [1, 2, 3, 4, 5]\n# selectで条件に合う要素を抽出\nbig = nums.select { |n| n >= 3 }\n# putsで出力\nputs big",
-        "holeyCode": "# numsに配列を代入（1, 2, 3, 4, 5）\nnums = [___, ___, ___, ___, ___]\n# selectで条件に合う要素を抽出\nbig = nums.___ { |n| n >= 3 }\n# putsで出力\nputs ___",
+        "holeyCode": "# numsに配列を代入（1, 2, 3, 4, 5）\nnums = [___, 2, 3, 4, 5]\n# selectで条件に合う要素を抽出\nbig = nums.select { |n| n >= ___ }\n# putsで出力\nputs ___",
         "correctLines": [
           "# numsに配列を代入（1, 2, 3, 4, 5）",
           "nums = [1, 2, 3, 4, 5]",
@@ -186,7 +186,7 @@ export const ruby2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# itemにハッシュを代入\nitem = { name: 'Apple', price: 100 }\n# :でシンボルを指定してアクセス\nputs item[:price]",
-        "holeyCode": "# itemにハッシュを代入\nitem = { name: '___', price: ___ }\n# :でシンボルを指定してアクセス\nputs item[___price]",
+        "holeyCode": "# itemにハッシュを代入\nitem = { name: 'Apple', price: ___ }\n# :でシンボルを指定してアクセス\nputs item[:___]",
         "correctLines": [
           "# itemにハッシュを代入",
           "item = { name: 'Apple', price: 100 }",
@@ -232,7 +232,7 @@ export const ruby2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# classでクラスを定義\nclass Cat\n  # initializeを定義\n  def initialize(name)\n    # @nameに代入\n    @name = name\n  # endで終了\n  end\n  # greetを定義\n  def greet\n    # @nameを出力\n    puts @name\n  # endで終了\n  end\n# endで終了\nend\n# catにインスタンスを代入\ncat = Cat.new('Tama')\n# greetを呼び出し\ncat.greet",
-        "holeyCode": "# classでクラスを定義\n___ Cat\n  # initializeを定義\n  def ___(name)\n    # @nameに代入\n    @name = ___\n  # endで終了\n  ___\n  # greetを定義\n  def ___\n    # @nameを出力\n    puts ___\n  # endで終了\n  ___\n# endで終了\n___\n# catにインスタンスを代入\ncat = Cat.___('Tama')\n# greetを呼び出し\ncat.___",
+        "holeyCode": "# classでクラスを定義\nclass ___\n  # initializeを定義\n  def initialize(___)\n    # @nameに代入\n    @___ = name\n  # endで終了\n  ___\n  # greetを定義\n  def ___\n    # @nameを出力\n    puts @___\n  # endで終了\n  ___\n# endで終了\n___\n# catにインスタンスを代入\ncat = Cat.new('___')\n# greetを呼び出し\ncat.___",
         "correctLines": [
           "# classでクラスを定義",
           "class Cat",
@@ -314,7 +314,7 @@ export const ruby2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# classでクラスを定義\nclass Item\n  # attr_accessorで読み書き可能に\n  attr_accessor :price\n# endで終了\nend\n# itemにインスタンスを代入\nitem = Item.new\n# priceに値を代入\nitem.price = 200\n# priceを出力\nputs item.price",
-        "holeyCode": "# classでクラスを定義\n___ Item\n  # attr_accessorで読み書き可能に\n  ___ :price\n# endで終了\n___\n# itemにインスタンスを代入\nitem = Item.___\n# priceに値を代入\nitem.price = ___\n# priceを出力\nputs item.___",
+        "holeyCode": "# classでクラスを定義\nclass ___\n  # attr_accessorで読み書き可能に\n  attr_accessor :___\n# endで終了\n___\n# itemにインスタンスを代入\nitem = Item.___\n# priceに値を代入\nitem.price = ___\n# priceを出力\nputs item.___",
         "correctLines": [
           "# classでクラスを定義",
           "class Item",
@@ -379,7 +379,7 @@ export const ruby2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# classでクラスを定義\nclass Vehicle\n  # moveを定義\n  def move\n    # movingを出力\n    puts 'moving'\n  # endで終了\n  end\n# endで終了\nend\n# <で親クラスを継承\nclass Car < Vehicle\n# endで終了\nend\n# carにインスタンスを代入\ncar = Car.new\n# moveを呼び出し\ncar.move",
-        "holeyCode": "# classでクラスを定義\n___ Vehicle\n  # moveを定義\n  def ___\n    # movingを出力\n    puts '___'\n  # endで終了\n  ___\n# endで終了\n___\n# <で親クラスを継承\nclass Car ___ Vehicle\n# endで終了\n___\n# carにインスタンスを代入\ncar = Car.___\n# moveを呼び出し\ncar.___",
+        "holeyCode": "# classでクラスを定義\nclass ___\n  # moveを定義\n  def ___\n    # movingを出力\n    puts '___'\n  # endで終了\n  ___\n# endで終了\n___\n# <で親クラスを継承\nclass ___ < Vehicle\n# endで終了\n___\n# carにインスタンスを代入\ncar = Car.___\n# moveを呼び出し\ncar.___",
         "correctLines": [
           "# classでクラスを定義",
           "class Vehicle",
@@ -456,7 +456,7 @@ export const ruby2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# moduleでモジュールを定義\nmodule Speakable\n  # speakを定義\n  def speak\n    # speakingを出力\n    puts 'speaking'\n  # endで終了\n  end\n# endで終了\nend\n# classでクラスを定義\nclass Robot\n  # includeでモジュールを取り込み\n  include Speakable\n# endで終了\nend\n# robotにインスタンスを代入\nrobot = Robot.new\n# speakを呼び出し\nrobot.speak",
-        "holeyCode": "# moduleでモジュールを定義\n___ Speakable\n  # speakを定義\n  def ___\n    # speakingを出力\n    puts '___'\n  # endで終了\n  ___\n# endで終了\n___\n# classでクラスを定義\n___ Robot\n  # includeでモジュールを取り込み\n  include ___\n# endで終了\n___\n# robotにインスタンスを代入\nrobot = Robot.___\n# speakを呼び出し\nrobot.___",
+        "holeyCode": "# moduleでモジュールを定義\nmodule ___\n  # speakを定義\n  def ___\n    # speakingを出力\n    puts '___'\n  # endで終了\n  ___\n# endで終了\n___\n# classでクラスを定義\nclass ___\n  # includeでモジュールを取り込み\n  include ___\n# endで終了\n___\n# robotにインスタンスを代入\nrobot = Robot.___\n# speakを呼び出し\nrobot.___",
         "correctLines": [
           "# moduleでモジュールを定義",
           "module Speakable",
@@ -538,7 +538,7 @@ export const ruby2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# beginで開始\nbegin\n  # raiseでエラーを発生\n  raise 'oops'\n# rescueで例外を捕捉\nrescue => e\n  # caughtを出力\n  puts 'caught'\n# endで終了\nend",
-        "holeyCode": "# beginで開始\n___\n  # raiseでエラーを発生\n  raise '___'\n# rescueで例外を捕捉\n___ => e\n  # caughtを出力\n  puts '___'\n# endで終了\n___",
+        "holeyCode": "# beginで開始\n___\n  # raiseでエラーを発生\n  raise '___'\n# rescueで例外を捕捉\nrescue => ___\n  # caughtを出力\n  puts '___'\n# endで終了\n___",
         "correctLines": [
           "# beginで開始",
           "begin",
@@ -598,7 +598,7 @@ export const ruby2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# ->でラムダを定義\ndouble = ->(n) { n * 2 }\n# callで実行\nputs double.call(5)",
-        "holeyCode": "# ->でラムダを定義\ndouble = ___(n) { n * 2 }\n# callで実行\nputs double.___(5)",
+        "holeyCode": "# ->でラムダを定義\ndouble = ->(n) { n * ___ }\n# callで実行\nputs double.call(___)",
         "correctLines": [
           "# ->でラムダを定義",
           "double = ->(n) { n * 2 }",

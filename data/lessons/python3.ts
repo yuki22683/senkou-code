@@ -23,7 +23,7 @@ export const pythonData3 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 2乗を計算する無名関数を定義\nsquare = lambda x: x ** 2\n# 定義した関数に数値 5 を渡して実行結果を表示\nprint(square(5))",
-        "holeyCode": "# 2乗を計算する無名関数を定義\nsquare = ___ x: x ** 2\n# 定義した関数に数値 5 を渡して実行結果を表示\nprint(___)",
+        "holeyCode": "# 2乗を計算する無名関数を定義\nsquare = lambda x: x ** ___\n# 定義した関数に数値 5 を渡して実行結果を表示\n___(square(5))",
         "correctLines": [
           "# 2乗を計算する無名関数を定義",
           "square = lambda x: x ** 2",
@@ -69,7 +69,7 @@ export const pythonData3 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 全ての数値を受け取って合計を出す関数を定義\ndef add_all(*args):\n    # 合計値を保持する変数を初期化\n    total = 0\n    # 渡された全ての引数をループで処理\n    for n in args:\n        # 各要素を合計に加算\n        total += n\n    # 最終的な合計値を返す\n    return total\n\n# 1, 2, 3, 4 を渡して合計を表示\nprint(add_all(1, 2, 3, 4))",
-        "holeyCode": "# 全ての数値を受け取って合計を出す関数を定義\ndef add_all(___args):\n    # 合計値を保持する変数を初期化\n    total = ___\n    # 渡された全ての引数をループで処理\n    for n in ___:\n        # 各要素を合計に加算\n        total += ___\n    # 最終的な合計値を返す\n    return ___\n\n# 1, 2, 3, 4 を渡して合計を表示\nprint(___)",
+        "holeyCode": "# 全ての数値を受け取って合計を出す関数を定義\ndef ___(*args):\n    # 合計値を保持する変数を初期化\n    total = ___\n    # 渡された全ての引数をループで処理\n    for n in ___:\n        # 各要素を合計に加算\n        total += ___\n    # 最終的な合計値を返す\n    return ___\n\n# 1, 2, 3, 4 を渡して合計を表示\n___(add_all(1, 2, 3, 4))",
         "correctLines": [
           "# 全ての数値を受け取って合計を出す関数を定義",
           "def add_all(*args):",
@@ -137,7 +137,7 @@ export const pythonData3 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# キーワード引数を受け取って表示する関数を定義\ndef print_info(**kwargs):\n    # 1番目の k にキー、2番目の v に値が入る\n    for k, v in kwargs.items():\n        # キーと値をイコールで繋いで表示\n        print(f'{k} = {v}')\n\n# x=10, y=20 を指定して実行\nprint_info(x=10, y=20)",
-        "holeyCode": "# キーワード引数を受け取って表示する関数を定義\ndef print_info(___kwargs):\n    # 1番目の k にキー、2番目の v に値が入る\n    for k, v in ___:\n        # キーと値をイコールで繋いで表示\n        print(___)\n\n# x=10, y=20 を指定して実行\n___",
+        "holeyCode": "# キーワード引数を受け取って表示する関数を定義\ndef ___(**kwargs):\n    # 1番目の k にキー、2番目の v に値が入る\n    for k, v in kwargs.___():\n        # キーと値をイコールで繋いで表示\n        ___(f'{k} = {v}')\n\n# x=10, y=20 を指定して実行\nprint_info(x=___, y=20)",
         "correctLines": [
           "# キーワード引数を受け取って表示する関数を定義",
           "def print_info(**kwargs):",
@@ -195,7 +195,7 @@ export const pythonData3 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 赤、緑、青の3色を含むリストを作成\ncolors = ['red', 'green', 'blue']\n# 1番目の i に番号、2番目の color に要素が入る\nfor i, color in enumerate(colors):\n    # 「番号: 色」の形式で画面に出力\n    print(f'{i}: {color}')",
-        "holeyCode": "# 赤、緑、青の3色を含むリストを作成\ncolors = ___\n# 1番目の i に番号、2番目の color に要素が入る\nfor i, color in ___(colors):\n    # 「番号: 色」の形式で画面に出力\n    print(___)",
+        "holeyCode": "# 赤、緑、青の3色を含むリストを作成\ncolors = ['red', 'green', '___']\n# 1番目の i に番号、2番目の color に要素が入る\nfor i, color in enumerate(___):\n    # 「番号: 色」の形式で画面に出力\n    ___(f'{i}: {color}')",
         "correctLines": [
           "# 赤、緑、青の3色を含むリストを作成",
           "colors = ['red', 'green', 'blue']",
@@ -247,7 +247,7 @@ export const pythonData3 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 英単語 a, b, c のリストを定義\nkeys = ['a', 'b', 'c']\n# 数値 1, 2, 3 のリストを定義\nvalues = [1, 2, 3]\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\nfor k, v in zip(keys, values):\n    # 「キー: 値」の形式で画面に出力\n    print(f'{k}: {v}')",
-        "holeyCode": "# 英単語 a, b, c のリストを定義\nkeys = ___\n# 数値 1, 2, 3 のリストを定義\nvalues = ___\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\nfor k, v in ___(keys, values):\n    # 「キー: 値」の形式で画面に出力\n    print(___)",
+        "holeyCode": "# 英単語 a, b, c のリストを定義\nkeys = ['a', 'b', '___']\n# 数値 1, 2, 3 のリストを定義\nvalues = [___, 2, 3]\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\nfor k, v in zip(keys, ___):\n    # 「キー: 値」の形式で画面に出力\n    ___(f'{k}: {v}')",
         "correctLines": [
           "# 英単語 a, b, c のリストを定義",
           "keys = ['a', 'b', 'c']",
@@ -304,7 +304,7 @@ export const pythonData3 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 偶数を生成するジェネレータ関数を定義\ndef even_numbers(n):\n    # 指定された回数ループ\n    for i in range(n):\n        # 値を1つずつ返す\n        yield i * 2\n\n# ジェネレータから値を取り出して表示\nfor num in even_numbers(4):\n    # 取り出した値を表示\n    print(num)",
-        "holeyCode": "# 偶数を生成するジェネレータ関数を定義\ndef ___:\n    # 指定された回数ループ\n    for i in ___:\n        # 値を1つずつ返す\n        ___ i * 2\n\n# ジェネレータから値を取り出して表示\nfor num in ___:\n    # 取り出した値を表示\n    print(___)",
+        "holeyCode": "# 偶数を生成するジェネレータ関数を定義\ndef ___(n):\n    # 指定された回数ループ\n    for i in range(___):\n        # 値を1つずつ返す\n        yield i * ___\n\n# ジェネレータから値を取り出して表示\nfor num in even_numbers(___):\n    # 取り出した値を表示\n    ___(num)",
         "correctLines": [
           "# 偶数を生成するジェネレータ関数を定義",
           "def even_numbers(n):",
@@ -369,7 +369,7 @@ export const pythonData3 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 1から5までの範囲オブジェクトを作成\nnums = range(1, 6)\n# ジェネレータ式で各要素の2乗を計算し、その合計を出す\ntotal = sum(x * x for x in nums)\n# 合計を表示\nprint(total)",
-        "holeyCode": "# 1から5までの範囲オブジェクトを作成\nnums = ___\n# ジェネレータ式で各要素の2乗を計算し、その合計を出す\ntotal = sum(x * x ___ x in nums)\n# 合計を表示\nprint(___)",
+        "holeyCode": "# 1から5までの範囲オブジェクトを作成\nnums = range(___, 6)\n# ジェネレータ式で各要素の2乗を計算し、その合計を出す\ntotal = sum(x * x for x in ___)\n# 合計を表示\n___(total)",
         "correctLines": [
           "# 1から5までの範囲オブジェクトを作成",
           "nums = range(1, 6)",
@@ -421,7 +421,7 @@ export const pythonData3 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef show_call(func):\n    # 実行内容を包む内部関数を定義\n    def wrapper():\n        # 実行前のメッセージを表示\n        print('関数を呼び出します')\n        # 本来の関数を実行\n        func()\n    # 新しく作った関数を返す\n    return wrapper\n\n# デコレータを関数に適用\n@show_call\n# 挨拶を表示する関数を定義\ndef greet():\n    # メッセージを表示\n    print('Hello!')\n\n# 関数を呼び出して実行\ngreet()",
-        "holeyCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef ___:\n    # 実行内容を包む内部関数を定義\n    def ___:\n        # 実行前のメッセージを表示\n        print(___)\n        # 本来の関数を実行\n        ___\n    # 新しく作った関数を返す\n    return ___\n\n# デコレータを関数に適用\n___show_call\n# 挨拶を表示する関数を定義\ndef ___:\n    # メッセージを表示\n    print(___)\n\n# 関数を呼び出して実行\n___",
+        "holeyCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef ___(func):\n    # 実行内容を包む内部関数を定義\n    def ___():\n        # 実行前のメッセージを表示\n        ___('関数を呼び出します')\n        # 本来の関数を実行\n        ___()\n    # 新しく作った関数を返す\n    return ___\n\n# デコレータを関数に適用\n@___\n# 挨拶を表示する関数を定義\ndef ___():\n    # メッセージを表示\n    ___('Hello!')\n\n# 関数を呼び出して実行\n___()",
         "correctLines": [
           "# 関数の実行前後でメッセージを表示するデコレータを定義",
           "def show_call(func):",
@@ -506,7 +506,7 @@ export const pythonData3 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 1から5までの数値リストを作成\nnums = [1, 2, 3, 4, 5]\n# 全要素が0より大きいか判定する関数を使用\nresult = all(x > 0 for x in nums)\n# 判定結果を画面に表示\nprint(result)",
-        "holeyCode": "# 1から5までの数値リストを作成\nnums = ___\n# 全要素が0より大きいか判定する関数を使用\nresult = ___(x > 0 for x in nums)\n# 判定結果を画面に表示\nprint(___)",
+        "holeyCode": "# 1から5までの数値リストを作成\nnums = [___, 2, 3, 4, 5]\n# 全要素が0より大きいか判定する関数を使用\nresult = all(x > ___ for x in nums)\n# 判定結果を画面に表示\n___(result)",
         "correctLines": [
           "# 1から5までの数値リストを作成",
           "nums = [1, 2, 3, 4, 5]",
@@ -558,7 +558,7 @@ export const pythonData3 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# ファイル操作を模擬するクラスを定義\nclass MockFile:\n    # ブロック開始時に呼ばれるメソッドを定義\n    def __enter__(self):\n        # 開始メッセージを表示\n        print('opened')\n        # 自身を返す\n        return self\n    # ブロック終了時に呼ばれるメソッドを定義\n    def __exit__(self, *args):\n        # 終了メッセージを表示\n        print('closed')\n\n# コンテキストマネージャを使用してブロックを開始\nwith MockFile() as f:\n    # 使用中のメッセージを表示\n    print('using')",
-        "holeyCode": "# ファイル操作を模擬するクラスを定義\nclass ___:\n    # ブロック開始時に呼ばれるメソッドを定義\n    def ___:\n        # 開始メッセージを表示\n        print(___)\n        # 自身を返す\n        return ___\n    # ブロック終了時に呼ばれるメソッドを定義\n    def ___:\n        # 終了メッセージを表示\n        print(___)\n\n# コンテキストマネージャを使用してブロックを開始\n___ MockFile() as f:\n    # 使用中のメッセージを表示\n    print(___)",
+        "holeyCode": "# ファイル操作を模擬するクラスを定義\nclass ___:\n    # ブロック開始時に呼ばれるメソッドを定義\n    def ___(self):\n        # 開始メッセージを表示\n        ___('opened')\n        # 自身を返す\n        return ___\n    # ブロック終了時に呼ばれるメソッドを定義\n    def ___(self, *args):\n        # 終了メッセージを表示\n        ___('closed')\n\n# コンテキストマネージャを使用してブロックを開始\nwith MockFile() as ___:\n    # 使用中のメッセージを表示\n    ___('using')",
         "correctLines": [
           "# ファイル操作を模擬するクラスを定義",
           "class MockFile:",

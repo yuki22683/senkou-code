@@ -23,7 +23,7 @@ export const c2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\nint main() {\\n    int x = 42;\\n    // xのアドレスを取得する演算子\\n    int *p = &x;\\n    printf(\"%d\\n\", *p);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\nint main() {\n    int x = 42;\n    // xのアドレスを取得する演算子\n    int *p = ___x;\n    printf(\"%d\\n\", *p);\n    return 0;\n}",
+        "holeyCode": "#include <___>\\\nint ___() {\\\n    int x = ___;\\\n    // xのアドレスを取得する演算子\\\n    int *p = &___;\\\n    printf(\"%d\\\n\", *p);\\\n    return ___;\\\n___",
         "correctLines": [
           "#include <stdio.h>",
           "int main() {",
@@ -75,7 +75,7 @@ export const c2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\nint main() {\\n    int n = 10;\\n    int *ptr = &n;\\n    // ptrが指す先の値にアクセスする演算子\\n    *ptr = 99;\\n    printf(\"%d\\n\", n);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\nint main() {\n    int n = 10;\n    int *ptr = &n;\n    // ptrが指す先の値にアクセスする演算子\n    ___ptr = 99;\n    printf(\"%d\\n\", n);\n    return 0;\n}",
+        "holeyCode": "#include <___>\\\nint ___() {\\\n    int n = ___;\\\n    int *ptr = &___;\\\n    // ptrが指す先の値にアクセスする演算子\\\n    *ptr = ___;\\\n    printf(\"%d\\\n\", n);\\\n    return ___;\\\n___",
         "correctLines": [
           "#include <stdio.h>",
           "int main() {",
@@ -129,7 +129,7 @@ export const c2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\n// printfで使っている引数名を定義\\nvoid show(int num) {\\n    printf(\"%d\\n\", num);\\n}\\nint main() {\\n    show(25);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\n// printfで使っている引数名を定義\nvoid show(int ___) {\n    printf(\"%d\\n\", num);\n}\nint main() {\n    show(25);\n    return 0;\n}",
+        "holeyCode": "#include <___>\\\n// printfで使っている引数名を定義\\\nvoid show(int ___) {\\\n    printf(\"%d\\\n\", num);\\\n___\\\nint ___() {\\\n    show(___);\\\n    return ___;\\\n___",
         "correctLines": [
           "#include <stdio.h>",
           "// printfで使っている引数名を定義",
@@ -183,7 +183,7 @@ export const c2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\nint double_it(int x) {\\n    // 計算結果を呼び出し元に返すキーワード\\n    return x * 2;\\n}\\nint main() {\\n    int result = double_it(7);\\n    printf(\"%d\\n\", result);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\nint double_it(int x) {\n    // 計算結果を呼び出し元に返すキーワード\n    ___ x * 2;\n}\nint main() {\n    int result = double_it(7);\n    printf(\"%d\\n\", result);\n    return 0;\n}",
+        "holeyCode": "#include <___>\\\nint double_it(int ___) {\\\n    // 計算結果を呼び出し元に返すキーワード\\\n    return x * ___;\\\n___\\\nint ___() {\\\n    int result = double_it(___);\\\n    printf(\"%d\\\n\", result);\\\n    return ___;\\\n___",
         "correctLines": [
           "#include <stdio.h>",
           "int double_it(int x) {",
@@ -239,7 +239,7 @@ export const c2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\nint main() {\\n    int arr[] = {5, 15, 25};\\n    // 配列の先頭アドレスを代入\\n    int *p = arr;\\n    printf(\"%d\\n\", *(p + 2));\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\nint main() {\n    int arr[] = {5, 15, 25};\n    // 配列の先頭アドレスを代入\n    int *p = ___;\n    printf(\"%d\\n\", *(p + 2));\n    return 0;\n}",
+        "holeyCode": "#include <___>\\\nint ___() {\\\n    int arr[] = {___};\\\n    // 配列の先頭アドレスを代入\\\n    int *p = ___;\\\n    printf(\"%d\\\n\", *(p + 2));\\\n    return ___;\\\n___",
         "correctLines": [
           "#include <stdio.h>",
           "int main() {",
@@ -291,7 +291,7 @@ export const c2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\nint main() {\\n    char msg[] = \"Hello\";\\n    // 文字列を表示する書式指定子\\n    printf(\"%s\\n\", msg);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\nint main() {\n    char msg[] = \"Hello\";\n    // 文字列を表示する書式指定子\n    printf(\"%___\\n\", msg);\n    return 0;\n}",
+        "holeyCode": "#include <___>\\\nint ___() {\\\n    char msg[] = \"___\";\\\n    // 文字列を表示する書式指定子\\\n    printf(\"%s\\\n\", msg);\\\n    return ___;\\\n___",
         "correctLines": [
           "#include <stdio.h>",
           "int main() {",
@@ -341,7 +341,7 @@ export const c2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\nvoid triple(int *p) {\\n    *p = *p * 3;\\n}\\nint main() {\\n    int val = 4;\\n    // valのアドレスを取得する演算子\\n    triple(&val);\\n    printf(\"%d\\n\", val);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\nvoid triple(int *p) {\n    *p = *p * 3;\n}\nint main() {\n    int val = 4;\n    // valのアドレスを取得する演算子\n    triple(___val);\n    printf(\"%d\\n\", val);\n    return 0;\n}",
+        "holeyCode": "#include <___>\\\nvoid triple(int *___) {\\\n    *p = *p * ___;\\\n___\\\nint ___() {\\\n    int val = ___;\\\n    // valのアドレスを取得する演算子\\\n    triple(&___);\\\n    printf(\"%d\\\n\", val);\\\n    return ___;\\\n___",
         "correctLines": [
           "#include <stdio.h>",
           "void triple(int *p) {",
@@ -399,7 +399,7 @@ export const c2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\n#include <stdlib.h>\\nint main() {\\n    int *p = malloc(sizeof(int));\\n    *p = 50;\\n    printf(\"%d\\n\", *p);\\n    // 確保したメモリを解放する関数\\n    free(p);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\n#include <stdlib.h>\nint main() {\n    int *p = malloc(sizeof(int));\n    *p = 50;\n    printf(\"%d\\n\", *p);\n    // 確保したメモリを解放する関数\n    ___(p);\n    return 0;\n}",
+        "holeyCode": "#include <___>\\\n#include <___>\\\nint ___() {\\\n    ___ *p = malloc(sizeof(int));\\\n    *p = ___;\\\n    printf(\"%d\\\n\", *p);\\\n    // 確保したメモリを解放する関数\\\n    free(___);\\\n    return ___;\\\n___",
         "correctLines": [
           "#include <stdio.h>",
           "#include <stdlib.h>",
@@ -455,7 +455,7 @@ export const c2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\nstruct Item {\\n    int price;\\n};\\nint main() {\\n    struct Item item = {200};\\n    struct Item *p = &item;\\n    // ポインタからメンバにアクセスする演算子\\n    printf(\"%d\\n\", p->price);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\nstruct Item {\n    int price;\n};\nint main() {\n    struct Item item = {200};\n    struct Item *p = &item;\n    // ポインタからメンバにアクセスする演算子\n    printf(\"%d\\n\", p___price);\n    return 0;\n}",
+        "holeyCode": "#include <___>\\\nstruct ___ {\\\n    int ___;\\\n___;\\\nint ___() {\\\n    struct Item item = {___};\\\n    struct Item *p = &___;\\\n    // ポインタからメンバにアクセスする演算子\\\n    printf(\"%d\\\n\", p->price);\\\n    return ___;\\\n___",
         "correctLines": [
           "#include <stdio.h>",
           "struct Item {",
@@ -513,7 +513,7 @@ export const c2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\nenum Day { MON, TUE, WED };\\nint main() {\\n    // 列挙型の変数を宣言するキーワード\\n    enum Day today = WED;\\n    printf(\"%d\\n\", today);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\nenum Day { MON, TUE, WED };\nint main() {\n    // 列挙型の変数を宣言するキーワード\n    ___ Day today = WED;\n    printf(\"%d\\n\", today);\n    return 0;\n}",
+        "holeyCode": "#include <___>\\\nenum Day { MON, TUE, ___ };\\\nint ___() {\\\n    // 列挙型の変数を宣言するキーワード\\\n    enum Day today = ___;\\\n    printf(\"%d\\\n\", today);\\\n    return ___;\\\n___",
         "correctLines": [
           "#include <stdio.h>",
           "enum Day { MON, TUE, WED };",

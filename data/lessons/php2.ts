@@ -23,7 +23,7 @@ export const php2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "<?php\n// classでクラスを定義\nclass Cat {\n    // publicでアクセス修飾子\n    public $name;\n}\n// newでインスタンスを作成\n$cat = new Cat();\n// ->でプロパティにアクセス\n$cat->name = 'Tama';\n// echoで出力\necho $cat->name;\n?>",
-        "holeyCode": "<?php\n// classでクラスを定義\n___ Cat {\n    // publicでアクセス修飾子\n    ___ $name;\n}\n// newでインスタンスを作成\n$cat = ___ Cat();\n// ->でプロパティにアクセス\n$cat___name = 'Tama';\n// echoで出力\n___ $cat->name;\n?>",
+        "holeyCode": "___\n// classでクラスを定義\nclass ___ {\n    // publicでアクセス修飾子\n    public $___;\n___\n// newでインスタンスを作成\n$cat = new ___();\n// ->でプロパティにアクセス\n$cat->name = '___';\n// echoで出力\necho ___->name;\n___",
         "correctLines": [
           "<?php",
           "// classでクラスを定義",
@@ -89,7 +89,7 @@ export const php2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "<?php\n// classでクラスを定義\nclass Counter {\n    // publicでアクセス修飾子\n    public $count;\n    // __constructでコンストラクタを定義\n    public function __construct($c) {\n        // $thisで自分自身を参照\n        $this->count = $c;\n    }\n}\n// newでインスタンスを作成\n$cnt = new Counter(5);\n// echoで出力\necho $cnt->count;\n?>",
-        "holeyCode": "<?php\n// classでクラスを定義\n___ Counter {\n    // publicでアクセス修飾子\n    ___ $count;\n    // __constructでコンストラクタを定義\n    public function ___($c) {\n        // $thisで自分自身を参照\n        ___->count = $c;\n    }\n}\n// newでインスタンスを作成\n$cnt = ___ Counter(5);\n// echoで出力\n___ $cnt->count;\n?>",
+        "holeyCode": "___\n// classでクラスを定義\nclass ___ {\n    // publicでアクセス修飾子\n    public $___;\n    // __constructでコンストラクタを定義\n    public function ___($c) {\n        // $thisで自分自身を参照\n        $this->count = $___;\n    ___\n___\n// newでインスタンスを作成\n$cnt = new Counter(___);\n// echoで出力\necho ___->count;\n___",
         "correctLines": [
           "<?php",
           "// classでクラスを定義",
@@ -162,7 +162,7 @@ export const php2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "<?php\n// classでクラスを定義\nclass Vehicle {\n    // functionで関数を定義\n    public function move() {\n        // echoで出力\n        echo 'moving';\n    }\n}\n// extendsで継承\nclass Car extends Vehicle { }\n// newでインスタンスを作成\n$car = new Car();\n// ->でメソッドを呼び出し\n$car->move();\n?>",
-        "holeyCode": "<?php\n// classでクラスを定義\n___ Vehicle {\n    // functionで関数を定義\n    public ___ move() {\n        // echoで出力\n        ___ 'moving';\n    }\n}\n// extendsで継承\nclass Car ___ Vehicle { }\n// newでインスタンスを作成\n$car = ___ Car();\n// ->でメソッドを呼び出し\n$car___move();\n?>",
+        "holeyCode": "___\n// classでクラスを定義\nclass ___ {\n    // functionで関数を定義\n    public function ___() {\n        // echoで出力\n        echo '___';\n    ___\n___\n// extendsで継承\nclass ___ extends Vehicle { }\n// newでインスタンスを作成\n$car = new ___();\n// ->でメソッドを呼び出し\n$car->___();\n___",
         "correctLines": [
           "<?php",
           "// classでクラスを定義",
@@ -235,7 +235,7 @@ export const php2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "<?php\n// interfaceでインターフェースを定義\ninterface Runner {\n    // functionでメソッドを宣言\n    public function run();\n}\n// implementsでインターフェースを実装\nclass Robot implements Runner {\n    // functionでメソッドを実装\n    public function run() {\n        // echoで出力\n        echo 'running';\n    }\n}\n// newでインスタンスを作成\n$r = new Robot();\n// ->でメソッドを呼び出し\n$r->run();\n?>",
-        "holeyCode": "<?php\n// interfaceでインターフェースを定義\n___ Runner {\n    // functionでメソッドを宣言\n    public ___ run();\n}\n// implementsでインターフェースを実装\nclass Robot ___ Runner {\n    // functionでメソッドを実装\n    public ___ run() {\n        // echoで出力\n        ___ 'running';\n    }\n}\n// newでインスタンスを作成\n$r = ___ Robot();\n// ->でメソッドを呼び出し\n$r___run();\n?>",
+        "holeyCode": "___\n// interfaceでインターフェースを定義\ninterface ___ {\n    // functionでメソッドを宣言\n    public function ___();\n___\n// implementsでインターフェースを実装\nclass ___ implements Runner {\n    // functionでメソッドを実装\n    public function ___() {\n        // echoで出力\n        echo '___';\n    ___\n___\n// newでインスタンスを作成\n$r = new ___();\n// ->でメソッドを呼び出し\n$r->___();\n___",
         "correctLines": [
           "<?php",
           "// interfaceでインターフェースを定義",
@@ -314,7 +314,7 @@ export const php2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "<?php\n// 配列を定義（1, 2, 3）\n$nums = [1, 2, 3];\n// array_mapで各要素を変換\n$squared = array_map(fn($n) => $n * $n, $nums);\n// print_rで配列を出力\nprint_r($squared);\n?>",
-        "holeyCode": "<?php\n// 配列を定義（1, 2, 3）\n$nums = [1, 2, ___];\n// array_mapで各要素を変換\n$squared = ___(fn($n) => $n * $n, $nums);\n// print_rで配列を出力\n___ ($squared);\n?>",
+        "holeyCode": "___\n// 配列を定義（1, 2, 3）\n$___ = [___];\n// array_mapで各要素を変換\n$squared = array_map(fn($n) => $n * $n, $___);\n// print_rで配列を出力\nprint_r($___);\n___",
         "correctLines": [
           "<?php",
           "// 配列を定義（1, 2, 3）",
@@ -368,7 +368,7 @@ export const php2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "<?php\n// 配列を定義\n$nums = [1, 2, 3, 4, 5];\n// array_filterで条件に合う要素を抽出\n$result = array_filter($nums, fn($n) => $n >= 3);\n// print_rで配列を出力\nprint_r($result);\n?>",
-        "holeyCode": "<?php\n// 配列を定義\n$nums = [1, 2, 3, 4, ___];\n// array_filterで条件に合う要素を抽出\n$result = ___($nums, fn($n) => $n >= 3);\n// print_rで配列を出力\n___($result);\n?>",
+        "holeyCode": "___\n// 配列を定義\n$___ = [___];\n// array_filterで条件に合う要素を抽出\n$result = array_filter($nums, fn($n) => $n >= ___);\n// print_rで配列を出力\nprint_r($___);\n___",
         "correctLines": [
           "<?php",
           "// 配列を定義",
@@ -422,7 +422,7 @@ export const php2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "<?php\n// fnでアロー関数を定義\n$triple = fn($n) => $n * 3;\n// echoで出力\necho $triple(7);\n?>",
-        "holeyCode": "<?php\n// fnでアロー関数を定義\n$triple = ___($n) => $n * 3;\n// echoで出力\n___ $triple(7);\n?>",
+        "holeyCode": "___\n// fnでアロー関数を定義\n$triple = fn($n) => $n * ___;\n// echoで出力\necho ___(7);\n___",
         "correctLines": [
           "<?php",
           "// fnでアロー関数を定義",
@@ -471,7 +471,7 @@ export const php2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "<?php\n// tryで例外を発生させる可能性があるコードを囲む\ntry {\n    // throwで例外を投げる\n    throw new Exception('oops');\n// catchで例外を捕捉\n} catch (Exception $e) {\n    // echoで出力\n    echo 'caught';\n}\n?>",
-        "holeyCode": "<?php\n// tryで例外を発生させる可能性があるコードを囲む\n___ {\n    // throwで例外を投げる\n    ___ new Exception('oops');\n// catchで例外を捕捉\n} ___ (Exception $e) {\n    // echoで出力\n    ___ 'caught';\n}\n?>",
+        "holeyCode": "___\n// tryで例外を発生させる可能性があるコードを囲む\n___ {\n    // throwで例外を投げる\n    throw new Exception('___');\n// catchで例外を捕捉\n} catch (Exception $___) {\n    // echoで出力\n    echo '___';\n___\n___",
         "correctLines": [
           "<?php",
           "// tryで例外を発生させる可能性があるコードを囲む",
@@ -532,7 +532,7 @@ export const php2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "<?php\n// namespaceで名前空間を宣言\nnamespace App;\n// classでクラスを定義\nclass Hello {\n    // functionでメソッドを定義\n    public function say() {\n        // echoで出力\n        echo 'hello';\n    }\n}\n// newでインスタンスを作成\n$h = new Hello();\n// ->でメソッドを呼び出し\n$h->say();\n?>",
-        "holeyCode": "<?php\n// namespaceで名前空間を宣言\n___ App;\n// classでクラスを定義\n___ Hello {\n    // functionでメソッドを定義\n    public ___ say() {\n        // echoで出力\n        ___ 'hello';\n    }\n}\n// newでインスタンスを作成\n$h = ___ Hello();\n// ->でメソッドを呼び出し\n$h___say();\n?>",
+        "holeyCode": "___\n// namespaceで名前空間を宣言\nnamespace ___;\n// classでクラスを定義\nclass ___ {\n    // functionでメソッドを定義\n    public function ___() {\n        // echoで出力\n        echo '___';\n    ___\n___\n// newでインスタンスを作成\n$h = new ___();\n// ->でメソッドを呼び出し\n$h->___();\n___",
         "correctLines": [
           "<?php",
           "// namespaceで名前空間を宣言",
@@ -605,7 +605,7 @@ export const php2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "<?php\n// nullを代入\n$value = null;\n// ??でnullの場合のデフォルト値を指定\necho $value ?? 'default';\n?>",
-        "holeyCode": "<?php\n// nullを代入\n$value = ___;\n// ??でnullの場合のデフォルト値を指定\necho $value ___ 'default';\n?>",
+        "holeyCode": "___\n// nullを代入\n$value = ___;\n// ??でnullの場合のデフォルト値を指定\necho ___ ?? 'default';\n___",
         "correctLines": [
           "<?php",
           "// nullを代入",

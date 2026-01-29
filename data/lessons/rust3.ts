@@ -23,7 +23,7 @@ export const rust3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// 'a でライフタイムを定義\nfn first<'a>(s: &'a str) -> &'a str {\n    &s[..1]\n}\n\nfn main() {\n    let s = String::from(\"Hello\");\n    println!(\"{}\", first(&s));\n}",
-        "holeyCode": "// 'a でライフタイムを定義\nfn first<___>(s: &'a str) -> &'a str {\n    &s[..1]\n}\n\nfn main() {\n    let s = String::from(\"Hello\");\n    println!(\"{}\", first(&s));\n}",
+        "holeyCode": "// 'a でライフタイムを定義\nfn first<'a>(s: &'a ___) -> &'a str {\n    &s[___]\n___\n\nfn ___ () {\n    let ___ = String::from(\"Hello\");\n    ___!(\"{}\", first(&s));\n___",
         "correctLines": [
           "// 'a でライフタイムを定義",
           "fn first<'a>(s: &'a str) -> &'a str {",
@@ -77,7 +77,7 @@ export const rust3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn main() {\n    // |x| でクロージャの引数を定義\n    let double = |x| x * 2;\n    println!(\"{}\", double(5));\n}",
-        "holeyCode": "fn main() {\n    // |x| でクロージャの引数を定義\n    let double = ___x___ x * 2;\n    println!(\"{}\", double(5));\n}",
+        "holeyCode": "fn ___ () {\n    // |x| でクロージャの引数を定義\n    let ___ = |x| x * 2;\n    ___!(\"{}\", double(5));\n___",
         "correctLines": [
           "fn main() {",
           "    // |x| でクロージャの引数を定義",
@@ -123,7 +123,7 @@ export const rust3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn main() {\n    let nums = vec![1, 2, 3];\n    // iter でイテレータを取得\n    for n in nums.iter() {\n        println!(\"{}\", n);\n    }\n}",
-        "holeyCode": "fn main() {\n    let nums = vec![1, 2, 3];\n    // iter でイテレータを取得\n    for n in nums.___() {\n        println!(\"{}\", n);\n    }\n}",
+        "holeyCode": "fn ___ () {\n    let ___ = vec![1, 2, 3];\n    // iter でイテレータを取得\n    for n in nums.___() {\n        ___!(\"{}\", n);\n    ___\n___",
         "correctLines": [
           "fn main() {",
           "    let nums = vec![1, 2, 3];",
@@ -173,7 +173,7 @@ export const rust3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn main() {\n    let nums = vec![1, 2, 3];\n    // map で各要素を変換\n    let squared: Vec<_> = nums.iter().map(|x| x * x).collect();\n    println!(\"{:?}\", squared);\n}",
-        "holeyCode": "fn main() {\n    let nums = vec![1, 2, 3];\n    // map で各要素を変換\n    let squared: Vec<_> = nums.iter().___(|x| x * x).collect();\n    println!(\"{:?}\", squared);\n}",
+        "holeyCode": "fn ___ () {\n    let ___ = vec![1, 2, 3];\n    // map で各要素を変換\n    let squared: Vec<_> = nums.___().map(|x| x * x).collect();\n    ___!(\"{:?}\", squared);\n___",
         "correctLines": [
           "fn main() {",
           "    let nums = vec![1, 2, 3];",
@@ -221,7 +221,7 @@ export const rust3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn main() {\n    let nums = vec![1, 2, 3, 4, 5];\n    // filter で条件に合う要素を絞り込む\n    let big: Vec<_> = nums.iter().filter(|x| **x > 2).collect();\n    println!(\"{:?}\", big);\n}",
-        "holeyCode": "fn main() {\n    let nums = vec![1, 2, 3, 4, 5];\n    // filter で条件に合う要素を絞り込む\n    let big: Vec<_> = nums.iter().___(|x| **x > 2).collect();\n    println!(\"{:?}\", big);\n}",
+        "holeyCode": "fn ___ () {\n    let ___ = vec![1, 2, 3, 4, 5];\n    // filter で条件に合う要素を絞り込む\n    let big: Vec<_> = nums.___().filter(|x| **x > 2).collect();\n    ___!(\"{:?}\", big);\n___",
         "correctLines": [
           "fn main() {",
           "    let nums = vec![1, 2, 3, 4, 5];",
@@ -269,7 +269,7 @@ export const rust3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn main() {\n    let nums = vec![1, 2, 3, 4];\n    // fold で畳み込み\n    let product = nums.iter().fold(1, |acc, x| acc * x);\n    println!(\"{}\", product);\n}",
-        "holeyCode": "fn main() {\n    let nums = vec![1, 2, 3, 4];\n    // fold で畳み込み\n    let product = nums.iter().___(1, |acc, x| acc * x);\n    println!(\"{}\", product);\n}",
+        "holeyCode": "fn ___ () {\n    let ___ = vec![1, 2, 3, 4];\n    // fold で畳み込み\n    let ___ = nums.iter().fold(1, |acc, x| acc * x);\n    ___!(\"{}\", product);\n___",
         "correctLines": [
           "fn main() {",
           "    let nums = vec![1, 2, 3, 4];",
@@ -317,7 +317,7 @@ export const rust3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {\n    if b == 0 {\n        Err(\"division by zero\")\n    } else {\n        Ok(a / b)\n    }\n}\n\nfn calc() -> Result<i32, &'static str> {\n    // ? でエラーを伝播\n    let x = divide(10, 2)?;\n    Ok(x * 2)\n}\n\nfn main() {\n    println!(\"{:?}\", calc());\n}",
-        "holeyCode": "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {\n    if b == 0 {\n        Err(\"division by zero\")\n    } else {\n        Ok(a / b)\n    }\n}\n\nfn calc() -> Result<i32, &'static str> {\n    // ? でエラーを伝播\n    let x = divide(10, 2)___;\n    Ok(x * 2)\n}\n\nfn main() {\n    println!(\"{:?}\", calc());\n}",
+        "holeyCode": "fn ___ (a: i32, b: i32) -> Result<i32, &'static str> {\n    if b ___ 0 {\n        ___(\"division by zero\")\n    } ___ {\n        ___(a / b)\n    ___\n___\n\nfn ___ () -> Result<i32, &'static str> {\n    // ? でエラーを伝播\n    let ___ = divide(10, 2)?;\n    ___(x * 2)\n___\n\nfn ___ () {\n    ___!(\"{:?}\", calc());\n___",
         "correctLines": [
           "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {",
           "    if b == 0 {",
@@ -387,7 +387,7 @@ export const rust3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn main() {\n    let x: Option<i32> = None;\n    // unwrap_or でデフォルト値を設定\n    let value = x.unwrap_or(42);\n    println!(\"{}\", value);\n}",
-        "holeyCode": "fn main() {\n    let x: Option<i32> = None;\n    // unwrap_or でデフォルト値を設定\n    let value = x.___(42);\n    println!(\"{}\", value);\n}",
+        "holeyCode": "fn ___ () {\n    let x: ___ = ___;\n    // unwrap_or でデフォルト値を設定\n    let ___ = x.unwrap_or(42);\n    ___!(\"{}\", value);\n___",
         "correctLines": [
           "fn main() {",
           "    let x: Option<i32> = None;",
@@ -435,7 +435,7 @@ export const rust3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn main() {\n    let mut nums = Vec::new();\n    // push で要素を追加\n    nums.push(10);\n    nums.push(20);\n    println!(\"{:?}\", nums);\n}",
-        "holeyCode": "fn main() {\n    let mut nums = Vec::new();\n    // push で要素を追加\n    nums.___(10);\n    nums.push(20);\n    println!(\"{:?}\", nums);\n}",
+        "holeyCode": "fn ___ () {\n    let mut ___ = Vec::new();\n    // push で要素を追加\n    nums.___(10);\n    nums.___(20);\n    ___!(\"{:?}\", nums);\n___",
         "correctLines": [
           "fn main() {",
           "    let mut nums = Vec::new();",
@@ -485,7 +485,7 @@ export const rust3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "fn main() {\n    let s: &str = \"Hello\";\n    // to_string で String に変換\n    let owned: String = s.to_string();\n    println!(\"{}\", owned);\n}",
-        "holeyCode": "fn main() {\n    let s: &str = \"Hello\";\n    // to_string で String に変換\n    let owned: String = s.___();\n    println!(\"{}\", owned);\n}",
+        "holeyCode": "fn ___ () {\n    let s: ___ = \"Hello\";\n    // to_string で String に変換\n    let owned: String = s.___();\n    ___!(\"{}\", owned);\n___",
         "correctLines": [
           "fn main() {",
           "    let s: &str = \"Hello\";",

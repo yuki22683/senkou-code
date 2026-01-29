@@ -23,7 +23,7 @@ export const assembly3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  mov rax, 10\n  ; decで1減らす\n  dec rax\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  mov rax, 10\n  ; decで1減らす\n  ___ rax\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  mov ___, ___\n  ; decで1減らす\n  dec ___\n\n  mov ___, ___\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -82,7 +82,7 @@ export const assembly3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  mov rbx, 3\n  ; imulで掛け算\n  imul rax, rbx, 4\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  mov rbx, 3\n  ; imulで掛け算\n  ___ rax, rbx, 4\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  mov ___, ___\n  ; imulで掛け算\n  imul rax, rbx, ___\n\n  mov ___, ___\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -141,7 +141,7 @@ export const assembly3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  mov rax, 42\n  ; pushでスタックに保存\n  push rax\n  pop rdi\n\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  mov rax, 42\n  ; pushでスタックに保存\n  ___ rax\n  pop rdi\n\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  mov ___, ___\n  ; pushでスタックに保存\n  push ___\n  pop ___\n\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -200,7 +200,7 @@ export const assembly3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  push 99\n  ; popでスタックから取り出す\n  pop rdi\n\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  push 99\n  ; popでスタックから取り出す\n  ___ rdi\n\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  push ___\n  ; popでスタックから取り出す\n  pop ___\n\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -257,7 +257,7 @@ export const assembly3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  mov rax, 0xFF\n  ; andでビットAND\n  and rax, 0x0F\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  mov rax, 0xFF\n  ; andでビットAND\n  ___ rax, 0x0F\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  mov ___, ___\n  ; andでビットAND\n  and rax, ___x0F\n\n  mov ___, ___\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -316,7 +316,7 @@ export const assembly3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  mov rax, 0x10\n  ; orでビットOR\n  or rax, 0x01\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  mov rax, 0x10\n  ; orでビットOR\n  ___ rax, 0x01\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  mov ___, ___\n  ; orでビットOR\n  or rax, ___x01\n\n  mov ___, ___\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -375,7 +375,7 @@ export const assembly3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  mov rax, 5\n  ; shlで左シフト\n  shl rax, 2\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  mov rax, 5\n  ; shlで左シフト\n  ___ rax, 2\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  mov ___, ___\n  ; shlで左シフト\n  shl rax, ___\n\n  mov ___, ___\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -434,7 +434,7 @@ export const assembly3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  mov rax, 20\n  ; shrで右シフト\n  shr rax, 1\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  mov rax, 20\n  ; shrで右シフト\n  ___ rax, 1\n\n  mov rdi, rax\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  mov ___, ___\n  ; shrで右シフト\n  shr rax, ___\n\n  mov ___, ___\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -493,7 +493,7 @@ export const assembly3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  mov rax, 5\n  ; testでビットを検査\n  test rax, 1\n  jnz is_odd\n  mov rdi, 0\n  jmp done\nis_odd:\n  mov rdi, 1\ndone:\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  mov rax, 5\n  ; testでビットを検査\n  ___ rax, 1\n  jnz is_odd\n  mov rdi, 0\n  jmp done\nis_odd:\n  mov rdi, 1\ndone:\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  mov ___, ___\n  ; testでビットを検査\n  test rax, ___\n  jnz ___\n  mov ___, ___\n  jmp ___\n___:\n  mov ___, ___\n___:\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -560,7 +560,7 @@ export const assembly3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "section .text\n  global _start\n\n_start:\n  mov rax, 10\n  ; negで符号反転\n  neg rax\n\n  xor rdi, rdi\n  mov rax, 60\n  syscall",
-        "holeyCode": "section .text\n  global _start\n\n_start:\n  mov rax, 10\n  ; negで符号反転\n  ___ rax\n\n  xor rdi, rdi\n  mov rax, 60\n  syscall",
+        "holeyCode": "section .___\n  global ___\n\n___:\n  mov ___, ___\n  ; negで符号反転\n  neg ___\n\n  xor ___, ___\n  mov ___, ___\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",

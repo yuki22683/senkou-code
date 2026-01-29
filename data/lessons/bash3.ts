@@ -23,7 +23,7 @@ export const bash3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# |でパイプを使う\necho \"hello world\" | wc -w",
-        "holeyCode": "# |でパイプを使う\necho \"hello world\" ___ wc -w",
+        "holeyCode": "# |でパイプを使う\necho \"___\" | wc -w",
         "correctLines": [
           "# |でパイプを使う",
           "echo \"hello world\" | wc -w"
@@ -64,7 +64,7 @@ export const bash3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# >でファイルに出力\necho \"test\" > /tmp/out.txt && cat /tmp/out.txt",
-        "holeyCode": "# >でファイルに出力\necho \"test\" ___ /tmp/out.txt && cat /tmp/out.txt",
+        "holeyCode": "# >でファイルに出力\necho \"___\" > /tmp/out.txt && cat /tmp/out.txt",
         "correctLines": [
           "# >でファイルに出力",
           "echo \"test\" > /tmp/out.txt && cat /tmp/out.txt"
@@ -105,7 +105,7 @@ export const bash3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "echo \"line1\" > /tmp/in.txt\n# <でファイルから読み込む\nwc -l < /tmp/in.txt",
-        "holeyCode": "echo \"line1\" > /tmp/in.txt\n# <でファイルから読み込む\nwc -l ___ /tmp/in.txt",
+        "holeyCode": "echo \"___\" > /tmp/in.txt\n# <でファイルから読み込む\nwc -l < /tmp/in.___",
         "correctLines": [
           "echo \"line1\" > /tmp/in.txt",
           "# <でファイルから読み込む",
@@ -148,7 +148,7 @@ export const bash3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 2>でエラー出力をリダイレクト\nls /nonexistent 2> /dev/null && echo \"ok\" || echo \"error hidden\"",
-        "holeyCode": "# 2>でエラー出力をリダイレクト\nls /nonexistent ___> /dev/null && echo \"ok\" || echo \"error hidden\"",
+        "holeyCode": "# 2>でエラー出力をリダイレクト\nls /nonexistent 2> /dev/null && echo \"___\" || echo \"error hidden\"",
         "correctLines": [
           "# 2>でエラー出力をリダイレクト",
           "ls /nonexistent 2> /dev/null && echo \"ok\" || echo \"error hidden\""
@@ -189,7 +189,7 @@ export const bash3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# -fでファイルが存在するか確認\nif [ -f /etc/passwd ]; then\n    echo \"file exists\"\nfi",
-        "holeyCode": "# -fでファイルが存在するか確認\nif [ ___ /etc/passwd ]; then\n    echo \"file exists\"\nfi",
+        "holeyCode": "# -fでファイルが存在するか確認\nif [ -f /etc/passwd ]; ___\n    echo \"___\"\n___",
         "correctLines": [
           "# -fでファイルが存在するか確認",
           "if [ -f /etc/passwd ]; then",
@@ -234,7 +234,7 @@ export const bash3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# xargsで引数に変換\necho \"hello world\" | xargs echo \"Message:\"",
-        "holeyCode": "# xargsで引数に変換\necho \"hello world\" | ___ echo \"Message:\"",
+        "holeyCode": "# xargsで引数に変換\necho \"___\" | xargs echo \"Message:\"",
         "correctLines": [
           "# xargsで引数に変換",
           "echo \"hello world\" | xargs echo \"Message:\""
@@ -275,7 +275,7 @@ export const bash3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# sedで置換\necho \"cat\" | sed 's/cat/dog/'",
-        "holeyCode": "# sedで置換\necho \"cat\" | ___ 's/cat/dog/'",
+        "holeyCode": "# sedで置換\necho \"___\" | sed 's/cat/dog/'",
         "correctLines": [
           "# sedで置換",
           "echo \"cat\" | sed 's/cat/dog/'"
@@ -316,7 +316,7 @@ export const bash3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# awkでフィールドを抽出\necho \"apple 100 yen\" | awk '{print $2}'",
-        "holeyCode": "# awkでフィールドを抽出\necho \"apple 100 yen\" | ___ '{print $2}'",
+        "holeyCode": "# awkでフィールドを抽出\necho \"___\" | awk '{print $2}'",
         "correctLines": [
           "# awkでフィールドを抽出",
           "echo \"apple 100 yen\" | awk '{print $2}'"
@@ -357,7 +357,7 @@ export const bash3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# sortで並べ替え\\necho -e \"banana\\napple\\ncherry\" | sort",
-        "holeyCode": "# sortで並べ替え\necho -e \"banana\\napple\\ncherry\" | ___",
+        "holeyCode": "# sortで並べ替え\\\necho -e \"banana\\\n___\\\ncherry\" | sort",
         "correctLines": [
           "# sortで並べ替え",
           "echo -e \"banana",
@@ -402,7 +402,7 @@ export const bash3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# uniqで重複を除去\\necho -e \"a\\nb\\na\\nb\" | sort | uniq",
-        "holeyCode": "# uniqで重複を除去\necho -e \"a\\nb\\na\\nb\" | sort | ___",
+        "holeyCode": "# uniqで重複を除去\\\necho -e \"a\\\n___\\\n___\\\nb\" | sort | uniq",
         "correctLines": [
           "# uniqで重複を除去",
           "echo -e \"a",

@@ -80,7 +80,7 @@ export const kotlinData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// x に 10 を入れる\nval x = 10\n// y に 5 を入れる\nval y = 5\n// + でたし算する\nprintln(x + y)",
-        "holeyCode": "// x に 10 を入れる\nval x = ___\n// y に 5 を入れる\nval y = ___\n// + でたし算する\nprintln(x ___ y)",
+        "holeyCode": "// x に 10 を入れる\nval x = ___\n// y に 5 を入れる\nval y = ___\n// + でたし算する\n___(x + y)",
         "correctLines": [
           "// x に 10 を入れる",
           "val x = 10",
@@ -137,7 +137,7 @@ export const kotlinData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// 10 を 3 で割ったあまりを出力する\nprintln(10 % 3)",
-        "holeyCode": "// 10 を 3 で割ったあまりを出力する\nprintln(10 ___ 3)",
+        "holeyCode": "// 10 を 3 で割ったあまりを出力する\n___(10 % 3)",
         "correctLines": [
           "// 10 を 3 で割ったあまりを出力する",
           "println(10 % 3)"
@@ -186,7 +186,7 @@ export const kotlinData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// var で変更可能な変数を作る\nvar hp = 100\n// += で 20 を足す\nhp += 20\n// -= で 50 を引く\nhp -= 50\nprintln(hp)",
-        "holeyCode": "// var で変更可能な変数を作る\nvar hp = 100\n// += で 20 を足す\nhp ___ 20\n// -= で 50 を引く\nhp ___ 50\nprintln(hp)",
+        "holeyCode": "// var で変更可能な変数を作る\nvar ___ = 100\n// += で 20 を足す\nhp += ___\n// -= で 50 を引く\nhp -= ___\nprintln(___)",
         "correctLines": [
           "// var で変更可能な変数を作る",
           "var hp = 100",
@@ -245,7 +245,7 @@ export const kotlinData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// score に 100 を入れる\nval score = 100\n// > で比較する\nif (score > 80) {\n    println(\"Great!\")\n}",
-        "holeyCode": "// score に 100 を入れる\nval score = ___\n// > で比較する\nif (score ___ 80) {\n    println(\"Great!\")\n}",
+        "holeyCode": "// score に 100 を入れる\nval score = ___\n// > で比較する\nif (score ___ 80) {\n    ___(\"Great!\")\n___",
         "correctLines": [
           "// score に 100 を入れる",
           "val score = 100",
@@ -305,7 +305,7 @@ export const kotlinData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "val score = 80\nval bonus = 10\n// && で両方の条件をチェック\nif (score >= 70 && bonus > 0) {\n    println(\"Bonus Pass\")\n}",
-        "holeyCode": "val score = 80\nval bonus = 10\n// && で両方の条件をチェック\nif (score >= 70 ___ bonus > 0) {\n    println(\"Bonus Pass\")\n}",
+        "holeyCode": "val score = ___\nval bonus = ___\n// && で両方の条件をチェック\nif (score >= ___ && bonus > 0) {\n    ___(\"Bonus Pass\")\n___",
         "correctLines": [
           "val score = 80",
           "val bonus = 10",
@@ -362,7 +362,7 @@ export const kotlinData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// colors というリストを作る（'あか', 'あお'の順）\nval colors = listOf(\"あか\", \"あお\")\n// 2番目のデータ（インデックス1）を出す\nprintln(colors[1])",
-        "holeyCode": "// colors というリストを作る（'あか', 'あお'の順）\nval colors = listOf(\"___\", \"___\")\n// 2番目のデータ（インデックス1）を出す\nprintln(colors[___])",
+        "holeyCode": "// colors というリストを作る（'あか', 'あお'の順）\nval colors = listOf(\"___\", \"あお\")\n// 2番目のデータ（インデックス1）を出す\n___(colors[1])",
         "correctLines": [
           "// colors というリストを作る（'あか', 'あお'の順）",
           "val colors = listOf(\"あか\", \"あお\")",
@@ -423,7 +423,7 @@ export const kotlinData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nval colors = mapOf(\"みかん\" to \"オレンジ\")\n// 中身を出す\nprintln(colors[\"みかん\"])",
-        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nval colors = mapOf(\"___\" to \"___\")\n// 中身を出す\nprintln(colors[\"___\"])",
+        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nval colors = mapOf(\"___\" to \"オレンジ\")\n// 中身を出す\n___(colors[\"みかん\"])",
         "correctLines": [
           "// 辞書を作る（キーは'みかん'、値は'オレンジ'）",
           "val colors = mapOf(\"みかん\" to \"オレンジ\")",

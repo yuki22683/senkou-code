@@ -25,7 +25,7 @@ export const javascriptData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// 画面に「Hello, JavaScript!」と出す関数\nconsole.log('Hello, JavaScript!');",
-        "holeyCode": "// 画面に「Hello, JavaScript!」と出す関数\nconsole.log('___');",
+        "holeyCode": "// 画面に「Hello, JavaScript!」と出す関数\nconsole.___('Hello, JavaScript!');",
         "correctLines": [
           "// 画面に「Hello, JavaScript!」と出す関数",
           "console.log('Hello, JavaScript!');"
@@ -66,7 +66,7 @@ export const javascriptData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// nameという名前のはこを作る\nconst name = 'JavaScript';\n// はこの中身を出す\nconsole.log(name);",
-        "holeyCode": "// nameという名前のはこを作る\nconst name = '___';\n// はこの中身を出す\nconsole.log(___);",
+        "holeyCode": "// nameという名前のはこを作る\nconst ___ = 'JavaScript';\n// はこの中身を出す\nconsole.log(___);",
         "correctLines": [
           "// nameという名前のはこを作る",
           "const name = 'JavaScript';",
@@ -114,7 +114,7 @@ export const javascriptData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// xに10を入れる\nconst x = 10;\n// yに5を入れる\nconst y = 5;\n// x + y を表示する\nconsole.log(x + y);",
-        "holeyCode": "// xに10を入れる\nconst x = ___ ;\n// yに5を入れる\nconst y = ___ ;\n// x + y を表示する\nconsole.log(x ___ y);",
+        "holeyCode": "// xに10を入れる\nconst ___ = 10;\n// yに5を入れる\nconst ___ = 5;\n// x + y を表示する\nconsole.___(x + y);",
         "correctLines": [
           "// xに10を入れる",
           "const x = 10;",
@@ -175,7 +175,7 @@ export const javascriptData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// age というはこに 10 を入れる\nconst age = 10;\n// 文章の中に age の中身を入れる\nconsole.log(`私は${age}歳です`);",
-        "holeyCode": "// age というはこに 10 を入れる\nconst age = ___ ;\n// 文章の中に age の中身を入れる\nconsole.log(`私は${___}歳です`);",
+        "holeyCode": "// age というはこに 10 を入れる\nconst ___ = 10;\n// 文章の中に age の中身を入れる\nconsole.___(`私は${age}歳です`);",
         "correctLines": [
           "// age というはこに 10 を入れる",
           "const age = 10;",
@@ -226,7 +226,7 @@ export const javascriptData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst colors = ['あか', 'あお'];\n// 2番目のデータ（インデックス1）を出す\nconsole.log(colors[1]);",
-        "holeyCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst colors = ['___', '___'];\n// 2番目のデータ（インデックス1）を出す\nconsole.log(colors[___]);",
+        "holeyCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst ___ = ['あか', 'あお'];\n// 2番目のデータ（インデックス1）を出す\nconsole.___(colors[1]);",
         "correctLines": [
           "// 'あか', 'あお' の順で colors という配列を作る",
           "const colors = ['あか', 'あお'];",
@@ -278,7 +278,7 @@ export const javascriptData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// score に 100 を入れる\nconst score = 100;\n// もし 80 より大きかったら\nif (score > 80) {\n    // 「ごうかく！」と表示する\n    console.log('ごうかく！');\n}",
-        "holeyCode": "// score に 100 を入れる\nconst score = ___ ;\n// もし 80 より大きかったら\nif (score ___ 80) {\n    // 「ごうかく！」と表示する\n    console.log('___');\n}",
+        "holeyCode": "// score に 100 を入れる\nconst ___ = 100;\n// もし 80 より大きかったら\nif (score ___ 80) {\n    // 「ごうかく！」と表示する\n    console.___('ごうかく！');\n___",
         "correctLines": [
           "// score に 100 を入れる",
           "const score = 100;",
@@ -341,7 +341,7 @@ export const javascriptData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// age に 10 を入れる\nconst age = 10;\n// 20以上かを比較する演算子\nif (age >= 20) {\n    // 20歳以上のときのメッセージ（'おとな'）\n    console.log('おとな');\n// 「そうでなければ」を表すキーワード\n} else {\n    // それ以外の場合（'こども'）\n    console.log('こども');\n}",
-        "holeyCode": "// age に 10 を入れる\nconst age = ___ ;\n// 20以上かを比較する演算子\nif (age ___ 20) {\n    // 20歳以上のときのメッセージ（'おとな'）\n    console.log('___');\n// 「そうでなければ」を表すキーワード\n} ___ {\n    // それ以外の場合（'こども'）\n    console.log('___');\n}",
+        "holeyCode": "// age に 10 を入れる\nconst ___ = 10;\n// 20以上かを比較する演算子\nif (age ___ 20) {\n    // 20歳以上のときのメッセージ（'おとな'）\n    console.___('おとな');\n// 「そうでなければ」を表すキーワード\n} ___ {\n    // それ以外の場合（'こども'）\n    console.___('こども');\n___",
         "correctLines": [
           "// age に 10 を入れる",
           "const age = 10;",
@@ -414,7 +414,7 @@ export const javascriptData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// 配列を作る（'たろう', 'はなこ'の順）\nconst names = ['たろう', 'はなこ'];\n// 順番に取り出すループ\nfor (const name of names) {\n    // 取り出した名前を表示\n    console.log(name);\n}",
-        "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\nconst names = ['___', '___'];\n// 順番に取り出すループ\nfor (const ___ of ___) {\n    // 取り出した名前を表示\n    console.log(___);\n}",
+        "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\nconst ___ = ['たろう', 'はなこ'];\n// 順番に取り出すループ\nfor (const name of ___) {\n    // 取り出した名前を表示\n    console.log(___);\n___",
         "correctLines": [
           "// 配列を作る（'たろう', 'はなこ'の順）",
           "const names = ['たろう', 'はなこ'];",
@@ -470,7 +470,7 @@ export const javascriptData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// オブジェクトを作る（nameは'たろう'）\nconst user = { name: 'たろう' };\n// nameプロパティを取り出す\nconsole.log(user.name);",
-        "holeyCode": "// オブジェクトを作る（nameは'たろう'）\nconst user = { ___: '___' };\n// nameプロパティを取り出す\nconsole.log(user.___);",
+        "holeyCode": "// オブジェクトを作る（nameは'たろう'）\nconst ___ = { name: 'たろう' };\n// nameプロパティを取り出す\nconsole.___(user.name);",
         "correctLines": [
           "// オブジェクトを作る（nameは'たろう'）",
           "const user = { name: 'たろう' };",
@@ -519,7 +519,7 @@ export const javascriptData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// greet という関数を定義する（'こんにちは'と表示）\nfunction greet() {\n    // 'こんにちは'と表示\n    console.log('こんにちは');\n}\n// 関数を動かす\ngreet();",
-        "holeyCode": "// greet という関数を定義する（'こんにちは'と表示）\nfunction ___() {\n    // 'こんにちは'と表示\n    console.log('___');\n}\n// 関数を動かす\n___();",
+        "holeyCode": "// greet という関数を定義する（'こんにちは'と表示）\nfunction ___() {\n    // 'こんにちは'と表示\n    console.___('こんにちは');\n___\n// 関数を動かす\n___();",
         "correctLines": [
           "// greet という関数を定義する（'こんにちは'と表示）",
           "function greet() {",
