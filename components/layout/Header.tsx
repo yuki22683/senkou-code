@@ -1,12 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { LoginButton } from "@/components/auth/LoginButton";
 import { UserXpDisplay } from "@/components/auth/UserXpDisplay";
 import Image from "next/image";
 import { Trophy, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { NavigationLink } from "./NavigationLink";
 
 export function Header() {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -47,7 +47,7 @@ export function Header() {
     <header className="border-b bg-white sticky top-0 z-50">
       <div className="container mx-auto px-2 sm:px-4 py-2 sm:py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center group">
+          <NavigationLink href="/" className="flex items-center group">
             <Image
               src="/icons/logo_long.png"
               alt="令和プログラミング"
@@ -55,25 +55,25 @@ export function Header() {
               height={60}
               className="h-7 sm:h-14 lg:h-16 w-auto object-contain"
             />
-          </Link>
+          </NavigationLink>
 
           <nav className="flex items-center space-x-2 sm:space-x-4">
             {isAdmin && (
-              <Link
+              <NavigationLink
                 href="/admin"
                 className="flex items-center gap-1 px-2 sm:px-3 py-1.5 text-sm text-amber-600 hover:text-amber-700 hover:bg-amber-50 rounded-lg transition-colors"
               >
                 <Shield className="w-4 h-4" />
                 <span className="hidden sm:inline">管理者</span>
-              </Link>
+              </NavigationLink>
             )}
-            <Link
+            <NavigationLink
               href="/ranking"
               className="flex items-center gap-1 px-2 sm:px-3 py-1.5 text-sm text-gray-600 hover:text-yellow-600 hover:bg-yellow-50 rounded-lg transition-colors"
             >
               <Trophy className="w-4 h-4" />
               <span className="hidden sm:inline">ランキング</span>
-            </Link>
+            </NavigationLink>
             <UserXpDisplay />
             <LoginButton />
           </nav>

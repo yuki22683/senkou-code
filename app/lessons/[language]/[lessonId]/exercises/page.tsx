@@ -3,7 +3,7 @@ import { ExerciseCard } from "@/components/exercises/ExerciseCard";
 import { ResetProgressButton } from "@/components/lessons/ResetProgressButton";
 import { getLanguageById, LANGUAGE_COLORS } from "@/data/languages";
 import { redirect } from "next/navigation";
-import Link from "next/link";
+import { NavigationLink } from "@/components/layout/NavigationLink";
 import { ArrowLeft, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { UserProgress } from "@/types/database";
@@ -85,10 +85,10 @@ export default async function ExercisesPage({ params }: PageProps) {
       <div className="max-w-5xl mx-auto">
         <div className="mb-8">
           <Button variant="ghost" asChild className="mb-4">
-            <Link href={`/lessons/${language}`}>
+            <NavigationLink href={`/lessons/${language}`}>
               <ArrowLeft className="w-4 h-4 mr-2" />
               レッスン一覧に戻る
-            </Link>
+            </NavigationLink>
           </Button>
 
           <div className={`rounded-lg p-6 mb-6 border-2 ${colorClass.split(' ').filter(c => !c.startsWith('hover')).join(' ')}`}>

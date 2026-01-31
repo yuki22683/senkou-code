@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, Delete, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -365,8 +365,8 @@ export function MobileCodeEditor({
 
       const filtered = expandedTokens.filter(t => t.trim().length > 0);
       const unique = Array.from(new Set(filtered));
-      const shuffled = [...unique].sort(() => Math.random() - 0.5);
-      setSuggestions(shuffled);
+      // シャッフルは行分配後に行うため、ここでは行わない
+      setSuggestions(unique);
     } else {
       setSuggestions([]);
     }
@@ -376,6 +376,48 @@ export function MobileCodeEditor({
   useEffect(() => {
     setClickedButtonIdx(null);
   }, [cursor.line]);
+
+  // シャッフル済みの行配列をメモ化（suggestionsが変わったときだけ再計算）
+  const shuffledRows = useMemo(() => {
+    if (suggestions.length === 0) return [];
+
+    const count = suggestions.length;
+    const maxPerRow = 4;
+    const numRows = Math.ceil(count / maxPerRow);
+
+    // 1. 文字数（幅）でソート（長い順）
+    const sortedByLength = [...suggestions].sort((a, b) => b.length - a.length);
+
+    // 2. 幅バランスを考慮して各行に分配（長いものを別の行に分散）
+    const rows: string[][] = Array.from({ length: numRows }, () => []);
+    const rowWidths: number[] = Array(numRows).fill(0);
+
+    for (const token of sortedByLength) {
+      let minRowIndex = 0;
+      let minWidth = rowWidths[0];
+      let minCount = rows[0].length;
+      for (let i = 1; i < numRows; i++) {
+        if (rowWidths[i] < minWidth || (rowWidths[i] === minWidth && rows[i].length < minCount)) {
+          minWidth = rowWidths[i];
+          minCount = rows[i].length;
+          minRowIndex = i;
+        }
+      }
+      rows[minRowIndex].push(token);
+      rowWidths[minRowIndex] += token.length;
+    }
+
+    // 3. 各行内でシャッフル
+    for (const row of rows) {
+      row.sort(() => Math.random() - 0.5);
+    }
+
+    // 4. 行の順番もシャッフル
+    rows.sort(() => Math.random() - 0.5);
+
+    // 空の行を除去
+    return rows.filter(row => row.length > 0);
+  }, [suggestions]);
 
   useEffect(() => {
     const newCode = lines.join("\n");
@@ -801,30 +843,12 @@ export function MobileCodeEditor({
           className="flex flex-col gap-1 sm:gap-2 mb-2 w-full max-h-[180px] sm:max-h-[160px] overflow-hidden p-1"
         >
           {(() => {
-            if (suggestions.length === 0) {
+            if (shuffledRows.length === 0) {
               return (
                 <div className="flex justify-center items-center min-h-[36px]">
                   <span className="text-sm sm:text-xs px-2 py-1.5" style={{ color: SYNTAX_COLORS.comment }}>ヒントはありません</span>
                 </div>
               );
-            }
-
-            // 選択肢をできるだけ均等な数で複数行に配分
-            const count = suggestions.length;
-            const maxPerRow = 4;
-            const numRows = Math.ceil(count / maxPerRow);
-
-            const rows: string[][] = [];
-            let startIndex = 0;
-
-            for (let i = 0; i < numRows; i++) {
-              // 残りのアイテムを残りの行数で割って、現在の行の個数を決定
-              // これにより、余りが各行に分散され、行ごとの個数差が1以内になる
-              // 例: 13個, 3行 -> 5, 4, 4
-              const itemsForThisRow = Math.ceil((count - startIndex) / (numRows - i));
-              const endIndex = startIndex + itemsForThisRow;
-              rows.push(suggestions.slice(startIndex, endIndex));
-              startIndex = endIndex;
             }
 
             // 行ごとにフォントサイズを計算（コンテナ幅を超えないように）
@@ -864,15 +888,16 @@ export function MobileCodeEditor({
             const containerPadding = 8; // p-1 = 4px * 2
             const rowGap = isMobile ? 4 : 8; // gap-1 sm:gap-2
             const availableHeight = suggestionsContainerMaxHeight - containerPadding;
-            const totalRowGaps = (numRows - 1) * rowGap;
+            const actualNumRows = shuffledRows.length;
+            const totalRowGaps = (actualNumRows - 1) * rowGap;
             const availableForRows = availableHeight - totalRowGaps;
             const baseRowHeight = isMobile ? 36 : 48; // h-9 sm:h-12
-            const calculatedRowHeight = Math.min(baseRowHeight, Math.floor(availableForRows / numRows));
+            const calculatedRowHeight = Math.min(baseRowHeight, Math.floor(availableForRows / actualNumRows));
             const rowHeight = Math.max(20, calculatedRowHeight); // 最小20px
 
             return (
               <div className={`flex flex-col w-full items-center ${isMobile ? 'gap-1' : 'gap-1 sm:gap-2'}`}>
-                {rows.map((row, rowIdx) => {
+                {shuffledRows.map((row, rowIdx) => {
                   const widthBasedFontSize = calculateRowFontSize(row);
                   // ボタンの高さに基づくフォントサイズ（高さの60%程度）
                   const heightBasedFontSize = Math.floor(rowHeight * 0.6);

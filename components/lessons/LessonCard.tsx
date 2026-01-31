@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Lesson } from "@/types/database";
 import { BookOpen, CheckCircle2 } from "lucide-react";
 import { LANGUAGE_COLORS } from "@/data/languages";
+import { useNavigationLoading } from "@/components/layout/NavigationLoadingProvider";
 
 interface LessonCardProps {
   lesson: Lesson;
@@ -14,6 +15,7 @@ interface LessonCardProps {
 }
 
 export function LessonCard({ lesson, language, progressCount = 0, totalExercises = 0 }: LessonCardProps) {
+  const { startNavigation, isNavigating } = useNavigationLoading();
   const progressPercent = totalExercises > 0 ? Math.round((progressCount / totalExercises) * 100) : 0;
   const colorClass = LANGUAGE_COLORS[language] || 'bg-gray-50 border-gray-200';
 
@@ -24,7 +26,17 @@ export function LessonCard({ lesson, language, progressCount = 0, totalExercises
   }[lesson.difficulty] || 'bg-gray-100 text-gray-700';
 
   return (
-    <Link href={`/lessons/${language}/${lesson.id}/exercises`}>
+    <Link
+      href={`/lessons/${language}/${lesson.id}/exercises`}
+      onClick={(e) => {
+        if (isNavigating) {
+          e.preventDefault();
+          return;
+        }
+        startNavigation();
+      }}
+      className={isNavigating ? "pointer-events-none" : ""}
+    >
       <Card className={`transition-all hover:shadow-lg hover:scale-105 cursor-pointer border-2 h-[200px] flex flex-col ${colorClass}`}>
         <CardHeader className="flex-shrink-0">
           <div className="flex items-start justify-between">

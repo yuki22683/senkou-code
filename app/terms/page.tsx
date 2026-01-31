@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { NavigationLink } from '@/components/layout/NavigationLink'
 
 export const metadata = {
   title: '利用規約 - 令和プログラミング',
@@ -133,12 +133,12 @@ export default function TermsOfServicePage() {
 
         <section>
           <h2 className="text-xl font-bold mb-4 border-b pb-2">第11条（個人情報の取扱い）</h2>
-          <p>運営は、本サービスの利用によって取得する個人情報については、運営「<Link href="/privacy" className="text-blue-600 hover:underline">プライバシーポリシー</Link>」に従い適切に取り扱うものとします。</p>
+          <p>運営は、本サービスの利用によって取得する個人情報については、運営「<NavigationLink href="/privacy" className="text-blue-600 hover:underline">プライバシーポリシー</NavigationLink>」に従い適切に取り扱うものとします。</p>
         </section>
 
         <section>
           <h2 className="text-xl font-bold mb-4 border-b pb-2">第12条（通知または連絡）</h2>
-          <p>ユーザーと運営との間の通知または連絡は、本サイト上への掲示またはユーザーが登録したメールアドレスへの送信等、運営が適当と判断する方法によって行うものとします。ユーザーからの連絡は、原則として本サイト上の<Link href="/contact" className="text-blue-600 hover:underline">お問い合わせフォーム</Link>より行うものとします。</p>
+          <p>ユーザーと運営との間の通知または連絡は、本サイト上への掲示またはユーザーが登録したメールアドレスへの送信等、運営が適当と判断する方法によって行うものとします。ユーザーからの連絡は、原則として本サイト上の<NavigationLink href="/contact" className="text-blue-600 hover:underline">お問い合わせフォーム</NavigationLink>より行うものとします。</p>
         </section>
 
         <section>

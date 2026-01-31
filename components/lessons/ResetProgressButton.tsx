@@ -12,6 +12,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { RotateCcw, AlertTriangle, Loader2 } from "lucide-react";
+import { useNavigationLoading } from "@/components/layout/NavigationLoadingProvider";
 
 interface ResetProgressButtonProps {
   language?: string;
@@ -27,6 +28,7 @@ export function ResetProgressButton({
   lessonTitle,
 }: ResetProgressButtonProps) {
   const router = useRouter();
+  const { isNavigating } = useNavigationLoading();
   const [showConfirmDialog, setShowConfirmDialog] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
 
@@ -68,6 +70,7 @@ export function ResetProgressButton({
         variant="outline"
         size="sm"
         onClick={() => setShowConfirmDialog(true)}
+        disabled={isNavigating}
         className="text-orange-600 border-orange-300 hover:bg-orange-50 hover:text-orange-700"
       >
         <RotateCcw className="w-4 h-4 mr-2" />
@@ -90,14 +93,14 @@ export function ResetProgressButton({
             <Button
               variant="outline"
               onClick={() => setShowConfirmDialog(false)}
-              disabled={isResetting}
+              disabled={isResetting || isNavigating}
             >
               キャンセル
             </Button>
             <Button
               variant="destructive"
               onClick={handleReset}
-              disabled={isResetting}
+              disabled={isResetting || isNavigating}
             >
               {isResetting ? (
                 <>

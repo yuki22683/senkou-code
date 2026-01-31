@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { calculateLevel, getLevelTitle, formatXp } from "@/lib/xp";
 import { Trophy, Medal, Award, User as UserIcon, Zap, BookOpen, CheckCircle } from "lucide-react";
-import Link from "next/link";
+import { NavigationLink } from "@/components/layout/NavigationLink";
 import { Button } from "@/components/ui/button";
 import RandomAffiliateBanner from "@/components/home/RandomAffiliateBanner";
 
@@ -181,9 +181,9 @@ export default function RankingPage() {
           <div className="text-center py-12 bg-white rounded-lg border">
             <UserIcon className="w-16 h-16 text-gray-300 mx-auto mb-4" />
             <p className="text-gray-500 mb-4">まだランキングに参加しているユーザーがいません</p>
-            <Link href="/">
+            <NavigationLink href="/">
               <Button>演習を始める</Button>
-            </Link>
+            </NavigationLink>
           </div>
         ) : (
           <div className="space-y-2">
@@ -275,9 +275,9 @@ export default function RankingPage() {
 
         {/* フッター */}
         <div className="mt-8 text-center">
-          <Link href="/">
+          <NavigationLink href="/">
             <Button variant="outline">ホームに戻る</Button>
-          </Link>
+          </NavigationLink>
         </div>
       </div>
     </div>

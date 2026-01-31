@@ -3,7 +3,7 @@ import { LessonCard } from "@/components/lessons/LessonCard";
 import { ResetProgressButton } from "@/components/lessons/ResetProgressButton";
 import { getLanguageById, LANGUAGE_COLORS } from "@/data/languages";
 import { redirect } from "next/navigation";
-import Link from "next/link";
+import { NavigationLink } from "@/components/layout/NavigationLink";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -84,10 +84,10 @@ export default async function LessonsPage({ params }: PageProps) {
       <div className="max-w-5xl mx-auto">
         <div className="mb-8">
           <Button variant="ghost" asChild className="mb-4">
-            <Link href="/">
+            <NavigationLink href="/">
               <ArrowLeft className="w-4 h-4 mr-2" />
               言語選択に戻る
-            </Link>
+            </NavigationLink>
           </Button>
 
           <div className="flex items-center space-x-4 mb-4">

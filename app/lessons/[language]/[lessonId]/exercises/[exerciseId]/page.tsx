@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
+import { useNavigationLoading } from "@/components/layout/NavigationLoadingProvider";
 import { MobileCodeEditor } from "@/components/exercise/MobileCodeEditor";
 import { ConsolePanel } from "@/components/exercise/ConsolePanel";
 import { SyntaxHighlightedCode } from "@/components/exercise/SyntaxHighlightedCode";
@@ -47,7 +48,7 @@ export default function ExercisePage() {
   const lessonId = params.lessonId as string;
   const exerciseId = params.exerciseId as string;
 
-  const router = useRouter();
+  const { navigateTo, isNavigating } = useNavigationLoading();
   const supabase = createClient();
 
   const [exercise, setExercise] = useState<Exercise | null>(null);
@@ -214,7 +215,7 @@ export default function ExercisePage() {
       }
     }
     // キャッシュを無効化するためハードナビゲーション
-    window.location.href = `/lessons/${language}/${lessonId}/exercises`;
+    navigateTo(`/lessons/${language}/${lessonId}/exercises`, { hardRefresh: true });
   }
 
   async function handleSubmitFeedback() {
@@ -451,14 +452,14 @@ export default function ExercisePage() {
   async function handleNextExercise() {
     if (!exercise) {
       // キャッシュを無効化するためハードナビゲーション
-      window.location.href = `/lessons/${language}/${lessonId}/exercises`;
+      navigateTo(`/lessons/${language}/${lessonId}/exercises`, { hardRefresh: true });
       return;
     }
 
     // レッスン完了または言語完了の場合は直接レッスン一覧へ
     if (celebrationType === "lesson" || celebrationType === "language") {
       // キャッシュを無効化するためハードナビゲーション
-      window.location.href = `/lessons/${language}`;
+      navigateTo(`/lessons/${language}`, { hardRefresh: true });
       return;
     }
 
@@ -474,15 +475,15 @@ export default function ExercisePage() {
 
       if (data) {
         // 次の演習のチュートリアルへ（キャッシュ無効化不要）
-        router.push(`/lessons/${language}/${lessonId}/exercises/${data.id}/tutorial`);
+        navigateTo(`/lessons/${language}/${lessonId}/exercises/${data.id}/tutorial`);
       } else {
         // キャッシュを無効化するためハードナビゲーション
-        window.location.href = `/lessons/${language}`;
+        navigateTo(`/lessons/${language}`, { hardRefresh: true });
       }
     } catch (error) {
       console.error("Error navigating to next exercise:", error);
       // キャッシュを無効化するためハードナビゲーション
-      window.location.href = `/lessons/${language}`;
+      navigateTo(`/lessons/${language}`, { hardRefresh: true });
     }
   }
 
@@ -520,6 +521,7 @@ export default function ExercisePage() {
               size="icon"
               className="h-8 w-8"
               onClick={() => setShowExitDialog(true)}
+              disabled={isNavigating}
             >
               <ArrowLeft className="w-4 h-4" />
             </Button>
@@ -555,26 +557,26 @@ export default function ExercisePage() {
                 </div>
 
                 <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="icon" className="h-8 w-8">
+                  <DropdownMenuTrigger asChild disabled={isNavigating}>
+                    <Button variant="ghost" size="icon" className="h-8 w-8" disabled={isNavigating}>
                       <MoreHorizontal className="w-5 h-5" />
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end" className="w-56">
-                    <DropdownMenuItem onClick={handleShowAnswer} className="cursor-pointer">
+                    <DropdownMenuItem onClick={handleShowAnswer} className="cursor-pointer" disabled={isNavigating}>
                       <CheckCircle2 className="mr-2 h-4 w-4 text-green-600" />
                       <span>答えを見る</span>
                     </DropdownMenuItem>
-                    <DropdownMenuItem onClick={handleReset} className="cursor-pointer">
+                    <DropdownMenuItem onClick={handleReset} className="cursor-pointer" disabled={isNavigating}>
                       <Undo2 className="mr-2 h-4 w-4 text-blue-600" />
                       <span>コードをリセット</span>
                     </DropdownMenuItem>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem onClick={() => setShowFeedbackDialog(true)} className="cursor-pointer text-orange-600">
+                    <DropdownMenuItem onClick={() => setShowFeedbackDialog(true)} className="cursor-pointer text-orange-600" disabled={isNavigating}>
                       <Flag className="mr-2 h-4 w-4" />
                       <span>問題を報告</span>
                     </DropdownMenuItem>
-                    <DropdownMenuItem onClick={handleInterruptLesson} className="cursor-pointer text-red-600">
+                    <DropdownMenuItem onClick={handleInterruptLesson} className="cursor-pointer text-red-600" disabled={isNavigating}>
                       <LogOut className="mr-2 h-4 w-4" />
                       <span>レッスンを中断する</span>
                     </DropdownMenuItem>
@@ -638,6 +640,7 @@ export default function ExercisePage() {
                         : "次の演習へ"
                     }
                     onNextClick={handleNextExercise}
+                    isNavigating={isNavigating}
                   />
                 </div>
 
@@ -648,11 +651,12 @@ export default function ExercisePage() {
                       variant="outline"
                       size="sm"
                       className="text-base flex-1"
+                      disabled={isNavigating}
                       onClick={() => {
                         // 現在のコードを一時保存
                         const savedCodeKey = `exercise_temp_code_${exerciseId}`;
                         sessionStorage.setItem(savedCodeKey, code);
-                        router.push(
+                        navigateTo(
                           `/lessons/${language}/${lessonId}/exercises/${exerciseId}/tutorial`
                         );
                       }}
@@ -665,7 +669,7 @@ export default function ExercisePage() {
                       size="sm"
                       className="text-base flex-1"
                       onClick={() => setShowHintDialog(true)}
-                      disabled={!exercise.line_hints || !exercise.line_hints[currentLine]}
+                      disabled={isNavigating || !exercise.line_hints || !exercise.line_hints[currentLine]}
                     >
                       <Lightbulb className="w-5 h-5 lg:mr-2" />
                       <span className="hidden lg:inline">ヒント</span>
@@ -695,7 +699,7 @@ export default function ExercisePage() {
             </p>
           </div>
           <DialogFooter>
-            <Button onClick={() => setShowHintDialog(false)}>閉じる</Button>
+            <Button onClick={() => setShowHintDialog(false)} disabled={isNavigating}>閉じる</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
@@ -721,7 +725,7 @@ export default function ExercisePage() {
             )}
           </div>
           <DialogFooter>
-            <Button onClick={() => setShowAnswerDialog(false)}>閉じる</Button>
+            <Button onClick={() => setShowAnswerDialog(false)} disabled={isNavigating}>閉じる</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
@@ -750,10 +754,10 @@ export default function ExercisePage() {
             <Button variant="outline" onClick={() => {
               setShowCompleteDialog(false);
               setShowNextButton(true);
-            }}>
+            }} disabled={isNavigating}>
               演習を続ける
             </Button>
-            <Button onClick={handleNextExercise}>
+            <Button onClick={handleNextExercise} disabled={isNavigating}>
               {celebrationType === "lesson" || celebrationType === "language"
                 ? "レッスン一覧へ"
                 : "次の演習へ"}
@@ -780,12 +784,12 @@ export default function ExercisePage() {
             />
           </div>
           <DialogFooter className="gap-2">
-            <Button variant="outline" onClick={() => setShowFeedbackDialog(false)}>
+            <Button variant="outline" onClick={() => setShowFeedbackDialog(false)} disabled={isNavigating}>
               キャンセル
             </Button>
             <Button
               onClick={handleSubmitFeedback}
-              disabled={isSubmittingFeedback || !feedbackMessage.trim()}
+              disabled={isNavigating || isSubmittingFeedback || !feedbackMessage.trim()}
               className="bg-blue-600 hover:bg-blue-700"
             >
               {isSubmittingFeedback ? "送信中..." : "送信する"}
@@ -805,14 +809,15 @@ export default function ExercisePage() {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter className="gap-2">
-            <Button variant="outline" onClick={() => setShowExitDialog(false)}>
+            <Button variant="outline" onClick={() => setShowExitDialog(false)} disabled={isNavigating}>
               キャンセル
             </Button>
             <Button
+              disabled={isNavigating}
               onClick={() => {
                 setShowExitDialog(false);
                 // キャッシュを無効化するためハードナビゲーション
-                window.location.href = `/lessons/${language}/${lessonId}/exercises`;
+                navigateTo(`/lessons/${language}/${lessonId}/exercises`, { hardRefresh: true });
               }}
             >
               終了する

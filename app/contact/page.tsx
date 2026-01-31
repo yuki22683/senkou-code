@@ -3,7 +3,7 @@
 import { useFormState, useFormStatus } from 'react-dom'
 import { submitInquiry } from '@/app/actions/inquiries'
 import { useEffect, useRef } from 'react'
-import Link from 'next/link'
+import { NavigationLink } from '@/components/layout/NavigationLink'
 
 const initialState = {
   message: '',
@@ -94,9 +94,9 @@ export default function ContactPage() {
         <div className="mt-8 pt-6 border-t text-sm text-gray-500">
           <p>
             お問い合わせの前に、
-            <Link href="/privacy" className="text-blue-600 hover:underline mx-1">プライバシーポリシー</Link>
+            <NavigationLink href="/privacy" className="text-blue-600 hover:underline mx-1">プライバシーポリシー</NavigationLink>
             および
-            <Link href="/terms" className="text-blue-600 hover:underline mx-1">利用規約</Link>
+            <NavigationLink href="/terms" className="text-blue-600 hover:underline mx-1">利用規約</NavigationLink>
             をご確認ください。
           </p>
         </div>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Exercise, UserProgress } from "@/types/database";
 import { Code2, CheckCircle2, PlayCircle, Lock } from "lucide-react";
+import { useNavigationLoading } from "@/components/layout/NavigationLoadingProvider";
 
 interface ExerciseCardProps {
   exercise: Exercise;
@@ -15,6 +16,7 @@ interface ExerciseCardProps {
 }
 
 export function ExerciseCard({ exercise, language, lessonId, progress, isLocked = false, isNext = false }: ExerciseCardProps) {
+  const { startNavigation, isNavigating } = useNavigationLoading();
   const isCompleted = progress?.status === 'completed';
   const isInProgress = progress?.status === 'in_progress';
 
@@ -56,14 +58,23 @@ export function ExerciseCard({ exercise, language, lessonId, progress, isLocked 
     );
   }
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent) => {
+    if (isNavigating) {
+      e.preventDefault();
+      return;
+    }
     // 一時保存されたコードをクリア
     const savedCodeKey = `exercise_temp_code_${exercise.id}`;
     sessionStorage.removeItem(savedCodeKey);
+    startNavigation();
   };
 
   return (
-    <Link href={`/lessons/${language}/${lessonId}/exercises/${exercise.id}/tutorial`} onClick={handleClick}>
+    <Link
+      href={`/lessons/${language}/${lessonId}/exercises/${exercise.id}/tutorial`}
+      onClick={handleClick}
+      className={isNavigating ? "pointer-events-none" : ""}
+    >
       <Card className={`transition-all hover:shadow-lg hover:scale-[1.02] cursor-pointer ${
         isCompleted ? 'border-green-500 border-2' : isNext ? 'border-orange-400 border-2 shadow-md' : ''
       }`}>

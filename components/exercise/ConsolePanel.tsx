@@ -21,6 +21,7 @@ interface ConsolePanelProps {
   showNextButton?: boolean;
   nextButtonLabel?: string;
   onNextClick?: () => void;
+  isNavigating?: boolean;
 }
 
 // ネットワークエラーかどうかを判定
@@ -203,6 +204,7 @@ export function ConsolePanel({
   showNextButton = false,
   nextButtonLabel = "次の演習へ",
   onNextClick,
+  isNavigating = false,
 }: ConsolePanelProps) {
   const consoleContentRef = useRef<HTMLDivElement>(null);
   const examplesContentRef = useRef<HTMLDivElement>(null);
@@ -242,6 +244,7 @@ export function ConsolePanel({
               onClick={onNextClick}
               size="sm"
               className="ml-auto h-8 text-sm"
+              disabled={isNavigating}
             >
               {nextButtonLabel}
             </Button>

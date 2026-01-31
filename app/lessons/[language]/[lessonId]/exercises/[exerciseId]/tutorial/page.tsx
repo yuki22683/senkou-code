@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Play, ArrowLeft } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
@@ -10,6 +10,7 @@ import remarkGfm from "remark-gfm";
 import { SyntaxHighlightedCode } from "@/components/exercise/SyntaxHighlightedCode";
 import Image from "next/image";
 import type { Exercise, TutorialSlide } from "@/types/database";
+import { useNavigationLoading } from "@/components/layout/NavigationLoadingProvider";
 
 export default function TutorialPage() {
   const params = useParams();
@@ -17,13 +18,18 @@ export default function TutorialPage() {
   const lessonId = params.lessonId as string;
   const exerciseId = params.exerciseId as string;
 
-  const router = useRouter();
+  const { navigateTo, isNavigating } = useNavigationLoading();
   const supabase = createClient();
 
   const [exercise, setExercise] = useState<Exercise | null>(null);
   const [slides, setSlides] = useState<TutorialSlide[]>([]);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+
+  // スライド切り替え時にスクロール位置をトップにリセット
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentSlide]);
 
   useEffect(() => {
     const loadExercise = async () => {
@@ -93,7 +99,11 @@ export default function TutorialPage() {
   }
 
   function handleStartExercise() {
-    router.push(`/lessons/${language}/${lessonId}/exercises/${exerciseId}`);
+    navigateTo(`/lessons/${language}/${lessonId}/exercises/${exerciseId}`);
+  }
+
+  function handleBack() {
+    navigateTo(`/lessons/${language}/${lessonId}/exercises`);
   }
 
   if (isLoading) {
@@ -117,7 +127,7 @@ export default function TutorialPage() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <p className="text-gray-600 mb-4">スライドがありません</p>
-          <Button onClick={handleStartExercise}>演習を始める</Button>
+          <Button onClick={handleStartExercise} disabled={isNavigating}>演習を始める</Button>
         </div>
       </div>
     );
@@ -132,9 +142,8 @@ export default function TutorialPage() {
             variant="outline"
             size="icon"
             className="lg:h-12 lg:w-12"
-            onClick={() =>
-              router.push(`/lessons/${language}/${lessonId}/exercises`)
-            }
+            onClick={handleBack}
+            disabled={isNavigating}
           >
             <ArrowLeft className="w-5 h-5 lg:w-6 lg:h-6" />
           </Button>
@@ -247,7 +256,7 @@ export default function TutorialPage() {
           <Button
             variant="outline"
             onClick={handlePrevSlide}
-            disabled={currentSlide === 0}
+            disabled={currentSlide === 0 || isNavigating}
             className="lg:h-12 lg:px-6 lg:text-lg"
           >
             <ChevronLeft className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
@@ -259,11 +268,12 @@ export default function TutorialPage() {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
+                disabled={isNavigating}
                 className={`w-2 h-2 lg:w-3 lg:h-3 rounded-full transition-all ${
                   index === currentSlide
                     ? "bg-blue-600 w-8 lg:w-12"
                     : "bg-gray-300 hover:bg-gray-400"
-                }`}
+                } ${isNavigating ? "opacity-50 cursor-not-allowed" : ""}`}
               />
             ))}
           </div>
@@ -271,13 +281,14 @@ export default function TutorialPage() {
           {isLastSlide ? (
             <Button
               onClick={handleStartExercise}
+              disabled={isNavigating}
               className="bg-green-600 hover:bg-green-700 lg:h-12 lg:px-6 lg:text-lg"
             >
               <Play className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
               演習を始める
             </Button>
           ) : (
-            <Button onClick={handleNextSlide} className="lg:h-12 lg:px-6 lg:text-lg">
+            <Button onClick={handleNextSlide} disabled={isNavigating} className="lg:h-12 lg:px-6 lg:text-lg">
               次へ
               <ChevronRight className="w-4 h-4 lg:w-5 lg:h-5 ml-2" />
             </Button>
@@ -286,7 +297,7 @@ export default function TutorialPage() {
 
         {/* スキップボタン */}
         <div className="mt-6 lg:mt-10 text-center">
-          <Button variant="ghost" onClick={handleStartExercise} className="text-gray-500 lg:text-lg">
+          <Button variant="ghost" onClick={handleStartExercise} disabled={isNavigating} className="text-gray-500 lg:text-lg">
             解説をスキップして演習へ
           </Button>
         </div>

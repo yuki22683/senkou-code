@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { AffiliateLinkProvider } from "@/components/layout/AffiliateLinkProvider";
+import { NavigationLoadingProvider } from "@/components/layout/NavigationLoadingProvider";
 import HomeWrapper from "@/components/layout/HomeWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,11 +27,13 @@ export default function RootLayout({
     <html lang="ja">
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <AffiliateLinkProvider>
-          <Header />
-          <HomeWrapper>
-            <main className="flex-1 w-full">{children}</main>
-          </HomeWrapper>
-          <Footer />
+          <NavigationLoadingProvider>
+            <Header />
+            <HomeWrapper>
+              <main className="flex-1 w-full">{children}</main>
+            </HomeWrapper>
+            <Footer />
+          </NavigationLoadingProvider>
         </AffiliateLinkProvider>
       </body>
     </html>

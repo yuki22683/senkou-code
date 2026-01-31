@@ -1,4 +1,6 @@
-import Link from "next/link";
+"use client";
+
+import { NavigationLink } from "./NavigationLink";
 
 export function Footer() {
   return (
@@ -7,15 +9,15 @@ export function Footer() {
         <div className="text-center text-sm text-muted-foreground">
           <p className="mb-3">© 2025 令和プログラミング. All rights reserved.</p>
           <div className="flex justify-center items-center gap-6">
-            <Link href="/privacy" className="hover:text-primary">
+            <NavigationLink href="/privacy" className="hover:text-primary">
               プライバシーポリシー
-            </Link>
-            <Link href="/terms" className="hover:text-primary">
+            </NavigationLink>
+            <NavigationLink href="/terms" className="hover:text-primary">
               利用規約
-            </Link>
-            <Link href="/contact" className="hover:text-primary">
+            </NavigationLink>
+            <NavigationLink href="/contact" className="hover:text-primary">
               お問い合わせ
-            </Link>
+            </NavigationLink>
           </div>
         </div>
       </div>

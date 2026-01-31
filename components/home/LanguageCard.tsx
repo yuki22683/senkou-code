@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Language, LANGUAGE_COLORS } from "@/data/languages";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
+import { useNavigationLoading } from "@/components/layout/NavigationLoadingProvider";
 
 interface LanguageCardProps {
   language: Language;
@@ -13,12 +14,23 @@ interface LanguageCardProps {
 }
 
 export function LanguageCard({ language, progressCount = 0, totalExercises = 0 }: LanguageCardProps) {
+  const { startNavigation, isNavigating } = useNavigationLoading();
   const colorClass = LANGUAGE_COLORS[language.id] || 'bg-gray-50 hover:bg-gray-100 border-gray-200';
   const progressPercent = totalExercises > 0 ? Math.round((progressCount / totalExercises) * 100) : 0;
   const isCompleted = totalExercises > 0 && progressCount === totalExercises;
 
   return (
-    <Link href={`/lessons/${language.id}`}>
+    <Link
+      href={`/lessons/${language.id}`}
+      onClick={(e) => {
+        if (isNavigating) {
+          e.preventDefault();
+          return;
+        }
+        startNavigation();
+      }}
+      className={isNavigating ? "pointer-events-none" : ""}
+    >
       <Card className={`transition-all hover:shadow-lg hover:scale-105 cursor-pointer border-2 h-full ${colorClass}`}>
         <CardHeader className="p-3 sm:p-6">
           <div className="flex items-center justify-center w-10 h-10 sm:w-16 sm:h-16 mb-2 sm:mb-4 rounded-full bg-white shadow-md overflow-hidden p-2 sm:p-3">

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { NavigationLink } from '@/components/layout/NavigationLink'
 
 export const metadata = {
   title: 'プライバシーポリシー - 令和プログラミング',
@@ -193,7 +193,7 @@ export default function PrivacyPage() {
             <li>利用停止権：個人情報の利用停止を請求する権利</li>
           </ul>
           <p className="text-gray-700 mb-4">
-            これらの権利を行使したい場合は、<Link href="/contact" className="text-blue-600 hover:underline">お問い合わせフォーム</Link>からご連絡ください。
+            これらの権利を行使したい場合は、<NavigationLink href="/contact" className="text-blue-600 hover:underline">お問い合わせフォーム</NavigationLink>からご連絡ください。
           </p>
         </section>
 
@@ -210,7 +210,7 @@ export default function PrivacyPage() {
           <h2 className="text-2xl font-bold mb-4">13. お問い合わせ</h2>
           <p className="text-gray-700 mb-4">
             本プライバシーポリシーに関するご質問、ご意見、個人情報に関するお問い合わせは、
-            <Link href="/contact" className="text-blue-600 hover:underline ml-1">お問い合わせフォーム</Link>
+            <NavigationLink href="/contact" className="text-blue-600 hover:underline ml-1">お問い合わせフォーム</NavigationLink>
             よりご連絡ください。
           </p>
         </section>
