@@ -22,13 +22,16 @@ export const javascriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Promise コンストラクタで作成\nconst p = new Promise((resolve) => {\n  // 'Hello Promise!' で解決\n  resolve('Hello Promise!');\n});\n\n// then でコールバックを登録\np.then(msg => console.log(msg));",
-        "holeyCode": "// Promise コンストラクタで作成\nconst ___ = new Promise((resolve) => {\n  // 'Hello Promise!' で解決\n  ___('Hello Promise!');\n___);\n\n// then でコールバックを登録\np.then(msg => console.log(___));",
+        "correctCode": "// Promise コンストラクタで作成\nconst p = new Promise((resolve) => {\n  // setTimeoutで100ms後に解決\n  setTimeout(() => {\n    // 'Done!' で解決\n    resolve('Done!');\n  }, 100);\n});\n\n// then でコールバックを登録\np.then(msg => console.log(msg));",
+        "holeyCode": "// Promise コンストラクタで作成\nconst ___ = new Promise((resolve) => {\n  // setTimeoutで100ms後に解決\n  setTimeout(() => {\n    // 'Done!' で解決\n    ___('Done!');\n  }, ___);\n___);\n\n// then でコールバックを登録\np.then(msg => console.log(___));",
         "correctLines": [
           "// Promise コンストラクタで作成",
           "const p = new Promise((resolve) => {",
-          "  // 'Hello Promise!' で解決",
-          "  resolve('Hello Promise!');",
+          "  // setTimeoutで100ms後に解決",
+          "  setTimeout(() => {",
+          "    // 'Done!' で解決",
+          "    resolve('Done!');",
+          "  }, 100);",
           "});",
           "",
           "// then でコールバックを登録",
@@ -38,11 +41,14 @@ export const javascriptData3 = {
           null,
           "Promise コンストラクタを使います。",
           null,
+          "setTimeoutで遅延実行します。",
+          null,
           "resolve で Promise を解決します。",
-          "then でコールバックを登録します。",
+          "ミリ秒で遅延時間を指定します。",
           null,
           null,
-          null
+          null,
+          "then でコールバックを登録します。"
         ],
         "candidates": {
           "keywords": [
@@ -51,14 +57,16 @@ export const javascriptData3 = {
             "Object"
           ],
           "others": [
+            "p",
             "resolve",
-            "then"
+            "100",
+            "msg"
           ]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello Promise!\n"
+            "expected_output": "Done!\n"
           }
         ]
       },
@@ -125,12 +133,12 @@ export const javascriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// async キーワードで非同期関数を定義\nasync function getMessage() {\n  // return で値を返す\n  return 'Async works!';\n}\n\n// then でメッセージを出力\ngetMessage().then(msg => console.log(msg));",
-        "holeyCode": "// async キーワードで非同期関数を定義\nasync function ___() {\n  // return で値を返す\n  return 'Async ___!';\n___\n\n// then でメッセージを出力\ngetMessage().then(msg => console.log(___));",
+        "correctCode": "// async キーワードで非同期関数を定義\nasync function getMessage() {\n  // 'Async works!'を返す\n  return 'Async works!';\n}\n\n// then でメッセージを出力\ngetMessage().then(msg => console.log(msg));",
+        "holeyCode": "// async キーワードで非同期関数を定義\nasync function ___() {\n  // 'Async works!'を返す\n  return 'Async ___!';\n___\n\n// then でメッセージを出力\ngetMessage().then(msg => console.log(___));",
         "correctLines": [
           "// async キーワードで非同期関数を定義",
           "async function getMessage() {",
-          "  // return で値を返す",
+          "  // 'Async works!'を返す",
           "  return 'Async works!';",
           "}",
           "",

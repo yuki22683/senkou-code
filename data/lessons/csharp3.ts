@@ -22,8 +22,8 @@ export const csharp3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n// usingでTasks名前空間をインポート\nusing System.Threading.Tasks;\n\n// Programクラスを定義\nclass Program {\n    // async Taskでエントリーポイント\n    static async Task Main() {\n        // awaitで非同期処理を待機\n        var result = await GetMessageAsync();\n        // 結果を表示\n        Console.WriteLine(result);\n    }\n    \n    // 非同期メソッドを定義\n    static async Task<string> GetMessageAsync() {\n        // 遅延を待機\n        await Task.Delay(100);\n        // 結果を返す\n        return \"Hello Async!\";\n    }\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでTasks名前空間をインポート\nusing ___.Threading.Tasks;\n\n// Programクラスを定義\nclass ___ {\n    // async Taskでエントリーポイント\n    static async Task ___() {\n        // awaitで非同期処理を待機\n        var ___ = await GetMessageAsync();\n        // 結果を表示\n        Console.WriteLine(___);\n    ___\n    \n    // 非同期メソッドを定義\n    static async Task<string> ___() {\n        // 遅延を待機\n        await Task.Delay(___);\n        // 結果を返す\n        return \"___\";\n    ___\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n// usingでTasks名前空間をインポート\nusing System.Threading.Tasks;\n\n// Programクラスを定義\nclass Program {\n    // async Taskでエントリーポイント\n    static async Task Main() {\n        // awaitで非同期処理を待機\n        var result = await CalculateAsync(5);\n        // 結果を表示\n        Console.WriteLine(result);\n    }\n    \n    // 整数を返す非同期メソッドを定義\n    static async Task<int> CalculateAsync(int n) {\n        // 遅延を待機\n        await Task.Delay(100);\n        // nの2乗を返す\n        return n * n;\n    }\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでTasks名前空間をインポート\nusing ___.Threading.Tasks;\n\n// Programクラスを定義\nclass ___ {\n    // async Taskでエントリーポイント\n    static async Task ___() {\n        // awaitで非同期処理を待機\n        var ___ = await CalculateAsync(5);\n        // 結果を表示\n        Console.WriteLine(___);\n    ___\n    \n    // 整数を返す非同期メソッドを定義\n    static async Task<___> CalculateAsync(int n) {\n        // 遅延を待機\n        await Task.Delay(___);\n        // nの2乗を返す\n        return n * ___;\n    ___\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -35,17 +35,17 @@ export const csharp3Data = {
           "    // async Taskでエントリーポイント",
           "    static async Task Main() {",
           "        // awaitで非同期処理を待機",
-          "        var result = await GetMessageAsync();",
+          "        var result = await CalculateAsync(5);",
           "        // 結果を表示",
           "        Console.WriteLine(result);",
           "    }",
           "    ",
-          "    // 非同期メソッドを定義",
-          "    static async Task<string> GetMessageAsync() {",
+          "    // 整数を返す非同期メソッドを定義",
+          "    static async Task<int> CalculateAsync(int n) {",
           "        // 遅延を待機",
           "        await Task.Delay(100);",
-          "        // 結果を返す",
-          "        return \"Hello Async!\";",
+          "        // nの2乗を返す",
+          "        return n * n;",
           "    }",
           "}"
         ],
@@ -62,9 +62,9 @@ export const csharp3Data = {
           null,
           "WriteLineで結果を表示します。",
           null,
-          "GetMessageAsyncは文字列を返す非同期メソッドです。",
+          "整数を返すのでTask<int>を使います。",
           "Delayで指定ミリ秒待機します。",
-          "Hello Async!という文字列を返します。",
+          "nを掛ける相手もnです。",
           null,
           null,
           null,
@@ -82,18 +82,18 @@ export const csharp3Data = {
           ],
           "others": [
             "System",
-            "Tasks",
             "Program",
-            "WriteLine",
-            "GetMessageAsync",
-            "Delay",
-            "Hello Async!"
+            "Main",
+            "result",
+            "int",
+            "100",
+            "n"
           ]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello Async!\n"
+            "expected_output": "25\n"
           }
         ]
       },

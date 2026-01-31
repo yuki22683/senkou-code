@@ -85,11 +85,11 @@ export const ruby3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Procでブロックをオブジェクト化、*で乗算\ndoubler = Proc.new { |x| x * 2 }",
-        "holeyCode": "# Procでブロックをオブジェクト化、*で乗算\ndoubler = Proc.new { |x| x * ___ }",
+        "correctCode": "# Procでブロックをオブジェクト化、**で累乗\nsquarer = Proc.new { |x| x ** 2 }",
+        "holeyCode": "# Procでブロックをオブジェクト化、**で累乗\nsquarer = Proc.new { |x| x ** ___ }",
         "correctLines": [
-          "# Procでブロックをオブジェクト化、*で乗算",
-          "doubler = Proc.new { |x| x * 2 }"
+          "# Procでブロックをオブジェクト化、**で累乗",
+          "squarer = Proc.new { |x| x ** 2 }"
         ],
         "lineHints": [
           null,
@@ -103,12 +103,13 @@ export const ruby3Data = {
             "Function"
           ],
           "others": [
-            "*"
+            "**",
+            "2"
           ]
         },
         "testCases": [
           {
-            "input": "doubler.call(5)",
+            "input": "squarer.call(5)",
             "expected_output": ""
           }
         ]
