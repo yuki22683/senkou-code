@@ -18,67 +18,67 @@ export const pythonData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 動物を表す親クラスを定義\nclass Animal:\n    # インスタンスを初期設定するメソッドを定義\n    def __init__(self, name):\n        # 名前を属性に保存\n        self.name = name\n\n# Animalを継承してDogクラスを定義\nclass Dog(Animal):\n    # 鳴き声を表示するメソッドを定義\n    def bark(self):\n        # 名前を含めたメッセージを表示\n        print(f'{self.name} says Woof!')\n\n# 'Pochi'という名前で犬のインスタンスを作成\ndog = Dog('Pochi')\n# インスタンスのメソッドを実行\ndog.bark()",
-        "holeyCode": "# 動物を表す親クラスを定義\nclass ___:\n    # インスタンスを初期設定するメソッドを定義\n    def ___(self, name):\n        # 名前を属性に保存\n        self.___ = name\n\n# Animalを継承してDogクラスを定義\nclass ___(Animal):\n    # 鳴き声を表示するメソッドを定義\n    def ___(self):\n        # 名前を含めたメッセージを表示\n        ___(f'{self.name} says Woof!')\n\n# 'Pochi'という名前で犬のインスタンスを作成\ndog = Dog('___')\n# インスタンスのメソッドを実行\ndog.___()",
+        "correctCode": "# 乗り物を表す親クラスを定義\nclass Vehicle:\n    # インスタンスを初期設定するメソッドを定義\n    def __init__(self, brand):\n        # ブランド名を属性に保存\n        self.brand = brand\n\n# Vehicleを継承してCarクラスを定義\nclass Car(Vehicle):\n    # クラクションを鳴らすメソッドを定義\n    def honk(self):\n        # ブランド名を含めたメッセージを表示\n        print(f'{self.brand} car: Beep!')\n\n# 'Toyota'ブランドで車のインスタンスを作成\ncar = Car('Toyota')\n# インスタンスのメソッドを実行\ncar.honk()",
+        "holeyCode": "# 乗り物を表す親クラスを定義\nclass ___:\n    # インスタンスを初期設定するメソッドを定義\n    def ___(self, brand):\n        # ブランド名を属性に保存\n        self.___ = brand\n\n# Vehicleを継承してCarクラスを定義\nclass ___(Vehicle):\n    # クラクションを鳴らすメソッドを定義\n    def ___(self):\n        # ブランド名を含めたメッセージを表示\n        ___(f'{self.brand} car: Beep!')\n\n# 'Toyota'ブランドで車のインスタンスを作成\ncar = Car('___')\n# インスタンスのメソッドを実行\ncar.___()",
         "correctLines": [
-          "# 動物を表す親クラスを定義",
-          "class Animal:",
+          "# 乗り物を表す親クラスを定義",
+          "class Vehicle:",
           "    # インスタンスを初期設定するメソッドを定義",
-          "    def __init__(self, name):",
-          "        # 名前を属性に保存",
-          "        self.name = name",
+          "    def __init__(self, brand):",
+          "        # ブランド名を属性に保存",
+          "        self.brand = brand",
           "",
-          "# Animalを継承してDogクラスを定義",
-          "class Dog(Animal):",
-          "    # 鳴き声を表示するメソッドを定義",
-          "    def bark(self):",
-          "        # 名前を含めたメッセージを表示",
-          "        print(f'{self.name} says Woof!')",
+          "# Vehicleを継承してCarクラスを定義",
+          "class Car(Vehicle):",
+          "    # クラクションを鳴らすメソッドを定義",
+          "    def honk(self):",
+          "        # ブランド名を含めたメッセージを表示",
+          "        print(f'{self.brand} car: Beep!')",
           "",
-          "# 'Pochi'という名前で犬のインスタンスを作成",
-          "dog = Dog('Pochi')",
+          "# 'Toyota'ブランドで車のインスタンスを作成",
+          "car = Car('Toyota')",
           "# インスタンスのメソッドを実行",
-          "dog.bark()"
+          "car.honk()"
         ],
         "lineHints": [
           null,
-          "親クラス名を括弧内に書きます。",
+          "乗り物を表すクラス名です。",
+          null,
+          "オブジェクト生成時に呼ばれる特殊メソッドです。",
+          null,
+          "brandを保存する属性名です。",
           null,
           null,
+          "Vehicleを継承する子クラス名です。",
+          null,
+          "クラクションを鳴らすメソッド名です。",
+          null,
+          "画面に出力する関数です。",
           null,
           null,
+          "Carクラスに渡すブランド名です。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "honkメソッドを呼び出します。"
         ],
         "candidates": {
           "keywords": [
-            "Animal",
+            "Vehicle",
             "Object",
             "Base"
           ],
           "others": [
-            "__init__(self, name)",
-            "name",
-            "bark(self)",
-            "f'{self.name} says Woof!'",
-            "Dog('Pochi')",
-            "dog.bark()"
+            "__init__",
+            "brand",
+            "Car",
+            "honk",
+            "print",
+            "Toyota"
           ]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Pochi says Woof!\n"
+            "expected_output": "Toyota car: Beep!\n"
           }
         ]
       },

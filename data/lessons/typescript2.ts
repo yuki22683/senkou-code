@@ -84,37 +84,40 @@ export const typescriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// interface キーワードで定義\ninterface Person {\n    // 名前プロパティの型\n    name: string;\n    // 年齢プロパティの型\n    age: number;\n}\n\n// Personオブジェクトを作成\nconst p: Person = { name: 'Alice', age: 25 };\n// 名前を出力\nconsole.log(p.name);\n",
-        "holeyCode": "// interface キーワードで定義\ninterface ___ {\n    // 名前プロパティの型\n    name: ___;\n    // 年齢プロパティの型\n    age: ___;\n___\n\n// Personオブジェクトを作成\nconst p: Person = { name: 'Alice', age: ___ };\n// 名前を出力\nconsole.___(p.name);\n",
+        "correctCode": "// interface キーワードで定義\ninterface Product {\n    // 商品IDプロパティの型\n    id: number;\n    // 商品名プロパティの型\n    name: string;\n    // 価格プロパティの型\n    price: number;\n}\n\n// Productオブジェクトを作成\nconst item: Product = { id: 1, name: 'Apple', price: 150 };\n// 商品名を出力\nconsole.log(item.name);\n",
+        "holeyCode": "// interface キーワードで定義\ninterface ___ {\n    // 商品IDプロパティの型\n    id: ___;\n    // 商品名プロパティの型\n    name: ___;\n    // 価格プロパティの型\n    price: ___;\n___\n\n// Productオブジェクトを作成\nconst item: Product = { id: 1, name: '___', price: ___ };\n// 商品名を出力\nconsole.___(item.name);\n",
         "correctLines": [
           "// interface キーワードで定義",
-          "interface Person {",
-          "    // 名前プロパティの型",
+          "interface Product {",
+          "    // 商品IDプロパティの型",
+          "    id: number;",
+          "    // 商品名プロパティの型",
           "    name: string;",
-          "    // 年齢プロパティの型",
-          "    age: number;",
+          "    // 価格プロパティの型",
+          "    price: number;",
           "}",
           "",
-          "// Personオブジェクトを作成",
-          "const p: Person = { name: 'Alice', age: 25 };",
-          "// 名前を出力",
-          "console.log(p.name);",
+          "// Productオブジェクトを作成",
+          "const item: Product = { id: 1, name: 'Apple', price: 150 };",
+          "// 商品名を出力",
+          "console.log(item.name);",
           ""
         ],
         "lineHints": [
           null,
-          "`interface` キーワードを使います。",
+          "商品を表すインターフェース名です。",
           null,
-          "名前は文字列なので `string` です。",
+          "IDは数値なので `number` です。",
           null,
-          "年齢は数値なので `number` です。",
-          "年齢の値を数値で指定します。",
-          "取得したいプロパティ名を指定します。",
+          "商品名は文字列なので `string` です。",
           null,
-          null,
+          "価格も数値なので `number` です。",
           null,
           null,
-          null
+          null,
+          "商品名を文字列で指定します。",
+          null,
+          "コンソールに出力するメソッドです。"
         ],
         "candidates": {
           "keywords": [
@@ -124,16 +127,18 @@ export const typescriptData2 = {
             "struct"
           ],
           "others": [
+            "Product",
             "string",
             "number",
-            "25",
-            "name"
+            "Apple",
+            "150",
+            "log"
           ]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Alice\n"
+            "expected_output": "Apple\n"
           }
         ]
       },
@@ -416,12 +421,12 @@ export const typescriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// <T> で型パラメータを定義\nfunction wrap<T>(value: T): T[] {\n    // 値を配列に入れて返す\n    return [value];\n}\n\n// 関数を呼び出し\nconst arr = wrap(5);\n// 結果を出力\nconsole.log(arr);",
-        "holeyCode": "// <T> で型パラメータを定義\nfunction wrap<___>(value: T): T[] {\n    // 値を配列に入れて返す\n    return [___];\n___\n\n// 関数を呼び出し\nconst ___ = wrap(5);\n// 結果を出力\nconsole.log(___);",
+        "correctCode": "// <T> で型パラメータを定義\nfunction wrap<T>(value: T): T[] {\n    // valueを配列に入れて返す\n    return [value];\n}\n\n// 関数を呼び出し\nconst arr = wrap(5);\n// arrを出力\nconsole.log(arr);",
+        "holeyCode": "// <T> で型パラメータを定義\nfunction wrap<___>(value: T): T[] {\n    // valueを配列に入れて返す\n    return [___];\n___\n\n// 関数を呼び出し\nconst ___ = wrap(5);\n// arrを出力\nconsole.log(___);",
         "correctLines": [
           "// <T> で型パラメータを定義",
           "function wrap<T>(value: T): T[] {",
-          "    // 値を配列に入れて返す",
+          "    // valueを配列に入れて返す",
           "    return [value];",
           "}",
           "",

@@ -68,37 +68,39 @@ export const pythonData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 全ての数値を受け取って合計を出す関数を定義\ndef add_all(*args):\n    # 合計値を保持する変数を初期化\n    total = 0\n    # 渡された全ての引数をループで処理\n    for n in args:\n        # 各要素を合計に加算\n        total += n\n    # 最終的な合計値を返す\n    return total\n\n# 1, 2, 3, 4 を渡して合計を表示\nprint(add_all(1, 2, 3, 4))",
-        "holeyCode": "# 全ての数値を受け取って合計を出す関数を定義\ndef ___(*args):\n    # 合計値を保持する変数を初期化\n    total = ___\n    # 渡された全ての引数をループで処理\n    for n in ___:\n        # 各要素を合計に加算\n        total += ___\n    # 最終的な合計値を返す\n    return ___\n\n# 1, 2, 3, 4 を渡して合計を表示\n___(add_all(1, 2, 3, 4))",
+        "correctCode": "# 全ての数値から最大値を求める関数を定義\ndef find_max(*args):\n    # 最大値を最初の引数で初期化\n    max_val = args[0]\n    # 渡された全ての引数をループで処理\n    for n in args:\n        # より大きい値があれば更新\n        if n > max_val:\n            max_val = n\n    # 最終的な最大値を返す\n    return max_val\n\n# 3, 7, 2, 9, 5 から最大値を表示\nprint(find_max(3, 7, 2, 9, 5))",
+        "holeyCode": "# 全ての数値から最大値を求める関数を定義\ndef ___(*args):\n    # 最大値を最初の引数で初期化\n    max_val = args[___]\n    # 渡された全ての引数をループで処理\n    for n in ___:\n        # より大きい値があれば更新\n        if n > ___:\n            max_val = ___\n    # 最終的な最大値を返す\n    return ___\n\n# 3, 7, 2, 9, 5 から最大値を表示\n___(find_max(3, 7, 2, 9, 5))",
         "correctLines": [
-          "# 全ての数値を受け取って合計を出す関数を定義",
-          "def add_all(*args):",
-          "    # 合計値を保持する変数を初期化",
-          "    total = 0",
+          "# 全ての数値から最大値を求める関数を定義",
+          "def find_max(*args):",
+          "    # 最大値を最初の引数で初期化",
+          "    max_val = args[0]",
           "    # 渡された全ての引数をループで処理",
           "    for n in args:",
-          "        # 各要素を合計に加算",
-          "        total += n",
-          "    # 最終的な合計値を返す",
-          "    return total",
+          "        # より大きい値があれば更新",
+          "        if n > max_val:",
+          "            max_val = n",
+          "    # 最終的な最大値を返す",
+          "    return max_val",
           "",
-          "# 1, 2, 3, 4 を渡して合計を表示",
-          "print(add_all(1, 2, 3, 4))"
+          "# 3, 7, 2, 9, 5 から最大値を表示",
+          "print(find_max(3, 7, 2, 9, 5))"
         ],
         "lineHints": [
           null,
-          "関数（add_all）を新しく定義します。",
+          "最大値を求める関数名です。",
+          null,
+          "タプルの最初の要素はインデックス0です。",
+          null,
+          "可変長引数をループ処理します。",
+          null,
+          "現在の最大値と比較します。",
+          "より大きい値で最大値を更新します。",
+          null,
+          "求めた最大値を返します。",
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "結果を画面に出力する関数です。"
         ],
         "candidates": {
           "operators": [
@@ -106,17 +108,18 @@ export const pythonData3 = {
             "**"
           ],
           "others": [
+            "find_max",
             "0",
             "args",
             "n",
-            "total",
-            "add_all(1, 2, 3, 4"
+            "max_val",
+            "print"
           ]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\n"
+            "expected_output": "9\n"
           }
         ]
       },
@@ -303,14 +306,14 @@ export const pythonData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 偶数を生成するジェネレータ関数を定義\ndef even_numbers(n):\n    # 指定された回数ループ\n    for i in range(n):\n        # 値を1つずつ返す\n        yield i * 2\n\n# ジェネレータから値を取り出して表示\nfor num in even_numbers(4):\n    # 取り出した値を表示\n    print(num)",
-        "holeyCode": "# 偶数を生成するジェネレータ関数を定義\ndef ___(n):\n    # 指定された回数ループ\n    for i in range(___):\n        # 値を1つずつ返す\n        yield i * ___\n\n# ジェネレータから値を取り出して表示\nfor num in even_numbers(___):\n    # 取り出した値を表示\n    ___(num)",
+        "correctCode": "# 偶数を生成するジェネレータ関数を定義\ndef even_numbers(n):\n    # 指定された回数ループ\n    for i in range(n):\n        # i * 2（偶数）を返す\n        yield i * 2\n\n# ジェネレータから値を取り出して表示\nfor num in even_numbers(4):\n    # 取り出した値を表示\n    print(num)",
+        "holeyCode": "# 偶数を生成するジェネレータ関数を定義\ndef ___(n):\n    # 指定された回数ループ\n    for i in range(___):\n        # i * 2（偶数）を返す\n        yield i * ___\n\n# ジェネレータから値を取り出して表示\nfor num in even_numbers(___):\n    # 取り出した値を表示\n    ___(num)",
         "correctLines": [
           "# 偶数を生成するジェネレータ関数を定義",
           "def even_numbers(n):",
           "    # 指定された回数ループ",
           "    for i in range(n):",
-          "        # 値を1つずつ返す",
+          "        # i * 2（偶数）を返す",
           "        yield i * 2",
           "",
           "# ジェネレータから値を取り出して表示",
@@ -420,8 +423,8 @@ export const pythonData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef show_call(func):\n    # 実行内容を包む内部関数を定義\n    def wrapper():\n        # 実行前のメッセージを表示\n        print('関数を呼び出します')\n        # 本来の関数を実行\n        func()\n    # 新しく作った関数を返す\n    return wrapper\n\n# デコレータを関数に適用\n@show_call\n# 挨拶を表示する関数を定義\ndef greet():\n    # メッセージを表示\n    print('Hello!')\n\n# 関数を呼び出して実行\ngreet()",
-        "holeyCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef ___(func):\n    # 実行内容を包む内部関数を定義\n    def ___():\n        # 実行前のメッセージを表示\n        ___('関数を呼び出します')\n        # 本来の関数を実行\n        ___()\n    # 新しく作った関数を返す\n    return ___\n\n# デコレータを関数に適用\n@___\n# 挨拶を表示する関数を定義\ndef ___():\n    # メッセージを表示\n    ___('Hello!')\n\n# 関数を呼び出して実行\n___()",
+        "correctCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef show_call(func):\n    # 実行内容を包む内部関数を定義\n    def wrapper():\n        # 実行前のメッセージを表示\n        print('関数を呼び出します')\n        # 本来の関数を実行\n        func()\n    # 新しく作った関数を返す\n    return wrapper\n\n# デコレータを関数に適用\n@show_call\n# 挨拶を表示する関数を定義\ndef greet():\n    # 'Hello!'を表示\n    print('Hello!')\n\n# 関数を呼び出して実行\ngreet()",
+        "holeyCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef ___(func):\n    # 実行内容を包む内部関数を定義\n    def ___():\n        # 実行前のメッセージを表示\n        ___('関数を呼び出します')\n        # 本来の関数を実行\n        ___()\n    # 新しく作った関数を返す\n    return ___\n\n# デコレータを関数に適用\n@___\n# 挨拶を表示する関数を定義\ndef ___():\n    # 'Hello!'を表示\n    ___('Hello!')\n\n# 関数を呼び出して実行\n___()",
         "correctLines": [
           "# 関数の実行前後でメッセージを表示するデコレータを定義",
           "def show_call(func):",
@@ -438,7 +441,7 @@ export const pythonData3 = {
           "@show_call",
           "# 挨拶を表示する関数を定義",
           "def greet():",
-          "    # メッセージを表示",
+          "    # 'Hello!'を表示",
           "    print('Hello!')",
           "",
           "# 関数を呼び出して実行",
