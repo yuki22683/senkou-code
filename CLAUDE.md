@@ -157,3 +157,4 @@
   - 特殊メソッド（`__eq__`, `__str__`, `toString()`, `equals()`等）
   - クラス定義の基本演習
   - デザインパターンの演習
+- **チェックスクリプト**：`node scripts/check-tutorial-exercise-similarity.mjs` で類似性をチェックできる
