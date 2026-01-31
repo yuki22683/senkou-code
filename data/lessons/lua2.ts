@@ -272,12 +272,12 @@ export const lua2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- swap関数を定義\nlocal function swap(a, b)\n    -- returnで値を返す\n    return b, a\nend\n-- swap(1, 2)を呼び出す\nlocal x, y = swap(1, 2)\n-- xとyを表示（x, yの順）\nprint(x, y)\n",
-        "holeyCode": "-- swap関数を定義\nlocal function swap(a, ___)\n    -- returnで値を返す\n    return b, ___\n___\n-- swap(1, 2)を呼び出す\nlocal x, y = swap(___, 2)\n-- xとyを表示（x, yの順）\n___(x, y)\n",
+        "correctCode": "-- swap関数を定義\nlocal function swap(a, b)\n    -- b, aの順で返す\n    return b, a\nend\n-- swap(1, 2)を呼び出す\nlocal x, y = swap(1, 2)\n-- xとyを表示（x, yの順）\nprint(x, y)\n",
+        "holeyCode": "-- swap関数を定義\nlocal function swap(a, ___)\n    -- b, aの順で返す\n    return b, ___\n___\n-- swap(1, 2)を呼び出す\nlocal x, y = swap(___, 2)\n-- xとyを表示（x, yの順）\n___(x, y)\n",
         "correctLines": [
           "-- swap関数を定義",
           "local function swap(a, b)",
-          "    -- returnで値を返す",
+          "    -- b, aの順で返す",
           "    return b, a",
           "end",
           "-- swap(1, 2)を呼び出す",

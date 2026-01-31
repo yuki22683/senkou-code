@@ -25,18 +25,18 @@ export const javascriptData2 = {
         "correctCode": "// => でアロー関数を定義する\nconst square = x => x * x;\n\n// 使ってみる（引数は5）\nconsole.log(square(5));",
         "holeyCode": "// => でアロー関数を定義する\nconst ___ = x => x * x;\n\n// 使ってみる（引数は5）\nconsole.___(square(5));",
         "correctLines": [
-          "// => でアロー関数を定義する",
-          "const square = x => x * x;",
-          "",
-          "// 使ってみる（引数は5）",
-          "console.log(square(5));"
+                  "// => でアロー関数を定義する",
+                  "const square = x => x * x;",
+                  "",
+                  "// 使ってみる（引数は5）",
+                  "console.log(square(5));"
         ],
         "lineHints": [
-          null,
-          "アロー関数は `=>` を使います。",
-          "square(5) で5の2乗を計算します。",
-          null,
-          null
+                  null,
+                  "アロー関数は `=>` を使います。",
+                  null,
+                  null,
+                  null
         ],
         "candidates": {
           "operators": [

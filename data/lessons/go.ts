@@ -275,12 +275,12 @@ export const goData = {
           },
           {
             "title": "Printf（プリントエフ）を使いましょう",
-            "content": "# %d のところに数字が入る\n\n`Printf`（プリントエフ）を使うと、文章の中の `%d` の部分が、あとで指定した変数の中身に置き換わります。\n\n**コード例：**\n```go\nmonth := 12\nfmt.Printf(\"今は %d 月です\\n\", month)\n// → 「今は 12 月です」と表示される\n```\n\n**記号の意味：**\n- `%d` → 整数（せいすう：小数点のない数）を入れる場所\n- `%s` → 文字列（もじれつ：文字のならび）を入れる場所\n- `\\n` → 改行（かいぎょう：次の行に移る）\n\n`Println` は自動で改行しますが、`Printf` では自分で `\\n` を入れます。"
+            "content": "# %d のところに数字が入る\n\n`Printf`（プリントエフ）を使うと、文章の中の `%d` の部分が、あとで指定した変数の中身に置き換わります。\n\n**コード例：**\n```go\nmonth := 12\nfmt.Printf(\"今は %d 月です\n\", month)\n// → 「今は 12 月です」と表示される\n```\n\n**記号の意味：**\n- `%d` → 整数（せいすう：小数点のない数）を入れる場所\n- `%s` → 文字列（もじれつ：文字のならび）を入れる場所\n- `\n` → 改行（かいぎょう：次の行に移る）\n\n`Println` は自動で改行しますが、`Printf` では自分で `\n` を入れます。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // ageに10を入れる\\n    age := 10\\n    // age を埋め込む\\n    fmt.Printf(\"I am %d years old.\\n\", age)\\n}",
-        "holeyCode": "package ___\\\nimport \\\"___\\\"\\\nfunc ___ () {\\\n    // ageに10を入れる\\n    ___ := 10\\\n    // age を埋め込む\\n    fmt.___(\"I am %d years old.\\\n\", age)\\\n___",
+        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // ageに10を入れる\n    age := 10\n    // age を埋め込む\n    fmt.Printf(\"I am %d years old.\n\", age)\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // ageに10を入れる\n    ___ := 10\n    // age を埋め込む\n    fmt.___(\"I am %d years old.\n\", age)\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",

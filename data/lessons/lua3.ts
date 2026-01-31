@@ -22,8 +22,8 @@ export const lua3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- pcallでエラーを捕捉\nlocal ok, result = pcall(function()\n    return 10 + 5\nend)\n-- 成功したら出力\nif ok then\n    -- 結果を出力\n    print(result)\nend",
-        "holeyCode": "-- pcallでエラーを捕捉\nlocal ___, ___ = pcall(function()\n    return ___ + ___\n___)\n-- 成功したら出力\nif ok ___\n    -- 結果を出力\n    ___(result)\n___",
+        "correctCode": "-- pcallでエラーを捕捉\nlocal ok, result = pcall(function()\n    return 10 + 5\nend)\n-- 成功したら出力\nif ok then\n    -- resultを出力\n    print(result)\nend",
+        "holeyCode": "-- pcallでエラーを捕捉\nlocal ___, ___ = pcall(function()\n    return ___ + ___\n___)\n-- 成功したら出力\nif ok ___\n    -- resultを出力\n    ___(result)\n___",
         "correctLines": [
           "-- pcallでエラーを捕捉",
           "local ok, result = pcall(function()",
@@ -31,7 +31,7 @@ export const lua3Data = {
           "end)",
           "-- 成功したら出力",
           "if ok then",
-          "    -- 結果を出力",
+          "    -- resultを出力",
           "    print(result)",
           "end"
         ],

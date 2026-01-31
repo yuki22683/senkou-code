@@ -74,7 +74,7 @@ export const pythonData5 = {
         "tutorialSlides": [
           {
             "title": "1行ずつ読み込む",
-            "content": "# forループでファイルを読む\n\nファイルオブジェクトは **イテレータ**（繰り返し処理できるもの）なので、**forループで1行ずつ読めます**。\n\n**たとえ話：** 本のページをめくるように、1行ずつ順番に読んでいきます。\n- `f.read()`: 本を丸ごとコピーする（メモリをたくさん使う）\n- `for line in f`: 1ページずつ読む（メモリに優しい）\n\n**例：** ファイルを1行ずつ処理しよう！\n\n```python\nwith open('file.txt', 'r') as f:\n    for line in f:\n        print(line.strip())  # 余分な空白を取り除いて表示\n```\n\n**何をしているか：**\n1. `for line in f` でファイルから1行ずつ取り出す\n2. `line` には1行分のテキストが入る（改行文字`\\n`も含む）\n3. `line.strip()` で前後の空白や改行を取り除く\n\n**ポイント：** 大きなファイルを読むときは、`for line in f` を使うとメモリを節約できます！"
+            "content": "# forループでファイルを読む\n\nファイルオブジェクトは **イテレータ**（繰り返し処理できるもの）なので、**forループで1行ずつ読めます**。\n\n**たとえ話：** 本のページをめくるように、1行ずつ順番に読んでいきます。\n- `f.read()`: 本を丸ごとコピーする（メモリをたくさん使う）\n- `for line in f`: 1ページずつ読む（メモリに優しい）\n\n**例：** ファイルを1行ずつ処理しよう！\n\n```python\nwith open('file.txt', 'r') as f:\n    for line in f:\n        print(line.strip())  # 余分な空白を取り除いて表示\n```\n\n**何をしているか：**\n1. `for line in f` でファイルから1行ずつ取り出す\n2. `line` には1行分のテキストが入る（改行文字`\n`も含む）\n3. `line.strip()` で前後の空白や改行を取り除く\n\n**ポイント：** 大きなファイルを読むときは、`for line in f` を使うとメモリを節約できます！"
           }
         ],
         "initialDisplayMode": "holey",

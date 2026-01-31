@@ -86,14 +86,14 @@ export const swift2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// ?でオプショナル型\nvar val: Int? = 100\n// letで値を取り出す\nif let n = val {\n    // 値を出力\n    print(n)\n}",
-        "holeyCode": "// ?でオプショナル型\nvar val: Int? = ___\n// letで値を取り出す\nif let n = ___ {\n    // 値を出力\n    print(___)\n___",
+        "correctCode": "// ?でオプショナル型\nvar val: Int? = 100\n// letで値を取り出す\nif let n = val {\n    // nを出力\n    print(n)\n}",
+        "holeyCode": "// ?でオプショナル型\nvar val: Int? = ___\n// letで値を取り出す\nif let n = ___ {\n    // nを出力\n    print(___)\n___",
         "correctLines": [
           "// ?でオプショナル型",
           "var val: Int? = 100",
           "// letで値を取り出す",
           "if let n = val {",
-          "    // 値を出力",
+          "    // nを出力",
           "    print(n)",
           "}"
         ],
@@ -433,14 +433,14 @@ export const swift2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 配列を作成\nlet nums = [1, 2, 3]\n// mapで各要素を変換\nlet squared = nums.map { $0 * $0 }\n// 結果を出力\nprint(squared)",
-        "holeyCode": "// 配列を作成\nlet ___ = [1, 2, 3]\n// mapで各要素を変換\nlet ___ = nums.map { $0 * $0 }\n// 結果を出力\nprint(___)",
+        "correctCode": "// 配列を作成\nlet nums = [1, 2, 3]\n// mapで各要素を変換\nlet squared = nums.map { $0 * $0 }\n// squaredを出力\nprint(squared)",
+        "holeyCode": "// 配列を作成\nlet ___ = [1, 2, 3]\n// mapで各要素を変換\nlet ___ = nums.map { $0 * $0 }\n// squaredを出力\nprint(___)",
         "correctLines": [
           "// 配列を作成",
           "let nums = [1, 2, 3]",
           "// mapで各要素を変換",
           "let squared = nums.map { $0 * $0 }",
-          "// 結果を出力",
+          "// squaredを出力",
           "print(squared)"
         ],
         "lineHints": [
@@ -487,14 +487,14 @@ export const swift2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 配列を作成\nlet nums = [1, 2, 3, 4, 5]\n// filterで条件に合う要素を抽出\nlet result = nums.filter { $0 >= 3 }\n// 結果を出力\nprint(result)",
-        "holeyCode": "// 配列を作成\nlet ___ = [1, 2, 3, 4, 5]\n// filterで条件に合う要素を抽出\nlet ___ = nums.filter { $0 >= 3 }\n// 結果を出力\nprint(___)",
+        "correctCode": "// 配列を作成\nlet nums = [1, 2, 3, 4, 5]\n// filterで条件に合う要素を抽出\nlet result = nums.filter { $0 >= 3 }\n// resultを出力\nprint(result)",
+        "holeyCode": "// 配列を作成\nlet ___ = [1, 2, 3, 4, 5]\n// filterで条件に合う要素を抽出\nlet ___ = nums.filter { $0 >= 3 }\n// resultを出力\nprint(___)",
         "correctLines": [
           "// 配列を作成",
           "let nums = [1, 2, 3, 4, 5]",
           "// filterで条件に合う要素を抽出",
           "let result = nums.filter { $0 >= 3 }",
-          "// 結果を出力",
+          "// resultを出力",
           "print(result)"
         ],
         "lineHints": [

@@ -485,15 +485,15 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\n  // scoreに85を入れる\n  $score = 85;\n  // 80以上 かつ 100以下 ならメッセージを出す\n  if ($score >= 80 && $score <= 100) {\n    // 結果を出力\n    echo \"Pass\";\n  }\n?>",
-        "holeyCode": "___\n  // scoreに85を入れる\n  $___ = ___;\n  // 80以上 かつ 100以下 ならメッセージを出す\n  if ($score >= ___ && $score <= 100) {\n    // 結果を出力\n    ___ \"Pass\";\n  ___\n___",
+        "correctCode": "<?php\n  // scoreに85を入れる\n  $score = 85;\n  // 80以上 かつ 100以下 ならメッセージを出す\n  if ($score >= 80 && $score <= 100) {\n    // \"Pass\"を出力\n    echo \"Pass\";\n  }\n?>",
+        "holeyCode": "___\n  // scoreに85を入れる\n  $___ = ___;\n  // 80以上 かつ 100以下 ならメッセージを出す\n  if ($score >= ___ && $score <= 100) {\n    // \"Pass\"を出力\n    ___ \"Pass\";\n  ___\n___",
         "correctLines": [
           "<?php",
           "  // scoreに85を入れる",
           "  $score = 85;",
           "  // 80以上 かつ 100以下 ならメッセージを出す",
           "  if ($score >= 80 && $score <= 100) {",
-          "    // 結果を出力",
+          "    // \"Pass\"を出力",
           "    echo \"Pass\";",
           "  }",
           "?>"

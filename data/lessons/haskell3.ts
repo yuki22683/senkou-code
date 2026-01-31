@@ -34,7 +34,7 @@ export const haskell3Data = {
           "型を指定します。",
           null,
           "掛け算で2倍にします。",
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          null,
           null,
           null
         ],
@@ -85,7 +85,7 @@ export const haskell3Data = {
           "型を指定します。",
           null,
           "== で等価比較をします。",
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          null,
           null,
           null
         ],

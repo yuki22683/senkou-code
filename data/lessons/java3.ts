@@ -38,7 +38,7 @@ export const javaData3 = {
         ],
         "lineHints": [
           "-> でラムダ式を定義します。",
-          "`apply` でラムダ式を実行します。",
+          null,
           null,
           null,
           null,
@@ -156,7 +156,7 @@ export const javaData3 = {
         ],
         "lineHints": [
           "`asList` でリストを作成します。",
-          "`map` で各要素を変換します。",
+          null,
           null,
           null,
           null,
@@ -217,7 +217,7 @@ export const javaData3 = {
         ],
         "lineHints": [
           "`asList` でリストを作成します。",
-          "`filter` で条件に合う要素を絞り込みます。",
+          null,
           null,
           null,
           null,
@@ -282,7 +282,7 @@ export const javaData3 = {
         "lineHints": [
           "`asList` でリストを作成します。",
           "`collect` と `Collectors` でリストに変換します。",
-          "変数の値をコンソールに出力し、改行します。",
+          null,
           null,
           null,
           null,
@@ -346,7 +346,7 @@ export const javaData3 = {
         ],
         "lineHints": [
           "`asList` でリストを作成します。",
-          "`reduce` で要素を1つに集約します。",
+          null,
           "変数の値をコンソールに出力し、改行します。",
           null,
           null,
@@ -409,7 +409,7 @@ export const javaData3 = {
         ],
         "lineHints": [
           "`of` で値を持つOptionalを作成します。",
-          "`orElse` でデフォルト値を指定して取得します。",
+          null,
           "変数の値をコンソールに出力し、改行します。",
           null,
           null,
@@ -469,7 +469,7 @@ export const javaData3 = {
         ],
         "lineHints": [
           "`asList` でリストを作成します。",
-          ":: でメソッド参照を使います。",
+          null,
           null,
           null,
           null,
@@ -528,7 +528,7 @@ export const javaData3 = {
         ],
         "lineHints": [
           "`asList` でリストを作成します。",
-          "`sorted` でソートします。",
+          null,
           null,
           null,
           null,
@@ -589,7 +589,7 @@ export const javaData3 = {
         ],
         "lineHints": [
           "`asList` でリストを作成します。",
-          "`distinct` で重複を除去します。",
+          null,
           null,
           null,
           null,

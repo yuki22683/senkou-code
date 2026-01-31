@@ -353,8 +353,7 @@ export const haskell2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- \\でラムダ式を開始\nmain = print (map (\\x -> x * x) [1, 2, 3])",
-        "holeyCode": "-- \\でラムダ式を開始\nmain = print (map (\\\\x -> x * x) [___, 2, 3])",
+        "correctCode": "-- \\でラムダ式を開始\nmain = print (map (\\x -> x * x) [1, 2, 3])", "holeyCode": "-- \\でラムダ式を開始\nmain = print (map (\\\\x -> x * x) [___, 2, 3])",
         "correctLines": [
           "-- \\でラムダ式を開始",
           "main = print (map (\\x -> x * x) [1, 2, 3])"

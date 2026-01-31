@@ -173,7 +173,7 @@ export const javaData5 = {
         ],
         "lineHints": [
           "`throws` で例外をスローすることを宣言します。",
-          "`throw` で例外をスローします。",
+          null,
           "関数（riskyMethod）を呼び出して実行します。",
           null,
           "文字列をコンソールに出力し、改行します。",
@@ -320,7 +320,7 @@ export const javaData5 = {
         ],
         "lineHints": [
           "`(` でリソースを宣言します。",
-          "`read` で1文字読み込みます。",
+          null,
           "`printStackTrace` でスタックトレースを出力します。",
           null,
           null,
@@ -369,8 +369,8 @@ export const javaData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "import java.io.*;\\n\\npublic class Main {\\n    public static void main(String[] args) throws IOException {\\n        String content = \"Line1\\nLine2\";\\n        // new で BufferedReader を作成する\\n        BufferedReader br = new BufferedReader(new StringReader(content));\\n        // readLine で1行ずつ読み込む\\n        String line = br.readLine();\\n        // println で出力する\\n        System.out.println(line);\\n        // close でリソースを閉じる\\n        br.close();\\n    }\\n}",
-        "holeyCode": "import java.io.___\\\n\\ ___\npublic class ___ {\\\n    public static void ___\\(String[] args) throws IOException {\\\n        String content = \"Line1\\\nLine2\";\\\n        // new で BufferedReader を作成する\\\n        BufferedReader br = new BufferedReader(new StringReader(___));\\\n        // readLine で1行ずつ読み込む\\\n        String line = br.___();\\\n        // println で出力する\\\n        System.out.___(line);\\\n        // close でリソースを閉じる\\\n        br.___();\\\n    ___\\\n___",
+        "correctCode": "import java.io.*;\n\npublic class Main {\n    public static void main(String[] args) throws IOException {\n        String content = \"Line1\nLine2\";\n        // new で BufferedReader を作成する\n        BufferedReader br = new BufferedReader(new StringReader(content));\n        // readLine で1行ずつ読み込む\n        String line = br.readLine();\n        // println で出力する\n        System.out.println(line);\n        // close でリソースを閉じる\n        br.close();\n    }\n}",
+        "holeyCode": "import java.io.___\n\npublic class ___ {\n    public static void ___\\(String[] args) throws IOException {\n        String content = \"Line1\nLine2\";\n        // new で BufferedReader を作成する\n        BufferedReader br = new BufferedReader(new StringReader(___));\n        // readLine で1行ずつ読み込む\n        String line = br.___();\n        // println で出力する\n        System.out.___(line);\n        // close でリソースを閉じる\n        br.___();\n    ___\n___",
         "correctLines": [
           "import java.io.*;",
           "",
@@ -391,7 +391,7 @@ export const javaData5 = {
         ],
         "lineHints": [
           "`new` で BufferedReader を作成します。",
-          "`readLine` で1行ずつ読み込みます。",
+          null,
           "変数の値をコンソールに出力し、改行します。",
           "`close` でリソースを閉じます。",
           null,
@@ -462,7 +462,7 @@ export const javaData5 = {
         ],
         "lineHints": [
           "`new` で StringWriter を作成します。",
-          "`new` で BufferedWriter を作成します。",
+          null,
           "`write` で文字列を書き込みます。",
           "`flush` でバッファをフラッシュします。",
           null,
@@ -531,7 +531,7 @@ export const javaData5 = {
         ],
         "lineHints": [
           "`new` で Scanner を作成します。",
-          "`nextInt` で整数を読み込みます。",
+          null,
           "`next` で文字列を読み込みます。",
           "`println` で出力します。",
           null,
@@ -598,7 +598,7 @@ export const javaData5 = {
         "lineHints": [
           "`get` でパスを作成します。",
           "`exists` でファイルの存在を確認します。",
-          "変数の値をコンソールに出力し、改行します。",
+          null,
           null,
           null,
           null,

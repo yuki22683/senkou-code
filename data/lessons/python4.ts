@@ -583,7 +583,7 @@ export const pythonData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 本を表すクラスを定義\nclass Book:\n    # タイトルと著者で初期化\n    def __init__(self, title, author):\n        # タイトルを属性に保存\n        self.title = title\n        # 著者を属性に保存\n        self.author = author\n    \n    # 等価比較を定義するメソッド\n    def __eq__(self, other):\n        # タイトルと著者が両方一致するかを返す\n        return self.title == other.title and self.author == other.author\n\n# 本のインスタンスを作成\nbook1 = Book(\"Python入門\", \"田中\")\n# 同じ内容で別のインスタンスを作成\nbook2 = Book(\"Python入門\", \"田中\")\n# 2つの本が等しいか比較\nprint(book1 == book2)",
-        "holeyCode": "# 本を表すクラスを定義\nclass ___:\n    # タイトルと著者で初期化\n    def ___(self, title, author):\n        # タイトルを属性に保存\n        self.___ = title\n        # 著者を属性に保存\n        self.___ = author\n    \n    # 等価比較を定義するメソッド\n    def ___(self, other):\n        # タイトルと著者が両方一致するかを返す\n        return self.title == other.___ and self.author == other.___\n\n# 本のインスタンスを作成\nbook1 = ___\n# 同じ内容で別のインスタンスを作成\nbook2 = ___\n# 2つの本が等しいか比較\n___(book1 == book2)",
+        "holeyCode": "# 本を表すクラスを定義\nclass ___:\n    # タイトルと著者で初期化\n    def ___(self, title, author):\n        # タイトルを属性に保存\n        self.___ = title\n        # 著者を属性に保存\n        self.___ = author\n    \n    # 等価比較を定義するメソッド\n    def ___(self, other):\n        # タイトルと著者が両方一致するかを返す\n        return self.title == other.title and self.___ == other.author\n\n# 本のインスタンスを作成\nbook1 = Book(\"___\", \"田中\")\n# 同じ内容で別のインスタンスを作成\nbook2 = Book(\"___\", \"田中\")\n# 2つの本が等しいか比較\n___(book1 == book2)",
         "correctLines": [
           "# 本を表すクラスを定義",
           "class Book:",

@@ -14,9 +14,12 @@
 ### 1. git checkout 実行時の注意
 - `git checkout -- data/lessons/*.ts` を実行すると、以前適用した修正（虫食い化、コメント追加など）が全て消える
 - git checkout 後は必ず以下のスクリプトを再実行すること：
-  1. `node scripts/fix-holey-v2.mjs` - 虫食い化
-  2. `node scripts/add-hint-comments.mjs` - コメント追加
+  1. `node scripts/fix-empty-line-hints.mjs` - 空行のhints修正
+  2. `node scripts/fix-non-holey-hints.mjs` - 非holey行のhints修正
+  3. `node scripts/fix-comment-consistency.mjs` - コメント整合性修正
+  4. `node scripts/add-hint-comments.mjs` - コメント追加
 - index.tsのケーシング修正（Java3→java3, C2→c2など）も再適用が必要
+- **注意**：`fix-holey-v2.mjs` は使用禁止（ルール#24参照）
 
 ### 2. bashファイルのechoクォート
 - `echo "___"` の閉じクォートは必ずエスケープする: `echo \"___\"`
@@ -117,9 +120,10 @@
 ### 15. holeyCodeの全コード行に虫食い（___）を含める
 - `holeyCode` フィールドの**すべてのコード行**には必ず `___` を含めること。
 - コメント行と空行のみ例外。構造的な行（`{`, `}`, `end`等）も虫食いにする。
-- レッスンファイルを修正した後は必ず `node scripts/fix-holey-v2.mjs` を実行して虫食い化を確認すること。
+- レッスンファイルを修正した後は必ず `node scripts/check-holey-v3.ts` を実行して整合性を確認すること。
 - **禁止**：`package main` `import "fmt"` `using System;` など、虫食いのないコード行
 - **正しい**：`package ___` `import "___"` `using ___;`
+- **注意**：`fix-holey-v2.mjs` は使用禁止（ルール#24参照）
 
 ### 16. エスケープシーケンスの置換順序
 - レッスンファイルの文字列をデコードする際、置換の順序が重要。
@@ -158,3 +162,56 @@
   - クラス定義の基本演習
   - デザインパターンの演習
 - **チェックスクリプト**：`node scripts/check-tutorial-exercise-similarity.mjs` で類似性をチェックできる
+
+### 20. 計算演習における演算子の差別化
+- 四則演算（`+`, `-`, `*`, `/`）を教える演習では、**チュートリアルと演習で異なる演算子**を使うこと。
+- **禁止**：チュートリアルと演習が同じ演算子
+  - 解説: `a + b`（足し算）→ 演習: `x + y`（足し算）→ 同じ演算子なのでNG
+  - 解説: `a * b`（掛け算）→ 演習: `x * y`（掛け算）→ 同じ演算子なのでNG
+- **正しい**：チュートリアルと演習で異なる演算子
+  - 解説: `a + b`（足し算）→ 演習: `x - y`（引き算）→ 異なる演算子でOK
+  - 解説: `cookies / friends`（割り算）→ 演習: `x + y`（足し算）→ 異なる演算子でOK
+- **理由**：同じ演算子だと解説をそのままコピーして変数名だけ変えれば解けてしまい、学習効果がない。
+- **例外**：
+  - Assembly言語の`add`/`sub`/`mul`/`div`命令は、その命令自体を教えているため同じ命令を使うのはOK
+  - 演算子一覧を表示するだけで具体的なコード例がないチュートリアルはOK
+- **確認コマンド**：`node scripts/check-tutorial-exercise-similarity.mjs`
+
+### 21. 空行のlineHintsはnullにする
+- `correctLines` で空行（`""`）に対応する `lineHints` の要素は必ず `null` にすること。
+- **理由**：空行にはユーザーが入力する箇所がないため、ヒントは不要。
+- **禁止**：空行に対して `"何かを入力します"` などのヒントを設定する
+- **修正スクリプト**：`node scripts/fix-empty-line-hints.mjs`
+
+### 22. holeyCodeに___がない行のlineHintsはnullにする
+- `holeyCode` の行に `___` が含まれていない場合、その行の `lineHints` は `null` にすること。
+- **理由**：`___` がない行はユーザーが入力する箇所がないため、ヒントがあっても意味がない。
+- **対象**：閉じ括弧 `}`、構造的な行、コメント行など
+- **修正スクリプト**：`node scripts/fix-non-holey-hints.mjs`
+
+### 23. holeyCode内のコメントに___を含めない
+- `holeyCode` のコメント行には `___` を含めないこと。コメントは `correctCode` と完全に一致させる。
+- **禁止**：`# ___を入力`、`// ___で処理`
+- **正しい**：`# 10を入力`、`// mapで処理`（correctCodeと同じ）
+- **理由**：コメントはユーザーへのヒントであり、穴埋め対象ではない。コメントに `___` があると混乱を招く。
+- **修正スクリプト**：`node scripts/fix-comment-consistency.mjs`
+
+### 24. fix-holey-v2.mjsの使用禁止
+- `scripts/fix-holey-v2.mjs` は**使用禁止**。このスクリプトにはバグがあり、holeyCodeを破損させる（無限に複製される）。
+- git checkout後の再適用には、個別の修正スクリプトを使用すること：
+  - `node scripts/fix-empty-line-hints.mjs`
+  - `node scripts/fix-non-holey-hints.mjs`
+  - `node scripts/fix-comment-consistency.mjs`
+
+### 25. レッスン修正後の必須チェック項目
+- レッスンファイルを修正した後は、以下の全チェックを実行して0件/問題なしを確認すること：
+  1. `node scripts/check-holey-v3.ts` → 0件
+  2. `node scripts/check-comment-consistency-v3.mjs` → 不整合なし
+  3. `node scripts/check-vague-comments.mjs` → 曖昧なコメントなし
+  4. `node scripts/check-tutorial-exercise-similarity.mjs` → 問題なし
+  5. `npm run seed:db` → 成功
+- **チェックが失敗した場合の修正方法**：
+  - check-holey-v3.ts → `fix-empty-line-hints.mjs` と `fix-non-holey-hints.mjs` を実行
+  - check-comment-consistency-v3.mjs → `fix-comment-consistency.mjs` を実行
+  - check-vague-comments.mjs → 手動でコメントを具体的に修正（ルール#12参照）
+  - check-tutorial-exercise-similarity.mjs → 手動で演習のシナリオを変更（ルール#19, #20参照）

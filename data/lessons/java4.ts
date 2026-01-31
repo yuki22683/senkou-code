@@ -47,7 +47,7 @@ export const javaData4 = {
         ],
         "lineHints": [
           "新しいクラス（Box）を定義します。",
-          "`new` でインスタンスを作成します。",
+          null,
           null,
           "`set` で値を設定します。",
           "`get` で値を取得します。",
@@ -189,7 +189,7 @@ export const javaData4 = {
         ],
         "lineHints": [
           "`?` で任意の型を表します。",
-          "変数の値をコンソールに出力し、改行します。",
+          null,
           "`asList` でリストを作成します。",
           null,
           "`printAll` メソッドを呼び出します。",
@@ -259,7 +259,7 @@ export const javaData4 = {
         ],
         "lineHints": [
           "`new` で HashMap を作成します。",
-          "`put` でキーと値を追加します。",
+          null,
           "`put` でキーと値を追加します。",
           "`get` で値を取得します。",
           null,
@@ -328,7 +328,7 @@ export const javaData4 = {
         ],
         "lineHints": [
           "`new` で HashMap を作成します。",
-          "`put` でキーと値を追加します。",
+          null,
           "`put` でキーと値を追加します。",
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
           null,
@@ -396,7 +396,7 @@ export const javaData4 = {
         ],
         "lineHints": [
           "`new` と `asList` でリストを作成します。",
-          "`comparing` でプロパティを基準に比較します。",
+          null,
           "変数の値をコンソールに出力し、改行します。",
           null,
           null,
@@ -469,7 +469,7 @@ export const javaData4 = {
         ],
         "lineHints": [
           "新しいクラス（Score）を定義します。",
-          "`return` で比較結果を返します。",
+          null,
           null,
           "`asList` でリストを作成します。",
           "`sort` でソートします。",
@@ -609,7 +609,7 @@ export const javaData4 = {
         ],
         "lineHints": [
           "`new` で LinkedList を作成します。",
-          "`offer` でキューに要素を追加します。",
+          null,
           "`offer` でキューに要素を追加します。",
           "`poll` で要素を取り出します。",
           null,
@@ -675,7 +675,7 @@ export const javaData4 = {
         ],
         "lineHints": [
           "`new` で ArrayDeque を作成します。",
-          "`push` でスタックに積みます。",
+          null,
           "`push` でスタックに積みます。",
           "`pop` でスタックから取り出します。",
           null,

@@ -18,12 +18,12 @@ export const perl2Data = {
           },
           {
             "title": "=~ でパターンマッチング",
-            "content": "# /パターン/ の書き方\n\n**このコードは何をしているの？**\n```perl\nif ($text =~ /hello/) {\n    print \"found\\n\";\n}\n```\n\n**解説：**\n1. `$text =~ /hello/` で「$text の中に hello がある？」をチェック\n2. `=~` → マッチング演算子（「〜に合う？」の意味）\n3. `/hello/` → 探したいパターン\n4. 見つかったら \"found\" と表示\n\n**ポイント：** パターンは `/` と `/` で囲みます。"
+            "content": "# /パターン/ の書き方\n\n**このコードは何をしているの？**\n```perl\nif ($text =~ /hello/) {\n    print \"found\n\";\n}\n```\n\n**解説：**\n1. `$text =~ /hello/` で「$text の中に hello がある？」をチェック\n2. `=~` → マッチング演算子（「〜に合う？」の意味）\n3. `/hello/` → 探したいパターン\n4. 見つかったら \"found\" と表示\n\n**ポイント：** パターンは `/` と `/` で囲みます。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数に文字列を代入\\nmy $text = \"hello world\";\\n# =~でパターンマッチング\\nif ($text =~ /world/) {\\n    # printで出力\\n    print \"found\\n\";\\n}",
-        "holeyCode": "# 変数に文字列を代入\\\nmy $___ = \"hello world\";\\\n# =~でパターンマッチング\\\nif ($text =~ /___/) {\\\n    # printで出力\\\n    ___ \"found\\\n\";\\\n___",
+        "correctCode": "# 変数に文字列を代入\nmy $text = \"hello world\";\n# =~でパターンマッチング\nif ($text =~ /world/) {\n    # printで出力\n    print \"found\n\";\n}",
+        "holeyCode": "# 変数に文字列を代入\nmy $___ = \"hello world\";\n# =~でパターンマッチング\nif ($text =~ /___/) {\n    # printで出力\n    ___ \"found\n\";\n___",
         "correctLines": [
           "# 変数に文字列を代入",
           "my $text = \"hello world\";",
@@ -76,8 +76,8 @@ export const perl2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数に文字列を代入\\nmy $text = \"cat\";\\n# sで置換\\n$text =~ s/cat/dog/;\\n# printで出力\\nprint \"$text\\n\";",
-        "holeyCode": "# 変数に文字列を代入\\\nmy $___ = \"cat\";\\\n# sで置換\\\n$text =~ s/cat/___/;\\\n# printで出力\\\n___ \"$text\\\n\";",
+        "correctCode": "# 変数に文字列を代入\nmy $text = \"cat\";\n# sで置換\n$text =~ s/cat/dog/;\n# printで出力\nprint \"$text\n\";",
+        "holeyCode": "# 変数に文字列を代入\nmy $___ = \"cat\";\n# sで置換\n$text =~ s/cat/___/;\n# printで出力\n___ \"$text\n\";",
         "correctLines": [
           "# 変数に文字列を代入",
           "my $text = \"cat\";",
@@ -128,8 +128,8 @@ export const perl2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# @で配列を宣言\\nmy @fruits = (\"apple\", \"banana\");\\n# printで出力\\nprint $fruits[1] . \"\\n\";",
-        "holeyCode": "# @で配列を宣言\\\nmy @___ = (\"apple\", \"banana\");\\\n# printで出力\\\n___ $fruits[1] . \"\\\n\";",
+        "correctCode": "# @で配列を宣言\nmy @fruits = (\"apple\", \"banana\");\n# printで出力\nprint $fruits[1] . \"\n\";",
+        "holeyCode": "# @で配列を宣言\nmy @___ = (\"apple\", \"banana\");\n# printで出力\n___ $fruits[1] . \"\n\";",
         "correctLines": [
           "# @で配列を宣言",
           "my @fruits = (\"apple\", \"banana\");",
@@ -175,8 +175,8 @@ export const perl2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# %でハッシュを宣言\\nmy %scores = (\"math\" => 90);\\n# printで出力\\nprint $scores{\"math\"} . \"\\n\";",
-        "holeyCode": "# %でハッシュを宣言\\\nmy %scores = (\"___\" => 90);\\\n# printで出力\\\n___ $scores{\"math\"} . \"\\\n\";",
+        "correctCode": "# %でハッシュを宣言\nmy %scores = (\"math\" => 90);\n# printで出力\nprint $scores{\"math\"} . \"\n\";",
+        "holeyCode": "# %でハッシュを宣言\nmy %scores = (\"___\" => 90);\n# printで出力\n___ $scores{\"math\"} . \"\n\";",
         "correctLines": [
           "# %でハッシュを宣言",
           "my %scores = (\"math\" => 90);",
@@ -218,12 +218,12 @@ export const perl2Data = {
           },
           {
             "title": "foreach の書き方",
-            "content": "# foreach my $変数 (@配列)\n\n**このコードは何をしているの？**\n```perl\nforeach my $n (@nums) {\n    print \"$n\\n\";\n}\n```\n\n**解説：**\n1. `@nums` から要素を1つ取り出す\n2. それを `$n` に入れる\n3. `{ }` の中を実行\n4. 次の要素に進む\n5. 全部終わるまで繰り返す\n\n**ポイント：** `for` と書いても同じ動きをします（Perlでは同じ）。"
+            "content": "# foreach my $変数 (@配列)\n\n**このコードは何をしているの？**\n```perl\nforeach my $n (@nums) {\n    print \"$n\n\";\n}\n```\n\n**解説：**\n1. `@nums` から要素を1つ取り出す\n2. それを `$n` に入れる\n3. `{ }` の中を実行\n4. 次の要素に進む\n5. 全部終わるまで繰り返す\n\n**ポイント：** `for` と書いても同じ動きをします（Perlでは同じ）。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 配列を宣言（1, 2, 3）\\nmy @nums = (1, 2, 3);\\n# foreachで各要素を処理\\nforeach my $n (@nums) {\\n    # printで出力\\n    print \"$n\\n\";\\n}",
-        "holeyCode": "# 配列を宣言（1, 2, 3）\\\nmy @___ = (1, 2, 3);\\\n# foreachで各要素を処理\\\nforeach my $n (@___) {\\\n    # printで出力\\\n    ___ \"$n\\\n\";\\\n___",
+        "correctCode": "# 配列を宣言（1, 2, 3）\nmy @nums = (1, 2, 3);\n# foreachで各要素を処理\nforeach my $n (@nums) {\n    # printで出力\n    print \"$n\n\";\n}",
+        "holeyCode": "# 配列を宣言（1, 2, 3）\nmy @___ = (1, 2, 3);\n# foreachで各要素を処理\nforeach my $n (@___) {\n    # printで出力\n    ___ \"$n\n\";\n___",
         "correctLines": [
           "# 配列を宣言（1, 2, 3）",
           "my @nums = (1, 2, 3);",
@@ -272,12 +272,12 @@ export const perl2Data = {
           },
           {
             "title": "shift で引数を取り出す",
-            "content": "# @_ から1つずつ取り出す\n\n**このコードは何をしているの？**\n```perl\nsub greet {\n    my $name = shift;\n    print \"Hello, $name\\n\";\n}\ngreet(\"Taro\");\n```\n\n**解説：**\n1. `greet(\"Taro\")` で \"Taro\" が `@_` に入る\n2. `shift` で `@_` の先頭を取り出す\n3. `$name` に \"Taro\" が入る\n4. \"Hello, Taro\" と表示\n\n**shift とは：** 配列の先頭を取り出すコマンド。`shift @_` の略です。"
+            "content": "# @_ から1つずつ取り出す\n\n**このコードは何をしているの？**\n```perl\nsub greet {\n    my $name = shift;\n    print \"Hello, $name\n\";\n}\ngreet(\"Taro\");\n```\n\n**解説：**\n1. `greet(\"Taro\")` で \"Taro\" が `@_` に入る\n2. `shift` で `@_` の先頭を取り出す\n3. `$name` に \"Taro\" が入る\n4. \"Hello, Taro\" と表示\n\n**shift とは：** 配列の先頭を取り出すコマンド。`shift @_` の略です。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# subでサブルーチンを定義\\nsub double {\\n    # shiftで引数を取得\\n    my $n = shift;\\n    # returnで戻り値を返す\\n    return $n * 2;\\n}\\n# printで出力\\nprint double(5) . \"\\n\";",
-        "holeyCode": "# subでサブルーチンを定義\\\nsub ___ {\\\n    # shiftで引数を取得\\\n    my $___ = shift;\\\n    # returnで戻り値を返す\\\n    return $n * ___;\\\n___\\\n# printで出力\\\nprint double(5) . \"\\\n\";",
+        "correctCode": "# subでサブルーチンを定義\nsub double {\n    # shiftで引数を取得\n    my $n = shift;\n    # returnで戻り値を返す\n    return $n * 2;\n}\n# printで出力\nprint double(5) . \"\n\";",
+        "holeyCode": "# subでサブルーチンを定義\nsub ___ {\n    # shiftで引数を取得\n    my $___ = shift;\n    # returnで戻り値を返す\n    return $n * ___;\n___\n# printで出力\nprint double(5) . \"\n\";",
         "correctLines": [
           "# subでサブルーチンを定義",
           "sub double {",
@@ -335,8 +335,7 @@ export const perl2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 配列を宣言（10, 20）\\nmy @nums = (10, 20);\\n# \\でリファレンスを作成\\nmy $ref = \\@nums;\\n# printで出力\\nprint $ref->[1] . \"\\n\";",
-        "holeyCode": "# 配列を宣言（10, 20）\\\nmy @___ = (10, 20);\\\n# \\\\でリファレンスを作成\\\nmy $___ = \\\\@nums;\\\n# printで出力\\\n___ $ref->[1] . \"\\\n\";",
+        "correctCode": "# 配列を宣言（10, 20）\nmy @nums = (10, 20);\n# \\でリファレンスを作成\nmy $ref = \\@nums;\n# printで出力\nprint $ref->[1] . \"\n\";", "holeyCode": "# 配列を宣言（10, 20）\nmy @___ = (10, 20);\n# \\でリファレンスを作成\nmy $___ = \\\\@nums;\n# printで出力\n___ $ref->[1] . \"\n\";",
         "correctLines": [
           "# 配列を宣言（10, 20）",
           "my @nums = (10, 20);",
@@ -387,8 +386,8 @@ export const perl2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# [で無名配列を作成\\nmy $ref = [5, 10, 15];\\n# printで出力\\nprint $ref->[2] . \"\\n\";",
-        "holeyCode": "# [で無名配列を作成\\\nmy $___ = [5, 10, 15];\\\n# printで出力\\\n___ $ref->[2] . \"\\\n\";",
+        "correctCode": "# [で無名配列を作成\nmy $ref = [5, 10, 15];\n# printで出力\nprint $ref->[2] . \"\n\";",
+        "holeyCode": "# [で無名配列を作成\nmy $___ = [5, 10, 15];\n# printで出力\n___ $ref->[2] . \"\n\";",
         "correctLines": [
           "# [で無名配列を作成",
           "my $ref = [5, 10, 15];",
@@ -434,8 +433,8 @@ export const perl2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 配列を宣言（1, 2, 3）\\nmy @nums = (1, 2, 3);\\n# mapで各要素を変換\\nmy @squared = map { $_ * $_ } @nums;\\n# printで出力\\nprint \"@squared\\n\";",
-        "holeyCode": "# 配列を宣言（1, 2, 3）\\\nmy @___ = (1, 2, 3);\\\n# mapで各要素を変換\\\nmy @___ = map { $_ * $_ } @nums;\\\n# printで出力\\\n___ \"@squared\\\n\";",
+        "correctCode": "# 配列を宣言（1, 2, 3）\nmy @nums = (1, 2, 3);\n# mapで各要素を変換\nmy @squared = map { $_ * $_ } @nums;\n# printで出力\nprint \"@squared\n\";",
+        "holeyCode": "# 配列を宣言（1, 2, 3）\nmy @___ = (1, 2, 3);\n# mapで各要素を変換\nmy @___ = map { $_ * $_ } @nums;\n# printで出力\n___ \"@squared\n\";",
         "correctLines": [
           "# 配列を宣言（1, 2, 3）",
           "my @nums = (1, 2, 3);",
@@ -486,8 +485,8 @@ export const perl2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 配列を宣言（1, 2, 3, 4, 5）\\nmy @nums = (1, 2, 3, 4, 5);\\n# grepで条件に合う要素を抽出\\nmy @result = grep { $_ >= 3 } @nums;\\n# printで出力\\nprint \"@result\\n\";",
-        "holeyCode": "# 配列を宣言（1, 2, 3, 4, 5）\\\nmy @___ = (1, 2, 3, 4, 5);\\\n# grepで条件に合う要素を抽出\\\nmy @___ = grep { $_ >= 3 } @nums;\\\n# printで出力\\\n___ \"@result\\\n\";",
+        "correctCode": "# 配列を宣言（1, 2, 3, 4, 5）\nmy @nums = (1, 2, 3, 4, 5);\n# grepで条件に合う要素を抽出\nmy @result = grep { $_ >= 3 } @nums;\n# printで出力\nprint \"@result\n\";",
+        "holeyCode": "# 配列を宣言（1, 2, 3, 4, 5）\nmy @___ = (1, 2, 3, 4, 5);\n# grepで条件に合う要素を抽出\nmy @___ = grep { $_ >= 3 } @nums;\n# printで出力\n___ \"@result\n\";",
         "correctLines": [
           "# 配列を宣言（1, 2, 3, 4, 5）",
           "my @nums = (1, 2, 3, 4, 5);",

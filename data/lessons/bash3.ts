@@ -352,23 +352,19 @@ export const bash3Data = {
           },
           {
             "title": "sort のオプション",
-            "content": "# 並べ替え方を指定する\n\n| オプション | 意味 | 動作 |\n|------------|------|------|\n| （なし） | デフォルト | アルファベット順（辞書順） |\n| `-n` | numeric | 数値として並べ替え |\n| `-r` | reverse | 逆順（大きい順） |\n\n**このコードは何をしているの？**\n```bash\necho -e \"3\\n1\\n2\" | sort -n\n```\n\n**解説：**\n1. `echo -e \"3\\n1\\n2\"` で3行（3, 1, 2）を出力\n2. `sort -n` で数値として並べ替え\n3. 結果は 1, 2, 3 の順\n\n**注意：** `-n` がないと \"10\" が \"2\" より前に来てしまいます（文字として比較するため）。"
+            "content": "# 並べ替え方を指定する\n\n| オプション | 意味 | 動作 |\n|------------|------|------|\n| （なし） | デフォルト | アルファベット順（辞書順） |\n| `-n` | numeric | 数値として並べ替え |\n| `-r` | reverse | 逆順（大きい順） |\n\n**このコードは何をしているの？**\n```bash\necho -e \"3\n1\n2\" | sort -n\n```\n\n**解説：**\n1. `echo -e \"3\n1\n2\"` で3行（3, 1, 2）を出力\n2. `sort -n` で数値として並べ替え\n3. 結果は 1, 2, 3 の順\n\n**注意：** `-n` がないと \"10\" が \"2\" より前に来てしまいます（文字として比較するため）。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# sortで並べ替え\\necho -e \"banana\\napple\\ncherry\" | sort",
-        "holeyCode": "# sortで並べ替え\\\necho -e \"banana\\\n___\\\ncherry\" | sort",
+        "correctCode": "# sortで並べ替え\necho -e \"banana\\napple\\ncherry\" | sort",
+        "holeyCode": "# sortで並べ替え\necho -e \"banana\\\n___\\\ncherry\" | sort",
         "correctLines": [
           "# sortで並べ替え",
-          "echo -e \"banana",
-          "apple",
-          "cherry\" | sort"
+          "echo -e \"banana\\napple\\ncherry\" | sort"
         ],
         "lineHints": [
           null,
-          "sort で並べ替えます。",
-          null,
-          null
+          "sort で並べ替えます。"
         ],
         "candidates": {
           "commands": [
@@ -397,25 +393,19 @@ export const bash3Data = {
           },
           {
             "title": "sort | uniq の組み合わせ",
-            "content": "# 並べ替えてから重複除去\n\n**このコードは何をしているの？**\n```bash\necho -e \"a\\nb\\na\" | sort | uniq\n```\n\n**解説：**\n1. \"a\", \"b\", \"a\" の3行がある\n2. `sort` で並べ替え → \"a\", \"a\", \"b\"\n3. `uniq` で連続する重複を除去 → \"a\", \"b\"\n\n**sort なしだとどうなる？**\n```bash\necho -e \"a\\nb\\na\" | uniq\n# a, b, a のまま！（連続してないから消えない）\n```\n\n**便利なオプション：**\n- `-c` で重複回数を表示\n- `-d` で重複した行だけ表示"
+            "content": "# 並べ替えてから重複除去\n\n**このコードは何をしているの？**\n```bash\necho -e \"a\nb\na\" | sort | uniq\n```\n\n**解説：**\n1. \"a\", \"b\", \"a\" の3行がある\n2. `sort` で並べ替え → \"a\", \"a\", \"b\"\n3. `uniq` で連続する重複を除去 → \"a\", \"b\"\n\n**sort なしだとどうなる？**\n```bash\necho -e \"a\nb\na\" | uniq\n# a, b, a のまま！（連続してないから消えない）\n```\n\n**便利なオプション：**\n- `-c` で重複回数を表示\n- `-d` で重複した行だけ表示"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# uniqで重複を除去\\necho -e \"a\\nb\\na\\nb\" | sort | uniq",
-        "holeyCode": "# uniqで重複を除去\\\necho -e \"a\\\n___\\\n___\\\nb\" | sort | uniq",
+        "correctCode": "# uniqで重複を除去\necho -e \"a\\nb\\na\\nb\" | sort | uniq",
+        "holeyCode": "# uniqで重複を除去\necho -e \"a\\\n___\\\n___\\\nb\" | sort | uniq",
         "correctLines": [
           "# uniqで重複を除去",
-          "echo -e \"a",
-          "b",
-          "a",
-          "b\" | sort | uniq"
+          "echo -e \"a\\nb\\na\\nb\" | sort | uniq"
         ],
         "lineHints": [
           null,
-          "uniq で重複を除去します。",
-          null,
-          null,
-          null
+          "uniq で重複を除去します。"
         ],
         "candidates": {
           "commands": [

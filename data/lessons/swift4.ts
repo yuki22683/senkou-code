@@ -281,8 +281,8 @@ export const swift4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Comparableで比較可能な型に制限\nfunc maximum<T: Comparable>(_ a: T, _ b: T) -> T {\n    // 大きい方を返す\n    return a > b ? a : b\n}\n\n// 結果を出力\nprint(maximum(5, 3))",
-        "holeyCode": "// Comparableで比較可能な型に制限\nfunc maximum<___: Comparable>(_ a: T, _ b: T) -> T {\n    // 大きい方を返す\n    return a > ___ ? a : b\n___\n\n// 結果を出力\nprint(maximum(___, 3))",
+        "correctCode": "// Comparableで比較可能な型に制限\nfunc maximum<T: Comparable>(_ a: T, _ b: T) -> T {\n    // 大きい方を返す\n    return a > b ? a : b\n}\n\n// maximum(5, 3)を出力\nprint(maximum(5, 3))",
+        "holeyCode": "// Comparableで比較可能な型に制限\nfunc maximum<___: Comparable>(_ a: T, _ b: T) -> T {\n    // 大きい方を返す\n    return a > ___ ? a : b\n___\n\n// maximum(5, 3)を出力\nprint(maximum(___, 3))",
         "correctLines": [
           "// Comparableで比較可能な型に制限",
           "func maximum<T: Comparable>(_ a: T, _ b: T) -> T {",
@@ -290,7 +290,7 @@ export const swift4Data = {
           "    return a > b ? a : b",
           "}",
           "",
-          "// 結果を出力",
+          "// maximum(5, 3)を出力",
           "print(maximum(5, 3))"
         ],
         "lineHints": [

@@ -171,8 +171,7 @@ export const go2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    // & でアドレスを取得\n    p := &x\n    // *p でポインタの値を変更\n    *p = 10\n    fmt.Println(x)\n}",
-        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    ___ := 5\n    // & でアドレスを取得\n    ___ := &x\n    // *p でポインタの値を変更\n    *p = ___\n    fmt.___(x)\n___",
+        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    x := 5\n    // & でアドレスを取得\n    p := &x\n    // *p でポインタの値を変更\n    *p = 10\n    fmt.Println(x)\n}", "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    ___ := 5\n    // & でアドレスを取得\n    ___ := &x\n    // *p でポインタの値を変更\n    *p = 10\n    fmt.___(x)\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",

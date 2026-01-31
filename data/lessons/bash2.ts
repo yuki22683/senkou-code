@@ -266,8 +266,8 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数を初期化\ni=1\n# 条件が真の間繰り返すキーワード\nwhile [ $i -le 3 ]; do\n    # 変数を表示\n    echo $i\n    # 変数をインクリメント\n    i=$((i + 1))\ndone",
-        "holeyCode": "# 変数を初期化\ni=___\n# 条件が真の間繰り返すキーワード\n___ [ $i -le 3 ]; do\n    # 変数を表示\n    echo $___\n    # 変数をインクリメント\n    i=$((___ + 1))\ndone",
+        "correctCode": "# 変数を初期化\ni=1\n# 条件が真の間繰り返すキーワード\nwhile [ $i -le 3 ]; do\n    # 変数を表示\n    echo $i\n    # iを1増やす\n    i=$((i + 1))\ndone",
+        "holeyCode": "# 変数を初期化\ni=___\n# 条件が真の間繰り返すキーワード\n___ [ $i -le 3 ]; do\n    # 変数を表示\n    echo $___\n    # iを1増やす\n    i=$((___ + 1))\ndone",
         "correctLines": [
           "# 変数を初期化",
           "i=1",
@@ -275,7 +275,7 @@ export const bash2Data = {
           "while [ $i -le 3 ]; do",
           "    # 変数を表示",
           "    echo $i",
-          "    # 変数をインクリメント",
+          "    # iを1増やす",
           "    i=$((i + 1))",
           "done"
         ],
@@ -322,8 +322,7 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数に値を代入\nfruit=\"apple\"\n# パターンマッチで分岐するキーワード\ncase $fruit in\n    # appleの場合\n    apple) echo \"red\";;\n    # bananaの場合\n    banana) echo \"yellow\";;\n    # その他の場合\n    *) echo \"unknown\";;\nesac",
-        "holeyCode": "# 変数に値を代入\nfruit=\"___\"\n# パターンマッチで分岐するキーワード\n___ $fruit in\n    # appleの場合\n    apple) echo \"___\";;\n    # bananaの場合\n    banana) echo \"yellow\";;\n    # その他の場合\n    *) echo \"___\";;\nesac",
+        "correctCode": "# 変数に値を代入\nfruit=\"apple\"\n# パターンマッチで分岐するキーワード\ncase $fruit in\n    # appleの場合\n    apple) echo \"red\";;\n    # bananaの場合\n    banana) echo \"yellow\";;\n    # その他の場合\n    *) echo \"unknown\";;\nesac", "holeyCode": "# 変数に値を代入\nfruit=\"___\"\n# パターンマッチで分岐するキーワード\n___ $fruit in\n    # appleの場合\n    apple) echo \"___\";;\n    # bananaの場合\n    banana) echo \"yellow\";;\n    # その他の場合\n    *) echo \"unknown\";;\nesac",
         "correctLines": [
           "# 変数に値を代入",
           "fruit=\"apple\"",
