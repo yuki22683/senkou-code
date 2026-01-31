@@ -131,7 +131,7 @@ export const cData = {
       },
     {
         "title": "コンピュータで計算しましょう",
-        "description": "C言語を使って、たし算をしてみましょう。",
+        "description": "C言語を使って、ひき算をしてみましょう。",
         "difficulty": "easy",
         "orderIndex": 3,
         "tutorialSlides": [
@@ -145,19 +145,19 @@ export const cData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 標準入出力ライブラリを読み込む\nint main() {\n// プログラムのエントリーポイントを定義する\n    int a = 5;\n    // int型の変数aに5を代入する\n    int b = 3;\n    // int型の変数bに3を代入する\n    printf(\"%d\n    // a + b の結果を表示する\n\", a + b);\n    // 正常終了を示す値0を返す\n    return 0;\n// 関数の終わり\n}",
-        "holeyCode": "// 標準入出力ライブラリを読み込む\nint ___() {\n// プログラムのエントリーポイントを定義する\n    int a = ___;\n    // int型の変数aに5を代入する\n    int b = ___;\n    // int型の変数bに3を代入する\n    printf(\"%d\n    // a + b の結果を表示する\n\", a + b);\n    // 正常終了を示す値0を返す\n    return ___;\n// 関数の終わり\n___",
+        "correctCode": "// 標準入出力ライブラリを読み込む\nint main() {\n// プログラムのエントリーポイントを定義する\n    int a = 10;\n    // int型の変数aに10を代入する\n    int b = 3;\n    // int型の変数bに3を代入する\n    printf(\"%d\n    // a - b の結果を表示する\n\", a - b);\n    // 正常終了を示す値0を返す\n    return 0;\n// 関数の終わり\n}",
+        "holeyCode": "// 標準入出力ライブラリを読み込む\nint ___() {\n// プログラムのエントリーポイントを定義する\n    int a = ___;\n    // int型の変数aに10を代入する\n    int b = ___;\n    // int型の変数bに3を代入する\n    printf(\"%d\n    // a - b の結果を表示する\n\", a - b);\n    // 正常終了を示す値0を返す\n    return ___;\n// 関数の終わり\n___",
         "correctLines": [
           "// 標準入出力ライブラリを読み込む",
           "int main() {",
           "// プログラムのエントリーポイントを定義する",
-          "    int a = 5;",
-          "    // int型の変数aに5を代入する",
+          "    int a = 10;",
+          "    // int型の変数aに10を代入する",
           "    int b = 3;",
           "    // int型の変数bに3を代入する",
           "    printf(\"%d",
-          "    // a + b の結果を表示する",
-          "\", a + b);",
+          "    // a - b の結果を表示する",
+          "\", a - b);",
           "    // 正常終了を示す値0を返す",
           "    return 0;",
           "// 関数の終わり",
@@ -181,11 +181,11 @@ export const cData = {
         ],
         "candidates": {
           "operators": [
-            "+"
+            "-"
           ],
           "others": [
             "int main() {",
-            "int a = 5;",
+            "int a = 10;",
             "int b = 3;",
             "printf(\"%d",
             "return 0;"
@@ -194,7 +194,7 @@ export const cData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "8"
+            "expected_output": "7"
           }
         ]
       },

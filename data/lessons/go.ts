@@ -107,7 +107,7 @@ export const goData = {
       },
     {
         "title": "コンピュータで計算しましょう",
-        "description": "Go言語を使って、たし算をしてみましょう。",
+        "description": "Go言語を使って、かけ算をしてみましょう。",
         "difficulty": "easy",
         "orderIndex": 3,
         "tutorialSlides": [
@@ -121,21 +121,21 @@ export const goData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // はこに数字を入れる\n    a := 5\n    b := 3\n    // + でたし算する\n    fmt.Println(a + b)\n}",
-        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // はこに数字を入れる\n    ___ := 5\n    ___ := 3\n    // + でたし算する\n    fmt.___(a + b)\n___",
+        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // はこに数字を入れる\n    a := 4\n    b := 3\n    // * でかけ算する\n    fmt.Println(a * b)\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // はこに数字を入れる\n    ___ := 4\n    ___ := 3\n    // * でかけ算する\n    fmt.___(a * b)\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
           "func main() {",
           "    // はこに数字を入れる",
-          "    a := 5",
+          "    a := 4",
           "    b := 3",
-          "    // + でたし算する",
-          "    fmt.Println(a + b)",
+          "    // * でかけ算する",
+          "    fmt.Println(a * b)",
           "}"
         ],
         "lineHints": [
-          "たし算なので `+` を使います。",
+          "かけ算なので `*` を使います。",
           null,
           null,
           null,
@@ -147,13 +147,13 @@ export const goData = {
         ],
         "candidates": {
           "operators": [
-            "+"
+            "*"
           ]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "8\n"
+            "expected_output": "12\n"
           }
         ]
       },
@@ -280,7 +280,7 @@ export const goData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // ageに10を入れる\\n    age := 10\\n    // age を埋め込む\\n    fmt.Printf(\"I am %d years old.\\n\", age)\\n}",
-        "holeyCode": "package ___\\\nimport \\\"___\\\"\\\nfunc ___ () {\\\n    // ageに10を入れる\\\n    ___ := 10\\\n    // age を埋め込む\\\n    fmt.___(\"I am %d years old.\\\n\", age)\\\n___",
+        "holeyCode": "package ___\\\nimport \\\"___\\\"\\\nfunc ___ () {\\\n    // ageに10を入れる\\n    ___ := 10\\\n    // age を埋め込む\\n    fmt.___(\"I am %d years old.\\\n\", age)\\\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",

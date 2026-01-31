@@ -26,11 +26,11 @@ export const haskellData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- Hello, Haskell!を表示\nmain = putStrLn \"Hello, Haskell!\"",
-        "holeyCode": "-- Hello, Haskell!を表示\nmain = putStrLn \"___\"",
+        "correctCode": "-- Welcome to FP!を表示\nmain = putStrLn \"Welcome to FP!\"",
+        "holeyCode": "-- Welcome to FP!を表示\nmain = putStrLn \"___\"",
         "correctLines": [
-          "-- Hello, Haskell!を表示",
-          "main = putStrLn \"Hello, Haskell!\""
+          "-- Welcome to FP!を表示",
+          "main = putStrLn \"Welcome to FP!\""
         ],
         "lineHints": [
           null,
@@ -41,13 +41,13 @@ export const haskellData = {
             "putStrLn"
           ],
           "strings": [
-            "Hello, Haskell!"
+            "Welcome to FP!"
           ]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Haskell!\n"
+            "expected_output": "Welcome to FP!\n"
           }
         ]
       },

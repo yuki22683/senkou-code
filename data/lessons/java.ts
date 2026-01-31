@@ -130,17 +130,17 @@ export const javaData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // x に 10 を代入する\n        int x = 10;\n        // y に 5 を代入する\n        int y = 5;\n        // + でたし算した答えを出す\n        System.out.println(x + y);\n    }\n}",
-        "holeyCode": "public class ___ {\n    public static void ___\\(String[] args) {\n        // x に 10 を代入する\n        int x = ___;\n        // y に 5 を代入する\n        int y = ___;\n        // + でたし算した答えを出す\n        System.out.___(x + y);\n    ___\n___",
+        "correctCode": "public class Main {\n    public static void main(String[] args) {\n        // x に 10 を代入する\n        int x = 10;\n        // y に 3 を代入する\n        int y = 3;\n        // - でひき算した答えを出す\n        System.out.println(x - y);\n    }\n}",
+        "holeyCode": "public class ___ {\n    public static void ___\\(String[] args) {\n        // x に 10 を代入する\n        int x = ___;\n        // y に 3 を代入する\n        int y = ___;\n        // - でひき算した答えを出す\n        System.out.___(x - y);\n    ___\n___",
         "correctLines": [
           "public class Main {",
           "    public static void main(String[] args) {",
           "        // x に 10 を代入する",
           "        int x = 10;",
-          "        // y に 5 を代入する",
-          "        int y = 5;",
-          "        // + でたし算した答えを出す",
-          "        System.out.println(x + y);",
+          "        // y に 3 を代入する",
+          "        int y = 3;",
+          "        // - でひき算した答えを出す",
+          "        System.out.println(x - y);",
           "    }",
           "}"
         ],
@@ -148,7 +148,7 @@ export const javaData = {
           "整数型の変数を宣言し、初期値を代入します。",
           "整数型の変数を宣言し、初期値を代入します。",
           null,
-          "たし算なので `+` を使います。",
+          "ひき算なので `-` を使います。",
           null,
           null,
           null,
@@ -162,21 +162,21 @@ export const javaData = {
             "y"
           ],
           "operators": [
-            "+"
+            "-"
           ],
           "numbers": [
             "10",
-            "5"
+            "3"
           ],
           "others": [
             "10;",
-            "5;"
+            "3;"
           ]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\n"
+            "expected_output": "7\n"
           }
         ]
       },
