@@ -22,32 +22,32 @@ export const haskell2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- *で掛け算\ntriple x = x * 3\n-- tripleを入力\nmain = print (triple 4)",
-        "holeyCode": "-- *で掛け算\ntriple x = x * ___\n-- tripleを入力\nmain = print (triple ___)",
+        "correctCode": "-- +で足し算\naddTen x = x + 10\n-- addTenを入力\nmain = print (addTen 5)",
+        "holeyCode": "-- +で足し算\naddTen x = x + ___\n-- addTenを入力\nmain = print (addTen ___)",
         "correctLines": [
-          "-- *で掛け算",
-          "triple x = x * 3",
-          "-- tripleを入力",
-          "main = print (triple 4)"
+          "-- +で足し算",
+          "addTen x = x + 10",
+          "-- addTenを入力",
+          "main = print (addTen 5)"
         ],
         "lineHints": [
           null,
-          "* で掛け算します。",
+          "+ で足し算します。",
           null,
-          "triple関数を呼び出します。"
+          "addTen関数を呼び出します。"
         ],
         "candidates": {
           "operators": [
-            "*"
+            "+"
           ],
           "others": [
-            "triple"
+            "addTen"
           ]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "12\n"
+            "expected_output": "15\n"
           }
         ]
       },
@@ -354,7 +354,7 @@ export const haskell2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "-- \\でラムダ式を開始\nmain = print (map (\\x -> x * x) [1, 2, 3])",
-        "holeyCode": "-- \\\\でラムダ式を開始\nmain = print (map (\\\\x -> x * x) [___, 2, 3])",
+        "holeyCode": "-- \\でラムダ式を開始\nmain = print (map (\\\\x -> x * x) [___, 2, 3])",
         "correctLines": [
           "-- \\でラムダ式を開始",
           "main = print (map (\\x -> x * x) [1, 2, 3])"
