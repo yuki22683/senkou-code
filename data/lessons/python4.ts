@@ -729,7 +729,7 @@ export const pythonData4 = {
         "tutorialSlides": [
           {
             "title": "@dataclassとは？",
-            "content": "# データ用クラスを「簡単」に定義！\n\n**@dataclass（データクラス）** を使うと、面倒なメソッドが自動で作られます！\n\n**たとえ話：** 住所録のカードのようなもの。\n- 普通のクラス: 「名前欄」「住所欄」を1つずつ手作りする\n- データクラス: 「名前」「住所」と書くだけで自動的にカードが完成！\n\n**普通のクラス vs データクラス：**\n\n```python\n# 普通のクラス（たくさん書く必要あり）\nclass Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\n# データクラス（シンプル！）\n@dataclass\nclass Point:\n    x: int\n    y: int\n```\n\n**自動で作られるもの：**\n- `__init__`: 初期化メソッド（前回学習済み）\n- `__repr__`: **開発者向けの表示メソッド**（`Point(x=3, y=4)` のように属性名付きで表示。`__str__`と似ているが、デバッグや開発用に詳細な情報を返す）\n- `__eq__`: 等価比較メソッド（前回学習済み）\n\n**何をしているか：**\n1. `from dataclasses import dataclass` でインポート\n2. `@dataclass` をクラスの上に書く\n3. `変数名: 型` の形式で属性を定義\n4. `__init__` を書かなくても自動で作られる！"
+            "content": "# データ用クラスを「簡単」に定義！\n\n**@dataclass（データクラス）** を使うと、面倒なメソッドが自動で作られます！\n\n**たとえ話：** 住所録のカードのようなもの。\n- 普通のクラス: 「名前欄」「住所欄」を1つずつ手作りする\n- データクラス: 「名前」「住所」と書くだけで自動的にカードが完成！\n\n**普通のクラス vs データクラス：**\n\n```python\n# 普通のクラス（たくさん書く必要あり）\nclass Point:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n\n# データクラス（シンプル！）\n@dataclass\nclass Point:\n    x: int\n    y: int\n```\n\n**自動で作られるもの：**\n- `__init__`: 初期化メソッド\n- `__repr__`: **開発者向けの表示メソッド**（`Point(x=3, y=4)` のように属性名付きで表示。`__str__`と似ているが、デバッグや開発用に詳細な情報を返す）\n- `__eq__`: 等価比較メソッド\n\n**何をしているか：**\n1. `from dataclasses import dataclass` でインポート\n2. `@dataclass` をクラスの上に書く\n3. `変数名: 型` の形式で属性を定義\n4. `__init__` を書かなくても自動で作られる！"
           }
         ],
         "initialDisplayMode": "holey",
