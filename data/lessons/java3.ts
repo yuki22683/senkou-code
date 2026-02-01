@@ -14,7 +14,7 @@ export const javaData3 = {
         "tutorialSlides": [
           {
             "title": "ラムダ式とは？",
-            "content": "# 簡潔な関数の書き方\n\n**ラムダ式** は、匿名関数を簡潔に書ける構文です。\n\n```java\n// 従来の書き方\nRunnable r = new Runnable() {\n    public void run() { System.out.println(\"Hi\"); }\n};\n\n// ラムダ式\nRunnable r = () -> System.out.println(\"Hi\");\n```"
+            "content": "# 簡潔な関数の書き方\n\n**ラムダ式** は、**匿名関数（名前をつけない使い捨ての関数）** を簡潔に書ける構文です。\n\n```java\n// 従来の書き方\nRunnable r = new Runnable() {\n    public void run() { System.out.println(\"Hi\"); }\n};\n\n// ラムダ式\nRunnable r = () -> System.out.println(\"Hi\");\n```"
           },
           {
             "title": "構文",

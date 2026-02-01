@@ -244,7 +244,7 @@ export const pythonData5 = {
         "tutorialSlides": [
           {
             "title": "re.search()",
-            "content": "# パターンを検索\n\n**正規表現（せいきひょうげん）** とは、文字の **パターン（形）** を表す特別な書き方です。\n\n**たとえ話：** 「3桁の数字」「@が入ったメールアドレス」のような「形」で文字を探せます。\n\n**re.search()（サーチ）** で **文字列の中からパターンに合う部分を探します**。\n\n**よく使う記号：**\n- `\\d` = 数字1文字（0-9）\n- `\\w` = 英数字1文字（a-z, A-Z, 0-9, _）\n- `+` = 1回以上の繰り返し\n- `{3}` = ちょうど3回\n\n**例：** メールアドレスを探そう！\n\n```python\nimport re\n\ntext = 'my email is test@example.com'\nmatch = re.search(r'\\w+@\\w+\\.\\w+', text)\nif match:\n    print(match.group())  # test@example.com\n```\n\n**何をしているか：**\n1. `import re` で正規表現モジュールを読み込む\n2. `re.search(パターン, 文字列)` で検索\n3. 見つかったら `match` オブジェクトが返る\n4. `match.group()` で一致した文字列を取得\n\n**ポイント：** パターンの前に `r` をつけると、`\\` をそのまま使えます。"
+            "content": "# パターンを検索\n\n**正規表現（せいきひょうげん）** とは、文字の **パターン（形）** を表す特別な書き方です。\n\n**たとえ話：** 「3桁の数字」「@が入ったメールアドレス」のような「形」で文字を探せます。\n\n**re.search()（サーチ）** で **文字列の中からパターンに合う部分を探します**。\n\n**よく使う記号：**\n- `\\d` = 数字1文字（0-9）\n- `\\w` = 英数字1文字（a-z, A-Z, 0-9, _）\n- `\\.` = ドット文字そのもの（`.`は特殊文字なので`\\`でエスケープ）\n- `+` = 1回以上の繰り返し\n- `{3}` = ちょうど3回\n\n**例：** メールアドレスを探そう！\n\n```python\nimport re\n\ntext = 'my email is test@example.com'\nmatch = re.search(r'\\w+@\\w+\\.\\w+', text)\nif match:\n    print(match.group())  # test@example.com\n```\n\n**何をしているか：**\n1. `import re` で正規表現モジュールを読み込む\n2. `re.search(パターン, 文字列)` で検索\n3. 見つかったら `match` オブジェクトが返る\n4. `match.group()` で一致した文字列を取得\n\n**ポイント：** パターンの前に `r` をつけると、`\\` をそのまま使えます。"
           }
         ],
         "initialDisplayMode": "holey",

@@ -18,6 +18,10 @@
   2. `node scripts/fix-non-holey-hints.mjs` - 非holey行のhints修正
   3. `node scripts/fix-comment-consistency.mjs` - コメント整合性修正
   4. `node scripts/add-hint-comments.mjs` - コメント追加
+  5. `node scripts/fix-vague-output-comments.mjs` - 曖昧なコメント修正
+  6. `node scripts/sync-comments-to-holey.mjs` - holeyCodeにコメント同期
+  7. `node scripts/fix-correctlines-comments.mjs` - correctLinesのコメント修正
+  8. `node scripts/translate-string-literals.mjs` - 文字列リテラルを英語化
 - index.tsのケーシング修正（Java3→java3, C2→c2など）も再適用が必要
 - **注意**：`fix-holey-v2.mjs` は使用禁止（ルール#24参照）
 
@@ -95,12 +99,28 @@
   - `# 値を配列に入れて返す` → 何の値か不明（`# valueを配列に入れて返す` のように）
   - `// 結果を返す` → 何の結果か不明（`// "Hello Async!"を返す` のように具体的に）
   - `// 値を持つ〜を作成` → 何の値か不明（`// 「Hello」を持つOptionalを作成` のように）
+  - **`# 結果を表示`** → 何の結果か不明（`# scoreを表示` のように変数名を含める）
+  - **`// 結果を表示`** → 何の結果か不明（`// remainderを表示` のように変数名を含める）
+  - **`# 関数を定義`** → 何の関数か不明（`# add関数を定義` のように関数名を含める）
+  - **`// 関数を定義`** → 何の関数か不明（`// check関数を定義` のように関数名を含める）
+  - **`// クラスを定義`** → 何のクラスか不明（`// Calculatorクラスを定義` のようにクラス名を含める）
+  - **`# 〜を属性に保存`** → 何を何に（`# self.nameにnameを代入` のように具体的に）
+  - **`# 〜で初期化するメソッドを定義`** → 何のメソッドか（`# __init__メソッド（引数: self, name）` のように）
+  - **`# 〜の数を返す`** → 何を返すか（`# len(self.members)を返す` のように）
 - **正しい表現**：
   - `# 「ごうかく！」と表示する` → 具体的な文字列がわかる
   - `# 「Hi, 名前!」の形式で表示` → フォーマットがわかる
   - `# scoreが80より大きいか判定` → 条件がわかる
   - `// 'Async works!'を返す` → 返す値が明確
   - `// 「Hello」を持つOptionalを作成する` → 持つ値が明確
+  - **`# scoreを表示`** → 変数名が明確
+  - **`// add関数を定義`** → 関数名が明確
+  - **`// Calculatorクラスを定義`** → クラス名が明確
+- **チェックスクリプト**：`node scripts/check-vague-comments.mjs` で曖昧なコメントを検出
+- **修正スクリプト**：
+  - `node scripts/fix-vague-output-comments.mjs` → correctCodeの曖昧なコメントを自動修正
+  - `node scripts/sync-comments-to-holey.mjs` → correctCodeのコメントをholeyCodeに同期
+  - `node scripts/fix-correctlines-comments.mjs` → correctLinesの曖昧なコメントを修正
 
 ### 13. 構文ハイライトの判定順序
 - `lib/syntax-highlight.ts` の `getTokenStyle()` では、**コメント判定を文字列判定より前**に配置すること。
@@ -206,12 +226,51 @@
 ### 25. レッスン修正後の必須チェック項目
 - レッスンファイルを修正した後は、以下の全チェックを実行して0件/問題なしを確認すること：
   1. `node scripts/check-holey-v3.ts` → 0件
-  2. `node scripts/check-comment-consistency-v3.mjs` → 不整合なし
+  2. `node scripts/check-comment-consistency-v2.mjs` → 不整合なし
   3. `node scripts/check-vague-comments.mjs` → 曖昧なコメントなし
   4. `node scripts/check-tutorial-exercise-similarity.mjs` → 問題なし
-  5. `npm run seed:db` → 成功
+  5. `node scripts/verify-translation.mjs` → 文字列リテラル内の日本語0件
+  6. `npm run seed:db` → 成功
+  7. **【手動確認】** tutorialSlidesで新しい専門用語を使う際、説明前に使っていないか確認（ルール#27参照）
+     - 特に「○○や△△が自動で作られます」のような羅列パターンに注意
+     - 確認コマンド: `grep -E "が自動で作られ|が自動的に" data/lessons/*.ts`
 - **チェックが失敗した場合の修正方法**：
   - check-holey-v3.ts → `fix-empty-line-hints.mjs` と `fix-non-holey-hints.mjs` を実行
-  - check-comment-consistency-v3.mjs → `fix-comment-consistency.mjs` を実行
-  - check-vague-comments.mjs → 手動でコメントを具体的に修正（ルール#12参照）
+  - check-comment-consistency-v2.mjs → `fix-comment-consistency.mjs` を実行
+  - check-vague-comments.mjs → `fix-vague-output-comments.mjs` → `sync-comments-to-holey.mjs` → `fix-correctlines-comments.mjs` を順に実行
   - check-tutorial-exercise-similarity.mjs → 手動で演習のシナリオを変更（ルール#19, #20参照）
+  - verify-translation.mjs → `translate-string-literals.mjs` を実行（ルール#26参照）
+
+### 26. コード内の文字列リテラルは英語、コメントは日本語
+- `correctCode`、`holeyCode`、`correctLines` 内のコードにおいて：
+  - **文字列リテラル**（`'...'` や `"..."`）の中身は**英語**にする
+  - **コメント**（`#`、`//`、`--` 等で始まる行）は**日本語**のまま維持
+- **禁止**：
+  - `print('ごうかく！')` → 文字列が日本語
+  - `console.log('結果を表示')` → 文字列が日本語
+  - `// Display the score` → コメントが英語
+- **正しい**：
+  - `print('Pass!')` → 文字列が英語
+  - `console.log('Display result')` → 文字列が英語
+  - `// scoreを表示` → コメントが日本語
+- **理由**：
+  - 文字列リテラルはプログラムの出力として表示されるため、英語が望ましい
+  - コメントは学習者への説明であり、日本語の方が理解しやすい
+- **検証スクリプト**：`node scripts/verify-translation.mjs`
+  - 日本語コメント数が表示される（これは正常）
+  - 「文字列リテラル内の日本語: 0件」になることを確認
+- **修正スクリプト**：`node scripts/translate-string-literals.mjs`
+  - 新しい日本語文字列がある場合は、スクリプト内の `translations` マップに追加してから実行
+
+### 27. 新しい用語は説明してから使う
+- 解説スライド（`tutorialSlides`）で新しい専門用語を使う際は、**必ずその意味を説明してから使う**こと。
+- **禁止パターン**：
+  - 冒頭で「`__init__` や `__repr__` が自動で作られます！」のように、まだ説明していない用語を羅列する
+  - 「○○と△△と□□ができます」のように、未説明の用語を複数並べる
+- **正しいパターン**：
+  - 冒頭では抽象的に説明し、詳細セクションで各用語を初めて紹介する際に意味を説明する
+  - 例：「面倒なメソッドが自動で作られます」（冒頭）→「`__repr__`: **開発者向けの表示メソッド**（詳細な説明）」（後半）
+- **確認方法**：
+  - その用語がこの演習より前の演習（orderIndex が小さい演習）で説明されているか確認
+  - 説明されていない場合は、その演習内で初めて使う箇所で意味を説明する
+- **理由**：説明なしに専門用語を使うと、学習者は「何それ？」となり混乱する。新しい概念は必ず説明してから使うべき。
