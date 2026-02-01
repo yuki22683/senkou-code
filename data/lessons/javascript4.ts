@@ -179,7 +179,7 @@ export const javascriptData4 = {
           null,
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに出力します。",
           null
         ],
         "candidates": {

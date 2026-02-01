@@ -186,7 +186,7 @@ export const javascriptData = {
           null,
           "定数を宣言し、数値を代入します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。"
+          "コンソールに出力します。"
         ],
         "candidates": {
           "variables": [
@@ -225,8 +225,8 @@ export const javascriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst colors = ['あか', 'あお'];\n// 2番目のデータ（インデックス1）を出す\nconsole.log(colors[1]);",
-        "holeyCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst ___ = ['あか', 'あお'];\n// 2番目のデータ（インデックス1）を出す\nconsole.___(colors[1]);",
+        "correctCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst colors = ['16redconst colors = ['red', '45blueconst colors = ['16redconst colors = ['red', 'blue'];', 'blue'];'];', '54blueconst colors = ['16redconst colors = ['red', 'blue'];', 'blue'];'];\n// 2番目のデータ（インデックス1）を出す\nconsole.log(colors[1]);",
+        "holeyCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst ___ = ['13redconst ___ = ['red', '39blueconst ___ = ['13redconst ___ = ['red', 'blue'];', 'blue'];'];', '48blueconst ___ = ['13redconst ___ = ['red', 'blue'];', 'blue'];'];\n// 2番目のデータ（インデックス1）を出す\nconsole.___(colors[1]);",
         "correctLines": [
           "// 'あか', 'あお' の順で colors という配列を作る",
           "const colors = ['あか', 'あお'];",
@@ -277,15 +277,15 @@ export const javascriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// score に 100 を入れる\nconst score = 100;\n// もし 80 より大きかったら\nif (score > 80) {\n    // 「ごうかく！」と表示する\n    console.log('ごうかく！');\n}",
-        "holeyCode": "// score に 100 を入れる\nconst ___ = 100;\n// もし 80 より大きかったら\nif (score ___ 80) {\n    // 「ごうかく！」と表示する\n    console.___('ごうかく！');\n___",
+        "correctCode": "// score に 100 を入れる\nconst score = 100;\n// もし 80 より大きかったら\nif (score > 80) {\n    // 「ごうかく！」と表示する\n    console.log('16Pass!    console.log('Pass!');');\n}",
+        "holeyCode": "// score に 100 を入れる\nconst ___ = 100;\n// もし 80 より大きかったら\nif (score ___ 80) {\n    // 「ごうかく！」と表示する\n    console.___('16Pass!    console.___('Pass!');');\n___",
         "correctLines": [
           "// score に 100 を入れる",
           "const score = 100;",
           "// もし 80 より大きかったら",
           "if (score > 80) {",
           "    // 「ごうかく！」と表示する",
-          "    console.log('ごうかく！');",
+          "    console.log('16Pass!    console.log('Pass!');');",
           "}"
         ],
         "lineHints": [
@@ -294,7 +294,7 @@ export const javascriptData = {
           null,
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに出力します。",
           null
         ],
         "candidates": {
@@ -340,19 +340,19 @@ export const javascriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// age に 10 を入れる\nconst age = 10;\n// 20以上かを比較する演算子\nif (age >= 20) {\n    // 20歳以上のときのメッセージ（'おとな'）\n    console.log('おとな');\n// 「そうでなければ」を表すキーワード\n} else {\n    // それ以外の場合（'こども'）\n    console.log('こども');\n}",
-        "holeyCode": "// age に 10 を入れる\nconst ___ = 10;\n// 20以上かを比較する演算子\nif (age ___ 20) {\n    // 20歳以上のときのメッセージ（'おとな'）\n    console.___('おとな');\n// 「そうでなければ」を表すキーワード\n} ___ {\n    // それ以外の場合（'こども'）\n    console.___('こども');\n___",
+        "correctCode": "// age に 10 を入れる\nconst age = 10;\n// 20以上かを比較する演算子\nif (age >= 20) {\n    // 20歳以上のときのメッセージ（'おとな'）\n    console.log('16Adult    console.log('Adult');');\n// 「そうでなければ」を表すキーワード\n} else {\n    // それ以外の場合（'こども'）\n    console.log('16Child    console.log('Child');');\n}",
+        "holeyCode": "// age に 10 を入れる\nconst ___ = 10;\n// 20以上かを比較する演算子\nif (age ___ 20) {\n    // 20歳以上のときのメッセージ（'おとな'）\n    console.___('16Adult    console.___('Adult');');\n// 「そうでなければ」を表すキーワード\n} ___ {\n    // それ以外の場合（'こども'）\n    console.___('16Child    console.___('Child');');\n___",
         "correctLines": [
           "// age に 10 を入れる",
           "const age = 10;",
           "// 20以上かを比較する演算子",
           "if (age >= 20) {",
           "    // 20歳以上のときのメッセージ（'おとな'）",
-          "    console.log('おとな');",
+          "    console.log('16Adult    console.log('Adult');');",
           "// 「そうでなければ」を表すキーワード",
           "} else {",
           "    // それ以外の場合（'こども'）",
-          "    console.log('こども');",
+          "    console.log('16Child    console.log('Child');');",
           "}"
         ],
         "lineHints": [
@@ -361,11 +361,11 @@ export const javascriptData = {
           null,
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに出力します。",
           null,
           "もし条件が満たされなかった場合に実行する処理を記述します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに出力します。",
           null
         ],
         "candidates": {
@@ -413,8 +413,8 @@ export const javascriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 配列を作る（'たろう', 'はなこ'の順）\nconst names = ['たろう', 'はなこ'];\n// 順番に取り出すループ\nfor (const name of names) {\n    // 取り出した名前を表示\n    console.log(name);\n}",
-        "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\nconst ___ = ['たろう', 'はなこ'];\n// 順番に取り出すループ\nfor (const name of ___) {\n    // 取り出した名前を表示\n    console.log(___);\n___",
+        "correctCode": "// 配列を作る（'たろう', 'はなこ'の順）\nconst names = ['15Taroconst names = ['Taro', '45Hanakoconst names = ['15Taroconst names = ['Taro', 'Hanako'];', 'Hanako'];'];', '55Hanakoconst names = ['15Taroconst names = ['Taro', 'Hanako'];', 'Hanako'];'];\n// 順番に取り出すループ\nfor (const name of names) {\n    // 取り出した名前を表示\n    console.log(name);\n}",
+        "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\nconst ___ = ['13Taroconst ___ = ['Taro', '41Hanakoconst ___ = ['13Taroconst ___ = ['Taro', 'Hanako'];', 'Hanako'];'];', '51Hanakoconst ___ = ['13Taroconst ___ = ['Taro', 'Hanako'];', 'Hanako'];'];\n// 順番に取り出すループ\nfor (const name of ___) {\n    // 取り出した名前を表示\n    console.log(___);\n___",
         "correctLines": [
           "// 配列を作る（'たろう', 'はなこ'の順）",
           "const names = ['たろう', 'はなこ'];",
@@ -469,11 +469,11 @@ export const javascriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// オブジェクトを作る（nameは'たろう'）\nconst user = { name: 'たろう' };\n// nameプロパティを取り出す\nconsole.log(user.name);",
-        "holeyCode": "// オブジェクトを作る（nameは'たろう'）\nconst ___ = { name: 'たろう' };\n// nameプロパティを取り出す\nconsole.___(user.name);",
+        "correctCode": "// オブジェクトを作る（nameは'たろう'）\nconst user = { name: '21Taroconst user = { name: 'Taro' };' };\n// nameプロパティを取り出す\nconsole.log(user.name);",
+        "holeyCode": "// オブジェクトを作る（nameは'たろう'）\nconst ___ = { name: '20Taroconst ___ = { name: 'Taro' };' };\n// nameプロパティを取り出す\nconsole.___(user.name);",
         "correctLines": [
           "// オブジェクトを作る（nameは'たろう'）",
-          "const user = { name: 'たろう' };",
+          "const user = { name: '21Taroconst user = { name: 'Taro' };' };",
           "// nameプロパティを取り出す",
           "console.log(user.name);"
         ],
@@ -518,13 +518,13 @@ export const javascriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// greet という関数を定義する（'こんにちは'と表示）\nfunction greet() {\n    // 'こんにちは'と表示\n    console.log('こんにちは');\n}\n// 関数を動かす\ngreet();",
-        "holeyCode": "// greet という関数を定義する（'こんにちは'と表示）\nfunction ___() {\n    // 'こんにちは'と表示\n    console.___('こんにちは');\n___\n// 関数を動かす\n___();",
+        "correctCode": "// greet という関数を定義する（'こんにちは'と表示）\nfunction greet() {\n    // 'こんにちは'と表示\n    console.log('16Hello    console.log('Hello');');\n}\n// 関数を動かす\ngreet();",
+        "holeyCode": "// greet という関数を定義する（'こんにちは'と表示）\nfunction ___() {\n    // 'こんにちは'と表示\n    console.___('16Hello    console.___('Hello');');\n___\n// 関数を動かす\n___();",
         "correctLines": [
           "// greet という関数を定義する（'こんにちは'と表示）",
           "function greet() {",
           "    // 'こんにちは'と表示",
-          "    console.log('こんにちは');",
+          "    console.log('16Hello    console.log('Hello');');",
           "}",
           "// 関数を動かす",
           "greet();"
@@ -533,7 +533,7 @@ export const javascriptData = {
           null,
           "function greet() { と入力して、関数を定義します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに出力します。",
           "関数（greet）を呼び出して実行します。",
           null,
           null
