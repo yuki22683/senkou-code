@@ -378,12 +378,12 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# コマンドの出力を変数に格納する構文\nfiles=$(echo \"test\")\n# 変数を表示\necho \"Files: $files\"",
-        "holeyCode": "# コマンドの出力を変数に格納する構文\nfiles=___(___)\n# 変数を表示\necho \"Files: $___\"",
+        "correctCode": "# コマンドの出力を変数に格納する構文\nfiles=$(echo \"test\")\n# \"Files: $files\"をechoで出力\necho \"Files: $files\"",
+        "holeyCode": "# コマンドの出力を変数に格納する構文\nfiles=___(___)\n# \"Files: $files\"をechoで出力\necho \"Files: $___\"",
         "correctLines": [
           "# コマンドの出力を変数に格納する構文",
           "files=$(echo \"test\")",
-          "# 変数を表示",
+          "# \"Files: $files\"をechoで出力",
           "echo \"Files: $files\""
         ],
         "lineHints": [
