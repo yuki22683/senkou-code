@@ -224,8 +224,8 @@ async function main() {
     while ((match = exerciseRegex.exec(content)) !== null) {
       exerciseIndex++;
       const title = match[1];
-      const correctCode = match[2].replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'").replace(/\\\\/g, '\\').replace(/\\t/g, '\t');
-      const holeyCode = match[3].replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'").replace(/\\\\/g, '\\').replace(/\\t/g, '\t');
+      const correctCode = match[2].replace(/\\\\/g, '\\').replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'").replace(/\\t/g, '\t');
+      const holeyCode = match[3].replace(/\\\\/g, '\\').replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'").replace(/\\t/g, '\t');
 
       const correctLines = correctCode.split('\n');
       const holeyLines = holeyCode.split('\n');

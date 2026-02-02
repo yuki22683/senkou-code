@@ -36,8 +36,8 @@ for (const file of files) {
   while ((match = exerciseBlockRegex.exec(content)) !== null) {
     exerciseIndex++;
     const title = match[1];
-    const correctCode = match[2].replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'").replace(/\\\\/g, '\\');
-    const holeyCode = match[3].replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'").replace(/\\\\/g, '\\');
+    const correctCode = match[2].replace(/\\\\/g, '\\').replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'");
+    const holeyCode = match[3].replace(/\\\\/g, '\\').replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'");
     const lineHintsRaw = match[4];
 
     // lineHintsをパース（簡易版）

@@ -82,8 +82,8 @@ for (const file of files) {
   for (const match of exerciseMatches) {
     exerciseIndex++;
     const title = match[1];
-    const correctCode = match[2].replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'").replace(/\\\\/g, '\\');
-    const holeyCode = match[3].replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'").replace(/\\\\/g, '\\');
+    const correctCode = match[2].replace(/\\\\/g, '\\').replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'");
+    const holeyCode = match[3].replace(/\\\\/g, '\\').replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'");
 
     const correctLines = correctCode.split('\n');
     const holeyLines = holeyCode.split('\n');
