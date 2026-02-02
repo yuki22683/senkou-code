@@ -54,11 +54,7 @@ export const kotlin2Data = {
           "operators": [
             "?"
           ],
-          "others": [
-            "42",
-            "null",
-            "println"
-          ]
+          "others": ["42", "null", "println", "num", "}"]
         },
         "testCases": [
           {
@@ -105,9 +101,7 @@ export const kotlin2Data = {
           "operators": [
             "?."
           ],
-          "others": [
-            "String"
-          ]
+          "others": ["String", "Hello", "println"]
         },
         "testCases": [
           {
@@ -154,9 +148,7 @@ export const kotlin2Data = {
           "operators": [
             "?:"
           ],
-          "others": [
-            "null"
-          ]
+          "others": ["null", "println"]
         },
         "testCases": [
           {
@@ -207,10 +199,7 @@ export const kotlin2Data = {
           "keywords": [
             "data"
           ],
-          "others": [
-            "Point",
-            "println"
-          ]
+          "others": ["Point", "println", "Int", "3", "p"]
         },
         "testCases": [
           {
@@ -261,9 +250,7 @@ export const kotlin2Data = {
           "operators": [
             "->"
           ],
-          "others": [
-            "double"
-          ]
+          "others": ["double", "2", "println"]
         },
         "testCases": [
           {
@@ -318,10 +305,7 @@ export const kotlin2Data = {
           "functions": [
             "map"
           ],
-          "others": [
-            "listOf",
-            "println"
-          ]
+          "others": ["listOf", "println", "1", "it", "squared"]
         },
         "testCases": [
           {
@@ -376,10 +360,7 @@ export const kotlin2Data = {
           "functions": [
             "filter"
           ],
-          "others": [
-            "listOf",
-            "println"
-          ]
+          "others": ["listOf", "println", "1", "3", "result"]
         },
         "testCases": [
           {
@@ -448,13 +429,7 @@ export const kotlin2Data = {
           "keywords": [
             "when"
           ],
-          "others": [
-            "2",
-            "one",
-            "two",
-            "other",
-            "println"
-          ]
+          "others": ["2", "one", "two", "other", "println", "x", "}", "result"]
         },
         "testCases": [
           {
@@ -505,9 +480,7 @@ export const kotlin2Data = {
           "keywords": [
             "this"
           ],
-          "others": [
-            "double"
-          ]
+          "others": ["double", "2", "println"]
         },
         "testCases": [
           {
@@ -558,9 +531,7 @@ export const kotlin2Data = {
           "functions": [
             "let"
           ],
-          "others": [
-            "42"
-          ]
+          "others": ["42", "2"]
         },
         "testCases": [
           {

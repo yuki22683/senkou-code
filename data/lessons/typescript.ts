@@ -50,7 +50,8 @@ export const typescriptData = {
           "strings": [
             "string",
             "Hello TS"
-          ]
+          ],
+          "others": ["TS"]
         },
         "testCases": [
           {
@@ -106,7 +107,8 @@ export const typescriptData = {
           ],
           "operators": [
             "+"
-          ]
+          ],
+          "others": ["10", "5", "log"]
         },
         "testCases": [
           {
@@ -148,7 +150,8 @@ export const typescriptData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["log"]
         },
         "testCases": [
           {
@@ -202,9 +205,7 @@ export const typescriptData = {
             "50",
             "10"
           ],
-          "others": [
-            "50;"
-          ]
+          "others": ["50;", "score"]
         },
         "testCases": [
           {
@@ -252,7 +253,8 @@ export const typescriptData = {
           ],
           "strings": [
             "number"
-          ]
+          ],
+          "others": ["10", "log"]
         },
         "testCases": [
           {
@@ -303,7 +305,8 @@ export const typescriptData = {
           ],
           "numbers": [
             "1"
-          ]
+          ],
+          "others": ["log"]
         },
         "testCases": [
           {
@@ -358,9 +361,7 @@ export const typescriptData = {
           "strings": [
             "boolean"
           ],
-          "others": [
-            "おとなです"
-          ]
+          "others": ["おとなです", "true", "log", "}"]
         },
         "testCases": [
           {
@@ -426,11 +427,7 @@ export const typescriptData = {
           "keywords": [
             "else"
           ],
-          "others": [
-            ">=",
-            "ごうかく",
-            "ざんねん"
-          ]
+          "others": [">=", "ごうかく", "ざんねん", "75", "log", "}"]
         },
         "testCases": [
           {
@@ -486,9 +483,7 @@ export const typescriptData = {
           "strings": [
             "ごうかく"
           ],
-          "others": [
-            "85;"
-          ]
+          "others": ["85;", "80", "log", "}"]
         },
         "testCases": [
           {
@@ -546,10 +541,7 @@ export const typescriptData = {
           "strings": [
             "string"
           ],
-          "others": [
-            "たろう",
-            "はなこ"
-          ]
+          "others": ["たろう", "はなこ", "}"]
         },
         "testCases": [
           {
@@ -603,7 +595,8 @@ export const typescriptData = {
             "string",
             "User",
             "name"
-          ]
+          ],
+          "others": ["log"]
         },
         "testCases": [
           {
@@ -653,7 +646,8 @@ export const typescriptData = {
           ],
           "strings": [
             "string"
-          ]
+          ],
+          "others": ["log", "}"]
         },
         "testCases": [
           {
@@ -703,7 +697,8 @@ export const typescriptData = {
           ],
           "strings": [
             "void"
-          ]
+          ],
+          "others": ["log", "}"]
         },
         "testCases": [
           {

@@ -55,11 +55,7 @@ export const typescriptData2 = {
             "||",
             "&&"
           ],
-          "others": [
-            "value",
-            "'Hello'",
-            "42"
-          ]
+          "others": ["value", "'Hello'", "42", "void", "}", "show"]
         },
         "testCases": [
           {
@@ -127,14 +123,7 @@ export const typescriptData2 = {
             "class",
             "struct"
           ],
-          "others": [
-            "Product",
-            "string",
-            "number",
-            "Apple",
-            "150",
-            "log"
-          ]
+          "others": ["Product", "string", "number", "Apple", "150", "log", "}", "1"]
         },
         "testCases": [
           {
@@ -196,11 +185,7 @@ export const typescriptData2 = {
             "*",
             "&"
           ],
-          "others": [
-            "string",
-            "'Bob'",
-            "name"
-          ]
+          "others": ["string", "'Bob'", "name", "Profile", "}", "Bob", "log"]
         },
         "testCases": [
           {
@@ -256,11 +241,7 @@ export const typescriptData2 = {
             "const",
             "let"
           ],
-          "others": [
-            "85",
-            "90",
-            "+"
-          ]
+          "others": ["85", "90", "+", "number", "log"]
         },
         "testCases": [
           {
@@ -322,11 +303,7 @@ export const typescriptData2 = {
             "final",
             "immutable"
           ],
-          "others": [
-            "string",
-            "'Apple'",
-            "id"
-          ]
+          "others": ["string", "'Apple'", "id", "Item", "number", "}", "1", "log"]
         },
         "testCases": [
           {
@@ -392,12 +369,7 @@ export const typescriptData2 = {
             "const",
             "class"
           ],
-          "others": [
-            "Sun",
-            "Mon",
-            "Tue",
-            "today"
-          ]
+          "others": ["Sun", "Mon", "Tue", "today", "Day", "}"]
         },
         "testCases": [
           {
@@ -455,11 +427,7 @@ export const typescriptData2 = {
             "(",
             ")"
           ],
-          "others": [
-            "value",
-            "5",
-            "arr"
-          ]
+          "others": ["value", "5", "arr", "T", "}"]
         },
         "testCases": [
           {
@@ -517,10 +485,7 @@ export const typescriptData2 = {
             "V",
             "Type"
           ],
-          "others": [
-            "'Hello'",
-            "item"
-          ]
+          "others": ["'Hello'", "item", "}", "Hello", "log"]
         },
         "testCases": [
           {
@@ -570,10 +535,7 @@ export const typescriptData2 = {
             "instanceof",
             "type"
           ],
-          "others": [
-            "20",
-            "x"
-          ]
+          "others": ["20", "x", "point", "2", "log"]
         },
         "testCases": [
           {
@@ -643,12 +605,7 @@ export const typescriptData2 = {
             "with",
             "include"
           ],
-          "others": [
-            "number",
-            "string",
-            "'Taro'",
-            "name"
-          ]
+          "others": ["number", "string", "'Taro'", "name", "Base", "}", "1", "log"]
         },
         "testCases": [
           {

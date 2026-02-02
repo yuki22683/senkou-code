@@ -40,10 +40,7 @@ export const lua2Data = {
           "operators": [
             "."
           ],
-          "others": [
-            "Apple",
-            "100"
-          ]
+          "others": ["Apple", "100", "item", "print"]
         },
         "testCases": [
           {
@@ -86,10 +83,7 @@ export const lua2Data = {
           "numbers": [
             "2"
           ],
-          "others": [
-            "10",
-            "30"
-          ]
+          "others": ["10", "30", "nums", "print"]
         },
         "testCases": [
           {
@@ -138,11 +132,7 @@ export const lua2Data = {
           "functions": [
             "ipairs"
           ],
-          "others": [
-            "1",
-            "3",
-            "v"
-          ]
+          "others": ["1", "3", "v", "nums", "do", "print", "end"]
         },
         "testCases": [
           {
@@ -191,11 +181,7 @@ export const lua2Data = {
           "functions": [
             "pairs"
           ],
-          "others": [
-            "10",
-            "k",
-            "v"
-          ]
+          "others": ["10", "k", "v", "t", "do", "print", "end"]
         },
         "testCases": [
           {
@@ -244,10 +230,7 @@ export const lua2Data = {
           "keywords": [
             "function"
           ],
-          "others": [
-            "*",
-            "5"
-          ]
+          "others": ["*", "5", "n", "2", "end", "print"]
         },
         "testCases": [
           {
@@ -303,12 +286,7 @@ export const lua2Data = {
             "return",
             "swap"
           ],
-          "others": [
-            "1",
-            "2",
-            "x",
-            "y"
-          ]
+          "others": ["1", "2", "x", "y", "b", "a", "end", "print"]
         },
         "testCases": [
           {
@@ -361,10 +339,7 @@ export const lua2Data = {
           "keywords": [
             "self"
           ],
-          "others": [
-            "5",
-            "getX"
-          ]
+          "others": ["5", "getX", "obj", "x", "end", "print"]
         },
         "testCases": [
           {
@@ -415,10 +390,7 @@ export const lua2Data = {
           "functions": [
             "setmetatable"
           ],
-          "others": [
-            "10",
-            "."
-          ]
+          "others": ["10", ".", "t", "mt", "print"]
         },
         "testCases": [
           {
@@ -477,12 +449,7 @@ export const lua2Data = {
           "keywords": [
             "return"
           ],
-          "others": [
-            "makeAdder",
-            "+",
-            "5",
-            "10"
-          ]
+          "others": ["makeAdder", "+", "5", "10", "n", "x", "end", "add5", "print"]
         },
         "testCases": [
           {
@@ -531,10 +498,7 @@ export const lua2Data = {
           "functions": [
             "create"
           ],
-          "others": [
-            "hello",
-            "resume"
-          ]
+          "others": ["hello", "resume", "co", "print", "end"]
         },
         "testCases": [
           {

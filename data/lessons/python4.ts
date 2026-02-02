@@ -146,16 +146,7 @@ export const pythonData4 = {
             "parent",
             "self"
           ],
-          "others": [
-            "Person",
-            "__init__(self, name)",
-            "name",
-            "Student(Person)",
-            "__init__(self, name, grade)",
-            "grade",
-            "Student('Taro', 3)",
-            "f'{s.name} is in grade {s.grade}'"
-          ]
+          "others": ["Person", "__init__(self, name)", "name", "Student(Person)", "__init__(self, name, grade)", "grade", "Student('Taro', 3)", "f'{s.name} is in grade {s.grade}'", "__init__", "Student", "3", "print"]
         },
         "testCases": [
           {
@@ -228,16 +219,7 @@ export const pythonData4 = {
             "@staticmethod",
             "@classmethod"
           ],
-          "others": [
-            "Rectangle",
-            "__init__(self, width, height)",
-            "width",
-            "height",
-            "area(self)",
-            "self.width * self.height",
-            "Rectangle(4, 5)",
-            "r.area"
-          ]
+          "others": ["Rectangle", "__init__(self, width, height)", "width", "height", "area(self)", "self.width * self.height", "Rectangle(4, 5)", "r.area", "__init__", "property", "area", "4", "print"]
         },
         "testCases": [
           {
@@ -320,18 +302,7 @@ export const pythonData4 = {
             "@staticmethod",
             "@property"
           ],
-          "others": [
-            "Dog",
-            "0",
-            "__init__(self, name)",
-            "name",
-            "Dog.count += 1",
-            "get_count(cls)",
-            "cls.count",
-            "Dog('Pochi')",
-            "Dog('Hachi')",
-            "Dog.get_count("
-          ]
+          "others": ["Dog", "0", "__init__(self, name)", "name", "Dog.count += 1", "get_count(cls)", "cls.count", "Dog('Pochi')", "Dog('Hachi')", "Dog.get_count(", "__init__", "1", "classmethod", "get_count", "count", "2", "print"]
         },
         "testCases": [
           {
@@ -390,13 +361,7 @@ export const pythonData4 = {
             "@classmethod",
             "@property"
           ],
-          "others": [
-            "Validator",
-            "is_positive(n)",
-            "n > 0",
-            "Validator.is_positive(5",
-            "Validator.is_positive(-3"
-          ]
+          "others": ["Validator", "is_positive(n)", "n > 0", "Validator.is_positive(5", "Validator.is_positive(-3", "staticmethod", "is_positive", "0", "print"]
         },
         "testCases": [
           {
@@ -475,16 +440,7 @@ export const pythonData4 = {
             "@property",
             "@staticmethod"
           ],
-          "others": [
-            "ABC, abstractmethod",
-            "Animal(ABC)",
-            "speak(self)",
-            "pass",
-            "Cat(Animal)",
-            "'Meow'",
-            "Cat()",
-            "cat.speak("
-          ]
+          "others": ["ABC, abstractmethod", "Animal(ABC)", "speak(self)", "pass", "Cat(Animal)", "'Meow'", "Cat()", "cat.speak(", "abstractmethod", "Animal", "speak", "Cat", "Meow", "print"]
         },
         "testCases": [
           {
@@ -553,15 +509,7 @@ export const pythonData4 = {
             "__repr__",
             "__init__"
           ],
-          "others": [
-            "Book",
-            "__init__(self, title, author)",
-            "title",
-            "author",
-            "f'{self.title} by {self.author}'",
-            "Book('Python Guide', 'Taro')",
-            "book"
-          ]
+          "others": ["Book", "__init__(self, title, author)", "title", "author", "f'{self.title} by {self.author}'", "Book('Python Guide', 'Taro')", "book", "Taro", "print"]
         },
         "testCases": [
           {
@@ -634,13 +582,7 @@ export const pythonData4 = {
             "__ne__",
             "__init__"
           ],
-          "others": [
-            "Book",
-            "title",
-            "author",
-            "Book(\"Python入門\", \"田中\")",
-            "print"
-          ]
+          "others": ["Book", "title", "author", "Book(\"Python入門\", \"田中\")", "print", "Python Basics"]
         },
         "testCases": [
           {
@@ -705,14 +647,7 @@ export const pythonData4 = {
             "__size__",
             "__count__"
           ],
-          "others": [
-            "Team",
-            "__init__(self, members)",
-            "members",
-            "len(self.members)",
-            "Team(['Alice', 'Bob', 'Charlie'])",
-            "len(team"
-          ]
+          "others": ["Team", "__init__(self, members)", "members", "len(self.members)", "Team(['Alice', 'Bob', 'Charlie'])", "len(team", "__init__", "Charlie", "print"]
         },
         "testCases": [
           {
@@ -777,14 +712,7 @@ export const pythonData4 = {
             "@property",
             "@classmethod"
           ],
-          "others": [
-            "dataclass",
-            "Person",
-            "str",
-            "int",
-            "Person('Taro', 25)",
-            "p"
-          ]
+          "others": ["dataclass", "Person", "str", "int", "Person('Taro', 25)", "p", "25", "print"]
         },
         "testCases": [
           {

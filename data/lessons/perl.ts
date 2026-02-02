@@ -97,7 +97,8 @@ export const perlData = {
             "our",
             "local",
             "var"
-          ]
+          ],
+          "others": ["message", "print"]
         },
         "testCases": [
           {
@@ -152,7 +153,8 @@ export const perlData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["a", "b", "sum", "print"]
         },
         "testCases": [
           {
@@ -201,7 +203,8 @@ export const perlData = {
             "+",
             ",",
             "&"
-          ]
+          ],
+          "others": ["greeting", "print"]
         },
         "testCases": [
           {
@@ -230,11 +233,11 @@ export const perlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 配列を作る\nmy @fruits = (\"りんご\", \"みかん\", \"ぶどう\");\nprint \"$fruits[0]\n\";",
-        "holeyCode": "# 配列を作る\nmy @___ = (\"りんご\", \"みかん\", \"ぶどう\");\n___ \"$fruits[0]\n\";",
+        "correctCode": "# 配列を作る\nmy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"109grapemy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"orange\", \"129grapemy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"139grapemy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"213grapemy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"orange\", \"233grapemy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"243grapemy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\nprint \"$fruits[0]\n\";",
+        "holeyCode": "# 配列を作る\nmy @___ = (\"11applemy @___ = (\"apple\", \"39orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"97grapemy @___ = (\"11applemy @___ = (\"apple\", \"39orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"56orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"orange\", \"117grapemy @___ = (\"11applemy @___ = (\"apple\", \"39orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"56orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"127grapemy @___ = (\"11applemy @___ = (\"apple\", \"39orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"56orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"56orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"195grapemy @___ = (\"11applemy @___ = (\"apple\", \"39orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"56orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"orange\", \"215grapemy @___ = (\"11applemy @___ = (\"apple\", \"39orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"56orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"225grapemy @___ = (\"11applemy @___ = (\"apple\", \"39orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"56orangemy @___ = (\"11applemy @___ = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\n___ \"$fruits[0]\n\";",
         "correctLines": [
           "# 配列を作る",
-          "my @fruits = (\"りんご\", \"みかん\", \"ぶどう\");",
+          "my @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"109grapemy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"orange\", \"129grapemy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"139grapemy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"213grapemy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"orange\", \"233grapemy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");\", \"243grapemy @fruits = (\"14applemy @fruits = (\"apple\", \"45orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\", \"62orangemy @fruits = (\"14applemy @fruits = (\"apple\", \"orange\", \"grape\");\", \"orange\", \"grape\");\", \"grape\");\");",
           "print \"$fruits[0]",
           "\";"
         ],
@@ -250,7 +253,8 @@ export const perlData = {
             "@colors",
             "$fruits",
             "$colors"
-          ]
+          ],
+          "others": ["fruits", "print"]
         },
         "testCases": [
           {
@@ -305,7 +309,8 @@ export const perlData = {
             "unless",
             "while",
             "for"
-          ]
+          ],
+          "others": ["score", "==", "print", "}"]
         },
         "testCases": [
           {
@@ -366,7 +371,8 @@ export const perlData = {
             "elsif",
             "then",
             "otherwise"
-          ]
+          ],
+          "others": ["num", ">=", "{", "print", "}"]
         },
         "testCases": [
           {
@@ -395,11 +401,11 @@ export const perlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 配列をループ\nmy @animals = (\"犬\", \"猫\", \"鳥\");\n# 配列の各要素について繰り返す\nforeach my $animal (@animals) {\n  print \"$animal\n\";\n}",
-        "holeyCode": "# 配列をループ\nmy @___ = (\"犬\", \"猫\", \"鳥\");\n# 配列の各要素について繰り返す\nforeach my $animal (@___) {\n  ___ \"$animal\n\";\n___",
+        "correctCode": "# 配列をループ\nmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"99birdmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"cat\", \"114birdmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"122birdmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"186birdmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"cat\", \"201birdmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"209birdmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\n# 配列の各要素について繰り返す\nforeach my $animal (@animals) {\n  print \"$animal\n\";\n}",
+        "holeyCode": "# 配列をループ\nmy @___ = (\"11dogmy @___ = (\"dog\", \"35catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"83birdmy @___ = (\"11dogmy @___ = (\"dog\", \"35catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"48catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"cat\", \"98birdmy @___ = (\"11dogmy @___ = (\"dog\", \"35catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"48catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"106birdmy @___ = (\"11dogmy @___ = (\"dog\", \"35catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"48catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"48catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"162birdmy @___ = (\"11dogmy @___ = (\"dog\", \"35catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"48catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"cat\", \"177birdmy @___ = (\"11dogmy @___ = (\"dog\", \"35catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"48catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"185birdmy @___ = (\"11dogmy @___ = (\"dog\", \"35catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"48catmy @___ = (\"11dogmy @___ = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\n# 配列の各要素について繰り返す\nforeach my $animal (@___) {\n  ___ \"$animal\n\";\n___",
         "correctLines": [
           "# 配列をループ",
-          "my @animals = (\"犬\", \"猫\", \"鳥\");",
+          "my @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"99birdmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"cat\", \"114birdmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"122birdmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"186birdmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"cat\", \"201birdmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");\", \"209birdmy @animals = (\"15dogmy @animals = (\"dog\", \"43catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\", \"56catmy @animals = (\"15dogmy @animals = (\"dog\", \"cat\", \"bird\");\", \"cat\", \"bird\");\", \"bird\");\");",
           "# 配列の各要素について繰り返す",
           "foreach my $animal (@animals) {",
           "  print \"$animal",
@@ -421,7 +427,8 @@ export const perlData = {
             "for",
             "while",
             "until"
-          ]
+          ],
+          "others": ["animals", "print", "}", "@animals"]
         },
         "testCases": [
           {
@@ -450,11 +457,11 @@ export const perlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ハッシュを作る\nmy %fruit = (\"color\" => \"赤\");\nprint \"$fruit{color}\n\";",
-        "holeyCode": "# ハッシュを作る\nmy %fruit = (\"___\" => \"赤\");\n___ \"$fruit{color}\n\";",
+        "correctCode": "# ハッシュを作る\nmy %fruit = (\"color\" => \"24redmy %fruit = (\"color\" => \"red\");\");\nprint \"$fruit{color}\n\";",
+        "holeyCode": "# ハッシュを作る\nmy %fruit = (\"___\" => \"22redmy %fruit = (\"___\" => \"red\");\");\n___ \"$fruit{color}\n\";",
         "correctLines": [
           "# ハッシュを作る",
-          "my %fruit = (\"color\" => \"赤\");",
+          "my %fruit = (\"color\" => \"24redmy %fruit = (\"color\" => \"red\");\");",
           "print \"$fruit{color}",
           "\";"
         ],
@@ -470,7 +477,8 @@ export const perlData = {
             "%color",
             "@fruit",
             "$fruit"
-          ]
+          ],
+          "others": ["color", "print"]
         },
         "testCases": [
           {
@@ -527,7 +535,8 @@ export const perlData = {
             "def",
             "function",
             "fn"
-          ]
+          ],
+          "others": ["welcome", "print", "}"]
         },
         "testCases": [
           {

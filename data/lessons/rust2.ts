@@ -43,7 +43,8 @@ export const rust2Data = {
         "candidates": {
           "variables": [
             "s1"
-          ]
+          ],
+          "others": ["main()", "s2", "println", "}"]
         },
         "testCases": [
           {
@@ -93,7 +94,8 @@ export const rust2Data = {
         "candidates": {
           "operators": [
             "&"
-          ]
+          ],
+          "others": ["print_len(s:", "println", "}", "main()", "text", "print_len"]
         },
         "testCases": [
           {
@@ -145,7 +147,8 @@ export const rust2Data = {
         "candidates": {
           "keywords": [
             "mut"
-          ]
+          ],
+          "others": ["add_world(s:", "push_str", "}", "main()", "text", "add_world", "println"]
         },
         "testCases": [
           {
@@ -197,7 +200,8 @@ export const rust2Data = {
         "candidates": {
           "keywords": [
             "struct"
-          ]
+          ],
+          "others": ["Rect", "i32", "}", "main()", "r", "println"]
         },
         "testCases": [
           {
@@ -257,7 +261,8 @@ export const rust2Data = {
         "candidates": {
           "keywords": [
             "impl"
-          ]
+          ],
+          "others": ["Square", "i32", "}", "area(&self)", "side", "main()", "s", "println"]
         },
         "testCases": [
           {
@@ -315,7 +320,8 @@ export const rust2Data = {
         "candidates": {
           "keywords": [
             "enum"
-          ]
+          ],
+          "others": ["Direction", "Up", "Down", "}", "main()", "d", "println"]
         },
         "testCases": [
           {
@@ -365,7 +371,8 @@ export const rust2Data = {
         "candidates": {
           "keywords": [
             "Some"
-          ]
+          ],
+          "others": ["main()", "Option<i32>", "val", "println", "}"]
         },
         "testCases": [
           {
@@ -425,7 +432,8 @@ export const rust2Data = {
         "candidates": {
           "keywords": [
             "Ok"
-          ]
+          ],
+          "others": ["half(n:", "!=", "\"odd\".to_string(", "}", "main()", "half", "println"]
         },
         "testCases": [
           {
@@ -487,7 +495,8 @@ export const rust2Data = {
         "candidates": {
           "keywords": [
             "trait"
-          ]
+          ],
+          "others": ["Speak", "speak(&self);", "}", "Dog", "speak(&self)", "println", "main()", "d", "speak"]
         },
         "testCases": [
           {
@@ -537,7 +546,8 @@ export const rust2Data = {
         "candidates": {
           "variables": [
             "T"
-          ]
+          ],
+          "others": ["println", "}", "main()", "print_val"]
         },
         "testCases": [
           {

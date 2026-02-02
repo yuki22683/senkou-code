@@ -78,13 +78,7 @@ export const kotlin3Data = {
             "async",
             "await"
           ],
-          "others": [
-            "*",
-            "delay",
-            "Hello",
-            "main",
-            "println"
-          ]
+          "others": ["*", "delay", "Hello", "main", "println", "coroutines", "String", "100", "}", "runBlocking"]
         },
         "testCases": [
           {
@@ -155,12 +149,7 @@ export const kotlin3Data = {
             "sequence",
             "listOf"
           ],
-          "others": [
-            "main",
-            "4",
-            "toList()",
-            "println"
-          ]
+          "others": ["main", "4", "toList()", "println", "1", "toList", "nums", "}"]
         },
         "testCases": [
           {
@@ -231,11 +220,7 @@ export const kotlin3Data = {
             "noinline",
             "crossinline"
           ],
-          "others": [
-            "action",
-            "main",
-            "repeat"
-          ]
+          "others": ["action", "main", "repeat", "Unit", "0", "}", "3"]
         },
         "testCases": [
           {
@@ -310,12 +295,7 @@ export const kotlin3Data = {
             "inline",
             "generic"
           ],
-          "others": [
-            "is",
-            "main",
-            "String",
-            "Int"
-          ]
+          "others": ["is", "main", "String", "Int", "Boolean", "T", "}", "println"]
         },
         "testCases": [
           {
@@ -394,13 +374,7 @@ export const kotlin3Data = {
             "also",
             "run"
           ],
-          "others": [
-            "data",
-            "main",
-            "localhost",
-            "8080",
-            "println"
-          ]
+          "others": ["data", "main", "localhost", "8080", "println", "}", "cfg"]
         },
         "testCases": [
           {
@@ -469,12 +443,7 @@ export const kotlin3Data = {
             "apply",
             "let"
           ],
-          "others": [
-            "main",
-            "42",
-            "it",
-            "println"
-          ]
+          "others": ["main", "42", "it", "println", "}", "num"]
         },
         "testCases": [
           {
@@ -543,11 +512,7 @@ export const kotlin3Data = {
             "let",
             "with"
           ],
-          "others": [
-            "main",
-            "size",
-            "println"
-          ]
+          "others": ["main", "size", "println", "Hello World", "}", "result"]
         },
         "testCases": [
           {
@@ -610,11 +575,7 @@ export const kotlin3Data = {
             "takeUnless",
             "filter"
           ],
-          "others": [
-            "main",
-            "10",
-            "println"
-          ]
+          "others": ["main", "10", "println", "num", "}"]
         },
         "testCases": [
           {
@@ -681,11 +642,7 @@ export const kotlin3Data = {
             "partition",
             "associate"
           ],
-          "others": [
-            "main",
-            "listOf",
-            "println"
-          ]
+          "others": ["main", "listOf", "println", "1", "2", "grouped", "}"]
         },
         "testCases": [
           {
@@ -752,11 +709,7 @@ export const kotlin3Data = {
             "reduce",
             "aggregate"
           ],
-          "others": [
-            "main",
-            "listOf",
-            "println"
-          ]
+          "others": ["main", "listOf", "println", "1", "product", "}"]
         },
         "testCases": [
           {

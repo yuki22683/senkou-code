@@ -38,7 +38,8 @@ export const elixirData = {
         "candidates": {
           "strings": [
             "Hello, Elixir!"
-          ]
+          ],
+          "others": ["ello, Elixir!\""]
         },
         "testCases": [
           {
@@ -131,7 +132,8 @@ export const elixirData = {
           ],
           "operators": [
             "+"
-          ]
+          ],
+          "others": ["b"]
         },
         "testCases": [
           {

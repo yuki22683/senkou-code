@@ -56,12 +56,7 @@ export const javascriptData3 = {
             "Function",
             "Object"
           ],
-          "others": [
-            "p",
-            "resolve",
-            "100",
-            "msg"
-          ]
+          "others": ["p", "resolve", "100", "msg", "setTimeout", "}"]
         },
         "testCases": [
           {
@@ -106,9 +101,7 @@ export const javascriptData3 = {
             "reject",
             "all"
           ],
-          "others": [
-            "then"
-          ]
+          "others": ["then", "42", "log"]
         },
         "testCases": [
           {
@@ -161,10 +154,7 @@ export const javascriptData3 = {
             "await",
             "function"
           ],
-          "others": [
-            "return",
-            "then"
-          ]
+          "others": ["return", "then", "getMessage", "works", "}", "msg"]
         },
         "testCases": [
           {
@@ -223,10 +213,7 @@ export const javascriptData3 = {
             "async",
             "return"
           ],
-          "others": [
-            "log",
-            "main"
-          ]
+          "others": ["log", "main", "value", "}"]
         },
         "testCases": [
           {
@@ -281,9 +268,7 @@ export const javascriptData3 = {
             "race",
             "resolve"
           ],
-          "others": [
-            "0"
-          ]
+          "others": ["0", "p1", "p2", "1", "log", "}"]
         },
         "testCases": [
           {
@@ -354,12 +339,7 @@ export const javascriptData3 = {
             "function",
             "const"
           ],
-          "others": [
-            "constructor",
-            "name",
-            "new",
-            "bark"
-          ]
+          "others": ["constructor", "name", "new", "bark", "Dog", "}", "log", "dog"]
         },
         "testCases": [
           {
@@ -430,12 +410,7 @@ export const javascriptData3 = {
             "implements",
             "with"
           ],
-          "others": [
-            "class",
-            "speak",
-            "Meow!",
-            "new"
-          ]
+          "others": ["class", "speak", "Meow!", "new", "Animal", "log", "}", "Cat", "cat"]
         },
         "testCases": [
           {
@@ -496,11 +471,7 @@ export const javascriptData3 = {
             "public",
             "private"
           ],
-          "others": [
-            "class",
-            "return",
-            "Calculator"
-          ]
+          "others": ["class", "return", "Calculator", "b", "}", "log"]
         },
         "testCases": [
           {
@@ -549,9 +520,7 @@ export const javascriptData3 = {
             ".",
             "?."
           ],
-          "others": [
-            "Bob"
-          ]
+          "others": ["Bob", "data", "log"]
         },
         "testCases": [
           {
@@ -600,10 +569,7 @@ export const javascriptData3 = {
             "||",
             "&&"
           ],
-          "others": [
-            "undefined",
-            "log"
-          ]
+          "others": ["undefined", "log", "value", "result"]
         },
         "testCases": [
           {

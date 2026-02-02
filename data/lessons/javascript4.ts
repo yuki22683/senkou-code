@@ -42,10 +42,7 @@ export const javascriptData4 = {
             "some",
             "all"
           ],
-          "others": [
-            "75",
-            "log"
-          ]
+          "others": ["75", "log", "scores", "allPassed"]
         },
         "testCases": [
           {
@@ -90,10 +87,7 @@ export const javascriptData4 = {
             "every",
             "any"
           ],
-          "others": [
-            "22",
-            "log"
-          ]
+          "others": ["22", "log", "ages", "hasAdult"]
         },
         "testCases": [
           {
@@ -138,10 +132,7 @@ export const javascriptData4 = {
             "map",
             "flat"
           ],
-          "others": [
-            "world",
-            "log"
-          ]
+          "others": ["world", "log", "words", "chars"]
         },
         "testCases": [
           {
@@ -188,10 +179,7 @@ export const javascriptData4 = {
             "keys",
             "values"
           ],
-          "others": [
-            "Taro",
-            "key"
-          ]
+          "others": ["Taro", "key", "user", "log", "}"]
         },
         "testCases": [
           {
@@ -236,10 +224,7 @@ export const javascriptData4 = {
             "entries",
             "create"
           ],
-          "others": [
-            "Python",
-            "log"
-          ]
+          "others": ["Python", "log", "pairs", "obj"]
         },
         "testCases": [
           {
@@ -284,10 +269,7 @@ export const javascriptData4 = {
             "->",
             "function"
           ],
-          "others": [
-            "multiply",
-            "5"
-          ]
+          "others": ["multiply", "5", "double", "log"]
         },
         "testCases": [
           {
@@ -340,12 +322,7 @@ export const javascriptData4 = {
             "f",
             "x"
           ],
-          "others": [
-            "*",
-            "-",
-            "compose",
-            "3"
-          ]
+          "others": ["*", "-", "compose", "3", "square", "negate", "squareThenNegate", "log"]
         },
         "testCases": [
           {
@@ -408,13 +385,7 @@ export const javascriptData4 = {
             "--",
             "+="
           ],
-          "others": [
-            "function",
-            "let",
-            "createCounter",
-            "counter());",
-            "counter"
-          ]
+          "others": ["function", "let", "createCounter", "counter());", "counter", "count", "}", "log"]
         },
         "testCases": [
           {
@@ -485,14 +456,7 @@ export const javascriptData4 = {
             "of",
             "has"
           ],
-          "others": [
-            "function",
-            "{}",
-            "fn",
-            "return",
-            "memoize",
-            "5"
-          ]
+          "others": ["function", "{}", "fn", "return", "memoize", "5", "cache", "x", "}", "};", "square", "log"]
         },
         "testCases": [
           {
@@ -556,13 +520,7 @@ export const javascriptData4 = {
             "reduce",
             "v"
           ],
-          "others": [
-            "const",
-            "pipe",
-            "1",
-            "*",
-            "5"
-          ]
+          "others": ["const", "pipe", "1", "*", "5", "x", "process", "+", "-", ");", "log"]
         },
         "testCases": [
           {

@@ -53,10 +53,7 @@ export const lua3Data = {
             "call",
             "try"
           ],
-          "others": [
-            "ok",
-            "result"
-          ]
+          "others": ["ok", "result", "10", "5", "end", "then", "print"]
         },
         "testCases": [
           {
@@ -103,7 +100,8 @@ export const lua3Data = {
             "throw",
             "raise",
             "fail"
-          ]
+          ],
+          "others": ["ok", "msg", "test error", "end", "print"]
         },
         "testCases": [
           {
@@ -146,7 +144,8 @@ export const lua3Data = {
             "check",
             "verify",
             "validate"
-          ]
+          ],
+          "others": ["value", "print"]
         },
         "testCases": [
           {
@@ -191,7 +190,8 @@ export const lua3Data = {
             "typeof",
             "kind",
             "class"
-          ]
+          ],
+          "others": ["t", "print"]
         },
         "testCases": [
           {
@@ -236,7 +236,8 @@ export const lua3Data = {
             "string",
             "str",
             "toString"
-          ]
+          ],
+          "others": ["n", "print"]
         },
         "testCases": [
           {
@@ -283,7 +284,8 @@ export const lua3Data = {
             "number",
             "int",
             "toNumber"
-          ]
+          ],
+          "others": ["s", "n", "print"]
         },
         "testCases": [
           {
@@ -330,7 +332,8 @@ export const lua3Data = {
             "+",
             "&",
             "||"
-          ]
+          ],
+          "others": ["a", "b", "print"]
         },
         "testCases": [
           {
@@ -375,7 +378,8 @@ export const lua3Data = {
             "$",
             "@",
             "&"
-          ]
+          ],
+          "others": ["s", "print"]
         },
         "testCases": [
           {
@@ -422,7 +426,8 @@ export const lua3Data = {
             "or",
             "if",
             "then"
-          ]
+          ],
+          "others": ["age", "status", "print"]
         },
         "testCases": [
           {
@@ -471,7 +476,8 @@ export const lua3Data = {
             "continue",
             "return",
             "exit"
-          ]
+          ],
+          "others": ["1", "10", ">", "print", "end"]
         },
         "testCases": [
           {

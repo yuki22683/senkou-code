@@ -23,7 +23,7 @@ export const cppData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nint main() {\n    // Hello, C++! と入力\n    std::cout << \"Hello, C++!\" << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\nint ___() {\n    // Hello, C++! と入力\n    std::cout << ___ << std::endl;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nint ___() {\n    // Hello, C++! と入力\n    std::cout << ___ << std::endl;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -43,7 +43,8 @@ export const cppData = {
         "candidates": {
           "strings": [
             "Hello, C++!"
-          ]
+          ],
+          "others": ["main", "\"Hello,", "0", "}"]
         },
         "testCases": [
           {
@@ -69,7 +70,7 @@ export const cppData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nint main() {\n    // 10 と入力\n    int x = 10;\n    // x と入力\n    std::cout << x << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\nint ___() {\n    // 10 と入力\n    int x = ___;\n    // x と入力\n    std::cout << ___ << std::endl;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nint ___() {\n    // 10 と入力\n    int x = ___;\n    // x と入力\n    std::cout << ___ << std::endl;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -97,9 +98,7 @@ export const cppData = {
           "numbers": [
             "10"
           ],
-          "others": [
-            "10;"
-          ]
+          "others": ["10;", "main", "0", "}"]
         },
         "testCases": [
           {
@@ -125,7 +124,7 @@ export const cppData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nint main() {\n    int a = 5;\n    int b = 3;\n    // + でたし算\n    std::cout << a + b << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\nint ___() {\n    int a = ___;\n    int b = ___;\n    // + でたし算\n    std::cout << a + b << std::___;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nint ___() {\n    int a = ___;\n    int b = ___;\n    // + でたし算\n    std::cout << a + b << std::___;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -149,7 +148,8 @@ export const cppData = {
         "candidates": {
           "operators": [
             "+"
-          ]
+          ],
+          "others": ["main", "5", "3", "endl", "0", "}"]
         },
         "testCases": [
           {
@@ -175,7 +175,7 @@ export const cppData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nint main() {\n    // 10 を 3 で割ったあまりを出力する\n    std::cout << 10 % 3 << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\nint ___() {\n    // 10 を 3 で割ったあまりを出力する\n    std::cout << ___ % 3 << std::endl;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nint ___() {\n    // 10 を 3 で割ったあまりを出力する\n    std::cout << ___ % 3 << std::endl;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -199,7 +199,8 @@ export const cppData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["main", "10", "0", "}"]
         },
         "testCases": [
           {
@@ -224,8 +225,8 @@ export const cppData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    // scoreに50を入れる\n    int score = 50;\n    // 10点プラスする\n    score += 10;\n    // 結果を表示\n    std::cout << score << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\nint ___() {\n    // scoreに50を入れる\n    int score = ___;\n    // 10点プラスする\n    score += ___;\n    // 結果を表示\n    std::cout << ___ << std::endl;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\nint main() {\n    // scoreに50を入れる\n    int score = 50;\n    // 10点プラスする\n    score += 10;\n    // scoreを表示\n    std::cout << score << std::endl;\n    return 0;\n}",
+        "holeyCode": "#include <iostream>\nint ___() {\n    // scoreに50を入れる\n    int score = ___;\n    // 10点プラスする\n    score += ___;\n    // scoreを表示\n    std::cout << ___ << std::endl;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -233,7 +234,7 @@ export const cppData = {
           "    int score = 50;",
           "    // 10点プラスする",
           "    score += 10;",
-          "    // 結果を表示",
+          "    // scoreを表示",
           "    std::cout << score << std::endl;",
           "    return 0;",
           "}"
@@ -261,9 +262,7 @@ export const cppData = {
             "50",
             "10"
           ],
-          "others": [
-            "50;"
-          ]
+          "others": ["50;", "main", "score", "0", "}"]
         },
         "testCases": [
           {
@@ -289,7 +288,7 @@ export const cppData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nint main() {\n    int age = 10;\n    // age と入力\n    std::cout << \"I am \" << age << \" years old.\" << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\nint ___() {\n    int age = ___;\n    // age と入力\n    std::cout << ___ << age << \" years old.\" << std::endl;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nint ___() {\n    int age = ___;\n    // age と入力\n    std::cout << ___ << age << \" years old.\" << std::endl;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -311,7 +310,8 @@ export const cppData = {
         "candidates": {
           "variables": [
             "age"
-          ]
+          ],
+          "others": ["main", "10", "\"I", "0", "}"]
         },
         "testCases": [
           {
@@ -336,14 +336,14 @@ export const cppData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\n#include <vector>\n#include <string>\nint main() {\n    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\n    // 1 と入力（2番目のデータはインデックス1）\n    std::cout << fruits[1] << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\n#include <___>\n#include <___>\nint ___() {\n    std::vector<std::string> fruits = {\"___\", \"バナナ\"};\n    // 1 と入力（2番目のデータはインデックス1）\n    std::cout << fruits[___] << std::endl;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\n#include <vector>\n#include <string>\nint main() {\n    std::vector<std::string> fruits = {\"39apple    std::vector<std::string> fruits = {\"apple\", \"95banana    std::vector<std::string> fruits = {\"39apple    std::vector<std::string> fruits = {\"apple\", \"banana\"};\", \"banana\"};\"};\", \"105banana    std::vector<std::string> fruits = {\"39apple    std::vector<std::string> fruits = {\"apple\", \"banana\"};\", \"banana\"};\"};\n    // 1 と入力（2番目のデータはインデックス1）\n    std::cout << fruits[1] << std::endl;\n    return 0;\n}",
+        "holeyCode": "#include <iostream>\n#include <vector>\n#include <string>\nint ___() {\n    std::vector<std::string> fruits = {\"___\", \"46banana    std::vector<std::string> fruits = {\"___\", \"banana\"};\"};\n    // 1 と入力（2番目のデータはインデックス1）\n    std::cout << fruits[___] << std::endl;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <vector>",
           "#include <string>",
           "int main() {",
-          "    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};",
+          "    std::vector<std::string> fruits = {\"39apple    std::vector<std::string> fruits = {\"apple\", \"95banana    std::vector<std::string> fruits = {\"39apple    std::vector<std::string> fruits = {\"apple\", \"banana\"};\", \"banana\"};\"};\", \"105banana    std::vector<std::string> fruits = {\"39apple    std::vector<std::string> fruits = {\"apple\", \"banana\"};\", \"banana\"};\"};",
           "    // 1 と入力（2番目のデータはインデックス1）",
           "    std::cout << fruits[1] << std::endl;",
           "    return 0;",
@@ -363,7 +363,8 @@ export const cppData = {
         "candidates": {
           "numbers": [
             "1"
-          ]
+          ],
+          "others": ["main", "りんご", "0", "}", "39apple    std::vector<std::string> fruits = {", "s = {"]
         },
         "testCases": [
           {
@@ -389,7 +390,7 @@ export const cppData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nint main() {\n    // scoreに100を入れる\n    int score = 100;\n    // > で「より大きい」を比較\n    if (score > 80) {\n        // 'Perfect' と入力\n        std::cout << \"Perfect\" << std::endl;\n    }\n    return 0;\n}",
-        "holeyCode": "#include <___>\nint ___() {\n    // scoreに100を入れる\n    int score = ___;\n    // > で「より大きい」を比較\n    if (score ___ 80) {\n        // 'Perfect' と入力\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nint ___() {\n    // scoreに100を入れる\n    int score = ___;\n    // > で「より大きい」を比較\n    if (score ___ 80) {\n        // 'Perfect' と入力\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -423,9 +424,7 @@ export const cppData = {
           "strings": [
             "Perfect"
           ],
-          "others": [
-            "100;"
-          ]
+          "others": ["100;", "main", "100", "\"Perfect\"", "}", "0"]
         },
         "testCases": [
           {
@@ -451,7 +450,7 @@ export const cppData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nint main() {\n    // ageに10を入れる\n    int age = 10;\n    // 20以上かを比較する演算子\n    if (age >= 20) {\n        // 20歳以上のときのメッセージ（'Adult'）\n        std::cout << \"Adult\" << std::endl;\n    // else で「それ以外」\n    } else {\n        // それ以外のメッセージ（'Minor'）\n        std::cout << \"Minor\" << std::endl;\n    }\n    return 0;\n}",
-        "holeyCode": "#include <___>\nint ___() {\n    // ageに10を入れる\n    int age = ___;\n    // 20以上かを比較する演算子\n    if (age ___ 20) {\n        // 20歳以上のときのメッセージ（'Adult'）\n        std::cout << ___ << std::endl;\n    // else で「それ以外」\n    } ___ {\n        // それ以外のメッセージ（'Minor'）\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nint ___() {\n    // ageに10を入れる\n    int age = ___;\n    // 20以上かを比較する演算子\n    if (age ___ 20) {\n        // 20歳以上のときのメッセージ（'Adult'）\n        std::cout << ___ << std::endl;\n    // else で「それ以外」\n    } ___ {\n        // それ以外のメッセージ（'Minor'）\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -490,12 +489,7 @@ export const cppData = {
           "keywords": [
             "else"
           ],
-          "others": [
-            "10;",
-            ">=",
-            "Adult",
-            "Minor"
-          ]
+          "others": ["10;", ">=", "Adult", "Minor", "main", "10", "\"Adult\"", "\"Minor\"", "}", "0"]
         },
         "testCases": [
           {
@@ -521,7 +515,7 @@ export const cppData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nint main() {\n    // scoreに85を入れる\n    int score = 85;\n    // 80以上 かつ 100以下 ならメッセージを出す\n    if (score >= 80 && score <= 100) {\n        // 「Pass」と出力\n        std::cout << \"Pass\" << std::endl;\n    }\n    return 0;\n}",
-        "holeyCode": "#include <___>\nint ___() {\n    // scoreに85を入れる\n    int score = ___;\n    // 80以上 かつ 100以下 ならメッセージを出す\n    if (score >= ___ && score <= 100) {\n        // 「Pass」と出力\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nint ___() {\n    // scoreに85を入れる\n    int score = ___;\n    // 80以上 かつ 100以下 ならメッセージを出す\n    if (score >= ___ && score <= 100) {\n        // 「Pass」と出力\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -559,9 +553,7 @@ export const cppData = {
           "strings": [
             "Pass"
           ],
-          "others": [
-            "85;"
-          ]
+          "others": ["85;", "main", "80", "\"Pass\"", "}", "0"]
         },
         "testCases": [
           {
@@ -587,7 +579,7 @@ export const cppData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\n#include <vector>\nint main() {\n    std::vector<int> nums = {1, 2, 3};\n    // nums で配列を指定\n    for (int n : nums) {\n        std::cout << n << std::endl;\n    }\n    return 0;\n}",
-        "holeyCode": "#include <___>\n#include <___>\nint ___() {\n    std::vector<int> nums = {___, 2, 3};\n    // nums で配列を指定\n    for (int ___ : nums) {\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\n#include <vector>\nint ___() {\n    std::vector<int> nums = {___, 2, 3};\n    // nums で配列を指定\n    for (int ___ : nums) {\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <vector>",
@@ -616,9 +608,7 @@ export const cppData = {
           "variables": [
             "nums"
           ],
-          "others": [
-            "nums) {"
-          ]
+          "others": ["nums) {", "main", "1", "n", "}", "0"]
         },
         "testCases": [
           {
@@ -644,7 +634,7 @@ export const cppData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\n#include <map>\n#include <string>\nint main() {\n    std::map<std::string, int> scores;\n    // 'Math' と入力（キー名）\n    scores[\"Math\"] = 90;\n    // 'Math' と入力（同じキー名）\n    std::cout << scores[\"Math\"] << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\n#include <___>\n#include <___>\nint ___() {\n    std::map<std::string, int> ___;\n    // 'Math' と入力（キー名）\n    scores[\"___\"] = 90;\n    // 'Math' と入力（同じキー名）\n    std::cout << scores[\"___\"] << std::endl;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\n#include <map>\n#include <string>\nint ___() {\n    std::map<std::string, int> ___;\n    // 'Math' と入力（キー名）\n    scores[\"___\"] = 90;\n    // 'Math' と入力（同じキー名）\n    std::cout << scores[\"___\"] << std::endl;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <map>",
@@ -674,7 +664,8 @@ export const cppData = {
         "candidates": {
           "strings": [
             "Math"
-          ]
+          ],
+          "others": ["main", "scores", "0", "}"]
         },
         "testCases": [
           {
@@ -700,7 +691,7 @@ export const cppData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nvoid greet() {\n    std::cout << \"Hello\" << std::endl;\n}\nint main() {\n    // greet で関数を呼び出す\n    greet();\n    return 0;\n}",
-        "holeyCode": "#include <___>\nvoid ___() {\n    std::cout << ___ << std::endl;\n___\nint ___() {\n    // greet で関数を呼び出す\n    ___();\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nvoid ___() {\n    std::cout << ___ << std::endl;\n___\nint ___() {\n    // greet で関数を呼び出す\n    ___();\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "void greet() {",
@@ -726,7 +717,8 @@ export const cppData = {
         "candidates": {
           "functions": [
             "greet"
-          ]
+          ],
+          "others": ["\"Hello\"", "}", "main", "0"]
         },
         "testCases": [
           {

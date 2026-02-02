@@ -48,7 +48,8 @@ export const perl3Data = {
             "fopen",
             "file",
             "read"
-          ]
+          ],
+          "others": ["open(my $fh, \">\", \"/tmp/test.txt\") or die;", "\"", "close", "print"]
         },
         "testCases": [
           {
@@ -99,7 +100,8 @@ export const perl3Data = {
             "fclose",
             "end",
             "shut"
-          ]
+          ],
+          "others": ["open(my $fh, \">\", \"/tmp/test2.txt\") or die;", "\"", "print"]
         },
         "testCases": [
           {
@@ -148,7 +150,8 @@ export const perl3Data = {
             "chop",
             "trim",
             "strip"
-          ]
+          ],
+          "others": ["text", "print"]
         },
         "testCases": [
           {
@@ -195,7 +198,8 @@ export const perl3Data = {
             "explode",
             "divide",
             "cut"
-          ]
+          ],
+          "others": ["data", "fruits", "print"]
         },
         "testCases": [
           {
@@ -242,7 +246,8 @@ export const perl3Data = {
             "implode",
             "concat",
             "merge"
-          ]
+          ],
+          "others": ["words", "sentence", "print"]
         },
         "testCases": [
           {
@@ -289,7 +294,8 @@ export const perl3Data = {
             "append",
             "add",
             "insert"
-          ]
+          ],
+          "others": ["nums", "3", "print"]
         },
         "testCases": [
           {
@@ -336,7 +342,8 @@ export const perl3Data = {
             "remove",
             "take",
             "get"
-          ]
+          ],
+          "others": ["nums", "last", "print"]
         },
         "testCases": [
           {
@@ -383,7 +390,8 @@ export const perl3Data = {
             "order",
             "arrange",
             "rank"
-          ]
+          ],
+          "others": ["words", "sorted", "print"]
         },
         "testCases": [
           {
@@ -430,7 +438,8 @@ export const perl3Data = {
             "flip",
             "invert",
             "back"
-          ]
+          ],
+          "others": ["nums", "rev", "print"]
         },
         "testCases": [
           {
@@ -477,7 +486,8 @@ export const perl3Data = {
             "len",
             "size",
             "count"
-          ]
+          ],
+          "others": ["text", "print"]
         },
         "testCases": [
           {

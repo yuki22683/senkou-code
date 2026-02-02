@@ -80,13 +80,7 @@ export const swift4Data = {
             "struct",
             "class"
           ],
-          "others": [
-            "speak",
-            "Speakable",
-            "String",
-            "Woof!",
-            "Dog"
-          ]
+          "others": ["speak", "Speakable", "String", "Woof!", "Dog", "speak()", "}", "dog"]
         },
         "testCases": [
           {
@@ -175,13 +169,7 @@ export const swift4Data = {
             "protocol",
             "struct"
           ],
-          "others": [
-            "Identifiable",
-            "Int",
-            "display",
-            "id",
-            "42"
-          ]
+          "others": ["Identifiable", "Int", "display", "id", "42", "get", "}", "display()", "user"]
         },
         "testCases": [
           {
@@ -245,10 +233,7 @@ export const swift4Data = {
             "<",
             ">"
           ],
-          "others": [
-            "first",
-            "10"
-          ]
+          "others": ["first", "10", "T", "}", "nums", "0"]
         },
         "testCases": [
           {
@@ -309,10 +294,7 @@ export const swift4Data = {
             "Equatable",
             "Hashable"
           ],
-          "others": [
-            ">",
-            "maximum"
-          ]
+          "others": [">", "maximum", "T", "b", "}", "5"]
         },
         "testCases": [
           {
@@ -395,14 +377,7 @@ export const swift4Data = {
             "Encodable",
             "Decodable"
           ],
-          "others": [
-            "Foundation",
-            "name",
-            "Apple",
-            "JSONEncoder",
-            "item",
-            "json"
-          ]
+          "others": ["Foundation", "name", "Apple", "JSONEncoder", "item", "json", "String", "}", "encoder"]
         },
         "testCases": [
           {
@@ -435,10 +410,10 @@ export const swift4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// クラスを定義\nclass Calculator {\n    // lazyで遅延初期化\n    lazy var result: Int = {\n        // 計算中と出力\n        print(\"Computing...\")\n        // 100を返す\n        return 100\n    }()\n}\n\n// インスタンスを作成\nlet calc = Calculator()\n// resultを出力\nprint(calc.result)",
-        "holeyCode": "// クラスを定義\nclass ___ {\n    // lazyで遅延初期化\n    lazy var result: ___ = {\n        // 計算中と出力\n        ___(\"Computing...\")\n        // 100を返す\n        return ___\n    ___()\n___\n\n// インスタンスを作成\nlet ___ = Calculator()\n// resultを出力\nprint(calc.___)",
+        "correctCode": "// Calculatorクラスを定義\nclass Calculator {\n    // lazyで遅延初期化\n    lazy var result: Int = {\n        // 計算中と出力\n        print(\"Computing...\")\n        // 100を返す\n        return 100\n    }()\n}\n\n// インスタンスを作成\nlet calc = Calculator()\n// resultを出力\nprint(calc.result)",
+        "holeyCode": "// Calculatorクラスを定義\nclass ___ {\n    // lazyで遅延初期化\n    lazy var result: ___ = {\n        // 計算中と出力\n        ___(\"Computing...\")\n        // 100を返す\n        return ___\n    ___()\n___\n\n// インスタンスを作成\nlet ___ = Calculator()\n// resultを出力\nprint(calc.___)",
         "correctLines": [
-          "// クラスを定義",
+          "// Calculatorクラスを定義",
           "class Calculator {",
           "    // lazyで遅延初期化",
           "    lazy var result: Int = {",
@@ -477,12 +452,7 @@ export const swift4Data = {
             "static",
             "computed"
           ],
-          "others": [
-            "Calculator",
-            "Computing...",
-            "100",
-            "result"
-          ]
+          "others": ["Calculator", "Computing...", "100", "result", "Int", "print", "}", "calc"]
         },
         "testCases": [
           {
@@ -515,10 +485,10 @@ export const swift4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 関数を定義\nfunc test() {\n    // deferでスコープ終了時に実行\n    defer { print(\"end\") }\n    // startと出力\n    print(\"start\")\n}\n\n// 関数を呼び出し\ntest()",
-        "holeyCode": "// 関数を定義\nfunc ___ () {\n    // deferでスコープ終了時に実行\n    defer { print(\"___\") }\n    // startと出力\n    ___(\"start\")\n___\n\n// 関数を呼び出し\n___()",
+        "correctCode": "// test関数を定義\nfunc test() {\n    // deferでスコープ終了時に実行\n    defer { print(\"end\") }\n    // startと出力\n    print(\"start\")\n}\n\n// 関数を呼び出し\ntest()",
+        "holeyCode": "// test関数を定義\nfunc ___ () {\n    // deferでスコープ終了時に実行\n    defer { print(\"___\") }\n    // startと出力\n    ___(\"start\")\n___\n\n// 関数を呼び出し\n___()",
         "correctLines": [
-          "// 関数を定義",
+          "// test関数を定義",
           "func test() {",
           "    // deferでスコープ終了時に実行",
           "    defer { print(\"end\") }",
@@ -547,10 +517,7 @@ export const swift4Data = {
             "finally",
             "cleanup"
           ],
-          "others": [
-            "test",
-            "start"
-          ]
+          "others": ["test", "start", "test()", "end", "print", "}"]
         },
         "testCases": [
           {
@@ -583,10 +550,10 @@ export const swift4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 関数を定義\nfunc check(_ num: Int?) {\n    // guardで早期リターン\n    guard let n = num else {\n        // nilと出力\n        print(\"nil\")\n        // 早期リターン\n        return\n    }\n    // n * 2を出力\n    print(n * 2)\n}\n\n// 関数を呼び出し\ncheck(5)",
-        "holeyCode": "// 関数を定義\nfunc ___ (_ num: Int?) {\n    // guardで早期リターン\n    guard let n = num ___ {\n        // nilと出力\n        ___(\"nil\")\n        // 早期リターン\n        ___\n    ___\n    // n * 2を出力\n    print(n * ___)\n___\n\n// 関数を呼び出し\ncheck(___)",
+        "correctCode": "// check関数を定義\nfunc check(_ num: Int?) {\n    // guardで早期リターン\n    guard let n = num else {\n        // nilと出力\n        print(\"nil\")\n        // 早期リターン\n        return\n    }\n    // n * 2を出力\n    print(n * 2)\n}\n\n// 関数を呼び出し\ncheck(5)",
+        "holeyCode": "// check関数を定義\nfunc ___ (_ num: Int?) {\n    // guardで早期リターン\n    guard let n = num ___ {\n        // nilと出力\n        ___(\"nil\")\n        // 早期リターン\n        ___\n    ___\n    // n * 2を出力\n    print(n * ___)\n___\n\n// 関数を呼び出し\ncheck(___)",
         "correctLines": [
-          "// 関数を定義",
+          "// check関数を定義",
           "func check(_ num: Int?) {",
           "    // guardで早期リターン",
           "    guard let n = num else {",
@@ -625,12 +592,7 @@ export const swift4Data = {
             "if",
             "unless"
           ],
-          "others": [
-            "check",
-            "nil",
-            "return",
-            "*"
-          ]
+          "others": ["check", "nil", "return", "*", "check(_", "else", "print", "}", "2", "5"]
         },
         "testCases": [
           {
@@ -725,16 +687,7 @@ export const swift4Data = {
             "typealias",
             "type"
           ],
-          "others": [
-            "Stack",
-            "Element",
-            "Int",
-            "push",
-            "append",
-            "IntStack",
-            "10",
-            "items"
-          ]
+          "others": ["Stack", "Element", "Int", "push", "append", "IntStack", "10", "items", "}", "item", "stack"]
         },
         "testCases": [
           {
@@ -799,11 +752,7 @@ export const swift4Data = {
             "any",
             "opaque"
           ],
-          "others": [
-            "1",
-            "makeCollection",
-            "count"
-          ]
+          "others": ["1", "makeCollection", "count", "makeCollection()", "}", "c"]
         },
         "testCases": [
           {

@@ -73,7 +73,8 @@ export const javaData4 = {
             "new",
             "set",
             "get"
-          ]
+          ],
+          "others": ["*;", "Box", "value", "}", "Main", "main(String[] args) {", "Java", "println"]
         },
         "testCases": [
           {
@@ -141,7 +142,8 @@ export const javaData4 = {
             "super",
             "new",
             "getDouble"
-          ]
+          ],
+          "others": ["Calculator", "value", "}", "Main", "main(String[] args) {", "42", "println"]
         },
         "testCases": [
           {
@@ -214,7 +216,8 @@ export const javaData4 = {
             "println",
             "asList",
             "printAll"
-          ]
+          ],
+          "others": ["*;", "Main", "list", "item", "}", "main(String[] args) {", "A", "names"]
         },
         "testCases": [
           {
@@ -280,7 +283,8 @@ export const javaData4 = {
             "add",
             "new",
             "get"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "HashMap", "Math", "English", "println", "}"]
         },
         "testCases": [
           {
@@ -353,7 +357,8 @@ export const javaData4 = {
             "new",
             "put",
             "getKey"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "HashMap", "A", "B", "println", "}"]
         },
         "testCases": [
           {
@@ -416,7 +421,8 @@ export const javaData4 = {
             "new",
             "asList",
             "println"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "cat", "length", "}"]
         },
         "testCases": [
           {
@@ -500,7 +506,8 @@ export const javaData4 = {
             "asList",
             "sort",
             "get"
-          ]
+          ],
+          "others": ["*;", "Score", "value", "compareTo", "}", "Main", "main(String[] args) {", "80", "scores", "println"]
         },
         "testCases": [
           {
@@ -564,7 +571,8 @@ export const javaData4 = {
             "interface",
             "MON",
             "println"
-          ]
+          ],
+          "others": ["Day", "MON, TUE, WED, THU, FRI, SAT, SUN", "}", "Main", "main(String[] args) {"]
         },
         "testCases": [
           {
@@ -630,7 +638,8 @@ export const javaData4 = {
             "push",
             "new",
             "poll"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "LinkedList", "First", "Second", "println", "}"]
         },
         "testCases": [
           {
@@ -696,7 +705,8 @@ export const javaData4 = {
             "offer",
             "new",
             "pop"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "ArrayDeque", "10", "20", "println", "}"]
         },
         "testCases": [
           {

@@ -42,7 +42,8 @@ export const sqlData = {
           ],
           "strings": [
             "'Hello, World!'"
-          ]
+          ],
+          "others": ["World"]
         },
         "testCases": [
           {
@@ -71,11 +72,11 @@ export const sqlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- 文字にgreetingという名前をつける\nSELECT 'こんにちは' AS greeting;",
-        "holeyCode": "-- 文字にgreetingという名前をつける\nSELECT 'こんにちは' AS ___;",
+        "correctCode": "-- 文字にgreetingという名前をつける\nSELECT '7HelloSELECT 'Hello' AS greeting;' AS greeting;",
+        "holeyCode": "-- 文字にgreetingという名前をつける\nSELECT '7HelloSELECT 'Hello' AS ___;' AS ___;",
         "correctLines": [
           "-- 文字にgreetingという名前をつける",
-          "SELECT 'こんにちは' AS greeting;"
+          "SELECT '7HelloSELECT 'Hello' AS greeting;' AS greeting;"
         ],
         "lineHints": [
           null,
@@ -133,7 +134,8 @@ export const sqlData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["100"]
         },
         "testCases": [
           {
@@ -177,7 +179,8 @@ export const sqlData = {
             ",",
             ";",
             ":"
-          ]
+          ],
+          "others": ["10"]
         },
         "testCases": [
           {
@@ -221,7 +224,8 @@ export const sqlData = {
             "WHERE",
             "FROM",
             "AND"
-          ]
+          ],
+          "others": ["1"]
         },
         "testCases": [
           {
@@ -250,11 +254,11 @@ export const sqlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- 文字をつなげる\nSELECT 'SQL' || 'は楽しい！';",
-        "holeyCode": "-- 文字をつなげる\nSELECT '___' || 'は楽しい！';",
+        "correctCode": "-- 文字をつなげる\nSELECT 'SQL' || '16 is fun!SELECT 'SQL' || ' is fun!';';",
+        "holeyCode": "-- 文字をつなげる\nSELECT '___' || '16 is fun!SELECT '___' || ' is fun!';';",
         "correctLines": [
           "-- 文字をつなげる",
-          "SELECT 'SQL' || 'は楽しい！';"
+          "SELECT 'SQL' || '16 is fun!SELECT 'SQL' || ' is fun!';';"
         ],
         "lineHints": [
           null,
@@ -265,7 +269,8 @@ export const sqlData = {
             "||",
             "+",
             "&"
-          ]
+          ],
+          "others": ["SQL"]
         },
         "testCases": [
           {
@@ -310,7 +315,8 @@ export const sqlData = {
             "BY",
             "GROUP",
             "HAVING"
-          ]
+          ],
+          "others": ["1"]
         },
         "testCases": [
           {
@@ -354,7 +360,8 @@ export const sqlData = {
             "AND",
             "OR",
             "NOT"
-          ]
+          ],
+          "others": ["1"]
         },
         "testCases": [
           {
@@ -383,11 +390,11 @@ export const sqlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- 条件分岐\nSELECT CASE WHEN 10 > 5 THEN '大きい' ELSE '小さい' END;",
-        "holeyCode": "-- 条件分岐\nSELECT CASE WHEN ___ > 5 THEN '大きい' ELSE '小さい' END;",
+        "correctCode": "-- 条件分岐\nSELECT CASE WHEN 10 > 5 THEN '29bigSELECT CASE WHEN 10 > 5 THEN 'big' ELSE '75smallSELECT CASE WHEN 10 > 5 THEN '29bigSELECT CASE WHEN 10 > 5 THEN 'big' ELSE 'small' END;' ELSE 'small' END;' END;' ELSE '92smallSELECT CASE WHEN 10 > 5 THEN '29bigSELECT CASE WHEN 10 > 5 THEN 'big' ELSE 'small' END;' ELSE 'small' END;' END;",
+        "holeyCode": "-- 条件分岐\nSELECT CASE WHEN ___ > 5 THEN '30bigSELECT CASE WHEN ___ > 5 THEN 'big' ELSE '77smallSELECT CASE WHEN ___ > 5 THEN '30bigSELECT CASE WHEN ___ > 5 THEN 'big' ELSE 'small' END;' ELSE 'small' END;' END;' ELSE '94smallSELECT CASE WHEN ___ > 5 THEN '30bigSELECT CASE WHEN ___ > 5 THEN 'big' ELSE 'small' END;' ELSE 'small' END;' END;",
         "correctLines": [
           "-- 条件分岐",
-          "SELECT CASE WHEN 10 > 5 THEN '大きい' ELSE '小さい' END;"
+          "SELECT CASE WHEN 10 > 5 THEN '29bigSELECT CASE WHEN 10 > 5 THEN 'big' ELSE '75smallSELECT CASE WHEN 10 > 5 THEN '29bigSELECT CASE WHEN 10 > 5 THEN 'big' ELSE 'small' END;' ELSE 'small' END;' END;' ELSE '92smallSELECT CASE WHEN 10 > 5 THEN '29bigSELECT CASE WHEN 10 > 5 THEN 'big' ELSE 'small' END;' ELSE 'small' END;' END;"
         ],
         "lineHints": [
           null,
@@ -400,7 +407,8 @@ export const sqlData = {
             "END",
             "WHEN",
             "ELSE"
-          ]
+          ],
+          "others": ["10"]
         },
         "testCases": [
           {
@@ -445,7 +453,8 @@ export const sqlData = {
             "NULL",
             "NOT",
             "LIKE"
-          ]
+          ],
+          "others": ["1"]
         },
         "testCases": [
           {

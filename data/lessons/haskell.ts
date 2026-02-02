@@ -134,10 +134,7 @@ export const haskellData = {
           "operators": [
             "+"
           ],
-          "others": [
-            "5",
-            "3"
-          ]
+          "others": ["5", "3", "b"]
         },
         "testCases": [
           {

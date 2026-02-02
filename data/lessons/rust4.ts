@@ -67,7 +67,8 @@ export const rust4Data = {
             "trait",
             "impl",
             "struct"
-          ]
+          ],
+          "others": ["Speak", "speak(&self)", "}", "Dog", "from", "main()", "dog", "println"]
         },
         "testCases": [
           {
@@ -125,7 +126,8 @@ export const rust4Data = {
             "derive",
             "cfg",
             "allow"
-          ]
+          ],
+          "others": ["User", "String", "u32", "}", "main()", "user", "println"]
         },
         "testCases": [
           {
@@ -171,7 +173,8 @@ export const rust4Data = {
             "Box",
             "Rc",
             "Arc"
-          ]
+          ],
+          "others": ["main()", "x", "println", "}"]
         },
         "testCases": [
           {
@@ -223,7 +226,8 @@ export const rust4Data = {
             "clone",
             "new",
             "copy"
-          ]
+          ],
+          "others": ["rc", "Rc", "main()", "a", "b", "println", "}"]
         },
         "testCases": [
           {
@@ -277,7 +281,8 @@ export const rust4Data = {
             "insert",
             "put",
             "add"
-          ]
+          ],
+          "others": ["collections", "HashMap", "main()", "map", "println", "}"]
         },
         "testCases": [
           {
@@ -333,7 +338,8 @@ export const rust4Data = {
             "HashSet",
             "HashMap",
             "BTreeSet"
-          ]
+          ],
+          "others": ["collections", "main()", "set", "insert", "println", "}"]
         },
         "testCases": [
           {
@@ -385,7 +391,8 @@ export const rust4Data = {
             "if",
             "when",
             "where"
-          ]
+          ],
+          "others": ["main()", "num", "println", "}"]
         },
         "testCases": [
           {
@@ -441,7 +448,8 @@ export const rust4Data = {
             "impl",
             "dyn",
             "type"
-          ]
+          ],
+          "others": ["doubles(n:", "map", "}", "main()", "doubles", "3", "println"]
         },
         "testCases": [
           {
@@ -487,7 +495,8 @@ export const rust4Data = {
             "collect",
             "into",
             "to_vec"
-          ]
+          ],
+          "others": ["main()", "println", "}"]
         },
         "testCases": [
           {
@@ -537,7 +546,8 @@ export const rust4Data = {
             "enumerate",
             "zip",
             "indexed"
-          ]
+          ],
+          "others": ["main()", "items", "println", "}"]
         },
         "testCases": [
           {

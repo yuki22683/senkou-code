@@ -37,7 +37,8 @@ export const sql3Data = {
             "SELECT",
             "FROM",
             "WHERE"
-          ]
+          ],
+          "others": ["5"]
         },
         "testCases": [
           {
@@ -77,7 +78,8 @@ export const sql3Data = {
             "EXISTS",
             "IN",
             "ANY"
-          ]
+          ],
+          "others": ["1"]
         },
         "testCases": [
           {
@@ -117,7 +119,8 @@ export const sql3Data = {
             "UNION",
             "JOIN",
             "MERGE"
-          ]
+          ],
+          "others": ["C"]
         },
         "testCases": [
           {
@@ -174,10 +177,7 @@ export const sql3Data = {
             "LEFT",
             "RIGHT"
           ],
-          "others": [
-            "SELECT",
-            "ON"
-          ]
+          "others": ["SELECT", "ON", "FROM", "1", "JOIN", "id"]
         },
         "testCases": [
           {
@@ -234,10 +234,7 @@ export const sql3Data = {
             "RIGHT",
             "INNER"
           ],
-          "others": [
-            "SELECT",
-            "ON"
-          ]
+          "others": ["SELECT", "ON", "FROM", "1", "JOIN", "2", "id"]
         },
         "testCases": [
           {
@@ -277,7 +274,8 @@ export const sql3Data = {
             "MAX",
             "MIN",
             "AVG"
-          ]
+          ],
+          "others": ["5"]
         },
         "testCases": [
           {
@@ -332,9 +330,7 @@ export const sql3Data = {
             "UNIQUE",
             "ALL"
           ],
-          "others": [
-            "SELECT"
-          ]
+          "others": ["SELECT", "FROM", "1", "2", ");"]
         },
         "testCases": [
           {
@@ -374,7 +370,8 @@ export const sql3Data = {
             "LIKE",
             "MATCH",
             "REGEX"
-          ]
+          ],
+          "others": ["H"]
         },
         "testCases": [
           {
@@ -414,7 +411,8 @@ export const sql3Data = {
             "BETWEEN",
             "FROM",
             "IN"
-          ]
+          ],
+          "others": ["5"]
         },
         "testCases": [
           {
@@ -454,7 +452,8 @@ export const sql3Data = {
             "IN",
             "ANY",
             "SOME"
-          ]
+          ],
+          "others": ["C"]
         },
         "testCases": [
           {

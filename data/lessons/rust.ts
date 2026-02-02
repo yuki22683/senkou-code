@@ -39,7 +39,8 @@ export const rustData = {
         "candidates": {
           "strings": [
             "Hello, Rust!"
-          ]
+          ],
+          "others": ["main()", "println", "}"]
         },
         "testCases": [
           {
@@ -96,7 +97,8 @@ export const rustData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["main()", "x", "y", "println", "}"]
         },
         "testCases": [
           {
@@ -137,7 +139,8 @@ export const rustData = {
             "/",
             "*",
             "-"
-          ]
+          ],
+          "others": ["main()", "println", "}"]
         },
         "testCases": [
           {
@@ -188,7 +191,8 @@ export const rustData = {
             "-=",
             "*=",
             "/="
-          ]
+          ],
+          "others": ["main()", "hp", "20", "50", "println", "}"]
         },
         "testCases": [
           {
@@ -240,7 +244,8 @@ export const rustData = {
             "<",
             ">=",
             "<="
-          ]
+          ],
+          "others": ["main()", "score", "println", "}"]
         },
         "testCases": [
           {
@@ -289,7 +294,8 @@ export const rustData = {
             "||",
             "&",
             "|"
-          ]
+          ],
+          "others": ["main()", "score", "bonus", ">=", "println", "}"]
         },
         "testCases": [
           {
@@ -314,8 +320,8 @@ export const rustData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "fn main() {\n    // colors というベクタを作る（'あか', 'あお'の順）\n    let colors = vec![\"あか\", \"あお\"];\n    // 2番目のデータ（インデックス1）を出す\n    println!(\"{}\", colors[1]);\n}",
-        "holeyCode": "fn ___ () {\n    // colors というベクタを作る（'あか', 'あお'の順）\n    let ___ = vec![\"あか\", \"あお\"];\n    // 2番目のデータ（インデックス1）を出す\n    ___!(\"{}\", colors[1]);\n___",
+        "correctCode": "fn main() {\n    // colors というベクタを作る（'あか', 'あお'の順）\n    let colors = vec![\"22red    let colors = vec![\"red\", \"57blue    let colors = vec![\"22red    let colors = vec![\"red\", \"blue\"];\", \"blue\"];\"];\", \"66blue    let colors = vec![\"22red    let colors = vec![\"red\", \"blue\"];\", \"blue\"];\"];\n    // 2番目のデータ（インデックス1）を出す\n    println!(\"{}\", colors[1]);\n}",
+        "holeyCode": "fn ___ () {\n    // colors というベクタを作る（'あか', 'あお'の順）\n    let ___ = vec![\"19red    let ___ = vec![\"red\", \"51blue    let ___ = vec![\"19red    let ___ = vec![\"red\", \"blue\"];\", \"blue\"];\"];\", \"60blue    let ___ = vec![\"19red    let ___ = vec![\"red\", \"blue\"];\", \"blue\"];\"];\n    // 2番目のデータ（インデックス1）を出す\n    ___!(\"{}\", colors[1]);\n___",
         "correctLines": [
           "fn main() {",
           "    // colors というベクタを作る（'あか', 'あお'の順）",
@@ -346,7 +352,8 @@ export const rustData = {
           ],
           "numbers": [
             "1"
-          ]
+          ],
+          "others": ["main()", "println", "}"]
         },
         "testCases": [
           {
@@ -371,15 +378,15 @@ export const rustData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "use std::collections::HashMap;\nfn main() {\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\n    let mut colors = HashMap::new();\n    // キーと値を追加\n    colors.insert(\"みかん\", \"オレンジ\");\n    // 中身を出す\n    println!(\"{}\", colors[\"みかん\"]);\n}",
-        "holeyCode": "use std::___::___;\nfn ___ () {\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\n    let mut ___ = HashMap::new();\n    // キーと値を追加\n    colors.___(\"みかん\", \"オレンジ\");\n    // 中身を出す\n    ___!(\"{}\", colors[\"みかん\"]);\n___",
+        "correctCode": "use std::collections::HashMap;\nfn main() {\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\n    let mut colors = HashMap::new();\n    // キーと値を追加\n    colors.insert(\"18orange    colors.insert(\"orange\", \"25orange    colors.insert(\"orange\", \"orange\");\");\", \"25orange    colors.insert(\"52orange    colors.insert(\"orange\", \"25orange    colors.insert(\"orange\", \"orange\");\");\", \"orange\");\");\n    // 中身を出す\n    println!(\"{}\", colors[\"26orange    println!(\"{}\", colors[\"orange\"]);\"]);\n}",
+        "holeyCode": "use std::___::___;\nfn ___ () {\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\n    let mut ___ = HashMap::new();\n    // キーと値を追加\n    colors.___(\"15orange    colors.___(\"orange\", \"22orange    colors.___(\"orange\", \"orange\");\");\", \"22orange    colors.___(\"46orange    colors.___(\"orange\", \"22orange    colors.___(\"orange\", \"orange\");\");\", \"orange\");\");\n    // 中身を出す\n    ___!(\"{}\", colors[\"22orange    ___!(\"{}\", colors[\"orange\"]);\"]);\n___",
         "correctLines": [
           "use std::collections::HashMap;",
           "fn main() {",
           "    // 辞書を作る（キーは'みかん'、値は'オレンジ'）",
           "    let mut colors = HashMap::new();",
           "    // キーと値を追加",
-          "    colors.insert(\"みかん\", \"オレンジ\");",
+          "    colors.insert(\"18orange    colors.insert(\"orange\", \"25orange    colors.insert(\"orange\", \"orange\");\");\", \"25orange    colors.insert(\"52orange    colors.insert(\"orange\", \"25orange    colors.insert(\"orange\", \"orange\");\");\", \"orange\");\");",
           "    // 中身を出す",
           "    println!(\"{}\", colors[\"みかん\"]);",
           "}"
@@ -408,7 +415,8 @@ export const rustData = {
           "strings": [
             "みかん",
             "オレンジ"
-          ]
+          ],
+          "others": ["collections", "HashMap", "main()", "println", "}"]
         },
         "testCases": [
           {

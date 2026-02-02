@@ -62,13 +62,7 @@ export const csharp2Data = {
           "operators": [
             ":"
           ],
-          "others": [
-            "class",
-            "void",
-            "moving",
-            "new",
-            "Move"
-          ]
+          "others": ["class", "void", "moving", "new", "Move", "Vehicle", "WriteLine", "}", "Car"]
         },
         "testCases": [
           {
@@ -148,14 +142,7 @@ export const csharp2Data = {
           "operators": [
             ":"
           ],
-          "others": [
-            "class",
-            "virtual",
-            "shape",
-            "circle",
-            "new",
-            "Draw"
-          ]
+          "others": ["class", "virtual", "shape", "circle", "new", "Draw", "Shape", "WriteLine", "}", "Circle"]
         },
         "testCases": [
           {
@@ -229,12 +216,7 @@ export const csharp2Data = {
           "operators": [
             ":"
           ],
-          "others": [
-            "void",
-            "running",
-            "new",
-            "Run"
-          ]
+          "others": ["void", "running", "new", "Run", "IRunner", "}", "Robot", "WriteLine"]
         },
         "testCases": [
           {
@@ -293,11 +275,7 @@ export const csharp2Data = {
           "keywords": [
             "get"
           ],
-          "others": [
-            "class",
-            "new",
-            "Price"
-          ]
+          "others": ["class", "new", "Price", "Item", "set", "}", "500", "WriteLine"]
         },
         "testCases": [
           {
@@ -348,10 +326,7 @@ export const csharp2Data = {
           "functions": [
             "Add"
           ],
-          "others": [
-            "List",
-            "1"
-          ]
+          "others": ["List", "1", "int", "10", "20", "WriteLine"]
         },
         "testCases": [
           {
@@ -404,11 +379,7 @@ export const csharp2Data = {
           "functions": [
             "Where"
           ],
-          "others": [
-            "List",
-            "in",
-            "WriteLine"
-          ]
+          "others": ["List", "in", "WriteLine", "1", "result", "n", "}"]
         },
         "testCases": [
           {
@@ -461,11 +432,7 @@ export const csharp2Data = {
           "functions": [
             "Select"
           ],
-          "others": [
-            "List",
-            "in",
-            "WriteLine"
-          ]
+          "others": ["List", "in", "WriteLine", "1", "squared", "n", "}"]
         },
         "testCases": [
           {
@@ -508,9 +475,7 @@ export const csharp2Data = {
           "operators": [
             "=>"
           ],
-          "others": [
-            "7"
-          ]
+          "others": ["7", "3", "WriteLine"]
         },
         "testCases": [
           {
@@ -563,11 +528,7 @@ export const csharp2Data = {
           "keywords": [
             "try"
           ],
-          "others": [
-            "Exception(\"oops\");",
-            "catch",
-            "caught"
-          ]
+          "others": ["Exception(\"oops\");", "catch", "caught", "oops", "WriteLine", "}"]
         },
         "testCases": [
           {
@@ -614,10 +575,7 @@ export const csharp2Data = {
           "operators": [
             "?."
           ],
-          "others": [
-            "Hello\";",
-            "WriteLine"
-          ]
+          "others": ["Hello\";", "WriteLine", "Hello", "Length", "length"]
         },
         "testCases": [
           {

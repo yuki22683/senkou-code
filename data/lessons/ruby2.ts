@@ -203,10 +203,7 @@ export const ruby2Data = {
           "operators": [
             ":"
           ],
-          "others": [
-            "Apple",
-            "100"
-          ]
+          "others": ["Apple", "100", "price"]
         },
         "testCases": [
           {
@@ -281,14 +278,7 @@ export const ruby2Data = {
           "keywords": [
             "class"
           ],
-          "others": [
-            "initialize",
-            "name",
-            "end",
-            "greet",
-            "@name",
-            "new"
-          ]
+          "others": ["initialize", "name", "end", "greet", "@name", "new", "Cat", "Tama"]
         },
         "testCases": [
           {
@@ -347,13 +337,7 @@ export const ruby2Data = {
           "keywords": [
             "attr_accessor"
           ],
-          "others": [
-            "class",
-            "end",
-            "new",
-            "200",
-            "price"
-          ]
+          "others": ["class", "end", "new", "200", "price", "Item"]
         },
         "testCases": [
           {
@@ -424,13 +408,7 @@ export const ruby2Data = {
           "operators": [
             "<"
           ],
-          "others": [
-            "class",
-            "move",
-            "moving",
-            "end",
-            "new"
-          ]
+          "others": ["class", "move", "moving", "end", "new", "Vehicle", "Car"]
         },
         "testCases": [
           {
@@ -505,14 +483,7 @@ export const ruby2Data = {
           "keywords": [
             "module"
           ],
-          "others": [
-            "speak",
-            "speaking",
-            "end",
-            "class",
-            "Speakable",
-            "new"
-          ]
+          "others": ["speak", "speaking", "end", "class", "Speakable", "new", "Robot"]
         },
         "testCases": [
           {
@@ -567,12 +538,7 @@ export const ruby2Data = {
           "keywords": [
             "rescue"
           ],
-          "others": [
-            "begin",
-            "oops",
-            "caught",
-            "end"
-          ]
+          "others": ["begin", "oops", "caught", "end", "e"]
         },
         "testCases": [
           {
@@ -615,9 +581,7 @@ export const ruby2Data = {
           "operators": [
             "->"
           ],
-          "others": [
-            "call"
-          ]
+          "others": ["call", "2", "5"]
         },
         "testCases": [
           {

@@ -56,7 +56,8 @@ export const assembly3Data = {
             "inc",
             "sub",
             "add"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "10", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -115,7 +116,8 @@ export const assembly3Data = {
             "mul",
             "add",
             "sub"
-          ]
+          ],
+          "others": ["text", "_start", "rbx", "3", "4", "rdi", "rax", "60", "syscall"]
         },
         "testCases": [
           {
@@ -174,7 +176,8 @@ export const assembly3Data = {
             "pop",
             "mov",
             "store"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "42", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -231,7 +234,8 @@ export const assembly3Data = {
             "push",
             "mov",
             "load"
-          ]
+          ],
+          "others": ["text", "_start", "99", "rdi", "rax", "60", "syscall"]
         },
         "testCases": [
           {
@@ -290,7 +294,8 @@ export const assembly3Data = {
             "or",
             "xor",
             "not"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "0xFF", "0", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -349,7 +354,8 @@ export const assembly3Data = {
             "and",
             "xor",
             "not"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "0x10", "0", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -408,7 +414,8 @@ export const assembly3Data = {
             "shr",
             "rol",
             "ror"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "5", "2", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -467,7 +474,8 @@ export const assembly3Data = {
             "shl",
             "ror",
             "rol"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "20", "1", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -534,7 +542,8 @@ export const assembly3Data = {
             "cmp",
             "and",
             "check"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "5", "1", "is_odd", "rdi", "0", "done", "60", "syscall"]
         },
         "testCases": [
           {
@@ -593,7 +602,8 @@ export const assembly3Data = {
             "not",
             "inv",
             "sub"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "10", "rdi", "60", "syscall"]
         },
         "testCases": [
           {

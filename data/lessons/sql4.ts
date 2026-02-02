@@ -48,9 +48,7 @@ export const sql4Data = {
             "AS",
             "FROM"
           ],
-          "others": [
-            "SELECT"
-          ]
+          "others": ["SELECT", "1", ")", "nums"]
         },
         "testCases": [
           {
@@ -103,11 +101,7 @@ export const sql4Data = {
             "RANK",
             "DENSE_RANK"
           ],
-          "others": [
-            "SELECT",
-            "val",
-            "FROM"
-          ]
+          "others": ["SELECT", "val", "FROM", "rn", "C"]
         },
         "testCases": [
           {
@@ -160,11 +154,7 @@ export const sql4Data = {
             "ROW_NUMBER",
             "DENSE_RANK"
           ],
-          "others": [
-            "SELECT",
-            "val",
-            "FROM"
-          ]
+          "others": ["SELECT", "val", "FROM", "rnk", "1"]
         },
         "testCases": [
           {
@@ -217,11 +207,7 @@ export const sql4Data = {
             "AVG",
             "COUNT"
           ],
-          "others": [
-            "SELECT",
-            "val",
-            "FROM"
-          ]
+          "others": ["SELECT", "val", "FROM", "running", "1"]
         },
         "testCases": [
           {
@@ -266,9 +252,7 @@ export const sql4Data = {
             "IF",
             "SWITCH"
           ],
-          "others": [
-            "SELECT"
-          ]
+          "others": ["SELECT", "1"]
         },
         "testCases": [
           {
@@ -308,7 +292,8 @@ export const sql4Data = {
             "COALESCE",
             "IFNULL",
             "NVL"
-          ]
+          ],
+          "others": ["val"]
         },
         "testCases": [
           {
@@ -357,10 +342,7 @@ export const sql4Data = {
             "ADD",
             "PUT"
           ],
-          "others": [
-            "CREATE",
-            "SELECT"
-          ]
+          "others": ["CREATE", "SELECT", "TEXT", "hello", "test"]
         },
         "testCases": [
           {
@@ -413,11 +395,7 @@ export const sql4Data = {
             "MODIFY",
             "CHANGE"
           ],
-          "others": [
-            "CREATE",
-            "INSERT",
-            "SELECT"
-          ]
+          "others": ["CREATE", "INSERT", "SELECT", "TEXT", "old", "new", "test"]
         },
         "testCases": [
           {
@@ -470,11 +448,7 @@ export const sql4Data = {
             "REMOVE",
             "DROP"
           ],
-          "others": [
-            "CREATE",
-            "INSERT",
-            "SELECT"
-          ]
+          "others": ["CREATE", "INSERT", "SELECT", "INT", "1", "2", "test"]
         },
         "testCases": [
           {
@@ -515,10 +489,7 @@ export const sql4Data = {
             "STRING_AGG",
             "CONCAT"
           ],
-          "others": [
-            "SELECT",
-            "GROUP_CONCAT(val, '-') FROM"
-          ]
+          "others": ["SELECT", "GROUP_CONCAT(val, '-') FROM", "FROM"]
         },
         "testCases": [
           {

@@ -56,12 +56,7 @@ export const assembly2Data = {
           "keywords": [
             "mov"
           ],
-          "others": [
-            ".text",
-            "_start",
-            "rdi",
-            "syscall"
-          ]
+          "others": [".text", "_start", "rdi", "syscall", "text", "rax", "60", "0"]
         },
         "testCases": [
           {
@@ -128,14 +123,7 @@ export const assembly2Data = {
           "keywords": [
             "add"
           ],
-          "others": [
-            ".text",
-            "_start",
-            "10",
-            "rdi",
-            "60",
-            "syscall"
-          ]
+          "others": [".text", "_start", "10", "rdi", "60", "syscall", "text", "rax", "5"]
         },
         "testCases": [
           {
@@ -202,14 +190,7 @@ export const assembly2Data = {
           "keywords": [
             "sub"
           ],
-          "others": [
-            ".text",
-            "_start",
-            "20",
-            "rdi",
-            "60",
-            "syscall"
-          ]
+          "others": [".text", "_start", "20", "rdi", "60", "syscall", "text", "rax", "5"]
         },
         "testCases": [
           {
@@ -280,15 +261,7 @@ export const assembly2Data = {
           "keywords": [
             "mul"
           ],
-          "others": [
-            ".text",
-            "_start",
-            "4",
-            "3",
-            "rdi",
-            "60",
-            "syscall"
-          ]
+          "others": [".text", "_start", "4", "3", "rdi", "60", "syscall", "text", "rax", "rbx"]
         },
         "testCases": [
           {
@@ -355,14 +328,7 @@ export const assembly2Data = {
           "keywords": [
             "cmp"
           ],
-          "others": [
-            ".text",
-            "_start",
-            "5",
-            "60",
-            "0",
-            "syscall"
-          ]
+          "others": [".text", "_start", "5", "60", "0", "syscall", "text", "rax", "rdi"]
         },
         "testCases": [
           {
@@ -429,14 +395,7 @@ export const assembly2Data = {
           "keywords": [
             "jmp"
           ],
-          "others": [
-            ".text",
-            "_start",
-            "done",
-            "60",
-            "rdi",
-            "syscall"
-          ]
+          "others": [".text", "_start", "done", "60", "rdi", "syscall", "text", "rax"]
         },
         "testCases": [
           {
@@ -511,15 +470,7 @@ export const assembly2Data = {
           "keywords": [
             "je"
           ],
-          "others": [
-            ".text",
-            "_start",
-            "5",
-            "done",
-            "60",
-            "rdi",
-            "syscall"
-          ]
+          "others": [".text", "_start", "5", "done", "60", "rdi", "syscall", "text", "rax"]
         },
         "testCases": [
           {
@@ -590,14 +541,7 @@ export const assembly2Data = {
           "keywords": [
             "push"
           ],
-          "others": [
-            ".text",
-            "_start",
-            "42",
-            "rbx",
-            "60",
-            "syscall"
-          ]
+          "others": [".text", "_start", "42", "rbx", "60", "syscall", "text", "rax", "rdi"]
         },
         "testCases": [
           {
@@ -656,12 +600,7 @@ export const assembly2Data = {
           "keywords": [
             "xor"
           ],
-          "others": [
-            ".text",
-            "_start",
-            "60",
-            "syscall"
-          ]
+          "others": [".text", "_start", "60", "syscall", "text", "rax", "rdi"]
         },
         "testCases": [
           {
@@ -728,14 +667,7 @@ export const assembly2Data = {
           "keywords": [
             "call"
           ],
-          "others": [
-            ".text",
-            "_start",
-            "done",
-            "60",
-            "rdi",
-            "syscall"
-          ]
+          "others": [".text", "_start", "done", "60", "rdi", "syscall", "text", "rax"]
         },
         "testCases": [
           {

@@ -38,9 +38,7 @@ export const javascriptData5 = {
             "\"",
             "'"
           ],
-          "others": [
-            "test"
-          ]
+          "others": ["test", "pattern", "log"]
         },
         "testCases": [
           {
@@ -85,11 +83,7 @@ export const javascriptData5 = {
             "match(",
             "exec("
           ],
-          "others": [
-            "/",
-            "test('test@example.com'));",
-            "invalid-email"
-          ]
+          "others": ["/", "test('test@example.com'));", "invalid-email", "emailPattern", "log"]
         },
         "testCases": [
           {
@@ -133,11 +127,7 @@ export const javascriptData5 = {
             "match(",
             "/"
           ],
-          "others": [
-            "090",
-            "match",
-            "log"
-          ]
+          "others": ["090", "match", "log", "text", "phones"]
         },
         "testCases": [
           {
@@ -181,11 +171,7 @@ export const javascriptData5 = {
             "replace(",
             "/"
           ],
-          "others": [
-            "Hello",
-            "replace",
-            "log"
-          ]
+          "others": ["Hello", "replace", "log", "text", "result"]
         },
         "testCases": [
           {
@@ -234,11 +220,7 @@ export const javascriptData5 = {
             "except",
             "handle"
           ],
-          "others": [
-            "try",
-            "parse",
-            "message"
-          ]
+          "others": ["try", "parse", "message", "result", "e", "log"]
         },
         "testCases": [
           {
@@ -305,13 +287,7 @@ export const javascriptData5 = {
             "always",
             "end"
           ],
-          "others": [
-            "function",
-            "try",
-            "throw",
-            "message",
-            "process"
-          ]
+          "others": ["function", "try", "throw", "message", "process", "log", "Error", "e", "}"]
         },
         "testCases": [
           {
@@ -382,13 +358,7 @@ export const javascriptData5 = {
             "implements",
             "inherits"
           ],
-          "others": [
-            "constructor",
-            "super",
-            "name",
-            "try",
-            "throw"
-          ]
+          "others": ["constructor", "super", "name", "try", "throw", "ValidationError", "message", "}", "input", "e", "log"]
         },
         "testCases": [
           {
@@ -447,12 +417,7 @@ export const javascriptData5 = {
             "Unique",
             "Key"
           ],
-          "others": [
-            "Taro",
-            "password123",
-            "name",
-            "secret"
-          ]
+          "others": ["Taro", "password123", "name", "secret", "user", "123", "};", "log"]
         },
         "testCases": [
           {
@@ -529,15 +494,7 @@ export const javascriptData5 = {
             "Map",
             "HashMap"
           ],
-          "others": [
-            "class",
-            "constructor",
-            "set",
-            "name",
-            "get",
-            "new",
-            "getPassword"
-          ]
+          "others": ["class", "constructor", "set", "name", "get", "new", "getPassword", "privateData", "User", "secret", "}", "password", "user", "log"]
         },
         "testCases": [
           {
@@ -598,12 +555,7 @@ export const javascriptData5 = {
             "Handler",
             "Wrapper"
           ],
-          "others": [
-            "get",
-            "prop",
-            "return",
-            "name"
-          ]
+          "others": ["get", "prop", "return", "name", "handler", "log", "}", "};", "user"]
         },
         "testCases": [
           {

@@ -39,7 +39,8 @@ export const elixir2Data = {
           "variables": [
             "y",
             "x"
-          ]
+          ],
+          "others": ["10"]
         },
         "testCases": [
           {
@@ -83,7 +84,8 @@ export const elixir2Data = {
           ],
           "variables": [
             "head"
-          ]
+          ],
+          "others": ["1"]
         },
         "testCases": [
           {
@@ -131,7 +133,8 @@ export const elixir2Data = {
           ],
           "operators": [
             "|>"
-          ]
+          ],
+          "others": ["1", "sum", "puts"]
         },
         "testCases": [
           {
@@ -223,9 +226,7 @@ export const elixir2Data = {
           "variables": [
             "result"
           ],
-          "others": [
-            "filter([1, 2, 3, 4, 5], fn x -> x >= 3 end)"
-          ]
+          "others": ["filter([1, 2, 3, 4, 5], fn x -> x >= 3 end)", "1"]
         },
         "testCases": [
           {
@@ -284,7 +285,8 @@ export const elixir2Data = {
           ],
           "variables": [
             "result"
-          ]
+          ],
+          "others": ["do", "one", "two", "other", "end"]
         },
         "testCases": [
           {
@@ -335,7 +337,8 @@ export const elixir2Data = {
           ],
           "functions": [
             "Calc.triple(4)"
-          ]
+          ],
+          "others": ["do", "3", "end", "4"]
         },
         "testCases": [
           {
@@ -388,7 +391,8 @@ export const elixir2Data = {
           "functions": [
             "factorial",
             "Math.factorial(5)"
-          ]
+          ],
+          "others": ["do", "0", "1", "end", "5"]
         },
         "testCases": [
           {
@@ -432,7 +436,8 @@ export const elixir2Data = {
           ],
           "numbers": [
             "100"
-          ]
+          ],
+          "others": ["hello"]
         },
         "testCases": [
           {
@@ -480,7 +485,8 @@ export const elixir2Data = {
           ],
           "keywords": [
             "receive"
-          ]
+          ],
+          "others": ["42", "do", "n", "end"]
         },
         "testCases": [
           {

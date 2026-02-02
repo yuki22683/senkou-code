@@ -58,12 +58,7 @@ export const php2Data = {
           "keywords": [
             "class"
           ],
-          "others": [
-            "public",
-            "new",
-            "->",
-            "echo"
-          ]
+          "others": ["public", "new", "->", "echo", "<?php", "Cat", "name", "}", "Tama", "$cat", "?>"]
         },
         "testCases": [
           {
@@ -130,13 +125,7 @@ export const php2Data = {
           "functions": [
             "__construct"
           ],
-          "others": [
-            "class",
-            "public",
-            "$this",
-            "new",
-            "echo"
-          ]
+          "others": ["class", "public", "$this", "new", "echo", "<?php", "Counter", "count", "c", "}", "5", "$cnt", "?>"]
         },
         "testCases": [
           {
@@ -203,13 +192,7 @@ export const php2Data = {
           "keywords": [
             "extends"
           ],
-          "others": [
-            "class",
-            "function",
-            "echo",
-            "new",
-            "->"
-          ]
+          "others": ["class", "function", "echo", "new", "->", "<?php", "Vehicle", "move", "moving", "}", "Car", "?>"]
         },
         "testCases": [
           {
@@ -282,13 +265,7 @@ export const php2Data = {
           "keywords": [
             "interface"
           ],
-          "others": [
-            "function",
-            "implements",
-            "echo",
-            "new",
-            "->"
-          ]
+          "others": ["function", "implements", "echo", "new", "->", "<?php", "Runner", "run", "}", "Robot", "running", "?>"]
         },
         "testCases": [
           {
@@ -339,10 +316,7 @@ export const php2Data = {
           "functions": [
             "array_map"
           ],
-          "others": [
-            "3",
-            "print_r($squared);"
-          ]
+          "others": ["3", "print_r($squared);", "<?php", "nums", "1, 2, 3", "squared", "?>"]
         },
         "testCases": [
           {
@@ -393,10 +367,7 @@ export const php2Data = {
           "functions": [
             "array_filter"
           ],
-          "others": [
-            "5",
-            "print_r"
-          ]
+          "others": ["5", "print_r", "<?php", "nums", "1, 2, 3, 4, 5", "3", "result", "?>"]
         },
         "testCases": [
           {
@@ -443,9 +414,7 @@ export const php2Data = {
           "keywords": [
             "fn"
           ],
-          "others": [
-            "echo"
-          ]
+          "others": ["echo", "<?php", "3", "$triple", "?>"]
         },
         "testCases": [
           {
@@ -502,11 +471,7 @@ export const php2Data = {
           "keywords": [
             "catch"
           ],
-          "others": [
-            "try",
-            "throw",
-            "echo"
-          ]
+          "others": ["try", "throw", "echo", "<?php", "oops", "e", "caught", "}", "?>"]
         },
         "testCases": [
           {
@@ -573,13 +538,7 @@ export const php2Data = {
           "keywords": [
             "namespace"
           ],
-          "others": [
-            "class",
-            "function",
-            "echo",
-            "new",
-            "->"
-          ]
+          "others": ["class", "function", "echo", "new", "->", "<?php", "App", "Hello", "say", "hello", "}", "?>"]
         },
         "testCases": [
           {
@@ -626,9 +585,7 @@ export const php2Data = {
           "operators": [
             "??"
           ],
-          "others": [
-            "null"
-          ]
+          "others": ["null", "<?php", "$value", "?>"]
         },
         "testCases": [
           {

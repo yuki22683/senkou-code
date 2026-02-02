@@ -16,12 +16,12 @@
 - git checkout 後は必ず以下のスクリプトを再実行すること：
   1. `node scripts/fix-empty-line-hints.mjs` - 空行のhints修正
   2. `node scripts/fix-non-holey-hints.mjs` - 非holey行のhints修正
-  3. `node scripts/fix-comment-consistency.mjs` - コメント整合性修正
-  4. `node scripts/add-hint-comments.mjs` - コメント追加
-  5. `node scripts/fix-vague-output-comments.mjs` - 曖昧なコメント修正
-  6. `node scripts/sync-comments-to-holey.mjs` - holeyCodeにコメント同期
-  7. `node scripts/fix-correctlines-comments.mjs` - correctLinesのコメント修正
-  8. `node scripts/translate-string-literals.mjs` - 文字列リテラルを英語化
+  3. `node scripts/add-hint-comments.mjs` - コメント追加
+  4. `node scripts/fix-vague-output-comments.mjs` - 曖昧なコメント修正
+  5. `node scripts/sync-comments-to-holey.mjs` - holeyCodeにコメント同期（コメント整合性修正）
+  6. `node scripts/fix-correctlines-comments.mjs` - correctLinesのコメント修正
+  7. `node scripts/translate-string-literals.mjs` - 文字列リテラルを英語化
+  8. `node scripts/fix-candidates-correct.mjs` - 選択肢不足を自動修正（ルール#34参照）
 - index.tsのケーシング修正（Java3→java3, C2→c2など）も再適用が必要
 - **注意**：`fix-holey-v2.mjs` は使用禁止（ルール#24参照）
 
@@ -230,16 +230,18 @@
   3. `node scripts/check-vague-comments.mjs` → 曖昧なコメントなし
   4. `node scripts/check-tutorial-exercise-similarity.mjs` → 問題なし
   5. `node scripts/verify-translation.mjs` → 文字列リテラル内の日本語0件
-  6. `npm run seed:db` → 成功
-  7. **【手動確認】** tutorialSlidesで新しい専門用語を使う際、説明前に使っていないか確認（ルール#27参照）
+  6. `node scripts/check-candidates-final.mjs` → 0件（ルール#33参照）
+  7. `npm run seed:db` → 成功
+  8. **【手動確認】** tutorialSlidesで新しい専門用語を使う際、説明前に使っていないか確認（ルール#27参照）
      - 特に「○○や△△が自動で作られます」のような羅列パターンに注意
      - 確認コマンド: `grep -E "が自動で作られ|が自動的に" data/lessons/*.ts`
 - **チェックが失敗した場合の修正方法**：
   - check-holey-v3.ts → `fix-empty-line-hints.mjs` と `fix-non-holey-hints.mjs` を実行
-  - check-comment-consistency-v2.mjs → `fix-comment-consistency.mjs` を実行
+  - check-comment-consistency-v2.mjs → `sync-comments-to-holey.mjs` を実行（correctCodeのコメントをholeyCodeに同期）
   - check-vague-comments.mjs → `fix-vague-output-comments.mjs` → `sync-comments-to-holey.mjs` → `fix-correctlines-comments.mjs` を順に実行
   - check-tutorial-exercise-similarity.mjs → 手動で演習のシナリオを変更（ルール#19, #20参照）
   - verify-translation.mjs → `translate-string-literals.mjs` を実行（ルール#26参照）
+  - check-candidates-final.mjs → `fix-candidates-correct.mjs` を実行（ルール#33参照）
 
 ### 26. コード内の文字列リテラルは英語、コメントは日本語
 - `correctCode`、`holeyCode`、`correctLines` 内のコードにおいて：
@@ -293,3 +295,120 @@
 - **禁止**：`__repr__`: 表示用メソッド（`Point(x=3, y=4)` のように表示）
 - **正しい**：`__repr__`: 表示用メソッド
 - コード例が必要な場合は、別の行やコードブロックで示す。
+
+### 30. 完了済み演習の進捗ステータスを上書きしない
+- `user_progress`テーブルにステータスを保存する際、**既にcompletedの演習は上書きしない**こと。
+- **問題のあるコード**：
+  ```javascript
+  await supabase.from("user_progress").upsert({
+    status: "hint_used",  // completedを上書きしてしまう！
+    ...
+  });
+  ```
+- **正しいコード**：
+  ```javascript
+  const { data: existingProgress } = await supabase
+    .from("user_progress")
+    .select("status")
+    .eq("user_id", user.id)
+    .eq("exercise_id", exerciseId)
+    .single();
+
+  if (existingProgress?.status !== "completed") {
+    await supabase.from("user_progress").upsert({
+      status: "hint_used",
+      ...
+    });
+  }
+  ```
+- **理由**：完了済み演習を再度開いて途中でやめた場合、ステータスが上書きされると次の演習がロックされてしまう。
+
+### 31. 2行連続のコメント禁止
+- `correctCode`、`holeyCode`、`correctLines`において、**コメント行が2行連続することを禁止**する。
+- **禁止**：
+  ```python
+  # 親クラス
+  # class でクラスを定義
+  class Animal:
+  ```
+- **正しい**：
+  ```python
+  # 親クラスAnimalをclassで定義
+  class Animal:
+  ```
+- **理由**：コメントはその直下のコード行を説明するもの。2行連続すると、どのコメントがどのコードを説明しているか不明確になる。
+- **チェックコマンド**：
+  ```bash
+  node -e "
+  const fs = require('fs');
+  const path = require('path');
+  function isComment(line) {
+    const trimmed = line.trim();
+    if (trimmed.startsWith('# ') || trimmed === '#') return true;
+    if (trimmed.startsWith('//')) return true;
+    return false;
+  }
+  const dir = 'data/lessons';
+  fs.readdirSync(dir).filter(f => f.endsWith('.ts')).forEach(file => {
+    const content = fs.readFileSync(path.join(dir, file), 'utf8');
+    const regex = /\"correctLines\":\s*\[([\s\S]*?)\]/g;
+    let match;
+    while ((match = regex.exec(content)) !== null) {
+      const lines = match[1].split(',').map(l => l.trim().replace(/^\"|\"$/g, ''));
+      for (let i = 0; i < lines.length - 1; i++) {
+        if (isComment(lines[i]) && isComment(lines[i+1])) {
+          console.log(file + ': ' + lines[i].substring(0, 50));
+        }
+      }
+    }
+  });
+  "
+  ```
+
+### 32. 演習コードの構文チェック必須
+- 演習を追加・修正した後は、**必ず構文チェックを実行**してコードが正しいことを確認すること。
+- **チェックスクリプト**: `node scripts/check-python-syntax.mjs`（Python用）
+- **問題のあるコード例**:
+  ```python
+  print('10Pass!    print('Pass!')')  # 壊れた文字列
+  colors = ['10redcolors = ['red', 'blue']']  # 壊れたリスト
+  ```
+- **理由**: translate-string-literals.mjsなどのスクリプトが誤った変換を行うと、コードが壊れて演習が動作しなくなる。
+- **対象言語**: 各言語用の構文チェックスクリプトを使用するか、手動でコードをコピーして実行確認する。
+
+### 33. candidatesにはholeyCodeの全ての穴を埋める選択肢を含める
+- `candidates` フィールドの `keywords` と `others` には、**holeyCodeの全ての `___` を埋めるのに必要な選択肢**を必ず含めること。
+- **問題のある例**：
+  - holeyCode に `___` が6個あるのに、candidatesに5個しか選択肢がない → 1つの穴が埋められない
+  - holeyCode に `json_str` を入力する穴があるのに、candidatesに `json_str` がない
+- **正しい例**：
+  - holeyCodeの `___` の数 ≤ candidatesの選択肢の合計数
+  - 全ての答えが candidates に含まれている
+- **チェックスクリプト**: `node scripts/check-candidates-final.mjs`
+- **修正スクリプト**: `node scripts/fix-candidates-correct.mjs`（自動で不足している選択肢を `others` に追加）
+- **理由**: 選択肢に答えがないと、ユーザーは正解を入力できない。
+
+### 34. 翻訳スクリプト実行後は選択肢チェック必須
+- `translate-string-literals.mjs` を実行した後は、**必ず `check-candidates-final.mjs` を実行**すること。
+- **理由**: 翻訳により文字列リテラルが変わると、その新しい文字列がcandidatesに含まれていない場合がある。
+- **例**:
+  - 翻訳前: `'こんにちは'` → candidates に `'こんにちは'` がある
+  - 翻訳後: `'Hello'` → candidates に `'Hello'` がない → 選択肢不足
+- **修正手順**:
+  1. `node scripts/translate-string-literals.mjs` を実行
+  2. `node scripts/check-candidates-final.mjs` を実行
+  3. 問題があれば `node scripts/fix-candidates-correct.mjs` を実行
+  4. `npx tsc --noEmit` で構文チェック
+  5. `npm run seed:db` でDB反映
+
+### 35. 演習を削除したらDBからも削除する
+- レッスンファイルから演習を削除しても、**`seed:db`はDBから演習を削除しない**（追加/更新のみ）。
+- 演習を削除した場合は、**必ずDBからも手動で削除**すること。
+- **削除スクリプト**: `npx ts-node scripts/delete-exercise.ts "演習タイトル"`
+- **例**:
+  ```bash
+  # "with文（コンテキストマネージャ）" という演習を削除
+  npx ts-node scripts/delete-exercise.ts "with文（コンテキストマネージャ）"
+  ```
+- **確認方法**: UIでレッスン一覧を開き、削除した演習が表示されていないことを確認
+- **理由**: seed:dbはupsert（存在すれば更新、なければ挿入）のみ行うため、ファイルから削除してもDBには残り続ける

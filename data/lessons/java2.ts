@@ -78,7 +78,8 @@ export const javaData2 = {
             "this",
             "new",
             "move"
-          ]
+          ],
+          "others": ["Vehicle", "println", "}", "Car", "honk", "Main", "main(String[] args) {"]
         },
         "testCases": [
           {
@@ -161,7 +162,8 @@ export const javaData2 = {
             "@Overwrite",
             "new",
             "draw"
-          ]
+          ],
+          "others": ["Shape", "println", "}", "Circle", "Override", "Main", "main(String[] args) {"]
         },
         "testCases": [
           {
@@ -238,7 +240,8 @@ export const javaData2 = {
             "abstract",
             "new",
             "sayHello"
-          ]
+          ],
+          "others": ["Greeting", "}", "Person", "println", "Main", "main(String[] args) {"]
         },
         "testCases": [
           {
@@ -315,7 +318,8 @@ export const javaData2 = {
             "static",
             "new",
             "speak"
-          ]
+          ],
+          "others": ["Animal", "}", "Dog", "println", "Main", "main(String[] args) {"]
         },
         "testCases": [
           {
@@ -375,7 +379,8 @@ export const javaData2 = {
             "throw",
             "finally",
             "parseInt"
-          ]
+          ],
+          "others": ["Main", "main(String[] args) {", "abc", "println", "}"]
         },
         "testCases": [
           {
@@ -439,7 +444,8 @@ export const javaData2 = {
             "finish",
             "end",
             "println"
-          ]
+          ],
+          "others": ["Main", "main(String[] args) {", "try", "catch", "}"]
         },
         "testCases": [
           {
@@ -506,7 +512,8 @@ export const javaData2 = {
             "insert",
             "new",
             "get"
-          ]
+          ],
+          "others": ["ArrayList;", "Main", "main(String[] args) {", "ArrayList", "A", "B", "println", "}"]
         },
         "testCases": [
           {
@@ -567,7 +574,8 @@ export const javaData2 = {
             "->",
             "R",
             "println"
-          ]
+          ],
+          "others": ["Main", "main(String[] args) {", "\"R\", \"G\", \"B\"", "c", "}"]
         },
         "testCases": [
           {
@@ -639,7 +647,8 @@ export const javaData2 = {
             "return",
             "multiply",
             "println"
-          ]
+          ],
+          "others": ["Calculator", "b", "}", "Main", "main(String[] args) {", "4"]
         },
         "testCases": [
           {
@@ -726,7 +735,8 @@ export const javaData2 = {
             "return",
             "new",
             "getPrice"
-          ]
+          ],
+          "others": ["Item", "p", "}", "Main", "main(String[] args) {", "100", "println"]
         },
         "testCases": [
           {

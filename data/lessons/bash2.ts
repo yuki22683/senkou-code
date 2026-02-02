@@ -157,10 +157,10 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 関数を定義\nadd() {\n    # 最初の引数を参照する変数\n    echo $(($1 + $2))\n}\n# 関数を呼び出す\nadd 3 5",
-        "holeyCode": "# 関数を定義\n___() {\n    # 最初の引数を参照する変数\n    echo $((___ + $2))\n}\n# 関数を呼び出す\nadd ___ 5",
+        "correctCode": "# add関数を定義\nadd() {\n    # 最初の引数を参照する変数\n    echo $(($1 + $2))\n}\n# 関数を呼び出す\nadd 3 5",
+        "holeyCode": "# add関数を定義\n___() {\n    # 最初の引数を参照する変数\n    echo $((___ + $2))\n}\n# 関数を呼び出す\nadd ___ 5",
         "correctLines": [
-          "# 関数を定義",
+          "# add関数を定義",
           "add() {",
           "    # 最初の引数を参照する変数",
           "    echo $(($1 + $2))",
@@ -209,17 +209,17 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 関数を定義\nsquare() {\n    # 引数を2乗する\n    echo $(($1 * $1))\n}\n# コマンドの出力を取得する構文\nresult=$(square 4)\n# 結果を表示\necho $result",
-        "holeyCode": "# 関数を定義\n___() {\n    # 引数を2乗する\n    echo $(($1 * ___))\n___\n# コマンドの出力を取得する構文\nresult=$(___ ___)\n# 結果を表示\necho ___",
+        "correctCode": "# square関数を定義\nsquare() {\n    # 引数を2乗する\n    echo $(($1 * $1))\n}\n# コマンドの出力を取得する構文\nresult=$(square 4)\n# resultを表示\necho $result",
+        "holeyCode": "# square関数を定義\n___() {\n    # 引数を2乗する\n    echo $(($1 * ___))\n___\n# コマンドの出力を取得する構文\nresult=$(___ ___)\n# resultを表示\necho ___",
         "correctLines": [
-          "# 関数を定義",
+          "# square関数を定義",
           "square() {",
           "    # 引数を2乗する",
           "    echo $(($1 * $1))",
           "}",
           "# コマンドの出力を取得する構文",
           "result=$(square 4)",
-          "# 結果を表示",
+          "# resultを表示",
           "echo $result"
         ],
         "lineHints": [
@@ -237,11 +237,7 @@ export const bash2Data = {
           "operators": [
             "$"
           ],
-          "others": [
-            "square",
-            "$1))",
-            "result"
-          ]
+          "others": ["square", "$1))", "result", "$1", "}", "4", "$result"]
         },
         "testCases": [
           {

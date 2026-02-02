@@ -23,7 +23,7 @@ export const cpp2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\n#include <string>\n// class でクラスを定義\nclass Cat {\npublic:\n    // string でメンバ変数を定義\n    std::string name;\n};\nint main() {\n    // Cat でオブジェクトを作成\n    Cat c;\n    c.name = \"Tama\";\n    std::cout << c.name << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\n#include <___>\n// class でクラスを定義\nclass ___ {\n___:\n    // string でメンバ変数を定義\n    std::string ___;\n___\nint ___() {\n    // Cat でオブジェクトを作成\n    Cat ___;\n    c.name = \"___\";\n    std::cout << c.name << std::___;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\n#include <string>\n// class でクラスを定義\nclass ___ {\n___:\n    // string でメンバ変数を定義\n    std::string ___;\n___\nint ___() {\n    // Cat でオブジェクトを作成\n    Cat ___;\n    c.name = \"___\";\n    std::cout << c.name << std::___;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <string>",
@@ -62,10 +62,7 @@ export const cpp2Data = {
           "keywords": [
             "class"
           ],
-          "others": [
-            "string",
-            "Cat"
-          ]
+          "others": ["string", "Cat", "public", "name", "};", "main", "c", "Tama", "endl", "0", "}"]
         },
         "testCases": [
           {
@@ -91,7 +88,7 @@ export const cpp2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nclass Counter {\npublic:\n    int count;\n    // Counter でコンストラクタを定義\n    Counter(int c) {\n        // count に値を代入\n        count = c;\n    }\n};\nint main() {\n    // Counter(5) でオブジェクトを作成\n    Counter cnt(5);\n    std::cout << cnt.count << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\nclass ___ {\n___:\n    int ___;\n    // Counter でコンストラクタを定義\n    Counter(int ___) {\n        // count に値を代入\n        count = ___;\n    ___\n___\nint ___() {\n    // Counter(5) でオブジェクトを作成\n    Counter cnt(___);\n    std::cout << cnt.count << std::___;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nclass ___ {\n___:\n    int ___;\n    // Counter でコンストラクタを定義\n    Counter(int ___) {\n        // count に値を代入\n        count = ___;\n    ___\n___\nint ___() {\n    // Counter(5) でオブジェクトを作成\n    Counter cnt(___);\n    std::cout << cnt.count << std::___;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "class Counter {",
@@ -132,10 +129,7 @@ export const cpp2Data = {
           "functions": [
             "Counter"
           ],
-          "others": [
-            "count",
-            "5"
-          ]
+          "others": ["count", "5", "public", "c", "}", "};", "main", "endl", "0"]
         },
         "testCases": [
           {
@@ -161,7 +155,7 @@ export const cpp2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nclass Rect {\npublic:\n    int w;\n    int h;\n    int area() {\n        // * で掛け算\n        return w * h;\n    }\n};\nint main() {\n    // Rect でオブジェクトを作成\n    Rect r;\n    r.w = 3;\n    r.h = 4;\n    // area() でメンバ関数を呼び出し\n    std::cout << r.area() << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\nclass ___ {\n___:\n    int ___;\n    int ___;\n    int ___() {\n        // * で掛け算\n        return w * ___;\n    ___\n___\nint ___() {\n    // Rect でオブジェクトを作成\n    Rect ___;\n    r.w = ___;\n    r.h = ___;\n    // area() でメンバ関数を呼び出し\n    std::cout << r.area() << std::___;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nclass ___ {\n___:\n    int ___;\n    int ___;\n    int ___() {\n        // * で掛け算\n        return w * ___;\n    ___\n___\nint ___() {\n    // Rect でオブジェクトを作成\n    Rect ___;\n    r.w = ___;\n    r.h = ___;\n    // area() でメンバ関数を呼び出し\n    std::cout << r.area() << std::___;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "class Rect {",
@@ -208,10 +202,7 @@ export const cpp2Data = {
           "operators": [
             "*"
           ],
-          "others": [
-            "Rect",
-            "area"
-          ]
+          "others": ["Rect", "area", "public", "w", "h", "}", "};", "main", "r", "3", "4", "endl", "0"]
         },
         "testCases": [
           {
@@ -237,7 +228,7 @@ export const cpp2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nint main() {\n    int num = 5;\n    // & で参照を作る\n    int& ref = num;\n    // ref に 100 を代入\n    ref = 100;\n    std::cout << num << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\nint ___() {\n    int num = ___;\n    // & で参照を作る\n    int& ref = ___;\n    // ref に 100 を代入\n    ref = ___;\n    std::cout << ___ << std::endl;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nint ___() {\n    int num = ___;\n    // & で参照を作る\n    int& ref = ___;\n    // ref に 100 を代入\n    ref = ___;\n    std::cout << ___ << std::endl;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -266,9 +257,7 @@ export const cpp2Data = {
           "operators": [
             "&"
           ],
-          "others": [
-            "100"
-          ]
+          "others": ["100", "main", "5", "num", "0", "}"]
         },
         "testCases": [
           {
@@ -294,7 +283,7 @@ export const cpp2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nclass Vehicle {\npublic:\n    void move() {\n        std::cout << \"moving\" << std::endl;\n    }\n};\n// public で継承\nclass Car : public Vehicle {\n};\nint main() {\n    Car c;\n    // move() でメンバ関数を呼び出し\n    c.move();\n    return 0;\n}",
-        "holeyCode": "#include <___>\nclass ___ {\n___:\n    void ___() {\n        std::cout << ___ << std::endl;\n    ___\n___\n// public で継承\nclass ___ : public Vehicle {\n___\nint ___() {\n    Car ___;\n    // move() でメンバ関数を呼び出し\n    c.___();\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nclass ___ {\n___:\n    void ___() {\n        std::cout << ___ << std::endl;\n    ___\n___\n// public で継承\nclass ___ : public Vehicle {\n___\nint ___() {\n    Car ___;\n    // move() でメンバ関数を呼び出し\n    c.___();\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "class Vehicle {",
@@ -335,9 +324,7 @@ export const cpp2Data = {
           "keywords": [
             "public"
           ],
-          "others": [
-            "move"
-          ]
+          "others": ["move", "Vehicle", "\"moving\"", "}", "};", "Car", "main", "c", "0"]
         },
         "testCases": [
           {
@@ -363,7 +350,7 @@ export const cpp2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nclass Shape {\npublic:\n    // virtual で仮想関数を定義\n    virtual void draw() {\n        std::cout << \"shape\" << std::endl;\n    }\n};\nclass Circle : public Shape {\npublic:\n    // override で上書き\n    void draw() override {\n        std::cout << \"circle\" << std::endl;\n    }\n};\nint main() {\n    Circle c;\n    // draw() でメンバ関数を呼び出し\n    c.draw();\n    return 0;\n}",
-        "holeyCode": "#include <___>\nclass ___ {\n___:\n    // virtual で仮想関数を定義\n    virtual void ___() {\n        std::cout << ___ << std::endl;\n    ___\n___\nclass ___ : public Shape {\n___:\n    // override で上書き\n    void draw() ___ {\n        std::cout << ___ << std::endl;\n    ___\n___\nint ___() {\n    Circle ___;\n    // draw() でメンバ関数を呼び出し\n    c.___();\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nclass ___ {\n___:\n    // virtual で仮想関数を定義\n    virtual void ___() {\n        std::cout << ___ << std::endl;\n    ___\n___\nclass ___ : public Shape {\n___:\n    // override で上書き\n    void draw() ___ {\n        std::cout << ___ << std::endl;\n    ___\n___\nint ___() {\n    Circle ___;\n    // draw() でメンバ関数を呼び出し\n    c.___();\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "class Shape {",
@@ -414,10 +401,7 @@ export const cpp2Data = {
           "keywords": [
             "virtual"
           ],
-          "others": [
-            "override",
-            "draw"
-          ]
+          "others": ["override", "draw", "Shape", "public", "\"shape\"", "}", "};", "Circle", "\"circle\"", "main", "c", "0"]
         },
         "testCases": [
           {
@@ -443,7 +427,7 @@ export const cpp2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\n// T で型パラメータを定義\ntemplate<typename T>\nT bigger(T a, T b) {\n    if (a > b) return a;\n    return b;\n}\nint main() {\n    // bigger で大きい方を取得\n    std::cout << bigger(3, 7) << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\n// T で型パラメータを定義\ntemplate<typename ___>\nT bigger(T a, T ___) {\n    if (___ > b) return a;\n    return ___;\n___\nint ___() {\n    // bigger で大きい方を取得\n    std::cout << bigger(___, 7) << std::endl;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\n// T で型パラメータを定義\ntemplate<typename ___>\nT bigger(T a, T ___) {\n    if (___ > b) return a;\n    return ___;\n___\nint ___() {\n    // bigger で大きい方を取得\n    std::cout << bigger(___, 7) << std::endl;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "// T で型パラメータを定義",
@@ -476,9 +460,7 @@ export const cpp2Data = {
           "variables": [
             "T"
           ],
-          "others": [
-            "bigger"
-          ]
+          "others": ["bigger", "b", "a", "}", "main", "3", "0"]
         },
         "testCases": [
           {
@@ -504,7 +486,7 @@ export const cpp2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nint main() {\n    // { でラムダ本体を開始\n    auto square = [](int x) {\n        return x * x;\n    };\n    // square(4) でラムダを呼び出し\n    std::cout << square(4) << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\nint ___() {\n    // { でラムダ本体を開始\n    auto square = [](int ___) {\n        return ___ * x;\n    ___\n    // square(4) でラムダを呼び出し\n    std::cout << square(___) << std::endl;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nint ___() {\n    // { でラムダ本体を開始\n    auto square = [](int ___) {\n        return ___ * x;\n    ___\n    // square(4) でラムダを呼び出し\n    std::cout << square(___) << std::endl;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -533,9 +515,7 @@ export const cpp2Data = {
           "operators": [
             "{"
           ],
-          "others": [
-            "square"
-          ]
+          "others": ["square", "main", "x", "};", "4", "0", "}"]
         },
         "testCases": [
           {
@@ -561,7 +541,7 @@ export const cpp2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\n#include <memory>\nint main() {\n    // make_unique でスマートポインタを作成\n    auto ptr = std::make_unique<int>(100);\n    // *ptr で中身にアクセス\n    std::cout << *ptr << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <___>\n#include <___>\nint ___() {\n    // make_unique でスマートポインタを作成\n    auto ptr = std::make_unique<int>(___);\n    // *ptr で中身にアクセス\n    std::cout << *ptr << std::___;\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\n#include <memory>\nint ___() {\n    // make_unique でスマートポインタを作成\n    auto ptr = std::make_unique<int>(___);\n    // *ptr で中身にアクセス\n    std::cout << *ptr << std::___;\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <memory>",
@@ -588,9 +568,7 @@ export const cpp2Data = {
           "functions": [
             "make_unique"
           ],
-          "others": [
-            "*"
-          ]
+          "others": ["*", "main", "100", "endl", "0", "}"]
         },
         "testCases": [
           {
@@ -616,7 +594,7 @@ export const cpp2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\nint main() {\n    try {\n        // throw で例外を投げる\n        throw 404;\n    // catch で例外を捕まえる\n    } catch (int e) {\n        std::cout << e << std::endl;\n    }\n    return 0;\n}",
-        "holeyCode": "#include <___>\nint ___() {\n    ___ {\n        // throw で例外を投げる\n        throw ___;\n    // catch で例外を捕まえる\n    } ___ (int e) {\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
+        "holeyCode": "#include <iostream>\nint ___() {\n    ___ {\n        // throw で例外を投げる\n        throw ___;\n    // catch で例外を捕まえる\n    } ___ (int e) {\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -647,9 +625,7 @@ export const cpp2Data = {
           "keywords": [
             "throw"
           ],
-          "others": [
-            "catch"
-          ]
+          "others": ["catch", "main", "try", "404", "e", "}", "0"]
         },
         "testCases": [
           {

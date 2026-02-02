@@ -60,12 +60,7 @@ export const typescriptData4 = {
             "as",
             "in"
           ],
-          "others": [
-            "'number'",
-            "42",
-            "value",
-            "2"
-          ]
+          "others": ["'number'", "42", "value", "2", "number", "}", "log"]
         },
         "testCases": [
           {
@@ -138,11 +133,7 @@ export const typescriptData4 = {
             "of",
             "has"
           ],
-          "others": [
-            "void",
-            "'Driving'",
-            "'Sailing'"
-          ]
+          "others": ["void", "'Driving'", "'Sailing'", "vehicle", "log", "else", "}", "drive"]
         },
         "testCases": [
           {
@@ -225,13 +216,7 @@ export const typescriptData4 = {
             "type",
             "kind"
           ],
-          "others": [
-            "string",
-            "|",
-            "data",
-            "error",
-            "'OK'"
-          ]
+          "others": ["string", "|", "data", "error", "'OK'", "Failure", "void", "success", "log", "break", "failure", "}", "handle"]
         },
         "testCases": [
           {
@@ -310,14 +295,7 @@ export const typescriptData4 = {
             "void",
             "unknown"
           ],
-          "others": [
-            "|",
-            "'#ff0000'",
-            "'#00ff00'",
-            "'#0000ff'",
-            "_exhaustive",
-            "'red'"
-          ]
+          "others": ["|", "'#ff0000'", "'#00ff00'", "'#0000ff'", "_exhaustive", "'red'", "blue", "string", "color", "0000", "00", "default", "}", "log"]
         },
         "testCases": [
           {
@@ -376,11 +354,7 @@ export const typescriptData4 = {
             "'",
             "\""
           ],
-          "others": [
-            "|",
-            "'get /users'",
-            "route"
-          ]
+          "others": ["|", "'get /users'", "route", "post", "posts", "Endpoint", "users"]
         },
         "testCases": [
           {
@@ -435,11 +409,7 @@ export const typescriptData4 = {
             "Omit",
             "Extract"
           ],
-          "others": [
-            "|",
-            "'pending'",
-            "status"
-          ]
+          "others": ["|", "'pending'", "status", "cancelled", "pending"]
         },
         "testCases": [
           {
@@ -494,11 +464,7 @@ export const typescriptData4 = {
             "Exclude",
             "Pick"
           ],
-          "others": [
-            "|",
-            "'click'",
-            "event"
-          ]
+          "others": ["|", "'click'", "event", "keydown", "mouseover", "click"]
         },
         "testCases": [
           {
@@ -553,11 +519,7 @@ export const typescriptData4 = {
             "Required",
             "Exclude"
           ],
-          "others": [
-            "|",
-            "'Hello'",
-            "text"
-          ]
+          "others": ["|", "'Hello'", "text", "undefined", "MaybeString", "Hello"]
         },
         "testCases": [
           {
@@ -614,11 +576,7 @@ export const typescriptData4 = {
             "ReturnType",
             "Arguments"
           ],
-          "others": [
-            "age",
-            "25",
-            "args"
-          ]
+          "others": ["age", "25", "args", "void", "log", "}", "greet"]
         },
         "testCases": [
           {
@@ -673,11 +631,7 @@ export const typescriptData4 = {
             "Promise",
             "Resolved"
           ],
-          "others": [
-            "string",
-            "'success'",
-            "data"
-          ]
+          "others": ["string", "'success'", "data", "AsyncResult", "success", "log"]
         },
         "testCases": [
           {

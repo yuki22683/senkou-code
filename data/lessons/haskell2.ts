@@ -40,9 +40,7 @@ export const haskell2Data = {
           "operators": [
             "+"
           ],
-          "others": [
-            "addTen"
-          ]
+          "others": ["addTen", "10", "5"]
         },
         "testCases": [
           {
@@ -89,10 +87,7 @@ export const haskell2Data = {
           "operators": [
             "::"
           ],
-          "others": [
-            "*",
-            "square"
-          ]
+          "others": ["*", "square", "Int", "x", "5"]
         },
         "testCases": [
           {
@@ -135,9 +130,7 @@ export const haskell2Data = {
           "functions": [
             "head"
           ],
-          "others": [
-            "[1, 2, 3]"
-          ]
+          "others": ["[1, 2, 3]", "1", "nums"]
         },
         "testCases": [
           {
@@ -175,7 +168,8 @@ export const haskell2Data = {
         "candidates": {
           "functions": [
             "map"
-          ]
+          ],
+          "others": ["2"]
         },
         "testCases": [
           {
@@ -213,7 +207,8 @@ export const haskell2Data = {
         "candidates": {
           "functions": [
             "filter"
-          ]
+          ],
+          "others": ["3"]
         },
         "testCases": [
           {
@@ -264,11 +259,7 @@ export const haskell2Data = {
           "numbers": [
             "2"
           ],
-          "others": [
-            "0",
-            "1",
-            "fib"
-          ]
+          "others": ["0", "1", "fib", "6"]
         },
         "testCases": [
           {
@@ -323,12 +314,7 @@ export const haskell2Data = {
           "keywords": [
             "otherwise"
           ],
-          "others": [
-            "x",
-            ">",
-            "<",
-            "sign"
-          ]
+          "others": ["x", ">", "<", "sign", "positive", "negative", "zero", "5"]
         },
         "testCases": [
           {
@@ -365,7 +351,8 @@ export const haskell2Data = {
         "candidates": {
           "operators": [
             "\\"
-          ]
+          ],
+          "others": ["1"]
         },
         "testCases": [
           {
@@ -403,7 +390,8 @@ export const haskell2Data = {
         "candidates": {
           "operators": [
             "<-"
-          ]
+          ],
+          "others": ["1"]
         },
         "testCases": [
           {
@@ -441,7 +429,8 @@ export const haskell2Data = {
         "candidates": {
           "functions": [
             "foldr"
-          ]
+          ],
+          "others": ["0"]
         },
         "testCases": [
           {

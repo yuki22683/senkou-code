@@ -52,12 +52,7 @@ export const pythonData5 = {
             "file",
             "read"
           ],
-          "others": [
-            "'test.txt'",
-            "f.write('Hello, Python!')",
-            "open(filename, 'r')",
-            "f.read("
-          ]
+          "others": ["'test.txt'", "f.write('Hello, Python!')", "open(filename, 'r')", "f.read(", "txt", "f", "Python", "print"]
         },
         "testCases": [
           {
@@ -114,10 +109,7 @@ export const pythonData5 = {
             "from",
             "of"
           ],
-          "others": [
-            "open('test.txt', 'w')",
-            "f.write('line1"
-          ]
+          "others": ["open('test.txt', 'w')", "f.write('line1", "f", "1", "2", "3"]
         },
         "testCases": [
           {
@@ -168,11 +160,7 @@ export const pythonData5 = {
             "load",
             "parse"
           ],
-          "others": [
-            "json",
-            "'{\"name\": \"Python\", \"version\": 3.12}'",
-            "data['name']"
-          ]
+          "others": ["json", "'{\"name\": \"Python\", \"version\": 3.12}'", "data['name']", "name", "json_str", "print"]
         },
         "testCases": [
           {
@@ -223,11 +211,7 @@ export const pythonData5 = {
             "dump",
             "stringify"
           ],
-          "others": [
-            "json",
-            "{'language': 'Python', 'level': 'advanced'}",
-            "json_str"
-          ]
+          "others": ["json", "{'language': 'Python', 'level': 'advanced'}", "json_str", "advanced", "data", "print"]
         },
         "testCases": [
           {
@@ -282,11 +266,7 @@ export const pythonData5 = {
             "match",
             "find"
           ],
-          "others": [
-            "re",
-            "'Call me at 090-1234-5678'",
-            "match.group("
-          ]
+          "others": ["re", "'Call me at 090-1234-5678'", "match.group(", "090", "print", "3"]
         },
         "testCases": [
           {
@@ -337,11 +317,7 @@ export const pythonData5 = {
             "finditer",
             "search"
           ],
-          "others": [
-            "re",
-            "'email1@test.com and email2@test.com'",
-            "emails"
-          ]
+          "others": ["re", "'email1@test.com and email2@test.com'", "emails", "1", "print", "text"]
         },
         "testCases": [
           {
@@ -392,11 +368,7 @@ export const pythonData5 = {
             "replace",
             "swap"
           ],
-          "others": [
-            "re",
-            "'Hello   World   Python'",
-            "result"
-          ]
+          "others": ["re", "'Hello   World   Python'", "result", "Python", "ext", "print", "text"]
         },
         "testCases": [
           {
@@ -447,11 +419,7 @@ export const pythonData5 = {
             "Count",
             "Dict"
           ],
-          "others": [
-            "'hello world'",
-            "Counter(text)",
-            "count.most_common(3"
-          ]
+          "others": ["'hello world'", "Counter(text)", "count.most_common(3", "world", "text", "print"]
         },
         "testCases": [
           {
@@ -506,12 +474,7 @@ export const pythonData5 = {
             "dict",
             "OrderedDict"
           ],
-          "others": [
-            "defaultdict(list)",
-            "d['fruits'].append('apple')",
-            "d['fruits'].append('banana')",
-            "d['fruits']"
-          ]
+          "others": ["defaultdict(list)", "d['fruits'].append('apple')", "d['fruits'].append('banana')", "d['fruits']", "list", "apple", "banana", "print"]
         },
         "testCases": [
           {
@@ -566,12 +529,7 @@ export const pythonData5 = {
             "concat",
             "merge"
           ],
-          "others": [
-            "[1, 2, 3]",
-            "[4, 5, 6]",
-            "list(chain(list1, list2))",
-            "result"
-          ]
+          "others": ["[1, 2, 3]", "[4, 5, 6]", "list(chain(list1, list2))", "result", "1", "2", "print"]
         },
         "testCases": [
           {

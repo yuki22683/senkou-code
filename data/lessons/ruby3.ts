@@ -57,10 +57,7 @@ export const ruby3Data = {
             "block",
             "return"
           ],
-          "others": [
-            "def",
-            "end"
-          ]
+          "others": ["def", "end", "twice"]
         },
         "testCases": [
           {
@@ -147,9 +144,7 @@ export const ruby3Data = {
             "lambda",
             "proc"
           ],
-          "others": [
-            "**"
-          ]
+          "others": ["**", "3"]
         },
         "testCases": [
           {
@@ -235,9 +230,7 @@ export const ruby3Data = {
             "inject",
             "sum"
           ],
-          "others": [
-            "+"
-          ]
+          "others": ["+", "1"]
         },
         "testCases": [
           {
@@ -279,9 +272,7 @@ export const ruby3Data = {
             "find_all",
             "reject"
           ],
-          "others": [
-            "even"
-          ]
+          "others": ["even", "1"]
         },
         "testCases": [
           {
@@ -337,10 +328,7 @@ export const ruby3Data = {
             "fold",
             "inject"
           ],
-          "others": [
-            "def",
-            "end"
-          ]
+          "others": ["def", "end", "numbers", "0"]
         },
         "testCases": [
           {
@@ -404,10 +392,7 @@ export const ruby3Data = {
             "args",
             "self"
           ],
-          "others": [
-            "class",
-            "end"
-          ]
+          "others": ["class", "end", "FlexibleClass", "Unknown method: #{name}"]
         },
         "testCases": [
           {
@@ -494,9 +479,7 @@ export const ruby3Data = {
             "yield_self",
             "itself"
           ],
-          "others": [
-            "push"
-          ]
+          "others": ["push", "1"]
         },
         "testCases": [
           {

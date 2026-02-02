@@ -94,17 +94,7 @@ export const assemblyData = {
           "variables": [
             "msg"
           ],
-          "others": [
-            ".data",
-            "Hello",
-            ".text",
-            "_start",
-            "1",
-            "6",
-            "syscall",
-            "60",
-            "rdi"
-          ]
+          "others": [".data", "Hello", ".text", "_start", "1", "6", "syscall", "60", "rdi", "data", "text", "rax", "rsi", "rdx"]
         },
         "testCases": [
           {
@@ -180,7 +170,8 @@ export const assemblyData = {
             "3",
             "6",
             "2"
-          ]
+          ],
+          "others": ["data", "text", "_start", "rax", "1", "rdi", "rsi", "msg", "rdx", "syscall", "60"]
         },
         "testCases": [
           {
@@ -239,7 +230,8 @@ export const assemblyData = {
             "xor",
             "mov",
             "add"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "rdi", "syscall"]
         },
         "testCases": [
           {
@@ -302,7 +294,8 @@ export const assemblyData = {
             "sub",
             "mul",
             "mov"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "10", "5", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -365,7 +358,8 @@ export const assemblyData = {
             "add",
             "mul",
             "div"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "20", "8", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -426,7 +420,8 @@ export const assemblyData = {
             "rsi",
             "rdx",
             "rbx"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "25", "60", "syscall"]
         },
         "testCases": [
           {
@@ -487,7 +482,8 @@ export const assemblyData = {
             "add",
             "sub",
             "test"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "5", "10", "60", "rdi", "syscall"]
         },
         "testCases": [
           {
@@ -559,7 +555,8 @@ export const assemblyData = {
             "jmp",
             "jg",
             "jl"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "5", "equal", "rdi", "1", "done", "0", "60", "syscall"]
         },
         "testCases": [
           {
@@ -624,7 +621,8 @@ export const assemblyData = {
             "je",
             "jne",
             "call"
-          ]
+          ],
+          "others": ["text", "_start", "done", "skip", "rdi", "1", "rax", "60", "syscall"]
         },
         "testCases": [
           {
@@ -683,7 +681,8 @@ export const assemblyData = {
             "dec",
             "add",
             "sub"
-          ]
+          ],
+          "others": ["text", "_start", "rax", "9", "rdi", "60", "syscall"]
         },
         "testCases": [
           {

@@ -86,15 +86,7 @@ export const kotlin4Data = {
             "abstract",
             "open"
           ],
-          "others": [
-            "Circle",
-            "Rectangle",
-            "Shape",
-            "radius",
-            "w",
-            "main",
-            "println"
-          ]
+          "others": ["Circle", "Rectangle", "Shape", "radius", "w", "main", "println", "s", "3", "h", "}"]
         },
         "testCases": [
           {
@@ -181,13 +173,7 @@ export const kotlin4Data = {
             "class",
             "companion"
           ],
-          "others": [
-            "0",
-            "increment",
-            "count",
-            "main",
-            "get"
-          ]
+          "others": ["0", "increment", "count", "main", "get", "Counter", "}", "println"]
         },
         "testCases": [
           {
@@ -276,14 +262,7 @@ export const kotlin4Data = {
             "lateinit",
             "init"
           ],
-          "others": [
-            "Config",
-            "Init",
-            "42",
-            "main",
-            "Created",
-            "value"
-          ]
+          "others": ["Config", "Init", "42", "main", "Created", "value", "println", "}"]
         },
         "testCases": [
           {
@@ -368,12 +347,7 @@ export const kotlin4Data = {
             "lazy",
             "init"
           ],
-          "others": [
-            "Service",
-            "setup",
-            "main",
-            "config"
-          ]
+          "others": ["Service", "setup", "main", "config", "String", "c", "}", "OK", "println"]
         },
         "testCases": [
           {
@@ -450,12 +424,7 @@ export const kotlin4Data = {
             "noinline",
             "crossinline"
           ],
-          "others": [
-            "times",
-            "action",
-            "main",
-            "repeat"
-          ]
+          "others": ["times", "action", "main", "repeat", "Unit", "0", "i", "}", "3"]
         },
         "testCases": [
           {
@@ -526,11 +495,7 @@ export const kotlin4Data = {
             "inline",
             "generic"
           ],
-          "others": [
-            "simpleName",
-            "main",
-            "String>())"
-          ]
+          "others": ["simpleName", "main", "String>())", "String", "Unknown", "}", "println"]
         },
         "testCases": [
           {
@@ -599,10 +564,7 @@ export const kotlin4Data = {
             "even()",
             "checkEven()"
           ],
-          "others": [
-            "main",
-            "isEven"
-          ]
+          "others": ["main", "isEven", "2", "println", "}"]
         },
         "testCases": [
           {
@@ -671,11 +633,7 @@ export const kotlin4Data = {
             "also",
             "run"
           ],
-          "others": [
-            "main",
-            "uppercase",
-            "println"
-          ]
+          "others": ["main", "uppercase", "println", "hello", "}", "result"]
         },
         "testCases": [
           {
@@ -754,14 +712,7 @@ export const kotlin4Data = {
             "also",
             "with"
           ],
-          "others": [
-            "data",
-            "main",
-            "localhost",
-            "8080",
-            "host",
-            "port"
-          ]
+          "others": ["data", "main", "localhost", "8080", "host", "port", "}", "println"]
         },
         "testCases": [
           {
@@ -838,11 +789,7 @@ export const kotlin4Data = {
             "type",
             "alias"
           ],
-          "others": [
-            "printAll",
-            "forEach",
-            "main"
-          ]
+          "others": ["printAll", "forEach", "main", "String", "StringList", "it", "}", "A"]
         },
         "testCases": [
           {

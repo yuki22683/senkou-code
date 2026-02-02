@@ -59,7 +59,8 @@ export const javaData5 = {
             "throw",
             "0",
             "println"
-          ]
+          ],
+          "others": ["Main", "main(String[] args) {", "10", "}"]
         },
         "testCases": [
           {
@@ -124,7 +125,8 @@ export const javaData5 = {
             "catch",
             "end",
             "println"
-          ]
+          ],
+          "others": ["Main", "main(String[] args) {", "try", "}"]
         },
         "testCases": [
           {
@@ -198,7 +200,8 @@ export const javaData5 = {
             "catch",
             "riskyMethod",
             "println"
-          ]
+          ],
+          "others": ["*;", "Main", "Exception", "Error!", "}", "main(String[] args) {", "try"]
         },
         "testCases": [
           {
@@ -275,7 +278,8 @@ export const javaData5 = {
             "super",
             "throw",
             "getMessage"
-          ]
+          ],
+          "others": ["InvalidAgeException", "msg", "}", "Main", "main(String[] args) {", "try", "Invalid", "catch", "println"]
         },
         "testCases": [
           {
@@ -342,9 +346,7 @@ export const javaData5 = {
             "read",
             "printStackTrace"
           ],
-          "others": [
-            "(StringReader reader = new StringReader(\"Hello\")) {"
-          ]
+          "others": ["(StringReader reader = new StringReader(\"Hello\")) {", "*;", "Main", "main(String[] args) {", "Hello", "println", "catch", "}"]
         },
         "testCases": [
           {
@@ -415,7 +417,8 @@ export const javaData5 = {
             "new",
             "println",
             "close"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) throws IOException {", "content", "}"]
         },
         "testCases": [
           {
@@ -486,7 +489,8 @@ export const javaData5 = {
             "new",
             "flush",
             "toString"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) throws IOException {", "StringWriter", "sw", "Hello", "println", "}"]
         },
         "testCases": [
           {
@@ -553,7 +557,8 @@ export const javaData5 = {
             "new",
             "next",
             "println"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "42 Hello", "}"]
         },
         "testCases": [
           {
@@ -617,7 +622,8 @@ export const javaData5 = {
             "create",
             "exists",
             "println"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) throws Exception {", ".", "path", "}"]
         },
         "testCases": [
           {
@@ -684,7 +690,8 @@ export const javaData5 = {
             "null",
             "length",
             "println"
-          ]
+          ],
+          "others": ["Main", "main(String[] args) {", "try", "e", "}"]
         },
         "testCases": [
           {

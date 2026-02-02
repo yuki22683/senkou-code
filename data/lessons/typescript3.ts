@@ -64,12 +64,7 @@ export const typescriptData3 = {
             "Required",
             "Pick"
           ],
-          "others": [
-            "string",
-            "number",
-            "3000",
-            "port"
-          ]
+          "others": ["string", "number", "3000", "port", "Config", "}", "patch", "cfg", "log"]
         },
         "testCases": [
           {
@@ -134,11 +129,7 @@ export const typescriptData3 = {
             "Partial",
             "Readonly"
           ],
-          "others": [
-            "boolean",
-            "debug",
-            "false"
-          ]
+          "others": ["boolean", "debug", "false", "Options", "}", "log", "init"]
         },
         "testCases": [
           {
@@ -205,12 +196,7 @@ export const typescriptData3 = {
             "Omit",
             "Extract"
           ],
-          "others": [
-            "number",
-            "string",
-            "'Apple'",
-            "name"
-          ]
+          "others": ["number", "string", "'Apple'", "name", "Product", "}", "Apple", "log"]
         },
         "testCases": [
           {
@@ -277,12 +263,7 @@ export const typescriptData3 = {
             "Pick",
             "Exclude"
           ],
-          "others": [
-            "number",
-            "string",
-            "'Alice'",
-            "name"
-          ]
+          "others": ["number", "string", "'Alice'", "name", "User", "}", "secret", "1", "log"]
         },
         "testCases": [
           {
@@ -349,12 +330,7 @@ export const typescriptData3 = {
             "Map",
             "Object"
           ],
-          "others": [
-            "|",
-            "100",
-            "80",
-            "apple"
-          ]
+          "others": ["|", "100", "80", "apple", "banana", "number", "Prices", "};", "log"]
         },
         "testCases": [
           {
@@ -413,11 +389,7 @@ export const typescriptData3 = {
             "Parameters",
             "InstanceType"
           ],
-          "others": [
-            "20",
-            "15",
-            "x"
-          ]
+          "others": ["20", "15", "x", "createPoint", "10", "}", "5", "log"]
         },
         "testCases": [
           {
@@ -482,13 +454,7 @@ export const typescriptData3 = {
             "implements",
             "typeof"
           ],
-          "others": [
-            "number",
-            "string",
-            "true",
-            "false",
-            "b"
-          ]
+          "others": ["number", "string", "true", "false", "b", "log"]
         },
         "testCases": [
           {
@@ -553,13 +519,7 @@ export const typescriptData3 = {
             "typeof",
             "keyof"
           ],
-          "others": [
-            "string",
-            "number",
-            "'hello'",
-            "42",
-            "b"
-          ]
+          "others": ["string", "number", "'hello'", "42", "b", "T", "hello", "log"]
         },
         "testCases": [
           {
@@ -628,13 +588,7 @@ export const typescriptData3 = {
             "typeof",
             "instanceof"
           ],
-          "others": [
-            "string",
-            "number",
-            "key",
-            "30",
-            "'name'"
-          ]
+          "others": ["string", "number", "key", "30", "'name'", "Person", "}", "K", "person", "log"]
         },
         "testCases": [
           {
@@ -705,12 +659,7 @@ export const typescriptData3 = {
             "of",
             "from"
           ],
-          "others": [
-            "string",
-            "number",
-            "'localhost'",
-            "host"
-          ]
+          "others": ["string", "number", "'localhost'", "host", "T", "K", "};", "Config", "}", "localhost", "log"]
         },
         "testCases": [
           {

@@ -189,7 +189,8 @@ export const pythonData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["print"]
         },
         "testCases": [
           {
@@ -214,14 +215,14 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに50を入れる\nscore = 50\n# 10点プラスする\nscore += 10\n# 結果を表示\nprint(score)",
-        "holeyCode": "# scoreに50を入れる\nscore = ___\n# 10点プラスする\nscore += ___\n# 結果を表示\n___(score)",
+        "correctCode": "# scoreに50を入れる\nscore = 50\n# 10点プラスする\nscore += 10\n# scoreを表示\nprint(score)",
+        "holeyCode": "# scoreに50を入れる\nscore = ___\n# 10点プラスする\nscore += ___\n# scoreを表示\n___(score)",
         "correctLines": [
           "# scoreに50を入れる",
           "score = 50",
           "# 10点プラスする",
           "score += 10",
-          "# 結果を表示",
+          "# scoreを表示",
           "print(score)"
         ],
         "lineHints": [
@@ -242,7 +243,8 @@ export const pythonData = {
           "numbers": [
             "50",
             "10"
-          ]
+          ],
+          "others": ["print"]
         },
         "testCases": [
           {
@@ -267,13 +269,13 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ageというはこに 10 を入れる\nage = 10\n# f-stringを使ってメッセージを出す\nprint(f'私は{age}歳です')",
-        "holeyCode": "# ageというはこに 10 を入れる\nage = ___\n# f-stringを使ってメッセージを出す\n___(f'私は{age}歳です')",
+        "correctCode": "# ageというはこに 10 を入れる\nage = 10\n# f-stringを使ってメッセージを出す\nprint(f'7I am {age} years oldprint(f'I am {age} years old')')",
+        "holeyCode": "# ageというはこに 10 を入れる\nage = ___\n# f-stringを使ってメッセージを出す\n___(f'5I am {age} years old___(f'I am {age} years old')')",
         "correctLines": [
           "# ageというはこに 10 を入れる",
           "age = 10",
           "# f-stringを使ってメッセージを出す",
-          "print(f'私は{age}歳です')"
+          "print(f'7I am {age} years oldprint(f'I am {age} years old')')"
         ],
         "lineHints": [
           null,
@@ -315,8 +317,8 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# colors というリストを作る（'あか', 'あお'の順）\ncolors = ['あか', 'あお']\n# 2番目のデータ（インデックス1）を出す\nprint(colors[1])",
-        "holeyCode": "# colors というリストを作る（'あか', 'あお'の順）\n___ = ['あか', 'あお']\n# 2番目のデータ（インデックス1）を出す\n___(colors[1])",
+        "correctCode": "# colors というリストを作る（'あか', 'あお'の順）\ncolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue']', 'blue']']', '41bluecolors = ['10redcolors = ['red', 'blue']', 'blue']']\n# 2番目のデータ（インデックス1）を出す\nprint(colors[1])",
+        "holeyCode": "# colors というリストを作る（'あか', 'あお'の順）\n___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue']', 'blue']']', '34blue___ = ['7red___ = ['red', 'blue']', 'blue']']\n# 2番目のデータ（インデックス1）を出す\n___(colors[1])",
         "correctLines": [
           "# colors というリストを作る（'あか', 'あお'の順）",
           "colors = ['あか', 'あお']",
@@ -367,15 +369,15 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# score に 100 を入れる\nscore = 100\n# もし 80 より大きかったら\nif score > 80:\n    # 「ごうかく！」と表示する\n    print('ごうかく！')",
-        "holeyCode": "# score に 100 を入れる\nscore = ___\n# もし 80 より大きかったら\nif score ___ 80:\n    # 「ごうかく！」と表示する\n    ___('ごうかく！')",
+        "correctCode": "# score に 100 を入れる\nscore = 100\n# もし 80 より大きかったら\nif score > 80:\n    # 「ごうかく！」と表示する\n    print('10Pass!    print('Pass!')')",
+        "holeyCode": "# score に 100 を入れる\nscore = ___\n# もし 80 より大きかったら\nif score ___ 80:\n    # 「ごうかく！」と表示する\n    ___('8Pass!    ___('Pass!')')",
         "correctLines": [
           "# score に 100 を入れる",
           "score = 100",
           "# もし 80 より大きかったら",
           "if score > 80:",
           "    # 「ごうかく！」と表示する",
-          "    print('ごうかく！')"
+          "    print('10Pass!    print('Pass!')')"
         ],
         "lineHints": [
           null,
@@ -425,19 +427,19 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# age に 10 を入れる\nage = 10\n# 20以上かを比較する演算子\nif age >= 20:\n    # 20歳以上のときのメッセージ（'おとな'）\n    print('おとな')\n# 「そうでなければ」のキーワード\nelse:\n    # それ以外の場合（'こども'）\n    print('こども')",
-        "holeyCode": "# age に 10 を入れる\nage = ___\n# 20以上かを比較する演算子\nif age ___ 20:\n    # 20歳以上のときのメッセージ（'おとな'）\n    ___('おとな')\n# 「そうでなければ」のキーワード\n___:\n    # それ以外の場合（'こども'）\n    ___('こども')",
+        "correctCode": "# age に 10 を入れる\nage = 10\n# 20以上かを比較する演算子\nif age >= 20:\n    # 20歳以上のときのメッセージ（'おとな'）\n    print('10Adult    print('Adult')')\n# 「そうでなければ」のキーワード\nelse:\n    # それ以外の場合（'こども'）\n    print('10Child    print('Child')')",
+        "holeyCode": "# age に 10 を入れる\nage = ___\n# 20以上かを比較する演算子\nif age ___ 20:\n    # 20歳以上のときのメッセージ（'おとな'）\n    ___('8Adult    ___('Adult')')\n# 「そうでなければ」のキーワード\n___:\n    # それ以外の場合（'こども'）\n    ___('8Child    ___('Child')')",
         "correctLines": [
           "# age に 10 を入れる",
           "age = 10",
           "# 20以上かを比較する演算子",
           "if age >= 20:",
           "    # 20歳以上のときのメッセージ（'おとな'）",
-          "    print('おとな')",
+          "    print('10Adult    print('Adult')')",
           "# 「そうでなければ」のキーワード",
           "else:",
           "    # それ以外の場合（'こども'）",
-          "    print('こども')"
+          "    print('10Child    print('Child')')"
         ],
         "lineHints": [
           null,
@@ -493,15 +495,15 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに85を入れる\nscore = 85\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 and score <= 100:\n    # 「ごうかく！」と出力\n    print('ごうかく！')",
-        "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score ___ 80 and score <= 100:\n    # 「ごうかく！」と出力\n    ___('ごうかく！')",
+        "correctCode": "# scoreに85を入れる\nscore = 85\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 and score <= 100:\n    # 「ごうかく！」と出力\n    print('10Pass!    print('Pass!')')",
+        "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score ___ 80 and score <= 100:\n    # 「ごうかく！」と出力\n    ___('8Pass!    ___('Pass!')')",
         "correctLines": [
           "# scoreに85を入れる",
           "score = 85",
           "# 80以上 かつ 100以下 ならメッセージを出す",
           "if score >= 80 and score <= 100:",
           "    # 「ごうかく！」と出力",
-          "    print('ごうかく！')"
+          "    print('10Pass!    print('Pass!')')"
         ],
         "lineHints": [
           null,
@@ -521,7 +523,8 @@ export const pythonData = {
           ],
           "strings": [
             "ごうかく！"
-          ]
+          ],
+          "others": [">=", "print"]
         },
         "testCases": [
           {
@@ -546,8 +549,8 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# リストを作る（'たろう', 'はなこ'の順）\nnames = ['たろう', 'はなこ']\n# 順番に取り出すループ\nfor name in names:\n    # 取り出した名前を表示\n    print(name)",
-        "holeyCode": "# リストを作る（'たろう', 'はなこ'の順）\n___ = ['たろう', 'はなこ']\n# 順番に取り出すループ\nfor name in ___:\n    # 取り出した名前を表示\n    ___(name)",
+        "correctCode": "# リストを作る（'たろう', 'はなこ'の順）\nnames = ['9Taronames = ['Taro', '32Hanakonames = ['9Taronames = ['Taro', 'Hanako']', 'Hanako']']', '41Hanakonames = ['9Taronames = ['Taro', 'Hanako']', 'Hanako']']\n# 順番に取り出すループ\nfor name in names:\n    # 取り出した名前を表示\n    print(name)",
+        "holeyCode": "# リストを作る（'たろう', 'はなこ'の順）\n___ = ['7Taro___ = ['Taro', '28Hanako___ = ['7Taro___ = ['Taro', 'Hanako']', 'Hanako']']', '37Hanako___ = ['7Taro___ = ['Taro', 'Hanako']', 'Hanako']']\n# 順番に取り出すループ\nfor name in ___:\n    # 取り出した名前を表示\n    ___(name)",
         "correctLines": [
           "# リストを作る（'たろう', 'はなこ'の順）",
           "names = ['たろう', 'はなこ']",
@@ -600,11 +603,11 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 辞書を作る（キーは'みかん'、値は'オレンジ'）\ncolors = {'みかん': 'オレンジ'}\n# 中身を出す\nprint(colors['みかん'])",
-        "holeyCode": "# 辞書を作る（キーは'みかん'、値は'オレンジ'）\n___ = {'みかん': 'オレンジ'}\n# 中身を出す\n___(colors['みかん'])",
+        "correctCode": "# 辞書を作る（キーは'みかん'、値は'オレンジ'）\ncolors = {'10orangecolors = {'orange': '17orangecolors = {'orange': 'orange'}'}': '17orangecolors = {'36orangecolors = {'orange': '17orangecolors = {'orange': 'orange'}'}': 'orange'}'}\n# 中身を出す\nprint(colors['13orangeprint(colors['orange'])'])",
+        "holeyCode": "# 辞書を作る（キーは'みかん'、値は'オレンジ'）\n___ = {'7orange___ = {'orange': '14orange___ = {'orange': 'orange'}'}': '14orange___ = {'30orange___ = {'orange': '14orange___ = {'orange': 'orange'}'}': 'orange'}'}\n# 中身を出す\n___(colors['11orange___(colors['orange'])'])",
         "correctLines": [
           "# 辞書を作る（キーは'みかん'、値は'オレンジ'）",
-          "colors = {'みかん': 'オレンジ'}",
+          "colors = {'10orangecolors = {'orange': '17orangecolors = {'orange': 'orange'}'}': '17orangecolors = {'36orangecolors = {'orange': '17orangecolors = {'orange': 'orange'}'}': 'orange'}'}",
           "# 中身を出す",
           "print(colors['みかん'])"
         ],
@@ -624,7 +627,8 @@ export const pythonData = {
           "strings": [
             "みかん",
             "オレンジ"
-          ]
+          ],
+          "others": ["ecolors"]
         },
         "testCases": [
           {
@@ -649,13 +653,13 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# greet という関数を定義する（'こんにちは'と表示）\ndef greet():\n    # 'こんにちは'と表示\n    print('こんにちは')\n# 関数を呼び出す\ngreet()",
-        "holeyCode": "# greet という関数を定義する（'こんにちは'と表示）\ndef ___():\n    # 'こんにちは'と表示\n    ___('こんにちは')\n# 関数を呼び出す\n___()",
+        "correctCode": "# greet という関数を定義する（'こんにちは'と表示）\ndef greet():\n    # 'こんにちは'と表示\n    print('10Hello    print('Hello')')\n# 関数を呼び出す\ngreet()",
+        "holeyCode": "# greet という関数を定義する（'こんにちは'と表示）\ndef ___():\n    # 'こんにちは'と表示\n    ___('8Hello    ___('Hello')')\n# 関数を呼び出す\n___()",
         "correctLines": [
           "# greet という関数を定義する（'こんにちは'と表示）",
           "def greet():",
           "    # 'こんにちは'と表示",
-          "    print('こんにちは')",
+          "    print('10Hello    print('Hello')')",
           "# 関数を呼び出す",
           "greet()"
         ],

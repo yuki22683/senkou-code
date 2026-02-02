@@ -48,10 +48,7 @@ export const perl2Data = {
           "operators": [
             "=~"
           ],
-          "others": [
-            "\"hello world\"",
-            "print"
-          ]
+          "others": ["\"hello world\"", "print", "text", "world", "}"]
         },
         "testCases": [
           {
@@ -100,10 +97,7 @@ export const perl2Data = {
           "keywords": [
             "s"
           ],
-          "others": [
-            "\"cat\"",
-            "print"
-          ]
+          "others": ["\"cat\"", "print", "text", "dog"]
         },
         "testCases": [
           {
@@ -148,9 +142,7 @@ export const perl2Data = {
           "operators": [
             "@"
           ],
-          "others": [
-            "print"
-          ]
+          "others": ["print", "fruits"]
         },
         "testCases": [
           {
@@ -195,9 +187,7 @@ export const perl2Data = {
           "operators": [
             "%"
           ],
-          "others": [
-            "print"
-          ]
+          "others": ["print", "math"]
         },
         "testCases": [
           {
@@ -248,10 +238,7 @@ export const perl2Data = {
           "keywords": [
             "foreach"
           ],
-          "others": [
-            "3",
-            "print"
-          ]
+          "others": ["3", "print", "nums", "}"]
         },
         "testCases": [
           {
@@ -306,11 +293,7 @@ export const perl2Data = {
           "keywords": [
             "sub"
           ],
-          "others": [
-            "shift",
-            "return",
-            "print"
-          ]
+          "others": ["shift", "return", "print", "double", "n", "2", "}"]
         },
         "testCases": [
           {
@@ -358,10 +341,7 @@ export const perl2Data = {
           "operators": [
             "\\"
           ],
-          "others": [
-            "20",
-            "print"
-          ]
+          "others": ["20", "print", "nums", "ref"]
         },
         "testCases": [
           {
@@ -406,9 +386,7 @@ export const perl2Data = {
           "operators": [
             "["
           ],
-          "others": [
-            "print"
-          ]
+          "others": ["print", "ref"]
         },
         "testCases": [
           {
@@ -457,10 +435,7 @@ export const perl2Data = {
           "functions": [
             "map"
           ],
-          "others": [
-            "3",
-            "print"
-          ]
+          "others": ["3", "print", "nums", "squared"]
         },
         "testCases": [
           {
@@ -509,10 +484,7 @@ export const perl2Data = {
           "functions": [
             "grep"
           ],
-          "others": [
-            "5",
-            "print"
-          ]
+          "others": ["5", "print", "nums", "result"]
         },
         "testCases": [
           {

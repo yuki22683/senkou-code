@@ -39,7 +39,8 @@ export const luaData = {
         "candidates": {
           "strings": [
             "Hello, Lua!"
-          ]
+          ],
+          "others": ["print"]
         },
         "testCases": [
           {
@@ -84,7 +85,8 @@ export const luaData = {
           ],
           "numbers": [
             "10"
-          ]
+          ],
+          "others": ["print"]
         },
         "testCases": [
           {
@@ -131,10 +133,7 @@ export const luaData = {
           "operators": [
             "+"
           ],
-          "others": [
-            "5",
-            "3"
-          ]
+          "others": ["5", "3", "a", "b", "print"]
         },
         "testCases": [
           {

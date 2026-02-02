@@ -50,7 +50,8 @@ export const php3Data = {
             "+",
             "/",
             "**"
-          ]
+          ],
+          "others": ["x", "2", "};"]
         },
         "testCases": [
           {
@@ -94,7 +95,8 @@ export const php3Data = {
           "operators": [
             "=>",
             "->"
-          ]
+          ],
+          "others": ["3"]
         },
         "testCases": [
           {
@@ -142,7 +144,8 @@ export const php3Data = {
             "?:",
             "||",
             "&&"
-          ]
+          ],
+          "others": ["Guest"]
         },
         "testCases": [
           {
@@ -183,7 +186,8 @@ export const php3Data = {
             "**",
             "&&",
             "::"
-          ]
+          ],
+          "others": ["merged", "...[1, 2"]
         },
         "testCases": [
           {
@@ -251,9 +255,7 @@ export const php3Data = {
           "operators": [
             "=>"
           ],
-          "others": [
-            "'A'"
-          ]
+          "others": ["'A'", "grade", "Excellent", "Good", "harder", "};"]
         },
         "testCases": [
           {
@@ -308,7 +310,8 @@ export const php3Data = {
             "name",
             "user",
             "value"
-          ]
+          ],
+          "others": ["}", "30"]
         },
         "testCases": [
           {
@@ -378,7 +381,8 @@ export const php3Data = {
             "class",
             "function",
             "return"
-          ]
+          ],
+          "others": ["HelloTrait", "sayHello", "Hello", "}", "Greeter"]
         },
         "testCases": [
           {
@@ -433,7 +437,8 @@ export const php3Data = {
             "return",
             "emit",
             "output"
-          ]
+          ],
+          "others": ["n", "1", "i", "}"]
         },
         "testCases": [
           {
@@ -474,7 +479,8 @@ export const php3Data = {
             "age",
             "city",
             "value"
-          ]
+          ],
+          "others": ["25"]
         },
         "testCases": [
           {
@@ -538,7 +544,8 @@ export const php3Data = {
             "protected",
             "readonly",
             "function"
-          ]
+          ],
+          "others": ["Person", "name", "age", ")", "}"]
         },
         "testCases": [
           {

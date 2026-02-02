@@ -72,9 +72,7 @@ export const go4Data = {
             "Acquire",
             "Enter"
           ],
-          "others": [
-            "Unlock"
-          ]
+          "others": ["Unlock", "main", "(", "fmt", "sync", ")", "main()", "Mutex", "count", "Println", "}"]
         },
         "testCases": [
           {
@@ -155,10 +153,7 @@ export const go4Data = {
             "Finish",
             "Complete"
           ],
-          "others": [
-            "Add",
-            "Wait"
-          ]
+          "others": ["Add", "Wait", "main", "(", "fmt", "sync", ")", "main()", "WaitGroup", "1", "func", "Println", "}"]
         },
         "testCases": [
           {
@@ -221,9 +216,7 @@ export const go4Data = {
             "WithCancel",
             "WithTimeout"
           ],
-          "others": [
-            "Err"
-          ]
+          "others": ["Err", "main", "(", "context", "fmt", ")", "main()", "ctx", "Println", "}"]
         },
         "testCases": [
           {
@@ -288,9 +281,7 @@ export const go4Data = {
             "WithTimeout",
             "WithValue"
           ],
-          "others": [
-            "cancel"
-          ]
+          "others": ["cancel", "main", "(", "context", "fmt", ")", "main()", "Background", "Println", "}"]
         },
         "testCases": [
           {
@@ -350,7 +341,8 @@ export const go4Data = {
             "Millisecond",
             "Second",
             "Minute"
-          ]
+          ],
+          "others": ["main", "(", "fmt", "time", ")", "main()", "d", "Println", "}"]
         },
         "testCases": [
           {
@@ -423,9 +415,7 @@ export const go4Data = {
             "Encode",
             "Stringify"
           ],
-          "others": [
-            "\"Apple\""
-          ]
+          "others": ["\"Apple\"", "main", "(", "encoding/json", "fmt", ")", "struct", "name", "}", "main()", "item", "Println"]
         },
         "testCases": [
           {
@@ -500,9 +490,7 @@ export const go4Data = {
             "Decode",
             "Parse"
           ],
-          "others": [
-            "\"Banana\""
-          ]
+          "others": ["\"Banana\"", "main", "(", "encoding/json", "fmt", ")", "struct", "name", "}", "main()", "data", "Item", "item", "Println"]
         },
         "testCases": [
           {
@@ -567,9 +555,7 @@ export const go4Data = {
             "Join",
             "Cut"
           ],
-          "others": [
-            "\"hello,world\""
-          ]
+          "others": ["\"hello,world\"", "main", "(", "fmt", "strings", ")", "main()", "s", "parts", "Println", "}"]
         },
         "testCases": [
           {
@@ -629,7 +615,8 @@ export const go4Data = {
             "Atoi",
             "ParseInt",
             "ToInt"
-          ]
+          ],
+          "others": ["main", "(", "fmt", "strconv", ")", "main()", "42", "Println", "}"]
         },
         "testCases": [
           {
@@ -687,7 +674,8 @@ export const go4Data = {
             "Args",
             "Argv",
             "Arguments"
-          ]
+          ],
+          "others": ["main", "(", "fmt", "os", ")", "main()", "Println", "}"]
         },
         "testCases": [
           {

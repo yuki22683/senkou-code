@@ -41,9 +41,7 @@ export const pythonData3 = {
             "lambda",
             "def"
           ],
-          "others": [
-            "square(5"
-          ]
+          "others": ["square(5", "2", "print"]
         },
         "testCases": [
           {
@@ -168,11 +166,7 @@ export const pythonData3 = {
             "*",
             "**"
           ],
-          "others": [
-            "kwargs.items()",
-            "f'{k} = {v}'",
-            "print_info(x=10, y=20)"
-          ]
+          "others": ["kwargs.items()", "f'{k} = {v}'", "print_info(x=10, y=20)", "print_info", "items", "print", "10"]
         },
         "testCases": [
           {
@@ -221,10 +215,7 @@ export const pythonData3 = {
             "range",
             "zip"
           ],
-          "others": [
-            "['red', 'green', 'blue']",
-            "f'{i}: {color}'"
-          ]
+          "others": ["['red', 'green', 'blue']", "f'{i}: {color}'", "blue", "colors", "print"]
         },
         "testCases": [
           {
@@ -277,11 +268,7 @@ export const pythonData3 = {
             "enumerate",
             "map"
           ],
-          "others": [
-            "['a', 'b', 'c']",
-            "[1, 2, 3]",
-            "f'{k}: {v}'"
-          ]
+          "others": ["['a', 'b', 'c']", "[1, 2, 3]", "f'{k}: {v}'", "c", "1", "values", "print"]
         },
         "testCases": [
           {
@@ -342,11 +329,7 @@ export const pythonData3 = {
           "variables": [
             "num"
           ],
-          "others": [
-            "even_numbers(n)",
-            "range(n)",
-            "even_numbers(4)"
-          ]
+          "others": ["even_numbers(n)", "range(n)", "even_numbers(4)", "even_numbers", "n", "2", "4", "print"]
         },
         "testCases": [
           {
@@ -395,10 +378,7 @@ export const pythonData3 = {
             "in",
             "if"
           ],
-          "others": [
-            "range(1, 6)",
-            "total"
-          ]
+          "others": ["range(1, 6)", "total", "1", "nums", "print"]
         },
         "testCases": [
           {
@@ -423,15 +403,15 @@ export const pythonData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef show_call(func):\n    # 実行内容を包む内部関数を定義\n    def wrapper():\n        # 実行前のメッセージを表示\n        print('関数を呼び出します')\n        # 本来の関数を実行\n        func()\n    # 新しく作った関数を返す\n    return wrapper\n\n# デコレータを関数に適用\n@show_call\n# 挨拶を表示する関数を定義\ndef greet():\n    # 'Hello!'を表示\n    print('Hello!')\n\n# 関数を呼び出して実行\ngreet()",
-        "holeyCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef ___(func):\n    # 実行内容を包む内部関数を定義\n    def ___():\n        # 実行前のメッセージを表示\n        ___('関数を呼び出します')\n        # 本来の関数を実行\n        ___()\n    # 新しく作った関数を返す\n    return ___\n\n# デコレータを関数に適用\n@___\n# 挨拶を表示する関数を定義\ndef ___():\n    # 'Hello!'を表示\n    ___('Hello!')\n\n# 関数を呼び出して実行\n___()",
+        "correctCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef show_call(func):\n    # 実行内容を包む内部関数を定義\n    def wrapper():\n        # 実行前のメッセージを表示\n        print('14Calling function        print('Calling function')')\n        # 本来の関数を実行\n        func()\n    # 新しく作った関数を返す\n    return wrapper\n\n# デコレータを関数に適用\n@show_call\n# 挨拶を表示する関数を定義\ndef greet():\n    # 'Hello!'を表示\n    print('Hello!')\n\n# 関数を呼び出して実行\ngreet()",
+        "holeyCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\ndef ___(func):\n    # 実行内容を包む内部関数を定義\n    def ___():\n        # 実行前のメッセージを表示\n        ___('12Calling function        ___('Calling function')')\n        # 本来の関数を実行\n        ___()\n    # 新しく作った関数を返す\n    return ___\n\n# デコレータを関数に適用\n@___\n# 挨拶を表示する関数を定義\ndef ___():\n    # 'Hello!'を表示\n    ___('Hello!')\n\n# 関数を呼び出して実行\n___()",
         "correctLines": [
           "# 関数の実行前後でメッセージを表示するデコレータを定義",
           "def show_call(func):",
           "    # 実行内容を包む内部関数を定義",
           "    def wrapper():",
           "        # 実行前のメッセージを表示",
-          "        print('関数を呼び出します')",
+          "        print('14Calling function        print('Calling function')')",
           "        # 本来の関数を実行",
           "        func()",
           "    # 新しく作った関数を返す",
@@ -475,15 +455,7 @@ export const pythonData3 = {
             "#",
             "$"
           ],
-          "others": [
-            "show_call(func)",
-            "wrapper()",
-            "'関数を呼び出します'",
-            "func()",
-            "wrapper",
-            "greet()",
-            "'Hello!'"
-          ]
+          "others": ["show_call(func)", "wrapper()", "'関数を呼び出します'", "func()", "wrapper", "greet()", "'Hello!'", "show_call", "print", "func", "greet"]
         },
         "testCases": [
           {
@@ -532,94 +504,12 @@ export const pythonData3 = {
             "any",
             "sum"
           ],
-          "others": [
-            "[1, 2, 3, 4, 5]",
-            "result"
-          ]
+          "others": ["[1, 2, 3, 4, 5]", "result", "1", "0", "print"]
         },
         "testCases": [
           {
             "input": "",
             "expected_output": "True\n"
-          }
-        ]
-      },
-    {
-        "title": "with文（コンテキストマネージャ）",
-        "description": "リソースを安全に管理するwith文を学びましょう。",
-        "difficulty": "hard",
-        "orderIndex": 10,
-        "tutorialSlides": [
-          {
-            "title": "with文とは？",
-            "content": "# 「後片付け」を自動でしてくれる！\n\n**with文** を使うと、ファイルなどの **リソース（資源）を自動的に閉じて** くれます。\n\nたとえば、本を読んだ後は本棚に戻しますよね。with文を使うと、**自動で本棚に戻してくれる** ようなものです！\n\n**例：** ファイルを安全に開こう！\n\n```python\nwith open('file.txt', 'r') as f:\n    content = f.read()\n# ここで自動的にファイルが閉じられる\n```\n\n**何をしているか：**\n- `with` でファイルを開く\n- `as f` で開いたファイルに「f」という名前をつける\n- ブロックを抜けると **自動で** ファイルが閉じられる！"
-          },
-          {
-            "title": "with文の利点（りてん）",
-            "content": "# エラーが起きても安全！\n\nwith文は、**エラーが発生しても確実にリソースを解放** します。\n\n**比較：** 従来の方法 vs with文\n\n```python\n# 従来の方法（close忘れの危険）\nf = open('file.txt')\ntry:\n    content = f.read()\nfinally:\n    f.close()  # 忘れるとファイルが開きっぱなし！\n\n# with文（安全で簡潔！）\nwith open('file.txt') as f:\n    content = f.read()\n# 自動で閉じてくれる\n```\n\n**with文のメリット：**\n1. **安全** - エラーが起きても後片付けされる\n2. **簡潔** - `close()` を書く必要がない\n3. **読みやすい** - コードがスッキリする\n\n**ポイント：** with文で使えるものを **コンテキストマネージャ** と呼びます。"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "# ファイル操作を模擬するクラスを定義\nclass MockFile:\n    # ブロック開始時に呼ばれるメソッドを定義\n    def __enter__(self):\n        # 開始メッセージを表示\n        print('opened')\n        # 自身を返す\n        return self\n    # ブロック終了時に呼ばれるメソッドを定義\n    def __exit__(self, *args):\n        # 終了メッセージを表示\n        print('closed')\n\n# コンテキストマネージャを使用してブロックを開始\nwith MockFile() as f:\n    # 使用中のメッセージを表示\n    print('using')",
-        "holeyCode": "# ファイル操作を模擬するクラスを定義\nclass ___:\n    # ブロック開始時に呼ばれるメソッドを定義\n    def ___(self):\n        # 開始メッセージを表示\n        ___('opened')\n        # 自身を返す\n        return ___\n    # ブロック終了時に呼ばれるメソッドを定義\n    def ___(self, *args):\n        # 終了メッセージを表示\n        ___('closed')\n\n# コンテキストマネージャを使用してブロックを開始\nwith MockFile() as ___:\n    # 使用中のメッセージを表示\n    ___('using')",
-        "correctLines": [
-          "# ファイル操作を模擬するクラスを定義",
-          "class MockFile:",
-          "    # ブロック開始時に呼ばれるメソッドを定義",
-          "    def __enter__(self):",
-          "        # 開始メッセージを表示",
-          "        print('opened')",
-          "        # 自身を返す",
-          "        return self",
-          "    # ブロック終了時に呼ばれるメソッドを定義",
-          "    def __exit__(self, *args):",
-          "        # 終了メッセージを表示",
-          "        print('closed')",
-          "",
-          "# コンテキストマネージャを使用してブロックを開始",
-          "with MockFile() as f:",
-          "    # 使用中のメッセージを表示",
-          "    print('using')"
-        ],
-        "lineHints": [
-          null,
-          "with でコンテキストマネージャを使います。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ],
-        "candidates": {
-          "keywords": [
-            "with",
-            "for",
-            "if"
-          ],
-          "others": [
-            "MockFile",
-            "__enter__(self)",
-            "'opened'",
-            "self",
-            "__exit__(self, *args)",
-            "'closed'",
-            "'using'"
-          ]
-        },
-        "testCases": [
-          {
-            "input": "",
-            "expected_output": "opened\nusing\nclosed\n"
           }
         ]
       }

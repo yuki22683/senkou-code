@@ -30,13 +30,13 @@ export const swift3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// エラー型を定義\nenum MyError: Error { case negative }\n\n// 関数を定義\nfunc check(_ n: Int) -> Result<Int, MyError> {\n    // 負の場合は失敗\n    if n < 0 { return .failure(.negative) }\n    // successで成功を返す\n    return .success(n)\n}\n\n// 関数を呼び出し\nlet result = check(10)\n// switchでパターンマッチ\nswitch result {\n// 成功の場合\ncase .success(let v): print(v)\n// 失敗の場合\ncase .failure(_): print(\"error\")\n}",
-        "holeyCode": "// エラー型を定義\nenum MyError: ___ { case negative }\n\n// 関数を定義\nfunc check(_ n: Int) -> Result<Int, MyError> {\n    // 負の場合は失敗\n    if n < 0 { return .failure(.___) }\n    // successで成功を返す\n    return .___(n)\n}\n\n// 関数を呼び出し\nlet result = ___(10)\n// switchでパターンマッチ\nswitch ___ {\n// 成功の場合\ncase .success(let v): print(___)\n// 失敗の場合\ncase .failure(_): print(\"___\")\n}",
+        "correctCode": "// エラー型を定義\nenum MyError: Error { case negative }\n\n// check関数を定義\nfunc check(_ n: Int) -> Result<Int, MyError> {\n    // 負の場合は失敗\n    if n < 0 { return .failure(.negative) }\n    // successで成功を返す\n    return .success(n)\n}\n\n// 関数を呼び出し\nlet result = check(10)\n// switchでパターンマッチ\nswitch result {\n// 成功の場合\ncase .success(let v): print(v)\n// 失敗の場合\ncase .failure(_): print(\"error\")\n}",
+        "holeyCode": "// エラー型を定義\nenum MyError: ___ { case negative }\n\n// check関数を定義\nfunc check(_ n: Int) -> Result<Int, MyError> {\n    // 負の場合は失敗\n    if n < 0 { return .failure(.___) }\n    // successで成功を返す\n    return .___(n)\n}\n\n// 関数を呼び出し\nlet result = ___(10)\n// switchでパターンマッチ\nswitch ___ {\n// 成功の場合\ncase .success(let v): print(___)\n// 失敗の場合\ncase .failure(_): print(\"___\")\n}",
         "correctLines": [
           "// エラー型を定義",
           "enum MyError: Error { case negative }",
           "",
-          "// 関数を定義",
+          "// check関数を定義",
           "func check(_ n: Int) -> Result<Int, MyError> {",
           "    // 負の場合は失敗",
           "    if n < 0 { return .failure(.negative) }",
@@ -202,11 +202,7 @@ export const swift3Data = {
             "fold",
             "aggregate"
           ],
-          "others": [
-            "1",
-            "reduce(1) { $0 * $1 }",
-            "product"
-          ]
+          "others": ["1", "reduce(1) { $0 * $1 }", "product", "nums", "$1", "print"]
         },
         "testCases": [
           {
@@ -353,10 +349,10 @@ export const swift3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 関数を定義\nfunc test() {\n    // deferでスコープ終了時に実行\n    defer { print(\"end\") }\n    // startと出力\n    print(\"start\")\n}\n// 関数を呼び出し\ntest()",
-        "holeyCode": "// 関数を定義\nfunc ___() {\n    // deferでスコープ終了時に実行\n    ___ { print(\"end\") }\n    // startと出力\n    print(\"___\")\n}\n// 関数を呼び出し\n___()",
+        "correctCode": "// test関数を定義\nfunc test() {\n    // deferでスコープ終了時に実行\n    defer { print(\"end\") }\n    // startと出力\n    print(\"start\")\n}\n// 関数を呼び出し\ntest()",
+        "holeyCode": "// test関数を定義\nfunc ___() {\n    // deferでスコープ終了時に実行\n    ___ { print(\"end\") }\n    // startと出力\n    print(\"___\")\n}\n// 関数を呼び出し\n___()",
         "correctLines": [
-          "// 関数を定義",
+          "// test関数を定義",
           "func test() {",
           "    // deferでスコープ終了時に実行",
           "    defer { print(\"end\") }",

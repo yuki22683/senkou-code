@@ -91,7 +91,8 @@ export const bashData = {
           ],
           "strings": [
             "Bash"
-          ]
+          ],
+          "others": ["$name"]
         },
         "testCases": [
           {
@@ -135,7 +136,8 @@ export const bashData = {
         "candidates": {
           "operators": [
             "+"
-          ]
+          ],
+          "others": ["5", "3", "b"]
         },
         "testCases": [
           {
@@ -193,10 +195,7 @@ export const bashData = {
           "keywords": [
             "fi"
           ],
-          "others": [
-            "100",
-            "Great"
-          ]
+          "others": ["100", "Great", "80"]
         },
         "testCases": [
           {
@@ -253,12 +252,7 @@ export const bashData = {
           "keywords": [
             "else"
           ],
-          "others": [
-            "18",
-            "-ge",
-            "Adult",
-            "Minor"
-          ]
+          "others": ["18", "-ge", "Adult", "Minor", "20", "fi"]
         },
         "testCases": [
           {
@@ -305,7 +299,8 @@ export const bashData = {
           "keywords": [
             "in",
             "done"
-          ]
+          ],
+          "others": ["Alice", "Bob", "${names[@]}", "$name"]
         },
         "testCases": [
           {
@@ -349,7 +344,8 @@ export const bashData = {
         "candidates": {
           "functions": [
             "greet"
-          ]
+          ],
+          "others": ["Hello", "}"]
         },
         "testCases": [
           {

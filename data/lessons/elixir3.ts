@@ -50,7 +50,8 @@ export const elixir3Data = {
           "strings": [
             "Bob",
             "bob@example.com"
-          ]
+          ],
+          "others": ["do"]
         },
         "testCases": [
           {
@@ -113,7 +114,8 @@ export const elixir3Data = {
           ],
           "operators": [
             "|"
-          ]
+          ],
+          "others": ["do"]
         },
         "testCases": [
           {
@@ -157,7 +159,8 @@ export const elixir3Data = {
           ],
           "functions": [
             "reduce"
-          ]
+          ],
+          "others": ["0"]
         },
         "testCases": [
           {
@@ -203,7 +206,8 @@ export const elixir3Data = {
           ],
           "functions": [
             "group_by"
-          ]
+          ],
+          "others": ["end"]
         },
         "testCases": [
           {
@@ -301,7 +305,8 @@ export const elixir3Data = {
             "with",
             "else",
             "end"
-          ]
+          ],
+          "others": ["do", "name", "#{name} is #{age} years old", "Missing field"]
         },
         "testCases": [
           {
@@ -344,7 +349,8 @@ export const elixir3Data = {
             "defprotocol",
             "def",
             "end"
-          ]
+          ],
+          "others": ["do", "data"]
         },
         "testCases": [
           {
@@ -393,7 +399,8 @@ export const elixir3Data = {
             "defimpl",
             "def",
             "end"
-          ]
+          ],
+          "others": ["do", "Map with #{map_size(map)} keys"]
         },
         "testCases": [
           {
@@ -436,7 +443,8 @@ export const elixir3Data = {
             "start_link",
             "update",
             "get"
-          ]
+          ],
+          "others": ["0", "1", "end"]
         },
         "testCases": [
           {
@@ -474,7 +482,8 @@ export const elixir3Data = {
           "functions": [
             "async",
             "await"
-          ]
+          ],
+          "others": ["1", "task"]
         },
         "testCases": [
           {

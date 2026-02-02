@@ -40,7 +40,8 @@ export const javascriptData = {
           ],
           "strings": [
             "Hello, JavaScript!"
-          ]
+          ],
+          "others": ["log"]
         },
         "testCases": [
           {
@@ -146,10 +147,7 @@ export const javascriptData = {
             "10",
             "5"
           ],
-          "others": [
-            "10;",
-            "5;"
-          ]
+          "others": ["10;", "5;", "log"]
         },
         "testCases": [
           {
@@ -198,9 +196,7 @@ export const javascriptData = {
           "numbers": [
             "10"
           ],
-          "others": [
-            "10;"
-          ]
+          "others": ["10;", "log"]
         },
         "testCases": [
           {
@@ -252,7 +248,8 @@ export const javascriptData = {
           ],
           "numbers": [
             "1"
-          ]
+          ],
+          "others": ["log"]
         },
         "testCases": [
           {
@@ -313,9 +310,7 @@ export const javascriptData = {
           "numbers": [
             "100"
           ],
-          "others": [
-            "100;"
-          ]
+          "others": ["100;", "log", "}"]
         },
         "testCases": [
           {
@@ -384,11 +379,7 @@ export const javascriptData = {
           "keywords": [
             "else"
           ],
-          "others": [
-            "10;",
-            ">=",
-            "おとな"
-          ]
+          "others": ["10;", ">=", "おとな", "log", "}"]
         },
         "testCases": [
           {
@@ -441,10 +432,7 @@ export const javascriptData = {
           "functions": [
             "console.log"
           ],
-          "others": [
-            "たろう",
-            "はなこ"
-          ]
+          "others": ["たろう", "はなこ", ";", "}"]
         },
         "testCases": [
           {
@@ -493,7 +481,8 @@ export const javascriptData = {
           "strings": [
             "name",
             "たろう"
-          ]
+          ],
+          "others": ["log"]
         },
         "testCases": [
           {
@@ -545,7 +534,8 @@ export const javascriptData = {
           ],
           "strings": [
             "こんにちは"
-          ]
+          ],
+          "others": ["log", "}"]
         },
         "testCases": [
           {

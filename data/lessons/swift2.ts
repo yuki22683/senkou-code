@@ -54,10 +54,7 @@ export const swift2Data = {
           "operators": [
             "?"
           ],
-          "others": [
-            "nil",
-            "!"
-          ]
+          "others": ["nil", "!", "42", "num", "}"]
         },
         "testCases": [
           {
@@ -110,10 +107,7 @@ export const swift2Data = {
           "keywords": [
             "let"
           ],
-          "others": [
-            "?",
-            "print"
-          ]
+          "others": ["?", "print", "100", "val", "n", "}"]
         },
         "testCases": [
           {
@@ -178,11 +172,7 @@ export const swift2Data = {
           "keywords": [
             "struct"
           ],
-          "others": [
-            "width",
-            "height",
-            "Rect"
-          ]
+          "others": ["width", "height", "Rect", "Int", "}", "r"]
         },
         "testCases": [
           {
@@ -253,12 +243,7 @@ export const swift2Data = {
           "keywords": [
             "class"
           ],
-          "others": [
-            "name",
-            "init",
-            "self",
-            "Tama"
-          ]
+          "others": ["name", "init", "self", "Tama", "Cat", "String", "}", "cat"]
         },
         "testCases": [
           {
@@ -335,12 +320,7 @@ export const swift2Data = {
           "keywords": [
             "protocol"
           ],
-          "others": [
-            "speak",
-            "Speaker",
-            "woof",
-            "Dog"
-          ]
+          "others": ["speak", "Speaker", "woof", "Dog", "speak()", "}", "print", "d"]
         },
         "testCases": [
           {
@@ -397,10 +377,7 @@ export const swift2Data = {
           "keywords": [
             "in"
           ],
-          "others": [
-            "*",
-            "double"
-          ]
+          "others": ["*", "double", "2", "}", "5"]
         },
         "testCases": [
           {
@@ -455,10 +432,7 @@ export const swift2Data = {
           "functions": [
             "map"
           ],
-          "others": [
-            "1",
-            "squared"
-          ]
+          "others": ["1", "squared", "nums"]
         },
         "testCases": [
           {
@@ -509,10 +483,7 @@ export const swift2Data = {
           "functions": [
             "filter"
           ],
-          "others": [
-            "1",
-            "result"
-          ]
+          "others": ["1", "result", "nums"]
         },
         "testCases": [
           {
@@ -545,10 +516,10 @@ export const swift2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 関数を定義\nfunc check(_ val: Int?) {\n    // guardで早期リターン\n    guard let n = val else {\n        // nilと出力\n        print(\"nil\")\n        // 早期リターン\n        return\n    }\n    // nを出力\n    print(n)\n}\n// 関数を呼び出し\ncheck(10)",
-        "holeyCode": "// 関数を定義\nfunc ___ (_ val: Int?) {\n    // guardで早期リターン\n    guard let n = val ___ {\n        // nilと出力\n        ___(\"nil\")\n        // 早期リターン\n        ___\n    ___\n    // nを出力\n    print(___)\n___\n// 関数を呼び出し\ncheck(___)",
+        "correctCode": "// check関数を定義\nfunc check(_ val: Int?) {\n    // guardで早期リターン\n    guard let n = val else {\n        // nilと出力\n        print(\"nil\")\n        // 早期リターン\n        return\n    }\n    // nを出力\n    print(n)\n}\n// 関数を呼び出し\ncheck(10)",
+        "holeyCode": "// check関数を定義\nfunc ___ (_ val: Int?) {\n    // guardで早期リターン\n    guard let n = val ___ {\n        // nilと出力\n        ___(\"nil\")\n        // 早期リターン\n        ___\n    ___\n    // nを出力\n    print(___)\n___\n// 関数を呼び出し\ncheck(___)",
         "correctLines": [
-          "// 関数を定義",
+          "// check関数を定義",
           "func check(_ val: Int?) {",
           "    // guardで早期リターン",
           "    guard let n = val else {",
@@ -583,12 +554,7 @@ export const swift2Data = {
           "keywords": [
             "guard"
           ],
-          "others": [
-            "check",
-            "nil",
-            "return",
-            "n"
-          ]
+          "others": ["check", "nil", "return", "n", "check(_", "else", "print", "}", "10"]
         },
         "testCases": [
           {
@@ -669,12 +635,7 @@ export const swift2Data = {
           "keywords": [
             "enum"
           ],
-          "others": [
-            "red",
-            "c",
-            "green",
-            "blue"
-          ]
+          "others": ["red", "c", "green", "blue", "Color", "}", "print"]
         },
         "testCases": [
           {

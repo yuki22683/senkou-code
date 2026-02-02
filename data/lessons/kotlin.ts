@@ -107,7 +107,8 @@ export const kotlinData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["println"]
         },
         "testCases": [
           {
@@ -152,7 +153,8 @@ export const kotlinData = {
             "/",
             "*",
             "-"
-          ]
+          ],
+          "others": ["println"]
         },
         "testCases": [
           {
@@ -211,7 +213,8 @@ export const kotlinData = {
             "-=",
             "*=",
             "/="
-          ]
+          ],
+          "others": ["hp", "20", "50"]
         },
         "testCases": [
           {
@@ -271,7 +274,8 @@ export const kotlinData = {
             "<",
             ">=",
             "<="
-          ]
+          ],
+          "others": ["println", "}"]
         },
         "testCases": [
           {
@@ -328,7 +332,8 @@ export const kotlinData = {
             "||",
             "&",
             "|"
-          ]
+          ],
+          "others": ["80", "10", "70", "println", "}"]
         },
         "testCases": [
           {
@@ -361,11 +366,11 @@ export const kotlinData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// colors というリストを作る（'あか', 'あお'の順）\nval colors = listOf(\"あか\", \"あお\")\n// 2番目のデータ（インデックス1）を出す\nprintln(colors[1])",
-        "holeyCode": "// colors というリストを作る（'あか', 'あお'の順）\nval colors = listOf(\"___\", \"あお\")\n// 2番目のデータ（インデックス1）を出す\n___(colors[1])",
+        "correctCode": "// colors というリストを作る（'あか', 'あお'の順）\nval colors = listOf(\"20redval colors = listOf(\"red\", \"53blueval colors = listOf(\"20redval colors = listOf(\"red\", \"blue\")\", \"blue\")\")\", \"61blueval colors = listOf(\"20redval colors = listOf(\"red\", \"blue\")\", \"blue\")\")\n// 2番目のデータ（インデックス1）を出す\nprintln(colors[1])",
+        "holeyCode": "// colors というリストを作る（'あか', 'あお'の順）\nval colors = listOf(\"___\", \"27blueval colors = listOf(\"___\", \"blue\")\")\n// 2番目のデータ（インデックス1）を出す\n___(colors[1])",
         "correctLines": [
           "// colors というリストを作る（'あか', 'あお'の順）",
-          "val colors = listOf(\"あか\", \"あお\")",
+          "val colors = listOf(\"20redval colors = listOf(\"red\", \"53blueval colors = listOf(\"20redval colors = listOf(\"red\", \"blue\")\", \"blue\")\")\", \"61blueval colors = listOf(\"20redval colors = listOf(\"red\", \"blue\")\", \"blue\")\")",
           "// 2番目のデータ（インデックス1）を出す",
           "println(colors[1])"
         ],
@@ -389,7 +394,8 @@ export const kotlinData = {
           ],
           "numbers": [
             "1"
-          ]
+          ],
+          "others": ["20redval colors = listOf(", "Of("]
         },
         "testCases": [
           {
@@ -422,11 +428,11 @@ export const kotlinData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nval colors = mapOf(\"みかん\" to \"オレンジ\")\n// 中身を出す\nprintln(colors[\"みかん\"])",
-        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nval colors = mapOf(\"___\" to \"オレンジ\")\n// 中身を出す\n___(colors[\"みかん\"])",
+        "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nval colors = mapOf(\"19orangeval colors = mapOf(\"orange\" to \"28orangeval colors = mapOf(\"orange\" to \"orange\")\")\" to \"28orangeval colors = mapOf(\"56orangeval colors = mapOf(\"orange\" to \"28orangeval colors = mapOf(\"orange\" to \"orange\")\")\" to \"orange\")\")\n// 中身を出す\nprintln(colors[\"15orangeprintln(colors[\"orange\"])\"])",
+        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nval colors = mapOf(\"___\" to \"28orangeval colors = mapOf(\"___\" to \"orange\")\")\n// 中身を出す\n___(colors[\"11orange___(colors[\"orange\"])\"])",
         "correctLines": [
           "// 辞書を作る（キーは'みかん'、値は'オレンジ'）",
-          "val colors = mapOf(\"みかん\" to \"オレンジ\")",
+          "val colors = mapOf(\"19orangeval colors = mapOf(\"orange\" to \"28orangeval colors = mapOf(\"orange\" to \"orange\")\")\" to \"28orangeval colors = mapOf(\"56orangeval colors = mapOf(\"orange\" to \"28orangeval colors = mapOf(\"orange\" to \"orange\")\")\" to \"orange\")\")",
           "// 中身を出す",
           "println(colors[\"みかん\"])"
         ],
@@ -447,7 +453,8 @@ export const kotlinData = {
           "strings": [
             "みかん",
             "オレンジ"
-          ]
+          ],
+          "others": ["19orangeval colors = mapOf(", "mapOf("]
         },
         "testCases": [
           {

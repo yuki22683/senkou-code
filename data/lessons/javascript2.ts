@@ -45,9 +45,7 @@ export const javascriptData2 = {
             "=",
             ":"
           ],
-          "others": [
-            "5"
-          ]
+          "others": ["5", "square", "log"]
         },
         "testCases": [
           {
@@ -97,12 +95,7 @@ export const javascriptData2 = {
             "forEach",
             "reduce"
           ],
-          "others": [
-            "1",
-            "2",
-            "3",
-            "tripled"
-          ]
+          "others": ["1", "2", "3", "tripled", "nums"]
         },
         "testCases": [
           {
@@ -127,12 +120,12 @@ export const javascriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 10を3で割った余りを計算\nconst remainder = 10 % 3;\n// 結果を表示\nconsole.log(remainder);",
-        "holeyCode": "// 10を3で割った余りを計算\nconst ___ = 10 % 3;\n// 結果を表示\nconsole.log(___);",
+        "correctCode": "// 10を3で割った余りを計算\nconst remainder = 10 % 3;\n// remainderを表示\nconsole.log(remainder);",
+        "holeyCode": "// 10を3で割った余りを計算\nconst ___ = 10 % 3;\n// remainderを表示\nconsole.log(___);",
         "correctLines": [
           "// 10を3で割った余りを計算",
           "const remainder = 10 % 3;",
-          "// 結果を表示",
+          "// remainderを表示",
           "console.log(remainder);"
         ],
         "lineHints": [
@@ -147,7 +140,8 @@ export const javascriptData2 = {
             "/",
             "*",
             "+"
-          ]
+          ],
+          "others": ["remainder"]
         },
         "testCases": [
           {
@@ -172,8 +166,8 @@ export const javascriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 初期値を設定\nlet total = 0;\n// totalに10を足す\ntotal += 10;\n// totalに5を足す\ntotal += 5;\n// 結果を表示\nconsole.log(total);",
-        "holeyCode": "// 初期値を設定\nlet ___ = 0;\n// totalに10を足す\ntotal += ___;\n// totalに5を足す\ntotal += ___;\n// 結果を表示\nconsole.log(___);",
+        "correctCode": "// 初期値を設定\nlet total = 0;\n// totalに10を足す\ntotal += 10;\n// totalに5を足す\ntotal += 5;\n// totalを表示\nconsole.log(total);",
+        "holeyCode": "// 初期値を設定\nlet ___ = 0;\n// totalに10を足す\ntotal += ___;\n// totalに5を足す\ntotal += ___;\n// totalを表示\nconsole.log(___);",
         "correctLines": [
           "// 初期値を設定",
           "let total = 0;",
@@ -181,7 +175,7 @@ export const javascriptData2 = {
           "total += 10;",
           "// totalに5を足す",
           "total += 5;",
-          "// 結果を表示",
+          "// totalを表示",
           "console.log(total);"
         ],
         "lineHints": [
@@ -200,7 +194,8 @@ export const javascriptData2 = {
             "-=",
             "*=",
             "/="
-          ]
+          ],
+          "others": ["total", "10", "5"]
         },
         "testCases": [
           {
@@ -225,14 +220,14 @@ export const javascriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 年齢を設定\nconst age = 25;\n// 20以上かつ30未満かどうか判定\nif (age >= 20 && age < 30) {\n    console.log('20代です');\n}",
-        "holeyCode": "// 年齢を設定\nconst ___ = 25;\n// 20以上かつ30未満かどうか判定\nif (age >= ___ && age < 30) {\n    console.___('20代です');\n___",
+        "correctCode": "// 年齢を設定\nconst age = 25;\n// 20以上かつ30未満かどうか判定\nif (age >= 20 && age < 30) {\n    console.log('16In 20s    console.log('In 20s');');\n}",
+        "holeyCode": "// 年齢を設定\nconst ___ = 25;\n// 20以上かつ30未満かどうか判定\nif (age >= ___ && age < 30) {\n    console.___('16In 20s    console.___('In 20s');');\n___",
         "correctLines": [
           "// 年齢を設定",
           "const age = 25;",
           "// 20以上かつ30未満かどうか判定",
           "if (age >= 20 && age < 30) {",
-          "    console.log('20代です');",
+          "    console.log('16In 20s    console.log('In 20s');');",
           "}"
         ],
         "lineHints": [
@@ -248,7 +243,8 @@ export const javascriptData2 = {
             "&&",
             "||",
             "!"
-          ]
+          ],
+          "others": ["age", "20", "log", "}"]
         },
         "testCases": [
           {
@@ -298,13 +294,7 @@ export const javascriptData2 = {
             "find",
             "some"
           ],
-          "others": [
-            "5",
-            "15",
-            "8",
-            "20",
-            "big"
-          ]
+          "others": ["5", "15", "8", "20", "big", "nums"]
         },
         "testCases": [
           {
@@ -356,11 +346,7 @@ export const javascriptData2 = {
             "sum",
             "total"
           ],
-          "others": [
-            "10",
-            "20",
-            "30"
-          ]
+          "others": ["10", "20", "30", "nums"]
         },
         "testCases": [
           {
@@ -414,12 +400,7 @@ export const javascriptData2 = {
             "last",
             "next"
           ],
-          "others": [
-            "red",
-            "green",
-            "blue",
-            "first"
-          ]
+          "others": ["red", "green", "blue", "first", "colors"]
         },
         "testCases": [
           {
@@ -531,13 +512,7 @@ export const javascriptData2 = {
             "***",
             "::"
           ],
-          "others": [
-            "1",
-            "2",
-            "3",
-            "4",
-            "merged"
-          ]
+          "others": ["1", "2", "3", "4", "merged", "arr1", "arr2"]
         },
         "testCases": [
           {
@@ -587,10 +562,7 @@ export const javascriptData2 = {
             "&&",
             "||"
           ],
-          "others": [
-            "5",
-            "sign"
-          ]
+          "others": ["5", "sign", "num"]
         },
         "testCases": [
           {
@@ -640,14 +612,7 @@ export const javascriptData2 = {
             "some",
             "findIndex"
           ],
-          "others": [
-            "1",
-            "3",
-            "4",
-            "7",
-            "8",
-            "firstEven"
-          ]
+          "others": ["1", "3", "4", "7", "8", "firstEven", "numbers"]
         },
         "testCases": [
           {
@@ -705,11 +670,7 @@ export const javascriptData2 = {
             "point",
             "value"
           ],
-          "others": [
-            "10",
-            "20",
-            "y"
-          ]
+          "others": ["10", "20", "y", "log"]
         },
         "testCases": [
           {

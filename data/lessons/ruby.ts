@@ -35,7 +35,8 @@ export const rubyData = {
         "candidates": {
           "strings": [
             "Hello, Ruby!"
-          ]
+          ],
+          "others": ["Ruby"]
         },
         "testCases": [
           {
@@ -133,7 +134,8 @@ export const rubyData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["y"]
         },
         "testCases": [
           {
@@ -175,7 +177,8 @@ export const rubyData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["10"]
         },
         "testCases": [
           {
@@ -200,14 +203,14 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに50を入れる\nscore = 50\n# 10点プラスする\nscore += 10\n# 結果を表示\nputs score",
-        "holeyCode": "# scoreに50を入れる\nscore = ___\n# 10点プラスする\nscore += ___\n# 結果を表示\nputs ___",
+        "correctCode": "# scoreに50を入れる\nscore = 50\n# 10点プラスする\nscore += 10\n# scoreを表示\nputs score",
+        "holeyCode": "# scoreに50を入れる\nscore = ___\n# 10点プラスする\nscore += ___\n# scoreを表示\nputs ___",
         "correctLines": [
           "# scoreに50を入れる",
           "score = 50",
           "# 10点プラスする",
           "score += 10",
-          "# 結果を表示",
+          "# scoreを表示",
           "puts score"
         ],
         "lineHints": [
@@ -228,7 +231,8 @@ export const rubyData = {
           "numbers": [
             "50",
             "10"
-          ]
+          ],
+          "others": ["score"]
         },
         "testCases": [
           {
@@ -253,13 +257,13 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ageというはこに 10 を入れる\nage = 10\n# 式展開を使ってメッセージを出す\nputs \"私は#{age}歳です\"",
+        "correctCode": "# ageというはこに 10 を入れる\nage = 10\n# 式展開を使ってメッセージを出す\nputs \"I am #{age} years old\"",
         "holeyCode": "# ageというはこに 10 を入れる\nage = ___\n# 式展開を使ってメッセージを出す\nputs \"___\"",
         "correctLines": [
           "# ageというはこに 10 を入れる",
           "age = 10",
           "# 式展開を使ってメッセージを出す",
-          "puts \"私は#{age}歳です\""
+          "puts \"I am #{age} years old\""
         ],
         "lineHints": [
           null,
@@ -273,7 +277,8 @@ export const rubyData = {
           ],
           "numbers": [
             "10"
-          ]
+          ],
+          "others": ["私は#{age}歳です", "I am #{age} years old"]
         },
         "testCases": [
           {
@@ -298,8 +303,8 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# colorsという配列を作る\ncolors = ['赤', '青', '緑']\n# 2番目のデータ（インデックス1）を出す\nputs colors[1]",
-        "holeyCode": "# colorsという配列を作る\n___ = ['赤', '青', '緑']\n# 2番目のデータ（インデックス1）を出す\nputs colors[___]",
+        "correctCode": "# colorsという配列を作る\ncolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', '81greencolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '45bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', 'blue', '96greencolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '45bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', '103greencolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '45bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', '45bluecolors = ['10redcolors = ['red', 'blue', '158greencolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '45bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', 'blue', '173greencolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '45bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', '180greencolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '45bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']\n# 2番目のデータ（インデックス1）を出す\nputs colors[1]",
+        "holeyCode": "# colorsという配列を作る\n___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', '67green___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '38blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', 'blue', '82green___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '38blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', '89green___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '38blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', '38blue___ = ['7red___ = ['red', 'blue', '137green___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '38blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', 'blue', '152green___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '38blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', '159green___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '38blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']\n# 2番目のデータ（インデックス1）を出す\nputs colors[___]",
         "correctLines": [
           "# colorsという配列を作る",
           "colors = ['赤', '青', '緑']",
@@ -322,7 +327,8 @@ export const rubyData = {
             "0",
             "1",
             "2"
-          ]
+          ],
+          "others": ["colors", "'青',"]
         },
         "testCases": [
           {
@@ -347,15 +353,15 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに100を入れる\nscore = 100\n# もし80より大きかったら\nif score > 80\n  # 「合格！」と表示する\n  puts '合格！'\nend",
-        "holeyCode": "# scoreに100を入れる\nscore = ___\n# もし80より大きかったら\nif score ___ 80\n  # 「合格！」と表示する\n  ___ '合格！'\n___",
+        "correctCode": "# scoreに100を入れる\nscore = 100\n# もし80より大きかったら\nif score > 80\n  # 「合格！」と表示する\n  puts '7Pass!  puts 'Pass!''\nend",
+        "holeyCode": "# scoreに100を入れる\nscore = ___\n# もし80より大きかったら\nif score ___ 80\n  # 「合格！」と表示する\n  ___ '6Pass!  ___ 'Pass!''\n___",
         "correctLines": [
           "# scoreに100を入れる",
           "score = 100",
           "# もし80より大きかったら",
           "if score > 80",
           "  # 「合格！」と表示する",
-          "  puts '合格！'",
+          "  puts '7Pass!  puts 'Pass!''",
           "end"
         ],
         "lineHints": [
@@ -377,7 +383,8 @@ export const rubyData = {
           ],
           "strings": [
             "合格！"
-          ]
+          ],
+          "others": [">", "puts", "end"]
         },
         "testCases": [
           {
@@ -402,19 +409,19 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ageに10を入れる\nage = 10\n# 20歳以上かどうかで分ける\nif age >= 20\n  # 「大人」と表示\n  puts '大人'\n# else でそれ以外の場合\nelse\n  # 「子供」と表示\n  puts '子供'\nend",
-        "holeyCode": "# ageに10を入れる\nage = ___\n# 20歳以上かどうかで分ける\nif age ___ 20\n  # 「大人」と表示\n  ___ '大人'\n# else でそれ以外の場合\n___\n  # 「子供」と表示\n  ___ '子供'\n___",
+        "correctCode": "# ageに10を入れる\nage = 10\n# 20歳以上かどうかで分ける\nif age >= 20\n  # 「大人」と表示\n  puts '7Adult  puts 'Adult''\n# else でそれ以外の場合\nelse\n  # 「子供」と表示\n  puts '7Child  puts 'Child''\nend",
+        "holeyCode": "# ageに10を入れる\nage = ___\n# 20歳以上かどうかで分ける\nif age ___ 20\n  # 「大人」と表示\n  ___ '6Adult  ___ 'Adult''\n# else でそれ以外の場合\n___\n  # 「子供」と表示\n  ___ '6Child  ___ 'Child''\n___",
         "correctLines": [
           "# ageに10を入れる",
           "age = 10",
           "# 20歳以上かどうかで分ける",
           "if age >= 20",
           "  # 「大人」と表示",
-          "  puts '大人'",
+          "  puts '7Adult  puts 'Adult''",
           "# else でそれ以外の場合",
           "else",
           "  # 「子供」と表示",
-          "  puts '子供'",
+          "  puts '7Child  puts 'Child''",
           "end"
         ],
         "lineHints": [
@@ -441,7 +448,8 @@ export const rubyData = {
           "strings": [
             "大人",
             "子供"
-          ]
+          ],
+          "others": [">=", "puts", "end"]
         },
         "testCases": [
           {
@@ -466,15 +474,15 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに85を入れる\nscore = 85\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 and score <= 100\n  # 「合格！」と表示\n  puts '合格！'\nend",
-        "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score ___ 80 and score <= 100\n  # 「合格！」と表示\n  ___ '合格！'\n___",
+        "correctCode": "# scoreに85を入れる\nscore = 85\n# 80以上 かつ 100以下 ならメッセージを出す\nif score >= 80 and score <= 100\n  # 「合格！」と表示\n  puts '7Pass!  puts 'Pass!''\nend",
+        "holeyCode": "# scoreに85を入れる\nscore = ___\n# 80以上 かつ 100以下 ならメッセージを出す\nif score ___ 80 and score <= 100\n  # 「合格！」と表示\n  ___ '6Pass!  ___ 'Pass!''\n___",
         "correctLines": [
           "# scoreに85を入れる",
           "score = 85",
           "# 80以上 かつ 100以下 ならメッセージを出す",
           "if score >= 80 and score <= 100",
           "  # 「合格！」と表示",
-          "  puts '合格！'",
+          "  puts '7Pass!  puts 'Pass!''",
           "end"
         ],
         "lineHints": [
@@ -496,7 +504,8 @@ export const rubyData = {
           ],
           "strings": [
             "合格！"
-          ]
+          ],
+          "others": [">=", "puts", "end"]
         },
         "testCases": [
           {
@@ -521,8 +530,8 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 名前の配列を作る\nnames = ['太郎', '花子']\n# 順番に取り出すループ\nnames.each do |name|\n  # 取り出した名前を表示\n  puts name\nend",
-        "holeyCode": "# 名前の配列を作る\n___ = ['太郎', '花子']\n# 順番に取り出すループ\nnames.each do |___|\n  # 取り出した名前を表示\n  puts ___\n___",
+        "correctCode": "# 名前の配列を作る\nnames = ['9Taronames = ['Taro', '32Hanakonames = ['9Taronames = ['Taro', 'Hanako']', 'Hanako']']', '40Hanakonames = ['9Taronames = ['Taro', 'Hanako']', 'Hanako']']\n# 順番に取り出すループ\nnames.each do |name|\n  # 取り出した名前を表示\n  puts name\nend",
+        "holeyCode": "# 名前の配列を作る\n___ = ['7Taro___ = ['Taro', '28Hanako___ = ['7Taro___ = ['Taro', 'Hanako']', 'Hanako']']', '36Hanako___ = ['7Taro___ = ['Taro', 'Hanako']', 'Hanako']']\n# 順番に取り出すループ\nnames.each do |___|\n  # 取り出した名前を表示\n  puts ___\n___",
         "correctLines": [
           "# 名前の配列を作る",
           "names = ['太郎', '花子']",
@@ -552,7 +561,8 @@ export const rubyData = {
           "strings": [
             "太郎",
             "花子"
-          ]
+          ],
+          "others": ["names", "end", "'花子']"]
         },
         "testCases": [
           {
@@ -577,11 +587,11 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ハッシュを作る\nfruits = {'みかん' => 'オレンジ'}\n# キーを指定して値を取り出す\nputs fruits['みかん']",
-        "holeyCode": "# ハッシュを作る\n___ = {'みかん' => 'オレンジ'}\n# キーを指定して値を取り出す\nputs ___['みかん']",
+        "correctCode": "# ハッシュを作る\nfruits = {'10orangefruits = {'orange' => '19orangefruits = {'orange' => 'orange'}'}' => '19orangefruits = {'38orangefruits = {'orange' => '19orangefruits = {'orange' => 'orange'}'}' => 'orange'}'}\n# キーを指定して値を取り出す\nputs fruits['12orangeputs fruits['orange']']",
+        "holeyCode": "# ハッシュを作る\n___ = {'7orange___ = {'orange' => '16orange___ = {'orange' => 'orange'}'}' => '16orange___ = {'32orange___ = {'orange' => '16orange___ = {'orange' => 'orange'}'}' => 'orange'}'}\n# キーを指定して値を取り出す\nputs ___['9orangeputs ___['orange']']",
         "correctLines": [
           "# ハッシュを作る",
-          "fruits = {'みかん' => 'オレンジ'}",
+          "fruits = {'10orangefruits = {'orange' => '19orangefruits = {'orange' => 'orange'}'}' => '19orangefruits = {'38orangefruits = {'orange' => '19orangefruits = {'orange' => 'orange'}'}' => 'orange'}'}",
           "# キーを指定して値を取り出す",
           "puts fruits['みかん']"
         ],
@@ -595,7 +605,8 @@ export const rubyData = {
           "strings": [
             "みかん",
             "オレンジ"
-          ]
+          ],
+          "others": ["fruits", "efruits"]
         },
         "testCases": [
           {
@@ -620,13 +631,13 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# greetというメソッドを定義\ndef greet\n  # こんにちは と表示\n  puts 'こんにちは'\nend\n# メソッドを呼び出す\ngreet",
-        "holeyCode": "# greetというメソッドを定義\ndef ___\n  # こんにちは と表示\n  ___ 'こんにちは'\n___\n# メソッドを呼び出す\n___",
+        "correctCode": "# greetというメソッドを定義\ndef greet\n  # こんにちは と表示\n  puts '7Hello  puts 'Hello''\nend\n# メソッドを呼び出す\ngreet",
+        "holeyCode": "# greetというメソッドを定義\ndef ___\n  # こんにちは と表示\n  ___ '6Hello  ___ 'Hello''\n___\n# メソッドを呼び出す\n___",
         "correctLines": [
           "# greetというメソッドを定義",
           "def greet",
           "  # こんにちは と表示",
-          "  puts 'こんにちは'",
+          "  puts '7Hello  puts 'Hello''",
           "end",
           "# メソッドを呼び出す",
           "greet"
@@ -650,7 +661,8 @@ export const rubyData = {
           ],
           "strings": [
             "こんにちは"
-          ]
+          ],
+          "others": ["puts"]
         },
         "testCases": [
           {

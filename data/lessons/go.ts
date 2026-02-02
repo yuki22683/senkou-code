@@ -43,7 +43,8 @@ export const goData = {
         "candidates": {
           "strings": [
             "Hello, Go!"
-          ]
+          ],
+          "others": ["main", "fmt", "main()", "Println", "}"]
         },
         "testCases": [
           {
@@ -96,7 +97,8 @@ export const goData = {
           ],
           "numbers": [
             "10"
-          ]
+          ],
+          "others": ["main", "fmt", "main()", "Println", "}"]
         },
         "testCases": [
           {
@@ -148,7 +150,8 @@ export const goData = {
         "candidates": {
           "operators": [
             "*"
-          ]
+          ],
+          "others": ["main", "fmt", "main()", "a", "b", "Println", "}"]
         },
         "testCases": [
           {
@@ -197,7 +200,8 @@ export const goData = {
             "/",
             "*",
             "-"
-          ]
+          ],
+          "others": ["main", "fmt", "main()", "Println", "}"]
         },
         "testCases": [
           {
@@ -254,7 +258,8 @@ export const goData = {
             "-=",
             "*=",
             "/="
-          ]
+          ],
+          "others": ["main", "fmt", "main()", "hp", "20", "50", "Println", "}"]
         },
         "testCases": [
           {
@@ -306,7 +311,8 @@ export const goData = {
         "candidates": {
           "variables": [
             "age"
-          ]
+          ],
+          "others": ["main", "fmt", "main()", "Printf", "}"]
         },
         "testCases": [
           {
@@ -354,7 +360,8 @@ export const goData = {
         "candidates": {
           "numbers": [
             "1"
-          ]
+          ],
+          "others": ["main", "fmt", "main()", "nums", "Println", "}"]
         },
         "testCases": [
           {
@@ -414,10 +421,7 @@ export const goData = {
           "strings": [
             "Great"
           ],
-          "others": [
-            "100",
-            "Great\")"
-          ]
+          "others": ["100", "Great\")", "main", "fmt", "main()", "score", "Println", "}"]
         },
         "testCases": [
           {
@@ -486,7 +490,14 @@ export const goData = {
             "5",
             ">",
             "Big",
-            "Small"
+            "Small",
+            "main",
+            "fmt",
+            "main()",
+            "x",
+            "Println",
+            "}",
+            "{"
           ]
         },
         "testCases": [
@@ -544,7 +555,8 @@ export const goData = {
             "||",
             "&",
             "|"
-          ]
+          ],
+          "others": ["main", "fmt", "main()", "score", "bonus", ">=", "Println", "}"]
         },
         "testCases": [
           {
@@ -596,7 +608,8 @@ export const goData = {
         "candidates": {
           "keywords": [
             "range"
-          ]
+          ],
+          "others": ["main", "fmt", "main()", "nums", "Println", "}"]
         },
         "testCases": [
           {
@@ -647,7 +660,8 @@ export const goData = {
           "strings": [
             "string",
             "Math"
-          ]
+          ],
+          "others": ["main", "fmt", "main()", "scores", "Println", "}"]
         },
         "testCases": [
           {
@@ -699,7 +713,8 @@ export const goData = {
         "candidates": {
           "functions": [
             "greet"
-          ]
+          ],
+          "others": ["main", "fmt", "greet()", "Println", "}", "main()"]
         },
         "testCases": [
           {

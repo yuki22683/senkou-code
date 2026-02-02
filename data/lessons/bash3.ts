@@ -38,7 +38,8 @@ export const bash3Data = {
             "&",
             ">",
             "<"
-          ]
+          ],
+          "others": ["hello world"]
         },
         "testCases": [
           {
@@ -79,7 +80,8 @@ export const bash3Data = {
             ">>",
             "|",
             "<"
-          ]
+          ],
+          "others": ["test"]
         },
         "testCases": [
           {
@@ -122,7 +124,8 @@ export const bash3Data = {
             ">",
             "|",
             "<<"
-          ]
+          ],
+          "others": ["line1", "txt"]
         },
         "testCases": [
           {
@@ -163,7 +166,8 @@ export const bash3Data = {
             "1",
             "0",
             "3"
-          ]
+          ],
+          "others": ["ok"]
         },
         "testCases": [
           {
@@ -208,7 +212,8 @@ export const bash3Data = {
             "-d",
             "-e",
             "-r"
-          ]
+          ],
+          "others": ["then", "file exists", "fi"]
         },
         "testCases": [
           {
@@ -249,7 +254,8 @@ export const bash3Data = {
             "exec",
             "eval",
             "args"
-          ]
+          ],
+          "others": ["hello world"]
         },
         "testCases": [
           {
@@ -290,7 +296,8 @@ export const bash3Data = {
             "awk",
             "tr",
             "grep"
-          ]
+          ],
+          "others": ["cat"]
         },
         "testCases": [
           {
@@ -331,7 +338,8 @@ export const bash3Data = {
             "sed",
             "cut",
             "tr"
-          ]
+          ],
+          "others": ["apple 100 yen"]
         },
         "testCases": [
           {

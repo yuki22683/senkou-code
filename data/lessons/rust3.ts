@@ -51,7 +51,8 @@ export const rust3Data = {
             "'a",
             "'b",
             "'static"
-          ]
+          ],
+          "others": ["str", "..1", "}", "main()", "s", "println"]
         },
         "testCases": [
           {
@@ -97,7 +98,8 @@ export const rust3Data = {
             "|",
             "(",
             "["
-          ]
+          ],
+          "others": ["main()", "double", "println", "}"]
         },
         "testCases": [
           {
@@ -147,7 +149,8 @@ export const rust3Data = {
             "iter",
             "into_iter",
             "iter_mut"
-          ]
+          ],
+          "others": ["main()", "nums", "println", "}"]
         },
         "testCases": [
           {
@@ -195,7 +198,8 @@ export const rust3Data = {
             "map",
             "filter",
             "fold"
-          ]
+          ],
+          "others": ["main()", "nums", "iter", "println", "}"]
         },
         "testCases": [
           {
@@ -243,7 +247,8 @@ export const rust3Data = {
             "filter",
             "map",
             "find"
-          ]
+          ],
+          "others": ["main()", "nums", "iter", "println", "}"]
         },
         "testCases": [
           {
@@ -291,7 +296,8 @@ export const rust3Data = {
             "fold",
             "reduce",
             "sum"
-          ]
+          ],
+          "others": ["main()", "nums", "product", "println", "}"]
         },
         "testCases": [
           {
@@ -361,7 +367,8 @@ export const rust3Data = {
             "?",
             "!",
             "."
-          ]
+          ],
+          "others": ["divide(a:", "==", "Err", "else", "Ok", "}", "calc()", "x", "main()", "println"]
         },
         "testCases": [
           {
@@ -409,7 +416,8 @@ export const rust3Data = {
             "unwrap_or",
             "unwrap",
             "expect"
-          ]
+          ],
+          "others": ["main()", "Option<i32>", "None", "value", "println", "}"]
         },
         "testCases": [
           {
@@ -459,7 +467,8 @@ export const rust3Data = {
             "push",
             "append",
             "add"
-          ]
+          ],
+          "others": ["main()", "nums", "println", "}"]
         },
         "testCases": [
           {
@@ -507,7 +516,8 @@ export const rust3Data = {
             "to_string",
             "to_owned",
             "into"
-          ]
+          ],
+          "others": ["main()", "&str", "println", "}"]
         },
         "testCases": [
           {

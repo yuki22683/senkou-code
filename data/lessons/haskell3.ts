@@ -45,10 +45,7 @@ export const haskell3Data = {
             "fold",
             "apply"
           ],
-          "others": [
-            "Int",
-            "*"
-          ]
+          "others": ["Int", "*", "2", "1"]
         },
         "testCases": [
           {
@@ -96,10 +93,7 @@ export const haskell3Data = {
             "select",
             "where"
           ],
-          "others": [
-            "Bool",
-            "=="
-          ]
+          "others": ["Bool", "==", "2", "1"]
         },
         "testCases": [
           {
@@ -136,7 +130,8 @@ export const haskell3Data = {
             "lambda",
             "fn",
             "->"
-          ]
+          ],
+          "others": ["1"]
         },
         "testCases": [
           {
@@ -182,10 +177,7 @@ export const haskell3Data = {
             "reduce",
             "sum"
           ],
-          "others": [
-            "Int",
-            "sumList"
-          ]
+          "others": ["Int", "sumList", "0", "1"]
         },
         "testCases": [
           {
@@ -231,10 +223,7 @@ export const haskell3Data = {
             ">>",
             "->"
           ],
-          "others": [
-            "Int",
-            "squareDouble"
-          ]
+          "others": ["Int", "squareDouble", "2", "3"]
         },
         "testCases": [
           {
@@ -280,10 +269,7 @@ export const haskell3Data = {
             "Null",
             "Empty"
           ],
-          "others": [
-            "Maybe Int",
-            "Just"
-          ]
+          "others": ["Maybe Int", "Just", "Int", "0", "y"]
         },
         "testCases": [
           {
@@ -337,11 +323,7 @@ export const haskell3Data = {
             "Fail",
             "None"
           ],
-          "others": [
-            "Either String Int",
-            "age",
-            "Right"
-          ]
+          "others": ["Either String Int", "age", "Right", "Int", "Age cannot be negative"]
         },
         "testCases": [
           {
@@ -391,10 +373,7 @@ export const haskell3Data = {
             "apply",
             "bind"
           ],
-          "others": [
-            "Maybe Int",
-            "doubleJust"
-          ]
+          "others": ["Maybe Int", "doubleJust", "Int", "2", "5"]
         },
         "testCases": [
           {
@@ -448,12 +427,7 @@ export const haskell3Data = {
             "block",
             "run"
           ],
-          "others": [
-            "Maybe Int",
-            "mx",
-            "my",
-            "+"
-          ]
+          "others": ["Maybe Int", "mx", "my", "+", "Int", "y"]
         },
         "testCases": [
           {
@@ -499,9 +473,7 @@ export const haskell3Data = {
             "where",
             ";"
           ],
-          "others": [
-            "[Int]"
-          ]
+          "others": ["[Int]", "Int", "1"]
         },
         "testCases": [
           {

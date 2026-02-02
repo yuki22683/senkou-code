@@ -50,7 +50,8 @@ export const csharpData = {
           ],
           "strings": [
             "Hello, C#!"
-          ]
+          ],
+          "others": ["System", "Program", "Main", "WriteLine", "}"]
         },
         "testCases": [
           {
@@ -157,10 +158,7 @@ export const csharpData = {
             "*",
             "/"
           ],
-          "others": [
-            "10;",
-            "5;"
-          ]
+          "others": ["10;", "5;", "WriteLine"]
         },
         "testCases": [
           {
@@ -201,7 +199,8 @@ export const csharpData = {
             "/",
             "*",
             "-"
-          ]
+          ],
+          "others": ["WriteLine"]
         },
         "testCases": [
           {
@@ -252,7 +251,8 @@ export const csharpData = {
             "-=",
             "*=",
             "/="
-          ]
+          ],
+          "others": ["100", "20", "50", "hp"]
         },
         "testCases": [
           {
@@ -277,13 +277,13 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// ageというはこに 10 を入れる\nint age = 10;\n// 文字列補間を使ってメッセージを出す\nConsole.WriteLine($\"私は{age}歳です\");",
-        "holeyCode": "// ageというはこに 10 を入れる\nint age = ___;\n// 文字列補間を使ってメッセージを出す\nConsole.___($\"私は{age}歳です\");",
+        "correctCode": "// ageというはこに 10 を入れる\nint age = 10;\n// 文字列補間を使ってメッセージを出す\nConsole.WriteLine($\"19I am {age} years oldConsole.WriteLine($\"I am {age} years old\");\");",
+        "holeyCode": "// ageというはこに 10 を入れる\nint age = ___;\n// 文字列補間を使ってメッセージを出す\nConsole.___($\"13I am {age} years oldConsole.___($\"I am {age} years old\");\");",
         "correctLines": [
           "// ageというはこに 10 を入れる",
           "int age = 10;",
           "// 文字列補間を使ってメッセージを出す",
-          "Console.WriteLine($\"私は{age}歳です\");"
+          "Console.WriteLine($\"19I am {age} years oldConsole.WriteLine($\"I am {age} years old\");\");"
         ],
         "lineHints": [
           null,
@@ -301,9 +301,7 @@ export const csharpData = {
           "operators": [
             "$"
           ],
-          "others": [
-            "10;"
-          ]
+          "others": ["10;", "WriteLine"]
         },
         "testCases": [
           {
@@ -328,8 +326,8 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// colorsという配列を作る\nstring[] colors = {\"赤\", \"青\", \"緑\"};\n// 2番目のデータを出す\nConsole.WriteLine(colors[1]);",
-        "holeyCode": "// colorsという配列を作る\nstring[] colors = {\"___\", \"青\", \"緑\"};\n// 2番目のデータを出す\nConsole.___(colors[1]);",
+        "correctCode": "// colorsという配列を作る\nstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"117greenstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\"};\", \"blue\", \"133greenstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\"};\", \"141greenstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"215greenstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\"};\", \"blue\", \"231greenstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\"};\", \"239greenstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\"};\n// 2番目のデータを出す\nConsole.WriteLine(colors[1]);",
+        "holeyCode": "// colorsという配列を作る\nstring[] colors = {\"___\", \"26bluestring[] colors = {\"___\", \"blue\", \"67greenstring[] colors = {\"___\", \"26bluestring[] colors = {\"___\", \"blue\", \"green\"};\", \"green\"};\"};\", \"75greenstring[] colors = {\"___\", \"26bluestring[] colors = {\"___\", \"blue\", \"green\"};\", \"green\"};\"};\n// 2番目のデータを出す\nConsole.___(colors[1]);",
         "correctLines": [
           "// colorsという配列を作る",
           "string[] colors = {\"赤\", \"青\", \"緑\"};",
@@ -352,7 +350,8 @@ export const csharpData = {
             "0",
             "1",
             "2"
-          ]
+          ],
+          "others": ["WriteLine"]
         },
         "testCases": [
           {
@@ -377,8 +376,8 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// scoreに100を入れる\nint score = 100;\n// もし80より大きかったら\nif (score > 80)\n{\n    // 「合格！」と表示する\n    Console.WriteLine(\"合格！\");\n}",
-        "holeyCode": "// scoreに100を入れる\nint score = ___;\n// もし80より大きかったら\nif (score ___ 80)\n___\n    // 「合格！」と表示する\n    Console.___(\"合格！\");\n___",
+        "correctCode": "// scoreに100を入れる\nint score = 100;\n// もし80より大きかったら\nif (score > 80)\n{\n    // 「合格！」と表示する\n    Console.WriteLine(\"22Pass!    Console.WriteLine(\"Pass!\");\");\n}",
+        "holeyCode": "// scoreに100を入れる\nint score = ___;\n// もし80より大きかったら\nif (score ___ 80)\n___\n    // 「合格！」と表示する\n    Console.___(\"16Pass!    Console.___(\"Pass!\");\");\n___",
         "correctLines": [
           "// scoreに100を入れる",
           "int score = 100;",
@@ -386,7 +385,7 @@ export const csharpData = {
           "if (score > 80)",
           "{",
           "    // 「合格！」と表示する",
-          "    Console.WriteLine(\"合格！\");",
+          "    Console.WriteLine(\"22Pass!    Console.WriteLine(\"Pass!\");\");",
           "}"
         ],
         "lineHints": [
@@ -410,9 +409,7 @@ export const csharpData = {
           "strings": [
             "合格！"
           ],
-          "others": [
-            "100;"
-          ]
+          "others": ["100;", ">", "{", "WriteLine", "}"]
         },
         "testCases": [
           {
@@ -437,8 +434,8 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// ageに10を入れる\nint age = 10;\n// 20歳以上かどうかで分ける\nif (age >= 20)\n{\n    // 「大人」と出力\n    Console.WriteLine(\"大人\");\n}\n// else でそれ以外の場合\nelse\n{\n    // 「子供」と出力\n    Console.WriteLine(\"子供\");\n}",
-        "holeyCode": "// ageに10を入れる\nint age = ___;\n// 20歳以上かどうかで分ける\nif (age ___ 20)\n___\n    // 「大人」と出力\n    Console.___(\"大人\");\n___\n// else でそれ以外の場合\n___\n___\n    // 「子供」と出力\n    Console.___(\"子供\");\n___",
+        "correctCode": "// ageに10を入れる\nint age = 10;\n// 20歳以上かどうかで分ける\nif (age >= 20)\n{\n    // 「大人」と出力\n    Console.WriteLine(\"22Adult    Console.WriteLine(\"Adult\");\");\n}\n// else でそれ以外の場合\nelse\n{\n    // 「子供」と出力\n    Console.WriteLine(\"22Child    Console.WriteLine(\"Child\");\");\n}",
+        "holeyCode": "// ageに10を入れる\nint age = ___;\n// 20歳以上かどうかで分ける\nif (age ___ 20)\n___\n    // 「大人」と出力\n    Console.___(\"16Adult    Console.___(\"Adult\");\");\n___\n// else でそれ以外の場合\n___\n___\n    // 「子供」と出力\n    Console.___(\"16Child    Console.___(\"Child\");\");\n___",
         "correctLines": [
           "// ageに10を入れる",
           "int age = 10;",
@@ -446,13 +443,13 @@ export const csharpData = {
           "if (age >= 20)",
           "{",
           "    // 「大人」と出力",
-          "    Console.WriteLine(\"大人\");",
+          "    Console.WriteLine(\"22Adult    Console.WriteLine(\"Adult\");\");",
           "}",
           "// else でそれ以外の場合",
           "else",
           "{",
           "    // 「子供」と出力",
-          "    Console.WriteLine(\"子供\");",
+          "    Console.WriteLine(\"22Child    Console.WriteLine(\"Child\");\");",
           "}"
         ],
         "lineHints": [
@@ -483,9 +480,7 @@ export const csharpData = {
             "大人",
             "子供"
           ],
-          "others": [
-            "10;"
-          ]
+          "others": ["10;", ">=", "{", "WriteLine", "}"]
         },
         "testCases": [
           {
@@ -510,8 +505,8 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// score と bonus を定義\nint score = 80;\nint bonus = 10;\n// && で両方の条件をチェック\nif (score >= 70 && bonus > 0)\n{\n    Console.WriteLine(\"ボーナスあり合格\");\n}",
-        "holeyCode": "// score と bonus を定義\nint score = ___;\nint bonus = ___;\n// && で両方の条件をチェック\nif (score >= ___ && bonus > 0)\n___\n    Console.___(\"ボーナスあり合格\");\n___",
+        "correctCode": "// score と bonus を定義\nint score = 80;\nint bonus = 10;\n// && で両方の条件をチェック\nif (score >= 70 && bonus > 0)\n{\n    Console.WriteLine(\"22Pass with bonus    Console.WriteLine(\"Pass with bonus\");\");\n}",
+        "holeyCode": "// score と bonus を定義\nint score = ___;\nint bonus = ___;\n// && で両方の条件をチェック\nif (score >= ___ && bonus > 0)\n___\n    Console.___(\"16Pass with bonus    Console.___(\"Pass with bonus\");\");\n___",
         "correctLines": [
           "// score と bonus を定義",
           "int score = 80;",
@@ -519,7 +514,7 @@ export const csharpData = {
           "// && で両方の条件をチェック",
           "if (score >= 70 && bonus > 0)",
           "{",
-          "    Console.WriteLine(\"ボーナスあり合格\");",
+          "    Console.WriteLine(\"22Pass with bonus    Console.WriteLine(\"Pass with bonus\");\");",
           "}"
         ],
         "lineHints": [
@@ -538,7 +533,8 @@ export const csharpData = {
             "||",
             "&",
             "|"
-          ]
+          ],
+          "others": ["80", "10", "70", "{", "WriteLine", "}"]
         },
         "testCases": [
           {
@@ -563,8 +559,8 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 名前の配列を作る\nstring[] names = {\"太郎\", \"花子\"};\n// 順番に取り出すループ\nforeach (string name in names)\n{\n    // 取り出した名前を表示\n    Console.WriteLine(name);\n}",
-        "holeyCode": "// 名前の配列を作る\nstring[] names = {\"___\", \"花子\"};\n// 順番に取り出すループ\nforeach (string name in ___)\n___\n    // 取り出した名前を表示\n    Console.WriteLine(___);\n___",
+        "correctCode": "// 名前の配列を作る\nstring[] names = {\"18Tarostring[] names = {\"Taro\", \"51Hanakostring[] names = {\"18Tarostring[] names = {\"Taro\", \"Hanako\"};\", \"Hanako\"};\"};\", \"60Hanakostring[] names = {\"18Tarostring[] names = {\"Taro\", \"Hanako\"};\", \"Hanako\"};\"};\n// 順番に取り出すループ\nforeach (string name in names)\n{\n    // 取り出した名前を表示\n    Console.WriteLine(name);\n}",
+        "holeyCode": "// 名前の配列を作る\nstring[] names = {\"___\", \"25Hanakostring[] names = {\"___\", \"Hanako\"};\"};\n// 順番に取り出すループ\nforeach (string name in ___)\n___\n    // 取り出した名前を表示\n    Console.WriteLine(___);\n___",
         "correctLines": [
           "// 名前の配列を作る",
           "string[] names = {\"太郎\", \"花子\"};",
@@ -596,7 +592,8 @@ export const csharpData = {
           "strings": [
             "太郎",
             "花子"
-          ]
+          ],
+          "others": ["names", "{", "}"]
         },
         "testCases": [
           {
@@ -621,8 +618,8 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Dictionaryを作る\nvar fruits = new Dictionary<string, string>();\n// キーと値を追加\nfruits[\"みかん\"] = \"オレンジ\";\n// キーを指定して値を取り出す\nConsole.WriteLine(fruits[\"みかん\"]);",
-        "holeyCode": "// Dictionaryを作る\nvar ___ = new Dictionary<string, string>();\n// キーと値を追加\nfruits[\"___\"] = \"オレンジ\";\n// キーを指定して値を取り出す\nConsole.___(fruits[\"みかん\"]);",
+        "correctCode": "// Dictionaryを作る\nvar fruits = new Dictionary<string, string>();\n// キーと値を追加\nfruits[\"7orangefruits[\"orange\"] = \"16orangefruits[\"orange\"] = \"orange\";\";\"] = \"16orangefruits[\"32orangefruits[\"orange\"] = \"16orangefruits[\"orange\"] = \"orange\";\";\"] = \"orange\";\";\n// キーを指定して値を取り出す\nConsole.WriteLine(fruits[\"25orangeConsole.WriteLine(fruits[\"orange\"]);\"]);",
+        "holeyCode": "// Dictionaryを作る\nvar ___ = new Dictionary<string, string>();\n// キーと値を追加\nfruits[\"___\"] = \"16orangefruits[\"___\"] = \"orange\";\";\n// キーを指定して値を取り出す\nConsole.___(fruits[\"19orangeConsole.___(fruits[\"orange\"]);\"]);",
         "correctLines": [
           "// Dictionaryを作る",
           "var fruits = new Dictionary<string, string>();",
@@ -647,7 +644,8 @@ export const csharpData = {
           "strings": [
             "みかん",
             "オレンジ"
-          ]
+          ],
+          "others": ["fruits", "WriteLine"]
         },
         "testCases": [
           {
@@ -672,14 +670,14 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Greetというメソッドを定義\nstatic void Greet()\n{\n    // こんにちは と表示\n    Console.WriteLine(\"こんにちは\");\n}\n// メソッドを呼び出す\nGreet();",
-        "holeyCode": "// Greetというメソッドを定義\nstatic void ___()\n___\n    // こんにちは と表示\n    Console.___(\"こんにちは\");\n___\n// メソッドを呼び出す\n___();",
+        "correctCode": "// Greetというメソッドを定義\nstatic void Greet()\n{\n    // こんにちは と表示\n    Console.WriteLine(\"22Hello    Console.WriteLine(\"Hello\");\");\n}\n// メソッドを呼び出す\nGreet();",
+        "holeyCode": "// Greetというメソッドを定義\nstatic void ___()\n___\n    // こんにちは と表示\n    Console.___(\"16Hello    Console.___(\"Hello\");\");\n___\n// メソッドを呼び出す\n___();",
         "correctLines": [
           "// Greetというメソッドを定義",
           "static void Greet()",
           "{",
           "    // こんにちは と表示",
-          "    Console.WriteLine(\"こんにちは\");",
+          "    Console.WriteLine(\"22Hello    Console.WriteLine(\"Hello\");\");",
           "}",
           "// メソッドを呼び出す",
           "Greet();"
@@ -704,7 +702,8 @@ export const csharpData = {
           ],
           "strings": [
             "こんにちは"
-          ]
+          ],
+          "others": ["{", "WriteLine", "}"]
         },
         "testCases": [
           {

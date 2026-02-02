@@ -23,7 +23,7 @@ export const c3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\n\nint square(int x) { return x * x; }\n\nint main() {\n    // 関数ポインタを宣言する記法\n    int (*fp)(int) = square;\n    printf(\"%d\\n\", fp(5));\n    return 0;\n}",
-        "holeyCode": "#include <___>\n\nint square(int ___) { return x * x; }\n\nint ___() {\n    // 関数ポインタを宣言する記法\n    int (*fp)(int) = ___;\n    printf(\"%d\\\n\", fp(5));\n    return ___;\n___",
+        "holeyCode": "#include <stdio.h>\n\nint square(int ___) { return x * x; }\n\nint ___() {\n    // 関数ポインタを宣言する記法\n    int (*fp)(int) = ___;\n    printf(\"%d\\\n\", fp(5));\n    return ___;\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -53,7 +53,8 @@ export const c3Data = {
             "*fp",
             "fp",
             "&fp"
-          ]
+          ],
+          "others": ["x", "main", "square"]
         },
         "testCases": [
           {
@@ -79,7 +80,7 @@ export const c3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\n\nvoid apply(int n, void (*f)(int)) {\n    // 引数で受け取った関数ポインタを呼び出す\n    f(n);\n}\n\nvoid show(int x) {\n    printf(\"Value: %d\\n\", x);\n}\n\nint main() {\n    apply(42, show);\n    return 0;\n}",
-        "holeyCode": "#include <___>\n\nvoid apply(___ n, void (*f)(int)) {\n    // 引数で受け取った関数ポインタを呼び出す\n    f(___);\n___\n\nvoid show(int ___) {\n    printf(\"Value: %d\\\n\", x);\n___\n\nint ___() {\n    apply(___, show);\n    return ___;\n___",
+        "holeyCode": "#include <stdio.h>\n\nvoid apply(___ n, void (*f)(int)) {\n    // 引数で受け取った関数ポインタを呼び出す\n    f(___);\n___\n\nvoid show(int ___) {\n    printf(\"Value: %d\\\n\", x);\n___\n\nint ___() {\n    apply(___, show);\n    return ___;\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -121,7 +122,8 @@ export const c3Data = {
             "f",
             "n",
             "apply"
-          ]
+          ],
+          "others": ["int", "}", "x", "main", "42", "0"]
         },
         "testCases": [
           {
@@ -147,7 +149,7 @@ export const c3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\n\nint main() {\n    int a = 12;  // 1100\n    int b = 10;  // 1010\n    // 両方のビットが1の場合のみ1になる演算子\n    printf(\"%d\\n\", a & b);  // 8 (1000)\n    return 0;\n}",
-        "holeyCode": "#include <___>\n\nint ___() {\n    int a = ___;  // 1100\n    int b = ___;  // 1010\n    // 両方のビットが1の場合のみ1になる演算子\n    printf(\"%d\\\n\", a & b);  // 8 (1000)\n    return ___;\n___",
+        "holeyCode": "#include <stdio.h>\n\nint ___() {\n    int a = ___;  // 1100\n    int b = ___;  // 1010\n    // 両方のビットが1の場合のみ1になる演算子\n    printf(\"%d\\\n\", a & b);  // 8 (1000)\n    return ___;\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -177,7 +179,8 @@ export const c3Data = {
             "&",
             "|",
             "^"
-          ]
+          ],
+          "others": ["main", "12", "10", "0", "}"]
         },
         "testCases": [
           {
@@ -203,7 +206,7 @@ export const c3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\n\nint main() {\n    int a = 12;  // 1100\n    int b = 10;  // 1010\n    // どちらかのビットが1なら1になる演算子\n    printf(\"%d\\n\", a | b);  // 14 (1110)\n    return 0;\n}",
-        "holeyCode": "#include <___>\n\nint ___() {\n    int a = ___;  // 1100\n    int b = ___;  // 1010\n    // どちらかのビットが1なら1になる演算子\n    printf(\"%d\\\n\", a | b);  // 14 (1110)\n    return ___;\n___",
+        "holeyCode": "#include <stdio.h>\n\nint ___() {\n    int a = ___;  // 1100\n    int b = ___;  // 1010\n    // どちらかのビットが1なら1になる演算子\n    printf(\"%d\\\n\", a | b);  // 14 (1110)\n    return ___;\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -233,7 +236,8 @@ export const c3Data = {
             "|",
             "&",
             "^"
-          ]
+          ],
+          "others": ["main", "12", "10", "0", "}"]
         },
         "testCases": [
           {
@@ -259,7 +263,7 @@ export const c3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\n\nint main() {\n    int x = 3;\n    // ビットを左に移動する演算子\n    printf(\"%d\\n\", x << 2);  // 12\n    return 0;\n}",
-        "holeyCode": "#include <___>\n\nint ___() {\n    int x = ___;\n    // ビットを左に移動する演算子\n    printf(\"%d\\\n\", x << 2);  // 12\n    return ___;\n___",
+        "holeyCode": "#include <stdio.h>\n\nint ___() {\n    int x = ___;\n    // ビットを左に移動する演算子\n    printf(\"%d\\\n\", x << 2);  // 12\n    return ___;\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -287,7 +291,8 @@ export const c3Data = {
             "<<",
             ">>",
             "<"
-          ]
+          ],
+          "others": ["main", "3", "0", "}"]
         },
         "testCases": [
           {
@@ -313,7 +318,7 @@ export const c3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\n\nint main() {\n    int arr[] = {10, 20, 30};\n    // 型や変数のバイト数を取得する演算子\n    int count = sizeof(arr) / sizeof(arr[0]);\n    printf(\"%d\\n\", count);\n    return 0;\n}",
-        "holeyCode": "#include <___>\n\nint ___() {\n    int arr[] = {___};\n    // 型や変数のバイト数を取得する演算子\n    int count = sizeof(arr) / sizeof(arr[___]);\n    printf(\"%d\\\n\", count);\n    return ___;\n___",
+        "holeyCode": "#include <stdio.h>\n\nint ___() {\n    int arr[] = {___};\n    // 型や変数のバイト数を取得する演算子\n    int count = sizeof(arr) / sizeof(arr[___]);\n    printf(\"%d\\\n\", count);\n    return ___;\n___",
         "correctLines": [
           "#include <stdio.h>",
           "",
@@ -341,7 +346,8 @@ export const c3Data = {
             "sizeof",
             "strlen",
             "length"
-          ]
+          ],
+          "others": ["main", "10, 20, 30", "0"]
         },
         "testCases": [
           {
@@ -367,7 +373,7 @@ export const c3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\n\n// 型に別名をつけるキーワード\ntypedef int Number;\n\nint main() {\n    Number x = 100;\n    printf(\"%d\\n\", x);\n    return 0;\n}",
-        "holeyCode": "#include <___>\n\n// 型に別名をつけるキーワード\ntypedef int ___;\n\nint ___() {\n    Number x = ___;\n    printf(\"%d\\\n\", x);\n    return ___;\n___",
+        "holeyCode": "#include <stdio.h>\n\n// 型に別名をつけるキーワード\ntypedef int ___;\n\nint ___() {\n    Number x = ___;\n    printf(\"%d\\\n\", x);\n    return ___;\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -397,7 +403,8 @@ export const c3Data = {
             "typedef",
             "define",
             "alias"
-          ]
+          ],
+          "others": ["Number", "main", "100"]
         },
         "testCases": [
           {
@@ -423,7 +430,7 @@ export const c3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\n\n// 指す先を変更不可にするキーワード\nvoid show(const int *p) {\n    printf(\"%d\\n\", *p);\n}\n\nint main() {\n    int x = 42;\n    show(&x);\n    return 0;\n}",
-        "holeyCode": "#include <___>\n\n// 指す先を変更不可にするキーワード\nvoid show(const int *___) {\n    printf(\"%d\\\n\", *p);\n___\n\nint ___() {\n    int x = ___;\n    show(&___);\n    return ___;\n___",
+        "holeyCode": "#include <stdio.h>\n\n// 指す先を変更不可にするキーワード\nvoid show(const int *___) {\n    printf(\"%d\\\n\", *p);\n___\n\nint ___() {\n    int x = ___;\n    show(&___);\n    return ___;\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -457,7 +464,8 @@ export const c3Data = {
             "const",
             "static",
             "volatile"
-          ]
+          ],
+          "others": ["p", "int x = 42;", "0;"]
         },
         "testCases": [
           {
@@ -483,7 +491,7 @@ export const c3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\n\nvoid counter() {\n    // 関数を抜けても値を保持するキーワード\n    static int count = 0;\n    count++;\n    printf(\"%d\\n\", count);\n}\n\nint main() {\n    counter();\n    counter();\n    counter();\n    return 0;\n}",
-        "holeyCode": "#include <___>\n\nvoid ___() {\n    // 関数を抜けても値を保持するキーワード\n    static int count = ___;\n    ___++;\n    printf(\"%d\\\n\", count);\n___\n\nint ___() {\n    ___();\n    ___();\n    ___();\n    return ___;\n___",
+        "holeyCode": "#include <stdio.h>\n\nvoid ___() {\n    // 関数を抜けても値を保持するキーワード\n    static int count = ___;\n    ___++;\n    printf(\"%d\\\n\", count);\n___\n\nint ___() {\n    ___();\n    ___();\n    ___();\n    return ___;\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -523,7 +531,8 @@ export const c3Data = {
             "static",
             "const",
             "extern"
-          ]
+          ],
+          "others": ["counter", "0", "count", "return 0;"]
         },
         "testCases": [
           {
@@ -549,7 +558,7 @@ export const c3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\n\n// プリプロセッサでマクロを定義するディレクティブ\n#___ DOUBLE(x) ((x) * 2)\n\nint main() {\n    printf(\"%d\\n\", DOUBLE(7));\n    return 0;\n}",
-        "holeyCode": "#include <___>\n\n// プリプロセッサでマクロを定義するディレクティブ\n#___ DOUBLE(x) ((x) * 2)\n\nint ___() {\n    printf(\"%d\\\n\", DOUBLE(7));\n    return ___;\n___",
+        "holeyCode": "#include <stdio.h>\n\n// プリプロセッサでマクロを定義するディレクティブ\n#___ DOUBLE(x) ((x) * 2)\n\nint ___() {\n    printf(\"%d\\\n\", DOUBLE(7));\n    return ___;\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -577,7 +586,8 @@ export const c3Data = {
             "define",
             "include",
             "ifdef"
-          ]
+          ],
+          "others": ["main"]
         },
         "testCases": [
           {

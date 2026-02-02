@@ -107,7 +107,8 @@ export const swiftData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["x", "y"]
         },
         "testCases": [
           {
@@ -152,7 +153,8 @@ export const swiftData = {
             "/",
             "*",
             "-"
-          ]
+          ],
+          "others": ["10"]
         },
         "testCases": [
           {
@@ -211,7 +213,8 @@ export const swiftData = {
             "-=",
             "*=",
             "/="
-          ]
+          ],
+          "others": ["hp", "20", "50"]
         },
         "testCases": [
           {
@@ -271,7 +274,8 @@ export const swiftData = {
             "<",
             ">=",
             "<="
-          ]
+          ],
+          "others": ["score", "print", "}"]
         },
         "testCases": [
           {
@@ -328,7 +332,8 @@ export const swiftData = {
             "||",
             "&",
             "|"
-          ]
+          ],
+          "others": ["score", "bonus", ">=", "print", "}"]
         },
         "testCases": [
           {
@@ -361,8 +366,8 @@ export const swiftData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet colors = [\"あか\", \"あお\"]\n// 2番目のデータ（インデックス1）を出す\nprint(colors[1])",
-        "holeyCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet ___ = [\"あか\", \"あお\"]\n// 2番目のデータ（インデックス1）を出す\nprint(colors[___])",
+        "correctCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet colors = [\"14redlet colors = [\"red\", \"41bluelet colors = [\"14redlet colors = [\"red\", \"blue\"]\", \"blue\"]\"]\", \"49bluelet colors = [\"14redlet colors = [\"red\", \"blue\"]\", \"blue\"]\"]\n// 2番目のデータ（インデックス1）を出す\nprint(colors[1])",
+        "holeyCode": "// colors という配列を作る（'あか', 'あお'の順）\nlet ___ = [\"11redlet ___ = [\"red\", \"35bluelet ___ = [\"11redlet ___ = [\"red\", \"blue\"]\", \"blue\"]\"]\", \"43bluelet ___ = [\"11redlet ___ = [\"red\", \"blue\"]\", \"blue\"]\"]\n// 2番目のデータ（インデックス1）を出す\nprint(colors[___])",
         "correctLines": [
           "// colors という配列を作る（'あか', 'あお'の順）",
           "let colors = [\"あか\", \"あお\"]",
@@ -388,7 +393,8 @@ export const swiftData = {
           ],
           "numbers": [
             "1"
-          ]
+          ],
+          "others": ["]"]
         },
         "testCases": [
           {
@@ -421,8 +427,8 @@ export const swiftData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet colors = [\"みかん\": \"オレンジ\"]\n// 中身を出す\nprint(colors[\"みかん\"]!)",
-        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet ___ = [\"みかん\": \"オレンジ\"]\n// 中身を出す\nprint(colors[\"___\"]!)",
+        "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet colors = [\"14orangelet colors = [\"orange\": \"21orangelet colors = [\"orange\": \"orange\"]\"]\": \"21orangelet colors = [\"44orangelet colors = [\"orange\": \"21orangelet colors = [\"orange\": \"orange\"]\"]\": \"orange\"]\"]\n// 中身を出す\nprint(colors[\"13orangeprint(colors[\"orange\"]!)\"]!)",
+        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\nlet ___ = [\"11orangelet ___ = [\"orange\": \"18orangelet ___ = [\"orange\": \"orange\"]\"]\": \"18orangelet ___ = [\"38orangelet ___ = [\"orange\": \"18orangelet ___ = [\"orange\": \"orange\"]\"]\": \"orange\"]\"]\n// 中身を出す\nprint(colors[\"___\"]!)",
         "correctLines": [
           "// 辞書を作る（キーは'みかん'、値は'オレンジ'）",
           "let colors = [\"みかん\": \"オレンジ\"]",
@@ -445,7 +451,8 @@ export const swiftData = {
           "strings": [
             "みかん",
             "オレンジ"
-          ]
+          ],
+          "others": ["]"]
         },
         "testCases": [
           {

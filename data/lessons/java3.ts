@@ -54,7 +54,8 @@ export const javaData3 = {
             "=>",
             "::",
             "apply"
-          ]
+          ],
+          "others": ["Function;", "Main", "main(String[] args) {", "x", "println", "}"]
         },
         "testCases": [
           {
@@ -113,7 +114,8 @@ export const javaData3 = {
             "iterator",
             "toArray",
             "asList"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "1", "System.out::println", "}"]
         },
         "testCases": [
           {
@@ -174,7 +176,8 @@ export const javaData3 = {
             "filter",
             "flatMap",
             "asList"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "1", "stream", "n * 10", "System.out::println", "}"]
         },
         "testCases": [
           {
@@ -235,7 +238,8 @@ export const javaData3 = {
             "map",
             "reduce",
             "asList"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "1", "stream", "2", "System.out::println", "}"]
         },
         "testCases": [
           {
@@ -302,7 +306,8 @@ export const javaData3 = {
             "Collectors",
             "asList",
             "println"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "1", "stream", "n * 2", "toList", "}"]
         },
         "testCases": [
           {
@@ -366,7 +371,8 @@ export const javaData3 = {
             "count",
             "asList",
             "println"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "1", "stream", "}"]
         },
         "testCases": [
           {
@@ -428,7 +434,8 @@ export const javaData3 = {
             "ofNullable",
             "orElse",
             "println"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "Hello", "default", "}"]
         },
         "testCases": [
           {
@@ -485,7 +492,8 @@ export const javaData3 = {
             "->",
             ".",
             "asList"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "Alice", "System.out::println", "}"]
         },
         "testCases": [
           {
@@ -546,7 +554,8 @@ export const javaData3 = {
             "reversed",
             "ordered",
             "asList"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "5", "stream", "System.out::println", "}"]
         },
         "testCases": [
           {
@@ -607,7 +616,8 @@ export const javaData3 = {
             "unique",
             "dedupe",
             "asList"
-          ]
+          ],
+          "others": ["*;", "Main", "main(String[] args) {", "1", "stream", "System.out::println", "}"]
         },
         "testCases": [
           {

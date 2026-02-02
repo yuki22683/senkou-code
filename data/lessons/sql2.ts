@@ -35,7 +35,8 @@ export const sql2Data = {
         "candidates": {
           "keywords": [
             "WHERE"
-          ]
+          ],
+          "others": ["10"]
         },
         "testCases": [
           {
@@ -82,9 +83,7 @@ export const sql2Data = {
           "keywords": [
             "ORDER"
           ],
-          "others": [
-            "SELECT"
-          ]
+          "others": ["SELECT", "1", "num"]
         },
         "testCases": [
           {
@@ -127,9 +126,7 @@ export const sql2Data = {
           "keywords": [
             "LIMIT"
           ],
-          "others": [
-            "SELECT"
-          ]
+          "others": ["SELECT", "1", "2"]
         },
         "testCases": [
           {
@@ -167,7 +164,8 @@ export const sql2Data = {
         "candidates": {
           "functions": [
             "COUNT"
-          ]
+          ],
+          "others": ["1"]
         },
         "testCases": [
           {
@@ -205,7 +203,8 @@ export const sql2Data = {
         "candidates": {
           "functions": [
             "SUM"
-          ]
+          ],
+          "others": ["1"]
         },
         "testCases": [
           {
@@ -243,7 +242,8 @@ export const sql2Data = {
         "candidates": {
           "functions": [
             "AVG"
-          ]
+          ],
+          "others": ["10"]
         },
         "testCases": [
           {
@@ -294,9 +294,7 @@ export const sql2Data = {
           "keywords": [
             "GROUP"
           ],
-          "others": [
-            "SELECT"
-          ]
+          "others": ["SELECT", "FROM", "ALL", "B", "category"]
         },
         "testCases": [
           {
@@ -347,9 +345,7 @@ export const sql2Data = {
           "keywords": [
             "HAVING"
           ],
-          "others": [
-            "SELECT"
-          ]
+          "others": ["SELECT", "FROM", "ALL", "B", "1"]
         },
         "testCases": [
           {
@@ -404,12 +400,7 @@ export const sql2Data = {
           "keywords": [
             "CASE"
           ],
-          "others": [
-            "SELECT",
-            "WHEN",
-            "ELSE",
-            "END"
-          ]
+          "others": ["SELECT", "WHEN", "ELSE", "END", "85", "fail"]
         },
         "testCases": [
           {
@@ -447,7 +438,8 @@ export const sql2Data = {
         "candidates": {
           "functions": [
             "COALESCE"
-          ]
+          ],
+          "others": ["default"]
         },
         "testCases": [
           {
