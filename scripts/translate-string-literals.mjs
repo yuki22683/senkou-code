@@ -1,9 +1,56 @@
 // コード内の文字列リテラルを日本語から英語に翻訳するスクリプト
 // コメントは日本語のまま維持する
+// 【警告】このスクリプトは1回のみ実行可能。複数回実行すると破損する。
 import fs from 'fs';
 import path from 'path';
 
 const lessonsDir = './data/lessons';
+
+// ========== 安全チェック ==========
+// 破損パターンを検出して実行を中断する
+function checkForCorruption() {
+  const files = fs.readdirSync(lessonsDir).filter(f => f.endsWith('.ts') && f !== 'index.ts');
+  const corruptionPattern = /\d{2}[a-zA-Z]+[a-zA-Z]+ = /;
+  const corruptedFiles = [];
+
+  for (const file of files) {
+    const content = fs.readFileSync(path.join(lessonsDir, file), 'utf-8');
+    if (corruptionPattern.test(content)) {
+      corruptedFiles.push(file);
+    }
+  }
+
+  if (corruptedFiles.length > 0) {
+    console.error('【エラー】破損が検出されました。スクリプトを中断します。');
+    console.error('破損ファイル:', corruptedFiles.join(', '));
+    console.error('手動で修正してから再実行してください。');
+    process.exit(1);
+  }
+
+  // 既に英語化済みかどうかをチェック（日本語文字列が少ない場合は警告）
+  let japaneseCount = 0;
+  for (const file of files) {
+    const content = fs.readFileSync(path.join(lessonsDir, file), 'utf-8');
+    // correctCode/holeyCode内の日本語文字列をカウント
+    const matches = content.match(/"correctCode":\s*"[^"]*[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF][^"]*"/g);
+    if (matches) {
+      japaneseCount += matches.length;
+    }
+  }
+
+  if (japaneseCount < 10) {
+    console.warn('【警告】日本語文字列が少ないです（' + japaneseCount + '件）。');
+    console.warn('既に翻訳済みの可能性があります。本当に実行しますか？');
+    console.warn('5秒後に続行します... Ctrl+C で中断できます。');
+    // 同期的に5秒待機
+    const start = Date.now();
+    while (Date.now() - start < 5000) {}
+  }
+
+  console.log('安全チェック完了。処理を開始します。');
+}
+
+checkForCorruption();
 
 // 日本語→英語の翻訳マッピング
 const translations = new Map([
