@@ -401,14 +401,20 @@
   4. `npx tsc --noEmit` で構文チェック
   5. `npm run seed:db` でDB反映
 
-### 35. 演習を削除したらDBからも削除する
+### 35. 演習を削除したらDBからも削除し、即座にコミットする
 - レッスンファイルから演習を削除しても、**`seed:db`はDBから演習を削除しない**（追加/更新のみ）。
-- 演習を削除した場合は、**必ずDBからも手動で削除**すること。
-- **削除スクリプト**: `npx ts-node scripts/delete-exercise.ts "演習タイトル"`
+- 演習を削除した場合は、以下の手順を**必ず全て実行**すること：
+  1. レッスンファイルから演習を削除
+  2. DBから演習を削除: `npx ts-node scripts/delete-exercise.ts "演習タイトル"`
+  3. **即座にgit commit** ← これを忘れるとgit checkoutで元に戻る！
+  4. UIで削除されていることを確認
 - **例**:
   ```bash
-  # "with文（コンテキストマネージャ）" という演習を削除
+  # 1. ファイルから演習を削除（手動編集）
+  # 2. DBから削除
   npx ts-node scripts/delete-exercise.ts "with文（コンテキストマネージャ）"
+  # 3. 即座にコミット
+  git add data/lessons/python3.ts && git commit -m "fix: with文演習を削除"
   ```
-- **確認方法**: UIでレッスン一覧を開き、削除した演習が表示されていないことを確認
+- **重要**: コミットしないとgit checkoutやスクリプト実行で元に戻り、seed:dbで演習が再追加される
 - **理由**: seed:dbはupsert（存在すれば更新、なければ挿入）のみ行うため、ファイルから削除してもDBには残り続ける
