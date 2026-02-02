@@ -118,14 +118,14 @@ export const swift3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 配列を作成\nlet nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\n// compactMapでnilを除外して変換\nlet ints = nums.compactMap { Int($0) }\n// intsを出力\nprint(ints)",
-        "holeyCode": "// 配列を作成\nlet nums = [\"___\", \"a\", \"2\", \"b\", \"3\"]\n// compactMapでnilを除外して変換\nlet ints = nums.___ { Int($0) }\n// intsを出力\nprint(___)",
+        "correctCode": "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入\nlet nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\n// nums.compactMapでInt変換しintsに代入\nlet ints = nums.compactMap { Int($0) }\n// intsをprintで出力\nprint(ints)",
+        "holeyCode": "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入\nlet nums = [\"___\", \"a\", \"2\", \"b\", \"3\"]\n// nums.compactMapでInt変換しintsに代入\nlet ints = nums.___ { Int($0) }\n// intsをprintで出力\nprint(___)",
         "correctLines": [
-          "// 配列を作成",
+          "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入",
           "let nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]",
-          "// compactMapでnilを除外して変換",
+          "// nums.compactMapでInt変換しintsに代入",
           "let ints = nums.compactMap { Int($0) }",
-          "// intsを出力",
+          "// intsをprintで出力",
           "print(ints)"
         ],
         "lineHints": [
@@ -178,14 +178,14 @@ export const swift3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 配列を作成\nlet nums = [1, 2, 3, 4, 5]\n// reduceで畳み込み\nlet product = nums.reduce(1) { $0 * $1 }\n// productを出力\nprint(product)",
-        "holeyCode": "// 配列を作成\nlet ___ = [___, 2, 3, 4, 5]\n// reduceで畳み込み\nlet ___ = nums.___(___) { $0 * ___ }\n// productを出力\n___(___)",
+        "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\nlet nums = [1, 2, 3, 4, 5]\n// nums.reduce(1)で積を計算しproductに代入\nlet product = nums.reduce(1) { $0 * $1 }\n// productをprintで出力\nprint(product)",
+        "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\nlet ___ = [___, 2, 3, 4, 5]\n// nums.reduce(1)で積を計算しproductに代入\nlet ___ = nums.___(___) { $0 * ___ }\n// productをprintで出力\n___(___)",
         "correctLines": [
-          "// 配列を作成",
+          "// numsに[1, 2, 3, 4, 5]を代入",
           "let nums = [1, 2, 3, 4, 5]",
-          "// reduceで畳み込み",
+          "// nums.reduce(1)で積を計算しproductに代入",
           "let product = nums.reduce(1) { $0 * $1 }",
-          "// productを出力",
+          "// productをprintで出力",
           "print(product)"
         ],
         "lineHints": [
@@ -231,14 +231,14 @@ export const swift3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 配列を作成\nlet nums = [1, 2, 3, 4, 5]\n// lazyで遅延評価\nlet result = nums.lazy.map { $0 * 10 }.first!\n// resultを出力\nprint(result)",
-        "holeyCode": "// 配列を作成\nlet nums = [___, 2, 3, 4, 5]\n// lazyで遅延評価\nlet result = nums.___.map { $0 * 10 }.first!\n// resultを出力\nprint(___)",
+        "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\nlet nums = [1, 2, 3, 4, 5]\n// nums.lazy.mapで最初の要素*10をresultに代入\nlet result = nums.lazy.map { $0 * 10 }.first!\n// resultをprintで出力\nprint(result)",
+        "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\nlet nums = [___, 2, 3, 4, 5]\n// nums.lazy.mapで最初の要素*10をresultに代入\nlet result = nums.___.map { $0 * 10 }.first!\n// resultをprintで出力\nprint(___)",
         "correctLines": [
-          "// 配列を作成",
+          "// numsに[1, 2, 3, 4, 5]を代入",
           "let nums = [1, 2, 3, 4, 5]",
-          "// lazyで遅延評価",
+          "// nums.lazy.mapで最初の要素*10をresultに代入",
           "let result = nums.lazy.map { $0 * 10 }.first!",
-          "// resultを出力",
+          "// resultをprintで出力",
           "print(result)"
         ],
         "lineHints": [
@@ -287,14 +287,14 @@ export const swift3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 配列を作成\nlet nums = [1, -2, 3, -4, 5]\n// whereで条件を追加\nfor n in nums where n > 0 {\n    // nを出力\n    print(n)\n}",
-        "holeyCode": "// 配列を作成\nlet nums = [___, -2, 3, -4, 5]\n// whereで条件を追加\nfor n in nums ___ n > 0 {\n    // nを出力\n    print(___)\n}",
+        "correctCode": "// numsに[1, -2, 3, -4, 5]を代入\nlet nums = [1, -2, 3, -4, 5]\n// for-in whereでn>0の要素をループ\nfor n in nums where n > 0 {\n    // nをprintで出力\n    print(n)\n}",
+        "holeyCode": "// numsに[1, -2, 3, -4, 5]を代入\nlet nums = [___, -2, 3, -4, 5]\n// for-in whereでn>0の要素をループ\nfor n in nums ___ n > 0 {\n    // nをprintで出力\n    print(___)\n}",
         "correctLines": [
-          "// 配列を作成",
+          "// numsに[1, -2, 3, -4, 5]を代入",
           "let nums = [1, -2, 3, -4, 5]",
-          "// whereで条件を追加",
+          "// for-in whereでn>0の要素をループ",
           "for n in nums where n > 0 {",
-          "    // nを出力",
+          "    // nをprintで出力",
           "    print(n)",
           "}"
         ],
