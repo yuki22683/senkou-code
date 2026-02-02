@@ -6,6 +6,118 @@ import { ArrowLeft, ArrowRight, Delete, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { SYNTAX_COLORS, tokenize, getTokenStyle, getLanguageConfig } from "@/lib/syntax-highlight";
 
+// トークンを選択肢単位に展開する共通関数
+// 戻り値: { tokens: string[], boundaries: number[] }
+// boundaries[i] は tokens[i] の開始位置
+function expandTokensWithBoundaries(line: string, language: string): { tokens: string[], boundaries: number[] } {
+  const rawTokens = tokenize(line, language);
+  const expandedTokens: string[] = [];
+  const boundaries: number[] = [];
+  let pos = 0;
+
+  for (let tokenIdx = 0; tokenIdx < rawTokens.length; tokenIdx++) {
+    const token = rawTokens[tokenIdx];
+    const prevToken = tokenIdx > 0 ? rawTokens[tokenIdx - 1] : '';
+
+    // f-string検出
+    const isFStringPrefix = /^[fFrRbBuU]+$/.test(prevToken);
+    const isStringWithInterpolation =
+      ((token.startsWith('"') || token.startsWith("'")) && isFStringPrefix && token.includes('{'))
+      || ((token.startsWith('"') || token.startsWith("'")) && token.includes('#{'))
+      || (token.startsWith('`') && token.includes('${'));
+
+    // JSON文字列検出
+    const isJsonLikeString =
+      (token.startsWith("'") && token.endsWith("'") && (token.includes('{"') || token.includes("'{")))
+      || (token.startsWith('"') && token.endsWith('"') && (token.includes("{'") || token.includes('{"')))
+      || (token.startsWith('`') && token.endsWith('`') && token.includes('{"'));
+
+    if (isJsonLikeString) {
+      const quote = token[0];
+      // 開始クォート
+      boundaries.push(pos);
+      expandedTokens.push(quote);
+      pos += 1;
+
+      // 内部コンテンツ
+      const inner = token.slice(1, -1);
+      const jsonTokenRegex = /("(?:[^"\\]|\\.)*"|\d+\.?\d*|[{}:,\[\]])/g;
+      let match;
+      let lastIndex = 0;
+      while ((match = jsonTokenRegex.exec(inner)) !== null) {
+        // マッチ前にスキップされた文字があれば追加
+        if (match.index > lastIndex) {
+          const skipped = inner.slice(lastIndex, match.index);
+          if (skipped.trim()) {
+            boundaries.push(pos);
+            expandedTokens.push(skipped);
+          }
+          pos += match.index - lastIndex;
+        }
+        boundaries.push(pos);
+        expandedTokens.push(match[0]);
+        pos += match[0].length;
+        lastIndex = match.index + match[0].length;
+      }
+      // 残りの文字
+      if (lastIndex < inner.length) {
+        const remaining = inner.slice(lastIndex);
+        if (remaining.trim()) {
+          boundaries.push(pos);
+          expandedTokens.push(remaining);
+        }
+        pos += inner.length - lastIndex;
+      }
+
+      // 終了クォート
+      boundaries.push(pos);
+      expandedTokens.push(quote);
+      pos += 1;
+    } else if (isStringWithInterpolation) {
+      const splitRegex = /([#$]?\{[^}]+\})/g;
+      const parts = token.split(splitRegex);
+      for (const part of parts) {
+        if (part.match(splitRegex)) {
+          const innerMatch = part.match(/[#$]?\{([^}]+)\}/);
+          if (innerMatch) {
+            const innerContent = innerMatch[1];
+            const subParts = innerContent.split(/[.[\]()]+/).filter(p => p.trim() && /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(p));
+            for (const sp of subParts) {
+              boundaries.push(pos);
+              expandedTokens.push(sp);
+            }
+          }
+          boundaries.push(pos);
+          expandedTokens.push('{');
+          boundaries.push(pos);
+          expandedTokens.push('}');
+        } else {
+          const stringPart = part.replace(/^['"`]|['"`]$/g, '');
+          if (stringPart) {
+            const textParts = stringPart.split(/([,!?.:;])/);
+            for (const tp of textParts) {
+              if (tp.trim()) {
+                boundaries.push(pos);
+                expandedTokens.push(tp.trim());
+              }
+            }
+          }
+        }
+        pos += part.length;
+      }
+    } else {
+      boundaries.push(pos);
+      expandedTokens.push(token);
+      pos += token.length;
+    }
+  }
+
+  // 終端境界を追加
+  boundaries.push(pos);
+
+  return { tokens: expandedTokens, boundaries };
+}
+
 interface MobileCodeEditorProps {
   initialCode: string;
   correctLines?: (string | string[])[];  // Each line can have multiple correct answers
@@ -316,53 +428,8 @@ export function MobileCodeEditor({
     }
 
     if (targetLine.trim()) {
-      const tokens = tokenize(targetLine, language);
-      const expandedTokens: string[] = [];
-
-      for (const token of tokens) {
-        // f-string/テンプレートリテラル内の{...}や${...}や#{...}から変数名を抽出し、文字列部分も選択肢に追加
-        // Python: f'{...}', JavaScript/TypeScript: `${...}`, Ruby/Elixir: "#{...}"
-        const isStringWithInterpolation =
-          ((token.startsWith('"') || token.startsWith("'")) && (token.includes('{') || token.includes('#{')))
-          || (token.startsWith('`') && token.includes('${'));
-
-        if (isStringWithInterpolation) {
-          // 文字列内の{...}や${...}や#{...}パターンを抽出して個別に候補に追加
-          // また、それらの前後の文字列も個別に候補に追加する
-
-          // 分割用の正規表現
-          const splitRegex = /([#$]?\{[^}]+\})/g;
-          const parts = token.split(splitRegex);
-
-          for (const part of parts) {
-            if (part.match(splitRegex)) {
-              // 中身を抽出 (例: {age} -> age)
-              const innerMatch = part.match(/[#$]?\{([^}]+)\}/);
-              if (innerMatch) {
-                const innerContent = innerMatch[1];
-                const subParts = innerContent.split(/[.[\]()]+/ ).filter(p => p.trim() && /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(p));
-                expandedTokens.push(...subParts);
-              }
-              expandedTokens.push('{', '}');
-            } else {
-              // 文字列部分 (例: "私は)
-              const stringPart = part.replace(/^['"`]|['"`]$/g, '');
-              if (stringPart) {
-                // さらに記号などで細かく分ける
-                const textParts = stringPart.split(/([,!?.:;])/);
-                for (const tp of textParts) {
-                  if (tp.trim()) {
-                    expandedTokens.push(tp.trim());
-                  }
-                }
-              }
-            }
-          }
-        } else {
-          expandedTokens.push(token);
-        }
-      }
-
+      // 共通関数で選択肢トークンを取得
+      const { tokens: expandedTokens } = expandTokensWithBoundaries(targetLine, language);
       const filtered = expandedTokens.filter(t => t.trim().length > 0);
       const unique = Array.from(new Set(filtered));
       // シャッフルは行分配後に行うため、ここでは行わない
@@ -495,14 +562,8 @@ export function MobileCodeEditor({
       const currentLine = lines[cursor.line] || "";
       const textAfter = currentLine.slice(cursor.col);
 
-      // トークナイザーで境界を計算
-      const tokens = tokenize(currentLine, language);
-      const boundaries: number[] = [0];
-      let pos = 0;
-      for (const token of tokens) {
-        pos += token.length;
-        boundaries.push(pos);
-      }
+      // 選択肢と同じトークン単位で境界を計算
+      const { boundaries } = expandTokensWithBoundaries(currentLine, language);
 
       // カーソル位置から最も近い前の境界を探す
       let prevBoundary = 0;
@@ -612,15 +673,8 @@ export function MobileCodeEditor({
 
   const moveCursor = (direction: "left" | "right") => {
     const line = lines[cursor.line];
-    const tokens = tokenize(line, language);
-
-    // トークン境界を計算
-    const boundaries: number[] = [0];
-    let pos = 0;
-    for (const token of tokens) {
-      pos += token.length;
-      boundaries.push(pos);
-    }
+    // 選択肢と同じトークン単位で境界を計算
+    const { boundaries } = expandTokensWithBoundaries(line, language);
 
     if (direction === "left") {
       // 現在の行内でのみ移動（前の行には移動しない）
@@ -781,15 +835,8 @@ export function MobileCodeEditor({
                     const charWidth = fontSize * 0.6; // モノスペースフォントの文字幅は約0.6em
                     const clickedCol = Math.floor(clickX / charWidth);
 
-                    // トークン境界にスナップ（単語の途中にカーソルを置けないようにする）
-                    const tokens = tokenize(line, language);
-                    let pos = 0;
-                    const boundaries: number[] = [0]; // 各トークンの境界位置を記録
-
-                    for (const token of tokens) {
-                      pos += token.length;
-                      boundaries.push(pos);
-                    }
+                    // 選択肢と同じトークン単位で境界を計算
+                    const { boundaries } = expandTokensWithBoundaries(line, language);
 
                     // クリック位置に最も近い境界を見つける
                     let nearestBoundary = 0;
