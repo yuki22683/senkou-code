@@ -179,16 +179,25 @@ export default function ExercisePage() {
 
   async function handleShowAnswer() {
     setShowAnswerDialog(true);
-    
-    // ヒント使用として進捗を保存
+
+    // ヒント使用として進捗を保存（完了済みの場合は上書きしない）
     const { data: { user } } = await supabase.auth.getUser();
     if (user) {
-      await supabase.from("user_progress").upsert({
-        user_id: user.id,
-        exercise_id: exerciseId,
-        status: "hint_used",
-        updated_at: new Date().toISOString(),
-      }, { onConflict: 'user_id,exercise_id' });
+      const { data: existingProgress } = await supabase
+        .from("user_progress")
+        .select("status")
+        .eq("user_id", user.id)
+        .eq("exercise_id", exerciseId)
+        .single();
+
+      if (existingProgress?.status !== "completed") {
+        await supabase.from("user_progress").upsert({
+          user_id: user.id,
+          exercise_id: exerciseId,
+          status: "hint_used",
+          updated_at: new Date().toISOString(),
+        }, { onConflict: 'user_id,exercise_id' });
+      }
     }
   }
 

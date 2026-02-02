@@ -107,6 +107,36 @@ To prevent the recurrence of incomplete or non-functional exercises, the followi
 
 12. **Syntax-Safe Modification Policy:** When performing mass replacements in `.ts` lesson files, never use naive string splitting or global regex that can break object boundaries (e.g., deleting braces). Always target specific fields (like `"image": ...`) and verify the result with a syntax parser or database seeding test before committing.
 
+13. **String Literals in English, Comments in Japanese:** In `correctCode`, `holeyCode`, and `correctLines`:
+    - String literals (`'...'` or `"..."`) must be in **English**
+    - Comments (`#`, `//`, `--`, etc.) must remain in **Japanese**
+    - **Bad:** `print('ごうかく！')` → Japanese in string literal
+    - **Good:** `print('Pass!')` → English string, `# scoreを表示` → Japanese comment
+    - **Verification:** `node scripts/verify-translation.mjs` → String literals: 0件
+    - **Fix:** `node scripts/translate-string-literals.mjs`
+
+14. **Specific Comments Required (No Vague Comments):**
+    - Comments must uniquely identify the next line's content
+    - **Forbidden:**
+      - `# 結果を表示` → What result? (Use `# scoreを表示`)
+      - `// 関数を定義` → What function? (Use `// check関数を定義`)
+      - `// クラスを定義` → What class? (Use `// Calculatorクラスを定義`)
+      - `# 〜を属性に保存` → What to what? (Use `# self.nameにnameを代入`)
+      - `# 〜で初期化するメソッドを定義` → Which method? (Use `# __init__メソッド（引数: self, name）`)
+      - `# 〜の数を返す` → What exactly? (Use `# len(self.members)を返す`)
+    - **Verification:** `node scripts/check-vague-comments.mjs` → 0件
+    - **Fix:** Run in order:
+      1. `node scripts/fix-vague-output-comments.mjs`
+      2. `node scripts/sync-comments-to-holey.mjs`
+      3. `node scripts/fix-correctlines-comments.mjs`
+
+15. **Required Checks After Lesson Modifications:**
+    1. `node scripts/check-holey-v3.ts` → 0件
+    2. `node scripts/check-comment-consistency-v3.mjs` → No inconsistencies
+    3. `node scripts/check-vague-comments.mjs` → 0件
+    4. `node scripts/verify-translation.mjs` → String literals: 0件
+    5. `npm run seed:db` → Success
+
 
 # CLAUDE.md - プロジェクトルール
 
