@@ -487,11 +487,9 @@
 
 ### 42. translate-string-literals.mjsの使用制限
 - `scripts/translate-string-literals.mjs` は**1回のみ実行**すること。複数回実行すると再帰的な置換が発生し、データが破損する。
+- **スクリプト内蔵の安全チェック**:
+  1. 実行前に破損パターンを検出 → 検出時は即座に中断
+  2. 日本語文字列が少ない場合 → 5秒の警告表示（Ctrl+Cで中断可能）
 - **発生する破損パターン**: `names = ['9Taronames = ['Taro', '32Hanakonames = ...` のように、文字列リテラル内に同じ代入文が再帰的にネストされる。
-- **実行前の確認**:
-  - `grep -E "\d{2}[a-zA-Z]+[a-zA-Z]+ = " data/lessons/*.ts` で破損がないことを確認
-  - 破損がある場合は手動で修正してから実行
-- **実行後の確認**:
-  - 同じgrepコマンドで新たな破損がないことを確認
-  - `npm run seed:db` でエラーがないことを確認
+- **手動確認コマンド**: `grep -E "\d{2}[a-zA-Z]+[a-zA-Z]+ = " data/lessons/*.ts`
 - **破損が発生した場合の対処**: 手動でcorrectCode、holeyCode、correctLinesを修正する。correctLinesは比較的破損が軽微なことが多いので参考にできる。
