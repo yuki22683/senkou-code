@@ -130,29 +130,29 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# JSONモジュールをインポート\nimport json\n\n# JSON形式の文字列を定義\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# JSON文字列をPythonオブジェクトに変換\ndata = json.loads(json_str)\n# 辞書からnameキーの値を取得して表示\nprint(data['name'])",
-        "holeyCode": "# JSONモジュールをインポート\nimport ___\n\n# JSON形式の文字列を定義\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# JSON文字列をPythonオブジェクトに変換\ndata = json.___(json_str)\n# 辞書からnameキーの値を取得して表示\n___(data['name'])",
+        "correctCode": "# jsonモジュールをimportする\nimport json\n\n# 'で囲んだJSON: {の中に\"キー\": 値をカンマ区切りで並べる（name=\"Python\", version=3.12）\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# json_strをjson.loadsで辞書に変換しdataに代入する\ndata = json.loads(json_str)\n# data['name']をprintで出力する\nprint(data['name'])",
+        "holeyCode": "# jsonモジュールをimportする\nimport ___\n\n# 'で囲んだJSON: {の中に\"キー\": 値をカンマ区切りで並べる（name=\"Python\", version=3.12）\njson_str = ___\n# json_strをjson.loadsで辞書に変換しdataに代入する\ndata = json.___(json_str)\n# data['name']をprintで出力する\n___(data['name'])",
         "correctLines": [
-          "# JSONモジュールをインポート",
+          "# jsonモジュールをimportする",
           "import json",
           "",
-          "# JSON形式の文字列を定義",
+          "# 'で囲んだJSON: {の中に\"キー\": 値をカンマ区切りで並べる（name=\"Python\", version=3.12）",
           "json_str = '{\"name\": \"Python\", \"version\": 3.12}'",
-          "# JSON文字列をPythonオブジェクトに変換",
+          "# json_strをjson.loadsで辞書に変換しdataに代入する",
           "data = json.loads(json_str)",
-          "# 辞書からnameキーの値を取得して表示",
+          "# data['name']をprintで出力する",
           "print(data['name'])"
         ],
         "lineHints": [
           null,
-          "JSON文字列を読み込むメソッドです。",
+          "JSON処理に必要な標準モジュール名です。",
           null,
           null,
+          "'で開始→{→\"キー\":値,\"キー\":値→}→'で終了の構造です。",
           null,
+          "loadはファイル用、loadsは文字列(String)用です。",
           null,
-          null,
-          null,
-          null
+          "出力関数printと辞書のキー'name'を使います。"
         ],
         "candidates": {
           "keywords": [
@@ -160,7 +160,7 @@ export const pythonData5 = {
             "load",
             "parse"
           ],
-          "others": ["json", "print"]
+          "others": ["json", "'{\"name\": \"Python\", \"version\": 3.12}'", "print"]
         },
         "testCases": [
           {
@@ -181,17 +181,17 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# JSONモジュールをインポート\nimport json\n\n# 辞書データを定義\ndata = {'language': 'Python', 'level': 'advanced'}\n# PythonオブジェクトをJSON文字列に変換\njson_str = json.dumps(data)\n# JSON文字列を表示\nprint(json_str)",
-        "holeyCode": "# JSONモジュールをインポート\nimport ___\n\n# 辞書データを定義\ndata = {'language': 'Python', 'level': '___'}\n# PythonオブジェクトをJSON文字列に変換\njson_str = json.dumps(___)\n# JSON文字列を表示\n___(json_str)",
+        "correctCode": "# JSONモジュールをインポート\nimport json\n\n# dataにlanguage='Python', level='advanced'の辞書を代入\ndata = {'language': 'Python', 'level': 'advanced'}\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\njson_str = json.dumps(data)\n# json_strをprintで出力\nprint(json_str)",
+        "holeyCode": "# JSONモジュールをインポート\nimport ___\n\n# dataにlanguage='Python', level='advanced'の辞書を代入\ndata = {'language': 'Python', 'level': '___'}\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\njson_str = json.dumps(___)\n# json_strをprintで出力\n___(json_str)",
         "correctLines": [
           "# JSONモジュールをインポート",
           "import json",
           "",
-          "# 辞書データを定義",
+          "# dataにlanguage='Python', level='advanced'の辞書を代入",
           "data = {'language': 'Python', 'level': 'advanced'}",
-          "# PythonオブジェクトをJSON文字列に変換",
+          "# json.dumps(data)でJSON文字列に変換しjson_strに代入",
           "json_str = json.dumps(data)",
-          "# JSON文字列を表示",
+          "# json_strをprintで出力",
           "print(json_str)"
         ],
         "lineHints": [
@@ -232,19 +232,19 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 正規表現モジュールをインポート\nimport re\n\n# 電話番号を含む文字列を定義\ntext = 'Call me at 090-1234-5678'\n# パターンに一致する部分を検索\nmatch = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)\n# 一致した場合\nif match:\n    # 一致した文字列を表示\n    print(match.group())",
-        "holeyCode": "# 正規表現モジュールをインポート\nimport ___\n\n# 電話番号を含む文字列を定義\ntext = 'Call me at ___-1234-5678'\n# パターンに一致する部分を検索\nmatch = re.search(r'\\\\d{___}-\\\\d{4}-\\\\d{4}', text)\n# 一致した場合\nif ___:\n    # 一致した文字列を表示\n    ___(match.group())",
+        "correctCode": "# 正規表現モジュールをインポート\nimport re\n\n# textに'Call me at 090-1234-5678'を代入\ntext = 'Call me at 090-1234-5678'\n# re.search()でtextから3桁-4桁-4桁パターンを検索しmatchに代入\nmatch = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)\n# matchが存在する場合\nif match:\n    # match.group()をprintで出力\n    print(match.group())",
+        "holeyCode": "# 正規表現モジュールをインポート\nimport ___\n\n# textに'Call me at 090-1234-5678'を代入\ntext = 'Call me at ___-1234-5678'\n# re.search()でtextから3桁-4桁-4桁パターンを検索しmatchに代入\nmatch = re.search(r'\\\\d{___}-\\\\d{4}-\\\\d{4}', text)\n# matchが存在する場合\nif ___:\n    # match.group()をprintで出力\n    ___(match.group())",
         "correctLines": [
           "# 正規表現モジュールをインポート",
           "import re",
           "",
-          "# 電話番号を含む文字列を定義",
+          "# textに'Call me at 090-1234-5678'を代入",
           "text = 'Call me at 090-1234-5678'",
-          "# パターンに一致する部分を検索",
+          "# re.search()でtextから3桁-4桁-4桁パターンを検索しmatchに代入",
           "match = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)",
-          "# 一致した場合",
+          "# matchが存在する場合",
           "if match:",
-          "    # 一致した文字列を表示",
+          "    # match.group()をprintで出力",
           "    print(match.group())"
         ],
         "lineHints": [
@@ -287,17 +287,17 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 正規表現モジュールをインポート\nimport re\n\n# 複数のメールアドレスを含む文字列を定義\ntext = 'email1@test.com and email2@test.com'\n# パターンに一致する全ての部分をリストで取得\nemails = re.findall(r'\\w+@\\w+\\.\\w+', text)\n# 取得したメールアドレスのリストを表示\nprint(emails)",
-        "holeyCode": "# 正規表現モジュールをインポート\nimport ___\n\n# 複数のメールアドレスを含む文字列を定義\ntext = 'email___@test.com and email2@test.com'\n# パターンに一致する全ての部分をリストで取得\nemails = re.findall(r'\\\\w+@\\\\w+\\\\.\\\\w+', ___)\n# 取得したメールアドレスのリストを表示\n___(emails)",
+        "correctCode": "# 正規表現モジュールをインポート\nimport re\n\n# textに'email1@test.com and email2@test.com'を代入\ntext = 'email1@test.com and email2@test.com'\n# re.findall()でtextからメールアドレスを検索しemailsに代入\nemails = re.findall(r'\\w+@\\w+\\.\\w+', text)\n# emailsをprintで出力\nprint(emails)",
+        "holeyCode": "# 正規表現モジュールをインポート\nimport ___\n\n# textに'email1@test.com and email2@test.com'を代入\ntext = 'email___@test.com and email2@test.com'\n# re.findall()でtextからメールアドレスを検索しemailsに代入\nemails = re.findall(r'\\\\w+@\\\\w+\\\\.\\\\w+', ___)\n# emailsをprintで出力\n___(emails)",
         "correctLines": [
           "# 正規表現モジュールをインポート",
           "import re",
           "",
-          "# 複数のメールアドレスを含む文字列を定義",
+          "# textに'email1@test.com and email2@test.com'を代入",
           "text = 'email1@test.com and email2@test.com'",
-          "# パターンに一致する全ての部分をリストで取得",
+          "# re.findall()でtextからメールアドレスを検索しemailsに代入",
           "emails = re.findall(r'\\w+@\\w+\\.\\w+', text)",
-          "# 取得したメールアドレスのリストを表示",
+          "# emailsをprintで出力",
           "print(emails)"
         ],
         "lineHints": [
@@ -338,17 +338,17 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 正規表現モジュールをインポート\nimport re\n\n# 複数の空白を含む文字列を定義\ntext = 'Hello   World   Python'\n# パターンに一致する部分を置換\nresult = re.sub(r'\\s+', ' ', text)\n# 置換結果を表示\nprint(result)",
-        "holeyCode": "# 正規表現モジュールをインポート\nimport ___\n\n# 複数の空白を含む文字列を定義\ntext = 'Hello   World   ___'\n# パターンに一致する部分を置換\nresult = re.sub(r'\\\\s+', ' ', ___)\n# 置換結果を表示\n___(result)",
+        "correctCode": "# 正規表現モジュールをインポート\nimport re\n\n# textに'Hello   World   Python'を代入\ntext = 'Hello   World   Python'\n# re.sub()でtextの連続空白を単一空白に置換しresultに代入\nresult = re.sub(r'\\s+', ' ', text)\n# resultをprintで出力\nprint(result)",
+        "holeyCode": "# 正規表現モジュールをインポート\nimport ___\n\n# textに'Hello   World   Python'を代入\ntext = 'Hello   World   ___'\n# re.sub()でtextの連続空白を単一空白に置換しresultに代入\nresult = re.sub(r'\\\\s+', ' ', ___)\n# resultをprintで出力\n___(result)",
         "correctLines": [
           "# 正規表現モジュールをインポート",
           "import re",
           "",
-          "# 複数の空白を含む文字列を定義",
+          "# textに'Hello   World   Python'を代入",
           "text = 'Hello   World   Python'",
-          "# パターンに一致する部分を置換",
+          "# re.sub()でtextの連続空白を単一空白に置換しresultに代入",
           "result = re.sub(r'\\s+', ' ', text)",
-          "# 置換結果を表示",
+          "# resultをprintで出力",
           "print(result)"
         ],
         "lineHints": [
@@ -389,17 +389,17 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Counterクラスをインポート\nfrom collections import Counter\n\n# カウント対象の文字列を定義\ntext = 'hello world'\n# 文字の出現回数をカウント\ncount = Counter(text)\n# 最も多い3つを取得して表示\nprint(count.most_common(3))",
-        "holeyCode": "# Counterクラスをインポート\nfrom collections import ___\n\n# カウント対象の文字列を定義\ntext = 'hello ___'\n# 文字の出現回数をカウント\ncount = Counter(___)\n# 最も多い3つを取得して表示\n___(count.most_common(3))",
+        "correctCode": "# Counterクラスをインポート\nfrom collections import Counter\n\n# textに'hello world'を代入\ntext = 'hello world'\n# Counter(text)で文字をカウントしcountに代入\ncount = Counter(text)\n# count.most_common(3)をprintで出力\nprint(count.most_common(3))",
+        "holeyCode": "# Counterクラスをインポート\nfrom collections import ___\n\n# textに'hello world'を代入\ntext = 'hello ___'\n# Counter(text)で文字をカウントしcountに代入\ncount = Counter(___)\n# count.most_common(3)をprintで出力\n___(count.most_common(3))",
         "correctLines": [
           "# Counterクラスをインポート",
           "from collections import Counter",
           "",
-          "# カウント対象の文字列を定義",
+          "# textに'hello world'を代入",
           "text = 'hello world'",
-          "# 文字の出現回数をカウント",
+          "# Counter(text)で文字をカウントしcountに代入",
           "count = Counter(text)",
-          "# 最も多い3つを取得して表示",
+          "# count.most_common(3)をprintで出力",
           "print(count.most_common(3))"
         ],
         "lineHints": [
@@ -440,19 +440,19 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defaultdictクラスをインポート\nfrom collections import defaultdict\n\n# デフォルト値としてリストを生成する辞書を作成\nd = defaultdict(list)\n# fruitsキーにappleを追加\nd['fruits'].append('apple')\n# fruitsキーにbananaを追加\nd['fruits'].append('banana')\n# fruitsキーの値を表示\nprint(d['fruits'])",
-        "holeyCode": "# defaultdictクラスをインポート\nfrom collections import ___\n\n# デフォルト値としてリストを生成する辞書を作成\nd = defaultdict(___)\n# fruitsキーにappleを追加\nd['fruits'].append('___')\n# fruitsキーにbananaを追加\nd['fruits'].append('___')\n# fruitsキーの値を表示\n___(d['fruits'])",
+        "correctCode": "# defaultdictクラスをインポート\nfrom collections import defaultdict\n\n# dにdefaultdict(list)を代入\nd = defaultdict(list)\n# d['fruits']に'apple'をappend\nd['fruits'].append('apple')\n# d['fruits']に'banana'をappend\nd['fruits'].append('banana')\n# d['fruits']をprintで出力\nprint(d['fruits'])",
+        "holeyCode": "# defaultdictクラスをインポート\nfrom collections import ___\n\n# dにdefaultdict(list)を代入\nd = defaultdict(___)\n# d['fruits']に'apple'をappend\nd['fruits'].append('___')\n# d['fruits']に'banana'をappend\nd['fruits'].append('___')\n# d['fruits']をprintで出力\n___(d['fruits'])",
         "correctLines": [
           "# defaultdictクラスをインポート",
           "from collections import defaultdict",
           "",
-          "# デフォルト値としてリストを生成する辞書を作成",
+          "# dにdefaultdict(list)を代入",
           "d = defaultdict(list)",
-          "# fruitsキーにappleを追加",
+          "# d['fruits']に'apple'をappend",
           "d['fruits'].append('apple')",
-          "# fruitsキーにbananaを追加",
+          "# d['fruits']に'banana'をappend",
           "d['fruits'].append('banana')",
-          "# fruitsキーの値を表示",
+          "# d['fruits']をprintで出力",
           "print(d['fruits'])"
         ],
         "lineHints": [
@@ -495,19 +495,19 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# chain関数をインポート\nfrom itertools import chain\n\n# 1つ目のリストを定義\nlist1 = [1, 2, 3]\n# 2つ目のリストを定義\nlist2 = [4, 5, 6]\n# 2つのリストを連結してリストに変換\nresult = list(chain(list1, list2))\n# 連結結果を表示\nprint(result)",
-        "holeyCode": "# chain関数をインポート\nfrom itertools import ___\n\n# 1つ目のリストを定義\nlist___ = [1, 2, 3]\n# 2つ目のリストを定義\nlist___ = [4, 5, 6]\n# 2つのリストを連結してリストに変換\nresult = list(chain(list___, list2))\n# 連結結果を表示\n___(result)",
+        "correctCode": "# chain関数をインポート\nfrom itertools import chain\n\n# list1に[1, 2, 3]を代入\nlist1 = [1, 2, 3]\n# list2に[4, 5, 6]を代入\nlist2 = [4, 5, 6]\n# chain(list1, list2)をlist()でリスト化しresultに代入\nresult = list(chain(list1, list2))\n# resultをprintで出力\nprint(result)",
+        "holeyCode": "# chain関数をインポート\nfrom itertools import ___\n\n# list1に[1, 2, 3]を代入\nlist___ = [1, 2, 3]\n# list2に[4, 5, 6]を代入\nlist___ = [4, 5, 6]\n# chain(list1, list2)をlist()でリスト化しresultに代入\nresult = list(chain(list___, list2))\n# resultをprintで出力\n___(result)",
         "correctLines": [
           "# chain関数をインポート",
           "from itertools import chain",
           "",
-          "# 1つ目のリストを定義",
+          "# list1に[1, 2, 3]を代入",
           "list1 = [1, 2, 3]",
-          "# 2つ目のリストを定義",
+          "# list2に[4, 5, 6]を代入",
           "list2 = [4, 5, 6]",
-          "# 2つのリストを連結してリストに変換",
+          "# chain(list1, list2)をlist()でリスト化しresultに代入",
           "result = list(chain(list1, list2))",
-          "# 連結結果を表示",
+          "# resultをprintで出力",
           "print(result)"
         ],
         "lineHints": [
