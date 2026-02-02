@@ -73,8 +73,8 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 書き込みモードでファイルを開く\nwith open('test.txt', 'w') as f:\n    # 'line1\\nline2\\nline3'を書き込む\n    f.write('line1\\nline2\\nline3')\n# 読み込みモードでファイルを開く\nwith open('test.txt', 'r') as f:\n    # forでfをループ\n    for line in f:\n        # line.strip()を表示\n        print(line.strip(), end='')\nprint()",
-        "holeyCode": "# 書き込みモードでファイルを開く\nwith open('test.txt', '___') as f:\n    # 'line1\\nline2\\nline3'を書き込む\n    f.write('line1\\nline2\\nline3')\n# 読み込みモードでファイルを開く\nwith open('test.txt', '___') as f:\n    # forでfをループ\n    for line ___ f:\n        # line.strip()を表示\n        print(line.___(), end='')\nprint()",
+        "correctCode": "# 書き込みモードでファイルを開く\nwith open('test.txt', 'w') as f:\n    # 'line1\\nline2\\nline3'を書き込む\n    f.write('line1\\nline2\\nline3')\n# 読み込みモードでファイルを開く\nwith open('test.txt', 'r') as f:\n    # forでfをループ\n    for line in f:\n        # line.strip()を表示\n        print(line.strip())",
+        "holeyCode": "# 書き込みモードでファイルを開く\nwith open('test.txt', '___') as f:\n    # 'line1\\nline2\\nline3'を書き込む\n    f.write('line1\\nline2\\nline3')\n# 読み込みモードでファイルを開く\nwith open('test.txt', '___') as f:\n    # forでfをループ\n    for line ___ f:\n        # line.strip()を表示\n        print(line.___())",
         "correctLines": [
           "# 書き込みモードでファイルを開く",
           "with open('test.txt', 'w') as f:",
@@ -85,8 +85,7 @@ export const pythonData5 = {
           "    # forでfをループ",
           "    for line in f:",
           "        # line.strip()を表示",
-          "        print(line.strip(), end='')",
-          "print()"
+          "        print(line.strip())"
         ],
         "lineHints": [
           null,
@@ -98,8 +97,7 @@ export const pythonData5 = {
           null,
           "inキーワードを使います。",
           null,
-          "strip()は前後の空白を除去します。",
-          null
+          "strip()は前後の空白を除去します。"
         ],
         "candidates": {
           "keywords": [
@@ -117,7 +115,7 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "line1line2line3\n"
+            "expected_output": "line1\nline2\nline3\n"
           }
         ]
       },
