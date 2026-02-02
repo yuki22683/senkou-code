@@ -303,12 +303,12 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# colorsという配列を作る\ncolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', '81greencolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '45bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', 'blue', '96greencolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '45bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', '103greencolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '45bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', '45bluecolors = ['10redcolors = ['red', 'blue', '158greencolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '45bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', 'blue', '173greencolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '45bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', '180greencolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '45bluecolors = ['10redcolors = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']\n# 2番目のデータ（インデックス1）を出す\nputs colors[1]",
-        "holeyCode": "# colorsという配列を作る\n___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', '67green___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '38blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', 'blue', '82green___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '38blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', '89green___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '38blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', '38blue___ = ['7red___ = ['red', 'blue', '137green___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '38blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', 'blue', '152green___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '38blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']', '159green___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']', '38blue___ = ['7red___ = ['red', 'blue', 'green']', 'blue', 'green']', 'green']']\n# 2番目のデータ（インデックス1）を出す\nputs colors[___]",
+        "correctCode": "# colorsに['赤', '青', '緑']を代入\ncolors = ['赤', '青', '緑']\n# colors[1]を表示\nputs colors[1]",
+        "holeyCode": "# colorsに['赤', '青', '緑']を代入\n___ = ['赤', '青', '緑']\n# colors[1]を表示\nputs colors[___]",
         "correctLines": [
-          "# colorsという配列を作る",
+          "# colorsに['赤', '青', '緑']を代入",
           "colors = ['赤', '青', '緑']",
-          "# 2番目のデータ（インデックス1）を出す",
+          "# colors[1]を表示",
           "puts colors[1]"
         ],
         "lineHints": [
@@ -530,14 +530,14 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 名前の配列を作る\nnames = ['9Taronames = ['Taro', '32Hanakonames = ['9Taronames = ['Taro', 'Hanako']', 'Hanako']']', '40Hanakonames = ['9Taronames = ['Taro', 'Hanako']', 'Hanako']']\n# 順番に取り出すループ\nnames.each do |name|\n  # 取り出した名前を表示\n  puts name\nend",
-        "holeyCode": "# 名前の配列を作る\n___ = ['7Taro___ = ['Taro', '28Hanako___ = ['7Taro___ = ['Taro', 'Hanako']', 'Hanako']']', '36Hanako___ = ['7Taro___ = ['Taro', 'Hanako']', 'Hanako']']\n# 順番に取り出すループ\nnames.each do |___|\n  # 取り出した名前を表示\n  puts ___\n___",
+        "correctCode": "# namesに['太郎', '花子']を代入\nnames = ['太郎', '花子']\n# eachでnamesをループ\nnames.each do |name|\n  # nameを表示\n  puts name\nend",
+        "holeyCode": "# namesに['太郎', '花子']を代入\n___ = ['太郎', '花子']\n# eachでnamesをループ\nnames.each do |___|\n  # nameを表示\n  puts ___\n___",
         "correctLines": [
-          "# 名前の配列を作る",
+          "# namesに['太郎', '花子']を代入",
           "names = ['太郎', '花子']",
-          "# 順番に取り出すループ",
+          "# eachでnamesをループ",
           "names.each do |name|",
-          "  # 取り出した名前を表示",
+          "  # nameを表示",
           "  puts name",
           "end"
         ],
@@ -587,12 +587,12 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ハッシュを作る\nfruits = {'10orangefruits = {'orange' => '19orangefruits = {'orange' => 'orange'}'}' => '19orangefruits = {'38orangefruits = {'orange' => '19orangefruits = {'orange' => 'orange'}'}' => 'orange'}'}\n# キーを指定して値を取り出す\nputs fruits['12orangeputs fruits['orange']']",
-        "holeyCode": "# ハッシュを作る\n___ = {'7orange___ = {'orange' => '16orange___ = {'orange' => 'orange'}'}' => '16orange___ = {'32orange___ = {'orange' => '16orange___ = {'orange' => 'orange'}'}' => 'orange'}'}\n# キーを指定して値を取り出す\nputs ___['9orangeputs ___['orange']']",
+        "correctCode": "# fruitsに{'みかん' => 'オレンジ'}を代入\nfruits = {'みかん' => 'オレンジ'}\n# fruits['みかん']を表示\nputs fruits['みかん']",
+        "holeyCode": "# fruitsに{'みかん' => 'オレンジ'}を代入\n___ = {'みかん' => 'オレンジ'}\n# fruits['みかん']を表示\nputs ___['みかん']",
         "correctLines": [
-          "# ハッシュを作る",
-          "fruits = {'10orangefruits = {'orange' => '19orangefruits = {'orange' => 'orange'}'}' => '19orangefruits = {'38orangefruits = {'orange' => '19orangefruits = {'orange' => 'orange'}'}' => 'orange'}'}",
-          "# キーを指定して値を取り出す",
+          "# fruitsに{'みかん' => 'オレンジ'}を代入",
+          "fruits = {'みかん' => 'オレンジ'}",
+          "# fruits['みかん']を表示",
           "puts fruits['みかん']"
         ],
         "lineHints": [

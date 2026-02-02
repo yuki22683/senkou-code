@@ -317,12 +317,12 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# colors というリストを作る（'あか', 'あお'の順）\ncolors = ['10redcolors = ['red', '33bluecolors = ['10redcolors = ['red', 'blue']', 'blue']']', '41bluecolors = ['10redcolors = ['red', 'blue']', 'blue']']\n# 2番目のデータ（インデックス1）を出す\nprint(colors[1])",
-        "holeyCode": "# colors というリストを作る（'あか', 'あお'の順）\n___ = ['7red___ = ['red', '26blue___ = ['7red___ = ['red', 'blue']', 'blue']']', '34blue___ = ['7red___ = ['red', 'blue']', 'blue']']\n# 2番目のデータ（インデックス1）を出す\n___(colors[1])",
+        "correctCode": "# colorsに['あか', 'あお']を代入\ncolors = ['あか', 'あお']\n# colors[1]を表示\nprint(colors[1])",
+        "holeyCode": "# colorsに['あか', 'あお']を代入\n___ = ['あか', 'あお']\n# colors[1]を表示\n___(colors[1])",
         "correctLines": [
-          "# colors というリストを作る（'あか', 'あお'の順）",
+          "# colorsに['あか', 'あお']を代入",
           "colors = ['あか', 'あお']",
-          "# 2番目のデータ（インデックス1）を出す",
+          "# colors[1]を表示",
           "print(colors[1])"
         ],
         "lineHints": [
@@ -549,14 +549,14 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# リストを作る（'たろう', 'はなこ'の順）\nnames = ['9Taronames = ['Taro', '32Hanakonames = ['9Taronames = ['Taro', 'Hanako']', 'Hanako']']', '41Hanakonames = ['9Taronames = ['Taro', 'Hanako']', 'Hanako']']\n# 順番に取り出すループ\nfor name in names:\n    # 取り出した名前を表示\n    print(name)",
-        "holeyCode": "# リストを作る（'たろう', 'はなこ'の順）\n___ = ['7Taro___ = ['Taro', '28Hanako___ = ['7Taro___ = ['Taro', 'Hanako']', 'Hanako']']', '37Hanako___ = ['7Taro___ = ['Taro', 'Hanako']', 'Hanako']']\n# 順番に取り出すループ\nfor name in ___:\n    # 取り出した名前を表示\n    ___(name)",
+        "correctCode": "# namesに['たろう', 'はなこ']を代入\nnames = ['たろう', 'はなこ']\n# forでnamesをループ\nfor name in names:\n    # nameを表示\n    print(name)",
+        "holeyCode": "# namesに['たろう', 'はなこ']を代入\n___ = ['たろう', 'はなこ']\n# forでnamesをループ\nfor name in ___:\n    # nameを表示\n    ___(name)",
         "correctLines": [
-          "# リストを作る（'たろう', 'はなこ'の順）",
+          "# namesに['たろう', 'はなこ']を代入",
           "names = ['たろう', 'はなこ']",
-          "# 順番に取り出すループ",
+          "# forでnamesをループ",
           "for name in names:",
-          "    # 取り出した名前を表示",
+          "    # nameを表示",
           "    print(name)"
         ],
         "lineHints": [
@@ -603,12 +603,12 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 辞書を作る（キーは'みかん'、値は'オレンジ'）\ncolors = {'10orangecolors = {'orange': '17orangecolors = {'orange': 'orange'}'}': '17orangecolors = {'36orangecolors = {'orange': '17orangecolors = {'orange': 'orange'}'}': 'orange'}'}\n# 中身を出す\nprint(colors['13orangeprint(colors['orange'])'])",
-        "holeyCode": "# 辞書を作る（キーは'みかん'、値は'オレンジ'）\n___ = {'7orange___ = {'orange': '14orange___ = {'orange': 'orange'}'}': '14orange___ = {'30orange___ = {'orange': '14orange___ = {'orange': 'orange'}'}': 'orange'}'}\n# 中身を出す\n___(colors['11orange___(colors['orange'])'])",
+        "correctCode": "# colorsに{'みかん': 'オレンジ'}を代入\ncolors = {'みかん': 'オレンジ'}\n# colors['みかん']を表示\nprint(colors['みかん'])",
+        "holeyCode": "# colorsに{'みかん': 'オレンジ'}を代入\n___ = {'みかん': 'オレンジ'}\n# colors['みかん']を表示\n___(colors['みかん'])",
         "correctLines": [
-          "# 辞書を作る（キーは'みかん'、値は'オレンジ'）",
-          "colors = {'10orangecolors = {'orange': '17orangecolors = {'orange': 'orange'}'}': '17orangecolors = {'36orangecolors = {'orange': '17orangecolors = {'orange': 'orange'}'}': 'orange'}'}",
-          "# 中身を出す",
+          "# colorsに{'みかん': 'オレンジ'}を代入",
+          "colors = {'みかん': 'オレンジ'}",
+          "# colors['みかん']を表示",
           "print(colors['みかん'])"
         ],
         "lineHints": [
