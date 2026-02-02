@@ -22,13 +22,41 @@ function getCommentPrefix(lang: string): string {
   return commentPrefixes[lang] || '//';
 }
 
-allLessons.forEach(lesson => {
+interface TutorialSlide {
+  title: string;
+  content: string;
+  image?: string;
+}
+
+interface Exercise {
+  title: string;
+  description: string;
+  difficulty: string;
+  orderIndex: number;
+  tutorialSlides?: TutorialSlide[];
+  initialDisplayMode: string;
+  correctCode: string;
+  holeyCode: string;
+  correctLines: string[];
+  lineHints: (string | null)[];
+  candidates: Record<string, string[]>;
+  testCases: any[];
+}
+
+interface Lesson {
+  language: string;
+  lessonId: string;
+  lessonTitle: string;
+  exercises: Exercise[];
+}
+
+allLessons.forEach((lesson: any) => {
   const prefix = getCommentPrefix(lesson.language);
   
-  lesson.exercises.forEach(ex => {
+  lesson.exercises.forEach((ex: any) => {
     // 1. Check for missing images in slides
     if (ex.tutorialSlides) {
-      ex.tutorialSlides.forEach((slide, slideIndex) => {
+      ex.tutorialSlides.forEach((slide: any, slideIndex: number) => {
         if (slide.image) {
           const imagePath = path.join(process.cwd(), 'public', slide.image);
           if (!fs.existsSync(imagePath)) {
@@ -61,7 +89,7 @@ allLessons.forEach(lesson => {
       }
     }
 
-    lines.forEach((line, i) => {
+    lines.forEach((line: string, i: number) => {
       const trimmed = line.trim();
       if (!trimmed || trimmed.startsWith(prefix)) return;
 

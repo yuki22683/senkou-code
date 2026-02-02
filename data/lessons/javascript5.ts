@@ -85,11 +85,7 @@ export const javascriptData5 = {
             "match(",
             "exec("
           ],
-          "others": [
-            "/",
-            "test('test@example.com'));",
-            "invalid-email"
-          ]
+          "others": ["/", "test('test@example.com'));", "invalid-email", "test('test@example.com'"]
         },
         "testCases": [
           {

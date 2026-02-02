@@ -300,7 +300,7 @@ export const bashData = {
             "in",
             "done"
           ],
-          "others": ["Alice", "Bob", "${names[@]}", "$name"]
+          "others": ["Alice", "Bob", "${names[@]}", "$name", "lice\" \"Bob\")"]
         },
         "testCases": [
           {

@@ -39,7 +39,7 @@ export const elixirData = {
           "strings": [
             "Hello, Elixir!"
           ],
-          "others": ["ello, Elixir!\""]
+          "others": ["ello, Elixir!\"", "ello, Elixir!"]
         },
         "testCases": [
           {

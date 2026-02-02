@@ -44,7 +44,7 @@ export const goData = {
           "strings": [
             "Hello, Go!"
           ],
-          "others": ["main", "fmt", "main()", "Println", "}"]
+          "others": ["main", "fmt", "main()", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -98,7 +98,7 @@ export const goData = {
           "numbers": [
             "10"
           ],
-          "others": ["main", "fmt", "main()", "Println", "}"]
+          "others": ["main", "fmt", "main()", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -151,7 +151,7 @@ export const goData = {
           "operators": [
             "*"
           ],
-          "others": ["main", "fmt", "main()", "a", "b", "Println", "}"]
+          "others": ["main", "fmt", "main()", "a", "b", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -201,7 +201,7 @@ export const goData = {
             "*",
             "-"
           ],
-          "others": ["main", "fmt", "main()", "Println", "}"]
+          "others": ["main", "fmt", "main()", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -259,7 +259,7 @@ export const goData = {
             "*=",
             "/="
           ],
-          "others": ["main", "fmt", "main()", "hp", "20", "50", "Println", "}"]
+          "others": ["main", "fmt", "main()", "hp", "20", "50", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -312,7 +312,7 @@ export const goData = {
           "variables": [
             "age"
           ],
-          "others": ["main", "fmt", "main()", "Printf", "}"]
+          "others": ["main", "fmt", "main()", "Printf", "}", "mt\""]
         },
         "testCases": [
           {
@@ -361,7 +361,7 @@ export const goData = {
           "numbers": [
             "1"
           ],
-          "others": ["main", "fmt", "main()", "nums", "Println", "}"]
+          "others": ["main", "fmt", "main()", "nums", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -421,7 +421,7 @@ export const goData = {
           "strings": [
             "Great"
           ],
-          "others": ["100", "Great\")", "main", "fmt", "main()", "score", "Println", "}"]
+          "others": ["100", "Great\")", "main", "fmt", "main()", "score", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -486,19 +486,7 @@ export const goData = {
           "keywords": [
             "else"
           ],
-          "others": [
-            "5",
-            ">",
-            "Big",
-            "Small",
-            "main",
-            "fmt",
-            "main()",
-            "x",
-            "Println",
-            "}",
-            "{"
-          ]
+          "others": ["5", ">", "Big", "Small", "main", "fmt", "main()", "x", "Println", "}", "{", "mt\""]
         },
         "testCases": [
           {
@@ -556,7 +544,7 @@ export const goData = {
             "&",
             "|"
           ],
-          "others": ["main", "fmt", "main()", "score", "bonus", ">=", "Println", "}"]
+          "others": ["main", "fmt", "main()", "score", "bonus", ">=", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -609,7 +597,7 @@ export const goData = {
           "keywords": [
             "range"
           ],
-          "others": ["main", "fmt", "main()", "nums", "Println", "}"]
+          "others": ["main", "fmt", "main()", "nums", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -661,7 +649,7 @@ export const goData = {
             "string",
             "Math"
           ],
-          "others": ["main", "fmt", "main()", "scores", "Println", "}"]
+          "others": ["main", "fmt", "main()", "scores", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -714,7 +702,7 @@ export const goData = {
           "functions": [
             "greet"
           ],
-          "others": ["main", "fmt", "greet()", "Println", "}", "main()"]
+          "others": ["main", "fmt", "greet()", "Println", "}", "main()", "mt\""]
         },
         "testCases": [
           {

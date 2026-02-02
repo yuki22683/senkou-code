@@ -64,7 +64,7 @@ export const go3Data = {
             "interface{}",
             "comparable"
           ],
-          "others": ["slice", "30", "main", "fmt", "T", "0", "}", "main()", "nums", "Println"]
+          "others": ["slice", "30", "main", "fmt", "T", "0", "}", "main()", "nums", "Println", "mt\""]
         },
         "testCases": [
           {
@@ -143,7 +143,7 @@ export const go3Data = {
             "any",
             "ordered"
           ],
-          "others": ["range", "==", "\"c\"", "main", "fmt", "int", "slice", "v", "i", "}", "1", "main()", "names", "Println"]
+          "others": ["range", "==", "\"c\"", "main", "fmt", "int", "slice", "v", "i", "}", "1", "main()", "names", "Println", "mt\""]
         },
         "testCases": [
           {
@@ -206,7 +206,7 @@ export const go3Data = {
             "new",
             "create"
           ],
-          "others": ["10", "main", "fmt", "main()", "nums", "0", "1", "2", "Println", "}"]
+          "others": ["10", "main", "fmt", "main()", "nums", "0", "1", "2", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -267,7 +267,7 @@ export const go3Data = {
             "..",
             ","
           ],
-          "others": ["2", "main", "fmt", "main()", "a", "b", "c", "Println", "}"]
+          "others": ["2", "main", "fmt", "main()", "a", "b", "c", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -330,7 +330,7 @@ export const go3Data = {
             "clone",
             "dup"
           ],
-          "others": ["30", "make", "main", "fmt", "main()", "src", "dst", "Println", "}"]
+          "others": ["30", "make", "main", "fmt", "main()", "src", "dst", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -405,7 +405,7 @@ export const go3Data = {
             "switch",
             "case"
           ],
-          "others": ["1", "<-", "main", "fmt", "main()", "ch1", "ch2", "Println", "2", "}"]
+          "others": ["1", "<-", "main", "fmt", "main()", "ch1", "ch2", "Println", "2", "}", "mt\""]
         },
         "testCases": [
           {
@@ -468,7 +468,7 @@ export const go3Data = {
             "in",
             "each"
           ],
-          "others": ["85", "main", "fmt", "main()", "scores", "Printf", "}"]
+          "others": ["85", "main", "fmt", "main()", "scores", "Printf", "}", "mt\""]
         },
         "testCases": [
           {
@@ -529,7 +529,7 @@ export const go3Data = {
             "var",
             "const"
           ],
-          "others": ["25", "main", "fmt", "int", "main()", "Println", "}"]
+          "others": ["25", "main", "fmt", "int", "main()", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -604,7 +604,7 @@ export const go3Data = {
             "*Base",
             "base Base"
           ],
-          "others": ["100", "main", "fmt", "struct", "int", "}", "string", "main()", "e", "Println"]
+          "others": ["100", "main", "fmt", "struct", "int", "}", "string", "main()", "e", "Println", "mt\""]
         },
         "testCases": [
           {
@@ -669,7 +669,7 @@ export const go3Data = {
             "catch",
             "handle"
           ],
-          "others": ["panic", "main", "fmt", "main()", "func", "nil", "Println", "}", "error"]
+          "others": ["panic", "main", "fmt", "main()", "func", "nil", "Println", "}", "error", "mt\""]
         },
         "testCases": [
           {

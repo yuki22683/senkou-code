@@ -62,7 +62,7 @@ export const go2Data = {
           "keywords": [
             "return"
           ],
-          "others": ["minmax", "main", "fmt", "minmax(a,", "b", "}", "a", "main()", "5", "Println"]
+          "others": ["minmax", "main", "fmt", "minmax(a,", "b", "}", "a", "main()", "5", "Println", "mt\""]
         },
         "testCases": [
           {
@@ -141,7 +141,7 @@ export const go2Data = {
           "keywords": [
             "nil"
           ],
-          "others": ["New", "check", "main", "(", "errors", "fmt", ")", "check(n", "<", "negative", "}", "main()", "5", "Println", "else"]
+          "others": ["New", "check", "main", "(", "errors", "fmt", ")", "check(n", "<", "negative", "}", "main()", "5", "Println", "else", "mt\""]
         },
         "testCases": [
           {
@@ -195,7 +195,7 @@ export const go2Data = {
           "operators": [
             "&"
           ],
-          "others": ["*", "main", "fmt", "main()", "x", "p", "Println", "}"]
+          "others": ["*", "main", "fmt", "main()", "x", "p", "Println", "}", "mt\""]
         },
         "testCases": [
           {
@@ -256,7 +256,7 @@ export const go2Data = {
           "keywords": [
             "struct"
           ],
-          "others": ["int", "4", "main", "fmt", "}", "main()", "p", "Println"]
+          "others": ["int", "4", "main", "fmt", "}", "main()", "p", "Println", "mt\""]
         },
         "testCases": [
           {
@@ -323,7 +323,7 @@ export const go2Data = {
           "operators": [
             "*"
           ],
-          "others": ["4", "Area", "main", "fmt", "struct", "int", "}", "H", "main()", "rect", "Println"]
+          "others": ["4", "Area", "main", "fmt", "struct", "int", "}", "H", "main()", "rect", "Println", "mt\""]
         },
         "testCases": [
           {
@@ -390,7 +390,7 @@ export const go2Data = {
           "keywords": [
             "interface"
           ],
-          "others": ["Dog{}", "Speak", "main", "fmt", "}", "struct", "Println", "main()", "Dog"]
+          "others": ["Dog{}", "Speak", "main", "fmt", "}", "struct", "Println", "main()", "Dog", "mt\""]
         },
         "testCases": [
           {
@@ -441,7 +441,7 @@ export const go2Data = {
           "keywords": [
             "defer"
           ],
-          "others": ["Println", "main", "fmt", "main()", "}"]
+          "others": ["Println", "main", "fmt", "main()", "}", "mt\""]
         },
         "testCases": [
           {
@@ -504,7 +504,7 @@ export const go2Data = {
           "keywords": [
             "go"
           ],
-          "others": ["Sleep", "main", "(", "fmt", "time", ")", "say(msg", "Println", "}", "main()", "hello", "100"]
+          "others": ["Sleep", "main", "(", "fmt", "time", ")", "say(msg", "Println", "}", "main()", "hello", "100", "mt\"", "ime\""]
         },
         "testCases": [
           {
@@ -565,7 +565,7 @@ export const go2Data = {
           "keywords": [
             "chan"
           ],
-          "others": ["<-", "main", "fmt", "main()", "ch", "func", "100", "}", "val", "Println"]
+          "others": ["<-", "main", "fmt", "main()", "ch", "func", "100", "}", "val", "Println", "mt\""]
         },
         "testCases": [
           {
@@ -622,7 +622,7 @@ export const go2Data = {
           "keywords": [
             "func"
           ],
-          "others": ["*", "main", "fmt", "main()", "n", "double", "2", "}", "Println"]
+          "others": ["*", "main", "fmt", "main()", "n", "double", "2", "}", "Println", "mt\""]
         },
         "testCases": [
           {

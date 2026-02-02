@@ -313,9 +313,7 @@ export const javascriptData = {
           "numbers": [
             "100"
           ],
-          "others": [
-            "100;"
-          ]
+          "others": ["100;", "16Pass!    console.log("]
         },
         "testCases": [
           {
@@ -384,11 +382,7 @@ export const javascriptData = {
           "keywords": [
             "else"
           ],
-          "others": [
-            "10;",
-            ">=",
-            "おとな"
-          ]
+          "others": ["10;", ">=", "おとな", "16Adult    console.log(", "16Child    console.log("]
         },
         "testCases": [
           {
@@ -494,6 +488,8 @@ export const javascriptData = {
             "name",
             "たろう"
           ]
+        ,
+          "others": ["21Taroconst user = { name:"]
         },
         "testCases": [
           {
@@ -546,6 +542,8 @@ export const javascriptData = {
           "strings": [
             "こんにちは"
           ]
+        ,
+          "others": ["16Hello    console.log("]
         },
         "testCases": [
           {

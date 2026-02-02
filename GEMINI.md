@@ -131,11 +131,17 @@ To prevent the recurrence of incomplete or non-functional exercises, the followi
       3. `node scripts/fix-correctlines-comments.mjs`
 
 15. **Required Checks After Lesson Modifications:**
-    1. `node scripts/check-holey-v3.ts` → 0件
+    1. `node scripts/check-holey-v5.ts` → 0件
     2. `node scripts/check-comment-consistency-v3.mjs` → No inconsistencies
     3. `node scripts/check-vague-comments.mjs` → 0件
     4. `node scripts/verify-translation.mjs` → String literals: 0件
     5. `npm run seed:db` → Success
+
+16. **Candidate Completeness:** Ensure that the `candidates` field contains all necessary answers to fill the holes (`___`) in the exercise. Use `node scripts/check-candidates-v5.mjs` to verify this.
+
+17. **Robust JSON Parsing:** When writing scripts to parse or modify lesson data (JSON-like structures in TS files), **NEVER** use naive regular expressions like `\[([\s\S]*?)\]` to extract array content. This fails when strings contain `]`. Use robust parsing techniques (like bracket counting or `extractObject` functions) that respect nested structures and string literals.
+
+18. **Tool Hygiene:** Do not leave multiple versions of scripts (e.g., `v1`, `v2`, `v3`) in the `scripts/` directory. Delete obsolete or broken scripts to prevent future misuse. Always use the latest, verified version.
 
 
 # CLAUDE.md - プロジェクトルール
