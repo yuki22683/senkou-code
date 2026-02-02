@@ -326,12 +326,12 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// colorsという配列を作る\nstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"117greenstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\"};\", \"blue\", \"133greenstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\"};\", \"141greenstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"215greenstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\"};\", \"blue\", \"231greenstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\"};\", \"239greenstring[] colors = {\"19redstring[] colors = {\"red\", \"51bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\", \"64bluestring[] colors = {\"19redstring[] colors = {\"red\", \"blue\", \"green\"};\", \"blue\", \"green\"};\", \"green\"};\"};\n// 2番目のデータを出す\nConsole.WriteLine(colors[1]);",
-        "holeyCode": "// colorsという配列を作る\nstring[] colors = {\"___\", \"26bluestring[] colors = {\"___\", \"blue\", \"67greenstring[] colors = {\"___\", \"26bluestring[] colors = {\"___\", \"blue\", \"green\"};\", \"green\"};\"};\", \"75greenstring[] colors = {\"___\", \"26bluestring[] colors = {\"___\", \"blue\", \"green\"};\", \"green\"};\"};\n// 2番目のデータを出す\nConsole.___(colors[1]);",
+        "correctCode": "// colorsに{\"赤\", \"青\", \"緑\"}を代入\nstring[] colors = {\"赤\", \"青\", \"緑\"};\n// colors[1]を表示\nConsole.WriteLine(colors[1]);",
+        "holeyCode": "// colorsに{\"赤\", \"青\", \"緑\"}を代入\nstring[] colors = {\"___\", \"青\", \"緑\"};\n// colors[1]を表示\nConsole.___(colors[1]);",
         "correctLines": [
-          "// colorsという配列を作る",
+          "// colorsに{\"赤\", \"青\", \"緑\"}を代入",
           "string[] colors = {\"赤\", \"青\", \"緑\"};",
-          "// 2番目のデータを出す",
+          "// colors[1]を表示",
           "Console.WriteLine(colors[1]);"
         ],
         "lineHints": [
@@ -559,15 +559,15 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 名前の配列を作る\nstring[] names = {\"18Tarostring[] names = {\"Taro\", \"51Hanakostring[] names = {\"18Tarostring[] names = {\"Taro\", \"Hanako\"};\", \"Hanako\"};\"};\", \"60Hanakostring[] names = {\"18Tarostring[] names = {\"Taro\", \"Hanako\"};\", \"Hanako\"};\"};\n// 順番に取り出すループ\nforeach (string name in names)\n{\n    // 取り出した名前を表示\n    Console.WriteLine(name);\n}",
-        "holeyCode": "// 名前の配列を作る\nstring[] names = {\"___\", \"25Hanakostring[] names = {\"___\", \"Hanako\"};\"};\n// 順番に取り出すループ\nforeach (string name in ___)\n___\n    // 取り出した名前を表示\n    Console.WriteLine(___);\n___",
+        "correctCode": "// namesに{\"太郎\", \"花子\"}を代入\nstring[] names = {\"太郎\", \"花子\"};\n// foreachでnamesをループ\nforeach (string name in names)\n{\n    // nameを表示\n    Console.WriteLine(name);\n}",
+        "holeyCode": "// namesに{\"太郎\", \"花子\"}を代入\nstring[] names = {\"___\", \"花子\"};\n// foreachでnamesをループ\nforeach (string name in ___)\n___\n    // nameを表示\n    Console.WriteLine(___);\n___",
         "correctLines": [
-          "// 名前の配列を作る",
+          "// namesに{\"太郎\", \"花子\"}を代入",
           "string[] names = {\"太郎\", \"花子\"};",
-          "// 順番に取り出すループ",
+          "// foreachでnamesをループ",
           "foreach (string name in names)",
           "{",
-          "    // 取り出した名前を表示",
+          "    // nameを表示",
           "    Console.WriteLine(name);",
           "}"
         ],
