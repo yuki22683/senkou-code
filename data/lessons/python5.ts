@@ -131,7 +131,7 @@ export const pythonData5 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# JSONモジュールをインポート\nimport json\n\n# JSON形式の文字列を定義\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# JSON文字列をPythonオブジェクトに変換\ndata = json.loads(json_str)\n# 辞書からnameキーの値を取得して表示\nprint(data['name'])",
-        "holeyCode": "# JSONモジュールをインポート\nimport ___\n\n# JSON形式の文字列を定義\njson_str = '{\"___\": \"Python\", \"version\": 3.12}'\n# JSON文字列をPythonオブジェクトに変換\ndata = json.loads(___)\n# 辞書からnameキーの値を取得して表示\n___(data['name'])",
+        "holeyCode": "# JSONモジュールをインポート\nimport ___\n\n# JSON形式の文字列を定義\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\n# JSON文字列をPythonオブジェクトに変換\ndata = json.___(json_str)\n# 辞書からnameキーの値を取得して表示\n___(data['name'])",
         "correctLines": [
           "# JSONモジュールをインポート",
           "import json",
@@ -160,7 +160,7 @@ export const pythonData5 = {
             "load",
             "parse"
           ],
-          "others": ["json", "'{\"name\": \"Python\", \"version\": 3.12}'", "data['name']", "name", "json_str", "print"]
+          "others": ["json", "print"]
         },
         "testCases": [
           {
