@@ -1,0 +1,95 @@
+// correctCode と correctLines のコメント不整合を自動修正（末尾の\を除去して比較）
+import fs from 'fs';
+import path from 'path';
+
+const lessonsDir = './data/lessons';
+
+function isComment(line) {
+  const trimmed = line.trim();
+  if (trimmed.startsWith('#include') || trimmed.startsWith('#define') ||
+      trimmed.startsWith('#ifdef') || trimmed.startsWith('#ifndef') ||
+      trimmed.startsWith('#endif') || trimmed.startsWith('#pragma') ||
+      trimmed.startsWith('#!')) {
+    return false;
+  }
+  return trimmed.startsWith('//') || trimmed.startsWith('#') ||
+         trimmed.startsWith('--') || trimmed.startsWith(';');
+}
+
+function processFile(filePath, fileName) {
+  let content = fs.readFileSync(filePath, 'utf-8');
+  let modified = false;
+
+  // 各エクササイズを抽出して処理
+  const exerciseRegex = /("title":\s*"[^"]+")[\s\S]*?("correctCode":\s*")((?:[^"\\]|\\.)*)(")(\s*,\s*"holeyCode":\s*"(?:[^"\\]|\\.)*"\s*,\s*"correctLines":\s*\[)([\s\S]*?)(\])/g;
+
+  content = content.replace(exerciseRegex, (match, title, ccPrefix, correctCodeRaw, ccSuffix, middle, correctLinesStr, closeBracket) => {
+    // correctCodeをデコード
+    const correctCode = correctCodeRaw.replace(/\\\\/g, '\\').replace(/\\n/g, '\n').replace(/\\"/g, '"');
+    const correctCodeLines = correctCode.split('\n');
+
+    // correctLinesの各行を取得
+    const lineMatches = [...correctLinesStr.matchAll(/"((?:[^"\\]|\\.)*)"/g)];
+    const correctLinesArr = lineMatches.map(m => m[1].replace(/\\\\/g, '\\').replace(/\\n/g, '\n').replace(/\\"/g, '"'));
+
+    let changed = false;
+    const newCorrectLinesArr = correctLinesArr.map((arrLine, i) => {
+      if (i >= correctCodeLines.length) return arrLine;
+
+      const codeLine = correctCodeLines[i];
+
+      if (isComment(codeLine) && isComment(arrLine)) {
+        // 末尾の \ を除去して比較
+        const codeClean = codeLine.replace(/\\+$/, '').trim();
+        const arrClean = arrLine.trim();
+
+        if (codeClean !== arrClean) {
+          changed = true;
+          // インデントを保持してcorrectCodeのコメント（\除去済み）で置き換え
+          const indent = arrLine.match(/^(\s*)/)?.[1] || '';
+          return indent + codeClean;
+        }
+      }
+      return arrLine;
+    });
+
+    if (changed) {
+      modified = true;
+      // 新しいcorrectLinesStrを生成
+      const newLinesStr = newCorrectLinesArr.map(l => `"${l.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n')}"`).join(',\n          ');
+      return `${title}${match.substring(title.length, match.indexOf(middle) + middle.length)}\n          ${newLinesStr}\n        ${closeBracket}`;
+    }
+
+    return match;
+  });
+
+  if (modified) {
+    fs.writeFileSync(filePath, content, 'utf-8');
+    return true;
+  }
+  return false;
+}
+
+async function main() {
+  const files = fs.readdirSync(lessonsDir).filter(f =>
+    f.endsWith('.ts') && f !== 'index.ts' && !f.includes('extracted')
+  );
+
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(lessonsDir, file);
+    try {
+      if (processFile(filePath, file)) {
+        console.log(`修正: ${file}`);
+        fixedCount++;
+      }
+    } catch (e) {
+      console.error(`エラー (${file}): ${e.message}`);
+    }
+  }
+
+  console.log(`\n合計 ${fixedCount} ファイルを修正しました。`);
+}
+
+main().catch(console.error);

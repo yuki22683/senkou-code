@@ -1,0 +1,95 @@
+// correctCode と correctLines のコメント不整合を自動修正
+import fs from 'fs';
+import path from 'path';
+
+const lessonsDir = './data/lessons';
+
+// コメント行かどうか判定
+function isComment(line) {
+  const trimmed = line.trim();
+  if (trimmed.startsWith('#include') || trimmed.startsWith('#define') ||
+      trimmed.startsWith('#ifdef') || trimmed.startsWith('#ifndef') ||
+      trimmed.startsWith('#endif') || trimmed.startsWith('#pragma') ||
+      trimmed.startsWith('#!')) {
+    return false;
+  }
+  return trimmed.startsWith('//') || trimmed.startsWith('#') ||
+         trimmed.startsWith('--') || trimmed.startsWith(';');
+}
+
+// ファイルを処理
+function processFile(filePath) {
+  let content = fs.readFileSync(filePath, 'utf-8');
+  let modified = false;
+
+  // correctCodeを取得してcorrectLinesと比較・修正
+  const exercisePattern = /"correctCode":\s*"((?:[^"\\]|\\.)*)"\s*,[\s\S]*?"correctLines":\s*\[([\s\S]*?)\]/g;
+
+  content = content.replace(exercisePattern, (match, correctCode, correctLinesStr) => {
+    const correctLines = correctCode.split('\\n').map(l => l.replace(/\\"/g, '"'));
+
+    // correctLinesの配列を解析
+    const lineMatches = correctLinesStr.matchAll(/"((?:[^"\\]|\\.)*)"/g);
+    const originalLines = [];
+    for (const m of lineMatches) {
+      originalLines.push(m[1].replace(/\\"/g, '"'));
+    }
+
+    // コメント行を比較・修正
+    let changed = false;
+    const newLines = originalLines.map((origLine, i) => {
+      if (i >= correctLines.length) return origLine;
+
+      const correctLine = correctLines[i];
+
+      if (isComment(correctLine) && isComment(origLine)) {
+        if (correctLine.trim() !== origLine.trim()) {
+          changed = true;
+          // 元のインデントを保持
+          const indent = origLine.match(/^(\s*)/)?.[1] || '';
+          return indent + correctLine.trim();
+        }
+      }
+      return origLine;
+    });
+
+    if (changed) {
+      modified = true;
+      const newLinesStr = newLines.map(l => `"${l.replace(/"/g, '\\"')}"`).join(',\n          ');
+      return match.replace(correctLinesStr, `\n          ${newLinesStr}\n        `);
+    }
+
+    return match;
+  });
+
+  if (modified) {
+    fs.writeFileSync(filePath, content, 'utf-8');
+    return true;
+  }
+  return false;
+}
+
+// メイン処理
+async function main() {
+  const files = fs.readdirSync(lessonsDir).filter(f =>
+    f.endsWith('.ts') && f !== 'index.ts' && !f.includes('extracted')
+  );
+
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(lessonsDir, file);
+    try {
+      if (processFile(filePath)) {
+        console.log(`修正: ${file}`);
+        fixedCount++;
+      }
+    } catch (e) {
+      console.error(`エラー (${file}): ${e.message}`);
+    }
+  }
+
+  console.log(`\n合計 ${fixedCount} ファイルを修正しました。`);
+}
+
+main().catch(console.error);

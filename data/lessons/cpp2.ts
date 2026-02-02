@@ -14,16 +14,16 @@ export const cpp2Data = {
         "tutorialSlides": [
           {
             "title": "クラスとは？",
-            "content": "# データと機能の設計図（せっけいず）\n\n**クラス**は、データ（変数）と機能（関数）をひとまとめにした「設計図」です。\n\n**身近な例え：**\n「犬」の設計図を考えてみましょう。\n- データ: 名前、年齢、毛の色\n- 機能: 吠（ほ）える、走る、食べる\n\nこの設計図（クラス）から、「ポチ」「タロウ」「ハチ」という実際の犬（オブジェクト）を作れます。\n\n設計図は1つでも、そこから何匹でも犬を作れるのがポイントです！"
+            "content": "# データと機能の設計図（せっけいず）\\\\n\\\\n**クラス**は、データ（変数）と機能（関数）をひとまとめにした「設計図」です。\\\\n\\\\n**身近な例え：**\\\\n「犬」の設計図を考えてみましょう。\\\\n- データ: 名前、年齢、毛の色\\\\n- 機能: 吠（ほ）える、走る、食べる\\\\n\\\\nこの設計図（クラス）から、「ポチ」「タロウ」「ハチ」という実際の犬（オブジェクト）を作れます。\\\\n\\\\n設計図は1つでも、そこから何匹でも犬を作れるのがポイントです！"
           },
           {
             "title": "クラスの定義",
-            "content": "# class キーワード\n\n`class`（クラス）を使ってクラスを定義（ていぎ）します。\n`public:`（パブリック）の下に、外から使える部分を書きます。\n\n**実際のコードを見てみましょう：**\n```cpp\nclass Dog {       // Dogという設計図を作る\npublic:           // ここから下は外から使える\n    std::string name;  // 名前を入れる場所\n};\n\n// 設計図から実際の犬を作る\nDog d;            // dという犬を作成\nd.name = \"Pochi\"; // 名前をつける\n```\n\n**用語解説：**\n- `public`: 公開（こうかい）という意味。外からアクセスできる\n- `.`（ドット）: オブジェクトの中身にアクセスする記号"
+            "content": "# class キーワード\\\\n\\\\n`class`（クラス）を使ってクラスを定義（ていぎ）します。\\\\n`public:`（パブリック）の下に、外から使える部分を書きます。\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\nclass Dog {       // Dogという設計図を作る\\\\npublic:           // ここから下は外から使える\\\\n    std::string name;  // 名前を入れる場所\\\\n};\\\\n\\\\n// 設計図から実際の犬を作る\\\\nDog d;            // dという犬を作成\\\\nd.name = \"Pochi\"; // 名前をつける\\\\n```\\\\n\\\\n**用語解説：**\\\\n- `public`: 公開（こうかい）という意味。外からアクセスできる\\\\n- `.`（ドット）: オブジェクトの中身にアクセスする記号"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\n#include <string>\n// class でクラスを定義\nclass Cat {\npublic:\n    // string でメンバ変数を定義\n    std::string name;\n};\nint main() {\n    // Cat でオブジェクトを作成\n    Cat c;\n    c.name = \"Tama\";\n    std::cout << c.name << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\n#include <string>\n// class でクラスを定義\nclass ___ {\n___:\n    // string でメンバ変数を定義\n    std::string ___;\n___\nint ___() {\n    // Cat でオブジェクトを作成\n    Cat ___;\n    c.name = \"___\";\n    std::cout << c.name << std::___;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\n#include <string>\\\\n// class でクラスを定義\\\\nclass Cat {\\\\npublic:\\\\n    // string でメンバ変数を定義\\\\n    std::string name;\\\\n};\\\\nint main() {\\\\n    // Cat でオブジェクトを作成\\\\n    Cat c;\\\\n    c.name = \"Tama\";\\\\n    std::cout << c.name << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n#include <string>\\\\n// class でクラスを定義\\\\nclass ___ {\\\\n___:\\\\n    // string でメンバ変数を定義\\\\n    std::string ___;\\\\n___\\\\nint ___() {\\\\n    // Cat でオブジェクトを作成\\\\n    Cat ___;\\\\n    c.name = \"___\";\\\\n    std::cout << c.name << std::___;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <string>",
@@ -67,7 +67,7 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Tama\n"
+            "expected_output": "Tama\\\\n"
           }
         ]
       },
@@ -79,16 +79,16 @@ export const cpp2Data = {
         "tutorialSlides": [
           {
             "title": "コンストラクタとは？",
-            "content": "# 初期化（しょきか）の儀式（ぎしき）\n\n**コンストラクタ**は、オブジェクトを作るときに自動的に呼ばれる特別な関数です。\n\n**身近な例え：**\n新しいスマホを買ったとき、最初に「言語設定」「名前登録」などの初期設定をしますよね。コンストラクタは、オブジェクトが生まれたときに自動で行われる「初期設定」のようなものです。\n\nオブジェクトの初期値（さいしょの値）を設定するのに使います。"
+            "content": "# 初期化（しょきか）の儀式（ぎしき）\\\\n\\\\n**コンストラクタ**は、オブジェクトを作るときに自動的に呼ばれる特別な関数です。\\\\n\\\\n**身近な例え：**\\\\n新しいスマホを買ったとき、最初に「言語設定」「名前登録」などの初期設定をしますよね。コンストラクタは、オブジェクトが生まれたときに自動で行われる「初期設定」のようなものです。\\\\n\\\\nオブジェクトの初期値（さいしょの値）を設定するのに使います。"
           },
           {
             "title": "コンストラクタの書き方",
-            "content": "# クラス名と同じ名前\n\nコンストラクタには特別なルールがあります：\n1. **クラス名と同じ名前**にする\n2. **戻り値の型を書かない**（voidも書かない）\n\n**実際のコードを見てみましょう：**\n```cpp\nclass Box {\npublic:\n    int size;        // サイズを入れる場所\n    Box(int s) {     // コンストラクタ（クラス名と同じ）\n        size = s;    // 受け取った値で初期化\n    }\n};\n\nBox b(10);  // Boxを作ると同時にsize=10で初期化！\n```\n\n**ポイント：**\n`Box b(10)` と書くと、コンストラクタが自動で呼ばれ、size に 10 が入ります。"
+            "content": "# クラス名と同じ名前\\\\n\\\\nコンストラクタには特別なルールがあります：\\\\n1. **クラス名と同じ名前**にする\\\\n2. **戻り値の型を書かない**（voidも書かない）\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\nclass Box {\\\\npublic:\\\\n    int size;        // サイズを入れる場所\\\\n    Box(int s) {     // コンストラクタ（クラス名と同じ）\\\\n        size = s;    // 受け取った値で初期化\\\\n    }\\\\n};\\\\n\\\\nBox b(10);  // Boxを作ると同時にsize=10で初期化！\\\\n```\\\\n\\\\n**ポイント：**\\\\n`Box b(10)` と書くと、コンストラクタが自動で呼ばれ、size に 10 が入ります。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nclass Counter {\npublic:\n    int count;\n    // Counter でコンストラクタを定義\n    Counter(int c) {\n        // count に値を代入\n        count = c;\n    }\n};\nint main() {\n    // Counter(5) でオブジェクトを作成\n    Counter cnt(5);\n    std::cout << cnt.count << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nclass ___ {\n___:\n    int ___;\n    // Counter でコンストラクタを定義\n    Counter(int ___) {\n        // count に値を代入\n        count = ___;\n    ___\n___\nint ___() {\n    // Counter(5) でオブジェクトを作成\n    Counter cnt(___);\n    std::cout << cnt.count << std::___;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nclass Counter {\\\\npublic:\\\\n    int count;\\\\n    // Counter でコンストラクタを定義\\\\n    Counter(int c) {\\\\n        // count に値を代入\\\\n        count = c;\\\\n    }\\\\n};\\\\nint main() {\\\\n    // Counter(5) でオブジェクトを作成\\\\n    Counter cnt(5);\\\\n    std::cout << cnt.count << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nclass ___ {\\\\n___:\\\\n    int ___;\\\\n    // Counter でコンストラクタを定義\\\\n    Counter(int ___) {\\\\n        // count に値を代入\\\\n        count = ___;\\\\n    ___\\\\n___\\\\nint ___() {\\\\n    // Counter(5) でオブジェクトを作成\\\\n    Counter cnt(___);\\\\n    std::cout << cnt.count << std::___;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "class Counter {",
@@ -134,7 +134,7 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "5\n"
+            "expected_output": "5\\\\n"
           }
         ]
       },
@@ -146,16 +146,16 @@ export const cpp2Data = {
         "tutorialSlides": [
           {
             "title": "メンバ関数とは？",
-            "content": "# クラスに属する関数\n\n**メンバ関数** は、クラスの中で定義される関数です。そのクラスのデータを使った処理ができます。"
+            "content": "# クラスに属する関数\\\\n\\\\n**メンバ関数** は、クラスの中で定義される関数です。そのクラスのデータを使った処理ができます。"
           },
           {
             "title": "メンバ関数の定義",
-            "content": "# クラスの中に関数を書く\n\nクラス定義の中に関数を書くと、そのクラスのメンバ関数になります。\n\n**コード例：**\n```cpp\nclass Circle {\npublic:\n    int radius;\n    int area() {\n        return radius * radius * 3;\n    }\n};\n```"
+            "content": "# クラスの中に関数を書く\\\\n\\\\nクラス定義の中に関数を書くと、そのクラスのメンバ関数になります。\\\\n\\\\n**コード例：**\\\\n```cpp\\\\nclass Circle {\\\\npublic:\\\\n    int radius;\\\\n    int area() {\\\\n        return radius * radius * 3;\\\\n    }\\\\n};\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nclass Rect {\npublic:\n    int w;\n    int h;\n    int area() {\n        // * で掛け算\n        return w * h;\n    }\n};\nint main() {\n    // Rect でオブジェクトを作成\n    Rect r;\n    r.w = 3;\n    r.h = 4;\n    // area() でメンバ関数を呼び出し\n    std::cout << r.area() << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nclass ___ {\n___:\n    int ___;\n    int ___;\n    int ___() {\n        // * で掛け算\n        return w * ___;\n    ___\n___\nint ___() {\n    // Rect でオブジェクトを作成\n    Rect ___;\n    r.w = ___;\n    r.h = ___;\n    // area() でメンバ関数を呼び出し\n    std::cout << r.area() << std::___;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nclass Rect {\\\\npublic:\\\\n    int w;\\\\n    int h;\\\\n    int area() {\\\\n        // * で掛け算\\\\n        return w * h;\\\\n    }\\\\n};\\\\nint main() {\\\\n    // Rect でオブジェクトを作成\\\\n    Rect r;\\\\n    r.w = 3;\\\\n    r.h = 4;\\\\n    // area() でメンバ関数を呼び出し\\\\n    std::cout << r.area() << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nclass ___ {\\\\n___:\\\\n    int ___;\\\\n    int ___;\\\\n    int ___() {\\\\n        // * で掛け算\\\\n        return w * ___;\\\\n    ___\\\\n___\\\\nint ___() {\\\\n    // Rect でオブジェクトを作成\\\\n    Rect ___;\\\\n    r.w = ___;\\\\n    r.h = ___;\\\\n    // area() でメンバ関数を呼び出し\\\\n    std::cout << r.area() << std::___;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "class Rect {",
@@ -207,7 +207,7 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "12\n"
+            "expected_output": "12\\\\n"
           }
         ]
       },
@@ -219,16 +219,16 @@ export const cpp2Data = {
         "tutorialSlides": [
           {
             "title": "参照とは？",
-            "content": "# 変数の別名\n\n**参照** は、既存の変数に別の名前をつける機能です。参照を通じて元の変数を操作できます。"
+            "content": "# 変数の別名\\\\n\\\\n**参照** は、既存の変数に別の名前をつける機能です。参照を通じて元の変数を操作できます。"
           },
           {
             "title": "参照の使い方",
-            "content": "# & で参照を作る\n\n型名の後に `&` をつけると参照型になります。参照は宣言時に必ず初期化が必要です。\n\n**コード例：**\n```cpp\nint x = 10;\nint& ref = x;  // ref は x の別名\nref = 20;      // x も 20 になる\n```"
+            "content": "# & で参照を作る\\\\n\\\\n型名の後に `&` をつけると参照型になります。参照は宣言時に必ず初期化が必要です。\\\\n\\\\n**コード例：**\\\\n```cpp\\\\nint x = 10;\\\\nint& ref = x;  // ref は x の別名\\\\nref = 20;      // x も 20 になる\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    int num = 5;\n    // & で参照を作る\n    int& ref = num;\n    // ref に 100 を代入\n    ref = 100;\n    std::cout << num << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nint ___() {\n    int num = ___;\n    // & で参照を作る\n    int& ref = ___;\n    // ref に 100 を代入\n    ref = ___;\n    std::cout << ___ << std::endl;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    int num = 5;\\\\n    // & で参照を作る\\\\n    int& ref = num;\\\\n    // ref に 100 を代入\\\\n    ref = 100;\\\\n    std::cout << num << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    int num = ___;\\\\n    // & で参照を作る\\\\n    int& ref = ___;\\\\n    // ref に 100 を代入\\\\n    ref = ___;\\\\n    std::cout << ___ << std::endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -262,7 +262,7 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\n"
+            "expected_output": "100\\\\n"
           }
         ]
       },
@@ -274,16 +274,16 @@ export const cpp2Data = {
         "tutorialSlides": [
           {
             "title": "継承（けいしょう）とは？",
-            "content": "# クラスを拡張（かくちょう）する\n\n**継承（けいしょう）** を使うと、既存（きそん）のクラス（親クラス）の機能を引き継いだ新しいクラス（子クラス）を作れます。\n\n**身近な例え：**\n「動物」という親クラスがあるとします。\n- 動物は「食べる」「寝る」ができる\n\n「犬」は動物の子クラスです。\n- 犬は動物なので「食べる」「寝る」ができる（親から継承）\n- さらに「吠える」という独自の機能を追加できる\n\n一から作り直さなくても、親の機能を受け継げるので、コードの再利用（さいりよう）に便利です！"
+            "content": "# クラスを拡張（かくちょう）する\\\\n\\\\n**継承（けいしょう）** を使うと、既存（きそん）のクラス（親クラス）の機能を引き継いだ新しいクラス（子クラス）を作れます。\\\\n\\\\n**身近な例え：**\\\\n「動物」という親クラスがあるとします。\\\\n- 動物は「食べる」「寝る」ができる\\\\n\\\\n「犬」は動物の子クラスです。\\\\n- 犬は動物なので「食べる」「寝る」ができる（親から継承）\\\\n- さらに「吠える」という独自の機能を追加できる\\\\n\\\\n一から作り直さなくても、親の機能を受け継げるので、コードの再利用（さいりよう）に便利です！"
           },
           {
             "title": "継承の書き方",
-            "content": "# : public 親クラス\n\n子クラス名の後に `: public 親クラス名` と書きます。\n\n**実際のコードを見てみましょう：**\n```cpp\n// 親クラス（動物）\nclass Animal {\npublic:\n    void eat() { std::cout << \"eating\" << std::endl; }\n};\n\n// 子クラス（犬）- Animalを継承\nclass Dog : public Animal {\n    // 何も書かなくても eat() が使える！\n};\n\nDog d;\nd.eat();  // \"eating\" と表示される（親から継承した機能）\n```\n\n**ポイント：**\n子クラスは、親クラスの `public` な機能を自動的に使えるようになります。"
+            "content": "# : public 親クラス\\\\n\\\\n子クラス名の後に `: public 親クラス名` と書きます。\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\n// 親クラス（動物）\\\\nclass Animal {\\\\npublic:\\\\n    void eat() { std::cout << \"eating\" << std::endl; }\\\\n};\\\\n\\\\n// 子クラス（犬）- Animalを継承\\\\nclass Dog : public Animal {\\\\n    // 何も書かなくても eat() が使える！\\\\n};\\\\n\\\\nDog d;\\\\nd.eat();  // \"eating\" と表示される（親から継承した機能）\\\\n```\\\\n\\\\n**ポイント：**\\\\n子クラスは、親クラスの `public` な機能を自動的に使えるようになります。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nclass Vehicle {\npublic:\n    void move() {\n        std::cout << \"moving\" << std::endl;\n    }\n};\n// public で継承\nclass Car : public Vehicle {\n};\nint main() {\n    Car c;\n    // move() でメンバ関数を呼び出し\n    c.move();\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nclass ___ {\n___:\n    void ___() {\n        std::cout << ___ << std::endl;\n    ___\n___\n// public で継承\nclass ___ : public Vehicle {\n___\nint ___() {\n    Car ___;\n    // move() でメンバ関数を呼び出し\n    c.___();\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nclass Vehicle {\\\\npublic:\\\\n    void move() {\\\\n        std::cout << \"moving\" << std::endl;\\\\n    }\\\\n};\\\\n// public で継承\\\\nclass Car : public Vehicle {\\\\n};\\\\nint main() {\\\\n    Car c;\\\\n    // move() でメンバ関数を呼び出し\\\\n    c.move();\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nclass ___ {\\\\n___:\\\\n    void ___() {\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n___\\\\n// public で継承\\\\nclass ___ : public Vehicle {\\\\n___\\\\nint ___() {\\\\n    Car ___;\\\\n    // move() でメンバ関数を呼び出し\\\\n    c.___();\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "class Vehicle {",
@@ -329,7 +329,7 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "moving\n"
+            "expected_output": "moving\\\\n"
           }
         ]
       },
@@ -341,16 +341,16 @@ export const cpp2Data = {
         "tutorialSlides": [
           {
             "title": "オーバーライドとは？",
-            "content": "# 親の機能を上書き\n\n**オーバーライド** は、親クラスで定義された関数を子クラスで書き換える機能です。`virtual` キーワードを使います。"
+            "content": "# 親の機能を上書き\\\\n\\\\n**オーバーライド** は、親クラスで定義された関数を子クラスで書き換える機能です。`virtual` キーワードを使います。"
           },
           {
             "title": "virtual と override",
-            "content": "# 仮想関数の仕組み\n\n親クラスで `virtual` をつけた関数は、子クラスで `override` して上書きできます。\n\n**コード例：**\n```cpp\nclass Animal {\npublic:\n    virtual void speak() { std::cout << \"...\" << std::endl; }\n};\nclass Cat : public Animal {\npublic:\n    void speak() override { std::cout << \"meow\" << std::endl; }\n};\n```"
+            "content": "# 仮想関数の仕組み\\\\n\\\\n親クラスで `virtual` をつけた関数は、子クラスで `override` して上書きできます。\\\\n\\\\n**コード例：**\\\\n```cpp\\\\nclass Animal {\\\\npublic:\\\\n    virtual void speak() { std::cout << \"...\" << std::endl; }\\\\n};\\\\nclass Cat : public Animal {\\\\npublic:\\\\n    void speak() override { std::cout << \"meow\" << std::endl; }\\\\n};\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nclass Shape {\npublic:\n    // virtual で仮想関数を定義\n    virtual void draw() {\n        std::cout << \"shape\" << std::endl;\n    }\n};\nclass Circle : public Shape {\npublic:\n    // override で上書き\n    void draw() override {\n        std::cout << \"circle\" << std::endl;\n    }\n};\nint main() {\n    Circle c;\n    // draw() でメンバ関数を呼び出し\n    c.draw();\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nclass ___ {\n___:\n    // virtual で仮想関数を定義\n    virtual void ___() {\n        std::cout << ___ << std::endl;\n    ___\n___\nclass ___ : public Shape {\n___:\n    // override で上書き\n    void draw() ___ {\n        std::cout << ___ << std::endl;\n    ___\n___\nint ___() {\n    Circle ___;\n    // draw() でメンバ関数を呼び出し\n    c.___();\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nclass Shape {\\\\npublic:\\\\n    // virtual で仮想関数を定義\\\\n    virtual void draw() {\\\\n        std::cout << \"shape\" << std::endl;\\\\n    }\\\\n};\\\\nclass Circle : public Shape {\\\\npublic:\\\\n    // override で上書き\\\\n    void draw() override {\\\\n        std::cout << \"circle\" << std::endl;\\\\n    }\\\\n};\\\\nint main() {\\\\n    Circle c;\\\\n    // draw() でメンバ関数を呼び出し\\\\n    c.draw();\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nclass ___ {\\\\n___:\\\\n    // virtual で仮想関数を定義\\\\n    virtual void ___() {\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n___\\\\nclass ___ : public Shape {\\\\n___:\\\\n    // override で上書き\\\\n    void draw() ___ {\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n___\\\\nint ___() {\\\\n    Circle ___;\\\\n    // draw() でメンバ関数を呼び出し\\\\n    c.___();\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "class Shape {",
@@ -406,7 +406,7 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "circle\n"
+            "expected_output": "circle\\\\n"
           }
         ]
       },
@@ -418,16 +418,16 @@ export const cpp2Data = {
         "tutorialSlides": [
           {
             "title": "テンプレートとは？",
-            "content": "# 汎用的（はんようてき）なコード\n\n**テンプレート**を使うと、どんな型（かた）でも使える汎用的な関数やクラスが作れます。\n\n**身近な例え：**\n「2つの数を足す」関数を作りたいとき、整数用、小数用...と別々に作るのは大変ですよね。\n\nテンプレートを使えば、**型を後から決められる**「万能な設計図」が作れます。\n\n1つのコードで、int でも double でも使える！これがテンプレートの力です。"
+            "content": "# 汎用的（はんようてき）なコード\\\\n\\\\n**テンプレート**を使うと、どんな型（かた）でも使える汎用的な関数やクラスが作れます。\\\\n\\\\n**身近な例え：**\\\\n「2つの数を足す」関数を作りたいとき、整数用、小数用...と別々に作るのは大変ですよね。\\\\n\\\\nテンプレートを使えば、**型を後から決められる**「万能な設計図」が作れます。\\\\n\\\\n1つのコードで、int でも double でも使える！これがテンプレートの力です。"
           },
           {
             "title": "関数テンプレート",
-            "content": "# template<typename T>\n\n`template<typename T>`（テンプレート・タイプネーム・ティー）と書くと、`T` が「後から決まる型」を表します。\n\n**実際のコードを見てみましょう：**\n```cpp\n// T はどんな型にもなれる\ntemplate<typename T>\nT add(T a, T b) {\n    return a + b;\n}\n\n// 使うとき、型が自動で決まる\nadd(1, 2);       // T = int として動く\nadd(1.5, 2.5);   // T = double として動く\n```\n\n**ポイント：**\n- `T` は「型のための変数」のようなもの\n- 使われるときに、自動で適切な型に置き換わります\n- 同じコードで、いろいろな型に対応できます！"
+            "content": "# template<typename T>\\\\n\\\\n`template<typename T>`（テンプレート・タイプネーム・ティー）と書くと、`T` が「後から決まる型」を表します。\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\n// T はどんな型にもなれる\\\\ntemplate<typename T>\\\\nT add(T a, T b) {\\\\n    return a + b;\\\\n}\\\\n\\\\n// 使うとき、型が自動で決まる\\\\nadd(1, 2);       // T = int として動く\\\\nadd(1.5, 2.5);   // T = double として動く\\\\n```\\\\n\\\\n**ポイント：**\\\\n- `T` は「型のための変数」のようなもの\\\\n- 使われるときに、自動で適切な型に置き換わります\\\\n- 同じコードで、いろいろな型に対応できます！"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\n// T で型パラメータを定義\ntemplate<typename T>\nT bigger(T a, T b) {\n    if (a > b) return a;\n    return b;\n}\nint main() {\n    // bigger で大きい方を取得\n    std::cout << bigger(3, 7) << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\n// T で型パラメータを定義\ntemplate<typename ___>\nT bigger(T a, T ___) {\n    if (___ > b) return a;\n    return ___;\n___\nint ___() {\n    // bigger で大きい方を取得\n    std::cout << bigger(___, 7) << std::endl;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\n// T で型パラメータを定義\\\\ntemplate<typename T>\\\\nT bigger(T a, T b) {\\\\n    if (a > b) return a;\\\\n    return b;\\\\n}\\\\nint main() {\\\\n    // bigger で大きい方を取得\\\\n    std::cout << bigger(3, 7) << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n// T で型パラメータを定義\\\\ntemplate<typename ___>\\\\nT bigger(T a, T ___) {\\\\n    if (___ > b) return a;\\\\n    return ___;\\\\n___\\\\nint ___() {\\\\n    // bigger で大きい方を取得\\\\n    std::cout << bigger(___, 7) << std::endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "// T で型パラメータを定義",
@@ -465,7 +465,7 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "7\n"
+            "expected_output": "7\\\\n"
           }
         ]
       },
@@ -477,16 +477,16 @@ export const cpp2Data = {
         "tutorialSlides": [
           {
             "title": "ラムダ式とは？",
-            "content": "# 無名関数（むめいかんすう）\n\n**ラムダ式（しき）** は、名前をつけずにその場で関数を作る方法です。\n\n**身近な例え：**\n普通の関数は「料理のレシピに名前をつけて保存」するようなものです。\nラムダ式は「その場でちょっと作るメモ書きレシピ」のようなもの。\n\n**いつ使うの？**\n- 一度しか使わない短い処理\n- 関数に渡す小さな処理\n\n短い処理を簡潔（かんけつ）に書けるのが魅力です！"
+            "content": "# 無名関数（むめいかんすう）\\\\n\\\\n**ラムダ式（しき）** は、名前をつけずにその場で関数を作る方法です。\\\\n\\\\n**身近な例え：**\\\\n普通の関数は「料理のレシピに名前をつけて保存」するようなものです。\\\\nラムダ式は「その場でちょっと作るメモ書きレシピ」のようなもの。\\\\n\\\\n**いつ使うの？**\\\\n- 一度しか使わない短い処理\\\\n- 関数に渡す小さな処理\\\\n\\\\n短い処理を簡潔（かんけつ）に書けるのが魅力です！"
           },
           {
             "title": "ラムダ式の書き方",
-            "content": "# [ ] ( ) { }\n\nラムダ式は3つの部分でできています：\n- `[]`（キャプチャ）: 外の変数を使うかどうか\n- `()`（引数）: 関数に渡すデータ\n- `{}`（本体）: 実際の処理\n\n**実際のコードを見てみましょう：**\n```cpp\n// ラムダ式を変数 add に入れる\nauto add = [](int a, int b) {\n    return a + b;\n};\n\n// 普通の関数のように使える\nstd::cout << add(2, 3) << std::endl; // 5\n```\n\n**ポイント：**\n- `auto` で受け取る（型は自動で決まる）\n- `[]` から始まるのがラムダ式の目印"
+            "content": "# [ ] ( ) { }\\\\n\\\\nラムダ式は3つの部分でできています：\\\\n- `[]`（キャプチャ）: 外の変数を使うかどうか\\\\n- `()`（引数）: 関数に渡すデータ\\\\n- `{}`（本体）: 実際の処理\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\n// ラムダ式を変数 add に入れる\\\\nauto add = [](int a, int b) {\\\\n    return a + b;\\\\n};\\\\n\\\\n// 普通の関数のように使える\\\\nstd::cout << add(2, 3) << std::endl; // 5\\\\n```\\\\n\\\\n**ポイント：**\\\\n- `auto` で受け取る（型は自動で決まる）\\\\n- `[]` から始まるのがラムダ式の目印"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    // { でラムダ本体を開始\n    auto square = [](int x) {\n        return x * x;\n    };\n    // square(4) でラムダを呼び出し\n    std::cout << square(4) << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nint ___() {\n    // { でラムダ本体を開始\n    auto square = [](int ___) {\n        return ___ * x;\n    ___\n    // square(4) でラムダを呼び出し\n    std::cout << square(___) << std::endl;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    // { でラムダ本体を開始\\\\n    auto square = [](int x) {\\\\n        return x * x;\\\\n    };\\\\n    // square(4) でラムダを呼び出し\\\\n    std::cout << square(4) << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    // { でラムダ本体を開始\\\\n    auto square = [](int ___) {\\\\n        return ___ * x;\\\\n    ___\\\\n    // square(4) でラムダを呼び出し\\\\n    std::cout << square(___) << std::endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -520,7 +520,7 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "16\n"
+            "expected_output": "16\\\\n"
           }
         ]
       },
@@ -532,16 +532,16 @@ export const cpp2Data = {
         "tutorialSlides": [
           {
             "title": "スマートポインタとは？",
-            "content": "# 安全なメモリ管理（かんり）\n\n**スマートポインタ**は、使い終わったら自動的にメモリを解放（かいほう）してくれる便利なポインタです。\n\n**身近な例え：**\n普通のポインタは「借りた本を自分で返さないといけない」状態です。返し忘れると大変！\n\nスマートポインタは「自動返却システム」がついた本のようなもの。使い終わったら勝手に返してくれます。\n\n**メモリリーク**（メモリの解放忘れ）を防ぐことができます。"
+            "content": "# 安全なメモリ管理（かんり）\\\\n\\\\n**スマートポインタ**は、使い終わったら自動的にメモリを解放（かいほう）してくれる便利なポインタです。\\\\n\\\\n**身近な例え：**\\\\n普通のポインタは「借りた本を自分で返さないといけない」状態です。返し忘れると大変！\\\\n\\\\nスマートポインタは「自動返却システム」がついた本のようなもの。使い終わったら勝手に返してくれます。\\\\n\\\\n**メモリリーク**（メモリの解放忘れ）を防ぐことができます。"
           },
           {
             "title": "unique_ptr の使い方",
-            "content": "# std::make_unique\n\n`std::make_unique<型>()` でスマートポインタを作ります。\n\n**実際のコードを見てみましょう：**\n```cpp\n#include <memory>  // スマートポインタを使う準備\n\n// 整数を入れるスマートポインタを作る\nauto p = std::make_unique<int>(42);\n\n// 中身を見る（*をつける）\nstd::cout << *p << std::endl; // 42\n\n// ここでブロックを抜けると、自動でメモリが解放される！\n```\n\n**用語解説：**\n- `unique_ptr`: 1つのポインタだけが所有する（独占）\n- **スコープを抜ける**: `{ }` の外に出ること\n- 自動解放なので、`delete` を書く必要がない！"
+            "content": "# std::make_unique\\\\n\\\\n`std::make_unique<型>()` でスマートポインタを作ります。\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\n#include <memory>  // スマートポインタを使う準備\\\\n\\\\n// 整数を入れるスマートポインタを作る\\\\nauto p = std::make_unique<int>(42);\\\\n\\\\n// 中身を見る（*をつける）\\\\nstd::cout << *p << std::endl; // 42\\\\n\\\\n// ここでブロックを抜けると、自動でメモリが解放される！\\\\n```\\\\n\\\\n**用語解説：**\\\\n- `unique_ptr`: 1つのポインタだけが所有する（独占）\\\\n- **スコープを抜ける**: `{ }` の外に出ること\\\\n- 自動解放なので、`delete` を書く必要がない！"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\n#include <memory>\nint main() {\n    // make_unique でスマートポインタを作成\n    auto ptr = std::make_unique<int>(100);\n    // *ptr で中身にアクセス\n    std::cout << *ptr << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\n#include <memory>\nint ___() {\n    // make_unique でスマートポインタを作成\n    auto ptr = std::make_unique<int>(___);\n    // *ptr で中身にアクセス\n    std::cout << *ptr << std::___;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\n#include <memory>\\\\nint main() {\\\\n    // make_unique でスマートポインタを作成\\\\n    auto ptr = std::make_unique<int>(100);\\\\n    // *ptr で中身にアクセス\\\\n    std::cout << *ptr << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n#include <memory>\\\\nint ___() {\\\\n    // make_unique でスマートポインタを作成\\\\n    auto ptr = std::make_unique<int>(___);\\\\n    // *ptr で中身にアクセス\\\\n    std::cout << *ptr << std::___;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <memory>",
@@ -573,7 +573,7 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\n"
+            "expected_output": "100\\\\n"
           }
         ]
       },
@@ -585,16 +585,16 @@ export const cpp2Data = {
         "tutorialSlides": [
           {
             "title": "例外処理（れいがいしょり）とは？",
-            "content": "# エラーに備（そな）える\n\n**例外処理（れいがいしょり）** を使うと、プログラム実行中のエラーに対処（たいしょ）できます。\n\n**身近な例え：**\nサーカスの空中ブランコには、下に「安全ネット」がありますよね。万が一落ちても大丈夫なように。\n\n例外処理も同じです。プログラムで「万が一のエラー」が起きても、クラッシュせずに対処できる「安全ネット」を用意します。\n\nエラーが起きてもプログラムが止まらず、適切に対応できます！"
+            "content": "# エラーに備（そな）える\\\\n\\\\n**例外処理（れいがいしょり）** を使うと、プログラム実行中のエラーに対処（たいしょ）できます。\\\\n\\\\n**身近な例え：**\\\\nサーカスの空中ブランコには、下に「安全ネット」がありますよね。万が一落ちても大丈夫なように。\\\\n\\\\n例外処理も同じです。プログラムで「万が一のエラー」が起きても、クラッシュせずに対処できる「安全ネット」を用意します。\\\\n\\\\nエラーが起きてもプログラムが止まらず、適切に対応できます！"
           },
           {
             "title": "try-catch の使い方",
-            "content": "# throw で例外を投げる\n\n**基本の形：**\n- `try { }`: エラーが起きるかもしれない処理\n- `throw`: エラーを「投げる」\n- `catch { }`: 投げられたエラーを「捕まえる」\n\n**実際のコードを見てみましょう：**\n```cpp\ntry {\n    // エラーを投げる\n    throw \"error!\";\n} catch (const char* e) {\n    // 投げられたエラーを捕まえて処理\n    std::cout << e << std::endl;\n}\n```\n=> \"error!\" と表示されます\n\n**ポイント：**\n- `throw` でエラーを投げると、すぐに `catch` に移動します\n- `catch` でエラーに対処した後、プログラムは続行できます"
+            "content": "# throw で例外を投げる\\\\n\\\\n**基本の形：**\\\\n- `try { }`: エラーが起きるかもしれない処理\\\\n- `throw`: エラーを「投げる」\\\\n- `catch { }`: 投げられたエラーを「捕まえる」\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\ntry {\\\\n    // エラーを投げる\\\\n    throw \"error!\";\\\\n} catch (const char* e) {\\\\n    // 投げられたエラーを捕まえて処理\\\\n    std::cout << e << std::endl;\\\\n}\\\\n```\\\\n=> \"error!\" と表示されます\\\\n\\\\n**ポイント：**\\\\n- `throw` でエラーを投げると、すぐに `catch` に移動します\\\\n- `catch` でエラーに対処した後、プログラムは続行できます"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    try {\n        // throw で例外を投げる\n        throw 404;\n    // catch で例外を捕まえる\n    } catch (int e) {\n        std::cout << e << std::endl;\n    }\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nint ___() {\n    ___ {\n        // throw で例外を投げる\n        throw ___;\n    // catch で例外を捕まえる\n    } ___ (int e) {\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    try {\\\\n        // throw で例外を投げる\\\\n        throw 404;\\\\n    // catch で例外を捕まえる\\\\n    } catch (int e) {\\\\n        std::cout << e << std::endl;\\\\n    }\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    ___ {\\\\n        // throw で例外を投げる\\\\n        throw ___;\\\\n    // catch で例外を捕まえる\\\\n    } ___ (int e) {\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -630,7 +630,7 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "404\n"
+            "expected_output": "404\\\\n"
           }
         ]
       }

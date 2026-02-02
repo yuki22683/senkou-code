@@ -14,11 +14,11 @@ export const elixir3Data = {
         "tutorialSlides": [
           {
             "title": "構造体（Struct）",
-            "content": "構造体はキーが決まった辞書です。defstructで定義します。\n\n```elixir\ndefmodule User do\n  defstruct name: \"\", age: 0\nend\n\nuser = %User{name: \"Alice\", age: 25}\nuser.name  # \"Alice\"\n```"
+            "content": "構造体はキーが決まった辞書です。defstructで定義します。\\\\n\\\\n```elixir\\\\ndefmodule User do\\\\n  defstruct name: \"\", age: 0\\\\nend\\\\n\\\\nuser = %User{name: \"Alice\", age: 25}\\\\nuser.name  # \"Alice\"\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defmoduleでモジュールを定義\ndefmodule Person do\n  # defstructで構造体を定義\n  defstruct name: \"\", email: \"\"\n# endでモジュールを閉じる\nend\n\n# nameに\"Bob\"、emailに\"bob@example.com\"を指定して構造体を作成\nperson = %Person{name: \"Bob\", email: \"bob@example.com\"}", "holeyCode": "# defmoduleでモジュールを定義\ndefmodule Person ___\n  # defstructで構造体を定義\n  defstruct name: \"___\"\"\n# endでモジュールを閉じる\n___\n\n# nameに\"Bob\"、emailに\"bob@example.com\"を指定して構造体を作成\nperson = %Person{name: \"___\", email: \"bob@example.com\"}",
+        "correctCode": "# defmoduleでモジュールを定義\\\\ndefmodule Person do\\\\n  # defstructで構造体を定義\\\\n  defstruct name: \"\", email: \"\"\\\\n# endでモジュールを閉じる\\\\nend\\\\n\\\\n# nameに\"Bob\"、emailに\"bob@example.com\"を指定して構造体を作成\\\\nperson = %Person{name: \"Bob\", email: \"bob@example.com\"}", "holeyCode": "# defmoduleでモジュールを定義\\\\ndefmodule Person ___\\\\n  # defstructで構造体を定義\\\\n  defstruct name: \"___\"\"\\\\n# endでモジュールを閉じる\\\\n___\\\\n\\\\n# nameに\"Bob\"、emailに\"bob@example.com\"を指定して構造体を作成\\\\nperson = %Person{name: \"___\", email: \"bob@example.com\"}",
         "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Person do",
@@ -68,11 +68,11 @@ export const elixir3Data = {
         "tutorialSlides": [
           {
             "title": "構造体の更新",
-            "content": "構造体は辞書と同様に更新できます。\n\n```elixir\nuser = %User{name: \"Alice\", age: 25}\nupdated = %{user | age: 26}\n# %User{name: \"Alice\", age: 26}\n\n# Map.putも使える\nupdated2 = Map.put(user, :age, 27)\n```"
+            "content": "構造体は辞書と同様に更新できます。\\\\n\\\\n```elixir\\\\nuser = %User{name: \"Alice\", age: 25}\\\\nupdated = %{user | age: 26}\\\\n# %User{name: \"Alice\", age: 26}\\\\n\\\\n# Map.putも使える\\\\nupdated2 = Map.put(user, :age, 27)\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defmoduleでモジュールを定義\ndefmodule Product do\n  # defstructで構造体を定義\n  defstruct name: \"\", price: 0\n# endでモジュールを閉じる\nend\n\n# nameに\"Book\"、priceに1000を指定して構造体を作成\nproduct = %Product{name: \"Book\", price: 1000}\n# |で辞書を更新（priceを1200に）\nupdated = %{product | price: 1200}", "holeyCode": "# defmoduleでモジュールを定義\ndefmodule Product ___\n  # defstructで構造体を定義\n  defstruct name: \"\", price: 0\n# endでモジュールを閉じる\n___\n\n# nameに\"Book\"、priceに1000を指定して構造体を作成\nproduct = %Product{name: \"___\", price: 1000}\n# |で辞書を更新（priceを1200に）\nupdated = %{product | price: ___}",
+        "correctCode": "# defmoduleでモジュールを定義\\\\ndefmodule Product do\\\\n  # defstructで構造体を定義\\\\n  defstruct name: \"\", price: 0\\\\n# endでモジュールを閉じる\\\\nend\\\\n\\\\n# nameに\"Book\"、priceに1000を指定して構造体を作成\\\\nproduct = %Product{name: \"Book\", price: 1000}\\\\n# |で辞書を更新（priceを1200に）\\\\nupdated = %{product | price: 1200}", "holeyCode": "# defmoduleでモジュールを定義\\\\ndefmodule Product ___\\\\n  # defstructで構造体を定義\\\\n  defstruct name: \"\", price: 0\\\\n# endでモジュールを閉じる\\\\n___\\\\n\\\\n# nameに\"Book\"、priceに1000を指定して構造体を作成\\\\nproduct = %Product{name: \"___\", price: 1000}\\\\n# |で辞書を更新（priceを1200に）\\\\nupdated = %{product | price: ___}",
         "correctLines": [
                   "# defmoduleでモジュールを定義",
                   "defmodule Product do",
@@ -132,11 +132,11 @@ export const elixir3Data = {
         "tutorialSlides": [
           {
             "title": "Enum.reduce",
-            "content": "reduceはリストを単一の値に畳み込みます。\n\n```elixir\nsum = Enum.reduce([1, 2, 3, 4], 0, fn x, acc -> x + acc end)\n# 10\n\nproduct = Enum.reduce([1, 2, 3, 4], 1, &(&1 * &2))\n# 24\n```"
+            "content": "reduceはリストを単一の値に畳み込みます。\\\\n\\\\n```elixir\\\\nsum = Enum.reduce([1, 2, 3, 4], 0, fn x, acc -> x + acc end)\\\\n# 10\\\\n\\\\nproduct = Enum.reduce([1, 2, 3, 4], 1, &(&1 * &2))\\\\n# 24\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# numbersに[1, 2, 3, 4, 5]を代入\nnumbers = [1, 2, 3, 4, 5]\n# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)", "holeyCode": "# numbersに[1, 2, 3, 4, 5]を代入\nnumbers = [___, 2, 3, 4, 5]\n# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入\nsum = Enum.reduce(numbers, ___, fn x, acc -> x + acc end)",
+        "correctCode": "# numbersに[1, 2, 3, 4, 5]を代入\\\\nnumbers = [1, 2, 3, 4, 5]\\\\n# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入\\\\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)", "holeyCode": "# numbersに[1, 2, 3, 4, 5]を代入\\\\nnumbers = [___, 2, 3, 4, 5]\\\\n# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入\\\\nsum = Enum.reduce(numbers, ___, fn x, acc -> x + acc end)",
         "correctLines": [
           "# numbersに[1, 2, 3, 4, 5]を代入",
           "numbers = [1, 2, 3, 4, 5]",
@@ -177,11 +177,11 @@ export const elixir3Data = {
         "tutorialSlides": [
           {
             "title": "Enum.group_by",
-            "content": "group_byは要素をキーでグループ化します。\n\n```elixir\nwords = [\"apple\", \"ant\", \"banana\", \"berry\"]\nEnum.group_by(words, &String.first/1)\n# %{\"a\" => [\"apple\", \"ant\"], \"b\" => [\"banana\", \"berry\"]}\n\nnums = [1, 2, 3, 4, 5]\nEnum.group_by(nums, &rem(&1, 2))\n# %{0 => [2, 4], 1 => [1, 3, 5]}\n```"
+            "content": "group_byは要素をキーでグループ化します。\\\\n\\\\n```elixir\\\\nwords = [\"apple\", \"ant\", \"banana\", \"berry\"]\\\\nEnum.group_by(words, &String.first/1)\\\\n# %{\"a\" => [\"apple\", \"ant\"], \"b\" => [\"banana\", \"berry\"]}\\\\n\\\\nnums = [1, 2, 3, 4, 5]\\\\nEnum.group_by(nums, &rem(&1, 2))\\\\n# %{0 => [2, 4], 1 => [1, 3, 5]}\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\nusers = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\n# group_byでグループ化\ngrouped = Enum.group_by(users, fn {_name, age} -> age end)", "holeyCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\nusers = [{\"___\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\n# group_byでグループ化\ngrouped = Enum.group_by(users, fn {_name, age} -> age ___)",
+        "correctCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\\\\nusers = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\\\\n# group_byでグループ化\\\\ngrouped = Enum.group_by(users, fn {_name, age} -> age end)", "holeyCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\\\\nusers = [{\"___\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\\\\n# group_byでグループ化\\\\ngrouped = Enum.group_by(users, fn {_name, age} -> age ___)",
         "correctLines": [
           "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義",
           "users = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]",
@@ -224,11 +224,11 @@ export const elixir3Data = {
         "tutorialSlides": [
           {
             "title": "内包表記（for）",
-            "content": "for式はリスト内包表記を提供します。\n\n```elixir\nfor x <- [1, 2, 3], do: x * 2\n# [2, 4, 6]\n\n# フィルタリング\nfor x <- 1..10, rem(x, 2) == 0, do: x\n# [2, 4, 6, 8, 10]\n\n# 複数のジェネレータ\nfor x <- [1, 2], y <- [:a, :b], do: {x, y}\n# [{1, :a}, {1, :b}, {2, :a}, {2, :b}]\n```"
+            "content": "for式はリスト内包表記を提供します。\\\\n\\\\n```elixir\\\\nfor x <- [1, 2, 3], do: x * 2\\\\n# [2, 4, 6]\\\\n\\\\n# フィルタリング\\\\nfor x <- 1..10, rem(x, 2) == 0, do: x\\\\n# [2, 4, 6, 8, 10]\\\\n\\\\n# 複数のジェネレータ\\\\nfor x <- [1, 2], y <- [:a, :b], do: {x, y}\\\\n# [{1, :a}, {1, :b}, {2, :a}, {2, :b}]\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# forで内包表記\nsquares = for x <- 1..5, do: x * x", "holeyCode": "# forで内包表記\nsquares = for x <- ___..5, do: x * x",
+        "correctCode": "# forで内包表記\\\\nsquares = for x <- 1..5, do: x * x", "holeyCode": "# forで内包表記\\\\nsquares = for x <- ___..5, do: x * x",
         "correctLines": [
           "# forで内包表記",
           "squares = for x <- 1..5, do: x * x"
@@ -264,11 +264,11 @@ export const elixir3Data = {
         "tutorialSlides": [
           {
             "title": "with式",
-            "content": "with式は複数のパターンマッチを連鎖させ、すべて成功した場合のみdoブロックを実行します。\n\n```elixir\nwith {:ok, file} <- File.read(\"test.txt\"),\n     {:ok, json} <- Jason.decode(file) do\n  {:ok, json}\nelse\n  {:error, reason} -> {:error, reason}\nend\n```"
+            "content": "with式は複数のパターンマッチを連鎖させ、すべて成功した場合のみdoブロックを実行します。\\\\n\\\\n```elixir\\\\nwith {:ok, file} <- File.read(\"test.txt\"),\\\\n     {:ok, json} <- Jason.decode(file) do\\\\n  {:ok, json}\\\\nelse\\\\n  {:error, reason} -> {:error, reason}\\\\nend\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defで関数を定義\ndef process(map) do\n  # withでパターンマッチを連鎖\n  with {:ok, name} <- Map.fetch(map, :name),\n       {:ok, age} <- Map.fetch(map, :age) do\n    {:ok, \"#{name} is #{age} years old\"}\n  # elseでエラー処理\n  else\n    :error -> {:error, \"Missing field\"}\n  # endでブロックを閉じる\n  end\n# endで関数を閉じる\nend", "holeyCode": "# defで関数を定義\ndef process(map) ___\n  # withでパターンマッチを連鎖\n  with {:ok, ___} <- Map.fetch(map, :name),\n       {:ok, age} <- Map.fetch(map, :age) ___\n    {:ok, \"___\"}\n  # elseでエラー処理\n  ___\n    :error -> {:error, \"___\"}\n  # endでブロックを閉じる\n  ___\n# endで関数を閉じる\n___",
+        "correctCode": "# defで関数を定義\\\\ndef process(map) do\\\\n  # withでパターンマッチを連鎖\\\\n  with {:ok, name} <- Map.fetch(map, :name),\\\\n       {:ok, age} <- Map.fetch(map, :age) do\\\\n    {:ok, \"#{name} is #{age} years old\"}\\\\n  # elseでエラー処理\\\\n  else\\\\n    :error -> {:error, \"Missing field\"}\\\\n  # endでブロックを閉じる\\\\n  end\\\\n# endで関数を閉じる\\\\nend", "holeyCode": "# defで関数を定義\\\\ndef process(map) ___\\\\n  # withでパターンマッチを連鎖\\\\n  with {:ok, ___} <- Map.fetch(map, :name),\\\\n       {:ok, age} <- Map.fetch(map, :age) ___\\\\n    {:ok, \"___\"}\\\\n  # elseでエラー処理\\\\n  ___\\\\n    :error -> {:error, \"___\"}\\\\n  # endでブロックを閉じる\\\\n  ___\\\\n# endで関数を閉じる\\\\n___",
         "correctLines": [
           "# defで関数を定義",
           "def process(map) do",
@@ -323,11 +323,11 @@ export const elixir3Data = {
         "tutorialSlides": [
           {
             "title": "プロトコルの定義",
-            "content": "プロトコルはポリモーフィズムを実現します。\n\n```elixir\ndefprotocol Stringify do\n  def to_string(data)\nend\n\ndefimpl Stringify, for: Integer do\n  def to_string(num), do: Integer.to_string(num)\nend\n```"
+            "content": "プロトコルはポリモーフィズムを実現します。\\\\n\\\\n```elixir\\\\ndefprotocol Stringify do\\\\n  def to_string(data)\\\\nend\\\\n\\\\ndefimpl Stringify, for: Integer do\\\\n  def to_string(num), do: Integer.to_string(num)\\\\nend\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defprotocolでプロトコルを定義\ndefprotocol Describable do\n  # defで関数を宣言\n  def describe(data)\n# endでプロトコルを閉じる\nend", "holeyCode": "# defprotocolでプロトコルを定義\ndefprotocol Describable ___\n  # defで関数を宣言\n  def describe(___)\n# endでプロトコルを閉じる\n___",
+        "correctCode": "# defprotocolでプロトコルを定義\\\\ndefprotocol Describable do\\\\n  # defで関数を宣言\\\\n  def describe(data)\\\\n# endでプロトコルを閉じる\\\\nend", "holeyCode": "# defprotocolでプロトコルを定義\\\\ndefprotocol Describable ___\\\\n  # defで関数を宣言\\\\n  def describe(___)\\\\n# endでプロトコルを閉じる\\\\n___",
         "correctLines": [
           "# defprotocolでプロトコルを定義",
           "defprotocol Describable do",
@@ -367,11 +367,11 @@ export const elixir3Data = {
         "tutorialSlides": [
           {
             "title": "プロトコルの実装",
-            "content": "defimplで特定の型にプロトコルを実装します。\n\n```elixir\ndefimpl Stringify, for: List do\n  def to_string(list) do\n    Enum.join(list, \", \")\n  end\nend\n\nStringify.to_string([1, 2, 3])  # \"1, 2, 3\"\n```"
+            "content": "defimplで特定の型にプロトコルを実装します。\\\\n\\\\n```elixir\\\\ndefimpl Stringify, for: List do\\\\n  def to_string(list) do\\\\n    Enum.join(list, \", \")\\\\n  end\\\\nend\\\\n\\\\nStringify.to_string([1, 2, 3])  # \"1, 2, 3\"\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defimplでプロトコルを実装\ndefimpl Describable, for: Map do\n  # defで関数を定義\n  def describe(map) do\n    \"Map with #{map_size(map)} keys\"\n  # endで関数を閉じる\n  end\n# endでブロックを閉じる\nend", "holeyCode": "# defimplでプロトコルを実装\ndefimpl Describable, for: Map ___\n  # defで関数を定義\n  def describe(map) ___\n    \"___\"\n  # endで関数を閉じる\n  ___\n# endでブロックを閉じる\n___",
+        "correctCode": "# defimplでプロトコルを実装\\\\ndefimpl Describable, for: Map do\\\\n  # defで関数を定義\\\\n  def describe(map) do\\\\n    \"Map with #{map_size(map)} keys\"\\\\n  # endで関数を閉じる\\\\n  end\\\\n# endでブロックを閉じる\\\\nend", "holeyCode": "# defimplでプロトコルを実装\\\\ndefimpl Describable, for: Map ___\\\\n  # defで関数を定義\\\\n  def describe(map) ___\\\\n    \"___\"\\\\n  # endで関数を閉じる\\\\n  ___\\\\n# endでブロックを閉じる\\\\n___",
         "correctLines": [
           "# defimplでプロトコルを実装",
           "defimpl Describable, for: Map do",
@@ -417,11 +417,11 @@ export const elixir3Data = {
         "tutorialSlides": [
           {
             "title": "Agent",
-            "content": "Agentはシンプルな状態管理を提供します。\n\n```elixir\n{:ok, agent} = Agent.start_link(fn -> 0 end)\nAgent.get(agent, & &1)      # 0\nAgent.update(agent, &(&1 + 1))\nAgent.get(agent, & &1)      # 1\n```"
+            "content": "Agentはシンプルな状態管理を提供します。\\\\n\\\\n```elixir\\\\n{:ok, agent} = Agent.start_link(fn -> 0 end)\\\\nAgent.get(agent, & &1)      # 0\\\\nAgent.update(agent, &(&1 + 1))\\\\nAgent.get(agent, & &1)      # 1\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# start_linkでAgentを開始\n{:ok, counter} = Agent.start_link(fn -> 0 end)\n# updateでAgentの状態を更新\nAgent.update(counter, fn state -> state + 1 end)\n# getでAgentの状態を取得\nvalue = Agent.get(counter, fn state -> state end)", "holeyCode": "# start_linkでAgentを開始\n{:ok, counter} = Agent.start_link(fn -> ___ end)\n# updateでAgentの状態を更新\nAgent.update(counter, fn state -> state + ___ end)\n# getでAgentの状態を取得\nvalue = Agent.get(counter, fn state -> state ___)",
+        "correctCode": "# start_linkでAgentを開始\\\\n{:ok, counter} = Agent.start_link(fn -> 0 end)\\\\n# updateでAgentの状態を更新\\\\nAgent.update(counter, fn state -> state + 1 end)\\\\n# getでAgentの状態を取得\\\\nvalue = Agent.get(counter, fn state -> state end)", "holeyCode": "# start_linkでAgentを開始\\\\n{:ok, counter} = Agent.start_link(fn -> ___ end)\\\\n# updateでAgentの状態を更新\\\\nAgent.update(counter, fn state -> state + ___ end)\\\\n# getでAgentの状態を取得\\\\nvalue = Agent.get(counter, fn state -> state ___)",
         "correctLines": [
           "# start_linkでAgentを開始",
           "{:ok, counter} = Agent.start_link(fn -> 0 end)",
@@ -461,11 +461,11 @@ export const elixir3Data = {
         "tutorialSlides": [
           {
             "title": "Task",
-            "content": "Taskは非同期処理を簡単に実行できます。\n\n```elixir\ntask = Task.async(fn -> expensive_computation() end)\n# 他の処理を実行\nresult = Task.await(task)\n\n# 複数のTaskを並列実行\ntasks = Enum.map(1..5, fn i -> Task.async(fn -> i * 2 end) end)\nresults = Task.await_many(tasks)  # [2, 4, 6, 8, 10]\n```"
+            "content": "Taskは非同期処理を簡単に実行できます。\\\\n\\\\n```elixir\\\\ntask = Task.async(fn -> expensive_computation() end)\\\\n# 他の処理を実行\\\\nresult = Task.await(task)\\\\n\\\\n# 複数のTaskを並列実行\\\\ntasks = Enum.map(1..5, fn i -> Task.async(fn -> i * 2 end) end)\\\\nresults = Task.await_many(tasks)  # [2, 4, 6, 8, 10]\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# asyncで非同期タスクを開始\ntask = Task.async(fn -> 1 + 2 end)\n# awaitでタスクの結果を待機\nresult = Task.await(task)", "holeyCode": "# asyncで非同期タスクを開始\ntask = Task.async(fn -> ___ + 2 end)\n# awaitでタスクの結果を待機\nresult = Task.await(___)",
+        "correctCode": "# asyncで非同期タスクを開始\\\\ntask = Task.async(fn -> 1 + 2 end)\\\\n# awaitでタスクの結果を待機\\\\nresult = Task.await(task)", "holeyCode": "# asyncで非同期タスクを開始\\\\ntask = Task.async(fn -> ___ + 2 end)\\\\n# awaitでタスクの結果を待機\\\\nresult = Task.await(___)",
         "correctLines": [
           "# asyncで非同期タスクを開始",
           "task = Task.async(fn -> 1 + 2 end)",

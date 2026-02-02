@@ -14,16 +14,16 @@ export const bash2Data = {
         "tutorialSlides": [
           {
             "title": "配列とは？",
-            "content": "# 複数の値を格納\n\nBashの **配列** は、複数の値を格納できます。`( )` で作成し、インデックスは0から始まります。"
+            "content": "# 複数の値を格納\\\\n\\\\nBashの **配列** は、複数の値を格納できます。`( )` で作成し、インデックスは0から始まります。"
           },
           {
             "title": "配列の使い方",
-            "content": "# ${配列[番号]} でアクセス\n\n`${配列[@]}` ですべての要素を取得できます。\n\n**コード例：**\n```bash\narr=(\"a\" \"b\" \"c\")\necho ${arr[1]} # b\n```"
+            "content": "# ${配列[番号]} でアクセス\\\\n\\\\n`${配列[@]}` ですべての要素を取得できます。\\\\n\\\\n**コード例：**\\\\n```bash\\\\narr=(\"a\" \"b\" \"c\")\\\\necho ${arr[1]} # b\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 配列を定義（10, 20, 30）\nnums=(10 20 30)\n# 3番目の要素にアクセスするインデックス（0から数える）\necho ${nums[2]}",
-        "holeyCode": "# 配列を定義（10, 20, 30）\nnums=(___ 20 30)\n# 3番目の要素にアクセスするインデックス（0から数える）\necho ${nums[___]}",
+        "correctCode": "# 配列を定義（10, 20, 30）\\\\nnums=(10 20 30)\\\\n# 3番目の要素にアクセスするインデックス（0から数える）\\\\necho ${nums[2]}",
+        "holeyCode": "# 配列を定義（10, 20, 30）\\\\nnums=(___ 20 30)\\\\n# 3番目の要素にアクセスするインデックス（0から数える）\\\\necho ${nums[___]}",
         "correctLines": [
           "# 配列を定義（10, 20, 30）",
           "nums=(10 20 30)",
@@ -47,7 +47,7 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "30\n"
+            "expected_output": "30\\\\n"
           }
         ]
       },
@@ -59,16 +59,16 @@ export const bash2Data = {
         "tutorialSlides": [
           {
             "title": "文字列の長さ",
-            "content": "# ${#変数} で長さを取得\n\n`#` を変数名の前につけると、その長さを取得できます。"
+            "content": "# ${#変数} で長さを取得\\\\n\\\\n`#` を変数名の前につけると、その長さを取得できます。"
           },
           {
             "title": "長さの取得",
-            "content": "# 文字数を返す\n\n配列の場合は要素数を返します。\n\n**コード例：**\n```bash\ntext=\"Hello\"\necho ${#text} # 5\n```"
+            "content": "# 文字数を返す\\\\n\\\\n配列の場合は要素数を返します。\\\\n\\\\n**コード例：**\\\\n```bash\\\\ntext=\"Hello\"\\\\necho ${#text} # 5\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数に文字列を代入\nword=\"Bash\"\n# 文字列の長さを取得する記号\necho ${#word}",
-        "holeyCode": "# 変数に文字列を代入\nword=\"___\"\n# 文字列の長さを取得する記号\necho ${___word}",
+        "correctCode": "# 変数に文字列を代入\\\\nword=\"Bash\"\\\\n# 文字列の長さを取得する記号\\\\necho ${#word}",
+        "holeyCode": "# 変数に文字列を代入\\\\nword=\"___\"\\\\n# 文字列の長さを取得する記号\\\\necho ${___word}",
         "correctLines": [
           "# 変数に文字列を代入",
           "word=\"Bash\"",
@@ -92,7 +92,7 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "4\n"
+            "expected_output": "4\\\\n"
           }
         ]
       },
@@ -104,16 +104,16 @@ export const bash2Data = {
         "tutorialSlides": [
           {
             "title": "部分文字列",
-            "content": "# ${変数:開始:長さ}\n\n開始位置と長さを指定して部分文字列を取得できます。"
+            "content": "# ${変数:開始:長さ}\\\\n\\\\n開始位置と長さを指定して部分文字列を取得できます。"
           },
           {
             "title": "スライス",
-            "content": "# 位置は0から\n\n開始位置は0から数えます。\n\n**コード例：**\n```bash\ntext=\"Hello World\"\necho ${text:0:5} # Hello\n```"
+            "content": "# 位置は0から\\\\n\\\\n開始位置は0から数えます。\\\\n\\\\n**コード例：**\\\\n```bash\\\\ntext=\"Hello World\"\\\\necho ${text:0:5} # Hello\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数に文字列を代入\ntext=\"Hello World\"\n# Worldが始まる位置（0から数える）\necho ${text:6:5}",
-        "holeyCode": "# 変数に文字列を代入\ntext=\"___\"\n# Worldが始まる位置（0から数える）\necho ${text:___:5}",
+        "correctCode": "# 変数に文字列を代入\\\\ntext=\"Hello World\"\\\\n# Worldが始まる位置（0から数える）\\\\necho ${text:6:5}",
+        "holeyCode": "# 変数に文字列を代入\\\\ntext=\"___\"\\\\n# Worldが始まる位置（0から数える）\\\\necho ${text:___:5}",
         "correctLines": [
           "# 変数に文字列を代入",
           "text=\"Hello World\"",
@@ -137,7 +137,7 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "World\n"
+            "expected_output": "World\\\\n"
           }
         ]
       },
@@ -149,16 +149,16 @@ export const bash2Data = {
         "tutorialSlides": [
           {
             "title": "関数の引数",
-            "content": "# $1, $2, ... で引数\n\n関数内では `$1`, `$2` などで引数を参照します。"
+            "content": "# $1, $2, ... で引数\\\\n\\\\n関数内では `$1`, `$2` などで引数を参照します。"
           },
           {
             "title": "引数の使い方",
-            "content": "# 位置パラメータ\n\n`$1` が1番目、`$2` が2番目の引数です。\n\n**コード例：**\n```bash\ngreet() {\n    echo \"Hello, $1\"\n}\ngreet \"Taro\" # Hello, Taro\n```"
+            "content": "# 位置パラメータ\\\\n\\\\n`$1` が1番目、`$2` が2番目の引数です。\\\\n\\\\n**コード例：**\\\\n```bash\\\\ngreet() {\\\\n    echo \"Hello, $1\"\\\\n}\\\\ngreet \"Taro\" # Hello, Taro\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# add関数を定義\nadd() {\n    # 最初の引数を参照する変数\n    echo $(($1 + $2))\n}\n# 関数を呼び出す\nadd 3 5",
-        "holeyCode": "# add関数を定義\n___() {\n    # 最初の引数を参照する変数\n    echo $((___ + $2))\n}\n# 関数を呼び出す\nadd ___ 5",
+        "correctCode": "# add関数を定義\\\\nadd() {\\\\n    # 最初の引数を参照する変数\\\\n    echo $(($1 + $2))\\\\n}\\\\n# 関数を呼び出す\\\\nadd 3 5",
+        "holeyCode": "# add関数を定義\\\\n___() {\\\\n    # 最初の引数を参照する変数\\\\n    echo $((___ + $2))\\\\n}\\\\n# 関数を呼び出す\\\\nadd ___ 5",
         "correctLines": [
           "# add関数を定義",
           "add() {",
@@ -189,7 +189,7 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "8\n"
+            "expected_output": "8\\\\n"
           }
         ]
       },
@@ -201,16 +201,16 @@ export const bash2Data = {
         "tutorialSlides": [
           {
             "title": "戻り値",
-            "content": "# echo で返す\n\nBashでは `echo` で出力した値を `$()` で受け取るのが一般的です。"
+            "content": "# echo で返す\\\\n\\\\nBashでは `echo` で出力した値を `$()` で受け取るのが一般的です。"
           },
           {
             "title": "値の受け取り",
-            "content": "# $(関数) で取得\n\n`result=$(関数)` で関数の出力を受け取ります。\n\n**コード例：**\n```bash\ndouble() {\n    echo $(($1 * 2))\n}\nresult=$(double 5)\necho $result # 10\n```"
+            "content": "# $(関数) で取得\\\\n\\\\n`result=$(関数)` で関数の出力を受け取ります。\\\\n\\\\n**コード例：**\\\\n```bash\\\\ndouble() {\\\\n    echo $(($1 * 2))\\\\n}\\\\nresult=$(double 5)\\\\necho $result # 10\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# square関数を定義\nsquare() {\n    # 引数を2乗する\n    echo $(($1 * $1))\n}\n# コマンドの出力を取得する構文\nresult=$(square 4)\n# resultを表示\necho $result",
-        "holeyCode": "# square関数を定義\n___() {\n    # 引数を2乗する\n    echo $(($1 * ___))\n___\n# コマンドの出力を取得する構文\nresult=$(___ ___)\n# resultを表示\necho ___",
+        "correctCode": "# square関数を定義\\\\nsquare() {\\\\n    # 引数を2乗する\\\\n    echo $(($1 * $1))\\\\n}\\\\n# コマンドの出力を取得する構文\\\\nresult=$(square 4)\\\\n# resultを表示\\\\necho $result",
+        "holeyCode": "# square関数を定義\\\\n___() {\\\\n    # 引数を2乗する\\\\n    echo $(($1 * ___))\\\\n___\\\\n# コマンドの出力を取得する構文\\\\nresult=$(___ ___)\\\\n# resultを表示\\\\necho ___",
         "correctLines": [
           "# square関数を定義",
           "square() {",
@@ -242,7 +242,7 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "16\n"
+            "expected_output": "16\\\\n"
           }
         ]
       },
@@ -254,16 +254,16 @@ export const bash2Data = {
         "tutorialSlides": [
           {
             "title": "while とは？",
-            "content": "# 条件が真の間ループ\n\n**while** は、条件が真の間処理を繰り返します。"
+            "content": "# 条件が真の間ループ\\\\n\\\\n**while** は、条件が真の間処理を繰り返します。"
           },
           {
             "title": "while の使い方",
-            "content": "# while [ 条件 ]; do\n\n`do` と `done` で処理を囲みます。\n\n**コード例：**\n```bash\ni=0\nwhile [ $i -lt 3 ]; do\n    echo $i\n    i=$((i + 1))\ndone\n```"
+            "content": "# while [ 条件 ]; do\\\\n\\\\n`do` と `done` で処理を囲みます。\\\\n\\\\n**コード例：**\\\\n```bash\\\\ni=0\\\\nwhile [ $i -lt 3 ]; do\\\\n    echo $i\\\\n    i=$((i + 1))\\\\ndone\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# iを1で初期化\ni=1\n# 条件が真の間繰り返すキーワード\nwhile [ $i -le 3 ]; do\n    # $iをechoで出力\n    echo $i\n    # iを1増やす\n    i=$((i + 1))\ndone",
-        "holeyCode": "# iを1で初期化\ni=___\n# 条件が真の間繰り返すキーワード\n___ [ $i -le 3 ]; do\n    # $iをechoで出力\n    echo $___\n    # iを1増やす\n    i=$((___ + 1))\ndone",
+        "correctCode": "# iを1で初期化\\\\ni=1\\\\n# 条件が真の間繰り返すキーワード\\\\nwhile [ $i -le 3 ]; do\\\\n    # $iをechoで出力\\\\n    echo $i\\\\n    # iを1増やす\\\\n    i=$((i + 1))\\\\ndone",
+        "holeyCode": "# iを1で初期化\\\\ni=___\\\\n# 条件が真の間繰り返すキーワード\\\\n___ [ $i -le 3 ]; do\\\\n    # $iをechoで出力\\\\n    echo $___\\\\n    # iを1増やす\\\\n    i=$((___ + 1))\\\\ndone",
         "correctLines": [
           "# iを1で初期化",
           "i=1",
@@ -298,7 +298,7 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\n2\n3\n"
+            "expected_output": "1\\\\n2\\\\n3\\\\n"
           }
         ]
       },
@@ -310,15 +310,15 @@ export const bash2Data = {
         "tutorialSlides": [
           {
             "title": "case とは？",
-            "content": "# パターンで分岐\n\n**case** は、値がパターンに一致するかで分岐します。"
+            "content": "# パターンで分岐\\\\n\\\\n**case** は、値がパターンに一致するかで分岐します。"
           },
           {
             "title": "case の使い方",
-            "content": "# パターン) 処理;;\n\n`;;` で各パターンの処理を終えます。`*` はその他すべてです。\n\n**コード例：**\n```bash\ncase $x in\n    1) echo \"one\";;\n    2) echo \"two\";;\n    *) echo \"other\";;\nesac\n```"
+            "content": "# パターン) 処理;;\\\\n\\\\n`;;` で各パターンの処理を終えます。`*` はその他すべてです。\\\\n\\\\n**コード例：**\\\\n```bash\\\\ncase $x in\\\\n    1) echo \"one\";;\\\\n    2) echo \"two\";;\\\\n    *) echo \"other\";;\\\\nesac\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数に値を代入\nfruit=\"apple\"\n# パターンマッチで分岐するキーワード\ncase $fruit in\n    # appleの場合\n    apple) echo \"red\";;\n    # bananaの場合\n    banana) echo \"yellow\";;\n    # その他の場合\n    *) echo \"unknown\";;\nesac", "holeyCode": "# 変数に値を代入\nfruit=\"___\"\n# パターンマッチで分岐するキーワード\n___ $fruit in\n    # appleの場合\n    apple) echo \"___\";;\n    # bananaの場合\n    banana) echo \"yellow\";;\n    # その他の場合\n    *) echo \"unknown\";;\nesac",
+        "correctCode": "# 変数に値を代入\\\\nfruit=\"apple\"\\\\n# パターンマッチで分岐するキーワード\\\\ncase $fruit in\\\\n    # appleの場合\\\\n    apple) echo \"red\";;\\\\n    # bananaの場合\\\\n    banana) echo \"yellow\";;\\\\n    # その他の場合\\\\n    *) echo \"unknown\";;\\\\nesac", "holeyCode": "# 変数に値を代入\\\\nfruit=\"___\"\\\\n# パターンマッチで分岐するキーワード\\\\n___ $fruit in\\\\n    # appleの場合\\\\n    apple) echo \"___\";;\\\\n    # bananaの場合\\\\n    banana) echo \"yellow\";;\\\\n    # その他の場合\\\\n    *) echo \"unknown\";;\\\\nesac",
         "correctLines": [
           "# 変数に値を代入",
           "fruit=\"apple\"",
@@ -358,7 +358,7 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "red\n"
+            "expected_output": "red\\\\n"
           }
         ]
       },
@@ -370,16 +370,16 @@ export const bash2Data = {
         "tutorialSlides": [
           {
             "title": "コマンド置換とは？",
-            "content": "# コマンドの出力を取得\n\n**$()** を使うと、コマンドの出力を変数に格納できます。"
+            "content": "# コマンドの出力を取得\\\\n\\\\n**$()** を使うと、コマンドの出力を変数に格納できます。"
           },
           {
             "title": "コマンド置換の使い方",
-            "content": "# $(コマンド)\n\n任意のコマンドの出力を取得できます。\n\n**コード例：**\n```bash\ntoday=$(date +%Y-%m-%d)\necho $today\n```"
+            "content": "# $(コマンド)\\\\n\\\\n任意のコマンドの出力を取得できます。\\\\n\\\\n**コード例：**\\\\n```bash\\\\ntoday=$(date +%Y-%m-%d)\\\\necho $today\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# コマンドの出力を変数に格納する構文\nfiles=$(echo \"test\")\n# \"Files: $files\"をechoで出力\necho \"Files: $files\"",
-        "holeyCode": "# コマンドの出力を変数に格納する構文\nfiles=___(___)\n# \"Files: $files\"をechoで出力\necho \"Files: $___\"",
+        "correctCode": "# コマンドの出力を変数に格納する構文\\\\nfiles=$(echo \"test\")\\\\n# \"Files: $files\"をechoで出力\\\\necho \"Files: $files\"",
+        "holeyCode": "# コマンドの出力を変数に格納する構文\\\\nfiles=___(___)\\\\n# \"Files: $files\"をechoで出力\\\\necho \"Files: $___\"",
         "correctLines": [
           "# コマンドの出力を変数に格納する構文",
           "files=$(echo \"test\")",
@@ -404,7 +404,7 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Files: test\n"
+            "expected_output": "Files: test\\\\n"
           }
         ]
       },
@@ -416,16 +416,16 @@ export const bash2Data = {
         "tutorialSlides": [
           {
             "title": "read とは？",
-            "content": "# 入力を変数に格納\n\n**read** は、標準入力から読み取った値を変数に格納します。"
+            "content": "# 入力を変数に格納\\\\n\\\\n**read** は、標準入力から読み取った値を変数に格納します。"
           },
           {
             "title": "read の使い方",
-            "content": "# read 変数名\n\nスペースで区切って複数の変数に分けることもできます。\n\n**コード例：**\n```bash\necho \"Name?\"\nread name\necho \"Hello, $name\"\n```"
+            "content": "# read 変数名\\\\n\\\\nスペースで区切って複数の変数に分けることもできます。\\\\n\\\\n**コード例：**\\\\n```bash\\\\necho \"Name?\"\\\\nread name\\\\necho \"Hello, $name\"\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 標準入力を変数に読み込むコマンド\necho \"input:\" && read val && echo \"You entered: $val\"",
-        "holeyCode": "# 標準入力を変数に読み込むコマンド\necho \"input:\" && ___ val && echo \"You entered: $val\"",
+        "correctCode": "# 標準入力を変数に読み込むコマンド\\\\necho \"input:\" && read val && echo \"You entered: $val\"",
+        "holeyCode": "# 標準入力を変数に読み込むコマンド\\\\necho \"input:\" && ___ val && echo \"You entered: $val\"",
         "correctLines": [
           "# 標準入力を変数に読み込むコマンド",
           "echo \"input:\" && read val && echo \"You entered: $val\""
@@ -441,8 +441,8 @@ export const bash2Data = {
         },
         "testCases": [
           {
-            "input": "test\n",
-            "expected_output": "input:\nYou entered: test\n"
+            "input": "test\\\\n",
+            "expected_output": "input:\\\\nYou entered: test\\\\n"
           }
         ]
       },
@@ -454,16 +454,16 @@ export const bash2Data = {
         "tutorialSlides": [
           {
             "title": "ヒアドキュメントとは？",
-            "content": "# 複数行のテキスト\n\n**<<** を使うと、複数行のテキストをまとめて扱えます。"
+            "content": "# 複数行のテキスト\\\\n\\\\n**<<** を使うと、複数行のテキストをまとめて扱えます。"
           },
           {
             "title": "ヒアドキュメントの使い方",
-            "content": "# <<WORD ... WORD\n\n終端文字列までがテキストになります。\n\n**コード例：**\n```bash\ncat <<EOF\nLine 1\nLine 2\nEOF\n```"
+            "content": "# <<WORD ... WORD\\\\n\\\\n終端文字列までがテキストになります。\\\\n\\\\n**コード例：**\\\\n```bash\\\\ncat <<EOF\\\\nLine 1\\\\nLine 2\\\\nEOF\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ヒアドキュメントを開始する演算子\ncat <<END\n# 1行目のテキストを入力\nHello\n# 2行目のテキストを入力\nWorld\nEND",
-        "holeyCode": "# ヒアドキュメントを開始する演算子\ncat ___END\n# 1行目のテキストを入力\n___\n# 2行目のテキストを入力\n___\nEND",
+        "correctCode": "# ヒアドキュメントを開始する演算子\\\\ncat <<END\\\\n# 1行目のテキストを入力\\\\nHello\\\\n# 2行目のテキストを入力\\\\nWorld\\\\nEND",
+        "holeyCode": "# ヒアドキュメントを開始する演算子\\\\ncat ___END\\\\n# 1行目のテキストを入力\\\\n___\\\\n# 2行目のテキストを入力\\\\n___\\\\nEND",
         "correctLines": [
           "# ヒアドキュメントを開始する演算子",
           "cat <<END",
@@ -494,7 +494,7 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello\nWorld\n"
+            "expected_output": "Hello\\\\nWorld\\\\n"
           }
         ]
       }

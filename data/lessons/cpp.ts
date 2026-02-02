@@ -14,16 +14,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "C++（シープラスプラス）とは？",
-            "content": "# パワフルで高速な言語（げんご）\n\nC++（シープラスプラス）は、C言語を元にしてさらに便利な機能を追加した言語です。\n\n**身近な例え：**\nC言語が「普通の車」だとしたら、C++は「スーパーカー」のような存在です！速さはそのままに、もっと便利な機能がついています。\n\n**どんなところで使われているの？**\n- ゲーム（速さが命！）\n- ブラウザ（ChromeやFirefoxなど）\n- 3DCGソフト\n\nなど、**スピードが求められる場所**で大活躍しています。"
+            "content": "# パワフルで高速な言語（げんご）\\\\n\\\\nC++（シープラスプラス）は、C言語を元にしてさらに便利な機能を追加した言語です。\\\\n\\\\n**身近な例え：**\\\\nC言語が「普通の車」だとしたら、C++は「スーパーカー」のような存在です！速さはそのままに、もっと便利な機能がついています。\\\\n\\\\n**どんなところで使われているの？**\\\\n- ゲーム（速さが命！）\\\\n- ブラウザ（ChromeやFirefoxなど）\\\\n- 3DCGソフト\\\\n\\\\nなど、**スピードが求められる場所**で大活躍しています。"
           },
           {
             "title": "C++への入り口",
-            "content": "# std::cout（シーアウト）を使おう\n\nC++で画面に文字を出すには、`std::cout`（スタンダード・シーアウト）を使います。\n`cout` は「Character OUTput」（文字を出力）の略です。\n\n`<<` という矢印のような記号を使って、文字を画面の方へ送ります。\n\n**イメージ：**\n画面 `<<` \"こんにちは\"\n（文字が矢印の方向に流れていくイメージ！）\n\n**実際のコードを見てみましょう：**\n```cpp\n#include <iostream>  // 入出力を使う準備\nint main() {\n    std::cout << \"C++最高！\" << std::endl;\n    return 0;\n}\n```\n\n**用語解説：**\n- `std::endl`（エンドエル）: 改行して次の行に進む\n- `#include <iostream>`: 入出力機能を使えるようにする"
+            "content": "# std::cout（シーアウト）を使おう\\\\n\\\\nC++で画面に文字を出すには、`std::cout`（スタンダード・シーアウト）を使います。\\\\n`cout` は「Character OUTput」（文字を出力）の略です。\\\\n\\\\n`<<` という矢印のような記号を使って、文字を画面の方へ送ります。\\\\n\\\\n**イメージ：**\\\\n画面 `<<` \"こんにちは\"\\\\n（文字が矢印の方向に流れていくイメージ！）\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\n#include <iostream>  // 入出力を使う準備\\\\nint main() {\\\\n    std::cout << \"C++最高！\" << std::endl;\\\\n    return 0;\\\\n}\\\\n```\\\\n\\\\n**用語解説：**\\\\n- `std::endl`（エンドエル）: 改行して次の行に進む\\\\n- `#include <iostream>`: 入出力機能を使えるようにする"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    // Hello, C++! と入力\n    std::cout << \"Hello, C++!\" << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nint ___() {\n    // Hello, C++! と入力\n    std::cout << ___ << std::endl;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    // Hello, C++! と入力\\\\n    std::cout << \"Hello, C++!\" << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    // Hello, C++! と入力\\\\n    std::cout << ___ << std::endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -49,7 +49,7 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, C++!\n"
+            "expected_output": "Hello, C++!\\\\n"
           }
         ]
       },
@@ -61,16 +61,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "変数（へんすう）とは？",
-            "content": "# データを保存する「はこ」\n\nプログラムの中で数字や文字に名前をつけて、あとで使いやすくするための仕組みが **変数（へんすう）** です。\n\n**身近な例え：**\nおもちゃ箱に「レゴ入れ」「ぬいぐるみ入れ」とラベルを貼るように、プログラムでも「はこ」に名前をつけてデータをしまっておきます。\n\n例えば、年齢を覚えておきたいなら `age` という名前の「はこ」を作ります。"
+            "content": "# データを保存する「はこ」\\\\n\\\\nプログラムの中で数字や文字に名前をつけて、あとで使いやすくするための仕組みが **変数（へんすう）** です。\\\\n\\\\n**身近な例え：**\\\\nおもちゃ箱に「レゴ入れ」「ぬいぐるみ入れ」とラベルを貼るように、プログラムでも「はこ」に名前をつけてデータをしまっておきます。\\\\n\\\\n例えば、年齢を覚えておきたいなら `age` という名前の「はこ」を作ります。"
           },
           {
             "title": "数字のラベル int",
-            "content": "# 整数（せいすう）のラベル\n\n数字（1, 2, 3 のような整数）を入れたいときは、`int`（イント）というラベルを貼ります。\n`int` は「Integer」（整数）の略です。\n\n**実際のコードを見てみましょう：**\n```cpp\nint age = 20;  // 「age」という名前のはこに20を入れる\nstd::cout << age << std::endl;  // ageの中身を表示\n```\n=> 20 と表示されます\n\n**C言語との違い：**\nC言語では `printf(\"%d\", age)` と書いていましたが、C++では `std::cout << age` とシンプルに書けます！"
+            "content": "# 整数（せいすう）のラベル\\\\n\\\\n数字（1, 2, 3 のような整数）を入れたいときは、`int`（イント）というラベルを貼ります。\\\\n`int` は「Integer」（整数）の略です。\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\nint age = 20;  // 「age」という名前のはこに20を入れる\\\\nstd::cout << age << std::endl;  // ageの中身を表示\\\\n```\\\\n=> 20 と表示されます\\\\n\\\\n**C言語との違い：**\\\\nC言語では `printf(\"%d\", age)` と書いていましたが、C++では `std::cout << age` とシンプルに書けます！"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    // 10 と入力\n    int x = 10;\n    // x と入力\n    std::cout << x << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nint ___() {\n    // 10 と入力\n    int x = ___;\n    // x と入力\n    std::cout << ___ << std::endl;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    // 10 と入力\\\\n    int x = 10;\\\\n    // x と入力\\\\n    std::cout << x << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    // 10 と入力\\\\n    int x = ___;\\\\n    // x と入力\\\\n    std::cout << ___ << std::endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -103,7 +103,7 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\n"
+            "expected_output": "10\\\\n"
           }
         ]
       },
@@ -115,16 +115,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "計算はコンピュータにお任せ",
-            "content": "# 高速な計算処理\n\nコンピュータは人間よりもずっと速く計算できます。\nどんなに大きな数字でも、プログラミングで指示を出せば一瞬で解いてくれます。"
+            "content": "# 高速な計算処理\\\\n\\\\nコンピュータは人間よりもずっと速く計算できます。\\\\nどんなに大きな数字でも、プログラミングで指示を出せば一瞬で解いてくれます。"
           },
           {
             "title": "計算の記号",
-            "content": "# 矢印で送ろう\n\n`<<` で繋ぐことで、計算した結果をそのまま画面に出すことができます。\n\n**コード例：**\n```cpp\nint cookies = 10;\nint friends = 2;\n// クッキー ÷ 友達 の結果を画面へ！\nstd::cout << cookies / friends << std::endl;\n```\n=> 5"
+            "content": "# 矢印で送ろう\\\\n\\\\n`<<` で繋ぐことで、計算した結果をそのまま画面に出すことができます。\\\\n\\\\n**コード例：**\\\\n```cpp\\\\nint cookies = 10;\\\\nint friends = 2;\\\\n// クッキー ÷ 友達 の結果を画面へ！\\\\nstd::cout << cookies / friends << std::endl;\\\\n```\\\\n=> 5"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    int a = 5;\n    int b = 3;\n    // + でたし算\n    std::cout << a + b << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nint ___() {\n    int a = ___;\n    int b = ___;\n    // + でたし算\n    std::cout << a + b << std::___;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    int a = 5;\\\\n    int b = 3;\\\\n    // + でたし算\\\\n    std::cout << a + b << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    int a = ___;\\\\n    int b = ___;\\\\n    // + でたし算\\\\n    std::cout << a + b << std::___;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -154,7 +154,7 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "8\n"
+            "expected_output": "8\\\\n"
           }
         ]
       },
@@ -166,16 +166,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "あまりを求める",
-            "content": "# 割り算の「あまり」を知りたい！\n\n割り算をしたときに、割り切れなくて「あまり」が出ることがありますよね。\n`%` という記号を使うと、その **あまり** だけを計算してくれます。\nこれを「剰余（じょうよ）」と呼びます。"
+            "content": "# 割り算の「あまり」を知りたい！\\\\n\\\\n割り算をしたときに、割り切れなくて「あまり」が出ることがありますよね。\\\\n`%` という記号を使うと、その **あまり** だけを計算してくれます。\\\\nこれを「剰余（じょうよ）」と呼びます。"
           },
           {
             "title": "% の使い方",
-            "content": "# あまりを計算\n\n```cpp\nstd::cout << 10 % 3 << std::endl;  // => 1\n```\n10 ÷ 3 は 3 あまり 1 なので、「1」が表示されます。\n\n```cpp\nstd::cout << 8 % 2 << std::endl;   // => 0\n```\n8 ÷ 2 は 4 あまり 0 なので、「0」になります（割り切れるということです！）"
+            "content": "# あまりを計算\\\\n\\\\n```cpp\\\\nstd::cout << 10 % 3 << std::endl;  // => 1\\\\n```\\\\n10 ÷ 3 は 3 あまり 1 なので、「1」が表示されます。\\\\n\\\\n```cpp\\\\nstd::cout << 8 % 2 << std::endl;   // => 0\\\\n```\\\\n8 ÷ 2 は 4 あまり 0 なので、「0」になります（割り切れるということです！）"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    // 10 を 3 で割ったあまりを出力する\n    std::cout << 10 % 3 << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nint ___() {\n    // 10 を 3 で割ったあまりを出力する\n    std::cout << ___ % 3 << std::endl;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    // 10 を 3 で割ったあまりを出力する\\\\n    std::cout << 10 % 3 << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    // 10 を 3 で割ったあまりを出力する\\\\n    std::cout << ___ % 3 << std::endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -205,7 +205,7 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\n"
+            "expected_output": "1\\\\n"
           }
         ]
       },
@@ -217,16 +217,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "中身を増やしたいとき",
-            "content": "# はこの中身をパワーアップ\n\n「今の点数に10点プラスしたい！」というとき、`+=` を使うと便利です。\nこれは「今の数字に足して、そのまま保存する」という合体技です。\n\n```cpp\nint x = 10;\nx += 5;  // x に 5 を足して保存\nstd::cout << x << std::endl;  // => 15\n```"
+            "content": "# はこの中身をパワーアップ\\\\n\\\\n「今の点数に10点プラスしたい！」というとき、`+=` を使うと便利です。\\\\nこれは「今の数字に足して、そのまま保存する」という合体技です。\\\\n\\\\n```cpp\\\\nint x = 10;\\\\nx += 5;  // x に 5 を足して保存\\\\nstd::cout << x << std::endl;  // => 15\\\\n```"
           },
           {
             "title": "-= も使える",
-            "content": "# 引き算バージョン\n\n`-=` を使えば、「今の数字から引いて保存」ができます。\n\n```cpp\nint x = 10;\nx -= 3;  // x から 3 を引いて保存\nstd::cout << x << std::endl;  // => 7\n```"
+            "content": "# 引き算バージョン\\\\n\\\\n`-=` を使えば、「今の数字から引いて保存」ができます。\\\\n\\\\n```cpp\\\\nint x = 10;\\\\nx -= 3;  // x から 3 を引いて保存\\\\nstd::cout << x << std::endl;  // => 7\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    // scoreに50を入れる\n    int score = 50;\n    // 10点プラスする\n    score += 10;\n    // scoreを表示\n    std::cout << score << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nint ___() {\n    // scoreに50を入れる\n    int score = ___;\n    // 10点プラスする\n    score += ___;\n    // scoreを表示\n    std::cout << ___ << std::endl;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    // scoreに50を入れる\\\\n    int score = 50;\\\\n    // 10点プラスする\\\\n    score += 10;\\\\n    // scoreを表示\\\\n    std::cout << score << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    // scoreに50を入れる\\\\n    int score = ___;\\\\n    // 10点プラスする\\\\n    score += ___;\\\\n    // scoreを表示\\\\n    std::cout << ___ << std::endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -267,7 +267,7 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "60\n"
+            "expected_output": "60\\\\n"
           }
         ]
       },
@@ -279,16 +279,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "連結（れんけつ）とは？",
-            "content": "# 情報を組み合わせて表示する\n\n文章の途中に、変数（はこ）の中身を流し込んで一つのメッセージにすることを **連結** と呼びます。\nC++では `<<` を使って、電車のように情報を連結して画面へ送ります。"
+            "content": "# 情報を組み合わせて表示する\\\\n\\\\n文章の途中に、変数（はこ）の中身を流し込んで一つのメッセージにすることを **連結** と呼びます。\\\\nC++では `<<` を使って、電車のように情報を連結して画面へ送ります。"
           },
           {
             "title": "<< でつなげましょう",
-            "content": "# ガチャンと連結！\n\n`<<` を何回も使うことで、文字やはこの中身をどんどん繋げることができます。\n\n**コード例：**\n```cpp\nint hour = 15;\nstd::cout << \"今は \" << hour << \" 時です\" << std::endl;\n```\n=> 今は 15 時です"
+            "content": "# ガチャンと連結！\\\\n\\\\n`<<` を何回も使うことで、文字やはこの中身をどんどん繋げることができます。\\\\n\\\\n**コード例：**\\\\n```cpp\\\\nint hour = 15;\\\\nstd::cout << \"今は \" << hour << \" 時です\" << std::endl;\\\\n```\\\\n=> 今は 15 時です"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    int age = 10;\n    // age と入力\n    std::cout << \"I am \" << age << \" years old.\" << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nint ___() {\n    int age = ___;\n    // age と入力\n    std::cout << ___ << age << \" years old.\" << std::endl;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    int age = 10;\\\\n    // age と入力\\\\n    std::cout << \"I am \" << age << \" years old.\" << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    int age = ___;\\\\n    // age と入力\\\\n    std::cout << ___ << age << \" years old.\" << std::endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -316,7 +316,7 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "I am 10 years old.\n"
+            "expected_output": "I am 10 years old.\\\\n"
           }
         ]
       },
@@ -328,16 +328,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "動的配列（どうてきはいれつ）とは？",
-            "content": "# 長さが変わる便利な列\n\nあとから中身を増やしたり減らしたりできる「はこ」の列を **動的配列（どうてきはいれつ）** と呼びます。\n\n**身近な例え：**\n普通の配列は「決まった数のロッカー」ですが、`vector` は「必要に応じて増やせるロッカー」のようなものです。\n\n「伸び縮みする魔法（まほう）の配列」みたいなものです。\nC++では `vector`（ベクター）という機能を使ってこれを作ります。"
+            "content": "# 長さが変わる便利な列\\\\n\\\\nあとから中身を増やしたり減らしたりできる「はこ」の列を **動的配列（どうてきはいれつ）** と呼びます。\\\\n\\\\n**身近な例え：**\\\\n普通の配列は「決まった数のロッカー」ですが、`vector` は「必要に応じて増やせるロッカー」のようなものです。\\\\n\\\\n「伸び縮みする魔法（まほう）の配列」みたいなものです。\\\\nC++では `vector`（ベクター）という機能を使ってこれを作ります。"
           },
           {
             "title": "std::vector",
-            "content": "# 書き方のルール\n\n`< >` の中に「何を入れるか」を指定します。\n- `<int>`: 整数を入れる\n- `<std::string>`: 文字列を入れる\n\n**実際のコードを見てみましょう：**\n```cpp\n#include <vector>  // vectorを使う準備\n\n// 文字列を入れる vector を作る\nstd::vector<std::string> items = {\"Apple\", \"Orange\"};\nstd::cout << items[0] << std::endl;  // 0番目を表示\n```\n=> Apple と表示されます\n\n**ポイント：**\n- 普通の配列と同じく、番号は0から始まります\n- `items[0]` は1番目の要素「Apple」です"
+            "content": "# 書き方のルール\\\\n\\\\n`< >` の中に「何を入れるか」を指定します。\\\\n- `<int>`: 整数を入れる\\\\n- `<std::string>`: 文字列を入れる\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\n#include <vector>  // vectorを使う準備\\\\n\\\\n// 文字列を入れる vector を作る\\\\nstd::vector<std::string> items = {\"Apple\", \"Orange\"};\\\\nstd::cout << items[0] << std::endl;  // 0番目を表示\\\\n```\\\\n=> Apple と表示されます\\\\n\\\\n**ポイント：**\\\\n- 普通の配列と同じく、番号は0から始まります\\\\n- `items[0]` は1番目の要素「Apple」です"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\n#include <vector>\n#include <string>\nint main() {\n    std::vector<std::string> fruits = {\"39apple    std::vector<std::string> fruits = {\"apple\", \"95banana    std::vector<std::string> fruits = {\"39apple    std::vector<std::string> fruits = {\"apple\", \"banana\"};\", \"banana\"};\"};\", \"105banana    std::vector<std::string> fruits = {\"39apple    std::vector<std::string> fruits = {\"apple\", \"banana\"};\", \"banana\"};\"};\n    // 1 と入力（2番目のデータはインデックス1）\n    std::cout << fruits[1] << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\n#include <vector>\n#include <string>\nint ___() {\n    std::vector<std::string> fruits = {\"___\", \"46banana    std::vector<std::string> fruits = {\"___\", \"banana\"};\"};\n    // 1 と入力（2番目のデータはインデックス1）\n    std::cout << fruits[___] << std::endl;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <string>\\\\nint main() {\\\\n    std::vector<std::string> fruits = {\"39apple    std::vector<std::string> fruits = {\"apple\", \"95banana    std::vector<std::string> fruits = {\"39apple    std::vector<std::string> fruits = {\"apple\", \"banana\"};\", \"banana\"};\"};\", \"105banana    std::vector<std::string> fruits = {\"39apple    std::vector<std::string> fruits = {\"apple\", \"banana\"};\", \"banana\"};\"};\\\\n    // 1 と入力（2番目のデータはインデックス1）\\\\n    std::cout << fruits[1] << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <string>\\\\nint ___() {\\\\n    std::vector<std::string> fruits = {\"___\", \"46banana    std::vector<std::string> fruits = {\"___\", \"banana\"};\"};\\\\n    // 1 と入力（2番目のデータはインデックス1）\\\\n    std::cout << fruits[___] << std::endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <vector>",
@@ -369,7 +369,7 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "バナナ\n"
+            "expected_output": "バナナ\\\\n"
           }
         ]
       },
@@ -381,16 +381,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "条件分岐（じょうけんぶんき）とは？",
-            "content": "# プログラムに判断させてみよう\n\n「雨が降ったら傘をさす」「晴れたら外で遊ぶ」\nこんなふうに、状況によって動きを変えることを **条件分岐（じょうけんぶんき）** と呼びます。\nプログラムに「もし〜なら、これをしてね」と教えてあげましょう。"
+            "content": "# プログラムに判断させてみよう\\\\n\\\\n「雨が降ったら傘をさす」「晴れたら外で遊ぶ」\\\\nこんなふうに、状況によって動きを変えることを **条件分岐（じょうけんぶんき）** と呼びます。\\\\nプログラムに「もし〜なら、これをしてね」と教えてあげましょう。"
           },
           {
             "title": "if文",
-            "content": "# ( ) と { } を使いましょう\n\nC++でも、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\n\n**コード例：**\n```cpp\nint temp = 30;\nif (temp > 25) {\n    std::cout << \"暑いですね\" << std::endl;\n}"
+            "content": "# ( ) と { } を使いましょう\\\\n\\\\nC++でも、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\\\\n\\\\n**コード例：**\\\\n```cpp\\\\nint temp = 30;\\\\nif (temp > 25) {\\\\n    std::cout << \"暑いですね\" << std::endl;\\\\n}"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    // scoreに100を入れる\n    int score = 100;\n    // > で「より大きい」を比較\n    if (score > 80) {\n        // 'Perfect' と入力\n        std::cout << \"Perfect\" << std::endl;\n    }\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nint ___() {\n    // scoreに100を入れる\n    int score = ___;\n    // > で「より大きい」を比較\n    if (score ___ 80) {\n        // 'Perfect' と入力\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    // scoreに100を入れる\\\\n    int score = 100;\\\\n    // > で「より大きい」を比較\\\\n    if (score > 80) {\\\\n        // 'Perfect' と入力\\\\n        std::cout << \"Perfect\" << std::endl;\\\\n    }\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    // scoreに100を入れる\\\\n    int score = ___;\\\\n    // > で「より大きい」を比較\\\\n    if (score ___ 80) {\\\\n        // 'Perfect' と入力\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -429,7 +429,7 @@ export const cppData = {
         "testCases": [
           {
             "input": " ",
-            "expected_output": "Perfect\n"
+            "expected_output": "Perfect\\\\n"
           }
         ]
       },
@@ -441,16 +441,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "それ以外の場合は？",
-            "content": "# else（エルス）の役割\n\n条件に当てはまらなかったときの別のルートを作るのが **else（エルス）** です。「もし〜なら」とセットで使うことで、プログラムのルートを2つに分けることができます。"
+            "content": "# else（エルス）の役割\\\\n\\\\n条件に当てはまらなかったときの別のルートを作るのが **else（エルス）** です。「もし〜なら」とセットで使うことで、プログラムのルートを2つに分けることができます。"
           },
           {
             "title": "elseブロック",
-            "content": "# どちらかを選びます\n\n条件に当てはまらないときの動きは `else` を使って入力します。\n\n**コード例 ：**\n```cpp\nint age = 15;\nif (age >= 20) {\n    std::cout << \"大人\" << std::endl;\n} else {\n    std::cout << \"子供\" << std::endl;\n}"
+            "content": "# どちらかを選びます\\\\n\\\\n条件に当てはまらないときの動きは `else` を使って入力します。\\\\n\\\\n**コード例 ：**\\\\n```cpp\\\\nint age = 15;\\\\nif (age >= 20) {\\\\n    std::cout << \"大人\" << std::endl;\\\\n} else {\\\\n    std::cout << \"子供\" << std::endl;\\\\n}"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    // ageに10を入れる\n    int age = 10;\n    // 20以上かを比較する演算子\n    if (age >= 20) {\n        // 20歳以上のときのメッセージ（'Adult'）\n        std::cout << \"Adult\" << std::endl;\n    // else で「それ以外」\n    } else {\n        // それ以外のメッセージ（'Minor'）\n        std::cout << \"Minor\" << std::endl;\n    }\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nint ___() {\n    // ageに10を入れる\n    int age = ___;\n    // 20以上かを比較する演算子\n    if (age ___ 20) {\n        // 20歳以上のときのメッセージ（'Adult'）\n        std::cout << ___ << std::endl;\n    // else で「それ以外」\n    } ___ {\n        // それ以外のメッセージ（'Minor'）\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    // ageに10を入れる\\\\n    int age = 10;\\\\n    // 20以上かを比較する演算子\\\\n    if (age >= 20) {\\\\n        // 20歳以上のときのメッセージ（'Adult'）\\\\n        std::cout << \"Adult\" << std::endl;\\\\n    // else で「それ以外」\\\\n    } else {\\\\n        // それ以外のメッセージ（'Minor'）\\\\n        std::cout << \"Minor\" << std::endl;\\\\n    }\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    // ageに10を入れる\\\\n    int age = ___;\\\\n    // 20以上かを比較する演算子\\\\n    if (age ___ 20) {\\\\n        // 20歳以上のときのメッセージ（'Adult'）\\\\n        std::cout << ___ << std::endl;\\\\n    // else で「それ以外」\\\\n    } ___ {\\\\n        // それ以外のメッセージ（'Minor'）\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -494,7 +494,7 @@ export const cppData = {
         "testCases": [
           {
             "input": " ",
-            "expected_output": "Minor\n"
+            "expected_output": "Minor\\\\n"
           }
         ]
       },
@@ -506,16 +506,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "条件を組み合わせる",
-            "content": "# もっと細かい条件で\n\n「10歳以上、かつ、20歳未満」のように、2つの条件を両方クリアしているかチェックしたいときがあります。\nそんなときは `&&` （アンド）を使います。\n逆に「どちらか片方でもOK」なら `||` （オア）を使います。"
+            "content": "# もっと細かい条件で\\\\n\\\\n「10歳以上、かつ、20歳未満」のように、2つの条件を両方クリアしているかチェックしたいときがあります。\\\\nそんなときは `&&` （アンド）を使います。\\\\n逆に「どちらか片方でもOK」なら `||` （オア）を使います。"
           },
           {
             "title": "&& と || の使い方",
-            "content": "# 条件の合体技\n\n```cpp\nint age = 15;\nif (age >= 10 && age < 20) {\n    std::cout << \"10代です\" << std::endl;\n}\n```\n\n`&&` は「かつ」、`||` は「または」の意味です。"
+            "content": "# 条件の合体技\\\\n\\\\n```cpp\\\\nint age = 15;\\\\nif (age >= 10 && age < 20) {\\\\n    std::cout << \"10代です\" << std::endl;\\\\n}\\\\n```\\\\n\\\\n`&&` は「かつ」、`||` は「または」の意味です。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nint main() {\n    // scoreに85を入れる\n    int score = 85;\n    // 80以上 かつ 100以下 ならメッセージを出す\n    if (score >= 80 && score <= 100) {\n        // 「Pass」と出力\n        std::cout << \"Pass\" << std::endl;\n    }\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nint ___() {\n    // scoreに85を入れる\n    int score = ___;\n    // 80以上 かつ 100以下 ならメッセージを出す\n    if (score >= ___ && score <= 100) {\n        // 「Pass」と出力\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    // scoreに85を入れる\\\\n    int score = 85;\\\\n    // 80以上 かつ 100以下 ならメッセージを出す\\\\n    if (score >= 80 && score <= 100) {\\\\n        // 「Pass」と出力\\\\n        std::cout << \"Pass\" << std::endl;\\\\n    }\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    // scoreに85を入れる\\\\n    int score = ___;\\\\n    // 80以上 かつ 100以下 ならメッセージを出す\\\\n    if (score >= ___ && score <= 100) {\\\\n        // 「Pass」と出力\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -558,7 +558,7 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Pass\n"
+            "expected_output": "Pass\\\\n"
           }
         ]
       },
@@ -570,16 +570,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "繰り返し（ループ）とは？",
-            "content": "# 自動で順番に処理する\n\n同じ作業を何度も繰り返すための仕組みが **ループ（繰り返し）** です。\n\n**身近な例え：**\n学校で出席をとるとき、「田中さん」「鈴木さん」「佐藤さん」...と一人ずつ名前を呼びますよね。ループはこの「順番に全員をチェック」する作業を自動でやってくれます。\n\n配列の中身を一つずつ順番に全部チェックしたいときなどに非常に役立ちます。"
+            "content": "# 自動で順番に処理する\\\\n\\\\n同じ作業を何度も繰り返すための仕組みが **ループ（繰り返し）** です。\\\\n\\\\n**身近な例え：**\\\\n学校で出席をとるとき、「田中さん」「鈴木さん」「佐藤さん」...と一人ずつ名前を呼びますよね。ループはこの「順番に全員をチェック」する作業を自動でやってくれます。\\\\n\\\\n配列の中身を一つずつ順番に全部チェックしたいときなどに非常に役立ちます。"
           },
           {
             "title": "範囲for文",
-            "content": "# for (変数 : コンテナ)\n\nC++には **範囲for文（はんいフォーぶん）** という便利なループがあります。\n「はこ（配列）」の中に入っているものを、最初から最後まで順番に取り出せます。\n\n**実際のコードを見てみましょう：**\n```cpp\nstd::vector<std::string> fruits = {\"Apple\", \"Banana\"};\n// fruits の中身を一つずつ f に入れて繰り返す\nfor (std::string f : fruits) {\n    std::cout << f << std::endl;\n}\n```\n=> Apple と Banana が順番に表示されます\n\n**読み方：**\n「fruits の中身を、一つずつ f に入れながら繰り返す」\n\n**ポイント：**\nC言語の `for (int i = 0; i < 2; i++)` より、とても簡単に書けます！"
+            "content": "# for (変数 : コンテナ)\\\\n\\\\nC++には **範囲for文（はんいフォーぶん）** という便利なループがあります。\\\\n「はこ（配列）」の中に入っているものを、最初から最後まで順番に取り出せます。\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\nstd::vector<std::string> fruits = {\"Apple\", \"Banana\"};\\\\n// fruits の中身を一つずつ f に入れて繰り返す\\\\nfor (std::string f : fruits) {\\\\n    std::cout << f << std::endl;\\\\n}\\\\n```\\\\n=> Apple と Banana が順番に表示されます\\\\n\\\\n**読み方：**\\\\n「fruits の中身を、一つずつ f に入れながら繰り返す」\\\\n\\\\n**ポイント：**\\\\nC言語の `for (int i = 0; i < 2; i++)` より、とても簡単に書けます！"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\n#include <vector>\nint main() {\n    std::vector<int> nums = {1, 2, 3};\n    // nums で配列を指定\n    for (int n : nums) {\n        std::cout << n << std::endl;\n    }\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\n#include <vector>\nint ___() {\n    std::vector<int> nums = {___, 2, 3};\n    // nums で配列を指定\n    for (int ___ : nums) {\n        std::cout << ___ << std::endl;\n    ___\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\n#include <vector>\\\\nint main() {\\\\n    std::vector<int> nums = {1, 2, 3};\\\\n    // nums で配列を指定\\\\n    for (int n : nums) {\\\\n        std::cout << n << std::endl;\\\\n    }\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n#include <vector>\\\\nint ___() {\\\\n    std::vector<int> nums = {___, 2, 3};\\\\n    // nums で配列を指定\\\\n    for (int ___ : nums) {\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <vector>",
@@ -613,7 +613,7 @@ export const cppData = {
         "testCases": [
           {
             "input": " ",
-            "expected_output": "1\n2\n3\n"
+            "expected_output": "1\\\\n2\\\\n3\\\\n"
           }
         ]
       },
@@ -625,16 +625,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "辞書（じしょ）とは？",
-            "content": "# キーワードで検索（けんさく）！\n\n「名前」と「データ」をセットにして保存できるのが **辞書（map＝マップ）** です。\n\n**身近な例え：**\n国語辞典（こくごじてん）を想像してください。「りんご」という言葉を調べると、その意味が出てきますよね。\n\n`map` も同じで、「キー（名前）」を指定すると、それに対応する「値（データ）」が取り出せます。\n\nキーワードを使って目的のデータをすぐに見つけられる、とても便利な仕組みです！"
+            "content": "# キーワードで検索（けんさく）！\\\\n\\\\n「名前」と「データ」をセットにして保存できるのが **辞書（map＝マップ）** です。\\\\n\\\\n**身近な例え：**\\\\n国語辞典（こくごじてん）を想像してください。「りんご」という言葉を調べると、その意味が出てきますよね。\\\\n\\\\n`map` も同じで、「キー（名前）」を指定すると、それに対応する「値（データ）」が取り出せます。\\\\n\\\\nキーワードを使って目的のデータをすぐに見つけられる、とても便利な仕組みです！"
           },
           {
             "title": "std::map",
-            "content": "# キーと値（あたい）のペア\n\n`map` では「キー（名前）」と「値（データ）」をセットで保存します。\n\n**実際のコードを見てみましょう：**\n```cpp\n#include <map>\n#include <string>\n\n// 「文字列」をキーに、「文字列」を値にする辞書\nstd::map<std::string, std::string> colors;\ncolors[\"りんご\"] = \"あか\";  // りんご→あか と登録\nstd::cout << colors[\"りんご\"] << std::endl;\n```\n=> あか と表示されます\n\n**書き方のルール：**\n`std::map<キーの型, 値の型>` のように、`< >` の中に2つの型を書きます。\n\n**ポイント：**\n配列は「番号」でアクセスしますが、`map` は「名前（キー）」でアクセスします。"
+            "content": "# キーと値（あたい）のペア\\\\n\\\\n`map` では「キー（名前）」と「値（データ）」をセットで保存します。\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\n#include <map>\\\\n#include <string>\\\\n\\\\n// 「文字列」をキーに、「文字列」を値にする辞書\\\\nstd::map<std::string, std::string> colors;\\\\ncolors[\"りんご\"] = \"あか\";  // りんご→あか と登録\\\\nstd::cout << colors[\"りんご\"] << std::endl;\\\\n```\\\\n=> あか と表示されます\\\\n\\\\n**書き方のルール：**\\\\n`std::map<キーの型, 値の型>` のように、`< >` の中に2つの型を書きます。\\\\n\\\\n**ポイント：**\\\\n配列は「番号」でアクセスしますが、`map` は「名前（キー）」でアクセスします。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\n#include <map>\n#include <string>\nint main() {\n    std::map<std::string, int> scores;\n    // 'Math' と入力（キー名）\n    scores[\"Math\"] = 90;\n    // 'Math' と入力（同じキー名）\n    std::cout << scores[\"Math\"] << std::endl;\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\n#include <map>\n#include <string>\nint ___() {\n    std::map<std::string, int> ___;\n    // 'Math' と入力（キー名）\n    scores[\"___\"] = 90;\n    // 'Math' と入力（同じキー名）\n    std::cout << scores[\"___\"] << std::endl;\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\n#include <map>\\\\n#include <string>\\\\nint main() {\\\\n    std::map<std::string, int> scores;\\\\n    // 'Math' と入力（キー名）\\\\n    scores[\"Math\"] = 90;\\\\n    // 'Math' と入力（同じキー名）\\\\n    std::cout << scores[\"Math\"] << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n#include <map>\\\\n#include <string>\\\\nint ___() {\\\\n    std::map<std::string, int> ___;\\\\n    // 'Math' と入力（キー名）\\\\n    scores[\"___\"] = 90;\\\\n    // 'Math' と入力（同じキー名）\\\\n    std::cout << scores[\"___\"] << std::endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <map>",
@@ -670,7 +670,7 @@ export const cppData = {
         "testCases": [
           {
             "input": " ",
-            "expected_output": "90\n"
+            "expected_output": "90\\\\n"
           }
         ]
       },
@@ -682,16 +682,16 @@ export const cppData = {
         "tutorialSlides": [
           {
             "title": "関数（かんすう）とは？",
-            "content": "# オリジナルの技を作ろう\n\n何度も使う手順をまとめて名前をつけたものを **関数（かんすう）** と呼びます。\n\n**身近な例え：**\n「朝の準備」という言葉を聞くと、「起きる→顔を洗う→着替える→ご飯を食べる」という一連の動作を思い浮かべますよね。\n\n関数も同じです！「sayHello」と呼ぶだけで、中に書いた処理を全部やってくれます。\n\n一度作れば、「アレやって！」と名前を呼ぶだけで何度でも実行できる、便利なショートカットのようなものです。"
+            "content": "# オリジナルの技を作ろう\\\\n\\\\n何度も使う手順をまとめて名前をつけたものを **関数（かんすう）** と呼びます。\\\\n\\\\n**身近な例え：**\\\\n「朝の準備」という言葉を聞くと、「起きる→顔を洗う→着替える→ご飯を食べる」という一連の動作を思い浮かべますよね。\\\\n\\\\n関数も同じです！「sayHello」と呼ぶだけで、中に書いた処理を全部やってくれます。\\\\n\\\\n一度作れば、「アレやって！」と名前を呼ぶだけで何度でも実行できる、便利なショートカットのようなものです。"
           },
           {
             "title": "手順をまとめる",
-            "content": "# 関数の定義（ていぎ）\n\nやりたいことをひとまとめにして、名前をつけることができます。\n一度作っておけば、呼び出すだけでいつでも動かせます。\n\n**実際のコードを見てみましょう：**\n```cpp\n// 「sayHello」という関数を作る（定義する）\nvoid sayHello() {\n    std::cout << \"ハロー！\" << std::endl;\n}\n\n// mainの中で呼び出し（使う）\nsayHello();  // これで「ハロー！」と表示される\n```\n\n**用語解説：**\n- `void`（ボイド）: 「何も返さない」という意味\n- `()`: 関数名のあとに必ずつける丸かっこ\n- `{}`: この中に実行したい処理を書く"
+            "content": "# 関数の定義（ていぎ）\\\\n\\\\nやりたいことをひとまとめにして、名前をつけることができます。\\\\n一度作っておけば、呼び出すだけでいつでも動かせます。\\\\n\\\\n**実際のコードを見てみましょう：**\\\\n```cpp\\\\n// 「sayHello」という関数を作る（定義する）\\\\nvoid sayHello() {\\\\n    std::cout << \"ハロー！\" << std::endl;\\\\n}\\\\n\\\\n// mainの中で呼び出し（使う）\\\\nsayHello();  // これで「ハロー！」と表示される\\\\n```\\\\n\\\\n**用語解説：**\\\\n- `void`（ボイド）: 「何も返さない」という意味\\\\n- `()`: 関数名のあとに必ずつける丸かっこ\\\\n- `{}`: この中に実行したい処理を書く"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\nvoid greet() {\n    std::cout << \"Hello\" << std::endl;\n}\nint main() {\n    // greet で関数を呼び出す\n    greet();\n    return 0;\n}",
-        "holeyCode": "#include <iostream>\nvoid ___() {\n    std::cout << ___ << std::endl;\n___\nint ___() {\n    // greet で関数を呼び出す\n    ___();\n    return ___;\n___",
+        "correctCode": "#include <iostream>\\\\nvoid greet() {\\\\n    std::cout << \"Hello\" << std::endl;\\\\n}\\\\nint main() {\\\\n    // greet で関数を呼び出す\\\\n    greet();\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nvoid ___() {\\\\n    std::cout << ___ << std::endl;\\\\n___\\\\nint ___() {\\\\n    // greet で関数を呼び出す\\\\n    ___();\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "void greet() {",
@@ -723,7 +723,7 @@ export const cppData = {
         "testCases": [
           {
             "input": " ",
-            "expected_output": "Hello\n"
+            "expected_output": "Hello\\\\n"
           }
         ]
       }

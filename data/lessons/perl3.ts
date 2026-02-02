@@ -118,11 +118,11 @@ export const perl3Data = {
         "tutorialSlides": [
           {
             "title": "chomp（チョンプ）とは？",
-            "content": "# 末尾の改行を取り除く\n\n**chomp**（チョンプ＝「かじり取る」）は、文字列の末尾にある改行文字（`\n`）を取り除きます。\n\n**たとえば：** ファイルから1行読み込むと、行末に改行がついてきます。これを取り除かないと余計な空行が入ってしまいます。\n\nファイル処理でとてもよく使う関数です！"
+            "content": "# 末尾の改行を取り除く\n\n**chomp**（チョンプ＝「かじり取る」）は、文字列の末尾にある改行文字（`\\n`）を取り除きます。\n\n**たとえば：** ファイルから1行読み込むと、行末に改行がついてきます。これを取り除かないと余計な空行が入ってしまいます。\n\nファイル処理でとてもよく使う関数です！"
           },
           {
             "title": "chomp の使い方",
-            "content": "# chomp($変数)\n\n**このコードは何をしているの？**\n```perl\nmy $line = \"hello\n\";\nchomp($line);\nprint $line; # hello\n```\n\n**解説：**\n1. `$line` に \"hello\n\"（改行付き）を入れる\n2. `chomp($line)` で末尾の `\n` を除去\n3. `$line` は \"hello\" になる\n\n**ポイント：** chompは変数の中身を直接変更します。戻り値は使いません。"
+            "content": "# chomp($変数)\n\n**このコードは何をしているの？**\n```perl\nmy $line = \"hello\n\";\nchomp($line);\nprint $line; # hello\n```\n\n**解説：**\n1. `$line` に \"hello\n\"（改行付き）を入れる\n2. `chomp($line)` で末尾の `\\n` を除去\n3. `$line` は \"hello\" になる\n\n**ポイント：** chompは変数の中身を直接変更します。戻り値は使いません。"
           }
         ],
         "initialDisplayMode": "holey",

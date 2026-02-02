@@ -146,7 +146,7 @@ export const bash3Data = {
           },
           {
             "title": "2> の使い方",
-            "content": "# 2> でエラーだけリダイレクト\n\n**このコードは何をしているの？**\n```bash\nls /nonexistent 2> error.txt\n```\n\n**解説：**\n1. `ls /nonexistent` は存在しないファイルを表示しようとする\n2. エラーが発生する（「そんなファイルはない！」）\n3. `2>` でエラーメッセージだけを error.txt に保存\n\n**便利な使い方：**\n```bash\nコマンド 2> /dev/null\n```\n`/dev/null` は「ゴミ箱」のような特別な場所。エラーを捨てて見えなくできます。"
+            "content": "# 2> でエラーだけリダイレクト\n\n**このコードは何をしているの？**\n```bash\nls /nonexistent 2> error.txt\n```\n\n**解説：**\n1. `ls /nonexistent` は存在しないファイルを表示しようとする\n2. エラーが発生する（「そんなファイルはない！」）\n3. `2>` でエラーメッセージだけを error.txt に保存\n\n**便利な使い方：**\n```bash\nコマンド 2> /dev/null\n```\\n`/dev/null` は「ゴミ箱」のような特別な場所。エラーを捨てて見えなくできます。"
           }
         ],
         "initialDisplayMode": "holey",
@@ -364,11 +364,11 @@ export const bash3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# sortで並べ替え\necho -e \"banana\\napple\\ncherry\" | sort",
-        "holeyCode": "# sortで並べ替え\necho -e \"banana\\\n___\\\ncherry\" | sort",
+        "correctCode": "# sortで並べ替え\necho -e \"banana\napple\ncherry\" | sort",
+        "holeyCode": "# sortで並べ替え\necho -e \"banana\n___\ncherry\" | sort",
         "correctLines": [
           "# sortで並べ替え",
-          "echo -e \"banana\\napple\\ncherry\" | sort"
+          "echo -e \"banana\napple\ncherry\" | sort"
         ],
         "lineHints": [
           null,
@@ -405,11 +405,11 @@ export const bash3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# uniqで重複を除去\necho -e \"a\\nb\\na\\nb\" | sort | uniq",
-        "holeyCode": "# uniqで重複を除去\necho -e \"a\\\n___\\\n___\\\nb\" | sort | uniq",
+        "correctCode": "# uniqで重複を除去\necho -e \"a\nb\na\nb\" | sort | uniq",
+        "holeyCode": "# uniqで重複を除去\necho -e \"a\n___\n___\nb\" | sort | uniq",
         "correctLines": [
           "# uniqで重複を除去",
-          "echo -e \"a\\nb\\na\\nb\" | sort | uniq"
+          "echo -e \"a\nb\na\nb\" | sort | uniq"
         ],
         "lineHints": [
           null,

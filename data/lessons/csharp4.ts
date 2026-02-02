@@ -14,16 +14,16 @@ export const csharp4Data = {
         "tutorialSlides": [
           {
             "title": "ジェネリクスとは？",
-            "content": "# 型を後から指定\n\n**ジェネリクス** で、型を後から指定できるクラスを作れます。\n\n```csharp\nclass Box<T> {\n    public T Value { get; set; }\n}\n\nvar intBox = new Box<int> { Value = 42 };\nvar strBox = new Box<string> { Value = \"Hello\" };\n```"
+            "content": "# 型を後から指定\\\\n\\\\n**ジェネリクス** で、型を後から指定できるクラスを作れます。\\\\n\\\\n```csharp\\\\nclass Box<T> {\\\\n    public T Value { get; set; }\\\\n}\\\\n\\\\nvar intBox = new Box<int> { Value = 42 };\\\\nvar strBox = new Box<string> { Value = \"Hello\" };\\\\n```"
           },
           {
             "title": "型安全",
-            "content": "# コンパイル時チェック\n\n```csharp\nBox<int> box = new Box<int>();\nbox.Value = \"text\";  // コンパイルエラー！\n```"
+            "content": "# コンパイル時チェック\\\\n\\\\n```csharp\\\\nBox<int> box = new Box<int>();\\\\nbox.Value = \"text\";  // コンパイルエラー！\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// 型パラメータを定義する記号\nclass Container<T> {\n    // プロパティを定義\n    public T Item { get; set; }\n}\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // \"Hello\" を持つ Container インスタンスを作成\n        var c = new Container<string> { Item = \"Hello\" };\n        // c.Itemを表示\n        Console.WriteLine(c.Item);\n    }\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// 型パラメータを定義する記号\nclass ___<T> {\n    // プロパティを定義\n    public T Item { get; ___; }\n___\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // \"Hello\" を持つ Container インスタンスを作成\n        var ___ = new Container<string> { Item = \"Hello\" };\n        // c.Itemを表示\n        Console.___(c.Item);\n    ___\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// 型パラメータを定義する記号\\\\nclass Container<T> {\\\\n    // プロパティを定義\\\\n    public T Item { get; set; }\\\\n}\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // \"Hello\" を持つ Container インスタンスを作成\\\\n        var c = new Container<string> { Item = \"Hello\" };\\\\n        // c.Itemを表示\\\\n        Console.WriteLine(c.Item);\\\\n    }\\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// 型パラメータを定義する記号\\\\nclass ___<T> {\\\\n    // プロパティを定義\\\\n    public T Item { get; ___; }\\\\n___\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // \"Hello\" を持つ Container インスタンスを作成\\\\n        var ___ = new Container<string> { Item = \"Hello\" };\\\\n        // c.Itemを表示\\\\n        Console.___(c.Item);\\\\n    ___\\\\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -76,7 +76,7 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello\n"
+            "expected_output": "Hello\\\\n"
           }
         ]
       },
@@ -88,16 +88,16 @@ export const csharp4Data = {
         "tutorialSlides": [
           {
             "title": "where 制約",
-            "content": "# 型の条件を指定\n\n**where** で型パラメータに制約を付けられます。\n\n```csharp\nclass Repo<T> where T : class, new() {\n    public T Create() => new T();\n}\n```"
+            "content": "# 型の条件を指定\\\\n\\\\n**where** で型パラメータに制約を付けられます。\\\\n\\\\n```csharp\\\\nclass Repo<T> where T : class, new() {\\\\n    public T Create() => new T();\\\\n}\\\\n```"
           },
           {
             "title": "制約の種類",
-            "content": "# よく使う制約\n\n```csharp\nwhere T : class      // 参照型\nwhere T : struct     // 値型\nwhere T : new()      // 引数なしコンストラクタ\nwhere T : IComparable // インターフェース\n```"
+            "content": "# よく使う制約\\\\n\\\\n```csharp\\\\nwhere T : class      // 参照型\\\\nwhere T : struct     // 値型\\\\nwhere T : new()      // 引数なしコンストラクタ\\\\nwhere T : IComparable // インターフェース\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// 型パラメータに制約を付けるキーワード\nclass Comparer<T> where T : IComparable<T> {\n    // Compareメソッドを定義\n    public int Compare(T a, T b) => a.CompareTo(b);\n}\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // Comparerインスタンスを作成\n        var c = new Comparer<int>();\n        // 比較結果を表示\n        Console.WriteLine(c.Compare(5, 3));\n    }\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// 型パラメータに制約を付けるキーワード\nclass ___<T> where T : IComparable<T> {\n    // Compareメソッドを定義\n    public int ___(T a, T b) => a.CompareTo(b);\n___\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // Comparerインスタンスを作成\n        var ___ = new Comparer<int>();\n        // 比較結果を表示\n        Console.___(c.Compare(5, 3));\n    ___\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// 型パラメータに制約を付けるキーワード\\\\nclass Comparer<T> where T : IComparable<T> {\\\\n    // Compareメソッドを定義\\\\n    public int Compare(T a, T b) => a.CompareTo(b);\\\\n}\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // Comparerインスタンスを作成\\\\n        var c = new Comparer<int>();\\\\n        // 比較結果を表示\\\\n        Console.WriteLine(c.Compare(5, 3));\\\\n    }\\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// 型パラメータに制約を付けるキーワード\\\\nclass ___<T> where T : IComparable<T> {\\\\n    // Compareメソッドを定義\\\\n    public int ___(T a, T b) => a.CompareTo(b);\\\\n___\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // Comparerインスタンスを作成\\\\n        var ___ = new Comparer<int>();\\\\n        // 比較結果を表示\\\\n        Console.___(c.Compare(5, 3));\\\\n    ___\\\\n___",
         "correctLines": [
                   "// usingでSystem名前空間をインポート",
                   "using System;",
@@ -151,7 +151,7 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\n"
+            "expected_output": "1\\\\n"
           }
         ]
       },
@@ -163,16 +163,16 @@ export const csharp4Data = {
         "tutorialSlides": [
           {
             "title": "デリゲートとは？",
-            "content": "# メソッドの参照\n\n**デリゲート** は、メソッドを参照できる型です。\n\n```csharp\ndelegate int Operation(int a, int b);\n\nint Add(int a, int b) => a + b;\nOperation op = Add;\nint result = op(2, 3);  // 5\n```"
+            "content": "# メソッドの参照\\\\n\\\\n**デリゲート** は、メソッドを参照できる型です。\\\\n\\\\n```csharp\\\\ndelegate int Operation(int a, int b);\\\\n\\\\nint Add(int a, int b) => a + b;\\\\nOperation op = Add;\\\\nint result = op(2, 3);  // 5\\\\n```"
           },
           {
             "title": "組み込みデリゲート",
-            "content": "# Func と Action\n\n```csharp\nFunc<int, int, int> add = (a, b) => a + b;\nAction<string> print = s => Console.WriteLine(s);\n```"
+            "content": "# Func と Action\\\\n\\\\n```csharp\\\\nFunc<int, int, int> add = (a, b) => a + b;\\\\nAction<string> print = s => Console.WriteLine(s);\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // メソッドを参照できる型を定義するキーワード\n    delegate int MathOp(int x);\n    \n    // Doubleメソッドを定義\n    static int Double(int n) => n * 2;\n    \n    // Mainメソッドを定義\n    static void Main() {\n        // デリゲートにメソッドを代入\n        MathOp op = Double;\n        // op(5を表示\n        Console.WriteLine(op(5));\n    }\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // メソッドを参照できる型を定義するキーワード\n    delegate int MathOp(int ___);\n    \n    // Doubleメソッドを定義\n    static int Double(int n) => n * ___;\n    \n    // Mainメソッドを定義\n    static void ___() {\n        // デリゲートにメソッドを代入\n        MathOp op = ___;\n        // op(5を表示\n        Console.___(op(5));\n    ___\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // メソッドを参照できる型を定義するキーワード\\\\n    delegate int MathOp(int x);\\\\n    \\\\n    // Doubleメソッドを定義\\\\n    static int Double(int n) => n * 2;\\\\n    \\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // デリゲートにメソッドを代入\\\\n        MathOp op = Double;\\\\n        // op(5を表示\\\\n        Console.WriteLine(op(5));\\\\n    }\\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // メソッドを参照できる型を定義するキーワード\\\\n    delegate int MathOp(int ___);\\\\n    \\\\n    // Doubleメソッドを定義\\\\n    static int Double(int n) => n * ___;\\\\n    \\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // デリゲートにメソッドを代入\\\\n        MathOp op = ___;\\\\n        // op(5を表示\\\\n        Console.___(op(5));\\\\n    ___\\\\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -226,7 +226,7 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\n"
+            "expected_output": "10\\\\n"
           }
         ]
       },
@@ -238,16 +238,16 @@ export const csharp4Data = {
         "tutorialSlides": [
           {
             "title": "Func とは？",
-            "content": "# 戻り値ありのデリゲート\n\n**Func<>** は、戻り値を持つメソッドを参照します。\n\n```csharp\nFunc<int, int> square = x => x * x;\nFunc<int, int, int> add = (a, b) => a + b;\n```"
+            "content": "# 戻り値ありのデリゲート\\\\n\\\\n**Func<>** は、戻り値を持つメソッドを参照します。\\\\n\\\\n```csharp\\\\nFunc<int, int> square = x => x * x;\\\\nFunc<int, int, int> add = (a, b) => a + b;\\\\n```"
           },
           {
             "title": "最後が戻り値",
-            "content": "# 型パラメータの意味\n\n```csharp\nFunc<int>           // () => int\nFunc<int, string>   // (int) => string\nFunc<int, int, int> // (int, int) => int\n```"
+            "content": "# 型パラメータの意味\\\\n\\\\n```csharp\\\\nFunc<int>           // () => int\\\\nFunc<int, string>   // (int) => string\\\\nFunc<int, int, int> // (int, int) => int\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // 戻り値を持つ汎用デリゲート型\n        Func<int, int> triple = x => x * 3;\n        // triple(7を表示\n        Console.WriteLine(triple(7));\n    }\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 戻り値を持つ汎用デリゲート型\n        Func<int, int> triple = x => x * ___;\n        // triple(7を表示\n        Console.___(triple(7));\n    ___\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // 戻り値を持つ汎用デリゲート型\\\\n        Func<int, int> triple = x => x * 3;\\\\n        // triple(7を表示\\\\n        Console.WriteLine(triple(7));\\\\n    }\\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // 戻り値を持つ汎用デリゲート型\\\\n        Func<int, int> triple = x => x * ___;\\\\n        // triple(7を表示\\\\n        Console.___(triple(7));\\\\n    ___\\\\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -289,7 +289,7 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "21\n"
+            "expected_output": "21\\\\n"
           }
         ]
       },
@@ -301,16 +301,16 @@ export const csharp4Data = {
         "tutorialSlides": [
           {
             "title": "Action とは？",
-            "content": "# 戻り値なしのデリゲート\n\n**Action<>** は、戻り値を持たないメソッドを参照します。\n\n```csharp\nAction greet = () => Console.WriteLine(\"Hi\");\nAction<string> print = s => Console.WriteLine(s);\n```"
+            "content": "# 戻り値なしのデリゲート\\\\n\\\\n**Action<>** は、戻り値を持たないメソッドを参照します。\\\\n\\\\n```csharp\\\\nAction greet = () => Console.WriteLine(\"Hi\");\\\\nAction<string> print = s => Console.WriteLine(s);\\\\n```"
           },
           {
             "title": "void メソッド用",
-            "content": "# 戻り値がない場合\n\n```csharp\nAction<int, int> log = (a, b) => {\n    Console.WriteLine($\"{a} + {b}\");\n};\n```"
+            "content": "# 戻り値がない場合\\\\n\\\\n```csharp\\\\nAction<int, int> log = (a, b) => {\\\\n    Console.WriteLine($\"{a} + {b}\");\\\\n};\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // 戻り値を持たない汎用デリゲート型\n        Action<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\n        // 関数を呼び出し\n        greet(\"World\");\n    }\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 戻り値を持たない汎用デリゲート型\n        Action<string> greet = name => Console.___($\"Hello, {name}!\");\n        // 関数を呼び出し\n        greet(\"___\");\n    ___\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // 戻り値を持たない汎用デリゲート型\\\\n        Action<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\\\\n        // 関数を呼び出し\\\\n        greet(\"World\");\\\\n    }\\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // 戻り値を持たない汎用デリゲート型\\\\n        Action<string> greet = name => Console.___($\"Hello, {name}!\");\\\\n        // 関数を呼び出し\\\\n        greet(\"___\");\\\\n    ___\\\\n___",
         "correctLines": [
                   "// usingでSystem名前空間をインポート",
                   "using System;",
@@ -352,7 +352,7 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, World!\n"
+            "expected_output": "Hello, World!\\\\n"
           }
         ]
       },
@@ -364,16 +364,16 @@ export const csharp4Data = {
         "tutorialSlides": [
           {
             "title": "GroupBy とは？",
-            "content": "# グループ化\n\n**GroupBy** は、キーでグループ分けします。\n\n```csharp\nvar groups = people.GroupBy(p => p.City);\nforeach (var g in groups) {\n    Console.WriteLine($\"{g.Key}: {g.Count()}\");\n}\n```"
+            "content": "# グループ化\\\\n\\\\n**GroupBy** は、キーでグループ分けします。\\\\n\\\\n```csharp\\\\nvar groups = people.GroupBy(p => p.City);\\\\nforeach (var g in groups) {\\\\n    Console.WriteLine($\"{g.Key}: {g.Count()}\");\\\\n}\\\\n```"
           },
           {
             "title": "IGrouping",
-            "content": "# キーと要素\n\n```csharp\n// g.Key でグループのキー\n// g でグループの要素（IEnumerable）\n```"
+            "content": "# キーと要素\\\\n\\\\n```csharp\\\\n// g.Key でグループのキー\\\\n// g でグループの要素（IEnumerable）\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n// usingでLinq名前空間をインポート\nusing System.Linq;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // numsに{1, 2, 3, 4, 5, 6}を代入\n        var nums = new[] { 1, 2, 3, 4, 5, 6 };\n        // GroupByでnumsを偶奇でグループ分けしgroupsに代入\n        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");\n        // foreachでgroupsをループ\n        foreach (var g in groups) {\n            // g.Keyとg.Count()をWriteLineで出力\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\n        }\n    }\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n// usingでLinq名前空間をインポート\nusing ___.Linq;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // numsに{1, 2, 3, 4, 5, 6}を代入\n        var ___ = new[] { 1, 2, 3, 4, 5, 6 };\n        // GroupByでnumsを偶奇でグループ分けしgroupsに代入\n        var ___ = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");\n        // foreachでgroupsをループ\n        foreach (var g in ___) {\n            // g.Keyとg.Count()をWriteLineで出力\n            Console.___($\"{g.Key}: {g.Count()}\");\n        ___\n    ___\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n// usingでLinq名前空間をインポート\\\\nusing System.Linq;\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // numsに{1, 2, 3, 4, 5, 6}を代入\\\\n        var nums = new[] { 1, 2, 3, 4, 5, 6 };\\\\n        // GroupByでnumsを偶奇でグループ分けしgroupsに代入\\\\n        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");\\\\n        // foreachでgroupsをループ\\\\n        foreach (var g in groups) {\\\\n            // g.Keyとg.Count()をWriteLineで出力\\\\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\\\\n        }\\\\n    }\\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n// usingでLinq名前空間をインポート\\\\nusing ___.Linq;\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // numsに{1, 2, 3, 4, 5, 6}を代入\\\\n        var ___ = new[] { 1, 2, 3, 4, 5, 6 };\\\\n        // GroupByでnumsを偶奇でグループ分けしgroupsに代入\\\\n        var ___ = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");\\\\n        // foreachでgroupsをループ\\\\n        foreach (var g in ___) {\\\\n            // g.Keyとg.Count()をWriteLineで出力\\\\n            Console.___($\"{g.Key}: {g.Count()}\");\\\\n        ___\\\\n    ___\\\\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -429,7 +429,7 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "odd: 3\neven: 3\n"
+            "expected_output": "odd: 3\\\\neven: 3\\\\n"
           }
         ]
       },
@@ -441,16 +441,16 @@ export const csharp4Data = {
         "tutorialSlides": [
           {
             "title": "?. とは？",
-            "content": "# null安全なアクセス\n\n**?.** は、nullでなければアクセス、nullならnullを返します。\n\n```csharp\nstring? name = person?.Name;\nint? length = str?.Length;\n```"
+            "content": "# null安全なアクセス\\\\n\\\\n**?.** は、nullでなければアクセス、nullならnullを返します。\\\\n\\\\n```csharp\\\\nstring? name = person?.Name;\\\\nint? length = str?.Length;\\\\n```"
           },
           {
             "title": "?? と組み合わせ",
-            "content": "# デフォルト値\n\n```csharp\nstring name = person?.Name ?? \"Unknown\";\n```"
+            "content": "# デフォルト値\\\\n\\\\n```csharp\\\\nstring name = person?.Name ?? \"Unknown\";\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // null許容型の変数を定義\n        string? s = null;\n        // nullでなければアクセスする演算子\n        int? len = s?.Length;\n        // null合体演算子でデフォルト値\n        Console.WriteLine(len ?? 0);\n    }\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // null許容型の変数を定義\n        string? s = ___;\n        // nullでなければアクセスする演算子\n        int? len = s?.___;\n        // null合体演算子でデフォルト値\n        Console.___(len ?? 0);\n    ___\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // null許容型の変数を定義\\\\n        string? s = null;\\\\n        // nullでなければアクセスする演算子\\\\n        int? len = s?.Length;\\\\n        // null合体演算子でデフォルト値\\\\n        Console.WriteLine(len ?? 0);\\\\n    }\\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // null許容型の変数を定義\\\\n        string? s = ___;\\\\n        // nullでなければアクセスする演算子\\\\n        int? len = s?.___;\\\\n        // null合体演算子でデフォルト値\\\\n        Console.___(len ?? 0);\\\\n    ___\\\\n___",
         "correctLines": [
                   "// usingでSystem名前空間をインポート",
                   "using System;",
@@ -496,7 +496,7 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "0\n"
+            "expected_output": "0\\\\n"
           }
         ]
       },
@@ -508,16 +508,16 @@ export const csharp4Data = {
         "tutorialSlides": [
           {
             "title": "?? とは？",
-            "content": "# nullならデフォルト\n\n**??** は、左側がnullなら右側を返します。\n\n```csharp\nstring name = inputName ?? \"Guest\";\n```"
+            "content": "# nullならデフォルト\\\\n\\\\n**??** は、左側がnullなら右側を返します。\\\\n\\\\n```csharp\\\\nstring name = inputName ?? \"Guest\";\\\\n```"
           },
           {
             "title": "??= 代入",
-            "content": "# nullの場合だけ代入\n\n```csharp\nname ??= \"Default\";  // nameがnullなら代入\n```"
+            "content": "# nullの場合だけ代入\\\\n\\\\n```csharp\\\\nname ??= \"Default\";  // nameがnullなら代入\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // null許容型の変数を定義\n        string? value = null;\n        // nullなら右側を返す演算子\n        string result = value ?? \"default\";\n        // resultを表示\n        Console.WriteLine(result);\n    }\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // null許容型の変数を定義\n        string? value = ___;\n        // nullなら右側を返す演算子\n        string result = value ?? \"___\";\n        // resultを表示\n        Console.WriteLine(___);\n    ___\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // null許容型の変数を定義\\\\n        string? value = null;\\\\n        // nullなら右側を返す演算子\\\\n        string result = value ?? \"default\";\\\\n        // resultを表示\\\\n        Console.WriteLine(result);\\\\n    }\\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // null許容型の変数を定義\\\\n        string? value = ___;\\\\n        // nullなら右側を返す演算子\\\\n        string result = value ?? \"___\";\\\\n        // resultを表示\\\\n        Console.WriteLine(___);\\\\n    ___\\\\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -563,7 +563,7 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "default\n"
+            "expected_output": "default\\\\n"
           }
         ]
       },
@@ -575,16 +575,16 @@ export const csharp4Data = {
         "tutorialSlides": [
           {
             "title": "record とは？",
-            "content": "# 不変データ型\n\n**record** は、イミュータブルなデータ型を簡潔に定義します。\n\n```csharp\nrecord Person(string Name, int Age);\n\nvar p = new Person(\"Alice\", 30);\n```"
+            "content": "# 不変データ型\\\\n\\\\n**record** は、イミュータブルなデータ型を簡潔に定義します。\\\\n\\\\n```csharp\\\\nrecord Person(string Name, int Age);\\\\n\\\\nvar p = new Person(\"Alice\", 30);\\\\n```"
           },
           {
             "title": "with 式",
-            "content": "# 一部を変更したコピー\n\n```csharp\nvar p2 = p with { Age = 31 };\n```"
+            "content": "# 一部を変更したコピー\\\\n\\\\n```csharp\\\\nvar p2 = p with { Age = 31 };\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// イミュータブルなデータ型を定義するキーワード\nrecord Point(int X, int Y);\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // Pointインスタンスを作成\n        var p = new Point(3, 4);\n        // pを表示\n        Console.WriteLine(p);\n    }\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// イミュータブルなデータ型を定義するキーワード\nrecord Point(int X, int ___);\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // Pointインスタンスを作成\n        var ___ = new Point(3, 4);\n        // pを表示\n        Console.WriteLine(___);\n    ___\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// イミュータブルなデータ型を定義するキーワード\\\\nrecord Point(int X, int Y);\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // Pointインスタンスを作成\\\\n        var p = new Point(3, 4);\\\\n        // pを表示\\\\n        Console.WriteLine(p);\\\\n    }\\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// イミュータブルなデータ型を定義するキーワード\\\\nrecord Point(int X, int ___);\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // Pointインスタンスを作成\\\\n        var ___ = new Point(3, 4);\\\\n        // pを表示\\\\n        Console.WriteLine(___);\\\\n    ___\\\\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -632,7 +632,7 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Point { X = 3, Y = 4 }\n"
+            "expected_output": "Point { X = 3, Y = 4 }\\\\n"
           }
         ]
       },
@@ -644,16 +644,16 @@ export const csharp4Data = {
         "tutorialSlides": [
           {
             "title": "init とは？",
-            "content": "# 初期化時のみ設定可能\n\n**init** アクセサは、オブジェクト初期化時のみ値を設定できます。\n\n```csharp\nclass Person {\n    public string Name { get; init; }\n}\n\nvar p = new Person { Name = \"Alice\" };\n// p.Name = \"Bob\";  // エラー！\n```"
+            "content": "# 初期化時のみ設定可能\\\\n\\\\n**init** アクセサは、オブジェクト初期化時のみ値を設定できます。\\\\n\\\\n```csharp\\\\nclass Person {\\\\n    public string Name { get; init; }\\\\n}\\\\n\\\\nvar p = new Person { Name = \"Alice\" };\\\\n// p.Name = \"Bob\";  // エラー！\\\\n```"
           },
           {
             "title": "不変性の確保",
-            "content": "# 作成後は読み取り専用\n\n```csharp\npublic int Id { get; init; }\npublic string Name { get; init; }\n```"
+            "content": "# 作成後は読み取り専用\\\\n\\\\n```csharp\\\\npublic int Id { get; init; }\\\\npublic string Name { get; init; }\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Itemクラスを定義\nclass Item {\n    // 初期化時のみ値を設定できるアクセサ\n    public string Name { get; init; }\n}\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // \"Apple\" を持つ Item インスタンスを作成\n        var item = new Item { Name = \"Apple\" };\n        // item.Nameを表示\n        Console.WriteLine(item.Name);\n    }\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Itemクラスを定義\nclass ___ {\n    // 初期化時のみ値を設定できるアクセサ\n    public string Name { get; ___; }\n___\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // \"Apple\" を持つ Item インスタンスを作成\n        var ___ = new Item { Name = \"Apple\" };\n        // item.Nameを表示\n        Console.___(item.Name);\n    ___\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// Itemクラスを定義\\\\nclass Item {\\\\n    // 初期化時のみ値を設定できるアクセサ\\\\n    public string Name { get; init; }\\\\n}\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // \"Apple\" を持つ Item インスタンスを作成\\\\n        var item = new Item { Name = \"Apple\" };\\\\n        // item.Nameを表示\\\\n        Console.WriteLine(item.Name);\\\\n    }\\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// Itemクラスを定義\\\\nclass ___ {\\\\n    // 初期化時のみ値を設定できるアクセサ\\\\n    public string Name { get; ___; }\\\\n___\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // \"Apple\" を持つ Item インスタンスを作成\\\\n        var ___ = new Item { Name = \"Apple\" };\\\\n        // item.Nameを表示\\\\n        Console.___(item.Name);\\\\n    ___\\\\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -707,7 +707,7 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Apple\n"
+            "expected_output": "Apple\\\\n"
           }
         ]
       }

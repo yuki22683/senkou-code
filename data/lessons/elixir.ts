@@ -14,19 +14,19 @@ export const elixirData = {
         "tutorialSlides": [
           {
             "title": "Elixir（エリクサー）とは？",
-            "content": "# 並列処理が得意な現代の言葉\n\nElixirは、大量のアクセスを同時に裁くのが得意なプログラミング言語です。リアルタイムのチャットや、たくさんの人が遊ぶオンラインゲームの裏側などで活躍しています。"
+            "content": "# 並列処理が得意な現代の言葉\\\\n\\\\nElixirは、大量のアクセスを同時に裁くのが得意なプログラミング言語です。リアルタイムのチャットや、たくさんの人が遊ぶオンラインゲームの裏側などで活躍しています。"
           },
           {
             "title": "画面に文字を出すには？",
-            "content": "# IO.puts（アイオー・プッツ）\n\n画面に文字を出したいときは、`IO.puts` という命令を使います。文字は `\" \"`（ダブルクォート）で囲んで入力しましょう。"
+            "content": "# IO.puts（アイオー・プッツ）\\\\n\\\\n画面に文字を出したいときは、`IO.puts` という命令を使います。文字は `\" \"`（ダブルクォート）で囲んで入力しましょう。"
           },
           {
             "title": "IO.puts を使いましょう",
-            "content": "# メッセージを表示します\n\n画面に文字を出したいときは、`IO.puts` と入力して、そのあとに表示したい文字を続けます。\n\n**コード例：**\n```elixir\nIO.puts \\\"Hello, Elixir!\\\"\n```"
+            "content": "# メッセージを表示します\\\\n\\\\n画面に文字を出したいときは、`IO.puts` と入力して、そのあとに表示したい文字を続けます。\\\\n\\\\n**コード例：**\\\\n```elixir\\\\nIO.puts \\\"Hello, Elixir!\\\"\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Hello, Elixir!を表示\nIO.puts \\\"Hello, Elixir!\\\"", "holeyCode": "# Hello, Elixir!を表示\nIO.puts \\\\\"___\\\\\"",
+        "correctCode": "# Hello, Elixir!を表示\\\\nIO.puts \\\"Hello, Elixir!\\\"", "holeyCode": "# Hello, Elixir!を表示\\\\nIO.puts \\\\\"___\\\\\"",
         "correctLines": [
           "# Hello, Elixir!を表示",
           "IO.puts \\\"Hello, Elixir!\\\""
@@ -44,7 +44,7 @@ export const elixirData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Elixir!\n"
+            "expected_output": "Hello, Elixir!\\\\n"
           }
         ]
       },
@@ -56,15 +56,15 @@ export const elixirData = {
         "tutorialSlides": [
           {
             "title": "変数（へんすう）とは？",
-            "content": "# データを保存する仕組み\n\nプログラムの中で数字や文字を使い回すために、名前をつけて保存する場所を **変数（へんすう）** と呼びます。"
+            "content": "# データを保存する仕組み\\\\n\\\\nプログラムの中で数字や文字を使い回すために、名前をつけて保存する場所を **変数（へんすう）** と呼びます。"
           },
           {
             "title": "名前をつけます",
-            "content": "# 変数（へんすう）の作りかた\n\n`名前 = 中身` と入力することで、データに名前をつけることができます。\n\n**コード例：**\n```elixir\ncount = 5\nIO.puts count\n```"
+            "content": "# 変数（へんすう）の作りかた\\\\n\\\\n`名前 = 中身` と入力することで、データに名前をつけることができます。\\\\n\\\\n**コード例：**\\\\n```elixir\\\\ncount = 5\\\\nIO.puts count\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 10を入力\nx = 10\n# xを入力\nIO.puts x", "holeyCode": "# 10を入力\nx = ___\n# xを入力\nIO.puts ___",
+        "correctCode": "# 10を入力\\\\nx = 10\\\\n# xを入力\\\\nIO.puts x", "holeyCode": "# 10を入力\\\\nx = ___\\\\n# xを入力\\\\nIO.puts ___",
         "correctLines": [
           "# 10を入力",
           "x = 10",
@@ -88,7 +88,7 @@ export const elixirData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\n"
+            "expected_output": "10\\\\n"
           }
         ]
       },
@@ -100,15 +100,15 @@ export const elixirData = {
         "tutorialSlides": [
           {
             "title": "計算はコンピュータにお任せ",
-            "content": "# 高速な計算処理\n\nコンピュータは人間よりもずっと速く計算できます。プログラミングでは、算数と同じ記号を使って計算の指示を出します。"
+            "content": "# 高速な計算処理\\\\n\\\\nコンピュータは人間よりもずっと速く計算できます。プログラミングでは、算数と同じ記号を使って計算の指示を出します。"
           },
           {
             "title": "計算の記号",
-            "content": "# 計算の記号\n\nElixirでも、こんな記号を使って計算をします。\n\n- **+** : たし算\n- **-** : ひき算\n- **\\*** : かけ算\n- **/** : わり算"
+            "content": "# 計算の記号\\\\n\\\\nElixirでも、こんな記号を使って計算をします。\\\\n\\\\n- **+** : たし算\\\\n- **-** : ひき算\\\\n- **\\*** : かけ算\\\\n- **/** : わり算"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 5を入力\na = 5\n# 3を入力\nb = 3\n# +でたし算\nIO.puts a + b", "holeyCode": "# 5を入力\na = ___\n# 3を入力\nb = ___\n# +でたし算\nIO.puts a + ___",
+        "correctCode": "# 5を入力\\\\na = 5\\\\n# 3を入力\\\\nb = 3\\\\n# +でたし算\\\\nIO.puts a + b", "holeyCode": "# 5を入力\\\\na = ___\\\\n# 3を入力\\\\nb = ___\\\\n# +でたし算\\\\nIO.puts a + ___",
         "correctLines": [
           "# 5を入力",
           "a = 5",
@@ -138,7 +138,7 @@ export const elixirData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "8\n"
+            "expected_output": "8\\\\n"
           }
         ]
       }

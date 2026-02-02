@@ -21,12 +21,12 @@ export const perlData = {
             "content": "# print（プリント）＝「印刷する」\n\n画面に文字を出したいときは、`print`（プリント＝印刷する）を使います。\n\n**書き方のルール：**\n1. `print` と書く\n2. 文字は `\" \"` で囲む\n3. 最後に `;`（セミコロン）をつける\n\n**大事なポイント：** Perlでは、命令の終わりに必ず `;` をつけます。日本語の「。」のようなものです。"
           },
           {
-            "title": "\n は改行の記号",
-            "content": "# 改行（かいぎょう）って何？\n\n`\n` は「改行」を意味する特別な記号です。\n\n**たとえば：** 作文で次の行に移るとき、Enterキーを押しますよね。`\n` はそれと同じ役割をします。\n\n**このコードは何をしているの？**\n```perl\nprint \"表示したい文字\n\";\n```\n\n**解説：**\n1. `print` で画面に出力\n2. \"表示したい文字\" が表示される\n3. `\n` で次の行に移動\n4. `;` で命令終了"
+            "title": "\\\\n は改行の記号",
+            "content": "# 改行（かいぎょう）って何？\n\n`\\n` は「改行」を意味する特別な記号です。\n\n**たとえば：** 作文で次の行に移るとき、Enterキーを押しますよね。`\\n` はそれと同じ役割をします。\n\n**このコードは何をしているの？**\n```perl\nprint \"表示したい文字\n\";\n```\n\n**解説：**\n1. `print` で画面に出力\n2. \"表示したい文字\" が表示される\n3. `\\n` で次の行に移動\n4. `;` で命令終了"
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標\n\n`print` を使って `Hello, World!` と表示させてみましょう。\n\n**完成形：**\n```perl\nprint \"Hello, World!\n\";\n```\n\n**チェックポイント：**\n- `print` は小文字で書く\n- 文字は `\"` で囲む\n- 最後に `\n` と `;` を忘れずに！"
+            "content": "# 目標\n\n`print` を使って `Hello, World!` と表示させてみましょう。\n\n**完成形：**\n```perl\nprint \"Hello, World!\n\";\n```\n\n**チェックポイント：**\n- `print` は小文字で書く\n- 文字は `\"` で囲む\n- 最後に `\\n` と `;` を忘れずに！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -233,13 +233,13 @@ export const perlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# @fruitsに(\"apple\", \"orange\", \"grape\")を代入\nmy @fruits = (\"apple\", \"orange\", \"grape\");\n# $fruits[0]をprintで出力\nprint \"$fruits[0]\\n\";",
-        "holeyCode": "# @fruitsに(\"apple\", \"orange\", \"grape\")を代入\nmy @___ = (\"apple\", \"orange\", \"grape\");\n# $fruits[0]をprintで出力\n___ \"$fruits[0]\\n\";",
+        "correctCode": "# @fruitsに(\"apple\", \"orange\", \"grape\")を代入\nmy @fruits = (\"apple\", \"orange\", \"grape\");\n# $fruits[0]をprintで出力\nprint \"$fruits[0]\n\";",
+        "holeyCode": "# @fruitsに(\"apple\", \"orange\", \"grape\")を代入\nmy @___ = (\"apple\", \"orange\", \"grape\");\n# $fruits[0]をprintで出力\n___ \"$fruits[0]\n\";",
         "correctLines": [
           "# @fruitsに(\"apple\", \"orange\", \"grape\")を代入",
           "my @fruits = (\"apple\", \"orange\", \"grape\");",
           "# $fruits[0]をprintで出力",
-          "print \"$fruits[0]\\n\";"
+          "print \"$fruits[0]\n\";"
         ],
         "lineHints": [
           null,
@@ -401,15 +401,15 @@ export const perlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# @animalsに(\"dog\", \"cat\", \"bird\")を代入\nmy @animals = (\"dog\", \"cat\", \"bird\");\n# foreachで@animalsをループ\nforeach my $animal (@animals) {\n  # $animalをprintで出力\n  print \"$animal\\n\";\n}",
-        "holeyCode": "# @animalsに(\"dog\", \"cat\", \"bird\")を代入\nmy @___ = (\"dog\", \"cat\", \"bird\");\n# foreachで@animalsをループ\nforeach my $animal (@___) {\n  # $animalをprintで出力\n  ___ \"$animal\\n\";\n}",
+        "correctCode": "# @animalsに(\"dog\", \"cat\", \"bird\")を代入\nmy @animals = (\"dog\", \"cat\", \"bird\");\n# foreachで@animalsをループ\nforeach my $animal (@animals) {\n  # $animalをprintで出力\n  print \"$animal\n\";\n}",
+        "holeyCode": "# @animalsに(\"dog\", \"cat\", \"bird\")を代入\nmy @___ = (\"dog\", \"cat\", \"bird\");\n# foreachで@animalsをループ\nforeach my $animal (@___) {\n  # $animalをprintで出力\n  ___ \"$animal\n\";\n}",
         "correctLines": [
           "# @animalsに(\"dog\", \"cat\", \"bird\")を代入",
           "my @animals = (\"dog\", \"cat\", \"bird\");",
           "# foreachで@animalsをループ",
           "foreach my $animal (@animals) {",
           "  # $animalをprintで出力",
-          "  print \"$animal\\n\";",
+          "  print \"$animal\n\";",
           "}"
         ],
         "lineHints": [

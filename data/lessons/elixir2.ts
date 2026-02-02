@@ -14,15 +14,15 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "パターンマッチとは？",
-            "content": "# = は代入ではない\n\nElixirの `=` は **マッチ演算子** です。左辺と右辺が一致するかを確認し、変数を束縛します。"
+            "content": "# = は代入ではない\\\\n\\\\nElixirの `=` は **マッチ演算子** です。左辺と右辺が一致するかを確認し、変数を束縛します。"
           },
           {
             "title": "パターンマッチの使い方",
-            "content": "# 構造で分解\n\nタプルやリストを分解して変数に代入できます。\n\n**コード例：**\n```elixir\n{a, b} = {1, 2}\n# a = 1, b = 2\n```"
+            "content": "# 構造で分解\\\\n\\\\nタプルやリストを分解して変数に代入できます。\\\\n\\\\n**コード例：**\\\\n```elixir\\\\n{a, b} = {1, 2}\\\\n# a = 1, b = 2\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# yでタプルの2番目を受け取る\n{x, y} = {10, 20}\n# xを入力\nIO.puts x", "holeyCode": "# yでタプルの2番目を受け取る\n{x, y} = {___, 20}\n# xを入力\nIO.puts ___",
+        "correctCode": "# yでタプルの2番目を受け取る\\\\n{x, y} = {10, 20}\\\\n# xを入力\\\\nIO.puts x", "holeyCode": "# yでタプルの2番目を受け取る\\\\n{x, y} = {___, 20}\\\\n# xを入力\\\\nIO.puts ___",
         "correctLines": [
           "# yでタプルの2番目を受け取る",
           "{x, y} = {10, 20}",
@@ -45,7 +45,7 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\n"
+            "expected_output": "10\\\\n"
           }
         ]
       },
@@ -57,15 +57,15 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "head | tail",
-            "content": "# リストの分解\n\n`[head | tail]` パターンで、リストの先頭と残りに分解できます。"
+            "content": "# リストの分解\\\\n\\\\n`[head | tail]` パターンで、リストの先頭と残りに分解できます。"
           },
           {
             "title": "| の使い方",
-            "content": "# 先頭と残り\n\n`|` の左が先頭要素、右が残りのリストです。\n\n**コード例：**\n```elixir\n[first | rest] = [1, 2, 3]\n# first = 1, rest = [2, 3]\n```"
+            "content": "# 先頭と残り\\\\n\\\\n`|` の左が先頭要素、右が残りのリストです。\\\\n\\\\n**コード例：**\\\\n```elixir\\\\n[first | rest] = [1, 2, 3]\\\\n# first = 1, rest = [2, 3]\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# |でリストを分解\n[head | tail] = [1, 2, 3]\n# headを入力\nIO.puts head", "holeyCode": "# |でリストを分解\n[head | tail] = [___, 2, 3]\n# headを入力\nIO.puts ___",
+        "correctCode": "# |でリストを分解\\\\n[head | tail] = [1, 2, 3]\\\\n# headを入力\\\\nIO.puts head", "holeyCode": "# |でリストを分解\\\\n[head | tail] = [___, 2, 3]\\\\n# headを入力\\\\nIO.puts ___",
         "correctLines": [
           "# |でリストを分解",
           "[head | tail] = [1, 2, 3]",
@@ -90,7 +90,7 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\n"
+            "expected_output": "1\\\\n"
           }
         ]
       },
@@ -102,15 +102,15 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "パイプ演算子とは？",
-            "content": "# データを流す\n\n**|>** は、左側の結果を右側の関数の第1引数に渡します。処理の流れが読みやすくなります。"
+            "content": "# データを流す\\\\n\\\\n**|>** は、左側の結果を右側の関数の第1引数に渡します。処理の流れが読みやすくなります。"
           },
           {
             "title": "|> の使い方",
-            "content": "# 連鎖させる\n\n複数の関数を連鎖させて処理できます。\n\n**コード例：**\n```elixir\n\"hello\"\n|> String.upcase()\n|> IO.puts()\n# HELLO\n```"
+            "content": "# 連鎖させる\\\\n\\\\n複数の関数を連鎖させて処理できます。\\\\n\\\\n**コード例：**\\\\n```elixir\\\\n\"hello\"\\\\n|> String.upcase()\\\\n|> IO.puts()\\\\n# HELLO\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 1..5で範囲を作成\n1..5\n# |>でパイプ\n|> Enum.sum()\n# |>でパイプ\n|> IO.puts()", "holeyCode": "# 1..5で範囲を作成\n___..5\n# |>でパイプ\n|> Enum.___()\n# |>でパイプ\n|> IO.___()",
+        "correctCode": "# 1..5で範囲を作成\\\\n1..5\\\\n# |>でパイプ\\\\n|> Enum.sum()\\\\n# |>でパイプ\\\\n|> IO.puts()", "holeyCode": "# 1..5で範囲を作成\\\\n___..5\\\\n# |>でパイプ\\\\n|> Enum.___()\\\\n# |>でパイプ\\\\n|> IO.___()",
         "correctLines": [
           "# 1..5で範囲を作成",
           "1..5",
@@ -139,7 +139,7 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\n"
+            "expected_output": "15\\\\n"
           }
         ]
       },
@@ -151,15 +151,15 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "Enum.map とは？",
-            "content": "# 各要素を変換\n\n**Enum.map** は、リストの各要素に関数を適用して新しいリストを作ります。"
+            "content": "# 各要素を変換\\\\n\\\\n**Enum.map** は、リストの各要素に関数を適用して新しいリストを作ります。"
           },
           {
             "title": "Enum.map の使い方",
-            "content": "# 無名関数を渡す\n\n`fn x -> x * 2 end` のような無名関数を渡します。\n\n**コード例：**\n```elixir\nEnum.map([1, 2, 3], fn x -> x * 2 end)\n# [2, 4, 6]\n```"
+            "content": "# 無名関数を渡す\\\\n\\\\n`fn x -> x * 2 end` のような無名関数を渡します。\\\\n\\\\n**コード例：**\\\\n```elixir\\\\nEnum.map([1, 2, 3], fn x -> x * 2 end)\\\\n# [2, 4, 6]\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# mapで各要素を変換\nresult = Enum.map([1, 2, 3], fn x -> x * x end)\n# resultを入力\nIO.inspect result", "holeyCode": "# mapで各要素を変換\nresult = Enum.map([1, 2, 3], fn x -> x * x end)\n# resultを入力\nIO.inspect ___",
+        "correctCode": "# mapで各要素を変換\\\\nresult = Enum.map([1, 2, 3], fn x -> x * x end)\\\\n# resultを入力\\\\nIO.inspect result", "holeyCode": "# mapで各要素を変換\\\\nresult = Enum.map([1, 2, 3], fn x -> x * x end)\\\\n# resultを入力\\\\nIO.inspect ___",
         "correctLines": [
           "# mapで各要素を変換",
           "result = Enum.map([1, 2, 3], fn x -> x * x end)",
@@ -186,7 +186,7 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1, 4, 9]\n"
+            "expected_output": "[1, 4, 9]\\\\n"
           }
         ]
       },
@@ -198,15 +198,15 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "Enum.filter とは？",
-            "content": "# 条件でフィルタ\n\n**Enum.filter** は、条件を満たす要素だけを残した新しいリストを作ります。"
+            "content": "# 条件でフィルタ\\\\n\\\\n**Enum.filter** は、条件を満たす要素だけを残した新しいリストを作ります。"
           },
           {
             "title": "Enum.filter の使い方",
-            "content": "# 真を返す要素を残す\n\n関数が真を返す要素だけが残ります。\n\n**コード例：**\n```elixir\nEnum.filter([1, 2, 3, 4, 5], fn x -> x > 3 end)\n# [4, 5]\n```"
+            "content": "# 真を返す要素を残す\\\\n\\\\n関数が真を返す要素だけが残ります。\\\\n\\\\n**コード例：**\\\\n```elixir\\\\nEnum.filter([1, 2, 3, 4, 5], fn x -> x > 3 end)\\\\n# [4, 5]\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# filterで条件に合う要素を抽出\nresult = Enum.filter([1, 2, 3, 4, 5], fn x -> x >= 3 end)\n# resultを入力\nIO.inspect result", "holeyCode": "# filterで条件に合う要素を抽出\nresult = Enum.filter([___, 2, 3, 4, 5], fn x -> x >= 3 end)\n# resultを入力\nIO.inspect ___",
+        "correctCode": "# filterで条件に合う要素を抽出\\\\nresult = Enum.filter([1, 2, 3, 4, 5], fn x -> x >= 3 end)\\\\n# resultを入力\\\\nIO.inspect result", "holeyCode": "# filterで条件に合う要素を抽出\\\\nresult = Enum.filter([___, 2, 3, 4, 5], fn x -> x >= 3 end)\\\\n# resultを入力\\\\nIO.inspect ___",
         "correctLines": [
           "# filterで条件に合う要素を抽出",
           "result = Enum.filter([1, 2, 3, 4, 5], fn x -> x >= 3 end)",
@@ -231,7 +231,7 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[3, 4, 5]\n"
+            "expected_output": "[3, 4, 5]\\\\n"
           }
         ]
       },
@@ -243,15 +243,15 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "case とは？",
-            "content": "# パターンで分岐\n\n**case** は、値をパターンとマッチさせて分岐する構文です。"
+            "content": "# パターンで分岐\\\\n\\\\n**case** は、値をパターンとマッチさせて分岐する構文です。"
           },
           {
             "title": "case の使い方",
-            "content": "# 複数のパターン\n\n`->` で各パターンの処理を書きます。\n\n**コード例：**\n```elixir\ncase x do\n  1 -> \"one\"\n  2 -> \"two\"\n  _ -> \"other\"\nend\n```"
+            "content": "# 複数のパターン\\\\n\\\\n`->` で各パターンの処理を書きます。\\\\n\\\\n**コード例：**\\\\n```elixir\\\\ncase x do\\\\n  1 -> \"one\"\\\\n  2 -> \"two\"\\\\n  _ -> \"other\"\\\\nend\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 2を入力\nx = 2\n# caseでパターンマッチ\nresult = case x do\n  1 -> \"one\"\n  2 -> \"two\"\n  _ -> \"other\"\nend\n# resultを入力\nIO.puts result", "holeyCode": "# 2を入力\nx = ___\n# caseでパターンマッチ\nresult = case x ___\n  1 -> \"___\"\n  2 -> \"___\"\n  _ -> \"___\"\n___\n# resultを入力\nIO.puts ___",
+        "correctCode": "# 2を入力\\\\nx = 2\\\\n# caseでパターンマッチ\\\\nresult = case x do\\\\n  1 -> \"one\"\\\\n  2 -> \"two\"\\\\n  _ -> \"other\"\\\\nend\\\\n# resultを入力\\\\nIO.puts result", "holeyCode": "# 2を入力\\\\nx = ___\\\\n# caseでパターンマッチ\\\\nresult = case x ___\\\\n  1 -> \"___\"\\\\n  2 -> \"___\"\\\\n  _ -> \"___\"\\\\n___\\\\n# resultを入力\\\\nIO.puts ___",
         "correctLines": [
           "# 2を入力",
           "x = 2",
@@ -291,7 +291,7 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "two\n"
+            "expected_output": "two\\\\n"
           }
         ]
       },
@@ -303,15 +303,15 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "defmodule と def",
-            "content": "# モジュールと関数\n\n**defmodule** でモジュールを定義し、**def** で公開関数を定義します。"
+            "content": "# モジュールと関数\\\\n\\\\n**defmodule** でモジュールを定義し、**def** で公開関数を定義します。"
           },
           {
             "title": "関数の定義",
-            "content": "# def 関数名 do ... end\n\nパターンマッチを使った複数の関数定義もできます。\n\n**コード例：**\n```elixir\ndefmodule Math do\n  def double(x), do: x * 2\nend\n```"
+            "content": "# def 関数名 do ... end\\\\n\\\\nパターンマッチを使った複数の関数定義もできます。\\\\n\\\\n**コード例：**\\\\n```elixir\\\\ndefmodule Math do\\\\n  def double(x), do: x * 2\\\\nend\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defmoduleでモジュールを定義\ndefmodule Calc do\n  # defで関数を定義\n  def triple(x), do: x * 3\nend\n# Calc.triple(4)を入力\nIO.puts Calc.triple(4)", "holeyCode": "# defmoduleでモジュールを定義\ndefmodule Calc ___\n  # defで関数を定義\n  def triple(x), do: x * ___\n___\n# Calc.triple(4)を入力\nIO.puts Calc.triple(___)",
+        "correctCode": "# defmoduleでモジュールを定義\\\\ndefmodule Calc do\\\\n  # defで関数を定義\\\\n  def triple(x), do: x * 3\\\\nend\\\\n# Calc.triple(4)を入力\\\\nIO.puts Calc.triple(4)", "holeyCode": "# defmoduleでモジュールを定義\\\\ndefmodule Calc ___\\\\n  # defで関数を定義\\\\n  def triple(x), do: x * ___\\\\n___\\\\n# Calc.triple(4)を入力\\\\nIO.puts Calc.triple(___)",
         "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Calc do",
@@ -343,7 +343,7 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "12\n"
+            "expected_output": "12\\\\n"
           }
         ]
       },
@@ -355,15 +355,15 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "再帰とは？",
-            "content": "# 自分自身を呼び出す\n\n**再帰** は、関数が自分自身を呼び出す手法です。ループの代わりに使います。"
+            "content": "# 自分自身を呼び出す\\\\n\\\\n**再帰** は、関数が自分自身を呼び出す手法です。ループの代わりに使います。"
           },
           {
             "title": "再帰の書き方",
-            "content": "# 終了条件を忘れずに\n\n必ず終了条件を設定します。\n\n**コード例：**\n```elixir\ndef sum(0), do: 0\ndef sum(n), do: n + sum(n - 1)\n```"
+            "content": "# 終了条件を忘れずに\\\\n\\\\n必ず終了条件を設定します。\\\\n\\\\n**コード例：**\\\\n```elixir\\\\ndef sum(0), do: 0\\\\ndef sum(n), do: n + sum(n - 1)\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defmoduleでモジュールを定義\ndefmodule Math do\n  def factorial(0), do: 1\n  # factorialを再帰的に呼び出す\n  def factorial(n), do: n * factorial(n - 1)\nend\n# Math.factorial(5)を入力\nIO.puts Math.factorial(5)", "holeyCode": "# defmoduleでモジュールを定義\ndefmodule Math ___\n  def factorial(___), do: 1\n  # factorialを再帰的に呼び出す\n  def factorial(n), do: n * factorial(n - ___)\n___\n# Math.factorial(5)を入力\nIO.puts Math.factorial(___)",
+        "correctCode": "# defmoduleでモジュールを定義\\\\ndefmodule Math do\\\\n  def factorial(0), do: 1\\\\n  # factorialを再帰的に呼び出す\\\\n  def factorial(n), do: n * factorial(n - 1)\\\\nend\\\\n# Math.factorial(5)を入力\\\\nIO.puts Math.factorial(5)", "holeyCode": "# defmoduleでモジュールを定義\\\\ndefmodule Math ___\\\\n  def factorial(___), do: 1\\\\n  # factorialを再帰的に呼び出す\\\\n  def factorial(n), do: n * factorial(n - ___)\\\\n___\\\\n# Math.factorial(5)を入力\\\\nIO.puts Math.factorial(___)",
         "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Math do",
@@ -397,7 +397,7 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "120\n"
+            "expected_output": "120\\\\n"
           }
         ]
       },
@@ -409,15 +409,15 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "プロセスとは？",
-            "content": "# 軽量な並行処理\n\nElixirの **プロセス** は、非常に軽量で大量に作成できます。`spawn` で新しいプロセスを作ります。"
+            "content": "# 軽量な並行処理\\\\n\\\\nElixirの **プロセス** は、非常に軽量で大量に作成できます。`spawn` で新しいプロセスを作ります。"
           },
           {
             "title": "spawn の使い方",
-            "content": "# 関数を渡す\n\n`spawn` に関数を渡すと、新しいプロセスで実行されます。\n\n**コード例：**\n```elixir\nspawn(fn -> IO.puts \"hello\" end)\n```"
+            "content": "# 関数を渡す\\\\n\\\\n`spawn` に関数を渡すと、新しいプロセスで実行されます。\\\\n\\\\n**コード例：**\\\\n```elixir\\\\nspawn(fn -> IO.puts \"hello\" end)\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# spawnでプロセスを作成\nspawn(fn -> IO.puts \"hello\" end)\n# 100を入力\nProcess.sleep(100)", "holeyCode": "# spawnでプロセスを作成\nspawn(fn -> IO.puts \"___\" end)\n# 100を入力\nProcess.sleep(___)",
+        "correctCode": "# spawnでプロセスを作成\\\\nspawn(fn -> IO.puts \"hello\" end)\\\\n# 100を入力\\\\nProcess.sleep(100)", "holeyCode": "# spawnでプロセスを作成\\\\nspawn(fn -> IO.puts \"___\" end)\\\\n# 100を入力\\\\nProcess.sleep(___)",
         "correctLines": [
           "# spawnでプロセスを作成",
           "spawn(fn -> IO.puts \"hello\" end)",
@@ -442,7 +442,7 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello\n"
+            "expected_output": "hello\\\\n"
           }
         ]
       },
@@ -454,15 +454,15 @@ export const elixir2Data = {
         "tutorialSlides": [
           {
             "title": "send と receive",
-            "content": "# プロセス間通信\n\n**send** でメッセージを送り、**receive** で受け取ります。アクターモデルの基本です。"
+            "content": "# プロセス間通信\\\\n\\\\n**send** でメッセージを送り、**receive** で受け取ります。アクターモデルの基本です。"
           },
           {
             "title": "メッセージの送受信",
-            "content": "# self() で自分のPID\n\n`self()` で自分のプロセスIDを取得できます。\n\n**コード例：**\n```elixir\nsend(self(), :hello)\nreceive do\n  :hello -> IO.puts \"got hello\"\nend\n```"
+            "content": "# self() で自分のPID\\\\n\\\\n`self()` で自分のプロセスIDを取得できます。\\\\n\\\\n**コード例：**\\\\n```elixir\\\\nsend(self(), :hello)\\\\nreceive do\\\\n  :hello -> IO.puts \"got hello\"\\\\nend\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# sendでメッセージを送る\nsend(self(), {:msg, 42})\n# receiveでメッセージを受け取る\nreceive do\n  {:msg, n} -> IO.puts n\nend", "holeyCode": "# sendでメッセージを送る\nsend(self(), {:msg, ___})\n# receiveでメッセージを受け取る\nreceive ___\n  {:msg, ___} -> IO.puts n\n___",
+        "correctCode": "# sendでメッセージを送る\\\\nsend(self(), {:msg, 42})\\\\n# receiveでメッセージを受け取る\\\\nreceive do\\\\n  {:msg, n} -> IO.puts n\\\\nend", "holeyCode": "# sendでメッセージを送る\\\\nsend(self(), {:msg, ___})\\\\n# receiveでメッセージを受け取る\\\\nreceive ___\\\\n  {:msg, ___} -> IO.puts n\\\\n___",
         "correctLines": [
           "# sendでメッセージを送る",
           "send(self(), {:msg, 42})",
@@ -491,7 +491,7 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42\n"
+            "expected_output": "42\\\\n"
           }
         ]
       }
