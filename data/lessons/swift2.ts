@@ -410,14 +410,14 @@ export const swift2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 配列を作成\nlet nums = [1, 2, 3]\n// mapで各要素を変換\nlet squared = nums.map { $0 * $0 }\n// squaredを出力\nprint(squared)",
-        "holeyCode": "// 配列を作成\nlet ___ = [1, 2, 3]\n// mapで各要素を変換\nlet ___ = nums.map { $0 * $0 }\n// squaredを出力\nprint(___)",
+        "correctCode": "// numsに[1, 2, 3]を代入\nlet nums = [1, 2, 3]\n// nums.mapで各要素を2乗しsquaredに代入\nlet squared = nums.map { $0 * $0 }\n// squaredをprintで出力\nprint(squared)",
+        "holeyCode": "// numsに[1, 2, 3]を代入\nlet ___ = [1, 2, 3]\n// nums.mapで各要素を2乗しsquaredに代入\nlet ___ = nums.map { $0 * $0 }\n// squaredをprintで出力\nprint(___)",
         "correctLines": [
-          "// 配列を作成",
+          "// numsに[1, 2, 3]を代入",
           "let nums = [1, 2, 3]",
-          "// mapで各要素を変換",
+          "// nums.mapで各要素を2乗しsquaredに代入",
           "let squared = nums.map { $0 * $0 }",
-          "// squaredを出力",
+          "// squaredをprintで出力",
           "print(squared)"
         ],
         "lineHints": [
@@ -461,14 +461,14 @@ export const swift2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 配列を作成\nlet nums = [1, 2, 3, 4, 5]\n// filterで条件に合う要素を抽出\nlet result = nums.filter { $0 >= 3 }\n// resultを出力\nprint(result)",
-        "holeyCode": "// 配列を作成\nlet ___ = [1, 2, 3, 4, 5]\n// filterで条件に合う要素を抽出\nlet ___ = nums.filter { $0 >= 3 }\n// resultを出力\nprint(___)",
+        "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\nlet nums = [1, 2, 3, 4, 5]\n// nums.filterで3以上を抽出しresultに代入\nlet result = nums.filter { $0 >= 3 }\n// resultをprintで出力\nprint(result)",
+        "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\nlet ___ = [1, 2, 3, 4, 5]\n// nums.filterで3以上を抽出しresultに代入\nlet ___ = nums.filter { $0 >= 3 }\n// resultをprintで出力\nprint(___)",
         "correctLines": [
-          "// 配列を作成",
+          "// numsに[1, 2, 3, 4, 5]を代入",
           "let nums = [1, 2, 3, 4, 5]",
-          "// filterで条件に合う要素を抽出",
+          "// nums.filterで3以上を抽出しresultに代入",
           "let result = nums.filter { $0 >= 3 }",
-          "// resultを出力",
+          "// resultをprintで出力",
           "print(result)"
         ],
         "lineHints": [

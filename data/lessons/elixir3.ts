@@ -136,11 +136,11 @@ export const elixir3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# リストを定義\nnumbers = [1, 2, 3, 4, 5]\n# reduceで畳み込み\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)", "holeyCode": "# リストを定義\nnumbers = [___, 2, 3, 4, 5]\n# reduceで畳み込み\nsum = Enum.reduce(numbers, ___, fn x, acc -> x + acc end)",
+        "correctCode": "# numbersに[1, 2, 3, 4, 5]を代入\nnumbers = [1, 2, 3, 4, 5]\n# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)", "holeyCode": "# numbersに[1, 2, 3, 4, 5]を代入\nnumbers = [___, 2, 3, 4, 5]\n# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入\nsum = Enum.reduce(numbers, ___, fn x, acc -> x + acc end)",
         "correctLines": [
-          "# リストを定義",
+          "# numbersに[1, 2, 3, 4, 5]を代入",
           "numbers = [1, 2, 3, 4, 5]",
-          "# reduceで畳み込み",
+          "# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入",
           "sum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)"
         ],
         "lineHints": [

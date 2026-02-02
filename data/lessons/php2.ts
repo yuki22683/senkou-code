@@ -341,15 +341,15 @@ export const php2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\n// 配列を定義\n$nums = [1, 2, 3, 4, 5];\n// array_filterで条件に合う要素を抽出\n$result = array_filter($nums, fn($n) => $n >= 3);\n// print_rで配列を出力\nprint_r($result);\n?>",
-        "holeyCode": "___\n// 配列を定義\n$___ = [___];\n// array_filterで条件に合う要素を抽出\n$result = array_filter($nums, fn($n) => $n >= ___);\n// print_rで配列を出力\nprint_r($___);\n___",
+        "correctCode": "<?php\n// $numsに[1, 2, 3, 4, 5]を代入\n$nums = [1, 2, 3, 4, 5];\n// array_filterで3以上を抽出し$resultに代入\n$result = array_filter($nums, fn($n) => $n >= 3);\n// $resultをprint_rで出力\nprint_r($result);\n?>",
+        "holeyCode": "___\n// $numsに[1, 2, 3, 4, 5]を代入\n$___ = [___];\n// array_filterで3以上を抽出し$resultに代入\n$result = array_filter($nums, fn($n) => $n >= ___);\n// $resultをprint_rで出力\nprint_r($___);\n___",
         "correctLines": [
           "<?php",
-          "// 配列を定義",
+          "// $numsに[1, 2, 3, 4, 5]を代入",
           "$nums = [1, 2, 3, 4, 5];",
-          "// array_filterで条件に合う要素を抽出",
+          "// array_filterで3以上を抽出し$resultに代入",
           "$result = array_filter($nums, fn($n) => $n >= 3);",
-          "// print_rで配列を出力",
+          "// $resultをprint_rで出力",
           "print_r($result);",
           "?>"
         ],

@@ -202,18 +202,18 @@ export const swift4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// <T>で型パラメータを定義\nfunc first<T>(_ array: [T]) -> T? {\n    // 最初の要素を返す\n    return array.first\n}\n\n// 配列を作成\nlet nums = [10, 20, 30]\n// 最初の要素を出力\nprint(first(nums) ?? 0)",
-        "holeyCode": "// <T>で型パラメータを定義\nfunc first<___>(_ array: [T]) -> T? {\n    // 最初の要素を返す\n    return array.___\n___\n\n// 配列を作成\nlet ___ = [10, 20, 30]\n// 最初の要素を出力\nprint(first(nums) ?? ___)",
+        "correctCode": "// <T>で型パラメータを定義\nfunc first<T>(_ array: [T]) -> T? {\n    // array.firstを返す\n    return array.first\n}\n\n// numsに[10, 20, 30]を代入\nlet nums = [10, 20, 30]\n// first(nums) ?? 0をprintで出力\nprint(first(nums) ?? 0)",
+        "holeyCode": "// <T>で型パラメータを定義\nfunc first<___>(_ array: [T]) -> T? {\n    // array.firstを返す\n    return array.___\n___\n\n// numsに[10, 20, 30]を代入\nlet ___ = [10, 20, 30]\n// first(nums) ?? 0をprintで出力\nprint(first(nums) ?? ___)",
         "correctLines": [
           "// <T>で型パラメータを定義",
           "func first<T>(_ array: [T]) -> T? {",
-          "    // 最初の要素を返す",
+          "    // array.firstを返す",
           "    return array.first",
           "}",
           "",
-          "// 配列を作成",
+          "// numsに[10, 20, 30]を代入",
           "let nums = [10, 20, 30]",
-          "// 最初の要素を出力",
+          "// first(nums) ?? 0をprintで出力",
           "print(first(nums) ?? 0)"
         ],
         "lineHints": [

@@ -262,14 +262,14 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数を初期化\ni=1\n# 条件が真の間繰り返すキーワード\nwhile [ $i -le 3 ]; do\n    # 変数を表示\n    echo $i\n    # iを1増やす\n    i=$((i + 1))\ndone",
-        "holeyCode": "# 変数を初期化\ni=___\n# 条件が真の間繰り返すキーワード\n___ [ $i -le 3 ]; do\n    # 変数を表示\n    echo $___\n    # iを1増やす\n    i=$((___ + 1))\ndone",
+        "correctCode": "# iを1で初期化\ni=1\n# 条件が真の間繰り返すキーワード\nwhile [ $i -le 3 ]; do\n    # $iをechoで出力\n    echo $i\n    # iを1増やす\n    i=$((i + 1))\ndone",
+        "holeyCode": "# iを1で初期化\ni=___\n# 条件が真の間繰り返すキーワード\n___ [ $i -le 3 ]; do\n    # $iをechoで出力\n    echo $___\n    # iを1増やす\n    i=$((___ + 1))\ndone",
         "correctLines": [
-          "# 変数を初期化",
+          "# iを1で初期化",
           "i=1",
           "# 条件が真の間繰り返すキーワード",
           "while [ $i -le 3 ]; do",
-          "    # 変数を表示",
+          "    # $iをechoで出力",
           "    echo $i",
           "    # iを1増やす",
           "    i=$((i + 1))",

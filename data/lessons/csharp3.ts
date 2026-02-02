@@ -389,8 +389,8 @@ export const csharp3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // 変数を定義\n        int n = 2;\n        // switchで式を分岐\n        var result = n switch {\n            // 1の場合\n            1 => \"one\",\n            // 2の場合\n            2 => \"two\",\n            // その他の場合\n            _ => \"other\"\n        };\n        // resultを表示\n        Console.WriteLine(result);\n    }\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 変数を定義\n        int n = ___;\n        // switchで式を分岐\n        var ___ = n switch {\n            // 1の場合\n            1 => \"___\",\n            // 2の場合\n            2 => \"___\",\n            // その他の場合\n            _ => \"___\"\n        ___\n        // resultを表示\n        Console.WriteLine(___);\n    ___\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // nを2で初期化\n        int n = 2;\n        // switchでnを分岐しresultに代入\n        var result = n switch {\n            // 1の場合\n            1 => \"one\",\n            // 2の場合\n            2 => \"two\",\n            // その他の場合\n            _ => \"other\"\n        };\n        // resultをWriteLineで出力\n        Console.WriteLine(result);\n    }\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\nusing ___;\n\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // nを2で初期化\n        int n = ___;\n        // switchでnを分岐しresultに代入\n        var ___ = n switch {\n            // 1の場合\n            1 => \"___\",\n            // 2の場合\n            2 => \"___\",\n            // その他の場合\n            _ => \"___\"\n        ___\n        // resultをWriteLineで出力\n        Console.WriteLine(___);\n    ___\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -399,9 +399,9 @@ export const csharp3Data = {
           "class Program {",
           "    // Mainメソッドを定義",
           "    static void Main() {",
-          "        // 変数を定義",
+          "        // nを2で初期化",
           "        int n = 2;",
-          "        // switchで式を分岐",
+          "        // switchでnを分岐しresultに代入",
           "        var result = n switch {",
           "            // 1の場合",
           "            1 => \"one\",",
@@ -410,7 +410,7 @@ export const csharp3Data = {
           "            // その他の場合",
           "            _ => \"other\"",
           "        };",
-          "        // resultを表示",
+          "        // resultをWriteLineで出力",
           "        Console.WriteLine(result);",
           "    }",
           "}"
