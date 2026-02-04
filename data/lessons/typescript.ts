@@ -26,10 +26,10 @@ export const typescriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 文字を入れるためのラベルを貼ったはこを作る\\\\nconst message: string = 'Hello TS';\\\\n// はこの中身を出す\\\\nconsole.log(message);",
-        "holeyCode": "// 文字を入れるためのラベルを貼ったはこを作る\\\\nconst message: ___ = '___';\\\\n// はこの中身を出す\\\\nconsole.log(___);",
+        "correctCode": "// messageに'Hello TS'を代入（型: string）\\\\nconst message: string = 'Hello TS';\\\\n// はこの中身を出す\\\\nconsole.log(message);",
+        "holeyCode": "// messageに'Hello TS'を代入（型: string）\\\\nconst message: ___ = '___';\\\\n// はこの中身を出す\\\\nconsole.log(___);",
         "correctLines": [
-          "// 文字を入れるためのラベルを貼ったはこを作る",
+          "// messageに'Hello TS'を代入（型: string）",
           "const message: string = 'Hello TS';",
           "// はこの中身を出す",
           "console.log(message);"
@@ -574,12 +574,12 @@ export const typescriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// nameは文字列であるUserという名前のラベルを作る\\\\ntype User = { name: string };\\\\n// Userラベルを貼ったはこを作る\\\\nconst user: User = { name: 'たろう' };\\\\n// nameプロパティを出す\\\\nconsole.log(user.name);",
-        "holeyCode": "// nameは文字列であるUserという名前のラベルを作る\\\\ntype User = { name: ___ };\\\\n// Userラベルを貼ったはこを作る\\\\nconst user: ___ = { name: 'たろう' };\\\\n// nameプロパティを出す\\\\nconsole.log(user.___);",
+        "correctCode": "// User型を定義（nameはstring）\\\\ntype User = { name: string };\\\\n// userに{ name: 'たろう' }を代入\\\\nconst user: User = { name: 'たろう' };\\\\n// nameプロパティを出す\\\\nconsole.log(user.name);",
+        "holeyCode": "// User型を定義（nameはstring）\\\\ntype User = { name: ___ };\\\\n// userに{ name: 'たろう' }を代入\\\\nconst user: ___ = { name: 'たろう' };\\\\n// nameプロパティを出す\\\\nconsole.log(user.___);",
         "correctLines": [
-          "// nameは文字列であるUserという名前のラベルを作る",
+          "// User型を定義（nameはstring）",
           "type User = { name: string };",
-          "// Userラベルを貼ったはこを作る",
+          "// userに{ name: 'たろう' }を代入",
           "const user: User = { name: 'たろう' };",
           "// nameプロパティを出す",
           "console.log(user.name);"

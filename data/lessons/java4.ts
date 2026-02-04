@@ -168,8 +168,8 @@ export const javaData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "import java.util.*;\\\\n\\\\npublic class Main {\\\\n    // ? で任意の型を表すワイルドカード\\\\n    public static void printAll(List<?> list) {\\\\n        for (Object item : list) {\\\\n            // println で出力する\\\\n            System.out.println(item);\\\\n        }\\\\n    }\\\\n    public static void main(String[] args) {\\\\n        // asList でリストを作成する\\\\n        List<String> names = Arrays.asList(\"A\", \"B\");\\\\n        // printAll メソッドを呼び出す\\\\n        printAll(names);\\\\n    }\\\\n}",
-        "holeyCode": "import java.util.___\\\\n\\\\npublic class ___ {\\\\n    // ? で任意の型を表すワイルドカード\\\\n    public static void printAll(List<?> ___) {\\\\n        for (Object ___ : list) {\\\\n            // println で出力する\\\\n            System.out.___(item);\\\\n        ___\\\\n    ___\\\\n    public static void ___\\(String[] args) {\\\\n        // asList でリストを作成する\\\\n        List<String> names = Arrays.asList(\"___\", \"B\");\\\\n        // printAll メソッドを呼び出す\\\\n        printAll(___);\\\\n    ___\\\\n___",
+        "correctCode": "import java.util.*;\\\\n\\\\npublic class Main {\\\\n    // ? で任意の型を表すワイルドカード\\\\n    public static void printAll(List<?> list) {\\\\n        for (Object item : list) {\\\\n            // println で出力する\\\\n            System.out.println(item);\\\\n        }\\\\n    }\\\\n    public static void main(String[] args) {\\\\n        // namesに[\"A\", \"B\"]を代入\\\\n        List<String> names = Arrays.asList(\"A\", \"B\");\\\\n        // printAll メソッドを呼び出す\\\\n        printAll(names);\\\\n    }\\\\n}",
+        "holeyCode": "import java.util.___\\\\n\\\\npublic class ___ {\\\\n    // ? で任意の型を表すワイルドカード\\\\n    public static void printAll(List<?> ___) {\\\\n        for (Object ___ : list) {\\\\n            // println で出力する\\\\n            System.out.___(item);\\\\n        ___\\\\n    ___\\\\n    public static void ___\\(String[] args) {\\\\n        // namesに[\"A\", \"B\"]を代入\\\\n        List<String> names = Arrays.asList(\"___\", \"B\");\\\\n        // printAll メソッドを呼び出す\\\\n        printAll(___);\\\\n    ___\\\\n___",
         "correctLines": [
           "import java.util.*;",
           "",
@@ -182,7 +182,7 @@ export const javaData4 = {
           "        }",
           "    }",
           "    public static void main(String[] args) {",
-          "        // asList でリストを作成する",
+          "        // namesに[\"A\", \"B\"]を代入",
           "        List<String> names = Arrays.asList(\"A\", \"B\");",
           "        // printAll メソッドを呼び出す",
           "        printAll(names);",
@@ -383,14 +383,14 @@ export const javaData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "import java.util.*;\\\\n\\\\npublic class Main {\\\\n    public static void main(String[] args) {\\\\n        // new と asList でリストを作成する\\\\n        List<String> words = new ArrayList<>(Arrays.asList(\"cat\", \"a\", \"elephant\"));\\\\n        // comparing でプロパティを基準に比較する\\\\n        words.sort(Comparator.comparing(String::length));\\\\n        // println で出力する\\\\n        System.out.println(words);\\\\n    }\\\\n}",
-        "holeyCode": "import java.util.___\\\\n\\\\npublic class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // new と asList でリストを作成する\\\\n        List<String> words = new ArrayList<>(Arrays.asList(\"___\", \"a\", \"elephant\"));\\\\n        // comparing でプロパティを基準に比較する\\\\n        words.sort(Comparator.comparing(String::___));\\\\n        // println で出力する\\\\n        System.out.___(words);\\\\n    ___\\\\n___",
+        "correctCode": "import java.util.*;\\\\n\\\\npublic class Main {\\\\n    public static void main(String[] args) {\\\\n        // wordsに[\"cat\", \"a\", \"elephant\"]を代入\\\\n        List<String> words = new ArrayList<>(Arrays.asList(\"cat\", \"a\", \"elephant\"));\\\\n        // comparing でプロパティを基準に比較する\\\\n        words.sort(Comparator.comparing(String::length));\\\\n        // println で出力する\\\\n        System.out.println(words);\\\\n    }\\\\n}",
+        "holeyCode": "import java.util.___\\\\n\\\\npublic class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // wordsに[\"cat\", \"a\", \"elephant\"]を代入\\\\n        List<String> words = new ArrayList<>(Arrays.asList(\"___\", \"a\", \"elephant\"));\\\\n        // comparing でプロパティを基準に比較する\\\\n        words.sort(Comparator.comparing(String::___));\\\\n        // println で出力する\\\\n        System.out.___(words);\\\\n    ___\\\\n___",
         "correctLines": [
           "import java.util.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // new と asList でリストを作成する",
+          "        // wordsに[\"cat\", \"a\", \"elephant\"]を代入",
           "        List<String> words = new ArrayList<>(Arrays.asList(\"cat\", \"a\", \"elephant\"));",
           "        // comparing でプロパティを基準に比較する",
           "        words.sort(Comparator.comparing(String::length));",
@@ -447,8 +447,8 @@ export const javaData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "import java.util.*;\\\\n\\\\n// Comparable を実装して自然順序を定義する\\\\nclass Score implements Comparable<Score> {\\\\n    int value;\\\\n    Score(int v) { value = v; }\\\\n    public int compareTo(Score other) {\\\\n        // return で比較結果を返す\\\\n        return this.value - other.value;\\\\n    }\\\\n}\\\\n\\\\npublic class Main {\\\\n    public static void main(String[] args) {\\\\n        // asList でリストを作成する\\\\n        List<Score> scores = Arrays.asList(new Score(80), new Score(60));\\\\n        // sort でソートする\\\\n        Collections.sort(scores);\\\\n        // get で要素を取得する\\\\n        System.out.println(scores.get(0).value);\\\\n    }\\\\n}",
-        "holeyCode": "import java.util.___\\\\n\\\\n// Comparable を実装して自然順序を定義する\\\\nclass ___ implements Comparable<Score> {\\\\n    int ___;\\\\n    ___(int v) { value = v; }\\\\n    public int ___(Score other) {\\\\n        // return で比較結果を返す\\\\n        return this.___ - other.value;\\\\n    ___\\\\n___\\\\n\\\\npublic class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // asList でリストを作成する\\\\n        List<Score> scores = Arrays.asList(new Score(___), new Score(60));\\\\n        // sort でソートする\\\\n        Collections.sort(___);\\\\n        // get で要素を取得する\\\\n        System.out.___(scores.get(0).value);\\\\n    ___\\\\n___",
+        "correctCode": "import java.util.*;\\\\n\\\\n// Comparable を実装して自然順序を定義する\\\\nclass Score implements Comparable<Score> {\\\\n    int value;\\\\n    Score(int v) { value = v; }\\\\n    public int compareTo(Score other) {\\\\n        // return で比較結果を返す\\\\n        return this.value - other.value;\\\\n    }\\\\n}\\\\n\\\\npublic class Main {\\\\n    public static void main(String[] args) {\\\\n        // scoresに[Score(80), Score(60)]を代入\\\\n        List<Score> scores = Arrays.asList(new Score(80), new Score(60));\\\\n        // sort でソートする\\\\n        Collections.sort(scores);\\\\n        // get で要素を取得する\\\\n        System.out.println(scores.get(0).value);\\\\n    }\\\\n}",
+        "holeyCode": "import java.util.___\\\\n\\\\n// Comparable を実装して自然順序を定義する\\\\nclass ___ implements Comparable<Score> {\\\\n    int ___;\\\\n    ___(int v) { value = v; }\\\\n    public int ___(Score other) {\\\\n        // return で比較結果を返す\\\\n        return this.___ - other.value;\\\\n    ___\\\\n___\\\\n\\\\npublic class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // scoresに[Score(80), Score(60)]を代入\\\\n        List<Score> scores = Arrays.asList(new Score(___), new Score(60));\\\\n        // sort でソートする\\\\n        Collections.sort(___);\\\\n        // get で要素を取得する\\\\n        System.out.___(scores.get(0).value);\\\\n    ___\\\\n___",
         "correctLines": [
           "import java.util.*;",
           "",
@@ -464,7 +464,7 @@ export const javaData4 = {
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // asList でリストを作成する",
+          "        // scoresに[Score(80), Score(60)]を代入",
           "        List<Score> scores = Arrays.asList(new Score(80), new Score(60));",
           "        // sort でソートする",
           "        Collections.sort(scores);",
