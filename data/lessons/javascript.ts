@@ -65,12 +65,12 @@ export const javascriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// nameという名前のはこを作る\nconst name = 'JavaScript';\n// はこの中身を出す\nconsole.log(name);",
-        "holeyCode": "// nameという名前のはこを作る\nconst name = '___';\n// はこの中身を出す\nconsole.log(___);",
+        "correctCode": "// nameに'JavaScript'を代入\nconst name = 'JavaScript';\n// nameを出力\nconsole.log(name);",
+        "holeyCode": "// nameに'JavaScript'を代入\nconst name = '___';\n// nameを出力\nconsole.log(___);",
         "correctLines": [
-          "// nameという名前のはこを作る",
+          "// nameに'JavaScript'を代入",
           "const name = 'JavaScript';",
-          "// はこの中身を出す",
+          "// nameを出力",
           "console.log(name);"
         ],
         "lineHints": [
