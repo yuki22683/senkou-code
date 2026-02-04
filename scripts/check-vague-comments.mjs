@@ -135,7 +135,7 @@ for (const file of files) {
   // correctCodeをチェック
   const codeMatches = content.matchAll(/"correctCode":\s*"((?:[^"\\]|\\.)*)"/g);
   for (const m of codeMatches) {
-    const code = m[1].replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'");
+    const code = m[1].replace(/\\\\n/g, '\n').replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'");
     const issues = checkForVagueComments(code, file, 'correctCode');
 
     if (issues.length > 0) {
@@ -154,7 +154,7 @@ for (const file of files) {
   // holeyCodeをチェック
   const holeyMatches = content.matchAll(/"holeyCode":\s*"((?:[^"\\]|\\.)*)"/g);
   for (const m of holeyMatches) {
-    const code = m[1].replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'");
+    const code = m[1].replace(/\\\\n/g, '\n').replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\'/g, "'");
     const issues = checkForVagueComments(code, file, 'holeyCode');
 
     if (issues.length > 0) {
