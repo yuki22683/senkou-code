@@ -266,8 +266,8 @@ export const cpp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <algorithm>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // vector で配列を作成\\\\n    vector<int> v = {1, 2, 3};\\\\n    // transform で各要素を変換\\\\n    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });\\\\n    for (int n : v) cout << n << \" \";\\\\n    cout << endl;\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <algorithm>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // vector で配列を作成\\\\n    vector<int> v = {___, 2, 3};\\\\n    // transform で各要素を変換\\\\n    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * ___; });\\\\n    for (int ___ : v) cout << n << \" \";\\\\n    cout << ___;\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <algorithm>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // vに{1, 2, 3}を代入\\\\n    vector<int> v = {1, 2, 3};\\\\n    // transform で各要素を変換\\\\n    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });\\\\n    for (int n : v) cout << n << \" \";\\\\n    cout << endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <algorithm>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // vに{1, 2, 3}を代入\\\\n    vector<int> v = {___, 2, 3};\\\\n    // transform で各要素を変換\\\\n    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * ___; });\\\\n    for (int ___ : v) cout << n << \" \";\\\\n    cout << ___;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <vector>",
@@ -275,7 +275,7 @@ export const cpp4Data = {
           "using namespace std;",
           "",
           "int main() {",
-          "    // vector で配列を作成",
+          "    // vに{1, 2, 3}を代入",
           "    vector<int> v = {1, 2, 3};",
           "    // transform で各要素を変換",
           "    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });",
@@ -331,8 +331,8 @@ export const cpp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <numeric>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // vector で配列を作成\\\\n    vector<int> v = {1, 2, 3, 4, 5};\\\\n    // accumulate で要素を集約\\\\n    int sum = accumulate(v.begin(), v.end(), 0);\\\\n    cout << sum << endl;\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <numeric>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // vector で配列を作成\\\\n    vector<int> v = {___, 2, 3, 4, 5};\\\\n    // accumulate で要素を集約\\\\n    int sum = accumulate(v.begin(), v.end(), ___);\\\\n    cout << sum << ___;\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <numeric>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // vに{1, 2, 3, 4, 5}を代入\\\\n    vector<int> v = {1, 2, 3, 4, 5};\\\\n    // accumulate で要素を集約\\\\n    int sum = accumulate(v.begin(), v.end(), 0);\\\\n    cout << sum << endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <numeric>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // vに{1, 2, 3, 4, 5}を代入\\\\n    vector<int> v = {___, 2, 3, 4, 5};\\\\n    // accumulate で要素を集約\\\\n    int sum = accumulate(v.begin(), v.end(), ___);\\\\n    cout << sum << ___;\\\\n    return ___;\\\\n___",
         "correctLines": [
                   "#include <iostream>",
                   "#include <vector>",
@@ -340,7 +340,7 @@ export const cpp4Data = {
                   "using namespace std;",
                   "",
                   "int main() {",
-                  "    // vector で配列を作成",
+                  "    // vに{1, 2, 3, 4, 5}を代入",
                   "    vector<int> v = {1, 2, 3, 4, 5};",
                   "    // accumulate で要素を集約",
                   "    int sum = accumulate(v.begin(), v.end(), 0);",
@@ -394,8 +394,8 @@ export const cpp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <algorithm>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // vector で配列を作成\\\\n    vector<int> v = {1, 2, 3, 4, 5};\\\\n    // find_if で条件に合う要素を検索\\\\n    auto it = find_if(v.begin(), v.end(), [](int x) { return x > 3; });\\\\n    cout << *it << endl;\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <algorithm>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // vector で配列を作成\\\\n    vector<int> v = {___, 2, 3, 4, 5};\\\\n    // find_if で条件に合う要素を検索\\\\n    auto it = find_if(v.begin(), v.end(), [](int x) { return x > ___; });\\\\n    cout << *it << ___;\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <algorithm>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // vに{1, 2, 3, 4, 5}を代入\\\\n    vector<int> v = {1, 2, 3, 4, 5};\\\\n    // find_if で条件に合う要素を検索\\\\n    auto it = find_if(v.begin(), v.end(), [](int x) { return x > 3; });\\\\n    cout << *it << endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <algorithm>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // vに{1, 2, 3, 4, 5}を代入\\\\n    vector<int> v = {___, 2, 3, 4, 5};\\\\n    // find_if で条件に合う要素を検索\\\\n    auto it = find_if(v.begin(), v.end(), [](int x) { return x > ___; });\\\\n    cout << *it << ___;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <vector>",
@@ -403,7 +403,7 @@ export const cpp4Data = {
           "using namespace std;",
           "",
           "int main() {",
-          "    // vector で配列を作成",
+          "    // vに{1, 2, 3, 4, 5}を代入",
           "    vector<int> v = {1, 2, 3, 4, 5};",
           "    // find_if で条件に合う要素を検索",
           "    auto it = find_if(v.begin(), v.end(), [](int x) { return x > 3; });",
@@ -457,8 +457,8 @@ export const cpp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <algorithm>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // vector で配列を作成\\\\n    vector<int> v = {3, 1, 4, 1, 5};\\\\n    // sort でソート\\\\n    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });\\\\n    for (int n : v) cout << n << \" \";\\\\n    cout << endl;\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <algorithm>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // vector で配列を作成\\\\n    vector<int> v = {___, 1, 4, 1, 5};\\\\n    // sort でソート\\\\n    sort(v.begin(), v.end(), [](int a, int ___) { return a > b; });\\\\n    for (int ___ : v) cout << n << \" \";\\\\n    cout << ___;\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <algorithm>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // vに{3, 1, 4, 1, 5}を代入\\\\n    vector<int> v = {3, 1, 4, 1, 5};\\\\n    // sort でソート\\\\n    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });\\\\n    for (int n : v) cout << n << \" \";\\\\n    cout << endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n#include <vector>\\\\n#include <algorithm>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // vに{3, 1, 4, 1, 5}を代入\\\\n    vector<int> v = {___, 1, 4, 1, 5};\\\\n    // sort でソート\\\\n    sort(v.begin(), v.end(), [](int a, int ___) { return a > b; });\\\\n    for (int ___ : v) cout << n << \" \";\\\\n    cout << ___;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <vector>",
@@ -466,7 +466,7 @@ export const cpp4Data = {
           "using namespace std;",
           "",
           "int main() {",
-          "    // vector で配列を作成",
+          "    // vに{3, 1, 4, 1, 5}を代入",
           "    vector<int> v = {3, 1, 4, 1, 5};",
           "    // sort でソート",
           "    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });",
