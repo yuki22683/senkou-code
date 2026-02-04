@@ -229,7 +229,7 @@ export const pythonData5 = {
         "tutorialSlides": [
           {
             "title": "re.search()",
-            "content": "# パターンを検索\n\n**正規表現（せいきひょうげん）** とは、文字の **パターン（形）** を表す特別な書き方です。\n\n**たとえ話：** 「3桁の数字」「@が入ったメールアドレス」のような「形」で文字を探せます。\n\n**re.search()（サーチ）** で **文字列の中からパターンに合う部分を探します**。\n\n**よく使う記号：**\n- `\\d` = 数字1文字（0-9）\n- `\\w` = 英数字1文字（a-z, A-Z, 0-9, _）\n- `\\.` = ドット文字そのもの（`.`は特殊文字なので`\\`でエスケープ）\n- `+` = 1回以上の繰り返し\n- `{3}` = ちょうど3回\n\n**例：** メールアドレスを探そう！\n\n```python\nimport re\n\ntext = 'my email is test@example.com'\nmatch = re.search(r'\\w+@\\w+\\.\\w+', text)\nif match:\n    print(match.group())  # test@example.com\n```\n\n**何をしているか：**\n1. `import re` で正規表現モジュールを読み込む\n2. `re.search(パターン, 文字列)` で検索\n3. 見つかったら `match` オブジェクトが返る\n4. `match.group()` で一致した文字列を取得\n\n**ポイント：** パターンの前に `r` をつけると、`\\` をそのまま使えます。"
+            "content": "# パターンを検索\n\n**正規表現（せいきひょうげん）** とは、文字の **パターン（形）** を表す特別な書き方です。\n\n**たとえ話：** 「3桁の数字」「@が入ったメールアドレス」のような「形」で文字を探せます。\n\n**re.search()（サーチ）** で **文字列の中からパターンに合う部分を探します**。\n\n**よく使う記号：**\n- `\\d` = 数字1文字（0-9）\n- `\\w` = 英数字1文字（a-z, A-Z, 0-9, _）\n- `\\.` = ドット文字そのもの（`.`は特殊文字なので`\\`でエスケープ）\n- `+` = 1回以上の繰り返し\n- `{3}` = ちょうど3回\n\n**例：** メールアドレスを探そう！\n\n```python\nimport re\n\ntext = 'my email is test@example.com'\nmatch = re.search(r'\\w+@\\w+\\.\\w+', text)\nif match:\n    print(match.group())  # test@example.com\n```\n\n**パターン `\\w+@\\w+\\.\\w+` の意味：**\n- `\\w+` = 英数字が1文字以上（test）\n- `@` = @マークそのまま\n- `\\w+` = 英数字が1文字以上（example）\n- `\\.` = ドット文字（.）\n- `\\w+` = 英数字が1文字以上（com）\n\n**何をしているか：**\n1. `import re` で正規表現モジュールを読み込む\n2. `re.search(パターン, 文字列)` で検索\n3. 見つかったら `match` オブジェクトが返る\n4. `match.group()` で一致した文字列を取得\n\n**ポイント：なぜ `r` をつけるの？**\n\nPythonでは `\\` は特殊な意味を持ちます（`\\n` = 改行、`\\t` = タブ）。\n\nでも正規表現では `\\d` や `\\w` のように `\\` をそのまま使いたい。\n\n`r'...'` と書くと、`\\` が特殊文字として解釈されず、書いたままの文字列になります。正規表現では `r` をつけるのが定番です。"
           }
         ],
         "initialDisplayMode": "holey",
@@ -272,7 +272,7 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": ""
+            "expected_output": "090-1234-5678\n"
           }
         ]
       },
@@ -284,7 +284,7 @@ export const pythonData5 = {
         "tutorialSlides": [
           {
             "title": "re.findall()",
-            "content": "# 全ての一致を取得\n\n**re.findall()（ファインドオール）** で **パターンに一致する全ての部分をリストで取得** できます。\n\n**searchとの違い：**\n- `search`: 最初に見つかった1つだけ\n- `findall`: 全部見つけてリストにする\n\n**たとえ話：** 文章の中から「数字」を全部探し出すイメージです。\n\n**例：** 文章の中の全ての数字を取り出そう！\n\n```python\nimport re\n\ntext = 'I have 3 apples and 5 oranges'\nnumbers = re.findall(r'\\d+', text)\nprint(numbers)  # ['3', '5']\n```\n\n**何をしているか：**\n1. `re.findall(パターン, 文字列)` で全て検索\n2. `\\d+` は「1つ以上の数字」というパターン\n3. 見つかった全ての部分がリストで返ってくる\n4. 見つからない場合は空のリスト `[]` が返る\n\n**ポイント：** `findall` は常にリストを返すので、`if` でチェックしなくてもOK！"
+            "content": "# 全ての一致を取得\n\n**re.findall()（ファインドオール）** で **パターンに一致する全ての部分をリストで取得** できます。\n\n**searchとの違い：**\n- `search`: 最初に見つかった1つだけ\n- `findall`: 全部見つけてリストにする\n\n**たとえ話：** 文章の中から「数字」を全部探し出すイメージです。\n\n**例：** 文章の中の全ての数字を取り出そう！\n\n```python\nimport re\n\ntext = 'I have 3 apples and 5 oranges'\nnumbers = re.findall(r'\\d+', text)\nprint(numbers)  # ['3', '5']\n```\n\n**パターン `\\d+` の意味：**\n- `\\d` = 数字1文字（0-9）\n- `+` = 1回以上の繰り返し\n- つまり「1桁以上の数字」にマッチ\n\n**何をしているか：**\n1. `re.findall(パターン, 文字列)` で全て検索\n2. 見つかった全ての部分がリストで返ってくる\n3. 見つからない場合は空のリスト `[]` が返る\n\n**ポイント：** `findall` は常にリストを返すので、`if` でチェックしなくてもOK！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -323,7 +323,7 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[]\n"
+            "expected_output": "['email1@test.com', 'email2@test.com']\n"
           }
         ]
       },
@@ -335,7 +335,7 @@ export const pythonData5 = {
         "tutorialSlides": [
           {
             "title": "re.sub()",
-            "content": "# パターンを置換\n\n**re.sub()（サブスティテュート）** で **パターンに一致する部分を別の文字に置き換え** られます。\n\n**たとえ話：** 文章の中の「犬」を全部「猫」に置き換えるような処理です。\n\n**書き方：** `re.sub(パターン, 置換後, 文字列)`\n\n**例：** 数字を「many」に置き換えよう！\n\n```python\nimport re\n\ntext = 'I have 3 apples'\nresult = re.sub(r'\\d+', 'many', text)\nprint(result)  # I have many apples\n```\n\n**何をしているか：**\n1. `re.sub(パターン, 置換後, 文字列)` で置換\n2. `\\d+`（1つ以上の数字）を `'many'` に置き換え\n3. 全ての一致箇所が置き換わる\n\n**便利な使い方：**\n- 余分な空白を1つにまとめる: `re.sub(r'\\s+', ' ', text)`\n- 数字を消す: `re.sub(r'\\d+', '', text)`\n\n**ポイント：** 元の文字列は変わらず、新しい文字列が返ってきます。"
+            "content": "# パターンを置換\n\n**re.sub()（サブスティテュート）** で **パターンに一致する部分を別の文字に置き換え** られます。\n\n**たとえ話：** 文章の中の「犬」を全部「猫」に置き換えるような処理です。\n\n**書き方：** `re.sub(パターン, 置換後, 文字列)`\n\n**例：** 数字を「many」に置き換えよう！\n\n```python\nimport re\n\ntext = 'I have 3 apples'\nresult = re.sub(r'\\d+', 'many', text)\nprint(result)  # I have many apples\n```\n\n**パターン `\\d+` の意味：**\n- `\\d` = 数字1文字（0-9）\n- `+` = 1回以上の繰り返し\n- つまり「1桁以上の数字」にマッチ\n\n**何をしているか：**\n1. `re.sub(パターン, 置換後, 文字列)` で置換\n2. 全ての一致箇所が置き換わる\n\n**便利な使い方：**\n- 余分な空白を1つにまとめる: `re.sub(r'\\s+', ' ', text)`\n  - `\\s` = 空白文字（スペース、タブ、改行）\n  - `\\s+` = 1つ以上の連続した空白\n- 数字を消す: `re.sub(r'\\d+', '', text)`\n\n**ポイント：** 元の文字列は変わらず、新しい文字列が返ってきます。"
           }
         ],
         "initialDisplayMode": "holey",
@@ -374,7 +374,7 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello   World   Python\n"
+            "expected_output": "Hello World Python\n"
           }
         ]
       },
@@ -437,7 +437,7 @@ export const pythonData5 = {
         "tutorialSlides": [
           {
             "title": "defaultdictとは？",
-            "content": "# デフォルト値を持つ辞書\n\n**defaultdict（デフォルトディクト）** を使うと、**存在しないキーにアクセスしてもエラーにならない** 辞書が作れます。\n\n**普通の辞書の問題：**\n```python\nd = {}\nd['a'] += 1  # エラー！キー'a'が存在しない\n```\n\n**defaultdictなら：**\n```python\nd = defaultdict(int)\nd['a'] += 1  # OK！自動で 0 が入る\n```\n\n**たとえ話：** 出席簿のようなもの。名前が書いてなくても、自動で新しい欄が作られます。\n\n**デフォルト値の種類：**\n- `defaultdict(int)`: 数値 `0` がデフォルト\n- `defaultdict(list)`: 空のリスト `[]` がデフォルト\n- `defaultdict(str)`: 空の文字列 `''` がデフォルト\n\n**何をしているか：**\n1. `defaultdict(型)` でデフォルト値の型を指定\n2. 存在しないキーにアクセスすると自動でデフォルト値が入る\n3. その後は普通の辞書と同じように使える\n\n**ポイント：** キーの存在確認が不要になり、コードがシンプルになります！"
+            "content": "# デフォルト値を持つ辞書\n\n**defaultdict（デフォルトディクト）** を使うと、**存在しないキーにアクセスしてもエラーにならない** 辞書が作れます。\n\n**普通の辞書の問題：**\n```python\nd = {}\nd['a'] += 1  # エラー！キー'a'が存在しない\n```\n\n**defaultdictなら：**\n```python\nd = defaultdict(int)\nd['a'] += 1  # OK！自動で 0 が入る\n```\n\n**たとえ話：** ゲームのスコアボード。新しいプレイヤーが参加すると、自動で「0点」からスタートできます。\n\n**デフォルト値の種類：**\n- `defaultdict(int)`: 数値 `0` がデフォルト\n- `defaultdict(list)`: 空のリスト `[]` がデフォルト\n- `defaultdict(str)`: 空の文字列 `''` がデフォルト\n\n**何をしているか：**\n1. `defaultdict(型)` でデフォルト値の型を指定\n2. 存在しないキーにアクセスすると自動でデフォルト値が入る\n3. その後は普通の辞書と同じように使える\n\n**ポイント：** キーの存在確認が不要になり、コードがシンプルになります！"
           }
         ],
         "initialDisplayMode": "holey",
