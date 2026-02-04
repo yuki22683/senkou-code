@@ -97,15 +97,22 @@ export default function ExercisePage() {
 
         setExercise(data);
 
-        // sessionStorageから一時保存されたコードを取得
+        // sessionStorageから一時保存されたコードと完了状態を取得
         const savedCodeKey = `exercise_temp_code_${exerciseId}`;
+        const savedCompletedKey = `exercise_temp_completed_${exerciseId}`;
         const savedCode = sessionStorage.getItem(savedCodeKey);
+        const savedCompleted = sessionStorage.getItem(savedCompletedKey);
 
         if (savedCode) {
           // 一時保存されたコードがあれば使用し、sessionStorageから削除
           setSavedInitialCode(savedCode);
           setCode(savedCode);
           sessionStorage.removeItem(savedCodeKey);
+          // 完了状態も復元
+          if (savedCompleted === "true") {
+            setShowNextButton(true);
+          }
+          sessionStorage.removeItem(savedCompletedKey);
         } else {
           setSavedInitialCode(null);
           setCode(data.starter_code || data.holey_code || "");
@@ -607,6 +614,7 @@ export default function ExercisePage() {
                   onChange={(value) => setCode(value || "")}
                   onRun={() => handleRunCode(false)}
                   onCursorChange={(line) => setCurrentLine(line)}
+                  initialIsCompleted={showNextButton}
                 />
               </div>
             </div>
@@ -662,9 +670,11 @@ export default function ExercisePage() {
                       className="text-base flex-1"
                       disabled={isNavigating}
                       onClick={() => {
-                        // 現在のコードを一時保存
+                        // 現在のコードと完了状態を一時保存
                         const savedCodeKey = `exercise_temp_code_${exerciseId}`;
+                        const savedCompletedKey = `exercise_temp_completed_${exerciseId}`;
                         sessionStorage.setItem(savedCodeKey, code);
+                        sessionStorage.setItem(savedCompletedKey, showNextButton ? "true" : "false");
                         navigateTo(
                           `/lessons/${language}/${lessonId}/exercises/${exerciseId}/tutorial`
                         );

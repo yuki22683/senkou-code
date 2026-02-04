@@ -19,8 +19,8 @@ function expandTokensWithBoundaries(line: string, language: string): { tokens: s
     const token = rawTokens[tokenIdx];
     const prevToken = tokenIdx > 0 ? rawTokens[tokenIdx - 1] : '';
 
-    // f-string検出
-    const isFStringPrefix = /^[fFrRbBuU]+$/.test(prevToken);
+    // f-string検出（プレフィックスに'f'を含む場合のみ - r/b/u単独は補間なし）
+    const isFStringPrefix = /^[fFrRbBuU]+$/.test(prevToken) && prevToken.toLowerCase().includes('f');
     const isStringWithInterpolation =
       ((token.startsWith('"') || token.startsWith("'")) && isFStringPrefix && token.includes('{'))
       || ((token.startsWith('"') || token.startsWith("'")) && token.includes('#{'))
@@ -106,9 +106,36 @@ function expandTokensWithBoundaries(line: string, language: string): { tokens: s
         pos += part.length;
       }
     } else {
-      boundaries.push(pos);
-      expandedTokens.push(token);
-      pos += token.length;
+      // 通常の文字列リテラルはクォートを分離
+      const isStringLiteral = (token.startsWith("'") && token.endsWith("'") && token.length > 1) ||
+                              (token.startsWith('"') && token.endsWith('"') && token.length > 1) ||
+                              (token.startsWith('`') && token.endsWith('`') && token.length > 1);
+
+      if (isStringLiteral) {
+        const quote = token[0];
+        const inner = token.slice(1, -1);
+
+        // 開始クォート
+        boundaries.push(pos);
+        expandedTokens.push(quote);
+        pos += 1;
+
+        // 内部コンテンツ（空でなければ）
+        if (inner.length > 0) {
+          boundaries.push(pos);
+          expandedTokens.push(inner);
+          pos += inner.length;
+        }
+
+        // 終了クォート
+        boundaries.push(pos);
+        expandedTokens.push(quote);
+        pos += 1;
+      } else {
+        boundaries.push(pos);
+        expandedTokens.push(token);
+        pos += token.length;
+      }
     }
   }
 
@@ -126,6 +153,7 @@ interface MobileCodeEditorProps {
   onRun?: (code: string) => void;
   onCursorChange?: (line: number, col: number) => void;
   readOnly?: boolean;
+  initialIsCompleted?: boolean;
 }
 
 // コードの正規化: 言語の構文規則に基づいた判定
@@ -259,6 +287,7 @@ export function MobileCodeEditor({
   onCursorChange,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   readOnly = false,
+  initialIsCompleted = false,
 }: MobileCodeEditorProps) {
   const config = getLanguageConfig(language);
   const commentPrefix = config.commentPrefix;
@@ -329,6 +358,7 @@ export function MobileCodeEditor({
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [clickedButtonIdx, setClickedButtonIdx] = useState<number | null>(null);
   const [clickedControlBtn, setClickedControlBtn] = useState<string | null>(null);
+  const [isCompleted, setIsCompleted] = useState(initialIsCompleted);
   const containerRef = useRef<HTMLDivElement>(null);
   const suggestionsContainerRef = useRef<HTMLDivElement>(null);
   const [suggestionsContainerWidth, setSuggestionsContainerWidth] = useState<number>(0);
@@ -520,6 +550,7 @@ export function MobileCodeEditor({
         });
 
         if (allLinesCorrect) {
+          setIsCompleted(true);
           onRun?.(newFullCode);
         } else {
           // 次の未完成の編集対象行を探す
@@ -615,6 +646,7 @@ export function MobileCodeEditor({
           });
 
           if (allLinesCorrect) {
+            setIsCompleted(true);
             onRun?.(newFullCode);
           } else {
             // 次の未完成の編集対象行を探す
@@ -887,7 +919,7 @@ export function MobileCodeEditor({
       >
         <div
           ref={suggestionsContainerRef}
-          className="flex flex-col gap-1 sm:gap-2 mb-2 w-full max-h-[180px] sm:max-h-[160px] overflow-hidden p-1"
+          className="flex flex-col gap-1 sm:gap-2 mb-2 w-full max-h-[180px] sm:max-h-[160px] overflow-x-auto overflow-y-hidden p-1"
         >
           {(() => {
             if (shuffledRows.length === 0) {
@@ -900,7 +932,6 @@ export function MobileCodeEditor({
 
             // 行ごとにフォントサイズを計算（コンテナ幅を超えないように）
             const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
-            const isPC = typeof window !== 'undefined' && window.innerWidth >= 1024;
             const calculateRowFontSize = (tokens: string[]): number => {
               if (suggestionsContainerWidth <= 0) return baseFontSize;
 
@@ -950,15 +981,12 @@ export function MobileCodeEditor({
                   const heightBasedFontSize = Math.floor(rowHeight * 0.6);
                   // 幅と高さの両方に収まるフォントサイズを選択
                   const fontSize = Math.min(widthBasedFontSize, heightBasedFontSize);
-                  const isScaled = fontSize < baseFontSize;
-                  // PC表示ではスマホと同じくテキストに合わせた幅を使用
-                  const useMaxContent = isPC || !isScaled;
 
                   return (
                     <div
                       key={rowIdx}
                       className={`grid grid-flow-col w-full ${isMobile ? 'gap-1' : 'gap-1 sm:gap-2'}`}
-                      style={{ gridAutoColumns: useMaxContent ? "minmax(max-content, 1fr)" : "minmax(0, 1fr)" }}
+                      style={{ gridAutoColumns: "minmax(max-content, 1fr)" }}
                     >
                       {row.map((token) => {
                         const idx = suggestions.indexOf(token);
@@ -970,15 +998,18 @@ export function MobileCodeEditor({
                               setTimeout(() => setClickedButtonIdx(null), 500);
                               handleInsert(token);
                             }}
+                            disabled={isCompleted}
                             style={{
                               backgroundColor: clickedButtonIdx === idx ? '#4a9eff' : SYNTAX_COLORS.buttonBackground,
                               borderColor: SYNTAX_COLORS.buttonBorder,
                               color: SYNTAX_COLORS.foreground,
                               transition: 'background-color 0.15s ease-out',
                               fontSize: `${fontSize}px`,
-                              height: `${rowHeight}px`
+                              height: `${rowHeight}px`,
+                              opacity: isCompleted ? 0.5 : 1,
+                              cursor: isCompleted ? 'not-allowed' : 'pointer'
                             }}
-                            className="w-full rounded font-mono font-bold border active:scale-95 whitespace-nowrap overflow-hidden px-0 py-0 leading-none flex items-center justify-center"
+                            className="w-full rounded font-mono font-bold border active:scale-95 whitespace-nowrap px-0 py-0 leading-none flex items-center justify-center"
                           >
                             {token}
                           </button>
@@ -1007,7 +1038,7 @@ export function MobileCodeEditor({
               setTimeout(() => setClickedControlBtn(null), 500);
               moveCursor("left");
             }}
-            disabled={cursor.col <= minCols[cursor.line]}
+            disabled={isCompleted || cursor.col <= minCols[cursor.line]}
           >
             <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
           </Button>
@@ -1025,7 +1056,7 @@ export function MobileCodeEditor({
               setTimeout(() => setClickedControlBtn(null), 500);
               moveCursor("right");
             }}
-            disabled={cursor.col >= lines[cursor.line].length}
+            disabled={isCompleted || cursor.col >= lines[cursor.line].length}
           >
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
           </Button>
@@ -1043,6 +1074,7 @@ export function MobileCodeEditor({
               setTimeout(() => setClickedControlBtn(null), 500);
               handleInsert(" ");
             }}
+            disabled={isCompleted}
           >
             <div className="border px-1 py-0.5 sm:px-2 rounded text-[11px] sm:text-sm lg:text-lg" style={{ borderColor: SYNTAX_COLORS.foreground }}>Space</div>
           </Button>
@@ -1059,7 +1091,7 @@ export function MobileCodeEditor({
               setTimeout(() => setClickedControlBtn(null), 500);
               handleDelete();
             }}
-            disabled={cursor.col <= minCols[cursor.line]}
+            disabled={isCompleted || cursor.col <= minCols[cursor.line]}
           >
             <Delete className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
           </Button>
