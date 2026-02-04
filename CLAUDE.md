@@ -583,3 +583,24 @@
   1. たとえ話を読んで、プログラミング上の動作を正確に想像できるか？
   2. 説明対象の「核心的な特徴」（デフォルト値、自動変換、遅延評価など）が含まれているか？
   3. 単に「〜が作られる」「〜ができる」だけで終わっていないか？
+
+### 49. ページ遷移時にユーザーの進捗状態を保持する
+- ページ間を遷移する機能を実装する際、**ユーザーの進捗に関わる状態**はsessionStorageなどに保存し、戻ってきたときに復元すること。
+- **保存すべき状態の例**:
+  - 演習の完了状態（`showNextButton`, `isCompleted`）
+  - ユーザーが入力したコード
+  - ヒント使用状態
+- **問題のあるパターン**:
+  - コンポーネントのローカルstate（`useState`）だけで状態を管理 → 再マウント時にリセットされる
+  - ページ遷移時にコードだけ保存し、完了状態を保存しない
+- **正しいパターン**:
+  ```typescript
+  // 遷移前に保存
+  sessionStorage.setItem(`exercise_temp_code_${id}`, code);
+  sessionStorage.setItem(`exercise_temp_completed_${id}`, isCompleted ? "true" : "false");
+
+  // 読み込み時に復元
+  const savedCode = sessionStorage.getItem(`exercise_temp_code_${id}`);
+  const savedCompleted = sessionStorage.getItem(`exercise_temp_completed_${id}`) === "true";
+  ```
+- **確認方法**: ページ遷移後に戻ってきて、遷移前と同じ表示になるかテストする
