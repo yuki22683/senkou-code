@@ -14,7 +14,7 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "正規表現（せいきひょうげん）リテラルとは？",
-            "content": "# 文字のパターンを定義する\\\\n\\\\n**正規表現** は、文字列の「パターン」を表現する方法です。\\\\n\\\\n**身近なたとえ：**\\\\n「『あ』で始まる言葉を探して」とお願いするイメージです。正規表現を使えば、もっと複雑なパターンも探せます。\\\\n\\\\n**書き方：**\\\\nパターンを `/` で囲みます。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst pattern = /hello/;\\\\n// 'hello world' に 'hello' が含まれる？\\\\nconsole.log(pattern.test('hello world'));\\\\n```\\\\n**実行結果：**\\\\n```\\\\ntrue\\\\n```"
+            "content": "# 文字のパターンを定義する\\\\n\\\\n**正規表現** は、文字列の「パターン」を表現する方法です。\\\\n\\\\n**身近なたとえ：**\\\\n「『あ』で始まる言葉を探して」とお願いするイメージです。正規表現を使えば、もっと複雑なパターンも探せます。\\\\n\\\\n**書き方：**\\\\nパターンを `/` で囲みます。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst pattern = /hello/;\\\\n// 'hello world' に 'hello' が含まれる？\\\\nconsole.log(pattern.test('hello world'));\\\\n```\\\\n**実行結果：**\\\\n```\\\\ntrue\\\\n```\\\\n\\\\n**フラグについて：**\\\\n- `/pattern/i` の `i` は大文字小文字を区別しない\\\\n- `/pattern/g` の `g` は全てを検索（global）"
           }
         ],
         "initialDisplayMode": "holey",
@@ -57,7 +57,7 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "test()メソッドとは？",
-            "content": "# パターンに合うかチェック\\\\n\\\\n**test()** は、文字列がパターンに合うかどうかを true/false で返します。\\\\n\\\\n**身近なたとえ：**\\\\n「この文章に数字は含まれている？」と質問して、「はい」か「いいえ」で答えてもらうイメージです。\\\\n\\\\n**よく使う記号：**\\\\n- `\\d` ... 数字（0-9）\\\\n- `+` ... 1回以上の繰り返し\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst pattern = /\\d+/;  // 1個以上の数字\\\\nconsole.log(pattern.test('abc123'));  // true（数字あり）\\\\nconsole.log(pattern.test('abc'));     // false（数字なし）\\\\n```"
+            "content": "# パターンに合うかチェック\\\\n\\\\n**test()** は、文字列がパターンに合うかどうかを true/false で返します。\\\\n\\\\n**身近なたとえ：**\\\\n「この文章に数字は含まれている？」と質問して、「はい」か「いいえ」で答えてもらうイメージです。\\\\n\\\\n**よく使う記号：**\\\\n- `\\d` ... 数字（0-9）\\\\n- `\\w` ... 英数字（a-z, A-Z, 0-9, _）\\\\n- `\\.` ... ドット文字（.は特殊文字なのでエスケープ）\\\\n- `+` ... 1回以上の繰り返し\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst pattern = /\\d+/;  // 1個以上の数字\\\\nconsole.log(pattern.test('abc123'));  // true（数字あり）\\\\nconsole.log(pattern.test('abc'));     // false（数字なし）\\\\n```\\\\n\\\\n**パターン `\\d+` の意味：**\\\\n- `\\d` = 数字1文字\\\\n- `+` = 1回以上\\\\n- つまり「1桁以上の数字」にマッチ"
           }
         ],
         "initialDisplayMode": "holey",
@@ -102,7 +102,7 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "match()メソッドとは？",
-            "content": "# パターンに合う部分を取り出す\\\\n\\\\n**match()** は、パターンに合った部分を配列で返します。\\\\n\\\\n**身近なたとえ：**\\\\n「この文章から数字を全部抜き出して」とお願いするイメージです。\\\\n\\\\n**フラグ g について：**\\\\n`/g` をつけると「全部探す」（global）という意味になります。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst text = 'I have 3 apples and 5 oranges';\\\\nconst numbers = text.match(/\\d+/g);\\\\nconsole.log(numbers);\\\\n```\\\\n**実行結果：**\\\\n```\\\\n['3', '5']\\\\n```\\\\n\\\\n**ポイント：**\\\\n見つからなかった場合は `null` が返ります。"
+            "content": "# パターンに合う部分を取り出す\\\\n\\\\n**match()** は、パターンに合った部分を配列で返します。\\\\n\\\\n**身近なたとえ：**\\\\n「この文章から数字を全部抜き出して」とお願いするイメージです。\\\\n\\\\n**フラグ g について：**\\\\n`/g` をつけると「全部探す」（global）という意味になります。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst text = 'I have 3 apples and 5 oranges';\\\\nconst numbers = text.match(/\\d+/g);\\\\nconsole.log(numbers);\\\\n```\\\\n**実行結果：**\\\\n```\\\\n['3', '5']\\\\n```\\\\n\\\\n**よく使う量指定子：**\\\\n- `+` = 1回以上の繰り返し\\\\n- `{3}` = ちょうど3回\\\\n- `{3,4}` = 3回〜4回\\\\n\\\\n**パターン `\\d+` の意味：**\\\\n- `\\d` = 数字1文字（0-9）\\\\n- `+` = 1回以上\\\\n\\\\n**ポイント：**\\\\n見つからなかった場合は `null` が返ります。"
           }
         ],
         "initialDisplayMode": "holey",
@@ -150,7 +150,7 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "replace()メソッドとは？",
-            "content": "# パターンに合う部分を置き換える\\\\n\\\\n**replace()** は、パターンに合った部分を別の文字列に置き換えます。\\\\n\\\\n**身近なたとえ：**\\\\n「この文章の『りんご』を全部『みかん』に変えて」とお願いするイメージです。\\\\n\\\\n**書き方：**\\\\n```\\\\n文字列.replace(/パターン/g, '置き換え後')\\\\n```\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst text = 'hello world';\\\\nconst result = text.replace(/world/, 'JavaScript');\\\\nconsole.log(result);\\\\n```\\\\n**実行結果：**\\\\n```\\\\nhello JavaScript\\\\n```"
+            "content": "# パターンに合う部分を置き換える\\\\n\\\\n**replace()** は、パターンに合った部分を別の文字列に置き換えます。\\\\n\\\\n**身近なたとえ：**\\\\n「この文章の『りんご』を全部『みかん』に変えて」とお願いするイメージです。\\\\n\\\\n**書き方：**\\\\n```\\\\n文字列.replace(/パターン/g, '置き換え後')\\\\n```\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst text = 'hello world';\\\\nconst result = text.replace(/world/, 'JavaScript');\\\\nconsole.log(result);\\\\n```\\\\n**実行結果：**\\\\n```\\\\nhello JavaScript\\\\n```\\\\n\\\\n**便利なパターン例：**\\\\n- `\\s+` = 1つ以上の空白文字（スペース、タブ、改行）\\\\n- `\\d+` = 1桁以上の数字"
           }
         ],
         "initialDisplayMode": "holey",

@@ -107,7 +107,7 @@ export const ruby3Data = {
         "testCases": [
           {
             "input": "squarer.call(5)",
-            "expected_output": ""
+            "expected_output": "25"
           }
         ]
       },
@@ -149,7 +149,7 @@ export const ruby3Data = {
         "testCases": [
           {
             "input": "cube.call(3)",
-            "expected_output": ""
+            "expected_output": "27"
           }
         ]
       },
@@ -193,7 +193,7 @@ export const ruby3Data = {
         "testCases": [
           {
             "input": "result",
-            "expected_output": ""
+            "expected_output": "[\"RUBY\", \"PYTHON\", \"GO\"]"
           }
         ]
       },
@@ -235,7 +235,7 @@ export const ruby3Data = {
         "testCases": [
           {
             "input": "sum",
-            "expected_output": ""
+            "expected_output": "15"
           }
         ]
       },
@@ -277,7 +277,7 @@ export const ruby3Data = {
         "testCases": [
           {
             "input": "evens",
-            "expected_output": ""
+            "expected_output": "[2, 4, 6]"
           }
         ]
       },
@@ -333,7 +333,7 @@ export const ruby3Data = {
         "testCases": [
           {
             "input": "sum_all(1, 2, 3)",
-            "expected_output": ""
+            "expected_output": "6"
           }
         ]
       },
@@ -397,7 +397,7 @@ export const ruby3Data = {
         "testCases": [
           {
             "input": "FlexibleClass.new.hello",
-            "expected_output": ""
+            "expected_output": "Unknown method: hello"
           }
         ]
       },
@@ -442,7 +442,7 @@ export const ruby3Data = {
         "testCases": [
           {
             "input": "Person.new('Alice', 30).name",
-            "expected_output": ""
+            "expected_output": "Alice"
           }
         ]
       },
@@ -484,7 +484,7 @@ export const ruby3Data = {
         "testCases": [
           {
             "input": "result",
-            "expected_output": ""
+            "expected_output": "[1, 2, 3, 4]"
           }
         ]
       }

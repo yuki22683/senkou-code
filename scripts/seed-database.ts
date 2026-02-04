@@ -39,6 +39,32 @@ const supabase = createClient(
   }
 );
 
+/**
+ * 文字列内のエスケープシーケンス \\n を実際の改行に変換
+ */
+function unescapeNewlines(str: string): string {
+  return str.replace(/\\n/g, '\n');
+}
+
+/**
+ * tutorialSlidesのcontentフィールドのエスケープを解除
+ */
+function processTutorialSlides(slides: any[]): any[] {
+  if (!Array.isArray(slides)) return slides;
+  return slides.map(slide => ({
+    ...slide,
+    content: typeof slide.content === 'string' ? unescapeNewlines(slide.content) : slide.content
+  }));
+}
+
+/**
+ * 文字列配列の各要素のエスケープを解除
+ */
+function processStringArray(arr: string[]): string[] {
+  if (!Array.isArray(arr)) return arr;
+  return arr.map(s => typeof s === 'string' ? unescapeNewlines(s) : s);
+}
+
 async function seedDatabase() {
   console.log('Starting database seeding...\n');
 
@@ -130,12 +156,12 @@ async function seedDatabase() {
         description: exercise.description,
         difficulty: exercise.difficulty,
         order_index: exercise.orderIndex,
-        tutorial_slides: exercise.tutorialSlides,
-        correct_code: exercise.correctCode,
-        holey_code: exercise.holeyCode,
-        starter_code: (exercise as any).starterCode || (exercise.initialDisplayMode === 'editable' ? '' : exercise.holeyCode),
+        tutorial_slides: processTutorialSlides(exercise.tutorialSlides),
+        correct_code: unescapeNewlines(exercise.correctCode || ''),
+        holey_code: unescapeNewlines(exercise.holeyCode || ''),
+        starter_code: unescapeNewlines((exercise as any).starterCode || (exercise.initialDisplayMode === 'editable' ? '' : exercise.holeyCode) || ''),
         // initial_display_mode: exercise.initialDisplayMode || 'holey',
-        correct_lines: exercise.correctLines,
+        correct_lines: processStringArray(exercise.correctLines || []),
         candidates: exercise.candidates,
         test_cases: exercise.testCases,
         hints: exercise.lineHints,

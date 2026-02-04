@@ -56,7 +56,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "$doubler(5)",
-            "expected_output": ""
+            "expected_output": "10"
           }
         ]
       },
@@ -101,7 +101,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "$cube(3)",
-            "expected_output": ""
+            "expected_output": "27"
           }
         ]
       },
@@ -150,7 +150,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "$result",
-            "expected_output": ""
+            "expected_output": "Guest"
           }
         ]
       },
@@ -192,7 +192,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "$merged",
-            "expected_output": ""
+            "expected_output": "Array\\n(\\n    [0] => 1\\n    [1] => 2\\n    [2] => 3\\n    [3] => 4\\n)\\n"
           }
         ]
       },
@@ -316,7 +316,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "$user['name']",
-            "expected_output": ""
+            "expected_output": "Alice"
           }
         ]
       },
@@ -387,7 +387,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "(new Greeter())->sayHello()",
-            "expected_output": ""
+            "expected_output": "Hello!"
           }
         ]
       },
@@ -443,7 +443,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "iterator_to_array(rangeGen(5))",
-            "expected_output": ""
+            "expected_output": "Array\\n(\\n    [0] => 1\\n    [1] => 2\\n    [2] => 3\\n    [3] => 4\\n    [4] => 5\\n)\\n"
           }
         ]
       },

@@ -232,7 +232,7 @@ export default function TutorialPage() {
                   pre: ({ children }) => <>{children}</>,
                 }}
               >
-                {currentSlideData.content}
+                {currentSlideData.content.replace(/\\n/g, '\n')}
               </ReactMarkdown>
             ) : (
               <div className="text-gray-700 lg:text-lg whitespace-pre-wrap leading-relaxed lg:leading-loose">

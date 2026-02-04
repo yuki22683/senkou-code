@@ -604,3 +604,17 @@
   const savedCompleted = sessionStorage.getItem(`exercise_temp_completed_${id}`) === "true";
   ```
 - **確認方法**: ページ遷移後に戻ってきて、遷移前と同じ表示になるかテストする
+
+### 50. レッスンデータのエスケープシーケンスはDB保存時に解除する
+- レッスンファイル（`data/lessons/*.ts`）の文字列フィールドには `\\n` がリテラル文字列として含まれている。
+- **seed-database.ts** で以下の全フィールドの `\\n` を実際の改行 `\n` に変換してからDBに保存すること：
+  - `tutorial_slides[].content` - `processTutorialSlides()` 関数
+  - `correct_code` - `unescapeNewlines()` 関数
+  - `holey_code` - `unescapeNewlines()` 関数
+  - `starter_code` - `unescapeNewlines()` 関数
+  - `correct_lines[]` - `processStringArray()` 関数
+- **フロントエンド** でも防御的に `.replace(/\\n/g, '\n')` で変換すること（既存データ対策）:
+  - `tutorial/page.tsx` - ReactMarkdownに渡す前に変換
+- **問題の症状**: 解説スライドでタイトルだけ表示され本文が消える、コードが1行で表示される
+- **原因**: `\\n` がリテラル文字列のまま処理されると、改行として認識されない
+- **修正後の確認**: `npm run seed:db` を実行してDBを更新し、ブラウザで正しく表示されることを確認
