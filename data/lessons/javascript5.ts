@@ -14,12 +14,12 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "正規表現（せいきひょうげん）リテラルとは？",
-            "content": "# 文字のパターンを定義する\\\\n\\\\n**正規表現** は、文字列の「パターン」を表現する方法です。\\\\n\\\\n**身近なたとえ：**\\\\n「『あ』で始まる言葉を探して」とお願いするイメージです。正規表現を使えば、もっと複雑なパターンも探せます。\\\\n\\\\n**書き方：**\\\\nパターンを `/` で囲みます。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst pattern = /hello/;\\\\n// 'こんにちは世界' に 'こんにちは' が含まれる？\\\\nconsole.log(pattern.test('こんにちは世界'));\\\\n```\\\\n**実行結果：**\\\\n```\\\\ntrue\\\\n```\\\\n\\\\n**フラグについて：**\\\\n- `/pattern/i` の `i` は大文字小文字を区別しない\\\\n- `/pattern/g` の `g` は全てを検索（global）"
+            "content": "# 文字のパターンを定義する\\\\\n\\\\\n**正規表現** は、文字列の「パターン」を表現する方法です。\\\\\n\\\\\n**身近なたとえ：**\\\\\n「『あ』で始まる言葉を探して」とお願いするイメージです。正規表現を使えば、もっと複雑なパターンも探せます。\\\\\n\\\\\n**書き方：**\\\\\nパターンを `/` で囲みます。\\\\\n\\\\\n**コード例：**\\\\\n```javascript\\\\\nconst pattern = /hello/;\\\\\n// 'こんにちは世界' に 'こんにちは' が含まれる？\\\\\nconsole.log(pattern.test('こんにちは世界'));\\\\\n```\\\\\n**実行結果：**\\\\\n```\\\\\ntrue\\\\\n```\\\\\n\\\\\n**フラグについて：**\\\\\n- `/pattern/i` の `i` は大文字小文字を区別しない\\\\\n- `/pattern/g` の `g` は全てを検索（global）"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// / で正規表現リテラルを定義\\\\nconst pattern = /javascript/i;\\\\n// test でマッチをテスト\\\\nconsole.log(pattern.test('I love JavaScript'));",
-        "holeyCode": "// / で正規表現リテラルを定義\\\\nconst pattern = ___javascript/i;\\\\n// test でマッチをテスト\\\\nconsole.log(pattern.___('I love JavaScript'));",
+        "correctCode": "// / で正規表現リテラルを定義\\\\\nconst pattern = /javascript/i;\\\\\n// test でマッチをテスト\\\\\nconsole.log(pattern.test('I love JavaScript'));",
+        "holeyCode": "// / で正規表現リテラルを定義\\\\\nconst pattern = ___javascript/i;\\\\\n// test でマッチをテスト\\\\\nconsole.log(pattern.___('I love JavaScript'));",
         "correctLines": [
           "// / で正規表現リテラルを定義",
           "const pattern = /javascript/i;",
@@ -45,7 +45,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "true\\\\n"
+            "expected_output": "true\\\\\n"
           }
         ]
       },
@@ -57,12 +57,12 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "test()メソッドとは？",
-            "content": "# パターンに合うかチェック\\\\n\\\\n**test()** は、文字列がパターンに合うかどうかを true/false で返します。\\\\n\\\\n**身近なたとえ：**\\\\n「この文章に数字は含まれている？」と質問して、「はい」か「いいえ」で答えてもらうイメージです。\\\\n\\\\n**よく使う記号：**\\\\n- `\\d` ... 数字（0-9）\\\\n- `\\w` ... 英数字（a-z, A-Z, 0-9, _）\\\\n- `\\.` ... ドット文字（.は特殊文字なのでエスケープ）\\\\n- `+` ... 1回以上の繰り返し\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst pattern = /\\d+/;  // 1個以上の数字\\\\nconsole.log(pattern.test('abc123'));  // true（数字あり）\\\\nconsole.log(pattern.test('abc'));     // false（数字なし）\\\\n```\\\\n\\\\n**パターン `\\d+` の意味：**\\\\n- `\\d` = 数字1文字\\\\n- `+` = 1回以上\\\\n- つまり「1桁以上の数字」にマッチ"
+            "content": "# パターンに合うかチェック\\\\\n\\\\\n**test()** は、文字列がパターンに合うかどうかを true/false で返します。\\\\\n\\\\\n**身近なたとえ：**\\\\\n「この文章に数字は含まれている？」と質問して、「はい」か「いいえ」で答えてもらうイメージです。\\\\\n\\\\\n**よく使う記号：**\\\\\n- `\\d` ... 数字（0-9）\\\\\n- `\\w` ... 英数字（a-z, A-Z, 0-9, _）\\\\\n- `\\.` ... ドット文字（.は特殊文字なのでエスケープ）\\\\\n- `+` ... 1回以上の繰り返し\\\\\n\\\\\n**コード例：**\\\\\n```javascript\\\\\nconst pattern = /\\d+/;  // 1個以上の数字\\\\\nconsole.log(pattern.test('abc123'));  // true（数字あり）\\\\\nconsole.log(pattern.test('abc'));     // false（数字なし）\\\\\n```\\\\\n\\\\\n**パターン `\\d+` の意味：**\\\\\n- `\\d` = 数字1文字\\\\\n- `+` = 1回以上\\\\\n- つまり「1桁以上の数字」にマッチ"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 正規表現パターンを定義\\\nconst emailPattern = /\\w+@\\w+\\.\\w+/;\\\n// test() で 'test@example.com' と 'invalid-email' をテスト\\\nconsole.log(emailPattern.test('テスト@例.com'));\\\n// 無効なメールをテスト\\\nconsole.log(emailPattern.test('invalid-メール'));",
-        "holeyCode": "// 正規表現パターンを定義\\\nconst emailPattern = ___\\w+@\\w+\\.\\w+/;\\\n// test() で 'test@example.com' と 'invalid-email' をテスト\\\nconsole.log(emailPattern.___)('テスト@例.com'));\\\n// 無効なメールをテスト\\\nconsole.log(emailPattern.test('___'));",
+        "correctCode": "// 正規表現パターンを定義\\\\nconst emailPattern = /\\w+@\\w+\\.\\w+/;\\\\n// test() で 'test@example.com' と 'invalid-email' をテスト\\\\nconsole.log(emailPattern.test('テスト@例.com'));\\\\n// 無効なメールをテスト\\\\nconsole.log(emailPattern.test('invalid-メール'));",
+        "holeyCode": "// 正規表現パターンを定義\\\\nconst emailPattern = ___\\w+@\\w+\\.\\w+/;\\\\n// test() で 'test@example.com' と 'invalid-email' をテスト\\\\nconsole.log(emailPattern.___)('テスト@例.com'));\\\\n// 無効なメールをテスト\\\\nconsole.log(emailPattern.test('___'));",
         "correctLines": [
           "// 正規表現パターンを定義",
           "const emailPattern = /\\w+@\\w+\\.\\w+/;",
@@ -90,7 +90,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "false\\\\nfalse\\\\n"
+            "expected_output": "false\\\\\nfalse\\\\\n"
           }
         ]
       },
@@ -102,12 +102,12 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "match()メソッドとは？",
-            "content": "# パターンに合う部分を取り出す\\\\n\\\\n**match()** は、パターンに合った部分を配列で返します。\\\\n\\\\n**身近なたとえ：**\\\\n「この文章から数字を全部抜き出して」とお願いするイメージです。\\\\n\\\\n**フラグ g について：**\\\\n`/g` をつけると「全部探す」（global）という意味になります。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst text = 'りんご3個とみかん5個';\\\\nconst numbers = text.match(/\\d+/g);\\\\nconsole.log(numbers);\\\\n```\\\\n**実行結果：**\\\\n```\\\\n['3', '5']\\\\n```\\\\n\\\\n**よく使う量指定子：**\\\\n- `+` = 1回以上の繰り返し\\\\n- `{3}` = ちょうど3回\\\\n- `{3,4}` = 3回〜4回\\\\n\\\\n**パターン `\\d+` の意味：**\\\\n- `\\d` = 数字1文字（0-9）\\\\n- `+` = 1回以上\\\\n\\\\n**ポイント：**\\\\n見つからなかった場合は `null` が返ります。"
+            "content": "# パターンに合う部分を取り出す\\\\\n\\\\\n**match()** は、パターンに合った部分を配列で返します。\\\\\n\\\\\n**身近なたとえ：**\\\\\n「この文章から数字を全部抜き出して」とお願いするイメージです。\\\\\n\\\\\n**フラグ g について：**\\\\\n`/g` をつけると「全部探す」（global）という意味になります。\\\\\n\\\\\n**コード例：**\\\\\n```javascript\\\\\nconst text = 'りんご3個とみかん5個';\\\\\nconst numbers = text.match(/\\d+/g);\\\\\nconsole.log(numbers);\\\\\n```\\\\\n**実行結果：**\\\\\n```\\\\\n['3', '5']\\\\\n```\\\\\n\\\\\n**よく使う量指定子：**\\\\\n- `+` = 1回以上の繰り返し\\\\\n- `{3}` = ちょうど3回\\\\\n- `{3,4}` = 3回〜4回\\\\\n\\\\\n**パターン `\\d+` の意味：**\\\\\n- `\\d` = 数字1文字（0-9）\\\\\n- `+` = 1回以上\\\\\n\\\\\n**ポイント：**\\\\\n見つからなかった場合は `null` が返ります。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 090-1234-5678 を含む文字列を定義\\\\nconst text = 'Contact: 090-1234-5678 or 080-9876-5432';\\\\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\\\\nconst phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);\\\\n// 結果を出力\\\\nconsole.log(phones);",
-        "holeyCode": "// 090-1234-5678 を含む文字列を定義\\\\nconst text = 'Contact: ___-1234-5678 or 080-9876-5432';\\\\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\\\\nconst phones = text.___(___\\d{3}-\\d{4}-\\d{4}/g);\\\\n// 結果を出力\\\\nconsole.___(phones);",
+        "correctCode": "// 090-1234-5678 を含む文字列を定義\\\\\nconst text = 'Contact: 090-1234-5678 or 080-9876-5432';\\\\\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\\\\\nconst phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);\\\\\n// 結果を出力\\\\\nconsole.log(phones);",
+        "holeyCode": "// 090-1234-5678 を含む文字列を定義\\\\\nconst text = 'Contact: ___-1234-5678 or 080-9876-5432';\\\\\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\\\\\nconst phones = text.___(___\\d{3}-\\d{4}-\\d{4}/g);\\\\\n// 結果を出力\\\\\nconsole.___(phones);",
         "correctLines": [
           "// 090-1234-5678 を含む文字列を定義",
           "const text = 'Contact: 090-1234-5678 or 080-9876-5432';",
@@ -138,7 +138,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "null\\\\n"
+            "expected_output": "null\\\\\n"
           }
         ]
       },
@@ -150,12 +150,12 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "replace()メソッドとは？",
-            "content": "# パターンに合う部分を置き換える\\\\n\\\\n**replace()** は、パターンに合った部分を別の文字列に置き換えます。\\\\n\\\\n**身近なたとえ：**\\\\n「この文章の『りんご』を全部『みかん』に変えて」とお願いするイメージです。\\\\n\\\\n**書き方：**\\\\n```\\\\n文字列.replace(/パターン/g, '置き換え後')\\\\n```\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst text = 'こんにちは世界';\\\\nconst result = text.replace(/world/, 'JavaScript');\\\\nconsole.log(result);\\\\n```\\\\n**実行結果：**\\\\n```\\\\nhello JavaScript\\\\n```\\\\n\\\\n**便利なパターン例：**\\\\n- `\\s+` = 1つ以上の空白文字（スペース、タブ、改行）\\\\n- `\\d+` = 1桁以上の数字"
+            "content": "# パターンに合う部分を置き換える\\\\\n\\\\\n**replace()** は、パターンに合った部分を別の文字列に置き換えます。\\\\\n\\\\\n**身近なたとえ：**\\\\\n「この文章の『りんご』を全部『みかん』に変えて」とお願いするイメージです。\\\\\n\\\\\n**書き方：**\\\\\n```\\\\\n文字列.replace(/パターン/g, '置き換え後')\\\\\n```\\\\\n\\\\\n**コード例：**\\\\\n```javascript\\\\\nconst text = 'こんにちは世界';\\\\\nconst result = text.replace(/world/, 'JavaScript');\\\\\nconsole.log(result);\\\\\n```\\\\\n**実行結果：**\\\\\n```\\\\\nhello JavaScript\\\\\n```\\\\\n\\\\\n**便利なパターン例：**\\\\\n- `\\s+` = 1つ以上の空白文字（スペース、タブ、改行）\\\\\n- `\\d+` = 1桁以上の数字"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 'Hello   World   JavaScript' を定義\\\nconst text = 'こんにちは   世界   JavaScript';\\\n// replace() で連続する空白を1つの空白に置換\\\nconst result = text.replace(/\\s+/g, ' ');\\\n// 結果を出力\\\nconsole.log(result);",
-        "holeyCode": "// 'Hello   World   JavaScript' を定義\\\nconst text = '___   世界   JavaScript';\\\n// replace() で連続する空白を1つの空白に置換\\\nconst result = text.___(___\\s+/g, ' ');\\\n// 結果を出力\\\nconsole.___(result);",
+        "correctCode": "// 'Hello   World   JavaScript' を定義\\\\nconst text = 'こんにちは   世界   JavaScript';\\\\n// replace() で連続する空白を1つの空白に置換\\\\nconst result = text.replace(/\\s+/g, ' ');\\\\n// 結果を出力\\\\nconsole.log(result);",
+        "holeyCode": "// 'Hello   World   JavaScript' を定義\\\\nconst text = '___   世界   JavaScript';\\\\n// replace() で連続する空白を1つの空白に置換\\\\nconst result = text.___(___\\s+/g, ' ');\\\\n// 結果を出力\\\\nconsole.___(result);",
         "correctLines": [
           "// 'Hello   World   JavaScript' を定義",
           "const text = 'こんにちは   世界   JavaScript';",
@@ -182,7 +182,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello   World   JavaScript\\\\n"
+            "expected_output": "Hello   World   JavaScript\\\\\n"
           }
         ]
       },
@@ -194,12 +194,12 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "try-catch文とは？",
-            "content": "# エラーを捕まえて対処する\\\\n\\\\n**try-catch** は、エラーが起きてもプログラムが止まらないようにする仕組みです。\\\\n\\\\n**身近なたとえ：**\\\\nサッカーのゴールキーパーを想像してください。シュートが来たら（エラーが起きたら）キャッチする！\\\\n\\\\n**仕組み：**\\\\n- `try` ... 「試してみる」処理を書く\\\\n- `catch` ... エラーが起きたときの処理を書く\\\\n\\\\n**コード例：**\\\\n```javascript\\\\ntry {\\\\n  throw new Error('エラーが発生しました');\\\\n} catch (e) {\\\\n  console.log(e.message);  // エラーメッセージを表示\\\\n}\\\\n```\\\\n\\\\n**ポイント：**\\\\nエラーが起きても catch で処理すれば、プログラムは続行できます！"
+            "content": "# エラーを捕まえて対処する\\\\\n\\\\\n**try-catch** は、エラーが起きてもプログラムが止まらないようにする仕組みです。\\\\\n\\\\\n**身近なたとえ：**\\\\\nサッカーのゴールキーパーを想像してください。シュートが来たら（エラーが起きたら）キャッチする！\\\\\n\\\\\n**仕組み：**\\\\\n- `try` ... 「試してみる」処理を書く\\\\\n- `catch` ... エラーが起きたときの処理を書く\\\\\n\\\\\n**コード例：**\\\\\n```javascript\\\\\ntry {\\\\\n  throw new Error('エラーが発生しました');\\\\\n} catch (e) {\\\\\n  console.log(e.message);  // エラーメッセージを表示\\\\\n}\\\\\n```\\\\\n\\\\\n**ポイント：**\\\\\nエラーが起きても catch で処理すれば、プログラムは続行できます！"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// try ブロックを開始\\\ntry {\\\n  // JSON.parse でパース\\\n  const result = JSON.parse('invalid json');\\\n// catch(e)でエラーをキャッチ\\\n} catch (e) {\\\n  // エラーメッセージを出力\\\n  console.log('エラー:', e.message);",
-        "holeyCode": "// try ブロックを開始\\\n___ {\\\n  // JSON.parse でパース\\\n  const result = JSON.___('invalid json');\\\n// catch(e)でエラーをキャッチ\\\n} ___ (e) {\\\n  // エラーメッセージを出力\\\n  console.log('エラー:', e.___);",
+        "correctCode": "// try ブロックを開始\\\\ntry {\\\\n  // JSON.parse でパース\\\\n  const result = JSON.parse('invalid json');\\\\n// catch(e)でエラーをキャッチ\\\\n} catch (e) {\\\\n  // エラーメッセージを出力\\\\n  console.log('エラー:', e.message);",
+        "holeyCode": "// try ブロックを開始\\\\n___ {\\\\n  // JSON.parse でパース\\\\n  const result = JSON.___('invalid json');\\\\n// catch(e)でエラーをキャッチ\\\\n} ___ (e) {\\\\n  // エラーメッセージを出力\\\\n  console.log('エラー:', e.___);",
         "correctLines": [
           "// try ブロックを開始",
           "try {",
@@ -235,7 +235,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Error: Unexpected token i in JSON at position 0\\\\n"
+            "expected_output": "Error: Unexpected token i in JSON at position 0\\\\\n"
           }
         ]
       },
@@ -247,12 +247,12 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "finally節とは？",
-            "content": "# 必ず実行される処理\\\\n\\\\n**finally** は、エラーが起きても起きなくても **必ず** 実行される部分です。\\\\n\\\\n**身近なたとえ：**\\\\n「試合に勝っても負けても、最後に握手する」というルールのようなものです。\\\\n\\\\n**使いどころ：**\\\\n- ファイルを閉じる処理\\\\n- データベース接続を切る処理\\\\n- 「お片付け」的な処理\\\\n\\\\n**コード例：**\\\\n```javascript\\\\ntry {\\\\n  // 処理を試す\\\\n} catch (e) {\\\\n  // エラーがあれば処理\\\\n} finally {\\\\n  // 必ずここを通る！\\\\n}\\\\n```"
+            "content": "# 必ず実行される処理\\\\\n\\\\\n**finally** は、エラーが起きても起きなくても **必ず** 実行される部分です。\\\\\n\\\\\n**身近なたとえ：**\\\\\n「試合に勝っても負けても、最後に握手する」というルールのようなものです。\\\\\n\\\\\n**使いどころ：**\\\\\n- ファイルを閉じる処理\\\\\n- データベース接続を切る処理\\\\\n- 「お片付け」的な処理\\\\\n\\\\\n**コード例：**\\\\\n```javascript\\\\\ntry {\\\\\n  // 処理を試す\\\\\n} catch (e) {\\\\\n  // エラーがあれば処理\\\\\n} finally {\\\\\n  // 必ずここを通る！\\\\\n}\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// process関数を定義\\\nfunction process() {\\\n  // try ブロック\\\n  try {\\\n    console.log('処理中...');\\\n    // throw new Error('エラー！')でエラーを投げる\\\n    throw new Error('エラー！');\\\n  } catch (e) {\\\n    // エラーメッセージを出力\\\n    console.log('Caught:', e.message);\\\n  // finally で常に実行されるブロック\\\n  } finally {\\\n    console.log('クリーンアップ完了');\\\n  }\\\n}\\\n// 関数を呼び出し\\\nprocess();",
-        "holeyCode": "// process関数を定義\\\n___ process() {\\\n  // try ブロック\\\n  ___ {\\\n    console.log('処理中...');\\\n    // throw new Error('エラー！')でエラーを投げる\\\n    ___ new Error('エラー！');\\\n  } catch (e) {\\\n    // エラーメッセージを出力\\\n    console.log('Caught:', e.___);\\\n  // finally で常に実行されるブロック\\\n  } ___ {\\\n    console.log('クリーンアップ完了');\\\n  }\\\n}\\\n// 関数を呼び出し\\\n___();",
+        "correctCode": "// process関数を定義\\\\nfunction process() {\\\\n  // try ブロック\\\\n  try {\\\\n    console.log('処理中...');\\\\n    // throw new Error('エラー！')でエラーを投げる\\\\n    throw new Error('エラー！');\\\\n  } catch (e) {\\\\n    // エラーメッセージを出力\\\\n    console.log('Caught:', e.message);\\\\n  // finally で常に実行されるブロック\\\\n  } finally {\\\\n    console.log('クリーンアップ完了');\\\\n  }\\\\n}\\\\n// 関数を呼び出し\\\\nprocess();",
+        "holeyCode": "// process関数を定義\\\\n___ process() {\\\\n  // try ブロック\\\\n  ___ {\\\\n    console.log('処理中...');\\\\n    // throw new Error('エラー！')でエラーを投げる\\\\n    ___ new Error('エラー！');\\\\n  } catch (e) {\\\\n    // エラーメッセージを出力\\\\n    console.log('Caught:', e.___);\\\\n  // finally で常に実行されるブロック\\\\n  } ___ {\\\\n    console.log('クリーンアップ完了');\\\\n  }\\\\n}\\\\n// 関数を呼び出し\\\\n___();",
         "correctLines": [
           "// process関数を定義",
           "function process() {",
@@ -308,7 +308,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Processing...\\\\nCaught: Error!\\\\nCleanup done\\\\n"
+            "expected_output": "Processing...\\\\\nCaught: Error!\\\\\nCleanup done\\\\\n"
           }
         ]
       },
@@ -320,12 +320,12 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "カスタムエラーとは？",
-            "content": "# 自分だけのエラーを作る\\\\n\\\\n**カスタムエラー** は、Error クラスを継承して作る独自のエラーです。\\\\n\\\\n**なぜ作る？**\\\\n- エラーの種類を区別できる（「入力エラー」「ネットワークエラー」など）\\\\n- エラーの原因が分かりやすくなる\\\\n\\\\n**作り方：**\\\\n```javascript\\\\nclass ValidationError extends Error {\\\\n  constructor(message) {\\\\n    super(message);  // 親クラスを呼ぶ\\\\n    this.name = 'ValidationError';  // エラー名を設定\\\\n  }\\\\n}\\\\n```\\\\n\\\\n**使い方：**\\\\n```javascript\\\\nthrow new ValidationError('入力が無効です');\\\\n```"
+            "content": "# 自分だけのエラーを作る\\\\\n\\\\\n**カスタムエラー** は、Error クラスを継承して作る独自のエラーです。\\\\\n\\\\\n**なぜ作る？**\\\\\n- エラーの種類を区別できる（「入力エラー」「ネットワークエラー」など）\\\\\n- エラーの原因が分かりやすくなる\\\\\n\\\\\n**作り方：**\\\\\n```javascript\\\\\nclass ValidationError extends Error {\\\\\n  constructor(message) {\\\\\n    super(message);  // 親クラスを呼ぶ\\\\\n    this.name = 'ValidationError';  // エラー名を設定\\\\\n  }\\\\\n}\\\\\n```\\\\\n\\\\\n**使い方：**\\\\\n```javascript\\\\\nthrow new ValidationError('入力が無効です');\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// extends でErrorクラスを継承\\\nclass ValidationError extends Error {\\\n  // constructor で初期化\\\n  constructor(message) {\\\n    // super で親クラスのコンストラクタを呼び出し\\\n    super(message);\\\n    // this.name にクラス名を設定\\\n    this.name = 'Validationエラー';\\\n  }\\\n}\\\n\\\n// tryでエラー処理を開始\\\ntry {\\\n  // throw new ValidationError('Invalid input')でエラーを投げる\\\n  throw new ValidationError('無効な入力');\\\n} catch (e) {\\\n  // エラー情報を出力\\\n  console.log(`${e.名前}: ${e.メッセージ}`);\\\n}",
-        "holeyCode": "// extends でErrorクラスを継承\\\nclass ValidationError ___ Error {\\\n  // constructor で初期化\\\n  ___(message) {\\\n    // super で親クラスのコンストラクタを呼び出し\\\n    ___(message);\\\n    // this.name にクラス名を設定\\\n    this.___ = 'Validationエラー';\\\n  }\\\n}\\\n\\\n// tryでエラー処理を開始\\\n___ {\\\n  // throw new ValidationError('Invalid input')でエラーを投げる\\\n  ___ new ValidationError('無効な入力');\\\n} catch (e) {\\\n  // エラー情報を出力\\\n  console.log(`${e.___}: ${e.メッセージ}`);\\\n}",
+        "correctCode": "// extends でErrorクラスを継承\\\\nclass ValidationError extends Error {\\\\n  // constructor で初期化\\\\n  constructor(message) {\\\\n    // super で親クラスのコンストラクタを呼び出し\\\\n    super(message);\\\\n    // this.name にクラス名を設定\\\\n    this.name = 'Validationエラー';\\\\n  }\\\\n}\\\\n\\\\n// tryでエラー処理を開始\\\\ntry {\\\\n  // throw new ValidationError('Invalid input')でエラーを投げる\\\\n  throw new ValidationError('無効な入力');\\\\n} catch (e) {\\\\n  // エラー情報を出力\\\\n  console.log(`${e.名前}: ${e.メッセージ}`);\\\\n}",
+        "holeyCode": "// extends でErrorクラスを継承\\\\nclass ValidationError ___ Error {\\\\n  // constructor で初期化\\\\n  ___(message) {\\\\n    // super で親クラスのコンストラクタを呼び出し\\\\n    ___(message);\\\\n    // this.name にクラス名を設定\\\\n    this.___ = 'Validationエラー';\\\\n  }\\\\n}\\\\n\\\\n// tryでエラー処理を開始\\\\n___ {\\\\n  // throw new ValidationError('Invalid input')でエラーを投げる\\\\n  ___ new ValidationError('無効な入力');\\\\n} catch (e) {\\\\n  // エラー情報を出力\\\\n  console.log(`${e.___}: ${e.メッセージ}`);\\\\n}",
         "correctLines": [
           "// extends でErrorクラスを継承",
           "class ValidationError extends Error {",
@@ -379,7 +379,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ValidationError: Invalid input\\\\n"
+            "expected_output": "ValidationError: Invalid input\\\\\n"
           }
         ]
       },
@@ -391,12 +391,12 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "Symbolとは？",
-            "content": "# 絶対に重複しないユニークな値\\\\n\\\\n**Symbol** は、世界に一つだけの「印」を作る機能です。\\\\n\\\\n**身近なたとえ：**\\\\n指紋は人それぞれ違いますよね。Symbol も同じで、作るたびに必ず違う値になります。同じ名前で作っても、中身は別物です！\\\\n\\\\n**なぜ使う？**\\\\n- プロパティ名の衝突を避けられる\\\\n- 「隠し」プロパティを作れる\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst id = Symbol('id');\\\\nconst obj = {\\\\n  [id]: 12345  // [id] で Symbol をキーにする\\\\n};\\\\nconsole.log(obj[id]);  // 12345\\\\n```"
+            "content": "# 絶対に重複しないユニークな値\\\\\n\\\\\n**Symbol** は、世界に一つだけの「印」を作る機能です。\\\\\n\\\\\n**身近なたとえ：**\\\\\n指紋は人それぞれ違いますよね。Symbol も同じで、作るたびに必ず違う値になります。同じ名前で作っても、中身は別物です！\\\\\n\\\\\n**なぜ使う？**\\\\\n- プロパティ名の衝突を避けられる\\\\\n- 「隠し」プロパティを作れる\\\\\n\\\\\n**コード例：**\\\\\n```javascript\\\\\nconst id = Symbol('id');\\\\\nconst obj = {\\\\\n  [id]: 12345  // [id] で Symbol をキーにする\\\\\n};\\\\\nconsole.log(obj[id]);  // 12345\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Symbol('秘密')でsecretを作成\\\nconst secret = Symbol('秘密');\\\n// userオブジェクトを作成\\\nconst user = {\\\n  // nameに'太郎'を設定\\\n  name: '太郎',\\\n  // [secret]に'password123'を設定\\\n  [secret]: 'パスワード123'\\\n};\\\n// user.nameをconsole.logで出力\\\nconsole.log(user.name);\\\n// user[secret]をconsole.logで出力\\\nconsole.log(user[secret]);",
-        "holeyCode": "// Symbol('秘密')でsecretを作成\\\nconst secret = ___('秘密');\\\n// userオブジェクトを作成\\\nconst user = {\\\n  // nameに'太郎'を設定\\\n  name: '___',\\\n  // [secret]に'password123'を設定\\\n  [secret]: '___'\\\n};\\\n// user.nameをconsole.logで出力\\\nconsole.log(user.___);\\\n// user[secret]をconsole.logで出力\\\nconsole.log(user[___]);",
+        "correctCode": "// Symbol('秘密')でsecretを作成\\\\nconst secret = Symbol('秘密');\\\\n// userオブジェクトを作成\\\\nconst user = {\\\\n  // nameに'太郎'を設定\\\\n  name: '太郎',\\\\n  // [secret]に'password123'を設定\\\\n  [secret]: 'パスワード123'\\\\n};\\\\n// user.nameをconsole.logで出力\\\\nconsole.log(user.name);\\\\n// user[secret]をconsole.logで出力\\\\nconsole.log(user[secret]);",
+        "holeyCode": "// Symbol('秘密')でsecretを作成\\\\nconst secret = ___('秘密');\\\\n// userオブジェクトを作成\\\\nconst user = {\\\\n  // nameに'太郎'を設定\\\\n  name: '___',\\\\n  // [secret]に'password123'を設定\\\\n  [secret]: '___'\\\\n};\\\\n// user.nameをconsole.logで出力\\\\nconsole.log(user.___);\\\\n// user[secret]をconsole.logで出力\\\\nconsole.log(user[___]);",
         "correctLines": [
           "// Symbol('秘密')でsecretを作成",
           "const secret = Symbol('秘密');",
@@ -438,7 +438,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Taro\\\\npassword123\\\\n"
+            "expected_output": "Taro\\\\\npassword123\\\\\n"
           }
         ]
       },
@@ -450,12 +450,12 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "WeakMapとは？",
-            "content": "# 弱参照（じゃくさんしょう）のMap\\\\n\\\\n**WeakMap** は、オブジェクトをキーにできる特殊な Map です。\\\\n\\\\n**「弱参照」って何？**\\\\nオブジェクトが不要になったら、自動で片付けられる（ガベージコレクション）という意味です。メモリを節約できます！\\\\n\\\\n**身近なたとえ：**\\\\n付箋（メモ）を本に貼るイメージです。本を捨てたら、付箋も一緒に捨てられます。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst cache = new WeakMap();\\\\nconst obj = {};\\\\ncache.set(obj, 'キャッシュ値');  // キーはオブジェクト\\\\nconsole.log(cache.get(obj));     // 'キャッシュ値'\\\\n```\\\\n\\\\n**使いどころ：**\\\\nプライベートなデータを安全に保存したいとき"
+            "content": "# 弱参照（じゃくさんしょう）のMap\\\\\n\\\\\n**WeakMap** は、オブジェクトをキーにできる特殊な Map です。\\\\\n\\\\\n**「弱参照」って何？**\\\\\nオブジェクトが不要になったら、自動で片付けられる（ガベージコレクション）という意味です。メモリを節約できます！\\\\\n\\\\\n**身近なたとえ：**\\\\\n付箋（メモ）を本に貼るイメージです。本を捨てたら、付箋も一緒に捨てられます。\\\\\n\\\\\n**コード例：**\\\\\n```javascript\\\\\nconst cache = new WeakMap();\\\\\nconst obj = {};\\\\\ncache.set(obj, 'キャッシュ値');  // キーはオブジェクト\\\\\nconsole.log(cache.get(obj));     // 'キャッシュ値'\\\\\n```\\\\\n\\\\\n**使いどころ：**\\\\\nプライベートなデータを安全に保存したいとき"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// privateDataにnew WeakMap()を代入\\\nconst privateData = new WeakMap();\\\n\\\n// Userクラスを定義\\\nclass User {\\\n  // constructorでnameを初期化\\\n  constructor(name) {\\\n    // privateData.set()でデータを設定\\\n    privateData.set(this, { password: '秘密' });\\\n    // this.nameにnameを代入\\\n    this.name = name;\\\n  }\\\n  getPassword() {\\\n    // privateData.get()でデータを取得\\\n    return privateData.get(this).password;\\\n  }\\\n}\\\n\\\n// userにnew User('太郎')を代入\\\nconst user = new User('太郎');\\\n// getPassword()を呼び出し\\\nconsole.log(user.getPassword());",
-        "holeyCode": "// privateDataにnew WeakMap()を代入\\\nconst privateData = new ___();\\\n\\\n// Userクラスを定義\\\n___ User {\\\n  // constructorでnameを初期化\\\n  ___(name) {\\\n    // privateData.set()でデータを設定\\\n    privateData.___(this, { password: '秘密' });\\\n    // this.nameにnameを代入\\\n    this.___ = name;\\\n  }\\\n  getPassword() {\\\n    // privateData.get()でデータを取得\\\n    return privateData.___(this).password;\\\n  }\\\n}\\\n\\\n// userにnew User('太郎')を代入\\\nconst user = ___ User('太郎');\\\n// getPassword()を呼び出し\\\nconsole.log(user.___());",
+        "correctCode": "// privateDataにnew WeakMap()を代入\\\\nconst privateData = new WeakMap();\\\\n\\\\n// Userクラスを定義\\\\nclass User {\\\\n  // constructorでnameを初期化\\\\n  constructor(name) {\\\\n    // privateData.set()でデータを設定\\\\n    privateData.set(this, { password: '秘密' });\\\\n    // this.nameにnameを代入\\\\n    this.name = name;\\\\n  }\\\\n  getPassword() {\\\\n    // privateData.get()でデータを取得\\\\n    return privateData.get(this).password;\\\\n  }\\\\n}\\\\n\\\\n// userにnew User('太郎')を代入\\\\nconst user = new User('太郎');\\\\n// getPassword()を呼び出し\\\\nconsole.log(user.getPassword());",
+        "holeyCode": "// privateDataにnew WeakMap()を代入\\\\nconst privateData = new ___();\\\\n\\\\n// Userクラスを定義\\\\n___ User {\\\\n  // constructorでnameを初期化\\\\n  ___(name) {\\\\n    // privateData.set()でデータを設定\\\\n    privateData.___(this, { password: '秘密' });\\\\n    // this.nameにnameを代入\\\\n    this.___ = name;\\\\n  }\\\\n  getPassword() {\\\\n    // privateData.get()でデータを取得\\\\n    return privateData.___(this).password;\\\\n  }\\\\n}\\\\n\\\\n// userにnew User('太郎')を代入\\\\nconst user = ___ User('太郎');\\\\n// getPassword()を呼び出し\\\\nconsole.log(user.___());",
         "correctLines": [
           "// privateDataにnew WeakMap()を代入",
           "const privateData = new WeakMap();",
@@ -523,7 +523,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "secret\\\\n"
+            "expected_output": "secret\\\\\n"
           }
         ]
       },
@@ -535,12 +535,12 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "Proxyとは？",
-            "content": "# 操作を「横取り」する\\\\n\\\\n**Proxy** は、オブジェクトへの操作を途中でキャッチして、カスタマイズできる機能です。\\\\n\\\\n**身近なたとえ：**\\\\n「受付係」を想像してください。お客さん（コード）が社員（オブジェクト）に会いたいとき、受付係が間に入って「名前を聞く」「記録を残す」などができます。\\\\n\\\\n**できること：**\\\\n- プロパティにアクセスしたときの処理を変える\\\\n- 存在しないプロパティに「デフォルト値」を返す\\\\n- アクセスをログに残す\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst handler = {\\\\n  get(target, prop) {\\\\n    // ない場合は '見つかりません' を返す\\\\n    return prop in target ? target[prop] : '見つかりません';\\\\n  }\\\\n};\\\\nconst obj = new Proxy({}, handler);\\\\n```"
+            "content": "# 操作を「横取り」する\\\\\n\\\\\n**Proxy** は、オブジェクトへの操作を途中でキャッチして、カスタマイズできる機能です。\\\\\n\\\\\n**身近なたとえ：**\\\\\n「受付係」を想像してください。お客さん（コード）が社員（オブジェクト）に会いたいとき、受付係が間に入って「名前を聞く」「記録を残す」などができます。\\\\\n\\\\\n**できること：**\\\\\n- プロパティにアクセスしたときの処理を変える\\\\\n- 存在しないプロパティに「デフォルト値」を返す\\\\\n- アクセスをログに残す\\\\\n\\\\\n**コード例：**\\\\\n```javascript\\\\\nconst handler = {\\\\\n  get(target, prop) {\\\\\n    // ない場合は '見つかりません' を返す\\\\\n    return prop in target ? target[prop] : '見つかりません';\\\\\n  }\\\\\n};\\\\\nconst obj = new Proxy({}, handler);\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// ハンドラオブジェクトを定義\\\nconst handler = {\\\n  // get トラップを定義\\\n  get(target, prop) {\\\n    // アクセスをログ出力\\\n    console.log(`Getting ${prop}`);\\\n    // return でプロパティ値を返す\\\n    return target[prop];\\\n  }\\\n};\\\n// name: '太郎' を持つオブジェクトの操作をインターセプト\\\nconst user = new Proxy({ name: '太郎' }, handler);\\\n// name プロパティにアクセス\\\nconsole.log(user.name);",
-        "holeyCode": "// ハンドラオブジェクトを定義\\\nconst handler = {\\\n  // get トラップを定義\\\n  ___(target, prop) {\\\n    // アクセスをログ出力\\\n    console.log(`Getting ${___}`);\\\n    // return でプロパティ値を返す\\\n    ___ target[prop];\\\n  }\\\n};\\\n// name: '太郎' を持つオブジェクトの操作をインターセプト\\\nconst user = new ___({ name: '太郎' }, handler);\\\n// name プロパティにアクセス\\\nconsole.log(user.___);",
+        "correctCode": "// ハンドラオブジェクトを定義\\\\nconst handler = {\\\\n  // get トラップを定義\\\\n  get(target, prop) {\\\\n    // アクセスをログ出力\\\\n    console.log(`Getting ${prop}`);\\\\n    // return でプロパティ値を返す\\\\n    return target[prop];\\\\n  }\\\\n};\\\\n// name: '太郎' を持つオブジェクトの操作をインターセプト\\\\nconst user = new Proxy({ name: '太郎' }, handler);\\\\n// name プロパティにアクセス\\\\nconsole.log(user.name);",
+        "holeyCode": "// ハンドラオブジェクトを定義\\\\nconst handler = {\\\\n  // get トラップを定義\\\\n  ___(target, prop) {\\\\n    // アクセスをログ出力\\\\n    console.log(`Getting ${___}`);\\\\n    // return でプロパティ値を返す\\\\n    ___ target[prop];\\\\n  }\\\\n};\\\\n// name: '太郎' を持つオブジェクトの操作をインターセプト\\\\nconst user = new ___({ name: '太郎' }, handler);\\\\n// name プロパティにアクセス\\\\nconsole.log(user.___);",
         "correctLines": [
           "// ハンドラオブジェクトを定義",
           "const handler = {",
@@ -589,7 +589,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Getting name\\\\nTaro\\\\n"
+            "expected_output": "Getting name\\\\\nTaro\\\\\n"
           }
         ]
       }
