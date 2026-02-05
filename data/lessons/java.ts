@@ -22,8 +22,8 @@ export const javaData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "public class Main {\\\\n    public static void main(String[] args) {\\\\n        // Hello, Java! と出力する\\\\n        System.out.println(\"Hello, Java!\");\\\\n    }\\\\n}",
-        "holeyCode": "public class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // Hello, Java! と出力する\\\\n        System.out.___(\"Hello, Java!\");\\\\n    ___\\\\n___",
+        "correctCode": "public class Main {\\\n    public static void main(String[] args) {\\\n        // Hello, Java! と出力する\\\n        System.out.println(\"こんにちは, Java!\");\\\n    }\\\n}",
+        "holeyCode": "public class ___ {\\\n    public static void ___\\(String[] args) {\\\n        // Hello, Java! と出力する\\\n        System.out.___(\"こんにちは, Java!\");\\\n    ___\\\n___",
         "correctLines": [
           "public class Main {",
           "    public static void main(String[] args) {",
@@ -302,8 +302,8 @@ export const javaData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "public class Main {\\\\n    public static void main(String[] args) {\\\\n        // age というはこに 10 を入れる\\\\n        int age = 10;\\\\n        // 変数 age をくっつけて表示する\\\\n        System.out.println(\"27I am         System.out.println(\"I am \" + age + \"40 years old        System.out.println(\"I am \" + age + \" years old\");\");\" + age + \"40 years old        System.out.println(\"80I am         System.out.println(\"I am \" + age + \"40 years old        System.out.println(\"I am \" + age + \" years old\");\");\" + age + \" years old\");\");\\\\n    }\\\\n}",
-        "holeyCode": "public class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // age というはこに 10 を入れる\\\\n        int age = ___;\\\\n        // 変数 age をくっつけて表示する\\\\n        System.out.___(\"23I am         System.out.___(\"I am \" + age + \"36 years old        System.out.___(\"I am \" + age + \" years old\");\");\" + age + \"36 years old        System.out.___(\"72I am         System.out.___(\"I am \" + age + \"36 years old        System.out.___(\"I am \" + age + \" years old\");\");\" + age + \" years old\");\");\\\\n    ___\\\\n___",
+        "correctCode": "public class Main {\\\n    public static void main(String[] args) {\\\n        // age というはこに 10 を入れる\\\n        int age = 10;\\\n        // 変数 age をくっつけて表示する\\\n        System.out.println(\"27私は        System.out.println(\"私は\" + 年齢 + \"40歳です        System.out.println(\"私は\" + 年齢 + \"歳です\");\");\" + 年齢 + \"40歳です        System.out.println(\"80私は        System.out.println(\"私は\" + 年齢 + \"40歳です        System.out.println(\"私は\" + 年齢 + \"歳です\");\");\" + 年齢 + \"歳です\");\");\\\n    }\\\n}",
+        "holeyCode": "public class ___ {\\\n    public static void ___\\(String[] args) {\\\n        // age というはこに 10 を入れる\\\n        int age = ___;\\\n        // 変数 age をくっつけて表示する\\\n        System.out.___(\"23私は        System.out.___(\"私は\" + 年齢 + \"36歳です        System.out.___(\"私は\" + 年齢 + \"歳です\");\");\" + 年齢 + \"36歳です        System.out.___(\"72私は        System.out.___(\"私は\" + 年齢 + \"36歳です        System.out.___(\"私は\" + 年齢 + \"歳です\");\");\" + 年齢 + \"歳です\");\");\\\n    ___\\\n___",
         "correctLines": [
           "public class Main {",
           "    public static void main(String[] args) {",
@@ -356,7 +356,7 @@ export const javaData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "public class Main {\\\\n    public static void main(String[] args) {\\\\n        // \"あか\", \"あお\" の順で配列を作る\\\\n        String[] colors = {\"27red        String[] colors = {\"red\", \"67blue        String[] colors = {\"27red        String[] colors = {\"red\", \"blue\"};\", \"blue\"};\"};\", \"76blue        String[] colors = {\"27red        String[] colors = {\"red\", \"blue\"};\", \"blue\"};\"};\\\\n        // 添字 1 で2番目を出す\\\\n        System.out.println(colors[1]);\\\\n    }\\\\n}",
+        "correctCode": "public class Main {\\\n    public static void main(String[] args) {\\\n        // \"あか\", \"あお\" の順で配列を作る\\\n        String[] colors = {\"27赤        String[] colors = {\"赤\", \"67青        String[] colors = {\"27赤        String[] colors = {\"赤\", \"青\"};\", \"青\"};\"};\", \"76青        String[] colors = {\"27赤        String[] colors = {\"赤\", \"青\"};\", \"青\"};\"};\\\n        // 添字 1 で2番目を出す\\\n        System.out.println(colors[1]);\\\n    }\\\n}",
         "holeyCode": "public class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // \"あか\", \"あお\" の順で配列を作る\\\\n        String[] colors = {___};\\\\n        // 添字 1 で2番目を出す\\\\n        System.out.___(colors[1]);\\\\n    ___\\\\n___",
         "correctLines": [
           "public class Main {",
@@ -414,8 +414,8 @@ export const javaData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "public class Main {\\\\n    public static void main(String[] args) {\\\\n        // score に 100 を入れる\\\\n        int score = 100;\\\\n        // > で80より大きいか比較する\\\\n        if (score > 80) {\\\\n            // ごうかく！ と表示する\\\\n            System.out.println(\"31Pass!            System.out.println(\"Pass!\");\");\\\\n        }\\\\n    }\\\\n}",
-        "holeyCode": "public class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // score に 100 を入れる\\\\n        int score = ___;\\\\n        // > で80より大きいか比較する\\\\n        if (score ___ 80) {\\\\n            // ごうかく！ と表示する\\\\n            System.out.___(\"27Pass!            System.out.___(\"Pass!\");\");\\\\n        ___\\\\n    ___\\\\n___",
+        "correctCode": "public class Main {\\\n    public static void main(String[] args) {\\\n        // score に 100 を入れる\\\n        int score = 100;\\\n        // > で80より大きいか比較する\\\n        if (score > 80) {\\\n            // ごうかく！ と表示する\\\n            System.out.println(\"31合格！            System.out.println(\"合格！\");\");\\\n        }\\\n    }\\\n}",
+        "holeyCode": "public class ___ {\\\n    public static void ___\\(String[] args) {\\\n        // score に 100 を入れる\\\n        int score = ___;\\\n        // > で80より大きいか比較する\\\n        if (score ___ 80) {\\\n            // ごうかく！ と表示する\\\n            System.out.___(\"27合格！            System.out.___(\"合格！\");\");\\\n        ___\\\n    ___\\\n___",
         "correctLines": [
           "public class Main {",
           "    public static void main(String[] args) {",
@@ -474,8 +474,8 @@ export const javaData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "public class Main {\\\\n    public static void main(String[] args) {\\\\n        // age に 10 を入れる\\\\n        int age = 10;\\\\n        // 20以上かを比較する演算子\\\\n        if (age >= 20) {\\\\n            // 20歳以上のときのメッセージ（'おとな'）\\\\n            System.out.println(\"31Adult            System.out.println(\"Adult\");\");\\\\n        // elseで20歳未満の場合の処理\\\\n        } else {\\\\n            // こども と表示する\\\\n            System.out.println(\"31Child            System.out.println(\"Child\");\");\\\\n        }\\\\n    }\\\\n}",
-        "holeyCode": "public class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // age に 10 を入れる\\\\n        int age = ___;\\\\n        // 20以上かを比較する演算子\\\\n        if (age ___ 20) {\\\\n            // 20歳以上のときのメッセージ（'おとな'）\\\\n            System.out.___(\"27Adult            System.out.___(\"Adult\");\");\\\\n        // elseで20歳未満の場合の処理\\\\n        } ___ {\\\\n            // こども と表示する\\\\n            System.out.___(\"27Child            System.out.___(\"Child\");\");\\\\n        ___\\\\n    ___\\\\n___",
+        "correctCode": "public class Main {\\\n    public static void main(String[] args) {\\\n        // age に 10 を入れる\\\n        int age = 10;\\\n        // 20以上かを比較する演算子\\\n        if (age >= 20) {\\\n            // 20歳以上のときのメッセージ（'おとな'）\\\n            System.out.println(\"31大人            System.out.println(\"大人\");\");\\\n        // elseで20歳未満の場合の処理\\\n        } else {\\\n            // こども と表示する\\\n            System.out.println(\"31子供            System.out.println(\"子供\");\");\\\n        }\\\n    }\\\n}",
+        "holeyCode": "public class ___ {\\\n    public static void ___\\(String[] args) {\\\n        // age に 10 を入れる\\\n        int age = ___;\\\n        // 20以上かを比較する演算子\\\n        if (age ___ 20) {\\\n            // 20歳以上のときのメッセージ（'おとな'）\\\n            System.out.___(\"27大人            System.out.___(\"大人\");\");\\\n        // elseで20歳未満の場合の処理\\\n        } ___ {\\\n            // こども と表示する\\\n            System.out.___(\"27子供            System.out.___(\"子供\");\");\\\n        ___\\\n    ___\\\n___",
         "correctLines": [
           "public class Main {",
           "    public static void main(String[] args) {",
@@ -542,8 +542,8 @@ export const javaData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "public class Main {\\\\n    public static void main(String[] args) {\\\\n        // score と bonus を定義する\\\\n        int score = 80;\\\\n        int bonus = 10;\\\\n        // && で両方の条件をチェックする\\\\n        if (score >= 70 && bonus > 0) {\\\\n            System.out.println(\"31Pass with bonus            System.out.println(\"Pass with bonus\");\");\\\\n        }\\\\n    }\\\\n}",
-        "holeyCode": "public class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // score と bonus を定義する\\\\n        int score = ___;\\\\n        int bonus = ___;\\\\n        // && で両方の条件をチェックする\\\\n        if (score >= ___ && bonus > 0) {\\\\n            System.out.___(\"27Pass with bonus            System.out.___(\"Pass with bonus\");\");\\\\n        ___\\\\n    ___\\\\n___",
+        "correctCode": "public class Main {\\\n    public static void main(String[] args) {\\\n        // score と bonus を定義する\\\n        int score = 80;\\\n        int bonus = 10;\\\n        // && で両方の条件をチェックする\\\n        if (score >= 70 && bonus > 0) {\\\n            System.out.println(\"31ボーナスあり合格            System.out.println(\"ボーナスあり合格\");\");\\\n        }\\\n    }\\\n}",
+        "holeyCode": "public class ___ {\\\n    public static void ___\\(String[] args) {\\\n        // score と bonus を定義する\\\n        int score = ___;\\\n        int bonus = ___;\\\n        // && で両方の条件をチェックする\\\n        if (score >= ___ && bonus > 0) {\\\n            System.out.___(\"27ボーナスあり合格            System.out.___(\"ボーナスあり合格\");\");\\\n        ___\\\n    ___\\\n___",
         "correctLines": [
           "public class Main {",
           "    public static void main(String[] args) {",
@@ -602,7 +602,7 @@ export const javaData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "public class Main {\\\\n    public static void main(String[] args) {\\\\n        // 配列を作る\\\\n        String[] names = {\"26Taro        String[] names = {\"Taro\", \"67Hanako        String[] names = {\"26Taro        String[] names = {\"Taro\", \"Hanako\"};\", \"Hanako\"};\"};\", \"77Hanako        String[] names = {\"26Taro        String[] names = {\"Taro\", \"Hanako\"};\", \"Hanako\"};\"};\\\\n        // 変数 name で配列 names を順番に取り出す\\\\n        for (String name : names) {\\\\n            System.out.println(name);\\\\n        }\\\\n    }\\\\n}",
+        "correctCode": "public class Main {\\\n    public static void main(String[] args) {\\\n        // 配列を作る\\\n        String[] names = {\"26太郎        String[] 名前s = {\"太郎\", \"67花子        String[] 名前s = {\"26太郎        String[] names = {\"太郎\", \"花子\"};\", \"花子\"};\"};\", \"77花子        String[] 名前s = {\"26太郎        String[] names = {\"太郎\", \"花子\"};\", \"花子\"};\"};\\\n        // 変数 name で配列 names を順番に取り出す\\\n        for (String name : names) {\\\n            System.out.println(name);\\\n        }\\\n    }\\\n}",
         "holeyCode": "public class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // 配列を作る\\\\n        String[] names = {___};\\\\n        // 変数 name で配列 names を順番に取り出す\\\\n        for (String ___ : names) {\\\\n            System.out.___(name);\\\\n        ___\\\\n    ___\\\\n___",
         "correctLines": [
           "public class Main {",
@@ -658,8 +658,8 @@ export const javaData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "import java.util.HashMap;\\\\npublic class Main {\\\\n    public static void main(String[] args) {\\\\n        // new HashMap で作る\\\\n        HashMap<String, String> user = new HashMap<>();\\\\n        // put でデータを追加する\\\\n        user.put(\"name\", \"25Taro        user.put(\"name\", \"Taro\");\");\\\\n        // get でデータを取り出す\\\\n        System.out.println(user.get(\"name\"));\\\\n    }\\\\n}",
-        "holeyCode": "import java.util.___ ;\\\\npublic class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // new HashMap で作る\\\\n        ___<String, String> user = new HashMap<>();\\\\n        // put でデータを追加する\\\\n        user.put(\"___\", \"24Taro        user.put(\"___\", \"Taro\");\");\\\\n        // get でデータを取り出す\\\\n        System.out.___(user.get(\"name\"));\\\\n    ___\\\\n___",
+        "correctCode": "import java.util.HashMap;\\\npublic class Main {\\\n    public static void main(String[] args) {\\\n        // new HashMap で作る\\\n        HashMap<String, String> user = new HashMap<>();\\\n        // put でデータを追加する\\\n        user.put(\"名前\", \"25太郎        user.put(\"名前\", \"太郎\");\");\\\n        // get でデータを取り出す\\\n        System.out.println(user.get(\"名前\"));\\\n    }\\\n}",
+        "holeyCode": "import java.util.___ ;\\\npublic class ___ {\\\n    public static void ___\\(String[] args) {\\\n        // new HashMap で作る\\\n        ___<String, String> user = new HashMap<>();\\\n        // put でデータを追加する\\\n        user.put(\"___\", \"24太郎        user.put(\"___\", \"太郎\");\");\\\n        // get でデータを取り出す\\\n        System.out.___(user.get(\"名前\"));\\\n    ___\\\n___",
         "correctLines": [
           "import java.util.HashMap;",
           "public class Main {",
@@ -719,13 +719,13 @@ export const javaData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "public class Main {\\\\n    // greet というメソッドを定義する\\\\n    public static void greet() {\\\\n        System.out.println(\"27Hello        System.out.println(\"Hello\");\");\\\\n    }\\\\n    public static void main(String[] args) {\\\\n        // greet メソッドを呼び出す\\\\n        greet();\\\\n    }\\\\n}",
-        "holeyCode": "public class ___ {\\\\n    // greet というメソッドを定義する\\\\n    public static void ___() {\\\\n        System.out.___(\"23Hello        System.out.___(\"Hello\");\");\\\\n    ___\\\\n    public static void ___\\(String[] args) {\\\\n        // greet メソッドを呼び出す\\\\n        ___();\\\\n    ___\\\\n___",
+        "correctCode": "public class Main {\\\n    // greet というメソッドを定義する\\\n    public static void greet() {\\\n        System.out.println(\"27こんにちは        System.out.println(\"こんにちは\");\");\\\n    }\\\n    public static void main(String[] args) {\\\n        // greet メソッドを呼び出す\\\n        greet();\\\n    }\\\n}",
+        "holeyCode": "public class ___ {\\\n    // greet というメソッドを定義する\\\n    public static void ___() {\\\n        System.out.___(\"23こんにちは        System.out.___(\"こんにちは\");\");\\\n    ___\\\n    public static void ___\\(String[] args) {\\\n        // greet メソッドを呼び出す\\\n        ___();\\\n    ___\\\n___",
         "correctLines": [
           "public class Main {",
           "    // greet というメソッドを定義する",
           "    public static void greet() {",
-          "        System.out.println(\"27Hello        System.out.println(\"Hello\");\");",
+          "        System.out.println(\"27こんにちは        System.out.println(\"こんにちは\");\");",
           "    }",
           "    public static void main(String[] args) {",
           "        // greet メソッドを呼び出す",

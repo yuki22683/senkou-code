@@ -22,13 +22,13 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 名前を受け取ってあいさつする関数\\\\ndef hello(name):\\\\n    # f'Hello, {name}!'を出力\\\\n    print(f'Hello, {name}!')\\\\n\\\\n# 関数を'Python'を渡して呼び出す\\\\nhello('Python')",
-        "holeyCode": "# 名前を受け取ってあいさつする関数\\\\ndef ___(name):\\\\n    # f'Hello, {name}!'を出力\\\\n    ___(f'Hello, {name}!')\\\\n\\\\n# 関数を'Python'を渡して呼び出す\\\\nhello('___')",
+        "correctCode": "# 名前を受け取ってあいさつする関数\\\ndef hello(name):\\\n    # f'Hello, {name}!'を出力\\\n    print(f'こんにちは, {名前}!')\\\n\\\n# 関数を'Python'を渡して呼び出す\\\nhello('Python')",
+        "holeyCode": "# 名前を受け取ってあいさつする関数\\\ndef ___(name):\\\n    # f'Hello, {name}!'を出力\\\n    ___(f'こんにちは, {名前}!')\\\n\\\n# 関数を'Python'を渡して呼び出す\\\nhello('___')",
         "correctLines": [
           "# 名前を受け取ってあいさつする関数",
           "def hello(name):",
           "    # f'Hello, {name}!'を出力",
-          "    print(f'Hello, {name}!')",
+          "    print(f'こんにちは, {名前}!')",
           "",
           "# 関数を'Python'を渡して呼び出す",
           "hello('Python')"
@@ -81,13 +81,13 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# デフォルト引数を持つ関数\\\\ndef say_hi(name='World'):\\\\n    # 「Hi, 名前!」の形式で表示\\\\n    print(f'Hi, {name}!')\\\\n\\\\n# 引数なしで呼び出す\\\\nsay_hi()",
-        "holeyCode": "# デフォルト引数を持つ関数\\\\ndef ___(name='World'):\\\\n    # 「Hi, 名前!」の形式で表示\\\\n    ___(f'Hi, {name}!')\\\\n\\\\n# 引数なしで呼び出す\\\\n___()",
+        "correctCode": "# デフォルト引数を持つ関数\\\ndef say_hi(name='世界'):\\\n    # 「Hi, 名前!」の形式で表示\\\n    print(f'Hi, {名前}!')\\\n\\\n# 引数なしで呼び出す\\\nsay_hi()",
+        "holeyCode": "# デフォルト引数を持つ関数\\\ndef ___(name='世界'):\\\n    # 「Hi, 名前!」の形式で表示\\\n    ___(f'Hi, {名前}!')\\\n\\\n# 引数なしで呼び出す\\\n___()",
         "correctLines": [
           "# デフォルト引数を持つ関数",
-          "def say_hi(name='World'):",
+          "def say_hi(name='世界'):",
           "    # 「Hi, 名前!」の形式で表示",
-          "    print(f'Hi, {name}!')",
+          "    print(f'Hi, {名前}!')",
           "",
           "# 引数なしで呼び出す",
           "say_hi()"
@@ -446,14 +446,14 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 年齢を設定\\\\nage = 25\\\\n# 20以上かつ30未満かどうか判定\\\\nif age >= 20 and age < 30:\\\\n    print('10In 20s    print('In 20s')')",
-        "holeyCode": "# 年齢を設定\\\\nage = ___\\\\n# 20以上かつ30未満かどうか判定\\\\nif age ___ 20 and age < 30:\\\\n    ___('8In 20s    ___('In 20s')')",
+        "correctCode": "# 年齢を設定\\\nage = 25\\\n# 20以上かつ30未満かどうか判定\\\nif age >= 20 and age < 30:\\\n    print('20代です')",
+        "holeyCode": "# 年齢を設定\\\nage = ___\\\n# 20以上かつ30未満かどうか判定\\\nif age ___ 20 and age < 30:\\\n    ___('20代です')",
         "correctLines": [
           "# 年齢を設定",
           "age = 25",
           "# 20以上かつ30未満かどうか判定",
           "if age >= 20 and age < 30:",
-          "    print('10In 20s    print('In 20s')')"
+          "    print('20代です')"
         ],
         "lineHints": [
           null,
@@ -579,17 +579,17 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# エラーが起きる可能性のある処理\\\\ntry:\\\\n    # 文字列'abc'を数値に変換（エラー発生）\\\\n    num = int('abc')\\\\n# 例外をキャッチするキーワード\\\\nexcept:\\\\n    # エラーメッセージ（'Error'）\\\\n    print('Error')",
-        "holeyCode": "# エラーが起きる可能性のある処理\\\\n___:\\\\n    # 文字列'abc'を数値に変換（エラー発生）\\\\n    num = int('___')\\\\n# 例外をキャッチするキーワード\\\\n___:\\\\n    # エラーメッセージ（'Error'）\\\\n    ___('Error')",
+        "correctCode": "# エラーが起きる可能性のある処理\\\ntry:\\\n    # 文字列'abc'を数値に変換（エラー発生）\\\n    num = int('あいう')\\\n# 例外をキャッチするキーワード\\\nexcept:\\\n    # エラーメッセージ（'Error'）\\\n    print('エラー')",
+        "holeyCode": "# エラーが起きる可能性のある処理\\\n___:\\\n    # 文字列'abc'を数値に変換（エラー発生）\\\n    num = int('___')\\\n# 例外をキャッチするキーワード\\\n___:\\\n    # エラーメッセージ（'Error'）\\\n    ___('エラー')",
         "correctLines": [
           "# エラーが起きる可能性のある処理",
           "try:",
           "    # 文字列'abc'を数値に変換（エラー発生）",
-          "    num = int('abc')",
+          "    num = int('あいう')",
           "# 例外をキャッチするキーワード",
           "except:",
           "    # エラーメッセージ（'Error'）",
-          "    print('Error')"
+          "    print('エラー')"
         ],
         "lineHints": [
           null,
@@ -607,7 +607,7 @@ export const pythonData2 = {
             "except",
             "finally"
           ],
-          "others": ["abc", "Error", "print"]
+          "others": ["abc", "Error", "print", "あいう"]
         },
         "testCases": [
           {
@@ -632,15 +632,15 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Catクラスを定義\\\\nclass Cat:\\\\n    # メソッドの第一引数はself\\\\n    def meow(self):\\\\n        # メッセージ（'Meow!'）\\\\n        print('Meow!')\\\\n\\\\n# インスタンスを作って呼び出す\\\\ncat = Cat()\\\\n# meowメソッドを呼び出す\\\\ncat.meow()",
-        "holeyCode": "# Catクラスを定義\\\\nclass ___:\\\\n    # メソッドの第一引数はself\\\\n    def ___(self):\\\\n        # メッセージ（'Meow!'）\\\\n        ___('Meow!')\\\\n\\\\n# インスタンスを作って呼び出す\\\\ncat = ___()\\\\n# meowメソッドを呼び出す\\\\ncat.___()",
+        "correctCode": "# Catクラスを定義\\\nclass Cat:\\\n    # メソッドの第一引数はself\\\n    def meow(self):\\\n        # メッセージ（'Meow!'）\\\n        print('ニャー！')\\\n\\\n# インスタンスを作って呼び出す\\\ncat = Cat()\\\n# meowメソッドを呼び出す\\\ncat.meow()",
+        "holeyCode": "# Catクラスを定義\\\nclass ___:\\\n    # メソッドの第一引数はself\\\n    def ___(self):\\\n        # メッセージ（'Meow!'）\\\n        ___('ニャー！')\\\n\\\n# インスタンスを作って呼び出す\\\ncat = ___()\\\n# meowメソッドを呼び出す\\\ncat.___()",
         "correctLines": [
           "# Catクラスを定義",
           "class Cat:",
           "    # メソッドの第一引数はself",
           "    def meow(self):",
           "        # メッセージ（'Meow!'）",
-          "        print('Meow!')",
+          "        print('ニャー！')",
           "",
           "# インスタンスを作って呼び出す",
           "cat = Cat()",

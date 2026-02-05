@@ -201,7 +201,7 @@ export const cpp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\n#include <string_view>\\\\nusing namespace std;\\\\n\\\\n// string_view で文字列ビューを受け取る\\\\nvoid greet(string_view name) {\\\\n    cout << \"Hello, \" << name << endl;\\\\n}\\\\n\\\\nint main() {\\\\n    // greet(\"World\")を呼び出す\\\\n    greet(\"World\");\\\\n    return 0;\\\\n}",
+        "correctCode": "#include <iostream>\\\n#include <string_view>\\\nusing namespace std;\\\n\\\n// string_view で文字列ビューを受け取る\\\nvoid greet(string_view name) {\\\n    cout << \"こんにちは, \" << name << endl;\\\n}\\\n\\\nint main() {\\\n    // greet(\"World\")を呼び出す\\\n    greet(\"世界\");\\\n    return 0;\\\n}",
         "holeyCode": "#include <iostream>\\\\n#include <string_view>\\\\nusing namespace ___;\\\\n\\\\n// string_view で文字列ビューを受け取る\\\\nvoid greet(string_view ___) {\\\\n    cout << \"___\" << name << endl;\\\\n___\\\\n\\\\nint ___() {\\\\n    // greet(\"World\")を呼び出す\\\\n    greet(\"___\");\\\\n    return ___;\\\\n___",
         "correctLines": [
                   "#include <iostream>",
@@ -210,12 +210,12 @@ export const cpp4Data = {
                   "",
                   "// string_view で文字列ビューを受け取る",
                   "void greet(string_view name) {",
-                  "    cout << \"Hello, \" << name << endl;",
+                  "    cout << \"こんにちは, \" << name << endl;",
                   "}",
                   "",
                   "int main() {",
                   "    // greet(\"World\")を呼び出す",
-                  "    greet(\"World\");",
+                  "    greet(\"世界\");",
                   "    return 0;",
                   "}"
         ],

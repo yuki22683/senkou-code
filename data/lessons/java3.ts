@@ -397,7 +397,7 @@ export const javaData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "import java.util.*;\\\\n\\\\npublic class Main {\\\\n    public static void main(String[] args) {\\\\n        // 値を持つOptionalを作成するメソッド\\\\n        Optional<String> opt = Optional.of(\"Hello\");\\\\n        // orElse でデフォルト値を指定して取得する\\\\n        String value = opt.orElse(\"default\");\\\\n        // println で出力する\\\\n        System.out.println(value);\\\\n    }\\\\n}",
+        "correctCode": "import java.util.*;\\\n\\\npublic class Main {\\\n    public static void main(String[] args) {\\\n        // 値を持つOptionalを作成するメソッド\\\n        Optional<String> opt = Optional.of(\"こんにちは\");\\\n        // orElse でデフォルト値を指定して取得する\\\n        String value = opt.orElse(\"デフォルト\");\\\n        // println で出力する\\\n        System.out.println(value);\\\n    }\\\n}",
         "holeyCode": "import java.util.___\\\\n\\\\npublic class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // 値を持つOptionalを作成するメソッド\\\\n        Optional<String> opt = Optional.of(\"___\");\\\\n        // orElse でデフォルト値を指定して取得する\\\\n        String value = opt.orElse(\"___\");\\\\n        // println で出力する\\\\n        System.out.___(value);\\\\n    ___\\\\n___",
         "correctLines": [
           "import java.util.*;",
@@ -460,8 +460,8 @@ export const javaData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "import java.util.*;\\\\n\\\\npublic class Main {\\\\n    public static void main(String[] args) {\\\\n        // namesに[\"Alice\", \"Bob\"]を代入\\\\n        List<String> names = Arrays.asList(\"Alice\", \"Bob\");\\\\n        // メソッド参照を表す演算子\\\\n        names.forEach(System.out::println);\\\\n    }\\\\n}",
-        "holeyCode": "import java.util.___\\\\n\\\\npublic class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // namesに[\"Alice\", \"Bob\"]を代入\\\\n        List<String> names = Arrays.asList(\"___\", \"Bob\");\\\\n        // メソッド参照を表す演算子\\\\n        names.forEach(___);\\\\n    ___\\\\n___",
+        "correctCode": "import java.util.*;\\\n\\\npublic class Main {\\\n    public static void main(String[] args) {\\\n        // namesに[\"Alice\", \"Bob\"]を代入\\\n        List<String> names = Arrays.asList(\"アリス\", \"ボブ\");\\\n        // メソッド参照を表す演算子\\\n        names.forEach(System.out::println);\\\n    }\\\n}",
+        "holeyCode": "import java.util.___\\\n\\\npublic class ___ {\\\n    public static void ___\\(String[] args) {\\\n        // namesに[\"Alice\", \"Bob\"]を代入\\\n        List<String> names = Arrays.asList(\"___\", \"ボブ\");\\\n        // メソッド参照を表す演算子\\\n        names.forEach(___);\\\n    ___\\\n___",
         "correctLines": [
           "import java.util.*;",
           "",

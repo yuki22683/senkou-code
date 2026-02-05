@@ -22,7 +22,7 @@ export const php2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n// Catクラスを定義\\\\nclass Cat {\\\\n    // public $nameを定義\\\\n    public $name;\\\\n}\\\\n// $catにnew Cat()を代入\\\\n$cat = new Cat();\\\\n// $cat->nameに'Tama'を代入\\\\n$cat->name = 'Tama';\\\\n// $cat->nameを出力\\\\necho $cat->name;\\\\n?>",
+        "correctCode": "<?php\\\n// Catクラスを定義\\\nclass Cat {\\\n    // public $nameを定義\\\n    public $name;\\\n}\\\n// $catにnew Cat()を代入\\\n$cat = new Cat();\\\n// $cat->nameに'Tama'を代入\\\n$cat->name = 'タマ';\\\n// $cat->nameを出力\\\necho $cat->name;\\\n?>",
         "holeyCode": "___\\\\n// Catクラスを定義\\\\nclass ___ {\\\\n    // public $nameを定義\\\\n    public $___;\\\\n___\\\\n// $catにnew Cat()を代入\\\\n$cat = new ___();\\\\n// $cat->nameに'Tama'を代入\\\\n$cat->name = '___';\\\\n// $cat->nameを出力\\\\necho ___->name;\\\\n___",
         "correctLines": [
           "<?php",
@@ -34,7 +34,7 @@ export const php2Data = {
           "// $catにnew Cat()を代入",
           "$cat = new Cat();",
           "// ->でプロパティにアクセス",
-          "$cat->name = 'Tama';",
+          "$cat->name = 'タマ';",
           "// echoで出力",
           "echo $cat->name;",
           "?>"
@@ -150,7 +150,7 @@ export const php2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n// Vehicleクラスを定義\\\\nclass Vehicle {\\\\n    // move()メソッドを定義\\\\n    public function move() {\\\\n        // 'moving'を出力\\\\n        echo 'moving';\\\\n    }\\\\n}\\\\n// CarがVehicleを継承\\\\nclass Car extends Vehicle { }\\\\n// $carにnew Car()を代入\\\\n$car = new Car();\\\\n// $car->move()を呼び出し\\\\n$car->move();\\\\n?>",
+        "correctCode": "<?php\\\n// Vehicleクラスを定義\\\nclass Vehicle {\\\n    // move()メソッドを定義\\\n    public function move() {\\\n        // 'moving'を出力\\\n        echo '移動中';\\\n    }\\\n}\\\n// CarがVehicleを継承\\\nclass Car extends Vehicle { }\\\n// $carにnew Car()を代入\\\n$car = new Car();\\\n// $car->move()を呼び出し\\\n$car->move();\\\n?>",
         "holeyCode": "___\\\\n// Vehicleクラスを定義\\\\nclass ___ {\\\\n    // move()メソッドを定義\\\\n    public function ___() {\\\\n        // 'moving'を出力\\\\n        echo '___';\\\\n    ___\\\\n___\\\\n// CarがVehicleを継承\\\\nclass ___ extends Vehicle { }\\\\n// $carにnew Car()を代入\\\\n$car = new ___();\\\\n// $car->move()を呼び出し\\\\n$car->___();\\\\n___",
         "correctLines": [
           "<?php",
@@ -159,7 +159,7 @@ export const php2Data = {
           "    // move()メソッドを定義",
           "    public function move() {",
           "        // 'moving'を出力",
-          "        echo 'moving';",
+          "        echo '移動中';",
           "    }",
           "}",
           "// CarがVehicleを継承",
@@ -496,7 +496,7 @@ export const php2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n// namespace Appを宣言\\\\nnamespace App;\\\\n// Helloクラスを定義\\\\nclass Hello {\\\\n    // say()メソッドを定義\\\\n    public function say() {\\\\n        // 'hello'を出力\\\\n        echo 'hello';\\\\n    }\\\\n}\\\\n// $hにnew Hello()を代入\\\\n$h = new Hello();\\\\n// $h->say()を呼び出し\\\\n$h->say();\\\\n?>",
+        "correctCode": "<?php\\\n// namespace Appを宣言\\\nnamespace App;\\\n// Helloクラスを定義\\\nclass Hello {\\\n    // say()メソッドを定義\\\n    public function say() {\\\n        // 'hello'を出力\\\n        echo 'こんにちは';\\\n    }\\\n}\\\n// $hにnew Hello()を代入\\\n$h = new Hello();\\\n// $h->say()を呼び出し\\\n$h->say();\\\n?>",
         "holeyCode": "___\\\\n// namespace Appを宣言\\\\nnamespace ___;\\\\n// Helloクラスを定義\\\\nclass ___ {\\\\n    // say()メソッドを定義\\\\n    public function ___() {\\\\n        // 'hello'を出力\\\\n        echo '___';\\\\n    ___\\\\n___\\\\n// $hにnew Hello()を代入\\\\n$h = new ___();\\\\n// $h->say()を呼び出し\\\\n$h->___();\\\\n___",
         "correctLines": [
           "<?php",
@@ -507,7 +507,7 @@ export const php2Data = {
           "    // say()メソッドを定義",
           "    public function say() {",
           "        // 'hello'を出力",
-          "        echo 'hello';",
+          "        echo 'こんにちは';",
           "    }",
           "}",
           "// $hにnew Hello()を代入",
@@ -563,14 +563,14 @@ export const php2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n// nullを代入\\\\n$value = null;\\\\n// ??でnullの場合のデフォルト値を指定\\\\necho $value ?? 'default';\\\\n?>",
-        "holeyCode": "___\\\\n// nullを代入\\\\n$value = ___;\\\\n// ??でnullの場合のデフォルト値を指定\\\\necho ___ ?? 'default';\\\\n___",
+        "correctCode": "<?php\\\n// nullを代入\\\n$value = null;\\\n// ??でnullの場合のデフォルト値を指定\\\necho $value ?? 'デフォルト';\\\n?>",
+        "holeyCode": "___\\\n// nullを代入\\\n$value = ___;\\\n// ??でnullの場合のデフォルト値を指定\\\necho ___ ?? 'デフォルト';\\\n___",
         "correctLines": [
           "<?php",
           "// nullを代入",
           "$value = null;",
           "// ??でnullの場合のデフォルト値を指定",
-          "echo $value ?? 'default';",
+          "echo $value ?? 'デフォルト';",
           "?>"
         ],
         "lineHints": [

@@ -183,11 +183,11 @@ export const perlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 文字をつなげる\nmy $greeting = \"Hello, \" . \"Perl!\";\nprint \"$greeting\n\";",
-        "holeyCode": "# 文字をつなげる\nmy $___ = \"Hello, \" . \"Perl!\";\n___ \"$greeting\n\";",
+        "correctCode": "# 文字をつなげる\nmy $greeting = \"こんにちは, \" . \"Perl!\";\nprint \"$greeting\n\";",
+        "holeyCode": "# 文字をつなげる\nmy $___ = \"こんにちは, \" . \"Perl!\";\n___ \"$greeting\n\";",
         "correctLines": [
           "# 文字をつなげる",
-          "my $greeting = \"Hello, \" . \"Perl!\";",
+          "my $greeting = \"こんにちは, \" . \"Perl!\";",
           "print \"$greeting",
           "\";"
         ],
@@ -233,11 +233,11 @@ export const perlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# @fruitsに(\"apple\", \"orange\", \"grape\")を代入\nmy @fruits = (\"apple\", \"orange\", \"grape\");\n# $fruits[0]をprintで出力\nprint \"$fruits[0]\n\";",
-        "holeyCode": "# @fruitsに(\"apple\", \"orange\", \"grape\")を代入\nmy @___ = (\"apple\", \"orange\", \"grape\");\n# $fruits[0]をprintで出力\n___ \"$fruits[0]\n\";",
+        "correctCode": "# @fruitsに(\"apple\", \"orange\", \"grape\")を代入\nmy @fruits = (\"りんご\", \"みかん\", \"ぶどう\");\n# $fruits[0]をprintで出力\nprint \"$fruits[0]\n\";",
+        "holeyCode": "# @fruitsに(\"apple\", \"orange\", \"grape\")を代入\nmy @___ = (\"りんご\", \"みかん\", \"ぶどう\");\n# $fruits[0]をprintで出力\n___ \"$fruits[0]\n\";",
         "correctLines": [
           "# @fruitsに(\"apple\", \"orange\", \"grape\")を代入",
-          "my @fruits = (\"apple\", \"orange\", \"grape\");",
+          "my @fruits = (\"りんご\", \"みかん\", \"ぶどう\");",
           "# $fruits[0]をprintで出力",
           "print \"$fruits[0]\n\";"
         ],
@@ -401,11 +401,11 @@ export const perlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# @animalsに(\"dog\", \"cat\", \"bird\")を代入\nmy @animals = (\"dog\", \"cat\", \"bird\");\n# foreachで@animalsをループ\nforeach my $animal (@animals) {\n  # $animalをprintで出力\n  print \"$animal\n\";\n}",
-        "holeyCode": "# @animalsに(\"dog\", \"cat\", \"bird\")を代入\nmy @___ = (\"dog\", \"cat\", \"bird\");\n# foreachで@animalsをループ\nforeach my $animal (@___) {\n  # $animalをprintで出力\n  ___ \"$animal\n\";\n}",
+        "correctCode": "# @animalsに(\"dog\", \"cat\", \"bird\")を代入\nmy @animals = (\"犬\", \"猫\", \"鳥\");\n# foreachで@animalsをループ\nforeach my $animal (@animals) {\n  # $animalをprintで出力\n  print \"$animal\n\";\n}",
+        "holeyCode": "# @animalsに(\"dog\", \"cat\", \"bird\")を代入\nmy @___ = (\"犬\", \"猫\", \"鳥\");\n# foreachで@animalsをループ\nforeach my $animal (@___) {\n  # $animalをprintで出力\n  ___ \"$animal\n\";\n}",
         "correctLines": [
           "# @animalsに(\"dog\", \"cat\", \"bird\")を代入",
-          "my @animals = (\"dog\", \"cat\", \"bird\");",
+          "my @animals = (\"犬\", \"猫\", \"鳥\");",
           "# foreachで@animalsをループ",
           "foreach my $animal (@animals) {",
           "  # $animalをprintで出力",
@@ -457,11 +457,11 @@ export const perlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ハッシュを作る\nmy %fruit = (\"color\" => \"24redmy %fruit = (\"color\" => \"red\");\");\nprint \"$fruit{color}\n\";",
-        "holeyCode": "# ハッシュを作る\nmy %fruit = (\"___\" => \"22redmy %fruit = (\"___\" => \"red\");\");\n___ \"$fruit{color}\n\";",
+        "correctCode": "# ハッシュを作る\nmy %fruit = (\"color\" => \"24赤my %fruit = (\"color\" => \"赤\");\");\nprint \"$fruit{color}\n\";",
+        "holeyCode": "# ハッシュを作る\nmy %fruit = (\"___\" => \"22赤my %fruit = (\"___\" => \"赤\");\");\n___ \"$fruit{color}\n\";",
         "correctLines": [
           "# ハッシュを作る",
-          "my %fruit = (\"color\" => \"24redmy %fruit = (\"color\" => \"red\");\");",
+          "my %fruit = (\"color\" => \"24赤my %fruit = (\"color\" => \"赤\");\");",
           "print \"$fruit{color}",
           "\";"
         ],

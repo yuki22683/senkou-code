@@ -22,12 +22,12 @@ export const rustData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "fn main() {\\\\n    // Hello, Rust! と表示する\\\\n    println!(\"Hello, Rust!\");\\\\n}",
-        "holeyCode": "fn ___ () {\\\\n    // Hello, Rust! と表示する\\\\n    ___!(\"Hello, Rust!\");\\\\n___",
+        "correctCode": "fn main() {\\\n    // Hello, Rust! と表示する\\\n    println!(\"こんにちは, Rust!\");\\\n}",
+        "holeyCode": "fn ___ () {\\\n    // Hello, Rust! と表示する\\\n    ___!(\"こんにちは, Rust!\");\\\n___",
         "correctLines": [
           "fn main() {",
           "    // Hello, Rust! と表示する",
-          "    println!(\"Hello, Rust!\");",
+          "    println!(\"こんにちは, Rust!\");",
           "}"
         ],
         "lineHints": [
@@ -213,15 +213,15 @@ export const rustData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "fn main() {\\\\n    // score に 100 を入れる\\\\n    let score = 100;\\\\n    // > で比較する\\\\n    if score > 80 {\\\\n        println!(\"Great!\");\\\\n    }\\\\n}",
-        "holeyCode": "fn ___ () {\\\\n    // score に 100 を入れる\\\\n    let ___ = 100;\\\\n    // > で比較する\\\\n    if score ___ 80 {\\\\n        ___!(\"Great!\");\\\\n    ___\\\\n___",
+        "correctCode": "fn main() {\\\n    // score に 100 を入れる\\\n    let score = 100;\\\n    // > で比較する\\\n    if score > 80 {\\\n        println!(\"すごい!\");\\\n    }\\\n}",
+        "holeyCode": "fn ___ () {\\\n    // score に 100 を入れる\\\n    let ___ = 100;\\\n    // > で比較する\\\n    if score ___ 80 {\\\n        ___!(\"すごい!\");\\\n    ___\\\n___",
         "correctLines": [
           "fn main() {",
           "    // score に 100 を入れる",
           "    let score = 100;",
           "    // > で比較する",
           "    if score > 80 {",
-          "        println!(\"Great!\");",
+          "        println!(\"すごい!\");",
           "    }",
           "}"
         ],
@@ -266,15 +266,15 @@ export const rustData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "fn main() {\\\\n    let score = 80;\\\\n    let bonus = 10;\\\\n    // && で両方の条件をチェック\\\\n    if score >= 70 && bonus > 0 {\\\\n        println!(\"Bonus Pass\");\\\\n    }\\\\n}",
-        "holeyCode": "fn ___ () {\\\\n    let ___ = 80;\\\\n    let ___ = 10;\\\\n    // && で両方の条件をチェック\\\\n    if score ___ 70 && bonus > 0 {\\\\n        ___!(\"Bonus Pass\");\\\\n    ___\\\\n___",
+        "correctCode": "fn main() {\\\n    let score = 80;\\\n    let bonus = 10;\\\n    // && で両方の条件をチェック\\\n    if score >= 70 && bonus > 0 {\\\n        println!(\"Bonus 合格\");\\\n    }\\\n}",
+        "holeyCode": "fn ___ () {\\\n    let ___ = 80;\\\n    let ___ = 10;\\\n    // && で両方の条件をチェック\\\n    if score ___ 70 && bonus > 0 {\\\n        ___!(\"Bonus 合格\");\\\n    ___\\\n___",
         "correctLines": [
           "fn main() {",
           "    let score = 80;",
           "    let bonus = 10;",
           "    // && で両方の条件をチェック",
           "    if score >= 70 && bonus > 0 {",
-          "        println!(\"Bonus Pass\");",
+          "        println!(\"Bonus 合格\");",
           "    }",
           "}"
         ],
@@ -320,8 +320,8 @@ export const rustData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "fn main() {\\\\n    // colors というベクタを作る（'あか', 'あお'の順）\\\\n    let colors = vec![\"22red    let colors = vec![\"red\", \"57blue    let colors = vec![\"22red    let colors = vec![\"red\", \"blue\"];\", \"blue\"];\"];\", \"66blue    let colors = vec![\"22red    let colors = vec![\"red\", \"blue\"];\", \"blue\"];\"];\\\\n    // 2番目のデータ（インデックス1）を出す\\\\n    println!(\"{}\", colors[1]);\\\\n}",
-        "holeyCode": "fn ___ () {\\\\n    // colors というベクタを作る（'あか', 'あお'の順）\\\\n    let ___ = vec![\"19red    let ___ = vec![\"red\", \"51blue    let ___ = vec![\"19red    let ___ = vec![\"red\", \"blue\"];\", \"blue\"];\"];\", \"60blue    let ___ = vec![\"19red    let ___ = vec![\"red\", \"blue\"];\", \"blue\"];\"];\\\\n    // 2番目のデータ（インデックス1）を出す\\\\n    ___!(\"{}\", colors[1]);\\\\n___",
+        "correctCode": "fn main() {\\\n    // colors というベクタを作る（'あか', 'あお'の順）\\\n    let colors = vec![\"22赤    let colors = vec![\"赤\", \"57青    let colors = vec![\"22赤    let colors = vec![\"赤\", \"青\"];\", \"青\"];\"];\", \"66青    let colors = vec![\"22赤    let colors = vec![\"赤\", \"青\"];\", \"青\"];\"];\\\n    // 2番目のデータ（インデックス1）を出す\\\n    println!(\"{}\", colors[1]);\\\n}",
+        "holeyCode": "fn ___ () {\\\n    // colors というベクタを作る（'あか', 'あお'の順）\\\n    let ___ = vec![\"19赤    let ___ = vec![\"赤\", \"51青    let ___ = vec![\"19赤    let ___ = vec![\"赤\", \"青\"];\", \"青\"];\"];\", \"60青    let ___ = vec![\"19赤    let ___ = vec![\"赤\", \"青\"];\", \"青\"];\"];\\\n    // 2番目のデータ（インデックス1）を出す\\\n    ___!(\"{}\", colors[1]);\\\n___",
         "correctLines": [
           "fn main() {",
           "    // colors というベクタを作る（'あか', 'あお'の順）",
@@ -378,15 +378,15 @@ export const rustData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "use std::collections::HashMap;\\\\nfn main() {\\\\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\\\\n    let mut colors = HashMap::new();\\\\n    // キーと値を追加\\\\n    colors.insert(\"18orange    colors.insert(\"orange\", \"25orange    colors.insert(\"orange\", \"orange\");\");\", \"25orange    colors.insert(\"52orange    colors.insert(\"orange\", \"25orange    colors.insert(\"orange\", \"orange\");\");\", \"orange\");\");\\\\n    // 中身を出す\\\\n    println!(\"{}\", colors[\"26orange    println!(\"{}\", colors[\"orange\"]);\"]);\\\\n}",
-        "holeyCode": "use std::___::___;\\\\nfn ___ () {\\\\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\\\\n    let mut ___ = HashMap::new();\\\\n    // キーと値を追加\\\\n    colors.___(\"15orange    colors.___(\"orange\", \"22orange    colors.___(\"orange\", \"orange\");\");\", \"22orange    colors.___(\"46orange    colors.___(\"orange\", \"22orange    colors.___(\"orange\", \"orange\");\");\", \"orange\");\");\\\\n    // 中身を出す\\\\n    ___!(\"{}\", colors[\"22orange    ___!(\"{}\", colors[\"orange\"]);\"]);\\\\n___",
+        "correctCode": "use std::collections::HashMap;\\\nfn main() {\\\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\\\n    let mut colors = HashMap::new();\\\n    // キーと値を追加\\\n    colors.insert(\"18みかん    colors.insert(\"みかん\", \"25みかん    colors.insert(\"みかん\", \"みかん\");\");\", \"25みかん    colors.insert(\"52orange    colors.insert(\"みかん\", \"25みかん    colors.insert(\"みかん\", \"みかん\");\");\", \"みかん\");\");\\\n    // 中身を出す\\\n    println!(\"{}\", colors[\"26みかん    println!(\"{}\", colors[\"みかん\"]);\"]);\\\n}",
+        "holeyCode": "use std::___::___;\\\nfn ___ () {\\\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\\\n    let mut ___ = HashMap::new();\\\n    // キーと値を追加\\\n    colors.___(\"15みかん    colors.___(\"みかん\", \"22みかん    colors.___(\"みかん\", \"みかん\");\");\", \"22みかん    colors.___(\"46orange    colors.___(\"みかん\", \"22みかん    colors.___(\"みかん\", \"みかん\");\");\", \"みかん\");\");\\\n    // 中身を出す\\\n    ___!(\"{}\", colors[\"22みかん    ___!(\"{}\", colors[\"みかん\"]);\"]);\\\n___",
         "correctLines": [
           "use std::collections::HashMap;",
           "fn main() {",
           "    // 辞書を作る（キーは'みかん'、値は'オレンジ'）",
           "    let mut colors = HashMap::new();",
           "    // キーと値を追加",
-          "    colors.insert(\"18orange    colors.insert(\"orange\", \"25orange    colors.insert(\"orange\", \"orange\");\");\", \"25orange    colors.insert(\"52orange    colors.insert(\"orange\", \"25orange    colors.insert(\"orange\", \"orange\");\");\", \"orange\");\");",
+          "    colors.insert(\"18みかん    colors.insert(\"みかん\", \"25みかん    colors.insert(\"みかん\", \"みかん\");\");\", \"25みかん    colors.insert(\"52orange    colors.insert(\"みかん\", \"25みかん    colors.insert(\"みかん\", \"みかん\");\");\", \"みかん\");\");",
           "    // 中身を出す",
           "    println!(\"{}\", colors[\"みかん\"]);",
           "}"

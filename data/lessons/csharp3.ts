@@ -681,7 +681,7 @@ export const csharp3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n// usingでIO名前空間をインポート\\\\nusing System.IO;\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // usingで自動解放\\\\n        using var writer = new StringWriter();\\\\n        // 文字列を書き込む\\\\n        writer.WriteLine(\"Hello\");\\\\n        // writer.ToString(を表示\\\\n        Console.WriteLine(writer.ToString().Trim());\\\\n    }\\\\n}",
+        "correctCode": "// usingでSystem名前空間をインポート\\\nusing System;\\\n// usingでIO名前空間をインポート\\\nusing System.IO;\\\n\\\n// Programクラスを定義\\\nclass Program {\\\n    // Mainメソッドを定義\\\n    static void Main() {\\\n        // usingで自動解放\\\n        using var writer = new StringWriter();\\\n        // 文字列を書き込む\\\n        writer.WriteLine(\"こんにちは\");\\\n        // writer.ToString(を表示\\\n        Console.WriteLine(writer.ToString().Trim());\\\n    }\\\n}",
         "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n// usingでIO名前空間をインポート\\\\nusing ___.IO;\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // usingで自動解放\\\\n        using ___ writer = new StringWriter();\\\\n        // 文字列を書き込む\\\\n        writer.WriteLine(\"___\");\\\\n        // writer.ToString(を表示\\\\n        Console.___(writer.ToString().Trim());\\\\n    ___\\\\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
@@ -696,7 +696,7 @@ export const csharp3Data = {
           "        // usingで自動解放",
           "        using var writer = new StringWriter();",
           "        // 文字列を書き込む",
-          "        writer.WriteLine(\"Hello\");",
+          "        writer.WriteLine(\"こんにちは\");",
           "        // writer.ToString(を表示",
           "        Console.WriteLine(writer.ToString().Trim());",
           "    }",

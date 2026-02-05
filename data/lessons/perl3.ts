@@ -22,11 +22,11 @@ export const perl3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# openでファイルを開く\nopen(my $fh, \">\", \"/tmp/test.txt\") or die;\nprint $fh \"hello\n\";\nclose($fh);\nprint \"written\n\";",
-        "holeyCode": "# openでファイルを開く\n___\\(my $fh, \">\", \"/tmp/test.txt\") or die;\nprint $fh ___hello\n\";\n___($fh);\n___ \"written\n\";",
+        "correctCode": "# openでファイルを開く\nopen(my $fh, \">\", \"/tmp/テスト.txt\") or die;\nprint $fh \"hello\n\";\nclose($fh);\nprint \"written\n\";",
+        "holeyCode": "# openでファイルを開く\n___\\(my $fh, \">\", \"/tmp/テスト.txt\") or die;\nprint $fh ___hello\n\";\n___($fh);\n___ \"written\n\";",
         "correctLines": [
           "# openでファイルを開く",
-          "open(my $fh, \">\", \"/tmp/test.txt\") or die;",
+          "open(my $fh, \">\", \"/tmp/テスト.txt\") or die;",
           "print $fh \"hello",
           "\";",
           "close($fh);",
@@ -49,7 +49,7 @@ export const perl3Data = {
             "file",
             "read"
           ],
-          "others": ["open(my $fh, \">\", \"/tmp/test.txt\") or die;", "\"", "close", "print"]
+          "others": ["open(my $fh, \">\", \"/tmp/test.txt\") or die;", "\"", "close", "print", "open(my $fh, \">\", \"/tmp/テスト.txt\") or die;"]
         },
         "testCases": [
           {
@@ -74,10 +74,10 @@ export const perl3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "open(my $fh, \">\", \"/tmp/test2.txt\") or die;\nprint $fh \"data\n\";\n# closeでファイルを閉じる\nclose($fh);\nprint \"closed\n\";",
-        "holeyCode": "___\\(my $fh, \">\", \"/tmp/test2.txt\") or die;\nprint $fh ___data\n\";\n# closeでファイルを閉じる\n___($fh);\n___ \"closed\n\";",
+        "correctCode": "open(my $fh, \">\", \"/tmp/テスト2.txt\") or die;\nprint $fh \"data\n\";\n# closeでファイルを閉じる\nclose($fh);\nprint \"closed\n\";",
+        "holeyCode": "___\\(my $fh, \">\", \"/tmp/テスト2.txt\") or die;\nprint $fh ___data\n\";\n# closeでファイルを閉じる\n___($fh);\n___ \"closed\n\";",
         "correctLines": [
-          "open(my $fh, \">\", \"/tmp/test2.txt\") or die;",
+          "open(my $fh, \">\", \"/tmp/テスト2.txt\") or die;",
           "print $fh \"data",
           "\";",
           "# closeでファイルを閉じる",
@@ -101,7 +101,7 @@ export const perl3Data = {
             "end",
             "shut"
           ],
-          "others": ["open(my $fh, \">\", \"/tmp/test2.txt\") or die;", "\"", "print"]
+          "others": ["open(my $fh, \">\", \"/tmp/test2.txt\") or die;", "\"", "print", "open(my $fh, \">\", \"/tmp/テスト2.txt\") or die;"]
         },
         "testCases": [
           {
@@ -176,10 +176,10 @@ export const perl3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "my $data = \"apple:banana:cherry\";\n# splitで分割\nmy @fruits = split(/:/, $data);\nprint $fruits[1] . \"\n\";",
-        "holeyCode": "my $___ = \"apple:banana:cherry\";\n# splitで分割\nmy @___ = split(/:/, $data);\n___ $fruits[1] . \"\n\";",
+        "correctCode": "my $data = \"りんご:バナナ:さくらんぼ\";\n# splitで分割\nmy @fruits = split(/:/, $data);\nprint $fruits[1] . \"\n\";",
+        "holeyCode": "my $___ = \"りんご:バナナ:さくらんぼ\";\n# splitで分割\nmy @___ = split(/:/, $data);\n___ $fruits[1] . \"\n\";",
         "correctLines": [
-          "my $data = \"apple:banana:cherry\";",
+          "my $data = \"りんご:バナナ:さくらんぼ\";",
           "# splitで分割",
           "my @fruits = split(/:/, $data);",
           "print $fruits[1] . \"",
@@ -224,10 +224,10 @@ export const perl3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "my @words = (\"Hello\", \"World\");\n# joinで結合\nmy $sentence = join(\" \", @words);\nprint \"$sentence\n\";",
-        "holeyCode": "my @___ = (\"Hello\", \"World\");\n# joinで結合\nmy $___ = join(\" \", @words);\n___ \"$sentence\n\";",
+        "correctCode": "my @words = (\"こんにちは\", \"世界\");\n# joinで結合\nmy $sentence = join(\" \", @words);\nprint \"$sentence\n\";",
+        "holeyCode": "my @___ = (\"こんにちは\", \"世界\");\n# joinで結合\nmy $___ = join(\" \", @words);\n___ \"$sentence\n\";",
         "correctLines": [
-          "my @words = (\"Hello\", \"World\");",
+          "my @words = (\"こんにちは\", \"世界\");",
           "# joinで結合",
           "my $sentence = join(\" \", @words);",
           "print \"$sentence",
@@ -368,10 +368,10 @@ export const perl3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "my @words = (\"banana\", \"apple\", \"cherry\");\n# sortで並べ替え\nmy @sorted = sort @words;\nprint \"$sorted[0]\n\";",
-        "holeyCode": "my @___ = (\"banana\", \"apple\", \"cherry\");\n# sortで並べ替え\nmy @___ = sort @words;\n___ \"$sorted[0]\n\";",
+        "correctCode": "my @words = (\"バナナ\", \"りんご\", \"さくらんぼ\");\n# sortで並べ替え\nmy @sorted = sort @words;\nprint \"$sorted[0]\n\";",
+        "holeyCode": "my @___ = (\"バナナ\", \"りんご\", \"さくらんぼ\");\n# sortで並べ替え\nmy @___ = sort @words;\n___ \"$sorted[0]\n\";",
         "correctLines": [
-          "my @words = (\"banana\", \"apple\", \"cherry\");",
+          "my @words = (\"バナナ\", \"りんご\", \"さくらんぼ\");",
           "# sortで並べ替え",
           "my @sorted = sort @words;",
           "print \"$sorted[0]",

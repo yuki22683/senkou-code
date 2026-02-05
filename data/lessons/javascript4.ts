@@ -108,8 +108,8 @@ export const javascriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// ['hello', 'world'] の配列を定義\\\\nconst words = ['hello', 'world'];\\\\n// flatMap でmapと平坦化を同時に行う\\\\nconst chars = words.flatMap(w => w.split(''));\\\\n// charsを出力\\\\nconsole.log(chars);",
-        "holeyCode": "// ['hello', 'world'] の配列を定義\\\\nconst ___ = ['hello', 'world'];\\\\n// flatMap でmapと平坦化を同時に行う\\\\nconst ___ = words.flatMap(w => w.split(''));\\\\n// charsを出力\\\\nconsole.log(___);",
+        "correctCode": "// ['hello', 'world'] の配列を定義\\\nconst words = ['こんにちは', '世界'];\\\n// flatMap でmapと平坦化を同時に行う\\\nconst chars = words.flatMap(w => w.split(''));\\\n// charsを出力\\\nconsole.log(chars);",
+        "holeyCode": "// ['hello', 'world'] の配列を定義\\\nconst ___ = ['こんにちは', '世界'];\\\n// flatMap でmapと平坦化を同時に行う\\\nconst ___ = words.flatMap(w => w.split(''));\\\n// charsを出力\\\nconsole.log(___);",
         "correctLines": [
           "// ['hello', 'world'] の配列を定義",
           "const words = ['hello', 'world'];",
@@ -153,11 +153,11 @@ export const javascriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// name: 'Taro', age: 25 のオブジェクトを定義\\\\nconst user = { name: 'Taro', age: 25 };\\\\n// entries でキーと値のペアを取得\\\\nfor (const [key, value] of Object.entries(user)) {\\\\n  // テンプレートリテラルで出力\\\\n  console.log(`${key}: ${value}`);\\\\n}",
-        "holeyCode": "// name: 'Taro', age: 25 のオブジェクトを定義\\\\nconst ___ = { name: 'Taro', age: 25 };\\\\n// entries でキーと値のペアを取得\\\\nfor (const [key, value] of Object.entries(___)) {\\\\n  // テンプレートリテラルで出力\\\\n  console.___(`${key}: ${value}`);\\\\n___",
+        "correctCode": "// name: 'Taro', age: 25 のオブジェクトを定義\\\nconst user = { name: '太郎', age: 25 };\\\n// entries でキーと値のペアを取得\\\nfor (const [key, value] of Object.entries(user)) {\\\n  // テンプレートリテラルで出力\\\n  console.log(`${キー}: ${値}`);\\\n}",
+        "holeyCode": "// name: 'Taro', age: 25 のオブジェクトを定義\\\nconst ___ = { name: '太郎', age: 25 };\\\n// entries でキーと値のペアを取得\\\nfor (const [key, value] of Object.entries(___)) {\\\n  // テンプレートリテラルで出力\\\n  console.___(`${キー}: ${値}`);\\\n___",
         "correctLines": [
           "// name: 'Taro', age: 25 のオブジェクトを定義",
-          "const user = { name: 'Taro', age: 25 };",
+          "const user = { name: '太郎', age: 25 };",
           "// entries でキーと値のペアを取得",
           "for (const [key, value] of Object.entries(user)) {",
           "  // テンプレートリテラルで出力",
@@ -200,8 +200,8 @@ export const javascriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義\\\\nconst pairs = [['name', 'Python'], ['version', '3.12']];\\\\n// objにObject.fromEntries(pairs)を代入\\\\nconst obj = Object.fromEntries(pairs);\\\\n// objを出力\\\\nconsole.log(obj);",
-        "holeyCode": "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義\\\\nconst ___ = [['name', 'Python'], ['version', '3.12']];\\\\n// objにObject.fromEntries(pairs)を代入\\\\nconst ___ = Object.fromEntries(pairs);\\\\n// objを出力\\\\nconsole.log(___);",
+        "correctCode": "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義\\\nconst pairs = [['名前', 'Python'], ['version', '3.12']];\\\n// objにObject.fromEntries(pairs)を代入\\\nconst obj = Object.fromEntries(pairs);\\\n// objを出力\\\nconsole.log(obj);",
+        "holeyCode": "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義\\\nconst ___ = [['名前', 'Python'], ['version', '3.12']];\\\n// objにObject.fromEntries(pairs)を代入\\\nconst ___ = Object.fromEntries(pairs);\\\n// objを出力\\\nconsole.log(___);",
         "correctLines": [
           "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義",
           "const pairs = [['name', 'Python'], ['version', '3.12']];",

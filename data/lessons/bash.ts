@@ -26,7 +26,7 @@ export const bashData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Hello, World!と入力する\\\\necho \"Hello, World!\"",
+        "correctCode": "# Hello, World!と入力する\\\necho \"Hello, World!\"",
         "holeyCode": "# Hello, World!と入力する\\\\necho \"___\"",
         "correctLines": [
           "# Hello, World!と入力する",
@@ -166,7 +166,7 @@ export const bashData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに100を入れる\\\\nscore=100\\\\n# -gtで「より大きい」を指定\\\\nif [ $score -gt 80 ]; then\\\\n    # メッセージ（'Great'）\\\\n    echo \"Great\"\\\\n# fiでif文を閉じる\\\\nfi",
+        "correctCode": "# scoreに100を入れる\\\nscore=100\\\n# -gtで「より大きい」を指定\\\nif [ $score -gt 80 ]; then\\\n    # メッセージ（'Great'）\\\n    echo \"すごい\"\\\n# fiでif文を閉じる\\\nfi",
         "holeyCode": "# scoreに100を入れる\\\\nscore=___\\\\n# -gtで「より大きい」を指定\\\\nif [ $score -gt ___ ]; then\\\\n    # メッセージ（'Great'）\\\\n    echo \"___\"\\\\n# fiでif文を閉じる\\\\n___",
         "correctLines": [
           "# scoreに100を入れる",
@@ -220,7 +220,7 @@ export const bashData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ageに18を入れる\\\\nage=18\\\\n# 20以上かを比較する演算子\\\\nif [ $age -ge 20 ]; then\\\\n    # 20歳以上のときのメッセージ（'Adult'）\\\\n    echo \"Adult\"\\\\n# elseでそれ以外の場合\\\\nelse\\\\n    # それ以外のメッセージ（'Minor'）\\\\n    echo \"Minor\"\\\\nfi",
+        "correctCode": "# ageに18を入れる\\\nage=18\\\n# 20以上かを比較する演算子\\\nif [ $age -ge 20 ]; then\\\n    # 20歳以上のときのメッセージ（'Adult'）\\\n    echo \"大人\"\\\n# elseでそれ以外の場合\\\nelse\\\n    # それ以外のメッセージ（'Minor'）\\\n    echo \"未成年\"\\\nfi",
         "holeyCode": "# ageに18を入れる\\\\nage=___\\\\n# 20以上かを比較する演算子\\\\nif [ $age -ge ___ ]; then\\\\n    # 20歳以上のときのメッセージ（'Adult'）\\\\n    echo \"___\"\\\\n# elseでそれ以外の場合\\\\n___\\\\n    # それ以外のメッセージ（'Minor'）\\\\n    echo \"___\"\\\\n___",
         "correctLines": [
           "# ageに18を入れる",
@@ -277,10 +277,10 @@ export const bashData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "names=(\"Alice\" \"Bob\")\\\\n# inで配列の中身を取り出す\\\\nfor name in \"${names[@]}\"; do\\\\n    echo $name\\\\n# doneでループを終了\\\\ndone",
+        "correctCode": "names=(\"アリス\" \"ボブ\")\\\n# inで配列の中身を取り出す\\\nfor name in \"${名前s[@]}\"; do\\\n    echo $name\\\n# doneでループを終了\\\ndone",
         "holeyCode": "names=(\\\"___\\\" \\\"___\\\")\\\\n# inで配列の中身を取り出す\\\\nfor name in \"___\"; do\\\\n    echo ___\\\\n# doneでループを終了\\\\n___",
         "correctLines": [
-          "names=(\"Alice\" \"Bob\")",
+          "names=(\"アリス\" \"ボブ\")",
           "# inで配列の中身を取り出す",
           "for name in \"${names[@]}\"; do",
           "    echo $name",
@@ -300,7 +300,7 @@ export const bashData = {
             "in",
             "done"
           ],
-          "others": ["Alice", "Bob", "${names[@]}", "$name", "lice\" \"Bob\")"]
+          "others": ["Alice", "Bob", "${names[@]}", "$name", "lice\" \"Bob\")", "アリス", "ボブ"]
         },
         "testCases": [
           {
@@ -325,11 +325,11 @@ export const bashData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "greet() {\\\\n    echo \"Hello\"\\\\n}\\\\n# greetで関数を呼び出す\\\\ngreet",
+        "correctCode": "greet() {\\\n    echo \"こんにちは\"\\\n}\\\n# greetで関数を呼び出す\\\ngreet",
         "holeyCode": "___() {\\\\n    echo \"___\"\\\\n___\\\\n# greetで関数を呼び出す\\\\n___",
         "correctLines": [
           "greet() {",
-          "    echo \"Hello\"",
+          "    echo \"こんにちは\"",
           "}",
           "# greetで関数を呼び出す",
           "greet"

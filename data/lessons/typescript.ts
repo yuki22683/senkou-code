@@ -26,11 +26,11 @@ export const typescriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// messageに'Hello TS'を代入（型: string）\\\\nconst message: string = 'Hello TS';\\\\n// はこの中身を出す\\\\nconsole.log(message);",
+        "correctCode": "// messageに'Hello TS'を代入（型: string）\\\nconst message: string = 'こんにちは TS';\\\n// はこの中身を出す\\\nconsole.log(message);",
         "holeyCode": "// messageに'Hello TS'を代入（型: string）\\\\nconst message: ___ = '___';\\\\n// はこの中身を出す\\\\nconsole.log(___);",
         "correctLines": [
           "// messageに'Hello TS'を代入（型: string）",
-          "const message: string = 'Hello TS';",
+          "const message: string = 'こんにちは TS';",
           "// はこの中身を出す",
           "console.log(message);"
         ],
@@ -229,13 +229,13 @@ export const typescriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// age というはこに 10 を入れる\\\\nconst age: number = 10;\\\\n// 文章の中に中身を入れる\\\\nconsole.log(`私は${age}歳です`);",
+        "correctCode": "// age というはこに 10 を入れる\\\nconst age: number = 10;\\\n// 文章の中に中身を入れる\\\nconsole.log(`私は${年齢}歳です`);",
         "holeyCode": "// age というはこに 10 を入れる\\\\nconst age: ___ = 10;\\\\n// 文章の中に中身を入れる\\\\nconsole.log(`私は${___}歳です`);",
         "correctLines": [
           "// age というはこに 10 を入れる",
           "const age: number = 10;",
           "// 文章の中に中身を入れる",
-          "console.log(`私は${age}歳です`);"
+          "console.log(`私は${年齢}歳です`);"
         ],
         "lineHints": [
           null,
@@ -628,12 +628,12 @@ export const typescriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 受け取るデータのラベルを指定する\\\\nfunction greet(name: string) {\\\\n    console.log(`こんにちは、${name}`);\\\\n}\\\\n// 関数を実行する\\\\ngreet('TypeScript');",
-        "holeyCode": "// 受け取るデータのラベルを指定する\\\\nfunction greet(name: ___) {\\\\n    console.log(`こんにちは、${name}`);\\\\n}\\\\n// 関数を実行する\\\\ngreet('TypeScript');",
+        "correctCode": "// 受け取るデータのラベルを指定する\\\nfunction greet(name: string) {\\\n    console.log(`こんにちは、${名前}`);\\\n}\\\n// 関数を実行する\\\ngreet('TypeScript');",
+        "holeyCode": "// 受け取るデータのラベルを指定する\\\nfunction greet(name: ___) {\\\n    console.log(`こんにちは、${名前}`);\\\n}\\\n// 関数を実行する\\\ngreet('TypeScript');",
         "correctLines": [
           "// 受け取るデータのラベルを指定する",
           "function greet(name: string) {",
-          "    console.log(`こんにちは、${name}`);",
+          "    console.log(`こんにちは、${名前}`);",
           "}",
           "// 関数を実行する",
           "greet('TypeScript');"

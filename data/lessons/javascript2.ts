@@ -385,7 +385,7 @@ export const javascriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// ['red', 'green', 'blue'] から値を取り出す\\\\nconst colors = ['red', 'green', 'blue'];\\\\n// second で2番目の要素を受け取る\\\\nconst [first, second] = colors;\\\\n// firstを表示\\\\nconsole.log(first);\\\\n// secondを表示\\\\nconsole.log(second);",
+        "correctCode": "// ['red', 'green', 'blue'] から値を取り出す\\\nconst colors = ['赤', '緑', '青'];\\\n// second で2番目の要素を受け取る\\\nconst [first, second] = colors;\\\n// firstを表示\\\nconsole.log(first);\\\n// secondを表示\\\nconsole.log(second);",
         "holeyCode": "// ['red', 'green', 'blue'] から値を取り出す\\\\nconst colors = ['___', '___', '___'];\\\\n// second で2番目の要素を受け取る\\\\nconst [first, ___] = colors;\\\\n// firstを表示\\\\nconsole.log(___);\\\\n// secondを表示\\\\nconsole.log(___);",
         "correctLines": [
           "// ['red', 'green', 'blue'] から値を取り出す",
@@ -444,11 +444,11 @@ export const javascriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// name: 'Alice', score: 100 のオブジェクトから値を取り出す\\\\nconst user = { name: 'Alice', score: 100 };\\\\n// name プロパティを取り出す\\\\nconst { name, score } = user;\\\\n// nameを表示\\\\nconsole.log(name);\\\\n// scoreを表示\\\\nconsole.log(score);",
+        "correctCode": "// name: 'Alice', score: 100 のオブジェクトから値を取り出す\\\nconst user = { name: 'アリス', score: 100 };\\\n// name プロパティを取り出す\\\nconst { name, score } = user;\\\n// nameを表示\\\nconsole.log(name);\\\n// scoreを表示\\\nconsole.log(score);",
         "holeyCode": "// name: 'Alice', score: 100 のオブジェクトから値を取り出す\\\\nconst user = { name: '___', score: ___ };\\\\n// name プロパティを取り出す\\\\nconst { ___, score } = user;\\\\n// nameを表示\\\\nconsole.log(___);\\\\n// scoreを表示\\\\nconsole.log(___);",
         "correctLines": [
           "// name: 'Alice', score: 100 のオブジェクトから値を取り出す",
-          "const user = { name: 'Alice', score: 100 };",
+          "const user = { name: 'アリス', score: 100 };",
           "// name プロパティを取り出す",
           "const { name, score } = user;",
           "// nameを表示",

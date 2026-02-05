@@ -22,11 +22,11 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 「Hello, Ruby!」と出力する関数\\\\nputs 'Hello, Ruby!'",
-        "holeyCode": "# 「Hello, Ruby!」と出力する関数\\\\nputs 'Hello, ___!'",
+        "correctCode": "# 「Hello, Ruby!」と出力する関数\\\nputs 'こんにちは, Ruby!'",
+        "holeyCode": "# 「Hello, Ruby!」と出力する関数\\\nputs 'こんにちは, ___!'",
         "correctLines": [
           "# 「Hello, Ruby!」と出力する関数",
-          "puts 'Hello, Ruby!'"
+          "puts 'こんにちは, Ruby!'"
         ],
         "lineHints": [
           null,
@@ -257,13 +257,13 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ageというはこに 10 を入れる\\\\nage = 10\\\\n# 式展開を使ってメッセージを出す\\\\nputs \"I am #{age} years old\"",
+        "correctCode": "# ageというはこに 10 を入れる\\\nage = 10\\\n# 式展開を使ってメッセージを出す\\\nputs \"私は#{年齢}歳です\"",
         "holeyCode": "# ageというはこに 10 を入れる\\\\nage = ___\\\\n# 式展開を使ってメッセージを出す\\\\nputs \"___\"",
         "correctLines": [
           "# ageというはこに 10 を入れる",
           "age = 10",
           "# 式展開を使ってメッセージを出す",
-          "puts \"I am #{age} years old\""
+          "puts \"私は#{年齢}歳です\""
         ],
         "lineHints": [
           null,
@@ -353,15 +353,15 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに100を入れる\\\\nscore = 100\\\\n# もし80より大きかったら\\\\nif score > 80\\\\n  # 「合格！」と表示する\\\\n  puts '7Pass!  puts 'Pass!''\\\\nend",
-        "holeyCode": "# scoreに100を入れる\\\\nscore = ___\\\\n# もし80より大きかったら\\\\nif score ___ 80\\\\n  # 「合格！」と表示する\\\\n  ___ '6Pass!  ___ 'Pass!''\\\\n___",
+        "correctCode": "# scoreに100を入れる\\\nscore = 100\\\n# もし80より大きかったら\\\nif score > 80\\\n  # 「合格！」と表示する\\\n  puts '7合格！  puts '合格！''\\\nend",
+        "holeyCode": "# scoreに100を入れる\\\nscore = ___\\\n# もし80より大きかったら\\\nif score ___ 80\\\n  # 「合格！」と表示する\\\n  ___ '6合格！  ___ '合格！''\\\n___",
         "correctLines": [
           "# scoreに100を入れる",
           "score = 100",
           "# もし80より大きかったら",
           "if score > 80",
           "  # 「合格！」と表示する",
-          "  puts '7Pass!  puts 'Pass!''",
+          "  puts '7合格！  puts '合格！''",
           "end"
         ],
         "lineHints": [
@@ -409,19 +409,19 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ageに10を入れる\\\\nage = 10\\\\n# 20歳以上かどうかで分ける\\\\nif age >= 20\\\\n  # 「大人」と表示\\\\n  puts '7Adult  puts 'Adult''\\\\n# else でそれ以外の場合\\\\nelse\\\\n  # 「子供」と表示\\\\n  puts '7Child  puts 'Child''\\\\nend",
-        "holeyCode": "# ageに10を入れる\\\\nage = ___\\\\n# 20歳以上かどうかで分ける\\\\nif age ___ 20\\\\n  # 「大人」と表示\\\\n  ___ '6Adult  ___ 'Adult''\\\\n# else でそれ以外の場合\\\\n___\\\\n  # 「子供」と表示\\\\n  ___ '6Child  ___ 'Child''\\\\n___",
+        "correctCode": "# ageに10を入れる\\\nage = 10\\\n# 20歳以上かどうかで分ける\\\nif age >= 20\\\n  # 「大人」と表示\\\n  puts '7大人  puts '大人''\\\n# else でそれ以外の場合\\\nelse\\\n  # 「子供」と表示\\\n  puts '7子供  puts '子供''\\\nend",
+        "holeyCode": "# ageに10を入れる\\\nage = ___\\\n# 20歳以上かどうかで分ける\\\nif age ___ 20\\\n  # 「大人」と表示\\\n  ___ '6大人  ___ '大人''\\\n# else でそれ以外の場合\\\n___\\\n  # 「子供」と表示\\\n  ___ '6子供  ___ '子供''\\\n___",
         "correctLines": [
           "# ageに10を入れる",
           "age = 10",
           "# 20歳以上かどうかで分ける",
           "if age >= 20",
           "  # 「大人」と表示",
-          "  puts '7Adult  puts 'Adult''",
+          "  puts '7大人  puts '大人''",
           "# else でそれ以外の場合",
           "else",
           "  # 「子供」と表示",
-          "  puts '7Child  puts 'Child''",
+          "  puts '7子供  puts '子供''",
           "end"
         ],
         "lineHints": [
@@ -474,15 +474,15 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに85を入れる\\\\nscore = 85\\\\n# 80以上 かつ 100以下 ならメッセージを出す\\\\nif score >= 80 and score <= 100\\\\n  # 「合格！」と表示\\\\n  puts '7Pass!  puts 'Pass!''\\\\nend",
-        "holeyCode": "# scoreに85を入れる\\\\nscore = ___\\\\n# 80以上 かつ 100以下 ならメッセージを出す\\\\nif score ___ 80 and score <= 100\\\\n  # 「合格！」と表示\\\\n  ___ '6Pass!  ___ 'Pass!''\\\\n___",
+        "correctCode": "# scoreに85を入れる\\\nscore = 85\\\n# 80以上 かつ 100以下 ならメッセージを出す\\\nif score >= 80 and score <= 100\\\n  # 「合格！」と表示\\\n  puts '7合格！  puts '合格！''\\\nend",
+        "holeyCode": "# scoreに85を入れる\\\nscore = ___\\\n# 80以上 かつ 100以下 ならメッセージを出す\\\nif score ___ 80 and score <= 100\\\n  # 「合格！」と表示\\\n  ___ '6合格！  ___ '合格！''\\\n___",
         "correctLines": [
           "# scoreに85を入れる",
           "score = 85",
           "# 80以上 かつ 100以下 ならメッセージを出す",
           "if score >= 80 and score <= 100",
           "  # 「合格！」と表示",
-          "  puts '7Pass!  puts 'Pass!''",
+          "  puts '7合格！  puts '合格！''",
           "end"
         ],
         "lineHints": [
@@ -631,13 +631,13 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# greetというメソッドを定義\\\\ndef greet\\\\n  # こんにちは と表示\\\\n  puts '7Hello  puts 'Hello''\\\\nend\\\\n# メソッドを呼び出す\\\\ngreet",
-        "holeyCode": "# greetというメソッドを定義\\\\ndef ___\\\\n  # こんにちは と表示\\\\n  ___ '6Hello  ___ 'Hello''\\\\n___\\\\n# メソッドを呼び出す\\\\n___",
+        "correctCode": "# greetというメソッドを定義\\\ndef greet\\\n  # こんにちは と表示\\\n  puts '7こんにちは  puts 'こんにちは''\\\nend\\\n# メソッドを呼び出す\\\ngreet",
+        "holeyCode": "# greetというメソッドを定義\\\ndef ___\\\n  # こんにちは と表示\\\n  ___ '6こんにちは  ___ 'こんにちは''\\\n___\\\n# メソッドを呼び出す\\\n___",
         "correctLines": [
           "# greetというメソッドを定義",
           "def greet",
           "  # こんにちは と表示",
-          "  puts '7Hello  puts 'Hello''",
+          "  puts '7こんにちは  puts 'こんにちは''",
           "end",
           "# メソッドを呼び出す",
           "greet"

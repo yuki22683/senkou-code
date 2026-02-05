@@ -22,12 +22,12 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n  // 画面にメッセージを出す関数\\\\n  echo \"Hello, PHP!\";\\\\n?>",
-        "holeyCode": "___\\\\n  // 画面にメッセージを出す関数\\\\n  ___ \"Hello, PHP!\";\\\\n___",
+        "correctCode": "<?php\\\n  // 画面にメッセージを出す関数\\\n  echo \"こんにちは, PHP!\";\\\n?>",
+        "holeyCode": "___\\\n  // 画面にメッセージを出す関数\\\n  ___ \"こんにちは, PHP!\";\\\n___",
         "correctLines": [
           "<?php",
           "  // 画面にメッセージを出す関数",
-          "  echo \"Hello, PHP!\";",
+          "  echo \"こんにちは, PHP!\";",
           "?>"
         ],
         "lineHints": [
@@ -272,14 +272,14 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n  // ageに20を入れる\\\\n  $age = 20;\\\\n  // $ageを文章に埋め込んで表示する\\\\n  echo \"I am $age years old.\";\\\\n?>",
-        "holeyCode": "___\\\\n  // ageに20を入れる\\\\n  $___ = ___;\\\\n  // $ageを文章に埋め込んで表示する\\\\n  ___ \"I am $age years old.\";\\\\n___",
+        "correctCode": "<?php\\\n  // ageに20を入れる\\\n  $age = 20;\\\n  // $ageを文章に埋め込んで表示する\\\n  echo \"私は$年齢歳です.\";\\\n?>",
+        "holeyCode": "___\\\n  // ageに20を入れる\\\n  $___ = ___;\\\n  // $ageを文章に埋め込んで表示する\\\n  ___ \"私は$年齢歳です.\";\\\n___",
         "correctLines": [
           "<?php",
           "  // ageに20を入れる",
           "  $age = 20;",
           "  // $ageを文章に埋め込んで表示する",
-          "  echo \"I am $age years old.\";",
+          "  echo \"私は$年齢歳です.\";",
           "?>"
         ],
         "lineHints": [
@@ -319,7 +319,7 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n  // 配列を作る\\\\n  $fruits = ['13apple  $fruits = ['apple', '43banana  $fruits = ['13apple  $fruits = ['apple', 'banana'];', 'banana'];'];', '53banana  $fruits = ['13apple  $fruits = ['apple', 'banana'];', 'banana'];'];\\\\n  // 2番目のデータを表示する\\\\n  echo $fruits[1];\\\\n?>",
+        "correctCode": "<?php\\\n  // 配列を作る\\\n  $fruits = ['13りんご  $くだもの = ['りんご', '43バナナ  $くだもの = ['13りんご  $fruits = ['りんご', 'バナナ'];', 'バナナ'];'];', '53バナナ  $くだもの = ['13りんご  $fruits = ['りんご', 'バナナ'];', 'バナナ'];'];\\\n  // 2番目のデータを表示する\\\n  echo $fruits[1];\\\n?>",
         "holeyCode": "___\\\\n  // 配列を作る\\\\n  $___ = [___];\\\\n  // 2番目のデータを表示する\\\\n  echo ___[1];\\\\n___",
         "correctLines": [
           "<?php",
@@ -366,8 +366,8 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n  // scoreに100を入れる\\\\n  $score = 100;\\\\n  // >で大きいか比較\\\\n  if ($score > 80) {\\\\n    // メッセージ（'Excellent'）\\\\n    echo \"Excellent\";\\\\n  }\\\\n?>",
-        "holeyCode": "___\\\\n  // scoreに100を入れる\\\\n  $___ = ___;\\\\n  // >で大きいか比較\\\\n  if ($score ___ > ___) {\\\\n    // メッセージ（'Excellent'）\\\\n    ___ \"Excellent\";\\\\n  ___\\\\n___",
+        "correctCode": "<?php\\\n  // scoreに100を入れる\\\n  $score = 100;\\\n  // >で大きいか比較\\\n  if ($score > 80) {\\\n    // メッセージ（'Excellent'）\\\n    echo \"優秀\";\\\n  }\\\n?>",
+        "holeyCode": "___\\\n  // scoreに100を入れる\\\n  $___ = ___;\\\n  // >で大きいか比較\\\n  if ($score ___ > ___) {\\\n    // メッセージ（'Excellent'）\\\n    ___ \"優秀\";\\\n  ___\\\n___",
         "correctLines": [
           "<?php",
           "  // scoreに100を入れる",
@@ -375,7 +375,7 @@ export const phpData = {
           "  // >で大きいか比較",
           "  if ($score > 80) {",
           "    // メッセージ（'Excellent'）",
-          "    echo \"Excellent\";",
+          "    echo \"優秀\";",
           "  }",
           "?>"
         ],
@@ -419,8 +419,8 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n  // ageに18を入れる\\\\n  $age = 18;\\\\n  // 20以上かを比較する演算子\\\\n  if ($age >= 20) {\\\\n    // 20歳以上のときのメッセージ（'Adult'）\\\\n    echo \"Adult\";\\\\n  // elseで「そうでなければ」\\\\n  } else {\\\\n    // それ以外のメッセージ（'Minor'）\\\\n    echo \"Minor\";\\\\n  }\\\\n?>",
-        "holeyCode": "___\\\\n  // ageに18を入れる\\\\n  $___ = ___;\\\\n  // 20以上かを比較する演算子\\\\n  if ($age ___ >= ___) {\\\\n    // 20歳以上のときのメッセージ（'Adult'）\\\\n    ___ \"Adult\";\\\\n  // elseで「そうでなければ」\\\\n  } ___ {\\\\n    // それ以外のメッセージ（'Minor'）\\\\n    ___ \"Minor\";\\\\n  ___\\\\n___",
+        "correctCode": "<?php\\\n  // ageに18を入れる\\\n  $age = 18;\\\n  // 20以上かを比較する演算子\\\n  if ($age >= 20) {\\\n    // 20歳以上のときのメッセージ（'Adult'）\\\n    echo \"大人\";\\\n  // elseで「そうでなければ」\\\n  } else {\\\n    // それ以外のメッセージ（'Minor'）\\\n    echo \"未成年\";\\\n  }\\\n?>",
+        "holeyCode": "___\\\n  // ageに18を入れる\\\n  $___ = ___;\\\n  // 20以上かを比較する演算子\\\n  if ($age ___ >= ___) {\\\n    // 20歳以上のときのメッセージ（'Adult'）\\\n    ___ \"大人\";\\\n  // elseで「そうでなければ」\\\n  } ___ {\\\n    // それ以外のメッセージ（'Minor'）\\\n    ___ \"未成年\";\\\n  ___\\\n___",
         "correctLines": [
           "<?php",
           "  // ageに18を入れる",
@@ -428,11 +428,11 @@ export const phpData = {
           "  // 20以上かを比較する演算子",
           "  if ($age >= 20) {",
           "    // 20歳以上のときのメッセージ（'Adult'）",
-          "    echo \"Adult\";",
+          "    echo \"大人\";",
           "  // elseで「そうでなければ」",
           "  } else {",
           "    // それ以外のメッセージ（'Minor'）",
-          "    echo \"Minor\";",
+          "    echo \"未成年\";",
           "  }",
           "?>"
         ],
@@ -480,8 +480,8 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n  // scoreに85を入れる\\\\n  $score = 85;\\\\n  // 80以上 かつ 100以下 ならメッセージを出す\\\\n  if ($score >= 80 && $score <= 100) {\\\\n    // \"Pass\"を出力\\\\n    echo \"Pass\";\\\\n  }\\\\n?>",
-        "holeyCode": "___\\\\n  // scoreに85を入れる\\\\n  $___ = ___;\\\\n  // 80以上 かつ 100以下 ならメッセージを出す\\\\n  if ($score >= ___ && $score <= 100) {\\\\n    // \"Pass\"を出力\\\\n    ___ \"Pass\";\\\\n  ___\\\\n___",
+        "correctCode": "<?php\\\n  // scoreに85を入れる\\\n  $score = 85;\\\n  // 80以上 かつ 100以下 ならメッセージを出す\\\n  if ($score >= 80 && $score <= 100) {\\\n    // \"Pass\"を出力\\\n    echo \"合格\";\\\n  }\\\n?>",
+        "holeyCode": "___\\\n  // scoreに85を入れる\\\n  $___ = ___;\\\n  // 80以上 かつ 100以下 ならメッセージを出す\\\n  if ($score >= ___ && $score <= 100) {\\\n    // \"Pass\"を出力\\\n    ___ \"合格\";\\\n  ___\\\n___",
         "correctLines": [
           "<?php",
           "  // scoreに85を入れる",
@@ -489,7 +489,7 @@ export const phpData = {
           "  // 80以上 かつ 100以下 ならメッセージを出す",
           "  if ($score >= 80 && $score <= 100) {",
           "    // \"Pass\"を出力",
-          "    echo \"Pass\";",
+          "    echo \"合格\";",
           "  }",
           "?>"
         ],
@@ -589,8 +589,8 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n  $user = ['name' => 'Alice'];\\\\n  // nameでキーを指定してアクセス\\\\n  echo $user['name'];\\\\n?>",
-        "holeyCode": "___\\\\n  $___ = [___];\\\\n  // nameでキーを指定してアクセス\\\\n  echo ___['name'];\\\\n___",
+        "correctCode": "<?php\\\n  $user = ['名前' => 'アリス'];\\\n  // nameでキーを指定してアクセス\\\n  echo $user['名前'];\\\n?>",
+        "holeyCode": "___\\\n  $___ = [___];\\\n  // nameでキーを指定してアクセス\\\n  echo ___['名前'];\\\n___",
         "correctLines": [
           "<?php",
           "  $user = ['name' => 'Alice'];",
@@ -634,12 +634,12 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n  function greet() {\\\\n    echo \"Hello\";\\\\n  }\\\\n  // 関数を実行する\\\\n  greet();\\\\n?>",
-        "holeyCode": "___\\\\n  function ___() {\\\\n    ___ \"Hello\";\\\\n  ___\\\\n  // 関数を実行する\\\\n  ___();\\\\n___",
+        "correctCode": "<?php\\\n  function greet() {\\\n    echo \"こんにちは\";\\\n  }\\\n  // 関数を実行する\\\n  greet();\\\n?>",
+        "holeyCode": "___\\\n  function ___() {\\\n    ___ \"こんにちは\";\\\n  ___\\\n  // 関数を実行する\\\n  ___();\\\n___",
         "correctLines": [
           "<?php",
           "  function greet() {",
-          "    echo \"Hello\";",
+          "    echo \"こんにちは\";",
           "  }",
           "  // 関数を実行する",
           "  greet();",

@@ -121,13 +121,13 @@ export const php3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// nullを代入\\\\n$name = null;\\\\n// ??でNull合体演算子\\\\n$result = $name ?? 'Guest';",
+        "correctCode": "// nullを代入\\\n$name = null;\\\n// ??でNull合体演算子\\\n$result = $name ?? 'ゲスト';",
         "holeyCode": "// nullを代入\\\\n$name = ___;\\\\n// ??でNull合体演算子\\\\n$result = $name ?? '___';",
         "correctLines": [
           "// nullを代入",
           "$name = null;",
           "// ??でNull合体演算子",
-          "$result = $name ?? 'Guest';"
+          "$result = $name ?? 'ゲスト';"
         ],
         "lineHints": [
           null,
@@ -280,8 +280,8 @@ export const php3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// functionで関数を定義\\\\nfunction createUser($name, $age) {\\\\n    // returnで連想配列を返す\\\\n    return ['name' => $name, 'age' => $age];\\\\n}\\\\n// age, nameの順で名前付き引数を指定\\\\n$user = createUser(age: 30, name: 'Alice');",
-        "holeyCode": "// functionで関数を定義\\\\nfunction createUser($name, $___) {\\\\n    // returnで連想配列を返す\\\\n    return ['name' => $name, '___' => $age];\\\\n___\\\\n// age, nameの順で名前付き引数を指定\\\\n$user = createUser(age: ___, name: 'Alice');",
+        "correctCode": "// functionで関数を定義\\\nfunction createUser($name, $age) {\\\n    // returnで連想配列を返す\\\n    return ['名前' => $名前, '年齢' => $age];\\\n}\\\n// age, nameの順で名前付き引数を指定\\\n$user = createUser(age: 30, name: 'アリス');",
+        "holeyCode": "// functionで関数を定義\\\nfunction createUser($name, $___) {\\\n    // returnで連想配列を返す\\\n    return ['名前' => $名前, '___' => $age];\\\n___\\\n// age, nameの順で名前付き引数を指定\\\n$user = createUser(age: ___, name: 'アリス');",
         "correctLines": [
           "// functionで関数を定義",
           "function createUser($name, $age) {",
@@ -311,7 +311,7 @@ export const php3Data = {
             "user",
             "value"
           ],
-          "others": ["}", "30"]
+          "others": ["}", "30", "e,"]
         },
         "testCases": [
           {
@@ -336,7 +336,7 @@ export const php3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// traitでトレイトを定義\\\\ntrait HelloTrait {\\\\n    // functionでメソッドを定義\\\\n    public function sayHello() {\\\\n        // $this->name を返す\\\\n        return 'Hello!';\\\\n    }\\\\n}\\\\n// classでクラスを定義\\\\nclass Greeter {\\\\n    // useでトレイトを使用\\\\n    use HelloTrait;\\\\n}",
+        "correctCode": "// traitでトレイトを定義\\\ntrait HelloTrait {\\\n    // functionでメソッドを定義\\\n    public function sayHello() {\\\n        // $this->name を返す\\\n        return 'こんにちは！';\\\n    }\\\n}\\\n// classでクラスを定義\\\nclass Greeter {\\\n    // useでトレイトを使用\\\n    use HelloTrait;\\\n}",
         "holeyCode": "// traitでトレイトを定義\\\\ntrait ___ {\\\\n    // functionでメソッドを定義\\\\n    public function ___() {\\\\n        // $this->name を返す\\\\n        return '___!';\\\\n    ___\\\\n___\\\\n// classでクラスを定義\\\\nclass ___ {\\\\n    // useでトレイトを使用\\\\n    use ___;\\\\n___",
         "correctLines": [
           "// traitでトレイトを定義",
@@ -344,7 +344,7 @@ export const php3Data = {
           "    // functionでメソッドを定義",
           "    public function sayHello() {",
           "        // $this->name を返す",
-          "        return 'Hello!';",
+          "        return 'こんにちは！';",
           "    }",
           "}",
           "// classでクラスを定義",
@@ -463,8 +463,8 @@ export const php3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// name、age、cityの順に分割代入\\\\n[$name, $age, $city] = ['Alice', 25, 'Tokyo'];",
-        "holeyCode": "// name、age、cityの順に分割代入\\\\n[$name, $age, $city] = ['Alice', ___, 'Tokyo'];",
+        "correctCode": "// name、age、cityの順に分割代入\\\n[$name, $age, $city] = ['アリス', 25, 'Tokyo'];",
+        "holeyCode": "// name、age、cityの順に分割代入\\\n[$name, $age, $city] = ['アリス', ___, 'Tokyo'];",
         "correctLines": [
           "// name、age、cityの順に分割代入",
           "[$name, $age, $city] = ['Alice', 25, 'Tokyo'];"

@@ -112,7 +112,7 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数に文字列を代入\\\\ntext=\"Hello World\"\\\\n# Worldが始まる位置（0から数える）\\\\necho ${text:6:5}",
+        "correctCode": "# 変数に文字列を代入\\\ntext=\"Hello World\"\\\n# Worldが始まる位置（0から数える）\\\necho ${text:6:5}",
         "holeyCode": "# 変数に文字列を代入\\\\ntext=\"___\"\\\\n# Worldが始まる位置（0から数える）\\\\necho ${text:___:5}",
         "correctLines": [
           "# 変数に文字列を代入",
@@ -318,16 +318,16 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数に値を代入\\\\nfruit=\"apple\"\\\\n# パターンマッチで分岐するキーワード\\\\ncase $fruit in\\\\n    # appleの場合\\\\n    apple) echo \"red\";;\\\\n    # bananaの場合\\\\n    banana) echo \"yellow\";;\\\\n    # その他の場合\\\\n    *) echo \"unknown\";;\\\\nesac", "holeyCode": "# 変数に値を代入\\\\nfruit=\"___\"\\\\n# パターンマッチで分岐するキーワード\\\\n___ $fruit in\\\\n    # appleの場合\\\\n    apple) echo \"___\";;\\\\n    # bananaの場合\\\\n    banana) echo \"yellow\";;\\\\n    # その他の場合\\\\n    *) echo \"unknown\";;\\\\nesac",
+        "correctCode": "# 変数に値を代入\\\nfruit=\"りんご\"\\\n# パターンマッチで分岐するキーワード\\\ncase $fruit in\\\n    # appleの場合\\\n    apple) echo \"赤\";;\\\n    # bananaの場合\\\n    banana) echo \"黄色\";;\\\n    # その他の場合\\\n    *) echo \"unknown\";;\\\nesac", "holeyCode": "# 変数に値を代入\\\nfruit=\"___\"\\\n# パターンマッチで分岐するキーワード\\\n___ $fruit in\\\n    # appleの場合\\\n    apple) echo \"___\";;\\\n    # bananaの場合\\\n    banana) echo \"黄色\";;\\\n    # その他の場合\\\n    *) echo \"unknown\";;\\\nesac",
         "correctLines": [
           "# 変数に値を代入",
-          "fruit=\"apple\"",
+          "fruit=\"りんご\"",
           "# パターンマッチで分岐するキーワード",
           "case $fruit in",
           "    # appleの場合",
-          "    apple) echo \"red\";;",
+          "    apple) echo \"赤\";;",
           "    # bananaの場合",
-          "    banana) echo \"yellow\";;",
+          "    banana) echo \"黄色\";;",
           "    # その他の場合",
           "    *) echo \"unknown\";;",
           "esac"
@@ -349,11 +349,7 @@ export const bash2Data = {
           "keywords": [
             "case"
           ],
-          "others": [
-            "apple",
-            "red",
-            "unknown"
-          ]
+          "others": ["apple", "red", "unknown", "りんご", "赤"]
         },
         "testCases": [
           {
@@ -378,11 +374,11 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# コマンドの出力を変数に格納する構文\\\\nfiles=$(echo \"test\")\\\\n# \"Files: $files\"をechoで出力\\\\necho \"Files: $files\"",
+        "correctCode": "# コマンドの出力を変数に格納する構文\\\nfiles=$(echo \"テスト\")\\\n# \"Files: $files\"をechoで出力\\\necho \"Files: $files\"",
         "holeyCode": "# コマンドの出力を変数に格納する構文\\\\nfiles=___(___)\\\\n# \"Files: $files\"をechoで出力\\\\necho \"Files: $___\"",
         "correctLines": [
           "# コマンドの出力を変数に格納する構文",
-          "files=$(echo \"test\")",
+          "files=$(echo \"テスト\")",
           "# \"Files: $files\"をechoで出力",
           "echo \"Files: $files\""
         ],
@@ -424,11 +420,11 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 標準入力を変数に読み込むコマンド\\\\necho \"input:\" && read val && echo \"You entered: $val\"",
-        "holeyCode": "# 標準入力を変数に読み込むコマンド\\\\necho \"input:\" && ___ val && echo \"You entered: $val\"",
+        "correctCode": "# 標準入力を変数に読み込むコマンド\\\necho \"入力:\" && read val && echo \"You ente赤: $val\"",
+        "holeyCode": "# 標準入力を変数に読み込むコマンド\\\necho \"入力:\" && ___ val && echo \"You ente赤: $val\"",
         "correctLines": [
           "# 標準入力を変数に読み込むコマンド",
-          "echo \"input:\" && read val && echo \"You entered: $val\""
+          "echo \"入力:\" && read val && echo \"You ente赤: $val\""
         ],
         "lineHints": [
           null,

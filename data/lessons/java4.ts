@@ -383,7 +383,7 @@ export const javaData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "import java.util.*;\\\\n\\\\npublic class Main {\\\\n    public static void main(String[] args) {\\\\n        // wordsに[\"cat\", \"a\", \"elephant\"]を代入\\\\n        List<String> words = new ArrayList<>(Arrays.asList(\"cat\", \"a\", \"elephant\"));\\\\n        // comparing でプロパティを基準に比較する\\\\n        words.sort(Comparator.comparing(String::length));\\\\n        // println で出力する\\\\n        System.out.println(words);\\\\n    }\\\\n}",
+        "correctCode": "import java.util.*;\\\n\\\npublic class Main {\\\n    public static void main(String[] args) {\\\n        // wordsに[\"cat\", \"a\", \"elephant\"]を代入\\\n        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));\\\n        // comparing でプロパティを基準に比較する\\\n        words.sort(Comparator.comparing(String::length));\\\n        // println で出力する\\\n        System.out.println(words);\\\n    }\\\n}",
         "holeyCode": "import java.util.___\\\\n\\\\npublic class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // wordsに[\"cat\", \"a\", \"elephant\"]を代入\\\\n        List<String> words = new ArrayList<>(Arrays.asList(\"___\", \"a\", \"elephant\"));\\\\n        // comparing でプロパティを基準に比較する\\\\n        words.sort(Comparator.comparing(String::___));\\\\n        // println で出力する\\\\n        System.out.___(words);\\\\n    ___\\\\n___",
         "correctLines": [
           "import java.util.*;",

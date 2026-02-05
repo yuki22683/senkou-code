@@ -22,11 +22,11 @@ export const perl2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数に文字列を代入\\\\nmy $text = \"hello world\";\\\\n# =~でパターンマッチング\\\\nif ($text =~ /world/) {\\\\n    # printで出力\\\\n    print \"found\\\\n\";\\\\n}",
-        "holeyCode": "# 変数に文字列を代入\\\\nmy $___ = \"hello world\";\\\\n# =~でパターンマッチング\\\\nif ($text =~ /___/) {\\\\n    # printで出力\\\\n    ___ \"found\\\\n\";\\\\n___",
+        "correctCode": "# 変数に文字列を代入\\\nmy $text = \"Hello World\";\\\n# =~でパターンマッチング\\\nif ($text =~ /world/) {\\\n    # printで出力\\\n    print \"found\\\n\";\\\n}",
+        "holeyCode": "# 変数に文字列を代入\\\nmy $___ = \"Hello World\";\\\n# =~でパターンマッチング\\\nif ($text =~ /___/) {\\\n    # printで出力\\\n    ___ \"found\\\n\";\\\n___",
         "correctLines": [
           "# 変数に文字列を代入",
-          "my $text = \"hello world\";",
+          "my $text = \"Hello World\";",
           "# =~でパターンマッチング",
           "if ($text =~ /world/) {",
           "    # printで出力",
@@ -73,11 +73,11 @@ export const perl2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数に文字列を代入\\\\nmy $text = \"cat\";\\\\n# sで置換\\\\n$text =~ s/cat/dog/;\\\\n# printで出力\\\\nprint \"$text\\\\n\";",
-        "holeyCode": "# 変数に文字列を代入\\\\nmy $___ = \"cat\";\\\\n# sで置換\\\\n$text =~ s/cat/___/;\\\\n# printで出力\\\\n___ \"$text\\\\n\";",
+        "correctCode": "# 変数に文字列を代入\\\nmy $text = \"猫\";\\\n# sで置換\\\n$text =~ s/cat/dog/;\\\n# printで出力\\\nprint \"$text\\\n\";",
+        "holeyCode": "# 変数に文字列を代入\\\nmy $___ = \"猫\";\\\n# sで置換\\\n$text =~ s/cat/___/;\\\n# printで出力\\\n___ \"$text\\\n\";",
         "correctLines": [
           "# 変数に文字列を代入",
-          "my $text = \"cat\";",
+          "my $text = \"猫\";",
           "# sで置換",
           "$text =~ s/cat/dog/;",
           "# printで出力",
@@ -122,11 +122,11 @@ export const perl2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# @で配列を宣言\\\\nmy @fruits = (\"apple\", \"banana\");\\\\n# printで出力\\\\nprint $fruits[1] . \"\\\\n\";",
-        "holeyCode": "# @で配列を宣言\\\\nmy @___ = (\"apple\", \"banana\");\\\\n# printで出力\\\\n___ $fruits[1] . \"\\\\n\";",
+        "correctCode": "# @で配列を宣言\\\nmy @fruits = (\"りんご\", \"バナナ\");\\\n# printで出力\\\nprint $fruits[1] . \"\\\n\";",
+        "holeyCode": "# @で配列を宣言\\\nmy @___ = (\"りんご\", \"バナナ\");\\\n# printで出力\\\n___ $fruits[1] . \"\\\n\";",
         "correctLines": [
           "# @で配列を宣言",
-          "my @fruits = (\"apple\", \"banana\");",
+          "my @fruits = (\"りんご\", \"バナナ\");",
           "# printで出力",
           "print $fruits[1] . \"",
           "\";"

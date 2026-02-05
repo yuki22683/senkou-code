@@ -34,7 +34,7 @@ export const kotlin3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// coroutines をインポートする\\\\nimport kotlinx.coroutines.*\\\\n\\\\n// getMessage関数をsuspendで定義\\\\nsuspend fun getMessage(): String {\\\\n    // 100ミリ秒待機する\\\\n    delay(100)\\\\n    // \"Hello\" を返す\\\\n    return \"Hello\"\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() = runBlocking {\\\\n    // getMessage() を出力する\\\\n    println(getMessage())\\\\n}",
+        "correctCode": "// coroutines をインポートする\\\nimport kotlinx.coroutines.*\\\n\\\n// getMessage関数をsuspendで定義\\\nsuspend fun getMessage(): String {\\\n    // 100ミリ秒待機する\\\n    delay(100)\\\n    // \"Hello\" を返す\\\n    return \"こんにちは\"\\\n}\\\n\\\n// main 関数を定義する\\\nfun main() = runBlocking {\\\n    // getMessage() を出力する\\\n    println(getMessage())\\\n}",
         "holeyCode": "// coroutines をインポートする\\\\nimport kotlinx.___.*\\\\n\\\\n// getMessage関数をsuspendで定義\\\\nsuspend fun getMessage(): ___ {\\\\n    // 100ミリ秒待機する\\\\n    delay(___)\\\\n    // \"Hello\" を返す\\\\n    return \"___\"\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun main() = ___ {\\\\n    // getMessage() を出力する\\\\n    ___(getMessage())\\\\n___",
         "correctLines": [
                   "// coroutines をインポートする",
@@ -45,7 +45,7 @@ export const kotlin3Data = {
                   "    // 100ミリ秒待機する",
                   "    delay(100)",
                   "    // \"Hello\" を返す",
-                  "    return \"Hello\"",
+                  "    return \"こんにちは\"",
                   "}",
                   "",
                   "// main 関数を定義する",
@@ -257,8 +257,8 @@ export const kotlin3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// checkType関数をreifiedで定義\\\\ninline fun <reified T> checkType(value: Any): Boolean {\\\\n    // value が T 型かチェックする\\\\n    return value is T\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // String 型かチェックする\\\\n    println(checkType<String>(\"test\"))\\\\n    // Int 型かチェックする\\\\n    println(checkType<Int>(\"test\"))\\\\n}",
-        "holeyCode": "// checkType関数をreifiedで定義\\\\ninline fun <reified T> checkType(value: Any): ___ {\\\\n    // value が T 型かチェックする\\\\n    return value is ___\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // String 型かチェックする\\\\n    ___(checkType<String>(\"test\"))\\\\n    // Int 型かチェックする\\\\n    ___(checkType<Int>(\"test\"))\\\\n___",
+        "correctCode": "// checkType関数をreifiedで定義\\\ninline fun <reified T> checkType(value: Any): Boolean {\\\n    // value が T 型かチェックする\\\n    return value is T\\\n}\\\n\\\n// main 関数を定義する\\\nfun main() {\\\n    // String 型かチェックする\\\n    println(checkType<String>(\"テスト\"))\\\n    // Int 型かチェックする\\\n    println(checkType<Int>(\"テスト\"))\\\n}",
+        "holeyCode": "// checkType関数をreifiedで定義\\\ninline fun <reified T> checkType(value: Any): ___ {\\\n    // value が T 型かチェックする\\\n    return value is ___\\\n___\\\n\\\n// main 関数を定義する\\\nfun ___() {\\\n    // String 型かチェックする\\\n    ___(checkType<String>(\"テスト\"))\\\n    // Int 型かチェックする\\\n    ___(checkType<Int>(\"テスト\"))\\\n___",
         "correctLines": [
                   "// checkType関数をreifiedで定義",
                   "inline fun <reified T> checkType(value: Any): Boolean {",
@@ -269,9 +269,9 @@ export const kotlin3Data = {
                   "// main 関数を定義する",
                   "fun main() {",
                   "    // String 型かチェックする",
-                  "    println(checkType<String>(\"test\"))",
+                  "    println(checkType<String>(\"テスト\"))",
                   "    // Int 型かチェックする",
-                  "    println(checkType<Int>(\"test\"))",
+                  "    println(checkType<Int>(\"テスト\"))",
                   "}"
         ],
         "lineHints": [
@@ -480,7 +480,7 @@ export const kotlin3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// main 関数を定義する\\\\nfun main() {\\\\n    // run でブロックを実行して結果を返す\\\\n    val result = \"Hello World\".run {\\\\n        // スペースで分割してサイズを取得する\\\\n        split(\" \").size\\\\n    }\\\\n    // result を出力する\\\\n    println(result)\\\\n}",
+        "correctCode": "// main 関数を定義する\\\nfun main() {\\\n    // run でブロックを実行して結果を返す\\\n    val result = \"Hello World\".run {\\\n        // スペースで分割してサイズを取得する\\\n        split(\" \").size\\\n    }\\\n    // result を出力する\\\n    println(result)\\\n}",
         "holeyCode": "// main 関数を定義する\\\\nfun ___() {\\\\n    // run でブロックを実行して結果を返す\\\\n    val result = \"___\".run {\\\\n        // スペースで分割してサイズを取得する\\\\n        split(\"___\").size\\\\n    ___\\\\n    // result を出力する\\\\n    println(___)\\\\n___",
         "correctLines": [
           "// main 関数を定義する",

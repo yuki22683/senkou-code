@@ -30,8 +30,8 @@ export const swiftData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Hello, World!と出力する関数\\\\nprint(\"Hello, World!\")",
-        "holeyCode": "// Hello, World!と出力する関数\\\\n___(\"Hello, World!\")",
+        "correctCode": "// Hello, World!と出力する関数\\\nprint(\"Hello, World!\")",
+        "holeyCode": "// Hello, World!と出力する関数\\\n___(\"Hello, World!\")",
         "correctLines": [
           "// Hello, World!と出力する関数",
           "print(\"Hello, World!\")"
@@ -247,14 +247,14 @@ export const swiftData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// score に 100 を入れる\\\\nlet score = 100\\\\n// > で比較する\\\\nif score > 80 {\\\\n    print(\"Great!\")\\\\n}",
-        "holeyCode": "// score に 100 を入れる\\\\nlet ___ = 100\\\\n// > で比較する\\\\nif score ___ 80 {\\\\n    ___(\"Great!\")\\\\n___",
+        "correctCode": "// score に 100 を入れる\\\nlet score = 100\\\n// > で比較する\\\nif score > 80 {\\\n    print(\"すごい!\")\\\n}",
+        "holeyCode": "// score に 100 を入れる\\\nlet ___ = 100\\\n// > で比較する\\\nif score ___ 80 {\\\n    ___(\"すごい!\")\\\n___",
         "correctLines": [
           "// score に 100 を入れる",
           "let score = 100",
           "// > で比較する",
           "if score > 80 {",
-          "    print(\"Great!\")",
+          "    print(\"すごい!\")",
           "}"
         ],
         "lineHints": [
@@ -308,14 +308,14 @@ export const swiftData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "let score = 80\\\\nlet bonus = 10\\\\n// && で両方の条件をチェック\\\\nif score >= 70 && bonus > 0 {\\\\n    print(\"Bonus Pass\")\\\\n}",
-        "holeyCode": "let ___ = 80\\\\nlet ___ = 10\\\\n// && で両方の条件をチェック\\\\nif score ___ 70 && bonus > 0 {\\\\n    ___(\"Bonus Pass\")\\\\n___",
+        "correctCode": "let score = 80\\\nlet bonus = 10\\\n// && で両方の条件をチェック\\\nif score >= 70 && bonus > 0 {\\\n    print(\"Bonus 合格\")\\\n}",
+        "holeyCode": "let ___ = 80\\\nlet ___ = 10\\\n// && で両方の条件をチェック\\\nif score ___ 70 && bonus > 0 {\\\n    ___(\"Bonus 合格\")\\\n___",
         "correctLines": [
           "let score = 80",
           "let bonus = 10",
           "// && で両方の条件をチェック",
           "if score >= 70 && bonus > 0 {",
-          "    print(\"Bonus Pass\")",
+          "    print(\"Bonus 合格\")",
           "}"
         ],
         "lineHints": [
@@ -366,8 +366,8 @@ export const swiftData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// colors という配列を作る（'あか', 'あお'の順）\\\\nlet colors = [\"14redlet colors = [\"red\", \"41bluelet colors = [\"14redlet colors = [\"red\", \"blue\"]\", \"blue\"]\"]\", \"49bluelet colors = [\"14redlet colors = [\"red\", \"blue\"]\", \"blue\"]\"]\\\\n// 2番目のデータ（インデックス1）を出す\\\\nprint(colors[1])",
-        "holeyCode": "// colors という配列を作る（'あか', 'あお'の順）\\\\nlet ___ = [\"11redlet ___ = [\"red\", \"35bluelet ___ = [\"11redlet ___ = [\"red\", \"blue\"]\", \"blue\"]\"]\", \"43bluelet ___ = [\"11redlet ___ = [\"red\", \"blue\"]\", \"blue\"]\"]\\\\n// 2番目のデータ（インデックス1）を出す\\\\nprint(colors[___])",
+        "correctCode": "// colors という配列を作る（'あか', 'あお'の順）\\\nlet colors = [\"14赤let colors = [\"赤\", \"41青let colors = [\"14赤let colors = [\"赤\", \"青\"]\", \"青\"]\"]\", \"49青let colors = [\"14赤let colors = [\"赤\", \"青\"]\", \"青\"]\"]\\\n// 2番目のデータ（インデックス1）を出す\\\nprint(colors[1])",
+        "holeyCode": "// colors という配列を作る（'あか', 'あお'の順）\\\nlet ___ = [\"11赤let ___ = [\"赤\", \"35青let ___ = [\"11赤let ___ = [\"赤\", \"青\"]\", \"青\"]\"]\", \"43青let ___ = [\"11赤let ___ = [\"赤\", \"青\"]\", \"青\"]\"]\\\n// 2番目のデータ（インデックス1）を出す\\\nprint(colors[___])",
         "correctLines": [
           "// colors という配列を作る（'あか', 'あお'の順）",
           "let colors = [\"あか\", \"あお\"]",
@@ -394,7 +394,7 @@ export const swiftData = {
           "numbers": [
             "1"
           ],
-          "others": ["]"]
+          "others": ["]", "お\"]"]
         },
         "testCases": [
           {
@@ -427,8 +427,8 @@ export const swiftData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\\\nlet colors = [\"14orangelet colors = [\"orange\": \"21orangelet colors = [\"orange\": \"orange\"]\"]\": \"21orangelet colors = [\"44orangelet colors = [\"orange\": \"21orangelet colors = [\"orange\": \"orange\"]\"]\": \"orange\"]\"]\\\\n// 中身を出す\\\\nprint(colors[\"13orangeprint(colors[\"orange\"]!)\"]!)",
-        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\\\nlet ___ = [\"11orangelet ___ = [\"orange\": \"18orangelet ___ = [\"orange\": \"orange\"]\"]\": \"18orangelet ___ = [\"38orangelet ___ = [\"orange\": \"18orangelet ___ = [\"orange\": \"orange\"]\"]\": \"orange\"]\"]\\\\n// 中身を出す\\\\nprint(colors[\"___\"]!)",
+        "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\\nlet colors = [\"14みかんlet colors = [\"みかん\": \"21みかんlet colors = [\"みかん\": \"みかん\"]\"]\": \"21みかんlet colors = [\"44orangelet colors = [\"みかん\": \"21みかんlet colors = [\"みかん\": \"みかん\"]\"]\": \"みかん\"]\"]\\\n// 中身を出す\\\nprint(colors[\"13みかんprint(colors[\"みかん\"]!)\"]!)",
+        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\\nlet ___ = [\"11みかんlet ___ = [\"みかん\": \"18みかんlet ___ = [\"みかん\": \"みかん\"]\"]\": \"18みかんlet ___ = [\"38orangelet ___ = [\"みかん\": \"18みかんlet ___ = [\"みかん\": \"みかん\"]\"]\": \"みかん\"]\"]\\\n// 中身を出す\\\nprint(colors[\"___\"]!)",
         "correctLines": [
           "// 辞書を作る（キーは'みかん'、値は'オレンジ'）",
           "let colors = [\"みかん\": \"オレンジ\"]",
@@ -452,7 +452,7 @@ export const swiftData = {
             "みかん",
             "オレンジ"
           ],
-          "others": ["]"]
+          "others": ["]", "ンジ\"]"]
         },
         "testCases": [
           {

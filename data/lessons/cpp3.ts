@@ -391,7 +391,7 @@ export const cpp3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\n#include <string>\\\\n#include <utility>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // s1に\"Hello\"を代入\\\\n    string s1 = \"Hello\";\\\\n    // move で所有権を移動\\\\n    string s2 = move(s1);\\\\n    cout << s2 << endl;\\\\n    return 0;\\\\n}",
+        "correctCode": "#include <iostream>\\\n#include <string>\\\n#include <utility>\\\nusing namespace std;\\\n\\\nint main() {\\\n    // s1に\"Hello\"を代入\\\n    string s1 = \"こんにちは\";\\\n    // move で所有権を移動\\\n    string s2 = move(s1);\\\n    cout << s2 << endl;\\\n    return 0;\\\n}",
         "holeyCode": "#include <iostream>\\\\n#include <string>\\\\n#include <utility>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // s1に\"Hello\"を代入\\\\n    string s1 = \"___\";\\\\n    // move で所有権を移動\\\\n    string s___ = move(s1);\\\\n    cout << s___ << endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
                   "#include <iostream>",
@@ -401,7 +401,7 @@ export const cpp3Data = {
                   "",
                   "int main() {",
                   "    // s1に\"Hello\"を代入",
-                  "    string s1 = \"Hello\";",
+                  "    string s1 = \"こんにちは\";",
                   "    // move で所有権を移動",
                   "    string s2 = move(s1);",
                   "    cout << s2 << endl;",

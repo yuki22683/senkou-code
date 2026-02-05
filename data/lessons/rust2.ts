@@ -22,11 +22,11 @@ export const rust2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "fn main() {\\\\n    let s1 = String::from(\"hello\");\\\\n    // s1 の所有権を移動\\\\n    let s2 = s1;\\\\n    println!(\"{}\", s2);\\\\n}",
-        "holeyCode": "fn ___ () {\\\\n    let ___ = String::from(\"hello\");\\\\n    // s1 の所有権を移動\\\\n    let ___ = s1;\\\\n    ___!(\"{}\", s2);\\\\n___",
+        "correctCode": "fn main() {\\\n    let s1 = String::from(\"こんにちは\");\\\n    // s1 の所有権を移動\\\n    let s2 = s1;\\\n    println!(\"{}\", s2);\\\n}",
+        "holeyCode": "fn ___ () {\\\n    let ___ = String::from(\"こんにちは\");\\\n    // s1 の所有権を移動\\\n    let ___ = s1;\\\n    ___!(\"{}\", s2);\\\n___",
         "correctLines": [
           "fn main() {",
-          "    let s1 = String::from(\"hello\");",
+          "    let s1 = String::from(\"こんにちは\");",
           "    // s1 の所有権を移動",
           "    let s2 = s1;",
           "    println!(\"{}\", s2);",
@@ -69,14 +69,14 @@ export const rust2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "fn print_len(s: &String) {\\\\n    println!(\"{}\", s.len());\\\\n}\\\\nfn main() {\\\\n    let text = String::from(\"hello\");\\\\n    // & で参照を渡す\\\\n    print_len(&text);\\\\n}",
-        "holeyCode": "fn ___ (s: &String) {\\\\n    ___!(\"{}\", s.len());\\\\n___\\\\nfn ___ () {\\\\n    let ___ = String::from(\"hello\");\\\\n    // & で参照を渡す\\\\n    ___(&text);\\\\n___",
+        "correctCode": "fn print_len(s: &String) {\\\n    println!(\"{}\", s.len());\\\n}\\\nfn main() {\\\n    let text = String::from(\"こんにちは\");\\\n    // & で参照を渡す\\\n    print_len(&text);\\\n}",
+        "holeyCode": "fn ___ (s: &String) {\\\n    ___!(\"{}\", s.len());\\\n___\\\nfn ___ () {\\\n    let ___ = String::from(\"こんにちは\");\\\n    // & で参照を渡す\\\n    ___(&text);\\\n___",
         "correctLines": [
           "fn print_len(s: &String) {",
           "    println!(\"{}\", s.len());",
           "}",
           "fn main() {",
-          "    let text = String::from(\"hello\");",
+          "    let text = String::from(\"こんにちは\");",
           "    // & で参照を渡す",
           "    print_len(&text);",
           "}"
@@ -120,15 +120,15 @@ export const rust2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "fn add_world(s: &mut String) {\\\\n    s.push_str(\" world\");\\\\n}\\\\nfn main() {\\\\n    // mut で可変変数にする\\\\n    let mut text = String::from(\"hello\");\\\\n    add_world(&mut text);\\\\n    println!(\"{}\", text);\\\\n}",
-        "holeyCode": "fn ___ (s: &mut String) {\\\\n    s.___(\" world\");\\\\n___\\\\nfn ___ () {\\\\n    // mut で可変変数にする\\\\n    let mut ___ = String::from(\"hello\");\\\\n    ___(&mut text);\\\\n    ___!(\"{}\", text);\\\\n___",
+        "correctCode": "fn add_world(s: &mut String) {\\\n    s.push_str(\" 世界\");\\\n}\\\nfn main() {\\\n    // mut で可変変数にする\\\n    let mut text = String::from(\"こんにちは\");\\\n    add_world(&mut text);\\\n    println!(\"{}\", text);\\\n}",
+        "holeyCode": "fn ___ (s: &mut String) {\\\n    s.___(\" 世界\");\\\n___\\\nfn ___ () {\\\n    // mut で可変変数にする\\\n    let mut ___ = String::from(\"こんにちは\");\\\n    ___(&mut text);\\\n    ___!(\"{}\", text);\\\n___",
         "correctLines": [
           "fn add_world(s: &mut String) {",
-          "    s.push_str(\" world\");",
+          "    s.push_str(\" 世界\");",
           "}",
           "fn main() {",
           "    // mut で可変変数にする",
-          "    let mut text = String::from(\"hello\");",
+          "    let mut text = String::from(\"こんにちは\");",
           "    add_world(&mut text);",
           "    println!(\"{}\", text);",
           "}"
@@ -521,8 +521,8 @@ export const rust2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// T を型パラメータとして使う\\\\nfn print_val<T: std::fmt::Display>(val: T) {\\\\n    println!(\"{}\", val);\\\\n}\\\\nfn main() {\\\\n    print_val(42);\\\\n    print_val(\"hello\");\\\\n}",
-        "holeyCode": "// T を型パラメータとして使う\\\\nfn print_val<___: std::fmt::Display>(val: T) {\\\\n    ___!(\"{}\", val);\\\\n___\\\\nfn ___ () {\\\\n    ___(42);\\\\n    ___(\"hello\");\\\\n___",
+        "correctCode": "// T を型パラメータとして使う\\\nfn print_val<T: std::fmt::Display>(val: T) {\\\n    println!(\"{}\", val);\\\n}\\\nfn main() {\\\n    print_val(42);\\\n    print_val(\"こんにちは\");\\\n}",
+        "holeyCode": "// T を型パラメータとして使う\\\nfn print_val<___: std::fmt::Display>(val: T) {\\\n    ___!(\"{}\", val);\\\n___\\\nfn ___ () {\\\n    ___(42);\\\n    ___(\"こんにちは\");\\\n___",
         "correctLines": [
           "// T を型パラメータとして使う",
           "fn print_val<T: std::fmt::Display>(val: T) {",
@@ -530,7 +530,7 @@ export const rust2Data = {
           "}",
           "fn main() {",
           "    print_val(42);",
-          "    print_val(\"hello\");",
+          "    print_val(\"こんにちは\");",
           "}"
         ],
         "lineHints": [

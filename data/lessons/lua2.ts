@@ -22,11 +22,11 @@ export const lua2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- nameとpriceを持つテーブルを作成\\\\nlocal item = { name = \"Apple\", price = 100 }\\\\n-- .でキーにアクセス\\\\nprint(item.price)",
-        "holeyCode": "-- nameとpriceを持つテーブルを作成\\\\nlocal ___ = { name = \"Apple\", price = 100 }\\\\n-- .でキーにアクセス\\\\n___(item.price)",
+        "correctCode": "-- nameとpriceを持つテーブルを作成\\\nlocal item = { name = \"りんご\", price = 100 }\\\n-- .でキーにアクセス\\\nprint(item.price)",
+        "holeyCode": "-- nameとpriceを持つテーブルを作成\\\nlocal ___ = { name = \"りんご\", price = 100 }\\\n-- .でキーにアクセス\\\n___(item.price)",
         "correctLines": [
           "-- nameとpriceを持つテーブルを作成",
-          "local item = { name = \"Apple\", price = 100 }",
+          "local item = { name = \"りんご\", price = 100 }",
           "-- .でキーにアクセス",
           "print(item.price)"
         ],
@@ -474,13 +474,13 @@ export const lua2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- createでコルーチンを作成\\\\nlocal co = coroutine.create(function()\\\\n    -- helloを表示\\\\n    print(\"hello\")\\\\nend)\\\\n-- resumeでコルーチンを実行\\\\ncoroutine.resume(co)",
-        "holeyCode": "-- createでコルーチンを作成\\\\nlocal ___ = coroutine.create(function()\\\\n    -- helloを表示\\\\n    ___(\"hello\")\\\\n___)\\\\n-- resumeでコルーチンを実行\\\\ncoroutine.resume(___)",
+        "correctCode": "-- createでコルーチンを作成\\\nlocal co = coroutine.create(function()\\\n    -- helloを表示\\\n    print(\"こんにちは\")\\\nend)\\\n-- resumeでコルーチンを実行\\\ncoroutine.resume(co)",
+        "holeyCode": "-- createでコルーチンを作成\\\nlocal ___ = coroutine.create(function()\\\n    -- helloを表示\\\n    ___(\"こんにちは\")\\\n___)\\\n-- resumeでコルーチンを実行\\\ncoroutine.resume(___)",
         "correctLines": [
           "-- createでコルーチンを作成",
           "local co = coroutine.create(function()",
           "    -- helloを表示",
-          "    print(\"hello\")",
+          "    print(\"こんにちは\")",
           "end)",
           "-- resumeでコルーチンを実行",
           "coroutine.resume(co)"

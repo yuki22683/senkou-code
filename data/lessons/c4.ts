@@ -22,14 +22,14 @@ export const c4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <stdio.h>\\\\n\\\\nint main() {\\\\n    // fpにfopen(\"test.txt\", \"w\")を代入\\\\n    FILE *fp = fopen(\"test.txt\", \"w\");\\\\n    if (fp != NULL) {\\\\n        fprintf(fp, \"Hello\\\\n\");\\\\n        fclose(fp);\\\\n        printf(\"Done\\\\n\");\\\\n    }\\\\n    return 0;\\\\n}",
+        "correctCode": "#include <stdio.h>\\\n\\\nint main() {\\\n    // fpにfopen(\"test.txt\", \"w\")を代入\\\n    FILE *fp = fopen(\"テスト.txt\", \"w\");\\\n    if (fp != NULL) {\\\n        fprintf(fp, \"Hello\\\n\");\\\n        fclose(fp);\\\n        printf(\"Done\\\n\");\\\n    }\\\n    return 0;\\\n}",
         "holeyCode": "#include <stdio.h>\\\\n\\\\nint ___() {\\\\n    // fpにfopen(\"test.txt\", \"w\")を代入\\\\n    FILE *fp = fopen(\"___\", \"w\");\\\\n    if (fp != ___) {\\\\n        fprintf(fp, \"Hello\\\\n\");\\\\n        fclose(___);\\\\n        printf(\"Done\\\\n\");\\\\n    ___\\\\n    return ___;\\\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
                   "int main() {",
                   "    // fpにfopen(\"test.txt\", \"w\")を代入",
-                  "    FILE *fp = fopen(\"test.txt\", \"w\");",
+                  "    FILE *fp = fopen(\"テスト.txt\", \"w\");",
                   "    if (fp != NULL) {",
                   "        fprintf(fp, \"Hello",
                   "\");",
@@ -87,13 +87,13 @@ export const c4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <stdio.h>\\\\n\\\\nint main() {\\\\n    FILE *fp = fopen(\"data.txt\", \"w\");\\\\n    if (fp != NULL) {\\\\n        fputs(\"Data\\\\n\", fp);\\\\n        // fclose(fp)でファイルを閉じる\\\\n        fclose(fp);\\\\n        printf(\"Closed\\\\n\");\\\\n    }\\\\n    return 0;\\\\n}",
+        "correctCode": "#include <stdio.h>\\\n\\\nint main() {\\\n    FILE *fp = fopen(\"データ.txt\", \"w\");\\\n    if (fp != NULL) {\\\n        fputs(\"Data\\\n\", fp);\\\n        // fclose(fp)でファイルを閉じる\\\n        fclose(fp);\\\n        printf(\"Closed\\\n\");\\\n    }\\\n    return 0;\\\n}",
         "holeyCode": "#include <stdio.h>\\\\n\\\\nint ___() {\\\\n    FILE *fp = fopen(\"___\", \"w\");\\\\n    if (fp != ___) {\\\\n        fputs(\"Data\\\\n\", fp);\\\\n        // fclose(fp)でファイルを閉じる\\\\n        fclose(___);\\\\n        printf(\"Closed\\\\n\");\\\\n    ___\\\\n    return ___;\\\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
                   "int main() {",
-                  "    FILE *fp = fopen(\"data.txt\", \"w\");",
+                  "    FILE *fp = fopen(\"データ.txt\", \"w\");",
                   "    if (fp != NULL) {",
                   "        fputs(\"Data",
                   "\", fp);",
@@ -217,7 +217,7 @@ export const c4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <stdio.h>\\\\n#include <string.h>\\\\n\\\\nint main() {\\\\n    char line[100];\\\\n    FILE *fp = fopen(\"test.txt\", \"w\");\\\\n    fprintf(fp, \"Hello World\\\\n\");\\\\n    fclose(fp);\\\\n    fp = fopen(\"test.txt\", \"r\");\\\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\\\n    fgets(line, sizeof(line), fp);\\\\n    line[strcspn(line, \"\\\\n\")] = 0;\\\\n    printf(\"%s\\\\n\", line);\\\\n    fclose(fp);\\\\n    return 0;\\\\n}",
+        "correctCode": "#include <stdio.h>\\\n#include <string.h>\\\n\\\nint main() {\\\n    char line[100];\\\n    FILE *fp = fopen(\"テスト.txt\", \"w\");\\\n    fprintf(fp, \"Hello World\\\n\");\\\n    fclose(fp);\\\n    fp = fopen(\"テスト.txt\", \"r\");\\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\\n    fgets(line, sizeof(line), fp);\\\n    line[strcspn(line, \"\\\n\")] = 0;\\\n    printf(\"%s\\\n\", line);\\\n    fclose(fp);\\\n    return 0;\\\n}",
         "holeyCode": "#include <stdio.h>\\\\n#include <string.h>\\\\n\\\\nint ___() {\\\\n    char line[___];\\\\n    FILE *fp = fopen(\"___\", \"w\");\\\\n    fprintf(fp, \"Hello World\\\\n\");\\\\n    fclose(___);\\\\n    fp = fopen(\"___\", \"r\");\\\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\\\n    fgets(line, sizeof(line), ___);\\\\n    line[strcspn(line, \"\\\\n\")] = 0;\\\\n    printf(\"%s\\\\n\", line);\\\\n    fclose(___);\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <stdio.h>",
@@ -290,7 +290,7 @@ export const c4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <stdio.h>\\\\n\\\\nint main() {\\\\n    FILE *fp = fopen(\"pos.txt\", \"w+\");\\\\n    fputs(\"ABCDEFGHIJ\", fp);\\\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\\\n    fseek(fp, 0, SEEK_SET);\\\\n    printf(\"%c\\\\n\", fgetc(fp));\\\\n    fclose(fp);\\\\n    return 0;\\\\n}",
+        "correctCode": "#include <stdio.h>\\\n\\\nint main() {\\\n    FILE *fp = fopen(\"pos.txt\", \"w+\");\\\n    fputs(\"ABCDEFGHIJ\", fp);\\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\\n    fseek(fp, 0, SEEK_SET);\\\n    printf(\"%c\\\n\", fgetc(fp));\\\n    fclose(fp);\\\n    return 0;\\\n}",
         "holeyCode": "#include <stdio.h>\\\\n\\\\nint ___() {\\\\n    FILE *fp = fopen(\"___\", \"w+\");\\\\n    fputs(\"___\", fp);\\\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\\\n    fseek(fp, ___, SEEK_SET);\\\\n    printf(\"%c\\\\n\", fgetc(fp));\\\\n    fclose(___);\\\\n    return ___;\\\\n___",
         "correctLines": [
                   "#include <stdio.h>",

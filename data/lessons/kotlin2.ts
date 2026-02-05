@@ -83,11 +83,11 @@ export const kotlin2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// numに42を代入（nullable型）\\\\nval text: String? = \"Hello\"\\\\n// ?. で安全にプロパティにアクセスする\\\\nprintln(text?.length)",
+        "correctCode": "// numに42を代入（nullable型）\\\nval text: String? = \"こんにちは\"\\\n// ?. で安全にプロパティにアクセスする\\\nprintln(text?.length)",
         "holeyCode": "// numに42を代入（nullable型）\\\\nval text: String? = \"___\"\\\\n// ?. で安全にプロパティにアクセスする\\\\n___(text?.length)",
         "correctLines": [
           "// numに42を代入（nullable型）",
-          "val text: String? = \"Hello\"",
+          "val text: String? = \"こんにちは\"",
           "// ?. で安全にプロパティにアクセスする",
           "println(text?.length)"
         ],

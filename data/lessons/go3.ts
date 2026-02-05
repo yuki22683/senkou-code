@@ -554,8 +554,8 @@ export const go3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\\\\n\\\\nimport \"fmt\"\\\\n\\\\ntype Base struct {\\\\n    Value int\\\\n}\\\\n\\\\ntype Extended struct {\\\\n    // Base を埋め込む\\\\n    Base\\\\n    Extra string\\\\n}\\\\n\\\\nfunc main() {\\\\n    // 埋め込み構造体を初期化\\\\n    e := Extended{Base: Base{Value: 100}, Extra: \"test\"}\\\\n    fmt.Println(e.Value)\\\\n}",
-        "holeyCode": "package ___\\\\n\\\\nimport \\\"___\\\"\\\\n\\\\ntype Base ___ {\\\\n    Value ___\\\\n___\\\\n\\\\ntype Extended ___ {\\\\n    // Base を埋め込む\\\\n    ___\\\\n    Extra ___\\\\n___\\\\n\\\\nfunc ___ () {\\\\n    // 埋め込み構造体を初期化\\\\n    ___ := Extended{Base: Base{Value: 100}, Extra: \"test\"}\\\\n    fmt.___(e.Value)\\\\n___",
+        "correctCode": "package main\\\n\\\nimport \"fmt\"\\\n\\\ntype Base struct {\\\n    Value int\\\n}\\\n\\\ntype Extended struct {\\\n    // Base を埋め込む\\\n    Base\\\n    Extra string\\\n}\\\n\\\nfunc main() {\\\n    // 埋め込み構造体を初期化\\\n    e := Extended{Base: Base{Value: 100}, Extra: \"テスト\"}\\\n    fmt.Println(e.Value)\\\n}",
+        "holeyCode": "package ___\\\n\\\nimport \\\"___\\\"\\\n\\\ntype Base ___ {\\\n    Value ___\\\n___\\\n\\\ntype Extended ___ {\\\n    // Base を埋め込む\\\n    ___\\\n    Extra ___\\\n___\\\n\\\nfunc ___ () {\\\n    // 埋め込み構造体を初期化\\\n    ___ := Extended{Base: Base{Value: 100}, Extra: \"テスト\"}\\\n    fmt.___(e.Value)\\\n___",
         "correctLines": [
                   "package main",
                   "",
@@ -573,7 +573,7 @@ export const go3Data = {
                   "",
                   "func main() {",
                   "    // 埋め込み構造体を初期化",
-                  "    e := Extended{Base: Base{Value: 100}, Extra: \"test\"}",
+                  "    e := Extended{Base: Base{Value: 100}, Extra: \"テスト\"}",
                   "    fmt.Println(e.Value)",
                   "}"
         ],
@@ -629,7 +629,7 @@ export const go3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\\\\n\\\\nimport \"fmt\"\\\\n\\\\nfunc main() {\\\\n    defer func() {\\\\n        // recover でパニックを捕捉\\\\n        if r := recover(); r != nil {\\\\n            fmt.Println(\"caught\")\\\\n        }\\\\n    }()\\\\n    // panic でパニックを発生\\\\n    panic(\"error\")\\\\n}",
+        "correctCode": "package main\\\n\\\nimport \"fmt\"\\\n\\\nfunc main() {\\\n    defer func() {\\\n        // recover でパニックを捕捉\\\n        if r := recover(); r != nil {\\\n            fmt.Println(\"caught\")\\\n        }\\\n    }()\\\n    // panic でパニックを発生\\\n    panic(\"エラー\")\\\n}",
         "holeyCode": "package ___\\\\n\\\\nimport \\\"___\\\"\\\\n\\\\nfunc ___ () {\\\\n    defer ___() {\\\\n        // recover でパニックを捕捉\\\\n        if r := recover(); r != ___ {\\\\n            fmt.___(\"caught\")\\\\n        ___\\\\n    ___()\\\\n    // panic でパニックを発生\\\\n    panic(\"___\")\\\\n___",
         "correctLines": [
                   "package main",
@@ -644,7 +644,7 @@ export const go3Data = {
                   "        }",
                   "    }()",
                   "    // panic でパニックを発生",
-                  "    panic(\"error\")",
+                  "    panic(\"エラー\")",
                   "}"
         ],
         "lineHints": [

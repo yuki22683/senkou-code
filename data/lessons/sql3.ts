@@ -22,11 +22,11 @@ export const sql3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- SELECTでサブクエリを作成\\\\nSELECT 'found' WHERE 5 > (SELECT 3);",
-        "holeyCode": "-- SELECTでサブクエリを作成\\\\nSELECT 'found' WHERE ___ > (SELECT 3);",
+        "correctCode": "-- SELECTでサブクエリを作成\\\nSELECT '見つかった' WHERE 5 > (SELECT 3);",
+        "holeyCode": "-- SELECTでサブクエリを作成\\\nSELECT '見つかった' WHERE ___ > (SELECT 3);",
         "correctLines": [
           "-- SELECTでサブクエリを作成",
-          "SELECT 'found' WHERE 5 > (SELECT 3);"
+          "SELECT '見つかった' WHERE 5 > (SELECT 3);"
         ],
         "lineHints": [
           null,
@@ -63,11 +63,11 @@ export const sql3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- EXISTSで存在チェック\\\\nSELECT 'has data' WHERE EXISTS (SELECT 1);",
-        "holeyCode": "-- EXISTSで存在チェック\\\\nSELECT 'has data' WHERE EXISTS (SELECT ___);",
+        "correctCode": "-- EXISTSで存在チェック\\\nSELECT 'has データ' WHERE EXISTS (SELECT 1);",
+        "holeyCode": "-- EXISTSで存在チェック\\\nSELECT 'has データ' WHERE EXISTS (SELECT ___);",
         "correctLines": [
           "-- EXISTSで存在チェック",
-          "SELECT 'has data' WHERE EXISTS (SELECT 1);"
+          "SELECT 'has データ' WHERE EXISTS (SELECT 1);"
         ],
         "lineHints": [
           null,
@@ -355,11 +355,11 @@ export const sql3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- LIKEでパターン検索\\\\nSELECT 'matched' WHERE 'Hello' LIKE 'H%';",
-        "holeyCode": "-- LIKEでパターン検索\\\\nSELECT 'matched' WHERE 'Hello' LIKE '___%';",
+        "correctCode": "-- LIKEでパターン検索\\\nSELECT 'matched' WHERE 'こんにちは' LIKE 'H%';",
+        "holeyCode": "-- LIKEでパターン検索\\\nSELECT 'matched' WHERE 'こんにちは' LIKE '___%';",
         "correctLines": [
           "-- LIKEでパターン検索",
-          "SELECT 'matched' WHERE 'Hello' LIKE 'H%';"
+          "SELECT 'matched' WHERE 'こんにちは' LIKE 'H%';"
         ],
         "lineHints": [
           null,
@@ -437,11 +437,11 @@ export const sql3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- INで複数値マッチ\\\\nSELECT 'found' WHERE 'B' IN ('A', 'B', 'C');",
-        "holeyCode": "-- INで複数値マッチ\\\\nSELECT 'found' WHERE 'B' IN ('A', 'B', '___');",
+        "correctCode": "-- INで複数値マッチ\\\nSELECT '見つかった' WHERE 'B' IN ('A', 'B', 'C');",
+        "holeyCode": "-- INで複数値マッチ\\\nSELECT '見つかった' WHERE 'B' IN ('A', 'B', '___');",
         "correctLines": [
           "-- INで複数値マッチ",
-          "SELECT 'found' WHERE 'B' IN ('A', 'B', 'C');"
+          "SELECT '見つかった' WHERE 'B' IN ('A', 'B', 'C');"
         ],
         "lineHints": [
           null,

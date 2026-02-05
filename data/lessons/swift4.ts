@@ -30,7 +30,7 @@ export const swift4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// protocolでプロトコルを定義\\\\nprotocol Speakable {\\\\n    // speakメソッドを宣言\\\\n    func speak() -> String\\\\n}\\\\n\\\\n// Speakableに準拠\\\\nstruct Dog: Speakable {\\\\n    // speakメソッドを実装\\\\n    func speak() -> String {\\\\n        // Woof!を返す\\\\n        return \"Woof!\"\\\\n    }\\\\n}\\\\n\\\\n// インスタンスを作成\\\\nlet dog = Dog()\\\\n// speakを呼び出し\\\\nprint(dog.speak())",
+        "correctCode": "// protocolでプロトコルを定義\\\nprotocol Speakable {\\\n    // speakメソッドを宣言\\\n    func speak() -> String\\\n}\\\n\\\n// Speakableに準拠\\\nstruct Dog: Speakable {\\\n    // speakメソッドを実装\\\n    func speak() -> String {\\\n        // Woof!を返す\\\n        return \"ワン！\"\\\n    }\\\n}\\\n\\\n// インスタンスを作成\\\nlet dog = Dog()\\\n// speakを呼び出し\\\nprint(dog.speak())",
         "holeyCode": "// protocolでプロトコルを定義\\\\nprotocol ___ {\\\\n    // speakメソッドを宣言\\\\n    func ___ () -> String\\\\n___\\\\n\\\\n// Speakableに準拠\\\\nstruct Dog: ___ {\\\\n    // speakメソッドを実装\\\\n    func ___ () -> String {\\\\n        // Woof!を返す\\\\n        return \"___\"\\\\n    ___\\\\n___\\\\n\\\\n// インスタンスを作成\\\\nlet ___ = Dog()\\\\n// speakを呼び出し\\\\nprint(dog.___())",
         "correctLines": [
           "// protocolでプロトコルを定義",
@@ -44,7 +44,7 @@ export const swift4Data = {
           "    // speakメソッドを実装",
           "    func speak() -> String {",
           "        // Woof!を返す",
-          "        return \"Woof!\"",
+          "        return \"ワン！\"",
           "    }",
           "}",
           "",
@@ -327,8 +327,8 @@ export const swift4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Foundationをインポート\\\\nimport Foundation\\\\n\\\\n// CodableでJSON変換可能に\\\\nstruct Item: Codable {\\\\n    // nameプロパティ\\\\n    var name: String\\\\n}\\\\n\\\\n// インスタンスを作成\\\\nlet item = Item(name: \"Apple\")\\\\n// エンコーダを作成\\\\nlet encoder = JSONEncoder()\\\\n// JSONに変換\\\\nif let data = try? encoder.encode(item),\\\\n   let json = String(data: data, encoding: .utf8) {\\\\n    // JSONを出力\\\\n    print(json)\\\\n}",
-        "holeyCode": "// Foundationをインポート\\\\nimport ___\\\\n\\\\n// CodableでJSON変換可能に\\\\nstruct Item: ___ {\\\\n    // nameプロパティ\\\\n    var name: ___\\\\n___\\\\n\\\\n// インスタンスを作成\\\\nlet ___ = Item(name: \"Apple\")\\\\n// エンコーダを作成\\\\nlet ___ = JSONEncoder()\\\\n// JSONに変換\\\\nif let data = try? encoder.encode(___),\\\\n   let ___ = String(data: data, encoding: .utf8) {\\\\n    // JSONを出力\\\\n    print(___)\\\\n___",
+        "correctCode": "// Foundationをインポート\\\nimport Foundation\\\n\\\n// CodableでJSON変換可能に\\\nstruct Item: Codable {\\\n    // nameプロパティ\\\n    var name: String\\\n}\\\n\\\n// インスタンスを作成\\\nlet item = Item(name: \"りんご\")\\\n// エンコーダを作成\\\nlet encoder = JSONEncoder()\\\n// JSONに変換\\\nif let data = try? encoder.encode(item),\\\n   let json = String(data: data, encoding: .utf8) {\\\n    // JSONを出力\\\n    print(json)\\\n}",
+        "holeyCode": "// Foundationをインポート\\\nimport ___\\\n\\\n// CodableでJSON変換可能に\\\nstruct Item: ___ {\\\n    // nameプロパティ\\\n    var name: ___\\\n___\\\n\\\n// インスタンスを作成\\\nlet ___ = Item(name: \"りんご\")\\\n// エンコーダを作成\\\nlet ___ = JSONEncoder()\\\n// JSONに変換\\\nif let data = try? encoder.encode(___),\\\n   let ___ = String(data: data, encoding: .utf8) {\\\n    // JSONを出力\\\n    print(___)\\\n___",
         "correctLines": [
           "// Foundationをインポート",
           "import Foundation",
@@ -340,7 +340,7 @@ export const swift4Data = {
           "}",
           "",
           "// インスタンスを作成",
-          "let item = Item(name: \"Apple\")",
+          "let item = Item(name: \"りんご\")",
           "// エンコーダを作成",
           "let encoder = JSONEncoder()",
           "// JSONに変換",

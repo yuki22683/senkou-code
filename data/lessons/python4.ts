@@ -94,8 +94,8 @@ export const pythonData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 人を表す親クラスを定義\\\\nclass Person:\\\\n    # 名前を初期設定するメソッドを定義\\\\n    def __init__(self, name):\\\\n        # self.nameにnameを代入\\\\n        self.name = name\\\\n\\\\n# Personを継承してStudentクラスを定義\\\\nclass Student(Person):\\\\n    # name（名前）、grade（学年）の順で初期設定\\\\n    def __init__(self, name, grade):\\\\n        # 親クラスの初期化メソッドを呼び出し\\\\n        super().__init__(name)\\\\n        # self.gradeにgradeを代入\\\\n        self.grade = grade\\\\n\\\\n# 'Taro'、3年生としてインスタンスを作成\\\\ns = Student('Taro', 3)\\\\n# インスタンスの情報を表示\\\\nprint(f'{s.name} is in grade {s.grade}')",
-        "holeyCode": "# 人を表す親クラスを定義\\\\nclass ___:\\\\n    # 名前を初期設定するメソッドを定義\\\\n    def ___(self, name):\\\\n        # self.nameにnameを代入\\\\n        self.___ = name\\\\n\\\\n# Personを継承してStudentクラスを定義\\\\nclass ___(Person):\\\\n    # name（名前）、grade（学年）の順で初期設定\\\\n    def ___(self, name, grade):\\\\n        # 親クラスの初期化メソッドを呼び出し\\\\n        super().__init__(___)\\\\n        # self.gradeにgradeを代入\\\\n        self.___ = grade\\\\n\\\\n# 'Taro'、3年生としてインスタンスを作成\\\\ns = Student('Taro', ___)\\\\n# インスタンスの情報を表示\\\\n___(f'{s.name} is in grade {s.grade}')",
+        "correctCode": "# 人を表す親クラスを定義\\\nclass Person:\\\n    # 名前を初期設定するメソッドを定義\\\n    def __init__(self, name):\\\n        # self.nameにnameを代入\\\n        self.name = name\\\n\\\n# Personを継承してStudentクラスを定義\\\nclass Student(Person):\\\n    # name（名前）、grade（学年）の順で初期設定\\\n    def __init__(self, name, grade):\\\n        # 親クラスの初期化メソッドを呼び出し\\\n        super().__init__(name)\\\n        # self.gradeにgradeを代入\\\n        self.grade = grade\\\n\\\n# 'Taro'、3年生としてインスタンスを作成\\\ns = Student('太郎', 3)\\\n# インスタンスの情報を表示\\\nprint(f'{s.名前} is in grade {s.grade}')",
+        "holeyCode": "# 人を表す親クラスを定義\\\nclass ___:\\\n    # 名前を初期設定するメソッドを定義\\\n    def ___(self, name):\\\n        # self.nameにnameを代入\\\n        self.___ = name\\\n\\\n# Personを継承してStudentクラスを定義\\\nclass ___(Person):\\\n    # name（名前）、grade（学年）の順で初期設定\\\n    def ___(self, name, grade):\\\n        # 親クラスの初期化メソッドを呼び出し\\\n        super().__init__(___)\\\n        # self.gradeにgradeを代入\\\n        self.___ = grade\\\n\\\n# 'Taro'、3年生としてインスタンスを作成\\\ns = Student('太郎', ___)\\\n# インスタンスの情報を表示\\\n___(f'{s.名前} is in grade {s.grade}')",
         "correctLines": [
           "# 人を表す親クラスを定義",
           "class Person:",
@@ -114,9 +114,9 @@ export const pythonData4 = {
           "        self.grade = grade",
           "",
           "# 'Taro'、3年生としてインスタンスを作成",
-          "s = Student('Taro', 3)",
+          "s = Student('太郎', 3)",
           "# インスタンスの情報を表示",
-          "print(f'{s.name} is in grade {s.grade}')"
+          "print(f'{s.名前} is in grade {s.grade}')"
         ],
         "lineHints": [
           null,
@@ -240,8 +240,8 @@ export const pythonData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 犬を表すクラスを定義\\\\nclass Dog:\\\\n    # 生成された数をカウントするクラス変数を定義\\\\n    count = 0\\\\n    \\\\n    # 名前を初期設定するメソッドを定義\\\\n    def __init__(self, name):\\\\n        # 名前を保存\\\\n        self.name = name\\\\n        # インスタンスが作られるたびにカウントを増やす\\\\n        Dog.count += 1\\\\n    \\\\n    # クラス全体に関する処理を行うメソッドを定義\\\\n    @classmethod\\\\n    # カウントされている数を取得するメソッドを定義\\\\n    def get_count(cls):\\\\n        # クラス変数を参照して返す\\\\n        return cls.count\\\\n\\\\n# 1つ目のインスタンスを作成\\\\nd1 = Dog('Pochi')\\\\n# 2つ目のインスタンスを作成\\\\nd2 = Dog('Hachi')\\\\n# クラスメソッドを呼び出して合計数を表示\\\\nprint(Dog.get_count())",
-        "holeyCode": "# 犬を表すクラスを定義\\\\nclass ___:\\\\n    # 生成された数をカウントするクラス変数を定義\\\\n    count = ___\\\\n    \\\\n    # 名前を初期設定するメソッドを定義\\\\n    def ___(self, name):\\\\n        # 名前を保存\\\\n        self.___ = name\\\\n        # インスタンスが作られるたびにカウントを増やす\\\\n        Dog.count += ___\\\\n    \\\\n    # クラス全体に関する処理を行うメソッドを定義\\\\n    @___\\\\n    # カウントされている数を取得するメソッドを定義\\\\n    def ___(cls):\\\\n        # クラス変数を参照して返す\\\\n        return cls.___\\\\n\\\\n# 1つ目のインスタンスを作成\\\\nd___ = Dog('Pochi')\\\\n# 2つ目のインスタンスを作成\\\\nd___ = Dog('Hachi')\\\\n# クラスメソッドを呼び出して合計数を表示\\\\n___(Dog.get_count())",
+        "correctCode": "# 犬を表すクラスを定義\\\nclass Dog:\\\n    # 生成された数をカウントするクラス変数を定義\\\n    count = 0\\\n    \\\n    # 名前を初期設定するメソッドを定義\\\n    def __init__(self, name):\\\n        # 名前を保存\\\n        self.name = name\\\n        # インスタンスが作られるたびにカウントを増やす\\\n        Dog.count += 1\\\n    \\\n    # クラス全体に関する処理を行うメソッドを定義\\\n    @classmethod\\\n    # カウントされている数を取得するメソッドを定義\\\n    def get_count(cls):\\\n        # クラス変数を参照して返す\\\n        return cls.count\\\n\\\n# 1つ目のインスタンスを作成\\\nd1 = Dog('ポチ')\\\n# 2つ目のインスタンスを作成\\\nd2 = Dog('Hachi')\\\n# クラスメソッドを呼び出して合計数を表示\\\nprint(Dog.get_count())",
+        "holeyCode": "# 犬を表すクラスを定義\\\nclass ___:\\\n    # 生成された数をカウントするクラス変数を定義\\\n    count = ___\\\n    \\\n    # 名前を初期設定するメソッドを定義\\\n    def ___(self, name):\\\n        # 名前を保存\\\n        self.___ = name\\\n        # インスタンスが作られるたびにカウントを増やす\\\n        Dog.count += ___\\\n    \\\n    # クラス全体に関する処理を行うメソッドを定義\\\n    @___\\\n    # カウントされている数を取得するメソッドを定義\\\n    def ___(cls):\\\n        # クラス変数を参照して返す\\\n        return cls.___\\\n\\\n# 1つ目のインスタンスを作成\\\nd___ = Dog('ポチ')\\\n# 2つ目のインスタンスを作成\\\nd___ = Dog('Hachi')\\\n# クラスメソッドを呼び出して合計数を表示\\\n___(Dog.get_count())",
         "correctLines": [
           "# 犬を表すクラスを定義",
           "class Dog:",
@@ -263,7 +263,7 @@ export const pythonData4 = {
           "        return cls.count",
           "",
           "# 1つ目のインスタンスを作成",
-          "d1 = Dog('Pochi')",
+          "d1 = Dog('ポチ')",
           "# 2つ目のインスタンスを作成",
           "d2 = Dog('Hachi')",
           "# クラスメソッドを呼び出して合計数を表示",
@@ -461,8 +461,8 @@ export const pythonData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 本を表すクラスを定義\\\\nclass Book:\\\\n    # title（タイトル）、author（著者）の順で初期化\\\\n    def __init__(self, title, author):\\\\n        # self.titleにtitleを代入\\\\n        self.title = title\\\\n        # self.authorにauthorを代入\\\\n        self.author = author\\\\n    \\\\n    # 文字列表現を定義するメソッドを定義\\\\n    def __str__(self):\\\\n        # 「タイトル by 著者」の形式で返す\\\\n        return f'{self.title} by {self.author}'\\\\n\\\\n# title（タイトル）、author（著者）の順でインスタンスを作成\\\\nbook = Book('Python Guide', 'Taro')\\\\n# インスタンスを表示\\\\nprint(book)",
-        "holeyCode": "# 本を表すクラスを定義\\\\nclass ___:\\\\n    # title（タイトル）、author（著者）の順で初期化\\\\n    def ___(self, title, author):\\\\n        # self.titleにtitleを代入\\\\n        self.___ = title\\\\n        # self.authorにauthorを代入\\\\n        self.___ = author\\\\n    \\\\n    # 文字列表現を定義するメソッドを定義\\\\n    def ___(self):\\\\n        # 「タイトル by 著者」の形式で返す\\\\n        return f'{self.title} by {self.___}'\\\\n\\\\n# title（タイトル）、author（著者）の順でインスタンスを作成\\\\nbook = Book('Python Guide', '___')\\\\n# インスタンスを表示\\\\n___(book)",
+        "correctCode": "# 本を表すクラスを定義\\\nclass Book:\\\n    # title（タイトル）、author（著者）の順で初期化\\\n    def __init__(self, title, author):\\\n        # self.titleにtitleを代入\\\n        self.title = title\\\n        # self.authorにauthorを代入\\\n        self.author = author\\\n    \\\n    # 文字列表現を定義するメソッドを定義\\\n    def __str__(self):\\\n        # 「タイトル by 著者」の形式で返す\\\n        return f'{self.タイトル} by {self.author}'\\\n\\\n# title（タイトル）、author（著者）の順でインスタンスを作成\\\nbook = Book('Python Guide', '太郎')\\\n# インスタンスを表示\\\nprint(book)",
+        "holeyCode": "# 本を表すクラスを定義\\\nclass ___:\\\n    # title（タイトル）、author（著者）の順で初期化\\\n    def ___(self, title, author):\\\n        # self.titleにtitleを代入\\\n        self.___ = title\\\n        # self.authorにauthorを代入\\\n        self.___ = author\\\n    \\\n    # 文字列表現を定義するメソッドを定義\\\n    def ___(self):\\\n        # 「タイトル by 著者」の形式で返す\\\n        return f'{self.タイトル} by {self.___}'\\\n\\\n# title（タイトル）、author（著者）の順でインスタンスを作成\\\nbook = Book('Python Guide', '___')\\\n# インスタンスを表示\\\n___(book)",
         "correctLines": [
           "# 本を表すクラスを定義",
           "class Book:",
@@ -476,10 +476,10 @@ export const pythonData4 = {
           "    # 文字列表現を定義するメソッドを定義",
           "    def __str__(self):",
           "        # 「タイトル by 著者」の形式で返す",
-          "        return f'{self.title} by {self.author}'",
+          "        return f'{self.タイトル} by {self.author}'",
           "",
           "# title（タイトル）、author（著者）の順でインスタンスを作成",
-          "book = Book('Python Guide', 'Taro')",
+          "book = Book('Python Guide', '太郎')",
           "# インスタンスを表示",
           "print(book)"
         ],
@@ -509,7 +509,7 @@ export const pythonData4 = {
             "__repr__",
             "__init__"
           ],
-          "others": ["Book", "__init__(self, title, author)", "title", "author", "f'{self.title} by {self.author}'", "Book('Python Guide', 'Taro')", "book", "Taro", "print"]
+          "others": ["Book", "__init__(self, title, author)", "title", "author", "f'{self.title} by {self.author}'", "Book('Python Guide', 'Taro')", "book", "Taro", "print", "太郎"]
         },
         "testCases": [
           {
@@ -530,8 +530,8 @@ export const pythonData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 本を表すクラスを定義\\\\nclass Book:\\\\n    # タイトルと著者で初期化\\\\n    def __init__(self, title, author):\\\\n        # self.titleにtitleを代入\\\\n        self.title = title\\\\n        # self.authorにauthorを代入\\\\n        self.author = author\\\\n    \\\\n    # 等価比較を定義するメソッド\\\\n    def __eq__(self, other):\\\\n        # タイトルと著者が両方一致するかを返す\\\\n        return self.title == other.title and self.author == other.author\\\\n\\\\n# 本のインスタンスを作成\\\\nbook1 = Book('Python Basics', 'Tanaka')\\\\n# 同じ内容で別のインスタンスを作成\\\\nbook2 = Book('Python Basics', 'Tanaka')\\\\n# 2つの本が等しいか比較\\\\nprint(book1 == book2)",
-        "holeyCode": "# 本を表すクラスを定義\\\\nclass ___:\\\\n    # タイトルと著者で初期化\\\\n    def ___(self, title, author):\\\\n        # self.titleにtitleを代入\\\\n        self.___ = title\\\\n        # self.authorにauthorを代入\\\\n        self.___ = author\\\\n    \\\\n    # 等価比較を定義するメソッド\\\\n    def ___(self, other):\\\\n        # タイトルと著者が両方一致するかを返す\\\\n        return self.title == other.title and self.___ == other.author\\\\n\\\\n# 本のインスタンスを作成\\\\nbook1 = Book('___', 'Tanaka')\\\\n# 同じ内容で別のインスタンスを作成\\\\nbook2 = Book('___', 'Tanaka')\\\\n# 2つの本が等しいか比較\\\\n___(book1 == book2)",
+        "correctCode": "# 本を表すクラスを定義\\\nclass Book:\\\n    # タイトルと著者で初期化\\\n    def __init__(self, title, author):\\\n        # self.titleにtitleを代入\\\n        self.title = title\\\n        # self.authorにauthorを代入\\\n        self.author = author\\\n    \\\n    # 等価比較を定義するメソッド\\\n    def __eq__(self, other):\\\n        # タイトルと著者が両方一致するかを返す\\\n        return self.title == other.title and self.author == other.author\\\n\\\n# 本のインスタンスを作成\\\nbook1 = Book('Python入門', '田中')\\\n# 同じ内容で別のインスタンスを作成\\\nbook2 = Book('Python入門', '田中')\\\n# 2つの本が等しいか比較\\\nprint(book1 == book2)",
+        "holeyCode": "# 本を表すクラスを定義\\\nclass ___:\\\n    # タイトルと著者で初期化\\\n    def ___(self, title, author):\\\n        # self.titleにtitleを代入\\\n        self.___ = title\\\n        # self.authorにauthorを代入\\\n        self.___ = author\\\n    \\\n    # 等価比較を定義するメソッド\\\n    def ___(self, other):\\\n        # タイトルと著者が両方一致するかを返す\\\n        return self.title == other.title and self.___ == other.author\\\n\\\n# 本のインスタンスを作成\\\nbook1 = Book('___', '田中')\\\n# 同じ内容で別のインスタンスを作成\\\nbook2 = Book('___', '田中')\\\n# 2つの本が等しいか比較\\\n___(book1 == book2)",
         "correctLines": [
           "# 本を表すクラスを定義",
           "class Book:",
@@ -548,9 +548,9 @@ export const pythonData4 = {
           "        return self.title == other.title and self.author == other.author",
           "",
           "# 本のインスタンスを作成",
-          "book1 = Book('Python Basics', 'Tanaka')",
+          "book1 = Book('Python入門', '田中')",
           "# 同じ内容で別のインスタンスを作成",
-          "book2 = Book('Python Basics', 'Tanaka')",
+          "book2 = Book('Python入門', '田中')",
           "# 2つの本が等しいか比較",
           "print(book1 == book2)"
         ],
@@ -582,7 +582,7 @@ export const pythonData4 = {
             "__ne__",
             "__init__"
           ],
-          "others": ["Book", "title", "author", "Book(\"Python入門\", \"田中\")", "print", "Python Basics"]
+          "others": ["Book", "title", "author", "Book(\"Python入門\", \"田中\")", "print", "Python Basics", "Python入門"]
         },
         "testCases": [
           {
@@ -603,8 +603,8 @@ export const pythonData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Teamクラスを定義\\\\nclass Team:\\\\n    # __init__メソッド（引数: self, members）\\\\n    def __init__(self, members):\\\\n        # self.membersにmembersを代入\\\\n        self.members = members\\\\n    \\\\n    # __len__メソッド（引数: selfのみ）\\\\n    def __len__(self):\\\\n        # len(self.members)を返す\\\\n        return len(self.members)\\\\n\\\\n# Teamインスタンスを作成（Alice, Bob, Charlie）\\\\nteam = Team(['Alice', 'Bob', 'Charlie'])\\\\n# len(team)を表示\\\\nprint(len(team))",
-        "holeyCode": "# Teamクラスを定義\\\\nclass ___:\\\\n    # __init__メソッド（引数: self, members）\\\\n    def ___(self, members):\\\\n        # self.membersにmembersを代入\\\\n        self.___ = members\\\\n    \\\\n    # __len__メソッド（引数: selfのみ）\\\\n    def ___(self):\\\\n        # len(self.members)を返す\\\\n        return len(self.___)\\\\n\\\\n# Teamインスタンスを作成（Alice, Bob, Charlie）\\\\nteam = Team(['Alice', 'Bob', '___'])\\\\n# len(team)を表示\\\\n___(len(team))",
+        "correctCode": "# Teamクラスを定義\\\nclass Team:\\\n    # __init__メソッド（引数: self, members）\\\n    def __init__(self, members):\\\n        # self.membersにmembersを代入\\\n        self.members = members\\\n    \\\n    # __len__メソッド（引数: selfのみ）\\\n    def __len__(self):\\\n        # len(self.members)を返す\\\n        return len(self.members)\\\n\\\n# Teamインスタンスを作成（Alice, Bob, Charlie）\\\nteam = Team(['アリス', 'ボブ', 'チャーリー'])\\\n# len(team)を表示\\\nprint(len(team))",
+        "holeyCode": "# Teamクラスを定義\\\nclass ___:\\\n    # __init__メソッド（引数: self, members）\\\n    def ___(self, members):\\\n        # self.membersにmembersを代入\\\n        self.___ = members\\\n    \\\n    # __len__メソッド（引数: selfのみ）\\\n    def ___(self):\\\n        # len(self.members)を返す\\\n        return len(self.___)\\\n\\\n# Teamインスタンスを作成（Alice, Bob, Charlie）\\\nteam = Team(['アリス', 'ボブ', '___'])\\\n# len(team)を表示\\\n___(len(team))",
         "correctLines": [
           "# Teamクラスを定義",
           "class Team:",
@@ -647,7 +647,7 @@ export const pythonData4 = {
             "__size__",
             "__count__"
           ],
-          "others": ["Team", "__init__(self, members)", "members", "len(self.members)", "Team(['Alice', 'Bob', 'Charlie'])", "len(team", "__init__", "Charlie", "print"]
+          "others": ["Team", "__init__(self, members)", "members", "len(self.members)", "Team(['Alice', 'Bob', 'Charlie'])", "len(team", "__init__", "Charlie", "print", ","]
         },
         "testCases": [
           {
@@ -668,8 +668,8 @@ export const pythonData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# dataclassデコレータをインポート\\\\nfrom dataclasses import dataclass\\\\n\\\\n# データクラスとして定義するデコレータを適用\\\\n@dataclass\\\\n# 人物を表すクラスを定義\\\\nclass Person:\\\\n    # 名前の型を文字列で指定\\\\n    name: str\\\\n    # 年齢の型を整数で指定\\\\n    age: int\\\\n\\\\n# name（名前）、age（年齢）の順でインスタンスを作成\\\\np = Person('Taro', 25)\\\\n# インスタンスを表示\\\\nprint(p)",
-        "holeyCode": "# dataclassデコレータをインポート\\\\nfrom dataclasses import ___\\\\n\\\\n# データクラスとして定義するデコレータを適用\\\\n@___\\\\n# 人物を表すクラスを定義\\\\nclass ___:\\\\n    # 名前の型を文字列で指定\\\\n    name: ___\\\\n    # 年齢の型を整数で指定\\\\n    age: ___\\\\n\\\\n# name（名前）、age（年齢）の順でインスタンスを作成\\\\np = Person('Taro', ___)\\\\n# インスタンスを表示\\\\n___(p)",
+        "correctCode": "# dataclassデコレータをインポート\\\nfrom dataclasses import dataclass\\\n\\\n# データクラスとして定義するデコレータを適用\\\n@dataclass\\\n# 人物を表すクラスを定義\\\nclass Person:\\\n    # 名前の型を文字列で指定\\\n    name: str\\\n    # 年齢の型を整数で指定\\\n    age: int\\\n\\\n# name（名前）、age（年齢）の順でインスタンスを作成\\\np = Person('太郎', 25)\\\n# インスタンスを表示\\\nprint(p)",
+        "holeyCode": "# dataclassデコレータをインポート\\\nfrom dataclasses import ___\\\n\\\n# データクラスとして定義するデコレータを適用\\\n@___\\\n# 人物を表すクラスを定義\\\nclass ___:\\\n    # 名前の型を文字列で指定\\\n    name: ___\\\n    # 年齢の型を整数で指定\\\n    age: ___\\\n\\\n# name（名前）、age（年齢）の順でインスタンスを作成\\\np = Person('太郎', ___)\\\n# インスタンスを表示\\\n___(p)",
         "correctLines": [
           "# dataclassデコレータをインポート",
           "from dataclasses import dataclass",
@@ -684,7 +684,7 @@ export const pythonData4 = {
           "    age: int",
           "",
           "# name（名前）、age（年齢）の順でインスタンスを作成",
-          "p = Person('Taro', 25)",
+          "p = Person('太郎', 25)",
           "# インスタンスを表示",
           "print(p)"
         ],

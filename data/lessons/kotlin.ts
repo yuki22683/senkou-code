@@ -30,8 +30,8 @@ export const kotlinData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// println で出力する\\\\nprintln(\"Hello, World!\")",
-        "holeyCode": "// println で出力する\\\\n___(\"Hello, World!\")",
+        "correctCode": "// println で出力する\\\nprintln(\"Hello, World!\")",
+        "holeyCode": "// println で出力する\\\n___(\"Hello, World!\")",
         "correctLines": [
           "// println で出力する",
           "println(\"Hello, World!\")"
@@ -247,14 +247,14 @@ export const kotlinData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// score に 100 を入れる\\\\nval score = 100\\\\n// > で比較する\\\\nif (score > 80) {\\\\n    println(\"Great!\")\\\\n}",
-        "holeyCode": "// score に 100 を入れる\\\\nval score = ___\\\\n// > で比較する\\\\nif (score ___ 80) {\\\\n    ___(\"Great!\")\\\\n___",
+        "correctCode": "// score に 100 を入れる\\\nval score = 100\\\n// > で比較する\\\nif (score > 80) {\\\n    println(\"すごい!\")\\\n}",
+        "holeyCode": "// score に 100 を入れる\\\nval score = ___\\\n// > で比較する\\\nif (score ___ 80) {\\\n    ___(\"すごい!\")\\\n___",
         "correctLines": [
           "// score に 100 を入れる",
           "val score = 100",
           "// > で比較する",
           "if (score > 80) {",
-          "    println(\"Great!\")",
+          "    println(\"すごい!\")",
           "}"
         ],
         "lineHints": [
@@ -308,14 +308,14 @@ export const kotlinData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "val score = 80\\\\nval bonus = 10\\\\n// && で両方の条件をチェック\\\\nif (score >= 70 && bonus > 0) {\\\\n    println(\"Bonus Pass\")\\\\n}",
-        "holeyCode": "val score = ___\\\\nval bonus = ___\\\\n// && で両方の条件をチェック\\\\nif (score >= ___ && bonus > 0) {\\\\n    ___(\"Bonus Pass\")\\\\n___",
+        "correctCode": "val score = 80\\\nval bonus = 10\\\n// && で両方の条件をチェック\\\nif (score >= 70 && bonus > 0) {\\\n    println(\"Bonus 合格\")\\\n}",
+        "holeyCode": "val score = ___\\\nval bonus = ___\\\n// && で両方の条件をチェック\\\nif (score >= ___ && bonus > 0) {\\\n    ___(\"Bonus 合格\")\\\n___",
         "correctLines": [
           "val score = 80",
           "val bonus = 10",
           "// && で両方の条件をチェック",
           "if (score >= 70 && bonus > 0) {",
-          "    println(\"Bonus Pass\")",
+          "    println(\"Bonus 合格\")",
           "}"
         ],
         "lineHints": [
@@ -366,11 +366,11 @@ export const kotlinData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// colors というリストを作る（'あか', 'あお'の順）\\\\nval colors = listOf(\"20redval colors = listOf(\"red\", \"53blueval colors = listOf(\"20redval colors = listOf(\"red\", \"blue\")\", \"blue\")\")\", \"61blueval colors = listOf(\"20redval colors = listOf(\"red\", \"blue\")\", \"blue\")\")\\\\n// 2番目のデータ（インデックス1）を出す\\\\nprintln(colors[1])",
-        "holeyCode": "// colors というリストを作る（'あか', 'あお'の順）\\\\nval colors = listOf(\"___\", \"27blueval colors = listOf(\"___\", \"blue\")\")\\\\n// 2番目のデータ（インデックス1）を出す\\\\n___(colors[1])",
+        "correctCode": "// colors というリストを作る（'あか', 'あお'の順）\\\nval colors = listOf(\"20赤val colors = リストOf(\"赤\", \"53青val colors = リストOf(\"20赤val colors = listOf(\"赤\", \"青\")\", \"青\")\")\", \"61青val colors = リストOf(\"20赤val colors = listOf(\"赤\", \"青\")\", \"青\")\")\\\n// 2番目のデータ（インデックス1）を出す\\\nprintln(colors[1])",
+        "holeyCode": "// colors というリストを作る（'あか', 'あお'の順）\\\nval colors = listOf(\"___\", \"27青val colors = リストOf(\"___\", \"青\")\")\\\n// 2番目のデータ（インデックス1）を出す\\\n___(colors[1])",
         "correctLines": [
           "// colors というリストを作る（'あか', 'あお'の順）",
-          "val colors = listOf(\"20redval colors = listOf(\"red\", \"53blueval colors = listOf(\"20redval colors = listOf(\"red\", \"blue\")\", \"blue\")\")\", \"61blueval colors = listOf(\"20redval colors = listOf(\"red\", \"blue\")\", \"blue\")\")",
+          "val colors = listOf(\"20赤val colors = リストOf(\"赤\", \"53青val colors = リストOf(\"20赤val colors = listOf(\"赤\", \"青\")\", \"青\")\")\", \"61青val colors = リストOf(\"20赤val colors = listOf(\"赤\", \"青\")\", \"青\")\")",
           "// 2番目のデータ（インデックス1）を出す",
           "println(colors[1])"
         ],
@@ -395,7 +395,7 @@ export const kotlinData = {
           "numbers": [
             "1"
           ],
-          "others": ["20redval colors = listOf(", "Of("]
+          "others": ["20redval colors = listOf(", "Of(", "20赤val colors = リストOf(", "("]
         },
         "testCases": [
           {
@@ -428,11 +428,11 @@ export const kotlinData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\\\nval colors = mapOf(\"19orangeval colors = mapOf(\"orange\" to \"28orangeval colors = mapOf(\"orange\" to \"orange\")\")\" to \"28orangeval colors = mapOf(\"56orangeval colors = mapOf(\"orange\" to \"28orangeval colors = mapOf(\"orange\" to \"orange\")\")\" to \"orange\")\")\\\\n// 中身を出す\\\\nprintln(colors[\"15orangeprintln(colors[\"orange\"])\"])",
-        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\\\nval colors = mapOf(\"___\" to \"28orangeval colors = mapOf(\"___\" to \"orange\")\")\\\\n// 中身を出す\\\\n___(colors[\"11orange___(colors[\"orange\"])\"])",
+        "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\\nval colors = mapOf(\"19みかんval colors = mapOf(\"みかん\" to \"28みかんval colors = mapOf(\"みかん\" to \"みかん\")\")\" to \"28みかんval colors = mapOf(\"56orangeval colors = mapOf(\"みかん\" to \"28みかんval colors = mapOf(\"みかん\" to \"みかん\")\")\" to \"みかん\")\")\\\n// 中身を出す\\\nprintln(colors[\"15みかんprintln(colors[\"みかん\"])\"])",
+        "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\\nval colors = mapOf(\"___\" to \"28みかんval colors = mapOf(\"___\" to \"みかん\")\")\\\n// 中身を出す\\\n___(colors[\"11みかん___(colors[\"みかん\"])\"])",
         "correctLines": [
           "// 辞書を作る（キーは'みかん'、値は'オレンジ'）",
-          "val colors = mapOf(\"19orangeval colors = mapOf(\"orange\" to \"28orangeval colors = mapOf(\"orange\" to \"orange\")\")\" to \"28orangeval colors = mapOf(\"56orangeval colors = mapOf(\"orange\" to \"28orangeval colors = mapOf(\"orange\" to \"orange\")\")\" to \"orange\")\")",
+          "val colors = mapOf(\"19みかんval colors = mapOf(\"みかん\" to \"28みかんval colors = mapOf(\"みかん\" to \"みかん\")\")\" to \"28みかんval colors = mapOf(\"56orangeval colors = mapOf(\"みかん\" to \"28みかんval colors = mapOf(\"みかん\" to \"みかん\")\")\" to \"みかん\")\")",
           "// 中身を出す",
           "println(colors[\"みかん\"])"
         ],
@@ -454,7 +454,7 @@ export const kotlinData = {
             "みかん",
             "オレンジ"
           ],
-          "others": ["19orangeval colors = mapOf(", "mapOf("]
+          "others": ["19orangeval colors = mapOf(", "mapOf(", "19みかんval colors = mapOf(", "Of(", ")"]
         },
         "testCases": [
           {

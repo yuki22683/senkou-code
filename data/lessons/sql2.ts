@@ -22,11 +22,11 @@ export const sql2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- WHEREで条件を指定\\\\nSELECT 'found' WHERE 10 > 5;",
-        "holeyCode": "-- WHEREで条件を指定\\\\nSELECT 'found' WHERE ___ > 5;",
+        "correctCode": "-- WHEREで条件を指定\\\nSELECT '見つかった' WHERE 10 > 5;",
+        "holeyCode": "-- WHEREで条件を指定\\\nSELECT '見つかった' WHERE ___ > 5;",
         "correctLines": [
           "-- WHEREで条件を指定",
-          "SELECT 'found' WHERE 10 > 5;"
+          "SELECT '見つかった' WHERE 10 > 5;"
         ],
         "lineHints": [
           null,
@@ -425,11 +425,11 @@ export const sql2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- COALESCEでNULL処理\\\\nSELECT COALESCE(NULL, 'default');",
+        "correctCode": "-- COALESCEでNULL処理\\\nSELECT COALESCE(NULL, 'デフォルト');",
         "holeyCode": "-- COALESCEでNULL処理\\\\nSELECT COALESCE(NULL, '___');",
         "correctLines": [
           "-- COALESCEでNULL処理",
-          "SELECT COALESCE(NULL, 'default');"
+          "SELECT COALESCE(NULL, 'デフォルト');"
         ],
         "lineHints": [
           null,

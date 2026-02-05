@@ -22,8 +22,8 @@ export const typescriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// | でユニオン型を定義\\\\nfunction show(value: string | number): void {\\\\n    // valueを出力\\\\n    console.log(value);\\\\n}\\\\n\\\\n// 文字列を渡す\\\\nshow('Hello');\\\\n// 数値を渡す\\\\nshow(42);",
-        "holeyCode": "// | でユニオン型を定義\\\\nfunction show(value: string | number): ___ {\\\\n    // valueを出力\\\\n    console.log(___);\\\\n___\\\\n\\\\n// 文字列を渡す\\\\n___('Hello');\\\\n// 数値を渡す\\\\n___(42);",
+        "correctCode": "// | でユニオン型を定義\\\nfunction show(value: string | number): void {\\\n    // valueを出力\\\n    console.log(value);\\\n}\\\n\\\n// 文字列を渡す\\\nshow('こんにちは');\\\n// 数値を渡す\\\nshow(42);",
+        "holeyCode": "// | でユニオン型を定義\\\nfunction show(value: string | number): ___ {\\\n    // valueを出力\\\n    console.log(___);\\\n___\\\n\\\n// 文字列を渡す\\\n___('こんにちは');\\\n// 数値を渡す\\\n___(42);",
         "correctLines": [
                   "// | でユニオン型を定義",
                   "function show(value: string | number): void {",
@@ -32,7 +32,7 @@ export const typescriptData2 = {
                   "}",
                   "",
                   "// 文字列を渡す",
-                  "show('Hello');",
+                  "show('こんにちは');",
                   "// 数値を渡す",
                   "show(42);"
         ],
@@ -80,8 +80,8 @@ export const typescriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// interface キーワードで定義\\\\ninterface Product {\\\\n    // 商品IDプロパティの型\\\\n    id: number;\\\\n    // 商品名プロパティの型\\\\n    name: string;\\\\n    // 価格プロパティの型\\\\n    price: number;\\\\n}\\\\n\\\\n// Productオブジェクトを作成\\\\nconst item: Product = { id: 1, name: 'Apple', price: 150 };\\\\n// 商品名を出力\\\\nconsole.log(item.name);\\\\n",
-        "holeyCode": "// interface キーワードで定義\\\\ninterface ___ {\\\\n    // 商品IDプロパティの型\\\\n    id: ___;\\\\n    // 商品名プロパティの型\\\\n    name: ___;\\\\n    // 価格プロパティの型\\\\n    price: ___;\\\\n___\\\\n\\\\n// Productオブジェクトを作成\\\\nconst item: Product = { id: ___, name: 'Apple', price: 150 };\\\\n// 商品名を出力\\\\nconsole.___(item.name);\\\\n",
+        "correctCode": "// interface キーワードで定義\\\ninterface Product {\\\n    // 商品IDプロパティの型\\\n    id: number;\\\n    // 商品名プロパティの型\\\n    name: string;\\\n    // 価格プロパティの型\\\n    price: number;\\\n}\\\n\\\n// Productオブジェクトを作成\\\nconst item: Product = { id: 1, name: 'りんご', price: 150 };\\\n// 商品名を出力\\\nconsole.log(item.name);\\\n",
+        "holeyCode": "// interface キーワードで定義\\\ninterface ___ {\\\n    // 商品IDプロパティの型\\\n    id: ___;\\\n    // 商品名プロパティの型\\\n    name: ___;\\\n    // 価格プロパティの型\\\n    price: ___;\\\n___\\\n\\\n// Productオブジェクトを作成\\\nconst item: Product = { id: ___, name: 'りんご', price: 150 };\\\n// 商品名を出力\\\nconsole.___(item.name);\\\n",
         "correctLines": [
           "// interface キーワードで定義",
           "interface Product {",
@@ -94,7 +94,7 @@ export const typescriptData2 = {
           "}",
           "",
           "// Productオブジェクトを作成",
-          "const item: Product = { id: 1, name: 'Apple', price: 150 };",
+          "const item: Product = { id: 1, name: 'りんご', price: 150 };",
           "// 商品名を出力",
           "console.log(item.name);",
           ""
@@ -148,7 +148,7 @@ export const typescriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// nicknameは省略可能\\\\ninterface Profile {\\\\n    // 名前プロパティの型\\\\n    name: string;\\\\n    // ? でオプショナルに\\\\n    nickname?: string;\\\\n}\\\\n\\\\n// Profileオブジェクトを作成\\\\nconst prof: Profile = { name: 'Bob' };\\\\n// 名前を出力\\\\nconsole.log(prof.name);",
+        "correctCode": "// nicknameは省略可能\\\ninterface Profile {\\\n    // 名前プロパティの型\\\n    name: string;\\\n    // ? でオプショナルに\\\n    nickname?: string;\\\n}\\\n\\\n// Profileオブジェクトを作成\\\nconst prof: Profile = { name: 'ボブ' };\\\n// 名前を出力\\\nconsole.log(prof.name);",
         "holeyCode": "// nicknameは省略可能\\\\ninterface ___ {\\\\n    // 名前プロパティの型\\\\n    name: ___;\\\\n    // ? でオプショナルに\\\\n    nickname?: ___;\\\\n___\\\\n\\\\n// Profileオブジェクトを作成\\\\nconst prof: Profile = { name: '___' };\\\\n// 名前を出力\\\\nconsole.___(prof.name);",
         "correctLines": [
           "// nicknameは省略可能",
@@ -160,7 +160,7 @@ export const typescriptData2 = {
           "}",
           "",
           "// Profileオブジェクトを作成",
-          "const prof: Profile = { name: 'Bob' };",
+          "const prof: Profile = { name: 'ボブ' };",
           "// 名前を出力",
           "console.log(prof.name);"
         ],
@@ -266,8 +266,8 @@ export const typescriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// idは読み取り専用\\\\ninterface Item {\\\\n    // readonly で読み取り専用に\\\\n    readonly id: number;\\\\n    // 名前プロパティの型\\\\n    name: string;\\\\n}\\\\n\\\\n// itemに{id: 1, name: 'Apple'}を代入\\\\nconst item: Item = { id: 1, name: 'Apple' };\\\\n// idを出力\\\\nconsole.log(item.id);",
-        "holeyCode": "// idは読み取り専用\\\\ninterface ___ {\\\\n    // readonly で読み取り専用に\\\\n    readonly id: ___;\\\\n    // 名前プロパティの型\\\\n    name: ___;\\\\n___\\\\n\\\\n// itemに{id: 1, name: 'Apple'}を代入\\\\nconst item: Item = { id: ___, name: 'Apple' };\\\\n// idを出力\\\\nconsole.___(item.id);",
+        "correctCode": "// idは読み取り専用\\\ninterface Item {\\\n    // readonly で読み取り専用に\\\n    readonly id: number;\\\n    // 名前プロパティの型\\\n    name: string;\\\n}\\\n\\\n// itemに{id: 1, name: 'Apple'}を代入\\\nconst item: Item = { id: 1, name: 'りんご' };\\\n// idを出力\\\nconsole.log(item.id);",
+        "holeyCode": "// idは読み取り専用\\\ninterface ___ {\\\n    // readonly で読み取り専用に\\\n    readonly id: ___;\\\n    // 名前プロパティの型\\\n    name: ___;\\\n___\\\n\\\n// itemに{id: 1, name: 'Apple'}を代入\\\nconst item: Item = { id: ___, name: 'りんご' };\\\n// idを出力\\\nconsole.___(item.id);",
         "correctLines": [
           "// idは読み取り専用",
           "interface Item {",
@@ -278,7 +278,7 @@ export const typescriptData2 = {
           "}",
           "",
           "// itemに{id: 1, name: 'Apple'}を代入",
-          "const item: Item = { id: 1, name: 'Apple' };",
+          "const item: Item = { id: 1, name: 'りんご' };",
           "// idを出力",
           "console.log(item.id);"
         ],
@@ -452,7 +452,7 @@ export const typescriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 型パラメータTを定義\\\\ninterface Container<T> {\\\\n    // アイテムプロパティ\\\\n    item: T;\\\\n}\\\\n\\\\n// Containerオブジェクトを作成\\\\nconst box: Container<string> = { item: 'Hello' };\\\\n// アイテムを出力\\\\nconsole.log(box.item);",
+        "correctCode": "// 型パラメータTを定義\\\ninterface Container<T> {\\\n    // アイテムプロパティ\\\n    item: T;\\\n}\\\n\\\n// Containerオブジェクトを作成\\\nconst box: Container<string> = { item: 'こんにちは' };\\\n// アイテムを出力\\\nconsole.log(box.item);",
         "holeyCode": "// 型パラメータTを定義\\\\ninterface Container<___> {\\\\n    // アイテムプロパティ\\\\n    item: ___;\\\\n___\\\\n\\\\n// Containerオブジェクトを作成\\\\nconst box: Container<string> = { item: '___' };\\\\n// アイテムを出力\\\\nconsole.___(box.item);",
         "correctLines": [
                   "// 型パラメータTを定義",
@@ -462,7 +462,7 @@ export const typescriptData2 = {
                   "}",
                   "",
                   "// Containerオブジェクトを作成",
-                  "const box: Container<string> = { item: 'Hello' };",
+                  "const box: Container<string> = { item: 'こんにちは' };",
                   "// アイテムを出力",
                   "console.log(box.item);"
         ],
@@ -560,8 +560,8 @@ export const typescriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 基本のインターフェース\\\\ninterface Base {\\\\n    // idプロパティの型\\\\n    id: number;\\\\n}\\\\n\\\\n// extends でインターフェースを拡張\\\\ninterface User extends Base {\\\\n    // 名前プロパティの型\\\\n    name: string;\\\\n}\\\\n\\\\n// uに{id: 1, name: 'Taro'}を代入\\\\nconst u: User = { id: 1, name: 'Taro' };\\\\n// 名前を出力\\\\nconsole.log(u.name);",
-        "holeyCode": "// 基本のインターフェース\\\\ninterface ___ {\\\\n    // idプロパティの型\\\\n    id: ___;\\\\n___\\\\n\\\\n// extends でインターフェースを拡張\\\\ninterface User extends ___ {\\\\n    // 名前プロパティの型\\\\n    name: ___;\\\\n___\\\\n\\\\n// uに{id: 1, name: 'Taro'}を代入\\\\nconst u: User = { id: ___, name: 'Taro' };\\\\n// 名前を出力\\\\nconsole.___(u.name);",
+        "correctCode": "// 基本のインターフェース\\\ninterface Base {\\\n    // idプロパティの型\\\n    id: number;\\\n}\\\n\\\n// extends でインターフェースを拡張\\\ninterface User extends Base {\\\n    // 名前プロパティの型\\\n    name: string;\\\n}\\\n\\\n// uに{id: 1, name: 'Taro'}を代入\\\nconst u: User = { id: 1, name: '太郎' };\\\n// 名前を出力\\\nconsole.log(u.name);",
+        "holeyCode": "// 基本のインターフェース\\\ninterface ___ {\\\n    // idプロパティの型\\\n    id: ___;\\\n___\\\n\\\n// extends でインターフェースを拡張\\\ninterface User extends ___ {\\\n    // 名前プロパティの型\\\n    name: ___;\\\n___\\\n\\\n// uに{id: 1, name: 'Taro'}を代入\\\nconst u: User = { id: ___, name: '太郎' };\\\n// 名前を出力\\\nconsole.___(u.name);",
         "correctLines": [
                   "// 基本のインターフェース",
                   "interface Base {",
@@ -576,7 +576,7 @@ export const typescriptData2 = {
                   "}",
                   "",
                   "// uに{id: 1, name: 'Taro'}を代入",
-                  "const u: User = { id: 1, name: 'Taro' };",
+                  "const u: User = { id: 1, name: '太郎' };",
                   "// 名前を出力",
                   "console.log(u.name);"
         ],

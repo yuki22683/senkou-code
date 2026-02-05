@@ -367,8 +367,8 @@ export const go4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\\\\n\\\\nimport (\\\\n    \"encoding/json\"\\\\n    \"fmt\"\\\\n)\\\\n\\\\ntype Item struct {\\\\n    Name string `json:\"name\"`\\\\n}\\\\n\\\\nfunc main() {\\\\n    // \"Apple\" で構造体を初期化\\\\n    item := Item{Name: \"Apple\"}\\\\n    // Marshal で JSON に変換\\\\n    data, _ := json.Marshal(item)\\\\n    fmt.Println(string(data))\\\\n}",
-        "holeyCode": "package ___\\\\n\\\\nimport ___\\\\n    \"___\"\\\\n    \\\"___\\\"\\\\n___\\\\n\\\\ntype Item ___ {\\\\n    Name string `json:\"___\"`\\\\n___\\\\n\\\\nfunc ___ () {\\\\n    // \"Apple\" で構造体を初期化\\\\n    ___ := Item{Name: \"Apple\"}\\\\n    // Marshal で JSON に変換\\\\n    data, _ := json.Marshal(___)\\\\n    fmt.___(string(data))\\\\n___",
+        "correctCode": "package main\\\n\\\nimport (\\\n    \"encoding/json\"\\\n    \"fmt\"\\\n)\\\n\\\ntype Item struct {\\\n    Name string `json:\"名前\"`\\\n}\\\n\\\nfunc main() {\\\n    // \"Apple\" で構造体を初期化\\\n    item := Item{Name: \"りんご\"}\\\n    // Marshal で JSON に変換\\\n    data, _ := json.Marshal(item)\\\n    fmt.Println(string(data))\\\n}",
+        "holeyCode": "package ___\\\n\\\nimport ___\\\n    \"___\"\\\n    \\\"___\\\"\\\n___\\\n\\\ntype Item ___ {\\\n    Name string `json:\"___\"`\\\n___\\\n\\\nfunc ___ () {\\\n    // \"Apple\" で構造体を初期化\\\n    ___ := Item{Name: \"りんご\"}\\\n    // Marshal で JSON に変換\\\n    data, _ := json.Marshal(___)\\\n    fmt.___(string(data))\\\n___",
         "correctLines": [
                   "package main",
                   "",
@@ -378,12 +378,12 @@ export const go4Data = {
                   ")",
                   "",
                   "type Item struct {",
-                  "    Name string `json:\"name\"`",
+                  "    Name string `json:\"名前\"`",
                   "}",
                   "",
                   "func main() {",
                   "    // \"Apple\" で構造体を初期化",
-                  "    item := Item{Name: \"Apple\"}",
+                  "    item := Item{Name: \"りんご\"}",
                   "    // Marshal で JSON に変換",
                   "    data, _ := json.Marshal(item)",
                   "    fmt.Println(string(data))",
@@ -415,7 +415,7 @@ export const go4Data = {
             "Encode",
             "Stringify"
           ],
-          "others": ["\"Apple\"", "main", "(", "encoding/json", "fmt", ")", "struct", "name", "}", "main()", "item", "Println", "mt\""]
+          "others": ["\"Apple\"", "main", "(", "encoding/json", "fmt", ")", "struct", "name", "}", "main()", "item", "Println", "mt\"", "名前"]
         },
         "testCases": [
           {
@@ -440,8 +440,8 @@ export const go4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\\\\n\\\\nimport (\\\\n    \"encoding/json\"\\\\n    \"fmt\"\\\\n)\\\\n\\\\ntype Item struct {\\\\n    Name string `json:\"name\"`\\\\n}\\\\n\\\\nfunc main() {\\\\n    // \"Banana\" を含むJSON文字列をバイト列に変換\\\\n    data := []byte(`{\"name\":\"Banana\"}`)\\\\n    var item Item\\\\n    // Unmarshal で JSON をパース\\\\n    json.Unmarshal(data, &item)\\\\n    fmt.Println(item.Name)\\\\n}",
-        "holeyCode": "package ___\\\\n\\\\nimport ___\\\\n    \"___\"\\\\n    \\\"___\\\"\\\\n___\\\\n\\\\ntype Item ___ {\\\\n    Name string `json:\"___\"`\\\\n___\\\\n\\\\nfunc ___ () {\\\\n    // \"Banana\" を含むJSON文字列をバイト列に変換\\\\n    ___ := []byte(`{\"name\":\"Banana\"}`)\\\\n    var item ___\\\\n    // Unmarshal で JSON をパース\\\\n    json.Unmarshal(data, &___)\\\\n    fmt.___(item.Name)\\\\n___",
+        "correctCode": "package main\\\n\\\nimport (\\\n    \"encoding/json\"\\\n    \"fmt\"\\\n)\\\n\\\ntype Item struct {\\\n    Name string `json:\"名前\"`\\\n}\\\n\\\nfunc main() {\\\n    // \"Banana\" を含むJSON文字列をバイト列に変換\\\n    data := []byte(`{\"名前\":\"バナナ\"}`)\\\n    var item Item\\\n    // Unmarshal で JSON をパース\\\n    json.Unmarshal(data, &item)\\\n    fmt.Println(item.Name)\\\n}",
+        "holeyCode": "package ___\\\n\\\nimport ___\\\n    \"___\"\\\n    \\\"___\\\"\\\n___\\\n\\\ntype Item ___ {\\\n    Name string `json:\"___\"`\\\n___\\\n\\\nfunc ___ () {\\\n    // \"Banana\" を含むJSON文字列をバイト列に変換\\\n    ___ := []byte(`{\"名前\":\"バナナ\"}`)\\\n    var item ___\\\n    // Unmarshal で JSON をパース\\\n    json.Unmarshal(data, &___)\\\n    fmt.___(item.Name)\\\n___",
         "correctLines": [
           "package main",
           "",
@@ -451,7 +451,7 @@ export const go4Data = {
           ")",
           "",
           "type Item struct {",
-          "    Name string `json:\"name\"`",
+          "    Name string `json:\"名前\"`",
           "}",
           "",
           "func main() {",
@@ -490,7 +490,7 @@ export const go4Data = {
             "Decode",
             "Parse"
           ],
-          "others": ["\"Banana\"", "main", "(", "encoding/json", "fmt", ")", "struct", "name", "}", "main()", "data", "Item", "item", "Println", "mt\""]
+          "others": ["\"Banana\"", "main", "(", "encoding/json", "fmt", ")", "struct", "name", "}", "main()", "data", "Item", "item", "Println", "mt\"", "名前"]
         },
         "testCases": [
           {
@@ -515,8 +515,8 @@ export const go4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\\\\n\\\\nimport (\\\\n    \"fmt\"\\\\n    \"strings\"\\\\n)\\\\n\\\\nfunc main() {\\\\n    // 分割する文字列 \"hello,world\"\\\\n    s := \"hello,world\"\\\\n    // Split で文字列を分割\\\\n    parts := strings.Split(s, \",\")\\\\n    fmt.Println(parts[0])\\\\n}",
-        "holeyCode": "package ___\\\\n\\\\nimport ___\\\\n    \\\"___\\\"\\\\n    \"___\"\\\\n___\\\\n\\\\nfunc ___ () {\\\\n    // 分割する文字列 \"hello,world\"\\\\n    ___ := \"hello,world\"\\\\n    // Split で文字列を分割\\\\n    ___ := strings.Split(s, \",\")\\\\n    fmt.___(parts[0])\\\\n___",
+        "correctCode": "package main\\\n\\\nimport (\\\n    \"fmt\"\\\n    \"strings\"\\\n)\\\n\\\nfunc main() {\\\n    // 分割する文字列 \"hello,world\"\\\n    s := \"こんにちは,世界\"\\\n    // Split で文字列を分割\\\n    parts := strings.Split(s, \",\")\\\n    fmt.Println(parts[0])\\\n}",
+        "holeyCode": "package ___\\\n\\\nimport ___\\\n    \\\"___\\\"\\\n    \"___\"\\\n___\\\n\\\nfunc ___ () {\\\n    // 分割する文字列 \"hello,world\"\\\n    ___ := \"こんにちは,世界\"\\\n    // Split で文字列を分割\\\n    ___ := strings.Split(s, \",\")\\\n    fmt.___(parts[0])\\\n___",
         "correctLines": [
           "package main",
           "",
@@ -527,7 +527,7 @@ export const go4Data = {
           "",
           "func main() {",
           "    // 分割する文字列 \"hello,world\"",
-          "    s := \"hello,world\"",
+          "    s := \"こんにちは,世界\"",
           "    // Split で文字列を分割",
           "    parts := strings.Split(s, \",\")",
           "    fmt.Println(parts[0])",

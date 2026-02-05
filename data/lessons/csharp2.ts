@@ -22,15 +22,15 @@ export const csharp2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Vehicleクラスを定義\\\\nclass Vehicle {\\\\n    // Moveメソッドを定義\\\\n    public void Move() {\\\\n        // 画面に出力\\\\n        Console.WriteLine(\"moving\");\\\\n    }\\\\n}\\\\n// :で継承\\\\nclass Car : Vehicle { }\\\\n\\\\n// Carインスタンスを作成\\\\nCar c = new Car();\\\\n// Moveメソッドを呼び出し\\\\nc.Move();",
-        "holeyCode": "// Vehicleクラスを定義\\\\nclass ___ {\\\\n    // Moveメソッドを定義\\\\n    public void ___() {\\\\n        // 画面に出力\\\\n        Console.___(\"moving\");\\\\n    ___\\\\n___\\\\n// :で継承\\\\nclass ___ : Vehicle { }\\\\n\\\\n// Carインスタンスを作成\\\\n___ c = new Car();\\\\n// Moveメソッドを呼び出し\\\\nc.___();",
+        "correctCode": "// Vehicleクラスを定義\\\nclass Vehicle {\\\n    // Moveメソッドを定義\\\n    public void Move() {\\\n        // 画面に出力\\\n        Console.WriteLine(\"移動中\");\\\n    }\\\n}\\\n// :で継承\\\nclass Car : Vehicle { }\\\n\\\n// Carインスタンスを作成\\\nCar c = new Car();\\\n// Moveメソッドを呼び出し\\\nc.Move();",
+        "holeyCode": "// Vehicleクラスを定義\\\nclass ___ {\\\n    // Moveメソッドを定義\\\n    public void ___() {\\\n        // 画面に出力\\\n        Console.___(\"移動中\");\\\n    ___\\\n___\\\n// :で継承\\\nclass ___ : Vehicle { }\\\n\\\n// Carインスタンスを作成\\\n___ c = new Car();\\\n// Moveメソッドを呼び出し\\\nc.___();",
         "correctLines": [
           "// Vehicleクラスを定義",
           "class Vehicle {",
           "    // Moveメソッドを定義",
           "    public void Move() {",
           "        // 画面に出力",
-          "        Console.WriteLine(\"moving\");",
+          "        Console.WriteLine(\"移動中\");",
           "    }",
           "}",
           "// :で継承",
@@ -553,11 +553,11 @@ export const csharp2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 文字列を定義（\"Hello\"）\\\\nstring text = \"Hello\";\\\\n// ?.でnull安全にアクセス\\\\nint? length = text?.Length;\\\\n// 画面に出力\\\\nConsole.WriteLine(length);",
+        "correctCode": "// 文字列を定義（\"Hello\"）\\\nstring text = \"こんにちは\";\\\n// ?.でnull安全にアクセス\\\nint? length = text?.Length;\\\n// 画面に出力\\\nConsole.WriteLine(length);",
         "holeyCode": "// 文字列を定義（\"Hello\"）\\\\nstring text = \"___\";\\\\n// ?.でnull安全にアクセス\\\\nint? length = text?.___;\\\\n// 画面に出力\\\\nConsole.WriteLine(___);",
         "correctLines": [
           "// 文字列を定義（\"Hello\"）",
-          "string text = \"Hello\";",
+          "string text = \"こんにちは\";",
           "// ?.でnull安全にアクセス",
           "int? length = text?.Length;",
           "// 画面に出力",

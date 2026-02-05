@@ -188,8 +188,8 @@ export const javaData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "interface Greeting {\\\\n    void sayHello();\\\\n}\\\\n\\\\n// PersonクラスをGreetingインターフェースを実装して定義\\\\nclass Person implements Greeting {\\\\n    public void sayHello() {\\\\n        System.out.println(\"Hello!\");\\\\n    }\\\\n}\\\\n\\\\nclass Main {\\\\n    public static void main(String[] args) {\\\\n        // pにnew Person()を代入\\\\n        Person p = new Person();\\\\n        // sayHello メソッドを呼び出す\\\\n        p.sayHello();\\\\n    }\\\\n}",
-        "holeyCode": "interface ___ {\\\\n    void ___();\\\\n___\\\\n\\\\n// PersonクラスをGreetingインターフェースを実装して定義\\\\nclass ___ implements Greeting {\\\\n    public void ___() {\\\\n        System.out.___(\"Hello!\");\\\\n    ___\\\\n___\\\\n\\\\nclass ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // pにnew Person()を代入\\\\n        ___ p = new Person();\\\\n        // sayHello メソッドを呼び出す\\\\n        p.___();\\\\n    ___\\\\n___",
+        "correctCode": "interface Greeting {\\\n    void sayHello();\\\n}\\\n\\\n// PersonクラスをGreetingインターフェースを実装して定義\\\nclass Person implements Greeting {\\\n    public void sayHello() {\\\n        System.out.println(\"こんにちは！\");\\\n    }\\\n}\\\n\\\nclass Main {\\\n    public static void main(String[] args) {\\\n        // pにnew Person()を代入\\\n        Person p = new Person();\\\n        // sayHello メソッドを呼び出す\\\n        p.sayHello();\\\n    }\\\n}",
+        "holeyCode": "interface ___ {\\\n    void ___();\\\n___\\\n\\\n// PersonクラスをGreetingインターフェースを実装して定義\\\nclass ___ implements Greeting {\\\n    public void ___() {\\\n        System.out.___(\"こんにちは！\");\\\n    ___\\\n___\\\n\\\nclass ___ {\\\n    public static void ___\\(String[] args) {\\\n        // pにnew Person()を代入\\\n        ___ p = new Person();\\\n        // sayHello メソッドを呼び出す\\\n        p.___();\\\n    ___\\\n___",
         "correctLines": [
           "interface Greeting {",
           "    void sayHello();",
@@ -198,7 +198,7 @@ export const javaData2 = {
           "// PersonクラスをGreetingインターフェースを実装して定義",
           "class Person implements Greeting {",
           "    public void sayHello() {",
-          "        System.out.println(\"Hello!\");",
+          "        System.out.println(\"こんにちは！\");",
           "    }",
           "}",
           "",
@@ -266,8 +266,8 @@ export const javaData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 抽象クラスAnimalを定義\\\\nabstract class Animal {\\\\n    abstract void speak();\\\\n}\\\\n\\\\nclass Dog extends Animal {\\\\n    void speak() {\\\\n        System.out.println(\"Woof!\");\\\\n    }\\\\n}\\\\n\\\\nclass Main {\\\\n    public static void main(String[] args) {\\\\n        // dにnew Dog()を代入\\\\n        Dog d = new Dog();\\\\n        // speak メソッドを呼び出す\\\\n        d.speak();\\\\n    }\\\\n}",
-        "holeyCode": "// 抽象クラスAnimalを定義\\\\nabstract class ___ {\\\\n    abstract void ___();\\\\n___\\\\n\\\\nclass ___ extends Animal {\\\\n    void ___() {\\\\n        System.out.___(\"Woof!\");\\\\n    ___\\\\n___\\\\n\\\\nclass ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // dにnew Dog()を代入\\\\n        ___ d = new Dog();\\\\n        // speak メソッドを呼び出す\\\\n        d.___();\\\\n    ___\\\\n___",
+        "correctCode": "// 抽象クラスAnimalを定義\\\nabstract class Animal {\\\n    abstract void speak();\\\n}\\\n\\\nclass Dog extends Animal {\\\n    void speak() {\\\n        System.out.println(\"ワン！\");\\\n    }\\\n}\\\n\\\nclass Main {\\\n    public static void main(String[] args) {\\\n        // dにnew Dog()を代入\\\n        Dog d = new Dog();\\\n        // speak メソッドを呼び出す\\\n        d.speak();\\\n    }\\\n}",
+        "holeyCode": "// 抽象クラスAnimalを定義\\\nabstract class ___ {\\\n    abstract void ___();\\\n___\\\n\\\nclass ___ extends Animal {\\\n    void ___() {\\\n        System.out.___(\"ワン！\");\\\n    ___\\\n___\\\n\\\nclass ___ {\\\n    public static void ___\\(String[] args) {\\\n        // dにnew Dog()を代入\\\n        ___ d = new Dog();\\\n        // speak メソッドを呼び出す\\\n        d.___();\\\n    ___\\\n___",
         "correctLines": [
           "// 抽象クラスAnimalを定義",
           "abstract class Animal {",
@@ -276,7 +276,7 @@ export const javaData2 = {
           "",
           "class Dog extends Animal {",
           "    void speak() {",
-          "        System.out.println(\"Woof!\");",
+          "        System.out.println(\"ワン！\");",
           "    }",
           "}",
           "",
@@ -344,8 +344,8 @@ export const javaData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "class Main {\\\\n    public static void main(String[] args) {\\\\n        // tryで例外をキャッチする準備\\\\n        try {\\\\n            // parseInt で文字列を整数に変換する\\\\n            int x = Integer.parseInt(\"abc\");\\\\n        } catch (Exception e) {\\\\n            System.out.println(\"Error\");\\\\n        }\\\\n    }\\\\n}",
-        "holeyCode": "class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // tryで例外をキャッチする準備\\\\n        ___ {\\\\n            // parseInt で文字列を整数に変換する\\\\n            int x = Integer.parseInt(\"___\");\\\\n        } ___ (Exception e) {\\\\n            System.out.___(\"Error\");\\\\n        ___\\\\n    ___\\\\n___",
+        "correctCode": "class Main {\\\n    public static void main(String[] args) {\\\n        // tryで例外をキャッチする準備\\\n        try {\\\n            // parseInt で文字列を整数に変換する\\\n            int x = Integer.parseInt(\"あいう\");\\\n        } catch (Exception e) {\\\n            System.out.println(\"エラー\");\\\n        }\\\n    }\\\n}",
+        "holeyCode": "class ___ {\\\n    public static void ___\\(String[] args) {\\\n        // tryで例外をキャッチする準備\\\n        ___ {\\\n            // parseInt で文字列を整数に変換する\\\n            int x = Integer.parseInt(\"___\");\\\n        } ___ (Exception e) {\\\n            System.out.___(\"エラー\");\\\n        ___\\\n    ___\\\n___",
         "correctLines": [
           "class Main {",
           "    public static void main(String[] args) {",
@@ -405,8 +405,8 @@ export const javaData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "class Main {\\\\n    public static void main(String[] args) {\\\\n        try {\\\\n            // println で出力する\\\\n            System.out.println(\"Try\");\\\\n        } catch (Exception e) {\\\\n            System.out.println(\"Catch\");\\\\n        // finally で必ず実行する\\\\n        } finally {\\\\n            System.out.println(\"Finally\");\\\\n        }\\\\n    }\\\\n}",
-        "holeyCode": "class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        ___ {\\\\n            // println で出力する\\\\n            System.out.___(\"Try\");\\\\n        } ___ (Exception e) {\\\\n            System.out.___(\"Catch\");\\\\n        // finally で必ず実行する\\\\n        } ___ {\\\\n            System.out.___(\"Finally\");\\\\n        ___\\\\n    ___\\\\n___",
+        "correctCode": "class Main {\\\n    public static void main(String[] args) {\\\n        try {\\\n            // println で出力する\\\n            System.out.println(\"Try\");\\\n        } catch (Exception e) {\\\n            System.out.println(\"猫ch\");\\\n        // finally で必ず実行する\\\n        } finally {\\\n            System.out.println(\"Finally\");\\\n        }\\\n    }\\\n}",
+        "holeyCode": "class ___ {\\\n    public static void ___\\(String[] args) {\\\n        ___ {\\\n            // println で出力する\\\n            System.out.___(\"Try\");\\\n        } ___ (Exception e) {\\\n            System.out.___(\"猫ch\");\\\n        // finally で必ず実行する\\\n        } ___ {\\\n            System.out.___(\"Finally\");\\\n        ___\\\n    ___\\\n___",
         "correctLines": [
           "class Main {",
           "    public static void main(String[] args) {",

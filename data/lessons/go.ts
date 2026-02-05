@@ -22,14 +22,14 @@ export const goData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // Hello, Go! と表示する\n    fmt.Println(\"Hello, Go!\")\n}",
-        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // Hello, Go! と表示する\n    fmt.___(\"Hello, Go!\")\n___",
+        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // Hello, Go! と表示する\n    fmt.Println(\"こんにちは, Go!\")\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // Hello, Go! と表示する\n    fmt.___(\"こんにちは, Go!\")\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
           "func main() {",
           "    // Hello, Go! と表示する",
-          "    fmt.Println(\"Hello, Go!\")",
+          "    fmt.Println(\"こんにちは, Go!\")",
           "}"
         ],
         "lineHints": [
@@ -386,8 +386,8 @@ export const goData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // scoreに100を入れる\n    score := 100\n    // > で比較する\n    if score > 80 {\n        // Great と表示する\n        fmt.Println(\"Great\")\n    }\n}",
-        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // scoreに100を入れる\n    ___ := 100\n    // > で比較する\n    if score ___ 80 {\n        // Great と表示する\n        fmt.___(\"Great\")\n    ___\n___",
+        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // scoreに100を入れる\n    score := 100\n    // > で比較する\n    if score > 80 {\n        // Great と表示する\n        fmt.Println(\"すごい\")\n    }\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // scoreに100を入れる\n    ___ := 100\n    // > で比較する\n    if score ___ 80 {\n        // Great と表示する\n        fmt.___(\"すごい\")\n    ___\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -397,7 +397,7 @@ export const goData = {
           "    // > で比較する",
           "    if score > 80 {",
           "        // Great と表示する",
-          "        fmt.Println(\"Great\")",
+          "        fmt.Println(\"すごい\")",
           "    }",
           "}"
         ],
@@ -446,8 +446,8 @@ export const goData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // xに5を入れる\n    x := 5\n    // 10より大きいかを比較する演算子\n    if x > 10 {\n        // 10より大きいときのメッセージ（'Big'）\n        fmt.Println(\"Big\")\n    // elseで10以下の場合の処理\n    } else {\n        // それ以外のメッセージ（'Small'）\n        fmt.Println(\"Small\")\n    }\n}",
-        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // xに5を入れる\n    ___ := 5\n    // 10より大きいかを比較する演算子\n    if x ___ 10 {\n        // 10より大きいときのメッセージ（'Big'）\n        fmt.___(\"Big\")\n    // elseで10以下の場合の処理\n    } ___ {\n        // それ以外のメッセージ（'Small'）\n        fmt.___(\"Small\")\n    ___\n___",
+        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // xに5を入れる\n    x := 5\n    // 10より大きいかを比較する演算子\n    if x > 10 {\n        // 10より大きいときのメッセージ（'Big'）\n        fmt.Println(\"大きい\")\n    // elseで10以下の場合の処理\n    } else {\n        // それ以外のメッセージ（'Small'）\n        fmt.Println(\"小さい\")\n    }\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // xに5を入れる\n    ___ := 5\n    // 10より大きいかを比較する演算子\n    if x ___ 10 {\n        // 10より大きいときのメッセージ（'Big'）\n        fmt.___(\"大きい\")\n    // elseで10以下の場合の処理\n    } ___ {\n        // それ以外のメッセージ（'Small'）\n        fmt.___(\"小さい\")\n    ___\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -457,11 +457,11 @@ export const goData = {
           "    // 10より大きいかを比較する演算子",
           "    if x > 10 {",
           "        // 10より大きいときのメッセージ（'Big'）",
-          "        fmt.Println(\"Big\")",
+          "        fmt.Println(\"大きい\")",
           "    // elseで10以下の場合の処理",
           "    } else {",
           "        // それ以外のメッセージ（'Small'）",
-          "        fmt.Println(\"Small\")",
+          "        fmt.Println(\"小さい\")",
           "    }",
           "}"
         ],
@@ -511,8 +511,8 @@ export const goData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 80\n    bonus := 10\n    // && で両方の条件をチェック\n    if score >= 70 && bonus > 0 {\n        fmt.Println(\"Bonus Pass\")\n    }\n}",
-        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    ___ := 80\n    ___ := 10\n    // && で両方の条件をチェック\n    if score ___ 70 && bonus > 0 {\n        fmt.___(\"Bonus Pass\")\n    ___\n___",
+        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    score := 80\n    bonus := 10\n    // && で両方の条件をチェック\n    if score >= 70 && bonus > 0 {\n        fmt.Println(\"Bonus 合格\")\n    }\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    ___ := 80\n    ___ := 10\n    // && で両方の条件をチェック\n    if score ___ 70 && bonus > 0 {\n        fmt.___(\"Bonus 合格\")\n    ___\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -521,7 +521,7 @@ export const goData = {
           "    bonus := 10",
           "    // && で両方の条件をチェック",
           "    if score >= 70 && bonus > 0 {",
-          "        fmt.Println(\"Bonus Pass\")",
+          "        fmt.Println(\"Bonus 合格\")",
           "    }",
           "}"
         ],
@@ -674,13 +674,13 @@ export const goData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\nimport \"fmt\"\nfunc greet() {\n    fmt.Println(\"Hello\")\n}\nfunc main() {\n    // greet 関数を呼び出す\n    greet()\n}",
-        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    fmt.___(\"Hello\")\n___\nfunc ___ () {\n    // greet 関数を呼び出す\n    ___()\n___",
+        "correctCode": "package main\nimport \"fmt\"\nfunc greet() {\n    fmt.Println(\"こんにちは\")\n}\nfunc main() {\n    // greet 関数を呼び出す\n    greet()\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    fmt.___(\"こんにちは\")\n___\nfunc ___ () {\n    // greet 関数を呼び出す\n    ___()\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
           "func greet() {",
-          "    fmt.Println(\"Hello\")",
+          "    fmt.Println(\"こんにちは\")",
           "}",
           "func main() {",
           "    // greet 関数を呼び出す",

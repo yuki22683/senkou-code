@@ -353,7 +353,7 @@ export const ruby3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# classでクラスを定義\\\\nclass FlexibleClass\\\\n  # method_missingで未定義メソッドを捕捉\\\\n  def method_missing(name, *args)\\\\n    # nameでメソッド名を参照\\\\n    \"Unknown method: #{name}\"\\\\n  # endで終了\\\\n  end\\\\n# endで終了\\\\nend",
+        "correctCode": "# classでクラスを定義\\\nclass FlexibleClass\\\n  # method_missingで未定義メソッドを捕捉\\\n  def method_missing(name, *args)\\\n    # nameでメソッド名を参照\\\n    \"Unknown method: #{名前}\"\\\n  # endで終了\\\n  end\\\n# endで終了\\\nend",
         "holeyCode": "# classでクラスを定義\\\\nclass ___\\\\n  # method_missingで未定義メソッドを捕捉\\\\n  def method_missing(name, *___)\\\\n    # nameでメソッド名を参照\\\\n    \"___\"\\\\n  # endで終了\\\\n  ___\\\\n# endで終了\\\\n___",
         "correctLines": [
           "# classでクラスを定義",
@@ -361,7 +361,7 @@ export const ruby3Data = {
           "  # method_missingで未定義メソッドを捕捉",
           "  def method_missing(name, *args)",
           "    # nameでメソッド名を参照",
-          "    \"Unknown method: #{name}\"",
+          "    \"Unknown method: #{名前}\"",
           "  # endで終了",
           "  end",
           "# endで終了",

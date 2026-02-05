@@ -26,8 +26,8 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 画面に「Hello, World!」と出す関数\\\\nprint('Hello, World!')",
-        "holeyCode": "# 画面に「Hello, World!」と出す関数\\\\n___('Hello, World!')",
+        "correctCode": "# 画面に「Hello, World!」と出す関数\\\nprint('Hello, World!')",
+        "holeyCode": "# 画面に「Hello, World!」と出す関数\\\n___('Hello, World!')",
         "correctLines": [
           "# 画面に「Hello, World!」と出す関数",
           "print('Hello, World!')"
@@ -269,13 +269,13 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ageというはこに 10 を入れる\\\\nage = 10\\\\n# f-stringを使ってメッセージを出す\\\\nprint(f'7I am {age} years oldprint(f'I am {age} years old')')",
-        "holeyCode": "# ageというはこに 10 を入れる\\\\nage = ___\\\\n# f-stringを使ってメッセージを出す\\\\n___(f'5I am {age} years old___(f'I am {age} years old')')",
+        "correctCode": "# ageというはこに 10 を入れる\\\nage = 10\\\n# f-stringを使ってメッセージを出す\\\nprint(f'私は{age}歳です')",
+        "holeyCode": "# ageというはこに 10 を入れる\\\nage = ___\\\n# f-stringを使ってメッセージを出す\\\n___(f'私は{age}歳です')",
         "correctLines": [
           "# ageというはこに 10 を入れる",
           "age = 10",
           "# f-stringを使ってメッセージを出す",
-          "print(f'7I am {age} years oldprint(f'I am {age} years old')')"
+          "print(f'私は{age}歳です')"
         ],
         "lineHints": [
           null,
@@ -369,15 +369,15 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# score に 100 を入れる\\\\nscore = 100\\\\n# もし 80 より大きかったら\\\\nif score > 80:\\\\n    # 「ごうかく！」と表示する\\\\n    print('10Pass!    print('Pass!')')",
-        "holeyCode": "# score に 100 を入れる\\\\nscore = ___\\\\n# もし 80 より大きかったら\\\\nif score ___ 80:\\\\n    # 「ごうかく！」と表示する\\\\n    ___('8Pass!    ___('Pass!')')",
+        "correctCode": "# score に 100 を入れる\\\nscore = 100\\\n# もし 80 より大きかったら\\\nif score > 80:\\\n    # 「ごうかく！」と表示する\\\n    print('合格！')",
+        "holeyCode": "# score に 100 を入れる\\\nscore = ___\\\n# もし 80 より大きかったら\\\nif score ___ 80:\\\n    # 「ごうかく！」と表示する\\\n    ___('合格！')",
         "correctLines": [
           "# score に 100 を入れる",
           "score = 100",
           "# もし 80 より大きかったら",
           "if score > 80:",
           "    # 「ごうかく！」と表示する",
-          "    print('10Pass!    print('Pass!')')"
+          "    print('合格！')"
         ],
         "lineHints": [
           null,
@@ -427,19 +427,19 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# age に 10 を入れる\\\\nage = 10\\\\n# 20以上かを比較する演算子\\\\nif age >= 20:\\\\n    # 20歳以上のときのメッセージ（'おとな'）\\\\n    print('10Adult    print('Adult')')\\\\n# 「そうでなければ」のキーワード\\\\nelse:\\\\n    # それ以外の場合（'こども'）\\\\n    print('10Child    print('Child')')",
-        "holeyCode": "# age に 10 を入れる\\\\nage = ___\\\\n# 20以上かを比較する演算子\\\\nif age ___ 20:\\\\n    # 20歳以上のときのメッセージ（'おとな'）\\\\n    ___('8Adult    ___('Adult')')\\\\n# 「そうでなければ」のキーワード\\\\n___:\\\\n    # それ以外の場合（'こども'）\\\\n    ___('8Child    ___('Child')')",
+        "correctCode": "# age に 10 を入れる\\\nage = 10\\\n# 20以上かを比較する演算子\\\nif age >= 20:\\\n    # 20歳以上のときのメッセージ（'おとな'）\\\n    print('大人')\\\n# 「そうでなければ」のキーワード\\\nelse:\\\n    # それ以外の場合（'こども'）\\\n    print('子供')",
+        "holeyCode": "# age に 10 を入れる\\\nage = ___\\\n# 20以上かを比較する演算子\\\nif age ___ 20:\\\n    # 20歳以上のときのメッセージ（'おとな'）\\\n    ___('大人')\\\n# 「そうでなければ」のキーワード\\\n___:\\\n    # それ以外の場合（'こども'）\\\n    ___('子供')",
         "correctLines": [
           "# age に 10 を入れる",
           "age = 10",
           "# 20以上かを比較する演算子",
           "if age >= 20:",
           "    # 20歳以上のときのメッセージ（'おとな'）",
-          "    print('10Adult    print('Adult')')",
+          "    print('大人')",
           "# 「そうでなければ」のキーワード",
           "else:",
           "    # それ以外の場合（'こども'）",
-          "    print('10Child    print('Child')')"
+          "    print('子供')"
         ],
         "lineHints": [
           null,
@@ -495,15 +495,15 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに85を入れる\\\\nscore = 85\\\\n# 80以上 かつ 100以下 ならメッセージを出す\\\\nif score >= 80 and score <= 100:\\\\n    # 「ごうかく！」と出力\\\\n    print('10Pass!    print('Pass!')')",
-        "holeyCode": "# scoreに85を入れる\\\\nscore = ___\\\\n# 80以上 かつ 100以下 ならメッセージを出す\\\\nif score ___ 80 and score <= 100:\\\\n    # 「ごうかく！」と出力\\\\n    ___('8Pass!    ___('Pass!')')",
+        "correctCode": "# scoreに85を入れる\\\nscore = 85\\\n# 80以上 かつ 100以下 ならメッセージを出す\\\nif score >= 80 and score <= 100:\\\n    # 「ごうかく！」と出力\\\n    print('合格！')",
+        "holeyCode": "# scoreに85を入れる\\\nscore = ___\\\n# 80以上 かつ 100以下 ならメッセージを出す\\\nif score ___ 80 and score <= 100:\\\n    # 「ごうかく！」と出力\\\n    ___('合格！')",
         "correctLines": [
           "# scoreに85を入れる",
           "score = 85",
           "# 80以上 かつ 100以下 ならメッセージを出す",
           "if score >= 80 and score <= 100:",
           "    # 「ごうかく！」と出力",
-          "    print('10Pass!    print('Pass!')')"
+          "    print('合格！')"
         ],
         "lineHints": [
           null,
@@ -653,13 +653,13 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# greet という関数を定義する（'こんにちは'と表示）\\\\ndef greet():\\\\n    # 'こんにちは'と表示\\\\n    print('10Hello    print('Hello')')\\\\n# 関数を呼び出す\\\\ngreet()",
-        "holeyCode": "# greet という関数を定義する（'こんにちは'と表示）\\\\ndef ___():\\\\n    # 'こんにちは'と表示\\\\n    ___('8Hello    ___('Hello')')\\\\n# 関数を呼び出す\\\\n___()",
+        "correctCode": "# greet という関数を定義する（'こんにちは'と表示）\\\ndef greet():\\\n    # 'こんにちは'と表示\\\n    print('こんにちは')\\\n# 関数を呼び出す\\\ngreet()",
+        "holeyCode": "# greet という関数を定義する（'こんにちは'と表示）\\\ndef ___():\\\n    # 'こんにちは'と表示\\\n    ___('こんにちは')\\\n# 関数を呼び出す\\\n___()",
         "correctLines": [
           "# greet という関数を定義する（'こんにちは'と表示）",
           "def greet():",
           "    # 'こんにちは'と表示",
-          "    print('10Hello    print('Hello')')",
+          "    print('こんにちは')",
           "# 関数を呼び出す",
           "greet()"
         ],

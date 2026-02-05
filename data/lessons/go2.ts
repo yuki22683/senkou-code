@@ -87,12 +87,12 @@ export const go2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\\\\nimport (\\\\n    \"errors\"\\\\n    \"fmt\"\\\\n)\\\\nfunc check(n int) (int, error) {\\\\n    if n < 0 {\\\\n        // errors.New でエラーを作成\\\\n        return 0, errors.New(\"negative\")\\\\n    }\\\\n    // nil でエラーなしを表す\\\\n    return n, nil\\\\n}\\\\nfunc main() {\\\\n    // 関数から2つの戻り値を受け取る\\\\n    val, err := check(5)\\\\n    if err != nil {\\\\n        fmt.Println(err)\\\\n    } else {\\\\n        fmt.Println(val)\\\\n    }\\\\n}",
+        "correctCode": "package main\\\nimport (\\\n    \"エラーs\"\\\n    \"fmt\"\\\n)\\\nfunc check(n int) (int, error) {\\\n    if n < 0 {\\\n        // errors.New でエラーを作成\\\n        return 0, errors.New(\"negative\")\\\n    }\\\n    // nil でエラーなしを表す\\\n    return n, nil\\\n}\\\nfunc main() {\\\n    // 関数から2つの戻り値を受け取る\\\n    val, err := check(5)\\\n    if err != nil {\\\n        fmt.Println(err)\\\n    } else {\\\n        fmt.Println(val)\\\n    }\\\n}",
         "holeyCode": "package ___\\\\nimport ___\\\\n    \"___\"\\\\n    \\\"___\\\"\\\\n___\\\\nfunc ___ (n int) (int, error) {\\\\n    if n ___ 0 {\\\\n        // errors.New でエラーを作成\\\\n        return 0, errors.New(\"___\")\\\\n    ___\\\\n    // nil でエラーなしを表す\\\\n    return n, ___\\\\n___\\\\nfunc ___ () {\\\\n    // 関数から2つの戻り値を受け取る\\\\n    val, err := check(___)\\\\n    if err != ___ {\\\\n        fmt.___(err)\\\\n    } ___ {\\\\n        fmt.___(val)\\\\n    ___\\\\n___",
         "correctLines": [
           "package main",
           "import (",
-          "    \"errors\"",
+          "    \"エラーs\"",
           "    \"fmt\"",
           ")",
           "func check(n int) (int, error) {",
@@ -466,7 +466,7 @@ export const go2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\\\\nimport (\\\\n    \"fmt\"\\\\n    \"time\"\\\\n)\\\\nfunc say(msg string) {\\\\n    fmt.Println(msg)\\\\n}\\\\nfunc main() {\\\\n    // go でゴルーチンを起動\\\\n    go say(\"hello\")\\\\n    // ゴルーチンの完了を待つ\\\\n    time.Sleep(100 * time.Millisecond)\\\\n}",
+        "correctCode": "package main\\\nimport (\\\n    \"fmt\"\\\n    \"time\"\\\n)\\\nfunc say(msg string) {\\\n    fmt.Println(msg)\\\n}\\\nfunc main() {\\\n    // go でゴルーチンを起動\\\n    go say(\"こんにちは\")\\\n    // ゴルーチンの完了を待つ\\\n    time.Sleep(100 * time.Millisecond)\\\n}",
         "holeyCode": "package ___\\\\nimport ___\\\\n    \\\"___\\\"\\\\n    \\\"___\\\"\\\\n___\\\\nfunc ___ (msg string) {\\\\n    fmt.___(msg)\\\\n___\\\\nfunc ___ () {\\\\n    // go でゴルーチンを起動\\\\n    go say(\"___\")\\\\n    // ゴルーチンの完了を待つ\\\\n    time.Sleep(___ * time.Millisecond)\\\\n___",
         "correctLines": [
           "package main",
@@ -479,7 +479,7 @@ export const go2Data = {
           "}",
           "func main() {",
           "    // go でゴルーチンを起動",
-          "    go say(\"hello\")",
+          "    go say(\"こんにちは\")",
           "    // ゴルーチンの完了を待つ",
           "    time.Sleep(100 * time.Millisecond)",
           "}"

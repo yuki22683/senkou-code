@@ -185,11 +185,11 @@ export const ruby2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# itemにハッシュを代入\\\\nitem = { name: 'Apple', price: 100 }\\\\n# :でシンボルを指定してアクセス\\\\nputs item[:price]",
-        "holeyCode": "# itemにハッシュを代入\\\\nitem = { name: 'Apple', price: ___ }\\\\n# :でシンボルを指定してアクセス\\\\nputs item[:___]",
+        "correctCode": "# itemにハッシュを代入\\\nitem = { name: 'りんご', price: 100 }\\\n# :でシンボルを指定してアクセス\\\nputs item[:price]",
+        "holeyCode": "# itemにハッシュを代入\\\nitem = { name: 'りんご', price: ___ }\\\n# :でシンボルを指定してアクセス\\\nputs item[:___]",
         "correctLines": [
           "# itemにハッシュを代入",
-          "item = { name: 'Apple', price: 100 }",
+          "item = { name: 'りんご', price: 100 }",
           "# :でシンボルを指定してアクセス",
           "puts item[:price]"
         ],
@@ -228,7 +228,7 @@ export const ruby2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# classでクラスを定義\\\\nclass Cat\\\\n  # initializeを定義\\\\n  def initialize(name)\\\\n    # @nameに代入\\\\n    @name = name\\\\n  # endで終了\\\\n  end\\\\n  # greetを定義\\\\n  def greet\\\\n    # @nameを出力\\\\n    puts @name\\\\n  # endで終了\\\\n  end\\\\n# endで終了\\\\nend\\\\n# catにインスタンスを代入\\\\ncat = Cat.new('Tama')\\\\n# greetを呼び出し\\\\ncat.greet",
+        "correctCode": "# classでクラスを定義\\\nclass Cat\\\n  # initializeを定義\\\n  def initialize(name)\\\n    # @nameに代入\\\n    @name = name\\\n  # endで終了\\\n  end\\\n  # greetを定義\\\n  def greet\\\n    # @nameを出力\\\n    puts @name\\\n  # endで終了\\\n  end\\\n# endで終了\\\nend\\\n# catにインスタンスを代入\\\ncat = Cat.new('タマ')\\\n# greetを呼び出し\\\ncat.greet",
         "holeyCode": "# classでクラスを定義\\\\nclass ___\\\\n  # initializeを定義\\\\n  def initialize(___)\\\\n    # @nameに代入\\\\n    @___ = name\\\\n  # endで終了\\\\n  ___\\\\n  # greetを定義\\\\n  def ___\\\\n    # @nameを出力\\\\n    puts @___\\\\n  # endで終了\\\\n  ___\\\\n# endで終了\\\\n___\\\\n# catにインスタンスを代入\\\\ncat = Cat.new('___')\\\\n# greetを呼び出し\\\\ncat.___",
         "correctLines": [
           "# classでクラスを定義",
@@ -248,7 +248,7 @@ export const ruby2Data = {
           "# endで終了",
           "end",
           "# catにインスタンスを代入",
-          "cat = Cat.new('Tama')",
+          "cat = Cat.new('タマ')",
           "# greetを呼び出し",
           "cat.greet"
         ],
@@ -362,7 +362,7 @@ export const ruby2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# classでクラスを定義\\\\nclass Vehicle\\\\n  # moveを定義\\\\n  def move\\\\n    # movingを出力\\\\n    puts 'moving'\\\\n  # endで終了\\\\n  end\\\\n# endで終了\\\\nend\\\\n# <で親クラスを継承\\\\nclass Car < Vehicle\\\\n# endで終了\\\\nend\\\\n# carにインスタンスを代入\\\\ncar = Car.new\\\\n# moveを呼び出し\\\\ncar.move",
+        "correctCode": "# classでクラスを定義\\\nclass Vehicle\\\n  # moveを定義\\\n  def move\\\n    # movingを出力\\\n    puts '移動中'\\\n  # endで終了\\\n  end\\\n# endで終了\\\nend\\\n# <で親クラスを継承\\\nclass Car < Vehicle\\\n# endで終了\\\nend\\\n# carにインスタンスを代入\\\ncar = Car.new\\\n# moveを呼び出し\\\ncar.move",
         "holeyCode": "# classでクラスを定義\\\\nclass ___\\\\n  # moveを定義\\\\n  def ___\\\\n    # movingを出力\\\\n    puts '___'\\\\n  # endで終了\\\\n  ___\\\\n# endで終了\\\\n___\\\\n# <で親クラスを継承\\\\nclass ___ < Vehicle\\\\n# endで終了\\\\n___\\\\n# carにインスタンスを代入\\\\ncar = Car.___\\\\n# moveを呼び出し\\\\ncar.___",
         "correctLines": [
           "# classでクラスを定義",
@@ -370,7 +370,7 @@ export const ruby2Data = {
           "  # moveを定義",
           "  def move",
           "    # movingを出力",
-          "    puts 'moving'",
+          "    puts '移動中'",
           "  # endで終了",
           "  end",
           "# endで終了",

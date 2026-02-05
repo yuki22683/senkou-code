@@ -277,11 +277,11 @@ export const sql4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- COALESCEで最初の非NULLを返す\\\\nSELECT COALESCE(NULL, NULL, 'default') AS val;",
-        "holeyCode": "-- COALESCEで最初の非NULLを返す\\\\nSELECT COALESCE(NULL, NULL, 'default') AS ___;",
+        "correctCode": "-- COALESCEで最初の非NULLを返す\\\nSELECT COALESCE(NULL, NULL, 'デフォルト') AS val;",
+        "holeyCode": "-- COALESCEで最初の非NULLを返す\\\nSELECT COALESCE(NULL, NULL, 'デフォルト') AS ___;",
         "correctLines": [
           "-- COALESCEで最初の非NULLを返す",
-          "SELECT COALESCE(NULL, NULL, 'default') AS val;"
+          "SELECT COALESCE(NULL, NULL, 'デフォルト') AS val;"
         ],
         "lineHints": [
           null,
@@ -318,13 +318,13 @@ export const sql4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- CREATE TABLEでテーブルを作成\\\\nCREATE TABLE test(x TEXT);\\\\n-- INSERTでデータを挿入\\\\nINSERT INTO test VALUES ('hello');\\\\n-- SELECTでデータを取得\\\\nSELECT * FROM test;",
+        "correctCode": "-- CREATE TABLEでテーブルを作成\\\nCREATE TABLE test(x TEXT);\\\n-- INSERTでデータを挿入\\\nINSERT INTO test VALUES ('こんにちは');\\\n-- SELECTでデータを取得\\\nSELECT * FROM test;",
         "holeyCode": "-- CREATE TABLEでテーブルを作成\\\\nCREATE TABLE test(x ___);\\\\n-- INSERTでデータを挿入\\\\nINSERT INTO test VALUES ('___');\\\\n-- SELECTでデータを取得\\\\nSELECT * FROM ___;",
         "correctLines": [
           "-- CREATE TABLEでテーブルを作成",
           "CREATE TABLE test(x TEXT);",
           "-- INSERTでデータを挿入",
-          "INSERT INTO test VALUES ('hello');",
+          "INSERT INTO test VALUES ('こんにちは');",
           "-- SELECTでデータを取得",
           "SELECT * FROM test;"
         ],

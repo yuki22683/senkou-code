@@ -22,8 +22,8 @@ export const rust3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 'a でライフタイムを定義\\\\nfn first<'a>(s: &'a str) -> &'a str {\\\\n    &s[..1]\\\\n}\\\\n\\\\nfn main() {\\\\n    let s = String::from(\"Hello\");\\\\n    println!(\"{}\", first(&s));\\\\n}",
-        "holeyCode": "// 'a でライフタイムを定義\\\\nfn first<'a>(s: &'a ___) -> &'a str {\\\\n    &s[___]\\\\n___\\\\n\\\\nfn ___ () {\\\\n    let ___ = String::from(\"Hello\");\\\\n    ___!(\"{}\", first(&s));\\\\n___",
+        "correctCode": "// 'a でライフタイムを定義\\\nfn first<'a>(s: &'a str) -> &'a str {\\\n    &s[..1]\\\n}\\\n\\\nfn main() {\\\n    let s = String::from(\"こんにちは\");\\\n    println!(\"{}\", first(&s));\\\n}",
+        "holeyCode": "// 'a でライフタイムを定義\\\nfn first<'a>(s: &'a ___) -> &'a str {\\\n    &s[___]\\\n___\\\n\\\nfn ___ () {\\\n    let ___ = String::from(\"こんにちは\");\\\n    ___!(\"{}\", first(&s));\\\n___",
         "correctLines": [
           "// 'a でライフタイムを定義",
           "fn first<'a>(s: &'a str) -> &'a str {",
@@ -493,11 +493,11 @@ export const rust3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "fn main() {\\\\n    let s: &str = \"Hello\";\\\\n    // to_string で String に変換\\\\n    let owned: String = s.to_string();\\\\n    println!(\"{}\", owned);\\\\n}",
-        "holeyCode": "fn ___ () {\\\\n    let s: ___ = \"Hello\";\\\\n    // to_string で String に変換\\\\n    let owned: String = s.___();\\\\n    ___!(\"{}\", owned);\\\\n___",
+        "correctCode": "fn main() {\\\n    let s: &str = \"こんにちは\";\\\n    // to_string で String に変換\\\n    let owned: String = s.to_string();\\\n    println!(\"{}\", owned);\\\n}",
+        "holeyCode": "fn ___ () {\\\n    let s: ___ = \"こんにちは\";\\\n    // to_string で String に変換\\\n    let owned: String = s.___();\\\n    ___!(\"{}\", owned);\\\n___",
         "correctLines": [
           "fn main() {",
-          "    let s: &str = \"Hello\";",
+          "    let s: &str = \"こんにちは\";",
           "    // to_string で String に変換",
           "    let owned: String = s.to_string();",
           "    println!(\"{}\", owned);",

@@ -299,7 +299,7 @@ export const kotlin4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Service クラスを定義する\\\\nclass Service {\\\\n    // configをlateinitで宣言\\\\n    lateinit var config: String\\\\n    \\\\n    // setup 関数を定義する\\\\n    fun setup(c: String) { config = c }\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // Service のインスタンスを作成する\\\\n    val s = Service()\\\\n    // setup を呼び出す\\\\n    s.setup(\"OK\")\\\\n    // s.config を出力する\\\\n    println(s.config)\\\\n}",
+        "correctCode": "// Service クラスを定義する\\\nclass Service {\\\n    // configをlateinitで宣言\\\n    lateinit var config: String\\\n    \\\n    // setup 関数を定義する\\\n    fun setup(c: String) { config = c }\\\n}\\\n\\\n// main 関数を定義する\\\nfun main() {\\\n    // Service のインスタンスを作成する\\\n    val s = Service()\\\n    // setup を呼び出す\\\n    s.setup(\"OK\")\\\n    // s.config を出力する\\\n    println(s.config)\\\n}",
         "holeyCode": "// Service クラスを定義する\\\\nclass ___ {\\\\n    // configをlateinitで宣言\\\\n    lateinit var config: ___\\\\n    \\\\n    // setup 関数を定義する\\\\n    fun setup(___: String) { config = c }\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // Service のインスタンスを作成する\\\\n    val s = ___()\\\\n    // setup を呼び出す\\\\n    s.setup(\"___\")\\\\n    // s.config を出力する\\\\n    ___(s.config)\\\\n___",
         "correctLines": [
                   "// Service クラスを定義する",
@@ -601,13 +601,13 @@ export const kotlin4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// main 関数を定義する\\\\nfun main() {\\\\n    // letで\"hello\"を大文字に変換\\\\n    val result = \"hello\".let {\\\\n        // 大文字に変換する\\\\n        it.uppercase()\\\\n    }\\\\n    // result を出力する\\\\n    println(result)\\\\n}",
+        "correctCode": "// main 関数を定義する\\\nfun main() {\\\n    // letで\"hello\"を大文字に変換\\\n    val result = \"こんにちは\".let {\\\n        // 大文字に変換する\\\n        it.uppercase()\\\n    }\\\n    // result を出力する\\\n    println(result)\\\n}",
         "holeyCode": "// main 関数を定義する\\\\nfun ___() {\\\\n    // letで\"hello\"を大文字に変換\\\\n    val result = \"___\".let {\\\\n        // 大文字に変換する\\\\n        it.___()\\\\n    ___\\\\n    // result を出力する\\\\n    println(___)\\\\n___",
         "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
           "    // letで\"hello\"を大文字に変換",
-          "    val result = \"hello\".let {",
+          "    val result = \"こんにちは\".let {",
           "        // 大文字に変換する",
           "        it.uppercase()",
           "    }",

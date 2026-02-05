@@ -284,7 +284,7 @@ export const c2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <stdio.h>\\\\nint main() {\\\\n    char msg[] = \"Hello\";\\\\n    // 文字列を表示する書式指定子\\\\n    printf(\"%s\\\\n\", msg);\\\\n    return 0;\\\\n}",
+        "correctCode": "#include <stdio.h>\\\nint main() {\\\n    char msg[] = \"こんにちは\";\\\n    // 文字列を表示する書式指定子\\\n    printf(\"%s\\\n\", msg);\\\n    return 0;\\\n}",
         "holeyCode": "#include <stdio.h>\\\\nint ___() {\\\\n    char msg[] = \"___\";\\\\n    // 文字列を表示する書式指定子\\\\n    printf(\"%s\\\\n\", msg);\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <stdio.h>",

@@ -26,13 +26,13 @@ export const assemblyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "; データセクションを宣言\\\\nsection .data\\\\n  ; 文字列msgを定義\\\\n  msg db \"Hello\", 0xA\\\\n\\\\n; テキストセクションを宣言\\\\nsection .text\\\\n  ; エントリーポイントを公開\\\\n  global _start\\\\n\\\\n; プログラムの開始地点\\\\n_start:\\\\n  ; 1は「書く」という命令\\\\n  mov rax, 1\\\\n  ; 1は標準出力\\\\n  mov rdi, 1\\\\n  ; msgで表示する文字を指定\\\\n  mov rsi, msg\\\\n  ; 文字の長さを指定\\\\n  mov rdx, 6\\\\n  ; システムコールを実行\\\\n  syscall\\\\n\\\\n  ; 60は「終了」という命令\\\\n  mov rax, 60\\\\n  ; エラーコード0\\\\n  xor rdi, rdi\\\\n  ; システムコールを実行\\\\n  syscall",
+        "correctCode": "; データセクションを宣言\\\nsection .data\\\n  ; 文字列msgを定義\\\n  msg db \"こんにちは\", 0xA\\\n\\\n; テキストセクションを宣言\\\nsection .text\\\n  ; エントリーポイントを公開\\\n  global _start\\\n\\\n; プログラムの開始地点\\\n_start:\\\n  ; 1は「書く」という命令\\\n  mov rax, 1\\\n  ; 1は標準出力\\\n  mov rdi, 1\\\n  ; msgで表示する文字を指定\\\n  mov rsi, msg\\\n  ; 文字の長さを指定\\\n  mov rdx, 6\\\n  ; システムコールを実行\\\n  syscall\\\n\\\n  ; 60は「終了」という命令\\\n  mov rax, 60\\\n  ; エラーコード0\\\n  xor rdi, rdi\\\n  ; システムコールを実行\\\n  syscall",
         "holeyCode": "; データセクションを宣言\\\\nsection .___\\\\n  ; 文字列msgを定義\\\\n  msg db \"___\", 0xA\\\\n\\\\n; テキストセクションを宣言\\\\nsection .___\\\\n  ; エントリーポイントを公開\\\\n  global ___\\\\n\\\\n; プログラムの開始地点\\\\n___:\\\\n  ; 1は「書く」という命令\\\\n  mov ___, ___\\\\n  ; 1は標準出力\\\\n  mov ___, ___\\\\n  ; msgで表示する文字を指定\\\\n  mov ___, ___\\\\n  ; 文字の長さを指定\\\\n  mov ___, ___\\\\n  ; システムコールを実行\\\\n  ___\\\\n\\\\n  ; 60は「終了」という命令\\\\n  mov ___, ___\\\\n  ; エラーコード0\\\\n  xor ___, ___\\\\n  ; システムコールを実行\\\\n  ___",
         "correctLines": [
                   "; データセクションを宣言",
                   "section .data",
                   "  ; 文字列msgを定義",
-                  "  msg db \"Hello\", 0xA",
+                  "  msg db \"こんにちは\", 0xA",
                   "",
                   "; テキストセクションを宣言",
                   "section .text",

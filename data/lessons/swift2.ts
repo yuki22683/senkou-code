@@ -205,8 +205,8 @@ export const swift2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// classでクラスを定義\\\\nclass Cat {\\\\n    // nameプロパティ\\\\n    var name: String\\\\n    // initでイニシャライザ\\\\n    init(name: String) {\\\\n        // selfで自身のプロパティにアクセス\\\\n        self.name = name\\\\n    }\\\\n}\\\\n// インスタンスを作成\\\\nlet cat = Cat(name: \"Tama\")\\\\n// nameを出力\\\\nprint(cat.name)",
-        "holeyCode": "// classでクラスを定義\\\\nclass ___ {\\\\n    // nameプロパティ\\\\n    var name: ___\\\\n    // initでイニシャライザ\\\\n    init(name: ___) {\\\\n        // selfで自身のプロパティにアクセス\\\\n        self.___ = name\\\\n    ___\\\\n___\\\\n// インスタンスを作成\\\\nlet ___ = Cat(name: \"Tama\")\\\\n// nameを出力\\\\nprint(cat.___)",
+        "correctCode": "// classでクラスを定義\\\nclass Cat {\\\n    // nameプロパティ\\\n    var name: String\\\n    // initでイニシャライザ\\\n    init(name: String) {\\\n        // selfで自身のプロパティにアクセス\\\n        self.name = name\\\n    }\\\n}\\\n// インスタンスを作成\\\nlet cat = Cat(name: \"タマ\")\\\n// nameを出力\\\nprint(cat.name)",
+        "holeyCode": "// classでクラスを定義\\\nclass ___ {\\\n    // nameプロパティ\\\n    var name: ___\\\n    // initでイニシャライザ\\\n    init(name: ___) {\\\n        // selfで自身のプロパティにアクセス\\\n        self.___ = name\\\n    ___\\\n___\\\n// インスタンスを作成\\\nlet ___ = Cat(name: \"タマ\")\\\n// nameを出力\\\nprint(cat.___)",
         "correctLines": [
           "// classでクラスを定義",
           "class Cat {",
@@ -219,7 +219,7 @@ export const swift2Data = {
           "    }",
           "}",
           "// インスタンスを作成",
-          "let cat = Cat(name: \"Tama\")",
+          "let cat = Cat(name: \"タマ\")",
           "// nameを出力",
           "print(cat.name)"
         ],
@@ -587,8 +587,8 @@ export const swift2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// enumで列挙型を定義\\\\nenum Color {\\\\n    // caseでケースを定義\\\\n    case red, green, blue\\\\n}\\\\n// Color.redを代入\\\\nlet c = Color.red\\\\n// switchでパターンマッチ\\\\nswitch c {\\\\ncase .red:\\\\n    // 赤色を出力\\\\n    print(\"red\")\\\\ncase .green:\\\\n    // 緑色を出力\\\\n    print(\"green\")\\\\ncase .blue:\\\\n    // 青色を出力\\\\n    print(\"blue\")\\\\n}",
-        "holeyCode": "// enumで列挙型を定義\\\\nenum ___ {\\\\n    // caseでケースを定義\\\\n    case red, green, ___\\\\n___\\\\n// Color.redを代入\\\\nlet ___ = Color.red\\\\n// switchでパターンマッチ\\\\nswitch ___ {\\\\ncase .___:\\\\n    // 赤色を出力\\\\n    ___(\"red\")\\\\ncase .___:\\\\n    // 緑色を出力\\\\n    ___(\"green\")\\\\ncase .___:\\\\n    // 青色を出力\\\\n    ___(\"blue\")\\\\n___",
+        "correctCode": "// enumで列挙型を定義\\\nenum Color {\\\n    // caseでケースを定義\\\n    case red, green, blue\\\n}\\\n// Color.redを代入\\\nlet c = Color.red\\\n// switchでパターンマッチ\\\nswitch c {\\\ncase .red:\\\n    // 赤色を出力\\\n    print(\"赤\")\\\ncase .green:\\\n    // 緑色を出力\\\n    print(\"緑\")\\\ncase .blue:\\\n    // 青色を出力\\\n    print(\"青\")\\\n}",
+        "holeyCode": "// enumで列挙型を定義\\\nenum ___ {\\\n    // caseでケースを定義\\\n    case red, green, ___\\\n___\\\n// Color.redを代入\\\nlet ___ = Color.red\\\n// switchでパターンマッチ\\\nswitch ___ {\\\ncase .___:\\\n    // 赤色を出力\\\n    ___(\"赤\")\\\ncase .___:\\\n    // 緑色を出力\\\n    ___(\"緑\")\\\ncase .___:\\\n    // 青色を出力\\\n    ___(\"青\")\\\n___",
         "correctLines": [
           "// enumで列挙型を定義",
           "enum Color {",
@@ -601,13 +601,13 @@ export const swift2Data = {
           "switch c {",
           "case .red:",
           "    // 赤色を出力",
-          "    print(\"red\")",
+          "    print(\"赤\")",
           "case .green:",
           "    // 緑色を出力",
-          "    print(\"green\")",
+          "    print(\"緑\")",
           "case .blue:",
           "    // 青色を出力",
-          "    print(\"blue\")",
+          "    print(\"青\")",
           "}"
         ],
         "lineHints": [

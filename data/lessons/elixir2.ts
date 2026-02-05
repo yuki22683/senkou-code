@@ -417,10 +417,10 @@ export const elixir2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# spawnでプロセスを作成\\\\nspawn(fn -> IO.puts \"hello\" end)\\\\n# 100を入力\\\\nProcess.sleep(100)", "holeyCode": "# spawnでプロセスを作成\\\\nspawn(fn -> IO.puts \"___\" end)\\\\n# 100を入力\\\\nProcess.sleep(___)",
+        "correctCode": "# spawnでプロセスを作成\\\nspawn(fn -> IO.puts \"こんにちは\" end)\\\n# 100を入力\\\nProcess.sleep(100)", "holeyCode": "# spawnでプロセスを作成\\\\nspawn(fn -> IO.puts \"___\" end)\\\\n# 100を入力\\\\nProcess.sleep(___)",
         "correctLines": [
           "# spawnでプロセスを作成",
-          "spawn(fn -> IO.puts \"hello\" end)",
+          "spawn(fn -> IO.puts \"こんにちは\" end)",
           "# 100を入力",
           "Process.sleep(100)"
         ],

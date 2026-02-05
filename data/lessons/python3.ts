@@ -191,8 +191,8 @@ export const pythonData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 赤、緑、青の3色を含むリストを作成\\\\ncolors = ['red', 'green', 'blue']\\\\n# 1番目の i に番号、2番目の color に要素が入る\\\\nfor i, color in enumerate(colors):\\\\n    # 「番号: 色」の形式で画面に出力\\\\n    print(f'{i}: {color}')",
-        "holeyCode": "# 赤、緑、青の3色を含むリストを作成\\\\ncolors = ['red', 'green', '___']\\\\n# 1番目の i に番号、2番目の color に要素が入る\\\\nfor i, color in enumerate(___):\\\\n    # 「番号: 色」の形式で画面に出力\\\\n    ___(f'{i}: {color}')",
+        "correctCode": "# 赤、緑、青の3色を含むリストを作成\\\ncolors = ['赤', '緑', '青']\\\n# 1番目の i に番号、2番目の color に要素が入る\\\nfor i, color in enumerate(colors):\\\n    # 「番号: 色」の形式で画面に出力\\\n    print(f'{i}: {color}')",
+        "holeyCode": "# 赤、緑、青の3色を含むリストを作成\\\ncolors = ['赤', '緑', '___']\\\n# 1番目の i に番号、2番目の color に要素が入る\\\nfor i, color in enumerate(___):\\\n    # 「番号: 色」の形式で画面に出力\\\n    ___(f'{i}: {color}')",
         "correctLines": [
           "# 赤、緑、青の3色を含むリストを作成",
           "colors = ['red', 'green', 'blue']",
@@ -215,7 +215,7 @@ export const pythonData3 = {
             "range",
             "zip"
           ],
-          "others": ["['red', 'green', 'blue']", "f'{i}: {color}'", "blue", "colors", "print"]
+          "others": ["['red', 'green', 'blue']", "f'{i}: {color}'", "blue", "colors", "print", "en"]
         },
         "testCases": [
           {
@@ -403,15 +403,15 @@ export const pythonData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\\\\ndef show_call(func):\\\\n    # 実行内容を包む内部関数を定義\\\\n    def wrapper():\\\\n        # 実行前のメッセージを表示\\\\n        print('14Calling function        print('Calling function')')\\\\n        # 本来の関数を実行\\\\n        func()\\\\n    # 新しく作った関数を返す\\\\n    return wrapper\\\\n\\\\n# デコレータを関数に適用\\\\n@show_call\\\\n# 挨拶を表示する関数を定義\\\\ndef greet():\\\\n    # 'Hello!'を表示\\\\n    print('Hello!')\\\\n\\\\n# 関数を呼び出して実行\\\\ngreet()",
-        "holeyCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\\\\ndef ___(func):\\\\n    # 実行内容を包む内部関数を定義\\\\n    def ___():\\\\n        # 実行前のメッセージを表示\\\\n        ___('12Calling function        ___('Calling function')')\\\\n        # 本来の関数を実行\\\\n        ___()\\\\n    # 新しく作った関数を返す\\\\n    return ___\\\\n\\\\n# デコレータを関数に適用\\\\n@___\\\\n# 挨拶を表示する関数を定義\\\\ndef ___():\\\\n    # 'Hello!'を表示\\\\n    ___('Hello!')\\\\n\\\\n# 関数を呼び出して実行\\\\n___()",
+        "correctCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\\\ndef show_call(func):\\\n    # 実行内容を包む内部関数を定義\\\n    def wrapper():\\\n        # 実行前のメッセージを表示\\\n        print('関数を呼び出します')\\\n        # 本来の関数を実行\\\n        func()\\\n    # 新しく作った関数を返す\\\n    return wrapper\\\n\\\n# デコレータを関数に適用\\\n@show_call\\\n# 挨拶を表示する関数を定義\\\ndef greet():\\\n    # 'Hello!'を表示\\\n    print('こんにちは！')\\\n\\\n# 関数を呼び出して実行\\\ngreet()",
+        "holeyCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\\\ndef ___(func):\\\n    # 実行内容を包む内部関数を定義\\\n    def ___():\\\n        # 実行前のメッセージを表示\\\n        ___('関数を呼び出します')\\\n        # 本来の関数を実行\\\n        ___()\\\n    # 新しく作った関数を返す\\\n    return ___\\\n\\\n# デコレータを関数に適用\\\n@___\\\n# 挨拶を表示する関数を定義\\\ndef ___():\\\n    # 'Hello!'を表示\\\n    ___('こんにちは！')\\\n\\\n# 関数を呼び出して実行\\\n___()",
         "correctLines": [
           "# 関数の実行前後でメッセージを表示するデコレータを定義",
           "def show_call(func):",
           "    # 実行内容を包む内部関数を定義",
           "    def wrapper():",
           "        # 実行前のメッセージを表示",
-          "        print('14Calling function        print('Calling function')')",
+          "        print('関数を呼び出します')",
           "        # 本来の関数を実行",
           "        func()",
           "    # 新しく作った関数を返す",
@@ -422,7 +422,7 @@ export const pythonData3 = {
           "# 挨拶を表示する関数を定義",
           "def greet():",
           "    # 'Hello!'を表示",
-          "    print('Hello!')",
+          "    print('こんにちは！')",
           "",
           "# 関数を呼び出して実行",
           "greet()"

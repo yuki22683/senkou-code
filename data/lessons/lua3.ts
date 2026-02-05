@@ -78,14 +78,14 @@ export const lua3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "local ok, msg = pcall(function()\\\\n    -- errorでエラーを発生\\\\n    error(\"test error\")\\\\nend)\\\\nprint(msg:match(\"test error\") and \"caught\" or \"not caught\")",
-        "holeyCode": "local ___, ___ = pcall(function()\\\\n    -- errorでエラーを発生\\\\n    error(\"___\")\\\\n___)\\\\n___(msg:match(\"test error\") and \"caught\" or \"not caught\")",
+        "correctCode": "local ok, msg = pcall(function()\\\n    -- errorでエラーを発生\\\n    error(\"テスト エラー\")\\\nend)\\\nprint(msg:match(\"テスト エラー\") and \"caught\" or \"not caught\")",
+        "holeyCode": "local ___, ___ = pcall(function()\\\n    -- errorでエラーを発生\\\n    error(\"___\")\\\n___)\\\n___(msg:match(\"テスト エラー\") and \"caught\" or \"not caught\")",
         "correctLines": [
           "local ok, msg = pcall(function()",
           "    -- errorでエラーを発生",
-          "    error(\"test error\")",
+          "    error(\"テスト エラー\")",
           "end)",
-          "print(msg:match(\"test error\") and \"caught\" or \"not caught\")"
+          "print(msg:match(\"テスト エラー\") and \"caught\" or \"not caught\")"
         ],
         "lineHints": [
           "error でエラーを発生させます。",
@@ -101,7 +101,7 @@ export const lua3Data = {
             "raise",
             "fail"
           ],
-          "others": ["ok", "msg", "test error", "end", "print"]
+          "others": ["ok", "msg", "test error", "end", "print", "テスト エラー"]
         },
         "testCases": [
           {

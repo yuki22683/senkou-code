@@ -22,8 +22,8 @@ export const csharp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// 型パラメータを定義する記号\\\\nclass Container<T> {\\\\n    // プロパティを定義\\\\n    public T Item { get; set; }\\\\n}\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // \"Hello\" を持つ Container インスタンスを作成\\\\n        var c = new Container<string> { Item = \"Hello\" };\\\\n        // c.Itemを表示\\\\n        Console.WriteLine(c.Item);\\\\n    }\\\\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// 型パラメータを定義する記号\\\\nclass ___<T> {\\\\n    // プロパティを定義\\\\n    public T Item { get; ___; }\\\\n___\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // \"Hello\" を持つ Container インスタンスを作成\\\\n        var ___ = new Container<string> { Item = \"Hello\" };\\\\n        // c.Itemを表示\\\\n        Console.___(c.Item);\\\\n    ___\\\\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\nusing System;\\\n\\\n// 型パラメータを定義する記号\\\nclass Container<T> {\\\n    // プロパティを定義\\\n    public T Item { get; set; }\\\n}\\\n\\\n// Programクラスを定義\\\nclass Program {\\\n    // Mainメソッドを定義\\\n    static void Main() {\\\n        // \"Hello\" を持つ Container インスタンスを作成\\\n        var c = new Container<string> { Item = \"こんにちは\" };\\\n        // c.Itemを表示\\\n        Console.WriteLine(c.Item);\\\n    }\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\nusing ___;\\\n\\\n// 型パラメータを定義する記号\\\nclass ___<T> {\\\n    // プロパティを定義\\\n    public T Item { get; ___; }\\\n___\\\n\\\n// Programクラスを定義\\\nclass ___ {\\\n    // Mainメソッドを定義\\\n    static void ___() {\\\n        // \"Hello\" を持つ Container インスタンスを作成\\\n        var ___ = new Container<string> { Item = \"こんにちは\" };\\\n        // c.Itemを表示\\\n        Console.___(c.Item);\\\n    ___\\\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -39,7 +39,7 @@ export const csharp4Data = {
           "    // Mainメソッドを定義",
           "    static void Main() {",
           "        // \"Hello\" を持つ Container インスタンスを作成",
-          "        var c = new Container<string> { Item = \"Hello\" };",
+          "        var c = new Container<string> { Item = \"こんにちは\" };",
           "        // c.Itemを表示",
           "        Console.WriteLine(c.Item);",
           "    }",
@@ -309,8 +309,8 @@ export const csharp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // 戻り値を持たない汎用デリゲート型\\\\n        Action<string> greet = name => Console.WriteLine($\"Hello, {name}!\");\\\\n        // 関数を呼び出し\\\\n        greet(\"World\");\\\\n    }\\\\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // 戻り値を持たない汎用デリゲート型\\\\n        Action<string> greet = name => Console.___($\"Hello, {name}!\");\\\\n        // 関数を呼び出し\\\\n        greet(\"___\");\\\\n    ___\\\\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\nusing System;\\\n\\\n// Programクラスを定義\\\nclass Program {\\\n    // Mainメソッドを定義\\\n    static void Main() {\\\n        // 戻り値を持たない汎用デリゲート型\\\n        Action<string> greet = name => Console.WriteLine($\"こんにちは, {名前}!\");\\\n        // 関数を呼び出し\\\n        greet(\"世界\");\\\n    }\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\nusing ___;\\\n\\\n// Programクラスを定義\\\nclass ___ {\\\n    // Mainメソッドを定義\\\n    static void ___() {\\\n        // 戻り値を持たない汎用デリゲート型\\\n        Action<string> greet = name => Console.___($\"こんにちは, {名前}!\");\\\n        // 関数を呼び出し\\\n        greet(\"___\");\\\n    ___\\\n___",
         "correctLines": [
                   "// usingでSystem名前空間をインポート",
                   "using System;",
@@ -320,9 +320,9 @@ export const csharp4Data = {
                   "    // Mainメソッドを定義",
                   "    static void Main() {",
                   "        // 戻り値を持たない汎用デリゲート型",
-                  "        Action<string> greet = name => Console.WriteLine($\"Hello, {name}!\");",
+                  "        Action<string> greet = name => Console.WriteLine($\"こんにちは, {名前}!\");",
                   "        // 関数を呼び出し",
-                  "        greet(\"World\");",
+                  "        greet(\"世界\");",
                   "    }",
                   "}"
         ],
@@ -347,7 +347,7 @@ export const csharp4Data = {
             "Func",
             "Predicate"
           ],
-          "others": ["System", "Program", "Main", "World", "WriteLine", "}"]
+          "others": ["System", "Program", "Main", "World", "WriteLine", "}", "世界"]
         },
         "testCases": [
           {
@@ -516,7 +516,7 @@ export const csharp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // null許容型の変数を定義\\\\n        string? value = null;\\\\n        // nullなら右側を返す演算子\\\\n        string result = value ?? \"default\";\\\\n        // resultを表示\\\\n        Console.WriteLine(result);\\\\n    }\\\\n}",
+        "correctCode": "// usingでSystem名前空間をインポート\\\nusing System;\\\n\\\n// Programクラスを定義\\\nclass Program {\\\n    // Mainメソッドを定義\\\n    static void Main() {\\\n        // null許容型の変数を定義\\\n        string? value = null;\\\n        // nullなら右側を返す演算子\\\n        string result = value ?? \"デフォルト\";\\\n        // resultを表示\\\n        Console.WriteLine(result);\\\n    }\\\n}",
         "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // null許容型の変数を定義\\\\n        string? value = ___;\\\\n        // nullなら右側を返す演算子\\\\n        string result = value ?? \"___\";\\\\n        // resultを表示\\\\n        Console.WriteLine(___);\\\\n    ___\\\\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
@@ -529,7 +529,7 @@ export const csharp4Data = {
           "        // null許容型の変数を定義",
           "        string? value = null;",
           "        // nullなら右側を返す演算子",
-          "        string result = value ?? \"default\";",
+          "        string result = value ?? \"デフォルト\";",
           "        // resultを表示",
           "        Console.WriteLine(result);",
           "    }",
@@ -652,8 +652,8 @@ export const csharp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\\\\nusing System;\\\\n\\\\n// Itemクラスを定義\\\\nclass Item {\\\\n    // 初期化時のみ値を設定できるアクセサ\\\\n    public string Name { get; init; }\\\\n}\\\\n\\\\n// Programクラスを定義\\\\nclass Program {\\\\n    // Mainメソッドを定義\\\\n    static void Main() {\\\\n        // \"Apple\" を持つ Item インスタンスを作成\\\\n        var item = new Item { Name = \"Apple\" };\\\\n        // item.Nameを表示\\\\n        Console.WriteLine(item.Name);\\\\n    }\\\\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\\\\nusing ___;\\\\n\\\\n// Itemクラスを定義\\\\nclass ___ {\\\\n    // 初期化時のみ値を設定できるアクセサ\\\\n    public string Name { get; ___; }\\\\n___\\\\n\\\\n// Programクラスを定義\\\\nclass ___ {\\\\n    // Mainメソッドを定義\\\\n    static void ___() {\\\\n        // \"Apple\" を持つ Item インスタンスを作成\\\\n        var ___ = new Item { Name = \"Apple\" };\\\\n        // item.Nameを表示\\\\n        Console.___(item.Name);\\\\n    ___\\\\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\\nusing System;\\\n\\\n// Itemクラスを定義\\\nclass Item {\\\n    // 初期化時のみ値を設定できるアクセサ\\\n    public string Name { get; init; }\\\n}\\\n\\\n// Programクラスを定義\\\nclass Program {\\\n    // Mainメソッドを定義\\\n    static void Main() {\\\n        // \"Apple\" を持つ Item インスタンスを作成\\\n        var item = new Item { Name = \"りんご\" };\\\n        // item.Nameを表示\\\n        Console.WriteLine(item.Name);\\\n    }\\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\\nusing ___;\\\n\\\n// Itemクラスを定義\\\nclass ___ {\\\n    // 初期化時のみ値を設定できるアクセサ\\\n    public string Name { get; ___; }\\\n___\\\n\\\n// Programクラスを定義\\\nclass ___ {\\\n    // Mainメソッドを定義\\\n    static void ___() {\\\n        // \"Apple\" を持つ Item インスタンスを作成\\\n        var ___ = new Item { Name = \"りんご\" };\\\n        // item.Nameを表示\\\n        Console.___(item.Name);\\\n    ___\\\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -669,7 +669,7 @@ export const csharp4Data = {
           "    // Mainメソッドを定義",
           "    static void Main() {",
           "        // \"Apple\" を持つ Item インスタンスを作成",
-          "        var item = new Item { Name = \"Apple\" };",
+          "        var item = new Item { Name = \"りんご\" };",
           "        // item.Nameを表示",
           "        Console.WriteLine(item.Name);",
           "    }",

@@ -22,7 +22,7 @@ export const cpp2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\n#include <string>\\\\n// Catクラスを定義\\\\nclass Cat {\\\\npublic:\\\\n    // nameをstring型で定義\\\\n    std::string name;\\\\n};\\\\nint main() {\\\\n    // cにCatオブジェクトを作成\\\\n    Cat c;\\\\n    c.name = \"Tama\";\\\\n    std::cout << c.name << std::endl;\\\\n    return 0;\\\\n}",
+        "correctCode": "#include <iostream>\\\n#include <string>\\\n// Catクラスを定義\\\nclass Cat {\\\npublic:\\\n    // nameをstring型で定義\\\n    std::string name;\\\n};\\\nint main() {\\\n    // cにCatオブジェクトを作成\\\n    Cat c;\\\n    c.name = \"タマ\";\\\n    std::cout << c.name << std::endl;\\\n    return 0;\\\n}",
         "holeyCode": "#include <iostream>\\\\n#include <string>\\\\n// Catクラスを定義\\\\nclass ___ {\\\\n___:\\\\n    // nameをstring型で定義\\\\n    std::string ___;\\\\n___\\\\nint ___() {\\\\n    // cにCatオブジェクトを作成\\\\n    Cat ___;\\\\n    c.name = \"___\";\\\\n    std::cout << c.name << std::___;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
@@ -36,7 +36,7 @@ export const cpp2Data = {
           "int main() {",
           "    // cにCatオブジェクトを作成",
           "    Cat c;",
-          "    c.name = \"Tama\";",
+          "    c.name = \"タマ\";",
           "    std::cout << c.name << std::endl;",
           "    return 0;",
           "}"
@@ -282,14 +282,14 @@ export const cpp2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\nclass Vehicle {\\\\npublic:\\\\n    void move() {\\\\n        std::cout << \"moving\" << std::endl;\\\\n    }\\\\n};\\\\n// CarクラスをVehicleから継承\\\\nclass Car : public Vehicle {\\\\n};\\\\nint main() {\\\\n    Car c;\\\\n    // c.move()を呼び出す\\\\n    c.move();\\\\n    return 0;\\\\n}",
+        "correctCode": "#include <iostream>\\\nclass Vehicle {\\\npublic:\\\n    void move() {\\\n        std::cout << \"移動中\" << std::endl;\\\n    }\\\n};\\\n// CarクラスをVehicleから継承\\\nclass Car : public Vehicle {\\\n};\\\nint main() {\\\n    Car c;\\\n    // c.move()を呼び出す\\\n    c.move();\\\n    return 0;\\\n}",
         "holeyCode": "#include <iostream>\\\\nclass ___ {\\\\n___:\\\\n    void ___() {\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n___\\\\n// CarクラスをVehicleから継承\\\\nclass ___ : public Vehicle {\\\\n___\\\\nint ___() {\\\\n    Car ___;\\\\n    // c.move()を呼び出す\\\\n    c.___();\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "class Vehicle {",
           "public:",
           "    void move() {",
-          "        std::cout << \"moving\" << std::endl;",
+          "        std::cout << \"移動中\" << std::endl;",
           "    }",
           "};",
           "// CarクラスをVehicleから継承",

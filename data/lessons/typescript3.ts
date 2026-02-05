@@ -154,7 +154,7 @@ export const typescriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "interface Product {\\\\n  // IDの型\\\\n  id: number;\\\\n  // 名前の型\\\\n  name: string;\\\\n  // 価格の型\\\\n  price: number;\\\\n}\\\\n// Pick で特定のプロパティを選択\\\\ntype ProductName = Pick<Product, 'name'>;\\\\n\\\\n// 商品名のみを持つオブジェクト\\\\nconst item: ProductName = { name: 'Apple' };\\\\n// 名前を出力\\\\nconsole.log(item.name);",
+        "correctCode": "interface Product {\\\n  // IDの型\\\n  id: number;\\\n  // 名前の型\\\n  name: string;\\\n  // 価格の型\\\n  price: number;\\\n}\\\n// Pick で特定のプロパティを選択\\\ntype ProductName = Pick<Product, '名前'>;\\\n\\\n// 商品名のみを持つオブジェクト\\\nconst item: ProductName = { name: 'りんご' };\\\n// 名前を出力\\\nconsole.log(item.name);",
         "holeyCode": "interface ___ {\\\\n  // IDの型\\\\n  id: ___;\\\\n  // 名前の型\\\\n  name: ___;\\\\n  // 価格の型\\\\n  price: ___;\\\\n___\\\\n// Pick で特定のプロパティを選択\\\\ntype ProductName = Pick<Product, '___'>;\\\\n\\\\n// 商品名のみを持つオブジェクト\\\\nconst item: ProductName = { name: '___' };\\\\n// 名前を出力\\\\nconsole.___(item.name);",
         "correctLines": [
           "interface Product {",
@@ -166,10 +166,10 @@ export const typescriptData3 = {
           "  price: number;",
           "}",
           "// Pick で特定のプロパティを選択",
-          "type ProductName = Pick<Product, 'name'>;",
+          "type ProductName = Pick<Product, '名前'>;",
           "",
           "// 商品名のみを持つオブジェクト",
-          "const item: ProductName = { name: 'Apple' };",
+          "const item: ProductName = { name: 'りんご' };",
           "// 名前を出力",
           "console.log(item.name);"
         ],
@@ -221,8 +221,8 @@ export const typescriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "interface User {\\\\n  // IDの型\\\\n  id: number;\\\\n  // 名前の型\\\\n  name: string;\\\\n  // 秘密情報の型\\\\n  secret: string;\\\\n}\\\\n// Omit で特定のプロパティを除外\\\\ntype SafeUser = Omit<User, 'secret'>;\\\\n\\\\n// secretを除いたユーザー\\\\nconst user: SafeUser = { id: 1, name: 'Alice' };\\\\n// 名前を出力\\\\nconsole.log(user.name);",
-        "holeyCode": "interface ___ {\\\\n  // IDの型\\\\n  id: ___;\\\\n  // 名前の型\\\\n  name: ___;\\\\n  // 秘密情報の型\\\\n  secret: ___;\\\\n___\\\\n// Omit で特定のプロパティを除外\\\\ntype SafeUser = Omit<User, '___'>;\\\\n\\\\n// secretを除いたユーザー\\\\nconst user: SafeUser = { id: ___, name: 'Alice' };\\\\n// 名前を出力\\\\nconsole.___(user.name);",
+        "correctCode": "interface User {\\\n  // IDの型\\\n  id: number;\\\n  // 名前の型\\\n  name: string;\\\n  // 秘密情報の型\\\n  secret: string;\\\n}\\\n// Omit で特定のプロパティを除外\\\ntype SafeUser = Omit<User, '秘密'>;\\\n\\\n// secretを除いたユーザー\\\nconst user: SafeUser = { id: 1, name: 'アリス' };\\\n// 名前を出力\\\nconsole.log(user.name);",
+        "holeyCode": "interface ___ {\\\n  // IDの型\\\n  id: ___;\\\n  // 名前の型\\\n  name: ___;\\\n  // 秘密情報の型\\\n  secret: ___;\\\n___\\\n// Omit で特定のプロパティを除外\\\ntype SafeUser = Omit<User, '___'>;\\\n\\\n// secretを除いたユーザー\\\nconst user: SafeUser = { id: ___, name: 'アリス' };\\\n// 名前を出力\\\nconsole.___(user.name);",
         "correctLines": [
           "interface User {",
           "  // IDの型",
@@ -233,10 +233,10 @@ export const typescriptData3 = {
           "  secret: string;",
           "}",
           "// Omit で特定のプロパティを除外",
-          "type SafeUser = Omit<User, 'secret'>;",
+          "type SafeUser = Omit<User, '秘密'>;",
           "",
           "// secretを除いたユーザー",
-          "const user: SafeUser = { id: 1, name: 'Alice' };",
+          "const user: SafeUser = { id: 1, name: 'アリス' };",
           "// 名前を出力",
           "console.log(user.name);"
         ],
@@ -263,7 +263,7 @@ export const typescriptData3 = {
             "Pick",
             "Exclude"
           ],
-          "others": ["number", "string", "'Alice'", "name", "User", "}", "secret", "1", "log"]
+          "others": ["number", "string", "'Alice'", "name", "User", "}", "secret", "1", "log", "秘密"]
         },
         "testCases": [
           {
@@ -288,11 +288,11 @@ export const typescriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// フルーツのユニオン型\\\\ntype Fruit = 'apple' | 'banana';\\\\n// Record でキーと値の型を指定\\\\ntype Prices = Record<Fruit, number>;\\\\n\\\\n// 価格オブジェクト\\\\nconst prices: Prices = {\\\\n  // りんごの価格\\\\n  apple: 100,\\\\n  // バナナの価格\\\\n  banana: 80\\\\n};\\\\n\\\\n// りんごの価格を出力\\\\nconsole.log(prices.apple);",
-        "holeyCode": "// フルーツのユニオン型\\\\ntype Fruit = 'apple' | '___';\\\\n// Record でキーと値の型を指定\\\\ntype Prices = Record<Fruit, ___>;\\\\n\\\\n// 価格オブジェクト\\\\nconst prices: ___ = {\\\\n  // りんごの価格\\\\n  apple: ___,\\\\n  // バナナの価格\\\\n  banana: ___\\\\n___\\\\n\\\\n// りんごの価格を出力\\\\nconsole.___(prices.apple);",
+        "correctCode": "// フルーツのユニオン型\\\ntype Fruit = 'りんご' | 'バナナ';\\\n// Record でキーと値の型を指定\\\ntype Prices = Record<Fruit, number>;\\\n\\\n// 価格オブジェクト\\\nconst prices: Prices = {\\\n  // りんごの価格\\\n  apple: 100,\\\n  // バナナの価格\\\n  banana: 80\\\n};\\\n\\\n// りんごの価格を出力\\\nconsole.log(prices.apple);",
+        "holeyCode": "// フルーツのユニオン型\\\ntype Fruit = 'りんご' | '___';\\\n// Record でキーと値の型を指定\\\ntype Prices = Record<Fruit, ___>;\\\n\\\n// 価格オブジェクト\\\nconst prices: ___ = {\\\n  // りんごの価格\\\n  apple: ___,\\\n  // バナナの価格\\\n  banana: ___\\\n___\\\n\\\n// りんごの価格を出力\\\nconsole.___(prices.apple);",
         "correctLines": [
                   "// フルーツのユニオン型",
-                  "type Fruit = 'apple' | 'banana';",
+                  "type Fruit = 'りんご' | 'バナナ';",
                   "// Record でキーと値の型を指定",
                   "type Prices = Record<Fruit, number>;",
                   "",
@@ -330,7 +330,7 @@ export const typescriptData3 = {
             "Map",
             "Object"
           ],
-          "others": ["|", "100", "80", "apple", "banana", "number", "Prices", "};", "log"]
+          "others": ["|", "100", "80", "apple", "banana", "number", "Prices", "};", "log", "バナナ"]
         },
         "testCases": [
           {
@@ -479,7 +479,7 @@ export const typescriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// infer で型を推論して抽出\\\\ntype Unwrap<T> = T extends Promise<infer U> ? U : T;\\\\n\\\\n// Promise<string>をアンラップ\\\\ntype A = Unwrap<Promise<string>>;\\\\n// numberはそのまま\\\\ntype B = Unwrap<number>;\\\\n\\\\n// aに文字列を代入\\\\nconst a: A = 'hello';\\\\n// bに数値を代入\\\\nconst b: B = 42;\\\\n// aとbを出力\\\\nconsole.log(a, b);",
+        "correctCode": "// infer で型を推論して抽出\\\ntype Unwrap<T> = T extends Promise<infer U> ? U : T;\\\n\\\n// Promise<string>をアンラップ\\\ntype A = Unwrap<Promise<string>>;\\\n// numberはそのまま\\\ntype B = Unwrap<number>;\\\n\\\n// aに文字列を代入\\\nconst a: A = 'こんにちは';\\\n// bに数値を代入\\\nconst b: B = 42;\\\n// aとbを出力\\\nconsole.log(a, b);",
         "holeyCode": "// infer で型を推論して抽出\\\\ntype Unwrap<___> = T extends Promise<infer U> ? U : T;\\\\n\\\\n// Promise<string>をアンラップ\\\\ntype A = Unwrap<Promise<___>>;\\\\n// numberはそのまま\\\\ntype B = Unwrap<___>;\\\\n\\\\n// aに文字列を代入\\\\nconst a: A = '___';\\\\n// bに数値を代入\\\\nconst b: B = ___;\\\\n// aとbを出力\\\\nconsole.___(a, b);",
         "correctLines": [
                   "// infer で型を推論して抽出",
@@ -491,7 +491,7 @@ export const typescriptData3 = {
                   "type B = Unwrap<number>;",
                   "",
                   "// aに文字列を代入",
-                  "const a: A = 'hello';",
+                  "const a: A = 'こんにちは';",
                   "// bに数値を代入",
                   "const b: B = 42;",
                   "// aとbを出力",
@@ -544,8 +544,8 @@ export const typescriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "interface Person {\\\\n  // 名前の型\\\\n  name: string;\\\\n  // 年齢の型\\\\n  age: number;\\\\n}\\\\n// keyof でオブジェクトのキーを取得\\\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\\\n  // キーで値を取得して返す\\\\n  return p[key];\\\\n}\\\\n\\\\n// personに{name: 'Bob', age: 30}を代入\\\\nconst person = { name: 'Bob', age: 30 };\\\\n// 名前を取得して出力\\\\nconsole.log(getProperty(person, 'name'));",
-        "holeyCode": "interface ___ {\\\\n  // 名前の型\\\\n  name: ___;\\\\n  // 年齢の型\\\\n  age: ___;\\\\n___\\\\n// keyof でオブジェクトのキーを取得\\\\nfunction getProperty<___ extends keyof Person>(p: Person, key: K) {\\\\n  // キーで値を取得して返す\\\\n  return p[___];\\\\n___\\\\n\\\\n// personに{name: 'Bob', age: 30}を代入\\\\nconst ___ = { name: 'Bob', age: 30 };\\\\n// 名前を取得して出力\\\\nconsole.___(getProperty(person, 'name'));",
+        "correctCode": "interface Person {\\\n  // 名前の型\\\n  name: string;\\\n  // 年齢の型\\\n  age: number;\\\n}\\\n// keyof でオブジェクトのキーを取得\\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\\n  // キーで値を取得して返す\\\n  return p[key];\\\n}\\\n\\\n// personに{name: 'Bob', age: 30}を代入\\\nconst person = { name: 'ボブ', age: 30 };\\\n// 名前を取得して出力\\\nconsole.log(getProperty(person, '名前'));",
+        "holeyCode": "interface ___ {\\\n  // 名前の型\\\n  name: ___;\\\n  // 年齢の型\\\n  age: ___;\\\n___\\\n// keyof でオブジェクトのキーを取得\\\nfunction getProperty<___ extends keyof Person>(p: Person, key: K) {\\\n  // キーで値を取得して返す\\\n  return p[___];\\\n___\\\n\\\n// personに{name: 'Bob', age: 30}を代入\\\nconst ___ = { name: 'ボブ', age: 30 };\\\n// 名前を取得して出力\\\nconsole.___(getProperty(person, '名前'));",
         "correctLines": [
           "interface Person {",
           "  // 名前の型",

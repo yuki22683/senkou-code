@@ -26,10 +26,10 @@ export const elixirData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Hello, Elixir!を表示\\\\nIO.puts \\\"Hello, Elixir!\\\"", "holeyCode": "# Hello, Elixir!を表示\\\\nIO.puts \\\\\"___\\\\\"",
+        "correctCode": "# Hello, Elixir!を表示\\\nIO.puts \\\"こんにちは, Elixir!\\\"", "holeyCode": "# Hello, Elixir!を表示\\\\nIO.puts \\\\\"___\\\\\"",
         "correctLines": [
           "# Hello, Elixir!を表示",
-          "IO.puts \\\"Hello, Elixir!\\\""
+          "IO.puts \\\"こんにちは, Elixir!\\\""
         ],
         "lineHints": [
           null,

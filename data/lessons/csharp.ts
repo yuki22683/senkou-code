@@ -22,15 +22,15 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "using System;\\\\n\\\\nclass Program {\\\\n    static void Main() {\\\\n        // 画面にメッセージを出す関数\\\\n        Console.WriteLine(\"Hello, C#!\");\\\\n    }\\\\n}",
-        "holeyCode": "using ___;\\\\n\\\\nclass ___ {\\\\n    static void ___() {\\\\n        // 画面にメッセージを出す関数\\\\n        Console.___(\"Hello, C#!\");\\\\n    ___\\\\n___",
+        "correctCode": "using System;\\\n\\\nclass Program {\\\n    static void Main() {\\\n        // 画面にメッセージを出す関数\\\n        Console.WriteLine(\"こんにちは, C#!\");\\\n    }\\\n}",
+        "holeyCode": "using ___;\\\n\\\nclass ___ {\\\n    static void ___() {\\\n        // 画面にメッセージを出す関数\\\n        Console.___(\"こんにちは, C#!\");\\\n    ___\\\n___",
         "correctLines": [
           "using System;",
           "",
           "class Program {",
           "    static void Main() {",
           "        // 画面にメッセージを出す関数",
-          "        Console.WriteLine(\"Hello, C#!\");",
+          "        Console.WriteLine(\"こんにちは, C#!\");",
           "    }",
           "}"
         ],
@@ -277,13 +277,13 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// ageというはこに 10 を入れる\\\\nint age = 10;\\\\n// 文字列補間を使ってメッセージを出す\\\\nConsole.WriteLine($\"19I am {age} years oldConsole.WriteLine($\"I am {age} years old\");\");",
-        "holeyCode": "// ageというはこに 10 を入れる\\\\nint age = ___;\\\\n// 文字列補間を使ってメッセージを出す\\\\nConsole.___($\"13I am {age} years oldConsole.___($\"I am {age} years old\");\");",
+        "correctCode": "// ageというはこに 10 を入れる\\\nint age = 10;\\\n// 文字列補間を使ってメッセージを出す\\\nConsole.WriteLine($\"19私は{年齢}歳ですConsole.WriteLine($\"私は{age}歳です\");\");",
+        "holeyCode": "// ageというはこに 10 を入れる\\\nint age = ___;\\\n// 文字列補間を使ってメッセージを出す\\\nConsole.___($\"13私は{年齢}歳ですConsole.___($\"私は{age}歳です\");\");",
         "correctLines": [
           "// ageというはこに 10 を入れる",
           "int age = 10;",
           "// 文字列補間を使ってメッセージを出す",
-          "Console.WriteLine($\"19I am {age} years oldConsole.WriteLine($\"I am {age} years old\");\");"
+          "Console.WriteLine($\"19私は{年齢}歳ですConsole.WriteLine($\"私は{age}歳です\");\");"
         ],
         "lineHints": [
           null,
@@ -376,8 +376,8 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// scoreに100を入れる\\\\nint score = 100;\\\\n// もし80より大きかったら\\\\nif (score > 80)\\\\n{\\\\n    // 「合格！」と表示する\\\\n    Console.WriteLine(\"22Pass!    Console.WriteLine(\"Pass!\");\");\\\\n}",
-        "holeyCode": "// scoreに100を入れる\\\\nint score = ___;\\\\n// もし80より大きかったら\\\\nif (score ___ 80)\\\\n___\\\\n    // 「合格！」と表示する\\\\n    Console.___(\"16Pass!    Console.___(\"Pass!\");\");\\\\n___",
+        "correctCode": "// scoreに100を入れる\\\nint score = 100;\\\n// もし80より大きかったら\\\nif (score > 80)\\\n{\\\n    // 「合格！」と表示する\\\n    Console.WriteLine(\"22合格！    Console.WriteLine(\"合格！\");\");\\\n}",
+        "holeyCode": "// scoreに100を入れる\\\nint score = ___;\\\n// もし80より大きかったら\\\nif (score ___ 80)\\\n___\\\n    // 「合格！」と表示する\\\n    Console.___(\"16合格！    Console.___(\"合格！\");\");\\\n___",
         "correctLines": [
           "// scoreに100を入れる",
           "int score = 100;",
@@ -385,7 +385,7 @@ export const csharpData = {
           "if (score > 80)",
           "{",
           "    // 「合格！」と表示する",
-          "    Console.WriteLine(\"22Pass!    Console.WriteLine(\"Pass!\");\");",
+          "    Console.WriteLine(\"22合格！    Console.WriteLine(\"合格！\");\");",
           "}"
         ],
         "lineHints": [
@@ -434,8 +434,8 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// ageに10を入れる\\\\nint age = 10;\\\\n// 20歳以上かどうかで分ける\\\\nif (age >= 20)\\\\n{\\\\n    // 「大人」と出力\\\\n    Console.WriteLine(\"22Adult    Console.WriteLine(\"Adult\");\");\\\\n}\\\\n// elseで20歳未満の場合の処理\\\\nelse\\\\n{\\\\n    // 「子供」と出力\\\\n    Console.WriteLine(\"22Child    Console.WriteLine(\"Child\");\");\\\\n}",
-        "holeyCode": "// ageに10を入れる\\\\nint age = ___;\\\\n// 20歳以上かどうかで分ける\\\\nif (age ___ 20)\\\\n___\\\\n    // 「大人」と出力\\\\n    Console.___(\"16Adult    Console.___(\"Adult\");\");\\\\n___\\\\n// elseで20歳未満の場合の処理\\\\n___\\\\n___\\\\n    // 「子供」と出力\\\\n    Console.___(\"16Child    Console.___(\"Child\");\");\\\\n___",
+        "correctCode": "// ageに10を入れる\\\nint age = 10;\\\n// 20歳以上かどうかで分ける\\\nif (age >= 20)\\\n{\\\n    // 「大人」と出力\\\n    Console.WriteLine(\"22大人    Console.WriteLine(\"大人\");\");\\\n}\\\n// elseで20歳未満の場合の処理\\\nelse\\\n{\\\n    // 「子供」と出力\\\n    Console.WriteLine(\"22子供    Console.WriteLine(\"子供\");\");\\\n}",
+        "holeyCode": "// ageに10を入れる\\\nint age = ___;\\\n// 20歳以上かどうかで分ける\\\nif (age ___ 20)\\\n___\\\n    // 「大人」と出力\\\n    Console.___(\"16大人    Console.___(\"大人\");\");\\\n___\\\n// elseで20歳未満の場合の処理\\\n___\\\n___\\\n    // 「子供」と出力\\\n    Console.___(\"16子供    Console.___(\"子供\");\");\\\n___",
         "correctLines": [
           "// ageに10を入れる",
           "int age = 10;",
@@ -443,13 +443,13 @@ export const csharpData = {
           "if (age >= 20)",
           "{",
           "    // 「大人」と出力",
-          "    Console.WriteLine(\"22Adult    Console.WriteLine(\"Adult\");\");",
+          "    Console.WriteLine(\"22大人    Console.WriteLine(\"大人\");\");",
           "}",
           "// elseで20歳未満の場合の処理",
           "else",
           "{",
           "    // 「子供」と出力",
-          "    Console.WriteLine(\"22Child    Console.WriteLine(\"Child\");\");",
+          "    Console.WriteLine(\"22子供    Console.WriteLine(\"子供\");\");",
           "}"
         ],
         "lineHints": [
@@ -505,8 +505,8 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// score と bonus を定義\\\\nint score = 80;\\\\nint bonus = 10;\\\\n// && で両方の条件をチェック\\\\nif (score >= 70 && bonus > 0)\\\\n{\\\\n    Console.WriteLine(\"22Pass with bonus    Console.WriteLine(\"Pass with bonus\");\");\\\\n}",
-        "holeyCode": "// score と bonus を定義\\\\nint score = ___;\\\\nint bonus = ___;\\\\n// && で両方の条件をチェック\\\\nif (score >= ___ && bonus > 0)\\\\n___\\\\n    Console.___(\"16Pass with bonus    Console.___(\"Pass with bonus\");\");\\\\n___",
+        "correctCode": "// score と bonus を定義\\\nint score = 80;\\\nint bonus = 10;\\\n// && で両方の条件をチェック\\\nif (score >= 70 && bonus > 0)\\\n{\\\n    Console.WriteLine(\"22ボーナスあり合格    Console.WriteLine(\"ボーナスあり合格\");\");\\\n}",
+        "holeyCode": "// score と bonus を定義\\\nint score = ___;\\\nint bonus = ___;\\\n// && で両方の条件をチェック\\\nif (score >= ___ && bonus > 0)\\\n___\\\n    Console.___(\"16ボーナスあり合格    Console.___(\"ボーナスあり合格\");\");\\\n___",
         "correctLines": [
           "// score と bonus を定義",
           "int score = 80;",
@@ -514,7 +514,7 @@ export const csharpData = {
           "// && で両方の条件をチェック",
           "if (score >= 70 && bonus > 0)",
           "{",
-          "    Console.WriteLine(\"22Pass with bonus    Console.WriteLine(\"Pass with bonus\");\");",
+          "    Console.WriteLine(\"22ボーナスあり合格    Console.WriteLine(\"ボーナスあり合格\");\");",
           "}"
         ],
         "lineHints": [
@@ -618,8 +618,8 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Dictionaryを作る\\\\nvar fruits = new Dictionary<string, string>();\\\\n// キーと値を追加\\\\nfruits[\"7orangefruits[\"orange\"] = \"16orangefruits[\"orange\"] = \"orange\";\";\"] = \"16orangefruits[\"32orangefruits[\"orange\"] = \"16orangefruits[\"orange\"] = \"orange\";\";\"] = \"orange\";\";\\\\n// キーを指定して値を取り出す\\\\nConsole.WriteLine(fruits[\"25orangeConsole.WriteLine(fruits[\"orange\"]);\"]);",
-        "holeyCode": "// Dictionaryを作る\\\\nvar ___ = new Dictionary<string, string>();\\\\n// キーと値を追加\\\\nfruits[\"___\"] = \"16orangefruits[\"___\"] = \"orange\";\";\\\\n// キーを指定して値を取り出す\\\\nConsole.___(fruits[\"19orangeConsole.___(fruits[\"orange\"]);\"]);",
+        "correctCode": "// Dictionaryを作る\\\nvar fruits = new Dictionary<string, string>();\\\n// キーと値を追加\\\nfruits[\"7みかんくだもの[\"みかん\"] = \"16みかんくだもの[\"みかん\"] = \"みかん\";\";\"] = \"16みかんくだもの[\"32orangefruits[\"みかん\"] = \"16みかんくだもの[\"みかん\"] = \"みかん\";\";\"] = \"みかん\";\";\\\n// キーを指定して値を取り出す\\\nConsole.WriteLine(fruits[\"25みかんConsole.WriteLine(くだもの[\"みかん\"]);\"]);",
+        "holeyCode": "// Dictionaryを作る\\\nvar ___ = new Dictionary<string, string>();\\\n// キーと値を追加\\\nfruits[\"___\"] = \"16みかんくだもの[\"___\"] = \"みかん\";\";\\\n// キーを指定して値を取り出す\\\nConsole.___(fruits[\"19みかんConsole.___(くだもの[\"みかん\"]);\"]);",
         "correctLines": [
           "// Dictionaryを作る",
           "var fruits = new Dictionary<string, string>();",
@@ -670,14 +670,14 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Greetというメソッドを定義\\\\nstatic void Greet()\\\\n{\\\\n    // こんにちは と表示\\\\n    Console.WriteLine(\"22Hello    Console.WriteLine(\"Hello\");\");\\\\n}\\\\n// メソッドを呼び出す\\\\nGreet();",
-        "holeyCode": "// Greetというメソッドを定義\\\\nstatic void ___()\\\\n___\\\\n    // こんにちは と表示\\\\n    Console.___(\"16Hello    Console.___(\"Hello\");\");\\\\n___\\\\n// メソッドを呼び出す\\\\n___();",
+        "correctCode": "// Greetというメソッドを定義\\\nstatic void Greet()\\\n{\\\n    // こんにちは と表示\\\n    Console.WriteLine(\"22こんにちは    Console.WriteLine(\"こんにちは\");\");\\\n}\\\n// メソッドを呼び出す\\\nGreet();",
+        "holeyCode": "// Greetというメソッドを定義\\\nstatic void ___()\\\n___\\\n    // こんにちは と表示\\\n    Console.___(\"16こんにちは    Console.___(\"こんにちは\");\");\\\n___\\\n// メソッドを呼び出す\\\n___();",
         "correctLines": [
           "// Greetというメソッドを定義",
           "static void Greet()",
           "{",
           "    // こんにちは と表示",
-          "    Console.WriteLine(\"22Hello    Console.WriteLine(\"Hello\");\");",
+          "    Console.WriteLine(\"22こんにちは    Console.WriteLine(\"こんにちは\");\");",
           "}",
           "// メソッドを呼び出す",
           "Greet();"

@@ -18,17 +18,17 @@ export const elixir3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defmoduleでモジュールを定義\\\\ndefmodule Person do\\\\n  # defstructで構造体を定義\\\\n  defstruct name: \"\", email: \"\"\\\\n# endでモジュールを閉じる\\\\nend\\\\n\\\\n# nameに\"Bob\"、emailに\"bob@example.com\"を指定して構造体を作成\\\\nperson = %Person{name: \"Bob\", email: \"bob@example.com\"}", "holeyCode": "# defmoduleでモジュールを定義\\\\ndefmodule Person ___\\\\n  # defstructで構造体を定義\\\\n  defstruct name: \"___\"\"\\\\n# endでモジュールを閉じる\\\\n___\\\\n\\\\n# nameに\"Bob\"、emailに\"bob@example.com\"を指定して構造体を作成\\\\nperson = %Person{name: \"___\", email: \"bob@example.com\"}",
+        "correctCode": "# defmoduleでモジュールを定義\\\ndefmodule Person do\\\n  # defstructで構造体を定義\\\n  defstruct name: \"\", メール: \"\"\\\n# endでモジュールを閉じる\\\nend\\\n\\\n# nameに\"Bob\"、emailに\"bob@example.com\"を指定して構造体を作成\\\nperson = %Person{name: \"ボブ\", メール: \"bob@例.com\"}", "holeyCode": "# defmoduleでモジュールを定義\\\ndefmodule Person ___\\\n  # defstructで構造体を定義\\\n  defstruct name: \"___\"\"\\\n# endでモジュールを閉じる\\\n___\\\n\\\n# nameに\"Bob\"、emailに\"bob@example.com\"を指定して構造体を作成\\\nperson = %Person{name: \"___\", メール: \"bob@例.com\"}",
         "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Person do",
           "  # defstructで構造体を定義",
-          "  defstruct name: \"\", email: \"\"",
+          "  defstruct name: \"\", メール: \"\"",
           "# endでモジュールを閉じる",
           "end",
           "",
           "# nameに\"Bob\"、emailに\"bob@example.com\"を指定して構造体を作成",
-          "person = %Person{name: \"Bob\", email: \"bob@example.com\"}"
+          "person = %Person{name: \"ボブ\", メール: \"bob@例.com\"}"
         ],
         "lineHints": [
           null,
@@ -51,7 +51,7 @@ export const elixir3Data = {
             "Bob",
             "bob@example.com"
           ],
-          "others": ["do"]
+          "others": ["do", "ボブ"]
         },
         "testCases": [
           {
@@ -181,7 +181,7 @@ export const elixir3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\\\\nusers = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\\\\n# group_byでグループ化\\\\ngrouped = Enum.group_by(users, fn {_name, age} -> age end)", "holeyCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\\\\nusers = [{\"___\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]\\\\n# group_byでグループ化\\\\ngrouped = Enum.group_by(users, fn {_name, age} -> age ___)",
+        "correctCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\\\nusers = [{\"アリス\", 25}, {\"ボブ\", 30}, {\"Carol\", 25}]\\\n# group_byでグループ化\\\ngrouped = Enum.group_by(users, fn {_name, age} -> age end)", "holeyCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\\\nusers = [{\"___\", 25}, {\"ボブ\", 30}, {\"Carol\", 25}]\\\n# group_byでグループ化\\\ngrouped = Enum.group_by(users, fn {_name, age} -> age ___)",
         "correctLines": [
           "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義",
           "users = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]",
@@ -268,14 +268,14 @@ export const elixir3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defで関数を定義\\\\ndef process(map) do\\\\n  # withでパターンマッチを連鎖\\\\n  with {:ok, name} <- Map.fetch(map, :name),\\\\n       {:ok, age} <- Map.fetch(map, :age) do\\\\n    {:ok, \"#{name} is #{age} years old\"}\\\\n  # elseでエラー処理\\\\n  else\\\\n    :error -> {:error, \"Missing field\"}\\\\n  # endでブロックを閉じる\\\\n  end\\\\n# endで関数を閉じる\\\\nend", "holeyCode": "# defで関数を定義\\\\ndef process(map) ___\\\\n  # withでパターンマッチを連鎖\\\\n  with {:ok, ___} <- Map.fetch(map, :name),\\\\n       {:ok, age} <- Map.fetch(map, :age) ___\\\\n    {:ok, \"___\"}\\\\n  # elseでエラー処理\\\\n  ___\\\\n    :error -> {:error, \"___\"}\\\\n  # endでブロックを閉じる\\\\n  ___\\\\n# endで関数を閉じる\\\\n___",
+        "correctCode": "# defで関数を定義\\\ndef process(map) do\\\n  # withでパターンマッチを連鎖\\\n  with {:ok, name} <- Map.fetch(map, :name),\\\n       {:ok, age} <- Map.fetch(map, :age) do\\\n    {:ok, \"#{名前} is #{年齢}歳です\"}\\\n  # elseでエラー処理\\\n  else\\\n    :error -> {:error, \"Missing field\"}\\\n  # endでブロックを閉じる\\\n  end\\\n# endで関数を閉じる\\\nend", "holeyCode": "# defで関数を定義\\\\ndef process(map) ___\\\\n  # withでパターンマッチを連鎖\\\\n  with {:ok, ___} <- Map.fetch(map, :name),\\\\n       {:ok, age} <- Map.fetch(map, :age) ___\\\\n    {:ok, \"___\"}\\\\n  # elseでエラー処理\\\\n  ___\\\\n    :error -> {:error, \"___\"}\\\\n  # endでブロックを閉じる\\\\n  ___\\\\n# endで関数を閉じる\\\\n___",
         "correctLines": [
           "# defで関数を定義",
           "def process(map) do",
           "  # withでパターンマッチを連鎖",
           "  with {:ok, name} <- Map.fetch(map, :name),",
           "       {:ok, age} <- Map.fetch(map, :age) do",
-          "    {:ok, \"#{name} is #{age} years old\"}",
+          "    {:ok, \"#{名前} is #{年齢}歳です\"}",
           "  # elseでエラー処理",
           "  else",
           "    :error -> {:error, \"Missing field\"}",
@@ -371,13 +371,13 @@ export const elixir3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defimplでプロトコルを実装\\\\ndefimpl Describable, for: Map do\\\\n  # defで関数を定義\\\\n  def describe(map) do\\\\n    \"Map with #{map_size(map)} keys\"\\\\n  # endで関数を閉じる\\\\n  end\\\\n# endでブロックを閉じる\\\\nend", "holeyCode": "# defimplでプロトコルを実装\\\\ndefimpl Describable, for: Map ___\\\\n  # defで関数を定義\\\\n  def describe(map) ___\\\\n    \"___\"\\\\n  # endで関数を閉じる\\\\n  ___\\\\n# endでブロックを閉じる\\\\n___",
+        "correctCode": "# defimplでプロトコルを実装\\\ndefimpl Describable, for: Map do\\\n  # defで関数を定義\\\n  def describe(map) do\\\n    \"Map with #{map_size(map)} キーs\"\\\n  # endで関数を閉じる\\\n  end\\\n# endでブロックを閉じる\\\nend", "holeyCode": "# defimplでプロトコルを実装\\\\ndefimpl Describable, for: Map ___\\\\n  # defで関数を定義\\\\n  def describe(map) ___\\\\n    \"___\"\\\\n  # endで関数を閉じる\\\\n  ___\\\\n# endでブロックを閉じる\\\\n___",
         "correctLines": [
           "# defimplでプロトコルを実装",
           "defimpl Describable, for: Map do",
           "  # defで関数を定義",
           "  def describe(map) do",
-          "    \"Map with #{map_size(map)} keys\"",
+          "    \"Map with #{map_size(map)} キーs\"",
           "  # endで関数を閉じる",
           "  end",
           "# endでブロックを閉じる",

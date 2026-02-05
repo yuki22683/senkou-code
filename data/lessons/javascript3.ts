@@ -22,13 +22,13 @@ export const javascriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Promise コンストラクタで作成\\\\nconst p = new Promise((resolve) => {\\\\n  // 'Hello Promise!' で解決\\\\n  resolve('Hello Promise!');\\\\n});\\\\n\\\\n// then でコールバックを登録\\\\np.then(msg => console.log(msg));",
-        "holeyCode": "// Promise コンストラクタで作成\\\\nconst p = new ___((resolve) => {\\\\n  // 'Hello Promise!' で解決\\\\n  ___('Hello Promise!');\\\\n});\\\\n\\\\n// then でコールバックを登録\\\\np.___(msg => console.log(msg));",
+        "correctCode": "// Promise コンストラクタで作成\\\nconst p = new Promise((resolve) => {\\\n  // 'Hello Promise!' で解決\\\n  resolve('こんにちは Promise!');\\\n});\\\n\\\n// then でコールバックを登録\\\np.then(msg => console.log(msg));",
+        "holeyCode": "// Promise コンストラクタで作成\\\nconst p = new ___((resolve) => {\\\n  // 'Hello Promise!' で解決\\\n  ___('こんにちは Promise!');\\\n});\\\n\\\n// then でコールバックを登録\\\np.___(msg => console.log(msg));",
         "correctLines": [
           "// Promise コンストラクタで作成",
           "const p = new Promise((resolve) => {",
           "  // 'Hello Promise!' で解決",
-          "  resolve('Hello Promise!');",
+          "  resolve('こんにちは Promise!');",
           "});",
           "",
           "// then でコールバックを登録",
@@ -125,13 +125,13 @@ export const javascriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// async キーワードで非同期関数を定義\\\\nasync function getMessage() {\\\\n  // return で値を返す\\\\n  return 'Async works!';\\\\n}\\\\n\\\\n// then でメッセージを出力\\\\ngetMessage().then(msg => console.log(msg));",
-        "holeyCode": "// async キーワードで非同期関数を定義\\\\n___ function getMessage() {\\\\n  // return で値を返す\\\\n  ___ 'Async works!';\\\\n}\\\\n\\\\n// then でメッセージを出力\\\\ngetMessage().___(msg => console.log(msg));",
+        "correctCode": "// async キーワードで非同期関数を定義\\\nasync function getMessage() {\\\n  // return で値を返す\\\n  return '非同期成功！';\\\n}\\\n\\\n// then でメッセージを出力\\\ngetMessage().then(msg => console.log(msg));",
+        "holeyCode": "// async キーワードで非同期関数を定義\\\n___ function getMessage() {\\\n  // return で値を返す\\\n  ___ '非同期成功！';\\\n}\\\n\\\n// then でメッセージを出力\\\ngetMessage().___(msg => console.log(msg));",
         "correctLines": [
           "// async キーワードで非同期関数を定義",
           "async function getMessage() {",
           "  // return で値を返す",
-          "  return 'Async works!';",
+          "  return '非同期成功！';",
           "}",
           "",
           "// then でメッセージを出力",
@@ -300,8 +300,8 @@ export const javascriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Dogクラスを定義\\\\nclass Dog {\\\\n  // constructorでnameを初期化\\\\n  constructor(name) {\\\\n    // this.nameにnameを代入\\\\n    this.name = name;\\\\n  }\\\\n  bark() {\\\\n    // テンプレートリテラルで出力\\\\n    console.log(`${this.name}: Woof!`);\\\\n  }\\\\n}\\\\n\\\\n// dogにnew Dog('Pochi')を代入\\\\nconst dog = new Dog('Pochi');\\\\n// bark()メソッドを呼び出し\\\\ndog.bark();",
-        "holeyCode": "// Dogクラスを定義\\\\n___ Dog {\\\\n  // constructorでnameを初期化\\\\n  ___(name) {\\\\n    // this.nameにnameを代入\\\\n    this.___ = name;\\\\n  }\\\\n  bark() {\\\\n    // テンプレートリテラルで出力\\\\n    console.log(`${this.___}: Woof!`);\\\\n  }\\\\n}\\\\n\\\\n// dogにnew Dog('Pochi')を代入\\\\nconst dog = ___ Dog('Pochi');\\\\n// bark()メソッドを呼び出し\\\\ndog.___();",
+        "correctCode": "// Dogクラスを定義\\\nclass Dog {\\\n  // constructorでnameを初期化\\\n  constructor(name) {\\\n    // this.nameにnameを代入\\\n    this.name = name;\\\n  }\\\n  bark() {\\\n    // テンプレートリテラルで出力\\\n    console.log(`${this.名前}: ワン！`);\\\n  }\\\n}\\\n\\\n// dogにnew Dog('Pochi')を代入\\\nconst dog = new Dog('ポチ');\\\n// bark()メソッドを呼び出し\\\ndog.bark();",
+        "holeyCode": "// Dogクラスを定義\\\n___ Dog {\\\n  // constructorでnameを初期化\\\n  ___(name) {\\\n    // this.nameにnameを代入\\\n    this.___ = name;\\\n  }\\\n  bark() {\\\n    // テンプレートリテラルで出力\\\n    console.log(`${this.___}: ワン！`);\\\n  }\\\n}\\\n\\\n// dogにnew Dog('Pochi')を代入\\\nconst dog = ___ Dog('ポチ');\\\n// bark()メソッドを呼び出し\\\ndog.___();",
         "correctLines": [
           "// Dogクラスを定義",
           "class Dog {",
@@ -312,12 +312,12 @@ export const javascriptData3 = {
           "  }",
           "  bark() {",
           "    // テンプレートリテラルで出力",
-          "    console.log(`${this.name}: Woof!`);",
+          "    console.log(`${this.名前}: ワン！`);",
           "  }",
           "}",
           "",
           "// dogにnew Dog('Pochi')を代入",
-          "const dog = new Dog('Pochi');",
+          "const dog = new Dog('ポチ');",
           "// bark() メソッドを呼び出し",
           "dog.bark();"
         ],
@@ -346,12 +346,7 @@ export const javascriptData3 = {
             "function",
             "const"
           ],
-          "others": [
-            "constructor",
-            "name",
-            "new",
-            "bark"
-          ]
+          "others": ["constructor", "name", "new", "bark", "名前"]
         },
         "testCases": [
           {
@@ -376,7 +371,7 @@ export const javascriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 親クラスAnimalを定義\\\\nclass Animal {\\\\n  // speakメソッドを定義\\\\n  speak() { console.log('...'); }\\\\n}\\\\n\\\\n// CatクラスがAnimalを継承\\\\nclass Cat extends Animal {\\\\n  // speakメソッドをオーバーライド\\\\n  speak() { console.log('Meow!'); }\\\\n}\\\\n\\\\n// catにnew Cat()を代入\\\\nconst cat = new Cat();\\\\n// speak()を呼び出し\\\\ncat.speak();",
+        "correctCode": "// 親クラスAnimalを定義\\\nclass Animal {\\\n  // speakメソッドを定義\\\n  speak() { console.log('...'); }\\\n}\\\n\\\n// CatクラスがAnimalを継承\\\nclass Cat extends Animal {\\\n  // speakメソッドをオーバーライド\\\n  speak() { console.log('ニャー！'); }\\\n}\\\n\\\n// catにnew Cat()を代入\\\nconst cat = new Cat();\\\n// speak()を呼び出し\\\ncat.speak();",
         "holeyCode": "// 親クラスAnimalを定義\\\\n___ Animal {\\\\n  // speakメソッドを定義\\\\n  ___() { console.log('...'); }\\\\n}\\\\n\\\\n// CatクラスがAnimalを継承\\\\nclass Cat ___ Animal {\\\\n  // speakメソッドをオーバーライド\\\\n  speak() { console.log('___'); }\\\\n}\\\\n\\\\n// catにnew Cat()を代入\\\\nconst cat = ___ Cat();\\\\n// speak()を呼び出し\\\\ncat.___();",
         "correctLines": [
           "// 親クラスAnimalを定義",
@@ -388,7 +383,7 @@ export const javascriptData3 = {
           "// CatクラスがAnimalを継承",
           "class Cat extends Animal {",
           "  // speakメソッドをオーバーライド",
-          "  speak() { console.log('Meow!'); }",
+          "  speak() { console.log('ニャー！'); }",
           "}",
           "",
           "// catにnew Cat()を代入",
@@ -514,11 +509,11 @@ export const javascriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// user: { name: 'Bob' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス\\\\nconst data = { user: { name: 'Bob' } };\\\\n// ?. で安全にプロパティにアクセス\\\\nconsole.log(data?.user?.name);\\\\n// 存在しないプロパティにアクセス\\\\nconsole.log(data?.profile?.age);",
+        "correctCode": "// user: { name: 'Bob' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス\\\nconst data = { user: { name: 'ボブ' } };\\\n// ?. で安全にプロパティにアクセス\\\nconsole.log(data?.user?.name);\\\n// 存在しないプロパティにアクセス\\\nconsole.log(data?.profile?.age);",
         "holeyCode": "// user: { name: 'Bob' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス\\\\nconst data = { user: { name: '___' } };\\\\n// ?. で安全にプロパティにアクセス\\\\nconsole.log(data___user___name);\\\\n// 存在しないプロパティにアクセス\\\\nconsole.log(data___profile?.age);",
         "correctLines": [
           "// user: { name: 'Bob' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス",
-          "const data = { user: { name: 'Bob' } };",
+          "const data = { user: { name: 'ボブ' } };",
           "// ?. で安全にプロパティにアクセス",
           "console.log(data?.user?.name);",
           "// 存在しないプロパティにアクセス",
@@ -565,13 +560,13 @@ export const javascriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// undefined を代入し、Nullish Coalescingでデフォルト値\\\\nconst value = undefined;\\\\n// ?? でnull/undefinedのデフォルト値を設定\\\\nconst result = value ?? 'default';\\\\n// console.log で結果を出力\\\\nconsole.log(result);",
-        "holeyCode": "// undefined を代入し、Nullish Coalescingでデフォルト値\\\\nconst value = ___;\\\\n// ?? でnull/undefinedのデフォルト値を設定\\\\nconst result = value ___ 'default';\\\\n// console.log で結果を出力\\\\nconsole.___(result);",
+        "correctCode": "// undefined を代入し、Nullish Coalescingでデフォルト値\\\nconst value = undefined;\\\n// ?? でnull/undefinedのデフォルト値を設定\\\nconst result = value ?? 'デフォルト';\\\n// console.log で結果を出力\\\nconsole.log(result);",
+        "holeyCode": "// undefined を代入し、Nullish Coalescingでデフォルト値\\\nconst value = ___;\\\n// ?? でnull/undefinedのデフォルト値を設定\\\nconst result = value ___ 'デフォルト';\\\n// console.log で結果を出力\\\nconsole.___(result);",
         "correctLines": [
           "// undefined を代入し、Nullish Coalescingでデフォルト値",
           "const value = undefined;",
           "// ?? でnull/undefinedのデフォルト値を設定",
-          "const result = value ?? 'default';",
+          "const result = value ?? 'デフォルト';",
           "// console.log で結果を出力",
           "console.log(result);"
         ],

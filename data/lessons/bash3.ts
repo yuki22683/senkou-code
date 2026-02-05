@@ -22,11 +22,11 @@ export const bash3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# |でパイプを使う\necho \"hello world\" | wc -w",
+        "correctCode": "# |でパイプを使う\necho \"Hello World\" | wc -w",
         "holeyCode": "# |でパイプを使う\necho \"___\" | wc -w",
         "correctLines": [
           "# |でパイプを使う",
-          "echo \"hello world\" | wc -w"
+          "echo \"Hello World\" | wc -w"
         ],
         "lineHints": [
           null,
@@ -39,7 +39,7 @@ export const bash3Data = {
             ">",
             "<"
           ],
-          "others": ["hello world"]
+          "others": ["hello world", "Hello World"]
         },
         "testCases": [
           {
@@ -64,11 +64,11 @@ export const bash3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# >でファイルに出力\necho \"test\" > /tmp/out.txt && cat /tmp/out.txt",
+        "correctCode": "# >でファイルに出力\necho \"テスト\" > /tmp/out.txt && cat /tmp/out.txt",
         "holeyCode": "# >でファイルに出力\necho \"___\" > /tmp/out.txt && cat /tmp/out.txt",
         "correctLines": [
           "# >でファイルに出力",
-          "echo \"test\" > /tmp/out.txt && cat /tmp/out.txt"
+          "echo \"テスト\" > /tmp/out.txt && cat /tmp/out.txt"
         ],
         "lineHints": [
           null,
@@ -81,7 +81,7 @@ export const bash3Data = {
             "|",
             "<"
           ],
-          "others": ["test"]
+          "others": ["test", "テスト"]
         },
         "testCases": [
           {
@@ -150,11 +150,11 @@ export const bash3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 2>でエラー出力をリダイレクト\nls /nonexistent 2> /dev/null && echo \"ok\" || echo \"error hidden\"",
-        "holeyCode": "# 2>でエラー出力をリダイレクト\nls /nonexistent 2> /dev/null && echo \"___\" || echo \"error hidden\"",
+        "correctCode": "# 2>でエラー出力をリダイレクト\nls /nonexistent 2> /dev/null && echo \"ok\" || echo \"エラー hidden\"",
+        "holeyCode": "# 2>でエラー出力をリダイレクト\nls /nonexistent 2> /dev/null && echo \"___\" || echo \"エラー hidden\"",
         "correctLines": [
           "# 2>でエラー出力をリダイレクト",
-          "ls /nonexistent 2> /dev/null && echo \"ok\" || echo \"error hidden\""
+          "ls /nonexistent 2> /dev/null && echo \"ok\" || echo \"エラー hidden\""
         ],
         "lineHints": [
           null,
@@ -238,11 +238,11 @@ export const bash3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# xargsで引数に変換\necho \"hello world\" | xargs echo \"Message:\"",
-        "holeyCode": "# xargsで引数に変換\necho \"___\" | xargs echo \"Message:\"",
+        "correctCode": "# xargsで引数に変換\necho \"Hello World\" | xargs echo \"Mess年齢:\"",
+        "holeyCode": "# xargsで引数に変換\necho \"___\" | xargs echo \"Mess年齢:\"",
         "correctLines": [
           "# xargsで引数に変換",
-          "echo \"hello world\" | xargs echo \"Message:\""
+          "echo \"Hello World\" | xargs echo \"Mess年齢:\""
         ],
         "lineHints": [
           null,
@@ -255,7 +255,7 @@ export const bash3Data = {
             "eval",
             "args"
           ],
-          "others": ["hello world"]
+          "others": ["hello world", "Hello World"]
         },
         "testCases": [
           {
@@ -280,11 +280,11 @@ export const bash3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# sedで置換\necho \"cat\" | sed 's/cat/dog/'",
-        "holeyCode": "# sedで置換\necho \"___\" | sed 's/cat/dog/'",
+        "correctCode": "# sedで置換\necho \"猫\" | sed 's/猫/犬/'",
+        "holeyCode": "# sedで置換\necho \"___\" | sed 's/猫/犬/'",
         "correctLines": [
           "# sedで置換",
-          "echo \"cat\" | sed 's/cat/dog/'"
+          "echo \"猫\" | sed 's/猫/犬/'"
         ],
         "lineHints": [
           null,
@@ -297,7 +297,7 @@ export const bash3Data = {
             "tr",
             "grep"
           ],
-          "others": ["cat"]
+          "others": ["cat", "猫"]
         },
         "testCases": [
           {
@@ -322,11 +322,11 @@ export const bash3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# awkでフィールドを抽出\necho \"apple 100 yen\" | awk '{print $2}'",
+        "correctCode": "# awkでフィールドを抽出\necho \"りんご 100 yen\" | awk '{print $2}'",
         "holeyCode": "# awkでフィールドを抽出\necho \"___\" | awk '{print $2}'",
         "correctLines": [
           "# awkでフィールドを抽出",
-          "echo \"apple 100 yen\" | awk '{print $2}'"
+          "echo \"りんご 100 yen\" | awk '{print $2}'"
         ],
         "lineHints": [
           null,
@@ -339,7 +339,7 @@ export const bash3Data = {
             "cut",
             "tr"
           ],
-          "others": ["apple 100 yen"]
+          "others": ["apple 100 yen", "りんご 100 yen"]
         },
         "testCases": [
           {

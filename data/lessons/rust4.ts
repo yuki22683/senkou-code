@@ -22,8 +22,8 @@ export const rust4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Speakトレイトを定義\\\\ntrait Speak {\\\\n    fn speak(&self) -> String;\\\\n}\\\\n\\\\nstruct Dog;\\\\n\\\\nimpl Speak for Dog {\\\\n    fn speak(&self) -> String {\\\\n        String::from(\"Woof!\")\\\\n    }\\\\n}\\\\n\\\\nfn main() {\\\\n    let dog = Dog;\\\\n    println!(\"{}\", dog.speak());\\\\n}",
-        "holeyCode": "// Speakトレイトを定義\\\\ntrait ___ {\\\\n    fn ___ (&self) -> String;\\\\n___\\\\n\\\\nstruct ___;\\\\n\\\\nimpl ___ for ___ {\\\\n    fn ___ (&self) -> String {\\\\n        String::___(\"Woof!\")\\\\n    ___\\\\n___\\\\n\\\\nfn ___ () {\\\\n    let ___ = Dog;\\\\n    ___!(\"{}\", dog.speak());\\\\n___",
+        "correctCode": "// Speakトレイトを定義\\\ntrait Speak {\\\n    fn speak(&self) -> String;\\\n}\\\n\\\nstruct Dog;\\\n\\\nimpl Speak for Dog {\\\n    fn speak(&self) -> String {\\\n        String::from(\"ワン！\")\\\n    }\\\n}\\\n\\\nfn main() {\\\n    let dog = Dog;\\\n    println!(\"{}\", dog.speak());\\\n}",
+        "holeyCode": "// Speakトレイトを定義\\\ntrait ___ {\\\n    fn ___ (&self) -> String;\\\n___\\\n\\\nstruct ___;\\\n\\\nimpl ___ for ___ {\\\n    fn ___ (&self) -> String {\\\n        String::___(\"ワン！\")\\\n    ___\\\n___\\\n\\\nfn ___ () {\\\n    let ___ = Dog;\\\n    ___!(\"{}\", dog.speak());\\\n___",
         "correctLines": [
           "// Speakトレイトを定義",
           "trait Speak {",
@@ -34,7 +34,7 @@ export const rust4Data = {
           "",
           "impl Speak for Dog {",
           "    fn speak(&self) -> String {",
-          "        String::from(\"Woof!\")",
+          "        String::from(\"ワン！\")",
           "    }",
           "}",
           "",
@@ -93,8 +93,8 @@ export const rust4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// derive でトレイトを自動実装\\\\n#[___(Debug)]\\\\nstruct User {\\\\n    name: String,\\\\n    age: u32,\\\\n}\\\\n\\\\nfn main() {\\\\n    let user = User { name: String::from(\"Alice\"), age: 30 };\\\\n    println!(\"{:?}\", user);\\\\n}",
-        "holeyCode": "// derive でトレイトを自動実装\\\\n#[___(Debug)]\\\\nstruct ___ {\\\\n    name: ___,\\\\n    age: ___,\\\\n___\\\\n\\\\nfn ___ () {\\\\n    let ___ = User { name: String::from(\"Alice\"), age: 30 };\\\\n    ___!(\"{:?}\", user);\\\\n___",
+        "correctCode": "// derive でトレイトを自動実装\\\n#[___(Debug)]\\\nstruct User {\\\n    name: String,\\\n    age: u32,\\\n}\\\n\\\nfn main() {\\\n    let user = User { name: String::from(\"アリス\"), age: 30 };\\\n    println!(\"{:?}\", user);\\\n}",
+        "holeyCode": "// derive でトレイトを自動実装\\\n#[___(Debug)]\\\nstruct ___ {\\\n    name: ___,\\\n    age: ___,\\\n___\\\n\\\nfn ___ () {\\\n    let ___ = User { name: String::from(\"アリス\"), age: 30 };\\\n    ___!(\"{:?}\", user);\\\n___",
         "correctLines": [
           "// derive でトレイトを自動実装",
           "#[___(Debug)]",
@@ -199,13 +199,13 @@ export const rust4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "use std::rc::Rc;\\\\n\\\\nfn main() {\\\\n    let a = Rc::new(String::from(\"Hello\"));\\\\n    // clone で参照カウントを増やす\\\\n    let b = Rc::clone(&a);\\\\n    println!(\"{} {}\", a, b);\\\\n}",
-        "holeyCode": "use std::___::___;\\\\n\\\\nfn ___ () {\\\\n    let ___ = Rc::new(String::from(\"Hello\"));\\\\n    // clone で参照カウントを増やす\\\\n    let ___ = Rc::clone(&a);\\\\n    ___!(\"{} {}\", a, b);\\\\n___",
+        "correctCode": "use std::rc::Rc;\\\n\\\nfn main() {\\\n    let a = Rc::new(String::from(\"こんにちは\"));\\\n    // clone で参照カウントを増やす\\\n    let b = Rc::clone(&a);\\\n    println!(\"{} {}\", a, b);\\\n}",
+        "holeyCode": "use std::___::___;\\\n\\\nfn ___ () {\\\n    let ___ = Rc::new(String::from(\"こんにちは\"));\\\n    // clone で参照カウントを増やす\\\n    let ___ = Rc::clone(&a);\\\n    ___!(\"{} {}\", a, b);\\\n___",
         "correctLines": [
           "use std::rc::Rc;",
           "",
           "fn main() {",
-          "    let a = Rc::new(String::from(\"Hello\"));",
+          "    let a = Rc::new(String::from(\"こんにちは\"));",
           "    // clone で参照カウントを増やす",
           "    let b = Rc::clone(&a);",
           "    println!(\"{} {}\", a, b);",
