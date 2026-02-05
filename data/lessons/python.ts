@@ -369,15 +369,15 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# score に 100 を入れる\\nscore = 100\\n# もし 80 より大きかったら\\nif score > 80:\\n    # 「ごうかく！」と表示する\\n    print('合格！')",
-        "holeyCode": "# score に 100 を入れる\\nscore = ___\\n# もし 80 より大きかったら\\nif score ___ 80:\\n    # 「ごうかく！」と表示する\\n    ___('合格！')",
+        "correctCode": "# score に 100 を入れる\\nscore = 100\\n# もし 80 より大きかったら\\nif score > 80:\\n    # 「ごうかく！」と表示する\\n    print('ごうかく！')",
+        "holeyCode": "# score に 100 を入れる\\nscore = ___\\n# もし 80 より大きかったら\\nif score ___ 80:\\n    # 「ごうかく！」と表示する\\n    ___('ごうかく！')",
         "correctLines": [
           "# score に 100 を入れる",
           "score = 100",
           "# もし 80 より大きかったら",
           "if score > 80:",
           "    # 「ごうかく！」と表示する",
-          "    print('合格！')"
+          "    print('ごうかく！')"
         ],
         "lineHints": [
           null,
@@ -427,19 +427,19 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# age に 10 を入れる\\nage = 10\\n# 20以上かを比較する演算子\\nif age >= 20:\\n    # 20歳以上のときのメッセージ（'おとな'）\\n    print('大人')\\n# 「そうでなければ」のキーワード\\nelse:\\n    # それ以外の場合（'こども'）\\n    print('子供')",
-        "holeyCode": "# age に 10 を入れる\\nage = ___\\n# 20以上かを比較する演算子\\nif age ___ 20:\\n    # 20歳以上のときのメッセージ（'おとな'）\\n    ___('大人')\\n# 「そうでなければ」のキーワード\\n___:\\n    # それ以外の場合（'こども'）\\n    ___('子供')",
+        "correctCode": "# age に 10 を入れる\\nage = 10\\n# 20以上かを比較する演算子\\nif age >= 20:\\n    # 20歳以上のときのメッセージ（'おとな'）\\n    print('おとな')\\n# 「そうでなければ」のキーワード\\nelse:\\n    # それ以外の場合（'こども'）\\n    print('こども')",
+        "holeyCode": "# age に 10 を入れる\\nage = ___\\n# 20以上かを比較する演算子\\nif age ___ 20:\\n    # 20歳以上のときのメッセージ（'おとな'）\\n    ___('おとな')\\n# 「そうでなければ」のキーワード\\n___:\\n    # それ以外の場合（'こども'）\\n    ___('こども')",
         "correctLines": [
           "# age に 10 を入れる",
           "age = 10",
           "# 20以上かを比較する演算子",
           "if age >= 20:",
           "    # 20歳以上のときのメッセージ（'おとな'）",
-          "    print('大人')",
+          "    print('おとな')",
           "# 「そうでなければ」のキーワード",
           "else:",
           "    # それ以外の場合（'こども'）",
-          "    print('子供')"
+          "    print('こども')"
         ],
         "lineHints": [
           null,
@@ -495,15 +495,15 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに85を入れる\\nscore = 85\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif score >= 80 and score <= 100:\\n    # 「ごうかく！」と出力\\n    print('合格！')",
-        "holeyCode": "# scoreに85を入れる\\nscore = ___\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif score ___ 80 and score <= 100:\\n    # 「ごうかく！」と出力\\n    ___('合格！')",
+        "correctCode": "# scoreに85を入れる\\nscore = 85\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif score >= 80 and score <= 100:\\n    # 「ごうかく！」と出力\\n    print('ごうかく！')",
+        "holeyCode": "# scoreに85を入れる\\nscore = ___\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif score ___ 80 and score <= 100:\\n    # 「ごうかく！」と出力\\n    ___('ごうかく！')",
         "correctLines": [
           "# scoreに85を入れる",
           "score = 85",
           "# 80以上 かつ 100以下 ならメッセージを出す",
           "if score >= 80 and score <= 100:",
           "    # 「ごうかく！」と出力",
-          "    print('合格！')"
+          "    print('ごうかく！')"
         ],
         "lineHints": [
           null,
@@ -561,11 +561,11 @@ export const pythonData = {
         ],
         "lineHints": [
           null,
-          "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
+          "リストを格納する変数名を入力します。",
           null,
-          "変数の内容を画面に出力します。",
+          "ループで回すリストの変数名を入力します。",
           null,
-          null
+          "変数の内容を画面に出力する関数を使用します。"
         ],
         "candidates": {
           "variables": [
@@ -627,8 +627,7 @@ export const pythonData = {
           "strings": [
             "みかん",
             "オレンジ"
-          ],
-          "others": ["ecolors"]
+          ]
         },
         "testCases": [
           {
