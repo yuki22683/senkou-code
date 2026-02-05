@@ -709,11 +709,11 @@ export const cppData = {
         "lineHints": [
           null,
           "void型の値を返す関数（greet）を定義します。",
-          "関数の終わりです。",
+          null,
+          null,
+          null,
+          null,
           "関数（greet）を呼び出して実行します。",
-          null,
-          null,
-          null,
           null,
           null
         ],

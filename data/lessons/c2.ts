@@ -143,11 +143,11 @@ export const c2Data = {
           null,
           "void型の値を返す関数（show）を定義します。",
           "変数の値を指定された形式で画面に表示します。",
+          null,
+          null,
           "25 を渡して関数を呼び出します。",
           null,
-          null,
-          null,
-          null,
+          null
         ],
         "candidates": {
           "variables": [

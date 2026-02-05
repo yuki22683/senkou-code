@@ -326,9 +326,9 @@ export const elixir2Data = {
           "defmodule でモジュールを定義します。",
           null,
           "関数（triple）を新しく定義します。",
-          "Calc.triple(4) で関数を呼び出します。",
           null,
-          null
+          null,
+          "Calc.triple(4) で関数を呼び出します。"
         ],
         "candidates": {
           "keywords": [
@@ -380,9 +380,9 @@ export const elixir2Data = {
           "関数（factorial）を新しく定義します。",
           null,
           "関数（factorial）を新しく定義します。",
-          "Math.factorial(5) で関数を呼び出します。",
           null,
-          null
+          null,
+          "Math.factorial(5) で関数を呼び出します。"
         ],
         "candidates": {
           "keywords": [

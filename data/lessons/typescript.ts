@@ -174,8 +174,8 @@ export const typescriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// scoreに50を入れる\nlet score: number = 50;\n// 10点プラスする\nscore += 10;\n// scoreを表示\nconsole.log(score);",
-        "holeyCode": "// scoreに50を入れる\nlet score: number = ___ ;\n// 10点プラスする\nscore ___ 10;\n// scoreを表示\nconsole.log(score);",
+        "correctCode": "// scoreに50を入れる\\nlet score: number = 50;\\n// 10点プラスする\\nscore += 10;\\n// scoreを表示\\nconsole.log(score);",
+        "holeyCode": "// scoreに50を入れる\\nlet score: number = ___ ;\\n// 10点プラスする\\nscore ___ 10;\\n// scoreを表示\\nconsole.log(score);",
         "correctLines": [
           "// scoreに50を入れる",
           "let score: number = 50;",
@@ -242,7 +242,7 @@ export const typescriptData = {
           null,
           "数字を入れるので、ラベルは `number` です。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。"
+          "コンソールに文字列を出力します。"
         ],
         "candidates": {
           "variables": [
@@ -408,11 +408,11 @@ export const typescriptData = {
           null,
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに文字列を出力します。",
           null,
           "もし条件が満たされなかった場合に実行する処理を記述します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに文字列を出力します。",
           null
         ],
         "candidates": {
@@ -474,7 +474,7 @@ export const typescriptData = {
           null,
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに文字列を出力します。",
           null
         ],
         "candidates": {

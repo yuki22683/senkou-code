@@ -204,10 +204,10 @@ export const javascriptData3 = {
           "await でPromiseの結果を待ちます。",
           null,
           "console.log で出力します。",
-          "関数（main）を呼び出して実行します。",
           null,
           null,
-          null
+          null,
+          "関数（main）を呼び出して実行します。"
         ],
         "candidates": {
           "keywords": [
@@ -328,7 +328,7 @@ export const javascriptData3 = {
           "constructor でインスタンスを初期化します。",
           null,
           "this.name に名前を代入します。",
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに文字列を出力します。",
           "new Dog('ポチ')でインスタンスを作成します。",
           null,
           "barkメソッドを呼び出します。",

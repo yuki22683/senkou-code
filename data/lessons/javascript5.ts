@@ -218,7 +218,7 @@ export const javascriptData5 = {
           null,
           "エラー（例外）が発生した場合の処理を記述します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。"
+          "コンソールに文字列を出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -279,7 +279,7 @@ export const javascriptData5 = {
           "エラーが発生する可能性のある処理をここから記述します。",
           null,
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに文字列を出力します。",
           null,
           null,
           "関数（process）を呼び出して実行します。",
@@ -561,7 +561,7 @@ export const javascriptData5 = {
           null,
           null,
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに文字列を出力します。",
           null,
           "return でプロパティ値を返します。",
           null,

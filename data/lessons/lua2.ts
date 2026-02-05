@@ -222,9 +222,9 @@ export const lua2Data = {
           "function で関数を定義します。",
           null,
           "* で掛け算します。",
-          "double関数を呼び出します。",
           null,
-          null
+          null,
+          "double関数を呼び出します。"
         ],
         "candidates": {
           "keywords": [
