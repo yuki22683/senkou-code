@@ -288,8 +288,8 @@ export const typescriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// フルーツのユニオン型\\ntype Fruit = 'りんご' | 'バナナ';\\n// Record でキーと値の型を指定\\ntype Prices = Record<Fruit, number>;\\n\\n// 価格オブジェクト\\nconst prices: Prices = {\\n  // りんごの価格\\n  apple: 100,\\n  // バナナの価格\\n  banana: 80\\n};\\n\\n// りんごの価格を出力\\nconsole.log(prices.apple);",
-        "holeyCode": "// フルーツのユニオン型\\ntype Fruit = 'りんご' | '___';\\n// Record でキーと値の型を指定\\ntype Prices = Record<Fruit, ___>;\\n\\n// 価格オブジェクト\\nconst prices: ___ = {\\n  // りんごの価格\\n  apple: ___,\\n  // バナナの価格\\n  banana: ___\\n___\\n\\n// りんごの価格を出力\\nconsole.___(prices.apple);",
+        "correctCode": "// フルーツのユニオン型\\ntype Fruit = 'りんご' | 'バナナ';\\n// Record でキーと値の型を指定\\ntype Prices = Record<Fruit, number>;\\n\\n// 価格オブジェクト\\nconst prices: Prices = {\\n  // りんごの価格\\n  'りんご': 100,\\n  // バナナの価格\\n  'バナナ': 80\\n};\\n\\n// りんごの価格を出力\\nconsole.log(prices['りんご']);",
+        "holeyCode": "// フルーツのユニオン型\\ntype Fruit = 'りんご' | '___';\\n// Record でキーと値の型を指定\\ntype Prices = Record<Fruit, ___>;\\n\\n// 価格オブジェクト\\nconst prices: ___ = {\\n  // りんごの価格\\n  'りんご': ___,\\n  // バナナの価格\\n  'バナナ': ___\\n___\\n\\n// りんごの価格を出力\\nconsole.___(prices['りんご']);",
         "correctLines": [
                   "// フルーツのユニオン型",
                   "type Fruit = 'りんご' | 'バナナ';",
@@ -299,13 +299,13 @@ export const typescriptData3 = {
                   "// 価格オブジェクト",
                   "const prices: Prices = {",
                   "  // りんごの価格",
-                  "  apple: 100,",
+                  "  'りんご': 100,",
                   "  // バナナの価格",
-                  "  banana: 80",
+                  "  'バナナ': 80",
                   "};",
                   "",
                   "// りんごの価格を出力",
-                  "console.log(prices.apple);"
+                  "console.log(prices['りんご']);"
         ],
         "lineHints": [
                   null,
@@ -330,7 +330,7 @@ export const typescriptData3 = {
             "Map",
             "Object"
           ],
-          "others": ["|", "100", "80", "apple", "banana", "number", "Prices", "};", "log", "バナナ"]
+          "others": ["|", "100", "80", "'りんご'", "'バナナ'", "number", "Prices", "};", "log", "バナナ"]
         },
         "testCases": [
           {

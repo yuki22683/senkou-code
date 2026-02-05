@@ -318,18 +318,18 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数に値を代入\\nfruit=\"りんご\"\\n# パターンマッチで分岐するキーワード\\ncase $fruit in\\n    # appleの場合\\n    apple) echo \"赤\";;\\n    # bananaの場合\\n    banana) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"unknown\";;\\nesac", "holeyCode": "# 変数に値を代入\\nfruit=\"___\"\\n# パターンマッチで分岐するキーワード\\n___ $fruit in\\n    # appleの場合\\n    apple) echo \"___\";;\\n    # bananaの場合\\n    banana) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"unknown\";;\\nesac",
+        "correctCode": "# 変数に値を代入\\nfruit=\"りんご\"\\n# パターンマッチで分岐するキーワード\\ncase $fruit in\\n    # りんごの場合\\n    りんご) echo \"赤\";;\\n    # バナナの場合\\n    バナナ) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\nesac", "holeyCode": "# 変数に値を代入\\nfruit=\"___\"\\n# パターンマッチで分岐するキーワード\\n___ $fruit in\\n    # りんごの場合\\n    りんご) echo \"___\";;\\n    # バナナの場合\\n    バナナ) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\nesac",
         "correctLines": [
           "# 変数に値を代入",
           "fruit=\"りんご\"",
           "# パターンマッチで分岐するキーワード",
           "case $fruit in",
-          "    # appleの場合",
-          "    apple) echo \"赤\";;",
-          "    # bananaの場合",
-          "    banana) echo \"黄色\";;",
+          "    # りんごの場合",
+          "    りんご) echo \"赤\";;",
+          "    # バナナの場合",
+          "    バナナ) echo \"黄色\";;",
           "    # その他の場合",
-          "    *) echo \"unknown\";;",
+          "    *) echo \"その他\";;",
           "esac"
         ],
         "lineHints": [

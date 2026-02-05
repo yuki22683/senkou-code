@@ -314,7 +314,7 @@ export const sql4Data = {
           },
           {
             "title": "INSERT の使い方",
-            "content": "# INSERT INTO テーブル VALUES (値)\\n\\n**コード例：**\\n```sql\\nINSERT INTO users (name, email)\\nVALUES ('アリス', 'alice@example.com');\\n```\\n\\n**このコードは何をしているの？**\\n- usersテーブルに\\n- 名前がAlice、メールがalice@example.comの人を追加"
+            "content": "# INSERT INTO テーブル VALUES (値)\\n\\n**コード例：**\\n```sql\\nINSERT INTO users (name, email)\\nVALUES ('アリス', 'alice@example.com');\\n```\\n\\n**このコードは何をしているの？**\\n- usersテーブルに\\n- 名前がアリス、メールがalice@example.comの人を追加"
           }
         ],
         "initialDisplayMode": "holey",
