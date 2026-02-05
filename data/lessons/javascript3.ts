@@ -121,7 +121,7 @@ export const javascriptData3 = {
           },
           {
             "title": "async の使い方",
-            "content": "# 戻り値は自動で Promise になる！\\n\\n普通に値を `return` するだけで、Promise として扱えます。\\n\\n**コード例：**\\n```javascript\\nasync function getData() {\\n  return { name: 'アリス' };\\n}\\n\\n// 普通のオブジェクトを返しているけど...\\n// Promise として扱える！\\ngetData().then(data => console.log(data.name));\\n```\\n**実行結果：**\\n```\\nAlice\\n```"
+            "content": "# 戻り値は自動で Promise になる！\\n\\n普通に値を `return` するだけで、Promise として扱えます。\\n\\n**コード例：**\\n```javascript\\nasync function getData() {\\n  return { name: 'アリス' };\\n}\\n\\n// 普通のオブジェクトを返しているけど...\\n// Promise として扱える！\\ngetData().then(data => console.log(data.name));\\n```\\n**実行結果：**\\n```\\nアリス\\n```"
           }
         ],
         "initialDisplayMode": "holey",
@@ -296,11 +296,11 @@ export const javascriptData3 = {
           },
           {
             "title": "インスタンスの作成",
-            "content": "# new で実際のオブジェクトを作る\\n\\n設計図から作った実際のオブジェクトを **インスタンス** と呼びます。\\n\\n**身近なたとえ：**\\n- class（設計図）= たい焼きの型\\n- インスタンス = 実際のたい焼き\\n\\n**コード例：**\\n```javascript\\n// new で Person クラスからインスタンスを作る\\nconst alice = new Person('アリス');\\nalice.greet();\\n```\\n**実行結果：**\\n```\\nHello, Alice!\\n```\\n\\n**ポイント：**\\n`new` をつけて class を呼び出すと、インスタンスが作られます。"
+            "content": "# new で実際のオブジェクトを作る\\n\\n設計図から作った実際のオブジェクトを **インスタンス** と呼びます。\\n\\n**身近なたとえ：**\\n- class（設計図）= たい焼きの型\\n- インスタンス = 実際のたい焼き\\n\\n**コード例：**\\n```javascript\\n// new で Person クラスからインスタンスを作る\\nconst alice = new Person('アリス');\\nalice.greet();\\n```\\n**実行結果：**\\n```\\nHello, アリス!\\n```\\n\\n**ポイント：**\\n`new` をつけて class を呼び出すと、インスタンスが作られます。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Dogクラスを定義\\nclass Dog {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  bark() {\\n    // テンプレートリテラルで出力\\n    console.log(`${this.名前}: ワン！`);\\n  }\\n}\\n\\n// dogにnew Dog('ポチ')を代入\\nconst dog = new Dog('ポチ');\\n// bark()メソッドを呼び出し\\ndog.bark();",
+        "correctCode": "// Dogクラスを定義\\nclass Dog {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  bark() {\\n    // テンプレートリテラルで出力\\n    console.log(`${this.name}: ワン！`);\\n  }\\n}\\n\\n// dogにnew Dog('ポチ')を代入\\nconst dog = new Dog('ポチ');\\n// bark()メソッドを呼び出し\\ndog.bark();",
         "holeyCode": "// Dogクラスを定義\\n___ Dog {\\n  // constructorでnameを初期化\\n  ___(name) {\\n    // this.nameにnameを代入\\n    this.___ = name;\\n  }\\n  bark() {\\n    // テンプレートリテラルで出力\\n    console.log(`${this.___}: ワン！`);\\n  }\\n}\\n\\n// dogにnew Dog('ポチ')を代入\\nconst dog = ___ Dog('ポチ');\\n// bark()メソッドを呼び出し\\ndog.___();",
         "correctLines": [
           "// Dogクラスを定義",
@@ -312,7 +312,7 @@ export const javascriptData3 = {
           "  }",
           "  bark() {",
           "    // テンプレートリテラルで出力",
-          "    console.log(`${this.名前}: ワン！`);",
+          "    console.log(`${this.name}: ワン！`);",
           "  }",
           "}",
           "",
@@ -495,7 +495,7 @@ export const javascriptData3 = {
         "tutorialSlides": [
           {
             "title": "Optional Chaining（オプショナルチェイニング）とは？",
-            "content": "# 安全にプロパティにアクセスする\\n\\n**?.** を使うと、データがなくてもエラーにならずに `undefined` を返します。\\n\\n**身近なたとえ：**\\n「友達の→お姉さんの→ペットの名前」を聞くとき、お姉さんがいなかったら「わからない」と答えますよね。`?.` も同じで、途中でデータがなければ「undefined（わからない）」を返します。\\n\\n**コード例：**\\n```javascript\\nconst user = { name: 'アリス' };\\nconsole.log(user?.name);           // Alice\\nconsole.log(user?.address?.city);  // undefined（エラーにならない！）\\n```"
+            "content": "# 安全にプロパティにアクセスする\\n\\n**?.** を使うと、データがなくてもエラーにならずに `undefined` を返します。\\n\\n**身近なたとえ：**\\n「友達の→お姉さんの→ペットの名前」を聞くとき、お姉さんがいなかったら「わからない」と答えますよね。`?.` も同じで、途中でデータがなければ「undefined（わからない）」を返します。\\n\\n**コード例：**\\n```javascript\\nconst user = { name: 'アリス' };\\nconsole.log(user?.name);           // アリス\\nconsole.log(user?.address?.city);  // undefined（エラーにならない！）\\n```"
           },
           {
             "title": "従来の方法との比較",

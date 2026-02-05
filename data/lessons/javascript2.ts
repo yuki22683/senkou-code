@@ -419,7 +419,7 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "red\\ngreen\\n"
+            "expected_output": "赤\\n緑\\n"
           }
         ]
       },
@@ -473,7 +473,7 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Alice\\n100\\n"
+            "expected_output": "アリス\\n100\\n"
           }
         ]
       },
@@ -586,7 +586,7 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "positive\\n"
+            "expected_output": "正\\n"
           }
         ]
       },
@@ -602,7 +602,7 @@ export const javascriptData2 = {
           },
           {
             "title": "findの使い方",
-            "content": "# オブジェクトの配列でも使える！\\n\\nユーザーリストから特定のIDの人を探すときなどに便利です。\\n\\n**コード例：**\\n```javascript\\nconst users = [\\n    { id: 1, name: 'アリス' },\\n    { id: 2, name: 'ボブ' }\\n];\\n// id が 2 のユーザーを探す\\nconst user = users.find(u => u.id === 2);\\nconsole.log(user.name);\\n```\\n**実行結果：**\\n```\\nBob\\n```"
+            "content": "# オブジェクトの配列でも使える！\\n\\nユーザーリストから特定のIDの人を探すときなどに便利です。\\n\\n**コード例：**\\n```javascript\\nconst users = [\\n    { id: 1, name: 'アリス' },\\n    { id: 2, name: 'ボブ' }\\n];\\n// id が 2 のユーザーを探す\\nconst user = users.find(u => u.id === 2);\\nconsole.log(user.name);\\n```\\n**実行結果：**\\n```\\nボブ\\n```"
           }
         ],
         "initialDisplayMode": "holey",

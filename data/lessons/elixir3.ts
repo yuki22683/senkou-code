@@ -181,10 +181,10 @@ export const elixir3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\\nusers = [{\"アリス\", 25}, {\"ボブ\", 30}, {\"Carol\", 25}]\\n# group_byでグループ化\\ngrouped = Enum.group_by(users, fn {_name, age} -> age end)", "holeyCode": "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義\\nusers = [{\"___\", 25}, {\"ボブ\", 30}, {\"Carol\", 25}]\\n# group_byでグループ化\\ngrouped = Enum.group_by(users, fn {_name, age} -> age ___)",
+        "correctCode": "# アリス(25), ボブ(30), キャロル(25) のタプルのリストを定義\\nusers = [{\"アリス\", 25}, {\"ボブ\", 30}, {\"キャロル\", 25}]\\n# group_byでグループ化\\ngrouped = Enum.group_by(users, fn {_name, age} -> age end)", "holeyCode": "# アリス(25), ボブ(30), キャロル(25) のタプルのリストを定義\\nusers = [{\"___\", 25}, {\"ボブ\", 30}, {\"キャロル\", 25}]\\n# group_byでグループ化\\ngrouped = Enum.group_by(users, fn {_name, age} -> age ___)",
         "correctLines": [
-          "# Alice(25), Bob(30), Carol(25) のタプルのリストを定義",
-          "users = [{\"Alice\", 25}, {\"Bob\", 30}, {\"Carol\", 25}]",
+          "# アリス(25), ボブ(30), キャロル(25) のタプルのリストを定義",
+          "users = [{\"アリス\", 25}, {\"ボブ\", 30}, {\"キャロル\", 25}]",
           "# group_byでグループ化",
           "grouped = Enum.group_by(users, fn {_name, age} -> age end)"
         ],
@@ -196,9 +196,9 @@ export const elixir3Data = {
         ],
         "candidates": {
           "strings": [
-            "Alice",
-            "Bob",
-            "Carol"
+            "アリス",
+            "ボブ",
+            "キャロル"
           ],
           "numbers": [
             "25",
