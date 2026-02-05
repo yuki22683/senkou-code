@@ -179,18 +179,18 @@ export const pythonData5 = {
         "tutorialSlides": [
           {
             "title": "json.dumps()",
-            "content": "# PythonをJSONに変換\\n\\n**json.dumps()（ダンプエス）** で **Pythonの辞書やリストをJSON文字列に変換** できます。\\n\\n**たとえ話：** 日本語（Python）を外国語（JSON）に翻訳するようなものです。\\n- `loads`: 外国語 → 日本語（読み込み）\\n- `dumps`: 日本語 → 外国語（書き出し）\\n\\n**例：** 辞書をJSON文字列に変換しよう！\\n\\n```python\\nimport json\\n\\ndata = {'名前': '太郎', '年齢': 25}\\njson_str = json.dumps(data)\\nprint(json_str)  # {\"name\": \"Taro\", \"age\": 25}\\n```\\n\\n**何をしているか：**\\n1. Pythonの辞書 `{'名前': '太郎', '年齢': 25}` を作る\\n2. `json.dumps()` でJSON形式の文字列に変換\\n3. シングルクォートがダブルクォートに変わる（JSONのルール）\\n\\n**便利なオプション：**\\n- `json.dumps(data, indent=2)`: 見やすく整形\\n- `json.dumps(data, ensure_ascii=False)`: 日本語をそのまま表示\\n\\n**ポイント：** `dumps` の 's' は **String（文字列）** に変換するという意味です。"
+            "content": "# PythonをJSONに変換\\n\\n**json.dumps()（ダンプエス）** で **Pythonの辞書やリストをJSON文字列に変換** できます。\\n\\n**たとえ話：** 日本語（Python）を外国語（JSON）に翻訳するようなものです。\\n- `loads`: 外国語 → 日本語（読み込み）\\n- `dumps`: 日本語 → 外国語（書き出し）\\n\\n**例：** 辞書をJSON文字列に変換しよう！\\n\\n```python\\nimport json\\n\\ndata = {'name': 'Taro', 'age': 25}\\njson_str = json.dumps(data)\\nprint(json_str)  # {\"name\": \"Taro\", \"age\": 25}\\n```\\n\\n**何をしているか：**\\n1. Pythonの辞書 `{'名前': '太郎', '年齢': 25}` を作る\\n2. `json.dumps()` でJSON形式の文字列に変換\\n3. シングルクォートがダブルクォートに変わる（JSONのルール）\\n\\n**便利なオプション：**\\n- `json.dumps(data, indent=2)`: 見やすく整形\\n- `json.dumps(data, ensure_ascii=False)`: 日本語をそのまま表示\\n\\n**ポイント：** `dumps` の 's' は **String（文字列）** に変換するという意味です。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# JSONモジュールをインポート\\nimport json\\n\\n# dataにlanguage='Python', level='上級'の辞書を代入\\ndata = {'langu年齢': 'Python', 'レベル': '上級'}\\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\\njson_str = json.dumps(data)\\n# json_strをprintで出力\\nprint(json_str)",
-        "holeyCode": "# JSONモジュールをインポート\\nimport ___\\n\\n# dataにlanguage='Python', level='上級'の辞書を代入\\ndata = {'langu年齢': 'Python', 'レベル': '___'}\\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\\njson_str = json.dumps(___)\\n# json_strをprintで出力\\n___(json_str)",
+        "correctCode": "# JSONモジュールをインポート\\nimport json\\n\\n# dataにlanguage='Python', level='上級'の辞書を代入\\ndata = {'language': 'Python', 'レベル': '上級'}\\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\\njson_str = json.dumps(data)\\n# json_strをprintで出力\\nprint(json_str)",
+        "holeyCode": "# JSONモジュールをインポート\\nimport ___\\n\\n# dataにlanguage='Python', level='上級'の辞書を代入\\ndata = {'language': 'Python', 'レベル': '___'}\\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\\njson_str = json.dumps(___)\\n# json_strをprintで出力\\n___(json_str)",
         "correctLines": [
           "# JSONモジュールをインポート",
           "import json",
           "",
           "# dataにlanguage='Python', level='上級'の辞書を代入",
-          "data = {'langu年齢': 'Python', 'レベル': '上級'}",
+          "data = {'language': 'Python', 'レベル': '上級'}",
           "# json.dumps(data)でJSON文字列に変換しjson_strに代入",
           "json_str = json.dumps(data)",
           "# json_strをprintで出力",

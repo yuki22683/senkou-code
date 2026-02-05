@@ -117,7 +117,7 @@ export const php3Data = {
           },
           {
             "title": "?? の使い方",
-            "content": "# シンプルな null チェック\\n\\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\\n\\n**コード例：**\\n```php\\n$name = null;\\n$displayName = $name ?? '匿名';\\necho $displayName;  // Anonymous\\n```\\n\\n**何をしているの？**\\n1. `$name = null` → 名前は空っぽ\\n2. `$name ?? '匿名'` → nullかチェック\\n3. null なので → '匿名' を返す\\n\\n**値があるときは？**\\n```php\\n$name = '太郎';\\necho $name ?? '匿名';  // Taro（nullじゃないので$nameを使う）\\n```\\n\\n**ポイント：**\\n- 左が null → 右を返す\\n- 左が null じゃない → 左をそのまま返す"
+            "content": "# シンプルな null チェック\\n\\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\\n\\n**コード例：**\\n```php\\n$name = null;\\n$displayName = $name ?? '匿名';\\necho $displayName;  // Anonymous\\n```\\n\\n**何をしているの？**\\n1. `$name = null` → 名前は空っぽ\\n2. `$name ?? '匿名'` → nullかチェック\\n3. null なので → '匿名' を返す\\n\\n**値があるときは？**\\n```php\\n$name = '太郎';\\necho $name ?? '匿名';  // 太郎（nullじゃないので$nameを使う）\\n```\\n\\n**ポイント：**\\n- 左が null → 右を返す\\n- 左が null じゃない → 左をそのまま返す"
           }
         ],
         "initialDisplayMode": "holey",

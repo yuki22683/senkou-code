@@ -435,7 +435,7 @@ export const javascriptData2 = {
           },
           {
             "title": "よく使うパターン",
-            "content": "# 関数の引数でも使える！\\n\\n関数にオブジェクトを渡すとき、必要なプロパティだけ取り出せます。\\n\\n**コード例：**\\n```javascript\\nfunction greet({ name }) {\\n    // オブジェクトから name だけ取り出す\\n    console.log(`Hello, ${name}!`);\\n}\\n\\ngreet({ name: '太郎', age: 20 });\\n```\\n**実行結果：**\\n```\\nHello, Taro!\\n```\\n\\n**ポイント：**\\n`{ }` の中に欲しいプロパティ名を書くだけ！"
+            "content": "# 関数の引数でも使える！\\n\\n関数にオブジェクトを渡すとき、必要なプロパティだけ取り出せます。\\n\\n**コード例：**\\n```javascript\\nfunction greet({ name }) {\\n    // オブジェクトから name だけ取り出す\\n    console.log(`Hello, ${name}!`);\\n}\\n\\ngreet({ name: '太郎', age: 20 });\\n```\\n**実行結果：**\\n```\\nHello, 太郎!\\n```\\n\\n**ポイント：**\\n`{ }` の中に欲しいプロパティ名を書くだけ！"
           }
         ],
         "initialDisplayMode": "holey",

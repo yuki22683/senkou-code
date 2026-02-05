@@ -181,7 +181,7 @@ export const ruby2Data = {
           },
           {
             "title": "シンボルの使い方",
-            "content": "# ハッシュのキーに最適（さいてき）\\n\\nシンボルは同じ名前なら同じものを指すため、コンピュータのメモリ効率（こうりつ）が良いです。\\n\\n**コード例：**\\n```ruby\\nperson = { name: '太郎', age: 20 }\\nputs person[:name]  # => Taro\\n```\\n\\n**何をしているの？**\\n1. `{ name: '太郎' }` → シンボル `:name` をキーにして「Taro」を保存\\n2. `person[:name]` → シンボル `:name` で値を取り出す\\n\\n**短い書き方：**\\n- `{ :name => '太郎' }` と `{ name: '太郎' }` は同じ意味\\n- 後者（こうしゃ）の方がRubyらしい書き方です"
+            "content": "# ハッシュのキーに最適（さいてき）\\n\\nシンボルは同じ名前なら同じものを指すため、コンピュータのメモリ効率（こうりつ）が良いです。\\n\\n**コード例：**\\n```ruby\\nperson = { name: '太郎', age: 20 }\\nputs person[:name]  # => 太郎\\n```\\n\\n**何をしているの？**\\n1. `{ name: '太郎' }` → シンボル `:name` をキーにして「太郎」を保存\\n2. `person[:name]` → シンボル `:name` で値を取り出す\\n\\n**短い書き方：**\\n- `{ :name => '太郎' }` と `{ name: '太郎' }` は同じ意味\\n- 後者（こうしゃ）の方がRubyらしい書き方です"
           }
         ],
         "initialDisplayMode": "holey",
@@ -299,7 +299,7 @@ export const ruby2Data = {
           },
           {
             "title": "アクセサの種類（しゅるい）",
-            "content": "# 3種類のアクセサ\\n\\n**用途（ようと）に合わせて選べます：**\\n\\n| 種類 | 読み取り | 書き込み | 説明 |\\n|------|---------|---------|------|\\n| `attr_reader` | できる | できない | データを見るだけ |\\n| `attr_writer` | できない | できる | データを書くだけ |\\n| `attr_accessor` | できる | できる | 読み書き両方OK |\\n\\n**コード例：**\\n```ruby\\nclass Person\\n  attr_accessor :name\\nend\\n\\nperson = Person.new\\nperson.name = '太郎'  # 書き込み\\nputs person.name      # 読み取り → Taro\\n```\\n\\n**手動（しゅどう）で書くと長くなるコードを、一行で済（す）ませられます。**"
+            "content": "# 3種類のアクセサ\\n\\n**用途（ようと）に合わせて選べます：**\\n\\n| 種類 | 読み取り | 書き込み | 説明 |\\n|------|---------|---------|------|\\n| `attr_reader` | できる | できない | データを見るだけ |\\n| `attr_writer` | できない | できる | データを書くだけ |\\n| `attr_accessor` | できる | できる | 読み書き両方OK |\\n\\n**コード例：**\\n```ruby\\nclass Person\\n  attr_accessor :name\\nend\\n\\nperson = Person.new\\nperson.name = '太郎'  # 書き込み\\nputs person.name      # 読み取り → 太郎\\n```\\n\\n**手動（しゅどう）で書くと長くなるコードを、一行で済（す）ませられます。**"
           }
         ],
         "initialDisplayMode": "holey",
