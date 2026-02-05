@@ -35,16 +35,16 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "文字列を画面に表示します。",
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          "プログラムの開始点を定義します。",
+          null,
+          null,
+          null,
+          "正常終了を示します。",
+          null
+        ],
       "candidates": {
         "functions": [
           "printf"
@@ -97,18 +97,18 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "整数型の変数を宣言します。",
-        null,
-        "変数の値を表示します。",
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          "プログラムの開始点を定義します。",
+          null,
+          "整数型の変数を宣言します。",
+          null,
+          null,
+          null,
+          "正常終了を示します。",
+          null
+        ],
       "candidates": {
         "others": [
           "stdio.h",
@@ -159,20 +159,20 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "変数aに10を代入します。",
-        null,
-        "変数bに3を代入します。",
-        null,
-        "ひき算の結果を表示します。",
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          "プログラムの開始点を定義します。",
+          null,
+          "変数aに10を代入します。",
+          null,
+          "変数bに3を代入します。",
+          null,
+          null,
+          null,
+          "正常終了を示します。",
+          null
+        ],
       "candidates": {
         "operators": [
           "-",
@@ -221,16 +221,16 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "余りを計算して表示します。",
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          "プログラムの開始点を定義します。",
+          null,
+          null,
+          null,
+          "正常終了を示します。",
+          null
+        ],
       "candidates": {
         "operators": [
           "%",
@@ -281,20 +281,20 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "変数を初期化します。",
-        null,
-        "累算代入演算子で加算します。",
-        null,
-        "結果を表示します。",
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          "プログラムの開始点を定義します。",
+          null,
+          "変数を初期化します。",
+          null,
+          "累算代入演算子で加算します。",
+          null,
+          null,
+          null,
+          "正常終了を示します。",
+          null
+        ],
       "candidates": {
         "operators": [
           "+=",
@@ -339,18 +339,18 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "変数を初期化します。",
-        null,
-        "文字列と変数を組み合わせて表示します。",
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          "プログラムの開始点を定義します。",
+          null,
+          "変数を初期化します。",
+          null,
+          null,
+          null,
+          "正常終了を示します。",
+          null
+        ],
       "candidates": {
         "others": [
           "stdio.h",
@@ -395,18 +395,18 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "配列を宣言して初期化します。",
-        null,
-        "配列の要素にアクセスします。",
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          "プログラムの開始点を定義します。",
+          null,
+          "配列を宣言して初期化します。",
+          null,
+          null,
+          null,
+          "正常終了を示します。",
+          null
+        ],
       "candidates": {
         "numbers": [
           "0",
@@ -513,22 +513,22 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "変数を初期化します。",
-        null,
-        "条件分岐を開始します。",
-        null,
-        "elseで「そうでなければ」を指定します。",
-        null,
-        null,
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          "プログラムの開始点を定義します。",
+          null,
+          "変数を初期化します。",
+          null,
+          "条件分岐を開始します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          "正常終了を示します。",
+          null
+        ],
       "candidates": {
         "keywords": [
           "else",
@@ -632,19 +632,19 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "forで繰り返し処理を開始します。",
-        null,
-        "ループ変数を表示します。",
-        null,
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          "プログラムの開始点を定義します。",
+          null,
+          "forで繰り返し処理を開始します。",
+          null,
+          null,
+          null,
+          null,
+          "正常終了を示します。",
+          null
+        ],
       "candidates": {
         "keywords": [
           "for",
@@ -695,25 +695,25 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "構造体の変数を宣言します。",
-        null,
-        "メンバに値を代入します。",
-        null,
-        "メンバの値を表示します。",
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "プログラムの開始点を定義します。",
+          null,
+          "構造体の変数を宣言します。",
+          null,
+          "メンバに値を代入します。",
+          null,
+          null,
+          null,
+          "正常終了を示します。",
+          null
+        ],
       "candidates": {
         "others": ["stdio.h", "main", "p", "10", "x", "0", "Point", "y", "};"]
       },

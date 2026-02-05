@@ -360,7 +360,7 @@ export const pythonData2 = {
         ],
         "lineHints": [
           null,
-          "変数の値を計算して、その結果を同じ変数に再代入します。",
+          "変数totalを宣言し、0を設定します。",
           null,
           null,
           null,
@@ -457,7 +457,7 @@ export const pythonData2 = {
         ],
         "lineHints": [
           null,
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "変数ageを宣言し、25を設定します。",
           null,
           null,
           null

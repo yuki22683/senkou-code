@@ -1,0 +1,130 @@
+import fs from 'fs';
+import path from 'path';
+
+const problematicPatterns = [
+  {
+    hint: '変数の値を計算して、その結果を同じ変数に再代入します',
+    validLines: ['+=', '-=', '*=', '/='],
+    problem: '累算代入の説明が非累算代入行'
+  },
+  {
+    hint: '条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します',
+    validLines: ['if ', 'if('],
+    problem: 'if文の説明が非if行'
+  }
+];
+
+// 動的パターン: メソッド呼び出しヒントがメソッド呼び出し行にあるか
+function checkMethodCallHint(hint, correctLine) {
+  // "XXXメソッドを呼び出します" パターン
+  const methodMatch = hint.match(/[`']?(\w+)[`']?\s*メソッドを呼び出します/);
+  if (methodMatch) {
+    const methodName = methodMatch[1];
+    // 行に .methodName( または methodName( があるか確認
+    const callPattern = new RegExp(`\\.${methodName}\\s*\\(|^\\s*${methodName}\\s*\\(`);
+    if (!callPattern.test(correctLine)) {
+      return { problem: `"${methodName}メソッドを呼び出します"が非呼び出し行` };
+    }
+  }
+  return null;
+}
+
+// 動的パターン: インスタンス作成ヒントがnew行にあるか
+function checkInstanceCreationHint(hint, correctLine) {
+  // "new XXX()でインスタンスを作成" または "newでインスタンスを作成" パターン
+  if (hint.includes('インスタンスを作成')) {
+    if (!correctLine.includes('new ') && !correctLine.includes('new(')) {
+      return { problem: 'インスタンス作成の説明がnewなし行' };
+    }
+  }
+  return null;
+}
+
+// 動的パターン: extendsヒントがextends行にあるか
+function checkExtendsHint(hint, correctLine) {
+  if (hint.includes('extends') && hint.includes('継承')) {
+    if (!correctLine.includes('extends')) {
+      return { problem: 'extends継承の説明が非extends行' };
+    }
+  }
+  return null;
+}
+
+const files = fs.readdirSync('data/lessons').filter(f => f.endsWith('.ts') && f !== 'index.ts');
+
+const issues = [];
+
+files.forEach(file => {
+  const content = fs.readFileSync(path.join('data/lessons', file), 'utf8');
+
+  const exportMatch = content.match(/export const \w+ = ({[\s\S]*});/);
+  if (!exportMatch) return;
+
+  let data;
+  try {
+    data = eval('(' + exportMatch[1] + ')');
+  } catch(e) { return; }
+
+  if (!data.exercises) return;
+
+  data.exercises.forEach((ex, i) => {
+    if (!ex.lineHints || !ex.correctLines) return;
+
+    ex.lineHints.forEach((hint, j) => {
+      if (!hint) return;
+
+      const correctLine = ex.correctLines[j] || '';
+
+      // 静的パターンチェック
+      problematicPatterns.forEach(pattern => {
+        if (hint.includes(pattern.hint)) {
+          const isValid = pattern.validLines.some(valid => correctLine.includes(valid));
+          if (!isValid) {
+            issues.push({
+              file,
+              exercise: ex.title,
+              line: j,
+              hint: hint.substring(0, 50),
+              code: correctLine.substring(0, 60),
+              problem: pattern.problem
+            });
+          }
+        }
+      });
+
+      // 動的パターンチェック
+      const dynamicChecks = [
+        checkMethodCallHint(hint, correctLine),
+        checkInstanceCreationHint(hint, correctLine),
+        checkExtendsHint(hint, correctLine)
+      ];
+
+      dynamicChecks.forEach(result => {
+        if (result) {
+          issues.push({
+            file,
+            exercise: ex.title,
+            line: j,
+            hint: hint.substring(0, 50),
+            code: correctLine.substring(0, 60),
+            problem: result.problem
+          });
+        }
+      });
+    });
+  });
+});
+
+if (issues.length === 0) {
+  console.log('✅ 問題は見つかりませんでした。');
+} else {
+  console.log('=== lineHints内容チェック: 問題 ' + issues.length + '件 ===\n');
+  issues.forEach(i => {
+    console.log('File: ' + i.file);
+    console.log('Exercise: ' + i.exercise);
+    console.log('Line ' + i.line + ': ' + i.code);
+    console.log('Hint: ' + i.hint);
+    console.log('Problem: ' + i.problem);
+    console.log('');
+  });
+}

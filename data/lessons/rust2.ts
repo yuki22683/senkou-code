@@ -189,12 +189,12 @@ export const rust2Data = {
         "lineHints": [
           null,
           "構造体（Rect）を定義します。",
+          null,
+          null,
+          null,
+          null,
           "構造体のインスタンスを作成します。",
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {

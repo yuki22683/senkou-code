@@ -331,9 +331,9 @@ export const lua2Data = {
           "メソッドを定義します。",
           null,
           "self で自分自身を参照します。",
-          "getX メソッドを呼び出します。",
           null,
-          null
+          null,
+          "getX メソッドを呼び出します。"
         ],
         "candidates": {
           "keywords": [

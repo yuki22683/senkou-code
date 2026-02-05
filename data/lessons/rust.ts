@@ -175,9 +175,9 @@ export const rustData = {
           "}"
         ],
         "lineHints": [
-          "変数の値を計算して、その結果を同じ変数に再代入します。",
+          "fn main()でメイン関数を定義します。",
           null,
-          "変数の値を計算して、その結果を同じ変数に再代入します。",
+          "変数hpを宣言し、100を設定します。",
           null,
           null,
           null,
@@ -228,7 +228,7 @@ export const rustData = {
         "lineHints": [
           "再代入可能な変数を宣言し、数値を代入します。",
           null,
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "変数scoreを宣言し、100を設定します。",
           null,
           null,
           null,
@@ -279,7 +279,7 @@ export const rustData = {
           "}"
         ],
         "lineHints": [
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "fn main()でメイン関数を定義します。",
           null,
           null,
           null,

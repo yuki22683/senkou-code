@@ -464,7 +464,7 @@ export const lua3Data = {
         ],
         "lineHints": [
           null,
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "forループでiを1から10まで繰り返します。",
           null,
           null,
           null,

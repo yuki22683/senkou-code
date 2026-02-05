@@ -272,6 +272,10 @@
      - lineHints配列長とcorrectLines配列長の一致
      - holeyCodeに`___`がない行にヒントがないこと
      - コメント行でない行に「コメントです」ヒントがないこと
+  17. `node scripts/check-linehints-content-v2.mjs` → lineHints内容チェック（ルール#59参照）
+     - 「メソッドを呼び出し」ヒントが実際のメソッド呼び出し行にあること
+     - 「インスタンスを作成」ヒントが実際のインスタンス作成行にあること
+     - 「条件式評価」ヒントが実際のif文行にあること
 - **チェックが失敗した場合の修正方法**：
   - check-holey-v4.mjs → `fix-empty-line-hints.mjs` と `fix-non-holey-hints.mjs` を実行
   - check-comment-consistency-v3.mjs → `sync-comments-to-holey.mjs` を実行（correctCodeのコメントをholeyCodeに同期）
@@ -285,6 +289,7 @@
   - check-lesson-file.mjs（expected_output文字列）→ `fix-output-mismatch-v2.mjs` を実行（ルール#53参照）
   - check-code-output-consistency.mjs → コメントを手動修正、または expected_output をコード出力に合わせて修正（ルール#56-58参照）
   - check-linehints-consistency.mjs → 配列長不一致は手動修正、hint_on_non_holey_lineは`fix-non-holey-hints.mjs`を実行
+  - check-linehints-content-v2.mjs → 手動で該当行に合ったヒントに修正（ルール#59参照）
 
 ### 26. コード内の文字列リテラルは日本語、コメントも日本語
 - `correctCode`、`holeyCode`、`correctLines` 内のコードにおいて：
@@ -767,3 +772,37 @@
   1. コメントに書かれている値・文字列がコードにも存在するか確認
   2. コードを実行して expected_output と一致するか確認
 - **理由**: コメントとコードが矛盾すると、学習者は混乱し、コードの動作を誤解する
+
+### 59. lineHintsは対象行のコード内容と一致させる
+- `lineHints` の各要素は、対応する `correctLines` の行の内容と**一致した説明**にすること。
+- **禁止パターン**:
+  - 初期化行（`let x = 0;`）に対して「累算代入」「条件式を評価」の説明
+  - 関数定義行（`fn main() {`）に対して「条件式を評価」の説明
+  - forループ行（`for i = 1, 10 do`）に対して「if文」の説明
+  - メソッド定義行（`void move() {`）に対して「メソッドを呼び出します」の説明
+  - メソッド定義行（`void draw() {`）に対して「new でインスタンスを作成」の説明
+  - 継承行（`class Cat extends Animal`）に対して「インスタンスを作成」の説明
+  - 出力文行（`console.log('ニャー！')`）に対して「メソッドを呼び出します」の説明
+- **正しいパターン**:
+  - 初期化行: 「変数xを宣言し、0を設定します。」
+  - 関数定義行: 「fn main()でメイン関数を定義します。」
+  - 累算代入行（`x += 5;`）: 「変数xに5を加算します。」
+  - if文行: 「条件式を評価し、真の場合にブロックを実行します。」
+  - メソッド呼び出し行（`c.move();`）: 「moveメソッドを呼び出します。」
+  - インスタンス作成行（`Car c = new Car();`）: 「Car型の変数cにnew Car()を代入します。」
+  - 継承行: 「extendsでAnimalを継承します。」
+- **チェックスクリプト**: `node scripts/check-linehints-content-v2.mjs`
+- **検出パターン**:
+  1. 「〜メソッドを呼び出します」が`.methodName(`または`:methodName(`のない行にある
+  2. 「インスタンスを作成」が`new `/`Type{}`/`Type { ... }`のない行にある
+  3. 「extendsで〜を継承」が`extends`のない行にある
+  4. 「累算代入」が`+=`/`-=`/`*=`/`/=`のない行にある
+  5. 「条件式を評価」が`if`のない行にある
+- **言語固有のインスタンス作成構文**:
+  - Java/C#/JavaScript: `new Type()`
+  - Go: `Type{}` （構造体リテラル）
+  - Rust: `Type { field: value }` （構造体リテラル）
+- **言語固有のメソッド呼び出し構文**:
+  - 一般: `.methodName()`
+  - Lua: `:methodName()` （コロン記法）
+- **理由**: ヒントがコードと合っていないと、学習者が混乱し、誤った理解を招く

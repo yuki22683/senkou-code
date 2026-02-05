@@ -200,9 +200,9 @@ export const swiftData = {
         ],
         "lineHints": [
           null,
-          "変数の値を計算して、その結果を同じ変数に再代入します。",
+          "変数hpを宣言し、100を設定します。",
           null,
-          "変数の値を計算して、その結果を同じ変数に再代入します。",
+          null,
           null,
           null,
           null
@@ -319,7 +319,7 @@ export const swiftData = {
           "}"
         ],
         "lineHints": [
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "定数scoreを宣言し、80を設定します。",
           null,
           null,
           null,

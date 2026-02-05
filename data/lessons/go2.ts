@@ -370,7 +370,7 @@ export const go2Data = {
         ],
         "lineHints": [
           "interface でインターフェースを定義します。",
-          "Dog{} でインスタンスを作成して代入します。",
+          null,
           null,
           "メソッド名 Speak を入力して呼び出します。",
           null,
@@ -381,7 +381,7 @@ export const go2Data = {
           null,
           null,
           null,
-          null,
+          "Dog{} でインスタンスを作成して代入します。",
           null,
           null,
           null

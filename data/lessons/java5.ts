@@ -667,17 +667,17 @@ export const javaData5 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
           "`null` を代入します。",
+          null,
           "`length` メソッドを呼び出します。",
+          null,
           "エラー（例外）が発生した場合の処理を記述します。",
           null,
           "文字列をコンソールに出力し、改行します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null

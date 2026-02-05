@@ -372,7 +372,7 @@ export const bash3Data = {
         ],
         "lineHints": [
           null,
-          "sort で並べ替えます。"
+          null
         ],
         "candidates": {
           "commands": [
@@ -413,7 +413,7 @@ export const bash3Data = {
         ],
         "lineHints": [
           null,
-          "uniq で重複を除去します。"
+          null
         ],
         "candidates": {
           "commands": [

@@ -47,7 +47,7 @@ export const go4Data = {
         ],
         "lineHints": [
           "Lock でロックを取得します。",
-          "Unlock でロックを解放します。",
+          null,
           null,
           null,
           null,
@@ -125,7 +125,7 @@ export const go4Data = {
         ],
         "lineHints": [
           "Add でカウンタを増やします。",
-          "Done でカウンタを減らします。",
+          null,
           "Wait でカウンタが0になるまで待ちます。",
           null,
           null,
@@ -197,7 +197,7 @@ export const go4Data = {
         ],
         "lineHints": [
           "Background でルートコンテキストを作成します。",
-          "Err でエラーを取得します。",
+          null,
           null,
           null,
           null,
@@ -261,7 +261,7 @@ export const go4Data = {
         ],
         "lineHints": [
           "WithCancel でキャンセル可能にします。",
-          "関数（cancel）を呼び出して実行します。",
+          null,
           null,
           null,
           null,
@@ -391,7 +391,7 @@ export const go4Data = {
         ],
         "lineHints": [
           "\"Apple\" を入力して構造体を初期化します。",
-          "Marshal で JSON に変換します。",
+          null,
           null,
           null,
           null,
@@ -465,7 +465,7 @@ export const go4Data = {
         ],
         "lineHints": [
           "\"Banana\" を入力してJSONを完成させます。",
-          "Unmarshal で JSON をパースします。",
+          null,
           null,
           null,
           null,
@@ -535,7 +535,7 @@ export const go4Data = {
         ],
         "lineHints": [
           "\"hello,world\" を入力して文字列を設定します。",
-          "Split で文字列を分割します。",
+          null,
           null,
           null,
           null,

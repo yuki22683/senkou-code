@@ -93,9 +93,9 @@ export const pythonData5 = {
           null,
           null,
           null,
-          "'r'は読み込みモードを表します。",
           null,
-          "inキーワードを使います。",
+          null,
+          null,
           null,
           "strip()は前後の空白を除去します。"
         ],

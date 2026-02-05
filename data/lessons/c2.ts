@@ -142,7 +142,7 @@ export const c2Data = {
           null,
           null,
           "void型の値を返す関数（show）を定義します。",
-          "変数の値を指定された形式で画面に表示します。",
+          null,
           null,
           null,
           "25 を渡して関数を呼び出します。",
@@ -408,11 +408,11 @@ export const c2Data = {
           "標準ライブラリを読み込み、使用可能にします。",
           "malloc で int サイズのメモリを確保します。",
           "確保したメモリに 50 を代入します。",
-          "値を表示します。",
-          "free でメモリを解放します。",
           null,
           null,
           null,
+          null,
+          null
         ],
         "candidates": {
           "functions": [
