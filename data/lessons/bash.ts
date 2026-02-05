@@ -345,7 +345,7 @@ export const bashData = {
           "functions": [
             "greet"
           ],
-          "others": ["Hello", "}"]
+          "others": ["Hello", "}", "こんにちは"]
         },
         "testCases": [
           {

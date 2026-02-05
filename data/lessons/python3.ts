@@ -215,12 +215,12 @@ export const pythonData3 = {
             "range",
             "zip"
           ],
-          "others": ["['赤', '緑', '青']", "f'{i}: {color}'", "blue", "colors", "print", "en"]
+          "others": ["['赤', '緑', '青']", "f'{i}: {color}'", "青", "colors", "print", "en"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "0: red\\\\\n1: green\\\\\n2: blue\\\\\n"
+            "expected_output": "0: 赤\\\\\n1: 緑\\\\\n2: 青\\\\\n"
           }
         ]
       },

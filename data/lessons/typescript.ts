@@ -50,7 +50,8 @@ export const typescriptData = {
           "strings": [
             "string",
             "Hello TS"
-          ]
+          ],
+          "others": ["こんにちは TS"]
         },
         "testCases": [
           {
@@ -252,7 +253,8 @@ export const typescriptData = {
           ],
           "strings": [
             "number"
-          ]
+          ],
+          "others": ["年齢"]
         },
         "testCases": [
           {

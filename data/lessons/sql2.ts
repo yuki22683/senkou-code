@@ -400,7 +400,7 @@ export const sql2Data = {
           "keywords": [
             "CASE"
           ],
-          "others": ["SELECT", "WHEN", "ELSE", "END", "85", "fail"]
+          "others": ["SELECT", "WHEN", "ELSE", "END", "85", "fail", "失敗"]
         },
         "testCases": [
           {
@@ -439,7 +439,7 @@ export const sql2Data = {
           "functions": [
             "COALESCE"
           ],
-          "others": ["default"]
+          "others": ["default", "デフォルト"]
         },
         "testCases": [
           {

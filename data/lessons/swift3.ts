@@ -82,14 +82,7 @@ export const swift3Data = {
             "ok",
             "value"
           ],
-          "others": [
-            "Error",
-            "negative",
-            "check",
-            "result",
-            "v",
-            "error"
-          ]
+          "others": ["Error", "negative", "check", "result", "v", "error", "エラー"]
         },
         "testCases": [
           {
@@ -573,12 +566,7 @@ export const swift3Data = {
             "throw",
             "error"
           ],
-          "others": [
-            "invalid",
-            "n",
-            "try",
-            "v"
-          ]
+          "others": ["invalid", "n", "try", "v", "エラー"]
         },
         "testCases": [
           {

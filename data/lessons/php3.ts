@@ -145,7 +145,7 @@ export const php3Data = {
             "||",
             "&&"
           ],
-          "others": ["Guest"]
+          "others": ["Guest", "ゲスト"]
         },
         "testCases": [
           {
@@ -255,7 +255,7 @@ export const php3Data = {
           "operators": [
             "=>"
           ],
-          "others": ["'A'", "grade", "Excellent", "Good", "harder", "};"]
+          "others": ["'A'", "grade", "Excellent", "Good", "harder", "};", "優秀", "良い", "張って"]
         },
         "testCases": [
           {
@@ -382,7 +382,7 @@ export const php3Data = {
             "function",
             "return"
           ],
-          "others": ["HelloTrait", "sayHello", "Hello", "}", "Greeter"]
+          "others": ["HelloTrait", "sayHello", "Hello", "}", "Greeter", "こんにちは！';"]
         },
         "testCases": [
           {

@@ -414,12 +414,7 @@ export const javascriptData2 = {
             "last",
             "next"
           ],
-          "others": [
-            "red",
-            "green",
-            "blue",
-            "first"
-          ]
+          "others": ["red", "green", "blue", "first", "赤", "緑", "青"]
         },
         "testCases": [
           {
@@ -473,11 +468,7 @@ export const javascriptData2 = {
             "value",
             "key"
           ],
-          "others": [
-            "Alice",
-            "100",
-            "score"
-          ]
+          "others": ["Alice", "100", "score", "アリス"]
         },
         "testCases": [
           {

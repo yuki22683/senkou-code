@@ -201,7 +201,7 @@ export const javaData5 = {
             "riskyMethod",
             "println"
           ],
-          "others": ["*;", "Main", "Exception", "Error!", "}", "main(String[] args) {", "try"]
+          "others": ["*;", "Main", "Exception", "Error!", "}", "main(String[] args) {", "try", "エラー！"]
         },
         "testCases": [
           {

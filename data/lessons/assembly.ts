@@ -94,7 +94,7 @@ export const assemblyData = {
           "variables": [
             "msg"
           ],
-          "others": [".data", "Hello", ".text", "_start", "1", "6", "syscall", "60", "rdi", "data", "text", "rax", "rsi", "rdx"]
+          "others": [".data", "Hello", ".text", "_start", "1", "6", "syscall", "60", "rdi", "data", "text", "rax", "rsi", "rdx", "こんにちは"]
         },
         "testCases": [
           {

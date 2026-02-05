@@ -273,7 +273,7 @@ export const pythonData2 = {
             "1",
             "3"
           ],
-          "others": ["Programming", "print"]
+          "others": ["Programming", "print", "プログラミング"]
         },
         "testCases": [
           {

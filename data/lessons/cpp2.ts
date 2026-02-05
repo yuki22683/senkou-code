@@ -62,7 +62,7 @@ export const cpp2Data = {
           "keywords": [
             "class"
           ],
-          "others": ["string", "Cat", "public", "name", "};", "main", "c", "Tama", "endl", "0", "}"]
+          "others": ["string", "Cat", "public", "name", "};", "main", "c", "Tama", "endl", "0", "}", "タマ"]
         },
         "testCases": [
           {
@@ -324,7 +324,7 @@ export const cpp2Data = {
           "keywords": [
             "public"
           ],
-          "others": ["move", "Vehicle", "\"moving\"", "}", "};", "Car", "main", "c", "0"]
+          "others": ["move", "Vehicle", "\"moving\"", "}", "};", "Car", "main", "c", "0", "\"移動中\""]
         },
         "testCases": [
           {

@@ -532,11 +532,7 @@ export const typescriptData4 = {
             "Required",
             "Exclude"
           ],
-          "others": [
-            "|",
-            "'Hello'",
-            "text"
-          ]
+          "others": ["|", "'Hello'", "text", "'こんにちは'"]
         },
         "testCases": [
           {

@@ -37,14 +37,14 @@ export const elixirData = {
         ],
         "candidates": {
           "strings": [
-            "Hello, Elixir!"
+            "こんにちは, Elixir!"
           ],
-          "others": ["ello, Elixir!\"", "ello, Elixir!"]
+          "others": []
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Elixir!\\\\\n"
+            "expected_output": "こんにちは, Elixir!\\\\\n"
           }
         ]
       },

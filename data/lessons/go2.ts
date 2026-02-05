@@ -141,7 +141,7 @@ export const go2Data = {
           "keywords": [
             "nil"
           ],
-          "others": ["New", "check", "main", "(", "errors", "fmt", ")", "check(n", "<", "negative", "}", "main()", "5", "Println", "else", "mt\""]
+          "others": ["New", "check", "main", "(", "errors", "fmt", ")", "check(n", "<", "negative", "}", "main()", "5", "Println", "else", "mt\"", "エラーs"]
         },
         "testCases": [
           {
@@ -504,7 +504,7 @@ export const go2Data = {
           "keywords": [
             "go"
           ],
-          "others": ["Sleep", "main", "(", "fmt", "time", ")", "say(msg", "Println", "}", "main()", "hello", "100", "mt\"", "ime\""]
+          "others": ["Sleep", "main", "(", "fmt", "time", ")", "say(msg", "Println", "}", "main()", "hello", "100", "mt\"", "ime\"", "こんにちは"]
         },
         "testCases": [
           {

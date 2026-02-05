@@ -78,7 +78,7 @@ export const kotlin3Data = {
             "async",
             "await"
           ],
-          "others": ["*", "delay", "Hello", "main", "println", "coroutines", "String", "100", "}", "runBlocking"]
+          "others": ["*", "delay", "Hello", "main", "println", "coroutines", "String", "100", "}", "runBlocking", "こんにちは"]
         },
         "testCases": [
           {

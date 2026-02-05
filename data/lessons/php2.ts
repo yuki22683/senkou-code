@@ -58,7 +58,7 @@ export const php2Data = {
           "keywords": [
             "class"
           ],
-          "others": ["public", "new", "->", "echo", "<?php", "Cat", "name", "}", "Tama", "$cat", "?>"]
+          "others": ["public", "new", "->", "echo", "<?php", "Cat", "name", "}", "Tama", "$cat", "?>", "タマ"]
         },
         "testCases": [
           {
@@ -192,7 +192,7 @@ export const php2Data = {
           "keywords": [
             "extends"
           ],
-          "others": ["class", "function", "echo", "new", "->", "<?php", "Vehicle", "move", "moving", "}", "Car", "?>"]
+          "others": ["class", "function", "echo", "new", "->", "<?php", "Vehicle", "move", "moving", "}", "Car", "?>", "移動中"]
         },
         "testCases": [
           {
@@ -265,7 +265,7 @@ export const php2Data = {
           "keywords": [
             "interface"
           ],
-          "others": ["function", "implements", "echo", "new", "->", "<?php", "Runner", "run", "}", "Robot", "running", "?>"]
+          "others": ["function", "implements", "echo", "new", "->", "<?php", "Runner", "run", "}", "Robot", "running", "?>", "実行中"]
         },
         "testCases": [
           {
@@ -471,7 +471,7 @@ export const php2Data = {
           "keywords": [
             "catch"
           ],
-          "others": ["try", "throw", "echo", "<?php", "oops", "e", "caught", "}", "?>"]
+          "others": ["try", "throw", "echo", "<?php", "oops", "e", "caught", "}", "?>", "おっと", "キャッチ"]
         },
         "testCases": [
           {
@@ -538,7 +538,7 @@ export const php2Data = {
           "keywords": [
             "namespace"
           ],
-          "others": ["class", "function", "echo", "new", "->", "<?php", "App", "Hello", "say", "hello", "}", "?>"]
+          "others": ["class", "function", "echo", "new", "->", "<?php", "App", "Hello", "say", "hello", "}", "?>", "こんにちは"]
         },
         "testCases": [
           {

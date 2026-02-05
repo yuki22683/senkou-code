@@ -278,7 +278,7 @@ export const ruby2Data = {
           "keywords": [
             "class"
           ],
-          "others": ["initialize", "name", "end", "greet", "@name", "new", "Cat", "Tama"]
+          "others": ["initialize", "name", "end", "greet", "@name", "new", "Cat", "Tama", "タマ"]
         },
         "testCases": [
           {
@@ -408,7 +408,7 @@ export const ruby2Data = {
           "operators": [
             "<"
           ],
-          "others": ["class", "move", "moving", "end", "new", "Vehicle", "Car"]
+          "others": ["class", "move", "moving", "end", "new", "Vehicle", "Car", "移動中"]
         },
         "testCases": [
           {
@@ -483,7 +483,7 @@ export const ruby2Data = {
           "keywords": [
             "module"
           ],
-          "others": ["speak", "speaking", "end", "class", "Speakable", "new", "Robot"]
+          "others": ["speak", "speaking", "end", "class", "Speakable", "new", "Robot", "話し中"]
         },
         "testCases": [
           {
@@ -538,7 +538,7 @@ export const ruby2Data = {
           "keywords": [
             "rescue"
           ],
-          "others": ["begin", "oops", "caught", "end", "e"]
+          "others": ["begin", "oops", "caught", "end", "e", "おっと", "キャッチ"]
         },
         "testCases": [
           {

@@ -558,7 +558,7 @@ export const csharp4Data = {
             "?:",
             "||"
           ],
-          "others": ["System", "Program", "Main", "null", "WriteLine", "default", "result", "}"]
+          "others": ["System", "Program", "Main", "null", "WriteLine", "default", "result", "}", "デフォルト"]
         },
         "testCases": [
           {

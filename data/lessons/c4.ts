@@ -62,7 +62,7 @@ export const c4Data = {
             "open",
             "fread"
           ],
-          "others": ["main", "test.txt", "NULL", "fp", "}", "0"]
+          "others": ["main", "test.txt", "NULL", "fp", "}", "0", "テスト.txt"]
         },
         "testCases": [
           {
@@ -127,7 +127,7 @@ export const c4Data = {
             "close",
             "fend"
           ],
-          "others": ["main", "data.txt", "NULL", "fp", "}", "0"]
+          "others": ["main", "data.txt", "NULL", "fp", "}", "0", "データ.txt"]
         },
         "testCases": [
           {
@@ -192,7 +192,7 @@ export const c4Data = {
             "printf",
             "sprintf"
           ],
-          "others": ["main", "log.txt", "NULL", "fp", "}", "0"]
+          "others": ["main", "log.txt", "NULL", "fp", "}", "0", "\"Written", "return 0;"]
         },
         "testCases": [
           {

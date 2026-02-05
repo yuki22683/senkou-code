@@ -278,7 +278,7 @@ export const rubyData = {
           "numbers": [
             "10"
           ],
-          "others": ["私は#{age}歳です", "I am #{age} years old"]
+          "others": ["私は#{age}歳です", "I am #{age} years old", "私は#{年齢}歳です"]
         },
         "testCases": [
           {

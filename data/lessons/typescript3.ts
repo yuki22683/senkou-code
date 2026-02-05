@@ -196,7 +196,7 @@ export const typescriptData3 = {
             "Omit",
             "Extract"
           ],
-          "others": ["number", "string", "'りんご'", "name", "Product", "}", "Apple", "log"]
+          "others": ["number", "string", "'りんご'", "name", "Product", "}", "Apple", "log", "名前", "りんご"]
         },
         "testCases": [
           {
@@ -519,7 +519,7 @@ export const typescriptData3 = {
             "typeof",
             "keyof"
           ],
-          "others": ["string", "number", "'こんにちは'", "42", "b", "T", "hello", "log"]
+          "others": ["string", "number", "'こんにちは'", "42", "b", "T", "hello", "log", "こんにちは"]
         },
         "testCases": [
           {

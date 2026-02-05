@@ -44,7 +44,7 @@ export const cppData = {
           "strings": [
             "Hello, C++!"
           ],
-          "others": ["main", "\"Hello,", "0", "}"]
+          "others": ["main", "\"Hello,", "0", "}", "\"こんにちは,"]
         },
         "testCases": [
           {
@@ -489,7 +489,7 @@ export const cppData = {
           "keywords": [
             "else"
           ],
-          "others": ["10;", ">=", "Adult", "Minor", "main", "10", "\"Adult\"", "\"Minor\"", "}", "0"]
+          "others": ["10;", ">=", "Adult", "Minor", "main", "10", "\"Adult\"", "\"Minor\"", "}", "0", "\"大人\"", "\"未成年\""]
         },
         "testCases": [
           {
@@ -553,7 +553,7 @@ export const cppData = {
           "strings": [
             "Pass"
           ],
-          "others": ["85;", "main", "80", "\"Pass\"", "}", "0"]
+          "others": ["85;", "main", "80", "\"Pass\"", "}", "0", "\"合格\""]
         },
         "testCases": [
           {
@@ -718,7 +718,7 @@ export const cppData = {
           "functions": [
             "greet"
           ],
-          "others": ["\"Hello\"", "}", "main", "0"]
+          "others": ["\"Hello\"", "}", "main", "0", "\"こんにちは\""]
         },
         "testCases": [
           {

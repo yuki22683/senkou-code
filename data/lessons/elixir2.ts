@@ -437,7 +437,7 @@ export const elixir2Data = {
           "numbers": [
             "100"
           ],
-          "others": ["hello"]
+          "others": ["hello", "こんにちは"]
         },
         "testCases": [
           {

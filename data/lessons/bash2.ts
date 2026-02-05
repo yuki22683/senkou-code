@@ -392,10 +392,7 @@ export const bash2Data = {
           "operators": [
             "$"
           ],
-          "others": [
-            "echo \"test\"",
-            "files"
-          ]
+          "others": ["echo \"test\"", "files", "echo \"テスト\""]
         },
         "testCases": [
           {

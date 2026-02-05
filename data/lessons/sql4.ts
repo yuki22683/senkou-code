@@ -342,7 +342,7 @@ export const sql4Data = {
             "ADD",
             "PUT"
           ],
-          "others": ["CREATE", "SELECT", "TEXT", "hello", "test"]
+          "others": ["CREATE", "SELECT", "TEXT", "hello", "test", "こんにちは"]
         },
         "testCases": [
           {
@@ -395,7 +395,7 @@ export const sql4Data = {
             "MODIFY",
             "CHANGE"
           ],
-          "others": ["CREATE", "INSERT", "SELECT", "TEXT", "old", "new", "test"]
+          "others": ["CREATE", "INSERT", "SELECT", "TEXT", "old", "new", "test", "古い", "新しい"]
         },
         "testCases": [
           {

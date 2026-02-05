@@ -80,7 +80,7 @@ export const swift4Data = {
             "struct",
             "class"
           ],
-          "others": ["speak", "Speakable", "String", "Woof!", "Dog", "speak()", "}", "dog"]
+          "others": ["speak", "Speakable", "String", "Woof!", "Dog", "speak()", "}", "dog", "ワン！"]
         },
         "testCases": [
           {

@@ -306,7 +306,7 @@ export const elixir3Data = {
             "else",
             "end"
           ],
-          "others": ["do", "name", "#{name} is #{age} years old", "Missing field"]
+          "others": ["do", "name", "#{name} is #{age} years old", "Missing field", "#{名前} is #{年齢}歳です"]
         },
         "testCases": [
           {
@@ -400,7 +400,7 @@ export const elixir3Data = {
             "def",
             "end"
           ],
-          "others": ["do", "Map with #{map_size(map)} keys"]
+          "others": ["do", "Map with #{map_size(map)} keys", "Map with #{map_size(map)} キーs"]
         },
         "testCases": [
           {

@@ -440,7 +440,7 @@ export const pythonData4 = {
             "@property",
             "@staticmethod"
           ],
-          "others": ["ABC, abstractmethod", "Animal(ABC)", "speak(self)", "pass", "Cat(Animal)", "'ニャー'", "Cat()", "cat.speak(", "abstractmethod", "Animal", "speak", "Cat", "Meow", "print"]
+          "others": ["ABC, abstractmethod", "Animal(ABC)", "speak(self)", "pass", "Cat(Animal)", "'ニャー'", "Cat()", "cat.speak(", "abstractmethod", "Animal", "speak", "Cat", "Meow", "print", "ニャー"]
         },
         "testCases": [
           {
@@ -647,7 +647,7 @@ export const pythonData4 = {
             "__size__",
             "__count__"
           ],
-          "others": ["Team", "__init__(self, members)", "members", "len(self.members)", "Team(['アリス', 'ボブ', 'チャーリー'])", "len(team", "__init__", "Charlie", "print", ","]
+          "others": ["Team", "__init__(self, members)", "members", "len(self.members)", "Team(['アリス', 'ボブ', 'チャーリー'])", "len(team", "__init__", "チャーリー", "print", ","]
         },
         "testCases": [
           {

@@ -669,7 +669,7 @@ export const go3Data = {
             "catch",
             "handle"
           ],
-          "others": ["panic", "main", "fmt", "main()", "func", "nil", "Println", "}", "error", "mt\""]
+          "others": ["panic", "main", "fmt", "main()", "func", "nil", "Println", "}", "error", "mt\"", "エラー"]
         },
         "testCases": [
           {

@@ -633,7 +633,7 @@ export const kotlin4Data = {
             "also",
             "run"
           ],
-          "others": ["main", "uppercase", "println", "hello", "}", "result"]
+          "others": ["main", "uppercase", "println", "hello", "}", "result", "こんにちは"]
         },
         "testCases": [
           {

@@ -415,12 +415,7 @@ export const javascriptData3 = {
             "implements",
             "with"
           ],
-          "others": [
-            "class",
-            "speak",
-            "Meow!",
-            "new"
-          ]
+          "others": ["class", "speak", "Meow!", "new", "ニャー！"]
         },
         "testCases": [
           {
@@ -533,9 +528,7 @@ export const javascriptData3 = {
             ".",
             "?."
           ],
-          "others": [
-            "Bob"
-          ]
+          "others": ["Bob", "ボブ"]
         },
         "testCases": [
           {

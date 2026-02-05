@@ -213,7 +213,7 @@ export const pythonData5 = {
             "dump",
             "stringify"
           ],
-          "others": ["json", "{'language': 'Python', 'レベル': '上級'}", "json_str", "advanced", "data", "print"]
+          "others": ["json", "{'language': 'Python', 'レベル': '上級'}", "json_str", "advanced", "data", "print", "上級"]
         },
         "testCases": [
           {
@@ -421,7 +421,7 @@ export const pythonData5 = {
             "Count",
             "Dict"
           ],
-          "others": ["'こんにちは世界'", "Counter(text)", "count.most_common(3", "world", "text", "print", "世界"]
+          "others": ["'こんにちは世界'", "Counter(text)", "count.most_common(3", "world", "text", "print", "世界", "World"]
         },
         "testCases": [
           {
@@ -476,7 +476,7 @@ export const pythonData5 = {
             "dict",
             "OrderedDict"
           ],
-          "others": ["defaultdict(list)", "d['くだもの'].append('りんご')", "d['くだもの'].append('バナナ')", "d['くだもの']", "list", "apple", "banana", "print", "("]
+          "others": ["defaultdict(list)", "d['くだもの'].append('りんご')", "d['くだもの'].append('バナナ')", "d['くだもの']", "list", "apple", "banana", "print", "(", "りんご", "バナナ"]
         },
         "testCases": [
           {

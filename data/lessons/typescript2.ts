@@ -185,7 +185,7 @@ export const typescriptData2 = {
             "*",
             "&"
           ],
-          "others": ["string", "'ボブ'", "name", "Profile", "}", "Bob", "log"]
+          "others": ["string", "'ボブ'", "name", "Profile", "}", "Bob", "log", "ボブ"]
         },
         "testCases": [
           {
@@ -485,7 +485,7 @@ export const typescriptData2 = {
             "V",
             "Type"
           ],
-          "others": ["'Hello'", "item", "}", "Hello", "log"]
+          "others": ["'Hello'", "item", "}", "Hello", "log", "こんにちは"]
         },
         "testCases": [
           {

@@ -392,7 +392,7 @@ export const ruby3Data = {
             "args",
             "self"
           ],
-          "others": ["class", "end", "FlexibleClass", "Unknown method: #{name}"]
+          "others": ["class", "end", "FlexibleClass", "Unknown method: #{name}", "Unknown method: #{名前}"]
         },
         "testCases": [
           {

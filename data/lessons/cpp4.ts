@@ -241,7 +241,7 @@ export const cpp4Data = {
             "string",
             "const char*"
           ],
-          "others": ["greet", "std", "name", "Hello,", "}", "main", "World", "0"]
+          "others": ["greet", "std", "name", "Hello,", "}", "main", "World", "0", "こんにちは,", "世界"]
         },
         "testCases": [
           {

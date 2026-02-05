@@ -735,14 +735,14 @@ export const csharp3Data = {
             "WriteLine",
             "Trim",
             "var",
-            "Hello",
+            "こんにちは",
             "}"
           ]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello\\\\\n"
+            "expected_output": "こんにちは\\\\\n"
           }
         ]
       }
