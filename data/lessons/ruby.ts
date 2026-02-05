@@ -257,13 +257,13 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ageというはこに 10 を入れる\\nage = 10\\n# 式展開を使ってメッセージを出す\\nputs \"私は#{年齢}歳です\"",
+        "correctCode": "# ageというはこに 10 を入れる\\nage = 10\\n# 式展開を使ってメッセージを出す\\nputs \"私は#{age}歳です\"",
         "holeyCode": "# ageというはこに 10 を入れる\\nage = ___\\n# 式展開を使ってメッセージを出す\\nputs \"___\"",
         "correctLines": [
           "# ageというはこに 10 を入れる",
           "age = 10",
           "# 式展開を使ってメッセージを出す",
-          "puts \"私は#{年齢}歳です\""
+          "puts \"私は#{age}歳です\""
         ],
         "lineHints": [
           null,
@@ -278,7 +278,7 @@ export const rubyData = {
           "numbers": [
             "10"
           ],
-          "others": ["私は#{age}歳です", "I am #{age} years old", "私は#{年齢}歳です"]
+          "others": ["私は#{age}歳です", "I am #{age} years old", "私は#{age}歳です"]
         },
         "testCases": [
           {

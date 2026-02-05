@@ -345,6 +345,37 @@ function checkImagePaths(file, content) {
   }
 }
 
+// 11. 日本語変数参照チェック（テンプレート文字列内の未定義変数）
+function checkJapaneseVariableRefs(file, content) {
+  const checkName = '日本語変数参照';
+  const exercises = extractExercises(content);
+
+  // 日本語変数参照パターン: ${日本語}, #{日本語}, {日本語}
+  const patterns = [
+    /\$\{[ぁ-んァ-ン一-龥]+\}/g,   // JavaScript/TypeScript: ${名前}
+    /#\{[ぁ-んァ-ン一-龥]+\}/g,    // Ruby/Elixir: #{名前}
+    /\{[ぁ-んァ-ン一-龥]+\}/g,     // C#/Python f-string: {名前}
+  ];
+
+  let hasError = false;
+  for (const ex of exercises) {
+    const code = ex.correctCode;
+
+    for (const pattern of patterns) {
+      const matches = code.match(pattern) || [];
+      for (const match of matches) {
+        // コメント内や"content"フィールドは除外
+        addError(file, checkName, `「${ex.title}」: 日本語変数参照 ${match} → 英語変数名に修正が必要`);
+        hasError = true;
+      }
+    }
+  }
+
+  if (!hasError) {
+    addPassed(file, checkName);
+  }
+}
+
 // メイン処理
 function checkFile(file) {
   const filePath = path.join(lessonsDir, file);
@@ -362,6 +393,7 @@ function checkFile(file) {
   checkJapaneseStrings(file, content);
   checkTutorialSlides(file, content);
   checkImagePaths(file, content);
+  checkJapaneseVariableRefs(file, content);
 }
 
 // 実行

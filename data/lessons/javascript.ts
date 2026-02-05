@@ -175,13 +175,13 @@ export const javascriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// age というはこに 10 を入れる\\nconst age = 10;\\n// 文章の中に age の中身を入れる\\nconsole.log(`私は${年齢}歳です`);",
+        "correctCode": "// age というはこに 10 を入れる\\nconst age = 10;\\n// 文章の中に age の中身を入れる\\nconsole.log(`私は${age}歳です`);",
         "holeyCode": "// age というはこに 10 を入れる\\nconst age = ___ ;\\n// 文章の中に age の中身を入れる\\nconsole.log(`私は${___}歳です`);",
         "correctLines": [
           "// age というはこに 10 を入れる",
           "const age = 10;",
           "// 文章の中に age の中身を入れる",
-          "console.log(`私は${年齢}歳です`);"
+          "console.log(`私は${age}歳です`);"
         ],
         "lineHints": [
           null,

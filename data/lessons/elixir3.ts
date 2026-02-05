@@ -268,14 +268,14 @@ export const elixir3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defで関数を定義\\ndef process(map) do\\n  # withでパターンマッチを連鎖\\n  with {:ok, name} <- Map.fetch(map, :name),\\n       {:ok, age} <- Map.fetch(map, :age) do\\n    {:ok, \"#{名前} is #{年齢}歳です\"}\\n  # elseでエラー処理\\n  else\\n    :error -> {:error, \"Missing field\"}\\n  # endでブロックを閉じる\\n  end\\n# endで関数を閉じる\\nend", "holeyCode": "# defで関数を定義\\ndef process(map) ___\\n  # withでパターンマッチを連鎖\\n  with {:ok, ___} <- Map.fetch(map, :name),\\n       {:ok, age} <- Map.fetch(map, :age) ___\\n    {:ok, \"___\"}\\n  # elseでエラー処理\\n  ___\\n    :error -> {:error, \"___\"}\\n  # endでブロックを閉じる\\n  ___\\n# endで関数を閉じる\\n___",
+        "correctCode": "# defで関数を定義\\ndef process(map) do\\n  # withでパターンマッチを連鎖\\n  with {:ok, name} <- Map.fetch(map, :name),\\n       {:ok, age} <- Map.fetch(map, :age) do\\n    {:ok, \"#{name} is #{age}歳です\"}\\n  # elseでエラー処理\\n  else\\n    :error -> {:error, \"Missing field\"}\\n  # endでブロックを閉じる\\n  end\\n# endで関数を閉じる\\nend", "holeyCode": "# defで関数を定義\\ndef process(map) ___\\n  # withでパターンマッチを連鎖\\n  with {:ok, ___} <- Map.fetch(map, :name),\\n       {:ok, age} <- Map.fetch(map, :age) ___\\n    {:ok, \"___\"}\\n  # elseでエラー処理\\n  ___\\n    :error -> {:error, \"___\"}\\n  # endでブロックを閉じる\\n  ___\\n# endで関数を閉じる\\n___",
         "correctLines": [
           "# defで関数を定義",
           "def process(map) do",
           "  # withでパターンマッチを連鎖",
           "  with {:ok, name} <- Map.fetch(map, :name),",
           "       {:ok, age} <- Map.fetch(map, :age) do",
-          "    {:ok, \"#{名前} is #{年齢}歳です\"}",
+          "    {:ok, \"#{name} is #{age}歳です\"}",
           "  # elseでエラー処理",
           "  else",
           "    :error -> {:error, \"Missing field\"}",
@@ -306,7 +306,7 @@ export const elixir3Data = {
             "else",
             "end"
           ],
-          "others": ["do", "name", "#{name} is #{age} years old", "Missing field", "#{名前} is #{年齢}歳です"]
+          "others": ["do", "name", "#{name} is #{age} years old", "Missing field", "#{name} is #{age}歳です"]
         },
         "testCases": [
           {

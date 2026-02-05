@@ -277,7 +277,7 @@ export const bashData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "names=(\"アリス\" \"ボブ\")\\n# inで配列の中身を取り出す\\nfor name in \"${名前s[@]}\"; do\\n    echo $name\\n# doneでループを終了\\ndone",
+        "correctCode": "names=(\"アリス\" \"ボブ\")\\n# inで配列の中身を取り出す\\nfor name in \"${names[@]}\"; do\\n    echo $name\\n# doneでループを終了\\ndone",
         "holeyCode": "names=(\\\"___\\\" \\\"___\\\")\\n# inで配列の中身を取り出す\\nfor name in \"___\"; do\\n    echo ___\\n# doneでループを終了\\n___",
         "correctLines": [
           "names=(\"アリス\" \"ボブ\")",

@@ -309,8 +309,8 @@ export const csharp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 戻り値を持たない汎用デリゲート型\\n        Action<string> greet = name => Console.WriteLine($\"こんにちは, {名前}!\");\\n        // 関数を呼び出し\\n        greet(\"世界\");\\n    }\\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // 戻り値を持たない汎用デリゲート型\\n        Action<string> greet = name => Console.___($\"こんにちは, {名前}!\");\\n        // 関数を呼び出し\\n        greet(\"___\");\\n    ___\\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 戻り値を持たない汎用デリゲート型\\n        Action<string> greet = name => Console.WriteLine($\"こんにちは, {name}!\");\\n        // 関数を呼び出し\\n        greet(\"世界\");\\n    }\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // 戻り値を持たない汎用デリゲート型\\n        Action<string> greet = name => Console.___($\"こんにちは, {name}!\");\\n        // 関数を呼び出し\\n        greet(\"___\");\\n    ___\\n___",
         "correctLines": [
                   "// usingでSystem名前空間をインポート",
                   "using System;",
@@ -320,7 +320,7 @@ export const csharp4Data = {
                   "    // Mainメソッドを定義",
                   "    static void Main() {",
                   "        // 戻り値を持たない汎用デリゲート型",
-                  "        Action<string> greet = name => Console.WriteLine($\"こんにちは, {名前}!\");",
+                  "        Action<string> greet = name => Console.WriteLine($\"こんにちは, {name}!\");",
                   "        // 関数を呼び出し",
                   "        greet(\"世界\");",
                   "    }",

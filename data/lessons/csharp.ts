@@ -277,13 +277,13 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// ageというはこに 10 を入れる\\nint age = 10;\\n// 文字列補間を使ってメッセージを出す\\nConsole.WriteLine($\"19私は{年齢}歳ですConsole.WriteLine($\"私は{age}歳です\");\");",
-        "holeyCode": "// ageというはこに 10 を入れる\\nint age = ___;\\n// 文字列補間を使ってメッセージを出す\\nConsole.___($\"13私は{年齢}歳ですConsole.___($\"私は{age}歳です\");\");",
+        "correctCode": "// ageというはこに 10 を入れる\\nint age = 10;\\n// 文字列補間を使ってメッセージを出す\\nConsole.WriteLine($\"私は{age}歳です\");",
+        "holeyCode": "// ageというはこに 10 を入れる\\nint age = ___;\\n// 文字列補間を使ってメッセージを出す\\nConsole.___($\"私は{___}歳です\");",
         "correctLines": [
           "// ageというはこに 10 を入れる",
           "int age = 10;",
           "// 文字列補間を使ってメッセージを出す",
-          "Console.WriteLine($\"19私は{年齢}歳ですConsole.WriteLine($\"私は{age}歳です\");\");"
+          "Console.WriteLine($\"私は{age}歳です\");"
         ],
         "lineHints": [
           null,

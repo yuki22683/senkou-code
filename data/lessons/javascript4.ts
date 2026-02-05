@@ -153,8 +153,8 @@ export const javascriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// name: '太郎', age: 25 のオブジェクトを定義\\nconst user = { name: '太郎', age: 25 };\\n// entries でキーと値のペアを取得\\nfor (const [key, value] of Object.entries(user)) {\\n  // テンプレートリテラルで出力\\n  console.log(`${キー}: ${値}`);\\n}",
-        "holeyCode": "// name: '太郎', age: 25 のオブジェクトを定義\\nconst ___ = { name: '太郎', age: 25 };\\n// entries でキーと値のペアを取得\\nfor (const [key, value] of Object.entries(___)) {\\n  // テンプレートリテラルで出力\\n  console.___(`${キー}: ${値}`);\\n___",
+        "correctCode": "// name: '太郎', age: 25 のオブジェクトを定義\\nconst user = { name: '太郎', age: 25 };\\n// entries でキーと値のペアを取得\\nfor (const [key, value] of Object.entries(user)) {\\n  // テンプレートリテラルで出力\\n  console.log(`${key}: ${value}`);\\n}",
+        "holeyCode": "// name: '太郎', age: 25 のオブジェクトを定義\\nconst ___ = { name: '太郎', age: 25 };\\n// entries でキーと値のペアを取得\\nfor (const [key, value] of Object.entries(___)) {\\n  // テンプレートリテラルで出力\\n  console.___(`${key}: ${value}`);\\n___",
         "correctLines": [
           "// name: '太郎', age: 25 のオブジェクトを定義",
           "const user = { name: '太郎', age: 25 };",
