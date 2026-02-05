@@ -49,7 +49,7 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, C++!\\n"
+            "expected_output": "こんにちは, C++!\\n"
           }
         ]
       },
@@ -558,7 +558,7 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Pass\\n"
+            "expected_output": "合格\\n"
           }
         ]
       },
@@ -723,7 +723,7 @@ export const cppData = {
         "testCases": [
           {
             "input": " ",
-            "expected_output": "Hello\\n"
+            "expected_output": "こんにちは\\n"
           }
         ]
       }

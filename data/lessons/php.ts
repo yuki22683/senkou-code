@@ -48,7 +48,7 @@ export const phpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, PHP!"
+            "expected_output": "こんにちは, PHP!"
           }
         ]
       },
@@ -520,7 +520,7 @@ export const phpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Pass"
+            "expected_output": "合格"
           }
         ]
       },
@@ -663,7 +663,7 @@ export const phpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello"
+            "expected_output": "こんにちは"
           }
         ]
       }

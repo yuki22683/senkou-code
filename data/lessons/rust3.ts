@@ -522,7 +522,7 @@ export const rust3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello\\n"
+            "expected_output": "こんにちは\\n"
           }
         ]
       }

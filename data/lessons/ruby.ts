@@ -41,7 +41,7 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Ruby!\\n"
+            "expected_output": "こんにちは, Ruby!\\n"
           }
         ]
       },

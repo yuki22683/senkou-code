@@ -232,7 +232,7 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello Hello\\n"
+            "expected_output": "こんにちは Hello\\n"
           }
         ]
       },

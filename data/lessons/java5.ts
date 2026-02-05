@@ -65,7 +65,7 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Error\\n"
+            "expected_output": "エラー\\n"
           }
         ]
       },
@@ -495,7 +495,7 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello\\n"
+            "expected_output": "こんにちは\\n"
           }
         ]
       },
@@ -563,7 +563,7 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42 Hello\\n"
+            "expected_output": "42 こんにちは\\n"
           }
         ]
       },

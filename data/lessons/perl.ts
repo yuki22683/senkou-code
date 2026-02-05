@@ -209,7 +209,7 @@ export const perlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Perl!\\n"
+            "expected_output": "こんにちは, Perl!\\n"
           }
         ]
       },

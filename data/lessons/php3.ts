@@ -387,7 +387,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "(new Greeter())->sayHello()",
-            "expected_output": "Hello!"
+            "expected_output": "こんにちは！"
           }
         ]
       },

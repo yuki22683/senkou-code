@@ -60,7 +60,7 @@ export const typescriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello\\n42\\n"
+            "expected_output": "こんにちは\\n42\\n"
           }
         ]
       },
@@ -490,7 +490,7 @@ export const typescriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello\\n"
+            "expected_output": "こんにちは\\n"
           }
         ]
       },

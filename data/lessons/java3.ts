@@ -440,7 +440,7 @@ export const javaData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello\\n"
+            "expected_output": "こんにちは\\n"
           }
         ]
       },

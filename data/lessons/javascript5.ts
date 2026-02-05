@@ -182,7 +182,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello   World   JavaScript\\n"
+            "expected_output": "こんにちは   世界   JavaScript\\n"
           }
         ]
       },
@@ -235,7 +235,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Error: Unexpected token i in JSON at position 0\\n"
+            "expected_output": "エラー: Unexpected token i in JSON at position 0\\n"
           }
         ]
       },
@@ -308,7 +308,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Processing...\\nCaught: Error!\\nCleanup done\\n"
+            "expected_output": "Processing...\\nCaught: エラー!\\nCleanup done\\n"
           }
         ]
       },
@@ -379,7 +379,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ValidationError: Invalid input\\n"
+            "expected_output": "Validationエラー: Invalid input\\n"
           }
         ]
       },

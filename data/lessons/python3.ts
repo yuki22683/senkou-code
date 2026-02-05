@@ -460,7 +460,7 @@ export const pythonData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "関数を呼び出します\\nHello!\\n"
+            "expected_output": "関数を呼び出します\\nこんにちは！\\n"
           }
         ]
       },

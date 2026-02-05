@@ -338,7 +338,7 @@ export const kotlinData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bonus Pass\\n"
+            "expected_output": "Bonus 合格\\n"
           }
         ]
       },

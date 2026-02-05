@@ -46,7 +46,7 @@ export const javascriptData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, JavaScript!\\n"
+            "expected_output": "こんにちは, JavaScript!\\n"
           }
         ]
       },

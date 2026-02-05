@@ -45,7 +45,7 @@ export const luaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Lua!\\n"
+            "expected_output": "こんにちは, Lua!\\n"
           }
         ]
       },

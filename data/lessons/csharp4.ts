@@ -76,7 +76,7 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello\\n"
+            "expected_output": "こんにちは\\n"
           }
         ]
       },
@@ -352,7 +352,7 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, World!\\n"
+            "expected_output": "こんにちは, 世界!\\n"
           }
         ]
       },

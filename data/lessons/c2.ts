@@ -313,7 +313,7 @@ export const c2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello"
+            "expected_output": "こんにちは"
           }
         ]
       },

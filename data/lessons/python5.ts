@@ -57,7 +57,7 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Python!\\n"
+            "expected_output": "こんにちは, Python!\\n"
           }
         ]
       },
@@ -375,7 +375,7 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello World Python\\n"
+            "expected_output": "こんにちは 世界 Python\\n"
           }
         ]
       },

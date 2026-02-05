@@ -445,7 +445,7 @@ export const pythonData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Meow\\n"
+            "expected_output": "ニャー\\n"
           }
         ]
       },

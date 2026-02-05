@@ -56,7 +56,7 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, C#!\\n"
+            "expected_output": "こんにちは, C#!\\n"
           }
         ]
       },

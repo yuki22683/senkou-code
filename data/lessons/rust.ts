@@ -45,7 +45,7 @@ export const rustData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Rust!\\n"
+            "expected_output": "こんにちは, Rust!\\n"
           }
         ]
       },
@@ -300,7 +300,7 @@ export const rustData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bonus Pass\\n"
+            "expected_output": "Bonus 合格\\n"
           }
         ]
       },

@@ -58,7 +58,7 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello Promise!\\n"
+            "expected_output": "こんにちは Promise!\\n"
           }
         ]
       },
@@ -420,7 +420,7 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Meow!\\n"
+            "expected_output": "ニャー！\\n"
           }
         ]
       },

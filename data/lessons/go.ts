@@ -49,7 +49,7 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Go!\\n"
+            "expected_output": "こんにちは, Go!\\n"
           }
         ]
       },
@@ -549,7 +549,7 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bonus Pass\\n"
+            "expected_output": "Bonus 合格\\n"
           }
         ]
       },
@@ -707,7 +707,7 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello\\n"
+            "expected_output": "こんにちは\\n"
           }
         ]
       }

@@ -52,7 +52,7 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Java!\\n"
+            "expected_output": "こんにちは, Java!\\n"
           }
         ]
       },

@@ -56,7 +56,7 @@ export const typescriptData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello TS\\n"
+            "expected_output": "こんにちは TS\\n"
           }
         ]
       },
