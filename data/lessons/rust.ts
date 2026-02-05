@@ -39,7 +39,8 @@ export const rustData = {
         "candidates": {
           "strings": [
             "Hello, Rust!"
-          ]
+          ],
+          "others": ["main()", "println", "}"]
         },
         "testCases": [
           {
@@ -96,7 +97,8 @@ export const rustData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["main()", "x", "y", "println", "}"]
         },
         "testCases": [
           {
@@ -137,7 +139,8 @@ export const rustData = {
             "/",
             "*",
             "-"
-          ]
+          ],
+          "others": ["main()", "println", "}"]
         },
         "testCases": [
           {
@@ -188,7 +191,8 @@ export const rustData = {
             "-=",
             "*=",
             "/="
-          ]
+          ],
+          "others": ["main()", "hp", "20", "50", "println", "}"]
         },
         "testCases": [
           {
@@ -240,7 +244,8 @@ export const rustData = {
             "<",
             ">=",
             "<="
-          ]
+          ],
+          "others": ["main()", "score", "println", "}"]
         },
         "testCases": [
           {
@@ -289,7 +294,8 @@ export const rustData = {
             "||",
             "&",
             "|"
-          ]
+          ],
+          "others": ["main()", "score", "bonus", ">=", "println", "}"]
         },
         "testCases": [
           {
@@ -346,7 +352,8 @@ export const rustData = {
           ],
           "numbers": [
             "1"
-          ]
+          ],
+          "others": ["main()", "println", "}"]
         },
         "testCases": [
           {
@@ -408,7 +415,8 @@ export const rustData = {
           "strings": [
             "みかん",
             "オレンジ"
-          ]
+          ],
+          "others": ["collections", "HashMap", "main()", "println", "}"]
         },
         "testCases": [
           {

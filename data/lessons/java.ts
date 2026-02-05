@@ -46,7 +46,8 @@ export const javaData = {
           ],
           "strings": [
             "Hello, Java!"
-          ]
+          ],
+          "others": ["Main", "main(String[] args) {", "println", "}"]
         },
         "testCases": [
           {
@@ -103,9 +104,7 @@ export const javaData = {
           "strings": [
             "Java"
           ],
-          "others": [
-            "Java\";"
-          ]
+          "others": ["Java\";", "Main", "main(String[] args) {", "println", "}"]
         },
         "testCases": [
           {
@@ -168,10 +167,7 @@ export const javaData = {
             "10",
             "3"
           ],
-          "others": [
-            "10;",
-            "3;"
-          ]
+          "others": ["10;", "3;", "Main", "main(String[] args) {", "println", "}"]
         },
         "testCases": [
           {
@@ -220,7 +216,8 @@ export const javaData = {
             "/",
             "*",
             "-"
-          ]
+          ],
+          "others": ["Main", "main(String[] args) {", "println", "}"]
         },
         "testCases": [
           {
@@ -279,7 +276,8 @@ export const javaData = {
             "-=",
             "*=",
             "/="
-          ]
+          ],
+          "others": ["Main", "main(String[] args) {", "100", "20", "50", "println", "}"]
         },
         "testCases": [
           {
@@ -333,9 +331,7 @@ export const javaData = {
           "operators": [
             "+"
           ],
-          "others": [
-            "10;"
-          ]
+          "others": ["10;", "Main", "main(String[] args) {", "10", "println", "}"]
         },
         "testCases": [
           {
@@ -392,7 +388,8 @@ export const javaData = {
           ],
           "numbers": [
             "1"
-          ]
+          ],
+          "others": ["Main", "main(String[] args) {", "\"あか\", \"あお\"", "println", "}"]
         },
         "testCases": [
           {
@@ -452,9 +449,7 @@ export const javaData = {
           "strings": [
             "ごうかく！"
           ],
-          "others": [
-            "100;"
-          ]
+          "others": ["100;", "Main", "main(String[] args) {", "100", "println", "}"]
         },
         "testCases": [
           {
@@ -522,11 +517,7 @@ export const javaData = {
           "strings": [
             "こども"
           ],
-          "others": [
-            "10;",
-            ">=",
-            "おとな"
-          ]
+          "others": ["10;", ">=", "おとな", "Main", "main(String[] args) {", "10", "println", "}"]
         },
         "testCases": [
           {
@@ -585,7 +576,8 @@ export const javaData = {
             "||",
             "&",
             "|"
-          ]
+          ],
+          "others": ["Main", "main(String[] args) {", "80", "10", "70", "println", "}"]
         },
         "testCases": [
           {
@@ -640,7 +632,8 @@ export const javaData = {
           "variables": [
             "name",
             "names"
-          ]
+          ],
+          "others": ["Main", "main(String[] args) {", "\"たろう\", \"はなこ\"", "println", "}"]
         },
         "testCases": [
           {
@@ -700,7 +693,8 @@ export const javaData = {
           ],
           "strings": [
             "HashMap"
-          ]
+          ],
+          "others": ["HashMap;", "Main", "main(String[] args) {", "name", "println", "}"]
         },
         "testCases": [
           {
@@ -754,7 +748,8 @@ export const javaData = {
         "candidates": {
           "functions": [
             "greet"
-          ]
+          ],
+          "others": ["Main", "println", "}", "main(String[] args) {"]
         },
         "testCases": [
           {

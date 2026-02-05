@@ -91,7 +91,7 @@ function checkFile(filePath) {
       }
     }
 
-    // 4. 日本語/英語の不一致チェック
+    // 4. 日本語/英語の不一致チェック（文字列リテラル内のみ）
     const commonMismatches = [
       { jp: 'こんにちは', en: 'Hello' },
       { jp: 'こんにちは', en: 'hello' },
@@ -105,23 +105,29 @@ function checkFile(filePath) {
       { jp: 'りんご', en: 'apple' },
     ];
 
+    // コード内の文字列リテラルを抽出（識別子名を除外）
+    // 注意: エスケープされたクォートも考慮
+    const stringLiteralsInCode = correctCode.match(/'[^'\\]*(?:\\.[^'\\]*)*'|"[^"\\]*(?:\\.[^"\\]*)*"/g) || [];
+
     for (const pair of commonMismatches) {
-      // コードに日本語があり、出力に対応する英語がある場合
-      if (correctCode.includes(pair.jp) && expectedOutput.includes(pair.en)) {
+      // 文字列リテラル内に日本語があり、出力に対応する英語がある場合
+      const hasJpInStrings = stringLiteralsInCode.some(s => s.includes(pair.jp));
+      if (hasJpInStrings && expectedOutput.includes(pair.en)) {
         issues.push({
           file: fileName,
           exercise: title,
           type: 'language_mismatch',
-          message: `コードに「${pair.jp}」があるが、expected_outputに「${pair.en}」がある`
+          message: `コードの文字列に「${pair.jp}」があるが、expected_outputに「${pair.en}」がある`
         });
       }
-      // コードに英語があり、出力に対応する日本語がある場合
-      if (correctCode.includes(pair.en) && expectedOutput.includes(pair.jp)) {
+      // 文字列リテラル内に英語があり、出力に対応する日本語がある場合
+      const hasEnInStrings = stringLiteralsInCode.some(s => s.includes(pair.en));
+      if (hasEnInStrings && expectedOutput.includes(pair.jp)) {
         issues.push({
           file: fileName,
           exercise: title,
           type: 'language_mismatch',
-          message: `コードに「${pair.en}」があるが、expected_outputに「${pair.jp}」がある`
+          message: `コードの文字列に「${pair.en}」があるが、expected_outputに「${pair.jp}」がある`
         });
       }
     }

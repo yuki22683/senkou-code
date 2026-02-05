@@ -107,7 +107,8 @@ export const kotlinData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["println"]
         },
         "testCases": [
           {
@@ -152,7 +153,8 @@ export const kotlinData = {
             "/",
             "*",
             "-"
-          ]
+          ],
+          "others": ["println"]
         },
         "testCases": [
           {
@@ -211,7 +213,8 @@ export const kotlinData = {
             "-=",
             "*=",
             "/="
-          ]
+          ],
+          "others": ["hp", "20", "50"]
         },
         "testCases": [
           {
@@ -271,7 +274,8 @@ export const kotlinData = {
             "<",
             ">=",
             "<="
-          ]
+          ],
+          "others": ["println", "}"]
         },
         "testCases": [
           {
@@ -328,7 +332,8 @@ export const kotlinData = {
             "||",
             "&",
             "|"
-          ]
+          ],
+          "others": ["80", "10", "70", "println", "}"]
         },
         "testCases": [
           {

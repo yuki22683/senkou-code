@@ -109,9 +109,7 @@ export const pythonData2 = {
             "'World'",
             "World"
           ],
-          "others": [
-            "say_hi"
-          ]
+          "others": ["say_hi", "print"]
         },
         "testCases": [
           {
@@ -169,10 +167,7 @@ export const pythonData2 = {
             "b",
             "result"
           ],
-          "others": [
-            "10",
-            "20"
-          ]
+          "others": ["10", "20", "add", "print"]
         },
         "testCases": [
           {
@@ -232,11 +227,7 @@ export const pythonData2 = {
             "-",
             "/"
           ],
-          "others": [
-            "5",
-            "a",
-            "b"
-          ]
+          "others": ["5", "a", "b", "calc", "1", "print"]
         },
         "testCases": [
           {
@@ -282,9 +273,7 @@ export const pythonData2 = {
             "1",
             "3"
           ],
-          "others": [
-            "Programming"
-          ]
+          "others": ["Programming", "print"]
         },
         "testCases": [
           {
@@ -331,7 +320,8 @@ export const pythonData2 = {
           ],
           "variables": [
             "i"
-          ]
+          ],
+          "others": ["1", "print"]
         },
         "testCases": [
           {
@@ -356,8 +346,8 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 初期値を設定\ntotal = 0\n# totalに10を足す\ntotal += 10\n# totalに5を足す\ntotal += 5\n# 結果を表示\nprint(total)",
-        "holeyCode": "# 初期値を設定\ntotal = ___\n# totalに10を足す\ntotal += ___\n# totalに5を足す\ntotal += ___\n# 結果を表示\n___(total)",
+        "correctCode": "# 初期値を設定\ntotal = 0\n# totalに10を足す\ntotal += 10\n# totalに5を足す\ntotal += 5\n# totalを表示\nprint(total)",
+        "holeyCode": "# 初期値を設定\ntotal = ___\n# totalに10を足す\ntotal += ___\n# totalに5を足す\ntotal += ___\n# totalを表示\n___(total)",
         "correctLines": [
           "# 初期値を設定",
           "total = 0",
@@ -365,7 +355,7 @@ export const pythonData2 = {
           "total += 10",
           "# totalに5を足す",
           "total += 5",
-          "# 結果を表示",
+          "# totalを表示",
           "print(total)"
         ],
         "lineHints": [
@@ -384,7 +374,8 @@ export const pythonData2 = {
             "-=",
             "*=",
             "/="
-          ]
+          ],
+          "others": ["0", "10", "5", "print"]
         },
         "testCases": [
           {
@@ -409,12 +400,12 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 10を3で割った余りを計算\nremainder = 10 % 3\n# 結果を表示\nprint(remainder)",
-        "holeyCode": "# 10を3で割った余りを計算\nremainder = ___ % 3\n# 結果を表示\n___(remainder)",
+        "correctCode": "# 10を3で割った余りを計算\nremainder = 10 % 3\n# remainderを表示\nprint(remainder)",
+        "holeyCode": "# 10を3で割った余りを計算\nremainder = ___ % 3\n# remainderを表示\n___(remainder)",
         "correctLines": [
           "# 10を3で割った余りを計算",
           "remainder = 10 % 3",
-          "# 結果を表示",
+          "# remainderを表示",
           "print(remainder)"
         ],
         "lineHints": [
@@ -429,7 +420,8 @@ export const pythonData2 = {
             "/",
             "//",
             "*"
-          ]
+          ],
+          "others": ["10", "print"]
         },
         "testCases": [
           {
@@ -475,7 +467,8 @@ export const pythonData2 = {
             "and",
             "or",
             "not"
-          ]
+          ],
+          "others": ["25", ">=", "print"]
         },
         "testCases": [
           {
@@ -517,7 +510,8 @@ export const pythonData2 = {
             "for",
             "in",
             "if"
-          ]
+          ],
+          "others": ["2", "print"]
         },
         "testCases": [
           {
@@ -559,7 +553,8 @@ export const pythonData2 = {
             "if",
             "for",
             "in"
-          ]
+          ],
+          "others": ["1", "print"]
         },
         "testCases": [
           {
@@ -612,10 +607,7 @@ export const pythonData2 = {
             "except",
             "finally"
           ],
-          "others": [
-            "abc",
-            "Error"
-          ]
+          "others": ["abc", "Error", "print"]
         },
         "testCases": [
           {
@@ -677,11 +669,7 @@ export const pythonData2 = {
             "class",
             "def"
           ],
-          "others": [
-            "Cat",
-            "Meow!",
-            "meow"
-          ]
+          "others": ["Cat", "Meow!", "meow", "print"]
         },
         "testCases": [
           {
@@ -748,12 +736,7 @@ export const pythonData2 = {
             "name",
             "r"
           ],
-          "others": [
-            "Robot",
-            "__init__",
-            "R2D2",
-            "say_name"
-          ]
+          "others": ["Robot", "__init__", "R2D2", "say_name", "print", "2"]
         },
         "testCases": [
           {

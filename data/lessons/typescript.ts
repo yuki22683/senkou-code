@@ -174,14 +174,14 @@ export const typescriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// scoreに50を入れる\\nlet score: number = 50;\\n// 10点プラスする\\nscore += 10;\\n// 結果を表示\\nconsole.log(score);",
-        "holeyCode": "// scoreに50を入れる\\nlet score: number = ___ ;\\n// 10点プラスする\\nscore ___ 10;\\n// 結果を表示\\nconsole.log(score);",
+        "correctCode": "// scoreに50を入れる\nlet score: number = 50;\n// 10点プラスする\nscore += 10;\n// scoreを表示\nconsole.log(score);",
+        "holeyCode": "// scoreに50を入れる\nlet score: number = ___ ;\n// 10点プラスする\nscore ___ 10;\n// scoreを表示\nconsole.log(score);",
         "correctLines": [
           "// scoreに50を入れる",
           "let score: number = 50;",
           "// 10点プラスする",
           "score += 10;",
-          "// 結果を表示",
+          "// scoreを表示",
           "console.log(score);"
         ],
         "lineHints": [

@@ -449,8 +449,8 @@ export const csharp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // null許容型の変数を定義\\n        string? s = null;\\n        // nullでなければアクセスする演算子\\n        int? len = s?.Length;\\n        // null合体演算子でデフォルト値\\n        Console.WriteLine(len ?? 0);\\n    }\\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // null許容型の変数を定義\\n        string? s = ___;\\n        // nullでなければアクセスする演算子\\n        int? len = s?.___;\\n        // null合体演算子でデフォルト値\\n        Console.___(len ?? 0);\\n    ___\\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // sにnullを代入\\n        string? s = null;\\n        // nullでなければアクセスする演算子\\n        int? len = s?.Length;\\n        // null合体演算子でデフォルト値\\n        Console.WriteLine(len ?? 0);\\n    }\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // sにnullを代入\\n        string? s = ___;\\n        // nullでなければアクセスする演算子\\n        int? len = s?.___;\\n        // null合体演算子でデフォルト値\\n        Console.___(len ?? 0);\\n    ___\\n___",
         "correctLines": [
                   "// usingでSystem名前空間をインポート",
                   "using System;",
@@ -459,7 +459,7 @@ export const csharp4Data = {
                   "class Program {",
                   "    // Mainメソッドを定義",
                   "    static void Main() {",
-                  "        // null許容型の変数を定義",
+                  "        // sにnullを代入",
                   "        string? s = null;",
                   "        // nullでなければアクセスする演算子",
                   "        int? len = s?.Length;",
@@ -516,8 +516,8 @@ export const csharp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // null許容型の変数を定義\\n        string? value = null;\\n        // nullなら右側を返す演算子\\n        string result = value ?? \"デフォルト\";\\n        // resultを表示\\n        Console.WriteLine(result);\\n    }\\n}",
-        "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // null許容型の変数を定義\\n        string? value = ___;\\n        // nullなら右側を返す演算子\\n        string result = value ?? \"___\";\\n        // resultを表示\\n        Console.WriteLine(___);\\n    ___\\n___",
+        "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // valueにnullを代入\\n        string? value = null;\\n        // nullなら右側を返す演算子\\n        string result = value ?? \"デフォルト\";\\n        // resultを表示\\n        Console.WriteLine(result);\\n    }\\n}",
+        "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // valueにnullを代入\\n        string? value = ___;\\n        // nullなら右側を返す演算子\\n        string result = value ?? \"___\";\\n        // resultを表示\\n        Console.WriteLine(___);\\n    ___\\n___",
         "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -526,7 +526,7 @@ export const csharp4Data = {
           "class Program {",
           "    // Mainメソッドを定義",
           "    static void Main() {",
-          "        // null許容型の変数を定義",
+          "        // valueにnullを代入",
           "        string? value = null;",
           "        // nullなら右側を返す演算子",
           "        string result = value ?? \"デフォルト\";",

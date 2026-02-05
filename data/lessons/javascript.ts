@@ -40,7 +40,8 @@ export const javascriptData = {
           ],
           "strings": [
             "Hello, JavaScript!"
-          ]
+          ],
+          "others": ["log"]
         },
         "testCases": [
           {
@@ -65,10 +66,10 @@ export const javascriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// nameという名前のはこを作る\nconst name = 'JavaScript';\n// はこの中身を出す\nconsole.log(name);",
-        "holeyCode": "// nameという名前のはこを作る\nconst ___ = 'JavaScript';\n// はこの中身を出す\nconsole.log(___);",
+        "correctCode": "// nameに'JavaScript'を代入\nconst name = 'JavaScript';\n// はこの中身を出す\nconsole.log(name);",
+        "holeyCode": "// nameに'JavaScript'を代入\nconst ___ = 'JavaScript';\n// はこの中身を出す\nconsole.log(___);",
         "correctLines": [
-          "// nameという名前のはこを作る",
+          "// nameに'JavaScript'を代入",
           "const name = 'JavaScript';",
           "// はこの中身を出す",
           "console.log(name);"
@@ -146,10 +147,7 @@ export const javascriptData = {
             "10",
             "5"
           ],
-          "others": [
-            "10;",
-            "5;"
-          ]
+          "others": ["10;", "5;", "log"]
         },
         "testCases": [
           {
@@ -198,9 +196,7 @@ export const javascriptData = {
           "numbers": [
             "10"
           ],
-          "others": [
-            "10;"
-          ]
+          "others": ["10;", "log"]
         },
         "testCases": [
           {
@@ -225,10 +221,10 @@ export const javascriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst colors = ['あか', 'あお'];\n// 2番目のデータ（インデックス1）を出す\nconsole.log(colors[1]);",
-        "holeyCode": "// 'あか', 'あお' の順で colors という配列を作る\nconst ___ = ['あか', 'あお'];\n// 2番目のデータ（インデックス1）を出す\nconsole.___(colors[1]);",
+        "correctCode": "// colorsに['あか', 'あお']を代入\nconst colors = ['あか', 'あお'];\n// 2番目のデータ（インデックス1）を出す\nconsole.log(colors[1]);",
+        "holeyCode": "// colorsに['あか', 'あお']を代入\nconst ___ = ['あか', 'あお'];\n// 2番目のデータ（インデックス1）を出す\nconsole.___(colors[1]);",
         "correctLines": [
-          "// 'あか', 'あお' の順で colors という配列を作る",
+          "// colorsに['あか', 'あお']を代入",
           "const colors = ['あか', 'あお'];",
           "// 2番目のデータ（インデックス1）を出す",
           "console.log(colors[1]);"
@@ -252,7 +248,8 @@ export const javascriptData = {
           ],
           "numbers": [
             "1"
-          ]
+          ],
+          "others": ["log"]
         },
         "testCases": [
           {
@@ -313,9 +310,7 @@ export const javascriptData = {
           "numbers": [
             "100"
           ],
-          "others": [
-            "100;"
-          ]
+          "others": ["100;", "log", "}"]
         },
         "testCases": [
           {
@@ -384,11 +379,7 @@ export const javascriptData = {
           "keywords": [
             "else"
           ],
-          "others": [
-            "10;",
-            ">=",
-            "おとな"
-          ]
+          "others": ["10;", ">=", "おとな", "log", "}"]
         },
         "testCases": [
           {
@@ -441,10 +432,7 @@ export const javascriptData = {
           "functions": [
             "console.log"
           ],
-          "others": [
-            "たろう",
-            "はなこ"
-          ]
+          "others": ["たろう", "はなこ", "}"]
         },
         "testCases": [
           {
@@ -493,7 +481,8 @@ export const javascriptData = {
           "strings": [
             "name",
             "たろう"
-          ]
+          ],
+          "others": ["log"]
         },
         "testCases": [
           {
@@ -545,7 +534,8 @@ export const javascriptData = {
           ],
           "strings": [
             "こんにちは"
-          ]
+          ],
+          "others": ["log", "}"]
         },
         "testCases": [
           {

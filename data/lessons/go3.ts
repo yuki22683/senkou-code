@@ -493,8 +493,8 @@ export const go3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\\n\\nimport \"fmt\"\\n\\n// Age型を定義\\ntype Age int\\n\\nfunc main() {\\n    // 新しい型の変数を宣言\\n    var age Age = 25\\n    fmt.Println(age)\\n}",
-        "holeyCode": "package ___\\n\\nimport \\\"___\\\"\\n\\n// Age型を定義\\ntype Age ___\\n\\nfunc ___ () {\\n    // 新しい型の変数を宣言\\n    var age Age = ___\\n    fmt.___(age)\\n___",
+        "correctCode": "package main\\n\\nimport \"fmt\"\\n\\n// Age型を定義\\ntype Age int\\n\\nfunc main() {\\n    // ageに25を代入\\n    var age Age = 25\\n    fmt.Println(age)\\n}",
+        "holeyCode": "package ___\\n\\nimport \\\"___\\\"\\n\\n// Age型を定義\\ntype Age ___\\n\\nfunc ___ () {\\n    // ageに25を代入\\n    var age Age = ___\\n    fmt.___(age)\\n___",
         "correctLines": [
                   "package main",
                   "",
@@ -504,7 +504,7 @@ export const go3Data = {
                   "type Age int",
                   "",
                   "func main() {",
-                  "    // 新しい型の変数を宣言",
+                  "    // ageに25を代入",
                   "    var age Age = 25",
                   "    fmt.Println(age)",
                   "}"

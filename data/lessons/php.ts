@@ -42,7 +42,8 @@ export const phpData = {
           ],
           "strings": [
             "Hello, PHP!"
-          ]
+          ],
+          "others": ["<?php", "?>"]
         },
         "testCases": [
           {
@@ -92,10 +93,7 @@ export const phpData = {
           "numbers": [
             "10"
           ],
-          "others": [
-            "10;",
-            "x;"
-          ]
+          "others": ["10;", "x;", "<?php", "$x", "?>"]
         },
         "testCases": [
           {
@@ -143,7 +141,8 @@ export const phpData = {
         "candidates": {
           "operators": [
             "+"
-          ]
+          ],
+          "others": ["<?php", "a", "5", "b", "3", "$a", "?>"]
         },
         "testCases": [
           {
@@ -189,7 +188,8 @@ export const phpData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["<?php", "10", "?>"]
         },
         "testCases": [
           {
@@ -214,15 +214,15 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\n  // scoreに50を入れる\n  $score = 50;\n  // 10点プラスする\n  $score += 10;\n  // 結果を表示\n  echo $score;\n?>",
-        "holeyCode": "___\n  // scoreに50を入れる\n  $___ = ___;\n  // 10点プラスする\n  $score += ___;\n  // 結果を表示\n  echo ___;\n___",
+        "correctCode": "<?php\n  // scoreに50を入れる\n  $score = 50;\n  // 10点プラスする\n  $score += 10;\n  // score;を表示\n  echo $score;\n?>",
+        "holeyCode": "___\n  // scoreに50を入れる\n  $___ = ___;\n  // 10点プラスする\n  $score += ___;\n  // score;を表示\n  echo ___;\n___",
         "correctLines": [
           "<?php",
           "  // scoreに50を入れる",
           "  $score = 50;",
           "  // 10点プラスする",
           "  $score += 10;",
-          "  // 結果を表示",
+          "  // score;を表示",
           "  echo $score;",
           "?>"
         ],
@@ -246,7 +246,8 @@ export const phpData = {
           "numbers": [
             "50",
             "10"
-          ]
+          ],
+          "others": ["<?php", "score", "$score", "?>"]
         },
         "testCases": [
           {
@@ -292,7 +293,8 @@ export const phpData = {
         "candidates": {
           "variables": [
             "age"
-          ]
+          ],
+          "others": ["<?php", "20", "echo", "?>"]
         },
         "testCases": [
           {
@@ -338,7 +340,8 @@ export const phpData = {
         "candidates": {
           "numbers": [
             "1"
-          ]
+          ],
+          "others": ["<?php", "fruits", "'りんご', 'バナナ'", "$fruits", "?>"]
         },
         "testCases": [
           {
@@ -391,10 +394,7 @@ export const phpData = {
           "operators": [
             ">"
           ],
-          "others": [
-            "100",
-            "Excellent"
-          ]
+          "others": ["100", "Excellent", "<?php", "score", "echo", "}", "?>"]
         },
         "testCases": [
           {
@@ -455,12 +455,7 @@ export const phpData = {
           "keywords": [
             "else"
           ],
-          "others": [
-            "18",
-            ">=",
-            "Adult",
-            "Minor"
-          ]
+          "others": ["18", ">=", "Adult", "Minor", "<?php", "age", "{", "echo", "}", "?>"]
         },
         "testCases": [
           {
@@ -519,7 +514,8 @@ export const phpData = {
           ],
           "strings": [
             "Pass"
-          ]
+          ],
+          "others": ["<?php", "score", "80", "echo", "}", "?>"]
         },
         "testCases": [
           {
@@ -567,7 +563,8 @@ export const phpData = {
         "candidates": {
           "keywords": [
             "as"
-          ]
+          ],
+          "others": ["<?php", "nums", "1, 2, 3", "n", "$n", "}", "?>"]
         },
         "testCases": [
           {
@@ -611,7 +608,8 @@ export const phpData = {
         "candidates": {
           "strings": [
             "name"
-          ]
+          ],
+          "others": ["<?php", "user", "'name' => 'Alice'", "$user", "?>"]
         },
         "testCases": [
           {
@@ -659,7 +657,8 @@ export const phpData = {
         "candidates": {
           "functions": [
             "greet"
-          ]
+          ],
+          "others": ["<?php", "echo", "}", "?>"]
         },
         "testCases": [
           {

@@ -107,7 +107,8 @@ export const swiftData = {
             "-",
             "*",
             "/"
-          ]
+          ],
+          "others": ["x", "y"]
         },
         "testCases": [
           {
@@ -152,7 +153,8 @@ export const swiftData = {
             "/",
             "*",
             "-"
-          ]
+          ],
+          "others": ["10"]
         },
         "testCases": [
           {
@@ -211,7 +213,8 @@ export const swiftData = {
             "-=",
             "*=",
             "/="
-          ]
+          ],
+          "others": ["hp", "20", "50"]
         },
         "testCases": [
           {
@@ -271,7 +274,8 @@ export const swiftData = {
             "<",
             ">=",
             "<="
-          ]
+          ],
+          "others": ["score", "print", "}"]
         },
         "testCases": [
           {
@@ -328,7 +332,8 @@ export const swiftData = {
             "||",
             "&",
             "|"
-          ]
+          ],
+          "others": ["score", "bonus", ">=", "print", "}"]
         },
         "testCases": [
           {
