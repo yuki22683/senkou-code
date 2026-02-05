@@ -95,7 +95,7 @@ export const pythonData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# 人を表す親クラスを定義\\nclass Person:\\n    # 名前を初期設定するメソッドを定義\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n\\n# Personを継承してStudentクラスを定義\\nclass Student(Person):\\n    # name（名前）、grade（学年）の順で初期設定\\n    def __init__(self, name, grade):\\n        # 親クラスの初期化メソッドを呼び出し\\n        super().__init__(name)\\n        # self.gradeにgradeを代入\\n        self.grade = grade\\n\\n# '太郎'、3年生としてインスタンスを作成\\ns = Student('太郎', 3)\\n# インスタンスの情報を表示\\nprint(f'{s.name} is in grade {s.grade}')",
-        "holeyCode": "# 人を表す親クラスを定義\\nclass ___:\\n    # 名前を初期設定するメソッドを定義\\n    def ___(self, name):\\n        # self.nameにnameを代入\\n        self.___ = name\\n\\n# Personを継承してStudentクラスを定義\\nclass ___(Person):\\n    # name（名前）、grade（学年）の順で初期設定\\n    def ___(self, name, grade):\\n        # 親クラスの初期化メソッドを呼び出し\\n        super().__init__(___)\\n        # self.gradeにgradeを代入\\n        self.___ = grade\\n\\n# '太郎'、3年生としてインスタンスを作成\\ns = Student('太郎', ___)\\n# インスタンスの情報を表示\\n___(f'{s.名前} is in grade {s.grade}')",
+        "holeyCode": "# 人を表す親クラスを定義\\nclass ___:\\n    # 名前を初期設定するメソッドを定義\\n    def ___(self, name):\\n        # self.nameにnameを代入\\n        self.___ = name\\n\\n# Personを継承してStudentクラスを定義\\nclass ___(Person):\\n    # name（名前）、grade（学年）の順で初期設定\\n    def ___(self, name, grade):\\n        # 親クラスの初期化メソッドを呼び出し\\n        super().__init__(___)\\n        # self.gradeにgradeを代入\\n        self.___ = grade\\n\\n# '太郎'、3年生としてインスタンスを作成\\ns = Student('太郎', ___)\\n# インスタンスの情報を表示\\n___(f'{s.name} is in grade {s.grade}')",
         "correctLines": [
           "# 人を表す親クラスを定義",
           "class Person:",
