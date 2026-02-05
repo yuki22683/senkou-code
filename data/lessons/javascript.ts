@@ -32,7 +32,7 @@ export const javascriptData = {
         ],
         "lineHints": [
           null,
-          "コメントです。プログラムのメモとして使います。"
+          "console.logでカッコ内の文字列を画面に出力します。"
         ],
         "candidates": {
           "functions": [
@@ -184,7 +184,7 @@ export const javascriptData = {
           null,
           "定数を宣言し、数値を代入します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。"
+          "コンソールに文字列を出力します。"
         ],
         "candidates": {
           "variables": [
@@ -291,7 +291,7 @@ export const javascriptData = {
           null,
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに文字列を出力します。",
           null
         ],
         "candidates": {
@@ -356,11 +356,11 @@ export const javascriptData = {
           null,
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに文字列を出力します。",
           null,
           "もし条件が満たされなかった場合に実行する処理を記述します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
+          "コンソールに文字列を出力します。",
           null
         ],
         "candidates": {
@@ -522,10 +522,10 @@ export const javascriptData = {
           null,
           "function greet() { と入力して、関数を定義します。",
           null,
-          "デバッグ用コンソールなどに文字列を出力します。",
-          "関数（greet）を呼び出して実行します。",
+          "コンソールに文字列を出力します。",
           null,
-          null
+          null,
+          "関数（greet）を呼び出して実行します。"
         ],
         "candidates": {
           "functions": [
