@@ -376,6 +376,39 @@ function checkJapaneseVariableRefs(file, content) {
   }
 }
 
+// 12. expected_output文字列不一致チェック
+function checkOutputMismatch(file, content) {
+  const checkName = 'expected_output文字列';
+  const exercises = extractExercises(content);
+
+  // 日本語→英語の対応（correctCodeに日本語があるのにexpected_outputが英語ならエラー）
+  const mappings = [
+    { jp: 'ニャー', en: 'Meow' },
+    { jp: 'エラー', en: 'Error' },
+    { jp: '合格', en: 'Pass' },
+    { jp: '大人', en: 'Adult' },
+    { jp: '子供', en: 'Child' },
+    { jp: 'こんにちは', en: 'Hello' },
+    { jp: '世界', en: 'World' },
+  ];
+
+  let hasError = false;
+  for (const ex of exercises) {
+    for (const { jp, en } of mappings) {
+      if (ex.correctCode.includes(jp) &&
+          ex.expectedOutput.includes(en) &&
+          !ex.expectedOutput.includes(jp)) {
+        addError(file, checkName, `「${ex.title}」: correctCodeに「${jp}」→ expected_outputに「${en}」（「${jp}」にすべき）`);
+        hasError = true;
+      }
+    }
+  }
+
+  if (!hasError) {
+    addPassed(file, checkName);
+  }
+}
+
 // メイン処理
 function checkFile(file) {
   const filePath = path.join(lessonsDir, file);
@@ -394,6 +427,7 @@ function checkFile(file) {
   checkTutorialSlides(file, content);
   checkImagePaths(file, content);
   checkJapaneseVariableRefs(file, content);
+  checkOutputMismatch(file, content);
 }
 
 // 実行

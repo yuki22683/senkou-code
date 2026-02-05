@@ -260,6 +260,7 @@
      - 形式チェック: 同じ言語の既存ファイル（例: php.ts, php2.ts）の配列出力形式と比較
      - 特にPHP配列は `Array\n(\n    [0] => 1\n...)\n` 形式であること
   12. `node scripts/check-escape-sequences.mjs` → 全てのエスケープシーケンスが正しい（ルール#51参照）
+  13. `node scripts/check-lesson-file.mjs` → エラー0件（包括チェック: 日本語変数参照、expected_output文字列一致等）
 - **チェックが失敗した場合の修正方法**：
   - check-holey-v3.ts → `fix-empty-line-hints.mjs` と `fix-non-holey-hints.mjs` を実行
   - check-comment-consistency-v2.mjs → `sync-comments-to-holey.mjs` を実行（correctCodeのコメントをholeyCodeに同期）
@@ -269,6 +270,8 @@
   - check-candidates-final.mjs → `fix-candidates-correct.mjs` を実行（ルール#33参照）
   - expected_output空/形式不正 → 同じ言語の既存ファイルの形式を確認し手動修正（ルール#46参照）
   - check-escape-sequences.mjs → `fix-escape-normalize.mjs` を実行（ルール#51参照）
+  - check-lesson-file.mjs（日本語変数参照）→ 手動で英語変数名に修正（ルール#52参照）
+  - check-lesson-file.mjs（expected_output文字列）→ `fix-output-mismatch-v2.mjs` を実行（ルール#53参照）
 
 ### 26. コード内の文字列リテラルは日本語、コメントも日本語
 - `correctCode`、`holeyCode`、`correctLines` 内のコードにおいて：
@@ -652,6 +655,38 @@
 - **予防策**: 一括変換スクリプトでは以下を守ること：
   1. JSON文字列の `\\n` を実際の改行に変換しない
   2. シェルコマンド（`node -e "..."`）内でバックスラッシュを扱う際はエスケープに注意（ファイルベースのスクリプトを使用推奨）
+
+### 52. テンプレート文字列内の変数名は英語にする
+- `correctCode`、`holeyCode`、`correctLines` 内のテンプレート文字列（補間文字列）で使用する変数名は**英語**にすること。
+- **禁止パターン**:
+  - JavaScript/TypeScript: `${名前}` → `${name}` にする
+  - Ruby/Elixir: `#{名前}` → `#{name}` にする
+  - C#/Python f-string: `{年齢}` → `{age}` にする
+  - Bash: `${名前s[@]}` → `${names[@]}` にする
+- **理由**: 日本語変数名は実際のプログラミングでは使用されず、学習者が誤った習慣を身につける。また、一部の言語では日本語変数名がサポートされていない。
+- **チェックスクリプト**: `node scripts/check-lesson-file.mjs`（日本語変数参照チェック項目）
+- **確認コマンド**: `grep -E '\$\{[ぁ-んァ-ン一-龥]+\}|#\{[ぁ-んァ-ン一-龥]+\}|\{[ぁ-んァ-ン一-龥]+\}' data/lessons/*.ts`
+
+### 53. expected_outputはcorrectCodeの出力言語と一致させる
+- `expected_output` の文字列は、`correctCode` で出力される文字列と**同じ言語**（日本語/英語）にすること。
+- **禁止パターン**:
+  - correctCode: `print('こんにちは')` → expected_output: `Hello` （不一致）
+  - correctCode: `puts '合格'` → expected_output: `Pass` （不一致）
+  - correctCode: `console.log('ニャー')` → expected_output: `Meow` （不一致）
+- **正しいパターン**:
+  - correctCode: `print('こんにちは')` → expected_output: `こんにちは`
+  - correctCode: `puts '合格'` → expected_output: `合格`
+  - correctCode: `console.log('ニャー')` → expected_output: `ニャー`
+- **チェックスクリプト**: `node scripts/check-lesson-file.mjs`（expected_output文字列チェック項目）
+- **修正スクリプト**: `node scripts/fix-output-mismatch-v2.mjs`
+- **よくある不一致パターン**:
+  - `こんにちは` ↔ `Hello`
+  - `世界` ↔ `World`
+  - `合格` ↔ `Pass`
+  - `大人` ↔ `Adult`
+  - `子供` ↔ `Child`
+  - `ニャー` ↔ `Meow`
+  - `エラー` ↔ `Error`
   3. JavaScriptで改行を表す文字列を書く際は `'\\\\n'`（4バックスラッシュ）を使用すること。`'\\n'`は1バックスラッシュ+nになり不正
   4. **重要**: レッスンファイルを修正する**全てのスクリプト実行後**に `node scripts/check-escape-sequences.mjs` を実行
   5. `npm run seed:db` と**UIで解説スライドを確認**する
