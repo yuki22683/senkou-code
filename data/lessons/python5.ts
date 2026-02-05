@@ -183,14 +183,14 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# JSONモジュールをインポート\\nimport json\\n\\n# dataにlanguage='Python', level='上級'の辞書を代入\\ndata = {'language': 'Python', 'レベル': '上級'}\\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\\njson_str = json.dumps(data)\\n# json_strをprintで出力\\nprint(json_str)",
-        "holeyCode": "# JSONモジュールをインポート\\nimport ___\\n\\n# dataにlanguage='Python', level='上級'の辞書を代入\\ndata = {'language': 'Python', 'レベル': '___'}\\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\\njson_str = json.dumps(___)\\n# json_strをprintで出力\\n___(json_str)",
+        "correctCode": "# JSONモジュールをインポート\\nimport json\\n\\n# dataにlanguage='Python', level='advanced'の辞書を代入\\ndata = {'language': 'Python', 'level': 'advanced'}\\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\\njson_str = json.dumps(data)\\n# json_strをprintで出力\\nprint(json_str)",
+        "holeyCode": "# JSONモジュールをインポート\\nimport ___\\n\\n# dataにlanguage='Python', level='advanced'の辞書を代入\\ndata = {'language': 'Python', 'level': '___'}\\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\\njson_str = json.dumps(___)\\n# json_strをprintで出力\\n___(json_str)",
         "correctLines": [
           "# JSONモジュールをインポート",
           "import json",
           "",
-          "# dataにlanguage='Python', level='上級'の辞書を代入",
-          "data = {'language': 'Python', 'レベル': '上級'}",
+          "# dataにlanguage='Python', level='advanced'の辞書を代入",
+          "data = {'language': 'Python', 'level': 'advanced'}",
           "# json.dumps(data)でJSON文字列に変換しjson_strに代入",
           "json_str = json.dumps(data)",
           "# json_strをprintで出力",
@@ -213,7 +213,7 @@ export const pythonData5 = {
             "dump",
             "stringify"
           ],
-          "others": ["json", "{'language': 'Python', 'レベル': '上級'}", "json_str", "advanced", "data", "print", "上級"]
+          "others": ["json", "{'language': 'Python', 'level': 'advanced'}", "json_str", "data", "print", "advanced"]
         },
         "testCases": [
           {
@@ -289,14 +289,14 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 正規表現モジュールをインポート\\nimport re\\n\\n# textに'email1@test.com and email2@test.com'を代入\\ntext = 'メール1@テスト.com and email2@test.com'\\n# re.findall()でtextからメールアドレスを検索しemailsに代入\\nemails = re.findall(r'\\w+@\\w+\\.\\w+', text)\\n# emailsをprintで出力\\nprint(emails)",
-        "holeyCode": "# 正規表現モジュールをインポート\\nimport ___\\n\\n# textに'email1@test.com and email2@test.com'を代入\\ntext = 'メール___@テスト.com and email2@test.com'\\n# re.findall()でtextからメールアドレスを検索しemailsに代入\\nemails = re.findall(r'\\\\w+@\\\\w+\\\\.\\\\w+', ___)\\n# emailsをprintで出力\\n___(emails)",
+        "correctCode": "# 正規表現モジュールをインポート\\nimport re\\n\\n# textに'email1@test.com and email2@test.com'を代入\\ntext = 'email1@test.com and email2@test.com'\\n# re.findall()でtextからメールアドレスを検索しemailsに代入\\nemails = re.findall(r'\\w+@\\w+\\.\\w+', text)\\n# emailsをprintで出力\\nprint(emails)",
+        "holeyCode": "# 正規表現モジュールをインポート\\nimport ___\\n\\n# textに'email1@test.com and email2@test.com'を代入\\ntext = 'email___@test.com and email2@test.com'\\n# re.findall()でtextからメールアドレスを検索しemailsに代入\\nemails = re.findall(r'\\\\w+@\\\\w+\\\\.\\\\w+', ___)\\n# emailsをprintで出力\\n___(emails)",
         "correctLines": [
           "# 正規表現モジュールをインポート",
           "import re",
           "",
           "# textに'email1@test.com and email2@test.com'を代入",
-          "text = 'メール1@テスト.com and email2@test.com'",
+          "text = 'email1@test.com and email2@test.com'",
           "# re.findall()でtextからメールアドレスを検索しemailsに代入",
           "emails = re.findall(r'\\w+@\\w+\\.\\w+', text)",
           "# emailsをprintで出力",
@@ -391,14 +391,14 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Counterクラスをインポート\\nfrom collections import Counter\\n\\n# textに'こんにちは世界'を代入\\ntext = 'Hello World'\\n# Counter(text)で文字をカウントしcountに代入\\ncount = Counter(text)\\n# count.most_common(3)をprintで出力\\nprint(count.most_common(3))",
-        "holeyCode": "# Counterクラスをインポート\\nfrom collections import ___\\n\\n# textに'こんにちは世界'を代入\\ntext = 'こんにちは ___'\\n# Counter(text)で文字をカウントしcountに代入\\ncount = Counter(___)\\n# count.most_common(3)をprintで出力\\n___(count.most_common(3))",
+        "correctCode": "# Counterクラスをインポート\\nfrom collections import Counter\\n\\n# textに'hello world'を代入\\ntext = 'hello world'\\n# Counter(text)で文字をカウントしcountに代入\\ncount = Counter(text)\\n# count.most_common(3)をprintで出力\\nprint(count.most_common(3))",
+        "holeyCode": "# Counterクラスをインポート\\nfrom collections import ___\\n\\n# textに'hello world'を代入\\ntext = 'hello ___'\\n# Counter(text)で文字をカウントしcountに代入\\ncount = Counter(___)\\n# count.most_common(3)をprintで出力\\n___(count.most_common(3))",
         "correctLines": [
           "# Counterクラスをインポート",
           "from collections import Counter",
           "",
-          "# textに'こんにちは世界'を代入",
-          "text = 'Hello World'",
+          "# textに'hello world'を代入",
+          "text = 'hello world'",
           "# Counter(text)で文字をカウントしcountに代入",
           "count = Counter(text)",
           "# count.most_common(3)をprintで出力",
