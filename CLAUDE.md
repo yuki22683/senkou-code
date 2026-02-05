@@ -242,8 +242,8 @@
 
 ### 25. レッスン修正後の必須チェック項目
 - レッスンファイルを修正した後は、以下の全チェックを実行して0件/問題なしを確認すること：
-  1. `node scripts/check-holey-v3.ts` → 0件
-  2. `node scripts/check-comment-consistency-v2.mjs` → 不整合なし
+  1. `node scripts/check-holey-v4.mjs` → 0件
+  2. `node scripts/check-comment-consistency-v3.mjs` → 不整合なし
   3. `node scripts/check-vague-comments.mjs` → 曖昧なコメントなし
   4. `node scripts/check-tutorial-exercise-similarity.mjs` → 問題なし
   5. 文字列リテラルが日本語になっているか目視確認（例外: Hello World, 言語名, 技術用語）
@@ -268,9 +268,13 @@
      - 正規表現`\w+`と日本語の組み合わせ検出
      - コメントとコードの言語不一致検出
      - expected_outputとコード出力の言語不一致検出
+  16. `node scripts/check-linehints-consistency.mjs` → lineHints整合性チェック
+     - lineHints配列長とcorrectLines配列長の一致
+     - holeyCodeに`___`がない行にヒントがないこと
+     - コメント行でない行に「コメントです」ヒントがないこと
 - **チェックが失敗した場合の修正方法**：
-  - check-holey-v3.ts → `fix-empty-line-hints.mjs` と `fix-non-holey-hints.mjs` を実行
-  - check-comment-consistency-v2.mjs → `sync-comments-to-holey.mjs` を実行（correctCodeのコメントをholeyCodeに同期）
+  - check-holey-v4.mjs → `fix-empty-line-hints.mjs` と `fix-non-holey-hints.mjs` を実行
+  - check-comment-consistency-v3.mjs → `sync-comments-to-holey.mjs` を実行（correctCodeのコメントをholeyCodeに同期）
   - check-vague-comments.mjs → `fix-vague-output-comments.mjs` → `sync-comments-to-holey.mjs` → `fix-correctlines-comments.mjs` を順に実行
   - check-tutorial-exercise-similarity.mjs → 手動で演習のシナリオを変更（ルール#19, #20参照）
   - 英語文字列が残っている → `translate-to-japanese.mjs` を実行（ルール#26参照）
@@ -280,6 +284,7 @@
   - check-lesson-file.mjs（日本語変数参照）→ 手動で英語変数名に修正（ルール#52参照）
   - check-lesson-file.mjs（expected_output文字列）→ `fix-output-mismatch-v2.mjs` を実行（ルール#53参照）
   - check-code-output-consistency.mjs → コメントを手動修正、または expected_output をコード出力に合わせて修正（ルール#56-58参照）
+  - check-linehints-consistency.mjs → 配列長不一致は手動修正、hint_on_non_holey_lineは`fix-non-holey-hints.mjs`を実行
 
 ### 26. コード内の文字列リテラルは日本語、コメントも日本語
 - `correctCode`、`holeyCode`、`correctLines` 内のコードにおいて：

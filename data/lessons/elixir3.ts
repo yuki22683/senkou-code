@@ -18,7 +18,7 @@ export const elixir3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Person do\\n  # defstructで構造体を定義\\n  defstruct name: \"\", メール: \"\"\\n# endでモジュールを閉じる\\nend\\n\\n# nameに\"ボブ\"、メールに\"bob@example.com\"を指定して構造体を作成\\nperson = %Person{name: \"ボブ\", メール: \"bob@例.com\"}", "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule Person ___\\n  # defstructで構造体を定義\\n  defstruct name: \"___\"\"\\n# endでモジュールを閉じる\\n___\\n\\n# nameに\"ボブ\"、メールに\"bob@example.com\"を指定して構造体を作成\\nperson = %Person{name: \"___\", メール: \"bob@例.com\"}",
+        "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Person do\\n  # defstructで構造体を定義\\n  defstruct name: \"\", メール: \"\"\\n# endでモジュールを閉じる\\nend\\n\\n# nameに\"ボブ\"、メールに\"bob@example.com\"を指定して構造体を作成\\nperson = %Person{name: \"ボブ\", メール: \"bob@例.com\"}", "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule Person ___\\n  # defstructで構造体を定義\\n  defstruct name: \\\"\\\", メール: \\\"___\\\"\\n# endでモジュールを閉じる\\n___\\n\\n# nameに\\\"ボブ\\\"、メールに\\\"bob@example.com\\\"を指定して構造体を作成\\nperson = %Person{name: \\\"___\\\", メール: \\\"bob@例.com\\\"}",
         "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Person do",
@@ -36,10 +36,10 @@ export const elixir3Data = {
           null,
           "構造体を定義するマクロです。",
           null,
-          "構造体を作成してpersonに代入します。",
           null,
           null,
-          null
+          null,
+          "構造体を作成してpersonに代入します。"
         ],
         "candidates": {
           "keywords": [

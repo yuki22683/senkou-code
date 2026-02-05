@@ -734,14 +734,14 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
-          "public static void greet() { と入力して、メソッドを定義します。",
           null,
-          "文字列をコンソールに出力し、改行します。",
-          "メソッドの終わりです。",
+          null,
+          null,
+          "printlnで文字列をコンソールに出力します。",
+          null,
+          null,
+          null,
           "関数（greet）を呼び出して実行します。",
-          "mainの終わりです。",
-          null,
-          "クラスの終わりです。",
           null,
           null
         ],
