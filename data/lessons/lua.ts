@@ -26,10 +26,10 @@ export const luaData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- Hello, Lua!を表示\\nprint(\"こんにちは, Lua!\")",
-        "holeyCode": "-- Hello, Lua!を表示\\n___(\"こんにちは, Lua!\")",
+        "correctCode": "-- こんにちは, Lua!を表示\\nprint(\"こんにちは, Lua!\")",
+        "holeyCode": "-- こんにちは, Lua!を表示\\n___(\"こんにちは, Lua!\")",
         "correctLines": [
-          "-- Hello, Lua!を表示",
+          "-- こんにちは, Lua!を表示",
           "print(\"こんにちは, Lua!\")"
         ],
         "lineHints": [

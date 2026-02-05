@@ -22,12 +22,12 @@ export const cppData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\nint main() {\\n    // Hello, C++! と入力\\n    std::cout << \"こんにちは, C++!\" << std::endl;\\n    return 0;\\n}",
-        "holeyCode": "#include <iostream>\\nint ___() {\\n    // Hello, C++! と入力\\n    std::cout << ___ << std::endl;\\n    return ___;\\n___",
+        "correctCode": "#include <iostream>\\nint main() {\\n    // こんにちは, C++! と入力\\n    std::cout << \"こんにちは, C++!\" << std::endl;\\n    return 0;\\n}",
+        "holeyCode": "#include <iostream>\\nint ___() {\\n    // こんにちは, C++! と入力\\n    std::cout << ___ << std::endl;\\n    return ___;\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
-          "    // Hello, C++! と入力",
+          "    // こんにちは, C++! と入力",
           "    std::cout << \"こんにちは, C++!\" << std::endl;",
           "    return 0;",
           "}"
@@ -517,8 +517,8 @@ export const cppData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに85を入れる\\n    int score = 85;\\n    // 80以上 かつ 100以下 ならメッセージを出す\\n    if (score >= 80 && score <= 100) {\\n        // 「Pass」と出力\\n        std::cout << \"合格\" << std::endl;\\n    }\\n    return 0;\\n}",
-        "holeyCode": "#include <iostream>\\nint ___() {\\n    // scoreに85を入れる\\n    int score = ___;\\n    // 80以上 かつ 100以下 ならメッセージを出す\\n    if (score >= ___ && score <= 100) {\\n        // 「Pass」と出力\\n        std::cout << ___ << std::endl;\\n    ___\\n    return ___;\\n___",
+        "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに85を入れる\\n    int score = 85;\\n    // 80以上 かつ 100以下 ならメッセージを出す\\n    if (score >= 80 && score <= 100) {\\n        // 「合格」と出力\\n        std::cout << \"合格\" << std::endl;\\n    }\\n    return 0;\\n}",
+        "holeyCode": "#include <iostream>\\nint ___() {\\n    // scoreに85を入れる\\n    int score = ___;\\n    // 80以上 かつ 100以下 ならメッセージを出す\\n    if (score >= ___ && score <= 100) {\\n        // 「合格」と出力\\n        std::cout << ___ << std::endl;\\n    ___\\n    return ___;\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -526,7 +526,7 @@ export const cppData = {
           "    int score = 85;",
           "    // 80以上 かつ 100以下 ならメッセージを出す",
           "    if (score >= 80 && score <= 100) {",
-          "        // 「Pass」と出力",
+          "        // 「合格」と出力",
           "        std::cout << \"合格\" << std::endl;",
           "    }",
           "    return 0;",

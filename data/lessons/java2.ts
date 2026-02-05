@@ -324,7 +324,7 @@ export const javaData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Woof!\\n"
+            "expected_output": "ワン！\\n"
           }
         ]
       },
@@ -352,9 +352,9 @@ export const javaData2 = {
           "        // tryで例外をキャッチする準備",
           "        try {",
           "            // parseInt で文字列を整数に変換する",
-          "            int x = Integer.parseInt(\"abc\");",
+          "            int x = Integer.parseInt(\"あいう\");",
           "        } catch (Exception e) {",
-          "            System.out.println(\"Error\");",
+          "            System.out.println(\"エラー\");",
           "        }",
           "    }",
           "}"
@@ -380,7 +380,7 @@ export const javaData2 = {
             "finally",
             "parseInt"
           ],
-          "others": ["Main", "main(String[] args) {", "abc", "println", "}"]
+          "others": ["Main", "main(String[] args) {", "あいう", "println", "}"]
         },
         "testCases": [
           {
@@ -414,7 +414,7 @@ export const javaData2 = {
           "            // println で出力する",
           "            System.out.println(\"Try\");",
           "        } catch (Exception e) {",
-          "            System.out.println(\"Catch\");",
+          "            System.out.println(\"猫ch\");",
           "        // finally で必ず実行する",
           "        } finally {",
           "            System.out.println(\"Finally\");",

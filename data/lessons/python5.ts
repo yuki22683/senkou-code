@@ -340,13 +340,13 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 正規表現モジュールをインポート\\nimport re\\n\\n# textに'Hello   World   Python'を代入\\ntext = 'こんにちは   世界   Python'\\n# re.sub()でtextの連続空白を単一空白に置換しresultに代入\\nresult = re.sub(r'\\s+', ' ', text)\\n# resultをprintで出力\\nprint(result)",
-        "holeyCode": "# 正規表現モジュールをインポート\\nimport ___\\n\\n# textに'Hello   World   Python'を代入\\ntext = 'こんにちは   世界   ___'\\n# re.sub()でtextの連続空白を単一空白に置換しresultに代入\\nresult = re.sub(r'\\\\s+', ' ', ___)\\n# resultをprintで出力\\n___(result)",
+        "correctCode": "# 正規表現モジュールをインポート\\nimport re\\n\\n# textに'こんにちは   世界   Python'を代入\\ntext = 'こんにちは   世界   Python'\\n# re.sub()でtextの連続空白を単一空白に置換しresultに代入\\nresult = re.sub(r'\\s+', ' ', text)\\n# resultをprintで出力\\nprint(result)",
+        "holeyCode": "# 正規表現モジュールをインポート\\nimport ___\\n\\n# textに'こんにちは   世界   Python'を代入\\ntext = 'こんにちは   世界   ___'\\n# re.sub()でtextの連続空白を単一空白に置換しresultに代入\\nresult = re.sub(r'\\\\s+', ' ', ___)\\n# resultをprintで出力\\n___(result)",
         "correctLines": [
           "# 正規表現モジュールをインポート",
           "import re",
           "",
-          "# textに'Hello   World   Python'を代入",
+          "# textに'こんにちは   世界   Python'を代入",
           "text = 'こんにちは   世界   Python'",
           "# re.sub()でtextの連続空白を単一空白に置換しresultに代入",
           "result = re.sub(r'\\s+', ' ', text)",

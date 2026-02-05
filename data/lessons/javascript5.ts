@@ -154,10 +154,10 @@ export const javascriptData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 'Hello   World   JavaScript' を定義\\nconst text = 'こんにちは   世界   JavaScript';\\n// replace() で連続する空白を1つの空白に置換\\nconst result = text.replace(/\\s+/g, ' ');\\n// 結果を出力\\nconsole.log(result);",
-        "holeyCode": "// 'Hello   World   JavaScript' を定義\\nconst text = '___   世界   JavaScript';\\n// replace() で連続する空白を1つの空白に置換\\nconst result = text.___(___\\s+/g, ' ');\\n// 結果を出力\\nconsole.___(result);",
+        "correctCode": "// 'こんにちは   世界   JavaScript' を定義\\nconst text = 'こんにちは   世界   JavaScript';\\n// replace() で連続する空白を1つの空白に置換\\nconst result = text.replace(/\\s+/g, ' ');\\n// 結果を出力\\nconsole.log(result);",
+        "holeyCode": "// 'こんにちは   世界   JavaScript' を定義\\nconst text = '___   世界   JavaScript';\\n// replace() で連続する空白を1つの空白に置換\\nconst result = text.___(___\\s+/g, ' ');\\n// 結果を出力\\nconsole.___(result);",
         "correctLines": [
-          "// 'Hello   World   JavaScript' を定義",
+          "// 'こんにちは   世界   JavaScript' を定義",
           "const text = 'こんにちは   世界   JavaScript';",
           "// replace() で連続する空白を1つの空白に置換",
           "const result = text.replace(/\\s+/g, ' ');",

@@ -336,14 +336,14 @@ export const php3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// traitでトレイトを定義\\ntrait HelloTrait {\\n    // functionでメソッドを定義\\n    public function sayHello() {\\n        // $this->name を返す\\n        return 'こんにちは！';\\n    }\\n}\\n// classでクラスを定義\\nclass Greeter {\\n    // useでトレイトを使用\\n    use HelloTrait;\\n}",
-        "holeyCode": "// traitでトレイトを定義\\ntrait ___ {\\n    // functionでメソッドを定義\\n    public function ___() {\\n        // $this->name を返す\\n        return '___!';\\n    ___\\n___\\n// classでクラスを定義\\nclass ___ {\\n    // useでトレイトを使用\\n    use ___;\\n___",
+        "correctCode": "// traitでトレイトを定義\\ntrait HelloTrait {\\n    // functionでメソッドを定義\\n    public function sayHello() {\\n        // 'こんにちは！'を返す\\n        return 'こんにちは！';\\n    }\\n}\\n// classでクラスを定義\\nclass Greeter {\\n    // useでトレイトを使用\\n    use HelloTrait;\\n}",
+        "holeyCode": "// traitでトレイトを定義\\ntrait ___ {\\n    // functionでメソッドを定義\\n    public function ___() {\\n        // 'こんにちは！'を返す\\n        return '___!';\\n    ___\\n___\\n// classでクラスを定義\\nclass ___ {\\n    // useでトレイトを使用\\n    use ___;\\n___",
         "correctLines": [
           "// traitでトレイトを定義",
           "trait HelloTrait {",
           "    // functionでメソッドを定義",
           "    public function sayHello() {",
-          "        // $this->name を返す",
+          "        // 'こんにちは！'を返す",
           "        return 'こんにちは！';",
           "    }",
           "}",

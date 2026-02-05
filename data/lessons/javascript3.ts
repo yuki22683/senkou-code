@@ -22,12 +22,12 @@ export const javascriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Promise コンストラクタで作成\\nconst p = new Promise((resolve) => {\\n  // 'Hello Promise!' で解決\\n  resolve('こんにちは Promise!');\\n});\\n\\n// then でコールバックを登録\\np.then(msg => console.log(msg));",
-        "holeyCode": "// Promise コンストラクタで作成\\nconst p = new ___((resolve) => {\\n  // 'Hello Promise!' で解決\\n  ___('こんにちは Promise!');\\n});\\n\\n// then でコールバックを登録\\np.___(msg => console.log(msg));",
+        "correctCode": "// Promise コンストラクタで作成\\nconst p = new Promise((resolve) => {\\n  // 'こんにちは Promise!' で解決\\n  resolve('こんにちは Promise!');\\n});\\n\\n// then でコールバックを登録\\np.then(msg => console.log(msg));",
+        "holeyCode": "// Promise コンストラクタで作成\\nconst p = new ___((resolve) => {\\n  // 'こんにちは Promise!' で解決\\n  ___('こんにちは Promise!');\\n});\\n\\n// then でコールバックを登録\\np.___(msg => console.log(msg));",
         "correctLines": [
           "// Promise コンストラクタで作成",
           "const p = new Promise((resolve) => {",
-          "  // 'Hello Promise!' で解決",
+          "  // 'こんにちは Promise!' で解決",
           "  resolve('こんにちは Promise!');",
           "});",
           "",
@@ -161,7 +161,7 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Async works!\\n"
+            "expected_output": "非同期成功！\\n"
           }
         ]
       },
@@ -351,7 +351,7 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Pochi: Woof!\\n"
+            "expected_output": "ポチ: ワン！\\n"
           }
         ]
       },
@@ -532,7 +532,7 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bob\\nundefined\\n"
+            "expected_output": "ボブ\\nundefined\\n"
           }
         ]
       },
@@ -584,7 +584,7 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "default\\n"
+            "expected_output": "デフォルト\\n"
           }
         ]
       }

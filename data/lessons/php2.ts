@@ -543,7 +543,7 @@ export const php2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello"
+            "expected_output": "こんにちは"
           }
         ]
       },

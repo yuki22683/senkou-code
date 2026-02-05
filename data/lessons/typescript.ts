@@ -26,17 +26,17 @@ export const typescriptData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// messageに'Hello TS'を代入（型: string）\\nconst message: string = 'こんにちは TS';\\n// はこの中身を出す\\nconsole.log(message);",
-        "holeyCode": "// messageに'Hello TS'を代入（型: string）\\nconst message: ___ = '___';\\n// はこの中身を出す\\nconsole.log(___);",
+        "correctCode": "// messageに'こんにちは TS'を代入（型: string）\\nconst message: string = 'こんにちは TS';\\n// はこの中身を出す\\nconsole.log(message);",
+        "holeyCode": "// messageに'こんにちは TS'を代入（型: string）\\nconst message: ___ = '___';\\n// はこの中身を出す\\nconsole.log(___);",
         "correctLines": [
-          "// messageに'Hello TS'を代入（型: string）",
+          "// messageに'こんにちは TS'を代入（型: string）",
           "const message: string = 'こんにちは TS';",
           "// はこの中身を出す",
           "console.log(message);"
         ],
         "lineHints": [
           null,
-          "文字を入れるラベルは `string` です。 '=' のあとに `'Hello TS'` と入力しましょう。",
+          "文字を入れるラベルは `string` です。 '=' のあとに `'こんにちは TS'` と入力しましょう。",
           null,
           "console.log の中に、はこの名前 `message` を入力します。"
         ],
@@ -49,9 +49,9 @@ export const typescriptData = {
           ],
           "strings": [
             "string",
-            "Hello TS"
+            "こんにちは TS"
           ],
-          "others": ["こんにちは TS"]
+          "others": []
         },
         "testCases": [
           {

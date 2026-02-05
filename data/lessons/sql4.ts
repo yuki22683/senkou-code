@@ -257,7 +257,7 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "yes\\n"
+            "expected_output": "はい\\n"
           }
         ]
       },
@@ -298,7 +298,7 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "default\\n"
+            "expected_output": "デフォルト\\n"
           }
         ]
       },
@@ -347,7 +347,7 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello\\n"
+            "expected_output": "こんにちは\\n"
           }
         ]
       },
@@ -400,7 +400,7 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "new\\n"
+            "expected_output": "新しい\\n"
           }
         ]
       },
