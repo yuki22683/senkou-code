@@ -18,7 +18,7 @@ export const php3Data = {
           },
           {
             "title": "クロージャの書き方",
-            "content": "# function キーワードで作る\\\\n\\\\n`function(引数) { 処理 }` で作り、変数に代入（だいにゅう）します。\\\\n\\\\n**コード例：**\\\\n```php\\\\n$greet = function($name) {\\\\n    return \"Hello, $name!\";\\\\n};\\\\necho $greet('Alice');  // Hello, Alice!\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `function($name) { ... }` → 名前のない関数を作る\\\\n2. `$greet = ...` → その関数を変数に入れる\\\\n3. `$greet('Alice')` → 変数を関数として呼び出す\\\\n\\\\n**ポイント：**\\\\n- 普通の関数と違（ちが）い、名前がない\\\\n- 変数に入れるので、最後にセミコロン `;` が必要"
+            "content": "# function キーワードで作る\\\\n\\\\n`function(引数) { 処理 }` で作り、変数に代入（だいにゅう）します。\\\\n\\\\n**コード例：**\\\\n```php\\\\n$greet = function($name) {\\\\n    return \"Hello, $name!\";\\\\n};\\\\necho $greet('アリス');  // Hello, Alice!\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `function($name) { ... }` → 名前のない関数を作る\\\\n2. `$greet = ...` → その関数を変数に入れる\\\\n3. `$greet('アリス')` → 変数を関数として呼び出す\\\\n\\\\n**ポイント：**\\\\n- 普通の関数と違（ちが）い、名前がない\\\\n- 変数に入れるので、最後にセミコロン `;` が必要"
           }
         ],
         "initialDisplayMode": "holey",
@@ -117,7 +117,7 @@ export const php3Data = {
           },
           {
             "title": "?? の使い方",
-            "content": "# シンプルな null チェック\\\\n\\\\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\\\\n\\\\n**コード例：**\\\\n```php\\\\n$name = null;\\\\n$displayName = $name ?? 'Anonymous';\\\\necho $displayName;  // Anonymous\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `$name = null` → 名前は空っぽ\\\\n2. `$name ?? 'Anonymous'` → nullかチェック\\\\n3. null なので → 'Anonymous' を返す\\\\n\\\\n**値があるときは？**\\\\n```php\\\\n$name = 'Taro';\\\\necho $name ?? 'Anonymous';  // Taro（nullじゃないので$nameを使う）\\\\n```\\\\n\\\\n**ポイント：**\\\\n- 左が null → 右を返す\\\\n- 左が null じゃない → 左をそのまま返す"
+            "content": "# シンプルな null チェック\\\\n\\\\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\\\\n\\\\n**コード例：**\\\\n```php\\\\n$name = null;\\\\n$displayName = $name ?? '匿名';\\\\necho $displayName;  // Anonymous\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `$name = null` → 名前は空っぽ\\\\n2. `$name ?? '匿名'` → nullかチェック\\\\n3. null なので → '匿名' を返す\\\\n\\\\n**値があるときは？**\\\\n```php\\\\n$name = '太郎';\\\\necho $name ?? '匿名';  // Taro（nullじゃないので$nameを使う）\\\\n```\\\\n\\\\n**ポイント：**\\\\n- 左が null → 右を返す\\\\n- 左が null じゃない → 左をそのまま返す"
           }
         ],
         "initialDisplayMode": "holey",
@@ -208,23 +208,23 @@ export const php3Data = {
           },
           {
             "title": "match式の書き方",
-            "content": "# match と =>\\\\n\\\\n`match(値) { パターン => 結果 }` の形で書きます。\\\\n\\\\n**コード例：**\\\\n```php\\\\n$day = 1;\\\\n$name = match($day) {\\\\n    1 => 'Monday',\\\\n    2 => 'Tuesday',\\\\n    default => 'Other'\\\\n};\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `match($day)` → $day の値をチェック\\\\n2. `1 => 'Monday'` → 1なら 'Monday' を返す\\\\n3. `2 => 'Tuesday'` → 2なら 'Tuesday' を返す\\\\n4. `default => 'Other'` → どれにも当てはまらなければ 'Other'\\\\n\\\\n**ポイント：**\\\\n- `=>` で「この値ならこれを返す」と指定\\\\n- `default` はどれにも当てはまらないときの処理\\\\n- セミコロン `;` を最後につける（式だから）"
+            "content": "# match と =>\\\\n\\\\n`match(値) { パターン => 結果 }` の形で書きます。\\\\n\\\\n**コード例：**\\\\n```php\\\\n$day = 1;\\\\n$name = match($day) {\\\\n    1 => 'Monday',\\\\n    2 => 'Tuesday',\\\\n    default => 'その他'\\\\n};\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `match($day)` → $day の値をチェック\\\\n2. `1 => 'Monday'` → 1なら 'Monday' を返す\\\\n3. `2 => 'Tuesday'` → 2なら 'Tuesday' を返す\\\\n4. `default => 'その他'` → どれにも当てはまらなければ 'その他'\\\\n\\\\n**ポイント：**\\\\n- `=>` で「この値ならこれを返す」と指定\\\\n- `default` はどれにも当てはまらないときの処理\\\\n- セミコロン `;` を最後につける（式だから）"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// $gradeに'A'を代入\\\\n$grade = 'A';\\\\n// match($grade)で$messageに結果を代入\\\\n$message = match($grade) {\\\\n    // 'A'なら'Excellent'を返す\\\\n    'A' => 'Excellent',\\\\n    // 'B'なら'Good'を返す\\\\n    'B' => 'Good',\\\\n    // それ以外なら'Try harder'を返す\\\\n    default => 'Try harder'\\\\n};",
-        "holeyCode": "// $gradeに'A'を代入\\\\n$grade = '___';\\\\n// match($grade)で$messageに結果を代入\\\\n$message = match($___) {\\\\n    // 'A'なら'Excellent'を返す\\\\n    'A' => '___',\\\\n    // 'B'なら'Good'を返す\\\\n    'B' => '___',\\\\n    // それ以外なら'Try harder'を返す\\\\n    default => 'Try ___'\\\\n___",
+        "correctCode": "// $gradeに'A'を代入\\\\n$grade = 'A';\\\\n// match($grade)で$messageに結果を代入\\\\n$message = match($grade) {\\\\n    // 'A'なら'優秀'を返す\\\\n    'A' => '優秀',\\\\n    // 'B'なら'良い'を返す\\\\n    'B' => '良い',\\\\n    // それ以外なら'もっと頑張って'を返す\\\\n    default => 'もっと頑張って'\\\\n};",
+        "holeyCode": "// $gradeに'A'を代入\\\\n$grade = '___';\\\\n// match($grade)で$messageに結果を代入\\\\n$message = match($___) {\\\\n    // 'A'なら'優秀'を返す\\\\n    'A' => '___',\\\\n    // 'B'なら'良い'を返す\\\\n    'B' => '___',\\\\n    // それ以外なら'もっと頑張って'を返す\\\\n    default => 'Try ___'\\\\n___",
         "correctLines": [
           "// $gradeに'A'を代入",
           "$grade = 'A';",
           "// match($grade)で$messageに結果を代入",
           "$message = match($grade) {",
-          "    // 'A'なら'Excellent'を返す",
-          "    'A' => 'Excellent',",
-          "    // 'B'なら'Good'を返す",
-          "    'B' => 'Good',",
-          "    // それ以外なら'Try harder'を返す",
-          "    default => 'Try harder'",
+          "    // 'A'なら'優秀'を返す",
+          "    'A' => '優秀',",
+          "    // 'B'なら'良い'を返す",
+          "    'B' => '良い',",
+          "    // それ以外なら'もっと頑張って'を返す",
+          "    default => 'もっと頑張って'",
           "};"
         ],
         "lineHints": [
@@ -276,7 +276,7 @@ export const php3Data = {
           },
           {
             "title": "名前付き引数の書き方",
-            "content": "# 引数名: 値 の形式（けいしき）\\\\n\\\\n`関数(引数名: 値)` で指定します。\\\\n\\\\n**コード例：**\\\\n```php\\\\nfunction greet($name, $greeting) {\\\\n    return \"$greeting, $name!\";\\\\n}\\\\necho greet(greeting: 'Hi', name: 'Alice');\\\\n// Hi, Alice!\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `greet($name, $greeting)` → 普通は name, greeting の順\\\\n2. `greeting: 'Hi'` → greetingに'Hi'を入れる\\\\n3. `name: 'Alice'` → nameに'Alice'を入れる\\\\n4. 順番が逆（ぎゃく）でもOK！名前で指定してるから\\\\n\\\\n**ポイント：**\\\\n- `引数名:` と値をセットで書く\\\\n- 順番を気にしなくていい\\\\n- 何を渡しているか一目瞭然（いちもくりょうぜん）"
+            "content": "# 引数名: 値 の形式（けいしき）\\\\n\\\\n`関数(引数名: 値)` で指定します。\\\\n\\\\n**コード例：**\\\\n```php\\\\nfunction greet($name, $greeting) {\\\\n    return \"$greeting, $name!\";\\\\n}\\\\necho greet(greeting: 'こんにちは', name: 'アリス');\\\\n// Hi, Alice!\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `greet($name, $greeting)` → 普通は name, greeting の順\\\\n2. `greeting: 'こんにちは'` → greetingに'こんにちは'を入れる\\\\n3. `name: 'アリス'` → nameに'アリス'を入れる\\\\n4. 順番が逆（ぎゃく）でもOK！名前で指定してるから\\\\n\\\\n**ポイント：**\\\\n- `引数名:` と値をセットで書く\\\\n- 順番を気にしなくていい\\\\n- 何を渡しているか一目瞭然（いちもくりょうぜん）"
           }
         ],
         "initialDisplayMode": "holey",
@@ -286,10 +286,10 @@ export const php3Data = {
           "// functionで関数を定義",
           "function createUser($name, $age) {",
           "    // returnで連想配列を返す",
-          "    return ['name' => $name, 'age' => $age];",
+          "    return ['名前' => $name, '年齢' => $age];",
           "}",
           "// age, nameの順で名前付き引数を指定",
-          "$user = createUser(age: 30, name: 'Alice');"
+          "$user = createUser(age: 30, name: 'アリス');"
         ],
         "lineHints": [
           null,
@@ -315,7 +315,7 @@ export const php3Data = {
         },
         "testCases": [
           {
-            "input": "$user['name']",
+            "input": "$user['名前']",
             "expected_output": "Alice"
           }
         ]
@@ -467,7 +467,7 @@ export const php3Data = {
         "holeyCode": "// name、age、cityの順に分割代入\\\n[$name, $age, $city] = ['アリス', ___, 'Tokyo'];",
         "correctLines": [
           "// name、age、cityの順に分割代入",
-          "[$name, $age, $city] = ['Alice', 25, 'Tokyo'];"
+          "[$name, $age, $city] = ['アリス', 25, 'Tokyo'];"
         ],
         "lineHints": [
           null,
@@ -549,7 +549,7 @@ export const php3Data = {
         },
         "testCases": [
           {
-            "input": "(new Person('Alice', 30))->name",
+            "input": "(new Person('アリス', 30))->name",
             "expected_output": "Alice"
           }
         ]

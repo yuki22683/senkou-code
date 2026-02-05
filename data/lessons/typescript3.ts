@@ -18,7 +18,7 @@ export const typescriptData3 = {
           },
           {
             "title": "使いどころ",
-            "content": "# 部分的な更新に便利\\\\n\\\\nデータの一部だけを更新したいときに便利です。全項目を毎回指定しなくていいのです！\\\\n\\\\n## たとえ話\\\\n\\\\nプロフィールの「名前だけ変えたい」「年齢だけ変えたい」というとき、変えたい項目だけ指定できます。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction updateUser(user: User, updates: Partial<User>) {\\\\n  return { ...user, ...updates };\\\\n}\\\\n\\\\n// 名前だけ更新、ageは省略OK！\\\\nupdateUser(user, { name: 'Bob' });\\\\n```"
+            "content": "# 部分的な更新に便利\\\\n\\\\nデータの一部だけを更新したいときに便利です。全項目を毎回指定しなくていいのです！\\\\n\\\\n## たとえ話\\\\n\\\\nプロフィールの「名前だけ変えたい」「年齢だけ変えたい」というとき、変えたい項目だけ指定できます。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction updateUser(user: User, updates: Partial<User>) {\\\\n  return { ...user, ...updates };\\\\n}\\\\n\\\\n// 名前だけ更新、ageは省略OK！\\\\nupdateUser(user, { name: 'ボブ' });\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
@@ -146,11 +146,11 @@ export const typescriptData3 = {
         "tutorialSlides": [
           {
             "title": "Pick とは？",
-            "content": "# 特定のプロパティを選択\\\\n\\\\n**Pick<T, K>**（ピック）は、型Tから「欲しいプロパティだけ」を選んで取り出します。\\\\n\\\\n## たとえ話\\\\n\\\\n名簿の中から「名前と電話番号だけ」を抜き出して別のリストを作るようなものです。全部の情報は要らなくて、必要な部分だけ欲しいときに使います。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface User {\\\\n  id: number;\\\\n  name: string;\\\\n  email: string;\\\\n}\\\\n\\\\n// id と name だけを選ぶ\\\\ntype UserPreview = Pick<User, 'id' | 'name'>;\\\\n// ↓ これと同じ意味になる\\\\n// { id: number; name: string; }\\\\n// emailは含まれない！\\\\n```"
+            "content": "# 特定のプロパティを選択\\\\n\\\\n**Pick<T, K>**（ピック）は、型Tから「欲しいプロパティだけ」を選んで取り出します。\\\\n\\\\n## たとえ話\\\\n\\\\n名簿の中から「名前と電話番号だけ」を抜き出して別のリストを作るようなものです。全部の情報は要らなくて、必要な部分だけ欲しいときに使います。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface User {\\\\n  id: number;\\\\n  name: string;\\\\n  email: string;\\\\n}\\\\n\\\\n// id と name だけを選ぶ\\\\ntype UserPreview = Pick<User, 'id' | '名前'>;\\\\n// ↓ これと同じ意味になる\\\\n// { id: number; name: string; }\\\\n// emailは含まれない！\\\\n```"
           },
           {
             "title": "使いどころ",
-            "content": "# 必要な情報だけを抽出\\\\n\\\\n一部の情報だけ使いたいとき、Pickで新しい型を作れます。\\\\n\\\\n## たとえ話\\\\n\\\\n全ユーザー情報のうち、「名前だけ表示するカード」を作りたいとき。パスワードやメールは不要ですよね。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction getPreview(user: User): Pick<User, 'name'> {\\\\n  return { name: user.name };\\\\n}\\\\n```\\\\n\\\\nこれで「nameだけを持つ型」が作れます！"
+            "content": "# 必要な情報だけを抽出\\\\n\\\\n一部の情報だけ使いたいとき、Pickで新しい型を作れます。\\\\n\\\\n## たとえ話\\\\n\\\\n全ユーザー情報のうち、「名前だけ表示するカード」を作りたいとき。パスワードやメールは不要ですよね。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction getPreview(user: User): Pick<User, '名前'> {\\\\n  return { name: user.name };\\\\n}\\\\n```\\\\n\\\\nこれで「nameだけを持つ型」が作れます！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -196,7 +196,7 @@ export const typescriptData3 = {
             "Omit",
             "Extract"
           ],
-          "others": ["number", "string", "'Apple'", "name", "Product", "}", "Apple", "log"]
+          "others": ["number", "string", "'りんご'", "name", "Product", "}", "Apple", "log"]
         },
         "testCases": [
           {
@@ -263,7 +263,7 @@ export const typescriptData3 = {
             "Pick",
             "Exclude"
           ],
-          "others": ["number", "string", "'Alice'", "name", "User", "}", "secret", "1", "log", "秘密"]
+          "others": ["number", "string", "'アリス'", "name", "User", "}", "secret", "1", "log", "秘密"]
         },
         "testCases": [
           {
@@ -284,7 +284,7 @@ export const typescriptData3 = {
           },
           {
             "title": "リテラル型と組み合わせ",
-            "content": "# 特定のキーに限定\\\\n\\\\nキーを特定の値だけに限定することもできます。これで「決まったキーしか使えない」オブジェクトが作れます。\\\\n\\\\n## たとえ話\\\\n\\\\n信号機の色は「赤・黄・緑」の3つだけですよね。「紫」は無いはず！Recordで決まったキーだけを許可できます。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\n// 決まった状態だけを許可\\\\ntype Status = 'pending' | 'done' | 'error';\\\\ntype StatusColors = Record<Status, string>;\\\\n\\\\nconst colors: StatusColors = {\\\\n  pending: 'yellow',  // 保留中は黄色\\\\n  done: 'green',      // 完了は緑\\\\n  error: 'red'        // エラーは赤\\\\n};\\\\n// この3つ以外は使えない！\\\\n```"
+            "content": "# 特定のキーに限定\\\\n\\\\nキーを特定の値だけに限定することもできます。これで「決まったキーしか使えない」オブジェクトが作れます。\\\\n\\\\n## たとえ話\\\\n\\\\n信号機の色は「赤・黄・緑」の3つだけですよね。「紫」は無いはず！Recordで決まったキーだけを許可できます。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\n// 決まった状態だけを許可\\\\ntype Status = '保留中' | '完了' | 'エラー';\\\\ntype StatusColors = Record<Status, string>;\\\\n\\\\nconst colors: StatusColors = {\\\\n  pending: '黄色',  // 保留中は黄色\\\\n  done: '緑',      // 完了は緑\\\\n  error: '赤'        // エラーは赤\\\\n};\\\\n// この3つ以外は使えない！\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
@@ -347,7 +347,7 @@ export const typescriptData3 = {
         "tutorialSlides": [
           {
             "title": "ReturnType とは？",
-            "content": "# 関数の戻り値の型を抽出\\\\n\\\\n**ReturnType<T>**（リターンタイプ）は、関数が「何を返すか」の型を取得します。\\\\n\\\\n## たとえ話\\\\n\\\\n自動販売機にお金を入れると「ジュース」が出てきますよね。ReturnTypeは「この自動販売機から何が出てくるか」を調べるようなものです。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction getUser() {\\\\n  return { id: 1, name: 'Alice' };\\\\n}\\\\n\\\\n// この関数は何を返す？\\\\ntype User = ReturnType<typeof getUser>;\\\\n// ↓ これと同じ意味になる\\\\n// { id: number; name: string; }\\\\n```"
+            "content": "# 関数の戻り値の型を抽出\\\\n\\\\n**ReturnType<T>**（リターンタイプ）は、関数が「何を返すか」の型を取得します。\\\\n\\\\n## たとえ話\\\\n\\\\n自動販売機にお金を入れると「ジュース」が出てきますよね。ReturnTypeは「この自動販売機から何が出てくるか」を調べるようなものです。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction getUser() {\\\\n  return { id: 1, name: 'アリス' };\\\\n}\\\\n\\\\n// この関数は何を返す？\\\\ntype User = ReturnType<typeof getUser>;\\\\n// ↓ これと同じ意味になる\\\\n// { id: number; name: string; }\\\\n```"
           },
           {
             "title": "使いどころ",
@@ -406,7 +406,7 @@ export const typescriptData3 = {
         "tutorialSlides": [
           {
             "title": "条件型とは？",
-            "content": "# 型レベルの「もし〜なら」\\\\n\\\\n**条件型**（Conditional Types）は、「もしこの型なら、こっち。そうでなければ、あっち」という分岐ができます。\\\\n\\\\n## たとえ話\\\\n\\\\n「もし犬なら『ワン』、そうでなければ『ニャー』と鳴く」のように、条件によって結果が変わりますよね。型でも同じことができるのです！\\\\n\\\\n## 書き方\\\\n\\\\n`T extends U ? X : Y` という形で書きます。\\\\n- もしTがUに当てはまるなら → X\\\\n- そうでなければ → Y\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ntype IsString<T> = T extends string ? 'yes' : 'no';\\\\n\\\\ntype A = IsString<string>;  // 'yes'（文字列だから）\\\\ntype B = IsString<number>;  // 'no'（数字だから）\\\\n```"
+            "content": "# 型レベルの「もし〜なら」\\\\n\\\\n**条件型**（Conditional Types）は、「もしこの型なら、こっち。そうでなければ、あっち」という分岐ができます。\\\\n\\\\n## たとえ話\\\\n\\\\n「もし犬なら『ワン』、そうでなければ『ニャー』と鳴く」のように、条件によって結果が変わりますよね。型でも同じことができるのです！\\\\n\\\\n## 書き方\\\\n\\\\n`T extends U ? X : Y` という形で書きます。\\\\n- もしTがUに当てはまるなら → X\\\\n- そうでなければ → Y\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ntype IsString<T> = T extends string ? 'はい' : 'いいえ';\\\\n\\\\ntype A = IsString<string>;  // 'はい'（文字列だから）\\\\ntype B = IsString<number>;  // 'いいえ'（数字だから）\\\\n```"
           },
           {
             "title": "実用例",
@@ -519,7 +519,7 @@ export const typescriptData3 = {
             "typeof",
             "keyof"
           ],
-          "others": ["string", "number", "'hello'", "42", "b", "T", "hello", "log"]
+          "others": ["string", "number", "'こんにちは'", "42", "b", "T", "hello", "log"]
         },
         "testCases": [
           {
@@ -536,16 +536,16 @@ export const typescriptData3 = {
         "tutorialSlides": [
           {
             "title": "keyof とは？",
-            "content": "# オブジェクトのキーをUnion型に\\\\n\\\\n**keyof**（キーオブ）は、オブジェクト型の「キー（項目名）」をすべて取り出して、ユニオン型にします。\\\\n\\\\n## たとえ話\\\\n\\\\n生徒カードの項目を想像してみてください。「名前」「年齢」「クラス」...といった項目名がありますよね。keyofは「このカードにはどんな項目がある？」と聞くようなものです。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface User {\\\\n  id: number;\\\\n  name: string;\\\\n}\\\\n\\\\ntype UserKeys = keyof User; // 'id' | 'name'\\\\n// Userのキーは 'id' か 'name' のどちらか\\\\n```"
+            "content": "# オブジェクトのキーをUnion型に\\\\n\\\\n**keyof**（キーオブ）は、オブジェクト型の「キー（項目名）」をすべて取り出して、ユニオン型にします。\\\\n\\\\n## たとえ話\\\\n\\\\n生徒カードの項目を想像してみてください。「名前」「年齢」「クラス」...といった項目名がありますよね。keyofは「このカードにはどんな項目がある？」と聞くようなものです。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface User {\\\\n  id: number;\\\\n  name: string;\\\\n}\\\\n\\\\ntype UserKeys = keyof User; // 'id' | '名前'\\\\n// Userのキーは 'id' か '名前' のどちらか\\\\n```"
           },
           {
             "title": "型安全なアクセス",
-            "content": "# 動的アクセスを型安全に\\\\n\\\\nkeyofを使うと、「存在するキーだけ使える」という安全な関数が作れます。\\\\n\\\\n## たとえ話\\\\n\\\\nロッカーを開けるとき、「存在する番号」しか使えませんよね。keyofで「存在するキー」だけを許可できます。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction getValue<T, K extends keyof T>(obj: T, key: K): T[K] {\\\\n  return obj[key];\\\\n}\\\\n\\\\nconst user = { id: 1, name: 'Alice' };\\\\ngetValue(user, 'name'); // OK! 'name'は存在する\\\\ngetValue(user, 'age');  // エラー！ 'age'は存在しない\\\\n```\\\\n\\\\n存在しないキーを使おうとするとエラーで教えてくれます！"
+            "content": "# 動的アクセスを型安全に\\\\n\\\\nkeyofを使うと、「存在するキーだけ使える」という安全な関数が作れます。\\\\n\\\\n## たとえ話\\\\n\\\\nロッカーを開けるとき、「存在する番号」しか使えませんよね。keyofで「存在するキー」だけを許可できます。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction getValue<T, K extends keyof T>(obj: T, key: K): T[K] {\\\\n  return obj[key];\\\\n}\\\\n\\\\nconst user = { id: 1, name: 'アリス' };\\\\ngetValue(user, '名前'); // OK! '名前'は存在する\\\\ngetValue(user, '年齢');  // エラー！ '年齢'は存在しない\\\\n```\\\\n\\\\n存在しないキーを使おうとするとエラーで教えてくれます！"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "interface Person {\\\n  // 名前の型\\\n  name: string;\\\n  // 年齢の型\\\n  age: number;\\\n}\\\n// keyof でオブジェクトのキーを取得\\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\\n  // キーで値を取得して返す\\\n  return p[key];\\\n}\\\n\\\n// personに{name: 'Bob', age: 30}を代入\\\nconst person = { name: 'ボブ', age: 30 };\\\n// 名前を取得して出力\\\nconsole.log(getProperty(person, '名前'));",
-        "holeyCode": "interface ___ {\\\n  // 名前の型\\\n  name: ___;\\\n  // 年齢の型\\\n  age: ___;\\\n___\\\n// keyof でオブジェクトのキーを取得\\\nfunction getProperty<___ extends keyof Person>(p: Person, key: K) {\\\n  // キーで値を取得して返す\\\n  return p[___];\\\n___\\\n\\\n// personに{name: 'Bob', age: 30}を代入\\\nconst ___ = { name: 'ボブ', age: 30 };\\\n// 名前を取得して出力\\\nconsole.___(getProperty(person, '名前'));",
+        "correctCode": "interface Person {\\\n  // 名前の型\\\n  name: string;\\\n  // 年齢の型\\\n  age: number;\\\n}\\\n// keyof でオブジェクトのキーを取得\\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\\n  // キーで値を取得して返す\\\n  return p[key];\\\n}\\\n\\\n// personに{name: 'ボブ', age: 30}を代入\\\nconst person = { name: 'ボブ', age: 30 };\\\n// 名前を取得して出力\\\nconsole.log(getProperty(person, '名前'));",
+        "holeyCode": "interface ___ {\\\n  // 名前の型\\\n  name: ___;\\\n  // 年齢の型\\\n  age: ___;\\\n___\\\n// keyof でオブジェクトのキーを取得\\\nfunction getProperty<___ extends keyof Person>(p: Person, key: K) {\\\n  // キーで値を取得して返す\\\n  return p[___];\\\n___\\\n\\\n// personに{name: 'ボブ', age: 30}を代入\\\nconst ___ = { name: 'ボブ', age: 30 };\\\n// 名前を取得して出力\\\nconsole.___(getProperty(person, '名前'));",
         "correctLines": [
           "interface Person {",
           "  // 名前の型",
@@ -559,10 +559,10 @@ export const typescriptData3 = {
           "  return p[key];",
           "}",
           "",
-          "// personに{name: 'Bob', age: 30}を代入",
-          "const person = { name: 'Bob', age: 30 };",
+          "// personに{name: 'ボブ', age: 30}を代入",
+          "const person = { name: 'ボブ', age: 30 };",
           "// 名前を取得して出力",
-          "console.log(getProperty(person, 'name'));"
+          "console.log(getProperty(person, '名前'));"
         ],
         "lineHints": [
           "名前は文字列なのでstring型です。",
@@ -588,7 +588,7 @@ export const typescriptData3 = {
             "typeof",
             "instanceof"
           ],
-          "others": ["string", "number", "key", "30", "'name'", "Person", "}", "K", "person", "log"]
+          "others": ["string", "number", "key", "30", "'名前'", "Person", "}", "K", "person", "log"]
         },
         "testCases": [
           {

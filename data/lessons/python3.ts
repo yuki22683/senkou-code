@@ -62,7 +62,7 @@ export const pythonData3 = {
           },
           {
             "title": "*args の使い方",
-            "content": "# 引数名は自由につけられる！\\\\n\\\\n`*args` の「args」の部分は、好きな名前に変えてOKです。\\\\n\\\\n大事なのは **「*」（アスタリスク）** をつけることです！\\\\n\\\\n**例：** みんなにあいさつしよう！\\\\n\\\\n```python\\\\ndef greet(*names):\\\\n    for name in names:\\\\n        print(f'Hello, {name}!')\\\\n\\\\ngreet('Alice', 'Bob', 'Charlie')\\\\n```\\\\n=> Hello, Alice!\\\\n=> Hello, Bob!\\\\n=> Hello, Charlie!\\\\n\\\\n**何をしているか：**\\\\n1. `greet('Alice', 'Bob', 'Charlie')` で3人の名前を渡す\\\\n2. `*names` で全ての名前をまとめて受け取る\\\\n3. `for` ループで1人ずつあいさつする\\\\n\\\\n**使いどころ：** 引数の数が決まっていない関数を作りたいとき！"
+            "content": "# 引数名は自由につけられる！\\\\n\\\\n`*args` の「args」の部分は、好きな名前に変えてOKです。\\\\n\\\\n大事なのは **「*」（アスタリスク）** をつけることです！\\\\n\\\\n**例：** みんなにあいさつしよう！\\\\n\\\\n```python\\\\ndef greet(*names):\\\\n    for name in names:\\\\n        print(f'Hello, {name}!')\\\\n\\\\ngreet('アリス', 'ボブ', 'チャーリー')\\\\n```\\\\n=> Hello, Alice!\\\\n=> Hello, Bob!\\\\n=> Hello, Charlie!\\\\n\\\\n**何をしているか：**\\\\n1. `greet('アリス', 'ボブ', 'チャーリー')` で3人の名前を渡す\\\\n2. `*names` で全ての名前をまとめて受け取る\\\\n3. `for` ループで1人ずつあいさつする\\\\n\\\\n**使いどころ：** 引数の数が決まっていない関数を作りたいとき！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -133,7 +133,7 @@ export const pythonData3 = {
           },
           {
             "title": "**kwargs の使い方",
-            "content": "# 辞書（じしょ）として扱える！\\\\n\\\\n受け取った `kwargs` は **辞書** として使えます。\\\\n\\\\n`.items()`, `.keys()`, `.values()` などのメソッドが使えます！\\\\n\\\\n**例：** ユーザー情報を作ろう！\\\\n\\\\n```python\\\\ndef create_user(**kwargs):\\\\n    return kwargs\\\\n\\\\nuser = create_user(name='花子', email='hanako@example.com')\\\\nprint(user['name'])  # => 花子\\\\n```\\\\n\\\\n**何をしているか：**\\\\n1. `create_user(name='花子', email='...')` で名前付き引数を渡す\\\\n2. `**kwargs` でそれらを辞書として受け取る\\\\n3. `{'name': '花子', 'email': '...'}` という辞書が返される\\\\n4. `user['name']` で「花子」が取り出せる！\\\\n\\\\n**使いどころ：** 設定項目（オプション）をたくさん渡したいとき！"
+            "content": "# 辞書（じしょ）として扱える！\\\\n\\\\n受け取った `kwargs` は **辞書** として使えます。\\\\n\\\\n`.items()`, `.keys()`, `.values()` などのメソッドが使えます！\\\\n\\\\n**例：** ユーザー情報を作ろう！\\\\n\\\\n```python\\\\ndef create_user(**kwargs):\\\\n    return kwargs\\\\n\\\\nuser = create_user(name='花子', email='hanako@example.com')\\\\nprint(user['名前'])  # => 花子\\\\n```\\\\n\\\\n**何をしているか：**\\\\n1. `create_user(name='花子', email='...')` で名前付き引数を渡す\\\\n2. `**kwargs` でそれらを辞書として受け取る\\\\n3. `{'名前': '花子', 'email': '...'}` という辞書が返される\\\\n4. `user['名前']` で「花子」が取り出せる！\\\\n\\\\n**使いどころ：** 設定項目（オプション）をたくさん渡したいとき！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -183,11 +183,11 @@ export const pythonData3 = {
         "tutorialSlides": [
           {
             "title": "enumerate とは？",
-            "content": "# 番号と要素を一緒に取得しよう！\\\\n\\\\n**enumerate（イニュメレイト）** を使うと、ループで **番号（インデックス）と要素を同時に** 取得できます。\\\\n\\\\n「enumerate」は「番号をつける」という意味です。\\\\n\\\\nたとえば、「1番目のりんご、2番目のバナナ...」と番号付きで表示したいときに便利です！\\\\n\\\\n**例：** くだものに番号をつけよう！\\\\n\\\\n```python\\\\nfruits = ['apple', 'banana', 'cherry']\\\\nfor i, fruit in enumerate(fruits):\\\\n    print(f'{i}: {fruit}')\\\\n```\\\\n=> 0: apple\\\\n=> 1: banana\\\\n=> 2: cherry\\\\n\\\\n`i` に番号、`fruit` に要素が入ります！"
+            "content": "# 番号と要素を一緒に取得しよう！\\\\n\\\\n**enumerate（イニュメレイト）** を使うと、ループで **番号（インデックス）と要素を同時に** 取得できます。\\\\n\\\\n「enumerate」は「番号をつける」という意味です。\\\\n\\\\nたとえば、「1番目のりんご、2番目のバナナ...」と番号付きで表示したいときに便利です！\\\\n\\\\n**例：** くだものに番号をつけよう！\\\\n\\\\n```python\\\\nfruits = ['りんご', 'バナナ', 'さくらんぼ']\\\\nfor i, fruit in enumerate(fruits):\\\\n    print(f'{i}: {fruit}')\\\\n```\\\\n=> 0: apple\\\\n=> 1: banana\\\\n=> 2: cherry\\\\n\\\\n`i` に番号、`fruit` に要素が入ります！"
           },
           {
             "title": "開始番号を指定する",
-            "content": "# start で開始番号を変えられる！\\\\n\\\\nデフォルトでは0から始まりますが、`start=1` で **1から始める** こともできます。\\\\n\\\\n人間は「1番目、2番目...」と数えることが多いですよね。そんなときに便利です！\\\\n\\\\n**例：** 1番目から始めよう！\\\\n\\\\n```python\\\\nfruits = ['apple', 'banana', 'cherry']\\\\nfor i, fruit in enumerate(fruits, start=1):\\\\n    print(f'{i}番目: {fruit}')\\\\n```\\\\n=> 1番目: apple\\\\n=> 2番目: banana\\\\n=> 3番目: cherry\\\\n\\\\n**何をしているか：**\\\\n- `start=1` で開始番号を1に設定\\\\n- ループするたびに番号が1ずつ増える\\\\n\\\\n**ポイント：** `start` を使わないと0から始まります！"
+            "content": "# start で開始番号を変えられる！\\\\n\\\\nデフォルトでは0から始まりますが、`start=1` で **1から始める** こともできます。\\\\n\\\\n人間は「1番目、2番目...」と数えることが多いですよね。そんなときに便利です！\\\\n\\\\n**例：** 1番目から始めよう！\\\\n\\\\n```python\\\\nfruits = ['りんご', 'バナナ', 'さくらんぼ']\\\\nfor i, fruit in enumerate(fruits, start=1):\\\\n    print(f'{i}番目: {fruit}')\\\\n```\\\\n=> 1番目: apple\\\\n=> 2番目: banana\\\\n=> 3番目: cherry\\\\n\\\\n**何をしているか：**\\\\n- `start=1` で開始番号を1に設定\\\\n- ループするたびに番号が1ずつ増える\\\\n\\\\n**ポイント：** `start` を使わないと0から始まります！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -195,7 +195,7 @@ export const pythonData3 = {
         "holeyCode": "# 赤、緑、青の3色を含むリストを作成\\\ncolors = ['赤', '緑', '___']\\\n# 1番目の i に番号、2番目の color に要素が入る\\\nfor i, color in enumerate(___):\\\n    # 「番号: 色」の形式で画面に出力\\\n    ___(f'{i}: {color}')",
         "correctLines": [
           "# 赤、緑、青の3色を含むリストを作成",
-          "colors = ['red', 'green', 'blue']",
+          "colors = ['赤', '緑', '青']",
           "# 1番目の i に番号、2番目の color に要素が入る",
           "for i, color in enumerate(colors):",
           "    # 「番号: 色」の形式で画面に出力",
@@ -215,7 +215,7 @@ export const pythonData3 = {
             "range",
             "zip"
           ],
-          "others": ["['red', 'green', 'blue']", "f'{i}: {color}'", "blue", "colors", "print", "en"]
+          "others": ["['赤', '緑', '青']", "f'{i}: {color}'", "blue", "colors", "print", "en"]
         },
         "testCases": [
           {
@@ -232,7 +232,7 @@ export const pythonData3 = {
         "tutorialSlides": [
           {
             "title": "zip とは？",
-            "content": "# 複数のリストを「ジッパー」でつなごう！\\\\n\\\\n**zip（ジップ）** を使うと、**複数のリストの要素を同時に** 取り出せます。\\\\n\\\\n「zip」はジッパー（ファスナー）のことです。2つのものを噛（か）み合わせるイメージです！\\\\n\\\\nたとえば、「名前のリスト」と「年齢のリスト」を **ペアにして** 処理したいときに便利です。\\\\n\\\\n**例：** 名前と年齢をペアにしよう！\\\\n\\\\n```python\\\\nnames = ['Alice', 'Bob']\\\\nages = [20, 25]\\\\nfor name, age in zip(names, ages):\\\\n    print(f'{name} is {age}')\\\\n```\\\\n=> Alice is 20\\\\n=> Bob is 25\\\\n\\\\n1番目どうし、2番目どうしがペアになります！"
+            "content": "# 複数のリストを「ジッパー」でつなごう！\\\\n\\\\n**zip（ジップ）** を使うと、**複数のリストの要素を同時に** 取り出せます。\\\\n\\\\n「zip」はジッパー（ファスナー）のことです。2つのものを噛（か）み合わせるイメージです！\\\\n\\\\nたとえば、「名前のリスト」と「年齢のリスト」を **ペアにして** 処理したいときに便利です。\\\\n\\\\n**例：** 名前と年齢をペアにしよう！\\\\n\\\\n```python\\\\nnames = ['アリス', 'ボブ']\\\\nages = [20, 25]\\\\nfor name, age in zip(names, ages):\\\\n    print(f'{name} is {age}')\\\\n```\\\\n=> Alice is 20\\\\n=> Bob is 25\\\\n\\\\n1番目どうし、2番目どうしがペアになります！"
           },
           {
             "title": "zip の使い方",
@@ -395,7 +395,7 @@ export const pythonData3 = {
         "tutorialSlides": [
           {
             "title": "デコレータとは？",
-            "content": "# 関数を「飾（かざ）り付け」しよう！\\\\n\\\\n**デコレータ** は、関数に **追加の機能をつける** 仕組みです。\\\\n\\\\n「デコレーション」は「飾り付け」という意味ですね。ケーキにクリームで飾りをつけるように、関数に機能を追加します！\\\\n\\\\n**例：** 関数の前後にメッセージを追加！\\\\n\\\\n```python\\\\ndef my_decorator(func):\\\\n    def wrapper():\\\\n        print('Before')  # 前に追加\\\\n        func()           # 元の関数を実行\\\\n        print('After')   # 後に追加\\\\n    return wrapper\\\\n\\\\n@my_decorator\\\\ndef say_hello():\\\\n    print('Hello!')\\\\n```\\\\n\\\\n**仕組み：**\\\\n- デコレータは「関数を受け取って、新しい関数を返す関数」\\\\n- 元の関数を「包んで」、追加の処理をつける"
+            "content": "# 関数を「飾（かざ）り付け」しよう！\\\\n\\\\n**デコレータ** は、関数に **追加の機能をつける** 仕組みです。\\\\n\\\\n「デコレーション」は「飾り付け」という意味ですね。ケーキにクリームで飾りをつけるように、関数に機能を追加します！\\\\n\\\\n**例：** 関数の前後にメッセージを追加！\\\\n\\\\n```python\\\\ndef my_decorator(func):\\\\n    def wrapper():\\\\n        print('Before')  # 前に追加\\\\n        func()           # 元の関数を実行\\\\n        print('後')   # 後に追加\\\\n    return wrapper\\\\n\\\\n@my_decorator\\\\ndef say_hello():\\\\n    print('Hello!')\\\\n```\\\\n\\\\n**仕組み：**\\\\n- デコレータは「関数を受け取って、新しい関数を返す関数」\\\\n- 元の関数を「包んで」、追加の処理をつける"
           },
           {
             "title": "デコレータの使い方",

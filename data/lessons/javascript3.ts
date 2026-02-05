@@ -121,7 +121,7 @@ export const javascriptData3 = {
           },
           {
             "title": "async の使い方",
-            "content": "# 戻り値は自動で Promise になる！\\\\n\\\\n普通に値を `return` するだけで、Promise として扱えます。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nasync function getData() {\\\\n  return { name: 'Alice' };\\\\n}\\\\n\\\\n// 普通のオブジェクトを返しているけど...\\\\n// Promise として扱える！\\\\ngetData().then(data => console.log(data.name));\\\\n```\\\\n**実行結果：**\\\\n```\\\\nAlice\\\\n```"
+            "content": "# 戻り値は自動で Promise になる！\\\\n\\\\n普通に値を `return` するだけで、Promise として扱えます。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nasync function getData() {\\\\n  return { name: 'アリス' };\\\\n}\\\\n\\\\n// 普通のオブジェクトを返しているけど...\\\\n// Promise として扱える！\\\\ngetData().then(data => console.log(data.name));\\\\n```\\\\n**実行結果：**\\\\n```\\\\nAlice\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
@@ -296,12 +296,12 @@ export const javascriptData3 = {
           },
           {
             "title": "インスタンスの作成",
-            "content": "# new で実際のオブジェクトを作る\\\\n\\\\n設計図から作った実際のオブジェクトを **インスタンス** と呼びます。\\\\n\\\\n**身近なたとえ：**\\\\n- class（設計図）= たい焼きの型\\\\n- インスタンス = 実際のたい焼き\\\\n\\\\n**コード例：**\\\\n```javascript\\\\n// new で Person クラスからインスタンスを作る\\\\nconst alice = new Person('Alice');\\\\nalice.greet();\\\\n```\\\\n**実行結果：**\\\\n```\\\\nHello, Alice!\\\\n```\\\\n\\\\n**ポイント：**\\\\n`new` をつけて class を呼び出すと、インスタンスが作られます。"
+            "content": "# new で実際のオブジェクトを作る\\\\n\\\\n設計図から作った実際のオブジェクトを **インスタンス** と呼びます。\\\\n\\\\n**身近なたとえ：**\\\\n- class（設計図）= たい焼きの型\\\\n- インスタンス = 実際のたい焼き\\\\n\\\\n**コード例：**\\\\n```javascript\\\\n// new で Person クラスからインスタンスを作る\\\\nconst alice = new Person('アリス');\\\\nalice.greet();\\\\n```\\\\n**実行結果：**\\\\n```\\\\nHello, Alice!\\\\n```\\\\n\\\\n**ポイント：**\\\\n`new` をつけて class を呼び出すと、インスタンスが作られます。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Dogクラスを定義\\\nclass Dog {\\\n  // constructorでnameを初期化\\\n  constructor(name) {\\\n    // this.nameにnameを代入\\\n    this.name = name;\\\n  }\\\n  bark() {\\\n    // テンプレートリテラルで出力\\\n    console.log(`${this.名前}: ワン！`);\\\n  }\\\n}\\\n\\\n// dogにnew Dog('Pochi')を代入\\\nconst dog = new Dog('ポチ');\\\n// bark()メソッドを呼び出し\\\ndog.bark();",
-        "holeyCode": "// Dogクラスを定義\\\n___ Dog {\\\n  // constructorでnameを初期化\\\n  ___(name) {\\\n    // this.nameにnameを代入\\\n    this.___ = name;\\\n  }\\\n  bark() {\\\n    // テンプレートリテラルで出力\\\n    console.log(`${this.___}: ワン！`);\\\n  }\\\n}\\\n\\\n// dogにnew Dog('Pochi')を代入\\\nconst dog = ___ Dog('ポチ');\\\n// bark()メソッドを呼び出し\\\ndog.___();",
+        "correctCode": "// Dogクラスを定義\\\nclass Dog {\\\n  // constructorでnameを初期化\\\n  constructor(name) {\\\n    // this.nameにnameを代入\\\n    this.name = name;\\\n  }\\\n  bark() {\\\n    // テンプレートリテラルで出力\\\n    console.log(`${this.名前}: ワン！`);\\\n  }\\\n}\\\n\\\n// dogにnew Dog('ポチ')を代入\\\nconst dog = new Dog('ポチ');\\\n// bark()メソッドを呼び出し\\\ndog.bark();",
+        "holeyCode": "// Dogクラスを定義\\\n___ Dog {\\\n  // constructorでnameを初期化\\\n  ___(name) {\\\n    // this.nameにnameを代入\\\n    this.___ = name;\\\n  }\\\n  bark() {\\\n    // テンプレートリテラルで出力\\\n    console.log(`${this.___}: ワン！`);\\\n  }\\\n}\\\n\\\n// dogにnew Dog('ポチ')を代入\\\nconst dog = ___ Dog('ポチ');\\\n// bark()メソッドを呼び出し\\\ndog.___();",
         "correctLines": [
           "// Dogクラスを定義",
           "class Dog {",
@@ -316,7 +316,7 @@ export const javascriptData3 = {
           "  }",
           "}",
           "",
-          "// dogにnew Dog('Pochi')を代入",
+          "// dogにnew Dog('ポチ')を代入",
           "const dog = new Dog('ポチ');",
           "// bark() メソッドを呼び出し",
           "dog.bark();"
@@ -329,7 +329,7 @@ export const javascriptData3 = {
           null,
           "this.name に名前を代入します。",
           "デバッグ用コンソールなどに文字列を出力します。",
-          "new Dog('Pochi')でインスタンスを作成します。",
+          "new Dog('ポチ')でインスタンスを作成します。",
           null,
           "barkメソッドを呼び出します。",
           null,
@@ -363,7 +363,7 @@ export const javascriptData3 = {
         "tutorialSlides": [
           {
             "title": "extends（継承・けいしょう）とは？",
-            "content": "# 既存のクラスを拡張する\\\\n\\\\n**extends** を使うと、既存のクラスの機能を引き継いで新しいクラスを作れます。これを **継承（けいしょう）** と呼びます。\\\\n\\\\n**身近なたとえ：**\\\\n「動物」というグループがあって、その下に「猫」「犬」があるイメージです。猫も犬も動物の特徴を持っていますよね。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nclass Animal {\\\\n  speak() { console.log('...'); }\\\\n}\\\\n\\\\n// Animal の機能を引き継いで Cat を作る\\\\nclass Cat extends Animal {\\\\n  speak() { console.log('Meow!'); }  // 上書き\\\\n}\\\\n```"
+            "content": "# 既存のクラスを拡張する\\\\n\\\\n**extends** を使うと、既存のクラスの機能を引き継いで新しいクラスを作れます。これを **継承（けいしょう）** と呼びます。\\\\n\\\\n**身近なたとえ：**\\\\n「動物」というグループがあって、その下に「猫」「犬」があるイメージです。猫も犬も動物の特徴を持っていますよね。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nclass Animal {\\\\n  speak() { console.log('...'); }\\\\n}\\\\n\\\\n// Animal の機能を引き継いで Cat を作る\\\\nclass Cat extends Animal {\\\\n  speak() { console.log('ニャー！'); }  // 上書き\\\\n}\\\\n```"
           },
           {
             "title": "super（スーパー）の使い方",
@@ -397,7 +397,7 @@ export const javascriptData3 = {
           null,
           "console.log('...')を出力します。",
           "Cat extends Animalで継承します。",
-          "console.log('Meow!')を出力します。",
+          "console.log('ニャー！')を出力します。",
           null,
           "new Cat()でインスタンスを作成します。",
           null,
@@ -501,7 +501,7 @@ export const javascriptData3 = {
         "tutorialSlides": [
           {
             "title": "Optional Chaining（オプショナルチェイニング）とは？",
-            "content": "# 安全にプロパティにアクセスする\\\\n\\\\n**?.** を使うと、データがなくてもエラーにならずに `undefined` を返します。\\\\n\\\\n**身近なたとえ：**\\\\n「友達の→お姉さんの→ペットの名前」を聞くとき、お姉さんがいなかったら「わからない」と答えますよね。`?.` も同じで、途中でデータがなければ「undefined（わからない）」を返します。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst user = { name: 'Alice' };\\\\nconsole.log(user?.name);           // Alice\\\\nconsole.log(user?.address?.city);  // undefined（エラーにならない！）\\\\n```"
+            "content": "# 安全にプロパティにアクセスする\\\\n\\\\n**?.** を使うと、データがなくてもエラーにならずに `undefined` を返します。\\\\n\\\\n**身近なたとえ：**\\\\n「友達の→お姉さんの→ペットの名前」を聞くとき、お姉さんがいなかったら「わからない」と答えますよね。`?.` も同じで、途中でデータがなければ「undefined（わからない）」を返します。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst user = { name: 'アリス' };\\\\nconsole.log(user?.name);           // Alice\\\\nconsole.log(user?.address?.city);  // undefined（エラーにならない！）\\\\n```"
           },
           {
             "title": "従来の方法との比較",
@@ -509,10 +509,10 @@ export const javascriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// user: { name: 'Bob' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス\\\nconst data = { user: { name: 'ボブ' } };\\\n// ?. で安全にプロパティにアクセス\\\nconsole.log(data?.user?.name);\\\n// 存在しないプロパティにアクセス\\\nconsole.log(data?.profile?.age);",
-        "holeyCode": "// user: { name: 'Bob' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス\\\\nconst data = { user: { name: '___' } };\\\\n// ?. で安全にプロパティにアクセス\\\\nconsole.log(data___user___name);\\\\n// 存在しないプロパティにアクセス\\\\nconsole.log(data___profile?.age);",
+        "correctCode": "// user: { name: 'ボブ' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス\\\nconst data = { user: { name: 'ボブ' } };\\\n// ?. で安全にプロパティにアクセス\\\nconsole.log(data?.user?.name);\\\n// 存在しないプロパティにアクセス\\\nconsole.log(data?.profile?.age);",
+        "holeyCode": "// user: { name: 'ボブ' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス\\\\nconst data = { user: { name: '___' } };\\\\n// ?. で安全にプロパティにアクセス\\\\nconsole.log(data___user___name);\\\\n// 存在しないプロパティにアクセス\\\\nconsole.log(data___profile?.age);",
         "correctLines": [
-          "// user: { name: 'Bob' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス",
+          "// user: { name: 'ボブ' } を持つオブジェクトを定義し、Optional Chainingで安全にアクセス",
           "const data = { user: { name: 'ボブ' } };",
           "// ?. で安全にプロパティにアクセス",
           "console.log(data?.user?.name);",
@@ -521,7 +521,7 @@ export const javascriptData3 = {
         ],
         "lineHints": [
           null,
-          "{ user: { name: 'Bob' } } のオブジェクトを作ります。",
+          "{ user: { name: 'ボブ' } } のオブジェクトを作ります。",
           null,
           "?. で安全にアクセスします。",
           null,
@@ -552,7 +552,7 @@ export const javascriptData3 = {
         "tutorialSlides": [
           {
             "title": "Nullish Coalescing（??）とは？",
-            "content": "# null/undefined のときだけ代わりの値を使う\\\\n\\\\n**??** は「左側が null か undefined のときだけ、右側の値を使う」という演算子です。\\\\n\\\\n**身近なたとえ：**\\\\n「名前を教えて。わからなかったら『ゲスト』と呼ぶね」というイメージです。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst name = null ?? 'Guest';\\\\nconsole.log(name);  // Guest（null だから）\\\\n\\\\nconst count = 0 ?? 10;\\\\nconsole.log(count);  // 0（0 は null じゃない！）\\\\n```"
+            "content": "# null/undefined のときだけ代わりの値を使う\\\\n\\\\n**??** は「左側が null か undefined のときだけ、右側の値を使う」という演算子です。\\\\n\\\\n**身近なたとえ：**\\\\n「名前を教えて。わからなかったら『ゲスト』と呼ぶね」というイメージです。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst name = null ?? 'ゲスト';\\\\nconsole.log(name);  // Guest（null だから）\\\\n\\\\nconst count = 0 ?? 10;\\\\nconsole.log(count);  // 0（0 は null じゃない！）\\\\n```"
           },
           {
             "title": "|| との違い",

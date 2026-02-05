@@ -503,7 +503,7 @@ export const perlData = {
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標\n\n`'Welcome!'` と表示するサブルーチン `welcome` を作って呼び出しましょう。\n\n**手順：**\n1. `sub welcome { ... }` で定義\n2. `welcome();` で呼び出し"
+            "content": "# 目標\n\n`'ようこそ！'` と表示するサブルーチン `welcome` を作って呼び出しましょう。\n\n**手順：**\n1. `sub welcome { ... }` で定義\n2. `welcome();` で呼び出し"
           }
         ],
         "initialDisplayMode": "holey",

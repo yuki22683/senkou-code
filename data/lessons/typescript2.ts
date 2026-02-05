@@ -14,7 +14,7 @@ export const typescriptData2 = {
         "tutorialSlides": [
           {
             "title": "ユニオン型とは？",
-            "content": "# 複数の型を許容する\\\\n\\\\n**ユニオン型**は、「AまたはB」のように、複数の型のうちどれかを受け入れる型です。\\\\n\\\\n## たとえ話\\\\n\\\\n「飲み物専用」と「お菓子専用」の両方OKな引き出しがあったら便利ですよね。ユニオン型はまさにそれ！「文字でも数字でもOK」というラベルを作れます。\\\\n\\\\n## 書き方のポイント\\\\n\\\\n`|`（パイプ・縦棒）で型をつなげます。\\\\n\\\\n```typescript\\\\nlet value: string | number;  // 文字か数字のどちらかOK\\\\nvalue = 'hello';  // 文字 → OK!\\\\nvalue = 42;       // 数字 → OK!\\\\n```"
+            "content": "# 複数の型を許容する\\\\n\\\\n**ユニオン型**は、「AまたはB」のように、複数の型のうちどれかを受け入れる型です。\\\\n\\\\n## たとえ話\\\\n\\\\n「飲み物専用」と「お菓子専用」の両方OKな引き出しがあったら便利ですよね。ユニオン型はまさにそれ！「文字でも数字でもOK」というラベルを作れます。\\\\n\\\\n## 書き方のポイント\\\\n\\\\n`|`（パイプ・縦棒）で型をつなげます。\\\\n\\\\n```typescript\\\\nlet value: string | number;  // 文字か数字のどちらかOK\\\\nvalue = 'こんにちは';  // 文字 → OK!\\\\nvalue = 42;       // 数字 → OK!\\\\n```"
           },
           {
             "title": "ユニオン型の使い方",
@@ -72,11 +72,11 @@ export const typescriptData2 = {
         "tutorialSlides": [
           {
             "title": "インターフェースとは？",
-            "content": "# オブジェクトの設計図\\\\n\\\\n**インターフェース**（interface）は、オブジェクトが持つべきプロパティ（属性・特徴）を定義する「設計図」のようなものです。\\\\n\\\\n## たとえ話\\\\n\\\\n「生徒カード」を作るときの規則を想像してみてください。\\\\n- 必ず「名前」を書く\\\\n- 必ず「年齢」を書く\\\\n\\\\nインターフェースは、こんな規則をプログラムで表現したものです。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface User {\\\\n    name: string;  // 名前は必須\\\\n    age: number;   // 年齢も必須\\\\n}\\\\n\\\\nconst user: User = {\\\\n    name: 'Taro',\\\\n    age: 20\\\\n};\\\\n```"
+            "content": "# オブジェクトの設計図\\\\n\\\\n**インターフェース**（interface）は、オブジェクトが持つべきプロパティ（属性・特徴）を定義する「設計図」のようなものです。\\\\n\\\\n## たとえ話\\\\n\\\\n「生徒カード」を作るときの規則を想像してみてください。\\\\n- 必ず「名前」を書く\\\\n- 必ず「年齢」を書く\\\\n\\\\nインターフェースは、こんな規則をプログラムで表現したものです。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface User {\\\\n    name: string;  // 名前は必須\\\\n    age: number;   // 年齢も必須\\\\n}\\\\n\\\\nconst user: User = {\\\\n    name: '太郎',\\\\n    age: 20\\\\n};\\\\n```"
           },
           {
             "title": "型チェックの恩恵",
-            "content": "# 間違いを防ぐ\\\\n\\\\nインターフェースの規則に合わないオブジェクトを作ろうとすると、TypeScriptがエラーで教えてくれます。\\\\n\\\\n## たとえ話\\\\n\\\\n「名前と年齢を両方書いてね」というルールなのに、名前だけ書いて提出しようとしたら「年齢も書いて！」と言われますよね。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface User {\\\\n    name: string;\\\\n    age: number;\\\\n}\\\\n\\\\n// エラー！ 'age' がありません\\\\nconst user: User = { name: 'Taro' };\\\\n```\\\\n\\\\nこうやって、うっかり忘れを防いでくれるんです！"
+            "content": "# 間違いを防ぐ\\\\n\\\\nインターフェースの規則に合わないオブジェクトを作ろうとすると、TypeScriptがエラーで教えてくれます。\\\\n\\\\n## たとえ話\\\\n\\\\n「名前と年齢を両方書いてね」というルールなのに、名前だけ書いて提出しようとしたら「年齢も書いて！」と言われますよね。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface User {\\\\n    name: string;\\\\n    age: number;\\\\n}\\\\n\\\\n// エラー！ '年齢' がありません\\\\nconst user: User = { name: '太郎' };\\\\n```\\\\n\\\\nこうやって、うっかり忘れを防いでくれるんです！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -144,7 +144,7 @@ export const typescriptData2 = {
           },
           {
             "title": "オプショナルの使い方",
-            "content": "# 柔軟なオブジェクト\\\\n\\\\n`?` をつけたプロパティは、あってもなくてもエラーになりません。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface User {\\\\n    name: string;\\\\n    email?: string;  // オプショナル\\\\n}\\\\n\\\\n// emailなし → OK!\\\\nconst user1: User = { name: 'Taro' };\\\\n\\\\n// emailあり → もちろんOK!\\\\nconst user2: User = { name: 'Hanako', email: 'h@example.com' };\\\\n```\\\\n\\\\nどちらもエラーにならず、柔軟に対応できますね！"
+            "content": "# 柔軟なオブジェクト\\\\n\\\\n`?` をつけたプロパティは、あってもなくてもエラーになりません。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface User {\\\\n    name: string;\\\\n    email?: string;  // オプショナル\\\\n}\\\\n\\\\n// emailなし → OK!\\\\nconst user1: User = { name: '太郎' };\\\\n\\\\n// emailあり → もちろんOK!\\\\nconst user2: User = { name: '花子', email: 'h@example.com' };\\\\n```\\\\n\\\\nどちらもエラーにならず、柔軟に対応できますね！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -185,7 +185,7 @@ export const typescriptData2 = {
             "*",
             "&"
           ],
-          "others": ["string", "'Bob'", "name", "Profile", "}", "Bob", "log"]
+          "others": ["string", "'ボブ'", "name", "Profile", "}", "Bob", "log"]
         },
         "testCases": [
           {
@@ -262,12 +262,12 @@ export const typescriptData2 = {
           },
           {
             "title": "readonlyの活用",
-            "content": "# 安全なコード\\\\n\\\\n「絶対に変更されたくない値」を守れます。例えば、ユーザーのIDは変わってはいけませんよね。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface User {\\\\n    readonly id: number;  // IDは変更禁止\\\\n    name: string;         // 名前は変更OK\\\\n}\\\\n\\\\nconst user: User = { id: 1, name: 'Taro' };\\\\nuser.name = 'Jiro';  // OK! 名前は変えられる\\\\nuser.id = 2;         // エラー！ IDは変えられない\\\\n```\\\\n\\\\nこうやって、大切なデータを間違って変更してしまうのを防げます！"
+            "content": "# 安全なコード\\\\n\\\\n「絶対に変更されたくない値」を守れます。例えば、ユーザーのIDは変わってはいけませんよね。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface User {\\\\n    readonly id: number;  // IDは変更禁止\\\\n    name: string;         // 名前は変更OK\\\\n}\\\\n\\\\nconst user: User = { id: 1, name: '太郎' };\\\\nuser.name = '次郎';  // OK! 名前は変えられる\\\\nuser.id = 2;         // エラー！ IDは変えられない\\\\n```\\\\n\\\\nこうやって、大切なデータを間違って変更してしまうのを防げます！"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// idは読み取り専用\\\ninterface Item {\\\n    // readonly で読み取り専用に\\\n    readonly id: number;\\\n    // 名前プロパティの型\\\n    name: string;\\\n}\\\n\\\n// itemに{id: 1, name: 'Apple'}を代入\\\nconst item: Item = { id: 1, name: 'りんご' };\\\n// idを出力\\\nconsole.log(item.id);",
-        "holeyCode": "// idは読み取り専用\\\ninterface ___ {\\\n    // readonly で読み取り専用に\\\n    readonly id: ___;\\\n    // 名前プロパティの型\\\n    name: ___;\\\n___\\\n\\\n// itemに{id: 1, name: 'Apple'}を代入\\\nconst item: Item = { id: ___, name: 'りんご' };\\\n// idを出力\\\nconsole.___(item.id);",
+        "correctCode": "// idは読み取り専用\\\ninterface Item {\\\n    // readonly で読み取り専用に\\\n    readonly id: number;\\\n    // 名前プロパティの型\\\n    name: string;\\\n}\\\n\\\n// itemに{id: 1, name: 'りんご'}を代入\\\nconst item: Item = { id: 1, name: 'りんご' };\\\n// idを出力\\\nconsole.log(item.id);",
+        "holeyCode": "// idは読み取り専用\\\ninterface ___ {\\\n    // readonly で読み取り専用に\\\n    readonly id: ___;\\\n    // 名前プロパティの型\\\n    name: ___;\\\n___\\\n\\\n// itemに{id: 1, name: 'りんご'}を代入\\\nconst item: Item = { id: ___, name: 'りんご' };\\\n// idを出力\\\nconsole.___(item.id);",
         "correctLines": [
           "// idは読み取り専用",
           "interface Item {",
@@ -277,7 +277,7 @@ export const typescriptData2 = {
           "    name: string;",
           "}",
           "",
-          "// itemに{id: 1, name: 'Apple'}を代入",
+          "// itemに{id: 1, name: 'りんご'}を代入",
           "const item: Item = { id: 1, name: 'りんご' };",
           "// idを出力",
           "console.log(item.id);"
@@ -303,7 +303,7 @@ export const typescriptData2 = {
             "final",
             "immutable"
           ],
-          "others": ["string", "'Apple'", "id", "Item", "number", "}", "1", "log"]
+          "others": ["string", "'りんご'", "id", "Item", "number", "}", "1", "log"]
         },
         "testCases": [
           {
@@ -386,11 +386,11 @@ export const typescriptData2 = {
         "tutorialSlides": [
           {
             "title": "ジェネリクスとは？",
-            "content": "# 型を変数のように使う\\\\n\\\\n**ジェネリクス**（Generics）とは、「後から型を決められる」仕組みです。`<T>` のように書いて、Tの部分に好きな型を入れられます。\\\\n\\\\n## たとえ話\\\\n\\\\n「何でも入る箱」を想像してみてください。りんごを入れれば「りんご箱」、おもちゃを入れれば「おもちゃ箱」になりますよね。\\\\n\\\\nジェネリクスも同じで、使うときに「これは文字用」「これは数字用」と決められるのです！\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction identity<T>(arg: T): T {\\\\n    return arg;\\\\n}\\\\n\\\\nidentity<string>('hello');  // 文字列用として使う\\\\nidentity<number>(42);       // 数値用として使う\\\\n```"
+            "content": "# 型を変数のように使う\\\\n\\\\n**ジェネリクス**（Generics）とは、「後から型を決められる」仕組みです。`<T>` のように書いて、Tの部分に好きな型を入れられます。\\\\n\\\\n## たとえ話\\\\n\\\\n「何でも入る箱」を想像してみてください。りんごを入れれば「りんご箱」、おもちゃを入れれば「おもちゃ箱」になりますよね。\\\\n\\\\nジェネリクスも同じで、使うときに「これは文字用」「これは数字用」と決められるのです！\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction identity<T>(arg: T): T {\\\\n    return arg;\\\\n}\\\\n\\\\nidentity<string>('こんにちは');  // 文字列用として使う\\\\nidentity<number>(42);       // 数値用として使う\\\\n```"
           },
           {
             "title": "型推論と一緒に",
-            "content": "# TypeScriptが型を推測\\\\n\\\\nTypeScriptは賢いので、渡した値から型を自動的に判断してくれます。これを **型推論（かたすいろん）** と呼びます。\\\\n\\\\n## たとえ話\\\\n\\\\n「りんご」を箱に入れたら、わざわざ「これはりんご箱です」と言わなくても、見ればわかりますよね。TypeScriptも同じです！\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction identity<T>(arg: T): T {\\\\n    return arg;\\\\n}\\\\n\\\\n// <string> を書かなくても、TypeScriptが推測してくれる！\\\\nconst str = identity('hello');  // string と推論\\\\nconst num = identity(42);       // number と推論\\\\n```\\\\n\\\\n便利ですね！"
+            "content": "# TypeScriptが型を推測\\\\n\\\\nTypeScriptは賢いので、渡した値から型を自動的に判断してくれます。これを **型推論（かたすいろん）** と呼びます。\\\\n\\\\n## たとえ話\\\\n\\\\n「りんご」を箱に入れたら、わざわざ「これはりんご箱です」と言わなくても、見ればわかりますよね。TypeScriptも同じです！\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction identity<T>(arg: T): T {\\\\n    return arg;\\\\n}\\\\n\\\\n// <string> を書かなくても、TypeScriptが推測してくれる！\\\\nconst str = identity('こんにちは');  // string と推論\\\\nconst num = identity(42);       // number と推論\\\\n```\\\\n\\\\n便利ですね！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -444,11 +444,11 @@ export const typescriptData2 = {
         "tutorialSlides": [
           {
             "title": "ジェネリックインターフェース",
-            "content": "# 柔軟なデータ構造\\\\n\\\\nインターフェース（設計図）にもジェネリクスを使えます。「中身の型は後で決める箱」のような設計図を作れるのです！\\\\n\\\\n## たとえ話\\\\n\\\\n「プレゼント箱」の設計図があるとします。中身は「おもちゃ」でも「お菓子」でも「本」でも何でもOK。箱の形は同じで、中身だけ変わりますよね。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface Box<T> {   // Tは後で決める\\\\n    value: T;\\\\n}\\\\n\\\\nconst numBox: Box<number> = { value: 42 };  // 数字の箱\\\\nconst strBox: Box<string> = { value: 'hi' }; // 文字の箱\\\\n```"
+            "content": "# 柔軟なデータ構造\\\\n\\\\nインターフェース（設計図）にもジェネリクスを使えます。「中身の型は後で決める箱」のような設計図を作れるのです！\\\\n\\\\n## たとえ話\\\\n\\\\n「プレゼント箱」の設計図があるとします。中身は「おもちゃ」でも「お菓子」でも「本」でも何でもOK。箱の形は同じで、中身だけ変わりますよね。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface Box<T> {   // Tは後で決める\\\\n    value: T;\\\\n}\\\\n\\\\nconst numBox: Box<number> = { value: 42 };  // 数字の箱\\\\nconst strBox: Box<string> = { value: 'こんにちは' }; // 文字の箱\\\\n```"
           },
           {
             "title": "実践的な例",
-            "content": "# APIレスポンスなどに\\\\n\\\\nWebサイトからデータを取得するとき、「成功/失敗」と「データ」がセットで返ってくることが多いです。ジェネリクスを使うと、いろんなデータに対応できる型を作れます。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\n// 汎用的なレスポンスの型\\\\ninterface Response<T> {\\\\n    data: T;         // データ（型は後で決める）\\\\n    status: number;  // 状態コード（200=成功など）\\\\n}\\\\n\\\\ninterface User { name: string; }\\\\n\\\\n// ユーザー情報のレスポンス\\\\nconst res: Response<User> = {\\\\n    data: { name: 'Taro' },\\\\n    status: 200\\\\n};\\\\n```\\\\n\\\\nこれで同じ型を使いまわせて便利です！"
+            "content": "# APIレスポンスなどに\\\\n\\\\nWebサイトからデータを取得するとき、「成功/失敗」と「データ」がセットで返ってくることが多いです。ジェネリクスを使うと、いろんなデータに対応できる型を作れます。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\n// 汎用的なレスポンスの型\\\\ninterface Response<T> {\\\\n    data: T;         // データ（型は後で決める）\\\\n    status: number;  // 状態コード（200=成功など）\\\\n}\\\\n\\\\ninterface User { name: string; }\\\\n\\\\n// ユーザー情報のレスポンス\\\\nconst res: Response<User> = {\\\\n    data: { name: '太郎' },\\\\n    status: 200\\\\n};\\\\n```\\\\n\\\\nこれで同じ型を使いまわせて便利です！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -502,7 +502,7 @@ export const typescriptData2 = {
         "tutorialSlides": [
           {
             "title": "typeof型演算子",
-            "content": "# 変数から型を取得\\\\n\\\\n**typeof**（タイプオブ）を使うと、「この変数と同じ型」という意味になります。既に作った変数の型をコピーできるのです！\\\\n\\\\n## たとえ話\\\\n\\\\n「太郎くんと同じ服を買いたい」というとき、太郎くんの服を見れば何を買えばいいかわかりますよね。typeofも同じで、既にある変数を見て型を決められます。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nconst user = { name: 'Taro', age: 20 };\\\\n\\\\ntype UserType = typeof user;\\\\n// UserTypeは { name: string; age: number; } と同じ意味になる\\\\n```"
+            "content": "# 変数から型を取得\\\\n\\\\n**typeof**（タイプオブ）を使うと、「この変数と同じ型」という意味になります。既に作った変数の型をコピーできるのです！\\\\n\\\\n## たとえ話\\\\n\\\\n「太郎くんと同じ服を買いたい」というとき、太郎くんの服を見れば何を買えばいいかわかりますよね。typeofも同じで、既にある変数を見て型を決められます。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nconst user = { name: '太郎', age: 20 };\\\\n\\\\ntype UserType = typeof user;\\\\n// UserTypeは { name: string; age: number; } と同じ意味になる\\\\n```"
           },
           {
             "title": "同じ型の変数を作る",
@@ -556,12 +556,12 @@ export const typescriptData2 = {
           },
           {
             "title": "複数の拡張",
-            "content": "# 複数から継承\\\\n\\\\n複数のインターフェースを組み合わせることもできます。カンマ（,）で区切って書きます。\\\\n\\\\n## たとえ話\\\\n\\\\n「歌える」という能力と「踊れる」という能力があるとします。「アイドル」は両方の能力を持っていますよね！\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface A { a: string; }  // Aの特徴\\\\ninterface B { b: number; }  // Bの特徴\\\\n\\\\n// AとBの両方を継承\\\\ninterface C extends A, B {\\\\n    c: boolean;  // Cだけの特徴\\\\n}\\\\n\\\\nconst obj: C = { a: 'hi', b: 1, c: true };\\\\n// a, b, c すべて必要！\\\\n```"
+            "content": "# 複数から継承\\\\n\\\\n複数のインターフェースを組み合わせることもできます。カンマ（,）で区切って書きます。\\\\n\\\\n## たとえ話\\\\n\\\\n「歌える」という能力と「踊れる」という能力があるとします。「アイドル」は両方の能力を持っていますよね！\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\ninterface A { a: string; }  // Aの特徴\\\\ninterface B { b: number; }  // Bの特徴\\\\n\\\\n// AとBの両方を継承\\\\ninterface C extends A, B {\\\\n    c: boolean;  // Cだけの特徴\\\\n}\\\\n\\\\nconst obj: C = { a: 'こんにちは', b: 1, c: true };\\\\n// a, b, c すべて必要！\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 基本のインターフェース\\\ninterface Base {\\\n    // idプロパティの型\\\n    id: number;\\\n}\\\n\\\n// extends でインターフェースを拡張\\\ninterface User extends Base {\\\n    // 名前プロパティの型\\\n    name: string;\\\n}\\\n\\\n// uに{id: 1, name: 'Taro'}を代入\\\nconst u: User = { id: 1, name: '太郎' };\\\n// 名前を出力\\\nconsole.log(u.name);",
-        "holeyCode": "// 基本のインターフェース\\\ninterface ___ {\\\n    // idプロパティの型\\\n    id: ___;\\\n___\\\n\\\n// extends でインターフェースを拡張\\\ninterface User extends ___ {\\\n    // 名前プロパティの型\\\n    name: ___;\\\n___\\\n\\\n// uに{id: 1, name: 'Taro'}を代入\\\nconst u: User = { id: ___, name: '太郎' };\\\n// 名前を出力\\\nconsole.___(u.name);",
+        "correctCode": "// 基本のインターフェース\\\ninterface Base {\\\n    // idプロパティの型\\\n    id: number;\\\n}\\\n\\\n// extends でインターフェースを拡張\\\ninterface User extends Base {\\\n    // 名前プロパティの型\\\n    name: string;\\\n}\\\n\\\n// uに{id: 1, name: '太郎'}を代入\\\nconst u: User = { id: 1, name: '太郎' };\\\n// 名前を出力\\\nconsole.log(u.name);",
+        "holeyCode": "// 基本のインターフェース\\\ninterface ___ {\\\n    // idプロパティの型\\\n    id: ___;\\\n___\\\n\\\n// extends でインターフェースを拡張\\\ninterface User extends ___ {\\\n    // 名前プロパティの型\\\n    name: ___;\\\n___\\\n\\\n// uに{id: 1, name: '太郎'}を代入\\\nconst u: User = { id: ___, name: '太郎' };\\\n// 名前を出力\\\nconsole.___(u.name);",
         "correctLines": [
                   "// 基本のインターフェース",
                   "interface Base {",
@@ -575,7 +575,7 @@ export const typescriptData2 = {
                   "    name: string;",
                   "}",
                   "",
-                  "// uに{id: 1, name: 'Taro'}を代入",
+                  "// uに{id: 1, name: '太郎'}を代入",
                   "const u: User = { id: 1, name: '太郎' };",
                   "// 名前を出力",
                   "console.log(u.name);"
@@ -605,7 +605,7 @@ export const typescriptData2 = {
             "with",
             "include"
           ],
-          "others": ["number", "string", "'Taro'", "name", "Base", "}", "1", "log"]
+          "others": ["number", "string", "'太郎'", "name", "Base", "}", "1", "log"]
         },
         "testCases": [
           {

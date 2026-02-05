@@ -128,12 +128,12 @@ export const pythonData5 = {
         "tutorialSlides": [
           {
             "title": "json.loads()",
-            "content": "# JSON文字列をPythonに変換\n\n**JSON（ジェイソン）** とは、データを保存したり送ったりするための **世界共通の書き方** です。\n\n**JSONの例：**\n```json\n{\"name\": \"Taro\", \"age\": 25}\n```\n\n**json.loads()（ロードエス）** で **JSON文字列をPythonの辞書やリストに変換** できます。\n\n**たとえ話：** 外国語（JSON）を日本語（Python）に翻訳するようなものです。\n\n**例：** JSON文字列を辞書に変換しよう！\n\n```python\nimport json\n\n# JSON形式の文字列\njson_str = '{\"name\": \"Taro\", \"age\": 25}'\n# Pythonの辞書に変換\ndata = json.loads(json_str)\nprint(data['name'])  # Taro\n```\n\n**何をしているか：**\n1. `import json` でJSONモジュールを読み込む\n2. JSON形式の文字列を用意（ダブルクォートを使うのがJSONのルール）\n3. `json.loads()` で文字列（String）をPythonオブジェクトに変換\n\n**ポイント：** `loads` の 's' は **String（文字列）** の意味です。"
+            "content": "# JSON文字列をPythonに変換\n\n**JSON（ジェイソン）** とは、データを保存したり送ったりするための **世界共通の書き方** です。\n\n**JSONの例：**\n```json\n{\"name\": \"Taro\", \"age\": 25}\n```\n\n**json.loads()（ロードエス）** で **JSON文字列をPythonの辞書やリストに変換** できます。\n\n**たとえ話：** 外国語（JSON）を日本語（Python）に翻訳するようなものです。\n\n**例：** JSON文字列を辞書に変換しよう！\n\n```python\nimport json\n\n# JSON形式の文字列\njson_str = '{\"name\": \"Taro\", \"age\": 25}'\n# Pythonの辞書に変換\ndata = json.loads(json_str)\nprint(data['名前'])  # Taro\n```\n\n**何をしているか：**\n1. `import json` でJSONモジュールを読み込む\n2. JSON形式の文字列を用意（ダブルクォートを使うのがJSONのルール）\n3. `json.loads()` で文字列（String）をPythonオブジェクトに変換\n\n**ポイント：** `loads` の 's' は **String（文字列）** の意味です。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# jsonモジュールをimportする\nimport json\n\n# 'で囲んだJSON: {の中に\"キー\": 値をカンマ区切りで並べる（name=\"Python\", version=3.12）\njson_str = '{\"名前\": \"Python\", \"version\": 3.12}'\n# json_strをjson.loadsで辞書に変換しdataに代入する\ndata = json.loads(json_str)\n# data['name']をprintで出力する\nprint(data['名前'])",
-        "holeyCode": "# jsonモジュールをimportする\nimport ___\n\n# 'で囲んだJSON: {の中に\"キー\": 値をカンマ区切りで並べる（name=\"Python\", version=3.12）\njson_str = ___\n# json_strをjson.loadsで辞書に変換しdataに代入する\ndata = json.___(json_str)\n# data['name']をprintで出力する\n___(data['名前'])",
+        "correctCode": "# jsonモジュールをimportする\nimport json\n\n# 'で囲んだJSON: {の中に\"キー\": 値をカンマ区切りで並べる（name=\"Python\", version=3.12）\njson_str = '{\"名前\": \"Python\", \"version\": 3.12}'\n# json_strをjson.loadsで辞書に変換しdataに代入する\ndata = json.loads(json_str)\n# data['名前']をprintで出力する\nprint(data['名前'])",
+        "holeyCode": "# jsonモジュールをimportする\nimport ___\n\n# 'で囲んだJSON: {の中に\"キー\": 値をカンマ区切りで並べる（name=\"Python\", version=3.12）\njson_str = ___\n# json_strをjson.loadsで辞書に変換しdataに代入する\ndata = json.___(json_str)\n# data['名前']をprintで出力する\n___(data['名前'])",
         "correctLines": [
           "# jsonモジュールをimportする",
           "import json",
@@ -142,8 +142,8 @@ export const pythonData5 = {
           "json_str = '{\"名前\": \"Python\", \"version\": 3.12}'",
           "# json_strをjson.loadsで辞書に変換しdataに代入する",
           "data = json.loads(json_str)",
-          "# data['name']をprintで出力する",
-          "print(data['name'])"
+          "# data['名前']をprintで出力する",
+          "print(data['名前'])"
         ],
         "lineHints": [
           null,
@@ -154,7 +154,7 @@ export const pythonData5 = {
           null,
           "loadはファイル用、loadsは文字列(String)用です。",
           null,
-          "出力関数printと辞書のキー'name'を使います。"
+          "出力関数printと辞書のキー'名前'を使います。"
         ],
         "candidates": {
           "keywords": [
@@ -179,18 +179,18 @@ export const pythonData5 = {
         "tutorialSlides": [
           {
             "title": "json.dumps()",
-            "content": "# PythonをJSONに変換\n\n**json.dumps()（ダンプエス）** で **Pythonの辞書やリストをJSON文字列に変換** できます。\n\n**たとえ話：** 日本語（Python）を外国語（JSON）に翻訳するようなものです。\n- `loads`: 外国語 → 日本語（読み込み）\n- `dumps`: 日本語 → 外国語（書き出し）\n\n**例：** 辞書をJSON文字列に変換しよう！\n\n```python\nimport json\n\ndata = {'name': 'Taro', 'age': 25}\njson_str = json.dumps(data)\nprint(json_str)  # {\"name\": \"Taro\", \"age\": 25}\n```\n\n**何をしているか：**\n1. Pythonの辞書 `{'name': 'Taro', 'age': 25}` を作る\n2. `json.dumps()` でJSON形式の文字列に変換\n3. シングルクォートがダブルクォートに変わる（JSONのルール）\n\n**便利なオプション：**\n- `json.dumps(data, indent=2)`: 見やすく整形\n- `json.dumps(data, ensure_ascii=False)`: 日本語をそのまま表示\n\n**ポイント：** `dumps` の 's' は **String（文字列）** に変換するという意味です。"
+            "content": "# PythonをJSONに変換\n\n**json.dumps()（ダンプエス）** で **Pythonの辞書やリストをJSON文字列に変換** できます。\n\n**たとえ話：** 日本語（Python）を外国語（JSON）に翻訳するようなものです。\n- `loads`: 外国語 → 日本語（読み込み）\n- `dumps`: 日本語 → 外国語（書き出し）\n\n**例：** 辞書をJSON文字列に変換しよう！\n\n```python\nimport json\n\ndata = {'名前': '太郎', '年齢': 25}\njson_str = json.dumps(data)\nprint(json_str)  # {\"name\": \"Taro\", \"age\": 25}\n```\n\n**何をしているか：**\n1. Pythonの辞書 `{'名前': '太郎', '年齢': 25}` を作る\n2. `json.dumps()` でJSON形式の文字列に変換\n3. シングルクォートがダブルクォートに変わる（JSONのルール）\n\n**便利なオプション：**\n- `json.dumps(data, indent=2)`: 見やすく整形\n- `json.dumps(data, ensure_ascii=False)`: 日本語をそのまま表示\n\n**ポイント：** `dumps` の 's' は **String（文字列）** に変換するという意味です。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# JSONモジュールをインポート\nimport json\n\n# dataにlanguage='Python', level='advanced'の辞書を代入\ndata = {'langu年齢': 'Python', 'level': 'advanced'}\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\njson_str = json.dumps(data)\n# json_strをprintで出力\nprint(json_str)",
-        "holeyCode": "# JSONモジュールをインポート\nimport ___\n\n# dataにlanguage='Python', level='advanced'の辞書を代入\ndata = {'langu年齢': 'Python', 'level': '___'}\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\njson_str = json.dumps(___)\n# json_strをprintで出力\n___(json_str)",
+        "correctCode": "# JSONモジュールをインポート\nimport json\n\n# dataにlanguage='Python', level='上級'の辞書を代入\ndata = {'langu年齢': 'Python', 'レベル': '上級'}\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\njson_str = json.dumps(data)\n# json_strをprintで出力\nprint(json_str)",
+        "holeyCode": "# JSONモジュールをインポート\nimport ___\n\n# dataにlanguage='Python', level='上級'の辞書を代入\ndata = {'langu年齢': 'Python', 'レベル': '___'}\n# json.dumps(data)でJSON文字列に変換しjson_strに代入\njson_str = json.dumps(___)\n# json_strをprintで出力\n___(json_str)",
         "correctLines": [
           "# JSONモジュールをインポート",
           "import json",
           "",
-          "# dataにlanguage='Python', level='advanced'の辞書を代入",
-          "data = {'langu年齢': 'Python', 'level': 'advanced'}",
+          "# dataにlanguage='Python', level='上級'の辞書を代入",
+          "data = {'langu年齢': 'Python', 'レベル': '上級'}",
           "# json.dumps(data)でJSON文字列に変換しjson_strに代入",
           "json_str = json.dumps(data)",
           "# json_strをprintで出力",
@@ -213,7 +213,7 @@ export const pythonData5 = {
             "dump",
             "stringify"
           ],
-          "others": ["json", "{'language': 'Python', 'level': 'advanced'}", "json_str", "advanced", "data", "print"]
+          "others": ["json", "{'language': 'Python', 'レベル': '上級'}", "json_str", "advanced", "data", "print"]
         },
         "testCases": [
           {
@@ -387,17 +387,17 @@ export const pythonData5 = {
         "tutorialSlides": [
           {
             "title": "Counterとは？",
-            "content": "# 要素を数える\n\n**Counter（カウンター）** を使うと、**要素の出現回数を簡単にカウント** できます。\n\n**たとえ話：** クラスで「好きな果物」アンケートを取って、りんごが何票、バナナが何票...と数えるようなものです。\n\n**例：** 果物の出現回数を数えよう！\n\n```python\nfrom collections import Counter\n\nwords = ['apple', 'banana', 'apple', 'cherry']\ncount = Counter(words)\nprint(count['apple'])  # 2（appleは2回出てきた）\nprint(count['banana']) # 1\n```\n\n**何をしているか：**\n1. `from collections import Counter` でインポート\n2. `Counter(リスト)` でカウント開始\n3. `count['apple']` で「apple」の出現回数を取得\n\n**便利なメソッド：**\n- `count.most_common(3)`: 多い順に3つ取得\n- `count.total()`: 全要素の合計数\n\n**ポイント：** 文字列を渡すと、1文字ずつカウントします！"
+            "content": "# 要素を数える\n\n**Counter（カウンター）** を使うと、**要素の出現回数を簡単にカウント** できます。\n\n**たとえ話：** クラスで「好きな果物」アンケートを取って、りんごが何票、バナナが何票...と数えるようなものです。\n\n**例：** 果物の出現回数を数えよう！\n\n```python\nfrom collections import Counter\n\nwords = ['りんご', 'バナナ', 'りんご', 'さくらんぼ']\ncount = Counter(words)\nprint(count['りんご'])  # 2（appleは2回出てきた）\nprint(count['バナナ']) # 1\n```\n\n**何をしているか：**\n1. `from collections import Counter` でインポート\n2. `Counter(リスト)` でカウント開始\n3. `count['りんご']` で「apple」の出現回数を取得\n\n**便利なメソッド：**\n- `count.most_common(3)`: 多い順に3つ取得\n- `count.total()`: 全要素の合計数\n\n**ポイント：** 文字列を渡すと、1文字ずつカウントします！"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Counterクラスをインポート\nfrom collections import Counter\n\n# textに'hello world'を代入\ntext = 'Hello World'\n# Counter(text)で文字をカウントしcountに代入\ncount = Counter(text)\n# count.most_common(3)をprintで出力\nprint(count.most_common(3))",
-        "holeyCode": "# Counterクラスをインポート\nfrom collections import ___\n\n# textに'hello world'を代入\ntext = 'こんにちは ___'\n# Counter(text)で文字をカウントしcountに代入\ncount = Counter(___)\n# count.most_common(3)をprintで出力\n___(count.most_common(3))",
+        "correctCode": "# Counterクラスをインポート\nfrom collections import Counter\n\n# textに'こんにちは世界'を代入\ntext = 'Hello World'\n# Counter(text)で文字をカウントしcountに代入\ncount = Counter(text)\n# count.most_common(3)をprintで出力\nprint(count.most_common(3))",
+        "holeyCode": "# Counterクラスをインポート\nfrom collections import ___\n\n# textに'こんにちは世界'を代入\ntext = 'こんにちは ___'\n# Counter(text)で文字をカウントしcountに代入\ncount = Counter(___)\n# count.most_common(3)をprintで出力\n___(count.most_common(3))",
         "correctLines": [
           "# Counterクラスをインポート",
           "from collections import Counter",
           "",
-          "# textに'hello world'を代入",
+          "# textに'こんにちは世界'を代入",
           "text = 'Hello World'",
           "# Counter(text)で文字をカウントしcountに代入",
           "count = Counter(text)",
@@ -421,7 +421,7 @@ export const pythonData5 = {
             "Count",
             "Dict"
           ],
-          "others": ["'hello world'", "Counter(text)", "count.most_common(3", "world", "text", "print", "世界"]
+          "others": ["'こんにちは世界'", "Counter(text)", "count.most_common(3", "world", "text", "print", "世界"]
         },
         "testCases": [
           {
@@ -442,20 +442,20 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defaultdictクラスをインポート\nfrom collections import defaultdict\n\n# dにdefaultdict(list)を代入\nd = defaultdict(list)\n# d['fruits']に'apple'をappend\nd['くだもの'].append('りんご')\n# d['fruits']に'banana'をappend\nd['くだもの'].append('バナナ')\n# d['fruits']をprintで出力\nprint(d['くだもの'])",
-        "holeyCode": "# defaultdictクラスをインポート\nfrom collections import ___\n\n# dにdefaultdict(list)を代入\nd = defaultdict(___)\n# d['fruits']に'apple'をappend\nd['くだもの'].append('___')\n# d['fruits']に'banana'をappend\nd['くだもの'].append('___')\n# d['fruits']をprintで出力\n___(d['くだもの'])",
+        "correctCode": "# defaultdictクラスをインポート\nfrom collections import defaultdict\n\n# dにdefaultdict(list)を代入\nd = defaultdict(list)\n# d['くだもの']に'りんご'をappend\nd['くだもの'].append('りんご')\n# d['くだもの']に'バナナ'をappend\nd['くだもの'].append('バナナ')\n# d['くだもの']をprintで出力\nprint(d['くだもの'])",
+        "holeyCode": "# defaultdictクラスをインポート\nfrom collections import ___\n\n# dにdefaultdict(list)を代入\nd = defaultdict(___)\n# d['くだもの']に'りんご'をappend\nd['くだもの'].append('___')\n# d['くだもの']に'バナナ'をappend\nd['くだもの'].append('___')\n# d['くだもの']をprintで出力\n___(d['くだもの'])",
         "correctLines": [
           "# defaultdictクラスをインポート",
           "from collections import defaultdict",
           "",
           "# dにdefaultdict(list)を代入",
           "d = defaultdict(list)",
-          "# d['fruits']に'apple'をappend",
-          "d['fruits'].append('apple')",
-          "# d['fruits']に'banana'をappend",
-          "d['fruits'].append('banana')",
-          "# d['fruits']をprintで出力",
-          "print(d['fruits'])"
+          "# d['くだもの']に'りんご'をappend",
+          "d['くだもの'].append('りんご')",
+          "# d['くだもの']に'バナナ'をappend",
+          "d['くだもの'].append('バナナ')",
+          "# d['くだもの']をprintで出力",
+          "print(d['くだもの'])"
         ],
         "lineHints": [
           null,
@@ -476,12 +476,12 @@ export const pythonData5 = {
             "dict",
             "OrderedDict"
           ],
-          "others": ["defaultdict(list)", "d['fruits'].append('apple')", "d['fruits'].append('banana')", "d['fruits']", "list", "apple", "banana", "print", "("]
+          "others": ["defaultdict(list)", "d['くだもの'].append('りんご')", "d['くだもの'].append('バナナ')", "d['くだもの']", "list", "apple", "banana", "print", "("]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "['apple', 'banana']\n"
+            "expected_output": "['りんご', 'バナナ']\n"
           }
         ]
       },

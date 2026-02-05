@@ -228,17 +228,17 @@ export const sql4Data = {
           },
           {
             "title": "シンプルCASE",
-            "content": "# 等価比較\\\\n\\\\n```sql\\\\nCASE status\\\\n  WHEN 1 THEN 'Active'\\\\n  WHEN 0 THEN 'Inactive'\\\\nEND\\\\n```"
+            "content": "# 等価比較\\\\n\\\\n```sql\\\\nCASE status\\\\n  WHEN 1 THEN 'アクティブ'\\\\n  WHEN 0 THEN '非アクティブ'\\\\nEND\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- SELECTで取得\\\\nSELECT\\\\n  -- CASEで条件分岐\\\\n  CASE WHEN 1 > 0 THEN 'yes' ELSE 'no' END AS result;",
-        "holeyCode": "-- SELECTで取得\\\\n___\\\\n  -- CASEで条件分岐\\\\n  CASE WHEN ___ > 0 THEN 'yes' ELSE 'no' END AS result;",
+        "correctCode": "-- SELECTで取得\\\\nSELECT\\\\n  -- CASEで条件分岐\\\\n  CASE WHEN 1 > 0 THEN 'はい' ELSE 'いいえ' END AS result;",
+        "holeyCode": "-- SELECTで取得\\\\n___\\\\n  -- CASEで条件分岐\\\\n  CASE WHEN ___ > 0 THEN 'はい' ELSE 'いいえ' END AS result;",
         "correctLines": [
           "-- SELECTで取得",
           "SELECT",
           "  -- CASEで条件分岐",
-          "  CASE WHEN 1 > 0 THEN 'yes' ELSE 'no' END AS result;"
+          "  CASE WHEN 1 > 0 THEN 'はい' ELSE 'いいえ' END AS result;"
         ],
         "lineHints": [
           null,
@@ -269,7 +269,7 @@ export const sql4Data = {
         "tutorialSlides": [
           {
             "title": "COALESCE とは？",
-            "content": "# 最初の非NULLを返す\\\\n\\\\n**COALESCE** は、引数の中で最初のNULLでない値を返します。\\\\n\\\\n```sql\\\\nSELECT COALESCE(nickname, name, 'Anonymous') AS display_name\\\\nFROM users;\\\\n```"
+            "content": "# 最初の非NULLを返す\\\\n\\\\n**COALESCE** は、引数の中で最初のNULLでない値を返します。\\\\n\\\\n```sql\\\\nSELECT COALESCE(nickname, name, '匿名') AS display_name\\\\nFROM users;\\\\n```"
           },
           {
             "title": "デフォルト値",
@@ -314,7 +314,7 @@ export const sql4Data = {
           },
           {
             "title": "INSERT の使い方",
-            "content": "# INSERT INTO テーブル VALUES (値)\\\\n\\\\n**コード例：**\\\\n```sql\\\\nINSERT INTO users (name, email)\\\\nVALUES ('Alice', 'alice@example.com');\\\\n```\\\\n\\\\n**このコードは何をしているの？**\\\\n- usersテーブルに\\\\n- 名前がAlice、メールがalice@example.comの人を追加"
+            "content": "# INSERT INTO テーブル VALUES (値)\\\\n\\\\n**コード例：**\\\\n```sql\\\\nINSERT INTO users (name, email)\\\\nVALUES ('アリス', 'alice@example.com');\\\\n```\\\\n\\\\n**このコードは何をしているの？**\\\\n- usersテーブルに\\\\n- 名前がAlice、メールがalice@example.comの人を追加"
           }
         ],
         "initialDisplayMode": "holey",
@@ -367,15 +367,15 @@ export const sql4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- CREATE TABLEでテーブルを作成\\\\nCREATE TABLE test(x TEXT);\\\\n-- INSERTでデータを挿入\\\\nINSERT INTO test VALUES ('old');\\\\n-- UPDATEでデータを更新\\\\nUPDATE test SET x = 'new';\\\\n-- SELECTでデータを取得\\\\nSELECT * FROM test;",
+        "correctCode": "-- CREATE TABLEでテーブルを作成\\\\nCREATE TABLE test(x TEXT);\\\\n-- INSERTでデータを挿入\\\\nINSERT INTO test VALUES ('古い');\\\\n-- UPDATEでデータを更新\\\\nUPDATE test SET x = '新しい';\\\\n-- SELECTでデータを取得\\\\nSELECT * FROM test;",
         "holeyCode": "-- CREATE TABLEでテーブルを作成\\\\nCREATE TABLE test(x ___);\\\\n-- INSERTでデータを挿入\\\\nINSERT INTO test VALUES ('___');\\\\n-- UPDATEでデータを更新\\\\nUPDATE test SET x = '___';\\\\n-- SELECTでデータを取得\\\\nSELECT * FROM ___;",
         "correctLines": [
           "-- CREATE TABLEでテーブルを作成",
           "CREATE TABLE test(x TEXT);",
           "-- INSERTでデータを挿入",
-          "INSERT INTO test VALUES ('old');",
+          "INSERT INTO test VALUES ('古い');",
           "-- UPDATEでデータを更新",
-          "UPDATE test SET x = 'new';",
+          "UPDATE test SET x = '新しい';",
           "-- SELECTでデータを取得",
           "SELECT * FROM test;"
         ],

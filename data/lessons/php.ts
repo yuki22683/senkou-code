@@ -366,15 +366,15 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\n  // scoreに100を入れる\\\n  $score = 100;\\\n  // >で大きいか比較\\\n  if ($score > 80) {\\\n    // メッセージ（'Excellent'）\\\n    echo \"優秀\";\\\n  }\\\n?>",
-        "holeyCode": "___\\\n  // scoreに100を入れる\\\n  $___ = ___;\\\n  // >で大きいか比較\\\n  if ($score ___ > ___) {\\\n    // メッセージ（'Excellent'）\\\n    ___ \"優秀\";\\\n  ___\\\n___",
+        "correctCode": "<?php\\\n  // scoreに100を入れる\\\n  $score = 100;\\\n  // >で大きいか比較\\\n  if ($score > 80) {\\\n    // メッセージ（'優秀'）\\\n    echo \"優秀\";\\\n  }\\\n?>",
+        "holeyCode": "___\\\n  // scoreに100を入れる\\\n  $___ = ___;\\\n  // >で大きいか比較\\\n  if ($score ___ > ___) {\\\n    // メッセージ（'優秀'）\\\n    ___ \"優秀\";\\\n  ___\\\n___",
         "correctLines": [
           "<?php",
           "  // scoreに100を入れる",
           "  $score = 100;",
           "  // >で大きいか比較",
           "  if ($score > 80) {",
-          "    // メッセージ（'Excellent'）",
+          "    // メッセージ（'優秀'）",
           "    echo \"優秀\";",
           "  }",
           "?>"
@@ -419,19 +419,19 @@ export const phpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\n  // ageに18を入れる\\\n  $age = 18;\\\n  // 20以上かを比較する演算子\\\n  if ($age >= 20) {\\\n    // 20歳以上のときのメッセージ（'Adult'）\\\n    echo \"大人\";\\\n  // elseで「そうでなければ」\\\n  } else {\\\n    // それ以外のメッセージ（'Minor'）\\\n    echo \"未成年\";\\\n  }\\\n?>",
-        "holeyCode": "___\\\n  // ageに18を入れる\\\n  $___ = ___;\\\n  // 20以上かを比較する演算子\\\n  if ($age ___ >= ___) {\\\n    // 20歳以上のときのメッセージ（'Adult'）\\\n    ___ \"大人\";\\\n  // elseで「そうでなければ」\\\n  } ___ {\\\n    // それ以外のメッセージ（'Minor'）\\\n    ___ \"未成年\";\\\n  ___\\\n___",
+        "correctCode": "<?php\\\n  // ageに18を入れる\\\n  $age = 18;\\\n  // 20以上かを比較する演算子\\\n  if ($age >= 20) {\\\n    // 20歳以上のときのメッセージ（'大人'）\\\n    echo \"大人\";\\\n  // elseで「そうでなければ」\\\n  } else {\\\n    // それ以外のメッセージ（'未成年'）\\\n    echo \"未成年\";\\\n  }\\\n?>",
+        "holeyCode": "___\\\n  // ageに18を入れる\\\n  $___ = ___;\\\n  // 20以上かを比較する演算子\\\n  if ($age ___ >= ___) {\\\n    // 20歳以上のときのメッセージ（'大人'）\\\n    ___ \"大人\";\\\n  // elseで「そうでなければ」\\\n  } ___ {\\\n    // それ以外のメッセージ（'未成年'）\\\n    ___ \"未成年\";\\\n  ___\\\n___",
         "correctLines": [
           "<?php",
           "  // ageに18を入れる",
           "  $age = 18;",
           "  // 20以上かを比較する演算子",
           "  if ($age >= 20) {",
-          "    // 20歳以上のときのメッセージ（'Adult'）",
+          "    // 20歳以上のときのメッセージ（'大人'）",
           "    echo \"大人\";",
           "  // elseで「そうでなければ」",
           "  } else {",
-          "    // それ以外のメッセージ（'Minor'）",
+          "    // それ以外のメッセージ（'未成年'）",
           "    echo \"未成年\";",
           "  }",
           "?>"
@@ -593,9 +593,9 @@ export const phpData = {
         "holeyCode": "___\\\n  $___ = [___];\\\n  // nameでキーを指定してアクセス\\\n  echo ___['名前'];\\\n___",
         "correctLines": [
           "<?php",
-          "  $user = ['name' => 'Alice'];",
+          "  $user = ['名前' => 'アリス'];",
           "  // nameでキーを指定してアクセス",
-          "  echo $user['name'];",
+          "  echo $user['名前'];",
           "?>"
         ],
         "lineHints": [
@@ -609,7 +609,7 @@ export const phpData = {
           "strings": [
             "name"
           ],
-          "others": ["<?php", "user", "'name' => 'Alice'", "$user", "?>"]
+          "others": ["<?php", "user", "'名前' => 'アリス'", "$user", "?>"]
         },
         "testCases": [
           {

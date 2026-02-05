@@ -22,8 +22,8 @@ export const php2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\n// Catクラスを定義\\\nclass Cat {\\\n    // public $nameを定義\\\n    public $name;\\\n}\\\n// $catにnew Cat()を代入\\\n$cat = new Cat();\\\n// $cat->nameに'Tama'を代入\\\n$cat->name = 'タマ';\\\n// $cat->nameを出力\\\necho $cat->name;\\\n?>",
-        "holeyCode": "___\\\\n// Catクラスを定義\\\\nclass ___ {\\\\n    // public $nameを定義\\\\n    public $___;\\\\n___\\\\n// $catにnew Cat()を代入\\\\n$cat = new ___();\\\\n// $cat->nameに'Tama'を代入\\\\n$cat->name = '___';\\\\n// $cat->nameを出力\\\\necho ___->name;\\\\n___",
+        "correctCode": "<?php\\\n// Catクラスを定義\\\nclass Cat {\\\n    // public $nameを定義\\\n    public $name;\\\n}\\\n// $catにnew Cat()を代入\\\n$cat = new Cat();\\\n// $cat->nameに'タマ'を代入\\\n$cat->name = 'タマ';\\\n// $cat->nameを出力\\\necho $cat->name;\\\n?>",
+        "holeyCode": "___\\\\n// Catクラスを定義\\\\nclass ___ {\\\\n    // public $nameを定義\\\\n    public $___;\\\\n___\\\\n// $catにnew Cat()を代入\\\\n$cat = new ___();\\\\n// $cat->nameに'タマ'を代入\\\\n$cat->name = '___';\\\\n// $cat->nameを出力\\\\necho ___->name;\\\\n___",
         "correctLines": [
           "<?php",
           "// Catクラスを定義",
@@ -146,19 +146,19 @@ export const php2Data = {
           },
           {
             "title": "extends で継承（けいしょう）",
-            "content": "# 親クラスを拡張（かくちょう）\\\\n\\\\n`extends`（エクステンズ）キーワードで親クラスを指定（してい）します。子クラスは親クラスのメソッドを使えます。\\\\n\\\\n**コード例：**\\\\n```php\\\\nclass Animal {\\\\n    public function eat() { echo 'eating'; }\\\\n}\\\\nclass Dog extends Animal { }\\\\n\\\\n$dog = new Dog();\\\\n$dog->eat();  // => eating（親のメソッドが使える！）\\\\n```\\\\n\\\\n**何が起こるの？**\\\\n1. `Animal` クラスに `eat` メソッドがある\\\\n2. `Dog extends Animal` → DogはAnimalを継承\\\\n3. Dogは自分で `eat` を作らなくても、Animalの `eat` が使える\\\\n\\\\n**extends = 「拡張する」** という意味です。"
+            "content": "# 親クラスを拡張（かくちょう）\\\\n\\\\n`extends`（エクステンズ）キーワードで親クラスを指定（してい）します。子クラスは親クラスのメソッドを使えます。\\\\n\\\\n**コード例：**\\\\n```php\\\\nclass Animal {\\\\n    public function eat() { echo '食事中'; }\\\\n}\\\\nclass Dog extends Animal { }\\\\n\\\\n$dog = new Dog();\\\\n$dog->eat();  // => eating（親のメソッドが使える！）\\\\n```\\\\n\\\\n**何が起こるの？**\\\\n1. `Animal` クラスに `eat` メソッドがある\\\\n2. `Dog extends Animal` → DogはAnimalを継承\\\\n3. Dogは自分で `eat` を作らなくても、Animalの `eat` が使える\\\\n\\\\n**extends = 「拡張する」** という意味です。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\n// Vehicleクラスを定義\\\nclass Vehicle {\\\n    // move()メソッドを定義\\\n    public function move() {\\\n        // 'moving'を出力\\\n        echo '移動中';\\\n    }\\\n}\\\n// CarがVehicleを継承\\\nclass Car extends Vehicle { }\\\n// $carにnew Car()を代入\\\n$car = new Car();\\\n// $car->move()を呼び出し\\\n$car->move();\\\n?>",
-        "holeyCode": "___\\\\n// Vehicleクラスを定義\\\\nclass ___ {\\\\n    // move()メソッドを定義\\\\n    public function ___() {\\\\n        // 'moving'を出力\\\\n        echo '___';\\\\n    ___\\\\n___\\\\n// CarがVehicleを継承\\\\nclass ___ extends Vehicle { }\\\\n// $carにnew Car()を代入\\\\n$car = new ___();\\\\n// $car->move()を呼び出し\\\\n$car->___();\\\\n___",
+        "correctCode": "<?php\\\n// Vehicleクラスを定義\\\nclass Vehicle {\\\n    // move()メソッドを定義\\\n    public function move() {\\\n        // '移動中'を出力\\\n        echo '移動中';\\\n    }\\\n}\\\n// CarがVehicleを継承\\\nclass Car extends Vehicle { }\\\n// $carにnew Car()を代入\\\n$car = new Car();\\\n// $car->move()を呼び出し\\\n$car->move();\\\n?>",
+        "holeyCode": "___\\\\n// Vehicleクラスを定義\\\\nclass ___ {\\\\n    // move()メソッドを定義\\\\n    public function ___() {\\\\n        // '移動中'を出力\\\\n        echo '___';\\\\n    ___\\\\n___\\\\n// CarがVehicleを継承\\\\nclass ___ extends Vehicle { }\\\\n// $carにnew Car()を代入\\\\n$car = new ___();\\\\n// $car->move()を呼び出し\\\\n$car->___();\\\\n___",
         "correctLines": [
           "<?php",
           "// Vehicleクラスを定義",
           "class Vehicle {",
           "    // move()メソッドを定義",
           "    public function move() {",
-          "        // 'moving'を出力",
+          "        // '移動中'を出力",
           "        echo '移動中';",
           "    }",
           "}",
@@ -213,12 +213,12 @@ export const php2Data = {
           },
           {
             "title": "interface と implements",
-            "content": "# 約束（やくそく）を守（まも）る\\\\n\\\\n`interface`（インターフェース）で約束を定義（ていぎ）し、`implements`（インプリメンツ）で「その約束を守ります」と宣言（せんげん）します。\\\\n\\\\n**コード例：**\\\\n```php\\\\ninterface Greet {\\\\n    public function hello();\\\\n}\\\\nclass Person implements Greet {\\\\n    public function hello() { echo 'hi'; }\\\\n}\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `interface Greet` → 「helloメソッドを持つこと」という約束を作る\\\\n2. `class Person implements Greet` → Personは「Greetの約束を守る」と宣言\\\\n3. `public function hello()` → 約束通りhelloメソッドを作る（作らないとエラー！）\\\\n\\\\n**ポイント：**\\\\n- interface = 「約束」の定義\\\\n- implements = 「約束を守る」という宣言"
+            "content": "# 約束（やくそく）を守（まも）る\\\\n\\\\n`interface`（インターフェース）で約束を定義（ていぎ）し、`implements`（インプリメンツ）で「その約束を守ります」と宣言（せんげん）します。\\\\n\\\\n**コード例：**\\\\n```php\\\\ninterface Greet {\\\\n    public function hello();\\\\n}\\\\nclass Person implements Greet {\\\\n    public function hello() { echo 'こんにちは'; }\\\\n}\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `interface Greet` → 「helloメソッドを持つこと」という約束を作る\\\\n2. `class Person implements Greet` → Personは「Greetの約束を守る」と宣言\\\\n3. `public function hello()` → 約束通りhelloメソッドを作る（作らないとエラー！）\\\\n\\\\n**ポイント：**\\\\n- interface = 「約束」の定義\\\\n- implements = 「約束を守る」という宣言"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n// Runnerインターフェースを定義\\\\ninterface Runner {\\\\n    // run()メソッドを宣言\\\\n    public function run();\\\\n}\\\\n// RobotがRunnerを実装\\\\nclass Robot implements Runner {\\\\n    // run()メソッドを実装\\\\n    public function run() {\\\\n        // 'running'を出力\\\\n        echo 'running';\\\\n    }\\\\n}\\\\n// $rにnew Robot()を代入\\\\n$r = new Robot();\\\\n// $r->run()を呼び出し\\\\n$r->run();\\\\n?>",
-        "holeyCode": "___\\\\n// Runnerインターフェースを定義\\\\ninterface ___ {\\\\n    // run()メソッドを宣言\\\\n    public function ___();\\\\n___\\\\n// RobotがRunnerを実装\\\\nclass ___ implements Runner {\\\\n    // run()メソッドを実装\\\\n    public function ___() {\\\\n        // 'running'を出力\\\\n        echo '___';\\\\n    ___\\\\n___\\\\n// $rにnew Robot()を代入\\\\n$r = new ___();\\\\n// $r->run()を呼び出し\\\\n$r->___();\\\\n___",
+        "correctCode": "<?php\\\\n// Runnerインターフェースを定義\\\\ninterface Runner {\\\\n    // run()メソッドを宣言\\\\n    public function run();\\\\n}\\\\n// RobotがRunnerを実装\\\\nclass Robot implements Runner {\\\\n    // run()メソッドを実装\\\\n    public function run() {\\\\n        // '実行中'を出力\\\\n        echo '実行中';\\\\n    }\\\\n}\\\\n// $rにnew Robot()を代入\\\\n$r = new Robot();\\\\n// $r->run()を呼び出し\\\\n$r->run();\\\\n?>",
+        "holeyCode": "___\\\\n// Runnerインターフェースを定義\\\\ninterface ___ {\\\\n    // run()メソッドを宣言\\\\n    public function ___();\\\\n___\\\\n// RobotがRunnerを実装\\\\nclass ___ implements Runner {\\\\n    // run()メソッドを実装\\\\n    public function ___() {\\\\n        // '実行中'を出力\\\\n        echo '___';\\\\n    ___\\\\n___\\\\n// $rにnew Robot()を代入\\\\n$r = new ___();\\\\n// $r->run()を呼び出し\\\\n$r->___();\\\\n___",
         "correctLines": [
           "<?php",
           "// Runnerインターフェースを定義",
@@ -230,8 +230,8 @@ export const php2Data = {
           "class Robot implements Runner {",
           "    // run()メソッドを実装",
           "    public function run() {",
-          "        // 'running'を出力",
-          "        echo 'running';",
+          "        // '実行中'を出力",
+          "        echo '実行中';",
           "    }",
           "}",
           "// $rにnew Robot()を代入",
@@ -435,22 +435,22 @@ export const php2Data = {
           },
           {
             "title": "try-catch（トライ・キャッチ）",
-            "content": "# 例外（れいがい）を捕（つか）まえる\\\\n\\\\n`try`（トライ）ブロックでエラーが起きると、`catch`（キャッチ）ブロックが実行（じっこう）されます。\\\\n\\\\n**コード例：**\\\\n```php\\\\ntry {\\\\n    throw new Exception('error');\\\\n} catch (Exception $e) {\\\\n    echo 'caught';\\\\n}\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `try { }` → 「この中でエラーが起きるかも」と囲（かこ）む\\\\n2. `throw new Exception('error')` → わざとエラー（例外）を投げる\\\\n3. `catch (Exception $e)` → 投げられた例外をキャッチ\\\\n4. `echo 'caught'` → キャッチしたら、この処理を実行\\\\n\\\\n**ポイント：**\\\\n- try = 「試（ため）す」\\\\n- catch = 「捕まえる」\\\\n- throw = 「投げる」\\\\n- エラーが起きなければ、catchは実行されない"
+            "content": "# 例外（れいがい）を捕（つか）まえる\\\\n\\\\n`try`（トライ）ブロックでエラーが起きると、`catch`（キャッチ）ブロックが実行（じっこう）されます。\\\\n\\\\n**コード例：**\\\\n```php\\\\ntry {\\\\n    throw new Exception('エラー');\\\\n} catch (Exception $e) {\\\\n    echo 'キャッチ';\\\\n}\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `try { }` → 「この中でエラーが起きるかも」と囲（かこ）む\\\\n2. `throw new Exception('エラー')` → わざとエラー（例外）を投げる\\\\n3. `catch (Exception $e)` → 投げられた例外をキャッチ\\\\n4. `echo 'キャッチ'` → キャッチしたら、この処理を実行\\\\n\\\\n**ポイント：**\\\\n- try = 「試（ため）す」\\\\n- catch = 「捕まえる」\\\\n- throw = 「投げる」\\\\n- エラーが起きなければ、catchは実行されない"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\\n// tryで例外を発生させる可能性があるコードを囲む\\\\ntry {\\\\n    // throwで例外を投げる\\\\n    throw new Exception('oops');\\\\n// catchで例外を捕捉\\\\n} catch (Exception $e) {\\\\n    // echoで出力\\\\n    echo 'caught';\\\\n}\\\\n?>",
+        "correctCode": "<?php\\\\n// tryで例外を発生させる可能性があるコードを囲む\\\\ntry {\\\\n    // throwで例外を投げる\\\\n    throw new Exception('おっと');\\\\n// catchで例外を捕捉\\\\n} catch (Exception $e) {\\\\n    // echoで出力\\\\n    echo 'キャッチ';\\\\n}\\\\n?>",
         "holeyCode": "___\\\\n// tryで例外を発生させる可能性があるコードを囲む\\\\n___ {\\\\n    // throwで例外を投げる\\\\n    throw new Exception('___');\\\\n// catchで例外を捕捉\\\\n} catch (Exception $___) {\\\\n    // echoで出力\\\\n    echo '___';\\\\n___\\\\n___",
         "correctLines": [
           "<?php",
           "// tryで例外を発生させる可能性があるコードを囲む",
           "try {",
           "    // throwで例外を投げる",
-          "    throw new Exception('oops');",
+          "    throw new Exception('おっと');",
           "// catchで例外を捕捉",
           "} catch (Exception $e) {",
           "    // echoで出力",
-          "    echo 'caught';",
+          "    echo 'キャッチ';",
           "}",
           "?>"
         ],
@@ -496,8 +496,8 @@ export const php2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\\n// namespace Appを宣言\\\nnamespace App;\\\n// Helloクラスを定義\\\nclass Hello {\\\n    // say()メソッドを定義\\\n    public function say() {\\\n        // 'hello'を出力\\\n        echo 'こんにちは';\\\n    }\\\n}\\\n// $hにnew Hello()を代入\\\n$h = new Hello();\\\n// $h->say()を呼び出し\\\n$h->say();\\\n?>",
-        "holeyCode": "___\\\\n// namespace Appを宣言\\\\nnamespace ___;\\\\n// Helloクラスを定義\\\\nclass ___ {\\\\n    // say()メソッドを定義\\\\n    public function ___() {\\\\n        // 'hello'を出力\\\\n        echo '___';\\\\n    ___\\\\n___\\\\n// $hにnew Hello()を代入\\\\n$h = new ___();\\\\n// $h->say()を呼び出し\\\\n$h->___();\\\\n___",
+        "correctCode": "<?php\\\n// namespace Appを宣言\\\nnamespace App;\\\n// Helloクラスを定義\\\nclass Hello {\\\n    // say()メソッドを定義\\\n    public function say() {\\\n        // 'こんにちは'を出力\\\n        echo 'こんにちは';\\\n    }\\\n}\\\n// $hにnew Hello()を代入\\\n$h = new Hello();\\\n// $h->say()を呼び出し\\\n$h->say();\\\n?>",
+        "holeyCode": "___\\\\n// namespace Appを宣言\\\\nnamespace ___;\\\\n// Helloクラスを定義\\\\nclass ___ {\\\\n    // say()メソッドを定義\\\\n    public function ___() {\\\\n        // 'こんにちは'を出力\\\\n        echo '___';\\\\n    ___\\\\n___\\\\n// $hにnew Hello()を代入\\\\n$h = new ___();\\\\n// $h->say()を呼び出し\\\\n$h->___();\\\\n___",
         "correctLines": [
           "<?php",
           "// namespace Appを宣言",
@@ -506,7 +506,7 @@ export const php2Data = {
           "class Hello {",
           "    // say()メソッドを定義",
           "    public function say() {",
-          "        // 'hello'を出力",
+          "        // 'こんにちは'を出力",
           "        echo 'こんにちは';",
           "    }",
           "}",
@@ -559,7 +559,7 @@ export const php2Data = {
           },
           {
             "title": "?? の使い方",
-            "content": "# シンプルな null チェック\\\\n\\\\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\\\\n\\\\n**コード例：**\\\\n```php\\\\n$name = null;\\\\necho $name ?? 'Guest'; // Guest\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `$name = null` → $name は空っぽ\\\\n2. `$name ?? 'Guest'` → $name が null かチェック\\\\n3. null だったので → 'Guest' を返す\\\\n\\\\n**もし値があったら？**\\\\n```php\\\\n$name = 'Taro';\\\\necho $name ?? 'Guest'; // Taro（nullじゃないから$nameを使う）\\\\n```\\\\n\\\\n**ポイント：**\\\\n- `??` の左側が null → 右側を返す\\\\n- `??` の左側が null じゃない → 左側をそのまま返す\\\\n- デフォルト値の設定（せってい）にとても便利"
+            "content": "# シンプルな null チェック\\\\n\\\\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\\\\n\\\\n**コード例：**\\\\n```php\\\\n$name = null;\\\\necho $name ?? 'ゲスト'; // Guest\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `$name = null` → $name は空っぽ\\\\n2. `$name ?? 'ゲスト'` → $name が null かチェック\\\\n3. null だったので → 'ゲスト' を返す\\\\n\\\\n**もし値があったら？**\\\\n```php\\\\n$name = '太郎';\\\\necho $name ?? 'ゲスト'; // Taro（nullじゃないから$nameを使う）\\\\n```\\\\n\\\\n**ポイント：**\\\\n- `??` の左側が null → 右側を返す\\\\n- `??` の左側が null じゃない → 左側をそのまま返す\\\\n- デフォルト値の設定（せってい）にとても便利"
           }
         ],
         "initialDisplayMode": "holey",

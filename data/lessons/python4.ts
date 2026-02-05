@@ -14,7 +14,7 @@ export const pythonData4 = {
         "tutorialSlides": [
           {
             "title": "継承（けいしょう）とは？",
-            "content": "# 親の能力を子供が受け継ぐ！\\\\n\\\\n**継承（けいしょう）** とは、既存のクラスの機能を **そのまま引き継いで** 新しいクラスを作ることです。\\\\n\\\\n現実世界で考えてみましょう：\\\\n- **親クラス（Animal）** = 動物の基本的な性質\\\\n- **子クラス（Dog）** = 動物の性質 + 犬特有の性質\\\\n\\\\n犬は「動物」なので、動物の機能は全部持っています。でも、犬だけの特別な機能も追加できます！\\\\n\\\\n**例：** 動物クラスを継承して犬クラスを作ろう！\\\\n\\\\n```python\\\\nclass Animal:\\\\n    def speak(self):\\\\n        print('...')\\\\n\\\\nclass Dog(Animal):  # Animalを継承\\\\n    def speak(self):\\\\n        print('Woof!')  # 犬専用の鳴き声\\\\n```\\\\n\\\\n**ポイント：** `class Dog(Animal):` の `(Animal)` で「Animalを継承する」という意味になります。"
+            "content": "# 親の能力を子供が受け継ぐ！\\\\n\\\\n**継承（けいしょう）** とは、既存のクラスの機能を **そのまま引き継いで** 新しいクラスを作ることです。\\\\n\\\\n現実世界で考えてみましょう：\\\\n- **親クラス（Animal）** = 動物の基本的な性質\\\\n- **子クラス（Dog）** = 動物の性質 + 犬特有の性質\\\\n\\\\n犬は「動物」なので、動物の機能は全部持っています。でも、犬だけの特別な機能も追加できます！\\\\n\\\\n**例：** 動物クラスを継承して犬クラスを作ろう！\\\\n\\\\n```python\\\\nclass Animal:\\\\n    def speak(self):\\\\n        print('...')\\\\n\\\\nclass Dog(Animal):  # Animalを継承\\\\n    def speak(self):\\\\n        print('ワン！')  # 犬専用の鳴き声\\\\n```\\\\n\\\\n**ポイント：** `class Dog(Animal):` の `(Animal)` で「Animalを継承する」という意味になります。"
           }
         ],
         "initialDisplayMode": "holey",
@@ -94,8 +94,8 @@ export const pythonData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 人を表す親クラスを定義\\\nclass Person:\\\n    # 名前を初期設定するメソッドを定義\\\n    def __init__(self, name):\\\n        # self.nameにnameを代入\\\n        self.name = name\\\n\\\n# Personを継承してStudentクラスを定義\\\nclass Student(Person):\\\n    # name（名前）、grade（学年）の順で初期設定\\\n    def __init__(self, name, grade):\\\n        # 親クラスの初期化メソッドを呼び出し\\\n        super().__init__(name)\\\n        # self.gradeにgradeを代入\\\n        self.grade = grade\\\n\\\n# 'Taro'、3年生としてインスタンスを作成\\\ns = Student('太郎', 3)\\\n# インスタンスの情報を表示\\\nprint(f'{s.名前} is in grade {s.grade}')",
-        "holeyCode": "# 人を表す親クラスを定義\\\nclass ___:\\\n    # 名前を初期設定するメソッドを定義\\\n    def ___(self, name):\\\n        # self.nameにnameを代入\\\n        self.___ = name\\\n\\\n# Personを継承してStudentクラスを定義\\\nclass ___(Person):\\\n    # name（名前）、grade（学年）の順で初期設定\\\n    def ___(self, name, grade):\\\n        # 親クラスの初期化メソッドを呼び出し\\\n        super().__init__(___)\\\n        # self.gradeにgradeを代入\\\n        self.___ = grade\\\n\\\n# 'Taro'、3年生としてインスタンスを作成\\\ns = Student('太郎', ___)\\\n# インスタンスの情報を表示\\\n___(f'{s.名前} is in grade {s.grade}')",
+        "correctCode": "# 人を表す親クラスを定義\\\nclass Person:\\\n    # 名前を初期設定するメソッドを定義\\\n    def __init__(self, name):\\\n        # self.nameにnameを代入\\\n        self.name = name\\\n\\\n# Personを継承してStudentクラスを定義\\\nclass Student(Person):\\\n    # name（名前）、grade（学年）の順で初期設定\\\n    def __init__(self, name, grade):\\\n        # 親クラスの初期化メソッドを呼び出し\\\n        super().__init__(name)\\\n        # self.gradeにgradeを代入\\\n        self.grade = grade\\\n\\\n# '太郎'、3年生としてインスタンスを作成\\\ns = Student('太郎', 3)\\\n# インスタンスの情報を表示\\\nprint(f'{s.名前} is in grade {s.grade}')",
+        "holeyCode": "# 人を表す親クラスを定義\\\nclass ___:\\\n    # 名前を初期設定するメソッドを定義\\\n    def ___(self, name):\\\n        # self.nameにnameを代入\\\n        self.___ = name\\\n\\\n# Personを継承してStudentクラスを定義\\\nclass ___(Person):\\\n    # name（名前）、grade（学年）の順で初期設定\\\n    def ___(self, name, grade):\\\n        # 親クラスの初期化メソッドを呼び出し\\\n        super().__init__(___)\\\n        # self.gradeにgradeを代入\\\n        self.___ = grade\\\n\\\n# '太郎'、3年生としてインスタンスを作成\\\ns = Student('太郎', ___)\\\n# インスタンスの情報を表示\\\n___(f'{s.名前} is in grade {s.grade}')",
         "correctLines": [
           "# 人を表す親クラスを定義",
           "class Person:",
@@ -113,7 +113,7 @@ export const pythonData4 = {
           "        # self.gradeにgradeを代入",
           "        self.grade = grade",
           "",
-          "# 'Taro'、3年生としてインスタンスを作成",
+          "# '太郎'、3年生としてインスタンスを作成",
           "s = Student('太郎', 3)",
           "# インスタンスの情報を表示",
           "print(f'{s.名前} is in grade {s.grade}')"
@@ -146,7 +146,7 @@ export const pythonData4 = {
             "parent",
             "self"
           ],
-          "others": ["Person", "__init__(self, name)", "name", "Student(Person)", "__init__(self, name, grade)", "grade", "Student('Taro', 3)", "f'{s.name} is in grade {s.grade}'", "__init__", "Student", "3", "print"]
+          "others": ["Person", "__init__(self, name)", "name", "Student(Person)", "__init__(self, name, grade)", "grade", "Student('太郎', 3)", "f'{s.name} is in grade {s.grade}'", "__init__", "Student", "3", "print"]
         },
         "testCases": [
           {
@@ -240,8 +240,8 @@ export const pythonData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 犬を表すクラスを定義\\\nclass Dog:\\\n    # 生成された数をカウントするクラス変数を定義\\\n    count = 0\\\n    \\\n    # 名前を初期設定するメソッドを定義\\\n    def __init__(self, name):\\\n        # 名前を保存\\\n        self.name = name\\\n        # インスタンスが作られるたびにカウントを増やす\\\n        Dog.count += 1\\\n    \\\n    # クラス全体に関する処理を行うメソッドを定義\\\n    @classmethod\\\n    # カウントされている数を取得するメソッドを定義\\\n    def get_count(cls):\\\n        # クラス変数を参照して返す\\\n        return cls.count\\\n\\\n# 1つ目のインスタンスを作成\\\nd1 = Dog('ポチ')\\\n# 2つ目のインスタンスを作成\\\nd2 = Dog('Hachi')\\\n# クラスメソッドを呼び出して合計数を表示\\\nprint(Dog.get_count())",
-        "holeyCode": "# 犬を表すクラスを定義\\\nclass ___:\\\n    # 生成された数をカウントするクラス変数を定義\\\n    count = ___\\\n    \\\n    # 名前を初期設定するメソッドを定義\\\n    def ___(self, name):\\\n        # 名前を保存\\\n        self.___ = name\\\n        # インスタンスが作られるたびにカウントを増やす\\\n        Dog.count += ___\\\n    \\\n    # クラス全体に関する処理を行うメソッドを定義\\\n    @___\\\n    # カウントされている数を取得するメソッドを定義\\\n    def ___(cls):\\\n        # クラス変数を参照して返す\\\n        return cls.___\\\n\\\n# 1つ目のインスタンスを作成\\\nd___ = Dog('ポチ')\\\n# 2つ目のインスタンスを作成\\\nd___ = Dog('Hachi')\\\n# クラスメソッドを呼び出して合計数を表示\\\n___(Dog.get_count())",
+        "correctCode": "# 犬を表すクラスを定義\\\nclass Dog:\\\n    # 生成された数をカウントするクラス変数を定義\\\n    count = 0\\\n    \\\n    # 名前を初期設定するメソッドを定義\\\n    def __init__(self, name):\\\n        # 名前を保存\\\n        self.name = name\\\n        # インスタンスが作られるたびにカウントを増やす\\\n        Dog.count += 1\\\n    \\\n    # クラス全体に関する処理を行うメソッドを定義\\\n    @classmethod\\\n    # カウントされている数を取得するメソッドを定義\\\n    def get_count(cls):\\\n        # クラス変数を参照して返す\\\n        return cls.count\\\n\\\n# 1つ目のインスタンスを作成\\\nd1 = Dog('ポチ')\\\n# 2つ目のインスタンスを作成\\\nd2 = Dog('ハチ')\\\n# クラスメソッドを呼び出して合計数を表示\\\nprint(Dog.get_count())",
+        "holeyCode": "# 犬を表すクラスを定義\\\nclass ___:\\\n    # 生成された数をカウントするクラス変数を定義\\\n    count = ___\\\n    \\\n    # 名前を初期設定するメソッドを定義\\\n    def ___(self, name):\\\n        # 名前を保存\\\n        self.___ = name\\\n        # インスタンスが作られるたびにカウントを増やす\\\n        Dog.count += ___\\\n    \\\n    # クラス全体に関する処理を行うメソッドを定義\\\n    @___\\\n    # カウントされている数を取得するメソッドを定義\\\n    def ___(cls):\\\n        # クラス変数を参照して返す\\\n        return cls.___\\\n\\\n# 1つ目のインスタンスを作成\\\nd___ = Dog('ポチ')\\\n# 2つ目のインスタンスを作成\\\nd___ = Dog('ハチ')\\\n# クラスメソッドを呼び出して合計数を表示\\\n___(Dog.get_count())",
         "correctLines": [
           "# 犬を表すクラスを定義",
           "class Dog:",
@@ -265,7 +265,7 @@ export const pythonData4 = {
           "# 1つ目のインスタンスを作成",
           "d1 = Dog('ポチ')",
           "# 2つ目のインスタンスを作成",
-          "d2 = Dog('Hachi')",
+          "d2 = Dog('ハチ')",
           "# クラスメソッドを呼び出して合計数を表示",
           "print(Dog.get_count())"
         ],
@@ -302,7 +302,7 @@ export const pythonData4 = {
             "@staticmethod",
             "@property"
           ],
-          "others": ["Dog", "0", "__init__(self, name)", "name", "Dog.count += 1", "get_count(cls)", "cls.count", "Dog('Pochi')", "Dog('Hachi')", "Dog.get_count(", "__init__", "1", "classmethod", "get_count", "count", "2", "print"]
+          "others": ["Dog", "0", "__init__(self, name)", "name", "Dog.count += 1", "get_count(cls)", "cls.count", "Dog('ポチ')", "Dog('ハチ')", "Dog.get_count(", "__init__", "1", "classmethod", "get_count", "count", "2", "print"]
         },
         "testCases": [
           {
@@ -382,7 +382,7 @@ export const pythonData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 抽象クラス関連の機能を読み込み\\\\nfrom abc import ABC, abstractmethod\\\\n\\\\n# 動物を表す抽象クラスを定義\\\\nclass Animal(ABC):\\\\n    # 子クラスで実装必須のメソッドを定義\\\\n    @abstractmethod\\\\n    # 鳴き声を出すメソッドの枠組みを定義\\\\n    def speak(self):\\\\n        # 抽象メソッドなので処理はなし\\\\n        pass\\\\n\\\\n# 抽象クラスを継承して実装クラスを作成\\\\nclass Cat(Animal):\\\\n    # speakメソッドを具体的に実装\\\\n    def speak(self):\\\\n        # 鳴き声を返す\\\\n        return 'Meow'\\\\n\\\\n# インスタンスを作成\\\\ncat = Cat()\\\\n# 実装したメソッドを実行して表示\\\\nprint(cat.speak())",
+        "correctCode": "# 抽象クラス関連の機能を読み込み\\\\nfrom abc import ABC, abstractmethod\\\\n\\\\n# 動物を表す抽象クラスを定義\\\\nclass Animal(ABC):\\\\n    # 子クラスで実装必須のメソッドを定義\\\\n    @abstractmethod\\\\n    # 鳴き声を出すメソッドの枠組みを定義\\\\n    def speak(self):\\\\n        # 抽象メソッドなので処理はなし\\\\n        pass\\\\n\\\\n# 抽象クラスを継承して実装クラスを作成\\\\nclass Cat(Animal):\\\\n    # speakメソッドを具体的に実装\\\\n    def speak(self):\\\\n        # 鳴き声を返す\\\\n        return 'ニャー'\\\\n\\\\n# インスタンスを作成\\\\ncat = Cat()\\\\n# 実装したメソッドを実行して表示\\\\nprint(cat.speak())",
         "holeyCode": "# 抽象クラス関連の機能を読み込み\\\\nfrom abc import ABC, ___\\\\n\\\\n# 動物を表す抽象クラスを定義\\\\nclass ___(ABC):\\\\n    # 子クラスで実装必須のメソッドを定義\\\\n    @___\\\\n    # 鳴き声を出すメソッドの枠組みを定義\\\\n    def ___(self):\\\\n        # 抽象メソッドなので処理はなし\\\\n        ___\\\\n\\\\n# 抽象クラスを継承して実装クラスを作成\\\\nclass ___(Animal):\\\\n    # speakメソッドを具体的に実装\\\\n    def ___(self):\\\\n        # 鳴き声を返す\\\\n        return '___'\\\\n\\\\n# インスタンスを作成\\\\ncat = ___()\\\\n# 実装したメソッドを実行して表示\\\\n___(cat.speak())",
         "correctLines": [
           "# 抽象クラス関連の機能を読み込み",
@@ -402,7 +402,7 @@ export const pythonData4 = {
           "    # speakメソッドを具体的に実装",
           "    def speak(self):",
           "        # 鳴き声を返す",
-          "        return 'Meow'",
+          "        return 'ニャー'",
           "",
           "# インスタンスを作成",
           "cat = Cat()",
@@ -440,7 +440,7 @@ export const pythonData4 = {
             "@property",
             "@staticmethod"
           ],
-          "others": ["ABC, abstractmethod", "Animal(ABC)", "speak(self)", "pass", "Cat(Animal)", "'Meow'", "Cat()", "cat.speak(", "abstractmethod", "Animal", "speak", "Cat", "Meow", "print"]
+          "others": ["ABC, abstractmethod", "Animal(ABC)", "speak(self)", "pass", "Cat(Animal)", "'ニャー'", "Cat()", "cat.speak(", "abstractmethod", "Animal", "speak", "Cat", "Meow", "print"]
         },
         "testCases": [
           {
@@ -509,7 +509,7 @@ export const pythonData4 = {
             "__repr__",
             "__init__"
           ],
-          "others": ["Book", "__init__(self, title, author)", "title", "author", "f'{self.title} by {self.author}'", "Book('Python Guide', 'Taro')", "book", "Taro", "print", "太郎"]
+          "others": ["Book", "__init__(self, title, author)", "title", "author", "f'{self.title} by {self.author}'", "Book('Python Guide', '太郎')", "book", "Taro", "print", "太郎"]
         },
         "testCases": [
           {
@@ -619,7 +619,7 @@ export const pythonData4 = {
           "        return len(self.members)",
           "",
           "# Teamインスタンスを作成（Alice, Bob, Charlie）",
-          "team = Team(['Alice', 'Bob', 'Charlie'])",
+          "team = Team(['アリス', 'ボブ', 'チャーリー'])",
           "# len(team)を表示",
           "print(len(team))"
         ],
@@ -647,7 +647,7 @@ export const pythonData4 = {
             "__size__",
             "__count__"
           ],
-          "others": ["Team", "__init__(self, members)", "members", "len(self.members)", "Team(['Alice', 'Bob', 'Charlie'])", "len(team", "__init__", "Charlie", "print", ","]
+          "others": ["Team", "__init__(self, members)", "members", "len(self.members)", "Team(['アリス', 'ボブ', 'チャーリー'])", "len(team", "__init__", "Charlie", "print", ","]
         },
         "testCases": [
           {
@@ -712,12 +712,12 @@ export const pythonData4 = {
             "@property",
             "@classmethod"
           ],
-          "others": ["dataclass", "Person", "str", "int", "Person('Taro', 25)", "p", "25", "print"]
+          "others": ["dataclass", "Person", "str", "int", "Person('太郎', 25)", "p", "25", "print"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Person(name='Taro', age=25)\\\\n"
+            "expected_output": "Person(name='太郎', age=25)\\\\n"
           }
         ]
       }

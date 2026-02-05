@@ -177,11 +177,11 @@ export const ruby2Data = {
         "tutorialSlides": [
           {
             "title": "シンボルとは？",
-            "content": "# 軽量（けいりょう）な名前\\\\n\\\\n**シンボル** は `:名前` のように **コロン（:）** をつけて表す特別（とくべつ）な名前です。\\\\n\\\\n**身近（みぢか）な例（れい）：**\\\\n- ロッカーの「番号札（ばんごうふだ）」のようなもの\\\\n- 「123番」という札は、何度使っても同じ「123番」\\\\n\\\\n**文字列との違（ちが）い：**\\\\n- 文字列 `'name'` → 使うたびに新しく作られる\\\\n- シンボル `:name` → 1つだけ存在（そんざい）し、使い回（まわ）される\\\\n\\\\nシンボルは **変わらない名前** として使うのに最適（さいてき）です。"
+            "content": "# 軽量（けいりょう）な名前\\\\n\\\\n**シンボル** は `:名前` のように **コロン（:）** をつけて表す特別（とくべつ）な名前です。\\\\n\\\\n**身近（みぢか）な例（れい）：**\\\\n- ロッカーの「番号札（ばんごうふだ）」のようなもの\\\\n- 「123番」という札は、何度使っても同じ「123番」\\\\n\\\\n**文字列との違（ちが）い：**\\\\n- 文字列 `'名前'` → 使うたびに新しく作られる\\\\n- シンボル `:name` → 1つだけ存在（そんざい）し、使い回（まわ）される\\\\n\\\\nシンボルは **変わらない名前** として使うのに最適（さいてき）です。"
           },
           {
             "title": "シンボルの使い方",
-            "content": "# ハッシュのキーに最適（さいてき）\\\\n\\\\nシンボルは同じ名前なら同じものを指すため、コンピュータのメモリ効率（こうりつ）が良いです。\\\\n\\\\n**コード例：**\\\\n```ruby\\\\nperson = { name: 'Taro', age: 20 }\\\\nputs person[:name]  # => Taro\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `{ name: 'Taro' }` → シンボル `:name` をキーにして「Taro」を保存\\\\n2. `person[:name]` → シンボル `:name` で値を取り出す\\\\n\\\\n**短い書き方：**\\\\n- `{ :name => 'Taro' }` と `{ name: 'Taro' }` は同じ意味\\\\n- 後者（こうしゃ）の方がRubyらしい書き方です"
+            "content": "# ハッシュのキーに最適（さいてき）\\\\n\\\\nシンボルは同じ名前なら同じものを指すため、コンピュータのメモリ効率（こうりつ）が良いです。\\\\n\\\\n**コード例：**\\\\n```ruby\\\\nperson = { name: '太郎', age: 20 }\\\\nputs person[:name]  # => Taro\\\\n```\\\\n\\\\n**何をしているの？**\\\\n1. `{ name: '太郎' }` → シンボル `:name` をキーにして「Taro」を保存\\\\n2. `person[:name]` → シンボル `:name` で値を取り出す\\\\n\\\\n**短い書き方：**\\\\n- `{ :name => '太郎' }` と `{ name: '太郎' }` は同じ意味\\\\n- 後者（こうしゃ）の方がRubyらしい書き方です"
           }
         ],
         "initialDisplayMode": "holey",
@@ -299,7 +299,7 @@ export const ruby2Data = {
           },
           {
             "title": "アクセサの種類（しゅるい）",
-            "content": "# 3種類のアクセサ\\\\n\\\\n**用途（ようと）に合わせて選べます：**\\\\n\\\\n| 種類 | 読み取り | 書き込み | 説明 |\\\\n|------|---------|---------|------|\\\\n| `attr_reader` | できる | できない | データを見るだけ |\\\\n| `attr_writer` | できない | できる | データを書くだけ |\\\\n| `attr_accessor` | できる | できる | 読み書き両方OK |\\\\n\\\\n**コード例：**\\\\n```ruby\\\\nclass Person\\\\n  attr_accessor :name\\\\nend\\\\n\\\\nperson = Person.new\\\\nperson.name = 'Taro'  # 書き込み\\\\nputs person.name      # 読み取り → Taro\\\\n```\\\\n\\\\n**手動（しゅどう）で書くと長くなるコードを、一行で済（す）ませられます。**"
+            "content": "# 3種類のアクセサ\\\\n\\\\n**用途（ようと）に合わせて選べます：**\\\\n\\\\n| 種類 | 読み取り | 書き込み | 説明 |\\\\n|------|---------|---------|------|\\\\n| `attr_reader` | できる | できない | データを見るだけ |\\\\n| `attr_writer` | できない | できる | データを書くだけ |\\\\n| `attr_accessor` | できる | できる | 読み書き両方OK |\\\\n\\\\n**コード例：**\\\\n```ruby\\\\nclass Person\\\\n  attr_accessor :name\\\\nend\\\\n\\\\nperson = Person.new\\\\nperson.name = '太郎'  # 書き込み\\\\nputs person.name      # 読み取り → Taro\\\\n```\\\\n\\\\n**手動（しゅどう）で書くと長くなるコードを、一行で済（す）ませられます。**"
           }
         ],
         "initialDisplayMode": "holey",
@@ -429,11 +429,11 @@ export const ruby2Data = {
           },
           {
             "title": "include でミックスイン",
-            "content": "# モジュールを取り込む\\\\n\\\\nクラス内で `include モジュール名` と書くと、そのモジュールのメソッドが使えるようになります。これを **ミックスイン** と呼びます。\\\\n\\\\n**コード例：**\\\\n```ruby\\\\nmodule Greet\\\\n  def hello\\\\n    puts 'hello'\\\\n  end\\\\nend\\\\n\\\\nclass Person\\\\n  include Greet\\\\nend\\\\n\\\\nperson = Person.new\\\\nperson.hello  # => hello\\\\n```\\\\n\\\\n**何が起こるの？**\\\\n1. `Greet` モジュールに `hello` メソッドがある\\\\n2. `include Greet` → PersonクラスにGreetを取り込む\\\\n3. Personのインスタンスで `hello` が使えるようになる\\\\n\\\\n**継承は1つのクラスからだけ**ですが、**モジュールは複数（ふくすう）取り込める**ので柔軟（じゅうなん）です。"
+            "content": "# モジュールを取り込む\\\\n\\\\nクラス内で `include モジュール名` と書くと、そのモジュールのメソッドが使えるようになります。これを **ミックスイン** と呼びます。\\\\n\\\\n**コード例：**\\\\n```ruby\\\\nmodule Greet\\\\n  def hello\\\\n    puts 'こんにちは'\\\\n  end\\\\nend\\\\n\\\\nclass Person\\\\n  include Greet\\\\nend\\\\n\\\\nperson = Person.new\\\\nperson.hello  # => hello\\\\n```\\\\n\\\\n**何が起こるの？**\\\\n1. `Greet` モジュールに `hello` メソッドがある\\\\n2. `include Greet` → PersonクラスにGreetを取り込む\\\\n3. Personのインスタンスで `hello` が使えるようになる\\\\n\\\\n**継承は1つのクラスからだけ**ですが、**モジュールは複数（ふくすう）取り込める**ので柔軟（じゅうなん）です。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# moduleでモジュールを定義\\\\nmodule Speakable\\\\n  # speakを定義\\\\n  def speak\\\\n    # speakingを出力\\\\n    puts 'speaking'\\\\n  # endで終了\\\\n  end\\\\n# endで終了\\\\nend\\\\n# classでクラスを定義\\\\nclass Robot\\\\n  # includeでモジュールを取り込み\\\\n  include Speakable\\\\n# endで終了\\\\nend\\\\n# robotにインスタンスを代入\\\\nrobot = Robot.new\\\\n# speakを呼び出し\\\\nrobot.speak",
+        "correctCode": "# moduleでモジュールを定義\\\\nmodule Speakable\\\\n  # speakを定義\\\\n  def speak\\\\n    # speakingを出力\\\\n    puts '話し中'\\\\n  # endで終了\\\\n  end\\\\n# endで終了\\\\nend\\\\n# classでクラスを定義\\\\nclass Robot\\\\n  # includeでモジュールを取り込み\\\\n  include Speakable\\\\n# endで終了\\\\nend\\\\n# robotにインスタンスを代入\\\\nrobot = Robot.new\\\\n# speakを呼び出し\\\\nrobot.speak",
         "holeyCode": "# moduleでモジュールを定義\\\\nmodule ___\\\\n  # speakを定義\\\\n  def ___\\\\n    # speakingを出力\\\\n    puts '___'\\\\n  # endで終了\\\\n  ___\\\\n# endで終了\\\\n___\\\\n# classでクラスを定義\\\\nclass ___\\\\n  # includeでモジュールを取り込み\\\\n  include ___\\\\n# endで終了\\\\n___\\\\n# robotにインスタンスを代入\\\\nrobot = Robot.___\\\\n# speakを呼び出し\\\\nrobot.___",
         "correctLines": [
           "# moduleでモジュールを定義",
@@ -441,7 +441,7 @@ export const ruby2Data = {
           "  # speakを定義",
           "  def speak",
           "    # speakingを出力",
-          "    puts 'speaking'",
+          "    puts '話し中'",
           "  # endで終了",
           "  end",
           "# endで終了",
@@ -504,21 +504,21 @@ export const ruby2Data = {
           },
           {
             "title": "begin-rescue（ビギン・レスキュー）",
-            "content": "# エラーを捕（つか）まえる\\\\n\\\\n`begin` ブロックでエラーが起きると、`rescue` ブロックが実行（じっこう）されます。\\\\n\\\\n**コード例：**\\\\n```ruby\\\\nbegin\\\\n  1 / 0  # ゼロで割るとエラー！\\\\nrescue => e\\\\n  puts 'Error!'\\\\nend\\\\n```\\\\n\\\\n**何が起こるの？**\\\\n1. `begin` の中の処理を試（ため）す\\\\n2. `1 / 0` → ゼロで割れない！エラー発生（はっせい）！\\\\n3. `rescue` に飛（と）ぶ（エラーをキャッチ）\\\\n4. 「Error!」と表示される\\\\n5. プログラムは止まらずに続く\\\\n\\\\n**`=> e` とは？**\\\\n- エラーの情報（じょうほう）を変数 `e` に入れる\\\\n- `e.message` でエラーメッセージを見られる"
+            "content": "# エラーを捕（つか）まえる\\\\n\\\\n`begin` ブロックでエラーが起きると、`rescue` ブロックが実行（じっこう）されます。\\\\n\\\\n**コード例：**\\\\n```ruby\\\\nbegin\\\\n  1 / 0  # ゼロで割るとエラー！\\\\nrescue => e\\\\n  puts 'エラー！'\\\\nend\\\\n```\\\\n\\\\n**何が起こるの？**\\\\n1. `begin` の中の処理を試（ため）す\\\\n2. `1 / 0` → ゼロで割れない！エラー発生（はっせい）！\\\\n3. `rescue` に飛（と）ぶ（エラーをキャッチ）\\\\n4. 「Error!」と表示される\\\\n5. プログラムは止まらずに続く\\\\n\\\\n**`=> e` とは？**\\\\n- エラーの情報（じょうほう）を変数 `e` に入れる\\\\n- `e.message` でエラーメッセージを見られる"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# beginで開始\\\\nbegin\\\\n  # raiseでエラーを発生\\\\n  raise 'oops'\\\\n# rescueで例外を捕捉\\\\nrescue => e\\\\n  # caughtを出力\\\\n  puts 'caught'\\\\n# endで終了\\\\nend",
+        "correctCode": "# beginで開始\\\\nbegin\\\\n  # raiseでエラーを発生\\\\n  raise 'おっと'\\\\n# rescueで例外を捕捉\\\\nrescue => e\\\\n  # caughtを出力\\\\n  puts 'キャッチ'\\\\n# endで終了\\\\nend",
         "holeyCode": "# beginで開始\\\\n___\\\\n  # raiseでエラーを発生\\\\n  raise '___'\\\\n# rescueで例外を捕捉\\\\nrescue => ___\\\\n  # caughtを出力\\\\n  puts '___'\\\\n# endで終了\\\\n___",
         "correctLines": [
           "# beginで開始",
           "begin",
           "  # raiseでエラーを発生",
-          "  raise 'oops'",
+          "  raise 'おっと'",
           "# rescueで例外を捕捉",
           "rescue => e",
           "  # caughtを出力",
-          "  puts 'caught'",
+          "  puts 'キャッチ'",
           "# endで終了",
           "end"
         ],

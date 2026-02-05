@@ -160,7 +160,7 @@ export const sqlData = {
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標\\\\n\\\\n名前 `'Taro'` と年齢 `10` を、それぞれ `name`（名前）と `age`（年齢）という名前をつけて表示しましょう。\\\\n\\\\n**入力するコードのヒント：**\\\\n```sql\\\\nSELECT 'Taro' AS name, 10 AS age;\\\\n```"
+            "content": "# 目標\\\\n\\\\n名前 `'太郎'` と年齢 `10` を、それぞれ `name`（名前）と `age`（年齢）という名前をつけて表示しましょう。\\\\n\\\\n**入力するコードのヒント：**\\\\n```sql\\\\nSELECT '太郎' AS name, 10 AS age;\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",

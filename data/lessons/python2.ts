@@ -252,11 +252,11 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 文字列を用意（'Programming'）\\\\nword = 'Programming'\\\\n# 最初の4文字（0から4の手前まで）を取り出す\\\\nprint(word[0:4])",
-        "holeyCode": "# 文字列を用意（'Programming'）\\\\nword = '___'\\\\n# 最初の4文字（0から4の手前まで）を取り出す\\\\n___(word[0:4])",
+        "correctCode": "# 文字列を用意（'プログラミング'）\\\\nword = 'プログラミング'\\\\n# 最初の4文字（0から4の手前まで）を取り出す\\\\nprint(word[0:4])",
+        "holeyCode": "# 文字列を用意（'プログラミング'）\\\\nword = '___'\\\\n# 最初の4文字（0から4の手前まで）を取り出す\\\\n___(word[0:4])",
         "correctLines": [
-          "# 文字列を用意（'Programming'）",
-          "word = 'Programming'",
+          "# 文字列を用意（'プログラミング'）",
+          "word = 'プログラミング'",
           "# 最初の4文字（0から4の手前まで）を取り出す",
           "print(word[0:4])"
         ],
@@ -532,7 +532,7 @@ export const pythonData2 = {
           },
           {
             "title": "条件付き内包表記の書き方",
-            "content": "# [式 for 変数 in イテラブル if 条件]\\\\n\\\\n条件を **満たす要素だけ** がリストに入ります。\\\\n\\\\n**例：** 短い単語だけを集めよう！\\\\n\\\\n```python\\\\nwords = ['apple', 'banana', 'cherry']\\\\n# 5文字以下の単語だけ\\\\nshort = [w for w in words if len(w) <= 5]\\\\nprint(short)  # => ['apple']\\\\n```\\\\n\\\\n**何をしているか：**\\\\n1. `words` から単語を順番に取り出す\\\\n2. `len(w) <= 5` で文字数が5以下かチェック\\\\n3. 条件に合う 'apple'（5文字）だけがリストに入る\\\\n4. 'banana'（6文字）と 'cherry'（6文字）は含まれない\\\\n\\\\n**ポイント：** `if` は最後に書きます！"
+            "content": "# [式 for 変数 in イテラブル if 条件]\\\\n\\\\n条件を **満たす要素だけ** がリストに入ります。\\\\n\\\\n**例：** 短い単語だけを集めよう！\\\\n\\\\n```python\\\\nwords = ['りんご', 'バナナ', 'さくらんぼ']\\\\n# 5文字以下の単語だけ\\\\nshort = [w for w in words if len(w) <= 5]\\\\nprint(short)  # => ['りんご']\\\\n```\\\\n\\\\n**何をしているか：**\\\\n1. `words` から単語を順番に取り出す\\\\n2. `len(w) <= 5` で文字数が5以下かチェック\\\\n3. 条件に合う 'りんご'（5文字）だけがリストに入る\\\\n4. 'バナナ'（6文字）と 'さくらんぼ'（6文字）は含まれない\\\\n\\\\n**ポイント：** `if` は最後に書きます！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -579,8 +579,8 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# エラーが起きる可能性のある処理\\\ntry:\\\n    # 文字列'abc'を数値に変換（エラー発生）\\\n    num = int('あいう')\\\n# 例外をキャッチするキーワード\\\nexcept:\\\n    # エラーメッセージ（'Error'）\\\n    print('エラー')",
-        "holeyCode": "# エラーが起きる可能性のある処理\\\n___:\\\n    # 文字列'abc'を数値に変換（エラー発生）\\\n    num = int('___')\\\n# 例外をキャッチするキーワード\\\n___:\\\n    # エラーメッセージ（'Error'）\\\n    ___('エラー')",
+        "correctCode": "# エラーが起きる可能性のある処理\\\ntry:\\\n    # 文字列'abc'を数値に変換（エラー発生）\\\n    num = int('あいう')\\\n# 例外をキャッチするキーワード\\\nexcept:\\\n    # エラーメッセージ（'エラー'）\\\n    print('エラー')",
+        "holeyCode": "# エラーが起きる可能性のある処理\\\n___:\\\n    # 文字列'abc'を数値に変換（エラー発生）\\\n    num = int('___')\\\n# 例外をキャッチするキーワード\\\n___:\\\n    # エラーメッセージ（'エラー'）\\\n    ___('エラー')",
         "correctLines": [
           "# エラーが起きる可能性のある処理",
           "try:",
@@ -588,7 +588,7 @@ export const pythonData2 = {
           "    num = int('あいう')",
           "# 例外をキャッチするキーワード",
           "except:",
-          "    # エラーメッセージ（'Error'）",
+          "    # エラーメッセージ（'エラー'）",
           "    print('エラー')"
         ],
         "lineHints": [
@@ -632,14 +632,14 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Catクラスを定義\\\nclass Cat:\\\n    # メソッドの第一引数はself\\\n    def meow(self):\\\n        # メッセージ（'Meow!'）\\\n        print('ニャー！')\\\n\\\n# インスタンスを作って呼び出す\\\ncat = Cat()\\\n# meowメソッドを呼び出す\\\ncat.meow()",
-        "holeyCode": "# Catクラスを定義\\\nclass ___:\\\n    # メソッドの第一引数はself\\\n    def ___(self):\\\n        # メッセージ（'Meow!'）\\\n        ___('ニャー！')\\\n\\\n# インスタンスを作って呼び出す\\\ncat = ___()\\\n# meowメソッドを呼び出す\\\ncat.___()",
+        "correctCode": "# Catクラスを定義\\\nclass Cat:\\\n    # メソッドの第一引数はself\\\n    def meow(self):\\\n        # メッセージ（'ニャー！'）\\\n        print('ニャー！')\\\n\\\n# インスタンスを作って呼び出す\\\ncat = Cat()\\\n# meowメソッドを呼び出す\\\ncat.meow()",
+        "holeyCode": "# Catクラスを定義\\\nclass ___:\\\n    # メソッドの第一引数はself\\\n    def ___(self):\\\n        # メッセージ（'ニャー！'）\\\n        ___('ニャー！')\\\n\\\n# インスタンスを作って呼び出す\\\ncat = ___()\\\n# meowメソッドを呼び出す\\\ncat.___()",
         "correctLines": [
           "# Catクラスを定義",
           "class Cat:",
           "    # メソッドの第一引数はself",
           "    def meow(self):",
-          "        # メッセージ（'Meow!'）",
+          "        # メッセージ（'ニャー！'）",
           "        print('ニャー！')",
           "",
           "# インスタンスを作って呼び出す",

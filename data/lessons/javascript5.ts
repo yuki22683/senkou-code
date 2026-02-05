@@ -14,7 +14,7 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "正規表現（せいきひょうげん）リテラルとは？",
-            "content": "# 文字のパターンを定義する\\\\n\\\\n**正規表現** は、文字列の「パターン」を表現する方法です。\\\\n\\\\n**身近なたとえ：**\\\\n「『あ』で始まる言葉を探して」とお願いするイメージです。正規表現を使えば、もっと複雑なパターンも探せます。\\\\n\\\\n**書き方：**\\\\nパターンを `/` で囲みます。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst pattern = /hello/;\\\\n// 'hello world' に 'hello' が含まれる？\\\\nconsole.log(pattern.test('hello world'));\\\\n```\\\\n**実行結果：**\\\\n```\\\\ntrue\\\\n```\\\\n\\\\n**フラグについて：**\\\\n- `/pattern/i` の `i` は大文字小文字を区別しない\\\\n- `/pattern/g` の `g` は全てを検索（global）"
+            "content": "# 文字のパターンを定義する\\\\n\\\\n**正規表現** は、文字列の「パターン」を表現する方法です。\\\\n\\\\n**身近なたとえ：**\\\\n「『あ』で始まる言葉を探して」とお願いするイメージです。正規表現を使えば、もっと複雑なパターンも探せます。\\\\n\\\\n**書き方：**\\\\nパターンを `/` で囲みます。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst pattern = /hello/;\\\\n// 'こんにちは世界' に 'こんにちは' が含まれる？\\\\nconsole.log(pattern.test('こんにちは世界'));\\\\n```\\\\n**実行結果：**\\\\n```\\\\ntrue\\\\n```\\\\n\\\\n**フラグについて：**\\\\n- `/pattern/i` の `i` は大文字小文字を区別しない\\\\n- `/pattern/g` の `g` は全てを検索（global）"
           }
         ],
         "initialDisplayMode": "holey",
@@ -150,7 +150,7 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "replace()メソッドとは？",
-            "content": "# パターンに合う部分を置き換える\\\\n\\\\n**replace()** は、パターンに合った部分を別の文字列に置き換えます。\\\\n\\\\n**身近なたとえ：**\\\\n「この文章の『りんご』を全部『みかん』に変えて」とお願いするイメージです。\\\\n\\\\n**書き方：**\\\\n```\\\\n文字列.replace(/パターン/g, '置き換え後')\\\\n```\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst text = 'hello world';\\\\nconst result = text.replace(/world/, 'JavaScript');\\\\nconsole.log(result);\\\\n```\\\\n**実行結果：**\\\\n```\\\\nhello JavaScript\\\\n```\\\\n\\\\n**便利なパターン例：**\\\\n- `\\s+` = 1つ以上の空白文字（スペース、タブ、改行）\\\\n- `\\d+` = 1桁以上の数字"
+            "content": "# パターンに合う部分を置き換える\\\\n\\\\n**replace()** は、パターンに合った部分を別の文字列に置き換えます。\\\\n\\\\n**身近なたとえ：**\\\\n「この文章の『りんご』を全部『みかん』に変えて」とお願いするイメージです。\\\\n\\\\n**書き方：**\\\\n```\\\\n文字列.replace(/パターン/g, '置き換え後')\\\\n```\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst text = 'こんにちは世界';\\\\nconst result = text.replace(/world/, 'JavaScript');\\\\nconsole.log(result);\\\\n```\\\\n**実行結果：**\\\\n```\\\\nhello JavaScript\\\\n```\\\\n\\\\n**便利なパターン例：**\\\\n- `\\s+` = 1つ以上の空白文字（スペース、タブ、改行）\\\\n- `\\d+` = 1桁以上の数字"
           }
         ],
         "initialDisplayMode": "holey",
@@ -194,7 +194,7 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "try-catch文とは？",
-            "content": "# エラーを捕まえて対処する\\\\n\\\\n**try-catch** は、エラーが起きてもプログラムが止まらないようにする仕組みです。\\\\n\\\\n**身近なたとえ：**\\\\nサッカーのゴールキーパーを想像してください。シュートが来たら（エラーが起きたら）キャッチする！\\\\n\\\\n**仕組み：**\\\\n- `try` ... 「試してみる」処理を書く\\\\n- `catch` ... エラーが起きたときの処理を書く\\\\n\\\\n**コード例：**\\\\n```javascript\\\\ntry {\\\\n  throw new Error('Something went wrong');\\\\n} catch (e) {\\\\n  console.log(e.message);  // エラーメッセージを表示\\\\n}\\\\n```\\\\n\\\\n**ポイント：**\\\\nエラーが起きても catch で処理すれば、プログラムは続行できます！"
+            "content": "# エラーを捕まえて対処する\\\\n\\\\n**try-catch** は、エラーが起きてもプログラムが止まらないようにする仕組みです。\\\\n\\\\n**身近なたとえ：**\\\\nサッカーのゴールキーパーを想像してください。シュートが来たら（エラーが起きたら）キャッチする！\\\\n\\\\n**仕組み：**\\\\n- `try` ... 「試してみる」処理を書く\\\\n- `catch` ... エラーが起きたときの処理を書く\\\\n\\\\n**コード例：**\\\\n```javascript\\\\ntry {\\\\n  throw new Error('エラーが発生しました');\\\\n} catch (e) {\\\\n  console.log(e.message);  // エラーメッセージを表示\\\\n}\\\\n```\\\\n\\\\n**ポイント：**\\\\nエラーが起きても catch で処理すれば、プログラムは続行できます！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -251,22 +251,22 @@ export const javascriptData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// process関数を定義\\\nfunction process() {\\\n  // try ブロック\\\n  try {\\\n    console.log('Processing...');\\\n    // throw new Error('Error!')でエラーを投げる\\\n    throw new Error('エラー！');\\\n  } catch (e) {\\\n    // エラーメッセージを出力\\\n    console.log('Caught:', e.message);\\\n  // finally で常に実行されるブロック\\\n  } finally {\\\n    console.log('Cleanup done');\\\n  }\\\n}\\\n// 関数を呼び出し\\\nprocess();",
-        "holeyCode": "// process関数を定義\\\n___ process() {\\\n  // try ブロック\\\n  ___ {\\\n    console.log('Processing...');\\\n    // throw new Error('Error!')でエラーを投げる\\\n    ___ new Error('エラー！');\\\n  } catch (e) {\\\n    // エラーメッセージを出力\\\n    console.log('Caught:', e.___);\\\n  // finally で常に実行されるブロック\\\n  } ___ {\\\n    console.log('Cleanup done');\\\n  }\\\n}\\\n// 関数を呼び出し\\\n___();",
+        "correctCode": "// process関数を定義\\\nfunction process() {\\\n  // try ブロック\\\n  try {\\\n    console.log('処理中...');\\\n    // throw new Error('エラー！')でエラーを投げる\\\n    throw new Error('エラー！');\\\n  } catch (e) {\\\n    // エラーメッセージを出力\\\n    console.log('Caught:', e.message);\\\n  // finally で常に実行されるブロック\\\n  } finally {\\\n    console.log('クリーンアップ完了');\\\n  }\\\n}\\\n// 関数を呼び出し\\\nprocess();",
+        "holeyCode": "// process関数を定義\\\n___ process() {\\\n  // try ブロック\\\n  ___ {\\\n    console.log('処理中...');\\\n    // throw new Error('エラー！')でエラーを投げる\\\n    ___ new Error('エラー！');\\\n  } catch (e) {\\\n    // エラーメッセージを出力\\\n    console.log('Caught:', e.___);\\\n  // finally で常に実行されるブロック\\\n  } ___ {\\\n    console.log('クリーンアップ完了');\\\n  }\\\n}\\\n// 関数を呼び出し\\\n___();",
         "correctLines": [
           "// process関数を定義",
           "function process() {",
           "  // try ブロック",
           "  try {",
-          "    console.log('Processing...');",
-          "    // throw new Error('Error!')でエラーを投げる",
+          "    console.log('処理中...');",
+          "    // throw new Error('エラー！')でエラーを投げる",
           "    throw new Error('エラー！');",
           "  } catch (e) {",
           "    // エラーメッセージを出力",
           "    console.log('Caught:', e.message);",
           "  // finally で常に実行されるブロック",
           "  } finally {",
-          "    console.log('Cleanup done');",
+          "    console.log('クリーンアップ完了');",
           "  }",
           "}",
           "// 関数を呼び出し",
@@ -395,14 +395,14 @@ export const javascriptData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Symbol('secret')でsecretを作成\\\nconst secret = Symbol('秘密');\\\n// userオブジェクトを作成\\\nconst user = {\\\n  // nameに'Taro'を設定\\\n  name: '太郎',\\\n  // [secret]に'password123'を設定\\\n  [secret]: 'パスワード123'\\\n};\\\n// user.nameをconsole.logで出力\\\nconsole.log(user.name);\\\n// user[secret]をconsole.logで出力\\\nconsole.log(user[secret]);",
-        "holeyCode": "// Symbol('secret')でsecretを作成\\\nconst secret = ___('秘密');\\\n// userオブジェクトを作成\\\nconst user = {\\\n  // nameに'Taro'を設定\\\n  name: '___',\\\n  // [secret]に'password123'を設定\\\n  [secret]: '___'\\\n};\\\n// user.nameをconsole.logで出力\\\nconsole.log(user.___);\\\n// user[secret]をconsole.logで出力\\\nconsole.log(user[___]);",
+        "correctCode": "// Symbol('秘密')でsecretを作成\\\nconst secret = Symbol('秘密');\\\n// userオブジェクトを作成\\\nconst user = {\\\n  // nameに'太郎'を設定\\\n  name: '太郎',\\\n  // [secret]に'password123'を設定\\\n  [secret]: 'パスワード123'\\\n};\\\n// user.nameをconsole.logで出力\\\nconsole.log(user.name);\\\n// user[secret]をconsole.logで出力\\\nconsole.log(user[secret]);",
+        "holeyCode": "// Symbol('秘密')でsecretを作成\\\nconst secret = ___('秘密');\\\n// userオブジェクトを作成\\\nconst user = {\\\n  // nameに'太郎'を設定\\\n  name: '___',\\\n  // [secret]に'password123'を設定\\\n  [secret]: '___'\\\n};\\\n// user.nameをconsole.logで出力\\\nconsole.log(user.___);\\\n// user[secret]をconsole.logで出力\\\nconsole.log(user[___]);",
         "correctLines": [
-          "// Symbol('secret')でsecretを作成",
+          "// Symbol('秘密')でsecretを作成",
           "const secret = Symbol('秘密');",
           "// userオブジェクトを作成",
           "const user = {",
-          "  // nameに'Taro'を設定",
+          "  // nameに'太郎'を設定",
           "  name: '太郎',",
           "  // [secret]に'password123'を設定",
           "  [secret]: 'password123'",
@@ -450,12 +450,12 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "WeakMapとは？",
-            "content": "# 弱参照（じゃくさんしょう）のMap\\\\n\\\\n**WeakMap** は、オブジェクトをキーにできる特殊な Map です。\\\\n\\\\n**「弱参照」って何？**\\\\nオブジェクトが不要になったら、自動で片付けられる（ガベージコレクション）という意味です。メモリを節約できます！\\\\n\\\\n**身近なたとえ：**\\\\n付箋（メモ）を本に貼るイメージです。本を捨てたら、付箋も一緒に捨てられます。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst cache = new WeakMap();\\\\nconst obj = {};\\\\ncache.set(obj, 'cached value');  // キーはオブジェクト\\\\nconsole.log(cache.get(obj));     // 'cached value'\\\\n```\\\\n\\\\n**使いどころ：**\\\\nプライベートなデータを安全に保存したいとき"
+            "content": "# 弱参照（じゃくさんしょう）のMap\\\\n\\\\n**WeakMap** は、オブジェクトをキーにできる特殊な Map です。\\\\n\\\\n**「弱参照」って何？**\\\\nオブジェクトが不要になったら、自動で片付けられる（ガベージコレクション）という意味です。メモリを節約できます！\\\\n\\\\n**身近なたとえ：**\\\\n付箋（メモ）を本に貼るイメージです。本を捨てたら、付箋も一緒に捨てられます。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst cache = new WeakMap();\\\\nconst obj = {};\\\\ncache.set(obj, 'キャッシュ値');  // キーはオブジェクト\\\\nconsole.log(cache.get(obj));     // 'キャッシュ値'\\\\n```\\\\n\\\\n**使いどころ：**\\\\nプライベートなデータを安全に保存したいとき"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// privateDataにnew WeakMap()を代入\\\nconst privateData = new WeakMap();\\\n\\\n// Userクラスを定義\\\nclass User {\\\n  // constructorでnameを初期化\\\n  constructor(name) {\\\n    // privateData.set()でデータを設定\\\n    privateData.set(this, { password: '秘密' });\\\n    // this.nameにnameを代入\\\n    this.name = name;\\\n  }\\\n  getPassword() {\\\n    // privateData.get()でデータを取得\\\n    return privateData.get(this).password;\\\n  }\\\n}\\\n\\\n// userにnew User('Taro')を代入\\\nconst user = new User('太郎');\\\n// getPassword()を呼び出し\\\nconsole.log(user.getPassword());",
-        "holeyCode": "// privateDataにnew WeakMap()を代入\\\nconst privateData = new ___();\\\n\\\n// Userクラスを定義\\\n___ User {\\\n  // constructorでnameを初期化\\\n  ___(name) {\\\n    // privateData.set()でデータを設定\\\n    privateData.___(this, { password: '秘密' });\\\n    // this.nameにnameを代入\\\n    this.___ = name;\\\n  }\\\n  getPassword() {\\\n    // privateData.get()でデータを取得\\\n    return privateData.___(this).password;\\\n  }\\\n}\\\n\\\n// userにnew User('Taro')を代入\\\nconst user = ___ User('太郎');\\\n// getPassword()を呼び出し\\\nconsole.log(user.___());",
+        "correctCode": "// privateDataにnew WeakMap()を代入\\\nconst privateData = new WeakMap();\\\n\\\n// Userクラスを定義\\\nclass User {\\\n  // constructorでnameを初期化\\\n  constructor(name) {\\\n    // privateData.set()でデータを設定\\\n    privateData.set(this, { password: '秘密' });\\\n    // this.nameにnameを代入\\\n    this.name = name;\\\n  }\\\n  getPassword() {\\\n    // privateData.get()でデータを取得\\\n    return privateData.get(this).password;\\\n  }\\\n}\\\n\\\n// userにnew User('太郎')を代入\\\nconst user = new User('太郎');\\\n// getPassword()を呼び出し\\\nconsole.log(user.getPassword());",
+        "holeyCode": "// privateDataにnew WeakMap()を代入\\\nconst privateData = new ___();\\\n\\\n// Userクラスを定義\\\n___ User {\\\n  // constructorでnameを初期化\\\n  ___(name) {\\\n    // privateData.set()でデータを設定\\\n    privateData.___(this, { password: '秘密' });\\\n    // this.nameにnameを代入\\\n    this.___ = name;\\\n  }\\\n  getPassword() {\\\n    // privateData.get()でデータを取得\\\n    return privateData.___(this).password;\\\n  }\\\n}\\\n\\\n// userにnew User('太郎')を代入\\\nconst user = ___ User('太郎');\\\n// getPassword()を呼び出し\\\nconsole.log(user.___());",
         "correctLines": [
           "// privateDataにnew WeakMap()を代入",
           "const privateData = new WeakMap();",
@@ -475,7 +475,7 @@ export const javascriptData5 = {
           "  }",
           "}",
           "",
-          "// userにnew User('Taro')を代入",
+          "// userにnew User('太郎')を代入",
           "const user = new User('太郎');",
           "// getPassword() を呼び出し",
           "console.log(user.getPassword());"
@@ -535,12 +535,12 @@ export const javascriptData5 = {
         "tutorialSlides": [
           {
             "title": "Proxyとは？",
-            "content": "# 操作を「横取り」する\\\\n\\\\n**Proxy** は、オブジェクトへの操作を途中でキャッチして、カスタマイズできる機能です。\\\\n\\\\n**身近なたとえ：**\\\\n「受付係」を想像してください。お客さん（コード）が社員（オブジェクト）に会いたいとき、受付係が間に入って「名前を聞く」「記録を残す」などができます。\\\\n\\\\n**できること：**\\\\n- プロパティにアクセスしたときの処理を変える\\\\n- 存在しないプロパティに「デフォルト値」を返す\\\\n- アクセスをログに残す\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst handler = {\\\\n  get(target, prop) {\\\\n    // ない場合は 'not found' を返す\\\\n    return prop in target ? target[prop] : 'not found';\\\\n  }\\\\n};\\\\nconst obj = new Proxy({}, handler);\\\\n```"
+            "content": "# 操作を「横取り」する\\\\n\\\\n**Proxy** は、オブジェクトへの操作を途中でキャッチして、カスタマイズできる機能です。\\\\n\\\\n**身近なたとえ：**\\\\n「受付係」を想像してください。お客さん（コード）が社員（オブジェクト）に会いたいとき、受付係が間に入って「名前を聞く」「記録を残す」などができます。\\\\n\\\\n**できること：**\\\\n- プロパティにアクセスしたときの処理を変える\\\\n- 存在しないプロパティに「デフォルト値」を返す\\\\n- アクセスをログに残す\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst handler = {\\\\n  get(target, prop) {\\\\n    // ない場合は '見つかりません' を返す\\\\n    return prop in target ? target[prop] : '見つかりません';\\\\n  }\\\\n};\\\\nconst obj = new Proxy({}, handler);\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// ハンドラオブジェクトを定義\\\nconst handler = {\\\n  // get トラップを定義\\\n  get(target, prop) {\\\n    // アクセスをログ出力\\\n    console.log(`Getting ${prop}`);\\\n    // return でプロパティ値を返す\\\n    return target[prop];\\\n  }\\\n};\\\n// name: 'Taro' を持つオブジェクトの操作をインターセプト\\\nconst user = new Proxy({ name: '太郎' }, handler);\\\n// name プロパティにアクセス\\\nconsole.log(user.name);",
-        "holeyCode": "// ハンドラオブジェクトを定義\\\nconst handler = {\\\n  // get トラップを定義\\\n  ___(target, prop) {\\\n    // アクセスをログ出力\\\n    console.log(`Getting ${___}`);\\\n    // return でプロパティ値を返す\\\n    ___ target[prop];\\\n  }\\\n};\\\n// name: 'Taro' を持つオブジェクトの操作をインターセプト\\\nconst user = new ___({ name: '太郎' }, handler);\\\n// name プロパティにアクセス\\\nconsole.log(user.___);",
+        "correctCode": "// ハンドラオブジェクトを定義\\\nconst handler = {\\\n  // get トラップを定義\\\n  get(target, prop) {\\\n    // アクセスをログ出力\\\n    console.log(`Getting ${prop}`);\\\n    // return でプロパティ値を返す\\\n    return target[prop];\\\n  }\\\n};\\\n// name: '太郎' を持つオブジェクトの操作をインターセプト\\\nconst user = new Proxy({ name: '太郎' }, handler);\\\n// name プロパティにアクセス\\\nconsole.log(user.name);",
+        "holeyCode": "// ハンドラオブジェクトを定義\\\nconst handler = {\\\n  // get トラップを定義\\\n  ___(target, prop) {\\\n    // アクセスをログ出力\\\n    console.log(`Getting ${___}`);\\\n    // return でプロパティ値を返す\\\n    ___ target[prop];\\\n  }\\\n};\\\n// name: '太郎' を持つオブジェクトの操作をインターセプト\\\nconst user = new ___({ name: '太郎' }, handler);\\\n// name プロパティにアクセス\\\nconsole.log(user.___);",
         "correctLines": [
           "// ハンドラオブジェクトを定義",
           "const handler = {",
@@ -552,8 +552,8 @@ export const javascriptData5 = {
           "    return target[prop];",
           "  }",
           "};",
-          "// name: 'Taro' を持つオブジェクトの操作をインターセプト",
-          "const user = new Proxy({ name: 'Taro' }, handler);",
+          "// name: '太郎' を持つオブジェクトの操作をインターセプト",
+          "const user = new Proxy({ name: '太郎' }, handler);",
           "// name プロパティにアクセス",
           "console.log(user.name);"
         ],

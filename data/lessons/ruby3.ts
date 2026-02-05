@@ -293,7 +293,7 @@ export const ruby3Data = {
           },
           {
             "title": "スプラット演算子の使い方",
-            "content": "# * で複数（ふくすう）の引数を受け取る\\\\n\\\\n**コード例：**\\\\n```ruby\\\\ndef greet(*names)\\\\n  names.each { |name| puts name }\\\\nend\\\\n\\\\ngreet('Alice', 'Bob', 'Carol')\\\\n# => Alice\\\\n# => Bob\\\\n# => Carol\\\\n```\\\\n\\\\n**何が起こるの？**\\\\n1. `*names` → 渡された引数をすべて配列にまとめる\\\\n2. 3つの名前を渡すと `names = ['Alice', 'Bob', 'Carol']` になる\\\\n3. `.each` で1つずつ表示\\\\n\\\\n**配列を展開（てんかい）するときにも使える：**\\\\n```ruby\\\\nnums = [1, 2, 3]\\\\nsome_method(*nums)  # some_method(1, 2, 3) と同じ\\\\n```\\\\n\\\\n`*` は配列を「バラバラ」にする魔法（まほう）です。"
+            "content": "# * で複数（ふくすう）の引数を受け取る\\\\n\\\\n**コード例：**\\\\n```ruby\\\\ndef greet(*names)\\\\n  names.each { |name| puts name }\\\\nend\\\\n\\\\ngreet('アリス', 'ボブ', 'キャロル')\\\\n# => Alice\\\\n# => Bob\\\\n# => Carol\\\\n```\\\\n\\\\n**何が起こるの？**\\\\n1. `*names` → 渡された引数をすべて配列にまとめる\\\\n2. 3つの名前を渡すと `names = ['アリス', 'ボブ', 'キャロル']` になる\\\\n3. `.each` で1つずつ表示\\\\n\\\\n**配列を展開（てんかい）するときにも使える：**\\\\n```ruby\\\\nnums = [1, 2, 3]\\\\nsome_method(*nums)  # some_method(1, 2, 3) と同じ\\\\n```\\\\n\\\\n`*` は配列を「バラバラ」にする魔法（まほう）です。"
           }
         ],
         "initialDisplayMode": "holey",
@@ -441,7 +441,7 @@ export const ruby3Data = {
         },
         "testCases": [
           {
-            "input": "Person.new('Alice', 30).name",
+            "input": "Person.new('アリス', 30).name",
             "expected_output": "Alice"
           }
         ]

@@ -355,11 +355,11 @@ export const sql3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- LIKEでパターン検索\\\nSELECT 'matched' WHERE 'こんにちは' LIKE 'H%';",
-        "holeyCode": "-- LIKEでパターン検索\\\nSELECT 'matched' WHERE 'こんにちは' LIKE '___%';",
+        "correctCode": "-- LIKEでパターン検索\\\nSELECT '一致' WHERE 'こんにちは' LIKE 'H%';",
+        "holeyCode": "-- LIKEでパターン検索\\\nSELECT '一致' WHERE 'こんにちは' LIKE '___%';",
         "correctLines": [
           "-- LIKEでパターン検索",
-          "SELECT 'matched' WHERE 'こんにちは' LIKE 'H%';"
+          "SELECT '一致' WHERE 'こんにちは' LIKE 'H%';"
         ],
         "lineHints": [
           null,
@@ -396,11 +396,11 @@ export const sql3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- BETWEENで範囲指定\\\\nSELECT 'in range' WHERE 5 BETWEEN 1 AND 10;",
-        "holeyCode": "-- BETWEENで範囲指定\\\\nSELECT 'in range' WHERE ___ BETWEEN 1 AND 10;",
+        "correctCode": "-- BETWEENで範囲指定\\\\nSELECT '範囲内' WHERE 5 BETWEEN 1 AND 10;",
+        "holeyCode": "-- BETWEENで範囲指定\\\\nSELECT '範囲内' WHERE ___ BETWEEN 1 AND 10;",
         "correctLines": [
           "-- BETWEENで範囲指定",
-          "SELECT 'in range' WHERE 5 BETWEEN 1 AND 10;"
+          "SELECT '範囲内' WHERE 5 BETWEEN 1 AND 10;"
         ],
         "lineHints": [
           null,
@@ -433,7 +433,7 @@ export const sql3Data = {
           },
           {
             "title": "IN の使い方",
-            "content": "# 値 IN (リスト)\\\\n\\\\n**コード例：**\\\\n```sql\\\\nSELECT * FROM users\\\\nWHERE status IN ('active', 'pending');\\\\n```\\\\n\\\\n**このコードは何をしているの？**\\\\n- statusが'active'または'pending'の人を\\\\n- 取得します\\\\n- `status = 'active' OR status = 'pending'` と同じ意味"
+            "content": "# 値 IN (リスト)\\\\n\\\\n**コード例：**\\\\n```sql\\\\nSELECT * FROM users\\\\nWHERE status IN ('アクティブ', '保留中');\\\\n```\\\\n\\\\n**このコードは何をしているの？**\\\\n- statusが'アクティブ'または'保留中'の人を\\\\n- 取得します\\\\n- `status = 'アクティブ' OR status = '保留中'` と同じ意味"
           }
         ],
         "initialDisplayMode": "holey",

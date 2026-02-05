@@ -68,7 +68,7 @@ export const javascriptData2 = {
           },
           {
             "title": "mapの使い方",
-            "content": "# 元の配列は変わらない！\\\\n\\\\n**大事なポイント：**\\\\n`map` は新しい配列を作って返します。元の配列はそのまま残ります。\\\\n\\\\n**書き方：**\\\\n```\\\\n配列.map(要素 => 変換処理)\\\\n```\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst names = ['alice', 'bob'];\\\\n// 全部大文字に変換\\\\nconst upper = names.map(n => n.toUpperCase());\\\\nconsole.log(upper);  // ['ALICE', 'BOB']\\\\nconsole.log(names);  // ['alice', 'bob']（元のまま！）\\\\n```"
+            "content": "# 元の配列は変わらない！\\\\n\\\\n**大事なポイント：**\\\\n`map` は新しい配列を作って返します。元の配列はそのまま残ります。\\\\n\\\\n**書き方：**\\\\n```\\\\n配列.map(要素 => 変換処理)\\\\n```\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst names = ['アリス', 'ボブ'];\\\\n// 全部大文字に変換\\\\nconst upper = names.map(n => n.toUpperCase());\\\\nconsole.log(upper);  // ['アリス', 'ボブ']\\\\nconsole.log(names);  // ['アリス', 'ボブ']（元のまま！）\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
@@ -269,7 +269,7 @@ export const javascriptData2 = {
           },
           {
             "title": "filterの使い方",
-            "content": "# true を返す要素だけ残る\\\\n\\\\n**filterの仕組み：**\\\\n1. 配列の要素を一つずつチェック\\\\n2. 条件が `true` の要素だけ新しい配列に入る\\\\n3. `false` の要素は捨てられる\\\\n\\\\n**書き方：**\\\\n```\\\\n配列.filter(要素 => 条件)\\\\n```\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst words = ['hi', 'hello', 'hey'];\\\\n// 文字数が2より多いものだけ選ぶ\\\\nconst long = words.filter(w => w.length > 2);\\\\nconsole.log(long);\\\\n```\\\\n**実行結果：**\\\\n```\\\\n['hello', 'hey']\\\\n```\\\\n'hi' は2文字なので除外されました！"
+            "content": "# true を返す要素だけ残る\\\\n\\\\n**filterの仕組み：**\\\\n1. 配列の要素を一つずつチェック\\\\n2. 条件が `true` の要素だけ新しい配列に入る\\\\n3. `false` の要素は捨てられる\\\\n\\\\n**書き方：**\\\\n```\\\\n配列.filter(要素 => 条件)\\\\n```\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst words = ['こんにちは', 'こんにちは', 'おーい'];\\\\n// 文字数が2より多いものだけ選ぶ\\\\nconst long = words.filter(w => w.length > 2);\\\\nconsole.log(long);\\\\n```\\\\n**実行結果：**\\\\n```\\\\n['こんにちは', 'おーい']\\\\n```\\\\n'こんにちは' は2文字なので除外されました！"
           }
         ],
         "initialDisplayMode": "holey",
@@ -385,11 +385,11 @@ export const javascriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// ['red', 'green', 'blue'] から値を取り出す\\\nconst colors = ['赤', '緑', '青'];\\\n// second で2番目の要素を受け取る\\\nconst [first, second] = colors;\\\n// firstを表示\\\nconsole.log(first);\\\n// secondを表示\\\nconsole.log(second);",
-        "holeyCode": "// ['red', 'green', 'blue'] から値を取り出す\\\\nconst colors = ['___', '___', '___'];\\\\n// second で2番目の要素を受け取る\\\\nconst [first, ___] = colors;\\\\n// firstを表示\\\\nconsole.log(___);\\\\n// secondを表示\\\\nconsole.log(___);",
+        "correctCode": "// ['赤', '緑', '青'] から値を取り出す\\\nconst colors = ['赤', '緑', '青'];\\\n// second で2番目の要素を受け取る\\\nconst [first, second] = colors;\\\n// firstを表示\\\nconsole.log(first);\\\n// secondを表示\\\nconsole.log(second);",
+        "holeyCode": "// ['赤', '緑', '青'] から値を取り出す\\\\nconst colors = ['___', '___', '___'];\\\\n// second で2番目の要素を受け取る\\\\nconst [first, ___] = colors;\\\\n// firstを表示\\\\nconsole.log(___);\\\\n// secondを表示\\\\nconsole.log(___);",
         "correctLines": [
-          "// ['red', 'green', 'blue'] から値を取り出す",
-          "const colors = ['red', 'green', 'blue'];",
+          "// ['赤', '緑', '青'] から値を取り出す",
+          "const colors = ['赤', '緑', '青'];",
           "// second で2番目の要素を受け取る",
           "const [first, second] = colors;",
           "// firstを表示",
@@ -399,7 +399,7 @@ export const javascriptData2 = {
         ],
         "lineHints": [
           null,
-          "['red', 'green', 'blue'] の配列を作ります。",
+          "['赤', '緑', '青'] の配列を作ります。",
           null,
           "2番目の変数名は `second` です。",
           null,
@@ -436,18 +436,18 @@ export const javascriptData2 = {
         "tutorialSlides": [
           {
             "title": "オブジェクトの分割代入",
-            "content": "# プロパティ名で取り出す\\\\n\\\\nオブジェクトでも分割代入が使えます。**プロパティ名と同じ名前の変数** に自動で入ります。\\\\n\\\\n**身近なたとえ：**\\\\n名刺から「名前」と「年齢」の情報を取り出すイメージです。「名前」という項目は「名前」という変数に入ります。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst person = { name: 'Taro', age: 20 };\\\\n// { } を使って取り出す\\\\nconst { name, age } = person;\\\\nconsole.log(name); // 'Taro'\\\\nconsole.log(age);  // 20\\\\n```"
+            "content": "# プロパティ名で取り出す\\\\n\\\\nオブジェクトでも分割代入が使えます。**プロパティ名と同じ名前の変数** に自動で入ります。\\\\n\\\\n**身近なたとえ：**\\\\n名刺から「名前」と「年齢」の情報を取り出すイメージです。「名前」という項目は「名前」という変数に入ります。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst person = { name: '太郎', age: 20 };\\\\n// { } を使って取り出す\\\\nconst { name, age } = person;\\\\nconsole.log(name); // '太郎'\\\\nconsole.log(age);  // 20\\\\n```"
           },
           {
             "title": "よく使うパターン",
-            "content": "# 関数の引数でも使える！\\\\n\\\\n関数にオブジェクトを渡すとき、必要なプロパティだけ取り出せます。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nfunction greet({ name }) {\\\\n    // オブジェクトから name だけ取り出す\\\\n    console.log(`Hello, ${name}!`);\\\\n}\\\\n\\\\ngreet({ name: 'Taro', age: 20 });\\\\n```\\\\n**実行結果：**\\\\n```\\\\nHello, Taro!\\\\n```\\\\n\\\\n**ポイント：**\\\\n`{ }` の中に欲しいプロパティ名を書くだけ！"
+            "content": "# 関数の引数でも使える！\\\\n\\\\n関数にオブジェクトを渡すとき、必要なプロパティだけ取り出せます。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nfunction greet({ name }) {\\\\n    // オブジェクトから name だけ取り出す\\\\n    console.log(`Hello, ${name}!`);\\\\n}\\\\n\\\\ngreet({ name: '太郎', age: 20 });\\\\n```\\\\n**実行結果：**\\\\n```\\\\nHello, Taro!\\\\n```\\\\n\\\\n**ポイント：**\\\\n`{ }` の中に欲しいプロパティ名を書くだけ！"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// name: 'Alice', score: 100 のオブジェクトから値を取り出す\\\nconst user = { name: 'アリス', score: 100 };\\\n// name プロパティを取り出す\\\nconst { name, score } = user;\\\n// nameを表示\\\nconsole.log(name);\\\n// scoreを表示\\\nconsole.log(score);",
-        "holeyCode": "// name: 'Alice', score: 100 のオブジェクトから値を取り出す\\\\nconst user = { name: '___', score: ___ };\\\\n// name プロパティを取り出す\\\\nconst { ___, score } = user;\\\\n// nameを表示\\\\nconsole.log(___);\\\\n// scoreを表示\\\\nconsole.log(___);",
+        "correctCode": "// name: 'アリス', score: 100 のオブジェクトから値を取り出す\\\nconst user = { name: 'アリス', score: 100 };\\\n// name プロパティを取り出す\\\nconst { name, score } = user;\\\n// nameを表示\\\nconsole.log(name);\\\n// scoreを表示\\\nconsole.log(score);",
+        "holeyCode": "// name: 'アリス', score: 100 のオブジェクトから値を取り出す\\\\nconst user = { name: '___', score: ___ };\\\\n// name プロパティを取り出す\\\\nconst { ___, score } = user;\\\\n// nameを表示\\\\nconsole.log(___);\\\\n// scoreを表示\\\\nconsole.log(___);",
         "correctLines": [
-          "// name: 'Alice', score: 100 のオブジェクトから値を取り出す",
+          "// name: 'アリス', score: 100 のオブジェクトから値を取り出す",
           "const user = { name: 'アリス', score: 100 };",
           "// name プロパティを取り出す",
           "const { name, score } = user;",
@@ -458,7 +458,7 @@ export const javascriptData2 = {
         ],
         "lineHints": [
           null,
-          "{ name: 'Alice', score: 100 } のオブジェクトを作ります。",
+          "{ name: 'アリス', score: 100 } のオブジェクトを作ります。",
           null,
           "プロパティ名と同じ `name` を使います。",
           null,
@@ -562,13 +562,13 @@ export const javascriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 数値 5 が正か負かを判定\\\\nconst num = 5;\\\\n// ? で三項演算子を使う\\\\nconst sign = num >= 0 ? 'positive' : 'negative';\\\\n// signを表示\\\\nconsole.log(sign);",
-        "holeyCode": "// 数値 5 が正か負かを判定\\\\nconst num = ___;\\\\n// ? で三項演算子を使う\\\\nconst sign = num >= 0 ___ 'positive' : 'negative';\\\\n// signを表示\\\\nconsole.log(___);",
+        "correctCode": "// 数値 5 が正か負かを判定\\\\nconst num = 5;\\\\n// ? で三項演算子を使う\\\\nconst sign = num >= 0 ? '正' : '負';\\\\n// signを表示\\\\nconsole.log(sign);",
+        "holeyCode": "// 数値 5 が正か負かを判定\\\\nconst num = ___;\\\\n// ? で三項演算子を使う\\\\nconst sign = num >= 0 ___ '正' : '負';\\\\n// signを表示\\\\nconsole.log(___);",
         "correctLines": [
           "// 数値 5 が正か負かを判定",
           "const num = 5;",
           "// ? で三項演算子を使う",
-          "const sign = num >= 0 ? 'positive' : 'negative';",
+          "const sign = num >= 0 ? '正' : '負';",
           "// signを表示",
           "console.log(sign);"
         ],
@@ -611,7 +611,7 @@ export const javascriptData2 = {
           },
           {
             "title": "findの使い方",
-            "content": "# オブジェクトの配列でも使える！\\\\n\\\\nユーザーリストから特定のIDの人を探すときなどに便利です。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst users = [\\\\n    { id: 1, name: 'Alice' },\\\\n    { id: 2, name: 'Bob' }\\\\n];\\\\n// id が 2 のユーザーを探す\\\\nconst user = users.find(u => u.id === 2);\\\\nconsole.log(user.name);\\\\n```\\\\n**実行結果：**\\\\n```\\\\nBob\\\\n```"
+            "content": "# オブジェクトの配列でも使える！\\\\n\\\\nユーザーリストから特定のIDの人を探すときなどに便利です。\\\\n\\\\n**コード例：**\\\\n```javascript\\\\nconst users = [\\\\n    { id: 1, name: 'アリス' },\\\\n    { id: 2, name: 'ボブ' }\\\\n];\\\\n// id が 2 のユーザーを探す\\\\nconst user = users.find(u => u.id === 2);\\\\nconsole.log(user.name);\\\\n```\\\\n**実行結果：**\\\\n```\\\\nBob\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
@@ -664,11 +664,11 @@ export const javascriptData2 = {
         "tutorialSlides": [
           {
             "title": "プロパティのショートハンド",
-            "content": "# 同じ名前なら省略できる！\\\\n\\\\n変数名とプロパティ名が同じなら、省略（ショートハンド）できます。\\\\n\\\\n**身近なたとえ：**\\\\n「名前は『名前』です」と言わなくても「名前」だけで伝わりますよね。それと同じです！\\\\n\\\\n**比較してみよう：**\\\\n```javascript\\\\nconst name = 'Taro';\\\\nconst age = 20;\\\\n\\\\n// 通常の書き方（長い）\\\\nconst obj1 = { name: name, age: age };\\\\n\\\\n// ショートハンド（短い！同じ意味）\\\\nconst obj2 = { name, age };\\\\n```"
+            "content": "# 同じ名前なら省略できる！\\\\n\\\\n変数名とプロパティ名が同じなら、省略（ショートハンド）できます。\\\\n\\\\n**身近なたとえ：**\\\\n「名前は『名前』です」と言わなくても「名前」だけで伝わりますよね。それと同じです！\\\\n\\\\n**比較してみよう：**\\\\n```javascript\\\\nconst name = '太郎';\\\\nconst age = 20;\\\\n\\\\n// 通常の書き方（長い）\\\\nconst obj1 = { name: name, age: age };\\\\n\\\\n// ショートハンド（短い！同じ意味）\\\\nconst obj2 = { name, age };\\\\n```"
           },
           {
             "title": "メソッドのショートハンド",
-            "content": "# メソッドも短く書ける！\\\\n\\\\nオブジェクトの中にメソッド（関数）を書くときも省略できます。\\\\n\\\\n**比較してみよう：**\\\\n```javascript\\\\nconst obj = {\\\\n    // 通常の書き方\\\\n    greet: function() { \\\\n        console.log('Hi'); \\\\n    },\\\\n    \\\\n    // ショートハンド（: function を省略）\\\\n    sayBye() { \\\\n        console.log('Bye'); \\\\n    }\\\\n};\\\\n```\\\\n\\\\n**ポイント：**\\\\n`: function` を省略して、関数名のあとに直接 `()` を書けます。"
+            "content": "# メソッドも短く書ける！\\\\n\\\\nオブジェクトの中にメソッド（関数）を書くときも省略できます。\\\\n\\\\n**比較してみよう：**\\\\n```javascript\\\\nconst obj = {\\\\n    // 通常の書き方\\\\n    greet: function() { \\\\n        console.log('こんにちは'); \\\\n    },\\\\n    \\\\n    // ショートハンド（: function を省略）\\\\n    sayBye() { \\\\n        console.log('バイバイ'); \\\\n    }\\\\n};\\\\n```\\\\n\\\\n**ポイント：**\\\\n`: function` を省略して、関数名のあとに直接 `()` を書けます。"
           }
         ],
         "initialDisplayMode": "holey",

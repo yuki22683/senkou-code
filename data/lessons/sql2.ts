@@ -374,15 +374,15 @@ export const sql2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- SELECT CASE と入力して条件分岐\\\\nSELECT CASE\\\\n  -- 条件を指定\\\\n  WHEN 85 >= 80 THEN 'pass'\\\\n  -- それ以外の場合\\\\n  ELSE 'fail'\\\\n-- ENDで終了\\\\nEND;",
-        "holeyCode": "-- SELECT CASE と入力して条件分岐\\\\nSELECT ___\\\\n  -- 条件を指定\\\\n  WHEN ___ >= 80 THEN 'pass'\\\\n  -- それ以外の場合\\\\n  ELSE '___'\\\\n-- ENDで終了\\\\n___;",
+        "correctCode": "-- SELECT CASE と入力して条件分岐\\\\nSELECT CASE\\\\n  -- 条件を指定\\\\n  WHEN 85 >= 80 THEN '合格'\\\\n  -- それ以外の場合\\\\n  ELSE '失敗'\\\\n-- ENDで終了\\\\nEND;",
+        "holeyCode": "-- SELECT CASE と入力して条件分岐\\\\nSELECT ___\\\\n  -- 条件を指定\\\\n  WHEN ___ >= 80 THEN '合格'\\\\n  -- それ以外の場合\\\\n  ELSE '___'\\\\n-- ENDで終了\\\\n___;",
         "correctLines": [
           "-- SELECT CASE と入力して条件分岐",
           "SELECT CASE",
           "  -- 条件を指定",
-          "  WHEN 85 >= 80 THEN 'pass'",
+          "  WHEN 85 >= 80 THEN '合格'",
           "  -- それ以外の場合",
-          "  ELSE 'fail'",
+          "  ELSE '失敗'",
           "-- ENDで終了",
           "END;"
         ],
@@ -421,7 +421,7 @@ export const sql2Data = {
           },
           {
             "title": "COALESCE の使い方",
-            "content": "# COALESCE(値1, 値2, ...)\\\\n\\\\n左から順にチェックして、最初のNULLでない値を返します。\\\\n\\\\n**コード例：**\\\\n```sql\\\\nSELECT COALESCE(name, 'Unknown')\\\\nFROM users;\\\\n```\\\\n\\\\n**このコードは何をしているの？**\\\\n- nameがNULLでなければnameを返す\\\\n- nameがNULLなら'Unknown'を返す"
+            "content": "# COALESCE(値1, 値2, ...)\\\\n\\\\n左から順にチェックして、最初のNULLでない値を返します。\\\\n\\\\n**コード例：**\\\\n```sql\\\\nSELECT COALESCE(name, '不明')\\\\nFROM users;\\\\n```\\\\n\\\\n**このコードは何をしているの？**\\\\n- nameがNULLでなければnameを返す\\\\n- nameがNULLなら'不明'を返す"
           }
         ],
         "initialDisplayMode": "holey",
