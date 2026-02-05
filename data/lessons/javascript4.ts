@@ -200,12 +200,12 @@ export const javascriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義\\\\nconst pairs = [['name', 'Python'], ['version', '3.12']];\\\\n// fromEntries で配列からオブジェクトを作成\\\\nconst obj = Object.fromEntries(pairs);\\\\n// objを出力\\\\nconsole.log(obj);",
-        "holeyCode": "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義\\\\nconst ___ = [['name', 'Python'], ['version', '3.12']];\\\\n// fromEntries で配列からオブジェクトを作成\\\\nconst ___ = Object.fromEntries(pairs);\\\\n// objを出力\\\\nconsole.log(___);",
+        "correctCode": "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義\\\\nconst pairs = [['name', 'Python'], ['version', '3.12']];\\\\n// objにObject.fromEntries(pairs)を代入\\\\nconst obj = Object.fromEntries(pairs);\\\\n// objを出力\\\\nconsole.log(obj);",
+        "holeyCode": "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義\\\\nconst ___ = [['name', 'Python'], ['version', '3.12']];\\\\n// objにObject.fromEntries(pairs)を代入\\\\nconst ___ = Object.fromEntries(pairs);\\\\n// objを出力\\\\nconsole.log(___);",
         "correctLines": [
           "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義",
           "const pairs = [['name', 'Python'], ['version', '3.12']];",
-          "// fromEntries で配列からオブジェクトを作成",
+          "// objにObject.fromEntries(pairs)を代入",
           "const obj = Object.fromEntries(pairs);",
           "// objを出力",
           "console.log(obj);"
@@ -343,12 +343,12 @@ export const javascriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// function でカウンター生成関数を定義\\\\nfunction createCounter() {\\\\n  // let で変数を初期化\\\\n  let count = 0;\\\\n  // ++ でインクリメントして返す\\\\n  return () => ++count;\\\\n}\\\\n// カウンターを作成\\\\nconst counter = createCounter();\\\\n// 1回目の呼び出し\\\\nconsole.log(counter());\\\\n// 2回目の呼び出し\\\\nconsole.log(counter());\\\\n// 3回目の呼び出し\\\\nconsole.log(counter());",
-        "holeyCode": "// function でカウンター生成関数を定義\\\\nfunction ___() {\\\\n  // let で変数を初期化\\\\n  let ___ = 0;\\\\n  // ++ でインクリメントして返す\\\\n  return () => ++___;\\\\n___\\\\n// カウンターを作成\\\\nconst ___ = createCounter();\\\\n// 1回目の呼び出し\\\\nconsole.___(counter());\\\\n// 2回目の呼び出し\\\\nconsole.___(counter());\\\\n// 3回目の呼び出し\\\\nconsole.___(counter());",
+        "correctCode": "// createCounter関数を定義\\\\nfunction createCounter() {\\\\n  // countを0で初期化\\\\n  let count = 0;\\\\n  // ++ でインクリメントして返す\\\\n  return () => ++count;\\\\n}\\\\n// カウンターを作成\\\\nconst counter = createCounter();\\\\n// 1回目の呼び出し\\\\nconsole.log(counter());\\\\n// 2回目の呼び出し\\\\nconsole.log(counter());\\\\n// 3回目の呼び出し\\\\nconsole.log(counter());",
+        "holeyCode": "// createCounter関数を定義\\\\nfunction ___() {\\\\n  // countを0で初期化\\\\n  let ___ = 0;\\\\n  // ++ でインクリメントして返す\\\\n  return () => ++___;\\\\n___\\\\n// カウンターを作成\\\\nconst ___ = createCounter();\\\\n// 1回目の呼び出し\\\\nconsole.___(counter());\\\\n// 2回目の呼び出し\\\\nconsole.___(counter());\\\\n// 3回目の呼び出し\\\\nconsole.___(counter());",
         "correctLines": [
-          "// function でカウンター生成関数を定義",
+          "// createCounter関数を定義",
           "function createCounter() {",
-          "  // let で変数を初期化",
+          "  // countを0で初期化",
           "  let count = 0;",
           "  // ++ でインクリメントして返す",
           "  return () => ++count;",
@@ -406,12 +406,12 @@ export const javascriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// function でメモ化関数を定義\\\\nfunction memoize(fn) {\\\\n  // const でキャッシュオブジェクトを作成\\\\n  const cache = {};\\\\n  return (x) => {\\\\n    // in でオブジェクトにキーが存在するかチェック\\\\n    if (!(x in cache)) {\\\\n      // キャッシュに結果を保存\\\\n      cache[x] = fn(x);\\\\n    }\\\\n    // return でキャッシュから返す\\\\n    return cache[x];\\\\n  };\\\\n}\\\\n// メモ化されたsquare関数を作成\\\\nconst square = memoize(x => x * x);\\\\n// square(5)を出力\\\\nconsole.log(square(5));\\\\nconsole.log(square(5));",
-        "holeyCode": "// function でメモ化関数を定義\\\\nfunction memoize(___) {\\\\n  // const でキャッシュオブジェクトを作成\\\\n  const ___ = {};\\\\n  return (___) => {\\\\n    // in でオブジェクトにキーが存在するかチェック\\\\n    if (!(x in ___)) {\\\\n      // キャッシュに結果を保存\\\\n      cache[___] = fn(x);\\\\n    ___\\\\n    // return でキャッシュから返す\\\\n    return cache[___];\\\\n  ___\\\\n___\\\\n// メモ化されたsquare関数を作成\\\\nconst ___ = memoize(x => x * x);\\\\n// square(5)を出力\\\\nconsole.___(square(5));\\\\nconsole.___(square(5));",
+        "correctCode": "// memoize関数を定義\\\\nfunction memoize(fn) {\\\\n  // cacheに{}を代入\\\\n  const cache = {};\\\\n  return (x) => {\\\\n    // in でオブジェクトにキーが存在するかチェック\\\\n    if (!(x in cache)) {\\\\n      // キャッシュに結果を保存\\\\n      cache[x] = fn(x);\\\\n    }\\\\n    // return でキャッシュから返す\\\\n    return cache[x];\\\\n  };\\\\n}\\\\n// メモ化されたsquare関数を作成\\\\nconst square = memoize(x => x * x);\\\\n// square(5)を出力\\\\nconsole.log(square(5));\\\\nconsole.log(square(5));",
+        "holeyCode": "// memoize関数を定義\\\\nfunction memoize(___) {\\\\n  // cacheに{}を代入\\\\n  const ___ = {};\\\\n  return (___) => {\\\\n    // in でオブジェクトにキーが存在するかチェック\\\\n    if (!(x in ___)) {\\\\n      // キャッシュに結果を保存\\\\n      cache[___] = fn(x);\\\\n    ___\\\\n    // return でキャッシュから返す\\\\n    return cache[___];\\\\n  ___\\\\n___\\\\n// メモ化されたsquare関数を作成\\\\nconst ___ = memoize(x => x * x);\\\\n// square(5)を出力\\\\nconsole.___(square(5));\\\\nconsole.___(square(5));",
         "correctLines": [
-          "// function でメモ化関数を定義",
+          "// memoize関数を定義",
           "function memoize(fn) {",
-          "  // const でキャッシュオブジェクトを作成",
+          "  // cacheに{}を代入",
           "  const cache = {};",
           "  return (x) => {",
           "    // in でオブジェクトにキーが存在するかチェック",
@@ -477,10 +477,10 @@ export const javascriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// const でパイプライン関数を定義\\\\nconst pipe = (...fns) => x =>\\\\n  // reduce で累積値 v を使って関数を連鎖\\\\n  fns.reduce((v, f) => f(v), x);\\\\n\\\\n// パイプラインで関数を連結\\\\nconst process = pipe(\\\\n  // +1 する関数\\\\n  x => x + 1,\\\\n  // *2 する関数\\\\n  x => x * 2,\\\\n  // -3 する関数\\\\n  x => x - 3\\\\n);\\\\n// process(5)を出力\\\\nconsole.log(process(5));",
-        "holeyCode": "// const でパイプライン関数を定義\\\\nconst ___ = (...fns) => x =>\\\\n  // reduce で累積値 v を使って関数を連鎖\\\\n  fns.reduce((v, f) => f(v), ___);\\\\n\\\\n// パイプラインで関数を連結\\\\nconst ___ = pipe(\\\\n  // +1 する関数\\\\n  x => x ___ 1,\\\\n  // *2 する関数\\\\n  x => x ___ 2,\\\\n  // -3 する関数\\\\n  x => x ___ 3\\\\n___\\\\n// process(5)を出力\\\\nconsole.___(process(5));",
+        "correctCode": "// pipe関数を定義\\\\nconst pipe = (...fns) => x =>\\\\n  // reduce で累積値 v を使って関数を連鎖\\\\n  fns.reduce((v, f) => f(v), x);\\\\n\\\\n// パイプラインで関数を連結\\\\nconst process = pipe(\\\\n  // +1 する関数\\\\n  x => x + 1,\\\\n  // *2 する関数\\\\n  x => x * 2,\\\\n  // -3 する関数\\\\n  x => x - 3\\\\n);\\\\n// process(5)を出力\\\\nconsole.log(process(5));",
+        "holeyCode": "// pipe関数を定義\\\\nconst ___ = (...fns) => x =>\\\\n  // reduce で累積値 v を使って関数を連鎖\\\\n  fns.reduce((v, f) => f(v), ___);\\\\n\\\\n// パイプラインで関数を連結\\\\nconst ___ = pipe(\\\\n  // +1 する関数\\\\n  x => x ___ 1,\\\\n  // *2 する関数\\\\n  x => x ___ 2,\\\\n  // -3 する関数\\\\n  x => x ___ 3\\\\n___\\\\n// process(5)を出力\\\\nconsole.___(process(5));",
         "correctLines": [
-                  "// const でパイプライン関数を定義",
+                  "// pipe関数を定義",
                   "const pipe = (...fns) => x =>",
                   "  // reduce で累積値 v を使って関数を連鎖",
                   "  fns.reduce((v, f) => f(v), x);",

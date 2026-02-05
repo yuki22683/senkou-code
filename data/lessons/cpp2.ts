@@ -349,13 +349,13 @@ export const cpp2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\nclass Shape {\\\\npublic:\\\\n    // virtual で仮想関数を定義\\\\n    virtual void draw() {\\\\n        std::cout << \"shape\" << std::endl;\\\\n    }\\\\n};\\\\nclass Circle : public Shape {\\\\npublic:\\\\n    // override で上書き\\\\n    void draw() override {\\\\n        std::cout << \"circle\" << std::endl;\\\\n    }\\\\n};\\\\nint main() {\\\\n    Circle c;\\\\n    // draw() でメンバ関数を呼び出し\\\\n    c.draw();\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <iostream>\\\\nclass ___ {\\\\n___:\\\\n    // virtual で仮想関数を定義\\\\n    virtual void ___() {\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n___\\\\nclass ___ : public Shape {\\\\n___:\\\\n    // override で上書き\\\\n    void draw() ___ {\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n___\\\\nint ___() {\\\\n    Circle ___;\\\\n    // draw() でメンバ関数を呼び出し\\\\n    c.___();\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <iostream>\\\\nclass Shape {\\\\npublic:\\\\n    // virtual draw()を定義\\\\n    virtual void draw() {\\\\n        std::cout << \"shape\" << std::endl;\\\\n    }\\\\n};\\\\nclass Circle : public Shape {\\\\npublic:\\\\n    // override で上書き\\\\n    void draw() override {\\\\n        std::cout << \"circle\" << std::endl;\\\\n    }\\\\n};\\\\nint main() {\\\\n    Circle c;\\\\n    // draw() でメンバ関数を呼び出し\\\\n    c.draw();\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nclass ___ {\\\\n___:\\\\n    // virtual draw()を定義\\\\n    virtual void ___() {\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n___\\\\nclass ___ : public Shape {\\\\n___:\\\\n    // override で上書き\\\\n    void draw() ___ {\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n___\\\\nint ___() {\\\\n    Circle ___;\\\\n    // draw() でメンバ関数を呼び出し\\\\n    c.___();\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "class Shape {",
           "public:",
-          "    // virtual で仮想関数を定義",
+          "    // virtual draw()を定義",
           "    virtual void draw() {",
           "        std::cout << \"shape\" << std::endl;",
           "    }",
@@ -426,11 +426,11 @@ export const cpp2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\n// T で型パラメータを定義\\\\ntemplate<typename T>\\\\nT bigger(T a, T b) {\\\\n    if (a > b) return a;\\\\n    return b;\\\\n}\\\\nint main() {\\\\n    // bigger で大きい方を取得\\\\n    std::cout << bigger(3, 7) << std::endl;\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <iostream>\\\\n// T で型パラメータを定義\\\\ntemplate<typename ___>\\\\nT bigger(T a, T ___) {\\\\n    if (___ > b) return a;\\\\n    return ___;\\\\n___\\\\nint ___() {\\\\n    // bigger で大きい方を取得\\\\n    std::cout << bigger(___, 7) << std::endl;\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <iostream>\\\\n// 型パラメータTを定義\\\\ntemplate<typename T>\\\\nT bigger(T a, T b) {\\\\n    if (a > b) return a;\\\\n    return b;\\\\n}\\\\nint main() {\\\\n    // bigger で大きい方を取得\\\\n    std::cout << bigger(3, 7) << std::endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n// 型パラメータTを定義\\\\ntemplate<typename ___>\\\\nT bigger(T a, T ___) {\\\\n    if (___ > b) return a;\\\\n    return ___;\\\\n___\\\\nint ___() {\\\\n    // bigger で大きい方を取得\\\\n    std::cout << bigger(___, 7) << std::endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
-          "// T で型パラメータを定義",
+          "// 型パラメータTを定義",
           "template<typename T>",
           "T bigger(T a, T b) {",
           "    if (a > b) return a;",

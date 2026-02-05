@@ -255,10 +255,10 @@ export const javascriptData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// function で関数を定義\\\\nfunction process() {\\\\n  // try ブロック\\\\n  try {\\\\n    console.log('Processing...');\\\\n    // throw でエラーを投げる\\\\n    throw new Error('Error!');\\\\n  } catch (e) {\\\\n    // エラーメッセージを出力\\\\n    console.log('Caught:', e.message);\\\\n  // finally で常に実行されるブロック\\\\n  } finally {\\\\n    console.log('Cleanup done');\\\\n  }\\\\n}\\\\n// 関数を呼び出し\\\\nprocess();",
-        "holeyCode": "// function で関数を定義\\\\n___ process() {\\\\n  // try ブロック\\\\n  ___ {\\\\n    console.log('Processing...');\\\\n    // throw でエラーを投げる\\\\n    ___ new Error('Error!');\\\\n  } catch (e) {\\\\n    // エラーメッセージを出力\\\\n    console.log('Caught:', e.___);\\\\n  // finally で常に実行されるブロック\\\\n  } ___ {\\\\n    console.log('Cleanup done');\\\\n  }\\\\n}\\\\n// 関数を呼び出し\\\\n___();",
+        "correctCode": "// process関数を定義\\\\nfunction process() {\\\\n  // try ブロック\\\\n  try {\\\\n    console.log('Processing...');\\\\n    // throw でエラーを投げる\\\\n    throw new Error('Error!');\\\\n  } catch (e) {\\\\n    // エラーメッセージを出力\\\\n    console.log('Caught:', e.message);\\\\n  // finally で常に実行されるブロック\\\\n  } finally {\\\\n    console.log('Cleanup done');\\\\n  }\\\\n}\\\\n// 関数を呼び出し\\\\nprocess();",
+        "holeyCode": "// process関数を定義\\\\n___ process() {\\\\n  // try ブロック\\\\n  ___ {\\\\n    console.log('Processing...');\\\\n    // throw でエラーを投げる\\\\n    ___ new Error('Error!');\\\\n  } catch (e) {\\\\n    // エラーメッセージを出力\\\\n    console.log('Caught:', e.___);\\\\n  // finally で常に実行されるブロック\\\\n  } ___ {\\\\n    console.log('Cleanup done');\\\\n  }\\\\n}\\\\n// 関数を呼び出し\\\\n___();",
         "correctLines": [
-          "// function で関数を定義",
+          "// process関数を定義",
           "function process() {",
           "  // try ブロック",
           "  try {",

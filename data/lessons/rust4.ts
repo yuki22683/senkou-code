@@ -22,10 +22,10 @@ export const rust4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// trait でトレイトを定義\\\\ntrait Speak {\\\\n    fn speak(&self) -> String;\\\\n}\\\\n\\\\nstruct Dog;\\\\n\\\\nimpl Speak for Dog {\\\\n    fn speak(&self) -> String {\\\\n        String::from(\"Woof!\")\\\\n    }\\\\n}\\\\n\\\\nfn main() {\\\\n    let dog = Dog;\\\\n    println!(\"{}\", dog.speak());\\\\n}",
-        "holeyCode": "// trait でトレイトを定義\\\\ntrait ___ {\\\\n    fn ___ (&self) -> String;\\\\n___\\\\n\\\\nstruct ___;\\\\n\\\\nimpl ___ for ___ {\\\\n    fn ___ (&self) -> String {\\\\n        String::___(\"Woof!\")\\\\n    ___\\\\n___\\\\n\\\\nfn ___ () {\\\\n    let ___ = Dog;\\\\n    ___!(\"{}\", dog.speak());\\\\n___",
+        "correctCode": "// Speakトレイトを定義\\\\ntrait Speak {\\\\n    fn speak(&self) -> String;\\\\n}\\\\n\\\\nstruct Dog;\\\\n\\\\nimpl Speak for Dog {\\\\n    fn speak(&self) -> String {\\\\n        String::from(\"Woof!\")\\\\n    }\\\\n}\\\\n\\\\nfn main() {\\\\n    let dog = Dog;\\\\n    println!(\"{}\", dog.speak());\\\\n}",
+        "holeyCode": "// Speakトレイトを定義\\\\ntrait ___ {\\\\n    fn ___ (&self) -> String;\\\\n___\\\\n\\\\nstruct ___;\\\\n\\\\nimpl ___ for ___ {\\\\n    fn ___ (&self) -> String {\\\\n        String::___(\"Woof!\")\\\\n    ___\\\\n___\\\\n\\\\nfn ___ () {\\\\n    let ___ = Dog;\\\\n    ___!(\"{}\", dog.speak());\\\\n___",
         "correctLines": [
-          "// trait でトレイトを定義",
+          "// Speakトレイトを定義",
           "trait Speak {",
           "    fn speak(&self) -> String;",
           "}",

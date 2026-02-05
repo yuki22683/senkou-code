@@ -178,8 +178,8 @@ export const go4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\\\\n\\\\nimport (\\\\n    \"context\"\\\\n    \"fmt\"\\\\n)\\\\n\\\\nfunc main() {\\\\n    // Background でルートコンテキストを作成\\\\n    ctx := context.Background()\\\\n    // Err でエラーを取得\\\\n    fmt.Println(ctx.Err())\\\\n}",
-        "holeyCode": "package ___\\\\n\\\\nimport ___\\\\n    \"___\"\\\\n    \\\"___\\\"\\\\n___\\\\n\\\\nfunc ___ () {\\\\n    // Background でルートコンテキストを作成\\\\n    ___ := context.Background()\\\\n    // Err でエラーを取得\\\\n    fmt.___(ctx.Err())\\\\n___",
+        "correctCode": "package main\\\\n\\\\nimport (\\\\n    \"context\"\\\\n    \"fmt\"\\\\n)\\\\n\\\\nfunc main() {\\\\n    // ctxにcontext.Background()を代入\\\\n    ctx := context.Background()\\\\n    // Err でエラーを取得\\\\n    fmt.Println(ctx.Err())\\\\n}",
+        "holeyCode": "package ___\\\\n\\\\nimport ___\\\\n    \"___\"\\\\n    \\\"___\\\"\\\\n___\\\\n\\\\nfunc ___ () {\\\\n    // ctxにcontext.Background()を代入\\\\n    ___ := context.Background()\\\\n    // Err でエラーを取得\\\\n    fmt.___(ctx.Err())\\\\n___",
         "correctLines": [
                   "package main",
                   "",
@@ -189,7 +189,7 @@ export const go4Data = {
                   ")",
                   "",
                   "func main() {",
-                  "    // Background でルートコンテキストを作成",
+                  "    // ctxにcontext.Background()を代入",
                   "    ctx := context.Background()",
                   "    // Err でエラーを取得",
                   "    fmt.Println(ctx.Err())",

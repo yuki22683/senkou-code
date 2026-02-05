@@ -34,10 +34,10 @@ export const kotlin4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// sealed で継承を制限する\\\\nsealed class Shape\\\\n// Circle クラスを定義する\\\\nclass Circle(val radius: Double) : Shape()\\\\n// Rectangle クラスを定義する\\\\nclass Rectangle(val w: Double, val h: Double) : Shape()\\\\n\\\\n// 面積を計算する関数\\\\nfun area(s: Shape): Double = when (s) {\\\\n    // Circle の場合 (radius * radius)\\\\n    is Circle -> 3.14 * s.radius * s.radius\\\\n    // Rectangle の場合 (w * h)\\\\n    is Rectangle -> s.w * s.h\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // area を出力する\\\\n    println(area(Circle(2.0)))\\\\n}",
-        "holeyCode": "// sealed で継承を制限する\\\\nsealed class ___\\\\n// Circle クラスを定義する\\\\nclass ___(val radius: Double) : Shape()\\\\n// Rectangle クラスを定義する\\\\nclass ___(val w: Double, val h: Double) : Shape()\\\\n\\\\n// 面積を計算する関数\\\\nfun area(___: Shape): Double = when (s) {\\\\n    // Circle の場合 (radius * radius)\\\\n    is Circle -> ___.14 * s.radius * s.radius\\\\n    // Rectangle の場合 (w * h)\\\\n    is Rectangle -> s.w * s.___\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // area を出力する\\\\n    ___(area(Circle(2.0)))\\\\n___",
+        "correctCode": "// Shapeをsealed classで定義\\\\nsealed class Shape\\\\n// Circle クラスを定義する\\\\nclass Circle(val radius: Double) : Shape()\\\\n// Rectangle クラスを定義する\\\\nclass Rectangle(val w: Double, val h: Double) : Shape()\\\\n\\\\n// 面積を計算する関数\\\\nfun area(s: Shape): Double = when (s) {\\\\n    // Circle の場合 (radius * radius)\\\\n    is Circle -> 3.14 * s.radius * s.radius\\\\n    // Rectangle の場合 (w * h)\\\\n    is Rectangle -> s.w * s.h\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // area を出力する\\\\n    println(area(Circle(2.0)))\\\\n}",
+        "holeyCode": "// Shapeをsealed classで定義\\\\nsealed class ___\\\\n// Circle クラスを定義する\\\\nclass ___(val radius: Double) : Shape()\\\\n// Rectangle クラスを定義する\\\\nclass ___(val w: Double, val h: Double) : Shape()\\\\n\\\\n// 面積を計算する関数\\\\nfun area(___: Shape): Double = when (s) {\\\\n    // Circle の場合 (radius * radius)\\\\n    is Circle -> ___.14 * s.radius * s.radius\\\\n    // Rectangle の場合 (w * h)\\\\n    is Rectangle -> s.w * s.___\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // area を出力する\\\\n    ___(area(Circle(2.0)))\\\\n___",
         "correctLines": [
-                  "// sealed で継承を制限する",
+                  "// Shapeをsealed classで定義",
                   "sealed class Shape",
                   "// Circle クラスを定義する",
                   "class Circle(val radius: Double) : Shape()",
@@ -123,10 +123,10 @@ export const kotlin4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// object でシングルトンを定義する\\\\nobject Counter {\\\\n    // count を初期化する\\\\n    private var count = 0\\\\n    // increment 関数を定義する\\\\n    fun increment() { count++ }\\\\n    // get 関数を定義する\\\\n    fun get() = count\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // 1回目の increment を呼び出す\\\\n    Counter.increment()\\\\n    // 2回目の increment を呼び出す\\\\n    Counter.increment()\\\\n    // get を出力する\\\\n    println(Counter.get())\\\\n}",
-        "holeyCode": "// object でシングルトンを定義する\\\\nobject ___ {\\\\n    // count を初期化する\\\\n    private var count = ___\\\\n    // increment 関数を定義する\\\\n    fun increment() { ___++ }\\\\n    // get 関数を定義する\\\\n    fun get() = ___\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // 1回目の increment を呼び出す\\\\n    Counter.___()\\\\n    // 2回目の increment を呼び出す\\\\n    Counter.___()\\\\n    // get を出力する\\\\n    ___(Counter.get())\\\\n___",
+        "correctCode": "// Counterシングルトンを定義\\\\nobject Counter {\\\\n    // count を初期化する\\\\n    private var count = 0\\\\n    // increment 関数を定義する\\\\n    fun increment() { count++ }\\\\n    // get 関数を定義する\\\\n    fun get() = count\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // 1回目の increment を呼び出す\\\\n    Counter.increment()\\\\n    // 2回目の increment を呼び出す\\\\n    Counter.increment()\\\\n    // get を出力する\\\\n    println(Counter.get())\\\\n}",
+        "holeyCode": "// Counterシングルトンを定義\\\\nobject ___ {\\\\n    // count を初期化する\\\\n    private var count = ___\\\\n    // increment 関数を定義する\\\\n    fun increment() { ___++ }\\\\n    // get 関数を定義する\\\\n    fun get() = ___\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // 1回目の increment を呼び出す\\\\n    Counter.___()\\\\n    // 2回目の increment を呼び出す\\\\n    Counter.___()\\\\n    // get を出力する\\\\n    ___(Counter.get())\\\\n___",
         "correctLines": [
-                  "// object でシングルトンを定義する",
+                  "// Counterシングルトンを定義",
                   "object Counter {",
                   "    // count を初期化する",
                   "    private var count = 0",
@@ -210,12 +210,12 @@ export const kotlin4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Config クラスを定義する\\\\nclass Config {\\\\n    // lazy で遅延初期化する\\\\n    val value: Int by lazy {\\\\n        // \"Init\" を出力する\\\\n        println(\"Init\")\\\\n        // 42 を返す\\\\n        42\\\\n    }\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // Config のインスタンスを作成する\\\\n    val c = Config()\\\\n    // \"Created\" を出力する\\\\n    println(\"Created\")\\\\n    // c.value を出力する\\\\n    println(c.value)\\\\n}",
-        "holeyCode": "// Config クラスを定義する\\\\nclass ___ {\\\\n    // lazy で遅延初期化する\\\\n    val value: Int by ___ {\\\\n        // \"Init\" を出力する\\\\n        ___(\"Init\")\\\\n        // 42 を返す\\\\n        ___\\\\n    ___\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // Config のインスタンスを作成する\\\\n    val c = ___()\\\\n    // \"Created\" を出力する\\\\n    ___(\"Created\")\\\\n    // c.value を出力する\\\\n    ___(c.value)\\\\n___",
+        "correctCode": "// Config クラスを定義する\\\\nclass Config {\\\\n    // valueをlazyで遅延初期化\\\\n    val value: Int by lazy {\\\\n        // \"Init\" を出力する\\\\n        println(\"Init\")\\\\n        // 42 を返す\\\\n        42\\\\n    }\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // Config のインスタンスを作成する\\\\n    val c = Config()\\\\n    // \"Created\" を出力する\\\\n    println(\"Created\")\\\\n    // c.value を出力する\\\\n    println(c.value)\\\\n}",
+        "holeyCode": "// Config クラスを定義する\\\\nclass ___ {\\\\n    // valueをlazyで遅延初期化\\\\n    val value: Int by ___ {\\\\n        // \"Init\" を出力する\\\\n        ___(\"Init\")\\\\n        // 42 を返す\\\\n        ___\\\\n    ___\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // Config のインスタンスを作成する\\\\n    val c = ___()\\\\n    // \"Created\" を出力する\\\\n    ___(\"Created\")\\\\n    // c.value を出力する\\\\n    ___(c.value)\\\\n___",
         "correctLines": [
                   "// Config クラスを定義する",
                   "class Config {",
-                  "    // lazy で遅延初期化する",
+                  "    // valueをlazyで遅延初期化",
                   "    val value: Int by lazy {",
                   "        // \"Init\" を出力する",
                   "        println(\"Init\")",
@@ -299,12 +299,12 @@ export const kotlin4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Service クラスを定義する\\\\nclass Service {\\\\n    // lateinit で後から初期化を宣言する\\\\n    lateinit var config: String\\\\n    \\\\n    // setup 関数を定義する\\\\n    fun setup(c: String) { config = c }\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // Service のインスタンスを作成する\\\\n    val s = Service()\\\\n    // setup を呼び出す\\\\n    s.setup(\"OK\")\\\\n    // s.config を出力する\\\\n    println(s.config)\\\\n}",
-        "holeyCode": "// Service クラスを定義する\\\\nclass ___ {\\\\n    // lateinit で後から初期化を宣言する\\\\n    lateinit var config: ___\\\\n    \\\\n    // setup 関数を定義する\\\\n    fun setup(___: String) { config = c }\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // Service のインスタンスを作成する\\\\n    val s = ___()\\\\n    // setup を呼び出す\\\\n    s.setup(\"___\")\\\\n    // s.config を出力する\\\\n    ___(s.config)\\\\n___",
+        "correctCode": "// Service クラスを定義する\\\\nclass Service {\\\\n    // configをlateinitで宣言\\\\n    lateinit var config: String\\\\n    \\\\n    // setup 関数を定義する\\\\n    fun setup(c: String) { config = c }\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // Service のインスタンスを作成する\\\\n    val s = Service()\\\\n    // setup を呼び出す\\\\n    s.setup(\"OK\")\\\\n    // s.config を出力する\\\\n    println(s.config)\\\\n}",
+        "holeyCode": "// Service クラスを定義する\\\\nclass ___ {\\\\n    // configをlateinitで宣言\\\\n    lateinit var config: ___\\\\n    \\\\n    // setup 関数を定義する\\\\n    fun setup(___: String) { config = c }\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // Service のインスタンスを作成する\\\\n    val s = ___()\\\\n    // setup を呼び出す\\\\n    s.setup(\"___\")\\\\n    // s.config を出力する\\\\n    ___(s.config)\\\\n___",
         "correctLines": [
                   "// Service クラスを定義する",
                   "class Service {",
-                  "    // lateinit で後から初期化を宣言する",
+                  "    // configをlateinitで宣言",
                   "    lateinit var config: String",
                   "    ",
                   "    // setup 関数を定義する",
@@ -384,10 +384,10 @@ export const kotlin4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// inline でインライン展開する\\\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\\\n    // 0 から times まで繰り返す\\\\n    for (i in 0 until times) {\\\\n        // action を呼び出す\\\\n        action(i)\\\\n    }\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // repeat を呼び出す\\\\n    repeat(3) { println(it) }\\\\n}",
-        "holeyCode": "// inline でインライン展開する\\\\ninline fun repeat(times: Int, action: (Int) -> ___) {\\\\n    // 0 から times まで繰り返す\\\\n    for (i in ___ until times) {\\\\n        // action を呼び出す\\\\n        action(___)\\\\n    ___\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // repeat を呼び出す\\\\n    repeat(___) { println(it) }\\\\n___",
+        "correctCode": "// repeat関数をinlineで定義\\\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\\\n    // 0 から times まで繰り返す\\\\n    for (i in 0 until times) {\\\\n        // action を呼び出す\\\\n        action(i)\\\\n    }\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // repeat を呼び出す\\\\n    repeat(3) { println(it) }\\\\n}",
+        "holeyCode": "// repeat関数をinlineで定義\\\\ninline fun repeat(times: Int, action: (Int) -> ___) {\\\\n    // 0 から times まで繰り返す\\\\n    for (i in ___ until times) {\\\\n        // action を呼び出す\\\\n        action(___)\\\\n    ___\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // repeat を呼び出す\\\\n    repeat(___) { println(it) }\\\\n___",
         "correctLines": [
-          "// inline でインライン展開する",
+          "// repeat関数をinlineで定義",
           "inline fun repeat(times: Int, action: (Int) -> Unit) {",
           "    // 0 から times まで繰り返す",
           "    for (i in 0 until times) {",
@@ -461,10 +461,10 @@ export const kotlin4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// reified で型情報を保持する\\\\ninline fun <reified T> typeOf(): String {\\\\n    // 型名を返す\\\\n    return T::class.simpleName ?: \"Unknown\"\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // typeOf<String>() を出力する\\\\n    println(typeOf<String>())\\\\n}",
-        "holeyCode": "// reified で型情報を保持する\\\\ninline fun <reified T> typeOf(): ___ {\\\\n    // 型名を返す\\\\n    return T::class.simpleName ?: \"___\"\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // typeOf<String>() を出力する\\\\n    ___(typeOf<String>())\\\\n___",
+        "correctCode": "// typeOf関数をreifiedで定義\\\\ninline fun <reified T> typeOf(): String {\\\\n    // 型名を返す\\\\n    return T::class.simpleName ?: \"Unknown\"\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // typeOf<String>() を出力する\\\\n    println(typeOf<String>())\\\\n}",
+        "holeyCode": "// typeOf関数をreifiedで定義\\\\ninline fun <reified T> typeOf(): ___ {\\\\n    // 型名を返す\\\\n    return T::class.simpleName ?: \"___\"\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // typeOf<String>() を出力する\\\\n    ___(typeOf<String>())\\\\n___",
         "correctLines": [
-                  "// reified で型情報を保持する",
+                  "// typeOf関数をreifiedで定義",
                   "inline fun <reified T> typeOf(): String {",
                   "    // 型名を返す",
                   "    return T::class.simpleName ?: \"Unknown\"",
@@ -749,10 +749,10 @@ export const kotlin4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// typealias で型に別名をつける\\\\ntypealias StringList = List<String>\\\\n\\\\n// printAll 関数を定義する\\\\nfun printAll(items: StringList) {\\\\n    // forEach で各要素を出力する\\\\n    items.forEach { println(it) }\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // printAll を呼び出す\\\\n    printAll(listOf(\"A\", \"B\", \"C\"))\\\\n}",
-        "holeyCode": "// typealias で型に別名をつける\\\\ntypealias StringList = List<___>\\\\n\\\\n// printAll 関数を定義する\\\\nfun printAll(items: ___) {\\\\n    // forEach で各要素を出力する\\\\n    items.forEach { println(___) }\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // printAll を呼び出す\\\\n    printAll(listOf(\"___\", \"B\", \"C\"))\\\\n___",
+        "correctCode": "// StringList型エイリアスを定義\\\\ntypealias StringList = List<String>\\\\n\\\\n// printAll 関数を定義する\\\\nfun printAll(items: StringList) {\\\\n    // forEach で各要素を出力する\\\\n    items.forEach { println(it) }\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // printAll を呼び出す\\\\n    printAll(listOf(\"A\", \"B\", \"C\"))\\\\n}",
+        "holeyCode": "// StringList型エイリアスを定義\\\\ntypealias StringList = List<___>\\\\n\\\\n// printAll 関数を定義する\\\\nfun printAll(items: ___) {\\\\n    // forEach で各要素を出力する\\\\n    items.forEach { println(___) }\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // printAll を呼び出す\\\\n    printAll(listOf(\"___\", \"B\", \"C\"))\\\\n___",
         "correctLines": [
-                  "// typealias で型に別名をつける",
+                  "// StringList型エイリアスを定義",
                   "typealias StringList = List<String>",
                   "",
                   "// printAll 関数を定義する",

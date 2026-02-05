@@ -173,10 +173,10 @@ export const rust2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// struct で構造体を定義\\\\nstruct Rect {\\\\n    width: i32,\\\\n    height: i32,\\\\n}\\\\nfn main() {\\\\n    let r = Rect { width: 3, height: 4 };\\\\n    println!(\"{}\", r.width);\\\\n}",
-        "holeyCode": "// struct で構造体を定義\\\\nstruct ___ {\\\\n    width: ___,\\\\n    height: ___,\\\\n___\\\\nfn ___ () {\\\\n    let ___ = Rect { width: 3, height: 4 };\\\\n    ___!(\"{}\", r.width);\\\\n___",
+        "correctCode": "// Rect構造体を定義\\\\nstruct Rect {\\\\n    width: i32,\\\\n    height: i32,\\\\n}\\\\nfn main() {\\\\n    let r = Rect { width: 3, height: 4 };\\\\n    println!(\"{}\", r.width);\\\\n}",
+        "holeyCode": "// Rect構造体を定義\\\\nstruct ___ {\\\\n    width: ___,\\\\n    height: ___,\\\\n___\\\\nfn ___ () {\\\\n    let ___ = Rect { width: 3, height: 4 };\\\\n    ___!(\"{}\", r.width);\\\\n___",
         "correctLines": [
-          "// struct で構造体を定義",
+          "// Rect構造体を定義",
           "struct Rect {",
           "    width: i32,",
           "    height: i32,",
@@ -287,10 +287,10 @@ export const rust2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// enum で列挙型を定義\\\\nenum Direction {\\\\n    Up,\\\\n    Down,\\\\n}\\\\nfn main() {\\\\n    let d = Direction::Up;\\\\n    match d {\\\\n        Direction::Up => println!(\"up\"),\\\\n        Direction::Down => println!(\"down\"),\\\\n    }\\\\n}",
-        "holeyCode": "// enum で列挙型を定義\\\\nenum ___ {\\\\n    ___,\\\\n    ___,\\\\n___\\\\nfn ___ () {\\\\n    let ___ = Direction::Up;\\\\n    match ___ {\\\\n        Direction::Up => ___!(\"up\"),\\\\n        Direction::Down => ___!(\"down\"),\\\\n    ___\\\\n___",
+        "correctCode": "// Direction列挙型を定義\\\\nenum Direction {\\\\n    Up,\\\\n    Down,\\\\n}\\\\nfn main() {\\\\n    let d = Direction::Up;\\\\n    match d {\\\\n        Direction::Up => println!(\"up\"),\\\\n        Direction::Down => println!(\"down\"),\\\\n    }\\\\n}",
+        "holeyCode": "// Direction列挙型を定義\\\\nenum ___ {\\\\n    ___,\\\\n    ___,\\\\n___\\\\nfn ___ () {\\\\n    let ___ = Direction::Up;\\\\n    match ___ {\\\\n        Direction::Up => ___!(\"up\"),\\\\n        Direction::Down => ___!(\"down\"),\\\\n    ___\\\\n___",
         "correctLines": [
-          "// enum で列挙型を定義",
+          "// Direction列挙型を定義",
           "enum Direction {",
           "    Up,",
           "    Down,",
@@ -458,10 +458,10 @@ export const rust2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// trait でトレイトを定義\\\\ntrait Speak {\\\\n    fn speak(&self);\\\\n}\\\\nstruct Dog;\\\\nimpl Speak for Dog {\\\\n    fn speak(&self) {\\\\n        println!(\"woof\");\\\\n    }\\\\n}\\\\nfn main() {\\\\n    let d = Dog;\\\\n    d.speak();\\\\n}",
-        "holeyCode": "// trait でトレイトを定義\\\\ntrait ___ {\\\\n    fn ___ (&self);\\\\n___\\\\nstruct ___;\\\\nimpl ___ for ___ {\\\\n    fn ___ (&self) {\\\\n        ___!(\"woof\");\\\\n    ___\\\\n___\\\\nfn ___ () {\\\\n    let ___ = Dog;\\\\n    d.___();\\\\n___",
+        "correctCode": "// Speakトレイトを定義\\\\ntrait Speak {\\\\n    fn speak(&self);\\\\n}\\\\nstruct Dog;\\\\nimpl Speak for Dog {\\\\n    fn speak(&self) {\\\\n        println!(\"woof\");\\\\n    }\\\\n}\\\\nfn main() {\\\\n    let d = Dog;\\\\n    d.speak();\\\\n}",
+        "holeyCode": "// Speakトレイトを定義\\\\ntrait ___ {\\\\n    fn ___ (&self);\\\\n___\\\\nstruct ___;\\\\nimpl ___ for ___ {\\\\n    fn ___ (&self) {\\\\n        ___!(\"woof\");\\\\n    ___\\\\n___\\\\nfn ___ () {\\\\n    let ___ = Dog;\\\\n    d.___();\\\\n___",
         "correctLines": [
-          "// trait でトレイトを定義",
+          "// Speakトレイトを定義",
           "trait Speak {",
           "    fn speak(&self);",
           "}",

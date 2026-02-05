@@ -414,12 +414,12 @@ export const c4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <stdio.h>\\\\n\\\\n// enum で列挙型を定義\\\\nenum Day { MON, TUE, WED, THU, FRI };\\\\n\\\\nint main() {\\\\n    enum Day today = WED;\\\\n    printf(\"%d\\\\n\", today);\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <stdio.h>\\\\n\\\\n// enum で列挙型を定義\\\\nenum Day { MON, TUE, WED, THU, ___ };\\\\n\\\\nint ___() {\\\\n    enum Day today = ___;\\\\n    printf(\"%d\\\\n\", today);\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <stdio.h>\\\\n\\\\n// Day列挙型を定義\\\\nenum Day { MON, TUE, WED, THU, FRI };\\\\n\\\\nint main() {\\\\n    enum Day today = WED;\\\\n    printf(\"%d\\\\n\", today);\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <stdio.h>\\\\n\\\\n// Day列挙型を定義\\\\nenum Day { MON, TUE, WED, THU, ___ };\\\\n\\\\nint ___() {\\\\n    enum Day today = ___;\\\\n    printf(\"%d\\\\n\", today);\\\\n    return ___;\\\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
-                  "// enum で列挙型を定義",
+                  "// Day列挙型を定義",
                   "enum Day { MON, TUE, WED, THU, FRI };",
                   "",
                   "int main() {",
@@ -471,12 +471,12 @@ export const c4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <stdio.h>\\\\n\\\\n// union で共用体を定義\\\\nunion Value {\\\\n    int i;\\\\n    double d;\\\\n};\\\\n\\\\nint main() {\\\\n    union Value v;\\\\n    v.i = 42;\\\\n    printf(\"%d\\\\n\", v.i);\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <stdio.h>\\\\n\\\\n// union で共用体を定義\\\\nunion ___ {\\\\n    int ___;\\\\n    double ___;\\\\n___\\\\n\\\\nint ___() {\\\\n    union Value ___;\\\\n    v.i = ___;\\\\n    printf(\"%d\\\\n\", v.i);\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <stdio.h>\\\\n\\\\n// Value共用体を定義\\\\nunion Value {\\\\n    int i;\\\\n    double d;\\\\n};\\\\n\\\\nint main() {\\\\n    union Value v;\\\\n    v.i = 42;\\\\n    printf(\"%d\\\\n\", v.i);\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <stdio.h>\\\\n\\\\n// Value共用体を定義\\\\nunion ___ {\\\\n    int ___;\\\\n    double ___;\\\\n___\\\\n\\\\nint ___() {\\\\n    union Value ___;\\\\n    v.i = ___;\\\\n    printf(\"%d\\\\n\", v.i);\\\\n    return ___;\\\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
-                  "// union で共用体を定義",
+                  "// Value共用体を定義",
                   "union Value {",
                   "    int i;",
                   "    double d;",

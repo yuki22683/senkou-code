@@ -181,11 +181,11 @@ export const javascriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// awaitでPromiseを待つ\\\\n// async で非同期関数を宣言\\\\nasync function main() {\\\\n  // await でPromiseの結果を待つ\\\\n  const value = await Promise.resolve(100);\\\\n  // console.log で出力\\\\n  console.log(value);\\\\n}\\\\n\\\\n// main() で関数を呼び出す\\\\nmain();",
-        "holeyCode": "// awaitでPromiseを待つ\\\\n// async で非同期関数を宣言\\\\n___ function main() {\\\\n  // await でPromiseの結果を待つ\\\\n  const value = ___ Promise.resolve(100);\\\\n  // console.log で出力\\\\n  console.___(value);\\\\n}\\\\n\\\\n// main() で関数を呼び出す\\\\n___();",
+        "correctCode": "// awaitでPromiseを待つ\\\\n// async main()を宣言\\\\nasync function main() {\\\\n  // await でPromiseの結果を待つ\\\\n  const value = await Promise.resolve(100);\\\\n  // console.log で出力\\\\n  console.log(value);\\\\n}\\\\n\\\\n// main() で関数を呼び出す\\\\nmain();",
+        "holeyCode": "// awaitでPromiseを待つ\\\\n// async main()を宣言\\\\n___ function main() {\\\\n  // await でPromiseの結果を待つ\\\\n  const value = ___ Promise.resolve(100);\\\\n  // console.log で出力\\\\n  console.___(value);\\\\n}\\\\n\\\\n// main() で関数を呼び出す\\\\n___();",
         "correctLines": [
           "// awaitでPromiseを待つ",
-          "// async で非同期関数を宣言",
+          "// async main()を宣言",
           "async function main() {",
           "  // await でPromiseの結果を待つ",
           "  const value = await Promise.resolve(100);",

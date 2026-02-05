@@ -587,13 +587,13 @@ export const cpp4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\nusing namespace std;\\\\n\\\\n// noexcept で例外を投げないことを宣言\\\\nint add(int a, int b) noexcept {\\\\n    // + で足し算\\\\n    return a + b;\\\\n}\\\\n\\\\nint main() {\\\\n    cout << add(10, 20) << endl;\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <iostream>\\\\nusing namespace ___;\\\\n\\\\n// noexcept で例外を投げないことを宣言\\\\nint add(int a, int b) ___ {\\\\n    // + で足し算\\\\n    return a + ___;\\\\n___\\\\n\\\\nint ___() {\\\\n    cout << add(___, 20) << endl;\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <iostream>\\\\nusing namespace std;\\\\n\\\\n// add関数をnoexceptで宣言\\\\nint add(int a, int b) noexcept {\\\\n    // + で足し算\\\\n    return a + b;\\\\n}\\\\n\\\\nint main() {\\\\n    cout << add(10, 20) << endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nusing namespace ___;\\\\n\\\\n// add関数をnoexceptで宣言\\\\nint add(int a, int b) ___ {\\\\n    // + で足し算\\\\n    return a + ___;\\\\n___\\\\n\\\\nint ___() {\\\\n    cout << add(___, 20) << endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
                   "#include <iostream>",
                   "using namespace std;",
                   "",
-                  "// noexcept で例外を投げないことを宣言",
+                  "// add関数をnoexceptで宣言",
                   "int add(int a, int b) noexcept {",
                   "    // + で足し算",
                   "    return a + b;",

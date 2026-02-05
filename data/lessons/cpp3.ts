@@ -391,8 +391,8 @@ export const cpp3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\n#include <string>\\\\n#include <utility>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // string で文字列を作成\\\\n    string s1 = \"Hello\";\\\\n    // move で所有権を移動\\\\n    string s2 = move(s1);\\\\n    cout << s2 << endl;\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <iostream>\\\\n#include <string>\\\\n#include <utility>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // string で文字列を作成\\\\n    string s1 = \"___\";\\\\n    // move で所有権を移動\\\\n    string s___ = move(s1);\\\\n    cout << s___ << endl;\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <iostream>\\\\n#include <string>\\\\n#include <utility>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // s1に\"Hello\"を代入\\\\n    string s1 = \"Hello\";\\\\n    // move で所有権を移動\\\\n    string s2 = move(s1);\\\\n    cout << s2 << endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n#include <string>\\\\n#include <utility>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // s1に\"Hello\"を代入\\\\n    string s1 = \"___\";\\\\n    // move で所有権を移動\\\\n    string s___ = move(s1);\\\\n    cout << s___ << endl;\\\\n    return ___;\\\\n___",
         "correctLines": [
                   "#include <iostream>",
                   "#include <string>",
@@ -400,7 +400,7 @@ export const cpp3Data = {
                   "using namespace std;",
                   "",
                   "int main() {",
-                  "    // string で文字列を作成",
+                  "    // s1に\"Hello\"を代入",
                   "    string s1 = \"Hello\";",
                   "    // move で所有権を移動",
                   "    string s2 = move(s1);",
@@ -517,15 +517,15 @@ export const cpp3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\n#include <array>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // array で固定長配列を定義\\\\n    array<int, 3> arr = {10, 20, 30};\\\\n    // : で範囲for文\\\\n    for (int n : arr) cout << n << \" \";\\\\n    cout << endl;\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <iostream>\\\\n#include <array>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // array で固定長配列を定義\\\\n    array<int, ___> arr = {10, 20, 30};\\\\n    // : で範囲for文\\\\n    for (int ___ : arr) cout << n << \" \";\\\\n    cout << ___;\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <iostream>\\\\n#include <array>\\\\nusing namespace std;\\\\n\\\\nint main() {\\\\n    // arrに{10, 20, 30}を代入\\\\n    array<int, 3> arr = {10, 20, 30};\\\\n    // : で範囲for文\\\\n    for (int n : arr) cout << n << \" \";\\\\n    cout << endl;\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n#include <array>\\\\nusing namespace ___;\\\\n\\\\nint ___() {\\\\n    // arrに{10, 20, 30}を代入\\\\n    array<int, ___> arr = {10, 20, 30};\\\\n    // : で範囲for文\\\\n    for (int ___ : arr) cout << n << \" \";\\\\n    cout << ___;\\\\n    return ___;\\\\n___",
         "correctLines": [
                   "#include <iostream>",
                   "#include <array>",
                   "using namespace std;",
                   "",
                   "int main() {",
-                  "    // array で固定長配列を定義",
+                  "    // arrに{10, 20, 30}を代入",
                   "    array<int, 3> arr = {10, 20, 30};",
                   "    // : で範囲for文",
                   "    for (int n : arr) cout << n << \" \";",

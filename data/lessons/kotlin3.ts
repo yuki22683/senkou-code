@@ -34,13 +34,13 @@ export const kotlin3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// coroutines をインポートする\\\\nimport kotlinx.coroutines.*\\\\n\\\\n// suspend で一時停止可能な関数にする\\\\nsuspend fun getMessage(): String {\\\\n    // 100ミリ秒待機する\\\\n    delay(100)\\\\n    // \"Hello\" を返す\\\\n    return \"Hello\"\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() = runBlocking {\\\\n    // getMessage() を出力する\\\\n    println(getMessage())\\\\n}",
-        "holeyCode": "// coroutines をインポートする\\\\nimport kotlinx.___.*\\\\n\\\\n// suspend で一時停止可能な関数にする\\\\nsuspend fun getMessage(): ___ {\\\\n    // 100ミリ秒待機する\\\\n    delay(___)\\\\n    // \"Hello\" を返す\\\\n    return \"___\"\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun main() = ___ {\\\\n    // getMessage() を出力する\\\\n    ___(getMessage())\\\\n___",
+        "correctCode": "// coroutines をインポートする\\\\nimport kotlinx.coroutines.*\\\\n\\\\n// getMessage関数をsuspendで定義\\\\nsuspend fun getMessage(): String {\\\\n    // 100ミリ秒待機する\\\\n    delay(100)\\\\n    // \"Hello\" を返す\\\\n    return \"Hello\"\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() = runBlocking {\\\\n    // getMessage() を出力する\\\\n    println(getMessage())\\\\n}",
+        "holeyCode": "// coroutines をインポートする\\\\nimport kotlinx.___.*\\\\n\\\\n// getMessage関数をsuspendで定義\\\\nsuspend fun getMessage(): ___ {\\\\n    // 100ミリ秒待機する\\\\n    delay(___)\\\\n    // \"Hello\" を返す\\\\n    return \"___\"\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun main() = ___ {\\\\n    // getMessage() を出力する\\\\n    ___(getMessage())\\\\n___",
         "correctLines": [
                   "// coroutines をインポートする",
                   "import kotlinx.coroutines.*",
                   "",
-                  "// suspend で一時停止可能な関数にする",
+                  "// getMessage関数をsuspendで定義",
                   "suspend fun getMessage(): String {",
                   "    // 100ミリ秒待機する",
                   "    delay(100)",
@@ -186,10 +186,10 @@ export const kotlin3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// inline で関数をインライン化する\\\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\\\n    // 0 から times まで繰り返す\\\\n    for (i in 0 until times) action(i)\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // repeat を呼び出す\\\\n    repeat(3) { println(it) }\\\\n}",
-        "holeyCode": "// inline で関数をインライン化する\\\\ninline fun repeat(times: Int, action: (Int) -> ___) {\\\\n    // 0 から times まで繰り返す\\\\n    for (i in ___ until times) action(i)\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // repeat を呼び出す\\\\n    repeat(___) { println(it) }\\\\n___",
+        "correctCode": "// repeat関数をinlineで定義\\\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\\\n    // 0 から times まで繰り返す\\\\n    for (i in 0 until times) action(i)\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // repeat を呼び出す\\\\n    repeat(3) { println(it) }\\\\n}",
+        "holeyCode": "// repeat関数をinlineで定義\\\\ninline fun repeat(times: Int, action: (Int) -> ___) {\\\\n    // 0 から times まで繰り返す\\\\n    for (i in ___ until times) action(i)\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // repeat を呼び出す\\\\n    repeat(___) { println(it) }\\\\n___",
         "correctLines": [
-                  "// inline で関数をインライン化する",
+                  "// repeat関数をinlineで定義",
                   "inline fun repeat(times: Int, action: (Int) -> Unit) {",
                   "    // 0 から times まで繰り返す",
                   "    for (i in 0 until times) action(i)",
@@ -257,10 +257,10 @@ export const kotlin3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// reified で実行時に型情報を使う\\\\ninline fun <reified T> checkType(value: Any): Boolean {\\\\n    // value が T 型かチェックする\\\\n    return value is T\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // String 型かチェックする\\\\n    println(checkType<String>(\"test\"))\\\\n    // Int 型かチェックする\\\\n    println(checkType<Int>(\"test\"))\\\\n}",
-        "holeyCode": "// reified で実行時に型情報を使う\\\\ninline fun <reified T> checkType(value: Any): ___ {\\\\n    // value が T 型かチェックする\\\\n    return value is ___\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // String 型かチェックする\\\\n    ___(checkType<String>(\"test\"))\\\\n    // Int 型かチェックする\\\\n    ___(checkType<Int>(\"test\"))\\\\n___",
+        "correctCode": "// checkType関数をreifiedで定義\\\\ninline fun <reified T> checkType(value: Any): Boolean {\\\\n    // value が T 型かチェックする\\\\n    return value is T\\\\n}\\\\n\\\\n// main 関数を定義する\\\\nfun main() {\\\\n    // String 型かチェックする\\\\n    println(checkType<String>(\"test\"))\\\\n    // Int 型かチェックする\\\\n    println(checkType<Int>(\"test\"))\\\\n}",
+        "holeyCode": "// checkType関数をreifiedで定義\\\\ninline fun <reified T> checkType(value: Any): ___ {\\\\n    // value が T 型かチェックする\\\\n    return value is ___\\\\n___\\\\n\\\\n// main 関数を定義する\\\\nfun ___() {\\\\n    // String 型かチェックする\\\\n    ___(checkType<String>(\"test\"))\\\\n    // Int 型かチェックする\\\\n    ___(checkType<Int>(\"test\"))\\\\n___",
         "correctLines": [
-                  "// reified で実行時に型情報を使う",
+                  "// checkType関数をreifiedで定義",
                   "inline fun <reified T> checkType(value: Any): Boolean {",
                   "    // value が T 型かチェックする",
                   "    return value is T",

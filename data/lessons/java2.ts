@@ -600,11 +600,11 @@ export const javaData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "class Calculator {\\\\n    // static でクラスメソッドを定義する\\\\n    static int multiply(int a, int b) {\\\\n        // a * b を返す\\\\n        return a * b;\\\\n    }\\\\n}\\\\n\\\\nclass Main {\\\\n    public static void main(String[] args) {\\\\n        // multiply メソッドを呼び出す\\\\n        int result = Calculator.multiply(4, 5);\\\\n        // println で出力する\\\\n        System.out.println(result);\\\\n    }\\\\n}",
-        "holeyCode": "class ___ {\\\\n    // static でクラスメソッドを定義する\\\\n    static int multiply(int a, int ___) {\\\\n        // a * b を返す\\\\n        return a * ___;\\\\n    ___\\\\n___\\\\n\\\\nclass ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // multiply メソッドを呼び出す\\\\n        int result = Calculator.multiply(___, 5);\\\\n        // println で出力する\\\\n        System.out.___(result);\\\\n    ___\\\\n___",
+        "correctCode": "class Calculator {\\\\n    // static multiply()を定義\\\\n    static int multiply(int a, int b) {\\\\n        // a * b を返す\\\\n        return a * b;\\\\n    }\\\\n}\\\\n\\\\nclass Main {\\\\n    public static void main(String[] args) {\\\\n        // multiply メソッドを呼び出す\\\\n        int result = Calculator.multiply(4, 5);\\\\n        // println で出力する\\\\n        System.out.println(result);\\\\n    }\\\\n}",
+        "holeyCode": "class ___ {\\\\n    // static multiply()を定義\\\\n    static int multiply(int a, int ___) {\\\\n        // a * b を返す\\\\n        return a * ___;\\\\n    ___\\\\n___\\\\n\\\\nclass ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // multiply メソッドを呼び出す\\\\n        int result = Calculator.multiply(___, 5);\\\\n        // println で出力する\\\\n        System.out.___(result);\\\\n    ___\\\\n___",
         "correctLines": [
           "class Calculator {",
-          "    // static でクラスメソッドを定義する",
+          "    // static multiply()を定義",
           "    static int multiply(int a, int b) {",
           "        // a * b を返す",
           "        return a * b;",

@@ -177,10 +177,10 @@ export const kotlin2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// data でデータクラスを定義する\\\\ndata class Point(val x: Int, val y: Int)\\\\n// Point のインスタンスを作成する\\\\nval p = Point(3, 4)\\\\n// p を出力する\\\\nprintln(p)",
-        "holeyCode": "// data でデータクラスを定義する\\\\ndata class Point(val x: ___, val y: Int)\\\\n// Point のインスタンスを作成する\\\\nval p = Point(___, 4)\\\\n// p を出力する\\\\nprintln(___)",
+        "correctCode": "// Pointデータクラスを定義\\\\ndata class Point(val x: Int, val y: Int)\\\\n// Point のインスタンスを作成する\\\\nval p = Point(3, 4)\\\\n// p を出力する\\\\nprintln(p)",
+        "holeyCode": "// Pointデータクラスを定義\\\\ndata class Point(val x: ___, val y: Int)\\\\n// Point のインスタンスを作成する\\\\nval p = Point(___, 4)\\\\n// p を出力する\\\\nprintln(___)",
         "correctLines": [
-          "// data でデータクラスを定義する",
+          "// Pointデータクラスを定義",
           "data class Point(val x: Int, val y: Int)",
           "// Point のインスタンスを作成する",
           "val p = Point(3, 4)",

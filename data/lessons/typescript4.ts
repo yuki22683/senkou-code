@@ -22,10 +22,10 @@ export const typescriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// is で型ガードの戻り値型を定義\\\\nfunction isNumber(x: unknown): x is number {\\\\n  // typeofで型をチェック\\\\n  return typeof x === 'number';\\\\n}\\\\n\\\\n// unknown型の値\\\\nconst value: unknown = 42;\\\\n// 型ガードでチェック\\\\nif (isNumber(value)) {\\\\n  // 数値として計算\\\\n  console.log(value * 2);\\\\n}",
-        "holeyCode": "// is で型ガードの戻り値型を定義\\\\nfunction isNumber(x: unknown): x ___ number {\\\\n  // typeofで型をチェック\\\\n  return typeof x === ___;\\\\n}\\\\n\\\\n// unknown型の値\\\\nconst value: unknown = ___;\\\\n// 型ガードでチェック\\\\nif (isNumber(___)) {\\\\n  // 数値として計算\\\\n  console.log(value * ___);\\\\n}",
+        "correctCode": "// isNumber型ガード関数を定義\\\\nfunction isNumber(x: unknown): x is number {\\\\n  // typeofで型をチェック\\\\n  return typeof x === 'number';\\\\n}\\\\n\\\\n// unknown型の値\\\\nconst value: unknown = 42;\\\\n// 型ガードでチェック\\\\nif (isNumber(value)) {\\\\n  // 数値として計算\\\\n  console.log(value * 2);\\\\n}",
+        "holeyCode": "// isNumber型ガード関数を定義\\\\nfunction isNumber(x: unknown): x ___ number {\\\\n  // typeofで型をチェック\\\\n  return typeof x === ___;\\\\n}\\\\n\\\\n// unknown型の値\\\\nconst value: unknown = ___;\\\\n// 型ガードでチェック\\\\nif (isNumber(___)) {\\\\n  // 数値として計算\\\\n  console.log(value * ___);\\\\n}",
         "correctLines": [
-          "// is で型ガードの戻り値型を定義",
+          "// isNumber型ガード関数を定義",
           "function isNumber(x: unknown): x is number {",
           "  // typeofで型をチェック",
           "  return typeof x === 'number';",
@@ -582,8 +582,8 @@ export const typescriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "function greet(name: string, age: number): void {\\\\n  // テンプレート文字列で出力\\\\n  console.log(`${name} is ${age}`);\\\\n}\\\\n// Parameters で関数の引数型を取得\\\\ntype GreetParams = Parameters<typeof greet>;\\\\n// 引数の配列を定義\\\\nconst args: GreetParams = ['Taro', 25];\\\\n// 引数の配列 args を渡して呼び出し\\\\ngreet(...args);",
-        "holeyCode": "function greet(name: string, age: number): void {\\\\n  // テンプレート文字列で出力\\\\n  console.log(`${name} is ${___}`);\\\\n}\\\\n// Parameters で関数の引数型を取得\\\\ntype GreetParams = ___<typeof greet>;\\\\n// 引数の配列を定義\\\\nconst args: GreetParams = ['Taro', ___];\\\\n// 引数の配列 args を渡して呼び出し\\\\ngreet(...___);",
+        "correctCode": "function greet(name: string, age: number): void {\\\\n  // テンプレート文字列で出力\\\\n  console.log(`${name} is ${age}`);\\\\n}\\\\n// Parameters で関数の引数型を取得\\\\ntype GreetParams = Parameters<typeof greet>;\\\\n// argsに['Taro', 25]を代入\\\\nconst args: GreetParams = ['Taro', 25];\\\\n// 引数の配列 args を渡して呼び出し\\\\ngreet(...args);",
+        "holeyCode": "function greet(name: string, age: number): void {\\\\n  // テンプレート文字列で出力\\\\n  console.log(`${name} is ${___}`);\\\\n}\\\\n// Parameters で関数の引数型を取得\\\\ntype GreetParams = ___<typeof greet>;\\\\n// argsに['Taro', 25]を代入\\\\nconst args: GreetParams = ['Taro', ___];\\\\n// 引数の配列 args を渡して呼び出し\\\\ngreet(...___);",
         "correctLines": [
           "function greet(name: string, age: number): void {",
           "  // テンプレート文字列で出力",
@@ -591,7 +591,7 @@ export const typescriptData4 = {
           "}",
           "// Parameters で関数の引数型を取得",
           "type GreetParams = Parameters<typeof greet>;",
-          "// 引数の配列を定義",
+          "// argsに['Taro', 25]を代入",
           "const args: GreetParams = ['Taro', 25];",
           "// 引数の配列 args を渡して呼び出し",
           "greet(...args);"
@@ -643,15 +643,15 @@ export const typescriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Promiseの型を定義\\\\ntype AsyncResult = Promise<{ data: string }>;\\\\n// Awaited でPromiseの解決型を取得\\\\ntype Result = Awaited<AsyncResult>;\\\\n\\\\n// 結果オブジェクトを作成\\\\nconst result: Result = { data: 'success' };\\\\n// データを出力\\\\nconsole.log(result.data);",
-        "holeyCode": "// Promiseの型を定義\\\\ntype AsyncResult = Promise<{ data: ___ }>;\\\\n// Awaited でPromiseの解決型を取得\\\\ntype Result = ___<AsyncResult>;\\\\n\\\\n// 結果オブジェクトを作成\\\\nconst result: Result = { data: ___ };\\\\n// データを出力\\\\nconsole.log(result.___);",
+        "correctCode": "// AsyncResult型を定義\\\\ntype AsyncResult = Promise<{ data: string }>;\\\\n// Awaited でPromiseの解決型を取得\\\\ntype Result = Awaited<AsyncResult>;\\\\n\\\\n// resultに{data: 'success'}を代入\\\\nconst result: Result = { data: 'success' };\\\\n// データを出力\\\\nconsole.log(result.data);",
+        "holeyCode": "// AsyncResult型を定義\\\\ntype AsyncResult = Promise<{ data: ___ }>;\\\\n// Awaited でPromiseの解決型を取得\\\\ntype Result = ___<AsyncResult>;\\\\n\\\\n// resultに{data: 'success'}を代入\\\\nconst result: Result = { data: ___ };\\\\n// データを出力\\\\nconsole.log(result.___);",
         "correctLines": [
-          "// Promiseの型を定義",
+          "// AsyncResult型を定義",
           "type AsyncResult = Promise<{ data: string }>;",
           "// Awaited でPromiseの解決型を取得",
           "type Result = Awaited<AsyncResult>;",
           "",
-          "// 結果オブジェクトを作成",
+          "// resultに{data: 'success'}を代入",
           "const result: Result = { data: 'success' };",
           "// データを出力",
           "console.log(result.data);"

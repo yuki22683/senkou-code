@@ -532,10 +532,10 @@ export const javaData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// enum で列挙型を定義する\\\\nenum Day {\\\\n    MON, TUE, WED, THU, FRI, SAT, SUN\\\\n}\\\\n\\\\npublic class Main {\\\\n    public static void main(String[] args) {\\\\n        // Day.MON で列挙値を取得する\\\\n        Day today = Day.MON;\\\\n        // println で出力する\\\\n        System.out.println(today);\\\\n    }\\\\n}",
-        "holeyCode": "// enum で列挙型を定義する\\\\nenum ___ {\\\\n    ___\\\\n___\\\\n\\\\npublic class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // Day.MON で列挙値を取得する\\\\n        Day today = Day.___;\\\\n        // println で出力する\\\\n        System.out.___(today);\\\\n    ___\\\\n___",
+        "correctCode": "// Day列挙型を定義\\\\nenum Day {\\\\n    MON, TUE, WED, THU, FRI, SAT, SUN\\\\n}\\\\n\\\\npublic class Main {\\\\n    public static void main(String[] args) {\\\\n        // Day.MON で列挙値を取得する\\\\n        Day today = Day.MON;\\\\n        // println で出力する\\\\n        System.out.println(today);\\\\n    }\\\\n}",
+        "holeyCode": "// Day列挙型を定義\\\\nenum ___ {\\\\n    ___\\\\n___\\\\n\\\\npublic class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // Day.MON で列挙値を取得する\\\\n        Day today = Day.___;\\\\n        // println で出力する\\\\n        System.out.___(today);\\\\n    ___\\\\n___",
         "correctLines": [
-          "// enum で列挙型を定義する",
+          "// Day列挙型を定義",
           "enum Day {",
           "    MON, TUE, WED, THU, FRI, SAT, SUN",
           "}",

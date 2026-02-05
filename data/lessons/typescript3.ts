@@ -22,8 +22,8 @@ export const typescriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "interface Config {\\\\n  // ホスト名の型\\\\n  host: string;\\\\n  // ポート番号の型\\\\n  port: number;\\\\n}\\\\n// Partial で全プロパティをオプショナルに\\\\nfunction update(config: Config, patch: Partial<Config>): Config {\\\\n  return { ...config, ...patch };\\\\n}\\\\n\\\\n// 設定オブジェクトを作成\\\\nconst cfg = { host: 'localhost', port: 3000 };\\\\n// 更新してポートを出力\\\\nconsole.log(update(cfg, { port: 8080 }).port);",
-        "holeyCode": "interface ___ {\\\\n  // ホスト名の型\\\\n  host: ___;\\\\n  // ポート番号の型\\\\n  port: ___;\\\\n___\\\\n// Partial で全プロパティをオプショナルに\\\\nfunction update(config: ___, patch: Partial<Config>): Config {\\\\n  return { ...config, ...___ };\\\\n___\\\\n\\\\n// 設定オブジェクトを作成\\\\nconst ___ = { host: 'localhost', port: 3000 };\\\\n// 更新してポートを出力\\\\nconsole.___(update(cfg, { port: 8080 }).port);",
+        "correctCode": "interface Config {\\\\n  // ホスト名の型\\\\n  host: string;\\\\n  // ポート番号の型\\\\n  port: number;\\\\n}\\\\n// Partial で全プロパティをオプショナルに\\\\nfunction update(config: Config, patch: Partial<Config>): Config {\\\\n  return { ...config, ...patch };\\\\n}\\\\n\\\\n// cfgに{host: 'localhost', port: 3000}を代入\\\\nconst cfg = { host: 'localhost', port: 3000 };\\\\n// 更新してポートを出力\\\\nconsole.log(update(cfg, { port: 8080 }).port);",
+        "holeyCode": "interface ___ {\\\\n  // ホスト名の型\\\\n  host: ___;\\\\n  // ポート番号の型\\\\n  port: ___;\\\\n___\\\\n// Partial で全プロパティをオプショナルに\\\\nfunction update(config: ___, patch: Partial<Config>): Config {\\\\n  return { ...config, ...___ };\\\\n___\\\\n\\\\n// cfgに{host: 'localhost', port: 3000}を代入\\\\nconst ___ = { host: 'localhost', port: 3000 };\\\\n// 更新してポートを出力\\\\nconsole.___(update(cfg, { port: 8080 }).port);",
         "correctLines": [
           "interface Config {",
           "  // ホスト名の型",
@@ -36,7 +36,7 @@ export const typescriptData3 = {
           "  return { ...config, ...patch };",
           "}",
           "",
-          "// 設定オブジェクトを作成",
+          "// cfgに{host: 'localhost', port: 3000}を代入",
           "const cfg = { host: 'localhost', port: 3000 };",
           "// 更新してポートを出力",
           "console.log(update(cfg, { port: 8080 }).port);"
@@ -355,8 +355,8 @@ export const typescriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "function createPoint() {\\\\n  // 座標オブジェクトを返す\\\\n  return { x: 10, y: 20 };\\\\n}\\\\n// ReturnType で戻り値の型を取得\\\\ntype Point = ReturnType<typeof createPoint>;\\\\n\\\\n// Pointオブジェクトを作成\\\\nconst p: Point = { x: 5, y: 15 };\\\\n// 座標の合計を出力\\\\nconsole.log(p.x + p.y);",
-        "holeyCode": "function ___() {\\\\n  // 座標オブジェクトを返す\\\\n  return { x: ___, y: 20 };\\\\n___\\\\n// ReturnType で戻り値の型を取得\\\\ntype Point = ReturnType<typeof ___>;\\\\n\\\\n// Pointオブジェクトを作成\\\\nconst p: Point = { x: ___, y: 15 };\\\\n// 座標の合計を出力\\\\nconsole.___(p.x + p.y);",
+        "correctCode": "function createPoint() {\\\\n  // 座標オブジェクトを返す\\\\n  return { x: 10, y: 20 };\\\\n}\\\\n// ReturnType で戻り値の型を取得\\\\ntype Point = ReturnType<typeof createPoint>;\\\\n\\\\n// pに{x: 5, y: 15}を代入\\\\nconst p: Point = { x: 5, y: 15 };\\\\n// 座標の合計を出力\\\\nconsole.log(p.x + p.y);",
+        "holeyCode": "function ___() {\\\\n  // 座標オブジェクトを返す\\\\n  return { x: ___, y: 20 };\\\\n___\\\\n// ReturnType で戻り値の型を取得\\\\ntype Point = ReturnType<typeof ___>;\\\\n\\\\n// pに{x: 5, y: 15}を代入\\\\nconst p: Point = { x: ___, y: 15 };\\\\n// 座標の合計を出力\\\\nconsole.___(p.x + p.y);",
         "correctLines": [
           "function createPoint() {",
           "  // 座標オブジェクトを返す",
@@ -365,7 +365,7 @@ export const typescriptData3 = {
           "// ReturnType で戻り値の型を取得",
           "type Point = ReturnType<typeof createPoint>;",
           "",
-          "// Pointオブジェクトを作成",
+          "// pに{x: 5, y: 15}を代入",
           "const p: Point = { x: 5, y: 15 };",
           "// 座標の合計を出力",
           "console.log(p.x + p.y);"
@@ -414,10 +414,10 @@ export const typescriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// extends で条件型を定義\\\\ntype IsArray<T> = T extends any[] ? true : false;\\\\n\\\\n// 配列型をチェック\\\\ntype A = IsArray<number[]>;\\\\n// 非配列型をチェック\\\\ntype B = IsArray<string>;\\\\n\\\\n// aに配列判定結果を代入\\\\nconst a: A = true;\\\\n// bに非配列判定結果を代入\\\\nconst b: B = false;\\\\n// aとbを出力\\\\nconsole.log(a, b);",
-        "holeyCode": "// extends で条件型を定義\\\\ntype IsArray<T> = T extends any[] ? true : ___;\\\\n\\\\n// 配列型をチェック\\\\ntype A = IsArray<___[]>;\\\\n// 非配列型をチェック\\\\ntype B = IsArray<___>;\\\\n\\\\n// aに配列判定結果を代入\\\\nconst a: A = ___;\\\\n// bに非配列判定結果を代入\\\\nconst b: B = ___;\\\\n// aとbを出力\\\\nconsole.___(a, b);",
+        "correctCode": "// IsArray条件型を定義\\\\ntype IsArray<T> = T extends any[] ? true : false;\\\\n\\\\n// 配列型をチェック\\\\ntype A = IsArray<number[]>;\\\\n// 非配列型をチェック\\\\ntype B = IsArray<string>;\\\\n\\\\n// aに配列判定結果を代入\\\\nconst a: A = true;\\\\n// bに非配列判定結果を代入\\\\nconst b: B = false;\\\\n// aとbを出力\\\\nconsole.log(a, b);",
+        "holeyCode": "// IsArray条件型を定義\\\\ntype IsArray<T> = T extends any[] ? true : ___;\\\\n\\\\n// 配列型をチェック\\\\ntype A = IsArray<___[]>;\\\\n// 非配列型をチェック\\\\ntype B = IsArray<___>;\\\\n\\\\n// aに配列判定結果を代入\\\\nconst a: A = ___;\\\\n// bに非配列判定結果を代入\\\\nconst b: B = ___;\\\\n// aとbを出力\\\\nconsole.___(a, b);",
         "correctLines": [
-          "// extends で条件型を定義",
+          "// IsArray条件型を定義",
           "type IsArray<T> = T extends any[] ? true : false;",
           "",
           "// 配列型をチェック",
@@ -544,8 +544,8 @@ export const typescriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "interface Person {\\\\n  // 名前の型\\\\n  name: string;\\\\n  // 年齢の型\\\\n  age: number;\\\\n}\\\\n// keyof でオブジェクトのキーを取得\\\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\\\n  // キーで値を取得して返す\\\\n  return p[key];\\\\n}\\\\n\\\\n// Personオブジェクトを作成\\\\nconst person = { name: 'Bob', age: 30 };\\\\n// 名前を取得して出力\\\\nconsole.log(getProperty(person, 'name'));",
-        "holeyCode": "interface ___ {\\\\n  // 名前の型\\\\n  name: ___;\\\\n  // 年齢の型\\\\n  age: ___;\\\\n___\\\\n// keyof でオブジェクトのキーを取得\\\\nfunction getProperty<___ extends keyof Person>(p: Person, key: K) {\\\\n  // キーで値を取得して返す\\\\n  return p[___];\\\\n___\\\\n\\\\n// Personオブジェクトを作成\\\\nconst ___ = { name: 'Bob', age: 30 };\\\\n// 名前を取得して出力\\\\nconsole.___(getProperty(person, 'name'));",
+        "correctCode": "interface Person {\\\\n  // 名前の型\\\\n  name: string;\\\\n  // 年齢の型\\\\n  age: number;\\\\n}\\\\n// keyof でオブジェクトのキーを取得\\\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\\\n  // キーで値を取得して返す\\\\n  return p[key];\\\\n}\\\\n\\\\n// personに{name: 'Bob', age: 30}を代入\\\\nconst person = { name: 'Bob', age: 30 };\\\\n// 名前を取得して出力\\\\nconsole.log(getProperty(person, 'name'));",
+        "holeyCode": "interface ___ {\\\\n  // 名前の型\\\\n  name: ___;\\\\n  // 年齢の型\\\\n  age: ___;\\\\n___\\\\n// keyof でオブジェクトのキーを取得\\\\nfunction getProperty<___ extends keyof Person>(p: Person, key: K) {\\\\n  // キーで値を取得して返す\\\\n  return p[___];\\\\n___\\\\n\\\\n// personに{name: 'Bob', age: 30}を代入\\\\nconst ___ = { name: 'Bob', age: 30 };\\\\n// 名前を取得して出力\\\\nconsole.___(getProperty(person, 'name'));",
         "correctLines": [
           "interface Person {",
           "  // 名前の型",
@@ -559,7 +559,7 @@ export const typescriptData3 = {
           "  return p[key];",
           "}",
           "",
-          "// Personオブジェクトを作成",
+          "// personに{name: 'Bob', age: 30}を代入",
           "const person = { name: 'Bob', age: 30 };",
           "// 名前を取得して出力",
           "console.log(getProperty(person, 'name'));"
