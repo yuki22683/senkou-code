@@ -61,15 +61,15 @@ export const javascriptData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 正規表現パターンを定義\\nconst emailPattern = /\\w+@\\w+\\.\\w+/;\\n// test() で 'test@example.com' と 'invalid-email' をテスト\\nconsole.log(emailPattern.test('テスト@例.com'));\\n// 無効なメールをテスト\\nconsole.log(emailPattern.test('invalid-メール'));",
-        "holeyCode": "// 正規表現パターンを定義\\nconst emailPattern = ___\\w+@\\w+\\.\\w+/;\\n// test() で 'test@example.com' と 'invalid-email' をテスト\\nconsole.log(emailPattern.___)('テスト@例.com'));\\n// 無効なメールをテスト\\nconsole.log(emailPattern.test('___'));",
+        "correctCode": "// 正規表現パターンを定義\\nconst emailPattern = /\\w+@\\w+\\.\\w+/;\\n// test() で 'test@example.com' をテスト\\nconsole.log(emailPattern.test('test@example.com'));\\n// 無効なメールをテスト\\nconsole.log(emailPattern.test('invalid-email'));",
+        "holeyCode": "// 正規表現パターンを定義\\nconst emailPattern = ___\\w+@\\w+\\.\\w+/;\\n// test() で 'test@example.com' をテスト\\nconsole.log(emailPattern.___)('test@example.com'));\\n// 無効なメールをテスト\\nconsole.log(emailPattern.test('___'));",
         "correctLines": [
           "// 正規表現パターンを定義",
           "const emailPattern = /\\w+@\\w+\\.\\w+/;",
-          "// test() で 'test@example.com' と 'invalid-email' をテスト",
-          "console.log(emailPattern.test('テスト@例.com'));",
+          "// test() で 'test@example.com' をテスト",
+          "console.log(emailPattern.test('test@example.com'));",
           "// 無効なメールをテスト",
-          "console.log(emailPattern.test('invalid-メール'));"
+          "console.log(emailPattern.test('invalid-email'));"
         ],
         "lineHints": [
           null,
@@ -85,12 +85,12 @@ export const javascriptData5 = {
             "match(",
             "exec("
           ],
-          "others": ["/", "test('test@example.com'));", "invalid-email", "test('test@example.com'", "test('テスト@例.com'", "invalid-メール"]
+          "others": ["/", "test('test@example.com'));", "invalid-email", "test('test@example.com'"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "false\\nfalse\\n"
+            "expected_output": "true\\nfalse\\n"
           }
         ]
       },
