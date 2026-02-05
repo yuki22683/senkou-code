@@ -434,8 +434,8 @@ export const csharpData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// ageに10を入れる\\\\nint age = 10;\\\\n// 20歳以上かどうかで分ける\\\\nif (age >= 20)\\\\n{\\\\n    // 「大人」と出力\\\\n    Console.WriteLine(\"22Adult    Console.WriteLine(\"Adult\");\");\\\\n}\\\\n// else でそれ以外の場合\\\\nelse\\\\n{\\\\n    // 「子供」と出力\\\\n    Console.WriteLine(\"22Child    Console.WriteLine(\"Child\");\");\\\\n}",
-        "holeyCode": "// ageに10を入れる\\\\nint age = ___;\\\\n// 20歳以上かどうかで分ける\\\\nif (age ___ 20)\\\\n___\\\\n    // 「大人」と出力\\\\n    Console.___(\"16Adult    Console.___(\"Adult\");\");\\\\n___\\\\n// else でそれ以外の場合\\\\n___\\\\n___\\\\n    // 「子供」と出力\\\\n    Console.___(\"16Child    Console.___(\"Child\");\");\\\\n___",
+        "correctCode": "// ageに10を入れる\\\\nint age = 10;\\\\n// 20歳以上かどうかで分ける\\\\nif (age >= 20)\\\\n{\\\\n    // 「大人」と出力\\\\n    Console.WriteLine(\"22Adult    Console.WriteLine(\"Adult\");\");\\\\n}\\\\n// elseで20歳未満の場合の処理\\\\nelse\\\\n{\\\\n    // 「子供」と出力\\\\n    Console.WriteLine(\"22Child    Console.WriteLine(\"Child\");\");\\\\n}",
+        "holeyCode": "// ageに10を入れる\\\\nint age = ___;\\\\n// 20歳以上かどうかで分ける\\\\nif (age ___ 20)\\\\n___\\\\n    // 「大人」と出力\\\\n    Console.___(\"16Adult    Console.___(\"Adult\");\");\\\\n___\\\\n// elseで20歳未満の場合の処理\\\\n___\\\\n___\\\\n    // 「子供」と出力\\\\n    Console.___(\"16Child    Console.___(\"Child\");\");\\\\n___",
         "correctLines": [
           "// ageに10を入れる",
           "int age = 10;",
@@ -445,7 +445,7 @@ export const csharpData = {
           "    // 「大人」と出力",
           "    Console.WriteLine(\"22Adult    Console.WriteLine(\"Adult\");\");",
           "}",
-          "// else でそれ以外の場合",
+          "// elseで20歳未満の場合の処理",
           "else",
           "{",
           "    // 「子供」と出力",

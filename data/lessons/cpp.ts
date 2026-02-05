@@ -449,8 +449,8 @@ export const cppData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    // ageに10を入れる\\\\n    int age = 10;\\\\n    // 20以上かを比較する演算子\\\\n    if (age >= 20) {\\\\n        // 20歳以上のときのメッセージ（'Adult'）\\\\n        std::cout << \"Adult\" << std::endl;\\\\n    // else で「それ以外」\\\\n    } else {\\\\n        // それ以外のメッセージ（'Minor'）\\\\n        std::cout << \"Minor\" << std::endl;\\\\n    }\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    // ageに10を入れる\\\\n    int age = ___;\\\\n    // 20以上かを比較する演算子\\\\n    if (age ___ 20) {\\\\n        // 20歳以上のときのメッセージ（'Adult'）\\\\n        std::cout << ___ << std::endl;\\\\n    // else で「それ以外」\\\\n    } ___ {\\\\n        // それ以外のメッセージ（'Minor'）\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <iostream>\\\\nint main() {\\\\n    // ageに10を入れる\\\\n    int age = 10;\\\\n    // 20以上かを比較する演算子\\\\n    if (age >= 20) {\\\\n        // 20歳以上のときのメッセージ（'Adult'）\\\\n        std::cout << \"Adult\" << std::endl;\\\\n    // elseで20歳未満の場合の処理\\\\n    } else {\\\\n        // それ以外のメッセージ（'Minor'）\\\\n        std::cout << \"Minor\" << std::endl;\\\\n    }\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nint ___() {\\\\n    // ageに10を入れる\\\\n    int age = ___;\\\\n    // 20以上かを比較する演算子\\\\n    if (age ___ 20) {\\\\n        // 20歳以上のときのメッセージ（'Adult'）\\\\n        std::cout << ___ << std::endl;\\\\n    // elseで20歳未満の場合の処理\\\\n    } ___ {\\\\n        // それ以外のメッセージ（'Minor'）\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -460,7 +460,7 @@ export const cppData = {
           "    if (age >= 20) {",
           "        // 20歳以上のときのメッセージ（'Adult'）",
           "        std::cout << \"Adult\" << std::endl;",
-          "    // else で「それ以外」",
+          "    // elseで20歳未満の場合の処理",
           "    } else {",
           "        // それ以外のメッセージ（'Minor'）",
           "        std::cout << \"Minor\" << std::endl;",
@@ -578,14 +578,14 @@ export const cppData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\n#include <vector>\\\\nint main() {\\\\n    std::vector<int> nums = {1, 2, 3};\\\\n    // nums で配列を指定\\\\n    for (int n : nums) {\\\\n        std::cout << n << std::endl;\\\\n    }\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <iostream>\\\\n#include <vector>\\\\nint ___() {\\\\n    std::vector<int> nums = {___, 2, 3};\\\\n    // nums で配列を指定\\\\n    for (int ___ : nums) {\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <iostream>\\\\n#include <vector>\\\\nint main() {\\\\n    std::vector<int> nums = {1, 2, 3};\\\\n    // numsの各要素をnに代入して繰り返し\\\\n    for (int n : nums) {\\\\n        std::cout << n << std::endl;\\\\n    }\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\n#include <vector>\\\\nint ___() {\\\\n    std::vector<int> nums = {___, 2, 3};\\\\n    // numsの各要素をnに代入して繰り返し\\\\n    for (int ___ : nums) {\\\\n        std::cout << ___ << std::endl;\\\\n    ___\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <vector>",
           "int main() {",
           "    std::vector<int> nums = {1, 2, 3};",
-          "    // nums で配列を指定",
+          "    // numsの各要素をnに代入して繰り返し",
           "    for (int n : nums) {",
           "        std::cout << n << std::endl;",
           "    }",
@@ -690,15 +690,15 @@ export const cppData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\\\nvoid greet() {\\\\n    std::cout << \"Hello\" << std::endl;\\\\n}\\\\nint main() {\\\\n    // greet で関数を呼び出す\\\\n    greet();\\\\n    return 0;\\\\n}",
-        "holeyCode": "#include <iostream>\\\\nvoid ___() {\\\\n    std::cout << ___ << std::endl;\\\\n___\\\\nint ___() {\\\\n    // greet で関数を呼び出す\\\\n    ___();\\\\n    return ___;\\\\n___",
+        "correctCode": "#include <iostream>\\\\nvoid greet() {\\\\n    std::cout << \"Hello\" << std::endl;\\\\n}\\\\nint main() {\\\\n    // greet()を呼び出す\\\\n    greet();\\\\n    return 0;\\\\n}",
+        "holeyCode": "#include <iostream>\\\\nvoid ___() {\\\\n    std::cout << ___ << std::endl;\\\\n___\\\\nint ___() {\\\\n    // greet()を呼び出す\\\\n    ___();\\\\n    return ___;\\\\n___",
         "correctLines": [
           "#include <iostream>",
           "void greet() {",
           "    std::cout << \"Hello\" << std::endl;",
           "}",
           "int main() {",
-          "    // greet で関数を呼び出す",
+          "    // greet()を呼び出す",
           "    greet();",
           "    return 0;",
           "}"

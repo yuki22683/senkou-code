@@ -474,8 +474,8 @@ export const javaData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "public class Main {\\\\n    public static void main(String[] args) {\\\\n        // age に 10 を入れる\\\\n        int age = 10;\\\\n        // 20以上かを比較する演算子\\\\n        if (age >= 20) {\\\\n            // 20歳以上のときのメッセージ（'おとな'）\\\\n            System.out.println(\"31Adult            System.out.println(\"Adult\");\");\\\\n        // else でそれ以外の場合\\\\n        } else {\\\\n            // こども と表示する\\\\n            System.out.println(\"31Child            System.out.println(\"Child\");\");\\\\n        }\\\\n    }\\\\n}",
-        "holeyCode": "public class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // age に 10 を入れる\\\\n        int age = ___;\\\\n        // 20以上かを比較する演算子\\\\n        if (age ___ 20) {\\\\n            // 20歳以上のときのメッセージ（'おとな'）\\\\n            System.out.___(\"27Adult            System.out.___(\"Adult\");\");\\\\n        // else でそれ以外の場合\\\\n        } ___ {\\\\n            // こども と表示する\\\\n            System.out.___(\"27Child            System.out.___(\"Child\");\");\\\\n        ___\\\\n    ___\\\\n___",
+        "correctCode": "public class Main {\\\\n    public static void main(String[] args) {\\\\n        // age に 10 を入れる\\\\n        int age = 10;\\\\n        // 20以上かを比較する演算子\\\\n        if (age >= 20) {\\\\n            // 20歳以上のときのメッセージ（'おとな'）\\\\n            System.out.println(\"31Adult            System.out.println(\"Adult\");\");\\\\n        // elseで20歳未満の場合の処理\\\\n        } else {\\\\n            // こども と表示する\\\\n            System.out.println(\"31Child            System.out.println(\"Child\");\");\\\\n        }\\\\n    }\\\\n}",
+        "holeyCode": "public class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // age に 10 を入れる\\\\n        int age = ___;\\\\n        // 20以上かを比較する演算子\\\\n        if (age ___ 20) {\\\\n            // 20歳以上のときのメッセージ（'おとな'）\\\\n            System.out.___(\"27Adult            System.out.___(\"Adult\");\");\\\\n        // elseで20歳未満の場合の処理\\\\n        } ___ {\\\\n            // こども と表示する\\\\n            System.out.___(\"27Child            System.out.___(\"Child\");\");\\\\n        ___\\\\n    ___\\\\n___",
         "correctLines": [
           "public class Main {",
           "    public static void main(String[] args) {",
@@ -485,7 +485,7 @@ export const javaData = {
           "        if (age >= 20) {",
           "            // 20歳以上のときのメッセージ（'おとな'）",
           "            System.out.println(\"おとな\");",
-          "        // else でそれ以外の場合",
+          "        // elseで20歳未満の場合の処理",
           "        } else {",
           "            // こども と表示する",
           "            System.out.println(\"こども\");",

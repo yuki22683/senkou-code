@@ -344,12 +344,12 @@ export const javaData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "class Main {\\\\n    public static void main(String[] args) {\\\\n        // try で例外が起きる可能性のある処理を囲む\\\\n        try {\\\\n            // parseInt で文字列を整数に変換する\\\\n            int x = Integer.parseInt(\"abc\");\\\\n        } catch (Exception e) {\\\\n            System.out.println(\"Error\");\\\\n        }\\\\n    }\\\\n}",
-        "holeyCode": "class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // try で例外が起きる可能性のある処理を囲む\\\\n        ___ {\\\\n            // parseInt で文字列を整数に変換する\\\\n            int x = Integer.parseInt(\"___\");\\\\n        } ___ (Exception e) {\\\\n            System.out.___(\"Error\");\\\\n        ___\\\\n    ___\\\\n___",
+        "correctCode": "class Main {\\\\n    public static void main(String[] args) {\\\\n        // tryで例外をキャッチする準備\\\\n        try {\\\\n            // parseInt で文字列を整数に変換する\\\\n            int x = Integer.parseInt(\"abc\");\\\\n        } catch (Exception e) {\\\\n            System.out.println(\"Error\");\\\\n        }\\\\n    }\\\\n}",
+        "holeyCode": "class ___ {\\\\n    public static void ___\\(String[] args) {\\\\n        // tryで例外をキャッチする準備\\\\n        ___ {\\\\n            // parseInt で文字列を整数に変換する\\\\n            int x = Integer.parseInt(\"___\");\\\\n        } ___ (Exception e) {\\\\n            System.out.___(\"Error\");\\\\n        ___\\\\n    ___\\\\n___",
         "correctLines": [
           "class Main {",
           "    public static void main(String[] args) {",
-          "        // try で例外が起きる可能性のある処理を囲む",
+          "        // tryで例外をキャッチする準備",
           "        try {",
           "            // parseInt で文字列を整数に変換する",
           "            int x = Integer.parseInt(\"abc\");",

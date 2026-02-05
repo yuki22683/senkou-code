@@ -446,8 +446,8 @@ export const goData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // xに5を入れる\n    x := 5\n    // 10より大きいかを比較する演算子\n    if x > 10 {\n        // 10より大きいときのメッセージ（'Big'）\n        fmt.Println(\"Big\")\n    // else で「そうでなければ」\n    } else {\n        // それ以外のメッセージ（'Small'）\n        fmt.Println(\"Small\")\n    }\n}",
-        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // xに5を入れる\n    ___ := 5\n    // 10より大きいかを比較する演算子\n    if x ___ 10 {\n        // 10より大きいときのメッセージ（'Big'）\n        fmt.___(\"Big\")\n    // else で「そうでなければ」\n    } ___ {\n        // それ以外のメッセージ（'Small'）\n        fmt.___(\"Small\")\n    ___\n___",
+        "correctCode": "package main\nimport \"fmt\"\nfunc main() {\n    // xに5を入れる\n    x := 5\n    // 10より大きいかを比較する演算子\n    if x > 10 {\n        // 10より大きいときのメッセージ（'Big'）\n        fmt.Println(\"Big\")\n    // elseで10以下の場合の処理\n    } else {\n        // それ以外のメッセージ（'Small'）\n        fmt.Println(\"Small\")\n    }\n}",
+        "holeyCode": "package ___\nimport \\\"___\\\"\nfunc ___ () {\n    // xに5を入れる\n    ___ := 5\n    // 10より大きいかを比較する演算子\n    if x ___ 10 {\n        // 10より大きいときのメッセージ（'Big'）\n        fmt.___(\"Big\")\n    // elseで10以下の場合の処理\n    } ___ {\n        // それ以外のメッセージ（'Small'）\n        fmt.___(\"Small\")\n    ___\n___",
         "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -458,7 +458,7 @@ export const goData = {
           "    if x > 10 {",
           "        // 10より大きいときのメッセージ（'Big'）",
           "        fmt.Println(\"Big\")",
-          "    // else で「そうでなければ」",
+          "    // elseで10以下の場合の処理",
           "    } else {",
           "        // それ以外のメッセージ（'Small'）",
           "        fmt.Println(\"Small\")",
