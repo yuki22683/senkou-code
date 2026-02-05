@@ -6,7 +6,15 @@
       "Bash(where:*)",
       "Bash(git add .claude/ .claude_settings.json nul)",
       "Bash(git commit:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(grep:*)",
+      "Bash(xargs -I {} sh -c 'echo \"\"=== {} ===\"\" && grep -A2 \"\"\\\\\"\"title\\\\\"\":\"\" {} | head -50')",
+      "Bash(npm run seed:db:*)",
+      "Bash(npx tsx:*)",
+      "Bash(node:*)",
+      "Bash(git push)",
+      "Bash(npx tsc:*)",
+      "Bash(ls:*)"
     ]
   }
 }

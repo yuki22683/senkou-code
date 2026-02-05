@@ -1,1 +1,272 @@
-[]
+[
+  {
+    "file": "bash3.ts",
+    "exerciseIndex": 9,
+    "exerciseTitle": "sort で並べ替え",
+    "correctLineIdx": 1,
+    "correctLine": "echo -e \\\"banana",
+    "holeyLine": "echo -e \\\"banana",
+    "language": "bash"
+  },
+  {
+    "file": "bash3.ts",
+    "exerciseIndex": 9,
+    "exerciseTitle": "sort で並べ替え",
+    "correctLineIdx": 3,
+    "correctLine": "cherry\\\" | sort",
+    "holeyLine": "cherry\\\" | sort",
+    "language": "bash"
+  },
+  {
+    "file": "bash3.ts",
+    "exerciseIndex": 10,
+    "exerciseTitle": "uniq で重複を除去",
+    "correctLineIdx": 1,
+    "correctLine": "echo -e \\\"a",
+    "holeyLine": "echo -e \\\"a",
+    "language": "bash"
+  },
+  {
+    "file": "bash3.ts",
+    "exerciseIndex": 10,
+    "exerciseTitle": "uniq で重複を除去",
+    "correctLineIdx": 4,
+    "correctLine": "b\\\" | sort | uniq",
+    "holeyLine": "b\\\" | sort | uniq",
+    "language": "bash"
+  },
+  {
+    "file": "go.ts",
+    "exerciseIndex": 6,
+    "exerciseTitle": "文章の中に「はこ」を入れましょう",
+    "correctLineIdx": 7,
+    "correctLine": "\\\", age)",
+    "holeyLine": "\\\", age)",
+    "language": "go"
+  },
+  {
+    "file": "perl.ts",
+    "exerciseIndex": 1,
+    "exerciseTitle": "画面に文字を出してみましょう",
+    "correctLineIdx": 2,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl.ts",
+    "exerciseIndex": 2,
+    "exerciseTitle": "変数を使ってみましょう",
+    "correctLineIdx": 3,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl.ts",
+    "exerciseIndex": 3,
+    "exerciseTitle": "計算をしてみましょう",
+    "correctLineIdx": 6,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl.ts",
+    "exerciseIndex": 4,
+    "exerciseTitle": "文字をつなげましょう",
+    "correctLineIdx": 3,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl.ts",
+    "exerciseIndex": 5,
+    "exerciseTitle": "配列を使いましょう",
+    "correctLineIdx": 4,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl.ts",
+    "exerciseIndex": 6,
+    "exerciseTitle": "if文で条件分岐しましょう",
+    "correctLineIdx": 5,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl.ts",
+    "exerciseIndex": 7,
+    "exerciseTitle": "if-elseを使いましょう",
+    "correctLineIdx": 4,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl.ts",
+    "exerciseIndex": 7,
+    "exerciseTitle": "if-elseを使いましょう",
+    "correctLineIdx": 8,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl.ts",
+    "exerciseIndex": 8,
+    "exerciseTitle": "foreachでループしましょう",
+    "correctLineIdx": 6,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl.ts",
+    "exerciseIndex": 9,
+    "exerciseTitle": "ハッシュを使いましょう",
+    "correctLineIdx": 3,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl.ts",
+    "exerciseIndex": 10,
+    "exerciseTitle": "サブルーチンを作りましょう",
+    "correctLineIdx": 3,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 1,
+    "exerciseTitle": "ファイルを開こう",
+    "correctLineIdx": 3,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 1,
+    "exerciseTitle": "ファイルを開こう",
+    "correctLineIdx": 6,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 2,
+    "exerciseTitle": "ファイルを閉じよう",
+    "correctLineIdx": 2,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 2,
+    "exerciseTitle": "ファイルを閉じよう",
+    "correctLineIdx": 6,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 3,
+    "exerciseTitle": "chomp で改行を除去",
+    "correctLineIdx": 1,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 3,
+    "exerciseTitle": "chomp で改行を除去",
+    "correctLineIdx": 5,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 4,
+    "exerciseTitle": "split で文字列を分割",
+    "correctLineIdx": 4,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 5,
+    "exerciseTitle": "join で配列を結合",
+    "correctLineIdx": 4,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 6,
+    "exerciseTitle": "push で配列に追加",
+    "correctLineIdx": 4,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 7,
+    "exerciseTitle": "pop で配列から取り出す",
+    "correctLineIdx": 4,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 8,
+    "exerciseTitle": "sort で配列を並べ替え",
+    "correctLineIdx": 4,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 9,
+    "exerciseTitle": "reverse で配列を逆順に",
+    "correctLineIdx": 4,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "perl3.ts",
+    "exerciseIndex": 10,
+    "exerciseTitle": "length で文字列の長さ",
+    "correctLineIdx": 4,
+    "correctLine": "\\\";",
+    "holeyLine": "\\\";",
+    "language": "perl"
+  },
+  {
+    "file": "python5.ts",
+    "exerciseIndex": 2,
+    "exerciseTitle": "ファイルを1行ずつ読む",
+    "correctLineIdx": 3,
+    "correctLine": "    f.write('line1\\\\nline2\\\\nline3')",
+    "holeyLine": "    f.write('line1\\\\nline2\\\\nline3')",
+    "language": "python"
+  }
+]

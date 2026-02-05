@@ -259,6 +259,7 @@
      - 空チェック: `grep -n '"expected_output": ""' data/lessons/*.ts | grep -v assembly`
      - 形式チェック: 同じ言語の既存ファイル（例: php.ts, php2.ts）の配列出力形式と比較
      - 特にPHP配列は `Array\n(\n    [0] => 1\n...)\n` 形式であること
+  12. `node scripts/check-escape-sequences.mjs` → 全てのエスケープシーケンスが正しい（ルール#51参照）
 - **チェックが失敗した場合の修正方法**：
   - check-holey-v3.ts → `fix-empty-line-hints.mjs` と `fix-non-holey-hints.mjs` を実行
   - check-comment-consistency-v2.mjs → `sync-comments-to-holey.mjs` を実行（correctCodeのコメントをholeyCodeに同期）
@@ -267,6 +268,7 @@
   - 英語文字列が残っている → `translate-to-japanese.mjs` を実行（ルール#26参照）
   - check-candidates-final.mjs → `fix-candidates-correct.mjs` を実行（ルール#33参照）
   - expected_output空/形式不正 → 同じ言語の既存ファイルの形式を確認し手動修正（ルール#46参照）
+  - check-escape-sequences.mjs → `fix-escape-normalize.mjs` を実行（ルール#51参照）
 
 ### 26. コード内の文字列リテラルは日本語、コメントも日本語
 - `correctCode`、`holeyCode`、`correctLines` 内のコードにおいて：
@@ -630,17 +632,27 @@
 - **修正後の確認**: `npm run seed:db` を実行してDBを更新し、ブラウザで正しく表示されることを確認
 
 ### 51. 一括変換スクリプトでのエスケープ破損を防ぐ
-- レッスンファイルの `correctCode`、`holeyCode`、`correctLines` 内の改行エスケープ `\\n` を正しく保持すること。
-- **ファイル内の正しいバイト列**: `\\\\n`（バックスラッシュ4つ + n） → JSON文字列として `\\n` を表現
-- **破損したバイト列**: `\\\n`（バックスラッシュ3つ + n） → Markdownの改行が壊れる
+- レッスンファイルの `correctCode`、`holeyCode`、`correctLines`、`tutorialSlides[].content` 内の改行エスケープを正しく保持すること。
+- **ファイル内の正しいバイト列**: `5c 5c 6e`（バックスラッシュ2つ + n） → TypeScript文字列として `\n` を表現
+- **破損したバイト列**:
+  - `5c 6e`（バックスラッシュ1つ + n） → 実際の改行に解釈されてしまう
+  - `5c 5c 5c 6e`（バックスラッシュ3つ + n） → 余分なバックスラッシュが残る
+  - `5c 5c 5c 5c 5c 5c 6e`（バックスラッシュ6つ + n） → 過剰エスケープ
 - **問題の症状**:
   - 解説スライドでコードブロックが閉じない（` ``` ` 以降もコードとして表示される）
   - 「**だいじなルール：**」などのテキストがコードブロック内に表示される
-- **原因**: 一括変換スクリプトが `\\\\n` をデコード→エンコードする際に、置換順序のバグで `\\n` が改行文字に変換されてしまう
-- **使用禁止スクリプト**: `translate-to-japanese.mjs.DEPRECATED` - デコード処理にバグがあり、エスケープを破損させる
-- **チェック方法**: `grep -l $'\\\n' data/lessons/*.ts`（3バックスラッシュ+改行のパターンを検出）
-- **修正スクリプト**: `node scripts/fix-escaping.mjs`（`\\\n` → `\\\\n` に修正）
+  - コードが1行で表示される（改行がない）
+- **原因**: 一括変換スクリプトがエスケープシーケンスを誤って変換（シェルエスケープの問題、置換順序のバグ等）
+- **使用禁止スクリプト**:
+  - `translate-to-japanese.mjs.DEPRECATED` - デコード処理にバグがあり、エスケープを破損させる
+  - `normalize-escapes.mjs.DEPRECATED` - `'\\n'`が1バックスラッシュになるバグ
+  - `fix-escaping.mjs`（削除済み）- 「4バックスラッシュが正しい」という誤った前提
+- **チェックスクリプト**: `node scripts/check-escape-sequences.mjs`（全ファイルのエスケープを検証）
+- **修正スクリプト**: `node scripts/fix-escape-normalize.mjs`（全てのバックスラッシュ+n を正しい2バックスラッシュ+n に正規化）
 - **予防策**: 一括変換スクリプトでは以下を守ること：
   1. JSON文字列の `\\n` を実際の改行に変換しない
-  2. デコード時に `replace(/\\\\/g, '\\').replace(/\\n/g, '\n')` のような順次置換を使わない（`\\\\n`が`\\n`経由で改行になる）
-  3. 変換後は必ず `npm run seed:db` と**UIで解説スライドを確認**する
+  2. シェルコマンド（`node -e "..."`）内でバックスラッシュを扱う際はエスケープに注意（ファイルベースのスクリプトを使用推奨）
+  3. JavaScriptで改行を表す文字列を書く際は `'\\\\n'`（4バックスラッシュ）を使用すること。`'\\n'`は1バックスラッシュ+nになり不正
+  4. **重要**: レッスンファイルを修正する**全てのスクリプト実行後**に `node scripts/check-escape-sequences.mjs` を実行
+  5. `npm run seed:db` と**UIで解説スライドを確認**する
+- **注意**: `.worktrees/`内のファイルは別ブランチなので、メインブランチからは修正しない
