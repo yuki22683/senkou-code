@@ -22,13 +22,13 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 名前を受け取ってあいさつする関数\\ndef hello(name):\\n    # f'Hello, {name}!'を出力\\n    print(f'こんにちは, {名前}!')\\n\\n# 関数を'Python'を渡して呼び出す\\nhello('Python')",
-        "holeyCode": "# 名前を受け取ってあいさつする関数\\ndef ___(name):\\n    # f'Hello, {name}!'を出力\\n    ___(f'こんにちは, {名前}!')\\n\\n# 関数を'Python'を渡して呼び出す\\nhello('___')",
+        "correctCode": "# 名前を受け取ってあいさつする関数\\ndef hello(name):\\n    # f'こんにちは, {name}!'を出力\\n    print(f'こんにちは, {name}!')\\n\\n# 関数を'Python'を渡して呼び出す\\nhello('Python')",
+        "holeyCode": "# 名前を受け取ってあいさつする関数\\ndef ___(name):\\n    # f'こんにちは, {name}!'を出力\\n    ___(f'こんにちは, {___}!')\\n\\n# 関数を'Python'を渡して呼び出す\\nhello('___')",
         "correctLines": [
           "# 名前を受け取ってあいさつする関数",
           "def hello(name):",
-          "    # f'Hello, {name}!'を出力",
-          "    print(f'こんにちは, {名前}!')",
+          "    # f'こんにちは, {name}!'を出力",
+          "    print(f'こんにちは, {name}!')",
           "",
           "# 関数を'Python'を渡して呼び出す",
           "hello('Python')"
@@ -61,7 +61,7 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Python!\\n"
+            "expected_output": "こんにちは, Python!\\n"
           }
         ]
       },
@@ -81,13 +81,13 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# デフォルト引数を持つ関数\\ndef say_hi(name='世界'):\\n    # 「Hi, 名前!」の形式で表示\\n    print(f'Hi, {名前}!')\\n\\n# 引数なしで呼び出す\\nsay_hi()",
-        "holeyCode": "# デフォルト引数を持つ関数\\ndef ___(name='世界'):\\n    # 「Hi, 名前!」の形式で表示\\n    ___(f'Hi, {名前}!')\\n\\n# 引数なしで呼び出す\\n___()",
+        "correctCode": "# デフォルト引数を持つ関数\\ndef say_hi(name='世界'):\\n    # 「Hi, {name}!」の形式で表示\\n    print(f'Hi, {name}!')\\n\\n# 引数なしで呼び出す\\nsay_hi()",
+        "holeyCode": "# デフォルト引数を持つ関数\\ndef ___(name='世界'):\\n    # 「Hi, {name}!」の形式で表示\\n    ___(f'Hi, {___}!')\\n\\n# 引数なしで呼び出す\\n___()",
         "correctLines": [
           "# デフォルト引数を持つ関数",
           "def say_hi(name='世界'):",
-          "    # 「Hi, 名前!」の形式で表示",
-          "    print(f'Hi, {名前}!')",
+          "    # 「Hi, {name}!」の形式で表示",
+          "    print(f'Hi, {name}!')",
           "",
           "# 引数なしで呼び出す",
           "say_hi()"
@@ -114,7 +114,7 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hi, World!\\n"
+            "expected_output": "Hi, 世界!\\n"
           }
         ]
       },
@@ -278,7 +278,7 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Prog\\n"
+            "expected_output": "プログラ\\n"
           }
         ]
       },
@@ -612,7 +612,7 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Error\\n"
+            "expected_output": "エラー\\n"
           }
         ]
       },
@@ -674,7 +674,7 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Meow!\\n"
+            "expected_output": "ニャー！\\n"
           }
         ]
       },
