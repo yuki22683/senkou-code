@@ -612,12 +612,12 @@ export const kotlin3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// main 関数を定義する\\\\nfun main() {\\\\n    // listOf でリストを作成する\\\\n    val nums = listOf(1, 2, 3, 4, 5)\\\\n    // groupBy でグループ化する\\\\n    val grouped = nums.groupBy { it % 2 }\\\\n    // grouped を出力する\\\\n    println(grouped)\\\\n}",
-        "holeyCode": "// main 関数を定義する\\\\nfun ___() {\\\\n    // listOf でリストを作成する\\\\n    val nums = listOf(___, 2, 3, 4, 5)\\\\n    // groupBy でグループ化する\\\\n    val grouped = nums.groupBy { it % ___ }\\\\n    // grouped を出力する\\\\n    println(___)\\\\n___",
+        "correctCode": "// main 関数を定義する\\\\nfun main() {\\\\n    // numsにlistOf(1, 2, 3, 4, 5)を代入\\\\n    val nums = listOf(1, 2, 3, 4, 5)\\\\n    // groupBy でグループ化する\\\\n    val grouped = nums.groupBy { it % 2 }\\\\n    // grouped を出力する\\\\n    println(grouped)\\\\n}",
+        "holeyCode": "// main 関数を定義する\\\\nfun ___() {\\\\n    // numsにlistOf(1, 2, 3, 4, 5)を代入\\\\n    val nums = listOf(___, 2, 3, 4, 5)\\\\n    // groupBy でグループ化する\\\\n    val grouped = nums.groupBy { it % ___ }\\\\n    // grouped を出力する\\\\n    println(___)\\\\n___",
         "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
-          "    // listOf でリストを作成する",
+          "    // numsにlistOf(1, 2, 3, 4, 5)を代入",
           "    val nums = listOf(1, 2, 3, 4, 5)",
           "    // groupBy でグループ化する",
           "    val grouped = nums.groupBy { it % 2 }",
@@ -679,12 +679,12 @@ export const kotlin3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// main 関数を定義する\\\\nfun main() {\\\\n    // listOf でリスト(1, 2, 3, 4)を作成する\\\\n    val nums = listOf(1, 2, 3, 4)\\\\n    // fold で畳み込む\\\\n    val product = nums.fold(1) { acc, n -> acc * n }\\\\n    // product を出力する\\\\n    println(product)\\\\n}",
-        "holeyCode": "// main 関数を定義する\\\\nfun ___() {\\\\n    // listOf でリスト(1, 2, 3, 4)を作成する\\\\n    val nums = listOf(___, 2, 3, 4)\\\\n    // fold で畳み込む\\\\n    val product = nums.fold(___) { acc, n -> acc * n }\\\\n    // product を出力する\\\\n    println(___)\\\\n___",
+        "correctCode": "// main 関数を定義する\\\\nfun main() {\\\\n    // numsにlistOf(1, 2, 3, 4)を代入\\\\n    val nums = listOf(1, 2, 3, 4)\\\\n    // fold で畳み込む\\\\n    val product = nums.fold(1) { acc, n -> acc * n }\\\\n    // product を出力する\\\\n    println(product)\\\\n}",
+        "holeyCode": "// main 関数を定義する\\\\nfun ___() {\\\\n    // numsにlistOf(1, 2, 3, 4)を代入\\\\n    val nums = listOf(___, 2, 3, 4)\\\\n    // fold で畳み込む\\\\n    val product = nums.fold(___) { acc, n -> acc * n }\\\\n    // product を出力する\\\\n    println(___)\\\\n___",
         "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
-          "    // listOf でリスト(1, 2, 3, 4)を作成する",
+          "    // numsにlistOf(1, 2, 3, 4)を代入",
           "    val nums = listOf(1, 2, 3, 4)",
           "    // fold で畳み込む",
           "    val product = nums.fold(1) { acc, n -> acc * n }",

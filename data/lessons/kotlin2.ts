@@ -283,10 +283,10 @@ export const kotlin2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// listOf でリストを作成する\\\\nval nums = listOf(1, 2, 3)\\\\n// map で各要素を変換する\\\\nval squared = nums.map { it * it }\\\\n// squared を出力する\\\\nprintln(squared)",
-        "holeyCode": "// listOf でリストを作成する\\\\nval nums = listOf(___, 2, 3)\\\\n// map で各要素を変換する\\\\nval squared = nums.map { ___ * it }\\\\n// squared を出力する\\\\nprintln(___)",
+        "correctCode": "// numsにlistOf(1, 2, 3)を代入\\\\nval nums = listOf(1, 2, 3)\\\\n// map で各要素を変換する\\\\nval squared = nums.map { it * it }\\\\n// squared を出力する\\\\nprintln(squared)",
+        "holeyCode": "// numsにlistOf(1, 2, 3)を代入\\\\nval nums = listOf(___, 2, 3)\\\\n// map で各要素を変換する\\\\nval squared = nums.map { ___ * it }\\\\n// squared を出力する\\\\nprintln(___)",
         "correctLines": [
-          "// listOf でリストを作成する",
+          "// numsにlistOf(1, 2, 3)を代入",
           "val nums = listOf(1, 2, 3)",
           "// map で各要素を変換する",
           "val squared = nums.map { it * it }",
@@ -338,10 +338,10 @@ export const kotlin2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// listOf でリストを作成する\\\\nval nums = listOf(1, 2, 3, 4, 5)\\\\n// filter で条件に合う要素を抽出する\\\\nval result = nums.filter { it >= 3 }\\\\n// result を出力する\\\\nprintln(result)",
-        "holeyCode": "// listOf でリストを作成する\\\\nval nums = listOf(___, 2, 3, 4, 5)\\\\n// filter で条件に合う要素を抽出する\\\\nval result = nums.filter { it >= ___ }\\\\n// result を出力する\\\\nprintln(___)",
+        "correctCode": "// numsにlistOf(1, 2, 3, 4, 5)を代入\\\\nval nums = listOf(1, 2, 3, 4, 5)\\\\n// filter で条件に合う要素を抽出する\\\\nval result = nums.filter { it >= 3 }\\\\n// result を出力する\\\\nprintln(result)",
+        "holeyCode": "// numsにlistOf(1, 2, 3, 4, 5)を代入\\\\nval nums = listOf(___, 2, 3, 4, 5)\\\\n// filter で条件に合う要素を抽出する\\\\nval result = nums.filter { it >= ___ }\\\\n// result を出力する\\\\nprintln(___)",
         "correctLines": [
-          "// listOf でリストを作成する",
+          "// numsにlistOf(1, 2, 3, 4, 5)を代入",
           "val nums = listOf(1, 2, 3, 4, 5)",
           "// filter で条件に合う要素を抽出する",
           "val result = nums.filter { it >= 3 }",

@@ -96,7 +96,7 @@ export const javaData3 = {
           "}"
         ],
         "lineHints": [
-          "`asList` でリストを作成します。",
+          "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           "`stream` でStreamを作成します。",
           null,
           null,
@@ -157,7 +157,7 @@ export const javaData3 = {
           "}"
         ],
         "lineHints": [
-          "`asList` でリストを作成します。",
+          "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           null,
           null,
           null,
@@ -219,7 +219,7 @@ export const javaData3 = {
           "}"
         ],
         "lineHints": [
-          "`asList` でリストを作成します。",
+          "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           null,
           null,
           null,
@@ -284,7 +284,7 @@ export const javaData3 = {
           "}"
         ],
         "lineHints": [
-          "`asList` でリストを作成します。",
+          "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           "`collect` と `Collectors` でリストに変換します。",
           null,
           null,
@@ -350,7 +350,7 @@ export const javaData3 = {
           "}"
         ],
         "lineHints": [
-          "`asList` でリストを作成します。",
+          "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           null,
           "変数の値をコンソールに出力し、改行します。",
           null,
@@ -475,7 +475,7 @@ export const javaData3 = {
           "}"
         ],
         "lineHints": [
-          "`asList` でリストを作成します。",
+          "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           null,
           null,
           null,
@@ -535,7 +535,7 @@ export const javaData3 = {
           "}"
         ],
         "lineHints": [
-          "`asList` でリストを作成します。",
+          "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           null,
           null,
           null,
@@ -597,7 +597,7 @@ export const javaData3 = {
           "}"
         ],
         "lineHints": [
-          "`asList` でリストを作成します。",
+          "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           null,
           null,
           null,
