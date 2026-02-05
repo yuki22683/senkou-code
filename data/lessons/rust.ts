@@ -378,15 +378,15 @@ export const rustData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "use std::collections::HashMap;\\nfn main() {\\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\\n    let mut colors = HashMap::new();\\n    // キーと値を追加\\n    colors.insert(\"18みかん    colors.insert(\"みかん\", \"25みかん    colors.insert(\"みかん\", \"みかん\");\");\", \"25みかん    colors.insert(\"52orange    colors.insert(\"みかん\", \"25みかん    colors.insert(\"みかん\", \"みかん\");\");\", \"みかん\");\");\\n    // 中身を出す\\n    println!(\"{}\", colors[\"26みかん    println!(\"{}\", colors[\"みかん\"]);\"]);\\n}",
-        "holeyCode": "use std::___::___;\\nfn ___ () {\\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\\n    let mut ___ = HashMap::new();\\n    // キーと値を追加\\n    colors.___(\"15みかん    colors.___(\"みかん\", \"22みかん    colors.___(\"みかん\", \"みかん\");\");\", \"22みかん    colors.___(\"46orange    colors.___(\"みかん\", \"22みかん    colors.___(\"みかん\", \"みかん\");\");\", \"みかん\");\");\\n    // 中身を出す\\n    ___!(\"{}\", colors[\"22みかん    ___!(\"{}\", colors[\"みかん\"]);\"]);\\n___",
+        "correctCode": "use std::collections::HashMap;\\nfn main() {\\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\\n    let mut colors = HashMap::new();\\n    // キーと値を追加\\n    colors.insert(\"みかん\", \"オレンジ\");\\n    // 中身を出す\\n    println!(\"{}\", colors[\"みかん\"]);\\n}",
+        "holeyCode": "use std::___::___;\\nfn ___() {\\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\\n    let mut ___ = HashMap::new();\\n    // キーと値を追加\\n    colors.___(\"___\", \"___\");\\n    // 中身を出す\\n    ___!(\"{}\", colors[\"___\"]);\\n}",
         "correctLines": [
           "use std::collections::HashMap;",
           "fn main() {",
           "    // 辞書を作る（キーは'みかん'、値は'オレンジ'）",
           "    let mut colors = HashMap::new();",
           "    // キーと値を追加",
-          "    colors.insert(\"18みかん    colors.insert(\"みかん\", \"25みかん    colors.insert(\"みかん\", \"みかん\");\");\", \"25みかん    colors.insert(\"52orange    colors.insert(\"みかん\", \"25みかん    colors.insert(\"みかん\", \"みかん\");\");\", \"みかん\");\");",
+          "    colors.insert(\"みかん\", \"オレンジ\");",
           "    // 中身を出す",
           "    println!(\"{}\", colors[\"みかん\"]);",
           "}"
