@@ -185,12 +185,12 @@ export const typescriptData2 = {
             "*",
             "&"
           ],
-          "others": ["string", "'ボブ'", "name", "Profile", "}", "Bob", "log", "ボブ"]
+          "others": ["string", "'ボブ'", "name", "Profile", "}", "log", "ボブ"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bob\\n"
+            "expected_output": "ボブ\\n"
           }
         ]
       },

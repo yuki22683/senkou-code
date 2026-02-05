@@ -336,14 +336,15 @@ export const cppData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\n#include <vector>\\n#include <string>\\nint main() {\\n    std::vector<std::string> fruits = {\"39りんご    std::vector<std::string> くだもの = {\"りんご\", \"95バナナ    std::vector<std::string> くだもの = {\"39りんご    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\", \"バナナ\"};\"};\", \"105バナナ    std::vector<std::string> くだもの = {\"39りんご    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\", \"バナナ\"};\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    std::cout << fruits[1] << std::endl;\\n    return 0;\\n}",
-        "holeyCode": "#include <iostream>\\n#include <vector>\\n#include <string>\\nint ___() {\\n    std::vector<std::string> fruits = {\"___\", \"46バナナ    std::vector<std::string> くだもの = {\"___\", \"バナナ\"};\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    std::cout << fruits[___] << std::endl;\\n    return ___;\\n___",
+        "correctCode": "#include <iostream>\\n#include <vector>\\n#include <string>\\nint main() {\\n    // fruitsに{\"りんご\", \"バナナ\"}を代入\\n    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    std::cout << fruits[1] << std::endl;\\n    return 0;\\n}",
+        "holeyCode": "#include <iostream>\\n#include <vector>\\n#include <string>\\nint ___() {\\n    // fruitsに{\"りんご\", \"バナナ\"}を代入\\n    std::vector<std::string> fruits = {\"___\", \"___\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    std::cout << fruits[___] << std::endl;\\n    return ___;\\n}",
         "correctLines": [
           "#include <iostream>",
           "#include <vector>",
           "#include <string>",
           "int main() {",
-          "    std::vector<std::string> fruits = {\"39りんご    std::vector<std::string> くだもの = {\"りんご\", \"95バナナ    std::vector<std::string> くだもの = {\"39りんご    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\", \"バナナ\"};\"};\", \"105バナナ    std::vector<std::string> くだもの = {\"39りんご    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\", \"バナナ\"};\"};",
+          "    // fruitsに{\"りんご\", \"バナナ\"}を代入",
+          "    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};",
           "    // 1 と入力（2番目のデータはインデックス1）",
           "    std::cout << fruits[1] << std::endl;",
           "    return 0;",
@@ -356,15 +357,17 @@ export const cppData = {
           "可変長配列（ベクター）ライブラリを読み込み、使用可能にします。",
           "文字列クラスライブラリを読み込み、使用可能にします。",
           null,
-          "{\"りんご\", \"バナナ\"} と入力して初期化します。",
+          null,
+          "りんごとバナナを文字列として配列に入れます。",
           "2番目のデータはインデックス1です。",
+          null,
           null
         ],
         "candidates": {
           "numbers": [
             "1"
           ],
-          "others": ["main", "りんご", "0", "}", "39apple    std::vector<std::string> fruits = {", "s = {", "39りんご    std::vector<std::string> くだもの = {", "= {"]
+          "others": ["main", "りんご", "バナナ", "0", "}"]
         },
         "testCases": [
           {

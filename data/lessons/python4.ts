@@ -94,7 +94,7 @@ export const pythonData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 人を表す親クラスを定義\\nclass Person:\\n    # 名前を初期設定するメソッドを定義\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n\\n# Personを継承してStudentクラスを定義\\nclass Student(Person):\\n    # name（名前）、grade（学年）の順で初期設定\\n    def __init__(self, name, grade):\\n        # 親クラスの初期化メソッドを呼び出し\\n        super().__init__(name)\\n        # self.gradeにgradeを代入\\n        self.grade = grade\\n\\n# '太郎'、3年生としてインスタンスを作成\\ns = Student('太郎', 3)\\n# インスタンスの情報を表示\\nprint(f'{s.名前} is in grade {s.grade}')",
+        "correctCode": "# 人を表す親クラスを定義\\nclass Person:\\n    # 名前を初期設定するメソッドを定義\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n\\n# Personを継承してStudentクラスを定義\\nclass Student(Person):\\n    # name（名前）、grade（学年）の順で初期設定\\n    def __init__(self, name, grade):\\n        # 親クラスの初期化メソッドを呼び出し\\n        super().__init__(name)\\n        # self.gradeにgradeを代入\\n        self.grade = grade\\n\\n# '太郎'、3年生としてインスタンスを作成\\ns = Student('太郎', 3)\\n# インスタンスの情報を表示\\nprint(f'{s.name} is in grade {s.grade}')",
         "holeyCode": "# 人を表す親クラスを定義\\nclass ___:\\n    # 名前を初期設定するメソッドを定義\\n    def ___(self, name):\\n        # self.nameにnameを代入\\n        self.___ = name\\n\\n# Personを継承してStudentクラスを定義\\nclass ___(Person):\\n    # name（名前）、grade（学年）の順で初期設定\\n    def ___(self, name, grade):\\n        # 親クラスの初期化メソッドを呼び出し\\n        super().__init__(___)\\n        # self.gradeにgradeを代入\\n        self.___ = grade\\n\\n# '太郎'、3年生としてインスタンスを作成\\ns = Student('太郎', ___)\\n# インスタンスの情報を表示\\n___(f'{s.名前} is in grade {s.grade}')",
         "correctLines": [
           "# 人を表す親クラスを定義",
@@ -116,7 +116,7 @@ export const pythonData4 = {
           "# '太郎'、3年生としてインスタンスを作成",
           "s = Student('太郎', 3)",
           "# インスタンスの情報を表示",
-          "print(f'{s.名前} is in grade {s.grade}')"
+          "print(f'{s.name} is in grade {s.grade}')"
         ],
         "lineHints": [
           null,
@@ -151,7 +151,7 @@ export const pythonData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Taro is in grade 3\\n"
+            "expected_output": "太郎 is in grade 3\\n"
           }
         ]
       },
@@ -461,8 +461,8 @@ export const pythonData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 本を表すクラスを定義\\nclass Book:\\n    # title（タイトル）、author（著者）の順で初期化\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # 文字列表現を定義するメソッドを定義\\n    def __str__(self):\\n        # 「タイトル by 著者」の形式で返す\\n        return f'{self.タイトル} by {self.author}'\\n\\n# title（タイトル）、author（著者）の順でインスタンスを作成\\nbook = Book('Python Guide', '太郎')\\n# インスタンスを表示\\nprint(book)",
-        "holeyCode": "# 本を表すクラスを定義\\nclass ___:\\n    # title（タイトル）、author（著者）の順で初期化\\n    def ___(self, title, author):\\n        # self.titleにtitleを代入\\n        self.___ = title\\n        # self.authorにauthorを代入\\n        self.___ = author\\n    \\n    # 文字列表現を定義するメソッドを定義\\n    def ___(self):\\n        # 「タイトル by 著者」の形式で返す\\n        return f'{self.タイトル} by {self.___}'\\n\\n# title（タイトル）、author（著者）の順でインスタンスを作成\\nbook = Book('Python Guide', '___')\\n# インスタンスを表示\\n___(book)",
+        "correctCode": "# 本を表すクラスを定義\\nclass Book:\\n    # title（タイトル）、author（著者）の順で初期化\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # 文字列表現を定義するメソッドを定義\\n    def __str__(self):\\n        # 「タイトル by 著者」の形式で返す\\n        return f'{self.title} by {self.author}'\\n\\n# title（タイトル）、author（著者）の順でインスタンスを作成\\nbook = Book('Python Guide', '太郎')\\n# インスタンスを表示\\nprint(book)",
+        "holeyCode": "# 本を表すクラスを定義\\nclass ___:\\n    # title（タイトル）、author（著者）の順で初期化\\n    def ___(self, title, author):\\n        # self.titleにtitleを代入\\n        self.___ = title\\n        # self.authorにauthorを代入\\n        self.___ = author\\n    \\n    # 文字列表現を定義するメソッドを定義\\n    def ___(self):\\n        # 「タイトル by 著者」の形式で返す\\n        return f'{self.title} by {self.___}'\\n\\n# title（タイトル）、author（著者）の順でインスタンスを作成\\nbook = Book('Python Guide', '___')\\n# インスタンスを表示\\n___(book)",
         "correctLines": [
           "# 本を表すクラスを定義",
           "class Book:",
@@ -476,7 +476,7 @@ export const pythonData4 = {
           "    # 文字列表現を定義するメソッドを定義",
           "    def __str__(self):",
           "        # 「タイトル by 著者」の形式で返す",
-          "        return f'{self.タイトル} by {self.author}'",
+          "        return f'{self.title} by {self.author}'",
           "",
           "# title（タイトル）、author（著者）の順でインスタンスを作成",
           "book = Book('Python Guide', '太郎')",
@@ -509,12 +509,12 @@ export const pythonData4 = {
             "__repr__",
             "__init__"
           ],
-          "others": ["Book", "__init__(self, title, author)", "title", "author", "f'{self.title} by {self.author}'", "Book('Python Guide', '太郎')", "book", "Taro", "print", "太郎"]
+          "others": ["Book", "__init__(self, title, author)", "title", "author", "f'{self.title} by {self.author}'", "Book('Python Guide', '太郎')", "book", "print", "太郎"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Python Guide by Taro\\n"
+            "expected_output": "Python Guide by 太郎\\n"
           }
         ]
       },

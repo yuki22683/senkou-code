@@ -476,7 +476,7 @@ export const pythonData5 = {
             "dict",
             "OrderedDict"
           ],
-          "others": ["defaultdict(list)", "d['くだもの'].append('りんご')", "d['くだもの'].append('バナナ')", "d['くだもの']", "list", "apple", "banana", "print", "(", "りんご", "バナナ"]
+          "others": ["defaultdict(list)", "d['くだもの'].append('りんご')", "d['くだもの'].append('バナナ')", "d['くだもの']", "list", "print", "(", "りんご", "バナナ"]
         },
         "testCases": [
           {
