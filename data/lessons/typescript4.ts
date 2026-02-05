@@ -557,7 +557,7 @@ export const typescriptData4 = {
           },
           {
             "title": "Parametersの使い方",
-            "content": "# 引数を再利用する\\\\n\\\\n既存の関数と同じ引数を使いたいときに便利です。\\\\n\\\\n## たとえ話\\\\n\\\\n「この関数と同じ材料で、別の料理を作る」ような感じです。引数の型を一から書かなくて済みます。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction greet(name: string, age: number): void {\\\\n  console.log(`${name} is ${age}`);\\\\n}\\\\n\\\\n// 関数の引数の型を取得\\\\ntype GreetParams = Parameters<typeof greet>;\\\\n// [string, number]\\\\n\\\\n// 同じ型の引数を使える！\\\\nconst args: GreetParams = ['太郎', 25];\\\\ngreet(...args);  // 'Taro is 25'\\\\n```"
+            "content": "# 引数を再利用する\\\\n\\\\n既存の関数と同じ引数を使いたいときに便利です。\\\\n\\\\n## たとえ話\\\\n\\\\n「この関数と同じ材料で、別の料理を作る」ような感じです。引数の型を一から書かなくて済みます。\\\\n\\\\n## コードで書くとこうなるよ\\\\n\\\\n```typescript\\\\nfunction greet(name: string, age: number): void {\\\\n  console.log(`${name} is ${age}`);\\\\n}\\\\n\\\\n// 関数の引数の型を取得\\\\ntype GreetParams = Parameters<typeof greet>;\\\\n// [string, number]\\\\n\\\\n// 同じ型の引数を使える！\\\\nconst args: GreetParams = ['太郎', 25];\\\\ngreet(...args);  // '太郎は25歳'\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",

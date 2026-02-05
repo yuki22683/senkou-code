@@ -18,7 +18,7 @@ export const javascriptData2 = {
           },
           {
             "title": "アロー関数の書き方",
-            "content": "# 省略できるルール\\\\n\\\\n**基本の形：**\\\\n```\\\\nconst 関数名 = (引数) => 処理;\\\\n```\\\\n\\\\n**省略ルール：**\\\\n1. 処理が1行なら `{ }` と `return` を省略できる\\\\n2. 引数が1つなら `( )` も省略できる\\\\n\\\\n**コード例：**\\\\n```javascript\\\\n// 引数1つ → ()省略可能\\\\nconst double = x => x * 2;\\\\n\\\\n// 引数なし → ()は必要\\\\nconst greet = () => console.log('Hi!');\\\\n\\\\n// 引数2つ以上 → ()は必要\\\\nconst add = (a, b) => a + b;\\\\n```"
+            "content": "# 省略できるルール\\\\n\\\\n**基本の形：**\\\\n```\\\\nconst 関数名 = (引数) => 処理;\\\\n```\\\\n\\\\n**省略ルール：**\\\\n1. 処理が1行なら `{ }` と `return` を省略できる\\\\n2. 引数が1つなら `( )` も省略できる\\\\n\\\\n**コード例：**\\\\n```javascript\\\\n// 引数1つ → ()省略可能\\\\nconst double = x => x * 2;\\\\n\\\\n// 引数なし → ()は必要\\\\nconst greet = () => console.log('やあ！');\\\\n\\\\n// 引数2つ以上 → ()は必要\\\\nconst add = (a, b) => a + b;\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",

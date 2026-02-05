@@ -246,7 +246,7 @@
   2. `node scripts/check-comment-consistency-v2.mjs` → 不整合なし
   3. `node scripts/check-vague-comments.mjs` → 曖昧なコメントなし
   4. `node scripts/check-tutorial-exercise-similarity.mjs` → 問題なし
-  5. `node scripts/verify-translation.mjs` → 文字列リテラル内の日本語0件
+  5. 文字列リテラルが日本語になっているか目視確認（例外: Hello World, 言語名, 技術用語）
   6. `node scripts/check-candidates-final.mjs` → 0件（ルール#33参照）
   7. `npm run seed:db` → 成功
   8. **【手動確認】** tutorialSlidesで新しい専門用語を使う際、説明前に使っていないか確認（ルール#27参照）
@@ -264,30 +264,32 @@
   - check-comment-consistency-v2.mjs → `sync-comments-to-holey.mjs` を実行（correctCodeのコメントをholeyCodeに同期）
   - check-vague-comments.mjs → `fix-vague-output-comments.mjs` → `sync-comments-to-holey.mjs` → `fix-correctlines-comments.mjs` を順に実行
   - check-tutorial-exercise-similarity.mjs → 手動で演習のシナリオを変更（ルール#19, #20参照）
-  - verify-translation.mjs → `translate-string-literals.mjs` を実行（ルール#26参照）
+  - 英語文字列が残っている → `translate-to-japanese.mjs` を実行（ルール#26参照）
   - check-candidates-final.mjs → `fix-candidates-correct.mjs` を実行（ルール#33参照）
   - expected_output空/形式不正 → 同じ言語の既存ファイルの形式を確認し手動修正（ルール#46参照）
 
-### 26. コード内の文字列リテラルは英語、コメントは日本語
+### 26. コード内の文字列リテラルは日本語、コメントも日本語
 - `correctCode`、`holeyCode`、`correctLines` 内のコードにおいて：
-  - **文字列リテラル**（`'...'` や `"..."`）の中身は**英語**にする
-  - **コメント**（`#`、`//`、`--` 等で始まる行）は**日本語**のまま維持
+  - **文字列リテラル**（`'...'` や `"..."`）の中身は**日本語**にする
+  - **コメント**（`#`、`//`、`--` 等で始まる行）も**日本語**で記述
+  - **コメント内の文字列参照**も日本語にする（例：`// nameに'太郎'を設定`）
+- **例外（英語のまま維持）**：
+  - `'Hello, World!'` - プログラミングの決まり文句
+  - プログラミング言語名（Python, JavaScript, Ruby等）
+  - 技術用語（localhost, Math, TypeScript等）
 - **禁止**：
-  - `print('ごうかく！')` → 文字列が日本語
-  - `console.log('結果を表示')` → 文字列が日本語
-  - `// Display the score` → コメントが英語
+  - `print('Pass!')` → 文字列が英語（`print('合格！')` にする）
+  - `console.log('Adult')` → 文字列が英語（`console.log('大人')` にする）
+  - `// nameに'Taro'を設定` → コメント内の参照が英語（`// nameに'太郎'を設定` にする）
 - **正しい**：
-  - `print('Pass!')` → 文字列が英語
-  - `console.log('Display result')` → 文字列が英語
-  - `// scoreを表示` → コメントが日本語
+  - `print('合格！')` → 文字列が日本語
+  - `console.log('大人')` → 文字列が日本語
+  - `// nameに'太郎'を設定` → コメント内の参照も日本語
 - **理由**：
-  - 文字列リテラルはプログラムの出力として表示されるため、英語が望ましい
-  - コメントは学習者への説明であり、日本語の方が理解しやすい
-- **検証スクリプト**：`node scripts/verify-translation.mjs`
-  - 日本語コメント数が表示される（これは正常）
-  - 「文字列リテラル内の日本語: 0件」になることを確認
-- **修正スクリプト**：`node scripts/translate-string-literals.mjs`
-  - 新しい日本語文字列がある場合は、スクリプト内の `translations` マップに追加してから実行
+  - 日本語学習者向けのため、文字列も日本語の方が理解しやすい
+  - コメントと文字列の両方が日本語で統一されていると混乱が少ない
+- **修正スクリプト**：`node scripts/translate-to-japanese.mjs`
+  - 英語文字列を日本語に変換する
 
 ### 27. 新しい用語は説明してから使う
 - 解説スライド（`tutorialSlides`）で新しい専門用語を使う際は、**必ずその意味を説明してから使う**こと。
