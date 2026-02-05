@@ -264,6 +264,10 @@
   14. **【手動確認】** チュートリアルの出力例が入力と同じ言語か確認（ルール#54参照）
      - 確認コマンド: `grep -E "アリス.*Alice|ボブ.*Bob|太郎.*Taro|りんご.*apple" data/lessons/*.ts`
      - 日本語入力→英語出力のパターンは全て修正が必要
+  15. `node scripts/check-code-output-consistency.mjs` → コード・出力整合性チェック（ルール#56-58参照）
+     - 正規表現`\w+`と日本語の組み合わせ検出
+     - コメントとコードの言語不一致検出
+     - expected_outputとコード出力の言語不一致検出
 - **チェックが失敗した場合の修正方法**：
   - check-holey-v3.ts → `fix-empty-line-hints.mjs` と `fix-non-holey-hints.mjs` を実行
   - check-comment-consistency-v2.mjs → `sync-comments-to-holey.mjs` を実行（correctCodeのコメントをholeyCodeに同期）
@@ -275,6 +279,7 @@
   - check-escape-sequences.mjs → `fix-escape-normalize.mjs` を実行（ルール#51参照）
   - check-lesson-file.mjs（日本語変数参照）→ 手動で英語変数名に修正（ルール#52参照）
   - check-lesson-file.mjs（expected_output文字列）→ `fix-output-mismatch-v2.mjs` を実行（ルール#53参照）
+  - check-code-output-consistency.mjs → コメントを手動修正、または expected_output をコード出力に合わせて修正（ルール#56-58参照）
 
 ### 26. コード内の文字列リテラルは日本語、コメントも日本語
 - `correctCode`、`holeyCode`、`correctLines` 内のコードにおいて：
