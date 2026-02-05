@@ -559,7 +559,7 @@ export const php2Data = {
           },
           {
             "title": "?? の使い方",
-            "content": "# シンプルな null チェック\\n\\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\\n\\n**コード例：**\\n```php\\n$name = null;\\necho $name ?? 'ゲスト'; // Guest\\n```\\n\\n**何をしているの？**\\n1. `$name = null` → $name は空っぽ\\n2. `$name ?? 'ゲスト'` → $name が null かチェック\\n3. null だったので → 'ゲスト' を返す\\n\\n**もし値があったら？**\\n```php\\n$name = '太郎';\\necho $name ?? 'ゲスト'; // 太郎（nullじゃないから$nameを使う）\\n```\\n\\n**ポイント：**\\n- `??` の左側が null → 右側を返す\\n- `??` の左側が null じゃない → 左側をそのまま返す\\n- デフォルト値の設定（せってい）にとても便利"
+            "content": "# シンプルな null チェック\\n\\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\\n\\n**コード例：**\\n```php\\n$name = null;\\necho $name ?? 'ゲスト'; // ゲスト\\n```\\n\\n**何をしているの？**\\n1. `$name = null` → $name は空っぽ\\n2. `$name ?? 'ゲスト'` → $name が null かチェック\\n3. null だったので → 'ゲスト' を返す\\n\\n**もし値があったら？**\\n```php\\n$name = '太郎';\\necho $name ?? 'ゲスト'; // 太郎（nullじゃないから$nameを使う）\\n```\\n\\n**ポイント：**\\n- `??` の左側が null → 右側を返す\\n- `??` の左側が null じゃない → 左側をそのまま返す\\n- デフォルト値の設定（せってい）にとても便利"
           }
         ],
         "initialDisplayMode": "holey",

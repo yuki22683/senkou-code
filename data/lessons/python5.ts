@@ -336,7 +336,7 @@ export const pythonData5 = {
         "tutorialSlides": [
           {
             "title": "re.sub()",
-            "content": "# パターンを置換\\n\\n**re.sub()（サブスティテュート）** で **パターンに一致する部分を別の文字に置き換え** られます。\\n\\n**たとえ話：** 文章の中の「犬」を全部「猫」に置き換えるような処理です。\\n\\n**書き方：** `re.sub(パターン, 置換後, 文字列)`\\n\\n**例：** 数字を「many」に置き換えよう！\\n\\n```python\\nimport re\\n\\ntext = 'りんご3個'\\nresult = re.sub(r'\\d+', 'many', text)\\nprint(result)  # I have many apples\\n```\\n\\n**パターン `\\d+` の意味：**\\n- `\\d` = 数字1文字（0-9）\\n- `+` = 1回以上の繰り返し\\n- つまり「1桁以上の数字」にマッチ\\n\\n**何をしているか：**\\n1. `re.sub(パターン, 置換後, 文字列)` で置換\\n2. 全ての一致箇所が置き換わる\\n\\n**便利な使い方：**\\n- 余分な空白を1つにまとめる: `re.sub(r'\\s+', ' ', text)`\\n  - `\\s` = 空白文字（スペース、タブ、改行）\\n  - `\\s+` = 1つ以上の連続した空白\\n- 数字を消す: `re.sub(r'\\d+', '', text)`\\n\\n**ポイント：** 元の文字列は変わらず、新しい文字列が返ってきます。"
+            "content": "# パターンを置換\\n\\n**re.sub()（サブスティテュート）** で **パターンに一致する部分を別の文字に置き換え** られます。\\n\\n**たとえ話：** 文章の中の「犬」を全部「猫」に置き換えるような処理です。\\n\\n**書き方：** `re.sub(パターン, 置換後, 文字列)`\\n\\n**例：** 数字を「many」に置き換えよう！\\n\\n```python\\nimport re\\n\\ntext = 'りんご3個'\\nresult = re.sub(r'\\d+', 'many', text)\\nprint(result)  # りんごmany個\\n```\\n\\n**パターン `\\d+` の意味：**\\n- `\\d` = 数字1文字（0-9）\\n- `+` = 1回以上の繰り返し\\n- つまり「1桁以上の数字」にマッチ\\n\\n**何をしているか：**\\n1. `re.sub(パターン, 置換後, 文字列)` で置換\\n2. 全ての一致箇所が置き換わる\\n\\n**便利な使い方：**\\n- 余分な空白を1つにまとめる: `re.sub(r'\\s+', ' ', text)`\\n  - `\\s` = 空白文字（スペース、タブ、改行）\\n  - `\\s+` = 1つ以上の連続した空白\\n- 数字を消す: `re.sub(r'\\d+', '', text)`\\n\\n**ポイント：** 元の文字列は変わらず、新しい文字列が返ってきます。"
           }
         ],
         "initialDisplayMode": "holey",
@@ -387,7 +387,7 @@ export const pythonData5 = {
         "tutorialSlides": [
           {
             "title": "Counterとは？",
-            "content": "# 要素を数える\\n\\n**Counter（カウンター）** を使うと、**要素の出現回数を簡単にカウント** できます。\\n\\n**たとえ話：** クラスで「好きな果物」アンケートを取って、りんごが何票、バナナが何票...と数えるようなものです。\\n\\n**例：** 果物の出現回数を数えよう！\\n\\n```python\\nfrom collections import Counter\\n\\nwords = ['りんご', 'バナナ', 'りんご', 'さくらんぼ']\\ncount = Counter(words)\\nprint(count['りんご'])  # 2（appleは2回出てきた）\\nprint(count['バナナ']) # 1\\n```\\n\\n**何をしているか：**\\n1. `from collections import Counter` でインポート\\n2. `Counter(リスト)` でカウント開始\\n3. `count['りんご']` で「apple」の出現回数を取得\\n\\n**便利なメソッド：**\\n- `count.most_common(3)`: 多い順に3つ取得\\n- `count.total()`: 全要素の合計数\\n\\n**ポイント：** 文字列を渡すと、1文字ずつカウントします！"
+            "content": "# 要素を数える\\n\\n**Counter（カウンター）** を使うと、**要素の出現回数を簡単にカウント** できます。\\n\\n**たとえ話：** クラスで「好きな果物」アンケートを取って、りんごが何票、バナナが何票...と数えるようなものです。\\n\\n**例：** 果物の出現回数を数えよう！\\n\\n```python\\nfrom collections import Counter\\n\\nwords = ['りんご', 'バナナ', 'りんご', 'さくらんぼ']\\ncount = Counter(words)\\nprint(count['りんご'])  # 2（りんごは2回出てきた）\\nprint(count['バナナ']) # 1\\n```\\n\\n**何をしているか：**\\n1. `from collections import Counter` でインポート\\n2. `Counter(リスト)` でカウント開始\\n3. `count['りんご']` で「りんご」の出現回数を取得\\n\\n**便利なメソッド：**\\n- `count.most_common(3)`: 多い順に3つ取得\\n- `count.total()`: 全要素の合計数\\n\\n**ポイント：** 文字列を渡すと、1文字ずつカウントします！"
           }
         ],
         "initialDisplayMode": "holey",

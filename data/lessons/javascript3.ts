@@ -544,7 +544,7 @@ export const javascriptData3 = {
         "tutorialSlides": [
           {
             "title": "Nullish Coalescing（??）とは？",
-            "content": "# null/undefined のときだけ代わりの値を使う\\n\\n**??** は「左側が null か undefined のときだけ、右側の値を使う」という演算子です。\\n\\n**身近なたとえ：**\\n「名前を教えて。わからなかったら『ゲスト』と呼ぶね」というイメージです。\\n\\n**コード例：**\\n```javascript\\nconst name = null ?? 'ゲスト';\\nconsole.log(name);  // Guest（null だから）\\n\\nconst count = 0 ?? 10;\\nconsole.log(count);  // 0（0 は null じゃない！）\\n```"
+            "content": "# null/undefined のときだけ代わりの値を使う\\n\\n**??** は「左側が null か undefined のときだけ、右側の値を使う」という演算子です。\\n\\n**身近なたとえ：**\\n「名前を教えて。わからなかったら『ゲスト』と呼ぶね」というイメージです。\\n\\n**コード例：**\\n```javascript\\nconst name = null ?? 'ゲスト';\\nconsole.log(name);  // ゲスト（null だから）\\n\\nconst count = 0 ?? 10;\\nconsole.log(count);  // 0（0 は null じゃない！）\\n```"
           },
           {
             "title": "|| との違い",

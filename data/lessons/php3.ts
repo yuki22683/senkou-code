@@ -18,7 +18,7 @@ export const php3Data = {
           },
           {
             "title": "クロージャの書き方",
-            "content": "# function キーワードで作る\\n\\n`function(引数) { 処理 }` で作り、変数に代入（だいにゅう）します。\\n\\n**コード例：**\\n```php\\n$greet = function($name) {\\n    return \"Hello, $name!\";\\n};\\necho $greet('アリス');  // Hello, Alice!\\n```\\n\\n**何をしているの？**\\n1. `function($name) { ... }` → 名前のない関数を作る\\n2. `$greet = ...` → その関数を変数に入れる\\n3. `$greet('アリス')` → 変数を関数として呼び出す\\n\\n**ポイント：**\\n- 普通の関数と違（ちが）い、名前がない\\n- 変数に入れるので、最後にセミコロン `;` が必要"
+            "content": "# function キーワードで作る\\n\\n`function(引数) { 処理 }` で作り、変数に代入（だいにゅう）します。\\n\\n**コード例：**\\n```php\\n$greet = function($name) {\\n    return \"Hello, $name!\";\\n};\\necho $greet('アリス');  // Hello, アリス!\\n```\\n\\n**何をしているの？**\\n1. `function($name) { ... }` → 名前のない関数を作る\\n2. `$greet = ...` → その関数を変数に入れる\\n3. `$greet('アリス')` → 変数を関数として呼び出す\\n\\n**ポイント：**\\n- 普通の関数と違（ちが）い、名前がない\\n- 変数に入れるので、最後にセミコロン `;` が必要"
           }
         ],
         "initialDisplayMode": "holey",
@@ -117,7 +117,7 @@ export const php3Data = {
           },
           {
             "title": "?? の使い方",
-            "content": "# シンプルな null チェック\\n\\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\\n\\n**コード例：**\\n```php\\n$name = null;\\n$displayName = $name ?? '匿名';\\necho $displayName;  // Anonymous\\n```\\n\\n**何をしているの？**\\n1. `$name = null` → 名前は空っぽ\\n2. `$name ?? '匿名'` → nullかチェック\\n3. null なので → '匿名' を返す\\n\\n**値があるときは？**\\n```php\\n$name = '太郎';\\necho $name ?? '匿名';  // 太郎（nullじゃないので$nameを使う）\\n```\\n\\n**ポイント：**\\n- 左が null → 右を返す\\n- 左が null じゃない → 左をそのまま返す"
+            "content": "# シンプルな null チェック\\n\\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\\n\\n**コード例：**\\n```php\\n$name = null;\\n$displayName = $name ?? '匿名';\\necho $displayName;  // 匿名\\n```\\n\\n**何をしているの？**\\n1. `$name = null` → 名前は空っぽ\\n2. `$name ?? '匿名'` → nullかチェック\\n3. null なので → '匿名' を返す\\n\\n**値があるときは？**\\n```php\\n$name = '太郎';\\necho $name ?? '匿名';  // 太郎（nullじゃないので$nameを使う）\\n```\\n\\n**ポイント：**\\n- 左が null → 右を返す\\n- 左が null じゃない → 左をそのまま返す"
           }
         ],
         "initialDisplayMode": "holey",
@@ -276,7 +276,7 @@ export const php3Data = {
           },
           {
             "title": "名前付き引数の書き方",
-            "content": "# 引数名: 値 の形式（けいしき）\\n\\n`関数(引数名: 値)` で指定します。\\n\\n**コード例：**\\n```php\\nfunction greet($name, $greeting) {\\n    return \"$greeting, $name!\";\\n}\\necho greet(greeting: 'こんにちは', name: 'アリス');\\n// Hi, Alice!\\n```\\n\\n**何をしているの？**\\n1. `greet($name, $greeting)` → 普通は name, greeting の順\\n2. `greeting: 'こんにちは'` → greetingに'こんにちは'を入れる\\n3. `name: 'アリス'` → nameに'アリス'を入れる\\n4. 順番が逆（ぎゃく）でもOK！名前で指定してるから\\n\\n**ポイント：**\\n- `引数名:` と値をセットで書く\\n- 順番を気にしなくていい\\n- 何を渡しているか一目瞭然（いちもくりょうぜん）"
+            "content": "# 引数名: 値 の形式（けいしき）\\n\\n`関数(引数名: 値)` で指定します。\\n\\n**コード例：**\\n```php\\nfunction greet($name, $greeting) {\\n    return \"$greeting, $name!\";\\n}\\necho greet(greeting: 'こんにちは', name: 'アリス');\\n// こんにちは, アリス!\\n```\\n\\n**何をしているの？**\\n1. `greet($name, $greeting)` → 普通は name, greeting の順\\n2. `greeting: 'こんにちは'` → greetingに'こんにちは'を入れる\\n3. `name: 'アリス'` → nameに'アリス'を入れる\\n4. 順番が逆（ぎゃく）でもOK！名前で指定してるから\\n\\n**ポイント：**\\n- `引数名:` と値をセットで書く\\n- 順番を気にしなくていい\\n- 何を渡しているか一目瞭然（いちもくりょうぜん）"
           }
         ],
         "initialDisplayMode": "holey",
