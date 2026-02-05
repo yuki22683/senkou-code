@@ -187,10 +187,10 @@ export const kotlinData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// var で変更可能な変数を作る\\\\nvar hp = 100\\\\n// += で 20 を足す\\\\nhp += 20\\\\n// -= で 50 を引く\\\\nhp -= 50\\\\nprintln(hp)",
-        "holeyCode": "// var で変更可能な変数を作る\\\\nvar ___ = 100\\\\n// += で 20 を足す\\\\nhp += ___\\\\n// -= で 50 を引く\\\\nhp -= ___\\\\nprintln(___)",
+        "correctCode": "// hpに100を代入\\\\nvar hp = 100\\\\n// += で 20 を足す\\\\nhp += 20\\\\n// -= で 50 を引く\\\\nhp -= 50\\\\nprintln(hp)",
+        "holeyCode": "// hpに100を代入\\\\nvar ___ = 100\\\\n// += で 20 を足す\\\\nhp += ___\\\\n// -= で 50 を引く\\\\nhp -= ___\\\\nprintln(___)",
         "correctLines": [
-          "// var で変更可能な変数を作る",
+          "// hpに100を代入",
           "var hp = 100",
           "// += で 20 を足す",
           "hp += 20",

@@ -83,10 +83,10 @@ export const kotlin2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// nullable 型の変数を宣言する\\\\nval text: String? = \"Hello\"\\\\n// ?. で安全にプロパティにアクセスする\\\\nprintln(text?.length)",
-        "holeyCode": "// nullable 型の変数を宣言する\\\\nval text: String? = \"___\"\\\\n// ?. で安全にプロパティにアクセスする\\\\n___(text?.length)",
+        "correctCode": "// numに42を代入（nullable型）\\\\nval text: String? = \"Hello\"\\\\n// ?. で安全にプロパティにアクセスする\\\\nprintln(text?.length)",
+        "holeyCode": "// numに42を代入（nullable型）\\\\nval text: String? = \"___\"\\\\n// ?. で安全にプロパティにアクセスする\\\\n___(text?.length)",
         "correctLines": [
-          "// nullable 型の変数を宣言する",
+          "// numに42を代入（nullable型）",
           "val text: String? = \"Hello\"",
           "// ?. で安全にプロパティにアクセスする",
           "println(text?.length)"
@@ -130,10 +130,10 @@ export const kotlin2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// nullable 型の変数を宣言する\\\\nval value: Int? = null\\\\n// ?: でデフォルト値を指定する\\\\nprintln(value ?: 0)",
-        "holeyCode": "// nullable 型の変数を宣言する\\\\nval value: Int? = ___\\\\n// ?: でデフォルト値を指定する\\\\n___(value ?: 0)",
+        "correctCode": "// numに42を代入（nullable型）\\\\nval value: Int? = null\\\\n// ?: でデフォルト値を指定する\\\\nprintln(value ?: 0)",
+        "holeyCode": "// numに42を代入（nullable型）\\\\nval value: Int? = ___\\\\n// ?: でデフォルト値を指定する\\\\n___(value ?: 0)",
         "correctLines": [
-          "// nullable 型の変数を宣言する",
+          "// numに42を代入（nullable型）",
           "val value: Int? = null",
           "// ?: でデフォルト値を指定する",
           "println(value ?: 0)"
@@ -513,12 +513,12 @@ export const kotlin2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// nullable 型の変数を宣言する\\\\nval num: Int? = 42\\\\n// let で処理を実行する\\\\nnum?.let { println(it * 2) }",
-        "holeyCode": "// nullable 型の変数を宣言する\\\\nval num: Int? = ___\\\\n// let で処理を実行する\\\\nnum?.let { println(it * ___) }",
+        "correctCode": "// numに42を代入（nullable型）\\\\nval num: Int? = 42\\\\n// letでit * 2を出力\\\\nnum?.let { println(it * 2) }",
+        "holeyCode": "// numに42を代入（nullable型）\\\\nval num: Int? = ___\\\\n// letでit * 2を出力\\\\nnum?.let { println(it * ___) }",
         "correctLines": [
-          "// nullable 型の変数を宣言する",
+          "// numに42を代入（nullable型）",
           "val num: Int? = 42",
-          "// let で処理を実行する",
+          "// letでit * 2を出力",
           "num?.let { println(it * 2) }"
         ],
         "lineHints": [

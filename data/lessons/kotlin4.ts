@@ -601,12 +601,12 @@ export const kotlin4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// main 関数を定義する\\\\nfun main() {\\\\n    // let で変換処理を行う\\\\n    val result = \"hello\".let {\\\\n        // 大文字に変換する\\\\n        it.uppercase()\\\\n    }\\\\n    // result を出力する\\\\n    println(result)\\\\n}",
-        "holeyCode": "// main 関数を定義する\\\\nfun ___() {\\\\n    // let で変換処理を行う\\\\n    val result = \"___\".let {\\\\n        // 大文字に変換する\\\\n        it.___()\\\\n    ___\\\\n    // result を出力する\\\\n    println(___)\\\\n___",
+        "correctCode": "// main 関数を定義する\\\\nfun main() {\\\\n    // letで\"hello\"を大文字に変換\\\\n    val result = \"hello\".let {\\\\n        // 大文字に変換する\\\\n        it.uppercase()\\\\n    }\\\\n    // result を出力する\\\\n    println(result)\\\\n}",
+        "holeyCode": "// main 関数を定義する\\\\nfun ___() {\\\\n    // letで\"hello\"を大文字に変換\\\\n    val result = \"___\".let {\\\\n        // 大文字に変換する\\\\n        it.___()\\\\n    ___\\\\n    // result を出力する\\\\n    println(___)\\\\n___",
         "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
-          "    // let で変換処理を行う",
+          "    // letで\"hello\"を大文字に変換",
           "    val result = \"hello\".let {",
           "        // 大文字に変換する",
           "        it.uppercase()",
