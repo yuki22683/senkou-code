@@ -20,8 +20,8 @@
   4. `node scripts/fix-vague-output-comments.mjs` - 曖昧なコメント修正
   5. `node scripts/sync-comments-to-holey.mjs` - holeyCodeにコメント同期（コメント整合性修正）
   6. `node scripts/fix-correctlines-comments.mjs` - correctLinesのコメント修正
-  7. `node scripts/translate-string-literals.mjs` - 文字列リテラルを英語化
-  8. `node scripts/fix-candidates-correct.mjs` - 選択肢不足を自動修正（ルール#34参照）
+  7. `node scripts/fix-candidates-correct.mjs` - 選択肢不足を自動修正（ルール#34参照）
+- **注意**：`translate-string-literals.mjs` は使用禁止（ルール#55参照）
 - index.tsのケーシング修正（Java3→java3, C2→c2など）も再適用が必要
 - **注意**：`fix-holey-v2.mjs` は使用禁止（ルール#24参照）
 
@@ -703,7 +703,18 @@
   - 入力: `{ name: 'アリス' }` → 出力: `アリス`
 - **確認コマンド**: `grep -E "アリス.*Alice|ボブ.*Bob|りんご.*apple" data/lessons/*.ts`
 - **理由**: 入力と出力で言語が異なると、学習者が混乱する。コードが何を出力するか予測できなくなる。
-  3. JavaScriptで改行を表す文字列を書く際は `'\\\\n'`（4バックスラッシュ）を使用すること。`'\\n'`は1バックスラッシュ+nになり不正
-  4. **重要**: レッスンファイルを修正する**全てのスクリプト実行後**に `node scripts/check-escape-sequences.mjs` を実行
-  5. `npm run seed:db` と**UIで解説スライドを確認**する
-- **注意**: `.worktrees/`内のファイルは別ブランチなので、メインブランチからは修正しない
+
+### 55. translate-string-literals.mjsの使用禁止（データ破損バグ）
+- `scripts/translate-string-literals.mjs` は**使用禁止**。このスクリプトにはバグがあり、文字列を再帰的にネストさせてデータを破損させる。
+- **破損パターン**:
+  - 正常: `"合格！"`
+  - 破損: `"22合格！    Console.WriteLine(\"合格！\");\");"`
+  - 数字 + 元の文字列 + コードの重複が発生
+- **破損を検出するコマンド**: `grep -E '"[0-9]{2}[a-zA-Zぁ-んァ-ン一-龯]' data/lessons/*.ts`
+  - `"10代です"`、`"20代です"` などは正常（日本語として意味がある）
+  - `"22合格！..."` のように数字の後にコードが続くのは破損
+- **破損が発生した場合の修復方法**:
+  1. クリーンなコミット（破損前）を特定: `git log --oneline data/lessons/<file>.ts`
+  2. `git show <commit>:data/lessons/<file>.ts > data/lessons/<file>.ts` で復元
+  3. `npm run seed:db` で検証
+- **影響を受けたファイル（修復済み）**: csharp.ts, java.ts, kotlin.ts, swift.ts, javascript.ts, javascript2.ts, perl.ts, php.ts, python2.ts, rust.ts, go4.ts
