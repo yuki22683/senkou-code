@@ -261,6 +261,9 @@
      - 特にPHP配列は `Array\n(\n    [0] => 1\n...)\n` 形式であること
   12. `node scripts/check-escape-sequences.mjs` → 全てのエスケープシーケンスが正しい（ルール#51参照）
   13. `node scripts/check-lesson-file.mjs` → エラー0件（包括チェック: 日本語変数参照、expected_output文字列一致等）
+  14. **【手動確認】** チュートリアルの出力例が入力と同じ言語か確認（ルール#54参照）
+     - 確認コマンド: `grep -E "アリス.*Alice|ボブ.*Bob|太郎.*Taro|りんご.*apple" data/lessons/*.ts`
+     - 日本語入力→英語出力のパターンは全て修正が必要
 - **チェックが失敗した場合の修正方法**：
   - check-holey-v3.ts → `fix-empty-line-hints.mjs` と `fix-non-holey-hints.mjs` を実行
   - check-comment-consistency-v2.mjs → `sync-comments-to-holey.mjs` を実行（correctCodeのコメントをholeyCodeに同期）
