@@ -635,7 +635,6 @@ export const c4Data = {
           null,
           null,
           null,
-          null,
           null
         ],
         "candidates": {

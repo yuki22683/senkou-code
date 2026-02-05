@@ -466,7 +466,6 @@ export const javascriptData3 = {
           "Calculator.multiply で静的メソッドを呼び出します。",
           null,
           null,
-          null,
           null
         ],
         "candidates": {
