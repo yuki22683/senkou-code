@@ -14,16 +14,16 @@ export const assembly3Data = {
         "tutorialSlides": [
           {
             "title": "dec命令（デクリメント）",
-            "content": "# 値を1減らす\\\\\n\\\\\n**dec** 命令は、レジスタの値を1だけ減らします。`sub rax, 1` と同じ意味です。"
+            "content": "# 値を1減らす\\\\\\n\\\\\\n**dec** 命令は、レジスタの値を1だけ減らします。`sub rax, 1` と同じ意味です。"
           },
           {
             "title": "dec の使い方",
-            "content": "# dec レジスタ\\\\\n\\\\\n```asm\\\\\nmov rax, 10\\\\\ndec rax     ; raxが9になる\\\\\n```"
+            "content": "# dec レジスタ\\\\\\n\\\\\\n```asm\\\\\\nmov rax, 10\\\\\\ndec rax     ; raxが9になる\\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "section .text\\\\\n  global _start\\\\\n\\\\\n_start:\\\\\n  mov rax, 10\\\\\n  ; decで1減らす\\\\\n  dec rax\\\\\n\\\\\n  mov rdi, rax\\\\\n  mov rax, 60\\\\\n  syscall",
-        "holeyCode": "section .___\\\\\n  global ___\\\\\n\\\\\n___:\\\\\n  mov ___, ___\\\\\n  ; decで1減らす\\\\\n  dec ___\\\\\n\\\\\n  mov ___, ___\\\\\n  mov ___, ___\\\\\n  ___",
+        "correctCode": "section .text\\\\\\n  global _start\\\\\\n\\\\\\n_start:\\\\\\n  mov rax, 10\\\\\\n  ; decで1減らす\\\\\\n  dec rax\\\\\\n\\\\\\n  mov rdi, rax\\\\\\n  mov rax, 60\\\\\\n  syscall",
+        "holeyCode": "section .___\\\\\\n  global ___\\\\\\n\\\\\\n___:\\\\\\n  mov ___, ___\\\\\\n  ; decで1減らす\\\\\\n  dec ___\\\\\\n\\\\\\n  mov ___, ___\\\\\\n  mov ___, ___\\\\\\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -74,16 +74,16 @@ export const assembly3Data = {
         "tutorialSlides": [
           {
             "title": "imul命令",
-            "content": "# 符号付き整数の掛け算\\\\\n\\\\\n**imul** 命令は、符号付き整数の掛け算を行います。"
+            "content": "# 符号付き整数の掛け算\\\\\\n\\\\\\n**imul** 命令は、符号付き整数の掛け算を行います。"
           },
           {
             "title": "imul の使い方",
-            "content": "# imul 先, 元, 値\\\\\n\\\\\n結果を先のレジスタに格納します。\\\\\n\\\\\n```asm\\\\\nimul rax, rbx, 5  ; rax = rbx * 5\\\\\n```"
+            "content": "# imul 先, 元, 値\\\\\\n\\\\\\n結果を先のレジスタに格納します。\\\\\\n\\\\\\n```asm\\\\\\nimul rax, rbx, 5  ; rax = rbx * 5\\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "section .text\\\\\n  global _start\\\\\n\\\\\n_start:\\\\\n  mov rbx, 3\\\\\n  ; imulで掛け算\\\\\n  imul rax, rbx, 4\\\\\n\\\\\n  mov rdi, rax\\\\\n  mov rax, 60\\\\\n  syscall",
-        "holeyCode": "section .___\\\\\n  global ___\\\\\n\\\\\n___:\\\\\n  mov ___, ___\\\\\n  ; imulで掛け算\\\\\n  imul rax, rbx, ___\\\\\n\\\\\n  mov ___, ___\\\\\n  mov ___, ___\\\\\n  ___",
+        "correctCode": "section .text\\\\\\n  global _start\\\\\\n\\\\\\n_start:\\\\\\n  mov rbx, 3\\\\\\n  ; imulで掛け算\\\\\\n  imul rax, rbx, 4\\\\\\n\\\\\\n  mov rdi, rax\\\\\\n  mov rax, 60\\\\\\n  syscall",
+        "holeyCode": "section .___\\\\\\n  global ___\\\\\\n\\\\\\n___:\\\\\\n  mov ___, ___\\\\\\n  ; imulで掛け算\\\\\\n  imul rax, rbx, ___\\\\\\n\\\\\\n  mov ___, ___\\\\\\n  mov ___, ___\\\\\\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -134,16 +134,16 @@ export const assembly3Data = {
         "tutorialSlides": [
           {
             "title": "push命令",
-            "content": "# スタックに積む\\\\\n\\\\\n**push** 命令は、値をスタックの一番上に積みます。後で取り出すことができます。"
+            "content": "# スタックに積む\\\\\\n\\\\\\n**push** 命令は、値をスタックの一番上に積みます。後で取り出すことができます。"
           },
           {
             "title": "push の使い方",
-            "content": "# push 値\\\\\n\\\\\nレジスタや即値をスタックに積みます。\\\\\n\\\\\n```asm\\\\\npush rax    ; raxの値をスタックに\\\\\npush 42     ; 42をスタックに\\\\\n```"
+            "content": "# push 値\\\\\\n\\\\\\nレジスタや即値をスタックに積みます。\\\\\\n\\\\\\n```asm\\\\\\npush rax    ; raxの値をスタックに\\\\\\npush 42     ; 42をスタックに\\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "section .text\\\\\n  global _start\\\\\n\\\\\n_start:\\\\\n  mov rax, 42\\\\\n  ; pushでスタックに保存\\\\\n  push rax\\\\\n  pop rdi\\\\\n\\\\\n  mov rax, 60\\\\\n  syscall",
-        "holeyCode": "section .___\\\\\n  global ___\\\\\n\\\\\n___:\\\\\n  mov ___, ___\\\\\n  ; pushでスタックに保存\\\\\n  push ___\\\\\n  pop ___\\\\\n\\\\\n  mov ___, ___\\\\\n  ___",
+        "correctCode": "section .text\\\\\\n  global _start\\\\\\n\\\\\\n_start:\\\\\\n  mov rax, 42\\\\\\n  ; pushでスタックに保存\\\\\\n  push rax\\\\\\n  pop rdi\\\\\\n\\\\\\n  mov rax, 60\\\\\\n  syscall",
+        "holeyCode": "section .___\\\\\\n  global ___\\\\\\n\\\\\\n___:\\\\\\n  mov ___, ___\\\\\\n  ; pushでスタックに保存\\\\\\n  push ___\\\\\\n  pop ___\\\\\\n\\\\\\n  mov ___, ___\\\\\\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -194,16 +194,16 @@ export const assembly3Data = {
         "tutorialSlides": [
           {
             "title": "pop命令",
-            "content": "# スタックから取り出す\\\\\n\\\\\n**pop** 命令は、スタックの一番上から値を取り出してレジスタに入れます。"
+            "content": "# スタックから取り出す\\\\\\n\\\\\\n**pop** 命令は、スタックの一番上から値を取り出してレジスタに入れます。"
           },
           {
             "title": "pop の使い方",
-            "content": "# pop レジスタ\\\\\n\\\\\n最後にpushした値が取り出されます（LIFO）。\\\\\n\\\\\n```asm\\\\\npop rax    ; スタックの値をraxに\\\\\n```"
+            "content": "# pop レジスタ\\\\\\n\\\\\\n最後にpushした値が取り出されます（LIFO）。\\\\\\n\\\\\\n```asm\\\\\\npop rax    ; スタックの値をraxに\\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "section .text\\\\\n  global _start\\\\\n\\\\\n_start:\\\\\n  push 99\\\\\n  ; popでスタックから取り出す\\\\\n  pop rdi\\\\\n\\\\\n  mov rax, 60\\\\\n  syscall",
-        "holeyCode": "section .___\\\\\n  global ___\\\\\n\\\\\n___:\\\\\n  push ___\\\\\n  ; popでスタックから取り出す\\\\\n  pop ___\\\\\n\\\\\n  mov ___, ___\\\\\n  ___",
+        "correctCode": "section .text\\\\\\n  global _start\\\\\\n\\\\\\n_start:\\\\\\n  push 99\\\\\\n  ; popでスタックから取り出す\\\\\\n  pop rdi\\\\\\n\\\\\\n  mov rax, 60\\\\\\n  syscall",
+        "holeyCode": "section .___\\\\\\n  global ___\\\\\\n\\\\\\n___:\\\\\\n  push ___\\\\\\n  ; popでスタックから取り出す\\\\\\n  pop ___\\\\\\n\\\\\\n  mov ___, ___\\\\\\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -252,16 +252,16 @@ export const assembly3Data = {
         "tutorialSlides": [
           {
             "title": "and命令",
-            "content": "# ビットごとのAND\\\\\n\\\\\n**and** 命令は、2つの値のビットごとのANDを計算します。"
+            "content": "# ビットごとのAND\\\\\\n\\\\\\n**and** 命令は、2つの値のビットごとのANDを計算します。"
           },
           {
             "title": "and の使い方",
-            "content": "# and 先, 元\\\\\n\\\\\n両方のビットが1の場合のみ1になります。\\\\\n\\\\\n```asm\\\\\nand rax, 0xFF  ; 下位8ビットだけ残す\\\\\n```"
+            "content": "# and 先, 元\\\\\\n\\\\\\n両方のビットが1の場合のみ1になります。\\\\\\n\\\\\\n```asm\\\\\\nand rax, 0xFF  ; 下位8ビットだけ残す\\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "section .text\\\\\n  global _start\\\\\n\\\\\n_start:\\\\\n  mov rax, 0xFF\\\\\n  ; andでビットAND\\\\\n  and rax, 0x0F\\\\\n\\\\\n  mov rdi, rax\\\\\n  mov rax, 60\\\\\n  syscall",
-        "holeyCode": "section .___\\\\\n  global ___\\\\\n\\\\\n___:\\\\\n  mov ___, ___\\\\\n  ; andでビットAND\\\\\n  and rax, ___x0F\\\\\n\\\\\n  mov ___, ___\\\\\n  mov ___, ___\\\\\n  ___",
+        "correctCode": "section .text\\\\\\n  global _start\\\\\\n\\\\\\n_start:\\\\\\n  mov rax, 0xFF\\\\\\n  ; andでビットAND\\\\\\n  and rax, 0x0F\\\\\\n\\\\\\n  mov rdi, rax\\\\\\n  mov rax, 60\\\\\\n  syscall",
+        "holeyCode": "section .___\\\\\\n  global ___\\\\\\n\\\\\\n___:\\\\\\n  mov ___, ___\\\\\\n  ; andでビットAND\\\\\\n  and rax, ___x0F\\\\\\n\\\\\\n  mov ___, ___\\\\\\n  mov ___, ___\\\\\\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -312,16 +312,16 @@ export const assembly3Data = {
         "tutorialSlides": [
           {
             "title": "or命令",
-            "content": "# ビットごとのOR\\\\\n\\\\\n**or** 命令は、2つの値のビットごとのORを計算します。"
+            "content": "# ビットごとのOR\\\\\\n\\\\\\n**or** 命令は、2つの値のビットごとのORを計算します。"
           },
           {
             "title": "or の使い方",
-            "content": "# or 先, 元\\\\\n\\\\\nどちらかのビットが1なら1になります。\\\\\n\\\\\n```asm\\\\\nor rax, 0x01  ; 最下位ビットを1にする\\\\\n```"
+            "content": "# or 先, 元\\\\\\n\\\\\\nどちらかのビットが1なら1になります。\\\\\\n\\\\\\n```asm\\\\\\nor rax, 0x01  ; 最下位ビットを1にする\\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "section .text\\\\\n  global _start\\\\\n\\\\\n_start:\\\\\n  mov rax, 0x10\\\\\n  ; orでビットOR\\\\\n  or rax, 0x01\\\\\n\\\\\n  mov rdi, rax\\\\\n  mov rax, 60\\\\\n  syscall",
-        "holeyCode": "section .___\\\\\n  global ___\\\\\n\\\\\n___:\\\\\n  mov ___, ___\\\\\n  ; orでビットOR\\\\\n  or rax, ___x01\\\\\n\\\\\n  mov ___, ___\\\\\n  mov ___, ___\\\\\n  ___",
+        "correctCode": "section .text\\\\\\n  global _start\\\\\\n\\\\\\n_start:\\\\\\n  mov rax, 0x10\\\\\\n  ; orでビットOR\\\\\\n  or rax, 0x01\\\\\\n\\\\\\n  mov rdi, rax\\\\\\n  mov rax, 60\\\\\\n  syscall",
+        "holeyCode": "section .___\\\\\\n  global ___\\\\\\n\\\\\\n___:\\\\\\n  mov ___, ___\\\\\\n  ; orでビットOR\\\\\\n  or rax, ___x01\\\\\\n\\\\\\n  mov ___, ___\\\\\\n  mov ___, ___\\\\\\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -372,16 +372,16 @@ export const assembly3Data = {
         "tutorialSlides": [
           {
             "title": "shl命令",
-            "content": "# ビットを左にシフト\\\\\n\\\\\n**shl** 命令は、ビットを左に移動させます。1ビットシフトは2倍と同じです。"
+            "content": "# ビットを左にシフト\\\\\\n\\\\\\n**shl** 命令は、ビットを左に移動させます。1ビットシフトは2倍と同じです。"
           },
           {
             "title": "shl の使い方",
-            "content": "# shl 先, シフト数\\\\\n\\\\\n```asm\\\\\nmov rax, 4\\\\\nshl rax, 1  ; rax = 8 (4 * 2)\\\\\n```"
+            "content": "# shl 先, シフト数\\\\\\n\\\\\\n```asm\\\\\\nmov rax, 4\\\\\\nshl rax, 1  ; rax = 8 (4 * 2)\\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "section .text\\\\\n  global _start\\\\\n\\\\\n_start:\\\\\n  mov rax, 5\\\\\n  ; shlで左シフト\\\\\n  shl rax, 2\\\\\n\\\\\n  mov rdi, rax\\\\\n  mov rax, 60\\\\\n  syscall",
-        "holeyCode": "section .___\\\\\n  global ___\\\\\n\\\\\n___:\\\\\n  mov ___, ___\\\\\n  ; shlで左シフト\\\\\n  shl rax, ___\\\\\n\\\\\n  mov ___, ___\\\\\n  mov ___, ___\\\\\n  ___",
+        "correctCode": "section .text\\\\\\n  global _start\\\\\\n\\\\\\n_start:\\\\\\n  mov rax, 5\\\\\\n  ; shlで左シフト\\\\\\n  shl rax, 2\\\\\\n\\\\\\n  mov rdi, rax\\\\\\n  mov rax, 60\\\\\\n  syscall",
+        "holeyCode": "section .___\\\\\\n  global ___\\\\\\n\\\\\\n___:\\\\\\n  mov ___, ___\\\\\\n  ; shlで左シフト\\\\\\n  shl rax, ___\\\\\\n\\\\\\n  mov ___, ___\\\\\\n  mov ___, ___\\\\\\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -432,16 +432,16 @@ export const assembly3Data = {
         "tutorialSlides": [
           {
             "title": "shr命令",
-            "content": "# ビットを右にシフト\\\\\n\\\\\n**shr** 命令は、ビットを右に移動させます。1ビットシフトは2で割るのと同じです。"
+            "content": "# ビットを右にシフト\\\\\\n\\\\\\n**shr** 命令は、ビットを右に移動させます。1ビットシフトは2で割るのと同じです。"
           },
           {
             "title": "shr の使い方",
-            "content": "# shr 先, シフト数\\\\\n\\\\\n```asm\\\\\nmov rax, 16\\\\\nshr rax, 2  ; rax = 4 (16 / 4)\\\\\n```"
+            "content": "# shr 先, シフト数\\\\\\n\\\\\\n```asm\\\\\\nmov rax, 16\\\\\\nshr rax, 2  ; rax = 4 (16 / 4)\\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "section .text\\\\\n  global _start\\\\\n\\\\\n_start:\\\\\n  mov rax, 20\\\\\n  ; shrで右シフト\\\\\n  shr rax, 1\\\\\n\\\\\n  mov rdi, rax\\\\\n  mov rax, 60\\\\\n  syscall",
-        "holeyCode": "section .___\\\\\n  global ___\\\\\n\\\\\n___:\\\\\n  mov ___, ___\\\\\n  ; shrで右シフト\\\\\n  shr rax, ___\\\\\n\\\\\n  mov ___, ___\\\\\n  mov ___, ___\\\\\n  ___",
+        "correctCode": "section .text\\\\\\n  global _start\\\\\\n\\\\\\n_start:\\\\\\n  mov rax, 20\\\\\\n  ; shrで右シフト\\\\\\n  shr rax, 1\\\\\\n\\\\\\n  mov rdi, rax\\\\\\n  mov rax, 60\\\\\\n  syscall",
+        "holeyCode": "section .___\\\\\\n  global ___\\\\\\n\\\\\\n___:\\\\\\n  mov ___, ___\\\\\\n  ; shrで右シフト\\\\\\n  shr rax, ___\\\\\\n\\\\\\n  mov ___, ___\\\\\\n  mov ___, ___\\\\\\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -492,16 +492,16 @@ export const assembly3Data = {
         "tutorialSlides": [
           {
             "title": "test命令",
-            "content": "# ビットをテスト\\\\\n\\\\\n**test** 命令は、ANDを計算してフラグを設定しますが、結果は保存しません。"
+            "content": "# ビットをテスト\\\\\\n\\\\\\n**test** 命令は、ANDを計算してフラグを設定しますが、結果は保存しません。"
           },
           {
             "title": "test の使い方",
-            "content": "# test 先, 元\\\\\n\\\\\n特定のビットが立っているか確認するのに使います。\\\\\n\\\\\n```asm\\\\\ntest rax, 1  ; 最下位ビットをチェック\\\\\njnz odd      ; 0でなければジャンプ\\\\\n```"
+            "content": "# test 先, 元\\\\\\n\\\\\\n特定のビットが立っているか確認するのに使います。\\\\\\n\\\\\\n```asm\\\\\\ntest rax, 1  ; 最下位ビットをチェック\\\\\\njnz odd      ; 0でなければジャンプ\\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "section .text\\\\\n  global _start\\\\\n\\\\\n_start:\\\\\n  mov rax, 5\\\\\n  ; testでビットを検査\\\\\n  test rax, 1\\\\\n  jnz is_odd\\\\\n  mov rdi, 0\\\\\n  jmp done\\\\\nis_odd:\\\\\n  mov rdi, 1\\\\\ndone:\\\\\n  mov rax, 60\\\\\n  syscall",
-        "holeyCode": "section .___\\\\\n  global ___\\\\\n\\\\\n___:\\\\\n  mov ___, ___\\\\\n  ; testでビットを検査\\\\\n  test rax, ___\\\\\n  jnz ___\\\\\n  mov ___, ___\\\\\n  jmp ___\\\\\n___:\\\\\n  mov ___, ___\\\\\n___:\\\\\n  mov ___, ___\\\\\n  ___",
+        "correctCode": "section .text\\\\\\n  global _start\\\\\\n\\\\\\n_start:\\\\\\n  mov rax, 5\\\\\\n  ; testでビットを検査\\\\\\n  test rax, 1\\\\\\n  jnz is_odd\\\\\\n  mov rdi, 0\\\\\\n  jmp done\\\\\\nis_odd:\\\\\\n  mov rdi, 1\\\\\\ndone:\\\\\\n  mov rax, 60\\\\\\n  syscall",
+        "holeyCode": "section .___\\\\\\n  global ___\\\\\\n\\\\\\n___:\\\\\\n  mov ___, ___\\\\\\n  ; testでビットを検査\\\\\\n  test rax, ___\\\\\\n  jnz ___\\\\\\n  mov ___, ___\\\\\\n  jmp ___\\\\\\n___:\\\\\\n  mov ___, ___\\\\\\n___:\\\\\\n  mov ___, ___\\\\\\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",
@@ -560,16 +560,16 @@ export const assembly3Data = {
         "tutorialSlides": [
           {
             "title": "neg命令",
-            "content": "# 符号を反転\\\\\n\\\\\n**neg** 命令は、値の符号を反転します（2の補数を取ります）。"
+            "content": "# 符号を反転\\\\\\n\\\\\\n**neg** 命令は、値の符号を反転します（2の補数を取ります）。"
           },
           {
             "title": "neg の使い方",
-            "content": "# neg レジスタ\\\\\n\\\\\n正の数が負に、負の数が正になります。\\\\\n\\\\\n```asm\\\\\nmov rax, 5\\\\\nneg rax     ; rax = -5\\\\\n```"
+            "content": "# neg レジスタ\\\\\\n\\\\\\n正の数が負に、負の数が正になります。\\\\\\n\\\\\\n```asm\\\\\\nmov rax, 5\\\\\\nneg rax     ; rax = -5\\\\\\n```"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "section .text\\\\\n  global _start\\\\\n\\\\\n_start:\\\\\n  mov rax, 10\\\\\n  ; negで符号反転\\\\\n  neg rax\\\\\n\\\\\n  xor rdi, rdi\\\\\n  mov rax, 60\\\\\n  syscall",
-        "holeyCode": "section .___\\\\\n  global ___\\\\\n\\\\\n___:\\\\\n  mov ___, ___\\\\\n  ; negで符号反転\\\\\n  neg ___\\\\\n\\\\\n  xor ___, ___\\\\\n  mov ___, ___\\\\\n  ___",
+        "correctCode": "section .text\\\\\\n  global _start\\\\\\n\\\\\\n_start:\\\\\\n  mov rax, 10\\\\\\n  ; negで符号反転\\\\\\n  neg rax\\\\\\n\\\\\\n  xor rdi, rdi\\\\\\n  mov rax, 60\\\\\\n  syscall",
+        "holeyCode": "section .___\\\\\\n  global ___\\\\\\n\\\\\\n___:\\\\\\n  mov ___, ___\\\\\\n  ; negで符号反転\\\\\\n  neg ___\\\\\\n\\\\\\n  xor ___, ___\\\\\\n  mov ___, ___\\\\\\n  ___",
         "correctLines": [
           "section .text",
           "  global _start",

@@ -14,24 +14,24 @@ export const swift3Data = {
         "tutorialSlides": [
           {
             "title": "Result型（リザルトがた）とは？",
-            "content": "# 「成功」か「失敗」かを表す型\\\\\n\\\\\n**Result（リザルト）** は、処理の結果が「成功」か「失敗」かを表す型です。\\\\\n\\\\\n例えば、ネットワークからデータを取得するとき、うまくいくこともあれば、接続エラーで失敗することもありますよね。\\\\\n\\\\\nResult型を使うと、この2つの状態を明確に表現できます。"
+            "content": "# 「成功」か「失敗」かを表す型\\\\\\n\\\\\\n**Result（リザルト）** は、処理の結果が「成功」か「失敗」かを表す型です。\\\\\\n\\\\\\n例えば、ネットワークからデータを取得するとき、うまくいくこともあれば、接続エラーで失敗することもありますよね。\\\\\\n\\\\\\nResult型を使うと、この2つの状態を明確に表現できます。"
           },
           {
             "title": "Result型の使い方",
-            "content": "# .success と .failure\\\\\n\\\\\nResult型には2つの状態があります。\\\\\n\\\\\n- **.success（サクセス）**: 成功。結果の値を持つ\\\\\n- **.failure（フェイリャー）**: 失敗。エラー情報を持つ\\\\\n\\\\\n```swift\\\\\n// 成功を返す\\\\\nreturn .success(計算結果)\\\\\n\\\\\n// 失敗を返す\\\\\nreturn .failure(エラー)\\\\\n```"
+            "content": "# .success と .failure\\\\\\n\\\\\\nResult型には2つの状態があります。\\\\\\n\\\\\\n- **.success（サクセス）**: 成功。結果の値を持つ\\\\\\n- **.failure（フェイリャー）**: 失敗。エラー情報を持つ\\\\\\n\\\\\\n```swift\\\\\\n// 成功を返す\\\\\\nreturn .success(計算結果)\\\\\\n\\\\\\n// 失敗を返す\\\\\\nreturn .failure(エラー)\\\\\\n```"
           },
           {
             "title": "switch で結果を処理",
-            "content": "# 成功・失敗で分岐\\\\\n\\\\\n```swift\\\\\nswitch result {\\\\\ncase .success(let value):\\\\\n    print(\"成功: \\(value)\")\\\\\ncase .failure(let error):\\\\\n    print(\"失敗: \\(error)\")\\\\\n}\\\\\n```\\\\\n\\\\\n`let value` で成功時の値を、`let error` で失敗時のエラーを取り出せます。"
+            "content": "# 成功・失敗で分岐\\\\\\n\\\\\\n```swift\\\\\\nswitch result {\\\\\\ncase .success(let value):\\\\\\n    print(\"成功: \\(value)\")\\\\\\ncase .failure(let error):\\\\\\n    print(\"失敗: \\(error)\")\\\\\\n}\\\\\\n```\\\\\\n\\\\\\n`let value` で成功時の値を、`let error` で失敗時のエラーを取り出せます。"
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標（もくひょう）\\\\\n\\\\\n数が負（マイナス）なら失敗、そうでなければ成功を返す関数を作りましょう。\\\\\n\\\\\n1. `MyError` というエラー型を定義\\\\\n2. `check` 関数を作る\\\\\n3. 負の数なら `.failure`、そうでなければ `.success` を返す"
+            "content": "# 目標（もくひょう）\\\\\\n\\\\\\n数が負（マイナス）なら失敗、そうでなければ成功を返す関数を作りましょう。\\\\\\n\\\\\\n1. `MyError` というエラー型を定義\\\\\\n2. `check` 関数を作る\\\\\\n3. 負の数なら `.failure`、そうでなければ `.success` を返す"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// エラー型を定義\\\\nenum MyError: Error { case negative }\\\\n\\\\n// check関数を定義\\\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\\\n    // 負の場合は失敗\\\\n    if n < 0 { return .failure(.negative) }\\\\n    // successで成功を返す\\\\n    return .success(n)\\\\n}\\\\n\\\\n// 関数を呼び出し\\\\nlet result = check(10)\\\\n// switchでパターンマッチ\\\\nswitch result {\\\\n// 成功の場合\\\\ncase .success(let v): print(v)\\\\n// 失敗の場合\\\\ncase .failure(_): print(\"エラー\")\\\\n}",
-        "holeyCode": "// エラー型を定義\\\\\nenum MyError: ___ { case negative }\\\\\n\\\\\n// check関数を定義\\\\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\\\\n    // 負の場合は失敗\\\\\n    if n < 0 { return .failure(.___) }\\\\\n    // successで成功を返す\\\\\n    return .___(n)\\\\\n}\\\\\n\\\\\n// 関数を呼び出し\\\\\nlet result = ___(10)\\\\\n// switchでパターンマッチ\\\\\nswitch ___ {\\\\\n// 成功の場合\\\\\ncase .success(let v): print(___)\\\\\n// 失敗の場合\\\\\ncase .failure(_): print(\"___\")\\\\\n}",
+        "correctCode": "// エラー型を定義\\\\\nenum MyError: Error { case negative }\\\\\n\\\\\n// check関数を定義\\\\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\\\\n    // 負の場合は失敗\\\\\n    if n < 0 { return .failure(.negative) }\\\\\n    // successで成功を返す\\\\\n    return .success(n)\\\\\n}\\\\\n\\\\\n// 関数を呼び出し\\\\\nlet result = check(10)\\\\\n// switchでパターンマッチ\\\\\nswitch result {\\\\\n// 成功の場合\\\\\ncase .success(let v): print(v)\\\\\n// 失敗の場合\\\\\ncase .failure(_): print(\"エラー\")\\\\\n}",
+        "holeyCode": "// エラー型を定義\\\\\\nenum MyError: ___ { case negative }\\\\\\n\\\\\\n// check関数を定義\\\\\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\\\\\n    // 負の場合は失敗\\\\\\n    if n < 0 { return .failure(.___) }\\\\\\n    // successで成功を返す\\\\\\n    return .___(n)\\\\\\n}\\\\\\n\\\\\\n// 関数を呼び出し\\\\\\nlet result = ___(10)\\\\\\n// switchでパターンマッチ\\\\\\nswitch ___ {\\\\\\n// 成功の場合\\\\\\ncase .success(let v): print(___)\\\\\\n// 失敗の場合\\\\\\ncase .failure(_): print(\"___\")\\\\\\n}",
         "correctLines": [
           "// エラー型を定義",
           "enum MyError: Error { case negative }",
@@ -87,7 +87,7 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\\\\n"
+            "expected_output": "10\\\\\\n"
           }
         ]
       },
@@ -99,20 +99,20 @@ export const swift3Data = {
         "tutorialSlides": [
           {
             "title": "compactMap（コンパクトマップ）とは？",
-            "content": "# nilを取り除きながら変換\\\\\n\\\\\n**compactMap（コンパクトマップ）** は、mapと似ていますが、結果が nil のものを自動的に取り除いてくれます。\\\\\n\\\\\n「compact」は「ぎゅっと詰める」という意味。nilを取り除いて詰めるイメージです。\\\\\n\\\\\n文字列を数値に変換するとき、変換できない文字は無視したいときに便利です。"
+            "content": "# nilを取り除きながら変換\\\\\\n\\\\\\n**compactMap（コンパクトマップ）** は、mapと似ていますが、結果が nil のものを自動的に取り除いてくれます。\\\\\\n\\\\\\n「compact」は「ぎゅっと詰める」という意味。nilを取り除いて詰めるイメージです。\\\\\\n\\\\\\n文字列を数値に変換するとき、変換できない文字は無視したいときに便利です。"
           },
           {
             "title": "map との違い",
-            "content": "# nilが混ざるかどうか\\\\\n\\\\\n```swift\\\\\nlet strings = [\"1\", \"a\", \"2\"]  // \"a\"は数値に変換できない\\\\\n\\\\\n// mapの場合: nilが混ざる\\\\\nlet a = strings.map { Int($0) }\\\\\n// [1, nil, 2]（Int?型の配列）\\\\\n\\\\\n// compactMapの場合: nilを除外\\\\\nlet b = strings.compactMap { Int($0) }\\\\\n// [1, 2]（Int型の配列、nilなし）\\\\\n```"
+            "content": "# nilが混ざるかどうか\\\\\\n\\\\\\n```swift\\\\\\nlet strings = [\"1\", \"a\", \"2\"]  // \"a\"は数値に変換できない\\\\\\n\\\\\\n// mapの場合: nilが混ざる\\\\\\nlet a = strings.map { Int($0) }\\\\\\n// [1, nil, 2]（Int?型の配列）\\\\\\n\\\\\\n// compactMapの場合: nilを除外\\\\\\nlet b = strings.compactMap { Int($0) }\\\\\\n// [1, 2]（Int型の配列、nilなし）\\\\\\n```"
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標（もくひょう）\\\\\n\\\\\n文字列の配列から、数値に変換できるものだけを取り出しましょう。\\\\\n\\\\\n- `[\"1\", \"a\", \"2\", \"b\", \"3\"]` を\\\\\n- compactMapで `[1, 2, 3]` に変換\\\\\n\\\\\n「a」や「b」は数値に変換できないので、自動的に除外されます。"
+            "content": "# 目標（もくひょう）\\\\\\n\\\\\\n文字列の配列から、数値に変換できるものだけを取り出しましょう。\\\\\\n\\\\\\n- `[\"1\", \"a\", \"2\", \"b\", \"3\"]` を\\\\\\n- compactMapで `[1, 2, 3]` に変換\\\\\\n\\\\\\n「a」や「b」は数値に変換できないので、自動的に除外されます。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入\\\\\nlet nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\\\\\n// nums.compactMapでInt変換しintsに代入\\\\\nlet ints = nums.compactMap { Int($0) }\\\\\n// intsをprintで出力\\\\\nprint(ints)",
-        "holeyCode": "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入\\\\\nlet nums = [\"___\", \"a\", \"2\", \"b\", \"3\"]\\\\\n// nums.compactMapでInt変換しintsに代入\\\\\nlet ints = nums.___ { Int($0) }\\\\\n// intsをprintで出力\\\\\nprint(___)",
+        "correctCode": "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入\\\\\\nlet nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\\\\\\n// nums.compactMapでInt変換しintsに代入\\\\\\nlet ints = nums.compactMap { Int($0) }\\\\\\n// intsをprintで出力\\\\\\nprint(ints)",
+        "holeyCode": "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入\\\\\\nlet nums = [\"___\", \"a\", \"2\", \"b\", \"3\"]\\\\\\n// nums.compactMapでInt変換しintsに代入\\\\\\nlet ints = nums.___ { Int($0) }\\\\\\n// intsをprintで出力\\\\\\nprint(___)",
         "correctLines": [
           "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入",
           "let nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]",
@@ -143,7 +143,7 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1, 2, 3]\\\\\n"
+            "expected_output": "[1, 2, 3]\\\\\\n"
           }
         ]
       },
@@ -155,24 +155,24 @@ export const swift3Data = {
         "tutorialSlides": [
           {
             "title": "reduce（リデュース）とは？",
-            "content": "# 配列を1つの値にまとめる\\\\\n\\\\\n**reduce（リデュース）** は、配列の全要素を計算して1つの値にまとめる機能です。\\\\\n\\\\\n「reduce」は「減らす」という意味。たくさんの要素を1つに減らすイメージです。\\\\\n\\\\\n例えば、テストの点数リストの合計点を計算するときに使えます。"
+            "content": "# 配列を1つの値にまとめる\\\\\\n\\\\\\n**reduce（リデュース）** は、配列の全要素を計算して1つの値にまとめる機能です。\\\\\\n\\\\\\n「reduce」は「減らす」という意味。たくさんの要素を1つに減らすイメージです。\\\\\\n\\\\\\n例えば、テストの点数リストの合計点を計算するときに使えます。"
           },
           {
             "title": "reduce の使い方",
-            "content": "# 初期値と処理を指定\\\\\n\\\\\n```swift\\\\\n配列.reduce(初期値) { 途中の結果, 次の要素 in\\\\\n    // 新しい結果を返す\\\\\n}\\\\\n```\\\\\n\\\\\n**合計の例：**\\\\\n```swift\\\\\nlet sum = [1, 2, 3].reduce(0) { $0 + $1 }\\\\\n// 0 + 1 = 1\\\\\n// 1 + 2 = 3\\\\\n// 3 + 3 = 6 （結果）\\\\\n```\\\\\n\\\\\n`$0` は途中の結果、`$1` は次の要素です。"
+            "content": "# 初期値と処理を指定\\\\\\n\\\\\\n```swift\\\\\\n配列.reduce(初期値) { 途中の結果, 次の要素 in\\\\\\n    // 新しい結果を返す\\\\\\n}\\\\\\n```\\\\\\n\\\\\\n**合計の例：**\\\\\\n```swift\\\\\\nlet sum = [1, 2, 3].reduce(0) { $0 + $1 }\\\\\\n// 0 + 1 = 1\\\\\\n// 1 + 2 = 3\\\\\\n// 3 + 3 = 6 （結果）\\\\\\n```\\\\\\n\\\\\\n`$0` は途中の結果、`$1` は次の要素です。"
           },
           {
             "title": "いろいろな集約",
-            "content": "# かけ算や文字列結合も\\\\\n\\\\\n```swift\\\\\n// 全部をかける（積）\\\\\n[1, 2, 3, 4].reduce(1) { $0 * $1 }\\\\\n// 1 * 1 * 2 * 3 * 4 = 24\\\\\n\\\\\n// 文字を全部つなげる\\\\\n[\"a\", \"b\", \"c\"].reduce(\"\") { $0 + $1 }\\\\\n// \"\" + \"a\" + \"b\" + \"c\" = \"abc\"\\\\\n```"
+            "content": "# かけ算や文字列結合も\\\\\\n\\\\\\n```swift\\\\\\n// 全部をかける（積）\\\\\\n[1, 2, 3, 4].reduce(1) { $0 * $1 }\\\\\\n// 1 * 1 * 2 * 3 * 4 = 24\\\\\\n\\\\\\n// 文字を全部つなげる\\\\\\n[\"a\", \"b\", \"c\"].reduce(\"\") { $0 + $1 }\\\\\\n// \"\" + \"a\" + \"b\" + \"c\" = \"abc\"\\\\\\n```"
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標（もくひょう）\\\\\n\\\\\n配列の全要素をかけ算して、積（せき）を求めましょう。\\\\\n\\\\\n- `[1, 2, 3, 4, 5]` の全要素をかける\\\\\n- 初期値は `1`（かけ算なので）\\\\\n- 結果は `120`（1*2*3*4*5）になるはず"
+            "content": "# 目標（もくひょう）\\\\\\n\\\\\\n配列の全要素をかけ算して、積（せき）を求めましょう。\\\\\\n\\\\\\n- `[1, 2, 3, 4, 5]` の全要素をかける\\\\\\n- 初期値は `1`（かけ算なので）\\\\\\n- 結果は `120`（1*2*3*4*5）になるはず"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\\\\nlet nums = [1, 2, 3, 4, 5]\\\\\n// nums.reduce(1)で積を計算しproductに代入\\\\\nlet product = nums.reduce(1) { $0 * $1 }\\\\\n// productをprintで出力\\\\\nprint(product)",
-        "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\\\\nlet ___ = [___, 2, 3, 4, 5]\\\\\n// nums.reduce(1)で積を計算しproductに代入\\\\\nlet ___ = nums.___(___) { $0 * ___ }\\\\\n// productをprintで出力\\\\\n___(___)",
+        "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\\\\\nlet nums = [1, 2, 3, 4, 5]\\\\\\n// nums.reduce(1)で積を計算しproductに代入\\\\\\nlet product = nums.reduce(1) { $0 * $1 }\\\\\\n// productをprintで出力\\\\\\nprint(product)",
+        "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\\\\\nlet ___ = [___, 2, 3, 4, 5]\\\\\\n// nums.reduce(1)で積を計算しproductに代入\\\\\\nlet ___ = nums.___(___) { $0 * ___ }\\\\\\n// productをprintで出力\\\\\\n___(___)",
         "correctLines": [
           "// numsに[1, 2, 3, 4, 5]を代入",
           "let nums = [1, 2, 3, 4, 5]",
@@ -200,7 +200,7 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "120\\\\\n"
+            "expected_output": "120\\\\\\n"
           }
         ]
       },
@@ -212,20 +212,20 @@ export const swift3Data = {
         "tutorialSlides": [
           {
             "title": "lazy（レイジー）とは？",
-            "content": "# 必要になるまで計算しない\\\\\n\\\\\n**lazy（レイジー）** は「怠け者」という意味です。\\\\\n\\\\\n普通、mapやfilterは配列全体を一度に処理します。でもlazyを使うと、本当に必要になるまで計算を先延ばしにします。\\\\\n\\\\\n100万件のデータがあっても、最初の1件だけ欲しいなら、最初の1件だけ計算すればいいですよね。"
+            "content": "# 必要になるまで計算しない\\\\\\n\\\\\\n**lazy（レイジー）** は「怠け者」という意味です。\\\\\\n\\\\\\n普通、mapやfilterは配列全体を一度に処理します。でもlazyを使うと、本当に必要になるまで計算を先延ばしにします。\\\\\\n\\\\\\n100万件のデータがあっても、最初の1件だけ欲しいなら、最初の1件だけ計算すればいいですよね。"
           },
           {
             "title": "lazy の効果",
-            "content": "# 効率アップ\\\\\n\\\\\n```swift\\\\\n// 普通のmap: 全部計算してから最初を取る\\\\\nlet result = [1, 2, 3, 4, 5].map { $0 * 10 }.first!\\\\\n\\\\\n// lazy: 最初だけ計算\\\\\nlet result = [1, 2, 3, 4, 5].lazy.map { $0 * 10 }.first!\\\\\n```\\\\\n\\\\\n大量のデータを扱うとき、lazyを使うとプログラムが速くなります。"
+            "content": "# 効率アップ\\\\\\n\\\\\\n```swift\\\\\\n// 普通のmap: 全部計算してから最初を取る\\\\\\nlet result = [1, 2, 3, 4, 5].map { $0 * 10 }.first!\\\\\\n\\\\\\n// lazy: 最初だけ計算\\\\\\nlet result = [1, 2, 3, 4, 5].lazy.map { $0 * 10 }.first!\\\\\\n```\\\\\\n\\\\\\n大量のデータを扱うとき、lazyを使うとプログラムが速くなります。"
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標（もくひょう）\\\\\n\\\\\nlazyを使って、配列の最初の要素だけを10倍しましょう。\\\\\n\\\\\n1. 配列に `.lazy` をつける\\\\\n2. `.map { $0 * 10 }` で10倍\\\\\n3. `.first!` で最初の1つを取得\\\\\n\\\\\n結果は `10`（1 * 10）になります。"
+            "content": "# 目標（もくひょう）\\\\\\n\\\\\\nlazyを使って、配列の最初の要素だけを10倍しましょう。\\\\\\n\\\\\\n1. 配列に `.lazy` をつける\\\\\\n2. `.map { $0 * 10 }` で10倍\\\\\\n3. `.first!` で最初の1つを取得\\\\\\n\\\\\\n結果は `10`（1 * 10）になります。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\\\\nlet nums = [1, 2, 3, 4, 5]\\\\\n// nums.lazy.mapで最初の要素*10をresultに代入\\\\\nlet result = nums.lazy.map { $0 * 10 }.first!\\\\\n// resultをprintで出力\\\\\nprint(result)",
-        "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\\\\nlet nums = [___, 2, 3, 4, 5]\\\\\n// nums.lazy.mapで最初の要素*10をresultに代入\\\\\nlet result = nums.___.map { $0 * 10 }.first!\\\\\n// resultをprintで出力\\\\\nprint(___)",
+        "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\\\\\nlet nums = [1, 2, 3, 4, 5]\\\\\\n// nums.lazy.mapで最初の要素*10をresultに代入\\\\\\nlet result = nums.lazy.map { $0 * 10 }.first!\\\\\\n// resultをprintで出力\\\\\\nprint(result)",
+        "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\\\\\nlet nums = [___, 2, 3, 4, 5]\\\\\\n// nums.lazy.mapで最初の要素*10をresultに代入\\\\\\nlet result = nums.___.map { $0 * 10 }.first!\\\\\\n// resultをprintで出力\\\\\\nprint(___)",
         "correctLines": [
           "// numsに[1, 2, 3, 4, 5]を代入",
           "let nums = [1, 2, 3, 4, 5]",
@@ -256,7 +256,7 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\\\\n"
+            "expected_output": "10\\\\\\n"
           }
         ]
       },
@@ -268,20 +268,20 @@ export const swift3Data = {
         "tutorialSlides": [
           {
             "title": "where（ウェア）とは？",
-            "content": "# 「〜の場合だけ」という条件を追加\\\\\n\\\\\n**where（ウェア）** は、for文やswitch文に「追加の条件」をつけられる便利な機能です。\\\\\n\\\\\n「where」は英語で「〜の場所」という意味ですが、プログラミングでは「〜の場合」という条件を表します。\\\\\n\\\\\nfilterを使わなくても、for文に直接条件をつけられます。"
+            "content": "# 「〜の場合だけ」という条件を追加\\\\\\n\\\\\\n**where（ウェア）** は、for文やswitch文に「追加の条件」をつけられる便利な機能です。\\\\\\n\\\\\\n「where」は英語で「〜の場所」という意味ですが、プログラミングでは「〜の場合」という条件を表します。\\\\\\n\\\\\\nfilterを使わなくても、for文に直接条件をつけられます。"
           },
           {
             "title": "for文で使う",
-            "content": "# 条件に合う要素だけ処理\\\\\n\\\\\n```swift\\\\\nlet nums = [1, -2, 3, -4, 5]\\\\\n\\\\\n// whereで条件を追加\\\\\nfor n in nums where n > 0 {\\\\\n    print(n)  // 1, 3, 5 だけ表示\\\\\n}\\\\\n```\\\\\n\\\\\n負の数はスキップして、正の数だけ処理されます。"
+            "content": "# 条件に合う要素だけ処理\\\\\\n\\\\\\n```swift\\\\\\nlet nums = [1, -2, 3, -4, 5]\\\\\\n\\\\\\n// whereで条件を追加\\\\\\nfor n in nums where n > 0 {\\\\\\n    print(n)  // 1, 3, 5 だけ表示\\\\\\n}\\\\\\n```\\\\\\n\\\\\\n負の数はスキップして、正の数だけ処理されます。"
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標（もくひょう）\\\\\n\\\\\n配列の中から、正の数（0より大きい数）だけを表示しましょう。\\\\\n\\\\\n- `[1, -2, 3, -4, 5]` の中から\\\\\n- `where n > 0` で正の数だけ選ぶ\\\\\n- 結果は `1, 3, 5` が表示される"
+            "content": "# 目標（もくひょう）\\\\\\n\\\\\\n配列の中から、正の数（0より大きい数）だけを表示しましょう。\\\\\\n\\\\\\n- `[1, -2, 3, -4, 5]` の中から\\\\\\n- `where n > 0` で正の数だけ選ぶ\\\\\\n- 結果は `1, 3, 5` が表示される"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// numsに[1, -2, 3, -4, 5]を代入\\\\\nlet nums = [1, -2, 3, -4, 5]\\\\\n// for-in whereでn>0の要素をループ\\\\\nfor n in nums where n > 0 {\\\\\n    // nをprintで出力\\\\\n    print(n)\\\\\n}",
-        "holeyCode": "// numsに[1, -2, 3, -4, 5]を代入\\\\\nlet nums = [___, -2, 3, -4, 5]\\\\\n// for-in whereでn>0の要素をループ\\\\\nfor n in nums ___ n > 0 {\\\\\n    // nをprintで出力\\\\\n    print(___)\\\\\n}",
+        "correctCode": "// numsに[1, -2, 3, -4, 5]を代入\\\\\\nlet nums = [1, -2, 3, -4, 5]\\\\\\n// for-in whereでn>0の要素をループ\\\\\\nfor n in nums where n > 0 {\\\\\\n    // nをprintで出力\\\\\\n    print(n)\\\\\\n}",
+        "holeyCode": "// numsに[1, -2, 3, -4, 5]を代入\\\\\\nlet nums = [___, -2, 3, -4, 5]\\\\\\n// for-in whereでn>0の要素をループ\\\\\\nfor n in nums ___ n > 0 {\\\\\\n    // nをprintで出力\\\\\\n    print(___)\\\\\\n}",
         "correctLines": [
           "// numsに[1, -2, 3, -4, 5]を代入",
           "let nums = [1, -2, 3, -4, 5]",
@@ -314,7 +314,7 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\\\\n3\\\\\n5\\\\\n"
+            "expected_output": "1\\\\\\n3\\\\\\n5\\\\\\n"
           }
         ]
       },
@@ -326,24 +326,24 @@ export const swift3Data = {
         "tutorialSlides": [
           {
             "title": "defer（ディファー）とは？",
-            "content": "# 「後片付け」を予約する\\\\\n\\\\\n**defer（ディファー）** は、「関数が終わるときに必ず実行する」処理を予約する仕組みです。\\\\\n\\\\\n「defer」は「延期する」という意味。処理を後回しにして、最後に実行します。\\\\\n\\\\\n部屋を出るときに「電気を消す」ことを先に予約しておくようなイメージです。"
+            "content": "# 「後片付け」を予約する\\\\\\n\\\\\\n**defer（ディファー）** は、「関数が終わるときに必ず実行する」処理を予約する仕組みです。\\\\\\n\\\\\\n「defer」は「延期する」という意味。処理を後回しにして、最後に実行します。\\\\\\n\\\\\\n部屋を出るときに「電気を消す」ことを先に予約しておくようなイメージです。"
           },
           {
             "title": "defer の実行順序",
-            "content": "# 最後に実行される\\\\\n\\\\\n```swift\\\\\nfunc process() {\\\\\n    defer { print(\"後片付け\") }\\\\\n    print(\"作業中\")\\\\\n}\\\\\n\\\\\nprocess()\\\\\n// 出力:\\\\\n// 作業中\\\\\n// 後片付け\\\\\n```\\\\\n\\\\\n`defer` の中身は、関数の最後（`}` の直前）で実行されます。"
+            "content": "# 最後に実行される\\\\\\n\\\\\\n```swift\\\\\\nfunc process() {\\\\\\n    defer { print(\"後片付け\") }\\\\\\n    print(\"作業中\")\\\\\\n}\\\\\\n\\\\\\nprocess()\\\\\\n// 出力:\\\\\\n// 作業中\\\\\\n// 後片付け\\\\\\n```\\\\\\n\\\\\\n`defer` の中身は、関数の最後（`}` の直前）で実行されます。"
           },
           {
             "title": "defer が便利な場面",
-            "content": "# ファイルを閉じるなど\\\\\n\\\\\n```swift\\\\\nfunc readFile() {\\\\\n    let file = open()\\\\\n    defer { file.close() }  // 必ずファイルを閉じる\\\\\n    \\\\\n    // ファイルの処理...\\\\\n    // エラーが起きても defer は実行される\\\\\n}\\\\\n```\\\\\n\\\\\nどんな状況でも必ず実行されるので、後片付け処理に最適です。"
+            "content": "# ファイルを閉じるなど\\\\\\n\\\\\\n```swift\\\\\\nfunc readFile() {\\\\\\n    let file = open()\\\\\\n    defer { file.close() }  // 必ずファイルを閉じる\\\\\\n    \\\\\\n    // ファイルの処理...\\\\\\n    // エラーが起きても defer は実行される\\\\\\n}\\\\\\n```\\\\\\n\\\\\\nどんな状況でも必ず実行されるので、後片付け処理に最適です。"
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標（もくひょう）\\\\\n\\\\\ndeferを使って「start」の後に「end」と表示する関数を作りましょう。\\\\\n\\\\\n1. `test` 関数を作る\\\\\n2. `defer { print(\"end\") }` を書く\\\\\n3. `print(\"start\")` を書く\\\\\n\\\\\n実行すると「start」→「end」の順に表示されます。"
+            "content": "# 目標（もくひょう）\\\\\\n\\\\\\ndeferを使って「start」の後に「end」と表示する関数を作りましょう。\\\\\\n\\\\\\n1. `test` 関数を作る\\\\\\n2. `defer { print(\"end\") }` を書く\\\\\\n3. `print(\"start\")` を書く\\\\\\n\\\\\\n実行すると「start」→「end」の順に表示されます。"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// test関数を定義\\\\\nfunc test() {\\\\\n    // deferでスコープ終了時に実行\\\\\n    defer { print(\"end\") }\\\\\n    // startと出力\\\\\n    print(\"start\")\\\\\n}\\\\\n// 関数を呼び出し\\\\\ntest()",
-        "holeyCode": "// test関数を定義\\\\\nfunc ___() {\\\\\n    // deferでスコープ終了時に実行\\\\\n    ___ { print(\"end\") }\\\\\n    // startと出力\\\\\n    print(\"___\")\\\\\n}\\\\\n// 関数を呼び出し\\\\\n___()",
+        "correctCode": "// test関数を定義\\\\\\nfunc test() {\\\\\\n    // deferでスコープ終了時に実行\\\\\\n    defer { print(\"end\") }\\\\\\n    // startと出力\\\\\\n    print(\"start\")\\\\\\n}\\\\\\n// 関数を呼び出し\\\\\\ntest()",
+        "holeyCode": "// test関数を定義\\\\\\nfunc ___() {\\\\\\n    // deferでスコープ終了時に実行\\\\\\n    ___ { print(\"end\") }\\\\\\n    // startと出力\\\\\\n    print(\"___\")\\\\\\n}\\\\\\n// 関数を呼び出し\\\\\\n___()",
         "correctLines": [
           "// test関数を定義",
           "func test() {",
@@ -380,7 +380,7 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "start\\\\\nend\\\\\n"
+            "expected_output": "start\\\\\\nend\\\\\\n"
           }
         ]
       },
@@ -392,24 +392,24 @@ export const swift3Data = {
         "tutorialSlides": [
           {
             "title": "associatedtype（アソシエイテッドタイプ）とは？",
-            "content": "# プロトコルで「型を後で決める」仕組み\\\\\n\\\\\n**associatedtype（アソシエイテッドタイプ）** は、プロトコルの中で「型を後から決める」ための仕組みです。\\\\\n\\\\\n「associated」は「関連した」という意味。プロトコルに関連する型を表します。\\\\\n\\\\\n例えば「入れ物」というプロトコルで、中身の型（数字なのか文字なのか）は後から決めたいときに使います。"
+            "content": "# プロトコルで「型を後で決める」仕組み\\\\\\n\\\\\\n**associatedtype（アソシエイテッドタイプ）** は、プロトコルの中で「型を後から決める」ための仕組みです。\\\\\\n\\\\\\n「associated」は「関連した」という意味。プロトコルに関連する型を表します。\\\\\\n\\\\\\n例えば「入れ物」というプロトコルで、中身の型（数字なのか文字なのか）は後から決めたいときに使います。"
           },
           {
             "title": "associatedtype の定義",
-            "content": "# プロトコル内で宣言\\\\\n\\\\\n```swift\\\\\nprotocol Container {\\\\\n    associatedtype Item  // 「Item」という型を後で決める\\\\\n    func add(_ item: Item)\\\\\n}\\\\\n```\\\\\n\\\\\n`Item` が何の型かは、このプロトコルに準拠する型が決めます。"
+            "content": "# プロトコル内で宣言\\\\\\n\\\\\\n```swift\\\\\\nprotocol Container {\\\\\\n    associatedtype Item  // 「Item」という型を後で決める\\\\\\n    func add(_ item: Item)\\\\\\n}\\\\\\n```\\\\\\n\\\\\\n`Item` が何の型かは、このプロトコルに準拠する型が決めます。"
           },
           {
             "title": "準拠する側で型を決める",
-            "content": "# 実際の型を指定\\\\\n\\\\\n```swift\\\\\n// 整数を入れるコンテナ\\\\\nstruct IntBox: Container {\\\\\n    func add(_ item: Int) { }  // ItemはIntに決定\\\\\n}\\\\\n\\\\\n// 文字列を入れるコンテナ\\\\\nstruct StringBox: Container {\\\\\n    func add(_ item: String) { }  // ItemはStringに決定\\\\\n}\\\\\n```"
+            "content": "# 実際の型を指定\\\\\\n\\\\\\n```swift\\\\\\n// 整数を入れるコンテナ\\\\\\nstruct IntBox: Container {\\\\\\n    func add(_ item: Int) { }  // ItemはIntに決定\\\\\\n}\\\\\\n\\\\\\n// 文字列を入れるコンテナ\\\\\\nstruct StringBox: Container {\\\\\\n    func add(_ item: String) { }  // ItemはStringに決定\\\\\\n}\\\\\\n```"
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標（もくひょう）\\\\\n\\\\\nスタック（積み重ね）のプロトコルを作りましょう。\\\\\n\\\\\n1. `Stack` プロトコルを作る\\\\\n2. `associatedtype Element` を宣言\\\\\n3. `push` メソッドを宣言\\\\\n4. `IntStack` 構造体で準拠を実装"
+            "content": "# 目標（もくひょう）\\\\\\n\\\\\\nスタック（積み重ね）のプロトコルを作りましょう。\\\\\\n\\\\\\n1. `Stack` プロトコルを作る\\\\\\n2. `associatedtype Element` を宣言\\\\\\n3. `push` メソッドを宣言\\\\\\n4. `IntStack` 構造体で準拠を実装"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// プロトコルを定義\\\\\nprotocol Stack {\\\\\n    // associatedtypeで関連型を定義\\\\\n    associatedtype Element\\\\\n    // pushメソッドを宣言\\\\\n    mutating func push(_ item: Element)\\\\\n}\\\\\n\\\\\n// Stackに準拠\\\\\nstruct IntStack: Stack {\\\\\n    // items配列\\\\\n    var items: [Int] = []\\\\\n    // pushメソッドを実装\\\\\n    mutating func push(_ item: Int) {\\\\\n        // 要素を追加\\\\\n        items.append(item)\\\\\n    }\\\\\n}\\\\\n\\\\\n// インスタンスを作成\\\\\nvar s = IntStack()\\\\\n// 要素を追加\\\\\ns.push(10)\\\\\n// itemsを出力\\\\\nprint(s.items)",
-        "holeyCode": "// プロトコルを定義\\\\\nprotocol ___ {\\\\\n    // associatedtypeで関連型を定義\\\\\n    ___ Element\\\\\n    // pushメソッドを宣言\\\\\n    mutating func push(_ item: ___)\\\\\n}\\\\\n\\\\\n// Stackに準拠\\\\\nstruct IntStack: Stack {\\\\\n    // items配列\\\\\n    var items: [___] = []\\\\\n    // pushメソッドを実装\\\\\n    mutating func ___(_ item: Int) {\\\\\n        // 要素を追加\\\\\n        items.___(item)\\\\\n    }\\\\\n}\\\\\n\\\\\n// インスタンスを作成\\\\\nvar s = ___()\\\\\n// 要素を追加\\\\\ns.push(___)\\\\\n// itemsを出力\\\\\nprint(s.___)",
+        "correctCode": "// プロトコルを定義\\\\\\nprotocol Stack {\\\\\\n    // associatedtypeで関連型を定義\\\\\\n    associatedtype Element\\\\\\n    // pushメソッドを宣言\\\\\\n    mutating func push(_ item: Element)\\\\\\n}\\\\\\n\\\\\\n// Stackに準拠\\\\\\nstruct IntStack: Stack {\\\\\\n    // items配列\\\\\\n    var items: [Int] = []\\\\\\n    // pushメソッドを実装\\\\\\n    mutating func push(_ item: Int) {\\\\\\n        // 要素を追加\\\\\\n        items.append(item)\\\\\\n    }\\\\\\n}\\\\\\n\\\\\\n// インスタンスを作成\\\\\\nvar s = IntStack()\\\\\\n// 要素を追加\\\\\\ns.push(10)\\\\\\n// itemsを出力\\\\\\nprint(s.items)",
+        "holeyCode": "// プロトコルを定義\\\\\\nprotocol ___ {\\\\\\n    // associatedtypeで関連型を定義\\\\\\n    ___ Element\\\\\\n    // pushメソッドを宣言\\\\\\n    mutating func push(_ item: ___)\\\\\\n}\\\\\\n\\\\\\n// Stackに準拠\\\\\\nstruct IntStack: Stack {\\\\\\n    // items配列\\\\\\n    var items: [___] = []\\\\\\n    // pushメソッドを実装\\\\\\n    mutating func ___(_ item: Int) {\\\\\\n        // 要素を追加\\\\\\n        items.___(item)\\\\\\n    }\\\\\\n}\\\\\\n\\\\\\n// インスタンスを作成\\\\\\nvar s = ___()\\\\\\n// 要素を追加\\\\\\ns.push(___)\\\\\\n// itemsを出力\\\\\\nprint(s.___)",
         "correctLines": [
           "// プロトコルを定義",
           "protocol Stack {",
@@ -484,7 +484,7 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[10]\\\\\n"
+            "expected_output": "[10]\\\\\\n"
           }
         ]
       },
@@ -496,24 +496,24 @@ export const swift3Data = {
         "tutorialSlides": [
           {
             "title": "throws（スローズ）とは？",
-            "content": "# 「エラーを投げる可能性がある」宣言\\\\\n\\\\\n**throws（スローズ）** は、関数が「エラーを投げる可能性がある」ことを宣言します。\\\\\n\\\\\n「throw」は「投げる」という意味。野球でボールを投げるように、問題が起きたときにエラーを「投げ」ます。\\\\\n\\\\\n例えば、0で割り算しようとしたときにエラーを投げるような関数です。"
+            "content": "# 「エラーを投げる可能性がある」宣言\\\\\\n\\\\\\n**throws（スローズ）** は、関数が「エラーを投げる可能性がある」ことを宣言します。\\\\\\n\\\\\\n「throw」は「投げる」という意味。野球でボールを投げるように、問題が起きたときにエラーを「投げ」ます。\\\\\\n\\\\\\n例えば、0で割り算しようとしたときにエラーを投げるような関数です。"
           },
           {
             "title": "throws関数の作り方",
-            "content": "# -> の前に throws\\\\\n\\\\\n```swift\\\\\nfunc divide(_ a: Int, _ b: Int) throws -> Int {\\\\\n    if b == 0 {\\\\\n        throw MyError.divByZero  // エラーを投げる\\\\\n    }\\\\\n    return a / b\\\\\n}\\\\\n```\\\\\n\\\\\n`throws` を書くことで「この関数はエラーを投げるかもしれないよ」と伝えます。"
+            "content": "# -> の前に throws\\\\\\n\\\\\\n```swift\\\\\\nfunc divide(_ a: Int, _ b: Int) throws -> Int {\\\\\\n    if b == 0 {\\\\\\n        throw MyError.divByZero  // エラーを投げる\\\\\\n    }\\\\\\n    return a / b\\\\\\n}\\\\\\n```\\\\\\n\\\\\\n`throws` を書くことで「この関数はエラーを投げるかもしれないよ」と伝えます。"
           },
           {
             "title": "try と do-catch",
-            "content": "# エラーを受け止める\\\\\n\\\\\n```swift\\\\\ndo {\\\\\n    let result = try divide(10, 0)  // tryで呼び出し\\\\\n    print(result)\\\\\n} catch {\\\\\n    print(\"エラー発生: \\(error)\")  // エラーを処理\\\\\n}\\\\\n```\\\\\n\\\\\n- **try**: 「エラーが起きるかも」と覚悟して呼び出す\\\\\n- **do-catch**: エラーが起きたときの処理を書く"
+            "content": "# エラーを受け止める\\\\\\n\\\\\\n```swift\\\\\\ndo {\\\\\\n    let result = try divide(10, 0)  // tryで呼び出し\\\\\\n    print(result)\\\\\\n} catch {\\\\\\n    print(\"エラー発生: \\(error)\")  // エラーを処理\\\\\\n}\\\\\\n```\\\\\\n\\\\\\n- **try**: 「エラーが起きるかも」と覚悟して呼び出す\\\\\\n- **do-catch**: エラーが起きたときの処理を書く"
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標（もくひょう）\\\\\n\\\\\n数が負のときにエラーを投げる関数を作りましょう。\\\\\n\\\\\n1. `MyError` エラー型を定義（invalid case）\\\\\n2. `check` 関数を `throws` で作る\\\\\n3. 負の数なら `throw` でエラー\\\\\n4. `try` と `do-catch` で呼び出す"
+            "content": "# 目標（もくひょう）\\\\\\n\\\\\\n数が負のときにエラーを投げる関数を作りましょう。\\\\\\n\\\\\\n1. `MyError` エラー型を定義（invalid case）\\\\\\n2. `check` 関数を `throws` で作る\\\\\\n3. 負の数なら `throw` でエラー\\\\\\n4. `try` と `do-catch` で呼び出す"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// エラー型を定義\\\\nenum MyError: Error { case invalid }\\\\n\\\\n// throwsでエラーを投げる可能性を示す\\\\nfunc check(_ n: Int) throws -> Int {\\\\n    // 負の場合はエラー\\\\n    if n < 0 { throw MyError.invalid }\\\\n    // nを返す\\\\n    return n\\\\n}\\\\n\\\\n// do-catchでエラー処理\\\\ndo {\\\\n    // tryで呼び出し\\\\n    let v = try check(10)\\\\n    // vを出力\\\\n    print(v)\\\\n} catch {\\\\n    // エラーを出力\\\\n    print(\"エラー\")\\\\n}",
-        "holeyCode": "// エラー型を定義\\\\\nenum MyError: Error { case ___ }\\\\\n\\\\\n// throwsでエラーを投げる可能性を示す\\\\\nfunc check(_ n: Int) ___ -> Int {\\\\\n    // 負の場合はエラー\\\\\n    if n < 0 { throw MyError.___ }\\\\\n    // nを返す\\\\\n    return ___\\\\\n}\\\\\n\\\\\n// do-catchでエラー処理\\\\\ndo {\\\\\n    // tryで呼び出し\\\\\n    let v = ___ check(10)\\\\\n    // vを出力\\\\\n    print(___)\\\\\n} catch {\\\\\n    // エラーを出力\\\\\n    print(\"___\")\\\\\n}",
+        "correctCode": "// エラー型を定義\\\\\nenum MyError: Error { case invalid }\\\\\n\\\\\n// throwsでエラーを投げる可能性を示す\\\\\nfunc check(_ n: Int) throws -> Int {\\\\\n    // 負の場合はエラー\\\\\n    if n < 0 { throw MyError.invalid }\\\\\n    // nを返す\\\\\n    return n\\\\\n}\\\\\n\\\\\n// do-catchでエラー処理\\\\\ndo {\\\\\n    // tryで呼び出し\\\\\n    let v = try check(10)\\\\\n    // vを出力\\\\\n    print(v)\\\\\n} catch {\\\\\n    // エラーを出力\\\\\n    print(\"エラー\")\\\\\n}",
+        "holeyCode": "// エラー型を定義\\\\\\nenum MyError: Error { case ___ }\\\\\\n\\\\\\n// throwsでエラーを投げる可能性を示す\\\\\\nfunc check(_ n: Int) ___ -> Int {\\\\\\n    // 負の場合はエラー\\\\\\n    if n < 0 { throw MyError.___ }\\\\\\n    // nを返す\\\\\\n    return ___\\\\\\n}\\\\\\n\\\\\\n// do-catchでエラー処理\\\\\\ndo {\\\\\\n    // tryで呼び出し\\\\\\n    let v = ___ check(10)\\\\\\n    // vを出力\\\\\\n    print(___)\\\\\\n} catch {\\\\\\n    // エラーを出力\\\\\\n    print(\"___\")\\\\\\n}",
         "correctLines": [
           "// エラー型を定義",
           "enum MyError: Error { case invalid }",
@@ -571,7 +571,7 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\\\\n"
+            "expected_output": "10\\\\\\n"
           }
         ]
       },
@@ -583,24 +583,24 @@ export const swift3Data = {
         "tutorialSlides": [
           {
             "title": "Set（セット）とは？",
-            "content": "# 重複しないデータの集まり\\\\\n\\\\\n**Set（セット）** は、同じ値を持たないデータの集まりです。\\\\\n\\\\\n配列と違って、同じ値を入れても1つにまとめられます。\\\\\n\\\\\nクラスの出席番号のように、同じ番号が2つあるとおかしいですよね。そういうデータにSetを使います。"
+            "content": "# 重複しないデータの集まり\\\\\\n\\\\\\n**Set（セット）** は、同じ値を持たないデータの集まりです。\\\\\\n\\\\\\n配列と違って、同じ値を入れても1つにまとめられます。\\\\\\n\\\\\\nクラスの出席番号のように、同じ番号が2つあるとおかしいですよね。そういうデータにSetを使います。"
           },
           {
             "title": "Setの特徴",
-            "content": "# 重複が自動的に除かれる\\\\\n\\\\\n```swift\\\\\nvar set: Set = [1, 2, 2, 3, 3, 3]\\\\\nprint(set.count)  // 3（重複は1つになる）\\\\\n// setの中身は {1, 2, 3}\\\\\n```\\\\\n\\\\\n2を2回、3を3回入れても、それぞれ1つずつになります。"
+            "content": "# 重複が自動的に除かれる\\\\\\n\\\\\\n```swift\\\\\\nvar set: Set = [1, 2, 2, 3, 3, 3]\\\\\\nprint(set.count)  // 3（重複は1つになる）\\\\\\n// setの中身は {1, 2, 3}\\\\\\n```\\\\\\n\\\\\\n2を2回、3を3回入れても、それぞれ1つずつになります。"
           },
           {
             "title": "集合演算（しゅうごうえんざん）",
-            "content": "# 数学の集合と同じ計算ができる\\\\\n\\\\\n```swift\\\\\nlet a: Set = [1, 2, 3]\\\\\nlet b: Set = [2, 3, 4]\\\\\n\\\\\na.union(b)        // 合わせる → {1, 2, 3, 4}\\\\\na.intersection(b) // 共通部分 → {2, 3}\\\\\na.subtracting(b)  // 差（aだけ） → {1}\\\\\n```"
+            "content": "# 数学の集合と同じ計算ができる\\\\\\n\\\\\\n```swift\\\\\\nlet a: Set = [1, 2, 3]\\\\\\nlet b: Set = [2, 3, 4]\\\\\\n\\\\\\na.union(b)        // 合わせる → {1, 2, 3, 4}\\\\\\na.intersection(b) // 共通部分 → {2, 3}\\\\\\na.subtracting(b)  // 差（aだけ） → {1}\\\\\\n```"
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標（もくひょう）\\\\\n\\\\\n重複のあるデータをSetに入れて、実際の要素数を確認しましょう。\\\\\n\\\\\n- `[1, 2, 2, 3, 3, 3]` をSetに入れる\\\\\n- `.count` で要素数を表示\\\\\n- 答えは `3` になる（重複が除かれるから）"
+            "content": "# 目標（もくひょう）\\\\\\n\\\\\\n重複のあるデータをSetに入れて、実際の要素数を確認しましょう。\\\\\\n\\\\\\n- `[1, 2, 2, 3, 3, 3]` をSetに入れる\\\\\\n- `.count` で要素数を表示\\\\\\n- 答えは `3` になる（重複が除かれるから）"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Setで重複なしのコレクション\\\\\nvar s: Set = [1, 2, 2, 3, 3, 3]\\\\\n// 要素数を出力\\\\\nprint(s.count)",
-        "holeyCode": "// Setで重複なしのコレクション\\\\\nvar s: ___ = [1, 2, 2, 3, 3, 3]\\\\\n// 要素数を出力\\\\\nprint(s.___)",
+        "correctCode": "// Setで重複なしのコレクション\\\\\\nvar s: Set = [1, 2, 2, 3, 3, 3]\\\\\\n// 要素数を出力\\\\\\nprint(s.count)",
+        "holeyCode": "// Setで重複なしのコレクション\\\\\\nvar s: ___ = [1, 2, 2, 3, 3, 3]\\\\\\n// 要素数を出力\\\\\\nprint(s.___)",
         "correctLines": [
           "// Setで重複なしのコレクション",
           "var s: Set = [1, 2, 2, 3, 3, 3]",
@@ -626,7 +626,7 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3\\\\\n"
+            "expected_output": "3\\\\\\n"
           }
         ]
       },
@@ -638,24 +638,24 @@ export const swift3Data = {
         "tutorialSlides": [
           {
             "title": "mutating（ミューテイティング）とは？",
-            "content": "# 「自分を変更する」宣言\\\\\n\\\\\n**mutating（ミューテイティング）** は、構造体のメソッドで「自分自身を変更します」と宣言するキーワードです。\\\\\n\\\\\n「mutate」は「変化する」という意味。自分自身を変化させるメソッドに必要です。\\\\\n\\\\\n構造体は「値型」なので、普通は自分自身を変更できません。でも `mutating` をつけると変更できるようになります。"
+            "content": "# 「自分を変更する」宣言\\\\\\n\\\\\\n**mutating（ミューテイティング）** は、構造体のメソッドで「自分自身を変更します」と宣言するキーワードです。\\\\\\n\\\\\\n「mutate」は「変化する」という意味。自分自身を変化させるメソッドに必要です。\\\\\\n\\\\\\n構造体は「値型」なので、普通は自分自身を変更できません。でも `mutating` をつけると変更できるようになります。"
           },
           {
             "title": "mutating の使い方",
-            "content": "# func の前に mutating\\\\\n\\\\\n```swift\\\\\nstruct Counter {\\\\\n    var count = 0\\\\\n    \\\\\n    mutating func increment() {\\\\\n        count += 1  // 自分のcountを変更\\\\\n    }\\\\\n}\\\\\n```\\\\\n\\\\\n`mutating` がないと、`count += 1` でエラーになります。"
+            "content": "# func の前に mutating\\\\\\n\\\\\\n```swift\\\\\\nstruct Counter {\\\\\\n    var count = 0\\\\\\n    \\\\\\n    mutating func increment() {\\\\\\n        count += 1  // 自分のcountを変更\\\\\\n    }\\\\\\n}\\\\\\n```\\\\\\n\\\\\\n`mutating` がないと、`count += 1` でエラーになります。"
           },
           {
             "title": "なぜ mutating が必要？",
-            "content": "# 構造体は「値型」だから\\\\\n\\\\\n構造体は、変数にコピーすると別々の値になります（値型）。\\\\\n\\\\\n自分自身を変更するのは特別なことなので、「このメソッドは自分を変えますよ」と宣言する必要があります。\\\\\n\\\\\nクラスは「参照型」なので mutating は不要です。"
+            "content": "# 構造体は「値型」だから\\\\\\n\\\\\\n構造体は、変数にコピーすると別々の値になります（値型）。\\\\\\n\\\\\\n自分自身を変更するのは特別なことなので、「このメソッドは自分を変えますよ」と宣言する必要があります。\\\\\\n\\\\\\nクラスは「参照型」なので mutating は不要です。"
           },
           {
             "title": "やってみましょう！",
-            "content": "# 目標（もくひょう）\\\\\n\\\\\nカウンターの構造体を作って、数を増やせるようにしましょう。\\\\\n\\\\\n1. `Counter` 構造体を作る\\\\\n2. `count` プロパティを持つ\\\\\n3. `mutating func increment()` で1増やす\\\\\n4. 2回呼び出して `2` と表示されるか確認"
+            "content": "# 目標（もくひょう）\\\\\\n\\\\\\nカウンターの構造体を作って、数を増やせるようにしましょう。\\\\\\n\\\\\\n1. `Counter` 構造体を作る\\\\\\n2. `count` プロパティを持つ\\\\\\n3. `mutating func increment()` で1増やす\\\\\\n4. 2回呼び出して `2` と表示されるか確認"
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 構造体を定義\\\\\nstruct Counter {\\\\\n    // countプロパティ\\\\\n    var count = 0\\\\\n    // mutatingで構造体を変更可能に\\\\\n    mutating func increment() {\\\\\n        // countを1増やす\\\\\n        count += 1\\\\\n    }\\\\\n}\\\\\n\\\\\n// インスタンスを作成\\\\\nvar c = Counter()\\\\\n// 1回目のincrementを呼び出し\\\\\nc.increment()\\\\\n// 2回目のincrementを呼び出し\\\\\nc.increment()\\\\\n// countを出力\\\\\nprint(c.count)",
-        "holeyCode": "// 構造体を定義\\\\\nstruct ___ {\\\\\n    // countプロパティ\\\\\n    var count = ___\\\\\n    // mutatingで構造体を変更可能に\\\\\n    ___ func increment() {\\\\\n        // countを1増やす\\\\\n        count += ___\\\\\n    }\\\\\n}\\\\\n\\\\\n// インスタンスを作成\\\\\nvar c = ___()\\\\\n// 1回目のincrementを呼び出し\\\\\nc.___()\\\\\n// 2回目のincrementを呼び出し\\\\\nc.___()\\\\\n// countを出力\\\\\nprint(c.___)",
+        "correctCode": "// 構造体を定義\\\\\\nstruct Counter {\\\\\\n    // countプロパティ\\\\\\n    var count = 0\\\\\\n    // mutatingで構造体を変更可能に\\\\\\n    mutating func increment() {\\\\\\n        // countを1増やす\\\\\\n        count += 1\\\\\\n    }\\\\\\n}\\\\\\n\\\\\\n// インスタンスを作成\\\\\\nvar c = Counter()\\\\\\n// 1回目のincrementを呼び出し\\\\\\nc.increment()\\\\\\n// 2回目のincrementを呼び出し\\\\\\nc.increment()\\\\\\n// countを出力\\\\\\nprint(c.count)",
+        "holeyCode": "// 構造体を定義\\\\\\nstruct ___ {\\\\\\n    // countプロパティ\\\\\\n    var count = ___\\\\\\n    // mutatingで構造体を変更可能に\\\\\\n    ___ func increment() {\\\\\\n        // countを1増やす\\\\\\n        count += ___\\\\\\n    }\\\\\\n}\\\\\\n\\\\\\n// インスタンスを作成\\\\\\nvar c = ___()\\\\\\n// 1回目のincrementを呼び出し\\\\\\nc.___()\\\\\\n// 2回目のincrementを呼び出し\\\\\\nc.___()\\\\\\n// countを出力\\\\\\nprint(c.___)",
         "correctLines": [
           "// 構造体を定義",
           "struct Counter {",
@@ -715,7 +715,7 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "2\\\\\n"
+            "expected_output": "2\\\\\\n"
           }
         ]
       }
