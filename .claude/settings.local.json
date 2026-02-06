@@ -14,7 +14,9 @@
       "Bash(node:*)",
       "Bash(git push)",
       "Bash(npx tsc:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(npx ts-node:*)",
+      "Bash(cat:*)"
     ]
   }
 }

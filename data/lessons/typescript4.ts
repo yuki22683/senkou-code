@@ -250,8 +250,8 @@ export const typescriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 色のユニオン型\\ntype Color = '赤' | '緑' | '青';\\n\\nfunction getHex(color: Color): string {\\n  switch (color) {\\n    // 赤のカラーコード\\n    case '赤': return '#ff0000';\\n    // 緑のカラーコード\\n    case '緑': return '#00ff00';\\n    // 青のカラーコード\\n    case '青': return '#0000ff';\\n    default:\\n      // never で到達不能な型を表す\\n      const _exhaustive: never = color;\\n      // exhaustive変数を返す\\n      return _exhaustive;\\n  }\\n}\\n\\n// 赤のカラーコードを出力\\nconsole.log(getHex('赤'));",
-        "holeyCode": "// 色のユニオン型\\ntype Color = '赤' | '緑' ___ '青';\\n\\nfunction getHex(color: Color): string {\\n  switch (color) {\\n    // 赤のカラーコード\\n    case '赤': return ___;\\n    // 緑のカラーコード\\n    case '緑': return ___;\\n    // 青のカラーコード\\n    case '青': return ___;\\n    default:\\n      // never で到達不能な型を表す\\n      const _exhaustive: ___ = color;\\n      // exhaustive変数を返す\\n      return ___;\\n  }\\n}\\n\\n// 赤のカラーコードを出力\\nconsole.log(getHex(___));",
+        "correctCode": "// 色のユニオン型\\ntype Color = '赤' | '緑' | '青';\\n\\nfunction getHex(color: Color): string {\\n  switch (color) {\\n    // 赤のカラーコード\\n    case '赤': return '#ff0000';\\n    // 緑のカラーコード\\n    case '緑': return '#00ff00';\\n    // 青のカラーコード\\n    case '青': return '#0000ff';\\n    // 全ケース処理済みの場合\\n    default:\\n      // never で到達不能な型を表す\\n      const _exhaustive: never = color;\\n      // exhaustive変数を返す\\n      return _exhaustive;\\n  }\\n}\\n\\n// 赤のカラーコードを出力\\nconsole.log(getHex('赤'));",
+        "holeyCode": "// 色のユニオン型\\ntype Color = '赤' | '緑' ___ '青';\\n\\nfunction getHex(color: Color): string {\\n  switch (color) {\\n    // 赤のカラーコード\\n    case '赤': return ___;\\n    // 緑のカラーコード\\n    case '緑': return ___;\\n    // 青のカラーコード\\n    case '青': return ___;\\n    // 全ケース処理済みの場合\\n    ___:\\n      // never で到達不能な型を表す\\n      const _exhaustive: ___ = color;\\n      // exhaustive変数を返す\\n      return ___;\\n  }\\n}\\n\\n// 赤のカラーコードを出力\\nconsole.log(getHex(___));",
         "correctLines": [
           "// 色のユニオン型",
           "type Color = '赤' | '緑' | '青';",
@@ -264,6 +264,7 @@ export const typescriptData4 = {
           "    case '緑': return '#00ff00';",
           "    // 青のカラーコード",
           "    case '青': return '#0000ff';",
+          "    // 全ケース処理済みの場合",
           "    default:",
           "      // never で到達不能な型を表す",
           "      const _exhaustive: never = color;",
@@ -282,21 +283,22 @@ export const typescriptData4 = {
           null,
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           "全ケースを処理した後は到達しないことを示す型です。",
+          null,
+          null,
           null,
           "変数の値を呼び出し元に返します（戻り値）。",
           null,
-          "カラーコードを取得したい色を指定します。",
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "カラーコードを取得したい色を指定します。"
         ],
         "candidates": {
           "keywords": [
@@ -304,7 +306,7 @@ export const typescriptData4 = {
             "void",
             "unknown"
           ],
-          "others": ["|", "'#ff0000'", "'#00ff00'", "'#0000ff'", "_exhaustive", "'赤'", "'赤'"]
+          "others": ["|", "'#ff0000'", "'#00ff00'", "'#0000ff'", "_exhaustive", "'赤'", "default"]
         },
         "testCases": [
           {
@@ -558,7 +560,7 @@ export const typescriptData4 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "function greet(name: string, age: number): void {\\n  // テンプレート文字列で出力\\n  console.log(`${name} is ${age}`);\\n}\\n// Parameters で関数の引数型を取得\\ntype GreetParams = Parameters<typeof greet>;\\n// argsに['太郎', 25]を代入\\nconst args: GreetParams = ['太郎', 25];\\n// 引数の配列 args を渡して呼び出し\\ngreet(...args);",
-        "holeyCode": "function greet(name: string, age: number): void {\\n  // テンプレート文字列で出力\\n  console.log(`${name} is ${___}`);\\n}\\n// Parameters で関数の引数型を取得\\ntype GreetParams = ___<typeof greet>;\\n// argsに['太郎', 25]を代入\\nconst args: GreetParams = ['太郎', ___];\\n// 引数の配列 args を渡して呼び出し\\ngreet(...___);",
+        "holeyCode": "function greet(___, age: number): void {\\n  // テンプレート文字列で出力\\n  console.log(`${name} is ${___}`);\\n}\\n// Parameters で関数の引数型を取得\\ntype GreetParams = ___<typeof greet>;\\n// argsに['太郎', 25]を代入\\nconst args: GreetParams = ['太郎', ___];\\n// 引数の配列 args を渡して呼び出し\\ngreet(...___);",
         "correctLines": [
           "function greet(name: string, age: number): void {",
           "  // テンプレート文字列で出力",
@@ -589,12 +591,12 @@ export const typescriptData4 = {
             "ReturnType",
             "Arguments"
           ],
-          "others": ["age", "25", "args", "年齢", ", 25"]
+          "others": ["name: string", "age", "25", "args"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Taro is 25\\n"
+            "expected_output": "太郎 is 25\\n"
           }
         ]
       },
@@ -653,7 +655,7 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "success\\n"
+            "expected_output": "成功\\n"
           }
         ]
       }

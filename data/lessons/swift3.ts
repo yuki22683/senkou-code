@@ -31,7 +31,7 @@ export const swift3Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// エラー型を定義\\nenum MyError: Error { case negative }\\n\\n// check関数を定義\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.negative) }\\n    // successで成功を返す\\n    return .success(n)\\n}\\n\\n// 関数を呼び出し\\nlet result = check(10)\\n// switchでパターンマッチ\\nswitch result {\\n// 成功の場合\\ncase .success(let v): print(v)\\n// 失敗の場合\\ncase .failure(_): print(\"エラー\")\\n}",
-        "holeyCode": "// エラー型を定義\\nenum MyError: ___ { case negative }\\n\\n// check関数を定義\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.___) }\\n    // successで成功を返す\\n    return .___(n)\\n}\\n\\n// 関数を呼び出し\\nlet result = ___(10)\\n// switchでパターンマッチ\\nswitch ___ {\\n// 成功の場合\\ncase .success(let v): print(___)\\n// 失敗の場合\\ncase .failure(_): print(\"___\")\\n}",
+        "holeyCode": "// エラー型を定義\\nenum MyError: ___ { case negative }\\n\\n// check関数を定義\\nfunc ___(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.___) }\\n    // successで成功を返す\\n    return .___(n)\\n}\\n\\n// 関数を呼び出し\\nlet result = ___(10)\\n// switchでパターンマッチ\\nswitch ___ {\\n// 成功の場合\\ncase .success(let v): print(___)\\n// 失敗の場合\\ncase .failure(_): print(\"___\")\\n}",
         "correctLines": [
           "// エラー型を定義",
           "enum MyError: Error { case negative }",

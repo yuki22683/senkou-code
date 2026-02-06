@@ -457,16 +457,16 @@ export const javascriptData3 = {
         ],
         "lineHints": [
           null,
+          "classでクラスを定義します。",
+          null,
+          "staticでクラスメソッドにします。",
+          null,
+          "returnで計算結果を返します。",
           null,
           null,
           null,
-          "static でクラスメソッドにします。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "クラス名.メソッド名()でstaticを呼び出せます。"
         ],
         "candidates": {
           "keywords": [

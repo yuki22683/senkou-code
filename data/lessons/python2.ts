@@ -579,8 +579,8 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# エラーが起きる可能性のある処理\\ntry:\\n    # 文字列'abc'を数値に変換（エラー発生）\\n    num = int('abc')\\n# 例外をキャッチするキーワード\\nexcept:\\n    # エラーメッセージ（'Error'）\\n    print('Error')",
-        "holeyCode": "# エラーが起きる可能性のある処理\\n___:\\n    # 文字列'abc'を数値に変換（エラー発生）\\n    num = int('___')\\n# 例外をキャッチするキーワード\\n___:\\n    # エラーメッセージ（'Error'）\\n    ___('Error')",
+        "correctCode": "# エラーが起きる可能性のある処理\\ntry:\\n    # 文字列'abc'を数値に変換（エラー発生）\\n    num = int('abc')\\n# 例外をキャッチするキーワード\\nexcept:\\n    # 'エラー'と出力\\n    print('エラー')",
+        "holeyCode": "# エラーが起きる可能性のある処理\\n___:\\n    # 文字列'abc'を数値に変換（エラー発生）\\n    num = int('___')\\n# 例外をキャッチするキーワード\\n___:\\n    # 'エラー'と出力\\n    ___('エラー')",
         "correctLines": [
           "# エラーが起きる可能性のある処理",
           "try:",
@@ -588,8 +588,8 @@ export const pythonData2 = {
           "    num = int('abc')",
           "# 例外をキャッチするキーワード",
           "except:",
-          "    # エラーメッセージ（'Error'）",
-          "    print('Error')"
+          "    # 'エラー'と出力",
+          "    print('エラー')"
         ],
         "lineHints": [
           null,
@@ -607,12 +607,12 @@ export const pythonData2 = {
             "except",
             "finally"
           ],
-          "others": ["abc", "Error", "print"]
+          "others": ["abc", "エラー", "print"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Error\\n"
+            "expected_output": "エラー\\n"
           }
         ]
       },

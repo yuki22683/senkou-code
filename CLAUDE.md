@@ -806,3 +806,24 @@
   - 一般: `.methodName()`
   - Lua: `:methodName()` （コロン記法）
 - **理由**: ヒントがコードと合っていないと、学習者が混乱し、誤った理解を招く
+
+### 60. JavaScriptでリテラルの`\n`にマッチする正規表現
+- JavaScriptの正規表現で**リテラルのバックスラッシュ+n**（文字コード92, 110）にマッチさせる場合、`/\\n/g`は**使用禁止**。
+- **禁止**: `/\\n/g` → これは改行文字（char code 10）にマッチする
+- **正しい**: `/\\\\n/g` → これがリテラルのバックスラッシュ+nにマッチする
+- **理由**: JavaScriptソースコード内での解釈:
+  - `/\\n/g` → パターン `\n` → 改行文字にマッチ
+  - `/\\\\n/g` → パターン `\\n` → バックスラッシュ+nにマッチ
+- **代替方法**: `String.fromCharCode(92, 110)` で区切り文字を作成し、`split`/`join`を使う
+  ```javascript
+  const backslashN = String.fromCharCode(92, 110);
+  const result = str.split(backslashN).join('\n');
+  ```
+- **対象箇所**:
+  - チェックスクリプト（check-holey-v4.mjs等）
+  - フロントエンドのエスケープ解除処理
+- **確認方法**: パターンの`.source`プロパティで確認
+  ```javascript
+  console.log(/\\n/.source);   // → "\n" (改行)
+  console.log(/\\\\n/.source); // → "\\n" (バックスラッシュ+n)
+  ```

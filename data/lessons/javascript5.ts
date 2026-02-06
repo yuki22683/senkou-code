@@ -324,8 +324,8 @@ export const javascriptData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// extends でErrorクラスを継承\\nclass ValidationError extends Error {\\n  // constructor で初期化\\n  constructor(message) {\\n    // super で親クラスのコンストラクタを呼び出し\\n    super(message);\\n    // this.name にクラス名を設定\\n    this.name = 'Validationエラー';\\n  }\\n}\\n\\n// tryでエラー処理を開始\\ntry {\\n  // throw new ValidationError('Invalid input')でエラーを投げる\\n  throw new ValidationError('無効な入力');\\n} catch (e) {\\n  // エラー情報を出力\\n  console.log(`${e.名前}: ${e.メッセージ}`);\\n}",
-        "holeyCode": "// extends でErrorクラスを継承\\nclass ValidationError ___ Error {\\n  // constructor で初期化\\n  ___(message) {\\n    // super で親クラスのコンストラクタを呼び出し\\n    ___(message);\\n    // this.name にクラス名を設定\\n    this.___ = 'Validationエラー';\\n  }\\n}\\n\\n// tryでエラー処理を開始\\n___ {\\n  // throw new ValidationError('Invalid input')でエラーを投げる\\n  ___ new ValidationError('無効な入力');\\n} catch (e) {\\n  // エラー情報を出力\\n  console.log(`${e.___}: ${e.メッセージ}`);\\n}",
+        "correctCode": "// extends でErrorクラスを継承\\nclass ValidationError extends Error {\\n  // constructor で初期化\\n  constructor(message) {\\n    // super で親クラスのコンストラクタを呼び出し\\n    super(message);\\n    // this.name にクラス名を設定\\n    this.name = 'Validationエラー';\\n  }\\n}\\n\\n// tryでエラー処理を開始\\ntry {\\n  // throw new ValidationError('無効な入力')でエラーを投げる\\n  throw new ValidationError('無効な入力');\\n// catchでエラーをキャッチ\\n} catch (e) {\\n  // エラー情報を出力\\n  console.log(`${e.name}: ${e.message}`);\\n}",
+        "holeyCode": "// extends でErrorクラスを継承\\nclass ValidationError ___ Error {\\n  // constructor で初期化\\n  ___(message) {\\n    // super で親クラスのコンストラクタを呼び出し\\n    ___(message);\\n    // this.name にクラス名を設定\\n    this.___ = 'Validationエラー';\\n  }\\n}\\n\\n// tryでエラー処理を開始\\n___ {\\n  // throw new ValidationError('無効な入力')でエラーを投げる\\n  ___ new ValidationError('無効な入力');\\n// catchでエラーをキャッチ\\n} ___(e) {\\n  // エラー情報を出力\\n  console.log(`${e.___}: ${e.___}`);\\n}",
         "correctLines": [
           "// extends でErrorクラスを継承",
           "class ValidationError extends Error {",
@@ -340,11 +340,12 @@ export const javascriptData5 = {
           "",
           "// tryでエラー処理を開始",
           "try {",
-          "  // throw new ValidationError('Invalid input')でエラーを投げる",
+          "  // throw new ValidationError('無効な入力')でエラーを投げる",
           "  throw new ValidationError('無効な入力');",
-          "} catch (e) {",
+          "// catchでエラーをキャッチ",
+          "} catch(e) {",
           "  // エラー情報を出力",
-          "  console.log(`${e.名前}: ${e.メッセージ}`);",
+          "  console.log(`${e.name}: ${e.message}`);",
           "}"
         ],
         "lineHints": [
@@ -364,6 +365,7 @@ export const javascriptData5 = {
           null,
           null,
           null,
+          "catch で例外をキャッチします。",
           null,
           null,
           null
@@ -374,12 +376,12 @@ export const javascriptData5 = {
             "implements",
             "inherits"
           ],
-          "others": ["constructor", "super", "name", "try", "throw", "名前"]
+          "others": ["constructor", "super", "name", "message", "try", "throw", "catch"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Validationエラー: Invalid input\\n"
+            "expected_output": "Validationエラー: 無効な入力\\n"
           }
         ]
       },
