@@ -33,9 +33,9 @@ export const php2Data = {
           "}",
           "// $catにnew Cat()を代入",
           "$cat = new Cat();",
-          "// ->でプロパティにアクセス",
+          "// $cat->nameに'タマ'を代入",
           "$cat->name = 'タマ';",
-          "// echoで出力",
+          "// $cat->nameを出力",
           "echo $cat->name;",
           "?>"
         ],
@@ -99,7 +99,7 @@ export const php2Data = {
           "}",
           "// $cntにnew Counter(5)を代入",
           "$cnt = new Counter(5);",
-          "// echoで出力",
+          "// $cnt->countを出力",
           "echo $cnt->count;",
           "?>"
         ],
@@ -166,7 +166,7 @@ export const php2Data = {
           "class Car extends Vehicle { }",
           "// $carにnew Car()を代入",
           "$car = new Car();",
-          "// ->でメソッドを呼び出し",
+          "// $car->move()を呼び出し",
           "$car->move();",
           "?>"
         ],
@@ -236,7 +236,7 @@ export const php2Data = {
           "}",
           "// $rにnew Robot()を代入",
           "$r = new Robot();",
-          "// ->でメソッドを呼び出し",
+          "// $r->run()を呼び出し",
           "$r->run();",
           "?>"
         ],
@@ -512,7 +512,7 @@ export const php2Data = {
           "}",
           "// $hにnew Hello()を代入",
           "$h = new Hello();",
-          "// ->でメソッドを呼び出し",
+          "// $h->say()を呼び出し",
           "$h->say();",
           "?>"
         ],

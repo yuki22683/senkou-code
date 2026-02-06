@@ -104,7 +104,7 @@ export const rust4Data = {
           "}",
           "",
           "fn main() {",
-          "    let user = User { name: String::from(\"Alice\"), age: 30 };",
+          "    let user = User { name: String::from(\"アリス\"), age: 30 };",
           "    println!(\"{:?}\", user);",
           "}"
         ],

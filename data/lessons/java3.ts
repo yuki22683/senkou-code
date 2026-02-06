@@ -405,9 +405,9 @@ export const javaData3 = {
           "public class Main {",
           "    public static void main(String[] args) {",
           "        // 値を持つOptionalを作成するメソッド",
-          "        Optional<String> opt = Optional.of(\"Hello\");",
+          "        Optional<String> opt = Optional.of(\"こんにちは\");",
           "        // orElse でデフォルト値を指定して取得する",
-          "        String value = opt.orElse(\"default\");",
+          "        String value = opt.orElse(\"デフォルト\");",
           "        // println で出力する",
           "        System.out.println(value);",
           "    }",
@@ -435,7 +435,7 @@ export const javaData3 = {
             "orElse",
             "println"
           ],
-          "others": ["*;", "Main", "main(String[] args) {", "Hello", "default", "}"]
+          "others": ["*;", "Main", "main(String[] args) {", "こんにちは", "デフォルト", "}"]
         },
         "testCases": [
           {
@@ -460,15 +460,15 @@ export const javaData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // namesに[\"Alice\", \"Bob\"]を代入\\n        List<String> names = Arrays.asList(\"アリス\", \"ボブ\");\\n        // メソッド参照を表す演算子\\n        names.forEach(System.out::println);\\n    }\\n}",
-        "holeyCode": "import java.util.___\\n\\npublic class ___ {\\n    public static void ___\\(String[] args) {\\n        // namesに[\"Alice\", \"Bob\"]を代入\\n        List<String> names = Arrays.asList(\"___\", \"ボブ\");\\n        // メソッド参照を表す演算子\\n        names.forEach(___);\\n    ___\\n___",
+        "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // namesに[\"アリス\", \"ボブ\"]を代入\\n        List<String> names = Arrays.asList(\"アリス\", \"ボブ\");\\n        // メソッド参照を表す演算子\\n        names.forEach(System.out::println);\\n    }\\n}",
+        "holeyCode": "import java.util.___\\n\\npublic class ___ {\\n    public static void ___\\(String[] args) {\\n        // namesに[\"アリス\", \"ボブ\"]を代入\\n        List<String> names = Arrays.asList(\"___\", \"ボブ\");\\n        // メソッド参照を表す演算子\\n        names.forEach(___);\\n    ___\\n___",
         "correctLines": [
           "import java.util.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // namesに[\"Alice\", \"Bob\"]を代入",
-          "        List<String> names = Arrays.asList(\"Alice\", \"Bob\");",
+          "        // namesに[\"アリス\", \"ボブ\"]を代入",
+          "        List<String> names = Arrays.asList(\"アリス\", \"ボブ\");",
           "        // メソッド参照を表す演算子",
           "        names.forEach(System.out::println);",
           "    }",
@@ -493,12 +493,12 @@ export const javaData3 = {
             ".",
             "asList"
           ],
-          "others": ["*;", "Main", "main(String[] args) {", "Alice", "System.out::println", "}"]
+          "others": ["*;", "Main", "main(String[] args) {", "アリス", "System.out::println", "}"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Alice\\nBob\\n"
+            "expected_output": "アリス\\nボブ\\n"
           }
         ]
       },

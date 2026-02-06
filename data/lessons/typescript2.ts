@@ -405,7 +405,7 @@ export const typescriptData2 = {
           "",
           "// 関数を呼び出し",
           "const arr = wrap(5);",
-          "// 結果を出力",
+          "// arrを出力",
           "console.log(arr);"
         ],
         "lineHints": [

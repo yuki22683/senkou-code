@@ -391,7 +391,7 @@ export const javaData4 = {
           "public class Main {",
           "    public static void main(String[] args) {",
           "        // wordsに[\"cat\", \"a\", \"elephant\"]を代入",
-          "        List<String> words = new ArrayList<>(Arrays.asList(\"cat\", \"a\", \"elephant\"));",
+          "        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));",
           "        // comparing でプロパティを基準に比較する",
           "        words.sort(Comparator.comparing(String::length));",
           "        // println で出力する",

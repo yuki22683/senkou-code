@@ -318,7 +318,7 @@ export const javascriptData3 = {
           "",
           "// dogにnew Dog('ポチ')を代入",
           "const dog = new Dog('ポチ');",
-          "// bark() メソッドを呼び出し",
+          "// bark()メソッドを呼び出し",
           "dog.bark();"
         ],
         "lineHints": [
@@ -388,7 +388,7 @@ export const javascriptData3 = {
           "",
           "// catにnew Cat()を代入",
           "const cat = new Cat();",
-          "// speak() を呼び出し",
+          "// speak()を呼び出し",
           "cat.speak();"
         ],
         "lineHints": [

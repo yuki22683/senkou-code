@@ -33,7 +33,7 @@ export const javaData5 = {
           "            int result = 10 / 0;",
           "        } catch (ArithmeticException e) {",
           "            // println でエラーメッセージを出力する",
-          "            System.out.println(\"Error\");",
+          "            System.out.println(\"エラー\");",
           "        }",
           "    }",
           "}"
@@ -94,7 +94,7 @@ export const javaData5 = {
           "            // println で出力する",
           "            System.out.println(\"Try\");",
           "        } catch (Exception e) {",
-          "            System.out.println(\"Catch\");",
+          "            System.out.println(\"猫ch\");",
           "        // finally で必ず実行する",
           "        } finally {",
           "            // println で出力する",
@@ -312,7 +312,7 @@ export const javaData5 = {
           "public class Main {",
           "    public static void main(String[] args) {",
           "        // ( でリソースを宣言する try-with-resources",
-          "        try (StringReader reader = new StringReader(\"Hello\")) {",
+          "        try (StringReader reader = new StringReader(\"こんにちは\")) {",
           "            // read で1文字読み込む",
           "            System.out.println((char) reader.read());",
           "        } catch (IOException e) {",
@@ -346,7 +346,7 @@ export const javaData5 = {
             "read",
             "printStackTrace"
           ],
-          "others": ["(StringReader reader = new StringReader(\"Hello\")) {", "*;", "Main", "main(String[] args) {", "Hello", "println", "catch", "}"]
+          "others": ["(StringReader reader = new StringReader(\"こんにちは\")) {", "*;", "Main", "main(String[] args) {", "こんにちは", "println", "catch", "}"]
         },
         "testCases": [
           {
@@ -455,7 +455,7 @@ export const javaData5 = {
           "        // bwにnew BufferedWriter(sw)を代入",
           "        BufferedWriter bw = new BufferedWriter(sw);",
           "        // write で文字列を書き込む",
-          "        bw.write(\"Hello\");",
+          "        bw.write(\"こんにちは\");",
           "        // flush でバッファをフラッシュする",
           "        bw.flush();",
           "        // toString で文字列に変換する",
@@ -490,7 +490,7 @@ export const javaData5 = {
             "flush",
             "toString"
           ],
-          "others": ["*;", "Main", "main(String[] args) throws IOException {", "StringWriter", "sw", "Hello", "println", "}"]
+          "others": ["*;", "Main", "main(String[] args) throws IOException {", "StringWriter", "sw", "こんにちは", "println", "}"]
         },
         "testCases": [
           {
@@ -523,7 +523,7 @@ export const javaData5 = {
           "public class Main {",
           "    public static void main(String[] args) {",
           "        // scにnew Scanner(\"42 Hello\")を代入",
-          "        Scanner sc = new Scanner(\"42 Hello\");",
+          "        Scanner sc = new Scanner(\"42 こんにちは\");",
           "        // nextInt で整数を読み込む",
           "        int num = sc.nextInt();",
           "        // next で文字列を読み込む",
@@ -558,7 +558,7 @@ export const javaData5 = {
             "next",
             "println"
           ],
-          "others": ["*;", "Main", "main(String[] args) {", "42 Hello", "}"]
+          "others": ["*;", "Main", "main(String[] args) {", "42 こんにちは", "}"]
         },
         "testCases": [
           {

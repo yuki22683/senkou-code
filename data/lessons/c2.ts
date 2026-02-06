@@ -289,7 +289,7 @@ export const c2Data = {
         "correctLines": [
           "#include <stdio.h>",
           "int main() {",
-          "    char msg[] = \"Hello\";",
+          "    char msg[] = \"こんにちは\";",
           "    // 文字列を表示する書式指定子",
           "    printf(\"%s\\n\", msg);",
           "    return 0;",
@@ -308,7 +308,7 @@ export const c2Data = {
           "strings": [
             "s"
           ],
-          "others": ["main", "Hello"]
+          "others": ["main", "こんにちは"]
         },
         "testCases": [
           {

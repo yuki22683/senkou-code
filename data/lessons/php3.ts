@@ -286,7 +286,7 @@ export const php3Data = {
           "// functionで関数を定義",
           "function createUser($name, $age) {",
           "    // returnで連想配列を返す",
-          "    return ['名前' => $name, '年齢' => $age];",
+          "    return ['名前' => $名前, '年齢' => $age];",
           "}",
           "// age, nameの順で名前付き引数を指定",
           "$user = createUser(age: 30, name: 'アリス');"

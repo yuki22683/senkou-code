@@ -174,7 +174,7 @@ export const bashData = {
           "# -gtで「より大きい」を指定",
           "if [ $score -gt 80 ]; then",
           "    # メッセージ（'すごい'）",
-          "    echo \"Great\"",
+          "    echo \"すごい\"",
           "# fiでif文を閉じる",
           "fi"
         ],
@@ -195,12 +195,12 @@ export const bashData = {
           "keywords": [
             "fi"
           ],
-          "others": ["100", "Great", "80"]
+          "others": ["100", "すごい", "80"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Great\\n"
+            "expected_output": "すごい\\n"
           }
         ]
       },
@@ -228,11 +228,11 @@ export const bashData = {
           "# 20以上かを比較する演算子",
           "if [ $age -ge 20 ]; then",
           "    # 20歳以上のときのメッセージ（'大人'）",
-          "    echo \"Adult\"",
+          "    echo \"大人\"",
           "# elseでそれ以外の場合",
           "else",
           "    # それ以外のメッセージ（'未成年'）",
-          "    echo \"Minor\"",
+          "    echo \"未成年\"",
           "fi"
         ],
         "lineHints": [
@@ -252,12 +252,12 @@ export const bashData = {
           "keywords": [
             "else"
           ],
-          "others": ["18", "-ge", "Adult", "Minor", "20", "fi"]
+          "others": ["18", "-ge", "大人", "未成年", "20", "fi"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Minor\\n"
+            "expected_output": "未成年\\n"
           }
         ]
       },

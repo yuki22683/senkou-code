@@ -31,7 +31,7 @@ export const rust3Data = {
           "}",
           "",
           "fn main() {",
-          "    let s = String::from(\"Hello\");",
+          "    let s = String::from(\"こんにちは\");",
           "    println!(\"{}\", first(&s));",
           "}"
         ],

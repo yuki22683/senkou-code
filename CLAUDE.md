@@ -827,3 +827,44 @@
   console.log(/\\n/.source);   // → "\n" (改行)
   console.log(/\\\\n/.source); // → "\\n" (バックスラッシュ+n)
   ```
+
+### 61. rebuild-correctlines-v2.mjsの使用禁止
+- `scripts/rebuild-correctlines-v2.mjs` は**使用禁止**。このスクリプトにはバグがあり、correctLinesとlineHints配列を破損させる。
+- **破損パターン**:
+  - 配列の途中で `]を代入",` のような不正な閉じ括弧が発生
+  - 同じ行が重複して挿入される
+  - lineHintsの要素数がcorrectLinesと合わなくなる
+- **correctLines不整合の正しい修正方法**:
+  1. `node scripts/check-holey-v4.mjs` で `correctLines_content_mismatch` を検出
+  2. 各ファイルを手動で開き、correctCodeの内容とcorrectLinesを比較
+  3. correctLinesをcorrectCodeに合わせて個別に修正
+  4. candidates/othersも同じ文字列で更新
+  5. expected_outputも必要に応じて更新
+  6. `npm run seed:db` で検証
+
+### 62. TypeScriptインポート後の\nはリテラル文字列
+- TypeScriptファイルを動的インポート（`import()`）した後も、文字列内の `\\n` は**リテラルのバックスラッシュ+n（2文字）のまま**である。
+- **誤解しやすい点**: `\\n` が実際の改行文字に変換されると思いがちだが、変換されない
+- **正しい分割方法**:
+  ```javascript
+  const backslashN = String.fromCharCode(92, 110);
+  const lines = ex.holeyCode.split(backslashN);
+  ```
+- **誤った分割方法**:
+  ```javascript
+  const lines = ex.holeyCode.split('\n');  // 改行文字で分割 → 分割されない
+  ```
+- **対象スクリプト**: check-linehints-consistency.mjs, check-holey-v4.mjs, count-linehints-mismatch.mjs
+
+### 63. 文字列内の\nによる分割ずれへの対処
+- `correctCode`や`holeyCode`内の文字列リテラル（例: `printf("%s\n", msg)`）に`\n`が含まれる場合、`\n`で分割すると行数が増えてしまう。
+- **症状**: holeyLinesの行数がcorrectLinesより多くなる
+- **対処法**（check-linehints-consistency.mjs）:
+  ```javascript
+  if (holeyLines.length !== correctLines.length) {
+    // 文字列内の\nが原因で行数が異なる場合はスキップ
+    continue;
+  }
+  ```
+- **根本的な解決策**: 現状では完全な解決策がないため、行数不一致の場合はチェックをスキップしている
+- **影響を受けるファイル**: C言語のprintf、各種言語の文字列リテラル内の改行

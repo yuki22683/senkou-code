@@ -225,15 +225,13 @@ export const c4Data = {
           "",
           "int main() {",
           "    char line[100];",
-          "    FILE *fp = fopen(\"test.txt\", \"w\");",
-          "    fprintf(fp, \"Hello World",
-          "\");",
+          "    FILE *fp = fopen(\"テスト.txt\", \"w\");",
+          "    fprintf(fp, \"Hello World\\n\");",
           "    fclose(fp);",
-          "    fp = fopen(\"test.txt\", \"r\");",
+          "    fp = fopen(\"テスト.txt\", \"r\");",
           "    // fgets(line, sizeof(line), fp)で1行読み込む",
           "    fgets(line, sizeof(line), fp);",
-          "    line[strcspn(line, \"",
-          "\")] = 0;",
+          "    line[strcspn(line, \"\\n\")] = 0;",
           "    printf(\"%s\\n\", line);",
           "    fclose(fp);",
           "    return 0;",
@@ -255,9 +253,7 @@ export const c4Data = {
           null,
           null,
           null,
-          null,
-          null,
-          null,
+          null
         ],
         "candidates": {
           "functions": [
@@ -265,7 +261,7 @@ export const c4Data = {
             "gets",
             "fread"
           ],
-          "others": ["main", "100", "test.txt", "fp", "0;"]
+          "others": ["main", "100", "テスト.txt", "fp", "0;"]
         },
         "testCases": [
           {

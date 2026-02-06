@@ -343,7 +343,7 @@ export const javascriptData5 = {
           "  // throw new ValidationError('無効な入力')でエラーを投げる",
           "  throw new ValidationError('無効な入力');",
           "// catchでエラーをキャッチ",
-          "} catch(e) {",
+          "} catch (e) {",
           "  // エラー情報を出力",
           "  console.log(`${e.name}: ${e.message}`);",
           "}"
@@ -407,7 +407,7 @@ export const javascriptData5 = {
           "  // nameに'太郎'を設定",
           "  name: '太郎',",
           "  // [secret]に'password123'を設定",
-          "  [secret]: 'password123'",
+          "  [secret]: 'パスワード123'",
           "};",
           "// user.nameをconsole.logで出力",
           "console.log(user.name);",
@@ -435,7 +435,7 @@ export const javascriptData5 = {
             "Unique",
             "Key"
           ],
-          "others": ["Taro", "password123", "name", "secret", "太郎"]
+          "others": ["Taro", "パスワード123", "name", "secret", "太郎"]
         },
         "testCases": [
           {
@@ -479,7 +479,7 @@ export const javascriptData5 = {
           "",
           "// userにnew User('太郎')を代入",
           "const user = new User('太郎');",
-          "// getPassword() を呼び出し",
+          "// getPassword()を呼び出し",
           "console.log(user.getPassword());"
         ],
         "lineHints": [

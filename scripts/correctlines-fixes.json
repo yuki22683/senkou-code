@@ -1,0 +1,1160 @@
+[
+  {
+    "file": "bash.ts",
+    "title": "「もし〜なら」で分けましょう",
+    "currentLines": [
+      "# scoreに100を入れる",
+      "score=100",
+      "# -gtで「より大きい」を指定",
+      "if [ $score -gt 80 ]; then",
+      "    # メッセージ（'すごい'）",
+      "    echo \"Great\"",
+      "# fiでif文を閉じる",
+      "fi"
+    ],
+    "expectedLines": [
+      "# scoreに100を入れる",
+      "score=100",
+      "# -gtで「より大きい」を指定",
+      "if [ $score -gt 80 ]; then",
+      "    # メッセージ（'すごい'）",
+      "    echo \"すごい\"",
+      "# fiでif文を閉じる",
+      "fi"
+    ],
+    "diff": {
+      "current": 8,
+      "expected": 8
+    }
+  },
+  {
+    "file": "bash.ts",
+    "title": "ちがう場合はどうしましょう？",
+    "currentLines": [
+      "# ageに18を入れる",
+      "age=18",
+      "# 20以上かを比較する演算子",
+      "if [ $age -ge 20 ]; then",
+      "    # 20歳以上のときのメッセージ（'大人'）",
+      "    echo \"Adult\"",
+      "# elseでそれ以外の場合",
+      "else",
+      "    # それ以外のメッセージ（'未成年'）",
+      "    echo \"Minor\"",
+      "fi"
+    ],
+    "expectedLines": [
+      "# ageに18を入れる",
+      "age=18",
+      "# 20以上かを比較する演算子",
+      "if [ $age -ge 20 ]; then",
+      "    # 20歳以上のときのメッセージ（'大人'）",
+      "    echo \"大人\"",
+      "# elseでそれ以外の場合",
+      "else",
+      "    # それ以外のメッセージ（'未成年'）",
+      "    echo \"未成年\"",
+      "fi"
+    ],
+    "diff": {
+      "current": 11,
+      "expected": 11
+    }
+  },
+  {
+    "file": "c2.ts",
+    "title": "文字列の基本",
+    "currentLines": [
+      "#include <stdio.h>",
+      "int main() {",
+      "    char msg[] = \"Hello\";",
+      "    // 文字列を表示する書式指定子",
+      "    printf(\"%s\\n\", msg);",
+      "    return 0;",
+      "}"
+    ],
+    "expectedLines": [
+      "#include <stdio.h>",
+      "int main() {",
+      "    char msg[] = \"こんにちは\";",
+      "    // 文字列を表示する書式指定子",
+      "    printf(\"%s",
+      "\", msg);",
+      "    return 0;",
+      "}"
+    ],
+    "diff": {
+      "current": 7,
+      "expected": 8
+    }
+  },
+  {
+    "file": "c4.ts",
+    "title": "fgets で行読み込み",
+    "currentLines": [
+      "#include <stdio.h>",
+      "#include <string.h>",
+      "",
+      "int main() {",
+      "    char line[100];",
+      "    FILE *fp = fopen(\"test.txt\", \"w\");",
+      "    fprintf(fp, \"Hello World",
+      "\");",
+      "    fclose(fp);",
+      "    fp = fopen(\"test.txt\", \"r\");",
+      "    // fgets(line, sizeof(line), fp)で1行読み込む",
+      "    fgets(line, sizeof(line), fp);",
+      "    line[strcspn(line, \"",
+      "\")] = 0;",
+      "    printf(\"%s\\n\", line);",
+      "    fclose(fp);",
+      "    return 0;",
+      "}"
+    ],
+    "expectedLines": [
+      "#include <stdio.h>",
+      "#include <string.h>",
+      "",
+      "int main() {",
+      "    char line[100];",
+      "    FILE *fp = fopen(\"テスト.txt\", \"w\");",
+      "    fprintf(fp, \"Hello World",
+      "\");",
+      "    fclose(fp);",
+      "    fp = fopen(\"テスト.txt\", \"r\");",
+      "    // fgets(line, sizeof(line), fp)で1行読み込む",
+      "    fgets(line, sizeof(line), fp);",
+      "    line[strcspn(line, \"",
+      "\")] = 0;",
+      "    printf(\"%s",
+      "\", line);",
+      "    fclose(fp);",
+      "    return 0;",
+      "}"
+    ],
+    "diff": {
+      "current": 18,
+      "expected": 19
+    }
+  },
+  {
+    "file": "csharp3.ts",
+    "title": "LINQ First と FirstOrDefault",
+    "currentLines": [
+      "// usingでSystem名前空間をインポート",
+      "using System;",
+      "// usingでLinq名前空間をインポート",
+      "using System.Linq;",
+      "",
+      "// Programクラスを定義",
+      "class Program {",
+      "    // Mainメソッドを定義",
+      "    static void Main() {",
+      "        // 空の配列を定義",
+      "        var nums = new int[] {};",
+      "        // FirstOrDefaultで空の場合はデフォルト値",
+      "        var result = nums.FirstOrDefault();",
+      "        // 結果を表示",
+      "        Console.WriteLine(result);",
+      "    }",
+      "}"
+    ],
+    "expectedLines": [
+      "// usingでSystem名前空間をインポート",
+      "using System;",
+      "// usingでLinq名前空間をインポート",
+      "using System.Linq;",
+      "",
+      "// Programクラスを定義",
+      "class Program {",
+      "    // Mainメソッドを定義",
+      "    static void Main() {",
+      "        // 空の配列を定義",
+      "        var nums = new int[] {};",
+      "        // FirstOrDefaultで空の場合はデフォルト値",
+      "        var result = nums.FirstOrDefault();",
+      "        // resultを表示",
+      "        Console.WriteLine(result);",
+      "    }",
+      "}"
+    ],
+    "diff": {
+      "current": 17,
+      "expected": 17
+    }
+  },
+  {
+    "file": "csharp3.ts",
+    "title": "LINQ Any と All",
+    "currentLines": [
+      "// usingでSystem名前空間をインポート",
+      "using System;",
+      "// usingでLinq名前空間をインポート",
+      "using System.Linq;",
+      "",
+      "// Programクラスを定義",
+      "class Program {",
+      "    // Mainメソッドを定義",
+      "    static void Main() {",
+      "        // 1 を含む配列を定義",
+      "        var nums = new[] { 1, 2, 3, 4, 5 };",
+      "        // Allで全要素が条件を満たすかチェック",
+      "        var allPositive = nums.All(x => x > 0);",
+      "        // 結果を表示",
+      "        Console.WriteLine(allPositive);",
+      "    }",
+      "}"
+    ],
+    "expectedLines": [
+      "// usingでSystem名前空間をインポート",
+      "using System;",
+      "// usingでLinq名前空間をインポート",
+      "using System.Linq;",
+      "",
+      "// Programクラスを定義",
+      "class Program {",
+      "    // Mainメソッドを定義",
+      "    static void Main() {",
+      "        // 1 を含む配列を定義",
+      "        var nums = new[] { 1, 2, 3, 4, 5 };",
+      "        // Allで全要素が条件を満たすかチェック",
+      "        var allPositive = nums.All(x => x > 0);",
+      "        // allPositiveを表示",
+      "        Console.WriteLine(allPositive);",
+      "    }",
+      "}"
+    ],
+    "diff": {
+      "current": 17,
+      "expected": 17
+    }
+  },
+  {
+    "file": "csharp3.ts",
+    "title": "LINQ Sum と Average",
+    "currentLines": [
+      "// usingでSystem名前空間をインポート",
+      "using System;",
+      "// usingでLinq名前空間をインポート",
+      "using System.Linq;",
+      "",
+      "// Programクラスを定義",
+      "class Program {",
+      "    // Mainメソッドを定義",
+      "    static void Main() {",
+      "        // 10 を含む配列を定義",
+      "        var nums = new[] { 10, 20, 30 };",
+      "        // Sumで合計を計算",
+      "        var total = nums.Sum();",
+      "        // 結果を表示",
+      "        Console.WriteLine(total);",
+      "    }",
+      "}"
+    ],
+    "expectedLines": [
+      "// usingでSystem名前空間をインポート",
+      "using System;",
+      "// usingでLinq名前空間をインポート",
+      "using System.Linq;",
+      "",
+      "// Programクラスを定義",
+      "class Program {",
+      "    // Mainメソッドを定義",
+      "    static void Main() {",
+      "        // 10 を含む配列を定義",
+      "        var nums = new[] { 10, 20, 30 };",
+      "        // Sumで合計を計算",
+      "        var total = nums.Sum();",
+      "        // totalを表示",
+      "        Console.WriteLine(total);",
+      "    }",
+      "}"
+    ],
+    "diff": {
+      "current": 17,
+      "expected": 17
+    }
+  },
+  {
+    "file": "java3.ts",
+    "title": "Optional の基本",
+    "currentLines": [
+      "import java.util.*;",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // 値を持つOptionalを作成するメソッド",
+      "        Optional<String> opt = Optional.of(\"Hello\");",
+      "        // orElse でデフォルト値を指定して取得する",
+      "        String value = opt.orElse(\"default\");",
+      "        // println で出力する",
+      "        System.out.println(value);",
+      "    }",
+      "}"
+    ],
+    "expectedLines": [
+      "import java.util.*;",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // 値を持つOptionalを作成するメソッド",
+      "        Optional<String> opt = Optional.of(\"こんにちは\");",
+      "        // orElse でデフォルト値を指定して取得する",
+      "        String value = opt.orElse(\"デフォルト\");",
+      "        // println で出力する",
+      "        System.out.println(value);",
+      "    }",
+      "}"
+    ],
+    "diff": {
+      "current": 12,
+      "expected": 12
+    }
+  },
+  {
+    "file": "java3.ts",
+    "title": "メソッド参照",
+    "currentLines": [
+      "import java.util.*;",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // namesに[\"Alice\", \"Bob\"]を代入",
+      "        List<String> names = Arrays.asList(\"Alice\", \"Bob\");",
+      "        // メソッド参照を表す演算子",
+      "        names.forEach(System.out::println);",
+      "    }",
+      "}"
+    ],
+    "expectedLines": [
+      "import java.util.*;",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // namesに[\"Alice\", \"Bob\"]を代入",
+      "        List<String> names = Arrays.asList(\"アリス\", \"ボブ\");",
+      "        // メソッド参照を表す演算子",
+      "        names.forEach(System.out::println);",
+      "    }",
+      "}"
+    ],
+    "diff": {
+      "current": 10,
+      "expected": 10
+    }
+  },
+  {
+    "file": "java4.ts",
+    "title": "Comparator",
+    "currentLines": [
+      "import java.util.*;",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // wordsに[\"cat\", \"a\", \"elephant\"]を代入",
+      "        List<String> words = new ArrayList<>(Arrays.asList(\"cat\", \"a\", \"elephant\"));",
+      "        // comparing でプロパティを基準に比較する",
+      "        words.sort(Comparator.comparing(String::length));",
+      "        // println で出力する",
+      "        System.out.println(words);",
+      "    }",
+      "}"
+    ],
+    "expectedLines": [
+      "import java.util.*;",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // wordsに[\"cat\", \"a\", \"elephant\"]を代入",
+      "        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));",
+      "        // comparing でプロパティを基準に比較する",
+      "        words.sort(Comparator.comparing(String::length));",
+      "        // println で出力する",
+      "        System.out.println(words);",
+      "    }",
+      "}"
+    ],
+    "diff": {
+      "current": 12,
+      "expected": 12
+    }
+  },
+  {
+    "file": "java5.ts",
+    "title": "try-catch の基本",
+    "currentLines": [
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // tryで例外をキャッチする準備",
+      "        try {",
+      "            // 0で割ると例外が発生する",
+      "            int result = 10 / 0;",
+      "        } catch (ArithmeticException e) {",
+      "            // println でエラーメッセージを出力する",
+      "            System.out.println(\"Error\");",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "expectedLines": [
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // tryで例外をキャッチする準備",
+      "        try {",
+      "            // 0で割ると例外が発生する",
+      "            int result = 10 / 0;",
+      "        } catch (ArithmeticException e) {",
+      "            // println でエラーメッセージを出力する",
+      "            System.out.println(\"エラー\");",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "diff": {
+      "current": 12,
+      "expected": 12
+    }
+  },
+  {
+    "file": "java5.ts",
+    "title": "finally ブロック",
+    "currentLines": [
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        try {",
+      "            // println で出力する",
+      "            System.out.println(\"Try\");",
+      "        } catch (Exception e) {",
+      "            System.out.println(\"Catch\");",
+      "        // finally で必ず実行する",
+      "        } finally {",
+      "            // println で出力する",
+      "            System.out.println(\"Finally\");",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "expectedLines": [
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        try {",
+      "            // println で出力する",
+      "            System.out.println(\"Try\");",
+      "        } catch (Exception e) {",
+      "            System.out.println(\"猫ch\");",
+      "        // finally で必ず実行する",
+      "        } finally {",
+      "            // println で出力する",
+      "            System.out.println(\"Finally\");",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "diff": {
+      "current": 14,
+      "expected": 14
+    }
+  },
+  {
+    "file": "java5.ts",
+    "title": "try-with-resources",
+    "currentLines": [
+      "import java.io.*;",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // ( でリソースを宣言する try-with-resources",
+      "        try (StringReader reader = new StringReader(\"Hello\")) {",
+      "            // read で1文字読み込む",
+      "            System.out.println((char) reader.read());",
+      "        } catch (IOException e) {",
+      "            // printStackTrace でスタックトレースを出力する",
+      "            e.printStackTrace();",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "expectedLines": [
+      "import java.io.*;",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // ( でリソースを宣言する try-with-resources",
+      "        try (StringReader reader = new StringReader(\"こんにちは\")) {",
+      "            // read で1文字読み込む",
+      "            System.out.println((char) reader.read());",
+      "        } catch (IOException e) {",
+      "            // printStackTrace でスタックトレースを出力する",
+      "            e.printStackTrace();",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "diff": {
+      "current": 14,
+      "expected": 14
+    }
+  },
+  {
+    "file": "java5.ts",
+    "title": "BufferedWriter でファイル書き込み",
+    "currentLines": [
+      "import java.io.*;",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) throws IOException {",
+      "        // swにnew StringWriter()を代入",
+      "        StringWriter sw = new StringWriter();",
+      "        // bwにnew BufferedWriter(sw)を代入",
+      "        BufferedWriter bw = new BufferedWriter(sw);",
+      "        // write で文字列を書き込む",
+      "        bw.write(\"Hello\");",
+      "        // flush でバッファをフラッシュする",
+      "        bw.flush();",
+      "        // toString で文字列に変換する",
+      "        System.out.println(sw.toString());",
+      "    }",
+      "}"
+    ],
+    "expectedLines": [
+      "import java.io.*;",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) throws IOException {",
+      "        // swにnew StringWriter()を代入",
+      "        StringWriter sw = new StringWriter();",
+      "        // bwにnew BufferedWriter(sw)を代入",
+      "        BufferedWriter bw = new BufferedWriter(sw);",
+      "        // write で文字列を書き込む",
+      "        bw.write(\"こんにちは\");",
+      "        // flush でバッファをフラッシュする",
+      "        bw.flush();",
+      "        // toString で文字列に変換する",
+      "        System.out.println(sw.toString());",
+      "    }",
+      "}"
+    ],
+    "diff": {
+      "current": 16,
+      "expected": 16
+    }
+  },
+  {
+    "file": "java5.ts",
+    "title": "Scanner での入力",
+    "currentLines": [
+      "import java.util.*;",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // scにnew Scanner(\"42 Hello\")を代入",
+      "        Scanner sc = new Scanner(\"42 Hello\");",
+      "        // nextInt で整数を読み込む",
+      "        int num = sc.nextInt();",
+      "        // next で文字列を読み込む",
+      "        String word = sc.next();",
+      "        // println で出力する",
+      "        System.out.println(num + \" \" + word);",
+      "    }",
+      "}"
+    ],
+    "expectedLines": [
+      "import java.util.*;",
+      "",
+      "public class Main {",
+      "    public static void main(String[] args) {",
+      "        // scにnew Scanner(\"42 Hello\")を代入",
+      "        Scanner sc = new Scanner(\"42 こんにちは\");",
+      "        // nextInt で整数を読み込む",
+      "        int num = sc.nextInt();",
+      "        // next で文字列を読み込む",
+      "        String word = sc.next();",
+      "        // println で出力する",
+      "        System.out.println(num + \" \" + word);",
+      "    }",
+      "}"
+    ],
+    "diff": {
+      "current": 14,
+      "expected": 14
+    }
+  },
+  {
+    "file": "javascript3.ts",
+    "title": "クラスの定義",
+    "currentLines": [
+      "// Dogクラスを定義",
+      "class Dog {",
+      "  // constructorでnameを初期化",
+      "  constructor(name) {",
+      "    // this.nameにnameを代入",
+      "    this.name = name;",
+      "  }",
+      "  bark() {",
+      "    // テンプレートリテラルで出力",
+      "    console.log(`${this.name}: ワン！`);",
+      "  }",
+      "}",
+      "",
+      "// dogにnew Dog('ポチ')を代入",
+      "const dog = new Dog('ポチ');",
+      "// bark() メソッドを呼び出し",
+      "dog.bark();"
+    ],
+    "expectedLines": [
+      "// Dogクラスを定義",
+      "class Dog {",
+      "  // constructorでnameを初期化",
+      "  constructor(name) {",
+      "    // this.nameにnameを代入",
+      "    this.name = name;",
+      "  }",
+      "  bark() {",
+      "    // テンプレートリテラルで出力",
+      "    console.log(`${this.name}: ワン！`);",
+      "  }",
+      "}",
+      "",
+      "// dogにnew Dog('ポチ')を代入",
+      "const dog = new Dog('ポチ');",
+      "// bark()メソッドを呼び出し",
+      "dog.bark();"
+    ],
+    "diff": {
+      "current": 17,
+      "expected": 17
+    }
+  },
+  {
+    "file": "javascript3.ts",
+    "title": "クラスの継承",
+    "currentLines": [
+      "// 親クラスAnimalを定義",
+      "class Animal {",
+      "  // speakメソッドを定義",
+      "  speak() { console.log('...'); }",
+      "}",
+      "",
+      "// CatクラスがAnimalを継承",
+      "class Cat extends Animal {",
+      "  // speakメソッドをオーバーライド",
+      "  speak() { console.log('ニャー！'); }",
+      "}",
+      "",
+      "// catにnew Cat()を代入",
+      "const cat = new Cat();",
+      "// speak() を呼び出し",
+      "cat.speak();"
+    ],
+    "expectedLines": [
+      "// 親クラスAnimalを定義",
+      "class Animal {",
+      "  // speakメソッドを定義",
+      "  speak() { console.log('...'); }",
+      "}",
+      "",
+      "// CatクラスがAnimalを継承",
+      "class Cat extends Animal {",
+      "  // speakメソッドをオーバーライド",
+      "  speak() { console.log('ニャー！'); }",
+      "}",
+      "",
+      "// catにnew Cat()を代入",
+      "const cat = new Cat();",
+      "// speak()を呼び出し",
+      "cat.speak();"
+    ],
+    "diff": {
+      "current": 16,
+      "expected": 16
+    }
+  },
+  {
+    "file": "javascript5.ts",
+    "title": "カスタムエラー",
+    "currentLines": [
+      "// extends でErrorクラスを継承",
+      "class ValidationError extends Error {",
+      "  // constructor で初期化",
+      "  constructor(message) {",
+      "    // super で親クラスのコンストラクタを呼び出し",
+      "    super(message);",
+      "    // this.name にクラス名を設定",
+      "    this.name = 'Validationエラー';",
+      "  }",
+      "}",
+      "",
+      "// tryでエラー処理を開始",
+      "try {",
+      "  // throw new ValidationError('無効な入力')でエラーを投げる",
+      "  throw new ValidationError('無効な入力');",
+      "// catchでエラーをキャッチ",
+      "} catch(e) {",
+      "  // エラー情報を出力",
+      "  console.log(`${e.name}: ${e.message}`);",
+      "}"
+    ],
+    "expectedLines": [
+      "// extends でErrorクラスを継承",
+      "class ValidationError extends Error {",
+      "  // constructor で初期化",
+      "  constructor(message) {",
+      "    // super で親クラスのコンストラクタを呼び出し",
+      "    super(message);",
+      "    // this.name にクラス名を設定",
+      "    this.name = 'Validationエラー';",
+      "  }",
+      "}",
+      "",
+      "// tryでエラー処理を開始",
+      "try {",
+      "  // throw new ValidationError('無効な入力')でエラーを投げる",
+      "  throw new ValidationError('無効な入力');",
+      "// catchでエラーをキャッチ",
+      "} catch (e) {",
+      "  // エラー情報を出力",
+      "  console.log(`${e.name}: ${e.message}`);",
+      "}"
+    ],
+    "diff": {
+      "current": 20,
+      "expected": 20
+    }
+  },
+  {
+    "file": "javascript5.ts",
+    "title": "Symbol",
+    "currentLines": [
+      "// Symbol('秘密')でsecretを作成",
+      "const secret = Symbol('秘密');",
+      "// userオブジェクトを作成",
+      "const user = {",
+      "  // nameに'太郎'を設定",
+      "  name: '太郎',",
+      "  // [secret]に'password123'を設定",
+      "  [secret]: 'password123'",
+      "};",
+      "// user.nameをconsole.logで出力",
+      "console.log(user.name);",
+      "// user[secret]をconsole.logで出力",
+      "console.log(user[secret]);"
+    ],
+    "expectedLines": [
+      "// Symbol('秘密')でsecretを作成",
+      "const secret = Symbol('秘密');",
+      "// userオブジェクトを作成",
+      "const user = {",
+      "  // nameに'太郎'を設定",
+      "  name: '太郎',",
+      "  // [secret]に'password123'を設定",
+      "  [secret]: 'パスワード123'",
+      "};",
+      "// user.nameをconsole.logで出力",
+      "console.log(user.name);",
+      "// user[secret]をconsole.logで出力",
+      "console.log(user[secret]);"
+    ],
+    "diff": {
+      "current": 13,
+      "expected": 13
+    }
+  },
+  {
+    "file": "javascript5.ts",
+    "title": "WeakMap",
+    "currentLines": [
+      "// privateDataにnew WeakMap()を代入",
+      "const privateData = new WeakMap();",
+      "",
+      "// Userクラスを定義",
+      "class User {",
+      "  // constructorでnameを初期化",
+      "  constructor(name) {",
+      "    // privateData.set()でデータを設定",
+      "    privateData.set(this, { password: '秘密' });",
+      "    // this.nameにnameを代入",
+      "    this.name = name;",
+      "  }",
+      "  getPassword() {",
+      "    // privateData.get()でデータを取得",
+      "    return privateData.get(this).password;",
+      "  }",
+      "}",
+      "",
+      "// userにnew User('太郎')を代入",
+      "const user = new User('太郎');",
+      "// getPassword() を呼び出し",
+      "console.log(user.getPassword());"
+    ],
+    "expectedLines": [
+      "// privateDataにnew WeakMap()を代入",
+      "const privateData = new WeakMap();",
+      "",
+      "// Userクラスを定義",
+      "class User {",
+      "  // constructorでnameを初期化",
+      "  constructor(name) {",
+      "    // privateData.set()でデータを設定",
+      "    privateData.set(this, { password: '秘密' });",
+      "    // this.nameにnameを代入",
+      "    this.name = name;",
+      "  }",
+      "  getPassword() {",
+      "    // privateData.get()でデータを取得",
+      "    return privateData.get(this).password;",
+      "  }",
+      "}",
+      "",
+      "// userにnew User('太郎')を代入",
+      "const user = new User('太郎');",
+      "// getPassword()を呼び出し",
+      "console.log(user.getPassword());"
+    ],
+    "diff": {
+      "current": 22,
+      "expected": 22
+    }
+  },
+  {
+    "file": "php2.ts",
+    "title": "クラスを定義しよう",
+    "currentLines": [
+      "<?php",
+      "// Catクラスを定義",
+      "class Cat {",
+      "    // public $nameを定義",
+      "    public $name;",
+      "}",
+      "// $catにnew Cat()を代入",
+      "$cat = new Cat();",
+      "// ->でプロパティにアクセス",
+      "$cat->name = 'タマ';",
+      "// echoで出力",
+      "echo $cat->name;",
+      "?>"
+    ],
+    "expectedLines": [
+      "<?php",
+      "// Catクラスを定義",
+      "class Cat {",
+      "    // public $nameを定義",
+      "    public $name;",
+      "}",
+      "// $catにnew Cat()を代入",
+      "$cat = new Cat();",
+      "// $cat->nameに'タマ'を代入",
+      "$cat->name = 'タマ';",
+      "// $cat->nameを出力",
+      "echo $cat->name;",
+      "?>"
+    ],
+    "diff": {
+      "current": 13,
+      "expected": 13
+    }
+  },
+  {
+    "file": "php2.ts",
+    "title": "コンストラクタを使おう",
+    "currentLines": [
+      "<?php",
+      "// Counterクラスを定義",
+      "class Counter {",
+      "    // public $countを定義",
+      "    public $count;",
+      "    // __construct($c)でコンストラクタを定義",
+      "    public function __construct($c) {",
+      "        // $this->countに$cを代入",
+      "        $this->count = $c;",
+      "    }",
+      "}",
+      "// $cntにnew Counter(5)を代入",
+      "$cnt = new Counter(5);",
+      "// echoで出力",
+      "echo $cnt->count;",
+      "?>"
+    ],
+    "expectedLines": [
+      "<?php",
+      "// Counterクラスを定義",
+      "class Counter {",
+      "    // public $countを定義",
+      "    public $count;",
+      "    // __construct($c)でコンストラクタを定義",
+      "    public function __construct($c) {",
+      "        // $this->countに$cを代入",
+      "        $this->count = $c;",
+      "    }",
+      "}",
+      "// $cntにnew Counter(5)を代入",
+      "$cnt = new Counter(5);",
+      "// $cnt->countを出力",
+      "echo $cnt->count;",
+      "?>"
+    ],
+    "diff": {
+      "current": 16,
+      "expected": 16
+    }
+  },
+  {
+    "file": "php2.ts",
+    "title": "継承を学ぼう",
+    "currentLines": [
+      "<?php",
+      "// Vehicleクラスを定義",
+      "class Vehicle {",
+      "    // move()メソッドを定義",
+      "    public function move() {",
+      "        // '移動中'を出力",
+      "        echo '移動中';",
+      "    }",
+      "}",
+      "// CarがVehicleを継承",
+      "class Car extends Vehicle { }",
+      "// $carにnew Car()を代入",
+      "$car = new Car();",
+      "// ->でメソッドを呼び出し",
+      "$car->move();",
+      "?>"
+    ],
+    "expectedLines": [
+      "<?php",
+      "// Vehicleクラスを定義",
+      "class Vehicle {",
+      "    // move()メソッドを定義",
+      "    public function move() {",
+      "        // '移動中'を出力",
+      "        echo '移動中';",
+      "    }",
+      "}",
+      "// CarがVehicleを継承",
+      "class Car extends Vehicle { }",
+      "// $carにnew Car()を代入",
+      "$car = new Car();",
+      "// $car->move()を呼び出し",
+      "$car->move();",
+      "?>"
+    ],
+    "diff": {
+      "current": 16,
+      "expected": 16
+    }
+  },
+  {
+    "file": "php2.ts",
+    "title": "インターフェースを使おう",
+    "currentLines": [
+      "<?php",
+      "// Runnerインターフェースを定義",
+      "interface Runner {",
+      "    // run()メソッドを宣言",
+      "    public function run();",
+      "}",
+      "// RobotがRunnerを実装",
+      "class Robot implements Runner {",
+      "    // run()メソッドを実装",
+      "    public function run() {",
+      "        // '実行中'を出力",
+      "        echo '実行中';",
+      "    }",
+      "}",
+      "// $rにnew Robot()を代入",
+      "$r = new Robot();",
+      "// ->でメソッドを呼び出し",
+      "$r->run();",
+      "?>"
+    ],
+    "expectedLines": [
+      "<?php",
+      "// Runnerインターフェースを定義",
+      "interface Runner {",
+      "    // run()メソッドを宣言",
+      "    public function run();",
+      "}",
+      "// RobotがRunnerを実装",
+      "class Robot implements Runner {",
+      "    // run()メソッドを実装",
+      "    public function run() {",
+      "        // '実行中'を出力",
+      "        echo '実行中';",
+      "    }",
+      "}",
+      "// $rにnew Robot()を代入",
+      "$r = new Robot();",
+      "// $r->run()を呼び出し",
+      "$r->run();",
+      "?>"
+    ],
+    "diff": {
+      "current": 19,
+      "expected": 19
+    }
+  },
+  {
+    "file": "php2.ts",
+    "title": "名前空間を使おう",
+    "currentLines": [
+      "<?php",
+      "// namespace Appを宣言",
+      "namespace App;",
+      "// Helloクラスを定義",
+      "class Hello {",
+      "    // say()メソッドを定義",
+      "    public function say() {",
+      "        // 'こんにちは'を出力",
+      "        echo 'こんにちは';",
+      "    }",
+      "}",
+      "// $hにnew Hello()を代入",
+      "$h = new Hello();",
+      "// ->でメソッドを呼び出し",
+      "$h->say();",
+      "?>"
+    ],
+    "expectedLines": [
+      "<?php",
+      "// namespace Appを宣言",
+      "namespace App;",
+      "// Helloクラスを定義",
+      "class Hello {",
+      "    // say()メソッドを定義",
+      "    public function say() {",
+      "        // 'こんにちは'を出力",
+      "        echo 'こんにちは';",
+      "    }",
+      "}",
+      "// $hにnew Hello()を代入",
+      "$h = new Hello();",
+      "// $h->say()を呼び出し",
+      "$h->say();",
+      "?>"
+    ],
+    "diff": {
+      "current": 16,
+      "expected": 16
+    }
+  },
+  {
+    "file": "php3.ts",
+    "title": "名前付き引数",
+    "currentLines": [
+      "// functionで関数を定義",
+      "function createUser($name, $age) {",
+      "    // returnで連想配列を返す",
+      "    return ['名前' => $name, '年齢' => $age];",
+      "}",
+      "// age, nameの順で名前付き引数を指定",
+      "$user = createUser(age: 30, name: 'アリス');"
+    ],
+    "expectedLines": [
+      "// functionで関数を定義",
+      "function createUser($name, $age) {",
+      "    // returnで連想配列を返す",
+      "    return ['名前' => $名前, '年齢' => $age];",
+      "}",
+      "// age, nameの順で名前付き引数を指定",
+      "$user = createUser(age: 30, name: 'アリス');"
+    ],
+    "diff": {
+      "current": 7,
+      "expected": 7
+    }
+  },
+  {
+    "file": "rust3.ts",
+    "title": "ライフタイムの基本",
+    "currentLines": [
+      "// 'a でライフタイムを定義",
+      "fn first<'a>(s: &'a str) -> &'a str {",
+      "    &s[..1]",
+      "}",
+      "",
+      "fn main() {",
+      "    let s = String::from(\"Hello\");",
+      "    println!(\"{}\", first(&s));",
+      "}"
+    ],
+    "expectedLines": [
+      "// 'a でライフタイムを定義",
+      "fn first<'a>(s: &'a str) -> &'a str {",
+      "    &s[..1]",
+      "}",
+      "",
+      "fn main() {",
+      "    let s = String::from(\"こんにちは\");",
+      "    println!(\"{}\", first(&s));",
+      "}"
+    ],
+    "diff": {
+      "current": 9,
+      "expected": 9
+    }
+  },
+  {
+    "file": "rust4.ts",
+    "title": "derive 属性",
+    "currentLines": [
+      "// derive でトレイトを自動実装",
+      "#[___(Debug)]",
+      "struct User {",
+      "    name: String,",
+      "    age: u32,",
+      "}",
+      "",
+      "fn main() {",
+      "    let user = User { name: String::from(\"Alice\"), age: 30 };",
+      "    println!(\"{:?}\", user);",
+      "}"
+    ],
+    "expectedLines": [
+      "// derive でトレイトを自動実装",
+      "#[___(Debug)]",
+      "struct User {",
+      "    name: String,",
+      "    age: u32,",
+      "}",
+      "",
+      "fn main() {",
+      "    let user = User { name: String::from(\"アリス\"), age: 30 };",
+      "    println!(\"{:?}\", user);",
+      "}"
+    ],
+    "diff": {
+      "current": 11,
+      "expected": 11
+    }
+  },
+  {
+    "file": "typescript2.ts",
+    "title": "ジェネリクス入門",
+    "currentLines": [
+      "// <T> で型パラメータを定義",
+      "function wrap<T>(value: T): T[] {",
+      "    // valueを配列に入れて返す",
+      "    return [value];",
+      "}",
+      "",
+      "// 関数を呼び出し",
+      "const arr = wrap(5);",
+      "// 結果を出力",
+      "console.log(arr);"
+    ],
+    "expectedLines": [
+      "// <T> で型パラメータを定義",
+      "function wrap<T>(value: T): T[] {",
+      "    // valueを配列に入れて返す",
+      "    return [value];",
+      "}",
+      "",
+      "// 関数を呼び出し",
+      "const arr = wrap(5);",
+      "// arrを出力",
+      "console.log(arr);"
+    ],
+    "diff": {
+      "current": 10,
+      "expected": 10
+    }
+  }
+]
