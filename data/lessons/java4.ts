@@ -422,7 +422,7 @@ export const javaData4 = {
             "asList",
             "println"
           ],
-          "others": ["*;", "Main", "main(String[] args) {", "cat", "length", "}"]
+          "others": ["*;", "Main", "main(String[] args) {", "cat", "length", "}", "猫"]
         },
         "testCases": [
           {

@@ -311,7 +311,7 @@ export const php3Data = {
             "user",
             "value"
           ],
-          "others": ["}", "30", "e,"]
+          "others": ["}", "30", "e,", "年齢"]
         },
         "testCases": [
           {

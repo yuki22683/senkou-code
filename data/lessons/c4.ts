@@ -261,7 +261,7 @@ export const c4Data = {
             "gets",
             "fread"
           ],
-          "others": ["main", "100", "テスト.txt", "fp", "0;"]
+          "others": ["main", "100", "テスト.txt", "fp", "0;", "pen(\"テスト.txt\", \"r\"", "e, sizeof(line), fp)で1行読み込む"]
         },
         "testCases": [
           {
