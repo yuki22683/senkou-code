@@ -53,7 +53,8 @@ export const perlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, World!\\n"
+            "expected_output": "Hello, World!\
+"
           }
         ]
       },
@@ -103,7 +104,8 @@ export const perlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Perl\\n"
+            "expected_output": "Perl\
+"
           }
         ]
       },
@@ -140,10 +142,10 @@ export const perlData = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
+          null,
           "足し算の記号を入力しましょう。",
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -159,7 +161,8 @@ export const perlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -209,7 +212,8 @@ export const perlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Perl!\\n"
+            "expected_output": "Hello, Perl!\
+"
           }
         ]
       },
@@ -259,7 +263,8 @@ export const perlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "りんご\\n"
+            "expected_output": "りんご\
+"
           }
         ]
       },
@@ -296,9 +301,9 @@ export const perlData = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "条件分岐のキーワードを入力しましょう。",
-          null,
-          null,
           null,
           null,
           null
@@ -315,7 +320,8 @@ export const perlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "満点！\\n"
+            "expected_output": "満点！\
+"
           }
         ]
       },
@@ -377,7 +383,8 @@ export const perlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "小さい\\n"
+            "expected_output": "小さい\
+"
           }
         ]
       },
@@ -433,7 +440,10 @@ export const perlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "犬\\n猫\\n鳥\\n"
+            "expected_output": "犬\
+猫\
+鳥\
+"
           }
         ]
       },
@@ -483,7 +493,8 @@ export const perlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "赤\\n"
+            "expected_output": "赤\
+"
           }
         ]
       },
@@ -541,7 +552,8 @@ export const perlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Welcome!\\n"
+            "expected_output": "Welcome!\
+"
           }
         ]
       }

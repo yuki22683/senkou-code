@@ -61,7 +61,8 @@ export const cpp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "99\\n"
+            "expected_output": "99\
+"
           }
         ]
       },
@@ -120,7 +121,8 @@ export const cpp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3.14\\n"
+            "expected_output": "3.14\
+"
           }
         ]
       },
@@ -181,7 +183,8 @@ export const cpp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1 2.5 hi\\n"
+            "expected_output": "1 2.5 hi\
+"
           }
         ]
       },
@@ -246,7 +249,8 @@ export const cpp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは, 世界\\n"
+            "expected_output": "こんにちは, 世界\
+"
           }
         ]
       },
@@ -311,7 +315,8 @@ export const cpp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10 20 30 \\n"
+            "expected_output": "10 20 30 \
+"
           }
         ]
       },
@@ -374,7 +379,8 @@ export const cpp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -437,7 +443,8 @@ export const cpp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "4\\n"
+            "expected_output": "4\
+"
           }
         ]
       },
@@ -502,7 +509,8 @@ export const cpp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "5 4 3 1 1 \\n"
+            "expected_output": "5 4 3 1 1 \
+"
           }
         ]
       },
@@ -567,7 +575,8 @@ export const cpp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Oops!\\n"
+            "expected_output": "Oops!\
+"
           }
         ]
       },
@@ -630,7 +639,8 @@ export const cpp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "30\\n"
+            "expected_output": "30\
+"
           }
         ]
       }

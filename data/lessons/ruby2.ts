@@ -59,7 +59,10 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       },
@@ -111,7 +114,10 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "2\\n4\\n6\\n"
+            "expected_output": "2\
+4\
+6\
+"
           }
         ]
       },
@@ -143,9 +149,9 @@ export const ruby2Data = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "select で 3 以上の要素を抽出します。",
-          null,
-          null,
           null,
           null
         ],
@@ -165,7 +171,10 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3\\n4\\n5\\n"
+            "expected_output": "3\
+4\
+5\
+"
           }
         ]
       },
@@ -208,7 +217,8 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\\n"
+            "expected_output": "100\
+"
           }
         ]
       },
@@ -283,7 +293,8 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Tama\\n"
+            "expected_output": "Tama\
+"
           }
         ]
       },
@@ -342,7 +353,8 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "200\\n"
+            "expected_output": "200\
+"
           }
         ]
       },
@@ -413,7 +425,8 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "moving\\n"
+            "expected_output": "moving\
+"
           }
         ]
       },
@@ -488,7 +501,8 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "speaking\\n"
+            "expected_output": "speaking\
+"
           }
         ]
       },
@@ -543,7 +557,8 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "caught\\n"
+            "expected_output": "caught\
+"
           }
         ]
       },
@@ -586,7 +601,8 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       }

@@ -50,7 +50,8 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "25\\n"
+            "expected_output": "25\
+"
           }
         ]
       },
@@ -100,7 +101,8 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[ 3, 6, 9 ]\\n"
+            "expected_output": "[ 3, 6, 9 ]\
+"
           }
         ]
       },
@@ -146,7 +148,8 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -200,7 +203,8 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -249,7 +253,8 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "20代です\\n"
+            "expected_output": "20代です\
+"
           }
         ]
       },
@@ -299,7 +304,8 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[ 15, 20 ]\\n"
+            "expected_output": "[ 15, 20 ]\
+"
           }
         ]
       },
@@ -351,7 +357,8 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "60\\n"
+            "expected_output": "60\
+"
           }
         ]
       },
@@ -405,7 +412,9 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "red\\ngreen\\n"
+            "expected_output": "red\
+green\
+"
           }
         ]
       },
@@ -463,7 +472,9 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Alice\\n100\\n"
+            "expected_output": "Alice\
+100\
+"
           }
         ]
       },
@@ -517,7 +528,8 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[ 1, 2, 3, 4 ]\\n"
+            "expected_output": "[ 1, 2, 3, 4 ]\
+"
           }
         ]
       },
@@ -567,7 +579,8 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "positive\\n"
+            "expected_output": "positive\
+"
           }
         ]
       },
@@ -617,7 +630,8 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "4\\n"
+            "expected_output": "4\
+"
           }
         ]
       },
@@ -675,7 +689,9 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n20\\n"
+            "expected_output": "10\
+20\
+"
           }
         ]
       }

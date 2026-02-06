@@ -45,7 +45,8 @@ export const luaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは, Lua!\\n"
+            "expected_output": "こんにちは, Lua!\
+"
           }
         ]
       },
@@ -91,7 +92,8 @@ export const luaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -138,7 +140,8 @@ export const luaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "8\\n"
+            "expected_output": "8\
+"
           }
         ]
       }

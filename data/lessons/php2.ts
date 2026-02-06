@@ -40,11 +40,11 @@ export const php2Data = {
           "?>"
         ],
         "lineHints": [
+          null,
+          null,
           "新しいクラス（Cat）を定義します。",
           null,
           "public で外からアクセスできます。",
-          null,
-          null,
           null,
           null,
           "new でインスタンスを作成します。",
@@ -171,9 +171,9 @@ export const php2Data = {
           "?>"
         ],
         "lineHints": [
+          null,
+          null,
           "新しいクラス（Car）を定義します。",
-          null,
-          null,
           null,
           null,
           null,
@@ -241,14 +241,14 @@ export const php2Data = {
           "?>"
         ],
         "lineHints": [
+          null,
+          null,
           "interface でインターフェースを定義します。",
           null,
+          null,
+          null,
+          null,
           "新しいクラス（Robot）を定義します。",
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -321,7 +321,13 @@ export const php2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Array\\n(\\n    [0] => 1\\n    [1] => 4\\n    [2] => 9\\n)\\n"
+            "expected_output": "Array\
+(\
+    [0] => 1\
+    [1] => 4\
+    [2] => 9\
+)\
+"
           }
         ]
       },
@@ -372,7 +378,13 @@ export const php2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Array\\n(\\n    [2] => 3\\n    [3] => 4\\n    [4] => 5\\n)\\n"
+            "expected_output": "Array\
+(\
+    [2] => 3\
+    [3] => 4\
+    [4] => 5\
+)\
+"
           }
         ]
       },
@@ -574,11 +586,11 @@ export const php2Data = {
           "?>"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
           "変数の内容を展開して表示します。",
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {

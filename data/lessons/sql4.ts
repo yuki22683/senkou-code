@@ -53,7 +53,10 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       },
@@ -106,7 +109,10 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "A|1\\nB|2\\nC|3\\n"
+            "expected_output": "A|1\
+B|2\
+C|3\
+"
           }
         ]
       },
@@ -159,7 +165,10 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1|1\\n1|1\\n2|3\\n"
+            "expected_output": "1|1\
+1|1\
+2|3\
+"
           }
         ]
       },
@@ -212,7 +221,10 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1|1\\n2|3\\n3|6\\n"
+            "expected_output": "1|1\
+2|3\
+3|6\
+"
           }
         ]
       },
@@ -257,7 +269,8 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "はい\\n"
+            "expected_output": "はい\
+"
           }
         ]
       },
@@ -298,7 +311,8 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "デフォルト\\n"
+            "expected_output": "デフォルト\
+"
           }
         ]
       },
@@ -347,7 +361,8 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       },
@@ -400,7 +415,8 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "新しい\\n"
+            "expected_output": "新しい\
+"
           }
         ]
       },
@@ -453,7 +469,9 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n3\\n"
+            "expected_output": "1\
+3\
+"
           }
         ]
       },
@@ -494,7 +512,8 @@ export const sql4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "A-B-C\\n"
+            "expected_output": "A-B-C\
+"
           }
         ]
       }

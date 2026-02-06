@@ -84,7 +84,8 @@ export const javaData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Moving\\n"
+            "expected_output": "Moving\
+"
           }
         ]
       },
@@ -168,7 +169,8 @@ export const javaData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Circle\\n"
+            "expected_output": "Circle\
+"
           }
         ]
       },
@@ -246,7 +248,8 @@ export const javaData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは！\\n"
+            "expected_output": "こんにちは！\
+"
           }
         ]
       },
@@ -324,7 +327,8 @@ export const javaData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ワン！\\n"
+            "expected_output": "ワン！\
+"
           }
         ]
       },
@@ -385,7 +389,8 @@ export const javaData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "エラー\\n"
+            "expected_output": "エラー\
+"
           }
         ]
       },
@@ -450,7 +455,9 @@ export const javaData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Try\\nFinally\\n"
+            "expected_output": "Try\
+Finally\
+"
           }
         ]
       },
@@ -518,7 +525,8 @@ export const javaData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "A\\n"
+            "expected_output": "A\
+"
           }
         ]
       },
@@ -554,14 +562,14 @@ export const javaData2 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
           "配列の最初の要素を入力します。",
+          null,
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
           null,
           "変数の値をコンソールに出力し、改行します。",
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -580,7 +588,10 @@ export const javaData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "R\\nG\\nB\\n"
+            "expected_output": "R\
+G\
+B\
+"
           }
         ]
       },
@@ -653,7 +664,8 @@ export const javaData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "20\\n"
+            "expected_output": "20\
+"
           }
         ]
       },
@@ -741,7 +753,8 @@ export const javaData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\\n"
+            "expected_output": "100\
+"
           }
         ]
       }

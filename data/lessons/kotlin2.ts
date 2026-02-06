@@ -59,7 +59,8 @@ export const kotlin2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42\\n"
+            "expected_output": "42\
+"
           }
         ]
       },
@@ -106,7 +107,8 @@ export const kotlin2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "5\\n"
+            "expected_output": "5\
+"
           }
         ]
       },
@@ -153,7 +155,8 @@ export const kotlin2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "0\\n"
+            "expected_output": "0\
+"
           }
         ]
       },
@@ -204,7 +207,8 @@ export const kotlin2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Point(x=3, y=4)\\n"
+            "expected_output": "Point(x=3, y=4)\
+"
           }
         ]
       },
@@ -255,7 +259,8 @@ export const kotlin2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -310,7 +315,8 @@ export const kotlin2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1, 4, 9]\\n"
+            "expected_output": "[1, 4, 9]\
+"
           }
         ]
       },
@@ -365,7 +371,8 @@ export const kotlin2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[3, 4, 5]\\n"
+            "expected_output": "[3, 4, 5]\
+"
           }
         ]
       },
@@ -421,9 +428,9 @@ export const kotlin2Data = {
           "two と入力しましょう。",
           null,
           "other と入力しましょう。",
-          "println と入力しましょう。",
           null,
-          null
+          null,
+          "println と入力しましょう。"
         ],
         "candidates": {
           "keywords": [
@@ -434,7 +441,8 @@ export const kotlin2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "two\\n"
+            "expected_output": "two\
+"
           }
         ]
       },
@@ -485,7 +493,8 @@ export const kotlin2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -536,7 +545,8 @@ export const kotlin2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "84\\n"
+            "expected_output": "84\
+"
           }
         ]
       }

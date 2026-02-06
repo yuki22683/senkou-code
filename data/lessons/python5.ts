@@ -57,7 +57,8 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは, Python!\\n"
+            "expected_output": "こんにちは, Python!\
+"
           }
         ]
       },
@@ -116,7 +117,10 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "line1\\nline2\\nline3\\n"
+            "expected_output": "line1\
+line2\
+line3\
+"
           }
         ]
       },
@@ -167,7 +171,8 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Python\\n"
+            "expected_output": "Python\
+"
           }
         ]
       },
@@ -218,7 +223,8 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "{\"language\": \"Python\", \"level\": \"advanced\"}\\n"
+            "expected_output": "{\"language\": \"Python\", \"level\": \"advanced\"}\
+"
           }
         ]
       },
@@ -273,7 +279,8 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "090-1234-5678\\n"
+            "expected_output": "090-1234-5678\
+"
           }
         ]
       },
@@ -324,7 +331,8 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "['email1@test.com', 'email2@test.com']\\n"
+            "expected_output": "['email1@test.com', 'email2@test.com']\
+"
           }
         ]
       },
@@ -375,7 +383,8 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは 世界 Python\\n"
+            "expected_output": "こんにちは 世界 Python\
+"
           }
         ]
       },
@@ -426,7 +435,8 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[('l', 3), ('o', 2), ('h', 1)]\\n"
+            "expected_output": "[('l', 3), ('o', 2), ('h', 1)]\
+"
           }
         ]
       },
@@ -481,7 +491,8 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "['りんご', 'バナナ']\\n"
+            "expected_output": "['りんご', 'バナナ']\
+"
           }
         ]
       },
@@ -536,7 +547,8 @@ export const pythonData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1, 2, 3, 4, 5, 6]\\n"
+            "expected_output": "[1, 2, 3, 4, 5, 6]\
+"
           }
         ]
       }

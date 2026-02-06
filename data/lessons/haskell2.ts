@@ -45,7 +45,8 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -92,7 +93,8 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "25\\n"
+            "expected_output": "25\
+"
           }
         ]
       },
@@ -135,7 +137,8 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -174,7 +177,8 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[2,4,6]\\n"
+            "expected_output": "[2,4,6]\
+"
           }
         ]
       },
@@ -213,7 +217,8 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[3,4,5]\\n"
+            "expected_output": "[3,4,5]\
+"
           }
         ]
       },
@@ -264,7 +269,8 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "8\\n"
+            "expected_output": "8\
+"
           }
         ]
       },
@@ -319,7 +325,8 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "positive\\n"
+            "expected_output": "positive\
+"
           }
         ]
       },
@@ -357,7 +364,8 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1,4,9]\\n"
+            "expected_output": "[1,4,9]\
+"
           }
         ]
       },
@@ -396,7 +404,8 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1,4,9,16,25]\\n"
+            "expected_output": "[1,4,9,16,25]\
+"
           }
         ]
       },
@@ -435,7 +444,8 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       }

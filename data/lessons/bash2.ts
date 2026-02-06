@@ -47,7 +47,8 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "30\\n"
+            "expected_output": "30\
+"
           }
         ]
       },
@@ -92,7 +93,8 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "4\\n"
+            "expected_output": "4\
+"
           }
         ]
       },
@@ -137,7 +139,8 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "World\\n"
+            "expected_output": "World\
+"
           }
         ]
       },
@@ -189,7 +192,8 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "8\\n"
+            "expected_output": "8\
+"
           }
         ]
       },
@@ -242,7 +246,8 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "16\\n"
+            "expected_output": "16\
+"
           }
         ]
       },
@@ -298,7 +303,10 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       },
@@ -334,15 +342,15 @@ export const bash2Data = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "case で分岐します。",
           null,
           "red と表示します。",
           null,
+          null,
+          null,
           "unknown と表示します。",
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -354,7 +362,8 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "red\\n"
+            "expected_output": "red\
+"
           }
         ]
       },
@@ -397,7 +406,8 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Files: test\\n"
+            "expected_output": "Files: test\
+"
           }
         ]
       },
@@ -435,7 +445,9 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "test\\n",
-            "expected_output": "input:\\nYou entered: test\\n"
+            "expected_output": "input:\
+You entered: test\
+"
           }
         ]
       },
@@ -487,7 +499,9 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello\\nWorld\\n"
+            "expected_output": "Hello\
+World\
+"
           }
         ]
       }

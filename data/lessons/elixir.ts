@@ -44,7 +44,8 @@ export const elixirData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは, Elixir!\\n"
+            "expected_output": "こんにちは, Elixir!\
+"
           }
         ]
       },
@@ -88,7 +89,8 @@ export const elixirData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -138,7 +140,8 @@ export const elixirData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "8\\n"
+            "expected_output": "8\
+"
           }
         ]
       }

@@ -61,7 +61,8 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Python!\\n"
+            "expected_output": "Hello, Python!\
+"
           }
         ]
       },
@@ -114,7 +115,8 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hi, World!\\n"
+            "expected_output": "Hi, World!\
+"
           }
         ]
       },
@@ -172,7 +174,8 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "30\\n"
+            "expected_output": "30\
+"
           }
         ]
       },
@@ -232,7 +235,9 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "6\\n10\\n"
+            "expected_output": "6\
+10\
+"
           }
         ]
       },
@@ -278,7 +283,8 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Prog\\n"
+            "expected_output": "Prog\
+"
           }
         ]
       },
@@ -326,7 +332,12 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n4\\n5\\n"
+            "expected_output": "1\
+2\
+3\
+4\
+5\
+"
           }
         ]
       },
@@ -380,7 +391,8 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -426,7 +438,8 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -473,7 +486,8 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "20代です\\n"
+            "expected_output": "20代です\
+"
           }
         ]
       },
@@ -516,7 +530,8 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[2, 4, 6, 8, 10]\\n"
+            "expected_output": "[2, 4, 6, 8, 10]\
+"
           }
         ]
       },
@@ -559,7 +574,8 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[3, 6, 9]\\n"
+            "expected_output": "[3, 6, 9]\
+"
           }
         ]
       },
@@ -612,7 +628,8 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "エラー\\n"
+            "expected_output": "エラー\
+"
           }
         ]
       },
@@ -674,7 +691,8 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Meow!\\n"
+            "expected_output": "Meow!\
+"
           }
         ]
       },
@@ -741,7 +759,8 @@ export const pythonData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "R2D2\\n"
+            "expected_output": "R2D2\
+"
           }
         ]
       }

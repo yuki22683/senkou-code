@@ -56,19 +56,19 @@ export const csharp3Data = {
                   "System.Threading.Tasks名前空間を利用可能にします。",
                   null,
                   null,
+                  null,
+                  null,
                   "asyncで非同期メソッドを定義します。",
                   null,
                   "awaitで非同期処理の完了を待ちます。",
                   null,
                   "WriteLineで結果を表示します。",
                   null,
+                  null,
+                  null,
                   "整数を返すのでTask<int>を使います。",
+                  null,
                   "Delayで指定ミリ秒待機します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
                   null,
                   null,
                   null,
@@ -85,7 +85,8 @@ export const csharp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "25\\n"
+            "expected_output": "25\
+"
           }
         ]
       },
@@ -133,6 +134,8 @@ export const csharp3Data = {
           "System.Linq名前空間を利用可能にします。",
           null,
           null,
+          null,
+          null,
           "Mainはプログラムの開始地点です。",
           null,
           "複数の値をまとめて格納する配列（またはリスト）を作成します。",
@@ -140,8 +143,6 @@ export const csharp3Data = {
           "OrderByで昇順にソートします。",
           null,
           "Joinで要素をカンマ区切りで連結して表示します。",
-          null,
-          null,
           null,
           null
         ],
@@ -156,7 +157,8 @@ export const csharp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1,1,3,4,5\\n"
+            "expected_output": "1,1,3,4,5\
+"
           }
         ]
       },
@@ -204,6 +206,8 @@ export const csharp3Data = {
           "System.Linq名前空間を利用可能にします。",
           null,
           null,
+          null,
+          null,
           "Mainはプログラムの開始地点です。",
           null,
           "intは整数型を表します。",
@@ -211,8 +215,6 @@ export const csharp3Data = {
           "FirstOrDefaultは空の場合にデフォルト値（intなら0）を返します。",
           null,
           "WriteLineでresultを表示します。",
-          null,
-          null,
           null,
           null
         ],
@@ -227,7 +229,8 @@ export const csharp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "0\\n"
+            "expected_output": "0\
+"
           }
         ]
       },
@@ -275,6 +278,8 @@ export const csharp3Data = {
           "System.Linq名前空間を利用可能にします。",
           null,
           null,
+          null,
+          null,
           "Mainはプログラムの開始地点です。",
           null,
           "複数の値をまとめて格納する配列（またはリスト）を作成します。",
@@ -282,8 +287,6 @@ export const csharp3Data = {
           "Allで全要素が0より大きいかチェックします。",
           null,
           "WriteLineでallPositive（True）を表示します。",
-          null,
-          null,
           null,
           null
         ],
@@ -298,7 +301,8 @@ export const csharp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "True\\n"
+            "expected_output": "True\
+"
           }
         ]
       },
@@ -346,6 +350,8 @@ export const csharp3Data = {
           "System.Linq名前空間を利用可能にします。",
           null,
           null,
+          null,
+          null,
           "Mainはプログラムの開始地点です。",
           null,
           "複数の値をまとめて格納する配列（またはリスト）を作成します。",
@@ -353,8 +359,6 @@ export const csharp3Data = {
           "Sumで全要素の合計を計算します。",
           null,
           "WriteLineでtotal（60）を表示します。",
-          null,
-          null,
           null,
           null
         ],
@@ -369,7 +373,8 @@ export const csharp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "60\\n"
+            "expected_output": "60\
+"
           }
         ]
       },
@@ -420,6 +425,8 @@ export const csharp3Data = {
                   "基本クラスライブラリを利用可能にします。",
                   null,
                   null,
+                  null,
+                  null,
                   "Mainはプログラムの開始地点です。",
                   null,
                   "整数型の変数を宣言し、初期値を代入します。",
@@ -435,8 +442,6 @@ export const csharp3Data = {
                   "WriteLineで結果を表示します。",
                   null,
                   null,
-                  null,
-                  null,
                   null
         ],
         "candidates": {
@@ -450,7 +455,8 @@ export const csharp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "two\\n"
+            "expected_output": "two\
+"
           }
         ]
       },
@@ -500,6 +506,8 @@ export const csharp3Data = {
           "ジェネリックコレクションを利用可能にします。",
           null,
           null,
+          null,
+          null,
           "Mainはプログラムの開始地点です。",
           null,
           "Dictionaryでキーと値のペアを管理します。",
@@ -509,8 +517,6 @@ export const csharp3Data = {
           "キーbに値2を設定します。",
           null,
           "WriteLineでキーaの値を表示します。",
-          null,
-          null,
           null,
           null
         ],
@@ -525,7 +531,8 @@ export const csharp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -569,6 +576,8 @@ export const csharp3Data = {
                   "基本クラスライブラリを利用可能にします。",
                   null,
                   null,
+                  null,
+                  null,
                   "Mainはプログラムの開始地点です。",
                   null,
                   "変数を宣言し、数値を代入します。",
@@ -576,8 +585,6 @@ export const csharp3Data = {
                   "変数を宣言し、数値を代入します。",
                   null,
                   "$で文字列補間を行い、{x+y}で計算結果を埋め込みます。",
-                  null,
-                  null,
                   null,
                   null
         ],
@@ -592,7 +599,8 @@ export const csharp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Sum: 30\\n"
+            "expected_output": "Sum: 30\
+"
           }
         ]
       },
@@ -637,16 +645,16 @@ export const csharp3Data = {
                   "基本クラスライブラリを利用可能にします。",
                   null,
                   null,
-                  "新しいクラス（Program）を定義します。",
+                  "recordで値型を定義します。",
                   null,
+                  null,
+                  null,
+                  null,
+                  "Mainはプログラムの開始地点です。",
                   null,
                   "Pointインスタンスを座標(10,20)で作成します。",
                   null,
                   "WriteLineでPoint情報を表示します。",
-                  null,
-                  null,
-                  null,
-                  null,
                   null,
                   null
         ],
@@ -661,7 +669,8 @@ export const csharp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Point { X = 10, Y = 20 }\\n"
+            "expected_output": "Point { X = 10, Y = 20 }\
+"
           }
         ]
       },
@@ -709,15 +718,15 @@ export const csharp3Data = {
                   "System.IO名前空間を利用可能にします。",
                   null,
                   null,
+                  null,
+                  null,
                   "Mainはプログラムの開始地点です。",
                   null,
-                  "var writer = new StringWriter()名前空間を利用可能にします。",
+                  "usingで自動解放を設定します。",
                   null,
                   "WriteLineでHelloを書き込みます。",
                   null,
                   "Trimで前後の空白を除去して表示します。",
-                  null,
-                  null,
                   null,
                   null
         ],
@@ -742,7 +751,8 @@ export const csharp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       }

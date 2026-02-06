@@ -45,7 +45,8 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -90,7 +91,8 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -139,7 +141,8 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -186,7 +189,8 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1, 4, 9]\\n"
+            "expected_output": "[1, 4, 9]\
+"
           }
         ]
       },
@@ -231,7 +235,8 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[3, 4, 5]\\n"
+            "expected_output": "[3, 4, 5]\
+"
           }
         ]
       },
@@ -269,12 +274,12 @@ export const elixir2Data = {
           "変数に数値を代入（保存）します。",
           null,
           "case でパターンマッチします。",
+          null,
+          null,
           "_ はワイルドカードです。",
-          "resultの値を表示します。",
           null,
           null,
-          null,
-          null
+          "resultの値を表示します。"
         ],
         "candidates": {
           "numbers": [
@@ -291,7 +296,8 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "two\\n"
+            "expected_output": "two\
+"
           }
         ]
       },
@@ -343,7 +349,8 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "12\\n"
+            "expected_output": "12\
+"
           }
         ]
       },
@@ -397,7 +404,8 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "120\\n"
+            "expected_output": "120\
+"
           }
         ]
       },
@@ -442,7 +450,8 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello\\n"
+            "expected_output": "hello\
+"
           }
         ]
       },
@@ -491,7 +500,8 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42\\n"
+            "expected_output": "42\
+"
           }
         ]
       }

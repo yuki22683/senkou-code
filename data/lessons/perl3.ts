@@ -54,7 +54,8 @@ export const perl3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "written\\n"
+            "expected_output": "written\
+"
           }
         ]
       },
@@ -106,7 +107,8 @@ export const perl3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "closed\\n"
+            "expected_output": "closed\
+"
           }
         ]
       },
@@ -156,7 +158,8 @@ export const perl3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[hello]\\n"
+            "expected_output": "[hello]\
+"
           }
         ]
       },
@@ -204,7 +207,8 @@ export const perl3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "banana\\n"
+            "expected_output": "banana\
+"
           }
         ]
       },
@@ -252,7 +256,8 @@ export const perl3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは 世界\\n"
+            "expected_output": "こんにちは 世界\
+"
           }
         ]
       },
@@ -300,7 +305,8 @@ export const perl3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1 2 3\\n"
+            "expected_output": "1 2 3\
+"
           }
         ]
       },
@@ -348,7 +354,8 @@ export const perl3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "30\\n"
+            "expected_output": "30\
+"
           }
         ]
       },
@@ -396,7 +403,8 @@ export const perl3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "apple\\n"
+            "expected_output": "apple\
+"
           }
         ]
       },
@@ -444,7 +452,8 @@ export const perl3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3 2 1\\n"
+            "expected_output": "3 2 1\
+"
           }
         ]
       },
@@ -492,7 +501,8 @@ export const perl3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "4\\n"
+            "expected_output": "4\
+"
           }
         ]
       }

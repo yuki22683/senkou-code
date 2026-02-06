@@ -33,11 +33,11 @@ export const rust2Data = {
           "}"
         ],
         "lineHints": [
+          null,
           "String を作成します。",
+          null,
           "s1 の所有権を s2 に移動します。",
-          null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null,
           null
         ],
         "candidates": {
@@ -49,7 +49,8 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello\\n"
+            "expected_output": "hello\
+"
           }
         ]
       },
@@ -100,7 +101,8 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "5\\n"
+            "expected_output": "5\
+"
           }
         ]
       },
@@ -153,7 +155,8 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello world\\n"
+            "expected_output": "hello world\
+"
           }
         ]
       },
@@ -206,7 +209,8 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3\\n"
+            "expected_output": "3\
+"
           }
         ]
       },
@@ -244,18 +248,18 @@ export const rust2Data = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
           "impl でメソッドを実装します。",
           "関数（area）を定義します。",
+          null,
+          null,
+          null,
+          null,
+          null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -267,7 +271,8 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "25\\n"
+            "expected_output": "25\
+"
           }
         ]
       },
@@ -326,7 +331,8 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "up\\n"
+            "expected_output": "up\
+"
           }
         ]
       },
@@ -359,11 +365,11 @@ export const rust2Data = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
           "Some で値があることを示します。",
           null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null,
-          null,
           null,
           null,
           null
@@ -377,7 +383,8 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42\\n"
+            "expected_output": "42\
+"
           }
         ]
       },
@@ -438,7 +445,8 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "5\\n"
+            "expected_output": "5\
+"
           }
         ]
       },
@@ -501,7 +509,8 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "woof\\n"
+            "expected_output": "woof\
+"
           }
         ]
       },
@@ -552,7 +561,9 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42\\nhello\\n"
+            "expected_output": "42\
+hello\
+"
           }
         ]
       }

@@ -47,7 +47,8 @@ export const bashData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, World!\\n"
+            "expected_output": "Hello, World!\
+"
           }
         ]
       },
@@ -97,7 +98,8 @@ export const bashData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bash\\n"
+            "expected_output": "Bash\
+"
           }
         ]
       },
@@ -142,7 +144,8 @@ export const bashData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "8\\n"
+            "expected_output": "8\
+"
           }
         ]
       },
@@ -180,13 +183,13 @@ export const bashData = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "〜より大きい、をあらわす -gt を入力します。",
           null,
           "文字列を標準出力に表示します。",
           null,
-          "if文（条件分岐）のブロックを終了します。",
-          null,
-          null
+          "if文（条件分岐）のブロックを終了します。"
         ],
         "candidates": {
           "operators": [
@@ -200,7 +203,8 @@ export const bashData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "すごい\\n"
+            "expected_output": "すごい\
+"
           }
         ]
       },
@@ -237,6 +241,8 @@ export const bashData = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "以上、をあらわす -ge を入力します。",
           null,
           "文字列を標準出力に表示します。",
@@ -244,8 +250,6 @@ export const bashData = {
           "もし条件が満たされなかった場合に実行する処理を記述します。",
           null,
           "文字列を標準出力に表示します。",
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -257,7 +261,8 @@ export const bashData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "未成年\\n"
+            "expected_output": "未成年\
+"
           }
         ]
       },
@@ -305,7 +310,9 @@ export const bashData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Alice\\nBob\\n"
+            "expected_output": "Alice\
+Bob\
+"
           }
         ]
       },
@@ -350,7 +357,8 @@ export const bashData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       }

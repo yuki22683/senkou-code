@@ -70,7 +70,8 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "84\\n"
+            "expected_output": "84\
+"
           }
         ]
       },
@@ -147,7 +148,8 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Driving\\n"
+            "expected_output": "Driving\
+"
           }
         ]
       },
@@ -230,7 +232,8 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "OK\\n"
+            "expected_output": "OK\
+"
           }
         ]
       },
@@ -311,7 +314,8 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "#ff0000\\n"
+            "expected_output": "#ff0000\
+"
           }
         ]
       },
@@ -374,7 +378,8 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "get /users\\n"
+            "expected_output": "get /users\
+"
           }
         ]
       },
@@ -429,7 +434,8 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "pending\\n"
+            "expected_output": "pending\
+"
           }
         ]
       },
@@ -484,7 +490,8 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "click\\n"
+            "expected_output": "click\
+"
           }
         ]
       },
@@ -539,7 +546,8 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       },
@@ -596,7 +604,8 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "太郎 is 25\\n"
+            "expected_output": "太郎 is 25\
+"
           }
         ]
       },
@@ -655,7 +664,8 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "成功\\n"
+            "expected_output": "成功\
+"
           }
         ]
       }

@@ -192,7 +192,14 @@ export const php3Data = {
         "testCases": [
           {
             "input": "$merged",
-            "expected_output": "Array\\n(\\n    [0] => 1\\n    [1] => 2\\n    [2] => 3\\n    [3] => 4\\n)\\n"
+            "expected_output": "Array\
+(\
+    [0] => 1\
+    [1] => 2\
+    [2] => 3\
+    [3] => 4\
+)\
+"
           }
         ]
       },
@@ -443,7 +450,15 @@ export const php3Data = {
         "testCases": [
           {
             "input": "iterator_to_array(rangeGen(5))",
-            "expected_output": "Array\\n(\\n    [0] => 1\\n    [1] => 2\\n    [2] => 3\\n    [3] => 4\\n    [4] => 5\\n)\\n"
+            "expected_output": "Array\
+(\
+    [0] => 1\
+    [1] => 2\
+    [2] => 3\
+    [3] => 4\
+    [4] => 5\
+)\
+"
           }
         ]
       },

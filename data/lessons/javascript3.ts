@@ -58,7 +58,8 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは Promise!\\n"
+            "expected_output": "こんにちは Promise!\
+"
           }
         ]
       },
@@ -105,7 +106,8 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "84\\n"
+            "expected_output": "84\
+"
           }
         ]
       },
@@ -161,7 +163,8 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "非同期成功！\\n"
+            "expected_output": "非同期成功！\
+"
           }
         ]
       },
@@ -223,7 +226,8 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\\n"
+            "expected_output": "100\
+"
           }
         ]
       },
@@ -280,7 +284,8 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "30\\n"
+            "expected_output": "30\
+"
           }
         ]
       },
@@ -351,7 +356,8 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ポチ: ワン！\\n"
+            "expected_output": "ポチ: ワン！\
+"
           }
         ]
       },
@@ -420,7 +426,8 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ニャー！\\n"
+            "expected_output": "ニャー！\
+"
           }
         ]
       },
@@ -483,7 +490,8 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "12\\n"
+            "expected_output": "12\
+"
           }
         ]
       },
@@ -532,7 +540,9 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ボブ\\nundefined\\n"
+            "expected_output": "ボブ\
+undefined\
+"
           }
         ]
       },
@@ -584,7 +594,8 @@ export const javascriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "デフォルト\\n"
+            "expected_output": "デフォルト\
+"
           }
         ]
       }

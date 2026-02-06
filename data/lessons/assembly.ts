@@ -99,7 +99,8 @@ export const assemblyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       },
@@ -176,7 +177,8 @@ export const assemblyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hi\\n"
+            "expected_output": "Hi\
+"
           }
         ]
       },

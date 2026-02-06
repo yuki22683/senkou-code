@@ -79,11 +79,11 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
+          null,
+          null,
           "x という名前のはこに 10 を入力します。",
           null,
           "変数の内容を展開して表示します。",
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -130,12 +130,12 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
           "変数の内容を展開して表示します。",
-          null,
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -227,11 +227,11 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
+          null,
+          null,
           "50 と入力しましょう。",
           null,
           "+= を使って加算します。",
-          null,
-          null,
           null,
           null,
           null
@@ -283,11 +283,11 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
+          null,
+          null,
           "age に 20 を入力します。",
           null,
           "文字列を標準出力に表示します。",
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -330,11 +330,11 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
+          null,
+          null,
           "['りんご', 'バナナ'] と入力して配列を作ります。",
           null,
           "変数の内容を展開して表示します。",
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -380,14 +380,14 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
+          null,
+          null,
           "score = 100 と入力しましょう。",
           null,
           "比較するための記号 `>` を入力しましょう。",
           null,
           "文字列を標準出力に表示します。",
-          null,
           "さいごに } で閉じるのを忘れないでください。",
-          null,
           null
         ],
         "candidates": {
@@ -437,6 +437,8 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
+          null,
+          null,
           "age に 18 を入力します。",
           null,
           ">=演算子を使って比較します。",
@@ -446,8 +448,6 @@ export const phpData = {
           "もし条件が満たされなかった場合に実行する処理を記述します。",
           null,
           "文字列を標準出力に表示します。",
-          null,
-          null,
           null,
           null
         ],
@@ -494,13 +494,13 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
+          null,
+          null,
           "85 と入力しましょう。",
           null,
           "複数の条件がすべて満たされているか（論理積）を判定します。",
           null,
           "文字列を標準出力に表示します。",
-          null,
-          null,
           null,
           null
         ],
@@ -552,11 +552,11 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
+          null,
           "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          null,
           "「〜を〜として取り出す」をあらわす `as` キーワードを入力します。",
-          null,
           "変数の内容を展開して表示します。",
-          null,
           null,
           null
         ],
@@ -599,10 +599,10 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
+          null,
           "名前（キー）とデータのセットを作ります。",
+          null,
           "変数の内容を展開して表示します。",
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -646,9 +646,9 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
+          null,
           "greet という名前の関数を定義します。",
           "文字列を標準出力に表示します。",
-          null,
           null,
           null,
           "関数（greet）を呼び出して実行します。",

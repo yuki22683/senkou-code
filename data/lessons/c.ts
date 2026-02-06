@@ -61,7 +61,8 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Hello, World!\\n"
+          "expected_output": "Hello, World!\
+"
         }
       ],
       "initialDisplayMode": "holey"
@@ -121,7 +122,8 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "10\\n"
+          "expected_output": "10\
+"
         }
       ],
       "initialDisplayMode": "holey"
@@ -191,7 +193,8 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "7\\n"
+          "expected_output": "7\
+"
         }
       ],
       "initialDisplayMode": "holey"
@@ -247,7 +250,8 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "1\\n"
+          "expected_output": "1\
+"
         }
       ],
       "initialDisplayMode": "holey"
@@ -307,7 +311,8 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "90\\n"
+          "expected_output": "90\
+"
         }
       ],
       "initialDisplayMode": "holey"
@@ -363,7 +368,8 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "私は 12 歳です\\n"
+          "expected_output": "私は 12 歳です\
+"
         }
       ],
       "initialDisplayMode": "holey"
@@ -418,7 +424,8 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "20\\n"
+          "expected_output": "20\
+"
         }
       ],
       "initialDisplayMode": "holey"
@@ -477,7 +484,8 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Pass\\n"
+          "expected_output": "Pass\
+"
         }
       ],
       "initialDisplayMode": "holey"
@@ -540,7 +548,8 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Big\\n"
+          "expected_output": "Big\
+"
         }
       ],
       "initialDisplayMode": "holey"
@@ -599,7 +608,8 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Pass\\n"
+          "expected_output": "Pass\
+"
         }
       ],
       "initialDisplayMode": "holey"
@@ -656,7 +666,10 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "0\\n1\\n2\\n"
+          "expected_output": "0\
+1\
+2\
+"
         }
       ],
       "initialDisplayMode": "holey"
@@ -720,7 +733,8 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "10\\n"
+          "expected_output": "10\
+"
         }
       ],
       "initialDisplayMode": "holey"
@@ -776,7 +790,8 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Hello\\n"
+          "expected_output": "Hello\
+"
         }
       ],
       "initialDisplayMode": "holey"

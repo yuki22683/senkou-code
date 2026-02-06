@@ -46,7 +46,8 @@ export const pythonData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "25\\n"
+            "expected_output": "25\
+"
           }
         ]
       },
@@ -117,7 +118,8 @@ export const pythonData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "9\\n"
+            "expected_output": "9\
+"
           }
         ]
       },
@@ -171,7 +173,9 @@ export const pythonData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "x = 10\\ny = 20\\n"
+            "expected_output": "x = 10\
+y = 20\
+"
           }
         ]
       },
@@ -220,7 +224,10 @@ export const pythonData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "0: 赤\\n1: 緑\\n2: 青\\n"
+            "expected_output": "0: 赤\
+1: 緑\
+2: 青\
+"
           }
         ]
       },
@@ -273,7 +280,10 @@ export const pythonData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "a: 1\\nb: 2\\nc: 3\\n"
+            "expected_output": "a: 1\
+b: 2\
+c: 3\
+"
           }
         ]
       },
@@ -334,7 +344,11 @@ export const pythonData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "0\\n2\\n4\\n6\\n"
+            "expected_output": "0\
+2\
+4\
+6\
+"
           }
         ]
       },
@@ -383,7 +397,8 @@ export const pythonData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "55\\n"
+            "expected_output": "55\
+"
           }
         ]
       },
@@ -460,7 +475,9 @@ export const pythonData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "関数を呼び出します\\nこんにちは！\\n"
+            "expected_output": "関数を呼び出します\
+こんにちは！\
+"
           }
         ]
       },
@@ -509,7 +526,8 @@ export const pythonData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "True\\n"
+            "expected_output": "True\
+"
           }
         ]
       }

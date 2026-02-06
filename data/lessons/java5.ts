@@ -39,15 +39,15 @@ export const javaData5 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
           "エラーが発生する可能性のある処理をここから記述します。",
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
+          null,
           "文字列をコンソールに出力し、改行します。",
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -65,7 +65,8 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "エラー\\n"
+            "expected_output": "エラー\
+"
           }
         ]
       },
@@ -104,17 +105,17 @@ export const javaData5 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
           "文字列をコンソールに出力し、改行します。",
+          null,
+          null,
+          null,
           "エラーの有無に関わらず、最後に必ず実行する処理を記述します。",
+          null,
           "文字列をコンソールに出力し、改行します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -131,7 +132,9 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Try\\nFinally\\n"
+            "expected_output": "Try\
+Finally\
+"
           }
         ]
       },
@@ -174,21 +177,21 @@ export const javaData5 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
           "`throws` で例外をスローすることを宣言します。",
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           "関数（riskyMethod）を呼び出して実行します。",
           null,
+          null,
           "文字列をコンソールに出力し、改行します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -206,7 +209,8 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Caught\\n"
+            "expected_output": "Caught\
+"
           }
         ]
       },
@@ -284,7 +288,8 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Invalid\\n"
+            "expected_output": "Invalid\
+"
           }
         ]
       },
@@ -323,17 +328,17 @@ export const javaData5 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
           "`(` でリソースを宣言します。",
           null,
+          null,
+          null,
+          null,
           "`printStackTrace` でスタックトレースを出力します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -351,7 +356,8 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "H\\n"
+            "expected_output": "H\
+"
           }
         ]
       },
@@ -392,20 +398,20 @@ export const javaData5 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           "`new` で BufferedReader を作成します。",
           null,
+          null,
+          null,
           "変数の値をコンソールに出力し、改行します。",
+          null,
           "`close` でリソースを閉じます。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -423,7 +429,8 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Line1\\n"
+            "expected_output": "Line1\
+"
           }
         ]
       },
@@ -464,20 +471,20 @@ export const javaData5 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
           "`new` で StringWriter を作成します。",
           null,
+          null,
+          null,
           "`write` で文字列を書き込みます。",
+          null,
           "`flush` でバッファをフラッシュします。",
           null,
           "`toString` で文字列に変換します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -495,7 +502,8 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       },
@@ -534,18 +542,18 @@ export const javaData5 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
           "`new` で Scanner を作成します。",
           null,
+          null,
+          null,
           "`next` で文字列を読み込みます。",
+          null,
           "`println` で出力します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -563,7 +571,8 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42 こんにちは\\n"
+            "expected_output": "42 こんにちは\
+"
           }
         ]
       },
@@ -601,15 +610,15 @@ export const javaData5 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           "`get` でパスを作成します。",
+          null,
           "`exists` でファイルの存在を確認します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -628,7 +637,8 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "true\\n"
+            "expected_output": "true\
+"
           }
         ]
       },
@@ -696,7 +706,8 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Caught\\n"
+            "expected_output": "Caught\
+"
           }
         ]
       }

@@ -45,7 +45,8 @@ export const lua2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\\n"
+            "expected_output": "100\
+"
           }
         ]
       },
@@ -88,7 +89,8 @@ export const lua2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "20\\n"
+            "expected_output": "20\
+"
           }
         ]
       },
@@ -137,7 +139,10 @@ export const lua2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       },
@@ -186,7 +191,8 @@ export const lua2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "x\t10\\n"
+            "expected_output": "x\t10\
+"
           }
         ]
       },
@@ -235,7 +241,8 @@ export const lua2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -274,11 +281,11 @@ export const lua2Data = {
           "swap という関数を定義します。",
           null,
           "return で複数の値を返します。",
+          null,
+          null,
           "1, 2 を渡して呼び出します。",
           null,
           "x と y を表示します。",
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -291,7 +298,8 @@ export const lua2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "2\t1\\n"
+            "expected_output": "2\t1\
+"
           }
         ]
       },
@@ -344,7 +352,8 @@ export const lua2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "5\\n"
+            "expected_output": "5\
+"
           }
         ]
       },
@@ -395,7 +404,8 @@ export const lua2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -454,7 +464,8 @@ export const lua2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -503,7 +514,8 @@ export const lua2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello\\n"
+            "expected_output": "hello\
+"
           }
         ]
       }

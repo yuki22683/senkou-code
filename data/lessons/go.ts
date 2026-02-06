@@ -33,11 +33,11 @@ export const goData = {
           "}"
         ],
         "lineHints": [
-          "フォーマットパッケージを使って文字列を出力します。",
+          null,
+          "フォーマットパッケージをインポートします。",
           null,
           null,
-          null,
-          null,
+          "fmt.Printlnで文字列を出力します。",
           null
         ],
         "candidates": {
@@ -49,7 +49,8 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは, Go!\\n"
+            "expected_output": "こんにちは, Go!\
+"
           }
         ]
       },
@@ -82,13 +83,13 @@ export const goData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
           "変数を宣言し、同時に数値を代入します（型推論を使用）。",
+          null,
           "はこの名前 x を指定して、表示させます。",
-          null,
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -103,7 +104,8 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -137,14 +139,14 @@ export const goData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           "かけ算なので `*` を使います。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -156,7 +158,8 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "12\\n"
+            "expected_output": "12\
+"
           }
         ]
       },
@@ -187,11 +190,11 @@ export const goData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
           "あまりを求める `%` 演算子を使います。",
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -206,7 +209,8 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -264,7 +268,8 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "70\\n"
+            "expected_output": "70\
+"
           }
         ]
       },
@@ -298,13 +303,13 @@ export const goData = {
           "}"
         ],
         "lineHints": [
-          "フォーマットパッケージを使って文字列を出力します。",
+          null,
+          "フォーマットパッケージをインポートします。",
           null,
           null,
+          "変数ageに10を代入します。",
           null,
-          null,
-          null,
-          null,
+          "fmt.Printfで文字列を埋め込んで出力します。",
           null,
           null
         ],
@@ -317,7 +322,8 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "I am 10 years old.\\n"
+            "expected_output": "I am 10 years old.\
+"
           }
         ]
       },
@@ -349,12 +355,12 @@ export const goData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          "スライスに複数の値を格納します。",
+          null,
           "2番目のデータはインデックス1です。 `nums[1]` と入力してください。",
-          null,
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -366,7 +372,8 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "20\\n"
+            "expected_output": "20\
+"
           }
         ]
       },
@@ -426,7 +433,8 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Great\\n"
+            "expected_output": "Great\
+"
           }
         ]
       },
@@ -491,7 +499,8 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Small\\n"
+            "expected_output": "Small\
+"
           }
         ]
       },
@@ -549,7 +558,8 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bonus 合格\\n"
+            "expected_output": "Bonus 合格\
+"
           }
         ]
       },
@@ -583,12 +593,12 @@ export const goData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          "スライスに複数の値を格納します。",
+          null,
           "範囲をあらわす `range` を入力しましょう。",
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -602,7 +612,10 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       },
@@ -635,13 +648,13 @@ export const goData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
           "名前（キー）の種類として `string` と入力しましょう。",
+          null,
           "\"Math\" という名前を指定してデータを取り出します。",
-          null,
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -654,7 +667,8 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "90\\n"
+            "expected_output": "90\
+"
           }
         ]
       },
@@ -688,14 +702,14 @@ export const goData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          "void型の値を返す関数（greet）を定義します。",
+          null,
+          null,
+          null,
+          null,
           "関数（greet）を呼び出して実行します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -707,7 +721,8 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       }

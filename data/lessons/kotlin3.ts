@@ -59,17 +59,17 @@ export const kotlin3Data = {
                   "* でワイルドカードインポートします。",
                   null,
                   null,
+                  null,
+                  null,
                   "delay で待機します。",
                   null,
                   "Hello と入力しましょう。",
                   null,
+                  null,
+                  null,
                   "main と入力しましょう。",
+                  null,
                   "println と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
                   null
         ],
         "candidates": {
@@ -83,7 +83,8 @@ export const kotlin3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       },
@@ -154,7 +155,8 @@ export const kotlin3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1, 2, 4, 8]\\n"
+            "expected_output": "[1, 2, 4, 8]\
+"
           }
         ]
       },
@@ -225,7 +227,10 @@ export const kotlin3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "0\\n1\\n2\\n"
+            "expected_output": "0\
+1\
+2\
+"
           }
         ]
       },
@@ -300,7 +305,9 @@ export const kotlin3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "true\\nfalse\\n"
+            "expected_output": "true\
+false\
+"
           }
         ]
       },
@@ -356,16 +363,16 @@ export const kotlin3Data = {
                   null,
                   null,
                   null,
+                  null,
+                  null,
                   "apply で設定してオブジェクトを返します。",
                   null,
                   "localhost と入力しましょう。",
                   null,
                   "変数に数値を代入（保存）します。",
                   null,
+                  null,
                   "println で出力します。",
-                  null,
-                  null,
-                  null,
                   null
         ],
         "candidates": {
@@ -379,7 +386,8 @@ export const kotlin3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Config(host=localhost, port=8080)\\n"
+            "expected_output": "Config(host=localhost, port=8080)\
+"
           }
         ]
       },
@@ -431,10 +439,10 @@ export const kotlin3Data = {
           null,
           "also で副作用を実行してオブジェクトを返します。",
           null,
-          "it と入力しましょう。",
           "println と入力しましょう。",
           null,
           null,
+          "num と入力しましょう。",
           null
         ],
         "candidates": {
@@ -448,7 +456,9 @@ export const kotlin3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Value: 42\\n42\\n"
+            "expected_output": "Value: 42\
+42\
+"
           }
         ]
       },
@@ -501,9 +511,9 @@ export const kotlin3Data = {
           "run でブロックを実行して結果を返します。",
           null,
           "スペース1文字を入力しましょう。",
+          null,
+          null,
           "println と入力しましょう。",
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -517,7 +527,8 @@ export const kotlin3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "2\\n"
+            "expected_output": "2\
+"
           }
         ]
       },
@@ -580,7 +591,8 @@ export const kotlin3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -647,7 +659,8 @@ export const kotlin3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "{1=[1, 3, 5], 0=[2, 4]}\\n"
+            "expected_output": "{1=[1, 3, 5], 0=[2, 4]}\
+"
           }
         ]
       },
@@ -714,7 +727,8 @@ export const kotlin3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "24\\n"
+            "expected_output": "24\
+"
           }
         ]
       }

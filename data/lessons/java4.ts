@@ -46,13 +46,13 @@ export const javaData4 = {
           "}"
         ],
         "lineHints": [
-          "新しいクラス（Box）を定義します。",
           null,
+          null,
+          null,
+          "新しいクラス（Box）を定義します。",
           null,
           "`set` で値を設定します。",
           "`get` で値を取得します。",
-          null,
-          null,
           null,
           null,
           null,
@@ -79,7 +79,8 @@ export const javaData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Java\\n"
+            "expected_output": "Java\
+"
           }
         ]
       },
@@ -148,7 +149,8 @@ export const javaData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42.0\\n"
+            "expected_output": "42.0\
+"
           }
         ]
       },
@@ -190,19 +192,19 @@ export const javaData4 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
           "`?` で任意の型を表します。",
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           "配列の初期値を`Arrays.asList()`で渡します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           "`printAll` メソッドを呼び出します。",
           null,
@@ -222,7 +224,9 @@ export const javaData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "A\\nB\\n"
+            "expected_output": "A\
+B\
+"
           }
         ]
       },
@@ -261,18 +265,18 @@ export const javaData4 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
           "`new` で HashMap を作成します。",
           null,
           "`put` でキーと値を追加します。",
+          null,
+          null,
+          null,
           "`get` で値を取得します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -289,7 +293,8 @@ export const javaData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "90\\n"
+            "expected_output": "90\
+"
           }
         ]
       },
@@ -331,20 +336,20 @@ export const javaData4 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
           "`new` で HashMap を作成します。",
           null,
           "`put` でキーと値を追加します。",
+          null,
+          null,
+          null,
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
           null,
           "`getKey` でキーを取得します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -363,7 +368,9 @@ export const javaData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "A\\nB\\n"
+            "expected_output": "A\
+B\
+"
           }
         ]
       },
@@ -400,16 +407,16 @@ export const javaData4 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
           "`new ArrayList<>(Arrays.asList(...))`でリストを作成します。",
           null,
+          null,
+          null,
           "変数の値をコンソールに出力し、改行します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -427,7 +434,8 @@ export const javaData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[a, cat, elephant]\\n"
+            "expected_output": "[a, cat, elephant]\
+"
           }
         ]
       },
@@ -474,26 +482,26 @@ export const javaData4 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
           "新しいクラス（Score）を定義します。",
           null,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           "配列の初期値を`Arrays.asList()`で渡します。",
+          null,
           "`sort` でソートします。",
+          null,
           "`get` で要素を取得します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -512,7 +520,8 @@ export const javaData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "60\\n"
+            "expected_output": "60\
+"
           }
         ]
       },
@@ -577,7 +586,8 @@ export const javaData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "MON\\n"
+            "expected_output": "MON\
+"
           }
         ]
       },
@@ -616,18 +626,18 @@ export const javaData4 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
           "`new` で LinkedList を作成します。",
           null,
           "`offer` でキューに要素を追加します。",
+          null,
+          null,
+          null,
           "`poll` で要素を取り出します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -644,7 +654,8 @@ export const javaData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "First\\n"
+            "expected_output": "First\
+"
           }
         ]
       },
@@ -683,18 +694,18 @@ export const javaData4 = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
           "`new` で ArrayDeque を作成します。",
           null,
           "`push` でスタックに積みます。",
+          null,
+          null,
+          null,
           "`pop` でスタックから取り出します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -711,7 +722,8 @@ export const javaData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "20\\n"
+            "expected_output": "20\
+"
           }
         ]
       }

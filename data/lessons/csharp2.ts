@@ -67,7 +67,8 @@ export const csharp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "moving\\n"
+            "expected_output": "moving\
+"
           }
         ]
       },
@@ -147,7 +148,8 @@ export const csharp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "circle\\n"
+            "expected_output": "circle\
+"
           }
         ]
       },
@@ -221,7 +223,8 @@ export const csharp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "running\\n"
+            "expected_output": "running\
+"
           }
         ]
       },
@@ -280,7 +283,8 @@ export const csharp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "500\\n"
+            "expected_output": "500\
+"
           }
         ]
       },
@@ -331,7 +335,8 @@ export const csharp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "20\\n"
+            "expected_output": "20\
+"
           }
         ]
       },
@@ -384,7 +389,10 @@ export const csharp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n15\\n20\\n"
+            "expected_output": "10\
+15\
+20\
+"
           }
         ]
       },
@@ -437,7 +445,10 @@ export const csharp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n4\\n9\\n"
+            "expected_output": "1\
+4\
+9\
+"
           }
         ]
       },
@@ -480,7 +491,8 @@ export const csharp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "21\\n"
+            "expected_output": "21\
+"
           }
         ]
       },
@@ -533,7 +545,8 @@ export const csharp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "caught\\n"
+            "expected_output": "caught\
+"
           }
         ]
       },
@@ -580,7 +593,8 @@ export const csharp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "5\\n"
+            "expected_output": "5\
+"
           }
         ]
       }

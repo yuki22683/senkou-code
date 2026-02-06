@@ -77,7 +77,8 @@ export const go4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -158,7 +159,9 @@ export const go4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "goroutine\\ndone\\n"
+            "expected_output": "goroutine\
+done\
+"
           }
         ]
       },
@@ -221,7 +224,8 @@ export const go4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "<nil>\\n"
+            "expected_output": "<nil>\
+"
           }
         ]
       },
@@ -286,7 +290,8 @@ export const go4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "context canceled\\n"
+            "expected_output": "context canceled\
+"
           }
         ]
       },
@@ -347,7 +352,8 @@ export const go4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "500ms\\n"
+            "expected_output": "500ms\
+"
           }
         ]
       },
@@ -420,7 +426,8 @@ export const go4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "{\"name\":\"Apple\"}\\n"
+            "expected_output": "{\"name\":\"Apple\"}\
+"
           }
         ]
       },
@@ -495,7 +502,8 @@ export const go4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Banana\\n"
+            "expected_output": "Banana\
+"
           }
         ]
       },
@@ -560,7 +568,8 @@ export const go4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello\\n"
+            "expected_output": "hello\
+"
           }
         ]
       },
@@ -621,7 +630,8 @@ export const go4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "84\\n"
+            "expected_output": "84\
+"
           }
         ]
       },
@@ -680,7 +690,8 @@ export const go4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       }

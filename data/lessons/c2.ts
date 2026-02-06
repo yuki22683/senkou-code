@@ -36,13 +36,13 @@ export const c2Data = {
         ],
         "lineHints": [
           null,
-          "整数型の変数を宣言し、初期値を代入します。",
-          "& を使って x のアドレスを取得します。",
           null,
+          "整数型の変数を宣言し、初期値を代入します。",
+          null,
+          "& を使って x のアドレスを取得します。",
           "*p で中身を取り出します。",
           null,
-          null,
-          null,
+          null
         ],
         "candidates": {
           "operators": [
@@ -87,14 +87,14 @@ export const c2Data = {
         ],
         "lineHints": [
           null,
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
           "ptr に n のアドレスを入れます。",
-          "* を使って ptr の指す先に 99 を代入します。",
           null,
+          "* を使って ptr の指す先に 99 を代入します。",
           "変数の値を指定された形式で画面に表示します。",
           null,
-          null,
-          null,
+          null
         ],
         "candidates": {
           "operators": [
@@ -197,12 +197,12 @@ export const c2Data = {
           "int型の値を返す関数（double_it）を定義します。",
           null,
           "return を使って計算結果を返します。",
+          null,
+          null,
           "関数の戻り値を result に受け取ります。",
           "変数の値を指定された形式で画面に表示します。",
           null,
-          null,
-          null,
-          null,
+          null
         ],
         "candidates": {
           "keywords": [
@@ -247,13 +247,13 @@ export const c2Data = {
         ],
         "lineHints": [
           null,
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
-          "配列名 arr を p に代入します（先頭アドレス）。",
           null,
+          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          null,
+          "配列名 arr を p に代入します（先頭アドレス）。",
           "p + 2 で3番目の要素にアクセスします。",
           null,
-          null,
-          null,
+          null
         ],
         "candidates": {
           "variables": [
@@ -297,12 +297,12 @@ export const c2Data = {
         ],
         "lineHints": [
           null,
+          null,
           "char型の配列に文字列を入れます。",
+          null,
           "変数の値を指定された形式で画面に表示します。",
           null,
-          null,
-          null,
-          null,
+          null
         ],
         "candidates": {
           "strings": [
@@ -351,14 +351,14 @@ export const c2Data = {
           null,
           "void型の値を返す関数（triple）を定義します。",
           "ポインタ経由で値を3倍にします。",
+          null,
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
+          null,
           "& を使って val のアドレスを渡します。",
           "変数の値を指定された形式で画面に表示します。",
           null,
-          null,
-          null,
-          null,
-          null,
+          null
         ],
         "candidates": {
           "operators": [
@@ -405,12 +405,12 @@ export const c2Data = {
         "lineHints": [
           null,
           null,
-          "標準ライブラリを読み込み、使用可能にします。",
+          null,
           "malloc で int サイズのメモリを確保します。",
           "確保したメモリに 50 を代入します。",
           null,
           null,
-          null,
+          "メモリを解放します。",
           null,
           null
         ],
@@ -462,14 +462,14 @@ export const c2Data = {
           null,
           "構造体（Item）を定義します。",
           "price メンバを持ちます。",
-          "構造体（Item）を定義します。",
-          "構造体（Item）を定義します。",
-          "変数の値を指定された形式で画面に表示します。",
           null,
           null,
+          "構造体の変数を初期化します。",
+          "構造体のポインタを作成します。",
           null,
+          "-> 演算子でメンバにアクセスします。",
           null,
-          null,
+          null
         ],
         "candidates": {
           "operators": [
@@ -515,12 +515,12 @@ export const c2Data = {
         "lineHints": [
           null,
           "Day という列挙型を定義します。",
-          "enum Day 型の変数を作ります。",
           null,
+          null,
+          "enum Day 型の変数を作ります。",
           "変数の値を指定された形式で画面に表示します。",
           null,
-          null,
-          null,
+          null
         ],
         "candidates": {
           "keywords": [

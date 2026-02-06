@@ -43,7 +43,8 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "found\\n"
+            "expected_output": "found\
+"
           }
         ]
       },
@@ -84,7 +85,8 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "has data\\n"
+            "expected_output": "has data\
+"
           }
         ]
       },
@@ -125,7 +127,10 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "A\\nB\\nC\\n"
+            "expected_output": "A\
+B\
+C\
+"
           }
         ]
       },
@@ -182,7 +187,8 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "A|B\\n"
+            "expected_output": "A|B\
+"
           }
         ]
       },
@@ -239,7 +245,8 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "A|\\n"
+            "expected_output": "A|\
+"
           }
         ]
       },
@@ -280,7 +287,8 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -335,7 +343,9 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n"
+            "expected_output": "1\
+2\
+"
           }
         ]
       },
@@ -376,7 +386,8 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "matched\\n"
+            "expected_output": "matched\
+"
           }
         ]
       },
@@ -417,7 +428,8 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "in range\\n"
+            "expected_output": "in range\
+"
           }
         ]
       },
@@ -458,7 +470,8 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "found\\n"
+            "expected_output": "found\
+"
           }
         ]
       }

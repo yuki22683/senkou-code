@@ -61,7 +61,8 @@ export const cpp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "250\\n"
+            "expected_output": "250\
+"
           }
         ]
       },
@@ -124,7 +125,10 @@ export const cpp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n20\\n30\\n"
+            "expected_output": "10\
+20\
+30\
+"
           }
         ]
       },
@@ -185,7 +189,8 @@ export const cpp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "null\\n"
+            "expected_output": "null\
+"
           }
         ]
       },
@@ -250,7 +255,8 @@ export const cpp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "27\\n"
+            "expected_output": "27\
+"
           }
         ]
       },
@@ -312,7 +318,8 @@ export const cpp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1 2 3 4 5 \\n"
+            "expected_output": "1 2 3 4 5 \
+"
           }
         ]
       },
@@ -371,7 +378,8 @@ export const cpp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\\n"
+            "expected_output": "100\
+"
           }
         ]
       },
@@ -412,13 +420,13 @@ export const cpp3Data = {
                   null,
                   null,
                   null,
+                  null,
+                  null,
+                  null,
+                  null,
                   "文字列型の変数を宣言し、文字列データを代入します。",
                   null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
+                  "moveで所有権を移動します。",
                   null,
                   null,
                   null
@@ -434,7 +442,8 @@ export const cpp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       },
@@ -497,7 +506,8 @@ export const cpp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42\\n"
+            "expected_output": "42\
+"
           }
         ]
       },
@@ -561,7 +571,8 @@ export const cpp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10 20 30 \\n"
+            "expected_output": "10 20 30 \
+"
           }
         ]
       },
@@ -598,13 +609,13 @@ export const cpp3Data = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
+          null,
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          "xをコピーキャプチャしてラムダ式を作ります。",
           null,
           null,
           null
@@ -620,7 +631,8 @@ export const cpp3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "25\\n"
+            "expected_output": "25\
+"
           }
         ]
       }

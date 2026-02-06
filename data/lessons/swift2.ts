@@ -59,7 +59,8 @@ export const swift2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42\\n"
+            "expected_output": "42\
+"
           }
         ]
       },
@@ -112,7 +113,8 @@ export const swift2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\\n"
+            "expected_output": "100\
+"
           }
         ]
       },
@@ -177,7 +179,8 @@ export const swift2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3\\n"
+            "expected_output": "3\
+"
           }
         ]
       },
@@ -248,7 +251,8 @@ export const swift2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Tama\\n"
+            "expected_output": "Tama\
+"
           }
         ]
       },
@@ -325,7 +329,8 @@ export const swift2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "woof\\n"
+            "expected_output": "woof\
+"
           }
         ]
       },
@@ -382,7 +387,8 @@ export const swift2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -437,7 +443,8 @@ export const swift2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1, 4, 9]\\n"
+            "expected_output": "[1, 4, 9]\
+"
           }
         ]
       },
@@ -488,7 +495,8 @@ export const swift2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[3, 4, 5]\\n"
+            "expected_output": "[3, 4, 5]\
+"
           }
         ]
       },
@@ -543,12 +551,12 @@ export const swift2Data = {
           "nil と入力しましょう。",
           null,
           "関数の実行を終了し、呼び出し元に戻ります。",
+          null,
+          null,
           "変数の内容を画面に出力します。",
           null,
-          "check と入力しましょう。",
           null,
-          null,
-          null
+          "check と入力しましょう。"
         ],
         "candidates": {
           "keywords": [
@@ -559,7 +567,8 @@ export const swift2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -640,7 +649,8 @@ export const swift2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "red\\n"
+            "expected_output": "red\
+"
           }
         ]
       }

@@ -41,7 +41,8 @@ export const sql2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "found\\n"
+            "expected_output": "found\
+"
           }
         ]
       },
@@ -88,7 +89,10 @@ export const sql2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       },
@@ -131,7 +135,9 @@ export const sql2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n"
+            "expected_output": "1\
+2\
+"
           }
         ]
       },
@@ -170,7 +176,8 @@ export const sql2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3\\n"
+            "expected_output": "3\
+"
           }
         ]
       },
@@ -209,7 +216,8 @@ export const sql2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "6\\n"
+            "expected_output": "6\
+"
           }
         ]
       },
@@ -248,7 +256,8 @@ export const sql2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "20.0\\n"
+            "expected_output": "20.0\
+"
           }
         ]
       },
@@ -299,7 +308,9 @@ export const sql2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "A|2\\nB|1\\n"
+            "expected_output": "A|2\
+B|1\
+"
           }
         ]
       },
@@ -350,7 +361,8 @@ export const sql2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "A|2\\n"
+            "expected_output": "A|2\
+"
           }
         ]
       },
@@ -405,7 +417,8 @@ export const sql2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "pass\\n"
+            "expected_output": "pass\
+"
           }
         ]
       },
@@ -444,7 +457,8 @@ export const sql2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "default\\n"
+            "expected_output": "default\
+"
           }
         ]
       }

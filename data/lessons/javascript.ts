@@ -44,7 +44,8 @@ export const javascriptData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, JavaScript!\\n"
+            "expected_output": "Hello, JavaScript!\
+"
           }
         ]
       },
@@ -92,7 +93,8 @@ export const javascriptData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "JavaScript\\n"
+            "expected_output": "JavaScript\
+"
           }
         ]
       },
@@ -150,7 +152,8 @@ export const javascriptData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -199,7 +202,8 @@ export const javascriptData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "私は10歳です\\n"
+            "expected_output": "私は10歳です\
+"
           }
         ]
       },
@@ -252,7 +256,8 @@ export const javascriptData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "あお\\n"
+            "expected_output": "あお\
+"
           }
         ]
       },
@@ -313,7 +318,8 @@ export const javascriptData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ごうかく！\\n"
+            "expected_output": "ごうかく！\
+"
           }
         ]
       },
@@ -382,7 +388,8 @@ export const javascriptData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こども\\n"
+            "expected_output": "こども\
+"
           }
         ]
       },
@@ -435,7 +442,9 @@ export const javascriptData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "たろう\\nはなこ\\n"
+            "expected_output": "たろう\
+はなこ\
+"
           }
         ]
       },
@@ -485,7 +494,8 @@ export const javascriptData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "たろう\\n"
+            "expected_output": "たろう\
+"
           }
         ]
       },
@@ -538,7 +548,8 @@ export const javascriptData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       }

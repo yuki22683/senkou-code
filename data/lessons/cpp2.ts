@@ -49,11 +49,11 @@ export const cpp2Data = {
           "public: で公開部分を示します。",
           null,
           "メンバ変数を定義します。",
+          null,
+          null,
+          null,
           "Cat型のオブジェクトを作ります。",
           "メンバにアクセスします。",
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -67,7 +67,8 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Tama\\n"
+            "expected_output": "Tama\
+"
           }
         ]
       },
@@ -109,18 +110,18 @@ export const cpp2Data = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "メンバ変数です。",
+          null,
           "コンストラクタはクラス名と同じ Counter です。",
+          null,
           "引数で受け取った値を設定します。",
           null,
+          null,
+          null,
+          null,
           "Counter(5) でオブジェクトを作ります。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -134,7 +135,8 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "5\\n"
+            "expected_output": "5\
+"
           }
         ]
       },
@@ -179,22 +181,22 @@ export const cpp2Data = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "幅のメンバ変数です。",
           "高さのメンバ変数です。",
           "int型の値を返す関数（area）を定義します。",
+          null,
           "* を使って掛け算します。",
+          null,
+          null,
+          null,
+          null,
+          "Rectオブジェクトを作ります。",
+          null,
+          null,
+          null,
           "r.area() でメンバ関数を呼びます。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -207,7 +209,8 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "12\\n"
+            "expected_output": "12\
+"
           }
         ]
       },
@@ -243,13 +246,13 @@ export const cpp2Data = {
         ],
         "lineHints": [
           null,
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
+          null,
           "& を使って参照を作ります。",
           null,
           "ref を変えると num も変わります。",
-          null,
           "num が 100 になっています。",
-          null,
           null,
           null
         ],
@@ -262,7 +265,8 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\\n"
+            "expected_output": "100\
+"
           }
         ]
       },
@@ -305,18 +309,18 @@ export const cpp2Data = {
         "lineHints": [
           null,
           "新しいクラス（Vehicle）を定義します。",
+          null,
           "void型の値を返す関数（move）を定義します。",
-          "新しいクラス（Car）を定義します。",
+          null,
+          null,
+          null,
+          null,
+          "新しいクラス（Car）をVehicleから継承します。",
+          null,
+          null,
+          "Carオブジェクトを作ります。",
+          null,
           "Car は move() を使えます。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -329,7 +333,8 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "moving\\n"
+            "expected_output": "moving\
+"
           }
         ]
       },
@@ -376,24 +381,24 @@ export const cpp2Data = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
+          null,
           "virtual をつけて仮想関数にします。",
-          "void型の値を返す関数（draw）を定義します。",
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          "override で親クラスの関数を上書きします。",
+          null,
+          null,
+          null,
+          null,
+          "Circleオブジェクトを作ります。",
           null,
           "Circle の draw が呼ばれます。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -406,7 +411,8 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "circle\\n"
+            "expected_output": "circle\
+"
           }
         ]
       },
@@ -448,11 +454,11 @@ export const cpp2Data = {
           "T を型パラメータとして定義します。",
           "T型の引数を受け取り、T型を返します。",
           "大きい方を返します。",
+          null,
+          null,
+          null,
+          null,
           "int型で呼び出されます。",
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -465,7 +471,8 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "7\\n"
+            "expected_output": "7\
+"
           }
         ]
       },
@@ -501,13 +508,13 @@ export const cpp2Data = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "{ でラムダ式の本体を始めます。",
-          null,
           "x の2乗を返します。",
+          null,
+          null,
           "square(4) で 16 が出力されます。",
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -520,7 +527,8 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "16\\n"
+            "expected_output": "16\
+"
           }
         ]
       },
@@ -555,8 +563,8 @@ export const cpp2Data = {
         ],
         "lineHints": [
           null,
-          null,
           "memoryライブラリを読み込み、使用可能にします。",
+          null,
           null,
           "make_unique でスマートポインタを作ります。",
           null,
@@ -573,7 +581,8 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\\n"
+            "expected_output": "100\
+"
           }
         ]
       },
@@ -610,13 +619,13 @@ export const cpp2Data = {
         ],
         "lineHints": [
           null,
+          null,
           "エラーが発生する可能性のある処理をここから記述します。",
+          null,
           "throw で例外を投げます。",
           null,
           "エラー（例外）が発生した場合の処理を記述します。",
-          null,
           "捕まえた値を表示します。",
-          null,
           null,
           null,
           null
@@ -630,7 +639,8 @@ export const cpp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "404\\n"
+            "expected_output": "404\
+"
           }
         ]
       }

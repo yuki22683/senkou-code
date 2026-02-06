@@ -47,7 +47,8 @@ export const javascriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "true\\n"
+            "expected_output": "true\
+"
           }
         ]
       },
@@ -92,7 +93,8 @@ export const javascriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "true\\n"
+            "expected_output": "true\
+"
           }
         ]
       },
@@ -137,7 +139,12 @@ export const javascriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[\\n  'h', 'e', 'l', 'l',\\n  'o', 'w', 'o', 'r',\\n  'l', 'd'\\n]\\n"
+            "expected_output": "[\
+  'h', 'e', 'l', 'l',\
+  'o', 'w', 'o', 'r',\
+  'l', 'd'\
+]\
+"
           }
         ]
       },
@@ -184,7 +191,9 @@ export const javascriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "name: 太郎\\nage: 25\\n"
+            "expected_output": "name: 太郎\
+age: 25\
+"
           }
         ]
       },
@@ -229,7 +238,8 @@ export const javascriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "{ name: 'Python', version: '3.12' }\\n"
+            "expected_output": "{ name: 'Python', version: '3.12' }\
+"
           }
         ]
       },
@@ -274,7 +284,8 @@ export const javascriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -327,7 +338,8 @@ export const javascriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "-9\\n"
+            "expected_output": "-9\
+"
           }
         ]
       },
@@ -390,7 +402,10 @@ export const javascriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       },
@@ -461,7 +476,9 @@ export const javascriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "25\\n25\\n"
+            "expected_output": "25\
+25\
+"
           }
         ]
       },
@@ -525,7 +542,8 @@ export const javascriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "9\\n"
+            "expected_output": "9\
+"
           }
         ]
       }

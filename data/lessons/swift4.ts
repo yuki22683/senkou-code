@@ -85,7 +85,8 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Woof!\\n"
+            "expected_output": "Woof!\
+"
           }
         ]
       },
@@ -174,7 +175,8 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ID: (id)\\n"
+            "expected_output": "ID: (id)\
+"
           }
         ]
       },
@@ -238,7 +240,8 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -299,7 +302,8 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "5\\n"
+            "expected_output": "5\
+"
           }
         ]
       },
@@ -382,7 +386,8 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "{\"name\":\"Apple\"}\\n"
+            "expected_output": "{\"name\":\"Apple\"}\
+"
           }
         ]
       },
@@ -457,7 +462,9 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Computing...\\n100\\n"
+            "expected_output": "Computing...\
+100\
+"
           }
         ]
       },
@@ -522,7 +529,9 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "start\\nend\\n"
+            "expected_output": "start\
+end\
+"
           }
         ]
       },
@@ -597,7 +606,8 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -692,7 +702,8 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[10]\\n"
+            "expected_output": "[10]\
+"
           }
         ]
       },
@@ -757,7 +768,8 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3\\n"
+            "expected_output": "3\
+"
           }
         ]
       }

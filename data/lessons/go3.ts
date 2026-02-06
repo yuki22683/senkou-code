@@ -69,7 +69,8 @@ export const go3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -148,7 +149,8 @@ export const go3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -211,7 +213,8 @@ export const go3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[10 20 30]\\n"
+            "expected_output": "[10 20 30]\
+"
           }
         ]
       },
@@ -272,7 +275,8 @@ export const go3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1 2 3 4]\\n"
+            "expected_output": "[1 2 3 4]\
+"
           }
         ]
       },
@@ -335,7 +339,8 @@ export const go3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[10 20 30]\\n"
+            "expected_output": "[10 20 30]\
+"
           }
         ]
       },
@@ -410,7 +415,8 @@ export const go3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -473,7 +479,9 @@ export const go3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "math: 90\\nenglish: 85\\n"
+            "expected_output": "math: 90\
+english: 85\
+"
           }
         ]
       },
@@ -534,7 +542,8 @@ export const go3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "25\\n"
+            "expected_output": "25\
+"
           }
         ]
       },
@@ -609,7 +618,8 @@ export const go3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\\n"
+            "expected_output": "100\
+"
           }
         ]
       },
@@ -674,7 +684,8 @@ export const go3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "caught\\n"
+            "expected_output": "caught\
+"
           }
         ]
       }

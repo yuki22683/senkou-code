@@ -38,12 +38,12 @@ export const lua3Data = {
         "lineHints": [
           null,
           "pcall でエラーを捕捉します。",
-          "ok と入力しましょう。",
+          null,
+          null,
+          null,
+          null,
+          null,
           "変数の内容を画面に出力します。",
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -58,7 +58,8 @@ export const lua3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -106,7 +107,8 @@ export const lua3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "caught\\n"
+            "expected_output": "caught\
+"
           }
         ]
       },
@@ -150,7 +152,8 @@ export const lua3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "pass\\n"
+            "expected_output": "pass\
+"
           }
         ]
       },
@@ -196,7 +199,8 @@ export const lua3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "table\\n"
+            "expected_output": "table\
+"
           }
         ]
       },
@@ -242,7 +246,8 @@ export const lua3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Value: 100\\n"
+            "expected_output": "Value: 100\
+"
           }
         ]
       },
@@ -290,7 +295,8 @@ export const lua3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "60\\n"
+            "expected_output": "60\
+"
           }
         ]
       },
@@ -338,7 +344,8 @@ export const lua3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "LuaScript\\n"
+            "expected_output": "LuaScript\
+"
           }
         ]
       },
@@ -384,7 +391,8 @@ export const lua3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3\\n"
+            "expected_output": "3\
+"
           }
         ]
       },
@@ -432,7 +440,8 @@ export const lua3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "adult\\n"
+            "expected_output": "adult\
+"
           }
         ]
       },
@@ -482,7 +491,10 @@ export const lua3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       }

@@ -73,7 +73,8 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Woof!\\n"
+            "expected_output": "Woof!\
+"
           }
         ]
       },
@@ -93,11 +94,11 @@ export const rust4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// derive でトレイトを自動実装\\n#[___(Debug)]\\nstruct User {\\n    name: String,\\n    age: u32,\\n}\\n\\nfn main() {\\n    let user = User { name: String::from(\"アリス\"), age: 30 };\\n    println!(\"{:?}\", user);\\n}",
+        "correctCode": "// derive でトレイトを自動実装\\n#[derive(Debug)]\\nstruct User {\\n    name: String,\\n    age: u32,\\n}\\n\\nfn main() {\\n    let user = User { name: String::from(\"アリス\"), age: 30 };\\n    println!(\"{:?}\", user);\\n}",
         "holeyCode": "// derive でトレイトを自動実装\\n#[___(Debug)]\\nstruct ___ {\\n    name: ___,\\n    age: ___,\\n___\\n\\nfn ___ () {\\n    let ___ = User { name: String::from(\"アリス\"), age: 30 };\\n    ___!(\"{:?}\", user);\\n___",
         "correctLines": [
           "// derive でトレイトを自動実装",
-          "#[___(Debug)]",
+          "#[derive(Debug)]",
           "struct User {",
           "    name: String,",
           "    age: u32,",
@@ -132,7 +133,8 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "User { name: \"Alice\", age: 30 }\\n"
+            "expected_output": "User { name: \"Alice\", age: 30 }\
+"
           }
         ]
       },
@@ -179,7 +181,8 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42\\n"
+            "expected_output": "42\
+"
           }
         ]
       },
@@ -232,7 +235,8 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは Hello\\n"
+            "expected_output": "こんにちは Hello\
+"
           }
         ]
       },
@@ -287,7 +291,8 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Some(1)\\n"
+            "expected_output": "Some(1)\
+"
           }
         ]
       },
@@ -344,7 +349,8 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "2\\n"
+            "expected_output": "2\
+"
           }
         ]
       },
@@ -377,11 +383,11 @@ export const rust4Data = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -397,7 +403,8 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "odd\\n"
+            "expected_output": "odd\
+"
           }
         ]
       },
@@ -454,7 +461,10 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "0\\n2\\n4\\n"
+            "expected_output": "0\
+2\
+4\
+"
           }
         ]
       },
@@ -501,7 +511,8 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1, 2, 3, 4, 5]\\n"
+            "expected_output": "[1, 2, 3, 4, 5]\
+"
           }
         ]
       },
@@ -533,10 +544,10 @@ export const rust4Data = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -552,7 +563,10 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "0: a\\n1: b\\n2: c\\n"
+            "expected_output": "0: a\
+1: b\
+2: c\
+"
           }
         ]
       }

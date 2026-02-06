@@ -48,7 +48,8 @@ export const sqlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, World!\\n"
+            "expected_output": "Hello, World!\
+"
           }
         ]
       },
@@ -94,7 +95,8 @@ export const sqlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       },
@@ -140,7 +142,8 @@ export const sqlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "150\\n"
+            "expected_output": "150\
+"
           }
         ]
       },
@@ -185,7 +188,8 @@ export const sqlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "太郎|10\\n"
+            "expected_output": "太郎|10\
+"
           }
         ]
       },
@@ -230,7 +234,8 @@ export const sqlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -275,7 +280,8 @@ export const sqlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "SQLは楽しい！\\n"
+            "expected_output": "SQLは楽しい！\
+"
           }
         ]
       },
@@ -321,7 +327,8 @@ export const sqlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -366,7 +373,8 @@ export const sqlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -413,7 +421,8 @@ export const sqlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "大きい\\n"
+            "expected_output": "大きい\
+"
           }
         ]
       },
@@ -459,7 +468,8 @@ export const sqlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       }

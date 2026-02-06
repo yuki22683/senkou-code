@@ -56,7 +56,8 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, C#!\\n"
+            "expected_output": "Hello, C#!\
+"
           }
         ]
       },
@@ -105,7 +106,8 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "CSharp\\n"
+            "expected_output": "CSharp\
+"
           }
         ]
       },
@@ -163,7 +165,8 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -205,7 +208,8 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -257,7 +261,8 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "70\\n"
+            "expected_output": "70\
+"
           }
         ]
       },
@@ -306,7 +311,8 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "私は10歳です\\n"
+            "expected_output": "私は10歳です\
+"
           }
         ]
       },
@@ -356,7 +362,8 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "青\\n"
+            "expected_output": "青\
+"
           }
         ]
       },
@@ -414,7 +421,8 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "合格！\\n"
+            "expected_output": "合格！\
+"
           }
         ]
       },
@@ -485,7 +493,8 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "子供\\n"
+            "expected_output": "子供\
+"
           }
         ]
       },
@@ -539,7 +548,8 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ボーナスあり合格\\n"
+            "expected_output": "ボーナスあり合格\
+"
           }
         ]
       },
@@ -598,7 +608,9 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "太郎\\n花子\\n"
+            "expected_output": "太郎\
+花子\
+"
           }
         ]
       },
@@ -650,7 +662,8 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "オレンジ\\n"
+            "expected_output": "オレンジ\
+"
           }
         ]
       },
@@ -708,7 +721,8 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       }

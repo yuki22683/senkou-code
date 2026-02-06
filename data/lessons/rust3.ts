@@ -57,7 +57,8 @@ export const rust3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "H\\n"
+            "expected_output": "H\
+"
           }
         ]
       },
@@ -104,7 +105,8 @@ export const rust3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -155,7 +157,10 @@ export const rust3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       },
@@ -204,7 +209,8 @@ export const rust3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1, 4, 9]\\n"
+            "expected_output": "[1, 4, 9]\
+"
           }
         ]
       },
@@ -253,7 +259,8 @@ export const rust3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[3, 4, 5]\\n"
+            "expected_output": "[3, 4, 5]\
+"
           }
         ]
       },
@@ -302,7 +309,8 @@ export const rust3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "24\\n"
+            "expected_output": "24\
+"
           }
         ]
       },
@@ -373,7 +381,8 @@ export const rust3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Ok(10)\\n"
+            "expected_output": "Ok(10)\
+"
           }
         ]
       },
@@ -422,7 +431,8 @@ export const rust3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42\\n"
+            "expected_output": "42\
+"
           }
         ]
       },
@@ -473,7 +483,8 @@ export const rust3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[10, 20]\\n"
+            "expected_output": "[10, 20]\
+"
           }
         ]
       },
@@ -522,7 +533,8 @@ export const rust3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       }

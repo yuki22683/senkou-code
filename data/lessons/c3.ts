@@ -557,13 +557,13 @@ export const c3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <stdio.h>\\n\\n// プリプロセッサでマクロを定義するディレクティブ\\n#___ DOUBLE(x) ((x) * 2)\\n\\nint main() {\\n    printf(\"%d\\n\", DOUBLE(7));\\n    return 0;\\n}",
+        "correctCode": "#include <stdio.h>\\n\\n// プリプロセッサでマクロを定義するディレクティブ\\n#define DOUBLE(x) ((x) * 2)\\n\\nint main() {\\n    printf(\"%d\\n\", DOUBLE(7));\\n    return 0;\\n}",
         "holeyCode": "#include <stdio.h>\\n\\n// プリプロセッサでマクロを定義するディレクティブ\\n#___ DOUBLE(x) ((x) * 2)\\n\\nint ___() {\\n    printf(\"%d\\n\", DOUBLE(7));\\n    return ___;\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
                   "// プリプロセッサでマクロを定義するディレクティブ",
-                  "#___ DOUBLE(x) ((x) * 2)",
+                  "#define DOUBLE(x) ((x) * 2)",
                   "",
                   "int main() {",
                   "    printf(\"%d\\n\", DOUBLE(7));",

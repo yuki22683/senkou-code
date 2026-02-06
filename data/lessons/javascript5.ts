@@ -45,7 +45,8 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "true\\n"
+            "expected_output": "true\
+"
           }
         ]
       },
@@ -90,7 +91,9 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "true\\nfalse\\n"
+            "expected_output": "true\
+false\
+"
           }
         ]
       },
@@ -138,7 +141,8 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[ '090-1234-5678', '080-9876-5432' ]\\n"
+            "expected_output": "[ '090-1234-5678', '080-9876-5432' ]\
+"
           }
         ]
       },
@@ -182,7 +186,8 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは 世界 JavaScript\\n"
+            "expected_output": "こんにちは 世界 JavaScript\
+"
           }
         ]
       },
@@ -235,7 +240,8 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "エラー: Unexpected token i in JSON at position 0\\n"
+            "expected_output": "エラー: Unexpected token i in JSON at position 0\
+"
           }
         ]
       },
@@ -308,7 +314,10 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "処理中...\\nCaught: エラー！\\nクリーンアップ完了\\n"
+            "expected_output": "処理中...\
+Caught: エラー！\
+クリーンアップ完了\
+"
           }
         ]
       },
@@ -381,7 +390,8 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Validationエラー: 無効な入力\\n"
+            "expected_output": "Validationエラー: 無効な入力\
+"
           }
         ]
       },
@@ -420,12 +430,12 @@ export const javascriptData5 = {
           null,
           null,
           null,
+          null,
+          null,
           "'パスワード123' を設定します。",
           null,
+          null,
           "user.name を出力します。",
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -440,7 +450,9 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "太郎\\nパスワード123\\n"
+            "expected_output": "太郎\
+パスワード123\
+"
           }
         ]
       },
@@ -487,17 +499,17 @@ export const javascriptData5 = {
           "弱参照のMapを作成します。",
           null,
           null,
+          null,
+          null,
           "constructor で初期化します。",
           null,
           "set でデータを設定します。",
           null,
           "this.name に名前を代入します。",
           null,
+          null,
+          null,
           "get でデータを取得します。",
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -525,7 +537,8 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "秘密\\n"
+            "expected_output": "秘密\
+"
           }
         ]
       },
@@ -591,7 +604,9 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Getting name\\n太郎\\n"
+            "expected_output": "Getting name\
+太郎\
+"
           }
         ]
       }

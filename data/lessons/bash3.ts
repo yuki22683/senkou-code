@@ -44,7 +44,8 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "2\\n"
+            "expected_output": "2\
+"
           }
         ]
       },
@@ -86,7 +87,8 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "test\\n"
+            "expected_output": "test\
+"
           }
         ]
       },
@@ -130,7 +132,8 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -172,7 +175,8 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "error hidden\\n"
+            "expected_output": "error hidden\
+"
           }
         ]
       },
@@ -218,7 +222,8 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "file exists\\n"
+            "expected_output": "file exists\
+"
           }
         ]
       },
@@ -260,7 +265,8 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Message: hello world\\n"
+            "expected_output": "Message: hello world\
+"
           }
         ]
       },
@@ -302,7 +308,8 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "dog\\n"
+            "expected_output": "dog\
+"
           }
         ]
       },
@@ -344,7 +351,8 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\\n"
+            "expected_output": "100\
+"
           }
         ]
       },
@@ -385,7 +393,8 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "bananaapplecherry\\n"
+            "expected_output": "bananaapplecherry\
+"
           }
         ]
       },
@@ -426,7 +435,8 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "abab\\n"
+            "expected_output": "abab\
+"
           }
         ]
       }

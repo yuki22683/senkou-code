@@ -53,7 +53,8 @@ export const perl2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "found\\n"
+            "expected_output": "found\
+"
           }
         ]
       },
@@ -102,7 +103,8 @@ export const perl2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "dog\\n"
+            "expected_output": "dog\
+"
           }
         ]
       },
@@ -147,7 +149,8 @@ export const perl2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "バナナ\\n"
+            "expected_output": "バナナ\
+"
           }
         ]
       },
@@ -192,7 +195,8 @@ export const perl2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "90\\n"
+            "expected_output": "90\
+"
           }
         ]
       },
@@ -243,7 +247,10 @@ export const perl2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       },
@@ -284,9 +291,9 @@ export const perl2Data = {
           "shift で引数を取り出します。",
           null,
           "return で戻り値を返します。",
+          null,
+          null,
           "print で出力します。",
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -298,7 +305,8 @@ export const perl2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -346,7 +354,8 @@ export const perl2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "20\\n"
+            "expected_output": "20\
+"
           }
         ]
       },
@@ -391,7 +400,8 @@ export const perl2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -440,7 +450,8 @@ export const perl2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1 4 9\\n"
+            "expected_output": "1 4 9\
+"
           }
         ]
       },
@@ -489,7 +500,8 @@ export const perl2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3 4 5\\n"
+            "expected_output": "3 4 5\
+"
           }
         ]
       }

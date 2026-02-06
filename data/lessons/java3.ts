@@ -60,7 +60,8 @@ export const javaData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "25\\n"
+            "expected_output": "25\
+"
           }
         ]
       },
@@ -120,7 +121,10 @@ export const javaData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       },
@@ -182,7 +186,10 @@ export const javaData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n20\\n30\\n"
+            "expected_output": "10\
+20\
+30\
+"
           }
         ]
       },
@@ -244,7 +251,10 @@ export const javaData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3\\n4\\n5\\n"
+            "expected_output": "3\
+4\
+5\
+"
           }
         ]
       },
@@ -312,7 +322,8 @@ export const javaData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[2, 4, 6]\\n"
+            "expected_output": "[2, 4, 6]\
+"
           }
         ]
       },
@@ -377,7 +388,8 @@ export const javaData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "24\\n"
+            "expected_output": "24\
+"
           }
         ]
       },
@@ -440,7 +452,8 @@ export const javaData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       },
@@ -498,7 +511,9 @@ export const javaData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "アリス\\nボブ\\n"
+            "expected_output": "アリス\
+ボブ\
+"
           }
         ]
       },
@@ -560,7 +575,11 @@ export const javaData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n5\\n8\\n"
+            "expected_output": "1\
+2\
+5\
+8\
+"
           }
         ]
       },
@@ -622,7 +641,10 @@ export const javaData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       }

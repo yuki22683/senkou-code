@@ -67,7 +67,8 @@ export const go2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3 5\\n"
+            "expected_output": "3 5\
+"
           }
         ]
       },
@@ -146,7 +147,8 @@ export const go2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "5\\n"
+            "expected_output": "5\
+"
           }
         ]
       },
@@ -200,7 +202,8 @@ export const go2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -238,17 +241,17 @@ export const go2Data = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
           "struct で構造体を定義します。",
+          null,
           "int 型のフィールドを定義します。",
           null,
+          null,
+          null,
+          null,
           "Y に 4 を指定して構造体を初期化します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -261,7 +264,8 @@ export const go2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3\\n"
+            "expected_output": "3\
+"
           }
         ]
       },
@@ -328,7 +332,8 @@ export const go2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "12\\n"
+            "expected_output": "12\
+"
           }
         ]
       },
@@ -395,7 +400,8 @@ export const go2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "woof\\n"
+            "expected_output": "woof\
+"
           }
         ]
       },
@@ -428,13 +434,13 @@ export const go2Data = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
           "フォーマットパッケージを使って文字列を出力します。",
+          null,
           "フォーマットパッケージを使って文字列を出力します。",
-          null,
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -446,7 +452,9 @@ export const go2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "start\\nend\\n"
+            "expected_output": "start\
+end\
+"
           }
         ]
       },
@@ -509,7 +517,8 @@ export const go2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello\\n"
+            "expected_output": "hello\
+"
           }
         ]
       },
@@ -570,7 +579,8 @@ export const go2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100\\n"
+            "expected_output": "100\
+"
           }
         ]
       },
@@ -627,7 +637,8 @@ export const go2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       }

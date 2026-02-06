@@ -33,12 +33,12 @@ export const cppData = {
           "}"
         ],
         "lineHints": [
-          null,
           "標準入出力ストリームを読み込み、使用可能にします。",
-          null,
           "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          null,
           "標準出力ストリームに文字列を流し込み、表示します。",
-          "プログラムが正常に終了したことを示す値（通常は0）を返します。"
+          "プログラムが正常に終了したことを示す値（通常は0）を返します。",
+          null
         ],
         "candidates": {
           "strings": [
@@ -49,7 +49,8 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは, C++!\\n"
+            "expected_output": "こんにちは, C++!\
+"
           }
         ]
       },
@@ -83,11 +84,11 @@ export const cppData = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
           "はこの名前 x を指定して、表示させます。",
-          null,
-          null,
           null,
           null
         ],
@@ -103,7 +104,8 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -137,11 +139,11 @@ export const cppData = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
+          null,
+          null,
           "たし算なので `+` を使います。",
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -154,7 +156,8 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "8\\n"
+            "expected_output": "8\
+"
           }
         ]
       },
@@ -186,9 +189,9 @@ export const cppData = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "あまりを求める % 演算子を使います。",
-          null,
-          null,
           null,
           null
         ],
@@ -205,7 +208,8 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -241,13 +245,13 @@ export const cppData = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
-          "変数scoreを宣言し、50を設定します。",
+          "変数scoreに10を加算します。",
           null,
-          null,
-          null,
-          null,
+          "標準出力ストリームに文字列を流し込み、表示します。",
           null,
           null
         ],
@@ -267,7 +271,8 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "60\\n"
+            "expected_output": "60\
+"
           }
         ]
       },
@@ -300,10 +305,10 @@ export const cppData = {
         ],
         "lineHints": [
           null,
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
+          null,
           "標準出力ストリームに文字列を流し込み、表示します。",
-          null,
-          null,
           null,
           null
         ],
@@ -316,7 +321,8 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "I am 10 years old.\\n"
+            "expected_output": "I am 10 years old.\
+"
           }
         ]
       },
@@ -371,7 +377,8 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "バナナ\\n"
+            "expected_output": "バナナ\
+"
           }
         ]
       },
@@ -408,13 +415,13 @@ export const cppData = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
-          "変数scoreを宣言し、100を設定します。",
+          "scoreが80より大きいかを判定します。",
           null,
           "標準出力ストリームに文字列を流し込み、表示します。",
-          null,
-          null,
           null,
           null,
           null
@@ -431,7 +438,8 @@ export const cppData = {
         "testCases": [
           {
             "input": " ",
-            "expected_output": "Perfect\\n"
+            "expected_output": "Perfect\
+"
           }
         ]
       },
@@ -472,17 +480,17 @@ export const cppData = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
-          "変数ageを宣言し、10を設定します。",
+          "ageが20以上かを判定します。",
           null,
           "標準出力ストリームに文字列を流し込み、表示します。",
           null,
           "もし条件が満たされなかった場合に実行する処理を記述します。",
           null,
           "標準出力ストリームに文字列を流し込み、表示します。",
-          null,
-          null,
           null,
           null,
           null
@@ -496,7 +504,8 @@ export const cppData = {
         "testCases": [
           {
             "input": " ",
-            "expected_output": "Minor\\n"
+            "expected_output": "Minor\
+"
           }
         ]
       },
@@ -533,13 +542,13 @@ export const cppData = {
         ],
         "lineHints": [
           null,
+          null,
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
-          "変数scoreを宣言し、85を設定します。",
+          "scoreが80以上かつ100以下かを判定します。",
           null,
           "標準出力ストリームに文字列を流し込み、表示します。",
-          null,
-          null,
           null,
           null,
           null
@@ -560,7 +569,8 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "合格\\n"
+            "expected_output": "合格\
+"
           }
         ]
       },
@@ -597,10 +607,10 @@ export const cppData = {
         "lineHints": [
           null,
           null,
+          null,
+          "複数の値をまとめて格納する配列を作成します。",
+          null,
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -615,7 +625,10 @@ export const cppData = {
         "testCases": [
           {
             "input": " ",
-            "expected_output": "1\\n2\\n3\\n"
+            "expected_output": "1\
+2\
+3\
+"
           }
         ]
       },
@@ -654,12 +667,12 @@ export const cppData = {
           null,
           null,
           null,
+          null,
+          "mapで文字列から整数への辞書を作成します。",
+          null,
           "名前（キー）として \"Math\" と入力します。",
+          null,
           "同じく \"Math\" と入力してデータを取り出します。",
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -672,7 +685,8 @@ export const cppData = {
         "testCases": [
           {
             "input": " ",
-            "expected_output": "90\\n"
+            "expected_output": "90\
+"
           }
         ]
       },
@@ -725,7 +739,8 @@ export const cppData = {
         "testCases": [
           {
             "input": " ",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       }

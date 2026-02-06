@@ -52,7 +52,8 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Java!\\n"
+            "expected_output": "Hello, Java!\
+"
           }
         ]
       },
@@ -85,12 +86,12 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
           "文字列型の変数を宣言し、文字列データを代入します。",
+          null,
           "変数の値をコンソールに出力し、改行します。",
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -109,7 +110,8 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Java\\n"
+            "expected_output": "Java\
+"
           }
         ]
       },
@@ -144,14 +146,14 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
           "ひき算なので `-` を使います。",
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -172,7 +174,8 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "7\\n"
+            "expected_output": "7\
+"
           }
         ]
       },
@@ -203,10 +206,10 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
           "あまりを求める `%` 演算子を使います。",
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -222,7 +225,8 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -282,7 +286,8 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "70\\n"
+            "expected_output": "70\
+"
           }
         ]
       },
@@ -315,12 +320,12 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
           "整数型の変数を宣言し、初期値を代入します。",
+          null,
           "文字列をコンソールに出力し、改行します。",
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -336,7 +341,8 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "私は10歳です\\n"
+            "expected_output": "私は10歳です\
+"
           }
         ]
       },
@@ -369,12 +375,12 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
           "{\"あか\", \"あお\"} と入力しましょう。 { } を使うのがルールです。",
+          null,
           "2番目のデータはインデックス1です。 `colors[1]` と入力してください。",
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -394,7 +400,8 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "あお\\n"
+            "expected_output": "あお\
+"
           }
         ]
       },
@@ -454,7 +461,8 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ごうかく！\\n"
+            "expected_output": "ごうかく！\
+"
           }
         ]
       },
@@ -522,7 +530,8 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こども\\n"
+            "expected_output": "こども\
+"
           }
         ]
       },
@@ -538,7 +547,7 @@ export const javaData = {
           },
           {
             "title": "&&（かつ）と ||（または）",
-            "content": "# 使い分け\\n\\n**例1：両方の条件を満たす（かつ）**\\n```java\\n// 点数80点以上、かつ、出席率90%以上なら...\\nif (score >= 80 && attendance >= 90) {\\n    System.out.println(\"優秀！\");\\n}\\n```\\n\\n**例2：どちらかを満たす（または）**\\n```java\\n// 土曜日、または、日曜日なら...\\nif (day == \"土曜日\" || day == \"日曜日\") {\\n    System.out.println(\"お休み\");\\n}\\n```\\n\\n**覚え方：**\\n- `&&` → 「**かつ**」両方必要\\n- `||` → 「**または**」どちらか1つでOK"
+            "content": "# 使い分け\\n\\n**例1：両方の条件を満たす（かつ）**\\n```java\\n// 点数80点以上、かつ、出席率90%以上なら...\\nif (score >= 80 && attendance >= 90) {\\n    System.out.println(\"優秀！\");\\n}\\n```\\n\\n**例2：どちらかを満たす（または）**\\n```java\\n// 土曜日、または、日曜日なら...\\nif (day.equals(\"土曜日\") || day.equals(\"日曜日\")) {\\n    System.out.println(\"お休み\");\\n}\\n```\\n\\n**覚え方：**\\n- `&&` → 「**かつ**」両方必要\\n- `||` → 「**または**」どちらか1つでOK"
           }
         ],
         "initialDisplayMode": "holey",
@@ -582,7 +591,8 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ボーナスあり合格\\n"
+            "expected_output": "ボーナスあり合格\
+"
           }
         ]
       },
@@ -638,7 +648,9 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "たろう\\nはなこ\\n"
+            "expected_output": "たろう\
+はなこ\
+"
           }
         ]
       },
@@ -675,14 +687,14 @@ export const javaData = {
         ],
         "lineHints": [
           "HashMapクラスをインポートします。",
+          null,
+          null,
+          null,
           "new HashMap<>(); で新しくはこを作ります。",
+          null,
           "put（プット）でデータを入れます。",
           null,
           "get（ゲット）でデータを取り出します。",
-          null,
-          null,
-          null,
-          null,
           null,
           null
         ],
@@ -699,7 +711,8 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "たろう\\n"
+            "expected_output": "たろう\
+"
           }
         ]
       },
@@ -754,7 +767,8 @@ export const javaData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       }

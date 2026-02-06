@@ -51,7 +51,8 @@ export const swiftData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, World!\\n"
+            "expected_output": "Hello, World!\
+"
           }
         ]
       },
@@ -113,7 +114,8 @@ export const swiftData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -159,7 +161,8 @@ export const swiftData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -219,7 +222,8 @@ export const swiftData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "70\\n"
+            "expected_output": "70\
+"
           }
         ]
       },
@@ -280,7 +284,8 @@ export const swiftData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Great!\\n"
+            "expected_output": "Great!\
+"
           }
         ]
       },
@@ -338,7 +343,8 @@ export const swiftData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bonus Pass\\n"
+            "expected_output": "Bonus Pass\
+"
           }
         ]
       },
@@ -398,7 +404,8 @@ export const swiftData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "あお\\n"
+            "expected_output": "あお\
+"
           }
         ]
       },
@@ -455,7 +462,8 @@ export const swiftData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "オレンジ\\n"
+            "expected_output": "オレンジ\
+"
           }
         ]
       }

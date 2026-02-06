@@ -78,7 +78,8 @@ export const pythonData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Toyota car: Beep!\\n"
+            "expected_output": "Toyota car: Beep!\
+"
           }
         ]
       },
@@ -151,7 +152,8 @@ export const pythonData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "太郎 is in grade 3\\n"
+            "expected_output": "太郎 is in grade 3\
+"
           }
         ]
       },
@@ -224,7 +226,8 @@ export const pythonData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "20\\n"
+            "expected_output": "20\
+"
           }
         ]
       },
@@ -307,7 +310,8 @@ export const pythonData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "2\\n"
+            "expected_output": "2\
+"
           }
         ]
       },
@@ -366,7 +370,9 @@ export const pythonData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "True\\nFalse\\n"
+            "expected_output": "True\
+False\
+"
           }
         ]
       },
@@ -445,7 +451,8 @@ export const pythonData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ニャー\\n"
+            "expected_output": "ニャー\
+"
           }
         ]
       },
@@ -514,7 +521,8 @@ export const pythonData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Python Guide by 太郎\\n"
+            "expected_output": "Python Guide by 太郎\
+"
           }
         ]
       },
@@ -587,7 +595,8 @@ export const pythonData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "True\\n"
+            "expected_output": "True\
+"
           }
         ]
       },
@@ -652,7 +661,8 @@ export const pythonData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3\\n"
+            "expected_output": "3\
+"
           }
         ]
       },
@@ -717,7 +727,8 @@ export const pythonData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Person(name='太郎', age=25)\\n"
+            "expected_output": "Person(name='太郎', age=25)\
+"
           }
         ]
       }

@@ -59,15 +59,15 @@ export const swift3Data = {
           "Error と入力しましょう。",
           null,
           null,
-          null,
-          null,
           "check と入力しましょう。",
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           "result と入力しましょう。",
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           null,
@@ -87,7 +87,8 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -143,7 +144,8 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1, 2, 3]\\n"
+            "expected_output": "[1, 2, 3]\
+"
           }
         ]
       },
@@ -200,7 +202,8 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "120\\n"
+            "expected_output": "120\
+"
           }
         ]
       },
@@ -256,7 +259,8 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -314,7 +318,10 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n3\\n5\\n"
+            "expected_output": "1\
+3\
+5\
+"
           }
         ]
       },
@@ -380,7 +387,9 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "start\\nend\\n"
+            "expected_output": "start\
+end\
+"
           }
         ]
       },
@@ -484,7 +493,8 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[10]\\n"
+            "expected_output": "[10]\
+"
           }
         ]
       },
@@ -571,7 +581,8 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -626,7 +637,8 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "3\\n"
+            "expected_output": "3\
+"
           }
         ]
       },
@@ -690,13 +702,13 @@ export const swift3Data = {
           null,
           null,
           null,
-          "count と入力しましょう。",
+          "Counter と入力しましょう。",
           null,
           null,
           null,
           null,
           null,
-          null
+          "count と入力しましょう。"
         ],
         "candidates": {
           "keywords": [
@@ -715,7 +727,8 @@ export const swift3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "2\\n"
+            "expected_output": "2\
+"
           }
         ]
       }

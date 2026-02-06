@@ -41,7 +41,8 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは, Ruby!\\n"
+            "expected_output": "こんにちは, Ruby!\
+"
           }
         ]
       },
@@ -86,7 +87,8 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Ruby\\n"
+            "expected_output": "Ruby\
+"
           }
         ]
       },
@@ -140,7 +142,8 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -183,7 +186,8 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -237,7 +241,8 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "60\\n"
+            "expected_output": "60\
+"
           }
         ]
       },
@@ -283,7 +288,8 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "私は10歳です\\n"
+            "expected_output": "私は10歳です\
+"
           }
         ]
       },
@@ -333,7 +339,8 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "青\\n"
+            "expected_output": "青\
+"
           }
         ]
       },
@@ -389,7 +396,8 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "合格！\\n"
+            "expected_output": "合格！\
+"
           }
         ]
       },
@@ -454,7 +462,8 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "子供\\n"
+            "expected_output": "子供\
+"
           }
         ]
       },
@@ -510,7 +519,8 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "合格！\\n"
+            "expected_output": "合格！\
+"
           }
         ]
       },
@@ -567,7 +577,9 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "太郎\\n花子\\n"
+            "expected_output": "太郎\
+花子\
+"
           }
         ]
       },
@@ -611,7 +623,8 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "オレンジ\\n"
+            "expected_output": "オレンジ\
+"
           }
         ]
       },
@@ -667,7 +680,8 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       }

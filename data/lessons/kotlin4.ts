@@ -67,17 +67,17 @@ export const kotlin4Data = {
                   "新しいクラス（Rectangle）を定義します。",
                   null,
                   null,
+                  null,
+                  null,
                   "radius と入力しましょう。",
                   null,
                   "w と入力しましょう。",
                   null,
+                  null,
+                  null,
                   "main と入力しましょう。",
+                  null,
                   "println と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
                   null
         ],
         "candidates": {
@@ -91,7 +91,8 @@ export const kotlin4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "12.56\\n"
+            "expected_output": "12.56\
+"
           }
         ]
       },
@@ -178,7 +179,8 @@ export const kotlin4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "2\\n"
+            "expected_output": "2\
+"
           }
         ]
       },
@@ -267,7 +269,10 @@ export const kotlin4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Created\\nInit\\n42\\n"
+            "expected_output": "Created\
+Init\
+42\
+"
           }
         ]
       },
@@ -352,7 +357,8 @@ export const kotlin4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "OK\\n"
+            "expected_output": "OK\
+"
           }
         ]
       },
@@ -429,7 +435,10 @@ export const kotlin4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "0\\n1\\n2\\n"
+            "expected_output": "0\
+1\
+2\
+"
           }
         ]
       },
@@ -500,7 +509,8 @@ export const kotlin4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "String\\n"
+            "expected_output": "String\
+"
           }
         ]
       },
@@ -569,7 +579,9 @@ export const kotlin4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "true\\nfalse\\n"
+            "expected_output": "true\
+false\
+"
           }
         ]
       },
@@ -622,9 +634,9 @@ export const kotlin4Data = {
           "let で変換処理を行います。",
           null,
           "uppercase と入力しましょう。",
+          null,
+          null,
           "println と入力しましょう。",
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -638,7 +650,8 @@ export const kotlin4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "HELLO\\n"
+            "expected_output": "HELLO\
+"
           }
         ]
       },
@@ -717,7 +730,8 @@ export const kotlin4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "localhost:8080\\n"
+            "expected_output": "localhost:8080\
+"
           }
         ]
       },
@@ -772,15 +786,15 @@ export const kotlin4Data = {
                   "typealias で型に別名をつけます。",
                   null,
                   null,
+                  "StringList と入力しましょう。",
+                  null,
                   "forEach と入力しましょう。",
                   null,
+                  null,
+                  null,
                   "main と入力しましょう。",
+                  null,
                   "printAll と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
                   null
         ],
         "candidates": {
@@ -794,7 +808,10 @@ export const kotlin4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "A\\nB\\nC\\n"
+            "expected_output": "A\
+B\
+C\
+"
           }
         ]
       }

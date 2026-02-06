@@ -45,7 +45,8 @@ export const rustData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello, Rust!\\n"
+            "expected_output": "Hello, Rust!\
+"
           }
         ]
       },
@@ -78,13 +79,13 @@ export const rustData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
           "再代入可能な変数を宣言し、数値を代入します。",
           null,
           "再代入可能な変数を宣言し、数値を代入します。",
           null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -103,7 +104,8 @@ export const rustData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\\n"
+            "expected_output": "15\
+"
           }
         ]
       },
@@ -128,9 +130,9 @@ export const rustData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -145,7 +147,8 @@ export const rustData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -197,7 +200,8 @@ export const rustData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "70\\n"
+            "expected_output": "70\
+"
           }
         ]
       },
@@ -226,11 +230,11 @@ export const rustData = {
           "}"
         ],
         "lineHints": [
-          "再代入可能な変数を宣言し、数値を代入します。",
+          null,
           null,
           "変数scoreを宣言し、100を設定します。",
           null,
-          null,
+          "条件に基づいて分岐処理を行います。",
           null,
           null,
           null
@@ -250,7 +254,8 @@ export const rustData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Great!\\n"
+            "expected_output": "Great!\
+"
           }
         ]
       },
@@ -300,7 +305,8 @@ export const rustData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bonus Pass\\n"
+            "expected_output": "Bonus Pass\
+"
           }
         ]
       },
@@ -331,11 +337,11 @@ export const rustData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
           "vec![\"あか\", \"あお\"] と入力しましょう。",
           null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -358,7 +364,8 @@ export const rustData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "あお\\n"
+            "expected_output": "あお\
+"
           }
         ]
       },
@@ -392,14 +399,14 @@ export const rustData = {
           "}"
         ],
         "lineHints": [
+          null,
+          null,
+          null,
+          null,
+          null,
           "insert(\"みかん\", \"オレンジ\") と入力しましょう。",
+          null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -421,7 +428,8 @@ export const rustData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "オレンジ\\n"
+            "expected_output": "オレンジ\
+"
           }
         ]
       }

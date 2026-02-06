@@ -50,19 +50,19 @@ export const csharp4Data = {
                   "基本クラスライブラリを利用可能にします。",
                   null,
                   null,
+                  "型パラメータTを受け取るジェネリッククラスを定義します。",
+                  null,
                   "getで値を取得できるようにします。",
                   null,
+                  null,
+                  null,
                   "新しいクラス（Program）を定義します。",
+                  null,
                   "Mainはプログラムの開始地点です。",
                   null,
                   null,
+                  null,
                   "WriteLineでItemの値を表示します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
                   null,
                   null
         ],
@@ -76,7 +76,8 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは\\n"
+            "expected_output": "こんにちは\
+"
           }
         ]
       },
@@ -124,19 +125,19 @@ export const csharp4Data = {
                   "基本クラスライブラリを利用可能にします。",
                   null,
                   null,
+                  "whereで型制約を指定します。",
+                  null,
                   "CompareToで2つの値を比較します。",
                   null,
+                  null,
+                  null,
                   "新しいクラス（Program）を定義します。",
+                  null,
                   "Mainはプログラムの開始地点です。",
                   null,
                   null,
+                  null,
                   "WriteLineで比較結果を表示します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
                   null,
                   null
         ],
@@ -151,7 +152,8 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\\n"
+            "expected_output": "1\
+"
           }
         ]
       },
@@ -199,17 +201,17 @@ export const csharp4Data = {
                   "基本クラスライブラリを利用可能にします。",
                   null,
                   null,
+                  null,
+                  null,
                   "delegateでメソッドを参照できる型を定義します。",
+                  null,
                   null,
                   "2を掛けて結果を返します。",
                   null,
                   null,
+                  "Mainはプログラムの開始地点です。",
+                  null,
                   "Doubleメソッドをデリゲートに代入します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
                   null,
                   null,
                   null,
@@ -226,7 +228,8 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "10\\n"
+            "expected_output": "10\
+"
           }
         ]
       },
@@ -268,13 +271,13 @@ export const csharp4Data = {
                   "基本クラスライブラリを利用可能にします。",
                   null,
                   null,
+                  null,
+                  null,
                   "Mainはプログラムの開始地点です。",
                   null,
                   "Funcで引数int、戻り値intの関数を定義します。",
                   null,
                   "WriteLineで計算結果（21）を表示します。",
-                  null,
-                  null,
                   null,
                   null
         ],
@@ -289,7 +292,8 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "21\\n"
+            "expected_output": "21\
+"
           }
         ]
       },
@@ -331,13 +335,13 @@ export const csharp4Data = {
                   "基本クラスライブラリを利用可能にします。",
                   null,
                   null,
+                  null,
+                  null,
                   "Mainはプログラムの開始地点です。",
                   null,
                   "Actionで戻り値なしの関数を定義します。",
                   null,
                   "Worldを引数としてgreetを呼び出します。",
-                  null,
-                  null,
                   null,
                   null
         ],
@@ -352,7 +356,8 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは, 世界!\\n"
+            "expected_output": "こんにちは, 世界!\
+"
           }
         ]
       },
@@ -403,6 +408,8 @@ export const csharp4Data = {
           "System.Linq名前空間を利用可能にします。",
           null,
           null,
+          null,
+          null,
           "Mainはプログラムの開始地点です。",
           null,
           "複数の値をまとめて格納する配列（またはリスト）を作成します。",
@@ -412,8 +419,6 @@ export const csharp4Data = {
           "inキーワードでグループを反復します。",
           null,
           "Countで各グループの要素数を表示します。",
-          null,
-          null,
           null,
           null,
           null
@@ -429,7 +434,9 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "odd: 3\\neven: 3\\n"
+            "expected_output": "odd: 3\
+even: 3\
+"
           }
         ]
       },
@@ -473,6 +480,8 @@ export const csharp4Data = {
                   "基本クラスライブラリを利用可能にします。",
                   null,
                   null,
+                  null,
+                  null,
                   "Mainはプログラムの開始地点です。",
                   null,
                   "nullを代入してnull状態を作ります。",
@@ -480,8 +489,6 @@ export const csharp4Data = {
                   "?.でnullの場合もエラーにならずnullを返します。",
                   null,
                   "WriteLineで結果を表示します。",
-                  null,
-                  null,
                   null,
                   null
         ],
@@ -496,7 +503,8 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "0\\n"
+            "expected_output": "0\
+"
           }
         ]
       },
@@ -540,6 +548,8 @@ export const csharp4Data = {
                   "基本クラスライブラリを利用可能にします。",
                   null,
                   null,
+                  null,
+                  null,
                   "Mainはプログラムの開始地点です。",
                   null,
                   "nullを代入してnull状態を作ります。",
@@ -547,8 +557,6 @@ export const csharp4Data = {
                   "??でnullの場合はdefaultを返します。",
                   null,
                   "WriteLineで結果を表示します。",
-                  null,
-                  null,
                   null,
                   null
         ],
@@ -563,7 +571,8 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "default\\n"
+            "expected_output": "default\
+"
           }
         ]
       },
@@ -608,16 +617,16 @@ export const csharp4Data = {
                   "基本クラスライブラリを利用可能にします。",
                   null,
                   null,
+                  "recordで不変なデータ型を定義します。",
+                  null,
+                  null,
                   "新しいクラス（Program）を定義します。",
                   null,
+                  "Mainはプログラムの開始地点です。",
                   null,
                   "Pointインスタンスを座標(3,4)で作成します。",
                   null,
                   "WriteLineでPoint情報を表示します。",
-                  null,
-                  null,
-                  null,
-                  null,
                   null,
                   null
         ],
@@ -632,7 +641,8 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Point { X = 3, Y = 4 }\\n"
+            "expected_output": "Point { X = 3, Y = 4 }\
+"
           }
         ]
       },
@@ -680,19 +690,19 @@ export const csharp4Data = {
                   "基本クラスライブラリを利用可能にします。",
                   null,
                   null,
+                  "Itemクラスを定義します。",
+                  null,
                   "initで初期化時のみ値を設定できるようにします。",
                   null,
+                  null,
+                  null,
                   "新しいクラス（Program）を定義します。",
+                  null,
                   "Mainはプログラムの開始地点です。",
                   null,
                   null,
+                  null,
                   "WriteLineでNameの値を表示します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
                   null,
                   null
         ],
@@ -707,7 +717,8 @@ export const csharp4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Apple\\n"
+            "expected_output": "Apple\
+"
           }
         ]
       }
