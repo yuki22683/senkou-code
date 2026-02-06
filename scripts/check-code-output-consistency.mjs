@@ -103,6 +103,12 @@ function checkFile(filePath) {
       { jp: 'ワン', en: 'Woof' },
       { jp: 'バナナ', en: 'banana' },
       { jp: 'りんご', en: 'apple' },
+      { jp: '太郎', en: 'Taro' },
+      { jp: '花子', en: 'Hanako' },
+      { jp: '秘密', en: 'secret' },
+      { jp: 'パスワード', en: 'password' },
+      { jp: '処理中', en: 'Processing' },
+      { jp: 'クリーンアップ完了', en: 'Cleanup done' },
     ];
 
     // コード内の文字列リテラルを抽出（識別子名を除外）

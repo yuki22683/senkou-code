@@ -185,7 +185,7 @@ export const sqlData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Taro|10\\n"
+            "expected_output": "太郎|10\\n"
           }
         ]
       },

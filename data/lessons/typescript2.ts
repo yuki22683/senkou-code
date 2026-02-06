@@ -610,7 +610,7 @@ export const typescriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Taro\\n"
+            "expected_output": "太郎\\n"
           }
         ]
       }

@@ -62,7 +62,7 @@ export const javascriptData5 = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "// 正規表現パターンを定義\\nconst emailPattern = /\\w+@\\w+\\.\\w+/;\\n// test() で 'test@example.com' をテスト\\nconsole.log(emailPattern.test('test@example.com'));\\n// 無効なメールをテスト\\nconsole.log(emailPattern.test('invalid-email'));",
-        "holeyCode": "// 正規表現パターンを定義\\nconst emailPattern = ___\\w+@\\w+\\.\\w+/;\\n// test() で 'test@example.com' をテスト\\nconsole.log(emailPattern.___)('test@example.com'));\\n// 無効なメールをテスト\\nconsole.log(emailPattern.test('___'));",
+        "holeyCode": "// 正規表現パターンを定義\\nconst emailPattern = ___\\w+@\\w+\\.\\w+/;\\n// test() で 'test@example.com' をテスト\\nconsole.log(emailPattern.___('test@example.com'));\\n// 無効なメールをテスト\\nconsole.log(emailPattern.test('___'));",
         "correctLines": [
           "// 正規表現パターンを定義",
           "const emailPattern = /\\w+@\\w+\\.\\w+/;",
@@ -85,7 +85,7 @@ export const javascriptData5 = {
             "match(",
             "exec("
           ],
-          "others": ["/", "test('test@example.com'));", "invalid-email", "test('test@example.com'"]
+          "others": ["/", "test", "invalid-email"]
         },
         "testCases": [
           {
@@ -138,7 +138,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "null\\n"
+            "expected_output": "[ '090-1234-5678', '080-9876-5432' ]\\n"
           }
         ]
       },
@@ -182,7 +182,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは   世界   JavaScript\\n"
+            "expected_output": "こんにちは 世界 JavaScript\\n"
           }
         ]
       },
@@ -308,7 +308,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Processing...\\nCaught: エラー!\\nCleanup done\\n"
+            "expected_output": "処理中...\\nCaught: エラー！\\nクリーンアップ完了\\n"
           }
         ]
       },
@@ -397,8 +397,8 @@ export const javascriptData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// Symbol('秘密')でsecretを作成\\nconst secret = Symbol('秘密');\\n// userオブジェクトを作成\\nconst user = {\\n  // nameに'太郎'を設定\\n  name: '太郎',\\n  // [secret]に'password123'を設定\\n  [secret]: 'パスワード123'\\n};\\n// user.nameをconsole.logで出力\\nconsole.log(user.name);\\n// user[secret]をconsole.logで出力\\nconsole.log(user[secret]);",
-        "holeyCode": "// Symbol('秘密')でsecretを作成\\nconst secret = ___('秘密');\\n// userオブジェクトを作成\\nconst user = {\\n  // nameに'太郎'を設定\\n  name: '___',\\n  // [secret]に'password123'を設定\\n  [secret]: '___'\\n};\\n// user.nameをconsole.logで出力\\nconsole.log(user.___);\\n// user[secret]をconsole.logで出力\\nconsole.log(user[___]);",
+        "correctCode": "// Symbol('秘密')でsecretを作成\\nconst secret = Symbol('秘密');\\n// userオブジェクトを作成\\nconst user = {\\n  // nameに'太郎'を設定\\n  name: '太郎',\\n  // [secret]に'パスワード123'を設定\\n  [secret]: 'パスワード123'\\n};\\n// user.nameをconsole.logで出力\\nconsole.log(user.name);\\n// user[secret]をconsole.logで出力\\nconsole.log(user[secret]);",
+        "holeyCode": "// Symbol('秘密')でsecretを作成\\nconst secret = ___('秘密');\\n// userオブジェクトを作成\\nconst user = {\\n  // nameに'太郎'を設定\\n  name: '___',\\n  // [secret]に'パスワード123'を設定\\n  [secret]: '___'\\n};\\n// user.nameをconsole.logで出力\\nconsole.log(user.___);\\n// user[secret]をconsole.logで出力\\nconsole.log(user[___]);",
         "correctLines": [
           "// Symbol('秘密')でsecretを作成",
           "const secret = Symbol('秘密');",
@@ -406,7 +406,7 @@ export const javascriptData5 = {
           "const user = {",
           "  // nameに'太郎'を設定",
           "  name: '太郎',",
-          "  // [secret]に'password123'を設定",
+          "  // [secret]に'パスワード123'を設定",
           "  [secret]: 'パスワード123'",
           "};",
           "// user.nameをconsole.logで出力",
@@ -420,7 +420,7 @@ export const javascriptData5 = {
           null,
           null,
           null,
-          "password123 を設定します。",
+          "'パスワード123' を設定します。",
           null,
           "user.name を出力します。",
           null,
@@ -435,12 +435,12 @@ export const javascriptData5 = {
             "Unique",
             "Key"
           ],
-          "others": ["Taro", "パスワード123", "name", "secret", "太郎"]
+          "others": ["パスワード123", "name", "secret", "太郎"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Taro\\npassword123\\n"
+            "expected_output": "太郎\\nパスワード123\\n"
           }
         ]
       },
@@ -525,7 +525,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "secret\\n"
+            "expected_output": "秘密\\n"
           }
         ]
       },
@@ -591,7 +591,7 @@ export const javascriptData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Getting name\\nTaro\\n"
+            "expected_output": "Getting name\\n太郎\\n"
           }
         ]
       }
