@@ -252,7 +252,8 @@ export function tokenize(text: string, language: string): string[] {
   }
 
   // **を単一トークンとして認識（*argsや**kwargs用）
-  const regex = new RegExp(`(${stringPattern}|${commentPattern}|@[a-zA-Z0-9_]+|[a-zA-Z_][a-zA-Z0-9_]*|\\d+|\\s+|\\*\\*|[^\\s\\w])`, 'g');
+  // 日本語（ひらがな、カタカナ、漢字）も連続したトークンとして認識
+  const regex = new RegExp(`(${stringPattern}|${commentPattern}|@[a-zA-Z0-9_]+|[a-zA-Z_][a-zA-Z0-9_]*|[ぁ-んァ-ヶー一-龯々〆]+|\\d+|\\s+|\\*\\*|[^\\s\\w])`, 'g');
   const rawTokens = text.split(regex).filter(Boolean);
 
   // 文字列補間を分割
