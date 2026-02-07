@@ -28,3 +28,27 @@
 
 
 
+
+
+
+
+@data/lessons/python.ts, @data/lessons/python2.ts @data/lessons/python3.ts  @data/lessons/python4.ts  @data/lessons/python5.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/assembly.ts, @data/lessons/assembly2.ts @data/lessons/assembly3.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/bash.ts, @data/lessons/bash2.ts @data/lessons/bash3.ts の内容をチェックしてプログラミング学習教材として問題がないかとチェックして。
+@data/lessons/c.ts, @data/lessons/c2.ts @data/lessons/c3.ts  @data/lessons/c4.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がチェックして。
+@data/lessons/cpp.ts, @data/lessons/cpp2.ts @data/lessons/cpp3.ts  @data/lessons/cpp4.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/csharp.ts, @data/lessons/csharp2.ts @data/lessons/csharp3.ts  @data/lessons/csharp4.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/elixir.ts, @data/lessons/elixir2.ts @data/lessons/elixir3.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/go.ts, @data/lessons/go2.ts @data/lessons/go3.ts  @data/lessons/go4.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/haskell.ts, @data/lessons/haskell2.ts @data/lessons/haskell3.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/java.ts, @data/lessons/java2.ts @data/lessons/java3.ts  @data/lessons/java4.ts @data/lessons/java5.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/javascript.ts, @data/lessons/javascript2.ts @data/lessons/javascript3.ts  @data/lessons/javascript4.ts @data/lessons/javascript5.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/kotlin.ts, @data/lessons/kotlin2.ts @data/lessons/kotlin3.ts  @data/lessons/kotlin4.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/lua.ts, @data/lessons/lua2.ts @data/lessons/lua3.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/perl.ts, @data/lessons/perl2.ts @data/lessons/perl3.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/php.ts, @data/lessons/php2.ts @data/lessons/php3.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/ruby.ts, @data/lessons/ruby2.ts @data/lessons/ruby3.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/rust.ts, @data/lessons/rust2.ts @data/lessons/rust3.ts  @data/lessons/rust4.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/sql.ts, @data/lessons/sql2.ts @data/lessons/sql3.ts  @data/lessons/sql4.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/swift.ts, @data/lessons/swift2.ts @data/lessons/swift3.ts  @data/lessons/swift4.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+@data/lessons/typescript.ts, @data/lessons/typescript2.ts @data/lessons/typescript3.ts  @data/lessons/typescript4.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
