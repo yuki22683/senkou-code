@@ -22,10 +22,10 @@ export const javascriptData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// => でアロー関数を定義する\\nconst square = x => x * x;\\n\\n// 使ってみる（引数は5）\\nconsole.log(square(5));",
-        "holeyCode": "// => でアロー関数を定義する\\nconst ___ = x => x * x;\\n\\n// 使ってみる（引数は5）\\nconsole.___(square(5));",
+        "correctCode": "// xの2乗を返すsquare関数を定義\\nconst square = x => x * x;\\n\\n// 使ってみる（引数は5）\\nconsole.log(square(5));",
+        "holeyCode": "// xの2乗を返すsquare関数を定義\\nconst ___ = x => x * x;\\n\\n// 使ってみる（引数は5）\\nconsole.___(square(5));",
         "correctLines": [
-          "// => でアロー関数を定義する",
+          "// xの2乗を返すsquare関数を定義",
           "const square = x => x * x;",
           "",
           "// 使ってみる（引数は5）",
