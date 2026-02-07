@@ -223,7 +223,7 @@ export const rubyData = {
           null,
           "変数の値を計算して、その結果を同じ変数に再代入します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -360,7 +360,7 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに100を入れる\\nscore = 100\\n# もし80より大きかったら\\nif score > 80\\n  # 「合格！」と表示する\\n  puts '7合格！  puts '合格！''\\nend",
+        "correctCode": "# scoreに100を入れる\\nscore = 100\\n# もし80より大きかったら\\nif score > 80\\n  # 「合格！」と表示する\\n  puts '合格！'\\nend",
         "holeyCode": "# scoreに100を入れる\\nscore = ___\\n# もし80より大きかったら\\nif score ___ 80\\n  # 「合格！」と表示する\\n  ___ '6合格！  ___ '合格！''\\n___",
         "correctLines": [
           "# scoreに100を入れる",
@@ -368,7 +368,7 @@ export const rubyData = {
           "# もし80より大きかったら",
           "if score > 80",
           "  # 「合格！」と表示する",
-          "  puts '7合格！  puts '合格！''",
+          "  puts '合格！'",
           "end"
         ],
         "lineHints": [
@@ -378,7 +378,7 @@ export const rubyData = {
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
           "文字列を出力し、最後に改行を加えます。",
-          null
+          "ブロックを終了する。"
         ],
         "candidates": {
           "keywords": [
@@ -417,7 +417,7 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ageに10を入れる\\nage = 10\\n# 20歳以上かどうかで分ける\\nif age >= 20\\n  # 「大人」と表示\\n  puts '7大人  puts '大人''\\n# else でそれ以外の場合\\nelse\\n  # 「子供」と表示\\n  puts '7子供  puts '子供''\\nend",
+        "correctCode": "# ageに10を入れる\\nage = 10\\n# 20歳以上かどうかで分ける\\nif age >= 20\\n  # 「大人」と表示\\n  puts '大人'\\n# else でそれ以外の場合\\nelse\\n  # 「子供」と表示\\n  puts '子供'\\nend",
         "holeyCode": "# ageに10を入れる\\nage = ___\\n# 20歳以上かどうかで分ける\\nif age ___ 20\\n  # 「大人」と表示\\n  ___ '6大人  ___ '大人''\\n# else でそれ以外の場合\\n___\\n  # 「子供」と表示\\n  ___ '6子供  ___ '子供''\\n___",
         "correctLines": [
           "# ageに10を入れる",
@@ -425,11 +425,11 @@ export const rubyData = {
           "# 20歳以上かどうかで分ける",
           "if age >= 20",
           "  # 「大人」と表示",
-          "  puts '7大人  puts '大人''",
+          "  puts '大人'",
           "# else でそれ以外の場合",
           "else",
           "  # 「子供」と表示",
-          "  puts '7子供  puts '子供''",
+          "  puts '子供'",
           "end"
         ],
         "lineHints": [
@@ -442,8 +442,8 @@ export const rubyData = {
           null,
           "文字列を出力し、最後に改行を加えます。",
           null,
-          null,
-          null
+          "文字列を出力し、最後に改行を加えます。",
+          "ブロックを終了する。"
         ],
         "candidates": {
           "keywords": [
@@ -483,7 +483,7 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# scoreに85を入れる\\nscore = 85\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif score >= 80 and score <= 100\\n  # 「合格！」と表示\\n  puts '7合格！  puts '合格！''\\nend",
+        "correctCode": "# scoreに85を入れる\\nscore = 85\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif score >= 80 and score <= 100\\n  # 「合格！」と表示\\n  puts '合格！'\\nend",
         "holeyCode": "# scoreに85を入れる\\nscore = ___\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif score ___ 80 and score <= 100\\n  # 「合格！」と表示\\n  ___ '6合格！  ___ '合格！''\\n___",
         "correctLines": [
           "# scoreに85を入れる",
@@ -491,7 +491,7 @@ export const rubyData = {
           "# 80以上 かつ 100以下 ならメッセージを出す",
           "if score >= 80 and score <= 100",
           "  # 「合格！」と表示",
-          "  puts '7合格！  puts '合格！''",
+          "  puts '合格！'",
           "end"
         ],
         "lineHints": [
@@ -501,7 +501,7 @@ export const rubyData = {
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
           "文字列を出力し、最後に改行を加えます。",
-          null
+          "ブロックを終了する。"
         ],
         "candidates": {
           "keywords": [
@@ -558,7 +558,7 @@ export const rubyData = {
           "each を使います。",
           null,
           "ブロック変数 name を入力します。",
-          null
+          "ブロックを終了する。"
         ],
         "candidates": {
           "methods": [
@@ -644,13 +644,13 @@ export const rubyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# greetというメソッドを定義\\ndef greet\\n  # こんにちは と表示\\n  puts '7こんにちは  puts 'こんにちは''\\nend\\n# メソッドを呼び出す\\ngreet",
+        "correctCode": "# greetというメソッドを定義\\ndef greet\\n  # こんにちは と表示\\n  puts 'こんにちは'\\nend\\n# メソッドを呼び出す\\ngreet",
         "holeyCode": "# greetというメソッドを定義\\ndef ___\\n  # こんにちは と表示\\n  ___ '6こんにちは  ___ 'こんにちは''\\n___\\n# メソッドを呼び出す\\n___",
         "correctLines": [
           "# greetというメソッドを定義",
           "def greet",
           "  # こんにちは と表示",
-          "  puts '7こんにちは  puts 'こんにちは''",
+          "  puts 'こんにちは'",
           "end",
           "# メソッドを呼び出す",
           "greet"
@@ -662,7 +662,7 @@ export const rubyData = {
           "文字列を出力し、最後に改行を加えます。",
           "メソッド名 greet を入力して呼び出します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

@@ -38,13 +38,13 @@ export const lua3Data = {
         "lineHints": [
           null,
           "pcall でエラーを捕捉します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
           null,
           "変数の内容を画面に出力します。",
-          null
+          "ブロックを終了する。"
         ],
         "candidates": {
           "functions": [
@@ -91,9 +91,9 @@ export const lua3Data = {
         "lineHints": [
           "error でエラーを発生させます。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -138,7 +138,7 @@ export const lua3Data = {
         "lineHints": [
           null,
           "assert で検証します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -185,7 +185,7 @@ export const lua3Data = {
           null,
           "type で型を確認します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -232,7 +232,7 @@ export const lua3Data = {
           null,
           "tostring で文字列に変換します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -280,8 +280,8 @@ export const lua3Data = {
           null,
           "tonumber で数値に変換します。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -328,9 +328,9 @@ export const lua3Data = {
         "lineHints": [
           null,
           ".. で連結します。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -377,7 +377,7 @@ export const lua3Data = {
           null,
           "# で長さを取得します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -425,8 +425,8 @@ export const lua3Data = {
           null,
           "and と or を使います。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -475,9 +475,9 @@ export const lua3Data = {
           null,
           "forループでiを1から10まで繰り返します。",
           null,
-          null,
-          null,
-          null
+          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "変数の内容を画面に出力します。",
+          "ブロックを終了する。"
         ],
         "candidates": {
           "keywords": [

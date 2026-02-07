@@ -37,16 +37,16 @@ export const typescriptData2 = {
                   "show(42);"
         ],
         "lineHints": [
-                  null,
-                  "ユニオン型は `|` で区切ります。",
-                  null,
-                  "出力する変数を指定します。",
-                  "文字列の引数を渡します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "ユニオン型は `|` で区切ります。",
+          null,
+          "出力する変数を指定します。",
+          "文字列の引数を渡します。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -102,21 +102,21 @@ export const typescriptData2 = {
           ""
         ],
         "lineHints": [
-                  null,
-                  "商品を表すインターフェース名です。",
-                  null,
-                  "IDは数値なので `number` です。",
-                  null,
-                  "商品名は文字列なので `string` です。",
-                  null,
-                  "価格も数値なので `number` です。",
-                  null,
-                  null,
-                  null,
-                  "商品名を文字列で指定します。",
-                  null,
-                  "コンソールに出力するメソッドです。",
-                  null
+          null,
+          "商品を表すインターフェース名です。",
+          null,
+          "IDは数値なので `number` です。",
+          null,
+          "商品名は文字列なので `string` です。",
+          null,
+          "価格も数値なので `number` です。",
+          "ここを正しく入力してください。",
+          null,
+          null,
+          "商品名を文字列で指定します。",
+          null,
+          "コンソールに出力するメソッドです。",
+          null
         ],
         "candidates": {
           "keywords": [
@@ -130,7 +130,7 @@ export const typescriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Apple\
+            "expected_output": "りんご\
 "
           }
         ]
@@ -177,9 +177,9 @@ export const typescriptData2 = {
           "取得したいプロパティ名を指定します。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -228,15 +228,15 @@ export const typescriptData2 = {
                   "console.log(math + english);"
         ],
         "lineHints": [
-                  null,
-                  "`type` キーワードを使います。",
-                  null,
-                  null,
-                  "英語の点数を数値で指定します。",
-                  null,
-                  "足し算の演算子を使います。",
-                  null,
-                  null
+          null,
+          "`type` キーワードを使います。",
+          null,
+          null,
+          "英語の点数を数値で指定します。",
+          null,
+          "足し算の演算子を使います。",
+          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -297,9 +297,9 @@ export const typescriptData2 = {
           "取得したいプロパティ名を指定します。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -353,20 +353,20 @@ export const typescriptData2 = {
                   "console.log(today);"
         ],
         "lineHints": [
-                  null,
-                  "`enum` キーワードを使います。",
-                  null,
-                  "日曜日を表す値を指定します。",
-                  null,
-                  "月曜日を表す値を指定します。",
-                  null,
-                  "火曜日を表す値を指定します。",
-                  "月曜日の列挙値を指定します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "`enum` キーワードを使います。",
+          null,
+          "日曜日を表す値を指定します。",
+          null,
+          "月曜日を表す値を指定します。",
+          null,
+          "火曜日を表す値を指定します。",
+          "月曜日の列挙値を指定します。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "変数todayの値をコンソールに出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -423,9 +423,9 @@ export const typescriptData2 = {
           "配列に入れる値を指定します。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "変数arrの値をコンソールに出力します。"
         ],
         "candidates": {
           "operators": [
@@ -475,16 +475,16 @@ export const typescriptData2 = {
                   "console.log(box.item);"
         ],
         "lineHints": [
-                  null,
-                  "型パラメータ `T` を使います。",
-                  null,
-                  "型パラメータで指定した型を使います。",
-                  "アイテムの値を文字列で指定します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "型パラメータ `T` を使います。",
+          null,
+          "型パラメータで指定した型を使います。",
+          "アイテムの値を文字列で指定します。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -591,22 +591,22 @@ export const typescriptData2 = {
                   "console.log(u.name);"
         ],
         "lineHints": [
-                  null,
-                  "IDは数値なので `number` です。",
-                  null,
-                  "`extends` キーワードを使います。",
-                  "名前は文字列なので `string` です。",
-                  null,
-                  null,
-                  "取得したいプロパティ名を指定します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "IDは数値なので `number` です。",
+          null,
+          "`extends` キーワードを使います。",
+          "名前は文字列なので `string` です。",
+          null,
+          null,
+          "取得したいプロパティ名を指定します。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

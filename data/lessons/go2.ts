@@ -45,18 +45,18 @@ export const go2Data = {
           "return で複数の値を返します。",
           "return で複数の値を返します。",
           "関数名 minmax を入力して呼び出します。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -88,12 +88,12 @@ export const go2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "package main\\nimport (\\n    \"エラーs\"\\n    \"fmt\"\\n)\\nfunc check(n int) (int, error) {\\n    if n < 0 {\\n        // errors.New でエラーを作成\\n        return 0, errors.New(\"negative\")\\n    }\\n    // nil でエラーなしを表す\\n    return n, nil\\n}\\nfunc main() {\\n    // 関数から2つの戻り値を受け取る\\n    val, err := check(5)\\n    if err != nil {\\n        fmt.Println(err)\\n    } else {\\n        fmt.Println(val)\\n    }\\n}",
+        "correctCode": "package main\\nimport (\\n    \"errors\"\\n    \"fmt\"\\n)\\nfunc check(n int) (int, error) {\\n    if n < 0 {\\n        // errors.New でエラーを作成\\n        return 0, errors.New(\"negative\")\\n    }\\n    // nil でエラーなしを表す\\n    return n, nil\\n}\\nfunc main() {\\n    // 関数から2つの戻り値を受け取る\\n    val, err := check(5)\\n    if err != nil {\\n        fmt.Println(err)\\n    } else {\\n        fmt.Println(val)\\n    }\\n}",
         "holeyCode": "package ___\\nimport ___\\n    \"___\"\\n    \\\"___\\\"\\n___\\nfunc ___ (n int) (int, error) {\\n    if n ___ 0 {\\n        // errors.New でエラーを作成\\n        return 0, errors.New(\"___\")\\n    ___\\n    // nil でエラーなしを表す\\n    return n, ___\\n___\\nfunc ___ () {\\n    // 関数から2つの戻り値を受け取る\\n    val, err := check(___)\\n    if err != ___ {\\n        fmt.___(err)\\n    } ___ {\\n        fmt.___(val)\\n    ___\\n___",
         "correctLines": [
           "package main",
           "import (",
-          "    \"エラーs\"",
+          "    \"errors\"",
           "    \"fmt\"",
           ")",
           "func check(n int) (int, error) {",
@@ -118,31 +118,31 @@ export const go2Data = {
           "errors.New でエラーオブジェクトを作成します。",
           "エラーがないときは nil を返します。",
           "関数名 check を入力して呼び出します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "関数（check）を定義します。",
+          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "変数の値を標準出力に出力します。",
+          "条件が偽の場合の処理を定義する。",
+          "変数の値を標準出力に出力します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
             "nil"
           ],
-          "others": ["New", "check", "main", "(", "errors", "fmt", ")", "check(n", "<", "negative", "}", "main()", "5", "Println", "else", "mt\"", "エラーs"]
+          "others": ["New", "check", "main", "(", "errors", "fmt", ")", "check(n", "<", "negative", "}", "main()", "5", "Println", "else", "mt\"", "errors"]
         },
         "testCases": [
           {
@@ -184,14 +184,14 @@ export const go2Data = {
         "lineHints": [
           "& でアドレスを取得します。",
           "*p で値を変更します。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "変数を宣言し、同時に数値を代入します（型推論を使用）。",
+          null,
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "変数の値を標準出力に出力します。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -241,19 +241,19 @@ export const go2Data = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
+          "このファイルが属するパッケージ（main）を宣言します。",
+          "ここを正しく入力してください。",
           null,
           "struct で構造体を定義します。",
           null,
           "int 型のフィールドを定義します。",
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "Y に 4 を指定して構造体を初期化します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -309,19 +309,19 @@ export const go2Data = {
           "* で掛け算します。",
           "H に 4 を指定して構造体を初期化します。",
           "メソッド名 Area を入力して呼び出します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -375,21 +375,21 @@ export const go2Data = {
         ],
         "lineHints": [
           "interface でインターフェースを定義します。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "メソッド名 Speak を入力して呼び出します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          "関数（Speak）を呼び出して実行する。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "Dog{} でインスタンスを作成して代入します。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -434,14 +434,14 @@ export const go2Data = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
-          null,
-          null,
-          "フォーマットパッケージを使って文字列を出力します。",
+          "このファイルが属するパッケージ（main）を宣言します。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "フォーマットパッケージを使って文字列を出力します。",
-          null
+          null,
+          "フォーマットパッケージを使って文字列を出力します。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -495,18 +495,18 @@ end\
         "lineHints": [
           "go でゴルーチンを起動します。",
           "Sleep でゴルーチンの完了を待ちます。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "関数（say）を定義します。",
+          "変数の値を標準出力に出力します。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -517,7 +517,7 @@ end\
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello\
+            "expected_output": "こんにちは\
 "
           }
         ]
@@ -560,15 +560,15 @@ end\
           "<- でチャネルに値を送信します。",
           "<- でチャネルから値を受信します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "変数の値を標準出力に出力します。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -618,15 +618,15 @@ end\
         "lineHints": [
           "func で無名関数を定義します。",
           "* で掛け算をして外側の n にアクセスします。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "変数を宣言し、同時に数値を代入します（型推論を使用）。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

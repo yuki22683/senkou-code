@@ -87,7 +87,7 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "test\
+            "expected_output": "テスト\
 "
           }
         ]
@@ -118,7 +118,7 @@ export const bash3Data = {
         "lineHints": [
           "< でファイルから読み込みます。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -175,7 +175,7 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "error hidden\
+            "expected_output": "エラー hidden\
 "
           }
         ]
@@ -207,8 +207,8 @@ export const bash3Data = {
         "lineHints": [
           null,
           "-f でファイルの存在を確認します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "if文のブロックを終了する。"
         ],
         "candidates": {
           "operators": [
@@ -243,11 +243,11 @@ export const bash3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# xargsで引数に変換\\necho \"Hello World\" | xargs echo \"Mess年齢:\"",
-        "holeyCode": "# xargsで引数に変換\\necho \"___\" | xargs echo \"Mess年齢:\"",
+        "correctCode": "# xargsで引数に変換\\necho \"Hello World\" | xargs echo \"Message:\"",
+        "holeyCode": "# xargsで引数に変換\\necho \"___\" | xargs echo \"Message:\"",
         "correctLines": [
           "# xargsで引数に変換",
-          "echo \"Hello World\" | xargs echo \"Mess年齢:\""
+          "echo \"Hello World\" | xargs echo \"Message:\""
         ],
         "lineHints": [
           null,
@@ -308,7 +308,7 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "dog\
+            "expected_output": "犬\
 "
           }
         ]
@@ -393,7 +393,9 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "bananaapplecherry\
+            "expected_output": "apple\
+banana\
+cherry\
 "
           }
         ]
@@ -435,7 +437,8 @@ export const bash3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "abab\
+            "expected_output": "a\
+b\
 "
           }
         ]

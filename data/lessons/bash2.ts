@@ -34,7 +34,7 @@ export const bash2Data = {
           null,
           "インデックス 2 で3番目の要素にアクセスします。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "numbers": [
@@ -80,7 +80,7 @@ export const bash2Data = {
           null,
           "# で長さを取得します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -126,7 +126,7 @@ export const bash2Data = {
           null,
           "6 から始めて World を取得します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "numbers": [
@@ -175,10 +175,10 @@ export const bash2Data = {
           null,
           "$1 で最初の引数を参照します。",
           null,
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -230,12 +230,12 @@ export const bash2Data = {
           null,
           "$() で関数の出力を受け取ります。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "変数の内容を展開して表示します。"
         ],
         "candidates": {
           "operators": [
@@ -284,11 +284,11 @@ export const bash2Data = {
           null,
           "条件が満たされている間、処理を繰り返します。",
           null,
+          "条件が真の間、繰り返し処理を実行する。",
           null,
+          "変数の内容を展開して表示します。",
           null,
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -342,7 +342,7 @@ export const bash2Data = {
         ],
         "lineHints": [
           null,
-          null,
+          "ここを正しく入力してください。",
           null,
           "case で分岐します。",
           null,
@@ -362,7 +362,7 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "red\
+            "expected_output": "赤\
 "
           }
         ]
@@ -395,7 +395,7 @@ export const bash2Data = {
           null,
           "$() でコマンドの出力を取得します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -406,7 +406,7 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Files: test\
+            "expected_output": "Files: テスト\
 "
           }
         ]
@@ -427,11 +427,11 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 標準入力を変数に読み込むコマンド\\necho \"入力:\" && read val && echo \"You ente赤: $val\"",
-        "holeyCode": "# 標準入力を変数に読み込むコマンド\\necho \"入力:\" && ___ val && echo \"You ente赤: $val\"",
+        "correctCode": "# 標準入力を変数に読み込むコマンド\\necho \"入力:\" && read val && echo \"You entered: $val\"",
+        "holeyCode": "# 標準入力を変数に読み込むコマンド\\necho \"入力:\" && ___ val && echo \"You entered: $val\"",
         "correctLines": [
           "# 標準入力を変数に読み込むコマンド",
-          "echo \"入力:\" && read val && echo \"You ente赤: $val\""
+          "echo \"入力:\" && read val && echo \"You entered: $val\""
         ],
         "lineHints": [
           null,
@@ -445,7 +445,7 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "test\\n",
-            "expected_output": "input:\
+            "expected_output": "入力:\
 You entered: test\
 "
           }

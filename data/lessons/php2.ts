@@ -40,19 +40,19 @@ export const php2Data = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           null,
           "新しいクラス（Cat）を定義します。",
           null,
           "public で外からアクセスできます。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "new でインスタンスを作成します。",
           null,
           "-> でプロパティにアクセスします。",
           null,
-          null,
-          null
+          "変数の内容を展開して表示します。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -63,7 +63,7 @@ export const php2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Tama"
+            "expected_output": "タマ"
           }
         ]
       },
@@ -108,18 +108,18 @@ export const php2Data = {
           null,
           "$this で自分自身を参照します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "変数の内容を展開して表示します。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -171,22 +171,22 @@ export const php2Data = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           null,
           "新しいクラス（Car）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "新しいクラス（Car）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -197,7 +197,7 @@ export const php2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "moving"
+            "expected_output": "移動中"
           }
         ]
       },
@@ -241,25 +241,25 @@ export const php2Data = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           null,
           "interface でインターフェースを定義します。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "新しいクラス（Robot）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -270,7 +270,7 @@ export const php2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "running"
+            "expected_output": "実行中"
           }
         ]
       },
@@ -305,12 +305,12 @@ export const php2Data = {
         "lineHints": [
           "array_map で各要素を2乗します。",
           null,
+          "配列を複数の値で初期化する。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -362,12 +362,12 @@ export const php2Data = {
         "lineHints": [
           "array_filter で 3 以上を抽出します。",
           null,
+          "配列を複数の値で初期化する。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -417,10 +417,10 @@ export const php2Data = {
         "lineHints": [
           "fn でアロー関数を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "変数の内容を展開して表示します。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -471,13 +471,13 @@ export const php2Data = {
           null,
           "エラー（例外）が発生した場合の処理を記述します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "例外が発生した場合の処理を定義する。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -488,7 +488,7 @@ export const php2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "caught"
+            "expected_output": "キャッチ"
           }
         ]
       },
@@ -531,20 +531,20 @@ export const php2Data = {
         "lineHints": [
           "namespace で名前空間を宣言します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "新しいクラス（Hello）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -586,12 +586,12 @@ export const php2Data = {
           "?>"
         ],
         "lineHints": [
+          "PHPスクリプトの開始を宣言する。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
           null,
           "変数の内容を展開して表示します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -602,7 +602,7 @@ export const php2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "default"
+            "expected_output": "デフォルト"
           }
         ]
       }

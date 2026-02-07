@@ -128,7 +128,7 @@ export const lua2Data = {
           "ipairs で配列をループします。",
           null,
           "変数の内容を画面に出力します。",
-          null
+          "ブロックを終了する。"
         ],
         "candidates": {
           "functions": [
@@ -180,7 +180,7 @@ export const lua2Data = {
           "pairs ですべてのキーと値をループします。",
           null,
           "k と v を表示します。",
-          null
+          "ブロックを終了する。"
         ],
         "candidates": {
           "functions": [
@@ -228,7 +228,7 @@ export const lua2Data = {
           "function で関数を定義します。",
           null,
           "* で掛け算します。",
-          null,
+          "ブロックを終了する。",
           null,
           "double関数を呼び出します。"
         ],
@@ -281,7 +281,7 @@ export const lua2Data = {
           "swap という関数を定義します。",
           null,
           "return で複数の値を返します。",
-          null,
+          "ブロックを終了する。",
           null,
           "1, 2 を渡して呼び出します。",
           null,
@@ -339,7 +339,7 @@ export const lua2Data = {
           "メソッドを定義します。",
           null,
           "self で自分自身を参照します。",
-          null,
+          "ブロックを終了する。",
           null,
           "getX メソッドを呼び出します。"
         ],
@@ -451,9 +451,9 @@ export const lua2Data = {
           "makeAdder(5) を呼び出します。",
           "add5(10) を呼び出します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -503,7 +503,7 @@ export const lua2Data = {
           "hello を表示します。",
           "resume で実行します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -514,7 +514,7 @@ export const lua2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello\
+            "expected_output": "こんにちは\
 "
           }
         ]

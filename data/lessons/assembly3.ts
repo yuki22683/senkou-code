@@ -39,16 +39,16 @@ export const assembly3Data = {
         ],
         "lineHints": [
           "値を1減らす命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -99,16 +99,16 @@ export const assembly3Data = {
         ],
         "lineHints": [
           "掛け算の命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -159,16 +159,16 @@ export const assembly3Data = {
         ],
         "lineHints": [
           "スタックに保存する命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -218,15 +218,15 @@ export const assembly3Data = {
         ],
         "lineHints": [
           "スタックから取り出す命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -277,16 +277,16 @@ export const assembly3Data = {
         ],
         "lineHints": [
           "ビットANDの命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -337,16 +337,16 @@ export const assembly3Data = {
         ],
         "lineHints": [
           "ビットORの命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -397,16 +397,16 @@ export const assembly3Data = {
         ],
         "lineHints": [
           "左シフトの命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -457,16 +457,16 @@ export const assembly3Data = {
         ],
         "lineHints": [
           "右シフトの命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -521,20 +521,20 @@ export const assembly3Data = {
         ],
         "lineHints": [
           "ビットを検査する命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -585,16 +585,16 @@ export const assembly3Data = {
         ],
         "lineHints": [
           "符号を反転する命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [

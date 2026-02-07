@@ -235,7 +235,7 @@ export const pythonData = {
           null,
           "変数の値を計算して、その結果を同じ変数に再代入します。",
           null,
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "operators": [

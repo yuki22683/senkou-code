@@ -34,7 +34,7 @@ export const pythonData3 = {
           null,
           "lambda キーワードを使います。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -156,12 +156,12 @@ export const pythonData3 = {
           null,
           "関数（print_info）を新しく定義します。",
           null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -209,9 +209,9 @@ y = 20\
           null,
           "enumerate でインデックスと要素を取得します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -263,11 +263,11 @@ y = 20\
           null,
           "zip で複数のリストを同時にループします。",
           null,
+          "配列を複数の値で初期化する。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -322,14 +322,14 @@ c: 3\
           null,
           "yield で値を1つずつ返します。",
           null,
+          "繰り返し処理（ループ）を開始する。",
+          null,
+          "ここを正しく入力してください。",
           null,
           null,
+          "繰り返し処理（ループ）を開始する。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -382,9 +382,9 @@ c: 3\
           null,
           "for を使ってジェネレータ式を作ります。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -446,23 +446,23 @@ c: 3\
           null,
           "@ でデコレータを適用します。",
           null,
+          "関数（wrapper）を新しく定義します。",
+          null,
+          "指定された文字列を画面に出力する関数を使用します。",
+          null,
+          "関数（func）を呼び出して実行する。",
+          null,
+          "変数の値を呼び出し元に返す（戻り値）。",
           null,
           null,
+          "ここを正しく入力してください。",
+          null,
+          "関数（greet）を新しく定義します。",
+          null,
+          "指定された文字列を画面に出力する関数を使用します。",
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "関数（greet）を呼び出して実行する。"
         ],
         "candidates": {
           "operators": [
@@ -511,9 +511,9 @@ c: 3\
           null,
           "all で全ての要素が条件を満たすかチェックします。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "functions": [

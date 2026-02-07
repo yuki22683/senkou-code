@@ -274,10 +274,10 @@ export const elixir2Data = {
           "変数に数値を代入（保存）します。",
           null,
           "case でパターンマッチします。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           "_ はワイルドカードです。",
-          null,
+          "ブロックを終了する。",
           null,
           "resultの値を表示します。"
         ],
@@ -332,7 +332,7 @@ export const elixir2Data = {
           "defmodule でモジュールを定義します。",
           null,
           "関数（triple）を新しく定義します。",
-          null,
+          "ブロックを終了する。",
           null,
           "Calc.triple(4) で関数を呼び出します。"
         ],
@@ -387,7 +387,7 @@ export const elixir2Data = {
           "関数（factorial）を新しく定義します。",
           null,
           "関数（factorial）を新しく定義します。",
-          null,
+          "ブロックを終了する。",
           null,
           "Math.factorial(5) で関数を呼び出します。"
         ],
@@ -450,7 +450,7 @@ export const elixir2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello\
+            "expected_output": "こんにちは\
 "
           }
         ]
@@ -486,7 +486,7 @@ export const elixir2Data = {
           null,
           "receive でメッセージを受け取ります。",
           "パターンマッチでメッセージを受け取ります。",
-          null
+          "ブロックを終了する。"
         ],
         "candidates": {
           "functions": [

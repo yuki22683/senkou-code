@@ -41,7 +41,7 @@ export const sql2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "found\
+            "expected_output": "見つかった\
 "
           }
         ]
@@ -78,7 +78,7 @@ export const sql2Data = {
           null,
           "ORDER BY で並べ替えます。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -124,7 +124,7 @@ export const sql2Data = {
           null,
           "LIMIT で件数を制限します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -293,11 +293,11 @@ export const sql2Data = {
           null,
           "GROUP BY でグループ化します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -346,11 +346,11 @@ B|1\
           null,
           "HAVING でグループを絞り込みます。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -417,7 +417,7 @@ B|1\
         "testCases": [
           {
             "input": "",
-            "expected_output": "pass\
+            "expected_output": "合格\
 "
           }
         ]
@@ -457,7 +457,7 @@ B|1\
         "testCases": [
           {
             "input": "",
-            "expected_output": "default\
+            "expected_output": "デフォルト\
 "
           }
         ]

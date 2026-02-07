@@ -43,7 +43,7 @@ export const cData = {
           null,
           null,
           "正常終了を示します。",
-          null
+          "ここを正しく入力してください。"
         ],
       "candidates": {
         "functions": [
@@ -108,7 +108,7 @@ export const cData = {
           null,
           null,
           "正常終了を示します。",
-          null
+          "ここを正しく入力してください。"
         ],
       "candidates": {
         "others": [
@@ -173,7 +173,7 @@ export const cData = {
           null,
           null,
           "正常終了を示します。",
-          null
+          "ここを正しく入力してください。"
         ],
       "candidates": {
         "operators": [
@@ -232,7 +232,7 @@ export const cData = {
           null,
           null,
           "正常終了を示します。",
-          null
+          "ここを正しく入力してください。"
         ],
       "candidates": {
         "operators": [
@@ -297,7 +297,7 @@ export const cData = {
           null,
           null,
           "正常終了を示します。",
-          null
+          "ここを正しく入力してください。"
         ],
       "candidates": {
         "operators": [
@@ -354,7 +354,7 @@ export const cData = {
           null,
           null,
           "正常終了を示します。",
-          null
+          "ここを正しく入力してください。"
         ],
       "candidates": {
         "others": [
@@ -411,7 +411,7 @@ export const cData = {
           null,
           null,
           "正常終了を示します。",
-          null
+          "ここを正しく入力してください。"
         ],
       "candidates": {
         "numbers": [
@@ -459,20 +459,20 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "変数を初期化します。",
-        null,
-        "条件分岐を開始します。",
-        null,
-        null,
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          "プログラムの開始点を定義します。",
+          null,
+          "変数を初期化します。",
+          null,
+          "条件分岐を開始します。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          "正常終了を示します。",
+          "ここを正しく入力してください。"
+        ],
       "candidates": {
         "keywords": [
           "if",
@@ -531,7 +531,7 @@ export const cData = {
           "条件分岐を開始します。",
           null,
           null,
-          null,
+          "ここを正しく入力してください。",
           null,
           null,
           "正常終了を示します。",
@@ -583,20 +583,20 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "変数を初期化します。",
-        null,
-        "&&で「かつ」を表現します。",
-        null,
-        null,
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          "プログラムの開始点を定義します。",
+          null,
+          "変数を初期化します。",
+          null,
+          "&&で「かつ」を表現します。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          "正常終了を示します。",
+          "ここを正しく入力してください。"
+        ],
       "candidates": {
         "operators": [
           "&&",
@@ -651,9 +651,9 @@ export const cData = {
           null,
           null,
           null,
-          null,
+          "ここを正しく入力してください。",
           "正常終了を示します。",
-          null
+          "ここを正しく入力してください。"
         ],
       "candidates": {
         "keywords": [
@@ -711,10 +711,10 @@ export const cData = {
           null,
           "標準入出力ライブラリを読み込みます。",
           null,
-          null,
-          null,
-          null,
-          null,
+          "構造体（Point）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "プログラムの開始点を定義します。",
           null,
@@ -725,7 +725,7 @@ export const cData = {
           null,
           null,
           "正常終了を示します。",
-          null
+          "ここを正しく入力してください。"
         ],
       "candidates": {
         "others": ["stdio.h", "main", "p", "10", "x", "0", "Point", "y", "};"]
@@ -769,21 +769,21 @@ export const cData = {
         "}"
       ],
       "lineHints": [
-        null,
-        "標準入出力ライブラリを読み込みます。",
-        null,
-        "戻り値のない関数を定義します。",
-        null,
-        null,
-        null,
-        null,
-        "プログラムの開始点を定義します。",
-        null,
-        "定義した関数を呼び出します。",
-        null,
-        "正常終了を示します。",
-        null
-      ],
+          null,
+          "標準入出力ライブラリを読み込みます。",
+          null,
+          "戻り値のない関数を定義します。",
+          null,
+          null,
+          null,
+          "ここを正しく入力してください。",
+          "プログラムの開始点を定義します。",
+          "ここを正しく入力してください。",
+          "定義した関数を呼び出します。",
+          "ここを正しく入力してください。",
+          "正常終了を示します。",
+          "ここを正しく入力してください。"
+        ],
       "candidates": {
         "others": ["stdio.h", "greet", "0", "// mainはプログラムのエントリーポイント", "// greet関数を呼び出す", "// 正常終了を示す0を返す"]
       },

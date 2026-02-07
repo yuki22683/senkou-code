@@ -55,22 +55,22 @@ export const kotlin3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  "* でワイルドカードインポートします。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  "delay で待機します。",
-                  null,
-                  "Hello と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  "main と入力しましょう。",
-                  null,
-                  "println と入力しましょう。",
-                  null
+          null,
+          "* でワイルドカードインポートします。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "delay で待機します。",
+          null,
+          "Hello と入力しましょう。",
+          "ここを正しく入力してください。",
+          null,
+          null,
+          "main と入力しましょう。",
+          null,
+          "println と入力しましょう。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -142,7 +142,7 @@ export const kotlin3Data = {
           "toList() と入力しましょう。",
           null,
           "println と入力しましょう。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -204,17 +204,17 @@ export const kotlin3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  "inline で関数をインライン化します。",
-                  null,
-                  "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
-                  "main と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "inline で関数をインライン化します。",
+          null,
+          "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
+          "main と入力しましょう。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -280,19 +280,19 @@ export const kotlin3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  "reified で実行時に型情報を使えます。",
-                  null,
-                  "is と入力しましょう。",
-                  "main と入力しましょう。",
-                  null,
-                  null,
-                  "Int と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "reified で実行時に型情報を使えます。",
+          null,
+          "is と入力しましょう。",
+          "main と入力しましょう。",
+          null,
+          null,
+          "Int と入力しましょう。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -359,21 +359,21 @@ false\
                   "}"
         ],
         "lineHints": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  "apply で設定してオブジェクトを返します。",
-                  null,
-                  "localhost と入力しましょう。",
-                  null,
-                  "変数に数値を代入（保存）します。",
-                  null,
-                  null,
-                  "println で出力します。",
-                  null
+          null,
+          null,
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "apply で設定してオブジェクトを返します。",
+          null,
+          "localhost と入力しましょう。",
+          null,
+          "変数に数値を代入（保存）します。",
+          "ここを正しく入力してください。",
+          null,
+          "println で出力します。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -440,10 +440,10 @@ false\
           "also で副作用を実行してオブジェクトを返します。",
           null,
           "println と入力しましょう。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "num と入力しましょう。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -511,10 +511,10 @@ false\
           "run でブロックを実行して結果を返します。",
           null,
           "スペース1文字を入力しましょう。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "println と入力しましょう。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -578,7 +578,7 @@ false\
           "takeIf で条件を満たせば値を返します。",
           null,
           "println と入力しましょう。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -646,7 +646,7 @@ false\
           "groupBy でグループ化します。",
           null,
           "println と入力しましょう。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -714,7 +714,7 @@ false\
           "fold で畳み込みます。",
           null,
           "println と入力しましょう。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [

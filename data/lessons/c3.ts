@@ -37,16 +37,16 @@ export const c3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          null,
+          "int型の値を返す関数（square）を定義します。",
+          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -100,22 +100,22 @@ export const c3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          null,
+          "void型の値を返す関数（apply）を定義します。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          null,
+          "void型の値を返す関数（show）を定義します。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "ここを正しく入力してください。",
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -163,16 +163,16 @@ export const c3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "整数型の変数を宣言し、初期値を代入します。",
+          "整数型の変数を宣言し、初期値を代入します。",
+          null,
+          null,
+          null,
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -220,16 +220,16 @@ export const c3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "整数型の変数を宣言し、初期値を代入します。",
+          "整数型の変数を宣言し、初期値を代入します。",
+          null,
+          null,
+          null,
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -276,15 +276,15 @@ export const c3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "整数型の変数を宣言し、初期値を代入します。",
+          null,
+          null,
+          null,
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -333,13 +333,13 @@ export const c3Data = {
         "lineHints": [
           null,
           null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "配列を複数の値で初期化する。",
+          null,
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -387,16 +387,16 @@ export const c3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "ここを正しく入力してください。",
+          null,
+          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -446,18 +446,18 @@ export const c3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          null,
+          null,
+          "void型の値を返す関数（show）を定義します。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "整数型の変数を宣言し、初期値を代入します。",
+          "ここを正しく入力してください。",
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -510,21 +510,21 @@ export const c3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          null,
+          "void型の値を返す関数（counter）を定義します。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "関数（counter）を呼び出して実行する。",
+          "関数（counter）を呼び出して実行する。",
+          "関数（counter）を呼び出して実行する。",
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -571,15 +571,15 @@ export const c3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          null,
+          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

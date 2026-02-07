@@ -59,26 +59,26 @@ export const kotlin4Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  "sealed で継承を制限します。",
-                  null,
-                  "新しいクラス（Circle）を定義します。",
-                  null,
-                  "新しいクラス（Rectangle）を定義します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  "radius と入力しましょう。",
-                  null,
-                  "w と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  "main と入力しましょう。",
-                  null,
-                  "println と入力しましょう。",
-                  null
+          null,
+          "sealed で継承を制限します。",
+          null,
+          "新しいクラス（Circle）を定義します。",
+          null,
+          "新しいクラス（Rectangle）を定義します。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "radius と入力しましょう。",
+          null,
+          "w と入力しましょう。",
+          "ここを正しく入力してください。",
+          null,
+          null,
+          "main と入力しましょう。",
+          null,
+          "println と入力しましょう。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -148,25 +148,25 @@ export const kotlin4Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  "object でシングルトンを定義します。",
-                  null,
-                  "0 と入力しましょう。",
-                  null,
-                  "increment と入力しましょう。",
-                  null,
-                  "count と入力しましょう。",
-                  "main と入力しましょう。",
-                  null,
-                  null,
-                  "increment と入力しましょう。",
-                  null,
-                  "get と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "object でシングルトンを定義します。",
+          null,
+          "0 と入力しましょう。",
+          null,
+          "increment と入力しましょう。",
+          null,
+          "count と入力しましょう。",
+          "main と入力しましょう。",
+          null,
+          null,
+          "increment と入力しましょう。",
+          null,
+          "get と入力しましょう。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -237,26 +237,26 @@ export const kotlin4Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  "新しいクラス（Config）を定義します。",
-                  null,
-                  "lazy で遅延初期化します。",
-                  null,
-                  "Init と入力しましょう。",
-                  null,
-                  "42 と入力しましょう。",
-                  "main と入力しましょう。",
-                  "Config と入力しましょう。",
-                  null,
-                  null,
-                  "value と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "新しいクラス（Config）を定義します。",
+          null,
+          "lazy で遅延初期化します。",
+          null,
+          "Init と入力しましょう。",
+          null,
+          "42 と入力しましょう。",
+          "main と入力しましょう。",
+          "Config と入力しましょう。",
+          null,
+          null,
+          "value と入力しましょう。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -327,24 +327,24 @@ Init\
                   "}"
         ],
         "lineHints": [
-                  null,
-                  "新しいクラス（Service）を定義します。",
-                  null,
-                  "lateinit で後から初期化を宣言します。",
-                  null,
-                  null,
-                  "main と入力しましょう。",
-                  "Service と入力しましょう。",
-                  null,
-                  null,
-                  "config と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "新しいクラス（Service）を定義します。",
+          null,
+          "lateinit で後から初期化を宣言します。",
+          null,
+          null,
+          "main と入力しましょう。",
+          "Service と入力しましょう。",
+          null,
+          null,
+          "config と入力しましょう。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -419,10 +419,10 @@ Init\
           "repeat と入力しましょう。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -486,17 +486,17 @@ Init\
                   "}"
         ],
         "lineHints": [
-                  null,
-                  "reified で型情報を保持します。",
-                  null,
-                  "simpleName と入力しましょう。",
-                  "main と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "reified で型情報を保持します。",
+          null,
+          "simpleName と入力しましょう。",
+          "main と入力しましょう。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -557,16 +557,16 @@ Init\
                   "}"
         ],
         "lineHints": [
-                  null,
-                  "isEven() で拡張関数を定義します。",
-                  null,
-                  null,
-                  "isEven と入力しましょう。",
-                  null,
-                  "isEven と入力しましょう。",
-                  null,
-                  null,
-                  null
+          null,
+          "isEven() で拡張関数を定義します。",
+          null,
+          null,
+          "isEven と入力しましょう。",
+          null,
+          "isEven と入力しましょう。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "names": [
@@ -613,13 +613,13 @@ false\
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// main 関数を定義する\\nfun main() {\\n    // letで\"hello\"を大文字に変換\\n    val result = \"こんにちは\".let {\\n        // 大文字に変換する\\n        it.uppercase()\\n    }\\n    // result を出力する\\n    println(result)\\n}",
+        "correctCode": "// main 関数を定義する\\nfun main() {\\n    // letで\"hello\"を大文字に変換\\n    val result = \"hello\".let {\\n        // 大文字に変換する\\n        it.uppercase()\\n    }\\n    // result を出力する\\n    println(result)\\n}",
         "holeyCode": "// main 関数を定義する\\nfun ___() {\\n    // letで\"hello\"を大文字に変換\\n    val result = \"___\".let {\\n        // 大文字に変換する\\n        it.___()\\n    ___\\n    // result を出力する\\n    println(___)\\n___",
         "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
           "    // letで\"hello\"を大文字に変換",
-          "    val result = \"こんにちは\".let {",
+          "    val result = \"hello\".let {",
           "        // 大文字に変換する",
           "        it.uppercase()",
           "    }",
@@ -634,10 +634,10 @@ false\
           "let で変換処理を行います。",
           null,
           "uppercase と入力しましょう。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "println と入力しましょう。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -645,7 +645,7 @@ false\
             "also",
             "run"
           ],
-          "others": ["main", "uppercase", "println", "hello", "}", "result", "こんにちは"]
+          "others": ["main", "uppercase", "println", "hello", "}", "result"]
         },
         "testCases": [
           {
@@ -703,21 +703,21 @@ false\
                   "}"
         ],
         "lineHints": [
-                  null,
-                  null,
-                  null,
-                  null,
-                  "apply でオブジェクトを設定します。",
-                  null,
-                  "localhost と入力しましょう。",
-                  null,
-                  "変数に数値を代入（保存）します。",
-                  null,
-                  "host と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          null,
+          null,
+          null,
+          "apply でオブジェクトを設定します。",
+          null,
+          "localhost と入力しましょう。",
+          null,
+          "変数に数値を代入（保存）します。",
+          null,
+          "host と入力しましょう。",
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -782,20 +782,20 @@ false\
                   "}"
         ],
         "lineHints": [
-                  null,
-                  "typealias で型に別名をつけます。",
-                  null,
-                  null,
-                  "StringList と入力しましょう。",
-                  null,
-                  "forEach と入力しましょう。",
-                  null,
-                  null,
-                  null,
-                  "main と入力しましょう。",
-                  null,
-                  "printAll と入力しましょう。",
-                  null
+          null,
+          "typealias で型に別名をつけます。",
+          null,
+          null,
+          "StringList と入力しましょう。",
+          null,
+          "forEach と入力しましょう。",
+          "ここを正しく入力してください。",
+          null,
+          null,
+          "main と入力しましょう。",
+          null,
+          "printAll と入力しましょう。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

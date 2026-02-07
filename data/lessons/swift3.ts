@@ -61,19 +61,19 @@ export const swift3Data = {
           null,
           "check と入力しましょう。",
           null,
+          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
           null,
           null,
           null,
           "result と入力しましょう。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "変数の内容を画面に出力します。",
           null,
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -371,7 +371,7 @@ export const swift3Data = {
           "start と入力しましょう。",
           null,
           null,
-          null
+          "関数（test）を呼び出して実行する。"
         ],
         "candidates": {
           "keywords": [
@@ -467,11 +467,11 @@ end\
           null,
           null,
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -552,7 +552,7 @@ end\
           "invalid と入力しましょう。",
           null,
           null,
-          null,
+          "関数（check）を定義します。",
           null,
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
@@ -564,10 +564,10 @@ end\
           null,
           "try と入力しましょう。",
           null,
+          "変数の内容を画面に出力します。",
           null,
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -704,9 +704,9 @@ end\
           null,
           "Counter と入力しましょう。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
           null,
           "count と入力しましょう。"
         ],

@@ -316,9 +316,11 @@ export function getTokenStyle(
 
   // Middle string parts between interpolations (e.g., ", you are " in f"Hello {name}, you are {age}")
   // These don't start/end with quotes but are still string content
+  // BUT: Only apply if token is not a keyword/identifier (to avoid coloring "else" in "} else {")
   const prevIsClosingBrace = prevToken === '}';
   const nextIsOpeningBrace = nextToken === '{' || nextToken === '${';
-  if (prevIsClosingBrace && nextIsOpeningBrace) {
+  const isIdentifierOrKeyword = /^[a-zA-Z_][a-zA-Z0-9_]*$/.test(token);
+  if (prevIsClosingBrace && nextIsOpeningBrace && !isIdentifierOrKeyword) {
     return { color: SYNTAX_COLORS.string };
   }
 

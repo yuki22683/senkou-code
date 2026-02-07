@@ -8,7 +8,7 @@ export const assemblyData = {
   "exercises": [
     {
         "title": "画面にメッセージを出してみましょう",
-        "description": "アセンブリ言語を使って画面に「Hello」と表示させてみましょう。コンピュータの「ボス（OS）」に頼みごとをする特別な命令を使います。",
+        "description": "アセンブリ言語を使って画面に「こんにちは」と表示させてみましょう。コンピュータの「ボス（OS）」に頼みごとをする特別な命令を使います。",
         "difficulty": "medium",
         "orderIndex": 1,
         "tutorialSlides": [
@@ -26,8 +26,8 @@ export const assemblyData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "; データセクションを宣言\\nsection .data\\n  ; 文字列msgを定義\\n  msg db \"こんにちは\", 0xA\\n\\n; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n\\n; プログラムの開始地点\\n_start:\\n  ; 1は「書く」という命令\\n  mov rax, 1\\n  ; 1は標準出力\\n  mov rdi, 1\\n  ; msgで表示する文字を指定\\n  mov rsi, msg\\n  ; 文字の長さを指定\\n  mov rdx, 6\\n  ; システムコールを実行\\n  syscall\\n\\n  ; 60は「終了」という命令\\n  mov rax, 60\\n  ; エラーコード0\\n  xor rdi, rdi\\n  ; システムコールを実行\\n  syscall",
-        "holeyCode": "; データセクションを宣言\\nsection .___\\n  ; 文字列msgを定義\\n  msg db \"___\", 0xA\\n\\n; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n\\n; プログラムの開始地点\\n___:\\n  ; 1は「書く」という命令\\n  mov ___, ___\\n  ; 1は標準出力\\n  mov ___, ___\\n  ; msgで表示する文字を指定\\n  mov ___, ___\\n  ; 文字の長さを指定\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___\\n\\n  ; 60は「終了」という命令\\n  mov ___, ___\\n  ; エラーコード0\\n  xor ___, ___\\n  ; システムコールを実行\\n  ___",
+        "correctCode": "; データセクションを宣言\\nsection .data\\n  ; 文字列msgを定義\\n  msg db \"こんにちは\", 0xA\\n\\n; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n\\n; プログラムの開始地点\\n_start:\\n  ; 1は「書く」という命令\\n  mov rax, 1\\n  ; 1は標準出力\\n  mov rdi, 1\\n  ; msgで表示する文字を指定\\n  mov rsi, msg\\n  ; 文字のバイト数を指定\\n  mov rdx, 16\\n  ; システムコールを実行\\n  syscall\\n\\n  ; 60は「終了」という命令\\n  mov rax, 60\\n  ; エラーコード0\\n  xor rdi, rdi\\n  ; システムコールを実行\\n  syscall",
+        "holeyCode": "; データセクションを宣言\\nsection .___\\n  ; 文字列msgを定義\\n  msg db \"___\", 0xA\\n\\n; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n\\n; プログラムの開始地点\\n___:\\n  ; 1は「書く」という命令\\n  mov ___, ___\\n  ; 1は標準出力\\n  mov ___, ___\\n  ; msgで表示する文字を指定\\n  mov ___, ___\\n  ; 文字のバイト数を指定\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___\\n\\n  ; 60は「終了」という命令\\n  mov ___, ___\\n  ; エラーコード0\\n  xor ___, ___\\n  ; システムコールを実行\\n  ___",
         "correctLines": [
                   "; データセクションを宣言",
                   "section .data",
@@ -47,8 +47,8 @@ export const assemblyData = {
                   "  mov rdi, 1",
                   "  ; msgで表示する文字を指定",
                   "  mov rsi, msg",
-                  "  ; 文字の長さを指定",
-                  "  mov rdx, 6",
+                  "  ; 文字のバイト数を指定",
+                  "  mov rdx, 16",
                   "  ; システムコールを実行",
                   "  syscall",
                   "",
@@ -60,41 +60,41 @@ export const assemblyData = {
                   "  syscall"
         ],
         "lineHints": [
-                  null,
-                  "ここはおまじない（データの場所）です。",
-                  null,
-                  "表示したい文字を準備します。",
-                  null,
-                  null,
-                  "ここもおまじない（スタートの目印）です。",
-                  null,
-                  "ここからスタートします！",
-                  null,
-                  null,
-                  "場所「1（画面）」を机に置きます。",
-                  null,
-                  "表示する文字の名前 `msg` を入力しましょう。",
-                  null,
-                  "文字の長さ（6文字分）を机に置きます。",
-                  null,
-                  "ボスに実行を頼みます！",
-                  null,
-                  "プログラムを終わる準備です。",
-                  null,
-                  "エラーがないことを報告します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "ここはおまじない（データの場所）です。",
+          null,
+          "表示したい文字を準備します。",
+          null,
+          null,
+          "ここもおまじない（スタートの目印）です。",
+          null,
+          "ここからスタートします！",
+          null,
+          null,
+          "場所「1（画面）」を机に置きます。",
+          null,
+          "表示する文字の名前 `msg` を入力しましょう。",
+          null,
+          "文字のバイト数（16バイト分）を机に置きます。",
+          null,
+          "ボスに実行を頼みます！",
+          null,
+          "プログラムを終わる準備です。",
+          null,
+          "エラーがないことを報告します。",
+          null,
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
             "msg"
           ],
-          "others": [".data", "Hello", ".text", "_start", "1", "6", "syscall", "60", "rdi", "data", "text", "rax", "rsi", "rdx", "こんにちは"]
+          "others": [".data", "Hello", ".text", "_start", "1", "16", "syscall", "60", "rdi", "data", "text", "rax", "rsi", "rdx", "こんにちは"]
         },
         "testCases": [
           {
@@ -147,20 +147,20 @@ export const assemblyData = {
           null,
           "文字の長さを入力しましょう。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "strings": [
@@ -215,12 +215,12 @@ export const assemblyData = {
           "終了の命令番号を入力しましょう。",
           "レジスタを0にする命令を入力しましょう。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "numbers": [
@@ -277,18 +277,18 @@ export const assemblyData = {
         ],
         "lineHints": [
           "足し算の命令を入力しましょう。",
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -341,18 +341,18 @@ export const assemblyData = {
         ],
         "lineHints": [
           "引き算の命令を入力しましょう。",
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -404,17 +404,17 @@ export const assemblyData = {
         ],
         "lineHints": [
           "コピー先のレジスタ名を入力しましょう。",
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "registers": [
@@ -466,17 +466,17 @@ export const assemblyData = {
         ],
         "lineHints": [
           "比較の命令を入力しましょう。",
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -533,22 +533,22 @@ export const assemblyData = {
         ],
         "lineHints": [
           "等しければジャンプする命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -603,19 +603,19 @@ export const assemblyData = {
         ],
         "lineHints": [
           "無条件ジャンプの命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [
@@ -666,16 +666,16 @@ export const assemblyData = {
         ],
         "lineHints": [
           "値を1増やす命令を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "instructions": [

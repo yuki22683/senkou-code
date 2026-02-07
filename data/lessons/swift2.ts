@@ -48,7 +48,7 @@ export const swift2Data = {
           "nil チェックをします。",
           null,
           "! でアンラップします。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -102,7 +102,7 @@ export const swift2Data = {
           "let で値を取り出します。",
           null,
           "変数の内容を画面に出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -168,7 +168,7 @@ export const swift2Data = {
           null,
           "width と入力しましょう。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -238,9 +238,9 @@ export const swift2Data = {
           "Tama と入力しましょう。",
           "name と入力しましょう。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -251,7 +251,7 @@ export const swift2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Tama\
+            "expected_output": "タマ\
 "
           }
         ]
@@ -314,11 +314,11 @@ export const swift2Data = {
           null,
           "Dog と入力しましょう。",
           "speak と入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -376,7 +376,7 @@ export const swift2Data = {
           "* で掛け算します。",
           "double と入力しましょう。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -551,10 +551,10 @@ export const swift2Data = {
           "nil と入力しましょう。",
           null,
           "関数の実行を終了し、呼び出し元に戻ります。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "変数の内容を画面に出力します。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "check と入力しましょう。"
         ],
@@ -632,13 +632,13 @@ export const swift2Data = {
           "green を入力しましょう。",
           null,
           "blue を入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -649,7 +649,7 @@ export const swift2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "red\
+            "expected_output": "赤\
 "
           }
         ]

@@ -42,7 +42,7 @@ export const perl2Data = {
           null,
           "print で出力します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -236,7 +236,7 @@ export const perl2Data = {
           null,
           "print で出力します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -291,7 +291,7 @@ export const perl2Data = {
           "shift で引数を取り出します。",
           null,
           "return で戻り値を返します。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "print で出力します。",
           null

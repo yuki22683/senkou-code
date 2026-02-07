@@ -48,7 +48,7 @@ export const kotlin2Data = {
           "null チェックをします。",
           null,
           "println で出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -428,7 +428,7 @@ export const kotlin2Data = {
           "two と入力しましょう。",
           null,
           "other と入力しましょう。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "println と入力しましょう。"
         ],

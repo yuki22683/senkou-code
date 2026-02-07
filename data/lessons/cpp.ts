@@ -38,7 +38,7 @@ export const cppData = {
           null,
           "標準出力ストリームに文字列を流し込み、表示します。",
           "プログラムが正常に終了したことを示す値（通常は0）を返します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "strings": [
@@ -84,13 +84,13 @@ export const cppData = {
         ],
         "lineHints": [
           null,
-          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
           "はこの名前 x を指定して、表示させます。",
-          null,
-          null
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -139,13 +139,13 @@ export const cppData = {
         ],
         "lineHints": [
           null,
-          null,
-          null,
-          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "整数型の変数を宣言し、初期値を代入します。",
+          "整数型の変数を宣言し、初期値を代入します。",
           null,
           "たし算なので `+` を使います。",
-          null,
-          null
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -189,11 +189,11 @@ export const cppData = {
         ],
         "lineHints": [
           null,
-          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           null,
           "あまりを求める % 演算子を使います。",
-          null,
-          null
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -245,15 +245,15 @@ export const cppData = {
         ],
         "lineHints": [
           null,
-          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
           "変数scoreに10を加算します。",
           null,
           "標準出力ストリームに文字列を流し込み、表示します。",
-          null,
-          null
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -292,25 +292,25 @@ export const cppData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <iostream>\\nint main() {\\n    int age = 10;\\n    // age と入力\\n    std::cout << \"私は\" << 年齢 << \"歳です.\" << std::endl;\\n    return 0;\\n}",
+        "correctCode": "#include <iostream>\\nint main() {\\n    int age = 10;\\n    // age と入力\\n    std::cout << \"私は\" << age << \"歳です.\" << std::endl;\\n    return 0;\\n}",
         "holeyCode": "#include <iostream>\\nint ___() {\\n    int age = ___;\\n    // age と入力\\n    std::cout << ___ << age << \"歳です.\" << std::endl;\\n    return ___;\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
           "    int age = 10;",
           "    // age と入力",
-          "    std::cout << \"私は\" << 年齢 << \"歳です.\" << std::endl;",
+          "    std::cout << \"私は\" << age << \"歳です.\" << std::endl;",
           "    return 0;",
           "}"
         ],
         "lineHints": [
           null,
-          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           "整数型の変数を宣言し、初期値を代入します。",
           null,
           "標準出力ストリームに文字列を流し込み、表示します。",
-          null,
-          null
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -321,7 +321,7 @@ export const cppData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "I am 10 years old.\
+            "expected_output": "私は10歳です.\
 "
           }
         ]
@@ -360,12 +360,12 @@ export const cppData = {
           null,
           null,
           null,
-          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           null,
           "りんごとバナナを文字列として配列に入れます。",
           null,
           "2番目のデータはインデックス1です。",
-          null,
+          "プログラムの正常終了を示す値0を返す。",
           null
         ],
         "candidates": {
@@ -415,16 +415,16 @@ export const cppData = {
         ],
         "lineHints": [
           null,
-          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
           "scoreが80より大きいかを判定します。",
           null,
           "標準出力ストリームに文字列を流し込み、表示します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -480,7 +480,7 @@ export const cppData = {
         ],
         "lineHints": [
           null,
-          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
@@ -491,9 +491,9 @@ export const cppData = {
           "もし条件が満たされなかった場合に実行する処理を記述します。",
           null,
           "標準出力ストリームに文字列を流し込み、表示します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -504,7 +504,7 @@ export const cppData = {
         "testCases": [
           {
             "input": " ",
-            "expected_output": "Minor\
+            "expected_output": "未成年\
 "
           }
         ]
@@ -542,16 +542,16 @@ export const cppData = {
         ],
         "lineHints": [
           null,
-          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
           "scoreが80以上かつ100以下かを判定します。",
           null,
           "標準出力ストリームに文字列を流し込み、表示します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -607,14 +607,14 @@ export const cppData = {
         "lineHints": [
           null,
           null,
-          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           "複数の値をまとめて格納する配列を作成します。",
           null,
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
-          null,
-          null,
-          null,
-          null
+          "変数の値を標準出力に出力します。",
+          "ここを正しく入力してください。",
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -667,14 +667,14 @@ export const cppData = {
           null,
           null,
           null,
-          null,
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           "mapで文字列から整数への辞書を作成します。",
           null,
-          "名前（キー）として \"Math\" と入力します。",
+          " と入力します。",
           null,
-          "同じく \"Math\" と入力してデータを取り出します。",
-          null,
-          null
+          " と入力してデータを取り出します。",
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "strings": [
@@ -722,13 +722,13 @@ export const cppData = {
         "lineHints": [
           null,
           "void型の値を返す関数（greet）を定義します。",
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           null,
           "関数（greet）を呼び出して実行します。",
-          null,
-          null
+          "プログラムの正常終了を示す値0を返す。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [

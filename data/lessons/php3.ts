@@ -36,7 +36,7 @@ export const php3Data = {
           "無名関数を定義するキーワードです。",
           null,
           "2倍にする演算子です。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -133,7 +133,7 @@ export const php3Data = {
           null,
           "Null合体演算子です。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -150,7 +150,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "$result",
-            "expected_output": "Guest"
+            "expected_output": "ゲスト"
           }
         ]
       },
@@ -244,8 +244,8 @@ export const php3Data = {
           null,
           "デフォルトケースのキーワードです。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -267,7 +267,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "$message",
-            "expected_output": "Excellent"
+            "expected_output": "優秀"
           }
         ]
       },
@@ -287,13 +287,13 @@ export const php3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// functionで関数を定義\\nfunction createUser($name, $age) {\\n    // returnで連想配列を返す\\n    return ['名前' => $名前, '年齢' => $age];\\n}\\n// age, nameの順で名前付き引数を指定\\n$user = createUser(age: 30, name: 'アリス');",
-        "holeyCode": "// functionで関数を定義\\nfunction createUser($name, $___) {\\n    // returnで連想配列を返す\\n    return ['名前' => $名前, '___' => $age];\\n___\\n// age, nameの順で名前付き引数を指定\\n$user = createUser(age: ___, name: 'アリス');",
+        "correctCode": "// functionで関数を定義\\nfunction createUser($name, $age) {\\n    // returnで連想配列を返す\\n    return ['名前' => $name, '年齢' => $age];\\n}\\n// age, nameの順で名前付き引数を指定\\n$user = createUser(age: 30, name: 'アリス');",
+        "holeyCode": "// functionで関数を定義\\nfunction createUser($name, $___) {\\n    // returnで連想配列を返す\\n    return ['名前' => $name, '___' => $age];\\n___\\n// age, nameの順で名前付き引数を指定\\n$user = createUser(age: ___, name: 'アリス');",
         "correctLines": [
           "// functionで関数を定義",
           "function createUser($name, $age) {",
           "    // returnで連想配列を返す",
-          "    return ['名前' => $名前, '年齢' => $age];",
+          "    return ['名前' => $name, '年齢' => $age];",
           "}",
           "// age, nameの順で名前付き引数を指定",
           "$user = createUser(age: 30, name: 'アリス');"
@@ -302,10 +302,10 @@ export const php3Data = {
           null,
           "年齢と名前の引数名を指定します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -323,7 +323,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "$user['名前']",
-            "expected_output": "Alice"
+            "expected_output": "アリス"
           }
         ]
       },
@@ -366,14 +366,14 @@ export const php3Data = {
           null,
           "トレイトを使用するキーワードです。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "新しいクラス（Greeter）を定義します。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -430,11 +430,11 @@ export const php3Data = {
           null,
           "値を一つずつ返すキーワードです。",
           null,
+          "繰り返し処理（ループ）を開始する。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -500,7 +500,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "$name",
-            "expected_output": "Alice"
+            "expected_output": "アリス"
           },
           {
             "input": "$age",
@@ -544,11 +544,11 @@ export const php3Data = {
           null,
           "同じアクセス修飾子です。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -565,7 +565,7 @@ export const php3Data = {
         "testCases": [
           {
             "input": "(new Person('アリス', 30))->name",
-            "expected_output": "Alice"
+            "expected_output": "アリス"
           }
         ]
       }

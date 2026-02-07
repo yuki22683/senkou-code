@@ -37,14 +37,14 @@ export const pythonData5 = {
           null,
           "open関数を使います。",
           null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -206,11 +206,11 @@ line3\
           "JSONに変換するメソッドです。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -260,13 +260,13 @@ line3\
           "パターンを検索するメソッドです。",
           null,
           null,
+          "変数に文字列データを代入（保存）します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -314,11 +314,11 @@ line3\
           "全ての一致を取得するメソッドです。",
           null,
           null,
+          "変数に文字列データを代入（保存）します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -366,11 +366,11 @@ line3\
           "置換するメソッドです。",
           null,
           null,
+          "変数に文字列データを代入（保存）します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -418,11 +418,11 @@ line3\
           "collectionsモジュールから特定の機能（Counter）を読み込みます。",
           null,
           null,
+          "変数に文字列データを代入（保存）します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -472,13 +472,13 @@ line3\
           "collectionsモジュールから特定の機能（defaultdict）を読み込みます。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -528,13 +528,13 @@ line3\
           "itertoolsモジュールから特定の機能（chain）を読み込みます。",
           null,
           null,
+          "配列を複数の値で初期化する。",
           null,
+          "配列を複数の値で初期化する。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "keywords": [

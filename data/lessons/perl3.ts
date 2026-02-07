@@ -36,10 +36,10 @@ export const perl3Data = {
         "lineHints": [
           null,
           "open でファイルを開きます。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -88,11 +88,11 @@ export const perl3Data = {
         ],
         "lineHints": [
           "close でファイルを閉じます。",
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -142,8 +142,8 @@ export const perl3Data = {
           "chomp で改行を除去します。",
           null,
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -191,8 +191,8 @@ export const perl3Data = {
         "lineHints": [
           "split で分割します。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -207,7 +207,7 @@ export const perl3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "banana\
+            "expected_output": "バナナ\
 "
           }
         ]
@@ -240,8 +240,8 @@ export const perl3Data = {
         "lineHints": [
           "join で結合します。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -289,8 +289,8 @@ export const perl3Data = {
         "lineHints": [
           "push で追加します。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -338,8 +338,8 @@ export const perl3Data = {
         "lineHints": [
           "pop で取り出します。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -387,8 +387,8 @@ export const perl3Data = {
         "lineHints": [
           "sort で並べ替えます。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -403,7 +403,7 @@ export const perl3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "apple\
+            "expected_output": "さくらんぼ\
 "
           }
         ]
@@ -436,8 +436,8 @@ export const perl3Data = {
         "lineHints": [
           "reverse で逆順にします。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -485,8 +485,8 @@ export const perl3Data = {
         "lineHints": [
           "length で長さを取得します。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {

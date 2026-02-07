@@ -40,7 +40,7 @@ export const pythonData2 = {
           "f-string の中で `name` を使います。",
           null,
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -97,10 +97,10 @@ export const pythonData2 = {
           null,
           "関数（say_hi）を新しく定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null
+          "関数（say_hi）を呼び出して実行する。"
         ],
         "candidates": {
           "variables": [
@@ -153,12 +153,12 @@ export const pythonData2 = {
           null,
           "`return` を使って計算結果を返します。",
           null,
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -214,14 +214,14 @@ export const pythonData2 = {
           null,
           "かけ算の記号 `*` を使います。",
           null,
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
+          "変数の内容を画面に出力します。",
           null,
-          null,
-          null,
-          null,
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "operators": [
@@ -269,7 +269,7 @@ export const pythonData2 = {
           null,
           "開始は `0`、終了は `4` です。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "numbers": [
@@ -373,11 +373,11 @@ export const pythonData2 = {
           null,
           "変数totalを宣言し、0を設定します。",
           null,
+          "変数totalに10を加算して再代入する。",
           null,
+          "変数totalに5を加算して再代入する。",
           null,
-          null,
-          null,
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "operators": [
@@ -424,7 +424,7 @@ export const pythonData2 = {
           null,
           "`%` で余りを求めます。",
           null,
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "operators": [
@@ -472,8 +472,8 @@ export const pythonData2 = {
           null,
           "変数ageを宣言し、25を設定します。",
           null,
-          null,
-          null
+          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "指定された文字列を画面に出力する関数を使用します。"
         ],
         "candidates": {
           "keywords": [
@@ -517,7 +517,7 @@ export const pythonData2 = {
         "lineHints": [
           null,
           "内包表記では `for` キーワードを使います。",
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -561,7 +561,7 @@ export const pythonData2 = {
         "lineHints": [
           null,
           "条件を追加するには `if` を使います。",
-          null
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -613,9 +613,9 @@ export const pythonData2 = {
           null,
           "`except` キーワードで例外をキャッチします。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "指定された文字列を画面に出力する関数を使用します。"
         ],
         "candidates": {
           "keywords": [
@@ -668,14 +668,14 @@ export const pythonData2 = {
           null,
           "関数（meow）を新しく定義します。",
           null,
+          "関数（meow）を新しく定義します。",
+          null,
+          "指定された文字列を画面に出力する関数を使用します。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -737,16 +737,16 @@ export const pythonData2 = {
           null,
           "`self` を使ってオブジェクトに属性を保存します。",
           null,
+          "ここを正しく入力してください。",
+          null,
+          "関数（say_name）を新しく定義します。",
+          null,
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [

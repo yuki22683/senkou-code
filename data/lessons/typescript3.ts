@@ -50,13 +50,13 @@ export const typescriptData3 = {
           "ポート番号の初期値を数値で指定します。",
           null,
           "取得したいプロパティ名を指定します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "types": [
@@ -118,11 +118,11 @@ export const typescriptData3 = {
           null,
           "verboseの値を真偽値で指定します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "types": [
@@ -188,9 +188,9 @@ export const typescriptData3 = {
           "取得したいプロパティ名を指定します。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "types": [
@@ -203,7 +203,7 @@ export const typescriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Apple\
+            "expected_output": "りんご\
 "
           }
         ]
@@ -256,9 +256,9 @@ export const typescriptData3 = {
           "取得したいプロパティ名を指定します。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "types": [
@@ -271,7 +271,7 @@ export const typescriptData3 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Alice\
+            "expected_output": "アリス\
 "
           }
         ]
@@ -312,21 +312,21 @@ export const typescriptData3 = {
                   "console.log(prices['りんご']);"
         ],
         "lineHints": [
-                  null,
-                  "ユニオン型を作る演算子です。",
-                  null,
-                  "Record でキーと値の型を指定します。",
-                  null,
-                  null,
-                  "バナナの価格を数値で指定します。",
-                  null,
-                  "取得したいプロパティ名を指定します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "ユニオン型を作る演算子です。",
+          null,
+          "Record でキーと値の型を指定します。",
+          null,
+          null,
+          "バナナの価格を数値で指定します。",
+          null,
+          "取得したいプロパティ名を指定します。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          null,
+          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "types": [
@@ -384,9 +384,9 @@ export const typescriptData3 = {
           "x座標のプロパティ名を指定します。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "types": [
@@ -450,9 +450,9 @@ export const typescriptData3 = {
           null,
           "2つ目の変数を出力に追加します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -505,20 +505,20 @@ export const typescriptData3 = {
                   "console.log(a, b);"
         ],
         "lineHints": [
-                  null,
-                  "Promiseの中身の型を推論して取り出すキーワードです。",
-                  null,
-                  null,
-                  "Promiseではない型を指定します。",
-                  null,
-                  "Promise<string>をアンラップした結果の値です。",
-                  null,
-                  null,
-                  "2つ目の変数を出力に追加します。",
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "Promiseの中身の型を推論して取り出すキーワードです。",
+          null,
+          null,
+          "Promiseではない型を指定します。",
+          null,
+          "Promise<string>をアンラップした結果の値です。",
+          null,
+          null,
+          "2つ目の変数を出力に追加します。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -552,8 +552,8 @@ export const typescriptData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "interface Person {\\n  // 名前の型\\n  name: string;\\n  // 年齢の型\\n  age: number;\\n}\\n// keyof でオブジェクトのキーを取得\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\n  // キーで値を取得して返す\\n  return p[key];\\n}\\n\\n// personに{name: 'ボブ', age: 30}を代入\\nconst person = { name: 'ボブ', age: 30 };\\n// 名前を取得して出力\\nconsole.log(getProperty(person, '名前'));",
-        "holeyCode": "interface ___ {\\n  // 名前の型\\n  name: ___;\\n  // 年齢の型\\n  age: ___;\\n___\\n// keyof でオブジェクトのキーを取得\\nfunction getProperty<___ extends keyof Person>(p: Person, key: K) {\\n  // キーで値を取得して返す\\n  return p[___];\\n___\\n\\n// personに{name: 'ボブ', age: 30}を代入\\nconst ___ = { name: 'ボブ', age: 30 };\\n// 名前を取得して出力\\nconsole.___(getProperty(person, '名前'));",
+        "correctCode": "interface Person {\\n  // 名前の型\\n  name: string;\\n  // 年齢の型\\n  age: number;\\n}\\n// keyof でオブジェクトのキーを取得\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\n  // キーで値を取得して返す\\n  return p[key];\\n}\\n\\n// personに{name: 'ボブ', age: 30}を代入\\nconst person = { name: 'ボブ', age: 30 };\\n// 名前を取得して出力\\nconsole.log(getProperty(person, 'name'));",
+        "holeyCode": "interface ___ {\\n  // 名前の型\\n  name: ___;\\n  // 年齢の型\\n  age: ___;\\n___\\n// keyof でオブジェクトのキーを取得\\nfunction getProperty<___ extends keyof Person>(p: Person, key: K) {\\n  // キーで値を取得して返す\\n  return p[___];\\n___\\n\\n// personに{name: 'ボブ', age: 30}を代入\\nconst ___ = { name: 'ボブ', age: 30 };\\n// 名前を取得して出力\\nconsole.___(getProperty(person, 'name'));",
         "correctLines": [
           "interface Person {",
           "  // 名前の型",
@@ -570,7 +570,7 @@ export const typescriptData3 = {
           "// personに{name: 'ボブ', age: 30}を代入",
           "const person = { name: 'ボブ', age: 30 };",
           "// 名前を取得して出力",
-          "console.log(getProperty(person, '名前'));"
+          "console.log(getProperty(person, 'name'));"
         ],
         "lineHints": [
           "名前は文字列なのでstring型です。",
@@ -583,12 +583,12 @@ export const typescriptData3 = {
           "Bobの年齢を数値で指定します。",
           null,
           "取得したいプロパティ名を文字列で指定します。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -596,12 +596,12 @@ export const typescriptData3 = {
             "typeof",
             "instanceof"
           ],
-          "others": ["string", "number", "key", "30", "'名前'", "Person", "}", "K", "person", "log"]
+          "others": ["string", "number", "key", "30", "'name'", "Person", "}", "K", "person", "log"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bob\
+            "expected_output": "ボブ\
 "
           }
         ]
@@ -652,15 +652,15 @@ export const typescriptData3 = {
           null,
           "出力するプロパティ名を指定します。",
           null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

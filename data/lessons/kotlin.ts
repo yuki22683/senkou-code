@@ -205,10 +205,10 @@ export const kotlinData = {
           null,
           "変数hpを宣言し、100を設定します。",
           null,
+          "変数hpに20を加算して再代入する。",
           null,
-          null,
-          null,
-          null
+          "変数hpから50を減算して再代入する。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -266,8 +266,8 @@ export const kotlinData = {
           "100 と入力しましょう。",
           null,
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "numbers": [
@@ -325,11 +325,11 @@ export const kotlinData = {
         ],
         "lineHints": [
           "定数scoreを宣言し、80を設定します。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [

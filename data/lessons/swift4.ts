@@ -57,22 +57,22 @@ export const swift4Data = {
           null,
           "protocol でプロトコルを定義します。",
           null,
+          "関数（speak）を定義します。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "構造体（Dog）を定義します。",
+          null,
+          "関数（speak）を定義します。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -85,7 +85,7 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Woof!\
+            "expected_output": "ワン！\
 "
           }
         ]
@@ -144,25 +144,25 @@ export const swift4Data = {
           null,
           "extension でプロトコルを拡張します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "構造体（User）を定義します。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -175,7 +175,7 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "ID: (id)\
+            "expected_output": "ID: 42\
 "
           }
         ]
@@ -222,13 +222,13 @@ export const swift4Data = {
           null,
           "<T> で型パラメータを定義します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "配列を複数の値で初期化する。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "symbols": [
@@ -285,11 +285,11 @@ export const swift4Data = {
           null,
           "Comparable で比較可能な型に制限します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "protocols": [
@@ -359,21 +359,21 @@ export const swift4Data = {
           "構造体（Item）を定義します。",
           null,
           null,
+          "構造体（Item）を定義します。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "変数の内容を画面に出力します。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "protocols": [
@@ -386,7 +386,7 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "{\"name\":\"Apple\"}\
+            "expected_output": "{\"name\":\"りんご\"}\
 "
           }
         ]
@@ -438,18 +438,18 @@ export const swift4Data = {
           null,
           "lazy で遅延初期化します。",
           null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "数値を呼び出し元に返す（戻り値）。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -510,13 +510,13 @@ export const swift4Data = {
           null,
           "defer でスコープ終了時の処理を登録します。",
           null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "関数（test）を呼び出して実行する。"
         ],
         "candidates": {
           "keywords": [
@@ -582,18 +582,18 @@ end\
           null,
           "guard で早期リターンします。",
           null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "関数の実行を終了して呼び出し元に戻る。",
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -668,28 +668,28 @@ end\
           null,
           "associatedtype で関連型を定義します。",
           null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "構造体（IntStack）を定義します。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -749,13 +749,13 @@ end\
           null,
           "関数（makeCollection）を定義します。",
           null,
+          "配列を複数の値で初期化する。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

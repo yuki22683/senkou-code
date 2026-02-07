@@ -36,7 +36,7 @@ export const javascriptData2 = {
           "アロー関数は `=>` を使います。",
           null,
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -134,7 +134,7 @@ export const javascriptData2 = {
           null,
           "定数を宣言し、数値を代入します。",
           null,
-          null
+          "変数remainderの値をコンソールに出力します。"
         ],
         "candidates": {
           "operators": [
@@ -185,11 +185,11 @@ export const javascriptData2 = {
           null,
           "変数totalを宣言し、初期値0を設定します。",
           null,
+          "変数totalに10を加算して再代入する。",
           null,
+          "変数totalに5を加算して再代入する。",
           null,
-          null,
-          null,
-          null
+          "変数totalの値をコンソールに出力します。"
         ],
         "candidates": {
           "operators": [
@@ -238,9 +238,9 @@ export const javascriptData2 = {
           null,
           "定数ageを宣言し、25を設定します。",
           null,
-          null,
-          null,
-          null
+          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "デバッグ用コンソールなどに文字列を出力します。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [

@@ -353,7 +353,7 @@ export const typescriptData = {
           null,
           "() のなかに、はこの名前 `isAdult` を入力します。",
           null,
-          null,
+          "デバッグ用コンソールなどに文字列を出力します。",
           null
         ],
         "candidates": {

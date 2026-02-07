@@ -79,12 +79,12 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           null,
           "x という名前のはこに 10 を入力します。",
           null,
           "変数の内容を展開して表示します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -130,13 +130,13 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
+          "PHPスクリプトの開始を宣言する。",
           null,
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "変数の内容を展開して表示します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -178,8 +178,8 @@ export const phpData = {
         "lineHints": [
           "あまりを求める % 演算子を使います。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -227,14 +227,14 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           null,
           "50 と入力しましょう。",
           null,
           "+= を使って加算します。",
           null,
-          null,
-          null
+          "変数の内容を展開して表示します。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -283,12 +283,12 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           null,
           "age に 20 を入力します。",
           null,
           "文字列を標準出力に表示します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -330,12 +330,12 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           null,
           "['りんご', 'バナナ'] と入力して配列を作ります。",
           null,
           "変数の内容を展開して表示します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "numbers": [
@@ -380,7 +380,7 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           null,
           "score = 100 と入力しましょう。",
           null,
@@ -388,7 +388,7 @@ export const phpData = {
           null,
           "文字列を標準出力に表示します。",
           "さいごに } で閉じるのを忘れないでください。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -437,7 +437,7 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           null,
           "age に 18 を入力します。",
           null,
@@ -448,8 +448,8 @@ export const phpData = {
           "もし条件が満たされなかった場合に実行する処理を記述します。",
           null,
           "文字列を標準出力に表示します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -494,15 +494,15 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           null,
           "85 と入力しましょう。",
           null,
           "複数の条件がすべて満たされているか（論理積）を判定します。",
           null,
           "文字列を標準出力に表示します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -552,13 +552,13 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           "複数の値をまとめて格納する配列（またはリスト）を作成します。",
           null,
           "「〜を〜として取り出す」をあらわす `as` キーワードを入力します。",
           "変数の内容を展開して表示します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -599,11 +599,11 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           "名前（キー）とデータのセットを作ります。",
           null,
           "変数の内容を展開して表示します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "strings": [
@@ -646,13 +646,13 @@ export const phpData = {
           "?>"
         ],
         "lineHints": [
-          null,
+          "PHPスクリプトの開始を宣言する。",
           "greet という名前の関数を定義します。",
           "文字列を標準出力に表示します。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "関数（greet）を呼び出して実行します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [

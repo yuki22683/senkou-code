@@ -33,12 +33,12 @@ export const goData = {
           "}"
         ],
         "lineHints": [
-          null,
+          "このファイルが属するパッケージ（main）を宣言します。",
           "フォーマットパッケージをインポートします。",
-          null,
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "fmt.Printlnで文字列を出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "strings": [
@@ -83,14 +83,14 @@ export const goData = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
-          null,
+          "このファイルが属するパッケージ（main）を宣言します。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "変数を宣言し、同時に数値を代入します（型推論を使用）。",
           null,
           "はこの名前 x を指定して、表示させます。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -139,15 +139,15 @@ export const goData = {
           "}"
         ],
         "lineHints": [
+          "このファイルが属するパッケージ（main）を宣言します。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          "変数を宣言し、同時に数値を代入します（型推論を使用）。",
+          "変数を宣言し、同時に数値を代入します（型推論を使用）。",
           null,
           "かけ算なので `*` を使います。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -190,12 +190,12 @@ export const goData = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
-          null,
+          "このファイルが属するパッケージ（main）を宣言します。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "あまりを求める `%` 演算子を使います。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -254,7 +254,7 @@ export const goData = {
           null,
           "hpから50を減算します。",
           "Printlnで出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -303,15 +303,15 @@ export const goData = {
           "}"
         ],
         "lineHints": [
-          null,
+          "このファイルが属するパッケージ（main）を宣言します。",
           "フォーマットパッケージをインポートします。",
-          null,
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "変数ageに10を代入します。",
           null,
           "fmt.Printfで文字列を埋め込んで出力します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -355,13 +355,13 @@ export const goData = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
-          null,
+          "このファイルが属するパッケージ（main）を宣言します。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           "スライスに複数の値を格納します。",
           null,
           "2番目のデータはインデックス1です。 `nums[1]` と入力してください。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "numbers": [
@@ -418,8 +418,8 @@ export const goData = {
           "scoreが80より大きいかを判定します。",
           null,
           "Printlnで出力します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -433,7 +433,7 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Great\
+            "expected_output": "すごい\
 "
           }
         ]
@@ -487,8 +487,8 @@ export const goData = {
           "elseで条件不成立時の処理を記述します。",
           null,
           "Printlnで出力します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -499,7 +499,7 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Small\
+            "expected_output": "小さい\
 "
           }
         ]
@@ -543,8 +543,8 @@ export const goData = {
           null,
           "scoreが70以上かつbonusが0より大きいかを判定します。",
           "Printlnで出力します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -593,15 +593,15 @@ export const goData = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
-          null,
+          "このファイルが属するパッケージ（main）を宣言します。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           "スライスに複数の値を格納します。",
           null,
           "範囲をあらわす `range` を入力しましょう。",
-          null,
-          null,
-          null
+          "変数の値を標準出力に出力します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -648,14 +648,14 @@ export const goData = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
-          null,
+          "このファイルが属するパッケージ（main）を宣言します。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "名前（キー）の種類として `string` と入力しましょう。",
           null,
-          "\"Math\" という名前を指定してデータを取り出します。",
-          null
+          " という名前を指定してデータを取り出します。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "strings": [
@@ -702,15 +702,15 @@ export const goData = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
+          "このファイルが属するパッケージ（main）を宣言します。",
+          "ここを正しく入力してください。",
           "void型の値を返す関数（greet）を定義します。",
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "関数（greet）を呼び出して実行します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [

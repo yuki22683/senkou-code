@@ -442,7 +442,7 @@ export const ruby3Data = {
         "testCases": [
           {
             "input": "Person.new('アリス', 30).name",
-            "expected_output": "Alice"
+            "expected_output": "アリス"
           }
         ]
       },

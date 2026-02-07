@@ -51,15 +51,15 @@ export const javaData2 = {
           "Vehicleクラスを定義します。",
           "moveメソッドを定義します。",
           "printlnで出力します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
           "CarクラスをVehicleを継承して定義します。",
           "honkメソッドを定義します。",
           "printlnで出力します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "Mainクラスを定義します。",
           "main関数を定義します。",
@@ -67,8 +67,8 @@ export const javaData2 = {
           "Car型の変数cを宣言し、new Car()を代入します。",
           null,
           "moveメソッドを呼び出します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -135,16 +135,16 @@ export const javaData2 = {
           "Shapeクラスを定義します。",
           "drawメソッドを定義します。",
           "printlnで出力します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "CircleクラスをShapeを継承して定義します。",
           null,
           "@Overrideアノテーションを使います。",
           "drawメソッドをオーバーライドします。",
           "printlnで出力します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "Mainクラスを定義します。",
           "main関数を定義します。",
@@ -152,8 +152,8 @@ export const javaData2 = {
           "Circle型の変数cにnew Circle()を代入します。",
           null,
           "drawメソッドを呼び出します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -216,14 +216,14 @@ export const javaData2 = {
         "lineHints": [
           "Greetingインターフェースを定義します。",
           "sayHelloメソッドを宣言します。",
-          null,
+          "ここを正しく入力してください。",
           null,
           null,
           "PersonクラスをGreetingインターフェースを実装して定義します。",
           "sayHelloメソッドを実装します。",
           "printlnで出力します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "Mainクラスを定義します。",
           "main関数を定義します。",
@@ -231,8 +231,8 @@ export const javaData2 = {
           "Person型の変数pにnew Person()を代入します。",
           null,
           "sayHelloメソッドを呼び出します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -296,13 +296,13 @@ export const javaData2 = {
           null,
           "abstract classでAnimalを定義します。",
           "abstract voidで抽象メソッドspeakを宣言します。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "DogクラスをAnimalを継承して定義します。",
           "speakメソッドを実装します。",
           "printlnで出力します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "Mainクラスを定義します。",
           "main関数を定義します。",
@@ -310,8 +310,8 @@ export const javaData2 = {
           "Dog型の変数dにnew Dog()を代入します。",
           null,
           "speakメソッドを呼び出します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -367,14 +367,14 @@ export const javaData2 = {
           "エラーが発生する可能性のある処理をここから記述します。",
           "`parseInt` メソッドを使います。",
           null,
+          "例外が発生する可能性のある処理を開始する。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "例外が発生した場合の処理を定義する。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -410,8 +410,8 @@ export const javaData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "class Main {\\n    public static void main(String[] args) {\\n        try {\\n            // println で出力する\\n            System.out.println(\"Try\");\\n        } catch (Exception e) {\\n            System.out.println(\"猫ch\");\\n        // finally で必ず実行する\\n        } finally {\\n            System.out.println(\"Finally\");\\n        }\\n    }\\n}",
-        "holeyCode": "class ___ {\\n    public static void ___\\(String[] args) {\\n        ___ {\\n            // println で出力する\\n            System.out.___(\"Try\");\\n        } ___ (Exception e) {\\n            System.out.___(\"猫ch\");\\n        // finally で必ず実行する\\n        } ___ {\\n            System.out.___(\"Finally\");\\n        ___\\n    ___\\n___",
+        "correctCode": "class Main {\\n    public static void main(String[] args) {\\n        try {\\n            // println で出力する\\n            System.out.println(\"Try\");\\n        } catch (Exception e) {\\n            System.out.println(\"Catch\");\\n        // finally で必ず実行する\\n        } finally {\\n            System.out.println(\"Finally\");\\n        }\\n    }\\n}",
+        "holeyCode": "class ___ {\\n    public static void ___\\(String[] args) {\\n        ___ {\\n            // println で出力する\\n            System.out.___(\"Try\");\\n        } ___ (Exception e) {\\n            System.out.___(\"Catch\");\\n        // finally で必ず実行する\\n        } ___ {\\n            System.out.___(\"Finally\");\\n        ___\\n    ___\\n___",
         "correctLines": [
           "class Main {",
           "    public static void main(String[] args) {",
@@ -419,7 +419,7 @@ export const javaData2 = {
           "            // println で出力する",
           "            System.out.println(\"Try\");",
           "        } catch (Exception e) {",
-          "            System.out.println(\"猫ch\");",
+          "            System.out.println(\"Catch\");",
           "        // finally で必ず実行する",
           "        } finally {",
           "            System.out.println(\"Finally\");",
@@ -430,17 +430,17 @@ export const javaData2 = {
         "lineHints": [
           "文字列をコンソールに出力し、改行します。",
           "エラーの有無に関わらず、最後に必ず実行する処理を記述します。",
+          "例外が発生する可能性のある処理を開始する。",
           null,
+          "ここを正しく入力してください。",
+          "例外が発生した場合の処理を定義する。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "例外の有無に関わらず必ず実行する処理を定義する。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -503,13 +503,13 @@ Finally\
           null,
           "ArrayList<String>型のitemsにnew ArrayList<>()を代入します。",
           null,
-          "addメソッドで\"A\"を追加します。",
+          "addメソッドで\\\"A\\\"を追加します。",
           null,
-          "addメソッドで\"B\"を追加します。",
+          "addメソッドで\\\"B\\\"を追加します。",
           null,
           "getメソッドで要素を取得し、printlnで出力します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -562,17 +562,17 @@ Finally\
           "}"
         ],
         "lineHints": [
-          null,
-          null,
+          "新しいクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           "配列の最初の要素を入力します。",
           null,
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
           null,
           "変数の値をコンソールに出力し、改行します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -637,8 +637,8 @@ B\
           "static intでmultiplyメソッドを定義します。引数bを入力します。",
           null,
           "a * bの結果を返します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "Mainクラスを定義します。",
           "main関数を定義します。",
@@ -646,8 +646,8 @@ B\
           "Calculator.multiplyメソッドを呼び出します。引数に4を入力します。",
           null,
           "printlnで出力します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -720,13 +720,13 @@ B\
           "public Item()コンストラクタを定義します。",
           null,
           "price = pでフィールドに値を代入します。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "public intでgetPriceメソッドを定義します。",
           null,
           "priceを返します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "Mainクラスを定義します。",
           "main関数を定義します。",
@@ -734,8 +734,8 @@ B\
           "Item型のitemにnew Item(100)を代入します。",
           null,
           "getPriceメソッドを呼び出してprintlnで出力します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

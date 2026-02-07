@@ -37,10 +37,10 @@ export const sql4Data = {
           null,
           "WITH でCTEを定義します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -92,11 +92,11 @@ export const sql4Data = {
           null,
           "ROW_NUMBER で連番を振ります。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -148,11 +148,11 @@ C|3\
           null,
           "RANK で順位を付けます。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -204,11 +204,11 @@ C|3\
           null,
           "SUM で累積合計を計算します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -256,7 +256,7 @@ C|3\
           null,
           "CASE で条件分岐します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -346,9 +346,9 @@ C|3\
           null,
           "INSERT でデータを挿入します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -398,11 +398,11 @@ C|3\
           null,
           "UPDATE でデータを更新します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -452,11 +452,11 @@ C|3\
           null,
           "DELETE でデータを削除します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -491,11 +491,11 @@ C|3\
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- SELECT GROUP_CONCAT と入力して値を結合\\nSELECT GROUP_CONCAT(val, '-') FROM",
-        "holeyCode": "-- SELECT GROUP_CONCAT と入力して値を結合\\nSELECT GROUP_CONCAT(val, '-') ___",
+        "correctCode": "-- SELECT GROUP_CONCAT と入力して値を結合\\nSELECT GROUP_CONCAT(val, '-') FROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
+        "holeyCode": "-- SELECT GROUP_CONCAT と入力して値を結合\\nSELECT GROUP_CONCAT(val, '-') ___ (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT '___');",
         "correctLines": [
           "-- SELECT GROUP_CONCAT と入力して値を結合",
-          "SELECT GROUP_CONCAT(val, '-') FROM"
+          "SELECT GROUP_CONCAT(val, '-') FROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');"
         ],
         "lineHints": [
           null,
@@ -507,7 +507,7 @@ C|3\
             "STRING_AGG",
             "CONCAT"
           ],
-          "others": ["SELECT", "GROUP_CONCAT(val, '-') FROM", "FROM"]
+          "others": ["SELECT", "FROM", "C"]
         },
         "testCases": [
           {

@@ -205,10 +205,10 @@ export const swiftData = {
           null,
           "変数hpを宣言し、100を設定します。",
           null,
+          "変数hpに20を加算して再代入する。",
           null,
-          null,
-          null,
-          null
+          "変数hpから50を減算して再代入する。",
+          "変数の内容を画面に出力します。"
         ],
         "candidates": {
           "operators": [
@@ -266,8 +266,8 @@ export const swiftData = {
           "再代入可能な変数を宣言し、数値を代入します。",
           null,
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "numbers": [
@@ -325,11 +325,11 @@ export const swiftData = {
         ],
         "lineHints": [
           "定数scoreを宣言し、80を設定します。",
+          "再代入可能な変数を宣言し、数値を代入します。",
           null,
-          null,
-          null,
-          null,
-          null
+          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [

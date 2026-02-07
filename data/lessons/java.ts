@@ -86,14 +86,14 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           "文字列型の変数を宣言し、文字列データを代入します。",
           null,
           "変数の値をコンソールに出力し、改行します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -146,16 +146,16 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
           "ひき算なので `-` を使います。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -206,12 +206,12 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           "あまりを求める `%` 演算子を使います。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -271,8 +271,8 @@ export const javaData = {
           null,
           "hpから50を減算します。",
           "printlnで出力します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -320,14 +320,14 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           "整数型の変数を宣言し、初期値を代入します。",
           null,
           "文字列をコンソールに出力し、改行します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -375,14 +375,14 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
-          null,
-          null,
-          "{\"あか\", \"あお\"} と入力しましょう。 { } を使うのがルールです。",
+          "} と入力しましょう。 { } を使うのがルールです。",
           null,
           "2番目のデータはインデックス1です。 `colors[1]` と入力してください。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -445,9 +445,9 @@ export const javaData = {
           "scoreが80より大きいかを判定します。",
           null,
           "printlnで出力します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -514,9 +514,9 @@ export const javaData = {
           "elseで条件不成立時の処理を記述します。",
           null,
           "printlnで出力します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -575,9 +575,9 @@ export const javaData = {
           null,
           "scoreが70以上かつbonusが0より大きいかを判定します。",
           "printlnで出力します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -627,16 +627,16 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "繰り返し処理（ループ）を開始する。",
+          "変数の値をコンソールに出力し、改行します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -687,16 +687,16 @@ export const javaData = {
         ],
         "lineHints": [
           "HashMapクラスをインポートします。",
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           "new HashMap<>(); で新しくはこを作ります。",
           null,
           "put（プット）でデータを入れます。",
           null,
           "get（ゲット）でデータを取り出します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -747,16 +747,16 @@ export const javaData = {
           "}"
         ],
         "lineHints": [
+          "外部からアクセス可能なクラス（Main）を定義します。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
           "printlnで文字列をコンソールに出力します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           "関数（greet）を呼び出して実行します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [

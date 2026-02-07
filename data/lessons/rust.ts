@@ -79,14 +79,14 @@ export const rustData = {
           "}"
         ],
         "lineHints": [
-          null,
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "再代入可能な変数を宣言し、数値を代入します。",
           null,
           "再代入可能な変数を宣言し、数値を代入します。",
           null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "numbers": [
@@ -130,10 +130,10 @@ export const rustData = {
           "}"
         ],
         "lineHints": [
-          null,
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -182,11 +182,11 @@ export const rustData = {
           null,
           "変数hpを宣言し、100を設定します。",
           null,
+          "変数hpに20を加算して再代入する。",
           null,
-          null,
-          null,
-          null,
-          null
+          "変数hpから50を減算して再代入する。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -230,14 +230,14 @@ export const rustData = {
           "}"
         ],
         "lineHints": [
-          null,
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "変数scoreを宣言し、100を設定します。",
           null,
           "条件に基づいて分岐処理を行います。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "numbers": [
@@ -285,13 +285,13 @@ export const rustData = {
         ],
         "lineHints": [
           "fn main()でメイン関数を定義します。",
+          "再代入可能な変数を宣言し、数値を代入します。",
+          "再代入可能な変数を宣言し、数値を代入します。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -337,12 +337,12 @@ export const rustData = {
           "}"
         ],
         "lineHints": [
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          null,
-          "vec![\"あか\", \"あお\"] と入力しましょう。",
+          "] と入力しましょう。",
           null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -399,15 +399,15 @@ export const rustData = {
           "}"
         ],
         "lineHints": [
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          "insert(\"みかん\", \"オレンジ\") と入力しましょう。",
+          ") と入力しましょう。",
           null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [

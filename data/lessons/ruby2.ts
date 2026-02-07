@@ -40,9 +40,9 @@ export const ruby2Data = {
           null,
           "each で各要素を処理します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ブロックを終了する。"
         ],
         "candidates": {
           "functions": [
@@ -96,9 +96,9 @@ export const ruby2Data = {
           null,
           "map で各要素を2倍にします。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -149,11 +149,11 @@ export const ruby2Data = {
         ],
         "lineHints": [
           null,
-          null,
+          "配列を複数の値で初期化する。",
           null,
           "select で 3 以上の要素を抽出します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -270,19 +270,19 @@ export const ruby2Data = {
           null,
           "@name はインスタンス変数です。",
           null,
+          "ブロックを終了する。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ブロックを終了する。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
+          "ブロックを終了する。",
           null,
           "new でインスタンスを作成します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -293,7 +293,7 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Tama\
+            "expected_output": "タマ\
 "
           }
         ]
@@ -334,15 +334,15 @@ export const ruby2Data = {
           null,
           "attr_accessor で読み書き可能にします。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ブロックを終了する。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -400,21 +400,21 @@ export const ruby2Data = {
           null,
           "新しいクラス（Car）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "文字列を出力し、最後に改行を加えます。",
           null,
+          "ブロックを終了する。",
           null,
+          "ブロックを終了する。",
           null,
+          "新しいクラス（Car）を定義します。",
           null,
+          "ブロックを終了する。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -425,7 +425,7 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "moving\
+            "expected_output": "移動中\
 "
           }
         ]
@@ -476,21 +476,21 @@ export const ruby2Data = {
           null,
           "include でモジュールを取り込みます。",
           null,
+          "文字列を出力し、最後に改行を加えます。",
           null,
+          "ブロックを終了する。",
           null,
+          "ブロックを終了する。",
           null,
+          "新しいクラス（Robot）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ブロックを終了する。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -501,7 +501,7 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "speaking\
+            "expected_output": "話し中\
 "
           }
         ]
@@ -542,11 +542,11 @@ export const ruby2Data = {
           null,
           "rescue でエラーを捕まえます。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "文字列を出力し、最後に改行を加えます。",
           null,
-          null,
-          null,
-          null
+          "ブロックを終了する。"
         ],
         "candidates": {
           "keywords": [
@@ -557,7 +557,7 @@ export const ruby2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "caught\
+            "expected_output": "キャッチ\
 "
           }
         ]

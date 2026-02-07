@@ -178,7 +178,7 @@ export const javascriptData4 = {
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
           null,
           "コンソールに出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -387,9 +387,9 @@ age: 25\
           null,
           "counter を呼び出します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -457,13 +457,13 @@ age: 25\
           "memoize で関数をラップします。",
           null,
           "5 を引数として渡します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -515,22 +515,22 @@ age: 25\
                   "console.log(process(5));"
         ],
         "lineHints": [
-                  null,
-                  "const でパイプライン関数を定義します。",
-                  null,
-                  "reduceを使い、vは累積値です。",
-                  null,
-                  null,
-                  "1 を足します。",
-                  null,
-                  "2 を掛けます。",
-                  null,
-                  "process(5) の結果を出力します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "const でパイプライン関数を定義します。",
+          null,
+          "reduceを使い、vは累積値です。",
+          null,
+          null,
+          "1 を足します。",
+          null,
+          "2 を掛けます。",
+          null,
+          "process(5) の結果を出力します。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

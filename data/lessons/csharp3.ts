@@ -50,29 +50,29 @@ export const csharp3Data = {
           "}"
         ],
         "lineHints": [
-                  null,
-                  "基本クラスライブラリを利用可能にします。",
-                  null,
-                  "System.Threading.Tasks名前空間を利用可能にします。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  "asyncで非同期メソッドを定義します。",
-                  null,
-                  "awaitで非同期処理の完了を待ちます。",
-                  null,
-                  "WriteLineで結果を表示します。",
-                  null,
-                  null,
-                  null,
-                  "整数を返すのでTask<int>を使います。",
-                  null,
-                  "Delayで指定ミリ秒待機します。",
-                  null,
-                  null,
-                  null,
-                  null
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          null,
+          "System.Threading.Tasks名前空間を利用可能にします。",
+          null,
+          null,
+          "新しいクラス（Program）を定義します。",
+          null,
+          "asyncで非同期メソッドを定義します。",
+          null,
+          "awaitで非同期処理の完了を待ちます。",
+          null,
+          "WriteLineで結果を表示します。",
+          "ここを正しく入力してください。",
+          null,
+          null,
+          "整数を返すのでTask<int>を使います。",
+          null,
+          "Delayで指定ミリ秒待機します。",
+          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -134,7 +134,7 @@ export const csharp3Data = {
           "System.Linq名前空間を利用可能にします。",
           null,
           null,
-          null,
+          "新しいクラス（Program）を定義します。",
           null,
           "Mainはプログラムの開始地点です。",
           null,
@@ -143,8 +143,8 @@ export const csharp3Data = {
           "OrderByで昇順にソートします。",
           null,
           "Joinで要素をカンマ区切りで連結して表示します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -206,7 +206,7 @@ export const csharp3Data = {
           "System.Linq名前空間を利用可能にします。",
           null,
           null,
-          null,
+          "新しいクラス（Program）を定義します。",
           null,
           "Mainはプログラムの開始地点です。",
           null,
@@ -215,8 +215,8 @@ export const csharp3Data = {
           "FirstOrDefaultは空の場合にデフォルト値（intなら0）を返します。",
           null,
           "WriteLineでresultを表示します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -278,7 +278,7 @@ export const csharp3Data = {
           "System.Linq名前空間を利用可能にします。",
           null,
           null,
-          null,
+          "新しいクラス（Program）を定義します。",
           null,
           "Mainはプログラムの開始地点です。",
           null,
@@ -287,8 +287,8 @@ export const csharp3Data = {
           "Allで全要素が0より大きいかチェックします。",
           null,
           "WriteLineでallPositive（True）を表示します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -350,7 +350,7 @@ export const csharp3Data = {
           "System.Linq名前空間を利用可能にします。",
           null,
           null,
-          null,
+          "新しいクラス（Program）を定義します。",
           null,
           "Mainはプログラムの開始地点です。",
           null,
@@ -359,8 +359,8 @@ export const csharp3Data = {
           "Sumで全要素の合計を計算します。",
           null,
           "WriteLineでtotal（60）を表示します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -421,28 +421,28 @@ export const csharp3Data = {
           "}"
         ],
         "lineHints": [
-                  null,
-                  "基本クラスライブラリを利用可能にします。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  "Mainはプログラムの開始地点です。",
-                  null,
-                  "整数型の変数を宣言し、初期値を代入します。",
-                  null,
-                  "switchキーワードで値に応じて分岐します。",
-                  null,
-                  "oneという文字列を返します。",
-                  null,
-                  "twoという文字列を返します。",
-                  null,
-                  "otherという文字列を返します。",
-                  null,
-                  "WriteLineで結果を表示します。",
-                  null,
-                  null,
-                  null
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          null,
+          null,
+          "新しいクラス（Program）を定義します。",
+          null,
+          "Mainはプログラムの開始地点です。",
+          null,
+          "整数型の変数を宣言し、初期値を代入します。",
+          null,
+          "switchキーワードで値に応じて分岐します。",
+          null,
+          "oneという文字列を返します。",
+          null,
+          "twoという文字列を返します。",
+          null,
+          "otherという文字列を返します。",
+          "ここを正しく入力してください。",
+          "WriteLineで結果を表示します。",
+          "変数の値をコンソールに出力し、改行します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -506,7 +506,7 @@ export const csharp3Data = {
           "ジェネリックコレクションを利用可能にします。",
           null,
           null,
-          null,
+          "新しいクラス（Program）を定義します。",
           null,
           "Mainはプログラムの開始地点です。",
           null,
@@ -517,8 +517,8 @@ export const csharp3Data = {
           "キーbに値2を設定します。",
           null,
           "WriteLineでキーaの値を表示します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "types": [
@@ -572,21 +572,21 @@ export const csharp3Data = {
                   "}"
         ],
         "lineHints": [
-                  null,
-                  "基本クラスライブラリを利用可能にします。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  "Mainはプログラムの開始地点です。",
-                  null,
-                  "変数を宣言し、数値を代入します。",
-                  null,
-                  "変数を宣言し、数値を代入します。",
-                  null,
-                  "$で文字列補間を行い、{x+y}で計算結果を埋め込みます。",
-                  null,
-                  null
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          null,
+          null,
+          "新しいクラス（Program）を定義します。",
+          null,
+          "Mainはプログラムの開始地点です。",
+          null,
+          "変数を宣言し、数値を代入します。",
+          null,
+          "変数を宣言し、数値を代入します。",
+          null,
+          "$で文字列補間を行い、{x+y}で計算結果を埋め込みます。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -641,22 +641,22 @@ export const csharp3Data = {
           "}"
         ],
         "lineHints": [
-                  null,
-                  "基本クラスライブラリを利用可能にします。",
-                  null,
-                  null,
-                  "recordで値型を定義します。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  "Mainはプログラムの開始地点です。",
-                  null,
-                  "Pointインスタンスを座標(10,20)で作成します。",
-                  null,
-                  "WriteLineでPoint情報を表示します。",
-                  null,
-                  null
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          null,
+          null,
+          "recordで値型を定義します。",
+          null,
+          null,
+          "新しいクラス（Program）を定義します。",
+          null,
+          "Mainはプログラムの開始地点です。",
+          null,
+          "Pointインスタンスを座標(10,20)で作成します。",
+          null,
+          "WriteLineでPoint情報を表示します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -712,23 +712,23 @@ export const csharp3Data = {
           "}"
         ],
         "lineHints": [
-                  null,
-                  "基本クラスライブラリを利用可能にします。",
-                  null,
-                  "System.IO名前空間を利用可能にします。",
-                  null,
-                  null,
-                  null,
-                  null,
-                  "Mainはプログラムの開始地点です。",
-                  null,
-                  "usingで自動解放を設定します。",
-                  null,
-                  "WriteLineでHelloを書き込みます。",
-                  null,
-                  "Trimで前後の空白を除去して表示します。",
-                  null,
-                  null
+          null,
+          "基本クラスライブラリを利用可能にします。",
+          null,
+          "System.IO名前空間を利用可能にします。",
+          null,
+          null,
+          "新しいクラス（Program）を定義します。",
+          null,
+          "Mainはプログラムの開始地点です。",
+          null,
+          "usingで自動解放を設定します。",
+          null,
+          "WriteLineでHelloを書き込みます。",
+          null,
+          "Trimで前後の空白を除去して表示します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

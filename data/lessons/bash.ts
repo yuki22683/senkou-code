@@ -131,9 +131,9 @@ export const bashData = {
         "lineHints": [
           null,
           "たし算なので `+` を使います。全体を $(( )) で囲みます。",
+          "変数に数値を代入（保存）します。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -183,7 +183,7 @@ export const bashData = {
         ],
         "lineHints": [
           null,
-          null,
+          "変数に数値を代入（保存）します。",
           null,
           "〜より大きい、をあらわす -gt を入力します。",
           null,
@@ -241,7 +241,7 @@ export const bashData = {
         ],
         "lineHints": [
           null,
-          null,
+          "変数に数値を代入（保存）します。",
           null,
           "以上、をあらわす -ge を入力します。",
           null,
@@ -250,7 +250,7 @@ export const bashData = {
           "もし条件が満たされなかった場合に実行する処理を記述します。",
           null,
           "文字列を標準出力に表示します。",
-          null
+          "if文のブロックを終了する。"
         ],
         "candidates": {
           "keywords": [
@@ -296,22 +296,22 @@ export const bashData = {
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
           null,
           "ループ処理のブロックを終了します。",
+          "変数の内容を展開して表示します。",
           null,
-          null,
-          null
+          "ループのブロックを終了する。"
         ],
         "candidates": {
           "keywords": [
             "in",
             "done"
           ],
-          "others": ["Alice", "Bob", "${names[@]}", "$name", "lice\" \"Bob\")", "アリス", "ボブ"]
+          "others": ["Alice", "Bob", "Charlie"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Alice\
-Bob\
+            "expected_output": "アリス\
+ボブ\
 "
           }
         ]

@@ -290,12 +290,12 @@ false\
           null,
           "関数（process）を呼び出して実行します。",
           null,
+          "例外の有無に関わらず必ず実行する処理を定義する。",
           null,
           null,
           null,
           null,
-          null,
-          null
+          "関数（process）を呼び出して実行する。"
         ],
         "candidates": {
           "keywords": [
@@ -370,13 +370,13 @@ Caught: エラー！\
           null,
           null,
           null,
+          "例外が発生する可能性のある処理を開始する。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
           null,
           "catch で例外をキャッチします。",
           null,
-          null,
+          "デバッグ用コンソールなどに文字列を出力します。",
           null
         ],
         "candidates": {
@@ -430,14 +430,14 @@ Caught: エラー！\
           null,
           null,
           null,
-          null,
+          "ここを正しく入力してください。",
           null,
           "'パスワード123' を設定します。",
           null,
           null,
           "user.name を出力します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -499,7 +499,7 @@ Caught: エラー！\
           "弱参照のMapを作成します。",
           null,
           null,
-          null,
+          "新しいクラス（User）を定義します。",
           null,
           "constructor で初期化します。",
           null,
@@ -514,9 +514,9 @@ Caught: エラー！\
           null,
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -584,9 +584,9 @@ Caught: エラー！\
           null,
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

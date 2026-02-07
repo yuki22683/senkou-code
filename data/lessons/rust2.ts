@@ -33,12 +33,12 @@ export const rust2Data = {
           "}"
         ],
         "lineHints": [
-          null,
+          "プログラムの実行開始地点（main関数）を定義します。",
           "String を作成します。",
           null,
           "s1 の所有権を s2 に移動します。",
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -49,7 +49,7 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "hello\
+            "expected_output": "こんにちは\
 "
           }
         ]
@@ -85,12 +85,12 @@ export const rust2Data = {
         "lineHints": [
           "関数（print_len）を定義します。",
           "& で参照を渡します。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -101,7 +101,7 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "5\
+            "expected_output": "15\
 "
           }
         ]
@@ -122,15 +122,15 @@ export const rust2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "fn add_world(s: &mut String) {\\n    s.push_str(\" 世界\");\\n}\\nfn main() {\\n    // mut で可変変数にする\\n    let mut text = String::from(\"こんにちは\");\\n    add_world(&mut text);\\n    println!(\"{}\", text);\\n}",
-        "holeyCode": "fn ___ (s: &mut String) {\\n    s.___(\" 世界\");\\n___\\nfn ___ () {\\n    // mut で可変変数にする\\n    let mut ___ = String::from(\"こんにちは\");\\n    ___(&mut text);\\n    ___!(\"{}\", text);\\n___",
+        "correctCode": "fn add_world(s: &mut String) {\\n    s.push_str(\" world\");\\n}\\nfn main() {\\n    // mut で可変変数にする\\n    let mut text = String::from(\"hello\");\\n    add_world(&mut text);\\n    println!(\"{}\", text);\\n}",
+        "holeyCode": "fn ___ (s: &mut String) {\\n    s.___(\" world\");\\n___\\nfn ___ () {\\n    // mut で可変変数にする\\n    let mut ___ = String::from(\"hello\");\\n    ___(&mut text);\\n    ___!(\"{}\", text);\\n___",
         "correctLines": [
           "fn add_world(s: &mut String) {",
-          "    s.push_str(\" 世界\");",
+          "    s.push_str(\" world\");",
           "}",
           "fn main() {",
           "    // mut で可変変数にする",
-          "    let mut text = String::from(\"こんにちは\");",
+          "    let mut text = String::from(\"hello\");",
           "    add_world(&mut text);",
           "    println!(\"{}\", text);",
           "}"
@@ -141,10 +141,10 @@ export const rust2Data = {
           "mut で可変変数にします。",
           "&mut で可変参照を渡します。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -192,13 +192,13 @@ export const rust2Data = {
         "lineHints": [
           null,
           "構造体（Rect）を定義します。",
-          null,
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           "構造体のインスタンスを作成します。",
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -248,19 +248,19 @@ export const rust2Data = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
-          null,
+          "構造体（Square）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "impl でメソッドを実装します。",
           "関数（area）を定義します。",
-          null,
-          null,
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -313,14 +313,14 @@ export const rust2Data = {
           "enum で列挙型を定義します。",
           "Direction::Up を使います。",
           "match でパターンマッチングします。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -365,14 +365,14 @@ export const rust2Data = {
           "}"
         ],
         "lineHints": [
-          null,
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "Some で値があることを示します。",
-          null,
+          "ここを正しく入力してください。",
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -424,17 +424,17 @@ export const rust2Data = {
         "lineHints": [
           "Err でエラーを返します。",
           "Ok で成功を返します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -488,17 +488,17 @@ export const rust2Data = {
           null,
           "trait でトレイトを定義します。",
           "Dog に Speak を実装します。",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "構造体（Dog）を定義します。",
+          "ここを正しく入力してください。",
+          "関数（speak）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -547,10 +547,10 @@ export const rust2Data = {
           "T を型パラメータとして使います。",
           "i32 型で呼び出します。",
           "&str 型で呼び出します。",
-          null,
-          null,
-          null,
-          null
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -562,7 +562,7 @@ export const rust2Data = {
           {
             "input": "",
             "expected_output": "42\
-hello\
+こんにちは\
 "
           }
         ]

@@ -48,8 +48,8 @@ export const csharp2Data = {
           "Moveメソッドを定義します。",
           null,
           "WriteLineで出力します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "CarクラスをVehicleを継承して定義します。",
           null,
@@ -67,7 +67,7 @@ export const csharp2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "moving\
+            "expected_output": "移動中\
 "
           }
         ]
@@ -120,16 +120,16 @@ export const csharp2Data = {
           "virtualでDrawメソッドを定義します。",
           null,
           "WriteLineで出力します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "CircleクラスをShapeを継承して定義します。",
           null,
           "overrideでDrawメソッドを上書きします。",
           null,
           "WriteLineで出力します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
           "Circle型の変数cにnew Circle()を代入します。",
@@ -196,15 +196,15 @@ export const csharp2Data = {
           "IRunnerインターフェースを定義します。",
           null,
           "Runメソッドを宣言します。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "RobotクラスをIRunnerを実装して定義します。",
           null,
           "Runメソッドを実装します。",
           null,
           "WriteLineで出力します。",
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
           "Robot型の変数rにnew Robot()を代入します。",
@@ -261,18 +261,18 @@ export const csharp2Data = {
                   "Console.WriteLine(item.Price);"
         ],
         "lineHints": [
-                  null,
-                  "Itemクラスを定義します。",
-                  null,
-                  "getで値の取得、setで値の設定ができます。",
-                  null,
-                  null,
-                  null,
-                  "Item型の変数itemにnew Item()を代入します。",
-                  null,
-                  "Priceに500を設定します。",
-                  null,
-                  null
+          null,
+          "Itemクラスを定義します。",
+          null,
+          "getで値の取得、setで値の設定ができます。",
+          "ここを正しく入力してください。",
+          null,
+          null,
+          "Item型の変数itemにnew Item()を代入します。",
+          null,
+          "Priceに500を設定します。",
+          null,
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -378,7 +378,7 @@ export const csharp2Data = {
           "inキーワードでコレクションを反復します。",
           null,
           "WriteLineで各要素を表示します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -434,7 +434,7 @@ export const csharp2Data = {
           "inキーワードでコレクションを反復します。",
           null,
           "WriteLineで各要素を表示します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -534,7 +534,7 @@ export const csharp2Data = {
           "エラー（例外）が発生した場合の処理を記述します。",
           null,
           "文字列をコンソールに出力し、改行します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

@@ -39,14 +39,14 @@ export const javaData3 = {
         "lineHints": [
           "-> でラムダ式を定義します。",
           null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -100,14 +100,14 @@ export const javaData3 = {
           "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           "`stream` でStreamを作成します。",
           null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -163,16 +163,16 @@ export const javaData3 = {
         "lineHints": [
           "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -228,16 +228,16 @@ export const javaData3 = {
         "lineHints": [
           "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -297,18 +297,18 @@ export const javaData3 = {
           "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           "`collect` と `Collectors` でリストに変換します。",
           null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "変数の値をコンソールに出力し、改行します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -364,16 +364,16 @@ export const javaData3 = {
           "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           null,
           "変数の値をコンソールに出力し、改行します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "変数の値をコンソールに出力し、改行します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -429,15 +429,15 @@ export const javaData3 = {
           "`of` で値を持つOptionalを作成します。",
           null,
           "変数の値をコンソールに出力し、改行します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "変数の値をコンソールに出力し、改行します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -490,14 +490,14 @@ export const javaData3 = {
         "lineHints": [
           "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -552,16 +552,16 @@ export const javaData3 = {
         "lineHints": [
           "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -618,16 +618,16 @@ export const javaData3 = {
         "lineHints": [
           "配列の初期値（1, 2, 3など）を`Arrays.asList()`で渡します。",
           null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [

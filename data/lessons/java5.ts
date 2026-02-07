@@ -39,18 +39,18 @@ export const javaData5 = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           "エラーが発生する可能性のある処理をここから記述します。",
           null,
           "整数型の変数を宣言し、初期値を代入します。",
-          null,
+          "例外が発生した場合の処理を定義する。",
           null,
           "文字列をコンソールに出力し、改行します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -86,8 +86,8 @@ export const javaData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        try {\\n            // println で出力する\\n            System.out.println(\"Try\");\\n        } catch (Exception e) {\\n            System.out.println(\"猫ch\");\\n        // finally で必ず実行する\\n        } finally {\\n            // println で出力する\\n            System.out.println(\"Finally\");\\n        }\\n    }\\n}",
-        "holeyCode": "public class ___ {\\n    public static void ___\\(String[] args) {\\n        ___ {\\n            // println で出力する\\n            System.out.___(\"Try\");\\n        } ___ (Exception e) {\\n            System.out.___(\"猫ch\");\\n        // finally で必ず実行する\\n        } ___ {\\n            // println で出力する\\n            System.out.___(\"Finally\");\\n        ___\\n    ___\\n___",
+        "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        try {\\n            // println で出力する\\n            System.out.println(\"Try\");\\n        } catch (Exception e) {\\n            System.out.println(\"Catch\");\\n        // finally で必ず実行する\\n        } finally {\\n            // println で出力する\\n            System.out.println(\"Finally\");\\n        }\\n    }\\n}",
+        "holeyCode": "public class ___ {\\n    public static void ___\\(String[] args) {\\n        ___ {\\n            // println で出力する\\n            System.out.___(\"Try\");\\n        } ___ (Exception e) {\\n            System.out.___(\"Catch\");\\n        // finally で必ず実行する\\n        } ___ {\\n            // println で出力する\\n            System.out.___(\"Finally\");\\n        ___\\n    ___\\n___",
         "correctLines": [
           "public class Main {",
           "    public static void main(String[] args) {",
@@ -95,7 +95,7 @@ export const javaData5 = {
           "            // println で出力する",
           "            System.out.println(\"Try\");",
           "        } catch (Exception e) {",
-          "            System.out.println(\"猫ch\");",
+          "            System.out.println(\"Catch\");",
           "        // finally で必ず実行する",
           "        } finally {",
           "            // println で出力する",
@@ -105,20 +105,20 @@ export const javaData5 = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
+          "例外が発生する可能性のある処理を開始する。",
           null,
           "文字列をコンソールに出力し、改行します。",
-          null,
-          null,
+          "例外が発生した場合の処理を定義する。",
+          "ここを正しく入力してください。",
           null,
           "エラーの有無に関わらず、最後に必ず実行する処理を記述します。",
           null,
           "文字列をコンソールに出力し、改行します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -177,24 +177,24 @@ Finally\
           "}"
         ],
         "lineHints": [
+          "java.io.*をインポートします。",
           null,
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
           null,
           "`throws` で例外をスローすることを宣言します。",
           null,
-          null,
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
+          "例外が発生する可能性のある処理を開始する。",
           null,
           "関数（riskyMethod）を呼び出して実行します。",
-          null,
+          "例外が発生した場合の処理を定義する。",
           null,
           "文字列をコンソールに出力し、改行します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -260,19 +260,19 @@ Finally\
           null,
           "`throw` で例外をスローします。",
           "`getMessage` でメッセージを取得します。",
+          "ここを正しく入力してください。",
           null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
+          "例外が発生する可能性のある処理を開始する。",
           null,
+          "ここを正しく入力してください。",
+          "例外が発生した場合の処理を定義する。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -328,20 +328,20 @@ Finally\
           "}"
         ],
         "lineHints": [
+          "java.io.*をインポートします。",
           null,
-          null,
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           "`(` でリソースを宣言します。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "例外が発生した場合の処理を定義する。",
           null,
           "`printStackTrace` でスタックトレースを出力します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "symbols": [
@@ -398,22 +398,22 @@ Finally\
           "}"
         ],
         "lineHints": [
+          "java.io.*をインポートします。",
           null,
-          null,
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           null,
           null,
           "`new` で BufferedReader を作成します。",
           null,
-          null,
+          "ここを正しく入力してください。",
           null,
           "変数の値をコンソールに出力し、改行します。",
           null,
           "`close` でリソースを閉じます。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -471,22 +471,22 @@ Finally\
           "}"
         ],
         "lineHints": [
+          "java.io.*をインポートします。",
           null,
-          null,
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           "`new` で StringWriter を作成します。",
           null,
-          null,
+          "ここを正しく入力してください。",
           null,
           "`write` で文字列を書き込みます。",
           null,
           "`flush` でバッファをフラッシュします。",
           null,
           "`toString` で文字列に変換します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -542,20 +542,20 @@ Finally\
           "}"
         ],
         "lineHints": [
+          "Javaユーティリティライブラリをインポートします。",
           null,
-          null,
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           "`new` で Scanner を作成します。",
           null,
-          null,
+          "ここを正しく入力してください。",
           null,
           "`next` で文字列を読み込みます。",
           null,
           "`println` で出力します。",
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -610,19 +610,19 @@ Finally\
           "}"
         ],
         "lineHints": [
+          "java.nio.file.*をインポートします。",
+          "Javaユーティリティライブラリをインポートします。",
           null,
-          null,
-          null,
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
           null,
           "`get` でパスを作成します。",
           null,
           "`exists` でファイルの存在を確認します。",
           null,
-          null,
-          null,
-          null
+          "変数の値をコンソールに出力し、改行します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -677,9 +677,9 @@ Finally\
           "}"
         ],
         "lineHints": [
-          null,
-          null,
-          null,
+          "外部からアクセス可能なクラス（Main）を定義します。",
+          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
+          "例外が発生する可能性のある処理を開始する。",
           null,
           "`null` を代入します。",
           null,
@@ -688,9 +688,9 @@ Finally\
           "エラー（例外）が発生した場合の処理を記述します。",
           null,
           "文字列をコンソールに出力し、改行します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "symbols": [

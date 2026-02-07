@@ -43,7 +43,7 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "found\
+            "expected_output": "見つかった\
 "
           }
         ]
@@ -85,7 +85,7 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "has data\
+            "expected_output": "has データ\
 "
           }
         ]
@@ -168,13 +168,13 @@ C\
           null,
           "INNER JOIN で内部結合します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -226,13 +226,13 @@ C\
           null,
           "LEFT JOIN で左外部結合します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -325,12 +325,12 @@ C\
           null,
           "DISTINCT で重複を除去します。",
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -365,11 +365,11 @@ C\
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- LIKEでパターン検索\\nSELECT '一致' WHERE 'こんにちは' LIKE 'H%';",
-        "holeyCode": "-- LIKEでパターン検索\\nSELECT '一致' WHERE 'こんにちは' LIKE '___%';",
+        "correctCode": "-- LIKEでパターン検索\\nSELECT '一致' WHERE 'Hello' LIKE 'H%';",
+        "holeyCode": "-- LIKEでパターン検索\\nSELECT '一致' WHERE 'Hello' LIKE '___%';",
         "correctLines": [
           "-- LIKEでパターン検索",
-          "SELECT '一致' WHERE 'こんにちは' LIKE 'H%';"
+          "SELECT '一致' WHERE 'Hello' LIKE 'H%';"
         ],
         "lineHints": [
           null,
@@ -381,12 +381,12 @@ C\
             "MATCH",
             "REGEX"
           ],
-          "others": ["H"]
+          "others": ["H", "Hello"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "matched\
+            "expected_output": "一致\
 "
           }
         ]
@@ -428,7 +428,7 @@ C\
         "testCases": [
           {
             "input": "",
-            "expected_output": "in range\
+            "expected_output": "範囲内\
 "
           }
         ]
@@ -470,7 +470,7 @@ C\
         "testCases": [
           {
             "input": "",
-            "expected_output": "found\
+            "expected_output": "見つかった\
 "
           }
         ]

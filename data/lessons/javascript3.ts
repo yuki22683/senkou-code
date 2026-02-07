@@ -42,7 +42,7 @@ export const javascriptData3 = {
           null,
           null,
           null,
-          null
+          "変数msgの値をコンソールに出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -147,7 +147,7 @@ export const javascriptData3 = {
           null,
           null,
           null,
-          null
+          "変数msgの値をコンソールに出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -243,7 +243,8 @@ export const javascriptData3 = {
           },
           {
             "title": "並行処理（へいこうしょり）の利点",
-            "content": "# 同時に実行すると速い！\\n\\n**順番に実行 vs 同時に実行：**\\n- 順番：3秒 + 3秒 = 6秒かかる\\n- 同時：3秒で両方終わる！\\n\\n**コード例：**\\n```javascript\\nasync function fetchAll() {\\n  // 2つのリクエストを同時に実行！\\n  const [users, posts] = await Promise.all([\\n    fetch('/users'),\\n    fetch('/posts')\\n  ]);\\n}\\n```\\n\\n**ポイント：**\\n互いに関係のない処理は、`Promise.all` で同時に実行すると時間短縮できます。"
+            "content": "# 同時に実行すると速い！\\n\\n**順番に実行 vs 同時に実行：**\\n- 順番：3秒 + 3秒 = 6秒かかる\\n- 同時：3秒で両方終わる！\\n\\n**コード例：**\\n```javascript\\nasync function fetchAll() {\\n  // 2つのリクエストを同時に実行！\\n  const [users, posts] = await Promise.all([\\n    fetch('/users'),\\n    fetch('/posts')\
+        ]);\\n}\\n```\\n\\n**ポイント：**\\n互いに関係のない処理は、`Promise.all` で同時に実行すると時間短縮できます。"
           }
         ],
         "initialDisplayMode": "holey",
@@ -341,9 +342,9 @@ export const javascriptData3 = {
           null,
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -411,9 +412,9 @@ export const javascriptData3 = {
           null,
           null,
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

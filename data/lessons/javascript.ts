@@ -295,7 +295,7 @@ export const javascriptData = {
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
           "コンソールに文字列を出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -365,7 +365,7 @@ export const javascriptData = {
           "もし条件が満たされなかった場合に実行する処理を記述します。",
           null,
           "コンソールに文字列を出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -427,7 +427,7 @@ export const javascriptData = {
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
           null,
           "取り出した名前（name）を console.log で出力します。",
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "variables": [
@@ -531,7 +531,7 @@ export const javascriptData = {
           "function greet() { と入力して、関数を定義します。",
           null,
           "コンソールに文字列を出力します。",
-          null,
+          "ここを正しく入力してください。",
           null,
           "関数（greet）を呼び出して実行します。"
         ],

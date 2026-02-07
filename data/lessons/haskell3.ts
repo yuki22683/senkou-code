@@ -36,7 +36,7 @@ export const haskell3Data = {
           "掛け算で2倍にします。",
           null,
           null,
-          null
+          "配列を複数の値で初期化する。"
         ],
         "candidates": {
           "4": [
@@ -84,7 +84,7 @@ export const haskell3Data = {
           "== で等価比較をします。",
           null,
           null,
-          null
+          "配列を複数の値で初期化する。"
         ],
         "candidates": {
           "4": [

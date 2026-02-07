@@ -89,7 +89,7 @@ export const perlData = {
         "lineHints": [
           null,
           "変数を宣言するキーワードを入力しましょう。",
-          null,
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -142,11 +142,11 @@ export const perlData = {
         ],
         "lineHints": [
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "足し算の記号を入力しましょう。",
-          null,
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -197,7 +197,7 @@ export const perlData = {
         "lineHints": [
           null,
           "文字をつなげる記号を入力しましょう。",
-          null,
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -248,7 +248,7 @@ export const perlData = {
         "lineHints": [
           null,
           "配列名を入力しましょう。@をつけます。",
-          null,
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -301,12 +301,12 @@ export const perlData = {
         ],
         "lineHints": [
           null,
-          null,
+          "ここを正しく入力してください。",
           null,
           "条件分岐のキーワードを入力しましょう。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -362,14 +362,14 @@ export const perlData = {
         "lineHints": [
           null,
           "もし条件が満たされなかった場合に実行する処理を記述します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           null,
+          "条件が偽の場合の処理を定義する。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -423,10 +423,10 @@ export const perlData = {
           null,
           "配列をループするキーワードを入力しましょう。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -478,7 +478,7 @@ export const perlData = {
         "lineHints": [
           null,
           "ハッシュ名を入力しましょう。%をつけます。",
-          null,
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -533,12 +533,12 @@ export const perlData = {
         "lineHints": [
           null,
           "サブルーチンを定義するキーワードを入力しましょう。",
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "関数（welcome）を呼び出して実行する。"
         ],
         "candidates": {
           "keywords": [

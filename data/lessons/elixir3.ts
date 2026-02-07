@@ -18,18 +18,18 @@ export const elixir3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Person do\\n  # defstructで構造体を定義\\n  defstruct name: \"\", メール: \"\"\\n# endでモジュールを閉じる\\nend\\n\\n# nameに\"ボブ\"、メールに\"bob@example.com\"を指定して構造体を作成\\nperson = %Person{name: \"ボブ\", メール: \"bob@例.com\"}",
-        "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule Person ___\\n  # defstructで構造体を定義\\n  defstruct name: \"\", メール: \"___\"\\n# endでモジュールを閉じる\\n___\\n\\n# nameに\"ボブ\"、メールに\"bob@example.com\"を指定して構造体を作成\\nperson = %Person{name: \"___\", メール: \"bob@例.com\"}",
+        "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Person do\\n  # defstructで構造体を定義\\n  defstruct name: \"\", email: \"\"\\n# endでモジュールを閉じる\\nend\\n\\n# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成\\nperson = %Person{name: \"ボブ\", email: \"bob@example.com\"}",
+        "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule Person ___\\n  # defstructで構造体を定義\\n  defstruct name: \"\", email: \"___\"\\n# endでモジュールを閉じる\\n___\\n\\n# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成\\nperson = %Person{name: \"___\", email: \"bob@example.com\"}",
         "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Person do",
           "  # defstructで構造体を定義",
-          "  defstruct name: \"\", メール: \"\"",
+          "  defstruct name: \"\", email: \"\"",
           "# endでモジュールを閉じる",
           "end",
           "",
-          "# nameに\"ボブ\"、メールに\"bob@example.com\"を指定して構造体を作成",
-          "person = %Person{name: \"ボブ\", メール: \"bob@例.com\"}"
+          "# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成",
+          "person = %Person{name: \"ボブ\", email: \"bob@example.com\"}"
         ],
         "lineHints": [
           null,
@@ -37,7 +37,7 @@ export const elixir3Data = {
           null,
           "構造体を定義するマクロです。",
           null,
-          null,
+          "ブロックを終了する。",
           null,
           null,
           "構造体を作成してpersonに代入します。"
@@ -57,7 +57,7 @@ export const elixir3Data = {
         "testCases": [
           {
             "input": "person.name",
-            "expected_output": "\"Bob\""
+            "expected_output": "\"ボブ\""
           }
         ]
       },
@@ -292,14 +292,14 @@ export const elixir3Data = {
           null,
           "パターンマッチを連鎖させるキーワードです。",
           "もし条件が満たされなかった場合に実行する処理を記述します。",
+          "ここを正しく入力してください。",
           null,
+          "条件が偽の場合の処理を定義する。",
+          "ここを正しく入力してください。",
           null,
+          "ブロックを終了する。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ブロックを終了する。"
         ],
         "candidates": {
           "keywords": [
@@ -313,7 +313,7 @@ export const elixir3Data = {
         "testCases": [
           {
             "input": "process(%{name: \"Alice\", age: 25})",
-            "expected_output": "{:ok, \"Alice is 25 years old\"}"
+            "expected_output": "{:ok, \"Alice is 25歳です\"}"
           }
         ]
       },
@@ -344,7 +344,7 @@ export const elixir3Data = {
           null,
           "関数（describe）を新しく定義します。",
           null,
-          null
+          "ブロックを終了する。"
         ],
         "candidates": {
           "keywords": [
@@ -373,13 +373,13 @@ export const elixir3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# defimplでプロトコルを実装\\ndefimpl Describable, for: Map do\\n  # defで関数を定義\\n  def describe(map) do\\n    \"Map with #{map_size(map)} キーs\"\\n  # endで関数を閉じる\\n  end\\n# endでブロックを閉じる\\nend", "holeyCode": "# defimplでプロトコルを実装\\ndefimpl Describable, for: Map ___\\n  # defで関数を定義\\n  def describe(map) ___\\n    \"___\"\\n  # endで関数を閉じる\\n  ___\\n# endでブロックを閉じる\\n___",
+        "correctCode": "# defimplでプロトコルを実装\\ndefimpl Describable, for: Map do\\n  # defで関数を定義\\n  def describe(map) do\\n    \"Map with #{map_size(map)} keys\"\\n  # endで関数を閉じる\\n  end\\n# endでブロックを閉じる\\nend", "holeyCode": "# defimplでプロトコルを実装\\ndefimpl Describable, for: Map ___\\n  # defで関数を定義\\n  def describe(map) ___\\n    \"___\"\\n  # endで関数を閉じる\\n  ___\\n# endでブロックを閉じる\\n___",
         "correctLines": [
           "# defimplでプロトコルを実装",
           "defimpl Describable, for: Map do",
           "  # defで関数を定義",
           "  def describe(map) do",
-          "    \"Map with #{map_size(map)} キーs\"",
+          "    \"Map with #{map_size(map)} keys\"",
           "  # endで関数を閉じる",
           "  end",
           "# endでブロックを閉じる",
@@ -390,11 +390,11 @@ export const elixir3Data = {
           "プロトコルを実装するキーワードです。",
           null,
           "関数（describe）を新しく定義します。",
+          "ここを正しく入力してください。",
           null,
+          "ブロックを終了する。",
           null,
-          null,
-          null,
-          null
+          "ブロックを終了する。"
         ],
         "candidates": {
           "keywords": [
@@ -402,7 +402,7 @@ export const elixir3Data = {
             "def",
             "end"
           ],
-          "others": ["do", "Map with #{map_size(map)} keys", "Map with #{map_size(map)} キーs"]
+          "others": ["do", "Map with #{map_size(map)} keys", "Map with #{map_size(map)} keys"]
         },
         "testCases": [
           {

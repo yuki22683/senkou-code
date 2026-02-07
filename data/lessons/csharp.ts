@@ -37,12 +37,12 @@ export const csharpData = {
         "lineHints": [
           "文字列をコンソールに出力し、改行します。",
           null,
+          "新しいクラス（Program）を定義します。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "functions": [
@@ -244,10 +244,10 @@ export const csharpData = {
           null,
           "変数hpを宣言し、100を設定します。",
           null,
+          "変数hpに20を加算して再代入する。",
           null,
-          null,
-          null,
-          null
+          "変数hpから50を減算して再代入する。",
+          "変数の値をコンソールに出力し、改行します。"
         ],
         "candidates": {
           "operators": [
@@ -402,8 +402,8 @@ export const csharpData = {
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           "文字列をコンソールに出力し、改行します。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -468,13 +468,13 @@ export const csharpData = {
           "もし条件が満たされなかった場合に実行する処理を記述します。",
           null,
           "文字列をコンソールに出力し、改行します。",
+          "ここを正しく入力してください。",
           null,
+          "条件が偽の場合の処理を定義する。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -529,12 +529,12 @@ export const csharpData = {
         "lineHints": [
           null,
           "変数scoreを宣言し、80を設定します。",
+          "整数型の変数を宣言し、初期値を代入します。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -588,8 +588,8 @@ export const csharpData = {
           "foreach を使います。",
           "変数名 name を入力します。",
           null,
-          null,
-          null
+          "変数の値をコンソールに出力し、改行します。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -701,9 +701,9 @@ export const csharpData = {
           "文字列をコンソールに出力し、改行します。",
           null,
           "関数（Greet）を呼び出して実行します。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "関数（Greet）を呼び出して実行する。"
         ],
         "candidates": {
           "keywords": [

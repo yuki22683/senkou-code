@@ -49,9 +49,9 @@ export const typescriptData4 = {
           null,
           "掛け算の倍数を数値で指定します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
+          "ここを正しく入力してください。",
           null
         ],
         "candidates": {
@@ -91,8 +91,8 @@ export const typescriptData4 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 車の型\\ntype Car = { drive: () => void };\\n// 船の型\\ntype Boat = { sail: () => void };\\n\\nfunction operate(vehicle: Car | Boat): void {\\n  // in でプロパティの存在をチェック\\n  if ('運転' in vehicle) {\\n    // 車の操作\\n    console.log('運転中');\\n  } else {\\n    // 船の操作\\n    console.log('航海中');\\n  }\\n}\\n\\n// 車を操作\\noperate({ drive: () => {} });",
-        "holeyCode": "// 車の型\\ntype Car = { drive: () => ___ };\\n// 船の型\\ntype Boat = { sail: () => ___ };\\n\\nfunction operate(vehicle: Car | Boat): void {\\n  // in でプロパティの存在をチェック\\n  if ('運転' ___ vehicle) {\\n    // 車の操作\\n    console.log(___);\\n  } else {\\n    // 船の操作\\n    console.log(___);\\n  }\\n}\\n\\n// 車を操作\\noperate({ drive: () => {} });",
+        "correctCode": "// 車の型\\ntype Car = { drive: () => void };\\n// 船の型\\ntype Boat = { sail: () => void };\\n\\nfunction operate(vehicle: Car | Boat): void {\\n  // in でプロパティの存在をチェック\\n  if ('drive' in vehicle) {\\n    // 車の操作\\n    console.log('運転中');\\n  } else {\\n    // 船の操作\\n    console.log('航海中');\\n  }\\n}\\n\\n// 車を操作\\noperate({ drive: () => {} });",
+        "holeyCode": "// 車の型\\ntype Car = { drive: () => ___ };\\n// 船の型\\ntype Boat = { sail: () => ___ };\\n\\nfunction operate(vehicle: Car | Boat): void {\\n  // in でプロパティの存在をチェック\\n  if ('drive' ___ vehicle) {\\n    // 車の操作\\n    console.log(___);\\n  } else {\\n    // 船の操作\\n    console.log(___);\\n  }\\n}\\n\\n// 車を操作\\noperate({ drive: () => {} });",
         "correctLines": [
           "// 車の型",
           "type Car = { drive: () => void };",
@@ -101,7 +101,7 @@ export const typescriptData4 = {
           "",
           "function operate(vehicle: Car | Boat): void {",
           "  // in でプロパティの存在をチェック",
-          "  if ('運転' in vehicle) {",
+          "  if ('drive' in vehicle) {",
           "    // 車の操作",
           "    console.log('運転中');",
           "  } else {",
@@ -123,10 +123,10 @@ export const typescriptData4 = {
           null,
           "コンソールに文字列を出力します。",
           null,
+          "デバッグ用コンソールなどに文字列を出力します。",
           null,
           null,
-          null,
-          null,
+          "デバッグ用コンソールなどに文字列を出力します。",
           null,
           null,
           null,
@@ -142,13 +142,14 @@ export const typescriptData4 = {
           "others": [
             "void",
             "'運転中'",
-            "'航海中'"
+            "'航海中'",
+            "'drive'"
           ]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Driving\
+            "expected_output": "運転中\
 "
           }
         ]
@@ -209,17 +210,17 @@ export const typescriptData4 = {
           "失敗時に取得するプロパティ名を指定します。",
           null,
           null,
+          "ここを正しく入力してください。",
+          null,
+          null,
+          null,
+          "ここを正しく入力してください。",
           null,
           null,
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -286,15 +287,15 @@ export const typescriptData4 = {
           null,
           null,
           null,
+          "ここを正しく入力してください。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
+          "ここを正しく入力してください。",
           null,
           "全ケースを処理した後は到達しないことを示す型です。",
           null,
-          null,
+          "ここを正しく入力してください。",
           null,
           "変数の値を呼び出し元に返します（戻り値）。",
           null,
@@ -361,7 +362,7 @@ export const typescriptData4 = {
           null,
           "出力する変数を指定します。",
           null,
-          null
+          "変数routeの値をコンソールに出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -421,7 +422,7 @@ export const typescriptData4 = {
           null,
           "出力する変数を指定します。",
           null,
-          null
+          "変数statusの値をコンソールに出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -434,7 +435,7 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "pending\
+            "expected_output": "保留中\
 "
           }
         ]
@@ -477,7 +478,7 @@ export const typescriptData4 = {
           null,
           "出力する変数を指定します。",
           null,
-          null
+          "変数eventの値をコンソールに出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -490,7 +491,7 @@ export const typescriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "click\
+            "expected_output": "クリック\
 "
           }
         ]
@@ -533,7 +534,7 @@ export const typescriptData4 = {
           null,
           "出力する変数を指定します。",
           null,
-          null
+          "変数textの値をコンソールに出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -582,16 +583,16 @@ export const typescriptData4 = {
           "greet(...args);"
         ],
         "lineHints": [
-          null,
+          "ここを正しく入力してください。",
           null,
           "関数の引数型を取得するユーティリティ型です。",
           null,
           null,
           "スプレッド構文で展開する配列を指定します。",
           null,
+          "ここを正しく入力してください。",
           null,
-          null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -647,7 +648,7 @@ export const typescriptData4 = {
           null,
           "取得したいプロパティ名を指定します。",
           null,
-          null
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [

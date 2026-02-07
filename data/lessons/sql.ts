@@ -73,11 +73,11 @@ export const sqlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- 文字にgreetingという名前をつける\\nSELECT '7こんにちはSELECT 'こんにちは' AS greeting;' AS greeting;",
-        "holeyCode": "-- 文字にgreetingという名前をつける\\nSELECT '7こんにちはSELECT 'こんにちは' AS ___;' AS ___;",
+        "correctCode": "-- 文字にgreetingという名前をつける\\nSELECT 'こんにちは' AS greeting;",
+        "holeyCode": "-- 文字にgreetingという名前をつける\\nSELECT 'こんにちは' AS ___;",
         "correctLines": [
           "-- 文字にgreetingという名前をつける",
-          "SELECT '7こんにちはSELECT 'こんにちは' AS greeting;' AS greeting;"
+          "SELECT 'こんにちは' AS greeting;"
         ],
         "lineHints": [
           null,
@@ -259,11 +259,11 @@ export const sqlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- 文字をつなげる\\nSELECT 'SQL' || '16は楽しい！SELECT 'SQL' || 'は楽しい！';';",
-        "holeyCode": "-- 文字をつなげる\\nSELECT '___' || '16は楽しい！SELECT '___' || 'は楽しい！';';",
+        "correctCode": "-- 文字をつなげる\\nSELECT 'SQL' || 'は楽しい！';",
+        "holeyCode": "-- 文字をつなげる\\nSELECT '___' || 'は楽しい！';",
         "correctLines": [
           "-- 文字をつなげる",
-          "SELECT 'SQL' || '16は楽しい！SELECT 'SQL' || 'は楽しい！';';"
+          "SELECT 'SQL' || 'は楽しい！';"
         ],
         "lineHints": [
           null,
@@ -398,11 +398,11 @@ export const sqlData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "-- 条件分岐\\nSELECT CASE WHEN 10 > 5 THEN '29大きいSELECT CASE WHEN 10 > 5 THEN '大きい' ELSE '75小さいSELECT CASE WHEN 10 > 5 THEN '29大きいSELECT CASE WHEN 10 > 5 THEN '大きい' ELSE '小さい' END;' ELSE '小さい' END;' END;' ELSE '92小さいSELECT CASE WHEN 10 > 5 THEN '29大きいSELECT CASE WHEN 10 > 5 THEN '大きい' ELSE '小さい' END;' ELSE '小さい' END;' END;",
-        "holeyCode": "-- 条件分岐\\nSELECT CASE WHEN ___ > 5 THEN '30大きいSELECT CASE WHEN ___ > 5 THEN '大きい' ELSE '77小さいSELECT CASE WHEN ___ > 5 THEN '30大きいSELECT CASE WHEN ___ > 5 THEN '大きい' ELSE '小さい' END;' ELSE '小さい' END;' END;' ELSE '94小さいSELECT CASE WHEN ___ > 5 THEN '30大きいSELECT CASE WHEN ___ > 5 THEN '大きい' ELSE '小さい' END;' ELSE '小さい' END;' END;",
+        "correctCode": "-- 条件分岐\\nSELECT CASE WHEN 10 > 5 THEN '大きい' ELSE '小さい' END;",
+        "holeyCode": "-- 条件分岐\\nSELECT CASE WHEN ___ > 5 THEN '大きい' ELSE '小さい' END;",
         "correctLines": [
           "-- 条件分岐",
-          "SELECT CASE WHEN 10 > 5 THEN '29大きいSELECT CASE WHEN 10 > 5 THEN '大きい' ELSE '75小さいSELECT CASE WHEN 10 > 5 THEN '29大きいSELECT CASE WHEN 10 > 5 THEN '大きい' ELSE '小さい' END;' ELSE '小さい' END;' END;' ELSE '92小さいSELECT CASE WHEN 10 > 5 THEN '29大きいSELECT CASE WHEN 10 > 5 THEN '大きい' ELSE '小さい' END;' ELSE '小さい' END;' END;"
+          "SELECT CASE WHEN 10 > 5 THEN '大きい' ELSE '小さい' END;"
         ],
         "lineHints": [
           null,

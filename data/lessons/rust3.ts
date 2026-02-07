@@ -22,8 +22,8 @@ export const rust3Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// 'a でライフタイムを定義\\nfn first<'a>(s: &'a str) -> &'a str {\\n    &s[..1]\\n}\\n\\nfn main() {\\n    let s = String::from(\"こんにちは\");\\n    println!(\"{}\", first(&s));\\n}",
-        "holeyCode": "// 'a でライフタイムを定義\\nfn first<'a>(s: &'a ___) -> &'a str {\\n    &s[___]\\n___\\n\\nfn ___ () {\\n    let ___ = String::from(\"こんにちは\");\\n    ___!(\"{}\", first(&s));\\n___",
+        "correctCode": "// 'a でライフタイムを定義\\nfn first<'a>(s: &'a str) -> &'a str {\\n    &s[..1]\\n}\\n\\nfn main() {\\n    let s = String::from(\"Hello\");\\n    println!(\"{}\", first(&s));\\n}",
+        "holeyCode": "// 'a でライフタイムを定義\\nfn first<'a>(s: &'a ___) -> &'a str {\\n    &s[___]\\n___\\n\\nfn ___ () {\\n    let ___ = String::from(\"Hello\");\\n    ___!(\"{}\", first(&s));\\n___",
         "correctLines": [
           "// 'a でライフタイムを定義",
           "fn first<'a>(s: &'a str) -> &'a str {",
@@ -31,20 +31,20 @@ export const rust3Data = {
           "}",
           "",
           "fn main() {",
-          "    let s = String::from(\"こんにちは\");",
+          "    let s = String::from(\"Hello\");",
           "    println!(\"{}\", first(&s));",
           "}"
         ],
         "lineHints": [
           null,
           "'a でライフタイムを定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "lifetimes": [
@@ -90,9 +90,9 @@ export const rust3Data = {
         "lineHints": [
           "|x| でクロージャの引数を定義します。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -139,12 +139,12 @@ export const rust3Data = {
         ],
         "lineHints": [
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
+          "配列を複数の値で初期化する。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "繰り返し処理（ループ）を開始する。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -192,11 +192,11 @@ export const rust3Data = {
         ],
         "lineHints": [
           "map で各要素を変換します。",
+          "配列を複数の値で初期化する。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -242,11 +242,11 @@ export const rust3Data = {
         ],
         "lineHints": [
           "filter で条件に合う要素を絞り込みます。",
+          "配列を複数の値で初期化する。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -292,11 +292,11 @@ export const rust3Data = {
         ],
         "lineHints": [
           "fold で畳み込みます。",
+          "配列を複数の値で初期化する。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -353,22 +353,22 @@ export const rust3Data = {
         ],
         "lineHints": [
           "? でエラーを伝播します。",
+          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "ここを正しく入力してください。",
+          "条件が偽の場合の処理を定義する。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
+          "関数（calc）を定義します。",
           null,
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "operators": [
@@ -414,11 +414,11 @@ export const rust3Data = {
         ],
         "lineHints": [
           "unwrap_or でデフォルト値を設定します。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -465,12 +465,12 @@ export const rust3Data = {
         ],
         "lineHints": [
           "push で要素を追加します。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -516,11 +516,11 @@ export const rust3Data = {
         ],
         "lineHints": [
           "to_string で String に変換します。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [

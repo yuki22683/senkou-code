@@ -46,21 +46,21 @@ export const rust4Data = {
         "lineHints": [
           null,
           "trait でトレイトを定義します。",
+          "関数（speak）を定義します。",
+          "ここを正しく入力してください。",
           null,
+          "構造体（Dog）を定義します。",
           null,
+          "ここを正しく入力してください。",
+          "関数（speak）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -73,7 +73,7 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Woof!\
+            "expected_output": "ワン！\
 "
           }
         ]
@@ -111,16 +111,16 @@ export const rust4Data = {
         ],
         "lineHints": [
           null,
-          null,
+          "ここを正しく入力してください。",
           "derive でトレイトを自動実装します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "attributes": [
@@ -133,7 +133,7 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "User { name: \"Alice\", age: 30 }\
+            "expected_output": "User { name: \"アリス\", age: 30 }\
 "
           }
         ]
@@ -166,9 +166,9 @@ export const rust4Data = {
         "lineHints": [
           "Box::new でヒープに格納します。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "types": [
@@ -217,12 +217,12 @@ export const rust4Data = {
         "lineHints": [
           "Rc::clone で参照カウントを増やします。",
           null,
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -235,7 +235,7 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは Hello\
+            "expected_output": "こんにちは こんにちは\
 "
           }
         ]
@@ -272,13 +272,13 @@ export const rust4Data = {
         "lineHints": [
           "insert でキーと値を追加します。",
           null,
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -330,13 +330,13 @@ export const rust4Data = {
           null,
           "HashSet をインポートします。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "types": [
@@ -383,14 +383,14 @@ export const rust4Data = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
-          null,
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "再代入可能な変数を宣言し、数値を代入します。",
+          "ここを正しく入力してください。",
           null,
           "マクロを使用して、文字列と改行を標準出力に出力します。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -441,14 +441,14 @@ export const rust4Data = {
         "lineHints": [
           null,
           "関数（doubles）を定義します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "繰り返し処理（ループ）を開始する。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "keywords": [
@@ -496,9 +496,9 @@ export const rust4Data = {
         "lineHints": [
           "collect でVecに変換します。",
           null,
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
@@ -544,13 +544,13 @@ export const rust4Data = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "ここを正しく入力してください。",
           null,
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
-          null,
-          null,
-          null
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。"
         ],
         "candidates": {
           "methods": [
