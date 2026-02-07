@@ -236,10 +236,10 @@ export const kotlin2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// -> で引数と処理を区切る\\nval double = { n: Int -> n * 2 }\\n// double(5) を出力する\\nprintln(double(5))",
-        "holeyCode": "// -> で引数と処理を区切る\\nval double = { n: Int -> n * ___ }\\n// double(5) を出力する\\n___(double(5))",
+        "correctCode": "// nを2倍にするdouble関数を定義\\nval double = { n: Int -> n * 2 }\\n// double(5) を出力する\\nprintln(double(5))",
+        "holeyCode": "// nを2倍にするdouble関数を定義\\nval double = { n: Int -> n * ___ }\\n// double(5) を出力する\\n___(double(5))",
         "correctLines": [
-          "// -> で引数と処理を区切る",
+          "// nを2倍にするdouble関数を定義",
           "val double = { n: Int -> n * 2 }",
           "// double(5) を出力する",
           "println(double(5))"

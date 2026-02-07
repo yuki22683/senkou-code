@@ -255,10 +255,10 @@ age: 25\
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "// => でアロー関数を連鎖させる\\nconst multiply = a => b => a * b;\\n// 部分適用で2倍する関数を作成\\nconst double = multiply(2);\\n// double(5)を出力\\nconsole.log(double(5));",
-        "holeyCode": "// => でアロー関数を連鎖させる\\nconst ___ = a => b => a * b;\\n// 部分適用で2倍する関数を作成\\nconst ___ = multiply(2);\\n// double(5)を出力\\nconsole.___(double(5));",
+        "correctCode": "// a*bを返すmultiply関数を定義（カリー化）\\nconst multiply = a => b => a * b;\\n// 部分適用で2倍する関数を作成\\nconst double = multiply(2);\\n// double(5)を出力\\nconsole.log(double(5));",
+        "holeyCode": "// a*bを返すmultiply関数を定義（カリー化）\\nconst ___ = a => b => a * b;\\n// 部分適用で2倍する関数を作成\\nconst ___ = multiply(2);\\n// double(5)を出力\\nconsole.___(double(5));",
         "correctLines": [
-          "// => でアロー関数を連鎖させる",
+          "// a*bを返すmultiply関数を定義（カリー化）",
           "const multiply = a => b => a * b;",
           "// 部分適用で2倍する関数を作成",
           "const double = multiply(2);",

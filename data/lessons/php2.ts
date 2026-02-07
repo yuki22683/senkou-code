@@ -404,11 +404,11 @@ export const php2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n// fnでアロー関数を定義\\n$triple = fn($n) => $n * 3;\\n// echoで出力\\necho $triple(7);\\n?>",
-        "holeyCode": "___\\n// fnでアロー関数を定義\\n$triple = fn($n) => $n * ___;\\n// echoで出力\\necho ___(7);\\n___",
+        "correctCode": "<?php\\n// nを3倍にする$triple関数を定義\\n$triple = fn($n) => $n * 3;\\n// echoで出力\\necho $triple(7);\\n?>",
+        "holeyCode": "___\\n// nを3倍にする$triple関数を定義\\n$triple = fn($n) => $n * ___;\\n// echoで出力\\necho ___(7);\\n___",
         "correctLines": [
           "<?php",
-          "// fnでアロー関数を定義",
+          "// nを3倍にする$triple関数を定義",
           "$triple = fn($n) => $n * 3;",
           "// echoで出力",
           "echo $triple(7);",
