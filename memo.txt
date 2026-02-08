@@ -5,7 +5,7 @@
 
 
 
-@data/lessons/python.ts, @data/lessons/python2.ts @data/lessons/python3.ts  @data/lessons/python4.ts  @data/lessons/python5.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
+
 @data/lessons/assembly.ts, @data/lessons/assembly2.ts @data/lessons/assembly3.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がもれなく実施されていることをチェックして。
 @data/lessons/bash.ts, @data/lessons/bash2.ts @data/lessons/bash3.ts の内容をチェックしてプログラミング学習教材として問題がないかとチェックして。
 @data/lessons/c.ts, @data/lessons/c2.ts @data/lessons/c3.ts  @data/lessons/c4.ts の内容をチェックしてプログラミング学習教材として問題がないかと再発防止策がチェックして。
