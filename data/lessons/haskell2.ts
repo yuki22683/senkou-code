@@ -7,30 +7,16 @@ export const haskell2Data = {
   "lessonOrder": 2,
   "exercises": [
     {
-        "title": "関数を定義しよう",
-        "description": "Haskellでの関数定義を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 1,
-        "tutorialSlides": [
-          {
-            "title": "関数の定義",
-            "content": "# シンプルな定義\\n\\nHaskellでは、`名前 引数 = 本体` のようにシンプルに関数を定義します。括弧は不要です。"
-          },
-          {
-            "title": "関数の使い方",
-            "content": "# スペースで引数を渡す\\n\\n関数の呼び出しは `関数名 引数` と書きます。\\n\\n**コード例：**\\n```haskell\\ndouble x = x * 2\\nmain = print (double 5) -- 10\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "-- +で足し算\\naddTen x = x + 10\\n-- addTenを入力\\nmain = print (addTen 5)",
-        "holeyCode": "-- +で足し算\\naddTen x = x + ___\\n-- addTenを入力\\nmain = print (addTen ___)",
-        "correctLines": [
+      "title": "関数を定義しよう",
+      "correctCode": "-- +で足し算\\naddTen x = x + 10\\n-- addTenを入力\\nmain = print (addTen 5)",
+      "holeyCode": "-- +で足し算\\naddTen x = x + ___\\n-- addTenを入力\\nmain = print (addTen ___)",
+      "correctLines": [
           "-- +で足し算",
           "addTen x = x + 10",
           "-- addTenを入力",
           "main = print (addTen 5)"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "+ で足し算します。",
           null,
@@ -40,35 +26,20 @@ export const haskell2Data = {
           "operators": [
             "+"
           ],
-          "others": ["addTen", "10", "5"]
+          "others": ["addTen", "10", "5", "10"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\
-"
+            "expected_output": "15\\n"
           }
         ]
       },
     {
-        "title": "型注釈を書こう",
-        "description": "関数の型を明示する「型注釈」を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 2,
-        "tutorialSlides": [
-          {
-            "title": "型注釈とは？",
-            "content": "# 型を明示する\\n\\n**型注釈** は、関数や値の型を明示的に書くことです。`::` を使って書きます。"
-          },
-          {
-            "title": "型注釈の書き方",
-            "content": "# 名前 :: 型\\n\\n`関数名 :: 引数型 -> 戻り値型` のように書きます。\\n\\n**コード例：**\\n```haskell\\ndouble :: Int -> Int\\ndouble x = x * 2\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "-- ::で型注釈\\nsquare :: Int -> Int\\n-- *で掛け算\\nsquare x = x * x\\n-- squareを入力\\nmain = print (square 5)",
-        "holeyCode": "-- ::で型注釈\\nsquare :: ___ -> Int\\n-- *で掛け算\\nsquare ___ = x * x\\n-- squareを入力\\nmain = print (square ___)",
-        "correctLines": [
+      "title": "型注釈を書こう",
+      "correctCode": "-- ::で型注釈\\nsquare :: Int -> Int\\n-- *で掛け算\\nsquare x = x * x\\n-- squareを入力\\nmain = print (square 5)",
+      "holeyCode": "-- ::で型注釈\\nsquare :: ___ -> Int\\n-- *で掛け算\\nsquare ___ = x * x\\n-- squareを入力\\nmain = print (square ___)",
+      "correctLines": [
           "-- ::で型注釈",
           "square :: Int -> Int",
           "-- *で掛け算",
@@ -76,7 +47,7 @@ export const haskell2Data = {
           "-- squareを入力",
           "main = print (square 5)"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           ":: で型注釈を書きます。",
           null,
@@ -93,36 +64,21 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "25\
-"
+            "expected_output": "25\\n"
           }
         ]
       },
     {
-        "title": "リストを使おう",
-        "description": "Haskellのリストの基本を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 3,
-        "tutorialSlides": [
-          {
-            "title": "リストとは？",
-            "content": "# 同じ型の要素の列\\n\\nHaskellのリストは、同じ型の要素を順番に並べたものです。`[ ]` で作成します。"
-          },
-          {
-            "title": "リストの操作",
-            "content": "# head と tail\\n\\n`head` で先頭、`tail` で残りを取得します。\\n\\n**コード例：**\\n```haskell\\nhead [1, 2, 3] -- 1\\ntail [1, 2, 3] -- [2, 3]\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "-- [1, 2, 3]を入力\\nnums = [1, 2, 3]\\n-- headで先頭要素を取得\\nmain = print (head nums)",
-        "holeyCode": "-- [1, 2, 3]を入力\\nnums = [___, 2, 3]\\n-- headで先頭要素を取得\\nmain = print (head ___)",
-        "correctLines": [
+      "title": "リストを使おう",
+      "correctCode": "-- [1, 2, 3]を入力\\nnums = [1, 2, 3]\\n-- headで先頭要素を取得\\nmain = print (head nums)",
+      "holeyCode": "-- [1, 2, 3]を入力\\nnums = [___, 2, 3]\\n-- headで先頭要素を取得\\nmain = print (head ___)",
+      "correctLines": [
           "-- [1, 2, 3]を入力",
           "nums = [1, 2, 3]",
           "-- headで先頭要素を取得",
           "main = print (head nums)"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "複数の値をまとめて格納する配列（またはリスト）を作成します。",
           null,
@@ -137,34 +93,19 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "1\
-"
+            "expected_output": "1\\n"
           }
         ]
       },
     {
-        "title": "map で変換しよう",
-        "description": "リストの各要素を変換する「map」を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 4,
-        "tutorialSlides": [
-          {
-            "title": "map とは？",
-            "content": "# 各要素を変換\\n\\n**map** は、リストの各要素に関数を適用して新しいリストを作ります。"
-          },
-          {
-            "title": "map の使い方",
-            "content": "# map 関数 リスト\\n\\n関数とリストを渡します。\\n\\n**コード例：**\\n```haskell\\nmap (*2) [1, 2, 3] -- [2, 4, 6]\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "-- mapで各要素を変換\\nmain = print (map (*2) [1, 2, 3])",
-        "holeyCode": "-- mapで各要素を変換\\nmain = print (map (*___) [1, 2, 3])",
-        "correctLines": [
+      "title": "map で変換しよう",
+      "correctCode": "-- mapで各要素を変換\\nmain = print (map (*2) [1, 2, 3])",
+      "holeyCode": "-- mapで各要素を変換\\nmain = print (map (*___) [1, 2, 3])",
+      "correctLines": [
           "-- mapで各要素を変換",
           "main = print (map (*2) [1, 2, 3])"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "複数の値をまとめて格納する配列（またはリスト）を作成します。"
         ],
@@ -177,34 +118,19 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[2,4,6]\
-"
+            "expected_output": "[2,4,6]\\n"
           }
         ]
       },
     {
-        "title": "filter で絞り込もう",
-        "description": "条件に合う要素だけを抽出する「filter」を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 5,
-        "tutorialSlides": [
-          {
-            "title": "filter とは？",
-            "content": "# 条件でフィルタ\\n\\n**filter** は、条件を満たす要素だけを残した新しいリストを作ります。"
-          },
-          {
-            "title": "filter の使い方",
-            "content": "# filter 条件関数 リスト\\n\\n条件関数が True を返す要素だけが残ります。\\n\\n**コード例：**\\n```haskell\\nfilter (>3) [1, 2, 3, 4, 5] -- [4, 5]\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "-- filterで条件に合う要素を抽出\\nmain = print (filter (>=3) [1, 2, 3, 4, 5])",
-        "holeyCode": "-- filterで条件に合う要素を抽出\\nmain = print (filter (>=___) [1, 2, 3, 4, 5])",
-        "correctLines": [
+      "title": "filter で絞り込もう",
+      "correctCode": "-- filterで条件に合う要素を抽出\\nmain = print (filter (>=3) [1, 2, 3, 4, 5])",
+      "holeyCode": "-- filterで条件に合う要素を抽出\\nmain = print (filter (>=___) [1, 2, 3, 4, 5])",
+      "correctLines": [
           "-- filterで条件に合う要素を抽出",
           "main = print (filter (>=3) [1, 2, 3, 4, 5])"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "複数の値をまとめて格納する配列（またはリスト）を作成します。"
         ],
@@ -217,30 +143,15 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[3,4,5]\
-"
+            "expected_output": "[3,4,5]\\n"
           }
         ]
       },
     {
-        "title": "パターンマッチを使おう",
-        "description": "引数のパターンで分岐する方法を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 6,
-        "tutorialSlides": [
-          {
-            "title": "パターンマッチとは？",
-            "content": "# 値の形で分岐\\n\\n**パターンマッチ** は、引数の値や構造に応じて異なる定義を使う機能です。"
-          },
-          {
-            "title": "パターンマッチの書き方",
-            "content": "# 複数の定義\\n\\n同じ関数を複数定義し、引数のパターンで選ばせます。\\n\\n**コード例：**\\n```haskell\\nfactorial 0 = 1\\nfactorial n = n * factorial (n - 1)\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "-- 0を入力\\nfib 0 = 0\\n-- 1を入力\\nfib 1 = 1\\n-- 2を引いて再帰\\nfib n = fib (n - 1) + fib (n - 2)\\n-- fibを入力\\nmain = print (fib 6)",
-        "holeyCode": "-- 0を入力\\nfib ___ = 0\\n-- 1を入力\\nfib ___ = 1\\n-- 2を引いて再帰\\nfib n = fib (n - ___) + fib (n - 2)\\n-- fibを入力\\nmain = print (fib ___)",
-        "correctLines": [
+      "title": "パターンマッチを使おう",
+      "correctCode": "-- 0を入力\\nfib 0 = 0\\n-- 1を入力\\nfib 1 = 1\\n-- 2を引いて再帰\\nfib n = fib (n - 1) + fib (n - 2)\\n-- fibを入力\\nmain = print (fib 6)",
+      "holeyCode": "-- 0を入力\\nfib ___ = 0\\n-- 1を入力\\nfib ___ = 1\\n-- 2を引いて再帰\\nfib n = fib (n - ___) + fib (n - 2)\\n-- fibを入力\\nmain = print (fib ___)",
+      "correctLines": [
           "-- 0を入力",
           "fib 0 = 0",
           "-- 1を入力",
@@ -250,7 +161,7 @@ export const haskell2Data = {
           "-- fibを入力",
           "main = print (fib 6)"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "fib 0 の場合は 0 を返します。",
           null,
@@ -269,34 +180,19 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "8\
-"
+            "expected_output": "8\\n"
           }
         ]
       },
     {
-        "title": "ガードで条件分岐",
-        "description": "条件で分岐する「ガード」を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 7,
-        "tutorialSlides": [
-          {
-            "title": "ガードとは？",
-            "content": "# 条件での分岐\\n\\n**ガード** は、`|` を使って条件ごとに異なる処理を定義する方法です。"
-          },
-          {
-            "title": "ガードの書き方",
-            "content": "# | 条件 = 処理\\n\\n`otherwise` はすべての条件に当てはまらない場合です。\\n\\n**コード例：**\\n```haskell\\nabs' x\\n  | x < 0     = -x\\n  | otherwise = x\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "-- xを入力\\nsign x\\n  -- >で大なり比較\\n  | x > 0     = \"positive\"\\n  -- <で小なり比較\\n  | x < 0     = \"negative\"\\n  -- otherwiseはそれ以外の場合\\n  | otherwise = \"zero\"\\n-- signを入力\\nmain = putStrLn (sign 5)",
-        "holeyCode": "-- xを入力\\nsign ___\\n  -- >で大なり比較\\n  | x > 0     = \"___\"\\n  -- <で小なり比較\\n  | x < 0     = \"___\"\\n  -- otherwiseはそれ以外の場合\\n  | otherwise = \"___\"\\n-- signを入力\\nmain = putStrLn (sign ___)",
-        "correctLines": [
+      "title": "ガードで条件分岐",
+      "correctCode": "-- xを入力\\nsign x\\n  -- >で大なり比較\\n  | ___ > ___     = \"positive\"\\n  -- <で小なり比較\\n  | x < 0     = \"negative\"\\n  -- otherwiseはそれ以外の場合\\n  | otherwise = \"zero\"\\n-- signを入力\\nmain = putStrLn (sign 5)",
+      "holeyCode": "-- xを入力\\nsign ___\\n  -- >で大なり比較\\n  | ___ > ___     = \"___\"\\n  -- <で小なり比較\\n  | x < 0     = \"___\"\\n  -- otherwiseはそれ以外の場合\\n  | otherwise = \"___\"\\n-- signを入力\\nmain = putStrLn (sign ___)",
+      "correctLines": [
           "-- xを入力",
           "sign x",
           "  -- >で大なり比較",
-          "  | x > 0     = \"positive\"",
+          "  | ___ > ___     = \"positive\"",
           "  -- <で小なり比較",
           "  | x < 0     = \"negative\"",
           "  -- otherwiseはそれ以外の場合",
@@ -304,7 +200,7 @@ export const haskell2Data = {
           "-- signを入力",
           "main = putStrLn (sign 5)"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "関数の引数を定義します。",
           null,
@@ -320,78 +216,48 @@ export const haskell2Data = {
           "keywords": [
             "otherwise"
           ],
-          "others": ["x", ">", "<", "sign", "positive", "negative", "zero", "5"]
+          "others": ["x", ">", "<", "sign", "positive", "negative", "zero", "5", "x", "___"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "positive\
-"
+            "expected_output": "positive\\n"
           }
         ]
       },
     {
-        "title": "ラムダ式を使おう",
-        "description": "名前のない関数「ラムダ式」を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 8,
-        "tutorialSlides": [
-          {
-            "title": "ラムダ式とは？",
-            "content": "# 無名関数\\n\\n**ラムダ式** は、名前をつけずに定義する関数です。`\\引数 -> 本体` と書きます。"
-          },
-          {
-            "title": "ラムダの使い方",
-            "content": "# \\ で始める\\n\\n`\\` はラムダの記号です。\\n\\n**コード例：**\\n```haskell\\nmap (\\x -> x * 2) [1, 2, 3]\\n-- [2, 4, 6]\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "-- \\でラムダ式を開始\\nmain = print (map (\\x -> x * x) [1, 2, 3])", "holeyCode": "-- \\でラムダ式を開始\\nmain = print (map (\\\\x -> x * x) [___, 2, 3])",
-        "correctLines": [
+      "title": "ラムダ式を使おう",
+      "correctCode": "-- \\でラムダ式を開始\\nmain = print (map (\\x -> x * x) [1, 2, 3])",
+      "holeyCode": "-- \\でラムダ式を開始\\nmain = print (map (\\\\x -> x * x) [___, 2, 3])",
+      "correctLines": [
           "-- \\でラムダ式を開始",
           "main = print (map (\\x -> x * x) [1, 2, 3])"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "複数の値をまとめて格納する配列（またはリスト）を作成します。"
         ],
         "candidates": {
           "operators": [
-            "\\"
           ],
           "others": ["1"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1,4,9]\
-"
+            "expected_output": "[1,4,9]\\n"
           }
         ]
       },
     {
-        "title": "リスト内包表記",
-        "description": "リストを簡潔に作る「内包表記」を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 9,
-        "tutorialSlides": [
-          {
-            "title": "リスト内包表記とは？",
-            "content": "# 数学的なリスト生成\\n\\n**リスト内包表記** は、数学の集合表記のようにリストを作る方法です。"
-          },
-          {
-            "title": "内包表記の書き方",
-            "content": "# [式 | 変数 <- リスト, 条件]\\n\\n生成規則と条件を組み合わせられます。\\n\\n**コード例：**\\n```haskell\\n[x * 2 | x <- [1..5]] -- [2,4,6,8,10]\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "-- <-でリストから要素を取り出す\\nmain = print [x * x | x <- [1..5]]",
-        "holeyCode": "-- <-でリストから要素を取り出す\\nmain = print [x * x | x <- [___..5]]",
-        "correctLines": [
+      "title": "リスト内包表記",
+      "correctCode": "-- <-でリストから要素を取り出す\\nmain = print [x * x | x <- [1..5]]",
+      "holeyCode": "-- <-でリストから要素を取り出す\\nmain = print [x * x | x <- [___..5]]",
+      "correctLines": [
           "-- <-でリストから要素を取り出す",
           "main = print [x * x | x <- [1..5]]"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "<- でリストから要素を取り出します。"
         ],
@@ -404,34 +270,19 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "[1,4,9,16,25]\
-"
+            "expected_output": "[1,4,9,16,25]\\n"
           }
         ]
       },
     {
-        "title": "foldr で畳み込み",
-        "description": "リストを一つの値に畳み込む「foldr」を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 10,
-        "tutorialSlides": [
-          {
-            "title": "foldr とは？",
-            "content": "# リストの畳み込み\\n\\n**foldr** は、リストの要素を右から順に二項演算で畳み込みます。"
-          },
-          {
-            "title": "foldr の使い方",
-            "content": "# foldr 関数 初期値 リスト\\n\\n二項関数、初期値、リストを渡します。\\n\\n**コード例：**\\n```haskell\\nfoldr (+) 0 [1, 2, 3] -- 6\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "-- foldrで畳み込み\\nmain = print (foldr (+) 0 [1, 2, 3, 4, 5])",
-        "holeyCode": "-- foldrで畳み込み\\nmain = print (foldr (+) ___ [1, 2, 3, 4, 5])",
-        "correctLines": [
+      "title": "foldr で畳み込み",
+      "correctCode": "-- foldrで畳み込み\\nmain = print (foldr (+) 0 [1, 2, 3, 4, 5])",
+      "holeyCode": "-- foldrで畳み込み\\nmain = print (foldr (+) ___ [1, 2, 3, 4, 5])",
+      "correctLines": [
           "-- foldrで畳み込み",
           "main = print (foldr (+) 0 [1, 2, 3, 4, 5])"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "複数の値をまとめて格納する配列（またはリスト）を作成します。"
         ],
@@ -444,8 +295,7 @@ export const haskell2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "15\
-"
+            "expected_output": "15\\n"
           }
         ]
       }

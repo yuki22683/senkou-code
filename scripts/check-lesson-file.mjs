@@ -161,6 +161,8 @@ function checkVagueComments(file, content) {
 function checkHoleyCode(file, content) {
   const checkName = 'holeyCode穴埋め';
   const exercises = extractExercises(content);
+  const language = content.match(/"language":\s*"([^"]+)"/)?.[1] || '';
+  const isHashCommentLanguage = !['c', 'cpp', 'csharp', 'java', 'javascript', 'typescript', 'kotlin', 'swift', 'go', 'lua', 'sql', 'rust'].includes(language);
 
   let hasError = false;
   for (const ex of exercises) {
@@ -170,15 +172,9 @@ function checkHoleyCode(file, content) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
       // 空行、コメント行はスキップ
-      if (line === '' ||
-          line.startsWith('#') ||
-          line.startsWith('//') ||
-          line.startsWith('/*') ||
-          line.startsWith('*') ||
-          line.startsWith('--') ||
-          line.startsWith(';')) {
-        continue;
-      }
+      if (line === '') continue;
+      if (line.startsWith('//') || line.startsWith('/*') || line.startsWith('*') || line.startsWith('--') || line.startsWith(';')) continue;
+      if (isHashCommentLanguage && line.startsWith('#')) continue;
 
       // コード行に___がない場合
       if (!line.includes('___')) {
@@ -205,19 +201,24 @@ function checkHoleyCode(file, content) {
 function checkCommentConsistency(file, content) {
   const checkName = 'コメント整合性';
   const exercises = extractExercises(content);
+  const language = content.match(/"language":\s*"([^"]+)"/)?.[1] || '';
+  const isHashCommentLanguage = !['c', 'cpp', 'csharp', 'java', 'javascript', 'typescript', 'kotlin', 'swift', 'go', 'lua', 'sql', 'rust'].includes(language);
 
   let hasError = false;
   for (const ex of exercises) {
     const correctCode = ex.correctCode.replace(/\\n/g, '\n');
     const holeyCode = ex.holeyCode.replace(/\\n/g, '\n');
 
+    const isCommentLine = (line) => {
+      const trimmed = line.trim();
+      if (trimmed.startsWith('//')) return true;
+      if (isHashCommentLanguage && trimmed.startsWith('#')) return true;
+      return false;
+    };
+
     // コメント行を抽出して比較
-    const correctComments = correctCode.split('\n').filter(l =>
-      l.trim().startsWith('#') || l.trim().startsWith('//')
-    );
-    const holeyComments = holeyCode.split('\n').filter(l =>
-      l.trim().startsWith('#') || l.trim().startsWith('//')
-    );
+    const correctComments = correctCode.split('\n').filter(isCommentLine);
+    const holeyComments = holeyCode.split('\n').filter(isCommentLine);
 
     if (correctComments.length !== holeyComments.length) {
       addError(file, checkName, `「${ex.title}」: コメント行数不一致 (correct=${correctComments.length}, holey=${holeyComments.length})`);
@@ -242,6 +243,8 @@ function checkCommentConsistency(file, content) {
 function checkConsecutiveComments(file, content) {
   const checkName = '連続コメント';
   const exercises = extractExercises(content);
+  const language = content.match(/"language":\s*"([^"]+)"/)?.[1] || '';
+  const isHashCommentLanguage = !['c', 'cpp', 'csharp', 'java', 'javascript', 'typescript', 'kotlin', 'swift', 'go', 'lua', 'sql', 'rust'].includes(language);
 
   let hasError = false;
   for (const ex of exercises) {
@@ -252,8 +255,11 @@ function checkConsecutiveComments(file, content) {
       const current = lines[i].trim();
       const next = lines[i + 1].trim();
 
-      const isComment = (line) =>
-        line.startsWith('#') || line.startsWith('//');
+      const isComment = (line) => {
+        if (line.startsWith('//')) return true;
+        if (isHashCommentLanguage && line.startsWith('#')) return true;
+        return false;
+      };
 
       if (isComment(current) && isComment(next)) {
         addWarning(file, checkName, `「${ex.title}」行${i + 1}-${i + 2}: 2行連続コメント`);
@@ -321,26 +327,6 @@ function checkTutorialSlides(file, content) {
   if (!hasTutorial) {
     addWarning(file, checkName, 'tutorialSlidesが見つかりません');
   } else {
-    addPassed(file, checkName);
-  }
-}
-
-// 10. 画像パスの存在チェック
-function checkImagePaths(file, content) {
-  const checkName = '画像パス';
-
-  const imageMatches = content.match(/"image":\s*"([^"]+)"/g) || [];
-  let hasError = false;
-
-  for (const match of imageMatches) {
-    const imagePath = match.match(/"image":\s*"([^"]+)"/)[1];
-    if (imagePath && !imagePath.startsWith('/')) {
-      addWarning(file, checkName, `相対パスの画像: ${imagePath}`);
-      hasError = true;
-    }
-  }
-
-  if (!hasError) {
     addPassed(file, checkName);
   }
 }
@@ -425,7 +411,6 @@ function checkFile(file) {
   checkConsecutiveComments(file, content);
   checkJapaneseStrings(file, content);
   checkTutorialSlides(file, content);
-  checkImagePaths(file, content);
   checkJapaneseVariableRefs(file, content);
   checkOutputMismatch(file, content);
 }

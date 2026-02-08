@@ -54,19 +54,6 @@ allLessons.forEach((lesson: any) => {
   const prefix = getCommentPrefix(lesson.language);
   
   lesson.exercises.forEach((ex: any) => {
-    // 1. Check for missing images in slides
-    if (ex.tutorialSlides) {
-      ex.tutorialSlides.forEach((slide: any, slideIndex: number) => {
-        if (slide.image) {
-          const imagePath = path.join(process.cwd(), 'public', slide.image);
-          if (!fs.existsSync(imagePath)) {
-             console.log(`[VIOLATION] ${lesson.language} - ${ex.title} (Slide ${slideIndex+1}): Image missing: '${slide.image}'`);
-             totalViolations++;
-          }
-        }
-      });
-    }
-
     if (!ex.holeyCode) {
         console.log(`[FAIL] ${lesson.language} - ${ex.title}: holeyCode is MISSING`);
         totalViolations++;

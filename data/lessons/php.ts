@@ -7,30 +7,16 @@ export const phpData = {
   "lessonOrder": 1,
   "exercises": [
     {
-        "title": "画面に文字を出してみましょう",
-        "description": "PHPを使って画面に「こんにちは」と表示させてみましょう。echo（エコー）という関数を使います。",
-        "difficulty": "easy",
-        "orderIndex": 1,
-        "tutorialSlides": [
-          {
-            "title": "PHP（ピーエイチピー）とは？",
-            "content": "# Webサイトを裏側（うらがわ）で動かす言葉\\n\\nPHPは、Webサイトの「裏側」で活躍（かつやく）するプログラミング言語です。\\n\\n**身近（みぢか）な例（れい）：**\\n- お店のホームページ → 静的（せいてき）（いつも同じ）\\n- TwitterやInstagram → 動的（どうてき）（毎回内容が変わる）\\n\\n**PHPでできること：**\\n- 掲示板（けいじばん）やブログの投稿（とうこう）\\n- ログイン機能（きのう）\\n- お問い合わせフォーム\\n\\n世界で最も使われているWeb言語の一つです。"
-          },
-          {
-            "title": "PHPの「おまじない」",
-            "content": "# <?php ... ?> で囲（かこ）む\\n\\nPHPのプログラムを書くときは、**`<?php`** で始めて **`?>`** で終わるのがルールです。\\n\\n**コード例：**\\n```php\\n<?php\\n  echo \"ヤッホー\";\\n?>\\n```\\n\\n**何をしているの？**\\n1. `<?php` → 「ここからPHPのコードが始まるよ」という合図\\n2. `echo \"ヤッホー\";` → 画面に「ヤッホー」と表示する\\n3. `?>` → 「PHPのコードはここまで」という合図\\n\\n**ポイント：**\\n- 命令（めいれい）の最後には `;`（セミコロン）をつける\\n- `echo`（エコー）は「やまびこ」の意味で、入力した文字を返すイメージ"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  // 画面にメッセージを出す関数\\n  echo \"Hello, PHP!\";\\n?>",
-        "holeyCode": "___\\n  // 画面にメッセージを出す関数\\n  ___ \"Hello, PHP!\";\\n___",
-        "correctLines": [
+      "title": "画面に文字を出してみましょう",
+      "correctCode": "<?php\\n  // 画面にメッセージを出す関数\\n  echo \"Hello, PHP!\";\\n?>",
+      "holeyCode": "___\\n  // 画面にメッセージを出す関数\\n  ___ \"Hello, PHP!\";\\n___",
+      "correctLines": [
           "<?php",
           "  // 画面にメッセージを出す関数",
           "  echo \"Hello, PHP!\";",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "PHPのコードがここから始まることを宣言します。",
           null,
           "文字列を標準出力に表示します。",
@@ -43,7 +29,7 @@ export const phpData = {
           "strings": [
             "Hello, PHP!"
           ],
-          "others": ["<?php", "?>"]
+          "others": ["<?php", "?>", "<?php"]
         },
         "testCases": [
           {
@@ -53,24 +39,10 @@ export const phpData = {
         ]
       },
     {
-        "title": "便利な「はこ」",
-        "description": "数字をしまっておく「はこ（変数）」を使ってみましょう。PHPでは、はこに $（ドル記号）をつけます。",
-        "difficulty": "easy",
-        "orderIndex": 2,
-        "tutorialSlides": [
-          {
-            "title": "変数（へんすう）とは？",
-            "content": "# データを保存（ほぞん）する「はこ」\\n\\n**変数（へんすう）** は、数字や文字をしまっておける「はこ」のようなものです。\\n\\n**身近（みぢか）な例（れい）で考えてみよう：**\\n- 筆箱（ふでばこ）に「えんぴつ」を入れるように\\n- 変数という「はこ」に「データ」を入れておける\\n\\n一度しまったデータは、あとで何度（なんど）でも取り出して使えます。"
-          },
-          {
-            "title": "$ から始（はじ）めます",
-            "content": "# $（ドル記号（きごう））がPHPの特徴（とくちょう）\\n\\nPHPでは、変数（はこ）の名前の前に必ず **`$`（ドル）** をつけるルールがあります。\\n\\n**コード例：**\\n```php\\n$price = 100;\\necho $price;\\n```\\n\\n**何をしているの？**\\n1. `$price = 100;` → `price` という名前のはこに `100` を入れる\\n2. `echo $price;` → はこの中身を画面に表示する\\n\\n**結果（けっか）：** 100 と表示されます\\n\\n**なぜ $ をつける？**\\n- 「これは変数だよ」と分かりやすくするため\\n- 他の言葉と区別（くべつ）するため"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  // x というはこに 10 を入れる\\n  $x = 10;\\n  // $x の中身を表示する\\n  echo $x;\\n?>",
-        "holeyCode": "___\\n  // x というはこに 10 を入れる\\n  $___ = ___;\\n  // $x の中身を表示する\\n  echo ___;\\n___",
-        "correctLines": [
+      "title": "便利な「はこ」",
+      "correctCode": "<?php\\n  // x というはこに 10 を入れる\\n  $x = 10;\\n  // $x の中身を表示する\\n  echo $x;\\n?>",
+      "holeyCode": "___\\n  // x というはこに 10 を入れる\\n  $___ = ___;\\n  // $x の中身を表示する\\n  echo ___;\\n___",
+      "correctLines": [
           "<?php",
           "  // x というはこに 10 を入れる",
           "  $x = 10;",
@@ -78,7 +50,7 @@ export const phpData = {
           "  echo $x;",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           null,
           "x という名前のはこに 10 を入力します。",
@@ -93,7 +65,7 @@ export const phpData = {
           "numbers": [
             "10"
           ],
-          "others": ["10;", "x;", "<?php", "$x", "?>"]
+          "others": ["10;", "x;", "<?php", "$x", "?>", "<?php"]
         },
         "testCases": [
           {
@@ -103,24 +75,10 @@ export const phpData = {
         ]
       },
     {
-        "title": "コンピュータで計算しましょう",
-        "description": "PHPを使って、たし算をしてみましょう。",
-        "difficulty": "easy",
-        "orderIndex": 3,
-        "tutorialSlides": [
-          {
-            "title": "計算はコンピュータにお任（まか）せ",
-            "content": "# 高速（こうそく）な計算処理（しょり）\\n\\nコンピュータの一番の得意（とくい）なことは **「正確（せいかく）で速い計算」** です。\\n\\n**すごいところ：**\\n- どんなに大きな数字でも間違（まちが）えない\\n- 人間が何時間もかかる計算を一瞬（いっしゅん）で解（と）いてくれる\\n\\nプログラミングでは、算数と同じ記号を使って計算の指示（しじ）を出します。"
-          },
-          {
-            "title": "計算の記号（きごう）",
-            "content": "# 算数と同じ記号を使います\\n\\nPHPでは、こんな記号を使って計算をします。\\n\\n**演算子（えんざんし）の一覧（いちらん）：**\\n- **+** : たし算（例：5 + 3 = 8）\\n- **-** : ひき算（例：10 - 4 = 6）\\n- **\\*** : かけ算（例：3 * 4 = 12）\\n- **/** : わり算（例：20 / 5 = 4）\\n\\n**コード例：**\\n```php\\n$a = 10;\\n$b = 5;\\necho $a - $b; // 5 が表示されます\\n```\\n\\n**ポイント：**\\n- 計算の順番（じゅんばん）は算数と同じ（かけ算・わり算が先）\\n- かっこ `( )` を使えば計算の順番を変えられる"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  // はこに数字を入れる\\n  $a = 5;\\n  $b = 3;\\n  // たし算した結果を表示する\\n  echo $a + $b;\\n?>",
-        "holeyCode": "___\\n  // はこに数字を入れる\\n  $___ = ___;\\n  $___ = ___;\\n  // たし算した結果を表示する\\n  echo ___ + $b;\\n___",
-        "correctLines": [
+      "title": "コンピュータで計算しましょう",
+      "correctCode": "<?php\\n  // はこに数字を入れる\\n  $a = 5;\\n  $b = 3;\\n  // たし算した結果を表示する\\n  echo $a + $b;\\n?>",
+      "holeyCode": "___\\n  // はこに数字を入れる\\n  $___ = ___;\\n  $___ = ___;\\n  // たし算した結果を表示する\\n  echo ___ + $b;\\n___",
+      "correctLines": [
           "<?php",
           "  // はこに数字を入れる",
           "  $a = 5;",
@@ -129,7 +87,7 @@ export const phpData = {
           "  echo $a + $b;",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           null,
           "ここを正しく入力してください。",
@@ -142,7 +100,7 @@ export const phpData = {
           "operators": [
             "+"
           ],
-          "others": ["<?php", "a", "5", "b", "3", "$a", "?>"]
+          "others": ["<?php", "a", "5", "b", "3", "$a", "?>", "<?php"]
         },
         "testCases": [
           {
@@ -152,30 +110,16 @@ export const phpData = {
         ]
       },
     {
-        "title": "剰余演算子（%）",
-        "description": "割り算の「あまり」を求める「%」（パーセント）演算子を学びましょう。10を3で割ったあまりは1になります。",
-        "difficulty": "easy",
-        "orderIndex": 4,
-        "tutorialSlides": [
-          {
-            "title": "あまりを求（もと）める",
-            "content": "# 剰余（じょうよ）演算子（えんざんし）\\n\\n**`%`（パーセント）** を使うと、割（わ）り算の **あまり** を求められます。\\n\\n**身近（みぢか）な例（れい）で考えよう：**\\n- 10個のあめを3人で分けると...\\n- 1人3個ずつで、**1個あまる**\\n- この「あまり」を計算するのが `%` です！\\n\\nあまりを求める計算を **剰余（じょうよ）** と呼びます。"
-          },
-          {
-            "title": "% の使い方",
-            "content": "# あまりを計算してみよう\\n\\n**コード例：**\\n```php\\necho 10 % 3;  // => 1（10÷3=3あまり1）\\necho 8 % 2;   // => 0（割り切れる）\\n```\\n\\n**便利（べんり）な使い方：**\\n- **偶数（ぐうすう）**：2で割ってあまりが0\\n- **奇数（きすう）**：2で割ってあまりが1\\n\\n```php\\necho 6 % 2;   // => 0（6は偶数）\\necho 7 % 2;   // => 1（7は奇数）\\n```\\n\\nゲームで「3回ごとにボーナス」といった処理（しょり）にも使えます。"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  // 10 を 3 で割ったあまりを出力する\\n  echo 10 % 3;\\n?>",
-        "holeyCode": "___\\n  // 10 を 3 で割ったあまりを出力する\\n  echo ___ % 3;\\n___",
-        "correctLines": [
+      "title": "剰余演算子（%）",
+      "correctCode": "<?php\\n  // 10 を 3 で割ったあまりを出力する\\n  echo 10 % 3;\\n?>",
+      "holeyCode": "___\\n  // 10 を 3 で割ったあまりを出力する\\n  echo ___ % 3;\\n___",
+      "correctLines": [
           "<?php",
           "  // 10 を 3 で割ったあまりを出力する",
           "  echo 10 % 3;",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "あまりを求める % 演算子を使います。",
           null,
           "ここを正しく入力してください。",
@@ -189,7 +133,7 @@ export const phpData = {
             "*",
             "/"
           ],
-          "others": ["<?php", "10", "?>"]
+          "others": ["<?php", "10", "?>", "<?php"]
         },
         "testCases": [
           {
@@ -199,24 +143,10 @@ export const phpData = {
         ]
       },
     {
-        "title": "累算代入演算子（+=、-=）",
-        "description": "変数に値を足したり引いたりして、同じ変数に戻す便利な書き方を学びましょう。",
-        "difficulty": "easy",
-        "orderIndex": 5,
-        "tutorialSlides": [
-          {
-            "title": "累算代入（るいさんだいにゅう）とは？",
-            "content": "# 計算してそのまま代入（だいにゅう）\\n\\n**累算代入（るいさんだいにゅう）** は、「計算して、結果（けっか）を同じはこに戻（もど）す」便利（べんり）な書き方です。\\n\\n**身近（みぢか）な例（れい）：**\\n- 貯金箱（ちょきんばこ）に100円入っている\\n- さらに50円を追加（ついか）する\\n- 貯金箱の中身は150円になる\\n\\n**`+=` を使うと：**\\n```php\\n$x = 10;\\n$x += 5;  // $x = $x + 5 と同じ意味\\necho $x;  // => 15 と表示される\\n```"
-          },
-          {
-            "title": "-= も使える",
-            "content": "# 引き算バージョン\\n\\n`-=` を使えば引き算もできます。\\n\\n**コード例：**\\n```php\\n$x = 10;\\n$x -= 3;  // $x = $x - 3 と同じ意味\\necho $x;  // => 7 と表示される\\n```\\n\\n**他にもある演算子（えんざんし）：**\\n- `*=` : かけ算して代入\\n- `/=` : わり算して代入\\n\\n```php\\n$x = 6;\\n$x *= 2;  // $x = $x * 2 と同じ → 12になる\\n```\\n\\nゲームのスコアを増（ふ）やしたり減（へ）らしたりするのに便利です。"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  // scoreに50を入れる\\n  $score = 50;\\n  // 10点プラスする\\n  $score += 10;\\n  // score;を表示\\n  echo $score;\\n?>",
-        "holeyCode": "___\\n  // scoreに50を入れる\\n  $___ = ___;\\n  // 10点プラスする\\n  $score += ___;\\n  // score;を表示\\n  echo ___;\\n___",
-        "correctLines": [
+      "title": "累算代入演算子（+=、-=）",
+      "correctCode": "<?php\\n  // scoreに50を入れる\\n  $score = 50;\\n  // 10点プラスする\\n  $score += 10;\\n  // score;を表示\\n  echo $score;\\n?>",
+      "holeyCode": "___\\n  // scoreに50を入れる\\n  $___ = ___;\\n  // 10点プラスする\\n  $score += ___;\\n  // score;を表示\\n  echo ___;\\n___",
+      "correctLines": [
           "<?php",
           "  // scoreに50を入れる",
           "  $score = 50;",
@@ -226,7 +156,7 @@ export const phpData = {
           "  echo $score;",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           null,
           "50 と入力しましょう。",
@@ -247,7 +177,7 @@ export const phpData = {
             "50",
             "10"
           ],
-          "others": ["<?php", "score", "$score", "?>"]
+          "others": ["<?php", "score", "$score", "?>", "<?php"]
         },
         "testCases": [
           {
@@ -257,24 +187,10 @@ export const phpData = {
         ]
       },
     {
-        "title": "文章の中に「はこ」を入れましょう",
-        "description": "ダブルクォート（\"）の中に「はこ（変数）」を直接入れて、中身を表示してみましょう。",
-        "difficulty": "easy",
-        "orderIndex": 6,
-        "tutorialSlides": [
-          {
-            "title": "変数展開（へんすうてんかい）とは？",
-            "content": "# 文章の中に変数（へんすう）を入れる\\n\\n文章の途中（とちゅう）に、変数（はこ）の中身を入れたいときに使うのが **変数展開（へんすうてんかい）** です。\\n\\n**身近（みぢか）な例（れい）：**\\n- 「こんにちは、○○さん！」の○○を変えたい\\n- 名前が入った変数を文章に組み込（こ）める\\n\\nPHPでは `\" \"`（ダブルクォート）で囲（かこ）んだ文章の中に変数を書くだけでOKです。"
-          },
-          {
-            "title": "文字列の中に入れるだけ",
-            "content": "# $（ドル）をそのまま文章に入れる\\n\\n`\" \"` で囲んだ文章の中に `$変数名` と書くだけで、その中身が文章に入ります。\\n\\n**コード例：**\\n```php\\n$weather = \"はれ\";\\necho \"明日は $weather です\";\\n```\\n\\n**何が起こるの？**\\n1. `$weather` には「はれ」が入っている\\n2. `echo` で文章を表示するとき、`$weather` が「はれ」に置（お）き換（か）わる\\n3. 「明日は はれ です」と表示される\\n\\n**注意（ちゅうい）：**\\n- シングルクォート `' '` だと変数展開されません\\n- 必ずダブルクォート `\" \"` を使いましょう"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  // ageに20を入れる\\n  $age = 20;\\n  // $ageを文章に埋め込んで表示する\\n  echo \"I am $age years old.\";\\n?>",
-        "holeyCode": "___\\n  // ageに20を入れる\\n  $___ = ___;\\n  // $ageを文章に埋め込んで表示する\\n  ___ \"I am $age years old.\";\\n___",
-        "correctLines": [
+      "title": "文章の中に「はこ」を入れましょう",
+      "correctCode": "<?php\\n  // ageに20を入れる\\n  $age = 20;\\n  // $ageを文章に埋め込んで表示する\\n  echo \"I am $age years old.\";\\n?>",
+      "holeyCode": "___\\n  // ageに20を入れる\\n  $___ = ___;\\n  // $ageを文章に埋め込んで表示する\\n  ___ \"I am $age years old.\";\\n___",
+      "correctLines": [
           "<?php",
           "  // ageに20を入れる",
           "  $age = 20;",
@@ -282,7 +198,7 @@ export const phpData = {
           "  echo \"I am $age years old.\";",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           null,
           "age に 20 を入力します。",
@@ -294,7 +210,7 @@ export const phpData = {
           "variables": [
             "age"
           ],
-          "others": ["<?php", "20", "echo", "?>"]
+          "others": ["<?php", "20", "echo", "?>", "<?php"]
         },
         "testCases": [
           {
@@ -304,24 +220,10 @@ export const phpData = {
         ]
       },
     {
-        "title": "データをならべる「配列」",
-        "description": "たくさんのデータを一つの「長い はこ」にまとめて入れられる「配列（はいれつ）」を使ってみましょう。",
-        "difficulty": "easy",
-        "orderIndex": 7,
-        "tutorialSlides": [
-          {
-            "title": "配列（はいれつ）とは？",
-            "content": "# データの行列（ぎょうれつ）\\n\\nたくさんのデータを順番（じゅんばん）に並（なら）べておきたいときに使うのが **配列（はいれつ）** です。\\n\\n**身近（みぢか）な例（れい）：**\\n- ロッカーが横（よこ）に並んでいるイメージ\\n- 0番目のロッカー、1番目のロッカー...とデータを入れる\\n\\n順番に 0, 1, 2... と番号をつけて管理（かんり）します。"
-          },
-          {
-            "title": "データの番号は 0 から！",
-            "content": "# [ ]（角（かく）かっこ）を使いましょう\\n\\n配列の中身を取り出すときは、何番目かを指定（してい）します。**最初（さいしょ）のデータは「0番」** から数えるのがルールです。\\n\\n**コード例：**\\n```php\\n$items = ['おにぎり', 'パン'];\\necho $items[0]; // 「おにぎり」が表示されます\\n```\\n\\n**イメージしてみよう：**\\n| 番号（インデックス） | 0番目 | 1番目 |\\n| --- | --- | --- |\\n| 中身 | おにぎり | パン |\\n\\n**大事（だいじ）なポイント：**\\n- 1番目のデータは `[0]` で取り出す\\n- 2番目のデータは `[1]` で取り出す"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  // 配列を作る\\n  $fruits = ['りんご', 'バナナ'];\\n  // 2番目のデータを表示する\\n  echo $fruits[1];\\n?>",
-        "holeyCode": "___\\n  // 配列を作る\\n  $___ = [___];\\n  // 2番目のデータを表示する\\n  echo ___[1];\\n___",
-        "correctLines": [
+      "title": "データをならべる「配列」",
+      "correctCode": "<?php\\n  // 配列を作る\\n  $fruits = ['りんご', 'バナナ'];\\n  // 2番目のデータを表示する\\n  echo $fruits[1];\\n?>",
+      "holeyCode": "___\\n  // 配列を作る\\n  $___ = [___];\\n  // 2番目のデータを表示する\\n  echo ___[1];\\n___",
+      "correctLines": [
           "<?php",
           "  // 配列を作る",
           "  $fruits = ['りんご', 'バナナ'];",
@@ -329,7 +231,7 @@ export const phpData = {
           "  echo $fruits[1];",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           null,
           "['りんご', 'バナナ'] と入力して配列を作ります。",
@@ -341,7 +243,7 @@ export const phpData = {
           "numbers": [
             "1"
           ],
-          "others": ["<?php", "fruits", "'りんご', 'バナナ'", "$fruits", "?>"]
+          "others": ["<?php", "fruits", "'りんご', 'バナナ'", "$fruits", "?>", "<?php"]
         },
         "testCases": [
           {
@@ -351,35 +253,21 @@ export const phpData = {
         ]
       },
     {
-        "title": "「もし〜なら」で分けましょう",
-        "description": "点数によって表示するメッセージを変えてみましょう。",
-        "difficulty": "easy",
-        "orderIndex": 8,
-        "tutorialSlides": [
-          {
-            "title": "条件分岐（じょうけんぶんき）とは？",
-            "content": "# プログラムに判断（はんだん）させる\\n\\n状況（じょうきょう）によって動きを変えることを **条件分岐（じょうけんぶんき）** と呼びます。\\n\\n**身近（みぢか）な例（れい）：**\\n- **もし**雨が降（ふ）っていたら → かさを持っていく\\n- **もし**テストで80点以上だったら → ごほうびをもらえる\\n\\nプログラムも同じように「もし〜なら、〜する」という判断ができます。"
-          },
-          {
-            "title": "if文（イフぶん）",
-            "content": "# ( ) と { } を使いましょう\\n\\nPHPでは、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを書きます。\\n\\n**コード例：**\\n```php\\nif ($score > 80) {\\n    echo \"すごい！\";\\n}\\n```\\n\\n**何をしているの？**\\n1. `if ($score > 80)` → もし score が80より大きかったら\\n2. `{ }` の中の処理を実行する\\n3. 条件に合わなければ何もしない\\n\\n**比較（ひかく）の記号：**\\n- `>` : より大きい\\n- `<` : より小さい\\n- `>=` : 以上（いじょう）\\n- `<=` : 以下（いか）\\n- `==` : 等（ひと）しい"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  // scoreに100を入れる\\n  $score = 100;\\n  // >で大きいか比較\\n  if ($score > 80) {\\n    // メッセージ（'Excellent'）\\n    echo \"Excellent\";\\n  }\\n?>",
-        "holeyCode": "___\\n  // scoreに100を入れる\\n  $___ = ___;\\n  // >で大きいか比較\\n  if ($score ___ > ___) {\\n    // メッセージ（'Excellent'）\\n    ___ \"Excellent\";\\n  ___\\n___",
-        "correctLines": [
+      "title": "「もし〜なら」で分けましょう",
+      "correctCode": "<?php\\n  // scoreに100を入れる\\n  $score = 100;\\n  // >で大きいか比較\\n  if ($score > 80) {\\n    // メッセージ（'大変良い'）\\n    echo \"Excellent\";\\n  }\\n?>",
+      "holeyCode": "___\\n  // scoreに100を入れる\\n  $___ = ___;\\n  // >で大きいか比較\\n  if ($score ___ > ___) {\\n    // メッセージ（'大変良い'）\\n    ___ \"Excellent\";\\n  ___\\n___",
+      "correctLines": [
           "<?php",
           "  // scoreに100を入れる",
           "  $score = 100;",
           "  // >で大きいか比較",
           "  if ($score > 80) {",
-          "    // メッセージ（'Excellent'）",
+          "    // メッセージ（'大変良い'）",
           "    echo \"Excellent\";",
           "  }",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           null,
           "score = 100 と入力しましょう。",
@@ -394,49 +282,35 @@ export const phpData = {
           "operators": [
             ">"
           ],
-          "others": ["100", "Excellent", "<?php", "score", "echo", "}", "?>"]
+          "others": ["100", "大変良い", "<?php", "score", "echo", "}", "?>", "<?php", "}"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Excellent"
+            "expected_output": "大変良い"
           }
         ]
       },
     {
-        "title": "ちがう場合はどうしましょう？",
-        "description": "else（エルス）を使って、「そうでなければ」の動きを作りましょう。",
-        "difficulty": "easy",
-        "orderIndex": 9,
-        "tutorialSlides": [
-          {
-            "title": "それ以外（いがい）の場合は？",
-            "content": "# else（エルス）の役割（やくわり）\\n\\n条件（じょうけん）に当（あ）てはまらなかったときの別のルートを作るのが **else（エルス）** です。\\n\\n**身近（みぢか）な例（れい）：**\\n- **もし**晴れだったら → 公園に行く\\n- **そうでなければ** → 家で遊ぶ\\n\\n「もし〜なら」と「そうでなければ」の2つのルートを作れます。"
-          },
-          {
-            "title": "else ブロック",
-            "content": "# 2つのルートを作る\\n\\n条件に当てはまらないときの動きは `else` を使って書きます。\\n\\n**コード例：**\\n```php\\nif ($price < 1000) {\\n    echo \"安い\";\\n} else {\\n    echo \"高い\";\\n}\\n```\\n\\n**何が起こるの？**\\n1. `$price` が1000より小さい？\\n2. → はい → 「安い」と表示\\n3. → いいえ → `else` のルートへ → 「高い」と表示\\n\\n**ポイント：**\\n- `if` と `else` はセットで使う\\n- どちらか一方だけが実行される"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  // ageに18を入れる\\n  $age = 18;\\n  // 20以上かを比較する演算子\\n  if ($age >= 20) {\\n    // 20歳以上のときのメッセージ（'Adult'）\\n    echo \"Adult\";\\n  // elseで「そうでなければ」\\n  } else {\\n    // それ以外のメッセージ（'Minor'）\\n    echo \"Minor\";\\n  }\\n?>",
-        "holeyCode": "___\\n  // ageに18を入れる\\n  $___ = ___;\\n  // 20以上かを比較する演算子\\n  if ($age ___ >= ___) {\\n    // 20歳以上のときのメッセージ（'Adult'）\\n    ___ \"Adult\";\\n  // elseで「そうでなければ」\\n  } ___ {\\n    // それ以外のメッセージ（'Minor'）\\n    ___ \"Minor\";\\n  ___\\n___",
-        "correctLines": [
+      "title": "ちがう場合はどうしましょう？",
+      "correctCode": "<?php\\n  // ageに18を入れる\\n  $age = 18;\\n  // 20以上かを比較する演算子\\n  if ($age >= 20) {\\n    // 20歳以上のときのメッセージ（'大人'）\\n    echo \"Adult\";\\n  // elseで「そうでなければ」\\n  } else {\\n    // それ以外のメッセージ（'未成年'）\\n    echo \"Minor\";\\n  }\\n?>",
+      "holeyCode": "___\\n  // ageに18を入れる\\n  $___ = ___;\\n  // 20以上かを比較する演算子\\n  if ($age ___ >= ___) {\\n    // 20歳以上のときのメッセージ（'大人'）\\n    ___ \"Adult\";\\n  // elseで「そうでなければ」\\n  } ___ {\\n    // それ以外のメッセージ（'未成年'）\\n    ___ \"Minor\";\\n  ___\\n___",
+      "correctLines": [
           "<?php",
           "  // ageに18を入れる",
           "  $age = 18;",
           "  // 20以上かを比較する演算子",
           "  if ($age >= 20) {",
-          "    // 20歳以上のときのメッセージ（'Adult'）",
+          "    // 20歳以上のときのメッセージ（'大人'）",
           "    echo \"Adult\";",
           "  // elseで「そうでなければ」",
           "  } else {",
-          "    // それ以外のメッセージ（'Minor'）",
+          "    // それ以外のメッセージ（'未成年'）",
           "    echo \"Minor\";",
           "  }",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           null,
           "age に 18 を入力します。",
@@ -455,34 +329,20 @@ export const phpData = {
           "keywords": [
             "else"
           ],
-          "others": ["18", ">=", "Adult", "Minor", "<?php", "age", "{", "echo", "}", "?>"]
+          "others": ["18", ">=", "大人", "未成年", "<?php", "age", "{", "echo", "}", "?>", "<?php", "{", "}"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Minor"
+            "expected_output": "未成年"
           }
         ]
       },
     {
-        "title": "論理演算子（&&、||）",
-        "description": "2つ以上の条件を組み合わせる「&&」と「||」を学びましょう。両方の条件を満たすか、どちらかを満たすかを判定できます。",
-        "difficulty": "easy",
-        "orderIndex": 10,
-        "tutorialSlides": [
-          {
-            "title": "条件（じょうけん）を組み合わせる",
-            "content": "# 複数（ふくすう）の条件\\n\\n2つ以上の条件を組み合わせることができます。\\n\\n**身近（みぢか）な例（れい）：**\\n- 遊園地（ゆうえんち）の乗り物に乗れる条件\\n- 「身長120cm以上」**かつ**「年齢6歳以上」の両方を満（み）たす必要（ひつよう）がある\\n\\n**`&&`（アンド）**：「〜かつ〜」両方の条件を満たす\\n**`||`（オア）**：「〜または〜」どちらか一方を満たす"
-          },
-          {
-            "title": "&& と || の使い方",
-            "content": "# 条件（じょうけん）の組み合わせ\\n\\n**&& の例（両方の条件を満たす）：**\\n```php\\n$age = 15;\\nif ($age >= 10 && $age < 20) {\\n    echo \"10代です\";\\n}\\n```\\n→ 15は「10以上」**かつ**「20より小さい」ので表示される\\n\\n**|| の例（どちらかを満たす）：**\\n```php\\n$day = '土曜';\\nif ($day == '土曜' || $day == '日曜') {\\n    echo \"お休みです\";\\n}\\n```\\n→ 「土曜」**または**「日曜」なので表示される\\n\\n**記号の意味：**\\n- `&&` = AND（かつ）\\n- `||` = OR（または）"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  // scoreに85を入れる\\n  $score = 85;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($score >= 80 && $score <= 100) {\\n    // 結果を出力\\n    echo \"Pass\";\\n  }\\n?>",
-        "holeyCode": "___\\n  // scoreに85を入れる\\n  $___ = ___;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($score >= ___ && $score <= 100) {\\n    // 結果を出力\\n    ___ \"Pass\";\\n  ___\\n___",
-        "correctLines": [
+      "title": "論理演算子（&&、||）",
+      "correctCode": "<?php\\n  // scoreに85を入れる\\n  $score = 85;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($score >= 80 && $score <= 100) {\\n    // 結果を出力\\n    echo \"Pass\";\\n  }\\n?>",
+      "holeyCode": "___\\n  // scoreに85を入れる\\n  $___ = ___;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($score >= ___ && $score <= 100) {\\n    // 結果を出力\\n    ___ \"Pass\";\\n  ___\\n___",
+      "correctLines": [
           "<?php",
           "  // scoreに85を入れる",
           "  $score = 85;",
@@ -493,7 +353,7 @@ export const phpData = {
           "  }",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           null,
           "85 と入力しましょう。",
@@ -515,7 +375,7 @@ export const phpData = {
           "strings": [
             "Pass"
           ],
-          "others": ["<?php", "score", "80", "echo", "}", "?>"]
+          "others": ["<?php", "score", "80", "echo", "}", "?>", "<?php", "}"]
         },
         "testCases": [
           {
@@ -525,24 +385,10 @@ export const phpData = {
         ]
       },
     {
-        "title": "中身を全部出してみましょう",
-        "description": "foreach（フォーイーチ）という機能を使って、配列の中身を一つずつ順番に表示します。",
-        "difficulty": "easy",
-        "orderIndex": 11,
-        "tutorialSlides": [
-          {
-            "title": "繰（く）り返し（ループ）とは？",
-            "content": "# 自動で順番に処理（しょり）する\\n\\n同じ作業を何度も繰り返すための仕組（しく）みが **ループ** です。\\n\\n**身近（みぢか）な例（れい）：**\\n- 出席（しゅっせき）をとるとき、名簿（めいぼ）の名前を1人ずつ呼ぶ\\n- 買い物リストの商品（しょうひん）を1つずつチェックする\\n\\n配列の中身を一つずつ順番に全部チェックしたいときなどに非常（ひじょう）に役立ちます。"
-          },
-          {
-            "title": "foreach（フォーイーチ）ループ",
-            "content": "# as を使いましょう\\n\\n`foreach ($配列 as $ラベル)` と書くと、中身を一つずつ取り出して処理できます。PHPで一番よく使われるループです。\\n\\n**コード例：**\\n```php\\n$members = ['たろう', 'はなこ'];\\nforeach ($members as $member) {\\n    echo $member;\\n}\\n```\\n\\n**何をしているの？**\\n1. `$members` という配列がある\\n2. `foreach` で1つずつ取り出す\\n3. 取り出したものを `$member` に入れる\\n4. `echo $member` で表示\\n5. 全部表示したら終わり\\n\\n**as は「〜として」という意味** で、「配列の各要素（ようそ）を$memberとして扱（あつか）う」というイメージです。"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  $nums = [1, 2, 3];\\n  // asで各要素を取り出す\\n  foreach ($nums as $n) {\\n    echo $n;\\n  }\\n?>",
-        "holeyCode": "___\\n  $___ = [___];\\n  // asで各要素を取り出す\\n  foreach ($nums as $___) {\\n    echo ___;\\n  ___\\n___",
-        "correctLines": [
+      "title": "中身を全部出してみましょう",
+      "correctCode": "<?php\\n  $nums = [1, 2, 3];\\n  // asで各要素を取り出す\\n  foreach ($nums as $n) {\\n    echo $n;\\n  }\\n?>",
+      "holeyCode": "___\\n  $___ = [___];\\n  // asで各要素を取り出す\\n  foreach ($nums as $___) {\\n    echo ___;\\n  ___\\n___",
+      "correctLines": [
           "<?php",
           "  $nums = [1, 2, 3];",
           "  // asで各要素を取り出す",
@@ -551,7 +397,7 @@ export const phpData = {
           "  }",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           "複数の値をまとめて格納する配列（またはリスト）を作成します。",
           null,
@@ -564,7 +410,7 @@ export const phpData = {
           "keywords": [
             "as"
           ],
-          "others": ["<?php", "nums", "1, 2, 3", "n", "$n", "}", "?>"]
+          "others": ["<?php", "nums", "1, 2, 3", "n", "$n", "}", "?>", "<?php", "}", "}", "}\\"]
         },
         "testCases": [
           {
@@ -574,31 +420,17 @@ export const phpData = {
         ]
       },
     {
-        "title": "名前で探しましょう「連想配列」",
-        "description": "連想配列を使って、名前を指定してデータを取り出してみましょう。",
-        "difficulty": "easy",
-        "orderIndex": 12,
-        "tutorialSlides": [
-          {
-            "title": "連想配列（れんそうはいれつ）とは？",
-            "content": "# キーワードで検索（けんさく）できる仕組（しく）み\\n\\n「名前」と「データ」をセットにして保存できるのが **連想配列（れんそうはいれつ）** です。\\n\\n**身近（みぢか）な例（れい）：**\\n- 電話帳（でんわちょう）のイメージ\\n- 「たろう」という名前で調べると「090-1234」が出てくる\\n- 「はなこ」という名前で調べると「080-5678」が出てくる\\n\\n辞書（じしょ）を引くように、キーワード（キー）を使って目的（もくてき）のデータをすぐに見つけられます。"
-          },
-          {
-            "title": "連想配列の書き方",
-            "content": "# キー => あたい\\n\\n「名前（キー）」と「データ（値）」をセットにして保存できます。\\n\\n**`=>`（ダブルアロー）** は「名前と値をセットにする」という意味の記号です。矢印（やじるし）のような形をしているのがPHPの特徴（とくちょう）です。\\n\\n**コード例：**\\n```php\\n$fruits = ['りんご' => 'あか', 'バナナ' => 'きいろ'];\\necho $fruits['りんご']; // 「あか」が表示されます\\n```\\n\\n**何をしているの？**\\n1. `'りんご' => 'あか'` → 「りんご」というキーに「あか」という値をセット\\n2. `$fruits['りんご']` → 「りんご」で値を取り出す → 「あか」\\n\\n番号で探す普通（ふつう）の配列と違（ちが）って、**名前で探せる**のが便利です。"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  $user = ['name' => 'Alice'];\\n  // nameでキーを指定してアクセス\\n  echo $user['name'];\\n?>",
-        "holeyCode": "___\\n  $___ = [___];\\n  // nameでキーを指定してアクセス\\n  echo ___['name'];\\n___",
-        "correctLines": [
+      "title": "名前で探しましょう「連想配列」",
+      "correctCode": "<?php\\n  $user = ['名前' => 'アリス'];\\n  // nameでキーを指定してアクセス\\n  echo $user['名前'];\\n?>",
+      "holeyCode": "___\\n  $___ = [___];\\n  // nameでキーを指定してアクセス\\n  echo ___['名前'];\\n___",
+      "correctLines": [
           "<?php",
-          "  $user = ['name' => 'Alice'];",
+          "  $user = ['名前' => 'アリス'];",
           "  // nameでキーを指定してアクセス",
-          "  echo $user['name'];",
+          "  echo $user['名前'];",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           "名前（キー）とデータのセットを作ります。",
           null,
@@ -607,36 +439,22 @@ export const phpData = {
         ],
         "candidates": {
           "strings": [
-            "name"
+            "名前"
           ],
-          "others": ["<?php", "user", "'name' => 'Alice'", "$user", "?>"]
+          "others": ["<?php", "user", "'名前' => 'アリス'", "$user", "?>", "<?php"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Alice"
+            "expected_output": "アリス"
           }
         ]
       },
     {
-        "title": "自分だけの関数を作りましょう",
-        "description": "一連の手順をまとめて、名前をつけた「関数（かんすう）」を作ってみましょう。",
-        "difficulty": "easy",
-        "orderIndex": 13,
-        "tutorialSlides": [
-          {
-            "title": "関数（かんすう）とは？",
-            "content": "# 処理（しょり）のパッケージ化\\n\\nやりたいことをひとまとめにして、名前をつけることができます。\\n\\n**身近（みぢか）な例（れい）：**\\n- 料理（りょうり）のレシピのようなもの\\n- 「カレーの作り方」というレシピがあれば、何度でもカレーが作れる\\n- プログラムも同じように「手順書（てじゅんしょ）」を作っておける\\n\\n**関数の便利（べんり）なところ：**\\n- 一度作れば、何度でも呼び出せる\\n- 同じコードを何回も書かなくていい"
-          },
-          {
-            "title": "手順（てじゅん）をまとめる",
-            "content": "# 関数（かんすう）の定義（ていぎ）\\n\\n`function` キーワードを使って関数を作ります。\\n\\n**コード例：**\\n```php\\nfunction sayHello() {\\n    echo \"ヤッホー！\";\\n}\\n\\nsayHello(); // 呼び出し\\n```\\n\\n**何をしているの？**\\n1. `function sayHello()` → 「sayHello」という名前の関数を作る\\n2. `{ }` の中に処理を書く\\n3. `sayHello();` → 関数を呼び出す（名前を呼ぶだけでOK）\\n\\n**ポイント：**\\n- `function` は「機能」という意味\\n- 関数名のあとに `()` をつけて呼び出す\\n- 呼び出すと `{ }` の中の処理が実行される"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "<?php\\n  function greet() {\\n    echo \"Hello\";\\n  }\\n  // 関数を実行する\\n  greet();\\n?>",
-        "holeyCode": "___\\n  function ___() {\\n    ___ \"Hello\";\\n  ___\\n  // 関数を実行する\\n  ___();\\n___",
-        "correctLines": [
+      "title": "自分だけの関数を作りましょう",
+      "correctCode": "<?php\\n  function greet() {\\n    echo \"Hello\";\\n  }\\n  // 関数を実行する\\n  greet();\\n?>",
+      "holeyCode": "___\\n  function ___() {\\n    ___ \"Hello\";\\n  ___\\n  // 関数を実行する\\n  ___();\\n___",
+      "correctLines": [
           "<?php",
           "  function greet() {",
           "    echo \"Hello\";",
@@ -645,7 +463,7 @@ export const phpData = {
           "  greet();",
           "?>"
         ],
-        "lineHints": [
+      "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           "greet という名前の関数を定義します。",
           "文字列を標準出力に表示します。",
@@ -658,12 +476,12 @@ export const phpData = {
           "functions": [
             "greet"
           ],
-          "others": ["<?php", "echo", "}", "?>"]
+          "others": ["<?php", "echo", "}", "?>", "<?php", "}"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello"
+            "expected_output": "こんにちは"
           }
         ]
       }

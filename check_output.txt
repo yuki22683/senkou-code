@@ -1,0 +1,866 @@
+═══════════════════════════════════════════════════════════
+  学習コンテンツ包括チェック
+═══════════════════════════════════════════════════════════
+
+📁 assembly.ts をチェック中...
+
+📁 assembly2.ts をチェック中...
+
+📁 assembly3.ts をチェック中...
+
+📁 bash.ts をチェック中...
+
+📁 bash2.ts をチェック中...
+
+📁 bash3.ts をチェック中...
+
+📁 c.ts をチェック中...
+
+📁 c2.ts をチェック中...
+
+📁 c3.ts をチェック中...
+
+📁 c4.ts をチェック中...
+
+📁 cpp.ts をチェック中...
+
+📁 cpp2.ts をチェック中...
+
+📁 cpp3.ts をチェック中...
+
+📁 cpp4.ts をチェック中...
+
+📁 csharp.ts をチェック中...
+
+📁 csharp2.ts をチェック中...
+
+📁 csharp3.ts をチェック中...
+
+📁 csharp4.ts をチェック中...
+
+📁 elixir.ts をチェック中...
+
+📁 elixir2.ts をチェック中...
+
+📁 elixir3.ts をチェック中...
+
+📁 go.ts をチェック中...
+
+📁 go2.ts をチェック中...
+
+📁 go3.ts をチェック中...
+
+📁 go4.ts をチェック中...
+
+📁 haskell.ts をチェック中...
+
+📁 haskell2.ts をチェック中...
+
+📁 haskell3.ts をチェック中...
+
+📁 java.ts をチェック中...
+
+📁 java2.ts をチェック中...
+
+📁 java3.ts をチェック中...
+
+📁 java4.ts をチェック中...
+
+📁 java5.ts をチェック中...
+
+📁 javascript.ts をチェック中...
+
+📁 javascript2.ts をチェック中...
+
+📁 javascript3.ts をチェック中...
+
+📁 javascript4.ts をチェック中...
+
+📁 javascript5.ts をチェック中...
+
+📁 kotlin.ts をチェック中...
+
+📁 kotlin2.ts をチェック中...
+
+📁 kotlin3.ts をチェック中...
+
+📁 kotlin4.ts をチェック中...
+
+📁 lua.ts をチェック中...
+
+📁 lua2.ts をチェック中...
+
+📁 lua3.ts をチェック中...
+
+📁 perl.ts をチェック中...
+
+📁 perl2.ts をチェック中...
+
+📁 perl3.ts をチェック中...
+
+📁 php.ts をチェック中...
+
+📁 php2.ts をチェック中...
+
+📁 php3.ts をチェック中...
+
+📁 python.ts をチェック中...
+
+📁 python2.ts をチェック中...
+
+📁 python3.ts をチェック中...
+
+📁 python4.ts をチェック中...
+
+📁 python5.ts をチェック中...
+
+📁 ruby.ts をチェック中...
+
+📁 ruby2.ts をチェック中...
+
+📁 ruby3.ts をチェック中...
+
+📁 rust.ts をチェック中...
+
+📁 rust2.ts をチェック中...
+
+📁 rust3.ts をチェック中...
+
+📁 rust4.ts をチェック中...
+
+📁 sql.ts をチェック中...
+
+📁 sql2.ts をチェック中...
+
+📁 sql3.ts をチェック中...
+
+📁 sql4.ts をチェック中...
+
+📁 swift.ts をチェック中...
+
+📁 swift2.ts をチェック中...
+
+📁 swift3.ts をチェック中...
+
+📁 swift4.ts をチェック中...
+
+📁 typescript.ts をチェック中...
+
+📁 typescript2.ts をチェック中...
+
+📁 typescript3.ts をチェック中...
+
+📁 typescript4.ts をチェック中...
+
+
+═══════════════════════════════════════════════════════════
+  チェック結果サマリー
+═══════════════════════════════════════════════════════════
+
+❌ エラー: 48件
+-----------------------------------------------------------
+  [c.ts] コメント整合性
+    → 「画面に文字を出してみましょう」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c.ts] コメント整合性
+    → 「数字を入れる「はこ」int」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c.ts] コメント整合性
+    → 「コンピュータで計算しましょう」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c.ts] コメント整合性
+    → 「剰余演算子（%）」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c.ts] コメント整合性
+    → 「累算代入演算子（+=、-=）」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c.ts] コメント整合性
+    → 「文章の中に「はこ」を入れましょう」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c.ts] コメント整合性
+    → 「データをならべる「配列」」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c.ts] コメント整合性
+    → 「「もし〜なら」で分ける if文」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c.ts] コメント整合性
+    → 「ちがう場合は？ if-else文」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c.ts] コメント整合性
+    → 「論理演算子（&&、||）」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c.ts] コメント整合性
+    → 「ぐるぐる回す for文」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c.ts] コメント整合性
+    → 「データをまとめましょう「構造体」」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c.ts] コメント整合性
+    → 「自分だけの関数を作ろう」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c2.ts] コメント整合性
+    → 「ポインタって何？」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c2.ts] コメント整合性
+    → 「ポインタで値を変える」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c2.ts] コメント整合性
+    → 「関数に引数を渡す」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c2.ts] コメント整合性
+    → 「戻り値のある関数」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c2.ts] コメント整合性
+    → 「配列とポインタ」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c2.ts] コメント整合性
+    → 「文字列の基本」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c2.ts] コメント整合性
+    → 「ポインタを関数に渡す」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c2.ts] コメント整合性
+    → 「動的メモリ確保 malloc」: コメント不一致
+  correct: #include <stdlib.h>\
+  holey: #include <___>\
+  [c2.ts] コメント整合性
+    → 「構造体へのポインタ」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c2.ts] コメント整合性
+    → 「列挙型 enum」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c3.ts] lineHints長さ
+    → 「ビットシフト」: correctLines=9, lineHints=8
+  [c3.ts] コメント整合性
+    → 「関数ポインタ」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c3.ts] コメント整合性
+    → 「コールバック関数」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c3.ts] コメント整合性
+    → 「ビット演算 AND」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c3.ts] コメント整合性
+    → 「ビット演算 OR」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c3.ts] コメント整合性
+    → 「ビットシフト」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c3.ts] コメント整合性
+    → 「sizeof 演算子」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c3.ts] コメント整合性
+    → 「typedef で型に別名」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c3.ts] コメント整合性
+    → 「const ポインタ」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c3.ts] コメント整合性
+    → 「static 変数」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c3.ts] コメント整合性
+    → 「マクロ定義」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c4.ts] コメント整合性
+    → 「ファイルのオープン」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c4.ts] コメント整合性
+    → 「ファイルのクローズ」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c4.ts] コメント整合性
+    → 「fprintf でファイル書き込み」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c4.ts] コメント整合性
+    → 「fgets で行読み込み」: コメント不一致
+  correct: #include <string.h>\
+  holey: #include <___>\
+  [c4.ts] コメント整合性
+    → 「fseek でファイル位置移動」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c4.ts] コメント整合性
+    → 「ftell で現在位置取得」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c4.ts] コメント整合性
+    → 「enum 列挙型」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c4.ts] コメント整合性
+    → 「union 共用体」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c4.ts] コメント整合性
+    → 「ポインタのポインタ」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [c4.ts] コメント整合性
+    → 「可変長引数」: コメント不一致
+  correct: #include <stdio.h>\
+  holey: #include <___>\
+  [cpp.ts] コメント整合性
+    → 「画面にメッセージを出しましょう」: コメント不一致
+  correct: #include <iostream>\
+  holey: #include <___>\
+  [cpp2.ts] コメント整合性
+    → 「スマートポインタ unique_ptr」: コメント不一致
+  correct: #include <memory>\
+  holey: #include <___>\
+  [python2.ts] lineHints長さ
+    → 「コンストラクタ（__init__）」: correctLines=16, lineHints=15
+  [rust4.ts] コメント整合性
+    → 「derive 属性」: コメント不一致
+  correct: #[derive(Debug)]\
+  holey: #[___(Debug)]\
+
+⚠️  警告: 254件
+-----------------------------------------------------------
+  [bash.ts] 日本語文字列
+    → 「便利な「はこ」」: 英語文字列 'Bash'
+  [bash2.ts] holeyCode穴埋め
+    → 「while ループ」行9: 穴埋めなし「done」
+  [bash2.ts] holeyCode穴埋め
+    → 「case で分岐」行8: 穴埋めなし「バナナ) echo \"黄色\";;\」
+  [bash2.ts] holeyCode穴埋め
+    → 「case で分岐」行11: 穴埋めなし「esac」
+  [c.ts] holeyCode穴埋め
+    → 「画面に文字を出してみましょう」行6: 穴埋めなし「printf(\"Hello, World!\」
+  [c.ts] holeyCode穴埋め
+    → 「画面に文字を出してみましょう」行7: 穴埋めなし「\");\」
+  [c.ts] holeyCode穴埋め
+    → 「数字を入れる「はこ」int」行8: 穴埋めなし「printf(\"%d\」
+  [c.ts] holeyCode穴埋め
+    → 「数字を入れる「はこ」int」行9: 穴埋めなし「\", x);\」
+  [c.ts] holeyCode穴埋め
+    → 「コンピュータで計算しましょう」行10: 穴埋めなし「printf(\"%d\」
+  [c.ts] holeyCode穴埋め
+    → 「コンピュータで計算しましょう」行11: 穴埋めなし「\", a - b);\」
+  [c.ts] holeyCode穴埋め
+    → 「剰余演算子（%）」行6: 穴埋めなし「printf(\"%d\」
+  [c.ts] holeyCode穴埋め
+    → 「剰余演算子（%）」行7: 穴埋めなし「\", 10 % 3);\」
+  [c.ts] holeyCode穴埋め
+    → 「累算代入演算子（+=、-=）」行10: 穴埋めなし「printf(\"%d\」
+  [c.ts] holeyCode穴埋め
+    → 「累算代入演算子（+=、-=）」行11: 穴埋めなし「\", score);\」
+  [c.ts] holeyCode穴埋め
+    → 「文章の中に「はこ」を入れましょう」行8: 穴埋めなし「printf(\"私は %d 歳です\」
+  [c.ts] holeyCode穴埋め
+    → 「文章の中に「はこ」を入れましょう」行9: 穴埋めなし「\", age);\」
+  [c.ts] holeyCode穴埋め
+    → 「データをならべる「配列」」行8: 穴埋めなし「printf(\"%d\」
+  [c.ts] holeyCode穴埋め
+    → 「データをならべる「配列」」行9: 穴埋めなし「\", nums[1]);\」
+  [c.ts] holeyCode穴埋め
+    → 「「もし〜なら」で分ける if文」行9: 穴埋めなし「printf(\"Pass\」
+  [c.ts] holeyCode穴埋め
+    → 「「もし〜なら」で分ける if文」行10: 穴埋めなし「\");\」
+  [c.ts] holeyCode穴埋め
+    → 「ちがう場合は？ if-else文」行9: 穴埋めなし「printf(\"Big\」
+  [c.ts] holeyCode穴埋め
+    → 「ちがう場合は？ if-else文」行10: 穴埋めなし「\");\」
+  [c.ts] holeyCode穴埋め
+    → 「ちがう場合は？ if-else文」行12: 穴埋めなし「printf(\"Small\」
+  [c.ts] holeyCode穴埋め
+    → 「ちがう場合は？ if-else文」行13: 穴埋めなし「\");\」
+  [c.ts] holeyCode穴埋め
+    → 「論理演算子（&&、||）」行9: 穴埋めなし「printf(\"Pass\」
+  [c.ts] holeyCode穴埋め
+    → 「論理演算子（&&、||）」行10: 穴埋めなし「\");\」
+  [c.ts] holeyCode穴埋め
+    → 「ぐるぐる回す for文」行8: 穴埋めなし「printf(\"%d\」
+  [c.ts] holeyCode穴埋め
+    → 「ぐるぐる回す for文」行9: 穴埋めなし「\", i);\」
+  [c.ts] holeyCode穴埋め
+    → 「データをまとめましょう「構造体」」行15: 穴埋めなし「printf(\"%d\」
+  [c.ts] holeyCode穴埋め
+    → 「データをまとめましょう「構造体」」行16: 穴埋めなし「\", p.x);\」
+  [c.ts] holeyCode穴埋め
+    → 「自分だけの関数を作ろう」行6: 穴埋めなし「printf(\"Hello\」
+  [c.ts] holeyCode穴埋め
+    → 「自分だけの関数を作ろう」行7: 穴埋めなし「\");\」
+  [c.ts] 連続コメント
+    → 「画面に文字を出してみましょう」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「画面に文字を出してみましょう」行2-3: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「数字を入れる「はこ」int」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「数字を入れる「はこ」int」行2-3: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「コンピュータで計算しましょう」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「コンピュータで計算しましょう」行2-3: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「剰余演算子（%）」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「剰余演算子（%）」行2-3: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「累算代入演算子（+=、-=）」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「累算代入演算子（+=、-=）」行2-3: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「文章の中に「はこ」を入れましょう」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「文章の中に「はこ」を入れましょう」行2-3: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「データをならべる「配列」」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「データをならべる「配列」」行2-3: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「「もし〜なら」で分ける if文」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「「もし〜なら」で分ける if文」行2-3: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「ちがう場合は？ if-else文」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「ちがう場合は？ if-else文」行2-3: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「論理演算子（&&、||）」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「論理演算子（&&、||）」行2-3: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「ぐるぐる回す for文」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「ぐるぐる回す for文」行2-3: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「データをまとめましょう「構造体」」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「データをまとめましょう「構造体」」行2-3: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「自分だけの関数を作ろう」行1-2: 2行連続コメント
+  [c.ts] 連続コメント
+    → 「自分だけの関数を作ろう」行2-3: 2行連続コメント
+  [c2.ts] holeyCode穴埋め
+    → 「ポインタって何？」行6: 穴埋めなし「printf(\"%d\」
+  [c2.ts] holeyCode穴埋め
+    → 「ポインタって何？」行7: 穴埋めなし「\", *p);\」
+  [c2.ts] holeyCode穴埋め
+    → 「ポインタで値を変える」行7: 穴埋めなし「printf(\"%d\」
+  [c2.ts] holeyCode穴埋め
+    → 「ポインタで値を変える」行8: 穴埋めなし「\", n);\」
+  [c2.ts] holeyCode穴埋め
+    → 「関数に引数を渡す」行4: 穴埋めなし「printf(\"%d\」
+  [c2.ts] holeyCode穴埋め
+    → 「関数に引数を渡す」行5: 穴埋めなし「\", num);\」
+  [c2.ts] holeyCode穴埋め
+    → 「戻り値のある関数」行8: 穴埋めなし「printf(\"%d\」
+  [c2.ts] holeyCode穴埋め
+    → 「戻り値のある関数」行9: 穴埋めなし「\", result);\」
+  [c2.ts] holeyCode穴埋め
+    → 「配列とポインタ」行6: 穴埋めなし「printf(\"%d\」
+  [c2.ts] holeyCode穴埋め
+    → 「配列とポインタ」行7: 穴埋めなし「\", *(p + 2));\」
+  [c2.ts] holeyCode穴埋め
+    → 「文字列の基本」行5: 穴埋めなし「printf(\"%s\」
+  [c2.ts] holeyCode穴埋め
+    → 「文字列の基本」行6: 穴埋めなし「\", msg);\」
+  [c2.ts] holeyCode穴埋め
+    → 「ポインタを関数に渡す」行9: 穴埋めなし「printf(\"%d\」
+  [c2.ts] holeyCode穴埋め
+    → 「ポインタを関数に渡す」行10: 穴埋めなし「\", val);\」
+  [c2.ts] holeyCode穴埋め
+    → 「動的メモリ確保 malloc」行6: 穴埋めなし「printf(\"%d\」
+  [c2.ts] holeyCode穴埋め
+    → 「動的メモリ確保 malloc」行7: 穴埋めなし「\", *p);\」
+  [c2.ts] holeyCode穴埋め
+    → 「構造体へのポインタ」行9: 穴埋めなし「printf(\"%d\」
+  [c2.ts] holeyCode穴埋め
+    → 「構造体へのポインタ」行10: 穴埋めなし「\", p->price);\」
+  [c2.ts] holeyCode穴埋め
+    → 「列挙型 enum」行6: 穴埋めなし「printf(\"%d\」
+  [c2.ts] holeyCode穴埋め
+    → 「列挙型 enum」行7: 穴埋めなし「\", today);\」
+  [c2.ts] 連続コメント
+    → 「関数に引数を渡す」行1-2: 2行連続コメント
+  [c2.ts] 連続コメント
+    → 「動的メモリ確保 malloc」行1-2: 2行連続コメント
+  [c3.ts] holeyCode穴埋め
+    → 「関数ポインタ」行8: 穴埋めなし「printf(\"%d\」
+  [c3.ts] holeyCode穴埋め
+    → 「関数ポインタ」行9: 穴埋めなし「\", fp(5));\」
+  [c3.ts] holeyCode穴埋め
+    → 「コールバック関数」行9: 穴埋めなし「printf(\"Value: %d\」
+  [c3.ts] holeyCode穴埋め
+    → 「コールバック関数」行10: 穴埋めなし「\", x);\」
+  [c3.ts] holeyCode穴埋め
+    → 「ビット演算 AND」行7: 穴埋めなし「printf(\"%d\」
+  [c3.ts] holeyCode穴埋め
+    → 「ビット演算 AND」行8: 穴埋めなし「\", a & b);  // 8 (1000)\」
+  [c3.ts] holeyCode穴埋め
+    → 「ビット演算 OR」行7: 穴埋めなし「printf(\"%d\」
+  [c3.ts] holeyCode穴埋め
+    → 「ビット演算 OR」行8: 穴埋めなし「\", a | b);  // 14 (1110)\」
+  [c3.ts] holeyCode穴埋め
+    → 「ビットシフト」行6: 穴埋めなし「printf(\"%d\」
+  [c3.ts] holeyCode穴埋め
+    → 「ビットシフト」行7: 穴埋めなし「\", x << 2);  // 12\」
+  [c3.ts] holeyCode穴埋め
+    → 「sizeof 演算子」行7: 穴埋めなし「printf(\"%d\」
+  [c3.ts] holeyCode穴埋め
+    → 「sizeof 演算子」行8: 穴埋めなし「\", count);\」
+  [c3.ts] holeyCode穴埋め
+    → 「typedef で型に別名」行8: 穴埋めなし「printf(\"%d\」
+  [c3.ts] holeyCode穴埋め
+    → 「typedef で型に別名」行9: 穴埋めなし「\", x);\」
+  [c3.ts] holeyCode穴埋め
+    → 「const ポインタ」行5: 穴埋めなし「printf(\"%d\」
+  [c3.ts] holeyCode穴埋め
+    → 「const ポインタ」行6: 穴埋めなし「\", *p);\」
+  [c3.ts] holeyCode穴埋め
+    → 「static 変数」行7: 穴埋めなし「printf(\"%d\」
+  [c3.ts] holeyCode穴埋め
+    → 「static 変数」行8: 穴埋めなし「\", count);\」
+  [c3.ts] holeyCode穴埋め
+    → 「マクロ定義」行7: 穴埋めなし「printf(\"%d\」
+  [c3.ts] holeyCode穴埋め
+    → 「マクロ定義」行8: 穴埋めなし「\", DOUBLE(7));\」
+  [c3.ts] 連続コメント
+    → 「マクロ定義」行3-4: 2行連続コメント
+  [c4.ts] holeyCode穴埋め
+    → 「ファイルのオープン」行7: 穴埋めなし「fprintf(fp, \"Hello\」
+  [c4.ts] holeyCode穴埋め
+    → 「ファイルのオープン」行8: 穴埋めなし「\");\」
+  [c4.ts] holeyCode穴埋め
+    → 「ファイルのオープン」行10: 穴埋めなし「printf(\"Done\」
+  [c4.ts] holeyCode穴埋め
+    → 「ファイルのオープン」行11: 穴埋めなし「\");\」
+  [c4.ts] holeyCode穴埋め
+    → 「ファイルのクローズ」行6: 穴埋めなし「fputs(\"Data\」
+  [c4.ts] holeyCode穴埋め
+    → 「ファイルのクローズ」行7: 穴埋めなし「\", fp);\」
+  [c4.ts] holeyCode穴埋め
+    → 「ファイルのクローズ」行10: 穴埋めなし「printf(\"Closed\」
+  [c4.ts] holeyCode穴埋め
+    → 「ファイルのクローズ」行11: 穴埋めなし「\");\」
+  [c4.ts] holeyCode穴埋め
+    → 「fprintf でファイル書き込み」行7: 穴埋めなし「\", 100)で書き込む\」
+  [c4.ts] holeyCode穴埋め
+    → 「fprintf でファイル書き込み」行8: 穴埋めなし「fprintf(fp, \"Score: %d\」
+  [c4.ts] holeyCode穴埋め
+    → 「fprintf でファイル書き込み」行9: 穴埋めなし「\", 100);\」
+  [c4.ts] holeyCode穴埋め
+    → 「fprintf でファイル書き込み」行11: 穴埋めなし「printf(\"Written\」
+  [c4.ts] holeyCode穴埋め
+    → 「fprintf でファイル書き込み」行12: 穴埋めなし「\");\」
+  [c4.ts] holeyCode穴埋め
+    → 「fgets で行読み込み」行7: 穴埋めなし「fprintf(fp, \"Hello World\」
+  [c4.ts] holeyCode穴埋め
+    → 「fgets で行読み込み」行8: 穴埋めなし「\");\」
+  [c4.ts] holeyCode穴埋め
+    → 「fgets で行読み込み」行13: 穴埋めなし「line[strcspn(line, \"\」
+  [c4.ts] holeyCode穴埋め
+    → 「fgets で行読み込み」行14: 穴埋めなし「\")] = 0;\」
+  [c4.ts] holeyCode穴埋め
+    → 「fgets で行読み込み」行15: 穴埋めなし「printf(\"%s\」
+  [c4.ts] holeyCode穴埋め
+    → 「fgets で行読み込み」行16: 穴埋めなし「\", line);\」
+  [c4.ts] holeyCode穴埋め
+    → 「fseek でファイル位置移動」行8: 穴埋めなし「printf(\"%c\」
+  [c4.ts] holeyCode穴埋め
+    → 「fseek でファイル位置移動」行9: 穴埋めなし「\", fgetc(fp));\」
+  [c4.ts] holeyCode穴埋め
+    → 「ftell で現在位置取得」行9: 穴埋めなし「printf(\"%ld\」
+  [c4.ts] holeyCode穴埋め
+    → 「ftell で現在位置取得」行10: 穴埋めなし「\", size);\」
+  [c4.ts] holeyCode穴埋め
+    → 「enum 列挙型」行8: 穴埋めなし「printf(\"%d\」
+  [c4.ts] holeyCode穴埋め
+    → 「enum 列挙型」行9: 穴埋めなし「\", today);\」
+  [c4.ts] holeyCode穴埋め
+    → 「union 共用体」行12: 穴埋めなし「printf(\"%d\」
+  [c4.ts] holeyCode穴埋め
+    → 「union 共用体」行13: 穴埋めなし「\", v.i);\」
+  [c4.ts] holeyCode穴埋め
+    → 「ポインタのポインタ」行8: 穴埋めなし「printf(\"%d\」
+  [c4.ts] holeyCode穴埋め
+    → 「ポインタのポインタ」行9: 穴埋めなし「\", **pp);\」
+  [c4.ts] holeyCode穴埋め
+    → 「可変長引数」行17: 穴埋めなし「printf(\"%d\」
+  [c4.ts] holeyCode穴埋め
+    → 「可変長引数」行18: 穴埋めなし「\", sum(3, 10, 20, 30));\」
+  [c4.ts] 連続コメント
+    → 「fgets で行読み込み」行1-2: 2行連続コメント
+  [c4.ts] 連続コメント
+    → 「可変長引数」行1-2: 2行連続コメント
+  [cpp.ts] 連続コメント
+    → 「自由に伸びる「はこ」vector」行1-2: 2行連続コメント
+  [cpp.ts] 連続コメント
+    → 「自由に伸びる「はこ」vector」行2-3: 2行連続コメント
+  [cpp.ts] 連続コメント
+    → 「中身を全部出してみましょう」行1-2: 2行連続コメント
+  [cpp.ts] 連続コメント
+    → 「名前で探しましょう「じしょ」」行1-2: 2行連続コメント
+  [cpp.ts] 連続コメント
+    → 「名前で探しましょう「じしょ」」行2-3: 2行連続コメント
+  [cpp2.ts] 連続コメント
+    → 「クラスを作ろう」行1-2: 2行連続コメント
+  [cpp2.ts] 連続コメント
+    → 「クラスを作ろう」行2-3: 2行連続コメント
+  [cpp2.ts] 連続コメント
+    → 「テンプレートを使おう」行1-2: 2行連続コメント
+  [cpp2.ts] 連続コメント
+    → 「スマートポインタ unique_ptr」行1-2: 2行連続コメント
+  [cpp3.ts] 連続コメント
+    → 「範囲for文」行1-2: 2行連続コメント
+  [cpp3.ts] 連続コメント
+    → 「初期化子リスト」行1-2: 2行連続コメント
+  [cpp3.ts] 連続コメント
+    → 「shared_ptr」行1-2: 2行連続コメント
+  [cpp3.ts] 連続コメント
+    → 「std::move」行1-2: 2行連続コメント
+  [cpp3.ts] 連続コメント
+    → 「std::move」行2-3: 2行連続コメント
+  [cpp3.ts] 連続コメント
+    → 「std::optional」行1-2: 2行連続コメント
+  [cpp3.ts] 連続コメント
+    → 「std::array」行1-2: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「unique_ptr」行1-2: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「std::variant」行1-2: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「構造化束縛」行1-2: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「std::string_view」行1-2: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「std::transform」行1-2: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「std::transform」行2-3: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「std::accumulate」行1-2: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「std::accumulate」行2-3: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「std::find_if」行1-2: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「std::find_if」行2-3: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「std::sort with lambda」行1-2: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「std::sort with lambda」行2-3: 2行連続コメント
+  [cpp4.ts] 連続コメント
+    → 「try-catch 例外処理」行1-2: 2行連続コメント
+  [elixir2.ts] holeyCode穴埋め
+    → 「Enum.map で変換」行2: 穴埋めなし「result = Enum.map([1, 2, 3], fn x -> x * x end)\」
+  [go.ts] holeyCode穴埋め
+    → 「文章の中に「はこ」を入れましょう」行8: 穴埋めなし「\", age)\」
+  [go3.ts] holeyCode穴埋め
+    → 「range で辞書をループ」行11: 穴埋めなし「\", k, v)\」
+  [java5.ts] holeyCode穴埋め
+    → 「BufferedReader でファイル読み込み」行5: 穴埋めなし「String content = \"Line1\」
+  [java5.ts] holeyCode穴埋め
+    → 「BufferedReader でファイル読み込み」行6: 穴埋めなし「Line2\";\」
+  [javascript.ts] 日本語文字列
+    → 「画面にメッセージを出しましょう」: 英語文字列 'Hello, JavaScript!'
+  [javascript2.ts] 日本語文字列
+    → 「分割代入（配列）」: 英語文字列 'green'
+  [javascript2.ts] 日本語文字列
+    → 「分割代入（配列）」: 英語文字列 'blue'
+  [javascript2.ts] 日本語文字列
+    → 「分割代入（配列）」: 英語文字列 'green'
+  [javascript2.ts] 日本語文字列
+    → 「分割代入（配列）」: 英語文字列 'blue'
+  [javascript2.ts] 日本語文字列
+    → 「分割代入（オブジェクト）」: 英語文字列 'Alice'
+  [javascript2.ts] 日本語文字列
+    → 「分割代入（オブジェクト）」: 英語文字列 'Alice'
+  [javascript2.ts] 日本語文字列
+    → 「三項演算子」: 英語文字列 'positive'
+  [javascript2.ts] 日本語文字列
+    → 「三項演算子」: 英語文字列 'negative'
+  [javascript3.ts] holeyCode穴埋め
+    → 「Promise の基本」行5: 穴埋めなし「});\」
+  [javascript3.ts] holeyCode穴埋め
+    → 「クラスの定義」行8: 穴埋めなし「bark() {\」
+  [javascript3.ts] 連続コメント
+    → 「await で待機」行1-2: 2行連続コメント
+  [javascript4.ts] 日本語文字列
+    → 「flatMapで展開と変換」: 英語文字列 'hello'
+  [javascript4.ts] 日本語文字列
+    → 「flatMapで展開と変換」: 英語文字列 'world'
+  [javascript4.ts] 日本語文字列
+    → 「flatMapで展開と変換」: 英語文字列 'hello'
+  [javascript4.ts] 日本語文字列
+    → 「flatMapで展開と変換」: 英語文字列 'world'
+  [javascript4.ts] 日本語文字列
+    → 「Object.fromEntries」: 英語文字列 'name'
+  [javascript4.ts] 日本語文字列
+    → 「Object.fromEntries」: 英語文字列 'version'
+  [javascript5.ts] holeyCode穴埋め
+    → 「finally節」行5: 穴埋めなし「console.log('処理中...');\」
+  [javascript5.ts] holeyCode穴埋め
+    → 「finally節」行8: 穴埋めなし「} catch (e) {\」
+  [javascript5.ts] holeyCode穴埋め
+    → 「finally節」行13: 穴埋めなし「console.log('クリーンアップ完了');\」
+  [javascript5.ts] holeyCode穴埋め
+    → 「Symbol」行4: 穴埋めなし「const user = {\」
+  [javascript5.ts] holeyCode穴埋め
+    → 「WeakMap」行13: 穴埋めなし「getPassword() {\」
+  [javascript5.ts] holeyCode穴埋め
+    → 「Proxy」行2: 穴埋めなし「const handler = {\」
+  [javascript5.ts] 日本語文字列
+    → 「正規表現リテラル」: 英語文字列 'I love JavaScript'
+  [javascript5.ts] 日本語文字列
+    → 「try-catch文」: 英語文字列 'invalid json'
+  [kotlin3.ts] holeyCode穴埋め
+    → 「apply スコープ関数」行2: 穴埋めなし「data class Config(var host: String = \"\", var por」
+  [kotlin4.ts] holeyCode穴埋め
+    → 「scope 関数 apply」行2: 穴埋めなし「data class Config(var host: String = \"\", var por」
+  [perl.ts] holeyCode穴埋め
+    → 「if文で条件分岐しましょう」行6: 穴埋めなし「\";\」
+  [perl.ts] holeyCode穴埋め
+    → 「if-elseを使いましょう」行5: 穴埋めなし「\";\」
+  [perl.ts] holeyCode穴埋め
+    → 「if-elseを使いましょう」行9: 穴埋めなし「\";\」
+  [perl.ts] holeyCode穴埋め
+    → 「foreachでループしましょう」行6: 穴埋めなし「\";\」
+  [perl.ts] holeyCode穴埋め
+    → 「サブルーチンを作りましょう」行4: 穴埋めなし「\";\」
+  [perl2.ts] holeyCode穴埋め
+    → 「正規表現でマッチング」行7: 穴埋めなし「\";\」
+  [perl2.ts] holeyCode穴埋め
+    → 「foreach でループ」行7: 穴埋めなし「\";\」
+  [perl3.ts] holeyCode穴埋め
+    → 「ファイルを開こう」行4: 穴埋めなし「\";\」
+  [perl3.ts] holeyCode穴埋め
+    → 「ファイルを閉じよう」行3: 穴埋めなし「\";\」
+  [perl3.ts] holeyCode穴埋め
+    → 「chomp で改行を除去」行2: 穴埋めなし「\";\」
+  [php.ts] 日本語文字列
+    → 「「もし〜なら」で分けましょう」: 英語文字列 'Excellent'
+  [php.ts] 日本語文字列
+    → 「ちがう場合はどうしましょう？」: 英語文字列 'Adult'
+  [php.ts] 日本語文字列
+    → 「ちがう場合はどうしましょう？」: 英語文字列 'Minor'
+  [php.ts] 日本語文字列
+    → 「名前で探しましょう「連想配列」」: 英語文字列 'name'
+  [php.ts] 日本語文字列
+    → 「名前で探しましょう「連想配列」」: 英語文字列 'Alice'
+  [php.ts] 日本語文字列
+    → 「名前で探しましょう「連想配列」」: 英語文字列 'name'
+  [php3.ts] 日本語文字列
+    → 「配列の分割代入」: 英語文字列 'Tokyo'
+  [python2.ts] 日本語文字列
+    → 「デフォルト引数」: 英語文字列 'World'
+  [python2.ts] 日本語文字列
+    → 「文字列スライス」: 英語文字列 'Programming'
+  [python2.ts] 日本語文字列
+    → 「文字列スライス」: 英語文字列 'Programming'
+  [python2.ts] 日本語文字列
+    → 「クラスの基本」: 英語文字列 'Meow!'
+  [python2.ts] 日本語文字列
+    → 「クラスの基本」: 英語文字列 'Meow!'
+  [python4.ts] 日本語文字列
+    → 「クラスの継承」: 英語文字列 'Toyota'
+  [python4.ts] 日本語文字列
+    → 「クラスの継承」: 英語文字列 'Toyota'
+  [python4.ts] 日本語文字列
+    → 「__str__メソッド」: 英語文字列 'Python Guide'
+  [python4.ts] 日本語文字列
+    → 「__str__メソッド」: 英語文字列 'Python Guide'
+  [python5.ts] holeyCode穴埋め
+    → 「ファイルを1行ずつ読む」行4: 穴埋めなし「line2\」
+  [python5.ts] holeyCode穴埋め
+    → 「ファイルを1行ずつ読む」行5: 穴埋めなし「line3'を書き込む\」
+  [python5.ts] holeyCode穴埋め
+    → 「ファイルを1行ずつ読む」行6: 穴埋めなし「f.write('line1\」
+  [python5.ts] holeyCode穴埋め
+    → 「ファイルを1行ずつ読む」行7: 穴埋めなし「line2\」
+  [python5.ts] holeyCode穴埋め
+    → 「ファイルを1行ずつ読む」行8: 穴埋めなし「line3')\」
+  [python5.ts] 日本語文字列
+    → 「JSONに変換する」: 英語文字列 'advanced'
+  [python5.ts] 日本語文字列
+    → 「JSONに変換する」: 英語文字列 'language'
+  [python5.ts] 日本語文字列
+    → 「JSONに変換する」: 英語文字列 'level'
+  [python5.ts] 日本語文字列
+    → 「JSONに変換する」: 英語文字列 'advanced'
+  [rust4.ts] 連続コメント
+    → 「derive 属性」行1-2: 2行連続コメント
+  [sql3.ts] 日本語文字列
+    → 「LIKE でパターン検索」: 英語文字列 'Hello'
+  [swift3.ts] holeyCode穴埋め
+    → 「associatedtype」行10: 穴埋めなし「struct IntStack: Stack {\」
+  [swift3.ts] holeyCode穴埋め
+    → 「throws と rethrows」行13: 穴埋めなし「do {\」
+  [swift3.ts] holeyCode穴埋め
+    → 「throws と rethrows」行18: 穴埋めなし「} catch {\」
+  [typescript.ts] holeyCode穴埋め
+    → 「累算代入演算子（+=、-=）」行6: 穴埋めなし「console.log(score);」
+  [typescript.ts] holeyCode穴埋め
+    → 「順番に出してみましょう」行5: 穴埋めなし「console.log(name);\」
+  [typescript.ts] holeyCode穴埋め
+    → 「関数の「入り口」にラベルをはりましょう」行3: 穴埋めなし「console.log(`こんにちは、${name}`);\」
+  [typescript.ts] holeyCode穴埋め
+    → 「関数の「入り口」にラベルをはりましょう」行6: 穴埋めなし「greet('TypeScript');」
+  [typescript.ts] holeyCode穴埋め
+    → 「「なにも返さない」というラベル」行3: 穴埋めなし「console.log('今日の日付');\」
+  [typescript.ts] holeyCode穴埋め
+    → 「「なにも返さない」というラベル」行6: 穴埋めなし「showDate();」
+  [typescript3.ts] 日本語文字列
+    → 「keyof 演算子」: 英語文字列 'name'
+  [typescript4.ts] holeyCode穴埋め
+    → 「in演算子での型絞り込み」行6: 穴埋めなし「function operate(vehicle: Car | Boat): void {\」
+  [typescript4.ts] holeyCode穴埋め
+    → 「in演算子での型絞り込み」行11: 穴埋めなし「} else {\」
+  [typescript4.ts] holeyCode穴埋め
+    → 「in演算子での型絞り込み」行18: 穴埋めなし「operate({ drive: () => {} });」
+  [typescript4.ts] holeyCode穴埋め
+    → 「Discriminated Union」行8: 穴埋めなし「function handle(result: Result): void {\」
+  [typescript4.ts] holeyCode穴埋め
+    → 「Discriminated Union」行11: 穴埋めなし「case '成功':\」
+  [typescript4.ts] holeyCode穴埋め
+    → 「Discriminated Union」行14: 穴埋めなし「break;\」
+  [typescript4.ts] holeyCode穴埋め
+    → 「Discriminated Union」行15: 穴埋めなし「case '失敗':\」
+  [typescript4.ts] holeyCode穴埋め
+    → 「Discriminated Union」行18: 穴埋めなし「break;\」
+  [typescript4.ts] holeyCode穴埋め
+    → 「never型で網羅性チェック」行4: 穴埋めなし「function getHex(color: Color): string {\」
+  [typescript4.ts] holeyCode穴埋め
+    → 「never型で網羅性チェック」行5: 穴埋めなし「switch (color) {\」
+  [typescript4.ts] 日本語文字列
+    → 「in演算子での型絞り込み」: 英語文字列 'drive'
+
+✅ パス: 848件
+
+═══════════════════════════════════════════════════════════
+  結果: エラー 48件 / 警告 254件
+═══════════════════════════════════════════════════════════

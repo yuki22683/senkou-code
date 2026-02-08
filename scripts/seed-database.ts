@@ -136,13 +136,15 @@ async function seedDatabase() {
     }
 
     // 演習を挿入
-    for (const exercise of lessonData.exercises) {
+    for (const [index, exercise] of lessonData.exercises.entries()) {
+      const orderIndex = exercise.orderIndex ?? (index + 1);
+
       // 既存の演習をチェック
       const { data: existingExercise } = await supabase
         .from('exercises')
         .select('id')
         .eq('lesson_id', lessonId)
-        .eq('order_index', exercise.orderIndex)
+        .eq('order_index', orderIndex)
         .single();
 
       // テストケースから test_input と expected_output を取得
@@ -155,7 +157,7 @@ async function seedDatabase() {
         title: exercise.title,
         description: exercise.description,
         difficulty: exercise.difficulty,
-        order_index: exercise.orderIndex,
+        order_index: orderIndex,
         tutorial_slides: processTutorialSlides(exercise.tutorialSlides),
         correct_code: unescapeNewlines(exercise.correctCode || ''),
         holey_code: unescapeNewlines(exercise.holeyCode || ''),

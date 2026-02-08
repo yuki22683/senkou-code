@@ -79,14 +79,22 @@ function makeHoleyEscaped(line: string, language: string): string {
     return r.replace(/((static\s+)?(void|int)\s+)\w+(\s*\()/, '$1___$4');
   }
 
-  // func xxx()
-  if (/func\s+\w+\s*\(/.test(r) && !/__/.test(r)) {
-    return r.replace(/(func\s+)\w+(\s*\()/, '$1___$2');
+  // printf/println (エスケープ版)
+  if (/(printf|println|console\.log|cout|print|IO\.puts)\s*\(/.test(r) && !/___/.test(r)) {
+    return r.replace(/(printf|println|console\.log|cout|print|IO\.puts)(\s*\()/, '___$2');
   }
 
   // return N;
-  if (/return\s+\d+/.test(r) && !/__/.test(r)) {
+  if (/return\s+\d+/.test(r) && !/___/.test(r)) {
     return r.replace(/(return\s+)\d+/, '$1___');
+  }
+  if (/return\s+0;/.test(r) && !/___/.test(r)) {
+    return r.replace(/(return\s+)0/, '$1___');
+  }
+
+  // int main() {
+  if (/int\s+main\s*\(/.test(r) && !/___/.test(r)) {
+    return r.replace(/(int\s+)main/, '$1___');
   }
 
   // section .xxx (assembly)

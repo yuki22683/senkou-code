@@ -7,24 +7,10 @@ export const assembly2Data = {
   "lessonOrder": 2,
   "exercises": [
     {
-        "title": "レジスタに値を入れる",
-        "description": "mov命令でレジスタに値を格納する方法を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 1,
-        "tutorialSlides": [
-          {
-            "title": "レジスタとは？",
-            "content": "# CPUの小さな机\\n\\n**レジスタ** は、CPUが直接操作できる超高速な記憶領域です。rax, rbx, rcx, rdxなどがあります。"
-          },
-          {
-            "title": "mov 命令",
-            "content": "# mov 先, 値\\n\\n`mov` は、値をレジスタや変数に格納します。\\n\\n**コード例：**\\n```asm\\nmov rax, 42  ; rax に 42 を入れる\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; movで値をレジスタに格納\\n  mov rax, 60\\n  ; 終了コード0を設定\\n  mov rdi, 0\\n  ; システムコールを実行\\n  syscall",
-        "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; movで値をレジスタに格納\\n  mov ___, ___\\n  ; 終了コード0を設定\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___",
-        "correctLines": [
+      "title": "レジスタに値を入れる",
+      "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; movで値をレジスタに格納\\n  mov rax, 60\\n  ; 終了コード0を設定\\n  mov rdi, 0\\n  ; システムコールを実行\\n  syscall",
+      "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; movで値をレジスタに格納\\n  mov ___, ___\\n  ; 終了コード0を設定\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___",
+      "correctLines": [
           "; テキストセクションを宣言",
           "section .text",
           "  ; エントリーポイントを公開",
@@ -38,7 +24,7 @@ export const assembly2Data = {
           "  ; システムコールを実行",
           "  syscall"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "mov で値をレジスタに格納します。",
           null,
@@ -56,7 +42,7 @@ export const assembly2Data = {
           "keywords": [
             "mov"
           ],
-          "others": [".text", "_start", "rdi", "syscall", "text", "rax", "60", "0"]
+          "others": [".text", "_start", "rdi", "syscall", "text", "rax", "60", "0", "text", "_start", "60", "0"]
         },
         "testCases": [
           {
@@ -66,24 +52,10 @@ export const assembly2Data = {
         ]
       },
     {
-        "title": "add で足し算",
-        "description": "add命令で加算を行う方法を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 2,
-        "tutorialSlides": [
-          {
-            "title": "add 命令",
-            "content": "# 足し算\\n\\n**add** は、2つの値を足してレジスタに格納します。"
-          },
-          {
-            "title": "add の使い方",
-            "content": "# add 先, 値\\n\\n先のレジスタに値を足します。\\n\\n**コード例：**\\n```asm\\nmov rax, 5\\nadd rax, 3  ; rax = 8\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; raxに10を格納\\n  mov rax, 10\\n  ; addで 10 が入った rax に 5 を足す\\n  add rax, 5\\n  ; 結果をrdiにコピー\\n  mov rdi, rax\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; システムコールを実行\\n  syscall",
-        "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; raxに10を格納\\n  mov ___, ___\\n  ; addで 10 が入った rax に 5 を足す\\n  add rax, ___\\n  ; 結果をrdiにコピー\\n  mov ___, ___\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___",
-        "correctLines": [
+      "title": "add で足し算",
+      "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; raxに10を格納\\n  mov rax, 10\\n  ; addで 10 が入った rax に 5 を足す\\n  add rax, 5\\n  ; 結果をrdiにコピー\\n  mov rdi, rax\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; システムコールを実行\\n  syscall",
+      "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; raxに10を格納\\n  mov ___, ___\\n  ; addで 10 が入った rax に 5 を足す\\n  add rax, ___\\n  ; 結果をrdiにコピー\\n  mov ___, ___\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___",
+      "correctLines": [
           "; テキストセクションを宣言",
           "section .text",
           "  ; エントリーポイントを公開",
@@ -101,7 +73,7 @@ export const assembly2Data = {
           "  ; システムコールを実行",
           "  syscall"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "add で足し算します。",
           null,
@@ -123,7 +95,7 @@ export const assembly2Data = {
           "keywords": [
             "add"
           ],
-          "others": [".text", "_start", "10", "rdi", "60", "syscall", "text", "rax", "5"]
+          "others": [".text", "_start", "10", "rdi", "60", "syscall", "text", "rax", "5", "text", "_start", "10", "5", "rax", "60"]
         },
         "testCases": [
           {
@@ -133,24 +105,10 @@ export const assembly2Data = {
         ]
       },
     {
-        "title": "sub で引き算",
-        "description": "sub命令で減算を行う方法を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 3,
-        "tutorialSlides": [
-          {
-            "title": "sub 命令",
-            "content": "# 引き算\\n\\n**sub** は、レジスタから値を引きます。"
-          },
-          {
-            "title": "sub の使い方",
-            "content": "# sub 先, 値\\n\\n先のレジスタから値を引きます。\\n\\n**コード例：**\\n```asm\\nmov rax, 10\\nsub rax, 3  ; rax = 7\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; raxに20を格納\\n  mov rax, 20\\n  ; subで 20 が入った rax から 5 を引く\\n  sub rax, 5\\n  ; 結果をrdiにコピー\\n  mov rdi, rax\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; システムコールを実行\\n  syscall",
-        "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; raxに20を格納\\n  mov ___, ___\\n  ; subで 20 が入った rax から 5 を引く\\n  sub rax, ___\\n  ; 結果をrdiにコピー\\n  mov ___, ___\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___",
-        "correctLines": [
+      "title": "sub で引き算",
+      "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; raxに20を格納\\n  mov rax, 20\\n  ; subで 20 が入った rax から 5 を引く\\n  sub rax, 5\\n  ; 結果をrdiにコピー\\n  mov rdi, rax\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; システムコールを実行\\n  syscall",
+      "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; raxに20を格納\\n  mov ___, ___\\n  ; subで 20 が入った rax から 5 を引く\\n  sub rax, ___\\n  ; 結果をrdiにコピー\\n  mov ___, ___\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___",
+      "correctLines": [
           "; テキストセクションを宣言",
           "section .text",
           "  ; エントリーポイントを公開",
@@ -168,7 +126,7 @@ export const assembly2Data = {
           "  ; システムコールを実行",
           "  syscall"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "sub で引き算します。",
           null,
@@ -190,7 +148,7 @@ export const assembly2Data = {
           "keywords": [
             "sub"
           ],
-          "others": [".text", "_start", "20", "rdi", "60", "syscall", "text", "rax", "5"]
+          "others": [".text", "_start", "20", "rdi", "60", "syscall", "text", "rax", "5", "text", "_start", "20", "5", "rax", "60"]
         },
         "testCases": [
           {
@@ -200,24 +158,10 @@ export const assembly2Data = {
         ]
       },
     {
-        "title": "mul で掛け算",
-        "description": "mul命令で乗算を行う方法を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 4,
-        "tutorialSlides": [
-          {
-            "title": "mul 命令",
-            "content": "# 掛け算\\n\\n**mul** は、raxの値に指定した値を掛けます。結果はraxに入ります。"
-          },
-          {
-            "title": "mul の使い方",
-            "content": "# mul 値\\n\\nrax × 値 の結果がraxに入ります。\\n\\n**コード例：**\\n```asm\\nmov rax, 5\\nmov rbx, 3\\nmul rbx  ; rax = 15\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; raxに4を格納\\n  mov rax, 4\\n  ; rbxに3を格納\\n  mov rbx, 3\\n  ; mulで rax(4) と rbx(3) を掛ける\\n  mul rbx\\n  ; 結果をrdiにコピー\\n  mov rdi, rax\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; システムコールを実行\\n  syscall",
-        "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; raxに4を格納\\n  mov ___, ___\\n  ; rbxに3を格納\\n  mov ___, ___\\n  ; mulで rax(4) と rbx(3) を掛ける\\n  mul ___\\n  ; 結果をrdiにコピー\\n  mov ___, ___\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___",
-        "correctLines": [
+      "title": "mul で掛け算",
+      "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; raxに4を格納\\n  mov rax, 4\\n  ; rbxに3を格納\\n  mov rbx, 3\\n  ; mulで rax(4) と rbx(3) を掛ける\\n  mul rbx\\n  ; 結果をrdiにコピー\\n  mov rdi, rax\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; システムコールを実行\\n  syscall",
+      "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; raxに4を格納\\n  mov ___, ___\\n  ; rbxに3を格納\\n  mov ___, ___\\n  ; mulで rax(4) と rbx(3) を掛ける\\n  mul ___\\n  ; 結果をrdiにコピー\\n  mov ___, ___\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___",
+      "correctLines": [
           "; テキストセクションを宣言",
           "section .text",
           "  ; エントリーポイントを公開",
@@ -237,7 +181,7 @@ export const assembly2Data = {
           "  ; システムコールを実行",
           "  syscall"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "mul で掛け算します。",
           null,
@@ -261,7 +205,7 @@ export const assembly2Data = {
           "keywords": [
             "mul"
           ],
-          "others": [".text", "_start", "4", "3", "rdi", "60", "syscall", "text", "rax", "rbx"]
+          "others": [".text", "_start", "4", "3", "rdi", "60", "syscall", "text", "rax", "rbx", "text", "_start", "4", "3", "rbx", "rax", "60"]
         },
         "testCases": [
           {
@@ -271,24 +215,10 @@ export const assembly2Data = {
         ]
       },
     {
-        "title": "cmp で比較",
-        "description": "cmp命令で値を比較する方法を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 5,
-        "tutorialSlides": [
-          {
-            "title": "cmp 命令",
-            "content": "# 比較\\n\\n**cmp** は、2つの値を比較してフラグを設定します。条件分岐の前に使います。"
-          },
-          {
-            "title": "cmp の使い方",
-            "content": "# cmp A, B\\n\\nA - B を計算し、結果に応じてフラグを立てます（実際の値は変わりません）。\\n\\n**コード例：**\\n```asm\\ncmp rax, 10  ; rax と 10 を比較\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; raxに5を格納\\n  mov rax, 5\\n  ; cmpで rax(5) と 5 を比較\\n  cmp rax, 5\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; 終了コード0を設定\\n  mov rdi, 0\\n  ; システムコールを実行\\n  syscall",
-        "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; raxに5を格納\\n  mov ___, ___\\n  ; cmpで rax(5) と 5 を比較\\n  cmp ___, ___\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; 終了コード0を設定\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___",
-        "correctLines": [
+      "title": "cmp で比較",
+      "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; raxに5を格納\\n  mov rax, 5\\n  ; cmpで rax(5) と 5 を比較\\n  cmp rax, 5\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; 終了コード0を設定\\n  mov rdi, 0\\n  ; システムコールを実行\\n  syscall",
+      "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; raxに5を格納\\n  mov ___, ___\\n  ; cmpで rax(5) と 5 を比較\\n  cmp ___, ___\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; 終了コード0を設定\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___",
+      "correctLines": [
           "; テキストセクションを宣言",
           "section .text",
           "  ; エントリーポイントを公開",
@@ -306,7 +236,7 @@ export const assembly2Data = {
           "  ; システムコールを実行",
           "  syscall"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "cmp で比較します。",
           null,
@@ -328,7 +258,7 @@ export const assembly2Data = {
           "keywords": [
             "cmp"
           ],
-          "others": [".text", "_start", "5", "60", "0", "syscall", "text", "rax", "rdi"]
+          "others": [".text", "_start", "5", "60", "0", "syscall", "text", "rax", "rdi", "text", "_start", "5", "60", "0"]
         },
         "testCases": [
           {
@@ -338,24 +268,10 @@ export const assembly2Data = {
         ]
       },
     {
-        "title": "jmp で無条件ジャンプ",
-        "description": "jmp命令で別の場所に飛ぶ方法を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 6,
-        "tutorialSlides": [
-          {
-            "title": "jmp 命令",
-            "content": "# 無条件ジャンプ\\n\\n**jmp** は、指定したラベルに無条件でジャンプします。"
-          },
-          {
-            "title": "jmp の使い方",
-            "content": "# jmp ラベル\\n\\nプログラムの実行位置をラベルに移動します。\\n\\n**コード例：**\\n```asm\\njmp end\\n...\\nend:\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; jmpで done ラベルにジャンプ\\n  jmp done\\n; ジャンプ先のラベル\\ndone:\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; rdiを0にクリア\\n  xor rdi, rdi\\n  ; システムコールを実行\\n  syscall",
-        "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; jmpで done ラベルにジャンプ\\n  jmp ___\\n; ジャンプ先のラベル\\n___:\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; rdiを0にクリア\\n  xor ___, ___\\n  ; システムコールを実行\\n  ___",
-        "correctLines": [
+      "title": "jmp で無条件ジャンプ",
+      "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; jmpで done ラベルにジャンプ\\n  jmp done\\n; ジャンプ先のラベル\\ndone:\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; rdiを0にクリア\\n  xor rdi, rdi\\n  ; システムコールを実行\\n  syscall",
+      "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; jmpで done ラベルにジャンプ\\n  jmp ___\\n; ジャンプ先のラベル\\n___:\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; rdiを0にクリア\\n  xor ___, ___\\n  ; システムコールを実行\\n  ___",
+      "correctLines": [
           "; テキストセクションを宣言",
           "section .text",
           "  ; エントリーポイントを公開",
@@ -373,7 +289,7 @@ export const assembly2Data = {
           "  ; システムコールを実行",
           "  syscall"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "jmp でジャンプします。",
           null,
@@ -395,7 +311,7 @@ export const assembly2Data = {
           "keywords": [
             "jmp"
           ],
-          "others": [".text", "_start", "done", "60", "rdi", "syscall", "text", "rax"]
+          "others": [".text", "_start", "done", "60", "rdi", "syscall", "text", "rax", "text", "_start", "done", "60", "rdi"]
         },
         "testCases": [
           {
@@ -405,24 +321,10 @@ export const assembly2Data = {
         ]
       },
     {
-        "title": "je で等しければジャンプ",
-        "description": "je命令で条件ジャンプを行う方法を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 7,
-        "tutorialSlides": [
-          {
-            "title": "je 命令",
-            "content": "# 等しければジャンプ\\n\\n**je** (Jump if Equal) は、cmpの結果が等しい場合にジャンプします。"
-          },
-          {
-            "title": "je の使い方",
-            "content": "# cmp の後に使う\\n\\n比較結果に応じて分岐できます。\\n\\n**コード例：**\\n```asm\\ncmp rax, 5\\nje equal  ; 等しければ equal へ\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; raxに5を格納\\n  mov rax, 5\\n  ; raxと5を比較\\n  cmp rax, 5\\n  ; jeで等しければ done にジャンプ\\n  je done\\n; ジャンプ先のラベル\\ndone:\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; rdiを0にクリア\\n  xor rdi, rdi\\n  ; システムコールを実行\\n  syscall",
-        "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; raxに5を格納\\n  mov ___, ___\\n  ; raxと5を比較\\n  cmp ___, ___\\n  ; jeで等しければ done にジャンプ\\n  je ___\\n; ジャンプ先のラベル\\n___:\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; rdiを0にクリア\\n  xor ___, ___\\n  ; システムコールを実行\\n  ___",
-        "correctLines": [
+      "title": "je で等しければジャンプ",
+      "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; raxに5を格納\\n  mov rax, 5\\n  ; raxと5を比較\\n  cmp rax, 5\\n  ; jeで等しければ done にジャンプ\\n  je done\\n; ジャンプ先のラベル\\ndone:\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; rdiを0にクリア\\n  xor rdi, rdi\\n  ; システムコールを実行\\n  syscall",
+      "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; raxに5を格納\\n  mov ___, ___\\n  ; raxと5を比較\\n  cmp ___, ___\\n  ; jeで等しければ done にジャンプ\\n  je ___\\n; ジャンプ先のラベル\\n___:\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; rdiを0にクリア\\n  xor ___, ___\\n  ; システムコールを実行\\n  ___",
+      "correctLines": [
           "; テキストセクションを宣言",
           "section .text",
           "  ; エントリーポイントを公開",
@@ -444,7 +346,7 @@ export const assembly2Data = {
           "  ; システムコールを実行",
           "  syscall"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "je で等しければジャンプします。",
           null,
@@ -470,7 +372,7 @@ export const assembly2Data = {
           "keywords": [
             "je"
           ],
-          "others": [".text", "_start", "5", "done", "60", "rdi", "syscall", "text", "rax"]
+          "others": [".text", "_start", "5", "done", "60", "rdi", "syscall", "text", "rax", "text", "_start", "5", "done", "60", "rdi"]
         },
         "testCases": [
           {
@@ -480,24 +382,10 @@ export const assembly2Data = {
         ]
       },
     {
-        "title": "push と pop でスタック操作",
-        "description": "スタックにデータを保存・復元する方法を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 8,
-        "tutorialSlides": [
-          {
-            "title": "スタックとは？",
-            "content": "# 後入れ先出し\\n\\n**スタック** は、最後に入れたものを最初に取り出すデータ構造です。関数呼び出しで使います。"
-          },
-          {
-            "title": "push と pop",
-            "content": "# push で入れ、pop で取り出す\\n\\n`push` でスタックに入れ、`pop` で取り出します。\\n\\n**コード例：**\\n```perl\\npush rax  ; スタックに保存\\npop rbx   ; スタックから復元\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; raxに42を格納\\n  mov rax, 42\\n  ; pushで rax(42) をスタックに保存\\n  push rax\\n  ; popでスタックから rbx に取り出す\\n  pop rbx\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; rbxの値を終了コードに設定\\n  mov rdi, rbx\\n  ; システムコールを実行\\n  syscall",
-        "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; raxに42を格納\\n  mov ___, ___\\n  ; pushで rax(42) をスタックに保存\\n  push ___\\n  ; popでスタックから rbx に取り出す\\n  pop ___\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; rbxの値を終了コードに設定\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___",
-        "correctLines": [
+      "title": "push と pop でスタック操作",
+      "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; raxに42を格納\\n  mov rax, 42\\n  ; pushで rax(42) をスタックに保存\\n  push rax\\n  ; popでスタックから rbx に取り出す\\n  pop rbx\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; rbxの値を終了コードに設定\\n  mov rdi, rbx\\n  ; システムコールを実行\\n  syscall",
+      "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; raxに42を格納\\n  mov ___, ___\\n  ; pushで rax(42) をスタックに保存\\n  push ___\\n  ; popでスタックから rbx に取り出す\\n  pop ___\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; rbxの値を終了コードに設定\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___",
+      "correctLines": [
           "; テキストセクションを宣言",
           "section .text",
           "  ; エントリーポイントを公開",
@@ -517,7 +405,7 @@ export const assembly2Data = {
           "  ; システムコールを実行",
           "  syscall"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "push でスタックに保存します。",
           null,
@@ -541,7 +429,7 @@ export const assembly2Data = {
           "keywords": [
             "push"
           ],
-          "others": [".text", "_start", "42", "rbx", "60", "syscall", "text", "rax", "rdi"]
+          "others": [".text", "_start", "42", "rbx", "60", "syscall", "text", "rax", "rdi", "text", "_start", "42", "rax", "rbx", "60"]
         },
         "testCases": [
           {
@@ -551,24 +439,10 @@ export const assembly2Data = {
         ]
       },
     {
-        "title": "xor でゼロクリア",
-        "description": "xor命令でレジスタをゼロにする方法を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 9,
-        "tutorialSlides": [
-          {
-            "title": "xor 命令",
-            "content": "# 排他的論理和\\n\\n**xor** は、排他的論理和を計算します。同じ値同士のxorは0になります。"
-          },
-          {
-            "title": "ゼロクリアのテクニック",
-            "content": "# xor A, A で 0 に\\n\\n`xor rax, rax` は rax を 0 にする効率的な方法です。\\n\\n**コード例：**\\n```asm\\nxor rax, rax  ; rax = 0\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; xorで rdi を 0 にする\\n  xor rdi, rdi\\n  ; システムコールを実行\\n  syscall",
-        "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; xorで rdi を 0 にする\\n  xor ___, ___\\n  ; システムコールを実行\\n  ___",
-        "correctLines": [
+      "title": "xor でゼロクリア",
+      "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; xorで rdi を 0 にする\\n  xor rdi, rdi\\n  ; システムコールを実行\\n  syscall",
+      "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; xorで rdi を 0 にする\\n  xor ___, ___\\n  ; システムコールを実行\\n  ___",
+      "correctLines": [
           "; テキストセクションを宣言",
           "section .text",
           "  ; エントリーポイントを公開",
@@ -582,7 +456,7 @@ export const assembly2Data = {
           "  ; システムコールを実行",
           "  syscall"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "xor で rdi を 0 にします。",
           null,
@@ -600,7 +474,7 @@ export const assembly2Data = {
           "keywords": [
             "xor"
           ],
-          "others": [".text", "_start", "60", "syscall", "text", "rax", "rdi"]
+          "others": [".text", "_start", "60", "syscall", "text", "rax", "rdi", "text", "_start", "60", "rdi"]
         },
         "testCases": [
           {
@@ -610,24 +484,10 @@ export const assembly2Data = {
         ]
       },
     {
-        "title": "call で関数呼び出し",
-        "description": "call命令でサブルーチンを呼び出す方法を学びましょう。",
-        "difficulty": "medium",
-        "orderIndex": 10,
-        "tutorialSlides": [
-          {
-            "title": "call 命令",
-            "content": "# サブルーチン呼び出し\\n\\n**call** は、サブルーチン（関数）を呼び出します。戻りアドレスがスタックに保存されます。"
-          },
-          {
-            "title": "call と ret",
-            "content": "# ret で戻る\\n\\n`call` で呼び出し、`ret` で呼び出し元に戻ります。\\n\\n**コード例：**\\n```asm\\ncall func\\n...\\nfunc:\\n  ...\\n  ret\\n```"
-          }
-        ],
-        "initialDisplayMode": "holey",
-        "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; callで done サブルーチンを呼び出す\\n  call done\\n; サブルーチンのラベル\\ndone:\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; rdiを0にクリア\\n  xor rdi, rdi\\n  ; システムコールを実行\\n  syscall",
-        "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; callで done サブルーチンを呼び出す\\n  call ___\\n; サブルーチンのラベル\\n___:\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; rdiを0にクリア\\n  xor ___, ___\\n  ; システムコールを実行\\n  ___",
-        "correctLines": [
+      "title": "call で関数呼び出し",
+      "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n; プログラムの開始地点\\n_start:\\n  ; callで done サブルーチンを呼び出す\\n  call done\\n; サブルーチンのラベル\\ndone:\\n  ; 60は終了コマンド\\n  mov rax, 60\\n  ; rdiを0にクリア\\n  xor rdi, rdi\\n  ; システムコールを実行\\n  syscall",
+      "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n; プログラムの開始地点\\n___:\\n  ; callで done サブルーチンを呼び出す\\n  call ___\\n; サブルーチンのラベル\\n___:\\n  ; 60は終了コマンド\\n  mov ___, ___\\n  ; rdiを0にクリア\\n  xor ___, ___\\n  ; システムコールを実行\\n  ___",
+      "correctLines": [
           "; テキストセクションを宣言",
           "section .text",
           "  ; エントリーポイントを公開",
@@ -645,7 +505,7 @@ export const assembly2Data = {
           "  ; システムコールを実行",
           "  syscall"
         ],
-        "lineHints": [
+      "lineHints": [
           null,
           "call でサブルーチンを呼び出します。",
           null,
@@ -667,7 +527,7 @@ export const assembly2Data = {
           "keywords": [
             "call"
           ],
-          "others": [".text", "_start", "done", "60", "rdi", "syscall", "text", "rax"]
+          "others": [".text", "_start", "done", "60", "rdi", "syscall", "text", "rax", "text", "_start", "done", "60", "rdi"]
         },
         "testCases": [
           {

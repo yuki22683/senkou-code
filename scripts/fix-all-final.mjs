@@ -1,178 +1,130 @@
-// 最終版: 全ファイルのcandidatesを修正
 import fs from 'fs';
 import path from 'path';
 
-const dir = 'data/lessons';
-const files = fs.readdirSync(dir).filter(f => f.endsWith('.ts') && f !== 'index.ts');
-
-let totalFixed = 0;
+const lessonsDir = './data/lessons';
+const files = fs.readdirSync(lessonsDir).filter(f => f.endsWith('.ts') && f !== 'index.ts');
 
 function decode(s) {
-  return s.replace(/\\n/g, '\n').replace(/\\t/g, '\t').replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+  if (!s) return '';
+  return s
+    .replace(/\\n/g, '\n')
+    .replace(/\\t/g, '\t')
+    .replace(/\\"/g, '"')
+    .replace(/\\\\/g, '\\');
 }
 
-function escapeStr(s) {
-  return s.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+function encode(s) {
+  if (!s) return '';
+  return s
+    .replace(/\\/g, '\\\\')
+    .replace(/"/g, '\\"')
+    .replace(/\n/g, '\\n')
+    .replace(/\t/g, '\\t');
 }
 
-function extractAnswers(holeyLine, correctLine) {
-  const answers = [];
-  if (!holeyLine.includes('___')) return answers;
-
-  const trimmed = holeyLine.trim();
-  if (trimmed.startsWith('#') || trimmed.startsWith('//') || trimmed.startsWith(';') ||
-      trimmed.startsWith('--') || trimmed.startsWith('/*') || trimmed.startsWith('*')) {
-    return answers;
-  }
-
-  let hIdx = 0, cIdx = 0;
-  while (hIdx < holeyLine.length && cIdx < correctLine.length) {
-    const blankIdx = holeyLine.indexOf('___', hIdx);
-    if (blankIdx === -1) break;
-
-    // ___の前の固定文字をスキップ
-    const prefix = holeyLine.substring(hIdx, blankIdx);
-    cIdx += prefix.length;
-    hIdx = blankIdx + 3;
-
-    // 連続する___を処理
-    while (holeyLine.substring(hIdx, hIdx + 3) === '___') hIdx += 3;
-
-    // 次の固定文字
-    const nextChar = holeyLine[hIdx];
-    let answerEnd;
-
-    if (nextChar === undefined) {
-      answerEnd = correctLine.length;
-    } else {
-      answerEnd = correctLine.indexOf(nextChar, cIdx);
-      if (answerEnd === -1) answerEnd = correctLine.length;
-    }
-
-    const answer = correctLine.substring(cIdx, answerEnd).trim();
-    if (answer && answer.length > 0 && answer.length <= 40) {
-      answers.push(answer);
-    }
-    cIdx = answerEnd;
-  }
-  return answers;
+function isCommentLine(line, language) {
+  const trimmed = line.trim();
+  if (trimmed.startsWith('//') || trimmed.startsWith('/*') || trimmed.startsWith('*') || trimmed.startsWith('--') || trimmed.startsWith(';') || trimmed.startsWith('{-')) return true;
+  const hashCommentLangs = ['python', 'ruby', 'bash', 'perl', 'elixir', 'php'];
+  if (hashCommentLangs.includes(language) && trimmed.startsWith('#')) return true;
+  return false;
 }
 
 for (const file of files) {
-  const filePath = path.join(dir, file);
-  let content = fs.readFileSync(filePath, 'utf8');
-  let fileFixed = 0;
+  const filePath = path.join(lessonsDir, file);
+  let content = fs.readFileSync(filePath, 'utf-8');
+  let modified = false;
 
-  // 各holeyCodeとcorrectLinesのペアを処理
-  const holeyMatches = [...content.matchAll(/"holeyCode":\s*"((?:[^"\\]|\\.)*)"/g)];
+  const languageMatch = content.match(/"language":\s*"([^"]+)"/);
+  const language = languageMatch ? languageMatch[1] : '';
 
-  for (let i = 0; i < holeyMatches.length; i++) {
-    // 毎回ファイルを読み直す（前回の変更を反映）
-    content = fs.readFileSync(filePath, 'utf8');
+  const exerciseRegex = /\{\s*"title":\s*"([^"]+)"[\s\S]*?"correctCode":\s*"((?:[^"\\]|\\.)*)"[\s\S]*?"holeyCode":\s*"((?:[^"\\]|\\.)*)"[\s\S]*?"correctLines":\s*\[([\s\S]*?)\],\s*"lineHints":\s*\[([\s\S]*?)\],/g;
 
-    const holeyMatch = content.match(new RegExp(`"holeyCode":\\s*"((?:[^"\\\\]|\\\\.)*)"`, 'g'));
-    if (!holeyMatch || !holeyMatch[i]) continue;
+  content = content.replace(exerciseRegex, (match, title, correctCodeRaw, holeyCodeRaw, correctLinesRaw, lineHintsRaw) => {
+    const correctCode = decode(correctCodeRaw);
+    const correctLines = correctCode.split('\n');
+    
+    // Existing holey lines for reference (to keep existing ___ if possible)
+    const existingHoleyLines = decode(holeyCodeRaw).split('\n');
+    
+    // Parse existing hints
+    const existingHints = [];
+    const hintMatches = lineHintsRaw.matchAll(/null|"((?:[^"\\]|\\.)*)"/g);
+    for (const hm of hintMatches) {
+      if (hm[0] === 'null') existingHints.push(null);
+      else existingHints.push(decode(hm[1]));
+    }
 
-    // このエクササイズの範囲を特定
-    const holeyIdx = content.indexOf(holeyMatch[i]);
-    const nextHoleyIdx = holeyMatch[i + 1] ? content.indexOf(holeyMatch[i + 1]) : content.length;
+    const newHoleyLines = [];
+    const newLineHints = [];
 
-    const exerciseSection = content.substring(holeyIdx, nextHoleyIdx);
-
-    // holeyCodeをデコード
-    const holeyCodeMatch = exerciseSection.match(/"holeyCode":\s*"((?:[^"\\]|\\.)*)"/);
-    if (!holeyCodeMatch) continue;
-    const holeyCode = decode(holeyCodeMatch[1]);
-    const holeyLines = holeyCode.split('\n');
-
-    // correctLinesを取得
-    const correctLinesMatch = exerciseSection.match(/"correctLines":\s*\[([\s\S]*?)\]/);
-    if (!correctLinesMatch) continue;
-
-    // correctLinesを解析
-    const items = [];
-    const clStr = correctLinesMatch[1];
-    let depth = 0, start = 0, inStr = false, esc = false;
-    for (let j = 0; j < clStr.length; j++) {
-      const ch = clStr[j];
-      if (esc) { esc = false; continue; }
-      if (ch === '\\') { esc = true; continue; }
-      if (ch === '"' && depth === 0) { inStr = !inStr; continue; }
-      if (!inStr && ch === ',' && depth === 0) {
-        items.push(clStr.substring(start, j).trim());
-        start = j + 1;
+    for (let i = 0; i < correctLines.length; i++) {
+      const cLine = correctLines[i];
+      const trimmedC = cLine.trim();
+      
+      if (trimmedC === '' || isCommentLine(cLine, language)) {
+        newHoleyLines.push(cLine);
+        newLineHints.push(null);
+        continue;
       }
-    }
-    if (start < clStr.length) items.push(clStr.substring(start).trim());
 
-    const correctLines = items.map(item => {
-      const m = item.match(/^"((?:[^"\\]|\\.)*)"/);
-      return m ? decode(m[1]) : '';
-    });
+      // Check if we already have a holey version of this line at the same position
+      let hLine = existingHoleyLines[i] || '';
+      let hint = existingHints[i] || null;
 
-    // 答えを収集
-    const neededAnswers = new Set();
-    for (let j = 0; j < holeyLines.length && j < correctLines.length; j++) {
-      const answers = extractAnswers(holeyLines[j], correctLines[j]);
-      answers.forEach(a => neededAnswers.add(a));
-    }
+      // If existing holey line is totally different (line mismatch), try to find it nearby or regenerate
+      if (!hLine.includes('___') || (hLine.trim() !== trimmedC && !hLine.includes('___'))) {
+        // Regenerate holey
+        hLine = cLine;
+        if (hLine.includes('printf')) hLine = hLine.replace('printf', '___');
+        else if (hLine.includes('console.log')) hLine = hLine.replace('console.log', '___');
+        else if (hLine.includes('print')) hLine = hLine.replace('print', '___');
+        else if (hLine.includes('return')) hLine = hLine.replace('return', '___');
+        else if (hLine.includes('{')) hLine = hLine.replace('{', '___');
+        else if (hLine.includes('}')) hLine = hLine.replace('}', '___');
+        else {
+          const indent = hLine.match(/^(\s*)/)[0];
+          hLine = indent + '___';
+        }
+      }
 
-    if (neededAnswers.size === 0) continue;
+      // Final check: if it still has no ___, make it ___
+      if (!hLine.includes('___')) {
+        const indent = hLine.match(/^(\s*)/)[0];
+        hLine = indent + '___';
+      }
 
-    // candidatesを探す
-    const candidatesMatch = exerciseSection.match(/"candidates":\s*\{([\s\S]*?)\}/);
-    if (!candidatesMatch) continue;
+      // Ensure hint exists for holey line
+      if (hint === null) {
+        if (cLine.includes('printf')) hint = 'printf関数で結果を表示します。';
+        else if (cLine.includes('console.log')) hint = 'console.log で結果を表示します。';
+        else if (cLine.includes('return 0;')) hint = 'プログラムの正常終了を示す0を返します。';
+        else hint = 'この行を正しく入力してください。';
+      }
 
-    // 現在の値を収集
-    const currentValues = new Set();
-    const arrayPattern = /:\s*\[([\s\S]*?)\]/g;
-    let arrayMatch;
-    while ((arrayMatch = arrayPattern.exec(candidatesMatch[1])) !== null) {
-      const vals = arrayMatch[1].match(/"([^"]+)"/g);
-      if (vals) vals.forEach(v => currentValues.add(v.replace(/"/g, '')));
-    }
-
-    // 不足分
-    const missing = [...neededAnswers].filter(a => !currentValues.has(a));
-    if (missing.length === 0 || missing.length > 15) continue;
-
-    // candidatesを更新
-    const candidatesFullMatch = exerciseSection.match(/"candidates":\s*\{[\s\S]*?\}/);
-    if (!candidatesFullMatch) continue;
-
-    const oldCandidates = candidatesFullMatch[0];
-    let newCandidates;
-
-    if (oldCandidates.includes('"others"')) {
-      const othersMatch = oldCandidates.match(/"others":\s*\[([\s\S]*?)\]/);
-      if (!othersMatch) continue;
-
-      const existingOthers = (othersMatch[1].match(/"([^"]+)"/g) || []).map(s => s.replace(/"/g, ''));
-      const newOthers = [...new Set([...existingOthers, ...missing])];
-      if (newOthers.length > 40) continue;
-
-      const newOthersStr = `"others": [${newOthers.map(o => `"${escapeStr(o)}"`).join(', ')}]`;
-      newCandidates = oldCandidates.replace(/"others":\s*\[[\s\S]*?\]/, newOthersStr);
-    } else {
-      const insertIdx = oldCandidates.lastIndexOf('}');
-      const newOthersStr = `,\n          "others": [${missing.map(o => `"${escapeStr(o)}"`).join(', ')}]`;
-      newCandidates = oldCandidates.substring(0, insertIdx) + newOthersStr + '\n        }';
+      newHoleyLines.push(hLine);
+      newLineHints.push(hint);
     }
 
-    if (newCandidates && newCandidates !== oldCandidates) {
-      // このエクササイズのcandidatesの絶対位置を計算
-      const absOldCandidatesIdx = holeyIdx + exerciseSection.indexOf(oldCandidates);
-      content = content.substring(0, absOldCandidatesIdx) + newCandidates +
-                content.substring(absOldCandidatesIdx + oldCandidates.length);
-      fs.writeFileSync(filePath, content);
-      fileFixed++;
-    }
-  }
+    modified = true;
+    const newHoleyCodeRaw = encode(newHoleyLines.join('\n'));
+    const newLineHintsRaw = newLineHints.map(h => h === null ? 'null' : `"${encode(h)}"`).join(',\n          ');
+    const newCorrectLinesRaw = correctLines.map(l => `"${encode(l)}"`).join(',\n          ');
 
-  if (fileFixed > 0) {
-    console.log(`${file}: ${fileFixed}件`);
-    totalFixed += fileFixed;
+    return `{
+      "title": "${title}",
+      "correctCode": "${correctCodeRaw}",
+      "holeyCode": "${newHoleyCodeRaw}",
+      "correctLines": [
+          ${newCorrectLinesRaw}
+        ],
+      "lineHints": [
+          ${newLineHintsRaw}
+        ],`;
+  });
+
+  if (modified) {
+    fs.writeFileSync(filePath, content, 'utf-8');
+    console.log(`Fully stabilized ${file}`);
   }
 }
-
-console.log(`\n合計: ${totalFixed}件`);
