@@ -549,7 +549,7 @@ export const cpp2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\\n#include <memory>\\nint main() {\\n    // make_unique でスマートポインタを作成\\n    auto ptr = std::make_unique<int>(100);\\n    // *ptr で中身にアクセス\\n    std::cout << *ptr << std::endl;\\n    return 0;\\n}",
-        "holeyCode": "#include <iostream>\\n#include <memory>\\nint ___() {\\n    // make_unique でスマートポインタを作成\\n    auto ptr = std::make_unique<int>(___);\\n    // *ptr で中身にアクセス\\n    std::cout << *ptr << std::___;\\n    return ___;\\n___",
+        "holeyCode": "#include <iostream>\\n#include <___>\\nint ___() {\\n    // make_unique でスマートポインタを作成\\n    auto ptr = std::make_unique<int>(___);\\n    // *ptr で中身にアクセス\\n    std::cout << *ptr << std::___;\\n    return ___;\\n___",
         "correctLines": [
           "#include <iostream>",
           "#include <memory>",

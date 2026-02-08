@@ -303,9 +303,10 @@ export const bashData = {
         "candidates": {
           "keywords": [
             "in",
-            "done"
+            "done",
+            "for"
           ],
-          "others": ["Alice", "Bob", "Charlie"]
+          "others": ["アリス", "ボブ", "${names[@]}", "$name"]
         },
         "testCases": [
           {

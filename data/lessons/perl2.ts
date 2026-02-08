@@ -271,7 +271,7 @@ export const perl2Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "# subでサブルーチンを定義\\nsub double {\\n    # shiftで引数を取得\\n    my $n = shift;\\n    # returnで戻り値を返す\\n    return $n * 2;\\n}\\n# printで出力\\nprint double(5) . \"\\n\";",
-        "holeyCode": "# subでサブルーチンを定義\\nsub ___ {\\n    # shiftで引数を取得\\n    my $___ = shift;\\n    # returnで戻り値を返す\\n    return $n * ___;\\n___\\n# printで出力\\nprint double(5) . \"\\n\";",
+        "holeyCode": "# subでサブルーチンを定義\\nsub ___ {\\n    # shiftで引数を取得\\n    my $___ = shift;\\n    # returnで戻り値を返す\\n    return $n * ___;\\n___\\n# printで出力\\nprint double(5) . \"___\";",
         "correctLines": [
           "# subでサブルーチンを定義",
           "sub double {",

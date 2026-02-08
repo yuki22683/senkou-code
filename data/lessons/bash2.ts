@@ -326,7 +326,8 @@ export const bash2Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 変数に値を代入\\nfruit=\"りんご\"\\n# パターンマッチで分岐するキーワード\\ncase $fruit in\\n    # りんごの場合\\n    りんご) echo \"赤\";;\\n    # バナナの場合\\n    バナナ) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\nesac", "holeyCode": "# 変数に値を代入\\nfruit=\"___\"\\n# パターンマッチで分岐するキーワード\\n___ $fruit in\\n    # りんごの場合\\n    りんご) echo \"___\";;\\n    # バナナの場合\\n    バナナ) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\nesac",
+        "correctCode": "# 変数に値を代入\\nfruit=\"りんご\"\\n# パターンマッチで分岐するキーワード\\ncase $fruit in\\n    # りんごの場合\\n    りんご) echo \"赤\";;\\n    # バナナの場合\\n    バナナ) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\nesac",
+        "holeyCode": "# 変数に値を代入\\nfruit=\"___\"\\n# パターンマッチで分岐するキーワード\\n___ $fruit in\\n    # りんごの場合\\n    りんご) echo \"___\";;\\n    # バナナの場合\\n    バナナ) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"___\";;\\nesac",
         "correctLines": [
           "# 変数に値を代入",
           "fruit=\"りんご\"",
@@ -395,7 +396,7 @@ export const bash2Data = {
           null,
           "$() でコマンドの出力を取得します。",
           null,
-          "ここを正しく入力してください。"
+          "ここを正しく入力してください."
         ],
         "candidates": {
           "operators": [
@@ -435,7 +436,7 @@ export const bash2Data = {
         ],
         "lineHints": [
           null,
-          "文字列を標準出力に表示します。"
+          "文字列を標準出力に表示します."
         ],
         "candidates": {
           "keywords": [

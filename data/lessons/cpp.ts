@@ -23,7 +23,7 @@ export const cppData = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <iostream>\\nint main() {\\n    // こんにちは, C++! と入力\\n    std::cout << \"こんにちは, C++!\" << std::endl;\\n    return 0;\\n}",
-        "holeyCode": "#include <iostream>\\nint ___() {\\n    // こんにちは, C++! と入力\\n    std::cout << ___ << std::endl;\\n    return ___;\\n___",
+        "holeyCode": "#include <___>\\nint ___() {\\n    // こんにちは, C++! と入力\\n    std::cout << ___ << std::endl;\\n    return ___;\\n___",
         "correctLines": [
           "#include <iostream>",
           "int main() {",
