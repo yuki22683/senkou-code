@@ -262,7 +262,7 @@ function checkConsecutiveComments(file, content) {
       };
 
       if (isComment(current) && isComment(next)) {
-        addWarning(file, checkName, `「${ex.title}」行${i + 1}-${i + 2}: 2行連続コメント`);
+        addError(file, checkName, `「${ex.title}」行${i + 1}-${i + 2}: 2行連続コメント`);
         hasError = true;
       }
     }
