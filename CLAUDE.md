@@ -1,15 +1,45 @@
-# CLAUDE.md - プロジェクトルール
+# Project Rules (プロジェクトルール)
 
-## 修正ミス発生時のルール
+## 修正ミス発生時のルール (Ironclad Rules)
 
-修正ミスが発生した場合は、必ず以下を行うこと：
-
-1. **再発防止策をこのファイルに記述する**
-2. 同じミスを二度と繰り返さない
+1.  **再発防止策の徹底 (Mandatory Recurrence Prevention):**
+    修正ミスや実装ミスが発生した場合は、必ず**再発防止策 (Recurrence Prevention Measures)** をこのファイルに追記すること。これは継続的な改善とプロジェクトの安定性を確保するための絶対的なルールである。
+2.  **同じミスを繰り返さない:**
+    策定した再発防止策を遵守し、同じ過ちを二度と繰り返さないこと。
 
 ---
 
-## 再発防止策
+## 画像生成 (Image Generation)
+
+`imagefx` コマンドを使用して、Google ImageFXで画像を生成できます。
+
+### 使用方法 (Usage)
+
+```bash
+imagefx --cookie "<COOKIE_VALUE>" --prompt "<PROMPT>" --count <NUMBER> --dir "<OUTPUT_DIRECTORY>" --ratio <ASPECT_RATIO>
+```
+
+### パラメータ (Parameters)
+
+- `--cookie`: ImageFX認証用のセッションクッキー。
+- `--prompt`: 生成したい画像のテキストによる説明。
+- `--count`: 生成する画像の枚数（デフォルト: 1）。
+- `--dir`: 生成された画像を保存するディレクトリ。
+- `--ratio`: 画像のアスペクト比。一般的な値: `IMAGE_ASPECT_RATIO_SQUARE`。
+
+### 例 (Example)
+
+```bash
+imagefx --cookie "your_cookie_here" \
+  --prompt "A cute robot learning to code, 3D style" \
+  --count 1 \
+  --dir "public/illustrations" \
+  --ratio IMAGE_ASPECT_RATIO_SQUARE
+```
+
+---
+
+## 再発防止策 (Recurrence Prevention Measures)
 
 ### 1. git checkout 実行時の注意
 - `git checkout -- data/lessons/*.ts` を実行すると、以前適用した修正（虫食い化、コメント追加など）が全て消える
@@ -365,17 +395,10 @@
 - **正しいコード**：
   ```javascript
   const { data: existingProgress } = await supabase
-    .from("user_progress")
-    .select("status")
-    .eq("user_id", user.id)
-    .eq("exercise_id", exerciseId)
-    .single();
+    .from("user_progress").select("status").eq("user_id", user.id).eq("exercise_id", exerciseId).single();
 
   if (existingProgress?.status !== "completed") {
-    await supabase.from("user_progress").upsert({
-      status: "hint_used",
-      ...
-    });
+    await supabase.from("user_progress").upsert({ status: "hint_used", ... });
   }
   ```
 - **理由**：完了済み演習を再度開いて途中でやめた場合、ステータスが上書きされると次の演習がロックされてしまう。
@@ -397,8 +420,7 @@
 - **チェックコマンド**：
   ```bash
   node -e "
-  const fs = require('fs');
-  const path = require('path');
+  const fs = require('fs'); const path = require('path');
   function isComment(line) {
     const trimmed = line.trim();
     if (trimmed.startsWith('# ') || trimmed === '#') return true;
@@ -890,3 +912,22 @@
   - 例: 「関数名」→「関」（黄色）「数」（白）「名」（白）
 - **正しい表示**: 「関数名」が1つのトークンとして統一された色で表示される
 - **対象ファイル**: `lib/syntax-highlight.ts` の `tokenize` 関数内の正規表現
+
+### 65. チュートリアルのリセットポリシー
+- 解説スライド（Tutorial Slides）は、ナビゲーションされた際に**常に1ページ目から開始**しなければならない。
+- **禁止**: `localStorage` やその他の永続化メカニズムを使用して、最後に表示したスライドのインデックスを保存・復元すること。これは演習間で切り替えた際にユーザーを混乱させるUXの原因となる。
+
+### 66. ツールの衛生管理 (Tool Hygiene)
+- `scripts/` ディレクトリに、複数のバージョンのスクリプト（例: `v1`, `v2`, `v3`）を放置しないこと。
+- 陳腐化・破損したスクリプトは、将来の誤用を防ぐために削除する。常に最新の検証済みバージョンのみを使用すること。
+
+### 67. 堅牢なJSONパース (Robust JSON Parsing)
+- レッスンデータ（TSファイル内のJSON風構造）をパースまたは修正するスクリプトを書く際、`\[([\s\S]*?)\]` のような**単純な正規表現を使用して配列の中身を抽出してはならない**。
+- **理由**: 文字列内に `]` が含まれている場合（例: `pattern = "[a-z]"`）、正規表現が途中でマッチ終了してしまい、パースに失敗する。
+- **対策**: ブラケットのネストをカウントするロジックや、`extractObject` 関数のような堅牢なパース技術を使用して、ネストされた構造や文字列リテラルを正しく処理すること。
+
+### 68. 答えをそのまま教えないポリシー (Zero Giveaway Policy)
+- **ボイラープレート（定型コード）であっても、虫食い（`___`）のない行を提供してはならない**。
+- **目的**: ユーザーがプログラムの構造全体を理解し、自身の指でタイプすることを保証するため。
+- **禁止**: `correctCode` をそのままコピーして、一部だけを隠す手抜き作成。
+- **必須**: すべてのコード行（コメント・空行除く）に `___` を含めること。
