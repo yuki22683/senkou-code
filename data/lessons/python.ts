@@ -665,14 +665,14 @@ export const pythonData = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# greet という関数を定義する（'こんにちは'と表示）\\ndef greet():\\n    # 'こんにちは'と表示\\n    print('こんにちは')\\n# 関数を呼び出す\\ngreet()",
-        "holeyCode": "# greet という関数を定義する（'こんにちは'と表示）\\ndef ___():\\n    # 'こんにちは'と表示\\n    ___('こんにちは')\\n# 関数を呼び出す\\n___()",
+        "correctCode": "# greet という関数を定義する（'こんにちは'と表示）\\ndef greet():\\n    # 'こんにちは'と表示\\n    print('こんにちは')\\n# greet関数を呼び出す\\ngreet()",
+        "holeyCode": "# greet という関数を定義する（'こんにちは'と表示）\\ndef ___():\\n    # 'こんにちは'と表示\\n    ___('こんにちは')\\n# greet関数を呼び出す\\n___()",
         "correctLines": [
           "# greet という関数を定義する（'こんにちは'と表示）",
           "def greet():",
           "    # 'こんにちは'と表示",
           "    print('こんにちは')",
-          "# 関数を呼び出す",
+          "# greet関数を呼び出す",
           "greet()"
         ],
         "lineHints": [

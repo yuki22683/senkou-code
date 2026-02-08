@@ -22,15 +22,15 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 名前を受け取ってあいさつする関数\\ndef hello(name):\\n    # f'Hello, {name}!'を出力\\n    print(f'Hello, {name}!')\\n\\n# 関数を'Python'を渡して呼び出す\\nhello('Python')",
-        "holeyCode": "# 名前を受け取ってあいさつする関数\\ndef ___(name):\\n    # f'Hello, {name}!'を出力\\n    ___(f'Hello, {name}!')\\n\\n# 関数を'Python'を渡して呼び出す\\nhello('___')",
+        "correctCode": "# 名前を受け取ってあいさつするhello関数を定義\\ndef hello(name):\\n    # f'Hello, {name}!'を出力\\n    print(f'Hello, {name}!')\\n\\n# 'Python'を渡してhello関数を呼び出す\\nhello('Python')",
+        "holeyCode": "# 名前を受け取ってあいさつするhello関数を定義\\ndef ___(name):\\n    # f'Hello, {name}!'を出力\\n    ___(f'Hello, {name}!')\\n\\n# 'Python'を渡してhello関数を呼び出す\\nhello('___')",
         "correctLines": [
-          "# 名前を受け取ってあいさつする関数",
+          "# 名前を受け取ってあいさつするhello関数を定義",
           "def hello(name):",
           "    # f'Hello, {name}!'を出力",
           "    print(f'Hello, {name}!')",
           "",
-          "# 関数を'Python'を渡して呼び出す",
+          "# 'Python'を渡してhello関数を呼び出す",
           "hello('Python')"
         ],
         "lineHints": [
@@ -82,15 +82,15 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# デフォルト引数を持つ関数\\ndef say_hi(name='World'):\\n    # 「Hi, 名前!」の形式で表示\\n    print(f'Hi, {name}!')\\n\\n# 引数なしで呼び出す\\nsay_hi()",
-        "holeyCode": "# デフォルト引数を持つ関数\\ndef ___(name='World'):\\n    # 「Hi, 名前!」の形式で表示\\n    ___(f'Hi, {name}!')\\n\\n# 引数なしで呼び出す\\n___()",
+        "correctCode": "# デフォルト引数を持つsay_hi関数を定義\\ndef say_hi(name='World'):\\n    # 「Hi, 名前!」の形式で表示\\n    print(f'Hi, {name}!')\\n\\n# 引数なしでsay_hi関数を呼び出す\\nsay_hi()",
+        "holeyCode": "# デフォルト引数を持つsay_hi関数を定義\\ndef ___(name='World'):\\n    # 「Hi, 名前!」の形式で表示\\n    ___(f'Hi, {name}!')\\n\\n# 引数なしでsay_hi関数を呼び出す\\n___()",
         "correctLines": [
-          "# デフォルト引数を持つ関数",
+          "# デフォルト引数を持つsay_hi関数を定義",
           "def say_hi(name='World'):",
           "    # 「Hi, 名前!」の形式で表示",
           "    print(f'Hi, {name}!')",
           "",
-          "# 引数なしで呼び出す",
+          "# 引数なしでsay_hi関数を呼び出す",
           "say_hi()"
         ],
         "lineHints": [
@@ -136,15 +136,15 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 2つの数を足して返す関数\\ndef add(a, b):\\n    # 計算結果をreturnで返す\\n    return a + b\\n\\n# 結果を変数に入れて表示（引数は10と20）\\nresult = add(10, 20)\\n# resultを表示\\nprint(result)",
-        "holeyCode": "# 2つの数を足して返す関数\\ndef ___(a, b):\\n    # 計算結果をreturnで返す\\n    return a + ___\\n\\n# 結果を変数に入れて表示（引数は10と20）\\nresult = add(___, 20)\\n# resultを表示\\n___(result)",
+        "correctCode": "# 2つの数を足して返すadd関数を定義\\ndef add(a, b):\\n    # 計算結果をreturnで返す\\n    return a + b\\n\\n# add(10, 20)の結果をresultに代入\\nresult = add(10, 20)\\n# resultを表示\\nprint(result)",
+        "holeyCode": "# 2つの数を足して返すadd関数を定義\\ndef ___(a, b):\\n    # 計算結果をreturnで返す\\n    return a + ___\\n\\n# add(10, 20)の結果をresultに代入\\nresult = add(___, 20)\\n# resultを表示\\n___(result)",
         "correctLines": [
-          "# 2つの数を足して返す関数",
+          "# 2つの数を足して返すadd関数を定義",
           "def add(a, b):",
           "    # 計算結果をreturnで返す",
           "    return a + b",
           "",
-          "# 結果を変数に入れて表示（引数は10と20）",
+          "# add(10, 20)の結果をresultに代入",
           "result = add(10, 20)",
           "# resultを表示",
           "print(result)"
@@ -195,15 +195,15 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 2つの値を返す関数\\ndef calc(x):\\n    # x+1 と x*2 を返す\\n    return x + 1, x * 2\\n\\n# 2つの変数で受け取る（引数は5）\\na, b = calc(5)\\n# aを表示\\nprint(a)\\n# bを表示\\nprint(b)",
-        "holeyCode": "# 2つの値を返す関数\\ndef ___(x):\\n    # x+1 と x*2 を返す\\n    return x + ___, x * 2\\n\\n# 2つの変数で受け取る（引数は5）\\na, b = calc(___)\\n# aを表示\\n___(a)\\n# bを表示\\n___(b)",
+        "correctCode": "# 2つの値を返すcalc関数を定義\\ndef calc(x):\\n    # x+1 と x*2 を返す\\n    return x + 1, x * 2\\n\\n# calc(5)の結果をa, bで受け取る\\na, b = calc(5)\\n# aを表示\\nprint(a)\\n# bを表示\\nprint(b)",
+        "holeyCode": "# 2つの値を返すcalc関数を定義\\ndef ___(x):\\n    # x+1 と x*2 を返す\\n    return x + ___, x * 2\\n\\n# calc(5)の結果をa, bで受け取る\\na, b = calc(___)\\n# aを表示\\n___(a)\\n# bを表示\\n___(b)",
         "correctLines": [
-          "# 2つの値を返す関数",
+          "# 2つの値を返すcalc関数を定義",
           "def calc(x):",
           "    # x+1 と x*2 を返す",
           "    return x + 1, x * 2",
           "",
-          "# 2つの変数で受け取る（引数は5）",
+          "# calc(5)の結果をa, bで受け取る",
           "a, b = calc(5)",
           "# aを表示",
           "print(a)",
@@ -649,19 +649,19 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Catクラスを定義\\nclass Cat:\\n    # メソッドの第一引数はself\\n    def meow(self):\\n        # メッセージ（'Meow!'）\\n        print('Meow!')\\n\\n# インスタンスを作って呼び出す\\ncat = Cat()\\n# meowメソッドを呼び出す\\ncat.meow()",
-        "holeyCode": "# Catクラスを定義\\nclass ___:\\n    # メソッドの第一引数はself\\n    def ___(self):\\n        # メッセージ（'Meow!'）\\n        ___('Meow!')\\n\\n# インスタンスを作って呼び出す\\ncat = ___()\\n# meowメソッドを呼び出す\\ncat.___()",
+        "correctCode": "# Catクラスを定義\\nclass Cat:\\n    # meowメソッドを定義（第一引数はself）\\n    def meow(self):\\n        # 'Meow!'を表示\\n        print('Meow!')\\n\\n# Catのインスタンスを作成しcatに代入\\ncat = Cat()\\n# catのmeowメソッドを呼び出す\\ncat.meow()",
+        "holeyCode": "# Catクラスを定義\\nclass ___:\\n    # meowメソッドを定義（第一引数はself）\\n    def ___(self):\\n        # 'Meow!'を表示\\n        ___('Meow!')\\n\\n# Catのインスタンスを作成しcatに代入\\ncat = ___()\\n# catのmeowメソッドを呼び出す\\ncat.___()",
         "correctLines": [
           "# Catクラスを定義",
           "class Cat:",
-          "    # メソッドの第一引数はself",
+          "    # meowメソッドを定義（第一引数はself）",
           "    def meow(self):",
-          "        # メッセージ（'Meow!'）",
+          "        # 'Meow!'を表示",
           "        print('Meow!')",
           "",
-          "# インスタンスを作って呼び出す",
+          "# Catのインスタンスを作成しcatに代入",
           "cat = Cat()",
-          "# meowメソッドを呼び出す",
+          "# catのmeowメソッドを呼び出す",
           "cat.meow()"
         ],
         "lineHints": [
@@ -712,23 +712,24 @@ export const pythonData2 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# Robotクラスを定義\\nclass Robot:\\n    # コンストラクタを定義\\n    def __init__(self, name):\\n        # selfを使って属性を保存\\n        self.name = name\\n    \\n    def say_name(self):\\n        # self.nameを表示\\n        print(self.name)\\n\\n# インスタンスを作る（名前は'R2D2'）\\nr = Robot('R2D2')\\n# say_nameメソッドを呼び出す\\nr.say_name()",
-        "holeyCode": "# Robotクラスを定義\\nclass ___:\\n    # コンストラクタを定義\\n    def ___(self, name):\\n        # selfを使って属性を保存\\n        self.___ = name\\n    \\n    def ___(self):\\n        # self.nameを表示\\n        ___(self.name)\\n\\n# インスタンスを作る（名前は'R2D2'）\\nr = Robot('R___D2')\\n# say_nameメソッドを呼び出す\\nr.___()",
+        "correctCode": "# Robotクラスを定義\\nclass Robot:\\n    # __init__メソッド（コンストラクタ）を定義\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n    \\n    # say_nameメソッドを定義\\n    def say_name(self):\\n        # self.nameを表示\\n        print(self.name)\\n\\n# Robotのインスタンスを作成（名前は'R2D2'）しrに代入\\nr = Robot('R2D2')\\n# rのsay_nameメソッドを呼び出す\\nr.say_name()",
+        "holeyCode": "# Robotクラスを定義\\nclass ___:\\n    # __init__メソッド（コンストラクタ）を定義\\n    def ___(self, name):\\n        # self.nameにnameを代入\\n        self.___ = name\\n    \\n    # say_nameメソッドを定義\\n    def ___(self):\\n        # self.nameを表示\\n        ___(self.name)\\n\\n# Robotのインスタンスを作成（名前は'R2D2'）しrに代入\\nr = Robot('R___D2')\\n# rのsay_nameメソッドを呼び出す\\nr.___()",
         "correctLines": [
           "# Robotクラスを定義",
           "class Robot:",
-          "    # コンストラクタを定義",
+          "    # __init__メソッド（コンストラクタ）を定義",
           "    def __init__(self, name):",
-          "        # selfを使って属性を保存",
+          "        # self.nameにnameを代入",
           "        self.name = name",
           "    ",
+          "    # say_nameメソッドを定義",
           "    def say_name(self):",
           "        # self.nameを表示",
           "        print(self.name)",
           "",
-          "# インスタンスを作る（名前は'R2D2'）",
+          "# Robotのインスタンスを作成（名前は'R2D2'）しrに代入",
           "r = Robot('R2D2')",
-          "# say_nameメソッドを呼び出す",
+          "# rのsay_nameメソッドを呼び出す",
           "r.say_name()"
         ],
         "lineHints": [

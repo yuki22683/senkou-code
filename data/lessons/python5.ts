@@ -18,17 +18,17 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# ファイル名を変数に保存\\nfilename = 'テスト.txt'\\n# 書き込みモードでファイルを開く\\nwith open(filename, 'w') as f:\\n    # ファイルにテキストを書き込む\\n    f.write('こんにちは, Python!')\\n\\n# 読み込みモードでファイルを開く\\nwith open(filename, 'r') as f:\\n    # ファイルの内容を読み込んで表示\\n    print(f.read())",
-        "holeyCode": "# ファイル名を変数に保存\\nfilename = 'テスト.___'\\n# 書き込みモードでファイルを開く\\nwith open(filename, 'w') as ___:\\n    # ファイルにテキストを書き込む\\n    f.write('こんにちは, ___!')\\n\\n# 読み込みモードでファイルを開く\\nwith open(filename, 'r') as ___:\\n    # ファイルの内容を読み込んで表示\\n    ___(f.read())",
+        "correctCode": "# ファイル名を変数に保存\\nfilename = 'テスト.txt'\\n# 書き込みモードでファイルを開く（変数f）\\nwith open(filename, 'w') as f:\\n    # ファイルにテキストを書き込む\\n    f.write('こんにちは, Python!')\\n\\n# 読み込みモードでファイルを開く（変数f）\\nwith open(filename, 'r') as f:\\n    # ファイルの内容を読み込んで表示\\n    print(f.read())",
+        "holeyCode": "# ファイル名を変数に保存\\nfilename = 'テスト.___'\\n# 書き込みモードでファイルを開く（変数f）\\nwith open(filename, 'w') as ___:\\n    # ファイルにテキストを書き込む\\n    f.write('こんにちは, ___!')\\n\\n# 読み込みモードでファイルを開く（変数f）\\nwith open(filename, 'r') as ___:\\n    # ファイルの内容を読み込んで表示\\n    ___(f.read())",
         "correctLines": [
           "# ファイル名を変数に保存",
           "filename = 'テスト.txt'",
-          "# 書き込みモードでファイルを開く",
+          "# 書き込みモードでファイルを開く（変数f）",
           "with open(filename, 'w') as f:",
           "    # ファイルにテキストを書き込む",
           "    f.write('こんにちは, Python!')",
           "",
-          "# 読み込みモードでファイルを開く",
+          "# 読み込みモードでファイルを開く（変数f）",
           "with open(filename, 'r') as f:",
           "    # ファイルの内容を読み込んで表示",
           "    print(f.read())"
@@ -74,16 +74,16 @@ export const pythonData5 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 書き込みモードでファイルを開く\\nwith open('テスト.txt', 'w') as f:\\n    # 'line1\\nline2\\nline3'を書き込む\\n    f.write('line1\\nline2\\nline3')\\n# 読み込みモードでファイルを開く\\nwith open('テスト.txt', 'r') as f:\\n    # forでfをループ\\n    for line in f:\\n        # line.strip()を表示\\n        print(line.strip())",
-        "holeyCode": "# 書き込みモードでファイルを開く\\nwith open('テスト.txt', '___') as f:\\n    # 'line1\\nline2\\nline3'を書き込む\\n    f.write('line1\\nline2\\nline3')\\n# 読み込みモードでファイルを開く\\nwith open('テスト.txt', '___') as f:\\n    # forでfをループ\\n    for line ___ f:\\n        # line.strip()を表示\\n        print(line.___())",
+        "correctCode": "# 書き込みモードでファイルを開く（変数f）\\nwith open('テスト.txt', 'w') as f:\\n    # 'line1\\nline2\\nline3'を書き込む\\n    f.write('line1\\nline2\\nline3')\\n# 読み込みモードでファイルを開く（変数f）\\nwith open('テスト.txt', 'r') as f:\\n    # ファイルオブジェクトfをループ\\n    for line in f:\\n        # line.strip()を表示\\n        print(line.strip())",
+        "holeyCode": "# 書き込みモードでファイルを開く（変数f）\\nwith open('テスト.txt', '___') as f:\\n    # 'line1\\nline2\\nline3'を書き込む\\n    f.write('line1\\nline2\\nline3')\\n# 読み込みモードでファイルを開く（変数f）\\nwith open('テスト.txt', '___') as f:\\n    # ファイルオブジェクトfをループ\\n    for line ___ f:\\n        # line.strip()を表示\\n        print(line.___())",
         "correctLines": [
-          "# 書き込みモードでファイルを開く",
+          "# 書き込みモードでファイルを開く（変数f）",
           "with open('テスト.txt', 'w') as f:",
           "    # 'line1\\nline2\\nline3'を書き込む",
           "    f.write('line1\\nline2\\nline3')",
-          "# 読み込みモードでファイルを開く",
+          "# 読み込みモードでファイルを開く（変数f）",
           "with open('テスト.txt', 'r') as f:",
-          "    # forでfをループ",
+          "    # ファイルオブジェクトfをループ",
           "    for line in f:",
           "        # line.strip()を表示",
           "        print(line.strip())"

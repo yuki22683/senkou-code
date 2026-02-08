@@ -22,12 +22,12 @@ export const pythonData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 2乗を計算する無名関数を定義\\nsquare = lambda x: x ** 2\\n# 定義した関数に数値 5 を渡して実行結果を表示\\nprint(square(5))",
-        "holeyCode": "# 2乗を計算する無名関数を定義\\nsquare = lambda x: x ** ___\\n# 定義した関数に数値 5 を渡して実行結果を表示\\n___(square(5))",
+        "correctCode": "# 2乗を計算するlambda式をsquareに代入\\nsquare = lambda x: x ** 2\\n# square(5)の結果を表示\\nprint(square(5))",
+        "holeyCode": "# 2乗を計算するlambda式をsquareに代入\\nsquare = lambda x: x ** ___\\n# square(5)の結果を表示\\n___(square(5))",
         "correctLines": [
-          "# 2乗を計算する無名関数を定義",
+          "# 2乗を計算するlambda式をsquareに代入",
           "square = lambda x: x ** 2",
-          "# 定義した関数に数値 5 を渡して実行結果を表示",
+          "# square(5)の結果を表示",
           "print(square(5))"
         ],
         "lineHints": [
@@ -67,10 +67,10 @@ export const pythonData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 全ての数値から最大値を求める関数を定義\\ndef find_max(*args):\\n    # 最大値を最初の引数で初期化\\n    max_val = args[0]\\n    # 渡された全ての引数をループで処理\\n    for n in args:\\n        # より大きい値があれば更新\\n        if n > max_val:\\n            max_val = n\\n    # 最終的な最大値を返す\\n    return max_val\\n\\n# 3, 7, 2, 9, 5 から最大値を表示\\nprint(find_max(3, 7, 2, 9, 5))",
-        "holeyCode": "# 全ての数値から最大値を求める関数を定義\\ndef ___(*args):\\n    # 最大値を最初の引数で初期化\\n    max_val = args[___]\\n    # 渡された全ての引数をループで処理\\n    for n in ___:\\n        # より大きい値があれば更新\\n        if n > ___:\\n            max_val = ___\\n    # 最終的な最大値を返す\\n    return ___\\n\\n# 3, 7, 2, 9, 5 から最大値を表示\\n___(find_max(3, 7, 2, 9, 5))",
+        "correctCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef find_max(*args):\\n    # 最大値を最初の引数で初期化\\n    max_val = args[0]\\n    # 渡された全ての引数をループで処理\\n    for n in args:\\n        # より大きい値があれば更新\\n        if n > max_val:\\n            max_val = n\\n    # 最終的な最大値を返す\\n    return max_val\\n\\n# find_max(3, 7, 2, 9, 5)の結果を表示\\nprint(find_max(3, 7, 2, 9, 5))",
+        "holeyCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef ___(*args):\\n    # 最大値を最初の引数で初期化\\n    max_val = args[___]\\n    # 渡された全ての引数をループで処理\\n    for n in ___:\\n        # より大きい値があれば更新\\n        if n > ___:\\n            max_val = ___\\n    # 最終的な最大値を返す\\n    return ___\\n\\n# find_max(3, 7, 2, 9, 5)の結果を表示\\n___(find_max(3, 7, 2, 9, 5))",
         "correctLines": [
-          "# 全ての数値から最大値を求める関数を定義",
+          "# 全ての数値から最大値を求めるfind_max関数を定義",
           "def find_max(*args):",
           "    # 最大値を最初の引数で初期化",
           "    max_val = args[0]",
@@ -82,7 +82,7 @@ export const pythonData3 = {
           "    # 最終的な最大値を返す",
           "    return max_val",
           "",
-          "# 3, 7, 2, 9, 5 から最大値を表示",
+          "# find_max(3, 7, 2, 9, 5)の結果を表示",
           "print(find_max(3, 7, 2, 9, 5))"
         ],
         "lineHints": [
@@ -139,17 +139,17 @@ export const pythonData3 = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# キーワード引数を受け取って表示する関数を定義\\ndef print_info(**kwargs):\\n    # 1番目の k にキー、2番目の v に値が入る\\n    for k, v in kwargs.items():\\n        # キーと値をイコールで繋いで表示\\n        print(f'{k} = {v}')\\n\\n# x=10, y=20 を指定して実行\\nprint_info(x=10, y=20)",
-        "holeyCode": "# キーワード引数を受け取って表示する関数を定義\\ndef ___(**kwargs):\\n    # 1番目の k にキー、2番目の v に値が入る\\n    for k, v in kwargs.___():\\n        # キーと値をイコールで繋いで表示\\n        ___(f'{k} = {v}')\\n\\n# x=10, y=20 を指定して実行\\nprint_info(x=___, y=20)",
+        "correctCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef print_info(**kwargs):\\n    # 1番目の k にキー、2番目の v に値が入る\\n    for k, v in kwargs.items():\\n        # キーと値をイコールで繋いで表示\\n        print(f'{k} = {v}')\\n\\n# print_info(x=10, y=20)を実行\\nprint_info(x=10, y=20)",
+        "holeyCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef ___(**kwargs):\\n    # 1番目の k にキー、2番目の v に値が入る\\n    for k, v in kwargs.___():\\n        # キーと値をイコールで繋いで表示\\n        ___(f'{k} = {v}')\\n\\n# print_info(x=10, y=20)を実行\\nprint_info(x=___, y=20)",
         "correctLines": [
-          "# キーワード引数を受け取って表示する関数を定義",
+          "# キーワード引数を受け取って表示するprint_info関数を定義",
           "def print_info(**kwargs):",
           "    # 1番目の k にキー、2番目の v に値が入る",
           "    for k, v in kwargs.items():",
           "        # キーと値をイコールで繋いで表示",
           "        print(f'{k} = {v}')",
           "",
-          "# x=10, y=20 を指定して実行",
+          "# print_info(x=10, y=20)を実行",
           "print_info(x=10, y=20)"
         ],
         "lineHints": [
@@ -303,17 +303,17 @@ c: 3\
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 偶数を生成するジェネレータ関数を定義\\ndef even_numbers(n):\\n    # 指定された回数ループ\\n    for i in range(n):\\n        # i * 2（偶数）を返す\\n        yield i * 2\\n\\n# ジェネレータから値を取り出して表示\\nfor num in even_numbers(4):\\n    # 取り出した値を表示\\n    print(num)",
-        "holeyCode": "# 偶数を生成するジェネレータ関数を定義\\ndef ___(n):\\n    # 指定された回数ループ\\n    for i in range(___):\\n        # i * 2（偶数）を返す\\n        yield i * ___\\n\\n# ジェネレータから値を取り出して表示\\nfor num in even_numbers(___):\\n    # 取り出した値を表示\\n    ___(num)",
+        "correctCode": "# 偶数を生成するeven_numbersジェネレータ関数を定義\\ndef even_numbers(n):\\n    # 指定された回数ループ\\n    for i in range(n):\\n        # i * 2（偶数）を返す\\n        yield i * 2\\n\\n# even_numbers(4)から値を取り出して表示\\nfor num in even_numbers(4):\\n    # 取り出した値を表示\\n    print(num)",
+        "holeyCode": "# 偶数を生成するeven_numbersジェネレータ関数を定義\\ndef ___(n):\\n    # 指定された回数ループ\\n    for i in range(___):\\n        # i * 2（偶数）を返す\\n        yield i * ___\\n\\n# even_numbers(4)から値を取り出して表示\\nfor num in even_numbers(___):\\n    # 取り出した値を表示\\n    ___(num)",
         "correctLines": [
-          "# 偶数を生成するジェネレータ関数を定義",
+          "# 偶数を生成するeven_numbersジェネレータ関数を定義",
           "def even_numbers(n):",
           "    # 指定された回数ループ",
           "    for i in range(n):",
           "        # i * 2（偶数）を返す",
           "        yield i * 2",
           "",
-          "# ジェネレータから値を取り出して表示",
+          "# even_numbers(4)から値を取り出して表示",
           "for num in even_numbers(4):",
           "    # 取り出した値を表示",
           "    print(num)"
@@ -418,28 +418,28 @@ c: 3\
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\\ndef show_call(func):\\n    # 実行内容を包む内部関数を定義\\n    def wrapper():\\n        # 実行前のメッセージを表示\\n        print('関数を呼び出します')\\n        # 本来の関数を実行\\n        func()\\n    # 新しく作った関数を返す\\n    return wrapper\\n\\n# デコレータを関数に適用\\n@show_call\\n# 挨拶を表示する関数を定義\\ndef greet():\\n    # 'こんにちは！'を表示\\n    print('こんにちは！')\\n\\n# 関数を呼び出して実行\\ngreet()",
-        "holeyCode": "# 関数の実行前後でメッセージを表示するデコレータを定義\\ndef ___(func):\\n    # 実行内容を包む内部関数を定義\\n    def ___():\\n        # 実行前のメッセージを表示\\n        ___('関数を呼び出します')\\n        # 本来の関数を実行\\n        ___()\\n    # 新しく作った関数を返す\\n    return ___\\n\\n# デコレータを関数に適用\\n@___\\n# 挨拶を表示する関数を定義\\ndef ___():\\n    # 'こんにちは！'を表示\\n    ___('こんにちは！')\\n\\n# 関数を呼び出して実行\\n___()",
+        "correctCode": "# show_callデコレータ関数を定義\\ndef show_call(func):\\n    # 内部関数wrapperを定義\\n    def wrapper():\\n        # 実行前のメッセージを表示\\n        print('関数を呼び出します')\\n        # 本来の関数を実行\\n        func()\\n    # wrapperを返す\\n    return wrapper\\n\\n# @show_callを適用\\n@show_call\\n# greet関数を定義\\ndef greet():\\n    # 'こんにちは！'を表示\\n    print('こんにちは！')\\n\\n# greet関数を実行\\ngreet()",
+        "holeyCode": "# show_callデコレータ関数を定義\\ndef ___(func):\\n    # 内部関数wrapperを定義\\n    def ___():\\n        # 実行前のメッセージを表示\\n        ___('関数を呼び出します')\\n        # 本来の関数を実行\\n        ___()\\n    # wrapperを返す\\n    return ___\\n\\n# @show_callを適用\\n@___\\n# greet関数を定義\\ndef ___():\\n    # 'こんにちは！'を表示\\n    ___('こんにちは！')\\n\\n# greet関数を実行\\n___()",
         "correctLines": [
-          "# 関数の実行前後でメッセージを表示するデコレータを定義",
+          "# show_callデコレータ関数を定義",
           "def show_call(func):",
-          "    # 実行内容を包む内部関数を定義",
+          "    # 内部関数wrapperを定義",
           "    def wrapper():",
           "        # 実行前のメッセージを表示",
           "        print('関数を呼び出します')",
           "        # 本来の関数を実行",
           "        func()",
-          "    # 新しく作った関数を返す",
+          "    # wrapperを返す",
           "    return wrapper",
           "",
-          "# デコレータを関数に適用",
+          "# @show_callを適用",
           "@show_call",
-          "# 挨拶を表示する関数を定義",
+          "# greet関数を定義",
           "def greet():",
           "    # 'こんにちは！'を表示",
           "    print('こんにちは！')",
           "",
-          "# 関数を呼び出して実行",
+          "# greet関数を実行",
           "greet()"
         ],
         "lineHints": [
