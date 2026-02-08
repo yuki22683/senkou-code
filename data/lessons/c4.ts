@@ -23,7 +23,7 @@ export const c4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    // fpにfopen(\"test.txt\", \"w\")を代入\\n    FILE *fp = fopen(\"テスト.txt\", \"w\");\\n    if (fp != NULL) {\\n        fprintf(fp, \"Hello\\n\");\\n        fclose(fp);\\n        printf(\"Done\\n\");\\n    }\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\\n\\nint ___() {\\n    // fpにfopen(\"test.txt\", \"w\")を代入\\n    FILE *fp = fopen(\"___\", \"w\");\\n    if (fp != ___) {\\n        fprintf(fp, \"Hello\\n\");\\n        fclose(___);\\n        printf(\"Done\\n\");\\n    ___\\n    return ___;\\n___",
+        "holeyCode": "#include <___>\\n\\nint ___() {\\n    // fpにfopen(\"test.txt\", \"w\")を代入\\n    FILE *fp = fopen(\"___\", \"w\");\\n    if (fp != ___) {\\n        fprintf(fp, \"Hello\\n\");\\n        fclose(___);\\n        printf(\"Done\\n\");\\n    ___\\n    return ___;\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -41,7 +41,7 @@ export const c4Data = {
                   "}"
         ],
         "lineHints": [
-          null,
+          "標準入出力ライブラリを読み込みます。",
           null,
           "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           null,
@@ -62,7 +62,7 @@ export const c4Data = {
             "open",
             "fread"
           ],
-          "others": ["main", "test.txt", "NULL", "fp", "}", "0", "テスト.txt"]
+          "others": ["main", "test.txt", "NULL", "fp", "}", "0", "テスト.txt", "stdio.h"]
         },
         "testCases": [
           {
@@ -83,12 +83,12 @@ export const c4Data = {
           },
           {
             "title": "重要性",
-            "content": "# 必ず閉じる理由\\n\\n**なぜファイルを閉じないといけないの？**\\n\\n1. **バッファ**（一時的な保存場所）の内容が実際にファイルに書き込まれる\\n2. **メモリ**が解放される（パソコンの負担が減る）\\n3. 他のプログラムがそのファイルを使えるようになる\\n\\n**身近な例え：**\\n使った本を返さないと、他の人が読めません。また、本を持ったままだと手がふさがってしまいますよね。\\n\\n**超重要！**\\n`fopen` したら、必ず `fclose` で閉じましょう！これはプログラマーの大切なマナーです。"
+            "content": "# 必ず閉じる理由\\n\\n**なぜファイルを閉じないといけないの？**\\n\\n1. **バッファ**（一時的な保存場所）の内容が実際にファイルに書き込まれる\\n2. **メモリ**が解放される（パソコンの負担が減る）\\n3. 他のプログラムがそのファイルを使えるようになる\\n\\n**身近な例え：**\\n使った本を返さないと、他の人が読めません。また、本を持ったまだと手がふさがってしまいますよね。\\n\\n**超重要！**\\n`fopen` したら、必ず `fclose` で閉じましょう！これはプログラマーの大切なマナーです。"
           }
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"データ.txt\", \"w\");\\n    if (fp != NULL) {\\n        fputs(\"Data\\n\", fp);\\n        // fclose(fp)でファイルを閉じる\\n        fclose(fp);\\n        printf(\"Closed\\n\");\\n    }\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\\n\\nint ___() {\\n    FILE *fp = fopen(\"___\", \"w\");\\n    if (fp != ___) {\\n        fputs(\"Data\\n\", fp);\\n        // fclose(fp)でファイルを閉じる\\n        fclose(___);\\n        printf(\"Closed\\n\");\\n    ___\\n    return ___;\\n___",
+        "holeyCode": "#include <___>\\n\\nint ___() {\\n    FILE *fp = fopen(\"___\", \"w\");\\n    if (fp != ___) {\\n        fputs(\"Data\\n\", fp);\\n        // fclose(fp)でファイルを閉じる\\n        fclose(___);\\n        printf(\"Closed\\n\");\\n    ___\\n    return ___;\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -106,7 +106,7 @@ export const c4Data = {
                   "}"
         ],
         "lineHints": [
-          null,
+          "標準入出力ライブラリを読み込みます。",
           null,
           "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           "ここを正しく入力してください。",
@@ -127,7 +127,7 @@ export const c4Data = {
             "close",
             "fend"
           ],
-          "others": ["main", "data.txt", "NULL", "fp", "}", "0", "データ.txt"]
+          "others": ["main", "data.txt", "NULL", "fp", "}", "0", "データ.txt", "stdio.h"]
         },
         "testCases": [
           {
@@ -153,7 +153,7 @@ export const c4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"log.txt\", \"w\");\\n    if (fp != NULL) {\\n        // fprintf(fp, \"Score: %d\\n\", 100)で書き込む\\n        fprintf(fp, \"Score: %d\\n\", 100);\\n        fclose(fp);\\n        printf(\"Written\\n\");\\n    }\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\\n\\nint ___() {\\n    FILE *fp = fopen(\"___\", \"w\");\\n    if (fp != ___) {\\n        // fprintf(fp, \"Score: %d\\n\", 100)で書き込む\\n        fprintf(fp, \"Score: %d\\n\", 100);\\n        fclose(___);\\n        printf(\"Written\\n\");\\n    ___\\n    return ___;\\n___",
+        "holeyCode": "#include <___>\\n\\nint ___() {\\n    FILE *fp = fopen(\"___\", \"w\");\\n    if (fp != ___) {\\n        // fprintf(fp, \"Score: %d\\n\", 100)で書き込む\\n        fprintf(fp, \"Score: %d\\n\", 100);\\n        fclose(___);\\n        printf(\"Written\\n\");\\n    ___\\n    return ___;\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -171,7 +171,7 @@ export const c4Data = {
                   "}"
         ],
         "lineHints": [
-          null,
+          "標準入出力ライブラリを読み込みます。",
           null,
           "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           "ここを正しく入力してください。",
@@ -192,7 +192,7 @@ export const c4Data = {
             "printf",
             "sprintf"
           ],
-          "others": ["main", "log.txt", "NULL", "fp", "}", "0", "\"Written", "return 0;"]
+          "others": ["main", "log.txt", "NULL", "fp", "}", "0", "\"Written", "return 0;", "stdio.h"]
         },
         "testCases": [
           {
@@ -218,7 +218,7 @@ export const c4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\n#include <string.h>\\n\\nint main() {\\n    char line[100];\\n    FILE *fp = fopen(\"テスト.txt\", \"w\");\\n    fprintf(fp, \"Hello World\\n\");\\n    fclose(fp);\\n    fp = fopen(\"テスト.txt\", \"r\");\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\n    fgets(line, sizeof(line), fp);\\n    line[strcspn(line, \"\\n\")] = 0;\\n    printf(\"%s\\n\", line);\\n    fclose(fp);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\\n#include <string.h>\\n\\nint ___() {\\n    char line[___];\\n    FILE *fp = fopen(\"___\", \"w\");\\n    fprintf(fp, \"Hello World\\n\");\\n    fclose(___);\\n    fp = fopen(\"___\", \"r\");\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\n    fgets(line, sizeof(line), ___);\\n    line[strcspn(line, \"\\n\")] = 0;\\n    printf(\"%s\\n\", line);\\n    fclose(___);\\n    return ___;\\n___",
+        "holeyCode": "#include <stdio.h>\\n#include <___>\\n\\nint ___() {\\n    char line[___];\\n    FILE *fp = fopen(\"___\", \"w\");\\n    fprintf(fp, \"Hello World\\n\");\\n    fclose(___);\\n    fp = fopen(\"___\", \"r\");\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\n    fgets(line, sizeof(line), ___);\\n    line[strcspn(line, \"\\n\")] = 0;\\n    printf(\"%s\\n\", line);\\n    fclose(___);\\n    return ___;\\n___",
         "correctLines": [
           "#include <stdio.h>",
           "#include <string.h>",
@@ -239,7 +239,7 @@ export const c4Data = {
         ],
         "lineHints": [
           null,
-          null,
+          "文字列操作用ライブラリを読み込みます。",
           null,
           "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           "ここを正しく入力してください。",
@@ -261,7 +261,7 @@ export const c4Data = {
             "gets",
             "fread"
           ],
-          "others": ["main", "100", "テスト.txt", "fp", "0;", "pen(\"テスト.txt\", \"r\"", "e, sizeof(line), fp)で1行読み込む"]
+          "others": ["main", "100", "テスト.txt", "fp", "0;", "pen(\"テスト.txt\", \"r\"", "e, sizeof(line), fp)で1行読み込む", "string.h"]
         },
         "testCases": [
           {
@@ -287,7 +287,7 @@ export const c4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"pos.txt\", \"w+\");\\n    fputs(\"ABCDEFGHIJ\", fp);\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\n    fseek(fp, 0, SEEK_SET);\\n    printf(\"%c\\n\", fgetc(fp));\\n    fclose(fp);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\\n\\nint ___() {\\n    FILE *fp = fopen(\"___\", \"w+\");\\n    fputs(\"___\", fp);\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\n    fseek(fp, ___, SEEK_SET);\\n    printf(\"%c\\n\", fgetc(fp));\\n    fclose(___);\\n    return ___;\\n___",
+        "holeyCode": "#include <___>\\n\\nint ___() {\\n    FILE *fp = fopen(\"___\", \"w+\");\\n    fputs(\"___\", fp);\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\n    fseek(fp, ___, SEEK_SET);\\n    printf(\"%c\\n\", fgetc(fp));\\n    fclose(___);\\n    return ___;\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -303,7 +303,7 @@ export const c4Data = {
                   "}"
         ],
         "lineHints": [
-          null,
+          "標準入出力ライブラリを読み込みます。",
           null,
           "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           "ここを正しく入力してください。",
@@ -322,7 +322,7 @@ export const c4Data = {
             "seek",
             "ftell"
           ],
-          "others": ["main", "pos.txt", "ABCDEFGHIJ", "0", "fp", "}"]
+          "others": ["main", "pos.txt", "ABCDEFGHIJ", "0", "fp", "}", "stdio.h"]
         },
         "testCases": [
           {
@@ -339,7 +339,7 @@ export const c4Data = {
         "tutorialSlides": [
           {
             "title": "ftell とは？",
-            "content": "# 現在位置を取得（しゅとく）\\n\\n**ftell**（エフテル）は、今ファイルのどこにいるかを教えてくれる関数です。\\n\\n**身近な例え：**\\n本を読んでいて「今何ページ目？」と聞くようなものです。`ftell` は「今、ファイルの先頭から何バイト目にいますよ」と教えてくれます。\\n\\n**実際のコードを見てみましょう：**\\n```c\\nlong pos = ftell(fp);  // 現在位置を取得\\nprintf(\"Position: %ld\\n\", pos);  // 何バイト目かを表示\\n```\\n\\n**ポイント：**\\n- 戻り値は `long` 型（大きな数を扱える整数型）\\n- `%ld` で表示します（long型のdecimal）"
+            "content": "# 現在位置を取得（しゅとく）\\n\\n**ftell**（エフテル）は、今ファイルのどこにいるかを教えてくれる関数です. \\n\\n**身近な例え：**\\n本を読んでいて「今何ページ目？」と聞くようなものです。`ftell` は「今、ファイルの先頭から何バイト目にいますよ」と教えてくれます。\\n\\n**実際のコードを見てみましょう：**\\n```c\\nlong pos = ftell(fp);  // 現在位置を取得\\nprintf(\"Position: %ld\\n\", pos);  // 何バイト目かを表示\\n```\\n\\n**ポイント：**\\n- 戻り値は `long` 型（大きな数を扱える整数型）\\n- `%ld` で表示します（long型のdecimal）"
           },
           {
             "title": "ファイルサイズの取得",
@@ -348,7 +348,7 @@ export const c4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"size.txt\", \"w+\");\\n    fputs(\"12345\", fp);\\n    fseek(fp, 0, SEEK_END);\\n    // sizeにftell(fp)を代入\\n    long size = ftell(fp);\\n    printf(\"%ld\\n\", size);\\n    fclose(fp);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\\n\\nint ___() {\\n    FILE *fp = fopen(\"___\", \"w+\");\\n    fputs(\"___\", fp);\\n    fseek(fp, ___, SEEK_END);\\n    // sizeにftell(fp)を代入\\n    long size = ftell(___);\\n    printf(\"%ld\\n\", size);\\n    fclose(___);\\n    return ___;\\n___",
+        "holeyCode": "#include <___>\\n\\nint ___() {\\n    FILE *fp = fopen(\"___\", \"w+\");\\n    fputs(\"___\", fp);\\n    fseek(fp, ___, SEEK_END);\\n    // sizeにftell(fp)を代入\\n    long size = ftell(___);\\n    printf(\"%ld\\n\", size);\\n    fclose(___);\\n    return ___;\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -365,7 +365,7 @@ export const c4Data = {
                   "}"
         ],
         "lineHints": [
-          null,
+          "標準入出力ライブラリを読み込みます。",
           null,
           "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           "ここを正しく入力してください。",
@@ -385,7 +385,7 @@ export const c4Data = {
             "fpos",
             "fseek"
           ],
-          "others": ["main", "size.txt", "12345", "0", "fp", "}"]
+          "others": ["main", "size.txt", "12345", "0", "fp", "}", "stdio.h"]
         },
         "testCases": [
           {
@@ -411,7 +411,7 @@ export const c4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\n\\n// Day列挙型を定義\\nenum Day { MON, TUE, WED, THU, FRI };\\n\\nint main() {\\n    enum Day today = WED;\\n    printf(\"%d\\n\", today);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\\n\\n// Day列挙型を定義\\nenum Day { MON, TUE, WED, THU, ___ };\\n\\nint ___() {\\n    enum Day today = ___;\\n    printf(\"%d\\n\", today);\\n    return ___;\\n___",
+        "holeyCode": "#include <___>\\n\\n// Day列挙型を定義\\nenum Day { MON, TUE, WED, THU, ___ };\\n\\nint ___() {\\n    enum Day today = ___;\\n    printf(\"%d\\n\", today);\\n    return ___;\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -425,7 +425,7 @@ export const c4Data = {
                   "}"
         ],
         "lineHints": [
-          null,
+          "標準入出力ライブラリを読み込みます。",
           null,
           null,
           "ここを正しく入力してください。",
@@ -442,7 +442,7 @@ export const c4Data = {
             "struct",
             "typedef"
           ],
-          "others": ["FRI", "main", "WED"]
+          "others": ["FRI", "main", "WED", "stdio.h"]
         },
         "testCases": [
           {
@@ -468,7 +468,7 @@ export const c4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\n\\n// Value共用体を定義\\nunion Value {\\n    int i;\\n    double d;\\n};\\n\\nint main() {\\n    union Value v;\\n    v.i = 42;\\n    printf(\"%d\\n\", v.i);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\\n\\n// Value共用体を定義\\nunion ___ {\\n    int ___;\\n    double ___;\\n___\\n\\nint ___() {\\n    union Value ___;\\n    v.i = ___;\\n    printf(\"%d\\n\", v.i);\\n    return ___;\\n___",
+        "holeyCode": "#include <___>\\n\\n// Value共用体を定義\\nunion ___ {\\n    int ___;\\n    double ___;\\n___\\n\\nint ___() {\\n    union Value ___;\\n    v.i = ___;\\n    printf(\"%d\\n\", v.i);\\n    return ___;\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -486,7 +486,7 @@ export const c4Data = {
                   "}"
         ],
         "lineHints": [
-          null,
+          "標準入出力ライブラリを読み込みます。",
           null,
           null,
           "ここを正しく入力してください。",
@@ -507,7 +507,7 @@ export const c4Data = {
             "struct",
             "enum"
           ],
-          "others": ["Value", "i", "d", "};", "main", "v", "42"]
+          "others": ["Value", "i", "d", "};", "main", "v", "42", "stdio.h"]
         },
         "testCases": [
           {
@@ -533,7 +533,7 @@ export const c4Data = {
         ],
         "initialDisplayMode": "holey",
         "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    int x = 100;\\n    int *p = &x;\\n    // ** で二重ポインタを宣言\\n    int **pp = &p;\\n    printf(\"%d\\n\", **pp);\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\\n\\nint ___() {\\n    int x = ___;\\n    int *p = &___;\\n    // ** で二重ポインタを宣言\\n    int **pp = &___;\\n    printf(\"%d\\n\", **pp);\\n    return ___;\\n___",
+        "holeyCode": "#include <___>\\n\\nint ___() {\\n    int x = ___;\\n    int *p = &___;\\n    // ** で二重ポインタを宣言\\n    int **pp = &___;\\n    printf(\"%d\\n\", **pp);\\n    return ___;\\n___",
         "correctLines": [
                   "#include <stdio.h>",
                   "",
@@ -547,7 +547,7 @@ export const c4Data = {
                   "}"
         ],
         "lineHints": [
-          null,
+          "標準入出力ライブラリを読み込みます。",
           null,
           "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
           "整数型の変数を宣言し、初期値を代入します。",
@@ -564,7 +564,7 @@ export const c4Data = {
             "*",
             "&"
           ],
-          "others": ["main", "100", "x", "p"]
+          "others": ["main", "100", "x", "p", "stdio.h"]
         },
         "testCases": [
           {
@@ -589,8 +589,8 @@ export const c4Data = {
           }
         ],
         "initialDisplayMode": "holey",
-        "correctCode": "#include <stdio.h>\\n#include <stdarg.h>\\n\\nint sum(int count, ...) {\\n    va_list args;\\n    // va_start で可変長引数を初期化\\n    va_start(args, count);\\n    int total = 0;\\n    for (int i = 0; i < count; i++) {\\n        total += va_arg(args, int);\\n    }\\n    va_end(args);\\n    return total;\\n}\\n\\nint main() {\\n    printf(\"%d\\n\", sum(3, 10, 20, 30));\\n    return 0;\\n}",
-        "holeyCode": "#include <stdio.h>\\n#include <stdarg.h>\\n\\nint sum(int ___, ...) {\\n    va_list ___;\\n    // va_start で可変長引数を初期化\\n    va_start(args, ___);\\n    int total = ___;\\n    for (int i = ___; i < count; i++) {\\n        total += va_arg(args, ___);\\n    ___\\n    va_end(___);\\n    return ___;\\n___\\n\\nint ___() {\\n    printf(\"%d\\n\", sum(3, 10, 20, 30));\\n    return ___;\\n___",
+        "correctCode": "#include <stdio.h>\\n#include <stdarg.h>\\n\\nint sum(int count, ...) {\\n    va_list args;\\n    // va_start で可変長引数を初期化\\n    va_start(args, count);\\n    int total = 0;\\n    for (int i = 0; i < i < count; i++) {\\n        total += va_arg(args, int);\\n    }\\n    va_end(args);\\n    return total;\\n}\\n\\nint main() {\\n    printf(\"%d\\n\", sum(3, 10, 20, 30));\\n    return 0;\\n}",
+        "holeyCode": "#include <___>\\n#include <___>\\n\\nint sum(int ___, ...) {\\n    va_list ___;\\n    // va_start で可変長引数を初期化\\n    va_start(args, ___);\\n    int total = ___;\\n    for (int i = ___; i < count; i++) {\\n        total += va_arg(args, ___);\\n    ___\\n    va_end(___);\\n    return ___;\\n___\\n\\nint ___() {\\n    printf(\"%d\\n\", sum(3, 10, 20, 30));\\n    return ___;\\n___",
         "correctLines": [
           "#include <stdio.h>",
           "#include <stdarg.h>",
@@ -613,8 +613,8 @@ export const c4Data = {
           "}"
         ],
         "lineHints": [
-          null,
-          null,
+          "標準入出力ライブラリを読み込みます。",
+          "可変長引数を扱うライブラリを読み込みます。",
           null,
           "int型の値を返す関数（sum）を定義します。",
           "ここを正しく入力してください。",
@@ -639,7 +639,7 @@ export const c4Data = {
             "va_arg",
             "va_end"
           ],
-          "others": ["count", "args", "0", "int", "}", "total", "main"]
+          "others": ["count", "args", "0", "int", "}", "total", "main", "stdio.h", "stdarg.h"]
         },
         "testCases": [
           {

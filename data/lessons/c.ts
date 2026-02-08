@@ -22,7 +22,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // Hello, World!を表示する\\n    printf(\"Hello, World!\\n\");\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // Hello, World!を表示する\\n    printf(\"Hello, World!\\n\");\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // Hello, World!を表示する\\n    printf(\"Hello, World!\\n\");\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
@@ -83,7 +83,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // xに10を代入する\\n    int x = 10;\\n    // xの値を表示する\\n    printf(\"%d\\n\", x);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // xに10を代入する\\n    int x = ___;\\n    // xの値を表示する\\n    printf(\"%d\\n\", x);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // xに10を代入する\\n    int x = ___;\\n    // xの値を表示する\\n    printf(\"%d\\n\", x);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
@@ -144,7 +144,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // aに10を代入する\\n    int a = 10;\\n    // bに3を代入する\\n    int b = 3;\\n    // a - bの結果を表示する\\n    printf(\"%d\\n\", a - b);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // aに10を代入する\\n    int a = ___;\\n    // bに3を代入する\\n    int b = ___;\\n    // a - bの結果を表示する\\n    printf(\"%d\\n\", a - b);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // aに10を代入する\\n    int a = ___;\\n    // bに3を代入する\\n    int b = ___;\\n    // a - bの結果を表示する\\n    printf(\"%d\\n\", a - b);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
@@ -211,7 +211,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // 10 % 3の結果を表示する\\n    printf(\"%d\\n\", 10 % 3);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // 10 % 3の結果を表示する\\n    printf(\"%d\\n\", 10 % 3);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // 10 % 3の結果を表示する\\n    printf(\"%d\\n\", 10 % 3);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
@@ -268,7 +268,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // scoreに80を代入する\\n    int score = 80;\\n    // scoreに10を加算する\\n    score += 10;\\n    // scoreの値を表示する\\n    printf(\"%d\\n\", score);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // scoreに80を代入する\\n    int score = ___;\\n    // scoreに10を加算する\\n    score += ___;\\n    // scoreの値を表示する\\n    printf(\"%d\\n\", score);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // scoreに80を代入する\\n    int score = ___;\\n    // scoreに10を加算する\\n    score += ___;\\n    // scoreの値を表示する\\n    printf(\"%d\\n\", score);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
@@ -329,7 +329,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // ageに12を代入する\\n    int age = 12;\\n    // 「私は12歳です」と表示する\\n    printf(\"私は %d 歳です\\n\", age);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // ageに12を代入する\\n    int age = ___;\\n    // 「私は12歳です」と表示する\\n    printf(\"私は %d 歳です\\n\", age);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // ageに12を代入する\\n    int age = ___;\\n    // 「私は12歳です」と表示する\\n    printf(\"私は %d 歳です\\n\", age);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
@@ -386,7 +386,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // 配列numsを初期化する\\n    int nums[3] = {10, 20, 30};\\n    // nums[1]を表示する（インデックス1は20）\\n    printf(\"%d\\n\", nums[1]);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // 配列numsを初期化する\\n    int nums[___] = {10, 20, 30};\\n    // nums[1]を表示する（インデックス1は20）\\n    printf(\"%d\\n\", nums[1]);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // 配列numsを初期化する\\n    int nums[___] = {10, 20, 30};\\n    // nums[1]を表示する（インデックス1は20）\\n    printf(\"%d\\n\", nums[1]);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
@@ -442,7 +442,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // scoreに85を代入する\\n    int score = 85;\\n    // scoreが80以上ならPassと表示する\\n    if (score >= 80) {\\n        printf(\"Pass\\n\");\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // scoreに85を代入する\\n    int score = ___;\\n    // scoreが80以上ならPassと表示する\\n    if (score ___ 80) {\\n        printf(\"Pass\\n\");\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // scoreに85を代入する\\n    int score = ___;\\n    // scoreが80以上ならPassと表示する\\n    if (score ___ 80) {\\n        printf(\"Pass\\n\");\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
@@ -502,7 +502,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // xに10を代入する\\n    int x = 10;\\n    // xが5より大きいか判定する\\n    if (x > 5) {\\n        printf(\"Big\\n\");\\n    } else {\\n        printf(\"Small\\n\");\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // xに10を代入する\\n    int x = ___;\\n    // xが5より大きいか判定する\\n    if (x ___ 5) {\\n        printf(\"Big\\n\");\\n    } ___ {\\n        printf(\"Small\\n\");\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // xに10を代入する\\n    int x = ___;\\n    // xが5より大きいか判定する\\n    if (x ___ 5) {\\n        printf(\"Big\\n\");\\n    } ___ {\\n        printf(\"Small\\n\");\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
@@ -566,7 +566,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // scoreに85を代入する\\n    int score = 85;\\n    // scoreが80以上かつ100以下ならPassと表示する\\n    if (score >= 80 && score <= 100) {\\n        printf(\"Pass\\n\");\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // scoreに85を代入する\\n    int score = ___;\\n    // scoreが80以上かつ100以下ならPassと表示する\\n    if (score >= ___ && score <= 100) {\\n        printf(\"Pass\\n\");\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // scoreに85を代入する\\n    int score = ___;\\n    // scoreが80以上かつ100以下ならPassと表示する\\n    if (score >= ___ && score <= 100) {\\n        printf(\"Pass\\n\");\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
@@ -626,7 +626,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // iが0から2までループする\\n    for (int i = 0; i < 3; i++) {\\n        // iの値を表示する\\n        printf(\"%d\\n\", i);\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // iが0から2までループする\\n    for (int i = ___; i < 3; i++) {\\n        // iの値を表示する\\n        printf(\"%d\\n\", i);\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // iが0から2までループする\\n    for (int i = ___; i < 3; i++) {\\n        // iの値を表示する\\n        printf(\"%d\\n\", i);\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
@@ -686,7 +686,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// Point構造体を定義する\\nstruct Point {\\n    int x;\\n    int y;\\n};\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // Point型の変数pを作成する\\n    struct Point p;\\n    // p.xに10を代入する\\n    p.x = 10;\\n    // p.xの値を表示する\\n    printf(\"%d\\n\", p.x);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// Point構造体を定義する\\nstruct ___ {\\n    int ___;\\n    int ___;\\n___\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // Point型の変数pを作成する\\n    struct Point ___;\\n    // p.xに10を代入する\\n    p.x = ___;\\n    // p.xの値を表示する\\n    printf(\"%d\\n\", p.x);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// Point構造体を定義する\\nstruct ___ {\\n    int ___;\\n    int ___;\\n___\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // Point型の変数pを作成する\\n    struct Point ___;\\n    // p.xに10を代入する\\n    p.x = ___;\\n    // p.xの値を表示する\\n    printf(\"%d\\n\", p.x);\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
@@ -751,7 +751,7 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// greet関数を定義する\\nvoid greet() {\\n    // Helloと表示する\\n    printf(\"Hello\\n\");\\n}\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // greet関数を呼び出す\\n    greet();\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// greet関数を定義する\\nvoid ___() {\\n    // Helloと表示する\\n    printf(\"Hello\\n\");\\n___\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // greet関数を呼び出す\\n    ___();\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// greet関数を定義する\\nvoid ___() {\\n    // Helloと表示する\\n    printf(\"Hello\\n\");\\n___\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // greet関数を呼び出す\\n    ___();\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
         "// 標準入出力ライブラリを読み込む",
         "#include <stdio.h>",
