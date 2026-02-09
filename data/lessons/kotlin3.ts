@@ -37,13 +37,13 @@ export const kotlin3Data = {
           null,
           "delay で待機します。",
           null,
-          "Hello と入力しましょう。",
+          "出力する文字列です。",
           "ここを正しく入力してください。",
           null,
           null,
-          "main と入力しましょう。",
+          "プログラムのエントリーポイントとなる関数名です。",
           null,
-          "println と入力しましょう。",
+          "値を画面に出力する関数です。",
           "ここを正しく入力してください。"
         ],
         "candidates": {
@@ -52,7 +52,7 @@ export const kotlin3Data = {
             "async",
             "await"
           ],
-          "others": ["*", "delay", "Hello", "main", "println", "coroutines", "String", "100", "}", "runBlocking", "こんにちは", "", "}"]
+          "others": ["*", "delay", "main", "println", "coroutines", "String", "100", "}", "runBlocking", "こんにちは", "", "}"]
         },
         "testCases": [
           {
@@ -80,15 +80,15 @@ export const kotlin3Data = {
         ],
       "lineHints": [
           null,
-          "main と入力しましょう。",
+          "プログラムのエントリーポイントとなる関数名です。",
           null,
           "generateSequence で無限シーケンスを生成します。",
           null,
-          "4 と入力しましょう。",
+          "数値 4 を設定します。",
           null,
-          "toList() と入力しましょう。",
+          "toList(関数呼び出しやグループを閉じる括弧です。",
           null,
-          "println と入力しましょう。",
+          "値を画面に出力する関数です。",
           "ここを正しく入力してください。"
         ],
         "candidates": {
@@ -128,7 +128,7 @@ export const kotlin3Data = {
           "inline で関数をインライン化します。",
           null,
           "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
-          "main と入力しましょう。",
+          "プログラムのエントリーポイントとなる関数名です。",
           null,
           null,
           "ここを正しく入力してください。",
@@ -174,11 +174,11 @@ export const kotlin3Data = {
           null,
           "reified で実行時に型情報を使えます。",
           null,
-          "is と入力しましょう。",
-          "main と入力しましょう。",
+          "型チェックを行うキーワードです。",
+          "プログラムのエントリーポイントとなる関数名です。",
           null,
           null,
-          "Int と入力しましょう。",
+          "整数型を表す型名です。",
           null,
           "ここを正しく入力してください。",
           null,
@@ -230,7 +230,7 @@ export const kotlin3Data = {
           null,
           "apply で設定してオブジェクトを返します。",
           null,
-          "localhost と入力しましょう。",
+          "ローカルホストを表す文字列です。",
           null,
           "変数に数値を代入（保存）します。",
           "ここを正しく入力してください。",
@@ -271,14 +271,14 @@ export const kotlin3Data = {
         ],
       "lineHints": [
           null,
-          "main と入力しましょう。",
+          "プログラムのエントリーポイントとなる関数名です。",
           null,
           "also で副作用を実行してオブジェクトを返します。",
           null,
-          "println と入力しましょう。",
+          "値を画面に出力する関数です。",
           "ここを正しく入力してください。",
           null,
-          "num と入力しましょう。",
+          "数値を格納する変数名です。",
           "ここを正しく入力してください。"
         ],
         "candidates": {
@@ -314,14 +314,14 @@ export const kotlin3Data = {
         ],
       "lineHints": [
           null,
-          "main と入力しましょう。",
+          "プログラムのエントリーポイントとなる関数名です。",
           null,
           "run でブロックを実行して結果を返します。",
           null,
-          "スペース1文字を入力しましょう。",
+          "区切り文字として使用するスペースです。",
           "ここを正しく入力してください。",
           null,
-          "println と入力しましょう。",
+          "値を画面に出力する関数です。",
           "ここを正しく入力してください。"
         ],
         "candidates": {
@@ -354,11 +354,11 @@ export const kotlin3Data = {
         ],
       "lineHints": [
           null,
-          "main と入力しましょう。",
+          "プログラムのエントリーポイントとなる関数名です。",
           null,
           "takeIf で条件を満たせば値を返します。",
           null,
-          "println と入力しましょう。",
+          "値を画面に出力する関数です。",
           "ここを正しく入力してください。"
         ],
         "candidates": {
@@ -393,13 +393,13 @@ export const kotlin3Data = {
         ],
       "lineHints": [
           null,
-          "main と入力しましょう。",
+          "プログラムのエントリーポイントとなる関数名です。",
           null,
-          "listOf と入力しましょう。",
+          "リストを作成する関数です。",
           null,
           "groupBy でグループ化します。",
           null,
-          "println と入力しましょう。",
+          "値を画面に出力する関数です。",
           "ここを正しく入力してください。"
         ],
         "candidates": {
@@ -434,13 +434,13 @@ export const kotlin3Data = {
         ],
       "lineHints": [
           null,
-          "main と入力しましょう。",
+          "プログラムのエントリーポイントとなる関数名です。",
           null,
-          "listOf と入力しましょう。",
+          "リストを作成する関数です。",
           null,
           "fold で畳み込みます。",
           null,
-          "println と入力しましょう。",
+          "値を画面に出力する関数です。",
           "ここを正しく入力してください。"
         ],
         "candidates": {

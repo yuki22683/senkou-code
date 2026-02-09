@@ -26,7 +26,7 @@ export const lua2Data = {
           "operators": [
             "."
           ],
-          "others": ["Apple", "100", "item", "print"]
+          "others": ["りんご", "100", "item", "print"]
         },
         "testCases": [
           {
@@ -358,7 +358,7 @@ export const lua2Data = {
           "functions": [
             "create"
           ],
-          "others": ["hello", "resume", "co", "print", "end"]
+          "others": ["こんにちは", "resume", "co", "print", "end"]
         },
         "testCases": [
           {

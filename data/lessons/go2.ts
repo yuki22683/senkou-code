@@ -393,7 +393,7 @@ export const go2Data = {
           "keywords": [
             "go"
           ],
-          "others": ["Sleep", "main", "(", "fmt", "time", ")", "say(msg", "Println", "}", "main()", "hello", "100", "mt\"", "ime\"", "こんにちは", "main", "(", ")", "}"]
+          "others": ["Sleep", "main", "(", "fmt", "time", ")", "say(msg", "Println", "}", "main()", "100", "mt\"", "ime\"", "こんにちは", "main", "(", ")", "}"]
         },
         "testCases": [
           {

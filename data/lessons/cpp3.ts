@@ -331,7 +331,7 @@ export const cpp3Data = {
             "forward",
             "swap"
           ],
-          "others": ["string", "std", "main", "Hello", "2", "0", "}", "こんにちは", "#include <iostream>", "#include <string>", "#include <utility>", "#include <iostream>", "#include <string>", "#include <utility>", ""]
+          "others": ["string", "std", "main", "2", "0", "}", "こんにちは", "#include <iostream>", "#include <string>", "#include <utility>", "#include <iostream>", "#include <string>", "#include <utility>", ""]
         },
         "testCases": [
           {

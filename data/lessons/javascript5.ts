@@ -137,7 +137,7 @@ export const javascriptData5 = {
             "replace(",
             "/"
           ],
-          "others": ["Hello", "replace", "log", "こんにちは"]
+          "others": ["replace", "log", "こんにちは"]
         },
         "testCases": [
           {

@@ -284,7 +284,7 @@ export const php3Data = {
             "function",
             "return"
           ],
-          "others": ["HelloTrait", "sayHello", "Hello", "}", "Greeter", "こんにちは！';", "こんにちは！';", "}"]
+          "others": ["HelloTrait", "sayHello", "}", "Greeter", "こんにちは！';", "こんにちは！';", "}"]
         },
         "testCases": [
           {

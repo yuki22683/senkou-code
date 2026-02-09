@@ -61,7 +61,7 @@ export const kotlin2Data = {
           "operators": [
             "?."
           ],
-          "others": ["String", "Hello", "println", "こんにちは", "val"]
+          "others": ["String", "println", "こんにちは", "val"]
         },
         "testCases": [
           {

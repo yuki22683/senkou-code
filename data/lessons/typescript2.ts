@@ -95,7 +95,7 @@ export const typescriptData2 = {
             "class",
             "struct"
           ],
-          "others": ["Product", "string", "number", "Apple", "150", "log", "}", "1"]
+          "others": ["Product", "string", "number", "りんご", "150", "log", "}", "1"]
         },
         "testCases": [
           {
@@ -373,7 +373,7 @@ export const typescriptData2 = {
             "V",
             "Type"
           ],
-          "others": ["'Hello'", "item", "}", "Hello", "log", "こんにちは"]
+          "others": ["item", "}", "log", "こんにちは"]
         },
         "testCases": [
           {

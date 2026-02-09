@@ -141,7 +141,7 @@ export const ruby2Data = {
           "operators": [
             ":"
           ],
-          "others": ["Apple", "100", "price"]
+          "others": ["りんご", "100", "price"]
         },
         "testCases": [
           {

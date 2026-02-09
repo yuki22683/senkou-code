@@ -244,7 +244,7 @@ export const sql4Data = {
             "ADD",
             "PUT"
           ],
-          "others": ["CREATE", "SELECT", "TEXT", "hello", "test", "こんにちは"]
+          "others": ["CREATE", "SELECT", "TEXT", "test", "こんにちは"]
         },
         "testCases": [
           {

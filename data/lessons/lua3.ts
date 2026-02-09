@@ -73,7 +73,7 @@ export const lua3Data = {
             "raise",
             "fail"
           ],
-          "others": ["ok", "msg", "test error", "end", "print", "テスト エラー"]
+          "others": ["ok", "msg", "end", "print", "テスト エラー"]
         },
         "testCases": [
           {

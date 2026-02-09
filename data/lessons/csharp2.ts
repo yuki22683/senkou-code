@@ -435,7 +435,7 @@ export const csharp2Data = {
           "operators": [
             "?."
           ],
-          "others": ["Hello\";", "WriteLine", "Hello", "Length", "length", "こんにちは"]
+          "others": ["WriteLine", "Length", "length", "こんにちは"]
         },
         "testCases": [
           {

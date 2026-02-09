@@ -412,7 +412,7 @@ export const php2Data = {
           "keywords": [
             "namespace"
           ],
-          "others": ["class", "function", "echo", "new", "->", "<?php", "App", "Hello", "say", "hello", "}", "?>", "こんにちは", "<?php", "}"]
+          "others": ["class", "function", "echo", "new", "->", "<?php", "App", "Hello", "say", "}", "?>", "こんにちは", "<?php", "}"]
         },
         "testCases": [
           {

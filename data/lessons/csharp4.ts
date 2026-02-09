@@ -57,7 +57,7 @@ export const csharp4Data = {
             "<",
             ">"
           ],
-          "others": ["System", "get", "Program", "Main", "Hello", "WriteLine", "Container", "set", "}", "c", "", "}"]
+          "others": ["System", "get", "Program", "Main", "WriteLine", "Container", "set", "}", "c", "こんにちは", "", "}"]
         },
         "testCases": [
           {
@@ -562,7 +562,7 @@ export const csharp4Data = {
             "set",
             "private set"
           ],
-          "others": ["System", "Item", "Program", "Main", "Apple", "WriteLine", "}", "item", "", "}"]
+          "others": ["System", "Item", "Program", "Main", "りんご", "WriteLine", "}", "item", "", "}"]
         },
         "testCases": [
           {

@@ -267,7 +267,7 @@ export const swift4Data = {
             "Encodable",
             "Decodable"
           ],
-          "others": ["Foundation", "name", "Apple", "JSONEncoder", "item", "json", "String", "}", "encoder"]
+          "others": ["Foundation", "name", "りんご", "JSONEncoder", "item", "json", "String", "}", "encoder"]
         },
         "testCases": [
           {
