@@ -41,7 +41,7 @@ export const typescriptData2 = {
             "||",
             "&&"
           ],
-          "others": ["value", "'Hello'", "42", "void", "}", "show"]
+          "others": ["value", "42", "void", "}", "show"]
         },
         "testCases": [
           {

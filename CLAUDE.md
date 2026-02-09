@@ -985,3 +985,27 @@
   1. `grep -n '"others":.*"Hello"' data/lessons/*.ts` で英語文字列を検出
   2. 該当ファイルの `expected_output` を確認し、コードの出力言語と一致するか確認
 - **理由**: candidatesはフロントエンドで使用されていないが（ルール#38参照）、将来使用される可能性があり、データの整合性を保つため
+
+### 76. JavaScriptのtypeof演算子は英語文字列を返す
+- JavaScriptの `typeof` 演算子は、以下の**英語文字列のみ**を返す。日本語化してはならない。
+  - `'number'`、`'string'`、`'boolean'`、`'object'`、`'undefined'`、`'function'`、`'symbol'`、`'bigint'`
+- **禁止パターン**:
+  - `typeof x === '数値'` → `'数値'` はtypeofが返す値ではない
+  - `typeof x === '文字列'` → `'文字列'` はtypeofが返す値ではない
+- **正しいパターン**:
+  - `typeof x === 'number'`
+  - `typeof x === 'string'`
+- **対象言語**: JavaScript, TypeScript
+- **チェックコマンド**: `grep -n "typeof.*===.*'[ぁ-んァ-ン一-龥]" data/lessons/*.ts`
+- **理由**: typeofの戻り値は言語仕様で定められており、日本語にするとコードが動作しない
+
+### 77. TypeScriptのユーティリティ型はプロパティ名と一致させる
+- `Pick<T, K>`、`Omit<T, K>`、`keyof` 等のユーティリティ型で指定するプロパティ名は、**実際のinterface/typeで定義されているプロパティ名**と一致させること。
+- **禁止パターン**:
+  - `interface Product { name: string; }` → `Pick<Product, '名前'>` （プロパティ名が不一致）
+  - `interface User { secret: string; }` → `Omit<User, '秘密'>` （プロパティ名が不一致）
+- **正しいパターン**:
+  - `interface Product { name: string; }` → `Pick<Product, 'name'>`
+  - `interface User { secret: string; }` → `Omit<User, 'secret'>`
+- **チェックコマンド**: Pick/Omitの引数とinterfaceのプロパティ名が一致するか手動確認
+- **理由**: プロパティ名が一致しないとTypeScriptのコンパイルエラーになる

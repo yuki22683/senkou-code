@@ -8,13 +8,13 @@ export const typescriptData4 = {
   "exercises": [
     {
       "title": "型ガード関数",
-      "correctCode": "// isNumber型ガード関数を定義\\nfunction isNumber(x: unknown): x is number {\\n  // typeofで型をチェック\\n  return typeof x === '数値';\\n}\\n\\n// unknown型の値\\nconst value: unknown = 42;\\n// 型ガードでチェック\\nif (isNumber(value)) {\\n  // 数値として計算\\n  console.log(value * 2);\\n}",
+      "correctCode": "// isNumber型ガード関数を定義\\nfunction isNumber(x: unknown): x is number {\\n  // typeofで型をチェック\\n  return typeof x === 'number';\\n}\\n\\n// unknown型の値\\nconst value: unknown = 42;\\n// 型ガードでチェック\\nif (isNumber(value)) {\\n  // 数値として計算\\n  console.log(value * 2);\\n}",
       "holeyCode": "// isNumber型ガード関数を定義\\nfunction isNumber(x: unknown): x ___ number {\\n  // typeofで型をチェック\\n  return typeof x === ___;\\n___\\n___\\n// unknown型の値\\nconst value: unknown = ___;\\n// 型ガードでチェック\\nif (isNumber(___)) {\\n  // 数値として計算\\n  console.log(value * ___);\\n___",
       "correctLines": [
           "// isNumber型ガード関数を定義",
           "function isNumber(x: unknown): x is number {",
           "  // typeofで型をチェック",
-          "  return typeof x === '数値';",
+          "  return typeof x === 'number';",
           "}",
           "",
           "// unknown型の値",
@@ -46,7 +46,7 @@ export const typescriptData4 = {
             "as",
             "in"
           ],
-          "others": ["'数値'", "42", "value", "2", "}"]
+          "others": ["'number'", "42", "value", "2", "}"]
         },
         "testCases": [
           {
@@ -116,7 +116,7 @@ export const typescriptData4 = {
       },
     {
       "title": "Discriminated Union",
-      "correctCode": "// 成功時の型\\ntype Success = { status: '成功'; data: string };\\n// 失敗時の型\\ntype Failure = { status: '失敗'; error: string };\\n// 結果のユニオン型\\ntype Result = Success | Failure;\\n\\nfunction handle(result: Result): void {\\n  // status で判別プロパティを使う\\n  switch (result.status) {\\n    case '成功':\\n      // データを出力\\n      console.log(result.data);\\n      break;\\n    case '失敗':\\n      // エラーを出力\\n      console.log(result.error);\\n      break;\\n  }\\n}\\n\\n// 成功結果を処理\\nhandle({ status: '成功', データ: 'OK' });",
+      "correctCode": "// 成功時の型\\ntype Success = { status: '成功'; data: string };\\n// 失敗時の型\\ntype Failure = { status: '失敗'; error: string };\\n// 結果のユニオン型\\ntype Result = Success | Failure;\\n\\nfunction handle(result: Result): void {\\n  // status で判別プロパティを使う\\n  switch (result.status) {\\n    case '成功':\\n      // データを出力\\n      console.log(result.data);\\n      break;\\n    case '失敗':\\n      // エラーを出力\\n      console.log(result.error);\\n      break;\\n  }\\n}\\n\\n// 成功結果を処理\\nhandle({ status: '成功', data: 'OK' });",
       "holeyCode": "// 成功時の型\\ntype Success = { status: '成功'; data: ___ };\\n// 失敗時の型\\ntype Failure = { status: '失敗'; error: ___ };\\n// 結果のユニオン型\\ntype Result = Success ___ Failure;\\n___\\n___\\n  // status で判別プロパティを使う\\n  switch (result.___) {\\n    ___\\n      // データを出力\\n      console.log(result.___);\\n      ___\\n    ___\\n      // エラーを出力\\n      console.log(result.___);\\n      ___\\n  ___\\n___\\n___\\n// 成功結果を処理\\nhandle({ status: '成功', data: ___ });",
       "correctLines": [
           "// 成功時の型",
@@ -141,7 +141,7 @@ export const typescriptData4 = {
           "}",
           "",
           "// 成功結果を処理",
-          "handle({ status: '成功', データ: 'OK' });"
+          "handle({ status: '成功', data: 'OK' });"
         ],
       "lineHints": [
           null,
@@ -413,7 +413,7 @@ export const typescriptData4 = {
             "Required",
             "Exclude"
           ],
-          "others": ["|", "'Hello'", "text", "'こんにちは'"]
+          "others": ["|", "text", "'こんにちは'"]
         },
         "testCases": [
           {
