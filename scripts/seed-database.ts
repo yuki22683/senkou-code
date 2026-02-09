@@ -169,7 +169,7 @@ async function seedDatabase() {
         hints: exercise.lineHints,
         language_id: languageInfo.judge0Id,
         file_extension: languageInfo.extension.replace('.', ''),
-        test_input: testInput,
+        test_input: unescapeNewlines(testInput),
         expected_output: unescapeNewlines(expectedOutput),
       };
 

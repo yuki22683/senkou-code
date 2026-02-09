@@ -672,6 +672,7 @@
   - `starter_code` - `unescapeNewlines()` 関数
   - `correct_lines[]` - `processStringArray()` 関数
   - `expected_output` - `unescapeNewlines()` 関数
+  - `test_input` - `unescapeNewlines()` 関数
 - **フロントエンド** でも防御的に `.replace(/\\n/g, '\n')` で変換すること（既存データ対策）:
   - `tutorial/page.tsx` - ReactMarkdownに渡す前に変換
 - **問題の症状**: 解説スライドでタイトルだけ表示され本文が消える、コードが1行で表示される
