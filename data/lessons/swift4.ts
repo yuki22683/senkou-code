@@ -272,8 +272,7 @@ export const swift4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "{\"name\":\"りんご\"}\
-"
+            "expected_output": "{\"name\":\"りんご\"}\\n"
           }
         ]
       },

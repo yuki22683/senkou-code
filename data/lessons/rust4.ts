@@ -104,8 +104,7 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "User { name: \"アリス\", age: 30 }\
-"
+            "expected_output": "User { name: \"アリス\", age: 30 }\\n"
           }
         ]
       },

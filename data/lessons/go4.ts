@@ -336,8 +336,7 @@ export const go4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "{\"name\":\"Apple\"}\
-"
+            "expected_output": "{\"name\":\"Apple\"}\\n"
           }
         ]
       },
