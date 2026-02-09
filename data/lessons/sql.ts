@@ -9,7 +9,7 @@ export const sqlData = {
     {
       "title": "画面に文字を出してみましょう",
       "correctCode": "-- SELECTでデータを取得\\nSELECT 'Hello, World!';",
-      "holeyCode": "-- SELECTでデータを取得\\nSELECT 'こんにちは, ___!';",
+      "holeyCode": "-- SELECTでデータを取得\\nSELECT 'Hello, ___!';",
       "correctLines": [
           "-- SELECTでデータを取得",
           "SELECT 'Hello, World!';"

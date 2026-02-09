@@ -35,11 +35,11 @@ export const sql3Data = {
       },
     {
       "title": "EXISTS で存在チェック",
-      "correctCode": "-- EXISTSで存在チェック\\nSELECT 'has データ' WHERE EXISTS (SELECT 1);",
-      "holeyCode": "-- EXISTSで存在チェック\\nSELECT 'has データ' WHERE EXISTS (SELECT ___);",
+      "correctCode": "-- EXISTSで存在チェック\\nSELECT 'データあり' WHERE EXISTS (SELECT 1);",
+      "holeyCode": "-- EXISTSで存在チェック\\nSELECT 'データあり' WHERE EXISTS (SELECT ___);",
       "correctLines": [
           "-- EXISTSで存在チェック",
-          "SELECT 'has データ' WHERE EXISTS (SELECT 1);"
+          "SELECT 'データあり' WHERE EXISTS (SELECT 1);"
         ],
       "lineHints": [
           null,
@@ -56,7 +56,7 @@ export const sql3Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "has データ\\n"
+            "expected_output": "データあり\\n"
           }
         ]
       },
@@ -243,11 +243,11 @@ export const sql3Data = {
       },
     {
       "title": "LIKE でパターン検索",
-      "correctCode": "-- LIKEでパターン検索\\nSELECT '一致' WHERE 'こんにちは' LIKE 'H%';",
-      "holeyCode": "-- LIKEでパターン検索\\nSELECT '一致' WHERE 'こんにちは' LIKE '___%';",
+      "correctCode": "-- LIKEでパターン検索\\nSELECT '一致' WHERE 'こんにちは' LIKE 'こ%';",
+      "holeyCode": "-- LIKEでパターン検索\\nSELECT '一致' WHERE 'こんにちは' LIKE '___';",
       "correctLines": [
           "-- LIKEでパターン検索",
-          "SELECT '一致' WHERE 'こんにちは' LIKE 'H%';"
+          "SELECT '一致' WHERE 'こんにちは' LIKE 'こ%';"
         ],
       "lineHints": [
           null,
@@ -259,7 +259,7 @@ export const sql3Data = {
             "MATCH",
             "REGEX"
           ],
-          "others": ["H", "こんにちは"]
+          "others": ["こ%"]
         },
         "testCases": [
           {

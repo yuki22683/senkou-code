@@ -279,7 +279,7 @@ export const cppData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
-      "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに100を入れる\\n    int score = 100;\\n    // > で「より大きい」を比較\\n    if (score > 80) {\\n        // '完璧' と入力\\n        std::cout << \"Perfect\" << std::endl;\\n    }\\n    return 0;\\n}",
+      "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに100を入れる\\n    int score = 100;\\n    // > で「より大きい」を比較\\n    if (score > 80) {\\n        // '完璧' と入力\\n        std::cout << \"完璧\" << std::endl;\\n    }\\n    return 0;\\n}",
       "holeyCode": "___\\nint ___() {\\n    // scoreに100を入れる\\n    int score = ___;\\n    // > で「より大きい」を比較\\n    if (score ___ 80) {\\n        // '完璧' と入力\\n        std::cout << ___ << std::endl;\\n    ___\\n    return ___;\\n___",
       "correctLines": [
           "#include <iostream>",
@@ -289,7 +289,7 @@ export const cppData = {
           "    // > で「より大きい」を比較",
           "    if (score > 80) {",
           "        // '完璧' と入力",
-          "        std::cout << \"Perfect\" << std::endl;",
+          "        std::cout << \"完璧\" << std::endl;",
           "    }",
           "    return 0;",
           "}"
@@ -312,14 +312,14 @@ export const cppData = {
             ">"
           ],
           "strings": [
-            "Perfect"
+            "完璧"
           ],
-          "others": ["100;", "main", "100", "\"Perfect\"", "}", "0", "#include <iostream>", "#include <iostream>", "}"]
+          "others": ["100;", "main", "100", "\"完璧\"", "}", "0", "#include <iostream>", "#include <iostream>", "}"]
         },
         "testCases": [
           {
              "input": "",
-            "expected_output": "Perfect\\n"
+            "expected_output": "完璧\\n"
           }
         ]
       },
