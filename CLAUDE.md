@@ -280,6 +280,8 @@
      - 「メソッドを呼び出し」ヒントが実際のメソッド呼び出し行にあること
      - 「インスタンスを作成」ヒントが実際のインスタンス作成行にあること
      - 「条件式評価」ヒントが実際のif文行にあること
+  18. `node scripts/check-linehints-giveaway.mjs` → 答え漏れチェック（ルール#5参照）
+     - 「〜を入力します」「〜と入力しましょう」パターンがないこと
 - **チェックが失敗した場合の修正方法**：
   - check-holey-v4.mjs → `fix-empty-line-hints.mjs` と `fix-non-holey-hints.mjs` を実行
   - check-comment-consistency-v3.mjs → `sync-comments-to-holey.mjs` を実行（correctCodeのコメントをholeyCodeに同期）
@@ -294,6 +296,7 @@
   - check-code-output-consistency.mjs → コメントを手動修正、または expected_output をコード出力に合わせて修正（ルール#56-58参照）
   - check-linehints-consistency.mjs → 配列長不一致は手動修正、hint_on_non_holey_lineは`fix-non-holey-hints.mjs`を実行
   - check-linehints-content-v2.mjs → 手動で該当行に合ったヒントに修正（ルール#59参照）
+  - check-linehints-giveaway.mjs → 手動で概念的な説明に修正（ルール#5参照）
   - correctCode/correctLinesに`___`が含まれている → 手動で正しい値に修正（ルール#74参照）
   18. `grep -l '"correctCode".*___' data/lessons/*.ts` → correctCodeに___がないこと（ルール#74参照）
 
