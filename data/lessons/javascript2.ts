@@ -293,7 +293,7 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "red\\ngreen\\n"
+            "expected_output": "赤\\n緑\\n"
           }
         ]
       },
@@ -333,7 +333,7 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Alice\\n100\\n"
+            "expected_output": "アリス\\n100\\n"
           }
         ]
       },
@@ -409,7 +409,7 @@ export const javascriptData2 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "positive\\n"
+            "expected_output": "正\\n"
           }
         ]
       },

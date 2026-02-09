@@ -78,11 +78,11 @@ export const javascriptData4 = {
       },
     {
       "title": "flatMapで展開と変換",
-      "correctCode": "// ['こんにちは', '世界'] の配列を定義\\nconst words = ['こんにちは', '世界'];\\n// flatMap でmapと平坦化を同時に行う\\nconst chars = words.flatMap(w => w.split(''));\\n// charsを出力\\nconsole.log(chars);",
-      "holeyCode": "// ['こんにちは', '世界'] の配列を定義\\nconst ___ = ['こんにちは', '世界'];\\n// flatMap でmapと平坦化を同時に行う\\nconst ___ = words.flatMap(w => w.split(''));\\n// charsを出力\\nconsole.log(___);",
+      "correctCode": "// ['hello', 'world'] の配列を定義\\nconst words = ['hello', 'world'];\\n// flatMap でmapと平坦化を同時に行う\\nconst chars = words.flatMap(w => w.split(''));\\n// charsを出力\\nconsole.log(chars);",
+      "holeyCode": "// ['hello', 'world'] の配列を定義\\nconst ___ = ['hello', 'world'];\\n// flatMap でmapと平坦化を同時に行う\\nconst ___ = words.flatMap(w => w.split(''));\\n// charsを出力\\nconsole.log(___);",
       "correctLines": [
-          "// ['こんにちは', '世界'] の配列を定義",
-          "const words = ['こんにちは', '世界'];",
+          "// ['hello', 'world'] の配列を定義",
+          "const words = ['hello', 'world'];",
           "// flatMap でmapと平坦化を同時に行う",
           "const chars = words.flatMap(w => w.split(''));",
           "// charsを出力",
@@ -90,7 +90,7 @@ export const javascriptData4 = {
         ],
       "lineHints": [
           null,
-          "['こんにちは', '世界'] の配列を作ります。",
+          "['hello', 'world'] の配列を作ります。",
           null,
           "mapと平坦化を同時に行うメソッドです。",
           null,
@@ -102,7 +102,7 @@ export const javascriptData4 = {
             "map",
             "flat"
           ],
-          "others": ["世界", "log", "words", "chars"]
+          "others": ["hello", "world", "log", "words", "chars"]
         },
         "testCases": [
           {
@@ -150,10 +150,10 @@ export const javascriptData4 = {
       },
     {
       "title": "Object.fromEntries",
-      "correctCode": "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義\\nconst pairs = [['名前', 'Python'], ['バージョン', '3.12']];\\n// objにObject.fromEntries(pairs)を代入\\nconst obj = Object.fromEntries(pairs);\\n// objを出力\\nconsole.log(obj);",
-      "holeyCode": "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義\\nconst ___ = [['名前', 'Python'], ['バージョン', '3.12']];\\n// objにObject.fromEntries(pairs)を代入\\nconst ___ = Object.fromEntries(pairs);\\n// objを出力\\nconsole.log(___);",
+      "correctCode": "// '名前': 'Python', 'バージョン': '3.12' のキーと値のペアの配列を定義\\nconst pairs = [['名前', 'Python'], ['バージョン', '3.12']];\\n// objにObject.fromEntries(pairs)を代入\\nconst obj = Object.fromEntries(pairs);\\n// objを出力\\nconsole.log(obj);",
+      "holeyCode": "// '名前': 'Python', 'バージョン': '3.12' のキーと値のペアの配列を定義\\nconst ___ = [['名前', 'Python'], ['バージョン', '3.12']];\\n// objにObject.fromEntries(pairs)を代入\\nconst ___ = Object.fromEntries(pairs);\\n// objを出力\\nconsole.log(___);",
       "correctLines": [
-          "// name: 'Python', version: '3.12' のキーと値のペアの配列を定義",
+          "// '名前': 'Python', 'バージョン': '3.12' のキーと値のペアの配列を定義",
           "const pairs = [['名前', 'Python'], ['バージョン', '3.12']];",
           "// objにObject.fromEntries(pairs)を代入",
           "const obj = Object.fromEntries(pairs);",
@@ -179,7 +179,7 @@ export const javascriptData4 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "{ name: 'Python', version: '3.12' }\\n"
+            "expected_output": "{ '名前': 'Python', 'バージョン': '3.12' }\\n"
           }
         ]
       },
