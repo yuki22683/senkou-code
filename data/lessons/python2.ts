@@ -31,9 +31,9 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "関数名 hello を入力します。",
+        "defキーワードで関数を定義します。",
         null,
-        "名前を埋め込んだ挨拶を表示する print 関数を入力します。",
+        "f-stringを使って変数を埋め込んだメッセージを出力します。",
         null,
         null,
         "定義した関数 hello を呼び出します。"
@@ -65,9 +65,9 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "関数名 say_hi を入力します。",
+        "デフォルト引数を持つ関数を定義します。",
         null,
-        "指定された名前で挨拶を表示する print 関数を入力します。",
+        "f-stringで引数を埋め込んだメッセージを出力します。",
         null,
         null,
         "定義した関数 say_hi を引数なしで呼び出します。"
@@ -99,13 +99,13 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "関数名 add を入力します。",
+        "2つの引数を受け取る関数を定義します。",
         null,
-        "結果を呼び出し元に返す return キーワードを入力します。",
+        "計算結果を呼び出し元に返します。",
         null,
         null,
         "add関数を呼び出して結果を変数 result に代入します。",
-        "計算結果の result を表示する print 関数を入力します。"
+        "関数の戻り値を出力します。"
       ],
       "candidates": {
         "keywords": ["return"],
@@ -136,14 +136,14 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "関数名 calc を入力します。",
+        "複数の戻り値を返す関数を定義します。",
         null,
-        "かけ算を行う演算子 * を入力します。",
+        "乗算演算子を使って2倍の値を計算します。",
         null,
         null,
         "calc関数を呼び出して結果を a と b に代入します。",
-        "a の値を表示する print 関数を入力します。",
-        "b の値を表示する print 関数を入力します。"
+        "戻り値の1つ目を出力します。",
+        "戻り値の2つ目を出力します。"
       ],
       "candidates": {
         "operators": ["*"],
@@ -168,9 +168,9 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "代入する文字列 'Python' を入力します。",
+        "スライス対象の文字列を変数に代入します。",
         null,
-        "結果を表示する print 関数と、スライスの終了位置 2 を入力します。"
+        "[開始:終了]でスライスした結果を出力します。"
       ],
       "candidates": {
         "strings": ["Python"],
@@ -196,9 +196,9 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "内包表記で使用する for キーワードを入力します。",
+        "内包表記で各要素を順番に処理します。",
         null,
-        "結果のリストを表示する print 関数を入力します。"
+        "結果のリストを出力します。"
       ],
       "candidates": {
         "keywords": ["for"],
@@ -223,9 +223,9 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "条件フィルタリングのための if キーワードを入力します。",
+        "条件を満たす要素だけをフィルタリングします。",
         null,
-        "結果のリストを表示する print 関数を入力します。"
+        "結果のリストを出力します。"
       ],
       "candidates": {
         "keywords": ["if"],
@@ -254,13 +254,13 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "エラー監視を開始する try キーワードを入力します。",
+        "例外が発生する可能性のあるコードを囲みます。",
         null,
         null,
         null,
-        "例外を捕捉した時の処理を指定する except キーワードを入力します。",
+        "例外が発生したときの処理を定義します。",
         null,
-        "エラーメッセージを表示する print 関数を入力します。"
+        "例外時に実行される出力処理です。"
       ],
       "candidates": {
         "keywords": ["try", "except"],
@@ -291,11 +291,11 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "クラス名 Cat を入力します。",
+        "classキーワードでクラスを定義します。",
         null,
-        "メソッド名 meow を入力します。",
+        "クラス内でメソッドを定義します。",
         null,
-        "鳴き声を表示する print 関数を入力します。",
+        "メソッド内で実行される出力処理です。",
         null,
         null,
         "クラス Cat を呼び出してインスタンスを生成します。",

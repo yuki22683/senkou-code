@@ -18,9 +18,9 @@ export const typescriptData = {
         ],
       "lineHints": [
           null,
-          "文字を入れるラベルは `string` です。 '=' のあとに `'こんにちは TS'` と入力しましょう。",
+          "文字列型を表す型注釈と、代入する文字列リテラルを指定します。",
           null,
-          "console.log の中に、はこの名前 `message` を入力します。"
+          "変数の値を出力するために変数名を渡します。"
         ],
         "candidates": {
           "variables": [
@@ -126,7 +126,7 @@ export const typescriptData = {
         ],
       "lineHints": [
           null,
-          "50 と入力しましょう。",
+          "変数に代入する数値を指定します。",
           null,
           "変数の値を計算して、その結果を同じ変数に再代入します。",
           null,
@@ -241,7 +241,7 @@ export const typescriptData = {
           null,
           "ラベルの名前は `boolean` です。",
           null,
-          "() のなかに、はこの名前 `isAdult` を入力します。",
+          "関数を呼び出すために関数名を指定します。",
           null,
           "console.log で結果を表示します。",
           "この行を正しく入力してください。"
@@ -490,7 +490,7 @@ export const typescriptData = {
         ],
       "lineHints": [
           null,
-          "「なにも返さない」ことをあらわす `void` と入力しましょう。",
+          "戻り値がないことを示す型注釈です。",
           "console.log で結果を表示します。",
           "この行を正しく入力してください。",
           null,

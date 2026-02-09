@@ -34,10 +34,10 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "Error と入力しましょう。",
+          "Error を指定します。",
           null,
           null,
-          "check と入力しましょう。",
+          "check を指定します。",
           null,
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           null,
@@ -45,7 +45,7 @@ export const swift3Data = {
           "この行を正しく入力してください。",
           null,
           null,
-          "result と入力しましょう。",
+          "result を指定します。",
           null,
           "ここを正しく入力してください。",
           null,
@@ -83,7 +83,7 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "1 と入力しましょう。",
+          "1 を指定します。",
           null,
           "compactMap で nil を除外します。",
           null,
@@ -238,7 +238,7 @@ export const swift3Data = {
           null,
           "defer でスコープ終了時の処理を登録します。",
           null,
-          "start と入力しましょう。",
+          "start を指定します。",
           "この行を正しく入力してください。",
           null,
           "関数（test）を呼び出して実行する。"
@@ -291,21 +291,21 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "Stack と入力しましょう。",
+          "Stack を指定します。",
           null,
           "associatedtype で関連型を定義します。",
           null,
-          "Element と入力しましょう。",
+          "Element を指定します。",
           "この行を正しく入力してください。",
           null,
           null,
           "この行を正しく入力してください。",
           null,
-          "IntStack と入力しましょう。",
+          "IntStack を指定します。",
           null,
-          "10 と入力しましょう。",
+          "10 を指定します。",
           null,
-          "items と入力しましょう。",
+          "items を指定します。",
           "この行を正しく入力してください。",
           "この行を正しく入力してください。",
           null,
@@ -360,7 +360,7 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "invalid と入力しましょう。",
+          "invalid を指定します。",
           null,
           null,
           "関数（check）を定義します。",
@@ -373,7 +373,7 @@ export const swift3Data = {
           null,
           "この行を正しく入力してください。",
           null,
-          "try と入力しましょう。",
+          "try を指定します。",
           null,
           "変数の内容を画面に出力します。",
           "この行を正しく入力してください。",
@@ -410,7 +410,7 @@ export const swift3Data = {
           null,
           "複数の値をまとめて格納する配列（またはリスト）を作成します。",
           null,
-          "count と入力しましょう。"
+          "count を指定します。"
         ],
         "candidates": {
           "types": [
@@ -467,13 +467,13 @@ export const swift3Data = {
           "この行を正しく入力してください。",
           null,
           null,
-          "Counter と入力しましょう。",
+          "Counter を指定します。",
           null,
           "ここを正しく入力してください。",
           null,
           "ここを正しく入力してください。",
           null,
-          "count と入力しましょう。"
+          "count を指定します。"
         ],
         "candidates": {
           "keywords": [

@@ -45,7 +45,7 @@ export const rubyData = {
           null,
           "変数に文字列データを代入（保存）します。",
           null,
-          "変数名 name を入力します。"
+          "putsで変数の中身を出力します。"
         ],
         "candidates": {
           "variables": [
@@ -393,7 +393,7 @@ export const rubyData = {
           null,
           "each を使います。",
           null,
-          "ブロック変数 name を入力します。",
+          "ループで取り出した要素を格納する変数です。",
           "ブロックを終了する。"
         ],
         "candidates": {
@@ -431,7 +431,7 @@ export const rubyData = {
           null,
           "キーは みかん、値は オレンジ です。",
           null,
-          "キー みかん を入力します。"
+          "ハッシュからキーを使って値を取り出します。"
         ],
         "candidates": {
           "strings": [
@@ -465,7 +465,7 @@ export const rubyData = {
           "def でメソッドを定義します。",
           null,
           "文字列を出力し、最後に改行を加えます。",
-          "メソッド名 greet を入力して呼び出します。",
+          "定義したメソッドを呼び出します。",
           null,
           "ここを正しく入力してください。"
         ],

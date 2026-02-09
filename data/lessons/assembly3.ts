@@ -37,7 +37,7 @@ export const assembly3Data = {
           null,
           "rax に 10 を格納します。",
           null,
-          "値を1減らす dec 命令と、対象の rax を入力します。",
+          "レジスタの値を1減少させる命令です。",
           null,
           null,
           "rdi に rax の値をコピーします。",
@@ -80,21 +80,21 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "セクション名 .text を入力します。",
-          "グローバルシンボル _start を入力します。",
+          "コードセクションを示すディレクティブです。",
+          "外部からアクセス可能なシンボルを宣言します。",
           null,
           "ラベル _start: を定義します。",
           null,
           "rbx に 3 を格納します。",
           null,
-          "掛け算を行う imul 命令と、結果格納先の rax 、対象の rbx 、掛ける数 4 を入力します。",
+          "符号付き乗算を行う命令です。",
           null,
           null,
           "rdi に rax を代入します。",
           null,
           "rax に 60 を代入します。",
           null,
-          "syscall を入力します。"
+          "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
           "others": ["text", "_start", "rbx", "3", "imul", "rax", "4", "rdi", "60", "syscall"]
@@ -130,21 +130,21 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "セクション名 .text を入力します。",
-          "グローバルシンボル _start を入力します。",
+          "コードセクションを示すディレクティブです。",
+          "外部からアクセス可能なシンボルを宣言します。",
           null,
           "ラベル _start: を定義します。",
           null,
           "rax に 42 を格納します。",
           null,
-          "値をスタックへ保存する push 命令と、対象の rax を入力します。",
+          "値をスタックに保存する命令です。",
           null,
-          "スタックから値を取り出す pop 命令と、対象の rdi を入力します。",
+          "スタックから値を取り出す命令です。",
           null,
           null,
           "rax に 60 をセットします。",
           null,
-          "syscall を入力します。"
+          "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
           "others": ["text", "_start", "rax", "42", "push", "pop", "rdi", "60", "syscall"]
@@ -190,7 +190,7 @@ export const assembly3Data = {
           null,
           "rax に 60 を格納します。",
           null,
-          "syscall を入力します。"
+          "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
           "others": ["text", "_start", "99", "rdi", "rax", "60", "syscall"]
@@ -233,14 +233,14 @@ export const assembly3Data = {
           null,
           "rax に 0xFF を代入します。",
           null,
-          "ビット論理積 and 命令と、対象の rax , 0x0F を入力します。",
+          "ビット単位の論理積を行う命令です。",
           null,
           null,
           "rdi に rax を代入します。",
           null,
           "rax に 60 を代入します。",
           null,
-          "syscall を入力します。"
+          "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
           "others": ["text", "_start", "rax", "0xFF", "and", "0x0F", "rdi", "60", "syscall"]
@@ -283,14 +283,14 @@ export const assembly3Data = {
           null,
           "rax に 0x10 をセットします。",
           null,
-          "ビット論理和 or 命令と、対象の rax , 0x01 を入力します。",
+          "ビット単位の論理和を行う命令です。",
           null,
           null,
           "rdi に rax を代入します。",
           null,
           "rax に 60 を代入します。",
           null,
-          "syscall を入力します。"
+          "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
           "others": ["text", "_start", "rax", "0x10", "or", "0x01", "rdi", "60", "syscall"]
@@ -326,21 +326,21 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "セクション名 .text を入力します。",
-          "シンボル名 _start を入力します。",
+          "コードセクションを示すディレクティブです。",
+          "外部からアクセス可能なシンボルを宣言します。",
           null,
-          "ラベル名 _start: を入力します。",
+          "プログラムのエントリーポイントを定義するラベルです。",
           null,
           "rax に 5 を格納します。",
           null,
-          "左シフト shl 命令と、対象の rax , 2 を入力します。",
+          "ビットを左にシフトする命令です。",
           null,
           null,
           "rdi に rax を代入します。",
           null,
           "rax に 60 を代入します。",
           null,
-          "syscall を入力します。"
+          "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
           "others": ["text", "_start", "rax", "5", "shl", "2", "rdi", "60", "syscall"]
@@ -376,21 +376,21 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "セクション .text を入力します。",
-          "シンボル _start を入力します。",
+          "コードセクションを示すディレクティブです。",
+          "外部からアクセス可能なシンボルを宣言します。",
           null,
-          "開始ラベル _start: を入力します。",
+          "プログラムのエントリーポイントを定義するラベルです。",
           null,
           "rax に 20 を代入します。",
           null,
-          "右シフト shr 命令と、対象の rax , 1 を入力します。",
+          "ビットを右にシフトする命令です。",
           null,
           null,
           "rdi に rax をコピーします。",
           null,
           "rax に 60 をセットします。",
           null,
-          "syscall を入力します。"
+          "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
           "others": ["text", "_start", "rax", "20", "shr", "1", "rdi", "60", "syscall"]
@@ -438,9 +438,9 @@ export const assembly3Data = {
           null,
           "rax に 5 を格納します。",
           null,
-          "ビット検査 test 命令と、対象の rax , 1 を入力します。",
+          "ビット単位の検査を行う命令です。",
           null,
-          "0でなければジャンプする jnz 命令と、飛び先 is_odd を入力します。",
+          "ゼロでない場合にジャンプする命令です。",
           null,
           "rdi に 0 を代入します。",
           "done ラベルへジャンプします。",
@@ -450,7 +450,7 @@ export const assembly3Data = {
           "ラベル done: を定義します。",
           null,
           "rax に 60 をセットします。",
-          "syscall を入力します。"
+          "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
           "others": ["text", "_start", "rax", "5", "test", "1", "is_odd", "rdi", "0", "done", "60", "syscall"]
@@ -485,20 +485,20 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "セクション .text を入力します。",
-          "グローバル _start を入力します。",
+          "コードセクションを示すディレクティブです。",
+          "外部からアクセス可能なシンボルを宣言します。",
           null,
-          "開始ラベル _start: を入力します。",
+          "プログラムのエントリーポイントを定義するラベルです。",
           null,
           "rax に 10 をセットします。",
           null,
-          "符号反転 neg 命令と、対象の rax を入力します。",
+          "符号を反転させる命令です。",
           null,
           null,
           "rdi を 0 にします。",
           null,
           "rax に 60 をセットします。",
-          "syscall を入力します。"
+          "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
           "others": ["text", "_start", "rax", "10", "neg", "rdi", "60", "syscall"]

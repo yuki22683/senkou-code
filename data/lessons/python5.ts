@@ -39,16 +39,16 @@ export const pythonData5 = {
         ],
       "lineHints": [
           null,
-          "変数名 filename を入力します。",
+          "ファイルパスを格納する変数です。",
           null,
-          "open 関数とファイルオブジェクト変数 f を入力します。",
+          "ファイルを開く組み込み関数と、ファイルを参照する変数を指定します。",
           null,
           "書き込む文字列 'Python' を指定します。",
           null,
           null,
-          "ファイルを開く open 関数を入力します。",
+          "ファイルを開くための組み込み関数です。",
           null,
-          "内容を表示する print 関数を入力します。"
+          "標準出力に値を表示する組み込み関数です。"
         ],
         "candidates": {
           "functions": ["open", "print"],
@@ -78,14 +78,14 @@ export const pythonData5 = {
         ],
       "lineHints": [
           null,
-          "モジュール名 json を入力します。",
+          "JSON形式のデータを扱うためのモジュールです。",
           null,
           null,
           "変数名 json_str を指定します。",
           null,
-          "文字列から変換する loads メソッドと、対象の json_str を入力します。",
+          "JSON文字列を辞書に変換するメソッドと、変換対象の変数を指定します。",
           null,
-          "表示のための print 関数を入力します。"
+          "標準出力に値を表示する組み込み関数です。"
         ],
         "candidates": {
           "keywords": ["json", "loads"],
@@ -120,9 +120,9 @@ export const pythonData5 = {
           "re モジュールをインポートします。",
           null,
           null,
-          "不足している番号 '090-1234-5678' を入力します。",
+          "テキスト内の電話番号データを指定します。",
           null,
-          "変数 match 、検索メソッド search 、パターン文字列 r'\\d{3}-\\d{4}-\\d{4}' を入力します。",
+          "パターンマッチの結果を格納する変数、検索メソッド、正規表現パターンを指定します。",
           null,
           "変数 match を指定します。",
           null,
@@ -160,11 +160,11 @@ export const pythonData5 = {
           "collections モジュールから Counter クラスをインポートします。",
           null,
           null,
-          "不足している単語 'world' を入力します。",
+          "文字列の後半部分を指定します。",
           null,
           "クラス名 Counter を指定します。",
           null,
-          "表示のための print 関数、取得のための most_common メソッド、引数の 3 を入力します。"
+          "出力関数、頻度順でデータを取得するメソッド、取得件数を指定します。"
         ],
         "candidates": {
           "keywords": ["collections", "Counter"],

@@ -47,9 +47,9 @@ export const kotlinData = {
         ],
       "lineHints": [
           null,
-          "10 と入力しましょう。",
+          "変数xに代入する整数値です。",
           null,
-          "5 と入力しましょう。",
+          "変数yに代入する整数値です。",
           null,
           "たし算なので + を使います。"
         ],
@@ -153,7 +153,7 @@ export const kotlinData = {
         ],
       "lineHints": [
           null,
-          "100 と入力しましょう。",
+          "変数scoreに代入する値です。",
           null,
           "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
           "ここを正しく入力してください。",
@@ -226,7 +226,7 @@ export const kotlinData = {
         ],
       "lineHints": [
           null,
-          "listOf(\"あか\", \"あお\") と入力しましょう。",
+          "listOf関数でリストを作成し、要素を順番に渡します。",
           null,
           "2番目のデータはインデックス1です。 `colors[1]` と入力してください。"
         ],
@@ -266,9 +266,9 @@ export const kotlinData = {
         ],
       "lineHints": [
           null,
-          "mapOf(\"みかん\" to \"オレンジ\") と入力しましょう。",
+          "mapOf関数でキーと値のペアを作成します。toで対応付けます。",
           null,
-          "colors[\"みかん\"] と入力しましょう。"
+          "[]でキーを指定して辞書から値を取り出します。"
         ],
         "candidates": {
           "variables": [

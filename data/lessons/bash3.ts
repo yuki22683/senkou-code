@@ -26,7 +26,7 @@ export const bash3Data = {
         ],
       "lineHints": [
           null,
-          "echo コマンド、文字列 \"Hello World\"、パイプ記号 | 、単語カウントの wc コマンド、オプション -w を入力します。"
+          "パイプ|でコマンドの出力を次のコマンドに渡します。wcの-wオプションで単語数を数えます。"
         ],
         "candidates": {
           "operators": [
@@ -51,7 +51,7 @@ export const bash3Data = {
         ],
       "lineHints": [
           null,
-          "echo コマンド、リダイレクト記号 > 、連結の && 、表示する cat コマンドを入力します。"
+          ">でファイルに出力を書き込み、&&で次のコマンドを実行します。"
         ],
         "candidates": {
           "operators": [
@@ -78,8 +78,8 @@ export const bash3Data = {
         ],
       "lineHints": [
           null,
-          "echo コマンド、文字列 \"line1\"、保存用のリダイレクト > を入力します。",
-          "wc コマンド、行数カウントの -l 、読み込みリダイレクト < 、拡張子 txt を入力します。"
+          ">でファイルに出力を書き込みます。",
+          "<でファイルから入力を読み込みます。-lで行数を数えます。"
         ],
         "candidates": {
           "operators": [
@@ -105,7 +105,7 @@ export const bash3Data = {
         ],
       "lineHints": [
           null,
-          "ls コマンド、エラー出力リダイレクト 2 、成功時の && 、echo コマンド、失敗時の || 、echo コマンド、文字列 \"エラー\" を入力します。"
+          "2>でエラー出力をリダイレクト、&&は成功時、||は失敗時に実行されます。"
         ],
         "candidates": {
           "numbers": [
@@ -133,10 +133,10 @@ export const bash3Data = {
         ],
       "lineHints": [
           null,
-          "if キーワード、ファイルチェックの f 、then キーワードを入力します。",
+          "-fでファイルの存在を確認します。条件が真ならthen以降を実行します。",
           null,
-          "echo コマンドと文字列 \"存在します\" を入力します。",
-          "if文を閉じる fi を入力します。"
+          "条件が真のときに実行される出力処理です。",
+          "if文を終了するキーワードです（ifの逆さ綴り）。"
         ],
         "candidates": {
           "operators": [
@@ -166,7 +166,7 @@ export const bash3Data = {
         ],
       "lineHints": [
           null,
-          "echo コマンド、文字列 \"Hello\"、パイプ | 、xargs コマンド、echo コマンドを入力します。"
+          "xargsはパイプからの入力を引数としてコマンドに渡します。"
         ],
         "candidates": {
           "commands": [
@@ -191,7 +191,7 @@ export const bash3Data = {
         ],
       "lineHints": [
           null,
-          "echo コマンド、文字列 \"りんご\"、パイプ | 、sed コマンド、置換前の \"りんご\"、置換後の \"バナナ\" を入力します。"
+          "sedの's/検索/置換/'で文字列を置き換えます。"
         ],
         "candidates": {
           "commands": [
@@ -216,7 +216,7 @@ export const bash3Data = {
         ],
       "lineHints": [
           null,
-          "echo コマンド、文字列 \"A 100 B\"、パイプ | 、awk コマンド、表示の print 、フィールド番号 2 を入力します。"
+          "awkはフィールドを抽出します。$2は2番目のフィールドを指します。"
         ],
         "candidates": {
           "commands": [
@@ -243,9 +243,9 @@ export const bash3Data = {
         ],
       "lineHints": [
           null,
-          "エスケープ有効の echo -e を入力します。",
-          "文字列 a を入力します。",
-          "パイプ | と並べ替えの sort コマンドを入力します。"
+          "-eオプションでエスケープシーケンス（\\n等）を有効にします。",
+          "\\nで改行された次の文字です。",
+          "sortコマンドで行をアルファベット順に並べ替えます。"
         ],
         "candidates": {
           "commands": [
@@ -272,9 +272,9 @@ export const bash3Data = {
         ],
       "lineHints": [
           null,
-          "echo -e を入力します。",
-          "文字列 a を入力します。",
-          "パイプ | と重複除去の uniq コマンドを入力します。"
+          "-eオプションでエスケープシーケンスを有効にします。",
+          "\\nで改行された次の文字です。",
+          "uniqコマンドで連続する重複行を1つにまとめます。"
         ],
         "candidates": {
           "commands": [

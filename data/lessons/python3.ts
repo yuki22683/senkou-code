@@ -30,7 +30,7 @@ export const pythonData3 = {
           null,
           "lambda式を代入する変数名 square と、べき乗演算子 ** を入力します。",
           null,
-          "結果を表示するための print 関数を入力します。"
+          "結果を表示するための print 関数です。"
         ],
         "candidates": {
           "keywords": [
@@ -68,19 +68,19 @@ export const pythonData3 = {
         ],
       "lineHints": [
           null,
-          "関数名 find_max を入力します。",
+          "可変長引数を受け取る関数を定義します。",
           null,
           "最初の引数の位置（インデックス0）を指定します。",
           null,
           "可変長引数の塊である args を指定します。",
           null,
-          "比較演算子 > を入力します。",
+          "「より大きい」を比較する演算子です。",
           "新しい最大値 n を代入します。",
           null,
           "変数 max_val を返します。",
           null,
           null,
-          "結果を表示する print 関数を入力します。"
+          "結果を表示する print 関数です。"
         ],
         "candidates": {
           "variables": ["args", "n", "max_val"],
@@ -114,7 +114,7 @@ export const pythonData3 = {
           null,
           "辞書のキーと値をペアで取り出す items メソッドを呼び出します。",
           null,
-          "表示のための print 関数を入力します。",
+          "表示のための print 関数です。",
           null,
           null,
           "定義した関数 print_info を呼び出します。"
@@ -143,11 +143,11 @@ export const pythonData3 = {
         ],
       "lineHints": [
           null,
-          "リストの最後の要素 '青' を入力します。",
+          "リストの3番目の色を指定します。",
           null,
           "enumerate関数にリスト colors を渡します。",
           null,
-          "結果を表示する print 関数を入力します。"
+          "結果を表示する print 関数です。"
         ],
         "candidates": {
           "functions": [
@@ -178,13 +178,13 @@ export const pythonData3 = {
         ],
       "lineHints": [
           null,
-          "リストの最後の要素 'c' を入力します。",
+          "リストの3番目の英単語を指定します。",
           null,
-          "数値の 1 を入力します。",
+          "リストの最初の要素（数値）を指定します。",
           null,
           "zip関数に keys と values を渡します。",
           null,
-          "結果を表示する print 関数を入力します。"
+          "結果を表示する print 関数です。"
         ],
         "candidates": {
           "functions": [
@@ -218,7 +218,7 @@ export const pythonData3 = {
         ],
       "lineHints": [
           null,
-          "関数名 even_numbers を入力します。",
+          "yieldで値を生成するジェネレータ関数を定義します。",
           null,
           "range関数に引数 n を渡します。",
           null,
@@ -227,7 +227,7 @@ export const pythonData3 = {
           null,
           "even_numbers関数を引数 4 で呼び出します。",
           null,
-          "値を表示する print 関数を入力します。"
+          "値を表示する print 関数です。"
         ],
         "candidates": {
           "keywords": [
@@ -260,7 +260,7 @@ export const pythonData3 = {
           null,
           "sum関数を使ってジェネレータ式の結果を合計します。x * x で2乗を計算し、対象は nums です。",
           null,
-          "結果を表示する print 関数を入力します。"
+          "結果を表示する print 関数です。"
         ],
         "candidates": {
           "functions": ["range", "sum"],
@@ -305,7 +305,7 @@ export const pythonData3 = {
           null,
           "内部関数名 wrapper を定義します。",
           null,
-          "メッセージを出す print 関数を入力します。",
+          "メッセージを出す print 関数です。",
           null,
           "引数として受け取った関数 func を呼び出します。",
           null,
@@ -316,7 +316,7 @@ export const pythonData3 = {
           null,
           "対象となる関数 greet を定義します。",
           null,
-          "挨拶を出す print 関数を入力します。",
+          "挨拶を出す print 関数です。",
           null,
           null,
           "関数 greet を呼び出します。"
@@ -345,11 +345,11 @@ export const pythonData3 = {
         ],
       "lineHints": [
           null,
-          "数値の 1 を入力します。",
+          "リストの最初の要素（数値）を指定します。",
           null,
           "すべての要素が真であることを確認する all 関数と、判定式の x を入力します。",
           null,
-          "結果を表示する print 関数を入力します。"
+          "結果を表示する print 関数です。"
         ],
         "candidates": {
           "functions": ["all"],

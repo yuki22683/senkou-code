@@ -60,7 +60,7 @@ export const csharpData = {
           null,
           "文字列型の変数を宣言し、文字列データを代入します。",
           null,
-          "変数名 name を入力します。"
+          "ConsoleクラスのWriteLineメソッドで変数の内容を出力します。"
         ],
         "candidates": {
           "types": [
@@ -421,8 +421,8 @@ export const csharpData = {
           null,
           "太郎、花子 の順で入力しましょう。",
           null,
-          "foreach を使います。",
-          "変数名 name を入力します。",
+          "foreachで配列の各要素を順番に処理します。",
+          "ループ内で使用する変数を宣言します。",
           null,
           "変数の値をコンソールに出力し、改行します。",
           "ここを正しく入力してください。"
@@ -466,7 +466,7 @@ export const csharpData = {
           null,
           "キーは みかん、値は オレンジ です。",
           null,
-          "キー みかん を入力します。"
+          "WriteLineメソッドで辞書から取得した値を出力します。"
         ],
         "candidates": {
           "types": [

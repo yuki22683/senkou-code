@@ -44,7 +44,7 @@ export const sqlData = {
         ],
       "lineHints": [
           null,
-          "別名をつけるキーワードを入力しましょう。"
+          "結果に別名をつけるためのキーワードです。"
         ],
         "candidates": {
           "keywords": [
@@ -72,7 +72,7 @@ export const sqlData = {
         ],
       "lineHints": [
           null,
-          "足し算の記号を入力しましょう。"
+          "加算を行う算術演算子です。"
         ],
         "candidates": {
           "operators": [
@@ -100,7 +100,7 @@ export const sqlData = {
         ],
       "lineHints": [
           null,
-          "複数の値を区切る記号を入力しましょう。"
+          "複数のカラムを区切るための記号です。"
         ],
         "candidates": {
           "punctuation": [
@@ -127,7 +127,7 @@ export const sqlData = {
         ],
       "lineHints": [
           null,
-          "条件をつけるキーワードを入力しましょう。"
+          "条件でデータを絞り込むためのキーワードです。"
         ],
         "candidates": {
           "keywords": [
@@ -154,7 +154,7 @@ export const sqlData = {
         ],
       "lineHints": [
           null,
-          "文字をつなげる記号を入力しましょう。"
+          "文字列を連結するための演算子です。"
         ],
         "candidates": {
           "operators": [
@@ -181,7 +181,7 @@ export const sqlData = {
         ],
       "lineHints": [
           null,
-          "並べ替えのキーワードを入力しましょう。"
+          "結果を並べ替えるためのキーワードです。"
         ],
         "candidates": {
           "keywords": [
@@ -209,7 +209,7 @@ export const sqlData = {
         ],
       "lineHints": [
           null,
-          "「両方とも」という意味のキーワードを入力しましょう。"
+          "両方の条件を満たす場合に真となる論理演算子です。"
         ],
         "candidates": {
           "keywords": [
@@ -236,7 +236,7 @@ export const sqlData = {
         ],
       "lineHints": [
           null,
-          "CASE、THEN、ENDを入力しましょう。"
+          "条件分岐を構成するキーワードを指定します。"
         ],
         "candidates": {
           "keywords": [
@@ -265,7 +265,7 @@ export const sqlData = {
         ],
       "lineHints": [
           null,
-          "NULLかどうかをチェックするキーワードを入力しましょう。"
+          "値がNULLかどうかを判定するキーワードです。"
         ],
         "candidates": {
           "keywords": [

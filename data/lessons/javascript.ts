@@ -159,7 +159,7 @@ export const javascriptData = {
         ],
       "lineHints": [
           null,
-          "['あか', 'あお'] と入力しましょう。",
+          "配列リテラル[]で複数の要素を格納します。",
           null,
           "2番目のデータはインデックス1です。 `colors[1]` と入力してください。"
         ],
@@ -339,7 +339,7 @@ export const javascriptData = {
         ],
       "lineHints": [
           null,
-          "{ name: 'たろう' } と入力しましょう。",
+          "オブジェクトリテラル{}でプロパティと値のペアを定義します。",
           null,
           "はこ（user）のあとに `.name` をつけてデータを取り出すことができます。"
         ],
