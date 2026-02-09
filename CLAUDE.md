@@ -21,6 +21,7 @@
   5. `node scripts/sync-comments-to-holey.mjs` - holeyCodeにコメント同期（コメント整合性修正）
   6. `node scripts/fix-correctlines-comments.mjs` - correctLinesのコメント修正
   7. `node scripts/fix-candidates-correct.mjs` - 選択肢不足を自動修正（ルール#34参照）
+  8. `node scripts/check-linehints-giveaway.mjs` - 答えをそのまま教えるヒントがないかチェック（ルール#5参照）
 - **注意**：`translate-string-literals.mjs` は使用禁止（ルール#55参照）
 - index.tsのケーシング修正（Java3→java3, C2→c2など）も再適用が必要
 - **注意**：`fix-holey-v2.mjs` は使用禁止（ルール#24参照）
@@ -52,10 +53,16 @@
   - `"「かつ」を表す論理演算子を使って両方の条件を満たすかチェックします。"`
   - `"Promiseの中身の型を推論して取り出すキーワードです。"`
   - `"number[]は配列なので結果はtrueになります。"`
+  - `"プログラムのエントリーポイントを定義するラベルです。"`
+  - `"OSにシステムコールを実行させる命令です。"`
 - 悪い例：
   - `"extends と入力します。"` → 答えを言っているだけ
   - `"true と入力します。"` → 答えを言っているだけ
+  - `"変数名 a を入力します。"` → 答えを言っているだけ
+  - `"syscall を入力します。"` → 答えを言っているだけ
   - `null` → ヒントを放棄している
+- **チェックスクリプト**: `node scripts/check-linehints-giveaway.mjs`
+- **修正後は必ずチェックを実行**して0件であることを確認すること
 
 ### 6. 修正後のDB反映
 - レッスンファイル（`data/lessons/*.ts`）を修正した後は、必ず `npm run seed:db` を実行して変更をデータベースに反映させること。
@@ -573,13 +580,15 @@
 - **確認方法**:
   1. 同じ言語の既存ファイルの出力形式を確認する
   2. 可能であれば実際にコードを実行して出力を確認する
-- **言語ごとの配列出力形式**（必ず既存ファイルに合わせる）:
+- **言語ごとの出力形式**（必ず既存ファイルに合わせる）:
+  - C言語: `printf("%d\n", x)` → `"42\\n"`（printfのフォーマット文字列に`\n`があれば`\\n`必須）
   - JavaScript: `[ 3, 6, 9 ]\\n`（括弧内にスペース、改行あり）
   - Python: `[2, 4, 6, 8, 10]\\n`（スペースなし、改行あり）
-  - PHP: `Array\\n(\\n    [0] => 1\\n...)\\n`（print_r形式）
+  - PHP: `echo $x;` → 改行なし、`Array\\n(\\n    [0] => 1\\n...)\\n`（print_r形式）
   - Ruby: `[1, 1]`（改行なし）
 - **確認コマンド**: `grep -n '"expected_output": ""' data/lessons/*.ts | grep -v assembly`
 - **よくあるミス**:
+  - C言語の`printf("%d\n", x)`で`\\n`を付け忘れる（printfのフォーマットに`\n`があれば必ず`\\n`を含める）
   - 正規表現演習で出力を空にしてしまう
   - 文字列置換の結果を置換前の値にしてしまう
   - 関数の戻り値をexpected_outputに設定し忘れる（PHP/Rubyなど）
@@ -704,6 +713,8 @@
   - `パスワード` ↔ `password`
   - `処理中` ↔ `Processing`
   - `クリーンアップ完了` ↔ `Cleanup done`
+  - `トヨタ` ↔ `Toyota`
+  - `Pythonガイド` ↔ `Python Guide`
 
 ### 53. チュートリアルの出力例は入力と同じ言語にする
 - `tutorialSlides` のコード例で日本語の値を入力している場合、**出力例も日本語**にすること。

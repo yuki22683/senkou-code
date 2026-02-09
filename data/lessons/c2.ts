@@ -41,7 +41,7 @@ export const c2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42"
+            "expected_output": "42\\n"
           }
         ]
       },
@@ -82,7 +82,7 @@ export const c2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "99"
+            "expected_output": "99\\n"
           }
         ]
       },
@@ -123,7 +123,7 @@ export const c2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "25"
+            "expected_output": "25\\n"
           }
         ]
       },
@@ -166,7 +166,7 @@ export const c2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "14"
+            "expected_output": "14\\n"
           }
         ]
       },
@@ -205,7 +205,7 @@ export const c2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "25"
+            "expected_output": "25\\n"
           }
         ]
       },
@@ -242,7 +242,7 @@ export const c2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは"
+            "expected_output": "こんにちは\\n"
           }
         ]
       },
@@ -287,7 +287,7 @@ export const c2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "12"
+            "expected_output": "12\\n"
           }
         ]
       },
@@ -330,7 +330,7 @@ export const c2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "50"
+            "expected_output": "50\\n"
           }
         ]
       },
@@ -375,7 +375,7 @@ export const c2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "200"
+            "expected_output": "200\\n"
           }
         ]
       },
@@ -414,7 +414,7 @@ export const c2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "2"
+            "expected_output": "2\\n"
           }
         ]
       }

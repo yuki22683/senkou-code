@@ -53,7 +53,7 @@ export const c4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Done"
+            "expected_output": "Done\\n"
           }
         ]
       },
@@ -104,7 +104,7 @@ export const c4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Closed"
+            "expected_output": "Closed\\n"
           }
         ]
       },
@@ -157,7 +157,7 @@ export const c4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Written"
+            "expected_output": "Written\\n"
           }
         ]
       },
@@ -218,7 +218,7 @@ export const c4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Hello World"
+            "expected_output": "Hello World\\n"
           }
         ]
       },
@@ -265,7 +265,7 @@ export const c4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "A"
+            "expected_output": "A\\n"
           }
         ]
       },
@@ -314,7 +314,7 @@ export const c4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "5"
+            "expected_output": "5\\n"
           }
         ]
       },
@@ -359,7 +359,7 @@ export const c4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "2"
+            "expected_output": "2\\n"
           }
         ]
       },
@@ -412,7 +412,7 @@ export const c4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "42"
+            "expected_output": "42\\n"
           }
         ]
       },
@@ -457,7 +457,7 @@ export const c4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "100"
+            "expected_output": "100\\n"
           }
         ]
       },
@@ -520,7 +520,7 @@ export const c4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "60"
+            "expected_output": "60\\n"
           }
         ]
       }
