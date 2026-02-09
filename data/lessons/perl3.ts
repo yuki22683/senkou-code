@@ -35,7 +35,7 @@ export const perl3Data = {
             "file",
             "read"
           ],
-          "others": ["open(my $fh, \"> \"/tmp/test.txt\") or die;", "\"", "close", "print", "open(my $fh, \"> \"/tmp/テスト.txt\") or die;", "\";", "\";", "open(my $fh, \"> \"/tmp/テスト.txt\") or die;", "open(my $fh, \">\", \"/tmp/テスト.txt\") or die;"]
+          "others": ["\"", "close", "print", "open(my $fh, \"> \"/tmp/テスト.txt\") or die;", "\";", "\";", "open(my $fh, \"> \"/tmp/テスト.txt\") or die;", "open(my $fh, \">\", \"/tmp/テスト.txt\") or die;"]
         },
         "testCases": [
           {
@@ -73,7 +73,7 @@ export const perl3Data = {
             "end",
             "shut"
           ],
-          "others": ["open(my $fh, \"> \"/tmp/test2.txt\") or die;", "\"", "print", "open(my $fh, \"> \"/tmp/テスト2.txt\") or die;", "\";", "\";", "open(my $fh, \"> \"/tmp/テスト2.txt\") or die;", "open(my $fh, \">\", \"/tmp/テスト2.txt\") or die;"]
+          "others": ["\"", "print", "open(my $fh, \"> \"/tmp/テスト2.txt\") or die;", "\";", "\";", "open(my $fh, \"> \"/tmp/テスト2.txt\") or die;", "open(my $fh, \">\", \"/tmp/テスト2.txt\") or die;"]
         },
         "testCases": [
           {
