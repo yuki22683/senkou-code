@@ -413,10 +413,10 @@ export const csharp2Data = {
       },
     {
       "title": "null条件演算子 ?.",
-      "correctCode": "// 文字列を定義（\"Hello\"）\\nstring text = \"こんにちは\";\\n// ?.でnull安全にアクセス\\nint? length = text?.Length;\\n// 画面に出力\\nConsole.WriteLine(length);",
-      "holeyCode": "// 文字列を定義（\"Hello\"）\\nstring text = \"___\";\\n// ?.でnull安全にアクセス\\nint? length = text?.___;\\n// 画面に出力\\nConsole.WriteLine(___);",
+      "correctCode": "// 文字列を定義（\"こんにちは\"）\\nstring text = \"こんにちは\";\\n// ?.でnull安全にアクセス\\nint? length = text?.Length;\\n// 画面に出力\\nConsole.WriteLine(length);",
+      "holeyCode": "// 文字列を定義（\"こんにちは\"）\\nstring text = \"___\";\\n// ?.でnull安全にアクセス\\nint? length = text?.___;\\n// 画面に出力\\nConsole.WriteLine(___);",
       "correctLines": [
-          "// 文字列を定義（\"Hello\"）",
+          "// 文字列を定義（\"こんにちは\"）",
           "string text = \"こんにちは\";",
           "// ?.でnull安全にアクセス",
           "int? length = text?.Length;",

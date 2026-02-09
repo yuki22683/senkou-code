@@ -293,8 +293,8 @@ export const cpp3Data = {
       },
     {
       "title": "std::move",
-      "correctCode": "#include <iostream>\\n#include <string>\\n#include <utility>\\nusing namespace std;\\n\\nint main() {\\n    // s1に\"Hello\"を代入\\n    string s1 = \"こんにちは\";\\n    // move で所有権を移動\\n    string s2 = move(s1);\\n    cout << s2 << endl;\\n    return 0;\\n}",
-      "holeyCode": "___\\n___\\n___\\nusing namespace ___;\\n___\\nint ___() {\\n    // s1に\"Hello\"を代入\\n    string s1 = \"___\";\\n    // move で所有権を移動\\n    string s___ = move(s1);\\n    cout << s___ << endl;\\n    return ___;\\n___",
+      "correctCode": "#include <iostream>\\n#include <string>\\n#include <utility>\\nusing namespace std;\\n\\nint main() {\\n    // s1に\"こんにちは\"を代入\\n    string s1 = \"こんにちは\";\\n    // move で所有権を移動\\n    string s2 = move(s1);\\n    cout << s2 << endl;\\n    return 0;\\n}",
+      "holeyCode": "___\\n___\\n___\\nusing namespace ___;\\n___\\nint ___() {\\n    // s1に\"こんにちは\"を代入\\n    string s1 = \"___\";\\n    // move で所有権を移動\\n    string s___ = move(s1);\\n    cout << s___ << endl;\\n    return ___;\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <string>",
@@ -302,7 +302,7 @@ export const cpp3Data = {
           "using namespace std;",
           "",
           "int main() {",
-          "    // s1に\"Hello\"を代入",
+          "    // s1に\"こんにちは\"を代入",
           "    string s1 = \"こんにちは\";",
           "    // move で所有権を移動",
           "    string s2 = move(s1);",

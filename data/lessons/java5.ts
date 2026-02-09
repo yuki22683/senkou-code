@@ -281,7 +281,7 @@ export const javaData5 = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "H\\n"
+            "expected_output": "こ\\n"
           }
         ]
       },
@@ -403,14 +403,14 @@ export const javaData5 = {
       },
     {
       "title": "Scanner での入力",
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // scにnew Scanner(\"42 Hello\")を代入\\n        Scanner sc = new Scanner(\"42 こんにちは\");\\n        // nextInt で整数を読み込む\\n        int num = sc.nextInt();\\n        // next で文字列を読み込む\\n        String word = sc.next();\\n        // println で出力する\\n        System.out.println(num + \" \" + word);\\n    }\\n}",
-      "holeyCode": "import java.util.___\\n___\\npublic class ___ {\\n    public static void ___\\(String[] args) {\\n        // scにnew Scanner(\"42 Hello\")を代入\\n        Scanner sc = new Scanner(\"___\");\\n        // nextInt で整数を読み込む\\n        int num = sc.___();\\n        // next で文字列を読み込む\\n        String word = sc.___();\\n        // println で出力する\\n        System.out.___(num + \" \" + word);\\n    ___\\n___",
+      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // scにnew Scanner(\"42 こんにちは\")を代入\\n        Scanner sc = new Scanner(\"42 こんにちは\");\\n        // nextInt で整数を読み込む\\n        int num = sc.nextInt();\\n        // next で文字列を読み込む\\n        String word = sc.next();\\n        // println で出力する\\n        System.out.println(num + \" \" + word);\\n    }\\n}",
+      "holeyCode": "import java.util.___\\n___\\npublic class ___ {\\n    public static void ___\\(String[] args) {\\n        // scにnew Scanner(\"42 こんにちは\")を代入\\n        Scanner sc = new Scanner(\"___\");\\n        // nextInt で整数を読み込む\\n        int num = sc.___();\\n        // next で文字列を読み込む\\n        String word = sc.___();\\n        // println で出力する\\n        System.out.___(num + \" \" + word);\\n    ___\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // scにnew Scanner(\"42 Hello\")を代入",
+          "        // scにnew Scanner(\"42 こんにちは\")を代入",
           "        Scanner sc = new Scanner(\"42 こんにちは\");",
           "        // nextInt で整数を読み込む",
           "        int num = sc.nextInt();",

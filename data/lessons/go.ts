@@ -8,13 +8,13 @@ export const goData = {
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",
-      "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // Hello, Go! と表示する\\n    fmt.Println(\"こんにちは, Go!\")\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // Hello, Go! と表示する\\n    fmt.___(\"こんにちは, Go!\")\\n___",
+      "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // こんにちは, Go! と表示する\\n    fmt.Println(\"こんにちは, Go!\")\\n}",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // こんにちは, Go! と表示する\\n    fmt.___(\"こんにちは, Go!\")\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
           "func main() {",
-          "    // Hello, Go! と表示する",
+          "    // こんにちは, Go! と表示する",
           "    fmt.Println(\"こんにちは, Go!\")",
           "}"
         ],
@@ -434,7 +434,7 @@ export const goData = {
           "プログラムの実行開始地点（main関数）を定義します。",
           "スライスに複数の値を格納します。",
           null,
-          "範囲をあらわす `range` を入力しましょう。",
+          "配列やスライスを反復処理するキーワードです。",
           "変数の値を標準出力に出力します。",
           "ここを正しく入力してください。",
           "ここを正しく入力してください。"

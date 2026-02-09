@@ -8,8 +8,8 @@ export const csharp4Data = {
   "exercises": [
     {
       "title": "ジェネリッククラス",
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// 型パラメータを定義する記号\\nclass Container<T> {\\n    // プロパティを定義\\n    public T Item { get; set; }\\n}\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // \"Hello\" を持つ Container インスタンスを作成\\n        var c = new Container<string> { Item = \"こんにちは\" };\\n        // c.Itemを表示\\n        Console.WriteLine(c.Item);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n___\\n// 型パラメータを定義する記号\\nclass ___<T> {\\n    // プロパティを定義\\n    public T Item { get; ___; }\\n___\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // \"Hello\" を持つ Container インスタンスを作成\\n        var ___ = new Container<string> { Item = \"こんにちは\" };\\n        // c.Itemを表示\\n        Console.___(c.Item);\\n    ___\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// 型パラメータを定義する記号\\nclass Container<T> {\\n    // プロパティを定義\\n    public T Item { get; set; }\\n}\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // \"こんにちは\" を持つ Container インスタンスを作成\\n        var c = new Container<string> { Item = \"こんにちは\" };\\n        // c.Itemを表示\\n        Console.WriteLine(c.Item);\\n    }\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n___\\n// 型パラメータを定義する記号\\nclass ___<T> {\\n    // プロパティを定義\\n    public T Item { get; ___; }\\n___\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // \"こんにちは\" を持つ Container インスタンスを作成\\n        var ___ = new Container<string> { Item = \"こんにちは\" };\\n        // c.Itemを表示\\n        Console.___(c.Item);\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -24,7 +24,7 @@ export const csharp4Data = {
           "class Program {",
           "    // Mainメソッドを定義",
           "    static void Main() {",
-          "        // \"Hello\" を持つ Container インスタンスを作成",
+          "        // \"こんにちは\" を持つ Container インスタンスを作成",
           "        var c = new Container<string> { Item = \"こんにちは\" };",
           "        // c.Itemを表示",
           "        Console.WriteLine(c.Item);",

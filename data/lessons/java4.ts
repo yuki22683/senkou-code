@@ -299,14 +299,14 @@ export const javaData4 = {
       },
     {
       "title": "Comparator",
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // wordsに[\"cat\", \"a\", \"elephant\"]を代入\\n        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));\\n        // comparing でプロパティを基準に比較する\\n        words.sort(Comparator.comparing(String::length));\\n        // println で出力する\\n        System.out.println(words);\\n    }\\n}",
-      "holeyCode": "import java.util.___\\n___\\npublic class ___ {\\n    public static void ___\\(String[] args) {\\n        // wordsに[\"cat\", \"a\", \"elephant\"]を代入\\n        List<String> words = new ArrayList<>(Arrays.asList(\"___\", \"a\", \"elephant\"));\\n        // comparing でプロパティを基準に比較する\\n        words.sort(Comparator.comparing(String::___));\\n        // println で出力する\\n        System.out.___(words);\\n    ___\\n___",
+      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // wordsに[\"猫\", \"a\", \"elephant\"]を代入\\n        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));\\n        // comparing でプロパティを基準に比較する\\n        words.sort(Comparator.comparing(String::length));\\n        // println で出力する\\n        System.out.println(words);\\n    }\\n}",
+      "holeyCode": "import java.util.___\\n___\\npublic class ___ {\\n    public static void ___\\(String[] args) {\\n        // wordsに[\"猫\", \"a\", \"elephant\"]を代入\\n        List<String> words = new ArrayList<>(Arrays.asList(\"___\", \"a\", \"elephant\"));\\n        // comparing でプロパティを基準に比較する\\n        words.sort(Comparator.comparing(String::___));\\n        // println で出力する\\n        System.out.___(words);\\n    ___\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // wordsに[\"cat\", \"a\", \"elephant\"]を代入",
+          "        // wordsに[\"猫\", \"a\", \"elephant\"]を代入",
           "        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));",
           "        // comparing でプロパティを基準に比較する",
           "        words.sort(Comparator.comparing(String::length));",
@@ -338,12 +338,12 @@ export const javaData4 = {
             "asList",
             "println"
           ],
-          "others": ["*;", "Main", "main(String[] args) {", "cat", "length", "}", "猫", "*;", "", "}\\"]
+          "others": ["*;", "Main", "main(String[] args) {", "length", "}", "猫", "*;", "", "}\\"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "[a, cat, elephant]\\n"
+            "expected_output": "[猫, a, elephant]\\n"
           }
         ]
       },
