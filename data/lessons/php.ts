@@ -254,8 +254,8 @@ export const phpData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
-      "correctCode": "<?php\\n  // scoreに100を入れる\\n  $score = 100;\\n  // >で大きいか比較\\n  if ($score > 80) {\\n    // メッセージ（'大変良い'）\\n    echo \"Excellent\";\\n  }\\n?>",
-      "holeyCode": "___\\n  // scoreに100を入れる\\n  $___ = ___;\\n  // >で大きいか比較\\n  if ($score ___ > ___) {\\n    // メッセージ（'大変良い'）\\n    ___ \"Excellent\";\\n  ___\\n___",
+      "correctCode": "<?php\\n  // scoreに100を入れる\\n  $score = 100;\\n  // >で大きいか比較\\n  if ($score > 80) {\\n    // メッセージ（'大変良い'）\\n    echo \"大変良い\";\\n  }\\n?>",
+      "holeyCode": "___\\n  // scoreに100を入れる\\n  $___ = ___;\\n  // >で大きいか比較\\n  if ($score ___ > ___) {\\n    // メッセージ（'大変良い'）\\n    ___ \"大変良い\";\\n  ___\\n___",
       "correctLines": [
           "<?php",
           "  // scoreに100を入れる",
@@ -263,7 +263,7 @@ export const phpData = {
           "  // >で大きいか比較",
           "  if ($score > 80) {",
           "    // メッセージ（'大変良い'）",
-          "    echo \"Excellent\";",
+          "    echo \"大変良い\";",
           "  }",
           "?>"
         ],
@@ -293,8 +293,8 @@ export const phpData = {
       },
     {
       "title": "ちがう場合はどうしましょう？",
-      "correctCode": "<?php\\n  // ageに18を入れる\\n  $age = 18;\\n  // 20以上かを比較する演算子\\n  if ($age >= 20) {\\n    // 20歳以上のときのメッセージ（'大人'）\\n    echo \"Adult\";\\n  // elseで「そうでなければ」\\n  } else {\\n    // それ以外のメッセージ（'未成年'）\\n    echo \"Minor\";\\n  }\\n?>",
-      "holeyCode": "___\\n  // ageに18を入れる\\n  $___ = ___;\\n  // 20以上かを比較する演算子\\n  if ($age ___ >= ___) {\\n    // 20歳以上のときのメッセージ（'大人'）\\n    ___ \"Adult\";\\n  // elseで「そうでなければ」\\n  } ___ {\\n    // それ以外のメッセージ（'未成年'）\\n    ___ \"Minor\";\\n  ___\\n___",
+      "correctCode": "<?php\\n  // ageに18を入れる\\n  $age = 18;\\n  // 20以上かを比較する演算子\\n  if ($age >= 20) {\\n    // 20歳以上のときのメッセージ（'大人'）\\n    echo \"大人\";\\n  // elseで「そうでなければ」\\n  } else {\\n    // それ以外のメッセージ（'未成年'）\\n    echo \"未成年\";\\n  }\\n?>",
+      "holeyCode": "___\\n  // ageに18を入れる\\n  $___ = ___;\\n  // 20以上かを比較する演算子\\n  if ($age ___ >= ___) {\\n    // 20歳以上のときのメッセージ（'大人'）\\n    ___ \"大人\";\\n  // elseで「そうでなければ」\\n  } ___ {\\n    // それ以外のメッセージ（'未成年'）\\n    ___ \"未成年\";\\n  ___\\n___",
       "correctLines": [
           "<?php",
           "  // ageに18を入れる",
@@ -302,11 +302,11 @@ export const phpData = {
           "  // 20以上かを比較する演算子",
           "  if ($age >= 20) {",
           "    // 20歳以上のときのメッセージ（'大人'）",
-          "    echo \"Adult\";",
+          "    echo \"大人\";",
           "  // elseで「そうでなければ」",
           "  } else {",
           "    // それ以外のメッセージ（'未成年'）",
-          "    echo \"Minor\";",
+          "    echo \"未成年\";",
           "  }",
           "?>"
         ],
@@ -452,12 +452,12 @@ export const phpData = {
       },
     {
       "title": "自分だけの関数を作りましょう",
-      "correctCode": "<?php\\n  function greet() {\\n    echo \"Hello\";\\n  }\\n  // 関数を実行する\\n  greet();\\n?>",
-      "holeyCode": "___\\n  function ___() {\\n    ___ \"Hello\";\\n  ___\\n  // 関数を実行する\\n  ___();\\n___",
+      "correctCode": "<?php\\n  function greet() {\\n    echo \"こんにちは\";\\n  }\\n  // 関数を実行する\\n  greet();\\n?>",
+      "holeyCode": "___\\n  function ___() {\\n    ___ \"こんにちは\";\\n  ___\\n  // 関数を実行する\\n  ___();\\n___",
       "correctLines": [
           "<?php",
           "  function greet() {",
-          "    echo \"Hello\";",
+          "    echo \"こんにちは\";",
           "  }",
           "  // 関数を実行する",
           "  greet();",

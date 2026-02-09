@@ -22,13 +22,13 @@ export const ruby3Data = {
         ],
       "lineHints": [
           null,
-          "lineNumber",
+          "def でメソッドを定義します。",
           null,
-          "hint",
+          "yield でブロックを呼び出します。",
           null,
-          "ブロックを呼び出すキーワード",
+          "yield でブロックを呼び出します。",
           null,
-          "lineNumber"
+          "ブロックを終了する。"
         ],
         "candidates": {
           "2": [
@@ -62,7 +62,7 @@ export const ruby3Data = {
         ],
       "lineHints": [
           null,
-          "lineNumber"
+          "Proc.new でブロックをオブジェクト化します。"
         ],
         "candidates": {
           "1": [
@@ -93,7 +93,7 @@ export const ruby3Data = {
         ],
       "lineHints": [
           null,
-          "lineNumber"
+          "-> でラムダを定義します。"
         ],
         "candidates": {
           "1": [
@@ -121,7 +121,7 @@ export const ruby3Data = {
         ],
       "lineHints": [
           null,
-          "lineNumber"
+          "&:upcase でシンボルをProc変換します。"
         ],
         "candidates": {
           "1": [
@@ -151,7 +151,7 @@ export const ruby3Data = {
         ],
       "lineHints": [
           null,
-          "lineNumber"
+          "reduce で配列を畳み込みます。"
         ],
         "candidates": {
           "1": [
@@ -179,7 +179,7 @@ export const ruby3Data = {
         ],
       "lineHints": [
           null,
-          "lineNumber"
+          "select で条件に合う要素を抽出します。"
         ],
         "candidates": {
           "1": [
@@ -211,11 +211,11 @@ export const ruby3Data = {
         ],
       "lineHints": [
           null,
-          "lineNumber",
+          "* で可変長引数を受け取ります。",
           null,
-          "hint",
+          "reduce で配列を畳み込みます。",
           null,
-          "関数（sum_all）を新しく定義します。"
+          "ブロックを終了する。"
         ],
         "candidates": {
           "1": [
@@ -257,15 +257,15 @@ export const ruby3Data = {
         ],
       "lineHints": [
           null,
-          "lineNumber",
+          "新しいクラス（FlexibleClass）を定義します。",
           null,
-          "hint",
+          "*args で可変長引数を受け取ります。",
           null,
-          "関数（method_missing）を新しく定義します。",
+          "未定義メソッドのエラーメッセージを返します。",
           null,
-          "lineNumber",
+          "ブロックを終了する。",
           null,
-          "hint"
+          "ブロックを終了する。"
         ],
         "candidates": {
           "2": [
@@ -299,7 +299,7 @@ export const ruby3Data = {
         ],
       "lineHints": [
           null,
-          "lineNumber"
+          "Struct.new で簡易クラスを作成します。"
         ],
         "candidates": {
           "1": [
@@ -330,7 +330,7 @@ export const ruby3Data = {
         ],
       "lineHints": [
           null,
-          "lineNumber"
+          "tap で自身を返しながら処理を行います。"
         ],
         "candidates": {
           "1": [
