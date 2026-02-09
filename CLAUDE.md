@@ -947,3 +947,20 @@
   - Elixir: アトム（`:ok`, `:error`）を使うパターンマッチ
 - **チェックコマンド**: `grep -l '"correctCode".*___' data/lessons/*.ts`
 - **理由**: correctCode/correctLinesはユーザーが入力すべき正解であり、`___`が含まれていると正解が不明確になる
+
+### 75. candidates.othersはコードと同じ言語の文字列を使用する
+- `candidates.others` 配列に含める文字列は、`correctCode`/`correctLines` で実際に使用されている文字列と**同じ言語（日本語/英語）**にすること。
+- **禁止パターン**:
+  - コード: `print('こんにちは')` → candidates.others: `["Hello", ...]` （英語が混在）
+  - コード: `name = 'りんご'` → candidates.others: `["Apple", ...]` （英語が混在）
+- **正しいパターン**:
+  - コード: `print('こんにちは')` → candidates.others: `["こんにちは", ...]`
+  - コード: `name = 'りんご'` → candidates.others: `["りんご", ...]`
+- **例外（英語のまま維持）**:
+  - クラス名・メソッド名として使用: `class Hello`、`HelloTrait`、`sayHello()`
+  - プログラミングの決まり文句: `['hello', 'world']`（ルール#25参照）
+  - コードで実際に英語を使用している場合（expected_outputも英語で一致）
+- **チェック方法**:
+  1. `grep -n '"others":.*"Hello"' data/lessons/*.ts` で英語文字列を検出
+  2. 該当ファイルの `expected_output` を確認し、コードの出力言語と一致するか確認
+- **理由**: candidatesはフロントエンドで使用されていないが（ルール#38参照）、将来使用される可能性があり、データの整合性を保つため
