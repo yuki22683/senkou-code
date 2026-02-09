@@ -5,30 +5,39 @@ export const bash2Data = {
   "lessonDescription": "Bashの高度な機能を学びます。配列、文字列操作、ファイル処理などシステム管理に役立つ技法を身につけましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "複数のデータを扱う 配列",
+      "content": "配列を使うと、たくさんのデータを1つの名前でまとめて管理できます。\\n\\n```bash\\nnames=(\"アリス\" \"ボブ\")\\necho ${names[0]} # アリス\\n```\\n\\nインデックスは 0 から始まります。"
+    },
+    {
+      "title": "コマンドの出力を使う コマンド置換",
+      "content": "コマンドの実行結果を変数に入れたり、別のコマンドで使いたいときは `$( )` を使います。\\n\\n```bash\\nnow=$(date)\\necho \"今は $now です\"\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "配列を使おう",
-      "correctCode": "# 配列を定義（10, 20, 30）\\nnums=(10 20 30)\\n# 3番目の要素にアクセスするインデックス（0から数える）\\necho ${nums[2]}",
-      "holeyCode": "# 配列を定義（10, 20, 30）\\nnums=(___ 20 30)\\n# 3番目の要素にアクセスするインデックス（0から数える）\\necho ${nums[___]}",
+      "correctCode": "# 配列numsを定義\\nnums=(10 20 30)\\n# インデックス2（3つ目の要素）にアクセス\\necho ${nums[2]}",
+      "holeyCode": "# 配列numsを定義\\n___=(___ 20 30)\\n# インデックス2（3つ目の要素）にアクセス\\n___ ${___[___]}",
       "correctLines": [
-          "# 配列を定義（10, 20, 30）",
+          "# 配列numsを定義",
           "nums=(10 20 30)",
-          "# 3番目の要素にアクセスするインデックス（0から数える）",
+          "# インデックス2（3つ目の要素）にアクセス",
           "echo ${nums[2]}"
         ],
       "lineHints": [
           null,
-          "インデックス 2 で3番目の要素にアクセスします。",
+          "変数名 nums と最初の要素 10 を入力します。",
           null,
-          "ここを正しく入力してください。"
+          "echo コマンド、配列名 nums 、インデックス 2 を入力します。"
         ],
         "candidates": {
           "numbers": [
-            "2"
-          ],
-          "others": [
+            "2",
             "10"
-          ]
+          ],
+          "others": ["nums", "echo"]
         },
         "testCases": [
           {
@@ -39,25 +48,25 @@ export const bash2Data = {
       },
     {
       "title": "文字列の長さを取得",
-      "correctCode": "# 変数に文字列を代入\\nword=\"Bash\"\\n# 文字列の長さを取得する記号\\necho ${#word}",
-      "holeyCode": "# 変数に文字列を代入\\n___=\"___\"\\n# 文字列の長さを取得する記号\\necho ${___word}",
+      "correctCode": "# 変数wordに文字列を代入\\nword=\"Bash\"\\n# 文字列の長さを表示\\necho ${#word}",
+      "holeyCode": "# 変数wordに文字列を代入\\n___=\"___\"\\n# 文字列の長さを表示\\n___ ${___word}",
       "correctLines": [
-          "# 変数に文字列を代入",
+          "# 変数wordに文字列を代入",
           "word=\"Bash\"",
-          "# 文字列の長さを取得する記号",
+          "# 文字列の長さを表示",
           "echo ${#word}"
         ],
       "lineHints": [
           null,
-          "# で長さを取得します。",
+          "変数名 word と文字列 \"Bash\" を入力します。",
           null,
-          "ここを正しく入力してください。"
+          "echo コマンドと長さを取得する # 記号を入力します。"
         ],
         "candidates": {
           "operators": [
             "#"
           ],
-          "others": ["Bash", "word"]
+          "others": ["Bash", "word", "echo"]
         },
         "testCases": [
           {
@@ -68,25 +77,25 @@ export const bash2Data = {
       },
     {
       "title": "文字列の部分取得",
-      "correctCode": "# 変数に文字列を代入\\ntext=\"Hello World\"\\n# Worldが始まる位置（0から数える）\\necho ${text:6:5}",
-      "holeyCode": "# 変数に文字列を代入\\n___=\"___\"\\n# Worldが始まる位置（0から数える）\\necho ${text:___:5}",
+      "correctCode": "# 変数textに文字列を代入\\ntext=\"Hello World\"\\n# インデックス6から5文字分を取得\\necho ${text:6:5}",
+      "holeyCode": "# 変数textに文字列を代入\\n___=\"___\"\\n# インデックス6から5文字分を取得\\n___ ${___:___:5}",
       "correctLines": [
-          "# 変数に文字列を代入",
+          "# 変数textに文字列を代入",
           "text=\"Hello World\"",
-          "# Worldが始まる位置（0から数える）",
+          "# インデックス6から5文字分を取得",
           "echo ${text:6:5}"
         ],
       "lineHints": [
           null,
-          "6 から始めて World を取得します。",
+          "変数名 text と文字列 \"Hello World\" を入力します。",
           null,
-          "ここを正しく入力してください。"
+          "echo コマンド、変数名 text 、開始位置のインデックス 6 を入力します。"
         ],
         "candidates": {
           "numbers": [
             "6"
           ],
-          "others": ["Hello World", "text"]
+          "others": ["Hello World", "text", "echo"]
         },
         "testCases": [
           {
@@ -97,31 +106,32 @@ export const bash2Data = {
       },
     {
       "title": "関数に引数を渡す",
-      "correctCode": "# add関数を定義\\nadd() {\\n    # 最初の引数を参照する変数\\n    echo $(($1 + $2))\\n}\\n# 関数を呼び出す\\nadd 3 5",
-      "holeyCode": "# add関数を定義\\n___() {\\n    # 最初の引数を参照する変数\\n    echo $((___ + $2))\\n___\\n# 関数を呼び出す\\nadd ___ 5",
+      "correctCode": "# add関数を定義\\nadd() {\\n    # 引数1と引数2を足して表示\\n    echo $(($1 + $2))\\n}\\n# 3と5を引数に渡して呼び出す\\nadd 3 5",
+      "holeyCode": "# add関数を定義\\n___() {\\n    # 引数1と引数2を足して表示\\n    ___ $((___ + ___))\\n___\\n# 3と5を引数に渡して呼び出す\\n___ ___ ___",
       "correctLines": [
           "# add関数を定義",
           "add() {",
-          "    # 最初の引数を参照する変数",
+          "    # 引数1と引数2を足して表示",
           "    echo $(($1 + $2))",
           "}",
-          "# 関数を呼び出す",
+          "# 3と5を引数に渡して呼び出す",
           "add 3 5"
         ],
       "lineHints": [
           null,
-          "$1 で最初の引数を参照します。",
+          "関数名 add を定義します。",
           null,
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。",
+          "echo コマンドと特殊変数 $1 , $2 を入力します。",
+          "関数の終わりを示す } を入力します。",
           null,
-          "ここを正しく入力してください。"
+          "関数名 add と引数 3 , 5 を入力します。"
         ],
         "candidates": {
           "variables": [
-            "$1"
+            "$1",
+            "$2"
           ],
-          "others": ["add", "3", "}"]
+          "others": ["add", "3", "5", "}", "echo"]
         },
         "testCases": [
           {
@@ -132,35 +142,35 @@ export const bash2Data = {
       },
     {
       "title": "戻り値を使おう",
-      "correctCode": "# square関数を定義\\nsquare() {\\n    # 引数を2乗する\\n    echo $(($1 * $1))\\n}\\n# コマンドの出力を取得する構文\\nresult=$(square 4)\\n# resultを表示\\necho $result",
-      "holeyCode": "# square関数を定義\\n___() {\\n    # 引数を2乗する\\n    echo $(($1 * ___))\\n___\\n# コマンドの出力を取得する構文\\nresult=$(___ ___)\\n# resultを表示\\necho ___",
+      "correctCode": "# square関数を定義\\nsquare() {\\n    # 引数を2乗する\\n    echo $(($1 * $1))\\n}\\n# 関数の出力をresultに格納\\nresult=$(square 4)\\n# $resultを表示\\necho $result",
+      "holeyCode": "# square関数を定義\\n___() {\\n    # 引数を2乗する\\n    ___ $((___ * ___))\\n___\\n# 関数の出力をresultに格納\\n___=$(___ ___)\\n# $resultを表示\\n___ $___",
       "correctLines": [
           "# square関数を定義",
           "square() {",
           "    # 引数を2乗する",
           "    echo $(($1 * $1))",
           "}",
-          "# コマンドの出力を取得する構文",
+          "# 関数の出力をresultに格納",
           "result=$(square 4)",
-          "# resultを表示",
+          "# $resultを表示",
           "echo $result"
         ],
       "lineHints": [
           null,
-          "$() で関数の出力を受け取ります。",
+          "関数名 square を定義します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "echo コマンドと引数を表す $1 を2回入力します。",
+          "関数の終わりを示す } を入力します。",
           null,
-          "ここを正しく入力してください。",
+          "変数名 result 、コマンド置換 $( ) 、関数名 square 、引数 4 を入力します。",
           null,
-          "変数の内容を展開して表示します。"
+          "echo コマンドと変数 $result を入力します。"
         ],
         "candidates": {
           "operators": [
-            "$"
+            "*"
           ],
-          "others": ["square", "$1))", "result", "$1", "}", "4", "$result", "}"]
+          "others": ["square", "$1", "echo", "}", "result", "4", "$result"]
         },
         "testCases": [
           {
@@ -171,14 +181,14 @@ export const bash2Data = {
       },
     {
       "title": "while ループ",
-      "correctCode": "# iを1で初期化\\ni=1\\n# 条件が真の間繰り返すキーワード\\nwhile [ $i -le 3 ]; do\\n    # $iをechoで出力\\n    echo $i\\n    # iを1増やす\\n    i=$((i + 1))\\ndone",
-      "holeyCode": "# iを1で初期化\\ni=___\\n# 条件が真の間繰り返すキーワード\\n___ [ $i -le 3 ]; do\\n    # $iをechoで出力\\n    echo $___\\n    # iを1増やす\\n    i=$((___ + 1))\\n___",
+      "correctCode": "# 変数iを1で初期化\\ni=1\\n# iが3以下の間ループ\\nwhile [ $i -le 3 ]; do\\n    # 現在のiを表示\\n    echo $i\\n    # iを1増やす\\n    i=$((i + 1))\\ndone",
+      "holeyCode": "# 変数iを1で初期化\\n___=___\\n# iが3以下の間ループ\\n___ [ $___ -le 3 ]; do\\n    # 現在のiを表示\\n    ___ $___\\n    # iを1増やす\\n    ___=$((___ + 1))\\n___",
       "correctLines": [
-          "# iを1で初期化",
+          "# 変数iを1で初期化",
           "i=1",
-          "# 条件が真の間繰り返すキーワード",
+          "# iが3以下の間ループ",
           "while [ $i -le 3 ]; do",
-          "    # $iをechoで出力",
+          "    # 現在のiを表示",
           "    echo $i",
           "    # iを1増やす",
           "    i=$((i + 1))",
@@ -186,20 +196,21 @@ export const bash2Data = {
         ],
       "lineHints": [
           null,
-          "条件が満たされている間、処理を繰り返します。",
+          "変数名 i と初期値 1 を入力します。",
           null,
-          "条件が真の間、繰り返し処理を実行する。",
+          "while キーワードと変数 $i を入力します。",
           null,
-          "変数の内容を展開して表示します。",
+          "echo コマンドと変数 $i を入力します。",
           null,
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。"
+          "変数名 i を2回入力します。",
+          "ループを終了する done キーワードを入力します。"
         ],
         "candidates": {
           "keywords": [
-            "while"
+            "while",
+            "done"
           ],
-          "others": ["1", "i", "done"]
+          "others": ["1", "i", "echo"]
         },
         "testCases": [
           {
@@ -210,12 +221,12 @@ export const bash2Data = {
       },
     {
       "title": "case で分岐",
-      "correctCode": "# 変数に値を代入\\nfruit=\"りんご\"\\n# パターンマッチで分岐するキーワード\\ncase $fruit in\\n    # りんごの場合\\n    りんご) echo \"赤\";;\\n    # バナナの場合\\n    バナナ) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\nesac",
-      "holeyCode": "# 変数に値を代入\\n___=\"___\"\\n# パターンマッチで分岐するキーワード\\n___ $fruit in\\n    # りんごの場合\\n    りんご) echo \"___\";;\\n    # バナナの場合\\n    ___\\n    # その他の場合\\n    *) echo \"その他\";;\\n___",
+      "correctCode": "# 変数fruitに値を代入\\nfruit=\"りんご\"\\n# fruitの値で分岐\\ncase $fruit in\\n    # りんごの場合\\n    りんご) echo \"赤\";;\\n    # バナナの場合\\n    バナナ) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\nesac",
+      "holeyCode": "# 変数fruitに値を代入\\n___=\"___\"\\n# fruitの値で分岐\\n___ $___ in\\n    # りんごの場合\\n    りんご) ___ \"___\";;\\n    # バナナの場合\\n    ___) ___ \"___\";;\\n    # その他の場合\\n    *) ___ \"その他\";;\\n___",
       "correctLines": [
-          "# 変数に値を代入",
+          "# 変数fruitに値を代入",
           "fruit=\"りんご\"",
-          "# パターンマッチで分岐するキーワード",
+          "# fruitの値で分岐",
           "case $fruit in",
           "    # りんごの場合",
           "    りんご) echo \"赤\";;",
@@ -227,22 +238,23 @@ export const bash2Data = {
         ],
       "lineHints": [
           null,
-          "ここを正しく入力してください。",
+          "変数名 fruit と文字列 \"りんご\" を入力します。",
           null,
-          "case で分岐します。",
+          "case キーワードと変数 $fruit を入力します。",
           null,
-          "「赤」と表示します。",
+          "echo コマンドと文字列 \"赤\" を入力します。",
           null,
-          "この行を正しく入力してください。",
+          "パターン \"バナナ\"、echo コマンド、文字列 \"黄色\" を入力します。",
           null,
-          null,
-          "この行を正しく入力してください。"
+          "echo コマンドを入力します。",
+          "case文を終了する esac キーワードを入力します。"
         ],
         "candidates": {
           "keywords": [
-            "case"
+            "case",
+            "esac"
           ],
-          "others": ["りんご", "赤", "fruit", "バナナ) echo \"黄色\";;", "esac"]
+          "others": ["fruit", "りんご", "バナナ", "echo", "赤", "黄色"]
         },
         "testCases": [
           {
@@ -253,44 +265,41 @@ export const bash2Data = {
       },
     {
       "title": "コマンド置換",
-      "correctCode": "# コマンドの出力を変数に格納する構文\\nfiles=$(echo \"テスト\")\\n# \"Files: $files\"をechoで出力\\necho \"Files: $files\"",
-      "holeyCode": "# コマンドの出力を変数に格納する構文\\nfiles=___(___)\\n# \"Files: $files\"をechoで出力\\necho \"Files: $___\"",
+      "correctCode": "# 出力を変数filesに格納\\nfiles=$(echo \"テスト\")\\n# $filesの内容を表示\\necho \"Files: $files\"",
+      "holeyCode": "# 出力を変数filesに格納\\n___=$(___ \"___\")\\n# $filesの内容を表示\\n___ \"Files: $___\"",
       "correctLines": [
-          "# コマンドの出力を変数に格納する構文",
+          "# 出力を変数filesに格納",
           "files=$(echo \"テスト\")",
-          "# \"Files: $files\"をechoで出力",
+          "# $filesの内容を表示",
           "echo \"Files: $files\""
         ],
       "lineHints": [
           null,
-          "$() でコマンドの出力を取得します。",
+          "変数名 files 、echo コマンド、文字列 \"テスト\" を入力します。",
           null,
-          "ここを正しく入力してください."
+          "echo コマンドと展開する変数名 files を入力します。"
         ],
-        "candidates": {
-          "operators": [
-            "$"
-          ],
-          "others": ["echo \"test\"", "files", "echo \"テスト\""]
-        },
-        "testCases": [
-          {
-            "input": "",
-            "expected_output": "Files: テスト\\n"
-          }
-        ]
+      "candidates": {
+        "others": ["files", "echo", "テスト"]
       },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "Files: テスト\\n"
+        }
+      ]
+    },
     {
       "title": "read で入力を受け取る",
-      "correctCode": "# 標準入力を変数に読み込むコマンド\\necho \"入力:\" && read val && echo \"You entered: $val\"",
-      "holeyCode": "# 標準入力を変数に読み込むコマンド\\n___ \"入力:\" && ___ val && ___ \"You entered: $___\"",
+      "correctCode": "# メッセージを出して入力を変数valに読み込む\\necho \"入力:\" && read val && echo \"入力内容は: $val\"",
+      "holeyCode": "# メッセージを出して入力を変数valに読み込む\\n___ \"入力:\" && ___ ___ && ___ \"入力内容は: $___\"",
       "correctLines": [
-          "# 標準入力を変数に読み込むコマンド",
-          "echo \"入力:\" && read val && echo \"You entered: $val\""
+          "# メッセージを出して入力を変数valに読み込む",
+          "echo \"入力:\" && read val && echo \"入力内容は: $val\""
         ],
       "lineHints": [
           null,
-          "echo でメッセージを出し、read で変数 val に読み込みます。"
+          "echo コマンド、read コマンド、変数名 val を2回、最後は echo コマンドを入力します。"
         ],
         "candidates": {
           "keywords": [
@@ -301,37 +310,33 @@ export const bash2Data = {
         "testCases": [
           {
             "input": "test\\n",
-            "expected_output": "入力:\\nYou entered: test\\n"
+            "expected_output": "入力:\\n入力内容は: test\\n"
           }
         ]
       },
     {
       "title": "ヒアドキュメント",
-      "correctCode": "# ヒアドキュメントを開始する演算子\\ncat <<END\\n# 1行目のテキストを入力\\nHello\\n# 2行目のテキストを入力\\nWorld\\nEND",
-      "holeyCode": "# ヒアドキュメントを開始する演算子\\ncat ___END\\n# 1行目のテキストを入力\\n___\\n# 2行目のテキストを入力\\n___\\n___",
+      "correctCode": "# ENDラベルまでをcatに渡す\\ncat <<END\\nHello\\nWorld\\nEND",
+      "holeyCode": "# ENDラベルまでをcatに渡す\\n___ ___END\\n___\\n___\\n___",
       "correctLines": [
-          "# ヒアドキュメントを開始する演算子",
+          "# ENDラベルまでをcatに渡す",
           "cat <<END",
-          "# 1行目のテキストを入力",
           "Hello",
-          "# 2行目のテキストを入力",
           "World",
           "END"
         ],
       "lineHints": [
           null,
-          "<< でヒアドキュメントを始めます。",
-          null,
-          "Hello と入力しましょう。",
-          null,
-          "World と入力しましょう。",
-          "この行を正しく入力してください。"
+          "cat コマンドとヒアドキュメント演算子 << を入力します。",
+          "文字列 Hello を入力します。",
+          "文字列 World を入力します。",
+          "終了ラベル END を入力します。"
         ],
         "candidates": {
           "operators": [
             "<<"
           ],
-          "others": ["Hello", "World", "END", "Hello", "World"]
+          "others": ["cat", "Hello", "World", "END"]
         },
         "testCases": [
           {

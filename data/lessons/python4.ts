@@ -267,7 +267,7 @@ export const pythonData4 = {
           "    def __init__(self, title, author):",
           "        # タイトルと著者を保存",
           "        self.title = title",
-          "        self.author = author,
+          "        self.author = author",
           "",
           "    # __str__メソッドを定義",
           "    def __str__(self):",

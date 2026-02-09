@@ -5,25 +5,32 @@ export const bash3Data = {
   "lessonDescription": "Bashの真髄「パイプライン」とファイル処理を学びます。コマンドを組み合わせて強力なスクリプトを作りましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    {
+      "title": "コマンドをつなぐ パイプ",
+      "content": "パイプ `|` を使うと、あるコマンドの出力を別のコマンドの入力として渡せます。\\n\\n```bash\\necho \"Hello World\" | wc -w # 単語数をカウント\\n```"
+    },
+    {
+      "title": "出力を保存する リダイレクト",
+      "content": "コマンドの結果をファイルに保存するにはリダイレクト `>` を使います。\\n\\n```bash\\necho \"テスト\" > result.txt\\n```\\n\\n`>` は上書き、`>>` は追記です。"
+    }
+  ],
   "exercises": [
     {
       "title": "パイプでコマンドをつなぐ",
-      "correctCode": "# |でパイプを使う\\necho \"Hello World\" | wc -w",
-      "holeyCode": "# |でパイプを使う\\n___ \"___\" ___ wc -___",
+      "correctCode": "# echoの出力をwcコマンドに渡す\\necho \"Hello World\" | wc -w",
+      "holeyCode": "# echoの出力をwcコマンドに渡す\\n___ \"___\" ___ ___ -___",
       "correctLines": [
-          "# |でパイプを使う",
+          "# echoの出力をwcコマンドに渡す",
           "echo \"Hello World\" | wc -w"
         ],
       "lineHints": [
           null,
-          "echo で出力し、| でパイプをつなぎます。"
+          "echo コマンド、文字列 \"Hello World\"、パイプ記号 | 、単語カウントの wc コマンド、オプション -w を入力します。"
         ],
         "candidates": {
           "operators": [
-            "|",
-            "&",
-            ">",
-            "<"
+            "|"
           ],
           "others": ["echo", "Hello World", "wc", "w"]
         },
@@ -36,24 +43,22 @@ export const bash3Data = {
       },
     {
       "title": "ファイルにリダイレクト",
-      "correctCode": "# >でファイルに出力\\necho \"テスト\" > /tmp/out.txt && cat /tmp/out.txt",
-      "holeyCode": "# >でファイルに出力\\n___ \"___\" ___ /tmp/out.txt ___ ___ /tmp/out.txt",
+      "correctCode": "# echoの結果をファイルout.txtに保存\\necho \"テスト\" > /tmp/out.txt && cat /tmp/out.txt",
+      "holeyCode": "# echoの結果をファイルout.txtに保存\\n___ \"___\" ___ /tmp/out.txt ___ ___ /tmp/out.txt",
       "correctLines": [
-          "# >でファイルに出力",
+          "# echoの結果をファイルout.txtに保存",
           "echo \"テスト\" > /tmp/out.txt && cat /tmp/out.txt"
         ],
       "lineHints": [
           null,
-          "echo で出力し、> でリダイレクトします。 && で cat を実行しましょう。"
+          "echo コマンド、リダイレクト記号 > 、連結の && 、表示する cat コマンドを入力します。"
         ],
         "candidates": {
           "operators": [
             ">",
-            ">>",
-            "|",
-            "<"
+            "&&"
           ],
-          "others": ["echo", "テスト", "&&", "cat"]
+          "others": ["echo", "テスト", "cat"]
         },
         "testCases": [
           {
@@ -64,24 +69,22 @@ export const bash3Data = {
       },
     {
       "title": "ファイルから読み込む",
-      "correctCode": "echo \"line1\" > /tmp/in.txt\\n# <でファイルから読み込む\\nwc -l < /tmp/in.txt",
-      "holeyCode": "___ \"___\" ___ /tmp/in.txt\\n# <でファイルから読み込む\\n___ -___ ___ /tmp/in.___",
+      "correctCode": "# in.txtを作成してから読み込む\\necho \"line1\" > /tmp/in.txt\\nwc -l < /tmp/in.txt",
+      "holeyCode": "# in.txtを作成してから読み込む\\n___ \"___\" ___ /tmp/in.txt\\n___ -___ ___ /tmp/in.___",
       "correctLines": [
+          "# in.txtを作成してから読み込む",
           "echo \"line1\" > /tmp/in.txt",
-          "# <でファイルから読み込む",
           "wc -l < /tmp/in.txt"
         ],
       "lineHints": [
-          "echo でファイルを作成します。",
           null,
-          "wc コマンドで読み込みます。"
+          "echo コマンド、文字列 \"line1\"、保存用のリダイレクト > を入力します。",
+          "wc コマンド、行数カウントの -l 、読み込みリダイレクト < 、拡張子 txt を入力します。"
         ],
         "candidates": {
           "operators": [
             "<",
-            ">",
-            "|",
-            "<<"
+            ">"
           ],
           "others": ["echo", "line1", "wc", "l", "txt"]
         },
@@ -94,140 +97,132 @@ export const bash3Data = {
       },
     {
       "title": "エラー出力をリダイレクト",
-      "correctCode": "# 2>でエラー出力をリダイレクト\\nls /nonexistent 2> /dev/null && echo \"ok\" || echo \"エラー hidden\"",
-      "holeyCode": "# 2>でエラー出力をリダイレクト\\n___ /nonexistent ___> /dev/null && ___ \"___\" ___ ___ \"エラー hidden\"",
+      "correctCode": "# エラーをnullに捨てて成否を判定\\nls /nonexistent 2> /dev/null && echo \"ok\" || echo \"エラー\"",
+      "holeyCode": "# エラーをnullに捨てて成否を判定\\n___ /nonexistent ___> /dev/null ___ ___ \"ok\" ___ ___ \"___\"",
       "correctLines": [
-          "# 2>でエラー出力をリダイレクト",
-          "ls /nonexistent 2> /dev/null && echo \"ok\" || echo \"エラー hidden\""
+          "# エラーをnullに捨てて成否を判定",
+          "ls /nonexistent 2> /dev/null && echo \"ok\" || echo \"エラー\""
         ],
       "lineHints": [
           null,
-          "ls コマンドの結果を 2> でリダイレクトし、&& と || で成否判定します。"
+          "ls コマンド、エラー出力リダイレクト 2 、成功時の && 、echo コマンド、失敗時の || 、echo コマンド、文字列 \"エラー\" を入力します。"
         ],
         "candidates": {
           "numbers": [
-            "2",
-            "1",
-            "0",
-            "3"
+            "2"
           ],
-          "others": ["ls", "echo", "ok", "||"]
+          "others": ["ls", "&&", "echo", "||", "エラー"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "エラー hidden\\n"
+            "expected_output": "エラー\\n"
           }
         ]
       },
     {
       "title": "テストでファイルを確認",
-      "correctCode": "# -fでファイルが存在するか確認\\nif [ -f /etc/passwd ]; then\\n    echo \"file exists\"\\nfi",
-      "holeyCode": "# -fでファイルが存在するか確認\\n___ [ -___ /etc/passwd ]; ___\\n    ___ \"___\"\\n___",
+      "correctCode": "# -fでファイルが存在するか確認\\nif [ -f /etc/passwd ]; then\\n    # 「存在します」と表示\\n    echo \"存在します\"\\nfi",
+      "holeyCode": "# -fでファイルが存在するか確認\\n___ [ -___ /etc/passwd ]; ___\\n    # 「存在します」と表示\\n    ___ \"___\"\\n___",
       "correctLines": [
           "# -fでファイルが存在するか確認",
           "if [ -f /etc/passwd ]; then",
-          "    echo \"file exists\"",
+          "    # 「存在します」と表示",
+          "    echo \"存在します\"",
           "fi"
         ],
       "lineHints": [
           null,
-          "if 文を開始し、-f でファイル存在チェックをします。",
-          "echo でメッセージを表示します。",
-          "fi で if 文を閉じます。"
+          "if キーワード、ファイルチェックの f 、then キーワードを入力します。",
+          null,
+          "echo コマンドと文字列 \"存在します\" を入力します。",
+          "if文を閉じる fi を入力します。"
         ],
         "candidates": {
           "operators": [
-            "-f",
-            "-d",
-            "-e",
-            "-r"
+            "-f"
           ],
-          "others": ["if", "then", "echo", "file exists", "fi", "f"]
+          "keywords": [
+            "if",
+            "then",
+            "fi"
+          ],
+          "others": ["echo", "存在します", "f"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "file exists\\n"
+            "expected_output": "存在します\\n"
           }
         ]
       },
     {
       "title": "xargs でコマンドに渡す",
-      "correctCode": "# xargsで引数に変換\\necho \"Hello World\" | xargs echo \"Message:\"",
-      "holeyCode": "# xargsで引数に変換\\n___ \"___\" ___ ___ ___ \"Message:\"",
+      "correctCode": "# 出力を引数に変換してxargsに渡す\\necho \"Hello\" | xargs echo \"Message:\"",
+      "holeyCode": "# 出力を引数に変換してxargsに渡す\\n___ \"___\" ___ ___ ___ \"Message:\"",
       "correctLines": [
-          "# xargsで引数に変換",
-          "echo \"Hello World\" | xargs echo \"Message:\""
+          "# 出力を引数に変換してxargsに渡す",
+          "echo \"Hello\" | xargs echo \"Message:\""
         ],
       "lineHints": [
           null,
-          "echo の出力をパイプ経由で xargs に渡します。"
+          "echo コマンド、文字列 \"Hello\"、パイプ | 、xargs コマンド、echo コマンドを入力します。"
         ],
         "candidates": {
           "commands": [
-            "xargs",
-            "exec",
-            "eval",
-            "args"
+            "xargs"
           ],
-          "others": ["echo", "Hello World", "|"]
+          "others": ["echo", "Hello", "|"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Message: Hello World\\n"
+            "expected_output": "Message: Hello\\n"
           }
         ]
       },
     {
       "title": "sed で置換",
-      "correctCode": "# sedで置換\\necho \"猫\" | sed 's/猫/犬/'",
-      "holeyCode": "# sedで置換\\n___ \"___\" ___ ___ 's/___/___/'",
+      "correctCode": "# 文字列をsedで置換\\necho \"りんご\" | sed 's/りんご/バナナ/'",
+      "holeyCode": "# 文字列をsedで置換\\n___ \"___\" ___ ___ 's/___/___/'",
       "correctLines": [
-          "# sedで置換",
-          "echo \"猫\" | sed 's/猫/犬/'"
+          "# 文字列をsedで置換",
+          "echo \"りんご\" | sed 's/りんご/バナナ/'"
         ],
       "lineHints": [
           null,
-          "echo の出力を sed コマンドに渡して置換します。"
+          "echo コマンド、文字列 \"りんご\"、パイプ | 、sed コマンド、置換前の \"りんご\"、置換後の \"バナナ\" を入力します。"
         ],
         "candidates": {
           "commands": [
-            "sed",
-            "awk",
-            "tr",
-            "grep"
+            "sed"
           ],
-          "others": ["echo", "猫", "|", "犬"]
+          "others": ["echo", "りんご", "|", "バナナ"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "犬\\n"
+            "expected_output": "バナナ\\n"
           }
         ]
       },
     {
       "title": "awk でフィールドを抽出",
-      "correctCode": "# awkでフィールドを抽出\\necho \"りんご 100 yen\" | awk '{print $2}'",
-      "holeyCode": "# awkでフィールドを抽出\\n___ \"___\" ___ ___ '{___ $___}'",
+      "correctCode": "# スペース区切りの2番目を表示\\necho \"A 100 B\" | awk '{print $2}'",
+      "holeyCode": "# スペース区切りの2番目を表示\\n___ \"___\" ___ ___ '{___ $___}'",
       "correctLines": [
-          "# awkでフィールドを抽出",
-          "echo \"りんご 100 yen\" | awk '{print $2}'"
+          "# スペース区切りの2番目を表示",
+          "echo \"A 100 B\" | awk '{print $2}'"
         ],
       "lineHints": [
           null,
-          "echo の出力を awk に渡し、2番目のフィールドを表示します。"
+          "echo コマンド、文字列 \"A 100 B\"、パイプ | 、awk コマンド、表示の print 、フィールド番号 2 を入力します。"
         ],
         "candidates": {
           "commands": [
-            "awk",
-            "sed",
-            "cut",
-            "tr"
+            "awk"
           ],
-          "others": ["echo", "りんご 100 yen", "|", "print", "2"]
+          "others": ["echo", "A 100 B", "|", "print", "2"]
         },
         "testCases": [
           {
@@ -238,62 +233,54 @@ export const bash3Data = {
       },
     {
       "title": "sort で並べ替え",
-      "correctCode": "# sortで並べ替え\\necho -e \"banana\\napple\\ncherry\" | sort",
-      "holeyCode": "# sortで並べ替え\\n___ -e \"banana\\n___\\ncherry\" ___ ___",
+      "correctCode": "# 複数行出力を並べ替える\\necho -e \"b\\na\\nc\" | sort",
+      "holeyCode": "# 複数行出力を並べ替える\\n___ -e \"b\\n___\\nc\" ___ ___",
       "correctLines": [
-          "# sortで並べ替え",
-          "echo -e \"banana",
-          "apple",
-          "cherry\" | sort"
+          "# 複数行出力を並べ替える",
+          "echo -e \"b",
+          "a",
+          "c\" | sort"
         ],
       "lineHints": [
           null,
-          "echo -e で複数行出力し、sort コマンドに渡します。",
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。"
+          "エスケープ有効の echo -e を入力します。",
+          "文字列 a を入力します。",
+          "パイプ | と並べ替えの sort コマンドを入力します。"
         ],
         "candidates": {
           "commands": [
-            "sort",
-            "uniq",
-            "head",
-            "tail"
+            "sort"
           ],
-          "others": ["echo", "apple", "|", "apple"]
+          "others": ["echo", "a", "|"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "apple\\nbanana\\ncherry\\n"
+            "expected_output": "a\\nb\\nc\\n"
           }
         ]
       },
     {
       "title": "uniq で重複を除去",
-      "correctCode": "# uniqで重複を除去\\necho -e \"a\\nb\\na\\nb\" | sort | uniq",
-      "holeyCode": "# uniqで重複を除去\\n___ -e \"a\\n___\\n___\\nb\" ___ ___ ___ ___",
+      "correctCode": "# 重複をuniqで取り除く\\necho -e \"a\\na\\nb\" | uniq",
+      "holeyCode": "# 重複をuniqで取り除く\\n___ -e \"a\\n___\\nb\" ___ ___",
       "correctLines": [
-          "# uniqで重複を除去",
+          "# 重複をuniqで取り除く",
           "echo -e \"a",
-          "b",
           "a",
-          "b\" | sort | uniq"
+          "b\" | uniq"
         ],
       "lineHints": [
           null,
-          "echo -e で出力した結果を sort し、さらに uniq コマンドに渡します。",
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。"
+          "echo -e を入力します。",
+          "文字列 a を入力します。",
+          "パイプ | と重複除去の uniq コマンドを入力します。"
         ],
         "candidates": {
           "commands": [
-            "uniq",
-            "sort",
-            "head",
-            "tail"
+            "uniq"
           ],
-          "others": ["echo", "b", "a", "|", "b", "a"]
+          "others": ["echo", "a", "|"]
         },
         "testCases": [
           {
