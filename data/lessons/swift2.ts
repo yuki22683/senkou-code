@@ -148,8 +148,8 @@ export const swift2Data = {
           "init でイニシャライザを定義します。",
           null,
           "self を指定します。",
-          "Tama を指定します。",
-          "name を指定します。",
+          "ここを正しく入力してください。",
+          "ここを正しく入力してください。",
           null,
           "ここを正しく入力してください。",
           null,
@@ -159,7 +159,7 @@ export const swift2Data = {
           "keywords": [
             "class"
           ],
-          "others": ["name", "init", "self", "Tama", "Cat", "String", "}", "cat", "String", "}"]
+          "others": ["name", "init", "self", "タマ", "Cat", "String", "}", "cat", "String", "}"]
         },
         "testCases": [
           {

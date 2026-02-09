@@ -44,7 +44,7 @@ export const php2Data = {
           "keywords": [
             "class"
           ],
-          "others": ["public", "new", "->", "echo", "<?php", "Cat", "name", "}", "Tama", "$cat", "?>", "タマ", "<?php", "}"]
+          "others": ["public", "new", "->", "echo", "<?php", "Cat", "name", "}", "$cat", "?>", "タマ", "<?php", "}"]
         },
         "testCases": [
           {

@@ -278,15 +278,15 @@ export const swift4Data = {
       },
     {
       "title": "lazy プロパティ",
-      "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n    // lazyで遅延初期化\\n    lazy var result: Int = {\\n        // 計算中と出力\\n        print(\"Computing...\")\\n        // 100を返す\\n        return 100\\n    }()\\n}\\n\\n// インスタンスを作成\\nlet calc = Calculator()\\n// resultを出力\\nprint(calc.result)",
-      "holeyCode": "// Calculatorクラスを定義\\nclass ___ {\\n    // lazyで遅延初期化\\n    lazy var result: ___ = {\\n        // 計算中と出力\\n        ___(\"Computing...\")\\n        // 100を返す\\n        return ___\\n    ___()\\n___\\n___\\n// インスタンスを作成\\nlet ___ = Calculator()\\n// resultを出力\\nprint(calc.___)",
+      "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n    // lazyで遅延初期化\\n    lazy var result: Int = {\\n        // 計算中と出力\\n        print(\"計算中...\")\\n        // 100を返す\\n        return 100\\n    }()\\n}\\n\\n// インスタンスを作成\\nlet calc = Calculator()\\n// resultを出力\\nprint(calc.result)",
+      "holeyCode": "// Calculatorクラスを定義\\nclass ___ {\\n    // lazyで遅延初期化\\n    lazy var result: ___ = {\\n        // 計算中と出力\\n        ___(\"計算中...\")\\n        // 100を返す\\n        return ___\\n    ___()\\n___\\n___\\n// インスタンスを作成\\nlet ___ = Calculator()\\n// resultを出力\\nprint(calc.___)",
       "correctLines": [
           "// Calculatorクラスを定義",
           "class Calculator {",
           "    // lazyで遅延初期化",
           "    lazy var result: Int = {",
           "        // 計算中と出力",
-          "        print(\"Computing...\")",
+          "        print(\"計算中...\")",
           "        // 100を返す",
           "        return 100",
           "    }()",
@@ -320,12 +320,12 @@ export const swift4Data = {
             "static",
             "computed"
           ],
-          "others": ["Calculator", "Computing...", "100", "result", "Int", "print", "}", "calc"]
+          "others": ["Calculator", "計算中...", "100", "result", "Int", "print", "}", "calc"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Computing...\\n100\\n"
+            "expected_output": "計算中...\\n100\\n"
           }
         ]
       },

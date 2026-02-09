@@ -327,6 +327,8 @@
   - `"even"` / `"odd"` → `"偶数"` / `"奇数"`
   - `"woof"` / `"meow"` → `"ワン！"` / `"ニャー"`
   - `"division by zero"` → `"ゼロ除算エラー"`
+  - `"Computing..."` / `"Loading..."` → `"計算中..."` / `"読み込み中..."`
+  - `"Tama"` → `"タマ"` (candidates内の人名も日本語表記)
 - **チェックコマンド**：
   ```bash
   grep -rn '"Pass"\|"Great\|"woof\|"meow\|"Big"\|"Small"\|"up"\|"down"\|"even"\|"odd"\|"Bonus' data/lessons/*.ts | grep -v 'すごい\|合格\|ボーナス\|ワン\|ニャー\|大きい\|小さい\|上\|下\|偶数\|奇数\|不合格\|even?\|"others":\|"functions":'

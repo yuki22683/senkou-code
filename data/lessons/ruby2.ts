@@ -202,7 +202,7 @@ export const ruby2Data = {
           "keywords": [
             "class"
           ],
-          "others": ["initialize", "name", "end", "greet", "@name", "new", "Cat", "Tama", "タマ", "Cat", "end", "greet", "name"]
+          "others": ["initialize", "name", "end", "greet", "@name", "new", "Cat", "タマ", "Cat", "end", "greet", "name"]
         },
         "testCases": [
           {
