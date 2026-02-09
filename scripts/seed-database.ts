@@ -170,7 +170,7 @@ async function seedDatabase() {
         language_id: languageInfo.judge0Id,
         file_extension: languageInfo.extension.replace('.', ''),
         test_input: testInput,
-        expected_output: expectedOutput,
+        expected_output: unescapeNewlines(expectedOutput),
       };
 
       if (existingExercise) {
