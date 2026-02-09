@@ -294,6 +294,8 @@
   - check-code-output-consistency.mjs → コメントを手動修正、または expected_output をコード出力に合わせて修正（ルール#56-58参照）
   - check-linehints-consistency.mjs → 配列長不一致は手動修正、hint_on_non_holey_lineは`fix-non-holey-hints.mjs`を実行
   - check-linehints-content-v2.mjs → 手動で該当行に合ったヒントに修正（ルール#59参照）
+  - correctCode/correctLinesに`___`が含まれている → 手動で正しい値に修正（ルール#74参照）
+  18. `grep -l '"correctCode".*___' data/lessons/*.ts` → correctCodeに___がないこと（ルール#74参照）
 
 ### 25. コード内の文字列リテラルは日本語、コメントも日本語
 - `correctCode`、`holeyCode`、`correctLines` 内のコードにおいて：
@@ -930,3 +932,18 @@
 ### 73. バックスラッシュのエスケープレベル
 - スクリプトでバックスラッシュを扱う際は、ファイル上の表現、JSメモリ上の表現、正規表現エンジンでの表現の3レベルを意識すること。
 - ファイル上の `\\`（2つ）はメモリ上で `\`（1つ）となり、それを正規表現でマッチさせるには JSリテラルで `\\\\`（4つ）必要になる。この計算を誤ると、意図しない置換や破損を招く。
+
+### 74. correctCode/correctLinesに___を含めない
+- `correctCode` と `correctLines` は正解のコードであり、穴埋め記号 `___` を含めてはならない。
+- **禁止パターン**:
+  - `correctCode: "case x do\\n  ___ -> \"one\""` → 正解コードに`___`が含まれている
+  - `correctLines: ["  ___ -> \"one\""]` → 正解コードに`___`が含まれている
+- **正しいパターン**:
+  - `correctCode: "case x do\\n  1 -> \"one\""` → 具体的な値が入っている
+  - `correctLines: ["  1 -> \"one\""]` → 具体的な値が入っている
+- **よく発生する言語/構文**:
+  - Elixir/Kotlin/C#: switch/case/when式の分岐パターン（`1 -> "one"`）
+  - Haskell: ガード式（`| x > 0 = "positive"`）、Either型（`Left "error"`）
+  - Elixir: アトム（`:ok`, `:error`）を使うパターンマッチ
+- **チェックコマンド**: `grep -l '"correctCode".*___' data/lessons/*.ts`
+- **理由**: correctCode/correctLinesはユーザーが入力すべき正解であり、`___`が含まれていると正解が不明確になる

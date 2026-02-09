@@ -186,13 +186,13 @@ export const haskell2Data = {
       },
     {
       "title": "ガードで条件分岐",
-      "correctCode": "-- xを入力\\nsign x\\n  -- >で大なり比較\\n  | ___ > ___     = \"positive\"\\n  -- <で小なり比較\\n  | x < 0     = \"negative\"\\n  -- otherwiseはそれ以外の場合\\n  | otherwise = \"zero\"\\n-- signを入力\\nmain = putStrLn (sign 5)",
+      "correctCode": "-- xを入力\\nsign x\\n  -- >で大なり比較\\n  | x > 0     = \"positive\"\\n  -- <で小なり比較\\n  | x < 0     = \"negative\"\\n  -- otherwiseはそれ以外の場合\\n  | otherwise = \"zero\"\\n-- signを入力\\nmain = putStrLn (sign 5)",
       "holeyCode": "-- xを入力\\nsign ___\\n  -- >で大なり比較\\n  | ___ > ___     = \"___\"\\n  -- <で小なり比較\\n  | x < 0     = \"___\"\\n  -- otherwiseはそれ以外の場合\\n  | otherwise = \"___\"\\n-- signを入力\\nmain = putStrLn (sign ___)",
       "correctLines": [
           "-- xを入力",
           "sign x",
           "  -- >で大なり比較",
-          "  | ___ > ___     = \"positive\"",
+          "  | x > 0     = \"positive\"",
           "  -- <で小なり比較",
           "  | x < 0     = \"negative\"",
           "  -- otherwiseはそれ以外の場合",
@@ -216,7 +216,7 @@ export const haskell2Data = {
           "keywords": [
             "otherwise"
           ],
-          "others": ["x", ">", "<", "sign", "positive", "negative", "zero", "5", "x", "___"]
+          "others": ["x", "0", ">", "<", "sign", "positive", "negative", "zero", "5"]
         },
         "testCases": [
           {

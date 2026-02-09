@@ -213,15 +213,15 @@ export const elixir3Data = {
       },
     {
       "title": "with式",
-      "correctCode": "# defで関数を定義\\ndef process(map) do\\n  # withでパターンマッチを連鎖\\n  with {:___, name} <- Map.fetch(map, :name),\\n       {:___, age} <- Map.fetch(map, :age) do\\n    {:___, \"#{name} is #{age}歳です\"}\\n  # elseでエラー処理\\n  else\\n    :error -> {:error, \"Missing field\"}\\n  # endでブロックを閉じる\\n  end\\n# endで関数を閉じる\\nend",
+      "correctCode": "# defで関数を定義\\ndef process(map) do\\n  # withでパターンマッチを連鎖\\n  with {:ok, name} <- Map.fetch(map, :name),\\n       {:ok, age} <- Map.fetch(map, :age) do\\n    {:ok, \"#{name} is #{age}歳です\"}\\n  # elseでエラー処理\\n  else\\n    :error -> {:error, \"Missing field\"}\\n  # endでブロックを閉じる\\n  end\\n# endで関数を閉じる\\nend",
       "holeyCode": "# defで関数を定義\\ndef process(map) ___\\n  # withでパターンマッチを連鎖\\n  with {:___, ___} <- Map.fetch(map, :name),\\n       {:___, age} <- Map.fetch(map, :age) ___\\n    {:___, \"___\"}\\n  # elseでエラー処理\\n  ___\\n    :error -> {:error, \"___\"}\\n  # endでブロックを閉じる\\n  ___\\n# endで関数を閉じる\\n___",
       "correctLines": [
           "# defで関数を定義",
           "def process(map) do",
           "  # withでパターンマッチを連鎖",
-          "  with {:___, name} <- Map.fetch(map, :name),",
-          "       {:___, age} <- Map.fetch(map, :age) do",
-          "    {:___, \"#{name} is #{age}歳です\"}",
+          "  with {:ok, name} <- Map.fetch(map, :name),",
+          "       {:ok, age} <- Map.fetch(map, :age) do",
+          "    {:ok, \"#{name} is #{age}歳です\"}",
           "  # elseでエラー処理",
           "  else",
           "    :error -> {:error, \"Missing field\"}",
@@ -252,12 +252,12 @@ export const elixir3Data = {
             "else",
             "end"
           ],
-          "others": ["do", "name", "#{name} is #{age} years old", "Missing field", "#{name} is #{age}歳です", "do", "else", "end", "___"]
+          "others": ["do", "name", "Missing field", "#{name} is #{age}歳です", "ok"]
         },
         "testCases": [
           {
             "input": "process(%{name: \"Alice\", age: 25})",
-            "expected_output": "{:___, \"Alice is 25歳です\"}"
+            "expected_output": "{:ok, \"Alice is 25歳です\"}"
           }
         ]
       },
@@ -339,11 +339,11 @@ export const elixir3Data = {
       },
     {
       "title": "Agent",
-      "correctCode": "# start_linkでAgentを開始\\n{:___, counter} = Agent.start_link(fn -> 0 end)\\n# updateでAgentの状態を更新\\nAgent.update(counter, fn state -> state + 1 end)\\n# getでAgentの状態を取得\\nvalue = Agent.get(counter, fn state -> state end)",
+      "correctCode": "# start_linkでAgentを開始\\n{:ok, counter} = Agent.start_link(fn -> 0 end)\\n# updateでAgentの状態を更新\\nAgent.update(counter, fn state -> state + 1 end)\\n# getでAgentの状態を取得\\nvalue = Agent.get(counter, fn state -> state end)",
       "holeyCode": "# start_linkでAgentを開始\\n{:___, counter} = Agent.start_link(fn -> ___ end)\\n# updateでAgentの状態を更新\\nAgent.update(counter, fn state -> state + ___ end)\\n# getでAgentの状態を取得\\nvalue = Agent.get(counter, fn state -> state ___)",
       "correctLines": [
           "# start_linkでAgentを開始",
-          "{:___, counter} = Agent.start_link(fn -> 0 end)",
+          "{:ok, counter} = Agent.start_link(fn -> 0 end)",
           "# updateでAgentの状態を更新",
           "Agent.update(counter, fn state -> state + 1 end)",
           "# getでAgentの状態を取得",
@@ -363,7 +363,7 @@ export const elixir3Data = {
             "update",
             "get"
           ],
-          "others": ["0", "1", "end", "___"]
+          "others": ["0", "1", "end", "ok"]
         },
         "testCases": [
           {

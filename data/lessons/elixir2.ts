@@ -170,14 +170,14 @@ export const elixir2Data = {
       },
     {
       "title": "case でパターンマッチ",
-      "correctCode": "# 2を入力\\nx = 2\\n# caseでパターンマッチ\\nresult = case x do\\n  ___ -> \"one\"\\n  2 -> \"two\"\\n  _ -> \"other\"\\nend\\n# resultを入力\\nIO.puts result",
+      "correctCode": "# 2を入力\\nx = 2\\n# caseでパターンマッチ\\nresult = case x do\\n  1 -> \"one\"\\n  2 -> \"two\"\\n  _ -> \"other\"\\nend\\n# resultを入力\\nIO.puts result",
       "holeyCode": "# 2を入力\\nx = ___\\n# caseでパターンマッチ\\nresult = case x ___\\n  ___ -> \"___\"\\n  2 -> \"___\"\\n  _ -> \"___\"\\n___\\n# resultを入力\\nIO.puts ___",
       "correctLines": [
           "# 2を入力",
           "x = 2",
           "# caseでパターンマッチ",
           "result = case x do",
-          "  ___ -> \"one\"",
+          "  1 -> \"one\"",
           "  2 -> \"two\"",
           "  _ -> \"other\"",
           "end",
@@ -206,7 +206,7 @@ export const elixir2Data = {
           "variables": [
             "result"
           ],
-          "others": ["do", "one", "two", "other", "end", "2", "do", "end", "___"]
+          "others": ["do", "one", "two", "other", "end", "1"]
         },
         "testCases": [
           {

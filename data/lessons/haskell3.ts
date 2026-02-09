@@ -224,7 +224,7 @@ export const haskell3Data = {
       },
     {
       "title": "Either型",
-      "correctCode": "-- Either String Intを入力\\nvalidateAge :: Int -> Either String Int\\n-- ageを入力\\nvalidateAge age\\n  -- 失敗・エラーを表すEitherのコンストラクタ\\n  | ___ < ___   = ___ \"Age cannot be negative\"\\n  -- Rightを入力\\n  | otherwise = Right age",
+      "correctCode": "-- Either String Intを入力\\nvalidateAge :: Int -> Either String Int\\n-- ageを入力\\nvalidateAge age\\n  -- 失敗・エラーを表すEitherのコンストラクタ\\n  | age < 0   = Left \"Age cannot be negative\"\\n  -- Rightを入力\\n  | otherwise = Right age",
       "holeyCode": "-- Either String Intを入力\\nvalidateAge :: ___ -> Either String Int\\n-- ageを入力\\nvalidateAge ___\\n  -- 失敗・エラーを表すEitherのコンストラクタ\\n  | ___ < ___   = ___ \"___\"\\n  -- Rightを入力\\n  | otherwise = Right ___",
       "correctLines": [
           "-- Either String Intを入力",
@@ -232,7 +232,7 @@ export const haskell3Data = {
           "-- ageを入力",
           "validateAge age",
           "  -- 失敗・エラーを表すEitherのコンストラクタ",
-          "  | ___ < ___   = ___ \"Age cannot be negative\"",
+          "  | age < 0   = Left \"Age cannot be negative\"",
           "  -- Rightを入力",
           "  | otherwise = Right age"
         ],
@@ -253,7 +253,7 @@ export const haskell3Data = {
             "Fail",
             "None"
           ],
-          "others": ["Either String Int", "age", "Right", "Int", "Age cannot be negative", "age", "___"]
+          "others": ["Either String Int", "age", "0", "Left", "Right", "Int", "Age cannot be negative"]
         },
         "testCases": [
           {

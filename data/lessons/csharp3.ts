@@ -305,7 +305,7 @@ export const csharp3Data = {
       },
     {
       "title": "switch式（パターンマッチ）",
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // nを2で初期化\\n        int n = 2;\\n        // switchでnを分岐しresultに代入\\n        var result = n switch {\\n            // 1の場合\\n            ___ => \"one\",\\n            // 2の場合\\n            2 => \"two\",\\n            // その他の場合\\n            _ => \"other\"\\n        };\\n        // resultをWriteLineで出力\\n        Console.WriteLine(result);\\n    }\\n}",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // nを2で初期化\\n        int n = 2;\\n        // switchでnを分岐しresultに代入\\n        var result = n switch {\\n            // 1の場合\\n            1 => \"one\",\\n            // 2の場合\\n            2 => \"two\",\\n            // その他の場合\\n            _ => \"other\"\\n        };\\n        // resultをWriteLineで出力\\n        Console.WriteLine(result);\\n    }\\n}",
       "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // nを2で初期化\\n        int n = ___;\\n        // switchでnを分岐しresultに代入\\n        var ___ = n switch {\\n            // 1の場合\\n            ___ => \"___\",\\n            // 2の場合\\n            2 => \"___\",\\n            // その他の場合\\n            _ => \"___\"\\n        ___\\n        // resultをWriteLineで出力\\n        Console.WriteLine(___);\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
@@ -320,7 +320,7 @@ export const csharp3Data = {
           "        // switchでnを分岐しresultに代入",
           "        var result = n switch {",
           "            // 1の場合",
-          "            ___ => \"one\",",
+          "            1 => \"one\",",
           "            // 2の場合",
           "            2 => \"two\",",
           "            // その他の場合",
@@ -361,7 +361,7 @@ export const csharp3Data = {
             "match",
             "case"
           ],
-          "others": ["System", "Program", "Main", "2", "one", "two", "other", "WriteLine", "result", "};", "}", "", "};", "}", "___"]
+          "others": ["System", "Program", "Main", "2", "1", "one", "two", "other", "WriteLine", "result", "};", "}"]
         },
         "testCases": [
           {

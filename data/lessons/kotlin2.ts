@@ -82,7 +82,7 @@ export const kotlin2Data = {
         ],
       "lineHints": [
           null,
-          "null を入力しましょう。",
+          "値が存在しないことを表すnullを設定します。",
           null,
           "?: でデフォルト値を指定します。"
         ],
@@ -115,9 +115,9 @@ export const kotlin2Data = {
           null,
           "data でデータクラスにします。",
           null,
-          "Point と入力しましょう。",
+          "座標を表すデータクラス名です。",
           null,
-          "println と入力しましょう。"
+          "値を画面に出力する関数です。"
         ],
         "candidates": {
           "keywords": [
@@ -146,7 +146,7 @@ export const kotlin2Data = {
           null,
           "-> で引数と処理を区切ります。",
           null,
-          "double と入力しましょう。"
+          "値を2倍にする関数名です。"
         ],
         "candidates": {
           "operators": [
@@ -175,11 +175,11 @@ export const kotlin2Data = {
         ],
       "lineHints": [
           null,
-          "listOf と入力しましょう。",
+          "リストを作成する関数です。",
           null,
           "map で各要素を2乗します。",
           null,
-          "println と入力しましょう。"
+          "値を画面に出力する関数です。"
         ],
         "candidates": {
           "functions": [
@@ -208,11 +208,11 @@ export const kotlin2Data = {
         ],
       "lineHints": [
           null,
-          "listOf と入力しましょう。",
+          "リストを作成する関数です。",
           null,
           "filter で 3 以上を抽出します。",
           null,
-          "println と入力しましょう。"
+          "値を画面に出力する関数です。"
         ],
         "candidates": {
           "functions": [
@@ -229,7 +229,7 @@ export const kotlin2Data = {
       },
     {
       "title": "when 式を使おう",
-      "correctCode": "// x に 2 を代入する\\nval x = 2\\n// when で分岐する\\nval result = when (x) {\\n    // 1 の場合\\n    ___ -> \"one\"\\n    // 2 の場合\\n    2 -> \"two\"\\n    // その他の場合\\n    else -> \"other\"\\n}\\n// result を出力する\\nprintln(result)",
+      "correctCode": "// x に 2 を代入する\\nval x = 2\\n// when で分岐する\\nval result = when (x) {\\n    // 1 の場合\\n    1 -> \"one\"\\n    // 2 の場合\\n    2 -> \"two\"\\n    // その他の場合\\n    else -> \"other\"\\n}\\n// result を出力する\\nprintln(result)",
       "holeyCode": "// x に 2 を代入する\\nval x = ___\\n// when で分岐する\\nval result = when (___) {\\n    // 1 の場合\\n    ___ -> \"___\"\\n    // 2 の場合\\n    2 -> \"___\"\\n    // その他の場合\\n    else -> \"___\"\\n___\\n// result を出力する\\nprintln(___)",
       "correctLines": [
           "// x に 2 を代入する",
@@ -237,7 +237,7 @@ export const kotlin2Data = {
           "// when で分岐する",
           "val result = when (x) {",
           "    // 1 の場合",
-          "    ___ -> \"one\"",
+          "    1 -> \"one\"",
           "    // 2 の場合",
           "    2 -> \"two\"",
           "    // その他の場合",
@@ -248,24 +248,24 @@ export const kotlin2Data = {
         ],
       "lineHints": [
           null,
-          "2 と入力しましょう。",
+          "数値 2 を設定します。",
           null,
           "when で分岐します。",
           null,
-          "one と入力しましょう。",
+          "最初の分岐パターンです。",
           null,
-          "two と入力しましょう。",
+          "2番目の分岐パターンです。",
           null,
-          "other と入力しましょう。",
+          "デフォルトの分岐パターンです。",
           "ここを正しく入力してください。",
           null,
-          "println と入力しましょう。"
+          "値を画面に出力する関数です。"
         ],
         "candidates": {
           "keywords": [
             "when"
           ],
-          "others": ["2", "one", "two", "other", "println", "x", "}", "result", "2", "}", "___"]
+          "others": ["2", "1", "one", "two", "other", "println", "x", "}", "result"]
         },
         "testCases": [
           {
@@ -288,7 +288,7 @@ export const kotlin2Data = {
           null,
           "this でレシーバを参照します。",
           null,
-          "double と入力しましょう。"
+          "値を2倍にする関数名です。"
         ],
         "candidates": {
           "keywords": [
@@ -315,7 +315,7 @@ export const kotlin2Data = {
         ],
       "lineHints": [
           null,
-          "42 と入力しましょう。",
+          "数値 42 を設定します。",
           null,
           "let で処理を実行します。"
         ],
