@@ -250,7 +250,8 @@
   2. `node scripts/check-comment-consistency-v3.mjs` → 不整合なし
   3. `node scripts/check-vague-comments.mjs` → 曖昧なコメントなし
   4. `node scripts/check-tutorial-exercise-similarity.mjs` → 問題なし
-  5. 文字列リテラルが日本語になっているか目視確認（例外: Hello World, 言語名, 技術用語）
+  5. 英語文字列チェック → 0件（ルール#25参照）
+     - コマンド: `grep -rn '"Pass"\|"Great\|"woof\|"meow\|"Big"\|"Small"\|"up"\|"down"\|"even"\|"odd"\|"Bonus' data/lessons/*.ts | grep -v 'すごい\|合格\|ボーナス\|ワン\|ニャー\|大きい\|小さい\|上\|下\|偶数\|奇数\|不合格\|even?\|"others":\|"functions":'`
   6. `node scripts/check-candidates-final.mjs` → 0件（ルール#33参照）
   7. `npm run seed:db` → 成功
   8. **【手動確認】** tutorialSlidesで新しい専門用語を使う際、説明前に使っていないか確認（ルール#27参照）
@@ -317,6 +318,21 @@
   - `print('Pass!')` → 文字列が英語（`print('合格！')` にする）
   - `console.log('Adult')` → 文字列が英語（`console.log('大人')` にする）
   - `// nameに'Taro'を設定` → コメント内の参照が英語（`// nameに'太郎'を設定` にする）
+- **よく見落とされる英語文字列（必ず日本語化）**：
+  - `"Great!"` → `"すごい！"`
+  - `"Pass"` / `"Fail"` → `"合格"` / `"不合格"`
+  - `"Bonus Pass"` → `"ボーナス合格！"`
+  - `"Big"` / `"Small"` → `"大きい"` / `"小さい"`
+  - `"up"` / `"down"` → `"上"` / `"下"`
+  - `"even"` / `"odd"` → `"偶数"` / `"奇数"`
+  - `"woof"` / `"meow"` → `"ワン！"` / `"ニャー"`
+  - `"division by zero"` → `"ゼロ除算エラー"`
+- **チェックコマンド**：
+  ```bash
+  grep -rn '"Pass"\|"Great\|"woof\|"meow\|"Big"\|"Small"\|"up"\|"down"\|"even"\|"odd"\|"Bonus' data/lessons/*.ts | grep -v 'すごい\|合格\|ボーナス\|ワン\|ニャー\|大きい\|小さい\|上\|下\|偶数\|奇数\|不合格\|even?\|"others":\|"functions":'
+  ```
+  - 出力が0件であることを確認する
+  - **許容**: candidates内のメソッド名・型名（meow, Fail等）は識別子なので英語のまま
 - **正しい**：
   - `print('合格！')` → 文字列が日本語
   - `console.log('大人')` → 文字列が日本語

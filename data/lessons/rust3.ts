@@ -224,12 +224,12 @@ export const rust3Data = {
       },
     {
       "title": "? 演算子でエラー伝播",
-      "correctCode": "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {\\n    if b == 0 {\\n        Err(\"division by zero\")\\n    } else {\\n        Ok(a / b)\\n    }\\n}\\n\\nfn calc() -> Result<i32, &'static str> {\\n    // ? でエラーを伝播\\n    let x = divide(10, 2)?;\\n    Ok(x * 2)\\n}\\n\\nfn main() {\\n    println!(\"{:?}\", calc());\\n}",
-      "holeyCode": "fn ___ (a: i32, b: i32) -> Result<i32, &'static str> {\\n    if b ___ 0 {\\n        ___(\"division by zero\")\\n    } ___ {\\n        ___(a / b)\\n    ___\\n___\\n___\\nfn ___ () -> Result<i32, &'static str> {\\n    // ? でエラーを伝播\\n    let ___ = divide(10, 2)?;\\n    ___(x * 2)\\n___\\n___\\nfn ___ () {\\n    ___!(\"{:?}\", calc());\\n___",
+      "correctCode": "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {\\n    if b == 0 {\\n        Err(\"ゼロ除算エラー\")\\n    } else {\\n        Ok(a / b)\\n    }\\n}\\n\\nfn calc() -> Result<i32, &'static str> {\\n    // ? でエラーを伝播\\n    let x = divide(10, 2)?;\\n    Ok(x * 2)\\n}\\n\\nfn main() {\\n    println!(\"{:?}\", calc());\\n}",
+      "holeyCode": "fn ___ (a: i32, b: i32) -> Result<i32, &'static str> {\\n    if b ___ 0 {\\n        ___(\"ゼロ除算エラー\")\\n    } ___ {\\n        ___(a / b)\\n    ___\\n___\\n___\\nfn ___ () -> Result<i32, &'static str> {\\n    // ? でエラーを伝播\\n    let ___ = divide(10, 2)?;\\n    ___(x * 2)\\n___\\n___\\nfn ___ () {\\n    ___!(\"{:?}\", calc());\\n___",
       "correctLines": [
           "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {",
           "    if b == 0 {",
-          "        Err(\"division by zero\")",
+          "        Err(\"ゼロ除算エラー\")",
           "    } else {",
           "        Ok(a / b)",
           "    }",

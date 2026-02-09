@@ -170,8 +170,8 @@ export const swift2Data = {
       },
     {
       "title": "プロトコルを使おう",
-      "correctCode": "// protocolでプロトコルを定義\\nprotocol Speaker {\\n    // speakメソッドを宣言\\n    func speak()\\n}\\n// Speakerに準拠\\nstruct Dog: Speaker {\\n    // speakメソッドを実装\\n    func speak() {\\n        // woofと出力\\n        print(\"woof\")\\n    }\\n}\\n// インスタンスを作成\\nlet d = Dog()\\n// speakを呼び出し\\nd.speak()",
-      "holeyCode": "// protocolでプロトコルを定義\\nprotocol ___ {\\n    // speakメソッドを宣言\\n    func ___ ()\\n___\\n// Speakerに準拠\\nstruct Dog: ___ {\\n    // speakメソッドを実装\\n    func ___ () {\\n        // woofと出力\\n        ___(\"woof\")\\n    ___\\n___\\n// インスタンスを作成\\nlet ___ = Dog()\\n// speakを呼び出し\\nd.___()",
+      "correctCode": "// protocolでプロトコルを定義\\nprotocol Speaker {\\n    // speakメソッドを宣言\\n    func speak()\\n}\\n// Speakerに準拠\\nstruct Dog: Speaker {\\n    // speakメソッドを実装\\n    func speak() {\\n        // ワン！と出力\\n        print(\"ワン！\")\\n    }\\n}\\n// インスタンスを作成\\nlet d = Dog()\\n// speakを呼び出し\\nd.speak()",
+      "holeyCode": "// protocolでプロトコルを定義\\nprotocol ___ {\\n    // speakメソッドを宣言\\n    func ___ ()\\n___\\n// Speakerに準拠\\nstruct Dog: ___ {\\n    // speakメソッドを実装\\n    func ___ () {\\n        // ワン！と出力\\n        ___(\"ワン！\")\\n    ___\\n___\\n// インスタンスを作成\\nlet ___ = Dog()\\n// speakを呼び出し\\nd.___()",
       "correctLines": [
           "// protocolでプロトコルを定義",
           "protocol Speaker {",
@@ -182,8 +182,8 @@ export const swift2Data = {
           "struct Dog: Speaker {",
           "    // speakメソッドを実装",
           "    func speak() {",
-          "        // woofと出力",
-          "        print(\"woof\")",
+          "        // ワン！と出力",
+          "        print(\"ワン！\")",
           "    }",
           "}",
           "// インスタンスを作成",
@@ -200,7 +200,7 @@ export const swift2Data = {
           null,
           "関数（speak）を定義します。",
           null,
-          "woof を指定します。",
+          "ワン！ を指定します。",
           null,
           "Dog を指定します。",
           "speak を指定します。",
@@ -214,12 +214,12 @@ export const swift2Data = {
           "keywords": [
             "protocol"
           ],
-          "others": ["speak", "Speaker", "woof", "Dog", "speak()", "}", "print", "d", "speak()", "}"]
+          "others": ["speak", "Speaker", "ワン！", "Dog", "speak()", "}", "print", "d", "speak()", "}"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "woof\\n"
+            "expected_output": "ワン！\\n"
           }
         ]
       },

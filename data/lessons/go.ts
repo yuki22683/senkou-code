@@ -307,9 +307,9 @@ export const goData = {
             ">"
           ],
           "strings": [
-            "Great"
+            "すごい"
           ],
-          "others": ["100", "Great\")", "main", "fmt", "main()", "score", "Println", "}", "mt\"", "import", "main", "}"]
+          "others": ["100", "すごい\")", "main", "fmt", "main()", "score", "Println", "}", "mt\"", "import", "main", "}"]
         },
         "testCases": [
           {
@@ -360,7 +360,7 @@ export const goData = {
           "keywords": [
             "else"
           ],
-          "others": ["5", ">", "Big", "Small", "main", "fmt", "main()", "x", "Println", "}", "{", "mt\"", "main", "import", "}"]
+          "others": ["5", ">", "大きい", "小さい", "main", "fmt", "main()", "x", "Println", "}", "{", "mt\"", "main", "import", "}"]
         },
         "testCases": [
           {
@@ -371,8 +371,8 @@ export const goData = {
       },
     {
       "title": "論理演算子（&&、||）",
-      "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    score := 80\\n    bonus := 10\\n    // && で両方の条件をチェック\\n    if score >= 70 && bonus > 0 {\\n        fmt.Println(\"Bonus 合格\")\\n    }\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    ___ := 80\\n    ___ := 10\\n    // && で両方の条件をチェック\\n    if score ___ 70 && bonus > 0 {\\n        fmt.___(\"Bonus 合格\")\\n    ___\\n___",
+      "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    score := 80\\n    bonus := 10\\n    // && で両方の条件をチェック\\n    if score >= 70 && bonus > 0 {\\n        fmt.Println(\"ボーナス合格！\")\\n    }\\n}",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    ___ := 80\\n    ___ := 10\\n    // && で両方の条件をチェック\\n    if score ___ 70 && bonus > 0 {\\n        fmt.___(\"ボーナス合格！\")\\n    ___\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -381,7 +381,7 @@ export const goData = {
           "    bonus := 10",
           "    // && で両方の条件をチェック",
           "    if score >= 70 && bonus > 0 {",
-          "        fmt.Println(\"Bonus 合格\")",
+          "        fmt.Println(\"ボーナス合格！\")",
           "    }",
           "}"
         ],
@@ -409,7 +409,7 @@ export const goData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bonus 合格\\n"
+            "expected_output": "ボーナス合格！\\n"
           }
         ]
       },

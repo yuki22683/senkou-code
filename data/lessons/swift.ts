@@ -141,14 +141,14 @@ export const swiftData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
-      "correctCode": "// score に 100 を入れる\\nlet score = 100\\n// > で比較する\\nif score > 80 {\\n    print(\"Great!\")\\n}",
-      "holeyCode": "// score に 100 を入れる\\nlet ___ = 100\\n// > で比較する\\nif score ___ 80 {\\n    ___(\"Great!\")\\n___",
+      "correctCode": "// score に 100 を入れる\\nlet score = 100\\n// > で比較する\\nif score > 80 {\\n    print(\"すごい！\")\\n}",
+      "holeyCode": "// score に 100 を入れる\\nlet ___ = 100\\n// > で比較する\\nif score ___ 80 {\\n    ___(\"すごい！\")\\n___",
       "correctLines": [
           "// score に 100 を入れる",
           "let score = 100",
           "// > で比較する",
           "if score > 80 {",
-          "    print(\"Great!\")",
+          "    print(\"すごい！\")",
           "}"
         ],
       "lineHints": [
@@ -174,20 +174,20 @@ export const swiftData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Great!\\n"
+            "expected_output": "すごい！\\n"
           }
         ]
       },
     {
       "title": "論理演算子（&&、||）",
-      "correctCode": "let score = 80\\nlet bonus = 10\\n// && で両方の条件をチェック\\nif score >= 70 && bonus > 0 {\\n    print(\"Bonus Pass\")\\n}",
-      "holeyCode": "let ___ = 80\\nlet ___ = 10\\n// && で両方の条件をチェック\\nif score ___ 70 && bonus > 0 {\\n    ___(\"Bonus Pass\")\\n___",
+      "correctCode": "let score = 80\\nlet bonus = 10\\n// && で両方の条件をチェック\\nif score >= 70 && bonus > 0 {\\n    print(\"ボーナス合格！\")\\n}",
+      "holeyCode": "let ___ = 80\\nlet ___ = 10\\n// && で両方の条件をチェック\\nif score ___ 70 && bonus > 0 {\\n    ___(\"ボーナス合格！\")\\n___",
       "correctLines": [
           "let score = 80",
           "let bonus = 10",
           "// && で両方の条件をチェック",
           "if score >= 70 && bonus > 0 {",
-          "    print(\"Bonus Pass\")",
+          "    print(\"ボーナス合格！\")",
           "}"
         ],
       "lineHints": [
@@ -210,7 +210,7 @@ export const swiftData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bonus Pass\\n"
+            "expected_output": "ボーナス合格！\\n"
           }
         ]
       },

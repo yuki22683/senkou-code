@@ -203,8 +203,8 @@ export const rust2Data = {
       },
     {
       "title": "enum で状態を表す",
-      "correctCode": "// Direction列挙型を定義\\nenum Direction {\\n    Up,\\n    Down,\\n}\\nfn main() {\\n    let d = Direction::Up;\\n    match d {\\n        Direction::Up => println!(\"up\"),\\n        Direction::Down => println!(\"down\"),\\n    }\\n}",
-      "holeyCode": "// Direction列挙型を定義\\nenum ___ {\\n    ___,\\n    ___,\\n___\\nfn ___ () {\\n    let ___ = Direction::Up;\\n    match ___ {\\n        Direction::Up => ___!(\"up\"),\\n        Direction::Down => ___!(\"down\"),\\n    ___\\n___",
+      "correctCode": "// Direction列挙型を定義\\nenum Direction {\\n    Up,\\n    Down,\\n}\\nfn main() {\\n    let d = Direction::Up;\\n    match d {\\n        Direction::Up => println!(\"上\"),\\n        Direction::Down => println!(\"下\"),\\n    }\\n}",
+      "holeyCode": "// Direction列挙型を定義\\nenum ___ {\\n    ___,\\n    ___,\\n___\\nfn ___ () {\\n    let ___ = Direction::Up;\\n    match ___ {\\n        Direction::Up => ___!(\"上\"),\\n        Direction::Down => ___!(\"下\"),\\n    ___\\n___",
       "correctLines": [
           "// Direction列挙型を定義",
           "enum Direction {",
@@ -214,8 +214,8 @@ export const rust2Data = {
           "fn main() {",
           "    let d = Direction::Up;",
           "    match d {",
-          "        Direction::Up => println!(\"up\"),",
-          "        Direction::Down => println!(\"down\"),",
+          "        Direction::Up => println!(\"上\"),",
+          "        Direction::Down => println!(\"下\"),",
           "    }",
           "}"
         ],
@@ -242,7 +242,7 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "up\\n"
+            "expected_output": "上\\n"
           }
         ]
       },
@@ -332,8 +332,8 @@ export const rust2Data = {
       },
     {
       "title": "トレイトを定義しよう",
-      "correctCode": "// Speakトレイトを定義\\ntrait Speak {\\n    fn speak(&self);\\n}\\nstruct Dog;\\nimpl Speak for Dog {\\n    fn speak(&self) {\\n        println!(\"woof\");\\n    }\\n}\\nfn main() {\\n    let d = Dog;\\n    d.speak();\\n}",
-      "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    fn ___ (&self);\\n___\\nstruct ___;\\nimpl ___ for ___ {\\n    fn ___ (&self) {\\n        ___!(\"woof\");\\n    ___\\n___\\nfn ___ () {\\n    let ___ = Dog;\\n    d.___();\\n___",
+      "correctCode": "// Speakトレイトを定義\\ntrait Speak {\\n    fn speak(&self);\\n}\\nstruct Dog;\\nimpl Speak for Dog {\\n    fn speak(&self) {\\n        println!(\"ワン！\");\\n    }\\n}\\nfn main() {\\n    let d = Dog;\\n    d.speak();\\n}",
+      "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    fn ___ (&self);\\n___\\nstruct ___;\\nimpl ___ for ___ {\\n    fn ___ (&self) {\\n        ___!(\"ワン！\");\\n    ___\\n___\\nfn ___ () {\\n    let ___ = Dog;\\n    d.___();\\n___",
       "correctLines": [
           "// Speakトレイトを定義",
           "trait Speak {",
@@ -342,7 +342,7 @@ export const rust2Data = {
           "struct Dog;",
           "impl Speak for Dog {",
           "    fn speak(&self) {",
-          "        println!(\"woof\");",
+          "        println!(\"ワン！\");",
           "    }",
           "}",
           "fn main() {",
@@ -375,7 +375,7 @@ export const rust2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "woof\\n"
+            "expected_output": "ワン！\\n"
           }
         ]
       },

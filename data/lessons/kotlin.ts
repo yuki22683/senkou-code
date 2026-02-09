@@ -141,14 +141,14 @@ export const kotlinData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
-      "correctCode": "// score に 100 を入れる\\nval score = 100\\n// > で比較する\\nif (score > 80) {\\n    println(\"Great!\")\\n}",
-      "holeyCode": "// score に 100 を入れる\\nval score = ___\\n// > で比較する\\nif (score ___ 80) {\\n    ___(\"Great!\")\\n___",
+      "correctCode": "// score に 100 を入れる\\nval score = 100\\n// > で比較する\\nif (score > 80) {\\n    println(\"すごい！\")\\n}",
+      "holeyCode": "// score に 100 を入れる\\nval score = ___\\n// > で比較する\\nif (score ___ 80) {\\n    ___(\"すごい！\")\\n___",
       "correctLines": [
           "// score に 100 を入れる",
           "val score = 100",
           "// > で比較する",
           "if (score > 80) {",
-          "    println(\"Great!\")",
+          "    println(\"すごい！\")",
           "}"
         ],
       "lineHints": [
@@ -174,20 +174,20 @@ export const kotlinData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Great!\\n"
+            "expected_output": "すごい！\\n"
           }
         ]
       },
     {
       "title": "論理演算子（&&、||）",
-      "correctCode": "val score = 80\\nval bonus = 10\\n// && で両方の条件をチェック\\nif (score >= 70 && bonus > 0) {\\n    println(\"Bonus Pass\")\\n}",
-      "holeyCode": "val score = ___\\nval bonus = ___\\n// && で両方の条件をチェック\\nif (score >= ___ && bonus > 0) {\\n    ___(\"Bonus Pass\")\\n___",
+      "correctCode": "val score = 80\\nval bonus = 10\\n// && で両方の条件をチェック\\nif (score >= 70 && bonus > 0) {\\n    println(\"ボーナス合格！\")\\n}",
+      "holeyCode": "val score = ___\\nval bonus = ___\\n// && で両方の条件をチェック\\nif (score >= ___ && bonus > 0) {\\n    ___(\"ボーナス合格！\")\\n___",
       "correctLines": [
           "val score = 80",
           "val bonus = 10",
           "// && で両方の条件をチェック",
           "if (score >= 70 && bonus > 0) {",
-          "    println(\"Bonus Pass\")",
+          "    println(\"ボーナス合格！\")",
           "}"
         ],
       "lineHints": [
@@ -210,7 +210,7 @@ export const kotlinData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bonus Pass\\n"
+            "expected_output": "ボーナス合格！\\n"
           }
         ]
       },

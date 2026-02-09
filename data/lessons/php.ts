@@ -340,8 +340,8 @@ export const phpData = {
       },
     {
       "title": "論理演算子（&&、||）",
-      "correctCode": "<?php\\n  // scoreに85を入れる\\n  $score = 85;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($score >= 80 && $score <= 100) {\\n    // 結果を出力\\n    echo \"Pass\";\\n  }\\n?>",
-      "holeyCode": "___\\n  // scoreに85を入れる\\n  $___ = ___;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($score >= ___ && $score <= 100) {\\n    // 結果を出力\\n    ___ \"Pass\";\\n  ___\\n___",
+      "correctCode": "<?php\\n  // scoreに85を入れる\\n  $score = 85;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($score >= 80 && $score <= 100) {\\n    // 結果を出力\\n    echo \"合格\";\\n  }\\n?>",
+      "holeyCode": "___\\n  // scoreに85を入れる\\n  $___ = ___;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($score >= ___ && $score <= 100) {\\n    // 結果を出力\\n    ___ \"合格\";\\n  ___\\n___",
       "correctLines": [
           "<?php",
           "  // scoreに85を入れる",
@@ -349,7 +349,7 @@ export const phpData = {
           "  // 80以上 かつ 100以下 ならメッセージを出す",
           "  if ($score >= 80 && $score <= 100) {",
           "    // 結果を出力",
-          "    echo \"Pass\";",
+          "    echo \"合格\";",
           "  }",
           "?>"
         ],
@@ -373,14 +373,14 @@ export const phpData = {
             "85"
           ],
           "strings": [
-            "Pass"
+            "合格"
           ],
           "others": ["<?php", "score", "80", "echo", "}", "?>", "<?php", "}"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Pass"
+            "expected_output": "合格"
           }
         ]
       },

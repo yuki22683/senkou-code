@@ -266,15 +266,15 @@ export const rust4Data = {
       },
     {
       "title": "match ガード",
-      "correctCode": "fn main() {\\n    let num = 7;\\n    match num {\\n        // if でマッチガードを追加\\n        n if n % 2 == 0 => println!(\"even\"),\\n        _ => println!(\"odd\"),\\n    }\\n}",
-      "holeyCode": "fn ___ () {\\n    let ___ = 7;\\n    match ___ {\\n        // if でマッチガードを追加\\n        n if n % 2 == 0 => ___!(\"even\"),\\n        _ => ___!(\"odd\"),\\n    ___\\n___",
+      "correctCode": "fn main() {\\n    let num = 7;\\n    match num {\\n        // if でマッチガードを追加\\n        n if n % 2 == 0 => println!(\"偶数\"),\\n        _ => println!(\"奇数\"),\\n    }\\n}",
+      "holeyCode": "fn ___ () {\\n    let ___ = 7;\\n    match ___ {\\n        // if でマッチガードを追加\\n        n if n % 2 == 0 => ___!(\"偶数\"),\\n        _ => ___!(\"奇数\"),\\n    ___\\n___",
       "correctLines": [
           "fn main() {",
           "    let num = 7;",
           "    match num {",
           "        // if でマッチガードを追加",
-          "        n if n % 2 == 0 => println!(\"even\"),",
-          "        _ => println!(\"odd\"),",
+          "        n if n % 2 == 0 => println!(\"偶数\"),",
+          "        _ => println!(\"奇数\"),",
           "    }",
           "}"
         ],
@@ -299,7 +299,7 @@ export const rust4Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "odd\\n"
+            "expected_output": "奇数\\n"
           }
         ]
       },

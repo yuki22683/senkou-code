@@ -265,8 +265,8 @@ export const go2Data = {
       },
     {
       "title": "インターフェースを使おう",
-      "correctCode": "package main\\nimport \"fmt\"\\n// Speakerインターフェースを定義\\ntype Speaker interface {\\n    Speak()\\n}\\ntype Dog struct{}\\nfunc (d Dog) Speak() {\\n    fmt.Println(\"woof\")\\n}\\nfunc main() {\\n    // インターフェース型の変数に代入\\n    var s Speaker = Dog{}\\n    // インターフェースのメソッドを呼び出す\\n    s.Speak()\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\n// Speakerインターフェースを定義\\ntype Speaker ___ {\\n    ___()\\n___\\ntype Dog ___{}\\nfunc (d Dog) ___() {\\n    fmt.___(\"woof\")\\n___\\nfunc ___ () {\\n    // インターフェース型の変数に代入\\n    var s Speaker = ___{}\\n    // インターフェースのメソッドを呼び出す\\n    s.___()\\n___",
+      "correctCode": "package main\\nimport \"fmt\"\\n// Speakerインターフェースを定義\\ntype Speaker interface {\\n    Speak()\\n}\\ntype Dog struct{}\\nfunc (d Dog) Speak() {\\n    fmt.Println(\"ワン！\")\\n}\\nfunc main() {\\n    // インターフェース型の変数に代入\\n    var s Speaker = Dog{}\\n    // インターフェースのメソッドを呼び出す\\n    s.Speak()\\n}",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\n// Speakerインターフェースを定義\\ntype Speaker ___ {\\n    ___()\\n___\\ntype Dog ___{}\\nfunc (d Dog) ___() {\\n    fmt.___(\"ワン！\")\\n___\\nfunc ___ () {\\n    // インターフェース型の変数に代入\\n    var s Speaker = ___{}\\n    // インターフェースのメソッドを呼び出す\\n    s.___()\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -276,7 +276,7 @@ export const go2Data = {
           "}",
           "type Dog struct{}",
           "func (d Dog) Speak() {",
-          "    fmt.Println(\"woof\")",
+          "    fmt.Println(\"ワン！\")",
           "}",
           "func main() {",
           "    // インターフェース型の変数に代入",
@@ -312,7 +312,7 @@ export const go2Data = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "woof\\n"
+            "expected_output": "ワン！\\n"
           }
         ]
       },

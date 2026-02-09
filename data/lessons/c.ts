@@ -338,8 +338,8 @@ export const cData = {
     },
     {
       "title": "「もし〜なら」で分ける if文",
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // scoreに85を代入する\\n    int score = 85;\\n    // scoreが80以上ならPassと表示する\\n    if (score >= 80) {\\n        printf(\"Pass\\n\");\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // scoreに85を代入する\\n    int score = ___;\\n    // scoreが80以上ならPassと表示する\\n    if (score ___ 80) {\\n        ___(\"Pass\\n___\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // scoreに85を代入する\\n    int score = 85;\\n    // scoreが80以上なら合格と表示する\\n    if (score >= 80) {\\n        printf(\"合格\\n\");\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // scoreに85を代入する\\n    int score = ___;\\n    // scoreが80以上なら合格と表示する\\n    if (score ___ 80) {\\n        ___(\"合格\\n___\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
           "// 標準入出力ライブラリを読み込む",
           "#include <stdio.h>",
@@ -347,9 +347,9 @@ export const cData = {
           "int main() {",
           "    // scoreに85を代入する",
           "    int score = 85;",
-          "    // scoreが80以上ならPassと表示する",
+          "    // scoreが80以上なら合格と表示する",
           "    if (score >= 80) {",
-          "        printf(\"Pass",
+          "        printf(\"合格",
           "\");",
           "    }",
           "    // 正常終了を示す0を返す",
@@ -383,15 +383,15 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Pass\\n"
+          "expected_output": "合格\\n"
         }
       ],
       "initialDisplayMode": "holey"
     },
     {
       "title": "ちがう場合は？ if-else文",
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // xに10を代入する\\n    int x = 10;\\n    // xが5より大きいか判定する\\n    if (x > 5) {\\n        printf(\"Big\\n\");\\n    } else {\\n        printf(\"Small\\n\");\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n___\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // xに10を代入する\\n    int x = ___;\\n    // xが5より大きいか判定する\\n    if (x ___ 5) {\\n        ___(\"Big\\n___\\n    } ___ {\\n        ___(\"Small\\n___\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // xに10を代入する\\n    int x = 10;\\n    // xが5より大きいか判定する\\n    if (x > 5) {\\n        printf(\"大きい\\n\");\\n    } else {\\n        printf(\"小さい\\n\");\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n___\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // xに10を代入する\\n    int x = ___;\\n    // xが5より大きいか判定する\\n    if (x ___ 5) {\\n        ___(\"大きい\\n___\\n    } ___ {\\n        ___(\"小さい\\n___\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
           "// 標準入出力ライブラリを読み込む",
           "#include <stdio.h>",
@@ -401,10 +401,10 @@ export const cData = {
           "    int x = 10;",
           "    // xが5より大きいか判定する",
           "    if (x > 5) {",
-          "        printf(\"Big",
+          "        printf(\"大きい",
           "\");",
           "    } else {",
-          "        printf(\"Small",
+          "        printf(\"小さい",
           "\");",
           "    }",
           "    // 正常終了を示す0を返す",
@@ -441,15 +441,15 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Big\\n"
+          "expected_output": "大きい\\n"
         }
       ],
       "initialDisplayMode": "holey"
     },
     {
       "title": "論理演算子（&&、||）",
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // scoreに85を代入する\\n    int score = 85;\\n    // scoreが80以上かつ100以下ならPassと表示する\\n    if (score >= 80 && score <= 100) {\\n        printf(\"Pass\\n\");\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // scoreに85を代入する\\n    int score = ___;\\n    // scoreが80以上かつ100以下ならPassと表示する\\n    if (score >= ___ && score <= 100) {\\n        ___(\"Pass\\n___\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // scoreに85を代入する\\n    int score = 85;\\n    // scoreが80以上かつ100以下なら合格と表示する\\n    if (score >= 80 && score <= 100) {\\n        printf(\"合格\\n\");\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#include <___>\\n// mainはプログラムのエントリーポイント\\nint ___() {\\n    // scoreに85を代入する\\n    int score = ___;\\n    // scoreが80以上かつ100以下なら合格と表示する\\n    if (score >= ___ && score <= 100) {\\n        ___(\"合格\\n___\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
       "correctLines": [
           "// 標準入出力ライブラリを読み込む",
           "#include <stdio.h>",
@@ -457,9 +457,9 @@ export const cData = {
           "int main() {",
           "    // scoreに85を代入する",
           "    int score = 85;",
-          "    // scoreが80以上かつ100以下ならPassと表示する",
+          "    // scoreが80以上かつ100以下なら合格と表示する",
           "    if (score >= 80 && score <= 100) {",
-          "        printf(\"Pass",
+          "        printf(\"合格",
           "\");",
           "    }",
           "    // 正常終了を示す0を返す",
@@ -493,7 +493,7 @@ export const cData = {
       "testCases": [
         {
           "input": "",
-          "expected_output": "Pass\\n"
+          "expected_output": "合格\\n"
         }
       ],
       "initialDisplayMode": "holey"

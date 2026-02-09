@@ -155,15 +155,15 @@ export const rustData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
-      "correctCode": "fn main() {\\n    // score に 100 を入れる\\n    let score = 100;\\n    // > で比較する\\n    if score > 80 {\\n        println!(\"Great!\");\\n    }\\n}",
-      "holeyCode": "fn ___ () {\\n    // score に 100 を入れる\\n    let ___ = 100;\\n    // > で比較する\\n    if score ___ 80 {\\n        ___!(\"Great!\");\\n    ___\\n___",
+      "correctCode": "fn main() {\\n    // score に 100 を入れる\\n    let score = 100;\\n    // > で比較する\\n    if score > 80 {\\n        println!(\"すごい！\");\\n    }\\n}",
+      "holeyCode": "fn ___ () {\\n    // score に 100 を入れる\\n    let ___ = 100;\\n    // > で比較する\\n    if score ___ 80 {\\n        ___!(\"すごい！\");\\n    ___\\n___",
       "correctLines": [
           "fn main() {",
           "    // score に 100 を入れる",
           "    let score = 100;",
           "    // > で比較する",
           "    if score > 80 {",
-          "        println!(\"Great!\");",
+          "        println!(\"すごい！\");",
           "    }",
           "}"
         ],
@@ -192,21 +192,21 @@ export const rustData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Great!\\n"
+            "expected_output": "すごい！\\n"
           }
         ]
       },
     {
       "title": "論理演算子（&&、||）",
-      "correctCode": "fn main() {\\n    let score = 80;\\n    let bonus = 10;\\n    // && で両方の条件をチェック\\n    if score >= 70 && bonus > 0 {\\n        println!(\"Bonus Pass\");\\n    }\\n}",
-      "holeyCode": "fn ___ () {\\n    let ___ = 80;\\n    let ___ = 10;\\n    // && で両方の条件をチェック\\n    if score ___ 70 && bonus > 0 {\\n        ___!(\"Bonus Pass\");\\n    ___\\n___",
+      "correctCode": "fn main() {\\n    let score = 80;\\n    let bonus = 10;\\n    // && で両方の条件をチェック\\n    if score >= 70 && bonus > 0 {\\n        println!(\"ボーナス合格！\");\\n    }\\n}",
+      "holeyCode": "fn ___ () {\\n    let ___ = 80;\\n    let ___ = 10;\\n    // && で両方の条件をチェック\\n    if score ___ 70 && bonus > 0 {\\n        ___!(\"ボーナス合格！\");\\n    ___\\n___",
       "correctLines": [
           "fn main() {",
           "    let score = 80;",
           "    let bonus = 10;",
           "    // && で両方の条件をチェック",
           "    if score >= 70 && bonus > 0 {",
-          "        println!(\"Bonus Pass\");",
+          "        println!(\"ボーナス合格！\");",
           "    }",
           "}"
         ],
@@ -232,7 +232,7 @@ export const rustData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "Bonus Pass\\n"
+            "expected_output": "ボーナス合格！\\n"
           }
         ]
       },
