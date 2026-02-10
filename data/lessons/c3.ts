@@ -17,12 +17,10 @@ export const c3Data = {
       "tutorialSlides": [
         {
           "title": "関数ポインタとは？",
-          "image": "/illustrations/3d_advanced/pointer_arrow.png",
           "content": "# 関数を指すポインタ\\n\\n**関数ポインタ** は、関数のアドレスを格納できる変数です。\\n\\n```c\\nint add(int a, int b) { return a + b; }\\n\\n// 関数ポインタの宣言\\nint (*fp)(int, int);\\nfp = add;\\n```"
         },
         {
           "title": "関数ポインタの使い方",
-          "image": "/illustrations/3d_advanced/pointer_arrow.png",
           "content": "# 関数を変数として扱う\\n\\n```c\\nint (*fp)(int, int) = add;\\nint result = fp(2, 3);  // 5\\n```"
         }
       ],
@@ -73,12 +71,10 @@ export const c3Data = {
       "tutorialSlides": [
         {
           "title": "コールバックとは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 関数を引数として渡す\\n\\n**コールバック** は、関数ポインタを引数として受け取り、後で呼び出す仕組みです。\\n\\n```c\\nvoid process(int arr[], int n, void (*callback)(int)) {\\n    for (int i = 0; i < n; i++) {\\n        callback(arr[i]);\\n    }\\n}\\n```"
         },
         {
           "title": "使用例",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 柔軟な処理\\n\\n```c\\nvoid print(int x) { printf(\"%d \", x); }\\n\\nint arr[] = {1, 2, 3};\\nprocess(arr, 3, print);  // 1 2 3\\n```"
         }
       ],
@@ -140,12 +136,10 @@ export const c3Data = {
       "tutorialSlides": [
         {
           "title": "ビットAND とは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 両方が1なら1\\n\\n**&** は、両方のビットが1の場合のみ1になります。\\n\\n```c\\n// 5 = 0101\\n// 3 = 0011\\n// -------\\n// 1 = 0001\\nint result = 5 & 3;  // 1\\n```"
         },
         {
           "title": "使用例：マスク",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 特定ビットの抽出\\n\\n```c\\n// 下位4ビットだけ取得\\nint x = 0xAB;  // 10101011\\nint low4 = x & 0x0F;  // 00001011 = 11\\n```"
         }
       ],
@@ -195,12 +189,10 @@ export const c3Data = {
       "tutorialSlides": [
         {
           "title": "ビットOR とは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# どちらかが1なら1\\n\\n**|** は、どちらかのビットが1なら1になります。\\n\\n```c\\n// 5 = 0101\\n// 3 = 0011\\n// -------\\n// 7 = 0111\\nint result = 5 | 3;  // 7\\n```"
         },
         {
           "title": "使用例：フラグ設定",
-          "image": "/illustrations/3d/gear.png",
           "content": "# ビットを立てる\\n\\n```c\\nint flags = 0;\\nflags |= 0x01;  // フラグ1をON\\nflags |= 0x04;  // フラグ3をON\\n// flags = 0x05 (0101)\\n```"
         }
       ],
@@ -250,12 +242,10 @@ export const c3Data = {
       "tutorialSlides": [
         {
           "title": "シフト演算とは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# ビットを移動\\n\\n**<<** は左シフト、**>>** は右シフトです。\\n\\n```c\\nint x = 1;     // 0001\\nx << 2;        // 0100 = 4\\nx << 3;        // 1000 = 8\\n```"
         },
         {
           "title": "2の累乗との関係",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 掛け算・割り算の代わり\\n\\n```c\\n// 左シフト = 2倍\\n5 << 1;  // 10\\n\\n// 右シフト = 2で割る\\n8 >> 1;  // 4\\n```"
         }
       ],
@@ -303,12 +293,10 @@ export const c3Data = {
       "tutorialSlides": [
         {
           "title": "sizeof とは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# バイトサイズを取得\\n\\n**sizeof** は、型や変数のバイト数を返します。\\n\\n```c\\nprintf(\"%zu\\n\", sizeof(int));    // 4（環境依存）\\nprintf(\"%zu\\n\", sizeof(char));   // 1\\nprintf(\"%zu\\n\", sizeof(double)); // 8\\n```"
         },
         {
           "title": "配列のサイズ",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 配列の要素数を計算\\n\\n```c\\nint arr[] = {1, 2, 3, 4, 5};\\nint count = sizeof(arr) / sizeof(arr[0]);\\n// count = 5\\n```"
         }
       ],
@@ -358,12 +346,10 @@ export const c3Data = {
       "tutorialSlides": [
         {
           "title": "typedef とは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 型に別名を定義\\n\\n**typedef** を使うと、型に新しい名前をつけられます。\\n\\n```c\\ntypedef unsigned int uint;\\ntypedef int* IntPtr;\\n\\nuint x = 10;\\nIntPtr p = &x;\\n```"
         },
         {
           "title": "構造体との組み合わせ",
-          "image": "/illustrations/3d_advanced/class_template.png",
           "content": "# 構造体を簡潔に\\n\\n```c\\ntypedef struct {\\n    int x;\\n    int y;\\n} Point;\\n\\nPoint p = {10, 20};\\n```"
         }
       ],
@@ -415,12 +401,10 @@ export const c3Data = {
       "tutorialSlides": [
         {
           "title": "const とポインタ",
-          "image": "/illustrations/3d_advanced/pointer_arrow.png",
           "content": "# 何が const か？\\n\\n```c\\n// 指す先の値が変更不可\\nconst int *p1;\\n\\n// ポインタ自体が変更不可\\nint * const p2;\\n\\n// 両方変更不可\\nconst int * const p3;\\n```"
         },
         {
           "title": "使いどころ",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 安全な関数引数\\n\\n```c\\nvoid print(const char *str) {\\n    // str の中身は変更できない\\n    printf(\"%s\\n\", str);\\n}\\n```"
         }
       ],
@@ -476,12 +460,10 @@ export const c3Data = {
       "tutorialSlides": [
         {
           "title": "static とは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 値を保持する\\n\\n**static** 変数は、関数が終了しても値を保持します。\\n\\n```c\\nvoid count() {\\n    static int n = 0;\\n    n++;\\n    printf(\"%d\\n\", n);\\n}\\n```"
         },
         {
           "title": "呼び出しごとに増加",
-          "image": "/illustrations/3d/gear.png",
           "content": "# カウンタとして使う\\n\\n```c\\ncount();  // 1\\ncount();  // 2\\ncount();  // 3\\n```"
         }
       ],
@@ -543,12 +525,10 @@ export const c3Data = {
       "tutorialSlides": [
         {
           "title": "マクロとは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# コンパイル前の置換\\n\\n**#define** でマクロを定義すると、コンパイル前に置換されます。\\n\\n```c\\n#define PI 3.14159\\n#define MAX(a,b) ((a) > (b) ? (a) : (b))\\n```"
         },
         {
           "title": "関数風マクロ",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 引数を取るマクロ\\n\\n```c\\n#define SQUARE(x) ((x) * (x))\\n\\nint result = SQUARE(5);  // 25\\n```"
         }
       ],

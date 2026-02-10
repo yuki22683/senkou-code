@@ -33,7 +33,6 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "with文でファイルを開く",
-          "image": "/illustrations/3d/with_chain.png",
           "content": "# 安全にファイルを扱う\\n\\n**with文（ウィズぶん）** を使うと、**ファイルが自動的に閉じられます**。\\n\\n**たとえ話：** 冷蔵庫（ファイル）を開けたら、使い終わったら必ず閉める必要があります。\\n- with文なし: 自分で閉めないといけない（忘れるとトラブル！）\\n- with文あり: 自動で閉まる（安心！）\\n\\n**ファイルを開くときのモード：**\\n- `'r'` = 読み込み（Read）モード\\n- `'w'` = 書き込み（Write）モード（上書き）\\n- `'a'` = 追記（Append）モード\\n\\n**例：** ファイルを読み込もう！\\n\\n```python\\nwith open('file.txt', 'r') as f:\\n    content = f.read()  # 全部読む\\n    print(content)\\n# ← ここでファイルは自動で閉じられる！\\n```\\n\\n**何をしているか：**\\n1. `open('file.txt', 'r')` でファイルを読み込みモードで開く\\n2. `as f` でファイルオブジェクトを `f` という名前で使う\\n3. `f.read()` でファイルの中身を全部読む\\n4. `with` のブロックを抜けたら自動でファイルが閉じる"
         }
       ],
@@ -81,7 +80,6 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "json.loads()",
-          "image": "/illustrations/3d/box.png",
           "content": "# JSON文字列をPythonに変換\\n\\n**JSON（ジェイソン）** とは、データを保存したり送ったりするための **世界共通の書き方** です。\\n\\n**JSONの例：**\\n```json\\n{\"name\": \"Taro\", \"age\": 25}\\n```\\n\\n**json.loads()（ロードエス）** で **JSON文字列をPythonの辞書やリストに変換** できます。\\n\\n**たとえ話：** 外国語（JSON）を日本語（Python）に翻訳するようなものです。\\n\\n**例：** JSON文字列を辞書に変換しよう！\\n\\n```python\\nimport json\\n\\n# JSON形式の文字列\\njson_str = '{\"name\": \"Taro\", \"age\": 25}'\\n# Pythonの辞書に変換\\ndata = json.loads(json_str)\\nprint(data['name'])  # Taro\\n```\\n\\n**何をしているか：**\\n1. `import json` でJSONモジュールを読み込む\\n2. JSON形式の文字列を用意（ダブルクォートを使うのがJSONのルール）\\n3. `json.loads()` で文字列（String）をPythonオブジェクトに変換\\n\\n**ポイント：** `loads` の 's' は **String（文字列）** の意味です。"
         }
       ],
@@ -125,7 +123,6 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "re.search()",
-          "image": "/illustrations/3d/regex_search.png",
           "content": "# パターンを検索\\n\\n**正規表現（せいきひょうげん）** とは、文字の **パターン（形）** を表す特別な書き方です。\\n\\n**たとえ話：** 「3桁の数字」「@が入ったメールアドレス」のような「形」で文字を探せます。\\n\\n**re.search()（サーチ）** で **文字列の中からパターンに合う部分を探します**。\\n\\n**よく使う記号：**\\n- `\\d` = 数字1文字（0-9）\\n- `\\w` = 英数字1文字（a-z, A-Z, 0-9, _）\\n- `+` = 1回以上の繰り返し\\n- `{3}` = ちょうど3回\\n\\n**例：** メールアドレスを探そう！\\n\\n```python\\nimport re\\n\\ntext = 'my email is test@example.com'\\nmatch = re.search(r'\\w+@\\w+\\.\\w+', text)\\nif match:\\n    print(match.group())  # test@example.com\\n```\\n\\n**何をしているか：**\\n1. `import re` で正規表現モジュールを読み込む\\n2. `re.search(パターン, 文字列)` で検索\\n3. 見つかったら `match` オブジェクトが返る\\n4. `match.group()` で一致した文字列を取得\\n\\n**ポイント：** パターンの前に `r` をつけると、`\\` をそのまま使えます。"
         }
       ],
@@ -174,7 +171,6 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "Counterとは？",
-          "image": "/illustrations/3d/list.png",
           "content": "# 要素を数える\\n\\n**Counter（カウンター）** を使うと、**要素の出現回数を簡単にカウント** できます。\\n\\n**たとえ話：** クラスで「好きな果物」アンケートを取って、りんごが何票、バナナが何票...と数えるようなものです。\\n\\n**例：** 果物の出現回数を数えよう！\\n\\n```python\\nfrom collections import Counter\\n\\nwords = ['apple', 'banana', 'apple', 'cherry']\\ncount = Counter(words)\\nprint(count['apple'])  # 2（appleは2回出てきた）\\nprint(count['banana']) # 1\\n```\\n\\n**何をしているか：**\\n1. `from collections import Counter` でインポート\\n2. `Counter(リスト)` でカウント開始\\n3. `count['apple']` で「apple」の出現回数を取得\\n\\n**便利なメソッド：**\\n- `count.most_common(3)`: 多い順に3つ取得\\n- `count.total()`: 全要素の合計数\\n\\n**ポイント：** 文字列を渡すと、1文字ずつカウントします！"
         }
       ],

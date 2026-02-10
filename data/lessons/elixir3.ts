@@ -37,7 +37,6 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "構造体（Struct）",
-          "image": "/illustrations/3d_advanced/class_template.png",
           "content": "構造体はキーが決まった辞書です。defstructで定義します。\\n\\n```elixir\\ndefmodule User do\\n  defstruct name: \"\", age: 0\\nend\\n\\nuser = %User{name: \"Alice\", age: 25}\\nuser.name  # \"Alice\"\\n```"
         }
       ],
@@ -89,7 +88,6 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "構造体の更新",
-          "image": "/illustrations/3d_advanced/class_template.png",
           "content": "構造体は辞書と同様に更新できます。\\n\\n```elixir\\nuser = %User{name: \"Alice\", age: 25}\\nupdated = %{user | age: 26}\\n# %User{name: \"Alice\", age: 26}\\n\\n# Map.putも使える\\nupdated2 = Map.put(user, :age, 27)\\n```"
         }
       ],
@@ -152,7 +150,6 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "Enum.reduce",
-          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "reduceはリストを単一の値に畳み込みます。\\n\\n```elixir\\nsum = Enum.reduce([1, 2, 3, 4], 0, fn x, acc -> x + acc end)\\n# 10\\n\\nproduct = Enum.reduce([1, 2, 3, 4], 1, &(&1 * &2))\\n# 24\\n```"
         }
       ],
@@ -200,7 +197,6 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "Enum.group_by",
-          "image": "/illustrations/3d_advanced/union_funnel.png",
           "content": "group_byは要素をキーでグループ化します。\\n\\n```elixir\\nwords = [\"apple\", \"ant\", \"banana\", \"berry\"]\\nEnum.group_by(words, &String.first/1)\\n# %{\"a\" => [\"apple\", \"ant\"], \"b\" => [\"banana\", \"berry\"]}\\n\\nnums = [1, 2, 3, 4, 5]\\nEnum.group_by(nums, &rem(&1, 2))\\n# %{0 => [2, 4], 1 => [1, 3, 5]}\\n```"
         }
       ],
@@ -249,7 +245,6 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "内包表記（for）",
-          "image": "/illustrations/3d_advanced/comprehension.png",
           "content": "for式はリスト内包表記を提供します。\\n\\n```elixir\\nfor x <- [1, 2, 3], do: x * 2\\n# [2, 4, 6]\\n\\n# フィルタリング\\nfor x <- 1..10, rem(x, 2) == 0, do: x\\n# [2, 4, 6, 8, 10]\\n\\n# 複数のジェネレータ\\nfor x <- [1, 2], y <- [:a, :b], do: {x, y}\\n# [{1, :a}, {1, :b}, {2, :a}, {2, :b}]\\n```"
         }
       ],
@@ -289,7 +284,6 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "with式",
-          "image": "/illustrations/3d/with_chain.png",
           "content": "with式は複数のパターンマッチを連鎖させ、すべて成功した場合のみdoブロックを実行します。\\n\\n```elixir\\nwith {:ok, file} <- File.read(\"test.txt\"),\\n     {:ok, json} <- Jason.decode(file) do\\n  {:ok, json}\\nelse\\n  {:error, reason} -> {:error, reason}\\nend\\n```"
         }
       ],
@@ -347,7 +341,6 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "プロトコルの定義",
-          "image": "/illustrations/3d_advanced/interface_blueprint.png",
           "content": "プロトコルはポリモーフィズムを実現します。\\n\\n```elixir\\ndefprotocol Stringify do\\n  def to_string(data)\\nend\\n\\ndefimpl Stringify, for: Integer do\\n  def to_string(num), do: Integer.to_string(num)\\nend\\n```"
         }
       ],
@@ -390,7 +383,6 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "プロトコルの実装",
-          "image": "/illustrations/3d_advanced/interface_blueprint.png",
           "content": "defimplで特定の型にプロトコルを実装します。\\n\\n```elixir\\ndefimpl Stringify, for: List do\\n  def to_string(list) do\\n    Enum.join(list, \", \")\\n  end\\nend\\n\\nStringify.to_string([1, 2, 3])  # \"1, 2, 3\"\\n```"
         }
       ],
@@ -440,7 +432,6 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "Agent",
-          "image": "/illustrations/3d/agent_state.png",
           "content": "Agentはシンプルな状態管理を提供します。\\n\\n```elixir\\n{:ok, agent} = Agent.start_link(fn -> 0 end)\\nAgent.get(agent, & &1)      # 0\\nAgent.update(agent, &(&1 + 1))\\nAgent.get(agent, & &1)      # 1\\n```"
         }
       ],
@@ -486,7 +477,6 @@ export const elixir3Data = {
       "tutorialSlides": [
         {
           "title": "Task",
-          "image": "/illustrations/3d/task_async.png",
           "content": "Taskは非同期処理を簡単に実行できます。\\n\\n```elixir\\ntask = Task.async(fn -> expensive_computation() end)\\n# 他の処理を実行\\nresult = Task.await(task)\\n\\n# 複数のTaskを並列実行\\ntasks = Enum.map(1..5, fn i -> Task.async(fn -> i * 2 end) end)\\nresults = Task.await_many(tasks)  # [2, 4, 6, 8, 10]\\n```"
         }
       ],

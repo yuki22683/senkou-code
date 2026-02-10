@@ -37,12 +37,10 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "テーブルとは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 万能のデータ構造\\n\\n**テーブル** は、Luaで唯一のデータ構造です。配列としても辞書としても使えます。"
         },
         {
           "title": "テーブルの作成",
-          "image": "/illustrations/3d/gear.png",
           "content": "# { } で作成\\n\\n`{ }` でテーブルを作り、キーと値を格納します。\\n\\n**コード例：**\\n```lua\\nlocal t = { name = \"Taro\", age = 20 }\\nprint(t.name) -- Taro\\n```"
         }
       ],
@@ -78,12 +76,10 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "配列風テーブル",
-          "image": "/illustrations/3d/gear.png",
           "content": "# インデックスは1から\\n\\nLuaのテーブルを配列として使うとき、インデックスは **1** から始まります。"
         },
         {
           "title": "配列の作成",
-          "image": "/illustrations/3d/gear.png",
           "content": "# { } に値を並べる\\n\\n値を並べると自動で番号がつきます。\\n\\n**コード例：**\\n```lua\\nlocal nums = {10, 20, 30}\\nprint(nums[1]) -- 10\\n```"
         }
       ],
@@ -119,12 +115,10 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "ipairs とは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 配列をループ\\n\\n**ipairs** は、配列のインデックスと値を順番に取り出します。"
         },
         {
           "title": "ipairs の使い方",
-          "image": "/illustrations/3d/gear.png",
           "content": "# for i, v in ipairs(t)\\n\\nインデックス i と値 v を受け取ります。\\n\\n**コード例：**\\n```lua\\nfor i, v in ipairs({1, 2, 3}) do\\n    print(v)\\nend\\n```"
         }
       ],
@@ -167,12 +161,10 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "pairs とは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# すべてをループ\\n\\n**pairs** は、テーブルのすべてのキーと値を取り出します。"
         },
         {
           "title": "pairs の使い方",
-          "image": "/illustrations/3d/gear.png",
           "content": "# for k, v in pairs(t)\\n\\nキー k と値 v を受け取ります。\\n\\n**コード例：**\\n```lua\\nfor k, v in pairs({a = 1, b = 2}) do\\n    print(k, v)\\nend\\n```"
         }
       ],
@@ -215,12 +207,10 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "function とは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 関数の定義\\n\\n**function** キーワードで関数を定義します。`local function` でローカル関数にできます。"
         },
         {
           "title": "function の使い方",
-          "image": "/illustrations/3d/gear.png",
           "content": "# return で値を返す\\n\\n`return` で値を返します。\\n\\n**コード例：**\\n```lua\\nlocal function add(a, b)\\n    return a + b\\nend\\n```"
         }
       ],
@@ -263,12 +253,10 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "複数の return",
-          "image": "/illustrations/3d/return.png",
           "content": "# 複数の値を返せる\\n\\nLuaでは、関数から複数の値を返すことができます。"
         },
         {
           "title": "複数の戻り値",
-          "image": "/illustrations/3d/return.png",
           "content": "# カンマで区切る\\n\\n`return a, b` で複数の値を返します。\\n\\n**コード例：**\\n```lua\\nlocal function minmax(a, b)\\n    if a < b then return a, b end\\n    return b, a\\nend\\n```"
         }
       ],
@@ -317,12 +305,10 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "メソッドとは？",
-          "image": "/illustrations/3d_advanced/class_to_instance.png",
           "content": "# テーブルの関数\\n\\nテーブルに関数を格納すると、オブジェクトのようにメソッドを持たせられます。"
         },
         {
           "title": "コロン記法",
-          "image": "/illustrations/3d/gear.png",
           "content": "# : で self を渡す\\n\\n`obj:method()` と呼ぶと、自動で `self` が渡されます。\\n\\n**コード例：**\\n```lua\\nlocal obj = { value = 10 }\\nfunction obj:double()\\n    return self.value * 2\\nend\\n```"
         }
       ],
@@ -369,12 +355,10 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "メタテーブルとは？",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 振る舞いをカスタマイズ\\n\\n**メタテーブル** を使うと、テーブルの演算子や動作をカスタマイズできます。"
         },
         {
           "title": "setmetatable",
-          "image": "/illustrations/3d/gear.png",
           "content": "# メタテーブルを設定\\n\\n`setmetatable(t, mt)` でメタテーブルを設定します。\\n\\n**コード例：**\\n```lua\\nlocal mt = { __add = function(a, b) ... end }\\nsetmetatable(t, mt)\\n```"
         }
       ],
@@ -419,12 +403,10 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "クロージャとは？",
-          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 外の変数を覚える\\n\\n**クロージャ** は、定義時の環境（外側の変数）を捕捉した関数です。"
         },
         {
           "title": "クロージャの使い方",
-          "image": "/illustrations/3d_advanced/lambda_spark.png",
           "content": "# 状態を保持\\n\\nクロージャを使って状態を保持できます。\\n\\n**コード例：**\\n```lua\\nlocal function counter()\\n    local count = 0\\n    return function()\\n        count = count + 1\\n        return count\\n    end\\nend\\n```"
         }
       ],
@@ -477,12 +459,10 @@ export const lua2Data = {
       "tutorialSlides": [
         {
           "title": "コルーチンとは？",
-          "image": "/illustrations/3d_advanced/concurrency.png",
           "content": "# 中断と再開\\n\\n**コルーチン** は、実行を中断して後で再開できる特殊な関数です。ゲームのアニメーションなどに使います。"
         },
         {
           "title": "coroutine.create",
-          "image": "/illustrations/3d/gear.png",
           "content": "# 基本の使い方\\n\\n`create` で作成、`resume` で実行、`yield` で中断します。\\n\\n**コード例：**\\n```lua\\nlocal co = coroutine.create(function()\\n    print(\"start\")\\n    coroutine.yield()\\n    print(\"end\")\\nend)\\n```"
         }
       ],
