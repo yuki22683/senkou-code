@@ -33,15 +33,15 @@ export const pythonData2 = {
           "content": "# 関数を呼び出すときに材料を渡す\\n\\n関数を使うとき、カッコの中に **値を入れる** と、その値が引数に入ります。\\n\\n**例：** いろんな人にあいさつしよう！\\n\\n```python\\ndef greet(name):\\n    print(f'こんにちは、{name}さん！')\\n\\ngreet('太郎')\\n```\\n=> こんにちは、太郎さん！\\n\\n**何をしているか：**\\n1. `greet('太郎')` で関数を呼び出す\\n2. `'太郎'` という値が `name` に入る\\n3. `f'こんにちは、{name}さん！'` の `{name}` が「太郎」に置き換わる\\n4. 「こんにちは、太郎さん！」と表示される！\\n\\n**便利なところ：** 名前を変えるだけで、いろんな人にあいさつできます！"
         }
       ],
-      "correctCode": "# 名前を受け取ってあいさつする関数\\ndef hello(name):\\n    # f-stringで名前を表示\\n    print(f'こんにちは、{name}！')\\n\\n# 関数を呼び出す\\nhello('Python')",
-      "holeyCode": "# 名前を受け取ってあいさつする関数\\ndef ___(___):\\n    # f-stringで名前を表示\\n    ___(f'こんにちは、{___}！')\\n\\n# 関数を呼び出す\\n___('___')",
+      "correctCode": "# 名前を受け取ってあいさつする関数\\ndef hello(name):\\n    # f-stringで名前を表示\\n    print(f'こんにちは、{name}！')\\n\\n# hello関数を'Python'で呼び出す\\nhello('Python')",
+      "holeyCode": "# 名前を受け取ってあいさつする関数\\ndef ___(___):\\n    # f-stringで名前を表示\\n    ___(f'こんにちは、{___}！')\\n\\n# hello関数を'Python'で呼び出す\\n___('___')",
       "correctLines": [
         "# 名前を受け取ってあいさつする関数",
         "def hello(name):",
         "    # f-stringで名前を表示",
         "    print(f'こんにちは、{name}！')",
         "",
-        "# 関数を呼び出す",
+        "# hello関数を'Python'で呼び出す",
         "hello('Python')"
       ],
       "lineHints": [

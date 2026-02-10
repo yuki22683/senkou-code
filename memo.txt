@@ -29,3 +29,4 @@
 @data/lessons/sql.ts, @data/lessons/sql2.ts @data/lessons/sql3.ts  @data/lessons/sql4.ts の内容をチェックしてプログラミング学習教材として問題がないかとGEMINI.mdのルールが漏れなく実施されていることをチェックして。修正は最小限に慎重に実施して
 @data/lessons/swift.ts, @data/lessons/swift2.ts @data/lessons/swift3.ts  @data/lessons/swift4.ts の内容をチェックしてプログラミング学習教材として問題がないかとGEMINI.mdのルールが漏れなく実施されていることをチェックして。修正は最小限に慎重に実施して
 @data/lessons/typescript.ts, @data/lessons/typescript2.ts @data/lessons/typescript3.ts  @data/lessons/typescript4.ts の内容をチェックしてプログラミング学習教材として問題がないかとGEMINI.mdのルールが漏れなく実施されていることをチェックして。修正は最小限に慎重に実施して
+

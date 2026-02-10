@@ -293,8 +293,8 @@ export const go2Data = {
           "content": "# レシーバ（受け取り手）を指定\\n\\n`func (r 型) メソッド名()` と書きます。`(r 型)` の部分を「レシーバ（受け取り手）」と呼びます。\\n\\n**コード例：**\\n```go\\n// Rect構造体に Area メソッドを追加\\nfunc (r Rect) Area() int {\\n    return r.W * r.H  // 幅 × 高さ\\n}\\n\\n// 使い方\\nrect := Rect{W: 3, H: 4}\\nfmt.Println(rect.Area())  // 12 が表示される\\n```\\n\\n**読み方：**\\n- `(r Rect)` → 「Rect型のrが」\\n- `Area()` → 「Area というメソッドを持つ」\\n- `r.W * r.H` → 「自分のWとHを使って計算」"
         }
       ],
-      "correctCode": "package main\\nimport \"fmt\"\\ntype Rect struct {\\n    W int\\n    H int\\n}\\nfunc (r Rect) Area() int {\\n    // * でかけ算\\n    return r.W * r.H\\n}\\nfunc main() {\\n    // 構造体を初期化\\n    rect := Rect{W: 3, H: 4}\\n    // メソッドを呼び出す\\n    fmt.Println(rect.Area())\\n}",
-      "holeyCode": "package ___\\nimport \\\"___\\\"\\ntype ___ struct {\\n    ___ ___\\n    ___ ___\\n___\\nfunc (___ ___) ___() ___ {\\n    // * でかけ算\\n    return ___.___ * ___.___\\n___\\nfunc ___() {\\n    // 構造体を初期化\\n    ___ := ___{ ___: ___, ___: ___}\\n    // メソッドを呼び出す\\n    ___.___(___.___(  ))\\n___",
+      "correctCode": "package main\\nimport \"fmt\"\\ntype Rect struct {\\n    W int\\n    H int\\n}\\nfunc (r Rect) Area() int {\\n    // * でかけ算\\n    return r.W * r.H\\n}\\nfunc main() {\\n    // 構造体を初期化\\n    rect := Rect{W: 3, H: 4}\\n    // rect.Area()を呼び出して表示\\n    fmt.Println(rect.Area())\\n}",
+      "holeyCode": "package ___\\nimport \\\"___\\\"\\ntype ___ struct {\\n    ___ ___\\n    ___ ___\\n___\\nfunc (___ ___) ___() ___ {\\n    // * でかけ算\\n    return ___.___ * ___.___\\n___\\nfunc ___() {\\n    // 構造体を初期化\\n    ___ := ___{ ___: ___, ___: ___}\\n    // rect.Area()を呼び出して表示\\n    ___.___(___.___(  ))\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -309,7 +309,7 @@ export const go2Data = {
           "func main() {",
           "    // 構造体を初期化",
           "    rect := Rect{W: 3, H: 4}",
-          "    // メソッドを呼び出す",
+          "    // rect.Area()を呼び出して表示",
           "    fmt.Println(rect.Area())",
           "}"
         ],
