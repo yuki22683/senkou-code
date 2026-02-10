@@ -271,7 +271,7 @@
      - 形式チェック: 同じ言語の既存ファイル（例: php.ts, php2.ts）の配列出力形式と比較
      - 特にPHP配列は `Array\n(\n    [0] => 1\n...)\n` 形式であること
   12. `node scripts/check-escape-sequences.mjs` → 全てのエスケープシーケンスが正しい（ルール#51参照）
-  13. `node scripts/check-lesson-file.mjs` → エラー0件、tutorialSlides警告0件（包括チェック: 日本語変数参照、expected_output文字列一致、tutorialSlides存在確認等）
+  13. `node scripts/check-lesson-file.mjs` → エラー0件（tutorialSlides消失はエラーレベル - ルール#82参照）
   14. **【手動確認】** チュートリアルの出力例が入力と同じ言語か確認（ルール#54参照）
      - 確認コマンド: `grep -E "アリス.*Alice|ボブ.*Bob|太郎.*Taro|りんご.*apple" data/lessons/*.ts`
      - 日本語入力→英語出力のパターンは全て修正が必要
@@ -1077,7 +1077,7 @@
 - **必須チェック**:
   1. 書き換え前: `grep -c "tutorialSlides" data/lessons/<file>.ts` でtutorialSlidesの存在を確認
   2. 書き換え後: 同じコマンドで数が減っていないことを確認
-  3. `node scripts/check-lesson-file.mjs` で「tutorialSlidesが見つかりません」警告が0件であることを確認
+  3. `node scripts/check-lesson-file.mjs` → tutorialSlides消失は**エラー**として検出される（警告ではない）
 - **スクリプトでファイル全体を書き換える場合**:
   - 元のtutorialSlidesを抽出して保持してから書き換える
   - または、tutorialSlides部分は変更対象から除外する
@@ -1088,5 +1088,5 @@
   1. `git log --oneline data/lessons/<file>.ts` でtutorialSlidesが存在したコミットを特定
   2. `git show <commit>:data/lessons/<file>.ts` で内容を確認
   3. tutorialSlides部分のみ抽出して現在のファイルに追加（ファイル全体をcheckoutしない）
-- **チェックスクリプト**: `node scripts/check-lesson-file.mjs`（tutorialSlides項目）
+- **チェックスクリプト**: `node scripts/check-lesson-file.mjs`（tutorialSlides消失は**エラー**レベルで検出）
 - **理由**: tutorialSlidesは学習者にとって重要な解説コンテンツであり、消失すると学習体験が大幅に低下する

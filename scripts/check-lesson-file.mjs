@@ -319,13 +319,13 @@ function checkJapaneseStrings(file, content) {
   }
 }
 
-// 9. tutorialSlidesの存在チェック
+// 9. tutorialSlidesの存在チェック（エラーレベル - 必須フィールド）
 function checkTutorialSlides(file, content) {
   const checkName = 'tutorialSlides';
 
   const hasTutorial = content.includes('"tutorialSlides"');
   if (!hasTutorial) {
-    addWarning(file, checkName, 'tutorialSlidesが見つかりません');
+    addError(file, checkName, 'tutorialSlidesが見つかりません（必須フィールド - ルール#82参照）');
   } else {
     addPassed(file, checkName);
   }
