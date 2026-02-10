@@ -50,7 +50,7 @@ export const swift3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n数が負（マイナス）なら失敗、そうでなければ成功を返す関数を作りましょう。\\n\\n1. `MyError` というエラー型を定義\\n2. `check` 関数を作る\\n3. 負の数なら `.failure`、そうでなければ `.success` を返す"
+          "content": "# 目標\\n\\n数が負（マイナス）なら失敗、そうでなければ成功を返す関数を作りましょう。\\n\\n1. `MyError` というエラー型を定義\\n2. `check` 関数を作る\\n3. 負の数なら `.failure`、そうでなければ `.success` を返す"
         }
       ],
       "correctCode": "// エラー型を定義\\nenum MyError: Error { case negative }\\n\\n// check関数を定義\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.negative) }\\n    // successで成功を返す\\n    return .success(n)\\n}\\n\\n// 関数を呼び出し\\nlet result = check(10)\\n// switchでパターンマッチ\\nswitch result {\\n// 成功の場合\\ncase .success(let v): print(v)\\n// 失敗の場合\\ncase .failure(_): print(\"エラー\")\\n}",
@@ -128,7 +128,7 @@ export const swift3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n文字列の配列から、数値に変換できるものだけを取り出しましょう。\\n\\n- `[\"1\", \"a\", \"2\", \"b\", \"3\"]` を\\n- compactMapで `[1, 2, 3]` に変換\\n\\n「a」や「b」は数値に変換できないので、自動的に除外されます。"
+          "content": "# 目標\\n\\n文字列の配列から、数値に変換できるものだけを取り出しましょう。\\n\\n- `[\"1\", \"a\", \"2\", \"b\", \"3\"]` を\\n- compactMapで `[1, 2, 3]` に変換\\n\\n「a」や「b」は数値に変換できないので、自動的に除外されます。"
         }
       ],
       "correctCode": "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入\\nlet nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\\n// nums.compactMapでInt変換しintsに代入\\nlet ints = nums.compactMap { Int($0) }\\n// intsをprintで出力\\nprint(ints)",
@@ -184,7 +184,7 @@ export const swift3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n配列の全要素をかけ算して、積（せき）を求めましょう。\\n\\n- `[1, 2, 3, 4, 5]` の全要素をかける\\n- 初期値は `1`（かけ算なので）\\n- 結果は `120`（1*2*3*4*5）になるはず"
+          "content": "# 目標\\n\\n配列の全要素をかけ算して、積を求めましょう。\\n\\n- `[1, 2, 3, 4, 5]` の全要素をかける\\n- 初期値は `1`（かけ算なので）\\n- 結果は `120`（1*2*3*4*5）になるはず"
         }
       ],
       "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet nums = [1, 2, 3, 4, 5]\\n// 配列の全要素の積を計算\\nlet product = nums.reduce(1) { $0 * $1 }\\n// productをprintで出力\\nprint(product)",
@@ -234,7 +234,7 @@ export const swift3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nlazyを使って、配列の最初の要素だけを10倍しましょう。\\n\\n1. 配列に `.lazy` をつける\\n2. `.map { $0 * 10 }` で10倍\\n3. `.first!` で最初の1つを取得\\n\\n結果は `10`（1 * 10）になります。"
+          "content": "# 目標\\n\\nlazyを使って、配列の最初の要素だけを10倍しましょう。\\n\\n1. 配列に `.lazy` をつける\\n2. `.map { $0 * 10 }` で10倍\\n3. `.first!` で最初の1つを取得\\n\\n結果は `10`（1 * 10）になります。"
         }
       ],
       "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet nums = [1, 2, 3, 4, 5]\\n// nums.lazy.mapで最初の要素*10をresultに代入\\nlet result = nums.lazy.map { $0 * 10 }.first!\\n// resultをprintで出力\\nprint(result)",
@@ -286,7 +286,7 @@ export const swift3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n配列の中から、正の数（0より大きい数）だけを表示しましょう。\\n\\n- `[1, -2, 3, -4, 5]` の中から\\n- `where n > 0` で正の数だけ選ぶ\\n- 結果は `1, 3, 5` が表示される"
+          "content": "# 目標\\n\\n配列の中から、正の数（0より大きい数）だけを表示しましょう。\\n\\n- `[1, -2, 3, -4, 5]` の中から\\n- `where n > 0` で正の数だけ選ぶ\\n- 結果は `1, 3, 5` が表示される"
         }
       ],
       "correctCode": "// numsに[1, -2, 3, -4, 5]を代入\\nlet nums = [1, -2, 3, -4, 5]\\n// for-in whereでn>0の要素をループ\\nfor n in nums where n > 0 {\\n    // nをprintで出力\\n    print(n)\\n}",
@@ -394,7 +394,7 @@ export const swift3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nスタック（積み重ね）のプロトコルを作りましょう。\\n\\n1. `Stack` プロトコルを作る\\n2. `associatedtype Element` を宣言\\n3. `push` メソッドを宣言\\n4. `IntStack` 構造体で準拠を実装"
+          "content": "# 目標\\n\\nスタック（積み重ね）のプロトコルを作りましょう。\\n\\n1. `Stack` プロトコルを作る\\n2. `associatedtype Element` を宣言\\n3. `push` メソッドを宣言\\n4. `IntStack` 構造体で準拠を実装"
         }
       ],
       "correctCode": "// プロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    }\\n}\\n\\n// インスタンスを作成\\nvar s = IntStack()\\n// 要素を追加\\ns.push(10)\\n// itemsを出力\\nprint(s.items)",
@@ -486,7 +486,7 @@ export const swift3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n数が負のときにエラーを投げる関数を作りましょう。\\n\\n1. `MyError` エラー型を定義（invalid case）\\n2. `check` 関数を `throws` で作る\\n3. 負の数なら `throw` でエラー\\n4. `try` と `do-catch` で呼び出す"
+          "content": "# 目標\\n\\n数が負のときにエラーを投げる関数を作りましょう。\\n\\n1. `MyError` エラー型を定義（invalid case）\\n2. `check` 関数を `throws` で作る\\n3. 負の数なら `throw` でエラー\\n4. `try` と `do-catch` で呼び出す"
         }
       ],
       "correctCode": "// エラー型を定義\\nenum MyError: Error { case invalid }\\n\\n// throwsでエラーを投げる可能性を示す\\nfunc check(_ n: Int) throws -> Int {\\n    // 負の場合はエラー\\n    if n < 0 { throw MyError.invalid }\\n    // nを返す\\n    return n\\n}\\n\\n// do-catchでエラー処理\\ndo {\\n    // tryで呼び出し\\n    let v = try check(10)\\n    // vを出力\\n    print(v)\\n} catch {\\n    // エラーを出力\\n    print(\"エラー\")\\n}",
@@ -565,12 +565,12 @@ export const swift3Data = {
           "content": "# 重複が自動的に除かれる\\n\\n```swift\\nvar set: Set = [1, 2, 2, 3, 3, 3]\\nprint(set.count)  // 3（重複は1つになる）\\n// setの中身は {1, 2, 3}\\n```\\n\\n2を2回、3を3回入れても、それぞれ1つずつになります。"
         },
         {
-          "title": "集合演算（しゅうごうえんざん）",
+          "title": "集合演算",
           "content": "# 数学の集合と同じ計算ができる\\n\\n```swift\\nlet a: Set = [1, 2, 3]\\nlet b: Set = [2, 3, 4]\\n\\na.union(b)        // 合わせる → {1, 2, 3, 4}\\na.intersection(b) // 共通部分 → {2, 3}\\na.subtracting(b)  // 差（aだけ） → {1}\\n```"
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n重複のあるデータをSetに入れて、実際の要素数を確認しましょう。\\n\\n- `[1, 2, 2, 3, 3, 3]` をSetに入れる\\n- `.count` で要素数を表示\\n- 答えは `3` になる（重複が除かれるから）"
+          "content": "# 目標\\n\\n重複のあるデータをSetに入れて、実際の要素数を確認しましょう。\\n\\n- `[1, 2, 2, 3, 3, 3]` をSetに入れる\\n- `.count` で要素数を表示\\n- 答えは `3` になる（重複が除かれるから）"
         }
       ],
       "correctCode": "// Setで重複なしのコレクション\\nvar s: Set = [1, 2, 2, 3, 3, 3]\\n// 要素数を出力\\nprint(s.count)",
@@ -622,7 +622,7 @@ export const swift3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nカウンターの構造体を作って、数を増やせるようにしましょう。\\n\\n1. `Counter` 構造体を作る\\n2. `count` プロパティを持つ\\n3. `mutating func increment()` で1増やす\\n4. 2回呼び出して `2` と表示されるか確認"
+          "content": "# 目標\\n\\nカウンターの構造体を作って、数を増やせるようにしましょう。\\n\\n1. `Counter` 構造体を作る\\n2. `count` プロパティを持つ\\n3. `mutating func increment()` で1増やす\\n4. 2回呼び出して `2` と表示されるか確認"
         }
       ],
       "correctCode": "// 構造体を定義\\nstruct Counter {\\n    // countプロパティ\\n    var count = 0\\n    // mutatingで構造体を変更可能に\\n    mutating func increment() {\\n        // countを1増やす\\n        count += 1\\n    }\\n}\\n\\n// インスタンスを作成\\nvar c = Counter()\\n// 1回目のincrementを呼び出し\\nc.increment()\\n// 2回目のincrementを呼び出し\\nc.increment()\\n// countを出力\\nprint(c.count)",

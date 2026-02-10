@@ -38,7 +38,7 @@ export const kotlin4Data = {
       "tutorialSlides": [
         {
           "title": "Sealed Class（シールドクラス）とは？",
-          "content": "# 継承（けいしょう）を制限するクラス\\n\\n**sealed** は「封印（ふういん）された」という意味です。\\n\\nsealed class は、継承できるクラスを「このファイルの中だけ」に制限します。\\n\\n外部から勝手に継承されないので、すべての種類を把握できます。"
+          "content": "# 継承を制限するクラス\\n\\n**sealed** は「封印された」という意味です。\\n\\nsealed class は、継承できるクラスを「このファイルの中だけ」に制限します。\\n\\n外部から勝手に継承されないので、すべての種類を把握できます。"
         },
         {
           "title": "なぜ sealed class が便利？",
@@ -46,7 +46,7 @@ export const kotlin4Data = {
         },
         {
           "title": "when と組み合わせる",
-          "content": "# すべてのケースを網羅（もうら）\\n\\n```kotlin\\nwhen (result) {\\n    is Success -> println(result.data)\\n    is Error -> println(result.message)\\n}  // else が要らない！\\n```\\n\\nすべてのパターンを書いているので、`else` が不要です。\\n\\n新しい種類を追加したら、コンパイラが教えてくれます。"
+          "content": "# すべてのケースを網羅\\n\\n```kotlin\\nwhen (result) {\\n    is Success -> println(result.data)\\n    is Error -> println(result.message)\\n}  // else が要らない！\\n```\\n\\nすべてのパターンを書いているので、`else` が不要です。\\n\\n新しい種類を追加したら、コンパイラが教えてくれます。"
         },
         {
           "title": "is で型チェック",
@@ -54,7 +54,7 @@ export const kotlin4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n図形の面積を計算するsealed classを作りましょう。\\n\\n1. `sealed class Shape` を定義\\n2. `Circle` と `Rectangle` を継承させる\\n3. `when` ですべてのケースを処理\\n4. 円の面積は 3.14 * r * r"
+          "content": "# 目標\\n\\n図形の面積を計算するsealed classを作りましょう。\\n\\n1. `sealed class Shape` を定義\\n2. `Circle` と `Rectangle` を継承させる\\n3. `when` ですべてのケースを処理\\n4. 円の面積は 3.14 * r * r"
         }
       ],
       "correctCode": "// Shapeをsealed classで定義\\nsealed class Shape\\n// Circle クラスを定義する\\nclass Circle(val radius: Double) : Shape()\\n// Rectangle クラスを定義する\\nclass Rectangle(val w: Double, val h: Double) : Shape()\\n\\n// 面積を計算する関数\\nfun area(s: Shape): Double = when (s) {\\n    // Circle の場合 (radius * radius)\\n    is Circle -> 3.14 * s.radius * s.radius\\n    // Rectangle の場合 (w * h)\\n    is Rectangle -> s.w * s.h\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // area を出力する\\n    println(area(Circle(2.0)))\\n}",
@@ -145,7 +145,7 @@ export const kotlin4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nカウンターをobjectで作りましょう。\\n\\n1. `object Counter` を定義\\n2. `increment()` でカウントを増やす\\n3. `get()` で現在の値を取得\\n4. 2回 increment して 2 を表示"
+          "content": "# 目標\\n\\nカウンターをobjectで作りましょう。\\n\\n1. `object Counter` を定義\\n2. `increment()` でカウントを増やす\\n3. `get()` で現在の値を取得\\n4. 2回 increment して 2 を表示"
         }
       ],
       "correctCode": "// Counterシングルトンを定義\\nobject Counter {\\n    // count を初期化する\\n    private var count = 0\\n    // increment 関数を定義する\\n    fun increment() { count++ }\\n    // get 関数を定義する\\n    fun get() = count\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // 1回目の increment を呼び出す\\n    Counter.increment()\\n    // 2回目の increment を呼び出す\\n    Counter.increment()\\n    // get を出力する\\n    println(Counter.get())\\n}",
@@ -232,7 +232,7 @@ export const kotlin4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nby lazyで遅延初期化を体験しましょう。\\n\\n1. `val value: Int by lazy { }` を定義\\n2. 中で \"Init\" を表示して 42 を返す\\n3. \"Created\" → \"Init\" → \"42\" の順で表示される"
+          "content": "# 目標\\n\\nby lazyで遅延初期化を体験しましょう。\\n\\n1. `val value: Int by lazy { }` を定義\\n2. 中で \"Init\" を表示して 42 を返す\\n3. \"Created\" → \"Init\" → \"42\" の順で表示される"
         }
       ],
       "correctCode": "// Config クラスを定義する\\nclass Config {\\n    // valueをlazyで遅延初期化\\n    val value: Int by lazy {\\n        // \"Init\" を出力する\\n        println(\"Init\")\\n        // 42 を返す\\n        42\\n    }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // Config のインスタンスを作成する\\n    val c = Config()\\n    // \"Created\" を出力する\\n    println(\"Created\")\\n    // c.value を出力する\\n    println(c.value)\\n}",
@@ -322,7 +322,7 @@ export const kotlin4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nlateinitで後から初期化しましょう。\\n\\n1. `lateinit var config: String` を宣言\\n2. `setup()` 関数で値を設定\\n3. `s.setup(\"OK\")` で \"OK\" を設定\\n4. `s.config` を表示"
+          "content": "# 目標\\n\\nlateinitで後から初期化しましょう。\\n\\n1. `lateinit var config: String` を宣言\\n2. `setup()` 関数で値を設定\\n3. `s.setup(\"OK\")` で \"OK\" を設定\\n4. `s.config` を表示"
         }
       ],
       "correctCode": "// Service クラスを定義する\\nclass Service {\\n    // configをlateinitで宣言\\n    lateinit var config: String\\n    \\n    // setup 関数を定義する\\n    fun setup(c: String) { config = c }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // Service のインスタンスを作成する\\n    val s = Service()\\n    // setup を呼び出す\\n    s.setup(\"OK\")\\n    // s.config を出力する\\n    println(s.config)\\n}",
@@ -408,7 +408,7 @@ export const kotlin4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\ninline関数を作りましょう。\\n\\n1. `inline fun repeat(times, action)` を定義\\n2. `for` ループで action を呼び出す\\n3. `repeat(3) { println(it) }` で 0, 1, 2 を表示"
+          "content": "# 目標\\n\\ninline関数を作りましょう。\\n\\n1. `inline fun repeat(times, action)` を定義\\n2. `for` ループで action を呼び出す\\n3. `repeat(3) { println(it) }` で 0, 1, 2 を表示"
         }
       ],
       "correctCode": "// repeat関数をinlineで定義\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\n    // 0 から times まで繰り返す\\n    for (i in 0 until times) {\\n        // action を呼び出す\\n        action(i)\\n    }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // repeat を呼び出す\\n    repeat(3) { println(it) }\\n}",
@@ -486,7 +486,7 @@ export const kotlin4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n型名を返す関数を作りましょう。\\n\\n1. `inline fun <reified T> typeOf()` を定義\\n2. `T::class.simpleName` で型名を取得\\n3. `typeOf<String>()` は \"String\" を返す"
+          "content": "# 目標\\n\\n型名を返す関数を作りましょう。\\n\\n1. `inline fun <reified T> typeOf()` を定義\\n2. `T::class.simpleName` で型名を取得\\n3. `typeOf<String>()` は \"String\" を返す"
         }
       ],
       "correctCode": "// typeOf関数をreifiedで定義\\ninline fun <reified T> typeOf(): String {\\n    // 型名を返す\\n    return T::class.simpleName ?: \"Unknown\"\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // typeOf<String>() を出力する\\n    println(typeOf<String>())\\n}",
@@ -538,7 +538,7 @@ export const kotlin4Data = {
       "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
-          "title": "拡張関数（かくちょうかんすう）とは？",
+          "title": "拡張関数とは？",
           "content": "# 既存の型に機能を追加\\n\\n**拡張関数** は、すでにある型に新しい関数を追加する機能です。\\n\\nスマホにアプリを入れるように、IntやStringに自分の機能を追加できます。\\n\\n元のクラスを変更せずに拡張できます。"
         },
         {
@@ -555,7 +555,7 @@ export const kotlin4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nIntに「偶数かどうか」を判定する関数を追加しましょう。\\n\\n1. `fun Int.isEven()` を定義\\n2. `this % 2 == 0` で偶数判定\\n3. `4.isEven()` は true、`7.isEven()` は false"
+          "content": "# 目標\\n\\nIntに「偶数かどうか」を判定する関数を追加しましょう。\\n\\n1. `fun Int.isEven()` を定義\\n2. `this % 2 == 0` で偶数判定\\n3. `4.isEven()` は true、`7.isEven()` は false"
         }
       ],
       "correctCode": "// isEven() で拡張関数を定義する\\nfun Int.isEven() = this % 2 == 0\\n\\n// main 関数を定義する\\nfun main() {\\n    // 4.isEven() を出力する\\n    println(4.isEven())\\n    // 7.isEven() を出力する\\n    println(7.isEven())\\n}",
@@ -620,7 +620,7 @@ export const kotlin4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nletで文字列を大文字に変換しましょう。\\n\\n1. `\"hello\".let { }` を使う\\n2. `it.uppercase()` で大文字に\\n3. 結果は \"HELLO\" になる"
+          "content": "# 目標\\n\\nletで文字列を大文字に変換しましょう。\\n\\n1. `\"hello\".let { }` を使う\\n2. `it.uppercase()` で大文字に\\n3. 結果は \"HELLO\" になる"
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // letで\"hello\"を大文字に変換\\n    val result = \"hello\".let {\\n        // 大文字に変換する\\n        it.uppercase()\\n    }\\n    // result を出力する\\n    println(result)\\n}",
@@ -685,7 +685,7 @@ export const kotlin4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\napplyでConfigを設定しましょう。\\n\\n1. `Config().apply { }` を使う\\n2. `host = \"localhost\"` を設定\\n3. `port = 8080` を設定\\n4. 結果は \"localhost:8080\" と表示"
+          "content": "# 目標\\n\\napplyでConfigを設定しましょう。\\n\\n1. `Config().apply { }` を使う\\n2. `host = \"localhost\"` を設定\\n3. `port = 8080` を設定\\n4. 結果は \"localhost:8080\" と表示"
         }
       ],
       "correctCode": "// data class を定義する\\ndata class Config(var host: String = \"\", var port: Int = 0)\\n\\n// main 関数を定義する\\nfun main() {\\n    // apply でオブジェクトを設定する\\n    val config = Config().apply {\\n        // hostに\"localhost\"、portに8080を設定\\n        host = \"localhost\"\\n        // port を設定する\\n        port = 8080\\n    }\\n    // config を出力する\\n    println(\"${config.host}:${config.port}\")\\n}",
@@ -763,7 +763,7 @@ export const kotlin4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\ntypealiasで型に別名をつけましょう。\\n\\n1. `typealias StringList = List<String>` を定義\\n2. `printAll(items: StringList)` 関数を作る\\n3. `forEach` で各要素を表示"
+          "content": "# 目標\\n\\ntypealiasで型に別名をつけましょう。\\n\\n1. `typealias StringList = List<String>` を定義\\n2. `printAll(items: StringList)` 関数を作る\\n3. `forEach` で各要素を表示"
         }
       ],
       "correctCode": "// StringList型エイリアスを定義\\ntypealias StringList = List<String>\\n\\n// printAll 関数を定義する\\nfun printAll(items: StringList) {\\n    // forEach で各要素を出力する\\n    items.forEach { println(it) }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // printAll を呼び出す\\n    printAll(listOf(\"A\", \"B\", \"C\"))\\n}",

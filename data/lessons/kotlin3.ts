@@ -38,11 +38,11 @@ export const kotlin3Data = {
       "tutorialSlides": [
         {
           "title": "suspend（サスペンド）関数とは？",
-          "content": "# 一時停止（いちじていし）できる関数\\n\\n**suspend** は英語で「中断（ちゅうだん）する」という意味です。\\n\\n普通の関数は最後まで一気に実行されますが、suspend関数は途中で「待機（たいき）」できます。\\n\\n例えば、ネットからデータを取ってくる間、他の処理を進められます。"
+          "content": "# 一時停止できる関数\\n\\n**suspend** は英語で「中断する」という意味です。\\n\\n普通の関数は最後まで一気に実行されますが、suspend関数は途中で「待機」できます。\\n\\n例えば、ネットからデータを取ってくる間、他の処理を進められます。"
         },
         {
           "title": "コルーチンとは？",
-          "content": "# 軽い並行処理（へいこうしょり）\\n\\n**コルーチン** は、複数の処理を効率よく進める仕組みです。\\n\\n料理で例えると、お湯を沸かしている間に野菜を切る、というイメージです。\\n\\nsuspend関数はコルーチンの中で使います。"
+          "content": "# 軽い並行処理\\n\\n**コルーチン** は、複数の処理を効率よく進める仕組みです。\\n\\n料理で例えると、お湯を沸かしている間に野菜を切る、というイメージです。\\n\\nsuspend関数はコルーチンの中で使います。"
         },
         {
           "title": "suspend関数の書き方",
@@ -54,7 +54,7 @@ export const kotlin3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nsuspend関数を作って呼び出しましょう。\\n\\n1. `suspend fun getMessage()` を定義\\n2. `delay(100)` で100ミリ秒待機\\n3. `\"Hello\"` を返す\\n4. `runBlocking` の中で呼び出して表示"
+          "content": "# 目標\\n\\nsuspend関数を作って呼び出しましょう。\\n\\n1. `suspend fun getMessage()` を定義\\n2. `delay(100)` で100ミリ秒待機\\n3. `\"Hello\"` を返す\\n4. `runBlocking` の中で呼び出して表示"
         }
       ],
       "correctCode": "// coroutines をインポートする\\nimport kotlinx.coroutines.*\\n\\n// getMessage関数をsuspendで定義\\nsuspend fun getMessage(): String {\\n    // 100ミリ秒待機する\\n    delay(100)\\n    // \"Hello\" を返す\\n    return \"こんにちは\"\\n}\\n\\n// main 関数を定義する\\nfun main() = runBlocking {\\n    // getMessage() を出力する\\n    println(getMessage())\\n}",
@@ -118,7 +118,7 @@ export const kotlin3Data = {
       "tutorialSlides": [
         {
           "title": "sequence（シーケンス）とは？",
-          "content": "# 必要なときだけ計算する\\n\\n**sequence** は「遅延評価（ちえんひょうか）」でデータを生成します。\\n\\n遅延評価とは「必要になるまで計算しない」という仕組みです。\\n\\n蛇口をひねると水が出るように、使うときに初めてデータが作られます。"
+          "content": "# 必要なときだけ計算する\\n\\n**sequence** は「遅延評価」でデータを生成します。\\n\\n遅延評価とは「必要になるまで計算しない」という仕組みです。\\n\\n蛇口をひねると水が出るように、使うときに初めてデータが作られます。"
         },
         {
           "title": "なぜシーケンスが便利？",
@@ -126,7 +126,7 @@ export const kotlin3Data = {
         },
         {
           "title": "generateSequence の使い方",
-          "content": "# 無限（むげん）のシーケンスを作る\\n\\n```kotlin\\nval nums = generateSequence(1) { it * 2 }\\n```\\n\\nこれは「1から始めて、次は2倍」という無限のシーケンスです。\\n\\n1, 2, 4, 8, 16, 32... と続きます。\\n\\n無限でも、使う分だけ計算されるので大丈夫です。"
+          "content": "# 無限のシーケンスを作る\\n\\n```kotlin\\nval nums = generateSequence(1) { it * 2 }\\n```\\n\\nこれは「1から始めて、次は2倍」という無限のシーケンスです。\\n\\n1, 2, 4, 8, 16, 32... と続きます。\\n\\n無限でも、使う分だけ計算されるので大丈夫です。"
         },
         {
           "title": "take と toList",
@@ -134,7 +134,7 @@ export const kotlin3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n2倍ずつ増えるシーケンスを作りましょう。\\n\\n1. `generateSequence(1) { it * 2 }` で開始\\n2. `.take(4)` で4つ取る\\n3. `.toList()` でリストに変換\\n4. 結果は `[1, 2, 4, 8]` になる"
+          "content": "# 目標\\n\\n2倍ずつ増えるシーケンスを作りましょう。\\n\\n1. `generateSequence(1) { it * 2 }` で開始\\n2. `.take(4)` で4つ取る\\n3. `.toList()` でリストに変換\\n4. 結果は `[1, 2, 4, 8]` になる"
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // generateSequence で無限シーケンスを生成する\\n    val nums = generateSequence(1) { it * 2 }\\n        // 4つ取得する\\n        .take(4)\\n        // リストに変換する\\n        .toList()\\n    // nums を出力する\\n    println(nums)\\n}",
@@ -186,7 +186,7 @@ export const kotlin3Data = {
       "tutorialSlides": [
         {
           "title": "inline（インライン）関数とは？",
-          "content": "# 関数の中身を直接埋め込む\\n\\n**inline** は、関数を呼び出す代わりに、中身をその場に展開（てんかい）します。\\n\\nコピー＆ペーストで貼り付けるイメージです。\\n\\nこうすると、関数呼び出しの時間がなくなって速くなります。"
+          "content": "# 関数の中身を直接埋め込む\\n\\n**inline** は、関数を呼び出す代わりに、中身をその場に展開します。\\n\\nコピー＆ペーストで貼り付けるイメージです。\\n\\nこうすると、関数呼び出しの時間がなくなって速くなります。"
         },
         {
           "title": "なぜ inline が必要？",
@@ -202,7 +202,7 @@ export const kotlin3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\ninline関数を作ってみましょう。\\n\\n1. `inline fun repeat(times: Int, action: (Int) -> Unit)` を定義\\n2. `for` ループで action を呼び出す\\n3. `repeat(3) { println(it) }` で0, 1, 2を表示"
+          "content": "# 目標\\n\\ninline関数を作ってみましょう。\\n\\n1. `inline fun repeat(times: Int, action: (Int) -> Unit)` を定義\\n2. `for` ループで action を呼び出す\\n3. `repeat(3) { println(it) }` で0, 1, 2を表示"
         }
       ],
       "correctCode": "// repeat関数をinlineで定義\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\n    // 0 から times まで繰り返す\\n    for (i in 0 until times) action(i)\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // repeat を呼び出す\\n    repeat(3) { println(it) }\\n}",
@@ -257,7 +257,7 @@ export const kotlin3Data = {
       "tutorialSlides": [
         {
           "title": "reified（レイファイド）型パラメータとは？",
-          "content": "# 実行時に型情報を使う\\n\\n通常、ジェネリクス（型パラメータ）の型情報は実行時には消えてしまいます。\\n\\n**reified** をつけると、実行時にも型情報を使えます。\\n\\n「reify」は「具体化（ぐたいか）する」という意味です。"
+          "content": "# 実行時に型情報を使う\\n\\n通常、ジェネリクス（型パラメータ）の型情報は実行時には消えてしまいます。\\n\\n**reified** をつけると、実行時にも型情報を使えます。\\n\\n「reify」は「具体化する」という意味です。"
         },
         {
           "title": "なぜ reified が必要？",
@@ -273,7 +273,7 @@ export const kotlin3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n型チェック関数を作りましょう。\\n\\n1. `inline fun <reified T> checkType` を定義\\n2. `value is T` で型チェック\\n3. `checkType<String>(\"test\")` は true\\n4. `checkType<Int>(\"test\")` は false"
+          "content": "# 目標\\n\\n型チェック関数を作りましょう。\\n\\n1. `inline fun <reified T> checkType` を定義\\n2. `value is T` で型チェック\\n3. `checkType<String>(\"test\")` は true\\n4. `checkType<Int>(\"test\")` は false"
         }
       ],
       "correctCode": "// checkType関数をreifiedで定義\\ninline fun <reified T> checkType(value: Any): Boolean {\\n    // value が T 型かチェックする\\n    return value is T\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // String 型かチェックする\\n    println(checkType<String>(\"テスト\"))\\n    // Int 型かチェックする\\n    println(checkType<Int>(\"テスト\"))\\n}",
@@ -331,7 +331,7 @@ export const kotlin3Data = {
       "tutorialSlides": [
         {
           "title": "apply（アプライ）スコープ関数とは？",
-          "content": "# オブジェクトを設定して返す\\n\\n**apply** は「適用（てきよう）する」という意味です。\\n\\nオブジェクトに対して設定を行い、そのオブジェクト自体を返します。\\n\\n新しいオブジェクトを作って設定するときに便利です。"
+          "content": "# オブジェクトを設定して返す\\n\\n**apply** は「適用する」という意味です。\\n\\nオブジェクトに対して設定を行い、そのオブジェクト自体を返します。\\n\\n新しいオブジェクトを作って設定するときに便利です。"
         },
         {
           "title": "apply の中では this が使える",
@@ -347,7 +347,7 @@ export const kotlin3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\napplyでConfigを設定しましょう。\\n\\n1. `Config()` で新しいオブジェクトを作る\\n2. `.apply { }` で設定する\\n3. `host` を \"localhost\" に\\n4. `port` を 8080 に"
+          "content": "# 目標\\n\\napplyでConfigを設定しましょう。\\n\\n1. `Config()` で新しいオブジェクトを作る\\n2. `.apply { }` で設定する\\n3. `host` を \"localhost\" に\\n4. `port` を 8080 に"
         }
       ],
       "correctCode": "// data class を定義する\\ndata class Config(var host: String = \"\", var port: Int = 0)\\n\\n// main 関数を定義する\\nfun main() {\\n    // apply で設定してオブジェクトを返す\\n    val cfg = Config().apply {\\n        // hostを設定する\\n        host = \"localhost\"\\n        // portを設定する\\n        port = 8080\\n    }\\n    // cfg を出力する\\n    println(cfg)\\n}",
@@ -423,7 +423,7 @@ export const kotlin3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nalsoで値を確認しましょう。\\n\\n1. `42.also { }` で42に対して処理する\\n2. `println(\"Value: $it\")` でログ出力\\n3. 結果の num は 42 のまま"
+          "content": "# 目標\\n\\nalsoで値を確認しましょう。\\n\\n1. `42.also { }` で42に対して処理する\\n2. `println(\"Value: $it\")` でログ出力\\n3. 結果の num は 42 のまま"
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // also で副作用を実行してオブジェクトを返す\\n    val num = 42.also {\\n        // 「Value: it」の形式で出力\\n        println(\"Value: $it\")\\n    }\\n    // num を出力する\\n    println(num)\\n}",
@@ -489,7 +489,7 @@ export const kotlin3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nrunで文字列を分割して単語数を数えましょう。\\n\\n1. `\"Hello World\".run { }` を使う\\n2. `split(\" \")` でスペースで分割\\n3. `.size` で要素数を取得\\n4. 結果は 2 になる"
+          "content": "# 目標\\n\\nrunで文字列を分割して単語数を数えましょう。\\n\\n1. `\"Hello World\".run { }` を使う\\n2. `split(\" \")` でスペースで分割\\n3. `.size` で要素数を取得\\n4. 結果は 2 になる"
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // run でブロックを実行して結果を返す\\n    val result = \"Hello World\".run {\\n        // スペースで分割してサイズを取得する\\n        split(\" \").size\\n    }\\n    // result を出力する\\n    println(result)\\n}",
@@ -555,7 +555,7 @@ export const kotlin3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\ntakeIfで条件付きの値を取得しましょう。\\n\\n1. `10.takeIf { it > 5 }` を実行\\n2. 10は5より大きいので条件を満たす\\n3. 結果は 10 になる（nullではない）"
+          "content": "# 目標\\n\\ntakeIfで条件付きの値を取得しましょう。\\n\\n1. `10.takeIf { it > 5 }` を実行\\n2. 10は5より大きいので条件を満たす\\n3. 結果は 10 になる（nullではない）"
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // takeIf で条件を満たせば値を返す\\n    val num = 10.takeIf { it > 5 }\\n    // num を出力する\\n    println(num)\\n}",
@@ -615,7 +615,7 @@ export const kotlin3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n数を偶数・奇数でグループ分けしましょう。\\n\\n1. `listOf(1, 2, 3, 4, 5)` でリストを作る\\n2. `.groupBy { it % 2 }` でグループ化\\n3. 結果は `{1=[1, 3, 5], 0=[2, 4]}` になる"
+          "content": "# 目標\\n\\n数を偶数・奇数でグループ分けしましょう。\\n\\n1. `listOf(1, 2, 3, 4, 5)` でリストを作る\\n2. `.groupBy { it % 2 }` でグループ化\\n3. 結果は `{1=[1, 3, 5], 0=[2, 4]}` になる"
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // numsにlistOf(1, 2, 3, 4, 5)を代入\\n    val nums = listOf(1, 2, 3, 4, 5)\\n    // groupBy でグループ化する\\n    val grouped = nums.groupBy { it % 2 }\\n    // grouped を出力する\\n    println(grouped)\\n}",
@@ -663,11 +663,11 @@ export const kotlin3Data = {
       "tutorialSlides": [
         {
           "title": "fold（フォールド）とは？",
-          "content": "# 要素を1つにまとめる\\n\\n**fold** は「畳（たた）む」という意味です。\\n\\nリストの要素を順番に処理して、1つの値にまとめます。\\n\\n洗濯物を畳んで小さくするイメージです。"
+          "content": "# 要素を1つにまとめる\\n\\n**fold** は「畳む」という意味です。\\n\\nリストの要素を順番に処理して、1つの値にまとめます。\\n\\n洗濯物を畳んで小さくするイメージです。"
         },
         {
           "title": "fold の仕組み",
-          "content": "# 初期値から始めて累積（るいせき）\\n\\n```kotlin\\nlistOf(1, 2, 3).fold(0) { acc, n -> acc + n }\\n```\\n\\n- `0` が初期値\\n- `acc` は累積値（これまでの結果）\\n- `n` は今見ている要素\\n\\n0 + 1 = 1 → 1 + 2 = 3 → 3 + 3 = 6"
+          "content": "# 初期値から始めて累積\\n\\n```kotlin\\nlistOf(1, 2, 3).fold(0) { acc, n -> acc + n }\\n```\\n\\n- `0` が初期値\\n- `acc` は累積値（これまでの結果）\\n- `n` は今見ている要素\\n\\n0 + 1 = 1 → 1 + 2 = 3 → 3 + 3 = 6"
         },
         {
           "title": "fold で掛け算",
@@ -679,7 +679,7 @@ export const kotlin3Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nfoldで1から4までの積（せき）を計算しましょう。\\n\\n1. `listOf(1, 2, 3, 4)` でリストを作る\\n2. `.fold(1) { acc, n -> acc * n }` で掛け算\\n3. 結果は 24 (= 1 * 2 * 3 * 4) になる"
+          "content": "# 目標\\n\\nfoldで1から4までの積を計算しましょう。\\n\\n1. `listOf(1, 2, 3, 4)` でリストを作る\\n2. `.fold(1) { acc, n -> acc * n }` で掛け算\\n3. 結果は 24 (= 1 * 2 * 3 * 4) になる"
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // numsにlistOf(1, 2, 3, 4)を代入\\n    val nums = listOf(1, 2, 3, 4)\\n    // fold で畳み込む\\n    val product = nums.fold(1) { acc, n -> acc * n }\\n    // product を出力する\\n    println(product)\\n}",

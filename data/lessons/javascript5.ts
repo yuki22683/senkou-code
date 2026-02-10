@@ -29,7 +29,7 @@ export const javascriptData5 = {
       "description": "パターンを使って文字列を検索・置換する方法を学びます",
       "tutorialSlides": [
         {
-          "title": "正規表現（せいきひょうげん）リテラルとは？",
+          "title": "正規表現リテラルとは？",
           "content": "# 文字のパターンを定義する\\n\\n**正規表現** は、文字列の「パターン」を表現する方法です。\\n\\n**身近なたとえ：**\\n「『あ』で始まる言葉を探して」とお願いするイメージです。正規表現を使えば、もっと複雑なパターンも探せます。\\n\\n**書き方：**\\nパターンを `/` で囲みます。\\n\\n**コード例：**\\n```javascript\\nconst pattern = /hello/;\\n// 'hello world' に 'hello' が含まれる？\\nconsole.log(pattern.test('hello world'));\\n```\\n**実行結果：**\\n```\\ntrue\\n```"
         }
       ],
@@ -464,7 +464,7 @@ export const javascriptData5 = {
       "tutorialSlides": [
         {
           "title": "WeakMapとは？",
-          "content": "# 弱参照（じゃくさんしょう）のMap\\n\\n**WeakMap** は、オブジェクトをキーにできる特殊な Map です。\\n\\n**「弱参照」って何？**\\nオブジェクトが不要になったら、自動で片付けられる（ガベージコレクション）という意味です。メモリを節約できます！\\n\\n**身近なたとえ：**\\n付箋（メモ）を本に貼るイメージです。本を捨てたら、付箋も一緒に捨てられます。\\n\\n**コード例：**\\n```javascript\\nconst cache = new WeakMap();\\nconst obj = {};\\ncache.set(obj, 'cached value');  // キーはオブジェクト\\nconsole.log(cache.get(obj));     // 'cached value'\\n```\\n\\n**使いどころ：**\\nプライベートなデータを安全に保存したいとき"
+          "content": "# 弱参照のMap\\n\\n**WeakMap** は、オブジェクトをキーにできる特殊な Map です。\\n\\n**「弱参照」って何？**\\nオブジェクトが不要になったら、自動で片付けられる（ガベージコレクション）という意味です。メモリを節約できます！\\n\\n**身近なたとえ：**\\n付箋（メモ）を本に貼るイメージです。本を捨てたら、付箋も一緒に捨てられます。\\n\\n**コード例：**\\n```javascript\\nconst cache = new WeakMap();\\nconst obj = {};\\ncache.set(obj, 'cached value');  // キーはオブジェクト\\nconsole.log(cache.get(obj));     // 'cached value'\\n```\\n\\n**使いどころ：**\\nプライベートなデータを安全に保存したいとき"
         }
       ],
       "correctCode": "// privateDataにnew WeakMap()を代入\\nconst privateData = new WeakMap();\\n\\n// Userクラスを定義\\nclass User {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // 秘密データをWeakMapに保存\\n    privateData.set(this, { password: '秘密' });\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  getPassword() {\\n    // WeakMapから秘密データを取得して返す\\n    return privateData.get(this).password;\\n  }\\n}\\n\\n// userにnew User('太郎')を代入\\nconst user = new User('太郎');\\n// パスワードを取得して表示\\nconsole.log(user.getPassword());",

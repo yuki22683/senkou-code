@@ -310,7 +310,7 @@ export const typescriptData2 = {
       "tutorialSlides": [
         {
           "title": "enumとは？",
-          "content": "# 名前付きの定数群\\n\\n**enum**（イーナム）は、「列挙型（れっきょがた）」と呼ばれ、関連する値に名前をつけてグループ化できる機能です。\\n\\n## たとえ話\\n\\n方角を考えてみてください。「上・下・左・右」という4つの決まった選択肢がありますよね。これをプログラムで表すのに便利なのが enum です！\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nenum Direction {  // 「方角」というグループ\\n    Up,     // 上\\n    Down,   // 下\\n    Left,   // 左\\n    Right   // 右\\n}\\n\\nlet dir: Direction = Direction.Up;  // 「上」を選択\\n```\\n\\nこれで「Up」「Down」など、決まった値だけを使えるようになります！"
+          "content": "# 名前付きの定数群\\n\\n**enum**（イーナム）は、「列挙型」と呼ばれ、関連する値に名前をつけてグループ化できる機能です。\\n\\n## たとえ話\\n\\n方角を考えてみてください。「上・下・左・右」という4つの決まった選択肢がありますよね。これをプログラムで表すのに便利なのが enum です！\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nenum Direction {  // 「方角」というグループ\\n    Up,     // 上\\n    Down,   // 下\\n    Left,   // 左\\n    Right   // 右\\n}\\n\\nlet dir: Direction = Direction.Up;  // 「上」を選択\\n```\\n\\nこれで「Up」「Down」など、決まった値だけを使えるようになります！"
         },
         {
           "title": "enumの値",
@@ -377,7 +377,7 @@ export const typescriptData2 = {
         },
         {
           "title": "型推論と一緒に",
-          "content": "# TypeScriptが型を推測\\n\\nTypeScriptは賢いので、渡した値から型を自動的に判断してくれます。これを **型推論（かたすいろん）** と呼びます。\\n\\n## たとえ話\\n\\n「りんご」を箱に入れたら、わざわざ「これはりんご箱です」と言わなくても、見ればわかりますよね。TypeScriptも同じです！\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nfunction identity<T>(arg: T): T {\\n    return arg;\\n}\\n\\n// <string> を書かなくても、TypeScriptが推測してくれる！\\nconst str = identity('hello');  // string と推論\\nconst num = identity(42);       // number と推論\\n```\\n\\n便利ですね！"
+          "content": "# TypeScriptが型を推測\\n\\nTypeScriptは賢いので、渡した値から型を自動的に判断してくれます。これを **型推論** と呼びます。\\n\\n## たとえ話\\n\\n「りんご」を箱に入れたら、わざわざ「これはりんご箱です」と言わなくても、見ればわかりますよね。TypeScriptも同じです！\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nfunction identity<T>(arg: T): T {\\n    return arg;\\n}\\n\\n// <string> を書かなくても、TypeScriptが推測してくれる！\\nconst str = identity('hello');  // string と推論\\nconst num = identity(42);       // number と推論\\n```\\n\\n便利ですね！"
         }
       ],
       "correctCode": "// <T> で型パラメータを定義\\nfunction wrap<T>(value: T): T[] {\\n    // valueを配列に入れて返す\\n    return [value];\\n}\\n\\n// 関数を呼び出し\\nconst arr = wrap(5);\\n// arrを出力\\nconsole.log(arr);",
@@ -530,7 +530,7 @@ export const typescriptData2 = {
       "tutorialSlides": [
         {
           "title": "extendsで拡張",
-          "content": "# インターフェースの継承（けいしょう）\\n\\n**extends**（エクステンズ）を使うと、既存のインターフェースを「土台」にして、新しいプロパティを追加できます。\\n\\n## たとえ話\\n\\n「動物カード」には「名前」が書いてあります。「犬カード」は動物なので名前があり、さらに「犬種」も書いてあります。\\n\\nつまり「犬カード」は「動物カード」を拡張したものですね！\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ninterface Animal {\\n    name: string;  // 動物の名前\\n}\\n\\ninterface Dog extends Animal {\\n    breed: string;  // 犬種を追加！\\n}\\n// Dogはnameとbreedの両方を持つ\\n```"
+          "content": "# インターフェースの継承\\n\\n**extends**（エクステンズ）を使うと、既存のインターフェースを「土台」にして、新しいプロパティを追加できます。\\n\\n## たとえ話\\n\\n「動物カード」には「名前」が書いてあります。「犬カード」は動物なので名前があり、さらに「犬種」も書いてあります。\\n\\nつまり「犬カード」は「動物カード」を拡張したものですね！\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ninterface Animal {\\n    name: string;  // 動物の名前\\n}\\n\\ninterface Dog extends Animal {\\n    breed: string;  // 犬種を追加！\\n}\\n// Dogはnameとbreedの両方を持つ\\n```"
         },
         {
           "title": "複数の拡張",

@@ -153,7 +153,7 @@ export const pythonData3 = {
         },
         {
           "title": "**kwargs の使い方",
-          "content": "# 辞書（じしょ）として扱える！\\n\\n受け取った `kwargs` は **辞書** として使えます。\\n\\n`.items()`, `.keys()`, `.values()` などのメソッドが使えます！\\n\\n**例：** ユーザー情報を作ろう！\\n\\n```python\\ndef create_user(**kwargs):\\n    return kwargs\\n\\nuser = create_user(name='花子', email='hanako@example.com')\\nprint(user['name'])  # => 花子\\n```\\n\\n**何をしているか：**\\n1. `create_user(name='花子', email='...')` で名前付き引数を渡す\\n2. `**kwargs` でそれらを辞書として受け取る\\n3. `{'name': '花子', 'email': '...'}` という辞書が返される\\n4. `user['name']` で「花子」が取り出せる！\\n\\n**使いどころ：** 設定項目（オプション）をたくさん渡したいとき！"
+          "content": "# 辞書として扱える！\\n\\n受け取った `kwargs` は **辞書** として使えます。\\n\\n`.items()`, `.keys()`, `.values()` などのメソッドが使えます！\\n\\n**例：** ユーザー情報を作ろう！\\n\\n```python\\ndef create_user(**kwargs):\\n    return kwargs\\n\\nuser = create_user(name='花子', email='hanako@example.com')\\nprint(user['name'])  # => 花子\\n```\\n\\n**何をしているか：**\\n1. `create_user(name='花子', email='...')` で名前付き引数を渡す\\n2. `**kwargs` でそれらを辞書として受け取る\\n3. `{'name': '花子', 'email': '...'}` という辞書が返される\\n4. `user['name']` で「花子」が取り出せる！\\n\\n**使いどころ：** 設定項目（オプション）をたくさん渡したいとき！"
         }
       ],
       "correctCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef print_info(**kwargs):\\n    # 1番目の k にキー、2番目の v に値が入る\\n    for k, v in kwargs.items():\\n        # キーと値をイコールで繋いで表示\\n        print(f'{k} = {v}')\\n\\n# print_info(x=10, y=20)を実行\\nprint_info(x=10, y=20)",
@@ -240,7 +240,7 @@ export const pythonData3 = {
       "tutorialSlides": [
         {
           "title": "zip とは？",
-          "content": "# 複数のリストを「ジッパー」でつなごう！\\n\\n**zip（ジップ）** を使うと、**複数のリストの要素を同時に** 取り出せます。\\n\\n「zip」はジッパー（ファスナー）のことです。2つのものを噛（か）み合わせるイメージです！\\n\\nたとえば、「名前のリスト」と「年齢のリスト」を **ペアにして** 処理したいときに便利です。\\n\\n**例：** 名前と年齢をペアにしよう！\\n\\n```python\\nnames = ['Alice', 'Bob']\\nages = [20, 25]\\nfor name, age in zip(names, ages):\\n    print(f'{name} is {age}')\\n```\\n=> Alice is 20\\n=> Bob is 25\\n\\n1番目どうし、2番目どうしがペアになります！"
+          "content": "# 複数のリストを「ジッパー」でつなごう！\\n\\n**zip（ジップ）** を使うと、**複数のリストの要素を同時に** 取り出せます。\\n\\n「zip」はジッパー（ファスナー）のことです。2つのものを噛み合わせるイメージです！\\n\\nたとえば、「名前のリスト」と「年齢のリスト」を **ペアにして** 処理したいときに便利です。\\n\\n**例：** 名前と年齢をペアにしよう！\\n\\n```python\\nnames = ['Alice', 'Bob']\\nages = [20, 25]\\nfor name, age in zip(names, ages):\\n    print(f'{name} is {age}')\\n```\\n=> Alice is 20\\n=> Bob is 25\\n\\n1番目どうし、2番目どうしがペアになります！"
         },
         {
           "title": "zip の使い方",
@@ -291,7 +291,7 @@ export const pythonData3 = {
           "content": "# 値を「1つずつ」作る工場！\\n\\n**ジェネレータ** とは、値を **一度に全部作らず、必要なときに1つずつ生成する** 特別な関数です。\\n\\nたとえば、パン工場で1000個のパンを作るとき：\\n- **リスト** = 1000個全部作ってから渡す（場所をたくさん使う）\\n- **ジェネレータ** = 1個作って渡す、1個作って渡す...（場所を節約）\\n\\n**yield（イールド）** キーワードを使って定義します。「yield」は「生み出す」という意味です。\\n\\n**例：** 数を1つずつ生成しよう！\\n\\n```python\\ndef count_up(n):\\n    for i in range(n):\\n        yield i\\n\\nfor num in count_up(3):\\n    print(num)  # 0, 1, 2\\n```"
         },
         {
-          "title": "ジェネレータの利点（りてん）",
+          "title": "ジェネレータの利点",
           "content": "# 大量のデータを効率よく処理！\\n\\nリストは全データを **メモリ（コンピュータの記憶場所）** に保持しますが、ジェネレータは **1つずつ作るのでメモリを節約** できます。\\n\\n**例：** 1億個の数を生成しても大丈夫！\\n\\n```python\\ndef big_range(n):\\n    i = 0\\n    while i < n:\\n        yield i\\n        i += 1\\n```\\n\\n**何をしているか：**\\n- `yield i` で値を1つ返す\\n- 次に呼ばれるまで **一時停止**\\n- 次に呼ばれたら `i += 1` して続きを実行\\n\\n**ポイント：**\\n- `return` は関数を終了して値を返す\\n- `yield` は値を返すけど関数は **一時停止** するだけ（終了しない）\\n\\n**使いどころ：** 大量のデータを扱うとき、メモリを節約したいとき！"
         }
       ],
@@ -384,7 +384,7 @@ export const pythonData3 = {
       "tutorialSlides": [
         {
           "title": "デコレータとは？",
-          "content": "# 関数を「飾（かざ）り付け」しよう！\\n\\n**デコレータ** は、関数に **追加の機能をつける** 仕組みです。\\n\\n「デコレーション」は「飾り付け」という意味ですね。ケーキにクリームで飾りをつけるように、関数に機能を追加します！\\n\\n**例：** 関数の前後にメッセージを追加！\\n\\n```python\\ndef my_decorator(func):\\n    def wrapper():\\n        print('Before')  # 前に追加\\n        func()           # 元の関数を実行\\n        print('After')   # 後に追加\\n    return wrapper\\n\\n@my_decorator\\ndef say_hello():\\n    print('Hello!')\\n```\\n\\n**仕組み：**\\n- デコレータは「関数を受け取って、新しい関数を返す関数」\\n- 元の関数を「包んで」、追加の処理をつける"
+          "content": "# 関数を「飾り付け」しよう！\\n\\n**デコレータ** は、関数に **追加の機能をつける** 仕組みです。\\n\\n「デコレーション」は「飾り付け」という意味ですね。ケーキにクリームで飾りをつけるように、関数に機能を追加します！\\n\\n**例：** 関数の前後にメッセージを追加！\\n\\n```python\\ndef my_decorator(func):\\n    def wrapper():\\n        print('Before')  # 前に追加\\n        func()           # 元の関数を実行\\n        print('After')   # 後に追加\\n    return wrapper\\n\\n@my_decorator\\ndef say_hello():\\n    print('Hello!')\\n```\\n\\n**仕組み：**\\n- デコレータは「関数を受け取って、新しい関数を返す関数」\\n- 元の関数を「包んで」、追加の処理をつける"
         },
         {
           "title": "デコレータの使い方",

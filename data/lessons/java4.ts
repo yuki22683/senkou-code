@@ -86,12 +86,12 @@ export const javaData4 = {
       "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
-          "title": "extends で制約（せいやく）",
+          "title": "extends で制約",
           "content": "# 特定の型のサブタイプに限定\\n\\n**extends** を使うと、「このジェネリクスには〇〇の仲間だけ入れられます」という制限をつけられます。\\n\\n**たとえ話：** 「動物園の檻」には動物しか入れられないように、「Number（数字）の箱」には数字系の型しか入れられません。\\n\\n```java\\n// T は Number か、その子クラスだけOK\\nclass NumBox<T extends Number> {\\n    private T value;\\n    public double doubleValue() {\\n        return value.doubleValue();  // Numberのメソッドが使える！\\n    }\\n}\\n```"
         },
         {
           "title": "メリット",
-          "content": "# 型固有（かたこゆう）のメソッドが使える\\n\\n制限をつけると、その型のメソッドが使えるようになります。\\n\\n**OKな例**\\n```java\\nNumBox<Integer> box = new NumBox<>();\\n// OK: Integer は Number の仲間\\n```\\n\\n**NGな例**\\n```java\\nNumBox<String> box2; \\n// コンパイルエラー！Stringは数字じゃない\\n```\\n\\n**メリット：**\\n- 間違った型を入れるのを防げる\\n- Number系のメソッド（doubleValue など）が使える"
+          "content": "# 型固有のメソッドが使える\\n\\n制限をつけると、その型のメソッドが使えるようになります。\\n\\n**OKな例**\\n```java\\nNumBox<Integer> box = new NumBox<>();\\n// OK: Integer は Number の仲間\\n```\\n\\n**NGな例**\\n```java\\nNumBox<String> box2; \\n// コンパイルエラー！Stringは数字じゃない\\n```\\n\\n**メリット：**\\n- 間違った型を入れるのを防げる\\n- Number系のメソッド（doubleValue など）が使える"
         }
       ],
       "correctCode": "// extends で型の上限を Number に制限する\\nclass Calculator<T extends Number> {\\n    private T value;\\n    public Calculator(T v) { value = v; }\\n    public double getDouble() { return value.doubleValue(); }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // calcにnew Calculator<>(42)を代入\\n        Calculator<Integer> calc = new Calculator<>(42);\\n        // getDouble メソッドを呼び出す\\n        System.out.println(calc.getDouble());\\n    }\\n}",
@@ -151,7 +151,7 @@ export const javaData4 = {
         },
         {
           "title": "境界付きワイルドカード",
-          "content": "# 上限・下限の指定\\n\\nワイルドカードにも制限をつけられます。\\n\\n**上限（じょうげん）を指定：extends**\\n```java\\nList<? extends Number>  // Numberか、その子クラス\\n// Integer, Double などはOK、StringはNG\\n```\\n\\n**下限（かげん）を指定：super**\\n```java\\nList<? super Integer>  // Integerか、その親クラス\\n// Integer, Number, Object などがOK\\n```\\n\\n**覚え方：**\\n- extends → 「〜以下」（Numberから下）\\n- super → 「〜以上」（Integerから上）"
+          "content": "# 上限・下限の指定\\n\\nワイルドカードにも制限をつけられます。\\n\\n**上限を指定：extends**\\n```java\\nList<? extends Number>  // Numberか、その子クラス\\n// Integer, Double などはOK、StringはNG\\n```\\n\\n**下限を指定：super**\\n```java\\nList<? super Integer>  // Integerか、その親クラス\\n// Integer, Number, Object などがOK\\n```\\n\\n**覚え方：**\\n- extends → 「〜以下」（Numberから下）\\n- super → 「〜以上」（Integerから上）"
         }
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    // ? で任意の型を表すワイルドカード\\n    public static void printAll(List<?> list) {\\n        for (Object item : list) {\\n            // println で出力する\\n            System.out.println(item);\\n        }\\n    }\\n    public static void main(String[] args) {\\n        // namesに[\"A\", \"B\"]を代入\\n        List<String> names = Arrays.asList(\"A\", \"B\");\\n        // printAll メソッドを呼び出す\\n        printAll(names);\\n    }\\n}",
@@ -211,7 +211,7 @@ export const javaData4 = {
       "tutorialSlides": [
         {
           "title": "Map（マップ）とは？",
-          "content": "# キーと値の対応（たいおう）\\n\\n**Map**（マップ＝対応表）は、「キー（名前）」と「値（データ）」のペアを保存できるデータ構造です。\\n\\n**たとえ話：** 電話帳のようなものです。「名前」で検索すると「電話番号」が分かりますよね。それがMapです。\\n\\n```java\\nMap<String, Integer> ages = new HashMap<>();  // 電話帳を作る\\nages.put(\"Alice\", 25);  // Aliceの年齢は25\\nages.put(\"Bob\", 30);    // Bobの年齢は30\\n\\nint age = ages.get(\"Alice\"); // Aliceで検索→25が返る\\n```"
+          "content": "# キーと値の対応\\n\\n**Map**（マップ＝対応表）は、「キー（名前）」と「値（データ）」のペアを保存できるデータ構造です。\\n\\n**たとえ話：** 電話帳のようなものです。「名前」で検索すると「電話番号」が分かりますよね。それがMapです。\\n\\n```java\\nMap<String, Integer> ages = new HashMap<>();  // 電話帳を作る\\nages.put(\"Alice\", 25);  // Aliceの年齢は25\\nages.put(\"Bob\", 30);    // Bobの年齢は30\\n\\nint age = ages.get(\"Alice\"); // Aliceで検索→25が返る\\n```"
         },
         {
           "title": "便利なメソッド",
@@ -337,7 +337,7 @@ export const javaData4 = {
         },
         {
           "title": "便利なメソッド",
-          "content": "# Comparatorの作成方法\\n\\nいろいろな比較方法を簡単に作れます。\\n\\n**自然順序（しぜんじゅんじょ）**\\n```java\\nComparator.naturalOrder()  // あいうえお順、数字なら小さい順\\n```\\n\\n**逆順（ぎゃくじゅん）**\\n```java\\nComparator.reverseOrder()  // 自然順序の逆\\n```\\n\\n**特定の値で比較**\\n```java\\nComparator.comparing(Person::getName)  // 名前で比較\\nComparator.comparing(Person::getAge)   // 年齢で比較\\n```"
+          "content": "# Comparatorの作成方法\\n\\nいろいろな比較方法を簡単に作れます。\\n\\n**自然順序**\\n```java\\nComparator.naturalOrder()  // あいうえお順、数字なら小さい順\\n```\\n\\n**逆順**\\n```java\\nComparator.reverseOrder()  // 自然順序の逆\\n```\\n\\n**特定の値で比較**\\n```java\\nComparator.comparing(Person::getName)  // 名前で比較\\nComparator.comparing(Person::getAge)   // 年齢で比較\\n```"
         }
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // wordsに[\"猫\", \"a\", \"elephant\"]を代入\\n        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));\\n        // comparing でプロパティを基準に比較する\\n        words.sort(Comparator.comparing(String::length));\\n        // println で出力する\\n        System.out.println(words);\\n    }\\n}",
@@ -387,11 +387,11 @@ export const javaData4 = {
       "tutorialSlides": [
         {
           "title": "Comparable（コンパラブル）とは？",
-          "content": "# 自然順序（しぜんじゅんじょ）の定義\\n\\n**Comparable**（コンパラブル＝比較可能な）を実装すると、オブジェクトに「自然な並び順」を定義できます。\\n\\n**たとえ話：** 数字には「1<2<3」という自然な順番があるように、自分で作ったクラスにも「この順番で並べてね」と教えられます。\\n\\n```java\\nclass Person implements Comparable<Person> {\\n    String name;\\n    public int compareTo(Person other) {\\n        // 名前のあいうえお順で比較\\n        return this.name.compareTo(other.name);\\n    }\\n}\\n```"
+          "content": "# 自然順序の定義\\n\\n**Comparable**（コンパラブル＝比較可能な）を実装すると、オブジェクトに「自然な並び順」を定義できます。\\n\\n**たとえ話：** 数字には「1<2<3」という自然な順番があるように、自分で作ったクラスにも「この順番で並べてね」と教えられます。\\n\\n```java\\nclass Person implements Comparable<Person> {\\n    String name;\\n    public int compareTo(Person other) {\\n        // 名前のあいうえお順で比較\\n        return this.name.compareTo(other.name);\\n    }\\n}\\n```"
         },
         {
           "title": "compareTo のルール",
-          "content": "# 戻り値（もどりち）の意味\\n\\n`compareTo` メソッドは、比較結果を数字で返します。\\n\\n**ルール：**\\n- `this < other` → マイナスの数を返す（自分が先）\\n- `this == other` → 0を返す（同じ順番）\\n- `this > other` → プラスの数を返す（相手が先）\\n\\n**例：年齢で比較する場合**\\n```java\\nreturn this.age - other.age;\\n// 25 - 30 = -5 （マイナス→自分が先）\\n// 30 - 30 = 0  （0→同じ）\\n// 35 - 30 = 5  （プラス→相手が先）\\n```"
+          "content": "# 戻り値の意味\\n\\n`compareTo` メソッドは、比較結果を数字で返します。\\n\\n**ルール：**\\n- `this < other` → マイナスの数を返す（自分が先）\\n- `this == other` → 0を返す（同じ順番）\\n- `this > other` → プラスの数を返す（相手が先）\\n\\n**例：年齢で比較する場合**\\n```java\\nreturn this.age - other.age;\\n// 25 - 30 = -5 （マイナス→自分が先）\\n// 30 - 30 = 0  （0→同じ）\\n// 35 - 30 = 5  （プラス→相手が先）\\n```"
         }
       ],
       "correctCode": "import java.util.*;\\n\\n// Comparable を実装して自然順序を定義する\\nclass Score implements Comparable<Score> {\\n    int value;\\n    Score(int v) { value = v; }\\n    public int compareTo(Score other) {\\n        // 自分と相手のスコアを比較してソート順を決める\\n        return this.value - other.value;\\n    }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // scoresに[Score(80), Score(60)]を代入\\n        List<Score> scores = Arrays.asList(new Score(80), new Score(60));\\n        // sort でソートする\\n        Collections.sort(scores);\\n        // get で要素を取得する\\n        System.out.println(scores.get(0).value);\\n    }\\n}",
@@ -461,11 +461,11 @@ export const javaData4 = {
       "tutorialSlides": [
         {
           "title": "Enum（イーナム）とは？",
-          "content": "# 固定の値の集合（しゅうごう）\\n\\n**Enum**（イーナム＝列挙型・れっきょがた）は、「決まった選択肢」を定義するものです。\\n\\n**たとえ話：** 信号機の色は「赤・黄・青」の3つだけですよね。それ以外はありません。Enumはこのように「限られた選択肢」を表します。\\n\\n```java\\nenum Color {  // 色の選択肢を定義\\n    RED, GREEN, BLUE  // 赤、緑、青の3つだけ\\n}\\n\\nColor c = Color.RED;  // 赤を選択\\n```"
+          "content": "# 固定の値の集合\\n\\n**Enum**（イーナム＝列挙型・れっきょがた）は、「決まった選択肢」を定義するものです。\\n\\n**たとえ話：** 信号機の色は「赤・黄・青」の3つだけですよね。それ以外はありません。Enumはこのように「限られた選択肢」を表します。\\n\\n```java\\nenum Color {  // 色の選択肢を定義\\n    RED, GREEN, BLUE  // 赤、緑、青の3つだけ\\n}\\n\\nColor c = Color.RED;  // 赤を選択\\n```"
         },
         {
           "title": "Enum のメリット",
-          "content": "# 型安全（かたあんぜん）で明確\\n\\nEnumを使うと、間違った値を入れることができなくなります。\\n\\n**switch文で使える**\\n```java\\nswitch (color) {\\n    case RED: System.out.println(\"赤\"); break;\\n    case GREEN: System.out.println(\"緑\"); break;\\n    case BLUE: System.out.println(\"青\"); break;\\n}\\n```\\n\\n**全ての値を取得**\\n```java\\nColor.values()  // [RED, GREEN, BLUE]\\n```\\n\\n**メリット：** 「PURPRE」のようなタイプミスがあるとエラーになるので、間違いを防げます！"
+          "content": "# 型安全で明確\\n\\nEnumを使うと、間違った値を入れることができなくなります。\\n\\n**switch文で使える**\\n```java\\nswitch (color) {\\n    case RED: System.out.println(\"赤\"); break;\\n    case GREEN: System.out.println(\"緑\"); break;\\n    case BLUE: System.out.println(\"青\"); break;\\n}\\n```\\n\\n**全ての値を取得**\\n```java\\nColor.values()  // [RED, GREEN, BLUE]\\n```\\n\\n**メリット：** 「PURPRE」のようなタイプミスがあるとエラーになるので、間違いを防げます！"
         }
       ],
       "correctCode": "// Day列挙型を定義\\nenum Day {\\n    MON, TUE, WED, THU, FRI, SAT, SUN\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // Day.MON で列挙値を取得する\\n        Day today = Day.MON;\\n        // println で出力する\\n        System.out.println(today);\\n    }\\n}",
@@ -575,7 +575,7 @@ export const javaData4 = {
       "tutorialSlides": [
         {
           "title": "Deque（デック）とは？",
-          "content": "# 両端（りょうたん）から操作できるキュー\\n\\n**Deque**（デック＝Double-Ended Queue）は、先頭からも末尾からも追加・削除ができるキューです。\\n\\n**たとえ話：** 両開きドアのある電車のようなものです。前からも後ろからも乗り降りできます！\\n\\n```java\\nDeque<String> deque = new ArrayDeque<>();  // 両開きキューを作る\\ndeque.addFirst(\"A\");  // 先頭に追加\\ndeque.addLast(\"B\");   // 末尾に追加\\n```"
+          "content": "# 両端から操作できるキュー\\n\\n**Deque**（デック＝Double-Ended Queue）は、先頭からも末尾からも追加・削除ができるキューです。\\n\\n**たとえ話：** 両開きドアのある電車のようなものです。前からも後ろからも乗り降りできます！\\n\\n```java\\nDeque<String> deque = new ArrayDeque<>();  // 両開きキューを作る\\ndeque.addFirst(\"A\");  // 先頭に追加\\ndeque.addLast(\"B\");   // 末尾に追加\\n```"
         },
         {
           "title": "スタックとしても使える",

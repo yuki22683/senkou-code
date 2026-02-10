@@ -7,7 +7,7 @@ export const bash2Data = {
   "lessonOrder": 2,
   "tutorialSlides": [
     {
-      "title": "配列（はいれつ）",
+      "title": "配列",
       "content": "複数の値を格納できる**配列**を作るには `( )` を使います。\\n\\n```bash\\narr=(\"a\" \"b\" \"c\")\\necho ${arr[0]}  # a\\necho ${arr[1]}  # b\\n```\\n\\nインデックスは 0 から始まります。`${arr[@]}` で全要素を取得できます。"
     },
     {

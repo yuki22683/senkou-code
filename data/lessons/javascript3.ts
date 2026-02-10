@@ -26,11 +26,11 @@ export const javascriptData3 = {
   "exercises": [
     {
       "title": "Promise の基本",
-      "description": "非同期処理（ひどうきしょり）について学びます",
+      "description": "非同期処理について学びます",
       "tutorialSlides": [
         {
           "title": "Promise（プロミス）とは？",
-          "content": "# 「あとで届くよ」という約束\\n\\n**非同期処理（ひどうきしょり）** とは、時間のかかる処理を待たずに次の処理を進める仕組みです。\\n\\n**身近なたとえ：**\\nピザの宅配を想像してください。注文したら「30分後に届けます」という **約束（Promise）** をもらいますよね。届くまで待たずに他のことができます。\\n\\n**Promise は「約束の証明書」：**\\n- 処理が成功したら結果を届ける（resolve）\\n- 失敗したらエラーを届ける（reject）\\n\\n**コード例：**\\n```javascript\\nconst promise = new Promise((resolve, reject) => {\\n  resolve('成功！');  // 約束を果たす\\n});\\n```"
+          "content": "# 「あとで届くよ」という約束\\n\\n**非同期処理** とは、時間のかかる処理を待たずに次の処理を進める仕組みです。\\n\\n**身近なたとえ：**\\nピザの宅配を想像してください。注文したら「30分後に届けます」という **約束（Promise）** をもらいますよね。届くまで待たずに他のことができます。\\n\\n**Promise は「約束の証明書」：**\\n- 処理が成功したら結果を届ける（resolve）\\n- 失敗したらエラーを届ける（reject）\\n\\n**コード例：**\\n```javascript\\nconst promise = new Promise((resolve, reject) => {\\n  resolve('成功！');  // 約束を果たす\\n});\\n```"
         },
         {
           "title": "then で結果を受け取る",
@@ -242,7 +242,7 @@ export const javascriptData3 = {
           "content": "# 複数の Promise を同時に待つ\\n\\n**Promise.all** は、複数の Promise を同時に実行して、全部が完了するのを待ちます。\\n\\n**身近なたとえ：**\\n3人の友達にそれぞれ買い物をお願いして、全員が戻ってきたら出発する、というイメージです。\\n\\n**コード例：**\\n```javascript\\nconst p1 = Promise.resolve(1);\\nconst p2 = Promise.resolve(2);\\n\\nPromise.all([p1, p2]).then(results => {\\n  console.log(results);  // [1, 2]\\n});\\n```\\n\\n**ポイント：**\\n結果は配列で返ってきます！"
         },
         {
-          "title": "並行処理（へいこうしょり）の利点",
+          "title": "並行処理の利点",
           "content": "# 同時に実行すると速い！\\n\\n**順番に実行 vs 同時に実行：**\\n- 順番：3秒 + 3秒 = 6秒かかる\\n- 同時：3秒で両方終わる！\\n\\n**コード例：**\\n```javascript\\nasync function fetchAll() {\\n  // 2つのリクエストを同時に実行！\\n  const [users, posts] = await Promise.all([\\n    fetch('/users'),\\n    fetch('/posts')\\n  ]);\\n}\\n```\\n\\n**ポイント：**\\n互いに関係のない処理は、`Promise.all` で同時に実行すると時間短縮できます。"
         }
       ],
@@ -362,7 +362,7 @@ export const javascriptData3 = {
       "tutorialSlides": [
         {
           "title": "extends（継承・けいしょう）とは？",
-          "content": "# 既存のクラスを拡張する\\n\\n**extends** を使うと、既存のクラスの機能を引き継いで新しいクラスを作れます。これを **継承（けいしょう）** と呼びます。\\n\\n**身近なたとえ：**\\n「動物」というグループがあって、その下に「猫」「犬」があるイメージです。猫も犬も動物の特徴を持っていますよね。\\n\\n**コード例：**\\n```javascript\\nclass Animal {\\n  speak() { console.log('...'); }\\n}\\n\\n// Animal の機能を引き継いで Cat を作る\\nclass Cat extends Animal {\\n  speak() { console.log('Meow!'); }  // 上書き\\n}\\n```"
+          "content": "# 既存のクラスを拡張する\\n\\n**extends** を使うと、既存のクラスの機能を引き継いで新しいクラスを作れます。これを **継承** と呼びます。\\n\\n**身近なたとえ：**\\n「動物」というグループがあって、その下に「猫」「犬」があるイメージです。猫も犬も動物の特徴を持っていますよね。\\n\\n**コード例：**\\n```javascript\\nclass Animal {\\n  speak() { console.log('...'); }\\n}\\n\\n// Animal の機能を引き継いで Cat を作る\\nclass Cat extends Animal {\\n  speak() { console.log('Meow!'); }  // 上書き\\n}\\n```"
         },
         {
           "title": "super（スーパー）の使い方",

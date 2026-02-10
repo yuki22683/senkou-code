@@ -141,7 +141,7 @@ export const swift2Data = {
       "description": "構造体（struct・ストラクト）について学びます",
       "tutorialSlides": [
         {
-          "title": "構造体（こうぞうたい）とは？",
+          "title": "構造体とは？",
           "content": "# データをまとめる「型紙」\\n\\n**構造体（struct・ストラクト）** は、関連するデータをひとまとめにする仕組みです。\\n\\n例えば、ゲームのキャラクターには「名前」「HP」「攻撃力」などのデータがありますよね。これらをバラバラに管理するのは大変です。\\n\\n構造体を使えば、これらを1つのまとまりとして扱えます。"
         },
         {
@@ -154,7 +154,7 @@ export const swift2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n四角形（しかくけい）を表す構造体を作りましょう。\\n\\n1. `Rect` という構造体を作る\\n2. `width`（横幅）と `height`（高さ）を持たせる\\n3. インスタンスを作って `width` を表示する"
+          "content": "# 目標\\n\\n四角形を表す構造体を作りましょう。\\n\\n1. `Rect` という構造体を作る\\n2. `width`（横幅）と `height`（高さ）を持たせる\\n3. インスタンスを作って `width` を表示する"
         }
       ],
       "correctCode": "// structで構造体を定義\\nstruct Rect {\\n    // widthプロパティ\\n    var width: Int\\n    // heightプロパティ\\n    var height: Int\\n}\\n// インスタンスを作成\\nlet r = Rect(width: 3, height: 4)\\n// widthを出力\\nprint(r.width)",
@@ -204,7 +204,7 @@ export const swift2Data = {
       "tutorialSlides": [
         {
           "title": "クラスとは？",
-          "content": "# オブジェクトの「設計図」\\n\\n**クラス（class）** は、構造体（struct）に似ていますが、いくつか違いがあります。\\n\\nクラスは **参照型（さんしょうがた）** です。コピーしても、同じものを指し続けます。\\n\\n例えると、構造体は「コピー機でコピーした別の紙」、クラスは「同じ紙を複数の人で見ている」イメージです。"
+          "content": "# オブジェクトの「設計図」\\n\\n**クラス（class）** は、構造体（struct）に似ていますが、いくつか違いがあります。\\n\\nクラスは **参照型** です。コピーしても、同じものを指し続けます。\\n\\n例えると、構造体は「コピー機でコピーした別の紙」、クラスは「同じ紙を複数の人で見ている」イメージです。"
         },
         {
           "title": "クラスの定義方法",
@@ -216,7 +216,7 @@ export const swift2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nネコのクラスを作りましょう。\\n\\n1. `Cat` というクラスを作る\\n2. `name` プロパティを持たせる\\n3. `init` で名前を設定できるようにする\\n4. 「Tama」という名前のネコを作って表示する"
+          "content": "# 目標\\n\\nネコのクラスを作りましょう。\\n\\n1. `Cat` というクラスを作る\\n2. `name` プロパティを持たせる\\n3. `init` で名前を設定できるようにする\\n4. 「Tama」という名前のネコを作って表示する"
         }
       ],
       "correctCode": "// classでクラスを定義\\nclass Cat {\\n    // nameプロパティ\\n    var name: String\\n    // initでイニシャライザ\\n    init(name: String) {\\n        // selfで自身のプロパティにアクセス\\n        self.name = name\\n    }\\n}\\n// インスタンスを作成\\nlet cat = Cat(name: \"タマ\")\\n// nameを出力\\nprint(cat.name)",
@@ -280,11 +280,11 @@ export const swift2Data = {
         },
         {
           "title": "プロトコルに準拠する",
-          "content": "# : プロトコル名 で準拠を宣言\\n\\n```swift\\nstruct Person: Greet {  // Greetに準拠\\n    func hello() {\\n        print(\"こんにちは\")  // 中身を実装\\n    }\\n}\\n```\\n\\n「準拠（じゅんきょ）」とは、約束を守ることです。\\n\\nプロトコルで宣言された関数の中身を、実際に書きます。"
+          "content": "# : プロトコル名 で準拠を宣言\\n\\n```swift\\nstruct Person: Greet {  // Greetに準拠\\n    func hello() {\\n        print(\"こんにちは\")  // 中身を実装\\n    }\\n}\\n```\\n\\n「準拠」とは、約束を守ることです。\\n\\nプロトコルで宣言された関数の中身を、実際に書きます。"
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n「話せる」プロトコルを作って、犬に準拠させましょう。\\n\\n1. `Speaker` プロトコルを作る\\n2. `speak()` という関数を宣言\\n3. `Dog` 構造体を `Speaker` に準拠させる\\n4. `speak()` で「woof」と鳴くようにする"
+          "content": "# 目標\\n\\n「話せる」プロトコルを作って、犬に準拠させましょう。\\n\\n1. `Speaker` プロトコルを作る\\n2. `speak()` という関数を宣言\\n3. `Dog` 構造体を `Speaker` に準拠させる\\n4. `speak()` で「woof」と鳴くようにする"
         }
       ],
       "correctCode": "// protocolでプロトコルを定義\\nprotocol Speaker {\\n    // speakメソッドを宣言\\n    func speak()\\n}\\n// Speakerに準拠\\nstruct Dog: Speaker {\\n    // speakメソッドを実装\\n    func speak() {\\n        // ワン！と出力\\n        print(\"ワン！\")\\n    }\\n}\\n// インスタンスを作成\\nlet d = Dog()\\n// speakを呼び出し\\nd.speak()",
@@ -358,7 +358,7 @@ export const swift2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n数を2倍にするクロージャを作りましょう。\\n\\n1. `double` という変数にクロージャを入れる\\n2. 引数 `n` を受け取る\\n3. `n * 2` を返す\\n4. `double(5)` で10と表示されるか確認"
+          "content": "# 目標\\n\\n数を2倍にするクロージャを作りましょう。\\n\\n1. `double` という変数にクロージャを入れる\\n2. 引数 `n` を受け取る\\n3. `n * 2` を返す\\n4. `double(5)` で10と表示されるか確認"
         }
       ],
       "correctCode": "// inで引数と処理を分ける\\nlet double = { (n: Int) in\\n    // n * 2を返す\\n    return n * 2\\n}\\n// doubleを呼び出し\\nprint(double(5))",
@@ -412,7 +412,7 @@ export const swift2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n配列の各数を2乗（じじょう：同じ数を2回かける）しましょう。\\n\\n- `[1, 2, 3]` → `[1, 4, 9]` に変換\\n- `$0 * $0` で2乗できます"
+          "content": "# 目標\\n\\n配列の各数を2乗（じじょう：同じ数を2回かける）しましょう。\\n\\n- `[1, 2, 3]` → `[1, 4, 9]` に変換\\n- `$0 * $0` で2乗できます"
         }
       ],
       "correctCode": "// numsに[1, 2, 3]を代入\\nlet nums = [1, 2, 3]\\n// nums.mapで各要素を2乗しsquaredに代入\\nlet squared = nums.map { $0 * $0 }\\n// squaredをprintで出力\\nprint(squared)",
@@ -460,7 +460,7 @@ export const swift2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n配列から3以上の数だけを取り出しましょう。\\n\\n- `[1, 2, 3, 4, 5]` から\\n- 3以上（`$0 >= 3`）のものを残す\\n- 結果は `[3, 4, 5]` になるはず"
+          "content": "# 目標\\n\\n配列から3以上の数だけを取り出しましょう。\\n\\n- `[1, 2, 3, 4, 5]` から\\n- 3以上（`$0 >= 3`）のものを残す\\n- 結果は `[3, 4, 5]` になるはず"
         }
       ],
       "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet nums = [1, 2, 3, 4, 5]\\n// nums.filterで3以上を抽出しresultに代入\\nlet result = nums.filter { $0 >= 3 }\\n// resultをprintで出力\\nprint(result)",
@@ -512,7 +512,7 @@ export const swift2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nオプショナルの値をguardでチェックする関数を作りましょう。\\n\\n1. `check` 関数を作る\\n2. 引数がnilなら「nil」と表示してreturn\\n3. 値があれば、その値を表示\\n4. `check(10)` で10と表示されるか確認"
+          "content": "# 目標\\n\\nオプショナルの値をguardでチェックする関数を作りましょう。\\n\\n1. `check` 関数を作る\\n2. 引数がnilなら「nil」と表示してreturn\\n3. 値があれば、その値を表示\\n4. `check(10)` で10と表示されるか確認"
         }
       ],
       "correctCode": "// check関数を定義\\nfunc check(_ val: Int?) {\\n    // guardで早期リターン\\n    guard let n = val else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    }\\n    // nを出力\\n    print(n)\\n}\\n// 関数を呼び出し\\ncheck(10)",
@@ -567,8 +567,8 @@ export const swift2Data = {
       "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
-          "title": "列挙型（れっきょがた）とは？",
-          "content": "# 決まった選択肢を定義する\\n\\n**enum（イーナム）** は「列挙型（れっきょがた）」を作る仕組みです。「enumerate（列挙する）」の略です。\\n\\n例えば、信号は「赤・黄・青」の3つしかありませんよね。こういう「決まった選択肢」を定義するのに使います。\\n\\n曜日（月〜日）や、方向（上下左右）なども同じです。"
+          "title": "列挙型とは？",
+          "content": "# 決まった選択肢を定義する\\n\\n**enum（イーナム）** は「列挙型」を作る仕組みです。「enumerate（列挙する）」の略です。\\n\\n例えば、信号は「赤・黄・青」の3つしかありませんよね。こういう「決まった選択肢」を定義するのに使います。\\n\\n曜日（月〜日）や、方向（上下左右）なども同じです。"
         },
         {
           "title": "enum の作り方",
@@ -580,7 +580,7 @@ export const swift2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n色の列挙型を作って、switchで判定しましょう。\\n\\n1. `Color` enumを作る（red, green, blue）\\n2. `Color.red` を変数に入れる\\n3. switchで各ケースを判定して色名を表示"
+          "content": "# 目標\\n\\n色の列挙型を作って、switchで判定しましょう。\\n\\n1. `Color` enumを作る（red, green, blue）\\n2. `Color.red` を変数に入れる\\n3. switchで各ケースを判定して色名を表示"
         }
       ],
       "correctCode": "// enumで列挙型を定義\\nenum Color {\\n    // caseでケースを定義\\n    case red, green, blue\\n}\\n// Color.redを代入\\nlet c = Color.red\\n// switchでパターンマッチ\\nswitch c {\\ncase .red:\\n    // 赤色を出力\\n    print(\"赤\")\\ncase .green:\\n    // 緑色を出力\\n    print(\"緑\")\\ncase .blue:\\n    // 青色を出力\\n    print(\"青\")\\n}",

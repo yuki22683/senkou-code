@@ -50,7 +50,7 @@ export const kotlin2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nnullable型の変数を作り、nullチェックしてから表示しましょう。\\n\\n1. `Int?` 型の変数 `num` に 42 を入れる\\n2. `if` で null でないかチェック\\n3. null でなければ表示する"
+          "content": "# 目標\\n\\nnullable型の変数を作り、nullチェックしてから表示しましょう。\\n\\n1. `Int?` 型の変数 `num` に 42 を入れる\\n2. `if` で null でないかチェック\\n3. null でなければ表示する"
         }
       ],
       "correctCode": "// ? で nullable 型にする\\nvar num: Int? = 42\\n// null チェックをする\\nif (num != null) {\\n    // num を出力する\\n    println(num)\\n}",
@@ -91,7 +91,7 @@ export const kotlin2Data = {
       "description": "?.（セーフコール）について学びます",
       "tutorialSlides": [
         {
-          "title": "セーフコール演算子（えんざんし）とは？",
+          "title": "セーフコール演算子とは？",
           "content": "# 安全に呼び出す「?.」\\n\\n**?.（セーフコール）** は、「nullなら何もしない、そうでなければ処理する」という演算子です。\\n\\n普通の `.` だと、nullのときエラーになります。でも `?.` なら安全です。"
         },
         {
@@ -100,7 +100,7 @@ export const kotlin2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nセーフコール `?.` を使って、文字列の長さを安全に取得しましょう。\\n\\n1. `String?` 型の変数に「Hello」を入れる\\n2. `?.length` で長さを取得\\n\\n答えは `5` になります。"
+          "content": "# 目標\\n\\nセーフコール `?.` を使って、文字列の長さを安全に取得しましょう。\\n\\n1. `String?` 型の変数に「Hello」を入れる\\n2. `?.length` で長さを取得\\n\\n答えは `5` になります。"
         }
       ],
       "correctCode": "// numに42を代入（nullable型）\\nval text: String? = \"こんにちは\"\\n// ?. で安全にプロパティにアクセスする\\nprintln(text?.length)",
@@ -135,7 +135,7 @@ export const kotlin2Data = {
       "description": "?:（エルビス演算子）について学びます",
       "tutorialSlides": [
         {
-          "title": "エルビス演算子（えんざんし）とは？",
+          "title": "エルビス演算子とは？",
           "content": "# nullなら代わりの値を使う「?:」\\n\\n**?:（エルビス演算子）** は、左側がnullなら右側の値を返す演算子です。\\n\\n記号を横から見ると、歌手エルビス・プレスリーの髪型に見えることから名付けられました。\\n\\n「デフォルト値」を設定するのに便利です。"
         },
         {
@@ -144,7 +144,7 @@ export const kotlin2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nエルビス演算子 `?:` を使って、nullのときに0を表示しましょう。\\n\\n1. `Int?` 型の変数に null を入れる\\n2. `?: 0` でデフォルト値を設定\\n\\n答えは `0` になります。"
+          "content": "# 目標\\n\\nエルビス演算子 `?:` を使って、nullのときに0を表示しましょう。\\n\\n1. `Int?` 型の変数に null を入れる\\n2. `?: 0` でデフォルト値を設定\\n\\n答えは `0` になります。"
         }
       ],
       "correctCode": "// numに42を代入（nullable型）\\nval value: Int? = null\\n// ?: でデフォルト値を指定する\\nprintln(value ?: 0)",
@@ -188,7 +188,7 @@ export const kotlin2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n座標を表すデータクラスを作りましょう。\\n\\n1. `data class Point(val x: Int, val y: Int)` を定義\\n2. `Point(3, 4)` でインスタンスを作成\\n3. 表示すると `Point(x=3, y=4)` と出る"
+          "content": "# 目標\\n\\n座標を表すデータクラスを作りましょう。\\n\\n1. `data class Point(val x: Int, val y: Int)` を定義\\n2. `Point(3, 4)` でインスタンスを作成\\n3. 表示すると `Point(x=3, y=4)` と出る"
         }
       ],
       "correctCode": "// Pointデータクラスを定義\\ndata class Point(val x: Int, val y: Int)\\n// Pointを作成（x座標に3, y座標に4）\\nval p = Point(3, 4)\\n// p を出力する\\nprintln(p)",
@@ -227,12 +227,12 @@ export const kotlin2Data = {
       "description": "名前のない簡潔な関数を作る方法を学びます",
       "tutorialSlides": [
         {
-          "title": "ラムダ式（しき）とは？",
-          "content": "# 名前のない関数（かんすう）\\n\\n**ラムダ式** は、名前をつけずに作る小さな関数です。\\n\\n普通の関数は `fun` で名前をつけますが、ラムダ式は名前なしで `{ }` の中に直接書きます。\\n\\nちょっとした処理を手軽に作りたいときに便利です。"
+          "title": "ラムダ式とは？",
+          "content": "# 名前のない関数\\n\\n**ラムダ式** は、名前をつけずに作る小さな関数です。\\n\\n普通の関数は `fun` で名前をつけますが、ラムダ式は名前なしで `{ }` の中に直接書きます。\\n\\nちょっとした処理を手軽に作りたいときに便利です。"
         },
         {
           "title": "ラムダ式の書き方",
-          "content": "# { 引数（ひきすう） -> 処理（しょり） }\\n\\n`->` の前が「受け取るデータ（引数）」、後ろが「処理の内容」です。\\n\\n```kotlin\\nval add = { a: Int, b: Int -> a + b }\\n```\\n\\nこれは「aとbを受け取って、足し算して返す」という処理です。\\n\\n矢印 `->` は「〜したら〜する」というイメージです。"
+          "content": "# { 引数 -> 処理 }\\n\\n`->` の前が「受け取るデータ（引数）」、後ろが「処理の内容」です。\\n\\n```kotlin\\nval add = { a: Int, b: Int -> a + b }\\n```\\n\\nこれは「aとbを受け取って、足し算して返す」という処理です。\\n\\n矢印 `->` は「〜したら〜する」というイメージです。"
         },
         {
           "title": "ラムダ式を使ってみよう",
@@ -240,7 +240,7 @@ export const kotlin2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n数を2倍にするラムダ式を作りましょう。\\n\\n1. `{ n: Int -> n * 2 }` でラムダ式を作る\\n2. 変数 `double` に入れる\\n3. `double(5)` で呼び出すと 10 になる"
+          "content": "# 目標\\n\\n数を2倍にするラムダ式を作りましょう。\\n\\n1. `{ n: Int -> n * 2 }` でラムダ式を作る\\n2. 変数 `double` に入れる\\n3. `double(5)` で呼び出すと 10 になる"
         }
       ],
       "correctCode": "// nを2倍にするdouble関数を定義\\nval double = { n: Int -> n * 2 }\\n// double(5) を出力する\\nprintln(double(5))",
@@ -276,11 +276,11 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "map（マップ）とは？",
-          "content": "# 全部を変身（へんしん）させる魔法\\n\\n**map** は、リストの中身を一つずつ変換する関数です。\\n\\n例えば、1, 2, 3 を全部2倍にすると 2, 4, 6 になります。\\n\\nリストの「形を変える」というイメージです。"
+          "content": "# 全部を変身させる魔法\\n\\n**map** は、リストの中身を一つずつ変換する関数です。\\n\\n例えば、1, 2, 3 を全部2倍にすると 2, 4, 6 になります。\\n\\nリストの「形を変える」というイメージです。"
         },
         {
           "title": "it（イット）って何？",
-          "content": "# 暗黙（あんもく）の引数\\n\\nラムダ式で引数が1つのとき、**it** という名前で自動的に使えます。\\n\\n`it` は英語で「それ」という意味。「今見ている要素」のことです。\\n\\n```kotlin\\nlistOf(1, 2, 3).map { it * 2 }\\n```\\n\\n「それ（it）を2倍にする」と読みます。"
+          "content": "# 暗黙の引数\\n\\nラムダ式で引数が1つのとき、**it** という名前で自動的に使えます。\\n\\n`it` は英語で「それ」という意味。「今見ている要素」のことです。\\n\\n```kotlin\\nlistOf(1, 2, 3).map { it * 2 }\\n```\\n\\n「それ（it）を2倍にする」と読みます。"
         },
         {
           "title": "map を使ってみよう",
@@ -288,7 +288,7 @@ export const kotlin2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nリストの各数を2乗（じじょう）しましょう。\\n\\n1. `listOf(1, 2, 3)` でリストを作る\\n2. `.map { it * it }` で各要素を2乗\\n3. 結果は `[1, 4, 9]` になる"
+          "content": "# 目標\\n\\nリストの各数を2乗しましょう。\\n\\n1. `listOf(1, 2, 3)` でリストを作る\\n2. `.map { it * it }` で各要素を2乗\\n3. 結果は `[1, 4, 9]` になる"
         }
       ],
       "correctCode": "// numsにlistOf(1, 2, 3)を代入\\nval nums = listOf(1, 2, 3)\\n// map で各要素を変換する\\nval squared = nums.map { it * it }\\n// squared を出力する\\nprintln(squared)",
@@ -336,11 +336,11 @@ export const kotlin2Data = {
         },
         {
           "title": "filter を使ってみよう",
-          "content": "# 条件に合う要素を抽出（ちゅうしゅつ）\\n\\n```kotlin\\nval nums = listOf(1, 2, 3, 4, 5)\\nval result = nums.filter { it >= 3 }\\nprintln(result)  // [3, 4, 5]\\n```\\n\\n`>=` は「以上」という意味。3以上のものだけ残します。"
+          "content": "# 条件に合う要素を抽出\\n\\n```kotlin\\nval nums = listOf(1, 2, 3, 4, 5)\\nval result = nums.filter { it >= 3 }\\nprintln(result)  // [3, 4, 5]\\n```\\n\\n`>=` は「以上」という意味。3以上のものだけ残します。"
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nリストから3以上の数だけを取り出しましょう。\\n\\n1. `listOf(1, 2, 3, 4, 5)` でリストを作る\\n2. `.filter { it >= 3 }` で3以上を抽出\\n3. 結果は `[3, 4, 5]` になる"
+          "content": "# 目標\\n\\nリストから3以上の数だけを取り出しましょう。\\n\\n1. `listOf(1, 2, 3, 4, 5)` でリストを作る\\n2. `.filter { it >= 3 }` で3以上を抽出\\n3. 結果は `[3, 4, 5]` になる"
         }
       ],
       "correctCode": "// numsにlistOf(1, 2, 3, 4, 5)を代入\\nval nums = listOf(1, 2, 3, 4, 5)\\n// filter で条件に合う要素を抽出する\\nval result = nums.filter { it >= 3 }\\n// result を出力する\\nprintln(result)",
@@ -380,7 +380,7 @@ export const kotlin2Data = {
       "tutorialSlides": [
         {
           "title": "when（ウェン）式とは？",
-          "content": "# 複数の道を選ぶ分岐（ぶんき）\\n\\n**when** は「〜のとき」という意味の英語です。\\n\\n値によって、いくつもの道に分かれる処理を書けます。\\n\\n自動販売機のボタンのように、押したボタンによって出てくる飲み物が変わるイメージです。"
+          "content": "# 複数の道を選ぶ分岐\\n\\n**when** は「〜のとき」という意味の英語です。\\n\\n値によって、いくつもの道に分かれる処理を書けます。\\n\\n自動販売機のボタンのように、押したボタンによって出てくる飲み物が変わるイメージです。"
         },
         {
           "title": "when の書き方",
@@ -392,7 +392,7 @@ export const kotlin2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nwhenで数字を英語に変換しましょう。\\n\\n1. `x` に 2 を入れる\\n2. `when (x)` で分岐する\\n3. 1は\"one\"、2は\"two\"、それ以外は\"other\"\\n4. 結果は \"two\" になる"
+          "content": "# 目標\\n\\nwhenで数字を英語に変換しましょう。\\n\\n1. `x` に 2 を入れる\\n2. `when (x)` で分岐する\\n3. 1は\"one\"、2は\"two\"、それ以外は\"other\"\\n4. 結果は \"two\" になる"
         }
       ],
       "correctCode": "// x に 2 を代入する\\nval x = 2\\n// when で分岐する\\nval result = when (x) {\\n    // 1 の場合\\n    1 -> \"one\"\\n    // 2 の場合\\n    2 -> \"two\"\\n    // その他の場合\\n    else -> \"other\"\\n}\\n// result を出力する\\nprintln(result)",
@@ -445,7 +445,7 @@ export const kotlin2Data = {
       "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
-          "title": "拡張関数（かくちょうかんすう）とは？",
+          "title": "拡張関数とは？",
           "content": "# 既存の型に新しい機能を追加\\n\\n**拡張関数** は、すでにある型（IntやStringなど）に新しい関数を追加する機能です。\\n\\nスマートフォンにアプリを追加するように、元の型を変えずに機能を拡張できます。\\n\\nKotlinの強力な機能の一つです。"
         },
         {
@@ -458,7 +458,7 @@ export const kotlin2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nInt型に「2倍にする」関数を追加しましょう。\\n\\n1. `fun Int.double() = this * 2` で拡張関数を定義\\n2. `5.double()` で呼び出す\\n3. 結果は 10 になる"
+          "content": "# 目標\\n\\nInt型に「2倍にする」関数を追加しましょう。\\n\\n1. `fun Int.double() = this * 2` で拡張関数を定義\\n2. `5.double()` で呼び出す\\n3. 結果は 10 になる"
         }
       ],
       "correctCode": "// this でレシーバを参照する\\nfun Int.double() = this * 2\\n// 5.double() を出力する\\nprintln(5.double())",
@@ -506,7 +506,7 @@ export const kotlin2Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nnullでなければ2倍して表示しましょう。\\n\\n1. `Int?` 型の変数に 42 を入れる\\n2. `?.let { }` でnullチェック\\n3. `it * 2` で2倍にして表示\\n4. 結果は 84 になる"
+          "content": "# 目標\\n\\nnullでなければ2倍して表示しましょう。\\n\\n1. `Int?` 型の変数に 42 を入れる\\n2. `?.let { }` でnullチェック\\n3. `it * 2` で2倍にして表示\\n4. 結果は 84 になる"
         }
       ],
       "correctCode": "// numに42を代入（nullable型）\\nval num: Int? = 42\\n// letでit * 2を出力\\nnum?.let { println(it * 2) }",

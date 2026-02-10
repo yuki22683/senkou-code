@@ -7,7 +7,7 @@ export const pythonData4 = {
   "lessonOrder": 4,
   "tutorialSlides": [
     {
-      "title": "継承（けいしょう）とは？",
+      "title": "継承とは？",
       "content": "**継承** とは、既存のクラスの機能を**そのまま引き継いで**新しいクラスを作ることです。\\n\\n- **親クラス（Animal）** = 動物の基本的な性質\\n- **子クラス（Dog）** = 動物の性質 + 犬特有の性質\\n\\n```python\\nclass Animal:\\n    def speak(self):\\n        print('...')\\n\\nclass Dog(Animal):  # Animalを継承\\n    def speak(self):\\n        print('ワン!')\\n```\\n\\n`class Dog(Animal):` の `(Animal)` で「Animalを継承する」という意味になります。"
     },
     {
@@ -53,8 +53,8 @@ export const pythonData4 = {
       "description": "既存のクラスの機能を引き継いで、新しいクラスを作る方法を学びます",
       "tutorialSlides": [
         {
-          "title": "継承（けいしょう）とは？",
-          "content": "# 親の能力を子供が受け継ぐ！\\n\\n**継承（けいしょう）** とは、既存のクラスの機能を **そのまま引き継いで** 新しいクラスを作ることです。\\n\\n現実世界で考えてみましょう：\\n- **親クラス（Animal）** = 動物の基本的な性質\\n- **子クラス（Dog）** = 動物の性質 + 犬特有の性質\\n\\n犬は「動物」なので、動物の機能は全部持っています。でも、犬だけの特別な機能も追加できます！\\n\\n**例：** 動物クラスを継承して犬クラスを作ろう！\\n\\n```python\\nclass Animal:\\n    def speak(self):\\n        print('...')\\n\\nclass Dog(Animal):  # Animalを継承\\n    def speak(self):\\n        print('Woof!')  # 犬専用の鳴き声\\n```\\n\\n**ポイント：** `class Dog(Animal):` の `(Animal)` で「Animalを継承する」という意味になります。"
+          "title": "継承とは？",
+          "content": "# 親の能力を子供が受け継ぐ！\\n\\n**継承** とは、既存のクラスの機能を **そのまま引き継いで** 新しいクラスを作ることです。\\n\\n現実世界で考えてみましょう：\\n- **親クラス（Animal）** = 動物の基本的な性質\\n- **子クラス（Dog）** = 動物の性質 + 犬特有の性質\\n\\n犬は「動物」なので、動物の機能は全部持っています。でも、犬だけの特別な機能も追加できます！\\n\\n**例：** 動物クラスを継承して犬クラスを作ろう！\\n\\n```python\\nclass Animal:\\n    def speak(self):\\n        print('...')\\n\\nclass Dog(Animal):  # Animalを継承\\n    def speak(self):\\n        print('Woof!')  # 犬専用の鳴き声\\n```\\n\\n**ポイント：** `class Dog(Animal):` の `(Animal)` で「Animalを継承する」という意味になります。"
         }
       ],
       "correctCode": "# 親クラスVehicleを定義\\nclass Vehicle:\\n    # __init__メソッドを定義\\n    def __init__(self, brand):\\n        # self.brandにbrandを代入\\n        self.brand = brand\\n\\n# Carクラスを定義（Vehicleを継承）\\nclass Car(Vehicle):\\n    # honkメソッドを定義\\n    def honk(self):\\n        # f'{self.brand} car: Beep!'を表示\\n        print(f'{self.brand} car: Beep!')\\n\\n# Car('トヨタ')のインスタンスを作成しcarに代入\\ncar = Car('トヨタ')\\n# honkメソッドを実行\\ncar.honk()",
@@ -190,7 +190,7 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "@propertyとは？",
-          "content": "# メソッドを「属性（ぞくせい）」のように使う\\n\\n**@property（プロパティ）** というデコレータを使うと、**メソッド（関数）を属性のようにアクセス** できるようになります。\\n\\n**普通のメソッドとの違い：**\\n- 普通のメソッド: `c.area()` ← **括弧（かっこ）が必要**\\n- プロパティ: `c.area` ← **括弧なしで呼べる！**\\n\\n**たとえ話：** 電卓の「=」ボタンを押さなくても、数字を見るだけで答えが分かる感じです。\\n\\n**例：** 円の面積を括弧なしで取得しよう！\\n\\n```python\\nclass Circle:\\n    def __init__(self, radius):\\n        self._radius = radius\\n    \\n    @property\\n    def area(self):\\n        return 3.14 * self._radius ** 2\\n\\nc = Circle(5)\\nprint(c.area)  # 78.5 (括弧なし！)\\n```\\n\\n**何をしているか：**\\n1. `@property` をメソッドの上に書く\\n2. `area` メソッドが属性のように使える\\n3. `c.area` で面積が計算されて返ってくる"
+          "content": "# メソッドを「属性」のように使う\\n\\n**@property（プロパティ）** というデコレータを使うと、**メソッド（関数）を属性のようにアクセス** できるようになります。\\n\\n**普通のメソッドとの違い：**\\n- 普通のメソッド: `c.area()` ← **括弧が必要**\\n- プロパティ: `c.area` ← **括弧なしで呼べる！**\\n\\n**たとえ話：** 電卓の「=」ボタンを押さなくても、数字を見るだけで答えが分かる感じです。\\n\\n**例：** 円の面積を括弧なしで取得しよう！\\n\\n```python\\nclass Circle:\\n    def __init__(self, radius):\\n        self._radius = radius\\n    \\n    @property\\n    def area(self):\\n        return 3.14 * self._radius ** 2\\n\\nc = Circle(5)\\nprint(c.area)  # 78.5 (括弧なし！)\\n```\\n\\n**何をしているか：**\\n1. `@property` をメソッドの上に書く\\n2. `area` メソッドが属性のように使える\\n3. `c.area` で面積が計算されて返ってくる"
         }
       ],
       "correctCode": "# Rectangleクラスを定義\\nclass Rectangle:\\n    # __init__メソッドを定義\\n    def __init__(self, width, height):\\n        # 幅を保存\\n        self.width = width\\n        # 高さを保存\\n        self.height = height\\n    \\n    # @propertyデコレータ\\n    @property\\n    # areaメソッドを定義\\n    def area(self):\\n        # 幅と高さの積を計算\\n        return self.width * self.height\\n\\n# Rectangleを作成（幅に4, 高さに5）しrに代入\\nr = Rectangle(4, 5)\\n# r.areaを表示\\nprint(r.area)",

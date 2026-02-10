@@ -114,7 +114,7 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "flatMap()とは？",
-          "content": "# map して平らにする\\n\\n**flatMap()** は、`map` と `flat`（平坦化）を一度に行います。\\n\\n**身近なたとえ：**\\n各人にお菓子の袋を配って、全員の袋を開けて机に広げるイメージです。「配る → 広げる」を一度に！\\n\\n**平坦化（へいたんか）とは？**\\n配列の中の配列を「平ら」にすること。\\n`[[1, 2], [3, 4]]` → `[1, 2, 3, 4]`\\n\\n**コード例：**\\n```javascript\\nconst arr = [1, 2, 3];\\n// 各要素を [x, x*2] に変換して平らにする\\nconst result = arr.flatMap(x => [x, x * 2]);\\nconsole.log(result);  // [1, 2, 2, 4, 3, 6]\\n```"
+          "content": "# map して平らにする\\n\\n**flatMap()** は、`map` と `flat`（平坦化）を一度に行います。\\n\\n**身近なたとえ：**\\n各人にお菓子の袋を配って、全員の袋を開けて机に広げるイメージです。「配る → 広げる」を一度に！\\n\\n**平坦化とは？**\\n配列の中の配列を「平ら」にすること。\\n`[[1, 2], [3, 4]]` → `[1, 2, 3, 4]`\\n\\n**コード例：**\\n```javascript\\nconst arr = [1, 2, 3];\\n// 各要素を [x, x*2] に変換して平らにする\\nconst result = arr.flatMap(x => [x, x * 2]);\\nconsole.log(result);  // [1, 2, 2, 4, 3, 6]\\n```"
         }
       ],
       "correctCode": "// ['hello', 'world'] の配列を定義\\nconst words = ['hello', 'world'];\\n// flatMap でmapと平坦化を同時に行う\\nconst chars = words.flatMap(w => w.split(''));\\n// charsを出力\\nconsole.log(chars);",
@@ -283,7 +283,7 @@ export const javascriptData4 = {
       "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
-          "title": "関数合成（かんすうごうせい）とは？",
+          "title": "関数合成とは？",
           "content": "# 関数を組み合わせて新しい関数を作る\\n\\n**関数合成** は、複数の関数をつなげて、1つの新しい関数を作ることです。\\n\\n**身近なたとえ：**\\n料理で「野菜を切る → 炒める → 味付けする」という手順をまとめて「野菜炒めを作る」という1つの手順にするイメージです。\\n\\n**compose の仕組み：**\\n`compose(f, g)` は「gを実行してから、その結果をfに渡す」という関数を作ります。\\n\\n**コード例：**\\n```javascript\\nconst compose = (f, g) => x => f(g(x));\\nconst double = x => x * 2;     // 2倍にする\\nconst addOne = x => x + 1;     // 1を足す\\n\\n// 「2倍してから1を足す」関数を作る\\nconst doubleThenAdd = compose(addOne, double);\\nconsole.log(doubleThenAdd(5));  // 11（5*2=10, 10+1=11）\\n```"
         }
       ],

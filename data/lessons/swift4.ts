@@ -46,11 +46,11 @@ export const swift4Data = {
         },
         {
           "title": "プロトコルに準拠する",
-          "content": "# : プロトコル名 で準拠を宣言\\n\\n```swift\\nstruct Person: Greetable {  // 準拠を宣言\\n    var name: String        // 名前を実装\\n    func greet() -> String {\\n        return \"Hello, \\(name)\"\\n    }\\n}\\n```\\n\\n「準拠（じゅんきょ）」とは、約束を守ることです。プロトコルで宣言された機能を実際に作ります。"
+          "content": "# : プロトコル名 で準拠を宣言\\n\\n```swift\\nstruct Person: Greetable {  // 準拠を宣言\\n    var name: String        // 名前を実装\\n    func greet() -> String {\\n        return \"Hello, \\(name)\"\\n    }\\n}\\n```\\n\\n「準拠」とは、約束を守ることです。プロトコルで宣言された機能を実際に作ります。"
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n「話せる」プロトコルを作って、犬に準拠させましょう。\\n\\n1. `Speakable` プロトコルを作る\\n2. `speak()` という関数を宣言\\n3. `Dog` 構造体で準拠を実装\\n4. `speak()` で「Woof!」と返す"
+          "content": "# 目標\\n\\n「話せる」プロトコルを作って、犬に準拠させましょう。\\n\\n1. `Speakable` プロトコルを作る\\n2. `speak()` という関数を宣言\\n3. `Dog` 構造体で準拠を実装\\n4. `speak()` で「Woof!」と返す"
         }
       ],
       "correctCode": "// protocolでプロトコルを定義\\nprotocol Speakable {\\n    // speakメソッドを宣言\\n    func speak() -> String\\n}\\n\\n// Speakableに準拠\\nstruct Dog: Speakable {\\n    // speakメソッドを実装\\n    func speak() -> String {\\n        // Woof!を返す\\n        return \"ワン！\"\\n    }\\n}\\n\\n// インスタンスを作成\\nlet dog = Dog()\\n// speakを呼び出し\\nprint(dog.speak())",
@@ -119,7 +119,7 @@ export const swift4Data = {
       "description": "extension（エクステンション）について学びます",
       "tutorialSlides": [
         {
-          "title": "プロトコル拡張（かくちょう）とは？",
+          "title": "プロトコル拡張とは？",
           "content": "# 「デフォルト機能」を追加する\\n\\n**extension（エクステンション）** を使うと、プロトコルに「デフォルトの実装」を追加できます。\\n\\n「extension」は「拡張」という意味です。\\n\\n準拠する型が何も書かなくても、この機能が使えるようになります。"
         },
         {
@@ -132,7 +132,7 @@ export const swift4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n`Identifiable` プロトコルを作り、extensionでデフォルト機能を追加しましょう。\\n\\n1. `id` プロパティを持つプロトコルを作る\\n2. extensionで `display()` 関数を追加\\n3. `User` 構造体で準拠\\n4. デフォルトの `display()` を使う"
+          "content": "# 目標\\n\\n`Identifiable` プロトコルを作り、extensionでデフォルト機能を追加しましょう。\\n\\n1. `id` プロパティを持つプロトコルを作る\\n2. extensionで `display()` 関数を追加\\n3. `User` 構造体で準拠\\n4. デフォルトの `display()` を使う"
         }
       ],
       "correctCode": "// プロトコルを定義\\nprotocol Identifiable {\\n    // idプロパティを宣言\\n    var id: Int { get }\\n}\\n\\n// extensionでプロトコルを拡張\\nextension Identifiable {\\n    // デフォルト実装\\n    func display() { print(\"ID: \\(id)\") }\\n}\\n\\n// Identifiableに準拠\\nstruct User: Identifiable {\\n    // idプロパティ\\n    var id: Int\\n}\\n\\n// インスタンスを作成\\nlet user = User(id: 42)\\n// displayを呼び出し\\nuser.display()",
@@ -221,7 +221,7 @@ export const swift4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n配列の最初の要素を返すジェネリック関数を作りましょう。\\n\\n1. `first<T>` という関数を作る\\n2. `[T]` 型の配列を受け取る\\n3. `T?` 型（オプショナル）を返す\\n4. `[10, 20, 30]` で試して `10` と表示"
+          "content": "# 目標\\n\\n配列の最初の要素を返すジェネリック関数を作りましょう。\\n\\n1. `first<T>` という関数を作る\\n2. `[T]` 型の配列を受け取る\\n3. `T?` 型（オプショナル）を返す\\n4. `[10, 20, 30]` で試して `10` と表示"
         }
       ],
       "correctCode": "// <T>で型パラメータを定義\\nfunc first<T>(_ array: [T]) -> T? {\\n    // array.firstを返す\\n    return array.first\\n}\\n\\n// numsに[10, 20, 30]を代入\\nlet nums = [10, 20, 30]\\n// first(nums) ?? 0をprintで出力\\nprint(first(nums) ?? 0)",
@@ -283,7 +283,7 @@ export const swift4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\n2つの値のうち大きい方を返す関数を作りましょう。\\n\\n1. `maximum<T: Comparable>` という関数を作る\\n2. 2つの引数 `a` と `b` を受け取る\\n3. `a > b` なら `a` を、そうでなければ `b` を返す\\n4. `maximum(5, 3)` で `5` と表示"
+          "content": "# 目標\\n\\n2つの値のうち大きい方を返す関数を作りましょう。\\n\\n1. `maximum<T: Comparable>` という関数を作る\\n2. 2つの引数 `a` と `b` を受け取る\\n3. `a > b` なら `a` を、そうでなければ `b` を返す\\n4. `maximum(5, 3)` で `5` と表示"
         }
       ],
       "correctCode": "// Comparableで比較可能な型に制限\\nfunc maximum<T: Comparable>(_ a: T, _ b: T) -> T {\\n    // 大きい方を返す\\n    return a > b ? a : b\\n}\\n\\n// maximum関数を呼び出し（第1引数に5, 第2引数に3）\\nprint(maximum(5, 3))",
@@ -345,7 +345,7 @@ export const swift4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nCodableな構造体を作って、JSONに変換しましょう。\\n\\n1. `Item` 構造体を `Codable` に準拠させる\\n2. `name` プロパティを持たせる\\n3. `JSONEncoder()` でJSONに変換\\n4. 結果を表示する"
+          "content": "# 目標\\n\\nCodableな構造体を作って、JSONに変換しましょう。\\n\\n1. `Item` 構造体を `Codable` に準拠させる\\n2. `name` プロパティを持たせる\\n3. `JSONEncoder()` でJSONに変換\\n4. 結果を表示する"
         }
       ],
       "correctCode": "// Foundationをインポート\\nimport Foundation\\n\\n// CodableでJSON変換可能に\\nstruct Item: Codable {\\n    // nameプロパティ\\n    var name: String\\n}\\n\\n// インスタンスを作成\\nlet item = Item(name: \"りんご\")\\n// エンコーダを作成\\nlet encoder = JSONEncoder()\\n// JSONに変換\\nif let data = try? encoder.encode(item),\\n   let json = String(data: data, encoding: .utf8) {\\n    // JSONを出力\\n    print(json)\\n}",
@@ -433,7 +433,7 @@ export const swift4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nlazyプロパティを持つクラスを作りましょう。\\n\\n1. `Calculator` クラスを作る\\n2. `lazy var result` を定義\\n3. 初期化時に「Computing...」と表示して100を返す\\n4. インスタンスを作って `result` にアクセス"
+          "content": "# 目標\\n\\nlazyプロパティを持つクラスを作りましょう。\\n\\n1. `Calculator` クラスを作る\\n2. `lazy var result` を定義\\n3. 初期化時に「Computing...」と表示して100を返す\\n4. インスタンスを作って `result` にアクセス"
         }
       ],
       "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n    // lazyで遅延初期化\\n    lazy var result: Int = {\\n        // 計算中と出力\\n        print(\"計算中...\")\\n        // 100を返す\\n        return 100\\n    }()\\n}\\n\\n// インスタンスを作成\\nlet calc = Calculator()\\n// resultを出力\\nprint(calc.result)",
@@ -507,7 +507,7 @@ export const swift4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\ndeferを使って「start」の後に「end」と表示する関数を作りましょう。\\n\\n1. `test` 関数を作る\\n2. `defer { print(\"end\") }` を書く\\n3. `print(\"start\")` を書く\\n\\n「start」→「end」の順に表示されます。"
+          "content": "# 目標\\n\\ndeferを使って「start」の後に「end」と表示する関数を作りましょう。\\n\\n1. `test` 関数を作る\\n2. `defer { print(\"end\") }` を書く\\n3. `print(\"start\")` を書く\\n\\n「start」→「end」の順に表示されます。"
         }
       ],
       "correctCode": "// test関数を定義\\nfunc test() {\\n    // deferでスコープ終了時に実行\\n    defer { print(\"end\") }\\n    // startと出力\\n    print(\"start\")\\n}\\n\\n// 関数を呼び出し\\ntest()",
@@ -568,7 +568,7 @@ export const swift4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nguardでオプショナルをチェックする関数を作りましょう。\\n\\n1. `check` 関数を作る（引数は `Int?`）\\n2. `guard let` で値を取り出す\\n3. nilなら「nil」と表示してreturn\\n4. 値があれば2倍して表示\\n\\n`check(5)` で `10` と表示されます。"
+          "content": "# 目標\\n\\nguardでオプショナルをチェックする関数を作りましょう。\\n\\n1. `check` 関数を作る（引数は `Int?`）\\n2. `guard let` で値を取り出す\\n3. nilなら「nil」と表示してreturn\\n4. 値があれば2倍して表示\\n\\n`check(5)` で `10` と表示されます。"
         }
       ],
       "correctCode": "// check関数を定義\\nfunc check(_ num: Int?) {\\n    // guardで早期リターン\\n    guard let n = num else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    }\\n    // n * 2を出力\\n    print(n * 2)\\n}\\n\\n// 関数を呼び出し\\ncheck(5)",
@@ -642,7 +642,7 @@ export const swift4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nスタック（積み重ね）のプロトコルを作りましょう。\\n\\n1. `Stack` プロトコルに `associatedtype Element` を定義\\n2. `push` メソッドを宣言\\n3. `IntStack` 構造体で準拠を実装\\n4. 10をpushしてitemsを表示"
+          "content": "# 目標\\n\\nスタック（積み重ね）のプロトコルを作りましょう。\\n\\n1. `Stack` プロトコルに `associatedtype Element` を定義\\n2. `push` メソッドを宣言\\n3. `IntStack` 構造体で準拠を実装\\n4. 10をpushしてitemsを表示"
         }
       ],
       "correctCode": "// プロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    }\\n}\\n\\n// インスタンスを作成\\nvar stack = IntStack()\\n// 要素を追加\\nstack.push(10)\\n// itemsを出力\\nprint(stack.items)",
@@ -738,7 +738,7 @@ export const swift4Data = {
         },
         {
           "title": "やってみましょう！",
-          "content": "# 目標（もくひょう）\\n\\nsome を使って、具体的な型を隠して返す関数を作りましょう。\\n\\n1. `makeCollection` 関数を作る\\n2. 戻り値を `some Collection` にする\\n3. `[1, 2, 3]` を返す\\n4. `.count` で要素数を表示"
+          "content": "# 目標\\n\\nsome を使って、具体的な型を隠して返す関数を作りましょう。\\n\\n1. `makeCollection` 関数を作る\\n2. 戻り値を `some Collection` にする\\n3. `[1, 2, 3]` を返す\\n4. `.count` で要素数を表示"
         }
       ],
       "correctCode": "// someで不透明な型を返す\\nfunc makeCollection() -> some Collection {\\n    // 配列を返す\\n    return [1, 2, 3]\\n}\\n\\n// 関数を呼び出し\\nlet c = makeCollection()\\n// 要素数を出力\\nprint(c.count)",

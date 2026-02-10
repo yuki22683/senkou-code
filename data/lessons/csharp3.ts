@@ -38,7 +38,7 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "async/await（アシンク/アウェイト）とは？",
-          "content": "# 非同期処理（ひどうきしょり）を簡単に書く\\n\\n**非同期処理**とは、時間がかかる処理を「待っている間に他のことをする」仕組みです。**async/await**を使うと、この非同期処理を普通のコードのように書けます。\\n\\n**身近な例え：**\\nレストランで料理を注文したとき、料理ができるまでスマホを見たり、おしゃべりしたりできますよね。ずっと立って待っている必要はありません。非同期処理も同じで、「待っている間に他の処理を進める」ことができます。\\n\\n**用語：**\\n- `async`（アシンク）: 「このメソッドは非同期です」という宣言\\n- `await`（アウェイト）: 「この処理が終わるまで待つ」という指示"
+          "content": "# 非同期処理を簡単に書く\\n\\n**非同期処理**とは、時間がかかる処理を「待っている間に他のことをする」仕組みです。**async/await**を使うと、この非同期処理を普通のコードのように書けます。\\n\\n**身近な例え：**\\nレストランで料理を注文したとき、料理ができるまでスマホを見たり、おしゃべりしたりできますよね。ずっと立って待っている必要はありません。非同期処理も同じで、「待っている間に他の処理を進める」ことができます。\\n\\n**用語：**\\n- `async`（アシンク）: 「このメソッドは非同期です」という宣言\\n- `await`（アウェイト）: 「この処理が終わるまで待つ」という指示"
         },
         {
           "title": "Task（タスク）を返す",
@@ -121,8 +121,8 @@ export const csharp3Data = {
           "content": "# データを並べ替える\\n\\n**OrderBy**（オーダーバイ）は、データを指定した基準（キー）で**昇順（しょうじゅん：小さい順）**に並べ替えます。\\n\\n**身近な例え：**\\nテストの点数を低い順に並べたり、名前をあいうえお順に並べたりするのと同じです。\\n\\n**コード例（文字の長さで並べ替え）：**\\n```csharp\\nvar sorted = names.OrderBy(x => x.Length);\\n```\\n\\n**解説：**\\n`x => x.Length` は「各要素の長さをキーにして並べ替える」という意味です。短い文字列から順に並びます。"
         },
         {
-          "title": "降順（こうじゅん）ソート",
-          "content": "# OrderByDescending（大きい順）\\n\\n**降順（こうじゅん）**は「大きい順」のことです。`OrderByDescending`（オーダーバイ・ディセンディング）を使います。\\n\\n**昇順と降順の違い：**\\n- `OrderBy` : 1, 2, 3, 4, 5（小さい順）\\n- `OrderByDescending` : 5, 4, 3, 2, 1（大きい順）\\n\\n**コード例：**\\n```csharp\\nvar nums = new[] { 3, 1, 4, 1, 5 };\\n\\n// 昇順（小さい順）\\nvar asc = nums.OrderBy(x => x);      // 1,1,3,4,5\\n\\n// 降順（大きい順）\\nvar desc = nums.OrderByDescending(x => x);  // 5,4,3,1,1\\n```"
+          "title": "降順ソート",
+          "content": "# OrderByDescending（大きい順）\\n\\n**降順**は「大きい順」のことです。`OrderByDescending`（オーダーバイ・ディセンディング）を使います。\\n\\n**昇順と降順の違い：**\\n- `OrderBy` : 1, 2, 3, 4, 5（小さい順）\\n- `OrderByDescending` : 5, 4, 3, 2, 1（大きい順）\\n\\n**コード例：**\\n```csharp\\nvar nums = new[] { 3, 1, 4, 1, 5 };\\n\\n// 昇順（小さい順）\\nvar asc = nums.OrderBy(x => x);      // 1,1,3,4,5\\n\\n// 降順（大きい順）\\nvar desc = nums.OrderByDescending(x => x);  // 5,4,3,1,1\\n```"
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 3 を含む配列を定義\\n        var nums = new[] { 3, 1, 4, 1, 5 };\\n        // OrderByでソート\\n        var sorted = nums.OrderBy(x => x);\\n        // Joinで \",\" を区切り文字として結果を表示\\n        Console.WriteLine(string.Join(\",\", sorted));\\n    }\\n}",
@@ -394,7 +394,7 @@ export const csharp3Data = {
         },
         {
           "title": "パターンマッチング",
-          "content": "# 型（かた）によって分岐する\\n\\nswitch式では、値だけでなく**型**によっても分岐できます。これを「パターンマッチング」と呼びます。\\n\\n**コード例（型によって違うメッセージ）：**\\n```csharp\\nvar msg = obj switch {\\n    int i => $\"数字: {i}\",\\n    string s => $\"文字列: {s}\",\\n    _ => \"その他\"\\n};\\n```\\n\\n**解説：**\\n- `int i` : 「objがint型なら、その値をiとして使う」\\n- `string s` : 「objがstring型なら、その値をsとして使う」\\n- 型をチェックしながら、その値も取り出せる便利な機能！\\n\\n**ポイント：**\\nif文を何個も書くより、switch式で書いた方がスッキリします。"
+          "content": "# 型によって分岐する\\n\\nswitch式では、値だけでなく**型**によっても分岐できます。これを「パターンマッチング」と呼びます。\\n\\n**コード例（型によって違うメッセージ）：**\\n```csharp\\nvar msg = obj switch {\\n    int i => $\"数字: {i}\",\\n    string s => $\"文字列: {s}\",\\n    _ => \"その他\"\\n};\\n```\\n\\n**解説：**\\n- `int i` : 「objがint型なら、その値をiとして使う」\\n- `string s` : 「objがstring型なら、その値をsとして使う」\\n- 型をチェックしながら、その値も取り出せる便利な機能！\\n\\n**ポイント：**\\nif文を何個も書くより、switch式で書いた方がスッキリします。"
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // nを2で初期化\\n        int n = 2;\\n        // switchでnを分岐しresultに代入\\n        var result = n switch {\\n            // 1の場合\\n            1 => \"one\",\\n            // 2の場合\\n            2 => \"two\",\\n            // その他の場合\\n            _ => \"other\"\\n        };\\n        // resultをWriteLineで出力\\n        Console.WriteLine(result);\\n    }\\n}",
@@ -539,7 +539,7 @@ export const csharp3Data = {
       "description": "文字列補間について学びます",
       "tutorialSlides": [
         {
-          "title": "文字列補間（もじれつほかん）の復習",
+          "title": "文字列補間の復習",
           "content": "# $記号で変数を埋め込む\\n\\n**文字列補間**は、文字列の中に変数の値を埋め込む便利な機能です。`$`（ドルマーク）で始めて、`{}`の中に変数を書きます。\\n\\n**身近な例え：**\\n手紙のテンプレートで「○○様」の○○部分に名前を入れるようなものです。\\n\\n**コード例：**\\n```csharp\\nvar name = \"Alice\";\\nvar msg = $\"Hello, {name}!\";\\n// 結果: \"Hello, Alice!\"\\n```\\n\\n**解説：**\\n1. `$\"...\"` で「この文字列には変数を埋め込むよ」と宣言\\n2. `{name}` の部分が、変数nameの値「Alice」に置き換わる"
         },
         {
