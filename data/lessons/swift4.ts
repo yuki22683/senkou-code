@@ -510,8 +510,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\ndeferを使って「start」の後に「end」と表示する関数を作りましょう。\\n\\n1. `test` 関数を作る\\n2. `defer { print(\"end\") }` を書く\\n3. `print(\"start\")` を書く\\n\\n「start」→「end」の順に表示されます。"
         }
       ],
-      "correctCode": "// test関数を定義\\nfunc test() {\\n    // deferでスコープ終了時に実行\\n    defer { print(\"end\") }\\n    // startと出力\\n    print(\"start\")\\n}\\n\\n// 関数を呼び出し\\ntest()",
-      "holeyCode": "// test関数を定義\\nfunc ___() {\\n    // deferでスコープ終了時に実行\\n    defer { ___(\\\"___\\\") }\\n    // startと出力\\n    ___(\\\"___\\\")\\n___\\n\\n// 関数を呼び出し\\n___()",
+      "correctCode": "// test関数を定義\\nfunc test() {\\n    // deferでスコープ終了時に実行\\n    defer { print(\"end\") }\\n    // startと出力\\n    print(\"start\")\\n}\\n\\n// test関数を呼び出し\\ntest()",
+      "holeyCode": "// test関数を定義\\nfunc ___() {\\n    // deferでスコープ終了時に実行\\n    defer { ___(\\\"___\\\") }\\n    // startと出力\\n    ___(\\\"___\\\")\\n___\\n\\n// test関数を呼び出し\\n___()",
       "correctLines": [
           "// test関数を定義",
           "func test() {",
@@ -521,7 +521,7 @@ export const swift4Data = {
           "    print(\"start\")",
           "}",
           "",
-          "// 関数を呼び出し",
+          "// test関数を呼び出し",
           "test()"
         ],
       "lineHints": [
@@ -571,8 +571,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\nguardでオプショナルをチェックする関数を作りましょう。\\n\\n1. `check` 関数を作る（引数は `Int?`）\\n2. `guard let` で値を取り出す\\n3. nilなら「nil」と表示してreturn\\n4. 値があれば2倍して表示\\n\\n`check(5)` で `10` と表示されます。"
         }
       ],
-      "correctCode": "// check関数を定義\\nfunc check(_ num: Int?) {\\n    // guardで早期リターン\\n    guard let n = num else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    }\\n    // n * 2を出力\\n    print(n * 2)\\n}\\n\\n// 関数を呼び出し\\ncheck(5)",
-      "holeyCode": "// check関数を定義\\nfunc ___(___  ___: ___?) {\\n    // guardで早期リターン\\n    guard let ___ = ___ else {\\n        // nilと出力\\n        ___(\\\"___\\\")\\n        // 早期リターン\\n        ___\\n    ___\\n    // n * 2を出力\\n    ___(___ * ___)\\n___\\n\\n// 関数を呼び出し\\n___(___)",
+      "correctCode": "// check関数を定義\\nfunc check(_ num: Int?) {\\n    // guardで早期リターン\\n    guard let n = num else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    }\\n    // n * 2を出力\\n    print(n * 2)\\n}\\n\\n// check関数を呼び出し（引数5）\\ncheck(5)",
+      "holeyCode": "// check関数を定義\\nfunc ___(___  ___: ___?) {\\n    // guardで早期リターン\\n    guard let ___ = ___ else {\\n        // nilと出力\\n        ___(\\\"___\\\")\\n        // 早期リターン\\n        ___\\n    ___\\n    // n * 2を出力\\n    ___(___ * ___)\\n___\\n\\n// check関数を呼び出し（引数5）\\n___(___)",
       "correctLines": [
           "// check関数を定義",
           "func check(_ num: Int?) {",
@@ -587,7 +587,7 @@ export const swift4Data = {
           "    print(n * 2)",
           "}",
           "",
-          "// 関数を呼び出し",
+          "// check関数を呼び出し（引数5）",
           "check(5)"
         ],
       "lineHints": [
@@ -741,8 +741,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\nsome を使って、具体的な型を隠して返す関数を作りましょう。\\n\\n1. `makeCollection` 関数を作る\\n2. 戻り値を `some Collection` にする\\n3. `[1, 2, 3]` を返す\\n4. `.count` で要素数を表示"
         }
       ],
-      "correctCode": "// someで不透明な型を返す\\nfunc makeCollection() -> some Collection {\\n    // 配列を返す\\n    return [1, 2, 3]\\n}\\n\\n// 関数を呼び出し\\nlet c = makeCollection()\\n// 要素数を出力\\nprint(c.count)",
-      "holeyCode": "// someで不透明な型を返す\\nfunc ___() -> some ___ {\\n    // 配列を返す\\n    return [___, ___, ___]\\n___\\n\\n// 関数を呼び出し\\nlet ___ = ___()\\n// 要素数を出力\\n___(___.___)",
+      "correctCode": "// someで不透明な型を返す\\nfunc makeCollection() -> some Collection {\\n    // 配列を返す\\n    return [1, 2, 3]\\n}\\n\\n// cにmakeCollection関数の結果を代入\\nlet c = makeCollection()\\n// 要素数を出力\\nprint(c.count)",
+      "holeyCode": "// someで不透明な型を返す\\nfunc ___() -> some ___ {\\n    // 配列を返す\\n    return [___, ___, ___]\\n___\\n\\n// makeCollection関数を呼び出し\\nlet ___ = ___()\\n// 要素数を出力\\n___(___.___)",
       "correctLines": [
           "// someで不透明な型を返す",
           "func makeCollection() -> some Collection {",
@@ -750,7 +750,7 @@ export const swift4Data = {
           "    return [1, 2, 3]",
           "}",
           "",
-          "// 関数を呼び出し",
+          "// cにmakeCollection関数の結果を代入",
           "let c = makeCollection()",
           "// 要素数を出力",
           "print(c.count)"

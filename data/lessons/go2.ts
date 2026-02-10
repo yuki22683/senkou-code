@@ -45,7 +45,7 @@ export const go2Data = {
           "content": "# カッコで複数の型を指定\\n\\n戻り値の型を `(型1, 型2)` のように、かっこで囲んで書きます。\\n\\n**コード例：**\\n```go\\n// わり算の答えとあまりを両方返す関数\\nfunc divide(a, b int) (int, int) {\\n    return a / b, a % b  // 2つの値を返す\\n}\\n\\n// 2つの変数で受け取る\\nq, r := divide(10, 3)\\n// q=3（答え）, r=1（あまり）\\n```\\n\\n**ポイント：**\\n- `return` のあとにカンマで区切って複数の値を書く\\n- 受け取るときもカンマで区切った変数で受ける"
         }
       ],
-      "correctCode": "package main\\nimport \"fmt\"\\nfunc minmax(a, b int) (int, int) {\\n    if a < b {\\n        // a, bの順で返す\\n        return a, b\\n    }\\n    // b, aの順で返す\\n    return b, a\\n}\\nfunc main() {\\n    // minmax関数を呼び出し（第1引数に5, 第2引数に3）\\n    min, max := minmax(5, 3)\\n    fmt.Println(min, max)\\n}",
+      "correctCode": "package main\\nimport \"fmt\"\\nfunc minmax(a, b int) (int, int) {\\n    if a < b {\\n        // a, bの順で返す\\n        return a, b\\n    }\\n    // b, aの順で返す\\n    return b, a\\n}\\nfunc main() {\\n    // min, maxにminmax関数（第1引数がa, 第2引数がb）の結果を代入\\n    min, max := minmax(5, 3)\\n    fmt.Println(min, max)\\n}",
       "holeyCode": "package ___\\nimport \\\"___\\\"\\nfunc ___(___,  ___ ___) (___, ___) {\\n    if ___ < ___ {\\n        // a, bの順で返す\\n        return ___, ___\\n    ___\\n    // b, aの順で返す\\n    return ___, ___\\n___\\nfunc ___() {\\n    // minmax関数を呼び出し（第1引数に5, 第2引数に3）\\n    ___, ___ := ___(___, ___)\\n    ___.___(___,  ___)\\n___",
       "correctLines": [
           "package main",
@@ -59,7 +59,7 @@ export const go2Data = {
           "    return b, a",
           "}",
           "func main() {",
-          "    // minmax関数を呼び出し（第1引数に5, 第2引数に3）",
+          "    // min, maxにminmax関数（第1引数がa, 第2引数がb）の結果を代入",
           "    min, max := minmax(5, 3)",
           "    fmt.Println(min, max)",
           "}"

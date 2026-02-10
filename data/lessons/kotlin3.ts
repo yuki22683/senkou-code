@@ -205,7 +205,7 @@ export const kotlin3Data = {
           "content": "# 目標\\n\\ninline関数を作ってみましょう。\\n\\n1. `inline fun repeat(times: Int, action: (Int) -> Unit)` を定義\\n2. `for` ループで action を呼び出す\\n3. `repeat(3) { println(it) }` で0, 1, 2を表示"
         }
       ],
-      "correctCode": "// repeat関数をinlineで定義\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\n    // 0 から times まで繰り返す\\n    for (i in 0 until times) action(i)\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // repeat を呼び出す\\n    repeat(3) { println(it) }\\n}",
+      "correctCode": "// repeat関数をinlineで定義\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\n    // 0 から times まで繰り返す\\n    for (i in 0 until times) action(i)\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // repeat関数を呼び出し（引数3）\\n    repeat(3) { println(it) }\\n}",
       "holeyCode": "// repeat関数をinlineで定義\\n___ ___ ___(___: ___, ___: (___) -> ___) {\\n    // 0 から times まで繰り返す\\n    for (___ in ___ ___ ___) ___(___)\\n___\\n___\\n// main 関数を定義する\\n___ ___() {\\n    // repeat を呼び出す\\n    ___(___) { ___(___) }\\n___",
       "correctLines": [
           "// repeat関数をinlineで定義",
@@ -216,7 +216,7 @@ export const kotlin3Data = {
           "",
           "// main 関数を定義する",
           "fun main() {",
-          "    // repeat を呼び出す",
+          "    // repeat関数を呼び出し（引数3）",
           "    repeat(3) { println(it) }",
           "}"
         ],

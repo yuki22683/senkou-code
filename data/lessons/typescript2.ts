@@ -380,8 +380,8 @@ export const typescriptData2 = {
           "content": "# TypeScriptが型を推測\\n\\nTypeScriptは賢いので、渡した値から型を自動的に判断してくれます。これを **型推論** と呼びます。\\n\\n## たとえ話\\n\\n「りんご」を箱に入れたら、わざわざ「これはりんご箱です」と言わなくても、見ればわかりますよね。TypeScriptも同じです！\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nfunction identity<T>(arg: T): T {\\n    return arg;\\n}\\n\\n// <string> を書かなくても、TypeScriptが推測してくれる！\\nconst str = identity('hello');  // string と推論\\nconst num = identity(42);       // number と推論\\n```\\n\\n便利ですね！"
         }
       ],
-      "correctCode": "// <T> で型パラメータを定義\\nfunction wrap<T>(value: T): T[] {\\n    // valueを配列に入れて返す\\n    return [value];\\n}\\n\\n// 関数を呼び出し\\nconst arr = wrap(5);\\n// arrを出力\\nconsole.log(arr);",
-      "holeyCode": "// <T> で型パラメータを定義\\nfunction ___<___>(___: ___): ___[] {\\n    // valueを配列に入れて返す\\n    return [___];\\n}\\n\\n// 関数を呼び出し\\nconst ___ = ___(___);\\n// arrを出力\\n___.___(___);" ,
+      "correctCode": "// <T> で型パラメータを定義\\nfunction wrap<T>(value: T): T[] {\\n    // valueを配列に入れて返す\\n    return [value];\\n}\\n\\n// arrにwrap関数（引数5）の結果を代入\\nconst arr = wrap(5);\\n// arrを出力\\nconsole.log(arr);",
+      "holeyCode": "// <T> で型パラメータを定義\\nfunction ___<___>(___: ___): ___[] {\\n    // valueを配列に入れて返す\\n    return [___];\\n}\\n\\n// arrにwrap関数（引数5）の結果を代入\\nconst ___ = ___(___);\\n// arrを出力\\n___.___(___);" ,
       "correctLines": [
           "// <T> で型パラメータを定義",
           "function wrap<T>(value: T): T[] {",
@@ -389,7 +389,7 @@ export const typescriptData2 = {
           "    return [value];",
           "}",
           "",
-          "// 関数を呼び出し",
+          "// arrにwrap関数（引数5）の結果を代入",
           "const arr = wrap(5);",
           "// arrを出力",
           "console.log(arr);"

@@ -53,8 +53,8 @@ export const swift3Data = {
           "content": "# 目標\\n\\n数が負（マイナス）なら失敗、そうでなければ成功を返す関数を作りましょう。\\n\\n1. `MyError` というエラー型を定義\\n2. `check` 関数を作る\\n3. 負の数なら `.failure`、そうでなければ `.success` を返す"
         }
       ],
-      "correctCode": "// エラー型を定義\\nenum MyError: Error { case negative }\\n\\n// check関数を定義\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.negative) }\\n    // successで成功を返す\\n    return .success(n)\\n}\\n\\n// 関数を呼び出し\\nlet result = check(10)\\n// switchでパターンマッチ\\nswitch result {\\n// 成功の場合\\ncase .success(let v): print(v)\\n// 失敗の場合\\ncase .failure(_): print(\"エラー\")\\n}",
-      "holeyCode": "// エラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// check関数を定義\\nfunc ___(_ ___: ___) -> ___<___, ___> {\\n    // 負の場合は失敗\\n    if ___ < ___ { return .___(.___) }\\n    // successで成功を返す\\n    return .___(___)\\n___\\n___\\n// 関数を呼び出し\\nlet ___ = ___(___)\\n// switchでパターンマッチ\\nswitch ___ {\\n// 成功の場合\\ncase .___(let ___): ___(___)\\n// 失敗の場合\\ncase .___(_): ___(\"___\")\\n___",
+      "correctCode": "// エラー型を定義\\nenum MyError: Error { case negative }\\n\\n// check関数を定義\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.negative) }\\n    // successで成功を返す\\n    return .success(n)\\n}\\n\\n// resultにcheck関数（引数10）の結果を代入\\nlet result = check(10)\\n// switchでパターンマッチ\\nswitch result {\\n// 成功の場合\\ncase .success(let v): print(v)\\n// 失敗の場合\\ncase .failure(_): print(\"エラー\")\\n}",
+      "holeyCode": "// エラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// check関数を定義\\nfunc ___(_ ___: ___) -> ___<___, ___> {\\n    // 負の場合は失敗\\n    if ___ < ___ { return .___(.___) }\\n    // successで成功を返す\\n    return .___(___)\\n___\\n___\\n// resultにcheck関数（引数10）の結果を代入\\nlet ___ = ___(___)\\n// switchでパターンマッチ\\nswitch ___ {\\n// 成功の場合\\ncase .___(let ___): ___(___)\\n// 失敗の場合\\ncase .___(_): ___(\"___\")\\n___",
       "correctLines": [
           "// エラー型を定義",
           "enum MyError: Error { case negative }",
@@ -67,7 +67,7 @@ export const swift3Data = {
           "    return .success(n)",
           "}",
           "",
-          "// 関数を呼び出し",
+          "// resultにcheck関数（引数10）の結果を代入",
           "let result = check(10)",
           "// switchでパターンマッチ",
           "switch result {",
@@ -337,8 +337,8 @@ export const swift3Data = {
                       "content": "# リソースの解放に便利\\n\\n```swift\\nfunc readFile() {\\n    let file = open(\"test.txt\")\\n    defer { file.close() }\\n    // ファイルを読む\\n}  // 自動でclose\\n```\\n\\n忘れずに後片付けできます！"
               }
       ],
-      "correctCode": "// test関数を定義\\nfunc test() {\\n    // deferでスコープ終了時に実行\\n    defer { print(\"end\") }\\n    // startと出力\\n    print(\"start\")\\n}\\n// 関数を呼び出し\\ntest()",
-      "holeyCode": "// test関数を定義\\nfunc ___() {\\n    // deferでスコープ終了時に実行\\n    ___ { ___(\"___\") }\\n    // startと出力\\n    ___(\"___\")\\n___\\n// 関数を呼び出し\\n___()",
+      "correctCode": "// test関数を定義\\nfunc test() {\\n    // deferでスコープ終了時に実行\\n    defer { print(\"end\") }\\n    // startと出力\\n    print(\"start\")\\n}\\n// test関数を呼び出し\\ntest()",
+      "holeyCode": "// test関数を定義\\nfunc ___() {\\n    // deferでスコープ終了時に実行\\n    ___ { ___(\"___\") }\\n    // startと出力\\n    ___(\"___\")\\n___\\n// test関数を呼び出し\\n___()",
       "correctLines": [
           "// test関数を定義",
           "func test() {",
@@ -347,7 +347,7 @@ export const swift3Data = {
           "    // startと出力",
           "    print(\"start\")",
           "}",
-          "// 関数を呼び出し",
+          "// test関数を呼び出し",
           "test()"
         ],
       "lineHints": [

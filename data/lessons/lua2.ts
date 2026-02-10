@@ -266,7 +266,7 @@ export const lua2Data = {
           "content": "# カンマで区切る\\n\\n`return a, b` で複数の値を返します。\\n\\n**コード例：**\\n```lua\\nlocal function minmax(a, b)\\n    if a < b then return a, b end\\n    return b, a\\nend\\n```"
         }
       ],
-      "correctCode": "-- swap関数を定義\\nlocal function swap(a, b)\\n    -- b, aの順で返す\\n    return b, a\\nend\\n-- swap関数を呼び出し（第1引数に1, 第2引数に2）\\nlocal x, y = swap(1, 2)\\n-- xとyを表示（x, yの順）\\nprint(x, y)\\n",
+      "correctCode": "-- swap関数を定義\\nlocal function swap(a, b)\\n    -- b, aの順で返す\\n    return b, a\\nend\\n-- x, yにswap関数（第1引数がa, 第2引数がb）の結果を代入\\nlocal x, y = swap(1, 2)\\n-- xとyを表示（x, yの順）\\nprint(x, y)\\n",
       "holeyCode": "-- swap関数を定義\\nlocal function ___(___,  ___)\\n    -- b, aの順で返す\\n    return ___, ___\\n___\\n-- swap関数を呼び出し（第1引数に1, 第2引数に2）\\nlocal ___, ___ = ___(___, ___)\\n-- xとyを表示（x, yの順）\\n___(___, ___)\\n",
       "correctLines": [
           "-- swap関数を定義",
@@ -274,7 +274,7 @@ export const lua2Data = {
           "    -- b, aの順で返す",
           "    return b, a",
           "end",
-          "-- swap関数を呼び出し（第1引数に1, 第2引数に2）",
+          "-- x, yにswap関数（第1引数がa, 第2引数がb）の結果を代入",
           "local x, y = swap(1, 2)",
           "-- xとyを表示（x, yの順）",
           "print(x, y)",

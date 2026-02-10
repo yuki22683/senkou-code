@@ -64,7 +64,7 @@ export function Header() {
                 className="flex items-center gap-1 px-2 sm:px-3 py-1.5 text-sm text-amber-600 hover:text-amber-700 hover:bg-amber-50 rounded-lg transition-colors"
               >
                 <Shield className="w-4 h-4" />
-                <span className="hidden sm:inline">管理者</span>
+                <span className="hidden min-[1120px]:inline">管理者</span>
               </NavigationLink>
             )}
             <NavigationLink
@@ -72,7 +72,7 @@ export function Header() {
               className="flex items-center gap-1 px-2 sm:px-3 py-1.5 text-sm text-gray-600 hover:text-yellow-600 hover:bg-yellow-50 rounded-lg transition-colors"
             >
               <Trophy className="w-4 h-4" />
-              <span className="hidden sm:inline">ランキング</span>
+              <span className="hidden min-[1120px]:inline">ランキング</span>
             </NavigationLink>
             <UserXpDisplay />
             <LoginButton />

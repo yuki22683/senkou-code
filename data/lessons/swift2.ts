@@ -515,8 +515,8 @@ export const swift2Data = {
           "content": "# 目標\\n\\nオプショナルの値をguardでチェックする関数を作りましょう。\\n\\n1. `check` 関数を作る\\n2. 引数がnilなら「nil」と表示してreturn\\n3. 値があれば、その値を表示\\n4. `check(10)` で10と表示されるか確認"
         }
       ],
-      "correctCode": "// check関数を定義\\nfunc check(_ val: Int?) {\\n    // guardで早期リターン\\n    guard let n = val else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    }\\n    // nを出力\\n    print(n)\\n}\\n// 関数を呼び出し\\ncheck(10)",
-      "holeyCode": "// check関数を定義\\nfunc ___(___ ___: ___?) ___\\n    // guardで早期リターン\\n    guard let ___ = ___ else ___\\n        // nilと出力\\n        ___(___)\\n        // 早期リターン\\n        ___\\n    ___\\n    // nを出力\\n    ___(___)\\n___\\n// 関数を呼び出し\\n___(___)",
+      "correctCode": "// check関数を定義\\nfunc check(_ val: Int?) {\\n    // guardで早期リターン\\n    guard let n = val else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    }\\n    // nを出力\\n    print(n)\\n}\\n// check関数を呼び出し（引数10）\\ncheck(10)",
+      "holeyCode": "// check関数を定義\\nfunc ___(___ ___: ___?) ___\\n    // guardで早期リターン\\n    guard let ___ = ___ else ___\\n        // nilと出力\\n        ___(___)\\n        // 早期リターン\\n        ___\\n    ___\\n    // nを出力\\n    ___(___)\\n___\\n// check関数を呼び出し（引数10）\\n___(___)",
       "correctLines": [
           "// check関数を定義",
           "func check(_ val: Int?) {",
@@ -530,7 +530,7 @@ export const swift2Data = {
           "    // nを出力",
           "    print(n)",
           "}",
-          "// 関数を呼び出し",
+          "// check関数を呼び出し（引数10）",
           "check(10)"
         ],
       "lineHints": [
