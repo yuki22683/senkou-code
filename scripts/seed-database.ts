@@ -155,7 +155,7 @@ async function seedDatabase() {
       const exerciseData = {
         lesson_id: lessonId,
         title: exercise.title,
-        description: exercise.description,
+        description: exercise.description || null,
         difficulty: exercise.difficulty,
         order_index: orderIndex,
         tutorial_slides: processTutorialSlides(exercise.tutorialSlides),
