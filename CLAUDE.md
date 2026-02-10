@@ -1100,3 +1100,11 @@
   3. tutorialSlides部分のみ抽出して現在のファイルに追加（ファイル全体をcheckoutしない）
 - **チェックスクリプト**: `node scripts/check-lesson-file.mjs`（tutorialSlides消失は**エラー**レベルで検出）
 - **理由**: tutorialSlidesは学習者にとって重要な解説コンテンツであり、消失すると学習体験が大幅に低下する
+
+### 83. seed-database.tsでオプショナルフィールドはnullで明示的にクリア
+- `scripts/seed-database.ts`で演習データをDBに保存する際、**オプショナルなフィールドは`|| null`で明示的にnullを設定**すること。
+- **禁止**: `description: exercise.description,`（undefinedのまま送信）
+- **正しい**: `description: exercise.description || null,`（nullで明示的にクリア）
+- **理由**: undefinedをDBに送信すると、そのフィールドは更新されず、古い値が残り続ける。レッスンファイルからフィールドを削除しても、DBの古いデータが表示される問題が発生する。
+- **発生した問題**: 演習タイトル「リスト内包表記」に対して、古いdescription「range()関数を学びましょう」が表示される不整合が発生した。
+- **対象フィールド**: `description`など、レッスンファイルから削除される可能性があるオプショナルフィールド
