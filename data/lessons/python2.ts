@@ -250,6 +250,46 @@ export const pythonData2 = {
       ]
     },
     {
+      "title": "range() で数列を作る",
+      "description": "連続した数の列を簡単に作れる range() 関数を学びます",
+      "tutorialSlides": [
+        {
+          "title": "range() とは？",
+          "content": "# 数の列を自動で作ろう！\\n\\n**range（レンジ）** を使うと、**連続（れんぞく）した数の列** を簡単に作れます。\\n\\nたとえば「0, 1, 2, 3, 4」という数の列を作りたいとき、いちいち書かなくても、`range(5)` で作れます！\\n\\n**例：** 0から4までの数を順番に表示しよう！\\n\\n```python\\nfor i in range(5):\\n    print(i)\\n```\\n=> 0\\n=> 1\\n=> 2\\n=> 3\\n=> 4\\n\\n`range(5)` は「0から始まって、5個の数を作る」という意味です。"
+        },
+        {
+          "title": "range() の使い方",
+          "content": "# 開始と終了を指定しよう！\\n\\n**いろんな書き方ができます：**\\n\\n```python\\nrange(5)        # 0, 1, 2, 3, 4（0から始まって5個）\\nrange(1, 6)     # 1, 2, 3, 4, 5（1から6の手前まで）\\nrange(0, 10, 2) # 0, 2, 4, 6, 8（2ずつ増える）\\n```\\n\\n**書き方の解説：**\\n- `range(終了)` → 0から「終了の手前」まで\\n- `range(開始, 終了)` → 「開始」から「終了の手前」まで\\n- `range(開始, 終了, 増える量)` → 指定した量ずつ増える\\n\\n**例：** 1から5までカウントしたい！\\n\\n```python\\nfor i in range(1, 6):\\n    print(i)\\n```\\n=> 1, 2, 3, 4, 5\\n\\n**ポイント：** 終了の数は **含まれない** ので注意！"
+        }
+      ],
+      "correctCode": "# 1から5までの数を順番に表示\\nfor i in range(1, 6):\\n    # 変数iを出力\\n    print(i)",
+      "holeyCode": "# 1から5までの数を順番に表示\\n___ ___ ___ ___(___, ___):\\n    # 変数iを出力\\n    ___(___)",
+      "correctLines": [
+        "# 1から5までの数を順番に表示",
+        "for i in range(1, 6):",
+        "    # 変数iを出力",
+        "    print(i)"
+      ],
+      "lineHints": [
+        null,
+        "forループでrange(1, 6)の範囲を繰り返します。",
+        null,
+        "print関数で変数iの値を出力します。"
+      ],
+      "candidates": {
+        "keywords": ["for", "in"],
+        "functions": ["range", "print"],
+        "variables": ["i"],
+        "numbers": ["1", "6"]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "1\\n2\\n3\\n4\\n5\\n"
+        }
+      ]
+    },
+    {
       "title": "リスト内包表記",
       "description": "forループを1行で書ける「リスト内包表記」をマスターします",
       "tutorialSlides": [
