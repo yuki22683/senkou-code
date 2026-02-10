@@ -5,6 +5,13 @@ export const typescriptData2 = {
   "lessonDescription": "TypeScriptの基本をマスターしたら、より高度な型システムを学びましょう！ユニオン型、インターフェース、ジェネリクスなどを身につけます。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    { "title": "ユニオン型とは？", "content": "# 複数の型を許容する\\n\\n**ユニオン型**は「AまたはB」のように、複数の型のうちどれかを受け入れる型です。\\n\\n`|`（パイプ）で型をつなげます。\\n\\n```typescript\\nlet value: string | number;\\nvalue = 'hello';  // 文字 → OK!\\nvalue = 42;       // 数字 → OK!\\n```\\n\\n「文字でも数字でもOK」というラベルを作れます！" },
+    { "title": "インターフェースとは？", "content": "# オブジェクトの設計図\\n\\n**インターフェース**（interface）は、オブジェクトが持つべきプロパティを定義する設計図です。\\n\\n```typescript\\ninterface User {\\n    name: string;  // 名前は必須\\n    age: number;   // 年齢も必須\\n}\\n\\nconst user: User = {\\n    name: '太郎',\\n    age: 20\\n};\\n```\\n\\n規則に合わないオブジェクトはエラーで教えてくれます。" },
+    { "title": "オプショナルプロパティ", "content": "# ? で省略可能に\\n\\n**オプショナルプロパティ**は「あってもなくてもOK」な項目です。プロパティ名の後に `?` をつけます。\\n\\n```typescript\\ninterface User {\\n    name: string;     // 必須\\n    email?: string;   // ?がついているので省略OK\\n}\\n\\nconst user1: User = { name: '太郎' };  // emailなし → OK!\\nconst user2: User = { name: '花子', email: 'h@example.com' }; // OK!\\n```" },
+    { "title": "型エイリアス", "content": "# typeで型に名前をつける\\n\\n**型エイリアス**は、型に自分で名前をつける機能です。\\n\\n```typescript\\ntype ID = string | number;  // IDという名前をつける\\n\\nlet userId: ID = 'abc';   // 文字のID\\nlet orderId: ID = 123;    // 数字のID\\n```\\n\\n複雑な型に分かりやすい名前をつけると、コードが読みやすくなります！" },
+    { "title": "ジェネリクス<T>", "content": "# 型を後から決める\\n\\n**ジェネリクス**は、使うときに型を決める仕組みです。`<T>`のような形で書きます。\\n\\n```typescript\\nfunction getFirst<T>(arr: T[]): T {\\n    return arr[0];\\n}\\n\\ngetFirst<number>([1, 2, 3]);  // number型\\ngetFirst<string>(['a', 'b']); // string型\\n```\\n\\n「Tには何が入るか後で決めますよ」という意味です！" }
+  ],
   "exercises": [
     {
       "title": "ユニオン型",

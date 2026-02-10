@@ -5,6 +5,32 @@ export const kotlin4Data = {
   "lessonDescription": "Kotlinの高度な型システムを学びます。Sealed Class、委譲、inline関数などを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 4,
+  "tutorialSlides": [
+    {
+      "title": "Sealed Classとは",
+      "content": "**Sealed Class**は、継承できるクラスを制限する仕組みです。\\n\\n```kotlin\\nsealed class Result\\nclass Success(val data: String) : Result()\\nclass Error(val message: String) : Result()\\n```\\n\\n同じファイル内でのみ継承できるため、when式で全ての分岐を網羅できます。\\n\\n```kotlin\\nfun handle(result: Result) = when (result) {\\n    is Success -> result.data\\n    is Error -> result.message\\n    // elseが不要！\\n}\\n```"
+    },
+    {
+      "title": "objectシングルトン",
+      "content": "`object` でシングルトンを簡単に作れます。\\n\\n```kotlin\\nobject Logger {\\n    fun log(msg: String) {\\n        println(\"[LOG] $msg\")\\n    }\\n}\\n\\nLogger.log(\"アプリ起動\")\\n// => [LOG] アプリ起動\\n```\\n\\nインスタンスが1つだけ存在することが保証されます。"
+    },
+    {
+      "title": "by lazy（遅延初期化）",
+      "content": "`by lazy` を使うと、最初に使われるまで初期化を遅らせます。\\n\\n```kotlin\\nclass Config {\\n    val data: String by lazy {\\n        println(\"初期化中...\")\\n        \"設定データ\"\\n    }\\n}\\n\\nval c = Config()\\nprintln(\"インスタンス作成完了\")\\nprintln(c.data)  // ここで初期化\\nprintln(c.data)  // 2回目はキャッシュ\\n```\\n\\n重い初期化処理を必要になるまで遅らせられます。"
+    },
+    {
+      "title": "lateinit（後から初期化）",
+      "content": "`lateinit` は後から値を設定するvarに使います。\\n\\n```kotlin\\nclass Service {\\n    lateinit var config: String\\n    \\n    fun setup(c: String) {\\n        config = c\\n    }\\n}\\n\\nval s = Service()\\ns.setup(\"設定完了\")\\nprintln(s.config)  // => 設定完了\\n```\\n\\n初期化前にアクセスすると `UninitializedPropertyAccessException` が発生します。"
+    },
+    {
+      "title": "拡張関数",
+      "content": "既存のクラスにメソッドを追加できます。\\n\\n```kotlin\\nfun Int.isEven() = this % 2 == 0\\n\\nprintln(4.isEven())  // => true\\nprintln(7.isEven())  // => false\\n```\\n\\n元のクラスを変更せずに機能を追加できるため、ライブラリの機能拡張に便利です。\\n\\n`this` は拡張対象のオブジェクトを指します。"
+    },
+    {
+      "title": "typealias（型エイリアス）",
+      "content": "`typealias` で型に別名を付けられます。\\n\\n```kotlin\\ntypealias UserMap = Map<String, User>\\ntypealias Handler = (String) -> Unit\\n\\nfun process(handler: Handler) {\\n    handler(\"データ\")\\n}\\n\\nprocess { println(it) }\\n```\\n\\n長い型名を短くしたり、意図を明確にしたりできます。"
+    }
+  ],
   "exercises": [
     {
       "title": "Sealed Class",

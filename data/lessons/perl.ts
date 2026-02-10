@@ -5,6 +5,32 @@ export const perlData = {
   "lessonDescription": "文字をいじったり、整理したりするのが得意な言葉「Perl（パール）」のきほんを学びましょう。古くからたくさんの人に愛されている言葉です。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "Perlへようこそ！",
+      "content": "**Perl（パール）** は、1987年にLarry Wallさんが作ったプログラミング言語です。\\n\\n文字を扱うのがとても得意で、正規表現という強力な機能があります。\\n\\n「いろんな書き方ができる」のが特徴です。"
+    },
+    {
+      "title": "画面に文字を出す",
+      "content": "Perlで画面に文字を出すには `print` を使います。\\n\\n```perl\\nprint \\\"Hello, World!\\n\\\";\\n```\\n\\n`\\n` は改行を表します。"
+    },
+    {
+      "title": "変数を使う",
+      "content": "Perlの変数は `$` で始まります。\\n\\n```perl\\nmy $message = \\\"Perl\\\";\\nmy $num = 10;\\nprint \\\"$message\\n\\\";\\n```\\n\\n`my` で変数を宣言します。"
+    },
+    {
+      "title": "計算する",
+      "content": "Perlでは数字を計算できます。\\n\\n```perl\\nmy $a = 7;\\nmy $b = 3;\\nmy $sum = $a + $b;\\nprint \\\"$sum\\n\\\";  # 10\\n```\\n\\n`#` から後ろはコメント（メモ）です。"
+    },
+    {
+      "title": "文字をつなげる",
+      "content": "Perlでは `.` で文字をつなげます。\\n\\n```perl\\nmy $greeting = \\\"Hello, \\\" . \\\"Perl!\\\";\\nprint \\\"$greeting\\n\\\";\\n```\\n\\n数字の足し算は `+`、文字のつなげ合わせは `.` です。"
+    },
+    {
+      "title": "配列とハッシュ",
+      "content": "複数のデータをまとめて扱えます。\\n\\n**配列**（`@` で始まる）:\\n```perl\\nmy @fruits = (\\\"りんご\\\", \\\"みかん\\\");\\nprint \\\"$fruits[0]\\n\\\";\\n```\\n\\n**ハッシュ**（`%` で始まる）:\\n```perl\\nmy %fruit = (\\\"color\\\" => \\\"赤\\\");\\nprint \\\"$fruit{color}\\n\\\";\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",

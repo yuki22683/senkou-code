@@ -5,6 +5,12 @@ export const c4Data = {
   "lessonDescription": "C言語のファイル操作と高度なデータ型を学びます。実用的なプログラムを書くための必須スキルを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 4,
+  "tutorialSlides": [
+    { "title": "ファイルを開く", "content": "# fopen関数\\n\\n```c\\nFILE *fp = fopen(\\\"file.txt\\\", \\\"r\\\");\\nif (fp == NULL) {\\n    printf(\\\"Error!\\n\\\");\\n}\\n```\\n\\nモード: `\\\"r\\\"` 読み込み、`\\\"w\\\"` 書き込み、`\\\"a\\\"` 追記" },
+    { "title": "ファイルの読み書き", "content": "# fprintf と fscanf\\n\\n```c\\n// 書き込み\\nfprintf(fp, \\\"Hello %d\\n\\\", 42);\\n\\n// 読み込み\\nchar buf[100];\\nfgets(buf, 100, fp);\\n```" },
+    { "title": "ファイルを閉じる", "content": "# fclose関数\\n\\n```c\\nfclose(fp);\\n```\\n\\n使い終わったファイルは必ず閉じましょう！\\n\\n- バッファの内容がファイルに書き込まれる\\n- メモリが解放される\\n- 他のプログラムがファイルを使えるようになる" },
+    { "title": "動的メモリ確保", "content": "# malloc と free\\n\\n```c\\nint *p = (int*)malloc(sizeof(int) * 10);\\nif (p != NULL) {\\n    // 配列として使用\\n    p[0] = 100;\\n    free(p);  // 使い終わったら解放\\n}\\n```\\n\\n`malloc`で確保したメモリは`free`で解放！" }
+  ],
   "exercises": [
     {
       "title": "ファイルのオープン",

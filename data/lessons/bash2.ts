@@ -7,12 +7,24 @@ export const bash2Data = {
   "lessonOrder": 2,
   "tutorialSlides": [
     {
-      "title": "複数のデータを扱う 配列",
-      "content": "配列を使うと、たくさんのデータを1つの名前でまとめて管理できます。\\n\\n```bash\\nnames=(\"アリス\" \"ボブ\")\\necho ${names[0]} # アリス\\n```\\n\\nインデックスは 0 から始まります。"
+      "title": "配列（はいれつ）",
+      "content": "複数の値を格納できる**配列**を作るには `( )` を使います。\\n\\n```bash\\narr=(\"a\" \"b\" \"c\")\\necho ${arr[0]}  # a\\necho ${arr[1]}  # b\\n```\\n\\nインデックスは 0 から始まります。`${arr[@]}` で全要素を取得できます。"
     },
     {
-      "title": "コマンドの出力を使う コマンド置換",
-      "content": "コマンドの実行結果を変数に入れたり、別のコマンドで使いたいときは `$( )` を使います。\\n\\n```bash\\nnow=$(date)\\necho \"今は $now です\"\\n```"
+      "title": "文字列の長さ ${#変数}",
+      "content": "`#` を変数名の前につけると、**文字列の長さ**を取得できます。\\n\\n```bash\\ntext=\"Hello\"\\necho ${#text}  # 5\\n```\\n\\n配列の場合は要素数を返します。"
+    },
+    {
+      "title": "文字列の部分取得",
+      "content": "`${変数:開始:長さ}` で**部分文字列**を取り出せます。\\n\\n```bash\\ntext=\"Hello World\"\\necho ${text:0:5}   # Hello\\necho ${text:6:5}   # World\\n```\\n\\n開始位置は0から数えます。"
+    },
+    {
+      "title": "関数の定義",
+      "content": "Bashでも**関数**を定義できます。\\n\\n```bash\\ngreet() {\\n    echo \"Hello, $1\"\\n}\\ngreet \"太郎\"  # Hello, 太郎\\n```\\n\\n`$1`, `$2` で引数にアクセスします。"
+    },
+    {
+      "title": "コマンド置換 $()",
+      "content": "コマンドの出力を変数に入れるには `$( )` を使います。\\n\\n```bash\\nresult=$(echo \"Hello\")\\necho $result  # Hello\\n```\\n\\n関数の戻り値もこの方法で取得します。"
     }
   ],
   "exercises": [

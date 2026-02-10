@@ -5,6 +5,32 @@ export const swift3Data = {
   "lessonDescription": "Swiftの高度な機能を学びます。async/await、Result型、高階関数などモダンSwiftを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    {
+      "title": "Result型",
+      "content": "**Result型**は成功か失敗を表します。\\n\\n```swift\\nfunc divide(_ a: Int, by b: Int) -> Result<Int, Error> {\\n    if b == 0 {\\n        return .failure(MyError.divisionByZero)\\n    }\\n    return .success(a / b)\\n}\\n```"
+    },
+    {
+      "title": "Resultのパターンマッチ",
+      "content": "`switch` でResultを処理します。\\n\\n```swift\\nlet result = divide(10, by: 2)\\nswitch result {\\ncase .success(let value):\\n    print(value)\\ncase .failure(let error):\\n    print(error)\\n}\\n```"
+    },
+    {
+      "title": "高階関数 map",
+      "content": "`map` で配列を変換できます。\\n\\n```swift\\nlet nums = [1, 2, 3]\\nlet doubled = nums.map { $0 * 2 }\\n// [2, 4, 6]\\n```\\n\\n`$0` は引数を表すショートカットです。"
+    },
+    {
+      "title": "高階関数 filter",
+      "content": "`filter` で条件に合う要素だけを抽出します。\\n\\n```swift\\nlet nums = [1, 2, 3, 4, 5]\\nlet evens = nums.filter { $0 % 2 == 0 }\\n// [2, 4]\\n```"
+    },
+    {
+      "title": "クロージャ",
+      "content": "**クロージャ**は名前のない関数です。\\n\\n```swift\\nlet add = { (a: Int, b: Int) -> Int in\\n    return a + b\\n}\\nprint(add(2, 3)) // 5\\n```"
+    },
+    {
+      "title": "async/await",
+      "content": "非同期処理には `async/await` を使います。\\n\\n```swift\\nfunc fetchData() async -> String {\\n    // 非同期処理...\\n    return \\\"データ\\\"\\n}\\n\\nlet data = await fetchData()\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "Result型",

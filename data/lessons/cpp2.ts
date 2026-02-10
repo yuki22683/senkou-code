@@ -5,6 +5,12 @@ export const cpp2Data = {
   "lessonDescription": "C++の真髄「クラス」を使ったオブジェクト指向プログラミングを学びます。継承、テンプレート、スマートポインタなど現代C++の機能を身につけましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    { "title": "クラスとは？", "content": "# データと機能の設計図\\n\\n**クラス**は、データ（変数）と機能（関数）をひとまとめにした設計図です。\\n\\n```cpp\\nclass Dog {\\npublic:\\n    std::string name;\\n    void bark() { std::cout << \\\"ワン！\\\" << std::endl; }\\n};\\n\\nDog d;\\nd.name = \\\"ポチ\\\";\\nd.bark();\\n```" },
+    { "title": "コンストラクタ", "content": "# オブジェクト作成時の初期化\\n\\n```cpp\\nclass Box {\\npublic:\\n    int size;\\n    Box(int s) {  // コンストラクタ\\n        size = s;\\n    }\\n};\\n\\nBox b(10);  // 作成と同時にsize=10で初期化\\n```\\n\\nクラス名と同じ名前の関数がコンストラクタです。" },
+    { "title": "継承", "content": "# クラスを拡張する\\n\\n```cpp\\nclass Animal {\\npublic:\\n    void eat() { std::cout << \\\"食べる\\\" << std::endl; }\\n};\\n\\nclass Dog : public Animal {  // 継承\\npublic:\\n    void bark() { std::cout << \\\"ワン！\\\" << std::endl; }\\n};\\n```\\n\\n子クラスは親クラスの機能を引き継ぎます。" },
+    { "title": "テンプレート", "content": "# 型を後から決める\\n\\n```cpp\\ntemplate<typename T>\\nT maximum(T a, T b) {\\n    return (a > b) ? a : b;\\n}\\n\\nmaximum<int>(3, 7);      // 7\\nmaximum<double>(2.5, 1.2); // 2.5\\n```\\n\\n同じコードで異なる型に対応できます！" }
+  ],
   "exercises": [
     {
       "title": "クラスを作ろう",

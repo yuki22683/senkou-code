@@ -5,6 +5,32 @@ export const csharp4Data = {
   "lessonDescription": "C#のジェネリクスとデリゲートを学びます。型安全で再利用可能なコードを書くスキルを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 4,
+  "tutorialSlides": [
+    {
+      "title": "ジェネリッククラス",
+      "content": "`<T>`で型をパラメータとして受け取るクラスを定義できます。\\n\\n```csharp\\nclass Container<T> {\\n    public T Item { get; set; }\\n}\\n\\nvar c = new Container<string> { Item = \"こんにちは\" };\\nConsole.WriteLine(c.Item);  // => こんにちは\\n```"
+    },
+    {
+      "title": "ジェネリック制約 where",
+      "content": "`where`で型パラメータに制約を付けられます。\\n\\n```csharp\\nclass Comparer<T> where T : IComparable<T> {\\n    public int Compare(T a, T b) => a.CompareTo(b);\\n}\\n\\nvar c = new Comparer<int>();\\nConsole.WriteLine(c.Compare(5, 3));  // => 1\\n```"
+    },
+    {
+      "title": "デリゲート",
+      "content": "`delegate`でメソッドを参照できる型を定義できます。\\n\\n```csharp\\ndelegate int MathOp(int x);\\n\\nint Double(int n) => n * 2;\\n\\nMathOp op = Double;\\nConsole.WriteLine(op(5));  // => 10\\n```"
+    },
+    {
+      "title": "Func と Action",
+      "content": "`Func`は戻り値あり、`Action`は戻り値なしのデリゲートです。\\n\\n```csharp\\nFunc<int, int> triple = x => x * 3;\\nConsole.WriteLine(triple(7));  // => 21\\n\\nAction<string> greet = name => Console.WriteLine($\"こんにちは, {name}!\");\\ngreet(\"太郎\");  // => こんにちは, 太郎!\\n```"
+    },
+    {
+      "title": "null条件演算子 ?. と ??",
+      "content": "`?.`でnull安全アクセス、`??`でデフォルト値を設定できます。\\n\\n```csharp\\nstring? s = null;\\nint? len = s?.Length;     // => null\\nConsole.WriteLine(len ?? 0);  // => 0\\n\\nstring? value = null;\\nstring result = value ?? \"デフォルト\";\\n```"
+    },
+    {
+      "title": "record型と init",
+      "content": "`record`でイミュータブルなデータ型、`init`で初期化時のみ設定可能なプロパティを定義できます。\\n\\n```csharp\\nrecord Point(int X, int Y);\\n\\nclass Item {\\n    public string Name { get; init; }\\n}\\n\\nvar item = new Item { Name = \"りんご\" };\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "ジェネリッククラス",

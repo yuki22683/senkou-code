@@ -5,6 +5,12 @@ export const c3Data = {
   "lessonDescription": "C言語の高度な機能を学びます。関数ポインタ、ビット演算、ファイル操作など、システムプログラミングの技法を身つけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    { "title": "関数ポインタ", "content": "# 関数を指すポインタ\\n\\n関数ポインタは、関数のアドレスを格納できる変数です。\\n\\n```c\\nint add(int a, int b) { return a + b; }\\n\\nint (*fp)(int, int);  // 関数ポインタを宣言\\nfp = add;\\nprintf(\\\"%d\\n\\\", fp(2, 3));  // 5\\n```" },
+    { "title": "コールバック関数", "content": "# 関数を引数として渡す\\n\\n関数ポインタを引数として受け取り、後で呼び出す仕組みがコールバックです。\\n\\n```c\\nvoid process(int arr[], int n, void (*callback)(int)) {\\n    for (int i = 0; i < n; i++) {\\n        callback(arr[i]);\\n    }\\n}\\n```" },
+    { "title": "ビット演算", "content": "# ビット単位の操作\\n\\n```c\\nint a = 5;   // 0101（2進数）\\nint b = 3;   // 0011（2進数）\\n\\na & b  // AND: 0001 → 1\\na | b  // OR:  0111 → 7\\na ^ b  // XOR: 0110 → 6\\n~a     // NOT: 反転\\na << 1 // 左シフト: 1010 → 10\\n```" },
+    { "title": "構造体", "content": "# データをまとめる\\n\\n```c\\nstruct Person {\\n    char name[50];\\n    int age;\\n};\\n\\nstruct Person p;\\nstrcpy(p.name, \\\"太郎\\\");\\np.age = 20;\\n```\\n\\n関連するデータを1つにまとめて扱えます。" }
+  ],
   "exercises": [
     {
       "title": "関数ポインタ",

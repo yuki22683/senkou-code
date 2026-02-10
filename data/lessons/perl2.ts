@@ -5,6 +5,32 @@ export const perl2Data = {
   "lessonDescription": "Perlの最強機能「正規表現」とデータ構造を学びます。テキスト処理の達人になりましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "正規表現でマッチング",
+      "content": "Perlは正規表現が言語に組み込まれています。\\n\\n```perl\\nmy $text = \"Hello World\";\\n\\n# =~ でパターンマッチング\\nif ($text =~ /world/i) {\\n    print \"found\\n\";\\n}\\n```\\n\\n`/パターン/` で正規表現を書き、`i` フラグで大文字小文字を無視します。"
+    },
+    {
+      "title": "正規表現で置換",
+      "content": "`s/パターン/置換/` で文字列を置換します。\\n\\n```perl\\nmy $text = \"cat\";\\n$text =~ s/cat/dog/;\\nprint \"$text\\n\";  # => dog\\n```\\n\\n`g` フラグを付けると全ての箇所を置換します。\\n\\n```perl\\n$text =~ s/a/x/g;  # 全ての a を x に\\n```"
+    },
+    {
+      "title": "配列とハッシュ",
+      "content": "`@` で配列、`%` でハッシュを宣言します。\\n\\n```perl\\n# 配列\\nmy @fruits = (\"りんご\", \"バナナ\");\\nprint $fruits[0];  # => りんご\\n\\n# ハッシュ\\nmy %scores = (\"math\" => 90);\\nprint $scores{\"math\"};  # => 90\\n```\\n\\nアクセス時は `$` を使うことに注意！"
+    },
+    {
+      "title": "サブルーチン",
+      "content": "`sub` でサブルーチン（関数）を定義します。\\n\\n```perl\\nsub double {\\n    my $n = shift;  # 引数を取得\\n    return $n * 2;\\n}\\n\\nprint double(5);  # => 10\\n```\\n\\n`@_` に全引数が入り、`shift` で1つずつ取り出します。"
+    },
+    {
+      "title": "リファレンス",
+      "content": "`\\` でリファレンス（参照）を作成します。\\n\\n```perl\\nmy @nums = (10, 20);\\nmy $ref = \\@nums;  # 配列への参照\\n\\nprint $ref->[1];  # => 20\\n\\n# 無名配列リファレンス\\nmy $aref = [5, 10, 15];\\nprint $aref->[2];  # => 15\\n```\\n\\n`->` でリファレンス経由でアクセスします。"
+    },
+    {
+      "title": "map と grep",
+      "content": "`map` で変換、`grep` で抽出します。\\n\\n```perl\\nmy @nums = (1, 2, 3);\\n\\n# map: 各要素を変換\\nmy @squared = map { $_ * $_ } @nums;\\n# => (1, 4, 9)\\n\\n# grep: 条件に合う要素を抽出\\nmy @big = grep { $_ >= 2 } @nums;\\n# => (2, 3)\\n```\\n\\n`$_` は現在の要素を表す特殊変数です。"
+    }
+  ],
   "exercises": [
     {
       "title": "正規表現でマッチング",

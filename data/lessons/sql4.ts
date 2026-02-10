@@ -5,6 +5,32 @@ export const sql4Data = {
   "lessonDescription": "SQLの高度な分析機能を学びます。CTE、ウィンドウ関数、データ操作など、実務で使える技術を身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 4,
+  "tutorialSlides": [
+    {
+      "title": "CTE（共通テーブル式）",
+      "content": "`WITH` 句で一時的なテーブルを定義できます。\\n\\n```sql\\nWITH high_scores AS (\\n  SELECT * FROM students WHERE score >= 80\\n)\\nSELECT * FROM high_scores;\\n```\\n\\n複雑なクエリを読みやすく分割できます。\\n\\n複数のCTEをカンマで区切って定義することも可能です。"
+    },
+    {
+      "title": "ウィンドウ関数（ROW_NUMBER）",
+      "content": "`ROW_NUMBER()` で行に連番を振ります。\\n\\n```sql\\nSELECT name, score,\\n  ROW_NUMBER() OVER (ORDER BY score DESC) AS rank\\nFROM students;\\n\\n-- 結果例:\\n-- 田中 | 95 | 1\\n-- 鈴木 | 88 | 2\\n-- 佐藤 | 85 | 3\\n```\\n\\n`OVER (ORDER BY ...)` で順序を指定します。"
+    },
+    {
+      "title": "RANK と DENSE_RANK",
+      "content": "同じ値に同じ順位を付ける関数です。\\n\\n```sql\\n-- RANK: 同順位後にギャップあり\\n-- 1, 1, 3, 4 ...\\n\\n-- DENSE_RANK: ギャップなし\\n-- 1, 1, 2, 3 ...\\n\\nSELECT score,\\n  RANK() OVER (ORDER BY score DESC) AS rnk,\\n  DENSE_RANK() OVER (ORDER BY score DESC) AS dense_rnk\\nFROM students;\\n```"
+    },
+    {
+      "title": "累積計算（SUM OVER）",
+      "content": "`SUM() OVER` で累積合計を計算します。\\n\\n```sql\\nSELECT date, amount,\\n  SUM(amount) OVER (ORDER BY date) AS running_total\\nFROM sales;\\n\\n-- 結果例:\\n-- 2024-01-01 | 100 | 100\\n-- 2024-01-02 | 200 | 300\\n-- 2024-01-03 | 150 | 450\\n```\\n\\n`AVG`, `COUNT`, `MAX`, `MIN` も同様に使えます。"
+    },
+    {
+      "title": "データ操作（INSERT/UPDATE/DELETE）",
+      "content": "データを追加・更新・削除する文です。\\n\\n```sql\\n-- 挿入\\nINSERT INTO users (name, age) VALUES ('太郎', 25);\\n\\n-- 更新\\nUPDATE users SET age = 26 WHERE name = '太郎';\\n\\n-- 削除\\nDELETE FROM users WHERE age < 18;\\n```\\n\\n`WHERE` を忘れると全行に影響するので注意！"
+    },
+    {
+      "title": "GROUP_CONCAT / COALESCE",
+      "content": "便利な関数を紹介します。\\n\\n```sql\\n-- GROUP_CONCAT: 値を連結\\nSELECT GROUP_CONCAT(name, ', ') FROM users;\\n-- => '太郎, 花子, 次郎'\\n\\n-- COALESCE: 最初の非NULLを返す\\nSELECT COALESCE(nickname, name) FROM users;\\n```\\n\\n`GROUP_CONCAT` はSQLiteやMySQLで使用可能です。"
+    }
+  ],
   "exercises": [
     {
       "title": "CTE（WITH句）",

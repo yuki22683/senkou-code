@@ -5,6 +5,12 @@ export const cpp3Data = {
   "lessonDescription": "モダンC++の機能を学びます。スマートポインタ、ムーブセマンティクス、STLアルゴリズムなどを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    { "title": "autoで型推論", "content": "# コンパイラに型を任せる\\n\\n```cpp\\nauto x = 42;        // int型と自動判断\\nauto pi = 3.14;     // double型と自動判断\\nauto name = \\\"Alice\\\"; // const char*型\\n```\\n\\n型を書く手間が省けてコードがスッキリ！" },
+    { "title": "範囲for文", "content": "# シンプルなループ\\n\\n```cpp\\nvector<int> v = {1, 2, 3};\\nfor (int x : v) {\\n    cout << x << endl;\\n}\\n```\\n\\n`:` は「〜の中から」という意味です。\\n`const auto&`で効率的に参照できます。" },
+    { "title": "ラムダ式", "content": "# 簡潔な関数の書き方\\n\\n```cpp\\nauto add = [](int a, int b) { return a + b; };\\ncout << add(2, 3) << endl;  // 5\\n```\\n\\n`[]`の中にキャプチャ、`()`の中に引数を書きます。" },
+    { "title": "スマートポインタ", "content": "# 自動でメモリ管理\\n\\n```cpp\\nauto p = make_unique<int>(42);\\ncout << *p << endl;  // 42\\n// スコープを出ると自動でメモリ解放！\\n```\\n\\n`unique_ptr`: 1人だけが所有\\n`shared_ptr`: 複数で共有" }
+  ],
   "exercises": [
     {
       "title": "auto で型推論",

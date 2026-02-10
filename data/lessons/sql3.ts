@@ -5,6 +5,32 @@ export const sql3Data = {
   "lessonDescription": "SQLの高度な機能を学びます。サブクエリ、ウィンドウ関数、CTEなど、複雑なデータ操作を身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    {
+      "title": "サブクエリ",
+      "content": "クエリの中にクエリを書けます。\\n\\n```sql\\n-- WHERE内で使用\\nSELECT * FROM users\\nWHERE age > (SELECT AVG(age) FROM users);\\n\\n-- FROM内で使用\\nSELECT * FROM (\\n  SELECT name, score * 1.1 AS adjusted\\n  FROM students\\n) AS t;\\n```\\n\\nサブクエリは括弧 `()` で囲みます。"
+    },
+    {
+      "title": "EXISTS と IN",
+      "content": "`EXISTS` で存在チェック、`IN` で複数値マッチを行います。\\n\\n```sql\\n-- EXISTS: 結果が存在するか\\nSELECT * FROM users u\\nWHERE EXISTS (SELECT 1 FROM orders WHERE user_id = u.id);\\n\\n-- IN: リスト内に含まれるか\\nSELECT * FROM users\\nWHERE status IN ('active', 'pending');\\n```"
+    },
+    {
+      "title": "UNION",
+      "content": "`UNION` で複数のSELECT結果を縦に結合します。\\n\\n```sql\\nSELECT name FROM employees\\nUNION\\nSELECT name FROM customers;\\n```\\n\\n`UNION`: 重複を除去\\n`UNION ALL`: 重複も含める（高速）\\n\\n列の数と型が一致している必要があります。"
+    },
+    {
+      "title": "JOIN（結合）",
+      "content": "複数のテーブルを結合します。\\n\\n```sql\\n-- INNER JOIN: 両方にある行\\nSELECT * FROM orders o\\nINNER JOIN users u ON o.user_id = u.id;\\n\\n-- LEFT JOIN: 左テーブルの全行\\nSELECT * FROM users u\\nLEFT JOIN orders o ON u.id = o.user_id;\\n```\\n\\n`ON` で結合条件を指定します。"
+    },
+    {
+      "title": "LIKE と BETWEEN",
+      "content": "パターン検索と範囲検索ができます。\\n\\n```sql\\n-- LIKE: パターン検索\\nSELECT * FROM users\\nWHERE name LIKE '田%';  -- 田で始まる\\n\\n-- BETWEEN: 範囲検索\\nSELECT * FROM products\\nWHERE price BETWEEN 1000 AND 5000;\\n```\\n\\n`%` は任意の文字列、`_` は任意の1文字にマッチします。"
+    },
+    {
+      "title": "DISTINCT",
+      "content": "`DISTINCT` で重複を除去します。\\n\\n```sql\\n-- 重複除去\\nSELECT DISTINCT category FROM products;\\n\\n-- 複数列の組み合わせで重複除去\\nSELECT DISTINCT category, brand FROM products;\\n```\\n\\n全ての列の値が同じ行が重複と見なされます。"
+    }
+  ],
   "exercises": [
     {
       "title": "サブクエリ（WHERE内）",

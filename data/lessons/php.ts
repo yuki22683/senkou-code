@@ -5,6 +5,32 @@ export const phpData = {
   "lessonDescription": "Webサイトを作るのが得意な言葉「PHP（ピーエイチピー）」のきほんを学びましょう。HTMLという言葉と一緒に使われることが多いです。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "PHPへようこそ！",
+      "content": "**PHP（ピーエイチピー）** は、Webサイトを作るために生まれたプログラミング言語です。\\n\\nWordPressなど、世界中のたくさんのWebサイトで使われています。\\n\\nサーバーで動いて、HTMLを作り出します。"
+    },
+    {
+      "title": "画面に文字を出す",
+      "content": "PHPで画面に文字を出すには `echo` を使います。\\n\\n```php\\n<?php\\n  echo \\\"Hello, PHP!\\\";\\n?>\\n```\\n\\n`<?php` と `?>` の間にPHPのコードを書きます。"
+    },
+    {
+      "title": "変数を使う",
+      "content": "PHPの変数は `$` で始まります。\\n\\n```php\\n<?php\\n  $name = \\\"PHP\\\";\\n  $age = 10;\\n  echo $name;\\n  echo $age;\\n?>\\n```\\n\\n変数名の前に必ず `$` をつけましょう。"
+    },
+    {
+      "title": "計算する",
+      "content": "PHPでは数字を計算できます。\\n\\n```php\\n<?php\\n  $a = 5;\\n  $b = 3;\\n  echo $a + $b;  // 8\\n  echo 10 % 3;   // 1（あまり）\\n?>\\n```\\n\\n`//` から後ろはコメント（メモ）です。"
+    },
+    {
+      "title": "条件分岐 if文",
+      "content": "「もし〜なら」という条件で処理を分けられます。\\n\\n```php\\n<?php\\n  $score = 85;\\n  if ($score > 80) {\\n    echo \\\"すごい！\\\";\\n  } else {\\n    echo \\\"がんばろう\\\";\\n  }\\n?>\\n```"
+    },
+    {
+      "title": "配列と連想配列",
+      "content": "複数のデータをまとめて扱えます。\\n\\n**配列**:\\n```php\\n$fruits = ['りんご', 'バナナ'];\\necho $fruits[0];\\n```\\n\\n**連想配列**（辞書）:\\n```php\\n$user = ['名前' => 'アリス'];\\necho $user['名前'];\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",

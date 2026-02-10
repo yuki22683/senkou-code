@@ -5,6 +5,32 @@ export const assemblyData = {
   "lessonDescription": "コンピュータの「脳みそ」に直接、短い暗号で指示を出す「アセンブリ言語」のきほんを学びましょう。コンピュータがどうやって動いているのか、その秘密がわかります。",
   "lessonDifficulty": "medium",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "アセンブリ言語へようこそ！",
+      "content": "**Assembly（アセンブリ）** は、コンピュータのCPU（脳みそ）に直接命令を出す言語です。\\n\\n他の言語より低レベル（機械に近い）なので、コンピュータの仕組みがよくわかります。\\n\\nこのレッスンでは x86-64 アセンブリを学びます。"
+    },
+    {
+      "title": "レジスタとは",
+      "content": "**レジスタ**は、CPU内部にある小さな記憶場所です。\\n\\n主なレジスタ：\\n- `rax` - 計算結果や戻り値\\n- `rdi` - 第1引数\\n- `rsi` - 第2引数\\n- `rdx` - 第3引数\\n\\nデータをレジスタに入れて計算します。"
+    },
+    {
+      "title": "mov命令",
+      "content": "`mov` はデータを移動（コピー）する命令です。\\n\\n```asm\\nmov rax, 10    ; raxに10を入れる\\nmov rdi, rax   ; raxの値をrdiにコピー\\n```\\n\\n`mov 先, 元` の順番で書きます。`;` はコメントです。"
+    },
+    {
+      "title": "計算する",
+      "content": "足し算や引き算ができます。\\n\\n```asm\\nmov rax, 10\\nadd rax, 5    ; raxに5を足す（rax = 15）\\nsub rax, 3    ; raxから3を引く（rax = 12）\\n```\\n\\n`add` は足し算、`sub` は引き算です。"
+    },
+    {
+      "title": "システムコール",
+      "content": "OSに何かを頼むには `syscall` を使います。\\n\\n```asm\\nmov rax, 1    ; 1 = 書き込み\\nmov rdi, 1    ; 1 = 標準出力\\nmov rsi, msg  ; 出力する文字列\\nmov rdx, 5    ; 文字数\\nsyscall       ; OSに実行してもらう\\n```\\n\\n番号60は「プログラム終了」です。"
+    },
+    {
+      "title": "プログラムの構造",
+      "content": "アセンブリプログラムの基本構造：\\n\\n```asm\\nsection .data    ; データセクション\\n  msg db \\\"Hi\\\", 0xA\\n\\nsection .text    ; コードセクション\\n  global _start\\n\\n_start:          ; 開始地点\\n  ; ここに処理を書く\\n```\\n\\n`_start` がプログラムの入口です。"
+    }
+  ],
   "exercises": [
     {
       "title": "画面にメッセージを出してみましょう",

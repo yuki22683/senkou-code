@@ -5,6 +5,32 @@ export const rubyData = {
   "lessonDescription": "日本で生まれたプログラミング言語「Ruby（ルビー）」のきほんを学びましょう。人間にとって読みやすく、楽しくプログラムを書けるのが特徴です。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "Rubyへようこそ！",
+      "content": "**Ruby（ルビー）** は、まつもとゆきひろさん（Matz）が1995年に日本で作ったプログラミング言語です。\\n\\n「楽しくプログラミングする」ことを大切にしています。\\n\\nRuby on Railsというフレームワークで、Webサイト作りにもよく使われています。"
+    },
+    {
+      "title": "画面に文字を出す",
+      "content": "Rubyで画面に文字を出すには `puts` を使います。\\n\\n```ruby\\nputs 'こんにちは, Ruby!'\\n```\\n\\n`puts` は「put string」の略で、文字を出力して改行します。"
+    },
+    {
+      "title": "変数を使う",
+      "content": "データを入れておく「はこ」を**変数**と呼びます。\\n\\n```ruby\\nname = 'Ruby'\\nage = 10\\nputs name\\nputs age\\n```\\n\\n`=` で値を代入します。型の宣言は不要です。"
+    },
+    {
+      "title": "計算する",
+      "content": "Rubyでは数字を計算できます。\\n\\n```ruby\\na = 5\\nb = 3\\nputs a + b  # 8\\nputs 10 % 3 # 1（あまり）\\n```\\n\\n`#` から後ろはコメント（メモ）です。"
+    },
+    {
+      "title": "条件分岐 if文",
+      "content": "「もし〜なら」という条件で処理を分けられます。\\n\\n```ruby\\nscore = 85\\nif score > 80\\n  puts 'すごい！'\\nelse\\n  puts 'がんばろう'\\nend\\n```\\n\\nRubyは `end` でブロックを閉じます。"
+    },
+    {
+      "title": "配列とハッシュ",
+      "content": "複数のデータをまとめて扱えます。\\n\\n**配列**:\\n```ruby\\ncolors = ['赤', '青', '緑']\\nputs colors[0]\\n```\\n\\n**ハッシュ**（辞書）:\\n```ruby\\nscores = {'Math' => 90}\\nputs scores['Math']\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",

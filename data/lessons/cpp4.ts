@@ -5,6 +5,12 @@ export const cpp4Data = {
   "lessonDescription": "STLアルゴリズムとC++17以降の機能を学びます。効率的で表現力豊かなコードを書くスキルを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 4,
+  "tutorialSlides": [
+    { "title": "unique_ptr", "content": "# 排他的所有権のスマートポインタ\\n\\n```cpp\\nauto p = make_unique<int>(42);\\ncout << *p << endl;\\n// deleteを書き忘れてもメモリリークしない！\\n```\\n\\nコピー不可、移動（`move`）のみ可能。" },
+    { "title": "std::variant", "content": "# 型安全な「どれか1つ」型\\n\\n```cpp\\nvariant<int, string> v;\\nv = 42;        // 今はint\\nv = \\\"hello\\\";   // 今はstring\\n\\nif (holds_alternative<int>(v)) {\\n    cout << get<int>(v) << endl;\\n}\\n```" },
+    { "title": "std::optional", "content": "# 値があるかもしれない型\\n\\n```cpp\\noptional<int> find(vector<int>& v, int x) {\\n    for (int i : v)\\n        if (i == x) return i;\\n    return nullopt;  // 見つからなかった\\n}\\n```\\n\\n戻り値が「ない」こともある関数に便利！" },
+    { "title": "STLアルゴリズム", "content": "# 便利な関数群\\n\\n```cpp\\nvector<int> v = {3, 1, 4, 1, 5};\\n\\nsort(v.begin(), v.end());  // ソート\\nreverse(v.begin(), v.end());  // 逆順\\n\\nauto it = find(v.begin(), v.end(), 4);\\n```\\n\\nヘッダ`<algorithm>`で使えます。" }
+  ],
   "exercises": [
     {
       "title": "unique_ptr",

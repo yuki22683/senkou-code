@@ -5,6 +5,32 @@ export const rust3Data = {
   "lessonDescription": "Rustの高度な機能を学びます。ライフタイム、イテレータ、クロージャなど、Rustの真髄を身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    {
+      "title": "ライフタイム",
+      "content": "**ライフタイム**は参照の有効期間を示します。\\n\\n```rust\\nfn longest<'a>(x: &'a str, y: &'a str) -> &'a str {\\n    if x.len() > y.len() { x } else { y }\\n}\\n```\\n\\n`'a` はライフタイム注釈で、参照が有効な範囲を示します。"
+    },
+    {
+      "title": "イテレータ",
+      "content": "**イテレータ**でコレクションを順番に処理できます。\\n\\n```rust\\nlet nums = vec![1, 2, 3];\\nlet sum: i32 = nums.iter().sum();\\n```\\n\\n`iter()` でイテレータを作成し、`sum()` で合計を計算します。"
+    },
+    {
+      "title": "イテレータアダプタ",
+      "content": "`map` や `filter` でイテレータを変換できます。\\n\\n```rust\\nlet nums = vec![1, 2, 3];\\nlet doubled: Vec<_> = nums\\n    .iter()\\n    .map(|x| x * 2)\\n    .collect();\\n// [2, 4, 6]\\n```"
+    },
+    {
+      "title": "クロージャ",
+      "content": "**クロージャ**は名前のない関数です。\\n\\n```rust\\nlet add = |a, b| a + b;\\nprintln!(\\\"{}\\\", add(2, 3)); // 5\\n```\\n\\n`|引数|` で定義し、外側の変数もキャプチャできます。"
+    },
+    {
+      "title": "Result型",
+      "content": "エラー処理には `Result` 型を使います。\\n\\n```rust\\nfn divide(a: i32, b: i32) -> Result<i32, String> {\\n    if b == 0 {\\n        Err(String::from(\\\"ゼロ除算\\\"))\\n    } else {\\n        Ok(a / b)\\n    }\\n}\\n```"
+    },
+    {
+      "title": "? 演算子",
+      "content": "`?` でエラー処理を簡潔に書けます。\\n\\n```rust\\nfn read_file() -> Result<String, io::Error> {\\n    let content = fs::read_to_string(\\\"file.txt\\\")?;\\n    Ok(content)\\n}\\n```\\n\\nエラーがあれば早期リターンします。"
+    }
+  ],
   "exercises": [
     {
       "title": "ライフタイムの基本",

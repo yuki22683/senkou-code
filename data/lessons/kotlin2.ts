@@ -5,6 +5,32 @@ export const kotlin2Data = {
   "lessonDescription": "KotlinのNull安全機能とラムダ式を学びます。Androidアプリ開発に必要なモダンな記法を身につけましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "Null安全について学ぼう",
+      "content": "**Null（ヌル）** とは「何もない」を表す特別な値です。\\n\\nKotlinでは、変数が**nullになりうるか**を型で明示します。\\n\\n```kotlin\\n// nullを許容しない型\\nvar name: String = \"太郎\"\\n\\n// ?を付けるとnullを許容\\nvar nickname: String? = null\\n```\\n\\n`?` を付けた型を「nullable型」と呼びます。"
+    },
+    {
+      "title": "セーフコール演算子 ?.",
+      "content": "nullable型のプロパティやメソッドに安全にアクセスするには `?.` を使います。\\n\\n```kotlin\\nval text: String? = \"こんにちは\"\\nprintln(text?.length)  // => 5\\n\\nval empty: String? = null\\nprintln(empty?.length)  // => null（エラーにならない）\\n```\\n\\n`?.` を使うと、値がnullの場合はnullを返し、エラーを防げます。"
+    },
+    {
+      "title": "エルビス演算子 ?:",
+      "content": "nullの場合にデフォルト値を指定するには `?:` を使います。\\n\\n```kotlin\\nval value: Int? = null\\nprintln(value ?: 0)  // => 0\\n\\nval num: Int? = 42\\nprintln(num ?: 0)  // => 42\\n```\\n\\n`?:` の左側がnullなら右側の値が使われます。\\n\\n形が歌手エルビスの髪型に似ていることから「エルビス演算子」と呼ばれます。"
+    },
+    {
+      "title": "データクラス",
+      "content": "`data class` を使うと、データを持つクラスを簡単に作れます。\\n\\n```kotlin\\ndata class User(val name: String, val age: Int)\\n\\nval user = User(\"太郎\", 20)\\nprintln(user)  // => User(name=太郎, age=20)\\n```\\n\\nデータクラスには自動で以下が生成されます：\\n- `toString()` - 見やすい文字列表現\\n- `equals()` - 値の比較\\n- `copy()` - コピーの作成"
+    },
+    {
+      "title": "ラムダ式",
+      "content": "**ラムダ式**は関数を短く書く記法です。\\n\\n```kotlin\\n// 通常の関数\\nfun double(n: Int) = n * 2\\n\\n// ラムダ式\\nval double = { n: Int -> n * 2 }\\n\\nprintln(double(5))  // => 10\\n```\\n\\n`{ 引数 -> 処理 }` の形で書きます。\\n\\nラムダ式は変数に代入したり、他の関数に渡したりできます。"
+    },
+    {
+      "title": "コレクション操作（map / filter）",
+      "content": "`map` と `filter` でコレクションを変換・抽出できます。\\n\\n```kotlin\\nval nums = listOf(1, 2, 3, 4, 5)\\n\\n// map: 各要素を変換\\nval doubled = nums.map { it * 2 }\\nprintln(doubled)  // => [2, 4, 6, 8, 10]\\n\\n// filter: 条件に合う要素を抽出\\nval evens = nums.filter { it % 2 == 0 }\\nprintln(evens)  // => [2, 4]\\n```\\n\\n`it` は暗黙の引数名で、各要素を表します。"
+    }
+  ],
   "exercises": [
     {
       "title": "Null安全を学ぼう",

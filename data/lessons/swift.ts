@@ -5,6 +5,32 @@ export const swiftData = {
   "lessonDescription": "iPhone（アイフォーン）のアプリ作りなどで使われる言葉「Swift（スウィフト）」のきほんを学びましょう。きれいで分かりやすいプログラムを作れるようになります。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "Swiftへようこそ！",
+      "content": "**Swift（スウィフト）** は、Apple（アップル）が2014年に作ったプログラミング言語です。\\n\\niPhoneやiPad、Macのアプリを作るのに使います。\\n\\n読みやすく、書きやすく、安全なのが特徴です。"
+    },
+    {
+      "title": "画面に文字を出す",
+      "content": "Swiftで画面に文字を出すには `print` 関数を使います。\\n\\n```swift\\nprint(\\\"Hello, World!\\\")\\n```\\n\\nこれだけでOK！他の言語と違って、`main` 関数を書かなくても動きます。"
+    },
+    {
+      "title": "変数を使う",
+      "content": "データを入れておく「はこ」を**変数**と呼びます。\\n\\n```swift\\nlet name = \\\"太郎\\\"  // 変更できない\\nvar age = 10       // 変更できる\\nage = 11\\n```\\n\\n`let` は変更できない定数、`var` は変更できる変数です。"
+    },
+    {
+      "title": "計算する",
+      "content": "Swiftでは数字を計算できます。\\n\\n```swift\\nlet a = 5\\nlet b = 3\\nprint(a + b)  // 8\\nprint(10 % 3) // 1（あまり）\\n```\\n\\n`+`（足す）、`-`（引く）、`*`（かける）、`/`（割る）、`%`（あまり）が使えます。"
+    },
+    {
+      "title": "条件分岐 if文",
+      "content": "「もし〜なら」という条件で処理を分けられます。\\n\\n```swift\\nlet score = 85\\nif score > 80 {\\n    print(\\\"すごい！\\\")\\n} else {\\n    print(\\\"がんばろう\\\")\\n}\\n```\\n\\n条件が正しければ `{ }` の中が実行されます。"
+    },
+    {
+      "title": "配列と辞書",
+      "content": "複数のデータをまとめて扱えます。\\n\\n**配列**:\\n```swift\\nlet colors = [\\\"あか\\\", \\\"あお\\\"]\\nprint(colors[0]) // あか\\n```\\n\\n**辞書**:\\n```swift\\nlet scores = [\\\"Math\\\": 90]\\nprint(scores[\\\"Math\\\"]!) // 90\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",

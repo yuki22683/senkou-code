@@ -5,6 +5,48 @@ export const pythonData4 = {
   "lessonDescription": "Pythonのオブジェクト指向プログラミングを深く学びます。継承、多重継承、抽象クラス、プロパティなどを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 4,
+  "tutorialSlides": [
+    {
+      "title": "継承（けいしょう）とは？",
+      "content": "**継承** とは、既存のクラスの機能を**そのまま引き継いで**新しいクラスを作ることです。\\n\\n- **親クラス（Animal）** = 動物の基本的な性質\\n- **子クラス（Dog）** = 動物の性質 + 犬特有の性質\\n\\n```python\\nclass Animal:\\n    def speak(self):\\n        print('...')\\n\\nclass Dog(Animal):  # Animalを継承\\n    def speak(self):\\n        print('ワン!')\\n```\\n\\n`class Dog(Animal):` の `(Animal)` で「Animalを継承する」という意味になります。"
+    },
+    {
+      "title": "super()で親を呼ぶ",
+      "content": "**super()** を使うと、**親クラスのメソッドを呼び出す**ことができます。\\n\\n子クラスで `__init__` を作ると、親の `__init__` が上書きされます。親の初期化処理も使いたいときは `super().__init__()` で呼び出します。\\n\\n```python\\nclass Parent:\\n    def __init__(self, name):\\n        self.name = name\\n\\nclass Child(Parent):\\n    def __init__(self, name, age):\\n        super().__init__(name)  # 親の初期化を呼ぶ\\n        self.age = age\\n```"
+    },
+    {
+      "title": "@propertyデコレータ",
+      "content": "**@property** を使うと、**メソッドを属性のようにアクセス**できます。\\n\\n- 普通のメソッド: `c.area()` ← 括弧が必要\\n- プロパティ: `c.area` ← 括弧なしで呼べる\\n\\n```python\\nclass Circle:\\n    def __init__(self, radius):\\n        self._radius = radius\\n    \\n    @property\\n    def area(self):\\n        return 3.14 * self._radius ** 2\\n\\nc = Circle(5)\\nprint(c.area)  # 78.5（括弧なし）\\n```"
+    },
+    {
+      "title": "@classmethodデコレータ",
+      "content": "**@classmethod** は、**インスタンスではなくクラス自体**に対して動作するメソッドです。\\n\\n- 普通のメソッド: `self`（インスタンス）を受け取る\\n- クラスメソッド: `cls`（クラス自体）を受け取る\\n\\n```python\\nclass Counter:\\n    count = 0  # クラス変数\\n    \\n    @classmethod\\n    def increment(cls):\\n        cls.count += 1\\n```\\n\\n`cls.count` でクラス変数にアクセスできます。"
+    },
+    {
+      "title": "@staticmethodデコレータ",
+      "content": "**@staticmethod** は、**self も cls も必要としない**メソッドです。\\n\\n| メソッド種類 | 第一引数 | 用途 |\\n|------------|---------|------|\\n| 普通のメソッド | `self` | インスタンスのデータを扱う |\\n| クラスメソッド | `cls` | クラス全体のデータを扱う |\\n| 静的メソッド | なし | 独立した処理を行う |\\n\\n```python\\nclass Math:\\n    @staticmethod\\n    def add(a, b):\\n        return a + b\\n\\nprint(Math.add(3, 5))  # 8\\n```"
+    },
+    {
+      "title": "抽象クラス（ABC）",
+      "content": "**ABC（Abstract Base Class）** は、子クラスに「このメソッドは必ず作ってね」と**約束させる**仕組みです。\\n\\n- `ABC`: 抽象クラスを作るための親クラス\\n- `@abstractmethod`: 「必ず実装してね」と印をつける\\n\\n```python\\nfrom abc import ABC, abstractmethod\\n\\nclass Shape(ABC):\\n    @abstractmethod\\n    def area(self):\\n        pass\\n\\nclass Circle(Shape):\\n    def area(self):  # 必ず実装する\\n        return 3.14 * self.r ** 2\\n```"
+    },
+    {
+      "title": "__str__メソッド",
+      "content": "**__str__** を定義すると、`print()` での**表示をカスタマイズ**できます。\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __str__(self):\\n        return f'Point({self.x}, {self.y})'\\n\\np = Point(3, 4)\\nprint(p)  # Point(3, 4)\\n```\\n\\n`__str__` がないと `<Point object at 0x...>` のような分かりにくい表示になります。"
+    },
+    {
+      "title": "__eq__メソッド",
+      "content": "**__eq__** を定義すると、`==` での**比較方法をカスタマイズ**できます。\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __eq__(self, other):\\n        return self.x == other.x and self.y == other.y\\n\\np1 = Point(1, 2)\\np2 = Point(1, 2)\\nprint(p1 == p2)  # True\\n```\\n\\n引数 `other` は比較相手のオブジェクトです。"
+    },
+    {
+      "title": "__len__メソッド",
+      "content": "**__len__** を定義すると、`len()` 関数で**オブジェクトの長さ**を取得できます。\\n\\n```python\\nclass Playlist:\\n    def __init__(self, songs):\\n        self.songs = songs\\n    \\n    def __len__(self):\\n        return len(self.songs)\\n\\npl = Playlist(['A', 'B', 'C'])\\nprint(len(pl))  # 3\\n```\\n\\n`__len__` は必ず**整数（int）**を返す必要があります。"
+    },
+    {
+      "title": "@dataclassデコレータ",
+      "content": "**@dataclass** を使うと、`__init__` や `__repr__` が**自動で作られます**。\\n\\n```python\\nfrom dataclasses import dataclass\\n\\n# 普通のクラス（たくさん書く）\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n\\n# データクラス（シンプル！）\\n@dataclass\\nclass Point:\\n    x: int\\n    y: int\\n```\\n\\n自動で `__init__`、`__repr__`、`__eq__` が作られます。"
+    }
+  ],
   "exercises": [
     {
       "title": "クラスの継承",

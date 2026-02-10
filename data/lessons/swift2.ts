@@ -5,6 +5,32 @@ export const swift2Data = {
   "lessonDescription": "Swiftの安全機能「オプショナル」とオブジェクト指向を学びます。iOSアプリ開発に必要な知識を身につけましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "オプショナルとは",
+      "content": "**オプショナル**は「値があるかもしれないし、ないかもしれない」を表します。\\n\\n```swift\\nvar num: Int? = 42   // 値あり\\nvar name: String? = nil  // 値なし\\n```\\n\\n型の後に `?` をつけるとオプショナル型になります。"
+    },
+    {
+      "title": "アンラップ",
+      "content": "オプショナルから値を取り出すには**アンラップ**します。\\n\\n```swift\\nvar num: Int? = 42\\nif num != nil {\\n    print(num!) // 強制アンラップ\\n}\\n```\\n\\n`!` で強制アンラップしますが、nilだとエラーになります。"
+    },
+    {
+      "title": "オプショナルバインディング",
+      "content": "安全にアンラップするには `if let` を使います。\\n\\n```swift\\nvar num: Int? = 42\\nif let value = num {\\n    print(value) // 安全にアンラップ\\n}\\n```\\n\\n値があれば `value` に代入されます。"
+    },
+    {
+      "title": "クラス",
+      "content": "**クラス**でオブジェクトを作れます。\\n\\n```swift\\nclass Person {\\n    var name: String\\n    init(name: String) {\\n        self.name = name\\n    }\\n}\\nlet p = Person(name: \\\"太郎\\\")\\n```"
+    },
+    {
+      "title": "プロトコル",
+      "content": "**プロトコル**はメソッドの約束事です。\\n\\n```swift\\nprotocol Speakable {\\n    func speak() -> String\\n}\\n\\nstruct Dog: Speakable {\\n    func speak() -> String {\\n        return \\\"ワン！\\\"\\n    }\\n}\\n```"
+    },
+    {
+      "title": "拡張（extension）",
+      "content": "`extension` で既存の型に機能を追加できます。\\n\\n```swift\\nextension Int {\\n    var doubled: Int {\\n        return self * 2\\n    }\\n}\\nprint(5.doubled) // 10\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "オプショナルを学ぼう",

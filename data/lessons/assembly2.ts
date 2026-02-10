@@ -5,6 +5,32 @@ export const assembly2Data = {
   "lessonDescription": "アセンブリ言語の基本的な演算と制御フローを学びます。レジスタの使い方、算術演算、条件分岐の仕組みを理解しましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "レジスタとは",
+      "content": "レジスタはCPU内の高速な記憶領域です。x86-64には多くの64ビットレジスタがあります。\\n\\n**よく使うレジスタ:**\\n- `rax` - 戻り値・演算結果\\n- `rbx`, `rcx`, `rdx` - 汎用\\n- `rdi`, `rsi` - 関数の引数\\n- `rsp`, `rbp` - スタックポインタ"
+    },
+    {
+      "title": "mov命令でデータ転送",
+      "content": "`mov`命令で値をレジスタに格納します。\\n\\n```nasm\\nmov rax, 60   ; raxに60を入れる\\nmov rdi, 0    ; rdiに0を入れる\\nmov rbx, rax  ; raxの値をrbxにコピー\\n```\\n\\n`mov 先, 元`の順番で書きます。"
+    },
+    {
+      "title": "算術演算命令",
+      "content": "**add（加算）・sub（減算）:**\\n```nasm\\nmov rax, 10\\nadd rax, 5   ; rax = 15\\nsub rax, 3   ; rax = 12\\n```\\n\\n**mul（乗算）:**\\n```nasm\\nmov rax, 4\\nmov rbx, 3\\nmul rbx      ; rax = rax * rbx = 12\\n```"
+    },
+    {
+      "title": "比較とジャンプ",
+      "content": "`cmp`で値を比較し、条件ジャンプで分岐します。\\n\\n```nasm\\ncmp rax, 5   ; raxと5を比較\\nje equal    ; 等しければジャンプ\\njmp done     ; 無条件ジャンプ\\nequal:\\n  ; 等しい場合の処理\\ndone:\\n```\\n\\n- `je` = 等しい時\\n- `jne` = 等しくない時\\n- `jmp` = 無条件"
+    },
+    {
+      "title": "スタック操作",
+      "content": "`push`と`pop`でスタックを操作します。\\n\\n```nasm\\nmov rax, 42\\npush rax     ; スタックに42を保存\\npop rbx      ; スタックから取り出してrbxへ\\n```\\n\\nスタックはLIFO（後入れ先出し）構造です。"
+    },
+    {
+      "title": "xorでゼロクリア",
+      "content": "`xor reg, reg`でレジスタを0にするテクニックです。\\n\\n```nasm\\nxor rdi, rdi  ; rdi = 0\\n```\\n\\n`mov rdi, 0`より命令サイズが小さく高速です。\\n\\n同じ値同士のXOR演算は常に0になる性質を利用しています。"
+    }
+  ],
   "exercises": [
     {
       "title": "レジスタに値を入れる",

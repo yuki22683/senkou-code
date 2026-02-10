@@ -5,6 +5,32 @@ export const luaData = {
   "lessonDescription": "ゲーム作りなどでよく使われる、シンプルで軽い言葉「Lua（ルア）」のきほんを学びましょう。いろいろなものを入れることができる「テーブル」という機能が特徴です。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "Luaへようこそ！",
+      "content": "**Lua（ルア）** は、ブラジルで1993年に作られたプログラミング言語です。\\n\\nとても軽くて速いので、ゲームに組み込んで使われることが多いです。\\n\\nRobloxやMinecraftのModでも使われています。"
+    },
+    {
+      "title": "画面に文字を出す",
+      "content": "Luaで画面に文字を出すには `print` を使います。\\n\\n```lua\\nprint(\\\"こんにちは, Lua!\\\")\\n```\\n\\nシンプルで覚えやすいですね。"
+    },
+    {
+      "title": "変数を使う",
+      "content": "データを入れておく「はこ」を**変数**と呼びます。\\n\\n```lua\\nlocal x = 10\\nlocal name = \\\"太郎\\\"\\nprint(x)\\nprint(name)\\n```\\n\\n`local` をつけるとローカル変数になります。"
+    },
+    {
+      "title": "計算する",
+      "content": "Luaでは数字を計算できます。\\n\\n```lua\\nlocal a = 5\\nlocal b = 3\\nprint(a + b)  -- 8\\nprint(10 % 3) -- 1（あまり）\\n```\\n\\n`--` から後ろはコメント（メモ）です。"
+    },
+    {
+      "title": "条件分岐 if文",
+      "content": "「もし〜なら」という条件で処理を分けられます。\\n\\n```lua\\nlocal score = 85\\nif score > 80 then\\n  print(\\\"すごい！\\\")\\nelse\\n  print(\\\"がんばろう\\\")\\nend\\n```\\n\\n`then` と `end` がポイントです。"
+    },
+    {
+      "title": "テーブル",
+      "content": "Luaの**テーブル**は配列と辞書の両方として使えます。\\n\\n**配列として**:\\n```lua\\nlocal fruits = {\\\"りんご\\\", \\\"みかん\\\"}\\nprint(fruits[1]) -- りんご（1から始まる）\\n```\\n\\n**辞書として**:\\n```lua\\nlocal user = {name = \\\"太郎\\\"}\\nprint(user.name)\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "画面にメッセージを出してみましょう",

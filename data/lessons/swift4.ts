@@ -5,6 +5,32 @@ export const swift4Data = {
   "lessonDescription": "Swiftのプロトコルとジェネリクスを学びます。抽象化と型安全なコードを書くスキルを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 4,
+  "tutorialSlides": [
+    {
+      "title": "プロトコル",
+      "content": "**プロトコル**はメソッドの約束事です。\\n\\n```swift\\nprotocol Speakable {\\n    func speak() -> String\\n}\\n```\\n\\n準拠する型はこのメソッドを実装する必要があります。"
+    },
+    {
+      "title": "プロトコル拡張",
+      "content": "プロトコルに**デフォルト実装**を追加できます。\\n\\n```swift\\nextension Speakable {\\n    func greet() {\\n        print(\\\"Hello, \\\" + speak())\\n    }\\n}\\n```"
+    },
+    {
+      "title": "ジェネリクス",
+      "content": "**ジェネリクス**で型を抽象化できます。\\n\\n```swift\\nfunc swap<T>(_ a: inout T, _ b: inout T) {\\n    let temp = a\\n    a = b\\n    b = temp\\n}\\n```\\n\\n`<T>` でジェネリック型を定義します。"
+    },
+    {
+      "title": "型制約",
+      "content": "ジェネリクスに**制約**をつけられます。\\n\\n```swift\\nfunc compare<T: Comparable>(_ a: T, _ b: T) -> Bool {\\n    return a < b\\n}\\n```\\n\\n`T: Comparable` はComparableに準拠する型のみ受け付けます。"
+    },
+    {
+      "title": "Associated Type",
+      "content": "プロトコルで型を抽象化できます。\\n\\n```swift\\nprotocol Container {\\n    associatedtype Item\\n    func add(_ item: Item)\\n}\\n```"
+    },
+    {
+      "title": "where句",
+      "content": "`where` でより細かい制約をつけられます。\\n\\n```swift\\nfunc allEqual<C: Collection>(_ c: C) -> Bool\\n    where C.Element: Equatable {\\n    // ...\\n}\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "プロトコルの定義",

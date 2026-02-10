@@ -5,6 +5,32 @@ export const csharp3Data = {
   "lessonDescription": "C#の高度な機能を学びます。async/await、LINQ応用、パターンマッチングなどモダンC#を身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    {
+      "title": "async/await で非同期処理",
+      "content": "`async`/`await`で非同期処理を同期的に書けます。\\n\\n```csharp\\nasync Task<int> CalculateAsync(int n) {\\n    await Task.Delay(100);\\n    return n * n;\\n}\\n\\nvar result = await CalculateAsync(5);\\nConsole.WriteLine(result);  // => 25\\n```\\n\\n`await`で処理の完了を待ちます。"
+    },
+    {
+      "title": "LINQ OrderBy / GroupBy",
+      "content": "`OrderBy`でソート、`GroupBy`でグループ化できます。\\n\\n```csharp\\nvar nums = new[] { 3, 1, 4, 1, 5 };\\nvar sorted = nums.OrderBy(x => x);\\n// => 1, 1, 3, 4, 5\\n\\nvar groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");\\n```"
+    },
+    {
+      "title": "LINQ First / Any / All / Sum",
+      "content": "LINQには便利な集計メソッドがあります。\\n\\n```csharp\\nvar nums = new[] { 1, 2, 3, 4, 5 };\\n\\nnums.First();         // => 1\\nnums.Any(n => n > 3); // => true\\nnums.All(n => n > 0); // => true\\nnums.Sum();           // => 15\\n```"
+    },
+    {
+      "title": "switch式（パターンマッチ）",
+      "content": "`switch`式で値に応じた結果を返せます。\\n\\n```csharp\\nint n = 2;\\nvar result = n switch {\\n    1 => \"one\",\\n    2 => \"two\",\\n    _ => \"other\"\\n};\\nConsole.WriteLine(result);  // => two\\n```\\n\\n`_`はデフォルトケースです。"
+    },
+    {
+      "title": "Dictionary",
+      "content": "`Dictionary`でキーと値のペアを管理できます。\\n\\n```csharp\\nvar dict = new Dictionary<string, int>();\\ndict[\"a\"] = 1;\\ndict[\"b\"] = 2;\\nConsole.WriteLine(dict[\"a\"]);  // => 1\\n```"
+    },
+    {
+      "title": "record型と文字列補間",
+      "content": "`record`でイミュータブルなデータ型、`$`で文字列補間ができます。\\n\\n```csharp\\nrecord Point(int X, int Y);\\nvar p = new Point(10, 20);\\nConsole.WriteLine(p);  // => Point { X = 10, Y = 20 }\\n\\nvar x = 10;\\nConsole.WriteLine($\"Value: {x}\");  // => Value: 10\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "async/await の基本",

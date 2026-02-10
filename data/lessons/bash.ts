@@ -13,6 +13,26 @@ export const bashData = {
     {
       "title": "メッセージを出す echo",
       "content": "画面に文字を表示させるには `echo`（エコー）を使います。\\n\\n```bash\\necho \"こんにちは\"\\n```\\n\\n表示したい文字は `\" \"` で囲むのが基本です。"
+    },
+    {
+      "title": "変数（へんすう）",
+      "content": "データを保存する「はこ」が**変数**です。\\n\\n**注意:** `=` の前後にスペースを入れないこと！\\n\\n```bash\\nname=\"Bash\"    # OK\\nname = \"Bash\"  # エラー！\\n```\\n\\n中身を取り出すには `$` をつけます。\\n\\n```bash\\necho $name  # Bash\\n```"
+    },
+    {
+      "title": "計算する $(( ))",
+      "content": "Bashで計算するには `$(( ))` の中に式を書きます。\\n\\n```bash\\na=5\\nb=3\\necho $((a+b))  # 8\\necho $((a*b))  # 15\\n```\\n\\n使える記号：`+` たし算、`-` ひき算、`*` かけ算、`/` わり算"
+    },
+    {
+      "title": "条件分岐 if文",
+      "content": "「もし〜なら」は `if` で書きます。**if で始まり fi で終わる**のがポイントです。\\n\\n```bash\\nif [ $score -gt 80 ]; then\\n    echo \"すごい\"\\nfi\\n```\\n\\n**比較の記号：**\\n- `-gt` : より大きい（>）\\n- `-ge` : 以上（>=）\\n- `-lt` : より小さい（<）\\n- `-eq` : 等しい（==）"
+    },
+    {
+      "title": "if-else文",
+      "content": "「そうでなければ」は `else` を使います。\\n\\n```bash\\nif [ $age -ge 20 ]; then\\n    echo \"大人\"\\nelse\\n    echo \"未成年\"\\nfi\\n```"
+    },
+    {
+      "title": "for文でくり返し",
+      "content": "配列の中身を全部処理するには `for` を使います。\\n\\n```bash\\nnames=(\"アリス\" \"ボブ\")\\nfor name in \"${names[@]}\"; do\\n    echo $name\\ndone\\n```\\n\\n`${names[@]}` で配列の全要素を取り出します。"
     }
   ],
   "exercises": [

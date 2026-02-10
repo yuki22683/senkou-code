@@ -5,6 +5,32 @@ export const lua3Data = {
   "lessonDescription": "Luaのエラー処理とモジュールシステムを学びます。より堅牢なプログラムを作りましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    {
+      "title": "pcall でエラーを捕捉",
+      "content": "`pcall` は関数を保護モードで実行し、エラーを捕捉します。\\n\\n```lua\\nlocal ok, result = pcall(function()\\n    return 10 + 5\\nend)\\n\\nif ok then\\n    print(result)  -- => 15\\nelse\\n    print(\"エラー: \" .. result)\\nend\\n```\\n\\n第1戻り値が成功フラグ、第2戻り値が結果またはエラーメッセージです。"
+    },
+    {
+      "title": "error と assert",
+      "content": "`error` でエラーを発生させ、`assert` で条件を検証します。\\n\\n```lua\\n-- errorでエラーを発生\\nlocal ok, msg = pcall(function()\\n    error(\"テスト エラー\")\\nend)\\n-- ok = false, msg = エラーメッセージ\\n\\n-- assertで検証\\nlocal value = assert(10 > 5, \"should be true\")\\n-- 条件がfalseならエラー発生\\n```"
+    },
+    {
+      "title": "型変換",
+      "content": "`type`、`tostring`、`tonumber` で型を確認・変換します。\\n\\n```lua\\nprint(type({}))  -- => table\\nprint(type(10))  -- => number\\n\\nlocal n = 100\\nprint(\"Value: \" .. tostring(n))  -- => Value: 100\\n\\nlocal s = \"50\"\\nprint(tonumber(s) + 10)  -- => 60\\n```"
+    },
+    {
+      "title": "文字列操作",
+      "content": "`..` で文字列を連結し、`#` で長さを取得します。\\n\\n```lua\\nlocal a = \"Lua\"\\nlocal b = \"Script\"\\nprint(a .. b)  -- => LuaScript\\n\\nlocal s = \"Lua\"\\nprint(#s)  -- => 3\\n```\\n\\n`string.sub`、`string.find`、`string.match` なども使えます。"
+    },
+    {
+      "title": "条件演算子のパターン",
+      "content": "Luaには三項演算子がありませんが、`and`/`or` で代用できます。\\n\\n```lua\\nlocal age = 20\\nlocal status = age >= 18 and \"adult\" or \"child\"\\nprint(status)  -- => adult\\n```\\n\\n`condition and A or B` は条件が真なら `A`、偽なら `B` を返します。"
+    },
+    {
+      "title": "ループ制御",
+      "content": "`break` でループを抜けます。\\n\\n```lua\\nfor i = 1, 10 do\\n    if i > 3 then break end\\n    print(i)\\nend\\n-- => 1, 2, 3\\n```\\n\\nLuaには `continue` がないため、条件分岐で制御します。\\n\\n```lua\\nfor i = 1, 5 do\\n    if i ~= 3 then\\n        print(i)\\n    end\\nend\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "pcall でエラーを捕捉",

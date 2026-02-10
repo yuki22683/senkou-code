@@ -5,6 +5,32 @@ export const goData = {
   "lessonDescription": "Google（グーグル）が作った言葉「Go（ゴー）言語」のきほんを学びましょう。シンプルですばやく動くプログラムを作れるようになります。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "Go言語へようこそ！",
+      "content": "**Go（ゴー）** は、Google（グーグル）が2009年に作ったプログラミング言語です。\\n\\nシンプルで覚えやすく、とても速く動くのが特徴です。\\n\\nWebサービスやクラウドのシステムを作るのによく使われています。"
+    },
+    {
+      "title": "画面に文字を出す",
+      "content": "Go言語で画面に文字を出すには `fmt.Println` を使います。\\n\\n```go\\npackage main\\nimport \\\"fmt\\\"\\nfunc main() {\\n    fmt.Println(\\\"こんにちは！\\\")\\n}\\n```\\n\\n`package main` はプログラムの始まり、`import \\\"fmt\\\"` は出力機能を読み込み、`func main()` はプログラムの実行開始地点です。"
+    },
+    {
+      "title": "変数を使う",
+      "content": "データを入れておく「はこ」を**変数**（へんすう）と呼びます。\\n\\n```go\\nx := 10\\nname := \\\"太郎\\\"\\n```\\n\\n`:=` を使うと、変数の型を自動で決めてくれます。`var x int = 10` と書くこともできます。"
+    },
+    {
+      "title": "計算する",
+      "content": "Go言語では数字を計算できます。\\n\\n```go\\na := 5\\nb := 3\\nfmt.Println(a + b)  // 8\\nfmt.Println(a * b)  // 15\\nfmt.Println(10 % 3) // 1（あまり）\\n```\\n\\n`+`（足す）、`-`（引く）、`*`（かける）、`/`（割る）、`%`（あまり）が使えます。"
+    },
+    {
+      "title": "条件分岐 if文",
+      "content": "「もし〜なら」という条件で処理を分けられます。\\n\\n```go\\nscore := 85\\nif score > 80 {\\n    fmt.Println(\\\"すごい！\\\")\\n} else {\\n    fmt.Println(\\\"がんばろう\\\")\\n}\\n```\\n\\n条件が正しければ `{ }` の中が実行されます。`else` はそうでない場合です。"
+    },
+    {
+      "title": "スライスとマップ",
+      "content": "複数のデータをまとめて扱えます。\\n\\n**スライス**（配列のようなもの）:\\n```go\\nnums := []int{1, 2, 3}\\nfmt.Println(nums[0]) // 1\\n```\\n\\n**マップ**（辞書のようなもの）:\\n```go\\nscores := map[string]int{\\\"Math\\\": 90}\\nfmt.Println(scores[\\\"Math\\\"]) // 90\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",

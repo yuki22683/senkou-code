@@ -5,6 +5,32 @@ export const ruby3Data = {
   "lessonDescription": "Rubyの高度な機能を学びます。ブロック、Proc、ラムダ、メタプログラミングなどRubyの真髄を身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    {
+      "title": "yieldとブロック",
+      "content": "`yield` でメソッドに渡されたブロックを実行できます。\\n\\n```ruby\\ndef twice\\n  yield\\n  yield\\nend\\n\\ntwice { puts 'こんにちは' }\\n# => こんにちは\\n# => こんにちは\\n```\\n\\n`yield` はブロックを呼び出す特別なキーワードです。"
+    },
+    {
+      "title": "Procとラムダ",
+      "content": "ブロックをオブジェクトとして保存できます。\\n\\n```ruby\\n# Proc\\nsquare = Proc.new { |x| x ** 2 }\\nputs square.call(5)  # => 25\\n\\n# ラムダ（引数チェックあり）\\ncube = ->(x) { x ** 3 }\\nputs cube.call(3)    # => 27\\n```\\n\\n`->` はラムダを作る記法で、`lambda` と同じです。"
+    },
+    {
+      "title": "シンボルとProc変換",
+      "content": "`&:メソッド名` でシンボルをProcに変換できます。\\n\\n```ruby\\nwords = ['ruby', 'python', 'go']\\n\\n# 通常の書き方\\nresult = words.map { |w| w.upcase }\\n\\n# &:を使った省略形\\nresult = words.map(&:upcase)\\nputs result  # => [\"RUBY\", \"PYTHON\", \"GO\"]\\n```\\n\\n各要素に対してそのメソッドを呼び出します。"
+    },
+    {
+      "title": "reduceメソッド",
+      "content": "`reduce` で配列を1つの値にまとめます。\\n\\n```ruby\\nnums = [1, 2, 3, 4, 5]\\n\\n# 合計を計算\\nsum = nums.reduce(0) { |acc, n| acc + n }\\nputs sum  # => 15\\n\\n# 積を計算\\nproduct = nums.reduce(1) { |acc, n| acc * n }\\nputs product  # => 120\\n```\\n\\n`acc` は累積値、`n` は各要素です。"
+    },
+    {
+      "title": "スプラット演算子",
+      "content": "`*` で可変長引数を受け取れます。\\n\\n```ruby\\ndef sum_all(*numbers)\\n  numbers.reduce(0) { |acc, n| acc + n }\\nend\\n\\nputs sum_all(1, 2, 3)     # => 6\\nputs sum_all(1, 2, 3, 4)  # => 10\\n```\\n\\n`*numbers` で任意の数の引数を配列として受け取ります。"
+    },
+    {
+      "title": "method_missing",
+      "content": "`method_missing` で未定義メソッドの呼び出しを捕捉できます。\\n\\n```ruby\\nclass FlexibleClass\\n  def method_missing(name, *args)\\n    \"Unknown: #{name}\"\\n  end\\nend\\n\\nobj = FlexibleClass.new\\nputs obj.hello    # => Unknown: hello\\nputs obj.goodbye  # => Unknown: goodbye\\n```\\n\\nメタプログラミングの基礎となる強力な機能です。"
+    }
+  ],
   "exercises": [
     {
       "title": "yieldとブロック",

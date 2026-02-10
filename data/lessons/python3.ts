@@ -11,8 +11,36 @@ export const pythonData3 = {
       "content": "名前をつけずに1行で書ける関数を**ラムダ式**（無名関数）と呼びます。\\n\\n```python\\nadd = lambda x, y: x + y\\nprint(add(10, 5)) # 15\\n```\\n\\n`lambda 引数: 処理` の形式で書き、簡単な処理をサッと書きたいときに便利です。"
     },
     {
+      "title": "*args 可変長引数",
+      "content": "関数に**いくつでも引数を渡せる**ようにするには `*args` を使います。\\n\\n```python\\ndef total(*args):\\n    result = 0\\n    for n in args:\\n        result += n\\n    return result\\n\\nprint(total(1, 2, 3))  # 6\\nprint(total(10, 20))   # 30\\n```\\n\\n`*args` はタプルとして受け取られ、ループで1つずつ取り出せます。"
+    },
+    {
+      "title": "**kwargs キーワード引数",
+      "content": "**名前付きの引数**をいくつでも受け取るには `**kwargs` を使います。\\n\\n```python\\ndef show(**kwargs):\\n    for key, value in kwargs.items():\\n        print(f'{key}: {value}')\\n\\nshow(name='太郎', age=20)\\n# name: 太郎\\n# age: 20\\n```\\n\\n`**kwargs` は辞書として受け取られ、`.items()` でキーと値を取り出せます。"
+    },
+    {
       "title": "番号付きで繰り返す enumerate",
       "content": "ループを回すときに、要素と一緒にインデックス（何番目か）を取得できます。\\n\\n```python\\nnames = ['Python', 'Ruby']\\nfor i, name in enumerate(names):\\n    print(f\"{i}: {name}\")\\n```\\n\\n番号を自分で管理する必要がなくなります。"
+    },
+    {
+      "title": "zip で複数リストを同時ループ",
+      "content": "2つ以上のリストを**同時にループ**するには `zip` を使います。\\n\\n```python\\nnames = ['太郎', '花子']\\nages = [20, 25]\\nfor name, age in zip(names, ages):\\n    print(f'{name}は{age}歳')\\n# 太郎は20歳\\n# 花子は25歳\\n```\\n\\n同じ位置の要素がペアになって取り出されます。"
+    },
+    {
+      "title": "ジェネレータ yield",
+      "content": "`return` の代わりに `yield` を使うと、値を**1つずつ返す**関数（ジェネレータ）が作れます。\\n\\n```python\\ndef countdown(n):\\n    while n > 0:\\n        yield n\\n        n -= 1\\n\\nfor num in countdown(3):\\n    print(num)  # 3, 2, 1\\n```\\n\\n大量のデータを扱うときもメモリを節約できます。"
+    },
+    {
+      "title": "ジェネレータ式",
+      "content": "リスト内包表記と似た形で、ジェネレータを作れます。\\n\\n```python\\n# リスト内包（メモリを全部使う）\\nsquares = [x * x for x in range(100)]\\n\\n# ジェネレータ式（必要なときだけ計算）\\nsquares = (x * x for x in range(100))\\n```\\n\\n`[]` を `()` に変えるだけ。`sum()` などと組み合わせると便利です。"
+    },
+    {
+      "title": "デコレータ",
+      "content": "関数に**追加の処理を付け加える**仕組みがデコレータです。\\n\\n```python\\ndef logger(func):\\n    def wrapper():\\n        print('開始')\\n        func()\\n        print('終了')\\n    return wrapper\\n\\n@logger\\ndef hello():\\n    print('こんにちは')\\n\\nhello()\\n# 開始\\n# こんにちは\\n# 終了\\n```\\n\\n`@デコレータ名` を関数の上に書くと、その関数が拡張されます。"
+    },
+    {
+      "title": "any と all",
+      "content": "リストの要素をまとめてチェックする関数です。\\n\\n```python\\nnums = [1, 2, 3, 4, 5]\\n\\n# 全てが条件を満たすか\\nprint(all(x > 0 for x in nums))  # True\\n\\n# どれか1つでも満たすか\\nprint(any(x > 4 for x in nums))  # True\\n```\\n\\n`all` は「全部」、`any` は「どれか1つでも」を判定します。"
     }
   ],
   "exercises": [

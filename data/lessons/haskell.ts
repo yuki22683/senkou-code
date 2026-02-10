@@ -5,6 +5,32 @@ export const haskellData = {
   "lessonDescription": "数学のようなきっちりした美しさを持つ言葉「Haskell（ハスケル）」のきほんを学びましょう。計算の答えを次の計算にパスしていくような、独特な作りかたを体験できます。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "Haskellへようこそ！",
+      "content": "**Haskell（ハスケル）** は、1990年に作られた関数型プログラミング言語です。\\n\\n数学的で美しいコードが書けるのが特徴です。\\n\\n「純粋関数型」と呼ばれ、副作用がないコードを書きやすいです。"
+    },
+    {
+      "title": "画面に文字を出す",
+      "content": "Haskellで画面に文字を出すには `putStrLn` を使います。\\n\\n```haskell\\nmain = putStrLn \\\"Welcome to FP!\\\"\\n```\\n\\n`main` はプログラムの開始地点です。"
+    },
+    {
+      "title": "変数（束縛）",
+      "content": "Haskellでは変数を「束縛（そくばく）」と呼びます。一度決めたら変更できません。\\n\\n```haskell\\nx = 10\\nname = \\\"太郎\\\"\\n```\\n\\n`=` は「等しい」という意味で、代入ではなく定義です。"
+    },
+    {
+      "title": "計算する",
+      "content": "Haskellでは数字を計算できます。\\n\\n```haskell\\na = 5\\nb = 3\\nmain = print (a + b)  -- 8\\n```\\n\\n`--` から後ろはコメントです。`print` で値を表示します。"
+    },
+    {
+      "title": "関数を作る",
+      "content": "Haskellでは関数を簡単に作れます。\\n\\n```haskell\\ndouble x = x * 2\\nadd x y = x + y\\n\\nmain = print (double 5)  -- 10\\n```\\n\\n関数名の後に引数を書くだけです。"
+    },
+    {
+      "title": "リスト",
+      "content": "複数のデータをまとめて扱えます。\\n\\n```haskell\\nnums = [1, 2, 3, 4, 5]\\nhead nums  -- 1（先頭）\\ntail nums  -- [2, 3, 4, 5]（残り）\\nnums !! 0  -- 1（インデックス0）\\n```\\n\\nリストは同じ型のデータだけを入れられます。"
+    }
+  ],
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",

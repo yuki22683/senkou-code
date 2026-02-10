@@ -5,6 +5,32 @@ export const sql2Data = {
   "lessonDescription": "SQLの実践的な機能を学びます。複数テーブルの結合、集計関数、グループ化などデータベース操作の基本を身につけましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "WHERE による絞り込み",
+      "content": "`WHERE` 句で条件を指定して行を絞り込みます。\\n\\n```sql\\nSELECT * FROM users\\nWHERE age >= 20;\\n\\nSELECT * FROM products\\nWHERE price > 1000 AND category = '電子機器';\\n```\\n\\n比較演算子: `=`, `<>`, `>`, `<`, `>=`, `<=`\\n論理演算子: `AND`, `OR`, `NOT`"
+    },
+    {
+      "title": "ORDER BY と LIMIT",
+      "content": "`ORDER BY` で並べ替え、`LIMIT` で件数を制限します。\\n\\n```sql\\n-- 昇順（デフォルト）\\nSELECT * FROM users ORDER BY age;\\n\\n-- 降順\\nSELECT * FROM users ORDER BY age DESC;\\n\\n-- 上位3件のみ\\nSELECT * FROM users ORDER BY score DESC LIMIT 3;\\n```"
+    },
+    {
+      "title": "集計関数",
+      "content": "データを集計する関数が用意されています。\\n\\n```sql\\n-- 件数\\nSELECT COUNT(*) FROM users;\\n\\n-- 合計・平均・最大・最小\\nSELECT SUM(price) FROM orders;\\nSELECT AVG(score) FROM students;\\nSELECT MAX(age), MIN(age) FROM users;\\n```\\n\\n`COUNT(*)` は全行、`COUNT(列名)` はNULLを除いた行数です。"
+    },
+    {
+      "title": "GROUP BY",
+      "content": "`GROUP BY` でグループ化して集計します。\\n\\n```sql\\nSELECT category, COUNT(*) AS cnt\\nFROM products\\nGROUP BY category;\\n\\n-- 結果例:\\n-- 電子機器 | 15\\n-- 食品     | 8\\n```\\n\\n`HAVING` でグループ化後の条件を指定します。\\n\\n```sql\\nGROUP BY category HAVING COUNT(*) > 10;\\n```"
+    },
+    {
+      "title": "CASE 式",
+      "content": "`CASE` で条件分岐ができます。\\n\\n```sql\\nSELECT name,\\n  CASE\\n    WHEN score >= 80 THEN '合格'\\n    WHEN score >= 60 THEN '再試験'\\n    ELSE '不合格'\\n  END AS result\\nFROM students;\\n```\\n\\n結果を列として出力できます。"
+    },
+    {
+      "title": "NULL 処理",
+      "content": "`COALESCE` でNULLを別の値に置き換えます。\\n\\n```sql\\nSELECT COALESCE(nickname, name) FROM users;\\n-- nicknameがNULLならnameを使う\\n\\nSELECT COALESCE(NULL, NULL, 'デフォルト');\\n-- => 'デフォルト'\\n```\\n\\n最初の非NULL値を返します。"
+    }
+  ],
   "exercises": [
     {
       "title": "WHERE で絞り込み",

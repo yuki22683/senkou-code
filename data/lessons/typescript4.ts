@@ -5,6 +5,13 @@ export const typescriptData4 = {
   "lessonDescription": "TypeScriptのデコレータと高度なパターンを学びます。メタプログラミング、型ガード、ユーティリティなどを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 4,
+  "tutorialSlides": [
+    { "title": "型ガードとは？", "content": "# 型を絞り込む\\n\\n**型ガード**（Type Guard）は「この値は○○型です！」と確認する関数です。\\n\\n戻り値の型を `x is string` のように書きます。\\n\\n```typescript\\nfunction isString(x: unknown): x is string {\\n  return typeof x === 'string';\\n}\\n\\nif (isString(value)) {\\n  // ここではvalueはstring型！\\n  console.log(value.toUpperCase());\\n}\\n```" },
+    { "title": "in演算子での型絞り込み", "content": "# プロパティで型を判別\\n\\n**in演算子**は、オブジェクトに特定のプロパティがあるかをチェックします。\\n\\n```typescript\\ntype Fish = { swim: () => void };\\ntype Bird = { fly: () => void };\\n\\nfunction move(animal: Fish | Bird) {\\n  if ('swim' in animal) {\\n    animal.swim();  // Fish!\\n  } else {\\n    animal.fly();   // Bird!\\n  }\\n}\\n```\\n\\n「羽があれば鳥、ひれがあれば魚」のような判別ができます。" },
+    { "title": "Discriminated Union", "content": "# 判別プロパティで型を区別\\n\\n**Discriminated Union**は、共通の「目印」プロパティを使って型を見分ける方法です。\\n\\n```typescript\\ntype Circle = { kind: 'circle'; radius: number };\\ntype Square = { kind: 'square'; size: number };\\ntype Shape = Circle | Square;\\n\\nfunction area(s: Shape): number {\\n  switch (s.kind) {\\n    case 'circle': return Math.PI * s.radius ** 2;\\n    case 'square': return s.size ** 2;\\n  }\\n}\\n```" },
+    { "title": "never型で網羅性チェック", "content": "# 到達不能な型\\n\\n**never型**は「絶対にここには来ない」という意味の特別な型です。\\n\\nswitch文で全てのケースを処理したかチェックするのに使います。\\n\\n```typescript\\nfunction exhaustiveCheck(x: never): never {\\n  throw new Error('Unexpected value');\\n}\\n\\n// 全ケース処理済みなら、defaultには来ない\\ndefault:\\n  const _check: never = c;\\n```\\n\\n新しいケースを追加して処理を忘れるとエラーになります！" },
+    { "title": "Readonly<T>", "content": "# 読み取り専用に\\n\\n**Readonly<T>**は、全てのプロパティを読み取り専用（変更不可）にします。\\n\\n```typescript\\ninterface Point {\\n  x: number;\\n  y: number;\\n}\\n\\nconst p: Readonly<Point> = { x: 10, y: 20 };\\np.x = 5;  // エラー！読み取り専用\\n```\\n\\n誤って値を変更してしまうのを防げます！" }
+  ],
   "exercises": [
     {
       "title": "型ガード関数",

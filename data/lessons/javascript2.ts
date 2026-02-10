@@ -5,6 +5,28 @@ export const javascriptData2 = {
   "lessonDescription": "JavaScriptの基本をマスターしたら、次のステップへ！アロー関数、配列メソッド、分割代入など、モダンJavaScriptの書き方を学びましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "アロー関数 =>",
+      "content": "短く関数を書ける**アロー関数**です。\\n\\n```javascript\\n// 従来の書き方\\nconst add = function(a, b) { return a + b; };\\n\\n// アロー関数\\nconst add = (a, b) => a + b;\\n```\\n\\n`=>` で引数と処理を区切ります。"
+    },
+    {
+      "title": "配列メソッド map/filter",
+      "content": "配列を変換・絞り込みする便利なメソッドです。\\n\\n```javascript\\nconst nums = [1, 2, 3];\\nnums.map(x => x * 2);    // [2, 4, 6]\\nnums.filter(x => x > 1); // [2, 3]\\n```"
+    },
+    {
+      "title": "分割代入",
+      "content": "配列やオブジェクトから値を取り出せます。\\n\\n```javascript\\nconst [a, b] = [1, 2];\\nconst {name, age} = {name: '太郎', age: 20};\\n```"
+    },
+    {
+      "title": "スプレッド構文 ...",
+      "content": "配列やオブジェクトを展開できます。\\n\\n```javascript\\nconst arr1 = [1, 2];\\nconst arr2 = [...arr1, 3]; // [1, 2, 3]\\n```"
+    },
+    {
+      "title": "テンプレートリテラル",
+      "content": "バッククォートで変数を埋め込めます。\\n\\n```javascript\\nconst name = '太郎';\\nconsole.log(`Hello, ${name}!`);\\n// => Hello, 太郎!\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "アロー関数",

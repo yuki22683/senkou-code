@@ -5,6 +5,32 @@ export const go3Data = {
   "lessonDescription": "Go言語の高度な機能を学びます。ジェネリクス、テスト、コンテキストなど、本格的なGoプログラミングを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    {
+      "title": "ジェネリクス",
+      "content": "**ジェネリクス**で、どんな型でも使える関数を作れます。\\n\\n```go\\nfunc First[T any](slice []T) T {\\n    return slice[0]\\n}\\n\\nFirst([]int{1, 2, 3})    // 1\\nFirst([]string{\\\"a\\\"})    // a\\n```\\n\\n`[T any]` で型パラメータを定義します。"
+    },
+    {
+      "title": "型制約",
+      "content": "型パラメータに**制約**をつけられます。\\n\\n```go\\ntype Number interface {\\n    int | float64\\n}\\n\\nfunc Sum[T Number](nums []T) T {\\n    var sum T\\n    for _, n := range nums {\\n        sum += n\\n    }\\n    return sum\\n}\\n```\\n\\n`|` で許可する型を指定します。"
+    },
+    {
+      "title": "defer",
+      "content": "`defer` で、関数終了時に実行する処理を登録できます。\\n\\n```go\\nfunc readFile() {\\n    f := os.Open(\\\"file.txt\\\")\\n    defer f.Close() // 関数終了時に実行\\n    // ファイル処理...\\n}\\n```\\n\\nリソースの解放に便利です。"
+    },
+    {
+      "title": "panic と recover",
+      "content": "`panic` でプログラムを停止、`recover` で回復できます。\\n\\n```go\\nfunc safe() {\\n    defer func() {\\n        if r := recover(); r != nil {\\n            fmt.Println(\\\"回復:\\\", r)\\n        }\\n    }()\\n    panic(\\\"エラー発生！\\\")\\n}\\n```"
+    },
+    {
+      "title": "テストを書く",
+      "content": "Goには標準でテスト機能があります。\\n\\n```go\\n// math_test.go\\nfunc TestAdd(t *testing.T) {\\n    result := Add(2, 3)\\n    if result != 5 {\\n        t.Errorf(\\\"期待: 5, 実際: %d\\\", result)\\n    }\\n}\\n```\\n\\n`go test` で実行します。"
+    },
+    {
+      "title": "context",
+      "content": "`context` で処理のキャンセルやタイムアウトを制御します。\\n\\n```go\\nctx, cancel := context.WithTimeout(\\n    context.Background(),\\n    time.Second,\\n)\\ndefer cancel()\\n```\\n\\nAPIリクエストなどで重要です。"
+    }
+  ],
   "exercises": [
     {
       "title": "ジェネリクスの基本",

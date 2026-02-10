@@ -5,6 +5,32 @@ export const rustData = {
   "lessonDescription": "間違いを見つけるのがとても得意な言葉「Rust（ラスト）」のきほんを学びましょう。きっちりしたルールを身につけて、安全なプログラムを作れるようになります。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "Rustへようこそ！",
+      "content": "**Rust（ラスト）** は、Mozilla（モジラ）が作った安全で速いプログラミング言語です。\\n\\n間違いを見つけるのがとても得意で、プログラムが壊れにくくなります。\\n\\nシステムプログラミングやWebAssemblyなどに使われています。"
+    },
+    {
+      "title": "画面に文字を出す",
+      "content": "Rustで画面に文字を出すには `println!` マクロを使います。\\n\\n```rust\\nfn main() {\\n    println!(\\\"Hello, Rust!\\\");\\n}\\n```\\n\\n`fn main()` はプログラムの開始地点です。`println!` の `!` はマクロであることを示しています。"
+    },
+    {
+      "title": "変数を使う",
+      "content": "データを入れておく「はこ」を**変数**と呼びます。\\n\\n```rust\\nlet x = 10;\\nlet name = \\\"太郎\\\";\\n```\\n\\n`let` で変数を作ります。Rustの変数は**変更できない**のがふつうです。変更したいときは `let mut x = 10;` と書きます。"
+    },
+    {
+      "title": "計算する",
+      "content": "Rustでは数字を計算できます。\\n\\n```rust\\nlet a = 5;\\nlet b = 3;\\nprintln!(\\\"{}\\\", a + b);  // 8\\nprintln!(\\\"{}\\\", 10 % 3); // 1（あまり）\\n```\\n\\n`{}` は変数の値を埋め込む場所です。"
+    },
+    {
+      "title": "条件分岐 if文",
+      "content": "「もし〜なら」という条件で処理を分けられます。\\n\\n```rust\\nlet score = 85;\\nif score > 80 {\\n    println!(\\\"すごい！\\\");\\n} else {\\n    println!(\\\"がんばろう\\\");\\n}\\n```\\n\\n条件が正しければ `{ }` の中が実行されます。"
+    },
+    {
+      "title": "ベクタとハッシュマップ",
+      "content": "複数のデータをまとめて扱えます。\\n\\n**ベクタ**（配列のようなもの）:\\n```rust\\nlet colors = vec![\\\"あか\\\", \\\"あお\\\"];\\nprintln!(\\\"{}\\\", colors[0]);\\n```\\n\\n**ハッシュマップ**（辞書のようなもの）はHashMapを使います。"
+    }
+  ],
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",

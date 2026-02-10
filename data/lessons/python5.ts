@@ -7,16 +7,24 @@ export const pythonData5 = {
   "lessonOrder": 5,
   "tutorialSlides": [
     {
-      "title": "ファイルの読み書き",
-      "content": "Pythonでファイルを開くときは `with open()` を使うのが安全です。\\n\\n```python\\nwith open(\"data.txt\", \"r\") as f:\\n    content = f.read()\\n```\\n\\n`\"r\"` は読み込み、`\"w\"` は上書き、`\"a\"` は追記モードです。"
+      "title": "with文でファイルを開く",
+      "content": "**with文** を使うと、**ファイルが自動的に閉じられます**。\\n\\n```python\\nwith open('file.txt', 'r') as f:\\n    content = f.read()\\n# ← ここで自動で閉じる\\n```\\n\\n**モードの種類：**\\n- `'r'` = 読み込みモード\\n- `'w'` = 書き込みモード（上書き）\\n- `'a'` = 追記モード"
     },
     {
       "title": "JSONデータの扱い",
-      "content": "Webなどでよく使われるJSON形式のデータは、`json` モジュールを使って簡単にPythonの辞書に変換できます。\\n\\n```python\\nimport json\\ndata = json.loads('{\"name\": \"Python\"}')\\n```"
+      "content": "JSON形式のデータは `json` モジュールで変換できます。\\n\\n```python\\nimport json\\n\\n# JSON文字列 → Python辞書\\ndata = json.loads('{\"name\": \"Python\"}'）\\nprint(data['name'])  # Python\\n\\n# Python辞書 → JSON文字列\\njson_str = json.dumps(data)\\n```"
     },
     {
-      "title": "正規表現（せいきひょうげん）",
-      "content": "文字列のパターンを探すには**正規表現**を使います。\\n\\n- `\\d` : 数字\\n- `+` : 1回以上の繰り返し\\n- `[a-z]` : 小文字のアルファベット"
+      "title": "正規表現の基本",
+      "content": "**正規表現**で文字の**パターン（形）**を表します。\\n\\n**よく使う記号：**\\n- `\\d` = 数字1文字\\n- `\\w` = 英数字1文字\\n- `\\s` = 空白文字\\n- `+` = 1回以上の繰り返し\\n- `{n}` = ちょうどn回の繰り返し\\n- `{3,4}` = 3〜4回の繰り返し\\n\\n```python\\nimport re\\nmatch = re.search(r'\\d{3}-\\d{4}', text)\\n```\\n\\n`\\d{3}` は「数字3桁」を意味します。"
+    },
+    {
+      "title": "re.search と re.findall",
+      "content": "**re.search()** は最初の1つ、**re.findall()** は全部を取得します。\\n\\n```python\\nimport re\\ntext = 'a@b.com and c@d.com'\\n\\n# 最初の1つだけ\\nmatch = re.search(r'\\w+@\\w+', text)\\nprint(match.group())  # a@b\\n\\n# 全部リストで取得\\nall = re.findall(r'\\w+@\\w+', text)\\nprint(all)  # ['a@b', 'c@d']\\n```"
+    },
+    {
+      "title": "collections.Counter",
+      "content": "**Counter** で**要素の出現回数**を簡単にカウントできます。\\n\\n```python\\nfrom collections import Counter\\n\\nwords = ['apple', 'banana', 'apple']\\ncount = Counter(words)\\nprint(count['apple'])  # 2\\n\\n# 多い順に取得\\nprint(count.most_common(2))\\n# [('apple', 2), ('banana', 1)]\\n```\\n\\n文字列を渡すと1文字ずつカウントします。"
     }
   ],
   "exercises": [

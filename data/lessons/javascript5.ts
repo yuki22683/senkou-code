@@ -5,6 +5,24 @@ export const javascriptData5 = {
   "lessonDescription": "JavaScriptの正規表現とエラー処理を学びます。パターンマッチング、例外処理、デバッグなどを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 5,
+  "tutorialSlides": [
+    {
+      "title": "正規表現リテラル",
+      "content": "`/パターン/` で正規表現を作ります。\\n\\n```javascript\\nconst pattern = /hello/i;  // iは大文字小文字無視\\npattern.test('Hello');  // true\\n```"
+    },
+    {
+      "title": "正規表現メソッド",
+      "content": "文字列の検索・置換ができます。\\n\\n```javascript\\n'hello world'.match(/\\\\w+/g);\\n// => ['hello', 'world']\\n\\n'hello'.replace(/l/g, 'L');\\n// => 'heLLo'\\n```"
+    },
+    {
+      "title": "try-catch",
+      "content": "エラーを捕捉して処理できます。\\n\\n```javascript\\ntry {\\n  // エラーが起きるかもしれない処理\\n  JSON.parse('invalid');\\n} catch (e) {\\n  console.log('エラー発生');\\n}\\n```"
+    },
+    {
+      "title": "throw でエラーを投げる",
+      "content": "意図的にエラーを発生させます。\\n\\n```javascript\\nfunction divide(a, b) {\\n  if (b === 0) throw new Error('0で割れません');\\n  return a / b;\\n}\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "正規表現リテラル",

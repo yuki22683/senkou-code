@@ -5,6 +5,32 @@ export const kotlin3Data = {
   "lessonDescription": "Kotlinの高度な機能を学びます。コルーチン、シーケンス、DSLなどモダンKotlinを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    {
+      "title": "コルーチンとは",
+      "content": "**コルーチン**は、非同期処理を簡潔に書ける仕組みです。\\n\\n```kotlin\\nimport kotlinx.coroutines.*\\n\\nsuspend fun fetchData(): String {\\n    delay(1000)  // 1秒待機\\n    return \"データ\"\\n}\\n\\nfun main() = runBlocking {\\n    val data = fetchData()\\n    println(data)\\n}\\n```\\n\\n`suspend` を付けた関数は「中断可能」になり、待機中に他の処理ができます。"
+    },
+    {
+      "title": "シーケンス（遅延評価）",
+      "content": "**シーケンス**は要素を必要なときだけ計算する仕組みです。\\n\\n```kotlin\\n// 無限シーケンス\\nval nums = generateSequence(1) { it + 1 }\\n\\n// 最初の5個だけ取得\\nprintln(nums.take(5).toList())\\n// => [1, 2, 3, 4, 5]\\n```\\n\\n大量のデータや無限のデータを効率的に処理できます。"
+    },
+    {
+      "title": "inline関数",
+      "content": "`inline` を付けた関数は、呼び出し箇所にコードが展開されます。\\n\\n```kotlin\\ninline fun measure(action: () -> Unit) {\\n    val start = System.currentTimeMillis()\\n    action()\\n    println(\"実行時間: ${System.currentTimeMillis() - start}ms\")\\n}\\n\\nmeasure {\\n    Thread.sleep(100)\\n}\\n```\\n\\nラムダを受け取る関数を `inline` にすると、パフォーマンスが向上します。"
+    },
+    {
+      "title": "reified型パラメータ",
+      "content": "`reified` を使うと、実行時に型情報を利用できます。\\n\\n```kotlin\\ninline fun <reified T> isType(value: Any): Boolean {\\n    return value is T\\n}\\n\\nprintln(isType<String>(\"テスト\"))  // => true\\nprintln(isType<Int>(\"テスト\"))     // => false\\n```\\n\\n通常のジェネリクスでは消去される型情報が保持されます。\\n\\n`reified` は `inline` 関数でのみ使用可能です。"
+    },
+    {
+      "title": "スコープ関数（apply / also）",
+      "content": "スコープ関数を使うと、オブジェクトの設定を簡潔に書けます。\\n\\n```kotlin\\n// apply: オブジェクト自身を返す\\nval config = Config().apply {\\n    host = \"localhost\"\\n    port = 8080\\n}\\n\\n// also: 副作用を実行してオブジェクトを返す\\nval num = 42.also { println(\"値: $it\") }\\n```\\n\\n`apply` はオブジェクトの設定に、`also` はログ出力などに便利です。"
+    },
+    {
+      "title": "スコープ関数（run / let）",
+      "content": "`run` と `let` は処理結果を返すスコープ関数です。\\n\\n```kotlin\\n// run: ブロックの結果を返す\\nval length = \"Hello World\".run {\\n    split(\" \").size\\n}\\nprintln(length)  // => 2\\n\\n// let: nullableとの組み合わせ\\nval num: Int? = 42\\nnum?.let { println(it * 2) }  // => 84\\n```\\n\\n`let` は特にnullチェックとの組み合わせでよく使われます。"
+    }
+  ],
   "exercises": [
     {
       "title": "suspend 関数",

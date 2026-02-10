@@ -5,6 +5,13 @@ export const javaData3 = {
   "lessonDescription": "Java 8以降の機能を学びます。Stream API、ラムダ式、Optionalなど、モダンなJavaを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    { "title": "ラムダ式とは？", "content": "# 簡潔な関数の書き方\\n\\n**ラムダ式**は、匿名関数を簡潔に書ける構文です。\\n\\n```java\\n// 従来の書き方\\nRunnable r = new Runnable() {\\n    public void run() { System.out.println(\\\"Hi\\\"); }\\n};\\n\\n// ラムダ式\\nRunnable r = () -> System.out.println(\\\"Hi\\\");\\n```\\n\\n`->` で引数と処理を区切ります。" },
+    { "title": "ラムダ式の構文", "content": "# (引数) -> 処理\\n\\n```java\\n// 引数なし\\n() -> System.out.println(\\\"Hello\\\")\\n\\n// 引数1つ（カッコ省略可）\\nx -> x * 2\\n\\n// 引数複数\\n(a, b) -> a + b\\n```" },
+    { "title": "Stream API", "content": "# データの流れを処理\\n\\n**Stream**はコレクションの要素を順番に処理するAPIです。\\n\\n```java\\nList<String> list = Arrays.asList(\\\"a\\\", \\\"b\\\", \\\"c\\\");\\nlist.stream()\\n    .forEach(System.out::println);\\n```\\n\\n`.stream()` でStreamを作成し、`.forEach()` で各要素を処理します。" },
+    { "title": "map と filter", "content": "# 変換と絞り込み\\n\\n**map**: 各要素を変換\\n```java\\nnums.stream()\\n    .map(n -> n * 2)\\n    .forEach(System.out::println);\\n```\\n\\n**filter**: 条件に合う要素だけ残す\\n```java\\nnums.stream()\\n    .filter(n -> n > 2)\\n    .forEach(System.out::println);\\n```" },
+    { "title": "Optional", "content": "# nullを安全に扱う\\n\\n**Optional**はnullの可能性がある値を安全に扱うためのクラスです。\\n\\n```java\\nOptional<String> opt = Optional.of(\\\"Hello\\\");\\nopt.ifPresent(System.out::println);  // => Hello\\n\\nOptional<String> empty = Optional.empty();\\nSystem.out.println(empty.orElse(\\\"デフォルト\\\"));\\n```\\n\\nNullPointerExceptionを防げます！" }
+  ],
   "exercises": [
     {
       "title": "ラムダ式の基本",

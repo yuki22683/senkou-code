@@ -5,6 +5,32 @@ export const lua2Data = {
   "lessonDescription": "Luaの万能データ構造「テーブル」を深く学びます。ゲーム開発で使われる技法を身につけましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "テーブルの基本",
+      "content": "Luaのテーブルは配列とハッシュを兼ねた万能データ構造です。\\n\\n```lua\\n-- キーと値のペア\\nlocal item = { name = \"りんご\", price = 100 }\\nprint(item.name)   -- => りんご\\nprint(item.price)  -- => 100\\n\\n-- 配列としても使える\\nlocal nums = {10, 20, 30}\\nprint(nums[2])  -- => 20（1から始まる）\\n```"
+    },
+    {
+      "title": "ipairs と pairs",
+      "content": "テーブルをループするには `ipairs` と `pairs` を使います。\\n\\n```lua\\n-- ipairs: 配列部分のループ（連続した整数インデックス）\\nfor i, v in ipairs({10, 20, 30}) do\\n    print(i, v)\\nend\\n\\n-- pairs: 全てのキー・値をループ\\nfor k, v in pairs({x = 10, y = 20}) do\\n    print(k, v)\\nend\\n```"
+    },
+    {
+      "title": "関数の定義",
+      "content": "`function` で関数を定義します。\\n\\n```lua\\nlocal function double(n)\\n    return n * 2\\nend\\n\\nprint(double(5))  -- => 10\\n\\n-- 複数の戻り値を返せる\\nlocal function swap(a, b)\\n    return b, a\\nend\\nlocal x, y = swap(1, 2)\\n-- x = 2, y = 1\\n```"
+    },
+    {
+      "title": "メソッドの定義",
+      "content": "`:` を使うとメソッドを定義でき、`self` で自分自身を参照できます。\\n\\n```lua\\nlocal obj = { x = 5 }\\n\\nfunction obj:getX()\\n    return self.x\\nend\\n\\nprint(obj:getX())  -- => 5\\n```\\n\\n`:` は `self` を自動的に渡すシンタックスシュガーです。"
+    },
+    {
+      "title": "メタテーブル",
+      "content": "メタテーブルでテーブルの動作をカスタマイズできます。\\n\\n```lua\\nlocal t = {}\\nlocal mt = { __index = { x = 10 } }\\nsetmetatable(t, mt)\\n\\nprint(t.x)  -- => 10\\n```\\n\\n`__index` は存在しないキーにアクセスしたときに呼ばれます。\\n\\nオブジェクト指向やオーバーロードの実現に使われます。"
+    },
+    {
+      "title": "クロージャとコルーチン",
+      "content": "関数は環境を持つクロージャになれます。\\n\\n```lua\\nlocal function makeAdder(n)\\n    return function(x)\\n        return x + n  -- nを記憶\\n    end\\nend\\nlocal add5 = makeAdder(5)\\nprint(add5(10))  -- => 15\\n```\\n\\nコルーチンで協調的なマルチタスクも可能です。"
+    }
+  ],
   "exercises": [
     {
       "title": "テーブルの基本",

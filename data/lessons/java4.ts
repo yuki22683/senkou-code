@@ -5,6 +5,13 @@ export const javaData4 = {
   "lessonDescription": "Javaのジェネリクスとコレクションの高度な使い方を学びます。型安全なコードを書くための重要な概念を身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 4,
+  "tutorialSlides": [
+    { "title": "ジェネリクスとは？", "content": "# 型を後から指定\\n\\n**ジェネリクス**は、クラスやメソッドの「型」を後から指定できる機能です。\\n\\n```java\\nclass Box<T> {\\n    private T value;\\n    public void set(T v) { value = v; }\\n    public T get() { return value; }\\n}\\n```\\n\\n`<T>` は型パラメータで、使うときに具体的な型に置き換えます。" },
+    { "title": "ジェネリクスの使い方", "content": "# 型を指定して使う\\n\\n```java\\nBox<String> box = new Box<>();\\nbox.set(\\\"Hello\\\");\\nString s = box.get();  // キャスト不要！\\n\\nBox<Integer> numBox = new Box<>();\\nnumBox.set(42);\\n```\\n\\n間違った型を入れようとするとエラーで教えてくれます。" },
+    { "title": "境界型パラメータ", "content": "# extends で型を制限\\n\\n```java\\nclass Calculator<T extends Number> {\\n    private T value;\\n    public double getDouble() {\\n        return value.doubleValue();\\n    }\\n}\\n```\\n\\n`T extends Number` で「Numberの仲間だけ」に制限できます。Numberのメソッドが使えるようになります。" },
+    { "title": "ワイルドカード", "content": "# ? で不明な型を表す\\n\\n```java\\npublic void printList(List<?> list) {\\n    for (Object o : list) {\\n        System.out.println(o);\\n    }\\n}\\n```\\n\\n**境界付きワイルドカード**\\n- `? extends Number` → Numberか、その子クラス\\n- `? super Integer` → Integerか、その親クラス" },
+    { "title": "Map の操作", "content": "# キーと値のペア\\n\\n```java\\nMap<String, Integer> map = new HashMap<>();\\nmap.put(\\\"apple\\\", 100);\\nmap.put(\\\"banana\\\", 80);\\n\\nSystem.out.println(map.get(\\\"apple\\\"));  // => 100\\n\\n// 全エントリを処理\\nmap.forEach((k, v) -> System.out.println(k + \\\": \\\" + v));\\n```" }
+  ],
   "exercises": [
     {
       "title": "ジェネリクスの基本",

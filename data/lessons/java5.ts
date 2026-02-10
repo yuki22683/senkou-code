@@ -5,6 +5,13 @@ export const javaData5 = {
   "lessonDescription": "Javaの例外処理とファイル入出力を学びます。堅牢なプログラムを書くための必須スキルを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 5,
+  "tutorialSlides": [
+    { "title": "例外とは？", "content": "# プログラムの異常事態\\n\\n**例外**は、プログラム実行中に発生する「予期しない問題」です。\\n\\n```java\\nint[] arr = {1, 2, 3};\\narr[10];  // 10番目？そんなのない！\\n// → ArrayIndexOutOfBoundsException\\n```\\n\\n例外が起きると、そのままではプログラムが止まってしまいます。" },
+    { "title": "try-catch", "content": "# 例外をキャッチする\\n\\n**try-catch**で例外を捕まえて対処できます。\\n\\n```java\\ntry {\\n    int x = 10 / 0;  // 0で割る→例外！\\n} catch (ArithmeticException e) {\\n    System.out.println(\\\"エラー!\\\");\\n}\\n```\\n\\ntryの中で例外が起きたら、catchの中が実行されます。" },
+    { "title": "finally", "content": "# 必ず実行される処理\\n\\n**finally**ブロックは、例外が起きても起きなくても必ず実行されます。\\n\\n```java\\ntry {\\n    // 処理\\n} catch (Exception e) {\\n    // 例外処理\\n} finally {\\n    // 必ず実行される（後片付け）\\n}\\n```\\n\\nファイルを閉じるなどのクリーンアップ処理に使います。" },
+    { "title": "throws 宣言", "content": "# 例外を呼び出し元に伝える\\n\\n**throws**は「このメソッドは例外を投げるかも」と宣言します。\\n\\n```java\\npublic void readFile() throws IOException {\\n    // ファイル読み込み処理\\n}\\n```\\n\\n呼び出し側は「キャッチする」か「さらに上に投げる」かを選びます。" },
+    { "title": "カスタム例外", "content": "# 独自の例外を作る\\n\\nExceptionを継承して、オリジナルの例外を作れます。\\n\\n```java\\nclass MyException extends Exception {\\n    public MyException(String msg) {\\n        super(msg);\\n    }\\n}\\n\\n// 使い方\\nif (age < 0) {\\n    throw new MyException(\\\"年齢は正の数です\\\");\\n}\\n```" }
+  ],
   "exercises": [
     {
       "title": "try-catch の基本",

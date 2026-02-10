@@ -7,12 +7,28 @@ export const bash3Data = {
   "lessonOrder": 3,
   "tutorialSlides": [
     {
-      "title": "コマンドをつなぐ パイプ",
-      "content": "パイプ `|` を使うと、あるコマンドの出力を別のコマンドの入力として渡せます。\\n\\n```bash\\necho \"Hello World\" | wc -w # 単語数をカウント\\n```"
+      "title": "パイプ |",
+      "content": "**パイプ** `|` は、コマンドの出力を次のコマンドの入力に渡します。\\n\\n```bash\\necho \"hello world\" | wc -w  # 2（単語数）\\necho \"hello\" | tr 'a-z' 'A-Z'  # HELLO\\n```\\n\\nパイプは何個でもつなげられます。"
     },
     {
-      "title": "出力を保存する リダイレクト",
-      "content": "コマンドの結果をファイルに保存するにはリダイレクト `>` を使います。\\n\\n```bash\\necho \"テスト\" > result.txt\\n```\\n\\n`>` は上書き、`>>` は追記です。"
+      "title": "リダイレクト > と >>",
+      "content": "コマンドの結果をファイルに保存します。\\n\\n- `>` : 上書き（新規作成）\\n- `>>` : 追記\\n\\n```bash\\necho \"hello\" > file.txt   # 上書き\\necho \"world\" >> file.txt  # 追記\\n```"
+    },
+    {
+      "title": "入力リダイレクト <",
+      "content": "ファイルの内容をコマンドの入力として渡します。\\n\\n```bash\\nwc -l < file.txt  # 行数をカウント\\n```\\n\\n`<` でファイルから読み込みます。"
+    },
+    {
+      "title": "エラー出力 2>",
+      "content": "通常の出力は `1`、エラー出力は `2` です。\\n\\n```bash\\nls /nonexistent 2> /dev/null\\n# エラーを /dev/null に捨てる\\n```\\n\\n`/dev/null` は「ゴミ箱」のようなものです。"
+    },
+    {
+      "title": "ファイルテスト -f",
+      "content": "`-f` でファイルが存在するか確認できます。\\n\\n```bash\\nif [ -f /etc/passwd ]; then\\n    echo \"存在します\"\\nfi\\n```\\n\\n他にも `-d`（ディレクトリ）、`-e`（存在）などがあります。"
+    },
+    {
+      "title": "xargs コマンド",
+      "content": "`xargs` はパイプからの入力を引数に変換します。\\n\\n```bash\\necho \"Hello\" | xargs echo \"Message:\"\\n# Message: Hello\\n```\\n\\n入力を次のコマンドの引数として渡せます。"
     }
   ],
   "exercises": [

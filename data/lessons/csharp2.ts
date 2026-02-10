@@ -5,6 +5,32 @@ export const csharp2Data = {
   "lessonDescription": "C#の強力な機能「継承」「インターフェース」「LINQ」を学びます。現代的なC#プログラミングの技法を身につけましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "継承で機能を受け継ぐ",
+      "content": "**継承**で親クラスの機能を子クラスに引き継げます。\\n\\n```csharp\\nclass Vehicle {\\n    public void Move() => Console.WriteLine(\"移動中\");\\n}\\n\\nclass Car : Vehicle { }\\n\\nCar c = new Car();\\nc.Move();  // => 移動中\\n```\\n\\n`: 親クラス名`で継承を表します。"
+    },
+    {
+      "title": "メソッドのオーバーライド",
+      "content": "`virtual`と`override`で親のメソッドを子で上書きできます。\\n\\n```csharp\\nclass Shape {\\n    public virtual void Draw() => Console.WriteLine(\"shape\");\\n}\\n\\nclass Circle : Shape {\\n    public override void Draw() => Console.WriteLine(\"circle\");\\n}\\n```\\n\\n親は`virtual`、子は`override`を付けます。"
+    },
+    {
+      "title": "インターフェース",
+      "content": "`interface`で実装すべきメソッドを定義します。\\n\\n```csharp\\ninterface IRunner {\\n    void Run();\\n}\\n\\nclass Robot : IRunner {\\n    public void Run() => Console.WriteLine(\"running\");\\n}\\n```\\n\\nインターフェース名は慣例で`I`で始めます。"
+    },
+    {
+      "title": "プロパティ",
+      "content": "`get`/`set`でプロパティを定義できます。\\n\\n```csharp\\nclass Item {\\n    public int Price { get; set; }\\n}\\n\\nItem item = new Item();\\nitem.Price = 500;\\nConsole.WriteLine(item.Price);  // => 500\\n```\\n\\n自動プロパティで簡潔に書けます。"
+    },
+    {
+      "title": "List<T> コレクション",
+      "content": "`List<T>`で型安全なリストを作れます。\\n\\n```csharp\\nList<int> nums = new List<int>();\\nnums.Add(10);\\nnums.Add(20);\\nConsole.WriteLine(nums[1]);  // => 20\\n```\\n\\n`<T>`にはint、string等の型を指定します。"
+    },
+    {
+      "title": "LINQ で絞り込み・変換",
+      "content": "`Where`で絞り込み、`Select`で変換ができます。\\n\\n```csharp\\nvar nums = new List<int> {1, 5, 10, 15, 20};\\nvar big = nums.Where(n => n >= 10);\\n// => 10, 15, 20\\n\\nvar squared = nums.Select(n => n * n);\\n// => 1, 25, 100, 225, 400\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "クラスの継承",

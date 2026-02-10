@@ -5,6 +5,32 @@ export const elixirData = {
   "lessonDescription": "たくさんの指示を同時になおかつ正確にこなすのが得意な言葉「Elixir（エリクサー）」のきほんを学びましょう。データの流れをスムーズに作れるようになります。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "Elixirへようこそ！",
+      "content": "**Elixir（エリクサー）** は、2011年にJose Valimさんが作ったプログラミング言語です。\\n\\nたくさんの処理を同時に実行できるのが得意です。\\n\\nWebサービスやリアルタイム通信でよく使われています。"
+    },
+    {
+      "title": "画面に文字を出す",
+      "content": "Elixirで画面に文字を出すには `IO.puts` を使います。\\n\\n```elixir\\nIO.puts \\\"こんにちは, Elixir!\\\"\\n```\\n\\n`IO` は入出力を扱うモジュールです。"
+    },
+    {
+      "title": "変数を使う",
+      "content": "データを入れておく「はこ」を**変数**と呼びます。\\n\\n```elixir\\nx = 10\\nname = \\\"太郎\\\"\\nIO.puts x\\nIO.puts name\\n```\\n\\n変数の再代入もできます。"
+    },
+    {
+      "title": "計算する",
+      "content": "Elixirでは数字を計算できます。\\n\\n```elixir\\na = 5\\nb = 3\\nIO.puts a + b  # 8\\nIO.puts rem(10, 3) # 1（あまり）\\n```\\n\\n`#` から後ろはコメント（メモ）です。あまりは `rem` 関数を使います。"
+    },
+    {
+      "title": "条件分岐 if文",
+      "content": "「もし〜なら」という条件で処理を分けられます。\\n\\n```elixir\\nscore = 85\\nif score > 80 do\\n  IO.puts \\\"すごい！\\\"\\nelse\\n  IO.puts \\\"がんばろう\\\"\\nend\\n```\\n\\n`do` と `end` がポイントです。"
+    },
+    {
+      "title": "リストとマップ",
+      "content": "複数のデータをまとめて扱えます。\\n\\n**リスト**:\\n```elixir\\ncolors = [\\\"赤\\\", \\\"青\\\"]\\nIO.puts hd(colors) # 赤（先頭）\\n```\\n\\n**マップ**（辞書）:\\n```elixir\\nuser = %{name: \\\"太郎\\\"}\\nIO.puts user.name\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",

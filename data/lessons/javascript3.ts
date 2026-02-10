@@ -5,6 +5,24 @@ export const javascriptData3 = {
   "lessonDescription": "JavaScriptの非同期処理を学びます。Promise、async/await、そしてモダンなJavaScriptの機能を身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    {
+      "title": "非同期処理とは",
+      "content": "時間のかかる処理を**待たずに**次へ進む仕組みです。\\n\\n- ファイルの読み込み\\n- サーバーへの通信\\n- タイマー処理\\n\\nこれらは完了を待つと画面が固まってしまいます。"
+    },
+    {
+      "title": "Promise",
+      "content": "非同期処理の結果を表すオブジェクトです。\\n\\n```javascript\\nconst p = new Promise((resolve) => {\\n  resolve('完了！');\\n});\\np.then(msg => console.log(msg));\\n```\\n\\n`then` で完了後の処理を書きます。"
+    },
+    {
+      "title": "async/await",
+      "content": "Promiseをより簡潔に書けます。\\n\\n```javascript\\nasync function getData() {\\n  const result = await fetch(url);\\n  return result;\\n}\\n```\\n\\n`await` で完了を待ちます。"
+    },
+    {
+      "title": "エラー処理 catch",
+      "content": "非同期処理のエラーを捕捉します。\\n\\n```javascript\\np.then(data => console.log(data))\\n .catch(err => console.log('エラー'));\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "Promise の基本",

@@ -8,11 +8,31 @@ export const haskell2Data = {
   "tutorialSlides": [
     {
       "title": "関数の定義",
-      "content": "Haskellでは関数を簡潔に定義できます。\\n\\n```haskell\\naddTen x = x + 10\\n-- addTen 5 => 15\\n```\\n\\n**ポイント**:\\n- `関数名 引数 = 式` の形式\\n- `return` は不要（式の結果がそのまま戻り値）"
+      "content": "Haskellでは関数を簡潔に定義できます。\\n\\n```haskell\\naddTen x = x + 10\\n-- addTen 5 => 15\\n```\\n\\n`関数名 引数 = 式` の形式で、`return` は不要です。"
     },
     {
-      "title": "リスト内包表記",
-      "content": "リストから新しいリストを作る便利な記法です。\\n\\n```haskell\\n[x * x | x <- [1..5]]\\n-- => [1, 4, 9, 16, 25]\\n```\\n\\n**構文**: `[式 | 変数 <- リスト]`\\n- `式`: 各要素に適用する処理（例: `x * x`）\\n- `|`: 式と生成器を区切る記号\\n- `<-`: リストから要素を取り出す\\n- `[1..5]`: 1から5までのリスト"
+      "title": "型注釈 ::",
+      "content": "関数の型を明示するには `::` を使います。\\n\\n```haskell\\nsquare :: Int -> Int\\nsquare x = x * x\\n```\\n\\n`Int -> Int` は「整数を受け取り整数を返す」という意味です。"
+    },
+    {
+      "title": "リストとhead/tail",
+      "content": "リストは `[]` で作成し、`head` で先頭、`tail` で残りを取得します。\\n\\n```haskell\\nhead [1, 2, 3]  -- 1\\ntail [1, 2, 3]  -- [2, 3]\\n```"
+    },
+    {
+      "title": "高階関数 map と filter",
+      "content": "`map` は各要素を変換、`filter` は条件で絞り込みます。\\n\\n```haskell\\nmap (*2) [1, 2, 3]     -- [2, 4, 6]\\nfilter (>2) [1, 2, 3]  -- [3]\\n```\\n\\n関数を引数に取る関数を**高階関数**といいます。"
+    },
+    {
+      "title": "パターンマッチ",
+      "content": "引数の値によって異なる定義ができます。\\n\\n```haskell\\nfib 0 = 0\\nfib 1 = 1\\nfib n = fib (n-1) + fib (n-2)\\n```\\n\\n上から順にマッチするパターンを探します。"
+    },
+    {
+      "title": "ガード |",
+      "content": "条件分岐には**ガード** `|` を使います。\\n\\n```haskell\\nsign x\\n  | x > 0     = \"positive\"\\n  | x < 0     = \"negative\"\\n  | otherwise = \"zero\"\\n```\\n\\n`otherwise` は「それ以外」を表します。"
+    },
+    {
+      "title": "ラムダ式 \\\\",
+      "content": "無名関数は `\\\\引数 -> 式` で作ります。\\n\\n```haskell\\nmap (\\\\x -> x * x) [1, 2, 3]\\n-- [1, 4, 9]\\n```\\n\\n`\\\\` は λ（ラムダ）を表しています。"
     }
   ],
   "exercises": [

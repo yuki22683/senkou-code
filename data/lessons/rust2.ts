@@ -5,6 +5,32 @@ export const rust2Data = {
   "lessonDescription": "Rust最大の特徴「所有権」を中心に、構造体、トレイト、パターンマッチングを学びます。安全で高速なプログラムを書く力を身につけましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "所有権とは",
+      "content": "Rustでは、値には1つの**所有者**しかいません。\\n\\n```rust\\nlet s1 = String::from(\\\"hello\\\");\\nlet s2 = s1; // s1の所有権がs2に移動\\n// s1 はもう使えない！\\n```\\n\\nこれにより、メモリの二重解放を防ぎます。"
+    },
+    {
+      "title": "借用（参照）",
+      "content": "所有権を渡さずに値を使うには**借用**します。\\n\\n```rust\\nlet s = String::from(\\\"hello\\\");\\nlet len = calculate_length(&s); // 借用\\n// s はまだ使える\\n```\\n\\n`&` で参照を作成します。"
+    },
+    {
+      "title": "可変参照",
+      "content": "値を変更するには**可変参照**を使います。\\n\\n```rust\\nlet mut s = String::from(\\\"hello\\\");\\nchange(&mut s);\\n```\\n\\n`&mut` で可変参照を作成。同時に複数の可変参照は作れません。"
+    },
+    {
+      "title": "構造体",
+      "content": "**構造体**で独自の型を作れます。\\n\\n```rust\\nstruct Person {\\n    name: String,\\n    age: u32,\\n}\\n\\nlet p = Person {\\n    name: String::from(\\\"太郎\\\"),\\n    age: 20,\\n};\\n```"
+    },
+    {
+      "title": "パターンマッチング",
+      "content": "`match` で値を分解して処理できます。\\n\\n```rust\\nlet x = 2;\\nmatch x {\\n    1 => println!(\\\"いち\\\"),\\n    2 => println!(\\\"に\\\"),\\n    _ => println!(\\\"その他\\\"),\\n}\\n```\\n\\n`_` は「それ以外」を表します。"
+    },
+    {
+      "title": "Option型",
+      "content": "値があるかないかを表すには `Option` を使います。\\n\\n```rust\\nlet num: Option<i32> = Some(5);\\nlet none: Option<i32> = None;\\n\\nmatch num {\\n    Some(n) => println!(\\\"{}\\\", n),\\n    None => println!(\\\"なし\\\"),\\n}\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "所有権の基本",

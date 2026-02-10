@@ -5,6 +5,24 @@ export const javascriptData4 = {
   "lessonDescription": "JavaScriptの関数型プログラミングを学びます。高階関数、カリー化、合成関数などを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 4,
+  "tutorialSlides": [
+    {
+      "title": "高階関数とは",
+      "content": "関数を引数に取る、または関数を返す関数です。\\n\\n```javascript\\nconst nums = [1, 2, 3];\\nnums.map(x => x * 2);  // 関数を引数に取る\\n```\\n\\n`map`, `filter`, `reduce` などが高階関数です。"
+    },
+    {
+      "title": "every と some",
+      "content": "配列の要素をまとめてチェックします。\\n\\n```javascript\\n[1, 2, 3].every(x => x > 0);  // true（全て）\\n[1, 2, 3].some(x => x > 2);   // true（どれか）\\n```"
+    },
+    {
+      "title": "reduce",
+      "content": "配列を1つの値にまとめます。\\n\\n```javascript\\n[1, 2, 3].reduce((acc, x) => acc + x, 0);\\n// => 6（合計）\\n```\\n\\n`acc` は累積値、`0` は初期値です。"
+    },
+    {
+      "title": "メソッドチェーン",
+      "content": "メソッドを連続して呼び出せます。\\n\\n```javascript\\n[1, 2, 3, 4, 5]\\n  .filter(x => x % 2 === 0)\\n  .map(x => x * 2);\\n// => [4, 8]\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "配列のevery",

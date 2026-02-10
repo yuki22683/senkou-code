@@ -5,6 +5,32 @@ export const assembly3Data = {
   "lessonDescription": "アセンブリ言語のメモリ操作とスタックを学びます。データの保存と取り出しをマスターしましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    {
+      "title": "dec と inc",
+      "content": "`dec`（デクリメント）と`inc`（インクリメント）で1ずつ増減できます。\\n\\n```nasm\\nmov rax, 10\\ndec rax      ; rax = 9\\ninc rax      ; rax = 10\\n```\\n\\n`add rax, 1`や`sub rax, 1`より簡潔に書けます。"
+    },
+    {
+      "title": "imul で符号付き乗算",
+      "content": "`imul`は符号付き（負の数も扱える）乗算命令です。\\n\\n```nasm\\nmov rbx, 3\\nimul rax, rbx, 4  ; rax = rbx * 4 = 12\\n```\\n\\n3オペランド形式で `結果, 被乗数, 乗数` を指定できます。"
+    },
+    {
+      "title": "ビット論理演算",
+      "content": "ビット単位の論理演算ができます。\\n\\n```nasm\\nmov rax, 0xFF\\nand rax, 0x0F  ; AND: rax = 0x0F\\n\\nmov rax, 0x10\\nor rax, 0x01   ; OR: rax = 0x11\\n```\\n\\n- `and` = 両方1なら1\\n- `or` = どちらか1なら1\\n- `xor` = 異なれば1"
+    },
+    {
+      "title": "シフト演算",
+      "content": "`shl`（左シフト）と`shr`（右シフト）でビットを移動します。\\n\\n```nasm\\nmov rax, 5     ; 0101\\nshl rax, 2     ; 10100 = 20 (5 * 4)\\n\\nmov rax, 20    ; 10100\\nshr rax, 1     ; 1010 = 10 (20 / 2)\\n```\\n\\n左シフトは2倍、右シフトは2分の1と同じ効果があります。"
+    },
+    {
+      "title": "test命令でビット検査",
+      "content": "`test`はAND演算を行い、結果でフラグを設定します（レジスタは変更されません）。\\n\\n```nasm\\nmov rax, 5\\ntest rax, 1    ; 最下位ビットを検査\\njnz is_odd     ; 0でなければジャンプ\\n```\\n\\n奇数偶数判定などに便利です。"
+    },
+    {
+      "title": "neg命令で符号反転",
+      "content": "`neg`でレジスタの符号を反転します。\\n\\n```nasm\\nmov rax, 10\\nneg rax        ; rax = -10\\n\\nmov rax, -5\\nneg rax        ; rax = 5\\n```\\n\\n2の補数表現で符号が反転します。"
+    }
+  ],
   "exercises": [
     {
       "title": "値を減らしましょう",

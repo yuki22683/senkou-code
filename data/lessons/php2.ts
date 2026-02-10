@@ -5,6 +5,32 @@ export const php2Data = {
   "lessonDescription": "PHPのオブジェクト指向プログラミングを学びます。クラス、継承、名前空間など現代的なPHPの書き方を身につけましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "クラスの定義",
+      "content": "PHPでは `class` キーワードでクラスを定義します。\\n\\n```php\\nclass Cat {\\n    public $name;  // プロパティ\\n}\\n\\n$cat = new Cat();\\n$cat->name = 'タマ';\\necho $cat->name;  // => タマ\\n```\\n\\n`->` でプロパティやメソッドにアクセスします。"
+    },
+    {
+      "title": "コンストラクタ",
+      "content": "`__construct` メソッドでインスタンス作成時の初期化を行います。\\n\\n```php\\nclass Counter {\\n    public $count;\\n    \\n    public function __construct($c) {\\n        $this->count = $c;\\n    }\\n}\\n\\n$cnt = new Counter(5);\\necho $cnt->count;  // => 5\\n```\\n\\n`$this` は自分自身のインスタンスを指します。"
+    },
+    {
+      "title": "継承",
+      "content": "`extends` で親クラスを継承します。\\n\\n```php\\nclass Vehicle {\\n    public function move() {\\n        echo '移動中';\\n    }\\n}\\n\\nclass Car extends Vehicle { }\\n\\n$car = new Car();\\n$car->move();  // => 移動中\\n```\\n\\n子クラスは親クラスのプロパティとメソッドを引き継ぎます。"
+    },
+    {
+      "title": "インターフェース",
+      "content": "`interface` でメソッドの契約を定義し、`implements` で実装します。\\n\\n```php\\ninterface Runner {\\n    public function run();\\n}\\n\\nclass Robot implements Runner {\\n    public function run() {\\n        echo '実行中';\\n    }\\n}\\n```\\n\\nインターフェースを実装するクラスは、定義されたメソッドを必ず持ちます。"
+    },
+    {
+      "title": "配列関数（map/filter）",
+      "content": "`array_map` と `array_filter` でコレクションを変換・抽出します。\\n\\n```php\\n$nums = [1, 2, 3, 4, 5];\\n\\n// 各要素を2乗\\n$squared = array_map(fn($n) => $n * $n, $nums);\\n// => [1, 4, 9, 16, 25]\\n\\n// 3以上を抽出\\n$big = array_filter($nums, fn($n) => $n >= 3);\\n// => [3, 4, 5]\\n```"
+    },
+    {
+      "title": "名前空間とNull合体演算子",
+      "content": "`namespace` でクラスを整理し、`??` でnullの場合のデフォルト値を指定します。\\n\\n```php\\nnamespace App;\\n\\nclass Hello {\\n    public function say() {\\n        echo 'こんにちは';\\n    }\\n}\\n\\n// Null合体演算子\\n$value = null;\\necho $value ?? 'デフォルト';\\n// => デフォルト\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "クラスを定義しよう",

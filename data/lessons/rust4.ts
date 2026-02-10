@@ -5,6 +5,32 @@ export const rust4Data = {
   "lessonDescription": "Rustのトレイトとスマートポインタを学びます。抽象化と所有権の高度なパターンを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 4,
+  "tutorialSlides": [
+    {
+      "title": "トレイト",
+      "content": "**トレイト**はメソッドの集まりを定義します。\\n\\n```rust\\ntrait Speak {\\n    fn speak(&self) -> String;\\n}\\n\\nimpl Speak for Dog {\\n    fn speak(&self) -> String {\\n        String::from(\\\"ワン！\\\")\\n    }\\n}\\n```"
+    },
+    {
+      "title": "トレイト境界",
+      "content": "ジェネリクスに**トレイト境界**をつけられます。\\n\\n```rust\\nfn greet<T: Speak>(animal: T) {\\n    println!(\\\"{}\\\", animal.speak());\\n}\\n```\\n\\n`T: Speak` は「SpeakトレイトをimplしているT」を意味します。"
+    },
+    {
+      "title": "Boxスマートポインタ",
+      "content": "`Box<T>` でヒープにデータを配置します。\\n\\n```rust\\nlet b = Box::new(5);\\nprintln!(\\\"{}\\\", b);\\n```\\n\\n再帰的なデータ構造や大きなデータに便利です。"
+    },
+    {
+      "title": "Rc（参照カウント）",
+      "content": "`Rc<T>` で複数の所有者を持てます。\\n\\n```rust\\nuse std::rc::Rc;\\nlet a = Rc::new(5);\\nlet b = Rc::clone(&a);\\n// a と b は同じデータを共有\\n```\\n\\n参照カウントで管理されます。"
+    },
+    {
+      "title": "RefCell",
+      "content": "`RefCell<T>` で実行時に借用ルールをチェックします。\\n\\n```rust\\nuse std::cell::RefCell;\\nlet data = RefCell::new(5);\\n*data.borrow_mut() += 1;\\n```\\n\\n内部可変性パターンで使います。"
+    },
+    {
+      "title": "トレイトオブジェクト",
+      "content": "**トレイトオブジェクト**で動的ディスパッチができます。\\n\\n```rust\\nlet animals: Vec<Box<dyn Speak>> = vec![\\n    Box::new(Dog),\\n    Box::new(Cat),\\n];\\nfor a in animals {\\n    println!(\\\"{}\\\", a.speak());\\n}\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "トレイトの定義",

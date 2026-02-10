@@ -5,6 +5,32 @@ export const javascriptData = {
   "lessonDescription": "Webサイトを動かす魔法、JavaScript（ジャバスクリプト）のきほんを学びましょう。コンピュータにメッセージを出したり、計算させたりする方法を身につけます。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "JavaScriptとは？",
+      "content": "**JavaScript**はWebサイトに「動き」をつけるプログラミング言語です。\\n\\n- ボタンをクリックしたら何かが起きる\\n- アニメーションを動かす\\n- ゲームを作る\\n\\n世界中でとても人気があります。"
+    },
+    {
+      "title": "console.log で出力",
+      "content": "画面にメッセージを出すには `console.log()` を使います。\\n\\n```javascript\\nconsole.log('Hello!');\\n// => Hello!\\n```\\n\\n文字は `'` か `\"` で囲み、最後に `;` をつけます。"
+    },
+    {
+      "title": "変数 const と let",
+      "content": "データを入れる「はこ」を作ります。\\n\\n```javascript\\nconst name = 'JavaScript';  // 変更不可\\nlet count = 0;              // 変更可能\\n```\\n\\n`const` は変更できない、`let` は変更できる変数です。"
+    },
+    {
+      "title": "条件分岐 if文",
+      "content": "「もし〜なら」は `if` で書きます。\\n\\n```javascript\\nif (score > 80) {\\n    console.log('すごい！');\\n} else {\\n    console.log('がんばろう');\\n}\\n```"
+    },
+    {
+      "title": "くり返し for文",
+      "content": "同じ処理を繰り返すには `for` を使います。\\n\\n```javascript\\nfor (let i = 0; i < 3; i++) {\\n    console.log(i);\\n}\\n// 0, 1, 2\\n```"
+    },
+    {
+      "title": "関数 function",
+      "content": "処理をまとめて名前をつけたものが**関数**です。\\n\\n```javascript\\nfunction greet(name) {\\n    return 'Hello, ' + name;\\n}\\nconsole.log(greet('太郎'));\\n// => Hello, 太郎\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",

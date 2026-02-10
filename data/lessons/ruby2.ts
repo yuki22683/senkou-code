@@ -5,6 +5,32 @@ export const ruby2Data = {
   "lessonDescription": "Rubyの強力な機能「ブロック」と「クラス」を学びます。Rubyらしいエレガントなコードを書く力を身につけましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "ブロックとは",
+      "content": "**ブロック**はコードの塊をメソッドに渡す仕組みです。\\n\\n```ruby\\n# do...end形式\\nnums.each do |n|\\n  puts n\\nend\\n\\n# { }形式（1行向け）\\nnums.each { |n| puts n }\\n```\\n\\n`|n|` の `n` はブロック引数と呼ばれ、各要素を受け取ります。"
+    },
+    {
+      "title": "map と select",
+      "content": "`map` は各要素を変換し、`select` は条件に合う要素を抽出します。\\n\\n```ruby\\nnums = [1, 2, 3, 4, 5]\\n\\n# map: 各要素を2倍に変換\\ndoubled = nums.map { |n| n * 2 }\\n# => [2, 4, 6, 8, 10]\\n\\n# select: 3以上を抽出\\nbig = nums.select { |n| n >= 3 }\\n# => [3, 4, 5]\\n```"
+    },
+    {
+      "title": "シンボル",
+      "content": "**シンボル**は `:名前` で表す識別子です。文字列より軽量で、ハッシュのキーによく使います。\\n\\n```ruby\\n# シンボルをキーにしたハッシュ\\nitem = { name: 'りんご', price: 100 }\\n\\nputs item[:name]   # => りんご\\nputs item[:price]  # => 100\\n```\\n\\n`name:` は `:name =>` の省略形です。"
+    },
+    {
+      "title": "クラスの定義",
+      "content": "`class` でオブジェクトの設計図を作ります。\\n\\n```ruby\\nclass Cat\\n  def initialize(name)\\n    @name = name  # インスタンス変数\\n  end\\n  \\n  def greet\\n    puts \"にゃー、#{@name}です\"\\n  end\\nend\\n\\ncat = Cat.new('タマ')\\ncat.greet  # => にゃー、タマです\\n```\\n\\n`@name` は各インスタンスが持つ固有のデータです。"
+    },
+    {
+      "title": "attr_accessor",
+      "content": "`attr_accessor` でプロパティの読み書きを簡単に定義できます。\\n\\n```ruby\\nclass Item\\n  attr_accessor :price  # 読み書き可能\\n  attr_reader :name     # 読み取り専用\\nend\\n\\nitem = Item.new\\nitem.price = 200\\nputs item.price  # => 200\\n```\\n\\n手動でゲッター/セッターを書く必要がなくなります。"
+    },
+    {
+      "title": "継承とモジュール",
+      "content": "`<` で親クラスを継承し、`include` でモジュールの機能を取り込みます。\\n\\n```ruby\\nclass Vehicle\\n  def move\\n    puts '移動中'\\n  end\\nend\\n\\nclass Car < Vehicle  # Vehicleを継承\\nend\\n\\nCar.new.move  # => 移動中\\n```\\n\\nモジュールは複数のクラスで機能を共有する仕組みです。"
+    }
+  ],
   "exercises": [
     {
       "title": "ブロックを使おう - each",

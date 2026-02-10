@@ -5,6 +5,32 @@ export const sqlData = {
   "lessonDescription": "たくさんのデータがしまってある「倉庫（そうこ）」から、ほしいデータを取り出すための言葉「SQL（エスキューエル）」のきほんを学びましょう。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "SQLへようこそ！",
+      "content": "**SQL（エスキューエル）** は、データベースを操作するための言語です。\\n\\nデータベースは大きな「倉庫」のようなもので、たくさんのデータを整理して保存できます。\\n\\nSQLを使うと、そこからほしいデータを取り出したり、追加したりできます。"
+    },
+    {
+      "title": "データを取り出す SELECT",
+      "content": "データを取り出すには `SELECT` を使います。\\n\\n```sql\\nSELECT 'Hello, World!';\\n```\\n\\n`SELECT` は「選ぶ」という意味です。文字列はシングルクォート `'` で囲みます。"
+    },
+    {
+      "title": "名前をつける AS",
+      "content": "結果に名前をつけるには `AS` を使います。\\n\\n```sql\\nSELECT 'こんにちは' AS greeting;\\n```\\n\\n`AS` は「〜として」という意味で、結果に別名をつけます。"
+    },
+    {
+      "title": "計算する",
+      "content": "SQLでも計算ができます。\\n\\n```sql\\nSELECT 100 + 50 AS total;  -- 150\\nSELECT 10 * 5 AS product;  -- 50\\n```\\n\\n`--` から後ろはコメント（メモ）です。"
+    },
+    {
+      "title": "条件で絞り込む WHERE",
+      "content": "条件に合うデータだけを取り出すには `WHERE` を使います。\\n\\n```sql\\nSELECT * FROM users WHERE age > 20;\\n```\\n\\n`WHERE` の後ろに条件を書きます。`>` は「より大きい」という意味です。"
+    },
+    {
+      "title": "並べ替える ORDER BY",
+      "content": "結果を並べ替えるには `ORDER BY` を使います。\\n\\n```sql\\nSELECT * FROM users ORDER BY age DESC;\\n```\\n\\n`DESC` は大きい順（降順）、`ASC` は小さい順（昇順）です。"
+    }
+  ],
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",

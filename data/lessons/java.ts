@@ -5,6 +5,13 @@ export const javaData = {
   "lessonDescription": "きっちりしたルールが特徴の言葉「Java（ジャバ）」のきほんを学びましょう。コンピュータに正しい手順で指示（しじ）を出す方法を身につけます。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    { "title": "Java（ジャバ）とは？", "content": "# 世界中で使われる「きっちりした」言語\\n\\nJava（ジャバ）は、銀行やAndroidアプリなどで使われている信頼性の高いプログラミング言語です。\\n\\n**たとえ話：** Javaは「厳格な先生」のようなもの。ルールは厳しいけれど、そのおかげで間違いの少ない安全なプログラムを作れます。" },
+    { "title": "Javaを動かす「お約束」", "content": "# 最初に書く「おまじない」\\n\\nJavaでプログラムを書くときは、必ず書かなければいけない「お約束」があります。\\n\\n```java\\npublic class Main {\\n    public static void main(String[] args) {\\n        // ここにやりたいことを書くよ！\\n    }\\n}\\n```\\n\\n- `public class Main` → プログラムに名前をつける\\n- `public static void main` → 「ここからスタート！」の合図" },
+    { "title": "画面に文字を出す", "content": "# System.out.println\\n\\n画面に文字を出したいときは `System.out.println()` を使います。\\n\\n```java\\nSystem.out.println(\"こんにちは\");\\n```\\n**実行結果：** こんにちは\\n\\n長い名前ですが、これがJavaの流儀です！" },
+    { "title": "変数（はこ）を作る", "content": "# String と int\\n\\nデータを保存する「はこ」を作れます。\\n\\n**文字用のはこ：String**\\n```java\\nString name = \\\"太郎\\\";\\n```\\n\\n**数字用のはこ：int**\\n```java\\nint score = 100;\\n```\\n\\nJavaでは「何を入れるか」を先に決める必要があります。" },
+    { "title": "計算してみよう", "content": "# 四則演算\\n\\n`int` のはこに入れた数字は計算できます。\\n\\n```java\\nint apple = 100;\\nint orange = 50;\\nSystem.out.println(apple + orange);\\n```\\n**実行結果：** 150\\n\\n`%` を使うと「あまり」も計算できます。\\n\\n```java\\nSystem.out.println(10 % 3);  // => 1（あまり）\\n```" }
+  ],
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",

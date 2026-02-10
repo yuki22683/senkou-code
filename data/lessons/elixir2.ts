@@ -5,6 +5,32 @@ export const elixir2Data = {
   "lessonDescription": "Elixirの強力な機能「パターンマッチング」と「プロセス」を学びます。関数型プログラミングの考え方を身につけましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "パターンマッチングの基本",
+      "content": "Elixirでは`=`は代入ではなく**パターンマッチ**です。\\n\\n```elixir\\n{x, y} = {10, 20}\\nIO.puts x  # => 10\\nIO.puts y  # => 20\\n```\\n\\n左辺のパターンが右辺の値と一致すると、変数に値が束縛されます。"
+    },
+    {
+      "title": "リストのパターンマッチ",
+      "content": "`[head | tail]`でリストを先頭と残りに分解できます。\\n\\n```elixir\\n[head | tail] = [1, 2, 3]\\nIO.puts head  # => 1\\nIO.inspect tail  # => [2, 3]\\n```\\n\\n`|`演算子はリストの構造を分解するのに便利です。"
+    },
+    {
+      "title": "パイプ演算子 |>",
+      "content": "`|>`は前の式の結果を次の関数の第1引数に渡します。\\n\\n```elixir\\n1..5\\n|> Enum.sum()\\n|> IO.puts()\\n# => 15\\n```\\n\\nデータの流れが左から右に読めて分かりやすくなります。"
+    },
+    {
+      "title": "Enum.map と Enum.filter",
+      "content": "`Enum.map`で変換、`Enum.filter`で絞り込みができます。\\n\\n```elixir\\n# 各要素を2乗\\nEnum.map([1, 2, 3], fn x -> x * x end)\\n# => [1, 4, 9]\\n\\n# 偶数だけ抽出\\nEnum.filter([1, 2, 3, 4], fn x -> rem(x, 2) == 0 end)\\n# => [2, 4]\\n```"
+    },
+    {
+      "title": "case式でパターンマッチ",
+      "content": "`case`式で値に応じた処理を分岐できます。\\n\\n```elixir\\ncase x do\\n  1 -> \"one\"\\n  2 -> \"two\"\\n  _ -> \"other\"\\nend\\n```\\n\\n`_`はワイルドカードで、どんな値にもマッチします。"
+    },
+    {
+      "title": "プロセスとメッセージ",
+      "content": "Elixirでは`spawn`で軽量プロセスを作り、`send`/`receive`でメッセージをやり取りします。\\n\\n```elixir\\nspawn(fn -> IO.puts \"こんにちは\" end)\\n\\nsend(self(), {:msg, 42})\\nreceive do\\n  {:msg, n} -> IO.puts n\\nend\\n```\\n\\n並行処理がシンプルに書けます。"
+    }
+  ],
   "exercises": [
     {
       "title": "パターンマッチングの基本",

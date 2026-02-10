@@ -5,6 +5,32 @@ export const go2Data = {
   "lessonDescription": "Go言語の強力な機能「構造体」「インターフェース」「ゴルーチン」を学びます。並行処理ができるGo言語の真の力を体験しましょう。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    {
+      "title": "複数の値を返す関数",
+      "content": "Go言語では、関数から複数の値を返すことができます。\\n\\n```go\\nfunc minmax(a, b int) (int, int) {\\n    if a < b {\\n        return a, b\\n    }\\n    return b, a\\n}\\n\\nmin, max := minmax(5, 3)\\n```\\n\\n戻り値の型を `(int, int)` のようにカンマで区切って書きます。"
+    },
+    {
+      "title": "構造体 struct",
+      "content": "**構造体**は、複数のデータをまとめて扱えます。\\n\\n```go\\ntype Person struct {\\n    Name string\\n    Age  int\\n}\\n\\np := Person{Name: \\\"太郎\\\", Age: 20}\\nfmt.Println(p.Name) // 太郎\\n```\\n\\n`type 名前 struct { }` で定義します。"
+    },
+    {
+      "title": "メソッド",
+      "content": "構造体に**メソッド**を追加できます。\\n\\n```go\\nfunc (p Person) Greet() string {\\n    return \\\"こんにちは、\\\" + p.Name\\n}\\n\\np := Person{Name: \\\"太郎\\\"}\\nfmt.Println(p.Greet())\\n```\\n\\n`(p Person)` はレシーバと呼ばれ、メソッドが属する型を指定します。"
+    },
+    {
+      "title": "インターフェース",
+      "content": "**インターフェース**は、メソッドの集まりを定義します。\\n\\n```go\\ntype Greeter interface {\\n    Greet() string\\n}\\n```\\n\\n同じメソッドを持つ型は、自動的にそのインターフェースを満たします。"
+    },
+    {
+      "title": "ゴルーチン",
+      "content": "**ゴルーチン**で、処理を並行して実行できます。\\n\\n```go\\ngo func() {\\n    fmt.Println(\\\"並行処理中！\\\")\\n}()\\n```\\n\\n`go` を関数呼び出しの前につけるだけです。とても簡単！"
+    },
+    {
+      "title": "チャネル",
+      "content": "**チャネル**で、ゴルーチン間でデータをやり取りします。\\n\\n```go\\nch := make(chan int)\\ngo func() { ch <- 42 }()\\nvalue := <-ch\\n```\\n\\n`<-` でデータを送受信します。"
+    }
+  ],
   "exercises": [
     {
       "title": "複数の値を返す関数",

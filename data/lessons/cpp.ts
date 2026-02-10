@@ -5,6 +5,12 @@ export const cppData = {
   "lessonDescription": "C言語をもっとパワーアップさせた「C++（シープラスプラス）」のきほんを学びましょう。いろいろな機能を使って、自由にプログラムを作れるようになります。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    { "title": "C++とは？", "content": "# パワフルで高速な言語\\n\\nC++はC言語を元にして便利な機能を追加した言語です。\\n\\n**どんなところで使われているの？**\\n- ゲーム（速さが命！）\\n- ブラウザ（Chrome等）\\n- 3DCGソフト\\n\\nスピードが求められる場所で大活躍！" },
+    { "title": "std::coutで出力", "content": "# 画面に文字を出す\\n\\n```cpp\\n#include <iostream>\\nint main() {\\n    std::cout << \\\"こんにちは\\\" << std::endl;\\n    return 0;\\n}\\n```\\n\\n`<<`で文字を画面の方へ送るイメージです。\\n`std::endl`は改行です。" },
+    { "title": "変数を使う", "content": "# int と string\\n\\n```cpp\\nint age = 20;\\nstd::string name = \\\"太郎\\\";\\nstd::cout << name << \\\"は\\\" << age << \\\"歳\\\" << std::endl;\\n```\\n\\nC言語と違い、`std::cout`で簡単に出力できます！" },
+    { "title": "計算と演算子", "content": "# 四則演算\\n\\n```cpp\\nint a = 10, b = 3;\\nstd::cout << a + b << std::endl;  // 13\\nstd::cout << a % b << std::endl;  // 1（あまり）\\n```\\n\\n`+=`や`-=`も使えます。\\n```cpp\\nint x = 5;\\nx += 3;  // x = x + 3 と同じ\\n```" }
+  ],
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",

@@ -5,6 +5,14 @@ export const typescriptData3 = {
   "lessonDescription": "TypeScriptの高度な型システムを学びます。ユーティリティ型、条件型、マップ型など、型の達人を目指しましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 3,
+  "tutorialSlides": [
+    { "title": "ユーティリティ型とは？", "content": "# 型変換の便利ツール\\n\\nTypeScriptには、型を変換するための便利な組み込み型があります。これを**ユーティリティ型**と呼びます。\\n\\n## 主なユーティリティ型\\n\\n- **Partial<T>**: 全プロパティをオプショナルに\\n- **Required<T>**: 全プロパティを必須に\\n- **Pick<T, K>**: 特定のプロパティだけを選択\\n- **Omit<T, K>**: 特定のプロパティを除外" },
+    { "title": "Partial<T>", "content": "# 全プロパティをオプショナルに\\n\\n**Partial<T>**は、型Tの全てのプロパティを「あってもなくてもOK」に変えます。\\n\\n```typescript\\ninterface User {\\n  name: string;   // 必須\\n  age: number;    // 必須\\n}\\n\\ntype PartialUser = Partial<User>;\\n// { name?: string; age?: number; }\\n```\\n\\nデータの一部だけを更新したいときに便利です！" },
+    { "title": "Required<T>とPick<T, K>", "content": "# 必須化と選択\\n\\n**Required<T>**は、全てのプロパティを必須に変えます。\\n\\n```typescript\\ninterface Props { name?: string; }\\ntype RequiredProps = Required<Props>;\\n// { name: string; } ← ?が消えた！\\n```\\n\\n**Pick<T, K>**は、特定のプロパティだけを取り出します。\\n\\n```typescript\\ninterface User { id: number; name: string; email: string; }\\ntype UserPreview = Pick<User, 'id' | 'name'>;\\n// { id: number; name: string; }\\n```" },
+    { "title": "Omit<T, K>", "content": "# 特定のプロパティを除外\\n\\n**Omit<T, K>**は、指定したプロパティを除外します。\\n\\n```typescript\\ninterface User {\\n  id: number;\\n  name: string;\\n  password: string;  // 秘密の情報\\n}\\n\\ntype PublicUser = Omit<User, 'password'>;\\n// { id: number; name: string; }\\n```\\n\\n機密情報を除いて公開用のデータを作るときに便利です！" },
+    { "title": "条件型", "content": "# T extends U ? X : Y\\n\\n**条件型**は、型を条件分岐させる高度な機能です。\\n\\n```typescript\\ntype IsString<T> = T extends string ? 'yes' : 'no';\\n\\ntype A = IsString<string>;  // 'yes'\\ntype B = IsString<number>;  // 'no'\\n```\\n\\n「TがstringならX、そうでなければY」という型を作れます！" },
+    { "title": "infer キーワード", "content": "# 型を推論して取り出す\\n\\n**infer**は、条件型の中で型を推論して取り出すキーワードです。\\n\\n```typescript\\ntype GetReturnType<T> = T extends (...args: any[]) => infer R ? R : never;\\n\\ntype Result = GetReturnType<() => string>;  // string\\n```\\n\\n関数の戻り値の型など、複雑な型から一部を取り出せます！" }
+  ],
   "exercises": [
     {
       "title": "Partial<T>",

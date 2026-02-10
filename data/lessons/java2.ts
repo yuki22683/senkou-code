@@ -5,6 +5,12 @@ export const javaData2 = {
   "lessonDescription": "Javaの基本をマスターしたら、オブジェクト指向プログラミングを深く学びましょう！クラスの継承、インターフェース、例外処理などを身につけます。",
   "lessonDifficulty": "medium",
   "lessonOrder": 2,
+  "tutorialSlides": [
+    { "title": "継承（けいしょう）とは？", "content": "# クラスを拡張する\\n\\n**継承**とは、すでにあるクラス（親クラス）の機能を引き継いで新しいクラス（子クラス）を作る仕組みです。\\n\\n`extends` キーワードを使います。\\n\\n```java\\nclass Animal {\\n    void eat() { System.out.println(\\\"食べる\\\"); }\\n}\\n\\nclass Dog extends Animal {\\n    void bark() { System.out.println(\\\"ワン！\\\"); }\\n}\\n```\\n\\n犬（Dog）は動物（Animal）なので「食べる」こともできます！" },
+    { "title": "オーバーライド", "content": "# メソッドを上書きする\\n\\n**オーバーライド**は、親クラスのメソッドを子クラスで書き換えることです。\\n\\n`@Override` アノテーションを使います。\\n\\n```java\\nclass Cat extends Animal {\\n    @Override\\n    void sound() { System.out.println(\\\"ニャー\\\"); }\\n}\\n```\\n\\n動物ごとに違う動きを定義できます！" },
+    { "title": "インターフェース", "content": "# 契約を定義する\\n\\n**インターフェース**は、クラスが持つべきメソッドの「約束事」を定義します。\\n\\n`implements` で約束を守ります。\\n\\n```java\\ninterface Drawable {\\n    void draw();\\n}\\n\\nclass Square implements Drawable {\\n    public void draw() {\\n        System.out.println(\\\"四角形\\\");\\n    }\\n}\\n```\\n\\n複数のインターフェースを実装できます！" },
+    { "title": "抽象クラス", "content": "# 継承専用のクラス\\n\\n**抽象クラス**は `abstract` キーワードで定義し、直接インスタンス化できません。\\n\\n```java\\nabstract class Shape {\\n    abstract void draw();  // 中身は子クラスで実装\\n}\\n\\nclass Circle extends Shape {\\n    void draw() { System.out.println(\\\"円\\\"); }\\n}\\n```\\n\\n「形」という概念は抽象的で、具体的な形は子クラスで決めます。" }
+  ],
   "exercises": [
     {
       "title": "クラスの継承",

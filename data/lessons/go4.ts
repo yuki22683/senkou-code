@@ -5,6 +5,32 @@ export const go4Data = {
   "lessonDescription": "Go言語の並行処理とネットワークプログラミングを学びます。context、sync、httpなど、実用的なパターンを身につけましょう。",
   "lessonDifficulty": "hard",
   "lessonOrder": 4,
+  "tutorialSlides": [
+    {
+      "title": "sync.Mutex",
+      "content": "複数のゴルーチンから安全にデータにアクセスするには `sync.Mutex` を使います。\\n\\n```go\\nvar mu sync.Mutex\\ncount := 0\\n\\nmu.Lock()   // ロック\\ncount++\\nmu.Unlock() // アンロック\\n```\\n\\nロック中は他のゴルーチンは待ちます。"
+    },
+    {
+      "title": "sync.WaitGroup",
+      "content": "複数のゴルーチンの完了を待つには `sync.WaitGroup` を使います。\\n\\n```go\\nvar wg sync.WaitGroup\\n\\nwg.Add(1) // カウンタを増やす\\ngo func() {\\n    defer wg.Done() // 完了を通知\\n    // 処理...\\n}()\\nwg.Wait() // 全て完了まで待つ\\n```"
+    },
+    {
+      "title": "select文",
+      "content": "`select` で複数のチャネルを待てます。\\n\\n```go\\nselect {\\ncase msg := <-ch1:\\n    fmt.Println(msg)\\ncase msg := <-ch2:\\n    fmt.Println(msg)\\ndefault:\\n    fmt.Println(\\\"データなし\\\")\\n}\\n```\\n\\n最初に準備できたチャネルが選ばれます。"
+    },
+    {
+      "title": "HTTPサーバー",
+      "content": "Goで簡単にWebサーバーを作れます。\\n\\n```go\\nhttp.HandleFunc(\\\"/\\\", func(w http.ResponseWriter, r *http.Request) {\\n    fmt.Fprintf(w, \\\"Hello!\\\")\\n})\\nhttp.ListenAndServe(\\\":8080\\\", nil)\\n```\\n\\n数行でサーバーが完成！"
+    },
+    {
+      "title": "HTTPクライアント",
+      "content": "HTTPリクエストも簡単です。\\n\\n```go\\nresp, err := http.Get(\\\"https://example.com\\\")\\nif err != nil {\\n    log.Fatal(err)\\n}\\ndefer resp.Body.Close()\\nbody, _ := io.ReadAll(resp.Body)\\n```"
+    },
+    {
+      "title": "JSON処理",
+      "content": "JSONの読み書きは `encoding/json` パッケージを使います。\\n\\n```go\\ntype User struct {\\n    Name string `json:\\\"name\\\"`\\n    Age  int    `json:\\\"age\\\"`\\n}\\n\\ndata, _ := json.Marshal(user) // 構造体→JSON\\njson.Unmarshal(data, &user)   // JSON→構造体\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "sync.Mutex",

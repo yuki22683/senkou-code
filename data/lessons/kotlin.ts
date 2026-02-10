@@ -5,6 +5,32 @@ export const kotlinData = {
   "lessonDescription": "Android（アンドロイド）スマホのアプリ作りなどで大人気の言葉「Kotlin（コトリン）」のきほんを学びましょう。新しくて使いやすい機能がたくさんあります。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "Kotlinへようこそ！",
+      "content": "**Kotlin（コトリン）** は、JetBrains社が作ったプログラミング言語です。\\n\\nGoogleがAndroidアプリ開発の公式言語として推奨しています。\\n\\nJavaと互換性があり、より簡潔で安全なコードが書けます。"
+    },
+    {
+      "title": "画面に文字を出す",
+      "content": "Kotlinで画面に文字を出すには `println` 関数を使います。\\n\\n```kotlin\\nprintln(\\\"Hello, World!\\\")\\n```\\n\\nシンプルに1行で出力できます。`main` 関数なしでも動きます。"
+    },
+    {
+      "title": "変数を使う",
+      "content": "データを入れておく「はこ」を**変数**と呼びます。\\n\\n```kotlin\\nval name = \\\"太郎\\\"  // 変更できない\\nvar age = 10       // 変更できる\\nage = 11\\n```\\n\\n`val` は変更できない定数、`var` は変更できる変数です。"
+    },
+    {
+      "title": "計算する",
+      "content": "Kotlinでは数字を計算できます。\\n\\n```kotlin\\nval a = 5\\nval b = 3\\nprintln(a + b)  // 8\\nprintln(10 % 3) // 1（あまり）\\n```\\n\\n`+`（足す）、`-`（引く）、`*`（かける）、`/`（割る）、`%`（あまり）が使えます。"
+    },
+    {
+      "title": "条件分岐 if文",
+      "content": "「もし〜なら」という条件で処理を分けられます。\\n\\n```kotlin\\nval score = 85\\nif (score > 80) {\\n    println(\\\"すごい！\\\")\\n} else {\\n    println(\\\"がんばろう\\\")\\n}\\n```\\n\\n条件が正しければ `{ }` の中が実行されます。"
+    },
+    {
+      "title": "リストとマップ",
+      "content": "複数のデータをまとめて扱えます。\\n\\n**リスト**:\\n```kotlin\\nval colors = listOf(\\\"あか\\\", \\\"あお\\\")\\nprintln(colors[0])\\n```\\n\\n**マップ**（辞書）:\\n```kotlin\\nval scores = mapOf(\\\"Math\\\" to 90)\\nprintln(scores[\\\"Math\\\"])\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",

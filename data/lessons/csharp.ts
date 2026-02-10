@@ -5,6 +5,32 @@ export const csharpData = {
   "lessonDescription": "Microsoftが開発した、多機能で強力な言葉「C#（シーシャープ）」のきほんを学びましょう。Unityを使ったゲーム作りにも欠かせない言葉です。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
+  "tutorialSlides": [
+    {
+      "title": "C#へようこそ！",
+      "content": "**C#（シーシャープ）** は、Microsoft（マイクロソフト）が2000年に作ったプログラミング言語です。\\n\\nUnityでゲームを作ったり、Windowsアプリを作ったりするのに使います。\\n\\nJavaに似ていて、覚えやすい言語です。"
+    },
+    {
+      "title": "画面に文字を出す",
+      "content": "C#で画面に文字を出すには `Console.WriteLine` を使います。\\n\\n```csharp\\nConsole.WriteLine(\\\"Hello, C#!\\\");\\n```\\n\\n`Console` はコンソール（画面）を操作するクラスです。"
+    },
+    {
+      "title": "変数を使う",
+      "content": "C#では型を指定して変数を作ります。\\n\\n```csharp\\nstring name = \\\"太郎\\\";  // 文字列\\nint age = 10;           // 整数\\ndouble price = 99.9;    // 小数\\n```\\n\\n`var` を使うと型を自動で決めてくれます。"
+    },
+    {
+      "title": "計算する",
+      "content": "C#では数字を計算できます。\\n\\n```csharp\\nint a = 5;\\nint b = 3;\\nConsole.WriteLine(a + b);  // 8\\nConsole.WriteLine(10 % 3); // 1（あまり）\\n```\\n\\n`//` から後ろはコメントです。"
+    },
+    {
+      "title": "条件分岐 if文",
+      "content": "「もし〜なら」という条件で処理を分けられます。\\n\\n```csharp\\nint score = 85;\\nif (score > 80)\\n{\\n    Console.WriteLine(\\\"すごい！\\\");\\n}\\nelse\\n{\\n    Console.WriteLine(\\\"がんばろう\\\");\\n}\\n```"
+    },
+    {
+      "title": "配列とDictionary",
+      "content": "複数のデータをまとめて扱えます。\\n\\n**配列**:\\n```csharp\\nstring[] colors = {\\\"赤\\\", \\\"青\\\"};\\nConsole.WriteLine(colors[0]);\\n```\\n\\n**Dictionary**（辞書）:\\n```csharp\\nvar scores = new Dictionary<string, int>();\\nscores[\\\"Math\\\"] = 90;\\n```"
+    }
+  ],
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",
