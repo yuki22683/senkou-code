@@ -19,7 +19,7 @@ export const bash3Data = {
     {
       "title": "パイプでコマンドをつなぐ",
       "correctCode": "# echoの出力をwcコマンドに渡す\\necho \"Hello World\" | wc -w",
-      "holeyCode": "# echoの出力をwcコマンドに渡す\\n___ \"___\" ___ ___ -___",
+      "holeyCode": "# echoの出力をwcコマンドに渡す\\n___ \"___ ___\" ___ ___ ___",
       "correctLines": [
           "# echoの出力をwcコマンドに渡す",
           "echo \"Hello World\" | wc -w"
@@ -32,7 +32,7 @@ export const bash3Data = {
           "operators": [
             "|"
           ],
-          "others": ["echo", "Hello World", "wc", "w"]
+          "others": ["echo", "Hello", "World", "wc", "-w"]
         },
         "testCases": [
           {
@@ -44,7 +44,7 @@ export const bash3Data = {
     {
       "title": "ファイルにリダイレクト",
       "correctCode": "# echoの結果をファイルout.txtに保存\\necho \"テスト\" > /tmp/out.txt && cat /tmp/out.txt",
-      "holeyCode": "# echoの結果をファイルout.txtに保存\\n___ \"___\" ___ /tmp/out.txt ___ ___ /tmp/out.txt",
+      "holeyCode": "# echoの結果をファイルout.txtに保存\\n___ \"___\" ___ ___ ___ ___ ___",
       "correctLines": [
           "# echoの結果をファイルout.txtに保存",
           "echo \"テスト\" > /tmp/out.txt && cat /tmp/out.txt"
@@ -58,7 +58,7 @@ export const bash3Data = {
             ">",
             "&&"
           ],
-          "others": ["echo", "テスト", "cat"]
+          "others": ["echo", "テスト", "/tmp/out.txt", "&&", "cat"]
         },
         "testCases": [
           {
@@ -70,7 +70,7 @@ export const bash3Data = {
     {
       "title": "ファイルから読み込む",
       "correctCode": "# in.txtを作成してから読み込む\\necho \"line1\" > /tmp/in.txt\\nwc -l < /tmp/in.txt",
-      "holeyCode": "# in.txtを作成してから読み込む\\n___ \"___\" ___ /tmp/in.txt\\n___ -___ ___ /tmp/in.___",
+      "holeyCode": "# in.txtを作成してから読み込む\\n___ \"___\" ___ ___\\n___ ___ ___ ___",
       "correctLines": [
           "# in.txtを作成してから読み込む",
           "echo \"line1\" > /tmp/in.txt",
@@ -86,7 +86,7 @@ export const bash3Data = {
             "<",
             ">"
           ],
-          "others": ["echo", "line1", "wc", "l", "txt"]
+          "others": ["echo", "line1", "/tmp/in.txt", "wc", "-l", "<"]
         },
         "testCases": [
           {
@@ -98,7 +98,7 @@ export const bash3Data = {
     {
       "title": "エラー出力をリダイレクト",
       "correctCode": "# エラーをnullに捨てて成否を判定\\nls /nonexistent 2> /dev/null && echo \"ok\" || echo \"エラー\"",
-      "holeyCode": "# エラーをnullに捨てて成否を判定\\n___ /nonexistent ___> /dev/null ___ ___ \"ok\" ___ ___ \"___\"",
+      "holeyCode": "# エラーをnullに捨てて成否を判定\\n___ ___ ___> ___ ___ ___ \"___\" ___ ___ \"___\"",
       "correctLines": [
           "# エラーをnullに捨てて成否を判定",
           "ls /nonexistent 2> /dev/null && echo \"ok\" || echo \"エラー\""
@@ -111,7 +111,7 @@ export const bash3Data = {
           "numbers": [
             "2"
           ],
-          "others": ["ls", "&&", "echo", "||", "エラー"]
+          "others": ["ls", "/nonexistent", "/dev/null", "&&", "echo", "ok", "||", "エラー"]
         },
         "testCases": [
           {
@@ -123,7 +123,7 @@ export const bash3Data = {
     {
       "title": "テストでファイルを確認",
       "correctCode": "# -fでファイルが存在するか確認\\nif [ -f /etc/passwd ]; then\\n    # 「存在します」と表示\\n    echo \"存在します\"\\nfi",
-      "holeyCode": "# -fでファイルが存在するか確認\\n___ [ -___ /etc/passwd ]; ___\\n    # 「存在します」と表示\\n    ___ \"___\"\\n___",
+      "holeyCode": "# -fでファイルが存在するか確認\\nif [ ___ ___ ]; then\\n    # 「存在します」と表示\\n    ___ \"___\"\\nfi",
       "correctLines": [
           "# -fでファイルが存在するか確認",
           "if [ -f /etc/passwd ]; then",
@@ -136,18 +136,13 @@ export const bash3Data = {
           "-fでファイルの存在を確認します。条件が真ならthen以降を実行します。",
           null,
           "条件が真のときに実行される出力処理です。",
-          "if文を終了するキーワードです（ifの逆さ綴り）。"
+          null
         ],
         "candidates": {
           "operators": [
             "-f"
           ],
-          "keywords": [
-            "if",
-            "then",
-            "fi"
-          ],
-          "others": ["echo", "存在します", "f"]
+          "others": ["echo", "存在します", "-f", "/etc/passwd"]
         },
         "testCases": [
           {
@@ -159,7 +154,7 @@ export const bash3Data = {
     {
       "title": "xargs でコマンドに渡す",
       "correctCode": "# 出力を引数に変換してxargsに渡す\\necho \"Hello\" | xargs echo \"Message:\"",
-      "holeyCode": "# 出力を引数に変換してxargsに渡す\\n___ \"___\" ___ ___ ___ \"Message:\"",
+      "holeyCode": "# 出力を引数に変換してxargsに渡す\\n___ \"___\" ___ ___ ___ \"___\"",
       "correctLines": [
           "# 出力を引数に変換してxargsに渡す",
           "echo \"Hello\" | xargs echo \"Message:\""
@@ -172,7 +167,7 @@ export const bash3Data = {
           "commands": [
             "xargs"
           ],
-          "others": ["echo", "Hello", "|"]
+          "others": ["echo", "Hello", "|", "Message:"]
         },
         "testCases": [
           {
@@ -234,7 +229,7 @@ export const bash3Data = {
     {
       "title": "sort で並べ替え",
       "correctCode": "# 複数行出力を並べ替える\\necho -e \"b\\na\\nc\" | sort",
-      "holeyCode": "# 複数行出力を並べ替える\\n___ -e \"b\\n___\\nc\" ___ ___",
+      "holeyCode": "# 複数行出力を並べ替える\\n___ ___ \"___\\n___\\n___\" ___ ___",
       "correctLines": [
           "# 複数行出力を並べ替える",
           "echo -e \"b",
@@ -251,7 +246,7 @@ export const bash3Data = {
           "commands": [
             "sort"
           ],
-          "others": ["echo", "a", "|"]
+          "others": ["echo", "-e", "b", "a", "c", "|"]
         },
         "testCases": [
           {
@@ -263,7 +258,7 @@ export const bash3Data = {
     {
       "title": "uniq で重複を除去",
       "correctCode": "# 重複をuniqで取り除く\\necho -e \"a\\na\\nb\" | uniq",
-      "holeyCode": "# 重複をuniqで取り除く\\n___ -e \"a\\n___\\nb\" ___ ___",
+      "holeyCode": "# 重複をuniqで取り除く\\n___ ___ \"___\\n___\\n___\" ___ ___",
       "correctLines": [
           "# 重複をuniqで取り除く",
           "echo -e \"a",
@@ -280,7 +275,7 @@ export const bash3Data = {
           "commands": [
             "uniq"
           ],
-          "others": ["echo", "a", "|"]
+          "others": ["echo", "-e", "a", "b", "|"]
         },
         "testCases": [
           {

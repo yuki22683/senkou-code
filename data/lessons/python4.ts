@@ -9,7 +9,7 @@ export const pythonData4 = {
     {
       "title": "クラスの継承",
       "correctCode": "# 親クラスVehicleを定義\\nclass Vehicle:\\n    # __init__メソッドを定義\\n    def __init__(self, brand):\\n        # self.brandにbrandを代入\\n        self.brand = brand\\n\\n# Carクラスを定義（Vehicleを継承）\\nclass Car(Vehicle):\\n    # honkメソッドを定義\\n    def honk(self):\\n        # f'{self.brand} car: Beep!'を表示\\n        print(f'{self.brand} car: Beep!')\\n\\n# Car('トヨタ')のインスタンスを作成しcarに代入\\ncar = Car('トヨタ')\\n# honkメソッドを実行\\ncar.honk()",
-      "holeyCode": "# 親クラスVehicleを定義\\nclass ___:\\n    # __init__メソッドを定義\\n    def ___(self, brand):\\n        # self.brandにbrandを代入\\n        self.___ = brand\\n___\\n# Carクラスを定義（Vehicleを継承）\\nclass ___(Vehicle):\\n    # honkメソッドを定義\\n    def ___(self):\\n        # f'{self.brand} car: Beep!'を表示\\n        ___(f'{self.brand} car: Beep!')\\n___\\n# Car('トヨタ')のインスタンスを作成しcarに代入\\ncar = Car('___')\\n# honkメソッドを実行\\ncar.___()",
+      "holeyCode": "# 親クラスVehicleを定義\\nclass ___:\\n    # __init__メソッドを定義\\n    def ___(self, ___):\\n        # self.brandにbrandを代入\\n        self.___ = ___\\n___\\n# Carクラスを定義（Vehicleを継承）\\nclass ___(___):\\n    # honkメソッドを定義\\n    def ___(self):\\n        # f'{self.brand} car: Beep!'を表示\\n        ___(f'{self.___} car: Beep!')\\n___\\n# Car('トヨタ')のインスタンスを作成しcarに代入\\n___ = ___('___')\\n# honkメソッドを実行\\n___.___()",
       "correctLines": [
           "# 親クラスVehicleを定義",
           "class Vehicle:",
@@ -34,21 +34,21 @@ export const pythonData4 = {
           null,
           "乗り物を表すクラス名です。",
           null,
-          "オブジェクト生成時に呼ばれる特殊メソッドです。",
+          "オブジェクト生成時に呼ばれる特殊メソッドで、ブランド名を受け取ります。",
           null,
-          "brandを保存する属性名です。",
+          "インスタンス属性に引数の値を保存します。",
           null,
           null,
-          "Vehicleを継承する子クラス名です。",
+          "親クラスを継承して子クラスを定義します。",
           null,
           "クラクションを鳴らすメソッド名です。",
           null,
-          "画面に出力する関数です。",
+          "インスタンスの属性値を出力します。",
           null,
           null,
-          "Carクラスに渡すブランド名です。",
+          "クラスのインスタンスを作成して変数に代入します。",
           null,
-          "honkメソッドを呼び出します。"
+          "インスタンスのメソッドを呼び出します。"
         ],
         "candidates": {
           "keywords": [
@@ -56,7 +56,7 @@ export const pythonData4 = {
             "Object",
             "Base"
           ],
-          "others": ["__init__", "brand", "Car", "honk", "print", "トヨタ", ""]
+          "others": ["__init__", "brand", "Car", "honk", "print", "トヨタ", "", "car"]
         },
         "testCases": [
           {
@@ -67,8 +67,8 @@ export const pythonData4 = {
       },
     {
       "title": "super()で親を呼ぶ",
-      "correctCode": "# 親クラスPersonを定義\\nclass Person:\\n    # __init__メソッドを定義\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n\\n# Studentクラスを定義（Personを継承）\\nclass Student(Person):\\n    # __init__メソッドを定義（引数: self, name, grade）\\n    def __init__(self, name, grade):\\n        # super().__init__(name)を呼ぶ\\n        super().__init__(name)\\n        # self.gradeにgradeを代入\\n        self.grade = grade\\n\\n# Student('太郎', 3)のインスタンスを作成しsに代入\\ns = Student('太郎', 3)\\n# sの情報を表示\\nprint(f'{s.name} is in grade {s.grade}')",
-      "holeyCode": "# 親クラスPersonを定義\\nclass ___:\\n    # __init__メソッドを定義\\n    def ___(self, name):\\n        # self.nameにnameを代入\\n        self.___ = name\\n___\\n# Studentクラスを定義（Personを継承）\\nclass ___(Person):\\n    # __init__メソッドを定義（引数: self, name, grade）\\n    def ___(self, name, grade):\\n        # super().__init__(name)を呼ぶ\\n        super().__init__(___)\\n        # self.gradeにgradeを代入\\n        self.___ = grade\\n___\\n# Student('太郎', 3)のインスタンスを作成しsに代入\\ns = Student('太郎', ___)\\n# sの情報を表示\\n___(f'{s.name} is in grade {s.grade}')",
+      "correctCode": "# 親クラスPersonを定義\\nclass Person:\\n    # __init__メソッドを定義\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n\\n# Studentクラスを定義（Personを継承）\\nclass Student(Person):\\n    # __init__メソッドを定義（引数: self, name, grade）\\n    def __init__(self, name, grade):\\n        # super().__init__(name)を呼ぶ\\n        super().__init__(name)\\n        # self.gradeにgradeを代入\\n        self.grade = grade\\n\\n# Studentを作成（名前に文字列, 学年に数値）しsに代入\\ns = Student('太郎', 3)\\n# sの情報を表示\\nprint(f'{s.name} is in grade {s.grade}')",
+      "holeyCode": "# 親クラスPersonを定義\\nclass ___:\\n    # __init__メソッドを定義\\n    def ___(self, ___):\\n        # self.nameにnameを代入\\n        self.___ = ___\\n___\\n# Studentクラスを定義（Personを継承）\\nclass ___(___):\\n    # __init__メソッドを定義（引数: self, name, grade）\\n    def ___(self, ___, ___):\\n        # super().__init__(name)を呼ぶ\\n        ___().___(___)\\n        # self.gradeにgradeを代入\\n        self.___ = ___\\n___\\n# Studentを作成（名前に文字列, 学年に数値）しsに代入\\n___ = ___('___', ___)\\n# sの情報を表示\\n___(f'{___.___} is in grade {___.___}')",
       "correctLines": [
           "# 親クラスPersonを定義",
           "class Person:",
@@ -86,40 +86,40 @@ export const pythonData4 = {
           "        # self.gradeにgradeを代入",
           "        self.grade = grade",
           "",
-          "# Student('太郎', 3)のインスタンスを作成しsに代入",
+          "# Studentを作成（名前に文字列, 学年に数値）しsに代入",
           "s = Student('太郎', 3)",
           "# sの情報を表示",
           "print(f'{s.name} is in grade {s.grade}')"
         ],
       "lineHints": [
           null,
-          "super()で親クラスを参照します。",
+          "人を表す親クラス名です。",
           null,
-          "関数（__init__）を新しく定義します。",
+          "オブジェクト生成時に呼ばれる特殊メソッドで、名前を受け取ります。",
           null,
-          "ここを正しく入力してください。",
-          null,
-          null,
-          "新しいクラス（Student）を定義します。",
-          null,
-          "関数（__init__）を新しく定義します。",
-          null,
-          "ここを正しく入力してください。",
-          null,
-          "ここを正しく入力してください。",
+          "インスタンス属性に引数の値を保存します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "親クラスを継承して子クラスを定義します。",
           null,
-          "ここを正しく入力してください。"
+          "オブジェクト生成時に呼ばれる特殊メソッドで、名前と学年を受け取ります。",
+          null,
+          "親クラスの初期化メソッドを呼び出して、名前を渡します。",
+          null,
+          "インスタンス属性に引数の値を保存します。",
+          null,
+          null,
+          "クラスのインスタンスを作成して変数に代入します。",
+          null,
+          "インスタンスの属性値を出力します。"
         ],
         "candidates": {
           "keywords": [
-            "super()",
+            "super",
             "parent",
             "self"
           ],
-          "others": ["Person", "__init__(self, name)", "名前", "Student(Person)", "__init__(self, name, grade)", "grade", "Student('太郎', 3)", "f'{s.name} is in grade {s.grade}'", "__init__", "Student", "3", "print", "", "name"]
+          "others": ["Person", "__init__", "name", "Student", "grade", "3", "print", "", "太郎", "s"]
         },
         "testCases": [
           {
@@ -130,8 +130,8 @@ export const pythonData4 = {
       },
     {
       "title": "@propertyデコレータ",
-      "correctCode": "# Rectangleクラスを定義\\nclass Rectangle:\\n    # __init__メソッドを定義\\n    def __init__(self, width, height):\\n        # 幅を保存\\n        self.width = width\\n        # 高さを保存\\n        self.height = height\\n    \\n    # @propertyデコレータ\\n    @property\\n    # areaメソッドを定義\\n    def area(self):\\n        # 幅と高さの積を計算\\n        return self.width * self.height\\n\\n# Rectangle(4, 5)のインスタンスを作成しrに代入\\nr = Rectangle(4, 5)\\n# r.areaを表示\\nprint(r.area)",
-      "holeyCode": "# Rectangleクラスを定義\\nclass ___:\\n    # __init__メソッドを定義\\n    def ___(self, width, height):\\n        # 幅を保存\\n        self.___ = width\\n        # 高さを保存\\n        self.___ = height\\n    ___\\n    # @propertyデコレータ\\n    @___\\n    # areaメソッドを定義\\n    def ___(self):\\n        # 幅と高さの積を計算\\n        return self.___ * self.___\\n___\\n# Rectangle(4, 5)のインスタンスを作成しrに代入\\nr = Rectangle(___, 5)\\n# r.areaを表示\\n___(r.area)",
+      "correctCode": "# Rectangleクラスを定義\\nclass Rectangle:\\n    # __init__メソッドを定義\\n    def __init__(self, width, height):\\n        # 幅を保存\\n        self.width = width\\n        # 高さを保存\\n        self.height = height\\n    \\n    # @propertyデコレータ\\n    @property\\n    # areaメソッドを定義\\n    def area(self):\\n        # 幅と高さの積を計算\\n        return self.width * self.height\\n\\n# Rectangleを作成（幅に4, 高さに5）しrに代入\\nr = Rectangle(4, 5)\\n# r.areaを表示\\nprint(r.area)",
+      "holeyCode": "# Rectangleクラスを定義\\nclass ___:\\n    # __init__メソッドを定義\\n    def ___(self, ___, ___):\\n        # 幅を保存\\n        self.___ = ___\\n        # 高さを保存\\n        self.___ = ___\\n    ___\\n    # @propertyデコレータ\\n    @___\\n    # areaメソッドを定義\\n    def ___(self):\\n        # 幅と高さの積を計算\\n        return self.___ * self.___\\n___\\n# Rectangleを作成（幅に4, 高さに5）しrに代入\\n___ = ___(___, ___)\\n# r.areaを表示\\n___(___.___)",
       "correctLines": [
           "# Rectangleクラスを定義",
           "class Rectangle:",
@@ -149,32 +149,32 @@ export const pythonData4 = {
           "        # 幅と高さの積を計算",
           "        return self.width * self.height",
           "",
-          "# Rectangle(4, 5)のインスタンスを作成しrに代入",
+          "# Rectangleを作成（幅に4, 高さに5）しrに代入",
           "r = Rectangle(4, 5)",
           "# r.areaを表示",
           "print(r.area)"
         ],
       "lineHints": [
           null,
-          "プロパティデコレータを使います。",
+          "四角形を表すクラス名です。",
           null,
-          "関数（__init__）を新しく定義します。",
+          "オブジェクト生成時に呼ばれる特殊メソッドで、幅と高さを受け取ります。",
           null,
-          "ここを正しく入力してください。",
+          "インスタンス属性に引数の値を保存します。",
           null,
-          "ここを正しく入力してください。",
+          "インスタンス属性に引数の値を保存します。",
           "この行を正しく入力してください。",
           null,
-          "ここを正しく入力してください。",
+          "プロパティデコレータ名です。",
           null,
-          "関数（area）を新しく定義します。",
+          "面積を計算するメソッド名です。",
           null,
-          "ここを正しく入力してください。",
+          "幅と高さを掛けて面積を計算します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "クラスのインスタンスを作成して変数に代入します。",
           null,
-          "ここを正しく入力してください。"
+          "インスタンスのプロパティ値を出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -182,7 +182,7 @@ export const pythonData4 = {
             "@staticmethod",
             "@classmethod"
           ],
-          "others": ["Rectangle", "__init__(self, width, height)", "width", "height", "area(self)", "self.width * self.height", "Rectangle(4, 5)", "r.area", "__init__", "property", "area", "4", "print", "", "property", "height"]
+          "others": ["Rectangle", "__init__", "width", "height", "area", "4", "5", "print", "", "property", "r"]
         },
         "testCases": [
           {
@@ -194,7 +194,7 @@ export const pythonData4 = {
     {
       "title": "@classmethodデコレータ",
       "correctCode": "# Dogクラスを定義\\nclass Dog:\\n    # 生成された数をカウントするクラス変数を定義\\n    count = 0\\n    \\n    # __init__メソッドを定義\\n    def __init__(self, name):\\n        # 名前を保存\\n        self.name = name\\n        # インスタンスが作られるたびにカウントを増やす\\n        Dog.count += 1\\n    \\n    # @classmethodデコレータ\\n    @classmethod\\n    # get_countメソッドを定義\\n    def get_count(cls):\\n        # クラス変数を参照して返す\\n        return cls.count\\n\\n# Dog('ポチ')を作成しd1に代入\\nd1 = Dog('ポチ')\\n# Dog('ハチ')を作成しd2に代入\\nd2 = Dog('ハチ')\\n# Dog.get_count()を表示\\nprint(Dog.get_count())",
-      "holeyCode": "# Dogクラスを定義\\nclass ___:\\n    # 生成された数をカウントするクラス変数を定義\\n    count = ___\\n    ___\\n    # __init__メソッドを定義\\n    def ___(self, name):\\n        # 名前を保存\\n        self.___ = name\\n        # インスタンスが作られるたびにカウントを増やす\\n        Dog.count += ___\\n    ___\\n    # @classmethodデコレータ\\n    @___\\n    # get_countメソッドを定義\\n    def ___(cls):\\n        # クラス変数を参照して返す\\n        return cls.___\\n___\\n# Dog('ポチ')を作成しd1に代入\\nd___ = Dog('ポチ')\\n# Dog('ハチ')を作成しd2に代入\\nd___ = Dog('ハチ')\\n# Dog.get_count()を表示\\n___(Dog.get_count())",
+      "holeyCode": "# Dogクラスを定義\\nclass ___:\\n    # 生成された数をカウントするクラス変数を定義\\n    ___ = ___\\n    ___\\n    # __init__メソッドを定義\\n    def ___(self, ___):\\n        # 名前を保存\\n        self.___ = ___\\n        # インスタンスが作られるたびにカウントを増やす\\n        ___.___ += ___\\n    ___\\n    # @classmethodデコレータ\\n    @___\\n    # get_countメソッドを定義\\n    def ___(___):\\n        # クラス変数を参照して返す\\n        return ___.___\\n___\\n# Dog('ポチ')を作成しd1に代入\\n___ = ___('___')\\n# Dog('ハチ')を作成しd2に代入\\n___ = ___('___')\\n# Dog.get_count()を表示\\n___(___.___())",
       "correctLines": [
           "# Dogクラスを定義",
           "class Dog:",
@@ -224,30 +224,30 @@ export const pythonData4 = {
         ],
       "lineHints": [
           null,
-          "クラスメソッドデコレータを使います。",
+          "犬を表すクラス名です。",
           null,
-          "変数に数値を代入（保存）します。",
+          "インスタンス数を追跡するクラス変数を0で初期化します。",
           "この行を正しく入力してください。",
           null,
-          "関数（__init__）を新しく定義します。",
+          "オブジェクト生成時に呼ばれる特殊メソッドで、名前を受け取ります。",
           null,
-          "ここを正しく入力してください。",
+          "インスタンス属性に引数の値を保存します。",
           null,
-          "ここを正しく入力してください。",
+          "インスタンス生成時にクラス変数をインクリメントします。",
           "この行を正しく入力してください。",
           null,
-          "ここを正しく入力してください。",
+          "クラスメソッドデコレータ名です。",
           null,
-          "関数（get_count）を新しく定義します。",
+          "クラス変数にアクセスするメソッドを定義します。clsはクラス自身を指します。",
           null,
-          "ここを正しく入力してください。",
+          "クラス変数の値を返します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "クラスのインスタンスを作成して変数に代入します。",
           null,
-          "ここを正しく入力してください。",
+          "クラスのインスタンスを作成して変数に代入します。",
           null,
-          "ここを正しく入力してください。"
+          "クラスメソッドを呼び出して結果を出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -255,7 +255,7 @@ export const pythonData4 = {
             "@staticmethod",
             "@property"
           ],
-          "others": ["Dog", "0", "__init__(self, name)", "名前", "Dog.count += 1", "get_count(cls)", "cls.count", "Dog('ポチ')", "Dog('ハチ')", "Dog.get_count(", "__init__", "1", "classmethod", "get_count", "count", "2", "print", "0", "", "1", "classmethod", "count", "name"]
+          "others": ["Dog", "0", "__init__", "name", "count", "1", "classmethod", "get_count", "cls", "d1", "d2", "ポチ", "ハチ", "print", ""]
         },
         "testCases": [
           {
@@ -267,7 +267,7 @@ export const pythonData4 = {
     {
       "title": "@staticmethodデコレータ",
       "correctCode": "# Validatorクラスを定義\\nclass Validator:\\n    # @staticmethodデコレータ\\n    @staticmethod\\n    # is_positiveメソッドを定義\\n    def is_positive(n):\\n        # 0より大きいかどうかを返す\\n        return n > 0\\n\\n# Validator.is_positive(5)の結果を表示\\nprint(Validator.is_positive(5))\\n# Validator.is_positive(-3)の結果を表示\\nprint(Validator.is_positive(-3))",
-      "holeyCode": "# Validatorクラスを定義\\nclass ___:\\n    # @staticmethodデコレータ\\n    @___\\n    # is_positiveメソッドを定義\\n    def ___(n):\\n        # 0より大きいかどうかを返す\\n        return n > ___\\n___\\n# Validator.is_positive(5)の結果を表示\\n___(Validator.is_positive(5))\\n# Validator.is_positive(-3)の結果を表示\\n___(Validator.is_positive(-3))",
+      "holeyCode": "# Validatorクラスを定義\\nclass ___:\\n    # @staticmethodデコレータ\\n    @___\\n    # is_positiveメソッドを定義\\n    def ___(___):\\n        # 0より大きいかどうかを返す\\n        return ___ > ___\\n___\\n# Validator.is_positive(5)の結果を表示\\n___(___.___(___))\\n# Validator.is_positive(-3)の結果を表示\\n___(___.___(___)",
       "correctLines": [
           "# Validatorクラスを定義",
           "class Validator:",
@@ -285,18 +285,18 @@ export const pythonData4 = {
         ],
       "lineHints": [
           null,
-          "静的メソッドデコレータを使います。",
+          "検証用のクラス名です。",
           null,
-          "ここを正しく入力してください。",
+          "静的メソッドデコレータ名です。",
           null,
-          "関数（is_positive）を新しく定義します。",
+          "正の数かどうかを判定するメソッドを定義します。",
           null,
-          "ここを正しく入力してください。",
+          "引数が0より大きいかを比較して結果を返します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "静的メソッドを呼び出して結果を出力します。",
           null,
-          "ここを正しく入力してください。"
+          "静的メソッドを呼び出して結果を出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -304,7 +304,7 @@ export const pythonData4 = {
             "@classmethod",
             "@property"
           ],
-          "others": ["Validator", "is_positive(n)", "n > 0", "Validator.is_positive(5", "Validator.is_positive(-3", "staticmethod", "is_positive", "0", "print", "staticmethod", "0", ""]
+          "others": ["Validator", "staticmethod", "is_positive", "n", "0", "5", "-3", "print", ""]
         },
         "testCases": [
           {
@@ -316,7 +316,7 @@ export const pythonData4 = {
     {
       "title": "抽象基底クラス",
       "correctCode": "# 抽象クラス関連の機能を読み込み\\nfrom abc import ABC, abstractmethod\\n\\n# 抽象クラスAnimalを定義（ABCを継承）\\nclass Animal(ABC):\\n    # @abstractmethodデコレータ\\n    @abstractmethod\\n    # speakメソッドを定義（処理なし）\\n    def speak(self):\\n        # 抽象メソッドなので処理はなし\\n        pass\\n\\n# Catクラスを定義（Animalを継承）\\nclass Cat(Animal):\\n    # speakメソッドを実装\\n    def speak(self):\\n        # 鳴き声を返す\\n        return 'ニャー'\\n\\n# Catのインスタンスを作成しcatに代入\\ncat = Cat()\\n# cat.speak()の結果を表示\\nprint(cat.speak())",
-      "holeyCode": "# 抽象クラス関連の機能を読み込み\\nfrom abc import ABC, ___\\n___\\n# 抽象クラスAnimalを定義（ABCを継承）\\nclass ___(ABC):\\n    # @abstractmethodデコレータ\\n    @___\\n    # speakメソッドを定義（処理なし）\\n    def ___(self):\\n        # 抽象メソッドなので処理はなし\\n        ___\\n___\\n# Catクラスを定義（Animalを継承）\\nclass ___(Animal):\\n    # speakメソッドを実装\\n    def ___(self):\\n        # 鳴き声を返す\\n        return '___'\\n___\\n# Catのインスタンスを作成しcatに代入\\ncat = ___()\\n# cat.speak()の結果を表示\\n___(cat.speak())",
+      "holeyCode": "# 抽象クラス関連の機能を読み込み\\nfrom ___ import ___, ___\\n___\\n# 抽象クラスAnimalを定義（ABCを継承）\\nclass ___(___):\\n    # @abstractmethodデコレータ\\n    @___\\n    # speakメソッドを定義（処理なし）\\n    def ___(self):\\n        # 抽象メソッドなので処理はなし\\n        ___\\n___\\n# Catクラスを定義（Animalを継承）\\nclass ___(___):\\n    # speakメソッドを実装\\n    def ___(self):\\n        # 鳴き声を返す\\n        return '___'\\n___\\n# Catのインスタンスを作成しcatに代入\\n___ = ___()\\n# cat.speak()の結果を表示\\n___(___.___())",
       "correctLines": [
           "# 抽象クラス関連の機能を読み込み",
           "from abc import ABC, abstractmethod",
@@ -344,28 +344,28 @@ export const pythonData4 = {
         ],
       "lineHints": [
           null,
-          "抽象メソッドデコレータを使います。",
+          "抽象基底クラス機能をabcモジュールからインポートします。",
           null,
           null,
-          "新しいクラス（Animal）を定義します。",
+          "ABCを継承して抽象クラスを定義します。",
           null,
-          "ここを正しく入力してください。",
+          "抽象メソッドデコレータ名です。",
           null,
-          "関数（speak）を新しく定義します。",
+          "鳴き声メソッド名です。",
           null,
-          "ここを正しく入力してください。",
-          null,
-          null,
-          "新しいクラス（Cat）を定義します。",
-          null,
-          "関数（speak）を新しく定義します。",
-          null,
-          "ここを正しく入力してください。",
+          "何もしないことを示すキーワードです。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "抽象クラスを継承して具象クラスを定義します。",
           null,
-          "ここを正しく入力してください。"
+          "鳴き声メソッド名です。",
+          null,
+          "猫の鳴き声の文字列を返します。",
+          null,
+          null,
+          "クラスのインスタンスを作成して変数に代入します。",
+          null,
+          "インスタンスのメソッドを呼び出して結果を出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -373,7 +373,7 @@ export const pythonData4 = {
             "@property",
             "@staticmethod"
           ],
-          "others": ["ABC, abstractmethod", "Animal(ABC)", "speak(self)", "pass", "Cat(Animal)", "'ニャー'", "Cat()", "cat.speak(", "abstractmethod", "Animal", "speak", "Cat", "Meow", "print", "ニャー", "abstractmethod", "", "pass"]
+          "others": ["abc", "ABC", "abstractmethod", "Animal", "speak", "pass", "Cat", "ニャー", "cat", "print", ""]
         },
         "testCases": [
           {
@@ -384,8 +384,8 @@ export const pythonData4 = {
       },
     {
       "title": "__str__メソッド",
-      "correctCode": "# Bookクラスを定義\\nclass Book:\\n    # __init__メソッドを定義\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # __str__メソッドを定義\\n    def __str__(self):\\n        # 「タイトル by 著者」の形式で返す\\n        return f'{self.title} by {self.author}'\\n\\n# Book('Pythonガイド', '太郎')を作成しbookに代入\\nbook = Book('Pythonガイド', '太郎')\\n# bookを表示\\nprint(book)",
-      "holeyCode": "# Bookクラスを定義\\nclass ___:\\n    # __init__メソッドを定義\\n    def ___(self, title, author):\\n        # self.titleにtitleを代入\\n        self.___ = title\\n        # self.authorにauthorを代入\\n        self.___ = author\\n    ___\\n    # __str__メソッドを定義\\n    def ___(self):\\n        # 「タイトル by 著者」の形式で返す\\n        return f'{self.title} by {self.___}'\\n___\\n# Book('Pythonガイド', '太郎')を作成しbookに代入\\nbook = Book('Pythonガイド', '___')\\n# bookを表示\\n___(book)",
+      "correctCode": "# Bookクラスを定義\\nclass Book:\\n    # __init__メソッドを定義\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # __str__メソッドを定義\\n    def __str__(self):\\n        # 「タイトル by 著者」の形式で返す\\n        return f'{self.title} by {self.author}'\\n\\n# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入\\nbook = Book('Pythonガイド', '太郎')\\n# bookを表示\\nprint(book)",
+      "holeyCode": "# Bookクラスを定義\\nclass ___:\\n    # __init__メソッドを定義\\n    def ___(self, ___, ___):\\n        # self.titleにtitleを代入\\n        self.___ = ___\\n        # self.authorにauthorを代入\\n        self.___ = ___\\n    ___\\n    # __str__メソッドを定義\\n    def ___(self):\\n        # 「タイトル by 著者」の形式で返す\\n        return f'{self.___} by {self.___}'\\n___\\n# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入\\n___ = ___('___', '___')\\n# bookを表示\\n___(___)",
       "correctLines": [
           "# Bookクラスを定義",
           "class Book:",
@@ -401,30 +401,30 @@ export const pythonData4 = {
           "        # 「タイトル by 著者」の形式で返す",
           "        return f'{self.title} by {self.author}'",
           "",
-          "# Book('Pythonガイド', '太郎')を作成しbookに代入",
+          "# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入",
           "book = Book('Pythonガイド', '太郎')",
           "# bookを表示",
           "print(book)"
         ],
       "lineHints": [
           null,
-          "特殊メソッド__str__を定義します。",
+          "本を表すクラス名です。",
           null,
-          "関数（__init__）を新しく定義します。",
+          "オブジェクト生成時に呼ばれる特殊メソッドで、タイトルと著者を受け取ります。",
           null,
-          "ここを正しく入力してください。",
+          "インスタンス属性に引数の値を保存します。",
           null,
-          "ここを正しく入力してください。",
+          "インスタンス属性に引数の値を保存します。",
           "この行を正しく入力してください。",
           null,
-          "関数（__str__）を新しく定義します。",
+          "文字列表現を返す特殊メソッド名です。",
           null,
-          "ここを正しく入力してください。",
+          "タイトルと著者を組み合わせた文字列を返します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "クラスのインスタンスを作成して変数に代入します。",
           null,
-          "変数の内容を画面に出力します。"
+          "インスタンスを出力します（__str__が呼ばれます）。"
         ],
         "candidates": {
           "keywords": [
@@ -432,7 +432,7 @@ export const pythonData4 = {
             "__repr__",
             "__init__"
           ],
-          "others": ["Book", "__init__(self, title, author)", "title", "author", "f'{self.title} by {self.author}'", "Book('Pythonガイド', '太郎')", "book", "print", "太郎", ""]
+          "others": ["Book", "__init__", "title", "author", "Pythonガイド", "太郎", "book", "print", ""]
         },
         "testCases": [
           {
@@ -443,8 +443,8 @@ export const pythonData4 = {
       },
     {
       "title": "__eq__メソッド",
-      "correctCode": "# Bookクラスを定義\\nclass Book:\\n    # __init__メソッドを定義\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # __eq__メソッドを定義\\n    def __eq__(self, other):\\n        # タイトルと著者が両方一致するかを返す\\n        return self.title == other.title and self.author == other.author\\n\\n# Book('Python入門', '田中')を作成しbook1に代入\\nbook1 = Book('Python入門', '田中')\\n# Book('Python入門', '田中')を作成しbook2に代入\\nbook2 = Book('Python入門', '田中')\\n# book1 == book2の結果を表示\\nprint(book1 == book2)",
-      "holeyCode": "# Bookクラスを定義\\nclass ___:\\n    # __init__メソッドを定義\\n    def ___(self, title, author):\\n        # self.titleにtitleを代入\\n        self.___ = title\\n        # self.authorにauthorを代入\\n        self.___ = author\\n    ___\\n    # __eq__メソッドを定義\\n    def ___(self, other):\\n        # タイトルと著者が両方一致するかを返す\\n        return self.title == other.title and self.___ == other.author\\n___\\n# Book('Python入門', '田中')を作成しbook1に代入\\nbook1 = Book('___', '田中')\\n# Book('Python入門', '田中')を作成しbook2に代入\\nbook2 = Book('___', '田中')\\n# book1 == book2の結果を表示\\n___(book1 == book2)",
+      "correctCode": "# Bookクラスを定義\\nclass Book:\\n    # __init__メソッドを定義\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # __eq__メソッドを定義\\n    def __eq__(self, other):\\n        # タイトルと著者が両方一致するかを返す\\n        return self.title == other.title and self.author == other.author\\n\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook1に代入\\nbook1 = Book('Python入門', '田中')\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook2に代入\\nbook2 = Book('Python入門', '田中')\\n# book1 == book2の結果を表示\\nprint(book1 == book2)",
+      "holeyCode": "# Bookクラスを定義\\nclass ___:\\n    # __init__メソッドを定義\\n    def ___(self, ___, ___):\\n        # self.titleにtitleを代入\\n        self.___ = ___\\n        # self.authorにauthorを代入\\n        self.___ = ___\\n    ___\\n    # __eq__メソッドを定義\\n    def ___(self, ___):\\n        # タイトルと著者が両方一致するかを返す\\n        return self.___ == ___.___ and self.___ == ___.___\\n___\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook1に代入\\n___ = ___('___', '___')\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook2に代入\\n___ = ___('___', '___')\\n# book1 == book2の結果を表示\\n___(___ == ___)",
       "correctLines": [
           "# Bookクラスを定義",
           "class Book:",
@@ -460,9 +460,9 @@ export const pythonData4 = {
           "        # タイトルと著者が両方一致するかを返す",
           "        return self.title == other.title and self.author == other.author",
           "",
-          "# Book('Python入門', '田中')を作成しbook1に代入",
+          "# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook1に代入",
           "book1 = Book('Python入門', '田中')",
-          "# Book('Python入門', '田中')を作成しbook2に代入",
+          "# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook2に代入",
           "book2 = Book('Python入門', '田中')",
           "# book1 == book2の結果を表示",
           "print(book1 == book2)"
@@ -471,23 +471,23 @@ export const pythonData4 = {
           null,
           "本を表すクラス名です。",
           null,
-          "オブジェクト生成時に呼ばれる特殊メソッドです。",
+          "オブジェクト生成時に呼ばれる特殊メソッドで、タイトルと著者を受け取ります。",
           null,
-          "titleを保存する属性名です。",
+          "インスタンス属性に引数の値を保存します。",
           null,
-          "authorを保存する属性名です。",
+          "インスタンス属性に引数の値を保存します。",
           "この行を正しく入力してください。",
           null,
-          "==で比較されたとき呼ばれる特殊メソッドです。",
+          "==演算子で比較されたときに呼ばれる特殊メソッドを定義します。",
           null,
-          "比較相手のタイトルはother.titleで取得します。",
+          "両方の属性が一致するかを論理積で判定します。",
           null,
           null,
-          "Bookクラスのコンストラクタを呼び出します。",
+          "クラスのインスタンスを作成して変数に代入します。",
           null,
-          "同じ引数でBookを作成します。",
+          "クラスのインスタンスを作成して変数に代入します。",
           null,
-          "比較結果を出力する関数です。"
+          "2つのインスタンスを==で比較して結果を出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -495,7 +495,7 @@ export const pythonData4 = {
             "__ne__",
             "__init__"
           ],
-          "others": ["Book", "title", "author", "Book(\"Python入門 \"田中\")", "print", "Python Basics", "Python入門", ""]
+          "others": ["Book", "__init__", "title", "author", "__eq__", "other", "Python入門", "田中", "book1", "book2", "print", ""]
         },
         "testCases": [
           {
@@ -507,7 +507,7 @@ export const pythonData4 = {
     {
       "title": "__len__メソッド",
       "correctCode": "# Teamクラスを定義\\nclass Team:\\n    # __init__メソッド（引数: self, members）\\n    def __init__(self, members):\\n        # self.membersにmembersを代入\\n        self.members = members\\n    \\n    # __len__メソッド（引数: selfのみ）\\n    def __len__(self):\\n        # len(self.members)を返す\\n        return len(self.members)\\n\\n# Team(...)を作成しteamに代入\\nteam = Team(['アリス', 'ボブ', 'チャーリー'])\\n# len(team)を表示\\nprint(len(team))",
-      "holeyCode": "# Teamクラスを定義\\nclass ___:\\n    # __init__メソッド（引数: self, members）\\n    def ___(self, members):\\n        # self.membersにmembersを代入\\n        self.___ = members\\n    ___\\n    # __len__メソッド（引数: selfのみ）\\n    def ___(self):\\n        # len(self.members)を返す\\n        return len(self.___)\\n___\\n# Team(...)を作成しteamに代入\\nteam = Team(['アリス', 'ボブ', '___'])\\n# len(team)を表示\\n___(len(team))",
+      "holeyCode": "# Teamクラスを定義\\nclass ___:\\n    # __init__メソッド（引数: self, members）\\n    def ___(self, ___):\\n        # self.membersにmembersを代入\\n        self.___ = ___\\n    ___\\n    # __len__メソッド（引数: selfのみ）\\n    def ___(self):\\n        # len(self.members)を返す\\n        return ___(self.___)\\n___\\n# Team(...)を作成しteamに代入\\n___ = ___(['___', '___', '___'])\\n# len(team)を表示\\n___(___(___)",
       "correctLines": [
           "# Teamクラスを定義",
           "class Team:",
@@ -528,21 +528,21 @@ export const pythonData4 = {
         ],
       "lineHints": [
           null,
-          "長さを返す特殊メソッドを定義します。",
+          "チームを表すクラス名です。",
           null,
-          "関数（__init__）を新しく定義します。",
+          "オブジェクト生成時に呼ばれる特殊メソッドで、メンバーリストを受け取ります。",
           null,
-          "ここを正しく入力してください。",
+          "インスタンス属性に引数の値を保存します。",
           "この行を正しく入力してください。",
           null,
-          "関数（__len__）を新しく定義します。",
+          "長さを返す特殊メソッド名です。",
           null,
-          "ここを正しく入力してください。",
+          "メンバーリストの長さを返します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "メンバーリストを渡してインスタンスを作成します。",
           null,
-          "ここを正しく入力してください。"
+          "len()でインスタンスの長さを取得して出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -550,7 +550,7 @@ export const pythonData4 = {
             "__size__",
             "__count__"
           ],
-          "others": ["Team", "__init__(self, members)", "members", "len(self.members)", "Team(['アリス', 'ボブ', 'チャーリー'])", "len(team", "__init__", "チャーリー", "print", ","]
+          "others": ["Team", "__init__", "members", "len", "team", "アリス", "ボブ", "チャーリー", "print", ""]
         },
         "testCases": [
           {
@@ -561,8 +561,8 @@ export const pythonData4 = {
       },
     {
       "title": "dataclassデコレータ",
-      "correctCode": "# dataclassデコレータをインポート\\nfrom dataclasses import dataclass\\n\\n# @dataclassデコレータ\\n@dataclass\\n# Personクラスを定義\\nclass Person:\\n    # 名前の型を文字列で指定\\n    name: str\\n    # 年齢の型を整数で指定\\n    age: int\\n\\n# Person('太郎', 25)を作成しpに代入\\np = Person('太郎', 25)\\n# pを表示\\nprint(p)",
-      "holeyCode": "# dataclassデコレータをインポート\\nfrom dataclasses import ___\\n___\\n# @dataclassデコレータ\\n@___\\n# Personクラスを定義\\nclass ___:\\n    # 名前の型を文字列で指定\\n    name: ___\\n    # 年齢の型を整数で指定\\n    age: ___\\n___\\n# Person('太郎', 25)を作成しpに代入\\np = Person('太郎', ___)\\n# pを表示\\n___(p)",
+      "correctCode": "# dataclassデコレータをインポート\\nfrom dataclasses import dataclass\\n\\n# @dataclassデコレータ\\n@dataclass\\n# Personクラスを定義\\nclass Person:\\n    # 名前の型を文字列で指定\\n    name: str\\n    # 年齢の型を整数で指定\\n    age: int\\n\\n# Personを作成（名前に文字列, 年齢に数値）しpに代入\\np = Person('太郎', 25)\\n# pを表示\\nprint(p)",
+      "holeyCode": "# dataclassデコレータをインポート\\nfrom ___ import ___\\n___\\n# @dataclassデコレータ\\n@___\\n# Personクラスを定義\\nclass ___:\\n    # 名前の型を文字列で指定\\n    ___: ___\\n    # 年齢の型を整数で指定\\n    ___: ___\\n___\\n# Personを作成（名前に文字列, 年齢に数値）しpに代入\\n___ = ___('___', ___)\\n# pを表示\\n___(___)",
       "correctLines": [
           "# dataclassデコレータをインポート",
           "from dataclasses import dataclass",
@@ -576,28 +576,28 @@ export const pythonData4 = {
           "    # 年齢の型を整数で指定",
           "    age: int",
           "",
-          "# Person('太郎', 25)を作成しpに代入",
+          "# Personを作成（名前に文字列, 年齢に数値）しpに代入",
           "p = Person('太郎', 25)",
           "# pを表示",
           "print(p)"
         ],
       "lineHints": [
           null,
-          "dataclassデコレータを使います。",
+          "dataclassデコレータをインポートします。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "データクラスデコレータ名です。",
           null,
-          "新しいクラス（Person）を定義します。",
+          "人を表すクラス名です。",
           null,
-          "ここを正しく入力してください。",
+          "名前属性の型アノテーションを定義します。",
           null,
-          "ここを正しく入力してください。",
+          "年齢属性の型アノテーションを定義します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "クラスのインスタンスを作成して変数に代入します。",
           null,
-          "変数の内容を画面に出力します。"
+          "インスタンスを出力します（自動生成された__repr__が呼ばれます）。"
         ],
         "candidates": {
           "keywords": [
@@ -605,7 +605,7 @@ export const pythonData4 = {
             "@property",
             "@classmethod"
           ],
-          "others": ["dataclass", "Person", "str", "int", "Person('太郎', 25)", "p", "25", "print", "dataclass", "", "str", "int"]
+          "others": ["dataclasses", "dataclass", "Person", "name", "str", "age", "int", "p", "太郎", "25", "print", ""]
         },
         "testCases": [
           {

@@ -9,7 +9,7 @@ export const goData = {
     {
       "title": "画面にメッセージを出しましょう",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // こんにちは, Go! と表示する\\n    fmt.Println(\"こんにちは, Go!\")\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // こんにちは, Go! と表示する\\n    fmt.___(\"こんにちは, Go!\")\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // こんにちは, Go! と表示する\\n    ___.___(\\\"___\\\")\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -23,14 +23,14 @@ export const goData = {
           "フォーマットパッケージをインポートします。",
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "fmt.Printlnで文字列を出力します。",
-          "ここを正しく入力してください。"
+          "fmtパッケージのPrintln関数で「こんにちは, Go!」と出力します。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "strings": [
-            "Hello, Go!"
+            "こんにちは, Go!"
           ],
-          "others": ["main", "fmt", "main()", "Println", "}", "mt\"", "import", "main"]
+          "others": ["main", "fmt", "main()", "Println", "}", "import"]
         },
         "testCases": [
           {
@@ -42,7 +42,7 @@ export const goData = {
     {
       "title": "便利な「はこ」",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // x に 10 を代入する\\n    x := 10\\n    // x を表示する\\n    fmt.Println(x)\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // x に 10 を代入する\\n    ___ := 10\\n    // x を表示する\\n    fmt.___(x)\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // x に 10 を代入する\\n    ___ := ___\\n    // x を表示する\\n    ___.___(___) \\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -55,13 +55,13 @@ export const goData = {
         ],
       "lineHints": [
           "このファイルが属するパッケージ（main）を宣言します。",
-          "ここを正しく入力してください。",
+          "fmtパッケージをインポートします。",
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "変数を宣言し、同時に数値を代入します（型推論を使用）。",
+          "変数xに10を代入します。",
           null,
-          "はこの名前 x を指定して、表示させます。",
-          "ここを正しく入力してください。"
+          "fmt.Printlnで変数xの値を出力します。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "variables": [
@@ -70,7 +70,7 @@ export const goData = {
           "numbers": [
             "10"
           ],
-          "others": ["main", "fmt", "main()", "Println", "}", "mt\"", "import", "main"]
+          "others": ["main", "fmt", "main()", "Println", "}", "import"]
         },
         "testCases": [
           {
@@ -82,7 +82,7 @@ export const goData = {
     {
       "title": "コンピュータで計算しましょう",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // はこに数字を入れる\\n    a := 4\\n    b := 3\\n    // * でかけ算する\\n    fmt.Println(a * b)\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // はこに数字を入れる\\n    ___ := 4\\n    ___ := 3\\n    // * でかけ算する\\n    fmt.___(a * b)\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // はこに数字を入れる\\n    ___ := ___\\n    ___ := ___\\n    // * でかけ算する\\n    ___.___(___  ___ ___)\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -96,20 +96,20 @@ export const goData = {
         ],
       "lineHints": [
           "このファイルが属するパッケージ（main）を宣言します。",
-          "ここを正しく入力してください。",
+          "fmtパッケージをインポートします。",
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "変数を宣言し、同時に数値を代入します（型推論を使用）。",
-          "変数を宣言し、同時に数値を代入します（型推論を使用）。",
+          "変数aに4を代入します。",
+          "変数bに3を代入します。",
           null,
-          "かけ算なので `*` を使います。",
-          "ここを正しく入力してください。"
+          "fmt.Printlnでa * bの結果を出力します。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "operators": [
             "*"
           ],
-          "others": ["main", "fmt", "main()", "a", "b", "Println", "}", "mt\"", "import", "main"]
+          "others": ["main", "fmt", "main()", "a", "b", "Println", "}", "import", "4", "3"]
         },
         "testCases": [
           {
@@ -121,7 +121,7 @@ export const goData = {
     {
       "title": "剰余演算子（%）",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // 10 を 3 で割ったあまりを出力する\\n    fmt.Println(10 % 3)\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // 10 を 3 で割ったあまりを出力する\\n    fmt.___(10 % 3)\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // 10 を 3 で割ったあまりを出力する\\n    ___.___(___  ___ ___)\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -132,11 +132,11 @@ export const goData = {
         ],
       "lineHints": [
           "このファイルが属するパッケージ（main）を宣言します。",
-          "ここを正しく入力してください。",
+          "fmtパッケージをインポートします。",
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "あまりを求める `%` 演算子を使います。",
-          "ここを正しく入力してください。"
+          "fmt.Printlnで10 % 3（あまり）を出力します。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "operators": [
@@ -145,7 +145,7 @@ export const goData = {
             "*",
             "-"
           ],
-          "others": ["main", "fmt", "main()", "Println", "}", "mt\"", "import", "main"]
+          "others": ["main", "fmt", "main()", "Println", "}", "import", "10", "3"]
         },
         "testCases": [
           {
@@ -157,7 +157,7 @@ export const goData = {
     {
       "title": "累算代入演算子（+=、-=）",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    hp := 100\\n    // += で 20 を足す\\n    hp += 20\\n    // -= で 50 を引く\\n    hp -= 50\\n    fmt.Println(hp)\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    ___ := 100\\n    // += で 20 を足す\\n    hp += ___\\n    // -= で 50 を引く\\n    hp -= ___\\n    fmt.___(hp)\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    ___ := ___\\n    // += で 20 を足す\\n    ___ += ___\\n    // -= で 50 を引く\\n    ___ -= ___\\n    ___.___(___) \\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -176,11 +176,11 @@ export const goData = {
           "main関数を定義します。",
           "hpに100を代入します。",
           null,
-          "hpに20を加算します。",
+          "hp += 20でhpに20を加算します。",
           null,
-          "hpから50を減算します。",
-          "Printlnで出力します。",
-          "ここを正しく入力してください。"
+          "hp -= 50でhpから50を減算します。",
+          "fmt.Printlnでhpの値を出力します。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "operators": [
@@ -189,7 +189,7 @@ export const goData = {
             "*=",
             "/="
           ],
-          "others": ["main", "fmt", "main()", "hp", "20", "50", "Println", "}", "mt\"", "import", "main", "20", "50"]
+          "others": ["main", "fmt", "main()", "hp", "20", "50", "Println", "}", "import", "100"]
         },
         "testCases": [
           {
@@ -201,7 +201,7 @@ export const goData = {
     {
       "title": "文章の中に「はこ」を入れましょう",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // ageに10を入れる\\n    age := 10\\n    // age を埋め込む\\n    fmt.Printf(\"I am %d years old.\\n\", age)\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // ageに10を入れる\\n    ___ := 10\\n    // age を埋め込む\\n    fmt.___(\"I am %d years old.\\n___\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // ageに10を入れる\\n    ___ := ___\\n    // age を埋め込む\\n    ___.___(___ ___\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -209,26 +209,24 @@ export const goData = {
           "    // ageに10を入れる",
           "    age := 10",
           "    // age を埋め込む",
-          "    fmt.Printf(\"I am %d years old.",
-          "\", age)",
+          "    fmt.Printf(\"I am %d years old.\\n\", age)",
           "}"
         ],
       "lineHints": [
           "このファイルが属するパッケージ（main）を宣言します。",
-          "フォーマットパッケージをインポートします。",
+          "fmtパッケージをインポートします。",
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
           "変数ageに10を代入します。",
           null,
-          "fmt.Printfで文字列を埋め込んで出力します。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。"
+          "fmt.Printfでフォーマット文字列と変数ageを渡します。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "variables": [
             "age"
           ],
-          "others": ["main", "fmt", "main()", "Printf", "}", "mt\"", "import", " age)", "main", " age)", " age)", "\", age)"]
+          "others": ["main", "fmt", "main()", "Printf", "}", "import", "10", "\"I am %d years old.\\n\", age)", "\"I", "am %d years old.\\n\", age)"]
         },
         "testCases": [
           {
@@ -240,7 +238,7 @@ export const goData = {
     {
       "title": "データをならべる「スライス」",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    nums := []int{10, 20}\\n    // インデックス 1 で2番目を取得\\n    fmt.Println(nums[1])\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    ___ := []int{10, 20}\\n    // インデックス 1 で2番目を取得\\n    fmt.___(nums[1])\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    ___ := []___  {___, ___}\\n    // インデックス 1 で2番目を取得\\n    ___.___(___[___])\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -252,18 +250,18 @@ export const goData = {
         ],
       "lineHints": [
           "このファイルが属するパッケージ（main）を宣言します。",
-          "ここを正しく入力してください。",
+          "fmtパッケージをインポートします。",
           "プログラムの実行開始地点（main関数）を定義します。",
-          "スライスに複数の値を格納します。",
+          "numsにint型スライス{10, 20}を代入します。",
           null,
-          "2番目のデータはインデックス1です。 `nums[1]` と入力してください。",
-          "ここを正しく入力してください。"
+          "fmt.Printlnでnums[1]（2番目の要素）を出力します。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "numbers": [
-            "1"
+            "1", "10", "20"
           ],
-          "others": ["main", "fmt", "main()", "nums", "Println", "}", "mt\"", "import", "main"]
+          "others": ["main", "fmt", "main()", "nums", "Println", "}", "import", "int", "int{10,"]
         },
         "testCases": [
           {
@@ -275,7 +273,7 @@ export const goData = {
     {
       "title": "「もし〜なら」で分けましょう",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // scoreに100を入れる\\n    score := 100\\n    // > で比較する\\n    if score > 80 {\\n        // Great と表示する\\n        fmt.Println(\"すごい\")\\n    }\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // scoreに100を入れる\\n    ___ := 100\\n    // > で比較する\\n    if score ___ 80 {\\n        // Great と表示する\\n        fmt.___(\"すごい\")\\n    ___\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // scoreに100を入れる\\n    ___ := ___\\n    // > で比較する\\n    if ___ ___ ___ {\\n        // Great と表示する\\n        ___.___(\\\"___\\\")\\n    ___\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -296,11 +294,11 @@ export const goData = {
           null,
           "scoreに100を代入します。",
           null,
-          "scoreが80より大きいかを判定します。",
+          "if score > 80 で scoreが80より大きいかを判定します。",
           null,
-          "Printlnで出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "fmt.Printlnで「すごい」と出力します。",
+          "ブロックの終わりを示す閉じ括弧です。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "operators": [
@@ -309,7 +307,7 @@ export const goData = {
           "strings": [
             "すごい"
           ],
-          "others": ["100", "すごい\")", "main", "fmt", "main()", "score", "Println", "}", "mt\"", "import", "main", "}"]
+          "others": ["100", "main", "fmt", "main()", "score", "Println", "}", "import", "80"]
         },
         "testCases": [
           {
@@ -321,7 +319,7 @@ export const goData = {
     {
       "title": "ちがう場合はどうしましょう？",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // xに5を入れる\\n    x := 5\\n    // 10より大きいかを比較する演算子\\n    if x > 10 {\\n        // 10より大きいときのメッセージ（'大きい'）\\n        fmt.Println(\"大きい\")\\n    // elseで10以下の場合の処理\\n    } else {\\n        // それ以外のメッセージ（'小さい'）\\n        fmt.Println(\"小さい\")\\n    }\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // xに5を入れる\\n    ___ := 5\\n    // 10より大きいかを比較する演算子\\n    if x ___ 10 {\\n        // 10より大きいときのメッセージ（'大きい'）\\n        fmt.___(\"大きい\")\\n    // elseで10以下の場合の処理\\n    } ___ {\\n        // それ以外のメッセージ（'小さい'）\\n        fmt.___(\"小さい\")\\n    ___\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // xに5を入れる\\n    ___ := ___\\n    // 10より大きいかを比較する演算子\\n    if ___ ___ ___ {\\n        // 10より大きいときのメッセージ（'大きい'）\\n        ___.___(\\\"___\\\")\\n    // elseで10以下の場合の処理\\n    } ___ {\\n        // それ以外のメッセージ（'小さい'）\\n        ___.___(\\\"___\\\")\\n    ___\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -346,21 +344,21 @@ export const goData = {
           null,
           "xに5を代入します。",
           null,
-          "xが10より大きいかを判定します。",
+          "if x > 10 でxが10より大きいかを判定します。",
           null,
-          "Printlnで出力します。",
+          "fmt.Printlnで「大きい」と出力します。",
           null,
           "elseで条件不成立時の処理を記述します。",
           null,
-          "Printlnで出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "fmt.Printlnで「小さい」と出力します。",
+          "ブロックの終わりを示す閉じ括弧です。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "keywords": [
             "else"
           ],
-          "others": ["5", ">", "大きい", "小さい", "main", "fmt", "main()", "x", "Println", "}", "{", "mt\"", "main", "import", "}"]
+          "others": ["5", ">", "大きい", "小さい", "main", "fmt", "main()", "x", "Println", "}", "import", "10"]
         },
         "testCases": [
           {
@@ -372,7 +370,7 @@ export const goData = {
     {
       "title": "論理演算子（&&、||）",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    score := 80\\n    bonus := 10\\n    // && で両方の条件をチェック\\n    if score >= 70 && bonus > 0 {\\n        fmt.Println(\"ボーナス合格！\")\\n    }\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    ___ := 80\\n    ___ := 10\\n    // && で両方の条件をチェック\\n    if score ___ 70 && bonus > 0 {\\n        fmt.___(\"ボーナス合格！\")\\n    ___\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    ___ := ___\\n    ___ := ___\\n    // && で両方の条件をチェック\\n    if ___ ___ ___ && ___ ___ ___ {\\n        ___.___(\\\"___\\\")\\n    ___\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -392,19 +390,21 @@ export const goData = {
           "scoreに80を代入します。",
           "bonusに10を代入します。",
           null,
-          "scoreが70以上かつbonusが0より大きいかを判定します。",
-          "Printlnで出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "score >= 70 && bonus > 0 で両方の条件をチェックします。",
+          "fmt.Printlnで「ボーナス合格！」と出力します。",
+          "ブロックの終わりを示す閉じ括弧です。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "operators": [
             "&&",
             "||",
             "&",
-            "|"
+            "|",
+            ">=",
+            ">"
           ],
-          "others": ["main", "fmt", "main()", "score", "bonus", ">=", "Println", "}", "mt\"", "import", "main", "}"]
+          "others": ["main", "fmt", "main()", "score", "bonus", "Println", "}", "import", "80", "10", "70", "0", "ボーナス合格！"]
         },
         "testCases": [
           {
@@ -416,7 +416,7 @@ export const goData = {
     {
       "title": "中身を全部出してみましょう",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    nums := []int{1, 2, 3}\\n    // range で全要素をループ\\n    for _, n := range nums {\\n        fmt.Println(n)\\n    }\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    ___ := []int{1, 2, 3}\\n    // range で全要素をループ\\n    for _, n := range ___ {\\n        fmt.___(n)\\n    ___\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    ___ := []___  {___, ___, ___}\\n    // range で全要素をループ\\n    for ___, ___ := ___ ___ {\\n        ___.___(___) \\n    ___\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -430,20 +430,20 @@ export const goData = {
         ],
       "lineHints": [
           "このファイルが属するパッケージ（main）を宣言します。",
-          "ここを正しく入力してください。",
+          "fmtパッケージをインポートします。",
           "プログラムの実行開始地点（main関数）を定義します。",
-          "スライスに複数の値を格納します。",
+          "numsにint型スライス{1, 2, 3}を代入します。",
           null,
-          "配列やスライスを反復処理するキーワードです。",
-          "変数の値を標準出力に出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "for _, n := range nums で全要素をループします。",
+          "fmt.Printlnで変数nの値を出力します。",
+          "ブロックの終わりを示す閉じ括弧です。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "keywords": [
             "range"
           ],
-          "others": ["main", "fmt", "main()", "nums", "Println", "}", "mt\"", "import", "main", "}", "}", "}\\"]
+          "others": ["main", "fmt", "main()", "nums", "Println", "}", "import", "int", "1", "2", "3", "_", "n", "int{1,", "3}"]
         },
         "testCases": [
           {
@@ -455,7 +455,7 @@ export const goData = {
     {
       "title": "名前で探しましょう「じしょ」",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // string をキーの型に指定\\n    scores := map[string]int{\"Math\": 90}\\n    // 'Math' をキーに指定\\n    fmt.Println(scores[\"Math\"])\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // string をキーの型に指定\\n    ___ := map[string]int{\"Math\": 90}\\n    // 'Math' をキーに指定\\n    fmt.___(scores[\"Math\"])\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // string をキーの型に指定\\n    ___ := ___[___]___  {\\\"___\\\": ___}\\n    // 'Math' をキーに指定\\n    ___.___(___[\\\"___\\\"])\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -468,20 +468,20 @@ export const goData = {
         ],
       "lineHints": [
           "このファイルが属するパッケージ（main）を宣言します。",
-          "ここを正しく入力してください。",
+          "fmtパッケージをインポートします。",
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "名前（キー）の種類として `string` と入力しましょう。",
+          "scoresにmap[string]int{\"Math\": 90}を代入します。",
           null,
-          " という名前を指定してデータを取り出します。",
-          "ここを正しく入力してください。"
+          "fmt.Printlnでscores[\"Math\"]の値を出力します。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "strings": [
             "string",
             "Math"
           ],
-          "others": ["main", "fmt", "main()", "scores", "Println", "}", "mt\"", "import", "main"]
+          "others": ["main", "fmt", "main()", "scores", "Println", "}", "import", "map", "int", "90", "int{\"Math\":"]
         },
         "testCases": [
           {
@@ -493,7 +493,7 @@ export const goData = {
     {
       "title": "自分だけの関数を作りましょう",
       "correctCode": "package main\\nimport \"fmt\"\\nfunc greet() {\\n    fmt.Println(\"こんにちは\")\\n}\\nfunc main() {\\n    // greet 関数を呼び出す\\n    greet()\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    fmt.___(\"こんにちは\")\\n___\\nfunc ___ () {\\n    // greet 関数を呼び出す\\n    ___()\\n___",
+      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    ___.___(\\\"___\\\")\\n___\\nfunc ___ () {\\n    // greet 関数を呼び出す\\n    ___()\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -507,20 +507,20 @@ export const goData = {
         ],
       "lineHints": [
           "このファイルが属するパッケージ（main）を宣言します。",
-          "ここを正しく入力してください。",
-          "void型の値を返す関数（greet）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "fmtパッケージをインポートします。",
+          "greet関数を定義します。",
+          "fmt.Printlnで「こんにちは」と出力します。",
+          "関数の終わりを示す閉じ括弧です。",
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "関数（greet）を呼び出して実行します。",
-          "ここを正しく入力してください。"
+          "greet関数を呼び出して実行します。",
+          "関数の終わりを示す閉じ括弧です。"
         ],
         "candidates": {
           "functions": [
             "greet"
           ],
-          "others": ["main", "fmt", "greet()", "Println", "}", "main()", "mt\"", "import", "main", "}"]
+          "others": ["main", "fmt", "greet()", "Println", "}", "main()", "import", "こんにちは"]
         },
         "testCases": [
           {

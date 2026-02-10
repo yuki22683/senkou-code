@@ -9,7 +9,7 @@ export const csharpData = {
     {
       "title": "画面にメッセージを出しましょう",
       "correctCode": "using System;\\n\\nclass Program {\\n    static void Main() {\\n        // 画面にメッセージを出す関数\\n        Console.WriteLine(\"Hello, C#!\");\\n    }\\n}",
-      "holeyCode": "using ___;\\n___\\nclass ___ {\\n    static void ___() {\\n        // 画面にメッセージを出す関数\\n        Console.___(\"Hello, C#!\");\\n    ___\\n___",
+      "holeyCode": "using ___;\\n___\\nclass ___ {\\n    static void ___() {\\n        // 画面にメッセージを出す関数\\n        ___.___(\"___\");\\n    ___\\n___",
       "correctLines": [
           "using System;",
           "",
@@ -21,14 +21,14 @@ export const csharpData = {
           "}"
         ],
       "lineHints": [
-          "文字列をコンソールに出力し、改行します。",
+          "System名前空間を読み込みます。",
           null,
-          "新しいクラス（Program）を定義します。",
-          "ここを正しく入力してください。",
+          "Programという名前のクラスを定義します。",
+          "Mainメソッドを定義します（プログラムのエントリーポイント）。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "ConsoleクラスのWriteLineメソッドで文字列を出力します。",
+          "ブロックを閉じます。",
+          "クラスのブロックを閉じます。"
         ],
         "candidates": {
           "functions": [
@@ -37,7 +37,7 @@ export const csharpData = {
           "strings": [
             "Hello, C#!"
           ],
-          "others": ["System", "Program", "Main", "WriteLine", "}", "", "}"]
+          "others": ["System", "Program", "Main", "WriteLine", "}", "Console", "Hello, C#!"]
         },
         "testCases": [
           {
@@ -49,7 +49,7 @@ export const csharpData = {
     {
       "title": "便利な「はこ」変数（へんすう）",
       "correctCode": "// nameというはこに \"CSharp\" を入れる\\nstring name = \"CSharp\";\\n// はこの中身を画面に出す\\nConsole.WriteLine(name);",
-      "holeyCode": "// nameというはこに \"CSharp\" を入れる\\nstring name = \"___\";\\n// はこの中身を画面に出す\\nConsole.WriteLine(___);",
+      "holeyCode": "// nameというはこに \"CSharp\" を入れる\\n___ ___ = \"___\";\\n// はこの中身を画面に出す\\n___.___(___);",
       "correctLines": [
           "// nameというはこに \"CSharp\" を入れる",
           "string name = \"CSharp\";",
@@ -58,9 +58,9 @@ export const csharpData = {
         ],
       "lineHints": [
           null,
-          "文字列型の変数を宣言し、文字列データを代入します。",
+          "string型の変数nameに文字列\"CSharp\"を代入します。",
           null,
-          "ConsoleクラスのWriteLineメソッドで変数の内容を出力します。"
+          "ConsoleクラスのWriteLineメソッドで変数nameの内容を出力します。"
         ],
         "candidates": {
           "types": [
@@ -72,7 +72,8 @@ export const csharpData = {
           ],
           "strings": [
             "CSharp"
-          ]
+          ],
+          "others": ["Console", "WriteLine"]
         },
         "testCases": [
           {
@@ -84,7 +85,7 @@ export const csharpData = {
     {
       "title": "コンピュータで計算しましょう",
       "correctCode": "// xというはこに 10 を入れる\\nint x = 10;\\n// yというはこに 5 を入れる\\nint y = 5;\\n// x と y をたした答えを出す\\nConsole.WriteLine(x + y);",
-      "holeyCode": "// xというはこに 10 を入れる\\nint x = ___;\\n// yというはこに 5 を入れる\\nint y = ___;\\n// x と y をたした答えを出す\\nConsole.___(x + y);",
+      "holeyCode": "// xというはこに 10 を入れる\\n___ ___ = ___;\\n// yというはこに 5 を入れる\\n___ ___ = ___;\\n// x と y をたした答えを出す\\n___.___(__ ___ ___);",
       "correctLines": [
           "// xというはこに 10 を入れる",
           "int x = 10;",
@@ -95,11 +96,11 @@ export const csharpData = {
         ],
       "lineHints": [
           null,
-          "整数型の変数を宣言し、初期値を代入します。",
+          "int型の変数xに10を代入します。",
           null,
-          "整数型の変数を宣言し、初期値を代入します。",
+          "int型の変数yに5を代入します。",
           null,
-          "たし算なので + を使います。"
+          "Console.WriteLineでx + yの結果を出力します。"
         ],
         "candidates": {
           "types": [
@@ -116,7 +117,7 @@ export const csharpData = {
             "*",
             "/"
           ],
-          "others": ["10;", "5;", "WriteLine"]
+          "others": ["Console", "WriteLine", "x", "y"]
         },
         "testCases": [
           {
@@ -128,14 +129,14 @@ export const csharpData = {
     {
       "title": "剰余演算子（%）",
       "correctCode": "// 10 を 3 で割ったあまりを出力する\\nConsole.WriteLine(10 % 3);",
-      "holeyCode": "// 10 を 3 で割ったあまりを出力する\\nConsole.___(10 % 3);",
+      "holeyCode": "// 10 を 3 で割ったあまりを出力する\\n___.___(__ ___ ___);",
       "correctLines": [
           "// 10 を 3 で割ったあまりを出力する",
           "Console.WriteLine(10 % 3);"
         ],
       "lineHints": [
           null,
-          "あまりを求める `%` 演算子を使います。"
+          "Console.WriteLineで10 % 3（あまり）を出力します。"
         ],
         "candidates": {
           "operators": [
@@ -144,7 +145,7 @@ export const csharpData = {
             "*",
             "-"
           ],
-          "others": ["WriteLine"]
+          "others": ["Console", "WriteLine", "10", "3"]
         },
         "testCases": [
           {
@@ -156,7 +157,7 @@ export const csharpData = {
     {
       "title": "累算代入演算子（+=、-=）",
       "correctCode": "// hp に 100 を入れる\\nint hp = 100;\\n// += で 20 を足す\\nhp += 20;\\n// -= で 50 を引く\\nhp -= 50;\\nConsole.WriteLine(hp);",
-      "holeyCode": "// hp に 100 を入れる\\nint hp = ___;\\n// += で 20 を足す\\nhp += ___;\\n// -= で 50 を引く\\nhp -= ___;\\nConsole.WriteLine(___);",
+      "holeyCode": "// hp に 100 を入れる\\n___ ___ = ___;\\n// += で 20 を足す\\n___ ___ ___;\\n// -= で 50 を引く\\n___ ___ ___;\\n___.___(___);",
       "correctLines": [
           "// hp に 100 を入れる",
           "int hp = 100;",
@@ -168,12 +169,12 @@ export const csharpData = {
         ],
       "lineHints": [
           null,
-          "変数hpを宣言し、100を設定します。",
+          "int型の変数hpに100を代入します。",
           null,
-          "変数hpに20を加算して再代入する。",
+          "hp += 20 で変数hpに20を加算します。",
           null,
-          "変数hpから50を減算して再代入する。",
-          "変数の値をコンソールに出力し、改行します。"
+          "hp -= 50 で変数hpから50を減算します。",
+          "Console.WriteLineでhpの値を出力します。"
         ],
         "candidates": {
           "operators": [
@@ -182,7 +183,7 @@ export const csharpData = {
             "*=",
             "/="
           ],
-          "others": ["100", "20", "50", "hp"]
+          "others": ["int", "hp", "100", "20", "50", "Console", "WriteLine"]
         },
         "testCases": [
           {
@@ -194,7 +195,7 @@ export const csharpData = {
     {
       "title": "文章の中に変数を入れましょう",
       "correctCode": "// ageというはこに 10 を入れる\\nint age = 10;\\n// 文字列補間を使ってメッセージを出す\\nConsole.WriteLine($\"私は{age}歳です\");",
-      "holeyCode": "// ageというはこに 10 を入れる\\nint age = ___;\\n// 文字列補間を使ってメッセージを出す\\nConsole.___($\"私は{age}歳です\");",
+      "holeyCode": "// ageというはこに 10 を入れる\\n___ ___ = ___;\\n// 文字列補間を使ってメッセージを出す\\n___.___($\"私は{___}歳です\");",
       "correctLines": [
           "// ageというはこに 10 を入れる",
           "int age = 10;",
@@ -203,9 +204,9 @@ export const csharpData = {
         ],
       "lineHints": [
           null,
-          "整数型の変数を宣言し、初期値を代入します。",
+          "int型の変数ageに10を代入します。",
           null,
-          "$ を先頭につけて、age を {} の中に入力します。"
+          "Console.WriteLineで$\"私は{age}歳です\"を出力します。"
         ],
         "candidates": {
           "variables": [
@@ -217,7 +218,7 @@ export const csharpData = {
           "operators": [
             "$"
           ],
-          "others": ["10;", "WriteLine"]
+          "others": ["int", "Console", "WriteLine"]
         },
         "testCases": [
           {
@@ -229,7 +230,7 @@ export const csharpData = {
     {
       "title": "たくさんのデータをまとめましょう「配列」",
       "correctCode": "// colorsに{\"赤\", \"青\", \"緑\"}を代入\\nstring[] colors = {\"赤\", \"青\", \"緑\"};\\n// 2番目のデータを出す\\nConsole.WriteLine(colors[1]);",
-      "holeyCode": "// colorsに{\"赤\", \"青\", \"緑\"}を代入\\nstring[] colors = {\"___\", \"青\", \"緑\"};\\n// 2番目のデータを出す\\nConsole.___(colors[1]);",
+      "holeyCode": "// colorsに{\"赤\", \"青\", \"緑\"}を代入\\n___[] ___ = {\"___\", \"___\", \"___\"};\\n// 2番目のデータを出す\\n___.___(___[___]);",
       "correctLines": [
           "// colorsに{\"赤\", \"青\", \"緑\"}を代入",
           "string[] colors = {\"赤\", \"青\", \"緑\"};",
@@ -238,9 +239,9 @@ export const csharpData = {
         ],
       "lineHints": [
           null,
-          "赤、青、緑 の順で入力しましょう。",
+          "string[]型の変数colorsに{\"赤\", \"青\", \"緑\"}を代入します。",
           null,
-          "2番目のデータのインデックスは 1 です。"
+          "Console.WriteLineでcolors[1]（2番目の要素）を出力します。"
         ],
         "candidates": {
           "strings": [
@@ -253,7 +254,7 @@ export const csharpData = {
             "1",
             "2"
           ],
-          "others": ["WriteLine"]
+          "others": ["string", "colors", "Console", "WriteLine"]
         },
         "testCases": [
           {
@@ -265,7 +266,7 @@ export const csharpData = {
     {
       "title": "「もし〜なら」で分ける if文",
       "correctCode": "// scoreに100を入れる\\nint score = 100;\\n// もし80より大きかったら\\nif (score > 80)\\n{\\n    // 「合格！」と表示する\\n    Console.WriteLine(\"合格！\");\\n}",
-      "holeyCode": "// scoreに100を入れる\\nint score = ___;\\n// もし80より大きかったら\\nif (score ___ 80)\\n___\\n    // 「合格！」と表示する\\n    Console.___(\"合格！\");\\n___",
+      "holeyCode": "// scoreに100を入れる\\n___ ___ = ___;\\n// もし80より大きかったら\\nif (___ ___ ___)\\n___\\n    // 「合格！」と表示する\\n    ___.___(\"___\");\\n___",
       "correctLines": [
           "// scoreに100を入れる",
           "int score = 100;",
@@ -278,13 +279,13 @@ export const csharpData = {
         ],
       "lineHints": [
           null,
-          "整数型の変数を宣言し、初期値を代入します。",
+          "int型の変数scoreに100を代入します。",
           null,
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
-          "文字列をコンソールに出力し、改行します。",
+          "if文でscore > 80の条件を判定します。",
+          "ブロックの開始です。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "Console.WriteLineで\"合格！\"を出力します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
@@ -292,12 +293,13 @@ export const csharpData = {
             "while"
           ],
           "numbers": [
-            "100"
+            "100",
+            "80"
           ],
           "strings": [
             "合格！"
           ],
-          "others": ["100;", ">", "{", "WriteLine", "}", "{"]
+          "others": ["int", "score", ">", "{", "Console", "WriteLine", "}"]
         },
         "testCases": [
           {
@@ -309,7 +311,7 @@ export const csharpData = {
     {
       "title": "ちがう場合は？ if-else文",
       "correctCode": "// ageに10を入れる\\nint age = 10;\\n// 20歳以上かどうかで分ける\\nif (age >= 20)\\n{\\n    // 「大人」と出力\\n    Console.WriteLine(\"大人\");\\n}\\n// else でそれ以外の場合\\nelse\\n{\\n    // 「子供」と出力\\n    Console.WriteLine(\"子供\");\\n}",
-      "holeyCode": "// ageに10を入れる\\nint age = ___;\\n// 20歳以上かどうかで分ける\\nif (age ___ 20)\\n___\\n    // 「大人」と出力\\n    Console.___(\"大人\");\\n___\\n// else でそれ以外の場合\\n___\\n___\\n    // 「子供」と出力\\n    Console.___(\"子供\");\\n___",
+      "holeyCode": "// ageに10を入れる\\n___ ___ = ___;\\n// 20歳以上かどうかで分ける\\nif (___ ___ ___)\\n___\\n    // 「大人」と出力\\n    ___.___(\"___\");\\n___\\n// else でそれ以外の場合\\n___\\n___\\n    // 「子供」と出力\\n    ___.___(\"___\");\\n___",
       "correctLines": [
           "// ageに10を入れる",
           "int age = 10;",
@@ -328,19 +330,19 @@ export const csharpData = {
         ],
       "lineHints": [
           null,
-          "整数型の変数を宣言し、初期値を代入します。",
+          "int型の変数ageに10を代入します。",
           null,
-          "文字列をコンソールに出力し、改行します。",
-          "もし条件が満たされなかった場合に実行する処理を記述します。",
+          "if文でage >= 20の条件を判定します。",
+          "ブロックの開始です。",
           null,
-          "文字列をコンソールに出力し、改行します。",
-          "ここを正しく入力してください。",
+          "Console.WriteLineで\"大人\"を出力します。",
+          "ブロックを閉じます。",
           null,
-          "条件が偽の場合の処理を定義する。",
-          "ここを正しく入力してください。",
+          "条件が偽の場合の処理を定義します。",
+          "ブロックの開始です。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "Console.WriteLineで\"子供\"を出力します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
@@ -348,13 +350,14 @@ export const csharpData = {
             "elif"
           ],
           "numbers": [
-            "10"
+            "10",
+            "20"
           ],
           "strings": [
             "大人",
             "子供"
           ],
-          "others": ["10;", ">=", "{", "WriteLine", "}", "{", "}", "else"]
+          "others": ["int", "age", ">=", "{", "Console", "WriteLine", "}", "else"]
         },
         "testCases": [
           {
@@ -366,7 +369,7 @@ export const csharpData = {
     {
       "title": "論理演算子（&&、||）",
       "correctCode": "// score と bonus を定義\\nint score = 80;\\nint bonus = 10;\\n// && で両方の条件をチェック\\nif (score >= 70 && bonus > 0)\\n{\\n    Console.WriteLine(\"ボーナスあり合格\");\\n}",
-      "holeyCode": "// score と bonus を定義\\nint score = ___;\\nint bonus = ___;\\n// && で両方の条件をチェック\\nif (score >= ___ && bonus > 0)\\n___\\n    Console.___(\"ボーナスあり合格\");\\n___",
+      "holeyCode": "// score と bonus を定義\\n___ ___ = ___;\\n___ ___ = ___;\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___)\\n___\\n    ___.___(\"___\");\\n___",
       "correctLines": [
           "// score と bonus を定義",
           "int score = 80;",
@@ -379,22 +382,22 @@ export const csharpData = {
         ],
       "lineHints": [
           null,
-          "変数scoreを宣言し、80を設定します。",
-          "整数型の変数を宣言し、初期値を代入します。",
+          "int型の変数scoreに80を代入します。",
+          "int型の変数bonusに10を代入します。",
           null,
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "if文でscore >= 70 && bonus > 0の条件を判定します。",
+          "ブロックの開始です。",
+          "Console.WriteLineで\"ボーナスあり合格\"を出力します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "operators": [
             "&&",
             "||",
-            "&",
-            "|"
+            ">=",
+            ">"
           ],
-          "others": ["80", "10", "70", "{", "WriteLine", "}", "{"]
+          "others": ["int", "score", "bonus", "80", "10", "70", "0", "{", "Console", "WriteLine", "ボーナスあり合格", "}"]
         },
         "testCases": [
           {
@@ -406,7 +409,7 @@ export const csharpData = {
     {
       "title": "ぐるぐる回す foreach",
       "correctCode": "// namesに{\"太郎\", \"花子\"}を代入\\nstring[] names = {\"太郎\", \"花子\"};\\n// 順番に取り出すループ\\nforeach (string name in names)\\n{\\n    // 取り出した名前を表示\\n    Console.WriteLine(name);\\n}",
-      "holeyCode": "// namesに{\"太郎\", \"花子\"}を代入\\nstring[] names = {\"___\", \"花子\"};\\n// 順番に取り出すループ\\nforeach (string name in ___)\\n___\\n    // 取り出した名前を表示\\n    Console.WriteLine(___);\\n___",
+      "holeyCode": "// namesに{\"太郎\", \"花子\"}を代入\\n___[] ___ = {\"___\", \"___\"};\\n// 順番に取り出すループ\\nforeach (___ ___ in ___)\\n___\\n    // 取り出した名前を表示\\n    ___.___(___);\\n___",
       "correctLines": [
           "// namesに{\"太郎\", \"花子\"}を代入",
           "string[] names = {\"太郎\", \"花子\"};",
@@ -419,13 +422,13 @@ export const csharpData = {
         ],
       "lineHints": [
           null,
-          "太郎、花子 の順で入力しましょう。",
+          "string[]型の変数namesに{\"太郎\", \"花子\"}を代入します。",
           null,
-          "foreachで配列の各要素を順番に処理します。",
-          "ループ内で使用する変数を宣言します。",
+          "foreach文でnamesの各要素をstring型のnameに取り出します。",
+          "ブロックの開始です。",
           null,
-          "変数の値をコンソールに出力し、改行します。",
-          "ここを正しく入力してください。"
+          "Console.WriteLineで変数nameを出力します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
@@ -439,7 +442,7 @@ export const csharpData = {
             "太郎",
             "花子"
           ],
-          "others": ["names", "{", "}", "{", "{", "{\\"]
+          "others": ["string", "names", "{", "Console", "WriteLine", "}"]
         },
         "testCases": [
           {
@@ -451,7 +454,7 @@ export const csharpData = {
     {
       "title": "名前で探しましょう「Dictionary」",
       "correctCode": "// Dictionaryを作る\\nvar fruits = new Dictionary<string, string>();\\n// キーと値を追加\\nfruits[\"みかん\"] = \"オレンジ\";\\n// キーを指定して値を取り出す\\nConsole.WriteLine(fruits[\"みかん\"]);",
-      "holeyCode": "// Dictionaryを作る\\nvar ___ = new Dictionary<string, string>();\\n// キーと値を追加\\n___[\"___\"] = \"オレンジ\";\\n// キーを指定して値を取り出す\\nConsole.___(fruits[\"みかん\"]);",
+      "holeyCode": "// Dictionaryを作る\\n___ ___ = new ___<___, ___>();\\n// キーと値を追加\\n___[\"___\"] = \"___\";\\n// キーを指定して値を取り出す\\n___.___(___[\"___\"]);",
       "correctLines": [
           "// Dictionaryを作る",
           "var fruits = new Dictionary<string, string>();",
@@ -462,11 +465,11 @@ export const csharpData = {
         ],
       "lineHints": [
           null,
-          "Dictionary を使います。",
+          "var型の変数fruitsにDictionary<string, string>を作成します。",
           null,
-          "キーは みかん、値は オレンジ です。",
+          "fruits[\"みかん\"]に\"オレンジ\"を代入します。",
           null,
-          "WriteLineメソッドで辞書から取得した値を出力します。"
+          "Console.WriteLineでfruits[\"みかん\"]の値を出力します。"
         ],
         "candidates": {
           "types": [
@@ -477,7 +480,7 @@ export const csharpData = {
             "みかん",
             "オレンジ"
           ],
-          "others": ["fruits", "WriteLine"]
+          "others": ["var", "fruits", "string", "Console", "WriteLine"]
         },
         "testCases": [
           {
@@ -489,7 +492,7 @@ export const csharpData = {
     {
       "title": "自分だけの関数を作ろう「メソッド」",
       "correctCode": "// Greetというメソッドを定義\\nstatic void Greet()\\n{\\n    // こんにちは と表示\\n    Console.WriteLine(\"こんにちは\");\\n}\\n// メソッドを呼び出す\\nGreet();",
-      "holeyCode": "// Greetというメソッドを定義\\nstatic void ___()\\n___\\n    // こんにちは と表示\\n    Console.___(\"こんにちは\");\\n___\\n// メソッドを呼び出す\\n___();",
+      "holeyCode": "// Greetというメソッドを定義\\nstatic void ___()\\n___\\n    // こんにちは と表示\\n    ___.___(\"___\");\\n___\\n// メソッドを呼び出す\\n___();",
       "correctLines": [
           "// Greetというメソッドを定義",
           "static void Greet()",
@@ -502,13 +505,13 @@ export const csharpData = {
         ],
       "lineHints": [
           null,
-          "戻り値がないので void を使います。",
-          "文字列をコンソールに出力し、改行します。",
+          "static void Greet()でメソッドを定義します。",
+          "ブロックの開始です。",
           null,
-          "関数（Greet）を呼び出して実行します。",
-          "ここを正しく入力してください。",
+          "Console.WriteLineで\"こんにちは\"を出力します。",
+          "ブロックを閉じます。",
           null,
-          "関数（Greet）を呼び出して実行する。"
+          "Greet()でメソッドを呼び出します。"
         ],
         "candidates": {
           "keywords": [
@@ -521,7 +524,7 @@ export const csharpData = {
           "strings": [
             "こんにちは"
           ],
-          "others": ["{", "WriteLine", "}", "{", "}"]
+          "others": ["{", "Console", "WriteLine", "}"]
         },
         "testCases": [
           {

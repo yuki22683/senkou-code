@@ -9,7 +9,7 @@ export const php2Data = {
     {
       "title": "クラスを定義しよう",
       "correctCode": "<?php\\n// Catクラスを定義\\nclass Cat {\\n    // public $nameを定義\\n    public $name;\\n}\\n// $catにnew Cat()を代入\\n$cat = new Cat();\\n// $cat->nameに'タマ'を代入\\n$cat->name = 'タマ';\\n// $cat->nameを出力\\necho $cat->name;\\n?>",
-      "holeyCode": "___\\n// Catクラスを定義\\nclass ___ {\\n    // public $nameを定義\\n    public $___;\\n___\\n// $catにnew Cat()を代入\\n$cat = new ___();\\n// $cat->nameに'タマ'を代入\\n$cat->name = '___';\\n// $cat->nameを出力\\necho ___->name;\\n___",
+      "holeyCode": "___\\n// Catクラスを定義\\n___ ___ {\\n    // public $nameを定義\\n    ___ $___;\\n___\\n// $catにnew Cat()を代入\\n$___ = ___ ___();\\n// $cat->nameに'タマ'を代入\\n$___->___ = '___';\\n// $cat->nameを出力\\n___ $___->___;\\n___",
       "correctLines": [
           "<?php",
           "// Catクラスを定義",
@@ -28,23 +28,23 @@ export const php2Data = {
       "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           null,
-          "新しいクラス（Cat）を定義します。",
+          "class キーワードでクラスを定義します。",
           null,
-          "public で外からアクセスできます。",
-          "ここを正しく入力してください。",
+          "public で外からアクセスできるプロパティを定義します。",
+          "クラスやメソッドの閉じ括弧 } です。",
           null,
-          "new でインスタンスを作成します。",
+          "new でインスタンスを作成し変数に代入します。",
           null,
-          "-> でプロパティにアクセスします。",
+          "-> でプロパティにアクセスして値を代入します。",
           null,
-          "変数の内容を展開して表示します。",
-          "ここを正しく入力してください。"
+          "echo で変数の内容を出力します。",
+          "PHPスクリプトの終了を宣言します。"
         ],
         "candidates": {
           "keywords": [
-            "class"
+            "class", "public", "new", "echo"
           ],
-          "others": ["public", "new", "->", "echo", "<?php", "Cat", "name", "}", "$cat", "?>", "タマ", "<?php", "}"]
+          "others": ["<?php", "?>", "}", "Cat", "name", "cat", "タマ"]
         },
         "testCases": [
           {
@@ -56,7 +56,7 @@ export const php2Data = {
     {
       "title": "コンストラクタを使おう",
       "correctCode": "<?php\\n// Counterクラスを定義\\nclass Counter {\\n    // public $countを定義\\n    public $count;\\n    // __construct($c)でコンストラクタを定義\\n    public function __construct($c) {\\n        // $this->countに$cを代入\\n        $this->count = $c;\\n    }\\n}\\n// $cntにnew Counter(5)を代入\\n$cnt = new Counter(5);\\n// $cnt->countを出力\\necho $cnt->count;\\n?>",
-      "holeyCode": "___\\n// Counterクラスを定義\\nclass ___ {\\n    // public $countを定義\\n    public $___;\\n    // __construct($c)でコンストラクタを定義\\n    public function ___($c) {\\n        // $this->countに$cを代入\\n        $this->count = $___;\\n    ___\\n___\\n// $cntにnew Counter(5)を代入\\n$cnt = new Counter(___);\\n// $cnt->countを出力\\necho ___->count;\\n___",
+      "holeyCode": "___\\n// Counterクラスを定義\\n___ ___ {\\n    // public $countを定義\\n    ___ $___;\\n    // __construct($c)でコンストラクタを定義\\n    ___ ___ ___($___) {\\n        // $this->countに$cを代入\\n        $___->___ = $___;\\n    ___\\n___\\n// $cntにnew Counter(5)を代入\\n$___ = ___ ___(___);\\n// $cnt->countを出力\\n___ $___->___;\\n___",
       "correctLines": [
           "<?php",
           "// Counterクラスを定義",
@@ -76,28 +76,28 @@ export const php2Data = {
           "?>"
         ],
       "lineHints": [
-          "__construct でコンストラクタを定義します。",
+          "PHPスクリプトの開始を宣言する。",
           null,
-          "$this で自分自身を参照します。",
+          "class キーワードでクラスを定義します。",
           null,
-          "ここを正しく入力してください。",
+          "public でプロパティを定義します。",
           null,
-          "ここを正しく入力してください。",
+          "public function でメソッドを定義します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "$this で自分自身のプロパティにアクセスします。",
+          "クラスやメソッドの閉じ括弧 } です。",
+          "クラスやメソッドの閉じ括弧 } です。",
           null,
-          "ここを正しく入力してください。",
+          "new でインスタンスを作成し変数に代入します。",
           null,
-          "変数の内容を展開して表示します。",
-          "ここを正しく入力してください。"
+          "echo で変数のプロパティを出力します。",
+          "PHPスクリプトの終了を宣言します。"
         ],
         "candidates": {
-          "functions": [
-            "__construct"
+          "keywords": [
+            "class", "public", "function", "new", "echo"
           ],
-          "others": ["class", "public", "$this", "new", "echo", "<?php", "Counter", "count", "c", "}", "5", "$cnt", "?>", "<?php", "}"]
+          "others": ["<?php", "?>", "}", "Counter", "count", "c", "this", "cnt", "5", "__construct"]
         },
         "testCases": [
           {
@@ -109,7 +109,7 @@ export const php2Data = {
     {
       "title": "継承を学ぼう",
       "correctCode": "<?php\\n// Vehicleクラスを定義\\nclass Vehicle {\\n    // move()メソッドを定義\\n    public function move() {\\n        // '移動中'を出力\\n        echo '移動中';\\n    }\\n}\\n// CarがVehicleを継承\\nclass Car extends Vehicle { }\\n// $carにnew Car()を代入\\n$car = new Car();\\n// $car->move()を呼び出し\\n$car->move();\\n?>",
-      "holeyCode": "___\\n// Vehicleクラスを定義\\nclass ___ {\\n    // move()メソッドを定義\\n    public function ___() {\\n        // '移動中'を出力\\n        echo '___';\\n    ___\\n___\\n// CarがVehicleを継承\\nclass ___ extends Vehicle { }\\n// $carにnew Car()を代入\\n$car = new ___();\\n// $car->move()を呼び出し\\n$car->___();\\n___",
+      "holeyCode": "___\\n// Vehicleクラスを定義\\n___ ___ {\\n    // move()メソッドを定義\\n    ___ ___ ___() {\\n        // '移動中'を出力\\n        ___ '___';\\n    ___\\n___\\n// CarがVehicleを継承\\n___ ___ ___ ___ { }\\n// $carにnew Car()を代入\\n$___ = ___ ___();\\n// $car->move()を呼び出し\\n$___->___();\\n___",
       "correctLines": [
           "<?php",
           "// Vehicleクラスを定義",
@@ -131,26 +131,26 @@ export const php2Data = {
       "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           null,
-          "新しいクラス（Car）を定義します。",
+          "class キーワードでクラスを定義します。",
           null,
-          "ここを正しく入力してください。",
+          "public function でメソッドを定義します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "echo で文字列を出力します。",
+          "クラスやメソッドの閉じ括弧 } です。",
+          "クラスやメソッドの閉じ括弧 } です。",
           null,
-          "新しいクラス（Car）を定義します。",
+          "extends で親クラスを継承します。",
           null,
-          "ここを正しく入力してください。",
+          "new でインスタンスを作成し変数に代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "-> でメソッドを呼び出します。",
+          "PHPスクリプトの終了を宣言します。"
         ],
         "candidates": {
           "keywords": [
-            "extends"
+            "class", "public", "function", "echo", "extends", "new"
           ],
-          "others": ["class", "function", "echo", "new", "->", "<?php", "Vehicle", "move", "moving", "}", "Car", "?>", "移動中", "<?php", "}"]
+          "others": ["<?php", "?>", "}", "Vehicle", "move", "Car", "car", "移動中"]
         },
         "testCases": [
           {
@@ -162,7 +162,7 @@ export const php2Data = {
     {
       "title": "インターフェースを使おう",
       "correctCode": "<?php\\n// Runnerインターフェースを定義\\ninterface Runner {\\n    // run()メソッドを宣言\\n    public function run();\\n}\\n// RobotがRunnerを実装\\nclass Robot implements Runner {\\n    // run()メソッドを実装\\n    public function run() {\\n        // '実行中'を出力\\n        echo '実行中';\\n    }\\n}\\n// $rにnew Robot()を代入\\n$r = new Robot();\\n// $r->run()を呼び出し\\n$r->run();\\n?>",
-      "holeyCode": "___\\n// Runnerインターフェースを定義\\ninterface ___ {\\n    // run()メソッドを宣言\\n    public function ___();\\n___\\n// RobotがRunnerを実装\\nclass ___ implements Runner {\\n    // run()メソッドを実装\\n    public function ___() {\\n        // '実行中'を出力\\n        echo '___';\\n    ___\\n___\\n// $rにnew Robot()を代入\\n$r = new ___();\\n// $r->run()を呼び出し\\n$r->___();\\n___",
+      "holeyCode": "___\\n// Runnerインターフェースを定義\\n___ ___ {\\n    // run()メソッドを宣言\\n    ___ ___ ___();\\n___\\n// RobotがRunnerを実装\\n___ ___ ___ ___ {\\n    // run()メソッドを実装\\n    ___ ___ ___() {\\n        // '実行中'を出力\\n        ___ '___';\\n    ___\\n___\\n// $rにnew Robot()を代入\\n$___ = ___ ___();\\n// $r->run()を呼び出し\\n$___->___();\\n___",
       "correctLines": [
           "<?php",
           "// Runnerインターフェースを定義",
@@ -189,27 +189,27 @@ export const php2Data = {
           null,
           "interface でインターフェースを定義します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "public function でメソッドを宣言します。",
+          "クラスやメソッドの閉じ括弧 } です。",
           null,
-          "新しいクラス（Robot）を定義します。",
+          "class と implements でインターフェースを実装します。",
           null,
-          "ここを正しく入力してください。",
+          "public function でメソッドを実装します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "echo で文字列を出力します。",
+          "クラスやメソッドの閉じ括弧 } です。",
+          "クラスやメソッドの閉じ括弧 } です。",
           null,
-          "ここを正しく入力してください。",
+          "new でインスタンスを作成し変数に代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "-> でメソッドを呼び出します。",
+          "PHPスクリプトの終了を宣言します。"
         ],
         "candidates": {
           "keywords": [
-            "interface"
+            "interface", "class", "public", "function", "implements", "echo", "new"
           ],
-          "others": ["function", "implements", "echo", "new", "->", "<?php", "Runner", "run", "}", "Robot", "running", "?>", "実行中", "<?php", "}"]
+          "others": ["<?php", "?>", "}", "Runner", "run", "Robot", "r", "実行中"]
         },
         "testCases": [
           {
@@ -221,7 +221,7 @@ export const php2Data = {
     {
       "title": "配列の array_map",
       "correctCode": "<?php\\n// 配列を定義（1, 2, 3）\\n$nums = [1, 2, 3];\\n// array_mapで各要素を変換\\n$squared = array_map(fn($n) => $n * $n, $nums);\\n// print_rで配列を出力\\nprint_r($squared);\\n?>",
-      "holeyCode": "___\\n// 配列を定義（1, 2, 3）\\n$___ = [___];\\n// array_mapで各要素を変換\\n$squared = array_map(fn($n) => $n * $n, $___);\\n// print_rで配列を出力\\nprint_r($___);\\n___",
+      "holeyCode": "___\\n// 配列を定義（1, 2, 3）\\n$___ = [___, ___, ___];\\n// array_mapで各要素を変換\\n$___ = ___(___(___) => $___ * $___, $___);\\n// print_rで配列を出力\\n___($___);\\n___",
       "correctLines": [
           "<?php",
           "// 配列を定義（1, 2, 3）",
@@ -233,20 +233,20 @@ export const php2Data = {
           "?>"
         ],
       "lineHints": [
-          "array_map で各要素を2乗します。",
+          "PHPスクリプトの開始を宣言する。",
           null,
-          "配列を複数の値で初期化する。",
+          "配列を数値で初期化します。",
           null,
-          "ここを正しく入力してください。",
+          "array_map と fn でアロー関数を使って各要素を変換します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "print_r で配列の内容を出力します。",
+          "PHPスクリプトの終了を宣言します。"
         ],
         "candidates": {
-          "functions": [
-            "array_map"
+          "keywords": [
+            "fn"
           ],
-          "others": ["3", "print_r($squared);", "<?php", "nums", "1, 2, 3", "squared", "?>", "<?php"]
+          "others": ["<?php", "?>", "nums", "squared", "array_map", "print_r", "n", "$n", "1", "2", "3"]
         },
         "testCases": [
           {
@@ -258,7 +258,7 @@ export const php2Data = {
     {
       "title": "配列の array_filter",
       "correctCode": "<?php\\n// $numsに[1, 2, 3, 4, 5]を代入\\n$nums = [1, 2, 3, 4, 5];\\n// array_filterで3以上を抽出し$resultに代入\\n$result = array_filter($nums, fn($n) => $n >= 3);\\n// $resultをprint_rで出力\\nprint_r($result);\\n?>",
-      "holeyCode": "___\\n// $numsに[1, 2, 3, 4, 5]を代入\\n$___ = [___];\\n// array_filterで3以上を抽出し$resultに代入\\n$result = array_filter($nums, fn($n) => $n >= ___);\\n// $resultをprint_rで出力\\nprint_r($___);\\n___",
+      "holeyCode": "___\\n// $numsに[1, 2, 3, 4, 5]を代入\\n$___ = [___, ___, ___, ___, ___];\\n// array_filterで3以上を抽出し$resultに代入\\n$___ = ___($___, ___($___) => $___ >= ___);\\n// $resultをprint_rで出力\\n___($___);\\n___",
       "correctLines": [
           "<?php",
           "// $numsに[1, 2, 3, 4, 5]を代入",
@@ -270,20 +270,20 @@ export const php2Data = {
           "?>"
         ],
       "lineHints": [
-          "array_filter で 3 以上を抽出します。",
+          "PHPスクリプトの開始を宣言する。",
           null,
-          "配列を複数の値で初期化する。",
+          "配列を数値で初期化します。",
           null,
-          "ここを正しく入力してください。",
+          "array_filter と fn でアロー関数を使って条件に合う要素を抽出します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "print_r で配列の内容を出力します。",
+          "PHPスクリプトの終了を宣言します。"
         ],
         "candidates": {
-          "functions": [
-            "array_filter"
+          "keywords": [
+            "fn"
           ],
-          "others": ["5", "print_r", "<?php", "nums", "1, 2, 3, 4, 5", "3", "result", "?>", "<?php"]
+          "others": ["<?php", "?>", "nums", "result", "array_filter", "print_r", "n", "1", "2", "3", "4", "5"]
         },
         "testCases": [
           {
@@ -295,7 +295,7 @@ export const php2Data = {
     {
       "title": "アロー関数を使おう",
       "correctCode": "<?php\\n// nを3倍にする$triple関数を定義\\n$triple = fn($n) => $n * 3;\\n// echoで出力\\necho $triple(7);\\n?>",
-      "holeyCode": "___\\n// nを3倍にする$triple関数を定義\\n$triple = fn($n) => $n * ___;\\n// echoで出力\\necho ___(7);\\n___",
+      "holeyCode": "___\\n// nを3倍にする$triple関数を定義\\n$___ = ___($___) => $___ * ___;\\n// echoで出力\\n___ $___(___);\\n___",
       "correctLines": [
           "<?php",
           "// nを3倍にする$triple関数を定義",
@@ -305,18 +305,18 @@ export const php2Data = {
           "?>"
         ],
       "lineHints": [
+          "PHPスクリプトの開始を宣言する。",
+          null,
           "fn でアロー関数を定義します。",
           null,
-          "ここを正しく入力してください。",
-          null,
-          "変数の内容を展開して表示します。",
-          "ここを正しく入力してください。"
+          "echo で関数を呼び出して結果を出力します。",
+          "PHPスクリプトの終了を宣言します。"
         ],
         "candidates": {
           "keywords": [
-            "fn"
+            "fn", "echo"
           ],
-          "others": ["echo", "<?php", "3", "$triple", "?>", "<?php"]
+          "others": ["<?php", "?>", "triple", "n", "3", "7"]
         },
         "testCases": [
           {
@@ -328,7 +328,7 @@ export const php2Data = {
     {
       "title": "例外処理 try-catch",
       "correctCode": "<?php\\n// tryで例外を発生させる可能性があるコードを囲む\\ntry {\\n    // throwで例外を投げる\\n    throw new Exception('おっと');\\n// catchで例外を捕捉\\n} catch (Exception $e) {\\n    // echoで出力\\n    echo 'キャッチ';\\n}\\n?>",
-      "holeyCode": "___\\n// tryで例外を発生させる可能性があるコードを囲む\\n___ {\\n    // throwで例外を投げる\\n    throw new Exception('___');\\n// catchで例外を捕捉\\n} catch (Exception $___) {\\n    // echoで出力\\n    echo '___';\\n___\\n___",
+      "holeyCode": "___\\n// tryで例外を発生させる可能性があるコードを囲む\\n___ {\\n    // throwで例外を投げる\\n    ___ ___ ___('___');\\n// catchで例外を捕捉\\n} ___ (___ $___) {\\n    // echoで出力\\n    ___ '___';\\n___\\n___",
       "correctLines": [
           "<?php",
           "// tryで例外を発生させる可能性があるコードを囲む",
@@ -343,23 +343,23 @@ export const php2Data = {
           "?>"
         ],
       "lineHints": [
-          "throw で例外を投げます。",
+          "PHPスクリプトの開始を宣言する。",
           null,
-          "エラー（例外）が発生した場合の処理を記述します。",
+          "try でエラーが発生する可能性のあるコードを囲みます。",
           null,
-          "ここを正しく入力してください。",
+          "throw new Exception で例外を投げます。",
           null,
-          "例外が発生した場合の処理を定義する。",
+          "catch で例外を捕捉します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "echo で文字列を出力します。",
+          "クラスやメソッドの閉じ括弧 } です。",
+          "PHPスクリプトの終了を宣言します。"
         ],
         "candidates": {
           "keywords": [
-            "catch"
+            "try", "throw", "new", "catch", "echo"
           ],
-          "others": ["try", "throw", "echo", "<?php", "oops", "e", "caught", "}", "?>", "おっと", "キャッチ", "<?php", "}"]
+          "others": ["<?php", "?>", "}", "Exception", "e", "おっと", "キャッチ"]
         },
         "testCases": [
           {
@@ -371,7 +371,7 @@ export const php2Data = {
     {
       "title": "名前空間を使おう",
       "correctCode": "<?php\\n// namespace Appを宣言\\nnamespace App;\\n// Helloクラスを定義\\nclass Hello {\\n    // say()メソッドを定義\\n    public function say() {\\n        // 'こんにちは'を出力\\n        echo 'こんにちは';\\n    }\\n}\\n// $hにnew Hello()を代入\\n$h = new Hello();\\n// $h->say()を呼び出し\\n$h->say();\\n?>",
-      "holeyCode": "___\\n// namespace Appを宣言\\nnamespace ___;\\n// Helloクラスを定義\\nclass ___ {\\n    // say()メソッドを定義\\n    public function ___() {\\n        // 'こんにちは'を出力\\n        echo '___';\\n    ___\\n___\\n// $hにnew Hello()を代入\\n$h = new ___();\\n// $h->say()を呼び出し\\n$h->___();\\n___",
+      "holeyCode": "___\\n// namespace Appを宣言\\n___ ___;\\n// Helloクラスを定義\\n___ ___ {\\n    // say()メソッドを定義\\n    ___ ___ ___() {\\n        // 'こんにちは'を出力\\n        ___ '___';\\n    ___\\n___\\n// $hにnew Hello()を代入\\n$___ = ___ ___();\\n// $h->say()を呼び出し\\n$___->___();\\n___",
       "correctLines": [
           "<?php",
           "// namespace Appを宣言",
@@ -391,28 +391,28 @@ export const php2Data = {
           "?>"
         ],
       "lineHints": [
+          "PHPスクリプトの開始を宣言する。",
+          null,
           "namespace で名前空間を宣言します。",
           null,
-          "ここを正しく入力してください。",
+          "class キーワードでクラスを定義します。",
           null,
-          "新しいクラス（Hello）を定義します。",
+          "public function でメソッドを定義します。",
           null,
-          "ここを正しく入力してください。",
+          "echo で文字列を出力します。",
+          "クラスやメソッドの閉じ括弧 } です。",
+          "クラスやメソッドの閉じ括弧 } です。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "new でインスタンスを作成し変数に代入します。",
           null,
-          "ここを正しく入力してください。",
-          null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "-> でメソッドを呼び出します。",
+          "PHPスクリプトの終了を宣言します。"
         ],
         "candidates": {
           "keywords": [
-            "namespace"
+            "namespace", "class", "public", "function", "echo", "new"
           ],
-          "others": ["class", "function", "echo", "new", "->", "<?php", "App", "Hello", "say", "}", "?>", "こんにちは", "<?php", "}"]
+          "others": ["<?php", "?>", "}", "App", "Hello", "say", "h", "こんにちは"]
         },
         "testCases": [
           {
@@ -424,7 +424,7 @@ export const php2Data = {
     {
       "title": "Null合体演算子 ??",
       "correctCode": "<?php\\n// nullを代入\\n$value = null;\\n// ??でnullの場合のデフォルト値を指定\\necho $value ?? 'デフォルト';\\n?>",
-      "holeyCode": "___\\n// nullを代入\\n$value = ___;\\n// ??でnullの場合のデフォルト値を指定\\necho ___ ?? 'デフォルト';\\n___",
+      "holeyCode": "___\\n// nullを代入\\n$___ = ___;\\n// ??でnullの場合のデフォルト値を指定\\n___ $___ ___ '___';\\n___",
       "correctLines": [
           "<?php",
           "// nullを代入",
@@ -436,16 +436,19 @@ export const php2Data = {
       "lineHints": [
           "PHPスクリプトの開始を宣言する。",
           null,
-          "ここを正しく入力してください。",
+          "変数に null を代入します。",
           null,
-          "変数の内容を展開して表示します。",
-          "ここを正しく入力してください。"
+          "echo と ?? 演算子でデフォルト値を指定して出力します。",
+          "PHPスクリプトの終了を宣言します。"
         ],
         "candidates": {
+          "keywords": [
+            "echo"
+          ],
           "operators": [
             "??"
           ],
-          "others": ["null", "<?php", "$value", "?>", "<?php"]
+          "others": ["<?php", "?>", "value", "null", "デフォルト"]
         },
         "testCases": [
           {

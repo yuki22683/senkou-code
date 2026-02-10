@@ -9,7 +9,7 @@ export const javaData2 = {
     {
       "title": "クラスの継承",
       "correctCode": "class Vehicle {\\n    void move() {\\n        System.out.println(\"Moving\");\\n    }\\n}\\n\\n// CarクラスをVehicleを継承して定義\\nclass Car extends Vehicle {\\n    void honk() {\\n        System.out.println(\"Beep!\");\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // cにnew Car()を代入\\n        Car c = new Car();\\n        // move メソッドを呼び出す\\n        c.move();\\n    }\\n}",
-      "holeyCode": "class ___ {\\n    void ___() {\\n        System.out.___(\"Moving\");\\n    ___\\n___\\n___\\n// CarクラスをVehicleを継承して定義\\nclass ___ extends Vehicle {\\n    void ___() {\\n        System.out.___(\"Beep!\");\\n    ___\\n___\\n___\\nclass ___ {\\n    public static void ___\\(String[] args) {\\n        // cにnew Car()を代入\\n        ___ c = new Car();\\n        // move メソッドを呼び出す\\n        c.___();\\n    ___\\n___",
+      "holeyCode": "class ___ {\\n    void ___() {\\n        ___.___.___(___)___\\n    ___\\n___\\n___\\n// CarクラスをVehicleを継承して定義\\nclass ___ extends ___ {\\n    void ___() {\\n        ___.___.___(___)___\\n    ___\\n___\\n___\\nclass ___ {\\n    public static void ___(___[] ___) {\\n        // cにnew Car()を代入\\n        ___ ___ = new ___()___\\n        // move メソッドを呼び出す\\n        ___.___()___\\n    ___\\n___",
       "correctLines": [
           "class Vehicle {",
           "    void move() {",
@@ -36,25 +36,25 @@ export const javaData2 = {
       "lineHints": [
           "Vehicleクラスを定義します。",
           "moveメソッドを定義します。",
-          "printlnで出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "System.out.printlnで\"Moving\"を出力します。",
+          "moveメソッドのブロックを閉じます。",
+          "Vehicleクラスのブロックを閉じます。",
           null,
           null,
           "CarクラスをVehicleを継承して定義します。",
           "honkメソッドを定義します。",
-          "printlnで出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "System.out.printlnで\"Beep!\"を出力します。",
+          "honkメソッドのブロックを閉じます。",
+          "Carクラスのブロックを閉じます。",
           null,
           "Mainクラスを定義します。",
-          "main関数を定義します。",
+          "main関数を定義します。argsはString配列です。",
           null,
           "Car型の変数cを宣言し、new Car()を代入します。",
           null,
-          "moveメソッドを呼び出します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "cのmoveメソッドを呼び出します。",
+          "mainメソッドのブロックを閉じます。",
+          "Mainクラスのブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
@@ -63,9 +63,12 @@ export const javaData2 = {
             "super",
             "this",
             "new",
-            "move"
+            "void",
+            "class",
+            "public",
+            "static"
           ],
-          "others": ["Vehicle", "println", "}", "Car", "honk", "Main", "main(String[] args) {", "}"]
+          "others": ["Vehicle", "move", "System", "out", "println", "\"Moving\"", ";", "}", "Car", "honk", "\"Beep!\"", "Main", "main", "String", "args", "c", "()"]
         },
         "testCases": [
           {
@@ -77,7 +80,7 @@ export const javaData2 = {
     {
       "title": "メソッドのオーバーライド",
       "correctCode": "class Shape {\\n    void draw() {\\n        System.out.println(\"Shape\");\\n    }\\n}\\n\\nclass Circle extends Shape {\\n    // @Override でメソッドを上書き宣言する\\n    @Override\\n    void draw() {\\n        System.out.println(\"Circle\");\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // cにnew Circle()を代入\\n        Circle c = new Circle();\\n        // draw メソッドを呼び出す\\n        c.draw();\\n    }\\n}",
-      "holeyCode": "class ___ {\\n    void ___() {\\n        System.out.___(\"Shape\");\\n    ___\\n___\\n___\\nclass ___ extends Shape {\\n    // @Override でメソッドを上書き宣言する\\n    @___\\n    void ___() {\\n        System.out.___(\"Circle\");\\n    ___\\n___\\n___\\nclass ___ {\\n    public static void ___\\(String[] args) {\\n        // cにnew Circle()を代入\\n        ___ c = new Circle();\\n        // draw メソッドを呼び出す\\n        c.___();\\n    ___\\n___",
+      "holeyCode": "class ___ {\\n    void ___() {\\n        ___.___.___(___)___\\n    ___\\n___\\n___\\nclass ___ extends ___ {\\n    // @Override でメソッドを上書き宣言する\\n    @___\\n    void ___() {\\n        ___.___.___(___)___\\n    ___\\n___\\n___\\nclass ___ {\\n    public static void ___(___[] ___) {\\n        // cにnew Circle()を代入\\n        ___ ___ = new ___()___\\n        // draw メソッドを呼び出す\\n        ___.___()___\\n    ___\\n___",
       "correctLines": [
           "class Shape {",
           "    void draw() {",
@@ -105,37 +108,37 @@ export const javaData2 = {
       "lineHints": [
           "Shapeクラスを定義します。",
           "drawメソッドを定義します。",
-          "printlnで出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "System.out.printlnで\"Shape\"を出力します。",
+          "drawメソッドのブロックを閉じます。",
+          "Shapeクラスのブロックを閉じます。",
           null,
           "CircleクラスをShapeを継承して定義します。",
           null,
           "@Overrideアノテーションを使います。",
           "drawメソッドをオーバーライドします。",
-          "printlnで出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "System.out.printlnで\"Circle\"を出力します。",
+          "drawメソッドのブロックを閉じます。",
+          "Circleクラスのブロックを閉じます。",
           null,
           "Mainクラスを定義します。",
-          "main関数を定義します。",
+          "main関数を定義します。argsはString配列です。",
           null,
           "Circle型の変数cにnew Circle()を代入します。",
           null,
-          "drawメソッドを呼び出します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "cのdrawメソッドを呼び出します。",
+          "mainメソッドのブロックを閉じます。",
+          "Mainクラスのブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
-            "@Override",
-            "@override",
-            "override",
-            "@Overwrite",
+            "extends",
+            "class",
+            "void",
             "new",
-            "draw"
+            "public",
+            "static"
           ],
-          "others": ["Shape", "println", "}", "Circle", "Override", "Main", "main(String[] args) {", "}", "", "Override\\"]
+          "others": ["Shape", "draw", "System", "out", "println", "\"Shape\"", ";", "}", "Circle", "Override", "\"Circle\"", "Main", "main", "String", "args", "c", "()"]
         },
         "testCases": [
           {
@@ -147,7 +150,7 @@ export const javaData2 = {
     {
       "title": "インターフェース",
       "correctCode": "interface Greeting {\\n    void sayHello();\\n}\\n\\n// PersonクラスをGreetingインターフェースを実装して定義\\nclass Person implements Greeting {\\n    public void sayHello() {\\n        System.out.println(\"こんにちは！\");\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // pにnew Person()を代入\\n        Person p = new Person();\\n        // sayHello メソッドを呼び出す\\n        p.sayHello();\\n    }\\n}",
-      "holeyCode": "interface ___ {\\n    void ___();\\n___\\n___\\n// PersonクラスをGreetingインターフェースを実装して定義\\nclass ___ implements Greeting {\\n    public void ___() {\\n        System.out.___(\"こんにちは！\");\\n    ___\\n___\\n___\\nclass ___ {\\n    public static void ___\\(String[] args) {\\n        // pにnew Person()を代入\\n        ___ p = new Person();\\n        // sayHello メソッドを呼び出す\\n        p.___();\\n    ___\\n___",
+      "holeyCode": "interface ___ {\\n    void ___()___\\n___\\n___\\n// PersonクラスをGreetingインターフェースを実装して定義\\nclass ___ implements ___ {\\n    public void ___() {\\n        ___.___.___(___)___\\n    ___\\n___\\n___\\nclass ___ {\\n    public static void ___(___[] ___) {\\n        // pにnew Person()を代入\\n        ___ ___ = new ___()___\\n        // sayHello メソッドを呼び出す\\n        ___.___()___\\n    ___\\n___",
       "correctLines": [
           "interface Greeting {",
           "    void sayHello();",
@@ -172,23 +175,23 @@ export const javaData2 = {
       "lineHints": [
           "Greetingインターフェースを定義します。",
           "sayHelloメソッドを宣言します。",
-          "ここを正しく入力してください。",
+          "Greetingインターフェースのブロックを閉じます。",
           null,
           null,
           "PersonクラスをGreetingインターフェースを実装して定義します。",
           "sayHelloメソッドを実装します。",
-          "printlnで出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "System.out.printlnで\"こんにちは！\"を出力します。",
+          "sayHelloメソッドのブロックを閉じます。",
+          "Personクラスのブロックを閉じます。",
           null,
           "Mainクラスを定義します。",
-          "main関数を定義します。",
+          "main関数を定義します。argsはString配列です。",
           null,
           "Person型の変数pにnew Person()を代入します。",
           null,
-          "sayHelloメソッドを呼び出します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "pのsayHelloメソッドを呼び出します。",
+          "mainメソッドのブロックを閉じます。",
+          "Mainクラスのブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
@@ -197,9 +200,12 @@ export const javaData2 = {
             "interface",
             "abstract",
             "new",
-            "sayHello"
+            "void",
+            "class",
+            "public",
+            "static"
           ],
-          "others": ["Greeting", "}", "Person", "println", "Main", "main(String[] args) {", "}"]
+          "others": ["Greeting", ";", "}", "Person", "sayHello", "System", "out", "println", "\"こんにちは！\"", "Main", "main", "String", "args", "p", "()"]
         },
         "testCases": [
           {
@@ -211,7 +217,7 @@ export const javaData2 = {
     {
       "title": "抽象クラス",
       "correctCode": "// 抽象クラスAnimalを定義\\nabstract class Animal {\\n    abstract void speak();\\n}\\n\\nclass Dog extends Animal {\\n    void speak() {\\n        System.out.println(\"ワン！\");\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // dにnew Dog()を代入\\n        Dog d = new Dog();\\n        // speak メソッドを呼び出す\\n        d.speak();\\n    }\\n}",
-      "holeyCode": "// 抽象クラスAnimalを定義\\nabstract class ___ {\\n    abstract void ___();\\n___\\n___\\nclass ___ extends Animal {\\n    void ___() {\\n        System.out.___(\"ワン！\");\\n    ___\\n___\\n___\\nclass ___ {\\n    public static void ___\\(String[] args) {\\n        // dにnew Dog()を代入\\n        ___ d = new Dog();\\n        // speak メソッドを呼び出す\\n        d.___();\\n    ___\\n___",
+      "holeyCode": "// 抽象クラスAnimalを定義\\nabstract class ___ {\\n    abstract void ___()___\\n___\\n___\\nclass ___ extends ___ {\\n    void ___() {\\n        ___.___.___(___)___\\n    ___\\n___\\n___\\nclass ___ {\\n    public static void ___(___[] ___) {\\n        // dにnew Dog()を代入\\n        ___ ___ = new ___()___\\n        // speak メソッドを呼び出す\\n        ___.___()___\\n    ___\\n___",
       "correctLines": [
           "// 抽象クラスAnimalを定義",
           "abstract class Animal {",
@@ -237,22 +243,22 @@ export const javaData2 = {
           null,
           "abstract classでAnimalを定義します。",
           "abstract voidで抽象メソッドspeakを宣言します。",
-          "ここを正しく入力してください。",
+          "Animalクラスのブロックを閉じます。",
           null,
           "DogクラスをAnimalを継承して定義します。",
           "speakメソッドを実装します。",
-          "printlnで出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "System.out.printlnで\"ワン！\"を出力します。",
+          "speakメソッドのブロックを閉じます。",
+          "Dogクラスのブロックを閉じます。",
           null,
           "Mainクラスを定義します。",
-          "main関数を定義します。",
+          "main関数を定義します。argsはString配列です。",
           null,
           "Dog型の変数dにnew Dog()を代入します。",
           null,
-          "speakメソッドを呼び出します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "dのspeakメソッドを呼び出します。",
+          "mainメソッドのブロックを閉じます。",
+          "Mainクラスのブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
@@ -261,9 +267,12 @@ export const javaData2 = {
             "virtual",
             "static",
             "new",
-            "speak"
+            "void",
+            "class",
+            "extends",
+            "public"
           ],
-          "others": ["Animal", "}", "Dog", "println", "Main", "main(String[] args) {", "}"]
+          "others": ["Animal", ";", "}", "Dog", "speak", "System", "out", "println", "\"ワン！\"", "Main", "main", "String", "args", "d", "()"]
         },
         "testCases": [
           {
@@ -275,7 +284,7 @@ export const javaData2 = {
     {
       "title": "例外処理（try-catch）",
       "correctCode": "class Main {\\n    public static void main(String[] args) {\\n        // tryで例外をキャッチする準備\\n        try {\\n            // parseInt で文字列を整数に変換する\\n            int x = Integer.parseInt(\"あいう\");\\n        } catch (Exception e) {\\n            System.out.println(\"エラー\");\\n        }\\n    }\\n}",
-      "holeyCode": "class ___ {\\n    public static void ___\\(String[] args) {\\n        // tryで例外をキャッチする準備\\n        ___ {\\n            // parseInt で文字列を整数に変換する\\n            ___ x = Integer.parseInt(\"___\");\\n        } ___ (Exception e) {\\n            System.out.___(\"エラー\");\\n        ___\\n    ___\\n___",
+      "holeyCode": "class ___ {\\n    public static void ___(___[] ___) {\\n        // tryで例外をキャッチする準備\\n        try ___\\n            // parseInt で文字列を整数に変換する\\n            ___ ___ = ___.___(___)___\\n        ___ catch (___ ___) {\\n            ___.___.___(___)___\\n        ___\\n    ___\\n___",
       "correctLines": [
           "class Main {",
           "    public static void main(String[] args) {",
@@ -290,17 +299,17 @@ export const javaData2 = {
           "}"
         ],
       "lineHints": [
-          "エラーが発生する可能性のある処理をここから記述します。",
-          "`parseInt` メソッドを使います。",
+          "Mainクラスを定義します。",
+          "main関数を定義します。argsはString配列です。",
           null,
-          "例外が発生する可能性のある処理を開始する。",
+          "tryキーワードの後に開き波括弧を書きます。",
           null,
-          "ここを正しく入力してください。",
-          "例外が発生した場合の処理を定義する。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "int型のxにInteger.parseInt(\"あいう\")を代入します。",
+          "tryブロックを閉じてcatchブロックを開始します。",
+          "System.out.printlnで\"エラー\"を出力します。",
+          "catchブロックを閉じます。",
+          "mainメソッドのブロックを閉じます。",
+          "Mainクラスのブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
@@ -308,9 +317,13 @@ export const javaData2 = {
             "catch",
             "throw",
             "finally",
-            "parseInt"
+            "int",
+            "public",
+            "static",
+            "void",
+            "class"
           ],
-          "others": ["Main", "main(String[] args) {", "あいう", "println", "}", "int", "}\\"]
+          "others": ["Main", "main", "String", "args", "{", "x", "Integer", "parseInt", "\"あいう\"", ";", "}", "Exception", "e", "System", "out", "println", "\"エラー\""]
         },
         "testCases": [
           {
@@ -322,7 +335,7 @@ export const javaData2 = {
     {
       "title": "finally ブロック",
       "correctCode": "class Main {\\n    public static void main(String[] args) {\\n        try {\\n            // println で出力する\\n            System.out.println(\"Try\");\\n        } catch (Exception e) {\\n            System.out.println(\"Catch\");\\n        // finally で必ず実行する\\n        } finally {\\n            System.out.println(\"Finally\");\\n        }\\n    }\\n}",
-      "holeyCode": "class ___ {\\n    public static void ___\\(String[] args) {\\n        ___ {\\n            // println で出力する\\n            System.out.___(\"Try\");\\n        } ___ (Exception e) {\\n            System.out.___(\"Catch\");\\n        // finally で必ず実行する\\n        } ___ {\\n            System.out.___(\"Finally\");\\n        ___\\n    ___\\n___",
+      "holeyCode": "class ___ {\\n    public static void ___(___[] ___) {\\n        try ___\\n            // println で出力する\\n            ___.___.___(___)___\\n        ___ catch (___ ___) {\\n            ___.___.___(___)___\\n        // finally で必ず実行する\\n        ___ finally ___\\n            ___.___.___(___)___\\n        ___\\n    ___\\n___",
       "correctLines": [
           "class Main {",
           "    public static void main(String[] args) {",
@@ -339,19 +352,19 @@ export const javaData2 = {
           "}"
         ],
       "lineHints": [
-          "文字列をコンソールに出力し、改行します。",
-          "エラーの有無に関わらず、最後に必ず実行する処理を記述します。",
-          "例外が発生する可能性のある処理を開始する。",
+          "Mainクラスを定義します。",
+          "main関数を定義します。argsはString配列です。",
+          "tryキーワードの後に開き波括弧を書きます。",
           null,
-          "ここを正しく入力してください。",
-          "例外が発生した場合の処理を定義する。",
-          "ここを正しく入力してください。",
+          "System.out.printlnで\"Try\"を出力します。",
+          "tryブロックを閉じてcatchブロックを開始します。",
+          "System.out.printlnで\"Catch\"を出力します。",
           null,
-          "例外の有無に関わらず必ず実行する処理を定義する。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "catchブロックを閉じてfinallyブロックを開始します。",
+          "System.out.printlnで\"Finally\"を出力します。",
+          "finallyブロックを閉じます。",
+          "mainメソッドのブロックを閉じます。",
+          "Mainクラスのブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
@@ -359,9 +372,14 @@ export const javaData2 = {
             "final",
             "finish",
             "end",
-            "println"
+            "try",
+            "catch",
+            "public",
+            "static",
+            "void",
+            "class"
           ],
-          "others": ["Main", "main(String[] args) {", "try", "catch", "}", "}\\"]
+          "others": ["Main", "main", "String", "args", "{", "}", "System", "out", "println", "\"Try\"", ";", "Exception", "e", "\"Catch\"", "\"Finally\""]
         },
         "testCases": [
           {
@@ -373,7 +391,7 @@ export const javaData2 = {
     {
       "title": "ArrayList",
       "correctCode": "import java.util.ArrayList;\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // itemsにnew ArrayList<>()を代入\\n        ArrayList<String> items = new ArrayList<>();\\n        // add で要素を追加する\\n        items.add(\"A\");\\n        // add で要素を追加する\\n        items.add(\"B\");\\n        // get で要素を取得する\\n        System.out.println(items.get(0));\\n    }\\n}",
-      "holeyCode": "import java.util.___ ;\\n___\\nclass ___ {\\n    public static void ___\\(String[] args) {\\n        // itemsにnew ArrayList<>()を代入\\n        ___<String> items = new ArrayList<>();\\n        // add で要素を追加する\\n        ___.add(\"___\");\\n        // add で要素を追加する\\n        items.add(\"___\");\\n        // get で要素を取得する\\n        System.out.___(items.get(0));\\n    ___\\n___",
+      "holeyCode": "import ___.___.___\\n___\\nclass ___ {\\n    public static void ___(___[] ___) {\\n        // itemsにnew ArrayList<>()を代入\\n        ___<___> ___ = new ___<>()___\\n        // add で要素を追加する\\n        ___.___(___)___\\n        // add で要素を追加する\\n        ___.___(___)___\\n        // get で要素を取得する\\n        ___.___.___(___.___(___)___\\n    ___\\n___",
       "correctLines": [
           "import java.util.ArrayList;",
           "",
@@ -394,28 +412,28 @@ export const javaData2 = {
           "java.util.ArrayListをインポートします。",
           null,
           "Mainクラスを定義します。",
-          "main関数を定義します。",
+          "main関数を定義します。argsはString配列です。",
           null,
           "ArrayList<String>型のitemsにnew ArrayList<>()を代入します。",
           null,
-          "addメソッドで\\\"A\\\"を追加します。",
+          "itemsのaddメソッドで\"A\"を追加します。",
           null,
-          "addメソッドで\\\"B\\\"を追加します。",
+          "itemsのaddメソッドで\"B\"を追加します。",
           null,
-          "getメソッドで要素を取得し、printlnで出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "items.get(0)で要素を取得し、printlnで出力します。",
+          "mainメソッドのブロックを閉じます。",
+          "Mainクラスのブロックを閉じます。"
         ],
         "candidates": {
-          "functions": [
-            "add",
-            "push",
-            "append",
-            "insert",
+          "keywords": [
+            "import",
             "new",
-            "get"
+            "class",
+            "public",
+            "static",
+            "void"
           ],
-          "others": ["ArrayList;", "Main", "main(String[] args) {", "ArrayList", "A", "B", "println", "}", "items", "ArrayList;", "", "}\\"]
+          "others": ["java", "util", "ArrayList;", "Main", "main", "String", "args", "ArrayList", "items", ";", "add", "\"A\"", "\"B\"", "System", "out", "println", "get", "0", "))", "}", ");"]
         },
         "testCases": [
           {
@@ -427,7 +445,7 @@ export const javaData2 = {
     {
       "title": "拡張for文（for-each）",
       "correctCode": "class Main {\\n    public static void main(String[] args) {\\n        // colorsに{\"R\", \"G\", \"B\"}を代入\\n        String[] colors = {\"R\", \"G\", \"B\"};\\n        // for-eachでcolorsから順番にcに取り出す\\n        for (String c : colors) {\\n            // cをprintlnで出力\\n            System.out.println(c);\\n        }\\n    }\\n}",
-      "holeyCode": "class ___ {\\n    public static void ___\\(String[] args) {\\n        // colorsに{\"R\", \"G\", \"B\"}を代入\\n        String[] colors = {___};\\n        // for-eachでcolorsから順番にcに取り出す\\n        for (String ___ : colors) {\\n            // cをprintlnで出力\\n            System.out.___(c);\\n        ___\\n    ___\\n___",
+      "holeyCode": "class ___ {\\n    public static void ___(___[] ___) {\\n        // colorsに{\"R\", \"G\", \"B\"}を代入\\n        ___[] ___ = {___, ___, ___}___\\n        // for-eachでcolorsから順番にcに取り出す\\n        for (___ ___ : ___) {\\n            // cをprintlnで出力\\n            ___.___.___(___)___\\n        ___\\n    ___\\n___",
       "correctLines": [
           "class Main {",
           "    public static void main(String[] args) {",
@@ -442,28 +460,27 @@ export const javaData2 = {
           "}"
         ],
       "lineHints": [
-          "新しいクラス（Main）を定義します。",
-          "Javaプログラムの実行開始地点（メインメソッド）を定義します。",
+          "Mainクラスを定義します。",
+          "main関数を定義します。argsはString配列です。",
           null,
-          "配列の最初の要素です。インデックス0で参照されます。",
+          "String配列colorsに\"R\", \"G\", \"B\"を代入します。",
           null,
-          "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
+          "for-eachでString型のcにcolorsの要素を順番に取り出します。",
           null,
-          "変数の値をコンソールに出力し、改行します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "System.out.printlnでcを出力します。",
+          "forループのブロックを閉じます。",
+          "mainメソッドのブロックを閉じます。",
+          "Mainクラスのブロックを閉じます。"
         ],
         "candidates": {
-          "operators": [
-            ":",
-            "in",
-            "of",
-            "->",
-            "R",
-            "println"
+          "keywords": [
+            "for",
+            "class",
+            "public",
+            "static",
+            "void"
           ],
-          "others": ["Main", "main(String[] args) {", "\"R\", \"G\", \"B\"", "c", "}", "}\\"]
+          "others": ["Main", "main", "String", "args", "colors", "\"R\"", "\"G\"", "\"B\"", ";", "c", "System", "out", "println", "}"]
         },
         "testCases": [
           {
@@ -474,8 +491,8 @@ export const javaData2 = {
       },
     {
       "title": "staticメソッド",
-      "correctCode": "class Calculator {\\n    // static multiply()を定義\\n    static int multiply(int a, int b) {\\n        // a * b を返す\\n        return a * b;\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // multiply メソッドを呼び出す\\n        int result = Calculator.multiply(4, 5);\\n        // println で出力する\\n        System.out.println(result);\\n    }\\n}",
-      "holeyCode": "class ___ {\\n    // static multiply()を定義\\n    static int multiply(int a, int ___) {\\n        // a * b を返す\\n        return a * ___;\\n    ___\\n___\\n___\\nclass ___ {\\n    public static void ___\\(String[] args) {\\n        // multiply メソッドを呼び出す\\n        int result = Calculator.multiply(___, 5);\\n        // println で出力する\\n        System.out.___(result);\\n    ___\\n___",
+      "correctCode": "class Calculator {\\n    // static multiply()を定義\\n    static int multiply(int a, int b) {\\n        // a * b を返す\\n        return a * b;\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // multiply関数を呼び出し（第1引数に4, 第2引数に5）\\n        int result = Calculator.multiply(4, 5);\\n        // println で出力する\\n        System.out.println(result);\\n    }\\n}",
+      "holeyCode": "class ___ {\\n    // static multiply()を定義\\n    static ___ ___(int ___, int ___) {\\n        // a * b を返す\\n        return ___ * ___\\n    ___\\n___\\n___\\nclass ___ {\\n    public static void ___(___[] ___) {\\n        // multiply関数を呼び出し（第1引数に4, 第2引数に5）\\n        ___ ___ = ___.___(___, ___)___\\n        // println で出力する\\n        ___.___.___(___)___\\n    ___\\n___",
       "correctLines": [
           "class Calculator {",
           "    // static multiply()を定義",
@@ -487,7 +504,7 @@ export const javaData2 = {
           "",
           "class Main {",
           "    public static void main(String[] args) {",
-          "        // multiply メソッドを呼び出す",
+          "        // multiply関数を呼び出し（第1引数に4, 第2引数に5）",
           "        int result = Calculator.multiply(4, 5);",
           "        // println で出力する",
           "        System.out.println(result);",
@@ -497,20 +514,20 @@ export const javaData2 = {
       "lineHints": [
           "Calculatorクラスを定義します。",
           null,
-          "static intでmultiplyメソッドを定義します。引数bを入力します。",
+          "static intでmultiplyメソッドを定義します。引数aとbはint型です。",
           null,
           "a * bの結果を返します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "multiplyメソッドのブロックを閉じます。",
+          "Calculatorクラスのブロックを閉じます。",
           null,
           "Mainクラスを定義します。",
-          "main関数を定義します。",
+          "main関数を定義します。argsはString配列です。",
           null,
-          "Calculator.multiplyメソッドを呼び出します。引数に4を入力します。",
+          "int型のresultにCalculator.multiply(4, 5)を代入します。",
           null,
-          "printlnで出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "System.out.printlnでresultを出力します。",
+          "mainメソッドのブロックを閉じます。",
+          "Mainクラスのブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
@@ -519,10 +536,11 @@ export const javaData2 = {
             "private",
             "final",
             "return",
-            "multiply",
-            "println"
+            "class",
+            "void",
+            "int"
           ],
-          "others": ["Calculator", "b", "}", "Main", "main(String[] args) {", "4", "}"]
+          "others": ["Calculator", "multiply", "a", "b", ";", "}", "Main", "main", "String", "args", "result", "4", "5", "System", "out", "println", "b;"]
         },
         "testCases": [
           {
@@ -534,7 +552,7 @@ export const javaData2 = {
     {
       "title": "アクセス修飾子",
       "correctCode": "class Item {\\n    // private でフィールドを隠蔽する\\n    private int price;\\n    \\n    public Item(int p) {\\n        // price に値を代入する\\n        price = p;\\n    }\\n    \\n    public int getPrice() {\\n        // priceを返す\\n        return price;\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // itemにnew Item(100)を代入\\n        Item item = new Item(100);\\n        // getPrice メソッドを呼び出す\\n        System.out.println(item.getPrice());\\n    }\\n}",
-      "holeyCode": "class ___ {\\n    // private でフィールドを隠蔽する\\n    private int ___;\\n    ___\\n    public ___(int p) {\\n        // price に値を代入する\\n        price = ___;\\n    ___\\n    ___\\n    public int ___() {\\n        // priceを返す\\n        return ___;\\n    ___\\n___\\n___\\nclass ___ {\\n    public static void ___\\(String[] args) {\\n        // itemにnew Item(100)を代入\\n        Item item = new Item(___);\\n        // getPrice メソッドを呼び出す\\n        System.out.___(item.getPrice());\\n    ___\\n___",
+      "holeyCode": "class ___ {\\n    // private でフィールドを隠蔽する\\n    private ___ ___\\n    ___\\n    public ___(int ___) {\\n        // price に値を代入する\\n        ___ = ___\\n    ___\\n    ___\\n    public ___ ___() {\\n        // priceを返す\\n        return ___\\n    ___\\n___\\n___\\nclass ___ {\\n    public static void ___(___[] ___) {\\n        // itemにnew Item(100)を代入\\n        ___ ___ = new ___(___)___\\n        // getPrice メソッドを呼び出す\\n        ___.___.___(___.___())___\\n    ___\\n___",
       "correctLines": [
           "class Item {",
           "    // private でフィールドを隠蔽する",
@@ -564,26 +582,26 @@ export const javaData2 = {
           "Itemクラスを定義します。",
           null,
           "private intでpriceフィールドを定義します。",
-          "この行を正しく入力してください。",
-          "public Item()コンストラクタを定義します。",
+          "コードの可読性のための空白行です。",
+          "public Item()コンストラクタを定義します。引数pはint型です。",
           null,
-          "price = pでフィールドに値を代入します。",
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。",
+          "priceにpを代入します。",
+          "コンストラクタのブロックを閉じます。",
+          "コードの可読性のための空白行です。",
           "public intでgetPriceメソッドを定義します。",
           null,
           "priceを返します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "getPriceメソッドのブロックを閉じます。",
+          "Itemクラスのブロックを閉じます。",
           null,
           "Mainクラスを定義します。",
-          "main関数を定義します。",
+          "main関数を定義します。argsはString配列です。",
           null,
           "Item型のitemにnew Item(100)を代入します。",
           null,
-          "getPriceメソッドを呼び出してprintlnで出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "item.getPrice()を呼び出してprintlnで出力します。",
+          "mainメソッドのブロックを閉じます。",
+          "Mainクラスのブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
@@ -591,12 +609,13 @@ export const javaData2 = {
             "public",
             "protected",
             "static",
-            "price",
             "return",
             "new",
-            "getPrice"
+            "class",
+            "void",
+            "int"
           ],
-          "others": ["Item", "p", "}", "Main", "main(String[] args) {", "100", "println", "", "}\\"]
+          "others": ["Item", "price", ";", "", "p", "}", "getPrice", "Main", "main", "String", "args", "item", "100", "System", "out", "println", "price;", "p;"]
         },
         "testCases": [
           {

@@ -59,12 +59,24 @@ files.forEach(file => {
       const methodMatch = hint.match(/[`']?(\w+)[`']?\s*メソッドを呼び出し/);
       if (methodMatch) {
         const methodName = methodMatch[1];
-        const hasCall = line.includes(`.${methodName}(`) ||
-                       line.includes(`:${methodName}(`) ||  // Lua のコロン記法
-                       line.match(new RegExp(`^\\s*${methodName}\\s*\\(`));
-        if (!hasCall) {
-          issues.push({ file, title, line: j, hint: hint.substring(0, 50), code: line.substring(0, 60),
-            problem: `"${methodName}メソッドを呼び出し"が非呼び出し行` });
+
+        // 「staticメソッドを呼び出し」の場合は特別扱い
+        // 静的メソッド呼び出しパターン: ClassName.methodName( を探す
+        if (methodName === 'static') {
+          // 静的メソッド呼び出し: 大文字始まりクラス名.メソッド名(
+          const hasStaticCall = /[A-Z]\w*\.\w+\(/.test(line);
+          if (!hasStaticCall) {
+            issues.push({ file, title, line: j, hint: hint.substring(0, 50), code: line.substring(0, 60),
+              problem: `"staticメソッドを呼び出し"が非静的呼び出し行` });
+          }
+        } else {
+          const hasCall = line.includes(`.${methodName}(`) ||
+                         line.includes(`:${methodName}(`) ||  // Lua のコロン記法
+                         line.match(new RegExp(`^\\s*${methodName}\\s*\\(`));
+          if (!hasCall) {
+            issues.push({ file, title, line: j, hint: hint.substring(0, 50), code: line.substring(0, 60),
+              problem: `"${methodName}メソッドを呼び出し"が非呼び出し行` });
+          }
         }
       }
 
@@ -73,11 +85,18 @@ files.forEach(file => {
       // - Java/C#/JS: new Type()
       // - Go: Type{} (構造体リテラル)
       // - Rust: Type { ... } (構造体リテラル)
+      // - Swift/Kotlin: Type() or Type(arg: value) (new キーワードなし)
+      // - Ruby: Type.new or Type.new(args)
       if (hint.includes('インスタンスを作成')) {
         const hasNew = line.includes('new ') || line.includes('new(');
         const hasGoStruct = /\w+\{\}/.test(line);  // Go: Dog{}
         const hasRustStruct = /\w+\s*\{[^}]*\}/.test(line);  // Rust: Rect { width: 3, height: 4 }
-        if (!hasNew && !hasGoStruct && !hasRustStruct) {
+        // Swift/Kotlin: let x = Type() or let x = Type(arg: value)
+        // パターン: = 大文字始まりの識別子()
+        const hasSwiftKotlinInit = /=\s*[A-Z]\w*\s*\(/.test(line);
+        // Ruby: Type.new or Type.new(args)
+        const hasRubyNew = /[A-Z]\w*\.new\b/.test(line);
+        if (!hasNew && !hasGoStruct && !hasRustStruct && !hasSwiftKotlinInit && !hasRubyNew) {
           issues.push({ file, title, line: j, hint: hint.substring(0, 50), code: line.substring(0, 60),
             problem: 'インスタンス作成の説明がnewなし行' });
         }

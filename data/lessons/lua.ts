@@ -9,7 +9,7 @@ export const luaData = {
     {
       "title": "画面にメッセージを出してみましょう",
       "correctCode": "-- こんにちは, Lua!を表示\\nprint(\"こんにちは, Lua!\")",
-      "holeyCode": "-- こんにちは, Lua!を表示\\n___(\"こんにちは, Lua!\")",
+      "holeyCode": "-- こんにちは, Lua!を表示\\n___(\"___\")",
       "correctLines": [
           "-- こんにちは, Lua!を表示",
           "print(\"こんにちは, Lua!\")"
@@ -22,7 +22,7 @@ export const luaData = {
           "strings": [
             "Hello, Lua!"
           ],
-          "others": ["print"]
+          "others": ["print", "こんにちは, Lua!"]
         },
         "testCases": [
           {
@@ -34,7 +34,7 @@ export const luaData = {
     {
       "title": "自分専用の「はこ」",
       "correctCode": "-- 10を入力\\nlocal x = 10\\n-- xを入力\\nprint(x)",
-      "holeyCode": "-- 10を入力\\nlocal ___ = 10\\n-- xを入力\\n___(x)",
+      "holeyCode": "-- 10を入力\\nlocal ___ = ___\\n-- xを入力\\n___(___)",
       "correctLines": [
           "-- 10を入力",
           "local x = 10",
@@ -66,7 +66,7 @@ export const luaData = {
     {
       "title": "コンピュータで計算しましょう",
       "correctCode": "-- 5を入力\\nlocal a = 5\\n-- 3を入力\\nlocal b = 3\\n-- +でたし算\\nprint(a + b)",
-      "holeyCode": "-- 5を入力\\nlocal ___ = 5\\n-- 3を入力\\nlocal ___ = 3\\n-- +でたし算\\n___(a + b)",
+      "holeyCode": "-- 5を入力\\nlocal ___ = ___\\n-- 3を入力\\nlocal ___ = ___\\n-- +でたし算\\n___(___ ___ ___)",
       "correctLines": [
           "-- 5を入力",
           "local a = 5",

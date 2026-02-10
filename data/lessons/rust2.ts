@@ -9,7 +9,7 @@ export const rust2Data = {
     {
       "title": "所有権の基本",
       "correctCode": "fn main() {\\n    let s1 = String::from(\"こんにちは\");\\n    // s1 の所有権を移動\\n    let s2 = s1;\\n    println!(\"{}\", s2);\\n}",
-      "holeyCode": "fn ___ () {\\n    let ___ = String::from(\"こんにちは\");\\n    // s1 の所有権を移動\\n    let ___ = s1;\\n    ___!(\"{}\", s2);\\n___",
+      "holeyCode": "fn ___() {\\n    let ___ = ___::___(\"こんにちは\");\\n    // s1 の所有権を移動\\n    let ___ = ___;\\n    ___!(\"{}\", ___);\\n___",
       "correctLines": [
           "fn main() {",
           "    let s1 = String::from(\"こんにちは\");",
@@ -20,17 +20,17 @@ export const rust2Data = {
         ],
       "lineHints": [
           "プログラムの実行開始地点（main関数）を定義します。",
-          "String を作成します。",
+          "String::from で文字列を作成します。",
           null,
           "s1 の所有権を s2 に移動します。",
-          "マクロを使用して、文字列と改行を標準出力に出力します。",
-          "ここを正しく入力してください。"
+          "println! マクロで s2 を出力します。",
+          "閉じ括弧で関数を閉じます。"
         ],
         "candidates": {
           "variables": [
-            "s1"
+            "s1", "s2"
           ],
-          "others": ["main()", "s2", "println", "}"]
+          "others": ["main", "String", "from", "println", "}"]
         },
         "testCases": [
           {
@@ -42,7 +42,7 @@ export const rust2Data = {
     {
       "title": "参照と借用",
       "correctCode": "fn print_len(s: &String) {\\n    println!(\"{}\", s.len());\\n}\\nfn main() {\\n    let text = String::from(\"こんにちは\");\\n    // & で参照を渡す\\n    print_len(&text);\\n}",
-      "holeyCode": "fn ___ (s: &String) {\\n    ___!(\"{}\", s.len());\\n___\\nfn ___ () {\\n    let ___ = String::from(\"こんにちは\");\\n    // & で参照を渡す\\n    ___(&text);\\n___",
+      "holeyCode": "fn ___(___: &___) {\\n    ___!(\"{}\", ___.___());\\n___\\nfn ___() {\\n    let ___ = ___::___(\"こんにちは\");\\n    // & で参照を渡す\\n    ___(&___);\\n___",
       "correctLines": [
           "fn print_len(s: &String) {",
           "    println!(\"{}\", s.len());",
@@ -54,20 +54,20 @@ export const rust2Data = {
           "}"
         ],
       "lineHints": [
-          "関数（print_len）を定義します。",
-          "& で参照を渡します。",
-          "ここを正しく入力してください。",
+          "print_len 関数を定義し、引数 s は String の参照型です。",
+          "println! で s.len() の結果を出力します。",
+          "閉じ括弧で関数を閉じます。",
           "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
+          "String::from で文字列を作成します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "print_len に text の参照を渡して呼び出します。",
+          "閉じ括弧で関数を閉じます。"
         ],
         "candidates": {
           "operators": [
             "&"
           ],
-          "others": ["print_len(s:", "println", "}", "main()", "text", "print_len", "}"]
+          "others": ["print_len", "s", "String", "println", "len", "}", "main", "text", "from"]
         },
         "testCases": [
           {
@@ -79,7 +79,7 @@ export const rust2Data = {
     {
       "title": "可変参照",
       "correctCode": "fn add_world(s: &mut String) {\\n    s.push_str(\" world\");\\n}\\nfn main() {\\n    // mut で可変変数にする\\n    let mut text = String::from(\"hello\");\\n    add_world(&mut text);\\n    println!(\"{}\", text);\\n}",
-      "holeyCode": "fn ___ (s: &mut String) {\\n    s.___(\" world\");\\n___\\nfn ___ () {\\n    // mut で可変変数にする\\n    let mut ___ = String::from(\"hello\");\\n    ___(&mut text);\\n    ___!(\"{}\", text);\\n___",
+      "holeyCode": "fn ___(___: &mut ___) {\\n    ___.___(\"___\");\\n___\\nfn ___() {\\n    // mut で可変変数にする\\n    let mut ___ = ___::___(\"___\");\\n    ___(&mut ___);\\n    ___!(\"{}\", ___);\\n___",
       "correctLines": [
           "fn add_world(s: &mut String) {",
           "    s.push_str(\" world\");",
@@ -92,21 +92,21 @@ export const rust2Data = {
           "}"
         ],
       "lineHints": [
-          "関数（add_world）を定義します。",
-          "参照先を変更します。",
-          "mut で可変変数にします。",
-          "&mut で可変参照を渡します。",
+          "add_world 関数を定義し、引数 s は String の可変参照型です。",
+          "s.push_str で文字列を追加します。",
+          "閉じ括弧で関数を閉じます。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "String::from で文字列を作成します。",
+          "add_world に text の可変参照を渡して呼び出します。",
+          "println! で text を出力します。",
+          "閉じ括弧で関数を閉じます。"
         ],
         "candidates": {
           "keywords": [
             "mut"
           ],
-          "others": ["add_world(s:", "push_str", "}", "main()", "text", "add_world", "println", "}"]
+          "others": ["add_world", "s", "String", "push_str", "}", "main", "text", "from", "println", " world", "hello", "world"]
         },
         "testCases": [
           {
@@ -118,7 +118,7 @@ export const rust2Data = {
     {
       "title": "構造体を定義しよう",
       "correctCode": "// Rect構造体を定義\\nstruct Rect {\\n    width: i32,\\n    height: i32,\\n}\\nfn main() {\\n    let r = Rect { width: 3, height: 4 };\\n    println!(\"{}\", r.width);\\n}",
-      "holeyCode": "// Rect構造体を定義\\nstruct ___ {\\n    width: ___,\\n    height: ___,\\n___\\nfn ___ () {\\n    let ___ = Rect { width: 3, height: 4 };\\n    ___!(\"{}\", r.width);\\n___",
+      "holeyCode": "// Rect構造体を定義\\nstruct ___ {\\n    ___: ___,\\n    ___: ___,\\n___\\nfn ___() {\\n    let ___ = ___ { ___: ___, ___: ___ };\\n    ___!(\"{}\", ___.___);\\n___",
       "correctLines": [
           "// Rect構造体を定義",
           "struct Rect {",
@@ -132,20 +132,20 @@ export const rust2Data = {
         ],
       "lineHints": [
           null,
-          "構造体（Rect）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "Rect 構造体を struct で定義します。",
+          "width フィールドを i32 型で定義します。",
+          "height フィールドを i32 型で定義します。",
+          "閉じ括弧で構造体定義を閉じます。",
           "プログラムの実行開始地点（main関数）を定義します。",
-          "構造体のインスタンスを作成します。",
-          "マクロを使用して、文字列と改行を標準出力に出力します。",
-          "ここを正しく入力してください。"
+          "Rect 構造体のインスタンスを作成し、width: 3, height: 4 を設定します。",
+          "println! で r.width を出力します。",
+          "閉じ括弧で関数を閉じます。"
         ],
         "candidates": {
           "keywords": [
             "struct"
           ],
-          "others": ["Rect", "i32", "}", "main()", "r", "println", "}"]
+          "others": ["Rect", "width", "height", "i32", "}", "main", "r", "3", "4", "println"]
         },
         "testCases": [
           {
@@ -157,7 +157,7 @@ export const rust2Data = {
     {
       "title": "impl でメソッドを追加",
       "correctCode": "struct Square {\\n    side: i32,\\n}\\n// impl でメソッドを実装\\nimpl Square {\\n    fn area(&self) -> i32 {\\n        self.side * self.side\\n    }\\n}\\nfn main() {\\n    let s = Square { side: 5 };\\n    println!(\"{}\", s.area());\\n}",
-      "holeyCode": "struct ___ {\\n    side: ___,\\n___\\n// impl でメソッドを実装\\nimpl ___ {\\n    fn ___ (&self) -> i32 {\\n        self.___ * self.___\\n    ___\\n___\\nfn ___ () {\\n    let ___ = Square { side: 5 };\\n    ___!(\"{}\", s.area());\\n___",
+      "holeyCode": "struct ___ {\\n    ___: ___,\\n___\\n// impl でメソッドを実装\\nimpl ___ {\\n    fn ___(&___) -> ___ {\\n        ___.___ * ___.___\\n    ___\\n___\\nfn ___() {\\n    let ___ = ___ { ___: ___ };\\n    ___!(\"{}\", ___.___());\\n___",
       "correctLines": [
           "struct Square {",
           "    side: i32,",
@@ -174,25 +174,25 @@ export const rust2Data = {
           "}"
         ],
       "lineHints": [
-          "構造体（Square）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "Square 構造体を struct で定義します。",
+          "side フィールドを i32 型で定義します。",
+          "閉じ括弧で構造体定義を閉じます。",
           null,
-          "impl でメソッドを実装します。",
-          "関数（area）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "impl で Square にメソッドを実装します。",
+          "area メソッドを定義し、&self を受け取り i32 を返します。",
+          "self.side * self.side で面積を計算します。",
+          "閉じ括弧でメソッドを閉じます。",
+          "閉じ括弧で impl ブロックを閉じます。",
           "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
-          "マクロを使用して、文字列と改行を標準出力に出力します。",
-          "ここを正しく入力してください。"
+          "Square のインスタンスを作成し、side: 5 を設定します。",
+          "println! で s.area() の結果を出力します。",
+          "閉じ括弧で関数を閉じます。"
         ],
         "candidates": {
           "keywords": [
             "impl"
           ],
-          "others": ["Square", "i32", "}", "area(&self)", "side", "main()", "s", "println", "}", "side"]
+          "others": ["Square", "side", "i32", "}", "area", "self", "5", "main", "s", "println"]
         },
         "testCases": [
           {
@@ -204,7 +204,7 @@ export const rust2Data = {
     {
       "title": "enum で状態を表す",
       "correctCode": "// Direction列挙型を定義\\nenum Direction {\\n    Up,\\n    Down,\\n}\\nfn main() {\\n    let d = Direction::Up;\\n    match d {\\n        Direction::Up => println!(\"上\"),\\n        Direction::Down => println!(\"下\"),\\n    }\\n}",
-      "holeyCode": "// Direction列挙型を定義\\nenum ___ {\\n    ___,\\n    ___,\\n___\\nfn ___ () {\\n    let ___ = Direction::Up;\\n    match ___ {\\n        Direction::Up => ___!(\"上\"),\\n        Direction::Down => ___!(\"下\"),\\n    ___\\n___",
+      "holeyCode": "// Direction列挙型を定義\\nenum ___ {\\n    ___,\\n    ___,\\n___\\nfn ___() {\\n    let ___ = ___::___;\\n    match ___ {\\n        ___::___ => ___!(\"上\"),\\n        ___::___ => ___!(\"下\"),\\n    ___\\n___",
       "correctLines": [
           "// Direction列挙型を定義",
           "enum Direction {",
@@ -221,23 +221,23 @@ export const rust2Data = {
         ],
       "lineHints": [
           null,
-          "enum で列挙型を定義します。",
-          "Direction::Up を使います。",
-          "match でパターンマッチングします。",
-          "ここを正しく入力してください。",
+          "Direction 列挙型を enum で定義します。",
+          "Up バリアントを定義します。",
+          "Down バリアントを定義します。",
+          "閉じ括弧で列挙型定義を閉じます。",
           "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "Direction::Up を d に代入します。",
+          "match で d のパターンマッチングを開始します。",
+          "Direction::Up にマッチした場合、「上」を出力します。",
+          "Direction::Down にマッチした場合、「下」を出力します。",
+          "閉じ括弧で match ブロックを閉じます。",
+          "閉じ括弧で関数を閉じます。"
         ],
         "candidates": {
           "keywords": [
-            "enum"
+            "enum", "match"
           ],
-          "others": ["Direction", "Up", "Down", "}", "main()", "d", "println", "}"]
+          "others": ["Direction", "Up", "Down", "}", "main", "d", "println"]
         },
         "testCases": [
           {
@@ -249,7 +249,7 @@ export const rust2Data = {
     {
       "title": "Option<T> で null を安全に",
       "correctCode": "fn main() {\\n    // Some で値があることを示す\\n    let val: Option<i32> = Some(42);\\n    match val {\\n        Some(n) => println!(\"{}\", n),\\n        None => println!(\"none\"),\\n    }\\n}",
-      "holeyCode": "fn ___ () {\\n    // Some で値があることを示す\\n    let val: ___ = ___(42);\\n    match ___ {\\n        Some(n) => ___!(\"{}\", n),\\n        None => ___!(\"none\"),\\n    ___\\n___",
+      "holeyCode": "fn ___() {\\n    // Some で値があることを示す\\n    let ___: ___<___> = ___(___);\\n    match ___ {\\n        ___(___) => ___!(\"___\", ___),\\n        ___ => ___!(\"___\"),\\n    ___\\n___",
       "correctLines": [
           "fn main() {",
           "    // Some で値があることを示す",
@@ -263,18 +263,18 @@ export const rust2Data = {
       "lineHints": [
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "Some で値があることを示します。",
-          "ここを正しく入力してください。",
-          "マクロを使用して、文字列と改行を標準出力に出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "val に Option<i32> 型で Some(42) を代入します。",
+          "match で val のパターンマッチングを開始します。",
+          "Some(n) にマッチした場合、n を出力します。",
+          "None にマッチした場合、\"none\" を出力します。",
+          "閉じ括弧で match ブロックを閉じます。",
+          "閉じ括弧で関数を閉じます。"
         ],
         "candidates": {
           "keywords": [
-            "Some"
+            "match"
           ],
-          "others": ["main()", "Option<i32>", "val", "println", "}", "}"]
+          "others": ["main", "val", "Option", "i32", "Some", "42", "n", "println", "None", "}", "{}", "none"]
         },
         "testCases": [
           {
@@ -286,7 +286,7 @@ export const rust2Data = {
     {
       "title": "Result<T, E> でエラー処理",
       "correctCode": "fn half(n: i32) -> Result<i32, String> {\\n    if n % 2 != 0 {\\n        return Err(\"odd\".to_string());\\n    }\\n    // Ok で成功を返す\\n    Ok(n / 2)\\n}\\nfn main() {\\n    match half(10) {\\n        Ok(v) => println!(\"{}\", v),\\n        Err(e) => println!(\"{}\", e),\\n    }\\n}",
-      "holeyCode": "fn ___ (n: i32) -> Result<i32, String> {\\n    if n % 2 ___ != ___ {\\n        return Err(___));\\n    ___\\n    // Ok で成功を返す\\n    ___(n / 2)\\n___\\nfn ___ () {\\n    match ___(10) {\\n        Ok(v) => ___!(\"{}\", v),\\n        Err(e) => ___!(\"{}\", e),\\n    ___\\n___",
+      "holeyCode": "fn ___(___: ___) -> ___<___, ___> {\\n    if ___ % ___ != ___ {\\n        return ___(\"___\".___());\\n    ___\\n    // Ok で成功を返す\\n    ___(___ / ___)\\n___\\nfn ___() {\\n    match ___(___) {\\n        ___(___) => ___!(\"___\", ___),\\n        ___(___) => ___!(\"___\", ___),\\n    ___\\n___",
       "correctLines": [
           "fn half(n: i32) -> Result<i32, String> {",
           "    if n % 2 != 0 {",
@@ -303,25 +303,25 @@ export const rust2Data = {
           "}"
         ],
       "lineHints": [
-          "Err でエラーを返します。",
-          "Ok で成功を返します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "half 関数を定義し、引数 n は i32 型、戻り値は Result<i32, String> です。",
+          "if で n % 2 != 0 の条件を評価します。",
+          "Err で \"odd\".to_string() を返します。",
+          "閉じ括弧で if ブロックを閉じます。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "Ok で n / 2 を返します。",
+          "閉じ括弧で関数を閉じます。",
           "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "match で half(10) の結果をパターンマッチングします。",
+          "Ok(v) にマッチした場合、v を出力します。",
+          "Err(e) にマッチした場合、e を出力します。",
+          "閉じ括弧で match ブロックを閉じます。",
+          "閉じ括弧で関数を閉じます。"
         ],
         "candidates": {
           "keywords": [
-            "Ok"
+            "if", "return", "match"
           ],
-          "others": ["half(n:", "!=", "\"odd\".to_string(", "}", "main()", "half", "println", "", "}"]
+          "others": ["half", "n", "i32", "Result", "String", "2", "0", "Err", "to_string", "}", "Ok", "main", "10", "v", "println", "e", "odd", "{}"]
         },
         "testCases": [
           {
@@ -333,7 +333,7 @@ export const rust2Data = {
     {
       "title": "トレイトを定義しよう",
       "correctCode": "// Speakトレイトを定義\\ntrait Speak {\\n    fn speak(&self);\\n}\\nstruct Dog;\\nimpl Speak for Dog {\\n    fn speak(&self) {\\n        println!(\"ワン！\");\\n    }\\n}\\nfn main() {\\n    let d = Dog;\\n    d.speak();\\n}",
-      "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    fn ___ (&self);\\n___\\nstruct ___;\\nimpl ___ for ___ {\\n    fn ___ (&self) {\\n        ___!(\"ワン！\");\\n    ___\\n___\\nfn ___ () {\\n    let ___ = Dog;\\n    d.___();\\n___",
+      "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    fn ___(&___);\\n___\\nstruct ___;\\nimpl ___ for ___ {\\n    fn ___(&___) {\\n        ___!(\"ワン！\");\\n    ___\\n___\\nfn ___() {\\n    let ___ = ___;\\n    ___.___();\\n___",
       "correctLines": [
           "// Speakトレイトを定義",
           "trait Speak {",
@@ -352,25 +352,25 @@ export const rust2Data = {
         ],
       "lineHints": [
           null,
-          "trait でトレイトを定義します。",
-          "Dog に Speak を実装します。",
-          "ここを正しく入力してください。",
-          "構造体（Dog）を定義します。",
-          "ここを正しく入力してください。",
-          "関数（speak）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "Speak トレイトを trait で定義します。",
+          "speak メソッドのシグネチャを定義します（&self を受け取る）。",
+          "閉じ括弧でトレイト定義を閉じます。",
+          "Dog 構造体を定義します。",
+          "impl Speak for Dog で Dog に Speak を実装します。",
+          "speak メソッドを実装します（&self を受け取る）。",
+          "println! で「ワン！」を出力します。",
+          "閉じ括弧でメソッドを閉じます。",
+          "閉じ括弧で impl ブロックを閉じます。",
           "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "d に Dog のインスタンスを代入します。",
+          "d.speak() を呼び出します。",
+          "閉じ括弧で関数を閉じます。"
         ],
         "candidates": {
           "keywords": [
-            "trait"
+            "trait", "impl", "for", "struct"
           ],
-          "others": ["Speak", "speak(&self);", "}", "Dog", "speak(&self)", "println", "main()", "d", "speak", "speak(&self);", "}"]
+          "others": ["Speak", "speak", "self", "}", "Dog", "println", "main", "d"]
         },
         "testCases": [
           {
@@ -382,7 +382,7 @@ export const rust2Data = {
     {
       "title": "ジェネリクスを使おう",
       "correctCode": "// T を型パラメータとして使う\\nfn print_val<T: std::fmt::Display>(val: T) {\\n    println!(\"{}\", val);\\n}\\nfn main() {\\n    print_val(42);\\n    print_val(\"こんにちは\");\\n}",
-      "holeyCode": "// T を型パラメータとして使う\\nfn print_val<___: std::fmt::Display>(val: T) {\\n    ___!(\"{}\", val);\\n___\\nfn ___ () {\\n    ___(42);\\n    ___(\"こんにちは\");\\n___",
+      "holeyCode": "// T を型パラメータとして使う\\nfn ___<___: ___::___::___>(___: ___) {\\n    ___!(\"{}\", ___);\\n___\\nfn ___() {\\n    ___(___);\\n    ___(\"こんにちは\");\\n___",
       "correctLines": [
           "// T を型パラメータとして使う",
           "fn print_val<T: std::fmt::Display>(val: T) {",
@@ -395,19 +395,19 @@ export const rust2Data = {
         ],
       "lineHints": [
           null,
-          "T を型パラメータとして使います。",
-          "i32 型で呼び出します。",
-          "&str 型で呼び出します。",
+          "print_val 関数を定義し、型パラメータ T は std::fmt::Display トレイト境界を持ちます。",
+          "println! で val を出力します。",
+          "閉じ括弧で関数を閉じます。",
           "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "print_val(42) で i32 型を渡して呼び出します。",
+          "print_val(\"こんにちは\") で &str 型を渡して呼び出します。",
+          "閉じ括弧で関数を閉じます。"
         ],
         "candidates": {
           "variables": [
             "T"
           ],
-          "others": ["println", "}", "main()", "print_val", "}"]
+          "others": ["print_val", "std", "fmt", "Display", "val", "println", "}", "main", "42"]
         },
         "testCases": [
           {

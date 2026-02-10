@@ -9,7 +9,7 @@ export const csharp3Data = {
     {
       "title": "async/await の基本",
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでTasks名前空間をインポート\\nusing System.Threading.Tasks;\\n\\n// Programクラスを定義\\nclass Program {\\n    // async Taskでエントリーポイント\\n    static async Task Main() {\\n        // awaitで非同期処理を待機\\n        var result = await CalculateAsync(5);\\n        // resultを表示\\n        Console.WriteLine(result);\\n    }\\n    \\n    // 整数を返す非同期メソッドを定義\\n    static async Task<int> CalculateAsync(int n) {\\n        // 遅延を待機\\n        await Task.Delay(100);\\n        // nの2乗を返す\\n        return n * n;\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでTasks名前空間をインポート\\nusing ___.Threading.Tasks;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // async Taskでエントリーポイント\\n    static async Task ___() {\\n        // awaitで非同期処理を待機\\n        var ___ = await CalculateAsync(5);\\n        // resultを表示\\n        Console.WriteLine(___);\\n    ___\\n    ___\\n    // 整数を返す非同期メソッドを定義\\n    static async Task<int> CalculateAsync(int ___) {\\n        // 遅延を待機\\n        await Task.Delay(___);\\n        // nの2乗を返す\\n        return ___ * n;\\n    ___\\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでTasks名前空間をインポート\\nusing ___.___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // async Taskでエントリーポイント\\n    static ___ ___ ___() {\\n        // awaitで非同期処理を待機\\n        var ___ = ___ ___(___);\\n        // resultを表示\\n        ___.___(___);\\n    ___\\n    ___\\n    // 整数を返す非同期メソッドを定義\\n    static ___ ___<___> ___(int ___) {\\n        // 遅延を待機\\n        ___ ___.___(___)___\\n        // nの2乗を返す\\n        return ___ * ___;\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -66,7 +66,7 @@ export const csharp3Data = {
             "async",
             "return"
           ],
-          "others": ["System", "Program", "Main", "result", "int", "100", "n", "}", "", "}"]
+          "others": ["System", "Threading", "Tasks", "Program", "Task", "Main", "result", "CalculateAsync", "5", "Console", "WriteLine", "int", "n", "Delay", "100", ";", "}", "", "Tasks;"]
         },
         "testCases": [
           {
@@ -78,7 +78,7 @@ export const csharp3Data = {
     {
       "title": "LINQ OrderBy",
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 3 を含む配列を定義\\n        var nums = new[] { 3, 1, 4, 1, 5 };\\n        // OrderByでソート\\n        var sorted = nums.OrderBy(x => x);\\n        // Joinで \",\" を区切り文字として結果を表示\\n        Console.WriteLine(string.Join(\",\", sorted));\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.Linq;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // 3 を含む配列を定義\\n        var ___ = new[] { 3, 1, 4, 1, 5 };\\n        // OrderByでソート\\n        var ___ = nums.OrderBy(x => x);\\n        // Joinで \",\" を区切り文字として結果を表示\\n        Console.___(string.Join(\",\", sorted));\\n    ___\\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 3 を含む配列を定義\\n        var ___ = new[] { ___, ___, ___, ___, ___ };\\n        // OrderByでソート\\n        var ___ = ___.___(___ => ___);\\n        // Joinで \",\" を区切り文字として結果を表示\\n        ___.___(___.___(\"___\", ___));\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -123,7 +123,7 @@ export const csharp3Data = {
             "Sort",
             "Arrange"
           ],
-          "others": ["System", "Linq", "Program", "Main", "3", "Join", ",", "nums", "sorted", "WriteLine", "}", "", "}", "}", "}\\"]
+          "others": ["System", "Linq", "Program", "void", "Main", "nums", "3", "1", "4", "5", "sorted", "x", "Console", "WriteLine", "string", "Join", ",", "}", "", "Linq;"]
         },
         "testCases": [
           {
@@ -135,7 +135,7 @@ export const csharp3Data = {
     {
       "title": "LINQ First と FirstOrDefault",
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 空の配列を定義\\n        var nums = new int[] {};\\n        // FirstOrDefaultで空の場合はデフォルト値\\n        var result = nums.FirstOrDefault();\\n        // resultを表示\\n        Console.WriteLine(result);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.Linq;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // 空の配列を定義\\n        var ___ = new int[] {};\\n        // FirstOrDefaultで空の場合はデフォルト値\\n        var ___ = nums.FirstOrDefault();\\n        // resultを表示\\n        Console.WriteLine(___);\\n    ___\\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 空の配列を定義\\n        var ___ = new ___[] {};\\n        // FirstOrDefaultで空の場合はデフォルト値\\n        var ___ = ___.___();\\n        // resultを表示\\n        ___.___(___);\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -180,7 +180,7 @@ export const csharp3Data = {
             "First",
             "Single"
           ],
-          "others": ["System", "Linq", "Program", "Main", "int", "WriteLine", "nums", "result", "}", "", "}", "}", "}\\"]
+          "others": ["System", "Linq", "Program", "void", "Main", "nums", "int", "result", "Console", "WriteLine", "}", "", "Linq;"]
         },
         "testCases": [
           {
@@ -192,7 +192,7 @@ export const csharp3Data = {
     {
       "title": "LINQ Any と All",
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 1 を含む配列を定義\\n        var nums = new[] { 1, 2, 3, 4, 5 };\\n        // Allで全要素が条件を満たすかチェック\\n        var allPositive = nums.All(x => x > 0);\\n        // allPositiveを表示\\n        Console.WriteLine(allPositive);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.Linq;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // 1 を含む配列を定義\\n        var ___ = new[] { 1, 2, 3, 4, 5 };\\n        // Allで全要素が条件を満たすかチェック\\n        var ___ = nums.All(x => x > 0);\\n        // allPositiveを表示\\n        Console.WriteLine(___);\\n    ___\\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 1 を含む配列を定義\\n        var ___ = new[] { ___, ___, ___, ___, ___ };\\n        // Allで全要素が条件を満たすかチェック\\n        var ___ = ___.___(___ => ___ > ___);\\n        // allPositiveを表示\\n        ___.___(___);\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -237,7 +237,7 @@ export const csharp3Data = {
             "Any",
             "Contains"
           ],
-          "others": ["System", "Linq", "Program", "Main", "1", "WriteLine", "nums", "allPositive", "}", "", "}", "}", "}\\"]
+          "others": ["System", "Linq", "Program", "void", "Main", "nums", "1", "2", "3", "4", "5", "allPositive", "x", "0", "Console", "WriteLine", "}", "", "Linq;"]
         },
         "testCases": [
           {
@@ -249,7 +249,7 @@ export const csharp3Data = {
     {
       "title": "LINQ Sum と Average",
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 10 を含む配列を定義\\n        var nums = new[] { 10, 20, 30 };\\n        // Sumで合計を計算\\n        var total = nums.Sum();\\n        // totalを表示\\n        Console.WriteLine(total);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.Linq;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // 10 を含む配列を定義\\n        var ___ = new[] { 10, 20, 30 };\\n        // Sumで合計を計算\\n        var ___ = nums.Sum();\\n        // totalを表示\\n        Console.WriteLine(___);\\n    ___\\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 10 を含む配列を定義\\n        var ___ = new[] { ___, ___, ___ };\\n        // Sumで合計を計算\\n        var ___ = ___.___();\\n        // totalを表示\\n        ___.___(___);\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -294,7 +294,7 @@ export const csharp3Data = {
             "Total",
             "Add"
           ],
-          "others": ["System", "Linq", "Program", "Main", "10", "WriteLine", "nums", "total", "}", "", "}", "}", "}\\"]
+          "others": ["System", "Linq", "Program", "void", "Main", "nums", "10", "20", "30", "total", "Console", "WriteLine", "}", "", "Linq;"]
         },
         "testCases": [
           {
@@ -306,7 +306,7 @@ export const csharp3Data = {
     {
       "title": "switch式（パターンマッチ）",
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // nを2で初期化\\n        int n = 2;\\n        // switchでnを分岐しresultに代入\\n        var result = n switch {\\n            // 1の場合\\n            1 => \"one\",\\n            // 2の場合\\n            2 => \"two\",\\n            // その他の場合\\n            _ => \"other\"\\n        };\\n        // resultをWriteLineで出力\\n        Console.WriteLine(result);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // nを2で初期化\\n        int n = ___;\\n        // switchでnを分岐しresultに代入\\n        var ___ = n switch {\\n            // 1の場合\\n            ___ => \"___\",\\n            // 2の場合\\n            2 => \"___\",\\n            // その他の場合\\n            _ => \"___\"\\n        ___\\n        // resultをWriteLineで出力\\n        Console.WriteLine(___);\\n    ___\\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // nを2で初期化\\n        ___ ___ = ___;\\n        // switchでnを分岐しresultに代入\\n        var ___ = ___ switch {\\n            // 1の場合\\n            ___ => \"___\",\\n            // 2の場合\\n            ___ => \"___\",\\n            // その他の場合\\n            ___ => \"___\"\\n        ___\\n        // resultをWriteLineで出力\\n        ___.___(___);\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -361,7 +361,7 @@ export const csharp3Data = {
             "match",
             "case"
           ],
-          "others": ["System", "Program", "Main", "2", "1", "one", "two", "other", "WriteLine", "result", "};", "}"]
+          "others": ["System", "Program", "void", "Main", "int", "n", "2", "result", "1", "one", "two", "_", "other", "};", "Console", "WriteLine", "}", ""]
         },
         "testCases": [
           {
@@ -373,7 +373,7 @@ export const csharp3Data = {
     {
       "title": "Dictionary",
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでCollections.Generic名前空間をインポート\\nusing System.Collections.Generic;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Dictionaryでキーと値の辞書\\n        var dict = new Dictionary<string, int>();\\n        // キー\"a\"に値を設定\\n        dict[\"a\"] = 1;\\n        // キー\"b\"に値を設定\\n        dict[\"b\"] = 2;\\n        // キー\"a\"の値を表示\\n        Console.WriteLine(dict[\"a\"]);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでCollections.Generic名前空間をインポート\\nusing ___.Collections.Generic;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // Dictionaryでキーと値の辞書\\n        var ___ = new Dictionary<string, int>();\\n        // キー\"a\"に値を設定\\n        dict[\"___\"] = 1;\\n        // キー\"b\"に値を設定\\n        dict[\"___\"] = 2;\\n        // キー\"a\"の値を表示\\n        Console.___(dict[\"a\"]);\\n    ___\\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでCollections.Generic名前空間をインポート\\nusing ___.___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // Dictionaryでキーと値の辞書\\n        var ___ = new ___<___, ___>();\\n        // キー\"a\"に値を設定\\n        ___[\"___\"] = ___;\\n        // キー\"b\"に値を設定\\n        ___[\"___\"] = ___;\\n        // キー\"a\"の値を表示\\n        ___.___(___[\"___\"]);\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -422,7 +422,7 @@ export const csharp3Data = {
             "Map",
             "Hashtable"
           ],
-          "others": ["System", "Generic", "Program", "Main", "a", "b", "WriteLine", "dict", "}", "", "}", "}", "}\\"]
+          "others": ["System", "Collections", "Generic", "Program", "void", "Main", "dict", "string", "int", "a", "1", "b", "2", "Console", "WriteLine", "}", "", "Generic;"]
         },
         "testCases": [
           {
@@ -434,7 +434,7 @@ export const csharp3Data = {
     {
       "title": "string interpolation",
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 変数xを定義\\n        var x = 10;\\n        // 変数yを定義\\n        var y = 20;\\n        // $で文字列補間\\n        Console.WriteLine($\"Sum: {x + y}\");\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // 変数xを定義\\n        var ___ = 10;\\n        // 変数yを定義\\n        var ___ = 20;\\n        // $で文字列補間\\n        Console.___($\"Sum: {x + y}\");\\n    ___\\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 変数xを定義\\n        var ___ = ___;\\n        // 変数yを定義\\n        var ___ = ___;\\n        // $で文字列補間\\n        ___.___(___\"___: {___ + ___}\");\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -475,7 +475,7 @@ export const csharp3Data = {
             "@",
             "#"
           ],
-          "others": ["System", "Program", "Main", "10", "20", "x", "y", "WriteLine", "}", "", "}"]
+          "others": ["System", "Program", "void", "Main", "x", "10", "y", "20", "Console", "WriteLine", "Sum", "}", ""]
         },
         "testCases": [
           {
@@ -487,7 +487,7 @@ export const csharp3Data = {
     {
       "title": "record 型",
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// recordで値型を定義\\nrecord Point(int X, int Y);\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Pointインスタンスを作成\\n        var p = new Point(10, 20);\\n        // pを表示\\n        Console.WriteLine(p);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n___\\n// recordで値型を定義\\nrecord Point(int X, int ___);\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // Pointインスタンスを作成\\n        var ___ = new Point(10, 20);\\n        // pを表示\\n        Console.WriteLine(___);\\n    ___\\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n___\\n// recordで値型を定義\\n___ ___(int ___, int ___);\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // Pointインスタンスを作成\\n        var ___ = new ___(___, ___);\\n        // pを表示\\n        ___.___(___);\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -530,7 +530,7 @@ export const csharp3Data = {
             "struct",
             "class"
           ],
-          "others": ["System", "Program", "Main", "Point", "WriteLine", "Y", "p", "}", "", "}"]
+          "others": ["System", "Program", "Main", "Point", "WriteLine", "Y", "p", "}", "", "}", "X", "void", "10", "20", "Console"]
         },
         "testCases": [
           {
@@ -542,7 +542,7 @@ export const csharp3Data = {
     {
       "title": "using で自動解放",
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでIO名前空間をインポート\\nusing System.IO;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // usingで自動解放\\n        using var writer = new StringWriter();\\n        // 文字列を書き込む\\n        writer.WriteLine(\"こんにちは\");\\n        // writer.ToString(を表示\\n        Console.WriteLine(writer.ToString().Trim());\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでIO名前空間をインポート\\nusing ___.IO;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // usingで自動解放\\n        using ___ writer = new StringWriter();\\n        // 文字列を書き込む\\n        ___.WriteLine(\"___\");\\n        // writer.ToString(を表示\\n        Console.___(writer.ToString().Trim());\\n    ___\\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでIO名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // usingで自動解放\\n        using ___ ___ = new ___();\\n        // 文字列を書き込む\\n        ___.___(\"___\");\\n        // writer.ToString(を表示\\n        ___.___(___.___().___());\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -587,7 +587,7 @@ export const csharp3Data = {
             "with",
             "try"
           ],
-          "others": ["System", "IO", "Program", "Main", "WriteLine", "Trim", "var", "こんにちは", "}", "", "writer", "}"]
+          "others": ["System", "IO", "Program", "void", "Main", "var", "writer", "StringWriter", "WriteLine", "こんにちは", "Console", "ToString", "Trim", "}", "", "IO;"]
         },
         "testCases": [
           {

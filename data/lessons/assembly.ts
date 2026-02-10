@@ -9,7 +9,7 @@ export const assemblyData = {
     {
       "title": "画面にメッセージを出してみましょう",
       "correctCode": "; データセクションを宣言\\nsection .data\\n  ; 文字列msgを定義\\n  msg db \"こんにちは\", 0xA\\n\\n; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n\\n; プログラムの開始地点\\n_start:\\n  ; 1は「書く」という命令\\n  mov rax, 1\\n  ; 1は標準出力\\n  mov rdi, 1\\n  ; msgで表示する文字を指定\\n  mov rsi, msg\\n  ; 文字のバイト数を指定\\n  mov rdx, 16\\n  ; システムコールを実行\\n  syscall\\n\\n  ; 60は「終了」という命令\\n  mov rax, 60\\n  ; エラーコード0\\n  xor rdi, rdi\\n  ; システムコールを実行\\n  syscall",
-      "holeyCode": "; データセクションを宣言\\nsection .___\\n  ; 文字列msgを定義\\n  ___ db \"___\", 0xA\\n\\n; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n\\n; プログラムの開始地点\\n___:\\n  ; 1は「書く」という命令\\n  mov ___, ___\\n  ; 1は標準出力\\n  mov ___, ___\\n  ; msgで表示する文字を指定\\n  mov ___, ___\\n  ; 文字のバイト数を指定\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___\\n\\n  ; 60は「終了」という命令\\n  mov ___, ___\\n  ; エラーコード0\\n  xor ___, ___\\n  ; システムコールを実行\\n  ___",
+      "holeyCode": "; データセクションを宣言\\n___ .___\\n  ; 文字列msgを定義\\n  ___ ___ \"___\", ___\\n\\n; テキストセクションを宣言\\n___ .___\\n  ; エントリーポイントを公開\\n  ___ ___\\n\\n; プログラムの開始地点\\n___:\\n  ; 1は「書く」という命令\\n  ___ ___, ___\\n  ; 1は標準出力\\n  ___ ___, ___\\n  ; msgで表示する文字を指定\\n  ___ ___, ___\\n  ; 文字のバイト数を指定\\n  ___ ___, ___\\n  ; システムコールを実行\\n  ___\\n\\n  ; 60は「終了」という命令\\n  ___ ___, ___\\n  ; エラーコード0\\n  ___ ___, ___\\n  ; システムコールを実行\\n  ___",
       "correctLines": [
           "; データセクションを宣言",
           "section .data",
@@ -43,32 +43,32 @@ export const assemblyData = {
         ],
       "lineHints": [
           null,
-          "データセクションを示すディレクティブです。",
+          "section でデータセクションを宣言します。",
           null,
-          "名前 msg と文字列「こんにちは」を db で定義します。",
+          "db ディレクティブで msg という名前の文字列を定義します。0xA は改行コードです。",
           null,
           null,
-          "コードセクションを示すディレクティブです。",
+          "section でコードセクションを宣言します。",
           null,
-          "プログラムのエントリーポイントとして _start を公開します。",
+          "global で _start を外部公開します。",
           null,
           null,
           "プログラムの開始ラベル _start: を定義します。",
           null,
-          "raxレジスタに「書き込み」命令の番号 1 をセットします。",
+          "mov で rax に「書き込み」命令の番号 1 をセットします。",
           null,
-          "rdiレジスタに「標準出力」を示す番号 1 をセットします。",
+          "mov で rdi に「標準出力」を示す番号 1 をセットします。",
           null,
-          "rsiレジスタに、表示する文字列のアドレス msg をセットします。",
+          "mov で rsi に、表示する文字列のアドレス msg をセットします。",
           null,
-          "rdxレジスタに、書き込むバイト数 16 をセットします。",
+          "mov で rdx に、書き込むバイト数 16 をセットします。",
           null,
           "syscall でシステムコールを実行します。",
           null,
           null,
-          "raxレジスタに「終了」命令の番号 60 をセットします。",
+          "mov で rax に「終了」命令の番号 60 をセットします。",
           null,
-          "xor命令で rdi レジスタを 0 にクリアします。",
+          "xor 命令で rdi を 0 にクリアします。",
           null,
           "syscall でプログラムを終了します。"
         ],
@@ -76,7 +76,7 @@ export const assemblyData = {
           "variables": [
             "msg"
           ],
-          "others": [".data", "こんにちは", ".text", "_start", "rax", "1", "rdi", "rsi", "rdx", "16", "syscall", "60", "data", "text"]
+          "others": ["section", "data", "db", "こんにちは", "0xA", "text", "global", "_start", "mov", "rax", "1", "rdi", "rsi", "rdx", "16", "syscall", "60", "xor"]
         },
         "testCases": [
           {
@@ -88,7 +88,7 @@ export const assemblyData = {
     {
       "title": "違うメッセージを表示しましょう",
       "correctCode": "; データセクションを宣言\\nsection .data\\n  ; 表示したい文字列を定義\\n  msg db \"Hi\", 0xA\\n\\n; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n\\n; プログラムの開始地点\\n_start:\\n  ; 1は書き込み命令\\n  mov rax, 1\\n  ; 1は標準出力\\n  mov rdi, 1\\n  ; msgを指定\\n  mov rsi, msg\\n  ; Hiは2文字+改行で3バイト\\n  mov rdx, 3\\n  ; システムコールを実行\\n  syscall\\n\\n  ; 終了処理\\n  mov rax, 60\\n  xor rdi, rdi\\n  syscall",
-      "holeyCode": "; データセクションを宣言\\nsection .___\\n  ; 表示したい文字列を定義\\n  ___ db \"___\", 0xA\\n\\n; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n\\n; プログラムの開始地点\\n___:\\n  ; 1は書き込み命令\\n  mov ___, ___\\n  ; 1は標準出力\\n  mov ___, ___\\n  ; msgを指定\\n  mov ___, ___\\n  ; Hiは2文字+改行で3バイト\\n  mov ___, ___\\n  ; システムコールを実行\\n  ___\\n\\n  ; 終了処理\\n  mov ___, ___\\n  xor ___, ___\\n  ___",
+      "holeyCode": "; データセクションを宣言\\n___ .___\\n  ; 表示したい文字列を定義\\n  ___ ___ \"___\", ___\\n\\n; テキストセクションを宣言\\n___ .___\\n  ; エントリーポイントを公開\\n  ___ ___\\n\\n; プログラムの開始地点\\n___:\\n  ; 1は書き込み命令\\n  ___ ___, ___\\n  ; 1は標準出力\\n  ___ ___, ___\\n  ; msgを指定\\n  ___ ___, ___\\n  ; Hiは2文字+改行で3バイト\\n  ___ ___, ___\\n  ; システムコールを実行\\n  ___\\n\\n  ; 終了処理\\n  ___ ___, ___\\n  ___ ___, ___\\n  ___",
       "correctLines": [
           "; データセクションを宣言",
           "section .data",
@@ -120,30 +120,30 @@ export const assemblyData = {
         ],
       "lineHints": [
           null,
-          "データセクション .data を宣言します。",
+          "section でデータセクションを宣言します。",
           null,
-          "msg という名前で \"Hi\" を定義します。",
+          "db ディレクティブで msg という名前の文字列を定義します。0xA は改行コードです。",
           null,
           null,
-          "テキストセクション .text を宣言します。",
+          "section でテキストセクションを宣言します。",
           null,
-          "グローバルシンボル _start を宣言します。",
+          "global で _start を外部公開します。",
           null,
           null,
           "ラベル _start: を定義します。",
           null,
-          "rax に命令番号 1 を代入します。",
+          "mov で rax に命令番号 1 を代入します。",
           null,
-          "rdi に出力先番号 1 を代入します。",
+          "mov で rdi に出力先番号 1 を代入します。",
           null,
-          "rsi に文字列のアドレス msg を代入します。",
+          "mov で rsi に文字列のアドレス msg を代入します。",
           null,
-          "rdx にバイト数 3 を指定します。",
+          "mov で rdx にバイト数 3 を指定します。",
           null,
           "syscall を呼び出します。",
           null,
           null,
-          "rax に終了番号 60 をセットします。",
+          "mov で rax に終了番号 60 をセットします。",
           "xor で rdi を 0 にします。",
           "syscall を呼び出します。"
         ],
@@ -151,7 +151,7 @@ export const assemblyData = {
           "strings": [
             "Hi"
           ],
-          "others": ["data", "msg", "text", "_start", "rax", "1", "rdi", "rsi", "rdx", "3", "syscall", "60"]
+          "others": ["section", "data", "msg", "db", "0xA", "text", "global", "_start", "mov", "rax", "1", "rdi", "rsi", "rdx", "3", "syscall", "60", "xor"]
         },
         "testCases": [
           {
@@ -163,7 +163,7 @@ export const assemblyData = {
     {
       "title": "終了コードを返しましょう",
       "correctCode": "; テキストセクションを宣言\\nsection .text\\n  ; エントリーポイントを公開\\n  global _start\\n\\n; プログラムの開始地点\\n_start:\\n  ; 終了システムコール60\\n  mov rax, 60\\n  ; 終了コード0をセット\\n  xor rdi, rdi\\n  ; システムコールを実行\\n  syscall",
-      "holeyCode": "; テキストセクションを宣言\\nsection .___\\n  ; エントリーポイントを公開\\n  global ___\\n\\n; プログラムの開始地点\\n___:\\n  ; 終了システムコール60\\n  mov ___, ___\\n  ; 終了コード0をセット\\n  xor ___, ___\\n  ; システムコールを実行\\n  ___",
+      "holeyCode": "; テキストセクションを宣言\\n___ .___\\n  ; エントリーポイントを公開\\n  ___ ___\\n\\n; プログラムの開始地点\\n___:\\n  ; 終了システムコール60\\n  ___ ___, ___\\n  ; 終了コード0をセット\\n  ___ ___, ___\\n  ; システムコールを実行\\n  ___",
       "correctLines": [
           "; テキストセクションを宣言",
           "section .text",
@@ -181,21 +181,21 @@ export const assemblyData = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
+          "section でコードセクションを宣言します。",
           null,
-          "外部からアクセス可能なシンボルを宣言します。",
+          "global で _start を外部公開します。",
           null,
           null,
           "プログラムのエントリーポイントを定義するラベルです。",
           null,
-          "rax に終了番号 60 を代入します。",
+          "mov で rax に終了番号 60 を代入します。",
           null,
-          "レジスタをゼロクリアする効率的な方法です。",
+          "xor でレジスタをゼロクリアします。",
           null,
-          "OSにシステムコールを実行させる命令です。"
+          "syscall でシステムコールを実行します。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "60", "rdi", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "60", "xor", "rdi", "syscall"]
         },
         "testCases": [
           {
@@ -207,7 +207,7 @@ export const assemblyData = {
     {
       "title": "数字を足し算しましょう",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに10を入れる\\n  mov rax, 10\\n  ; raxに5を足す\\n  add rax, 5\\n\\n  ; 結果raxをrdiにコピー\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに10を入れる\\n  mov ___, ___\\n  ; raxに5を足す\\n  add ___, ___\\n\\n  ; 結果raxをrdiにコピー\\n  mov ___, ___\\n  ; 終了処理\\n  mov ___, ___\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに10を入れる\\n  ___ ___, ___\\n  ; raxに5を足す\\n  ___ ___, ___\\n\\n  ; 結果raxをrdiにコピー\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -227,23 +227,23 @@ export const assemblyData = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
-          "外部からアクセス可能なシンボルを宣言します。",
+          "section でコードセクションを宣言します。",
+          "global で _start を外部公開します。",
           null,
           "プログラムのエントリーポイントを定義するラベルです。",
           null,
-          "rax に 10 を代入します。",
+          "mov で rax に 10 を代入します。",
           null,
-          "rax に 5 を加算します。",
+          "add で rax に 5 を加算します。",
           null,
           null,
-          "rdi に rax の値をコピーします。",
+          "mov で rdi に rax の値をコピーします。",
           null,
-          "rax に 60 を代入します。",
-          "OSにシステムコールを実行させる命令です。"
+          "mov で rax に 60 を代入します。",
+          "syscall でシステムコールを実行します。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "10", "5", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "10", "add", "5", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -255,7 +255,7 @@ export const assemblyData = {
     {
       "title": "数字を引き算しましょう",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに20を入れる\\n  mov rax, 20\\n  ; raxから8を引く\\n  sub rax, 8\\n\\n  ; 結果raxをrdiにコピー\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに20を入れる\\n  mov ___, ___\\n  ; raxから8を引く\\n  sub ___, ___\\n\\n  ; 結果raxをrdiにコピー\\n  mov ___, ___\\n  ; 終了処理\\n  mov ___, ___\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに20を入れる\\n  ___ ___, ___\\n  ; raxから8を引く\\n  ___ ___, ___\\n\\n  ; 結果raxをrdiにコピー\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -275,23 +275,23 @@ export const assemblyData = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
-          "外部からアクセス可能なシンボルを宣言します。",
+          "section でコードセクションを宣言します。",
+          "global で _start を外部公開します。",
           null,
           "プログラムのエントリーポイントを定義するラベルです。",
           null,
-          "rax に 20 を代入します。",
+          "mov で rax に 20 を代入します。",
           null,
-          "rax から 8 を減算します。",
+          "sub で rax から 8 を減算します。",
           null,
           null,
-          "rdi に rax の値をコピーします。",
+          "mov で rdi に rax の値をコピーします。",
           null,
-          "rax に 60 を代入します。",
-          "OSにシステムコールを実行させる命令です。"
+          "mov で rax に 60 を代入します。",
+          "syscall でシステムコールを実行します。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "20", "8", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "20", "sub", "8", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -303,7 +303,7 @@ export const assemblyData = {
     {
       "title": "レジスタ間でコピーしましょう",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに25を入れる\\n  mov rax, 25\\n  ; raxをrdiにコピー\\n  mov rdi, rax\\n\\n  ; 終了処理\\n  mov rax, 60\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに25を入れる\\n  mov ___, ___\\n  ; raxをrdiにコピー\\n  mov ___, ___\\n\\n  ; 終了処理\\n  mov ___, ___\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに25を入れる\\n  ___ ___, ___\\n  ; raxをrdiにコピー\\n  ___ ___, ___\\n\\n  ; 終了処理\\n  ___ ___, ___\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -321,21 +321,21 @@ export const assemblyData = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
-          "外部からアクセス可能なシンボルを宣言します。",
+          "section でコードセクションを宣言します。",
+          "global で _start を外部公開します。",
           null,
           "プログラムのエントリーポイントを定義するラベルです。",
           null,
-          "rax に 25 を代入します。",
+          "mov で rax に 25 を代入します。",
           null,
-          "rdi に rax を代入します。",
+          "mov で rdi に rax を代入します。",
           null,
           null,
-          "rax に 60 を代入します。",
-          "OSにシステムコールを実行させる命令です。"
+          "mov で rax に 60 を代入します。",
+          "syscall でシステムコールを実行します。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "25", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "25", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -347,7 +347,7 @@ export const assemblyData = {
     {
       "title": "値を比較しましょう",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに5を入れる\\n  mov rax, 5\\n  ; raxと10を比較\\n  cmp rax, 10\\n\\n  ; 終了処理\\n  mov rax, 60\\n  xor rdi, rdi\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに5を入れる\\n  mov ___, ___\\n  ; raxと10を比較\\n  cmp ___, ___\\n\\n  ; 終了処理\\n  mov ___, ___\\n  xor ___, ___\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに5を入れる\\n  ___ ___, ___\\n  ; raxと10を比較\\n  ___ ___, ___\\n\\n  ; 終了処理\\n  ___ ___, ___\\n  ___ ___, ___\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -366,22 +366,22 @@ export const assemblyData = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
-          "外部からアクセス可能なシンボルを宣言します。",
+          "section でコードセクションを宣言します。",
+          "global で _start を外部公開します。",
           null,
           "プログラムのエントリーポイントを定義するラベルです。",
           null,
-          "rax に 5 を代入します。",
+          "mov で rax に 5 を代入します。",
           null,
-          "2つの値を比較する命令です。",
+          "cmp で rax と 10 を比較します。",
           null,
           null,
-          "rax に 60 を代入します。",
-          "xor命令で rdi を 0 にします。",
-          "OSにシステムコールを実行させる命令です。"
+          "mov で rax に 60 を代入します。",
+          "xor で rdi を 0 にします。",
+          "syscall でシステムコールを実行します。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "5", "cmp", "10", "60", "rdi", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "5", "cmp", "10", "60", "xor", "rdi", "syscall"]
         },
         "testCases": [
           {
@@ -393,7 +393,7 @@ export const assemblyData = {
     {
       "title": "条件ジャンプを使いましょう",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  mov rax, 5\\n  cmp rax, 5\\n  ; 等しければequalへジャンプ\\n  je equal\\n  mov rdi, 1\\n  jmp done\\n\\nequal:\\n  mov rdi, 0\\n\\ndone:\\n  mov rax, 60\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  mov ___, ___\\n  cmp ___, ___\\n  ; 等しければequalへジャンプ\\n  je ___\\n  mov ___, ___\\n  jmp ___\\n\\n___:\\n  mov ___, ___\\n\\n___:\\n  mov ___, ___\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ___ ___, ___\\n  ___ ___, ___\\n  ; 等しければequalへジャンプ\\n  ___ ___\\n  ___ ___, ___\\n  ___ ___\\n\\n___:\\n  ___ ___, ___\\n\\n___:\\n  ___ ___, ___\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -416,26 +416,26 @@ export const assemblyData = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
-          "外部からアクセス可能なシンボルを宣言します。",
+          "section でコードセクションを宣言します。",
+          "global で _start を外部公開します。",
           null,
           "プログラムのエントリーポイントを定義するラベルです。",
-          "rax に 5 を代入します。",
-          "rax と 5 を比較します。",
+          "mov で rax に 5 を代入します。",
+          "cmp で rax と 5 を比較します。",
           null,
-          "等しければ equal ラベルへジャンプします。",
-          "rdi に 1 を代入します。",
-          "done ラベルへ無条件ジャンプします。",
+          "je（jump if equal）で equal ラベルへジャンプします。",
+          "mov で rdi に 1 を代入します。",
+          "jmp で done ラベルへ無条件ジャンプします。",
           null,
           "ラベル equal: を定義します。",
-          "rdi に 0 を代入します。",
+          "mov で rdi に 0 を代入します。",
           null,
           "ラベル done: を定義します。",
-          "rax に 60 を代入します。",
-          "OSにシステムコールを実行させる命令です。"
+          "mov で rax に 60 を代入します。",
+          "syscall でシステムコールを実行します。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "5", "equal", "rdi", "1", "done", "0", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "5", "cmp", "je", "equal", "rdi", "1", "jmp", "done", "0", "60", "syscall"]
         },
         "testCases": [
           {
@@ -447,7 +447,7 @@ export const assemblyData = {
     {
       "title": "ラベルにジャンプしましょう",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; doneに直接ジャンプ\\n  jmp done\\n\\nskip:\\n  mov rdi, 1\\n\\ndone:\\n  xor rdi, rdi\\n  mov rax, 60\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; doneに直接ジャンプ\\n  jmp ___\\n\\n___:\\n  mov ___, ___\\n\\n___:\\n  xor ___, ___\\n  mov ___, ___\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; doneに直接ジャンプ\\n  ___ ___\\n\\n___:\\n  ___ ___, ___\\n\\n___:\\n  ___ ___, ___\\n  ___ ___, ___\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -467,23 +467,23 @@ export const assemblyData = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
-          "外部からアクセス可能なシンボルを宣言します。",
+          "section でコードセクションを宣言します。",
+          "global で _start を外部公開します。",
           null,
           "プログラムのエントリーポイントを定義するラベルです。",
           null,
-          "ラベル done へジャンプします。",
+          "jmp で done ラベルへジャンプします。",
           null,
           "ラベル skip: を定義します。",
-          "rdi に 1 を代入します。",
+          "mov で rdi に 1 を代入します。",
           null,
           "ラベル done: を定義します。",
-          "rdi を 0 にします。",
-          "rax に 60 を代入します。",
-          "OSにシステムコールを実行させる命令です。"
+          "xor で rdi を 0 にします。",
+          "mov で rax に 60 を代入します。",
+          "syscall でシステムコールを実行します。"
         ],
         "candidates": {
-          "others": ["text", "_start", "done", "skip", "rdi", "1", "rax", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "jmp", "done", "skip", "mov", "rdi", "1", "xor", "rax", "60", "syscall"]
         },
         "testCases": [
           {
@@ -495,7 +495,7 @@ export const assemblyData = {
     {
       "title": "値を増やしましょう",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに9を入れる\\n  mov rax, 9\\n  ; raxを1増やす\\n  inc rax\\n\\n  ; 結果raxをrdiにコピー\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに9を入れる\\n  mov ___, ___\\n  ; raxを1増やす\\n  inc ___\\n\\n  ; 結果raxをrdiにコピー\\n  mov ___, ___\\n  ; 終了処理\\n  mov ___, ___\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに9を入れる\\n  ___ ___, ___\\n  ; raxを1増やす\\n  ___ ___\\n\\n  ; 結果raxをrdiにコピー\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -515,23 +515,23 @@ export const assemblyData = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
-          "外部からアクセス可能なシンボルを宣言します。",
+          "section でコードセクションを宣言します。",
+          "global で _start を外部公開します。",
           null,
           "プログラムのエントリーポイントを定義するラベルです。",
           null,
-          "rax に 9 を代入します。",
+          "mov で rax に 9 を代入します。",
           null,
-          "レジスタの値を1増加させる命令です。",
+          "inc で rax の値を 1 増加させます。",
           null,
           null,
-          "rdi に rax の値をコピーします。",
+          "mov で rdi に rax の値をコピーします。",
           null,
-          "rax に 60 を代入します。",
-          "OSにシステムコールを実行させる命令です。"
+          "mov で rax に 60 を代入します。",
+          "syscall でシステムコールを実行します。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "9", "inc", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "9", "inc", "rdi", "60", "syscall"]
         },
         "testCases": [
           {

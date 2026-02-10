@@ -9,7 +9,7 @@ export const elixir2Data = {
     {
       "title": "パターンマッチングの基本",
       "correctCode": "# yでタプルの2番目を受け取る\\n{x, y} = {10, 20}\\n# xを入力\\nIO.puts x",
-      "holeyCode": "# yでタプルの2番目を受け取る\\n{x, y} = {___, 20}\\n# xを入力\\nIO.puts ___",
+      "holeyCode": "# yでタプルの2番目を受け取る\\n{___, ___} = {___, ___}\\n# xを入力\\n___.___ ___",
       "correctLines": [
           "# yでタプルの2番目を受け取る",
           "{x, y} = {10, 20}",
@@ -18,16 +18,16 @@ export const elixir2Data = {
         ],
       "lineHints": [
           null,
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "パターンマッチでタプルを分解します。",
           null,
-          "xの値を表示します。"
+          "IOモジュールのputsでxを表示します。"
         ],
         "candidates": {
           "variables": [
             "y",
             "x"
           ],
-          "others": ["10"]
+          "others": ["10", "20", "IO", "puts"]
         },
         "testCases": [
           {
@@ -39,7 +39,7 @@ export const elixir2Data = {
     {
       "title": "リストのパターンマッチ",
       "correctCode": "# |でリストを分解\\n[head | tail] = [1, 2, 3]\\n# headを入力\\nIO.puts head",
-      "holeyCode": "# |でリストを分解\\n[head | tail] = [___, 2, 3]\\n# headを入力\\nIO.puts ___",
+      "holeyCode": "# |でリストを分解\\n[___ | ___] = [___, ___, ___]\\n# headを入力\\n___.___ ___",
       "correctLines": [
           "# |でリストを分解",
           "[head | tail] = [1, 2, 3]",
@@ -48,18 +48,19 @@ export const elixir2Data = {
         ],
       "lineHints": [
           null,
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "|演算子でリストを先頭と残りに分解します。",
           null,
-          "headの値を表示します。"
+          "IOモジュールのputsでheadを表示します。"
         ],
         "candidates": {
           "operators": [
             "|"
           ],
           "variables": [
-            "head"
+            "head",
+            "tail"
           ],
-          "others": ["1"]
+          "others": ["1", "2", "3", "IO", "puts"]
         },
         "testCases": [
           {
@@ -71,7 +72,7 @@ export const elixir2Data = {
     {
       "title": "パイプ演算子を使おう",
       "correctCode": "# 1..5で範囲を作成\\n1..5\\n# |>でパイプ\\n|> Enum.sum()\\n# |>でパイプ\\n|> IO.puts()",
-      "holeyCode": "# 1..5で範囲を作成\\n___..5\\n# |>でパイプ\\n|> Enum.___()\\n# |>でパイプ\\n|> IO.___()",
+      "holeyCode": "# 1..5で範囲を作成\\n___..___\\n# |>でパイプ\\n|> ___.___()\\n# |>でパイプ\\n|> ___.___()",
       "correctLines": [
           "# 1..5で範囲を作成",
           "1..5",
@@ -84,9 +85,9 @@ export const elixir2Data = {
           null,
           "1から5の範囲を作ります。",
           null,
-          "|> でパイプします。",
+          "Enumモジュールのsumで合計を計算します。",
           null,
-          "|> でパイプします。"
+          "IOモジュールのputsで結果を表示します。"
         ],
         "candidates": {
           "ranges": [
@@ -95,7 +96,7 @@ export const elixir2Data = {
           "operators": [
             "|>"
           ],
-          "others": ["1", "sum", "puts"]
+          "others": ["1", "5", "Enum", "sum", "IO", "puts"]
         },
         "testCases": [
           {
@@ -107,7 +108,7 @@ export const elixir2Data = {
     {
       "title": "Enum.map で変換",
       "correctCode": "# mapで各要素を変換\\nresult = Enum.map([1, 2, 3], fn x -> x * x end)\\n# resultを入力\\nIO.inspect result",
-      "holeyCode": "# mapで各要素を変換\\n___\\n# resultを入力\\nIO.inspect ___",
+      "holeyCode": "# mapで各要素を変換\\n___ = ___.___([___, ___, ___], fn ___ -> ___ * ___ end)\\n# resultを入力\\n___.___ ___",
       "correctLines": [
           "# mapで各要素を変換",
           "result = Enum.map([1, 2, 3], fn x -> x * x end)",
@@ -116,18 +117,19 @@ export const elixir2Data = {
         ],
       "lineHints": [
           null,
-          "この行を正しく入力してください。",
+          "Enum.mapで各要素にfnを適用し、x * xを計算します。",
           null,
-          "resultの値を表示します。"
+          "IOモジュールのinspectでresultを表示します。"
         ],
         "candidates": {
           "functions": [
             "map"
           ],
           "variables": [
-            "result"
+            "result",
+            "x"
           ],
-          "others": ["map([1, 2, 3], fn x -> x * x end)", "result = Enum.map([1, 2, 3], fn x -> x * x end)", "result = Enum.map([1, 2, 3], fn x -> x * x end)\\"]
+          "others": ["Enum", "1", "2", "3", "IO", "inspect"]
         },
         "testCases": [
           {
@@ -139,7 +141,7 @@ export const elixir2Data = {
     {
       "title": "Enum.filter で絞り込み",
       "correctCode": "# filterで条件に合う要素を抽出\\nresult = Enum.filter([1, 2, 3, 4, 5], fn x -> x >= 3 end)\\n# resultを入力\\nIO.inspect result",
-      "holeyCode": "# filterで条件に合う要素を抽出\\nresult = Enum.filter([___, 2, 3, 4, 5], fn x -> x >= 3 end)\\n# resultを入力\\nIO.inspect ___",
+      "holeyCode": "# filterで条件に合う要素を抽出\\n___ = ___.___([___, ___, ___, ___, ___], fn ___ -> ___ >= ___ end)\\n# resultを入力\\n___.___ ___",
       "correctLines": [
           "# filterで条件に合う要素を抽出",
           "result = Enum.filter([1, 2, 3, 4, 5], fn x -> x >= 3 end)",
@@ -148,18 +150,19 @@ export const elixir2Data = {
         ],
       "lineHints": [
           null,
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "Enum.filterで条件x >= 3を満たす要素を抽出します。",
           null,
-          "resultの値を表示します。"
+          "IOモジュールのinspectでresultを表示します。"
         ],
         "candidates": {
           "functions": [
             "filter"
           ],
           "variables": [
-            "result"
+            "result",
+            "x"
           ],
-          "others": ["filter([1, 2, 3, 4, 5], fn x -> x >= 3 end)", "1"]
+          "others": ["Enum", "1", "2", "3", "4", "5", "IO", "inspect"]
         },
         "testCases": [
           {
@@ -171,7 +174,7 @@ export const elixir2Data = {
     {
       "title": "case でパターンマッチ",
       "correctCode": "# 2を入力\\nx = 2\\n# caseでパターンマッチ\\nresult = case x do\\n  1 -> \"one\"\\n  2 -> \"two\"\\n  _ -> \"other\"\\nend\\n# resultを入力\\nIO.puts result",
-      "holeyCode": "# 2を入力\\nx = ___\\n# caseでパターンマッチ\\nresult = case x ___\\n  ___ -> \"___\"\\n  2 -> \"___\"\\n  _ -> \"___\"\\n___\\n# resultを入力\\nIO.puts ___",
+      "holeyCode": "# 2を入力\\n___ = ___\\n# caseでパターンマッチ\\n___ = case ___ do\\n  ___ -> \"___\"\\n  ___ -> \"___\"\\n  ___ -> \"___\"\\n___\\n# resultを入力\\n___.___ ___",
       "correctLines": [
           "# 2を入力",
           "x = 2",
@@ -186,27 +189,30 @@ export const elixir2Data = {
         ],
       "lineHints": [
           null,
-          "変数に数値を代入（保存）します。",
+          "変数xに2を代入します。",
           null,
-          "case でパターンマッチします。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "_ はワイルドカードです。",
-          "ブロックを終了する。",
+          "case式でxをパターンマッチします。",
+          "1にマッチしたら\"one\"を返します。",
+          "2にマッチしたら\"two\"を返します。",
+          "_はワイルドカードで\"other\"を返します。",
+          "case式の終了を表すキーワードです。",
           null,
-          "resultの値を表示します。"
+          "IOモジュールのputsでresultを表示します。"
         ],
         "candidates": {
           "numbers": [
+            "1",
             "2"
           ],
           "keywords": [
             "case"
           ],
           "variables": [
-            "result"
+            "result",
+            "x",
+            "_"
           ],
-          "others": ["do", "one", "two", "other", "end", "1"]
+          "others": ["one", "two", "other", "IO", "puts", "end"]
         },
         "testCases": [
           {
@@ -218,7 +224,7 @@ export const elixir2Data = {
     {
       "title": "関数を定義しよう",
       "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Calc do\\n  # defで関数を定義\\n  def triple(x), do: x * 3\\nend\\n# Calc.triple(4)を入力\\nIO.puts Calc.triple(4)",
-      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule Calc ___\\n  # defで関数を定義\\n  def triple(x), do: x * ___\\n___\\n# Calc.triple(4)を入力\\nIO.puts Calc.triple(___)",
+      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  # defで関数を定義\\n  def ___(___), do: ___ * ___\\n___\\n# Calc.triple(4)を入力\\n___.___ ___.___(___)",
       "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Calc do",
@@ -230,12 +236,12 @@ export const elixir2Data = {
         ],
       "lineHints": [
           null,
-          "defmodule でモジュールを定義します。",
+          "Calcモジュールを定義します。",
           null,
-          "関数（triple）を新しく定義します。",
-          "ブロックを終了する。",
+          "triple関数でx * 3を計算します。",
+          "defmoduleの終了を表すキーワードです。",
           null,
-          "Calc.triple(4) で関数を呼び出します。"
+          "Calc.triple(4)で12を表示します。"
         ],
         "candidates": {
           "keywords": [
@@ -243,9 +249,12 @@ export const elixir2Data = {
             "def"
           ],
           "functions": [
-            "Calc.triple(4)"
+            "triple"
           ],
-          "others": ["do", "3", "end", "4", "do", "3", "end"]
+          "variables": [
+            "x"
+          ],
+          "others": ["Calc", "3", "4", "IO", "puts", "end"]
         },
         "testCases": [
           {
@@ -257,7 +266,7 @@ export const elixir2Data = {
     {
       "title": "再帰で計算しよう",
       "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Math do\\n  def factorial(0), do: 1\\n  # factorialを再帰的に呼び出す\\n  def factorial(n), do: n * factorial(n - 1)\\nend\\n# Math.factorial(5)を入力\\nIO.puts Math.factorial(5)",
-      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule Math ___\\n  def factorial(___), do: 1\\n  # factorialを再帰的に呼び出す\\n  def factorial(n), do: n * factorial(n - ___)\\n___\\n# Math.factorial(5)を入力\\nIO.puts Math.factorial(___)",
+      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  def ___(___), do: ___\\n  # factorialを再帰的に呼び出す\\n  def ___(___), do: ___ * ___(___ - ___)\\n___\\n# Math.factorial(5)を入力\\n___.___ ___.___(___)",
       "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Math do",
@@ -270,23 +279,25 @@ export const elixir2Data = {
         ],
       "lineHints": [
           null,
-          "defmodule でモジュールを定義します。",
-          "関数（factorial）を新しく定義します。",
+          "Mathモジュールを定義します。",
+          "factorial(0)の場合は1を返します。",
           null,
-          "関数（factorial）を新しく定義します。",
-          "ブロックを終了する。",
+          "factorial(n)でn * factorial(n-1)を計算します。",
+          "defmoduleの終了を表すキーワードです。",
           null,
-          "Math.factorial(5) で関数を呼び出します。"
+          "Math.factorial(5)で120を表示します。"
         ],
         "candidates": {
           "keywords": [
             "defmodule"
           ],
           "functions": [
-            "factorial",
-            "Math.factorial(5)"
+            "factorial"
           ],
-          "others": ["do", "0", "1", "end", "5", "do", "end"]
+          "variables": [
+            "n"
+          ],
+          "others": ["Math", "0", "1", "5", "IO", "puts", "end"]
         },
         "testCases": [
           {
@@ -298,7 +309,7 @@ export const elixir2Data = {
     {
       "title": "プロセスを作ろう",
       "correctCode": "# spawnでプロセスを作成\\nspawn(fn -> IO.puts \"こんにちは\" end)\\n# 100を入力\\nProcess.sleep(100)",
-      "holeyCode": "# spawnでプロセスを作成\\n___(fn -> IO.puts \"___\" end)\\n# 100を入力\\nProcess.sleep(___)",
+      "holeyCode": "# spawnでプロセスを作成\\n___(fn -> ___.___ \"___\" end)\\n# 100を入力\\n___.___(___)",
       "correctLines": [
           "# spawnでプロセスを作成",
           "spawn(fn -> IO.puts \"こんにちは\" end)",
@@ -307,9 +318,9 @@ export const elixir2Data = {
         ],
       "lineHints": [
           null,
-          "spawn でプロセスを作ります。",
+          "spawnでプロセスを作り、IO.putsで\"こんにちは\"を表示します。",
           null,
-          "プロセスの完了を待ちます。"
+          "Process.sleep(100)でプロセスの完了を待ちます。"
         ],
         "candidates": {
           "functions": [
@@ -318,7 +329,7 @@ export const elixir2Data = {
           "numbers": [
             "100"
           ],
-          "others": ["こんにちは"]
+          "others": ["こんにちは", "IO", "Process", "sleep", "puts"]
         },
         "testCases": [
           {
@@ -330,7 +341,7 @@ export const elixir2Data = {
     {
       "title": "メッセージを送ろう",
       "correctCode": "# sendでメッセージを送る\\nsend(self(), {:msg, 42})\\n# receiveでメッセージを受け取る\\nreceive do\\n  {:msg, n} -> IO.puts n\\nend",
-      "holeyCode": "# sendでメッセージを送る\\nsend(self(), {:msg, ___})\\n# receiveでメッセージを受け取る\\nreceive ___\\n  {:msg, ___} -> IO.puts n\\n___",
+      "holeyCode": "# sendでメッセージを送る\\n___(___(), {:___, ___})\\n# receiveでメッセージを受け取る\\n___ ___\\n  {:___, ___} -> ___.___ ___\\n___",
       "correctLines": [
           "# sendでメッセージを送る",
           "send(self(), {:msg, 42})",
@@ -341,20 +352,24 @@ export const elixir2Data = {
         ],
       "lineHints": [
           null,
-          "send でメッセージを送ります。",
+          "send(self(), {:msg, 42})でメッセージを送ります。",
           null,
-          "receive でメッセージを受け取ります。",
-          "パターンマッチでメッセージを受け取ります。",
-          "ブロックを終了する。"
+          "receiveでメッセージを待ち受けます。doでブロック開始。",
+          "パターンマッチで{:msg, n}を受け取りIO.putsで表示します。",
+          "receiveブロックの終了を表すキーワードです。"
         ],
         "candidates": {
           "functions": [
-            "send"
+            "send",
+            "self"
           ],
           "keywords": [
             "receive"
           ],
-          "others": ["42", "do", "n", "end", "do"]
+          "variables": [
+            "n"
+          ],
+          "others": ["42", "msg", "IO", "puts", "do", "end"]
         },
         "testCases": [
           {

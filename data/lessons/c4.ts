@@ -9,7 +9,7 @@ export const c4Data = {
     {
       "title": "ファイルのオープン",
       "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    // fpにfopen(\"test.txt\", \"w\")を代入\\n    FILE *fp = fopen(\"テスト.txt\", \"w\");\\n    if (fp != NULL) {\\n        fprintf(fp, \"Hello\\n\");\\n        fclose(fp);\\n        printf(\"Done\\n\");\\n    }\\n    return 0;\\n}",
-      "holeyCode": "#include <___>\\n___\\nint ___() {\\n    // fpにfopen(\"test.txt\", \"w\")を代入\\n    FILE *fp = fopen(\"___\", \"w\");\\n    if (fp != ___) {\\n        f___(fp, \"Hello\\n___\\n        fclose(___);\\n        ___(\"Done\\n___\\n    ___\\n    return ___;\\n___",
+      "holeyCode": "#___ <___>\\n___\\n___ ___() {\\n    // fpにfopen(\"test.txt\", \"w\")を代入\\n    ___ *___ = ___(\"___\", \"___\");\\n    if (___ != ___) {\\n        ___(___,  \"___\\n___\\n        ___(___);\\n        ___(\"___\\n___\\n    ___\\n    return ___;\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -27,28 +27,29 @@ export const c4Data = {
           "}"
         ],
       "lineHints": [
-          "標準入出力ライブラリを読み込みます。",
+          "標準入出力ライブラリstdio.hを読み込みます。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "戻り値型intでmain関数を定義します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "FILE型ポインタfpにfopen関数でファイルを開いた結果を代入します。",
+          "fpがNULLでないかif文で判定します。",
+          "fprintf関数でfpに文字列を書き込みます。",
+          "文字列の閉じクォートと括弧です。",
+          "fclose関数でfpを閉じます。",
+          "printf関数でDoneを表示します。",
+          "文字列の閉じクォートと括弧です。",
+          "if文のブロックを閉じる中括弧です。",
+          "プログラムの正常終了を示す値0を返します。",
+          "main関数のブロックを閉じる中括弧です。"
         ],
         "candidates": {
           "functions": [
             "fopen",
-            "open",
-            "fread"
+            "fclose",
+            "fprintf",
+            "printf"
           ],
-          "others": ["main", "test.txt", "NULL", "fp", "}", "0", "テスト.txt", "stdio.h", "printf", "\");", "", "\");", "}"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "テスト.txt", "w", "NULL", "Hello", "\");", "Done", "}", "0", "ello"]
         },
         "testCases": [
           {
@@ -60,7 +61,7 @@ export const c4Data = {
     {
       "title": "ファイルのクローズ",
       "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"データ.txt\", \"w\");\\n    if (fp != NULL) {\\n        fputs(\"Data\\n\", fp);\\n        // fclose(fp)でファイルを閉じる\\n        fclose(fp);\\n        printf(\"Closed\\n\");\\n    }\\n    return 0;\\n}",
-      "holeyCode": "#include <___>\\n___\\nint ___() {\\n    ___ *fp = fopen(\"___\", \"w\");\\n    if (fp != ___) {\\n        ___\\n___\\n        // fclose(fp)でファイルを閉じる\\n        fclose(___);\\n        ___(\"Closed\\n___\\n    ___\\n    return ___;\\n___",
+      "holeyCode": "#___ <___>\\n___\\n___ ___() {\\n    ___ *___ = ___(\"___\", \"___\");\\n    if (___ != ___) {\\n        ___(\"___\\n___\\n        // fclose(fp)でファイルを閉じる\\n        ___(___);\\n        ___(\"___\\n___\\n    ___\\n    return ___;\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -78,28 +79,29 @@ export const c4Data = {
           "}"
         ],
       "lineHints": [
-          "標準入出力ライブラリを読み込みます。",
+          "標準入出力ライブラリstdio.hを読み込みます。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
+          "戻り値型intでmain関数を定義します。",
+          "FILE型ポインタfpにfopen関数でファイルを開いた結果を代入します。",
+          "fpがNULLでないかif文で判定します。",
+          "fputs関数でfpに文字列を書き込みます。",
+          "文字列の閉じクォートとfpを渡します。",
           null,
-          "ここを正しく入力してください。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "fclose関数でfpを閉じます。",
+          "printf関数でClosedを表示します。",
+          "文字列の閉じクォートと括弧です。",
+          "if文のブロックを閉じる中括弧です。",
+          "プログラムの正常終了を示す値0を返します。",
+          "main関数のブロックを閉じる中括弧です。"
         ],
         "candidates": {
           "functions": [
+            "fopen",
             "fclose",
-            "close",
-            "fend"
+            "fputs",
+            "printf"
           ],
-          "others": ["main", "data.txt", "NULL", "fp", "}", "0", "データ.txt", "stdio.h", "FILE", "fputs(\"Data", " fp);", "printf", "\");", "", "fputs(\"Data", " fp);", "\");", "}", " fp);", "\", fp);"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "データ.txt", "w", "NULL", "Data", "\", fp);", "Closed", "\");", "}", "0"]
         },
         "testCases": [
           {
@@ -110,16 +112,15 @@ export const c4Data = {
       },
     {
       "title": "fprintf でファイル書き込み",
-      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"log.txt\", \"w\");\\n    if (fp != NULL) {\\n        // fprintf(fp, \"Score: %d\\n\", 100)で書き込む\\n        fprintf(fp, \"Score: %d\\n\", 100);\\n        fclose(fp);\\n        printf(\"Written\\n\");\\n    }\\n    return 0;\\n}",
-      "holeyCode": "#include <___>\\n___\\nint ___() {\\n    ___ *fp = fopen(\"___\", \"w\");\\n    if (fp != ___) {\\n        // fprintf(fp, \"Score: %d\\n___\\n        f___(fp, \"Score: %d\\n___\\n        fclose(___);\\n        ___(\"Written\\n___\\n    ___\\n    return ___;\\n___",
+      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"log.txt\", \"w\");\\n    if (fp != NULL) {\\n        // fpにフォーマット文字列と値100を書き込む\\n        fprintf(fp, \"Score: %d\\n\", 100);\\n        fclose(fp);\\n        printf(\"Written\\n\");\\n    }\\n    return 0;\\n}",
+      "holeyCode": "#___ <___>\\n___\\n___ ___() {\\n    ___ *___ = ___(\"___\", \"___\");\\n    if (___ != ___) {\\n        // fpにフォーマット文字列と値100を書き込む\\n        ___(___,  \"___\\n___\\n        ___(___);\\n        ___(\"___\\n___\\n    ___\\n    return ___;\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
           "int main() {",
           "    FILE *fp = fopen(\"log.txt\", \"w\");",
           "    if (fp != NULL) {",
-          "        // fprintf(fp, \"Score: %d",
-          "\", 100)で書き込む",
+          "        // fpにフォーマット文字列と値100を書き込む",
           "        fprintf(fp, \"Score: %d",
           "\", 100);",
           "        fclose(fp);",
@@ -130,29 +131,29 @@ export const c4Data = {
           "}"
         ],
       "lineHints": [
-          "標準入出力ライブラリを読み込みます。",
+          "標準入出力ライブラリstdio.hを読み込みます。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "戻り値型intでmain関数を定義します。",
+          "FILE型ポインタfpにfopen関数でファイルを開いた結果を代入します。",
+          "fpがNULLでないかif文で判定します。",
           null,
-          "この行を正しく入力してください。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。"
+          "fprintf関数でfpにフォーマット文字列を書き込みます。",
+          "フォーマット文字列の閉じと値100を渡します。",
+          "fclose関数でfpを閉じます。",
+          "printf関数でWrittenを表示します。",
+          "文字列の閉じクォートと括弧です。",
+          "if文のブロックを閉じる中括弧です。",
+          "プログラムの正常終了を示す値0を返します。",
+          "main関数のブロックを閉じる中括弧です。"
         ],
         "candidates": {
           "functions": [
+            "fopen",
+            "fclose",
             "fprintf",
-            "printf",
-            "sprintf"
+            "printf"
           ],
-          "others": ["main", "log.txt", "NULL", "fp", "}", "0", "\"Written", "return 0;", "stdio.h", "FILE", "", " 100)で書き込む", " 100);", "\");", "}", " 100)で書き込む", " 100);", "\", 100)で書き込む", "\", 100);"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "log.txt", "w", "NULL", "Score: %d", "\", 100);", "Written", "\");", "}", "0", "core: %d"]
         },
         "testCases": [
           {
@@ -164,7 +165,7 @@ export const c4Data = {
     {
       "title": "fgets で行読み込み",
       "correctCode": "#include <stdio.h>\\n#include <string.h>\\n\\nint main() {\\n    char line[100];\\n    FILE *fp = fopen(\"テスト.txt\", \"w\");\\n    fprintf(fp, \"Hello World\\n\");\\n    fclose(fp);\\n    fp = fopen(\"テスト.txt\", \"r\");\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\n    fgets(line, sizeof(line), fp);\\n    line[strcspn(line, \"\\n\")] = 0;\\n    printf(\"%s\\n\", line);\\n    fclose(fp);\\n    return 0;\\n}",
-      "holeyCode": "___\\n___\\n___\\nint ___() {\\n    char line[___];\\n    ___ *fp = fopen(\"___\", \"w\");\\n    f___(fp, \"Hello World\\n___\\n    fclose(___);\\n    fp = fopen(\"___\", \"r\");\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\n    fgets(line, sizeof(line), ___);\\n    ___\\n___\\n    ___(\"%s\\n___\\n    fclose(___);\\n    return ___;\\n___",
+      "holeyCode": "#___ <___>\\n#___ <___>\\n___\\n___ ___() {\\n    ___ ___[___];\\n    ___ *___ = ___(\"___\", \"___\");\\n    ___(___,  \"___\\n___\\n    ___(___);\\n    ___ = ___(\"___\", \"___\");\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\n    ___(___,  ___(___), ___);\\n    ___[___(___,  \"\\n___\\n    ___(\"___\\n___\\n    ___(___);\\n    return ___;\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "#include <string.h>",
@@ -187,33 +188,37 @@ export const c4Data = {
           "}"
         ],
       "lineHints": [
-          "この行を正しく入力してください。",
-          "文字列操作用ライブラリを読み込みます。",
+          "標準入出力ライブラリstdio.hを読み込みます。",
+          "文字列操作ライブラリstring.hを読み込みます。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "戻り値型intでmain関数を定義します。",
+          "char型配列lineをサイズ100で宣言します。",
+          "FILE型ポインタfpにfopen関数でファイルを開いた結果を代入します。",
+          "fprintf関数でfpに文字列を書き込みます。",
+          "文字列の閉じクォートと括弧です。",
+          "fclose関数でfpを閉じます。",
+          "fpにfopen関数で読み込みモードでファイルを開いた結果を代入します。",
           null,
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
-          "プログラムの正常終了を示す0を返します。",
-          "この行を正しく入力してください。"
+          "fgets関数でline配列にfpから1行読み込みます。",
+          "strcspn関数で改行位置を取得し、その位置に0を代入します。",
+          "改行文字を指定して閉じ括弧と代入です。",
+          "printf関数でlineを表示します。",
+          "フォーマット文字列の閉じとlineを渡します。",
+          "fclose関数でfpを閉じます。",
+          "プログラムの正常終了を示す値0を返します。",
+          "main関数のブロックを閉じる中括弧です。"
         ],
         "candidates": {
           "functions": [
+            "fopen",
+            "fclose",
+            "fprintf",
+            "printf",
             "fgets",
-            "gets",
-            "fread"
+            "strcspn",
+            "sizeof"
           ],
-          "others": ["main", "100", "テスト.txt", "fp", "0;", "pen(\"テスト.txt\", \"r\")", "e, sizeof(line), fp)で1行読み込む", "string.h", "FILE", "#include <stdio.h>", "#include <string.h>", "", "printf", "\");", "line[strcspn(line, \"\\n\")] = 0;", "\", line);", "0", "}", "\");", "line[strcspn(line, \"", "\")] = 0;"]
+          "others": ["include", "stdio.h", "string.h", "", "int", "main", "char", "line", "100", "FILE", "fp", "テスト.txt", "w", "Hello World", "\");", "r", "\")] = 0;", "%s", "\", line);", "0", "}", "ello World", "izeof"]
         },
         "testCases": [
           {
@@ -225,7 +230,7 @@ export const c4Data = {
     {
       "title": "fseek でファイル位置移動",
       "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"pos.txt\", \"w+\");\\n    fputs(\"ABCDEFGHIJ\", fp);\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\n    fseek(fp, 0, SEEK_SET);\\n    printf(\"%c\\n\", fgetc(fp));\\n    fclose(fp);\\n    return 0;\\n}",
-      "holeyCode": "#include <___>\\n___\\nint ___() {\\n    ___ *fp = fopen(\"___\", \"w+\");\\n    fputs(\"___\", fp);\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\n    fseek(fp, ___, SEEK_SET);\\n    ___(\"%c\\n___\\n    fclose(___);\\n    return ___;\\n___",
+      "holeyCode": "#___ <___>\\n___\\n___ ___() {\\n    ___ *___ = ___(\"___\", \"___\");\\n    ___(\"___\", ___);\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\n    ___(___,  ___,  ___);\\n    ___(\"___\\n___\\n    ___(___);\\n    return ___;\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -241,26 +246,29 @@ export const c4Data = {
           "}"
         ],
       "lineHints": [
-          "標準入出力ライブラリを読み込みます。",
+          "標準入出力ライブラリstdio.hを読み込みます。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "戻り値型intでmain関数を定義します。",
+          "FILE型ポインタfpにfopen関数でファイルを開いた結果を代入します。",
+          "fputs関数でfpに文字列ABCDEFGHIJを書き込みます。",
           null,
-          "ここを正しく入力してください。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "fseek関数でfpの位置をオフセット0、SEEK_SETで先頭に移動します。",
+          "printf関数で%cフォーマットで1文字表示します。",
+          "fgetc関数でfpから1文字読み込んで渡します。",
+          "fclose関数でfpを閉じます。",
+          "プログラムの正常終了を示す値0を返します。",
+          "main関数のブロックを閉じる中括弧です。"
         ],
         "candidates": {
           "functions": [
+            "fopen",
+            "fclose",
+            "fputs",
             "fseek",
-            "seek",
-            "ftell"
+            "fgetc",
+            "printf"
           ],
-          "others": ["main", "pos.txt", "ABCDEFGHIJ", "0", "fp", "}", "stdio.h", "FILE", "printf", " fgetc(fp));", "", " fgetc(fp));", " fgetc(fp));", "\", fgetc(fp));"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "pos.txt", "w+", "ABCDEFGHIJ", "0", "SEEK_SET", "%c", "\", fgetc(fp));", "}", "EEK_SET"]
         },
         "testCases": [
           {
@@ -272,7 +280,7 @@ export const c4Data = {
     {
       "title": "ftell で現在位置取得",
       "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"size.txt\", \"w+\");\\n    fputs(\"12345\", fp);\\n    fseek(fp, 0, SEEK_END);\\n    // sizeにftell(fp)を代入\\n    long size = ftell(fp);\\n    printf(\"%ld\\n\", size);\\n    fclose(fp);\\n    return 0;\\n}",
-      "holeyCode": "#include <___>\\n___\\nint ___() {\\n    ___ *fp = fopen(\"___\", \"w+\");\\n    fputs(\"___\", fp);\\n    fseek(fp, ___, SEEK_END);\\n    // sizeにftell(fp)を代入\\n    long size = ftell(___);\\n    ___(\"%ld\\n___\\n    fclose(___);\\n    return ___;\\n___",
+      "holeyCode": "#___ <___>\\n___\\n___ ___() {\\n    ___ *___ = ___(\"___\", \"___\");\\n    ___(\"___\", ___);\\n    ___(___,  ___,  ___);\\n    // sizeにftell(fp)を代入\\n    ___ ___ = ___(___);\\n    ___(\"___\\n___\\n    ___(___);\\n    return ___;\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -289,27 +297,30 @@ export const c4Data = {
           "}"
         ],
       "lineHints": [
-          "標準入出力ライブラリを読み込みます。",
+          "標準入出力ライブラリstdio.hを読み込みます。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "戻り値型intでmain関数を定義します。",
+          "FILE型ポインタfpにfopen関数でファイルを開いた結果を代入します。",
+          "fputs関数でfpに文字列12345を書き込みます。",
+          "fseek関数でfpの位置をオフセット0、SEEK_ENDで末尾に移動します。",
           null,
-          "ここを正しく入力してください。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "long型変数sizeにftell関数でfpの現在位置を代入します。",
+          "printf関数で%ldフォーマットでsizeを表示します。",
+          "フォーマット文字列の閉じとsizeを渡します。",
+          "fclose関数でfpを閉じます。",
+          "プログラムの正常終了を示す値0を返します。",
+          "main関数のブロックを閉じる中括弧です。"
         ],
         "candidates": {
           "functions": [
+            "fopen",
+            "fclose",
+            "fputs",
+            "fseek",
             "ftell",
-            "fpos",
-            "fseek"
+            "printf"
           ],
-          "others": ["main", "size.txt", "12345", "0", "fp", "}", "stdio.h", "FILE", "printf", " size);", "", " size);", " size);", "\", size);"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "size.txt", "w+", "12345", "0", "SEEK_END", "long", "size", "%ld", "\", size);", "}", "EEK_END"]
         },
         "testCases": [
           {
@@ -321,7 +332,7 @@ export const c4Data = {
     {
       "title": "enum 列挙型",
       "correctCode": "#include <stdio.h>\\n\\n// Day列挙型を定義\\nenum Day { MON, TUE, WED, THU, FRI };\\n\\nint main() {\\n    enum Day today = WED;\\n    printf(\"%d\\n\", today);\\n    return 0;\\n}",
-      "holeyCode": "#include <___>\\n___\\n// Day列挙型を定義\\nenum Day { MON, TUE, WED, THU, ___ };\\n___\\nint ___() {\\n    enum Day today = ___;\\n    ___(\"%d\\n___\\n    return ___;\\n___",
+      "holeyCode": "#___ <___>\\n___\\n// Day列挙型を定義\\nenum ___ { ___,  ___,  ___,  ___,  ___ };\\n___\\n___ ___() {\\n    enum ___ ___ = ___;\\n    ___(\"___\\n___\\n    return ___;\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -336,25 +347,23 @@ export const c4Data = {
           "}"
         ],
       "lineHints": [
-          "標準入出力ライブラリを読み込みます。",
+          "標準入出力ライブラリstdio.hを読み込みます。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "enum Day型を定義し、MON〜FRIの列挙値を宣言します。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
-          "ここを正しく入力してください。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。"
+          "戻り値型intでmain関数を定義します。",
+          "enum Day型変数todayにWEDを代入します。",
+          "printf関数で%dフォーマットでtodayを表示します。",
+          "フォーマット文字列の閉じとtodayを渡します。",
+          "プログラムの正常終了を示す値0を返します。",
+          "main関数のブロックを閉じる中括弧です。"
         ],
         "candidates": {
           "keywords": [
-            "enum",
-            "struct",
-            "typedef"
+            "enum"
           ],
-          "others": ["FRI", "main", "WED", "stdio.h", "printf", "", " today);", "0", "}", " today);", "\", today);"]
+          "others": ["include", "stdio.h", "", "Day", "MON", "TUE", "WED", "THU", "FRI", "int", "main", "today", "%d", "\", today);", "0", "}", "UE", "ED", "HU", "RI", "printf"]
         },
         "testCases": [
           {
@@ -366,7 +375,7 @@ export const c4Data = {
     {
       "title": "union 共用体",
       "correctCode": "#include <stdio.h>\\n\\n// Value共用体を定義\\nunion Value {\\n    int i;\\n    double d;\\n};\\n\\nint main() {\\n    union Value v;\\n    v.i = 42;\\n    printf(\"%d\\n\", v.i);\\n    return 0;\\n}",
-      "holeyCode": "#include <___>\\n___\\n// Value共用体を定義\\nunion ___ {\\n    int ___;\\n    double ___;\\n___\\n___\\nint ___() {\\n    union Value ___;\\n    v.i = ___;\\n    ___(\"%d\\n___\\n    return ___;\\n___",
+      "holeyCode": "#___ <___>\\n___\\n// Value共用体を定義\\nunion ___ {\\n    ___ ___;\\n    ___ ___;\\n___\\n___\\n___ ___() {\\n    union ___ ___;\\n    ___.___  = ___;\\n    ___(\"___\\n___\\n    return ___;\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -385,29 +394,27 @@ export const c4Data = {
           "}"
         ],
       "lineHints": [
-          "標準入出力ライブラリを読み込みます。",
+          "標準入出力ライブラリstdio.hを読み込みます。",
           null,
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "union Value型を定義します。",
+          "int型メンバiを宣言します。",
+          "double型メンバdを宣言します。",
+          "共用体定義を閉じるセミコロン付き中括弧です。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。"
+          "戻り値型intでmain関数を定義します。",
+          "union Value型変数vを宣言します。",
+          "v.iに42を代入します。",
+          "printf関数で%dフォーマットでv.iを表示します。",
+          "フォーマット文字列の閉じとv.iを渡します。",
+          "プログラムの正常終了を示す値0を返します。",
+          "main関数のブロックを閉じる中括弧です。"
         ],
         "candidates": {
           "keywords": [
-            "union",
-            "struct",
-            "enum"
+            "union"
           ],
-          "others": ["Value", "i", "d", "};", "main", "v", "42", "stdio.h", "printf", "", "};", " v.i);", "0", "}", " v.i);", "\", v.i);"]
+          "others": ["include", "stdio.h", "", "Value", "int", "i", "double", "d", "};", "main", "v", "42", "printf", "%d", "\", v.i);", "0", "}", "2"]
         },
         "testCases": [
           {
@@ -419,7 +426,7 @@ export const c4Data = {
     {
       "title": "ポインタのポインタ",
       "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    int x = 100;\\n    int *p = &x;\\n    // ** で二重ポインタを宣言\\n    int **pp = &p;\\n    printf(\"%d\\n\", **pp);\\n    return 0;\\n}",
-      "holeyCode": "#include <___>\\n___\\nint ___() {\\n    int x = ___;\\n    int *p = &___;\\n    // ** で二重ポインタを宣言\\n    int **pp = &___;\\n    ___(\"%d\\n___\\n    return ___;\\n___",
+      "holeyCode": "#___ <___>\\n___\\n___ ___() {\\n    ___ ___ = ___;\\n    ___ *___ = &___;\\n    // ** で二重ポインタを宣言\\n    ___ **___ = &___;\\n    ___(\"___\\n___\\n    return ___;\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -434,25 +441,20 @@ export const c4Data = {
           "}"
         ],
       "lineHints": [
-          "標準入出力ライブラリを読み込みます。",
+          "標準入出力ライブラリstdio.hを読み込みます。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
-          "整数型の変数を宣言し、初期値を代入します。",
-          "ここを正しく入力してください。",
+          "戻り値型intでmain関数を定義します。",
+          "int型変数xに100を代入します。",
+          "int型ポインタpにxのアドレスを代入します。",
           null,
-          "ここを正しく入力してください。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。"
+          "int型二重ポインタppにpのアドレスを代入します。",
+          "printf関数で%dフォーマットで**ppを表示します。",
+          "フォーマット文字列の閉じと**ppを渡します。",
+          "プログラムの正常終了を示す値0を返します。",
+          "main関数のブロックを閉じる中括弧です。"
         ],
         "candidates": {
-          "operators": [
-            "**",
-            "*",
-            "&"
-          ],
-          "others": ["main", "100", "x", "p", "stdio.h", "printf", "", " **pp);", "0", "}", " **pp);", "\", **pp);"]
+          "others": ["include", "stdio.h", "", "int", "main", "x", "100", "p", "pp", "printf", "%d", "\", **pp);", "0", "}"]
         },
         "testCases": [
           {
@@ -464,7 +466,7 @@ export const c4Data = {
     {
       "title": "可変長引数",
       "correctCode": "#include <stdio.h>\\n#include <stdarg.h>\\n\\nint sum(int count, ...) {\\n    va_list args;\\n    // va_start で可変長引数を初期化\\n    va_start(args, count);\\n    int total = 0;\\n    for (int i = 0; i < count; i++) {\\n        total += va_arg(args, int);\\n    }\\n    va_end(args);\\n    return total;\\n}\\n\\nint main() {\\n    printf(\"%d\\n\", sum(3, 10, 20, 30));\\n    return 0;\\n}",
-      "holeyCode": "#include <___>\\n#include <___>\\n___\\nint sum(int ___, ...) {\\n    va_list ___;\\n    // va_start で可変長引数を初期化\\n    va_start(args, ___);\\n    int total = ___;\\n    for (int i = ___; i < count; i++) {\\n        total += va_arg(args, ___);\\n    ___\\n    va_end(___);\\n    return ___;\\n___\\n___\\nint ___() {\\n    ___(\"%d\\n___\\n    return ___;\\n___",
+      "holeyCode": "#___ <___>\\n#___ <___>\\n___\\n___ ___(___  ___,  ...) {\\n    ___ ___;\\n    // va_start で可変長引数を初期化\\n    ___(___,  ___);\\n    ___ ___ = ___;\\n    for (___ ___ = ___; ___ < ___; ___++) {\\n        ___ += ___(___,  ___);\\n    ___\\n    ___(___);\\n    return ___;\\n___\\n___\\n___ ___() {\\n    ___(\"___\\n___\\n    return ___;\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "#include <stdarg.h>",
@@ -488,26 +490,26 @@ export const c4Data = {
           "}"
         ],
       "lineHints": [
-          "標準入出力ライブラリを読み込みます。",
-          "可変長引数を扱うライブラリを読み込みます。",
+          "標準入出力ライブラリstdio.hを読み込みます。",
+          "可変長引数ライブラリstdarg.hを読み込みます。",
           null,
-          "int型の値を返す関数（sum）を定義します。",
-          "ここを正しく入力してください。",
+          "int型を返すsum関数をint型引数countと可変長引数で定義します。",
+          "va_list型変数argsを宣言します。",
           null,
-          "ここを正しく入力してください。",
-          "整数型の変数を宣言し、初期値を代入します。",
-          "繰り返し処理（ループ）を開始する。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "変数の値を呼び出し元に返す（戻り値）。",
-          "ここを正しく入力してください。",
+          "va_startマクロでargsとcountで可変長引数を初期化します。",
+          "int型変数totalを0で初期化します。",
+          "int型変数iを0から、iがcount未満の間、i++でループします。",
+          "totalにva_argマクロでargsからint型の値を取得して加算します。",
+          "forループを閉じる中括弧です。",
+          "va_endマクロでargsを終了します。",
+          "変数totalを呼び出し元に返します。",
+          "sum関数を閉じる中括弧です。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
-          "printf関数で結果を表示します。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。"
+          "戻り値型intでmain関数を定義します。",
+          "printf関数で%dフォーマットでsum関数の結果を表示します。",
+          "sum関数を引数3, 10, 20, 30で呼び出します。",
+          "プログラムの正常終了を示す値0を返します。",
+          "main関数のブロックを閉じる中括弧です。"
         ],
         "candidates": {
           "macros": [
@@ -515,7 +517,7 @@ export const c4Data = {
             "va_arg",
             "va_end"
           ],
-          "others": ["count", "args", "0", "int", "}", "total", "main", "stdio.h", "stdarg.h", "printf", "", "}", " sum(3, 10, 20, 30));", " sum(3, 10, 20, 30));", "\", sum(3, 10, 20, 30));"]
+          "others": ["include", "stdio.h", "stdarg.h", "", "int", "sum", "count", "va_list", "args", "total", "0", "i", "}", "main", "printf", "%d", "\", sum(3, 10, 20, 30));", "ount", "nt"]
         },
         "testCases": [
           {

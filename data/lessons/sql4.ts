@@ -9,7 +9,7 @@ export const sql4Data = {
     {
       "title": "CTE（WITH句）",
       "correctCode": "-- WITHでCTEを定義\\nWITH nums AS (\\n  -- データを作成\\n  SELECT 1 AS n UNION SELECT 2 UNION SELECT 3\\n)\\n-- CTEからデータを取得\\nSELECT * FROM nums;",
-      "holeyCode": "-- WITHでCTEを定義\\nWITH nums ___ (\\n  -- データを作成\\n  SELECT ___ AS n UNION SELECT 2 UNION SELECT 3\\n___\\n-- CTEからデータを取得\\nSELECT * FROM ___;",
+      "holeyCode": "-- WITHでCTEを定義\\nWITH ___ AS (\\n  -- データを作成\\n  SELECT ___ AS ___ UNION SELECT ___ UNION SELECT ___\\n___\\n-- CTEからデータを取得\\nSELECT ___ FROM ___;",
       "correctLines": [
           "-- WITHでCTEを定義",
           "WITH nums AS (",
@@ -21,12 +21,12 @@ export const sql4Data = {
         ],
       "lineHints": [
           null,
-          "WITH でCTEを定義します。",
+          "CTEに名前を付けてASで定義を開始します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "UNION で複数の値を結合して仮想テーブルを作成します。",
+          "CTEの定義を閉じる括弧です。",
           null,
-          "ここを正しく入力してください。"
+          "定義したCTEから全ての列を取得します。"
         ],
         "candidates": {
           "keywords": [
@@ -34,7 +34,7 @@ export const sql4Data = {
             "AS",
             "FROM"
           ],
-          "others": ["SELECT", "1", ")", "nums", ")"]
+          "others": ["nums", "1", "n", "2", "3", ")", "*"]
         },
         "testCases": [
           {
@@ -46,7 +46,7 @@ export const sql4Data = {
     {
       "title": "ROW_NUMBER()",
       "correctCode": "-- SELECTで列を取得\\nSELECT\\n  -- 値の列\\n  val,\\n  -- ROW_NUMBERで連番を振る\\n  ROW_NUMBER() OVER (ORDER BY val) AS rn\\n-- データソースを指定\\nFROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
-      "holeyCode": "-- SELECTで列を取得\\n___\\n  -- 値の列\\n  ___,\\n  -- ROW_NUMBERで連番を振る\\n  ROW_NUMBER() OVER (ORDER BY val) AS ___\\n-- データソースを指定\\nFROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT '___');",
+      "holeyCode": "-- SELECTで列を取得\\n___\\n  -- 値の列\\n  ___,\\n  -- ROW_NUMBERで連番を振る\\n  ___() OVER (ORDER BY ___) AS ___\\n-- データソースを指定\\nFROM (SELECT '___' AS ___ UNION SELECT '___' UNION SELECT '___');",
       "correctLines": [
           "-- SELECTで列を取得",
           "SELECT",
@@ -59,13 +59,13 @@ export const sql4Data = {
         ],
       "lineHints": [
           null,
-          "ROW_NUMBER で連番を振ります。",
+          "データを取得するためのキーワードです。",
           null,
-          "ここを正しく入力してください。",
+          "取得する列名を指定します。",
           null,
-          "ここを正しく入力してください。",
+          "行に連番を振るウィンドウ関数を使います。",
           null,
-          "ここを正しく入力してください。"
+          "サブクエリで値と列名を定義します。"
         ],
         "candidates": {
           "functions": [
@@ -73,7 +73,7 @@ export const sql4Data = {
             "RANK",
             "DENSE_RANK"
           ],
-          "others": ["SELECT", "val", "FROM", "rn", "C", "SELECT", "rn"]
+          "others": ["SELECT", "val", "rn", "A", "B", "C"]
         },
         "testCases": [
           {
@@ -85,7 +85,7 @@ export const sql4Data = {
     {
       "title": "RANK()",
       "correctCode": "-- SELECTで列を取得\\nSELECT\\n  -- 値の列\\n  val,\\n  -- RANKで順位を付ける\\n  RANK() OVER (ORDER BY val) AS rnk\\n-- データソースを指定\\nFROM (SELECT 1 AS val UNION ALL SELECT 1 UNION ALL SELECT 2);",
-      "holeyCode": "-- SELECTで列を取得\\n___\\n  -- 値の列\\n  ___,\\n  -- RANKで順位を付ける\\n  RANK() OVER (ORDER BY val) AS ___\\n-- データソースを指定\\nFROM (SELECT ___ AS val UNION ALL SELECT 1 UNION ALL SELECT 2);",
+      "holeyCode": "-- SELECTで列を取得\\n___\\n  -- 値の列\\n  ___,\\n  -- RANKで順位を付ける\\n  ___() OVER (ORDER BY ___) AS ___\\n-- データソースを指定\\nFROM (SELECT ___ AS ___ UNION ALL SELECT ___ UNION ALL SELECT ___);",
       "correctLines": [
           "-- SELECTで列を取得",
           "SELECT",
@@ -98,13 +98,13 @@ export const sql4Data = {
         ],
       "lineHints": [
           null,
-          "RANK で順位を付けます。",
+          "データを取得するためのキーワードです。",
           null,
-          "ここを正しく入力してください。",
+          "取得する列名を指定します。",
           null,
-          "ここを正しく入力してください。",
+          "同じ値には同じ順位を付けるウィンドウ関数です。",
           null,
-          "ここを正しく入力してください。"
+          "サブクエリで重複を含む値を定義します。"
         ],
         "candidates": {
           "functions": [
@@ -112,7 +112,7 @@ export const sql4Data = {
             "ROW_NUMBER",
             "DENSE_RANK"
           ],
-          "others": ["SELECT", "val", "FROM", "rnk", "1", "SELECT", "rnk"]
+          "others": ["SELECT", "val", "rnk", "1", "2"]
         },
         "testCases": [
           {
@@ -124,7 +124,7 @@ export const sql4Data = {
     {
       "title": "SUM() OVER",
       "correctCode": "-- SELECTで列を取得\\nSELECT\\n  -- 値の列\\n  val,\\n  -- SUMで累積合計を計算\\n  SUM(val) OVER (ORDER BY val) AS running\\n-- データソースを指定\\nFROM (SELECT 1 AS val UNION ALL SELECT 2 UNION ALL SELECT 3);",
-      "holeyCode": "-- SELECTで列を取得\\n___\\n  -- 値の列\\n  ___,\\n  -- SUMで累積合計を計算\\n  SUM(val) OVER (ORDER BY val) AS ___\\n-- データソースを指定\\nFROM (SELECT ___ AS val UNION ALL SELECT 2 UNION ALL SELECT 3);",
+      "holeyCode": "-- SELECTで列を取得\\n___\\n  -- 値の列\\n  ___,\\n  -- SUMで累積合計を計算\\n  ___(___) OVER (ORDER BY ___) AS ___\\n-- データソースを指定\\nFROM (SELECT ___ AS ___ UNION ALL SELECT ___ UNION ALL SELECT ___);",
       "correctLines": [
           "-- SELECTで列を取得",
           "SELECT",
@@ -137,13 +137,13 @@ export const sql4Data = {
         ],
       "lineHints": [
           null,
-          "SUM で累積合計を計算します。",
+          "データを取得するためのキーワードです。",
           null,
-          "ここを正しく入力してください。",
+          "取得する列名を指定します。",
           null,
-          "ここを正しく入力してください。",
+          "累積合計を計算する集約関数をOVER句と組み合わせます。",
           null,
-          "ここを正しく入力してください。"
+          "サブクエリで連続した値を定義します。"
         ],
         "candidates": {
           "functions": [
@@ -151,7 +151,7 @@ export const sql4Data = {
             "AVG",
             "COUNT"
           ],
-          "others": ["SELECT", "val", "FROM", "running", "1", "SELECT", "running"]
+          "others": ["SELECT", "val", "running", "1", "2", "3"]
         },
         "testCases": [
           {
@@ -163,7 +163,7 @@ export const sql4Data = {
     {
       "title": "CASE WHEN",
       "correctCode": "-- SELECTで取得\\nSELECT\\n  -- CASEで条件分岐\\n  CASE WHEN 1 > 0 THEN 'はい' ELSE 'いいえ' END AS result;",
-      "holeyCode": "-- SELECTで取得\\n___\\n  -- CASEで条件分岐\\n  CASE WHEN ___ > 0 THEN 'はい' ELSE 'いいえ' END AS result;",
+      "holeyCode": "-- SELECTで取得\\n___\\n  -- CASEで条件分岐\\n  ___ WHEN ___ > ___ THEN '___' ELSE '___' END AS ___;",
       "correctLines": [
           "-- SELECTで取得",
           "SELECT",
@@ -172,9 +172,9 @@ export const sql4Data = {
         ],
       "lineHints": [
           null,
-          "CASE で条件分岐します。",
+          "データを取得するためのキーワードです。",
           null,
-          "ここを正しく入力してください。"
+          "条件分岐で値に応じて異なる結果を返します。"
         ],
         "candidates": {
           "keywords": [
@@ -182,7 +182,7 @@ export const sql4Data = {
             "IF",
             "SWITCH"
           ],
-          "others": ["SELECT", "1", "SELECT"]
+          "others": ["SELECT", "1", "0", "はい", "いいえ", "result"]
         },
         "testCases": [
           {
@@ -194,14 +194,14 @@ export const sql4Data = {
     {
       "title": "COALESCE",
       "correctCode": "-- COALESCEで最初の非NULLを返す\\nSELECT COALESCE(NULL, NULL, 'デフォルト') AS val;",
-      "holeyCode": "-- COALESCEで最初の非NULLを返す\\nSELECT COALESCE(NULL, NULL, 'デフォルト') AS ___;",
+      "holeyCode": "-- COALESCEで最初の非NULLを返す\\nSELECT ___(NULL, NULL, '___') AS ___;",
       "correctLines": [
           "-- COALESCEで最初の非NULLを返す",
           "SELECT COALESCE(NULL, NULL, 'デフォルト') AS val;"
         ],
       "lineHints": [
           null,
-          "COALESCE で最初の非NULLを返します。"
+          "複数の値から最初のNULLでない値を返す関数です。"
         ],
         "candidates": {
           "functions": [
@@ -209,7 +209,7 @@ export const sql4Data = {
             "IFNULL",
             "NVL"
           ],
-          "others": ["val"]
+          "others": ["デフォルト", "val"]
         },
         "testCases": [
           {
@@ -221,7 +221,7 @@ export const sql4Data = {
     {
       "title": "INSERT 文",
       "correctCode": "-- CREATE TABLEでテーブルを作成\\nCREATE TABLE test(x TEXT);\\n-- INSERTでデータを挿入\\nINSERT INTO test VALUES ('こんにちは');\\n-- SELECTでデータを取得\\nSELECT * FROM test;",
-      "holeyCode": "-- CREATE TABLEでテーブルを作成\\nCREATE TABLE test(x ___);\\n-- INSERTでデータを挿入\\nINSERT INTO test VALUES ('___');\\n-- SELECTでデータを取得\\nSELECT * FROM ___;",
+      "holeyCode": "-- CREATE TABLEでテーブルを作成\\nCREATE TABLE ___(___ ___);\\n-- INSERTでデータを挿入\\n___ INTO ___ VALUES ('___');\\n-- SELECTでデータを取得\\nSELECT ___ FROM ___;",
       "correctLines": [
           "-- CREATE TABLEでテーブルを作成",
           "CREATE TABLE test(x TEXT);",
@@ -232,11 +232,11 @@ export const sql4Data = {
         ],
       "lineHints": [
           null,
-          "INSERT でデータを挿入します。",
+          "テーブルの構造を定義します（名前、列、型）。",
           null,
-          "ここを正しく入力してください。",
+          "テーブルにデータを追加するDML文です。",
           null,
-          "ここを正しく入力してください。"
+          "挿入したデータを確認するためテーブルから取得します。"
         ],
         "candidates": {
           "keywords": [
@@ -244,7 +244,7 @@ export const sql4Data = {
             "ADD",
             "PUT"
           ],
-          "others": ["CREATE", "SELECT", "TEXT", "test", "こんにちは"]
+          "others": ["test", "x", "TEXT", "こんにちは", "*"]
         },
         "testCases": [
           {
@@ -256,7 +256,7 @@ export const sql4Data = {
     {
       "title": "UPDATE 文",
       "correctCode": "-- CREATE TABLEでテーブルを作成\\nCREATE TABLE test(x TEXT);\\n-- INSERTでデータを挿入\\nINSERT INTO test VALUES ('古い');\\n-- UPDATEでデータを更新\\nUPDATE test SET x = '新しい';\\n-- SELECTでデータを取得\\nSELECT * FROM test;",
-      "holeyCode": "-- CREATE TABLEでテーブルを作成\\nCREATE TABLE test(x ___);\\n-- INSERTでデータを挿入\\nINSERT INTO test VALUES ('___');\\n-- UPDATEでデータを更新\\nUPDATE test SET x = '___';\\n-- SELECTでデータを取得\\nSELECT * FROM ___;",
+      "holeyCode": "-- CREATE TABLEでテーブルを作成\\nCREATE TABLE ___(___ ___);\\n-- INSERTでデータを挿入\\nINSERT INTO ___ VALUES ('___');\\n-- UPDATEでデータを更新\\n___ ___ SET ___ = '___';\\n-- SELECTでデータを取得\\nSELECT ___ FROM ___;",
       "correctLines": [
           "-- CREATE TABLEでテーブルを作成",
           "CREATE TABLE test(x TEXT);",
@@ -269,13 +269,13 @@ export const sql4Data = {
         ],
       "lineHints": [
           null,
-          "UPDATE でデータを更新します。",
+          "テーブルの構造を定義します（名前、列、型）。",
           null,
-          "ここを正しく入力してください。",
+          "初期データをテーブルに追加します。",
           null,
-          "ここを正しく入力してください。",
+          "既存のデータを変更するDML文です。",
           null,
-          "ここを正しく入力してください。"
+          "更新されたデータを確認するためテーブルから取得します。"
         ],
         "candidates": {
           "keywords": [
@@ -283,7 +283,7 @@ export const sql4Data = {
             "MODIFY",
             "CHANGE"
           ],
-          "others": ["CREATE", "INSERT", "SELECT", "TEXT", "old", "new", "test", "古い", "新しい"]
+          "others": ["test", "x", "TEXT", "古い", "新しい", "*"]
         },
         "testCases": [
           {
@@ -295,7 +295,7 @@ export const sql4Data = {
     {
       "title": "DELETE 文",
       "correctCode": "-- CREATE TABLEでテーブルを作成\\nCREATE TABLE test(x INT);\\n-- INSERTでデータを挿入\\nINSERT INTO test VALUES (1), (2), (3);\\n-- DELETEでデータを削除\\nDELETE FROM test WHERE x = 2;\\n-- SELECTでデータを取得\\nSELECT * FROM test;",
-      "holeyCode": "-- CREATE TABLEでテーブルを作成\\nCREATE TABLE test(x ___);\\n-- INSERTでデータを挿入\\nINSERT INTO test VALUES (___), (2), (3);\\n-- DELETEでデータを削除\\nDELETE FROM test WHERE x = ___;\\n-- SELECTでデータを取得\\nSELECT * FROM ___;",
+      "holeyCode": "-- CREATE TABLEでテーブルを作成\\nCREATE TABLE ___(___ ___);\\n-- INSERTでデータを挿入\\nINSERT INTO ___ VALUES (___), (___), (___);\\n-- DELETEでデータを削除\\n___ FROM ___ WHERE ___ = ___;\\n-- SELECTでデータを取得\\nSELECT ___ FROM ___;",
       "correctLines": [
           "-- CREATE TABLEでテーブルを作成",
           "CREATE TABLE test(x INT);",
@@ -308,13 +308,13 @@ export const sql4Data = {
         ],
       "lineHints": [
           null,
-          "DELETE でデータを削除します。",
+          "テーブルの構造を定義します（名前、列、型）。",
           null,
-          "ここを正しく入力してください。",
+          "複数のデータをまとめてテーブルに追加します。",
           null,
-          "ここを正しく入力してください。",
+          "条件に一致するデータを削除するDML文です。",
           null,
-          "ここを正しく入力してください。"
+          "削除後のデータを確認するためテーブルから取得します。"
         ],
         "candidates": {
           "keywords": [
@@ -322,7 +322,7 @@ export const sql4Data = {
             "REMOVE",
             "DROP"
           ],
-          "others": ["CREATE", "INSERT", "SELECT", "INT", "1", "2", "test"]
+          "others": ["test", "x", "INT", "1", "2", "3", "*"]
         },
         "testCases": [
           {
@@ -334,14 +334,14 @@ export const sql4Data = {
     {
       "title": "GROUP_CONCAT",
       "correctCode": "-- SELECT GROUP_CONCAT と入力して値を結合\\nSELECT GROUP_CONCAT(val, '-') FROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
-      "holeyCode": "-- SELECT GROUP_CONCAT と入力して値を結合\\nSELECT GROUP_CONCAT(val, '-') ___ (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT '___');",
+      "holeyCode": "-- SELECT GROUP_CONCAT と入力して値を結合\\nSELECT ___(___, '___') FROM (SELECT '___' AS ___ UNION SELECT '___' UNION SELECT '___');",
       "correctLines": [
           "-- SELECT GROUP_CONCAT と入力して値を結合",
           "SELECT GROUP_CONCAT(val, '-') FROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');"
         ],
       "lineHints": [
           null,
-          "GROUP_CONCAT で値を結合します。"
+          "複数の値を区切り文字で連結する集約関数です。"
         ],
         "candidates": {
           "functions": [
@@ -349,7 +349,7 @@ export const sql4Data = {
             "STRING_AGG",
             "CONCAT"
           ],
-          "others": ["SELECT", "FROM", "C"]
+          "others": ["val", "-", "A", "B", "C"]
         },
         "testCases": [
           {

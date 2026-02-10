@@ -9,7 +9,7 @@ export const go4Data = {
     {
       "title": "sync.Mutex",
       "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"sync\"\\n)\\n\\nfunc main() {\\n    var mu sync.Mutex\\n    count := 0\\n    \\n    // Lock でロックを取得\\n    mu.Lock()\\n    count++\\n    // Unlock でロックを解放\\n    mu.Unlock()\\n    \\n    fmt.Println(count)\\n}",
-      "holeyCode": "package ___\\n___\\nimport ___\\n    \\\"___\\\"\\n    \"___\"\\n___\\n___\\nfunc ___ () {\\n    var mu sync.___\\n    ___ := 0\\n    ___\\n    // Lock でロックを取得\\n    mu.___()\\n    ___++\\n    // Unlock でロックを解放\\n    mu.___()\\n    ___\\n    fmt.___(count)\\n___",
+      "holeyCode": "package ___\\n\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n\\nfunc ___() ___\\n    var ___ ___.___\\n    ___ := ___\\n    \\n    // Lock でロックを取得\\n    ___.___()\\n    ___++\\n    // Unlock でロックを解放\\n    ___.___()\\n    \\n    ___.___(___)\\n___",
       "correctLines": [
           "package main",
           "",
@@ -32,25 +32,25 @@ export const go4Data = {
           "}"
         ],
       "lineHints": [
-          "Lock でロックを取得します。",
+          "mainパッケージを宣言します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "importの開き括弧です。",
+          "fmtパッケージをインポートします。",
+          "syncパッケージをインポートします。",
+          "importの閉じ括弧です。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
-          "変数を宣言し、同時に数値を代入します（型推論を使用）。",
-          "この行を正しく入力してください。",
+          "main関数を定義し、開き波括弧でブロックを開始します。",
+          "sync.Mutex型の変数muを宣言します。",
+          "変数countを0で初期化します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
           null,
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。",
-          "変数の値を標準出力に出力します。",
-          "ここを正しく入力してください。"
+          "mu.Lock()でロックを取得します。",
+          "countをインクリメントします。",
+          null,
+          "mu.Unlock()でロックを解放します。",
+          null,
+          "fmt.Printlnでcountの値を出力します。",
+          "閉じ波括弧で関数ブロックを終了します。"
         ],
         "candidates": {
           "methods": [
@@ -58,7 +58,7 @@ export const go4Data = {
             "Acquire",
             "Enter"
           ],
-          "others": ["Unlock", "main", "(", "fmt", "sync", ")", "main()", "Mutex", "count", "Println", "}", "main", "", "(", ")", "Mutex"]
+          "others": ["Unlock", "main", "fmt", "sync", "Mutex", "count", "Println", "mu", "0", "(", ")", "{", "}"]
         },
         "testCases": [
           {
@@ -70,7 +70,7 @@ export const go4Data = {
     {
       "title": "sync.WaitGroup",
       "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"sync\"\\n)\\n\\nfunc main() {\\n    var wg sync.WaitGroup\\n    // Add でカウンタを増やす\\n    wg.Add(1)\\n    \\n    go func() {\\n        // Done でカウンタを減らす\\n        defer wg.Done()\\n        fmt.Println(\"goroutine\")\\n    }()\\n    \\n    // Wait でカウンタが0になるまで待つ\\n    wg.Wait()\\n    fmt.Println(\"done\")\\n}",
-      "holeyCode": "package ___\\n___\\nimport ___\\n    \\\"___\\\"\\n    \"___\"\\n___\\n___\\nfunc ___ () {\\n    var wg sync.___\\n    // Add でカウンタを増やす\\n    wg.Add(___)\\n    ___\\n    go ___() {\\n        // Done でカウンタを減らす\\n        defer wg.___()\\n        fmt.___(\"goroutine\")\\n    ___()\\n    ___\\n    // Wait でカウンタが0になるまで待つ\\n    wg.___()\\n    fmt.___(\"done\")\\n___",
+      "holeyCode": "package ___\\n\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n\\nfunc ___() ___\\n    var ___ ___.___\\n    // Add でカウンタを増やす\\n    ___.___(___)\\n    \\n    go func___ ___\\n        // Done でカウンタを減らす\\n        defer ___.___()\\n        ___.___(\\\"\")\\n    ___()\\n    \\n    // Wait でカウンタが0になるまで待つ\\n    ___.___()\\n    ___.___(\\\"\")\\n___",
       "correctLines": [
           "package main",
           "",
@@ -96,28 +96,28 @@ export const go4Data = {
           "}"
         ],
       "lineHints": [
-          "Add でカウンタを増やします。",
+          "mainパッケージを宣言します。",
           null,
-          "Wait でカウンタが0になるまで待ちます。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "importの開き括弧です。",
+          "fmtパッケージをインポートします。",
+          "syncパッケージをインポートします。",
+          "importの閉じ括弧です。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
+          "main関数を定義し、開き波括弧でブロックを開始します。",
+          "sync.WaitGroup型の変数wgを宣言します。",
           null,
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。",
-          "ここを正しく入力してください。",
+          "wg.Add(1)でカウンタを1増やします。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "この行を正しく入力してください。",
+          "goキーワードでgoroutineを起動し、無名関数を定義します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "deferでwg.Done()をgoroutine終了時に実行します。",
+          "fmt.Printlnで\"goroutine\"を出力します。",
+          "閉じ波括弧と()で無名関数を即時実行します。",
+          null,
+          null,
+          "wg.Wait()でカウンタが0になるまで待ちます。",
+          "fmt.Printlnで\"done\"を出力します。",
+          "閉じ波括弧で関数ブロックを終了します。"
         ],
         "candidates": {
           "methods": [
@@ -125,7 +125,7 @@ export const go4Data = {
             "Finish",
             "Complete"
           ],
-          "others": ["Add", "Wait", "main", "(", "fmt", "sync", ")", "main()", "WaitGroup", "1", "func", "Println", "}", "main", "", "(", ")", "WaitGroup"]
+          "others": ["Add", "Wait", "main", "fmt", "sync", "WaitGroup", "1", "Println", "wg", "goroutine", "done", "(", ")", "{", "}", "()"]
         },
         "testCases": [
           {
@@ -137,7 +137,7 @@ export const go4Data = {
     {
       "title": "context.Background",
       "correctCode": "package main\\n\\nimport (\\n    \"context\"\\n    \"fmt\"\\n)\\n\\nfunc main() {\\n    // Background でルートコンテキストを作成\\n    ctx := context.Background()\\n    // Err でエラーを取得\\n    fmt.Println(ctx.Err())\\n}",
-      "holeyCode": "package ___\\n___\\nimport ___\\n    \"___\"\\n    \\\"___\\\"\\n___\\n___\\nfunc ___ () {\\n    // Background でルートコンテキストを作成\\n    ___ := context.Background()\\n    // Err でエラーを取得\\n    fmt.___(ctx.Err())\\n___",
+      "holeyCode": "package ___\\n\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n\\nfunc ___() ___\\n    // Background でルートコンテキストを作成\\n    ___ := ___.___()\\n    // Err でエラーを取得\\n    ___.___(___.___())\\n___",
       "correctLines": [
           "package main",
           "",
@@ -154,19 +154,19 @@ export const go4Data = {
           "}"
         ],
       "lineHints": [
-          "Background でルートコンテキストを作成します。",
+          "mainパッケージを宣言します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "importの開き括弧です。",
+          "contextパッケージをインポートします。",
+          "fmtパッケージをインポートします。",
+          "importの閉じ括弧です。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
+          "main関数を定義し、開き波括弧でブロックを開始します。",
           null,
-          "ここを正しく入力してください。",
+          "context.Background()でルートコンテキストを作成し、ctxに代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "fmt.Printlnでctx.Err()の結果を出力します。",
+          "閉じ波括弧で関数ブロックを終了します。"
         ],
         "candidates": {
           "functions": [
@@ -174,7 +174,7 @@ export const go4Data = {
             "WithCancel",
             "WithTimeout"
           ],
-          "others": ["Err", "main", "(", "context", "fmt", ")", "main()", "ctx", "Println", "}", "main", "", "(", ")"]
+          "others": ["Err", "main", "context", "fmt", "ctx", "Println", "(", ")", "{", "}"]
         },
         "testCases": [
           {
@@ -186,7 +186,7 @@ export const go4Data = {
     {
       "title": "context.WithCancel",
       "correctCode": "package main\\n\\nimport (\\n    \"context\"\\n    \"fmt\"\\n)\\n\\nfunc main() {\\n    // WithCancel でキャンセル可能に\\n    ctx, cancel := context.WithCancel(context.Background())\\n    // cancel でキャンセル\\n    cancel()\\n    fmt.Println(ctx.Err())\\n}",
-      "holeyCode": "package ___\\n___\\nimport ___\\n    \"___\"\\n    \\\"___\\\"\\n___\\n___\\nfunc ___ () {\\n    // WithCancel でキャンセル可能に\\n    ctx, cancel := context.WithCancel(context.___())\\n    // cancel でキャンセル\\n    ___()\\n    fmt.___(ctx.Err())\\n___",
+      "holeyCode": "package ___\\n\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n\\nfunc ___() ___\\n    // WithCancel でキャンセル可能に\\n    ___, ___ := ___.___(___.___())\\n    // cancel でキャンセル\\n    ___()\\n    ___.___(___.___())\\n___",
       "correctLines": [
           "package main",
           "",
@@ -204,20 +204,20 @@ export const go4Data = {
           "}"
         ],
       "lineHints": [
-          "WithCancel でキャンセル可能にします。",
+          "mainパッケージを宣言します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "importの開き括弧です。",
+          "contextパッケージをインポートします。",
+          "fmtパッケージをインポートします。",
+          "importの閉じ括弧です。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
+          "main関数を定義し、開き波括弧でブロックを開始します。",
           null,
-          "ここを正しく入力してください。",
+          "context.WithCancelでキャンセル可能なコンテキストを作成し、ctxとcancelに代入します。",
           null,
-          "関数（cancel）を呼び出して実行する。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "cancel関数を呼び出してコンテキストをキャンセルします。",
+          "fmt.Printlnでctx.Err()の結果を出力します。",
+          "閉じ波括弧で関数ブロックを終了します。"
         ],
         "candidates": {
           "functions": [
@@ -225,7 +225,7 @@ export const go4Data = {
             "WithTimeout",
             "WithValue"
           ],
-          "others": ["cancel", "main", "(", "context", "fmt", ")", "main()", "Background", "Println", "}", "main", "", "(", ")"]
+          "others": ["cancel", "main", "context", "fmt", "Background", "Println", "ctx", "Err", "(", ")", "{", "}"]
         },
         "testCases": [
           {
@@ -237,7 +237,7 @@ export const go4Data = {
     {
       "title": "time.Duration",
       "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"time\"\\n)\\n\\nfunc main() {\\n    // Millisecond でミリ秒を表す\\n    d := 500 * time.Millisecond\\n    fmt.Println(d)\\n}",
-      "holeyCode": "package ___\\n___\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n___\\nfunc ___ () {\\n    // Millisecond でミリ秒を表す\\n    ___ := 500 * time.Millisecond\\n    fmt.___(d)\\n___",
+      "holeyCode": "package ___\\n\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n\\nfunc ___() ___\\n    // Millisecond でミリ秒を表す\\n    ___ := ___ * ___.___\\n    ___.___(___)\\n___",
       "correctLines": [
           "package main",
           "",
@@ -253,18 +253,18 @@ export const go4Data = {
           "}"
         ],
       "lineHints": [
-          "変数を宣言し、同時に数値を代入します（型推論を使用）。",
+          "mainパッケージを宣言します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "importの開き括弧です。",
+          "fmtパッケージをインポートします。",
+          "timeパッケージをインポートします。",
+          "importの閉じ括弧です。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
+          "main関数を定義し、開き波括弧でブロックを開始します。",
           null,
-          "変数を宣言し、同時に数値を代入します（型推論を使用）。",
-          "変数の値を標準出力に出力します。",
-          "ここを正しく入力してください。"
+          "500 * time.Millisecondで500ミリ秒を表すDuration値を作成し、dに代入します。",
+          "fmt.Printlnでdの値を出力します。",
+          "閉じ波括弧で関数ブロックを終了します。"
         ],
         "candidates": {
           "constants": [
@@ -272,7 +272,7 @@ export const go4Data = {
             "Second",
             "Minute"
           ],
-          "others": ["main", "(", "fmt", "time", ")", "main()", "d", "Println", "}", "main", "", "(", ")"]
+          "others": ["main", "fmt", "time", "d", "Println", "500", "(", ")", "{", "}"]
         },
         "testCases": [
           {
@@ -284,7 +284,7 @@ export const go4Data = {
     {
       "title": "json.Marshal",
       "correctCode": "package main\\n\\nimport (\\n    \"encoding/json\"\\n    \"fmt\"\\n)\\n\\ntype Item struct {\\n    Name string `json:\"name\"`\\n}\\n\\nfunc main() {\\n    // \"Apple\" で構造体を初期化\\n    item := Item{Name: \"Apple\"}\\n    // Marshal で JSON に変換\\n    data, _ := json.Marshal(item)\\n    fmt.Println(string(data))\\n}",
-      "holeyCode": "package ___\\n___\\nimport ___\\n    \"___\"\\n    \\\"___\\\"\\n___\\n___\\ntype Item ___ {\\n    Name string `json:\"___\"`\\n___\\n___\\nfunc ___ () {\\n    // \"Apple\" で構造体を初期化\\n    ___ := Item{Name: \"Apple\"}\\n    // Marshal で JSON に変換\\n    data, _ := json.Marshal(___)\\n    fmt.___(string(data))\\n___",
+      "holeyCode": "package ___\\n\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n\\ntype ___ struct ___\\n    ___ ___ `json:\\\"___\\\"`\\n___\\n\\nfunc ___() ___\\n    // \"Apple\" で構造体を初期化\\n    ___ := ___{___: \\\"___\\\"}\\n    // Marshal で JSON に変換\\n    ___, _ := ___.___(___)\\n    ___.___(___(___))\\n___",
       "correctLines": [
           "package main",
           "",
@@ -306,24 +306,24 @@ export const go4Data = {
           "}"
         ],
       "lineHints": [
-          " を入力して構造体を初期化します。",
+          "mainパッケージを宣言します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "importの開き括弧です。",
+          "encoding/jsonパッケージをインポートします。",
+          "fmtパッケージをインポートします。",
+          "importの閉じ括弧です。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "type と struct で構造体を定義し、開き波括弧でブロックを開始します。",
+          "Name フィールド（string型）にJSONタグ \"name\" を付けます。",
+          "閉じ波括弧で構造体の定義を終了します。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
+          "main関数を定義し、開き波括弧でブロックを開始します。",
           null,
-          "ここを正しく入力してください。",
+          "Item構造体をName: \"Apple\"で初期化し、itemに代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "json.Marshalでitemを JSON バイト列に変換し、dataに代入します。",
+          "fmt.Printlnでstring(data)を出力します。",
+          "閉じ波括弧で関数ブロックを終了します。"
         ],
         "candidates": {
           "functions": [
@@ -331,7 +331,7 @@ export const go4Data = {
             "Encode",
             "Stringify"
           ],
-          "others": ["\"Apple\"", "main", "(", "encoding/json", "fmt", ")", "struct", "name", "}", "main()", "item", "Println", "main", "", "(", ")", "}"]
+          "others": ["Apple", "main", "encoding/json", "fmt", "Item", "Name", "string", "name", "item", "data", "json", "Println", "(", ")", "{", "}", ":"]
         },
         "testCases": [
           {
@@ -343,7 +343,7 @@ export const go4Data = {
     {
       "title": "json.Unmarshal",
       "correctCode": "package main\\n\\nimport (\\n    \"encoding/json\"\\n    \"fmt\"\\n)\\n\\ntype Item struct {\\n    Name string `json:\"name\"`\\n}\\n\\nfunc main() {\\n    // \"Banana\" を含むJSON文字列をバイト列に変換\\n    data := []byte(`{\"name\":\"Banana\"}`)\\n    var item Item\\n    // Unmarshal で JSON をパース\\n    json.Unmarshal(data, &item)\\n    fmt.Println(item.Name)\\n}",
-      "holeyCode": "package ___\\n___\\nimport ___\\n    \"___\"\\n    \\\"___\\\"\\n___\\n___\\ntype Item ___ {\\n    Name string `json:\"___\"`\\n___\\n___\\nfunc ___ () {\\n    // \"Banana\" を含むJSON文字列をバイト列に変換\\n    ___ := []byte(`{\"name\":\"Banana\"}`)\\n    var item ___\\n    // Unmarshal で JSON をパース\\n    json.Unmarshal(data, &___)\\n    fmt.___(item.Name)\\n___",
+      "holeyCode": "package ___\\n\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n\\ntype ___ struct ___\\n    ___ ___ `json:\\\"___\\\"`\\n___\\n\\nfunc ___() ___\\n    // \"Banana\" を含むJSON文字列をバイト列に変換\\n    ___ := []___(`{\\\"___\\\":\\\"___\\\"}`)\\n    var ___ ___\\n    // Unmarshal で JSON をパース\\n    ___.___(___, &___)\\n    ___.___(___.___)\\n___",
       "correctLines": [
           "package main",
           "",
@@ -366,25 +366,25 @@ export const go4Data = {
           "}"
         ],
       "lineHints": [
-          " を入力してJSONを完成させます。",
+          "mainパッケージを宣言します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "importの開き括弧です。",
+          "encoding/jsonパッケージをインポートします。",
+          "fmtパッケージをインポートします。",
+          "importの閉じ括弧です。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "type と struct で構造体を定義し、開き波括弧でブロックを開始します。",
+          "Name フィールド（string型）にJSONタグ \"name\" を付けます。",
+          "閉じ波括弧で構造体の定義を終了します。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
+          "main関数を定義し、開き波括弧でブロックを開始します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "JSON文字列をbyteスライスに変換し、dataに代入します。",
+          "Item型の変数itemを宣言します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "json.Unmarshalでdataをパースし、itemに格納します。",
+          "fmt.Printlnでitem.Nameを出力します。",
+          "閉じ波括弧で関数ブロックを終了します。"
         ],
         "candidates": {
           "functions": [
@@ -392,7 +392,7 @@ export const go4Data = {
             "Decode",
             "Parse"
           ],
-          "others": ["\"Banana\"", "main", "(", "encoding/json", "fmt", ")", "struct", "name", "}", "main()", "data", "Item", "item", "Println", "main", "", "(", ")", "}", "Item", "Item", "Item\\"]
+          "others": ["Banana", "main", "encoding/json", "fmt", "Item", "Name", "string", "name", "data", "item", "json", "Println", "byte", "(", ")", "{", "}"]
         },
         "testCases": [
           {
@@ -404,7 +404,7 @@ export const go4Data = {
     {
       "title": "strings パッケージ",
       "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"strings\"\\n)\\n\\nfunc main() {\\n    // 分割する文字列 \"hello,world\"\\n    s := \"hello,world\"\\n    // Split で文字列を分割\\n    parts := strings.Split(s, \",\")\\n    fmt.Println(parts[0])\\n}",
-      "holeyCode": "package ___\\n___\\nimport ___\\n    \\\"___\\\"\\n    \"___\"\\n___\\n___\\nfunc ___ () {\\n    // 分割する文字列 \"hello,world\"\\n    ___ := \"hello,world\"\\n    // Split で文字列を分割\\n    ___ := strings.Split(s, \",\")\\n    fmt.___(parts[0])\\n___",
+      "holeyCode": "package ___\\n\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n\\nfunc ___() ___\\n    // 分割する文字列 \"hello,world\"\\n    ___ := \\\"___\\\"\\n    // Split で文字列を分割\\n    ___ := ___.___(___, \\\",\\\")\\n    ___.___(___[___])\\n___",
       "correctLines": [
           "package main",
           "",
@@ -422,20 +422,20 @@ export const go4Data = {
           "}"
         ],
       "lineHints": [
-          " を入力して文字列を設定します。",
+          "mainパッケージを宣言します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "importの開き括弧です。",
+          "fmtパッケージをインポートします。",
+          "stringsパッケージをインポートします。",
+          "importの閉じ括弧です。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
+          "main関数を定義し、開き波括弧でブロックを開始します。",
           null,
-          "ここを正しく入力してください。",
+          "文字列 \"hello,world\" を変数sに代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "strings.Splitでsを \",\" で分割し、partsに代入します。",
+          "fmt.Printlnでparts[0]（最初の要素）を出力します。",
+          "閉じ波括弧で関数ブロックを終了します。"
         ],
         "candidates": {
           "functions": [
@@ -443,7 +443,7 @@ export const go4Data = {
             "Join",
             "Cut"
           ],
-          "others": ["\"hello,world\"", "main", "(", "fmt", "strings", ")", "main()", "s", "parts", "Println", "}", "main", "", "(", ")"]
+          "others": ["hello,world", "main", "fmt", "strings", "s", "parts", "Println", "0", "(", ")", "{", "}"]
         },
         "testCases": [
           {
@@ -455,7 +455,7 @@ export const go4Data = {
     {
       "title": "strconv.Atoi",
       "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"strconv\"\\n)\\n\\nfunc main() {\\n    // Atoi で文字列を整数に変換\\n    num, _ := strconv.Atoi(\"42\")\\n    fmt.Println(num * 2)\\n}",
-      "holeyCode": "package ___\\n___\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n___\\nfunc ___ () {\\n    // Atoi で文字列を整数に変換\\n    num, _ := strconv.Atoi(\"___\")\\n    fmt.___(num * 2)\\n___",
+      "holeyCode": "package ___\\n\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n\\nfunc ___() ___\\n    // Atoi で文字列を整数に変換\\n    ___, _ := ___.___(\\\"\")\\n    ___.___(___ * ___)\\n___",
       "correctLines": [
           "package main",
           "",
@@ -471,18 +471,18 @@ export const go4Data = {
           "}"
         ],
       "lineHints": [
-          "Atoi で文字列を整数に変換します。",
+          "mainパッケージを宣言します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "importの開き括弧です。",
+          "fmtパッケージをインポートします。",
+          "strconvパッケージをインポートします。",
+          "importの閉じ括弧です。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
+          "main関数を定義し、開き波括弧でブロックを開始します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "strconv.Atoiで文字列\"42\"を整数に変換し、numに代入します。",
+          "fmt.Printlnでnum * 2の結果を出力します。",
+          "閉じ波括弧で関数ブロックを終了します。"
         ],
         "candidates": {
           "functions": [
@@ -490,7 +490,7 @@ export const go4Data = {
             "ParseInt",
             "ToInt"
           ],
-          "others": ["main", "(", "fmt", "strconv", ")", "main()", "42", "Println", "}", "main", "", "(", ")"]
+          "others": ["main", "fmt", "strconv", "42", "Println", "num", "2", "(", ")", "{", "}"]
         },
         "testCases": [
           {
@@ -502,7 +502,7 @@ export const go4Data = {
     {
       "title": "os.Args",
       "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"os\"\\n)\\n\\nfunc main() {\\n    // Args でコマンドライン引数を取得\\n    fmt.Println(len(os.Args))\\n}",
-      "holeyCode": "package ___\\n___\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n___\\nfunc ___ () {\\n    // Args でコマンドライン引数を取得\\n    fmt.___(len(os.Args))\\n___",
+      "holeyCode": "package ___\\n\\nimport ___\\n    \\\"___\\\"\\n    \\\"___\\\"\\n___\\n\\nfunc ___() ___\\n    // Args でコマンドライン引数を取得\\n    ___.___(___(___.___))\\n___",
       "correctLines": [
           "package main",
           "",
@@ -517,17 +517,17 @@ export const go4Data = {
           "}"
         ],
       "lineHints": [
-          "Args でコマンドライン引数を取得します。",
+          "mainパッケージを宣言します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "importの開き括弧です。",
+          "fmtパッケージをインポートします。",
+          "osパッケージをインポートします。",
+          "importの閉じ括弧です。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
+          "main関数を定義し、開き波括弧でブロックを開始します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "fmt.Printlnでlen(os.Args)の結果を出力します。",
+          "閉じ波括弧で関数ブロックを終了します。"
         ],
         "candidates": {
           "variables": [
@@ -535,7 +535,7 @@ export const go4Data = {
             "Argv",
             "Arguments"
           ],
-          "others": ["main", "(", "fmt", "os", ")", "main()", "Println", "}", "main", "", "(", ")"]
+          "others": ["main", "fmt", "os", "Println", "len", "(", ")", "{", "}"]
         },
         "testCases": [
           {

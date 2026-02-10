@@ -9,7 +9,7 @@ export const kotlin4Data = {
     {
       "title": "Sealed Class",
       "correctCode": "// Shapeをsealed classで定義\\nsealed class Shape\\n// Circle クラスを定義する\\nclass Circle(val radius: Double) : Shape()\\n// Rectangle クラスを定義する\\nclass Rectangle(val w: Double, val h: Double) : Shape()\\n\\n// 面積を計算する関数\\nfun area(s: Shape): Double = when (s) {\\n    // Circle の場合 (radius * radius)\\n    is Circle -> 3.14 * s.radius * s.radius\\n    // Rectangle の場合 (w * h)\\n    is Rectangle -> s.w * s.h\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // area を出力する\\n    println(area(Circle(2.0)))\\n}",
-      "holeyCode": "// Shapeをsealed classで定義\\nsealed class ___\\n// Circle クラスを定義する\\nclass ___(val radius: Double) : Shape()\\n// Rectangle クラスを定義する\\nclass ___(val w: Double, val h: Double) : Shape()\\n___\\n// 面積を計算する関数\\nfun area(___: Shape): Double = when (s) {\\n    // Circle の場合 (radius * radius)\\n    is Circle -> ___.14 * s.radius * s.radius\\n    // Rectangle の場合 (w * h)\\n    is Rectangle -> s.w * s.___\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // area を出力する\\n    ___(area(Circle(2.0)))\\n___",
+      "holeyCode": "// Shapeをsealed classで定義\\nsealed class ___\\n// Circle クラスを定義する\\nclass ___(val ___: ___) : ___()\\n// Rectangle クラスを定義する\\nclass ___(val ___: ___, val ___: ___) : ___()\\n___\\n// 面積を計算する関数\\nfun ___(___: ___): ___ = when (___) {\\n    // Circle の場合 (radius * radius)\\n    is ___ -> ___ * ___.___ * ___.___\\n    // Rectangle の場合 (w * h)\\n    is ___ -> ___.___ * ___.___\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // area を出力する\\n    ___(___(___(___)))\\n___",
       "correctLines": [
           "// Shapeをsealed classで定義",
           "sealed class Shape",
@@ -34,33 +34,38 @@ export const kotlin4Data = {
         ],
       "lineHints": [
           null,
-          "sealed で継承を制限します。",
+          "sealed classで継承を制限されたShapeを定義します。",
           null,
-          "新しいクラス（Circle）を定義します。",
+          "Circleクラスを定義し、radiusプロパティとDouble型を持たせ、Shape()を継承します。",
           null,
-          "新しいクラス（Rectangle）を定義します。",
-          null,
-          null,
-          "ここを正しく入力してください。",
-          null,
-          "円の半径プロパティにアクセスします。",
-          null,
-          "四角形の高さプロパティにアクセスします。",
-          "ここを正しく入力してください。",
+          "Rectangleクラスを定義し、w・hプロパティとDouble型を持たせ、Shape()を継承します。",
           null,
           null,
-          "プログラムの開始点となる関数です。",
+          "area関数を定義し、s引数にShape型を指定し、戻り値にDouble型を指定し、when式でsを分岐します。",
           null,
-          "標準出力に値を出力する関数です。",
-          "ここを正しく入力してください。"
+          "Circleの場合、3.14と変数sのradiusプロパティを掛け合わせます。",
+          null,
+          "Rectangleの場合、変数sのwとhプロパティを掛け合わせます。",
+          null,
+          null,
+          null,
+          "main関数を定義します。",
+          null,
+          "printlnでarea関数にCircle(2.0)を渡した結果を出力します。",
+          null
         ],
         "candidates": {
           "keywords": [
             "sealed",
             "abstract",
-            "open"
+            "open",
+            "class",
+            "fun",
+            "val",
+            "is",
+            "when"
           ],
-          "others": ["Circle", "Rectangle", "Shape", "radius", "w", "main", "println", "s", "3", "h", "}", "Shape", "", "h", "}"]
+          "others": ["Shape", "Circle", "Rectangle", "radius", "Double", "w", "h", "area", "s", "3.14", "println", "2.0", "main", "}"]
         },
         "testCases": [
           {
@@ -72,7 +77,7 @@ export const kotlin4Data = {
     {
       "title": "object 宣言",
       "correctCode": "// Counterシングルトンを定義\\nobject Counter {\\n    // count を初期化する\\n    private var count = 0\\n    // increment 関数を定義する\\n    fun increment() { count++ }\\n    // get 関数を定義する\\n    fun get() = count\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // 1回目の increment を呼び出す\\n    Counter.increment()\\n    // 2回目の increment を呼び出す\\n    Counter.increment()\\n    // get を出力する\\n    println(Counter.get())\\n}",
-      "holeyCode": "// Counterシングルトンを定義\\nobject ___ {\\n    // count を初期化する\\n    private var count = ___\\n    // increment 関数を定義する\\n    fun increment() { ___++ }\\n    // get 関数を定義する\\n    fun get() = ___\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // 1回目の increment を呼び出す\\n    Counter.___()\\n    // 2回目の increment を呼び出す\\n    Counter.___()\\n    // get を出力する\\n    ___(Counter.get())\\n___",
+      "holeyCode": "// Counterシングルトンを定義\\nobject ___ {\\n    // count を初期化する\\n    private var ___ = ___\\n    // increment 関数を定義する\\n    fun ___() { ___++ }\\n    // get 関数を定義する\\n    fun ___() = ___\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // 1回目の increment を呼び出す\\n    ___.___()\\n    // 2回目の increment を呼び出す\\n    ___.___()\\n    // get を出力する\\n    ___(___.___())\\n___",
       "correctLines": [
           "// Counterシングルトンを定義",
           "object Counter {",
@@ -96,32 +101,35 @@ export const kotlin4Data = {
         ],
       "lineHints": [
           null,
-          "object でシングルトンを定義します。",
+          "Counterというシングルトンをobjectで定義します。",
           null,
-          "カウンタの初期値を設定します。",
+          "count変数を0で初期化します。",
           null,
-          "カウンタを増加させるメソッドを呼び出します。",
+          "increment関数を定義し、countをインクリメントします。",
           null,
-          "内部のカウンタ変数を返します。",
-          "プログラムの開始点となる関数です。",
+          "get関数を定義し、countを返します。",
           null,
           null,
-          "カウンタを増加させるメソッドを呼び出します。",
           null,
-          "カウンタの値を取得するメソッドです。",
+          "main関数を定義します。",
           null,
-          "ここを正しく入力してください。",
+          "Counter.increment()を呼び出します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "Counter.increment()を呼び出します。",
+          null,
+          "printlnでCounter.get()を出力します。",
+          null
         ],
         "candidates": {
           "keywords": [
             "object",
             "class",
-            "companion"
+            "companion",
+            "fun",
+            "private",
+            "var"
           ],
-          "others": ["0", "increment", "count", "main", "get", "Counter", "}", "println", "0", "count", "}", ""]
+          "others": ["Counter", "count", "0", "increment", "get", "main", "println", "}"]
         },
         "testCases": [
           {
@@ -133,7 +141,7 @@ export const kotlin4Data = {
     {
       "title": "委譲プロパティ by lazy",
       "correctCode": "// Config クラスを定義する\\nclass Config {\\n    // valueをlazyで遅延初期化\\n    val value: Int by lazy {\\n        // \"Init\" を出力する\\n        println(\"Init\")\\n        // 42 を返す\\n        42\\n    }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // Config のインスタンスを作成する\\n    val c = Config()\\n    // \"Created\" を出力する\\n    println(\"Created\")\\n    // c.value を出力する\\n    println(c.value)\\n}",
-      "holeyCode": "// Config クラスを定義する\\nclass ___ {\\n    // valueをlazyで遅延初期化\\n    val value: Int by ___ {\\n        // \"Init\" を出力する\\n        ___(\"Init\")\\n        // 42 を返す\\n        ___\\n    ___\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // Config のインスタンスを作成する\\n    val c = ___()\\n    // \"Created\" を出力する\\n    ___(\"Created\")\\n    // c.value を出力する\\n    ___(c.value)\\n___",
+      "holeyCode": "// Config クラスを定義する\\nclass ___ {\\n    // valueをlazyで遅延初期化\\n    val ___: ___ by ___ {\\n        // \"Init\" を出力する\\n        ___(\"___\")\\n        // 42 を返す\\n        ___\\n    ___\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // Config のインスタンスを作成する\\n    val ___ = ___()\\n    // \"Created\" を出力する\\n    ___(\"___\")\\n    // c.value を出力する\\n    ___(___.___) \\n___",
       "correctLines": [
           "// Config クラスを定義する",
           "class Config {",
@@ -158,33 +166,37 @@ export const kotlin4Data = {
         ],
       "lineHints": [
           null,
-          "新しいクラス（Config）を定義します。",
+          "Configクラスを定義します。",
           null,
-          "lazy で遅延初期化します。",
+          "valueプロパティをInt型でlazyによる遅延初期化で定義します。",
           null,
-          "初期化時に出力されるメッセージです。",
+          "printlnで\"Init\"を出力します。",
           null,
-          "lazyブロックから返される値です。",
-          "プログラムの開始点となる関数です。",
-          "Configクラスのインスタンスを作成します。",
+          "42を返します。",
           null,
           null,
-          "lazyで初期化されたプロパティにアクセスします。",
           null,
-          "ここを正しく入力してください。",
           null,
-          "ここを正しく入力してください。",
+          "main関数を定義します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "変数cにConfig()インスタンスを代入します。",
+          null,
+          "printlnで\"Created\"を出力します。",
+          null,
+          "printlnでc.valueを出力します。",
+          null
         ],
         "candidates": {
           "keywords": [
             "lazy",
             "lateinit",
-            "init"
+            "init",
+            "class",
+            "val",
+            "fun",
+            "by"
           ],
-          "others": ["Config", "Init", "42", "main", "Created", "value", "println", "}", "42", "}", ""]
+          "others": ["Config", "value", "Int", "println", "Init", "42", "c", "Created", "main", "}"]
         },
         "testCases": [
           {
@@ -196,7 +208,7 @@ export const kotlin4Data = {
     {
       "title": "lateinit 修飾子",
       "correctCode": "// Service クラスを定義する\\nclass Service {\\n    // configをlateinitで宣言\\n    lateinit var config: String\\n    \\n    // setup 関数を定義する\\n    fun setup(c: String) { config = c }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // Service のインスタンスを作成する\\n    val s = Service()\\n    // setup を呼び出す\\n    s.setup(\"OK\")\\n    // s.config を出力する\\n    println(s.config)\\n}",
-      "holeyCode": "// Service クラスを定義する\\nclass ___ {\\n    // configをlateinitで宣言\\n    lateinit var config: ___\\n    ___\\n    // setup 関数を定義する\\n    fun setup(___: String) { config = c }\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // Service のインスタンスを作成する\\n    val s = ___()\\n    // setup を呼び出す\\n    ___.setup(\"___\")\\n    // s.config を出力する\\n    ___(s.config)\\n___",
+      "holeyCode": "// Service クラスを定義する\\nclass ___ {\\n    // configをlateinitで宣言\\n    lateinit var ___: ___\\n    ___\\n    // setup 関数を定義する\\n    fun ___(___: ___) { ___ = ___ }\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // Service のインスタンスを作成する\\n    val ___ = ___()\\n    // setup を呼び出す\\n    ___.___(___)\\n    // s.config を出力する\\n    ___(___.___) \\n___",
       "correctLines": [
           "// Service クラスを定義する",
           "class Service {",
@@ -219,31 +231,35 @@ export const kotlin4Data = {
         ],
       "lineHints": [
           null,
-          "新しいクラス（Service）を定義します。",
+          "Serviceクラスを定義します。",
           null,
-          "lateinit で後から初期化を宣言します。",
-          "この行を正しく入力してください。",
-          null,
-          "プログラムの開始点となる関数です。",
-          "Serviceクラスのインスタンスを作成します。",
+          "configプロパティをString型でlateinitで宣言します。",
           null,
           null,
-          "lateinitで宣言されたプロパティに値を設定します。",
+          "setup関数を定義し、c引数にString型を指定し、configにcを代入します。",
           null,
-          "ここを正しく入力してください。",
           null,
-          "ここを正しく入力してください。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "main関数を定義します。",
+          null,
+          "変数sにService()インスタンスを代入します。",
+          null,
+          "s.setup()に\"OK\"を渡して呼び出します。",
+          null,
+          "printlnでs.configを出力します。",
+          null
         ],
         "candidates": {
           "keywords": [
             "lateinit",
             "lazy",
-            "init"
+            "init",
+            "class",
+            "var",
+            "fun",
+            "val"
           ],
-          "others": ["Service", "setup", "main", "config", "String", "c", "}", "OK", "println", "s", "String", "", "}"]
+          "others": ["Service", "config", "String", "setup", "c", "s", "main", "println", "\"OK\"", "}"]
         },
         "testCases": [
           {
@@ -255,7 +271,7 @@ export const kotlin4Data = {
     {
       "title": "inline 関数",
       "correctCode": "// repeat関数をinlineで定義\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\n    // 0 から times まで繰り返す\\n    for (i in 0 until times) {\\n        // action を呼び出す\\n        action(i)\\n    }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // repeat を呼び出す\\n    repeat(3) { println(it) }\\n}",
-      "holeyCode": "// repeat関数をinlineで定義\\ninline fun repeat(times: Int, action: (Int) -> ___) {\\n    // 0 から times まで繰り返す\\n    for (i in ___ until times) {\\n        // action を呼び出す\\n        action(___)\\n    ___\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // repeat を呼び出す\\n    repeat(___) { println(it) }\\n___",
+      "holeyCode": "// repeat関数をinlineで定義\\ninline fun ___(___: ___, ___: (___) -> ___) {\\n    // 0 から times まで繰り返す\\n    for (___ in ___ until ___) {\\n        // action を呼び出す\\n        ___(___) \\n    ___\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // repeat を呼び出す\\n    ___(___) { ___(___) }\\n___",
       "correctLines": [
           "// repeat関数をinlineで定義",
           "inline fun repeat(times: Int, action: (Int) -> Unit) {",
@@ -274,27 +290,31 @@ export const kotlin4Data = {
         ],
       "lineHints": [
           null,
-          "inline でインライン展開します。",
+          "repeat関数を定義し、times引数にInt型を、action引数に(Int)->Unit型を指定します。",
           null,
-          "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
+          "for文でiを0からtimesまで繰り返します。",
           null,
-          "引数として渡された関数を実行します。",
-          "プログラムの開始点となる関数です。",
-          "定義したinline関数を呼び出します。",
+          "action(i)を呼び出します。",
           null,
           null,
-          "ここを正しく入力してください。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          null,
+          "main関数を定義します。",
+          null,
+          "repeat(3)を呼び出し、ラムダ内でprintln(it)を実行します。",
+          null
         ],
         "candidates": {
           "keywords": [
             "inline",
             "noinline",
-            "crossinline"
+            "crossinline",
+            "fun",
+            "for",
+            "in",
+            "until"
           ],
-          "others": ["times", "action", "main", "repeat", "Unit", "0", "i", "}", "3", "}", ""]
+          "others": ["repeat", "times", "Int", "action", "Unit", "i", "0", "main", "3", "println", "it", "}"]
         },
         "testCases": [
           {
@@ -306,7 +326,7 @@ export const kotlin4Data = {
     {
       "title": "reified 型パラメータ",
       "correctCode": "// typeOf関数をreifiedで定義\\ninline fun <reified T> typeOf(): String {\\n    // 型名を返す\\n    return T::class.simpleName ?: \"Unknown\"\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // typeOf<String>() を出力する\\n    println(typeOf<String>())\\n}",
-      "holeyCode": "// typeOf関数をreifiedで定義\\ninline fun <reified T> typeOf(): ___ {\\n    // 型名を返す\\n    ___ T::class.simpleName ?: \"___\"\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // typeOf<String>() を出力する\\n    ___(typeOf<String>())\\n___",
+      "holeyCode": "// typeOf関数をreifiedで定義\\ninline fun <reified ___> ___(): ___ {\\n    // 型名を返す\\n    return ___::class.___ ?: \"___\"\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // typeOf<String>() を出力する\\n    ___(___(___))\\n___",
       "correctLines": [
           "// typeOf関数をreifiedで定義",
           "inline fun <reified T> typeOf(): String {",
@@ -322,24 +342,25 @@ export const kotlin4Data = {
         ],
       "lineHints": [
           null,
-          "reified で型情報を保持します。",
+          "reified T型パラメータでtypeOf関数を定義し、String型を返します。",
           null,
-          "型のシンプルな名前を取得するプロパティです。",
-          "プログラムの開始点となる関数です。",
+          "T::class.simpleNameでUnknownを返します。",
           null,
           null,
-          "ここを正しく入力してください。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "main関数を定義します。",
+          null,
+          "printlnでtypeOf<String>()を出力します。",
+          null
         ],
         "candidates": {
           "keywords": [
             "reified",
             "inline",
-            "generic"
+            "fun",
+            "return"
           ],
-          "others": ["simpleName", "main", "String>())", "String", "Unknown", "}", "println", "return", "}", ""]
+          "others": ["T", "typeOf", "String", "simpleName", "Unknown", "main", "println", "typeOf<String>()", "}", "typeOf<String>"]
         },
         "testCases": [
           {
@@ -351,7 +372,7 @@ export const kotlin4Data = {
     {
       "title": "拡張関数",
       "correctCode": "// isEven() で拡張関数を定義する\\nfun Int.isEven() = this % 2 == 0\\n\\n// main 関数を定義する\\nfun main() {\\n    // 4.isEven() を出力する\\n    println(4.isEven())\\n    // 7.isEven() を出力する\\n    println(7.isEven())\\n}",
-      "holeyCode": "// isEven() で拡張関数を定義する\\nfun Int.isEven() = this % ___ == 0\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // 4.isEven() を出力する\\n    ___(4.isEven())\\n    // 7.isEven() を出力する\\n    ___(7.isEven())\\n___",
+      "holeyCode": "// isEven() で拡張関数を定義する\\nfun ___.___(___) = ___ % ___ == ___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // 4.isEven() を出力する\\n    ___(___.___())\\n    // 7.isEven() を出力する\\n    ___(___.___())\\n___",
       "correctLines": [
           "// isEven() で拡張関数を定義する",
           "fun Int.isEven() = this % 2 == 0",
@@ -366,23 +387,22 @@ export const kotlin4Data = {
         ],
       "lineHints": [
           null,
-          "isEven() で拡張関数を定義します。",
+          "Int.isEven()拡張関数を定義し、this%2==0の判定を行います。",
           null,
           null,
-          "偶数かどうかを判定する拡張関数を呼び出します。",
+          "main関数を定義します。",
           null,
-          "偶数かどうかを判定する拡張関数を呼び出します。",
+          "printlnで4.isEven()を出力します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "printlnで7.isEven()を出力します。",
+          null
         ],
         "candidates": {
-          "names": [
-            "isEven()",
-            "even()",
-            "checkEven()"
+          "keywords": [
+            "fun",
+            "this"
           ],
-          "others": ["main", "isEven", "2", "println", "}", ""]
+          "others": ["Int", "isEven", "()", "2", "0", "main", "println", "4", "7", "}"]
         },
         "testCases": [
           {
@@ -394,7 +414,7 @@ export const kotlin4Data = {
     {
       "title": "scope 関数 let",
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // letで\"hello\"を大文字に変換\\n    val result = \"hello\".let {\\n        // 大文字に変換する\\n        it.uppercase()\\n    }\\n    // result を出力する\\n    println(result)\\n}",
-      "holeyCode": "// main 関数を定義する\\nfun ___() {\\n    // letで\"hello\"を大文字に変換\\n    val result = \"___\".let {\\n        // 大文字に変換する\\n        it.___()\\n    ___\\n    // result を出力する\\n    println(___)\\n___",
+      "holeyCode": "// main 関数を定義する\\nfun ___() {\\n    // letで\"hello\"を大文字に変換\\n    val ___ = \"___\".___ {\\n        // 大文字に変換する\\n        ___.___(___) \\n    ___\\n    // result を出力する\\n    ___(___) \\n___",
       "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
@@ -409,23 +429,22 @@ export const kotlin4Data = {
         ],
       "lineHints": [
           null,
-          "プログラムの開始点となる関数です。",
+          "main関数を定義します。",
           null,
-          "let で変換処理を行います。",
+          "result変数に\"hello\".let{}の結果を代入します。",
           null,
-          "文字列を大文字に変換するメソッドです。",
-          "ここを正しく入力してください。",
+          "it.uppercase()を呼び出します。",
           null,
-          "標準出力に値を出力する関数です。",
-          "ここを正しく入力してください。"
+          null,
+          "println(result)を出力します。",
+          null
         ],
         "candidates": {
-          "functions": [
-            "let",
-            "also",
-            "run"
+          "keywords": [
+            "fun",
+            "val"
           ],
-          "others": ["main", "uppercase", "println", "hello", "}", "result", "}"]
+          "others": ["main", "result", "hello", "let", "it", "uppercase", "()", "println", "}"]
         },
         "testCases": [
           {
@@ -437,7 +456,7 @@ export const kotlin4Data = {
     {
       "title": "scope 関数 apply",
       "correctCode": "// data class を定義する\\ndata class Config(var host: String = \"\", var port: Int = 0)\\n\\n// main 関数を定義する\\nfun main() {\\n    // apply でオブジェクトを設定する\\n    val config = Config().apply {\\n        // hostに\"localhost\"、portに8080を設定\\n        host = \"localhost\"\\n        // port を設定する\\n        port = 8080\\n    }\\n    // config を出力する\\n    println(\"${config.host}:${config.port}\")\\n}",
-      "holeyCode": "// data class を定義する\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // apply でオブジェクトを設定する\\n    val config = Config().___ {\\n        // hostに\"localhost\"、portに8080を設定\\n        host = \"___\"\\n        // port を設定する\\n        port = ___\\n    ___\\n    // config を出力する\\n    ___(\"${config.host}:${config.port}\")\\n___",
+      "holeyCode": "// data class を定義する\\ndata class ___(var ___: ___ = \"\", var ___: ___ = ___)\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // apply でオブジェクトを設定する\\n    val ___ = ___().___ {\\n        // hostに\"localhost\"、portに8080を設定\\n        ___ = \"___\"\\n        // port を設定する\\n        ___ = ___\\n    ___\\n    // config を出力する\\n    ___(\"${___.___}:${___.___}\")\\n___",
       "correctLines": [
           "// data class を定義する",
           "data class Config(var host: String = \"\", var port: Int = 0)",
@@ -457,28 +476,30 @@ export const kotlin4Data = {
         ],
       "lineHints": [
           null,
-          "この行を正しく入力してください。",
+          "data class ConfigをhostをString型、portをInt型=0で定義します。",
           null,
           null,
-          "apply でオブジェクトを設定します。",
+          "main関数を定義します。",
           null,
-          "ホスト名を設定する文字列です。",
+          "config変数にConfig().apply{}の結果を代入します。",
           null,
-          "変数に数値を代入（保存）します。",
+          "hostに\"localhost\"を代入します。",
           null,
-          "applyブロック内でプロパティを出力します。",
-          "ここを正しく入力してください。",
+          "portに8080を代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          null,
+          "printlnで\"${config.host}:${config.port}\"を出力します。",
+          null
         ],
         "candidates": {
-          "functions": [
-            "apply",
-            "also",
-            "with"
+          "keywords": [
+            "data",
+            "class",
+            "var",
+            "fun",
+            "val"
           ],
-          "others": ["data", "main", "localhost", "8080", "host", "port", "}", "println", "data class Config(var host: String = \" var port: Int = 0)", "data class Config(var host: String = \" var port: Int = 0)", "", "8080", "}", "data class Config(var host: String = \" var port: Int = 0)", "data class Config(var host: String = \"\", var port: Int = 0)"]
+          "others": ["Config", "host", "String", "port", "Int", "0", "main", "config", "apply", "localhost", "8080", "println", "}"]
         },
         "testCases": [
           {
@@ -490,7 +511,7 @@ export const kotlin4Data = {
     {
       "title": "typealias",
       "correctCode": "// StringList型エイリアスを定義\\ntypealias StringList = List<String>\\n\\n// printAll 関数を定義する\\nfun printAll(items: StringList) {\\n    // forEach で各要素を出力する\\n    items.forEach { println(it) }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // printAll を呼び出す\\n    printAll(listOf(\"A\", \"B\", \"C\"))\\n}",
-      "holeyCode": "// StringList型エイリアスを定義\\ntypealias StringList = List<___>\\n___\\n// printAll 関数を定義する\\nfun printAll(items: ___) {\\n    // forEach で各要素を出力する\\n    items.forEach { println(___) }\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // printAll を呼び出す\\n    ___(listOf(\"___\", \"B\", \"C\"))\\n___",
+      "holeyCode": "// StringList型エイリアスを定義\\ntypealias ___ = ___<___>\\n___\\n// printAll 関数を定義する\\nfun ___(___: ___) {\\n    // forEach で各要素を出力する\\n    ___.___ { ___(___) }\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // printAll を呼び出す\\n    ___(___(___, ___, ___))\\n___",
       "correctLines": [
           "// StringList型エイリアスを定義",
           "typealias StringList = List<String>",
@@ -509,27 +530,26 @@ export const kotlin4Data = {
         ],
       "lineHints": [
           null,
-          "typealias で型に別名をつけます。",
+          "typealias StringListをList<String>として定義します。",
           null,
           null,
-          "型エイリアスを引数の型として使用します。",
+          "printAll関数を定義し、items引数にStringList型を指定します。",
           null,
-          "コレクションの各要素に対して処理を実行します。",
-          "ここを正しく入力してください。",
+          "items.forEachでprintln(it)を実行します。",
           null,
           null,
-          "プログラムの開始点となる関数です。",
           null,
-          "定義した関数を呼び出してリストを出力します。",
-          "ここを正しく入力してください。"
+          "main関数を定義します。",
+          null,
+          "printAllにlistOf(\"A\",\"B\",\"C\")を渡します。",
+          null
         ],
         "candidates": {
           "keywords": [
             "typealias",
-            "type",
-            "alias"
+            "fun"
           ],
-          "others": ["printAll", "forEach", "main", "String", "StringList", "it", "}", "A", "", "}"]
+          "others": ["StringList", "List", "String", "printAll", "items", "forEach", "println", "it", "main", "listOf", "\"A\"", "\"B\"", "\"C\"", "}"]
         },
         "testCases": [
           {

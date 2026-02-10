@@ -55,14 +55,14 @@ export const ruby3Data = {
     {
       "title": "Procオブジェクト",
       "correctCode": "# Procでブロックをオブジェクト化、**で累乗\\nsquarer = Proc.new { |x| x ** 2 }",
-      "holeyCode": "# Procでブロックをオブジェクト化、**で累乗\\nsquarer = Proc.new { |x| x ** ___ }",
+      "holeyCode": "# Procでブロックをオブジェクト化、**で累乗\\n___ = ___.new { |___| ___ ___ ___ }",
       "correctLines": [
           "# Procでブロックをオブジェクト化、**で累乗",
           "squarer = Proc.new { |x| x ** 2 }"
         ],
       "lineHints": [
           null,
-          "Proc.new でブロックをオブジェクト化します。"
+          "Procでブロックをオブジェクト化し、xの2乗を計算します。"
         ],
         "candidates": {
           "1": [
@@ -72,6 +72,9 @@ export const ruby3Data = {
             "Function"
           ],
           "others": [
+            "squarer",
+            "Proc",
+            "x",
             "**",
             "2"
           ]
@@ -86,14 +89,14 @@ export const ruby3Data = {
     {
       "title": "ラムダ",
       "correctCode": "# ->でラムダを定義、**で累乗\\ncube = ->(x) { x ** 3 }",
-      "holeyCode": "# ->でラムダを定義、**で累乗\\ncube = ->(x) { x ** ___ }",
+      "holeyCode": "# ->でラムダを定義、**で累乗\\n___ = ___(___) { ___ ___ ___ }",
       "correctLines": [
           "# ->でラムダを定義、**で累乗",
           "cube = ->(x) { x ** 3 }"
         ],
       "lineHints": [
           null,
-          "-> でラムダを定義します。"
+          "->でラムダを定義し、xの3乗を計算します。"
         ],
         "candidates": {
           "1": [
@@ -102,7 +105,7 @@ export const ruby3Data = {
             "lambda",
             "proc"
           ],
-          "others": ["**", "3"]
+          "others": ["cube", "->", "x", "x", "**", "3"]
         },
         "testCases": [
           {
@@ -114,14 +117,14 @@ export const ruby3Data = {
     {
       "title": "シンボルとProc変換",
       "correctCode": "# mapで変換、upcaseで大文字化\\nresult = ['ruby', 'python', 'go'].map(&:upcase)",
-      "holeyCode": "# mapで変換、upcaseで大文字化\\nresult = ['ruby', 'python', 'go'].map(&:___)",
+      "holeyCode": "# mapで変換、upcaseで大文字化\\n___ = [___, ___, ___].___(___:___)",
       "correctLines": [
           "# mapで変換、upcaseで大文字化",
           "result = ['ruby', 'python', 'go'].map(&:upcase)"
         ],
       "lineHints": [
           null,
-          "&:upcase でシンボルをProc変換します。"
+          "mapと&:upcaseで配列の各要素を大文字化します。"
         ],
         "candidates": {
           "1": [
@@ -131,6 +134,12 @@ export const ruby3Data = {
             "filter"
           ],
           "others": [
+            "result",
+            "'ruby'",
+            "'python'",
+            "'go'",
+            "map",
+            "&",
             "upcase"
           ]
         },
@@ -144,14 +153,14 @@ export const ruby3Data = {
     {
       "title": "reduceメソッド",
       "correctCode": "# reduceで畳み込み、+で加算\\nsum = [1, 2, 3, 4, 5].reduce(0) { |acc, n| acc + n }",
-      "holeyCode": "# reduceで畳み込み、+で加算\\nsum = [___, 2, 3, 4, 5].reduce(0) { |acc, n| acc + n }",
+      "holeyCode": "# reduceで畳み込み、+で加算\\n___ = [___, ___, ___, ___, ___].___(___) { |___, ___| ___ ___ ___ }",
       "correctLines": [
           "# reduceで畳み込み、+で加算",
           "sum = [1, 2, 3, 4, 5].reduce(0) { |acc, n| acc + n }"
         ],
       "lineHints": [
           null,
-          "reduce で配列を畳み込みます。"
+          "reduceで配列を初期値0から畳み込み、acc+nで累積します。"
         ],
         "candidates": {
           "1": [
@@ -160,7 +169,7 @@ export const ruby3Data = {
             "inject",
             "sum"
           ],
-          "others": ["+", "1"]
+          "others": ["sum", "1", "2", "3", "4", "5", "reduce", "0", "acc", "n", "acc", "+", "n"]
         },
         "testCases": [
           {
@@ -172,14 +181,14 @@ export const ruby3Data = {
     {
       "title": "selectとreject",
       "correctCode": "# selectでフィルタ、evenで偶数判定\\nevens = [1, 2, 3, 4, 5, 6].select { |n| n.even? }",
-      "holeyCode": "# selectでフィルタ、evenで偶数判定\\nevens = [___, 2, 3, 4, 5, 6].select { |n| n.even? }",
+      "holeyCode": "# selectでフィルタ、evenで偶数判定\\n___ = [___, ___, ___, ___, ___, ___].___ { |___| ___.___ }",
       "correctLines": [
           "# selectでフィルタ、evenで偶数判定",
           "evens = [1, 2, 3, 4, 5, 6].select { |n| n.even? }"
         ],
       "lineHints": [
           null,
-          "select で条件に合う要素を抽出します。"
+          "selectで配列から偶数（even?）の要素を抽出します。"
         ],
         "candidates": {
           "1": [
@@ -188,7 +197,7 @@ export const ruby3Data = {
             "find_all",
             "reject"
           ],
-          "others": ["even", "1"]
+          "others": ["evens", "1", "2", "3", "4", "5", "6", "select", "n", "n", "even?"]
         },
         "testCases": [
           {
@@ -200,7 +209,7 @@ export const ruby3Data = {
     {
       "title": "スプラット演算子",
       "correctCode": "# *で可変長引数を受け取る\\ndef sum_all(*numbers)\\n  # reduceで畳み込み\\n  numbers.reduce(0) { |acc, n| acc + n }\\n# endで終了\\nend",
-      "holeyCode": "# *で可変長引数を受け取る\\ndef sum_all(*___)\\n  # reduceで畳み込み\\n  numbers.reduce(___) { |acc, n| acc + n }\\n# endで終了\\n___",
+      "holeyCode": "# *で可変長引数を受け取る\\n___ ___(___)\\n  # reduceで畳み込み\\n  ___.___(___) { |___, ___| ___ ___ ___ }\\n# endで終了\\n___",
       "correctLines": [
           "# *で可変長引数を受け取る",
           "def sum_all(*numbers)",
@@ -211,11 +220,11 @@ export const ruby3Data = {
         ],
       "lineHints": [
           null,
-          "* で可変長引数を受け取ります。",
+          "*numbersで可変長引数を受け取るsum_allメソッドを定義します。",
           null,
-          "reduce で配列を畳み込みます。",
+          "reduceで初期値0から畳み込み、acc+nで累積します。",
           null,
-          "ブロックを終了する。"
+          "ブロックを終了します。"
         ],
         "candidates": {
           "1": [
@@ -230,7 +239,7 @@ export const ruby3Data = {
             "fold",
             "inject"
           ],
-          "others": ["def", "end", "numbers", "0"]
+          "others": ["def", "sum_all", "*numbers", "numbers", "reduce", "0", "acc", "n", "acc", "+", "n", "end"]
         },
         "testCases": [
           {
@@ -242,7 +251,7 @@ export const ruby3Data = {
     {
       "title": "method_missing",
       "correctCode": "# classでクラスを定義\\nclass FlexibleClass\\n  # method_missingで未定義メソッドを捕捉\\n  def method_missing(name, *args)\\n    # nameでメソッド名を参照\\n    \"Unknown method: #{name}\"\\n  # endで終了\\n  end\\n# endで終了\\nend",
-      "holeyCode": "# classでクラスを定義\\nclass ___\\n  # method_missingで未定義メソッドを捕捉\\n  def method_missing(name, *___)\\n    # nameでメソッド名を参照\\n    \"___\"\\n  # endで終了\\n  ___\\n# endで終了\\n___",
+      "holeyCode": "# classでクラスを定義\\n___ ___\\n  # method_missingで未定義メソッドを捕捉\\n  ___ ___(___, ___)\\n    # nameでメソッド名を参照\\n    ___\\n  # endで終了\\n  ___\\n# endで終了\\n___",
       "correctLines": [
           "# classでクラスを定義",
           "class FlexibleClass",
@@ -257,15 +266,15 @@ export const ruby3Data = {
         ],
       "lineHints": [
           null,
-          "新しいクラス（FlexibleClass）を定義します。",
+          "classでFlexibleClassを定義します。",
           null,
-          "*args で可変長引数を受け取ります。",
+          "method_missingで未定義メソッドを捕捉し、*argsで可変長引数を受け取ります。",
           null,
-          "未定義メソッドのエラーメッセージを返します。",
+          "未定義メソッド名を含むエラーメッセージを返します。",
           null,
-          "ブロックを終了する。",
+          "メソッドを終了します。",
           null,
-          "ブロックを終了する。"
+          "クラスを終了します。"
         ],
         "candidates": {
           "2": [
@@ -280,7 +289,7 @@ export const ruby3Data = {
             "args",
             "self"
           ],
-          "others": ["class", "end", "FlexibleClass", "Unknown method: #{name}", "Unknown method: #{name}", "FlexibleClass", "end"]
+          "others": ["class", "FlexibleClass", "def", "method_missing", "name", "*args", "\"Unknown method: #{name}\"", "end", "end"]
         },
         "testCases": [
           {
@@ -292,14 +301,14 @@ export const ruby3Data = {
     {
       "title": "Struct",
       "correctCode": "# Structで簡易クラス、name, ageの順で属性名\\nPerson = Struct.new(:name, :age)",
-      "holeyCode": "# Structで簡易クラス、name, ageの順で属性名\\nPerson = Struct.new(:name, :___)",
+      "holeyCode": "# Structで簡易クラス、name, ageの順で属性名\\n___ = ___.___(:___, :___)",
       "correctLines": [
           "# Structで簡易クラス、name, ageの順で属性名",
           "Person = Struct.new(:name, :age)"
         ],
       "lineHints": [
           null,
-          "Struct.new で簡易クラスを作成します。"
+          "Struct.newで:nameと:ageを持つPerson構造体を作成します。"
         ],
         "candidates": {
           "1": [
@@ -309,6 +318,9 @@ export const ruby3Data = {
             "Data"
           ],
           "others": [
+            "Person",
+            "Struct",
+            "new",
             "name",
             "age"
           ]
@@ -323,14 +335,14 @@ export const ruby3Data = {
     {
       "title": "tapメソッド",
       "correctCode": "# tapで自身を返す、pushで要素追加\\nresult = [1, 2, 3].tap { |arr| arr.push(4) }",
-      "holeyCode": "# tapで自身を返す、pushで要素追加\\nresult = [___, 2, 3].tap { |arr| arr.push(4) }",
+      "holeyCode": "# tapで自身を返す、pushで要素追加\\n___ = [___, ___, ___].___ { |___| ___.___(___) }",
       "correctLines": [
           "# tapで自身を返す、pushで要素追加",
           "result = [1, 2, 3].tap { |arr| arr.push(4) }"
         ],
       "lineHints": [
           null,
-          "tap で自身を返しながら処理を行います。"
+          "tapで自身を返しながらpush(4)で要素を追加します。"
         ],
         "candidates": {
           "1": [
@@ -339,7 +351,7 @@ export const ruby3Data = {
             "yield_self",
             "itself"
           ],
-          "others": ["push", "1"]
+          "others": ["result", "1", "2", "3", "tap", "arr", "arr", "push", "4"]
         },
         "testCases": [
           {

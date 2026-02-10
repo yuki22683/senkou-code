@@ -9,20 +9,20 @@ export const sql2Data = {
     {
       "title": "WHERE で絞り込み",
       "correctCode": "-- WHEREで条件を指定\\nSELECT '見つかった' WHERE 10 > 5;",
-      "holeyCode": "-- WHEREで条件を指定\\nSELECT '見つかった' WHERE ___ > 5;",
+      "holeyCode": "-- WHEREで条件を指定\\n___ '___' ___ ___ > ___;",
       "correctLines": [
           "-- WHEREで条件を指定",
           "SELECT '見つかった' WHERE 10 > 5;"
         ],
       "lineHints": [
           null,
-          "WHERE で条件を指定します。"
+          "SELECT文でWHERE句による条件指定を行います。10 > 5の比較です。"
         ],
         "candidates": {
           "keywords": [
-            "WHERE"
+            "SELECT", "WHERE"
           ],
-          "others": ["10"]
+          "others": ["見つかった", "10", "5"]
         },
         "testCases": [
           {
@@ -34,7 +34,7 @@ export const sql2Data = {
     {
       "title": "ORDER BY で並べ替え",
       "correctCode": "-- SELECT文でデータを作成\\nSELECT 1 AS num UNION SELECT 3 UNION SELECT 2\\n-- ORDERで並べ替え\\nORDER BY num;",
-      "holeyCode": "-- SELECT文でデータを作成\\nSELECT ___ AS num UNION SELECT 3 UNION SELECT 2\\n-- ORDERで並べ替え\\nORDER BY ___;",
+      "holeyCode": "-- SELECT文でデータを作成\\n___ ___ AS ___ ___ ___ ___ ___ ___ ___\\n-- ORDERで並べ替え\\n___ BY ___;",
       "correctLines": [
           "-- SELECT文でデータを作成",
           "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2",
@@ -43,15 +43,15 @@ export const sql2Data = {
         ],
       "lineHints": [
           null,
-          "ORDER BY で並べ替えます。",
+          "SELECT 1 AS num UNION SELECT 3 UNION SELECT 2 でデータを作成します。",
           null,
-          "ここを正しく入力してください。"
+          "ORDER BY numで昇順に並べ替えます。"
         ],
         "candidates": {
           "keywords": [
-            "ORDER"
+            "SELECT", "UNION", "ORDER"
           ],
-          "others": ["SELECT", "1", "num"]
+          "others": ["1", "num", "3", "2"]
         },
         "testCases": [
           {
@@ -63,7 +63,7 @@ export const sql2Data = {
     {
       "title": "LIMIT で件数制限",
       "correctCode": "-- SELECT文でデータを作成\\nSELECT 1 UNION SELECT 2 UNION SELECT 3\\n-- LIMITで件数制限\\nLIMIT 2;",
-      "holeyCode": "-- SELECT文でデータを作成\\nSELECT ___ UNION SELECT 2 UNION SELECT 3\\n-- LIMITで件数制限\\nLIMIT ___;",
+      "holeyCode": "-- SELECT文でデータを作成\\n___ ___ ___ ___ ___ ___ ___ ___\\n-- LIMITで件数制限\\n___ ___;",
       "correctLines": [
           "-- SELECT文でデータを作成",
           "SELECT 1 UNION SELECT 2 UNION SELECT 3",
@@ -72,15 +72,15 @@ export const sql2Data = {
         ],
       "lineHints": [
           null,
-          "LIMIT で件数を制限します。",
+          "SELECT 1 UNION SELECT 2 UNION SELECT 3 でデータを作成します。",
           null,
-          "ここを正しく入力してください。"
+          "LIMIT 2で2件に制限します。"
         ],
         "candidates": {
           "keywords": [
-            "LIMIT"
+            "SELECT", "UNION", "LIMIT"
           ],
-          "others": ["SELECT", "1", "2"]
+          "others": ["1", "2", "3"]
         },
         "testCases": [
           {
@@ -92,20 +92,23 @@ export const sql2Data = {
     {
       "title": "COUNT で件数を数える",
       "correctCode": "-- COUNTで行数を数える\\nSELECT COUNT(*) FROM (SELECT 1 UNION SELECT 2 UNION SELECT 3);",
-      "holeyCode": "-- COUNTで行数を数える\\nSELECT COUNT(*) FROM (SELECT ___ UNION SELECT 2 UNION SELECT 3);",
+      "holeyCode": "-- COUNTで行数を数える\\n___ ___(*) ___ (___ ___ ___ ___ ___ ___ ___ ___);",
       "correctLines": [
           "-- COUNTで行数を数える",
           "SELECT COUNT(*) FROM (SELECT 1 UNION SELECT 2 UNION SELECT 3);"
         ],
       "lineHints": [
           null,
-          "COUNT で行数を数えます。"
+          "SELECT COUNT(*) FROM (SELECT 1 UNION SELECT 2 UNION SELECT 3)で3行の件数を数えます。"
         ],
         "candidates": {
+          "keywords": [
+            "SELECT", "UNION", "FROM"
+          ],
           "functions": [
             "COUNT"
           ],
-          "others": ["1"]
+          "others": ["1", "2", "3"]
         },
         "testCases": [
           {
@@ -117,20 +120,23 @@ export const sql2Data = {
     {
       "title": "SUM で合計を計算",
       "correctCode": "-- SUMで合計を計算\\nSELECT SUM(n) FROM (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3);",
-      "holeyCode": "-- SUMで合計を計算\\nSELECT SUM(n) FROM (SELECT ___ AS n UNION SELECT 2 UNION SELECT 3);",
+      "holeyCode": "-- SUMで合計を計算\\n___ ___(___) ___ (___ ___ AS ___ ___ ___ ___ ___ ___ ___);",
       "correctLines": [
           "-- SUMで合計を計算",
           "SELECT SUM(n) FROM (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3);"
         ],
       "lineHints": [
           null,
-          "SUM で合計を計算します。"
+          "SELECT SUM(n) FROM (SELECT 1 AS n UNION SELECT 2 UNION SELECT 3)で合計6を計算します。"
         ],
         "candidates": {
+          "keywords": [
+            "SELECT", "UNION", "FROM"
+          ],
           "functions": [
             "SUM"
           ],
-          "others": ["1"]
+          "others": ["n", "1", "2", "3"]
         },
         "testCases": [
           {
@@ -142,20 +148,23 @@ export const sql2Data = {
     {
       "title": "AVG で平均を計算",
       "correctCode": "-- AVGで平均を計算\\nSELECT AVG(n) FROM (SELECT 10 AS n UNION SELECT 20 UNION SELECT 30);",
-      "holeyCode": "-- AVGで平均を計算\\nSELECT AVG(n) FROM (SELECT ___ AS n UNION SELECT 20 UNION SELECT 30);",
+      "holeyCode": "-- AVGで平均を計算\\n___ ___(___) ___ (___ ___ AS ___ ___ ___ ___ ___ ___ ___);",
       "correctLines": [
           "-- AVGで平均を計算",
           "SELECT AVG(n) FROM (SELECT 10 AS n UNION SELECT 20 UNION SELECT 30);"
         ],
       "lineHints": [
           null,
-          "AVG で平均を計算します。"
+          "SELECT AVG(n) FROM (SELECT 10 AS n UNION SELECT 20 UNION SELECT 30)で平均20.0を計算します。"
         ],
         "candidates": {
+          "keywords": [
+            "SELECT", "UNION", "FROM"
+          ],
           "functions": [
             "AVG"
           ],
-          "others": ["10"]
+          "others": ["n", "10", "20", "30"]
         },
         "testCases": [
           {
@@ -167,7 +176,7 @@ export const sql2Data = {
     {
       "title": "GROUP BY でグループ化",
       "correctCode": "-- SELECT文でデータを取得\\nSELECT category, COUNT(*) FROM (\\n  -- カテゴリを定義\\n  SELECT 'A' AS category UNION ALL\\n  -- データを追加\\n  SELECT 'A' UNION ALL SELECT 'B'\\n-- GROUPでグループ化\\n) GROUP BY category;",
-      "holeyCode": "-- SELECT文でデータを取得\\nSELECT category, COUNT(*) ___ (\\n  -- カテゴリを定義\\n  SELECT 'A' AS category UNION ___\\n  -- データを追加\\n  SELECT 'A' UNION ALL SELECT '___'\\n-- GROUPでグループ化\\n) GROUP BY ___;",
+      "holeyCode": "-- SELECT文でデータを取得\\n___ ___, ___(*) ___ (\\n  -- カテゴリを定義\\n  ___ '___' AS ___ ___ ___\\n  -- データを追加\\n  ___ '___' ___ ___ ___ '___'\\n-- GROUPでグループ化\\n) ___ BY ___;",
       "correctLines": [
           "-- SELECT文でデータを取得",
           "SELECT category, COUNT(*) FROM (",
@@ -180,19 +189,22 @@ export const sql2Data = {
         ],
       "lineHints": [
           null,
-          "GROUP BY でグループ化します。",
+          "SELECT category, COUNT(*) FROM (でサブクエリからグループ集計を開始します。",
           null,
-          "ここを正しく入力してください。",
+          "SELECT 'A' AS category UNION ALLで最初のカテゴリAを定義します。",
           null,
-          "ここを正しく入力してください。",
+          "SELECT 'A' UNION ALL SELECT 'B'でA,Bのデータを追加します。",
           null,
-          "ここを正しく入力してください。"
+          ") GROUP BY categoryでカテゴリ別にグループ化します。"
         ],
         "candidates": {
           "keywords": [
-            "GROUP"
+            "SELECT", "UNION", "FROM", "GROUP", "ALL"
           ],
-          "others": ["SELECT", "FROM", "ALL", "B", "category", "ALL"]
+          "functions": [
+            "COUNT"
+          ],
+          "others": ["category", "A", "B"]
         },
         "testCases": [
           {
@@ -204,7 +216,7 @@ export const sql2Data = {
     {
       "title": "HAVING でグループを絞り込み",
       "correctCode": "-- SELECT文でデータを取得\\nSELECT category, COUNT(*) AS cnt FROM (\\n  -- カテゴリを定義\\n  SELECT 'A' AS category UNION ALL\\n  -- データを追加\\n  SELECT 'A' UNION ALL SELECT 'B'\\n-- HAVINGでグループを絞り込み\\n) GROUP BY category HAVING cnt > 1;",
-      "holeyCode": "-- SELECT文でデータを取得\\nSELECT category, COUNT(*) AS cnt ___ (\\n  -- カテゴリを定義\\n  SELECT 'A' AS category UNION ___\\n  -- データを追加\\n  SELECT 'A' UNION ALL SELECT '___'\\n-- HAVINGでグループを絞り込み\\n) GROUP BY category HAVING cnt > ___;",
+      "holeyCode": "-- SELECT文でデータを取得\\n___ ___, ___(*) AS ___ ___ (\\n  -- カテゴリを定義\\n  ___ '___' AS ___ ___ ___\\n  -- データを追加\\n  ___ '___' ___ ___ ___ '___'\\n-- HAVINGでグループを絞り込み\\n) ___ BY ___ ___ ___ > ___;",
       "correctLines": [
           "-- SELECT文でデータを取得",
           "SELECT category, COUNT(*) AS cnt FROM (",
@@ -217,19 +229,22 @@ export const sql2Data = {
         ],
       "lineHints": [
           null,
-          "HAVING でグループを絞り込みます。",
+          "SELECT category, COUNT(*) AS cnt FROM (でサブクエリからグループ集計を開始します。",
           null,
-          "ここを正しく入力してください。",
+          "SELECT 'A' AS category UNION ALLで最初のカテゴリAを定義します。",
           null,
-          "ここを正しく入力してください。",
+          "SELECT 'A' UNION ALL SELECT 'B'でA,Bのデータを追加します。",
           null,
-          "ここを正しく入力してください。"
+          ") GROUP BY category HAVING cnt > 1で件数1以上のグループのみ抽出します。"
         ],
         "candidates": {
           "keywords": [
-            "HAVING"
+            "SELECT", "UNION", "FROM", "GROUP", "ALL", "HAVING"
           ],
-          "others": ["SELECT", "FROM", "ALL", "B", "1", "ALL"]
+          "functions": [
+            "COUNT"
+          ],
+          "others": ["category", "cnt", "A", "B", "1"]
         },
         "testCases": [
           {
@@ -241,7 +256,7 @@ export const sql2Data = {
     {
       "title": "CASE で条件分岐",
       "correctCode": "-- SELECT CASE と入力して条件分岐\\nSELECT CASE\\n  -- 条件を指定\\n  WHEN 85 >= 80 THEN '合格'\\n  -- それ以外の場合\\n  ELSE '失敗'\\n-- ENDで終了\\nEND;",
-      "holeyCode": "-- SELECT CASE と入力して条件分岐\\nSELECT ___\\n  -- 条件を指定\\n  WHEN ___ >= 80 THEN '合格'\\n  -- それ以外の場合\\n  ELSE '___'\\n-- ENDで終了\\n___;",
+      "holeyCode": "-- SELECT CASE と入力して条件分岐\\n___ ___\\n  -- 条件を指定\\n  ___ ___ >= ___ ___ '___'\\n  -- それ以外の場合\\n  ___ '___'\\n-- ENDで終了\\n___;",
       "correctLines": [
           "-- SELECT CASE と入力して条件分岐",
           "SELECT CASE",
@@ -254,19 +269,19 @@ export const sql2Data = {
         ],
       "lineHints": [
           null,
-          "CASE で条件分岐を始めます。",
+          "SELECT CASEで条件分岐を始めます。",
           null,
-          "WHEN で条件を指定します。",
+          "WHEN 85 >= 80 THEN '合格'で85が80以上なら合格を返します。",
           null,
-          "ELSE でそれ以外の場合を指定します。",
+          "ELSE '失敗'で条件に合わない場合は失敗を返します。",
           null,
-          "END で終了します。"
+          "END;でCASE文を終了します。"
         ],
         "candidates": {
           "keywords": [
-            "CASE"
+            "SELECT", "CASE", "WHEN", "THEN", "ELSE", "END"
           ],
-          "others": ["SELECT", "WHEN", "ELSE", "END", "85", "fail", "失敗", "CASE"]
+          "others": ["85", "80", "合格", "失敗"]
         },
         "testCases": [
           {
@@ -278,20 +293,23 @@ export const sql2Data = {
     {
       "title": "COALESCE でNULL処理",
       "correctCode": "-- COALESCEでNULL処理\\nSELECT COALESCE(NULL, 'デフォルト');",
-      "holeyCode": "-- COALESCEでNULL処理\\nSELECT COALESCE(NULL, '___');",
+      "holeyCode": "-- COALESCEでNULL処理\\n___ ___(___, '___');",
       "correctLines": [
           "-- COALESCEでNULL処理",
           "SELECT COALESCE(NULL, 'デフォルト');"
         ],
       "lineHints": [
           null,
-          "COALESCE でNULLの代替値を指定します。"
+          "SELECT COALESCE(NULL, 'デフォルト')でNULLの場合にデフォルト値を返します。"
         ],
         "candidates": {
+          "keywords": [
+            "SELECT", "NULL"
+          ],
           "functions": [
             "COALESCE"
           ],
-          "others": ["default", "デフォルト"]
+          "others": ["デフォルト"]
         },
         "testCases": [
           {

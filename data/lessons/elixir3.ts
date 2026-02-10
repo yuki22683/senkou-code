@@ -9,7 +9,7 @@ export const elixir3Data = {
     {
       "title": "構造体（Struct）",
       "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Person do\\n  # defstructで構造体を定義\\n  defstruct name: \"\", email: \"\"\\n# endでモジュールを閉じる\\nend\\n\\n# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成\\nperson = %Person{name: \"ボブ\", email: \"bob@example.com\"}",
-      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule Person ___\\n  # defstructで構造体を定義\\n  ___ name: \"\", email: \"___\"\\n# endでモジュールを閉じる\\n___\\n___\\n# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成\\nperson = %Person{name: \"___\", email: \"bob@example.com\"}",
+      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ ___\\n  # defstructで構造体を定義\\n  defstruct ___: \"___\", ___: \"___\"\\n# endでモジュールを閉じる\\n___\\n___\\n# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成\\n___ = %____{___: \"___\", ___: \"___\"}",
       "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Person do",
@@ -23,11 +23,11 @@ export const elixir3Data = {
         ],
       "lineHints": [
           null,
-          "defmodule でモジュールを定義します。",
+          "defmodule でモジュールを定義し、doでブロックを開始します。",
           null,
-          "構造体を定義するマクロです。",
+          "構造体のフィールド名とデフォルト値を定義します。",
           null,
-          "ブロックを終了する。",
+          "ブロックを終了します。",
           null,
           null,
           "構造体を作成してpersonに代入します。"
@@ -39,10 +39,10 @@ export const elixir3Data = {
             "end"
           ],
           "strings": [
-            "Bob",
+            "ボブ",
             "bob@example.com"
           ],
-          "others": ["do", "ボブ", "do", "end", ""]
+          "others": ["do", "Person", "name", "email", "", "person", "Person{name: \"ボブ\", email: \"bob@example.com\"}"]
         },
         "testCases": [
           {
@@ -54,7 +54,7 @@ export const elixir3Data = {
     {
       "title": "構造体の更新",
       "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Product do\\n  # defstructで構造体を定義\\n  defstruct name: \"\", price: 0\\n# endでモジュールを閉じる\\nend\\n\\n# nameに\"Book\"、priceに1000を指定して構造体を作成\\nproduct = %Product{name: \"Book\", price: 1000}\\n# |で辞書を更新（priceを1200に）\\nupdated = %{product | price: 1200}",
-      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule Product ___\\n  # defstructで構造体を定義\\n  ___ name: \"\", price: 0\\n# endでモジュールを閉じる\\n___\\n___\\n# nameに\"Book\"、priceに1000を指定して構造体を作成\\nproduct = %Product{name: \"___\", price: 1000}\\n# |で辞書を更新（priceを1200に）\\nupdated = %{product | price: ___}",
+      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ ___\\n  # defstructで構造体を定義\\n  defstruct ___: \"___\", ___: ___\\n# endでモジュールを閉じる\\n___\\n___\\n# nameに\"Book\"、priceに1000を指定して構造体を作成\\n___ = %____{___: \"___\", ___: ___}\\n# |で辞書を更新（priceを1200に）\\n___ = %{___ | ___: ___}",
       "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Product do",
@@ -70,16 +70,16 @@ export const elixir3Data = {
         ],
       "lineHints": [
           null,
-          "defmoduleでモジュールを定義します。",
+          "defmoduleでモジュールを定義し、doでブロックを開始します。",
           null,
-          "defstructで構造体を定義します。",
+          "構造体のフィールド名とデフォルト値を定義します。",
           null,
-          "endでモジュールを閉じます。",
+          "ブロックを終了します。",
           null,
           null,
           "構造体を作成してproductに代入します。",
           null,
-          "|で辞書を更新します。"
+          "|で構造体の一部のフィールドを更新します。"
         ],
         "candidates": {
           "keywords": [
@@ -91,13 +91,14 @@ export const elixir3Data = {
             "Book"
           ],
           "numbers": [
+            "0",
             "1000",
             "1200"
           ],
           "operators": [
             "|"
           ],
-          "others": ["do", "do", "end", ""]
+          "others": ["do", "Product", "name", "price", "", "product", "updated", "Product{name: \"Book\", price: 1000}"]
         },
         "testCases": [
           {
@@ -109,7 +110,7 @@ export const elixir3Data = {
     {
       "title": "Enum.reduce",
       "correctCode": "# numbersに[1, 2, 3, 4, 5]を代入\\nnumbers = [1, 2, 3, 4, 5]\\n# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入\\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)",
-      "holeyCode": "# numbersに[1, 2, 3, 4, 5]を代入\\nnumbers = [___, 2, 3, 4, 5]\\n# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入\\nsum = Enum.reduce(numbers, ___, fn x, acc -> x + acc end)",
+      "holeyCode": "# numbersに[1, 2, 3, 4, 5]を代入\\n___ = [___, ___, ___, ___, ___]\\n# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入\\n___ = ___.___(_____, ___, fn ___, ___ -> ___ + ___ ___)",
       "correctLines": [
           "# numbersに[1, 2, 3, 4, 5]を代入",
           "numbers = [1, 2, 3, 4, 5]",
@@ -118,22 +119,27 @@ export const elixir3Data = {
         ],
       "lineHints": [
           null,
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "変数numbersにリストを代入します。",
           null,
-          "リストを畳み込む関数です。"
+          "Enum.reduceで初期値0から畳み込みを行います。"
         ],
         "candidates": {
+          "keywords": [
+            "fn",
+            "end"
+          ],
           "numbers": [
             "1",
             "2",
             "3",
             "4",
-            "5"
+            "5",
+            "0"
           ],
           "functions": [
             "reduce"
           ],
-          "others": ["0"]
+          "others": ["numbers", "sum", "Enum", "x", "acc", "numbers, 0, fn x, acc -> x + acc end)"]
         },
         "testCases": [
           {
@@ -145,7 +151,7 @@ export const elixir3Data = {
     {
       "title": "Enum.group_by",
       "correctCode": "# アリス(25), ボブ(30), キャロル(25) のタプルのリストを定義\\nusers = [{\"アリス\", 25}, {\"ボブ\", 30}, {\"キャロル\", 25}]\\n# group_byでグループ化\\ngrouped = Enum.group_by(users, fn {_name, age} -> age end)",
-      "holeyCode": "# アリス(25), ボブ(30), キャロル(25) のタプルのリストを定義\\n___ = [{\"___\", 25}, {\"ボブ\", 30}, {\"キャロル\", 25}]\\n# group_byでグループ化\\ngrouped = Enum.group_by(users, fn {_name, age} -> age ___)",
+      "holeyCode": "# アリス(25), ボブ(30), キャロル(25) のタプルのリストを定義\\n___ = [{\"___\", ___}, {\"___\", ___}, {\"___\", ___}]\\n# group_byでグループ化\\n___ = ___.___(_____, fn {___, ___} -> ___ ___)",
       "correctLines": [
           "# アリス(25), ボブ(30), キャロル(25) のタプルのリストを定義",
           "users = [{\"アリス\", 25}, {\"ボブ\", 30}, {\"キャロル\", 25}]",
@@ -154,11 +160,15 @@ export const elixir3Data = {
         ],
       "lineHints": [
           null,
-          "ユーザーのタプルリストを定義します。",
+          "ユーザーのタプルリストをusersに代入します。",
           null,
-          "要素をグループ化する関数です。"
+          "Enum.group_byで年齢をキーにしてグループ化します。"
         ],
         "candidates": {
+          "keywords": [
+            "fn",
+            "end"
+          ],
           "strings": [
             "アリス",
             "ボブ",
@@ -171,7 +181,7 @@ export const elixir3Data = {
           "functions": [
             "group_by"
           ],
-          "others": ["end", "users"]
+          "others": ["users", "grouped", "Enum", "_name", "age", "users, fn {", "ge} -> age end)"]
         },
         "testCases": [
           {
@@ -183,25 +193,27 @@ export const elixir3Data = {
     {
       "title": "内包表記（for）",
       "correctCode": "# forで内包表記\\nsquares = for x <- 1..5, do: x * x",
-      "holeyCode": "# forで内包表記\\nsquares = for x <- ___..5, do: x * x",
+      "holeyCode": "# forで内包表記\\n___ = for ___ <- ___...___, do: ___ * ___",
       "correctLines": [
           "# forで内包表記",
           "squares = for x <- 1..5, do: x * x"
         ],
       "lineHints": [
           null,
-          "リスト内包表記を開始するキーワードです。"
+          "forで1から5までの各要素を2乗したリストを作成します。"
         ],
         "candidates": {
           "keywords": [
-            "for"
+            "for",
+            "do"
           ],
           "numbers": [
             "1",
             "5"
           ],
           "others": [
-            "1..5, do: x * x"
+            "squares",
+            "x"
           ]
         },
         "testCases": [
@@ -214,7 +226,7 @@ export const elixir3Data = {
     {
       "title": "with式",
       "correctCode": "# defで関数を定義\\ndef process(map) do\\n  # withでパターンマッチを連鎖\\n  with {:ok, name} <- Map.fetch(map, :name),\\n       {:ok, age} <- Map.fetch(map, :age) do\\n    {:ok, \"#{name} is #{age}歳です\"}\\n  # elseでエラー処理\\n  else\\n    :error -> {:error, \"Missing field\"}\\n  # endでブロックを閉じる\\n  end\\n# endで関数を閉じる\\nend",
-      "holeyCode": "# defで関数を定義\\ndef process(map) ___\\n  # withでパターンマッチを連鎖\\n  with {:___, ___} <- Map.fetch(map, :name),\\n       {:___, age} <- Map.fetch(map, :age) ___\\n    {:___, \"___\"}\\n  # elseでエラー処理\\n  ___\\n    :error -> {:error, \"___\"}\\n  # endでブロックを閉じる\\n  ___\\n# endで関数を閉じる\\n___",
+      "holeyCode": "# defで関数を定義\\ndef ___(___)___\\n  # withでパターンマッチを連鎖\\n  with {___, ___} <- ___.___(___, ___),\\n       {___, ___} <- ___.___(___, ___) ___\\n    {___, \"___\"}\\n  # elseでエラー処理\\n  ___\\n    ___ -> {___, \"___\"}\\n  # endでブロックを閉じる\\n  ___\\n# endで関数を閉じる\\n___",
       "correctLines": [
           "# defで関数を定義",
           "def process(map) do",
@@ -232,27 +244,28 @@ export const elixir3Data = {
         ],
       "lineHints": [
           null,
-          "関数（process）を新しく定義します。",
+          "defで関数processを定義し、doでブロックを開始します。",
           null,
-          "パターンマッチを連鎖させるキーワードです。",
-          "もし条件が満たされなかった場合に実行する処理を記述します。",
-          "ここを正しく入力してください。",
+          "withで:okパターンにマッチさせてnameを取得します。",
+          "続いて:okパターンにマッチさせてageを取得します。",
+          "成功時に:okと文字列を含むタプルを返します。",
           null,
-          "条件が偽の場合の処理を定義する。",
-          "ここを正しく入力してください。",
+          "elseでマッチしなかった場合の処理を定義します。",
+          ":errorにマッチした場合にエラータプルを返します。",
           null,
-          "ブロックを終了する。",
+          "with式のブロックを終了します。",
           null,
-          "ブロックを終了する。"
+          "関数定義のブロックを終了します。"
         ],
         "candidates": {
           "keywords": [
             "def",
             "with",
             "else",
-            "end"
+            "end",
+            "do"
           ],
-          "others": ["do", "name", "Missing field", "#{name} is #{age}歳です", "ok"]
+          "others": ["process", "map", "ok", "name", "Map", "fetch", ":name", ":age", "age", "#{name} is #{age}歳です", ":error", "error", "Missing field", ":ok"]
         },
         "testCases": [
           {
@@ -264,7 +277,7 @@ export const elixir3Data = {
     {
       "title": "プロトコルの定義",
       "correctCode": "# defprotocolでプロトコルを定義\\ndefprotocol Describable do\\n  # defで関数を宣言\\n  def describe(data)\\n# endでプロトコルを閉じる\\nend",
-      "holeyCode": "# defprotocolでプロトコルを定義\\ndefprotocol Describable ___\\n  # defで関数を宣言\\n  def describe(___)\\n# endでプロトコルを閉じる\\n___",
+      "holeyCode": "# defprotocolでプロトコルを定義\\ndefprotocol ___ ___\\n  # defで関数を宣言\\n  def ___(_____)\\n# endでプロトコルを閉じる\\n___",
       "correctLines": [
           "# defprotocolでプロトコルを定義",
           "defprotocol Describable do",
@@ -275,19 +288,20 @@ export const elixir3Data = {
         ],
       "lineHints": [
           null,
-          "プロトコルを定義するキーワードです。",
+          "defprotocolでプロトコルDescribableを定義し、doでブロックを開始します。",
           null,
-          "関数（describe）を新しく定義します。",
+          "プロトコルの関数describeを引数dataで宣言します。",
           null,
-          "ブロックを終了する。"
+          "プロトコル定義のブロックを終了します。"
         ],
         "candidates": {
           "keywords": [
             "defprotocol",
             "def",
-            "end"
+            "end",
+            "do"
           ],
-          "others": ["do", "data", "do"]
+          "others": ["Describable", "describe", "data", "data)"]
         },
         "testCases": [
           {
@@ -299,7 +313,7 @@ export const elixir3Data = {
     {
       "title": "プロトコルの実装",
       "correctCode": "# defimplでプロトコルを実装\\ndefimpl Describable, for: Map do\\n  # defで関数を定義\\n  def describe(map) do\\n    \"Map with #{map_size(map)} keys\"\\n  # endで関数を閉じる\\n  end\\n# endでブロックを閉じる\\nend",
-      "holeyCode": "# defimplでプロトコルを実装\\ndefimpl Describable, for: Map ___\\n  # defで関数を定義\\n  def describe(map) ___\\n    \"___\"\\n  # endで関数を閉じる\\n  ___\\n# endでブロックを閉じる\\n___",
+      "holeyCode": "# defimplでプロトコルを実装\\ndefimpl ___, for: ___ ___\\n  # defで関数を定義\\n  def ___(___) ___\\n    \"___\"\\n  # endで関数を閉じる\\n  ___\\n# endでブロックを閉じる\\n___",
       "correctLines": [
           "# defimplでプロトコルを実装",
           "defimpl Describable, for: Map do",
@@ -313,22 +327,24 @@ export const elixir3Data = {
         ],
       "lineHints": [
           null,
-          "プロトコルを実装するキーワードです。",
+          "defimplでDescribableをMap型に対して実装します。",
           null,
-          "関数（describe）を新しく定義します。",
-          "ここを正しく入力してください。",
+          "defで関数describeを定義し、doでブロックを開始します。",
+          "文字列を返します。#{...}で式を埋め込みます。",
           null,
-          "ブロックを終了する。",
+          "関数定義のブロックを終了します。",
           null,
-          "ブロックを終了する。"
+          "defimplのブロックを終了します。"
         ],
         "candidates": {
           "keywords": [
             "defimpl",
             "def",
-            "end"
+            "end",
+            "do",
+            "for"
           ],
-          "others": ["do", "Map with #{map_size(map)} keys", "Map with #{map_size(map)} keys", "do", "end"]
+          "others": ["Describable", "Map", "describe", "map", "Map with #{map_size(map)} keys"]
         },
         "testCases": [
           {
@@ -340,7 +356,7 @@ export const elixir3Data = {
     {
       "title": "Agent",
       "correctCode": "# start_linkでAgentを開始\\n{:ok, counter} = Agent.start_link(fn -> 0 end)\\n# updateでAgentの状態を更新\\nAgent.update(counter, fn state -> state + 1 end)\\n# getでAgentの状態を取得\\nvalue = Agent.get(counter, fn state -> state end)",
-      "holeyCode": "# start_linkでAgentを開始\\n{:___, counter} = Agent.start_link(fn -> ___ end)\\n# updateでAgentの状態を更新\\nAgent.update(counter, fn state -> state + ___ end)\\n# getでAgentの状態を取得\\nvalue = Agent.get(counter, fn state -> state ___)",
+      "holeyCode": "# start_linkでAgentを開始\\n{___, ___} = ___._____(fn -> ___ _____)\\n# updateでAgentの状態を更新\\n___.___(_____, fn ___ -> ___ + ___ _____)\\n# getでAgentの状態を取得\\n___ = ___.___(_____, fn ___ -> ___ ___)",
       "correctLines": [
           "# start_linkでAgentを開始",
           "{:ok, counter} = Agent.start_link(fn -> 0 end)",
@@ -351,19 +367,23 @@ export const elixir3Data = {
         ],
       "lineHints": [
           null,
-          "Agentを開始してプロセスにリンクする関数です。",
+          "Agent.start_linkで初期値0のAgentを開始し、:okとcounterを受け取ります。",
           null,
-          "Agentの状態を更新する関数です。",
+          "Agent.updateでstateに1を加算して状態を更新します。",
           null,
-          "Agentの状態を取得する関数です。"
+          "Agent.getでAgentの現在の状態を取得します。"
         ],
         "candidates": {
+          "keywords": [
+            "fn",
+            "end"
+          ],
           "functions": [
             "start_link",
             "update",
             "get"
           ],
-          "others": ["0", "1", "end", "ok"]
+          "others": [":ok", "counter", "Agent", "0", "state", "1", "value", "start", "->", "0 end)", "counter, fn state -> state + 1 end)", "counter, fn state -> state end)"]
         },
         "testCases": [
           {
@@ -375,7 +395,7 @@ export const elixir3Data = {
     {
       "title": "Task",
       "correctCode": "# asyncで非同期タスクを開始\\ntask = Task.async(fn -> 1 + 2 end)\\n# awaitでタスクの結果を待機\\nresult = Task.await(task)",
-      "holeyCode": "# asyncで非同期タスクを開始\\ntask = Task.async(fn -> ___ + 2 end)\\n# awaitでタスクの結果を待機\\nresult = Task.await(___)",
+      "holeyCode": "# asyncで非同期タスクを開始\\n___ = ___.___(fn -> ___ + ___ _____)\\n# awaitでタスクの結果を待機\\n___ = ___.___(_____)",
       "correctLines": [
           "# asyncで非同期タスクを開始",
           "task = Task.async(fn -> 1 + 2 end)",
@@ -384,16 +404,24 @@ export const elixir3Data = {
         ],
       "lineHints": [
           null,
-          "非同期タスクを開始する関数です。",
+          "Task.asyncで1+2を計算する非同期タスクを開始します。",
           null,
-          "タスクの結果を待機する関数です。"
+          "Task.awaitでタスクの完了を待ち、結果を取得します。"
         ],
         "candidates": {
+          "keywords": [
+            "fn",
+            "end"
+          ],
           "functions": [
             "async",
             "await"
           ],
-          "others": ["1", "task"]
+          "numbers": [
+            "1",
+            "2"
+          ],
+          "others": ["task", "Task", "result", "end)", "task)"]
         },
         "testCases": [
           {

@@ -9,7 +9,7 @@ export const javascriptData4 = {
     {
       "title": "配列のevery",
       "correctCode": "// [80, 90, 75, 85] の配列を定義\\nconst scores = [80, 90, 75, 85];\\n// every で全要素をチェック\\nconst allPassed = scores.every(score => score >= 60);\\n// allPassedを出力\\nconsole.log(allPassed);",
-      "holeyCode": "// [80, 90, 75, 85] の配列を定義\\nconst ___ = [80, 90, 75, 85];\\n// every で全要素をチェック\\nconst ___ = scores.every(score => score >= 60);\\n// allPassedを出力\\nconsole.log(___);",
+      "holeyCode": "// [80, 90, 75, 85] の配列を定義\\nconst ___ = [___, ___, ___, ___];\\n// every で全要素をチェック\\nconst ___ = ___.___(___ => ___ >= ___);\\n// allPassedを出力\\n___.___(__);",
       "correctLines": [
           "// [80, 90, 75, 85] の配列を定義",
           "const scores = [80, 90, 75, 85];",
@@ -20,9 +20,9 @@ export const javascriptData4 = {
         ],
       "lineHints": [
           null,
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "[80, 90, 75, 85] の配列を作ります。",
           null,
-          "全ての要素をチェックするメソッドです。",
+          "全ての要素が条件を満たすかチェックするメソッドです。",
           null,
           "allPassed を出力します。"
         ],
@@ -32,7 +32,7 @@ export const javascriptData4 = {
             "some",
             "all"
           ],
-          "others": ["75", "log", "scores", "allPassed"]
+          "others": ["80", "90", "75", "85", "60", "scores", "allPassed", "score", "console", "log"]
         },
         "testCases": [
           {
@@ -44,7 +44,7 @@ export const javascriptData4 = {
     {
       "title": "配列のsome",
       "correctCode": "// [15, 22, 17, 19] の配列を定義\\nconst ages = [15, 22, 17, 19];\\n// some でいずれかの要素をチェック\\nconst hasAdult = ages.some(age => age >= 20);\\n// hasAdultを出力\\nconsole.log(hasAdult);",
-      "holeyCode": "// [15, 22, 17, 19] の配列を定義\\nconst ___ = [15, 22, 17, 19];\\n// some でいずれかの要素をチェック\\nconst ___ = ages.some(age => age >= 20);\\n// hasAdultを出力\\nconsole.log(___);",
+      "holeyCode": "// [15, 22, 17, 19] の配列を定義\\nconst ___ = [___, ___, ___, ___];\\n// some でいずれかの要素をチェック\\nconst ___ = ___.___(__ => ___ ___ ___);\\n// hasAdultを出力\\n___.___(___);",
       "correctLines": [
           "// [15, 22, 17, 19] の配列を定義",
           "const ages = [15, 22, 17, 19];",
@@ -55,9 +55,9 @@ export const javascriptData4 = {
         ],
       "lineHints": [
           null,
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "[15, 22, 17, 19] の配列を作ります。",
           null,
-          "いずれかの要素をチェックするメソッドです。",
+          "いずれかの要素が条件を満たすかチェックするメソッドです。",
           null,
           "hasAdult を出力します。"
         ],
@@ -67,7 +67,7 @@ export const javascriptData4 = {
             "every",
             "any"
           ],
-          "others": ["22", "log", "ages", "hasAdult"]
+          "others": ["15", "22", "17", "19", "20", ">=", "ages", "hasAdult", "age", "console", "log", ">= 20"]
         },
         "testCases": [
           {
@@ -79,7 +79,7 @@ export const javascriptData4 = {
     {
       "title": "flatMapで展開と変換",
       "correctCode": "// ['hello', 'world'] の配列を定義\\nconst words = ['hello', 'world'];\\n// flatMap でmapと平坦化を同時に行う\\nconst chars = words.flatMap(w => w.split(''));\\n// charsを出力\\nconsole.log(chars);",
-      "holeyCode": "// ['hello', 'world'] の配列を定義\\nconst ___ = ['hello', 'world'];\\n// flatMap でmapと平坦化を同時に行う\\nconst ___ = words.flatMap(w => w.split(''));\\n// charsを出力\\nconsole.log(___);",
+      "holeyCode": "// ['hello', 'world'] の配列を定義\\nconst ___ = [___, ___];\\n// flatMap でmapと平坦化を同時に行う\\nconst ___ = ___.___(___ => ___.___(___));\\n// charsを出力\\n___.___(___);",
       "correctLines": [
           "// ['hello', 'world'] の配列を定義",
           "const words = ['hello', 'world'];",
@@ -92,7 +92,7 @@ export const javascriptData4 = {
           null,
           "['hello', 'world'] の配列を作ります。",
           null,
-          "mapと平坦化を同時に行うメソッドです。",
+          "mapと平坦化を同時に行うメソッドです。split('')で1文字ずつ分割します。",
           null,
           "chars を出力します。"
         ],
@@ -102,7 +102,7 @@ export const javascriptData4 = {
             "map",
             "flat"
           ],
-          "others": ["hello", "world", "log", "words", "chars"]
+          "others": ["'hello'", "'world'", "''", "words", "chars", "w", "split", "console", "log"]
         },
         "testCases": [
           {
@@ -114,7 +114,7 @@ export const javascriptData4 = {
     {
       "title": "Object.entries",
       "correctCode": "// name: '太郎', age: 25 のオブジェクトを定義\\nconst user = { name: '太郎', age: 25 };\\n// entries でキーと値のペアを取得\\nfor (const [key, value] of Object.entries(user)) {\\n  // テンプレートリテラルで出力\\n  console.log(`${key}: ${value}`);\\n}",
-      "holeyCode": "// name: '太郎', age: 25 のオブジェクトを定義\\nconst ___ = { name: '太郎', age: 25 };\\n// entries でキーと値のペアを取得\\nfor (const [key, value] of Object.entries(___)) {\\n  // テンプレートリテラルで出力\\n  console.___(`${key}: ${value}`);\\n___",
+      "holeyCode": "// name: '太郎', age: 25 のオブジェクトを定義\\nconst ___ = { ___: ___, ___: ___ };\\n// entries でキーと値のペアを取得\\nfor (const [___, ___] of ___.___(___)) {\\n  // テンプレートリテラルで出力\\n  ___.___(___);\\n___",
       "correctLines": [
           "// name: '太郎', age: 25 のオブジェクトを定義",
           "const user = { name: '太郎', age: 25 };",
@@ -128,10 +128,10 @@ export const javascriptData4 = {
           null,
           "{ name: '太郎', age: 25 } のオブジェクトを作ります。",
           null,
-          "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
+          "Object.entriesでキーと値のペアを取得し、分割代入でkey, valueに代入します。",
           null,
-          "コンソールに出力します。",
-          "ここを正しく入力してください。"
+          "テンプレートリテラル `${key}: ${value}` で出力します。",
+          "forループのブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
@@ -139,7 +139,7 @@ export const javascriptData4 = {
             "keys",
             "values"
           ],
-          "others": ["Taro", "key", "user", "log", "}"]
+          "others": ["user", "name", "'太郎'", "age", "25", "key", "value", "Object", "`${key}: ${value}`", "console", "log", "}"]
         },
         "testCases": [
           {
@@ -151,7 +151,7 @@ export const javascriptData4 = {
     {
       "title": "Object.fromEntries",
       "correctCode": "// '名前': 'Python', 'バージョン': '3.12' のキーと値のペアの配列を定義\\nconst pairs = [['名前', 'Python'], ['バージョン', '3.12']];\\n// objにObject.fromEntries(pairs)を代入\\nconst obj = Object.fromEntries(pairs);\\n// objを出力\\nconsole.log(obj);",
-      "holeyCode": "// '名前': 'Python', 'バージョン': '3.12' のキーと値のペアの配列を定義\\nconst ___ = [['名前', 'Python'], ['バージョン', '3.12']];\\n// objにObject.fromEntries(pairs)を代入\\nconst ___ = Object.fromEntries(pairs);\\n// objを出力\\nconsole.log(___);",
+      "holeyCode": "// '名前': 'Python', 'バージョン': '3.12' のキーと値のペアの配列を定義\\nconst ___ = [[___, ___], [___, ___]];\\n// objにObject.fromEntries(pairs)を代入\\nconst ___ = ___.___(___);\\n// objを出力\\n___.___(___);",
       "correctLines": [
           "// '名前': 'Python', 'バージョン': '3.12' のキーと値のペアの配列を定義",
           "const pairs = [['名前', 'Python'], ['バージョン', '3.12']];",
@@ -164,7 +164,7 @@ export const javascriptData4 = {
           null,
           "キーと値のペアの配列を作ります。",
           null,
-          "配列からオブジェクトを作るメソッドです。",
+          "Object.fromEntriesで配列からオブジェクトを作ります。",
           null,
           "obj を出力します。"
         ],
@@ -174,7 +174,7 @@ export const javascriptData4 = {
             "entries",
             "create"
           ],
-          "others": ["Python", "log", "pairs", "obj"]
+          "others": ["pairs", "'名前'", "'Python'", "'バージョン'", "'3.12'", "obj", "Object", "console", "log"]
         },
         "testCases": [
           {
@@ -186,7 +186,7 @@ export const javascriptData4 = {
     {
       "title": "カリー化",
       "correctCode": "// a*bを返すmultiply関数を定義（カリー化）\\nconst multiply = a => b => a * b;\\n// 部分適用で2倍する関数を作成\\nconst double = multiply(2);\\n// double(5)を出力\\nconsole.log(double(5));",
-      "holeyCode": "// a*bを返すmultiply関数を定義（カリー化）\\nconst ___ = a => b => a * b;\\n// 部分適用で2倍する関数を作成\\nconst ___ = multiply(2);\\n// double(5)を出力\\nconsole.___(double(5));",
+      "holeyCode": "// a*bを返すmultiply関数を定義（カリー化）\\nconst ___ = ___ => ___ => ___ ___ ___;\\n// 部分適用で2倍する関数を作成\\nconst ___ = ___(___);\\n// double(5)を出力\\n___.___(___(_));",
       "correctLines": [
           "// a*bを返すmultiply関数を定義（カリー化）",
           "const multiply = a => b => a * b;",
@@ -197,7 +197,7 @@ export const javascriptData4 = {
         ],
       "lineHints": [
           null,
-          "アロー関数を連鎖させます。",
+          "アロー関数を連鎖させて a * b を返します。",
           null,
           "multiply(2) で2倍する関数を作ります。",
           null,
@@ -209,7 +209,7 @@ export const javascriptData4 = {
             "->",
             "function"
           ],
-          "others": ["multiply", "5", "double", "log"]
+          "others": ["multiply", "a", "b", "*", "double", "2", "5", "console", "log"]
         },
         "testCases": [
           {
@@ -221,7 +221,7 @@ export const javascriptData4 = {
     {
       "title": "関数合成",
       "correctCode": "// g を先に実行してfに渡す\\nconst compose = (f, g) => x => f(g(x));\\n// 2乗する関数\\nconst square = x => x * x;\\n// 符号を反転する関数\\nconst negate = x => -x;\\n// 関数を合成\\nconst squareThenNegate = compose(negate, square);\\n// squareThenNegate(3)を出力\\nconsole.log(squareThenNegate(3));",
-      "holeyCode": "// g を先に実行してfに渡す\\nconst ___ = (f, g) => x => f(g(x));\\n// 2乗する関数\\nconst ___ = x => x * x;\\n// 符号を反転する関数\\nconst ___ = x => -x;\\n// 関数を合成\\nconst ___ = compose(negate, square);\\n// squareThenNegate(3)を出力\\nconsole.___(squareThenNegate(3));",
+      "holeyCode": "// g を先に実行してfに渡す\\nconst ___ = (___, ___) => ___ => ___(___(___));\\n// 2乗する関数\\nconst ___ = ___ => ___ ___ ___;\\n// 符号を反転する関数\\nconst ___ = ___ => ______;\\n// 関数を合成\\nconst ___ = ___(___, ___);\\n// squareThenNegate(3)を出力\\n___.___(___(_));",
       "correctLines": [
           "// g を先に実行してfに渡す",
           "const compose = (f, g) => x => f(g(x));",
@@ -236,23 +236,23 @@ export const javascriptData4 = {
         ],
       "lineHints": [
           null,
-          "gを先に実行してfに渡します。",
+          "f(g(x)) の形で g を先に実行して f に渡します。",
           null,
           "x * x で2乗します。",
           null,
           "-x で符号を反転します。",
           null,
-          "compose で関数を合成します。",
+          "compose(negate, square) で関数を合成します。",
           null,
           "squareThenNegate(3) の結果を出力します。"
         ],
         "candidates": {
           "keywords": [
-            "g",
-            "f",
-            "x"
+            "=>",
+            "->",
+            "function"
           ],
-          "others": ["*", "-", "compose", "3", "square", "negate", "squareThenNegate", "log"]
+          "others": ["compose", "f", "g", "x", "*", "-x", "-x;", "square", "negate", "squareThenNegate", "3", "console", "log"]
         },
         "testCases": [
           {
@@ -264,7 +264,7 @@ export const javascriptData4 = {
     {
       "title": "クロージャでカウンター",
       "correctCode": "// createCounter関数を定義\\nfunction createCounter() {\\n  // countを0で初期化\\n  let count = 0;\\n  // ++ でインクリメントして返す\\n  return () => ++count;\\n}\\n// カウンターを作成\\nconst counter = createCounter();\\n// 1回目の呼び出し\\nconsole.log(counter());\\n// 2回目の呼び出し\\nconsole.log(counter());\\n// 3回目の呼び出し\\nconsole.log(counter());",
-      "holeyCode": "// createCounter関数を定義\\nfunction ___() {\\n  // countを0で初期化\\n  let ___ = 0;\\n  // ++ でインクリメントして返す\\n  return () => ++___;\\n___\\n// カウンターを作成\\nconst ___ = createCounter();\\n// 1回目の呼び出し\\nconsole.___(counter());\\n// 2回目の呼び出し\\nconsole.___(counter());\\n// 3回目の呼び出し\\nconsole.___(counter());",
+      "holeyCode": "// createCounter関数を定義\\nfunction ___() {\\n  // countを0で初期化\\n  let ___ = ___;\\n  // ++ でインクリメントして返す\\n  return () => ______;\\n___\\n// カウンターを作成\\nconst ___ = ___();\\n// 1回目の呼び出し\\n___.___(_());\\n// 2回目の呼び出し\\n___.___(_());\\n// 3回目の呼び出し\\n___.___(_());",
       "correctLines": [
           "// createCounter関数を定義",
           "function createCounter() {",
@@ -284,20 +284,20 @@ export const javascriptData4 = {
         ],
       "lineHints": [
           null,
-          "function で関数を定義します。",
+          "createCounter という関数を定義します。",
           null,
-          "再代入可能な変数を宣言し、数値を代入します。",
+          "count を 0 で初期化します。",
           null,
-          "インクリメント演算子 ++ を使います。",
-          "createCounter を呼び出します。",
+          "++count でインクリメントして返します。",
+          "createCounter関数の定義を完了します。",
           null,
-          "counter を呼び出します。",
+          "createCounter() を呼び出して counter に代入します。",
           null,
-          "counter を呼び出します。",
+          "counter() を呼び出して結果を出力します。",
           null,
-          "ここを正しく入力してください。",
+          "counter() を呼び出して結果を出力します。",
           null,
-          "ここを正しく入力してください。"
+          "counter() を呼び出して結果を出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -305,7 +305,7 @@ export const javascriptData4 = {
             "--",
             "+="
           ],
-          "others": ["function", "let", "createCounter", "counter());", "counter", "count", "}", "log", "}"]
+          "others": ["createCounter", "count", "0", "++count", "++count;", "counter", "console", "log", "}"]
         },
         "testCases": [
           {
@@ -317,7 +317,7 @@ export const javascriptData4 = {
     {
       "title": "メモ化",
       "correctCode": "// memoize関数を定義\\nfunction memoize(fn) {\\n  // cacheに{}を代入\\n  const cache = {};\\n  return (x) => {\\n    // in でオブジェクトにキーが存在するかチェック\\n    if (!(x in cache)) {\\n      // キャッシュに結果を保存\\n      cache[x] = fn(x);\\n    }\\n    // return でキャッシュから返す\\n    return cache[x];\\n  };\\n}\\n// メモ化されたsquare関数を作成\\nconst square = memoize(x => x * x);\\n// square(5)を出力\\nconsole.log(square(5));\\nconsole.log(square(5));",
-      "holeyCode": "// memoize関数を定義\\nfunction memoize(___) {\\n  // cacheに{}を代入\\n  const ___ = {};\\n  return (___) => {\\n    // in でオブジェクトにキーが存在するかチェック\\n    if (!(x in ___)) {\\n      // キャッシュに結果を保存\\n      cache[___] = fn(x);\\n    ___\\n    // return でキャッシュから返す\\n    return cache[___];\\n  ___\\n___\\n// メモ化されたsquare関数を作成\\nconst ___ = memoize(x => x * x);\\n// square(5)を出力\\nconsole.___(square(5));\\nconsole.___(square(5));",
+      "holeyCode": "// memoize関数を定義\\nfunction ___(___) {\\n  // cacheに{}を代入\\n  const ___ = ___;\\n  return (___) => {\\n    // in でオブジェクトにキーが存在するかチェック\\n    if (!(___ in ___)) {\\n      // キャッシュに結果を保存\\n      ___[___] = ___(___);\\n    ___\\n    // return でキャッシュから返す\\n    return ___[___];\\n  ___\\n___\\n// メモ化されたsquare関数を作成\\nconst ___ = ___(___ => ___ ___ ___);\\n// square(5)を出力\\n___.___(___(___));\\n___.___(___(___));",
       "correctLines": [
           "// memoize関数を定義",
           "function memoize(fn) {",
@@ -341,24 +341,24 @@ export const javascriptData4 = {
         ],
       "lineHints": [
           null,
-          "function で関数を定義します。",
+          "memoize という関数を定義します。引数は fn です。",
           null,
-          "空のオブジェクト {} を作ります。",
-          "in でキーが存在するかチェックします。",
+          "cache に空のオブジェクト {} を代入します。",
+          "引数 x を受け取る関数を返します。",
           null,
-          "fn(x) で計算して保存します。",
+          "x in cache でキーが存在するかチェックします。",
           null,
-          "return でキャッシュから返します。",
-          "memoize で関数をラップします。",
+          "cache[x] に fn(x) の結果を保存します。",
+          "if文のブロックを閉じます。",
           null,
-          "5 を引数として渡します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "cache[x] を返します。",
+          "内部関数の定義を完了します。",
+          "memoize関数の定義を完了します。",
           null,
-          "ここを正しく入力してください。",
+          "memoize で x * x を返す関数をラップします。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "square(5) を出力します。",
+          "square(5) を出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -366,7 +366,7 @@ export const javascriptData4 = {
             "of",
             "has"
           ],
-          "others": ["function", "{}", "fn", "return", "memoize", "5", "cache", "x", "}", "};", "square", "log", "}", "};", "}", "};", "}", "};\\"]
+          "others": ["memoize", "fn", "cache", "{}", "x", "*", "square", "5", "console", "log", "}", "};"]
         },
         "testCases": [
           {
@@ -378,7 +378,7 @@ export const javascriptData4 = {
     {
       "title": "パイプライン",
       "correctCode": "// pipe関数を定義\\nconst pipe = (...fns) => x =>\\n  // reduce で累積値 v を使って関数を連鎖\\n  fns.reduce((v, f) => f(v), x);\\n\\n// パイプラインで関数を連結\\nconst process = pipe(\\n  // +1 する関数\\n  x => x + 1,\\n  // *2 する関数\\n  x => x * 2,\\n  // -3 する関数\\n  x => x - 3\\n);\\n// process(5)を出力\\nconsole.log(process(5));",
-      "holeyCode": "// pipe関数を定義\\nconst ___ = (...fns) => x =>\\n  // reduce で累積値 v を使って関数を連鎖\\n  fns.reduce((v, f) => f(v), ___);\\n___\\n// パイプラインで関数を連結\\nconst ___ = pipe(\\n  // +1 する関数\\n  x => x ___ 1,\\n  // *2 する関数\\n  x => x ___ 2,\\n  // -3 する関数\\n  x => x ___ 3\\n___\\n// process(5)を出力\\nconsole.___(process(5));",
+      "holeyCode": "// pipe関数を定義\\nconst ___ = (...___) => ___ =>\\n  // reduce で累積値 v を使って関数を連鎖\\n  ___.___((___, ___) => ___(_), ___);\\n___\\n// パイプラインで関数を連結\\nconst ___ = ___(\\n  // +1 する関数\\n  ___ => ___ ___ ___,\\n  // *2 する関数\\n  ___ => ___ ___ ___,\\n  // -3 する関数\\n  ___ => ___ ___ ___\\n___\\n// process(5)を出力\\n___.___(___(___));",
       "correctLines": [
           "// pipe関数を定義",
           "const pipe = (...fns) => x =>",
@@ -399,28 +399,29 @@ export const javascriptData4 = {
         ],
       "lineHints": [
           null,
-          "const でパイプライン関数を定義します。",
+          "スプレッド構文 ...fns で関数配列を受け取ります。",
           null,
-          "reduceを使い、vは累積値です。",
+          "reduce で累積値 v を使って関数を連鎖させます。",
           null,
           null,
-          "1 を足します。",
+          "pipe に関数を渡します。",
           null,
-          "2 を掛けます。",
+          "x + 1 を返す関数です。",
           null,
-          "process(5) の結果を出力します。",
+          "x * 2 を返す関数です。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "x - 3 を返す関数です。",
+          "pipe関数の呼び出しを完了します。",
           null,
-          "ここを正しく入力してください。"
+          "process(5) の結果を出力します。"
         ],
         "candidates": {
           "keywords": [
             "reduce",
-            "v"
+            "map",
+            "filter"
           ],
-          "others": ["const", "pipe", "1", "*", "5", "x", "process", "+", "-", ");", "log", "", ");"]
+          "others": ["pipe", "fns", "x", "v", "f", "+", "*", "-", "1", "2", "3", "5", "process", "console", "log", "", ");"]
         },
         "testCases": [
           {

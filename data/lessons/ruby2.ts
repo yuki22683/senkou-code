@@ -9,7 +9,7 @@ export const ruby2Data = {
     {
       "title": "ブロックを使おう - each",
       "correctCode": "# numsに配列を代入（1, 2, 3）\\nnums = [1, 2, 3]\\n# eachで各要素を処理\\nnums.each do |n|\\n  # putsで出力\\n  puts n\\n# endで終了\\nend",
-      "holeyCode": "# numsに配列を代入（1, 2, 3）\\nnums = [___, 2, 3]\\n# eachで各要素を処理\\nnums.each do |___|\\n  # putsで出力\\n  puts ___\\n# endで終了\\n___",
+      "holeyCode": "# numsに配列を代入（1, 2, 3）\\n___ = [___, ___, ___]\\n# eachで各要素を処理\\n___.___ do |___|\\n  # putsで出力\\n  ___ ___\\n# endで終了\\n___",
       "correctLines": [
           "# numsに配列を代入（1, 2, 3）",
           "nums = [1, 2, 3]",
@@ -26,7 +26,7 @@ export const ruby2Data = {
           null,
           "each で各要素を処理します。",
           null,
-          "ここを正しく入力してください。",
+          "puts で変数を出力します。",
           null,
           "ブロックを終了する。"
         ],
@@ -34,7 +34,7 @@ export const ruby2Data = {
           "functions": [
             "each"
           ],
-          "others": ["1", "2", "3", "n", "end", "n", "n", "n\\"]
+          "others": ["nums", "1", "2", "3", "n", "end", "puts"]
         },
         "testCases": [
           {
@@ -46,7 +46,7 @@ export const ruby2Data = {
     {
       "title": "map で変換しよう",
       "correctCode": "# numsに配列を代入（1, 2, 3）\\nnums = [1, 2, 3]\\n# mapで各要素を変換\\ndoubled = nums.map { |n| n * 2 }\\n# putsで出力\\nputs doubled",
-      "holeyCode": "# numsに配列を代入（1, 2, 3）\\nnums = [___, 2, 3]\\n# mapで各要素を変換\\ndoubled = nums.map { |n| n * ___ }\\n# putsで出力\\nputs ___",
+      "holeyCode": "# numsに配列を代入（1, 2, 3）\\n___ = [___, ___, ___]\\n# mapで各要素を変換\\n___ = ___.map { |___| ___ * ___ }\\n# putsで出力\\n___ ___",
       "correctLines": [
           "# numsに配列を代入（1, 2, 3）",
           "nums = [1, 2, 3]",
@@ -57,21 +57,24 @@ export const ruby2Data = {
         ],
       "lineHints": [
           null,
+          "複数の値をまとめて格納する配列を作成します。",
+          null,
           "map で各要素を2倍にします。",
           null,
-          "ここを正しく入力してください。",
-          null,
-          "ここを正しく入力してください。"
+          "puts で変数を出力します。"
         ],
         "candidates": {
           "functions": [
             "map"
           ],
           "others": [
+            "nums",
             "1",
             "2",
             "3",
-            "doubled"
+            "doubled",
+            "n",
+            "puts"
           ]
         },
         "testCases": [
@@ -84,7 +87,7 @@ export const ruby2Data = {
     {
       "title": "select で絞り込もう",
       "correctCode": "# numsに配列を代入（1, 2, 3, 4, 5）\\nnums = [1, 2, 3, 4, 5]\\n# selectで条件に合う要素を抽出\\nbig = nums.select { |n| n >= 3 }\\n# putsで出力\\nputs big",
-      "holeyCode": "# numsに配列を代入（1, 2, 3, 4, 5）\\nnums = [___, 2, 3, 4, 5]\\n# selectで条件に合う要素を抽出\\nbig = nums.select { |n| n >= ___ }\\n# putsで出力\\nputs ___",
+      "holeyCode": "# numsに配列を代入（1, 2, 3, 4, 5）\\n___ = [___, ___, ___, ___, ___]\\n# selectで条件に合う要素を抽出\\n___ = ___.select { |___| ___ >= ___ }\\n# putsで出力\\n___ ___",
       "correctLines": [
           "# numsに配列を代入（1, 2, 3, 4, 5）",
           "nums = [1, 2, 3, 4, 5]",
@@ -95,23 +98,26 @@ export const ruby2Data = {
         ],
       "lineHints": [
           null,
-          "配列を複数の値で初期化する。",
+          "配列を複数の値で初期化します。",
           null,
           "select で 3 以上の要素を抽出します。",
           null,
-          "ここを正しく入力してください。"
+          "puts で変数を出力します。"
         ],
         "candidates": {
           "functions": [
             "select"
           ],
           "others": [
+            "nums",
             "1",
             "2",
             "3",
             "4",
             "5",
-            "big"
+            "big",
+            "n",
+            "puts"
           ]
         },
         "testCases": [
@@ -124,7 +130,7 @@ export const ruby2Data = {
     {
       "title": "シンボルを使おう",
       "correctCode": "# itemにハッシュを代入\\nitem = { name: 'りんご', price: 100 }\\n# :でシンボルを指定してアクセス\\nputs item[:price]",
-      "holeyCode": "# itemにハッシュを代入\\nitem = { name: 'りんご', price: ___ }\\n# :でシンボルを指定してアクセス\\nputs item[:___]",
+      "holeyCode": "# itemにハッシュを代入\\n___ = { ___: '___', ___: ___ }\\n# :でシンボルを指定してアクセス\\n___ ___[:___]",
       "correctLines": [
           "# itemにハッシュを代入",
           "item = { name: 'りんご', price: 100 }",
@@ -133,7 +139,7 @@ export const ruby2Data = {
         ],
       "lineHints": [
           null,
-          "シンボルをキーにしたハッシュです。",
+          "シンボルをキーにしたハッシュを作成します。",
           null,
           ": でシンボルを指定してアクセスします。"
         ],
@@ -141,7 +147,7 @@ export const ruby2Data = {
           "operators": [
             ":"
           ],
-          "others": ["りんご", "100", "price"]
+          "others": ["item", "name", "りんご", "price", "100", "puts"]
         },
         "testCases": [
           {
@@ -153,7 +159,7 @@ export const ruby2Data = {
     {
       "title": "クラスを定義しよう",
       "correctCode": "# classでクラスを定義\\nclass Cat\\n  # initializeを定義\\n  def initialize(name)\\n    # @nameに代入\\n    @name = name\\n  # endで終了\\n  end\\n  # greetを定義\\n  def greet\\n    # @nameを出力\\n    puts @name\\n  # endで終了\\n  end\\n# endで終了\\nend\\n# catにインスタンスを代入\\ncat = Cat.new('タマ')\\n# greetを呼び出し\\ncat.greet",
-      "holeyCode": "# classでクラスを定義\\nclass ___\\n  # initializeを定義\\n  def initialize(___)\\n    # @nameに代入\\n    @___ = name\\n  # endで終了\\n  ___\\n  # greetを定義\\n  def ___\\n    # @nameを出力\\n    puts @___\\n  # endで終了\\n  ___\\n# endで終了\\n___\\n# catにインスタンスを代入\\ncat = Cat.new('___')\\n# greetを呼び出し\\ncat.___",
+      "holeyCode": "# classでクラスを定義\\nclass ___\\n  # initializeを定義\\n  def ___(___) \\n    # @nameに代入\\n    @___ = ___\\n  # endで終了\\n  ___\\n  # greetを定義\\n  def ___\\n    # @nameを出力\\n    ___ @___\\n  # endで終了\\n  ___\\n# endで終了\\n___\\n# catにインスタンスを代入\\n___ = ___.___(___) \\n# greetを呼び出し\\n___.___",
       "correctLines": [
           "# classでクラスを定義",
           "class Cat",
@@ -180,29 +186,29 @@ export const ruby2Data = {
           null,
           "新しいクラス（Cat）を定義します。",
           null,
-          "関数（initialize）を新しく定義します。",
+          "initialize メソッドを定義します。",
           null,
           "@name はインスタンス変数です。",
           null,
           "ブロックを終了する。",
           null,
-          "ここを正しく入力してください。",
+          "greet メソッドを定義します。",
           null,
-          "ここを正しく入力してください。",
-          null,
-          "ブロックを終了する。",
+          "puts で @name を出力します。",
           null,
           "ブロックを終了する。",
           null,
-          "new でインスタンスを作成します。",
+          "ブロックを終了する。",
           null,
-          "ここを正しく入力してください。"
+          "Cat.newでCatクラスのインスタンスを作成します。",
+          null,
+          "catオブジェクトのgreetメソッドを実行します。"
         ],
         "candidates": {
           "keywords": [
             "class"
           ],
-          "others": ["initialize", "name", "end", "greet", "@name", "new", "Cat", "タマ", "Cat", "end", "greet", "name"]
+          "others": ["Cat", "initialize", "name", "end", "greet", "puts", "new", "'タマ'", "cat"]
         },
         "testCases": [
           {
@@ -214,7 +220,7 @@ export const ruby2Data = {
     {
       "title": "アクセサを使おう",
       "correctCode": "# classでクラスを定義\\nclass Item\\n  # attr_accessorで読み書き可能に\\n  attr_accessor :price\\n# endで終了\\nend\\n# itemにインスタンスを代入\\nitem = Item.new\\n# priceに値を代入\\nitem.price = 200\\n# priceを出力\\nputs item.price",
-      "holeyCode": "# classでクラスを定義\\nclass ___\\n  # attr_accessorで読み書き可能に\\n  attr_accessor :___\\n# endで終了\\n___\\n# itemにインスタンスを代入\\nitem = Item.___\\n# priceに値を代入\\nitem.price = ___\\n# priceを出力\\nputs item.___",
+      "holeyCode": "# classでクラスを定義\\nclass ___\\n  # attr_accessorで読み書き可能に\\n  ___ :___\\n# endで終了\\n___\\n# itemにインスタンスを代入\\n___ = ___.___\\n# priceに値を代入\\n___.___ = ___\\n# priceを出力\\n___ ___.___ ",
       "correctLines": [
           "# classでクラスを定義",
           "class Item",
@@ -231,23 +237,23 @@ export const ruby2Data = {
         ],
       "lineHints": [
           null,
-          "attr_accessor で読み書き可能にします。",
+          "Item クラスを定義します。",
           null,
-          "ここを正しく入力してください。",
+          "attr_accessor で読み書き可能にします。",
           null,
           "ブロックを終了する。",
           null,
-          "ここを正しく入力してください。",
+          "Item.newでItemクラスのインスタンスを作成します。",
           null,
-          "ここを正しく入力してください。",
+          "price プロパティに値を代入します。",
           null,
-          "ここを正しく入力してください。"
+          "puts で price を出力します。"
         ],
         "candidates": {
           "keywords": [
             "attr_accessor"
           ],
-          "others": ["class", "end", "new", "200", "price", "Item", "Item", "price", "end", "new", "200"]
+          "others": ["Item", "price", "end", "item", "new", "200", "puts"]
         },
         "testCases": [
           {
@@ -259,7 +265,7 @@ export const ruby2Data = {
     {
       "title": "継承を学ぼう",
       "correctCode": "# classでクラスを定義\\nclass Vehicle\\n  # moveを定義\\n  def move\\n    # movingを出力\\n    puts '移動中'\\n  # endで終了\\n  end\\n# endで終了\\nend\\n# <で親クラスを継承\\nclass Car < Vehicle\\n# endで終了\\nend\\n# carにインスタンスを代入\\ncar = Car.new\\n# moveを呼び出し\\ncar.move",
-      "holeyCode": "# classでクラスを定義\\nclass ___\\n  # moveを定義\\n  def ___\\n    # movingを出力\\n    puts '___'\\n  # endで終了\\n  ___\\n# endで終了\\n___\\n# <で親クラスを継承\\nclass ___ < Vehicle\\n# endで終了\\n___\\n# carにインスタンスを代入\\ncar = Car.___\\n# moveを呼び出し\\ncar.___",
+      "holeyCode": "# classでクラスを定義\\nclass ___\\n  # moveを定義\\n  def ___\\n    # movingを出力\\n    ___ '___'\\n  # endで終了\\n  ___\\n# endで終了\\n___\\n# <で親クラスを継承\\nclass ___ < ___\\n# endで終了\\n___\\n# carにインスタンスを代入\\n___ = ___.___ \\n# moveを呼び出し\\n___.___",
       "correctLines": [
           "# classでクラスを定義",
           "class Vehicle",
@@ -282,29 +288,29 @@ export const ruby2Data = {
         ],
       "lineHints": [
           null,
-          "新しいクラス（Car）を定義します。",
+          "Vehicle クラスを定義します。",
           null,
-          "ここを正しく入力してください。",
+          "move メソッドを定義します。",
           null,
-          "文字列を出力し、最後に改行を加えます。",
-          null,
-          "ブロックを終了する。",
+          "puts で文字列を出力します。",
           null,
           "ブロックを終了する。",
           null,
-          "新しいクラス（Car）を定義します。",
+          "ブロックを終了する。",
+          null,
+          "< で Vehicle を継承した Car クラスを定義します。",
           null,
           "ブロックを終了する。",
           null,
-          "ここを正しく入力してください。",
+          "Car.newでCarクラスのインスタンスを作成します。",
           null,
-          "ここを正しく入力してください。"
+          "carオブジェクトのmoveメソッドを実行します。"
         ],
         "candidates": {
           "operators": [
             "<"
           ],
-          "others": ["class", "move", "moving", "end", "new", "Vehicle", "Car", "移動中", "Vehicle", "move", "end", "new"]
+          "others": ["Vehicle", "move", "puts", "移動中", "end", "Car", "car", "new"]
         },
         "testCases": [
           {
@@ -316,7 +322,7 @@ export const ruby2Data = {
     {
       "title": "モジュールで機能を追加",
       "correctCode": "# moduleでモジュールを定義\\nmodule Speakable\\n  # speakを定義\\n  def speak\\n    # speakingを出力\\n    puts '話し中'\\n  # endで終了\\n  end\\n# endで終了\\nend\\n# classでクラスを定義\\nclass Robot\\n  # includeでモジュールを取り込み\\n  include Speakable\\n# endで終了\\nend\\n# robotにインスタンスを代入\\nrobot = Robot.new\\n# speakを呼び出し\\nrobot.speak",
-      "holeyCode": "# moduleでモジュールを定義\\nmodule ___\\n  # speakを定義\\n  def ___\\n    # speakingを出力\\n    puts '___'\\n  # endで終了\\n  ___\\n# endで終了\\n___\\n# classでクラスを定義\\nclass ___\\n  # includeでモジュールを取り込み\\n  include ___\\n# endで終了\\n___\\n# robotにインスタンスを代入\\nrobot = Robot.___\\n# speakを呼び出し\\nrobot.___",
+      "holeyCode": "# moduleでモジュールを定義\\nmodule ___\\n  # speakを定義\\n  def ___\\n    # speakingを出力\\n    ___ '___'\\n  # endで終了\\n  ___\\n# endで終了\\n___\\n# classでクラスを定義\\nclass ___\\n  # includeでモジュールを取り込み\\n  ___ ___\\n# endで終了\\n___\\n# robotにインスタンスを代入\\n___ = ___.___ \\n# speakを呼び出し\\n___.___",
       "correctLines": [
           "# moduleでモジュールを定義",
           "module Speakable",
@@ -341,31 +347,31 @@ export const ruby2Data = {
         ],
       "lineHints": [
           null,
-          "module でモジュールを定義します。",
+          "Speakable モジュールを定義します。",
+          null,
+          "speak メソッドを定義します。",
+          null,
+          "puts で文字列を出力します。",
+          null,
+          "ブロックを終了する。",
+          null,
+          "ブロックを終了する。",
+          null,
+          "Robot クラスを定義します。",
           null,
           "include でモジュールを取り込みます。",
           null,
-          "文字列を出力し、最後に改行を加えます。",
-          null,
           "ブロックを終了する。",
           null,
-          "ブロックを終了する。",
+          "Robot.newでRobotクラスのインスタンスを作成します。",
           null,
-          "新しいクラス（Robot）を定義します。",
-          null,
-          "ここを正しく入力してください。",
-          null,
-          "ブロックを終了する。",
-          null,
-          "ここを正しく入力してください。",
-          null,
-          "ここを正しく入力してください。"
+          "robotオブジェクトのspeakメソッドを実行します。"
         ],
         "candidates": {
           "keywords": [
-            "module"
+            "module", "include"
           ],
-          "others": ["speak", "speaking", "end", "class", "Speakable", "new", "Robot", "話し中", "Speakable", "speak", "end", "Robot", "new"]
+          "others": ["Speakable", "speak", "puts", "話し中", "end", "Robot", "robot", "new"]
         },
         "testCases": [
           {
@@ -377,7 +383,7 @@ export const ruby2Data = {
     {
       "title": "例外処理 begin-rescue",
       "correctCode": "# beginで開始\\nbegin\\n  # raiseでエラーを発生\\n  raise 'おっと'\\n# rescueで例外を捕捉\\nrescue => e\\n  # caughtを出力\\n  puts 'キャッチ'\\n# endで終了\\nend",
-      "holeyCode": "# beginで開始\\n___\\n  # raiseでエラーを発生\\n  raise '___'\\n# rescueで例外を捕捉\\nrescue => ___\\n  # caughtを出力\\n  puts '___'\\n# endで終了\\n___",
+      "holeyCode": "# beginで開始\\n___\\n  # raiseでエラーを発生\\n  ___ '___'\\n# rescueで例外を捕捉\\n___ => ___\\n  # caughtを出力\\n  ___ '___'\\n# endで終了\\n___",
       "correctLines": [
           "# beginで開始",
           "begin",
@@ -392,13 +398,13 @@ export const ruby2Data = {
         ],
       "lineHints": [
           null,
+          "begin で例外処理ブロックを開始します。",
+          null,
           "raise でエラーを発生させます。",
           null,
           "rescue でエラーを捕まえます。",
           null,
-          "ここを正しく入力してください。",
-          null,
-          "文字列を出力し、最後に改行を加えます。",
+          "puts で文字列を出力します。",
           null,
           "ブロックを終了する。"
         ],
@@ -406,7 +412,7 @@ export const ruby2Data = {
           "keywords": [
             "rescue"
           ],
-          "others": ["begin", "oops", "caught", "end", "e", "おっと", "キャッチ", "begin", "e"]
+          "others": ["begin", "raise", "おっと", "e", "puts", "キャッチ", "end"]
         },
         "testCases": [
           {
@@ -418,7 +424,7 @@ export const ruby2Data = {
     {
       "title": "ラムダを使おう",
       "correctCode": "# ->でラムダを定義\\ndouble = ->(n) { n * 2 }\\n# callで実行\\nputs double.call(5)",
-      "holeyCode": "# ->でラムダを定義\\ndouble = ->(n) { n * ___ }\\n# callで実行\\nputs double.call(___)",
+      "holeyCode": "# ->でラムダを定義\\n___ = ->(___) { ___ * ___ }\\n# callで実行\\n___ ___.___(___)",
       "correctLines": [
           "# ->でラムダを定義",
           "double = ->(n) { n * 2 }",
@@ -435,7 +441,7 @@ export const ruby2Data = {
           "operators": [
             "->"
           ],
-          "others": ["call", "2", "5"]
+          "others": ["double", "n", "2", "puts", "call", "5"]
         },
         "testCases": [
           {

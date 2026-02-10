@@ -9,7 +9,7 @@ export const assembly3Data = {
     {
       "title": "値を減らしましょう",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに10を入れる\\n  mov rax, 10\\n  ; raxを1減らす\\n  dec rax\\n\\n  ; 結果raxをrdiにコピー\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに10を入れる\\n  mov ___, ___\\n  ; raxを1減らす\\n  dec ___\\n\\n  ; 結果raxをrdiにコピー\\n  mov ___, ___\\n  ; 終了処理\\n  mov ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに10を入れる\\n  ___ ___, ___\\n  ; raxを1減らす\\n  ___ ___\\n\\n  ; 結果raxをrdiにコピー\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -30,24 +30,24 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "テキストセクション .text を宣言します。",
-          "グローバルシンボル _start を宣言します。",
+          "セクション宣言のディレクティブと .text を入力します。",
+          "グローバル宣言のディレクティブと _start を入力します。",
           null,
           "ラベル _start: を定義します。",
           null,
-          "rax に 10 を格納します。",
+          "データ転送命令で rax に 10 を格納します。",
           null,
           "レジスタの値を1減少させる命令です。",
           null,
           null,
-          "rdi に rax の値をコピーします。",
+          "データ転送命令で rdi に rax の値をコピーします。",
           null,
-          "rax に 60 を格納します。",
+          "データ転送命令で rax に 60 を格納します。",
           null,
           "syscall で実行します。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "10", "dec", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "10", "dec", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -59,7 +59,7 @@ export const assembly3Data = {
     {
       "title": "掛け算をしましょう",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; rbxに3を入れる\\n  mov rbx, 3\\n  ; rbx(3)と4を掛けて結果をraxへ\\n  imul rax, rbx, 4\\n\\n  ; 結果raxをrdiにコピー\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; rbxに3を入れる\\n  mov ___, ___\\n  ; rbx(3)と4を掛けて結果をraxへ\\n  imul ___, ___, ___\\n\\n  ; 結果raxをrdiにコピー\\n  mov ___, ___\\n  ; 終了処理\\n  mov ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; rbxに3を入れる\\n  ___ ___, ___\\n  ; rbx(3)と4を掛けて結果をraxへ\\n  ___ ___, ___, ___\\n\\n  ; 結果raxをrdiにコピー\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -80,24 +80,24 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
-          "外部からアクセス可能なシンボルを宣言します。",
+          "セクション宣言のディレクティブと .text を入力します。",
+          "グローバル宣言のディレクティブと _start を入力します。",
           null,
           "ラベル _start: を定義します。",
           null,
-          "rbx に 3 を格納します。",
+          "データ転送命令で rbx に 3 を格納します。",
           null,
           "符号付き乗算を行う命令です。",
           null,
           null,
-          "rdi に rax を代入します。",
+          "データ転送命令で rdi に rax を代入します。",
           null,
-          "rax に 60 を代入します。",
+          "データ転送命令で rax に 60 を代入します。",
           null,
           "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rbx", "3", "imul", "rax", "4", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rbx", "3", "imul", "rax", "4", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -109,7 +109,7 @@ export const assembly3Data = {
     {
       "title": "スタックに保存",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに42を入れる\\n  mov rax, 42\\n  ; スタックにraxを保存\\n  push rax\\n  ; スタックからrdiに取り出す\\n  pop rdi\\n\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに42を入れる\\n  mov ___, ___\\n  ; スタックにraxを保存\\n  push ___\\n  ; スタックからrdiに取り出す\\n  pop ___\\n\\n  ; 終了処理\\n  mov ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに42を入れる\\n  ___ ___, ___\\n  ; スタックにraxを保存\\n  ___ ___\\n  ; スタックからrdiに取り出す\\n  ___ ___\\n\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -130,24 +130,24 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
-          "外部からアクセス可能なシンボルを宣言します。",
+          "セクション宣言のディレクティブと .text を入力します。",
+          "グローバル宣言のディレクティブと _start を入力します。",
           null,
           "ラベル _start: を定義します。",
           null,
-          "rax に 42 を格納します。",
+          "データ転送命令で rax に 42 を格納します。",
           null,
           "値をスタックに保存する命令です。",
           null,
           "スタックから値を取り出す命令です。",
           null,
           null,
-          "rax に 60 をセットします。",
+          "データ転送命令で rax に 60 をセットします。",
           null,
           "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "42", "push", "pop", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "42", "push", "pop", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -159,7 +159,7 @@ export const assembly3Data = {
     {
       "title": "スタックから取り出す",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; 数値99をスタックへ\\n  push 99\\n  ; スタックからrdiへ\\n  pop rdi\\n\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; 数値99をスタックへ\\n  push ___\\n  ; スタックからrdiへ\\n  pop ___\\n\\n  ; 終了処理\\n  mov ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; 数値99をスタックへ\\n  ___ ___\\n  ; スタックからrdiへ\\n  ___ ___\\n\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -178,8 +178,8 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "セクション .text を宣言します。",
-          "グローバル _start を宣言します。",
+          "セクション宣言のディレクティブと .text を入力します。",
+          "グローバル宣言のディレクティブと _start を入力します。",
           null,
           "ラベル _start: を定義します。",
           null,
@@ -188,12 +188,12 @@ export const assembly3Data = {
           "pop命令でスタックの値を rdi に取り出します。",
           null,
           null,
-          "rax に 60 を格納します。",
+          "データ転送命令で rax に 60 を格納します。",
           null,
           "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
-          "others": ["text", "_start", "99", "rdi", "rax", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "push", "99", "pop", "rdi", "mov", "rax", "60", "syscall"]
         },
         "testCases": [
           {
@@ -205,7 +205,7 @@ export const assembly3Data = {
     {
       "title": "論理AND演算",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに0xFFをセット\\n  mov rax, 0xFF\\n  ; raxと0x0FのビットAND\\n  and rax, 0x0F\\n\\n  ; 結果をrdiへ\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに0xFFをセット\\n  mov ___, ___\\n  ; raxと0x0FのビットAND\\n  and ___, ___\\n\\n  ; 結果をrdiへ\\n  mov ___, ___\\n  ; 終了処理\\n  mov ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに0xFFをセット\\n  ___ ___, ___\\n  ; raxと0x0FのビットAND\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -226,24 +226,24 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "セクション .text を宣言します。",
-          "グローバル _start を宣言します。",
+          "セクション宣言のディレクティブと .text を入力します。",
+          "グローバル宣言のディレクティブと _start を入力します。",
           null,
           "ラベル _start: を定義します。",
           null,
-          "rax に 0xFF を代入します。",
+          "データ転送命令で rax に 0xFF を代入します。",
           null,
           "ビット単位の論理積を行う命令です。",
           null,
           null,
-          "rdi に rax を代入します。",
+          "データ転送命令で rdi に rax を代入します。",
           null,
-          "rax に 60 を代入します。",
+          "データ転送命令で rax に 60 を代入します。",
           null,
           "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "0xFF", "and", "0x0F", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "0xFF", "and", "0x0F", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -255,7 +255,7 @@ export const assembly3Data = {
     {
       "title": "論理OR演算",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに0x10をセット\\n  mov rax, 0x10\\n  ; raxと0x01のビットOR\\n  or rax, 0x01\\n\\n  ; 結果をrdiへ\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに0x10をセット\\n  mov ___, ___\\n  ; raxと0x01のビットOR\\n  or ___, ___\\n\\n  ; 結果をrdiへ\\n  mov ___, ___\\n  ; 終了処理\\n  mov ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに0x10をセット\\n  ___ ___, ___\\n  ; raxと0x01のビットOR\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -276,24 +276,24 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "セクション .text を宣言します。",
-          "グローバル _start を宣言します。",
+          "セクション宣言のディレクティブと .text を入力します。",
+          "グローバル宣言のディレクティブと _start を入力します。",
           null,
           "ラベル _start: を定義します。",
           null,
-          "rax に 0x10 をセットします。",
+          "データ転送命令で rax に 0x10 をセットします。",
           null,
           "ビット単位の論理和を行う命令です。",
           null,
           null,
-          "rdi に rax を代入します。",
+          "データ転送命令で rdi に rax を代入します。",
           null,
-          "rax に 60 を代入します。",
+          "データ転送命令で rax に 60 を代入します。",
           null,
           "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "0x10", "or", "0x01", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "0x10", "or", "0x01", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -305,7 +305,7 @@ export const assembly3Data = {
     {
       "title": "左シフト演算",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに5をセット\\n  mov rax, 5\\n  ; raxを2ビット左シフト\\n  shl rax, 2\\n\\n  ; 結果をrdiへ\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに5をセット\\n  mov ___, ___\\n  ; raxを2ビット左シフト\\n  shl ___, ___\\n\\n  ; 結果をrdiへ\\n  mov ___, ___\\n  ; 終了処理\\n  mov ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに5をセット\\n  ___ ___, ___\\n  ; raxを2ビット左シフト\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -326,24 +326,24 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
-          "外部からアクセス可能なシンボルを宣言します。",
+          "セクション宣言のディレクティブと .text を入力します。",
+          "グローバル宣言のディレクティブと _start を入力します。",
           null,
           "プログラムのエントリーポイントを定義するラベルです。",
           null,
-          "rax に 5 を格納します。",
+          "データ転送命令で rax に 5 を格納します。",
           null,
           "ビットを左にシフトする命令です。",
           null,
           null,
-          "rdi に rax を代入します。",
+          "データ転送命令で rdi に rax を代入します。",
           null,
-          "rax に 60 を代入します。",
+          "データ転送命令で rax に 60 を代入します。",
           null,
           "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "5", "shl", "2", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "5", "shl", "2", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -355,7 +355,7 @@ export const assembly3Data = {
     {
       "title": "右シフト演算",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに20をセット\\n  mov rax, 20\\n  ; raxを1ビット右シフト\\n  shr rax, 1\\n\\n  ; 結果をrdiへ\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに20をセット\\n  mov ___, ___\\n  ; raxを1ビット右シフト\\n  shr ___, ___\\n\\n  ; 結果をrdiへ\\n  mov ___, ___\\n  ; 終了処理\\n  mov ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに20をセット\\n  ___ ___, ___\\n  ; raxを1ビット右シフト\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -376,24 +376,24 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
-          "外部からアクセス可能なシンボルを宣言します。",
+          "セクション宣言のディレクティブと .text を入力します。",
+          "グローバル宣言のディレクティブと _start を入力します。",
           null,
           "プログラムのエントリーポイントを定義するラベルです。",
           null,
-          "rax に 20 を代入します。",
+          "データ転送命令で rax に 20 を代入します。",
           null,
           "ビットを右にシフトする命令です。",
           null,
           null,
-          "rdi に rax をコピーします。",
+          "データ転送命令で rdi に rax をコピーします。",
           null,
-          "rax に 60 をセットします。",
+          "データ転送命令で rax に 60 をセットします。",
           null,
           "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "20", "shr", "1", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "20", "shr", "1", "rdi", "60", "syscall"]
         },
         "testCases": [
           {
@@ -405,7 +405,7 @@ export const assembly3Data = {
     {
       "title": "test命令で検査",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに5をセット\\n  mov rax, 5\\n  ; ビット検査(rax AND 1)\\n  test rax, 1\\n  ; 0でなければ(奇数なら)ジャンプ\\n  jnz is_odd\\n  ; 0なら(偶数なら)rdi=0\\n  mov rdi, 0\\n  jmp done\\nis_odd:\\n  ; rdi=1\\n  mov rdi, 1\\ndone:\\n  ; 終了\\n  mov rax, 60\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに5をセット\\n  mov ___, ___\\n  ; ビット検査(rax AND 1)\\n  test ___, ___\\n  ; 0でなければ(奇数なら)ジャンプ\\n  jnz ___\\n  ; 0なら(偶数なら)rdi=0\\n  mov ___, ___\\n  jmp ___\\n___:\\n  ; rdi=1\\n  mov ___, ___\\n___:\\n  ; 終了\\n  mov ___, ___\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに5をセット\\n  ___ ___, ___\\n  ; ビット検査(rax AND 1)\\n  ___ ___, ___\\n  ; 0でなければ(奇数なら)ジャンプ\\n  ___ ___\\n  ; 0なら(偶数なら)rdi=0\\n  ___ ___, ___\\n  ___ ___\\n___:\\n  ; rdi=1\\n  ___ ___, ___\\n___:\\n  ; 終了\\n  ___ ___, ___\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -431,29 +431,29 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "セクション .text を宣言します。",
-          "グローバル _start を宣言します。",
+          "セクション宣言のディレクティブと .text を入力します。",
+          "グローバル宣言のディレクティブと _start を入力します。",
           null,
           "ラベル _start: を定義します。",
           null,
-          "rax に 5 を格納します。",
+          "データ転送命令で rax に 5 を格納します。",
           null,
           "ビット単位の検査を行う命令です。",
           null,
           "ゼロでない場合にジャンプする命令です。",
           null,
-          "rdi に 0 を代入します。",
-          "done ラベルへジャンプします。",
+          "データ転送命令で rdi に 0 を代入します。",
+          "無条件ジャンプ命令で done ラベルへジャンプします。",
           "ラベル is_odd: を定義します。",
           null,
-          "rdi に 1 を代入します。",
+          "データ転送命令で rdi に 1 を代入します。",
           "ラベル done: を定義します。",
           null,
-          "rax に 60 をセットします。",
+          "データ転送命令で rax に 60 をセットします。",
           "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "5", "test", "1", "is_odd", "rdi", "0", "done", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "5", "test", "1", "jnz", "is_odd", "rdi", "0", "jmp", "done", "60", "syscall"]
         },
         "testCases": [
           {
@@ -465,7 +465,7 @@ export const assembly3Data = {
     {
       "title": "neg命令で符号反転",
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに10をセット\\n  mov rax, 10\\n  ; 符号反転(-10になる)\\n  neg rax\\n\\n  ; rdiを0に\\n  xor rdi, rdi\\n  ; 終了\\n  mov rax, 60\\n  syscall",
-      "holeyCode": "; テキストセクション\\nsection .___\\n  global ___\\n\\n___:\\n  ; raxに10をセット\\n  mov ___, ___\\n  ; 符号反転(-10になる)\\n  neg ___\\n\\n  ; rdiを0に\\n  xor ___, ___\\n  ; 終了\\n  mov ___, ___\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに10をセット\\n  ___ ___, ___\\n  ; 符号反転(-10になる)\\n  ___ ___\\n\\n  ; rdiを0に\\n  ___ ___, ___\\n  ; 終了\\n  ___ ___, ___\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -485,23 +485,23 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "コードセクションを示すディレクティブです。",
-          "外部からアクセス可能なシンボルを宣言します。",
+          "セクション宣言のディレクティブと .text を入力します。",
+          "グローバル宣言のディレクティブと _start を入力します。",
           null,
           "プログラムのエントリーポイントを定義するラベルです。",
           null,
-          "rax に 10 をセットします。",
+          "データ転送命令で rax に 10 をセットします。",
           null,
           "符号を反転させる命令です。",
           null,
           null,
-          "rdi を 0 にします。",
+          "排他的論理和で rdi を 0 にします。",
           null,
-          "rax に 60 をセットします。",
+          "データ転送命令で rax に 60 をセットします。",
           "OSにシステムコールを実行させる命令です。"
         ],
         "candidates": {
-          "others": ["text", "_start", "rax", "10", "neg", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "10", "neg", "xor", "rdi", "60", "syscall"]
         },
         "testCases": [
           {

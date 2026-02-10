@@ -9,14 +9,14 @@ export const kotlinData = {
     {
       "title": "画面にメッセージを出しましょう",
       "correctCode": "// println で出力する\\nprintln(\"Hello, World!\")",
-      "holeyCode": "// println で出力する\\n___(\"Hello, World!\")",
+      "holeyCode": "// println で出力する\\n___(\"___\")",
       "correctLines": [
           "// println で出力する",
           "println(\"Hello, World!\")"
         ],
       "lineHints": [
           null,
-          "関数は println です。 L ではなく 小文字の l（エル）です。"
+          "println関数で「Hello, World!」という文字列を出力します。"
         ],
         "candidates": {
           "functions": [
@@ -24,7 +24,8 @@ export const kotlinData = {
           ],
           "strings": [
             "\"Hello, World!\""
-          ]
+          ],
+          "others": ["Hello, World!"]
         },
         "testCases": [
           {
@@ -36,7 +37,7 @@ export const kotlinData = {
     {
       "title": "便利な「はこ」変数（へんすう）",
       "correctCode": "// x に 10 を入れる\\nval x = 10\\n// y に 5 を入れる\\nval y = 5\\n// + でたし算する\\nprintln(x + y)",
-      "holeyCode": "// x に 10 を入れる\\nval x = ___\\n// y に 5 を入れる\\nval y = ___\\n// + でたし算する\\n___(x + y)",
+      "holeyCode": "// x に 10 を入れる\\nval ___ = ___\\n// y に 5 を入れる\\nval ___ = ___\\n// + でたし算する\\n___(___ + ___)",
       "correctLines": [
           "// x に 10 を入れる",
           "val x = 10",
@@ -47,11 +48,11 @@ export const kotlinData = {
         ],
       "lineHints": [
           null,
-          "変数xに代入する整数値です。",
+          "変数xを宣言し、10を代入します。",
           null,
-          "変数yに代入する整数値です。",
+          "変数yを宣言し、5を代入します。",
           null,
-          "たし算なので + を使います。"
+          "println関数でxとyの合計を出力します。"
         ],
         "candidates": {
           "numbers": [
@@ -64,7 +65,7 @@ export const kotlinData = {
             "*",
             "/"
           ],
-          "others": ["println", "10", "5"]
+          "others": ["println", "x", "y", "10", "5"]
         },
         "testCases": [
           {
@@ -76,14 +77,14 @@ export const kotlinData = {
     {
       "title": "剰余演算子（%）",
       "correctCode": "// 10 を 3 で割ったあまりを出力する\\nprintln(10 % 3)",
-      "holeyCode": "// 10 を 3 で割ったあまりを出力する\\n___(10 % 3)",
+      "holeyCode": "// 10 を 3 で割ったあまりを出力する\\n___(___ ___ ___)",
       "correctLines": [
           "// 10 を 3 で割ったあまりを出力する",
           "println(10 % 3)"
         ],
       "lineHints": [
           null,
-          "あまりを求める `%` 演算子を使います。"
+          "println関数で10を3で割ったあまりを出力します。%演算子を使います。"
         ],
         "candidates": {
           "operators": [
@@ -92,7 +93,7 @@ export const kotlinData = {
             "*",
             "-"
           ],
-          "others": ["println"]
+          "others": ["println", "10", "3"]
         },
         "testCases": [
           {
@@ -104,7 +105,7 @@ export const kotlinData = {
     {
       "title": "累算代入演算子（+=、-=）",
       "correctCode": "// var で変更可能な変数を作る\\nvar hp = 100\\n// += で 20 を足す\\nhp += 20\\n// -= で 50 を引く\\nhp -= 50\\nprintln(hp)",
-      "holeyCode": "// var で変更可能な変数を作る\\nvar ___ = 100\\n// += で 20 を足す\\nhp += ___\\n// -= で 50 を引く\\nhp -= ___\\nprintln(___)",
+      "holeyCode": "// var で変更可能な変数を作る\\nvar ___ = ___\\n// += で 20 を足す\\n___ ___ ___\\n// -= で 50 を引く\\n___ ___ ___\\n___(___)",
       "correctLines": [
           "// var で変更可能な変数を作る",
           "var hp = 100",
@@ -116,12 +117,12 @@ export const kotlinData = {
         ],
       "lineHints": [
           null,
-          "変数hpを宣言し、100を設定します。",
+          "変数hpを宣言し、100を代入します。",
           null,
-          "変数hpに20を加算して再代入する。",
+          "hpに20を足します。+=演算子を使います。",
           null,
-          "変数hpから50を減算して再代入する。",
-          "ここを正しく入力してください。"
+          "hpから50を引きます。-=演算子を使います。",
+          "println関数でhpの値を出力します。"
         ],
         "candidates": {
           "operators": [
@@ -130,7 +131,7 @@ export const kotlinData = {
             "*=",
             "/="
           ],
-          "others": ["hp", "20", "50", "20", "50"]
+          "others": ["hp", "100", "20", "50", "println"]
         },
         "testCases": [
           {
@@ -142,7 +143,7 @@ export const kotlinData = {
     {
       "title": "「もし〜なら」で分けましょう",
       "correctCode": "// score に 100 を入れる\\nval score = 100\\n// > で比較する\\nif (score > 80) {\\n    println(\"すごい！\")\\n}",
-      "holeyCode": "// score に 100 を入れる\\nval score = ___\\n// > で比較する\\nif (score ___ 80) {\\n    ___(\"すごい！\")\\n___",
+      "holeyCode": "// score に 100 を入れる\\nval ___ = ___\\n// > で比較する\\nif (___ ___ ___) ___\\n    ___(\"___\")\\n___",
       "correctLines": [
           "// score に 100 を入れる",
           "val score = 100",
@@ -153,11 +154,11 @@ export const kotlinData = {
         ],
       "lineHints": [
           null,
-          "変数scoreに代入する値です。",
+          "変数scoreを宣言し、100を代入します。",
           null,
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "scoreが80より大きいか比較します。if文と>演算子を使います。",
+          "println関数で「すごい！」を出力します。",
+          "if文のブロックを閉じる}です。"
         ],
         "candidates": {
           "numbers": [
@@ -169,7 +170,7 @@ export const kotlinData = {
             ">=",
             "<="
           ],
-          "others": ["println", "}", "100"]
+          "others": ["println", "}", "{", "score", "100", "80", "すごい！"]
         },
         "testCases": [
           {
@@ -181,7 +182,7 @@ export const kotlinData = {
     {
       "title": "論理演算子（&&、||）",
       "correctCode": "val score = 80\\nval bonus = 10\\n// && で両方の条件をチェック\\nif (score >= 70 && bonus > 0) {\\n    println(\"ボーナス合格！\")\\n}",
-      "holeyCode": "val score = ___\\nval bonus = ___\\n// && で両方の条件をチェック\\nif (score >= ___ && bonus > 0) {\\n    ___(\"ボーナス合格！\")\\n___",
+      "holeyCode": "val ___ = ___\\nval ___ = ___\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___) ___\\n    ___(\"___\")\\n___",
       "correctLines": [
           "val score = 80",
           "val bonus = 10",
@@ -191,12 +192,12 @@ export const kotlinData = {
           "}"
         ],
       "lineHints": [
-          "定数scoreを宣言し、80を設定します。",
-          "ここを正しく入力してください。",
+          "変数scoreを宣言し、80を代入します。",
+          "変数bonusを宣言し、10を代入します。",
           null,
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "score>=70かつbonus>0の両方を満たすか判定します。&&演算子を使います。",
+          "println関数で「ボーナス合格！」を出力します。",
+          "if文のブロックを閉じる}です。"
         ],
         "candidates": {
           "operators": [
@@ -205,7 +206,7 @@ export const kotlinData = {
             "&",
             "|"
           ],
-          "others": ["80", "10", "70", "println", "}", "80", "10"]
+          "others": ["score", "bonus", "80", "10", "70", "0", "println", "}", "{", "ボーナス合格！", ">=", ">"]
         },
         "testCases": [
           {
@@ -217,7 +218,7 @@ export const kotlinData = {
     {
       "title": "たくさんのデータをまとめましょう「リスト」",
       "correctCode": "// colors というリストを作る（'あか', 'あお'の順）\\nval colors = listOf(\"あか\", \"あお\")\\n// 2番目のデータ（インデックス1）を出す\\nprintln(colors[1])",
-      "holeyCode": "// colors というリストを作る（'あか', 'あお'の順）\\n___ colors = listOf(\"___\", \"あお\")\\n// 2番目のデータ（インデックス1）を出す\\n___(colors[1])",
+      "holeyCode": "// colors というリストを作る（'あか', 'あお'の順）\\nval ___ = ___(\"___\", \"___\")\\n// 2番目のデータ（インデックス1）を出す\\n___(___[___])",
       "correctLines": [
           "// colors というリストを作る（'あか', 'あお'の順）",
           "val colors = listOf(\"あか\", \"あお\")",
@@ -226,9 +227,9 @@ export const kotlinData = {
         ],
       "lineHints": [
           null,
-          "listOf関数でリストを作成し、要素を順番に渡します。",
+          "listOf関数でcolorsリストを作成し、「あか」「あお」を入れます。",
           null,
-          "2番目のデータはインデックス1です。 `colors[1]` と入力してください。"
+          "println関数でcolors[1]（2番目の要素）を出力します。"
         ],
         "candidates": {
           "variables": [
@@ -245,7 +246,7 @@ export const kotlinData = {
           "numbers": [
             "1"
           ],
-          "others": ["val"]
+          "others": ["colors", "1"]
         },
         "testCases": [
           {
@@ -257,7 +258,7 @@ export const kotlinData = {
     {
       "title": "名前で引き出す「辞書」",
       "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\nval colors = mapOf(\"みかん\" to \"オレンジ\")\\n// 中身を出す\\nprintln(colors[\"みかん\"])",
-      "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\n___ colors = mapOf(\"___\" to \"オレンジ\")\\n// 中身を出す\\n___(colors[\"みかん\"])",
+      "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\nval ___ = ___(\"___\" to \"___\")\\n// 中身を出す\\n___(___[\"___\"])",
       "correctLines": [
           "// 辞書を作る（キーは'みかん'、値は'オレンジ'）",
           "val colors = mapOf(\"みかん\" to \"オレンジ\")",
@@ -266,9 +267,9 @@ export const kotlinData = {
         ],
       "lineHints": [
           null,
-          "mapOf関数でキーと値のペアを作成します。toで対応付けます。",
+          "mapOf関数でcolors辞書を作成します。キー「みかん」に値「オレンジ」を対応付けます。",
           null,
-          "[]でキーを指定して辞書から値を取り出します。"
+          "println関数でcolors[\"みかん\"]の値を出力します。"
         ],
         "candidates": {
           "variables": [
@@ -282,7 +283,7 @@ export const kotlinData = {
             "みかん",
             "オレンジ"
           ],
-          "others": ["val"]
+          "others": ["colors"]
         },
         "testCases": [
           {

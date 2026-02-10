@@ -9,7 +9,7 @@ export const swift3Data = {
     {
       "title": "Result型",
       "correctCode": "// エラー型を定義\\nenum MyError: Error { case negative }\\n\\n// check関数を定義\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.negative) }\\n    // successで成功を返す\\n    return .success(n)\\n}\\n\\n// 関数を呼び出し\\nlet result = check(10)\\n// switchでパターンマッチ\\nswitch result {\\n// 成功の場合\\ncase .success(let v): print(v)\\n// 失敗の場合\\ncase .failure(_): print(\"エラー\")\\n}",
-      "holeyCode": "// エラー型を定義\\nenum MyError: ___ { case negative }\\n___\\n// check関数を定義\\nfunc ___(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.___) }\\n    // successで成功を返す\\n    return .___(n)\\n___\\n___\\n// 関数を呼び出し\\nlet result = ___(10)\\n// switchでパターンマッチ\\nswitch ___ {\\n// 成功の場合\\ncase .success(let v): print(___)\\n// 失敗の場合\\n___ .failure(_): print(\"___\")\\n___",
+      "holeyCode": "// エラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// check関数を定義\\nfunc ___(_ ___: ___) -> ___<___, ___> {\\n    // 負の場合は失敗\\n    if ___ < ___ { return .___(.___) }\\n    // successで成功を返す\\n    return .___(___)\\n___\\n___\\n// 関数を呼び出し\\nlet ___ = ___(___)\\n// switchでパターンマッチ\\nswitch ___ {\\n// 成功の場合\\ncase .___(let ___): ___(___)\\n// 失敗の場合\\ncase .___(_): ___(\"___\")\\n___",
       "correctLines": [
           "// エラー型を定義",
           "enum MyError: Error { case negative }",
@@ -34,24 +34,24 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "Error を指定します。",
+          "MyError, Error, negative を指定します。",
           null,
           null,
-          "check を指定します。",
+          "check, n, Int, Result, Int, MyError を指定します。",
           null,
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "n, 0, failure, negative を指定します。",
           null,
-          "ここを正しく入力してください。",
+          "success, n を指定します。",
           "この行を正しく入力してください。",
           null,
           null,
+          "result, check, 10 を指定します。",
+          null,
           "result を指定します。",
           null,
-          "ここを正しく入力してください。",
+          "success, v, print, v を指定します。",
           null,
-          "変数の内容を画面に出力します。",
-          null,
-          "ここを正しく入力してください。",
+          "failure, print, エラー を指定します。",
           "この行を正しく入力してください。"
         ],
         "candidates": {
@@ -60,7 +60,7 @@ export const swift3Data = {
             "ok",
             "value"
           ],
-          "others": ["Error", "negative", "check", "result", "v", "error", "エラー", "case", "", "}", "}"]
+          "others": ["MyError", "Error", "negative", "check", "n", "Int", "Result", "0", "failure", "result", "10", "v", "print", "エラー", "", "}", "}"]
         },
         "testCases": [
           {
@@ -72,7 +72,7 @@ export const swift3Data = {
     {
       "title": "compactMap",
       "correctCode": "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入\\nlet nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\\n// nums.compactMapでInt変換しintsに代入\\nlet ints = nums.compactMap { Int($0) }\\n// intsをprintで出力\\nprint(ints)",
-      "holeyCode": "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入\\nlet nums = [\"___\", \"a\", \"2\", \"b\", \"3\"]\\n// nums.compactMapでInt変換しintsに代入\\nlet ints = nums.___ { Int($0) }\\n// intsをprintで出力\\nprint(___)",
+      "holeyCode": "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入\\nlet ___ = [\"___\", \"___\", \"___\", \"___\", \"___\"]\\n// nums.compactMapでInt変換しintsに代入\\nlet ___ = ___.___ { ___($___) }\\n// intsをprintで出力\\n___(___)",
       "correctLines": [
           "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入",
           "let nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]",
@@ -83,11 +83,11 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "1 を指定します。",
+          "nums, 1, a, 2, b, 3 を指定します。",
           null,
-          "compactMap で nil を除外します。",
+          "ints, nums, compactMap, Int, 0 を指定します。",
           null,
-          "変数の内容を画面に出力します。"
+          "print, ints を指定します。"
         ],
         "candidates": {
           "methods": [
@@ -96,8 +96,7 @@ export const swift3Data = {
             "map"
           ],
           "others": [
-            "1",
-            "ints"
+            "nums", "1", "a", "2", "b", "3", "ints", "Int", "0", "print"
           ]
         },
         "testCases": [
@@ -110,7 +109,7 @@ export const swift3Data = {
     {
       "title": "reduce",
       "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet nums = [1, 2, 3, 4, 5]\\n// nums.reduce(1)で積を計算しproductに代入\\nlet product = nums.reduce(1) { $0 * $1 }\\n// productをprintで出力\\nprint(product)",
-      "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet ___ = [___, 2, 3, 4, 5]\\n// nums.reduce(1)で積を計算しproductに代入\\nlet ___ = nums.___(___) { $0 * ___ }\\n// productをprintで出力\\n___(___)",
+      "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// nums.reduce(1)で積を計算しproductに代入\\nlet ___ = ___.___(___) { $___ * $___ }\\n// productをprintで出力\\n___(___)",
       "correctLines": [
           "// numsに[1, 2, 3, 4, 5]を代入",
           "let nums = [1, 2, 3, 4, 5]",
@@ -121,11 +120,11 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "nums, 1, 2, 3, 4, 5 を指定します。",
           null,
-          "reduce で畳み込みます。",
+          "product, nums, reduce, 1, 0, 1 を指定します。",
           null,
-          "変数の内容を画面に出力します。"
+          "print, product を指定します。"
         ],
         "candidates": {
           "methods": [
@@ -133,7 +132,7 @@ export const swift3Data = {
             "fold",
             "aggregate"
           ],
-          "others": ["1", "reduce(1) { $0 * $1 }", "product", "nums", "$1", "print"]
+          "others": ["nums", "1", "2", "3", "4", "5", "product", "0", "print"]
         },
         "testCases": [
           {
@@ -145,7 +144,7 @@ export const swift3Data = {
     {
       "title": "lazy",
       "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet nums = [1, 2, 3, 4, 5]\\n// nums.lazy.mapで最初の要素*10をresultに代入\\nlet result = nums.lazy.map { $0 * 10 }.first!\\n// resultをprintで出力\\nprint(result)",
-      "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet nums = [___, 2, 3, 4, 5]\\n// nums.lazy.mapで最初の要素*10をresultに代入\\nlet result = nums.___.map { $0 * 10 }.first!\\n// resultをprintで出力\\nprint(___)",
+      "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// nums.lazy.mapで最初の要素*10をresultに代入\\nlet ___ = ___.___.map { $___ * ___ }.___!\\n// resultをprintで出力\\n___(___)",
       "correctLines": [
           "// numsに[1, 2, 3, 4, 5]を代入",
           "let nums = [1, 2, 3, 4, 5]",
@@ -156,11 +155,11 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "nums, 1, 2, 3, 4, 5 を指定します。",
           null,
-          "lazy で遅延評価します。",
+          "result, nums, lazy, 0, 10, first を指定します。",
           null,
-          "変数の内容を画面に出力します。"
+          "print, result を指定します。"
         ],
         "candidates": {
           "properties": [
@@ -169,8 +168,7 @@ export const swift3Data = {
             "delayed"
           ],
           "others": [
-            "1",
-            "result"
+            "nums", "1", "2", "3", "4", "5", "result", "0", "10", "first", "print"
           ]
         },
         "testCases": [
@@ -183,7 +181,7 @@ export const swift3Data = {
     {
       "title": "where 句",
       "correctCode": "// numsに[1, -2, 3, -4, 5]を代入\\nlet nums = [1, -2, 3, -4, 5]\\n// for-in whereでn>0の要素をループ\\nfor n in nums where n > 0 {\\n    // nをprintで出力\\n    print(n)\\n}",
-      "holeyCode": "// numsに[1, -2, 3, -4, 5]を代入\\nlet nums = [___, -2, 3, -4, 5]\\n// for-in whereでn>0の要素をループ\\nfor n in nums ___ n > 0 {\\n    // nをprintで出力\\n    print(___)\\n___",
+      "holeyCode": "// numsに[1, -2, 3, -4, 5]を代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// for-in whereでn>0の要素をループ\\nfor ___ in ___ ___ ___ > ___ {\\n    // nをprintで出力\\n    ___(___)\\n___",
       "correctLines": [
           "// numsに[1, -2, 3, -4, 5]を代入",
           "let nums = [1, -2, 3, -4, 5]",
@@ -195,11 +193,11 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "nums, 1, -2, 3, -4, 5 を指定します。",
           null,
-          "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
+          "n, nums, where, n, 0 を指定します。",
           null,
-          "変数の内容を画面に出力します。",
+          "print, n を指定します。",
           "この行を正しく入力してください。"
         ],
         "candidates": {
@@ -208,7 +206,7 @@ export const swift3Data = {
             "if",
             "when"
           ],
-          "others": ["1", "n", "}"]
+          "others": ["nums", "1", "-2", "3", "-4", "5", "n", "0", "print", "}"]
         },
         "testCases": [
           {
@@ -220,7 +218,7 @@ export const swift3Data = {
     {
       "title": "defer",
       "correctCode": "// test関数を定義\\nfunc test() {\\n    // deferでスコープ終了時に実行\\n    defer { print(\"end\") }\\n    // startと出力\\n    print(\"start\")\\n}\\n// 関数を呼び出し\\ntest()",
-      "holeyCode": "// test関数を定義\\nfunc ___() {\\n    // deferでスコープ終了時に実行\\n    ___ { print(\"end\") }\\n    // startと出力\\n    print(\"___\")\\n___\\n// 関数を呼び出し\\n___()",
+      "holeyCode": "// test関数を定義\\nfunc ___() {\\n    // deferでスコープ終了時に実行\\n    ___ { ___(\"___\") }\\n    // startと出力\\n    ___(\"___\")\\n___\\n// 関数を呼び出し\\n___()",
       "correctLines": [
           "// test関数を定義",
           "func test() {",
@@ -234,14 +232,14 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "関数（test）を定義します。",
+          "test を指定します。",
           null,
-          "defer でスコープ終了時の処理を登録します。",
+          "defer, print, end を指定します。",
           null,
-          "start を指定します。",
+          "print, start を指定します。",
           "この行を正しく入力してください。",
           null,
-          "関数（test）を呼び出して実行する。"
+          "test を指定します。"
         ],
         "candidates": {
           "keywords": [
@@ -249,7 +247,7 @@ export const swift3Data = {
             "finally",
             "cleanup"
           ],
-          "others": ["test", "start", "}"]
+          "others": ["test", "print", "end", "start", "}"]
         },
         "testCases": [
           {
@@ -261,7 +259,7 @@ export const swift3Data = {
     {
       "title": "associatedtype",
       "correctCode": "// プロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    }\\n}\\n\\n// インスタンスを作成\\nvar s = IntStack()\\n// 要素を追加\\ns.push(10)\\n// itemsを出力\\nprint(s.items)",
-      "holeyCode": "// プロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    ___ Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: ___)\\n___\\n___\\n// Stackに準拠\\n___\\n    // items配列\\n    var items: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(_ item: Int) {\\n        // 要素を追加\\n        items.___(item)\\n    ___\\n___\\n___\\n// インスタンスを作成\\nvar s = ___()\\n// 要素を追加\\ns.push(___)\\n// itemsを出力\\nprint(s.___)",
+      "holeyCode": "// プロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    ___ ___\\n    // pushメソッドを宣言\\n    mutating func ___(_ ___: ___)\\n___\\n___\\n// Stackに準拠\\nstruct ___: ___ {\\n    // items配列\\n    var ___: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(_ ___: ___) {\\n        // 要素を追加\\n        ___.___(___)\\n    ___\\n___\\n___\\n// インスタンスを作成\\nvar ___ = ___()\\n// 要素を追加\\n___.___(___)\\n// itemsを出力\\n___(___.___)",
       "correctLines": [
           "// プロトコルを定義",
           "protocol Stack {",
@@ -293,28 +291,28 @@ export const swift3Data = {
           null,
           "Stack を指定します。",
           null,
-          "associatedtype で関連型を定義します。",
+          "associatedtype, Element を指定します。",
           null,
-          "Element を指定します。",
+          "push, item, Element を指定します。",
           "この行を正しく入力してください。",
           null,
           null,
+          "IntStack, Stack を指定します。",
+          null,
+          "items, Int を指定します。",
+          null,
+          "push, item, Int を指定します。",
+          null,
+          "items, append, item を指定します。",
+          "この行を正しく入力してください。",
           "この行を正しく入力してください。",
           null,
-          "IntStack を指定します。",
           null,
-          "10 を指定します。",
+          "s, IntStack を指定します。",
           null,
-          "items を指定します。",
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
+          "s, push, 10 を指定します。",
           null,
-          null,
-          "ここを正しく入力してください。",
-          null,
-          "ここを正しく入力してください。",
-          null,
-          "ここを正しく入力してください。"
+          "print, s, items を指定します。"
         ],
         "candidates": {
           "keywords": [
@@ -322,7 +320,7 @@ export const swift3Data = {
             "typealias",
             "generic"
           ],
-          "others": ["Stack", "Element", "Int", "push", "append", "IntStack", "10", "items", "struct IntStack: Stack {", "}", "", "struct IntStack: Stack {", "}", "", "}"]
+          "others": ["Stack", "Element", "push", "item", "IntStack", "items", "Int", "append", "s", "10", "print", "}", ""]
         },
         "testCases": [
           {
@@ -334,7 +332,7 @@ export const swift3Data = {
     {
       "title": "throws と rethrows",
       "correctCode": "// エラー型を定義\\nenum MyError: Error { case invalid }\\n\\n// throwsでエラーを投げる可能性を示す\\nfunc check(_ n: Int) throws -> Int {\\n    // 負の場合はエラー\\n    if n < 0 { throw MyError.invalid }\\n    // nを返す\\n    return n\\n}\\n\\n// do-catchでエラー処理\\ndo {\\n    // tryで呼び出し\\n    let v = try check(10)\\n    // vを出力\\n    print(v)\\n} catch {\\n    // エラーを出力\\n    print(\"エラー\")\\n}",
-      "holeyCode": "// エラー型を定義\\nenum MyError: Error { case ___ }\\n___\\n// throwsでエラーを投げる可能性を示す\\nfunc check(_ n: Int) ___ -> Int {\\n    // 負の場合はエラー\\n    if n < 0 { throw MyError.___ }\\n    // nを返す\\n    return ___\\n___\\n___\\n// do-catchでエラー処理\\n___\\n    // tryで呼び出し\\n    let v = ___ check(10)\\n    // vを出力\\n    print(___)\\n___\\n    // エラーを出力\\n    ___(\"___\")\\n___",
+      "holeyCode": "// エラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// throwsでエラーを投げる可能性を示す\\nfunc ___(_ ___: ___) ___ -> ___ {\\n    // 負の場合はエラー\\n    if ___ < ___ { ___ ___.___ }\\n    // nを返す\\n    return ___\\n___\\n___\\n// do-catchでエラー処理\\n___ {\\n    // tryで呼び出し\\n    let ___ = ___ ___(___)\\n    // vを出力\\n    ___(___)\\n} ___ {\\n    // エラーを出力\\n    ___(\"___\")\\n___",
       "correctLines": [
           "// エラー型を定義",
           "enum MyError: Error { case invalid }",
@@ -360,25 +358,25 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "invalid を指定します。",
+          "MyError, Error, invalid を指定します。",
           null,
           null,
-          "関数（check）を定義します。",
+          "check, n, Int, throws, Int を指定します。",
           null,
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
+          "n, 0, throw, MyError, invalid を指定します。",
           null,
-          "変数の値を呼び出し元に返します（戻り値）。",
+          "n を指定します。",
           "この行を正しく入力してください。",
           null,
           null,
-          "この行を正しく入力してください。",
+          "do を指定します。",
           null,
-          "try を指定します。",
+          "v, try, check, 10 を指定します。",
           null,
-          "変数の内容を画面に出力します。",
-          "この行を正しく入力してください。",
+          "print, v を指定します。",
+          "catch を指定します。",
           null,
-          "ここを正しく入力してください。",
+          "print, エラー を指定します。",
           "この行を正しく入力してください。"
         ],
         "candidates": {
@@ -387,7 +385,7 @@ export const swift3Data = {
             "throw",
             "error"
           ],
-          "others": ["invalid", "n", "try", "v", "エラー", "do {", "} catch {", "print", "", "n", "}", "do {", "} catch {", "}"]
+          "others": ["MyError", "Error", "invalid", "check", "n", "Int", "0", "do", "v", "try", "10", "print", "catch", "エラー", "", "}"]
         },
         "testCases": [
           {
@@ -399,7 +397,7 @@ export const swift3Data = {
     {
       "title": "Set（集合）",
       "correctCode": "// Setで重複なしのコレクション\\nvar s: Set = [1, 2, 2, 3, 3, 3]\\n// 要素数を出力\\nprint(s.count)",
-      "holeyCode": "// Setで重複なしのコレクション\\nvar s: ___ = [1, 2, 2, 3, 3, 3]\\n// 要素数を出力\\nprint(s.___)",
+      "holeyCode": "// Setで重複なしのコレクション\\nvar ___: ___ = [___, ___, ___, ___, ___, ___]\\n// 要素数を出力\\n___(___.___)",
       "correctLines": [
           "// Setで重複なしのコレクション",
           "var s: Set = [1, 2, 2, 3, 3, 3]",
@@ -408,9 +406,9 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "s, Set, 1, 2, 2, 3, 3, 3 を指定します。",
           null,
-          "count を指定します。"
+          "print, s, count を指定します。"
         ],
         "candidates": {
           "types": [
@@ -419,7 +417,7 @@ export const swift3Data = {
             "List"
           ],
           "others": [
-            "count"
+            "s", "1", "2", "3", "print", "count"
           ]
         },
         "testCases": [
@@ -432,7 +430,7 @@ export const swift3Data = {
     {
       "title": "mutating",
       "correctCode": "// 構造体を定義\\nstruct Counter {\\n    // countプロパティ\\n    var count = 0\\n    // mutatingで構造体を変更可能に\\n    mutating func increment() {\\n        // countを1増やす\\n        count += 1\\n    }\\n}\\n\\n// インスタンスを作成\\nvar c = Counter()\\n// 1回目のincrementを呼び出し\\nc.increment()\\n// 2回目のincrementを呼び出し\\nc.increment()\\n// countを出力\\nprint(c.count)",
-      "holeyCode": "// 構造体を定義\\nstruct ___ {\\n    // countプロパティ\\n    var count = ___\\n    // mutatingで構造体を変更可能に\\n    ___ func increment() {\\n        // countを1増やす\\n        count += ___\\n    ___\\n___\\n___\\n// インスタンスを作成\\nvar c = ___()\\n// 1回目のincrementを呼び出し\\nc.___()\\n// 2回目のincrementを呼び出し\\nc.___()\\n// countを出力\\nprint(c.___)",
+      "holeyCode": "// 構造体を定義\\nstruct ___ {\\n    // countプロパティ\\n    var ___ = ___\\n    // mutatingで構造体を変更可能に\\n    ___ func ___() {\\n        // countを1増やす\\n        ___ += ___\\n    ___\\n___\\n___\\n// インスタンスを作成\\nvar ___ = ___()\\n// 1回目のincrementを呼び出し\\n___.___()\\n// 2回目のincrementを呼び出し\\n___.___()\\n// countを出力\\n___(___.___)",
       "correctLines": [
           "// 構造体を定義",
           "struct Counter {",
@@ -456,24 +454,24 @@ export const swift3Data = {
         ],
       "lineHints": [
           null,
-          "構造体（Counter）を定義します。",
-          null,
-          "変数を宣言し、数値を代入します。",
-          null,
-          "mutating で構造体を変更可能にします。",
-          null,
-          "変数の値を計算して、その結果を同じ変数に再代入します。",
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
-          null,
-          null,
           "Counter を指定します。",
           null,
-          "ここを正しく入力してください。",
+          "count, 0 を指定します。",
           null,
-          "ここを正しく入力してください。",
+          "mutating, increment を指定します。",
           null,
-          "count を指定します。"
+          "count, 1 を指定します。",
+          "この行を正しく入力してください。",
+          "この行を正しく入力してください。",
+          null,
+          null,
+          "c, Counter を指定します。",
+          null,
+          "c, increment を指定します。",
+          null,
+          "c, increment を指定します。",
+          null,
+          "print, c, count を指定します。"
         ],
         "candidates": {
           "keywords": [
@@ -481,7 +479,7 @@ export const swift3Data = {
             "mutable",
             "var"
           ],
-          "others": ["Counter", "0", "1", "increment", "count", "0", "1", "}", ""]
+          "others": ["Counter", "count", "0", "increment", "1", "c", "print", "}", ""]
         },
         "testCases": [
           {

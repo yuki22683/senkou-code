@@ -9,7 +9,7 @@ export const rust4Data = {
     {
       "title": "トレイトの定義",
       "correctCode": "// Speakトレイトを定義\\ntrait Speak {\\n    fn speak(&self) -> String;\\n}\\n\\nstruct Dog;\\n\\nimpl Speak for Dog {\\n    fn speak(&self) -> String {\\n        String::from(\"ワン！\")\\n    }\\n}\\n\\nfn main() {\\n    let dog = Dog;\\n    println!(\"{}\", dog.speak());\\n}",
-      "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    fn ___ (&self) -> String;\\n___\\n___\\nstruct ___;\\n___\\nimpl ___ for ___ {\\n    fn ___ (&self) -> String {\\n        String::___(\"ワン！\")\\n    ___\\n___\\n___\\nfn ___ () {\\n    let ___ = Dog;\\n    ___!(\"{}\", dog.speak());\\n___",
+      "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    fn ___(&___) -> ___;\\n___\\n___\\nstruct ___;\\n___\\nimpl ___ for ___ {\\n    fn ___(&___) -> ___ {\\n        ___::___(\"___\")\\n    ___\\n___\\n___\\nfn ___() {\\n    let ___ = ___;\\n    ___!(\"{}\", ___.___());\\n___",
       "correctLines": [
           "// Speakトレイトを定義",
           "trait Speak {",
@@ -31,30 +31,32 @@ export const rust4Data = {
         ],
       "lineHints": [
           null,
-          "trait でトレイトを定義します。",
-          "関数（speak）を定義します。",
-          "ここを正しく入力してください。",
+          "トレイト名Speakを定義します。",
+          "speakメソッド、引数&self、戻り値型Stringを指定します。",
+          "トレイト定義ブロックを閉じます。",
           null,
-          "構造体（Dog）を定義します。",
+          "構造体Dogを定義します。",
           null,
-          "ここを正しく入力してください。",
-          "関数（speak）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "SpeakトレイトをDogに実装します。",
+          "speakメソッド、引数&self、戻り値型Stringを指定します。",
+          "String::fromで文字列\"ワン！\"を作成します。",
+          "メソッド定義ブロックを閉じます。",
+          "impl実装ブロックを閉じます。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "main関数を定義します。",
+          "変数dogにDog構造体を代入します。",
+          "println!でdog.speak()の結果を表示します。",
+          "main関数ブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
             "trait",
             "impl",
-            "struct"
+            "struct",
+            "fn",
+            "let"
           ],
-          "others": ["Speak", "speak(&self)", "}", "Dog", "from", "main()", "dog", "println", "}", ""]
+          "others": ["Speak", "speak", "self", "String", "}", "Dog", "from", "ワン！", "main", "dog", "println", "{"]
         },
         "testCases": [
           {
@@ -66,7 +68,7 @@ export const rust4Data = {
     {
       "title": "derive 属性",
       "correctCode": "// derive でトレイトを自動実装\\n#[derive(Debug)]\\nstruct User {\\n    name: String,\\n    age: u32,\\n}\\n\\nfn main() {\\n    let user = User { name: String::from(\"アリス\"), age: 30 };\\n    println!(\"{:?}\", user);\\n}",
-      "holeyCode": "// derive でトレイトを自動実装\\n___\\nstruct ___ {\\n    name: ___,\\n    age: ___,\\n___\\n___\\nfn ___ () {\\n    let ___ = User { name: String::from(\"アリス\"), age: 30 };\\n    ___!(\"{:?}\", user);\\n___",
+      "holeyCode": "// derive でトレイトを自動実装\\n#[___(___)]\\nstruct ___ {\\n    ___: ___,\\n    ___: ___,\\n___\\n___\\nfn ___() {\\n    let ___ = ___ { ___: ___::___(\"___\"), ___: ___ };\\n    ___!(\"{:?}\", ___);\\n___",
       "correctLines": [
           "// derive でトレイトを自動実装",
           "#[derive(Debug)]",
@@ -82,16 +84,16 @@ export const rust4Data = {
         ],
       "lineHints": [
           null,
-          "ここを正しく入力してください。",
-          "derive でトレイトを自動実装します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "#[derive(Debug)]でDebugトレイトを自動実装します。",
+          "構造体Userを定義します。",
+          "フィールドname、型Stringを定義します。",
+          "フィールドage、型u32を定義します。",
+          "構造体定義ブロックを閉じます。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "main関数を定義します。",
+          "変数userにUser構造体、name: String::from(\"アリス\")、age: 30を設定します。",
+          "println!で変数userをデバッグ表示します。",
+          "main関数ブロックを閉じます。"
         ],
         "candidates": {
           "attributes": [
@@ -99,7 +101,7 @@ export const rust4Data = {
             "cfg",
             "allow"
           ],
-          "others": ["User", "String", "u32", "}", "main()", "user", "println", "#[derive(Debug)]", "}"]
+          "others": ["Debug", "User", "name", "String", "age", "u32", "}", "main", "user", "from", "アリス", "30", "println"]
         },
         "testCases": [
           {
@@ -111,7 +113,7 @@ export const rust4Data = {
     {
       "title": "Box<T>",
       "correctCode": "fn main() {\\n    // Box::new でヒープに格納\\n    let x = Box::new(42);\\n    println!(\"{}\", *x);\\n}",
-      "holeyCode": "fn ___ () {\\n    // Box::new でヒープに格納\\n    let ___ = Box::new(42);\\n    ___!(\"{}\", *x);\\n___",
+      "holeyCode": "fn ___() {\\n    // Box::new でヒープに格納\\n    let ___ = ___::___(___);\\n    ___!(\"{}\", *___);\\n___",
       "correctLines": [
           "fn main() {",
           "    // Box::new でヒープに格納",
@@ -120,11 +122,11 @@ export const rust4Data = {
           "}"
         ],
       "lineHints": [
-          "Box::new でヒープに格納します。",
+          "main関数を定義します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "変数xにBox::new(42)でヒープに42を格納します。",
+          "println!で*xを参照解除して表示します。",
+          "main関数ブロックを閉じます。"
         ],
         "candidates": {
           "types": [
@@ -132,7 +134,7 @@ export const rust4Data = {
             "Rc",
             "Arc"
           ],
-          "others": ["main()", "x", "println", "}"]
+          "others": ["main", "x", "new", "42", "println", "}"]
         },
         "testCases": [
           {
@@ -144,7 +146,7 @@ export const rust4Data = {
     {
       "title": "Rc<T>",
       "correctCode": "use std::rc::Rc;\\n\\nfn main() {\\n    let a = Rc::new(String::from(\"こんにちは\"));\\n    // clone で参照カウントを増やす\\n    let b = Rc::clone(&a);\\n    println!(\"{} {}\", a, b);\\n}",
-      "holeyCode": "use std::___::___;\\n___\\nfn ___ () {\\n    let ___ = Rc::new(String::from(\"こんにちは\"));\\n    // clone で参照カウントを増やす\\n    let ___ = Rc::clone(&a);\\n    ___!(\"{} {}\", a, b);\\n___",
+      "holeyCode": "use ___::___::___;\\n___\\nfn ___() {\\n    let ___ = ___::___(___::___(\"___\"));\\n    // clone で参照カウントを増やす\\n    let ___ = ___::___(&___);\\n    ___!(\"{} {}\", ___, ___);\\n___",
       "correctLines": [
           "use std::rc::Rc;",
           "",
@@ -156,22 +158,23 @@ export const rust4Data = {
           "}"
         ],
       "lineHints": [
-          "Rc::clone で参照カウントを増やします。",
+          "use std::rc::RcでRcをインポートします。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
+          "main関数を定義します。",
+          "変数aにRc::new(String::from(\"こんにちは\"))を代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "変数bにRc::clone(&a)で参照カウントを増やして代入します。",
+          "println!でaとbを表示します。",
+          "main関数ブロックを閉じます。"
         ],
         "candidates": {
           "methods": [
             "clone",
             "new",
-            "copy"
+            "copy",
+            "from"
           ],
-          "others": ["rc", "Rc", "main()", "a", "b", "println", "}", ""]
+          "others": ["std", "rc", "Rc", "main", "a", "b", "String", "こんにちは", "println", "}"]
         },
         "testCases": [
           {
@@ -183,7 +186,7 @@ export const rust4Data = {
     {
       "title": "HashMap",
       "correctCode": "use std::collections::HashMap;\\n\\nfn main() {\\n    let mut map = HashMap::new();\\n    // insert でキーと値を追加\\n    map.insert(\"a\", 1);\\n    map.insert(\"b\", 2);\\n    println!(\"{:?}\", map.get(\"a\"));\\n}",
-      "holeyCode": "use std::___::___;\\n___\\nfn ___ () {\\n    let mut ___ = HashMap::new();\\n    // insert でキーと値を追加\\n    map.___(\"a\", 1);\\n    map.___(\"b\", 2);\\n    ___!(\"{:?}\", map.get(\"a\"));\\n___",
+      "holeyCode": "use ___::___::___;\\n___\\nfn ___() {\\n    let mut ___ = ___::___();\\n    // insert でキーと値を追加\\n    ___.___(\"___\", ___);\\n    ___.___(\"___\", ___);\\n    ___!(\"{:?}\", ___.___(\"___\"));\\n___",
       "correctLines": [
           "use std::collections::HashMap;",
           "",
@@ -196,23 +199,25 @@ export const rust4Data = {
           "}"
         ],
       "lineHints": [
-          "insert でキーと値を追加します。",
+          "use std::collections::HashMapでHashMapをインポートします。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
+          "main関数を定義します。",
+          "変数mapにHashMap::new()で空のハッシュマップを作成します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "map.insert(\"a\", 1)でキー\"a\"に値1を追加します。",
+          "map.insert(\"b\", 2)でキー\"b\"に値2を追加します。",
+          "println!でmap.get(\"a\")の結果を表示します。",
+          "main関数ブロックを閉じます。"
         ],
         "candidates": {
           "methods": [
             "insert",
             "put",
-            "add"
+            "add",
+            "new",
+            "get"
           ],
-          "others": ["collections", "HashMap", "main()", "map", "println", "}", ""]
+          "others": ["std", "collections", "HashMap", "main", "map", "a", "b", "1", "2", "println", "}"]
         },
         "testCases": [
           {
@@ -224,7 +229,7 @@ export const rust4Data = {
     {
       "title": "HashSet",
       "correctCode": "// HashSet をインポート\\nuse std::collections::HashSet;\\n\\nfn main() {\\n    let mut set = HashSet::new();\\n    set.insert(1);\\n    set.insert(2);\\n    set.insert(1);\\n    println!(\"{}\", set.len());\\n}",
-      "holeyCode": "// HashSet をインポート\\nuse std::___::___;\\n___\\nfn ___ () {\\n    let mut ___ = HashSet::new();\\n    set.___(1);\\n    set.___(2);\\n    set.___(1);\\n    ___!(\"{}\", set.len());\\n___",
+      "holeyCode": "// HashSet をインポート\\nuse ___::___::___;\\n___\\nfn ___() {\\n    let mut ___ = ___::___();\\n    ___.___(___);\\n    ___.___(___);\\n    ___.___(___);\\n    ___!(\"{}\", ___.___());\\n___",
       "correctLines": [
           "// HashSet をインポート",
           "use std::collections::HashSet;",
@@ -239,15 +244,15 @@ export const rust4Data = {
         ],
       "lineHints": [
           null,
-          "HashSet をインポートします。",
+          "use std::collections::HashSetでHashSetをインポートします。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "main関数を定義します。",
+          "変数setにHashSet::new()で空のセットを作成します。",
+          "set.insert(1)で値1を追加します。",
+          "set.insert(2)で値2を追加します。",
+          "set.insert(1)で値1を追加（重複は無視されます）。",
+          "println!でset.len()の結果（要素数）を表示します。",
+          "main関数ブロックを閉じます。"
         ],
         "candidates": {
           "types": [
@@ -255,7 +260,7 @@ export const rust4Data = {
             "HashMap",
             "BTreeSet"
           ],
-          "others": ["collections", "main()", "set", "insert", "println", "}", ""]
+          "others": ["std", "collections", "main", "set", "new", "insert", "1", "2", "println", "len", "}"]
         },
         "testCases": [
           {
@@ -267,7 +272,7 @@ export const rust4Data = {
     {
       "title": "match ガード",
       "correctCode": "fn main() {\\n    let num = 7;\\n    match num {\\n        // if でマッチガードを追加\\n        n if n % 2 == 0 => println!(\"偶数\"),\\n        _ => println!(\"奇数\"),\\n    }\\n}",
-      "holeyCode": "fn ___ () {\\n    let ___ = 7;\\n    match ___ {\\n        // if でマッチガードを追加\\n        n if n % 2 == 0 => ___!(\"偶数\"),\\n        _ => ___!(\"奇数\"),\\n    ___\\n___",
+      "holeyCode": "fn ___() {\\n    let ___ = ___;\\n    match ___ {\\n        // if でマッチガードを追加\\n        ___ if ___ % ___ == ___ => ___!(\"___\"),\\n        ___ => ___!(\"___\"),\\n    ___\\n___",
       "correctLines": [
           "fn main() {",
           "    let num = 7;",
@@ -279,22 +284,25 @@ export const rust4Data = {
           "}"
         ],
       "lineHints": [
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "再代入可能な変数を宣言し、数値を代入します。",
-          "ここを正しく入力してください。",
+          "main関数を定義します。",
+          "変数numに7を代入します。",
+          "match numでnumの値をパターンマッチします。",
           null,
-          "マクロを使用して、文字列と改行を標準出力に出力します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "n if n % 2 == 0で偶数判定、println!(\"偶数\")を実行します。",
+          "_ => println!(\"奇数\")でそれ以外の場合を処理します。",
+          "matchブロックを閉じます。",
+          "main関数ブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
             "if",
             "when",
-            "where"
+            "where",
+            "match",
+            "let",
+            "fn"
           ],
-          "others": ["main()", "num", "println", "}", "}"]
+          "others": ["main", "num", "7", "n", "2", "0", "println", "偶数", "_", "奇数", "}"]
         },
         "testCases": [
           {
@@ -306,7 +314,7 @@ export const rust4Data = {
     {
       "title": "impl Trait",
       "correctCode": "// impl でトレイトを実装する型を返す\\nfn doubles(n: i32) -> impl Iterator<Item = i32> {\\n    (0..n).map(|x| x * 2)\\n}\\n\\nfn main() {\\n    for x in doubles(3) {\\n        println!(\"{}\", x);\\n    }\\n}",
-      "holeyCode": "// impl でトレイトを実装する型を返す\\nfn ___ (n: i32) -> impl Iterator<Item = i32> {\\n    (0..n).___(|x| x * 2)\\n___\\n___\\nfn ___ () {\\n    for x in ___(___) {\\n        ___!(\"{}\", x);\\n    ___\\n___",
+      "holeyCode": "// impl でトレイトを実装する型を返す\\nfn ___(___: ___) -> impl ___<___ = ___> {\\n    (___..___).___(___ ___ * ___)\\n___\\n___\\nfn ___() {\\n    for ___ in ___(___) {\\n        ___!(\"{}\", ___);\\n    ___\\n___",
       "correctLines": [
           "// impl でトレイトを実装する型を返す",
           "fn doubles(n: i32) -> impl Iterator<Item = i32> {",
@@ -321,23 +329,26 @@ export const rust4Data = {
         ],
       "lineHints": [
           null,
-          "関数（doubles）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "fn doubles(n: i32) -> impl Iterator<Item = i32>で関数を定義します。",
+          "(0..n).map(|x| x * 2)で0からnまでの値を2倍にします。",
+          "doubles関数ブロックを閉じます。",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "繰り返し処理（ループ）を開始する。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "main関数を定義します。",
+          "for x in doubles(3)でイテレータをループします。",
+          "println!でxを表示します。",
+          "forループブロックを閉じます。",
+          "main関数ブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
             "impl",
             "dyn",
-            "type"
+            "type",
+            "fn",
+            "for",
+            "in"
           ],
-          "others": ["doubles(n:", "map", "}", "main()", "doubles", "3", "println", "}", ""]
+          "others": ["doubles", "n", "i32", "Iterator", "Item", "0", "map", "|x|", "x", "2", "}", "main", "3", "println"]
         },
         "testCases": [
           {
@@ -349,7 +360,7 @@ export const rust4Data = {
     {
       "title": "collect で変換",
       "correctCode": "fn main() {\\n    // collect で Vec に変換\\n    let nums: Vec<i32> = (1..=5).collect();\\n    println!(\"{:?}\", nums);\\n}",
-      "holeyCode": "fn ___ () {\\n    // collect で Vec に変換\\n    let nums: Vec<i32> = (1..=5).___();\\n    ___!(\"{:?}\", nums);\\n___",
+      "holeyCode": "fn ___() {\\n    // collect で Vec に変換\\n    let ___: ___<___> = (___..=___).___();\\n    ___!(\"{:?}\", ___);\\n___",
       "correctLines": [
           "fn main() {",
           "    // collect で Vec に変換",
@@ -358,11 +369,11 @@ export const rust4Data = {
           "}"
         ],
       "lineHints": [
-          "collect でVecに変換します。",
+          "main関数を定義します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "変数nums: Vec<i32>に(1..=5).collect()でイテレータをVecに変換します。",
+          "println!でnumsをデバッグ表示します。",
+          "main関数ブロックを閉じます。"
         ],
         "candidates": {
           "methods": [
@@ -370,7 +381,7 @@ export const rust4Data = {
             "into",
             "to_vec"
           ],
-          "others": ["main()", "println", "}"]
+          "others": ["main", "nums", "Vec", "i32", "1", "5", "println", "}"]
         },
         "testCases": [
           {
@@ -382,7 +393,7 @@ export const rust4Data = {
     {
       "title": "enumerate でインデックス付き",
       "correctCode": "fn main() {\\n    let items = vec![\"a\", \"b\", \"c\"];\\n    // 1番目の i にインデックス、2番目の item に要素が入る\\n    for (i, item) in items.iter().enumerate() {\\n        println!(\"{}: {}\", i, item);\\n    }\\n}",
-      "holeyCode": "fn ___ () {\\n    let ___ = vec![\"a\", \"b\", \"c\"];\\n    // 1番目の i にインデックス、2番目の item に要素が入る\\n    for (i, item) in items.iter().___() {\\n        ___!(\"{}: {}\", i, item);\\n    ___\\n___",
+      "holeyCode": "fn ___() {\\n    let ___ = ___![\"___\", \"___\", \"___\"];\\n    // 1番目の i にインデックス、2番目の item に要素が入る\\n    for (___, ___) in ___.___().___() {\\n        ___!(\"{}: {}\", ___, ___);\\n    ___\\n___",
       "correctLines": [
           "fn main() {",
           "    let items = vec![\"a\", \"b\", \"c\"];",
@@ -393,21 +404,22 @@ export const rust4Data = {
           "}"
         ],
       "lineHints": [
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
+          "main関数を定義します。",
+          "変数itemsにvec![\"a\", \"b\", \"c\"]でベクタを作成します。",
           null,
-          "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "for (i, item) in items.iter().enumerate()でインデックス付きループします。",
+          "println!でiとitemを表示します。",
+          "forループブロックを閉じます。",
+          "main関数ブロックを閉じます。"
         ],
         "candidates": {
           "methods": [
             "enumerate",
             "zip",
-            "indexed"
+            "indexed",
+            "iter"
           ],
-          "others": ["main()", "items", "println", "}", "}", "}", "}\\"]
+          "others": ["main", "items", "vec", "a", "b", "c", "i", "item", "println", "}"]
         },
         "testCases": [
           {

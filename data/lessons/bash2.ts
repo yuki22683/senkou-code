@@ -49,7 +49,7 @@ export const bash2Data = {
     {
       "title": "文字列の長さを取得",
       "correctCode": "# 変数wordに文字列を代入\\nword=\"Bash\"\\n# 文字列の長さを表示\\necho ${#word}",
-      "holeyCode": "# 変数wordに文字列を代入\\n___=\"___\"\\n# 文字列の長さを表示\\n___ ${___word}",
+      "holeyCode": "# 変数wordに文字列を代入\\n___=\"___\"\\n# 文字列の長さを表示\\n___ ${______}",
       "correctLines": [
           "# 変数wordに文字列を代入",
           "word=\"Bash\"",
@@ -66,7 +66,7 @@ export const bash2Data = {
           "operators": [
             "#"
           ],
-          "others": ["Bash", "word", "echo"]
+          "others": ["Bash", "word", "echo", "#word"]
         },
         "testCases": [
           {
@@ -182,7 +182,7 @@ export const bash2Data = {
     {
       "title": "while ループ",
       "correctCode": "# 変数iを1で初期化\\ni=1\\n# iが3以下の間ループ\\nwhile [ $i -le 3 ]; do\\n    # 現在のiを表示\\n    echo $i\\n    # iを1増やす\\n    i=$((i + 1))\\ndone",
-      "holeyCode": "# 変数iを1で初期化\\n___=___\\n# iが3以下の間ループ\\n___ [ $___ -le 3 ]; do\\n    # 現在のiを表示\\n    ___ $___\\n    # iを1増やす\\n    ___=$((___ + 1))\\n___",
+      "holeyCode": "# 変数iを1で初期化\\n___=___\\n# iが3以下の間ループ\\n___ [ $___ -___ ___ ]; do\\n    # 現在のiを表示\\n    ___ $___\\n    # iを1増やす\\n    ___=$((___ + 1))\\n___",
       "correctLines": [
           "# 変数iを1で初期化",
           "i=1",
@@ -210,7 +210,7 @@ export const bash2Data = {
             "while",
             "done"
           ],
-          "others": ["1", "i", "echo"]
+          "others": ["1", "i", "echo", "le", "3"]
         },
         "testCases": [
           {
@@ -266,7 +266,7 @@ export const bash2Data = {
     {
       "title": "コマンド置換",
       "correctCode": "# 出力を変数filesに格納\\nfiles=$(echo \"テスト\")\\n# $filesの内容を表示\\necho \"Files: $files\"",
-      "holeyCode": "# 出力を変数filesに格納\\n___=$(___ \"___\")\\n# $filesの内容を表示\\n___ \"Files: $___\"",
+      "holeyCode": "# 出力を変数filesに格納\\n___=$(___ \"___\")\\n# $filesの内容を表示\\n___ \"___: $___\"",
       "correctLines": [
           "# 出力を変数filesに格納",
           "files=$(echo \"テスト\")",
@@ -280,7 +280,7 @@ export const bash2Data = {
           "ダブルクォート内で$変数名を展開して表示します。"
         ],
       "candidates": {
-        "others": ["files", "echo", "テスト"]
+        "others": ["files", "echo", "テスト", "Files"]
       },
       "testCases": [
         {

@@ -365,10 +365,8 @@ export function getTokenStyle(
   }
 
   // Function/Constructor Call (identifier followed by '(')
-  // Use same color as function definition for consistency
-  if (/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(token) && nextToken === '(') {
-    return { color: SYNTAX_COLORS.functionDef };
-  }
+  // Use variable color (same as other identifiers) - NOT function definition color
+  // Function definition uses yellow, but function calls use foreground like variables
 
   // Type annotation (PascalCase identifier after ':', '->', or ')')
   // Class/type names should be same color as their definition

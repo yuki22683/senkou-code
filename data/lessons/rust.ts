@@ -9,7 +9,7 @@ export const rustData = {
     {
       "title": "画面にメッセージを出しましょう",
       "correctCode": "fn main() {\\n    // Hello, Rust! と表示する\\n    println!(\"Hello, Rust!\");\\n}",
-      "holeyCode": "fn ___ () {\\n    // Hello, Rust! と表示する\\n    ___!(\"Hello, Rust!\");\\n___",
+      "holeyCode": "fn ___ () {\\n    // Hello, Rust! と表示する\\n    ___!(\"___\");\\n___",
       "correctLines": [
           "fn main() {",
           "    // Hello, Rust! と表示する",
@@ -38,7 +38,7 @@ export const rustData = {
     {
       "title": "便利な「はこ」変数（へんすう）",
       "correctCode": "fn main() {\\n    // x に 10 を入れる\\n    let x = 10;\\n    // y に 5 を入れる\\n    let y = 5;\\n    // + でたし算する\\n    println!(\"{}\", x + y);\\n}",
-      "holeyCode": "fn ___ () {\\n    // x に 10 を入れる\\n    let ___ = 10;\\n    // y に 5 を入れる\\n    let ___ = 5;\\n    // + でたし算する\\n    ___!(\"{}\", x + y);\\n___",
+      "holeyCode": "fn ___ () {\\n    // x に 10 を入れる\\n    let ___ = ___;\\n    // y に 5 を入れる\\n    let ___ = ___;\\n    // + でたし算する\\n    ___!(\"___\", ___ + ___);\\n___",
       "correctLines": [
           "fn main() {",
           "    // x に 10 を入れる",
@@ -52,12 +52,12 @@ export const rustData = {
       "lineHints": [
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "再代入可能な変数を宣言し、数値を代入します。",
+          "変数xを宣言し、10を代入します。",
           null,
-          "再代入可能な変数を宣言し、数値を代入します。",
+          "変数yを宣言し、5を代入します。",
           null,
-          "マクロを使用して、文字列と改行を標準出力に出力します。",
-          "ここを正しく入力してください。"
+          "println!マクロでx + yの計算結果を表示します。フォーマット文字列は{}を使います。",
+          "関数のブロックを閉じる括弧です。"
         ],
         "candidates": {
           "numbers": [
@@ -70,7 +70,7 @@ export const rustData = {
             "*",
             "/"
           ],
-          "others": ["main()", "x", "y", "println", "}"]
+          "others": ["main()", "x", "y", "println", "}", "{}"]
         },
         "testCases": [
           {
@@ -82,7 +82,7 @@ export const rustData = {
     {
       "title": "剰余演算子（%）",
       "correctCode": "fn main() {\\n    // 10 を 3 で割ったあまりを出力する\\n    println!(\"{}\", 10 % 3);\\n}",
-      "holeyCode": "fn ___ () {\\n    // 10 を 3 で割ったあまりを出力する\\n    ___!(\"{}\", 10 % 3);\\n___",
+      "holeyCode": "fn ___ () {\\n    // 10 を 3 で割ったあまりを出力する\\n    ___!(\"___\", ___ ___ ___);\\n___",
       "correctLines": [
           "fn main() {",
           "    // 10 を 3 で割ったあまりを出力する",
@@ -92,17 +92,21 @@ export const rustData = {
       "lineHints": [
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "マクロを使用して、文字列と改行を標準出力に出力します。",
-          "ここを正しく入力してください。"
+          "println!マクロで10 % 3の計算結果を表示します。フォーマット文字列は{}、剰余演算子は%を使います。",
+          "関数のブロックを閉じる括弧です。"
         ],
         "candidates": {
+          "numbers": [
+            "10",
+            "3"
+          ],
           "operators": [
             "%",
             "/",
             "*",
             "-"
           ],
-          "others": ["main()", "println", "}"]
+          "others": ["main()", "println", "}", "{}"]
         },
         "testCases": [
           {
@@ -114,7 +118,7 @@ export const rustData = {
     {
       "title": "累算代入演算子（+=、-=）",
       "correctCode": "fn main() {\\n    // mut で変更可能にする\\n    let mut hp = 100;\\n    // += で 20 を足す\\n    hp += 20;\\n    // -= で 50 を引く\\n    hp -= 50;\\n    println!(\"{}\", hp);\\n}",
-      "holeyCode": "fn ___ () {\\n    // mut で変更可能にする\\n    let mut ___ = 100;\\n    // += で 20 を足す\\n    hp += ___;\\n    // -= で 50 を引く\\n    hp -= ___;\\n    ___!(\"{}\", hp);\\n___",
+      "holeyCode": "fn ___ () {\\n    // mut で変更可能にする\\n    let mut ___ = ___;\\n    // += で 20 を足す\\n    ___ += ___;\\n    // -= で 50 を引く\\n    ___ -= ___;\\n    ___!(\"___\", ___);\\n___",
       "correctLines": [
           "fn main() {",
           "    // mut で変更可能にする",
@@ -129,22 +133,27 @@ export const rustData = {
       "lineHints": [
           "fn main()でメイン関数を定義します。",
           null,
-          "変数hpを宣言し、100を設定します。",
+          "mutキーワードで変更可能な変数hpを宣言し、100を代入します。",
           null,
-          "変数hpに20を加算して再代入する。",
+          "変数hpに+=演算子で20を加算します。",
           null,
-          "変数hpから50を減算して再代入する。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "変数hpから-=演算子で50を減算します。",
+          "println!マクロで変数hpの値を表示します。フォーマット文字列は{}を使います。",
+          "関数のブロックを閉じる括弧です。"
         ],
         "candidates": {
+          "numbers": [
+            "100",
+            "20",
+            "50"
+          ],
           "operators": [
             "+=",
             "-=",
             "*=",
             "/="
           ],
-          "others": ["main()", "hp", "20", "50", "println", "}"]
+          "others": ["main()", "hp", "println", "}", "{}"]
         },
         "testCases": [
           {
@@ -156,7 +165,7 @@ export const rustData = {
     {
       "title": "「もし〜なら」で分けましょう",
       "correctCode": "fn main() {\\n    // score に 100 を入れる\\n    let score = 100;\\n    // > で比較する\\n    if score > 80 {\\n        println!(\"すごい！\");\\n    }\\n}",
-      "holeyCode": "fn ___ () {\\n    // score に 100 を入れる\\n    let ___ = 100;\\n    // > で比較する\\n    if score ___ 80 {\\n        ___!(\"すごい！\");\\n    ___\\n___",
+      "holeyCode": "fn ___ () {\\n    // score に 100 を入れる\\n    let ___ = ___;\\n    // > で比較する\\n    if ___ ___ ___ {\\n        ___!(\"___\");\\n    ___\\n___",
       "correctLines": [
           "fn main() {",
           "    // score に 100 を入れる",
@@ -170,16 +179,20 @@ export const rustData = {
       "lineHints": [
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "変数scoreを宣言し、100を設定します。",
+          "変数scoreを宣言し、100を代入します。",
           null,
-          "条件に基づいて分岐処理を行います。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "if文でscore > 80の条件を評価します。変数score、比較演算子>、比較値80を入力します。",
+          "println!マクロで「すごい！」と表示します。",
+          "ifブロックを閉じる括弧です。",
+          "関数のブロックを閉じる括弧です。"
         ],
         "candidates": {
           "numbers": [
-            "100"
+            "100",
+            "80"
+          ],
+          "strings": [
+            "すごい！"
           ],
           "operators": [
             ">",
@@ -187,7 +200,7 @@ export const rustData = {
             ">=",
             "<="
           ],
-          "others": ["main()", "score", "println", "}", "}"]
+          "others": ["main()", "score", "println", "}"]
         },
         "testCases": [
           {
@@ -199,7 +212,7 @@ export const rustData = {
     {
       "title": "論理演算子（&&、||）",
       "correctCode": "fn main() {\\n    let score = 80;\\n    let bonus = 10;\\n    // && で両方の条件をチェック\\n    if score >= 70 && bonus > 0 {\\n        println!(\"ボーナス合格！\");\\n    }\\n}",
-      "holeyCode": "fn ___ () {\\n    let ___ = 80;\\n    let ___ = 10;\\n    // && で両方の条件をチェック\\n    if score ___ 70 && bonus > 0 {\\n        ___!(\"ボーナス合格！\");\\n    ___\\n___",
+      "holeyCode": "fn ___ () {\\n    let ___ = ___;\\n    let ___ = ___;\\n    // && で両方の条件をチェック\\n    if ___ ___ ___ ___ ___ ___ ___ {\\n        ___!(\"___\");\\n    ___\\n___",
       "correctLines": [
           "fn main() {",
           "    let score = 80;",
@@ -212,22 +225,33 @@ export const rustData = {
         ],
       "lineHints": [
           "fn main()でメイン関数を定義します。",
-          "再代入可能な変数を宣言し、数値を代入します。",
-          "再代入可能な変数を宣言し、数値を代入します。",
+          "変数scoreを宣言し、80を代入します。",
+          "変数bonusを宣言し、10を代入します。",
           null,
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "if文でscore >= 70 && bonus > 0の複合条件を評価します。&&は「かつ」の意味です。",
+          "println!マクロで「ボーナス合格！」と表示します。",
+          "ifブロックを閉じる括弧です。",
+          "関数のブロックを閉じる括弧です。"
         ],
         "candidates": {
+          "numbers": [
+            "80",
+            "10",
+            "70",
+            "0"
+          ],
+          "strings": [
+            "ボーナス合格！"
+          ],
           "operators": [
             "&&",
             "||",
             "&",
-            "|"
+            "|",
+            ">=",
+            ">"
           ],
-          "others": ["main()", "score", "bonus", ">=", "println", "}", "}"]
+          "others": ["main()", "score", "bonus", "println", "}"]
         },
         "testCases": [
           {
@@ -239,7 +263,7 @@ export const rustData = {
     {
       "title": "たくさんのデータをまとめましょう「ベクタ」",
       "correctCode": "fn main() {\\n    // colors というベクタを作る（'あか', 'あお'の順）\\n    let colors = vec![\"あか\", \"あお\"];\\n    // 2番目のデータ（インデックス1）を出す\\n    println!(\"{}\", colors[1]);\\n}",
-      "holeyCode": "fn ___ () {\\n    // colors というベクタを作る（'あか', 'あお'の順）\\n    let ___ = vec![\"あか\", \"あお\"];\\n    // 2番目のデータ（インデックス1）を出す\\n    ___!(\"{}\", colors[1]);\\n___",
+      "holeyCode": "fn ___ () {\\n    // colors というベクタを作る（'あか', 'あお'の順）\\n    let ___ = ___![\"___\", \"___\"];\\n    // 2番目のデータ（インデックス1）を出す\\n    ___!(\"___\", ___[___]);\\n___",
       "correctLines": [
           "fn main() {",
           "    // colors というベクタを作る（'あか', 'あお'の順）",
@@ -251,27 +275,28 @@ export const rustData = {
       "lineHints": [
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "vec!マクロで文字列のベクタを作成します。",
+          "変数colorsにvec!マクロで「あか」「あお」の文字列ベクタを作成します。",
           null,
-          "マクロを使用して、文字列と改行を標準出力に出力します。",
-          "ここを正しく入力してください。"
+          "println!マクロでcolors[1]（インデックス1＝2番目の要素「あお」）を表示します。",
+          "関数のブロックを閉じる括弧です。"
         ],
         "candidates": {
           "variables": [
             "colors"
           ],
           "macros": [
-            "vec!",
-            "println!"
+            "vec",
+            "println"
           ],
           "strings": [
             "あか",
-            "あお"
+            "あお",
+            "{}"
           ],
           "numbers": [
             "1"
           ],
-          "others": ["main()", "println", "}"]
+          "others": ["main()", "}"]
         },
         "testCases": [
           {
@@ -283,7 +308,7 @@ export const rustData = {
     {
       "title": "名前で引き出す「辞書」",
       "correctCode": "use std::collections::HashMap;\\nfn main() {\\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\\n    let mut colors = HashMap::new();\\n    // キーと値を追加\\n    colors.insert(\"みかん\", \"オレンジ\");\\n    // 中身を出す\\n    println!(\"{}\", colors[\"みかん\"]);\\n}",
-      "holeyCode": "use std::___::___;\\nfn ___ () {\\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\\n    let mut ___ = HashMap::new();\\n    // キーと値を追加\\n    colors.___(\"みかん\", \"オレンジ\");\\n    // 中身を出す\\n    ___!(\"{}\", colors[\"みかん\"]);\\n___",
+      "holeyCode": "use ___::___::___;\\nfn ___ () {\\n    // 辞書を作る（キーは'みかん'、値は'オレンジ'）\\n    let mut ___ = ___::___();\\n    // キーと値を追加\\n    ___.___(\"___\", \"___\");\\n    // 中身を出す\\n    ___!(\"___\", ___[\"___\"]);\\n___",
       "correctLines": [
           "use std::collections::HashMap;",
           "fn main() {",
@@ -296,31 +321,33 @@ export const rustData = {
           "}"
         ],
       "lineHints": [
-          "ここを正しく入力してください。",
+          "std::collections::HashMapをuse文でインポートします。",
           "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "ここを正しく入力してください。",
+          "変数colorsにHashMap::new()で新しい空のハッシュマップを作成します。",
           null,
-          "insertメソッドでキーと値のペアを追加します。",
+          "insertメソッドでキー「みかん」と値「オレンジ」のペアを追加します。",
           null,
-          "マクロを使用して、文字列と改行を標準出力に出力します。",
-          "ここを正しく入力してください。"
+          "println!マクロでcolors[\"みかん\"]（キー「みかん」の値）を表示します。",
+          "関数のブロックを閉じる括弧です。"
         ],
         "candidates": {
           "variables": [
             "colors"
           ],
           "macros": [
-            "println!"
+            "println"
           ],
           "functions": [
-            "insert"
+            "insert",
+            "new"
           ],
           "strings": [
             "みかん",
-            "オレンジ"
+            "オレンジ",
+            "{}"
           ],
-          "others": ["collections", "HashMap", "main()", "println", "}"]
+          "others": ["std", "collections", "HashMap", "main()", "}"]
         },
         "testCases": [
           {

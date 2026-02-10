@@ -65,7 +65,7 @@ export const sqlData = {
     {
       "title": "数字を足し算しましょう",
       "correctCode": "-- 100と50を足し算する\\nSELECT 100 + 50 AS total;",
-      "holeyCode": "-- 100と50を足し算する\\nSELECT ___ + 50 AS total;",
+      "holeyCode": "-- 100と50を足し算する\\nSELECT ___ + ___ AS ___;",
       "correctLines": [
           "-- 100と50を足し算する",
           "SELECT 100 + 50 AS total;"
@@ -81,7 +81,7 @@ export const sqlData = {
             "*",
             "/"
           ],
-          "others": ["100"]
+          "others": ["100", "50", "total"]
         },
         "testCases": [
           {
@@ -93,7 +93,7 @@ export const sqlData = {
     {
       "title": "いくつもの値を表示しましょう",
       "correctCode": "-- 名前と年齢を表示\\nSELECT '太郎' AS name, 10 AS age;",
-      "holeyCode": "-- 名前と年齢を表示\\nSELECT '太郎' AS name, ___ AS age;",
+      "holeyCode": "-- 名前と年齢を表示\\nSELECT '___' AS ___, ___ AS ___;",
       "correctLines": [
           "-- 名前と年齢を表示",
           "SELECT '太郎' AS name, 10 AS age;"
@@ -108,7 +108,7 @@ export const sqlData = {
             ";",
             ":"
           ],
-          "others": ["10"]
+          "others": ["太郎", "name", "10", "age"]
         },
         "testCases": [
           {
@@ -174,7 +174,7 @@ export const sqlData = {
     {
       "title": "大きい順に並べ替えましょう",
       "correctCode": "-- 降順で並べる\\nSELECT 1 AS num ORDER BY num DESC;",
-      "holeyCode": "-- 降順で並べる\\nSELECT ___ AS num ORDER BY num DESC;",
+      "holeyCode": "-- 降順で並べる\\nSELECT ___ AS ___ ORDER BY ___ ___;",
       "correctLines": [
           "-- 降順で並べる",
           "SELECT 1 AS num ORDER BY num DESC;"
@@ -188,9 +188,11 @@ export const sqlData = {
             "ORDER",
             "BY",
             "GROUP",
-            "HAVING"
+            "HAVING",
+            "DESC",
+            "ASC"
           ],
-          "others": ["1"]
+          "others": ["1", "num"]
         },
         "testCases": [
           {

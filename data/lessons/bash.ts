@@ -77,14 +77,14 @@ export const bashData = {
       },
     {
       "title": "コンピュータで計算しましょう",
-      "correctCode": "# 変数a, bに数字を入れる\\na=5\\nb=3\\n# $(( )) を使ってたし算の結果を表示\\necho $((a + b))",
-      "holeyCode": "# 変数a, bに数字を入れる\\n___=5\\n___=3\\n# $(( )) を使ってたし算の結果を表示\\n___ $((a ___ ___))",
+      "correctCode": "# 変数a, bに数字を入れる\\na=5\\nb=3\\n# $(( )) を使ってたし算の結果を表示\\necho $((a+b))",
+      "holeyCode": "# 変数a, bに数字を入れる\\n___=___\\n___=___\\n# $(( )) を使ってたし算の結果を表示\\n___ $((___+___))",
       "correctLines": [
           "# 変数a, bに数字を入れる",
           "a=5",
           "b=3",
           "# $(( )) を使ってたし算の結果を表示",
-          "echo $((a + b))"
+          "echo $((a+b))"
         ],
       "lineHints": [
           null,
@@ -109,7 +109,7 @@ export const bashData = {
     {
       "title": "「もし〜なら」で分けましょう",
       "correctCode": "# scoreに100を入れる\\nscore=100\\n# 80より大きいか判定\\nif [ $score -gt 80 ]; then\\n    # 「すごい」と表示\\n    echo \"すごい\"\\n# if文を終了\\nfi",
-      "holeyCode": "# scoreに100を入れる\\nscore=___\\n# 80より大きいか判定\\n___ [ $score ___ 80 ]; ___\\n    # 「すごい」と表示\\n    ___ \"___\"\\n# if文を終了\\n___",
+      "holeyCode": "# scoreに100を入れる\\n___=___\\n# 80より大きいか判定\\n___ [ $___ ___ ___ ]; ___\\n    # 「すごい」と表示\\n    ___ \"___\"\\n# if文を終了\\n___",
       "correctLines": [
           "# scoreに100を入れる",
           "score=100",
@@ -139,7 +139,7 @@ export const bashData = {
             "if",
             "then"
           ],
-          "others": ["100", "すごい", "80", "echo"]
+          "others": ["score", "100", "すごい", "80", "echo"]
         },
         "testCases": [
           {
@@ -151,7 +151,7 @@ export const bashData = {
     {
       "title": "ちがう場合はどうしましょう？",
       "correctCode": "# ageに18を入れる\\nage=18\\n# 20以上か判定\\nif [ $age -ge 20 ]; then\\n    # 「大人」と表示\\n    echo \"大人\"\\n# それ以外の場合\\nelse\\n    # 「未成年」と表示\\n    echo \"未成年\"\\nfi",
-      "holeyCode": "# ageに18を入れる\\n___=18\\n# 20以上か判定\\nif [ $age ___ ___ ]; then\\n    # 「大人」と表示\\n    ___ \"大人\"\\n# それ以外の場合\\n___\\n    # 「未成年」と表示\\n    ___ \"___\"\\n___",
+      "holeyCode": "# ageに18を入れる\\n___=___\\n# 20以上か判定\\n___ [ $___ ___ ___ ]; ___\\n    # 「大人」と表示\\n    ___ \"___\"\\n# それ以外の場合\\n___\\n    # 「未成年」と表示\\n    ___ \"___\"\\n___",
       "correctLines": [
           "# ageに18を入れる",
           "age=18",
@@ -181,9 +181,11 @@ export const bashData = {
         "candidates": {
           "keywords": [
             "else",
-            "fi"
+            "fi",
+            "if",
+            "then"
           ],
-          "others": ["age", "-ge", "大人", "未成年", "20", "echo"]
+          "others": ["age", "-ge", "大人", "未成年", "20", "18", "echo"]
         },
         "testCases": [
           {
@@ -195,7 +197,7 @@ export const bashData = {
     {
       "title": "中身を全部出してみましょう",
       "correctCode": "# 配列namesを定義\\nnames=(\"アリス\" \"ボブ\")\\n# 配列の全要素をループ\\nfor name in \"${names[@]}\"; do\\n    # 名前を表示\\n    echo $name\\ndone",
-      "holeyCode": "# 配列namesを定義\\n___=(\\\"___\\\" \\\"___\\\")\\n# 配列の全要素をループ\\n___ name ___ \\\"___\\\"; ___\\n    # 名前を表示\\n    ___ $___\\n___",
+      "holeyCode": "# 配列namesを定義\\n___=(\\\"___\\\" \\\"___\\\")\\n# 配列の全要素をループ\\n___ ___ ___ \\\"___\\\"; ___\\n    # 名前を表示\\n    ___ $___\\n___",
       "correctLines": [
           "# 配列namesを定義",
           "names=(\"アリス\" \"ボブ\")",

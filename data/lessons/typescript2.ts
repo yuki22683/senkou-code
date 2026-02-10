@@ -9,7 +9,7 @@ export const typescriptData2 = {
     {
       "title": "ユニオン型",
       "correctCode": "// | でユニオン型を定義\\nfunction show(value: string | number): void {\\n    // valueを出力\\n    console.log(value);\\n}\\n\\n// 文字列を渡す\\nshow('こんにちは');\\n// 数値を渡す\\nshow(42);",
-      "holeyCode": "// | でユニオン型を定義\\nfunction show(value: string | number): ___ {\\n    // valueを出力\\n    console.log(___);\\n___\\n___\\n// 文字列を渡す\\n___('こんにちは');\\n// 数値を渡す\\n___(42);",
+      "holeyCode": "// | でユニオン型を定義\\nfunction ___(___ : ___ | ___): ___ {\\n    // valueを出力\\n    ___.___(___);\\n}\\n\\n// 文字列を渡す\\n___('___');\\n// 数値を渡す\\n___(___);",
       "correctLines": [
           "// | でユニオン型を定義",
           "function show(value: string | number): void {",
@@ -24,15 +24,15 @@ export const typescriptData2 = {
         ],
       "lineHints": [
           null,
-          "ユニオン型は `|` で区切ります。",
+          "関数名と引数、複数の型を`|`で結合します。",
           null,
-          "出力する変数を指定します。",
-          "文字列の引数を渡します。",
+          "console.logで変数を出力します。",
           null,
           null,
-          "ここを正しく入力してください。",
           null,
-          "ここを正しく入力してください。"
+          "関数名と文字列を指定します。",
+          null,
+          "関数名と数値を指定します。"
         ],
         "candidates": {
           "operators": [
@@ -41,7 +41,7 @@ export const typescriptData2 = {
             "||",
             "&&"
           ],
-          "others": ["value", "42", "void", "}", "show"]
+          "others": ["show", "value", "string", "number", "void", "console", "log", "こんにちは", "42", "}", "value:", "ring"]
         },
         "testCases": [
           {
@@ -53,7 +53,7 @@ export const typescriptData2 = {
     {
       "title": "インターフェース",
       "correctCode": "// interface キーワードで定義\\ninterface Product {\\n    // 商品IDプロパティの型\\n    id: number;\\n    // 商品名プロパティの型\\n    name: string;\\n    // 価格プロパティの型\\n    price: number;\\n}\\n\\n// Productオブジェクトを作成\\nconst item: Product = { id: 1, name: 'りんご', price: 150 };\\n// 商品名を出力\\nconsole.log(item.name);\\n",
-      "holeyCode": "// interface キーワードで定義\\ninterface ___ {\\n    // 商品IDプロパティの型\\n    id: ___;\\n    // 商品名プロパティの型\\n    name: ___;\\n    // 価格プロパティの型\\n    price: ___;\\n___\\n___\\n// Productオブジェクトを作成\\nconst item: Product = { id: ___, name: 'りんご', price: 150 };\\n// 商品名を出力\\nconsole.___(item.name);\\n",
+      "holeyCode": "// interface キーワードで定義\\ninterface ___ {\\n    // 商品IDプロパティの型\\n    ___: ___;\\n    // 商品名プロパティの型\\n    ___: ___;\\n    // 価格プロパティの型\\n    ___: ___;\\n}\\n\\n// Productオブジェクトを作成\\nconst ___: ___ = { ___: ___, ___: '___', ___: ___ };\\n// 商品名を出力\\n___.___(___.___)\\n",
       "correctLines": [
           "// interface キーワードで定義",
           "interface Product {",
@@ -73,19 +73,19 @@ export const typescriptData2 = {
         ],
       "lineHints": [
           null,
-          "商品を表すインターフェース名です。",
+          "インターフェース名を指定します。",
           null,
-          "IDは数値なので `number` です。",
+          "プロパティ名idと型numberを指定します。",
           null,
-          "商品名は文字列なので `string` です。",
+          "プロパティ名nameと型stringを指定します。",
           null,
-          "価格も数値なので `number` です。",
-          "ここを正しく入力してください。",
+          "プロパティ名priceと型numberを指定します。",
           null,
           null,
-          "商品名を文字列で指定します。",
           null,
-          "コンソールに出力するメソッドです。",
+          "変数名、型、各プロパティの値を指定します。",
+          null,
+          "console.logでitem.nameを出力します。",
           null
         ],
         "candidates": {
@@ -95,7 +95,7 @@ export const typescriptData2 = {
             "class",
             "struct"
           ],
-          "others": ["Product", "string", "number", "りんご", "150", "log", "}", "1"]
+          "others": ["Product", "item", "id", "name", "price", "string", "number", "りんご", "150", "1", "console", "log", "}"]
         },
         "testCases": [
           {
@@ -107,7 +107,7 @@ export const typescriptData2 = {
     {
       "title": "オプショナルプロパティ",
       "correctCode": "// nicknameは省略可能\\ninterface Profile {\\n    // 名前プロパティの型\\n    name: string;\\n    // ? でオプショナルに\\n    nickname?: string;\\n}\\n\\n// Profileオブジェクトを作成\\nconst prof: Profile = { name: 'ボブ' };\\n// 名前を出力\\nconsole.log(prof.name);",
-      "holeyCode": "// nicknameは省略可能\\ninterface ___ {\\n    // 名前プロパティの型\\n    name: ___;\\n    // ? でオプショナルに\\n    nickname?: ___;\\n___\\n___\\n// Profileオブジェクトを作成\\nconst prof: Profile = { name: '___' };\\n// 名前を出力\\nconsole.___(prof.name);",
+      "holeyCode": "// nicknameは省略可能\\ninterface ___ {\\n    // 名前プロパティの型\\n    ___: ___;\\n    // ? でオプショナルに\\n    ___?: ___;\\n}\\n\\n// Profileオブジェクトを作成\\nconst ___: ___ = { ___: '___' };\\n// 名前を出力\\n___.___(___.___);",
       "correctLines": [
           "// nicknameは省略可能",
           "interface Profile {",
@@ -124,17 +124,17 @@ export const typescriptData2 = {
         ],
       "lineHints": [
           null,
-          "名前は文字列なので `string` です。",
+          "インターフェース名を指定します。",
           null,
-          "`?` を使うとオプショナルになります。",
+          "プロパティ名nameと型stringを指定します。",
           null,
-          "名前の値を文字列で指定します。",
-          "取得したいプロパティ名を指定します。",
+          "オプショナルなプロパティnickname?と型stringを指定します。",
           null,
           null,
-          "ここを正しく入力してください。",
           null,
-          "ここを正しく入力してください。"
+          "変数名、型、nameプロパティの値を指定します。",
+          null,
+          "console.logでprof.nameを出力します。"
         ],
         "candidates": {
           "operators": [
@@ -143,7 +143,7 @@ export const typescriptData2 = {
             "*",
             "&"
           ],
-          "others": ["string", "'ボブ'", "name", "Profile", "}", "log", "ボブ"]
+          "others": ["Profile", "prof", "name", "nickname", "string", "ボブ", "console", "log", "}"]
         },
         "testCases": [
           {
@@ -155,7 +155,7 @@ export const typescriptData2 = {
     {
       "title": "型エイリアス",
       "correctCode": "// type キーワードで型エイリアスを定義\\ntype Score = number;\\n\\n// 数学の点数\\nconst math: Score = 85;\\n// 英語の点数\\nconst english: Score = 90;\\n// 合計を出力\\nconsole.log(math + english);",
-      "holeyCode": "// type キーワードで型エイリアスを定義\\ntype Score = ___;\\n___\\n// 数学の点数\\nconst math: Score = ___;\\n// 英語の点数\\nconst english: Score = ___;\\n// 合計を出力\\nconsole.___(math + english);",
+      "holeyCode": "// type キーワードで型エイリアスを定義\\ntype ___ = ___;\\n\\n// 数学の点数\\nconst ___: ___ = ___;\\n// 英語の点数\\nconst ___: ___ = ___;\\n// 合計を出力\\n___.___(___+___);",
       "correctLines": [
           "// type キーワードで型エイリアスを定義",
           "type Score = number;",
@@ -169,14 +169,14 @@ export const typescriptData2 = {
         ],
       "lineHints": [
           null,
-          "`type` キーワードを使います。",
+          "型エイリアス名Scoreと型numberを指定します。",
           null,
           null,
-          "英語の点数を数値で指定します。",
+          "変数名math、型Score、値85を指定します。",
           null,
-          "足し算の演算子を使います。",
+          "変数名english、型Score、値90を指定します。",
           null,
-          "ここを正しく入力してください。"
+          "console.logでmath+englishを出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -185,7 +185,7 @@ export const typescriptData2 = {
             "const",
             "let"
           ],
-          "others": ["85", "90", "+", "number", "log"]
+          "others": ["Score", "math", "english", "number", "85", "90", "console", "log"]
         },
         "testCases": [
           {
@@ -197,7 +197,7 @@ export const typescriptData2 = {
     {
       "title": "readonly プロパティ",
       "correctCode": "// idは読み取り専用\\ninterface Item {\\n    // readonly で読み取り専用に\\n    readonly id: number;\\n    // 名前プロパティの型\\n    name: string;\\n}\\n\\n// itemに{id: 1, name: 'りんご'}を代入\\nconst item: Item = { id: 1, name: 'りんご' };\\n// idを出力\\nconsole.log(item.id);",
-      "holeyCode": "// idは読み取り専用\\ninterface ___ {\\n    // readonly で読み取り専用に\\n    readonly id: ___;\\n    // 名前プロパティの型\\n    name: ___;\\n___\\n___\\n// itemに{id: 1, name: 'りんご'}を代入\\nconst item: Item = { id: ___, name: 'りんご' };\\n// idを出力\\nconsole.___(item.id);",
+      "holeyCode": "// idは読み取り専用\\ninterface ___ {\\n    // readonly で読み取り専用に\\n    readonly ___: ___;\\n    // 名前プロパティの型\\n    ___: ___;\\n}\\n\\n// itemに{id: 1, name: 'りんご'}を代入\\nconst ___: ___ = { ___: ___, ___: '___' };\\n// idを出力\\n___.___(___.___);",
       "correctLines": [
           "// idは読み取り専用",
           "interface Item {",
@@ -214,17 +214,17 @@ export const typescriptData2 = {
         ],
       "lineHints": [
           null,
-          "`readonly` キーワードを使います。",
+          "インターフェース名を指定します。",
           null,
-          "名前は文字列なので `string` です。",
+          "readonly付きのidプロパティと型numberを指定します。",
           null,
-          "名前の値を文字列で指定します。",
-          "取得したいプロパティ名を指定します。",
+          "nameプロパティと型stringを指定します。",
           null,
           null,
-          "ここを正しく入力してください。",
           null,
-          "ここを正しく入力してください。"
+          "変数名、型、各プロパティの値を指定します。",
+          null,
+          "console.logでitem.idを出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -233,7 +233,7 @@ export const typescriptData2 = {
             "final",
             "immutable"
           ],
-          "others": ["string", "'りんご'", "id", "Item", "number", "}", "1", "log"]
+          "others": ["Item", "item", "id", "name", "string", "number", "1", "りんご", "console", "log", "}"]
         },
         "testCases": [
           {
@@ -245,7 +245,7 @@ export const typescriptData2 = {
     {
       "title": "列挙型（enum）",
       "correctCode": "// enum キーワードで列挙型を定義\\nenum Day {\\n    // 日曜日\\n    Sun,\\n    // 月曜日\\n    Mon,\\n    // 火曜日\\n    Tue\\n}\\n\\n// 月曜日を代入\\nconst today: Day = Day.Mon;\\n// 出力\\nconsole.log(today);",
-      "holeyCode": "// enum キーワードで列挙型を定義\\nenum ___ {\\n    // 日曜日\\n    ___,\\n    // 月曜日\\n    ___,\\n    // 火曜日\\n    ___\\n___\\n___\\n// 月曜日を代入\\nconst today: Day = Day.___;\\n// 出力\\nconsole.log(___);",
+      "holeyCode": "// enum キーワードで列挙型を定義\\nenum ___ {\\n    // 日曜日\\n    ___,\\n    // 月曜日\\n    ___,\\n    // 火曜日\\n    ___\\n}\\n\\n// 月曜日を代入\\nconst ___: ___ = ___.___;\\n// 出力\\n___.___(___);" ,
       "correctLines": [
           "// enum キーワードで列挙型を定義",
           "enum Day {",
@@ -264,19 +264,19 @@ export const typescriptData2 = {
         ],
       "lineHints": [
           null,
-          "`enum` キーワードを使います。",
+          "列挙型名Dayを指定します。",
           null,
-          "日曜日を表す値を指定します。",
+          "日曜日を表すSunを指定します。",
           null,
-          "月曜日を表す値を指定します。",
+          "月曜日を表すMonを指定します。",
           null,
-          "火曜日を表す値を指定します。",
-          "月曜日の列挙値を指定します。",
+          "火曜日を表すTueを指定します。",
           null,
           null,
-          "ここを正しく入力してください。",
           null,
-          "変数todayの値をコンソールに出力します。"
+          "変数名today、型Day、値Day.Monを指定します。",
+          null,
+          "console.logでtodayを出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -285,7 +285,7 @@ export const typescriptData2 = {
             "const",
             "class"
           ],
-          "others": ["Sun", "Mon", "Tue", "today", "Day", "}"]
+          "others": ["Day", "Sun", "Mon", "Tue", "today", "console", "log", "}"]
         },
         "testCases": [
           {
@@ -297,7 +297,7 @@ export const typescriptData2 = {
     {
       "title": "ジェネリクス入門",
       "correctCode": "// <T> で型パラメータを定義\\nfunction wrap<T>(value: T): T[] {\\n    // valueを配列に入れて返す\\n    return [value];\\n}\\n\\n// 関数を呼び出し\\nconst arr = wrap(5);\\n// arrを出力\\nconsole.log(arr);",
-      "holeyCode": "// <T> で型パラメータを定義\\nfunction wrap<___>(value: T): T[] {\\n    // valueを配列に入れて返す\\n    return [___];\\n___\\n___\\n// 関数を呼び出し\\nconst ___ = wrap(5);\\n// arrを出力\\nconsole.log(___);",
+      "holeyCode": "// <T> で型パラメータを定義\\nfunction ___<___>(___: ___): ___[] {\\n    // valueを配列に入れて返す\\n    return [___];\\n}\\n\\n// 関数を呼び出し\\nconst ___ = ___(___);\\n// arrを出力\\n___.___(___);" ,
       "correctLines": [
           "// <T> で型パラメータを定義",
           "function wrap<T>(value: T): T[] {",
@@ -312,15 +312,15 @@ export const typescriptData2 = {
         ],
       "lineHints": [
           null,
-          "型パラメータは `<T>` のように書きます。",
+          "関数名wrap、型パラメータT、引数value: T、戻り値T[]を指定します。",
           null,
-          "引数で受け取った値を配列に入れて返します。",
-          "配列に入れる値を指定します。",
+          "valueを配列に入れて返します。",
           null,
           null,
-          "ここを正しく入力してください。",
           null,
-          "変数arrの値をコンソールに出力します。"
+          "変数名arrと関数呼び出しwrap(5)を指定します。",
+          null,
+          "console.logでarrを出力します。"
         ],
         "candidates": {
           "operators": [
@@ -329,7 +329,7 @@ export const typescriptData2 = {
             "(",
             ")"
           ],
-          "others": ["value", "5", "arr", "T", "}", "}", "", "}"]
+          "others": ["wrap", "value", "T", "arr", "5", "console", "log", "}"]
         },
         "testCases": [
           {
@@ -341,7 +341,7 @@ export const typescriptData2 = {
     {
       "title": "ジェネリクスとインターフェース",
       "correctCode": "// 型パラメータTを定義\\ninterface Container<T> {\\n    // アイテムプロパティ\\n    item: T;\\n}\\n\\n// Containerオブジェクトを作成\\nconst box: Container<string> = { item: 'こんにちは' };\\n// アイテムを出力\\nconsole.log(box.item);",
-      "holeyCode": "// 型パラメータTを定義\\ninterface Container<___> {\\n    // アイテムプロパティ\\n    item: ___;\\n___\\n___\\n// Containerオブジェクトを作成\\nconst box: Container<string> = { item: '___' };\\n// アイテムを出力\\nconsole.___(box.item);",
+      "holeyCode": "// 型パラメータTを定義\\ninterface ___<___> {\\n    // アイテムプロパティ\\n    ___: ___;\\n}\\n\\n// Containerオブジェクトを作成\\nconst ___: ___<___> = { ___: '___' };\\n// アイテムを出力\\n___.___(___.___);",
       "correctLines": [
           "// 型パラメータTを定義",
           "interface Container<T> {",
@@ -356,15 +356,15 @@ export const typescriptData2 = {
         ],
       "lineHints": [
           null,
-          "型パラメータ `T` を使います。",
+          "インターフェース名Containerと型パラメータTを指定します。",
           null,
-          "型パラメータで指定した型を使います。",
-          "アイテムの値を文字列で指定します。",
+          "プロパティ名itemと型Tを指定します。",
           null,
           null,
-          "ここを正しく入力してください。",
           null,
-          "ここを正しく入力してください。"
+          "変数名box、型Container<string>、itemプロパティの値を指定します。",
+          null,
+          "console.logでbox.itemを出力します。"
         ],
         "candidates": {
           "variables": [
@@ -373,7 +373,7 @@ export const typescriptData2 = {
             "V",
             "Type"
           ],
-          "others": ["item", "}", "log", "こんにちは"]
+          "others": ["Container", "box", "item", "string", "こんにちは", "console", "log", "}"]
         },
         "testCases": [
           {
@@ -385,7 +385,7 @@ export const typescriptData2 = {
     {
       "title": "typeof 型演算子",
       "correctCode": "// 変数から型を取得\\nconst point = { x: 10, y: 20 };\\n// typeof で変数の型を取得\\nconst point2: typeof point = { x: 5, y: 15 };\\n// x座標を出力\\nconsole.log(point2.x);",
-      "holeyCode": "// 変数から型を取得\\nconst ___ = { x: 10, y: 20 };\\n// typeof で変数の型を取得\\nconst point___: typeof point = { x: 5, y: 15 };\\n// x座標を出力\\nconsole.___(point2.x);",
+      "holeyCode": "// 変数から型を取得\\nconst ___ = { ___: ___, ___: ___ };\\n// typeof で変数の型を取得\\nconst ___: typeof ___ = { ___: ___, ___: ___ };\\n// x座標を出力\\n___.___(___.___);",
       "correctLines": [
           "// 変数から型を取得",
           "const point = { x: 10, y: 20 };",
@@ -396,11 +396,11 @@ export const typescriptData2 = {
         ],
       "lineHints": [
           null,
-          "y座標の値を数値で指定します。",
+          "変数名pointとx: 10, y: 20の値を指定します。",
           null,
-          "`typeof` で変数の型を取得します。",
+          "変数名point2、typeof pointの型、x: 5, y: 15の値を指定します。",
           null,
-          "取得したいプロパティ名を指定します。"
+          "console.logでpoint2.xを出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -409,7 +409,7 @@ export const typescriptData2 = {
             "instanceof",
             "type"
           ],
-          "others": ["20", "x", "point", "2", "log"]
+          "others": ["point", "point2", "x", "y", "10", "20", "5", "15", "console", "log"]
         },
         "testCases": [
           {
@@ -421,7 +421,7 @@ export const typescriptData2 = {
     {
       "title": "インターフェースの拡張",
       "correctCode": "// 基本のインターフェース\\ninterface Base {\\n    // idプロパティの型\\n    id: number;\\n}\\n\\n// extends でインターフェースを拡張\\ninterface User extends Base {\\n    // 名前プロパティの型\\n    name: string;\\n}\\n\\n// uに{id: 1, name: '太郎'}を代入\\nconst u: User = { id: 1, name: '太郎' };\\n// 名前を出力\\nconsole.log(u.name);",
-      "holeyCode": "// 基本のインターフェース\\ninterface ___ {\\n    // idプロパティの型\\n    id: ___;\\n___\\n___\\n// extends でインターフェースを拡張\\ninterface User extends ___ {\\n    // 名前プロパティの型\\n    name: ___;\\n___\\n___\\n// uに{id: 1, name: '太郎'}を代入\\nconst u: User = { id: ___, name: '太郎' };\\n// 名前を出力\\nconsole.___(u.name);",
+      "holeyCode": "// 基本のインターフェース\\ninterface ___ {\\n    // idプロパティの型\\n    ___: ___;\\n}\\n\\n// extends でインターフェースを拡張\\ninterface ___ extends ___ {\\n    // 名前プロパティの型\\n    ___: ___;\\n}\\n\\n// uに{id: 1, name: '太郎'}を代入\\nconst ___: ___ = { ___: ___, ___: '___' };\\n// 名前を出力\\n___.___(___.___);",
       "correctLines": [
           "// 基本のインターフェース",
           "interface Base {",
@@ -442,21 +442,21 @@ export const typescriptData2 = {
         ],
       "lineHints": [
           null,
-          "IDは数値なので `number` です。",
+          "インターフェース名Baseを指定します。",
           null,
-          "`extends` キーワードを使います。",
-          "名前は文字列なので `string` です。",
-          null,
-          null,
-          "取得したいプロパティ名を指定します。",
-          null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "プロパティ名idと型numberを指定します。",
           null,
           null,
-          "ここを正しく入力してください。",
           null,
-          "ここを正しく入力してください。"
+          "インターフェース名UserとBaseをextendsで拡張します。",
+          null,
+          "プロパティ名nameと型stringを指定します。",
+          null,
+          null,
+          null,
+          "変数名u、型User、各プロパティの値を指定します。",
+          null,
+          "console.logでu.nameを出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -465,7 +465,7 @@ export const typescriptData2 = {
             "with",
             "include"
           ],
-          "others": ["number", "string", "'太郎'", "name", "Base", "}", "1", "log"]
+          "others": ["Base", "User", "u", "id", "name", "number", "string", "1", "太郎", "console", "log", "}"]
         },
         "testCases": [
           {

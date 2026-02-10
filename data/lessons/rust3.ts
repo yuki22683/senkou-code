@@ -9,7 +9,7 @@ export const rust3Data = {
     {
       "title": "ライフタイムの基本",
       "correctCode": "// 'a でライフタイムを定義\\nfn first<'a>(s: &'a str) -> &'a str {\\n    &s[..1]\\n}\\n\\nfn main() {\\n    let s = String::from(\"Hello\");\\n    println!(\"{}\", first(&s));\\n}",
-      "holeyCode": "// 'a でライフタイムを定義\\nfn first<'a>(s: &'a ___) -> &'a str {\\n    &s[___]\\n___\\n___\\nfn ___ () {\\n    let ___ = String::from(\"Hello\");\\n    ___!(\"{}\", first(&s));\\n___",
+      "holeyCode": "// 'a でライフタイムを定義\\nfn ___<'___>(___: &'___ ___) -> &'___ ___ {\\n    &___[..___]\\n___\\n___\\nfn ___() {\\n    let ___ = ___::___(\"___\");\\n    ___!(\"{}\", ___(___));\\n___",
       "correctLines": [
           "// 'a でライフタイムを定義",
           "fn first<'a>(s: &'a str) -> &'a str {",
@@ -24,13 +24,13 @@ export const rust3Data = {
       "lineHints": [
           null,
           "'a でライフタイムを定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "スライス構文で先頭1文字を取得します。",
+          "ブロックを閉じます。",
           null,
           "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "String型の値を作成します。",
+          "first関数を呼び出して結果を表示します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "lifetimes": [
@@ -38,7 +38,7 @@ export const rust3Data = {
             "'b",
             "'static"
           ],
-          "others": ["str", "..1", "}", "main()", "s", "println", "}", "", "}", "", "}"]
+          "others": ["first", "s", "str", "1", "}", "main", "String", "from", "println", "&s", "", "a", "Hello"]
         },
         "testCases": [
           {
@@ -50,7 +50,7 @@ export const rust3Data = {
     {
       "title": "クロージャの基本",
       "correctCode": "fn main() {\\n    // |x| でクロージャの引数を定義\\n    let double = |x| x * 2;\\n    println!(\"{}\", double(5));\\n}",
-      "holeyCode": "fn ___ () {\\n    // |x| でクロージャの引数を定義\\n    let ___ = |x| x * 2;\\n    ___!(\"{}\", double(5));\\n___",
+      "holeyCode": "fn ___() {\\n    // |x| でクロージャの引数を定義\\n    let ___ = |___| ___ * ___;\\n    ___!(\"{}\", ___(___));\\n___",
       "correctLines": [
           "fn main() {",
           "    // |x| でクロージャの引数を定義",
@@ -59,11 +59,11 @@ export const rust3Data = {
           "}"
         ],
       "lineHints": [
-          "|x| でクロージャの引数を定義します。",
+          "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "クロージャを定義してdouble変数に代入します。",
+          "double関数を呼び出して結果を表示します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "operators": [
@@ -71,7 +71,7 @@ export const rust3Data = {
             "(",
             "["
           ],
-          "others": ["main()", "double", "println", "}"]
+          "others": ["main", "double", "x", "2", "println", "5", "}"]
         },
         "testCases": [
           {
@@ -83,7 +83,7 @@ export const rust3Data = {
     {
       "title": "イテレータの基本",
       "correctCode": "fn main() {\\n    let nums = vec![1, 2, 3];\\n    // iter でイテレータを取得\\n    for n in nums.iter() {\\n        println!(\"{}\", n);\\n    }\\n}",
-      "holeyCode": "fn ___ () {\\n    let ___ = vec![1, 2, 3];\\n    // iter でイテレータを取得\\n    for n in nums.___() {\\n        ___!(\"{}\", n);\\n    ___\\n___",
+      "holeyCode": "fn ___() {\\n    let ___ = ___![___, ___, ___];\\n    // iter でイテレータを取得\\n    for ___ in ___.___() {\\n        ___!(\"{}\", ___);\\n    ___\\n___",
       "correctLines": [
           "fn main() {",
           "    let nums = vec![1, 2, 3];",
@@ -94,13 +94,13 @@ export const rust3Data = {
           "}"
         ],
       "lineHints": [
-          "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
-          "配列を複数の値で初期化する。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "vec!マクロで配列を作成します。",
           null,
-          "繰り返し処理（ループ）を開始する。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "iter()でイテレータを取得してループします。",
+          "要素nを表示します。",
+          "ブロックを閉じます。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "methods": [
@@ -108,7 +108,7 @@ export const rust3Data = {
             "into_iter",
             "iter_mut"
           ],
-          "others": ["main()", "nums", "println", "}", "}", "}", "}\\"]
+          "others": ["main", "nums", "vec", "1", "2", "3", "n", "println", "}"]
         },
         "testCases": [
           {
@@ -120,7 +120,7 @@ export const rust3Data = {
     {
       "title": "map でイテレータ変換",
       "correctCode": "fn main() {\\n    let nums = vec![1, 2, 3];\\n    // map で各要素を変換\\n    let squared: Vec<_> = nums.iter().map(|x| x * x).collect();\\n    println!(\"{:?}\", squared);\\n}",
-      "holeyCode": "fn ___ () {\\n    let ___ = vec![1, 2, 3];\\n    // map で各要素を変換\\n    let squared: Vec<_> = nums.___().map(|x| x * x).collect();\\n    ___!(\"{:?}\", squared);\\n___",
+      "holeyCode": "fn ___() {\\n    let ___ = ___![___, ___, ___];\\n    // map で各要素を変換\\n    let ___: ___<_> = ___.___().___(|___| ___ * ___).___();\\n    ___!(\"{:?}\", ___);\\n___",
       "correctLines": [
           "fn main() {",
           "    let nums = vec![1, 2, 3];",
@@ -130,12 +130,12 @@ export const rust3Data = {
           "}"
         ],
       "lineHints": [
-          "map で各要素を変換します。",
-          "配列を複数の値で初期化する。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "vec!マクロで配列を作成します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "iter().map().collect()で要素を変換してVecに収集します。",
+          "squared配列を表示します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "methods": [
@@ -143,7 +143,7 @@ export const rust3Data = {
             "filter",
             "fold"
           ],
-          "others": ["main()", "nums", "iter", "println", "}"]
+          "others": ["main", "nums", "vec", "1", "2", "3", "squared", "Vec", "iter", "x", "collect", "println", "}"]
         },
         "testCases": [
           {
@@ -155,7 +155,7 @@ export const rust3Data = {
     {
       "title": "filter で絞り込み",
       "correctCode": "fn main() {\\n    let nums = vec![1, 2, 3, 4, 5];\\n    // filter で条件に合う要素を絞り込む\\n    let big: Vec<_> = nums.iter().filter(|x| **x > 2).collect();\\n    println!(\"{:?}\", big);\\n}",
-      "holeyCode": "fn ___ () {\\n    let ___ = vec![1, 2, 3, 4, 5];\\n    // filter で条件に合う要素を絞り込む\\n    let big: Vec<_> = nums.___().filter(|x| **x > 2).collect();\\n    ___!(\"{:?}\", big);\\n___",
+      "holeyCode": "fn ___() {\\n    let ___ = ___![___, ___, ___, ___, ___];\\n    // filter で条件に合う要素を絞り込む\\n    let ___: ___<_> = ___.___().___(|___| **___ > ___).___();\\n    ___!(\"{:?}\", ___);\\n___",
       "correctLines": [
           "fn main() {",
           "    let nums = vec![1, 2, 3, 4, 5];",
@@ -165,12 +165,12 @@ export const rust3Data = {
           "}"
         ],
       "lineHints": [
-          "filter で条件に合う要素を絞り込みます。",
-          "配列を複数の値で初期化する。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "vec!マクロで配列を作成します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "iter().filter().collect()で条件に合う要素を絞り込みます。",
+          "big配列を表示します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "methods": [
@@ -178,7 +178,7 @@ export const rust3Data = {
             "map",
             "find"
           ],
-          "others": ["main()", "nums", "iter", "println", "}"]
+          "others": ["main", "nums", "vec", "1", "2", "3", "4", "5", "big", "Vec", "iter", "x", "collect", "println", "}"]
         },
         "testCases": [
           {
@@ -190,7 +190,7 @@ export const rust3Data = {
     {
       "title": "fold で畳み込み",
       "correctCode": "fn main() {\\n    let nums = vec![1, 2, 3, 4];\\n    // fold で畳み込み\\n    let product = nums.iter().fold(1, |acc, x| acc * x);\\n    println!(\"{}\", product);\\n}",
-      "holeyCode": "fn ___ () {\\n    let ___ = vec![1, 2, 3, 4];\\n    // fold で畳み込み\\n    let ___ = nums.iter().fold(1, |acc, x| acc * x);\\n    ___!(\"{}\", product);\\n___",
+      "holeyCode": "fn ___() {\\n    let ___ = ___![___, ___, ___, ___];\\n    // fold で畳み込み\\n    let ___ = ___.___().___(1, |___, ___| ___ * ___);\\n    ___!(\"{}\", ___);\\n___",
       "correctLines": [
           "fn main() {",
           "    let nums = vec![1, 2, 3, 4];",
@@ -200,12 +200,12 @@ export const rust3Data = {
           "}"
         ],
       "lineHints": [
-          "fold で畳み込みます。",
-          "配列を複数の値で初期化する。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "vec!マクロで配列を作成します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "iter().fold()で畳み込み計算を行います。",
+          "product変数を表示します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "methods": [
@@ -213,7 +213,7 @@ export const rust3Data = {
             "reduce",
             "sum"
           ],
-          "others": ["main()", "nums", "product", "println", "}"]
+          "others": ["main", "nums", "vec", "1", "2", "3", "4", "product", "iter", "acc", "x", "println", "}"]
         },
         "testCases": [
           {
@@ -225,7 +225,7 @@ export const rust3Data = {
     {
       "title": "? 演算子でエラー伝播",
       "correctCode": "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {\\n    if b == 0 {\\n        Err(\"ゼロ除算エラー\")\\n    } else {\\n        Ok(a / b)\\n    }\\n}\\n\\nfn calc() -> Result<i32, &'static str> {\\n    // ? でエラーを伝播\\n    let x = divide(10, 2)?;\\n    Ok(x * 2)\\n}\\n\\nfn main() {\\n    println!(\"{:?}\", calc());\\n}",
-      "holeyCode": "fn ___ (a: i32, b: i32) -> Result<i32, &'static str> {\\n    if b ___ 0 {\\n        ___(\"ゼロ除算エラー\")\\n    } ___ {\\n        ___(a / b)\\n    ___\\n___\\n___\\nfn ___ () -> Result<i32, &'static str> {\\n    // ? でエラーを伝播\\n    let ___ = divide(10, 2)?;\\n    ___(x * 2)\\n___\\n___\\nfn ___ () {\\n    ___!(\"{:?}\", calc());\\n___",
+      "holeyCode": "fn ___(___: ___, ___: ___) -> ___<___, &'static ___> {\\n    if ___ == ___ {\\n        ___(\"ゼロ除算エラー\")\\n    ___ else ___\\n        ___(___ / ___)\\n    ___\\n___\\n___\\nfn ___() -> ___<___, &'static ___> {\\n    // ? でエラーを伝播\\n    let ___ = ___(___, ___)?;\\n    ___(___ * ___)\\n___\\n___\\nfn ___() {\\n    ___!(\"{:?}\", ___());\\n___",
       "correctLines": [
           "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {",
           "    if b == 0 {",
@@ -246,23 +246,23 @@ export const rust3Data = {
           "}"
         ],
       "lineHints": [
-          "? でエラーを伝播します。",
-          "条件式（変数と数値の比較など）を評価し、真の場合にブロックを実行します。",
-          "ここを正しく入力してください。",
-          "条件が偽の場合の処理を定義する。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "divide関数を定義します。Result型でエラーを返します。",
+          "bが0かどうかをチェックします。",
+          "Errでエラーメッセージを返します。",
+          "if文のブロックを閉じ、elseブロックを開始します。",
+          "Okで割り算の結果を返します。",
+          "ブロックを閉じます。",
+          "ブロックを閉じます。",
           null,
-          "関数（calc）を定義します。",
+          "calc関数を定義します。Result型を返します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "divide関数を呼び出し、?でエラー伝播します。",
+          "Okで計算結果を返します。",
+          "ブロックを閉じます。",
           null,
           "プログラムの実行開始地点（main関数）を定義します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "calc関数を呼び出して結果を表示します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "operators": [
@@ -270,7 +270,7 @@ export const rust3Data = {
             "!",
             "."
           ],
-          "others": ["divide(a:", "==", "Err", "else", "Ok", "}", "calc()", "x", "main()", "println", "}", ""]
+          "others": ["divide", "a", "i32", "b", "Result", "str", "0", "Err", "Ok", "}", "{", "calc", "10", "2", "x", "main", "println", ""]
         },
         "testCases": [
           {
@@ -282,7 +282,7 @@ export const rust3Data = {
     {
       "title": "unwrap_or でデフォルト値",
       "correctCode": "fn main() {\\n    let x: Option<i32> = None;\\n    // unwrap_or でデフォルト値を設定\\n    let value = x.unwrap_or(42);\\n    println!(\"{}\", value);\\n}",
-      "holeyCode": "fn ___ () {\\n    let x: ___ = ___;\\n    // unwrap_or でデフォルト値を設定\\n    let ___ = x.unwrap_or(42);\\n    ___!(\"{}\", value);\\n___",
+      "holeyCode": "fn ___() {\\n    let ___: ___<___> = ___;\\n    // unwrap_or でデフォルト値を設定\\n    let ___ = ___.___(___);\\n    ___!(\"{}\", ___);\\n___",
       "correctLines": [
           "fn main() {",
           "    let x: Option<i32> = None;",
@@ -292,12 +292,12 @@ export const rust3Data = {
           "}"
         ],
       "lineHints": [
-          "unwrap_or でデフォルト値を設定します。",
-          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "Option<i32>型の変数xにNoneを代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "unwrap_orでデフォルト値42を設定します。",
+          "value変数を表示します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "methods": [
@@ -305,7 +305,7 @@ export const rust3Data = {
             "unwrap",
             "expect"
           ],
-          "others": ["main()", "Option<i32>", "None", "value", "println", "}"]
+          "others": ["main", "x", "Option", "i32", "None", "value", "42", "println", "}"]
         },
         "testCases": [
           {
@@ -317,7 +317,7 @@ export const rust3Data = {
     {
       "title": "Vec のメソッド push",
       "correctCode": "fn main() {\\n    let mut nums = Vec::new();\\n    // push で要素を追加\\n    nums.push(10);\\n    nums.push(20);\\n    println!(\"{:?}\", nums);\\n}",
-      "holeyCode": "fn ___ () {\\n    let mut ___ = Vec::new();\\n    // push で要素を追加\\n    nums.___(10);\\n    nums.___(20);\\n    ___!(\"{:?}\", nums);\\n___",
+      "holeyCode": "fn ___() {\\n    let mut ___ = ___::___();\\n    // push で要素を追加\\n    ___.___(___);\\n    ___.___(___);\\n    ___!(\"{:?}\", ___);\\n___",
       "correctLines": [
           "fn main() {",
           "    let mut nums = Vec::new();",
@@ -328,13 +328,13 @@ export const rust3Data = {
           "}"
         ],
       "lineHints": [
-          "push で要素を追加します。",
-          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "Vec::new()で空のVecを作成します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "pushで10を追加します。",
+          "pushで20を追加します。",
+          "nums配列を表示します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "methods": [
@@ -342,7 +342,7 @@ export const rust3Data = {
             "append",
             "add"
           ],
-          "others": ["main()", "nums", "println", "}"]
+          "others": ["main", "nums", "Vec", "new", "10", "20", "println", "}"]
         },
         "testCases": [
           {
@@ -354,7 +354,7 @@ export const rust3Data = {
     {
       "title": "String と &str",
       "correctCode": "fn main() {\\n    let s: &str = \"こんにちは\";\\n    // to_string で String に変換\\n    let owned: String = s.to_string();\\n    println!(\"{}\", owned);\\n}",
-      "holeyCode": "fn ___ () {\\n    let s: ___ = \"こんにちは\";\\n    // to_string で String に変換\\n    let owned: String = s.___();\\n    ___!(\"{}\", owned);\\n___",
+      "holeyCode": "fn ___() {\\n    let ___: ___ = \"こんにちは\";\\n    // to_string で String に変換\\n    let ___: ___ = ___.___();\\n    ___!(\"{}\", ___);\\n___",
       "correctLines": [
           "fn main() {",
           "    let s: &str = \"こんにちは\";",
@@ -364,12 +364,12 @@ export const rust3Data = {
           "}"
         ],
       "lineHints": [
-          "to_string で String に変換します。",
-          "ここを正しく入力してください。",
+          "プログラムの実行開始地点（main関数）を定義します。",
+          "&str型の変数sに文字列リテラルを代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。"
+          "to_string()でString型に変換します。",
+          "owned変数を表示します。",
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "methods": [
@@ -377,7 +377,7 @@ export const rust3Data = {
             "to_owned",
             "into"
           ],
-          "others": ["main()", "&str", "println", "}"]
+          "others": ["main", "s", "&str", "owned", "String", "println", "}"]
         },
         "testCases": [
           {

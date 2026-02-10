@@ -9,7 +9,7 @@ export const javascriptData2 = {
     {
       "title": "アロー関数",
       "correctCode": "// xの2乗を返すsquare関数を定義\\nconst square = x => x * x;\\n\\n// 使ってみる（引数は5）\\nconsole.log(square(5));",
-      "holeyCode": "// xの2乗を返すsquare関数を定義\\nconst ___ = x => x * x;\\n___\\n// 使ってみる（引数は5）\\nconsole.___(square(5));",
+      "holeyCode": "// xの2乗を返すsquare関数を定義\\nconst ___ = ___ => ___ * ___;\\n___\\n// 使ってみる（引数は5）\\n___.___(___(___));",
       "correctLines": [
           "// xの2乗を返すsquare関数を定義",
           "const square = x => x * x;",
@@ -31,7 +31,7 @@ export const javascriptData2 = {
             "=",
             ":"
           ],
-          "others": ["5", "square", "log", ""]
+          "others": ["5", "square", "log", "", "x", "console"]
         },
         "testCases": [
           {
@@ -43,7 +43,7 @@ export const javascriptData2 = {
     {
       "title": "配列のmap",
       "correctCode": "// [1, 2, 3] の各要素を3倍にする\\nconst nums = [1, 2, 3];\\n// map メソッドで変換する\\nconst tripled = nums.map(n => n * 3);\\n// tripledを表示\\nconsole.log(tripled);",
-      "holeyCode": "// [1, 2, 3] の各要素を3倍にする\\nconst ___ = [1, 2, 3];\\n// map メソッドで変換する\\nconst ___ = nums.map(n => n * 3);\\n// tripledを表示\\nconsole.log(___);",
+      "holeyCode": "// [1, 2, 3] の各要素を3倍にする\\nconst ___ = [___, ___, ___];\\n// map メソッドで変換する\\nconst ___ = ___.___(___=> ___ * ___);\\n// tripledを表示\\n___.___(___)___",
       "correctLines": [
           "// [1, 2, 3] の各要素を3倍にする",
           "const nums = [1, 2, 3];",
@@ -67,7 +67,7 @@ export const javascriptData2 = {
             "forEach",
             "reduce"
           ],
-          "others": ["1", "2", "3", "tripled", "nums"]
+          "others": ["1", "2", "3", "tripled", "nums", "n", "console", "log", ";"]
         },
         "testCases": [
           {
@@ -79,7 +79,7 @@ export const javascriptData2 = {
     {
       "title": "剰余演算子（%）",
       "correctCode": "// 10を3で割った余りを計算\\nconst remainder = 10 % 3;\\n// remainderを表示\\nconsole.log(remainder);",
-      "holeyCode": "// 10を3で割った余りを計算\\nconst ___ = 10 % 3;\\n// remainderを表示\\nconsole.log(___);",
+      "holeyCode": "// 10を3で割った余りを計算\\nconst ___ = ___ ___ ___;\\n// remainderを表示\\n___.___(___)___",
       "correctLines": [
           "// 10を3で割った余りを計算",
           "const remainder = 10 % 3;",
@@ -99,7 +99,7 @@ export const javascriptData2 = {
             "*",
             "+"
           ],
-          "others": ["remainder"]
+          "others": ["remainder", "10", "3", "console", "log", ";"]
         },
         "testCases": [
           {
@@ -111,7 +111,7 @@ export const javascriptData2 = {
     {
       "title": "累算代入演算子（+=、-=）",
       "correctCode": "// 初期値を設定\\nlet total = 0;\\n// totalに10を足す\\ntotal += 10;\\n// totalに5を足す\\ntotal += 5;\\n// totalを表示\\nconsole.log(total);",
-      "holeyCode": "// 初期値を設定\\nlet ___ = 0;\\n// totalに10を足す\\ntotal += ___;\\n// totalに5を足す\\ntotal += ___;\\n// totalを表示\\nconsole.log(___);",
+      "holeyCode": "// 初期値を設定\\nlet ___ = ___;\\n// totalに10を足す\\n___ ___ ___;\\n// totalに5を足す\\n___ ___ ___;\\n// totalを表示\\n___.___(___)___",
       "correctLines": [
           "// 初期値を設定",
           "let total = 0;",
@@ -139,7 +139,7 @@ export const javascriptData2 = {
             "*=",
             "/="
           ],
-          "others": ["total", "10", "5"]
+          "others": ["total", "10", "5", "0", "console", "log", ";"]
         },
         "testCases": [
           {
@@ -151,7 +151,7 @@ export const javascriptData2 = {
     {
       "title": "論理演算子（&&、||）",
       "correctCode": "// 年齢を設定\\nconst age = 25;\\n// 20以上かつ30未満かどうか判定\\nif (age >= 20 && age < 30) {\\n    console.log('20代です');\\n}",
-      "holeyCode": "// 年齢を設定\\nconst ___ = 25;\\n// 20以上かつ30未満かどうか判定\\nif (age >= ___ && age < 30) {\\n    console.___('20代です');\\n___",
+      "holeyCode": "// 年齢を設定\\nconst ___ = ___;\\n// 20以上かつ30未満かどうか判定\\nif (___ >= ___ ___ ___ < ___) ___\\n    ___.___('___');\\n___",
       "correctLines": [
           "// 年齢を設定",
           "const age = 25;",
@@ -174,7 +174,7 @@ export const javascriptData2 = {
             "||",
             "!"
           ],
-          "others": ["age", "20", "log", "}"]
+          "others": ["age", "20", "log", "}", "25", "30", "{", "console", "20代です"]
         },
         "testCases": [
           {
@@ -186,7 +186,7 @@ export const javascriptData2 = {
     {
       "title": "配列のfilter",
       "correctCode": "// [5, 15, 8, 20] から 10より大きい数だけ取り出す\\nconst nums = [5, 15, 8, 20];\\n// filter メソッドで絞り込む\\nconst big = nums.filter(n => n > 10);\\n// bigを表示\\nconsole.log(big);",
-      "holeyCode": "// [5, 15, 8, 20] から 10より大きい数だけ取り出す\\nconst ___ = [5, 15, 8, 20];\\n// filter メソッドで絞り込む\\nconst ___ = nums.filter(n => n > 10);\\n// bigを表示\\nconsole.log(___);",
+      "holeyCode": "// [5, 15, 8, 20] から 10より大きい数だけ取り出す\\nconst ___ = [___, ___, ___, ___];\\n// filter メソッドで絞り込む\\nconst ___ = ___.___(___=> ___ > ___);\\n// bigを表示\\n___.___(___)___",
       "correctLines": [
           "// [5, 15, 8, 20] から 10より大きい数だけ取り出す",
           "const nums = [5, 15, 8, 20];",
@@ -210,7 +210,7 @@ export const javascriptData2 = {
             "find",
             "some"
           ],
-          "others": ["5", "15", "8", "20", "big", "nums"]
+          "others": ["5", "15", "8", "20", "big", "nums", "n", "10", "console", "log", ";"]
         },
         "testCases": [
           {
@@ -222,7 +222,7 @@ export const javascriptData2 = {
     {
       "title": "配列のreduce",
       "correctCode": "// [10, 20, 30] の合計を計算\\nconst nums = [10, 20, 30];\\n// reduce メソッドで累積値 acc を使う\\nconst total = nums.reduce((acc, n) => acc + n, 0);\\n// totalを表示\\nconsole.log(total);",
-      "holeyCode": "// [10, 20, 30] の合計を計算\\nconst ___ = [10, 20, 30];\\n// reduce メソッドで累積値 acc を使う\\nconst ___ = nums.reduce((acc, n) => acc + n, 0);\\n// totalを表示\\nconsole.log(___);",
+      "holeyCode": "// [10, 20, 30] の合計を計算\\nconst ___ = [___, ___, ___];\\n// reduce メソッドで累積値 acc を使う\\nconst ___ = ___.___((___, ___) => ___ + ___, ___);\\n// totalを表示\\n___.___(___)___",
       "correctLines": [
           "// [10, 20, 30] の合計を計算",
           "const nums = [10, 20, 30];",
@@ -248,7 +248,7 @@ export const javascriptData2 = {
             "sum",
             "total"
           ],
-          "others": ["10", "20", "30", "nums"]
+          "others": ["10", "20", "30", "nums", "n", "0", "console", "log", ";"]
         },
         "testCases": [
           {
@@ -260,7 +260,7 @@ export const javascriptData2 = {
     {
       "title": "分割代入（配列）",
       "correctCode": "// ['赤', '緑', '青'] から値を取り出す\\nconst colors = ['赤', '緑', '青'];\\n// second で2番目の要素を受け取る\\nconst [first, second] = colors;\\n// firstを表示\\nconsole.log(first);\\n// secondを表示\\nconsole.log(second);",
-      "holeyCode": "// ['赤', '緑', '青'] から値を取り出す\\nconst ___ = ['赤', '緑', '青'];\\n// second で2番目の要素を受け取る\\nconst [first, second] = ___;\\n// firstを表示\\nconsole.log(___);\\n// secondを表示\\nconsole.log(___);",
+      "holeyCode": "// ['赤', '緑', '青'] から値を取り出す\\nconst ___ = ['___', '___', '___'];\\n// second で2番目の要素を受け取る\\nconst [___, ___] = ___;\\n// firstを表示\\n___.___(___)___\\n// secondを表示\\n___.___(___)___",
       "correctLines": [
           "// ['赤', '緑', '青'] から値を取り出す",
           "const colors = ['赤', '緑', '青'];",
@@ -288,7 +288,7 @@ export const javascriptData2 = {
             "last",
             "next"
           ],
-          "others": ["赤", "緑", "青", "first", "colors"]
+          "others": ["赤", "緑", "青", "first", "colors", "console", "log", ";"]
         },
         "testCases": [
           {
@@ -300,7 +300,7 @@ export const javascriptData2 = {
     {
       "title": "分割代入（オブジェクト）",
       "correctCode": "// name: 'アリス', score: 100 のオブジェクトから値を取り出す\\nconst user = { name: 'アリス', score: 100 };\\n// name プロパティを取り出す\\nconst { name, score } = user;\\n// nameを表示\\nconsole.log(name);\\n// scoreを表示\\nconsole.log(score);",
-      "holeyCode": "// name: 'アリス', score: 100 のオブジェクトから値を取り出す\\nconst ___ = { name: 'アリス', score: 100 };\\n// name プロパティを取り出す\\nconst { name, score } = ___;\\n// nameを表示\\nconsole.log(___);\\n// scoreを表示\\nconsole.log(___);",
+      "holeyCode": "// name: 'アリス', score: 100 のオブジェクトから値を取り出す\\nconst ___ = { ___: '___', ___: ___ };\\n// name プロパティを取り出す\\nconst { ___, ___ } = ___;\\n// nameを表示\\n___.___(___)___\\n// scoreを表示\\n___.___(___)___",
       "correctLines": [
           "// name: 'アリス', score: 100 のオブジェクトから値を取り出す",
           "const user = { name: 'アリス', score: 100 };",
@@ -328,7 +328,7 @@ export const javascriptData2 = {
             "value",
             "key"
           ],
-          "others": ["アリス", "100", "score", "name"]
+          "others": ["アリス", "100", "score", "name", "console", "log", ";"]
         },
         "testCases": [
           {
@@ -340,7 +340,7 @@ export const javascriptData2 = {
     {
       "title": "スプレッド演算子（配列）",
       "correctCode": "// [1, 2] と [3, 4] の2つの配列を合体させる\\nconst arr1 = [1, 2];\\n// arr2を定義する\\nconst arr2 = [3, 4];\\n// ... スプレッド演算子で展開する\\nconst merged = [...arr1, ...arr2];\\n// mergedを表示\\nconsole.log(merged);",
-      "holeyCode": "// [1, 2] と [3, 4] の2つの配列を合体させる\\nconst ___ = [1, 2];\\n// arr2を定義する\\nconst ___ = [3, 4];\\n// ... スプレッド演算子で展開する\\nconst ___ = [...arr1, ...arr2];\\n// mergedを表示\\nconsole.log(___);",
+      "holeyCode": "// [1, 2] と [3, 4] の2つの配列を合体させる\\nconst ___ = [___, ___];\\n// arr2を定義する\\nconst ___ = [___, ___];\\n// ... スプレッド演算子で展開する\\nconst ___ = [_______, _______];\\n// mergedを表示\\n___.___(___)___",
       "correctLines": [
           "// [1, 2] と [3, 4] の2つの配列を合体させる",
           "const arr1 = [1, 2];",
@@ -368,7 +368,7 @@ export const javascriptData2 = {
             "***",
             "::"
           ],
-          "others": ["1", "2", "3", "4", "merged", "arr1", "arr2"]
+          "others": ["1", "2", "3", "4", "merged", "arr1", "arr2", "...arr1, ...arr2];", "console", "log", ";"]
         },
         "testCases": [
           {
@@ -380,7 +380,7 @@ export const javascriptData2 = {
     {
       "title": "三項演算子",
       "correctCode": "// 数値 5 が正か負かを判定\\nconst num = 5;\\n// ? で三項演算子を使う\\nconst sign = num >= 0 ? '正' : '負';\\n// signを表示\\nconsole.log(sign);",
-      "holeyCode": "// 数値 5 が正か負かを判定\\nconst ___ = 5;\\n// ? で三項演算子を使う\\nconst ___ = num >= 0 ? '正' : '負';\\n// signを表示\\nconsole.log(___);",
+      "holeyCode": "// 数値 5 が正か負かを判定\\nconst ___ = ___;\\n// ? で三項演算子を使う\\nconst ___ = ___ >= ___ ___ '___' ___ '___';\\n// signを表示\\n___.___(___)___",
       "correctLines": [
           "// 数値 5 が正か負かを判定",
           "const num = 5;",
@@ -404,7 +404,7 @@ export const javascriptData2 = {
             "&&",
             "||"
           ],
-          "others": ["5", "sign", "num"]
+          "others": ["5", "sign", "num", "0", "正", "負", "console", "log", ";"]
         },
         "testCases": [
           {
@@ -416,7 +416,7 @@ export const javascriptData2 = {
     {
       "title": "配列のfind",
       "correctCode": "// [1, 3, 4, 7, 8] から最初の偶数を見つける\\nconst numbers = [1, 3, 4, 7, 8];\\n// find メソッドで最初の要素を探す\\nconst firstEven = numbers.find(n => n % 2 === 0);\\n// firstEvenを表示\\nconsole.log(firstEven);",
-      "holeyCode": "// [1, 3, 4, 7, 8] から最初の偶数を見つける\\nconst ___ = [1, 3, 4, 7, 8];\\n// find メソッドで最初の要素を探す\\nconst ___ = numbers.find(n => n % 2 === 0);\\n// firstEvenを表示\\nconsole.log(___);",
+      "holeyCode": "// [1, 3, 4, 7, 8] から最初の偶数を見つける\\nconst ___ = [___, ___, ___, ___, ___];\\n// find メソッドで最初の要素を探す\\nconst ___ = ___.___(___=> ___ ___ ___ === ___);\\n// firstEvenを表示\\n___.___(___)___",
       "correctLines": [
           "// [1, 3, 4, 7, 8] から最初の偶数を見つける",
           "const numbers = [1, 3, 4, 7, 8];",
@@ -440,7 +440,7 @@ export const javascriptData2 = {
             "some",
             "findIndex"
           ],
-          "others": ["1", "3", "4", "7", "8", "firstEven", "numbers"]
+          "others": ["1", "3", "4", "7", "8", "firstEven", "numbers", "n", "%", "2", "0", "console", "log", ";"]
         },
         "testCases": [
           {
@@ -452,7 +452,7 @@ export const javascriptData2 = {
     {
       "title": "オブジェクトのショートハンド",
       "correctCode": "// x = 10, y = 20 をプロパティとして持つオブジェクトを作る\\nconst x = 10;\\n// y = 20\\nconst y = 20;\\n// ショートハンドで x をプロパティとして追加する\\nconst point = { x, y };\\n// point.xを表示\\nconsole.log(point.x);\\n// point.yを表示\\nconsole.log(point.y);",
-      "holeyCode": "// x = 10, y = 20 をプロパティとして持つオブジェクトを作る\\nconst ___ = 10;\\n// y = 20\\nconst ___ = 20;\\n// ショートハンドで x をプロパティとして追加する\\nconst ___ = { x, y };\\n// point.xを表示\\nconsole.___(point.x);\\n// point.yを表示\\nconsole.___(point.y);",
+      "holeyCode": "// x = 10, y = 20 をプロパティとして持つオブジェクトを作る\\nconst ___ = ___;\\n// y = 20\\nconst ___ = ___;\\n// ショートハンドで x をプロパティとして追加する\\nconst ___ = { ___, ___ };\\n// point.xを表示\\n___.___(___.___)___\\n// point.yを表示\\n___.___(___.___)___",
       "correctLines": [
           "// x = 10, y = 20 をプロパティとして持つオブジェクトを作る",
           "const x = 10;",
@@ -484,7 +484,7 @@ export const javascriptData2 = {
             "point",
             "value"
           ],
-          "others": ["10", "20", "y", "log"]
+          "others": ["10", "20", "y", "log", "console", ";"]
         },
         "testCases": [
           {

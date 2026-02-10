@@ -9,7 +9,7 @@ export const elixirData = {
     {
       "title": "画面に文字を出してみましょう",
       "correctCode": "# こんにちは, Elixir!を表示\\nIO.puts \"こんにちは, Elixir!\"",
-      "holeyCode": "# こんにちは, Elixir!を表示\\n___.puts \"___\"",
+      "holeyCode": "# こんにちは, Elixir!を表示\\n___.___ \"___\"",
       "correctLines": [
           "# こんにちは, Elixir!を表示",
           "IO.puts \"こんにちは, Elixir!\""
@@ -22,7 +22,7 @@ export const elixirData = {
           "strings": [
             "こんにちは, Elixir!"
           ],
-          "others": ["IO"]
+          "others": ["IO", "puts"]
         },
         "testCases": [
           {
@@ -34,7 +34,7 @@ export const elixirData = {
     {
       "title": "便利な「はこ」",
       "correctCode": "# 10を入力\\nx = 10\\n# xを入力\\nIO.puts x",
-      "holeyCode": "# 10を入力\\nx = ___\\n# xを入力\\nIO.puts ___",
+      "holeyCode": "# 10を入力\\n___ = ___\\n# xを入力\\n___.___ ___",
       "correctLines": [
           "# 10を入力",
           "x = 10",
@@ -54,7 +54,7 @@ export const elixirData = {
           "numbers": [
             "10"
           ],
-          "others": ["10"]
+          "others": ["IO", "puts"]
         },
         "testCases": [
           {
@@ -66,7 +66,7 @@ export const elixirData = {
     {
       "title": "コンピュータで計算しましょう",
       "correctCode": "# 5を入力\\na = 5\\n# 3を入力\\nb = 3\\n# +でたし算\\nIO.puts a + b",
-      "holeyCode": "# 5を入力\\na = ___\\n# 3を入力\\nb = ___\\n# +でたし算\\nIO.puts a + ___",
+      "holeyCode": "# 5を入力\\n___ = ___\\n# 3を入力\\n___ = ___\\n# +でたし算\\n___.___ ___ + ___",
       "correctLines": [
           "# 5を入力",
           "a = 5",
@@ -91,7 +91,7 @@ export const elixirData = {
           "operators": [
             "+"
           ],
-          "others": ["b", "5", "3"]
+          "others": ["a", "b", "IO", "puts"]
         },
         "testCases": [
           {

@@ -9,7 +9,7 @@ export const cpp3Data = {
     {
       "title": "auto で型推論",
       "correctCode": "#include <iostream>\\nusing namespace std;\\n\\nint main() {\\n    // xに100を代入（auto型推論）\\n    auto x = 100;\\n    // yに2.5を代入（auto型推論）\\n    auto y = 2.5;\\n    cout << x * y << endl;\\n    return 0;\\n}",
-      "holeyCode": "___\\nusing namespace ___;\\n___\\nint ___() {\\n    // xに100を代入（auto型推論）\\n    auto x = ___;\\n    // yに2.5を代入（auto型推論）\\n    auto y = ___.5;\\n    cout << x * y << ___;\\n    return ___;\\n___",
+      "holeyCode": "___\\n___ ___ ___;\\n___\\n___ ___() {\\n    // xに100を代入（auto型推論）\\n    ___ ___ = ___;\\n    // yに2.5を代入（auto型推論）\\n    ___ ___ = ___;\\n    ___ << ___ * ___ << ___;\\n    ___ ___;\\n___",
       "correctLines": [
           "#include <iostream>",
           "using namespace std;",
@@ -25,24 +25,28 @@ export const cpp3Data = {
         ],
       "lineHints": [
           "標準入出力ストリームを読み込みます。",
-          "std名前空間を利用可能にします。",
+          "usingで名前空間stdを利用可能にします。",
           null,
-          "プログラムの開始点を定義します。",
+          "int main()でプログラムの開始点を定義します。",
           null,
-          "autoキーワードで、コンパイラに型を推論させます。",
+          "auto xに100を代入します。",
           null,
-          "浮動小数点数（小数）も自動的に推論されます。",
-          "計算結果を標準出力に表示します。",
-          "プログラムの正常終了を示す値0を返します。",
-          "ここを正しく入力してください。"
+          "auto yに2.5を代入します。",
+          "x * yの計算結果をcoutで出力し、endlで改行します。",
+          "return 0でプログラムの正常終了を示します。",
+          "関数の閉じ括弧です。"
         ],
         "candidates": {
           "keywords": [
             "auto",
             "var",
-            "let"
+            "let",
+            "using",
+            "namespace",
+            "int",
+            "return"
           ],
-          "others": ["std", "main", "100", "2", "endl", "0", "}", "#include <iostream>", "#include <iostream>", ""]
+          "others": ["std", "main", "100", "2.5", "endl", "0", "}", "#include <iostream>", "x", "y", "cout"]
         },
         "testCases": [
           {
@@ -54,7 +58,7 @@ export const cpp3Data = {
     {
       "title": "範囲for文",
       "correctCode": "#include <iostream>\\n#include <vector>\\nusing namespace std;\\n\\nint main() {\\n    // numsに{10, 20, 30}を代入\\n    vector<int> nums = {10, 20, 30};\\n    // : で範囲for文\\n    for (int n : nums) {\\n        cout << n << endl;\\n    }\\n    return 0;\\n}",
-      "holeyCode": "___\\n___\\nusing namespace ___;\\n___\\nint ___() {\\n    // numsに{10, 20, 30}を代入\\n    vector<int> nums = {___, 20, 30};\\n    // : で範囲for文\\n    for (int ___ : nums) {\\n        cout << n << ___;\\n    ___\\n    return ___;\\n___",
+      "holeyCode": "___\\n___\\n___ ___ ___;\\n___\\n___ ___() {\\n    // numsに{10, 20, 30}を代入\\n    ___<___> ___ = {___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) {\\n        ___ << ___ << ___;\\n    ___\\n    ___ ___;\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <vector>",
@@ -71,27 +75,29 @@ export const cpp3Data = {
           "}"
         ],
       "lineHints": [
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "iostreamヘッダを読み込みます。",
+          "vectorヘッダを読み込みます。",
+          "usingで名前空間stdを利用可能にします。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "int main()でプログラムの開始点を定義します。",
           null,
-          "配列を複数の値で初期化する。",
+          "vector<int>型のnumsに{10, 20, 30}を代入します。",
           null,
-          "繰り返し処理（ループ）を開始する。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "int nでnumsの各要素を順に取り出します。",
+          "coutでnを出力し、endlで改行します。",
+          "forループの閉じ括弧です。",
+          "return 0でプログラムの正常終了を示します。",
+          "関数の閉じ括弧です。"
         ],
         "candidates": {
-          "operators": [
-            ":",
-            "in",
-            "of"
+          "keywords": [
+            "using",
+            "namespace",
+            "int",
+            "for",
+            "return"
           ],
-          "others": ["vector", "std", "main", "10", "n", "endl", "}", "0", "#include <iostream>", "#include <vector>", "#include <iostream>", "#include <vector>", "", "}"]
+          "others": ["vector", "std", "main", "10", "20", "30", "n", "endl", "}", "0", "#include <iostream>", "#include <vector>", "nums", "cout"]
         },
         "testCases": [
           {
@@ -103,7 +109,7 @@ export const cpp3Data = {
     {
       "title": "nullptr",
       "correctCode": "#include <iostream>\\nusing namespace std;\\n\\nint main() {\\n    // pにnullptrを代入\\n    int* p = nullptr;\\n    // p == nullptrで比較\\n    if (p == nullptr) {\\n        cout << \"null\" << endl;\\n    }\\n    return 0;\\n}",
-      "holeyCode": "___\\nusing namespace ___;\\n___\\nint ___() {\\n    // pにnullptrを代入\\n    int* p = ___;\\n    // p == nullptrで比較\\n    if (p == ___) {\\n        ___ << \"___\" << endl;\\n    ___\\n    return ___;\\n___",
+      "holeyCode": "___\\n___ ___ ___;\\n___\\n___ ___() {\\n    // pにnullptrを代入\\n    ___* ___ = ___;\\n    // p == nullptrで比較\\n    if (___ == ___) {\\n        ___ << \"___\" << ___;\\n    ___\\n    ___ ___;\\n___",
       "correctLines": [
           "#include <iostream>",
           "using namespace std;",
@@ -119,26 +125,30 @@ export const cpp3Data = {
           "}"
         ],
       "lineHints": [
-          "この行を正しく入力してください。",
-          "型安全なヌルポインタを表すキーワードです。",
+          "iostreamヘッダを読み込みます。",
+          "usingで名前空間stdを利用可能にします。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "int main()でプログラムの開始点を定義します。",
           null,
-          "ここを正しく入力してください。",
+          "int*型のpにnullptrを代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "pがnullptrと等しいか比較します。",
+          "coutで\"null\"を出力し、endlで改行します。",
+          "ifブロックの閉じ括弧です。",
+          "return 0でプログラムの正常終了を示します。",
+          "関数の閉じ括弧です。"
         ],
         "candidates": {
           "keywords": [
             "nullptr",
             "NULL",
-            "0"
+            "using",
+            "namespace",
+            "int",
+            "if",
+            "return"
           ],
-          "others": ["std", "main", "null", "}", "#include <iostream>", "cout", "#include <iostream>", "", "}"]
+          "others": ["std", "main", "null", "}", "#include <iostream>", "cout", "p", "endl", "0"]
         },
         "testCases": [
           {
@@ -150,7 +160,7 @@ export const cpp3Data = {
     {
       "title": "constexpr",
       "correctCode": "#include <iostream>\\nusing namespace std;\\n\\n// constexpr cube(int x)を定義\\nconstexpr int cube(int x) {\\n    return x * x * x;\\n}\\n\\nint main() {\\n    // valにcube(3)を代入（constexpr）\\n    constexpr int val = cube(3);\\n    cout << val << endl;\\n    return 0;\\n}",
-      "holeyCode": "___\\nusing namespace ___;\\n___\\n// constexpr cube(int x)を定義\\nconstexpr int cube(int ___) {\\n    return ___ * x * x;\\n___\\n___\\nint ___() {\\n    // valにcube(3)を代入（constexpr）\\n    constexpr int val = cube(___);\\n    cout << val << ___;\\n    return ___;\\n___",
+      "holeyCode": "___\\n___ ___ ___;\\n___\\n// constexpr cube(int x)を定義\\n___ ___ ___(int ___) {\\n    ___ ___ * ___ * ___;\\n___\\n___\\n___ ___() {\\n    // valにcube(3)を代入（constexpr）\\n    ___ ___ ___ = ___(___);\\n    ___ << ___ << ___;\\n    ___ ___;\\n___",
       "correctLines": [
           "#include <iostream>",
           "using namespace std;",
@@ -168,28 +178,32 @@ export const cpp3Data = {
           "}"
         ],
       "lineHints": [
-          "この行を正しく入力してください。",
-          "コンパイル時に計算を行うためのキーワードです。",
+          "iostreamヘッダを読み込みます。",
+          "usingで名前空間stdを利用可能にします。",
           null,
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "constexpr intでcube関数を定義し、引数xを受け取ります。",
+          "return x * x * xで立方を計算して返します。",
+          "関数の閉じ括弧です。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "int main()でプログラムの開始点を定義します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "constexpr int valにcube(3)の結果を代入します。",
+          "coutでvalを出力し、endlで改行します。",
+          "return 0でプログラムの正常終了を示します。",
+          "関数の閉じ括弧です。"
         ],
         "candidates": {
           "keywords": [
             "constexpr",
             "const",
-            "static"
+            "static",
+            "using",
+            "namespace",
+            "int",
+            "return"
           ],
-          "others": ["std", "x", "}", "main", "3", "endl", "0", "#include <iostream>", "#include <iostream>", "", "}"]
+          "others": ["std", "x", "}", "main", "3", "endl", "0", "#include <iostream>", "cube", "val", "cout"]
         },
         "testCases": [
           {
@@ -201,7 +215,7 @@ export const cpp3Data = {
     {
       "title": "初期化子リスト",
       "correctCode": "#include <iostream>\\n#include <vector>\\nusing namespace std;\\n\\nint main() {\\n    // { で初期化子リスト\\n    vector<int> v{1, 2, 3, 4, 5};\\n    // : で範囲for文\\n    for (int n : v) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}",
-      "holeyCode": "___\\n___\\nusing namespace ___;\\n___\\nint ___() {\\n    // { で初期化子リスト\\n    vector<int> v{___, 2, 3, 4, 5};\\n    // : で範囲for文\\n    for (int ___ : v) cout << n << \" \";\\n    cout << ___;\\n    return ___;\\n___",
+      "holeyCode": "___\\n___\\n___ ___ ___;\\n___\\n___ ___() {\\n    // { で初期化子リスト\\n    ___<___> ___{___, ___, ___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) ___ << ___ << \" \";\\n    ___ << ___;\\n    ___ ___;\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <vector>",
@@ -217,27 +231,28 @@ export const cpp3Data = {
           "}"
         ],
       "lineHints": [
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "iostreamヘッダを読み込みます。",
+          "vectorヘッダを読み込みます。",
+          "usingで名前空間stdを利用可能にします。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "int main()でプログラムの開始点を定義します。",
           null,
-          "配列を複数の値で初期化する。",
+          "vector<int>型のvに{1, 2, 3, 4, 5}を初期化子リストで代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "int nでvの各要素を順に取り出し、coutで出力します。",
+          "coutでendlを出力して改行します。",
+          "return 0でプログラムの正常終了を示します。",
+          "関数の閉じ括弧です。"
         ],
         "candidates": {
-          "operators": [
-            "{",
-            "(",
-            "[",
-            ":"
+          "keywords": [
+            "using",
+            "namespace",
+            "int",
+            "for",
+            "return"
           ],
-          "others": ["std", "main", "1", "n", "endl", "0", "}", "#include <iostream>", "#include <vector>", "#include <iostream>", "#include <vector>", ""]
+          "others": ["std", "main", "1", "2", "3", "4", "5", "n", "endl", "0", "}", "#include <iostream>", "#include <vector>", "vector", "v", "cout"]
         },
         "testCases": [
           {
@@ -249,7 +264,7 @@ export const cpp3Data = {
     {
       "title": "shared_ptr",
       "correctCode": "#include <iostream>\\n#include <memory>\\nusing namespace std;\\n\\nint main() {\\n    // make_shared で共有ポインタを作成\\n    auto p = make_shared<int>(100);\\n    // *p で中身にアクセス\\n    cout << *p << endl;\\n    return 0;\\n}",
-      "holeyCode": "___\\n___\\nusing namespace ___;\\n___\\nint ___() {\\n    // make_shared で共有ポインタを作成\\n    auto p = make_shared<int>(___);\\n    // *p で中身にアクセス\\n    cout << *p << ___;\\n    return ___;\\n___",
+      "holeyCode": "___\\n___\\n___ ___ ___;\\n___\\n___ ___() {\\n    // make_shared で共有ポインタを作成\\n    ___ ___ = ___<___>(___);\\n    // *p で中身にアクセス\\n    ___ << *___ << ___;\\n    ___ ___;\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <memory>",
@@ -264,17 +279,17 @@ export const cpp3Data = {
           "}"
         ],
       "lineHints": [
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
-          "共有所有権のスマートポインタを作成する関数です。",
+          "iostreamヘッダを読み込みます。",
+          "memoryヘッダを読み込みます。",
+          "usingで名前空間stdを利用可能にします。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "int main()でプログラムの開始点を定義します。",
           null,
-          "ここを正しく入力してください。",
+          "auto pにmake_shared<int>(100)を代入します。",
           null,
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "coutで*pの値を出力し、endlで改行します。",
+          "return 0でプログラムの正常終了を示します。",
+          "関数の閉じ括弧です。"
         ],
         "candidates": {
           "functions": [
@@ -282,7 +297,14 @@ export const cpp3Data = {
             "make_unique",
             "shared_ptr"
           ],
-          "others": ["*", "std", "main", "100", "endl", "0", "}", "#include <iostream>", "#include <memory>", "#include <iostream>", "#include <memory>", ""]
+          "keywords": [
+            "auto",
+            "using",
+            "namespace",
+            "int",
+            "return"
+          ],
+          "others": ["std", "main", "100", "endl", "0", "}", "#include <iostream>", "#include <memory>", "p", "cout"]
         },
         "testCases": [
           {
@@ -294,7 +316,7 @@ export const cpp3Data = {
     {
       "title": "std::move",
       "correctCode": "#include <iostream>\\n#include <string>\\n#include <utility>\\nusing namespace std;\\n\\nint main() {\\n    // s1に\"こんにちは\"を代入\\n    string s1 = \"こんにちは\";\\n    // move で所有権を移動\\n    string s2 = move(s1);\\n    cout << s2 << endl;\\n    return 0;\\n}",
-      "holeyCode": "___\\n___\\n___\\nusing namespace ___;\\n___\\nint ___() {\\n    // s1に\"こんにちは\"を代入\\n    string s1 = \"___\";\\n    // move で所有権を移動\\n    string s___ = move(s1);\\n    cout << s___ << endl;\\n    return ___;\\n___",
+      "holeyCode": "___\\n___\\n___\\n___ ___ ___;\\n___\\n___ ___() {\\n    // s1に\"こんにちは\"を代入\\n    ___ ___ = \"___\";\\n    // move で所有権を移動\\n    ___ ___ = ___(___);\\n    ___ << ___ << ___;\\n    ___ ___;\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <string>",
@@ -311,19 +333,19 @@ export const cpp3Data = {
           "}"
         ],
       "lineHints": [
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
-          "namespace std名前空間を利用可能にします。",
+          "iostreamヘッダを読み込みます。",
+          "stringヘッダを読み込みます。",
+          "utilityヘッダを読み込みます。",
+          "usingで名前空間stdを利用可能にします。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "int main()でプログラムの開始点を定義します。",
           null,
-          "文字列型の変数を宣言し、文字列データを代入します。",
+          "string s1に\"こんにちは\"を代入します。",
           null,
-          "moveで所有権を移動します。",
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "string s2にmove(s1)で所有権を移動します。",
+          "coutでs2を出力し、endlで改行します。",
+          "return 0でプログラムの正常終了を示します。",
+          "関数の閉じ括弧です。"
         ],
         "candidates": {
           "functions": [
@@ -331,7 +353,13 @@ export const cpp3Data = {
             "forward",
             "swap"
           ],
-          "others": ["string", "std", "main", "2", "0", "}", "こんにちは", "#include <iostream>", "#include <string>", "#include <utility>", "#include <iostream>", "#include <string>", "#include <utility>", ""]
+          "keywords": [
+            "using",
+            "namespace",
+            "int",
+            "return"
+          ],
+          "others": ["string", "std", "main", "s1", "s2", "0", "}", "こんにちは", "#include <iostream>", "#include <string>", "#include <utility>", "cout", "endl"]
         },
         "testCases": [
           {
@@ -343,7 +371,7 @@ export const cpp3Data = {
     {
       "title": "std::optional",
       "correctCode": "#include <iostream>\\n#include <optional>\\nusing namespace std;\\n\\nint main() {\\n    // optional で値を保持\\n    optional<int> opt = 42;\\n    // has_value で値の有無をチェック\\n    if (opt.has_value()) {\\n        cout << opt.value() << endl;\\n    }\\n    return 0;\\n}",
-      "holeyCode": "___\\n___\\nusing namespace ___;\\n___\\nint ___() {\\n    // optional で値を保持\\n    optional<int> opt = ___;\\n    // has_value で値の有無をチェック\\n    if (opt.___()) {\\n        cout << opt.value() << ___;\\n    ___\\n    return ___;\\n___",
+      "holeyCode": "___\\n___\\n___ ___ ___;\\n___\\n___ ___() {\\n    // optional で値を保持\\n    ___<___> ___ = ___;\\n    // has_value で値の有無をチェック\\n    if (___.___()) {\\n        ___ << ___.___() << ___;\\n    ___\\n    ___ ___;\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <optional>",
@@ -360,27 +388,35 @@ export const cpp3Data = {
           "}"
         ],
       "lineHints": [
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
-          "値があるかもしれない状態を表現できる型です。",
+          "iostreamヘッダを読み込みます。",
+          "optionalヘッダを読み込みます。",
+          "usingで名前空間stdを利用可能にします。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "int main()でプログラムの開始点を定義します。",
           null,
-          "ここを正しく入力してください。",
+          "optional<int>型のoptに42を代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "opt.has_value()で値の有無をチェックします。",
+          "coutでopt.value()の値を出力し、endlで改行します。",
+          "ifブロックの閉じ括弧です。",
+          "return 0でプログラムの正常終了を示します。",
+          "関数の閉じ括弧です。"
         ],
         "candidates": {
           "methods": [
             "has_value",
             "empty",
-            "valid"
+            "valid",
+            "value"
           ],
-          "others": ["optional", "std", "main", "42", "endl", "}", "0", "#include <iostream>", "#include <optional>", "#include <iostream>", "#include <optional>", "", "}"]
+          "keywords": [
+            "using",
+            "namespace",
+            "int",
+            "if",
+            "return"
+          ],
+          "others": ["optional", "std", "main", "42", "endl", "}", "0", "#include <iostream>", "#include <optional>", "opt", "cout"]
         },
         "testCases": [
           {
@@ -392,7 +428,7 @@ export const cpp3Data = {
     {
       "title": "std::array",
       "correctCode": "#include <iostream>\\n#include <array>\\nusing namespace std;\\n\\nint main() {\\n    // arrに{10, 20, 30}を代入\\n    array<int, 3> arr = {10, 20, 30};\\n    // : で範囲for文\\n    for (int n : arr) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}",
-      "holeyCode": "___\\n___\\nusing namespace ___;\\n___\\nint ___() {\\n    // arrに{10, 20, 30}を代入\\n    array<int, ___> arr = {10, 20, 30};\\n    // : で範囲for文\\n    for (int ___ : arr) cout << n << \" \";\\n    cout << ___;\\n    return ___;\\n___",
+      "holeyCode": "___\\n___\\n___ ___ ___;\\n___\\n___ ___() {\\n    // arrに{10, 20, 30}を代入\\n    ___<___, ___> ___ = {___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) ___ << ___ << \" \";\\n    ___ << ___;\\n    ___ ___;\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <array>",
@@ -408,18 +444,18 @@ export const cpp3Data = {
           "}"
         ],
       "lineHints": [
-          "この行を正しく入力してください。",
-          "この行を正しく入力してください。",
-          "複数の値をまとめて格納する配列（またはリスト）を作成します。",
+          "iostreamヘッダを読み込みます。",
+          "arrayヘッダを読み込みます。",
+          "usingで名前空間stdを利用可能にします。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "int main()でプログラムの開始点を定義します。",
           null,
-          "配列を複数の値で初期化する。",
+          "array<int, 3>型のarrに{10, 20, 30}を代入します。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "int nでarrの各要素を順に取り出し、coutで出力します。",
+          "coutでendlを出力して改行します。",
+          "return 0でプログラムの正常終了を示します。",
+          "関数の閉じ括弧です。"
         ],
         "candidates": {
           "types": [
@@ -427,10 +463,14 @@ export const cpp3Data = {
             "vector",
             "list"
           ],
-          "operators": [
-            ":"
+          "keywords": [
+            "using",
+            "namespace",
+            "int",
+            "for",
+            "return"
           ],
-          "others": ["std", "main", "3", "n", "endl", "0", "}", "#include <iostream>", "#include <array>", "#include <iostream>", "#include <array>", ""]
+          "others": ["std", "main", "3", "10", "20", "30", "n", "endl", "0", "}", "#include <iostream>", "#include <array>", "arr", "cout"]
         },
         "testCases": [
           {
@@ -442,7 +482,7 @@ export const cpp3Data = {
     {
       "title": "ラムダのキャプチャ",
       "correctCode": "#include <iostream>\\nusing namespace std;\\n\\nint main() {\\n    // xに5を代入\\n    int x = 5;\\n    // x でコピーキャプチャ\\n    auto f = [x]() { return x * x; };\\n    cout << f() << endl;\\n    return 0;\\n}",
-      "holeyCode": "___\\nusing namespace ___;\\n___\\nint ___() {\\n    // xに5を代入\\n    int x = ___;\\n    // x でコピーキャプチャ\\n    auto f = [___]() { return x * x; };\\n    cout << f() << ___;\\n    return ___;\\n___",
+      "holeyCode": "___\\n___ ___ ___;\\n___\\n___ ___() {\\n    // xに5を代入\\n    ___ ___ = ___;\\n    // x でコピーキャプチャ\\n    ___ ___ = [___]() { return ___ * ___; };\\n    ___ << ___() << ___;\\n    ___ ___;\\n___",
       "correctLines": [
           "#include <iostream>",
           "using namespace std;",
@@ -457,17 +497,17 @@ export const cpp3Data = {
           "}"
         ],
       "lineHints": [
-          "この行を正しく入力してください。",
-          "namespace std名前空間を利用可能にします。",
+          "iostreamヘッダを読み込みます。",
+          "usingで名前空間stdを利用可能にします。",
           null,
-          "プログラムの実行開始地点（エントリーポイント）となる関数を定義します。",
+          "int main()でプログラムの開始点を定義します。",
           null,
-          "整数型の変数を宣言し、初期値を代入します。",
+          "int xに5を代入します。",
           null,
-          "xをコピーキャプチャしてラムダ式を作ります。",
-          "ここを正しく入力してください。",
-          "プログラムの正常終了を示す値0を返す。",
-          "ここを正しく入力してください。"
+          "auto fに[x]でxをキャプチャしたラムダを代入します。",
+          "coutでf()の結果を出力し、endlで改行します。",
+          "return 0でプログラムの正常終了を示します。",
+          "関数の閉じ括弧です。"
         ],
         "candidates": {
           "captures": [
@@ -475,7 +515,14 @@ export const cpp3Data = {
             "&x",
             "="
           ],
-          "others": ["int", "std", "main", "5", "endl", "0", "}", "#include <iostream>", "#include <iostream>", ""]
+          "keywords": [
+            "using",
+            "namespace",
+            "int",
+            "auto",
+            "return"
+          ],
+          "others": ["std", "main", "5", "endl", "0", "}", "#include <iostream>", "f", "cout"]
         },
         "testCases": [
           {

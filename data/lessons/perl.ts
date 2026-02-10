@@ -9,7 +9,7 @@ export const perlData = {
     {
       "title": "画面に文字を出してみましょう",
       "correctCode": "# printで出力\\nprint \"Hello, World!\\n\";",
-      "holeyCode": "# printで出力\\n___ \"Hello, World!\\n___",
+      "holeyCode": "# printで出力\\n___ \"___\\n___",
       "correctLines": [
           "# printで出力",
           "print \"Hello, World!",
@@ -27,7 +27,7 @@ export const perlData = {
           "strings": [
             "\"Hello, World!\\n\""
           ],
-          "others": ["\";"]
+          "others": ["\";", "Hello, World!"]
         },
         "testCases": [
           {
@@ -39,7 +39,7 @@ export const perlData = {
     {
       "title": "変数を使ってみましょう",
       "correctCode": "# 変数に文字を入れる\\nmy $message = \"Perl\";\\nprint \"$message\\n\";",
-      "holeyCode": "# 変数に文字を入れる\\nmy $___ = \"Perl\";\\n___ \"$message\\n___",
+      "holeyCode": "# 変数に文字を入れる\\n___ $___ = \"___\";\\n___ \"$___\\n___",
       "correctLines": [
           "# 変数に文字を入れる",
           "my $message = \"Perl\";",
@@ -59,7 +59,7 @@ export const perlData = {
             "local",
             "var"
           ],
-          "others": ["message", "print", "\";"]
+          "others": ["message", "print", "\";", "Perl"]
         },
         "testCases": [
           {
@@ -71,7 +71,7 @@ export const perlData = {
     {
       "title": "計算をしてみましょう",
       "correctCode": "# 足し算する\\nmy $a = 7;\\nmy $b = 3;\\n# 2つの変数を足し算する\\nmy $sum = $a + $b;\\nprint \"$sum\\n\";",
-      "holeyCode": "# 足し算する\\nmy $___ = 7;\\nmy $___ = 3;\\n# 2つの変数を足し算する\\nmy $___ = $a + $b;\\n___ \"$sum\\n___",
+      "holeyCode": "# 足し算する\\n___ $___ = ___;\\n___ $___ = ___;\\n# 2つの変数を足し算する\\n___ $___ = $___ ___ $___;\\n___ \"$___\\n___",
       "correctLines": [
           "# 足し算する",
           "my $a = 7;",
@@ -97,7 +97,7 @@ export const perlData = {
             "*",
             "/"
           ],
-          "others": ["a", "b", "sum", "print", "\";"]
+          "others": ["a", "b", "sum", "print", "\";", "my", "7", "3"]
         },
         "testCases": [
           {
@@ -109,7 +109,7 @@ export const perlData = {
     {
       "title": "文字をつなげましょう",
       "correctCode": "# 文字をつなげる\\nmy $greeting = \"Hello, \" . \"Perl!\";\\nprint \"$greeting\\n\";",
-      "holeyCode": "# 文字をつなげる\\nmy $___ = \"Hello, \" . \"Perl!\";\\n___ \"$greeting\\n___",
+      "holeyCode": "# 文字をつなげる\\n___ $___ = \"___\" ___ \"___\";\\n___ \"$___\\n___",
       "correctLines": [
           "# 文字をつなげる",
           "my $greeting = \"Hello, \" . \"Perl!\";",
@@ -129,7 +129,7 @@ export const perlData = {
             ",",
             "&"
           ],
-          "others": ["greeting", "print", "\";"]
+          "others": ["greeting", "print", "\";", "my", "Hello,", "Perl!"]
         },
         "testCases": [
           {
@@ -141,7 +141,7 @@ export const perlData = {
     {
       "title": "配列を使いましょう",
       "correctCode": "# 配列を作る\\nmy @fruits = (\"りんご\", \"みかん\", \"ぶどう\");\\nprint \"$fruits[0]\\n\";",
-      "holeyCode": "# 配列を作る\\nmy @___ = (\"りんご\", \"みかん\", \"ぶどう\");\\n___ \"$fruits[0]\\n___",
+      "holeyCode": "# 配列を作る\\n___ @___ = (\"___\", \"___\", \"___\");\\n___ \"$___[___]\\n___",
       "correctLines": [
           "# 配列を作る",
           "my @fruits = (\"りんご\", \"みかん\", \"ぶどう\");",
@@ -161,7 +161,7 @@ export const perlData = {
             "$fruits",
             "$colors"
           ],
-          "others": ["fruits", "print", "\";"]
+          "others": ["fruits", "print", "\";", "my", "りんご", "みかん", "ぶどう", "0"]
         },
         "testCases": [
           {
@@ -173,7 +173,7 @@ export const perlData = {
     {
       "title": "if文で条件分岐しましょう",
       "correctCode": "# 条件分岐\\nmy $score = 100;\\n# もしスコアが100なら\\nif ($score == 100) {\\n  print \"満点！\\n\";\\n}",
-      "holeyCode": "# 条件分岐\\nmy $___ = 100;\\n# もしスコアが100なら\\nif ($score ___ == ___) {\\n  ___ \"満点！\\n___\\n___",
+      "holeyCode": "# 条件分岐\\n___ $___ = ___;\\n# もしスコアが100なら\\n___ ($___ ___ ___) ___\\n  ___ \"___\\n___\\n___",
       "correctLines": [
           "# 条件分岐",
           "my $score = 100;",
@@ -199,7 +199,7 @@ export const perlData = {
             "while",
             "for"
           ],
-          "others": ["score", "==", "print", "}", "\";"]
+          "others": ["score", "==", "print", "}", "\";", "my", "100", "{", "満点！"]
         },
         "testCases": [
           {
@@ -211,7 +211,7 @@ export const perlData = {
     {
       "title": "if-elseを使いましょう",
       "correctCode": "# if-else\\nmy $num = 5;\\nif ($num >= 10) {\\n  print \"大きい\\n\";\\n# そうでなければ\\n} else {\\n  print \"小さい\\n\";\\n}",
-      "holeyCode": "# if-else\\nmy $___ = 5;\\nif ($num ___ >= ___) {\\n  ___ \"大きい\\n___\\n# そうでなければ\\n} ___ {\\n  ___ \"小さい\\n___\\n___",
+      "holeyCode": "# if-else\\n___ $___ = ___;\\n___ ($___ ___ ___) ___\\n  ___ \"___\\n___\\n# そうでなければ\\n___ ___ ___\\n  ___ \"___\\n___\\n___",
       "correctLines": [
           "# if-else",
           "my $num = 5;",
@@ -243,7 +243,7 @@ export const perlData = {
             "then",
             "otherwise"
           ],
-          "others": ["num", ">=", "{", "print", "}", "{", "\";"]
+          "others": ["num", ">=", "{", "print", "}", "{", "\";", "my", "5", "if", "10", "大きい", "小さい"]
         },
         "testCases": [
           {
@@ -255,7 +255,7 @@ export const perlData = {
     {
       "title": "foreachでループしましょう",
       "correctCode": "# 配列をループ\\nmy @animals = (\"犬\", \"猫\", \"鳥\");\\n# 配列の各要素について繰り返す\\nforeach my $animal (@animals) {\\n  print \"$animal\\n\";\\n}",
-      "holeyCode": "# 配列をループ\\nmy @___ = (\"犬\", \"猫\", \"鳥\");\\n# 配列の各要素について繰り返す\\nforeach my $animal (@___) {\\n  ___ \"$animal\\n___\\n___",
+      "holeyCode": "# 配列をループ\\n___ @___ = (\"___\", \"___\", \"___\");\\n# 配列の各要素について繰り返す\\n___ ___ $___ (@___) ___\\n  ___ \"$___\\n___\\n___",
       "correctLines": [
           "# 配列をループ",
           "my @animals = (\"犬\", \"猫\", \"鳥\");",
@@ -281,7 +281,7 @@ export const perlData = {
             "while",
             "until"
           ],
-          "others": ["animals", "print", "}", "\";"]
+          "others": ["animals", "print", "}", "\";", "my", "犬", "猫", "鳥", "animal", "{"]
         },
         "testCases": [
           {
@@ -293,7 +293,7 @@ export const perlData = {
     {
       "title": "ハッシュを使いましょう",
       "correctCode": "# ハッシュを作る\\nmy %fruit = (\"color\" => \"赤\");\\nprint \"$fruit{color}\\n\";",
-      "holeyCode": "# ハッシュを作る\\n___ %fruit = (\"___\" => \"赤\");\\n___ \"$fruit{color}\\n___",
+      "holeyCode": "# ハッシュを作る\\n___ %___ = (\"___\" ___ \"___\");\\n___ \"$___{___}\\n___",
       "correctLines": [
           "# ハッシュを作る",
           "my %fruit = (\"color\" => \"赤\");",
@@ -313,7 +313,7 @@ export const perlData = {
             "@fruit",
             "$fruit"
           ],
-          "others": ["color", "print", "my", "\";"]
+          "others": ["color", "print", "my", "\";", "fruit", "=>", "赤"]
         },
         "testCases": [
           {
@@ -325,7 +325,7 @@ export const perlData = {
     {
       "title": "サブルーチンを作りましょう",
       "correctCode": "# サブルーチンを定義\\nsub welcome {\\n  print \"Welcome!\\n\";\\n}\\n\\n# 呼び出し\\nwelcome();",
-      "holeyCode": "# サブルーチンを定義\\nsub ___ {\\n  ___ \"Welcome!\\n___\\n___\\n\\ ___\\n# 呼び出し\\n___();",
+      "holeyCode": "# サブルーチンを定義\\n___ ___ ___\\n  ___ \"___\\n___\\n___\\n\\n# 呼び出し\\n___();",
       "correctLines": [
           "# サブルーチンを定義",
           "sub welcome {",
@@ -353,7 +353,7 @@ export const perlData = {
             "function",
             "fn"
           ],
-          "others": ["welcome", "print", "}", "\";", "}"]
+          "others": ["welcome", "print", "}", "\";", "}", "{", "Welcome!"]
         },
         "testCases": [
           {

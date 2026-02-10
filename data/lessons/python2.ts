@@ -13,13 +13,17 @@ export const pythonData2 = {
     {
       "title": "戻り値（return）",
       "content": "`return` を使うと、関数の中で計算した結果を呼び出し元に「返す」ことができます。\\n\\n```python\\ndef add(a, b):\\n    return a + b\\n\\nresult = add(3, 5) # result に 8 が入る\\n```"
+    },
+    {
+      "title": "リスト内包表記",
+      "content": "**リスト内包表記**は、forループを1行で書ける便利な書き方です。\\n\\n```python\\n# 従来のforループ\\nnums = []\\nfor x in range(1, 4):\\n    nums.append(x * 2)\\n# nums = [2, 4, 6]\\n\\n# リスト内包表記なら1行！\\nnums = [x * 2 for x in range(1, 4)]\\n# nums = [2, 4, 6]\\n```\\n\\n**構文**: `[式 for 変数 in イテラブル]`\\n- `式`: 各要素に適用する処理（例: `x * 2`）\\n- `変数`: ループ変数（例: `x`）\\n- `イテラブル`: 繰り返し対象（例: `range(1, 4)`）"
     }
   ],
   "exercises": [
     {
       "title": "引数（ひきすう）を使った関数",
       "correctCode": "# 名前を受け取ってあいさつする関数\\ndef hello(name):\\n    # f-stringで名前を表示\\n    print(f'こんにちは、{name}！')\\n\\n# 関数を呼び出す\\nhello('Python')",
-      "holeyCode": "# 名前を受け取ってあいさつする関数\\ndef ___(name):\\n    # f-stringで名前を表示\\n    ___(f'こんにちは、{name}！')\\n\\n# 関数を呼び出す\\n___('Python')",
+      "holeyCode": "# 名前を受け取ってあいさつする関数\\ndef ___(___):\\n    # f-stringで名前を表示\\n    ___(f'こんにちは、{___}！')\\n\\n# 関数を呼び出す\\n___('___')",
       "correctLines": [
         "# 名前を受け取ってあいさつする関数",
         "def hello(name):",
@@ -31,12 +35,12 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "defキーワードで関数を定義します。",
+        "hello関数を定義し、引数nameを受け取ります。",
         null,
-        "f-stringを使って変数を埋め込んだメッセージを出力します。",
+        "printでf-stringを出力し、{name}で変数を埋め込みます。",
         null,
         null,
-        "定義した関数 hello を呼び出します。"
+        "hello関数に文字列Pythonを渡して呼び出します。"
       ],
       "candidates": {
         "variables": ["name"],
@@ -52,65 +56,67 @@ export const pythonData2 = {
     },
     {
       "title": "デフォルト引数",
-      "correctCode": "# デフォルト引数を持つsay_hi関数\\ndef say_hi(name='世界'):\\n    # やあ、名前！と表示\\n    print(f'やあ、{name}！')\\n\\n# 引数なしで呼び出す\\nsay_hi()",
-      "holeyCode": "# デフォルト引数を持つsay_hi関数\\ndef ___(name='世界'):\\n    # やあ、名前！と表示\\n    ___(f'やあ、{name}！')\\n\\n# 引数なしで呼び出す\\n___()",
+      "correctCode": "# デフォルト引数を持つsay_hello関数\\ndef say_hello(name='World'):\\n    # Hello, 名前!と表示\\n    print(f'Hello, {name}!')\\n\\n# 引数なしで呼び出す\\nsay_hello()",
+      "holeyCode": "# デフォルト引数を持つsay_hello関数\\ndef ___(___='___'):\\n    # Hello, 名前!と表示\\n    ___(f'Hello, {___}!')\\n\\n# 引数なしで呼び出す\\n___()",
       "correctLines": [
-        "# デフォルト引数を持つsay_hi関数",
-        "def say_hi(name='世界'):",
-        "    # やあ、名前！と表示",
-        "    print(f'やあ、{name}！')",
+        "# デフォルト引数を持つsay_hello関数",
+        "def say_hello(name='World'):",
+        "    # Hello, 名前!と表示",
+        "    print(f'Hello, {name}!')",
         "",
         "# 引数なしで呼び出す",
-        "say_hi()"
+        "say_hello()"
       ],
       "lineHints": [
         null,
-        "デフォルト引数を持つ関数を定義します。",
+        "say_hello関数を定義し、引数nameにデフォルト値'World'を設定します。",
         null,
-        "f-stringで引数を埋め込んだメッセージを出力します。",
+        "printでf-stringを出力し、{name}で変数を埋め込みます。",
         null,
         null,
-        "定義した関数 say_hi を引数なしで呼び出します。"
+        "say_hello関数を引数なしで呼び出します。"
       ],
       "candidates": {
-        "functions": ["say_hi", "print"],
-        "strings": ["世界"]
+        "variables": ["name"],
+        "functions": ["say_hello", "print"],
+        "strings": ["World"]
       },
       "testCases": [
         {
           "input": "",
-          "expected_output": "やあ、世界！\\n"
+          "expected_output": "Hello, World!\\n"
         }
       ]
     },
     {
       "title": "戻り値（return）",
-      "correctCode": "# 2つの数を足して返すadd関数\\ndef add(a, b):\\n    # 計算結果を返す\\n    return a + b\\n\\n# 結果を変数resultに入れて表示\\nresult = add(10, 20)\\nprint(result)",
-      "holeyCode": "# 2つの数を足して返すadd関数\\ndef ___(a, b):\\n    # 計算結果を返す\\n    ___ a + b\\n\\n# 結果を変数resultに入れて表示\\nresult = ___(10, 20)\\n___(result)",
+      "correctCode": "# 2つの数を足して返すadd関数\\ndef add(a, b):\\n    # 計算結果を返す\\n    return a + b\\n\\n# add関数を呼び出し（第1引数に10, 第2引数に20）\\nresult = add(10, 20)\\nprint(result)",
+      "holeyCode": "# 2つの数を足して返すadd関数\\ndef ___(___, ___):\\n    # 計算結果を返す\\n    ___ ___ + ___\\n\\n# add関数を呼び出し（第1引数に10, 第2引数に20）\\n___ = ___(___, ___)\\n___(___)",
       "correctLines": [
         "# 2つの数を足して返すadd関数",
         "def add(a, b):",
         "    # 計算結果を返す",
         "    return a + b",
         "",
-        "# 結果を変数resultに入れて表示",
+        "# add関数を呼び出し（第1引数に10, 第2引数に20）",
         "result = add(10, 20)",
         "print(result)"
       ],
       "lineHints": [
         null,
-        "2つの引数を受け取る関数を定義します。",
+        "add関数を定義し、引数a, bを受け取ります。",
         null,
-        "計算結果を呼び出し元に返します。",
+        "returnでa + bの計算結果を返します。",
         null,
         null,
-        "add関数を呼び出して結果を変数 result に代入します。",
-        "関数の戻り値を出力します。"
+        "resultにadd(10, 20)の戻り値を代入します。",
+        "printでresultを出力します。"
       ],
       "candidates": {
         "keywords": ["return"],
+        "variables": ["a", "b", "result"],
         "functions": ["add", "print"],
-        "others": ["result"]
+        "others": ["10", "20"]
       },
       "testCases": [
         {
@@ -121,12 +127,12 @@ export const pythonData2 = {
     },
     {
       "title": "複数の戻り値",
-      "correctCode": "# 2つの値を返すcalc関数\\ndef calc(x):\\n    # カンマで区切って複数の値を返す\\n    return x + 1, x * 2\\n\\n# 2つの変数a, bで受け取る\\na, b = calc(5)\\nprint(a)\\nprint(b)",
-      "holeyCode": "# 2つの値を返すcalc関数\\ndef ___(x):\\n    # カンマで区切って複数の値を返す\\n    return x + 1, x ___ 2\\n\\n# 2つの変数a, bで受け取る\\na, b = ___(5)\\n___(a)\\n___(b)",
+      "correctCode": "# 2つの値を返すcalc関数\\ndef calc(x):\\n    # x+1, x*2の順で返す\\n    return x + 1, x * 2\\n\\n# 2つの変数a, bで受け取る\\na, b = calc(5)\\nprint(a)\\nprint(b)",
+      "holeyCode": "# 2つの値を返すcalc関数\\ndef ___(___):\\n    # x+1, x*2の順で返す\\n    ___ ___ + 1, ___ ___ 2\\n\\n# 2つの変数a, bで受け取る\\n___, ___ = ___(___)\\n___(___)\\n___(___)",
       "correctLines": [
         "# 2つの値を返すcalc関数",
         "def calc(x):",
-        "    # カンマで区切って複数の値を返す",
+        "    # x+1, x*2の順で返す",
         "    return x + 1, x * 2",
         "",
         "# 2つの変数a, bで受け取る",
@@ -136,18 +142,21 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "複数の戻り値を返す関数を定義します。",
+        "calc関数を定義し、引数xを受け取ります。",
         null,
-        "乗算演算子を使って2倍の値を計算します。",
+        "returnでx+1とx*2の2つの値を返します。",
         null,
         null,
-        "calc関数を呼び出して結果を a と b に代入します。",
-        "戻り値の1つ目を出力します。",
-        "戻り値の2つ目を出力します。"
+        "a, bにcalc(5)の戻り値を代入します。",
+        "printでaを出力します。",
+        "printでbを出力します。"
       ],
       "candidates": {
+        "keywords": ["return"],
         "operators": ["*"],
-        "functions": ["calc", "print"]
+        "variables": ["x", "a", "b"],
+        "functions": ["calc", "print"],
+        "others": ["5"]
       },
       "testCases": [
         {
@@ -159,7 +168,7 @@ export const pythonData2 = {
     {
       "title": "文字列スライス",
       "correctCode": "# wordに'Python'を代入\\nword = 'Python'\\n# 最初の2文字（インデックス0から2の手前まで）を表示\\nprint(word[0:2])",
-      "holeyCode": "# wordに'Python'を代入\\nword = '___'\\n# 最初の2文字（インデックス0から2の手前まで）を表示\\n___(word[0:___])",
+      "holeyCode": "# wordに'Python'を代入\\n___ = '___'\\n# 最初の2文字（インデックス0から2の手前まで）を表示\\n___(___[___:___])",
       "correctLines": [
         "# wordに'Python'を代入",
         "word = 'Python'",
@@ -168,14 +177,15 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "スライス対象の文字列を変数に代入します。",
+        "wordに文字列'Python'を代入します。",
         null,
-        "[開始:終了]でスライスした結果を出力します。"
+        "printでword[0:2]のスライス結果を出力します。"
       ],
       "candidates": {
+        "variables": ["word"],
         "strings": ["Python"],
         "functions": ["print"],
-        "numbers": ["2", "0"]
+        "numbers": ["0", "2"]
       },
       "testCases": [
         {
@@ -187,7 +197,7 @@ export const pythonData2 = {
     {
       "title": "リスト内包表記",
       "correctCode": "# 1から5までの数を2倍にしたリストdoubledを作る\\ndoubled = [x * 2 for x in range(1, 6)]\\n# リストを表示\\nprint(doubled)",
-      "holeyCode": "# 1から5までの数を2倍にしたリストdoubledを作る\\ndoubled = [x * 2 ___ x in range(1, 6)]\\n# リストを表示\\n___(doubled)",
+      "holeyCode": "# 1から5までの数を2倍にしたリストdoubledを作る\\n___ = [___ * 2 ___ ___ in ___(___, ___)]\\n# リストを表示\\n___(___)",
       "correctLines": [
         "# 1から5までの数を2倍にしたリストdoubledを作る",
         "doubled = [x * 2 for x in range(1, 6)]",
@@ -196,13 +206,15 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "内包表記で各要素を順番に処理します。",
+        "doubledにリスト内包表記[x*2 for x in range(1,6)]を代入します。",
         null,
-        "結果のリストを出力します。"
+        "printでdoubledを出力します。"
       ],
       "candidates": {
         "keywords": ["for"],
-        "functions": ["print"]
+        "variables": ["doubled", "x"],
+        "functions": ["print", "range"],
+        "numbers": ["1", "6"]
       },
       "testCases": [
         {
@@ -214,7 +226,7 @@ export const pythonData2 = {
     {
       "title": "条件付きリスト内包表記",
       "correctCode": "# 1から10で偶数（2の倍数）だけを集めるevensを作る\\nevens = [n for n in range(1, 11) if n % 2 == 0]\\n# リストを表示\\nprint(evens)",
-      "holeyCode": "# 1から10で偶数（2の倍数）だけを集めるevensを作る\\nevens = [n for n in range(1, 11) ___ n % 2 == 0]\\n# リストを表示\\n___(evens)",
+      "holeyCode": "# 1から10で偶数（2の倍数）だけを集めるevensを作る\\n___ = [___ for ___ in ___(___, ___) ___ ___ % ___ == ___]\\n# リストを表示\\n___(___)",
       "correctLines": [
         "# 1から10で偶数（2の倍数）だけを集めるevensを作る",
         "evens = [n for n in range(1, 11) if n % 2 == 0]",
@@ -223,13 +235,15 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "条件を満たす要素だけをフィルタリングします。",
+        "evensに条件付きリスト内包表記[n for n in range(1,11) if n%2==0]を代入します。",
         null,
-        "結果のリストを出力します。"
+        "printでevensを出力します。"
       ],
       "candidates": {
-        "keywords": ["if"],
-        "functions": ["print"]
+        "keywords": ["for", "if"],
+        "variables": ["evens", "n"],
+        "functions": ["print", "range"],
+        "numbers": ["0", "1", "2", "11"]
       },
       "testCases": [
         {
@@ -241,7 +255,7 @@ export const pythonData2 = {
     {
       "title": "例外処理（try-except）",
       "correctCode": "# エラーが起きる可能性のある処理をtryに入れる\\ntry:\\n    # 文字列を数値に変換（エラーになる）\\n    num = int('abc')\\n# エラーが起きたときの処理をexceptに入れる\\nexcept:\\n    # 'エラー'と表示\\n    print('エラー')",
-      "holeyCode": "# エラーが起きる可能性のある処理をtryに入れる\\n___:\\n    # 文字列を数値に変換（エラーになる）\\n    num = int('abc')\\n# エラーが起きたときの処理をexceptに入れる\\n___:\\n    # 'エラー'と表示\\n    ___('エラー')",
+      "holeyCode": "# エラーが起きる可能性のある処理をtryに入れる\\n___:\\n    # 文字列を数値に変換（エラーになる）\\n    ___ = ___('___')\\n# エラーが起きたときの処理をexceptに入れる\\n___:\\n    # 'エラー'と表示\\n    ___('___')",
       "correctLines": [
         "# エラーが起きる可能性のある処理をtryに入れる",
         "try:",
@@ -256,7 +270,7 @@ export const pythonData2 = {
         null,
         "例外が発生する可能性のあるコードを囲みます。",
         null,
-        null,
+        "numにint('abc')の結果を代入しようとしてエラーが発生します。",
         null,
         "例外が発生したときの処理を定義します。",
         null,
@@ -264,7 +278,9 @@ export const pythonData2 = {
       ],
       "candidates": {
         "keywords": ["try", "except"],
-        "functions": ["print"]
+        "variables": ["num"],
+        "functions": ["print", "int"],
+        "strings": ["abc", "エラー"]
       },
       "testCases": [
         {
@@ -276,7 +292,7 @@ export const pythonData2 = {
     {
       "title": "クラスの基本",
       "correctCode": "# Catクラスを定義\\nclass Cat:\\n    # meowメソッドを定義\\n    def meow(self):\\n        # 'ニャー！'を表示\\n        print('ニャー！')\\n\\n# インスタンスcatを作って呼び出す\\ncat = Cat()\\ncat.meow()",
-      "holeyCode": "# Catクラスを定義\\nclass ___:\\n    # meowメソッドを定義\\n    def ___(self):\\n        # 'ニャー！'を表示\\n        ___('ニャー！')\\n\\n# インスタンスcatを作って呼び出す\\ncat = ___()\\ncat.___()",
+      "holeyCode": "# Catクラスを定義\\n___ ___:\\n    # meowメソッドを定義\\n    ___ ___(___):\\n        # 'ニャー！'を表示\\n        ___('___')\\n\\n# インスタンスcatを作って呼び出す\\n___ = ___()\\n___.___()",
       "correctLines": [
         "# Catクラスを定義",
         "class Cat:",
@@ -291,19 +307,21 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "classキーワードでクラスを定義します。",
+        "classキーワードでCatクラスを定義します。",
         null,
-        "クラス内でメソッドを定義します。",
+        "defキーワードでmeowメソッドを定義し、selfを受け取ります。",
         null,
-        "メソッド内で実行される出力処理です。",
+        "printで'ニャー！'を出力します。",
         null,
         null,
-        "クラス Cat を呼び出してインスタンスを生成します。",
-        "インスタンスの meow メソッドを呼び出します。"
+        "catにCat()のインスタンスを代入します。",
+        "cat.meow()でメソッドを呼び出します。"
       ],
       "candidates": {
-        "variables": ["self"],
-        "functions": ["meow", "Cat", "print"]
+        "keywords": ["class", "def"],
+        "variables": ["self", "cat"],
+        "functions": ["meow", "Cat", "print"],
+        "strings": ["ニャー！"]
       },
       "testCases": [
         {

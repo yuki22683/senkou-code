@@ -9,7 +9,7 @@ export const phpData = {
     {
       "title": "画面に文字を出してみましょう",
       "correctCode": "<?php\\n  // 画面にメッセージを出す関数\\n  echo \"Hello, PHP!\";\\n?>",
-      "holeyCode": "___\\n  // 画面にメッセージを出す関数\\n  ___ \"Hello, PHP!\";\\n___",
+      "holeyCode": "___\\n  // 画面にメッセージを出す関数\\n  ___ \"___\";\\n___",
       "correctLines": [
           "<?php",
           "  // 画面にメッセージを出す関数",
@@ -29,7 +29,7 @@ export const phpData = {
           "strings": [
             "Hello, PHP!"
           ],
-          "others": ["<?php", "?>", "<?php"]
+          "others": ["<?php", "?>"]
         },
         "testCases": [
           {
@@ -41,7 +41,7 @@ export const phpData = {
     {
       "title": "便利な「はこ」",
       "correctCode": "<?php\\n  // x というはこに 10 を入れる\\n  $x = 10;\\n  // $x の中身を表示する\\n  echo $x;\\n?>",
-      "holeyCode": "___\\n  // x というはこに 10 を入れる\\n  $___ = ___;\\n  // $x の中身を表示する\\n  echo ___;\\n___",
+      "holeyCode": "___\\n  // x というはこに 10 を入れる\\n  $___ = ___;\\n  // $x の中身を表示する\\n  ___ $___;\\n___",
       "correctLines": [
           "<?php",
           "  // x というはこに 10 を入れる",
@@ -65,7 +65,7 @@ export const phpData = {
           "numbers": [
             "10"
           ],
-          "others": ["10;", "x;", "<?php", "$x", "?>", "<?php"]
+          "others": ["<?php", "echo", "?>"]
         },
         "testCases": [
           {
@@ -77,7 +77,7 @@ export const phpData = {
     {
       "title": "コンピュータで計算しましょう",
       "correctCode": "<?php\\n  // はこに数字を入れる\\n  $a = 5;\\n  $b = 3;\\n  // たし算した結果を表示する\\n  echo $a + $b;\\n?>",
-      "holeyCode": "___\\n  // はこに数字を入れる\\n  $___ = ___;\\n  $___ = ___;\\n  // たし算した結果を表示する\\n  echo ___ + $b;\\n___",
+      "holeyCode": "___\\n  // はこに数字を入れる\\n  $___ = ___;\\n  $___ = ___;\\n  // たし算した結果を表示する\\n  ___ ___ + $___;\\n___",
       "correctLines": [
           "<?php",
           "  // はこに数字を入れる",
@@ -100,7 +100,7 @@ export const phpData = {
           "operators": [
             "+"
           ],
-          "others": ["<?php", "a", "5", "b", "3", "$a", "?>", "<?php"]
+          "others": ["<?php", "a", "5", "b", "3", "echo", "$a", "?>"]
         },
         "testCases": [
           {
@@ -112,7 +112,7 @@ export const phpData = {
     {
       "title": "剰余演算子（%）",
       "correctCode": "<?php\\n  // 10 を 3 で割ったあまりを出力する\\n  echo 10 % 3;\\n?>",
-      "holeyCode": "___\\n  // 10 を 3 で割ったあまりを出力する\\n  echo ___ % 3;\\n___",
+      "holeyCode": "___\\n  // 10 を 3 で割ったあまりを出力する\\n  ___ ___ ___ ___;\\n___",
       "correctLines": [
           "<?php",
           "  // 10 を 3 で割ったあまりを出力する",
@@ -133,7 +133,7 @@ export const phpData = {
             "*",
             "/"
           ],
-          "others": ["<?php", "10", "?>", "<?php"]
+          "others": ["<?php", "echo", "10", "3", "?>"]
         },
         "testCases": [
           {
@@ -145,7 +145,7 @@ export const phpData = {
     {
       "title": "累算代入演算子（+=、-=）",
       "correctCode": "<?php\\n  // scoreに50を入れる\\n  $score = 50;\\n  // 10点プラスする\\n  $score += 10;\\n  // score;を表示\\n  echo $score;\\n?>",
-      "holeyCode": "___\\n  // scoreに50を入れる\\n  $___ = ___;\\n  // 10点プラスする\\n  $score += ___;\\n  // score;を表示\\n  echo ___;\\n___",
+      "holeyCode": "___\\n  // scoreに50を入れる\\n  $___ = ___;\\n  // 10点プラスする\\n  $___ ___ ___;\\n  // score;を表示\\n  ___ $___;\\n___",
       "correctLines": [
           "<?php",
           "  // scoreに50を入れる",
@@ -177,7 +177,7 @@ export const phpData = {
             "50",
             "10"
           ],
-          "others": ["<?php", "score", "$score", "?>", "<?php"]
+          "others": ["<?php", "score", "echo", "?>"]
         },
         "testCases": [
           {
@@ -189,7 +189,7 @@ export const phpData = {
     {
       "title": "文章の中に「はこ」を入れましょう",
       "correctCode": "<?php\\n  // ageに20を入れる\\n  $age = 20;\\n  // $ageを文章に埋め込んで表示する\\n  echo \"I am $age years old.\";\\n?>",
-      "holeyCode": "___\\n  // ageに20を入れる\\n  $___ = ___;\\n  // $ageを文章に埋め込んで表示する\\n  ___ \"I am $age years old.\";\\n___",
+      "holeyCode": "___\\n  // ageに20を入れる\\n  $___ = ___;\\n  // $ageを文章に埋め込んで表示する\\n  ___ \"___\";\\n___",
       "correctLines": [
           "<?php",
           "  // ageに20を入れる",
@@ -210,7 +210,10 @@ export const phpData = {
           "variables": [
             "age"
           ],
-          "others": ["<?php", "20", "echo", "?>", "<?php"]
+          "strings": [
+            "I am $age years old."
+          ],
+          "others": ["<?php", "20", "echo", "?>"]
         },
         "testCases": [
           {
@@ -222,7 +225,7 @@ export const phpData = {
     {
       "title": "データをならべる「配列」",
       "correctCode": "<?php\\n  // 配列を作る\\n  $fruits = ['りんご', 'バナナ'];\\n  // 2番目のデータを表示する\\n  echo $fruits[1];\\n?>",
-      "holeyCode": "___\\n  // 配列を作る\\n  $___ = [___];\\n  // 2番目のデータを表示する\\n  echo ___[1];\\n___",
+      "holeyCode": "___\\n  // 配列を作る\\n  $___ = [___];\\n  // 2番目のデータを表示する\\n  ___ $___[___];\\n___",
       "correctLines": [
           "<?php",
           "  // 配列を作る",
@@ -243,7 +246,7 @@ export const phpData = {
           "numbers": [
             "1"
           ],
-          "others": ["<?php", "fruits", "'りんご', 'バナナ'", "$fruits", "?>", "<?php"]
+          "others": ["<?php", "fruits", "'りんご', 'バナナ'", "echo", "?>"]
         },
         "testCases": [
           {
@@ -255,7 +258,7 @@ export const phpData = {
     {
       "title": "「もし〜なら」で分けましょう",
       "correctCode": "<?php\\n  // scoreに100を入れる\\n  $score = 100;\\n  // >で大きいか比較\\n  if ($score > 80) {\\n    // メッセージ（'大変良い'）\\n    echo \"大変良い\";\\n  }\\n?>",
-      "holeyCode": "___\\n  // scoreに100を入れる\\n  $___ = ___;\\n  // >で大きいか比較\\n  if ($score ___ > ___) {\\n    // メッセージ（'大変良い'）\\n    ___ \"大変良い\";\\n  ___\\n___",
+      "holeyCode": "___\\n  // scoreに100を入れる\\n  $___ = ___;\\n  // >で大きいか比較\\n  if ($___ ___ ___) ___\\n    // メッセージ（'大変良い'）\\n    ___ \"___\";\\n  ___\\n___",
       "correctLines": [
           "<?php",
           "  // scoreに100を入れる",
@@ -282,7 +285,7 @@ export const phpData = {
           "operators": [
             ">"
           ],
-          "others": ["100", "大変良い", "<?php", "score", "echo", "}", "?>", "<?php", "}"]
+          "others": ["<?php", "score", "100", "80", "{", "echo", "大変良い", "}", "?>"]
         },
         "testCases": [
           {
@@ -294,7 +297,7 @@ export const phpData = {
     {
       "title": "ちがう場合はどうしましょう？",
       "correctCode": "<?php\\n  // ageに18を入れる\\n  $age = 18;\\n  // 20以上かを比較する演算子\\n  if ($age >= 20) {\\n    // 20歳以上のときのメッセージ（'大人'）\\n    echo \"大人\";\\n  // elseで「そうでなければ」\\n  } else {\\n    // それ以外のメッセージ（'未成年'）\\n    echo \"未成年\";\\n  }\\n?>",
-      "holeyCode": "___\\n  // ageに18を入れる\\n  $___ = ___;\\n  // 20以上かを比較する演算子\\n  if ($age ___ >= ___) {\\n    // 20歳以上のときのメッセージ（'大人'）\\n    ___ \"大人\";\\n  // elseで「そうでなければ」\\n  } ___ {\\n    // それ以外のメッセージ（'未成年'）\\n    ___ \"未成年\";\\n  ___\\n___",
+      "holeyCode": "___\\n  // ageに18を入れる\\n  $___ = ___;\\n  // 20以上かを比較する演算子\\n  if ($___ ___ ___) ___\\n    // 20歳以上のときのメッセージ（'大人'）\\n    ___ \"___\";\\n  // elseで「そうでなければ」\\n  ___ ___ ___\\n    // それ以外のメッセージ（'未成年'）\\n    ___ \"___\";\\n  ___\\n___",
       "correctLines": [
           "<?php",
           "  // ageに18を入れる",
@@ -329,7 +332,10 @@ export const phpData = {
           "keywords": [
             "else"
           ],
-          "others": ["18", ">=", "大人", "未成年", "<?php", "age", "{", "echo", "}", "?>", "<?php", "{", "}"]
+          "operators": [
+            ">="
+          ],
+          "others": ["<?php", "age", "18", "20", "{", "echo", "大人", "}", "未成年", "?>"]
         },
         "testCases": [
           {
@@ -341,7 +347,7 @@ export const phpData = {
     {
       "title": "論理演算子（&&、||）",
       "correctCode": "<?php\\n  // scoreに85を入れる\\n  $score = 85;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($score >= 80 && $score <= 100) {\\n    // 結果を出力\\n    echo \"合格\";\\n  }\\n?>",
-      "holeyCode": "___\\n  // scoreに85を入れる\\n  $___ = ___;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($score >= ___ && $score <= 100) {\\n    // 結果を出力\\n    ___ \"合格\";\\n  ___\\n___",
+      "holeyCode": "___\\n  // scoreに85を入れる\\n  $___ = ___;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($___ ___ ___ ___ $___ ___ ___) ___\\n    // 結果を出力\\n    ___ \"___\";\\n  ___\\n___",
       "correctLines": [
           "<?php",
           "  // scoreに85を入れる",
@@ -367,15 +373,19 @@ export const phpData = {
         "candidates": {
           "operators": [
             "&&",
-            "||"
+            "||",
+            ">=",
+            "<="
           ],
           "numbers": [
-            "85"
+            "85",
+            "80",
+            "100"
           ],
           "strings": [
             "合格"
           ],
-          "others": ["<?php", "score", "80", "echo", "}", "?>", "<?php", "}"]
+          "others": ["<?php", "score", "{", "echo", "}", "?>"]
         },
         "testCases": [
           {
@@ -387,7 +397,7 @@ export const phpData = {
     {
       "title": "中身を全部出してみましょう",
       "correctCode": "<?php\\n  $nums = [1, 2, 3];\\n  // asで各要素を取り出す\\n  foreach ($nums as $n) {\\n    echo $n;\\n  }\\n?>",
-      "holeyCode": "___\\n  $___ = [___];\\n  // asで各要素を取り出す\\n  foreach ($nums as $___) {\\n    echo ___;\\n  ___\\n___",
+      "holeyCode": "___\\n  $___ = [___];\\n  // asで各要素を取り出す\\n  foreach ($___ ___ $___) ___\\n    ___ $___;\\n  ___\\n___",
       "correctLines": [
           "<?php",
           "  $nums = [1, 2, 3];",
@@ -410,7 +420,7 @@ export const phpData = {
           "keywords": [
             "as"
           ],
-          "others": ["<?php", "nums", "1, 2, 3", "n", "$n", "}", "?>", "<?php", "}", "}", "}\\"]
+          "others": ["<?php", "nums", "1, 2, 3", "n", "{", "echo", "}", "?>"]
         },
         "testCases": [
           {
@@ -422,7 +432,7 @@ export const phpData = {
     {
       "title": "名前で探しましょう「連想配列」",
       "correctCode": "<?php\\n  $user = ['名前' => 'アリス'];\\n  // nameでキーを指定してアクセス\\n  echo $user['名前'];\\n?>",
-      "holeyCode": "___\\n  $___ = [___];\\n  // nameでキーを指定してアクセス\\n  echo ___['名前'];\\n___",
+      "holeyCode": "___\\n  $___ = [___];\\n  // nameでキーを指定してアクセス\\n  ___ $___['___'];\\n___",
       "correctLines": [
           "<?php",
           "  $user = ['名前' => 'アリス'];",
@@ -441,7 +451,7 @@ export const phpData = {
           "strings": [
             "名前"
           ],
-          "others": ["<?php", "user", "'名前' => 'アリス'", "$user", "?>", "<?php"]
+          "others": ["<?php", "user", "'名前' => 'アリス'", "echo", "?>"]
         },
         "testCases": [
           {
@@ -453,7 +463,7 @@ export const phpData = {
     {
       "title": "自分だけの関数を作りましょう",
       "correctCode": "<?php\\n  function greet() {\\n    echo \"こんにちは\";\\n  }\\n  // 関数を実行する\\n  greet();\\n?>",
-      "holeyCode": "___\\n  function ___() {\\n    ___ \"こんにちは\";\\n  ___\\n  // 関数を実行する\\n  ___();\\n___",
+      "holeyCode": "___\\n  function ___() ___\\n    ___ \"___\";\\n  ___\\n  // 関数を実行する\\n  ___();\\n___",
       "correctLines": [
           "<?php",
           "  function greet() {",
@@ -476,7 +486,10 @@ export const phpData = {
           "functions": [
             "greet"
           ],
-          "others": ["<?php", "echo", "}", "?>", "<?php", "}"]
+          "strings": [
+            "こんにちは"
+          ],
+          "others": ["<?php", "{", "echo", "}", "?>"]
         },
         "testCases": [
           {

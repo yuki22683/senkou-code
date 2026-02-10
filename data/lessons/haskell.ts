@@ -9,7 +9,7 @@ export const haskellData = {
     {
       "title": "画面に文字を出してみましょう",
       "correctCode": "-- Welcome to FP!を表示\\nmain = putStrLn \"Welcome to FP!\"",
-      "holeyCode": "-- Welcome to FP!を表示\\n___ = putStrLn \"___\"",
+      "holeyCode": "-- Welcome to FP!を表示\\n___ = ___ \"___\"",
       "correctLines": [
           "-- Welcome to FP!を表示",
           "main = putStrLn \"Welcome to FP!\""
@@ -37,7 +37,7 @@ export const haskellData = {
     {
       "title": "名前に「あたい」をつけましょう",
       "correctCode": "-- 10を入力\\nx = 10\\n-- xを入力\\nmain = print x",
-      "holeyCode": "-- 10を入力\\nx = ___\\n-- xを入力\\nmain = print ___",
+      "holeyCode": "-- 10を入力\\n___ = ___\\n-- xを入力\\n___ = ___ ___",
       "correctLines": [
           "-- 10を入力",
           "x = 10",
@@ -57,7 +57,7 @@ export const haskellData = {
           "numbers": [
             "10"
           ],
-          "others": ["10"]
+          "others": ["main", "print", "x"]
         },
         "testCases": [
           {
@@ -69,7 +69,7 @@ export const haskellData = {
     {
       "title": "コンピュータで計算しましょう",
       "correctCode": "-- 5を入力\\na = 5\\n-- 3を入力\\nb = 3\\n-- +でたし算\\nmain = print (a + b)",
-      "holeyCode": "-- 5を入力\\na = ___\\n-- 3を入力\\nb = ___\\n-- +でたし算\\nmain = print (a + ___)",
+      "holeyCode": "-- 5を入力\\n___ = ___\\n-- 3を入力\\n___ = ___\\n-- +でたし算\\n___ = ___ (___ ___ ___)",
       "correctLines": [
           "-- 5を入力",
           "a = 5",
@@ -90,7 +90,7 @@ export const haskellData = {
           "operators": [
             "+"
           ],
-          "others": ["5", "3", "b", "5", "3"]
+          "others": ["main", "print", "a", "b", "5", "3"]
         },
         "testCases": [
           {

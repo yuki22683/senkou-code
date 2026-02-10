@@ -9,7 +9,7 @@ export const typescriptData3 = {
     {
       "title": "Partial<T>",
       "correctCode": "interface Config {\\n  // ホスト名の型\\n  host: string;\\n  // ポート番号の型\\n  port: number;\\n}\\n// Partial で全プロパティをオプショナルに\\nfunction update(config: Config, patch: Partial<Config>): Config {\\n  return { ...config, ...patch };\\n}\\n\\n// cfgに{host: 'localhost', port: 3000}を代入\\nconst cfg = { host: 'localhost', port: 3000 };\\n// 更新してポートを出力\\nconsole.log(update(cfg, { port: 8080 }).port);",
-      "holeyCode": "interface ___ {\\n  // ホスト名の型\\n  host: ___;\\n  // ポート番号の型\\n  port: ___;\\n___\\n// Partial で全プロパティをオプショナルに\\nfunction update(config: ___, patch: Partial<Config>): Config {\\n  return { ...config, ...___ };\\n___\\n___\\n// cfgに{host: 'localhost', port: 3000}を代入\\nconst ___ = { host: 'localhost', port: 3000 };\\n// 更新してポートを出力\\nconsole.___(update(cfg, { port: 8080 }).port);",
+      "holeyCode": "interface ___ {\\n  // ホスト名の型\\n  ___: ___;\\n  // ポート番号の型\\n  ___: ___;\\n___\\n// Partial で全プロパティをオプショナルに\\nfunction ___(___: ___, ___: ___<___>): ___ {\\n  return { ...___, ...___ };\\n___\\n___\\n// cfgに{host: 'localhost', port: 3000}を代入\\nconst ___ = { ___: '___', ___: ___ };\\n// 更新してポートを出力\\n___.___(___(___, { ___: ___ }).___);",
       "correctLines": [
           "interface Config {",
           "  // ホスト名の型",
@@ -28,21 +28,21 @@ export const typescriptData3 = {
           "console.log(update(cfg, { port: 8080 }).port);"
         ],
       "lineHints": [
-          "ホスト名は文字列なので `string` です。",
+          "Configインターフェースを定義します。",
           null,
-          "ポート番号は数値なので `number` です。",
+          "hostプロパティはstring型です。",
           null,
-          "Partial で全プロパティをオプショナルにします。",
-          "ポート番号の初期値を数値で指定します。",
+          "portプロパティはnumber型です。",
+          "閉じ括弧でインターフェース定義を終了します。",
           null,
-          "取得したいプロパティ名を指定します。",
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "update関数を定義し、引数と戻り値の型を指定します。Partialで全プロパティをオプショナルにします。",
+          "スプレッド構文でオブジェクトをマージして返します。",
+          "閉じ括弧で関数定義を終了します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "cfgにホスト名とポート番号を持つオブジェクトを代入します。",
           null,
-          "ここを正しく入力してください。"
+          "console.logでupdate関数を呼び出し、ポートプロパティを出力します。"
         ],
         "candidates": {
           "types": [
@@ -50,7 +50,7 @@ export const typescriptData3 = {
             "Required",
             "Pick"
           ],
-          "others": ["string", "number", "3000", "port", "Config", "}", "patch", "cfg", "log"]
+          "others": ["string", "number", "3000", "port", "Config", "}", "patch", "cfg", "log", "host", "update", "config", "localhost", "8080", "console"]
         },
         "testCases": [
           {
@@ -62,7 +62,7 @@ export const typescriptData3 = {
     {
       "title": "Required<T>",
       "correctCode": "interface Options {\\n  // デバッグ設定の型\\n  debug?: boolean;\\n  // 詳細出力設定の型\\n  verbose?: boolean;\\n}\\n// Required で全プロパティを必須に\\nfunction init(opts: Required<Options>) {\\n  // debugを出力\\n  console.log(opts.debug);\\n}\\n\\n// オプションを渡して初期化\\ninit({ debug: true, verbose: false });",
-      "holeyCode": "interface ___ {\\n  // デバッグ設定の型\\n  debug?: ___;\\n  // 詳細出力設定の型\\n  verbose?: ___;\\n___\\n// Required で全プロパティを必須に\\nfunction init(opts: Required<___>) {\\n  // debugを出力\\n  console.___(opts.debug);\\n___\\n___\\n// オプションを渡して初期化\\n___({ debug: true, verbose: false });",
+      "holeyCode": "interface ___ {\\n  // デバッグ設定の型\\n  ___?: ___;\\n  // 詳細出力設定の型\\n  ___?: ___;\\n___\\n// Required で全プロパティを必須に\\nfunction ___(___: ___<___>) {\\n  // debugを出力\\n  ___.___(___.___);\\n___\\n___\\n// オプションを渡して初期化\\n___({ ___: ___, ___: ___ });",
       "correctLines": [
           "interface Options {",
           "  // デバッグ設定の型",
@@ -80,20 +80,20 @@ export const typescriptData3 = {
           "init({ debug: true, verbose: false });"
         ],
       "lineHints": [
-          "デバッグ設定は真偽値なので `boolean` です。",
+          "Optionsインターフェースを定義します。",
           null,
-          "詳細出力設定は真偽値なので `boolean` です。",
+          "debugプロパティはboolean型のオプショナルです。",
           null,
-          "Required で全プロパティを必須にします。",
-          "取得したいプロパティ名を指定します。",
+          "verboseプロパティはboolean型のオプショナルです。",
+          "閉じ括弧でインターフェース定義を終了します。",
           null,
-          "verboseの値を真偽値で指定します。",
+          "init関数を定義し、Required型でオプショナルを必須にします。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "console.logでopts.debugを出力します。",
+          "閉じ括弧で関数定義を終了します。",
           null,
           null,
-          "ここを正しく入力してください。"
+          "init関数を呼び出し、debugとverboseを指定します。"
         ],
         "candidates": {
           "types": [
@@ -101,7 +101,7 @@ export const typescriptData3 = {
             "Partial",
             "Readonly"
           ],
-          "others": ["boolean", "debug", "false", "Options", "}", "log", "init"]
+          "others": ["boolean", "debug", "false", "Options", "}", "log", "init", "opts", "verbose", "true", "console"]
         },
         "testCases": [
           {
@@ -113,7 +113,7 @@ export const typescriptData3 = {
     {
       "title": "Pick<T, K>",
       "correctCode": "interface Product {\\n  // IDの型\\n  id: number;\\n  // 名前の型\\n  name: string;\\n  // 価格の型\\n  price: number;\\n}\\n// Pick で特定のプロパティを選択\\ntype ProductName = Pick<Product, 'name'>;\\n\\n// 商品名のみを持つオブジェクト\\nconst item: ProductName = { name: 'りんご' };\\n// 名前を出力\\nconsole.log(item.name);",
-      "holeyCode": "interface ___ {\\n  // IDの型\\n  id: ___;\\n  // 名前の型\\n  name: ___;\\n  // 価格の型\\n  price: ___;\\n___\\n// Pick で特定のプロパティを選択\\ntype ProductName = Pick<Product, '___'>;\\n___\\n// 商品名のみを持つオブジェクト\\nconst item: ProductName = { name: '___' };\\n// 名前を出力\\nconsole.___(item.name);",
+      "holeyCode": "interface ___ {\\n  // IDの型\\n  ___: ___;\\n  // 名前の型\\n  ___: ___;\\n  // 価格の型\\n  ___: ___;\\n___\\n// Pick で特定のプロパティを選択\\ntype ___ = ___<___, '___'>;\\n___\\n// 商品名のみを持つオブジェクト\\nconst ___: ___ = { ___: '___' };\\n// 名前を出力\\n___.___(___.___);",
       "correctLines": [
           "interface Product {",
           "  // IDの型",
@@ -132,21 +132,21 @@ export const typescriptData3 = {
           "console.log(item.name);"
         ],
       "lineHints": [
-          "IDは数値なので `number` です。",
+          "Productインターフェースを定義します。",
           null,
-          "名前は文字列なので `string` です。",
+          "idプロパティはnumber型です。",
           null,
-          "価格は数値なので `number` です。",
+          "nameプロパティはstring型です。",
           null,
-          "Pick で特定のプロパティを選択します。",
-          "商品名の値を文字列で指定します。",
+          "priceプロパティはnumber型です。",
+          "閉じ括弧でインターフェース定義を終了します。",
           null,
-          "取得したいプロパティ名を指定します。",
+          "ProductName型をPickで定義し、nameプロパティのみを選択します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "itemにProductName型のオブジェクトを代入し、nameにりんごを設定します。",
           null,
-          "ここを正しく入力してください。"
+          "console.logでitem.nameを出力します。"
         ],
         "candidates": {
           "types": [
@@ -154,7 +154,7 @@ export const typescriptData3 = {
             "Omit",
             "Extract"
           ],
-          "others": ["number", "string", "'りんご'", "name", "Product", "}", "log", "りんご"]
+          "others": ["number", "string", "りんご", "name", "Product", "}", "log", "id", "price", "ProductName", "item", "console"]
         },
         "testCases": [
           {
@@ -166,7 +166,7 @@ export const typescriptData3 = {
     {
       "title": "Omit<T, K>",
       "correctCode": "interface User {\\n  // IDの型\\n  id: number;\\n  // 名前の型\\n  name: string;\\n  // 秘密情報の型\\n  secret: string;\\n}\\n// Omit で特定のプロパティを除外\\ntype SafeUser = Omit<User, 'secret'>;\\n\\n// secretを除いたユーザー\\nconst user: SafeUser = { id: 1, name: 'アリス' };\\n// 名前を出力\\nconsole.log(user.name);",
-      "holeyCode": "interface ___ {\\n  // IDの型\\n  id: ___;\\n  // 名前の型\\n  name: ___;\\n  // 秘密情報の型\\n  secret: ___;\\n___\\n// Omit で特定のプロパティを除外\\ntype SafeUser = Omit<User, '___'>;\\n___\\n// secretを除いたユーザー\\nconst user: SafeUser = { id: ___, name: 'アリス' };\\n// 名前を出力\\nconsole.___(user.name);",
+      "holeyCode": "interface ___ {\\n  // IDの型\\n  ___: ___;\\n  // 名前の型\\n  ___: ___;\\n  // 秘密情報の型\\n  ___: ___;\\n___\\n// Omit で特定のプロパティを除外\\ntype ___ = ___<___, '___'>;\\n___\\n// secretを除いたユーザー\\nconst ___: ___ = { ___: ___, ___: '___' };\\n// 名前を出力\\n___.___(___.___);",
       "correctLines": [
           "interface User {",
           "  // IDの型",
@@ -185,21 +185,21 @@ export const typescriptData3 = {
           "console.log(user.name);"
         ],
       "lineHints": [
-          "IDは数値なので `number` です。",
+          "Userインターフェースを定義します。",
           null,
-          "名前は文字列なので `string` です。",
+          "idプロパティはnumber型です。",
           null,
-          "秘密情報は文字列なので `string` です。",
+          "nameプロパティはstring型です。",
           null,
-          "Omit で特定のプロパティを除外します。",
-          "名前の値を文字列で指定します。",
+          "secretプロパティはstring型です。",
+          "閉じ括弧でインターフェース定義を終了します。",
           null,
-          "取得したいプロパティ名を指定します。",
+          "SafeUser型をOmitで定義し、secretプロパティを除外します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "userにSafeUser型のオブジェクトを代入し、idに1、nameにアリスを設定します。",
           null,
-          "ここを正しく入力してください。"
+          "console.logでuser.nameを出力します。"
         ],
         "candidates": {
           "types": [
@@ -207,7 +207,7 @@ export const typescriptData3 = {
             "Pick",
             "Exclude"
           ],
-          "others": ["number", "string", "'アリス'", "name", "User", "}", "secret", "1", "log"]
+          "others": ["number", "string", "アリス", "name", "User", "}", "secret", "1", "log", "id", "SafeUser", "user", "console"]
         },
         "testCases": [
           {
@@ -219,7 +219,7 @@ export const typescriptData3 = {
     {
       "title": "Record<K, V>",
       "correctCode": "// フルーツのユニオン型\\ntype Fruit = 'りんご' | 'バナナ';\\n// Record でキーと値の型を指定\\ntype Prices = Record<Fruit, number>;\\n\\n// 価格オブジェクト\\nconst prices: Prices = {\\n  // りんごの価格\\n  'りんご': 100,\\n  // バナナの価格\\n  'バナナ': 80\\n};\\n\\n// りんごの価格を出力\\nconsole.log(prices['りんご']);",
-      "holeyCode": "// フルーツのユニオン型\\ntype Fruit = 'りんご' | '___';\\n// Record でキーと値の型を指定\\ntype Prices = Record<Fruit, ___>;\\n___\\n// 価格オブジェクト\\nconst prices: ___ = {\\n  // りんごの価格\\n  'りんご': ___,\\n  // バナナの価格\\n  'バナナ': ___\\n___\\n___\\n// りんごの価格を出力\\nconsole.___(prices['りんご']);",
+      "holeyCode": "// フルーツのユニオン型\\ntype ___ = '___' | '___';\\n// Record でキーと値の型を指定\\ntype ___ = ___<___, ___>;\\n___\\n// 価格オブジェクト\\nconst ___: ___ = {\\n  // りんごの価格\\n  '___': ___,\\n  // バナナの価格\\n  '___': ___\\n___\\n___\\n// りんごの価格を出力\\n___.___(___['___']);",
       "correctLines": [
           "// フルーツのユニオン型",
           "type Fruit = 'りんご' | 'バナナ';",
@@ -239,20 +239,20 @@ export const typescriptData3 = {
         ],
       "lineHints": [
           null,
-          "ユニオン型を作る演算子です。",
+          "Fruit型をりんごとバナナのユニオン型として定義します。",
           null,
-          "Record でキーと値の型を指定します。",
-          null,
-          null,
-          "バナナの価格を数値で指定します。",
-          null,
-          "取得したいプロパティ名を指定します。",
-          null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "Prices型をRecordで定義し、Fruitをキー、numberを値の型とします。",
           null,
           null,
-          "ここを正しく入力してください。"
+          "pricesにPrices型のオブジェクトを代入します。",
+          null,
+          "りんごの価格に100を設定します。",
+          null,
+          "バナナの価格に80を設定します。",
+          "閉じ括弧でオブジェクト定義を終了します。",
+          null,
+          null,
+          "console.logでprices['りんご']を出力します。"
         ],
         "candidates": {
           "types": [
@@ -260,7 +260,7 @@ export const typescriptData3 = {
             "Map",
             "Object"
           ],
-          "others": ["|", "100", "80", "'りんご'", "'バナナ'", "number", "Prices", "};", "log", "バナナ"]
+          "others": ["100", "80", "りんご", "バナナ", "number", "Prices", "};", "log", "Fruit", "prices", "console"]
         },
         "testCases": [
           {
@@ -272,7 +272,7 @@ export const typescriptData3 = {
     {
       "title": "ReturnType<T>",
       "correctCode": "function createPoint() {\\n  // 座標オブジェクトを返す\\n  return { x: 10, y: 20 };\\n}\\n// ReturnType で戻り値の型を取得\\ntype Point = ReturnType<typeof createPoint>;\\n\\n// pに{x: 5, y: 15}を代入\\nconst p: Point = { x: 5, y: 15 };\\n// 座標の合計を出力\\nconsole.log(p.x + p.y);",
-      "holeyCode": "function ___() {\\n  // 座標オブジェクトを返す\\n  return { x: ___, y: 20 };\\n___\\n// ReturnType で戻り値の型を取得\\ntype Point = ReturnType<typeof ___>;\\n___\\n// pに{x: 5, y: 15}を代入\\nconst p: Point = { x: ___, y: 15 };\\n// 座標の合計を出力\\nconsole.___(p.x + p.y);",
+      "holeyCode": "function ___() {\\n  // 座標オブジェクトを返す\\n  return { ___: ___, ___: ___ };\\n___\\n// ReturnType で戻り値の型を取得\\ntype ___ = ___<typeof ___>;\\n___\\n// pに{x: 5, y: 15}を代入\\nconst ___: ___ = { ___: ___, ___: ___ };\\n// 座標の合計を出力\\n___.___(___.___+___.___);",
       "correctLines": [
           "function createPoint() {",
           "  // 座標オブジェクトを返す",
@@ -287,17 +287,17 @@ export const typescriptData3 = {
           "console.log(p.x + p.y);"
         ],
       "lineHints": [
-          "y座標の値を数値で指定します。",
+          "createPoint関数を定義します。",
           null,
-          "ReturnType で戻り値の型を取得します。",
-          "y座標の値を数値で指定します。",
+          "xに10、yに20を持つオブジェクトを返します。",
+          "閉じ括弧で関数定義を終了します。",
           null,
-          "x座標のプロパティ名を指定します。",
+          "Point型をReturnTypeで定義し、createPointの戻り値の型を取得します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "pにPoint型のオブジェクトを代入し、xに5、yに15を設定します。",
           null,
-          "ここを正しく入力してください。"
+          "console.logでp.xとp.yの合計を出力します。"
         ],
         "candidates": {
           "types": [
@@ -305,7 +305,7 @@ export const typescriptData3 = {
             "Parameters",
             "InstanceType"
           ],
-          "others": ["20", "15", "x", "createPoint", "10", "}", "5", "log"]
+          "others": ["20", "15", "x", "createPoint", "10", "}", "5", "log", "y", "Point", "p", "console"]
         },
         "testCases": [
           {
@@ -317,7 +317,7 @@ export const typescriptData3 = {
     {
       "title": "条件型（Conditional Types）",
       "correctCode": "// IsArray条件型を定義\\ntype IsArray<T> = T extends any[] ? true : false;\\n\\n// 配列型をチェック\\ntype A = IsArray<number[]>;\\n// 非配列型をチェック\\ntype B = IsArray<string>;\\n\\n// aに配列判定結果を代入\\nconst a: A = true;\\n// bに非配列判定結果を代入\\nconst b: B = false;\\n// aとbを出力\\nconsole.log(a, b);",
-      "holeyCode": "// IsArray条件型を定義\\ntype IsArray<T> = T extends any[] ? true : ___;\\n___\\n// 配列型をチェック\\ntype A = IsArray<___[]>;\\n// 非配列型をチェック\\ntype B = IsArray<___>;\\n___\\n// aに配列判定結果を代入\\nconst a: A = ___;\\n// bに非配列判定結果を代入\\nconst b: B = ___;\\n// aとbを出力\\nconsole.___(a, b);",
+      "holeyCode": "// IsArray条件型を定義\\ntype ___<___> = ___ extends ___[] ? ___ : ___;\\n___\\n// 配列型をチェック\\ntype ___ = ___<___[]>;\\n// 非配列型をチェック\\ntype ___ = ___<___>;\\n___\\n// aに配列判定結果を代入\\nconst ___: ___ = ___;\\n// bに非配列判定結果を代入\\nconst ___: ___ = ___;\\n// aとbを出力\\n___.___(___,___);",
       "correctLines": [
           "// IsArray条件型を定義",
           "type IsArray<T> = T extends any[] ? true : false;",
@@ -336,19 +336,19 @@ export const typescriptData3 = {
         ],
       "lineHints": [
           null,
-          "条件型で「TがUに当てはまるなら」を表すキーワードです。",
+          "IsArray条件型を定義し、Tが配列ならtrue、そうでなければfalseを返します。",
           null,
           null,
-          "非配列の型を指定します。",
+          "A型はIsArrayにnumber[]を渡します。number[]は配列なのでtrueになります。",
           null,
-          "number[]は配列なので結果はtrueになります。",
+          "B型はIsArrayにstringを渡します。stringは配列ではないのでfalseになります。",
           null,
           null,
-          "2つ目の変数を出力に追加します。",
+          "aにA型の値trueを代入します。",
           null,
-          "ここを正しく入力してください。",
+          "bにB型の値falseを代入します。",
           null,
-          "ここを正しく入力してください。"
+          "console.logでaとbを出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -356,7 +356,7 @@ export const typescriptData3 = {
             "implements",
             "typeof"
           ],
-          "others": ["number", "string", "true", "false", "b", "log", ""]
+          "others": ["number", "string", "true", "false", "b", "log", "T", "any", "IsArray", "A", "B", "a", "console"]
         },
         "testCases": [
           {
@@ -368,7 +368,7 @@ export const typescriptData3 = {
     {
       "title": "infer キーワード",
       "correctCode": "// infer で型を推論して抽出\\ntype Unwrap<T> = T extends Promise<infer U> ? U : T;\\n\\n// Promise<string>をアンラップ\\ntype A = Unwrap<Promise<string>>;\\n// numberはそのまま\\ntype B = Unwrap<number>;\\n\\n// aに文字列を代入\\nconst a: A = 'こんにちは';\\n// bに数値を代入\\nconst b: B = 42;\\n// aとbを出力\\nconsole.log(a, b);",
-      "holeyCode": "// infer で型を推論して抽出\\ntype Unwrap<___> = T extends Promise<infer U> ? U : T;\\n___\\n// Promise<string>をアンラップ\\ntype A = Unwrap<Promise<___>>;\\n// numberはそのまま\\ntype B = Unwrap<___>;\\n___\\n// aに文字列を代入\\nconst a: A = '___';\\n// bに数値を代入\\nconst b: B = ___;\\n// aとbを出力\\nconsole.___(a, b);",
+      "holeyCode": "// infer で型を推論して抽出\\ntype ___<___> = ___ extends ___<infer ___> ? ___ : ___;\\n___\\n// Promise<string>をアンラップ\\ntype ___ = ___<___<___>>;\\n// numberはそのまま\\ntype ___ = ___<___>;\\n___\\n// aに文字列を代入\\nconst ___: ___ = '___';\\n// bに数値を代入\\nconst ___: ___ = ___;\\n// aとbを出力\\n___.___(___,___);",
       "correctLines": [
           "// infer で型を推論して抽出",
           "type Unwrap<T> = T extends Promise<infer U> ? U : T;",
@@ -387,19 +387,19 @@ export const typescriptData3 = {
         ],
       "lineHints": [
           null,
-          "Promiseの中身の型を推論して取り出すキーワードです。",
+          "Unwrap型を定義し、inferでPromiseの中身の型Uを推論して取り出します。",
           null,
           null,
-          "Promiseではない型を指定します。",
+          "A型はUnwrapにPromise<string>を渡します。結果はstringになります。",
           null,
-          "Promise<string>をアンラップした結果の値です。",
+          "B型はUnwrapにnumberを渡します。Promiseではないのでnumberのままです。",
           null,
           null,
-          "2つ目の変数を出力に追加します。",
+          "aにA型の値こんにちはを代入します。",
           null,
-          "ここを正しく入力してください。",
+          "bにB型の値42を代入します。",
           null,
-          "ここを正しく入力してください。"
+          "console.logでaとbを出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -407,7 +407,7 @@ export const typescriptData3 = {
             "typeof",
             "keyof"
           ],
-          "others": ["string", "number", "'こんにちは'", "42", "b", "T", "log", "こんにちは"]
+          "others": ["string", "number", "こんにちは", "42", "b", "T", "log", "Unwrap", "Promise", "U", "A", "B", "a", "console"]
         },
         "testCases": [
           {
@@ -419,7 +419,7 @@ export const typescriptData3 = {
     {
       "title": "keyof 演算子",
       "correctCode": "interface Person {\\n  // 名前の型\\n  name: string;\\n  // 年齢の型\\n  age: number;\\n}\\n// keyof でオブジェクトのキーを取得\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\n  // キーで値を取得して返す\\n  return p[key];\\n}\\n\\n// personに{name: 'ボブ', age: 30}を代入\\nconst person = { name: 'ボブ', age: 30 };\\n// 名前を取得して出力\\nconsole.log(getProperty(person, 'name'));",
-      "holeyCode": "interface ___ {\\n  // 名前の型\\n  name: ___;\\n  // 年齢の型\\n  age: ___;\\n___\\n// keyof でオブジェクトのキーを取得\\nfunction getProperty<___ extends keyof Person>(p: Person, key: K) {\\n  // キーで値を取得して返す\\n  return p[___];\\n___\\n___\\n// personに{name: 'ボブ', age: 30}を代入\\nconst ___ = { name: 'ボブ', age: 30 };\\n// 名前を取得して出力\\nconsole.___(getProperty(person, '名前'));",
+      "holeyCode": "interface ___ {\\n  // 名前の型\\n  ___: ___;\\n  // 年齢の型\\n  ___: ___;\\n___\\n// keyof でオブジェクトのキーを取得\\nfunction ___<___ extends keyof ___>(___: ___, ___: ___) {\\n  // キーで値を取得して返す\\n  return ___[___];\\n___\\n___\\n// personに{name: 'ボブ', age: 30}を代入\\nconst ___ = { ___: '___', ___: ___ };\\n// 名前を取得して出力\\n___.___(___(___, '___'));",
       "correctLines": [
           "interface Person {",
           "  // 名前の型",
@@ -439,22 +439,22 @@ export const typescriptData3 = {
           "console.log(getProperty(person, 'name'));"
         ],
       "lineHints": [
-          "名前は文字列なのでstring型です。",
+          "Personインターフェースを定義します。",
           null,
-          "年齢は数値なのでnumber型です。",
+          "nameプロパティはstring型です。",
           null,
-          "オブジェクトのキーをユニオン型として取得するキーワードです。",
-          "引数で受け取ったkeyを使ってプロパティにアクセスします。",
+          "ageプロパティはnumber型です。",
+          "閉じ括弧でインターフェース定義を終了します。",
           null,
-          "Bobの年齢を数値で指定します。",
+          "getProperty関数を定義し、keyofでPersonのキー型を取得します。",
           null,
-          "取得したいプロパティ名を文字列で指定します。",
-          "ここを正しく入力してください。",
+          "引数keyを使ってpのプロパティにアクセスして返します。",
+          "閉じ括弧で関数定義を終了します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "personにnameとageを持つオブジェクトを代入します。",
           null,
-          "ここを正しく入力してください。"
+          "console.logでgetPropertyを呼び出し、nameプロパティを取得して出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -462,7 +462,7 @@ export const typescriptData3 = {
             "typeof",
             "instanceof"
           ],
-          "others": ["string", "number", "key", "30", "'name'", "Person", "}", "K", "person", "log"]
+          "others": ["string", "number", "key", "30", "name", "Person", "}", "K", "person", "log", "age", "getProperty", "p", "ボブ", "console"]
         },
         "testCases": [
           {
@@ -474,7 +474,7 @@ export const typescriptData3 = {
     {
       "title": "マップ型（Mapped Types）",
       "correctCode": "// マップ型の定義\\ntype Optional<T> = {\\n  // in でキーをイテレート\\n  [K in keyof T]?: T[K];\\n};\\n\\ninterface Config {\\n  // ホスト名の型\\n  host: string;\\n  // ポート番号の型\\n  port: number;\\n}\\n\\n// 部分的なConfigオブジェクト\\nconst partial: Optional<Config> = { host: 'localhost' };\\n// ホスト名を出力\\nconsole.log(partial.host);",
-      "holeyCode": "// マップ型の定義\\ntype Optional<___> = {\\n  // in でキーをイテレート\\n  [___ in keyof T]?: T[K];\\n___\\n___\\ninterface ___ {\\n  // ホスト名の型\\n  host: ___;\\n  // ポート番号の型\\n  port: ___;\\n___\\n___\\n// 部分的なConfigオブジェクト\\nconst partial: Optional<Config> = { host: '___' };\\n// ホスト名を出力\\nconsole.___(partial.host);",
+      "holeyCode": "// マップ型の定義\\ntype ___<___> = {\\n  // in でキーをイテレート\\n  [___ in keyof ___]?: ___[___];\\n___\\n___\\ninterface ___ {\\n  // ホスト名の型\\n  ___: ___;\\n  // ポート番号の型\\n  ___: ___;\\n___\\n___\\n// 部分的なConfigオブジェクト\\nconst ___: ___<___> = { ___: '___' };\\n// ホスト名を出力\\n___.___(___.___);",
       "correctLines": [
           "// マップ型の定義",
           "type Optional<T> = {",
@@ -496,22 +496,22 @@ export const typescriptData3 = {
         ],
       "lineHints": [
           null,
-          "Tの全てのキーに対して処理を行うキーワードです。",
+          "Optional型を定義し、型パラメータTを受け取ります。",
           null,
-          "ホスト名は文字列なので `string` です。",
-          "ポート番号は数値なので `number` です。",
+          "inでTの全てのキーKをイテレートし、T[K]でその型を取得します。",
+          "閉じ括弧で型定義を終了します。",
           null,
-          "出力するプロパティ名を指定します。",
+          "Configインターフェースを定義します。",
           null,
-          "ここを正しく入力してください。",
+          "hostプロパティはstring型です。",
           null,
-          "ここを正しく入力してください。",
-          "ここを正しく入力してください。",
+          "portプロパティはnumber型です。",
+          "閉じ括弧でインターフェース定義を終了します。",
           null,
           null,
-          "ここを正しく入力してください。",
+          "partialにOptional<Config>型のオブジェクトを代入し、hostにlocalhostを設定します。",
           null,
-          "ここを正しく入力してください。"
+          "console.logでpartial.hostを出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -519,7 +519,7 @@ export const typescriptData3 = {
             "of",
             "from"
           ],
-          "others": ["string", "number", "'localhost'", "host", "T", "K", "};", "Config", "}", "localhost", "log", "};", "", "}", "};", "", "}\\"]
+          "others": ["string", "number", "localhost", "host", "T", "K", "};", "Config", "}", "log", "Optional", "port", "partial", "console"]
         },
         "testCases": [
           {
