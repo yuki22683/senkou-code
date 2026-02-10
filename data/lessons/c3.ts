@@ -25,8 +25,7 @@ export const c3Data = {
           "content": "# 関数を変数として扱う\\n\\n```c\\nint (*fp)(int, int) = add;\\nint result = fp(2, 3);  // 5\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\nint square(int x) { return x * x; }\\n\\nint main() {\\n    // 関数ポインタを宣言する記法\\n    int (*fp)(int) = square;\\n    printf(\"%d\\n\", fp(5));\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// 変数を宣言\\n___ ___(int ___) { ___ ___ * ___; }\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 関数ポインタを宣言する記法\\n    ___ (*___)(___) = ___;\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n\", ___(___));\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\nint square(int x) { return x * x; }\\n\\nint main() {\\n    // 関数ポインタを宣言する記法\\n    int (*fp)(int) = square;\\n    printf(\"%d\\n\", fp(5));\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___\n// 変数を宣言\n___ ___(int ___) { ___ ___ * ___; }\n___\n// ブロックを開始\n___ ___() {\n    // 関数ポインタを宣言する記法\n    ___ (*___)(___) = ___;\n    // 出力\n    ___(\\\"___\n// 文を実行\n\\\", ___(___));\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -92,8 +91,7 @@ export const c3Data = {
           "content": "# 柔軟な処理\\n\\n```c\\nvoid print(int x) { printf(\"%d \", x); }\\n\\nint arr[] = {1, 2, 3};\\nprocess(arr, 3, print);  // 1 2 3\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\nvoid apply(int n, void (*f)(int)) {\\n    // 引数で受け取った関数ポインタを呼び出す\\n    f(n);\\n}\\n\\nvoid show(int x) {\\n    printf(\"Value: %d\\n\", x);\\n}\\n\\nint main() {\\n    apply(42, show);\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___(___ ___, ___ (*___)(___)) {\\n    // 引数で受け取った関数ポインタを呼び出す\\n    ___(___);\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___(___ ___) {\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n\", ___);\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 文を実行\\n    ___(___, ___);\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\nvoid apply(int n, void (*f)(int)) {\\n    // 引数で受け取った関数ポインタを呼び出す\\n    f(n);\\n}\\n\\nvoid show(int x) {\\n    printf(\"Value: %d\\n\", x);\\n}\\n\\nint main() {\\n    apply(42, show);\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___\n// ブロックを開始\n___ ___(___ ___, ___ (*___)(___)) {\n    // 引数で受け取った関数ポインタを呼び出す\n    ___(___);\n// ブロックを閉じる\n___\n___\n// ブロックを開始\n___ ___(___ ___) {\n    // 出力\n    ___(\\\"___\n// 文を実行\n\\\", ___);\n// ブロックを閉じる\n___\n___\n// ブロックを開始\n___ ___() {\n    // 文を実行\n    ___(___, ___);\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -178,8 +176,7 @@ export const c3Data = {
           "content": "# 特定ビットの抽出\\n\\n```c\\n// 下位4ビットだけ取得\\nint x = 0xAB;  // 10101011\\nint low4 = x & 0x0F;  // 00001011 = 11\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    int a = 12;  // 1100\\n    int b = 10;  // 1010\\n    // 両方のビットが1の場合のみ1になる演算子\\n    printf(\"%d\\n\", a & b);  // 8 (1000)\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___;  // 1100\\n    // 変数を宣言\\n    ___ ___ = ___;  // 1010\\n    // 両方のビットが1の場合のみ1になる演算子\\n    ___(\"___\\n// コードを記述\\n\", ___ ___ ___);  // 8 (1000)\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    int a = 12;  // 1100\\n    int b = 10;  // 1010\\n    // 両方のビットが1の場合のみ1になる演算子\\n    printf(\"%d\\n\", a & b);  // 8 (1000)\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___\n// ブロックを開始\n___ ___() {\n    // 変数を宣言\n    ___ ___ = ___;  // 1100\n    // 変数を宣言\n    ___ ___ = ___;  // 1010\n    // 両方のビットが1の場合のみ1になる演算子\n    ___(\\\"___\n// コードを記述\n\\\", ___ ___ ___);  // 8 (1000)\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -244,8 +241,7 @@ export const c3Data = {
           "content": "# ビットを立てる\\n\\n```c\\nint flags = 0;\\nflags |= 0x01;  // フラグ1をON\\nflags |= 0x04;  // フラグ3をON\\n// flags = 0x05 (0101)\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    int a = 12;  // 1100\\n    int b = 10;  // 1010\\n    // どちらかのビットが1なら1になる演算子\\n    printf(\"%d\\n\", a | b);  // 14 (1110)\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___;  // 1100\\n    // 変数を宣言\\n    ___ ___ = ___;  // 1010\\n    // どちらかのビットが1なら1になる演算子\\n    ___(\"___\\n// コードを記述\\n\", ___ ___ ___);  // 14 (1110)\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    int a = 12;  // 1100\\n    int b = 10;  // 1010\\n    // どちらかのビットが1なら1になる演算子\\n    printf(\"%d\\n\", a | b);  // 14 (1110)\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___\n// ブロックを開始\n___ ___() {\n    // 変数を宣言\n    ___ ___ = ___;  // 1100\n    // 変数を宣言\n    ___ ___ = ___;  // 1010\n    // どちらかのビットが1なら1になる演算子\n    ___(\\\"___\n// コードを記述\n\\\", ___ ___ ___);  // 14 (1110)\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -310,8 +306,7 @@ export const c3Data = {
           "content": "# 掛け算・割り算の代わり\\n\\n```c\\n// 左シフト = 2倍\\n5 << 1;  // 10\\n\\n// 右シフト = 2で割る\\n8 >> 1;  // 4\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    int x = 3;\\n    // ビットを左に移動する演算子\\n    printf(\"%d\\n\", x << 2);  // 12\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // ビットを左に移動する演算子\\n    ___(\"___\\n// コードを記述\\n\", ___ ___ ___);  // 12\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    int x = 3;\\n    // ビットを左に移動する演算子\\n    printf(\"%d\\n\", x << 2);  // 12\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___\n// ブロックを開始\n___ ___() {\n    // 変数を宣言\n    ___ ___ = ___;\n    // ビットを左に移動する演算子\n    ___(\\\"___\n// コードを記述\n\\\", ___ ___ ___);  // 12\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -372,8 +367,7 @@ export const c3Data = {
           "content": "# 配列の要素数を計算\\n\\n```c\\nint arr[] = {1, 2, 3, 4, 5};\\nint count = sizeof(arr) / sizeof(arr[0]);\\n// count = 5\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    int arr[] = {10, 20, 30};\\n    // 型や変数のバイト数を取得する演算子\\n    int count = sizeof(arr) / sizeof(arr[0]);\\n    printf(\"%d\\n\", count);\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___[] = {___, ___, ___};\\n    // 型や変数のバイト数を取得する演算子\\n    ___ ___ = ___(___) / ___(___[___]);\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n\", ___);\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    int arr[] = {10, 20, 30};\\n    // 型や変数のバイト数を取得する演算子\\n    int count = sizeof(arr) / sizeof(arr[0]);\\n    printf(\"%d\\n\", count);\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___\n// ブロックを開始\n___ ___() {\n    // 変数を宣言\n    ___ ___[] = {___, ___, ___};\n    // 型や変数のバイト数を取得する演算子\n    ___ ___ = ___(___) / ___(___[___]);\n    // 出力\n    ___(\\\"___\n// 文を実行\n\\\", ___);\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -438,8 +432,7 @@ export const c3Data = {
           "content": "# 構造体を簡潔に\\n\\n```c\\ntypedef struct {\\n    int x;\\n    int y;\\n} Point;\\n\\nPoint p = {10, 20};\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\n// int型にNumberという別名をつける\\ntypedef int Number;\\n\\nint main() {\\n    Number x = 100;\\n    printf(\"%d\\n\", x);\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// int型にNumberという別名をつける\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 値を代入\\n    ___ ___ = ___;\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n\", ___);\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\n// int型にNumberという別名をつける\\ntypedef int Number;\\n\\nint main() {\\n    Number x = 100;\\n    printf(\"%d\\n\", x);\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___\n// int型にNumberという別名をつける\n___ ___ ___;\n___\n// ブロックを開始\n___ ___() {\n    // 値を代入\n    ___ ___ = ___;\n    // 出力\n    ___(\\\"___\n// 文を実行\n\\\", ___);\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -506,8 +499,7 @@ export const c3Data = {
           "content": "# 安全な関数引数\\n\\n```c\\nvoid print(const char *str) {\\n    // str の中身は変更できない\\n    printf(\"%s\\n\", str);\\n}\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\n// ポインタの指す先を読み取り専用にする\\nvoid show(const int *p) {\\n    printf(\"%d\\n\", *p);\\n}\\n\\nint main() {\\n    int x = 42;\\n    show(&x);\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// ポインタの指す先を読み取り専用にする\\n___ ___(___ ___ *___) {\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n\", *___);\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // 文を実行\\n    ___(&___);\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\n// ポインタの指す先を読み取り専用にする\\nvoid show(const int *p) {\\n    printf(\"%d\\n\", *p);\\n}\\n\\nint main() {\\n    int x = 42;\\n    show(&x);\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___\n// ポインタの指す先を読み取り専用にする\n___ ___(___ ___ *___) {\n    // 出力\n    ___(\\\"___\n// 文を実行\n\\\", *___);\n// ブロックを閉じる\n___\n___\n// ブロックを開始\n___ ___() {\n    // 変数を宣言\n    ___ ___ = ___;\n    // 文を実行\n    ___(&___);\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -582,8 +574,7 @@ export const c3Data = {
           "content": "# カウンタとして使う\\n\\n```c\\ncount();  // 1\\ncount();  // 2\\ncount();  // 3\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\nvoid counter() {\\n    // 呼び出し間で値を保持するstatic変数\\n    static int count = 0;\\n    count++;\\n    printf(\"%d\\n\", count);\\n}\\n\\nint main() {\\n    counter();\\n    counter();\\n    counter();\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 呼び出し間で値を保持するstatic変数\\n    ___ ___ ___ = ___;\\n    // 文を実行\\n    ___++;\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n\", ___);\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 文を実行\\n    ___();\\n    // 文を実行\\n    ___();\\n    // 文を実行\\n    ___();\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\nvoid counter() {\\n    // 呼び出し間で値を保持するstatic変数\\n    static int count = 0;\\n    count++;\\n    printf(\"%d\\n\", count);\\n}\\n\\nint main() {\\n    counter();\\n    counter();\\n    counter();\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___\n// ブロックを開始\n___ ___() {\n    // 呼び出し間で値を保持するstatic変数\n    ___ ___ ___ = ___;\n    // 文を実行\n    ___++;\n    // 出力\n    ___(\\\"___\n// 文を実行\n\\\", ___);\n// ブロックを閉じる\n___\n___\n// ブロックを開始\n___ ___() {\n    // 文を実行\n    ___();\n    // 文を実行\n    ___();\n    // 文を実行\n    ___();\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -670,8 +661,7 @@ export const c3Data = {
           "content": "# 引数を取るマクロ\\n\\n```c\\n#define SQUARE(x) ((x) * (x))\\n\\nint result = SQUARE(5);  // 25\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\n// DOUBLEマクロを定義する\\n#define DOUBLE(x) ((x) * 2)\\n\\nint main() {\\n    printf(\"%d\\n\", DOUBLE(7));\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// DOUBLEマクロを定義する\\n#___ ___(___) ((___)  * ___)\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n\", ___(___));\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\n// DOUBLEマクロを定義する\\n#define DOUBLE(x) ((x) * 2)\\n\\nint main() {\\n    printf(\"%d\\n\", DOUBLE(7));\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___\n// DOUBLEマクロを定義する\n#___ ___(___) ((___)  * ___)\n___\n// ブロックを開始\n___ ___() {\n    // 出力\n    ___(\\\"___\n// 文を実行\n\\\", ___(___));\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",

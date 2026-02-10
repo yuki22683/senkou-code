@@ -20,8 +20,10 @@
   4. `node scripts/fix-vague-output-comments.mjs` - 曖昧なコメント修正
   5. `node scripts/sync-comments-to-holey.mjs` - holeyCodeにコメント同期（コメント整合性修正）
   6. `node scripts/fix-correctlines-comments.mjs` - correctLinesのコメント修正
-  7. `node scripts/fix-candidates-correct.mjs` - 選択肢不足を自動修正（ルール#34参照）
-  8. `node scripts/check-linehints-giveaway.mjs` - 答えをそのまま教えるヒントがないかチェック（ルール#5参照）
+  7. `node scripts/fix-all-vague-comments-v3.mjs` - holeyCode内の複雑な曖昧コメント修正
+  8. `node scripts/fix-all-vague-final.mjs` - correctCode/holeyCode両方の残り曖昧コメント修正
+  9. `node scripts/fix-candidates-correct.mjs` - 選択肢不足を自動修正（ルール#34参照）
+  10. `node scripts/check-linehints-giveaway.mjs` - 答えをそのまま教えるヒントがないかチェック（ルール#5参照）
 - **注意**：`translate-string-literals.mjs` は使用禁止（ルール#55参照）
 - index.tsのケーシング修正（Java3→java3, C2→c2など）も再適用が必要
 - **注意**：`fix-holey-v2.mjs` は使用禁止（ルール#24参照）
@@ -155,6 +157,10 @@
   - **`// add関数を定義`** → 関数名が明確
   - **`// Calculatorクラスを定義`** → クラス名が明確
 - **チェックスクリプト**：`node scripts/check-vague-comments.mjs` で曖昧なコメントを検出
+- **holeyCode特有の問題**：holeyCodeでは次の行が `fn ___(___: &___) {` のように `___` を含むため、自動修正スクリプトで関数名を特定しにくい。この場合は：
+  1. 同じ演習の`correctCode`を確認して関数名を特定
+  2. 手動でholeyCodeのコメントを修正（例：`// 関数を定義` → `// print_len関数を定義`）
+  3. 対応するcorrectLinesのコメントも同様に修正
 - **修正スクリプト**：
   - `node scripts/fix-vague-output-comments.mjs` → correctCodeの曖昧なコメントを自動修正
   - `node scripts/sync-comments-to-holey.mjs` → correctCodeのコメントをholeyCodeに同期
@@ -303,7 +309,13 @@
 - **チェックが失敗した場合の修正方法**：
   - check-holey-v4.mjs → `fix-empty-line-hints.mjs` と `fix-non-holey-hints.mjs` を実行
   - check-comment-consistency-v3.mjs → `sync-comments-to-holey.mjs` を実行（correctCodeのコメントをholeyCodeに同期）
-  - check-vague-comments.mjs → `fix-vague-output-comments.mjs` → `sync-comments-to-holey.mjs` → `fix-correctlines-comments.mjs` を順に実行
+  - check-vague-comments.mjs → 以下の手順で修正:
+    1. `fix-vague-output-comments.mjs` → correctCodeの曖昧コメント修正
+    2. `sync-comments-to-holey.mjs` → holeyCodeにコメント同期
+    3. `fix-correctlines-comments.mjs` → correctLinesのコメント修正
+    4. `fix-all-vague-comments-v3.mjs` → holeyCode内の複雑なパターン（`// 関数を定義`等）を修正
+    5. `fix-all-vague-final.mjs` → correctCode/holeyCode両方の残りの曖昧コメントを修正
+    6. 残りは手動で修正（関数名/クラス名等を特定してコメントに追加）
   - check-tutorial-exercise-similarity.mjs → 手動で演習のシナリオを変更（ルール#19, #20参照）
   - 英語文字列が残っている → `translate-to-japanese.mjs` を実行（ルール#26参照）
   - check-candidates-final.mjs → `fix-candidates-correct.mjs` を実行（ルール#33参照）

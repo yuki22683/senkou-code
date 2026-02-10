@@ -139,8 +139,7 @@ export const go4Data = {
           "content": "# Add, Done, Wait を覚えよう\\n\\n**3つのメソッドの役割：**\\n\\n- `Add(n)` → 「n人出発するよ」カウントを増やす\\n- `Done()` → 「1人終わったよ」カウントを1減らす\\n- `Wait()` → カウントが0になるまで待つ\\n\\n**使い方の流れ：**\\n```go\\nwg.Add(3)  // 3つのゴルーチンを待つ\\n\\ngo func() { defer wg.Done(); /* 処理1 */ }()\\ngo func() { defer wg.Done(); /* 処理2 */ }()\\ngo func() { defer wg.Done(); /* 処理3 */ }()\\n\\nwg.Wait()  // 3つ全部終わるまでここで止まる\\nfmt.Println(\"全員完了！\")\\n```"
         }
       ],
-      "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"sync\"\\n)\\n\\nfunc main() {\\n    var wg sync.WaitGroup\\n    // Add でカウンタを増やす\\n    wg.Add(1)\\n    \\n    go func() {\\n        // Done でカウンタを減らす\\n        defer wg.Done()\\n        fmt.Println(\"goroutine\")\\n    }()\\n    \\n    // Wait でカウンタが0になるまで待つ\\n    wg.Wait()\\n    fmt.Println(\"done\")\\n}",
-      "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// ライブラリを読み込む\\nimport ___\\n    // パッケージをインポート\\n    \\\"___\\\"\\n    // パッケージをインポート\\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\\n___\\n\\n// 関数を定義\\nfunc ___() ___\\n    // 変数を宣言\\n    var ___ ___.___\\n    // Add でカウンタを増やす\\n    ___.___(___)\\n    \\n    // ゴルーチンを起動\\n    go func___ ___\\n        // Done でカウンタを減らす\\n        defer ___.___()\\n        // \"\"\\n        ___.___(\\\"\")\\n    // クロージャを閉じて実行\\n    ___()\\n    \\n    // Wait でカウンタが0になるまで待つ\\n    ___.___()\\n    // \"\"\\n    ___.___(\\\"\")\\n// ブロックを閉じる\\n___",
+      "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"sync\"\\n)\\n\\nfunc main() {\\n    var wg sync.WaitGroup\\n    // Add でカウンタを増やす\\n    wg.Add(1)\\n    \\n    go func() {\\n        // Done でカウンタを減らす\\n        defer wg.Done()\\n        fmt.Println(\"goroutine\")\\n    }()\\n    \\n    // Wait でカウンタが0になるまで待つ\\n    wg.Wait()\\n    fmt.Println(\"done\")\\n}", "holeyCode": "// モジュールを宣言\npackage ___\n\n// ライブラリを読み込む\nimport ___\n    // パッケージをインポート\n    \\\"___\\\"\n    // パッケージをインポート\n    \\\"___\\\"\n// 関数呼び出しを閉じる\n___\n\n// main関数を定義\nfunc ___() ___\n    // 変数を宣言\n    var ___ ___.___\n    // Add でカウンタを増やす\n    ___.___(___)\n    \n    // ゴルーチンを起動\n    go func___ ___\n        // Done でカウンタを減らす\n        defer ___.___()\n        // \\\"\\\"\n        ___.___(\\\"\\\")\n    // クロージャを閉じて実行\n    ___()\n    \n    // Wait でカウンタが0になるまで待つ\n    ___.___()\n    // \\\"\\\"\n    ___.___(\\\"\\\")\n// ブロックを閉じる\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -241,8 +240,7 @@ export const go4Data = {
           "content": "# キャンセルや時間制限をつける\\n\\n基本のコンテキストから、機能を追加したコンテキストを作れます。\\n\\n**WithCancel：キャンセルできる**\\n```go\\nctx, cancel := context.WithCancel(context.Background())\\ndefer cancel()  // 関数を抜けるときキャンセル\\n```\\n\\n**WithTimeout：時間制限をつける**\\n```go\\n// 5秒で自動的にキャンセル\\nctx, cancel := context.WithTimeout(ctx, 5*time.Second)\\ndefer cancel()\\n```\\n\\n**ポイント：**\\n`cancel()` を呼ぶと、そのコンテキストを使っている処理に「もう止めて」と伝えられます。"
         }
       ],
-      "correctCode": "package main\\n\\nimport (\\n    \"context\"\\n    \"fmt\"\\n)\\n\\nfunc main() {\\n    // Background でルートコンテキストを作成\\n    ctx := context.Background()\\n    // Err でエラーを取得\\n    fmt.Println(ctx.Err())\\n}",
-      "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// ライブラリを読み込む\\nimport ___\\n    // パッケージをインポート\\n    \\\"___\\\"\\n    // パッケージをインポート\\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\\n___\\n\\n// 関数を定義\\nfunc ___() ___\\n    // Background でルートコンテキストを作成\\n    ___ := ___.___()\\n    // Err でエラーを取得\\n    ___.___(___.___())\\n// ブロックを閉じる\\n___",
+      "correctCode": "package main\\n\\nimport (\\n    \"context\"\\n    \"fmt\"\\n)\\n\\nfunc main() {\\n    // Background でルートコンテキストを作成\\n    ctx := context.Background()\\n    // Err でエラーを取得\\n    fmt.Println(ctx.Err())\\n}", "holeyCode": "// モジュールを宣言\npackage ___\n\n// ライブラリを読み込む\nimport ___\n    // パッケージをインポート\n    \\\"___\\\"\n    // パッケージをインポート\n    \\\"___\\\"\n// 関数呼び出しを閉じる\n___\n\n// main関数を定義\nfunc ___() ___\n    // Background でルートコンテキストを作成\n    ___ := ___.___()\n    // Err でエラーを取得\n    ___.___(___.___())\n// ブロックを閉じる\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -315,8 +313,7 @@ export const go4Data = {
           "content": "# Done チャネル\\n\\n```go\\nselect {\\ncase <-ctx.Done():\\n    return ctx.Err()\\ndefault:\\n    // 処理続行\\n}\\n```"
         }
       ],
-      "correctCode": "package main\\n\\nimport (\\n    \"context\"\\n    \"fmt\"\\n)\\n\\nfunc main() {\\n    // WithCancel でキャンセル可能に\\n    ctx, cancel := context.WithCancel(context.Background())\\n    // cancel でキャンセル\\n    cancel()\\n    fmt.Println(ctx.Err())\\n}",
-      "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// ライブラリを読み込む\\nimport ___\\n    // パッケージをインポート\\n    \\\"___\\\"\\n    // パッケージをインポート\\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\\n___\\n\\n// 関数を定義\\nfunc ___() ___\\n    // WithCancel でキャンセル可能に\\n    ___, ___ := ___.___(___.___())\\n    // cancel でキャンセル\\n    ___()\\n    // 出力\\n    ___.___(___.___())\\n// ブロックを閉じる\\n___",
+      "correctCode": "package main\\n\\nimport (\\n    \"context\"\\n    \"fmt\"\\n)\\n\\nfunc main() {\\n    // WithCancel でキャンセル可能に\\n    ctx, cancel := context.WithCancel(context.Background())\\n    // cancel でキャンセル\\n    cancel()\\n    fmt.Println(ctx.Err())\\n}", "holeyCode": "// モジュールを宣言\npackage ___\n\n// ライブラリを読み込む\nimport ___\n    // パッケージをインポート\n    \\\"___\\\"\n    // パッケージをインポート\n    \\\"___\\\"\n// 関数呼び出しを閉じる\n___\n\n// main関数を定義\nfunc ___() ___\n    // WithCancel でキャンセル可能に\n    ___, ___ := ___.___(___.___())\n    // cancel でキャンセル\n    ___()\n    // 出力\n    ___.___(___.___())\n// ブロックを閉じる\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -393,8 +390,7 @@ export const go4Data = {
           "content": "# 処理を一時停止\\n\\n```go\\ntime.Sleep(1 * time.Second)\\n```"
         }
       ],
-      "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"time\"\\n)\\n\\nfunc main() {\\n    // Millisecond でミリ秒を表す\\n    d := 500 * time.Millisecond\\n    fmt.Println(d)\\n}",
-      "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// ライブラリを読み込む\\nimport ___\\n    // パッケージをインポート\\n    \\\"___\\\"\\n    // パッケージをインポート\\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\\n___\\n\\n// 関数を定義\\nfunc ___() ___\\n    // Millisecond でミリ秒を表す\\n    ___ := ___ * ___.___\\n    // 出力\\n    ___.___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"time\"\\n)\\n\\nfunc main() {\\n    // Millisecond でミリ秒を表す\\n    d := 500 * time.Millisecond\\n    fmt.Println(d)\\n}", "holeyCode": "// モジュールを宣言\npackage ___\n\n// ライブラリを読み込む\nimport ___\n    // パッケージをインポート\n    \\\"___\\\"\n    // パッケージをインポート\n    \\\"___\\\"\n// 関数呼び出しを閉じる\n___\n\n// main関数を定義\nfunc ___() ___\n    // Millisecond でミリ秒を表す\n    ___ := ___ * ___.___\n    // 出力\n    ___.___(___)\n// ブロックを閉じる\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -467,8 +463,7 @@ export const go4Data = {
           "content": "# バッククォートでタグをつける\\n\\n構造体のフィールドに「タグ」をつけると、JSONでの名前を指定できます。\\n\\n**コード例：**\\n```go\\ntype Person struct {\\n    Name string `json:\"name\"`      // JSONでは\"name\"\\n    Age  int    `json:\"age\"`       // JSONでは\"age\"\\n}\\n```\\n\\n**タグの書き方：**\\n- フィールド名のあとに `` `json:\"名前\"` `` と書く\\n- バッククォート（`）で囲む（シングルクォートではない）\\n\\n**なぜ使う？**\\nGoでは「Name」だけど、JSONでは「name」（小文字）にしたい、など。"
         }
       ],
-      "correctCode": "package main\\n\\nimport (\\n    \"encoding/json\"\\n    \"fmt\"\\n)\\n\\ntype Item struct {\\n    Name string `json:\"name\"`\\n}\\n\\nfunc main() {\\n    // \"Apple\" で構造体を初期化\\n    item := Item{Name: \"Apple\"}\\n    // Marshal で JSON に変換\\n    data, _ := json.Marshal(item)\\n    fmt.Println(string(data))\\n}",
-      "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// ライブラリを読み込む\\nimport ___\\n    // パッケージをインポート\\n    \\\"___\\\"\\n    // パッケージをインポート\\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\\n___\\n\\n// ブロックを開始\\ntype ___ struct ___\\n    // \"\"\\n    ___ ___ `json:\\\"___\\\"`\\n// ブロックを閉じる\\n___\\n\\n// 関数を定義\\nfunc ___() ___\\n    // \"Apple\" で構造体を初期化\\n    ___ := ___{___: \\\"___\\\"}\\n    // Marshal で JSON に変換\\n    ___, _ := ___.___(___)\\n    // 出力\\n    ___.___(___(___))\\n// ブロックを閉じる\\n___",
+      "correctCode": "package main\\n\\nimport (\\n    \"encoding/json\"\\n    \"fmt\"\\n)\\n\\ntype Item struct {\\n    Name string `json:\"name\"`\\n}\\n\\nfunc main() {\\n    // \"Apple\" で構造体を初期化\\n    item := Item{Name: \"Apple\"}\\n    // Marshal で JSON に変換\\n    data, _ := json.Marshal(item)\\n    fmt.Println(string(data))\\n}", "holeyCode": "// モジュールを宣言\npackage ___\n\n// ライブラリを読み込む\nimport ___\n    // パッケージをインポート\n    \\\"___\\\"\n    // パッケージをインポート\n    \\\"___\\\"\n// 関数呼び出しを閉じる\n___\n\n// ブロックを開始\ntype ___ struct ___\n    // \\\"\\\"\n    ___ ___ `json:\\\"___\\\"`\n// ブロックを閉じる\n___\n\n// main関数を定義\nfunc ___() ___\n    // \\\"Apple\\\" で構造体を初期化\n    ___ := ___{___: \\\"___\\\"}\n    // Marshal で JSON に変換\n    ___, _ := ___.___(___)\n    // 出力\n    ___.___(___(___))\n// ブロックを閉じる\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -559,8 +554,7 @@ export const go4Data = {
           "content": "# & を忘れずに\\n\\n```go\\njson.Unmarshal(data, &result)  // OK\\njson.Unmarshal(data, result)   // NG\\n```"
         }
       ],
-      "correctCode": "package main\\n\\nimport (\\n    \"encoding/json\"\\n    \"fmt\"\\n)\\n\\ntype Item struct {\\n    Name string `json:\"name\"`\\n}\\n\\nfunc main() {\\n    // \"Banana\" を含むJSON文字列をバイト列に変換\\n    data := []byte(`{\"name\":\"Banana\"}`)\\n    var item Item\\n    // Unmarshal で JSON をパース\\n    json.Unmarshal(data, &item)\\n    fmt.Println(item.Name)\\n}",
-      "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// ライブラリを読み込む\\nimport ___\\n    // パッケージをインポート\\n    \\\"___\\\"\\n    // パッケージをインポート\\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\\n___\\n\\n// ブロックを開始\\ntype ___ struct ___\\n    // \"\"\\n    ___ ___ `json:\\\"___\\\"`\\n// ブロックを閉じる\\n___\\n\\n// 関数を定義\\nfunc ___() ___\\n    // \"Banana\" を含むJSON文字列をバイト列に変換\\n    ___ := []___(`{\\\"___\\\":\\\"___\\\"}`)\\n    // 変数を宣言\\n    var ___ ___\\n    // Unmarshal で JSON をパース\\n    ___.___(___, &___)\\n    // 出力\\n    ___.___(___.___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "package main\\n\\nimport (\\n    \"encoding/json\"\\n    \"fmt\"\\n)\\n\\ntype Item struct {\\n    Name string `json:\"name\"`\\n}\\n\\nfunc main() {\\n    // \"Banana\" を含むJSON文字列をバイト列に変換\\n    data := []byte(`{\"name\":\"Banana\"}`)\\n    var item Item\\n    // Unmarshal で JSON をパース\\n    json.Unmarshal(data, &item)\\n    fmt.Println(item.Name)\\n}", "holeyCode": "// モジュールを宣言\npackage ___\n\n// ライブラリを読み込む\nimport ___\n    // パッケージをインポート\n    \\\"___\\\"\n    // パッケージをインポート\n    \\\"___\\\"\n// 関数呼び出しを閉じる\n___\n\n// ブロックを開始\ntype ___ struct ___\n    // \\\"\\\"\n    ___ ___ `json:\\\"___\\\"`\n// ブロックを閉じる\n___\n\n// main関数を定義\nfunc ___() ___\n    // \\\"Banana\\\" を含むJSON文字列をバイト列に変換\n    ___ := []___(`{\\\"___\\\":\\\"___\\\"}`)\n    // 変数を宣言\n    var ___ ___\n    // Unmarshal で JSON をパース\n    ___.___(___, &___)\n    // 出力\n    ___.___(___.___)\n// ブロックを閉じる\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -655,8 +649,7 @@ export const go4Data = {
           "content": "# 変換と検索\\n\\n```go\\nstrings.ToUpper(s)\\nstrings.ToLower(s)\\nstrings.TrimSpace(s)\\nstrings.Replace(s, \"old\", \"new\", -1)\\n```"
         }
       ],
-      "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"strings\"\\n)\\n\\nfunc main() {\\n    // 分割する文字列 \"hello,world\"\\n    s := \"hello,world\"\\n    // Split で文字列を分割\\n    parts := strings.Split(s, \",\")\\n    fmt.Println(parts[0])\\n}",
-      "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// ライブラリを読み込む\\nimport ___\\n    // パッケージをインポート\\n    \\\"___\\\"\\n    // パッケージをインポート\\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\\n___\\n\\n// 関数を定義\\nfunc ___() ___\\n    // 分割する文字列 \"hello,world\"\\n    ___ := \\\"___\\\"\\n    // Split で文字列を分割\\n    ___ := ___.___(___, \\\",\\\")\\n    // 出力\\n    ___.___(___[___])\\n// ブロックを閉じる\\n___",
+      "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"strings\"\\n)\\n\\nfunc main() {\\n    // 分割する文字列 \"hello,world\"\\n    s := \"hello,world\"\\n    // Split で文字列を分割\\n    parts := strings.Split(s, \",\")\\n    fmt.Println(parts[0])\\n}", "holeyCode": "// モジュールを宣言\npackage ___\n\n// ライブラリを読み込む\nimport ___\n    // パッケージをインポート\n    \\\"___\\\"\n    // パッケージをインポート\n    \\\"___\\\"\n// 関数呼び出しを閉じる\n___\n\n// main関数を定義\nfunc ___() ___\n    // 分割する文字列 \\\"hello,world\\\"\n    ___ := \\\"___\\\"\n    // Split で文字列を分割\n    ___ := ___.___(___, \\\",\\\")\n    // 出力\n    ___.___(___[___])\n// ブロックを閉じる\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -733,8 +726,7 @@ export const go4Data = {
           "content": "# 数値から文字列\\n\\n```go\\ns := strconv.Itoa(123)  // \"123\"\\n```"
         }
       ],
-      "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"strconv\"\\n)\\n\\nfunc main() {\\n    // Atoi で文字列を整数に変換\\n    num, _ := strconv.Atoi(\"42\")\\n    fmt.Println(num * 2)\\n}",
-      "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// ライブラリを読み込む\\nimport ___\\n    // パッケージをインポート\\n    \\\"___\\\"\\n    // パッケージをインポート\\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\\n___\\n\\n// 関数を定義\\nfunc ___() ___\\n    // Atoi で文字列を整数に変換\\n    ___, _ := ___.___(\\\"\")\\n    // 出力\\n    ___.___(___ * ___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"strconv\"\\n)\\n\\nfunc main() {\\n    // Atoi で文字列を整数に変換\\n    num, _ := strconv.Atoi(\"42\")\\n    fmt.Println(num * 2)\\n}", "holeyCode": "// モジュールを宣言\npackage ___\n\n// ライブラリを読み込む\nimport ___\n    // パッケージをインポート\n    \\\"___\\\"\n    // パッケージをインポート\n    \\\"___\\\"\n// 関数呼び出しを閉じる\n___\n\n// main関数を定義\nfunc ___() ___\n    // Atoi で文字列を整数に変換\n    ___, _ := ___.___(\\\"\\\")\n    // 出力\n    ___.___(___ * ___)\n// ブロックを閉じる\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -807,8 +799,7 @@ export const go4Data = {
           "content": "# 引数の数をチェック\\n\\n```go\\nif len(os.Args) < 2 {\\n    fmt.Println(\"Usage: program <arg>\")\\n    return\\n}\\n```"
         }
       ],
-      "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"os\"\\n)\\n\\nfunc main() {\\n    // Args でコマンドライン引数を取得\\n    fmt.Println(len(os.Args))\\n}",
-      "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// ライブラリを読み込む\\nimport ___\\n    // パッケージをインポート\\n    \\\"___\\\"\\n    // パッケージをインポート\\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\\n___\\n\\n// 関数を定義\\nfunc ___() ___\\n    // Args でコマンドライン引数を取得\\n    ___.___(___(___.___))\\n// ブロックを閉じる\\n___",
+      "correctCode": "package main\\n\\nimport (\\n    \"fmt\"\\n    \"os\"\\n)\\n\\nfunc main() {\\n    // Args でコマンドライン引数を取得\\n    fmt.Println(len(os.Args))\\n}", "holeyCode": "// モジュールを宣言\npackage ___\n\n// ライブラリを読み込む\nimport ___\n    // パッケージをインポート\n    \\\"___\\\"\n    // パッケージをインポート\n    \\\"___\\\"\n// 関数呼び出しを閉じる\n___\n\n// main関数を定義\nfunc ___() ___\n    // Args でコマンドライン引数を取得\n    ___.___(___(___.___))\n// ブロックを閉じる\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",

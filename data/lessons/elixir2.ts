@@ -389,8 +389,7 @@ export const elixir2Data = {
           "content": "# 終了条件を忘れずに\\n\\n必ず終了条件を設定します。\\n\\n**コード例：**\\n```elixir\\ndef sum(0), do: 0\\ndef sum(n), do: n + sum(n - 1)\\n```"
         }
       ],
-      "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Math do\\n  def factorial(0), do: 1\\n  # factorialを再帰的に呼び出す\\n  def factorial(n), do: n * factorial(n - 1)\\nend\\n# 5の階乗を計算して表示\\nIO.puts Math.factorial(5)",
-      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  # 関数を定義\\n  def ___(___), do: ___\\n  # factorialを再帰的に呼び出す\\n  def ___(___), do: ___ * ___(___ - ___)\\n# ブロックを終了\\n___\\n# 5の階乗を計算して表示\\n___.___ ___.___(___)",
+      "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Math do\\n  def factorial(0), do: 1\\n  # factorialを再帰的に呼び出す\\n  def factorial(n), do: n * factorial(n - 1)\\nend\\n# 5の階乗を計算して表示\\nIO.puts Math.factorial(5)", "holeyCode": "# defmoduleでモジュールを定義\ndefmodule ___ do\n  # factorial関数を定義\n  def ___(___), do: ___\n  # factorialを再帰的に呼び出す\n  def ___(___), do: ___ * ___(___ - ___)\n# ブロックを終了\n___\n# 5の階乗を計算して表示\n___.___ ___.___(___)",
       "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Math do",
