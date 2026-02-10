@@ -34,7 +34,7 @@ export const elixir3Data = {
   "exercises": [
     {
       "title": "構造体（Struct）",
-      "description": "構造体（Struct）の使い方を学びます",
+      "description": "\"Alice\"\\n```",
       "tutorialSlides": [
         {
           "title": "構造体（Struct）",
@@ -86,7 +86,7 @@ export const elixir3Data = {
       },
     {
       "title": "構造体の更新",
-      "description": "構造体の更新の使い方を学びます",
+      "description": "構造体の更新の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "構造体の更新",
@@ -149,7 +149,7 @@ export const elixir3Data = {
       },
     {
       "title": "Enum.reduce",
-      "description": "Enum.reduceの使い方を学びます",
+      "description": "配列の要素を集約して1つの値にする方法を学びます",
       "tutorialSlides": [
         {
           "title": "Enum.reduce",
@@ -197,7 +197,7 @@ export const elixir3Data = {
       },
     {
       "title": "Enum.group_by",
-      "description": "Enum.group_byの使い方を学びます",
+      "description": "Enum.group_byの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Enum.group_by",
@@ -246,7 +246,7 @@ export const elixir3Data = {
       },
     {
       "title": "内包表記（for）",
-      "description": "同じ処理を繰り返す方法を学びます",
+      "description": "同じ処理を何度も実行する「繰り返し」を学びます",
       "tutorialSlides": [
         {
           "title": "内包表記（for）",
@@ -286,7 +286,7 @@ export const elixir3Data = {
       },
     {
       "title": "with式",
-      "description": "with式の使い方を学びます",
+      "description": "with式の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "with式",
@@ -344,7 +344,7 @@ export const elixir3Data = {
       },
     {
       "title": "プロトコルの定義",
-      "description": "プロトコルの定義の使い方を学びます",
+      "description": "プロトコルの定義の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "プロトコルの定義",
@@ -387,7 +387,7 @@ export const elixir3Data = {
       },
     {
       "title": "プロトコルの実装",
-      "description": "プロトコルの実装の使い方を学びます",
+      "description": "プロトコルの実装の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "プロトコルの実装",
@@ -437,7 +437,7 @@ export const elixir3Data = {
       },
     {
       "title": "Agent",
-      "description": "Agentの使い方を学びます",
+      "description": "Agentの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Agent",
@@ -483,7 +483,7 @@ export const elixir3Data = {
       },
     {
       "title": "Task",
-      "description": "Taskの使い方を学びます",
+      "description": "Taskの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Task",

@@ -34,7 +34,7 @@ export const ruby2Data = {
   "exercises": [
     {
       "title": "ブロックを使おう - each",
-      "description": "ブロックを使おう - eachの使い方を学びます",
+      "description": "ブロックについて学びます",
       "tutorialSlides": [
         {
           "title": "ブロックとは？",
@@ -82,7 +82,7 @@ export const ruby2Data = {
       },
     {
       "title": "map で変換しよう",
-      "description": "キーと値のペアでデータを管理する方法を学びます",
+      "description": "配列の全要素に同じ処理を適用する方法を学びます",
       "tutorialSlides": [
         {
           "title": "map（マップ）とは？",
@@ -134,7 +134,7 @@ export const ruby2Data = {
       },
     {
       "title": "select で絞り込もう",
-      "description": "select で絞り込もうの使い方を学びます",
+      "description": "条件に合う要素だけを抽出する方法を学びます",
       "tutorialSlides": [
         {
           "title": "select（セレクト）とは？",
@@ -188,7 +188,7 @@ export const ruby2Data = {
       },
     {
       "title": "シンボルを使おう",
-      "description": "シンボルを使おうの使い方を学びます",
+      "description": "シンボルについて学びます",
       "tutorialSlides": [
         {
           "title": "シンボルとは？",
@@ -228,7 +228,7 @@ export const ruby2Data = {
       },
     {
       "title": "クラスを定義しよう",
-      "description": "データと処理をまとめる「クラス」を学びます",
+      "description": "クラスを定義しようの仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "クラスとは？",
@@ -300,7 +300,7 @@ export const ruby2Data = {
       },
     {
       "title": "アクセサを使おう",
-      "description": "アクセサを使おうの使い方を学びます",
+      "description": "アクセサを使おうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "attr_accessor（アトリビュート・アクセサ）とは？",
@@ -356,7 +356,7 @@ export const ruby2Data = {
       },
     {
       "title": "継承を学ぼう",
-      "description": "継承を学ぼうの使い方を学びます",
+      "description": "継承（けいしょう）について学びます",
       "tutorialSlides": [
         {
           "title": "継承（けいしょう）とは？",
@@ -496,7 +496,7 @@ export const ruby2Data = {
       },
     {
       "title": "例外処理 begin-rescue",
-      "description": "エラーを適切に処理する方法を学びます",
+      "description": "プログラムのエラーを適切に処理して、安全に動作させる方法を学びます",
       "tutorialSlides": [
         {
           "title": "例外処理（れいがいしょり）とは？",
@@ -548,7 +548,7 @@ export const ruby2Data = {
       },
     {
       "title": "ラムダを使おう",
-      "description": "短く書ける無名関数を学びます",
+      "description": "名前のない簡潔な関数を作る方法を学びます",
       "tutorialSlides": [
         {
           "title": "ラムダとは？",

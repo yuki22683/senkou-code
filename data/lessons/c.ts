@@ -15,7 +15,7 @@ export const cData = {
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",
-      "description": "画面に文字を表示する方法を学びます",
+      "description": "プログラムの基本！画面にメッセージを表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "C言語とは？",
@@ -71,7 +71,7 @@ export const cData = {
     },
     {
       "title": "数字を入れる「はこ」int",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
               {
                       "title": "変数（へんすう）って何？",
@@ -125,7 +125,7 @@ export const cData = {
     },
     {
       "title": "コンピュータで計算しましょう",
-      "description": "数値の計算方法を学びます",
+      "description": "プログラムで数値を計算する方法を学びます",
       "tutorialSlides": [
               {
                       "title": "計算をしてみよう",
@@ -189,7 +189,7 @@ export const cData = {
     },
     {
       "title": "剰余演算子（%）",
-      "description": "数値の計算方法を学びます",
+      "description": "余りについて学びます",
       "tutorialSlides": [
               {
                       "title": "剰余演算子って何？",
@@ -245,7 +245,7 @@ export const cData = {
     },
     {
       "title": "累算代入演算子（+=、-=）",
-      "description": "数値の計算方法を学びます",
+      "description": "累算代入演算子（+=、-=）の仕組みと使い方を学びます",
       "tutorialSlides": [
               {
                       "title": "累算代入演算子とは",
@@ -309,7 +309,7 @@ export const cData = {
     },
     {
       "title": "文章の中に「はこ」を入れましょう",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
               {
                       "title": "fmt.Printfで表示",
@@ -363,7 +363,7 @@ export const cData = {
     },
     {
       "title": "データをならべる「配列」",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
               {
                       "title": "配列って何？",
@@ -422,7 +422,7 @@ export const cData = {
     },
     {
       "title": "「もし〜なら」で分ける if文",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -485,7 +485,7 @@ export const cData = {
     },
     {
       "title": "ちがう場合は？ if-else文",
-      "description": "条件に当てはまらない場合の処理を学びます",
+      "description": "条件に合わない場合の処理を追加する方法を学びます",
       "tutorialSlides": [
               {
                       "title": "if-else文とは",
@@ -554,7 +554,7 @@ export const cData = {
     },
     {
       "title": "論理演算子（&&、||）",
-      "description": "数値の計算方法を学びます",
+      "description": "複数の条件を組み合わせる方法を学びます",
       "tutorialSlides": [
               {
                       "title": "論理演算子とは",
@@ -617,7 +617,7 @@ export const cData = {
     },
     {
       "title": "ぐるぐる回す for文",
-      "description": "同じ処理を繰り返す方法を学びます",
+      "description": "同じ処理を何度も実行する「繰り返し」を学びます",
       "tutorialSlides": [
               {
                       "title": "for文とは",
@@ -678,7 +678,7 @@ export const cData = {
     },
     {
       "title": "データをまとめましょう「構造体」",
-      "description": "データをまとめましょう「構造体」の使い方を学びます",
+      "description": "データをまとめましょう「構造体」の仕組みと使い方を学びます",
       "tutorialSlides": [
               {
                       "title": "構造体とは",
@@ -746,7 +746,7 @@ export const cData = {
     },
     {
       "title": "自分だけの関数を作ろう",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",

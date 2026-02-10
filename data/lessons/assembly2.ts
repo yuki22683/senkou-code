@@ -34,7 +34,7 @@ export const assembly2Data = {
   "exercises": [
     {
       "title": "レジスタに値を入れる",
-      "description": "レジスタに値を入れるの使い方を学びます",
+      "description": "CPUの高速記憶装置「レジスタ」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "レジスタとは？",
@@ -89,7 +89,7 @@ export const assembly2Data = {
       },
     {
       "title": "add で足し算",
-      "description": "数の足し算を行う方法を学びます",
+      "description": "数の足し算（加算）をプログラムで行う方法を学びます",
       "tutorialSlides": [
         {
           "title": "add 命令",
@@ -152,7 +152,7 @@ export const assembly2Data = {
       },
     {
       "title": "sub で引き算",
-      "description": "数の引き算を行う方法を学びます",
+      "description": "数の引き算（減算）をプログラムで行う方法を学びます",
       "tutorialSlides": [
         {
           "title": "sub 命令",
@@ -215,7 +215,7 @@ export const assembly2Data = {
       },
     {
       "title": "mul で掛け算",
-      "description": "数の掛け算を行う方法を学びます",
+      "description": "数の掛け算（乗算）をプログラムで行う方法を学びます",
       "tutorialSlides": [
         {
           "title": "mul 命令",
@@ -282,7 +282,7 @@ export const assembly2Data = {
       },
     {
       "title": "cmp で比較",
-      "description": "値を比較する方法を学びます",
+      "description": "値の大小や等しさを比較する方法を学びます",
       "tutorialSlides": [
         {
           "title": "cmp 命令",
@@ -345,7 +345,7 @@ export const assembly2Data = {
       },
     {
       "title": "jmp で無条件ジャンプ",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "jmpについて学びます",
       "tutorialSlides": [
         {
           "title": "jmp 命令",
@@ -408,7 +408,7 @@ export const assembly2Data = {
       },
     {
       "title": "je で等しければジャンプ",
-      "description": "je で等しければジャンプの使い方を学びます",
+      "description": "je命令で条件が等しい場合にジャンプする方法を学びます",
       "tutorialSlides": [
         {
           "title": "je 命令",
@@ -479,7 +479,7 @@ export const assembly2Data = {
       },
     {
       "title": "push と pop でスタック操作",
-      "description": "push と pop でスタック操作の使い方を学びます",
+      "description": "スタックについて学びます",
       "tutorialSlides": [
         {
           "title": "スタックとは？",
@@ -601,7 +601,7 @@ export const assembly2Data = {
       },
     {
       "title": "call で関数呼び出し",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "call 命令",

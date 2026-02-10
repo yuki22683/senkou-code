@@ -34,7 +34,7 @@ export const perl2Data = {
   "exercises": [
     {
       "title": "正規表現でマッチング",
-      "description": "文字列のパターンマッチングを学びます",
+      "description": "パターンを使って文字列を検索・置換する方法を学びます",
       "tutorialSlides": [
         {
           "title": "正規表現（せいきひょうげん）とは？",
@@ -82,7 +82,7 @@ export const perl2Data = {
       },
     {
       "title": "正規表現で置換",
-      "description": "文字列のパターンマッチングを学びます",
+      "description": "パターンを使って文字列を検索・置換する方法を学びます",
       "tutorialSlides": [
         {
           "title": "置換（ちかん）とは？",
@@ -128,7 +128,7 @@ export const perl2Data = {
       },
     {
       "title": "配列を使おう",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）の復習",
@@ -212,7 +212,7 @@ export const perl2Data = {
       },
     {
       "title": "foreach でループ",
-      "description": "同じ処理を繰り返す方法を学びます",
+      "description": "同じ処理を何度も実行する「繰り返し」を学びます",
       "tutorialSlides": [
         {
           "title": "foreach（フォーイーチ）の復習",
@@ -260,7 +260,7 @@ export const perl2Data = {
       },
     {
       "title": "サブルーチンを作ろう",
-      "description": "サブルーチンを作ろうの使い方を学びます",
+      "description": "サブルーチンを作ろうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "サブルーチンと引数",
@@ -312,7 +312,7 @@ export const perl2Data = {
       },
     {
       "title": "リファレンスを学ぼう",
-      "description": "リファレンスを学ぼうの使い方を学びます",
+      "description": "リファレンスを学ぼうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "リファレンスとは？",
@@ -357,7 +357,7 @@ export const perl2Data = {
       },
     {
       "title": "無名配列リファレンス",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "無名配列（むめいはいれつ）とは？",
@@ -399,7 +399,7 @@ export const perl2Data = {
       },
     {
       "title": "map で変換",
-      "description": "キーと値のペアでデータを管理する方法を学びます",
+      "description": "配列の全要素に同じ処理を適用する方法を学びます",
       "tutorialSlides": [
         {
           "title": "map（マップ）とは？",
@@ -445,7 +445,7 @@ export const perl2Data = {
       },
     {
       "title": "grep でフィルタ",
-      "description": "grep でフィルタの使い方を学びます",
+      "description": "条件に合う要素だけを抽出する方法を学びます",
       "tutorialSlides": [
         {
           "title": "grep（グレップ）とは？",

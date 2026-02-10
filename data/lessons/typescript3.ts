@@ -16,7 +16,7 @@ export const typescriptData3 = {
   "exercises": [
     {
       "title": "Partial<T>",
-      "description": "Partial<T>の使い方を学びます",
+      "description": "Partial<T>の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Partial とは？",
@@ -80,7 +80,7 @@ export const typescriptData3 = {
       },
     {
       "title": "Required<T>",
-      "description": "Required<T>の使い方を学びます",
+      "description": "Required<T>の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Required とは？",
@@ -142,7 +142,7 @@ export const typescriptData3 = {
       },
     {
       "title": "Pick<T, K>",
-      "description": "Pick<T, K>の使い方を学びます",
+      "description": "Pick<T, K>の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Pick とは？",
@@ -206,7 +206,7 @@ export const typescriptData3 = {
       },
     {
       "title": "Omit<T, K>",
-      "description": "Omit<T, K>の使い方を学びます",
+      "description": "Omit<T, K>の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Omit とは？",
@@ -334,7 +334,7 @@ export const typescriptData3 = {
       },
     {
       "title": "ReturnType<T>",
-      "description": "データの種類（型）について学びます",
+      "description": "関数の処理結果を呼び出し元に返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "ReturnType とは？",
@@ -390,7 +390,7 @@ export const typescriptData3 = {
       },
     {
       "title": "条件型（Conditional Types）",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "条件型とは？",
@@ -452,7 +452,7 @@ export const typescriptData3 = {
       },
     {
       "title": "infer キーワード",
-      "description": "infer キーワードの使い方を学びます",
+      "description": "infer キーワードの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "infer とは？",
@@ -514,7 +514,7 @@ export const typescriptData3 = {
       },
     {
       "title": "keyof 演算子",
-      "description": "数値の計算方法を学びます",
+      "description": "keyof 演算子の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "keyof とは？",
@@ -580,7 +580,7 @@ export const typescriptData3 = {
       },
     {
       "title": "マップ型（Mapped Types）",
-      "description": "キーと値のペアでデータを管理する方法を学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "マップ型とは？",

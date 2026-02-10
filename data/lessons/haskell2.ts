@@ -38,7 +38,7 @@ export const haskell2Data = {
   "exercises": [
     {
       "title": "関数を定義しよう",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をひとまとめにして名前をつける「関数定義」を学びます",
       "tutorialSlides": [
         {
           "title": "関数の定義",
@@ -78,7 +78,7 @@ export const haskell2Data = {
       },
     {
       "title": "型注釈を書こう",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "型注釈とは？",
@@ -122,7 +122,7 @@ export const haskell2Data = {
       },
     {
       "title": "リストを使おう",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "リストとは？",
@@ -162,7 +162,7 @@ export const haskell2Data = {
       },
     {
       "title": "map で変換しよう",
-      "description": "キーと値のペアでデータを管理する方法を学びます",
+      "description": "配列の全要素に同じ処理を適用する方法を学びます",
       "tutorialSlides": [
         {
           "title": "map とは？",
@@ -198,7 +198,7 @@ export const haskell2Data = {
       },
     {
       "title": "filter で絞り込もう",
-      "description": "filter で絞り込もうの使い方を学びます",
+      "description": "条件に合う要素だけを抽出する方法を学びます",
       "tutorialSlides": [
         {
           "title": "filter とは？",
@@ -234,7 +234,7 @@ export const haskell2Data = {
       },
     {
       "title": "パターンマッチを使おう",
-      "description": "文字列のパターンマッチングを学びます",
+      "description": "パターンマッチについて学びます",
       "tutorialSlides": [
         {
           "title": "パターンマッチとは？",
@@ -282,7 +282,7 @@ export const haskell2Data = {
       },
     {
       "title": "ガードで条件分岐",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "ガードとは？",
@@ -334,7 +334,7 @@ export const haskell2Data = {
       },
     {
       "title": "ラムダ式を使おう",
-      "description": "短く書ける無名関数を学びます",
+      "description": "名前のない簡潔な関数を作る方法を学びます",
       "tutorialSlides": [
         {
           "title": "ラムダ式とは？",
@@ -370,7 +370,7 @@ export const haskell2Data = {
       },
     {
       "title": "リスト内包表記",
-      "description": "1行でリストを作成する便利な書き方を学びます",
+      "description": "forループを1行で書ける「リスト内包表記」をマスターします",
       "tutorialSlides": [
         {
           "title": "リスト内包表記とは？",
@@ -406,7 +406,7 @@ export const haskell2Data = {
       },
     {
       "title": "foldr で畳み込み",
-      "description": "foldr で畳み込みの使い方を学びます",
+      "description": "配列の要素を集約して1つの値にする方法を学びます",
       "tutorialSlides": [
         {
           "title": "foldr とは？",

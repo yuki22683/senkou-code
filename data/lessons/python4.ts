@@ -50,7 +50,7 @@ export const pythonData4 = {
   "exercises": [
     {
       "title": "クラスの継承",
-      "description": "クラスの機能を引き継ぐ「継承」を学びます",
+      "description": "既存のクラスの機能を引き継いで、新しいクラスを作る方法を学びます",
       "tutorialSlides": [
         {
           "title": "継承（けいしょう）とは？",
@@ -116,7 +116,7 @@ export const pythonData4 = {
       },
     {
       "title": "super()で親を呼ぶ",
-      "description": "super()で親を呼ぶの使い方を学びます",
+      "description": "super（スーパー）について学びます",
       "tutorialSlides": [
         {
           "title": "super()とは？",
@@ -186,7 +186,7 @@ export const pythonData4 = {
       },
     {
       "title": "@propertyデコレータ",
-      "description": "関数を拡張する「デコレータ」を学びます",
+      "description": "関数の機能を後から拡張できる「デコレータ」を学びます",
       "tutorialSlides": [
         {
           "title": "@propertyとは？",
@@ -256,7 +256,7 @@ export const pythonData4 = {
       },
     {
       "title": "@classmethodデコレータ",
-      "description": "データと処理をまとめる「クラス」を学びます",
+      "description": "関数の機能を後から拡張できる「デコレータ」を学びます",
       "tutorialSlides": [
         {
           "title": "@classmethodとは？",
@@ -336,7 +336,7 @@ export const pythonData4 = {
       },
     {
       "title": "@staticmethodデコレータ",
-      "description": "関数を拡張する「デコレータ」を学びます",
+      "description": "関数の機能を後から拡張できる「デコレータ」を学びます",
       "tutorialSlides": [
         {
           "title": "@staticmethodとは？",
@@ -392,7 +392,7 @@ export const pythonData4 = {
       },
     {
       "title": "抽象基底クラス",
-      "description": "データと処理をまとめる「クラス」を学びます",
+      "description": "抽象基底クラスの仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "抽象クラスとは？",
@@ -468,7 +468,7 @@ export const pythonData4 = {
       },
     {
       "title": "__str__メソッド",
-      "description": "__str__メソッドの使い方を学びます",
+      "description": "__str__メソッドの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "__str__とは？",
@@ -534,7 +534,7 @@ export const pythonData4 = {
       },
     {
       "title": "__eq__メソッド",
-      "description": "__eq__メソッドの使い方を学びます",
+      "description": "__eq__メソッドの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "__eq__とは？",
@@ -604,7 +604,7 @@ export const pythonData4 = {
       },
     {
       "title": "__len__メソッド",
-      "description": "__len__メソッドの使い方を学びます",
+      "description": "__len__メソッドの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "__len__とは？",
@@ -666,7 +666,7 @@ export const pythonData4 = {
       },
     {
       "title": "dataclassデコレータ",
-      "description": "データと処理をまとめる「クラス」を学びます",
+      "description": "関数の機能を後から拡張できる「デコレータ」を学びます",
       "tutorialSlides": [
         {
           "title": "@dataclassとは？",

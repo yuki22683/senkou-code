@@ -14,7 +14,7 @@ export const cpp4Data = {
   "exercises": [
     {
       "title": "unique_ptr",
-      "description": "unique_ptrの使い方を学びます",
+      "description": "unique_ptrの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "unique_ptr とは？",
@@ -70,7 +70,7 @@ export const cpp4Data = {
       },
     {
       "title": "std::variant",
-      "description": "std::variantの使い方を学びます",
+      "description": "std::variantの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "variant とは？",
@@ -126,7 +126,7 @@ export const cpp4Data = {
       },
     {
       "title": "構造化束縛",
-      "description": "構造化束縛の使い方を学びます",
+      "description": "構造化束縛の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "構造化束縛とは？",
@@ -184,7 +184,7 @@ export const cpp4Data = {
       },
     {
       "title": "std::string_view",
-      "description": "文字列の操作方法を学びます",
+      "description": "std::string_viewの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "string_view とは？",
@@ -246,7 +246,7 @@ export const cpp4Data = {
       },
     {
       "title": "std::transform",
-      "description": "同じ処理を繰り返す方法を学びます",
+      "description": "同じ処理を何度も実行する「繰り返し」を学びます",
       "tutorialSlides": [
         {
           "title": "transform とは？",
@@ -308,7 +308,7 @@ export const cpp4Data = {
       },
     {
       "title": "std::accumulate",
-      "description": "std::accumulateの使い方を学びます",
+      "description": "std::accumulateの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "accumulate とは？",
@@ -368,7 +368,7 @@ export const cpp4Data = {
       },
     {
       "title": "std::find_if",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "find_if とは？",
@@ -428,7 +428,7 @@ export const cpp4Data = {
       },
     {
       "title": "std::sort with lambda",
-      "description": "短く書ける無名関数を学びます",
+      "description": "複数の条件を組み合わせる方法を学びます",
       "tutorialSlides": [
         {
           "title": "カスタムソート",
@@ -490,7 +490,7 @@ export const cpp4Data = {
       },
     {
       "title": "try-catch 例外処理",
-      "description": "エラーを適切に処理する方法を学びます",
+      "description": "プログラムのエラーを適切に処理して、安全に動作させる方法を学びます",
       "tutorialSlides": [
         {
           "title": "例外処理",
@@ -552,7 +552,7 @@ export const cpp4Data = {
       },
     {
       "title": "noexcept 指定",
-      "description": "エラーを適切に処理する方法を学びます",
+      "description": "プログラムのエラーを適切に処理して、安全に動作させる方法を学びます",
       "tutorialSlides": [
         {
           "title": "noexcept とは？",

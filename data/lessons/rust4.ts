@@ -34,7 +34,7 @@ export const rust4Data = {
   "exercises": [
     {
       "title": "トレイトの定義",
-      "description": "トレイトの定義の使い方を学びます",
+      "description": "トレイトについて学びます",
       "tutorialSlides": [
         {
           "title": "トレイトとは？（復習）",
@@ -104,7 +104,7 @@ export const rust4Data = {
       },
     {
       "title": "derive 属性",
-      "description": "derive 属性の使い方を学びます",
+      "description": "derive 属性の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "derive（デライブ）とは？",
@@ -160,7 +160,7 @@ export const rust4Data = {
       },
     {
       "title": "Box<T>",
-      "description": "Box<T>の使い方を学びます",
+      "description": "Box<T>について学びます",
       "tutorialSlides": [
         {
           "title": "Box（ボックス）とは？",
@@ -204,7 +204,7 @@ export const rust4Data = {
       },
     {
       "title": "Rc<T>",
-      "description": "Rc<T>の使い方を学びます",
+      "description": "Rc<T>について学びます",
       "tutorialSlides": [
         {
           "title": "Rc（アールシー）とは？",
@@ -309,7 +309,7 @@ export const rust4Data = {
       },
     {
       "title": "HashSet",
-      "description": "HashSetの使い方を学びます",
+      "description": "キーと値のペアでデータを管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "HashSet とは？",
@@ -363,7 +363,7 @@ export const rust4Data = {
       },
     {
       "title": "match ガード",
-      "description": "match ガードの使い方を学びます",
+      "description": "match ガードの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "match ガードとは？",
@@ -416,7 +416,7 @@ export const rust4Data = {
       },
     {
       "title": "impl Trait",
-      "description": "impl Traitの使い方を学びます",
+      "description": "impl Traitの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "impl Trait とは？",
@@ -473,7 +473,7 @@ export const rust4Data = {
       },
     {
       "title": "collect で変換",
-      "description": "collect で変換の使い方を学びます",
+      "description": "collect で変換の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "collect とは？",
@@ -517,7 +517,7 @@ export const rust4Data = {
       },
     {
       "title": "enumerate でインデックス付き",
-      "description": "enumerate でインデックス付きの使い方を学びます",
+      "description": "enumerate でインデックス付きの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "enumerate（イニュメレート）とは？",

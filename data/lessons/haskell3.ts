@@ -18,7 +18,7 @@ export const haskell3Data = {
   "exercises": [
     {
       "title": "map関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "map関数",
@@ -63,7 +63,7 @@ export const haskell3Data = {
       },
     {
       "title": "filter関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "filter関数",
@@ -108,7 +108,7 @@ export const haskell3Data = {
       },
     {
       "title": "ラムダ式",
-      "description": "短く書ける無名関数を学びます",
+      "description": "名前のない簡潔な関数を作る方法を学びます",
       "tutorialSlides": [
         {
           "title": "ラムダ式",
@@ -143,7 +143,7 @@ export const haskell3Data = {
       },
     {
       "title": "foldr（右畳み込み）",
-      "description": "foldr（右畳み込み）の使い方を学びます",
+      "description": "配列の要素を集約して1つの値にする方法を学びます",
       "tutorialSlides": [
         {
           "title": "foldr（右畳み込み）",
@@ -186,7 +186,7 @@ export const haskell3Data = {
       },
     {
       "title": "関数合成",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "関数合成",
@@ -229,7 +229,7 @@ export const haskell3Data = {
       },
     {
       "title": "Maybe型",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "Maybe型",
@@ -276,7 +276,7 @@ export const haskell3Data = {
       },
     {
       "title": "Either型",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "Either型",
@@ -327,7 +327,7 @@ export const haskell3Data = {
       },
     {
       "title": "fmap（ファンクタ）",
-      "description": "キーと値のペアでデータを管理する方法を学びます",
+      "description": "配列の全要素に同じ処理を適用する方法を学びます",
       "tutorialSlides": [
         {
           "title": "fmap（ファンクタ）",
@@ -370,7 +370,7 @@ export const haskell3Data = {
       },
     {
       "title": "do記法",
-      "description": "do記法の使い方を学びます",
+      "description": "do記法の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "do記法",
@@ -425,7 +425,7 @@ export const haskell3Data = {
       },
     {
       "title": "リスト内包表記",
-      "description": "1行でリストを作成する便利な書き方を学びます",
+      "description": "forループを1行で書ける「リスト内包表記」をマスターします",
       "tutorialSlides": [
         {
           "title": "リスト内包表記",

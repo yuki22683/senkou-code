@@ -34,7 +34,7 @@ export const haskellData = {
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",
-      "description": "画面に文字を表示する方法を学びます",
+      "description": "プログラムの基本！画面にメッセージを表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "Haskell（ハスケル）とは？",
@@ -77,7 +77,7 @@ export const haskellData = {
       },
     {
       "title": "名前に「あたい」をつけましょう",
-      "description": "名前に「あたい」をつけましょうの使い方を学びます",
+      "description": "名前に「あたい」をつけましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "変数（定義）とは？",
@@ -120,7 +120,7 @@ export const haskellData = {
       },
     {
       "title": "コンピュータで計算しましょう",
-      "description": "数値の計算方法を学びます",
+      "description": "プログラムで数値を計算する方法を学びます",
       "tutorialSlides": [
         {
           "title": "計算はコンピュータにお任せ",

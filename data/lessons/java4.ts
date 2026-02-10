@@ -15,7 +15,7 @@ export const javaData4 = {
   "exercises": [
     {
       "title": "ジェネリクスの基本",
-      "description": "ジェネリクスの基本の使い方を学びます",
+      "description": "ジェネリクスについて学びます",
       "tutorialSlides": [
         {
           "title": "ジェネリクスとは？",
@@ -83,7 +83,7 @@ export const javaData4 = {
       },
     {
       "title": "境界型パラメータ",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "extends で制約（せいやく）",
@@ -143,7 +143,7 @@ export const javaData4 = {
       },
     {
       "title": "ワイルドカード",
-      "description": "ワイルドカードの使い方を学びます",
+      "description": "ワイルドカードの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "? ワイルドカードとは？",
@@ -207,7 +207,7 @@ export const javaData4 = {
       },
     {
       "title": "Map の基本操作",
-      "description": "キーと値のペアでデータを管理する方法を学びます",
+      "description": "配列の全要素に同じ処理を適用する方法を学びます",
       "tutorialSlides": [
         {
           "title": "Map（マップ）とは？",
@@ -265,7 +265,7 @@ export const javaData4 = {
       },
     {
       "title": "Map のイテレーション",
-      "description": "キーと値のペアでデータを管理する方法を学びます",
+      "description": "配列の全要素に同じ処理を適用する方法を学びます",
       "tutorialSlides": [
         {
           "title": "entrySet（エントリーセット）",
@@ -383,7 +383,7 @@ export const javaData4 = {
       },
     {
       "title": "Comparable の実装",
-      "description": "Comparable の実装の使い方を学びます",
+      "description": "Comparable の実装の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Comparable（コンパラブル）とは？",
@@ -457,7 +457,7 @@ export const javaData4 = {
       },
     {
       "title": "Enum の定義",
-      "description": "Enum の定義の使い方を学びます",
+      "description": "Enum の定義の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Enum（イーナム）とは？",
@@ -513,7 +513,7 @@ export const javaData4 = {
       },
     {
       "title": "Queue の使い方",
-      "description": "Queue の使い方の使い方を学びます",
+      "description": "Queue の使い方の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Queue（キュー）とは？",
@@ -571,7 +571,7 @@ export const javaData4 = {
       },
     {
       "title": "Deque の使い方",
-      "description": "Deque の使い方の使い方を学びます",
+      "description": "Deque の使い方の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Deque（デック）とは？",

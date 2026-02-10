@@ -34,7 +34,7 @@ export const csharp3Data = {
   "exercises": [
     {
       "title": "async/await の基本",
-      "description": "async/await の基本の使い方を学びます",
+      "description": "非同期処理について学びます",
       "tutorialSlides": [
         {
           "title": "async/await（アシンク/アウェイト）とは？",
@@ -182,7 +182,7 @@ export const csharp3Data = {
       },
     {
       "title": "LINQ First と FirstOrDefault",
-      "description": "複数の条件を組み合わせる方法を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "First と FirstOrDefault の違い",
@@ -250,7 +250,7 @@ export const csharp3Data = {
       },
     {
       "title": "LINQ Any と All",
-      "description": "LINQ Any と Allの使い方を学びます",
+      "description": "LINQ Any と Allの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Any（エニー）とは？",
@@ -318,7 +318,7 @@ export const csharp3Data = {
       },
     {
       "title": "LINQ Sum と Average",
-      "description": "LINQ Sum と Averageの使い方を学びます",
+      "description": "LINQ Sum と Averageの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Sum（サム）で合計を計算",
@@ -386,7 +386,7 @@ export const csharp3Data = {
       },
     {
       "title": "switch式（パターンマッチ）",
-      "description": "文字列のパターンマッチングを学びます",
+      "description": "switch式について学びます",
       "tutorialSlides": [
         {
           "title": "switch式（スイッチしき）とは？",
@@ -536,7 +536,7 @@ export const csharp3Data = {
       },
     {
       "title": "string interpolation",
-      "description": "文字列の操作方法を学びます",
+      "description": "文字列補間について学びます",
       "tutorialSlides": [
         {
           "title": "文字列補間（もじれつほかん）の復習",
@@ -600,7 +600,7 @@ export const csharp3Data = {
       },
     {
       "title": "record 型",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "record（レコード）型とは？",
@@ -666,7 +666,7 @@ export const csharp3Data = {
       },
     {
       "title": "using で自動解放",
-      "description": "using で自動解放の使い方を学びます",
+      "description": "using で自動解放の仕組みと使い方を学びます",
       "tutorialSlides": [
               {
                       "title": "usingステートメントとは",

@@ -30,7 +30,7 @@ export const bash2Data = {
   "exercises": [
     {
       "title": "配列を使おう",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "配列とは？",
@@ -71,7 +71,7 @@ export const bash2Data = {
       },
     {
       "title": "文字列の長さを取得",
-      "description": "文字列の操作方法を学びます",
+      "description": "文字列の長さを調べる方法を学びます",
       "tutorialSlides": [
         {
           "title": "文字列の長さ",
@@ -111,7 +111,7 @@ export const bash2Data = {
       },
     {
       "title": "文字列の部分取得",
-      "description": "文字列の操作方法を学びます",
+      "description": "文字列を操作する方法を学びます",
       "tutorialSlides": [
         {
           "title": "部分文字列",
@@ -151,7 +151,7 @@ export const bash2Data = {
       },
     {
       "title": "関数に引数を渡す",
-      "description": "関数に値を渡す方法を学びます",
+      "description": "関数に「材料」を渡して、柔軟に動作させる方法を学びます",
       "tutorialSlides": [
         {
           "title": "関数の引数",
@@ -198,7 +198,7 @@ export const bash2Data = {
       },
     {
       "title": "戻り値を使おう",
-      "description": "戻り値を使おうの使い方を学びます",
+      "description": "関数の処理結果を呼び出し元に返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "戻り値",
@@ -248,7 +248,7 @@ export const bash2Data = {
       },
     {
       "title": "while ループ",
-      "description": "同じ処理を繰り返す方法を学びます",
+      "description": "条件を満たす間、処理を繰り返し続ける方法を学びます",
       "tutorialSlides": [
         {
           "title": "while とは？",
@@ -299,7 +299,7 @@ export const bash2Data = {
       },
     {
       "title": "case で分岐",
-      "description": "case で分岐の使い方を学びます",
+      "description": "caseについて学びます",
       "tutorialSlides": [
         {
           "title": "case とは？",
@@ -354,7 +354,7 @@ export const bash2Data = {
       },
     {
       "title": "コマンド置換",
-      "description": "コマンド置換の使い方を学びます",
+      "description": "$()について学びます",
       "tutorialSlides": [
         {
           "title": "コマンド置換とは？",
@@ -391,7 +391,7 @@ export const bash2Data = {
     },
     {
       "title": "read で入力を受け取る",
-      "description": "ユーザーからの入力を受け取る方法を学びます",
+      "description": "キーボードからユーザーの入力を受け取る方法を学びます",
       "tutorialSlides": [
         {
           "title": "read とは？",
@@ -427,7 +427,7 @@ export const bash2Data = {
       },
     {
       "title": "ヒアドキュメント",
-      "description": "ヒアドキュメントの使い方を学びます",
+      "description": "<<について学びます",
       "tutorialSlides": [
         {
           "title": "ヒアドキュメントとは？",

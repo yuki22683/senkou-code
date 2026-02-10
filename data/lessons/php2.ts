@@ -34,7 +34,7 @@ export const php2Data = {
   "exercises": [
     {
       "title": "クラスを定義しよう",
-      "description": "データと処理をまとめる「クラス」を学びます",
+      "description": "クラスを定義しようの仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "クラスとは？",
@@ -92,7 +92,7 @@ export const php2Data = {
       },
     {
       "title": "コンストラクタを使おう",
-      "description": "コンストラクタを使おうの使い方を学びます",
+      "description": "コンストラクタを使おうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "コンストラクタとは？",
@@ -156,7 +156,7 @@ export const php2Data = {
       },
     {
       "title": "継承を学ぼう",
-      "description": "継承を学ぼうの使い方を学びます",
+      "description": "継承（けいしょう）について学びます",
       "tutorialSlides": [
         {
           "title": "継承（けいしょう）とは？",
@@ -220,7 +220,7 @@ export const php2Data = {
       },
     {
       "title": "インターフェースを使おう",
-      "description": "インターフェースを使おうの使い方を学びます",
+      "description": "インターフェースについて学びます",
       "tutorialSlides": [
         {
           "title": "インターフェースとは？",
@@ -290,7 +290,7 @@ export const php2Data = {
       },
     {
       "title": "配列の array_map",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "array_map とは？",
@@ -338,7 +338,7 @@ export const php2Data = {
       },
     {
       "title": "配列の array_filter",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "array_filter とは？",
@@ -386,7 +386,7 @@ export const php2Data = {
       },
     {
       "title": "アロー関数を使おう",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "アロー関数（かんすう）とは？",
@@ -430,7 +430,7 @@ export const php2Data = {
       },
     {
       "title": "例外処理 try-catch",
-      "description": "エラーを適切に処理する方法を学びます",
+      "description": "プログラムのエラーを適切に処理して、安全に動作させる方法を学びます",
       "tutorialSlides": [
         {
           "title": "例外処理（れいがいしょり）とは？",
@@ -484,7 +484,7 @@ export const php2Data = {
       },
     {
       "title": "名前空間を使おう",
-      "description": "名前空間を使おうの使い方を学びます",
+      "description": "名前空間（namespace）について学びます",
       "tutorialSlides": [
         {
           "title": "名前空間（なまえくうかん）とは？",
@@ -548,7 +548,7 @@ export const php2Data = {
       },
     {
       "title": "Null合体演算子 ??",
-      "description": "数値の計算方法を学びます",
+      "description": "Null合体演算子 ??の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Null合体演算子（がったいえんざんし）とは？",

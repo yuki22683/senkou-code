@@ -15,7 +15,7 @@ export const javaData5 = {
   "exercises": [
     {
       "title": "try-catch の基本",
-      "description": "エラーを適切に処理する方法を学びます",
+      "description": "プログラムのエラーを適切に処理して、安全に動作させる方法を学びます",
       "tutorialSlides": [
         {
           "title": "例外（れいがい）とは？",
@@ -73,7 +73,7 @@ export const javaData5 = {
       },
     {
       "title": "finally ブロック",
-      "description": "finally ブロックの使い方を学びます",
+      "description": "finally ブロックの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "finally（ファイナリー）とは？",
@@ -135,7 +135,7 @@ export const javaData5 = {
       },
     {
       "title": "throws 宣言",
-      "description": "throws 宣言の使い方を学びます",
+      "description": "throws 宣言の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "throws（スローズ）とは？",
@@ -207,7 +207,7 @@ export const javaData5 = {
       },
     {
       "title": "カスタム例外",
-      "description": "エラーを適切に処理する方法を学びます",
+      "description": "Exceptionについて学びます",
       "tutorialSlides": [
         {
           "title": "カスタム例外（れいがい）",
@@ -282,7 +282,7 @@ export const javaData5 = {
       },
     {
       "title": "try-with-resources",
-      "description": "エラーを適切に処理する方法を学びます",
+      "description": "プログラムのエラーを適切に処理して、安全に動作させる方法を学びます",
       "tutorialSlides": [
         {
           "title": "自動リソース管理（かんり）",
@@ -344,7 +344,7 @@ export const javaData5 = {
       },
     {
       "title": "BufferedReader でファイル読み込み",
-      "description": "ユーザーからの入力を受け取る方法を学びます",
+      "description": "ファイルを開いてデータを読み込む方法を学びます",
       "tutorialSlides": [
         {
           "title": "BufferedReader（バッファードリーダー）",
@@ -409,7 +409,7 @@ export const javaData5 = {
       },
     {
       "title": "BufferedWriter でファイル書き込み",
-      "description": "ファイルにデータを書き込む方法を学びます",
+      "description": "ファイルにデータを書き込んで保存する方法を学びます",
       "tutorialSlides": [
         {
           "title": "BufferedWriter（バッファードライター）",
@@ -474,7 +474,7 @@ export const javaData5 = {
       },
     {
       "title": "Scanner での入力",
-      "description": "ユーザーからの入力を受け取る方法を学びます",
+      "description": "キーボードからユーザーの入力を受け取る方法を学びます",
       "tutorialSlides": [
         {
           "title": "Scanner（スキャナー）とは？",
@@ -535,7 +535,7 @@ export const javaData5 = {
       },
     {
       "title": "Files.readAllLines",
-      "description": "ファイルからデータを読み込む方法を学びます",
+      "description": "Files.readAllLinesの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "NIO2 API（エヌアイオーツー）",
@@ -593,7 +593,7 @@ export const javaData5 = {
       },
     {
       "title": "複数例外のキャッチ",
-      "description": "エラーを適切に処理する方法を学びます",
+      "description": "複数例外のキャッチの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "マルチキャッチ",

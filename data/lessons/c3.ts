@@ -14,7 +14,7 @@ export const c3Data = {
   "exercises": [
     {
       "title": "関数ポインタ",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "関数ポインタとは？",
@@ -69,7 +69,7 @@ export const c3Data = {
       },
     {
       "title": "コールバック関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "コールバックとは？",
@@ -135,7 +135,7 @@ export const c3Data = {
       },
     {
       "title": "ビット演算 AND",
-      "description": "数値の計算方法を学びます",
+      "description": "複数の条件を組み合わせる方法を学びます",
       "tutorialSlides": [
         {
           "title": "ビットAND とは？",
@@ -189,7 +189,7 @@ export const c3Data = {
       },
     {
       "title": "ビット演算 OR",
-      "description": "数値の計算方法を学びます",
+      "description": "複数の条件を組み合わせる方法を学びます",
       "tutorialSlides": [
         {
           "title": "ビットOR とは？",
@@ -243,7 +243,7 @@ export const c3Data = {
       },
     {
       "title": "ビットシフト",
-      "description": "ビットシフトの使い方を学びます",
+      "description": "<<について学びます",
       "tutorialSlides": [
         {
           "title": "シフト演算とは？",
@@ -295,7 +295,7 @@ export const c3Data = {
       },
     {
       "title": "sizeof 演算子",
-      "description": "数値の計算方法を学びます",
+      "description": "sizeofについて学びます",
       "tutorialSlides": [
         {
           "title": "sizeof とは？",
@@ -349,7 +349,7 @@ export const c3Data = {
       },
     {
       "title": "typedef で型に別名",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "typedef とは？",
@@ -405,7 +405,7 @@ export const c3Data = {
       },
     {
       "title": "const ポインタ",
-      "description": "const ポインタの使い方を学びます",
+      "description": "const ポインタの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "const とポインタ",
@@ -465,7 +465,7 @@ export const c3Data = {
       },
     {
       "title": "static 変数",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "static とは？",
@@ -531,7 +531,7 @@ export const c3Data = {
       },
     {
       "title": "マクロ定義",
-      "description": "マクロ定義の使い方を学びます",
+      "description": "マクロ定義の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "マクロとは？",

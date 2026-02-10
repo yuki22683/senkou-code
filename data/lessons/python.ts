@@ -18,7 +18,7 @@ export const pythonData = {
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",
-      "description": "画面に文字を表示する方法を学びます",
+      "description": "プログラムの基本！画面にメッセージを表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "Python（パイソン）とは？",
@@ -60,7 +60,7 @@ export const pythonData = {
       },
     {
       "title": "便利な「はこ」変数（へんすう）",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
@@ -105,7 +105,7 @@ export const pythonData = {
       },
     {
       "title": "コンピュータで計算（けいさん）しましょう",
-      "description": "数値の計算方法を学びます",
+      "description": "プログラムで数値を計算する方法を学びます",
       "tutorialSlides": [
         {
           "title": "算数とプログラミング",
@@ -160,7 +160,7 @@ export const pythonData = {
       },
     {
       "title": "剰余演算子（%）",
-      "description": "数値の計算方法を学びます",
+      "description": "割り算の「あまり」を求める剰余演算子（%）を学びます",
       "tutorialSlides": [
         {
           "title": "あまりを求める",
@@ -200,7 +200,7 @@ export const pythonData = {
       },
     {
       "title": "累算代入演算子（+=、-=）",
-      "description": "数値の計算方法を学びます",
+      "description": "累算代入演算子（+=、-=）の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "中身を増やしたいとき",
@@ -244,7 +244,7 @@ export const pythonData = {
       },
     {
       "title": "文章の中に「はこ」を入れましょう",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "f-stringを使って、文章の中に変数の値を埋め込む方法を学びます",
       "tutorialSlides": [
         {
           "title": "f-string（エフストリング）とは？",
@@ -290,7 +290,7 @@ export const pythonData = {
       },
     {
       "title": "たくさんのデータをまとめましょう「リスト」",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "リストとは？",
@@ -339,7 +339,7 @@ export const pythonData = {
       },
     {
       "title": "「もし〜なら」で分ける if文",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -385,7 +385,7 @@ export const pythonData = {
       },
     {
       "title": "ちがう場合は？ if-else文",
-      "description": "条件に当てはまらない場合の処理を学びます",
+      "description": "条件に合わない場合の処理を追加する方法を学びます",
       "tutorialSlides": [
         {
           "title": "それ以外の場合は？",
@@ -439,7 +439,7 @@ export const pythonData = {
       },
     {
       "title": "論理演算子（and, or）",
-      "description": "数値の計算方法を学びます",
+      "description": "複数の条件を組み合わせる方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件を組み合わせる",
@@ -485,7 +485,7 @@ export const pythonData = {
       },
     {
       "title": "ぐるぐる回す for文",
-      "description": "同じ処理を繰り返す方法を学びます",
+      "description": "同じ処理を何度も実行する「繰り返し」を学びます",
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
@@ -575,7 +575,7 @@ export const pythonData = {
       },
     {
       "title": "自分だけの関数を作ろう",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",

@@ -34,7 +34,7 @@ export const ruby3Data = {
   "exercises": [
     {
       "title": "yieldとブロック",
-      "description": "値を順番に生成する仕組みを学びます",
+      "description": "yield（イールド）について学びます",
       "tutorialSlides": [
         {
           "title": "yield（イールド）とは",
@@ -91,7 +91,7 @@ export const ruby3Data = {
       },
     {
       "title": "Procオブジェクト",
-      "description": "キーと値のペアでデータを管理する方法を学びます",
+      "description": "Proc（プロック）について学びます",
       "tutorialSlides": [
         {
           "title": "Proc（プロック）とは",
@@ -136,7 +136,7 @@ export const ruby3Data = {
       },
     {
       "title": "ラムダ",
-      "description": "短く書ける無名関数を学びます",
+      "description": "名前のない簡潔な関数を作る方法を学びます",
       "tutorialSlides": [
         {
           "title": "ラムダとは",
@@ -175,7 +175,7 @@ export const ruby3Data = {
       },
     {
       "title": "シンボルとProc変換",
-      "description": "シンボルとProc変換の使い方を学びます",
+      "description": "`&:`について学びます",
       "tutorialSlides": [
         {
           "title": "&:（アンパサンドコロン）記法とは",
@@ -222,7 +222,7 @@ export const ruby3Data = {
       },
     {
       "title": "reduceメソッド",
-      "description": "reduceメソッドの使い方を学びます",
+      "description": "配列の要素を集約して1つの値にする方法を学びます",
       "tutorialSlides": [
         {
           "title": "reduce（リデュース）とは",
@@ -261,7 +261,7 @@ export const ruby3Data = {
       },
     {
       "title": "selectとreject",
-      "description": "selectとrejectの使い方を学びます",
+      "description": "条件に合う要素だけを抽出する方法を学びます",
       "tutorialSlides": [
         {
           "title": "select と reject",
@@ -300,7 +300,7 @@ export const ruby3Data = {
       },
     {
       "title": "スプラット演算子",
-      "description": "数値の計算方法を学びます",
+      "description": "スプラット演算子の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "スプラット演算子（*）とは",
@@ -353,7 +353,7 @@ export const ruby3Data = {
       },
     {
       "title": "method_missing",
-      "description": "method_missingの使い方を学びます",
+      "description": "method_missing（メソッドミッシング）について学びます",
       "tutorialSlides": [
         {
           "title": "method_missing とは",
@@ -414,7 +414,7 @@ export const ruby3Data = {
       },
     {
       "title": "Struct",
-      "description": "Structの使い方を学びます",
+      "description": "Struct（ストラクト）について学びます",
       "tutorialSlides": [
         {
           "title": "Struct（ストラクト）とは",
@@ -459,7 +459,7 @@ export const ruby3Data = {
       },
     {
       "title": "tapメソッド",
-      "description": "tapメソッドの使い方を学びます",
+      "description": "tap（タップ）について学びます",
       "tutorialSlides": [
         {
           "title": "tap（タップ）とは",

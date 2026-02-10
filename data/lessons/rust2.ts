@@ -34,7 +34,7 @@ export const rust2Data = {
   "exercises": [
     {
       "title": "所有権の基本",
-      "description": "所有権の基本の使い方を学びます",
+      "description": "所有権について学びます",
       "tutorialSlides": [
         {
           "title": "所有権（しょゆうけん）とは？",
@@ -78,7 +78,7 @@ export const rust2Data = {
       },
     {
       "title": "参照と借用",
-      "description": "参照と借用の使い方を学びます",
+      "description": "参照について学びます",
       "tutorialSlides": [
         {
           "title": "参照（さんしょう）とは？",
@@ -126,7 +126,7 @@ export const rust2Data = {
       },
     {
       "title": "可変参照",
-      "description": "可変参照の使い方を学びます",
+      "description": "可変参照の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "可変参照（かへんさんしょう）とは？",
@@ -176,7 +176,7 @@ export const rust2Data = {
       },
     {
       "title": "構造体を定義しよう",
-      "description": "構造体を定義しようの使い方を学びます",
+      "description": "構造体（struct）について学びます",
       "tutorialSlides": [
         {
           "title": "構造体（こうぞうたい）とは？",
@@ -226,7 +226,7 @@ export const rust2Data = {
       },
     {
       "title": "impl でメソッドを追加",
-      "description": "impl でメソッドを追加の使い方を学びます",
+      "description": "impl でメソッドを追加の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "impl とは？",
@@ -284,7 +284,7 @@ export const rust2Data = {
       },
     {
       "title": "enum で状態を表す",
-      "description": "enum で状態を表すの使い方を学びます",
+      "description": "enumについて学びます",
       "tutorialSlides": [
         {
           "title": "enum とは？",
@@ -340,7 +340,7 @@ export const rust2Data = {
       },
     {
       "title": "Option<T> で null を安全に",
-      "description": "Option<T> で null を安全にの使い方を学びます",
+      "description": "Option<T>について学びます",
       "tutorialSlides": [
         {
           "title": "Option（オプション）とは？",
@@ -388,7 +388,7 @@ export const rust2Data = {
       },
     {
       "title": "Result<T, E> でエラー処理",
-      "description": "エラーを適切に処理する方法を学びます",
+      "description": "Result<T, E>について学びます",
       "tutorialSlides": [
         {
           "title": "Result（リザルト）とは？",
@@ -446,7 +446,7 @@ export const rust2Data = {
       },
     {
       "title": "トレイトを定義しよう",
-      "description": "トレイトを定義しようの使い方を学びます",
+      "description": "トレイトについて学びます",
       "tutorialSlides": [
         {
           "title": "トレイトとは？",
@@ -506,7 +506,7 @@ export const rust2Data = {
       },
     {
       "title": "ジェネリクスを使おう",
-      "description": "ジェネリクスを使おうの使い方を学びます",
+      "description": "ジェネリクスについて学びます",
       "tutorialSlides": [
         {
           "title": "ジェネリクスとは？",

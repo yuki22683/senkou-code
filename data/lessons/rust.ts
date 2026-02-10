@@ -34,7 +34,7 @@ export const rustData = {
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",
-      "description": "画面にメッセージを出しましょうの使い方を学びます",
+      "description": "プログラムの基本！画面にメッセージを表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "Rust（ラスト）とは？",
@@ -74,7 +74,7 @@ export const rustData = {
       },
     {
       "title": "便利な「はこ」変数（へんすう）",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
@@ -129,7 +129,7 @@ export const rustData = {
       },
     {
       "title": "剰余演算子（%）",
-      "description": "数値の計算方法を学びます",
+      "description": "「あまり」について学びます",
       "tutorialSlides": [
         {
           "title": "あまりを求める",
@@ -172,7 +172,7 @@ export const rustData = {
       },
     {
       "title": "累算代入演算子（+=、-=）",
-      "description": "数値の計算方法を学びます",
+      "description": "累算代入演算子（+=、-=）の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "累算代入演算子（るいさんだいにゅう）とは？",
@@ -226,7 +226,7 @@ export const rustData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -280,7 +280,7 @@ export const rustData = {
       },
     {
       "title": "論理演算子（&&、||）",
-      "description": "数値の計算方法を学びます",
+      "description": "複数の条件を組み合わせる方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件を組み合わせる",
@@ -338,7 +338,7 @@ export const rustData = {
       },
     {
       "title": "たくさんのデータをまとめましょう「ベクタ」",
-      "description": "たくさんのデータをまとめましょう「ベクタ」の使い方を学びます",
+      "description": "たくさんのデータをまとめましょう「ベクタ」の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "ベクタ（Vec）とは？",

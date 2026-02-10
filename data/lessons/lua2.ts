@@ -34,7 +34,7 @@ export const lua2Data = {
   "exercises": [
     {
       "title": "テーブルの基本",
-      "description": "テーブルの基本の使い方を学びます",
+      "description": "テーブルについて学びます",
       "tutorialSlides": [
         {
           "title": "テーブルとは？",
@@ -74,7 +74,7 @@ export const lua2Data = {
       },
     {
       "title": "配列としてのテーブル",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "配列風テーブル",
@@ -114,7 +114,7 @@ export const lua2Data = {
       },
     {
       "title": "ipairs でループ",
-      "description": "同じ処理を繰り返す方法を学びます",
+      "description": "ipairsについて学びます",
       "tutorialSlides": [
         {
           "title": "ipairs とは？",
@@ -161,7 +161,7 @@ export const lua2Data = {
       },
     {
       "title": "pairs でループ",
-      "description": "同じ処理を繰り返す方法を学びます",
+      "description": "pairsについて学びます",
       "tutorialSlides": [
         {
           "title": "pairs とは？",
@@ -208,7 +208,7 @@ export const lua2Data = {
       },
     {
       "title": "関数を定義しよう",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をひとまとめにして名前をつける「関数定義」を学びます",
       "tutorialSlides": [
         {
           "title": "function とは？",
@@ -255,7 +255,7 @@ export const lua2Data = {
       },
     {
       "title": "複数の戻り値",
-      "description": "複数の戻り値の使い方を学びます",
+      "description": "関数の処理結果を呼び出し元に返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "複数の return",
@@ -308,7 +308,7 @@ export const lua2Data = {
       },
     {
       "title": "テーブルにメソッドを追加",
-      "description": "テーブルにメソッドを追加の使い方を学びます",
+      "description": "テーブルにメソッドを追加の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "メソッドとは？",
@@ -359,7 +359,7 @@ export const lua2Data = {
       },
     {
       "title": "メタテーブルの基本",
-      "description": "メタテーブルの基本の使い方を学びます",
+      "description": "メタテーブルについて学びます",
       "tutorialSlides": [
         {
           "title": "メタテーブルとは？",
@@ -408,7 +408,7 @@ export const lua2Data = {
       },
     {
       "title": "クロージャを作ろう",
-      "description": "クロージャを作ろうの使い方を学びます",
+      "description": "クロージャについて学びます",
       "tutorialSlides": [
         {
           "title": "クロージャとは？",
@@ -465,7 +465,7 @@ export const lua2Data = {
       },
     {
       "title": "コルーチンを使おう",
-      "description": "コルーチンを使おうの使い方を学びます",
+      "description": "コルーチンについて学びます",
       "tutorialSlides": [
         {
           "title": "コルーチンとは？",

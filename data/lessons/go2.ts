@@ -34,7 +34,7 @@ export const go2Data = {
   "exercises": [
     {
       "title": "複数の値を返す関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "複数の戻り値（もどりち）",
@@ -96,7 +96,7 @@ export const go2Data = {
       },
     {
       "title": "エラー処理の基本",
-      "description": "エラーを適切に処理する方法を学びます",
+      "description": "エラー処理の基本の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "エラーを返す",
@@ -172,7 +172,7 @@ export const go2Data = {
       },
     {
       "title": "ポインタを使おう",
-      "description": "ポインタを使おうの使い方を学びます",
+      "description": "ポインタについて学びます",
       "tutorialSlides": [
         {
           "title": "ポインタとは？",
@@ -224,7 +224,7 @@ export const go2Data = {
       },
     {
       "title": "構造体を定義しよう",
-      "description": "構造体を定義しようの使い方を学びます",
+      "description": "構造体（struct・ストラクト）について学びます",
       "tutorialSlides": [
         {
           "title": "構造体（こうぞうたい）とは？",
@@ -282,7 +282,7 @@ export const go2Data = {
       },
     {
       "title": "メソッドを作ろう",
-      "description": "メソッドを作ろうの使い方を学びます",
+      "description": "メソッドについて学びます",
       "tutorialSlides": [
         {
           "title": "メソッドとは？",
@@ -346,7 +346,7 @@ export const go2Data = {
       },
     {
       "title": "インターフェースを使おう",
-      "description": "インターフェースを使おうの使い方を学びます",
+      "description": "インターフェースについて学びます",
       "tutorialSlides": [
         {
           "title": "インターフェースとは？",
@@ -410,7 +410,7 @@ export const go2Data = {
       },
     {
       "title": "defer で後処理",
-      "description": "defer で後処理の使い方を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "defer（ディファー）とは？",
@@ -458,7 +458,7 @@ export const go2Data = {
       },
     {
       "title": "ゴルーチンで並行処理",
-      "description": "ゴルーチンで並行処理の使い方を学びます",
+      "description": "ゴルーチンについて学びます",
       "tutorialSlides": [
         {
           "title": "ゴルーチンとは？",
@@ -518,7 +518,7 @@ export const go2Data = {
       },
     {
       "title": "チャネルで通信",
-      "description": "チャネルで通信の使い方を学びます",
+      "description": "チャネルについて学びます",
       "tutorialSlides": [
         {
           "title": "チャネルとは？",
@@ -576,7 +576,7 @@ export const go2Data = {
       },
     {
       "title": "無名関数とクロージャ",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "無名関数（むめいかんすう）とは？",

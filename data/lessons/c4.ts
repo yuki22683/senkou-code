@@ -14,7 +14,7 @@ export const c4Data = {
   "exercises": [
     {
       "title": "ファイルのオープン",
-      "description": "ファイル操作の方法を学びます",
+      "description": "ファイルを扱う方法を学びます",
       "tutorialSlides": [
         {
           "title": "fopen とは？",
@@ -77,7 +77,7 @@ export const c4Data = {
       },
     {
       "title": "ファイルのクローズ",
-      "description": "ファイル操作の方法を学びます",
+      "description": "ファイルを扱う方法を学びます",
       "tutorialSlides": [
         {
           "title": "fclose とは？",
@@ -140,7 +140,7 @@ export const c4Data = {
       },
     {
       "title": "fprintf でファイル書き込み",
-      "description": "画面に文字を表示する方法を学びます",
+      "description": "ファイルにデータを書き込んで保存する方法を学びます",
       "tutorialSlides": [
         {
           "title": "fprintf とは？",
@@ -203,7 +203,7 @@ export const c4Data = {
       },
     {
       "title": "fgets で行読み込み",
-      "description": "ユーザーからの入力を受け取る方法を学びます",
+      "description": "fgets で行読み込みの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "fgets とは？",
@@ -279,7 +279,7 @@ export const c4Data = {
       },
     {
       "title": "fseek でファイル位置移動",
-      "description": "ファイル操作の方法を学びます",
+      "description": "ファイルを扱う方法を学びます",
       "tutorialSlides": [
         {
           "title": "fseek とは？",
@@ -340,7 +340,7 @@ export const c4Data = {
       },
     {
       "title": "ftell で現在位置取得",
-      "description": "ftell で現在位置取得の使い方を学びます",
+      "description": "ftell で現在位置取得の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "ftell とは？",
@@ -403,7 +403,7 @@ export const c4Data = {
       },
     {
       "title": "enum 列挙型",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "enum とは？",
@@ -457,7 +457,7 @@ export const c4Data = {
       },
     {
       "title": "union 共用体",
-      "description": "union 共用体の使い方を学びます",
+      "description": "union 共用体の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "union とは？",
@@ -519,7 +519,7 @@ export const c4Data = {
       },
     {
       "title": "ポインタのポインタ",
-      "description": "ポインタのポインタの使い方を学びます",
+      "description": "ポインタのポインタの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "ポインタのポインタ",
@@ -570,7 +570,7 @@ export const c4Data = {
       },
     {
       "title": "可変長引数",
-      "description": "可変長引数の使い方を学びます",
+      "description": "可変長引数（かへんちょうひきすう）について学びます",
       "tutorialSlides": [
         {
           "title": "可変長引数とは？",

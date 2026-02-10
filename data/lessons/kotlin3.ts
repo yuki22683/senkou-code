@@ -34,7 +34,7 @@ export const kotlin3Data = {
   "exercises": [
     {
       "title": "suspend 関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "suspend（サスペンド）関数とは？",
@@ -114,7 +114,7 @@ export const kotlin3Data = {
       },
     {
       "title": "sequence（シーケンス）",
-      "description": "sequence（シーケンス）の使い方を学びます",
+      "description": "sequenceについて学びます",
       "tutorialSlides": [
         {
           "title": "sequence（シーケンス）とは？",
@@ -182,7 +182,7 @@ export const kotlin3Data = {
       },
     {
       "title": "inline 関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "inline（インライン）関数とは？",
@@ -253,7 +253,7 @@ export const kotlin3Data = {
       },
     {
       "title": "reified 型パラメータ",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "reified（レイファイド）型パラメータとは？",
@@ -327,7 +327,7 @@ export const kotlin3Data = {
       },
     {
       "title": "apply スコープ関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "apply（アプライ）スコープ関数とは？",
@@ -403,7 +403,7 @@ export const kotlin3Data = {
       },
     {
       "title": "also スコープ関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "also（オールソー）スコープ関数とは？",
@@ -469,7 +469,7 @@ export const kotlin3Data = {
       },
     {
       "title": "run スコープ関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "run（ラン）スコープ関数とは？",
@@ -535,7 +535,7 @@ export const kotlin3Data = {
       },
     {
       "title": "takeIf と takeUnless",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "takeIf（テイクイフ）とは？",
@@ -595,7 +595,7 @@ export const kotlin3Data = {
       },
     {
       "title": "groupBy",
-      "description": "groupByの使い方を学びます",
+      "description": "groupByについて学びます",
       "tutorialSlides": [
         {
           "title": "groupBy（グループバイ）とは？",
@@ -659,7 +659,7 @@ export const kotlin3Data = {
       },
     {
       "title": "fold と reduce",
-      "description": "fold と reduceの使い方を学びます",
+      "description": "配列の要素を集約して1つの値にする方法を学びます",
       "tutorialSlides": [
         {
           "title": "fold（フォールド）とは？",

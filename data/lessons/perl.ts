@@ -34,7 +34,7 @@ export const perlData = {
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",
-      "description": "画面に文字を表示する方法を学びます",
+      "description": "プログラムの基本！画面にメッセージを表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "Perl（パール）とは？",
@@ -83,7 +83,7 @@ export const perlData = {
       },
     {
       "title": "変数を使ってみましょう",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
@@ -130,7 +130,7 @@ export const perlData = {
       },
     {
       "title": "計算をしてみましょう",
-      "description": "数値の計算方法を学びます",
+      "description": "プログラムで数値を計算する方法を学びます",
       "tutorialSlides": [
         {
           "title": "Perlで計算しよう",
@@ -183,7 +183,7 @@ export const perlData = {
       },
     {
       "title": "文字をつなげましょう",
-      "description": "文字をつなげましょうの使い方を学びます",
+      "description": "文字をつなげましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "文字の連結（れんけつ）",
@@ -230,7 +230,7 @@ export const perlData = {
       },
     {
       "title": "配列を使いましょう",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）とは？",
@@ -277,7 +277,7 @@ export const perlData = {
       },
     {
       "title": "if文で条件分岐しましょう",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "if文（イフぶん）とは？",
@@ -330,7 +330,7 @@ export const perlData = {
       },
     {
       "title": "if-elseを使いましょう",
-      "description": "条件に当てはまらない場合の処理を学びます",
+      "description": "条件に合わない場合の処理を追加する方法を学びます",
       "tutorialSlides": [
         {
           "title": "else（エルス）とは？",
@@ -389,7 +389,7 @@ export const perlData = {
       },
     {
       "title": "foreachでループしましょう",
-      "description": "同じ処理を繰り返す方法を学びます",
+      "description": "同じ処理を何度も実行する「繰り返し」を学びます",
       "tutorialSlides": [
         {
           "title": "foreach（フォーイーチ）とは？",
@@ -489,7 +489,7 @@ export const perlData = {
       },
     {
       "title": "サブルーチンを作りましょう",
-      "description": "サブルーチンを作りましょうの使い方を学びます",
+      "description": "サブルーチンを作りましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "サブルーチンとは？",

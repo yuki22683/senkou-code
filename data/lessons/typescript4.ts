@@ -15,7 +15,7 @@ export const typescriptData4 = {
   "exercises": [
     {
       "title": "型ガード関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "型ガードとは？",
@@ -77,7 +77,7 @@ export const typescriptData4 = {
       },
     {
       "title": "in演算子での型絞り込み",
-      "description": "数値の計算方法を学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "in演算子とは？",
@@ -149,7 +149,7 @@ export const typescriptData4 = {
       },
     {
       "title": "Discriminated Union",
-      "description": "Discriminated Unionの使い方を学びます",
+      "description": "Discriminated Unionの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Discriminated Unionとは？",
@@ -231,7 +231,7 @@ export const typescriptData4 = {
       },
     {
       "title": "never型で網羅性チェック",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "never型とは？",
@@ -313,7 +313,7 @@ export const typescriptData4 = {
       },
     {
       "title": "テンプレートリテラル型",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "テンプレートリテラル型とは？",
@@ -368,7 +368,7 @@ export const typescriptData4 = {
       },
     {
       "title": "Exclude型",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "Exclude<T, U>とは？",
@@ -419,7 +419,7 @@ export const typescriptData4 = {
       },
     {
       "title": "Extract型",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "Extract<T, U>とは？",
@@ -470,7 +470,7 @@ export const typescriptData4 = {
       },
     {
       "title": "NonNullable型",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "NonNullable<T>とは？",
@@ -521,7 +521,7 @@ export const typescriptData4 = {
       },
     {
       "title": "Parameters型",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "Parameters<T>とは？",
@@ -576,7 +576,7 @@ export const typescriptData4 = {
       },
     {
       "title": "Awaited型",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "Awaited<T>とは？",

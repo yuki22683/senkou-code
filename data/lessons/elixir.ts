@@ -34,7 +34,7 @@ export const elixirData = {
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",
-      "description": "画面に文字を表示する方法を学びます",
+      "description": "プログラムの基本！画面にメッセージを表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "Elixir（エリクサー）とは？",
@@ -74,7 +74,7 @@ export const elixirData = {
       },
     {
       "title": "便利な「はこ」",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
@@ -117,7 +117,7 @@ export const elixirData = {
       },
     {
       "title": "コンピュータで計算しましょう",
-      "description": "数値の計算方法を学びます",
+      "description": "プログラムで数値を計算する方法を学びます",
       "tutorialSlides": [
         {
           "title": "計算はコンピュータにお任せ",

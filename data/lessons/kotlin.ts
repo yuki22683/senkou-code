@@ -34,7 +34,7 @@ export const kotlinData = {
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",
-      "description": "画面にメッセージを出しましょうの使い方を学びます",
+      "description": "Kotlin（コトリン）について学びます",
       "tutorialSlides": [
         {
           "title": "Kotlin（コトリン）とは？",
@@ -81,7 +81,7 @@ export const kotlinData = {
       },
     {
       "title": "便利な「はこ」変数（へんすう）",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
@@ -140,7 +140,7 @@ export const kotlinData = {
       },
     {
       "title": "剰余演算子（%）",
-      "description": "数値の計算方法を学びます",
+      "description": "%（パーセント）について学びます",
       "tutorialSlides": [
         {
           "title": "あまりを求める演算子（えんざんし）",
@@ -183,7 +183,7 @@ export const kotlinData = {
       },
     {
       "title": "累算代入演算子（+=、-=）",
-      "description": "数値の計算方法を学びます",
+      "description": "累算代入演算子（るいさんだいにゅうえんざんし）について学びます",
       "tutorialSlides": [
         {
           "title": "累算代入演算子（るいさんだいにゅうえんざんし）とは？",
@@ -240,7 +240,7 @@ export const kotlinData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -298,7 +298,7 @@ export const kotlinData = {
       },
     {
       "title": "論理演算子（&&、||）",
-      "description": "数値の計算方法を学びます",
+      "description": "複数の条件を組み合わせる方法を学びます",
       "tutorialSlides": [
         {
           "title": "論理演算子（ろんりえんざんし）とは？",
@@ -353,7 +353,7 @@ export const kotlinData = {
       },
     {
       "title": "たくさんのデータをまとめましょう「リスト」",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "リストとは？",

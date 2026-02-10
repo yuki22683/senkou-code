@@ -34,7 +34,7 @@ export const luaData = {
   "exercises": [
     {
       "title": "画面にメッセージを出してみましょう",
-      "description": "画面にメッセージを出してみましょうの使い方を学びます",
+      "description": "画面にメッセージを出してみましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Lua（ルア）とは？",
@@ -74,7 +74,7 @@ export const luaData = {
       },
     {
       "title": "自分専用の「はこ」",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
@@ -117,7 +117,7 @@ export const luaData = {
       },
     {
       "title": "コンピュータで計算しましょう",
-      "description": "数値の計算方法を学びます",
+      "description": "プログラムで数値を計算する方法を学びます",
       "tutorialSlides": [
         {
           "title": "Luaで計算しよう",

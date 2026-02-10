@@ -22,7 +22,7 @@ export const pythonData2 = {
   "exercises": [
     {
       "title": "引数（ひきすう）を使った関数",
-      "description": "関数に値を渡す方法を学びます",
+      "description": "関数に「材料」を渡して、柔軟に動作させる方法を学びます",
       "tutorialSlides": [
         {
           "title": "引数（ひきすう）とは？",
@@ -67,7 +67,7 @@ export const pythonData2 = {
     },
     {
       "title": "デフォルト引数",
-      "description": "デフォルト引数の使い方を学びます",
+      "description": "引数を省略したときに使われる「初期値」の設定方法を学びます",
       "tutorialSlides": [
         {
           "title": "デフォルト引数とは？",
@@ -112,7 +112,7 @@ export const pythonData2 = {
     },
     {
       "title": "戻り値（return）",
-      "description": "戻り値（return）の使い方を学びます",
+      "description": "関数の処理結果を呼び出し元に返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "戻り値（もどりち）とは？",
@@ -160,7 +160,7 @@ export const pythonData2 = {
     },
     {
       "title": "複数の戻り値",
-      "description": "複数の戻り値の使い方を学びます",
+      "description": "1つの関数から複数の値をまとめて返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "複数の値を返す",
@@ -211,7 +211,7 @@ export const pythonData2 = {
     },
     {
       "title": "文字列スライス",
-      "description": "文字列の操作方法を学びます",
+      "description": "文字列の一部を切り出す「スライス」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "スライスとは？",
@@ -251,7 +251,7 @@ export const pythonData2 = {
     },
     {
       "title": "リスト内包表記",
-      "description": "1行でリストを作成する便利な書き方を学びます",
+      "description": "forループを1行で書ける「リスト内包表記」をマスターします",
       "tutorialSlides": [
         {
           "title": "リスト内包表記（ないほうひょうき）とは？",
@@ -291,7 +291,7 @@ export const pythonData2 = {
     },
     {
       "title": "条件付きリスト内包表記",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "リスト内包表記に条件を加えて、特定の要素だけを抽出する方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件でフィルタリング",
@@ -331,7 +331,7 @@ export const pythonData2 = {
     },
     {
       "title": "例外処理（try-except）",
-      "description": "エラーを適切に処理する方法を学びます",
+      "description": "プログラムのエラーを適切に処理して、安全に動作させる方法を学びます",
       "tutorialSlides": [
         {
           "title": "例外（れいがい）とは？",
@@ -379,7 +379,7 @@ export const pythonData2 = {
     },
     {
       "title": "クラスの基本",
-      "description": "データと処理をまとめる「クラス」を学びます",
+      "description": "データと処理をひとまとめにする「クラス」の基本を学びます",
       "tutorialSlides": [
         {
           "title": "クラスとは？",

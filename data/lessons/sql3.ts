@@ -34,7 +34,7 @@ export const sql3Data = {
   "exercises": [
     {
       "title": "サブクエリ（WHERE内）",
-      "description": "サブクエリ（WHERE内）の使い方を学びます",
+      "description": "条件を指定してデータを絞り込む方法を学びます",
       "tutorialSlides": [
         {
           "title": "サブクエリとは？",
@@ -72,7 +72,7 @@ export const sql3Data = {
       },
     {
       "title": "EXISTS で存在チェック",
-      "description": "EXISTS で存在チェックの使い方を学びます",
+      "description": "EXISTS で存在チェックの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "EXISTS（イグジスツ）とは？",
@@ -110,7 +110,7 @@ export const sql3Data = {
       },
     {
       "title": "UNION で結合",
-      "description": "UNION で結合の使い方を学びます",
+      "description": "UNION で結合の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "UNION（ユニオン）とは？",
@@ -147,7 +147,7 @@ export const sql3Data = {
       },
     {
       "title": "INNER JOIN",
-      "description": "INNER JOINの使い方を学びます",
+      "description": "複数のテーブルを結合する方法を学びます",
       "tutorialSlides": [
         {
           "title": "INNER JOIN（インナージョイン）とは？",
@@ -204,7 +204,7 @@ export const sql3Data = {
       },
     {
       "title": "LEFT JOIN",
-      "description": "LEFT JOINの使い方を学びます",
+      "description": "複数のテーブルを結合する方法を学びます",
       "tutorialSlides": [
         {
           "title": "LEFT JOIN（レフトジョイン）とは？",
@@ -261,7 +261,7 @@ export const sql3Data = {
       },
     {
       "title": "MAX と MIN",
-      "description": "MAX と MINの使い方を学びます",
+      "description": "MAX と MINの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "MAX / MIN とは？",
@@ -305,7 +305,7 @@ export const sql3Data = {
       },
     {
       "title": "DISTINCT で重複除去",
-      "description": "DISTINCT で重複除去の使い方を学びます",
+      "description": "DISTINCT で重複除去の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "DISTINCT（ディスティンクト）とは？",
@@ -360,7 +360,7 @@ export const sql3Data = {
       },
     {
       "title": "LIKE でパターン検索",
-      "description": "文字列のパターンマッチングを学びます",
+      "description": "LIKE でパターン検索の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "LIKE（ライク）とは？",
@@ -398,7 +398,7 @@ export const sql3Data = {
       },
     {
       "title": "BETWEEN で範囲指定",
-      "description": "BETWEEN で範囲指定の使い方を学びます",
+      "description": "BETWEEN で範囲指定の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "BETWEEN（ビトウィーン）とは？",
@@ -437,7 +437,7 @@ export const sql3Data = {
       },
     {
       "title": "IN で複数値マッチ",
-      "description": "IN で複数値マッチの使い方を学びます",
+      "description": "IN で複数値マッチの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "IN（イン）とは？",

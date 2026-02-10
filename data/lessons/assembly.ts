@@ -34,7 +34,7 @@ export const assemblyData = {
   "exercises": [
     {
       "title": "画面にメッセージを出してみましょう",
-      "description": "画面にメッセージを出してみましょうの使い方を学びます",
+      "description": "アセンブリ言語で文字列を画面に表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "アセンブリ言語とは？",
@@ -128,7 +128,7 @@ export const assemblyData = {
       },
     {
       "title": "違うメッセージを表示しましょう",
-      "description": "画面に文字を表示する方法を学びます",
+      "description": "複数の文字列を順番に表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "文字列の長さ",
@@ -214,7 +214,7 @@ export const assemblyData = {
       },
     {
       "title": "終了コードを返しましょう",
-      "description": "終了コードを返しましょうの使い方を学びます",
+      "description": "プログラムの終了コードをOSに返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "終了コード",
@@ -269,7 +269,7 @@ export const assemblyData = {
       },
     {
       "title": "数字を足し算しましょう",
-      "description": "数の足し算を行う方法を学びます",
+      "description": "数の足し算（加算）をプログラムで行う方法を学びます",
       "tutorialSlides": [
         {
           "title": "add命令（アッド）",
@@ -328,7 +328,7 @@ export const assemblyData = {
       },
     {
       "title": "数字を引き算しましょう",
-      "description": "数の引き算を行う方法を学びます",
+      "description": "数の引き算（減算）をプログラムで行う方法を学びます",
       "tutorialSlides": [
         {
           "title": "sub命令（サブ）",
@@ -387,7 +387,7 @@ export const assemblyData = {
       },
     {
       "title": "レジスタ間でコピーしましょう",
-      "description": "レジスタ間でコピーしましょうの使い方を学びます",
+      "description": "CPUの高速記憶装置「レジスタ」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "レジスタ間のコピー",
@@ -442,7 +442,7 @@ export const assemblyData = {
       },
     {
       "title": "値を比較しましょう",
-      "description": "値を比較する方法を学びます",
+      "description": "値の大小や等しさを比較する方法を学びます",
       "tutorialSlides": [
         {
           "title": "cmp命令（コンペア）",
@@ -499,7 +499,7 @@ export const assemblyData = {
       },
     {
       "title": "条件ジャンプを使いましょう",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件ジャンプを使いましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "条件ジャンプ",
@@ -564,7 +564,7 @@ export const assemblyData = {
       },
     {
       "title": "ラベルにジャンプしましょう",
-      "description": "ラベルにジャンプしましょうの使い方を学びます",
+      "description": "jmp命令でプログラムの実行位置を移動させる方法を学びます",
       "tutorialSlides": [
         {
           "title": "無条件ジャンプ",
@@ -623,7 +623,7 @@ export const assemblyData = {
       },
     {
       "title": "値を増やしましょう",
-      "description": "値を増やしましょうの使い方を学びます",
+      "description": "inc命令でレジスタの値を1増やす方法を学びます",
       "tutorialSlides": [
         {
           "title": "inc命令（インクリメント）",

@@ -34,7 +34,7 @@ export const kotlin4Data = {
   "exercises": [
     {
       "title": "Sealed Class",
-      "description": "データと処理をまとめる「クラス」を学びます",
+      "description": "sealedについて学びます",
       "tutorialSlides": [
         {
           "title": "Sealed Class（シールドクラス）とは？",
@@ -125,7 +125,7 @@ export const kotlin4Data = {
       },
     {
       "title": "object 宣言",
-      "description": "object 宣言の使い方を学びます",
+      "description": "objectについて学びます",
       "tutorialSlides": [
         {
           "title": "object（オブジェクト）宣言とは？",
@@ -212,7 +212,7 @@ export const kotlin4Data = {
       },
     {
       "title": "委譲プロパティ by lazy",
-      "description": "委譲プロパティ by lazyの使い方を学びます",
+      "description": "lazyについて学びます",
       "tutorialSlides": [
         {
           "title": "by lazy（バイ レイジー）とは？",
@@ -302,7 +302,7 @@ export const kotlin4Data = {
       },
     {
       "title": "lateinit 修飾子",
-      "description": "lateinit 修飾子の使い方を学びます",
+      "description": "lateinitについて学びます",
       "tutorialSlides": [
         {
           "title": "lateinit（レイトイニット）とは？",
@@ -388,7 +388,7 @@ export const kotlin4Data = {
       },
     {
       "title": "inline 関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "inline（インライン）関数とは？",
@@ -466,7 +466,7 @@ export const kotlin4Data = {
       },
     {
       "title": "reified 型パラメータ",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "reified（レイファイド）型パラメータとは？",
@@ -535,7 +535,7 @@ export const kotlin4Data = {
       },
     {
       "title": "拡張関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "拡張関数（かくちょうかんすう）とは？",
@@ -600,7 +600,7 @@ export const kotlin4Data = {
       },
     {
       "title": "scope 関数 let",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "let（レット）スコープ関数とは？",
@@ -665,7 +665,7 @@ export const kotlin4Data = {
       },
     {
       "title": "scope 関数 apply",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "apply（アプライ）スコープ関数とは？",
@@ -743,7 +743,7 @@ export const kotlin4Data = {
       },
     {
       "title": "typealias",
-      "description": "データの種類（型）について学びます",
+      "description": "typealiasについて学びます",
       "tutorialSlides": [
         {
           "title": "typealias（タイプエイリアス）とは？",

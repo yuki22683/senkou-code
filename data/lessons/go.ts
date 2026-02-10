@@ -34,7 +34,7 @@ export const goData = {
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",
-      "description": "画面にメッセージを出しましょうの使い方を学びます",
+      "description": "プログラムの基本！画面にメッセージを表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "Go言語（ゴー）とは？",
@@ -78,7 +78,7 @@ export const goData = {
       },
     {
       "title": "便利な「はこ」",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
               {
                       "title": "変数（へんすう）とは",
@@ -129,7 +129,7 @@ export const goData = {
       },
     {
       "title": "コンピュータで計算しましょう",
-      "description": "数値の計算方法を学びます",
+      "description": "プログラムで数値を計算する方法を学びます",
       "tutorialSlides": [
               {
                       "title": "計算をしてみよう",
@@ -179,7 +179,7 @@ export const goData = {
       },
     {
       "title": "剰余演算子（%）",
-      "description": "数値の計算方法を学びます",
+      "description": "「あまり」について学びます",
       "tutorialSlides": [
         {
           "title": "あまりを求める",
@@ -226,7 +226,7 @@ export const goData = {
       },
     {
       "title": "累算代入演算子（+=、-=）",
-      "description": "数値の計算方法を学びます",
+      "description": "累算代入演算子（+=、-=）の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "累算代入演算子（るいさんだいにゅう）とは？",
@@ -281,7 +281,7 @@ export const goData = {
       },
     {
       "title": "文章の中に「はこ」を入れましょう",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
               {
                       "title": "fmt.Printfで表示",
@@ -329,7 +329,7 @@ export const goData = {
       },
     {
       "title": "データをならべる「スライス」",
-      "description": "データをならべる「スライス」の使い方を学びます",
+      "description": "スライスについて学びます",
       "tutorialSlides": [
         {
           "title": "スライスとは？",
@@ -375,7 +375,7 @@ export const goData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -432,7 +432,7 @@ export const goData = {
       },
     {
       "title": "ちがう場合はどうしましょう？",
-      "description": "ちがう場合はどうしましょう？の使い方を学びます",
+      "description": "ちがう場合はどうしましょう？の仕組みと使い方を学びます",
       "tutorialSlides": [
               {
                       "title": "if-else文",
@@ -494,7 +494,7 @@ export const goData = {
       },
     {
       "title": "論理演算子（&&、||）",
-      "description": "数値の計算方法を学びます",
+      "description": "複数の条件を組み合わせる方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件を組み合わせる",
@@ -551,7 +551,7 @@ export const goData = {
       },
     {
       "title": "中身を全部出してみましょう",
-      "description": "中身を全部出してみましょうの使い方を学びます",
+      "description": "ループ（繰り返し）について学びます",
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
@@ -601,7 +601,7 @@ export const goData = {
       },
     {
       "title": "名前で探しましょう「じしょ」",
-      "description": "名前で探しましょう「じしょ」の使い方を学びます",
+      "description": "Map（マップ）について学びます",
       "tutorialSlides": [
         {
           "title": "辞書（じしょ）とは？",
@@ -650,7 +650,7 @@ export const goData = {
       },
     {
       "title": "自分だけの関数を作りましょう",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",

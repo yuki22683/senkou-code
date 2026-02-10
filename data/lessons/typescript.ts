@@ -16,7 +16,7 @@ export const typescriptData = {
   "exercises": [
     {
       "title": "はこに「ラベル」をはりましょう",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "TypeScript（タイプスクリプト）とは？",
@@ -67,7 +67,7 @@ export const typescriptData = {
       },
     {
       "title": "数字のラベルで計算しましょう",
-      "description": "数値の計算方法を学びます",
+      "description": "プログラムで数値を計算する方法を学びます",
       "tutorialSlides": [
         {
           "title": "数値型（すうちがた）とは？",
@@ -125,7 +125,7 @@ export const typescriptData = {
       },
     {
       "title": "剰余演算子（%）",
-      "description": "数値の計算方法を学びます",
+      "description": "剰余演算子（%）の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "あまりを求める",
@@ -172,7 +172,7 @@ export const typescriptData = {
       },
     {
       "title": "累算代入演算子（+=、-=）",
-      "description": "数値の計算方法を学びます",
+      "description": "累算代入演算子（+=、-=）の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "中身を増やしたいとき",
@@ -232,7 +232,7 @@ export const typescriptData = {
       },
     {
       "title": "ラベルを貼ったはこを文章に入れましょう",
-      "description": "データを保存する「変数」の使い方を学びます",
+      "description": "データを名前をつけて保存する「変数」の仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "文章と変数を組み合わせる",
@@ -282,7 +282,7 @@ export const typescriptData = {
       },
     {
       "title": "同じラベルを並べる「配列」",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）とは？",
@@ -333,7 +333,7 @@ export const typescriptData = {
       },
     {
       "title": "「はい」か「いいえ」のラベル",
-      "description": "「はい」か「いいえ」のラベルの使い方を学びます",
+      "description": "「はい」か「いいえ」のラベルの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "論理型（ろんりがた）とは？",
@@ -389,7 +389,7 @@ export const typescriptData = {
       },
     {
       "title": "点数で分けてみましょう",
-      "description": "点数で分けてみましょうの使い方を学びます",
+      "description": "点数で分けてみましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -461,7 +461,7 @@ export const typescriptData = {
       },
     {
       "title": "論理演算子（&&、||）",
-      "description": "数値の計算方法を学びます",
+      "description": "複数の条件を組み合わせる方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件を組み合わせる",
@@ -523,7 +523,7 @@ export const typescriptData = {
       },
     {
       "title": "順番に出してみましょう",
-      "description": "順番に出してみましょうの使い方を学びます",
+      "description": "順番に出してみましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
@@ -580,7 +580,7 @@ export const typescriptData = {
       },
     {
       "title": "自分だけのラベルを作ってみましょう",
-      "description": "自分だけのラベルを作ってみましょうの使い方を学びます",
+      "description": "自分だけのラベルを作ってみましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "オリジナルの型とは？",
@@ -633,7 +633,7 @@ export const typescriptData = {
       },
     {
       "title": "関数の「入り口」にラベルをはりましょう",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",
@@ -686,7 +686,7 @@ export const typescriptData = {
       },
     {
       "title": "「なにも返さない」というラベル",
-      "description": "「なにも返さない」というラベルの使い方を学びます",
+      "description": "「なにも返さない」というラベルの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "戻り値（もどりち）とは？",

@@ -15,7 +15,7 @@ export const typescriptData2 = {
   "exercises": [
     {
       "title": "ユニオン型",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "ユニオン型とは？",
@@ -70,7 +70,7 @@ export const typescriptData2 = {
       },
     {
       "title": "インターフェース",
-      "description": "インターフェースの使い方を学びます",
+      "description": "インターフェースの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "インターフェースとは？",
@@ -135,7 +135,7 @@ export const typescriptData2 = {
       },
     {
       "title": "オプショナルプロパティ",
-      "description": "オプショナルプロパティの使い方を学びます",
+      "description": "オプショナルプロパティについて学びます",
       "tutorialSlides": [
         {
           "title": "? でオプショナルに",
@@ -194,7 +194,7 @@ export const typescriptData2 = {
       },
     {
       "title": "型エイリアス",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "型エイリアスとは？",
@@ -247,7 +247,7 @@ export const typescriptData2 = {
       },
     {
       "title": "readonly プロパティ",
-      "description": "readonly プロパティの使い方を学びます",
+      "description": "readonly プロパティの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "readonlyとは？",
@@ -306,7 +306,7 @@ export const typescriptData2 = {
       },
     {
       "title": "列挙型（enum）",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "enumとは？",
@@ -369,7 +369,7 @@ export const typescriptData2 = {
       },
     {
       "title": "ジェネリクス入門",
-      "description": "ジェネリクス入門の使い方を学びます",
+      "description": "ジェネリクス入門の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "ジェネリクスとは？",
@@ -424,7 +424,7 @@ export const typescriptData2 = {
       },
     {
       "title": "ジェネリクスとインターフェース",
-      "description": "ジェネリクスとインターフェースの使い方を学びます",
+      "description": "ジェネリクスとインターフェースの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "ジェネリックインターフェース",
@@ -479,7 +479,7 @@ export const typescriptData2 = {
       },
     {
       "title": "typeof 型演算子",
-      "description": "数値の計算方法を学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "typeof型演算子",
@@ -526,7 +526,7 @@ export const typescriptData2 = {
       },
     {
       "title": "インターフェースの拡張",
-      "description": "インターフェースの拡張の使い方を学びます",
+      "description": "インターフェースの拡張の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "extendsで拡張",

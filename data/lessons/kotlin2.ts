@@ -34,7 +34,7 @@ export const kotlin2Data = {
   "exercises": [
     {
       "title": "Null安全を学ぼう",
-      "description": "Null安全を学ぼうの使い方を学びます",
+      "description": "null（ヌル）について学びます",
       "tutorialSlides": [
         {
           "title": "Null安全（ヌルあんぜん）とは？",
@@ -88,7 +88,7 @@ export const kotlin2Data = {
       },
     {
       "title": "セーフコール演算子 ?.",
-      "description": "数値の計算方法を学びます",
+      "description": "?.（セーフコール）について学びます",
       "tutorialSlides": [
         {
           "title": "セーフコール演算子（えんざんし）とは？",
@@ -132,7 +132,7 @@ export const kotlin2Data = {
       },
     {
       "title": "エルビス演算子 ?:",
-      "description": "数値の計算方法を学びます",
+      "description": "?:（エルビス演算子）について学びます",
       "tutorialSlides": [
         {
           "title": "エルビス演算子（えんざんし）とは？",
@@ -176,7 +176,7 @@ export const kotlin2Data = {
       },
     {
       "title": "データクラスを使おう",
-      "description": "データと処理をまとめる「クラス」を学びます",
+      "description": "データクラスを使おうの仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "データクラスとは？",
@@ -224,7 +224,7 @@ export const kotlin2Data = {
       },
     {
       "title": "ラムダ式を使おう",
-      "description": "短く書ける無名関数を学びます",
+      "description": "名前のない簡潔な関数を作る方法を学びます",
       "tutorialSlides": [
         {
           "title": "ラムダ式（しき）とは？",
@@ -272,7 +272,7 @@ export const kotlin2Data = {
       },
     {
       "title": "map で変換しよう",
-      "description": "キーと値のペアでデータを管理する方法を学びます",
+      "description": "配列の全要素に同じ処理を適用する方法を学びます",
       "tutorialSlides": [
         {
           "title": "map（マップ）とは？",
@@ -324,7 +324,7 @@ export const kotlin2Data = {
       },
     {
       "title": "filter で絞り込もう",
-      "description": "filter で絞り込もうの使い方を学びます",
+      "description": "条件に合う要素だけを抽出する方法を学びます",
       "tutorialSlides": [
         {
           "title": "filter（フィルター）とは？",
@@ -376,7 +376,7 @@ export const kotlin2Data = {
       },
     {
       "title": "when 式を使おう",
-      "description": "when 式を使おうの使い方を学びます",
+      "description": "whenについて学びます",
       "tutorialSlides": [
         {
           "title": "when（ウェン）式とは？",
@@ -442,7 +442,7 @@ export const kotlin2Data = {
       },
     {
       "title": "拡張関数を作ろう",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "拡張関数（かくちょうかんすう）とは？",
@@ -490,7 +490,7 @@ export const kotlin2Data = {
       },
     {
       "title": "スコープ関数 let",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "let（レット）とは？",

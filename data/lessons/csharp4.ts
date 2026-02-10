@@ -34,7 +34,7 @@ export const csharp4Data = {
   "exercises": [
     {
       "title": "ジェネリッククラス",
-      "description": "データと処理をまとめる「クラス」を学びます",
+      "description": "ジェネリッククラスの仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "ジェネリクスとは？",
@@ -105,7 +105,7 @@ export const csharp4Data = {
       },
     {
       "title": "ジェネリック制約 where",
-      "description": "ジェネリック制約 whereの使い方を学びます",
+      "description": "条件を指定してデータを絞り込む方法を学びます",
       "tutorialSlides": [
         {
           "title": "where 制約",
@@ -177,7 +177,7 @@ export const csharp4Data = {
       },
     {
       "title": "デリゲートの基本",
-      "description": "デリゲートの基本の使い方を学びます",
+      "description": "デリゲートについて学びます",
       "tutorialSlides": [
         {
           "title": "デリゲートとは？",
@@ -249,7 +249,7 @@ export const csharp4Data = {
       },
     {
       "title": "Func デリゲート",
-      "description": "Func デリゲートの使い方を学びます",
+      "description": "Func<>について学びます",
       "tutorialSlides": [
         {
           "title": "Func とは？",
@@ -309,7 +309,7 @@ export const csharp4Data = {
       },
     {
       "title": "Action デリゲート",
-      "description": "Action デリゲートの使い方を学びます",
+      "description": "Action<>について学びます",
       "tutorialSlides": [
         {
           "title": "Action とは？",
@@ -369,7 +369,7 @@ export const csharp4Data = {
       },
     {
       "title": "LINQ GroupBy",
-      "description": "LINQ GroupByの使い方を学びます",
+      "description": "GroupByについて学びます",
       "tutorialSlides": [
         {
           "title": "GroupBy とは？",
@@ -443,7 +443,7 @@ export const csharp4Data = {
       },
     {
       "title": "null条件演算子 ?.",
-      "description": "数値の計算方法を学びます",
+      "description": "?.について学びます",
       "tutorialSlides": [
         {
           "title": "?. とは？",
@@ -507,7 +507,7 @@ export const csharp4Data = {
       },
     {
       "title": "null合体演算子 ??",
-      "description": "数値の計算方法を学びます",
+      "description": "??について学びます",
       "tutorialSlides": [
         {
           "title": "?? とは？",
@@ -571,7 +571,7 @@ export const csharp4Data = {
       },
     {
       "title": "record 型",
-      "description": "データの種類（型）について学びます",
+      "description": "データの種類（型）について理解します",
       "tutorialSlides": [
         {
           "title": "record とは？",
@@ -637,7 +637,7 @@ export const csharp4Data = {
       },
     {
       "title": "init プロパティ",
-      "description": "init プロパティの使い方を学びます",
+      "description": "init プロパティの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "init とは？",

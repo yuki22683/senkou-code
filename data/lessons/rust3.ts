@@ -34,7 +34,7 @@ export const rust3Data = {
   "exercises": [
     {
       "title": "ライフタイムの基本",
-      "description": "ライフタイムの基本の使い方を学びます",
+      "description": "ライフタイムについて学びます",
       "tutorialSlides": [
         {
           "title": "ライフタイムとは？",
@@ -86,7 +86,7 @@ export const rust3Data = {
       },
     {
       "title": "クロージャの基本",
-      "description": "クロージャの基本の使い方を学びます",
+      "description": "クロージャについて学びます",
       "tutorialSlides": [
         {
           "title": "クロージャとは？",
@@ -130,7 +130,7 @@ export const rust3Data = {
       },
     {
       "title": "イテレータの基本",
-      "description": "イテレータの基本の使い方を学びます",
+      "description": "イテレータの基本の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "イテレータとは？",
@@ -178,7 +178,7 @@ export const rust3Data = {
       },
     {
       "title": "map でイテレータ変換",
-      "description": "キーと値のペアでデータを管理する方法を学びます",
+      "description": "配列の全要素に同じ処理を適用する方法を学びます",
       "tutorialSlides": [
         {
           "title": "map（マップ）とは？",
@@ -224,7 +224,7 @@ export const rust3Data = {
       },
     {
       "title": "filter で絞り込み",
-      "description": "filter で絞り込みの使い方を学びます",
+      "description": "条件に合う要素だけを抽出する方法を学びます",
       "tutorialSlides": [
         {
           "title": "filter（フィルター）とは？",
@@ -270,7 +270,7 @@ export const rust3Data = {
       },
     {
       "title": "fold で畳み込み",
-      "description": "fold で畳み込みの使い方を学びます",
+      "description": "配列の要素を集約して1つの値にする方法を学びます",
       "tutorialSlides": [
         {
           "title": "fold とは？",
@@ -316,7 +316,7 @@ export const rust3Data = {
       },
     {
       "title": "? 演算子でエラー伝播",
-      "description": "数値の計算方法を学びます",
+      "description": "?について学びます",
       "tutorialSlides": [
         {
           "title": "? 演算子とは？",
@@ -430,7 +430,7 @@ export const rust3Data = {
       },
     {
       "title": "Vec のメソッド push",
-      "description": "Vec のメソッド pushの使い方を学びます",
+      "description": "Vec のメソッド pushの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "push とは？",
@@ -478,7 +478,7 @@ export const rust3Data = {
       },
     {
       "title": "String と &str",
-      "description": "文字列の操作方法を学びます",
+      "description": "Stringについて学びます",
       "tutorialSlides": [
         {
           "title": "String vs &str",

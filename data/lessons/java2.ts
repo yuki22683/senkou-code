@@ -14,7 +14,7 @@ export const javaData2 = {
   "exercises": [
     {
       "title": "クラスの継承",
-      "description": "クラスの機能を引き継ぐ「継承」を学びます",
+      "description": "既存のクラスの機能を引き継いで、新しいクラスを作る方法を学びます",
       "tutorialSlides": [
         {
           "title": "継承（けいしょう）とは？",
@@ -96,7 +96,7 @@ export const javaData2 = {
       },
     {
       "title": "メソッドのオーバーライド",
-      "description": "メソッドのオーバーライドの使い方を学びます",
+      "description": "オーバーライドについて学びます",
       "tutorialSlides": [
         {
           "title": "オーバーライドとは？",
@@ -177,7 +177,7 @@ export const javaData2 = {
       },
     {
       "title": "インターフェース",
-      "description": "インターフェースの使い方を学びます",
+      "description": "インターフェースについて学びます",
       "tutorialSlides": [
         {
           "title": "インターフェースとは？",
@@ -255,7 +255,7 @@ export const javaData2 = {
       },
     {
       "title": "抽象クラス",
-      "description": "データと処理をまとめる「クラス」を学びます",
+      "description": "抽象クラスの仕組みを理解します",
       "tutorialSlides": [
         {
           "title": "抽象（ちゅうしょう）クラスとは？",
@@ -333,7 +333,7 @@ export const javaData2 = {
       },
     {
       "title": "例外処理（try-catch）",
-      "description": "エラーを適切に処理する方法を学びます",
+      "description": "プログラムのエラーを適切に処理して、安全に動作させる方法を学びます",
       "tutorialSlides": [
         {
           "title": "例外（れいがい）とは？",
@@ -395,7 +395,7 @@ export const javaData2 = {
       },
     {
       "title": "finally ブロック",
-      "description": "finally ブロックの使い方を学びます",
+      "description": "finally ブロックの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "finally（ファイナリー）とは？",
@@ -462,7 +462,7 @@ export const javaData2 = {
       },
     {
       "title": "ArrayList",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "ArrayList（アレイリスト）とは？",
@@ -527,7 +527,7 @@ export const javaData2 = {
       },
     {
       "title": "拡張for文（for-each）",
-      "description": "同じ処理を繰り返す方法を学びます",
+      "description": "同じ処理を何度も実行する「繰り返し」を学びます",
       "tutorialSlides": [
         {
           "title": "拡張for文（かくちょうフォーぶん）とは？",
@@ -585,7 +585,7 @@ export const javaData2 = {
       },
     {
       "title": "staticメソッド",
-      "description": "staticメソッドの使い方を学びます",
+      "description": "staticメソッドの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "static（スタティック）とは？",
@@ -656,7 +656,7 @@ export const javaData2 = {
       },
     {
       "title": "アクセス修飾子",
-      "description": "アクセス修飾子の使い方を学びます",
+      "description": "アクセス修飾子について学びます",
       "tutorialSlides": [
         {
           "title": "アクセス修飾子（しゅうしょくし）とは？",

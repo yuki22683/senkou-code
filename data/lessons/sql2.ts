@@ -34,7 +34,7 @@ export const sql2Data = {
   "exercises": [
     {
       "title": "WHERE で絞り込み",
-      "description": "WHERE で絞り込みの使い方を学びます",
+      "description": "条件を指定してデータを絞り込む方法を学びます",
       "tutorialSlides": [
         {
           "title": "WHERE（ホエア）とは？",
@@ -114,7 +114,7 @@ export const sql2Data = {
       },
     {
       "title": "LIMIT で件数制限",
-      "description": "LIMIT で件数制限の使い方を学びます",
+      "description": "LIMIT で件数制限の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "LIMIT（リミット）とは？",
@@ -154,7 +154,7 @@ export const sql2Data = {
       },
     {
       "title": "COUNT で件数を数える",
-      "description": "COUNT で件数を数えるの使い方を学びます",
+      "description": "COUNT で件数を数えるの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "COUNT（カウント）とは？",
@@ -193,7 +193,7 @@ export const sql2Data = {
       },
     {
       "title": "SUM で合計を計算",
-      "description": "数値の計算方法を学びます",
+      "description": "プログラムで数値を計算する方法を学びます",
       "tutorialSlides": [
         {
           "title": "SUM（サム）とは？",
@@ -232,7 +232,7 @@ export const sql2Data = {
       },
     {
       "title": "AVG で平均を計算",
-      "description": "数値の計算方法を学びます",
+      "description": "プログラムで数値を計算する方法を学びます",
       "tutorialSlides": [
         {
           "title": "AVG（アベレージ）とは？",
@@ -271,7 +271,7 @@ export const sql2Data = {
       },
     {
       "title": "GROUP BY でグループ化",
-      "description": "同じ処理を繰り返す方法を学びます",
+      "description": "GROUP BY でグループ化の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "GROUP BY（グループバイ）とは？",
@@ -322,7 +322,7 @@ export const sql2Data = {
       },
     {
       "title": "HAVING でグループを絞り込み",
-      "description": "同じ処理を繰り返す方法を学びます",
+      "description": "HAVING でグループを絞り込みの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "HAVING（ハビング）とは？",
@@ -373,7 +373,7 @@ export const sql2Data = {
       },
     {
       "title": "CASE で条件分岐",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "CASE（ケース）とは？",
@@ -425,7 +425,7 @@ export const sql2Data = {
       },
     {
       "title": "COALESCE でNULL処理",
-      "description": "COALESCE でNULL処理の使い方を学びます",
+      "description": "COALESCE でNULL処理の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "COALESCE（コアレス）とは？",

@@ -15,7 +15,7 @@ export const javaData3 = {
   "exercises": [
     {
       "title": "ラムダ式の基本",
-      "description": "短く書ける無名関数を学びます",
+      "description": "名前のない簡潔な関数を作る方法を学びます",
       "tutorialSlides": [
         {
           "title": "ラムダ式とは？",
@@ -70,7 +70,7 @@ export const javaData3 = {
       },
     {
       "title": "Stream の作成",
-      "description": "Stream の作成の使い方を学びます",
+      "description": "Streamについて学びます",
       "tutorialSlides": [
         {
           "title": "Stream とは？",
@@ -126,7 +126,7 @@ export const javaData3 = {
       },
     {
       "title": "map で変換",
-      "description": "キーと値のペアでデータを管理する方法を学びます",
+      "description": "配列の全要素に同じ処理を適用する方法を学びます",
       "tutorialSlides": [
         {
           "title": "map とは？",
@@ -187,7 +187,7 @@ export const javaData3 = {
       },
     {
       "title": "filter で絞り込み",
-      "description": "filter で絞り込みの使い方を学びます",
+      "description": "条件に合う要素だけを抽出する方法を学びます",
       "tutorialSlides": [
         {
           "title": "filter とは？",
@@ -248,7 +248,7 @@ export const javaData3 = {
       },
     {
       "title": "collect でリストに変換",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "collect とは？",
@@ -315,7 +315,7 @@ export const javaData3 = {
       },
     {
       "title": "reduce で集約",
-      "description": "reduce で集約の使い方を学びます",
+      "description": "配列の要素を集約して1つの値にする方法を学びます",
       "tutorialSlides": [
         {
           "title": "reduce とは？",
@@ -378,7 +378,7 @@ export const javaData3 = {
       },
     {
       "title": "Optional の基本",
-      "description": "Optional の基本の使い方を学びます",
+      "description": "Optionalについて学びます",
       "tutorialSlides": [
         {
           "title": "Optional とは？",
@@ -438,7 +438,7 @@ export const javaData3 = {
       },
     {
       "title": "メソッド参照",
-      "description": "メソッド参照の使い方を学びます",
+      "description": "::について学びます",
       "tutorialSlides": [
         {
           "title": "メソッド参照とは？",
@@ -553,7 +553,7 @@ export const javaData3 = {
       },
     {
       "title": "distinct で重複除去",
-      "description": "distinct で重複除去の使い方を学びます",
+      "description": "distinctについて学びます",
       "tutorialSlides": [
         {
           "title": "distinct とは？",

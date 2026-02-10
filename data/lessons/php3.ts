@@ -34,7 +34,7 @@ export const php3Data = {
   "exercises": [
     {
       "title": "クロージャ（無名関数）",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
               {
                       "title": "クロージャとは",
@@ -86,7 +86,7 @@ export const php3Data = {
       },
     {
       "title": "アロー関数",
-      "description": "処理をまとめて再利用する「関数」を学びます",
+      "description": "処理をまとめて再利用できる「関数」の作り方を学びます",
       "tutorialSlides": [
         {
           "title": "アロー関数（かんすう）とは？",
@@ -130,7 +130,7 @@ export const php3Data = {
       },
     {
       "title": "Null合体演算子",
-      "description": "数値の計算方法を学びます",
+      "description": "Null合体演算子の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Null合体演算子（がったいえんざんし）とは？",
@@ -176,7 +176,7 @@ export const php3Data = {
       },
     {
       "title": "スプレッド演算子",
-      "description": "数値の計算方法を学びます",
+      "description": "スプレッド演算子の仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "スプレッド演算子（えんざんし）とは？",
@@ -215,7 +215,7 @@ export const php3Data = {
       },
     {
       "title": "match式",
-      "description": "match式の使い方を学びます",
+      "description": "match式の仕組みと使い方を学びます",
       "tutorialSlides": [
               {
                       "title": "match式とは",
@@ -277,7 +277,7 @@ export const php3Data = {
       },
     {
       "title": "名前付き引数",
-      "description": "名前付き引数の使い方を学びます",
+      "description": "名前付き引数について学びます",
       "tutorialSlides": [
         {
           "title": "名前付（なまえつ）き引数（ひきすう）とは？",
@@ -327,7 +327,7 @@ export const php3Data = {
       },
     {
       "title": "トレイト",
-      "description": "トレイトの使い方を学びます",
+      "description": "トレイトについて学びます",
       "tutorialSlides": [
         {
           "title": "トレイトとは？",
@@ -398,7 +398,7 @@ export const php3Data = {
       },
     {
       "title": "ジェネレータ",
-      "description": "値を順番に生成する仕組みを学びます",
+      "description": "メモリを節約しながら値を順番に生成する仕組みを学びます",
       "tutorialSlides": [
         {
           "title": "ジェネレータとは？",
@@ -457,7 +457,7 @@ export const php3Data = {
       },
     {
       "title": "配列の分割代入",
-      "description": "複数のデータをまとめて管理する方法を学びます",
+      "description": "複数のデータをまとめて扱う「配列」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "分割代入（ぶんかつだいにゅう）とは？",
@@ -500,7 +500,7 @@ export const php3Data = {
       },
     {
       "title": "コンストラクタプロパティ昇格",
-      "description": "コンストラクタプロパティ昇格の使い方を学びます",
+      "description": "コンストラクタプロパティ昇格について学びます",
       "tutorialSlides": [
         {
           "title": "プロパティ昇格（しょうかく）とは？",

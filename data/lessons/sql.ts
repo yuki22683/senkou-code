@@ -34,7 +34,7 @@ export const sqlData = {
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",
-      "description": "画面に文字を表示する方法を学びます",
+      "description": "プログラムの基本！画面にメッセージを表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "SQL（エスキューエル）とは？",
@@ -77,7 +77,7 @@ export const sqlData = {
       },
     {
       "title": "データに名前をつけましょう",
-      "description": "データに名前をつけましょうの使い方を学びます",
+      "description": "データに名前をつけましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "AS（アズ）で名前をつける",
@@ -120,7 +120,7 @@ export const sqlData = {
       },
     {
       "title": "数字を足し算しましょう",
-      "description": "数の足し算を行う方法を学びます",
+      "description": "数の足し算（加算）をプログラムで行う方法を学びます",
       "tutorialSlides": [
         {
           "title": "計算をしよう",
@@ -163,7 +163,7 @@ export const sqlData = {
       },
     {
       "title": "いくつもの値を表示しましょう",
-      "description": "画面に文字を表示する方法を学びます",
+      "description": "SELECT文で複数の列を一度に取得する方法を学びます",
       "tutorialSlides": [
         {
           "title": "カンマで区切る",
@@ -205,7 +205,7 @@ export const sqlData = {
       },
     {
       "title": "条件で絞り込みましょう",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件で絞り込みましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "WHERE（ホエア）で絞り込む",
@@ -247,7 +247,7 @@ export const sqlData = {
       },
     {
       "title": "文字をつなげましょう",
-      "description": "文字をつなげましょうの使い方を学びます",
+      "description": "文字をつなげましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "文字の連結（れんけつ）",
@@ -289,7 +289,7 @@ export const sqlData = {
       },
     {
       "title": "大きい順に並べ替えましょう",
-      "description": "大きい順に並べ替えましょうの使い方を学びます",
+      "description": "大きい順に並べ替えましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "ORDER BY（オーダーバイ）で並べ替え",
@@ -334,7 +334,7 @@ export const sqlData = {
       },
     {
       "title": "条件を組み合わせましょう",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件を組み合わせましょうの仕組みと使い方を学びます",
       "tutorialSlides": [
         {
           "title": "AND と OR",
@@ -376,7 +376,7 @@ export const sqlData = {
       },
     {
       "title": "CASEで条件分岐しましょう",
-      "description": "条件によって処理を分ける方法を学びます",
+      "description": "条件によって処理を分ける「条件分岐」を学びます",
       "tutorialSlides": [
         {
           "title": "CASE文（ケースぶん）とは？",
@@ -420,7 +420,7 @@ export const sqlData = {
       },
     {
       "title": "NULLをチェックしましょう",
-      "description": "NULLをチェックしましょうの使い方を学びます",
+      "description": "IS NULLでNULL値を判定する方法を学びます",
       "tutorialSlides": [
         {
           "title": "NULL（ヌル）とは？",
