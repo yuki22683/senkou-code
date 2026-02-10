@@ -114,7 +114,7 @@ async function seedPythonLesson() {
     const exerciseData = {
       lesson_id: lessonId,
       title: exercise.title,
-      description: exercise.description,
+      description: exercise.description || null,
       difficulty: exercise.difficulty,
       order_index: exercise.orderIndex,
       tutorial_slides: exercise.tutorialSlides,
