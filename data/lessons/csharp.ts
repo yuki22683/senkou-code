@@ -45,27 +45,37 @@ export const csharpData = {
           "content": "# Console.WriteLine（コンソール・ライトライン）\\n\\n画面に文字を出したいときは、`Console.WriteLine()` という命令を使います。\\n\\n**Console** は「画面」、**WriteLine** は「1行書く」という意味です。つまり「画面に1行書いてね」とコンピュータにお願いしているんです。\\n\\n**大事なルール：**\\nC#では、文の最後に必ず `;`（セミコロン）をつけます。これは日本語の「。」と同じ役割です。忘れないようにしましょう！\\n\\n**コード例（文字を出すプログラム）：**\\n```csharp\\nConsole.WriteLine(\"ヤッホー！\");\\n```\\n=> ヤッホー！"
         }
       ],
-      "correctCode": "using System;\\n\\nclass Program {\\n    static void Main() {\\n        // 画面にメッセージを出す関数\\n        Console.WriteLine(\"Hello, C#!\");\\n    }\\n}",
-      "holeyCode": "using ___;\\n___\\nclass ___ {\\n    static void ___() {\\n        // 画面にメッセージを出す関数\\n        ___.___(\"___\");\\n    ___\\n___",
+      "correctCode": "// ライブラリを読み込む\\nusing System;\\n\\n// クラスを定義\\nclass Program {\\n    // メソッドを定義\\n    static void Main() {\\n        // 画面にメッセージを出す関数\\n        Console.WriteLine(\"Hello, C#!\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// ライブラリを読み込む\\nusing ___;\\n___\\n// クラスを定義\\nclass ___ {\\n    // メソッドを定義\\n    static void ___() {\\n        // 画面にメッセージを出す関数\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
+          "// ライブラリを読み込む",
           "using System;",
           "",
+          "// クラスを定義",
           "class Program {",
+          "    // メソッドを定義",
           "    static void Main() {",
           "        // 画面にメッセージを出す関数",
-          "        Console.WriteLine(\"Hello, C#!\");",
+          "        Console.WriteLine(\\\"Hello, C#!\\\");",
+          "    // ブロックを閉じる",
           "    }",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "System名前空間を読み込みます。",
           null,
-          "Programという名前のクラスを定義します。",
-          "Mainメソッドを定義します（プログラムのエントリーポイント）。",
+          "",
           null,
-          "ConsoleクラスのWriteLineメソッドで文字列を出力します。",
-          "ブロックを閉じます。",
-          "クラスのブロックを閉じます。"
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "functions": [

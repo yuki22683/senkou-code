@@ -45,13 +45,15 @@ export const assembly3Data = {
           "content": "# dec レジスタ\\n\\n```asm\\nmov rax, 10\\ndec rax     ; raxが9になる\\n```"
         }
       ],
-      "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに10を入れる\\n  mov rax, 10\\n  ; raxを1減らす\\n  dec rax\\n\\n  ; 結果raxをrdiにコピー\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに10を入れる\\n  ___ ___, ___\\n  ; raxを1減らす\\n  ___ ___\\n\\n  ; 結果raxをrdiにコピー\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
+      "correctCode": "; テキストセクション\\nsection .text\\n  ; グローバルシンボルを宣言\\n  global _start\\n\\n; ラベルを定義\\n_start:\\n  ; raxに10を入れる\\n  mov rax, 10\\n  ; raxを1減らす\\n  dec rax\\n\\n  ; 結果raxをrdiにコピー\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\\n  ___ ___\\n\\n; ラベルを定義\\n___:\\n  ; raxに10を入れる\\n  ___ ___, ___\\n  ; raxを1減らす\\n  ___ ___\\n\\n  ; 結果raxをrdiにコピー\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
+          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
+          "; ラベルを定義",
           "_start:",
           "  ; raxに10を入れる",
           "  mov rax, 10",
@@ -67,21 +69,23 @@ export const assembly3Data = {
         ],
       "lineHints": [
           null,
-          "セクション宣言のディレクティブと .text を入力します。",
-          "グローバル宣言のディレクティブと _start を入力します。",
+          "",
           null,
-          "ラベル _start: を定義します。",
-          null,
-          "データ転送命令で rax に 10 を格納します。",
-          null,
-          "レジスタの値を1減少させる命令です。",
+          "",
           null,
           null,
-          "データ転送命令で rdi に rax の値をコピーします。",
+          "",
           null,
-          "データ転送命令で rax に 60 を格納します。",
+          "",
           null,
-          "syscall で実行します。"
+          "",
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "others": ["section", "text", "global", "_start", "mov", "rax", "10", "dec", "rdi", "60", "syscall"]

@@ -45,19 +45,23 @@ export const rustData = {
           "content": "# println! で画面に表示\\n\\nRustで文字を画面に表示するには、`println!`（プリントラインびっくり）を使います。\\n\\n**ポイント：**\\n- `!` がつくのがRustの特徴（マクロと呼ばれます）\\n- プログラムは `fn main() { }` の中に書く\\n- `fn` は「function（関数）」の略\\n\\n**コード例：**\\n```rust\\nfn main() {\\n    println!(\"ヤッホー！\");\\n}\\n// 「ヤッホー！」と画面に表示される\\n```\\n\\n`println!` の `!` は「マクロ」という特別な機能の印です。今は「おまじない」と思っておけばOK！"
         }
       ],
-      "correctCode": "fn main() {\\n    // Hello, Rust! と表示する\\n    println!(\"Hello, Rust!\");\\n}",
-      "holeyCode": "fn ___ () {\\n    // Hello, Rust! と表示する\\n    ___!(\"___\");\\n___",
+      "correctCode": "// 関数を定義\\nfn main() {\\n    // Hello, Rust! と表示する\\n    println!(\"Hello, Rust!\");\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// 関数を定義\\nfn ___ () {\\n    // Hello, Rust! と表示する\\n    ___!(\"___\");\\n// ブロックを閉じる\\n___",
       "correctLines": [
+          "// 関数を定義",
           "fn main() {",
           "    // Hello, Rust! と表示する",
-          "    println!(\"Hello, Rust!\");",
+          "    println!(\\\"Hello, Rust!\\\");",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "マクロを使用して、文字列と改行を標準出力に出力します。",
-          "プログラムの終わりです。"
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "strings": [

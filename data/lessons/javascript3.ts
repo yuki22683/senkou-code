@@ -37,13 +37,14 @@ export const javascriptData3 = {
           "content": "# 約束が届いたときの処理\\n\\n**then（ゼン）** は「約束が届いたらこれをする」という意味です。\\n\\n**書き方：**\\n- `.then()` ：成功したときの処理\\n- `.catch()` ：失敗したときの処理\\n\\n**コード例：**\\n```javascript\\npromise\\n  .then(result => console.log(result))   // 成功！\\n  .catch(error => console.log(error));   // エラー時\\n```\\n\\n**ピザの例でいうと：**\\n- `.then()` ：ピザが届いたら食べる\\n- `.catch()` ：届かなかったらお店に電話する"
         }
       ],
-      "correctCode": "// Promise コンストラクタで作成\\nconst p = new Promise((resolve) => {\\n  // 'こんにちは Promise!' で解決\\n  resolve('こんにちは Promise!');\\n});\\n\\n// then でコールバックを登録\\np.then(msg => console.log(msg));",
-      "holeyCode": "// Promise コンストラクタで作成\\n___ ___ = ___ ___((___) => {\\n  // 'こんにちは Promise!' で解決\\n  ___('___');\\n___\\n___\\n// then でコールバックを登録\\n___.___(___ => ___.___(___));",
+      "correctCode": "// Promise コンストラクタで作成\\nconst p = new Promise((resolve) => {\\n  // 'こんにちは Promise!' で解決\\n  resolve('こんにちは Promise!');\\n// 文を実行\\n});\\n\\n// then でコールバックを登録\\np.then(msg => console.log(msg));",
+      "holeyCode": "// Promise コンストラクタで作成\\n___ ___ = ___ ___((___) => {\\n  // 'こんにちは Promise!' で解決\\n  ___('___');\\n// 文を実行\\n___\\n___\\n// then でコールバックを登録\\n___.___(___ => ___.___(___));",
       "correctLines": [
           "// Promise コンストラクタで作成",
           "const p = new Promise((resolve) => {",
           "  // 'こんにちは Promise!' で解決",
           "  resolve('こんにちは Promise!');",
+          "// 文を実行",
           "});",
           "",
           "// then でコールバックを登録",
@@ -51,13 +52,14 @@ export const javascriptData3 = {
         ],
       "lineHints": [
           null,
-          "const p = new Promise((resolve) => { で Promiseを作成します。",
+          "",
           null,
-          "resolve('こんにちは Promise!') で Promise を解決します。",
-          "Promiseコンストラクタのコールバック関数を閉じます。",
+          "",
+          null,
+          "",
           null,
           null,
-          "p.then(msg => console.log(msg)) でコールバックを登録します。"
+          ""
         ],
         "candidates": {
           "keywords": [

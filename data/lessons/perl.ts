@@ -53,17 +53,19 @@ export const perlData = {
           "content": "# 目標\\n\\n`print` を使って `Hello, World!` と表示させてみましょう。\\n\\n**完成形：**\\n```perl\\nprint \"Hello, World!\\n\";\\n```\\n\\n**チェックポイント：**\\n- `print` は小文字で書く\\n- 文字は `\"` で囲む\\n- 最後に `\\n` と `;` を忘れずに！"
         }
       ],
-      "correctCode": "# printで出力\\nprint \"Hello, World!\\n\";",
-      "holeyCode": "# printで出力\\n___ \"___\\n___",
+      "correctCode": "# printで出力\\nprint \"Hello, World!\\n# 文を実行\\n\";",
+      "holeyCode": "# printで出力\\n___ \"___\\n# 文を実行\\n___",
       "correctLines": [
           "# printで出力",
-          "print \"Hello, World!",
-          "\";"
+          "print \\\"Hello, World!",
+          "# 文を実行",
+          "\\\";"
         ],
       "lineHints": [
           null,
-          "画面に出す関数は `print` です。",
-          "この行を正しく入力してください。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "functions": [

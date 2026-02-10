@@ -45,14 +45,16 @@ export const php2Data = {
           "content": "# class キーワードで作る\\n\\n`class 名前 { }` で定義します。`new` でインスタンス（実体）を作成します。\\n\\n**コード例：**\\n```php\\nclass Dog {\\n    public $name;\\n}\\n$dog = new Dog();\\n```\\n\\n**何をしているの？**\\n1. `class Dog { }` → Dogという名前のクラスを作る\\n2. `public $name;` → nameというデータ（プロパティ）を持たせる\\n3. `new Dog()` → Dogクラスから実際のオブジェクトを作る\\n\\n**public とは？**\\n- 「外からアクセスできる」という意味\\n- プロパティやメソッドの前につける"
         }
       ],
-      "correctCode": "<?php\\n// Catクラスを定義\\nclass Cat {\\n    // public $nameを定義\\n    public $name;\\n}\\n// $catにnew Cat()を代入\\n$cat = new Cat();\\n// $cat->nameに'タマ'を代入\\n$cat->name = 'タマ';\\n// $cat->nameを出力\\necho $cat->name;\\n?>",
-      "holeyCode": "___\\n// Catクラスを定義\\n___ ___ {\\n    // public $nameを定義\\n    ___ $___;\\n___\\n// $catにnew Cat()を代入\\n$___ = ___ ___();\\n// $cat->nameに'タマ'を代入\\n$___->___ = '___';\\n// $cat->nameを出力\\n___ $___->___;\\n___",
+      "correctCode": "// PHPコード開始タグ\\n<?php\\n// Catクラスを定義\\nclass Cat {\\n    // public $nameを定義\\n    public $name;\\n// ブロックを閉じる\\n}\\n// $catにnew Cat()を代入\\n$cat = new Cat();\\n// $cat->nameに'タマ'を代入\\n$cat->name = 'タマ';\\n// $cat->nameを出力\\necho $cat->name;\\n// PHPコード終了タグ\\n?>",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// Catクラスを定義\\n___ ___ {\\n    // public $nameを定義\\n    ___ $___;\\n// ブロックを閉じる\\n___\\n// $catにnew Cat()を代入\\n$___ = ___ ___();\\n// $cat->nameに'タマ'を代入\\n$___->___ = '___';\\n// $cat->nameを出力\\n___ $___->___;\\n// PHPコード終了タグ\\n___",
       "correctLines": [
+          "// PHPコード開始タグ",
           "<?php",
           "// Catクラスを定義",
           "class Cat {",
           "    // public $nameを定義",
           "    public $name;",
+          "// ブロックを閉じる",
           "}",
           "// $catにnew Cat()を代入",
           "$cat = new Cat();",
@@ -60,22 +62,26 @@ export const php2Data = {
           "$cat->name = 'タマ';",
           "// $cat->nameを出力",
           "echo $cat->name;",
+          "// PHPコード終了タグ",
           "?>"
         ],
       "lineHints": [
-          "PHPスクリプトの開始を宣言する。",
           null,
-          "class キーワードでクラスを定義します。",
+          "",
           null,
-          "public で外からアクセスできるプロパティを定義します。",
-          "クラスやメソッドの閉じ括弧 } です。",
+          "",
           null,
-          "new でインスタンスを作成し変数に代入します。",
+          "",
           null,
-          "-> でプロパティにアクセスして値を代入します。",
+          "",
           null,
-          "echo で変数の内容を出力します。",
-          "PHPスクリプトの終了を宣言します。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

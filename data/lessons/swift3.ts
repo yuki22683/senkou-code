@@ -53,8 +53,8 @@ export const swift3Data = {
           "content": "# 目標\\n\\n数が負（マイナス）なら失敗、そうでなければ成功を返す関数を作りましょう。\\n\\n1. `MyError` というエラー型を定義\\n2. `check` 関数を作る\\n3. 負の数なら `.failure`、そうでなければ `.success` を返す"
         }
       ],
-      "correctCode": "// エラー型を定義\\nenum MyError: Error { case negative }\\n\\n// check関数を定義\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.negative) }\\n    // successで成功を返す\\n    return .success(n)\\n}\\n\\n// resultにcheck関数（引数10）の結果を代入\\nlet result = check(10)\\n// switchでパターンマッチ\\nswitch result {\\n// 成功の場合\\ncase .success(let v): print(v)\\n// 失敗の場合\\ncase .failure(_): print(\"エラー\")\\n}",
-      "holeyCode": "// エラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// check関数を定義\\nfunc ___(_ ___: ___) -> ___<___, ___> {\\n    // 負の場合は失敗\\n    if ___ < ___ { return .___(.___) }\\n    // successで成功を返す\\n    return .___(___)\\n___\\n___\\n// resultにcheck関数（引数10）の結果を代入\\nlet ___ = ___(___)\\n// switchでパターンマッチ\\nswitch ___ {\\n// 成功の場合\\ncase .___(let ___): ___(___)\\n// 失敗の場合\\ncase .___(_): ___(\"___\")\\n___",
+      "correctCode": "// エラー型を定義\\nenum MyError: Error { case negative }\\n\\n// check関数を定義\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.negative) }\\n    // successで成功を返す\\n    return .success(n)\\n// ブロックを閉じる\\n}\\n\\n// resultにcheck関数（引数10）の結果を代入\\nlet result = check(10)\\n// switchでパターンマッチ\\nswitch result {\\n// 成功の場合\\ncase .success(let v): print(v)\\n// 失敗の場合\\ncase .failure(_): print(\"エラー\")\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// エラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// check関数を定義\\nfunc ___(_ ___: ___) -> ___<___, ___> {\\n    // 負の場合は失敗\\n    if ___ < ___ { return .___(.___) }\\n    // successで成功を返す\\n    return .___(___)\\n// ブロックを閉じる\\n___\\n___\\n// resultにcheck関数（引数10）の結果を代入\\nlet ___ = ___(___)\\n// switchでパターンマッチ\\nswitch ___ {\\n// 成功の場合\\ncase .___(let ___): ___(___)\\n// 失敗の場合\\ncase .___(_): ___(\"___\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// エラー型を定義",
           "enum MyError: Error { case negative }",
@@ -65,6 +65,7 @@ export const swift3Data = {
           "    if n < 0 { return .failure(.negative) }",
           "    // successで成功を返す",
           "    return .success(n)",
+          "// ブロックを閉じる",
           "}",
           "",
           "// resultにcheck関数（引数10）の結果を代入",
@@ -74,30 +75,33 @@ export const swift3Data = {
           "// 成功の場合",
           "case .success(let v): print(v)",
           "// 失敗の場合",
-          "case .failure(_): print(\"エラー\")",
+          "case .failure(_): print(\\\"エラー\\\")",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "MyError, Error, negative を指定します。",
+          "",
           null,
           null,
-          "check, n, Int, Result, Int, MyError を指定します。",
+          "",
           null,
-          "n, 0, failure, negative を指定します。",
+          "",
           null,
-          "success, n を指定します。",
-          "この行を正しく入力してください。",
+          "",
+          null,
+          "",
           null,
           null,
-          "result, check, 10 を指定します。",
+          "",
           null,
-          "result を指定します。",
+          "",
           null,
-          "success, v, print, v を指定します。",
+          "",
           null,
-          "failure, print, エラー を指定します。",
-          "この行を正しく入力してください。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [

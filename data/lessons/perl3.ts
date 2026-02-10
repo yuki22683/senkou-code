@@ -46,20 +46,26 @@ export const perl3Data = {
         }
       ],
       "correctCode": "# openでファイルを開く\\nopen(my $fh, \">\", \"/tmp/テスト.txt\") or die;\\nprint $fh \"hello\\n\";\\nclose($fh);\\nprint \"written\\n\";",
-      "holeyCode": "# openでファイルを開く\\n___(my $___, \"___\", \"___\") or ___;\\n___ $___ \"___\";\\n___(___);\\n___ \"___\";",
+      "holeyCode": "# openでファイルを開く\\n___(my $___, \"___\", \"___\") or ___;\\n# 出力\\n___ $___ \"___\";\\n# 文を実行\\n___(___);\\n# 出力\\n___ \"___\";",
       "correctLines": [
           "# openでファイルを開く",
-          "open(my $fh, \">\", \"/tmp/テスト.txt\") or die;",
-          "print $fh \"hello\\n\";",
+          "open(my $fh, \\\">\\\", \\\"/tmp/テスト.txt\\\") or die;",
+          "# 出力",
+          "print $fh \\\"hello\\n\\\";",
+          "# 文を実行",
           "close($fh);",
-          "print \"written\\n\";"
+          "# 出力",
+          "print \\\"written\\n\\\";"
         ],
       "lineHints": [
           null,
-          "open関数でファイルハンドルを作成し、書き込みモード(>)でファイルを開きます。",
-          "print文でファイルハンドルに文字列を書き込みます。",
-          "close関数でファイルハンドルを閉じます。",
-          "print文で完了メッセージを出力します。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "functions": [

@@ -45,27 +45,31 @@ export const perl2Data = {
           "content": "# /パターン/ の書き方\\n\\n**このコードは何をしているの？**\\n```perl\\nif ($text =~ /hello/) {\\n    print \"found\\n\";\\n}\\n```\\n\\n**解説：**\\n1. `$text =~ /hello/` で「$text の中に hello がある？」をチェック\\n2. `=~` → マッチング演算子（「〜に合う？」の意味）\\n3. `/hello/` → 探したいパターン\\n4. 見つかったら \"found\" と表示\\n\\n**ポイント：** パターンは `/` と `/` で囲みます。"
         }
       ],
-      "correctCode": "# 変数に文字列を代入\\nmy $text = \"Hello World\";\\n# =~でパターンマッチング（iで大文字小文字を無視）\\nif ($text =~ /world/i) {\\n    # printで出力\\n    print \"found\\n\";\\n}",
-      "holeyCode": "# 変数に文字列を代入\\nmy $___=___\\n# =~でパターンマッチング（iで大文字小文字を無視）\\nif (___=~/___/___) {\\n    # printで出力\\n    ___\\n___\\n___",
+      "correctCode": "# 変数に文字列を代入\\nmy $text = \"Hello World\";\\n# =~でパターンマッチング（iで大文字小文字を無視）\\nif ($text =~ /world/i) {\\n    # printで出力\\n    print \"found\\n# 文を実行\\n\";\\n# ブロックを閉じる\\n}",
+      "holeyCode": "# 変数に文字列を代入\\nmy $___=___\\n# =~でパターンマッチング（iで大文字小文字を無視）\\nif (___=~/___/___) {\\n    # printで出力\\n    ___\\n# 文を実行\\n___\\n# ブロックを閉じる\\n___",
       "correctLines": [
           "# 変数に文字列を代入",
-          "my $text = \"Hello World\";",
+          "my $text = \\\"Hello World\\\";",
           "# =~でパターンマッチング（iで大文字小文字を無視）",
           "if ($text =~ /world/i) {",
           "    # printで出力",
-          "    print \"found",
-          "\";",
+          "    print \\\"found",
+          "# 文を実行",
+          "\\\";",
+          "# ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "$textに\"Hello World\"を代入します。",
+          "\\\"\\\"",
           null,
-          "$textがworldにマッチするか判定します（iで大文字小文字を無視）。",
+          "",
           null,
-          "print \"found で出力を開始します。",
-          "文字列を閉じて文を終了します。",
-          "ifブロックを閉じます。"
+          "\\\"",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [

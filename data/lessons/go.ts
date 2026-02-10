@@ -45,23 +45,31 @@ export const goData = {
           "content": "# おまじないを入力しましょう\\n\\nGo言語でプログラムを書くときは、最初に必ず入力する「きまり文句」があります。これは「おまじない」のようなものです。\\n\\n**3つのきまり文句：**\\n- `package main`（パッケージ メイン）：「このプログラムを動かせますよ」という合図\\n- `import \"fmt\"`（インポート エフエムティー）：画面に文字を出す機能を使う準備\\n- `func main()`（ファンク メイン）：プログラムがここからスタート！\\n\\n**コード例：**\\n```go\\npackage main\\nimport \"fmt\"\\nfunc main() {\\n    fmt.Println(\"ヤッホー\")\\n}\\n```\\n\\n`fmt.Println`（エフエムティー プリントライン）で、かっこの中の文字を画面に表示できます。"
         }
       ],
-      "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // こんにちは, Go! と表示する\\n    fmt.Println(\"こんにちは, Go!\")\\n}",
-      "holeyCode": "package ___\\n___ \\\"___\\\"\\nfunc ___ () {\\n    // こんにちは, Go! と表示する\\n    ___.___(\\\"___\\\")\\n___",
+      "correctCode": "// モジュールを宣言\\npackage main\\n// パッケージをインポート\\nimport \"fmt\"\\n// 関数を定義\\nfunc main() {\\n    // こんにちは, Go! と表示する\\n    fmt.Println(\"こんにちは, Go!\")\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// 関数を定義\\nfunc ___ () {\\n    // こんにちは, Go! と表示する\\n    ___.___(\\\"___\\\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
+          "// モジュールを宣言",
           "package main",
-          "import \"fmt\"",
+          "// パッケージをインポート",
+          "import \\\"fmt\\\"",
+          "// 関数を定義",
           "func main() {",
           "    // こんにちは, Go! と表示する",
-          "    fmt.Println(\"こんにちは, Go!\")",
+          "    fmt.Println(\\\"こんにちは, Go!\\\")",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "このファイルが属するパッケージ（main）を宣言します。",
-          "フォーマットパッケージをインポートします。",
-          "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "fmtパッケージのPrintln関数で「こんにちは, Go!」と出力します。",
-          "関数の終わりを示す閉じ括弧です。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "strings": [

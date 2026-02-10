@@ -45,25 +45,27 @@ export const sql4Data = {
           "content": "# WITH 名前 AS (クエリ)\\n\\n**コード例：**\\n```sql\\nWITH high_sales AS (\\n  SELECT * FROM orders WHERE total > 1000\\n)\\nSELECT * FROM high_sales;\\n```\\n\\n**このコードは何をしているの？**\\n1. `high_sales` という名前で「1000円以上の注文」を定義\\n2. その結果を取得"
         }
       ],
-      "correctCode": "-- WITHでCTEを定義\\nWITH nums AS (\\n  -- データを作成\\n  SELECT 1 AS n UNION SELECT 2 UNION SELECT 3\\n)\\n-- CTEからデータを取得\\nSELECT * FROM nums;",
-      "holeyCode": "-- WITHでCTEを定義\\nWITH ___ AS (\\n  -- データを作成\\n  SELECT ___ AS ___ UNION SELECT ___ UNION SELECT ___\\n___\\n-- CTEからデータを取得\\nSELECT ___ FROM ___;",
+      "correctCode": "-- WITHでCTEを定義\\nWITH nums AS (\\n  -- データを作成\\n  SELECT 1 AS n UNION SELECT 2 UNION SELECT 3\\n-- 関数呼び出しを閉じる\\n)\\n-- CTEからデータを取得\\nSELECT * FROM nums;",
+      "holeyCode": "-- WITHでCTEを定義\\nWITH ___ AS (\\n  -- データを作成\\n  SELECT ___ AS ___ UNION SELECT ___ UNION SELECT ___\\n-- 関数呼び出しを閉じる\\n___\\n-- CTEからデータを取得\\nSELECT ___ FROM ___;",
       "correctLines": [
           "-- WITHでCTEを定義",
           "WITH nums AS (",
           "  -- データを作成",
           "  SELECT 1 AS n UNION SELECT 2 UNION SELECT 3",
+          "-- 関数呼び出しを閉じる",
           ")",
           "-- CTEからデータを取得",
           "SELECT * FROM nums;"
         ],
       "lineHints": [
           null,
-          "CTEに名前を付けてASで定義を開始します。",
+          "",
           null,
-          "UNION で複数の値を結合して仮想テーブルを作成します。",
-          "CTEの定義を閉じる括弧です。",
+          "",
           null,
-          "定義したCTEから全ての列を取得します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

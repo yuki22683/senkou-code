@@ -25,23 +25,31 @@ export const cppData = {
           "content": "# std::cout（シーアウト）を使おう\\n\\nC++で画面に文字を出すには、`std::cout`（スタンダード・シーアウト）を使います。\\n`cout` は「Character OUTput」（文字を出力）の略です。\\n\\n`<<` という矢印のような記号を使って、文字を画面の方へ送ります。\\n\\n**イメージ：**\\n画面 `<<` \"こんにちは\"\\n（文字が矢印の方向に流れていくイメージ！）\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n#include <iostream>  // 入出力を使う準備\\nint main() {\\n    std::cout << \"C++最高！\" << std::endl;\\n    return 0;\\n}\\n```\\n\\n**用語解説：**\\n- `std::endl`（エンドエル）: 改行して次の行に進む\\n- `#include <iostream>`: 入出力機能を使えるようにする"
         }
       ],
-      "correctCode": "#include <iostream>\\nint main() {\\n    // こんにちは, C++! と入力\\n    std::cout << \"こんにちは, C++!\" << std::endl;\\n    return 0;\\n}",
-      "holeyCode": "___\\n___ ___() {\\n    // こんにちは, C++! と入力\\n    ___::___ << ___ << ___::___;\\n    ___ ___;\\n___",
+      "correctCode": "// ライブラリを読み込む\\n#include <iostream>\\n// ブロックを開始\\nint main() {\\n    // こんにちは, C++! と入力\\n    std::cout << \"こんにちは, C++!\" << std::endl;\\n    // 値を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // こんにちは, C++! と入力\\n    ___::___ << ___ << ___::___;\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
+          "// ライブラリを読み込む",
           "#include <iostream>",
+          "// ブロックを開始",
           "int main() {",
           "    // こんにちは, C++! と入力",
-          "    std::cout << \"こんにちは, C++!\" << std::endl;",
+          "    std::cout << \\\"こんにちは, C++!\\\" << std::endl;",
+          "    // 値を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "標準入出力ストリームを読み込み、使用可能にします。",
-          "int型の戻り値を持つmain関数を定義します。",
           null,
-          "std名前空間のcoutで文字列を出力し、endlで改行します。",
-          "returnで0を返してプログラムの正常終了を示します。",
-          "関数の終わりを示す閉じ括弧です。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "strings": [

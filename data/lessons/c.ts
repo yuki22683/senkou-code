@@ -27,30 +27,34 @@ export const cData = {
         }
       ],
       "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // Hello, World!を表示する\\n    printf(\"Hello, World!\\n\");\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // Hello, World!を表示する\\n    ___(\"___\\n___\\n    // 正常終了を示す0を返す\\n    return ___;\\n___",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // Hello, World!を表示する\\n    ___(\"___\\n// 文を実行\\n___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 標準入出力ライブラリを読み込む",
           "#include <stdio.h>",
           "// mainはプログラムのエントリーポイント",
           "int main() {",
           "    // Hello, World!を表示する",
-          "    printf(\"Hello, World!",
-          "\");",
+          "    printf(\\\"Hello, World!",
+          "// 文を実行",
+          "\\\");",
           "    // 正常終了を示す0を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "#includeでヘッダファイルを読み込みます。",
+          "",
           null,
-          "int型を返すmain関数を定義します。",
+          "",
           null,
-          "printf関数で文字列を表示します。",
-          "文字列の終端と関数呼び出しの閉じ括弧です。",
+          "",
           null,
-          "0を返して正常終了を示します。",
-          "関数ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
       "candidates": {
         "functions": [

@@ -45,29 +45,35 @@ export const lua3Data = {
           "content": "# success, result = pcall(関数)\\n\\n成功すると `true` と結果、失敗すると `false` とエラーメッセージを返します。\\n\\n**コード例：**\\n```lua\\nlocal ok, err = pcall(function()\\n    error(\"oops\")\\nend)\\nprint(ok) -- false\\n```"
         }
       ],
-      "correctCode": "-- pcallでエラーを捕捉\\nlocal ok, result = pcall(function()\\n    return 10 + 5\\nend)\\n-- 成功したら出力\\nif ok then\\n    -- resultを出力\\n    print(result)\\nend",
-      "holeyCode": "-- pcallでエラーを捕捉\\nlocal ___, ___ = ___(function()\\n    return ___ + ___\\n___)\\n-- 成功したら出力\\nif ___ ___\\n    -- resultを出力\\n    ___(___)\\n___",
+      "correctCode": "-- pcallでエラーを捕捉\\nlocal ok, result = pcall(function()\\n    -- 値を返す\\n    return 10 + 5\\n-- ブロックを終了\\nend)\\n-- 成功したら出力\\nif ok then\\n    -- resultを出力\\n    print(result)\\n-- ブロックを終了\\nend",
+      "holeyCode": "-- pcallでエラーを捕捉\\nlocal ___, ___ = ___(function()\\n    -- 値を返す\\n    return ___ + ___\\n-- ブロックを終了\\n___)\\n-- 成功したら出力\\nif ___ ___\\n    -- resultを出力\\n    ___(___)\\n-- ブロックを終了\\n___",
       "correctLines": [
           "-- pcallでエラーを捕捉",
           "local ok, result = pcall(function()",
+          "    -- 値を返す",
           "    return 10 + 5",
+          "-- ブロックを終了",
           "end)",
           "-- 成功したら出力",
           "if ok then",
           "    -- resultを出力",
           "    print(result)",
+          "-- ブロックを終了",
           "end"
         ],
       "lineHints": [
           null,
-          "pcall で関数を保護モードで実行します。",
-          "10と5を足した値を返します。",
-          "関数を閉じます。",
+          "",
           null,
-          "成功フラグokがtrueかチェックします。",
+          "",
           null,
-          "resultの値を画面に出力します。",
-          "ブロックを終了します。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "functions": [

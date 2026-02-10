@@ -57,8 +57,8 @@ export const kotlin3Data = {
           "content": "# 目標\\n\\nsuspend関数を作って呼び出しましょう。\\n\\n1. `suspend fun getMessage()` を定義\\n2. `delay(100)` で100ミリ秒待機\\n3. `\"Hello\"` を返す\\n4. `runBlocking` の中で呼び出して表示"
         }
       ],
-      "correctCode": "// coroutines をインポートする\\nimport kotlinx.coroutines.*\\n\\n// getMessage関数をsuspendで定義\\nsuspend fun getMessage(): String {\\n    // 100ミリ秒待機する\\n    delay(100)\\n    // \"Hello\" を返す\\n    return \"こんにちは\"\\n}\\n\\n// main 関数を定義する\\nfun main() = runBlocking {\\n    // getMessage() を出力する\\n    println(getMessage())\\n}",
-      "holeyCode": "// coroutines をインポートする\\n___ ___.___.___\\n___\\n// getMessage関数をsuspendで定義\\n___ ___ ___(): ___ {\\n    // 100ミリ秒待機する\\n    ___(___)\\n    // \"Hello\" を返す\\n    ___ \"___\"\\n___\\n___\\n// main 関数を定義する\\n___ ___() = ___ {\\n    // getMessage() を出力する\\n    ___(___(___))\\n___",
+      "correctCode": "// coroutines をインポートする\\nimport kotlinx.coroutines.*\\n\\n// getMessage関数をsuspendで定義\\nsuspend fun getMessage(): String {\\n    // 100ミリ秒待機する\\n    delay(100)\\n    // \"Hello\" を返す\\n    return \"こんにちは\"\\n// ブロックを閉じる\\n}\\n\\n// main 関数を定義する\\nfun main() = runBlocking {\\n    // getMessage() を出力する\\n    println(getMessage())\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// coroutines をインポートする\\n___ ___.___.___\\n___\\n// getMessage関数をsuspendで定義\\n___ ___ ___(): ___ {\\n    // 100ミリ秒待機する\\n    ___(___)\\n    // \"Hello\" を返す\\n    ___ \"___\"\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\n___ ___() = ___ {\\n    // getMessage() を出力する\\n    ___(___(___))\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// coroutines をインポートする",
           "import kotlinx.coroutines.*",
@@ -67,33 +67,37 @@ export const kotlin3Data = {
           "suspend fun getMessage(): String {",
           "    // 100ミリ秒待機する",
           "    delay(100)",
-          "    // \"Hello\" を返す",
-          "    return \"こんにちは\"",
+          "    // \\\"Hello\\\" を返す",
+          "    return \\\"こんにちは\\\"",
+          "// ブロックを閉じる",
           "}",
           "",
           "// main 関数を定義する",
           "fun main() = runBlocking {",
           "    // getMessage() を出力する",
           "    println(getMessage())",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "importでライブラリを読み込みます。",
+          "",
           null,
           null,
-          "suspendで中断可能な関数を定義します。",
+          "",
           null,
-          "delayで待機します。",
+          "",
           null,
-          "returnで値を返します。",
-          "関数やブロックを閉じる括弧です。",
+          "",
+          null,
+          "",
           null,
           null,
-          "funでメイン関数を定義します。",
+          "",
           null,
-          "printlnで出力します。",
-          "関数やブロックを閉じる括弧です。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

@@ -26,13 +26,14 @@ export const typescriptData4 = {
           "content": "# 安全に型を使う\\n\\n型ガードでチェックした後は、TypeScriptがその型として扱ってくれるので、安全にメソッドなどを使えます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nfunction isString(x: unknown): x is string {\\n  return typeof x === 'string';\\n}\\n\\nconst value: unknown = 'hello';\\n\\nif (isString(value)) {\\n  // ここではvalueはstring型！\\n  console.log(value.toUpperCase());\\n  // 文字列のメソッドが使える！\\n}\\n```"
         }
       ],
-      "correctCode": "// isNumber型ガード関数を定義\\nfunction isNumber(x: unknown): x is number {\\n  // typeofで型をチェック\\n  return typeof x === 'number';\\n}\\n\\n// unknown型の値\\nconst value: unknown = 42;\\n// 型ガードでチェック\\nif (isNumber(value)) {\\n  // 数値として計算\\n  console.log(value * 2);\\n}",
-      "holeyCode": "// isNumber型ガード関数を定義\\n___ ___(___: ___): ___ ___ ___ {\\n  // typeofで型をチェック\\n  return typeof ___ === ___;\\n___\\n___\\n// unknown型の値\\nconst ___: ___ = ___;\\n// 型ガードでチェック\\nif (___(___)) {\\n  // 数値として計算\\n  ___.___(___ * ___);\\n___",
+      "correctCode": "// isNumber型ガード関数を定義\\nfunction isNumber(x: unknown): x is number {\\n  // typeofで型をチェック\\n  return typeof x === 'number';\\n// ブロックを閉じる\\n}\\n\\n// unknown型の値\\nconst value: unknown = 42;\\n// 型ガードでチェック\\nif (isNumber(value)) {\\n  // 数値として計算\\n  console.log(value * 2);\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// isNumber型ガード関数を定義\\n___ ___(___: ___): ___ ___ ___ {\\n  // typeofで型をチェック\\n  return typeof ___ === ___;\\n// ブロックを閉じる\\n___\\n___\\n// unknown型の値\\nconst ___: ___ = ___;\\n// 型ガードでチェック\\nif (___(___)) {\\n  // 数値として計算\\n  ___.___(___ * ___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// isNumber型ガード関数を定義",
           "function isNumber(x: unknown): x is number {",
           "  // typeofで型をチェック",
           "  return typeof x === 'number';",
+          "// ブロックを閉じる",
           "}",
           "",
           "// unknown型の値",
@@ -41,22 +42,25 @@ export const typescriptData4 = {
           "if (isNumber(value)) {",
           "  // 数値として計算",
           "  console.log(value * 2);",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "isNumber型ガード関数を定義し、引数xがnumber型かをチェックします。",
+          "",
           null,
-          "typeof演算子でxの型を'number'と比較します。",
-          "関数の閉じ括弧です。",
+          "",
+          null,
+          "",
           null,
           null,
-          "unknown型のvalue変数に42を代入します。",
+          "",
           null,
-          "isNumber関数でvalueをチェックします。",
+          "",
           null,
-          "console.logでvalue * 2の結果を出力します。",
-          "ifブロックの閉じ括弧です。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

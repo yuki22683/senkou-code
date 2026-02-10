@@ -26,31 +26,41 @@ export const javaData3 = {
           "content": "# (引数) -> 処理\\n\\n```java\\n// 引数なし\\n() -> System.out.println(\"Hello\")\\n\\n// 引数1つ（カッコ省略可）\\nx -> x * 2\\n\\n// 引数複数\\n(a, b) -> a + b\\n```"
         }
       ],
-      "correctCode": "import java.util.function.Function;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // ラムダ式で引数と本体を区切る演算子\\n        Function<Integer, Integer> square = x -> x * x;\\n        // apply でラムダ式を実行する\\n        System.out.println(square.apply(5));\\n    }\\n}",
-      "holeyCode": "import ___.___.___.___.;\\n___\\npublic class ___ {\\n    public static void ___(___[] ___) {\\n        // ラムダ式で引数と本体を区切る演算子\\n        ___<___, ___> ___ = ___ ___ ___ * ___;\\n        // apply でラムダ式を実行する\\n        ___.___.___(___.___(___)___\\n    ___\\n___",
+      "correctCode": "// ライブラリを読み込む\\nimport java.util.function.Function;\\n\\n// クラスを定義\\npublic class Main {\\n    // メソッドを定義\\n    public static void main(String[] args) {\\n        // ラムダ式で引数と本体を区切る演算子\\n        Function<Integer, Integer> square = x -> x * x;\\n        // apply でラムダ式を実行する\\n        System.out.println(square.apply(5));\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___.___.;\\n___\\n// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // ラムダ式で引数と本体を区切る演算子\\n        ___<___, ___> ___ = ___ ___ ___ * ___;\\n        // apply でラムダ式を実行する\\n        ___.___.___(___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
+          "// ライブラリを読み込む",
           "import java.util.function.Function;",
           "",
+          "// クラスを定義",
           "public class Main {",
+          "    // メソッドを定義",
           "    public static void main(String[] args) {",
           "        // ラムダ式で引数と本体を区切る演算子",
           "        Function<Integer, Integer> square = x -> x * x;",
           "        // apply でラムダ式を実行する",
           "        System.out.println(square.apply(5));",
+          "    // ブロックを閉じる",
           "    }",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "java.util.function パッケージから Function クラスをインポートします。",
           null,
-          "Main クラスを定義します。",
-          "main メソッド（String[] args）を定義します。",
+          "",
           null,
-          "Function<Integer, Integer> 型の変数 square に、x -> x * x のラムダ式を代入します。",
           null,
-          "System.out.println で square.apply(5) の結果を出力します。",
-          "中括弧でメソッドを閉じます。",
-          "中括弧でクラスを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [

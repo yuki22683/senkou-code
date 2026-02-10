@@ -45,21 +45,23 @@ export const php3Data = {
                       "content": "# 外の変数を使う\\n\\n```php\\n$x = 10;\\n$fn = function($y) use ($x) {\\n    return $x + $y;\\n};\\necho $fn(5);  // 15\\n```\\n\\nuseで外の変数を取り込めます。"
               }
       ],
-      "correctCode": "// functionで無名関数を定義\\n$doubler = function($x) {\\n    // *で乗算\\n    return $x * 2;\\n};",
-      "holeyCode": "// functionで無名関数を定義\\n$___ = ___(___) {\\n    // *で乗算\\n    return $___ ___ ___;\\n___",
+      "correctCode": "// functionで無名関数を定義\\n$doubler = function($x) {\\n    // *で乗算\\n    return $x * 2;\\n// ブロックを閉じる\\n};",
+      "holeyCode": "// functionで無名関数を定義\\n$___ = ___(___) {\\n    // *で乗算\\n    return $___ ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// functionで無名関数を定義",
           "$doubler = function($x) {",
           "    // *で乗算",
           "    return $x * 2;",
+          "// ブロックを閉じる",
           "};"
         ],
       "lineHints": [
           null,
-          "無名関数を定義するキーワードです。",
+          "",
           null,
-          "2倍にする演算子です。",
-          "関数定義の閉じ括弧です。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

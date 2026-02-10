@@ -45,16 +45,18 @@ export const csharp2Data = {
           "content": "# コロン「:」で継承を表す\\n\\n子クラスを作るときは、クラス名の後に `: 親クラス名` と書きます。\\n\\n**コード例（動物クラスを継承）：**\\n```csharp\\n// 親クラス：動物\\nclass Animal {\\n    public void Eat() {\\n        Console.WriteLine(\"eating\");\\n    }\\n}\\n\\n// 子クラス：犬（Animalを継承）\\nclass Dog : Animal { }\\n```\\n\\n**解説：**\\n1. `Animal` クラスに `Eat()` メソッドを定義\\n2. `Dog : Animal` で「DogはAnimalを継承する」と宣言\\n3. Dog は何も書かなくても、自動的に `Eat()` が使える！\\n\\nこれが継承の力です。親クラスの機能を、子クラスがそのまま使えます。"
         }
       ],
-      "correctCode": "// Vehicleクラスを定義\\nclass Vehicle {\\n    // Moveメソッドを定義\\n    public void Move() {\\n        // 画面に出力\\n        Console.WriteLine(\"移動中\");\\n    }\\n}\\n// :で継承\\nclass Car : Vehicle { }\\n\\n// Carインスタンスを作成\\nCar c = new Car();\\n// Moveメソッドを呼び出し\\nc.Move();",
-      "holeyCode": "// Vehicleクラスを定義\\nclass ___ {\\n    // Moveメソッドを定義\\n    public void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    ___\\n___\\n// :で継承\\nclass ___ : ___ { }\\n\\n// Carインスタンスを作成\\n___ ___ = new ___();\\n// Moveメソッドを呼び出し\\n___.___();",
+      "correctCode": "// Vehicleクラスを定義\\nclass Vehicle {\\n    // Moveメソッドを定義\\n    public void Move() {\\n        // 画面に出力\\n        Console.WriteLine(\"移動中\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n// :で継承\\nclass Car : Vehicle { }\\n\\n// Carインスタンスを作成\\nCar c = new Car();\\n// Moveメソッドを呼び出し\\nc.Move();",
+      "holeyCode": "// Vehicleクラスを定義\\nclass ___ {\\n    // Moveメソッドを定義\\n    public void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// :で継承\\nclass ___ : ___ { }\\n\\n// Carインスタンスを作成\\n___ ___ = new ___();\\n// Moveメソッドを呼び出し\\n___.___();",
       "correctLines": [
           "// Vehicleクラスを定義",
           "class Vehicle {",
           "    // Moveメソッドを定義",
           "    public void Move() {",
           "        // 画面に出力",
-          "        Console.WriteLine(\"移動中\");",
+          "        Console.WriteLine(\\\"移動中\\\");",
+          "    // ブロックを閉じる",
           "    }",
+          "// ブロックを閉じる",
           "}",
           "// :で継承",
           "class Car : Vehicle { }",
@@ -66,20 +68,22 @@ export const csharp2Data = {
         ],
       "lineHints": [
           null,
-          "Vehicleクラスを定義します。",
+          "",
           null,
-          "Moveメソッドを定義します。",
+          "",
           null,
-          "ConsoleクラスのWriteLineメソッドで出力します。",
-          "閉じ括弧を入力してください。",
-          "閉じ括弧を入力してください。",
+          "",
           null,
-          "CarクラスをVehicleを継承して定義します。",
+          "",
+          null,
+          "",
+          null,
+          "",
           null,
           null,
-          "Car型の変数cにnew Car()を代入します。",
+          "",
           null,
-          "変数cのMoveメソッドを呼び出します。"
+          ""
         ],
         "candidates": {
           "operators": [

@@ -53,8 +53,8 @@ export const swift2Data = {
           "content": "# 包みを開けて中身を取り出す\\n\\nオプショナルは「箱に入った状態」なので、中身を使うには **アンラップ（包みを開ける）** が必要です。\\n\\n`!` をつけると強制的に開けられます。\\n\\n```swift\\nvar num: Int? = 42\\nprint(num!)  // 42（箱を開けて中身を表示）\\n```\\n\\n**注意：** nilのとき`!`を使うとエラーになります。"
         }
       ],
-      "correctCode": "// ?でオプショナル型\\nvar num: Int? = 42\\n// nilチェック\\nif num != nil {\\n    // !でアンラップ\\n    print(num!)\\n}",
-      "holeyCode": "// ?でオプショナル型\\nvar ___: ___? = ___\\n// nilチェック\\nif ___ != ___ ___\\n    // !でアンラップ\\n    ___(___!)\\n___",
+      "correctCode": "// ?でオプショナル型\\nvar num: Int? = 42\\n// nilチェック\\nif num != nil {\\n    // !でアンラップ\\n    print(num!)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// ?でオプショナル型\\nvar ___: ___? = ___\\n// nilチェック\\nif ___ != ___ ___\\n    // !でアンラップ\\n    ___(___!)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ?でオプショナル型",
           "var num: Int? = 42",
@@ -62,16 +62,18 @@ export const swift2Data = {
           "if num != nil {",
           "    // !でアンラップ",
           "    print(num!)",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "変数名はnum、型はInt?、値は42です。",
+          "",
           null,
-          "numがnilでないことを確認する条件式です。",
+          "",
           null,
-          "print関数でnum!を出力します。",
-          "閉じ括弧でブロックを終了します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [

@@ -26,23 +26,31 @@ export const javaData = {
           "content": "# 最初に書く「おまじない」\\n\\nJavaでプログラムを書くときは、必ず書かなければいけない「お約束」があります。\\n\\n**たとえ話：** 手紙を書くときに「拝啓」から始めるように、Javaにも決まった書き出しがあるんです。\\n\\n```java\\npublic class Main {\\n    public static void main(String[] args) {\\n        // ここにやりたいことを書くよ！\\n    }\\n}\\n```\\n\\n**何をしているの？**\\n- `public class Main` → プログラムに「Main」という名前をつけています\\n- `public static void main` → 「ここからスタート！」という合図です\\n\\n画面に文字を出したいときは、`System.out.println(\"出したい文字\");` と書きます。長いですね！でも、これがJavaの流儀なんです。"
         }
       ],
-      "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        // Hello, Java! と出力する\\n        System.out.println(\"Hello, Java!\");\\n    }\\n}",
-      "holeyCode": "public class ___ {\\n    public static void ___(___[] ___) {\\n        // Hello, Java! と出力する\\n        ___.___.___(___)___\\n    ___\\n___",
+      "correctCode": "// クラスを定義\\npublic class Main {\\n    // メソッドを定義\\n    public static void main(String[] args) {\\n        // Hello, Java! と出力する\\n        System.out.println(\"Hello, Java!\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // Hello, Java! と出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
+          "// クラスを定義",
           "public class Main {",
+          "    // メソッドを定義",
           "    public static void main(String[] args) {",
           "        // Hello, Java! と出力する",
-          "        System.out.println(\"Hello, Java!\");",
+          "        System.out.println(\\\"Hello, Java!\\\");",
+          "    // ブロックを閉じる",
           "    }",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "外部からアクセス可能なクラス（Main）を定義します。",
-          "mainメソッドを定義します。String[]型の引数argsを受け取ります。",
           null,
-          "Systemクラスのoutオブジェクトのprintlnメソッドで文字列を出力します。",
-          "ここまでがスタートの合図の終わりです。",
-          "ここまでがプログラム全体の終わりです。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "functions": [
