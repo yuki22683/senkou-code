@@ -683,16 +683,7 @@ export default function ExercisePage() {
                       <BookOpen className="w-5 h-5 lg:mr-2" />
                       <span className="hidden lg:inline">スライドを見る</span>
                     </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="text-base flex-1"
-                      onClick={() => setShowHintDialog(true)}
-                      disabled={isNavigating || !exercise.line_hints || !exercise.line_hints[currentLine]}
-                    >
-                      <Lightbulb className="w-5 h-5 lg:mr-2" />
-                      <span className="hidden lg:inline">ヒント</span>
-                    </Button>
+{/* ヒントボタンは非表示 */}
                   </div>
                 </div>
               </div>
@@ -701,27 +692,7 @@ export default function ExercisePage() {
         </div>
       </div>
 
-      {/* ヒントダイアログ */}
-      <Dialog open={showHintDialog} onOpenChange={setShowHintDialog}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle className="flex items-center">
-              <Lightbulb className="w-5 h-5 mr-2 text-yellow-500" />
-              ヒント
-            </DialogTitle>
-          </DialogHeader>
-          <div className="py-4">
-            <p className="text-gray-700 whitespace-pre-wrap">
-              {exercise.line_hints && exercise.line_hints[currentLine]
-                ? exercise.line_hints[currentLine]
-                : "この行にはヒントがありません"}
-            </p>
-          </div>
-          <DialogFooter>
-            <Button onClick={() => setShowHintDialog(false)} disabled={isNavigating}>閉じる</Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+{/* ヒントダイアログは非表示 */}
 
       {/* 答えダイアログ */}
       <Dialog open={showAnswerDialog} onOpenChange={setShowAnswerDialog}>
