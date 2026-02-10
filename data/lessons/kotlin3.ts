@@ -20,7 +20,7 @@ export const kotlin3Data = {
     },
     {
       "title": "reified型パラメータ",
-      "content": "`reified` を使うと、実行時に型情報を利用できます。\\n\\n```kotlin\\ninline fun <reified T> isType(value: Any): Boolean {\\n    return value is T\\n}\\n\\nprintln(isType<String>(\"テスト\"))  // => true\\nprintln(isType<Int>(\"テスト\"))     // => false\\n```\\n\\n通常のジェネリクスでは消去される型情報が保持されます。\\n\\n`reified` は `inline` 関数でのみ使用可能です。"
+      "content": "`reified` を使うと、実行時に型情報を利用できます。\\n\\n```kotlin\\ninline fun <reified T> isType(value: Any): Boolean {\\n    return value is T\\n}\\n\\nprintln(isType<String>(\"テスト\"))\\nprintln(isType<Int>(\"テスト\"))  \\n```\\n\\n=> true\\n\\n=> false\\n\\n通常のジェネリクスでは消去される型情報が保持されます。\\n\\n`reified` は `inline` 関数でのみ使用可能です。"
     },
     {
       "title": "スコープ関数（apply / also）",
@@ -28,7 +28,7 @@ export const kotlin3Data = {
     },
     {
       "title": "スコープ関数（run / let）",
-      "content": "`run` と `let` は処理結果を返すスコープ関数です。\\n\\n```kotlin\\n// run: ブロックの結果を返す\\nval length = \"Hello World\".run {\\n    split(\" \").size\\n}\\nprintln(length)  // => 2\\n\\n// let: nullableとの組み合わせ\\nval num: Int? = 42\\nnum?.let { println(it * 2) }  // => 84\\n```\\n\\n`let` は特にnullチェックとの組み合わせでよく使われます。"
+      "content": "`run` と `let` は処理結果を返すスコープ関数です。\\n\\n```kotlin\\n// run: ブロックの結果を返す\\nval length = \"Hello World\".run {\\n    split(\" \").size\\n}\\nprintln(length)\\n\\n// let: nullableとの組み合わせ\\nval num: Int? = 42\\nnum?.let { println(it * 2) }\\n```\\n\\n=> 2\\n\\n=> 84\\n\\n`let` は特にnullチェックとの組み合わせでよく使われます。"
     }
   ],
   "exercises": [

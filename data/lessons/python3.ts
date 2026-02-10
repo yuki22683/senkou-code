@@ -91,7 +91,7 @@ export const pythonData3 = {
       "tutorialSlides": [
         {
           "title": "*args とは？",
-          "content": "# いくつでも引数を受け取れる！\\n\\n**\\*args（アスタリスク・アーグス）** を使うと、**何個でも引数を受け取れる** 関数が作れます。\\n\\n「args」は「arguments（引数）」の略です。\\n\\nたとえば、「1個でも、10個でも、100個でも数を受け取って合計する」という関数が作れます！\\n\\n**例：** 全部足し算しよう！\\n\\n```python\\ndef sum_all(*args):\\n    return sum(args)\\n\\nprint(sum_all(1, 2, 3))  # => 6\\nprint(sum_all(1, 2, 3, 4, 5))  # => 15\\n```\\n\\n**ポイント：** 受け取った引数は **タプル**（リストに似たデータ）として扱われます。"
+          "content": "# いくつでも引数を受け取れる！\\n\\n**\\*args（アスタリスク・アーグス）** を使うと、**何個でも引数を受け取れる** 関数が作れます。\\n\\n「args」は「arguments（引数）」の略です。\\n\\nたとえば、「1個でも、10個でも、100個でも数を受け取って合計する」という関数が作れます！\\n\\n**例：** 全部足し算しよう！\\n\\n```python\\ndef sum_all(*args):\\n    return sum(args)\\n\\nprint(sum_all(1, 2, 3))\\nprint(sum_all(1, 2, 3, 4, 5))\\n```\\n\\n=> 6\\n\\n=> 15\\n\\n**ポイント：** 受け取った引数は **タプル**（リストに似たデータ）として扱われます。"
         },
         {
           "title": "*args の使い方",
@@ -153,7 +153,7 @@ export const pythonData3 = {
         },
         {
           "title": "**kwargs の使い方",
-          "content": "# 辞書として扱える！\\n\\n受け取った `kwargs` は **辞書** として使えます。\\n\\n`.items()`, `.keys()`, `.values()` などのメソッドが使えます！\\n\\n**例：** ユーザー情報を作ろう！\\n\\n```python\\ndef create_user(**kwargs):\\n    return kwargs\\n\\nuser = create_user(name='花子', email='hanako@example.com')\\nprint(user['name'])  # => 花子\\n```\\n\\n**何をしているか：**\\n1. `create_user(name='花子', email='...')` で名前付き引数を渡す\\n2. `**kwargs` でそれらを辞書として受け取る\\n3. `{'name': '花子', 'email': '...'}` という辞書が返される\\n4. `user['name']` で「花子」が取り出せる！\\n\\n**使いどころ：** 設定項目（オプション）をたくさん渡したいとき！"
+          "content": "# 辞書として扱える！\\n\\n受け取った `kwargs` は **辞書** として使えます。\\n\\n`.items()`, `.keys()`, `.values()` などのメソッドが使えます！\\n\\n**例：** ユーザー情報を作ろう！\\n\\n```python\\ndef create_user(**kwargs):\\n    return kwargs\\n\\nuser = create_user(name='花子', email='hanako@example.com')\\nprint(user['name'])\\n```\\n\\n=> 花子\\n\\n**何をしているか：**\\n1. `create_user(name='花子', email='...')` で名前付き引数を渡す\\n2. `**kwargs` でそれらを辞書として受け取る\\n3. `{'name': '花子', 'email': '...'}` という辞書が返される\\n4. `user['name']` で「花子」が取り出せる！\\n\\n**使いどころ：** 設定項目（オプション）をたくさん渡したいとき！"
         }
       ],
       "correctCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef print_info(**kwargs):\\n    # 1番目の k にキー、2番目の v に値が入る\\n    for k, v in kwargs.items():\\n        # キーと値をイコールで繋いで表示\\n        print(f'{k} = {v}')\\n\\n# print_info(x=10, y=20)を実行\\nprint_info(x=10, y=20)",
@@ -346,7 +346,7 @@ export const pythonData3 = {
         },
         {
           "title": "ジェネレータ式の使い方",
-          "content": "# sum や max と組み合わせると便利！\\n\\n`sum()`（合計）や `max()`（最大値）などの関数に **直接渡す** と効率的です。\\n\\n**例：** 2乗の合計を計算しよう！\\n\\n```python\\ntotal = sum(x**2 for x in range(5))\\nprint(total)  # => 30\\n```\\n\\n**何をしているか：**\\n1. `range(5)` で 0, 1, 2, 3, 4 を生成\\n2. 各数を2乗（0, 1, 4, 9, 16）\\n3. `sum()` で合計 → 0+1+4+9+16 = 30\\n\\n**ポイント：** `sum()` に渡すとき、外側のカッコを省略できます！\\n\\n```python\\n# これでOK（カッコを省略）\\nsum(x**2 for x in range(5))\\n\\n# こう書かなくてもいい\\nsum((x**2 for x in range(5)))\\n```"
+          "content": "# sum や max と組み合わせると便利！\\n\\n`sum()`（合計）や `max()`（最大値）などの関数に **直接渡す** と効率的です。\\n\\n**例：** 2乗の合計を計算しよう！\\n\\n```python\\ntotal = sum(x**2 for x in range(5))\\nprint(total)\\n```\\n\\n=> 30\\n\\n**何をしているか：**\\n1. `range(5)` で 0, 1, 2, 3, 4 を生成\\n2. 各数を2乗（0, 1, 4, 9, 16）\\n3. `sum()` で合計 → 0+1+4+9+16 = 30\\n\\n**ポイント：** `sum()` に渡すとき、外側のカッコを省略できます！\\n\\n```python\\n# これでOK（カッコを省略）\\nsum(x**2 for x in range(5))\\n\\n# こう書かなくてもいい\\nsum((x**2 for x in range(5)))\\n```"
         }
       ],
       "correctCode": "# numsにrangeを代入（開始に1, 終了に6）\\nnums = range(1, 6)\\n# ジェネレータ式で各要素の2乗を計算し、その合計を出す\\ntotal = sum(x * x for x in nums)\\n# 合計を表示\\nprint(total)",
@@ -453,11 +453,11 @@ export const pythonData3 = {
       "tutorialSlides": [
         {
           "title": "any とは？",
-          "content": "# 「1つでもOKならOK！」をチェック\\n\\n**any（エニー）** は、リストの中に **1つでも True（正しい）があれば True** を返します。\\n\\n「any」は「どれか」という意味です。「どれか1つでも当てはまる？」とチェックします。\\n\\n**例：** 合格者がいるかチェック！\\n\\n```python\\nnums = [0, 0, 1, 0]\\nprint(any(nums))  # => True（1が True）\\n\\n# 5より大きい数はある？\\nprint(any(x > 5 for x in [1, 2, 10]))  # => True（10が該当）\\n```\\n\\n**ポイント：** 0は False、0以外の数は True として扱われます。"
+          "content": "# 「1つでもOKならOK！」をチェック\\n\\n**any（エニー）** は、リストの中に **1つでも True（正しい）があれば True** を返します。\\n\\n「any」は「どれか」という意味です。「どれか1つでも当てはまる？」とチェックします。\\n\\n**例：** 合格者がいるかチェック！\\n\\n```python\\nnums = [0, 0, 1, 0]\\nprint(any(nums))\\n\\n# 5より大きい数はある？\\nprint(any(x > 5 for x in [1, 2, 10]))\\n```\\n\\n=> True（1が True）\\n\\n=> True（10が該当）\\n\\n**ポイント：** 0は False、0以外の数は True として扱われます。"
         },
         {
           "title": "all とは？",
-          "content": "# 「全部OKならOK！」をチェック\\n\\n**all（オール）** は、リストの **全てが True のときだけ True** を返します。\\n\\n「all」は「全て」という意味です。「全部当てはまる？」とチェックします。\\n\\n**例：** 全員合格かチェック！\\n\\n```python\\nnums = [1, 2, 3]\\nprint(all(nums))  # => True（全部0以外）\\n\\n# 全部0より大きい？\\nprint(all(x > 0 for x in [1, 2, 3]))   # => True\\nprint(all(x > 0 for x in [1, -1, 3]))  # => False（-1がNG）\\n```\\n\\n**any vs all の違い：**\\n- **any** = 1つでも True なら True（「または」的）\\n- **all** = 全部 True なら True（「かつ」的）"
+          "content": "# 「全部OKならOK！」をチェック\\n\\n**all（オール）** は、リストの **全てが True のときだけ True** を返します。\\n\\n「all」は「全て」という意味です。「全部当てはまる？」とチェックします。\\n\\n**例：** 全員合格かチェック！\\n\\n```python\\nnums = [1, 2, 3]\\nprint(all(nums))\\n\\n# 全部0より大きい？\\nprint(all(x > 0 for x in [1, 2, 3]))\\nprint(all(x > 0 for x in [1, -1, 3]))\\n```\\n\\n=> True（全部0以外）\\n\\n=> True\\n\\n=> False（-1がNG）\\n\\n**any vs all の違い：**\\n- **any** = 1つでも True なら True（「または」的）\\n- **all** = 全部 True なら True（「かつ」的）"
         }
       ],
       "correctCode": "# 1から5までの数値リストを作成\\nnums = [1, 2, 3, 4, 5]\\n# 全要素が0より大きいか判定する関数を使用\\nresult = all(x > 0 for x in nums)\\n# 判定結果を画面に表示\\nprint(result)",

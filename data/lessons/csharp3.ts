@@ -8,7 +8,7 @@ export const csharp3Data = {
   "tutorialSlides": [
     {
       "title": "async/await で非同期処理",
-      "content": "`async`/`await`で非同期処理を同期的に書けます。\\n\\n```csharp\\nasync Task<int> CalculateAsync(int n) {\\n    await Task.Delay(100);\\n    return n * n;\\n}\\n\\nvar result = await CalculateAsync(5);\\nConsole.WriteLine(result);  // => 25\\n```\\n\\n`await`で処理の完了を待ちます。"
+      "content": "`async`/`await`で非同期処理を同期的に書けます。\\n\\n```csharp\\nasync Task<int> CalculateAsync(int n) {\\n    await Task.Delay(100);\\n    return n * n;\\n}\\n\\nvar result = await CalculateAsync(5);\\nConsole.WriteLine(result);\\n```\\n\\n=> 25\\n\\n`await`で処理の完了を待ちます。"
     },
     {
       "title": "LINQ OrderBy / GroupBy",
@@ -16,19 +16,19 @@ export const csharp3Data = {
     },
     {
       "title": "LINQ First / Any / All / Sum",
-      "content": "LINQには便利な集計メソッドがあります。\\n\\n```csharp\\nvar nums = new[] { 1, 2, 3, 4, 5 };\\n\\nnums.First();         // => 1\\nnums.Any(n => n > 3); // => true\\nnums.All(n => n > 0); // => true\\nnums.Sum();           // => 15\\n```"
+      "content": "LINQには便利な集計メソッドがあります。\\n\\n```csharp\\nvar nums = new[] { 1, 2, 3, 4, 5 };\\n\\nnums.First();      \\nnums.Any(n => n > 3);\\nnums.All(n => n > 0);\\nnums.Sum();        \\n```\\n\\n=> 1\\n\\n=> true\\n\\n=> true\\n\\n=> 15"
     },
     {
       "title": "switch式（パターンマッチ）",
-      "content": "`switch`式で値に応じた結果を返せます。\\n\\n```csharp\\nint n = 2;\\nvar result = n switch {\\n    1 => \"one\",\\n    2 => \"two\",\\n    _ => \"other\"\\n};\\nConsole.WriteLine(result);  // => two\\n```\\n\\n`_`はデフォルトケースです。"
+      "content": "`switch`式で値に応じた結果を返せます。\\n\\n```csharp\\nint n = 2;\\nvar result = n switch {\\n    1 => \"one\",\\n    2 => \"two\",\\n    _ => \"other\"\\n};\\nConsole.WriteLine(result);\\n```\\n\\n=> two\\n\\n`_`はデフォルトケースです。"
     },
     {
       "title": "Dictionary",
-      "content": "`Dictionary`でキーと値のペアを管理できます。\\n\\n```csharp\\nvar dict = new Dictionary<string, int>();\\ndict[\"a\"] = 1;\\ndict[\"b\"] = 2;\\nConsole.WriteLine(dict[\"a\"]);  // => 1\\n```"
+      "content": "`Dictionary`でキーと値のペアを管理できます。\\n\\n```csharp\\nvar dict = new Dictionary<string, int>();\\ndict[\"a\"] = 1;\\ndict[\"b\"] = 2;\\nConsole.WriteLine(dict[\"a\"]);\\n```\\n\\n=> 1"
     },
     {
       "title": "record型と文字列補間",
-      "content": "`record`でイミュータブルなデータ型、`$`で文字列補間ができます。\\n\\n```csharp\\nrecord Point(int X, int Y);\\nvar p = new Point(10, 20);\\nConsole.WriteLine(p);  // => Point { X = 10, Y = 20 }\\n\\nvar x = 10;\\nConsole.WriteLine($\"Value: {x}\");  // => Value: 10\\n```"
+      "content": "`record`でイミュータブルなデータ型、`$`で文字列補間ができます。\\n\\n```csharp\\nrecord Point(int X, int Y);\\nvar p = new Point(10, 20);\\nConsole.WriteLine(p);\\n\\nvar x = 10;\\nConsole.WriteLine($\"Value: {x}\");\\n```\\n\\n=> Point { X = 10, Y = 20 }\\n\\n=> Value: 10"
     }
   ],
   "exercises": [

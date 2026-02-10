@@ -12,23 +12,23 @@ export const ruby2Data = {
     },
     {
       "title": "map と select",
-      "content": "`map` は各要素を変換し、`select` は条件に合う要素を抽出します。\\n\\n```ruby\\nnums = [1, 2, 3, 4, 5]\\n\\n# map: 各要素を2倍に変換\\ndoubled = nums.map { |n| n * 2 }\\n# => [2, 4, 6, 8, 10]\\n\\n# select: 3以上を抽出\\nbig = nums.select { |n| n >= 3 }\\n# => [3, 4, 5]\\n```"
+      "content": "`map` は各要素を変換し、`select` は条件に合う要素を抽出します。\\n\\n```ruby\\nnums = [1, 2, 3, 4, 5]\\n\\n# map: 各要素を2倍に変換\\ndoubled = nums.map { |n| n * 2 }\\n```\\n\\n=> [2, 4, 6, 8, 10]\\n\\n```\\n# select: 3以上を抽出\\nbig = nums.select { |n| n >= 3 }\\n```\\n\\n=> [3, 4, 5]"
     },
     {
       "title": "シンボル",
-      "content": "**シンボル**は `:名前` で表す識別子です。文字列より軽量で、ハッシュのキーによく使います。\\n\\n```ruby\\n# シンボルをキーにしたハッシュ\\nitem = { name: 'りんご', price: 100 }\\n\\nputs item[:name]   # => りんご\\nputs item[:price]  # => 100\\n```\\n\\n`name:` は `:name =>` の省略形です。"
+      "content": "**シンボル**は `:名前` で表す識別子です。文字列より軽量で、ハッシュのキーによく使います。\\n\\n```ruby\\n# シンボルをキーにしたハッシュ\\nitem = { name: 'りんご', price: 100 }\\n\\nputs item[:name]\\nputs item[:price]\\n```\\n\\n=> りんご\\n\\n=> 100\\n\\n`name:` は `:name =>` の省略形です。"
     },
     {
       "title": "クラスの定義",
-      "content": "`class` でオブジェクトの設計図を作ります。\\n\\n```ruby\\nclass Cat\\n  def initialize(name)\\n    @name = name  # インスタンス変数\\n  end\\n  \\n  def greet\\n    puts \"にゃー、#{@name}です\"\\n  end\\nend\\n\\ncat = Cat.new('タマ')\\ncat.greet  # => にゃー、タマです\\n```\\n\\n`@name` は各インスタンスが持つ固有のデータです。"
+      "content": "`class` でオブジェクトの設計図を作ります。\\n\\n```ruby\\nclass Cat\\n  def initialize(name)\\n    @name = name  # インスタンス変数\\n  end\\n  \\n  def greet\\n    puts \"にゃー、#{@name}です\"\\n  end\\nend\\n\\ncat = Cat.new('タマ')\\ncat.greet\\n```\\n\\n=> にゃー、タマです\\n\\n`@name` は各インスタンスが持つ固有のデータです。"
     },
     {
       "title": "attr_accessor",
-      "content": "`attr_accessor` でプロパティの読み書きを簡単に定義できます。\\n\\n```ruby\\nclass Item\\n  attr_accessor :price  # 読み書き可能\\n  attr_reader :name     # 読み取り専用\\nend\\n\\nitem = Item.new\\nitem.price = 200\\nputs item.price  # => 200\\n```\\n\\n手動でゲッター/セッターを書く必要がなくなります。"
+      "content": "`attr_accessor` でプロパティの読み書きを簡単に定義できます。\\n\\n```ruby\\nclass Item\\n  attr_accessor :price  # 読み書き可能\\n  attr_reader :name     # 読み取り専用\\nend\\n\\nitem = Item.new\\nitem.price = 200\\nputs item.price\\n```\\n\\n=> 200\\n\\n手動でゲッター/セッターを書く必要がなくなります。"
     },
     {
       "title": "継承とモジュール",
-      "content": "`<` で親クラスを継承し、`include` でモジュールの機能を取り込みます。\\n\\n```ruby\\nclass Vehicle\\n  def move\\n    puts '移動中'\\n  end\\nend\\n\\nclass Car < Vehicle  # Vehicleを継承\\nend\\n\\nCar.new.move  # => 移動中\\n```\\n\\nモジュールは複数のクラスで機能を共有する仕組みです。"
+      "content": "`<` で親クラスを継承し、`include` でモジュールの機能を取り込みます。\\n\\n```ruby\\nclass Vehicle\\n  def move\\n    puts '移動中'\\n  end\\nend\\n\\nclass Car < Vehicle  # Vehicleを継承\\nend\\n\\nCar.new.move\\n```\\n\\n=> 移動中\\n\\nモジュールは複数のクラスで機能を共有する仕組みです。"
     }
   ],
   "exercises": [
@@ -90,7 +90,7 @@ export const ruby2Data = {
         },
         {
           "title": "map の使い方",
-          "content": "# 新しい配列を返す\\n\\nブロック `{ }` の中で「どう変換するか」を書きます。\\n\\n**コード例：**\\n```ruby\\n[1, 2, 3].map { |n| n * 2 }\\n# => [2, 4, 6]\\n```\\n\\n**何が起こるの？**\\n1. `[1, 2, 3]` から1つずつ取り出す\\n2. 取り出した数を `n` に入れる\\n3. `n * 2` で2倍にする\\n4. 結果を新しい配列に入れる\\n5. 最終的に `[2, 4, 6]` という新しい配列ができる\\n\\n**each との違い：**\\n- `each` → 処理するだけ（結果を返さない）\\n- `map` → 変換した新しい配列を返す"
+          "content": "# 新しい配列を返す\\n\\nブロック `{ }` の中で「どう変換するか」を書きます。\\n\\n**コード例：**\\n```ruby\\n[1, 2, 3].map { |n| n * 2 }\\n```\\n\\n=> [2, 4, 6]\\n\\n**何が起こるの？**\\n1. `[1, 2, 3]` から1つずつ取り出す\\n2. 取り出した数を `n` に入れる\\n3. `n * 2` で2倍にする\\n4. 結果を新しい配列に入れる\\n5. 最終的に `[2, 4, 6]` という新しい配列ができる\\n\\n**each との違い：**\\n- `each` → 処理するだけ（結果を返さない）\\n- `map` → 変換した新しい配列を返す"
         }
       ],
       "correctCode": "# numsに配列を代入（1, 2, 3）\\nnums = [1, 2, 3]\\n# mapで各要素を変換\\ndoubled = nums.map { |n| n * 2 }\\n# putsで出力\\nputs doubled",
@@ -142,7 +142,7 @@ export const ruby2Data = {
         },
         {
           "title": "select の使い方",
-          "content": "# 条件に合う要素を選ぶ\\n\\nブロック `{ }` の中で条件を書きます。条件に合うもの（`true` になるもの）だけが残ります。\\n\\n**コード例：**\\n```ruby\\n[1, 2, 3, 4, 5].select { |n| n > 3 }\\n# => [4, 5]\\n```\\n\\n**何が起こるの？**\\n1. 配列から1つずつ取り出す（1, 2, 3, 4, 5）\\n2. `n > 3` → 3より大きいか確認\\n3. 1, 2, 3 → NG（条件に合わない）\\n4. 4, 5 → OK（条件に合う）→ 新しい配列へ\\n5. 結果：`[4, 5]` という配列ができる\\n\\n**map との違い：**\\n- `map` → 全部を変換する\\n- `select` → 条件に合うものだけを選ぶ"
+          "content": "# 条件に合う要素を選ぶ\\n\\nブロック `{ }` の中で条件を書きます。条件に合うもの（`true` になるもの）だけが残ります。\\n\\n**コード例：**\\n```ruby\\n[1, 2, 3, 4, 5].select { |n| n > 3 }\\n```\\n\\n=> [4, 5]\\n\\n**何が起こるの？**\\n1. 配列から1つずつ取り出す（1, 2, 3, 4, 5）\\n2. `n > 3` → 3より大きいか確認\\n3. 1, 2, 3 → NG（条件に合わない）\\n4. 4, 5 → OK（条件に合う）→ 新しい配列へ\\n5. 結果：`[4, 5]` という配列ができる\\n\\n**map との違い：**\\n- `map` → 全部を変換する\\n- `select` → 条件に合うものだけを選ぶ"
         }
       ],
       "correctCode": "# numsに配列を代入（1, 2, 3, 4, 5）\\nnums = [1, 2, 3, 4, 5]\\n# selectで条件に合う要素を抽出\\nbig = nums.select { |n| n >= 3 }\\n# putsで出力\\nputs big",
@@ -196,7 +196,7 @@ export const ruby2Data = {
         },
         {
           "title": "シンボルの使い方",
-          "content": "# ハッシュのキーに最適\\n\\nシンボルは同じ名前なら同じものを指すため、コンピュータのメモリ効率が良いです。\\n\\n**コード例：**\\n```ruby\\nperson = { name: 'Taro', age: 20 }\\nputs person[:name]  # => Taro\\n```\\n\\n**何をしているの？**\\n1. `{ name: 'Taro' }` → シンボル `:name` をキーにして「Taro」を保存\\n2. `person[:name]` → シンボル `:name` で値を取り出す\\n\\n**短い書き方：**\\n- `{ :name => 'Taro' }` と `{ name: 'Taro' }` は同じ意味\\n- 後者の方がRubyらしい書き方です"
+          "content": "# ハッシュのキーに最適\\n\\nシンボルは同じ名前なら同じものを指すため、コンピュータのメモリ効率が良いです。\\n\\n**コード例：**\\n```ruby\\nperson = { name: 'Taro', age: 20 }\\nputs person[:name]\\n```\\n\\n=> Taro\\n\\n**何をしているの？**\\n1. `{ name: 'Taro' }` → シンボル `:name` をキーにして「Taro」を保存\\n2. `person[:name]` → シンボル `:name` で値を取り出す\\n\\n**短い書き方：**\\n- `{ :name => 'Taro' }` と `{ name: 'Taro' }` は同じ意味\\n- 後者の方がRubyらしい書き方です"
         }
       ],
       "correctCode": "# itemにハッシュを代入\\nitem = { name: 'りんご', price: 100 }\\n# :でシンボルを指定してアクセス\\nputs item[:price]",
@@ -364,7 +364,7 @@ export const ruby2Data = {
         },
         {
           "title": "継承の書き方",
-          "content": "# < で継承する\\n\\n`<`（小なり記号）を使って親クラスを指定します。\\n\\n**コード例：**\\n```ruby\\nclass Animal\\n  def speak\\n    puts 'sound'\\n  end\\nend\\n\\nclass Dog < Animal\\nend\\n\\ndog = Dog.new\\ndog.speak  # => sound（親のメソッドが使える！）\\n```\\n\\n**何が起こるの？**\\n1. `Animal` クラスに `speak` メソッドがある\\n2. `Dog < Animal` → DogはAnimalを継承\\n3. Dogは自分で `speak` を作らなくても、Animalの `speak` が使える\\n\\n**子クラスは親クラスの機能を全部受け継ぎます。**"
+          "content": "# < で継承する\\n\\n`<`（小なり記号）を使って親クラスを指定します。\\n\\n**コード例：**\\n```ruby\\nclass Animal\\n  def speak\\n    puts 'sound'\\n  end\\nend\\n\\nclass Dog < Animal\\nend\\n\\ndog = Dog.new\\ndog.speak\\n```\\n\\n=> sound（親のメソッドが使える！）\\n\\n**何が起こるの？**\\n1. `Animal` クラスに `speak` メソッドがある\\n2. `Dog < Animal` → DogはAnimalを継承\\n3. Dogは自分で `speak` を作らなくても、Animalの `speak` が使える\\n\\n**子クラスは親クラスの機能を全部受け継ぎます。**"
         }
       ],
       "correctCode": "# classでクラスを定義\\nclass Vehicle\\n  # moveを定義\\n  def move\\n    # movingを出力\\n    puts '移動中'\\n  # endで終了\\n  end\\n# endで終了\\nend\\n# <で親クラスを継承\\nclass Car < Vehicle\\n# endで終了\\nend\\n# carにインスタンスを代入\\ncar = Car.new\\n# moveを呼び出し\\ncar.move",
@@ -432,7 +432,7 @@ export const ruby2Data = {
         },
         {
           "title": "include でミックスイン",
-          "content": "# モジュールを取り込む\\n\\nクラス内で `include モジュール名` と書くと、そのモジュールのメソッドが使えるようになります。これを **ミックスイン** と呼びます。\\n\\n**コード例：**\\n```ruby\\nmodule Greet\\n  def hello\\n    puts 'hello'\\n  end\\nend\\n\\nclass Person\\n  include Greet\\nend\\n\\nperson = Person.new\\nperson.hello  # => hello\\n```\\n\\n**何が起こるの？**\\n1. `Greet` モジュールに `hello` メソッドがある\\n2. `include Greet` → PersonクラスにGreetを取り込む\\n3. Personのインスタンスで `hello` が使えるようになる\\n\\n**継承は1つのクラスからだけ**ですが、**モジュールは複数取り込める**ので柔軟です。"
+          "content": "# モジュールを取り込む\\n\\nクラス内で `include モジュール名` と書くと、そのモジュールのメソッドが使えるようになります。これを **ミックスイン** と呼びます。\\n\\n**コード例：**\\n```ruby\\nmodule Greet\\n  def hello\\n    puts 'hello'\\n  end\\nend\\n\\nclass Person\\n  include Greet\\nend\\n\\nperson = Person.new\\nperson.hello\\n```\\n\\n=> hello\\n\\n**何が起こるの？**\\n1. `Greet` モジュールに `hello` メソッドがある\\n2. `include Greet` → PersonクラスにGreetを取り込む\\n3. Personのインスタンスで `hello` が使えるようになる\\n\\n**継承は1つのクラスからだけ**ですが、**モジュールは複数取り込める**ので柔軟です。"
         }
       ],
       "correctCode": "# moduleでモジュールを定義\\nmodule Speakable\\n  # speakを定義\\n  def speak\\n    # speakingを出力\\n    puts '話し中'\\n  # endで終了\\n  end\\n# endで終了\\nend\\n# classでクラスを定義\\nclass Robot\\n  # includeでモジュールを取り込み\\n  include Speakable\\n# endで終了\\nend\\n# robotにインスタンスを代入\\nrobot = Robot.new\\n# speakを呼び出し\\nrobot.speak",
@@ -556,7 +556,7 @@ export const ruby2Data = {
         },
         {
           "title": "ラムダの使い方",
-          "content": "# -> で定義\\n\\n`->` の後に引数を書き、`{ }` の中に処理を書きます。`.call` で実行します。\\n\\n**コード例：**\\n```ruby\\nadd = ->(a, b) { a + b }\\nputs add.call(2, 3)  # => 5\\n```\\n\\n**何をしているの？**\\n1. `->(a, b) { a + b }` → 「2つの数を足す」というラムダを作る\\n2. `add` という変数に入れる\\n3. `add.call(2, 3)` → 2と3を渡して実行\\n4. 結果は5\\n\\n**call が必要な理由：**\\n- ラムダは「処理の入れ物」なので、実行するには「呼び出す（call）」必要がある\\n- メソッドと違って、名前だけでは動かない"
+          "content": "# -> で定義\\n\\n`->` の後に引数を書き、`{ }` の中に処理を書きます。`.call` で実行します。\\n\\n**コード例：**\\n```ruby\\nadd = ->(a, b) { a + b }\\nputs add.call(2, 3)\\n```\\n\\n=> 5\\n\\n**何をしているの？**\\n1. `->(a, b) { a + b }` → 「2つの数を足す」というラムダを作る\\n2. `add` という変数に入れる\\n3. `add.call(2, 3)` → 2と3を渡して実行\\n4. 結果は5\\n\\n**call が必要な理由：**\\n- ラムダは「処理の入れ物」なので、実行するには「呼び出す（call）」必要がある\\n- メソッドと違って、名前だけでは動かない"
         }
       ],
       "correctCode": "# ->でラムダを定義\\ndouble = ->(n) { n * 2 }\\n# callで実行\\nputs double.call(5)",

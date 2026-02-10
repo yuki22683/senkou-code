@@ -20,11 +20,11 @@ export const kotlin4Data = {
     },
     {
       "title": "lateinit（後から初期化）",
-      "content": "`lateinit` は後から値を設定するvarに使います。\\n\\n```kotlin\\nclass Service {\\n    lateinit var config: String\\n    \\n    fun setup(c: String) {\\n        config = c\\n    }\\n}\\n\\nval s = Service()\\ns.setup(\"設定完了\")\\nprintln(s.config)  // => 設定完了\\n```\\n\\n初期化前にアクセスすると `UninitializedPropertyAccessException` が発生します。"
+      "content": "`lateinit` は後から値を設定するvarに使います。\\n\\n```kotlin\\nclass Service {\\n    lateinit var config: String\\n    \\n    fun setup(c: String) {\\n        config = c\\n    }\\n}\\n\\nval s = Service()\\ns.setup(\"設定完了\")\\nprintln(s.config)\\n```\\n\\n=> 設定完了\\n\\n初期化前にアクセスすると `UninitializedPropertyAccessException` が発生します。"
     },
     {
       "title": "拡張関数",
-      "content": "既存のクラスにメソッドを追加できます。\\n\\n```kotlin\\nfun Int.isEven() = this % 2 == 0\\n\\nprintln(4.isEven())  // => true\\nprintln(7.isEven())  // => false\\n```\\n\\n元のクラスを変更せずに機能を追加できるため、ライブラリの機能拡張に便利です。\\n\\n`this` は拡張対象のオブジェクトを指します。"
+      "content": "既存のクラスにメソッドを追加できます。\\n\\n```kotlin\\nfun Int.isEven() = this % 2 == 0\\n\\nprintln(4.isEven())\\nprintln(7.isEven())\\n```\\n\\n=> true\\n\\n=> false\\n\\n元のクラスを変更せずに機能を追加できるため、ライブラリの機能拡張に便利です。\\n\\n`this` は拡張対象のオブジェクトを指します。"
     },
     {
       "title": "typealias（型エイリアス）",

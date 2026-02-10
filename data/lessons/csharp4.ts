@@ -8,23 +8,23 @@ export const csharp4Data = {
   "tutorialSlides": [
     {
       "title": "ジェネリッククラス",
-      "content": "`<T>`で型をパラメータとして受け取るクラスを定義できます。\\n\\n```csharp\\nclass Container<T> {\\n    public T Item { get; set; }\\n}\\n\\nvar c = new Container<string> { Item = \"こんにちは\" };\\nConsole.WriteLine(c.Item);  // => こんにちは\\n```"
+      "content": "`<T>`で型をパラメータとして受け取るクラスを定義できます。\\n\\n```csharp\\nclass Container<T> {\\n    public T Item { get; set; }\\n}\\n\\nvar c = new Container<string> { Item = \"こんにちは\" };\\nConsole.WriteLine(c.Item);\\n```\\n\\n=> こんにちは"
     },
     {
       "title": "ジェネリック制約 where",
-      "content": "`where`で型パラメータに制約を付けられます。\\n\\n```csharp\\nclass Comparer<T> where T : IComparable<T> {\\n    public int Compare(T a, T b) => a.CompareTo(b);\\n}\\n\\nvar c = new Comparer<int>();\\nConsole.WriteLine(c.Compare(5, 3));  // => 1\\n```"
+      "content": "`where`で型パラメータに制約を付けられます。\\n\\n```csharp\\nclass Comparer<T> where T : IComparable<T> {\\n    public int Compare(T a, T b) => a.CompareTo(b);\\n}\\n\\nvar c = new Comparer<int>();\\nConsole.WriteLine(c.Compare(5, 3));\\n```\\n\\n=> 1"
     },
     {
       "title": "デリゲート",
-      "content": "`delegate`でメソッドを参照できる型を定義できます。\\n\\n```csharp\\ndelegate int MathOp(int x);\\n\\nint Double(int n) => n * 2;\\n\\nMathOp op = Double;\\nConsole.WriteLine(op(5));  // => 10\\n```"
+      "content": "`delegate`でメソッドを参照できる型を定義できます。\\n\\n```csharp\\ndelegate int MathOp(int x);\\n\\nint Double(int n) => n * 2;\\n\\nMathOp op = Double;\\nConsole.WriteLine(op(5));\\n```\\n\\n=> 10"
     },
     {
       "title": "Func と Action",
-      "content": "`Func`は戻り値あり、`Action`は戻り値なしのデリゲートです。\\n\\n```csharp\\nFunc<int, int> triple = x => x * 3;\\nConsole.WriteLine(triple(7));  // => 21\\n\\nAction<string> greet = name => Console.WriteLine($\"こんにちは, {name}!\");\\ngreet(\"太郎\");  // => こんにちは, 太郎!\\n```"
+      "content": "`Func`は戻り値あり、`Action`は戻り値なしのデリゲートです。\\n\\n```csharp\\nFunc<int, int> triple = x => x * 3;\\nConsole.WriteLine(triple(7));\\n\\nAction<string> greet = name => Console.WriteLine($\"こんにちは, {name}!\");\\ngreet(\"太郎\");\\n```\\n\\n=> 21\\n\\n=> こんにちは, 太郎!"
     },
     {
       "title": "null条件演算子 ?. と ??",
-      "content": "`?.`でnull安全アクセス、`??`でデフォルト値を設定できます。\\n\\n```csharp\\nstring? s = null;\\nint? len = s?.Length;     // => null\\nConsole.WriteLine(len ?? 0);  // => 0\\n\\nstring? value = null;\\nstring result = value ?? \"デフォルト\";\\n```"
+      "content": "`?.`でnull安全アクセス、`??`でデフォルト値を設定できます。\\n\\n```csharp\\nstring? s = null;\\nint? len = s?.Length;  \\nConsole.WriteLine(len ?? 0);\\n\\nstring? value = null;\\nstring result = value ?? \"デフォルト\";\\n```\\n\\n=> null\\n\\n=> 0"
     },
     {
       "title": "record型と init",

@@ -165,7 +165,7 @@ export const cppData = {
         },
         {
           "title": "% の使い方",
-          "content": "# あまりを計算\\n\\n```cpp\\nstd::cout << 10 % 3 << std::endl;  // => 1\\n```\\n10 ÷ 3 は 3 あまり 1 なので、「1」が表示されます。\\n\\n```cpp\\nstd::cout << 8 % 2 << std::endl;   // => 0\\n```\\n8 ÷ 2 は 4 あまり 0 なので、「0」になります（割り切れるということです！）"
+          "content": "# あまりを計算\\n\\n```cpp\\nstd::cout << 10 % 3 << std::endl;\\n```\\n\\n=> 1\\n10 ÷ 3 は 3 あまり 1 なので、「1」が表示されます。\\n\\n```cpp\\nstd::cout << 8 % 2 << std::endl;\\n```\\n\\n=> 0\\n8 ÷ 2 は 4 あまり 0 なので、「0」になります（割り切れるということです！）"
         }
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // 10 を 3 で割ったあまりを出力する\\n    std::cout << 10 % 3 << std::endl;\\n    return 0;\\n}",
@@ -209,11 +209,11 @@ export const cppData = {
       "tutorialSlides": [
         {
           "title": "中身を増やしたいとき",
-          "content": "# はこの中身をパワーアップ\\n\\n「今の点数に10点プラスしたい！」というとき、`+=` を使うと便利です。\\nこれは「今の数字に足して、そのまま保存する」という合体技です。\\n\\n```cpp\\nint x = 10;\\nx += 5;  // x に 5 を足して保存\\nstd::cout << x << std::endl;  // => 15\\n```"
+          "content": "# はこの中身をパワーアップ\\n\\n「今の点数に10点プラスしたい！」というとき、`+=` を使うと便利です。\\nこれは「今の数字に足して、そのまま保存する」という合体技です。\\n\\n```cpp\\nint x = 10;\\nx += 5;  // x に 5 を足して保存\\nstd::cout << x << std::endl;\\n```\\n\\n=> 15"
         },
         {
           "title": "-= も使える",
-          "content": "# 引き算バージョン\\n\\n`-=` を使えば、「今の数字から引いて保存」ができます。\\n\\n```cpp\\nint x = 10;\\nx -= 3;  // x から 3 を引いて保存\\nstd::cout << x << std::endl;  // => 7\\n```"
+          "content": "# 引き算バージョン\\n\\n`-=` を使えば、「今の数字から引いて保存」ができます。\\n\\n```cpp\\nint x = 10;\\nx -= 3;  // x から 3 を引いて保存\\nstd::cout << x << std::endl;\\n```\\n\\n=> 7"
         }
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに50を入れる\\n    int score = 50;\\n    // 10点プラスする\\n    score += 10;\\n    // scoreを表示\\n    std::cout << score << std::endl;\\n    return 0;\\n}",

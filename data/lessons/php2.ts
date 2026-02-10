@@ -8,15 +8,15 @@ export const php2Data = {
   "tutorialSlides": [
     {
       "title": "クラスの定義",
-      "content": "PHPでは `class` キーワードでクラスを定義します。\\n\\n```php\\nclass Cat {\\n    public $name;  // プロパティ\\n}\\n\\n$cat = new Cat();\\n$cat->name = 'タマ';\\necho $cat->name;  // => タマ\\n```\\n\\n`->` でプロパティやメソッドにアクセスします。"
+      "content": "PHPでは `class` キーワードでクラスを定義します。\\n\\n```php\\nclass Cat {\\n    public $name;  // プロパティ\\n}\\n\\n$cat = new Cat();\\n$cat->name = 'タマ';\\necho $cat->name;\\n```\\n\\n=> タマ\\n\\n`->` でプロパティやメソッドにアクセスします。"
     },
     {
       "title": "コンストラクタ",
-      "content": "`__construct` メソッドでインスタンス作成時の初期化を行います。\\n\\n```php\\nclass Counter {\\n    public $count;\\n    \\n    public function __construct($c) {\\n        $this->count = $c;\\n    }\\n}\\n\\n$cnt = new Counter(5);\\necho $cnt->count;  // => 5\\n```\\n\\n`$this` は自分自身のインスタンスを指します。"
+      "content": "`__construct` メソッドでインスタンス作成時の初期化を行います。\\n\\n```php\\nclass Counter {\\n    public $count;\\n    \\n    public function __construct($c) {\\n        $this->count = $c;\\n    }\\n}\\n\\n$cnt = new Counter(5);\\necho $cnt->count;\\n```\\n\\n=> 5\\n\\n`$this` は自分自身のインスタンスを指します。"
     },
     {
       "title": "継承",
-      "content": "`extends` で親クラスを継承します。\\n\\n```php\\nclass Vehicle {\\n    public function move() {\\n        echo '移動中';\\n    }\\n}\\n\\nclass Car extends Vehicle { }\\n\\n$car = new Car();\\n$car->move();  // => 移動中\\n```\\n\\n子クラスは親クラスのプロパティとメソッドを引き継ぎます。"
+      "content": "`extends` で親クラスを継承します。\\n\\n```php\\nclass Vehicle {\\n    public function move() {\\n        echo '移動中';\\n    }\\n}\\n\\nclass Car extends Vehicle { }\\n\\n$car = new Car();\\n$car->move();\\n```\\n\\n=> 移動中\\n\\n子クラスは親クラスのプロパティとメソッドを引き継ぎます。"
     },
     {
       "title": "インターフェース",
@@ -164,7 +164,7 @@ export const php2Data = {
         },
         {
           "title": "extends で継承",
-          "content": "# 親クラスを拡張\\n\\n`extends`（エクステンズ）キーワードで親クラスを指定します。子クラスは親クラスのメソッドを使えます。\\n\\n**コード例：**\\n```php\\nclass Animal {\\n    public function eat() { echo 'eating'; }\\n}\\nclass Dog extends Animal { }\\n\\n$dog = new Dog();\\n$dog->eat();  // => eating（親のメソッドが使える！）\\n```\\n\\n**何が起こるの？**\\n1. `Animal` クラスに `eat` メソッドがある\\n2. `Dog extends Animal` → DogはAnimalを継承\\n3. Dogは自分で `eat` を作らなくても、Animalの `eat` が使える\\n\\n**extends = 「拡張する」** という意味です。"
+          "content": "# 親クラスを拡張\\n\\n`extends`（エクステンズ）キーワードで親クラスを指定します。子クラスは親クラスのメソッドを使えます。\\n\\n**コード例：**\\n```php\\nclass Animal {\\n    public function eat() { echo 'eating'; }\\n}\\nclass Dog extends Animal { }\\n\\n$dog = new Dog();\\n$dog->eat();\\n```\\n\\n=> eating（親のメソッドが使える！）\\n\\n**何が起こるの？**\\n1. `Animal` クラスに `eat` メソッドがある\\n2. `Dog extends Animal` → DogはAnimalを継承\\n3. Dogは自分で `eat` を作らなくても、Animalの `eat` が使える\\n\\n**extends = 「拡張する」** という意味です。"
         }
       ],
       "correctCode": "<?php\\n// Vehicleクラスを定義\\nclass Vehicle {\\n    // move()メソッドを定義\\n    public function move() {\\n        // '移動中'を出力\\n        echo '移動中';\\n    }\\n}\\n// CarがVehicleを継承\\nclass Car extends Vehicle { }\\n// $carにnew Car()を代入\\n$car = new Car();\\n// $car->move()を呼び出し\\n$car->move();\\n?>",

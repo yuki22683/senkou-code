@@ -8,15 +8,15 @@ export const php3Data = {
   "tutorialSlides": [
     {
       "title": "クロージャとアロー関数",
-      "content": "PHPには2種類の無名関数があります。\\n\\n```php\\n// クロージャ（無名関数）\\n$double = function($x) {\\n    return $x * 2;\\n};\\n\\n// アロー関数（PHP 7.4+）\\n$triple = fn($x) => $x * 3;\\n\\necho $double(5);  // => 10\\necho $triple(5);  // => 15\\n```\\n\\n`fn` は短く書けますが、`return` は書けません。"
+      "content": "PHPには2種類の無名関数があります。\\n\\n```php\\n// クロージャ（無名関数）\\n$double = function($x) {\\n    return $x * 2;\\n};\\n\\n// アロー関数（PHP 7.4+）\\n$triple = fn($x) => $x * 3;\\n\\necho $double(5);\\necho $triple(5);\\n```\\n\\n=> 10\\n\\n=> 15\\n\\n`fn` は短く書けますが、`return` は書けません。"
     },
     {
       "title": "match式",
-      "content": "PHP 8.0+で使える `match` は `switch` より簡潔です。\\n\\n```php\\n$grade = 'A';\\n\\n$message = match($grade) {\\n    'A' => '優秀',\\n    'B' => '良い',\\n    default => 'もっと頑張って'\\n};\\n\\necho $message;  // => 優秀\\n```\\n\\n値を返せるので、変数に代入できます。"
+      "content": "PHP 8.0+で使える `match` は `switch` より簡潔です。\\n\\n```php\\n$grade = 'A';\\n\\n$message = match($grade) {\\n    'A' => '優秀',\\n    'B' => '良い',\\n    default => 'もっと頑張って'\\n};\\n\\necho $message;\\n```\\n\\n=> 優秀\\n\\n値を返せるので、変数に代入できます。"
     },
     {
       "title": "スプレッド演算子",
-      "content": "`...` で配列を展開できます。\\n\\n```php\\n$a = [1, 2];\\n$b = [3, 4];\\n\\n$merged = [...$a, ...$b];\\n// => [1, 2, 3, 4]\\n\\n// 関数引数にも使える\\nfunction sum(...$nums) {\\n    return array_sum($nums);\\n}\\necho sum(1, 2, 3);  // => 6\\n```"
+      "content": "`...` で配列を展開できます。\\n\\n```php\\n$a = [1, 2];\\n$b = [3, 4];\\n\\n$merged = [...$a, ...$b];\\n// => [1, 2, 3, 4]\\n\\n// 関数引数にも使える\\nfunction sum(...$nums) {\\n    return array_sum($nums);\\n}\\necho sum(1, 2, 3);\\n```\\n\\n=> 6"
     },
     {
       "title": "名前付き引数",
@@ -24,11 +24,11 @@ export const php3Data = {
     },
     {
       "title": "トレイト",
-      "content": "`trait` で複数のクラスに共通の機能を追加できます。\\n\\n```php\\ntrait HelloTrait {\\n    public function sayHello() {\\n        return 'こんにちは！';\\n    }\\n}\\n\\nclass Greeter {\\n    use HelloTrait;\\n}\\n\\n$g = new Greeter();\\necho $g->sayHello();  // => こんにちは！\\n```\\n\\nPHPは単一継承ですが、トレイトで機能を共有できます。"
+      "content": "`trait` で複数のクラスに共通の機能を追加できます。\\n\\n```php\\ntrait HelloTrait {\\n    public function sayHello() {\\n        return 'こんにちは！';\\n    }\\n}\\n\\nclass Greeter {\\n    use HelloTrait;\\n}\\n\\n$g = new Greeter();\\necho $g->sayHello();\\n```\\n\\n=> こんにちは！\\n\\nPHPは単一継承ですが、トレイトで機能を共有できます。"
     },
     {
       "title": "ジェネレータ",
-      "content": "`yield` で値を1つずつ返すジェネレータを作れます。\\n\\n```php\\nfunction rangeGen($n) {\\n    for ($i = 1; $i <= $n; $i++) {\\n        yield $i;\\n    }\\n}\\n\\nforeach (rangeGen(3) as $num) {\\n    echo $num;  // => 1, 2, 3\\n}\\n```\\n\\n全データをメモリに保持せず、効率的に処理できます。"
+      "content": "`yield` で値を1つずつ返すジェネレータを作れます。\\n\\n```php\\nfunction rangeGen($n) {\\n    for ($i = 1; $i <= $n; $i++) {\\n        yield $i;\\n    }\\n}\\n\\nforeach (rangeGen(3) as $num) {\\n    echo $num;\\n}\\n```\\n\\n=> 1, 2, 3\\n\\n全データをメモリに保持せず、効率的に処理できます。"
     }
   ],
   "exercises": [

@@ -8,27 +8,27 @@ export const ruby3Data = {
   "tutorialSlides": [
     {
       "title": "yieldとブロック",
-      "content": "`yield` でメソッドに渡されたブロックを実行できます。\\n\\n```ruby\\ndef twice\\n  yield\\n  yield\\nend\\n\\ntwice { puts 'こんにちは' }\\n# => こんにちは\\n# => こんにちは\\n```\\n\\n`yield` はブロックを呼び出す特別なキーワードです。"
+      "content": "`yield` でメソッドに渡されたブロックを実行できます。\\n\\n```ruby\\ndef twice\\n  yield\\n  yield\\nend\\n\\ntwice { puts 'こんにちは' }\\n```\\n\\n=> こんにちは\\n\\n=> こんにちは\\n\\n`yield` はブロックを呼び出す特別なキーワードです。"
     },
     {
       "title": "Procとラムダ",
-      "content": "ブロックをオブジェクトとして保存できます。\\n\\n```ruby\\n# Proc\\nsquare = Proc.new { |x| x ** 2 }\\nputs square.call(5)  # => 25\\n\\n# ラムダ（引数チェックあり）\\ncube = ->(x) { x ** 3 }\\nputs cube.call(3)    # => 27\\n```\\n\\n`->` はラムダを作る記法で、`lambda` と同じです。"
+      "content": "ブロックをオブジェクトとして保存できます。\\n\\n```ruby\\n# Proc\\nsquare = Proc.new { |x| x ** 2 }\\nputs square.call(5)\\n\\n# ラムダ（引数チェックあり）\\ncube = ->(x) { x ** 3 }\\nputs cube.call(3) \\n```\\n\\n=> 25\\n\\n=> 27\\n\\n`->` はラムダを作る記法で、`lambda` と同じです。"
     },
     {
       "title": "シンボルとProc変換",
-      "content": "`&:メソッド名` でシンボルをProcに変換できます。\\n\\n```ruby\\nwords = ['ruby', 'python', 'go']\\n\\n# 通常の書き方\\nresult = words.map { |w| w.upcase }\\n\\n# &:を使った省略形\\nresult = words.map(&:upcase)\\nputs result  # => [\"RUBY\", \"PYTHON\", \"GO\"]\\n```\\n\\n各要素に対してそのメソッドを呼び出します。"
+      "content": "`&:メソッド名` でシンボルをProcに変換できます。\\n\\n```ruby\\nwords = ['ruby', 'python', 'go']\\n\\n# 通常の書き方\\nresult = words.map { |w| w.upcase }\\n\\n# &:を使った省略形\\nresult = words.map(&:upcase)\\nputs result\\n```\\n\\n=> [\"RUBY\", \"PYTHON\", \"GO\"]\\n\\n各要素に対してそのメソッドを呼び出します。"
     },
     {
       "title": "reduceメソッド",
-      "content": "`reduce` で配列を1つの値にまとめます。\\n\\n```ruby\\nnums = [1, 2, 3, 4, 5]\\n\\n# 合計を計算\\nsum = nums.reduce(0) { |acc, n| acc + n }\\nputs sum  # => 15\\n\\n# 積を計算\\nproduct = nums.reduce(1) { |acc, n| acc * n }\\nputs product  # => 120\\n```\\n\\n`acc` は累積値、`n` は各要素です。"
+      "content": "`reduce` で配列を1つの値にまとめます。\\n\\n```ruby\\nnums = [1, 2, 3, 4, 5]\\n\\n# 合計を計算\\nsum = nums.reduce(0) { |acc, n| acc + n }\\nputs sum\\n\\n# 積を計算\\nproduct = nums.reduce(1) { |acc, n| acc * n }\\nputs product\\n```\\n\\n=> 15\\n\\n=> 120\\n\\n`acc` は累積値、`n` は各要素です。"
     },
     {
       "title": "スプラット演算子",
-      "content": "`*` で可変長引数を受け取れます。\\n\\n```ruby\\ndef sum_all(*numbers)\\n  numbers.reduce(0) { |acc, n| acc + n }\\nend\\n\\nputs sum_all(1, 2, 3)     # => 6\\nputs sum_all(1, 2, 3, 4)  # => 10\\n```\\n\\n`*numbers` で任意の数の引数を配列として受け取ります。"
+      "content": "`*` で可変長引数を受け取れます。\\n\\n```ruby\\ndef sum_all(*numbers)\\n  numbers.reduce(0) { |acc, n| acc + n }\\nend\\n\\nputs sum_all(1, 2, 3)  \\nputs sum_all(1, 2, 3, 4)\\n```\\n\\n=> 6\\n\\n=> 10\\n\\n`*numbers` で任意の数の引数を配列として受け取ります。"
     },
     {
       "title": "method_missing",
-      "content": "`method_missing` で未定義メソッドの呼び出しを捕捉できます。\\n\\n```ruby\\nclass FlexibleClass\\n  def method_missing(name, *args)\\n    \"Unknown: #{name}\"\\n  end\\nend\\n\\nobj = FlexibleClass.new\\nputs obj.hello    # => Unknown: hello\\nputs obj.goodbye  # => Unknown: goodbye\\n```\\n\\nメタプログラミングの基礎となる強力な機能です。"
+      "content": "`method_missing` で未定義メソッドの呼び出しを捕捉できます。\\n\\n```ruby\\nclass FlexibleClass\\n  def method_missing(name, *args)\\n    \"Unknown: #{name}\"\\n  end\\nend\\n\\nobj = FlexibleClass.new\\nputs obj.hello \\nputs obj.goodbye\\n```\\n\\n=> Unknown: hello\\n\\n=> Unknown: goodbye\\n\\nメタプログラミングの基礎となる強力な機能です。"
     }
   ],
   "exercises": [
@@ -42,7 +42,7 @@ export const ruby3Data = {
         },
         {
           "title": "yield の使い方",
-          "content": "# ブロックを実行する\\n\\n**コード例：**\\n```ruby\\ndef greet\\n  yield\\nend\\n\\ngreet { puts 'こんにちは' }\\n# => こんにちは\\n```\\n\\n**何が起こるの？**\\n1. `greet` メソッドを呼ぶ\\n2. `{ puts 'こんにちは' }` というブロックを渡す\\n3. メソッド内の `yield` に到達\\n4. 渡されたブロックが実行される\\n5. 「こんにちは」と表示される\\n\\n**ポイント：**\\n- ブロックの内容を変えれば、同じメソッドで違う処理ができる\\n- `yield` は何回でも呼べる（その度にブロックが実行される）"
+          "content": "# ブロックを実行する\\n\\n**コード例：**\\n```ruby\\ndef greet\\n  yield\\nend\\n\\ngreet { puts 'こんにちは' }\\n```\\n\\n=> こんにちは\\n\\n**何が起こるの？**\\n1. `greet` メソッドを呼ぶ\\n2. `{ puts 'こんにちは' }` というブロックを渡す\\n3. メソッド内の `yield` に到達\\n4. 渡されたブロックが実行される\\n5. 「こんにちは」と表示される\\n\\n**ポイント：**\\n- ブロックの内容を変えれば、同じメソッドで違う処理ができる\\n- `yield` は何回でも呼べる（その度にブロックが実行される）"
         }
       ],
       "correctCode": "# defでメソッドを定義\\ndef twice\\n  # yieldでブロックを実行\\n  yield\\n  # yieldでブロックを実行\\n  yield\\n# endで終了\\nend",
@@ -99,7 +99,7 @@ export const ruby3Data = {
         },
         {
           "title": "Proc の使い方",
-          "content": "# Proc.new で作成\\n\\n**コード例：**\\n```ruby\\nmy_proc = Proc.new { puts 'Hello' }\\nmy_proc.call  # => Hello\\n```\\n\\n**何をしているの？**\\n1. `Proc.new { puts 'Hello' }` → 「Hello と表示する」というProcを作る\\n2. `my_proc` という変数に入れる\\n3. `my_proc.call` → Procを実行する\\n4. 「Hello」と表示される\\n\\n**引数も渡せる：**\\n```ruby\\ndoubler = Proc.new { |x| x * 2 }\\nputs doubler.call(5)  # => 10\\n```\\n\\n`|x|` の部分で、渡された値を受け取ります。"
+          "content": "# Proc.new で作成\\n\\n**コード例：**\\n```ruby\\nmy_proc = Proc.new { puts 'Hello' }\\nmy_proc.call\\n```\\n\\n=> Hello\\n\\n**何をしているの？**\\n1. `Proc.new { puts 'Hello' }` → 「Hello と表示する」というProcを作る\\n2. `my_proc` という変数に入れる\\n3. `my_proc.call` → Procを実行する\\n4. 「Hello」と表示される\\n\\n**引数も渡せる：**\\n```ruby\\ndoubler = Proc.new { |x| x * 2 }\\nputs doubler.call(5)\\n```\\n\\n=> 10\\n\\n`|x|` の部分で、渡された値を受け取ります。"
         }
       ],
       "correctCode": "# Procでブロックをオブジェクト化、**で累乗\\nsquarer = Proc.new { |x| x ** 2 }",
@@ -144,7 +144,7 @@ export const ruby3Data = {
         },
         {
           "title": "ラムダの使い方",
-          "content": "# -> で簡単に作れる\\n\\n**コード例：**\\n```ruby\\nmy_lambda = ->(x) { x * 2 }\\nmy_lambda.call(5)  # => 10\\n```\\n\\n**何をしているの？**\\n1. `->(x) { x * 2 }` → 「xを2倍にする」というラムダを作る\\n2. `my_lambda` という変数に入れる\\n3. `my_lambda.call(5)` → 5を渡して実行\\n4. 結果は10\\n\\n**書き方は2種類：**\\n```ruby\\n# アロー記法（->）\\nadd = ->(a, b) { a + b }\\n\\n# lambda キーワード\\nadd = lambda { |a, b| a + b }\\n```\\n\\nどちらも同じ動きですが、`->` の方が短く書けます。"
+          "content": "# -> で簡単に作れる\\n\\n**コード例：**\\n```ruby\\nmy_lambda = ->(x) { x * 2 }\\nmy_lambda.call(5)\\n```\\n\\n=> 10\\n\\n**何をしているの？**\\n1. `->(x) { x * 2 }` → 「xを2倍にする」というラムダを作る\\n2. `my_lambda` という変数に入れる\\n3. `my_lambda.call(5)` → 5を渡して実行\\n4. 結果は10\\n\\n**書き方は2種類：**\\n```ruby\\n# アロー記法（->）\\nadd = ->(a, b) { a + b }\\n\\n# lambda キーワード\\nadd = lambda { |a, b| a + b }\\n```\\n\\nどちらも同じ動きですが、`->` の方が短く書けます。"
         }
       ],
       "correctCode": "# ->でラムダを定義、**で累乗\\ncube = ->(x) { x ** 3 }",
@@ -183,7 +183,7 @@ export const ruby3Data = {
         },
         {
           "title": "&: の使い方",
-          "content": "# 短くて読みやすいコード\\n\\n**コード例：**\\n```ruby\\n[1, 2, 3].map(&:to_s)\\n# => ['1', '2', '3']\\n```\\n\\n**これは次のコードと同じ意味：**\\n```ruby\\n[1, 2, 3].map { |n| n.to_s }\\n```\\n\\n**何が起こるの？**\\n1. `:to_s` はシンボル（メソッド名）\\n2. `&` をつけると「このメソッドを各要素に適用して」という意味になる\\n3. 各数字に対して `to_s`（文字列に変換）が呼ばれる\\n4. 結果は `['1', '2', '3']`\\n\\n**よく使う例：**\\n- `&:upcase` → 大文字に\\n- `&:downcase` → 小文字に\\n- `&:to_i` → 整数に変換"
+          "content": "# 短くて読みやすいコード\\n\\n**コード例：**\\n```ruby\\n[1, 2, 3].map(&:to_s)\\n```\\n\\n=> ['1', '2', '3']\\n\\n**これは次のコードと同じ意味：**\\n```ruby\\n[1, 2, 3].map { |n| n.to_s }\\n```\\n\\n**何が起こるの？**\\n1. `:to_s` はシンボル（メソッド名）\\n2. `&` をつけると「このメソッドを各要素に適用して」という意味になる\\n3. 各数字に対して `to_s`（文字列に変換）が呼ばれる\\n4. 結果は `['1', '2', '3']`\\n\\n**よく使う例：**\\n- `&:upcase` → 大文字に\\n- `&:downcase` → 小文字に\\n- `&:to_i` → 整数に変換"
         }
       ],
       "correctCode": "# mapで変換、upcaseで大文字化\\nresult = ['ruby', 'python', 'go'].map(&:upcase)",
@@ -230,7 +230,7 @@ export const ruby3Data = {
         },
         {
           "title": "reduce の使い方",
-          "content": "# 順番に計算してまとめる\\n\\n**コード例：**\\n```ruby\\n[1, 2, 3].reduce(0) { |acc, n| acc + n }\\n# => 6\\n```\\n\\n**何が起こるの？**\\n1. `(0)` → 計算の出発点を0にする\\n2. 1回目：`acc=0, n=1` → `0 + 1 = 1`（accが1になる）\\n3. 2回目：`acc=1, n=2` → `1 + 2 = 3`（accが3になる）\\n4. 3回目：`acc=3, n=3` → `3 + 3 = 6`（accが6になる）\\n5. 最終結果：6\\n\\n**ブロック変数の意味：**\\n- `acc`（アキュムレータ）→ 「これまでの計算結果」を覚える\\n- `n` → 配列から取り出した「今の要素」\\n\\n**injectという別名もあります。**"
+          "content": "# 順番に計算してまとめる\\n\\n**コード例：**\\n```ruby\\n[1, 2, 3].reduce(0) { |acc, n| acc + n }\\n```\\n\\n=> 6\\n\\n**何が起こるの？**\\n1. `(0)` → 計算の出発点を0にする\\n2. 1回目：`acc=0, n=1` → `0 + 1 = 1`（accが1になる）\\n3. 2回目：`acc=1, n=2` → `1 + 2 = 3`（accが3になる）\\n4. 3回目：`acc=3, n=3` → `3 + 3 = 6`（accが6になる）\\n5. 最終結果：6\\n\\n**ブロック変数の意味：**\\n- `acc`（アキュムレータ）→ 「これまでの計算結果」を覚える\\n- `n` → 配列から取り出した「今の要素」\\n\\n**injectという別名もあります。**"
         }
       ],
       "correctCode": "# reduceで畳み込み、+で加算\\nsum = [1, 2, 3, 4, 5].reduce(0) { |acc, n| acc + n }",
@@ -269,7 +269,7 @@ export const ruby3Data = {
         },
         {
           "title": "select と reject の使い方",
-          "content": "# 条件でフィルタリング\\n\\n**select の例：**\\n```ruby\\n[1, 2, 3, 4, 5].select { |n| n > 3 }\\n# => [4, 5]（3より大きいものを選ぶ）\\n```\\n\\n**reject の例：**\\n```ruby\\n[1, 2, 3, 4, 5].reject { |n| n > 3 }\\n# => [1, 2, 3]（3より大きいものを除く）\\n```\\n\\n**偶数・奇数を選ぶ：**\\n```ruby\\n# 偶数だけ選ぶ\\n[1, 2, 3, 4, 5, 6].select { |n| n.even? }\\n# => [2, 4, 6]\\n\\n# 奇数だけ選ぶ（偶数を除く）\\n[1, 2, 3, 4, 5, 6].reject { |n| n.even? }\\n# => [1, 3, 5]\\n```\\n\\n`.even?` は「偶数か？」を確認するメソッドです。"
+          "content": "# 条件でフィルタリング\\n\\n**select の例：**\\n```ruby\\n[1, 2, 3, 4, 5].select { |n| n > 3 }\\n```\\n\\n=> [4, 5]（3より大きいものを選ぶ）\\n\\n**reject の例：**\\n```ruby\\n[1, 2, 3, 4, 5].reject { |n| n > 3 }\\n```\\n\\n=> [1, 2, 3]（3より大きいものを除く）\\n\\n**偶数・奇数を選ぶ：**\\n```ruby\\n# 偶数だけ選ぶ\\n[1, 2, 3, 4, 5, 6].select { |n| n.even? }\\n```\\n\\n=> [2, 4, 6]\\n\\n```\\n# 奇数だけ選ぶ（偶数を除く）\\n[1, 2, 3, 4, 5, 6].reject { |n| n.even? }\\n```\\n\\n=> [1, 3, 5]\\n\\n`.even?` は「偶数か？」を確認するメソッドです。"
         }
       ],
       "correctCode": "# selectでフィルタ、evenで偶数判定\\nevens = [1, 2, 3, 4, 5, 6].select { |n| n.even? }",
@@ -308,7 +308,7 @@ export const ruby3Data = {
         },
         {
           "title": "スプラット演算子の使い方",
-          "content": "# * で複数の引数を受け取る\\n\\n**コード例：**\\n```ruby\\ndef greet(*names)\\n  names.each { |name| puts name }\\nend\\n\\ngreet('Alice', 'Bob', 'Carol')\\n# => Alice\\n# => Bob\\n# => Carol\\n```\\n\\n**何が起こるの？**\\n1. `*names` → 渡された引数をすべて配列にまとめる\\n2. 3つの名前を渡すと `names = ['Alice', 'Bob', 'Carol']` になる\\n3. `.each` で1つずつ表示\\n\\n**配列を展開するときにも使える：**\\n```ruby\\nnums = [1, 2, 3]\\nsome_method(*nums)  # some_method(1, 2, 3) と同じ\\n```\\n\\n`*` は配列を「バラバラ」にする魔法です。"
+          "content": "# * で複数の引数を受け取る\\n\\n**コード例：**\\n```ruby\\ndef greet(*names)\\n  names.each { |name| puts name }\\nend\\n\\ngreet('Alice', 'Bob', 'Carol')\\n```\\n\\n=> Alice\\n\\n=> Bob\\n\\n=> Carol\\n\\n**何が起こるの？**\\n1. `*names` → 渡された引数をすべて配列にまとめる\\n2. 3つの名前を渡すと `names = ['Alice', 'Bob', 'Carol']` になる\\n3. `.each` で1つずつ表示\\n\\n**配列を展開するときにも使える：**\\n```ruby\\nnums = [1, 2, 3]\\nsome_method(*nums)  # some_method(1, 2, 3) と同じ\\n```\\n\\n`*` は配列を「バラバラ」にする魔法です。"
         }
       ],
       "correctCode": "# *で可変長引数を受け取る\\ndef sum_all(*numbers)\\n  # reduceで畳み込み\\n  numbers.reduce(0) { |acc, n| acc + n }\\n# endで終了\\nend",
@@ -361,7 +361,7 @@ export const ruby3Data = {
         },
         {
           "title": "method_missing の使い方",
-          "content": "# 存在しないメソッドを捕まえる\\n\\n**コード例：**\\n```ruby\\nclass MyClass\\n  def method_missing(name, *args)\\n    puts \"#{name} が呼ばれました\"\\n  end\\nend\\n\\nobj = MyClass.new\\nobj.hello  # => hello が呼ばれました\\nobj.foo    # => foo が呼ばれました\\n```\\n\\n**何が起こるの？**\\n1. `obj.hello` を呼ぶ\\n2. `hello` メソッドは定義されていない\\n3. `method_missing` が代わりに実行される\\n4. `name` には `:hello` が入る\\n\\n**引数の意味：**\\n- `name` → 呼ばれたメソッド名（シンボル）\\n- `*args` → 渡された引数\\n\\n**注意：** 便利ですが、使いすぎるとデバッグが難しくなります。"
+          "content": "# 存在しないメソッドを捕まえる\\n\\n**コード例：**\\n```ruby\\nclass MyClass\\n  def method_missing(name, *args)\\n    puts \"#{name} が呼ばれました\"\\n  end\\nend\\n\\nobj = MyClass.new\\nobj.hello\\nobj.foo \\n```\\n\\n=> hello が呼ばれました\\n\\n=> foo が呼ばれました\\n\\n**何が起こるの？**\\n1. `obj.hello` を呼ぶ\\n2. `hello` メソッドは定義されていない\\n3. `method_missing` が代わりに実行される\\n4. `name` には `:hello` が入る\\n\\n**引数の意味：**\\n- `name` → 呼ばれたメソッド名（シンボル）\\n- `*args` → 渡された引数\\n\\n**注意：** 便利ですが、使いすぎるとデバッグが難しくなります。"
         }
       ],
       "correctCode": "# classでクラスを定義\\nclass FlexibleClass\\n  # method_missingで未定義メソッドを捕捉\\n  def method_missing(name, *args)\\n    # nameでメソッド名を参照\\n    \"Unknown method: #{name}\"\\n  # endで終了\\n  end\\n# endで終了\\nend",
@@ -422,7 +422,7 @@ export const ruby3Data = {
         },
         {
           "title": "Struct の使い方",
-          "content": "# Struct.new で簡単作成\\n\\n**コード例：**\\n```ruby\\nPoint = Struct.new(:x, :y)\\np = Point.new(10, 20)\\nputs p.x  # => 10\\nputs p.y  # => 20\\n```\\n\\n**何をしているの？**\\n1. `Struct.new(:x, :y)` → x と y という属性を持つクラスを作る\\n2. `Point` という名前で保存\\n3. `Point.new(10, 20)` → x=10, y=20 のオブジェクトを作る\\n4. `.x` や `.y` でデータにアクセス\\n\\n**普通のクラスで書くと：**\\n```ruby\\nclass Point\\n  attr_accessor :x, :y\\n  def initialize(x, y)\\n    @x = x\\n    @y = y\\n  end\\nend\\n```\\n\\nStructを使えば **1行で同じことができます！**"
+          "content": "# Struct.new で簡単作成\\n\\n**コード例：**\\n```ruby\\nPoint = Struct.new(:x, :y)\\np = Point.new(10, 20)\\nputs p.x\\nputs p.y\\n```\\n\\n=> 10\\n\\n=> 20\\n\\n**何をしているの？**\\n1. `Struct.new(:x, :y)` → x と y という属性を持つクラスを作る\\n2. `Point` という名前で保存\\n3. `Point.new(10, 20)` → x=10, y=20 のオブジェクトを作る\\n4. `.x` や `.y` でデータにアクセス\\n\\n**普通のクラスで書くと：**\\n```ruby\\nclass Point\\n  attr_accessor :x, :y\\n  def initialize(x, y)\\n    @x = x\\n    @y = y\\n  end\\nend\\n```\\n\\nStructを使えば **1行で同じことができます！**"
         }
       ],
       "correctCode": "# Structで簡易クラス、name, ageの順で属性名\\nPerson = Struct.new(:name, :age)",
@@ -467,7 +467,7 @@ export const ruby3Data = {
         },
         {
           "title": "tap の使い方",
-          "content": "# ブロック実行後、自分を返す\\n\\n**コード例：**\\n```ruby\\n[1, 2].tap { |arr| arr << 3 }\\n# => [1, 2, 3]\\n```\\n\\n**何が起こるの？**\\n1. `[1, 2]` という配列がある\\n2. `.tap` でブロックに配列を渡す\\n3. `arr << 3` で3を追加\\n4. 配列 `[1, 2, 3]` が返される\\n\\n**デバッグに便利：**\\n```ruby\\nresult = [1, 2, 3]\\n  .map { |n| n * 2 }\\n  .tap { |arr| puts \"変換後: #{arr}\" }  # 途中経過を確認\\n  .select { |n| n > 3 }\\n```\\n\\nメソッドチェーンを止めずに、途中の値を確認できます。"
+          "content": "# ブロック実行後、自分を返す\\n\\n**コード例：**\\n```ruby\\n[1, 2].tap { |arr| arr << 3 }\\n```\\n\\n=> [1, 2, 3]\\n\\n**何が起こるの？**\\n1. `[1, 2]` という配列がある\\n2. `.tap` でブロックに配列を渡す\\n3. `arr << 3` で3を追加\\n4. 配列 `[1, 2, 3]` が返される\\n\\n**デバッグに便利：**\\n```ruby\\nresult = [1, 2, 3]\\n  .map { |n| n * 2 }\\n  .tap { |arr| puts \"変換後: #{arr}\" }  # 途中経過を確認\\n  .select { |n| n > 3 }\\n```\\n\\nメソッドチェーンを止めずに、途中の値を確認できます。"
         }
       ],
       "correctCode": "# tapで自身を返す、pushで要素追加\\nresult = [1, 2, 3].tap { |arr| arr.push(4) }",

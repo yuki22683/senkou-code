@@ -8,19 +8,19 @@ export const elixir2Data = {
   "tutorialSlides": [
     {
       "title": "パターンマッチングの基本",
-      "content": "Elixirでは`=`は代入ではなく**パターンマッチ**です。\\n\\n```elixir\\n{x, y} = {10, 20}\\nIO.puts x  # => 10\\nIO.puts y  # => 20\\n```\\n\\n左辺のパターンが右辺の値と一致すると、変数に値が束縛されます。"
+      "content": "Elixirでは`=`は代入ではなく**パターンマッチ**です。\\n\\n```elixir\\n{x, y} = {10, 20}\\nIO.puts x\\nIO.puts y\\n```\\n\\n=> 10\\n\\n=> 20\\n\\n左辺のパターンが右辺の値と一致すると、変数に値が束縛されます。"
     },
     {
       "title": "リストのパターンマッチ",
-      "content": "`[head | tail]`でリストを先頭と残りに分解できます。\\n\\n```elixir\\n[head | tail] = [1, 2, 3]\\nIO.puts head  # => 1\\nIO.inspect tail  # => [2, 3]\\n```\\n\\n`|`演算子はリストの構造を分解するのに便利です。"
+      "content": "`[head | tail]`でリストを先頭と残りに分解できます。\\n\\n```elixir\\n[head | tail] = [1, 2, 3]\\nIO.puts head\\nIO.inspect tail\\n```\\n\\n=> 1\\n\\n=> [2, 3]\\n\\n`|`演算子はリストの構造を分解するのに便利です。"
     },
     {
       "title": "パイプ演算子 |>",
-      "content": "`|>`は前の式の結果を次の関数の第1引数に渡します。\\n\\n```elixir\\n1..5\\n|> Enum.sum()\\n|> IO.puts()\\n# => 15\\n```\\n\\nデータの流れが左から右に読めて分かりやすくなります。"
+      "content": "`|>`は前の式の結果を次の関数の第1引数に渡します。\\n\\n```elixir\\n1..5\\n|> Enum.sum()\\n|> IO.puts()\\n```\\n\\n=> 15\\n\\nデータの流れが左から右に読めて分かりやすくなります。"
     },
     {
       "title": "Enum.map と Enum.filter",
-      "content": "`Enum.map`で変換、`Enum.filter`で絞り込みができます。\\n\\n```elixir\\n# 各要素を2乗\\nEnum.map([1, 2, 3], fn x -> x * x end)\\n# => [1, 4, 9]\\n\\n# 偶数だけ抽出\\nEnum.filter([1, 2, 3, 4], fn x -> rem(x, 2) == 0 end)\\n# => [2, 4]\\n```"
+      "content": "`Enum.map`で変換、`Enum.filter`で絞り込みができます。\\n\\n```elixir\\n# 各要素を2乗\\nEnum.map([1, 2, 3], fn x -> x * x end)\\n```\\n\\n=> [1, 4, 9]\\n\\n```\\n# 偶数だけ抽出\\nEnum.filter([1, 2, 3, 4], fn x -> rem(x, 2) == 0 end)\\n```\\n\\n=> [2, 4]"
     },
     {
       "title": "case式でパターンマッチ",

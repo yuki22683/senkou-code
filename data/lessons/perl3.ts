@@ -12,23 +12,23 @@ export const perl3Data = {
     },
     {
       "title": "chomp で改行除去",
-      "content": "`chomp` で文字列末尾の改行を除去します。\\n\\n```perl\\nmy $text = \"hello\\n\";\\nchomp($text);\\nprint \"[$text]\\n\";  # => [hello]\\n```\\n\\nファイルから1行ずつ読み込むときに必須です。\\n\\n```perl\\nwhile (my $line = <$fh>) {\\n    chomp($line);\\n    # 処理...\\n}\\n```"
+      "content": "`chomp` で文字列末尾の改行を除去します。\\n\\n```perl\\nmy $text = \"hello\\n\";\\nchomp($text);\\nprint \"[$text]\\n\";\\n```\\n\\n=> [hello]\\n\\nファイルから1行ずつ読み込むときに必須です。\\n\\n```perl\\nwhile (my $line = <$fh>) {\\n    chomp($line);\\n    # 処理...\\n}\\n```"
     },
     {
       "title": "split と join",
-      "content": "`split` で文字列を分割、`join` で配列を結合します。\\n\\n```perl\\n# 分割\\nmy $data = \"りんご:バナナ:みかん\";\\nmy @fruits = split(/:/, $data);\\nprint $fruits[0];  # => りんご\\n\\n# 結合\\nmy @words = (\"hello\", \"world\");\\nmy $sentence = join(\" \", @words);\\nprint $sentence;  # => hello world\\n```"
+      "content": "`split` で文字列を分割、`join` で配列を結合します。\\n\\n```perl\\n# 分割\\nmy $data = \"りんご:バナナ:みかん\";\\nmy @fruits = split(/:/, $data);\\nprint $fruits[0];\\n\\n# 結合\\nmy @words = (\"hello\", \"world\");\\nmy $sentence = join(\" \", @words);\\nprint $sentence;\\n```\\n\\n=> りんご\\n\\n=> hello world"
     },
     {
       "title": "push と pop",
-      "content": "`push` で配列の末尾に追加、`pop` で取り出します。\\n\\n```perl\\nmy @nums = (1, 2);\\n\\npush(@nums, 3);    # => (1, 2, 3)\\nmy $last = pop(@nums);  # $last = 3\\n\\n# unshift/shift は先頭を操作\\nunshift(@nums, 0);  # => (0, 1, 2)\\nmy $first = shift(@nums);  # $first = 0\\n```"
+      "content": "`push` で配列の末尾に追加、`pop` で取り出します。\\n\\n```perl\\nmy @nums = (1, 2);\\n\\npush(@nums, 3); \\nmy $last = pop(@nums);  # $last = 3\\n\\n# unshift/shift は先頭を操作\\nunshift(@nums, 0);\\nmy $first = shift(@nums);  # $first = 0\\n```\\n\\n=> (1, 2, 3)\\n\\n=> (0, 1, 2)"
     },
     {
       "title": "sort と reverse",
-      "content": "`sort` で並べ替え、`reverse` で逆順にします。\\n\\n```perl\\nmy @words = (\"バナナ\", \"りんご\", \"みかん\");\\nmy @sorted = sort @words;\\n# => (\"バナナ\", \"みかん\", \"りんご\")\\n\\nmy @nums = (1, 2, 3);\\nmy @rev = reverse @nums;\\n# => (3, 2, 1)\\n```"
+      "content": "`sort` で並べ替え、`reverse` で逆順にします。\\n\\n```perl\\nmy @words = (\"バナナ\", \"りんご\", \"みかん\");\\nmy @sorted = sort @words;\\n```\\n\\n=> (\"バナナ\", \"みかん\", \"りんご\")\\n\\n```\\nmy @nums = (1, 2, 3);\\nmy @rev = reverse @nums;\\n```\\n\\n=> (3, 2, 1)"
     },
     {
       "title": "length と substr",
-      "content": "`length` で文字列の長さ、`substr` で部分文字列を取得します。\\n\\n```perl\\nmy $text = \"Perl\";\\nprint length($text);  # => 4\\n\\n# substr(文字列, 開始位置, 長さ)\\nprint substr($text, 0, 2);  # => Pe\\nprint substr($text, 2);     # => rl\\n```"
+      "content": "`length` で文字列の長さ、`substr` で部分文字列を取得します。\\n\\n```perl\\nmy $text = \"Perl\";\\nprint length($text);\\n\\n# substr(文字列, 開始位置, 長さ)\\nprint substr($text, 0, 2);\\nprint substr($text, 2);  \\n```\\n\\n=> 4\\n\\n=> Pe\\n\\n=> rl"
     }
   ],
   "exercises": [

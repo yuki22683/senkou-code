@@ -8,7 +8,7 @@ export const csharp2Data = {
   "tutorialSlides": [
     {
       "title": "継承で機能を受け継ぐ",
-      "content": "**継承**で親クラスの機能を子クラスに引き継げます。\\n\\n```csharp\\nclass Vehicle {\\n    public void Move() => Console.WriteLine(\"移動中\");\\n}\\n\\nclass Car : Vehicle { }\\n\\nCar c = new Car();\\nc.Move();  // => 移動中\\n```\\n\\n`: 親クラス名`で継承を表します。"
+      "content": "**継承**で親クラスの機能を子クラスに引き継げます。\\n\\n```csharp\\nclass Vehicle {\\n    public void Move() => Console.WriteLine(\"移動中\");\\n}\\n\\nclass Car : Vehicle { }\\n\\nCar c = new Car();\\nc.Move();\\n```\\n\\n=> 移動中\\n\\n`: 親クラス名`で継承を表します。"
     },
     {
       "title": "メソッドのオーバーライド",
@@ -20,11 +20,11 @@ export const csharp2Data = {
     },
     {
       "title": "プロパティ",
-      "content": "`get`/`set`でプロパティを定義できます。\\n\\n```csharp\\nclass Item {\\n    public int Price { get; set; }\\n}\\n\\nItem item = new Item();\\nitem.Price = 500;\\nConsole.WriteLine(item.Price);  // => 500\\n```\\n\\n自動プロパティで簡潔に書けます。"
+      "content": "`get`/`set`でプロパティを定義できます。\\n\\n```csharp\\nclass Item {\\n    public int Price { get; set; }\\n}\\n\\nItem item = new Item();\\nitem.Price = 500;\\nConsole.WriteLine(item.Price);\\n```\\n\\n=> 500\\n\\n自動プロパティで簡潔に書けます。"
     },
     {
       "title": "List<T> コレクション",
-      "content": "`List<T>`で型安全なリストを作れます。\\n\\n```csharp\\nList<int> nums = new List<int>();\\nnums.Add(10);\\nnums.Add(20);\\nConsole.WriteLine(nums[1]);  // => 20\\n```\\n\\n`<T>`にはint、string等の型を指定します。"
+      "content": "`List<T>`で型安全なリストを作れます。\\n\\n```csharp\\nList<int> nums = new List<int>();\\nnums.Add(10);\\nnums.Add(20);\\nConsole.WriteLine(nums[1]);\\n```\\n\\n=> 20\\n\\n`<T>`にはint、string等の型を指定します。"
     },
     {
       "title": "LINQ で絞り込み・変換",

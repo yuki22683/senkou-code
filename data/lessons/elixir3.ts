@@ -8,19 +8,19 @@ export const elixir3Data = {
   "tutorialSlides": [
     {
       "title": "構造体（Struct）",
-      "content": "`defstruct`でマップに似た構造体を定義できます。\\n\\n```elixir\\ndefmodule Person do\\n  defstruct name: \"\", age: 0\\nend\\n\\nperson = %Person{name: \"太郎\", age: 25}\\nIO.puts person.name  # => 太郎\\n```\\n\\n構造体はコンパイル時に型チェックされます。"
+      "content": "`defstruct`でマップに似た構造体を定義できます。\\n\\n```elixir\\ndefmodule Person do\\n  defstruct name: \"\", age: 0\\nend\\n\\nperson = %Person{name: \"太郎\", age: 25}\\nIO.puts person.name\\n```\\n\\n=> 太郎\\n\\n構造体はコンパイル時に型チェックされます。"
     },
     {
       "title": "構造体の更新",
-      "content": "`%{struct | field: value}`で構造体の一部を更新できます。\\n\\n```elixir\\nperson = %Person{name: \"太郎\", age: 25}\\nupdated = %{person | age: 26}\\nIO.puts updated.age  # => 26\\n```\\n\\n元の構造体は変更されず、新しい構造体が作られます（イミュータブル）。"
+      "content": "`%{struct | field: value}`で構造体の一部を更新できます。\\n\\n```elixir\\nperson = %Person{name: \"太郎\", age: 25}\\nupdated = %{person | age: 26}\\nIO.puts updated.age\\n```\\n\\n=> 26\\n\\n元の構造体は変更されず、新しい構造体が作られます（イミュータブル）。"
     },
     {
       "title": "Enum.reduce で畳み込み",
-      "content": "`Enum.reduce`でリストを1つの値に集約できます。\\n\\n```elixir\\nnumbers = [1, 2, 3, 4, 5]\\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)\\nIO.puts sum  # => 15\\n```\\n\\n第2引数が初期値、`acc`はアキュムレータ（累積値）です。"
+      "content": "`Enum.reduce`でリストを1つの値に集約できます。\\n\\n```elixir\\nnumbers = [1, 2, 3, 4, 5]\\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)\\nIO.puts sum\\n```\\n\\n=> 15\\n\\n第2引数が初期値、`acc`はアキュムレータ（累積値）です。"
     },
     {
       "title": "内包表記（for）",
-      "content": "`for`で簡潔にリストを生成できます。\\n\\n```elixir\\nsquares = for x <- 1..5, do: x * x\\n# => [1, 4, 9, 16, 25]\\n\\n# フィルタ条件も追加可能\\nevens = for x <- 1..10, rem(x, 2) == 0, do: x\\n# => [2, 4, 6, 8, 10]\\n```"
+      "content": "`for`で簡潔にリストを生成できます。\\n\\n```elixir\\nsquares = for x <- 1..5, do: x * x\\n```\\n\\n=> [1, 4, 9, 16, 25]\\n\\n```\\n# フィルタ条件も追加可能\\nevens = for x <- 1..10, rem(x, 2) == 0, do: x\\n```\\n\\n=> [2, 4, 6, 8, 10]"
     },
     {
       "title": "プロトコル",
@@ -28,7 +28,7 @@ export const elixir3Data = {
     },
     {
       "title": "Agent と Task",
-      "content": "`Agent`は状態を保持し、`Task`は非同期処理を行います。\\n\\n```elixir\\n# Agentで状態管理\\n{:ok, counter} = Agent.start_link(fn -> 0 end)\\nAgent.update(counter, fn n -> n + 1 end)\\nAgent.get(counter, fn n -> n end)  # => 1\\n\\n# Taskで非同期処理\\ntask = Task.async(fn -> 1 + 2 end)\\nTask.await(task)  # => 3\\n```"
+      "content": "`Agent`は状態を保持し、`Task`は非同期処理を行います。\\n\\n```elixir\\n# Agentで状態管理\\n{:ok, counter} = Agent.start_link(fn -> 0 end)\\nAgent.update(counter, fn n -> n + 1 end)\\nAgent.get(counter, fn n -> n end)\\n\\n# Taskで非同期処理\\ntask = Task.async(fn -> 1 + 2 end)\\nTask.await(task)\\n```\\n\\n=> 1\\n\\n=> 3"
     }
   ],
   "exercises": [
