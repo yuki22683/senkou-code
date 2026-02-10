@@ -14,6 +14,18 @@ export const cppData = {
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",
+      "tutorialSlides": [
+        {
+          "title": "C++（シープラスプラス）とは？",
+          "image": "/illustrations/common/monitor.png",
+          "content": "# パワフルで高速な言語（げんご）\\n\\nC++（シープラスプラス）は、C言語を元にしてさらに便利な機能を追加した言語です。\\n\\n**身近な例え：**\\nC言語が「普通の車」だとしたら、C++は「スーパーカー」のような存在です！速さはそのままに、もっと便利な機能がついています。\\n\\n**どんなところで使われているの？**\\n- ゲーム（速さが命！）\\n- ブラウザ（ChromeやFirefoxなど）\\n- 3DCGソフト\\n\\nなど、**スピードが求められる場所**で大活躍しています。"
+        },
+        {
+          "title": "C++への入り口",
+          "image": "/illustrations/common/monitor.png",
+          "content": "# std::cout（シーアウト）を使おう\\n\\nC++で画面に文字を出すには、`std::cout`（スタンダード・シーアウト）を使います。\\n`cout` は「Character OUTput」（文字を出力）の略です。\\n\\n`<<` という矢印のような記号を使って、文字を画面の方へ送ります。\\n\\n**イメージ：**\\n画面 `<<` \"こんにちは\"\\n（文字が矢印の方向に流れていくイメージ！）\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n#include <iostream>  // 入出力を使う準備\\nint main() {\\n    std::cout << \"C++最高！\" << std::endl;\\n    return 0;\\n}\\n```\\n\\n**用語解説：**\\n- `std::endl`（エンドエル）: 改行して次の行に進む\\n- `#include <iostream>`: 入出力機能を使えるようにする"
+        }
+      ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // こんにちは, C++! と入力\\n    std::cout << \"こんにちは, C++!\" << std::endl;\\n    return 0;\\n}",
       "holeyCode": "___\\n___ ___() {\\n    // こんにちは, C++! と入力\\n    ___::___ << ___ << ___::___;\\n    ___ ___;\\n___",
       "correctLines": [
@@ -47,6 +59,18 @@ export const cppData = {
       },
     {
       "title": "数字を入れる「はこ」",
+      "tutorialSlides": [
+        {
+          "title": "変数（へんすう）とは？",
+          "image": "/illustrations/common/box.png",
+          "content": "# データを保存する「はこ」\\n\\nプログラムの中で数字や文字に名前をつけて、あとで使いやすくするための仕組みが **変数（へんすう）** です。\\n\\n**身近な例え：**\\nおもちゃ箱に「レゴ入れ」「ぬいぐるみ入れ」とラベルを貼るように、プログラムでも「はこ」に名前をつけてデータをしまっておきます。\\n\\n例えば、年齢を覚えておきたいなら `age` という名前の「はこ」を作ります。"
+        },
+        {
+          "title": "数字のラベル int",
+          "image": "/illustrations/common/box.png",
+          "content": "# 整数（せいすう）のラベル\\n\\n数字（1, 2, 3 のような整数）を入れたいときは、`int`（イント）というラベルを貼ります。\\n`int` は「Integer」（整数）の略です。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nint age = 20;  // 「age」という名前のはこに20を入れる\\nstd::cout << age << std::endl;  // ageの中身を表示\\n```\\n=> 20 と表示されます\\n\\n**C言語との違い：**\\nC言語では `printf(\"%d\", age)` と書いていましたが、C++では `std::cout << age` とシンプルに書けます！"
+        }
+      ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // 10 と入力\\n    int x = 10;\\n    // x と入力\\n    std::cout << x << std::endl;\\n    return 0;\\n}",
       "holeyCode": "___\\n___ ___() {\\n    // 10 と入力\\n    ___ ___ = ___;\\n    // x と入力\\n    ___::___ << ___ << ___::___;\\n    ___ ___;\\n___",
       "correctLines": [
@@ -87,6 +111,18 @@ export const cppData = {
       },
     {
       "title": "コンピュータで計算しましょう",
+      "tutorialSlides": [
+        {
+          "title": "計算はコンピュータにお任せ",
+          "image": "/illustrations/common/robot_math.png",
+          "content": "# 高速な計算処理\\n\\nコンピュータは人間よりもずっと速く計算できます。\\nどんなに大きな数字でも、プログラミングで指示を出せば一瞬で解いてくれます。"
+        },
+        {
+          "title": "計算の記号",
+          "image": "/illustrations/common/robot_math.png",
+          "content": "# 矢印で送ろう\\n\\n`<<` で繋ぐことで、計算した結果をそのまま画面に出すことができます。\\n\\n**コード例：**\\n```cpp\\nint cookies = 10;\\nint friends = 2;\\n// クッキー ÷ 友達 の結果を画面へ！\\nstd::cout << cookies / friends << std::endl;\\n```\\n=> 5"
+        }
+      ],
       "correctCode": "#include <iostream>\\nint main() {\\n    int a = 5;\\n    int b = 3;\\n    // + でたし算\\n    std::cout << a + b << std::endl;\\n    return 0;\\n}",
       "holeyCode": "___\\n___ ___() {\\n    ___ ___ = ___;\\n    ___ ___ = ___;\\n    // + でたし算\\n    ___::___ << ___ ___ ___ << ___::___;\\n    ___ ___;\\n___",
       "correctLines": [
@@ -124,6 +160,18 @@ export const cppData = {
       },
     {
       "title": "剰余演算子（%）",
+      "tutorialSlides": [
+        {
+          "title": "あまりを求める",
+          "image": "/illustrations/common/robot_math.png",
+          "content": "# 割り算の「あまり」を知りたい！\\n\\n割り算をしたときに、割り切れなくて「あまり」が出ることがありますよね。\\n`%` という記号を使うと、その **あまり** だけを計算してくれます。\\nこれを「剰余（じょうよ）」と呼びます。"
+        },
+        {
+          "title": "% の使い方",
+          "image": "/illustrations/common/robot_math.png",
+          "content": "# あまりを計算\\n\\n```cpp\\nstd::cout << 10 % 3 << std::endl;  // => 1\\n```\\n10 ÷ 3 は 3 あまり 1 なので、「1」が表示されます。\\n\\n```cpp\\nstd::cout << 8 % 2 << std::endl;   // => 0\\n```\\n8 ÷ 2 は 4 あまり 0 なので、「0」になります（割り切れるということです！）"
+        }
+      ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // 10 を 3 で割ったあまりを出力する\\n    std::cout << 10 % 3 << std::endl;\\n    return 0;\\n}",
       "holeyCode": "___\\n___ ___() {\\n    // 10 を 3 で割ったあまりを出力する\\n    ___::___ << ___ ___ ___ << ___::___;\\n    ___ ___;\\n___",
       "correctLines": [
@@ -161,6 +209,18 @@ export const cppData = {
       },
     {
       "title": "累算代入演算子（+=、-=）",
+      "tutorialSlides": [
+        {
+          "title": "中身を増やしたいとき",
+          "image": "/illustrations/common/box.png",
+          "content": "# はこの中身をパワーアップ\\n\\n「今の点数に10点プラスしたい！」というとき、`+=` を使うと便利です。\\nこれは「今の数字に足して、そのまま保存する」という合体技です。\\n\\n```cpp\\nint x = 10;\\nx += 5;  // x に 5 を足して保存\\nstd::cout << x << std::endl;  // => 15\\n```"
+        },
+        {
+          "title": "-= も使える",
+          "image": "/illustrations/common/box.png",
+          "content": "# 引き算バージョン\\n\\n`-=` を使えば、「今の数字から引いて保存」ができます。\\n\\n```cpp\\nint x = 10;\\nx -= 3;  // x から 3 を引いて保存\\nstd::cout << x << std::endl;  // => 7\\n```"
+        }
+      ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに50を入れる\\n    int score = 50;\\n    // 10点プラスする\\n    score += 10;\\n    // scoreを表示\\n    std::cout << score << std::endl;\\n    return 0;\\n}",
       "holeyCode": "___\\n___ ___() {\\n    // scoreに50を入れる\\n    ___ ___ = ___;\\n    // 10点プラスする\\n    ___ ___ ___;\\n    // scoreを表示\\n    ___::___ << ___ << ___::___;\\n    ___ ___;\\n___",
       "correctLines": [
@@ -209,6 +269,18 @@ export const cppData = {
       },
     {
       "title": "文字と「はこ」を並べましょう",
+      "tutorialSlides": [
+        {
+          "title": "連結（れんけつ）とは？",
+          "image": "/illustrations/common/fstring.png",
+          "content": "# 情報を組み合わせて表示する\\n\\n文章の途中に、変数（はこ）の中身を流し込んで一つのメッセージにすることを **連結** と呼びます。\\nC++では `<<` を使って、電車のように情報を連結して画面へ送ります。"
+        },
+        {
+          "title": "<< でつなげましょう",
+          "image": "/illustrations/common/fstring.png",
+          "content": "# ガチャンと連結！\\n\\n`<<` を何回も使うことで、文字やはこの中身をどんどん繋げることができます。\\n\\n**コード例：**\\n```cpp\\nint hour = 15;\\nstd::cout << \"今は \" << hour << \" 時です\" << std::endl;\\n```\\n=> 今は 15 時です"
+        }
+      ],
       "correctCode": "#include <iostream>\\nint main() {\\n    int age = 10;\\n    // age と入力\\n    std::cout << \"私は\" << age << \"歳です.\" << std::endl;\\n    return 0;\\n}",
       "holeyCode": "___\\n___ ___() {\\n    ___ ___ = ___;\\n    // age と入力\\n    ___::___ << ___ << ___ << ___ << ___::___;\\n    ___ ___;\\n___",
       "correctLines": [
@@ -244,6 +316,18 @@ export const cppData = {
       },
     {
       "title": "自由に伸びる「はこ」vector",
+      "tutorialSlides": [
+        {
+          "title": "動的配列（どうてきはいれつ）とは？",
+          "image": "/illustrations/common/list.png",
+          "content": "# 長さが変わる便利な列\\n\\nあとから中身を増やしたり減らしたりできる「はこ」の列を **動的配列（どうてきはいれつ）** と呼びます。\\n\\n**身近な例え：**\\n普通の配列は「決まった数のロッカー」ですが、`vector` は「必要に応じて増やせるロッカー」のようなものです。\\n\\n「伸び縮みする魔法（まほう）の配列」みたいなものです。\\nC++では `vector`（ベクター）という機能を使ってこれを作ります。"
+        },
+        {
+          "title": "std::vector",
+          "image": "/illustrations/common/list.png",
+          "content": "# 書き方のルール\\n\\n`< >` の中に「何を入れるか」を指定します。\\n- `<int>`: 整数を入れる\\n- `<std::string>`: 文字列を入れる\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n#include <vector>  // vectorを使う準備\\n\\n// 文字列を入れる vector を作る\\nstd::vector<std::string> items = {\"Apple\", \"Orange\"};\\nstd::cout << items[0] << std::endl;  // 0番目を表示\\n```\\n=> Apple と表示されます\\n\\n**ポイント：**\\n- 普通の配列と同じく、番号は0から始まります\\n- `items[0]` は1番目の要素「Apple」です"
+        }
+      ],
       "correctCode": "#include <iostream>\\n#include <vector>\\n#include <string>\\nint main() {\\n    // fruitsに{\"りんご\", \"バナナ\"}を代入\\n    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    std::cout << fruits[1] << std::endl;\\n    return 0;\\n}",
       "holeyCode": "___\\n___\\n___\\n___ ___() {\\n    // fruitsに{\"りんご\", \"バナナ\"}を代入\\n    ___::___<___::___> ___ = {\"___\", \"___\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    ___::___ << ___[___] << ___::___;\\n    ___ ___;\\n___",
       "correctLines": [
@@ -285,6 +369,18 @@ export const cppData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
+      "tutorialSlides": [
+        {
+          "title": "条件分岐（じょうけんぶんき）とは？",
+          "image": "/illustrations/common/if.png",
+          "content": "# プログラムに判断させてみよう\\n\\n「雨が降ったら傘をさす」「晴れたら外で遊ぶ」\\nこんなふうに、状況によって動きを変えることを **条件分岐（じょうけんぶんき）** と呼びます。\\nプログラムに「もし〜なら、これをしてね」と教えてあげましょう。"
+        },
+        {
+          "title": "if文",
+          "image": "/illustrations/common/if.png",
+          "content": "# ( ) と { } を使いましょう\\n\\nC++でも、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\\n\\n**コード例：**\\n```cpp\\nint temp = 30;\\nif (temp > 25) {\\n    std::cout << \"暑いですね\" << std::endl;\\n}"
+        }
+      ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに100を入れる\\n    int score = 100;\\n    // > で「より大きい」を比較\\n    if (score > 80) {\\n        // '完璧' と入力\\n        std::cout << \"完璧\" << std::endl;\\n    }\\n    return 0;\\n}",
       "holeyCode": "___\\n___ ___() {\\n    // scoreに100を入れる\\n    ___ ___ = ___;\\n    // > で「より大きい」を比較\\n    ___ (___ ___ ___) {\\n        // '完璧' と入力\\n        ___::___ << ___ << ___::___;\\n    ___\\n    ___ ___;\\n___",
       "correctLines": [
@@ -331,6 +427,18 @@ export const cppData = {
       },
     {
       "title": "ちがう場合はどうしましょう？",
+      "tutorialSlides": [
+        {
+          "title": "それ以外の場合は？",
+          "image": "/illustrations/common/if.png",
+          "content": "# else（エルス）の役割\\n\\n条件に当てはまらなかったときの別のルートを作るのが **else（エルス）** です。「もし〜なら」とセットで使うことで、プログラムのルートを2つに分けることができます。"
+        },
+                {
+          "title": "elseブロック",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
+          "content": "# どちらかを選びます\\n\\n条件に当てはまらないときの動きは `else` を使って入力します。\\n\\n**コード例 ：**\\n```cpp\\nint age = 15;\\nif (age >= 20) {\\n    std::cout << \"大人\" << std::endl;\\n} else {\\n    std::cout << \"子供\" << std::endl;\\n}"
+                }
+      ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // ageに10を入れる\\n    int age = 10;\\n    // 20以上かを比較する演算子\\n    if (age >= 20) {\\n        // 20歳以上のときのメッセージ（'大人'）\\n        std::cout << \"大人\" << std::endl;\\n    // elseで20歳未満の場合の処理\\n    } else {\\n        // それ以外のメッセージ（'未成年'）\\n        std::cout << \"未成年\" << std::endl;\\n    }\\n    return 0;\\n}",
       "holeyCode": "___\\n___ ___() {\\n    // ageに10を入れる\\n    ___ ___ = ___;\\n    // 20以上かを比較する演算子\\n    ___ (___ ___ ___) {\\n        // 20歳以上のときのメッセージ（'大人'）\\n        ___::___ << ___ << ___::___;\\n    // elseで20歳未満の場合の処理\\n    } ___ {\\n        // それ以外のメッセージ（'未成年'）\\n        ___::___ << ___ << ___::___;\\n    ___\\n    ___ ___;\\n___",
       "correctLines": [
@@ -382,6 +490,18 @@ export const cppData = {
       },
     {
       "title": "論理演算子（&&、||）",
+      "tutorialSlides": [
+        {
+          "title": "条件を組み合わせる",
+          "image": "/illustrations/common/if.png",
+          "content": "# もっと細かい条件で\\n\\n「10歳以上、かつ、20歳未満」のように、2つの条件を両方クリアしているかチェックしたいときがあります。\\nそんなときは `&&` （アンド）を使います。\\n逆に「どちらか片方でもOK」なら `||` （オア）を使います。"
+        },
+        {
+          "title": "&& と || の使い方",
+          "image": "/illustrations/common/if.png",
+          "content": "# 条件の合体技\\n\\n```cpp\\nint age = 15;\\nif (age >= 10 && age < 20) {\\n    std::cout << \"10代です\" << std::endl;\\n}\\n```\\n\\n`&&` は「かつ」、`||` は「または」の意味です。"
+        }
+      ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに85を入れる\\n    int score = 85;\\n    // 80以上 かつ 100以下 ならメッセージを出す\\n    if (score >= 80 && score <= 100) {\\n        // 「合格」と出力\\n        std::cout << \"合格\" << std::endl;\\n    }\\n    return 0;\\n}",
       "holeyCode": "___\\n___ ___() {\\n    // scoreに85を入れる\\n    ___ ___ = ___;\\n    // 80以上 かつ 100以下 ならメッセージを出す\\n    ___ (___ ___ ___ ___ ___ ___ ___) {\\n        // 「合格」と出力\\n        ___::___ << ___ << ___::___;\\n    ___\\n    ___ ___;\\n___",
       "correctLines": [
@@ -432,6 +552,18 @@ export const cppData = {
       },
     {
       "title": "中身を全部出してみましょう",
+      "tutorialSlides": [
+        {
+          "title": "繰り返し（ループ）とは？",
+          "image": "/illustrations/common/loop.png",
+          "content": "# 自動で順番に処理する\\n\\n同じ作業を何度も繰り返すための仕組みが **ループ（繰り返し）** です。\\n\\n**身近な例え：**\\n学校で出席をとるとき、「田中さん」「鈴木さん」「佐藤さん」...と一人ずつ名前を呼びますよね。ループはこの「順番に全員をチェック」する作業を自動でやってくれます。\\n\\n配列の中身を一つずつ順番に全部チェックしたいときなどに非常に役立ちます。"
+        },
+        {
+          "title": "範囲for文",
+          "image": "/illustrations/common/loop.png",
+          "content": "# for (変数 : コンテナ)\\n\\nC++には **範囲for文（はんいフォーぶん）** という便利なループがあります。\\n「はこ（配列）」の中に入っているものを、最初から最後まで順番に取り出せます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nstd::vector<std::string> fruits = {\"Apple\", \"Banana\"};\\n// fruits の中身を一つずつ f に入れて繰り返す\\nfor (std::string f : fruits) {\\n    std::cout << f << std::endl;\\n}\\n```\\n=> Apple と Banana が順番に表示されます\\n\\n**読み方：**\\n「fruits の中身を、一つずつ f に入れながら繰り返す」\\n\\n**ポイント：**\\nC言語の `for (int i = 0; i < 2; i++)` より、とても簡単に書けます！"
+        }
+      ],
       "correctCode": "#include <iostream>\\n#include <vector>\\nint main() {\\n    std::vector<int> nums = {1, 2, 3};\\n    // numsの各要素をnに代入して繰り返し\\n    for (int n : nums) {\\n        std::cout << n << std::endl;\\n    }\\n    return 0;\\n}",
       "holeyCode": "___\\n___\\n___ ___() {\\n    ___::___<___> ___ = {___, ___, ___};\\n    // numsの各要素をnに代入して繰り返し\\n    ___ (___ ___ : ___) {\\n        ___::___ << ___ << ___::___;\\n    ___\\n    ___ ___;\\n___",
       "correctLines": [
@@ -473,6 +605,18 @@ export const cppData = {
       },
     {
       "title": "名前で探しましょう「じしょ」",
+      "tutorialSlides": [
+        {
+          "title": "辞書（じしょ）とは？",
+          "image": "/illustrations/common/dict.png",
+          "content": "# キーワードで検索（けんさく）！\\n\\n「名前」と「データ」をセットにして保存できるのが **辞書（map＝マップ）** です。\\n\\n**身近な例え：**\\n国語辞典（こくごじてん）を想像してください。「りんご」という言葉を調べると、その意味が出てきますよね。\\n\\n`map` も同じで、「キー（名前）」を指定すると、それに対応する「値（データ）」が取り出せます。\\n\\nキーワードを使って目的のデータをすぐに見つけられる、とても便利な仕組みです！"
+        },
+        {
+          "title": "std::map",
+          "image": "/illustrations/common/dict.png",
+          "content": "# キーと値（あたい）のペア\\n\\n`map` では「キー（名前）」と「値（データ）」をセットで保存します。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n#include <map>\\n#include <string>\\n\\n// 「文字列」をキーに、「文字列」を値にする辞書\\nstd::map<std::string, std::string> colors;\\ncolors[\"りんご\"] = \"あか\";  // りんご→あか と登録\\nstd::cout << colors[\"りんご\"] << std::endl;\\n```\\n=> あか と表示されます\\n\\n**書き方のルール：**\\n`std::map<キーの型, 値の型>` のように、`< >` の中に2つの型を書きます。\\n\\n**ポイント：**\\n配列は「番号」でアクセスしますが、`map` は「名前（キー）」でアクセスします。"
+        }
+      ],
       "correctCode": "#include <iostream>\\n#include <map>\\n#include <string>\\nint main() {\\n    std::map<std::string, int> scores;\\n    // 'Math' と入力（キー名）\\n    scores[\"Math\"] = 90;\\n    // 'Math' と入力（同じキー名）\\n    std::cout << scores[\"Math\"] << std::endl;\\n    return 0;\\n}",
       "holeyCode": "___\\n___\\n___\\n___ ___() {\\n    ___::___<___::___, ___> ___;\\n    // 'Math' と入力（キー名）\\n    ___[\"___\"] = ___;\\n    // 'Math' と入力（同じキー名）\\n    ___::___ << ___[\"___\"] << ___::___;\\n    ___ ___;\\n___",
       "correctLines": [
@@ -516,6 +660,18 @@ export const cppData = {
       },
     {
       "title": "自分だけの関数を作りましょう",
+      "tutorialSlides": [
+        {
+          "title": "関数（かんすう）とは？",
+          "image": "/illustrations/common/function.png",
+          "content": "# オリジナルの技を作ろう\\n\\n何度も使う手順をまとめて名前をつけたものを **関数（かんすう）** と呼びます。\\n\\n**身近な例え：**\\n「朝の準備」という言葉を聞くと、「起きる→顔を洗う→着替える→ご飯を食べる」という一連の動作を思い浮かべますよね。\\n\\n関数も同じです！「sayHello」と呼ぶだけで、中に書いた処理を全部やってくれます。\\n\\n一度作れば、「アレやって！」と名前を呼ぶだけで何度でも実行できる、便利なショートカットのようなものです。"
+        },
+        {
+          "title": "手順をまとめる",
+          "image": "/illustrations/common/function.png",
+          "content": "# 関数の定義（ていぎ）\\n\\nやりたいことをひとまとめにして、名前をつけることができます。\\n一度作っておけば、呼び出すだけでいつでも動かせます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n// 「sayHello」という関数を作る（定義する）\\nvoid sayHello() {\\n    std::cout << \"ハロー！\" << std::endl;\\n}\\n\\n// mainの中で呼び出し（使う）\\nsayHello();  // これで「ハロー！」と表示される\\n```\\n\\n**用語解説：**\\n- `void`（ボイド）: 「何も返さない」という意味\\n- `()`: 関数名のあとに必ずつける丸かっこ\\n- `{}`: この中に実行したい処理を書く"
+        }
+      ],
       "correctCode": "#include <iostream>\\nvoid greet() {\\n    std::cout << \"こんにちは\" << std::endl;\\n}\\nint main() {\\n    // greet()を呼び出す\\n    greet();\\n    return 0;\\n}",
       "holeyCode": "___\\n___ ___() {\\n    ___::___ << ___ << ___::___;\\n___\\n___ ___() {\\n    // greet()を呼び出す\\n    ___();\\n    ___ ___;\\n___",
       "correctLines": [

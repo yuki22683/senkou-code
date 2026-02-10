@@ -34,6 +34,18 @@ export const go3Data = {
   "exercises": [
     {
       "title": "ジェネリクスの基本",
+      "tutorialSlides": [
+        {
+          "title": "ジェネリクスとは？",
+          "image": "/illustrations/3d_advanced/generics_glass.png",
+          "content": "# どんな型でも使える「万能関数」\\n\\n**ジェネリクス** は、型（数字、文字など）を後から決められる仕組みです。同じ処理を色々な型で使い回せます。\\n\\n**たとえば：**\\n- 数字のリストから最初の要素を取る\\n- 文字列のリストから最初の要素を取る\\n\\n両方とも「最初を取る」という同じ処理なのに、型が違うだけで別の関数を書くのは大変ですよね？\\n\\n**ジェネリクスを使うと：**\\n```go\\nfunc Print[T any](v T) {\\n    fmt.Println(v)  // Tは何の型でもOK\\n}\\nPrint(42)       // 数字でもOK\\nPrint(\"hello\")  // 文字でもOK\\n```"
+        },
+        {
+          "title": "型制約（かたせいやく）",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 「この型だけ使える」と制限する\\n\\n何でも受け入れると困ることもあります。「比較できる型だけ」など、制限をつけられます。\\n\\n**よく使う制約：**\\n- `any`：どんな型でもOK\\n- `comparable`：`==` で比較できる型だけ\\n\\n**コード例：**\\n```go\\n// comparable で比較できる型に制限\\nfunc Equal[T comparable](a, b T) bool {\\n    return a == b  // == が使える！\\n}\\n```\\n\\n`[T comparable]` は「Tは比較できる型だけね」という意味です。"
+        }
+      ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\n// any で任意の型を受け入れる\\nfunc First[T any](slice []T) T {\\n    // スライスの最初の要素を返す\\n    return slice[0]\\n}\\n\\nfunc main() {\\n    // 10, 20, 30 でスライスを初期化\\n    nums := []int{10, 20, 30}\\n    fmt.Println(First(nums))\\n}",
       "holeyCode": "package ___\\n\\n___ \\\"___\\\"\\n\\n// any で任意の型を受け入れる\\nfunc ___[___ ___](___ []___) ___ {\\n    // スライスの最初の要素を返す\\n    return ___[___]\\n}\\n\\nfunc ___() {\\n    // 10, 20, 30 でスライスを初期化\\n    ___ := []___{___, ___, ___}\\n    ___.___(___(___)\\n}",
       "correctLines": [
@@ -87,6 +99,18 @@ export const go3Data = {
       },
     {
       "title": "型制約 comparable",
+      "tutorialSlides": [
+        {
+          "title": "comparable とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# == で比較できる型\\n\\n**comparable** は、== や != で比較できる型に制限します。\\n\\n```go\\nfunc Contains[T comparable](slice []T, v T) bool {\\n    for _, x := range slice {\\n        if x == v {\\n            return true\\n        }\\n    }\\n    return false\\n}\\n```"
+        },
+        {
+          "title": "使用例",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 要素の検索\\n\\n```go\\nnums := []int{1, 2, 3}\\nfmt.Println(Contains(nums, 2))  // true\\nfmt.Println(Contains(nums, 5))  // false\\n```"
+        }
+      ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\n// comparable で比較可能な型に制限\\nfunc IndexOf[T comparable](slice []T, v T) int {\\n    // range でスライスをイテレート\\n    for i, x := range slice {\\n        // == で比較\\n        if x == v {\\n            return i\\n        }\\n    }\\n    return -1\\n}\\n\\nfunc main() {\\n    // \"a\", \"b\", \"c\" でスライスを初期化\\n    names := []string{\"a\", \"b\", \"c\"}\\n    fmt.Println(IndexOf(names, \"b\"))\\n}",
       "holeyCode": "package ___\\n\\n___ \\\"___\\\"\\n\\n// comparable で比較可能な型に制限\\nfunc ___[___ ___](___ []___, ___ ___) ___ {\\n    // range でスライスをイテレート\\n    for ___, ___ := range ___ {\\n        // == で比較\\n        if ___ == ___ {\\n            return ___\\n        }\\n    }\\n    return -___\\n}\\n\\nfunc ___() {\\n    // \"a\", \"b\", \"c\" でスライスを初期化\\n    ___ := []___{\\\"\",  \\\"___\\\", \\\"___\\\"}\\n    ___.___(___(___, \\\"___\\\"))\\n}",
       "correctLines": [
@@ -152,6 +176,18 @@ export const go3Data = {
       },
     {
       "title": "make でスライス作成",
+      "tutorialSlides": [
+        {
+          "title": "make（メイク）でスライスを作る",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# サイズを指定してスライスを作る\\n\\n**make** を使うと、最初からサイズを指定してスライスを作れます。\\n\\n**たとえるなら：**\\n- `[]int{1,2,3}` → 「中身入り」のお弁当箱を用意\\n- `make([]int, 5)` → 「5つ分の空の」お弁当箱を用意\\n\\n**コード例：**\\n```go\\n// 長さ5のスライスを作る（中身は0で埋まる）\\ns1 := make([]int, 5)\\n// s1 = [0, 0, 0, 0, 0]\\n\\n// 長さ0、でも10個分の場所を確保\\ns2 := make([]int, 0, 10)\\n```"
+        },
+        {
+          "title": "なぜ make を使う？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 速くて効率的になる\\n\\nスライスに `append` で要素を追加していくと、容量が足りなくなるたびに新しい場所を確保し直します。これは時間がかかります。\\n\\n**make で先に場所を確保：**\\n```go\\n// 最初から100個分の場所を確保\\nresult := make([]int, 0, 100)\\n\\nfor i := 0; i < 100; i++ {\\n    result = append(result, i)  // 場所の確保し直しが不要！\\n}\\n```\\n\\n「100個追加する」とわかっているなら、先に100個分の場所を用意しておく方が効率的です。"
+        }
+      ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    // numsにmake([]int, 3)を代入\\n    nums := make([]int, 3)\\n    // インデックス 0 に 10 を代入\\n    nums[0] = 10\\n    nums[1] = 20\\n    nums[2] = 30\\n    fmt.Println(nums)\\n}",
       "holeyCode": "package ___\\n\\n___ \\\"___\\\"\\n\\nfunc ___() {\\n    // numsにmake([]int, 3)を代入\\n    ___ := ___([]___, ___)\\n    // インデックス 0 に 10 を代入\\n    ___[___] = ___\\n    ___[___] = ___\\n    ___[___] = ___\\n    ___.___(___\\n}",
       "correctLines": [
@@ -201,6 +237,18 @@ export const go3Data = {
       },
     {
       "title": "append でスライス結合",
+      "tutorialSlides": [
+        {
+          "title": "append とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# スライスに追加\\n\\n**append** でスライスに要素を追加できます。\\n\\n```go\\nnums := []int{1, 2}\\nnums = append(nums, 3)      // [1, 2, 3]\\nnums = append(nums, 4, 5)   // [1, 2, 3, 4, 5]\\n```"
+        },
+        {
+          "title": "スライス同士の結合",
+          "image": "/illustrations/3d_advanced/slicing.png",
+          "content": "# ... で展開\\n\\n```go\\na := []int{1, 2}\\nb := []int{3, 4}\\nc := append(a, b...)  // [1, 2, 3, 4]\\n```"
+        }
+      ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    // スライスを初期化\\n    a := []int{1, 2}\\n    b := []int{3, 4}\\n    // ... でスライスを展開\\n    c := append(a, b...)\\n    fmt.Println(c)\\n}",
       "holeyCode": "package ___\\n\\n___ \\\"___\\\"\\n\\nfunc ___() {\\n    // スライスを初期化\\n    ___ := []___{___, ___}\\n    ___ := []___{___, ___}\\n    // ... でスライスを展開\\n    ___ := ___(___, ___...)\\n    ___.___(___\\n}",
       "correctLines": [
@@ -248,6 +296,18 @@ export const go3Data = {
       },
     {
       "title": "copy でスライスコピー",
+      "tutorialSlides": [
+        {
+          "title": "copy とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 要素をコピー\\n\\n**copy** は、スライスの要素を別のスライスにコピーします。\\n\\n```go\\nsrc := []int{1, 2, 3}\\ndst := make([]int, len(src))\\ncopy(dst, src)\\n```"
+        },
+        {
+          "title": "部分コピー",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 短い方に合わせる\\n\\n```go\\nsrc := []int{1, 2, 3, 4, 5}\\ndst := make([]int, 3)\\nn := copy(dst, src)  // n = 3\\n// dst = [1, 2, 3]\\n```"
+        }
+      ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    // コピー元のスライス (10, 20, 30)\\n    src := []int{10, 20, 30}\\n    // dstにmake([]int, len(src))を代入\\n    dst := make([]int, len(src))\\n    // copy でスライスをコピー\\n    copy(dst, src)\\n    fmt.Println(dst)\\n}",
       "holeyCode": "package ___\\n\\n___ \\\"___\\\"\\n\\nfunc ___() {\\n    // コピー元のスライス (10, 20, 30)\\n    ___ := []___{___, ___, ___}\\n    // dstにmake([]int, len(src))を代入\\n    ___ := ___([]___, ___(___))\\n    // copy でスライスをコピー\\n    ___(___, ___)\\n    ___.___(___\\n}",
       "correctLines": [
@@ -297,6 +357,18 @@ export const go3Data = {
       },
     {
       "title": "select で複数チャネル",
+      "tutorialSlides": [
+        {
+          "title": "select（セレクト）とは？",
+          "image": "/illustrations/3d_advanced/comprehension.png",
+          "content": "# 複数のチャネルを同時に待つ\\n\\n**select** は、複数のチャネルからの受信を「どれか1つ」待ちます。\\n\\n**たとえるなら：**\\n- 電話が2台あって、どちらかが鳴るのを待つ\\n- 先に鳴った方の電話を取る\\n\\n**コード例：**\\n```go\\nselect {\\ncase v := <-ch1:\\n    fmt.Println(\"ch1から受信:\", v)\\ncase v := <-ch2:\\n    fmt.Println(\"ch2から受信:\", v)\\n}\\n// ch1 か ch2、先にデータが来た方を処理\\n```"
+        },
+        {
+          "title": "default で待たない",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# すぐに次に進む方法\\n\\n`default` をつけると、どのチャネルもすぐに受信できない場合に待たずに進めます。\\n\\n**コード例：**\\n```go\\nselect {\\ncase v := <-ch:\\n    fmt.Println(\"受信:\", v)\\ndefault:\\n    fmt.Println(\"データがない！\")  // 待たずにここが実行される\\n}\\n```\\n\\n**使いどころ：**\\n- データがあれば処理、なければ別のことをする\\n- プログラムを止めたくないとき"
+        }
+      ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    // バッファ付きチャネルを作成\\n    ch1 := make(chan int, 1)\\n    ch2 := make(chan int, 1)\\n    // チャネルに値を送信\\n    ch1 <- 10\\n    \\n    // select で複数チャネルを待機\\n    select {\\n    case v := <-ch1:\\n        fmt.Println(v)\\n    case v := <-ch2:\\n        fmt.Println(v)\\n    }\\n}",
       "holeyCode": "package ___\\n\\n___ \\\"___\\\"\\n\\nfunc ___() {\\n    // バッファ付きチャネルを作成\\n    ___ := ___(___ ___, ___)\\n    ___ := ___(___ ___, ___)\\n    // チャネルに値を送信\\n    ___ <- ___\\n    \\n    // select で複数チャネルを待機\\n    ___ ___\\n    case ___ := <-___:\\n        ___.___(___\\n    case ___ := <-___:\\n        ___.___(___\\n    ___\\n}",
       "correctLines": [
@@ -358,6 +430,18 @@ export const go3Data = {
       },
     {
       "title": "range で辞書をループ",
+      "tutorialSlides": [
+        {
+          "title": "辞書の range",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# キーと値を取得\\n\\n**range** で辞書のキーと値を取得できます。\\n\\n```go\\nm := map[string]int{\"a\": 1, \"b\": 2}\\nfor k, v := range m {\\n    fmt.Println(k, v)\\n}\\n```"
+        },
+        {
+          "title": "キーだけ取得",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 値を無視\\n\\n```go\\nfor k := range m {\\n    fmt.Println(k)\\n}\\n```"
+        }
+      ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    // マップを初期化 (math: 90, english: 85)\\n    scores := map[string]int{\"math\": 90, \"english\": 85}\\n    // range で辞書をイテレート\\n    for k, v := range scores {\\n        fmt.Printf(\"%s: %d\\n\", k, v)\\n    }\\n}",
       "holeyCode": "package ___\\n\\n___ \\\"___\\\"\\n\\nfunc ___() {\\n    // マップを初期化 (math: 90, english: 85)\\n    ___ := ___[___]___{\\\"___\\\": ___, \\\"___\\\": ___}\\n    // range で辞書をイテレート\\n    for ___, ___ := range ___ {\\n        ___.___(\\\"___: ___\\n\\\", ___, ___)\\n    }\\n}",
       "correctLines": [
@@ -405,6 +489,18 @@ export const go3Data = {
       },
     {
       "title": "type で新しい型",
+      "tutorialSlides": [
+        {
+          "title": "型定義",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 新しい型を作る\\n\\n**type** で既存の型を基に新しい型を定義できます。\\n\\n```go\\ntype UserID int\\ntype Email string\\n\\nvar id UserID = 123\\nvar email Email = \"test@example.com\"\\n```"
+        },
+        {
+          "title": "型安全性",
+          "image": "/illustrations/3d_advanced/safety_net.png",
+          "content": "# 誤った代入を防ぐ\\n\\n```go\\ntype Celsius float64\\ntype Fahrenheit float64\\n\\nvar c Celsius = 25\\nvar f Fahrenheit = c  // コンパイルエラー！\\n```"
+        }
+      ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\n// Age型を定義\\ntype Age int\\n\\nfunc main() {\\n    // ageに25を代入\\n    var age Age = 25\\n    fmt.Println(age)\\n}",
       "holeyCode": "package ___\\n\\n___ \\\"___\\\"\\n\\n// Age型を定義\\ntype ___ ___\\n\\nfunc ___() {\\n    // ageに25を代入\\n    var ___ ___ = ___\\n    ___.___(___\\n}",
       "correctLines": [
@@ -452,6 +548,18 @@ export const go3Data = {
       },
     {
       "title": "埋め込み（Embedding）",
+      "tutorialSlides": [
+        {
+          "title": "埋め込みとは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 構造体の継承的な機能\\n\\nGoでは **埋め込み** で構造体を合成できます。\\n\\n```go\\ntype Person struct {\\n    Name string\\n}\\n\\ntype Employee struct {\\n    Person  // 埋め込み\\n    ID int\\n}\\n```"
+        },
+        {
+          "title": "フィールドへのアクセス",
+          "image": "/illustrations/3d_advanced/class_to_instance.png",
+          "content": "# 直接アクセス可能\\n\\n```go\\ne := Employee{Person: Person{Name: \"Alice\"}, ID: 1}\\nfmt.Println(e.Name)  // Alice（直接アクセス）\\n```"
+        }
+      ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\ntype Base struct {\\n    Value int\\n}\\n\\ntype Extended struct {\\n    // Base を埋め込む\\n    Base\\n    Extra string\\n}\\n\\nfunc main() {\\n    // 埋め込み構造体を初期化\\n    e := Extended{Base: Base{Value: 100}, Extra: \"テスト\"}\\n    fmt.Println(e.Value)\\n}",
       "holeyCode": "package ___\\n\\n___ \\\"___\\\"\\n\\ntype ___ struct {\\n    ___ ___\\n}\\n\\ntype ___ struct {\\n    // Base を埋め込む\\n    ___\\n    ___ ___\\n}\\n\\nfunc ___() {\\n    // 埋め込み構造体を初期化\\n    ___ := ___{___: ___{___: ___}, ___: \\\"___\\\"}\\n    ___.___(___.___)\\n}",
       "correctLines": [
@@ -513,6 +621,18 @@ export const go3Data = {
       },
     {
       "title": "panic と recover",
+      "tutorialSlides": [
+        {
+          "title": "panic（パニック）とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 「大変だ！」とプログラムを止める\\n\\n**panic** は、「これはもう続けられない！」という深刻なエラーを起こして、プログラムを強制的に止めます。\\n\\n**たとえるなら：**\\n- 火災報知器が鳴る → 全員避難！\\n- 普通のエラーは「ちょっと困った」\\n- panic は「もうダメだ！」\\n\\n**コード例：**\\n```go\\nfunc main() {\\n    panic(\"大変なことが起きた！\")\\n    // ↓ ここには来ない（プログラムが止まる）\\n    fmt.Println(\"これは表示されない\")\\n}\\n```"
+        },
+        {
+          "title": "recover（リカバー）で回復",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# パニックから立ち直る方法\\n\\n**recover** を使うと、panic で止まりかけたプログラムを救出できます。ただし `defer` の中でしか使えません。\\n\\n**コード例：**\\n```go\\nfunc main() {\\n    defer func() {\\n        if r := recover(); r != nil {\\n            // パニックを捕まえた！\\n            fmt.Println(\"回復しました:\", r)\\n        }\\n    }()\\n    \\n    panic(\"エラー！\")  // パニック発生\\n}\\n// → 「回復しました: エラー！」と表示されて続行\\n```\\n\\n**ポイント：**\\n- recover は defer の中で使う\\n- panic の値を受け取れる"
+        }
+      ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    defer func() {\\n        // recover でパニックを捕捉\\n        if r := recover(); r != nil {\\n            fmt.Println(\"caught\")\\n        }\\n    }()\\n    // panic でパニックを発生\\n    panic(\"エラー\")\\n}",
       "holeyCode": "package ___\\n\\n___ \\\"___\\\"\\n\\nfunc ___() {\\n    defer ___() {\\n        // recover でパニックを捕捉\\n        if ___ := ___(); ___ != ___ {\\n            ___.___(\\\"___\\\")\\n        }\\n    ___()\\n    // panic でパニックを発生\\n    ___(\\\"___\\\")\\n}",
       "correctLines": [

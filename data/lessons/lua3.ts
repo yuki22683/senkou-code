@@ -34,6 +34,18 @@ export const lua3Data = {
   "exercises": [
     {
       "title": "pcall でエラーを捕捉",
+      "tutorialSlides": [
+        {
+          "title": "pcall とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 保護された呼び出し\\n\\n**pcall** は、関数をエラーから保護して呼び出します。エラーが発生してもプログラムは停止しません。"
+        },
+        {
+          "title": "pcall の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# success, result = pcall(関数)\\n\\n成功すると `true` と結果、失敗すると `false` とエラーメッセージを返します。\\n\\n**コード例：**\\n```lua\\nlocal ok, err = pcall(function()\\n    error(\"oops\")\\nend)\\nprint(ok) -- false\\n```"
+        }
+      ],
       "correctCode": "-- pcallでエラーを捕捉\\nlocal ok, result = pcall(function()\\n    return 10 + 5\\nend)\\n-- 成功したら出力\\nif ok then\\n    -- resultを出力\\n    print(result)\\nend",
       "holeyCode": "-- pcallでエラーを捕捉\\nlocal ___, ___ = ___(function()\\n    return ___ + ___\\n___)\\n-- 成功したら出力\\nif ___ ___\\n    -- resultを出力\\n    ___(___)\\n___",
       "correctLines": [
@@ -76,6 +88,18 @@ export const lua3Data = {
       },
     {
       "title": "error でエラーを発生",
+      "tutorialSlides": [
+        {
+          "title": "error とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# エラーを発生させる\\n\\n**error** 関数を使うと、意図的にエラーを発生させることができます。"
+        },
+        {
+          "title": "error の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# error(メッセージ)\\n\\nエラーメッセージを指定してエラーを発生させます。\\n\\n**コード例：**\\n```lua\\nif x < 0 then\\n    error(\"負の値は許可されません\")\\nend\\n```"
+        }
+      ],
       "correctCode": "local ok, msg = pcall(function()\\n    -- errorでエラーを発生\\n    error(\"テスト エラー\")\\nend)\\nprint(msg:match(\"テスト エラー\") and \"caught\" or \"not caught\")",
       "holeyCode": "local ___, ___ = ___(function()\\n    -- errorでエラーを発生\\n    ___(\"___\")\\n___)\\n___(___:___(\"___\") ___ \"___\" ___ \"___\")",
       "correctLines": [
@@ -110,6 +134,18 @@ export const lua3Data = {
       },
     {
       "title": "assert で検証",
+      "tutorialSlides": [
+        {
+          "title": "assert とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 条件を検証する\\n\\n**assert** は、条件が偽の場合にエラーを発生させます。"
+        },
+        {
+          "title": "assert の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# assert(条件, メッセージ)\\n\\n条件が真なら値を返し、偽ならエラーになります。\\n\\n**コード例：**\\n```lua\\nlocal x = assert(tonumber(\"42\"))\\nprint(x) -- 42\\n```"
+        }
+      ],
       "correctCode": "-- assertで検証\\nlocal value = assert(10 > 5, \"should be true\")\\nprint(value and \"pass\" or \"fail\")",
       "holeyCode": "-- assertで検証\\nlocal ___ = ___(___ ___ ___, \"___\")\\n___(___ ___ \"___\" ___ \"___\")",
       "correctLines": [
@@ -140,6 +176,18 @@ export const lua3Data = {
       },
     {
       "title": "型を確認しよう",
+      "tutorialSlides": [
+        {
+          "title": "type とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 型を調べる\\n\\n**type** 関数は、値の型を文字列で返します。"
+        },
+        {
+          "title": "type の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 主な型\\n\\n- `\"nil\"`, `\"boolean\"`, `\"number\"`, `\"string\"`, `\"table\"`, `\"function\"`\\n\\n**コード例：**\\n```lua\\nprint(type(42)) -- number\\nprint(type({})) -- table\\n```"
+        }
+      ],
       "correctCode": "-- typeで型を確認\\nlocal t = {}\\n-- 型を出力\\nprint(type(t))",
       "holeyCode": "-- typeで型を確認\\nlocal ___ = ___\\n-- 型を出力\\n___(___(___))",
       "correctLines": [
@@ -172,6 +220,18 @@ export const lua3Data = {
       },
     {
       "title": "tostring で文字列に変換",
+      "tutorialSlides": [
+        {
+          "title": "tostring とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 文字列に変換\\n\\n**tostring** は、任意の値を文字列に変換します。"
+        },
+        {
+          "title": "tostring の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# tostring(値)\\n\\n数値やテーブルを文字列に変換できます。\\n\\n**コード例：**\\n```lua\\nprint(tostring(42)) -- \"42\"\\nprint(tostring(true)) -- \"true\"\\n```"
+        }
+      ],
       "correctCode": "-- tostringで文字列に変換\\nlocal n = 100\\n-- 文字列に変換して連結\\nprint(\"Value: \" .. tostring(n))",
       "holeyCode": "-- tostringで文字列に変換\\nlocal ___ = ___\\n-- 文字列に変換して連結\\n___(\"___\" ___ ___(___))",
       "correctLines": [
@@ -204,6 +264,18 @@ export const lua3Data = {
       },
     {
       "title": "tonumber で数値に変換",
+      "tutorialSlides": [
+        {
+          "title": "tonumber とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 数値に変換\\n\\n**tonumber** は、文字列を数値に変換します。変換できない場合は `nil` を返します。"
+        },
+        {
+          "title": "tonumber の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# tonumber(文字列)\\n\\n数値として解釈できる文字列を変換します。\\n\\n**コード例：**\\n```lua\\nprint(tonumber(\"42\")) -- 42\\nprint(tonumber(\"abc\")) -- nil\\n```"
+        }
+      ],
       "correctCode": "-- tonumberで数値に変換\\nlocal s = \"50\"\\n-- 数値に変換\\nlocal n = tonumber(s)\\nprint(n + 10)",
       "holeyCode": "-- tonumberで数値に変換\\nlocal ___ = \"___\"\\n-- 数値に変換\\nlocal ___ = ___(___)\\n___(___ + ___)",
       "correctLines": [
@@ -238,6 +310,18 @@ export const lua3Data = {
       },
     {
       "title": "文字列を連結",
+      "tutorialSlides": [
+        {
+          "title": "文字列の連結",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# .. で連結\\n\\nLuaでは **..** 演算子で文字列を連結します。"
+        },
+        {
+          "title": ".. の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 文字列1 .. 文字列2\\n\\n複数の文字列をつなげます。\\n\\n**コード例：**\\n```lua\\nlocal s = \"Hello\" .. \" \" .. \"World\"\\nprint(s) -- Hello World\\n```"
+        }
+      ],
       "correctCode": "-- ..で文字列を連結\\nlocal a = \"Lua\"\\nlocal b = \"Script\"\\n-- 連結して出力\\nprint(a .. b)",
       "holeyCode": "-- ..で文字列を連結\\nlocal ___ = \"___\"\\nlocal ___ = \"___\"\\n-- 連結して出力\\n___(___ ___ ___)",
       "correctLines": [
@@ -272,6 +356,18 @@ export const lua3Data = {
       },
     {
       "title": "文字列の長さを取得",
+      "tutorialSlides": [
+        {
+          "title": "# 演算子",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 長さを取得\\n\\n**#** 演算子は、文字列やテーブルの長さを返します。"
+        },
+        {
+          "title": "# の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# #文字列 / #テーブル\\n\\n文字列のバイト数や配列の要素数を返します。\\n\\n**コード例：**\\n```lua\\nprint(#\"hello\") -- 5\\nprint(#{1, 2, 3}) -- 3\\n```"
+        }
+      ],
       "correctCode": "-- #で長さを取得\\nlocal s = \"Lua\"\\n-- 長さを出力\\nprint(#s)",
       "holeyCode": "-- #で長さを取得\\nlocal ___ = \"___\"\\n-- 長さを出力\\n___(___)",
       "correctLines": [
@@ -304,6 +400,18 @@ export const lua3Data = {
       },
     {
       "title": "条件演算子のパターン",
+      "tutorialSlides": [
+        {
+          "title": "条件式パターン",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# and と or の活用\\n\\nLuaには三項演算子がありませんが、`and` と `or` で同様のことができます。"
+        },
+        {
+          "title": "and/or パターン",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 条件 and 真の値 or 偽の値\\n\\n条件が真なら左側、偽なら右側の値を返します。\\n\\n**コード例：**\\n```lua\\nlocal x = 10 > 5 and \"yes\" or \"no\"\\nprint(x) -- yes\\n```"
+        }
+      ],
       "correctCode": "-- and/orで条件分岐\\nlocal age = 20\\n-- 条件に応じて値を決める\\nlocal status = age >= 18 and \"adult\" or \"child\"\\nprint(status)",
       "holeyCode": "-- and/orで条件分岐\\nlocal ___ = ___\\n-- 条件に応じて値を決める\\nlocal ___ = ___ ___ ___ ___ \"___\" ___ \"___\"\\n___(___)",
       "correctLines": [
@@ -338,6 +446,18 @@ export const lua3Data = {
       },
     {
       "title": "ループを制御しよう",
+      "tutorialSlides": [
+        {
+          "title": "break とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# ループを抜ける\\n\\n**break** を使うと、ループを途中で抜けることができます。"
+        },
+        {
+          "title": "break の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# ループ内で break\\n\\n条件を満たしたらループを終了します。\\n\\n**コード例：**\\n```lua\\nfor i = 1, 10 do\\n    if i > 5 then break end\\n    print(i)\\nend\\n```"
+        }
+      ],
       "correctCode": "-- breakでループを抜ける\\nfor i = 1, 10 do\\n    -- 3を超えたらループを抜ける\\n    if i > 3 then break end\\n    print(i)\\nend",
       "holeyCode": "-- breakでループを抜ける\\nfor ___ = ___, ___ do\\n    -- 3を超えたらループを抜ける\\n    if ___ ___ ___ then ___ ___\\n    ___(___)\\n___",
       "correctLines": [

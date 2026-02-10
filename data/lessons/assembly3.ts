@@ -34,6 +34,18 @@ export const assembly3Data = {
   "exercises": [
     {
       "title": "値を減らしましょう",
+      "tutorialSlides": [
+        {
+          "title": "dec命令（デクリメント）",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 値を1減らす\\n\\n**dec** 命令は、レジスタの値を1だけ減らします。`sub rax, 1` と同じ意味です。"
+        },
+        {
+          "title": "dec の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# dec レジスタ\\n\\n```asm\\nmov rax, 10\\ndec rax     ; raxが9になる\\n```"
+        }
+      ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに10を入れる\\n  mov rax, 10\\n  ; raxを1減らす\\n  dec rax\\n\\n  ; 結果raxをrdiにコピー\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
       "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに10を入れる\\n  ___ ___, ___\\n  ; raxを1減らす\\n  ___ ___\\n\\n  ; 結果raxをrdiにコピー\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
@@ -84,6 +96,18 @@ export const assembly3Data = {
       },
     {
       "title": "掛け算をしましょう",
+      "tutorialSlides": [
+        {
+          "title": "imul命令",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 符号付き整数の掛け算\\n\\n**imul** 命令は、符号付き整数の掛け算を行います。"
+        },
+        {
+          "title": "imul の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# imul 先, 元, 値\\n\\n結果を先のレジスタに格納します。\\n\\n```asm\\nimul rax, rbx, 5  ; rax = rbx * 5\\n```"
+        }
+      ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; rbxに3を入れる\\n  mov rbx, 3\\n  ; rbx(3)と4を掛けて結果をraxへ\\n  imul rax, rbx, 4\\n\\n  ; 結果raxをrdiにコピー\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
       "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; rbxに3を入れる\\n  ___ ___, ___\\n  ; rbx(3)と4を掛けて結果をraxへ\\n  ___ ___, ___, ___\\n\\n  ; 結果raxをrdiにコピー\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
@@ -134,6 +158,18 @@ export const assembly3Data = {
       },
     {
       "title": "スタックに保存",
+      "tutorialSlides": [
+        {
+          "title": "push命令",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# スタックに積む\\n\\n**push** 命令は、値をスタックの一番上に積みます。後で取り出すことができます。"
+        },
+        {
+          "title": "push の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# push 値\\n\\nレジスタや即値をスタックに積みます。\\n\\n```asm\\npush rax    ; raxの値をスタックに\\npush 42     ; 42をスタックに\\n```"
+        }
+      ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに42を入れる\\n  mov rax, 42\\n  ; スタックにraxを保存\\n  push rax\\n  ; スタックからrdiに取り出す\\n  pop rdi\\n\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
       "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに42を入れる\\n  ___ ___, ___\\n  ; スタックにraxを保存\\n  ___ ___\\n  ; スタックからrdiに取り出す\\n  ___ ___\\n\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
@@ -184,6 +220,18 @@ export const assembly3Data = {
       },
     {
       "title": "スタックから取り出す",
+      "tutorialSlides": [
+        {
+          "title": "pop命令",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# スタックから取り出す\\n\\n**pop** 命令は、スタックの一番上から値を取り出してレジスタに入れます。"
+        },
+        {
+          "title": "pop の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# pop レジスタ\\n\\n最後にpushした値が取り出されます（LIFO）。\\n\\n```asm\\npop rax    ; スタックの値をraxに\\n```"
+        }
+      ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; 数値99をスタックへ\\n  push 99\\n  ; スタックからrdiへ\\n  pop rdi\\n\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
       "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; 数値99をスタックへ\\n  ___ ___\\n  ; スタックからrdiへ\\n  ___ ___\\n\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
@@ -230,6 +278,18 @@ export const assembly3Data = {
       },
     {
       "title": "論理AND演算",
+      "tutorialSlides": [
+        {
+          "title": "and命令",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# ビットごとのAND\\n\\n**and** 命令は、2つの値のビットごとのANDを計算します。"
+        },
+        {
+          "title": "and の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# and 先, 元\\n\\n両方のビットが1の場合のみ1になります。\\n\\n```asm\\nand rax, 0xFF  ; 下位8ビットだけ残す\\n```"
+        }
+      ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに0xFFをセット\\n  mov rax, 0xFF\\n  ; raxと0x0FのビットAND\\n  and rax, 0x0F\\n\\n  ; 結果をrdiへ\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
       "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに0xFFをセット\\n  ___ ___, ___\\n  ; raxと0x0FのビットAND\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
@@ -280,6 +340,18 @@ export const assembly3Data = {
       },
     {
       "title": "論理OR演算",
+      "tutorialSlides": [
+        {
+          "title": "or命令",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# ビットごとのOR\\n\\n**or** 命令は、2つの値のビットごとのORを計算します。"
+        },
+        {
+          "title": "or の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# or 先, 元\\n\\nどちらかのビットが1なら1になります。\\n\\n```asm\\nor rax, 0x01  ; 最下位ビットを1にする\\n```"
+        }
+      ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに0x10をセット\\n  mov rax, 0x10\\n  ; raxと0x01のビットOR\\n  or rax, 0x01\\n\\n  ; 結果をrdiへ\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
       "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに0x10をセット\\n  ___ ___, ___\\n  ; raxと0x01のビットOR\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
@@ -330,6 +402,18 @@ export const assembly3Data = {
       },
     {
       "title": "左シフト演算",
+      "tutorialSlides": [
+        {
+          "title": "shl命令",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# ビットを左にシフト\\n\\n**shl** 命令は、ビットを左に移動させます。1ビットシフトは2倍と同じです。"
+        },
+        {
+          "title": "shl の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# shl 先, シフト数\\n\\n```asm\\nmov rax, 4\\nshl rax, 1  ; rax = 8 (4 * 2)\\n```"
+        }
+      ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに5をセット\\n  mov rax, 5\\n  ; raxを2ビット左シフト\\n  shl rax, 2\\n\\n  ; 結果をrdiへ\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
       "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに5をセット\\n  ___ ___, ___\\n  ; raxを2ビット左シフト\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
@@ -380,6 +464,18 @@ export const assembly3Data = {
       },
     {
       "title": "右シフト演算",
+      "tutorialSlides": [
+        {
+          "title": "shr命令",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# ビットを右にシフト\\n\\n**shr** 命令は、ビットを右に移動させます。1ビットシフトは2で割るのと同じです。"
+        },
+        {
+          "title": "shr の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# shr 先, シフト数\\n\\n```asm\\nmov rax, 16\\nshr rax, 2  ; rax = 4 (16 / 4)\\n```"
+        }
+      ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに20をセット\\n  mov rax, 20\\n  ; raxを1ビット右シフト\\n  shr rax, 1\\n\\n  ; 結果をrdiへ\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
       "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに20をセット\\n  ___ ___, ___\\n  ; raxを1ビット右シフト\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
@@ -430,6 +526,18 @@ export const assembly3Data = {
       },
     {
       "title": "test命令で検査",
+      "tutorialSlides": [
+        {
+          "title": "test命令",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# ビットをテスト\\n\\n**test** 命令は、ANDを計算してフラグを設定しますが、結果は保存しません。"
+        },
+        {
+          "title": "test の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# test 先, 元\\n\\n特定のビットが立っているか確認するのに使います。\\n\\n```asm\\ntest rax, 1  ; 最下位ビットをチェック\\njnz odd      ; 0でなければジャンプ\\n```"
+        }
+      ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに5をセット\\n  mov rax, 5\\n  ; ビット検査(rax AND 1)\\n  test rax, 1\\n  ; 0でなければ(奇数なら)ジャンプ\\n  jnz is_odd\\n  ; 0なら(偶数なら)rdi=0\\n  mov rdi, 0\\n  jmp done\\nis_odd:\\n  ; rdi=1\\n  mov rdi, 1\\ndone:\\n  ; 終了\\n  mov rax, 60\\n  syscall",
       "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに5をセット\\n  ___ ___, ___\\n  ; ビット検査(rax AND 1)\\n  ___ ___, ___\\n  ; 0でなければ(奇数なら)ジャンプ\\n  ___ ___\\n  ; 0なら(偶数なら)rdi=0\\n  ___ ___, ___\\n  ___ ___\\n___:\\n  ; rdi=1\\n  ___ ___, ___\\n___:\\n  ; 終了\\n  ___ ___, ___\\n  ___",
       "correctLines": [
@@ -490,6 +598,18 @@ export const assembly3Data = {
       },
     {
       "title": "neg命令で符号反転",
+      "tutorialSlides": [
+        {
+          "title": "neg命令",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 符号を反転\\n\\n**neg** 命令は、値の符号を反転します（2の補数を取ります）。"
+        },
+        {
+          "title": "neg の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# neg レジスタ\\n\\n正の数が負に、負の数が正になります。\\n\\n```asm\\nmov rax, 5\\nneg rax     ; rax = -5\\n```"
+        }
+      ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに10をセット\\n  mov rax, 10\\n  ; 符号反転(-10になる)\\n  neg rax\\n\\n  ; rdiを0に\\n  xor rdi, rdi\\n  ; 終了\\n  mov rax, 60\\n  syscall",
       "holeyCode": "; テキストセクション\\n___ .___\\n  ___ ___\\n\\n___:\\n  ; raxに10をセット\\n  ___ ___, ___\\n  ; 符号反転(-10になる)\\n  ___ ___\\n\\n  ; rdiを0に\\n  ___ ___, ___\\n  ; 終了\\n  ___ ___, ___\\n  ___",
       "correctLines": [

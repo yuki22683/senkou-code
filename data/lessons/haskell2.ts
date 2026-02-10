@@ -38,6 +38,18 @@ export const haskell2Data = {
   "exercises": [
     {
       "title": "関数を定義しよう",
+      "tutorialSlides": [
+        {
+          "title": "関数の定義",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# シンプルな定義\\n\\nHaskellでは、`名前 引数 = 本体` のようにシンプルに関数を定義します。括弧は不要です。"
+        },
+        {
+          "title": "関数の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# スペースで引数を渡す\\n\\n関数の呼び出しは `関数名 引数` と書きます。\\n\\n**コード例：**\\n```haskell\\ndouble x = x * 2\\nmain = print (double 5) -- 10\\n```"
+        }
+      ],
       "correctCode": "-- +で足し算\\naddTen x = x + 10\\n-- addTenを入力\\nmain = print (addTen 5)",
       "holeyCode": "-- +で足し算\\n___ ___ = ___ ___ ___\\n-- addTenを入力\\n___ = ___ (___ ___)",
       "correctLines": [
@@ -67,6 +79,18 @@ export const haskell2Data = {
       },
     {
       "title": "型注釈を書こう",
+      "tutorialSlides": [
+        {
+          "title": "型注釈とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 型を明示する\\n\\n**型注釈** は、関数や値の型を明示的に書くことです。`::` を使って書きます。"
+        },
+        {
+          "title": "型注釈の書き方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 名前 :: 型\\n\\n`関数名 :: 引数型 -> 戻り値型` のように書きます。\\n\\n**コード例：**\\n```haskell\\ndouble :: Int -> Int\\ndouble x = x * 2\\n```"
+        }
+      ],
       "correctCode": "-- ::で型注釈\\nsquare :: Int -> Int\\n-- *で掛け算\\nsquare x = x * x\\n-- squareを入力\\nmain = print (square 5)",
       "holeyCode": "-- ::で型注釈\\n___ ___ ___ ___ ___\\n-- *で掛け算\\n___ ___ = ___ ___ ___\\n-- squareを入力\\n___ = ___ (___ ___)",
       "correctLines": [
@@ -100,6 +124,18 @@ export const haskell2Data = {
       },
     {
       "title": "リストを使おう",
+      "tutorialSlides": [
+        {
+          "title": "リストとは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 同じ型の要素の列\\n\\nHaskellのリストは、同じ型の要素を順番に並べたものです。`[ ]` で作成します。"
+        },
+        {
+          "title": "リストの操作",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# head と tail\\n\\n`head` で先頭、`tail` で残りを取得します。\\n\\n**コード例：**\\n```haskell\\nhead [1, 2, 3] -- 1\\ntail [1, 2, 3] -- [2, 3]\\n```"
+        }
+      ],
       "correctCode": "-- [1, 2, 3]を入力\\nnums = [1, 2, 3]\\n-- headで先頭要素を取得\\nmain = print (head nums)",
       "holeyCode": "-- [1, 2, 3]を入力\\n___ = [___, ___, ___]\\n-- headで先頭要素を取得\\n___ = ___ (___ ___)",
       "correctLines": [
@@ -129,6 +165,18 @@ export const haskell2Data = {
       },
     {
       "title": "map で変換しよう",
+      "tutorialSlides": [
+        {
+          "title": "map とは？",
+          "image": "/illustrations/3d_advanced/comprehension.png",
+          "content": "# 各要素を変換\\n\\n**map** は、リストの各要素に関数を適用して新しいリストを作ります。"
+        },
+        {
+          "title": "map の使い方",
+          "image": "/illustrations/3d_advanced/comprehension.png",
+          "content": "# map 関数 リスト\\n\\n関数とリストを渡します。\\n\\n**コード例：**\\n```haskell\\nmap (*2) [1, 2, 3] -- [2, 4, 6]\\n```"
+        }
+      ],
       "correctCode": "-- mapで各要素を変換\\nmain = print (map (*2) [1, 2, 3])",
       "holeyCode": "-- mapで各要素を変換\\n___ = ___ (___ (*___) [___, ___, ___])",
       "correctLines": [
@@ -154,6 +202,18 @@ export const haskell2Data = {
       },
     {
       "title": "filter で絞り込もう",
+      "tutorialSlides": [
+        {
+          "title": "filter とは？",
+          "image": "/illustrations/3d_advanced/comprehension.png",
+          "content": "# 条件でフィルタ\\n\\n**filter** は、条件を満たす要素だけを残した新しいリストを作ります。"
+        },
+        {
+          "title": "filter の使い方",
+          "image": "/illustrations/3d_advanced/comprehension.png",
+          "content": "# filter 条件関数 リスト\\n\\n条件関数が True を返す要素だけが残ります。\\n\\n**コード例：**\\n```haskell\\nfilter (>3) [1, 2, 3, 4, 5] -- [4, 5]\\n```"
+        }
+      ],
       "correctCode": "-- filterで条件に合う要素を抽出\\nmain = print (filter (>=3) [1, 2, 3, 4, 5])",
       "holeyCode": "-- filterで条件に合う要素を抽出\\n___ = ___ (___ (>=___) [___, ___, ___, ___, ___])",
       "correctLines": [
@@ -179,6 +239,18 @@ export const haskell2Data = {
       },
     {
       "title": "パターンマッチを使おう",
+      "tutorialSlides": [
+        {
+          "title": "パターンマッチとは？",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
+          "content": "# 値の形で分岐\\n\\n**パターンマッチ** は、引数の値や構造に応じて異なる定義を使う機能です。"
+        },
+        {
+          "title": "パターンマッチの書き方",
+          "image": "/illustrations/3d_advanced/union_funnel.png",
+          "content": "# 複数の定義\\n\\n同じ関数を複数定義し、引数のパターンで選ばせます。\\n\\n**コード例：**\\n```haskell\\nfactorial 0 = 1\\nfactorial n = n * factorial (n - 1)\\n```"
+        }
+      ],
       "correctCode": "-- 0を入力\\nfib 0 = 0\\n-- 1を入力\\nfib 1 = 1\\n-- 2を引いて再帰\\nfib n = fib (n - 1) + fib (n - 2)\\n-- fibを入力\\nmain = print (fib 6)",
       "holeyCode": "-- 0を入力\\n___ ___ = ___\\n-- 1を入力\\n___ ___ = ___\\n-- 2を引いて再帰\\n___ ___ = ___ (___ ___ ___) ___ ___ (___ ___ ___)\\n-- fibを入力\\n___ = ___ (___ ___)",
       "correctLines": [
@@ -216,6 +288,18 @@ export const haskell2Data = {
       },
     {
       "title": "ガードで条件分岐",
+      "tutorialSlides": [
+        {
+          "title": "ガードとは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# 条件での分岐\\n\\n**ガード** は、`|` を使って条件ごとに異なる処理を定義する方法です。"
+        },
+        {
+          "title": "ガードの書き方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# | 条件 = 処理\\n\\n`otherwise` はすべての条件に当てはまらない場合です。\\n\\n**コード例：**\\n```haskell\\nabs' x\\n  | x < 0     = -x\\n  | otherwise = x\\n```"
+        }
+      ],
       "correctCode": "-- xを入力\\nsign x\\n  -- >で大なり比較\\n  | x > 0     = \"positive\"\\n  -- <で小なり比較\\n  | x < 0     = \"negative\"\\n  -- otherwiseはそれ以外の場合\\n  | otherwise = \"zero\"\\n-- signを入力\\nmain = putStrLn (sign 5)",
       "holeyCode": "-- xを入力\\n___ ___\\n  -- >で大なり比較\\n  | ___ ___ ___     = \"___\"\\n  -- <で小なり比較\\n  | ___ ___ ___     = \"___\"\\n  -- otherwiseはそれ以外の場合\\n  | ___ = \"___\"\\n-- signを入力\\n___ = ___ (___ ___)",
       "correctLines": [
@@ -257,6 +341,18 @@ export const haskell2Data = {
       },
     {
       "title": "ラムダ式を使おう",
+      "tutorialSlides": [
+        {
+          "title": "ラムダ式とは？",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
+          "content": "# 無名関数\\n\\n**ラムダ式** は、名前をつけずに定義する関数です。`\\引数 -> 本体` と書きます。"
+        },
+        {
+          "title": "ラムダの使い方",
+          "image": "/illustrations/3d_advanced/lambda_spark.png",
+          "content": "# \\ で始める\\n\\n`\\` はラムダの記号です。\\n\\n**コード例：**\\n```haskell\\nmap (\\x -> x * 2) [1, 2, 3]\\n-- [2, 4, 6]\\n```"
+        }
+      ],
       "correctCode": "-- \\でラムダ式を開始\\nmain = print (map (\\x -> x * x) [1, 2, 3])",
       "holeyCode": "-- \\でラムダ式を開始\\n___ = ___ (___ (\\\\___ ___ ___ ___ ___) [___, ___, ___])",
       "correctLines": [
@@ -282,6 +378,18 @@ export const haskell2Data = {
       },
     {
       "title": "リスト内包表記",
+      "tutorialSlides": [
+        {
+          "title": "リスト内包表記とは？",
+          "image": "/illustrations/3d_advanced/comprehension.png",
+          "content": "# 数学的なリスト生成\\n\\n**リスト内包表記** は、数学の集合表記のようにリストを作る方法です。"
+        },
+        {
+          "title": "内包表記の書き方",
+          "image": "/illustrations/3d_advanced/comprehension.png",
+          "content": "# [式 | 変数 <- リスト, 条件]\\n\\n生成規則と条件を組み合わせられます。\\n\\n**コード例：**\\n```haskell\\n[x * 2 | x <- [1..5]] -- [2,4,6,8,10]\\n```"
+        }
+      ],
       "correctCode": "-- <-でリストから要素を取り出す\\nmain = print [x * x | x <- [1..5]]",
       "holeyCode": "-- <-でリストから要素を取り出す\\n___ = ___ [___ ___ ___ | ___ ___ [___..___]]",
       "correctLines": [
@@ -307,6 +415,18 @@ export const haskell2Data = {
       },
     {
       "title": "foldr で畳み込み",
+      "tutorialSlides": [
+        {
+          "title": "foldr とは？",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# リストの畳み込み\\n\\n**foldr** は、リストの要素を右から順に二項演算で畳み込みます。"
+        },
+        {
+          "title": "foldr の使い方",
+          "image": "/illustrations/3d/gear.png",
+          "content": "# foldr 関数 初期値 リスト\\n\\n二項関数、初期値、リストを渡します。\\n\\n**コード例：**\\n```haskell\\nfoldr (+) 0 [1, 2, 3] -- 6\\n```"
+        }
+      ],
       "correctCode": "-- foldrで畳み込み\\nmain = print (foldr (+) 0 [1, 2, 3, 4, 5])",
       "holeyCode": "-- foldrで畳み込み\\n___ = ___ (___ (___) ___ [___, ___, ___, ___, ___])",
       "correctLines": [
