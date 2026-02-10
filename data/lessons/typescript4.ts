@@ -358,8 +358,8 @@ export const typescriptData4 = {
           "content": "# 書き方のポイント\\n\\nバッククォート（`）で囲んで、`${型名}` で他の型を埋め込みます。\\n\\n## 便利な使い方\\n\\nAPIのルートや、CSSのクラス名など、決まったパターンの文字列を型で表現できます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ntype Method = 'get' | 'post';\\ntype Path = '/users' | '/posts';\\n\\n// メソッドとパスの組み合わせ\\ntype Route = `${Method} ${Path}`;\\n// 'get /users' | 'get /posts' | 'post /users' | 'post /posts'\\n\\nconst route: Route = 'get /users';  // OK!\\nconst bad: Route = 'delete /users'; // エラー！\\n```"
         }
       ],
-      "correctCode": "// HTTPメソッドのユニオン型\\ntype Method = 'get' | '投稿';\\n// エンドポイントのユニオン型\\ntype Endpoint = '/users' | '/posts';\\n// ` でテンプレートリテラル型を定義\\ntype Route = `${Method} ${Endpoint}`;\\n\\n// ルートを定義\\nconst route: Route = 'get /users';\\n// 出力\\nconsole.log(route);",
-      "holeyCode": "// HTTPメソッドのユニオン型\\ntype ___ = ___ ___ ___;\\n// エンドポイントのユニオン型\\ntype ___ = ___ ___ ___;\\n// ` でテンプレートリテラル型を定義\\ntype ___ = ___${___} ${___}___;\\n___\\n// ルートを定義\\nconst ___: ___ = ___;\\n// 出力\\n___.___(___);",
+      "correctCode": "// HTTPメソッドのユニオン型\\ntype Method = 'get' | '投稿';\\n// エンドポイントのユニオン型\\ntype Endpoint = '/users' | '/posts';\\n// ` でテンプレートリテラル型を定義\\ntype Route = `${Method} ${Endpoint}`;\\n\\n// ルートを定義\\nconst route: Route = 'get /users';\\n// routeを出力\\nconsole.log(route);",
+      "holeyCode": "// HTTPメソッドのユニオン型\\ntype ___ = ___ ___ ___;\\n// エンドポイントのユニオン型\\ntype ___ = ___ ___ ___;\\n// ` でテンプレートリテラル型を定義\\ntype ___ = ___${___} ${___}___;\\n___\\n// ルートを定義\\nconst ___: ___ = ___;\\n// routeを出力\\n___.___(___);",
       "correctLines": [
           "// HTTPメソッドのユニオン型",
           "type Method = 'get' | '投稿';",
@@ -370,7 +370,7 @@ export const typescriptData4 = {
           "",
           "// ルートを定義",
           "const route: Route = 'get /users';",
-          "// 出力",
+          "// routeを出力",
           "console.log(route);"
         ],
       "lineHints": [
@@ -413,8 +413,8 @@ export const typescriptData4 = {
           "content": "# 特定の状態を除外\\n\\n「使いたくない状態」を除外した新しい型を作れます。\\n\\n## たとえ話\\n\\nすべてのステータスの中から「キャンセル済み」だけを除外して、「アクティブなステータス」だけを使いたいときに便利です。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ntype Status = 'pending' | 'success' | 'error' | 'cancelled';\\n\\n// cancelledを除外\\ntype ActiveStatus = Exclude<Status, 'cancelled'>;\\n// 'pending' | 'success' | 'error'\\n```"
         }
       ],
-      "correctCode": "// ステータスのユニオン型\\ntype Status = '保留中' | '成功' | 'エラー' | 'キャンセル済み';\\n// Exclude でユニオン型から特定の型を除外\\ntype ActiveStatus = Exclude<Status, 'キャンセル済み'>;\\n\\n// アクティブなステータスを代入\\nconst status: ActiveStatus = '保留中';\\n// 出力\\nconsole.log(status);",
-      "holeyCode": "// ステータスのユニオン型\\ntype ___ = ___ | ___ | ___ ___ ___;\\n// Exclude でユニオン型から特定の型を除外\\ntype ___ = ___<___, ___>;\\n___\\n// アクティブなステータスを代入\\nconst ___: ___ = ___;\\n// 出力\\n___.___(___);",
+      "correctCode": "// ステータスのユニオン型\\ntype Status = '保留中' | '成功' | 'エラー' | 'キャンセル済み';\\n// Exclude でユニオン型から特定の型を除外\\ntype ActiveStatus = Exclude<Status, 'キャンセル済み'>;\\n\\n// アクティブなステータスを代入\\nconst status: ActiveStatus = '保留中';\\n// statusを出力\\nconsole.log(status);",
+      "holeyCode": "// ステータスのユニオン型\\ntype ___ = ___ | ___ | ___ ___ ___;\\n// Exclude でユニオン型から特定の型を除外\\ntype ___ = ___<___, ___>;\\n___\\n// アクティブなステータスを代入\\nconst ___: ___ = ___;\\n// statusを出力\\n___.___(___);",
       "correctLines": [
           "// ステータスのユニオン型",
           "type Status = '保留中' | '成功' | 'エラー' | 'キャンセル済み';",
@@ -423,7 +423,7 @@ export const typescriptData4 = {
           "",
           "// アクティブなステータスを代入",
           "const status: ActiveStatus = '保留中';",
-          "// 出力",
+          "// statusを出力",
           "console.log(status);"
         ],
       "lineHints": [
@@ -464,8 +464,8 @@ export const typescriptData4 = {
           "content": "# 特定の種類だけを抽出\\n\\n「使いたい型だけ」を選び出せます。\\n\\n## たとえ話\\n\\nすべてのイベントの中から「マウス関連のイベント」だけを選びたいときに便利です。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ntype Event = 'click' | 'scroll' | 'keydown';\\n\\n// マウス関連だけを抽出\\ntype MouseEvent = Extract<Event, 'click' | 'scroll'>;\\n// 'click' | 'scroll'\\n```\\n\\nExcludeが「除外」、Extractが「抽出」と覚えましょう！"
         }
       ],
-      "correctCode": "// イベントのユニオン型\\ntype Event = 'クリック' | 'スクロール' | 'マウスオーバー' | 'キーdown';\\n// Extract でユニオン型から特定の型を抽出\\ntype MouseEvent = Extract<Event, 'クリック' | 'スクロール' | 'マウスオーバー'>;\\n\\n// マウスイベントを代入\\nconst event: MouseEvent = 'クリック';\\n// 出力\\nconsole.log(event);",
-      "holeyCode": "// イベントのユニオン型\\ntype ___ = ___ | ___ | ___ ___ ___;\\n// Extract でユニオン型から特定の型を抽出\\ntype ___ = ___<___, ___ | ___ | ___>;\\n___\\n// マウスイベントを代入\\nconst ___: ___ = ___;\\n// 出力\\n___.___(___);",
+      "correctCode": "// イベントのユニオン型\\ntype Event = 'クリック' | 'スクロール' | 'マウスオーバー' | 'キーdown';\\n// Extract でユニオン型から特定の型を抽出\\ntype MouseEvent = Extract<Event, 'クリック' | 'スクロール' | 'マウスオーバー'>;\\n\\n// マウスイベントを代入\\nconst event: MouseEvent = 'クリック';\\n// eventを出力\\nconsole.log(event);",
+      "holeyCode": "// イベントのユニオン型\\ntype ___ = ___ | ___ | ___ ___ ___;\\n// Extract でユニオン型から特定の型を抽出\\ntype ___ = ___<___, ___ | ___ | ___>;\\n___\\n// マウスイベントを代入\\nconst ___: ___ = ___;\\n// eventを出力\\n___.___(___);",
       "correctLines": [
           "// イベントのユニオン型",
           "type Event = 'クリック' | 'スクロール' | 'マウスオーバー' | 'キーdown';",
@@ -474,7 +474,7 @@ export const typescriptData4 = {
           "",
           "// マウスイベントを代入",
           "const event: MouseEvent = 'クリック';",
-          "// 出力",
+          "// eventを出力",
           "console.log(event);"
         ],
       "lineHints": [
@@ -515,8 +515,8 @@ export const typescriptData4 = {
           "content": "# 安全に値を使う\\n\\nnullやundefinedの可能性を排除して、安全に値を使えるようにします。\\n\\n## たとえ話\\n\\nデータを取得したとき「まだない」場合はnullかもしれません。でも「確実にある」場面ではNonNullableで保証できます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ntype MaybeString = string | null | undefined;\\n\\n// null/undefinedを除外\\ntype DefiniteString = NonNullable<MaybeString>;\\n// string\\n\\nconst text: DefiniteString = 'Hello';\\n// null や undefined は代入できない！\\n```"
         }
       ],
-      "correctCode": "// nullまたはundefinedを含む型\\ntype MaybeString = string | null | undefined;\\n// NonNullable でnull/undefinedを除外\\ntype DefiniteString = NonNullable<MaybeString>;\\n\\n// 確定した文字列を代入\\nconst text: DefiniteString = 'こんにちは';\\n// 出力\\nconsole.log(text);",
-      "holeyCode": "// nullまたはundefinedを含む型\\ntype ___ = ___ | ___ ___ ___;\\n// NonNullable でnull/undefinedを除外\\ntype ___ = ___<___>;\\n___\\n// 確定した文字列を代入\\nconst ___: ___ = ___;\\n// 出力\\n___.___(___);",
+      "correctCode": "// nullまたはundefinedを含む型\\ntype MaybeString = string | null | undefined;\\n// NonNullable でnull/undefinedを除外\\ntype DefiniteString = NonNullable<MaybeString>;\\n\\n// 確定した文字列を代入\\nconst text: DefiniteString = 'こんにちは';\\n// textを出力\\nconsole.log(text);",
+      "holeyCode": "// nullまたはundefinedを含む型\\ntype ___ = ___ | ___ ___ ___;\\n// NonNullable でnull/undefinedを除外\\ntype ___ = ___<___>;\\n___\\n// 確定した文字列を代入\\nconst ___: ___ = ___;\\n// textを出力\\n___.___(___);",
       "correctLines": [
           "// nullまたはundefinedを含む型",
           "type MaybeString = string | null | undefined;",
@@ -525,7 +525,7 @@ export const typescriptData4 = {
           "",
           "// 確定した文字列を代入",
           "const text: DefiniteString = 'こんにちは';",
-          "// 出力",
+          "// textを出力",
           "console.log(text);"
         ],
       "lineHints": [

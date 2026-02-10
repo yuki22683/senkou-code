@@ -202,8 +202,8 @@ export const kotlinData = {
           "content": "# 目標\\n\\n1. `var hp = 100` でHPを100にする\\n2. `+=` を使って20を足す\\n3. `-=` を使って50を引く\\n4. 最後のHPを表示する\\n\\n答えは `70` になるはずです。"
         }
       ],
-      "correctCode": "// var で変更可能な変数を作る\\nvar hp = 100\\n// += で 20 を足す\\nhp += 20\\n// -= で 50 を引く\\nhp -= 50\\nprintln(hp)",
-      "holeyCode": "// var で変更可能な変数を作る\\nvar ___ = ___\\n// += で 20 を足す\\n___ ___ ___\\n// -= で 50 を引く\\n___ ___ ___\\n// 出力\n___(___)",
+      "correctCode": "// var で変更可能な変数を作る\\nvar hp = 100\\n// += で 20 を足す\\nhp += 20\\n// -= で 50 を引く\\nhp -= 50\\n// hpを出力\\nprintln(hp)",
+      "holeyCode": "// var で変更可能な変数を作る\\nvar ___ = ___\\n// += で 20 を足す\\n___ ___ ___\\n// -= で 50 を引く\\n___ ___ ___\\n// hpを出力\\n___(___)",
       "correctLines": [
           "// var で変更可能な変数を作る",
           "var hp = 100",
@@ -211,7 +211,7 @@ export const kotlinData = {
           "hp += 20",
           "// -= で 50 を引く",
           "hp -= 50",
-          "// 出力",
+          "// hpを出力",
           "println(hp)"
         ],
       "lineHints": [

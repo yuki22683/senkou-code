@@ -317,8 +317,8 @@ export const typescriptData2 = {
           "content": "# 自動で番号が振られる\\n\\nenumを作ると、自動で0から順番に番号が割り当てられます。\\n\\n## たとえ話\\n\\nクラスの出席番号のようなものです。1番目の人が0番、2番目の人が1番...というふうに自動で番号がつきます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nenum Color {\\n    Red,    // 0 が自動で割り当て\\n    Green,  // 1 が自動で割り当て\\n    Blue    // 2 が自動で割り当て\\n}\\n\\nconsole.log(Color.Green);  // 1 と表示される\\n```\\n\\n0から始まるのがポイントです！"
         }
       ],
-      "correctCode": "// enum キーワードで列挙型を定義\\nenum Day {\\n    // 日曜日\\n    Sun,\\n    // 月曜日\\n    Mon,\\n    // 火曜日\\n    Tue\\n}\\n\\n// 月曜日を代入\\nconst today: Day = Day.Mon;\\n// 出力\\nconsole.log(today);",
-      "holeyCode": "// enum キーワードで列挙型を定義\\nenum ___ {\\n    // 日曜日\\n    ___,\\n    // 月曜日\\n    ___,\\n    // 火曜日\\n    ___\\n}\\n\\n// 月曜日を代入\\nconst ___: ___ = ___.___;\\n// 出力\\n___.___(___);" ,
+      "correctCode": "// enum キーワードで列挙型を定義\\nenum Day {\\n    // 日曜日\\n    Sun,\\n    // 月曜日\\n    Mon,\\n    // 火曜日\\n    Tue\\n}\\n\\n// 月曜日を代入\\nconst today: Day = Day.Mon;\\n// todayを出力\\nconsole.log(today);",
+      "holeyCode": "// enum キーワードで列挙型を定義\\nenum ___ {\\n    // 日曜日\\n    ___,\\n    // 月曜日\\n    ___,\\n    // 火曜日\\n    ___\\n}\\n\\n// 月曜日を代入\\nconst ___: ___ = ___.___;\\n// todayを出力\\n___.___(___);" ,
       "correctLines": [
           "// enum キーワードで列挙型を定義",
           "enum Day {",
@@ -332,7 +332,7 @@ export const typescriptData2 = {
           "",
           "// 月曜日を代入",
           "const today: Day = Day.Mon;",
-          "// 出力",
+          "// todayを出力",
           "console.log(today);"
         ],
       "lineHints": [
