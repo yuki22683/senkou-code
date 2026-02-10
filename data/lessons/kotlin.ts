@@ -203,7 +203,7 @@ export const kotlinData = {
         }
       ],
       "correctCode": "// var で変更可能な変数を作る\\nvar hp = 100\\n// += で 20 を足す\\nhp += 20\\n// -= で 50 を引く\\nhp -= 50\\nprintln(hp)",
-      "holeyCode": "// var で変更可能な変数を作る\\nvar ___ = ___\\n// += で 20 を足す\\n___ ___ ___\\n// -= で 50 を引く\\n___ ___ ___\\n___(___)",
+      "holeyCode": "// var で変更可能な変数を作る\\nvar ___ = ___\\n// += で 20 を足す\\n___ ___ ___\\n// -= で 50 を引く\\n___ ___ ___\\n// 出力\n___(___)",
       "correctLines": [
           "// var で変更可能な変数を作る",
           "var hp = 100",
@@ -211,16 +211,18 @@ export const kotlinData = {
           "hp += 20",
           "// -= で 50 を引く",
           "hp -= 50",
+          "// 出力",
           "println(hp)"
         ],
       "lineHints": [
           null,
-          "変数hpを宣言し、100を代入します。",
+          "",
           null,
-          "hpに20を足します。+=演算子を使います。",
+          "",
           null,
-          "hpから50を引きます。-=演算子を使います。",
-          "println関数でhpの値を出力します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [
@@ -260,22 +262,26 @@ export const kotlinData = {
         }
       ],
       "correctCode": "// score に 100 を入れる\\nval score = 100\\n// > で比較する\\nif (score > 80) {\\n    println(\"すごい！\")\\n}",
-      "holeyCode": "// score に 100 を入れる\\nval ___ = ___\\n// > で比較する\\nif (___ ___ ___) ___\\n    ___(\"___\")\\n___",
+      "holeyCode": "// score に 100 を入れる\\nval ___ = ___\\n// > で比較する\\nif (___ ___ ___) ___\\n    // 出力\n    ___(\"___\")\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// score に 100 を入れる",
           "val score = 100",
           "// > で比較する",
           "if (score > 80) {",
-          "    println(\"すごい！\")",
+          "    // 出力",
+          "    println(\\\"すごい！\\\")",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "変数scoreを宣言し、100を代入します。",
+          "",
           null,
-          "scoreが80より大きいか比較します。if文と>演算子を使います。",
-          "println関数で「すごい！」を出力します。",
-          "if文のブロックを閉じる}です。"
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "numbers": [
@@ -318,22 +324,30 @@ export const kotlinData = {
         }
       ],
       "correctCode": "val score = 80\\nval bonus = 10\\n// && で両方の条件をチェック\\nif (score >= 70 && bonus > 0) {\\n    println(\"ボーナス合格！\")\\n}",
-      "holeyCode": "val ___ = ___\\nval ___ = ___\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___) ___\\n    ___(\"___\")\\n___",
+      "holeyCode": "// 値を代入\nval ___ = ___\\n// 値を代入\nval ___ = ___\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___) ___\\n    // 出力\n    ___(\"___\")\\n// ブロックを閉じる\n___",
       "correctLines": [
+          "// 値を代入",
           "val score = 80",
+          "// 値を代入",
           "val bonus = 10",
           "// && で両方の条件をチェック",
           "if (score >= 70 && bonus > 0) {",
-          "    println(\"ボーナス合格！\")",
+          "    // 出力",
+          "    println(\\\"ボーナス合格！\\\")",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "変数scoreを宣言し、80を代入します。",
-          "変数bonusを宣言し、10を代入します。",
           null,
-          "score>=70かつbonus>0の両方を満たすか判定します。&&演算子を使います。",
-          "println関数で「ボーナス合格！」を出力します。",
-          "if文のブロックを閉じる}です。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [

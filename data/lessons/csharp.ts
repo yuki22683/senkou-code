@@ -248,7 +248,7 @@ export const csharpData = {
         }
       ],
       "correctCode": "// hp に 100 を入れる\\nint hp = 100;\\n// += で 20 を足す\\nhp += 20;\\n// -= で 50 を引く\\nhp -= 50;\\nConsole.WriteLine(hp);",
-      "holeyCode": "// hp に 100 を入れる\\n___ ___ = ___;\\n// += で 20 を足す\\n___ ___ ___;\\n// -= で 50 を引く\\n___ ___ ___;\\n___.___(___);",
+      "holeyCode": "// hp に 100 を入れる\\n___ ___ = ___;\\n// += で 20 を足す\\n___ ___ ___;\\n// -= で 50 を引く\\n___ ___ ___;\\n// 出力\n___.___(___);",
       "correctLines": [
           "// hp に 100 を入れる",
           "int hp = 100;",
@@ -256,16 +256,18 @@ export const csharpData = {
           "hp += 20;",
           "// -= で 50 を引く",
           "hp -= 50;",
+          "// 出力",
           "Console.WriteLine(hp);"
         ],
       "lineHints": [
           null,
-          "int型の変数hpに100を代入します。",
+          "",
           null,
-          "hp += 20 で変数hpに20を加算します。",
+          "",
           null,
-          "hp -= 50 で変数hpから50を減算します。",
-          "Console.WriteLineでhpの値を出力します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [
@@ -390,26 +392,30 @@ export const csharpData = {
         }
       ],
       "correctCode": "// scoreに100を入れる\\nint score = 100;\\n// もし80より大きかったら\\nif (score > 80)\\n{\\n    // 「合格！」と表示する\\n    Console.WriteLine(\"合格！\");\\n}",
-      "holeyCode": "// scoreに100を入れる\\n___ ___ = ___;\\n// もし80より大きかったら\\nif (___ ___ ___)\\n___\\n    // 「合格！」と表示する\\n    ___.___(\"___\");\\n___",
+      "holeyCode": "// scoreに100を入れる\\n___ ___ = ___;\\n// もし80より大きかったら\\nif (___ ___ ___)\\n// ブロックを開始\n___\\n    // 「合格！」と表示する\\n    ___.___(\"___\");\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// scoreに100を入れる",
           "int score = 100;",
           "// もし80より大きかったら",
           "if (score > 80)",
+          "// ブロックを開始",
           "{",
           "    // 「合格！」と表示する",
-          "    Console.WriteLine(\"合格！\");",
+          "    Console.WriteLine(\\\"合格！\\\");",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "int型の変数scoreに100を代入します。",
+          "",
           null,
-          "if文でscore > 80の条件を判定します。",
-          "ブロックの開始です。",
+          "",
           null,
-          "Console.WriteLineで\"合格！\"を出力します。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "\\\"\\\"",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -446,38 +452,46 @@ export const csharpData = {
         }
       ],
       "correctCode": "// ageに10を入れる\\nint age = 10;\\n// 20歳以上かどうかで分ける\\nif (age >= 20)\\n{\\n    // 「大人」と出力\\n    Console.WriteLine(\"大人\");\\n}\\n// else でそれ以外の場合\\nelse\\n{\\n    // 「子供」と出力\\n    Console.WriteLine(\"子供\");\\n}",
-      "holeyCode": "// ageに10を入れる\\n___ ___ = ___;\\n// 20歳以上かどうかで分ける\\nif (___ ___ ___)\\n___\\n    // 「大人」と出力\\n    ___.___(\"___\");\\n___\\n// else でそれ以外の場合\\n___\\n___\\n    // 「子供」と出力\\n    ___.___(\"___\");\\n___",
+      "holeyCode": "// ageに10を入れる\\n___ ___ = ___;\\n// 20歳以上かどうかで分ける\\nif (___ ___ ___)\\n// ブロックを開始\n___\\n    // 「大人」と出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\n___\\n// else でそれ以外の場合\\n___\\n// ブロックを開始\n___\\n    // 「子供」と出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// ageに10を入れる",
           "int age = 10;",
           "// 20歳以上かどうかで分ける",
           "if (age >= 20)",
+          "// ブロックを開始",
           "{",
           "    // 「大人」と出力",
-          "    Console.WriteLine(\"大人\");",
+          "    Console.WriteLine(\\\"大人\\\");",
+          "// ブロックを閉じる",
           "}",
           "// else でそれ以外の場合",
           "else",
+          "// ブロックを開始",
           "{",
           "    // 「子供」と出力",
-          "    Console.WriteLine(\"子供\");",
+          "    Console.WriteLine(\\\"子供\\\");",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "int型の変数ageに10を代入します。",
+          "",
           null,
-          "if文でage >= 20の条件を判定します。",
-          "ブロックの開始です。",
+          "",
           null,
-          "Console.WriteLineで\"大人\"を出力します。",
-          "ブロックを閉じます。",
+          "",
           null,
-          "条件が偽の場合の処理を定義します。",
-          "ブロックの開始です。",
+          "\\\"\\\"",
           null,
-          "Console.WriteLineで\"子供\"を出力します。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "\\\"\\\"",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -515,26 +529,34 @@ export const csharpData = {
         }
       ],
       "correctCode": "// score と bonus を定義\\nint score = 80;\\nint bonus = 10;\\n// && で両方の条件をチェック\\nif (score >= 70 && bonus > 0)\\n{\\n    Console.WriteLine(\"ボーナスあり合格\");\\n}",
-      "holeyCode": "// score と bonus を定義\\n___ ___ = ___;\\n___ ___ = ___;\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___)\\n___\\n    ___.___(\"___\");\\n___",
+      "holeyCode": "// score と bonus を定義\\n___ ___ = ___;\\n// 変数を宣言\n___ ___ = ___;\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___)\\n// ブロックを開始\n___\\n    // \"\"\n    ___.___(\"___\");\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// score と bonus を定義",
           "int score = 80;",
+          "// 変数を宣言",
           "int bonus = 10;",
           "// && で両方の条件をチェック",
           "if (score >= 70 && bonus > 0)",
+          "// ブロックを開始",
           "{",
-          "    Console.WriteLine(\"ボーナスあり合格\");",
+          "    // \\\"\\\"",
+          "    Console.WriteLine(\\\"ボーナスあり合格\\\");",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "int型の変数scoreに80を代入します。",
-          "int型の変数bonusに10を代入します。",
+          "",
           null,
-          "if文でscore >= 70 && bonus > 0の条件を判定します。",
-          "ブロックの開始です。",
-          "Console.WriteLineで\"ボーナスあり合格\"を出力します。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "\\\"\\\"",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [
@@ -566,26 +588,30 @@ export const csharpData = {
         }
       ],
       "correctCode": "// namesに{\"太郎\", \"花子\"}を代入\\nstring[] names = {\"太郎\", \"花子\"};\\n// 順番に取り出すループ\\nforeach (string name in names)\\n{\\n    // 取り出した名前を表示\\n    Console.WriteLine(name);\\n}",
-      "holeyCode": "// namesに{\"太郎\", \"花子\"}を代入\\n___[] ___ = {\"___\", \"___\"};\\n// 順番に取り出すループ\\nforeach (___ ___ in ___)\\n___\\n    // 取り出した名前を表示\\n    ___.___(___);\\n___",
+      "holeyCode": "// namesに{\"太郎\", \"花子\"}を代入\\n___[] ___ = {\"___\", \"___\"};\\n// 順番に取り出すループ\\nforeach (___ ___ in ___)\\n// ブロックを開始\n___\\n    // 取り出した名前を表示\\n    ___.___(___);\\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// namesに{\"太郎\", \"花子\"}を代入",
-          "string[] names = {\"太郎\", \"花子\"};",
+          "// namesに{\\\"太郎\\\", \\\"花子\\\"}を代入",
+          "string[] names = {\\\"太郎\\\", \\\"花子\\\"};",
           "// 順番に取り出すループ",
           "foreach (string name in names)",
+          "// ブロックを開始",
           "{",
           "    // 取り出した名前を表示",
           "    Console.WriteLine(name);",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "string[]型の変数namesに{\"太郎\", \"花子\"}を代入します。",
+          "\\\"\\\"\\\"\\\"",
           null,
-          "foreach文でnamesの各要素をstring型のnameに取り出します。",
-          "ブロックの開始です。",
+          "",
           null,
-          "Console.WriteLineで変数nameを出力します。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -671,26 +697,30 @@ export const csharpData = {
         }
       ],
       "correctCode": "// Greetというメソッドを定義\\nstatic void Greet()\\n{\\n    // こんにちは と表示\\n    Console.WriteLine(\"こんにちは\");\\n}\\n// Greetメソッドを呼び出す\\nGreet();",
-      "holeyCode": "// Greetというメソッドを定義\\nstatic void ___()\\n___\\n    // こんにちは と表示\\n    ___.___(\"___\");\\n___\\n// Greetメソッドを呼び出す\\n___();",
+      "holeyCode": "// Greetというメソッドを定義\\nstatic void ___()\\n// ブロックを開始\n___\\n    // こんにちは と表示\\n    ___.___(\"___\");\\n// ブロックを閉じる\n___\\n// Greetメソッドを呼び出す\\n___();",
       "correctLines": [
           "// Greetというメソッドを定義",
           "static void Greet()",
+          "// ブロックを開始",
           "{",
           "    // こんにちは と表示",
-          "    Console.WriteLine(\"こんにちは\");",
+          "    Console.WriteLine(\\\"こんにちは\\\");",
+          "// ブロックを閉じる",
           "}",
           "// Greetメソッドを呼び出す",
           "Greet();"
         ],
       "lineHints": [
           null,
-          "static void Greet()でメソッドを定義します。",
-          "ブロックの開始です。",
+          "",
           null,
-          "Console.WriteLineで\"こんにちは\"を出力します。",
-          "ブロックを閉じます。",
+          "",
           null,
-          "Greet()でメソッドを呼び出します。"
+          "\\\"\\\"",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

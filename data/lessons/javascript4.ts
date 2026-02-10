@@ -160,7 +160,7 @@ export const javascriptData4 = {
         }
       ],
       "correctCode": "// name: '太郎', age: 25 のオブジェクトを定義\\nconst user = { name: '太郎', age: 25 };\\n// entries でキーと値のペアを取得\\nfor (const [key, value] of Object.entries(user)) {\\n  // テンプレートリテラルで出力\\n  console.log(`${key}: ${value}`);\\n}",
-      "holeyCode": "// name: '太郎', age: 25 のオブジェクトを定義\\nconst ___ = { ___: ___, ___: ___ };\\n// entries でキーと値のペアを取得\\nfor (const [___, ___] of ___.___(___)) {\\n  // テンプレートリテラルで出力\\n  ___.___(___);\\n___",
+      "holeyCode": "// name: '太郎', age: 25 のオブジェクトを定義\\nconst ___ = { ___: ___, ___: ___ };\\n// entries でキーと値のペアを取得\\nfor (const [___, ___] of ___.___(___)) {\\n  // テンプレートリテラルで出力\\n  ___.___(___);\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// name: '太郎', age: 25 のオブジェクトを定義",
           "const user = { name: '太郎', age: 25 };",
@@ -168,16 +168,18 @@ export const javascriptData4 = {
           "for (const [key, value] of Object.entries(user)) {",
           "  // テンプレートリテラルで出力",
           "  console.log(`${key}: ${value}`);",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "{ name: '太郎', age: 25 } のオブジェクトを作ります。",
+          "",
           null,
-          "Object.entriesでキーと値のペアを取得し、分割代入でkey, valueに代入します。",
+          "",
           null,
-          "テンプレートリテラル `${key}: ${value}` で出力します。",
-          "forループのブロックを閉じます。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -338,7 +340,7 @@ export const javascriptData4 = {
         }
       ],
       "correctCode": "// createCounter関数を定義\\nfunction createCounter() {\\n  // countを0で初期化\\n  let count = 0;\\n  // ++ でインクリメントして返す\\n  return () => ++count;\\n}\\n// カウンターを作成\\nconst counter = createCounter();\\n// 1回目の呼び出し\\nconsole.log(counter());\\n// 2回目の呼び出し\\nconsole.log(counter());\\n// 3回目の呼び出し\\nconsole.log(counter());",
-      "holeyCode": "// createCounter関数を定義\\nfunction ___() {\\n  // countを0で初期化\\n  let ___ = ___;\\n  // ++ でインクリメントして返す\\n  return () => ______;\\n___\\n// カウンターを作成\\nconst ___ = ___();\\n// 1回目の呼び出し\\n___.___(_());\\n// 2回目の呼び出し\\n___.___(_());\\n// 3回目の呼び出し\\n___.___(_());",
+      "holeyCode": "// createCounter関数を定義\\nfunction ___() {\\n  // countを0で初期化\\n  let ___ = ___;\\n  // ++ でインクリメントして返す\\n  return () => ______;\\n// ブロックを閉じる\n___\\n// カウンターを作成\\nconst ___ = ___();\\n// 1回目の呼び出し\\n___.___(_());\\n// 2回目の呼び出し\\n___.___(_());\\n// 3回目の呼び出し\\n___.___(_());",
       "correctLines": [
           "// createCounter関数を定義",
           "function createCounter() {",
@@ -346,6 +348,7 @@ export const javascriptData4 = {
           "  let count = 0;",
           "  // ++ でインクリメントして返す",
           "  return () => ++count;",
+          "// ブロックを閉じる",
           "}",
           "// カウンターを作成",
           "const counter = createCounter();",
@@ -358,20 +361,21 @@ export const javascriptData4 = {
         ],
       "lineHints": [
           null,
-          "createCounter という関数を定義します。",
+          "",
           null,
-          "count を 0 で初期化します。",
+          "",
           null,
-          "++count でインクリメントして返します。",
-          "createCounter関数の定義を完了します。",
+          "",
           null,
-          "createCounter() を呼び出して counter に代入します。",
+          "",
           null,
-          "counter() を呼び出して結果を出力します。",
+          "",
           null,
-          "counter() を呼び出して結果を出力します。",
+          "",
           null,
-          "counter() を呼び出して結果を出力します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -398,48 +402,58 @@ export const javascriptData4 = {
         }
       ],
       "correctCode": "// memoize関数を定義\\nfunction memoize(fn) {\\n  // cacheに{}を代入\\n  const cache = {};\\n  return (x) => {\\n    // in でオブジェクトにキーが存在するかチェック\\n    if (!(x in cache)) {\\n      // キャッシュに結果を保存\\n      cache[x] = fn(x);\\n    }\\n    // return でキャッシュから返す\\n    return cache[x];\\n  };\\n}\\n// メモ化されたsquare関数を作成\\nconst square = memoize(x => x * x);\\n// square(5)を出力\\nconsole.log(square(5));\\nconsole.log(square(5));",
-      "holeyCode": "// memoize関数を定義\\nfunction ___(___) {\\n  // cacheに{}を代入\\n  const ___ = ___;\\n  return (___) => {\\n    // in でオブジェクトにキーが存在するかチェック\\n    if (!(___ in ___)) {\\n      // キャッシュに結果を保存\\n      ___[___] = ___(___);\\n    ___\\n    // return でキャッシュから返す\\n    return ___[___];\\n  ___\\n___\\n// メモ化されたsquare関数を作成\\nconst ___ = ___(___ => ___ ___ ___);\\n// square(5)を出力\\n___.___(___(___));\\n___.___(___(___));",
+      "holeyCode": "// memoize関数を定義\\nfunction ___(___) {\\n  // cacheに{}を代入\\n  const ___ = ___;\\n  // ブロックを開始\n  return (___) => {\\n    // in でオブジェクトにキーが存在するかチェック\\n    if (!(___ in ___)) {\\n      // キャッシュに結果を保存\\n      ___[___] = ___(___);\\n    // ブロックを閉じる\n    ___\\n    // return でキャッシュから返す\\n    return ___[___];\\n  // ブロックを閉じる\n  ___\\n// ブロックを閉じる\n___\\n// メモ化されたsquare関数を作成\\nconst ___ = ___(___ => ___ ___ ___);\\n// square(5)を出力\\n___.___(___(___));\\n// メソッドを呼び出す\n___.___(___(___));",
       "correctLines": [
           "// memoize関数を定義",
           "function memoize(fn) {",
           "  // cacheに{}を代入",
           "  const cache = {};",
+          "  // ブロックを開始",
           "  return (x) => {",
           "    // in でオブジェクトにキーが存在するかチェック",
           "    if (!(x in cache)) {",
           "      // キャッシュに結果を保存",
           "      cache[x] = fn(x);",
+          "    // ブロックを閉じる",
           "    }",
           "    // return でキャッシュから返す",
           "    return cache[x];",
+          "  // ブロックを閉じる",
           "  };",
+          "// ブロックを閉じる",
           "}",
           "// メモ化されたsquare関数を作成",
           "const square = memoize(x => x * x);",
           "// square(5)を出力",
           "console.log(square(5));",
+          "// メソッドを呼び出す",
           "console.log(square(5));"
         ],
       "lineHints": [
           null,
-          "memoize という関数を定義します。引数は fn です。",
+          "",
           null,
-          "cache に空のオブジェクト {} を代入します。",
-          "引数 x を受け取る関数を返します。",
+          "",
           null,
-          "x in cache でキーが存在するかチェックします。",
+          "",
           null,
-          "cache[x] に fn(x) の結果を保存します。",
-          "if文のブロックを閉じます。",
+          "",
           null,
-          "cache[x] を返します。",
-          "内部関数の定義を完了します。",
-          "memoize関数の定義を完了します。",
+          "",
           null,
-          "memoize で x * x を返す関数をラップします。",
+          "",
           null,
-          "square(5) を出力します。",
-          "square(5) を出力します。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -466,7 +480,7 @@ export const javascriptData4 = {
         }
       ],
       "correctCode": "// pipe関数を定義\\nconst pipe = (...fns) => x =>\\n  // reduce で累積値 v を使って関数を連鎖\\n  fns.reduce((v, f) => f(v), x);\\n\\n// パイプラインで関数を連結\\nconst process = pipe(\\n  // +1 する関数\\n  x => x + 1,\\n  // *2 する関数\\n  x => x * 2,\\n  // -3 する関数\\n  x => x - 3\\n);\\n// process(5)を出力\\nconsole.log(process(5));",
-      "holeyCode": "// pipe関数を定義\\nconst ___ = (...___) => ___ =>\\n  // reduce で累積値 v を使って関数を連鎖\\n  ___.___((___, ___) => ___(_), ___);\\n___\\n// パイプラインで関数を連結\\nconst ___ = ___(\\n  // +1 する関数\\n  ___ => ___ ___ ___,\\n  // *2 する関数\\n  ___ => ___ ___ ___,\\n  // -3 する関数\\n  ___ => ___ ___ ___\\n___\\n// process(5)を出力\\n___.___(___(___));",
+      "holeyCode": "// pipe関数を定義\\nconst ___ = (...___) => ___ =>\\n  // reduce で累積値 v を使って関数を連鎖\\n  ___.___((___, ___) => ___(_), ___);\\n___\\n// パイプラインで関数を連結\\nconst ___ = ___(\\n  // +1 する関数\\n  ___ => ___ ___ ___,\\n  // *2 する関数\\n  ___ => ___ ___ ___,\\n  // -3 する関数\\n  ___ => ___ ___ ___\\n// 関数呼び出しを閉じる\n___\\n// process(5)を出力\\n___.___(___(___));",
       "correctLines": [
           "// pipe関数を定義",
           "const pipe = (...fns) => x =>",
@@ -481,27 +495,29 @@ export const javascriptData4 = {
           "  x => x * 2,",
           "  // -3 する関数",
           "  x => x - 3",
+          "// 関数呼び出しを閉じる",
           ");",
           "// process(5)を出力",
           "console.log(process(5));"
         ],
       "lineHints": [
           null,
-          "スプレッド構文 ...fns で関数配列を受け取ります。",
+          "",
           null,
-          "reduce で累積値 v を使って関数を連鎖させます。",
+          "",
           null,
           null,
-          "pipe に関数を渡します。",
+          "",
           null,
-          "x + 1 を返す関数です。",
+          "",
           null,
-          "x * 2 を返す関数です。",
+          "",
           null,
-          "x - 3 を返す関数です。",
-          "pipe関数の呼び出しを完了します。",
+          "",
           null,
-          "process(5) の結果を出力します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

@@ -119,16 +119,18 @@ export const bash3Data = {
         }
       ],
       "correctCode": "# in.txtを作成してから読み込む\\necho \"line1\" > /tmp/in.txt\\nwc -l < /tmp/in.txt",
-      "holeyCode": "# in.txtを作成してから読み込む\\n___ \"___\" ___ ___\\n___ ___ ___ ___",
+      "holeyCode": "# in.txtを作成してから読み込む\\n___ \"___\" ___ ___\\n// コードを記述\n___ ___ ___ ___",
       "correctLines": [
           "# in.txtを作成してから読み込む",
-          "echo \"line1\" > /tmp/in.txt",
+          "echo \\\"line1\\\" > /tmp/in.txt",
+          "// コードを記述",
           "wc -l < /tmp/in.txt"
         ],
       "lineHints": [
           null,
-          ">でファイルに出力を書き込みます。",
-          "<でファイルから入力を読み込みます。-lで行数を数えます。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [
@@ -344,18 +346,22 @@ export const bash3Data = {
         }
       ],
       "correctCode": "# 複数行出力を並べ替える\\necho -e \"b\\na\\nc\" | sort",
-      "holeyCode": "# 複数行出力を並べ替える\\n___ ___ \"___\\n___\\n___\" ___ ___",
+      "holeyCode": "# 複数行出力を並べ替える\\n___ ___ \"___\\n// \\\n___\\n// パイプライン処理\n___\" ___ ___",
       "correctLines": [
           "# 複数行出力を並べ替える",
-          "echo -e \"b",
+          "echo -e \\\\\\\"b",
+          "// \\\\\\\\",
           "a",
-          "c\" | sort"
+          "// パイプライン処理",
+          "c\\\\\\\" | sort"
         ],
       "lineHints": [
           null,
-          "-eオプションでエスケープシーケンス（\\n等）を有効にします。",
-          "\\nで改行された次の文字です。",
-          "sortコマンドで行をアルファベット順に並べ替えます。"
+          "\\\\\\\\",
+          null,
+          "\\\\\\\\",
+          null,
+          ""
         ],
         "candidates": {
           "commands": [
@@ -384,18 +390,22 @@ export const bash3Data = {
         }
       ],
       "correctCode": "# 重複をuniqで取り除く\\necho -e \"a\\na\\nb\" | uniq",
-      "holeyCode": "# 重複をuniqで取り除く\\n___ ___ \"___\\n___\\n___\" ___ ___",
+      "holeyCode": "# 重複をuniqで取り除く\\n___ ___ \"___\\n// \\\n___\\n// パイプライン処理\n___\" ___ ___",
       "correctLines": [
           "# 重複をuniqで取り除く",
-          "echo -e \"a",
+          "echo -e \\\\\\\"a",
+          "// \\\\\\\\",
           "a",
-          "b\" | uniq"
+          "// パイプライン処理",
+          "b\\\\\\\" | uniq"
         ],
       "lineHints": [
           null,
-          "-eオプションでエスケープシーケンスを有効にします。",
-          "\\nで改行された次の文字です。",
-          "uniqコマンドで連続する重複行を1つにまとめます。"
+          "",
+          null,
+          "\\\\\\\\",
+          null,
+          ""
         ],
         "candidates": {
           "commands": [

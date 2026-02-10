@@ -282,7 +282,7 @@ export const javascriptData = {
         }
       ],
       "correctCode": "// score に 100 を入れる\\nconst score = 100;\\n// もし 80 より大きかったら\\nif (score > 80) {\\n    // 「ごうかく！」と表示する\\n    console.log('ごうかく！');\\n}",
-      "holeyCode": "// score に 100 を入れる\\nconst ___ = ___;\\n// もし 80 より大きかったら\\nif (___ ___ ___) {\\n    // 「ごうかく！」と表示する\\n    ___.___(___);\\n___",
+      "holeyCode": "// score に 100 を入れる\\nconst ___ = ___;\\n// もし 80 より大きかったら\\nif (___ ___ ___) {\\n    // 「ごうかく！」と表示する\\n    ___.___(___);\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// score に 100 を入れる",
           "const score = 100;",
@@ -290,16 +290,18 @@ export const javascriptData = {
           "if (score > 80) {",
           "    // 「ごうかく！」と表示する",
           "    console.log('ごうかく！');",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "変数名scoreを宣言し、数値100を代入します。",
+          "",
           null,
-          "変数scoreが80より大きいかを>演算子で比較します。",
+          "",
           null,
-          "consoleオブジェクトのlogメソッドで文字列「ごうかく！」を出力します。",
-          "閉じ括弧}を入力してブロックを閉じます。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "variables": [
@@ -341,7 +343,7 @@ export const javascriptData = {
         }
       ],
       "correctCode": "// age に 10 を入れる\\nconst age = 10;\\n// 20以上かを比較する演算子\\nif (age >= 20) {\\n    // 20歳以上のときのメッセージ（'おとな'）\\n    console.log('おとな');\\n// 「そうでなければ」を表すキーワード\\n} else {\\n    // それ以外の場合（'こども'）\\n    console.log('こども');\\n}",
-      "holeyCode": "// age に 10 を入れる\\nconst ___ = ___;\\n// 20以上かを比較する演算子\\nif (___ ___ ___) {\\n    // 20歳以上のときのメッセージ（'おとな'）\\n    ___.___(___);\\n// 「そうでなければ」を表すキーワード\\n} ___ {\\n    // それ以外の場合（'こども'）\\n    ___.___(___);\\n___",
+      "holeyCode": "// age に 10 を入れる\\nconst ___ = ___;\\n// 20以上かを比較する演算子\\nif (___ ___ ___) {\\n    // 20歳以上のときのメッセージ（'おとな'）\\n    ___.___(___);\\n// 「そうでなければ」を表すキーワード\\n} ___ {\\n    // それ以外の場合（'こども'）\\n    ___.___(___);\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// age に 10 を入れる",
           "const age = 10;",
@@ -353,20 +355,22 @@ export const javascriptData = {
           "} else {",
           "    // それ以外の場合（'こども'）",
           "    console.log('こども');",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "変数名ageを宣言し、数値10を代入します。",
+          "",
           null,
-          "変数ageが20以上かを>=演算子で比較します。",
+          "",
           null,
-          "consoleオブジェクトのlogメソッドで文字列「おとな」を出力します。",
+          "",
           null,
-          "条件が偽の場合に実行するelseブロックです。",
+          "",
           null,
-          "consoleオブジェクトのlogメソッドで文字列「こども」を出力します。",
-          "閉じ括弧}を入力してブロックを閉じます。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "variables": [
@@ -409,7 +413,7 @@ export const javascriptData = {
         }
       ],
       "correctCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst names = ['たろう', 'はなこ'];\\n// 順番に取り出すループ\\nfor (const name of names) {\\n    // 取り出した名前を表示\\n    console.log(name);\\n}",
-      "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst ___ = ['___', '___'];\\n// 順番に取り出すループ\\nfor (const ___ of ___) {\\n    // 取り出した名前を表示\\n    ___.___(___)\\n___",
+      "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst ___ = ['___', '___'];\\n// 順番に取り出すループ\\nfor (const ___ of ___) {\\n    // 取り出した名前を表示\\n    ___.___(___)\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// 配列を作る（'たろう', 'はなこ'の順）",
           "const names = ['たろう', 'はなこ'];",
@@ -417,16 +421,18 @@ export const javascriptData = {
           "for (const name of names) {",
           "    // 取り出した名前を表示",
           "    console.log(name);",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "変数名namesを宣言し、配列['たろう', 'はなこ']を代入します。",
+          "",
           null,
-          "for...of文で配列namesから要素を変数nameに順番に取り出します。",
+          "",
           null,
-          "consoleオブジェクトのlogメソッドで変数nameを出力します。",
-          "閉じ括弧}を入力してブロックを閉じます。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "variables": [
@@ -510,24 +516,26 @@ export const javascriptData = {
         }
       ],
       "correctCode": "// greet という関数を定義する（'こんにちは'と表示）\\nfunction greet() {\\n    // 'こんにちは'と表示\\n    console.log('こんにちは');\\n}\\n// 関数を動かす\\ngreet();",
-      "holeyCode": "// greet という関数を定義する（'こんにちは'と表示）\\nfunction ___() {\\n    // 'こんにちは'と表示\\n    ___.___(___);\\n___\\n// 関数を動かす\\n___();",
+      "holeyCode": "// greet という関数を定義する（'こんにちは'と表示）\\nfunction ___() {\\n    // 'こんにちは'と表示\\n    ___.___(___);\\n// ブロックを閉じる\n___\\n// 関数を動かす\\n___();",
       "correctLines": [
           "// greet という関数を定義する（'こんにちは'と表示）",
           "function greet() {",
           "    // 'こんにちは'と表示",
           "    console.log('こんにちは');",
+          "// ブロックを閉じる",
           "}",
           "// 関数を動かす",
           "greet();"
         ],
       "lineHints": [
           null,
-          "関数名greetでfunctionを定義します。",
+          "",
           null,
-          "consoleオブジェクトのlogメソッドで文字列「こんにちは」を出力します。",
-          "閉じ括弧}を入力して関数定義を閉じます。",
+          "",
           null,
-          "関数greetを呼び出して実行します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "functions": [

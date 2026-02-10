@@ -368,7 +368,7 @@ export const rubyData = {
         }
       ],
       "correctCode": "# scoreに100を入れる\\nscore = 100\\n# もし80より大きかったら\\nif score > 80\\n  # 「合格！」と表示する\\n  puts '合格！'\\nend",
-      "holeyCode": "# scoreに100を入れる\\n___ = ___\\n# もし80より大きかったら\\nif ___ ___ ___\\n  # 「合格！」と表示する\\n  ___ '___'\\n___",
+      "holeyCode": "# scoreに100を入れる\\n___ = ___\\n# もし80より大きかったら\\nif ___ ___ ___\\n  # 「合格！」と表示する\\n  ___ '___'\\n# ブロックを終了\n___",
       "correctLines": [
           "# scoreに100を入れる",
           "score = 100",
@@ -376,16 +376,18 @@ export const rubyData = {
           "if score > 80",
           "  # 「合格！」と表示する",
           "  puts '合格！'",
+          "# ブロックを終了",
           "end"
         ],
       "lineHints": [
           null,
-          "変数scoreに数値100を代入します。",
+          "",
           null,
-          "ifでscore > 80を判定します。",
+          "",
           null,
-          "putsで「合格！」を出力します。",
-          "endでブロックを終了します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -425,7 +427,7 @@ export const rubyData = {
         }
       ],
       "correctCode": "# ageに10を入れる\\nage = 10\\n# 20歳以上かどうかで分ける\\nif age >= 20\\n  # 「大人」と表示\\n  puts '大人'\\n# else でそれ以外の場合\\nelse\\n  # 「子供」と表示\\n  puts '子供'\\nend",
-      "holeyCode": "# ageに10を入れる\\n___ = ___\\n# 20歳以上かどうかで分ける\\nif ___ ___ ___\\n  # 「大人」と表示\\n  ___ '___'\\n# else でそれ以外の場合\\n___\\n  # 「子供」と表示\\n  ___ '___'\\n___",
+      "holeyCode": "# ageに10を入れる\\n___ = ___\\n# 20歳以上かどうかで分ける\\nif ___ ___ ___\\n  # 「大人」と表示\\n  ___ '___'\\n# else でそれ以外の場合\\n___\\n  # 「子供」と表示\\n  ___ '___'\\n# ブロックを終了\n___",
       "correctLines": [
           "# ageに10を入れる",
           "age = 10",
@@ -437,20 +439,22 @@ export const rubyData = {
           "else",
           "  # 「子供」と表示",
           "  puts '子供'",
+          "# ブロックを終了",
           "end"
         ],
       "lineHints": [
           null,
-          "変数ageに数値10を代入します。",
+          "",
           null,
-          "ifでage >= 20を判定します。",
+          "",
           null,
-          "putsで「大人」を出力します。",
+          "",
           null,
-          "elseでそれ以外の場合に実行します。",
+          "",
           null,
-          "putsで「子供」を出力します。",
-          "endでブロックを終了します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -492,7 +496,7 @@ export const rubyData = {
         }
       ],
       "correctCode": "# scoreに85を入れる\\nscore = 85\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif score >= 80 and score <= 100\\n  # 「合格！」と表示\\n  puts '合格！'\\nend",
-      "holeyCode": "# scoreに85を入れる\\n___ = ___\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif ___ ___ ___ ___ ___ ___ ___\\n  # 「合格！」と表示\\n  ___ '___'\\n___",
+      "holeyCode": "# scoreに85を入れる\\n___ = ___\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif ___ ___ ___ ___ ___ ___ ___\\n  # 「合格！」と表示\\n  ___ '___'\\n# ブロックを終了\n___",
       "correctLines": [
           "# scoreに85を入れる",
           "score = 85",
@@ -500,16 +504,18 @@ export const rubyData = {
           "if score >= 80 and score <= 100",
           "  # 「合格！」と表示",
           "  puts '合格！'",
+          "# ブロックを終了",
           "end"
         ],
       "lineHints": [
           null,
-          "変数scoreに数値85を代入します。",
+          "",
           null,
-          "ifでscore >= 80 and score <= 100を判定します。",
+          "",
           null,
-          "putsで「合格！」を出力します。",
-          "endでブロックを終了します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -551,7 +557,7 @@ export const rubyData = {
         }
       ],
       "correctCode": "# namesに['太郎', '花子']を代入\\nnames = ['太郎', '花子']\\n# eachでnamesをループ\\nnames.each do |name|\\n  # nameを表示\\n  puts name\\nend",
-      "holeyCode": "# namesに['太郎', '花子']を代入\\n___ = ['___', '___']\\n# eachでnamesをループ\\n___.___ do |___|\\n  # nameを表示\\n  ___ ___\\n___",
+      "holeyCode": "# namesに['太郎', '花子']を代入\\n___ = ['___', '___']\\n# eachでnamesをループ\\n___.___ do |___|\\n  # nameを表示\\n  ___ ___\\n# ブロックを終了\n___",
       "correctLines": [
           "# namesに['太郎', '花子']を代入",
           "names = ['太郎', '花子']",
@@ -559,16 +565,18 @@ export const rubyData = {
           "names.each do |name|",
           "  # nameを表示",
           "  puts name",
+          "# ブロックを終了",
           "end"
         ],
       "lineHints": [
           null,
-          "配列namesに太郎、花子の順で入力します。",
+          "",
           null,
-          "names.eachでループします。",
+          "",
           null,
-          "putsでnameを出力します。",
-          "endでブロックを終了します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": ["do", "end"],
@@ -650,24 +658,26 @@ export const rubyData = {
         }
       ],
       "correctCode": "# greetというメソッドを定義\\ndef greet\\n  # こんにちは と表示\\n  puts 'こんにちは'\\nend\\n# greetメソッドを呼び出す\\ngreet",
-      "holeyCode": "# greetというメソッドを定義\\ndef ___\\n  # こんにちは と表示\\n  ___ '___'\\n___\\n# greetメソッドを呼び出す\\n___",
+      "holeyCode": "# greetというメソッドを定義\\ndef ___\\n  # こんにちは と表示\\n  ___ '___'\\n# ブロックを終了\n___\\n# greetメソッドを呼び出す\\n___",
       "correctLines": [
           "# greetというメソッドを定義",
           "def greet",
           "  # こんにちは と表示",
           "  puts 'こんにちは'",
+          "# ブロックを終了",
           "end",
           "# greetメソッドを呼び出す",
           "greet"
         ],
       "lineHints": [
           null,
-          "defでgreetメソッドを定義します。",
+          "",
           null,
-          "putsで「こんにちは」を出力します。",
-          "endでメソッド定義を終了します。",
+          "",
           null,
-          "定義したgreetメソッドを実行します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

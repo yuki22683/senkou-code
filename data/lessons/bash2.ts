@@ -163,24 +163,26 @@ export const bash2Data = {
         }
       ],
       "correctCode": "# add関数を定義\\nadd() {\\n    # 引数1と引数2を足して表示\\n    echo $(($1 + $2))\\n}\\n# 3と5を引数に渡して呼び出す\\nadd 3 5",
-      "holeyCode": "# add関数を定義\\n___() {\\n    # 引数1と引数2を足して表示\\n    ___ $((___ + ___))\\n___\\n# 3と5を引数に渡して呼び出す\\n___ ___ ___",
+      "holeyCode": "# add関数を定義\\n___() {\\n    # 引数1と引数2を足して表示\\n    ___ $((___ + ___))\\n// ブロックを閉じる\n___\\n# 3と5を引数に渡して呼び出す\\n___ ___ ___",
       "correctLines": [
           "# add関数を定義",
           "add() {",
           "    # 引数1と引数2を足して表示",
           "    echo $(($1 + $2))",
+          "// ブロックを閉じる",
           "}",
           "# 3と5を引数に渡して呼び出す",
           "add 3 5"
         ],
       "lineHints": [
           null,
-          "関数名 add を定義します。",
+          "",
           null,
-          "$1は1番目、$2は2番目の引数を表す特殊変数です。",
-          "関数ブロックを閉じます。",
+          "",
           null,
-          "関数を呼び出し、スペース区切りで引数を渡します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "variables": [
@@ -210,12 +212,13 @@ export const bash2Data = {
         }
       ],
       "correctCode": "# square関数を定義\\nsquare() {\\n    # 引数を2乗する\\n    echo $(($1 * $1))\\n}\\n# 関数の出力をresultに格納\\nresult=$(square 4)\\n# $resultを表示\\necho $result",
-      "holeyCode": "# square関数を定義\\n___() {\\n    # 引数を2乗する\\n    ___ $((___ * ___))\\n___\\n# 関数の出力をresultに格納\\n___=$(___ ___)\\n# $resultを表示\\n___ $___",
+      "holeyCode": "# square関数を定義\\n___() {\\n    # 引数を2乗する\\n    ___ $((___ * ___))\\n// ブロックを閉じる\n___\\n# 関数の出力をresultに格納\\n___=$(___ ___)\\n# $resultを表示\\n___ $___",
       "correctLines": [
           "# square関数を定義",
           "square() {",
           "    # 引数を2乗する",
           "    echo $(($1 * $1))",
+          "// ブロックを閉じる",
           "}",
           "# 関数の出力をresultに格納",
           "result=$(square 4)",
@@ -224,14 +227,15 @@ export const bash2Data = {
         ],
       "lineHints": [
           null,
-          "関数名 square を定義します。",
+          "",
           null,
-          "$1を2回使って2乗を計算します。",
-          "関数ブロックを閉じます。",
+          "",
           null,
-          "コマンド置換$()で関数の出力を変数に格納します。",
+          "",
           null,
-          "$記号で変数の値を展開して表示します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [
@@ -260,7 +264,7 @@ export const bash2Data = {
         }
       ],
       "correctCode": "# 変数iを1で初期化\\ni=1\\n# iが3以下の間ループ\\nwhile [ $i -le 3 ]; do\\n    # 現在のiを表示\\n    echo $i\\n    # iを1増やす\\n    i=$((i + 1))\\ndone",
-      "holeyCode": "# 変数iを1で初期化\\n___=___\\n# iが3以下の間ループ\\n___ [ $___ -___ ___ ]; do\\n    # 現在のiを表示\\n    ___ $___\\n    # iを1増やす\\n    ___=$((___ + 1))\\n___",
+      "holeyCode": "# 変数iを1で初期化\\n___=___\\n# iが3以下の間ループ\\n___ [ $___ -___ ___ ]; do\\n    # 現在のiを表示\\n    ___ $___\\n    # iを1増やす\\n    ___=$((___ + 1))\\n// ループを終了\n___",
       "correctLines": [
           "# 変数iを1で初期化",
           "i=1",
@@ -270,18 +274,20 @@ export const bash2Data = {
           "    echo $i",
           "    # iを1増やす",
           "    i=$((i + 1))",
+          "// ループを終了",
           "done"
         ],
       "lineHints": [
           null,
-          "ループカウンタを初期化します。",
+          "",
           null,
-          "whileで条件が真の間繰り返します。-leは「以下」の比較演算子です。",
+          "",
           null,
-          "ループ内で現在の値を出力します。",
+          "",
           null,
-          "算術展開で変数を1増やします。",
-          "ループブロックを終了するキーワードです。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -439,20 +445,26 @@ export const bash2Data = {
         }
       ],
       "correctCode": "# ENDラベルまでをcatに渡す\\ncat <<END\\nHello\\nWorld\\nEND",
-      "holeyCode": "# ENDラベルまでをcatに渡す\\n___ ___END\\n___\\n___\\n___",
+      "holeyCode": "# ENDラベルまでをcatに渡す\\n___ ___END\\n// 列挙値\n___\\n// 列挙値\n___\\n// 列挙値\n___",
       "correctLines": [
           "# ENDラベルまでをcatに渡す",
           "cat <<END",
+          "// 列挙値",
           "Hello",
+          "// 列挙値",
           "World",
+          "// 列挙値",
           "END"
         ],
       "lineHints": [
           null,
-          "<<でヒアドキュメントを開始します。ENDまでの内容がcatに渡されます。",
-          "ヒアドキュメントの内容の1行目です。",
-          "ヒアドキュメントの内容の2行目です。",
-          "開始時と同じラベルでヒアドキュメントを終了します。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [

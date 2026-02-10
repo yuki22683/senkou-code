@@ -317,7 +317,7 @@ export const sql3Data = {
         }
       ],
       "correctCode": "-- SELECT DISTINCT と入力して重複除去\\nSELECT DISTINCT n FROM (\\n  -- データを作成\\n  SELECT 1 AS n UNION ALL\\n  -- 重複データを追加\\n  SELECT 1 UNION ALL\\n  -- 異なるデータを追加\\n  SELECT 2\\n);",
-      "holeyCode": "-- SELECT DISTINCT と入力して重複除去\\n___ ___ ___ ___ (\\n  -- データを作成\\n  ___ ___ AS ___ ___ ___\\n  -- 重複データを追加\\n  ___ ___ ___ ___\\n  -- 異なるデータを追加\\n  ___ ___\\n___",
+      "holeyCode": "-- SELECT DISTINCT と入力して重複除去\\n___ ___ ___ ___ (\\n  -- データを作成\\n  ___ ___ AS ___ ___ ___\\n  -- 重複データを追加\\n  ___ ___ ___ ___\\n  -- 異なるデータを追加\\n  ___ ___\\n-- 関数呼び出しを閉じる\n___",
       "correctLines": [
           "-- SELECT DISTINCT と入力して重複除去",
           "SELECT DISTINCT n FROM (",
@@ -327,18 +327,20 @@ export const sql3Data = {
           "  SELECT 1 UNION ALL",
           "  -- 異なるデータを追加",
           "  SELECT 2",
+          "-- 関数呼び出しを閉じる",
           ");"
         ],
       "lineHints": [
           null,
-          "DISTINCTで重複を除去し、FROMでサブクエリを指定します。",
+          "",
           null,
-          "SELECTで値を選択し、UNION ALLで結合します。",
+          "",
           null,
-          "SELECTで同じ値を追加（重複）します。",
+          "",
           null,
-          "SELECTで異なる値を追加します。",
-          "サブクエリの閉じ括弧とセミコロンです。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

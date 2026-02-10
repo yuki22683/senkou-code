@@ -105,20 +105,26 @@ export const lua3Data = {
         }
       ],
       "correctCode": "local ok, msg = pcall(function()\\n    -- errorでエラーを発生\\n    error(\"テスト エラー\")\\nend)\\nprint(msg:match(\"テスト エラー\") and \"caught\" or \"not caught\")",
-      "holeyCode": "local ___, ___ = ___(function()\\n    -- errorでエラーを発生\\n    ___(\"___\")\\n___)\\n___(___:___(\"___\") ___ \"___\" ___ \"___\")",
+      "holeyCode": "-- 値を代入\nlocal ___, ___ = ___(function()\\n    -- errorでエラーを発生\\n    ___(\"___\")\\n-- ブロックを終了\n___)\\n-- 出力\n___(___:___(\"___\") ___ \"___\" ___ \"___\")",
       "correctLines": [
+          "-- 値を代入",
           "local ok, msg = pcall(function()",
           "    -- errorでエラーを発生",
-          "    error(\"テスト エラー\")",
+          "    error(\\\"テスト エラー\\\")",
+          "-- ブロックを終了",
           "end)",
-          "print(msg:match(\"テスト エラー\") and \"caught\" or \"not caught\")"
+          "-- 出力",
+          "print(msg:match(\\\"テスト エラー\\\") and \\\"caught\\\" or \\\"not caught\\\")"
         ],
       "lineHints": [
-          "pcallで関数を保護モードで実行します。",
           null,
-          "errorでエラーメッセージを発生させます。",
-          "関数を閉じます。",
-          "matchでマッチしたらcaught、しなければnot caughtを出力します。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "functions": [
@@ -150,16 +156,18 @@ export const lua3Data = {
         }
       ],
       "correctCode": "-- assertで検証\\nlocal value = assert(10 > 5, \"should be true\")\\nprint(value and \"pass\" or \"fail\")",
-      "holeyCode": "-- assertで検証\\nlocal ___ = ___(___ ___ ___, \"___\")\\n___(___ ___ \"___\" ___ \"___\")",
+      "holeyCode": "-- assertで検証\\nlocal ___ = ___(___ ___ ___, \"___\")\\n-- 出力\n___(___ ___ \"___\" ___ \"___\")",
       "correctLines": [
           "-- assertで検証",
-          "local value = assert(10 > 5, \"should be true\")",
-          "print(value and \"pass\" or \"fail\")"
+          "local value = assert(10 > 5, \\\"should be true\\\")",
+          "-- 出力",
+          "print(value and \\\"pass\\\" or \\\"fail\\\")"
         ],
       "lineHints": [
           null,
-          "assertで10 > 5を検証し、結果をvalueに代入します。",
-          "valueがtrueならpass、falseならfailを出力します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "functions": [
@@ -277,20 +285,22 @@ export const lua3Data = {
         }
       ],
       "correctCode": "-- tonumberで数値に変換\\nlocal s = \"50\"\\n-- 数値に変換\\nlocal n = tonumber(s)\\nprint(n + 10)",
-      "holeyCode": "-- tonumberで数値に変換\\nlocal ___ = \"___\"\\n-- 数値に変換\\nlocal ___ = ___(___)\\n___(___ + ___)",
+      "holeyCode": "-- tonumberで数値に変換\\nlocal ___ = \"___\"\\n-- 数値に変換\\nlocal ___ = ___(___)\\n-- 出力\n___(___ + ___)",
       "correctLines": [
           "-- tonumberで数値に変換",
-          "local s = \"50\"",
+          "local s = \\\"50\\\"",
           "-- 数値に変換",
           "local n = tonumber(s)",
+          "-- 出力",
           "print(n + 10)"
         ],
       "lineHints": [
           null,
-          "変数sに文字列\"50\"を代入します。",
+          "\\\"\\\"",
           null,
-          "tonumber(s)で文字列を数値に変換してnに代入します。",
-          "n + 10の結果を出力します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "functions": [
@@ -322,20 +332,22 @@ export const lua3Data = {
         }
       ],
       "correctCode": "-- ..で文字列を連結\\nlocal a = \"Lua\"\\nlocal b = \"Script\"\\n-- 連結して出力\\nprint(a .. b)",
-      "holeyCode": "-- ..で文字列を連結\\nlocal ___ = \"___\"\\nlocal ___ = \"___\"\\n-- 連結して出力\\n___(___ ___ ___)",
+      "holeyCode": "-- ..で文字列を連結\\nlocal ___ = \"___\"\\n-- \"\"\nlocal ___ = \"___\"\\n-- 連結して出力\\n___(___ ___ ___)",
       "correctLines": [
           "-- ..で文字列を連結",
-          "local a = \"Lua\"",
-          "local b = \"Script\"",
+          "local a = \\\"Lua\\\"",
+          "-- \\\"\\\"",
+          "local b = \\\"Script\\\"",
           "-- 連結して出力",
           "print(a .. b)"
         ],
       "lineHints": [
           null,
-          "変数aに\"Lua\"を代入します。",
-          "変数bに\"Script\"を代入します。",
+          "\\\"\\\"",
           null,
-          "a .. bで文字列を連結して出力します。"
+          "\\\"\\\"",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [
@@ -410,20 +422,22 @@ export const lua3Data = {
         }
       ],
       "correctCode": "-- and/orで条件分岐\\nlocal age = 20\\n-- 条件に応じて値を決める\\nlocal status = age >= 18 and \"adult\" or \"child\"\\nprint(status)",
-      "holeyCode": "-- and/orで条件分岐\\nlocal ___ = ___\\n-- 条件に応じて値を決める\\nlocal ___ = ___ ___ ___ ___ \"___\" ___ \"___\"\\n___(___)",
+      "holeyCode": "-- and/orで条件分岐\\nlocal ___ = ___\\n-- 条件に応じて値を決める\\nlocal ___ = ___ ___ ___ ___ \"___\" ___ \"___\"\\n-- 出力\n___(___)",
       "correctLines": [
           "-- and/orで条件分岐",
           "local age = 20",
           "-- 条件に応じて値を決める",
-          "local status = age >= 18 and \"adult\" or \"child\"",
+          "local status = age >= 18 and \\\"adult\\\" or \\\"child\\\"",
+          "-- 出力",
           "print(status)"
         ],
       "lineHints": [
           null,
-          "変数ageに20を代入します。",
+          "",
           null,
-          "age >= 18 and \"adult\" or \"child\"で条件に応じた値をstatusに代入します。",
-          "statusを出力します。"
+          "\\\"\\\"\\\"\\\"",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -455,22 +469,26 @@ export const lua3Data = {
         }
       ],
       "correctCode": "-- breakでループを抜ける\\nfor i = 1, 10 do\\n    -- 3を超えたらループを抜ける\\n    if i > 3 then break end\\n    print(i)\\nend",
-      "holeyCode": "-- breakでループを抜ける\\nfor ___ = ___, ___ do\\n    -- 3を超えたらループを抜ける\\n    if ___ ___ ___ then ___ ___\\n    ___(___)\\n___",
+      "holeyCode": "-- breakでループを抜ける\\nfor ___ = ___, ___ do\\n    -- 3を超えたらループを抜ける\\n    if ___ ___ ___ then ___ ___\\n    -- 出力\n    ___(___)\\n-- ブロックを終了\n___",
       "correctLines": [
           "-- breakでループを抜ける",
           "for i = 1, 10 do",
           "    -- 3を超えたらループを抜ける",
           "    if i > 3 then break end",
+          "    -- 出力",
           "    print(i)",
+          "-- ブロックを終了",
           "end"
         ],
       "lineHints": [
           null,
-          "for i = 1, 10 doでiを1から10まで繰り返します。",
+          "",
           null,
-          "i > 3ならbreakでループを抜けます。",
-          "iを出力します。",
-          "ブロックを終了します。"
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

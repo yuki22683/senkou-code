@@ -110,20 +110,26 @@ export const rust3Data = {
         }
       ],
       "correctCode": "fn main() {\\n    // |x| でクロージャの引数を定義\\n    let double = |x| x * 2;\\n    println!(\"{}\", double(5));\\n}",
-      "holeyCode": "fn ___() {\\n    // |x| でクロージャの引数を定義\\n    let ___ = |___| ___ * ___;\\n    ___!(\"{}\", ___(___));\\n___",
+      "holeyCode": "// 関数を定義\nfn ___() {\\n    // |x| でクロージャの引数を定義\\n    let ___ = |___| ___ * ___;\\n    // 出力\n    ___!(\"{}\", ___(___));\\n// ブロックを閉じる\n___",
       "correctLines": [
+          "// 関数を定義",
           "fn main() {",
           "    // |x| でクロージャの引数を定義",
           "    let double = |x| x * 2;",
-          "    println!(\"{}\", double(5));",
+          "    // 出力",
+          "    println!(\\\"{}\\\", double(5));",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "プログラムの実行開始地点（main関数）を定義します。",
           null,
-          "クロージャを定義してdouble変数に代入します。",
-          "double関数を呼び出して結果を表示します。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [
@@ -154,24 +160,34 @@ export const rust3Data = {
         }
       ],
       "correctCode": "fn main() {\\n    let nums = vec![1, 2, 3];\\n    // iter でイテレータを取得\\n    for n in nums.iter() {\\n        println!(\"{}\", n);\\n    }\\n}",
-      "holeyCode": "fn ___() {\\n    let ___ = ___![___, ___, ___];\\n    // iter でイテレータを取得\\n    for ___ in ___.___() {\\n        ___!(\"{}\", ___);\\n    ___\\n___",
+      "holeyCode": "// 関数を定義\nfn ___() {\\n    // 変数を宣言\n    let ___ = ___![___, ___, ___];\\n    // iter でイテレータを取得\\n    for ___ in ___.___() {\\n        // 出力\n        ___!(\"{}\", ___);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
       "correctLines": [
+          "// 関数を定義",
           "fn main() {",
+          "    // 変数を宣言",
           "    let nums = vec![1, 2, 3];",
           "    // iter でイテレータを取得",
           "    for n in nums.iter() {",
-          "        println!(\"{}\", n);",
+          "        // 出力",
+          "        println!(\\\"{}\\\", n);",
+          "    // ブロックを閉じる",
           "    }",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "vec!マクロで配列を作成します。",
           null,
-          "iter()でイテレータを取得してループします。",
-          "要素nを表示します。",
-          "ブロックを閉じます。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -202,22 +218,30 @@ export const rust3Data = {
         }
       ],
       "correctCode": "fn main() {\\n    let nums = vec![1, 2, 3];\\n    // map で各要素を変換\\n    let squared: Vec<_> = nums.iter().map(|x| x * x).collect();\\n    println!(\"{:?}\", squared);\\n}",
-      "holeyCode": "fn ___() {\\n    let ___ = ___![___, ___, ___];\\n    // map で各要素を変換\\n    let ___: ___<_> = ___.___().___(|___| ___ * ___).___();\\n    ___!(\"{:?}\", ___);\\n___",
+      "holeyCode": "// 関数を定義\nfn ___() {\\n    // 変数を宣言\n    let ___ = ___![___, ___, ___];\\n    // map で各要素を変換\\n    let ___: ___<_> = ___.___().___(|___| ___ * ___).___();\\n    // 出力\n    ___!(\"{:?}\", ___);\\n// ブロックを閉じる\n___",
       "correctLines": [
+          "// 関数を定義",
           "fn main() {",
+          "    // 変数を宣言",
           "    let nums = vec![1, 2, 3];",
           "    // map で各要素を変換",
           "    let squared: Vec<_> = nums.iter().map(|x| x * x).collect();",
-          "    println!(\"{:?}\", squared);",
+          "    // 出力",
+          "    println!(\\\"{:?}\\\", squared);",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "vec!マクロで配列を作成します。",
           null,
-          "iter().map().collect()で要素を変換してVecに収集します。",
-          "squared配列を表示します。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -248,22 +272,30 @@ export const rust3Data = {
         }
       ],
       "correctCode": "fn main() {\\n    let nums = vec![1, 2, 3, 4, 5];\\n    // filter で条件に合う要素を絞り込む\\n    let big: Vec<_> = nums.iter().filter(|x| **x > 2).collect();\\n    println!(\"{:?}\", big);\\n}",
-      "holeyCode": "fn ___() {\\n    let ___ = ___![___, ___, ___, ___, ___];\\n    // filter で条件に合う要素を絞り込む\\n    let ___: ___<_> = ___.___().___(|___| **___ > ___).___();\\n    ___!(\"{:?}\", ___);\\n___",
+      "holeyCode": "// 関数を定義\nfn ___() {\\n    // 変数を宣言\n    let ___ = ___![___, ___, ___, ___, ___];\\n    // filter で条件に合う要素を絞り込む\\n    let ___: ___<_> = ___.___().___(|___| **___ > ___).___();\\n    // 出力\n    ___!(\"{:?}\", ___);\\n// ブロックを閉じる\n___",
       "correctLines": [
+          "// 関数を定義",
           "fn main() {",
+          "    // 変数を宣言",
           "    let nums = vec![1, 2, 3, 4, 5];",
           "    // filter で条件に合う要素を絞り込む",
           "    let big: Vec<_> = nums.iter().filter(|x| **x > 2).collect();",
-          "    println!(\"{:?}\", big);",
+          "    // 出力",
+          "    println!(\\\"{:?}\\\", big);",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "vec!マクロで配列を作成します。",
           null,
-          "iter().filter().collect()で条件に合う要素を絞り込みます。",
-          "big配列を表示します。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -294,22 +326,30 @@ export const rust3Data = {
         }
       ],
       "correctCode": "fn main() {\\n    let nums = vec![1, 2, 3, 4];\\n    // fold で畳み込み\\n    let product = nums.iter().fold(1, |acc, x| acc * x);\\n    println!(\"{}\", product);\\n}",
-      "holeyCode": "fn ___() {\\n    let ___ = ___![___, ___, ___, ___];\\n    // fold で畳み込み\\n    let ___ = ___.___().___(1, |___, ___| ___ * ___);\\n    ___!(\"{}\", ___);\\n___",
+      "holeyCode": "// 関数を定義\nfn ___() {\\n    // 変数を宣言\n    let ___ = ___![___, ___, ___, ___];\\n    // fold で畳み込み\\n    let ___ = ___.___().___(1, |___, ___| ___ * ___);\\n    // 出力\n    ___!(\"{}\", ___);\\n// ブロックを閉じる\n___",
       "correctLines": [
+          "// 関数を定義",
           "fn main() {",
+          "    // 変数を宣言",
           "    let nums = vec![1, 2, 3, 4];",
           "    // fold で畳み込み",
           "    let product = nums.iter().fold(1, |acc, x| acc * x);",
-          "    println!(\"{}\", product);",
+          "    // 出力",
+          "    println!(\\\"{}\\\", product);",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "vec!マクロで配列を作成します。",
           null,
-          "iter().fold()で畳み込み計算を行います。",
-          "product変数を表示します。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -340,44 +380,70 @@ export const rust3Data = {
         }
       ],
       "correctCode": "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {\\n    if b == 0 {\\n        Err(\"ゼロ除算エラー\")\\n    } else {\\n        Ok(a / b)\\n    }\\n}\\n\\nfn calc() -> Result<i32, &'static str> {\\n    // ? でエラーを伝播\\n    let x = divide(10, 2)?;\\n    Ok(x * 2)\\n}\\n\\nfn main() {\\n    println!(\"{:?}\", calc());\\n}",
-      "holeyCode": "fn ___(___: ___, ___: ___) -> ___<___, &'static ___> {\\n    if ___ == ___ {\\n        ___(\"ゼロ除算エラー\")\\n    ___ else ___\\n        ___(___ / ___)\\n    ___\\n___\\n___\\nfn ___() -> ___<___, &'static ___> {\\n    // ? でエラーを伝播\\n    let ___ = ___(___, ___)?;\\n    ___(___ * ___)\\n___\\n___\\nfn ___() {\\n    ___!(\"{:?}\", ___());\\n___",
+      "holeyCode": "// 関数を定義\nfn ___(___: ___, ___: ___) -> ___<___, &'static ___> {\\n    // 条件分岐\n    if ___ == ___ {\\n        // 関数を呼び出す\n        ___(\"ゼロ除算エラー\")\\n    // else分岐\n    ___ else ___\\n        // 関数を呼び出す\n        ___(___ / ___)\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___\\n___\\n// 関数を定義\nfn ___() -> ___<___, &'static ___> {\\n    // ? でエラーを伝播\\n    let ___ = ___(___, ___)?;\\n    // 関数を呼び出す\n    ___(___ * ___)\\n// ブロックを閉じる\n___\\n___\\n// 関数を定義\nfn ___() {\\n    // 出力\n    ___!(\"{:?}\", ___());\\n// ブロックを閉じる\n___",
       "correctLines": [
+          "// 関数を定義",
           "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {",
+          "    // 条件分岐",
           "    if b == 0 {",
-          "        Err(\"ゼロ除算エラー\")",
+          "        // 関数を呼び出す",
+          "        Err(\\\"ゼロ除算エラー\\\")",
+          "    // else分岐",
           "    } else {",
+          "        // 関数を呼び出す",
           "        Ok(a / b)",
+          "    // ブロックを閉じる",
           "    }",
+          "// ブロックを閉じる",
           "}",
           "",
+          "// 関数を定義",
           "fn calc() -> Result<i32, &'static str> {",
           "    // ? でエラーを伝播",
           "    let x = divide(10, 2)?;",
+          "    // 関数を呼び出す",
           "    Ok(x * 2)",
+          "// ブロックを閉じる",
           "}",
           "",
+          "// 関数を定義",
           "fn main() {",
-          "    println!(\"{:?}\", calc());",
+          "    // 出力",
+          "    println!(\\\"{:?}\\\", calc());",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "divide関数を定義します。Result型でエラーを返します。",
-          "bが0かどうかをチェックします。",
-          "Errでエラーメッセージを返します。",
-          "if文のブロックを閉じ、elseブロックを開始します。",
-          "Okで割り算の結果を返します。",
-          "ブロックを閉じます。",
-          "ブロックを閉じます。",
           null,
-          "calc関数を定義します。Result型を返します。",
+          "",
           null,
-          "divide関数を呼び出し、?でエラー伝播します。",
-          "Okで計算結果を返します。",
-          "ブロックを閉じます。",
+          "",
           null,
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "calc関数を呼び出して結果を表示します。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [
@@ -408,22 +474,30 @@ export const rust3Data = {
         }
       ],
       "correctCode": "fn main() {\\n    let x: Option<i32> = None;\\n    // unwrap_or でデフォルト値を設定\\n    let value = x.unwrap_or(42);\\n    println!(\"{}\", value);\\n}",
-      "holeyCode": "fn ___() {\\n    let ___: ___<___> = ___;\\n    // unwrap_or でデフォルト値を設定\\n    let ___ = ___.___(___);\\n    ___!(\"{}\", ___);\\n___",
+      "holeyCode": "// 関数を定義\nfn ___() {\\n    // 変数を宣言\n    let ___: ___<___> = ___;\\n    // unwrap_or でデフォルト値を設定\\n    let ___ = ___.___(___);\\n    // 出力\n    ___!(\"{}\", ___);\\n// ブロックを閉じる\n___",
       "correctLines": [
+          "// 関数を定義",
           "fn main() {",
+          "    // 変数を宣言",
           "    let x: Option<i32> = None;",
           "    // unwrap_or でデフォルト値を設定",
           "    let value = x.unwrap_or(42);",
-          "    println!(\"{}\", value);",
+          "    // 出力",
+          "    println!(\\\"{}\\\", value);",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "Option<i32>型の変数xにNoneを代入します。",
           null,
-          "unwrap_orでデフォルト値42を設定します。",
-          "value変数を表示します。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -454,24 +528,34 @@ export const rust3Data = {
         }
       ],
       "correctCode": "fn main() {\\n    let mut nums = Vec::new();\\n    // push で要素を追加\\n    nums.push(10);\\n    nums.push(20);\\n    println!(\"{:?}\", nums);\\n}",
-      "holeyCode": "fn ___() {\\n    let mut ___ = ___::___();\\n    // push で要素を追加\\n    ___.___(___);\\n    ___.___(___);\\n    ___!(\"{:?}\", ___);\\n___",
+      "holeyCode": "// 関数を定義\nfn ___() {\\n    // 変数を宣言\n    let mut ___ = ___::___();\\n    // push で要素を追加\\n    ___.___(___);\\n    // メソッドを呼び出す\n    ___.___(___);\\n    // 出力\n    ___!(\"{:?}\", ___);\\n// ブロックを閉じる\n___",
       "correctLines": [
+          "// 関数を定義",
           "fn main() {",
+          "    // 変数を宣言",
           "    let mut nums = Vec::new();",
           "    // push で要素を追加",
           "    nums.push(10);",
+          "    // メソッドを呼び出す",
           "    nums.push(20);",
-          "    println!(\"{:?}\", nums);",
+          "    // 出力",
+          "    println!(\\\"{:?}\\\", nums);",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "Vec::new()で空のVecを作成します。",
           null,
-          "pushで10を追加します。",
-          "pushで20を追加します。",
-          "nums配列を表示します。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -502,22 +586,30 @@ export const rust3Data = {
         }
       ],
       "correctCode": "fn main() {\\n    let s: &str = \"こんにちは\";\\n    // to_string で String に変換\\n    let owned: String = s.to_string();\\n    println!(\"{}\", owned);\\n}",
-      "holeyCode": "fn ___() {\\n    let ___: ___ = \"こんにちは\";\\n    // to_string で String に変換\\n    let ___: ___ = ___.___();\\n    ___!(\"{}\", ___);\\n___",
+      "holeyCode": "// 関数を定義\nfn ___() {\\n    // 変数を宣言\n    let ___: ___ = \"こんにちは\";\\n    // to_string で String に変換\\n    let ___: ___ = ___.___();\\n    // 出力\n    ___!(\"{}\", ___);\\n// ブロックを閉じる\n___",
       "correctLines": [
+          "// 関数を定義",
           "fn main() {",
-          "    let s: &str = \"こんにちは\";",
+          "    // 変数を宣言",
+          "    let s: &str = \\\"こんにちは\\\";",
           "    // to_string で String に変換",
           "    let owned: String = s.to_string();",
-          "    println!(\"{}\", owned);",
+          "    // 出力",
+          "    println!(\\\"{}\\\", owned);",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "プログラムの実行開始地点（main関数）を定義します。",
-          "&str型の変数sに文字列リテラルを代入します。",
           null,
-          "to_string()でString型に変換します。",
-          "owned変数を表示します。",
-          "ブロックを閉じます。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [

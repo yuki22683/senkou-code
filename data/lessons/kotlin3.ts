@@ -142,7 +142,7 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // generateSequence で無限シーケンスを生成する\\n    val nums = generateSequence(1) { it * 2 }\\n        // 4つ取得する\\n        .take(4)\\n        // リストに変換する\\n        .toList()\\n    // nums を出力する\\n    println(nums)\\n}",
-      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // generateSequence で無限シーケンスを生成する\\n    ___ ___ = ___(___) { ___ * ___ }\\n        // 4つ取得する\\n        .___(___)\\n        // リストに変換する\\n        .___()\\n    // nums を出力する\\n    ___(___)\\n___",
+      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // generateSequence で無限シーケンスを生成する\\n    ___ ___ = ___(___) { ___ * ___ }\\n        // 4つ取得する\\n        .___(___)\\n        // リストに変換する\\n        .___()\\n    // nums を出力する\\n    ___(___)\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
@@ -154,20 +154,22 @@ export const kotlin3Data = {
           "        .toList()",
           "    // nums を出力する",
           "    println(nums)",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "funでメイン関数を定義します。",
+          "",
           null,
-          "valで変数を宣言し、generateSequenceで無限シーケンスを生成します。",
+          "",
           null,
-          "takeで指定した数だけ取得します。",
+          "",
           null,
-          "toListでリストに変換します。",
+          "",
           null,
-          "printlnで出力します。",
-          "関数やブロックを閉じる括弧です。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "functions": [
@@ -210,32 +212,36 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// repeat関数をinlineで定義\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\n    // 0 から times まで繰り返す\\n    for (i in 0 until times) action(i)\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // repeat関数を呼び出し（引数3）\\n    repeat(3) { println(it) }\\n}",
-      "holeyCode": "// repeat関数をinlineで定義\\n___ ___ ___(___: ___, ___: (___) -> ___) {\\n    // 0 から times まで繰り返す\\n    for (___ in ___ ___ ___) ___(___)\\n___\\n___\\n// main 関数を定義する\\n___ ___() {\\n    // repeat を呼び出す\\n    ___(___) { ___(___) }\\n___",
+      "holeyCode": "// repeat関数をinlineで定義\\n___ ___ ___(___: ___, ___: (___) -> ___) {\\n    // 0 から times まで繰り返す\\n    for (___ in ___ ___ ___) ___(___)\\n// ブロックを閉じる\n___\\n___\\n// main 関数を定義する\\n___ ___() {\\n    // repeat を呼び出す\\n    ___(___) { ___(___) }\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// repeat関数をinlineで定義",
           "inline fun repeat(times: Int, action: (Int) -> Unit) {",
           "    // 0 から times まで繰り返す",
           "    for (i in 0 until times) action(i)",
+          "// ブロックを閉じる",
           "}",
           "",
           "// main 関数を定義する",
           "fun main() {",
           "    // repeat関数を呼び出し（引数3）",
           "    repeat(3) { println(it) }",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "inlineで関数をインライン化します。",
+          "",
           null,
-          "forで繰り返し処理を行います。",
-          "関数やブロックを閉じる括弧です。",
+          "",
+          null,
+          "",
           null,
           null,
-          "funでメイン関数を定義します。",
+          "",
           null,
-          "repeat関数を呼び出します。",
-          "関数やブロックを閉じる括弧です。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -281,36 +287,40 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// checkType関数をreifiedで定義\\ninline fun <reified T> checkType(value: Any): Boolean {\\n    // value が T 型かチェックする\\n    return value is T\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // String 型かチェックする\\n    println(checkType<String>(\"テスト\"))\\n    // Int 型かチェックする\\n    println(checkType<Int>(\"テスト\"))\\n}",
-      "holeyCode": "// checkType関数をreifiedで定義\\n___ ___ <___ ___> ___(___: ___): ___ {\\n    // value が T 型かチェックする\\n    ___ ___ ___ ___\\n___\\n___\\n// main 関数を定義する\\n___ ___() {\\n    // String 型かチェックする\\n    ___(___<___>(\"___\"))\\n    // Int 型かチェックする\\n    ___(___<___>(\"___\"))\\n___",
+      "holeyCode": "// checkType関数をreifiedで定義\\n___ ___ <___ ___> ___(___: ___): ___ {\\n    // value が T 型かチェックする\\n    ___ ___ ___ ___\\n// ブロックを閉じる\n___\\n___\\n// main 関数を定義する\\n___ ___() {\\n    // String 型かチェックする\\n    ___(___<___>(\"___\"))\\n    // Int 型かチェックする\\n    ___(___<___>(\"___\"))\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// checkType関数をreifiedで定義",
           "inline fun <reified T> checkType(value: Any): Boolean {",
           "    // value が T 型かチェックする",
           "    return value is T",
+          "// ブロックを閉じる",
           "}",
           "",
           "// main 関数を定義する",
           "fun main() {",
           "    // String 型かチェックする",
-          "    println(checkType<String>(\"テスト\"))",
+          "    println(checkType<String>(\\\"テスト\\\"))",
           "    // Int 型かチェックする",
-          "    println(checkType<Int>(\"テスト\"))",
+          "    println(checkType<Int>(\\\"テスト\\\"))",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "inlineとreifiedで実行時に型情報を使えます。",
+          "",
           null,
-          "returnとisで型チェック結果を返します。",
-          "関数やブロックを閉じる括弧です。",
+          "",
+          null,
+          "",
           null,
           null,
-          "funでメイン関数を定義します。",
+          "",
           null,
-          "printlnでString型チェック結果を出力します。",
+          "",
           null,
-          "printlnでInt型チェック結果を出力します。",
-          "関数やブロックを閉じる括弧です。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -355,40 +365,44 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// data class を定義する\\ndata class Config(var host: String = \"\", var port: Int = 0)\\n\\n// main 関数を定義する\\nfun main() {\\n    // apply で設定してオブジェクトを返す\\n    val cfg = Config().apply {\\n        // hostを設定する\\n        host = \"localhost\"\\n        // portを設定する\\n        port = 8080\\n    }\\n    // cfg を出力する\\n    println(cfg)\\n}",
-      "holeyCode": "// data class を定義する\\n___ ___ ___(var ___: ___ = \"\", var ___: ___ = ___)\\n___\\n// main 関数を定義する\\n___ ___() {\\n    // apply で設定してオブジェクトを返す\\n    ___ ___ = ___().___ {\\n        // hostを設定する\\n        ___ = \"___\"\\n        // portを設定する\\n        ___ = ___\\n    ___\\n    // cfg を出力する\\n    ___(___)\\n___",
+      "holeyCode": "// data class を定義する\\n___ ___ ___(var ___: ___ = \"\", var ___: ___ = ___)\\n___\\n// main 関数を定義する\\n___ ___() {\\n    // apply で設定してオブジェクトを返す\\n    ___ ___ = ___().___ {\\n        // hostを設定する\\n        ___ = \"___\"\\n        // portを設定する\\n        ___ = ___\\n    // ブロックを閉じる\n    ___\\n    // cfg を出力する\\n    ___(___)\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// data class を定義する",
-          "data class Config(var host: String = \"\", var port: Int = 0)",
+          "data class Config(var host: String = \\\"\\\", var port: Int = 0)",
           "",
           "// main 関数を定義する",
           "fun main() {",
           "    // apply で設定してオブジェクトを返す",
           "    val cfg = Config().apply {",
           "        // hostを設定する",
-          "        host = \"localhost\"",
+          "        host = \\\"localhost\\\"",
           "        // portを設定する",
           "        port = 8080",
+          "    // ブロックを閉じる",
           "    }",
           "    // cfg を出力する",
           "    println(cfg)",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "data classでConfigクラスを定義します。",
+          "",
           null,
           null,
-          "funでメイン関数を定義します。",
+          "",
           null,
-          "valで変数を宣言し、applyで設定します。",
+          "",
           null,
-          "hostにlocalhostを設定します。",
+          "",
           null,
-          "portに8080を設定します。",
-          "ブロックを閉じる括弧です。",
+          "",
           null,
-          "printlnで出力します。",
-          "関数やブロックを閉じる括弧です。"
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -431,30 +445,34 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // also で副作用を実行してオブジェクトを返す\\n    val num = 42.also {\\n        // 「Value: it」の形式で出力\\n        println(\"Value: $it\")\\n    }\\n    // num を出力する\\n    println(num)\\n}",
-      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // also で副作用を実行してオブジェクトを返す\\n    ___ ___ = ___.___ {\\n        // 「Value: it」の形式で出力\\n        ___(\"___: $___\")\\n    ___\\n    // num を出力する\\n    ___(___)\\n___",
+      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // also で副作用を実行してオブジェクトを返す\\n    ___ ___ = ___.___ {\\n        // 「Value: it」の形式で出力\\n        ___(\"___: $___\")\\n    // ブロックを閉じる\n    ___\\n    // num を出力する\\n    ___(___)\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
           "    // also で副作用を実行してオブジェクトを返す",
           "    val num = 42.also {",
           "        // 「Value: it」の形式で出力",
-          "        println(\"Value: $it\")",
+          "        println(\\\"Value: $it\\\")",
+          "    // ブロックを閉じる",
           "    }",
           "    // num を出力する",
           "    println(num)",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "funでメイン関数を定義します。",
+          "",
           null,
-          "valで変数を宣言し、alsoで副作用を実行します。",
+          "",
           null,
-          "printlnで値を出力します。",
-          "ブロックを閉じる括弧です。",
+          "",
           null,
-          "printlnで出力します。",
-          "関数やブロックを閉じる括弧です。"
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -497,30 +515,34 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // run でブロックを実行して結果を返す\\n    val result = \"Hello World\".run {\\n        // スペースで分割してサイズを取得する\\n        split(\" \").size\\n    }\\n    // result を出力する\\n    println(result)\\n}",
-      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // run でブロックを実行して結果を返す\\n    ___ ___ = \"___ ___\".___ {\\n        // スペースで分割してサイズを取得する\\n        ___(\"___\").___\\n    ___\\n    // result を出力する\\n    ___(___)\\n___",
+      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // run でブロックを実行して結果を返す\\n    ___ ___ = \"___ ___\".___ {\\n        // スペースで分割してサイズを取得する\\n        ___(\"___\").___\\n    // ブロックを閉じる\n    ___\\n    // result を出力する\\n    ___(___)\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
           "    // run でブロックを実行して結果を返す",
-          "    val result = \"Hello World\".run {",
+          "    val result = \\\"Hello World\\\".run {",
           "        // スペースで分割してサイズを取得する",
-          "        split(\" \").size",
+          "        split(\\\" \\\").size",
+          "    // ブロックを閉じる",
           "    }",
           "    // result を出力する",
           "    println(result)",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "funでメイン関数を定義します。",
+          "",
           null,
-          "valで変数を宣言し、runでブロックを実行します。",
+          "",
           null,
-          "splitでスペース区切りで分割し、sizeを取得します。",
-          "ブロックを閉じる括弧です。",
+          "",
           null,
-          "printlnで出力します。",
-          "関数やブロックを閉じる括弧です。"
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -563,7 +585,7 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // takeIf で条件を満たせば値を返す\\n    val num = 10.takeIf { it > 5 }\\n    // num を出力する\\n    println(num)\\n}",
-      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // takeIf で条件を満たせば値を返す\\n    ___ ___ = ___.___ { ___ > ___ }\\n    // num を出力する\\n    ___(___)\\n___",
+      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // takeIf で条件を満たせば値を返す\\n    ___ ___ = ___.___ { ___ > ___ }\\n    // num を出力する\\n    ___(___)\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
@@ -571,16 +593,18 @@ export const kotlin3Data = {
           "    val num = 10.takeIf { it > 5 }",
           "    // num を出力する",
           "    println(num)",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "funでメイン関数を定義します。",
+          "",
           null,
-          "valで変数を宣言し、takeIfで条件を満たせば値を返します。",
+          "",
           null,
-          "printlnで出力します。",
-          "関数やブロックを閉じる括弧です。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -623,7 +647,7 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // numsにlistOf(1, 2, 3, 4, 5)を代入\\n    val nums = listOf(1, 2, 3, 4, 5)\\n    // groupBy でグループ化する\\n    val grouped = nums.groupBy { it % 2 }\\n    // grouped を出力する\\n    println(grouped)\\n}",
-      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // numsにlistOf(1, 2, 3, 4, 5)を代入\\n    ___ ___ = ___(___,___, ___,___, ___)\\n    // groupBy でグループ化する\\n    ___ ___ = ___.___ { ___ % ___ }\\n    // grouped を出力する\\n    ___(___)\\n___",
+      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // numsにlistOf(1, 2, 3, 4, 5)を代入\\n    ___ ___ = ___(___,___, ___,___, ___)\\n    // groupBy でグループ化する\\n    ___ ___ = ___.___ { ___ % ___ }\\n    // grouped を出力する\\n    ___(___)\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
@@ -633,18 +657,20 @@ export const kotlin3Data = {
           "    val grouped = nums.groupBy { it % 2 }",
           "    // grouped を出力する",
           "    println(grouped)",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "funでメイン関数を定義します。",
+          "",
           null,
-          "valで変数を宣言し、listOfでリストを作成します。",
+          "",
           null,
-          "valで変数を宣言し、groupByでグループ化します。",
+          "",
           null,
-          "printlnで出力します。",
-          "関数やブロックを閉じる括弧です。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -687,7 +713,7 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// main 関数を定義する\\nfun main() {\\n    // numsにlistOf(1, 2, 3, 4)を代入\\n    val nums = listOf(1, 2, 3, 4)\\n    // fold で畳み込む\\n    val product = nums.fold(1) { acc, n -> acc * n }\\n    // product を出力する\\n    println(product)\\n}",
-      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // numsにlistOf(1, 2, 3, 4)を代入\\n    ___ ___ = ___(___,___, ___,___)\\n    // fold で畳み込む\\n    ___ ___ = ___.___(___) { ___,___ -> ___ * ___ }\\n    // product を出力する\\n    ___(___)\\n___",
+      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // numsにlistOf(1, 2, 3, 4)を代入\\n    ___ ___ = ___(___,___, ___,___)\\n    // fold で畳み込む\\n    ___ ___ = ___.___(___) { ___,___ -> ___ * ___ }\\n    // product を出力する\\n    ___(___)\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
@@ -697,18 +723,20 @@ export const kotlin3Data = {
           "    val product = nums.fold(1) { acc, n -> acc * n }",
           "    // product を出力する",
           "    println(product)",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "funでメイン関数を定義します。",
+          "",
           null,
-          "valで変数を宣言し、listOfでリストを作成します。",
+          "",
           null,
-          "valで変数を宣言し、foldで畳み込みます。",
+          "",
           null,
-          "printlnで出力します。",
-          "関数やブロックを閉じる括弧です。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [

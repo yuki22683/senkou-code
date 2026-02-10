@@ -229,7 +229,7 @@ export const php3Data = {
               }
       ],
       "correctCode": "// $gradeに'A'を代入\\n$grade = 'A';\\n// match($grade)で$messageに結果を代入\\n$message = match($grade) {\\n    // 'A'なら'優秀'を返す\\n    'A' => '優秀',\\n    // 'B'なら'良い'を返す\\n    'B' => '良い',\\n    // それ以外なら'もっと頑張って'を返す\\n    default => 'もっと頑張って'\\n};",
-      "holeyCode": "// $gradeに'A'を代入\\n$___ = '___';\\n// match($grade)で$messageに結果を代入\\n$___ = ___(___) {\\n    // 'A'なら'優秀'を返す\\n    '___' ___ '___',\\n    // 'B'なら'良い'を返す\\n    '___' ___ '___',\\n    // それ以外なら'もっと頑張って'を返す\\n    ___ ___ '___'\\n___",
+      "holeyCode": "// $gradeに'A'を代入\\n$___ = '___';\\n// match($grade)で$messageに結果を代入\\n$___ = ___(___) {\\n    // 'A'なら'優秀'を返す\\n    '___' ___ '___',\\n    // 'B'なら'良い'を返す\\n    '___' ___ '___',\\n    // それ以外なら'もっと頑張って'を返す\\n    ___ ___ '___'\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// $gradeに'A'を代入",
           "$grade = 'A';",
@@ -241,20 +241,22 @@ export const php3Data = {
           "    'B' => '良い',",
           "    // それ以外なら'もっと頑張って'を返す",
           "    default => 'もっと頑張って'",
+          "// ブロックを閉じる",
           "};"
         ],
       "lineHints": [
           null,
-          "変数gradeに評定'A'を代入します。",
+          "",
           null,
-          "match式で$gradeの値に応じた結果を$messageに代入します。",
+          "",
           null,
-          "'A'の場合に'優秀'を返します。=>で値をマッピングします。",
+          "",
           null,
-          "'B'の場合に'良い'を返します。",
+          "",
           null,
-          "defaultはそれ以外の全てのケースにマッチします。",
-          "match式の閉じ括弧です。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -291,24 +293,26 @@ export const php3Data = {
         }
       ],
       "correctCode": "// functionで関数を定義\\nfunction createUser($name, $age) {\\n    // returnで連想配列を返す\\n    return ['名前' => $name, '年齢' => $age];\\n}\\n// age, nameの順で名前付き引数を指定\\n$user = createUser(age: 30, name: 'アリス');",
-      "holeyCode": "// functionで関数を定義\\n___ ___(___) {\\n    // returnで連想配列を返す\\n    ___ ['___' ___ $___, '___' ___ $___];\\n___\\n// age, nameの順で名前付き引数を指定\\n$___ = ___(___: ___, ___: '___');",
+      "holeyCode": "// functionで関数を定義\\n___ ___(___) {\\n    // returnで連想配列を返す\\n    ___ ['___' ___ $___, '___' ___ $___];\\n// ブロックを閉じる\n___\\n// age, nameの順で名前付き引数を指定\\n$___ = ___(___: ___, ___: '___');",
       "correctLines": [
           "// functionで関数を定義",
           "function createUser($name, $age) {",
           "    // returnで連想配列を返す",
           "    return ['名前' => $name, '年齢' => $age];",
+          "// ブロックを閉じる",
           "}",
           "// age, nameの順で名前付き引数を指定",
           "$user = createUser(age: 30, name: 'アリス');"
         ],
       "lineHints": [
           null,
-          "functionで関数を定義し、$nameと$ageを引数に取ります。",
+          "",
           null,
-          "連想配列を返します。=>でキーと値を対応付けます。",
-          "関数定義の閉じ括弧です。",
+          "",
           null,
-          "名前付き引数でage:とname:の順で関数を呼び出します。"
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -341,7 +345,7 @@ export const php3Data = {
         }
       ],
       "correctCode": "// traitでトレイトを定義\\ntrait HelloTrait {\\n    // functionでメソッドを定義\\n    public function sayHello() {\\n        // 'こんにちは！'を返す\\n        return 'こんにちは！';\\n    }\\n}\\n// classでクラスを定義\\nclass Greeter {\\n    // useでトレイトを使用\\n    use HelloTrait;\\n}",
-      "holeyCode": "// traitでトレイトを定義\\n___ ___ {\\n    // functionでメソッドを定義\\n    ___ ___ ___() {\\n        // 'こんにちは！'を返す\\n        ___ '___';\\n    ___\\n___\\n// classでクラスを定義\\n___ ___ {\\n    // useでトレイトを使用\\n    ___ ___;\\n___",
+      "holeyCode": "// traitでトレイトを定義\\n___ ___ {\\n    // functionでメソッドを定義\\n    ___ ___ ___() {\\n        // 'こんにちは！'を返す\\n        ___ '___';\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___\\n// classでクラスを定義\\n___ ___ {\\n    // useでトレイトを使用\\n    ___ ___;\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// traitでトレイトを定義",
           "trait HelloTrait {",
@@ -349,28 +353,34 @@ export const php3Data = {
           "    public function sayHello() {",
           "        // 'こんにちは！'を返す",
           "        return 'こんにちは！';",
+          "    // ブロックを閉じる",
           "    }",
+          "// ブロックを閉じる",
           "}",
           "// classでクラスを定義",
           "class Greeter {",
           "    // useでトレイトを使用",
           "    use HelloTrait;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "traitでトレイトHelloTraitを定義します。",
+          "",
           null,
-          "publicアクセス修飾子でsayHelloメソッドを定義します。",
+          "",
           null,
-          "returnで'こんにちは！'を返します。",
-          "メソッドの閉じ括弧です。",
-          "トレイトの閉じ括弧です。",
+          "",
           null,
-          "classでGreeterクラスを定義します。",
+          "",
           null,
-          "useでHelloTraitトレイトを使用します。",
-          "クラスの閉じ括弧です。"
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -412,7 +422,7 @@ export const php3Data = {
         }
       ],
       "correctCode": "// functionで関数を定義\\nfunction rangeGen($n) {\\n    // forでループ\\n    for ($i = 1; $i <= $n; $i++) {\\n        // yieldで値を一つずつ返す\\n        yield $i;\\n    }\\n}",
-      "holeyCode": "// functionで関数を定義\\n___ ___(___) {\\n    // forでループ\\n    ___ ($___ = ___; $___ ___ $___; $___++) {\\n        // yieldで値を一つずつ返す\\n        ___ $___;\\n    ___\\n___",
+      "holeyCode": "// functionで関数を定義\\n___ ___(___) {\\n    // forでループ\\n    ___ ($___ = ___; $___ ___ $___; $___++) {\\n        // yieldで値を一つずつ返す\\n        ___ $___;\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// functionで関数を定義",
           "function rangeGen($n) {",
@@ -420,18 +430,22 @@ export const php3Data = {
           "    for ($i = 1; $i <= $n; $i++) {",
           "        // yieldで値を一つずつ返す",
           "        yield $i;",
+          "    // ブロックを閉じる",
           "    }",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "functionでrangeGen関数を定義し、$nを引数に取ります。",
+          "",
           null,
-          "forループで$iを1から$nまで繰り返します。",
+          "",
           null,
-          "yieldで$iを一つずつ返します。",
-          "forループの閉じ括弧です。",
-          "関数の閉じ括弧です。"
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -514,7 +528,7 @@ export const php3Data = {
         }
       ],
       "correctCode": "// classでクラスを定義\\nclass Person {\\n    // __constructでコンストラクタを定義\\n    public function __construct(\\n        // publicでアクセス修飾子\\n        public string $name,\\n        // publicでアクセス修飾子\\n        public int $age\\n    ) {}\\n}",
-      "holeyCode": "// classでクラスを定義\\n___ ___ {\\n    // __constructでコンストラクタを定義\\n    ___ ___ ___(\\n        // publicでアクセス修飾子\\n        ___ ___ $___,\\n        // publicでアクセス修飾子\\n        ___ ___ $___\\n    ) ___\\n___",
+      "holeyCode": "// classでクラスを定義\\n___ ___ {\\n    // __constructでコンストラクタを定義\\n    ___ ___ ___(\\n        // publicでアクセス修飾子\\n        ___ ___ $___,\\n        // publicでアクセス修飾子\\n        ___ ___ $___\\n    // 空のコンストラクタ\n    ) ___\\n// ブロックを閉じる\n___",
       "correctLines": [
           "// classでクラスを定義",
           "class Person {",
@@ -524,20 +538,24 @@ export const php3Data = {
           "        public string $name,",
           "        // publicでアクセス修飾子",
           "        public int $age",
+          "    // 空のコンストラクタ",
           "    ) {}",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "classでPersonクラスを定義します。",
+          "",
           null,
-          "publicでfunction __constructを定義します。",
+          "",
           null,
-          "public string型で$nameプロパティを昇格します。",
+          "",
           null,
-          "public int型で$ageプロパティを昇格します。",
-          "コンストラクタの閉じ括弧と空のボディです。",
-          "クラスの閉じ括弧です。"
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

@@ -99,7 +99,7 @@ export const pythonData3 = {
         }
       ],
       "correctCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef find_max(*args):\\n    # 最大値を最初の引数で初期化\\n    max_val = args[0]\\n    # 渡された全ての引数をループで処理\\n    for n in args:\\n        # より大きい値があれば更新\\n        if n > max_val:\\n            max_val = n\\n    # 最終的な最大値を返す\\n    return max_val\\n\\n# find_max(3, 7, 2, 9, 5)の結果を表示\\nprint(find_max(3, 7, 2, 9, 5))",
-      "holeyCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef ___(*___):\\n    # 最大値を最初の引数で初期化\\n    ___ = ___[___]\\n    # 渡された全ての引数をループで処理\\n    for ___ in ___:\\n        # より大きい値があれば更新\\n        if ___ ___ ___:\\n            ___ = ___\\n    # 最終的な最大値を返す\\n    return ___\\n\\n# find_max(3, 7, 2, 9, 5)の結果を表示\\n___(___(3, 7, 2, 9, 5))",
+      "holeyCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef ___(*___):\\n    # 最大値を最初の引数で初期化\\n    ___ = ___[___]\\n    # 渡された全ての引数をループで処理\\n    for ___ in ___:\\n        # より大きい値があれば更新\\n        if ___ ___ ___:\\n            # 値を代入\n            ___ = ___\\n    # 最終的な最大値を返す\\n    return ___\\n\\n# find_max(3, 7, 2, 9, 5)の結果を表示\\n___(___(3, 7, 2, 9, 5))",
       "correctLines": [
           "# 全ての数値から最大値を求めるfind_max関数を定義",
           "def find_max(*args):",
@@ -109,6 +109,7 @@ export const pythonData3 = {
           "    for n in args:",
           "        # より大きい値があれば更新",
           "        if n > max_val:",
+          "            # 値を代入",
           "            max_val = n",
           "    # 最終的な最大値を返す",
           "    return max_val",
@@ -118,19 +119,20 @@ export const pythonData3 = {
         ],
       "lineHints": [
           null,
-          "任意の数の引数を受け取れる可変長引数関数を定義します。",
+          "",
           null,
-          "最大値の候補を最初の引数で初期化します。",
+          "",
           null,
-          "渡された全ての引数に対してループ処理を行います。",
+          "",
           null,
-          "現在の値が暫定最大値より大きいか比較します。",
-          "より大きい値が見つかった場合、最大値を更新します。",
+          "",
           null,
-          "最終的に求まった最大値を返却します。",
+          "",
+          null,
+          "",
           null,
           null,
-          "結果を画面に出力して確認します。"
+          ""
         ],
         "candidates": {
           "variables": ["args", "n", "max_val"],
