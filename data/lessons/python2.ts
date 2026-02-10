@@ -173,8 +173,8 @@ export const pythonData2 = {
           "content": "# 複数の値を別々の変数に入れよう！\\n\\n返ってきた複数の値を、**別々の変数で受け取れます**。\\n\\n**例：** 最小値と最大値を調べよう！\\n\\n```python\\ndef min_max(numbers):\\n    return min(numbers), max(numbers)\\n\\nsmallest, largest = min_max([3, 1, 4])\\nprint(smallest)\\nprint(largest)\\n```\\n\\n=> 1\\n\\n=> 4\\n\\n**何をしているか：**\\n1. `min_max([3, 1, 4])` でリスト [3, 1, 4] を渡す\\n2. 関数が最小値 1 と最大値 4 を返す\\n3. `smallest, largest` で2つの変数に **同時に代入**\\n4. それぞれの値を表示！\\n\\n**ポイント：** 受け取る変数の数と、返す値の数は **同じ** にしましょう！"
         }
       ],
-      "correctCode": "# 2つの値を返すcalc関数\\ndef calc(x):\\n    # x+1, x*2の順で返す\\n    return x + 1, x * 2\\n\\n# 2つの変数a, bで受け取る\\na, b = calc(5)\\nprint(a)\\nprint(b)",
-      "holeyCode": "# 2つの値を返すcalc関数\\ndef ___(___):\\n    # x+1, x*2の順で返す\\n    ___ ___ + 1, ___ ___ 2\\n\\n# 2つの変数a, bで受け取る\\n___, ___ = ___(___)\\n# 出力\n___(___)\\n# 出力\n___(___)",
+      "correctCode": "# 2つの値を返すcalc関数\\ndef calc(x):\\n    # x+1, x*2の順で返す\\n    return x + 1, x * 2\\n\\n# 2つの変数a, bで受け取る\\na, b = calc(5)\\n# aを出力\\nprint(a)\\n# bを出力\\nprint(b)",
+      "holeyCode": "# 2つの値を返すcalc関数\\ndef ___(___):\\n    # x+1, x*2の順で返す\\n    ___ ___ + 1, ___ ___ 2\\n\\n# 2つの変数a, bで受け取る\\n___, ___ = ___(___)\\n# aを出力\\n___(___)\\n# bを出力\\n___(___)",
       "correctLines": [
           "# 2つの値を返すcalc関数",
           "def calc(x):",
@@ -183,23 +183,23 @@ export const pythonData2 = {
           "",
           "# 2つの変数a, bで受け取る",
           "a, b = calc(5)",
-          "# 出力",
+          "# aを出力",
           "print(a)",
-          "# 出力",
+          "# bを出力",
           "print(b)"
         ],
       "lineHints": [
           null,
-          "",
+          "calcという名前の関数を定義します。",
           null,
-          "",
+          "returnで複数の値をカンマ区切りで返します。",
           null,
           null,
-          "",
+          "関数の戻り値を複数の変数で受け取ります。",
           null,
-          "",
+          "print関数で変数aを出力します。",
           null,
-          ""
+          "print関数で変数bを出力します。"
         ],
       "candidates": {
         "keywords": ["return"],
