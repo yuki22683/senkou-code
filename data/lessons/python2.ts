@@ -272,9 +272,9 @@ export const pythonData2 = {
       ],
       "lineHints": [
         null,
-        "forループでrange(1, 6)の範囲を繰り返します。",
+        "指定された回数や範囲で、繰り返し処理（ループ）を行います。",
         null,
-        "print関数で変数iの値を出力します。"
+        "変数の内容を画面に出力します。"
       ],
       "candidates": {
         "keywords": ["for", "in"],
