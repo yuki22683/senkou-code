@@ -83,8 +83,44 @@ function extractClassName(line) {
   return match ? match[1] : null;
 }
 
+function extractPrintfContent(line) {
+  // C printf: printf("text\n");
+  const cMatch = line.match(/printf\s*\(\s*"([^"\\]+)/);
+  if (cMatch) return cMatch[1].replace(/\\n$/, '');
+
+  // Rust println!: println!("text");
+  const rustMatch = line.match(/println!\s*\(\s*"([^"{}]+)/);
+  if (rustMatch) return rustMatch[1];
+
+  // Go fmt.Println: fmt.Println(var)
+  const goMatch = line.match(/fmt\.Print(?:ln|f)?\s*\(\s*([^)]+)/);
+  if (goMatch) {
+    const arg = goMatch[1].replace(/"/g, '').trim();
+    return arg;
+  }
+
+  // Java System.out.println
+  const javaMatch = line.match(/System\.out\.println?\s*\(\s*"?([^")]+)/);
+  if (javaMatch) return javaMatch[1];
+
+  return null;
+}
+
 function makeSpecificComment(vagueComment, nextLine, commentPrefix) {
   const trimmedNext = nextLine.replace(/___/g, '').trim();
+
+  // Handle // 出力 or # 出力
+  if (vagueComment.trim() === '// 出力' || vagueComment.trim() === '# 出力') {
+    const content = extractPrintfContent(nextLine);
+    if (content) {
+      // If it looks like a variable, use varName
+      if (/^[a-zA-Z_][a-zA-Z0-9_]*$/.test(content)) {
+        return commentPrefix + ' ' + content + 'を出力';
+      }
+      // Otherwise use 「content」
+      return commentPrefix + ' 「' + content + '」を出力';
+    }
+  }
 
   if (vagueComment.includes('結果を表示') || vagueComment.includes('メッセージを表示')) {
     const varName = extractVariableName(nextLine);
@@ -132,6 +168,8 @@ function fixVagueCommentsInCode(code) {
       '// クラスを定義',
       '# メッセージを表示',
       '// メッセージを表示',
+      '# 出力',
+      '// 出力',
     ];
 
     let isVague = false;

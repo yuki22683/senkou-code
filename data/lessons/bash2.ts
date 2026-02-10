@@ -163,7 +163,7 @@ export const bash2Data = {
         }
       ],
       "correctCode": "# add関数を定義\\nadd() {\\n    # 引数1と引数2を足して表示\\n    echo $(($1 + $2))\\n}\\n# 3と5を引数に渡して呼び出す\\nadd 3 5",
-      "holeyCode": "# add関数を定義\\n___() {\\n    # 引数1と引数2を足して表示\\n    ___ $((___ + ___))\\n// ブロックを閉じる\n___\\n# 3と5を引数に渡して呼び出す\\n___ ___ ___",
+      "holeyCode": "# add関数を定義\\n___() {\\n    # 引数1と引数2を足して表示\\n    ___ $((___ + ___))\\n// ブロックを閉じる\\n___\\n# 3と5を引数に渡して呼び出す\\n___ ___ ___",
       "correctLines": [
           "# add関数を定義",
           "add() {",
@@ -212,7 +212,7 @@ export const bash2Data = {
         }
       ],
       "correctCode": "# square関数を定義\\nsquare() {\\n    # 引数を2乗する\\n    echo $(($1 * $1))\\n}\\n# 関数の出力をresultに格納\\nresult=$(square 4)\\n# $resultを表示\\necho $result",
-      "holeyCode": "# square関数を定義\\n___() {\\n    # 引数を2乗する\\n    ___ $((___ * ___))\\n// ブロックを閉じる\n___\\n# 関数の出力をresultに格納\\n___=$(___ ___)\\n# $resultを表示\\n___ $___",
+      "holeyCode": "# square関数を定義\\n___() {\\n    # 引数を2乗する\\n    ___ $((___ * ___))\\n// ブロックを閉じる\\n___\\n# 関数の出力をresultに格納\\n___=$(___ ___)\\n# $resultを表示\\n___ $___",
       "correctLines": [
           "# square関数を定義",
           "square() {",
@@ -264,7 +264,7 @@ export const bash2Data = {
         }
       ],
       "correctCode": "# 変数iを1で初期化\\ni=1\\n# iが3以下の間ループ\\nwhile [ $i -le 3 ]; do\\n    # 現在のiを表示\\n    echo $i\\n    # iを1増やす\\n    i=$((i + 1))\\ndone",
-      "holeyCode": "# 変数iを1で初期化\\n___=___\\n# iが3以下の間ループ\\n___ [ $___ -___ ___ ]; do\\n    # 現在のiを表示\\n    ___ $___\\n    # iを1増やす\\n    ___=$((___ + 1))\\n// ループを終了\n___",
+      "holeyCode": "# 変数iを1で初期化\\n___=___\\n# iが3以下の間ループ\\n___ [ $___ -___ ___ ]; do\\n    # 現在のiを表示\\n    ___ $___\\n    # iを1増やす\\n    ___=$((___ + 1))\\n// ループを終了\\n___",
       "correctLines": [
           "# 変数iを1で初期化",
           "i=1",
@@ -317,7 +317,7 @@ export const bash2Data = {
         }
       ],
       "correctCode": "# 変数fruitに値を代入\\nfruit=\"りんご\"\\n# fruitの値で分岐\\ncase $fruit in\\n    # りんごの場合\\n    りんご) echo \"赤\";;\\n    # バナナの場合\\n    バナナ) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\nesac",
-      "holeyCode": "# 変数fruitに値を代入\\n___=\"___\"\\n# fruitの値で分岐\\n___ $___ in\\n    # りんごの場合\\n    りんご) ___ \"___\";;\\n    # バナナの場合\\n    ___) ___ \"___\";;\\n    # その他の場合\\n    *) ___ \"その他\";;\\n___",
+      "holeyCode": "# 変数fruitに値を代入\\n___=\"___\"\\n# fruitの値で分岐\\n___ $___ in\\n    # りんごの場合\\n    りんご) ___ \"___\";;\\n    # バナナの場合\\n    ___) ___ \"___\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\n___",
       "correctLines": [
           "# 変数fruitに値を代入",
           "fruit=\"りんご\"",
@@ -445,7 +445,7 @@ export const bash2Data = {
         }
       ],
       "correctCode": "# ENDラベルまでをcatに渡す\\ncat <<END\\nHello\\nWorld\\nEND",
-      "holeyCode": "# ENDラベルまでをcatに渡す\\n___ ___END\\n// 列挙値\n___\\n// 列挙値\n___\\n// 列挙値\n___",
+      "holeyCode": "# ENDラベルまでをcatに渡す\\n___ ___END\\n// 列挙値\\n___\\n// 列挙値\\n___\\n// 列挙値\\n___",
       "correctLines": [
           "# ENDラベルまでをcatに渡す",
           "cat <<END",

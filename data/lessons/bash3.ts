@@ -119,7 +119,7 @@ export const bash3Data = {
         }
       ],
       "correctCode": "# in.txtを作成してから読み込む\\necho \"line1\" > /tmp/in.txt\\nwc -l < /tmp/in.txt",
-      "holeyCode": "# in.txtを作成してから読み込む\\n___ \"___\" ___ ___\\n// コードを記述\n___ ___ ___ ___",
+      "holeyCode": "# in.txtを作成してから読み込む\\n___ \"___\" ___ ___\\n// コードを記述\\n___ ___ ___ ___",
       "correctLines": [
           "# in.txtを作成してから読み込む",
           "echo \\\"line1\\\" > /tmp/in.txt",
@@ -346,7 +346,7 @@ export const bash3Data = {
         }
       ],
       "correctCode": "# 複数行出力を並べ替える\\necho -e \"b\\na\\nc\" | sort",
-      "holeyCode": "# 複数行出力を並べ替える\\n___ ___ \"___\\n// \\\n___\\n// パイプライン処理\n___\" ___ ___",
+      "holeyCode": "# 複数行出力を並べ替える\\n___ ___ \"___\\n// \\n___\\n// パイプライン処理\\n___\" ___ ___",
       "correctLines": [
           "# 複数行出力を並べ替える",
           "echo -e \\\\\\\"b",
@@ -390,7 +390,7 @@ export const bash3Data = {
         }
       ],
       "correctCode": "# 重複をuniqで取り除く\\necho -e \"a\\na\\nb\" | uniq",
-      "holeyCode": "# 重複をuniqで取り除く\\n___ ___ \"___\\n// \\\n___\\n// パイプライン処理\n___\" ___ ___",
+      "holeyCode": "# 重複をuniqで取り除く\\n___ ___ \"___\\n// \\n___\\n// パイプライン処理\\n___\" ___ ___",
       "correctLines": [
           "# 重複をuniqで取り除く",
           "echo -e \\\\\\\"a",

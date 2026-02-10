@@ -112,7 +112,7 @@ export const csharp2Data = {
         }
       ],
       "correctCode": "// Shapeクラスを定義\\nclass Shape {\\n    // virtualで仮想メソッド\\n    public virtual void Draw() {\\n        // 画面に出力\\n        Console.WriteLine(\"shape\");\\n    }\\n}\\n// Shapeを継承\\nclass Circle : Shape {\\n    // overrideで親メソッドを上書き\\n    public override void Draw() {\\n        // 画面に出力\\n        Console.WriteLine(\"circle\");\\n    }\\n}\\n\\n// Circleインスタンスを作成\\nCircle c = new Circle();\\n// Drawメソッドを呼び出し\\nc.Draw();",
-      "holeyCode": "// Shapeクラスを定義\\nclass ___ {\\n    // virtualで仮想メソッド\\n    public virtual void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___\\n// Shapeを継承\\nclass ___ : ___ {\\n    // overrideで親メソッドを上書き\\n    public override void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___\\n\\n// Circleインスタンスを作成\\n___ ___ = new ___();\\n// Drawメソッドを呼び出し\\n___.___();",
+      "holeyCode": "// Shapeクラスを定義\\nclass ___ {\\n    // virtualで仮想メソッド\\n    public virtual void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// Shapeを継承\\nclass ___ : ___ {\\n    // overrideで親メソッドを上書き\\n    public override void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// Circleインスタンスを作成\\n___ ___ = new ___();\\n// Drawメソッドを呼び出し\\n___.___();",
       "correctLines": [
           "// Shapeクラスを定義",
           "class Shape {",
@@ -197,7 +197,7 @@ export const csharp2Data = {
         }
       ],
       "correctCode": "// interfaceでインターフェースを定義\\ninterface IRunner {\\n    // Runメソッドを宣言\\n    void Run();\\n}\\n// IRunnerを実装\\nclass Robot : IRunner {\\n    // Runメソッドを実装\\n    public void Run() {\\n        // 画面に出力\\n        Console.WriteLine(\"running\");\\n    }\\n}\\n\\n// Robotインスタンスを作成\\nRobot r = new Robot();\\n// Runメソッドを呼び出し\\nr.Run();",
-      "holeyCode": "// interfaceでインターフェースを定義\\ninterface ___ {\\n    // Runメソッドを宣言\\n    void ___();\\n// ブロックを閉じる\n___\\n// IRunnerを実装\\nclass ___ : ___ {\\n    // Runメソッドを実装\\n    public void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___\\n\\n// Robotインスタンスを作成\\n___ ___ = new ___();\\n// Runメソッドを呼び出し\\n___.___();",
+      "holeyCode": "// interfaceでインターフェースを定義\\ninterface ___ {\\n    // Runメソッドを宣言\\n    void ___();\\n// ブロックを閉じる\\n___\\n// IRunnerを実装\\nclass ___ : ___ {\\n    // Runメソッドを実装\\n    public void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// Robotインスタンスを作成\\n___ ___ = new ___();\\n// Runメソッドを呼び出し\\n___.___();",
       "correctLines": [
           "// interfaceでインターフェースを定義",
           "interface IRunner {",
@@ -274,7 +274,7 @@ export const csharp2Data = {
         }
       ],
       "correctCode": "// Itemクラスを定義\\nclass Item {\\n    // getで値を取得\\n    public int Price { get; set; }\\n}\\n\\n// Itemインスタンスを作成\\nItem item = new Item();\\n// Priceに値を設定\\nitem.Price = 500;\\n// Priceを表示\\nConsole.WriteLine(item.Price);",
-      "holeyCode": "// Itemクラスを定義\\nclass ___ {\\n    // getで値を取得\\n    public int ___ { get; ___; }\\n// ブロックを閉じる\n___\\n\\n// Itemインスタンスを作成\\n___ ___ = new ___();\\n// Priceに値を設定\\n___.___ = ___;\\n// Priceを表示\\n___.___(___.___ );",
+      "holeyCode": "// Itemクラスを定義\\nclass ___ {\\n    // getで値を取得\\n    public int ___ { get; ___; }\\n// ブロックを閉じる\\n___\\n\\n// Itemインスタンスを作成\\n___ ___ = new ___();\\n// Priceに値を設定\\n___.___ = ___;\\n// Priceを表示\\n___.___(___.___ );",
       "correctLines": [
           "// Itemクラスを定義",
           "class Item {",
@@ -380,7 +380,7 @@ export const csharp2Data = {
         }
       ],
       "correctCode": "// int型のListを作成\\nList<int> nums = new List<int> {1, 5, 10, 15, 20};\\n// Whereで条件に合う要素を抽出\\nvar result = nums.Where(n => n >= 10);\\n// foreachでループ\\nforeach (var n in result) {\\n    // 画面に出力\\n    Console.WriteLine(n);\\n}",
-      "holeyCode": "// int型のListを作成\\n___<___> ___ = new ___<___> {___, ___, ___, ___, ___};\\n// Whereで条件に合う要素を抽出\\nvar ___ = ___.___(___=> ___ >= ___);\\n// foreachでループ\\nforeach (var ___ in ___) {\\n    // 画面に出力\\n    ___.___(___);\\n// ブロックを閉じる\n___",
+      "holeyCode": "// int型のListを作成\\n___<___> ___ = new ___<___> {___, ___, ___, ___, ___};\\n// Whereで条件に合う要素を抽出\\nvar ___ = ___.___(___=> ___ >= ___);\\n// foreachでループ\\nforeach (var ___ in ___) {\\n    // 画面に出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// int型のListを作成",
           "List<int> nums = new List<int> {1, 5, 10, 15, 20};",
@@ -432,7 +432,7 @@ export const csharp2Data = {
         }
       ],
       "correctCode": "// int型のListを作成\\nList<int> nums = new List<int> {1, 2, 3};\\n// Selectで各要素を変換\\nvar squared = nums.Select(n => n * n);\\n// foreachでループ\\nforeach (var n in squared) {\\n    // 画面に出力\\n    Console.WriteLine(n);\\n}",
-      "holeyCode": "// int型のListを作成\\n___<___> ___ = new ___<___> {___, ___, ___};\\n// Selectで各要素を変換\\nvar ___ = ___.___(___=> ___ * ___);\\n// foreachでループ\\nforeach (var ___ in ___) {\\n    // 画面に出力\\n    ___.___(___);\\n// ブロックを閉じる\n___",
+      "holeyCode": "// int型のListを作成\\n___<___> ___ = new ___<___> {___, ___, ___};\\n// Selectで各要素を変換\\nvar ___ = ___.___(___=> ___ * ___);\\n// foreachでループ\\nforeach (var ___ in ___) {\\n    // 画面に出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// int型のListを作成",
           "List<int> nums = new List<int> {1, 2, 3};",
@@ -524,7 +524,7 @@ export const csharp2Data = {
         }
       ],
       "correctCode": "// tryで例外処理を開始\\ntry {\\n    // 例外を投げる\\n    throw new Exception(\"oops\");\\n// catchで例外を捕捉\\n} catch (Exception e) {\\n    // 画面に出力\\n    Console.WriteLine(\"caught\");\\n}",
-      "holeyCode": "// tryで例外処理を開始\\n___ {\\n    // 例外を投げる\\n    ___ new ___(\"___\");\\n// catchで例外を捕捉\\n} ___ (___ ___) {\\n    // 画面に出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\n___",
+      "holeyCode": "// tryで例外処理を開始\\n___ {\\n    // 例外を投げる\\n    ___ new ___(\"___\");\\n// catchで例外を捕捉\\n} ___ (___ ___) {\\n    // 画面に出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// tryで例外処理を開始",
           "try {",

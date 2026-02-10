@@ -294,7 +294,7 @@ export const elixir3Data = {
         }
       ],
       "correctCode": "# defで関数を定義\\ndef process(map) do\\n  # withでパターンマッチを連鎖\\n  with {:ok, name} <- Map.fetch(map, :name),\\n       {:ok, age} <- Map.fetch(map, :age) do\\n    {:ok, \"#{name} is #{age}歳です\"}\\n  # elseでエラー処理\\n  else\\n    :error -> {:error, \"Missing field\"}\\n  # endでブロックを閉じる\\n  end\\n# endで関数を閉じる\\nend",
-      "holeyCode": "# defで関数を定義\\ndef ___(___)___\\n  # withでパターンマッチを連鎖\\n  with {___, ___} <- ___.___(___, ___),\\n       # タプルを返す\n       {___, ___} <- ___.___(___, ___) ___\\n    # タプルを返す\n    {___, \"___\"}\\n  # elseでエラー処理\\n  ___\\n    # パターンマッチの分岐\n    ___ -> {___, \"___\"}\\n  # endでブロックを閉じる\\n  ___\\n# endで関数を閉じる\\n___",
+      "holeyCode": "# defで関数を定義\\ndef ___(___)___\\n  # withでパターンマッチを連鎖\\n  with {___, ___} <- ___.___(___, ___),\\n       # タプルを返す\\n       {___, ___} <- ___.___(___, ___) ___\\n    # タプルを返す\\n    {___, \"___\"}\\n  # elseでエラー処理\\n  ___\\n    # パターンマッチの分岐\\n    ___ -> {___, \"___\"}\\n  # endでブロックを閉じる\\n  ___\\n# endで関数を閉じる\\n___",
       "correctLines": [
           "# defで関数を定義",
           "def process(map) do",
@@ -401,7 +401,7 @@ export const elixir3Data = {
         }
       ],
       "correctCode": "# defimplでプロトコルを実装\\ndefimpl Describable, for: Map do\\n  # defで関数を定義\\n  def describe(map) do\\n    \"Map with #{map_size(map)} keys\"\\n  # endで関数を閉じる\\n  end\\n# endでブロックを閉じる\\nend",
-      "holeyCode": "# defimplでプロトコルを実装\\ndefimpl ___, for: ___ ___\\n  # defで関数を定義\\n  def ___(___) ___\\n    # パッケージをインポート\n    \"___\"\\n  # endで関数を閉じる\\n  ___\\n# endでブロックを閉じる\\n___",
+      "holeyCode": "# defimplでプロトコルを実装\\ndefimpl ___, for: ___ ___\\n  # defで関数を定義\\n  def ___(___) ___\\n    # パッケージをインポート\\n    \"___\"\\n  # endで関数を閉じる\\n  ___\\n# endでブロックを閉じる\\n___",
       "correctLines": [
           "# defimplでプロトコルを実装",
           "defimpl Describable, for: Map do",

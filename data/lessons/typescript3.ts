@@ -100,7 +100,7 @@ export const typescriptData3 = {
         }
       ],
       "correctCode": "interface Options {\\n  // デバッグ設定の型\\n  debug?: boolean;\\n  // 詳細出力設定の型\\n  verbose?: boolean;\\n}\\n// Required で全プロパティを必須に\\nfunction init(opts: Required<Options>) {\\n  // debugを出力\\n  console.log(opts.debug);\\n}\\n\\n// オプションを渡して初期化\\ninit({ debug: true, verbose: false });",
-      "holeyCode": "// インターフェースを定義\ninterface ___ {\\n  // デバッグ設定の型\\n  ___?: ___;\\n  // 詳細出力設定の型\\n  ___?: ___;\\n// ブロックを閉じる\n___\\n// Required で全プロパティを必須に\\nfunction ___(___: ___<___>) {\\n  // debugを出力\\n  ___.___(___.___);\\n// ブロックを閉じる\n___\\n___\\n// オプションを渡して初期化\\n___({ ___: ___, ___: ___ });",
+      "holeyCode": "// インターフェースを定義\\ninterface ___ {\\n  // デバッグ設定の型\\n  ___?: ___;\\n  // 詳細出力設定の型\\n  ___?: ___;\\n// ブロックを閉じる\\n___\\n// Required で全プロパティを必須に\\nfunction ___(___: ___<___>) {\\n  // debugを出力\\n  ___.___(___.___);\\n// ブロックを閉じる\\n___\\n___\\n// オプションを渡して初期化\\n___({ ___: ___, ___: ___ });",
       "correctLines": [
           "// インターフェースを定義",
           "interface Options {",
@@ -168,7 +168,7 @@ export const typescriptData3 = {
         }
       ],
       "correctCode": "interface Product {\\n  // IDの型\\n  id: number;\\n  // 名前の型\\n  name: string;\\n  // 価格の型\\n  price: number;\\n}\\n// Pick で特定のプロパティを選択\\ntype ProductName = Pick<Product, 'name'>;\\n\\n// 商品名のみを持つオブジェクト\\nconst item: ProductName = { name: 'りんご' };\\n// 名前を出力\\nconsole.log(item.name);",
-      "holeyCode": "// インターフェースを定義\ninterface ___ {\\n  // IDの型\\n  ___: ___;\\n  // 名前の型\\n  ___: ___;\\n  // 価格の型\\n  ___: ___;\\n// ブロックを閉じる\n___\\n// Pick で特定のプロパティを選択\\ntype ___ = ___<___, '___'>;\\n___\\n// 商品名のみを持つオブジェクト\\nconst ___: ___ = { ___: '___' };\\n// 名前を出力\\n___.___(___.___);",
+      "holeyCode": "// インターフェースを定義\\ninterface ___ {\\n  // IDの型\\n  ___: ___;\\n  // 名前の型\\n  ___: ___;\\n  // 価格の型\\n  ___: ___;\\n// ブロックを閉じる\\n___\\n// Pick で特定のプロパティを選択\\ntype ___ = ___<___, '___'>;\\n___\\n// 商品名のみを持つオブジェクト\\nconst ___: ___ = { ___: '___' };\\n// 名前を出力\\n___.___(___.___);",
       "correctLines": [
           "// インターフェースを定義",
           "interface Product {",
@@ -236,7 +236,7 @@ export const typescriptData3 = {
         }
       ],
       "correctCode": "interface User {\\n  // IDの型\\n  id: number;\\n  // 名前の型\\n  name: string;\\n  // 秘密情報の型\\n  secret: string;\\n}\\n// Omit で特定のプロパティを除外\\ntype SafeUser = Omit<User, 'secret'>;\\n\\n// secretを除いたユーザー\\nconst user: SafeUser = { id: 1, name: 'アリス' };\\n// 名前を出力\\nconsole.log(user.name);",
-      "holeyCode": "// インターフェースを定義\ninterface ___ {\\n  // IDの型\\n  ___: ___;\\n  // 名前の型\\n  ___: ___;\\n  // 秘密情報の型\\n  ___: ___;\\n// ブロックを閉じる\n___\\n// Omit で特定のプロパティを除外\\ntype ___ = ___<___, '___'>;\\n___\\n// secretを除いたユーザー\\nconst ___: ___ = { ___: ___, ___: '___' };\\n// 名前を出力\\n___.___(___.___);",
+      "holeyCode": "// インターフェースを定義\\ninterface ___ {\\n  // IDの型\\n  ___: ___;\\n  // 名前の型\\n  ___: ___;\\n  // 秘密情報の型\\n  ___: ___;\\n// ブロックを閉じる\\n___\\n// Omit で特定のプロパティを除外\\ntype ___ = ___<___, '___'>;\\n___\\n// secretを除いたユーザー\\nconst ___: ___ = { ___: ___, ___: '___' };\\n// 名前を出力\\n___.___(___.___);",
       "correctLines": [
           "// インターフェースを定義",
           "interface User {",
@@ -304,7 +304,7 @@ export const typescriptData3 = {
         }
       ],
       "correctCode": "// フルーツのユニオン型\\ntype Fruit = 'りんご' | 'バナナ';\\n// Record でキーと値の型を指定\\ntype Prices = Record<Fruit, number>;\\n\\n// 価格オブジェクト\\nconst prices: Prices = {\\n  // りんごの価格\\n  'りんご': 100,\\n  // バナナの価格\\n  'バナナ': 80\\n};\\n\\n// りんごの価格を出力\\nconsole.log(prices['りんご']);",
-      "holeyCode": "// フルーツのユニオン型\\ntype ___ = '___' | '___';\\n// Record でキーと値の型を指定\\ntype ___ = ___<___, ___>;\\n___\\n// 価格オブジェクト\\nconst ___: ___ = {\\n  // りんごの価格\\n  '___': ___,\\n  // バナナの価格\\n  '___': ___\\n// ブロックを閉じる\n___\\n___\\n// りんごの価格を出力\\n___.___(___['___']);",
+      "holeyCode": "// フルーツのユニオン型\\ntype ___ = '___' | '___';\\n// Record でキーと値の型を指定\\ntype ___ = ___<___, ___>;\\n___\\n// 価格オブジェクト\\nconst ___: ___ = {\\n  // りんごの価格\\n  '___': ___,\\n  // バナナの価格\\n  '___': ___\\n// ブロックを閉じる\\n___\\n___\\n// りんごの価格を出力\\n___.___(___['___']);",
       "correctLines": [
           "// フルーツのユニオン型",
           "type Fruit = 'りんご' | 'バナナ';",
@@ -370,7 +370,7 @@ export const typescriptData3 = {
         }
       ],
       "correctCode": "function createPoint() {\\n  // 座標オブジェクトを返す\\n  return { x: 10, y: 20 };\\n}\\n// ReturnType で戻り値の型を取得\\ntype Point = ReturnType<typeof createPoint>;\\n\\n// pに{x: 5, y: 15}を代入\\nconst p: Point = { x: 5, y: 15 };\\n// 座標の合計を出力\\nconsole.log(p.x + p.y);",
-      "holeyCode": "// ブロックを開始\nfunction ___() {\\n  // 座標オブジェクトを返す\\n  return { ___: ___, ___: ___ };\\n// ブロックを閉じる\n___\\n// ReturnType で戻り値の型を取得\\ntype ___ = ___<typeof ___>;\\n___\\n// pに{x: 5, y: 15}を代入\\nconst ___: ___ = { ___: ___, ___: ___ };\\n// 座標の合計を出力\\n___.___(___.___+___.___);",
+      "holeyCode": "// ブロックを開始\\nfunction ___() {\\n  // 座標オブジェクトを返す\\n  return { ___: ___, ___: ___ };\\n// ブロックを閉じる\\n___\\n// ReturnType で戻り値の型を取得\\ntype ___ = ___<typeof ___>;\\n___\\n// pに{x: 5, y: 15}を代入\\nconst ___: ___ = { ___: ___, ___: ___ };\\n// 座標の合計を出力\\n___.___(___.___+___.___);",
       "correctLines": [
           "// ブロックを開始",
           "function createPoint() {",
@@ -554,7 +554,7 @@ export const typescriptData3 = {
         }
       ],
       "correctCode": "interface Person {\\n  // 名前の型\\n  name: string;\\n  // 年齢の型\\n  age: number;\\n}\\n// keyof でオブジェクトのキーを取得\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\n  // キーで値を取得して返す\\n  return p[key];\\n}\\n\\n// personに{name: 'ボブ', age: 30}を代入\\nconst person = { name: 'ボブ', age: 30 };\\n// 名前を取得して出力\\nconsole.log(getProperty(person, 'name'));",
-      "holeyCode": "// インターフェースを定義\ninterface ___ {\\n  // 名前の型\\n  ___: ___;\\n  // 年齢の型\\n  ___: ___;\\n// ブロックを閉じる\n___\\n// keyof でオブジェクトのキーを取得\\nfunction ___<___ extends keyof ___>(___: ___, ___: ___) {\\n  // キーで値を取得して返す\\n  return ___[___];\\n// ブロックを閉じる\n___\\n___\\n// personに{name: 'ボブ', age: 30}を代入\\nconst ___ = { ___: '___', ___: ___ };\\n// 名前を取得して出力\\n___.___(___(___, '___'));",
+      "holeyCode": "// インターフェースを定義\\ninterface ___ {\\n  // 名前の型\\n  ___: ___;\\n  // 年齢の型\\n  ___: ___;\\n// ブロックを閉じる\\n___\\n// keyof でオブジェクトのキーを取得\\nfunction ___<___ extends keyof ___>(___: ___, ___: ___) {\\n  // キーで値を取得して返す\\n  return ___[___];\\n// ブロックを閉じる\\n___\\n___\\n// personに{name: 'ボブ', age: 30}を代入\\nconst ___ = { ___: '___', ___: ___ };\\n// 名前を取得して出力\\n___.___(___(___, '___'));",
       "correctLines": [
           "// インターフェースを定義",
           "interface Person {",
@@ -626,7 +626,7 @@ export const typescriptData3 = {
         }
       ],
       "correctCode": "// マップ型の定義\\ntype Optional<T> = {\\n  // in でキーをイテレート\\n  [K in keyof T]?: T[K];\\n};\\n\\ninterface Config {\\n  // ホスト名の型\\n  host: string;\\n  // ポート番号の型\\n  port: number;\\n}\\n\\n// 部分的なConfigオブジェクト\\nconst partial: Optional<Config> = { host: 'localhost' };\\n// ホスト名を出力\\nconsole.log(partial.host);",
-      "holeyCode": "// マップ型の定義\\ntype ___<___> = {\\n  // in でキーをイテレート\\n  [___ in keyof ___]?: ___[___];\\n// ブロックを閉じる\n___\\n___\\n// インターフェースを定義\ninterface ___ {\\n  // ホスト名の型\\n  ___: ___;\\n  // ポート番号の型\\n  ___: ___;\\n// ブロックを閉じる\n___\\n___\\n// 部分的なConfigオブジェクト\\nconst ___: ___<___> = { ___: '___' };\\n// ホスト名を出力\\n___.___(___.___);",
+      "holeyCode": "// マップ型の定義\\ntype ___<___> = {\\n  // in でキーをイテレート\\n  [___ in keyof ___]?: ___[___];\\n// ブロックを閉じる\\n___\\n___\\n// インターフェースを定義\\ninterface ___ {\\n  // ホスト名の型\\n  ___: ___;\\n  // ポート番号の型\\n  ___: ___;\\n// ブロックを閉じる\\n___\\n___\\n// 部分的なConfigオブジェクト\\nconst ___: ___<___> = { ___: '___' };\\n// ホスト名を出力\\n___.___(___.___);",
       "correctLines": [
           "// マップ型の定義",
           "type Optional<T> = {",

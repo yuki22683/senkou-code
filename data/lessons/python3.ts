@@ -99,7 +99,7 @@ export const pythonData3 = {
         }
       ],
       "correctCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef find_max(*args):\\n    # 最大値を最初の引数で初期化\\n    max_val = args[0]\\n    # 渡された全ての引数をループで処理\\n    for n in args:\\n        # より大きい値があれば更新\\n        if n > max_val:\\n            max_val = n\\n    # 最終的な最大値を返す\\n    return max_val\\n\\n# find_max(3, 7, 2, 9, 5)の結果を表示\\nprint(find_max(3, 7, 2, 9, 5))",
-      "holeyCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef ___(*___):\\n    # 最大値を最初の引数で初期化\\n    ___ = ___[___]\\n    # 渡された全ての引数をループで処理\\n    for ___ in ___:\\n        # より大きい値があれば更新\\n        if ___ ___ ___:\\n            # 値を代入\n            ___ = ___\\n    # 最終的な最大値を返す\\n    return ___\\n\\n# find_max(3, 7, 2, 9, 5)の結果を表示\\n___(___(3, 7, 2, 9, 5))",
+      "holeyCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef ___(*___):\\n    # 最大値を最初の引数で初期化\\n    ___ = ___[___]\\n    # 渡された全ての引数をループで処理\\n    for ___ in ___:\\n        # より大きい値があれば更新\\n        if ___ ___ ___:\\n            # 値を代入\\n            ___ = ___\\n    # 最終的な最大値を返す\\n    return ___\\n\\n# find_max(3, 7, 2, 9, 5)の結果を表示\\n___(___(3, 7, 2, 9, 5))",
       "correctLines": [
           "# 全ての数値から最大値を求めるfind_max関数を定義",
           "def find_max(*args):",

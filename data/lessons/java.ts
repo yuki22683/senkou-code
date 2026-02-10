@@ -26,10 +26,10 @@ export const javaData = {
           "content": "# 最初に書く「おまじない」\\n\\nJavaでプログラムを書くときは、必ず書かなければいけない「お約束」があります。\\n\\n**たとえ話：** 手紙を書くときに「拝啓」から始めるように、Javaにも決まった書き出しがあるんです。\\n\\n```java\\npublic class Main {\\n    public static void main(String[] args) {\\n        // ここにやりたいことを書くよ！\\n    }\\n}\\n```\\n\\n**何をしているの？**\\n- `public class Main` → プログラムに「Main」という名前をつけています\\n- `public static void main` → 「ここからスタート！」という合図です\\n\\n画面に文字を出したいときは、`System.out.println(\"出したい文字\");` と書きます。長いですね！でも、これがJavaの流儀なんです。"
         }
       ],
-      "correctCode": "// クラスを定義\\npublic class Main {\\n    // メソッドを定義\\n    public static void main(String[] args) {\\n        // Hello, Java! と出力する\\n        System.out.println(\"Hello, Java!\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // Hello, Java! と出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// Mainクラスを定義\\npublic class Main {\\n    // メソッドを定義\\n    public static void main(String[] args) {\\n        // Hello, Java! と出力する\\n        System.out.println(\"Hello, Java!\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// Mainクラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // Hello, Java! と出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// クラスを定義",
+          "// Mainクラスを定義",
           "public class Main {",
           "    // メソッドを定義",
           "    public static void main(String[] args) {",
@@ -82,7 +82,7 @@ export const javaData = {
         }
       ],
       "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        // 文字列 Java を代入する\\n        String name = \"Java\";\\n        // 変数 name を出力する\\n        System.out.println(name);\\n    }\\n}",
-      "holeyCode": "// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // 文字列 Java を代入する\\n        ___ ___ = ___;\\n        // 変数 name を出力する\\n        ___.___.___(___);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // 文字列 Java を代入する\\n        ___ ___ = ___;\\n        // 変数 name を出力する\\n        ___.___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
@@ -144,7 +144,7 @@ export const javaData = {
         }
       ],
       "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        // x に 10 を代入する\\n        int x = 10;\\n        // y に 3 を代入する\\n        int y = 3;\\n        // - でひき算した答えを出す\\n        System.out.println(x - y);\\n    }\\n}",
-      "holeyCode": "// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // x に 10 を代入する\\n        ___ ___ = ___;\\n        // y に 3 を代入する\\n        ___ ___ = ___;\\n        // - でひき算した答えを出す\\n        ___.___.___(___ ___ ___);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // x に 10 を代入する\\n        ___ ___ = ___;\\n        // y に 3 を代入する\\n        ___ ___ = ___;\\n        // - でひき算した答えを出す\\n        ___.___.___(___ ___ ___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
@@ -212,7 +212,7 @@ export const javaData = {
         }
       ],
       "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        // 10 を 3 で割ったあまりを出力する\\n        System.out.println(10 % 3);\\n    }\\n}",
-      "holeyCode": "// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // 10 を 3 で割ったあまりを出力する\\n        ___.___.___(___ ___ ___);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // 10 を 3 で割ったあまりを出力する\\n        ___.___.___(___ ___ ___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
@@ -271,7 +271,7 @@ export const javaData = {
         }
       ],
       "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        // hp に 100 を入れる\\n        int hp = 100;\\n        // += で 20 を足す\\n        hp += 20;\\n        // -= で 50 を引く\\n        hp -= 50;\\n        System.out.println(hp);\\n    }\\n}",
-      "holeyCode": "// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // hp に 100 を入れる\\n        ___ ___ = ___;\\n        // += で 20 を足す\\n        ___ ___ ___;\\n        // -= で 50 を引く\\n        ___ ___ ___;\\n        // 出力\n        ___.___.___(___)___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // hp に 100 を入れる\\n        ___ ___ = ___;\\n        // += で 20 を足す\\n        ___ ___ ___;\\n        // -= で 50 を引く\\n        ___ ___ ___;\\n        // 出力\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
@@ -346,7 +346,7 @@ export const javaData = {
         }
       ],
       "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        // age というはこに 10 を入れる\\n        int age = 10;\\n        // 変数 age をくっつけて表示する\\n        System.out.println(\"私は\" + age + \"歳です\");\\n    }\\n}",
-      "holeyCode": "// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // age というはこに 10 を入れる\\n        ___ ___ = ___;\\n        // 変数 age をくっつけて表示する\\n        ___.___.___(___ ___ ___ ___ ___);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // age というはこに 10 を入れる\\n        ___ ___ = ___;\\n        // 変数 age をくっつけて表示する\\n        ___.___.___(___ ___ ___ ___ ___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
@@ -412,7 +412,7 @@ export const javaData = {
         }
       ],
       "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        // \"あか\", \"あお\" の順で配列を作る\\n        String[] colors = {\"あか\", \"あお\"};\\n        // 添字 1 で2番目を出す\\n        System.out.println(colors[1]);\\n    }\\n}",
-      "holeyCode": "// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // \"あか\", \"あお\" の順で配列を作る\\n        ___[] ___ = {___, ___};\\n        // 添字 1 で2番目を出す\\n        ___.___.___(___[___]);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // \"あか\", \"あお\" の順で配列を作る\\n        ___[] ___ = {___, ___};\\n        // 添字 1 で2番目を出す\\n        ___.___.___(___[___]);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
@@ -475,7 +475,7 @@ export const javaData = {
         }
       ],
       "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        // score に 100 を入れる\\n        int score = 100;\\n        // > で80より大きいか比較する\\n        if (score > 80) {\\n            // ごうかく！ と表示する\\n            System.out.println(\"ごうかく！\");\\n        }\\n    }\\n}",
-      "holeyCode": "// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // score に 100 を入れる\\n        ___ ___ = ___;\\n        // > で80より大きいか比較する\\n        if (___ ___ ___) {\\n            // ごうかく！ と表示する\\n            ___.___.___(___);\\n        // ブロックを閉じる\n        ___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // score に 100 を入れる\\n        ___ ___ = ___;\\n        // > で80より大きいか比較する\\n        if (___ ___ ___) {\\n            // ごうかく！ と表示する\\n            ___.___.___(___);\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
@@ -549,7 +549,7 @@ export const javaData = {
               }
       ],
       "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        // age に 10 を入れる\\n        int age = 10;\\n        // 20以上かを比較する演算子\\n        if (age >= 20) {\\n            // 20歳以上のときのメッセージ（'おとな'）\\n            System.out.println(\"おとな\");\\n        // else でそれ以外の場合\\n        } else {\\n            // こども と表示する\\n            System.out.println(\"こども\");\\n        }\\n    }\\n}",
-      "holeyCode": "// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // age に 10 を入れる\\n        ___ ___ = ___;\\n        // 20以上かを比較する演算子\\n        if (___ ___ ___) {\\n            // 20歳以上のときのメッセージ（'おとな'）\\n            ___.___.___(___);\\n        // else でそれ以外の場合\\n        ___ else ___\\n            // こども と表示する\\n            ___.___.___(___);\\n        // ブロックを閉じる\n        ___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // age に 10 を入れる\\n        ___ ___ = ___;\\n        // 20以上かを比較する演算子\\n        if (___ ___ ___) {\\n            // 20歳以上のときのメッセージ（'おとな'）\\n            ___.___.___(___);\\n        // else でそれ以外の場合\\n        ___ else ___\\n            // こども と表示する\\n            ___.___.___(___);\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
@@ -635,7 +635,7 @@ export const javaData = {
         }
       ],
       "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        // score と bonus を定義する\\n        int score = 80;\\n        int bonus = 10;\\n        // && で両方の条件をチェックする\\n        if (score >= 70 && bonus > 0) {\\n            System.out.println(\"ボーナスあり合格\");\\n        }\\n    }\\n}",
-      "holeyCode": "// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // score と bonus を定義する\\n        ___ ___ = ___;\\n        // 変数を宣言\n        ___ ___ = ___;\\n        // && で両方の条件をチェックする\\n        if (___ >= ___ ___ ___ > ___) {\\n            // 出力\n            ___.___.___(___);\\n        // ブロックを閉じる\n        ___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // score と bonus を定義する\\n        ___ ___ = ___;\\n        // 変数を宣言\\n        ___ ___ = ___;\\n        // && で両方の条件をチェックする\\n        if (___ >= ___ ___ ___ > ___) {\\n            // 出力\\n            ___.___.___(___);\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
@@ -719,7 +719,7 @@ export const javaData = {
         }
       ],
       "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        // 配列を作る\\n        String[] names = {\"たろう\", \"はなこ\"};\\n        // 変数 name で配列 names を順番に取り出す\\n        for (String name : names) {\\n            System.out.println(name);\\n        }\\n    }\\n}",
-      "holeyCode": "// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // 配列を作る\\n        ___[] ___ = {___, ___};\\n        // 変数 name で配列 names を順番に取り出す\\n        for (___ ___ : ___) {\\n            // 出力\n            ___.___.___(___);\\n        // ブロックを閉じる\n        ___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // 配列を作る\\n        ___[] ___ = {___, ___};\\n        // 変数 name で配列 names を順番に取り出す\\n        for (___ ___ : ___) {\\n            // 出力\\n            ___.___.___(___);\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
@@ -788,7 +788,7 @@ export const javaData = {
         }
       ],
       "correctCode": "import java.util.HashMap;\\npublic class Main {\\n    public static void main(String[] args) {\\n        // new HashMap で作る\\n        HashMap<String, String> user = new HashMap<>();\\n        // put でデータを追加する\\n        user.put(\"name\", \"たろう\");\\n        // get でデータを取り出す\\n        System.out.println(user.get(\"name\"));\\n    }\\n}",
-      "holeyCode": "// ライブラリを読み込む\nimport ___.___.___;\\n// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // new HashMap で作る\\n        ___<___, ___> ___ = new ___<>();\\n        // put でデータを追加する\\n        ___.___(___, ___);\\n        // get でデータを取り出す\\n        ___.___.___(___.___(___)___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___;\\n// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // new HashMap で作る\\n        ___<___, ___> ___ = new ___<>();\\n        // put でデータを追加する\\n        ___.___(___, ___);\\n        // get でデータを取り出す\\n        ___.___.___(___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "import java.util.HashMap;",
@@ -857,7 +857,7 @@ export const javaData = {
         }
       ],
       "correctCode": "public class Main {\\n    // greet というメソッドを定義する\\n    public static void greet() {\\n        System.out.println(\"こんにちは\");\\n    }\\n    public static void main(String[] args) {\\n        // greet メソッドを呼び出す\\n        greet();\\n    }\\n}",
-      "holeyCode": "// クラスを定義\npublic class ___ {\\n    // greet というメソッドを定義する\\n    public static void ___() {\\n        // \"\"\n        ___.___.___(___)___\\n    // ブロックを閉じる\n    ___\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // greet メソッドを呼び出す\\n        ___();\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// クラスを定義\\npublic class ___ {\\n    // greet というメソッドを定義する\\n    public static void ___() {\\n        // \"\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // greet メソッドを呼び出す\\n        ___();\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// クラスを定義",
           "public class Main {",

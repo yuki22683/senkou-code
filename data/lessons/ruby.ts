@@ -368,7 +368,7 @@ export const rubyData = {
         }
       ],
       "correctCode": "# scoreに100を入れる\\nscore = 100\\n# もし80より大きかったら\\nif score > 80\\n  # 「合格！」と表示する\\n  puts '合格！'\\nend",
-      "holeyCode": "# scoreに100を入れる\\n___ = ___\\n# もし80より大きかったら\\nif ___ ___ ___\\n  # 「合格！」と表示する\\n  ___ '___'\\n# ブロックを終了\n___",
+      "holeyCode": "# scoreに100を入れる\\n___ = ___\\n# もし80より大きかったら\\nif ___ ___ ___\\n  # 「合格！」と表示する\\n  ___ '___'\\n# ブロックを終了\\n___",
       "correctLines": [
           "# scoreに100を入れる",
           "score = 100",
@@ -427,7 +427,7 @@ export const rubyData = {
         }
       ],
       "correctCode": "# ageに10を入れる\\nage = 10\\n# 20歳以上かどうかで分ける\\nif age >= 20\\n  # 「大人」と表示\\n  puts '大人'\\n# else でそれ以外の場合\\nelse\\n  # 「子供」と表示\\n  puts '子供'\\nend",
-      "holeyCode": "# ageに10を入れる\\n___ = ___\\n# 20歳以上かどうかで分ける\\nif ___ ___ ___\\n  # 「大人」と表示\\n  ___ '___'\\n# else でそれ以外の場合\\n___\\n  # 「子供」と表示\\n  ___ '___'\\n# ブロックを終了\n___",
+      "holeyCode": "# ageに10を入れる\\n___ = ___\\n# 20歳以上かどうかで分ける\\nif ___ ___ ___\\n  # 「大人」と表示\\n  ___ '___'\\n# else でそれ以外の場合\\n___\\n  # 「子供」と表示\\n  ___ '___'\\n# ブロックを終了\\n___",
       "correctLines": [
           "# ageに10を入れる",
           "age = 10",
@@ -496,7 +496,7 @@ export const rubyData = {
         }
       ],
       "correctCode": "# scoreに85を入れる\\nscore = 85\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif score >= 80 and score <= 100\\n  # 「合格！」と表示\\n  puts '合格！'\\nend",
-      "holeyCode": "# scoreに85を入れる\\n___ = ___\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif ___ ___ ___ ___ ___ ___ ___\\n  # 「合格！」と表示\\n  ___ '___'\\n# ブロックを終了\n___",
+      "holeyCode": "# scoreに85を入れる\\n___ = ___\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif ___ ___ ___ ___ ___ ___ ___\\n  # 「合格！」と表示\\n  ___ '___'\\n# ブロックを終了\\n___",
       "correctLines": [
           "# scoreに85を入れる",
           "score = 85",
@@ -557,7 +557,7 @@ export const rubyData = {
         }
       ],
       "correctCode": "# namesに['太郎', '花子']を代入\\nnames = ['太郎', '花子']\\n# eachでnamesをループ\\nnames.each do |name|\\n  # nameを表示\\n  puts name\\nend",
-      "holeyCode": "# namesに['太郎', '花子']を代入\\n___ = ['___', '___']\\n# eachでnamesをループ\\n___.___ do |___|\\n  # nameを表示\\n  ___ ___\\n# ブロックを終了\n___",
+      "holeyCode": "# namesに['太郎', '花子']を代入\\n___ = ['___', '___']\\n# eachでnamesをループ\\n___.___ do |___|\\n  # nameを表示\\n  ___ ___\\n# ブロックを終了\\n___",
       "correctLines": [
           "# namesに['太郎', '花子']を代入",
           "names = ['太郎', '花子']",
@@ -658,7 +658,7 @@ export const rubyData = {
         }
       ],
       "correctCode": "# greetというメソッドを定義\\ndef greet\\n  # こんにちは と表示\\n  puts 'こんにちは'\\nend\\n# greetメソッドを呼び出す\\ngreet",
-      "holeyCode": "# greetというメソッドを定義\\ndef ___\\n  # こんにちは と表示\\n  ___ '___'\\n# ブロックを終了\n___\\n# greetメソッドを呼び出す\\n___",
+      "holeyCode": "# greetというメソッドを定義\\ndef ___\\n  # こんにちは と表示\\n  ___ '___'\\n# ブロックを終了\\n___\\n# greetメソッドを呼び出す\\n___",
       "correctLines": [
           "# greetというメソッドを定義",
           "def greet",

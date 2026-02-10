@@ -345,7 +345,7 @@ export const typescriptData = {
         }
       ],
       "correctCode": "// 真偽値（はい/いいえ）を入れるためのラベルを貼る\\nconst isAdult: boolean = true;\\n// もし 正しかったら（trueなら）\\nif (isAdult) {\\n    // メッセージ（'おとなです'）\\n    console.log('おとなです');\\n}",
-      "holeyCode": "// 真偽値（はい/いいえ）を入れるためのラベルを貼る\\nconst ___: ___ = ___;\\n// もし 正しかったら（trueなら）\\nif (___) {\\n    // メッセージ（'おとなです'）\\n    ___.___(___);\\n// ブロックを閉じる\n___",
+      "holeyCode": "// 真偽値（はい/いいえ）を入れるためのラベルを貼る\\nconst ___: ___ = ___;\\n// もし 正しかったら（trueなら）\\nif (___) {\\n    // メッセージ（'おとなです'）\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 真偽値（はい/いいえ）を入れるためのラベルを貼る",
           "const isAdult: boolean = true;",
@@ -403,7 +403,7 @@ export const typescriptData = {
         }
       ],
       "correctCode": "// score というはこに 75 を入れる\\nconst score: number = 75;\\n// 80以上かを比較する演算子\\nif (score >= 80) {\\n    // 80点以上のときのメッセージ（'ごうかく'）\\n    console.log('ごうかく');\\n// 「そうでなければ」を表すキーワード\\n} else {\\n    // それ以外の場合（'ざんねん'）\\n    console.log('ざんねん');\\n}",
-      "holeyCode": "// score というはこに 75 を入れる\\nconst ___: ___ = ___;\\n// 80以上かを比較する演算子\\nif (___ ___ ___) {\\n    // 80点以上のときのメッセージ（'ごうかく'）\\n    ___.___(___);\\n// 「そうでなければ」を表すキーワード\\n} ___ {\\n    // それ以外の場合（'ざんねん'）\\n    ___.___(___);\\n// ブロックを閉じる\n___",
+      "holeyCode": "// score というはこに 75 を入れる\\nconst ___: ___ = ___;\\n// 80以上かを比較する演算子\\nif (___ ___ ___) {\\n    // 80点以上のときのメッセージ（'ごうかく'）\\n    ___.___(___);\\n// 「そうでなければ」を表すキーワード\\n} ___ {\\n    // それ以外の場合（'ざんねん'）\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// score というはこに 75 を入れる",
           "const score: number = 75;",
@@ -477,7 +477,7 @@ export const typescriptData = {
         }
       ],
       "correctCode": "// scoreに85を入れる\\nconst score: number = 85;\\n// 80以上 かつ 100以下 ならメッセージを出す\\nif (score >= 80 && score <= 100) {\\n    // ごうかくと出力\\n    console.log('ごうかく');\\n}",
-      "holeyCode": "// scoreに85を入れる\\nconst ___: ___ = ___;\\n// 80以上 かつ 100以下 ならメッセージを出す\\nif (___ >= ___ ___ ___ <= ___) {\\n    // ごうかくと出力\\n    ___.___(___);\\n// ブロックを閉じる\n___",
+      "holeyCode": "// scoreに85を入れる\\nconst ___: ___ = ___;\\n// 80以上 かつ 100以下 ならメッセージを出す\\nif (___ >= ___ ___ ___ <= ___) {\\n    // ごうかくと出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// scoreに85を入れる",
           "const score: number = 85;",
@@ -545,7 +545,7 @@ export const typescriptData = {
         }
       ],
       "correctCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst names: string[] = ['たろう', 'はなこ'];\\n// 順番にループする\\nfor (const name of names) {\\n    console.log(name);\\n}",
-      "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst ___: ___[] = ['___', '___'];\\n// 順番にループする\\nfor (const ___ of ___) {\\n    // メソッドを呼び出す\n    ___.___(___);\\n// ブロックを閉じる\n___",
+      "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst ___: ___[] = ['___', '___'];\\n// 順番にループする\\nfor (const ___ of ___) {\\n    // メソッドを呼び出す\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 配列を作る（'たろう', 'はなこ'の順）",
           "const names: string[] = ['たろう', 'はなこ'];",
@@ -655,7 +655,7 @@ export const typescriptData = {
         }
       ],
       "correctCode": "// 受け取るデータのラベルを指定する\\nfunction greet(name: string) {\\n    console.log(`こんにちは、${name}`);\\n}\\n// 関数を実行する\\ngreet('TypeScript');",
-      "holeyCode": "// 受け取るデータのラベルを指定する\\nfunction ___(___: ___) {\\n    // メソッドを呼び出す\n    ___.___(___);\\n// ブロックを閉じる\n___\\n// 関数を実行する\\n___(___);",
+      "holeyCode": "// 受け取るデータのラベルを指定する\\nfunction ___(___: ___) {\\n    // メソッドを呼び出す\\n    ___.___(___);\\n// ブロックを閉じる\\n___\\n// 関数を実行する\\n___(___);",
       "correctLines": [
           "// 受け取るデータのラベルを指定する",
           "function greet(name: string) {",
@@ -712,7 +712,7 @@ export const typescriptData = {
         }
       ],
       "correctCode": "// 何も返さないときに使うラベル\\nfunction showDate(): void {\\n    console.log('今日の日付');\\n}\\n// 関数を実行する\\nshowDate();",
-      "holeyCode": "// 何も返さないときに使うラベル\\nfunction ___(): ___ {\\n    // メソッドを呼び出す\n    ___.___(___);\\n// ブロックを閉じる\n___\\n// 関数を実行する\\n___();",
+      "holeyCode": "// 何も返さないときに使うラベル\\nfunction ___(): ___ {\\n    // メソッドを呼び出す\\n    ___.___(___);\\n// ブロックを閉じる\\n___\\n// 関数を実行する\\n___();",
       "correctLines": [
           "// 何も返さないときに使うラベル",
           "function showDate(): void {",

@@ -45,8 +45,8 @@ export const rust4Data = {
           "content": "# impl で約束を守る\\n\\n構造体にトレイトを実装すると、その構造体は「約束を守る」ことになります。\\n\\n**コード例：**\\n```rust\\nstruct Person { name: String }\\n\\nimpl Greet for Person {\\n    fn greet(&self) -> String {\\n        format!(\"Hello, {}\", self.name)\\n    }\\n}\\n```\\n\\n**読み方：**\\n- `impl Greet for Person` → 「PersonはGreetを実装する」\\n- これでPersonは「あいさつできる」ようになった！"
         }
       ],
-      "correctCode": "// Speakトレイトを定義\\ntrait Speak {\\n    // パターンマッチの分岐\\n    fn speak(&self) -> String;\\n// ブロックを閉じる\\n}\\n\\n// 文を実行\\nstruct Dog;\\n\\n// 実装ブロックを開始\\nimpl Speak for Dog {\\n    // 関数を定義\\n    fn speak(&self) -> String {\\n        // \"\"\\n        String::from(\"ワン！\")\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// 関数を定義\\nfn main() {\\n    // 変数を宣言\\n    let dog = Dog;\\n    // 出力\\n    println!(\"{}\", dog.speak());\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    // パターンマッチの分岐\\n    fn ___(&___) -> ___;\\n// ブロックを閉じる\\n___\\n___\\n// 文を実行\\nstruct ___;\\n___\\n// 実装ブロックを開始\\nimpl ___ for ___ {\\n    // 関数を定義\\n    fn ___(&___) -> ___ {\\n        // \"\"\\n        ___::___(\"___\")\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// 関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___;\\n    // 出力\\n    ___!(\"{}\", ___.___());\\n// ブロックを閉じる\\n___",
+      "correctCode": "// Speakトレイトを定義\\ntrait Speak {\\n    // パターンマッチの分岐\\n    fn speak(&self) -> String;\\n// ブロックを閉じる\\n}\\n\\n// 文を実行\\nstruct Dog;\\n\\n// 実装ブロックを開始\\nimpl Speak for Dog {\\n    // 関数を定義\\n    fn speak(&self) -> String {\\n        // \"\"\\n        String::from(\"ワン！\")\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// main関数を定義\\nfn main() {\\n    // 変数を宣言\\n    let dog = Dog;\\n    // 出力\\n    println!(\"{}\", dog.speak());\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    // パターンマッチの分岐\\n    fn ___(&___) -> ___;\\n// ブロックを閉じる\\n___\\n___\\n// 文を実行\\nstruct ___;\\n___\\n// 実装ブロックを開始\\nimpl ___ for ___ {\\n    // 関数を定義\\n    fn ___(&___) -> ___ {\\n        // \"\"\\n        ___::___(\"___\")\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___;\\n    // 出力\\n    ___!(\"{}\", ___.___());\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Speakトレイトを定義",
           "trait Speak {",
@@ -69,7 +69,7 @@ export const rust4Data = {
           "// ブロックを閉じる",
           "}",
           "",
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // 変数を宣言",
           "    let dog = Dog;",
@@ -140,7 +140,7 @@ export const rust4Data = {
         }
       ],
       "correctCode": "// derive でトレイトを自動実装\\n#[derive(Debug)]\\nstruct User {\\n    name: String,\\n    age: u32,\\n}\\n\\nfn main() {\\n    let user = User { name: String::from(\"アリス\"), age: 30 };\\n    println!(\"{:?}\", user);\\n}",
-      "holeyCode": "// derive でトレイトを自動実装\\n#[___(___)]\\nstruct ___ {\\n    // フィールドを定義\n    ___: ___,\\n    // フィールドを定義\n    ___: ___,\\n// ブロックを閉じる\n___\\n___\\n// 関数を定義\nfn ___() {\\n    // \"\"\n    let ___ = ___ { ___: ___::___(\"___\"), ___: ___ };\\n    // 出力\n    ___!(\"{:?}\", ___);\\n// ブロックを閉じる\n___",
+      "holeyCode": "// derive でトレイトを自動実装\\n#[___(___)]\\nstruct ___ {\\n    // フィールドを定義\\n    ___: ___,\\n    // フィールドを定義\\n    ___: ___,\\n// ブロックを閉じる\\n___\\n___\\n// 関数を定義\\nfn ___() {\\n    // \"\"\\n    let ___ = ___ { ___: ___::___(\"___\"), ___: ___ };\\n    // 出力\\n    ___!(\"{:?}\", ___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// derive でトレイトを自動実装",
           "#[derive(Debug)]",
@@ -210,7 +210,7 @@ export const rust4Data = {
         }
       ],
       "correctCode": "fn main() {\\n    // Box::new でヒープに格納\\n    let x = Box::new(42);\\n    println!(\"{}\", *x);\\n}",
-      "holeyCode": "// 関数を定義\nfn ___() {\\n    // Box::new でヒープに格納\\n    let ___ = ___::___(___);\\n    // 出力\n    ___!(\"{}\", *___);\\n// ブロックを閉じる\n___",
+      "holeyCode": "// 関数を定義\\nfn ___() {\\n    // Box::new でヒープに格納\\n    let ___ = ___::___(___);\\n    // 出力\\n    ___!(\"{}\", *___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 関数を定義",
           "fn main() {",
@@ -260,7 +260,7 @@ export const rust4Data = {
         }
       ],
       "correctCode": "use std::rc::Rc;\\n\\nfn main() {\\n    let a = Rc::new(String::from(\"こんにちは\"));\\n    // clone で参照カウントを増やす\\n    let b = Rc::clone(&a);\\n    println!(\"{} {}\", a, b);\\n}",
-      "holeyCode": "// ライブラリを読み込む\nuse ___::___::___;\\n___\\n// 関数を定義\nfn ___() {\\n    // \"\"\n    let ___ = ___::___(___::___(\"___\"));\\n    // clone で参照カウントを増やす\\n    let ___ = ___::___(&___);\\n    // 出力\n    ___!(\"{} {}\", ___, ___);\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\nuse ___::___::___;\\n___\\n// 関数を定義\\nfn ___() {\\n    // \"\"\\n    let ___ = ___::___(___::___(\"___\"));\\n    // clone で参照カウントを増やす\\n    let ___ = ___::___(&___);\\n    // 出力\\n    ___!(\"{} {}\", ___, ___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "use std::rc::Rc;",
@@ -321,7 +321,7 @@ export const rust4Data = {
         }
       ],
       "correctCode": "use std::collections::HashMap;\\n\\nfn main() {\\n    let mut map = HashMap::new();\\n    // insert でキーと値を追加\\n    map.insert(\"a\", 1);\\n    map.insert(\"b\", 2);\\n    println!(\"{:?}\", map.get(\"a\"));\\n}",
-      "holeyCode": "// ライブラリを読み込む\nuse ___::___::___;\\n___\\n// 関数を定義\nfn ___() {\\n    // 変数を宣言\n    let mut ___ = ___::___();\\n    // insert でキーと値を追加\\n    ___.___(\"___\", ___);\\n    // \"\"\"\"\n    ___.___(\"___\", ___);\\n    // \"\"\n    ___!(\"{:?}\", ___.___(\"___\"));\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\nuse ___::___::___;\\n___\\n// 関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let mut ___ = ___::___();\\n    // insert でキーと値を追加\\n    ___.___(\"___\", ___);\\n    // \"\"\"\"\\n    ___.___(\"___\", ___);\\n    // \"\"\\n    ___!(\"{:?}\", ___.___(\"___\"));\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "use std::collections::HashMap;",
@@ -387,7 +387,7 @@ export const rust4Data = {
         }
       ],
       "correctCode": "// HashSet をインポート\\nuse std::collections::HashSet;\\n\\nfn main() {\\n    let mut set = HashSet::new();\\n    set.insert(1);\\n    set.insert(2);\\n    set.insert(1);\\n    println!(\"{}\", set.len());\\n}",
-      "holeyCode": "// HashSet をインポート\\nuse ___::___::___;\\n___\\n// 関数を定義\nfn ___() {\\n    // 変数を宣言\n    let mut ___ = ___::___();\\n    // メソッドを呼び出す\n    ___.___(___);\\n    // メソッドを呼び出す\n    ___.___(___);\\n    // メソッドを呼び出す\n    ___.___(___);\\n    // 出力\n    ___!(\"{}\", ___.___());\\n// ブロックを閉じる\n___",
+      "holeyCode": "// HashSet をインポート\\nuse ___::___::___;\\n___\\n// 関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let mut ___ = ___::___();\\n    // メソッドを呼び出す\\n    ___.___(___);\\n    // メソッドを呼び出す\\n    ___.___(___);\\n    // メソッドを呼び出す\\n    ___.___(___);\\n    // 出力\\n    ___!(\"{}\", ___.___());\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// HashSet をインポート",
           "use std::collections::HashSet;",
@@ -455,7 +455,7 @@ export const rust4Data = {
         }
       ],
       "correctCode": "fn main() {\\n    let num = 7;\\n    match num {\\n        // if でマッチガードを追加\\n        n if n % 2 == 0 => println!(\"偶数\"),\\n        _ => println!(\"奇数\"),\\n    }\\n}",
-      "holeyCode": "// 関数を定義\nfn ___() {\\n    // 変数を宣言\n    let ___ = ___;\\n    // パターンマッチ\n    match ___ {\\n        // if でマッチガードを追加\\n        ___ if ___ % ___ == ___ => ___!(\"___\"),\\n        // \"\"\n        ___ => ___!(\"___\"),\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// 関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___;\\n    // パターンマッチ\\n    match ___ {\\n        // if でマッチガードを追加\\n        ___ if ___ % ___ == ___ => ___!(\"___\"),\\n        // \"\"\\n        ___ => ___!(\"___\"),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 関数を定義",
           "fn main() {",
@@ -520,7 +520,7 @@ export const rust4Data = {
         }
       ],
       "correctCode": "// impl でトレイトを実装する型を返す\\nfn doubles(n: i32) -> impl Iterator<Item = i32> {\\n    (0..n).map(|x| x * 2)\\n}\\n\\nfn main() {\\n    for x in doubles(3) {\\n        println!(\"{}\", x);\\n    }\\n}",
-      "holeyCode": "// impl でトレイトを実装する型を返す\\nfn ___(___: ___) -> impl ___<___ = ___> {\\n    // イテレータ処理\n    (___..___).___(___ ___ * ___)\\n// ブロックを閉じる\n___\\n___\\n// 関数を定義\nfn ___() {\\n    // forループ\n    for ___ in ___(___) {\\n        // 出力\n        ___!(\"{}\", ___);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// impl でトレイトを実装する型を返す\\nfn ___(___: ___) -> impl ___<___ = ___> {\\n    // イテレータ処理\\n    (___..___).___(___ ___ * ___)\\n// ブロックを閉じる\\n___\\n___\\n// 関数を定義\\nfn ___() {\\n    // forループ\\n    for ___ in ___(___) {\\n        // 出力\\n        ___!(\"{}\", ___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// impl でトレイトを実装する型を返す",
           "fn doubles(n: i32) -> impl Iterator<Item = i32> {",
@@ -591,7 +591,7 @@ export const rust4Data = {
         }
       ],
       "correctCode": "fn main() {\\n    // collect で Vec に変換\\n    let nums: Vec<i32> = (1..=5).collect();\\n    println!(\"{:?}\", nums);\\n}",
-      "holeyCode": "// 関数を定義\nfn ___() {\\n    // collect で Vec に変換\\n    let ___: ___<___> = (___..=___).___();\\n    // 出力\n    ___!(\"{:?}\", ___);\\n// ブロックを閉じる\n___",
+      "holeyCode": "// 関数を定義\\nfn ___() {\\n    // collect で Vec に変換\\n    let ___: ___<___> = (___..=___).___();\\n    // 出力\\n    ___!(\"{:?}\", ___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 関数を定義",
           "fn main() {",
@@ -641,7 +641,7 @@ export const rust4Data = {
         }
       ],
       "correctCode": "fn main() {\\n    let items = vec![\"a\", \"b\", \"c\"];\\n    // 1番目の i にインデックス、2番目の item に要素が入る\\n    for (i, item) in items.iter().enumerate() {\\n        println!(\"{}: {}\", i, item);\\n    }\\n}",
-      "holeyCode": "// 関数を定義\nfn ___() {\\n    // \"\"\"\"\"\"\n    let ___ = ___![\"___\", \"___\", \"___\"];\\n    // 1番目の i にインデックス、2番目の item に要素が入る\\n    for (___, ___) in ___.___().___() {\\n        // 出力\n        ___!(\"{}: {}\", ___, ___);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// 関数を定義\\nfn ___() {\\n    // \"\"\"\"\"\"\\n    let ___ = ___![\"___\", \"___\", \"___\"];\\n    // 1番目の i にインデックス、2番目の item に要素が入る\\n    for (___, ___) in ___.___().___() {\\n        // 出力\\n        ___!(\"{}: {}\", ___, ___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 関数を定義",
           "fn main() {",

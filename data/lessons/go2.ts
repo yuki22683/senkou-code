@@ -126,7 +126,7 @@ export const go2Data = {
         }
       ],
       "correctCode": "package main\\nimport (\\n    \"errors\"\\n    \"fmt\"\\n)\\nfunc check(n int) (int, error) {\\n    if n < 0 {\\n        // errors.New でエラーを作成\\n        return 0, errors.New(\"negative\")\\n    }\\n    // nil でエラーなしを表す\\n    return n, nil\\n}\\nfunc main() {\\n    // 関数から2つの戻り値を受け取る\\n    val, err := check(5)\\n    if err != nil {\\n        fmt.Println(err)\\n    } else {\\n        fmt.Println(val)\\n    }\\n}",
-      "holeyCode": "// モジュールを宣言\npackage ___\\n// ライブラリを読み込む\nimport ___\\n    // パッケージをインポート\n    \\\"___\\\"\\n    // パッケージをインポート\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\n___\\n// 関数を定義\nfunc ___(___  ___) (___, ___) {\\n    // 条件分岐\n    if ___ < ___ {\\n        // errors.New でエラーを作成\\n        return ___, ___.___( \\\"___\\\")\\n    // ブロックを閉じる\n    ___\\n    // nil でエラーなしを表す\\n    return ___, ___\\n// ブロックを閉じる\n___\\n// 関数を定義\nfunc ___() {\\n    // 関数から2つの戻り値を受け取る\\n    ___, ___ := ___(___)\\n    // 条件分岐\n    if ___ != ___ {\\n        // 出力\n        ___.___(___) \\n    // else分岐\n    ___ else {\\n        // 出力\n        ___.___(___) \\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// モジュールを宣言\\npackage ___\\n// ライブラリを読み込む\\nimport ___\\n    // パッケージをインポート\\n    \\\"___\\\"\\n    // パッケージをインポート\\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\\n___\\n// 関数を定義\\nfunc ___(___  ___) (___, ___) {\\n    // 条件分岐\\n    if ___ < ___ {\\n        // errors.New でエラーを作成\\n        return ___, ___.___( \\\"___\\\")\\n    // ブロックを閉じる\\n    ___\\n    // nil でエラーなしを表す\\n    return ___, ___\\n// ブロックを閉じる\\n___\\n// 関数を定義\\nfunc ___() {\\n    // 関数から2つの戻り値を受け取る\\n    ___, ___ := ___(___)\\n    // 条件分岐\\n    if ___ != ___ {\\n        // 出力\\n        ___.___(___) \\n    // else分岐\\n    ___ else {\\n        // 出力\\n        ___.___(___) \\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -234,7 +234,7 @@ export const go2Data = {
         }
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    x := 5\\n    // & でアドレスを取得\\n    p := &x\\n    // *p でポインタの値を変更\\n    *p = 10\\n    fmt.Println(x)\\n}",
-      "holeyCode": "// モジュールを宣言\npackage ___\\n// パッケージをインポート\nimport \\\"___\\\"\\n// 関数を定義\nfunc ___() {\\n    // 変数を宣言\n    ___ := ___\\n    // & でアドレスを取得\\n    ___ := &___\\n    // *p でポインタの値を変更\\n    *___ = ___\\n    ___.___(___) \\n// ブロックを閉じる\n___",
+      "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\nimport \\\"___\\\"\\n// 関数を定義\\nfunc ___() {\\n    // 変数を宣言\\n    ___ := ___\\n    // & でアドレスを取得\\n    ___ := &___\\n    // *p でポインタの値を変更\\n    *___ = ___\\n    ___.___(___) \\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -296,7 +296,7 @@ export const go2Data = {
         }
       ],
       "correctCode": "package main\\nimport \"fmt\"\\n// Point構造体を定義\\ntype Point struct {\\n    // フィールド名と型を定義\\n    X int\\n    Y int\\n}\\nfunc main() {\\n    // 構造体を初期化\\n    p := Point{X: 3, Y: 4}\\n    fmt.Println(p.X)\\n}",
-      "holeyCode": "// モジュールを宣言\npackage ___\\n// パッケージをインポート\nimport \\\"___\\\"\\n// Point構造体を定義\\ntype ___ struct {\\n    // フィールド名と型を定義\\n    ___ ___\\n    // フィールドを定義\n    ___ ___\\n// ブロックを閉じる\n___\\n// 関数を定義\nfunc ___() {\\n    // 構造体を初期化\\n    ___ := ___{ ___: ___, ___: ___}\\n    // 出力\n    ___.___(___.___)\\n// ブロックを閉じる\n___",
+      "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\nimport \\\"___\\\"\\n// Point構造体を定義\\ntype ___ struct {\\n    // フィールド名と型を定義\\n    ___ ___\\n    // フィールドを定義\\n    ___ ___\\n// ブロックを閉じる\\n___\\n// 関数を定義\\nfunc ___() {\\n    // 構造体を初期化\\n    ___ := ___{ ___: ___, ___: ___}\\n    // 出力\\n    ___.___(___.___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -368,7 +368,7 @@ export const go2Data = {
         }
       ],
       "correctCode": "package main\\nimport \"fmt\"\\ntype Rect struct {\\n    W int\\n    H int\\n}\\nfunc (r Rect) Area() int {\\n    // * でかけ算\\n    return r.W * r.H\\n}\\nfunc main() {\\n    // 構造体を初期化\\n    rect := Rect{W: 3, H: 4}\\n    // rect.Area()を呼び出して表示\\n    fmt.Println(rect.Area())\\n}",
-      "holeyCode": "// モジュールを宣言\npackage ___\\n// パッケージをインポート\nimport \\\"___\\\"\\n// ブロックを開始\ntype ___ struct {\\n    // フィールドを定義\n    ___ ___\\n    // フィールドを定義\n    ___ ___\\n// ブロックを閉じる\n___\\n// 関数を定義\nfunc (___ ___) ___() ___ {\\n    // * でかけ算\\n    return ___.___ * ___.___\\n// ブロックを閉じる\n___\\n// 関数を定義\nfunc ___() {\\n    // 構造体を初期化\\n    ___ := ___{ ___: ___, ___: ___}\\n    // rect.Area()を呼び出して表示\\n    ___.___(___.___(  ))\\n// ブロックを閉じる\n___",
+      "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\nimport \\\"___\\\"\\n// ブロックを開始\\ntype ___ struct {\\n    // フィールドを定義\\n    ___ ___\\n    // フィールドを定義\\n    ___ ___\\n// ブロックを閉じる\\n___\\n// 関数を定義\\nfunc (___ ___) ___() ___ {\\n    // * でかけ算\\n    return ___.___ * ___.___\\n// ブロックを閉じる\\n___\\n// 関数を定義\\nfunc ___() {\\n    // 構造体を初期化\\n    ___ := ___{ ___: ___, ___: ___}\\n    // rect.Area()を呼び出して表示\\n    ___.___(___.___(  ))\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -452,7 +452,7 @@ export const go2Data = {
         }
       ],
       "correctCode": "package main\\nimport \"fmt\"\\n// Speakerインターフェースを定義\\ntype Speaker interface {\\n    Speak()\\n}\\ntype Dog struct{}\\nfunc (d Dog) Speak() {\\n    fmt.Println(\"ワン！\")\\n}\\nfunc main() {\\n    // インターフェース型の変数に代入\\n    var s Speaker = Dog{}\\n    // インターフェースのメソッドを呼び出す\\n    s.Speak()\\n}",
-      "holeyCode": "// モジュールを宣言\npackage ___\\n// パッケージをインポート\nimport \\\"___\\\"\\n// Speakerインターフェースを定義\\ntype ___ interface {\\n    // 関数を呼び出す\n    ___()\\n// ブロックを閉じる\n___\\n// 空の構造体を定義\ntype ___ struct{}\\n// 関数を定義\nfunc (___ ___) ___() {\\n    // \\\"\\\"\n    ___.___(\\\"___\\\")\\n// ブロックを閉じる\n___\\n// 関数を定義\nfunc ___() {\\n    // インターフェース型の変数に代入\\n    var ___ ___ = ___{}\\n    // インターフェースのメソッドを呼び出す\\n    ___.___()\\n// ブロックを閉じる\n___",
+      "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\nimport \\\"___\\\"\\n// Speakerインターフェースを定義\\ntype ___ interface {\\n    // 関数を呼び出す\\n    ___()\\n// ブロックを閉じる\\n___\\n// 空の構造体を定義\\ntype ___ struct{}\\n// 関数を定義\\nfunc (___ ___) ___() {\\n    // \\\"\\\"\\n    ___.___(\\\"___\\\")\\n// ブロックを閉じる\\n___\\n// 関数を定義\\nfunc ___() {\\n    // インターフェース型の変数に代入\\n    var ___ ___ = ___{}\\n    // インターフェースのメソッドを呼び出す\\n    ___.___()\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -536,7 +536,7 @@ export const go2Data = {
         }
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // defer で関数終了時に実行\\n    defer fmt.Println(\"end\")\\n    // これが先に実行される\\n    fmt.Println(\"start\")\\n}",
-      "holeyCode": "// モジュールを宣言\npackage ___\\n// パッケージをインポート\nimport \\\"___\\\"\\n// 関数を定義\nfunc ___() {\\n    // defer で関数終了時に実行\\n    defer ___.___(\\\"___\\\")\\n    // これが先に実行される\\n    ___.___(\\\"___\\\")\\n// ブロックを閉じる\n___",
+      "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\nimport \\\"___\\\"\\n// 関数を定義\\nfunc ___() {\\n    // defer で関数終了時に実行\\n    defer ___.___(\\\"___\\\")\\n    // これが先に実行される\\n    ___.___(\\\"___\\\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -592,7 +592,7 @@ export const go2Data = {
         }
       ],
       "correctCode": "package main\\nimport (\\n    \"fmt\"\\n    \"time\"\\n)\\nfunc say(msg string) {\\n    fmt.Println(msg)\\n}\\nfunc main() {\\n    // go でゴルーチンを起動\\n    go say(\"こんにちは\")\\n    // ゴルーチンの完了を待つ\\n    time.Sleep(100 * time.Millisecond)\\n}",
-      "holeyCode": "// モジュールを宣言\npackage ___\\n// ライブラリを読み込む\nimport ___\\n    // パッケージをインポート\n    \\\"___\\\"\\n    // パッケージをインポート\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\n___\\n// 関数を定義\nfunc ___(___ ___) {\\n    // 出力\n    ___.___(___) \\n// ブロックを閉じる\n___\\n// 関数を定義\nfunc ___() {\\n    // go でゴルーチンを起動\\n    go ___(\\\"___\\\")\\n    // ゴルーチンの完了を待つ\\n    ___.___(___ * ___.___)\\n// ブロックを閉じる\n___",
+      "holeyCode": "// モジュールを宣言\\npackage ___\\n// ライブラリを読み込む\\nimport ___\\n    // パッケージをインポート\\n    \\\"___\\\"\\n    // パッケージをインポート\\n    \\\"___\\\"\\n// 関数呼び出しを閉じる\\n___\\n// 関数を定義\\nfunc ___(___ ___) {\\n    // 出力\\n    ___.___(___) \\n// ブロックを閉じる\\n___\\n// 関数を定義\\nfunc ___() {\\n    // go でゴルーチンを起動\\n    go ___(\\\"___\\\")\\n    // ゴルーチンの完了を待つ\\n    ___.___(___ * ___.___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -672,7 +672,7 @@ export const go2Data = {
         }
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // chにmake(chan int)を代入\\n    ch := make(chan int)\\n    go func() {\\n        // チャネルに値を送信\\n        ch <- 100\\n    }()\\n    // チャネルから値を受信\\n    val := <-ch\\n    fmt.Println(val)\\n}",
-      "holeyCode": "// モジュールを宣言\npackage ___\\n// パッケージをインポート\nimport \\\"___\\\"\\n// 関数を定義\nfunc ___() {\\n    // chにmake(chan int)を代入\\n    ___ := ___(chan ___)\\n    // ゴルーチンを起動\n    go ___() {\\n        // チャネルに値を送信\\n        ___ <- ___\\n    // クロージャを閉じて実行\n    ___()\\n    // チャネルから値を受信\\n    ___ := <-___\\n    // 出力\n    ___.___(___) \\n// ブロックを閉じる\n___",
+      "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\nimport \\\"___\\\"\\n// 関数を定義\\nfunc ___() {\\n    // chにmake(chan int)を代入\\n    ___ := ___(chan ___)\\n    // ゴルーチンを起動\\n    go ___() {\\n        // チャネルに値を送信\\n        ___ <- ___\\n    // クロージャを閉じて実行\\n    ___()\\n    // チャネルから値を受信\\n    ___ := <-___\\n    // 出力\\n    ___.___(___) \\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",
@@ -744,7 +744,7 @@ export const go2Data = {
         }
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    n := 5\\n    // doubleに無名関数を代入\\n    double := func() int {\\n        // 外側の変数 n を参照\\n        return n * 2\\n    }\\n    fmt.Println(double())\\n}",
-      "holeyCode": "// モジュールを宣言\npackage ___\\n// パッケージをインポート\nimport \\\"___\\\"\\n// 関数を定義\nfunc ___() {\\n    // 変数を宣言\n    ___ := ___\\n    // doubleに無名関数を代入\\n    ___ := func() ___ {\\n        // 外側の変数 n を参照\\n        return ___ * ___\\n    // ブロックを閉じる\n    ___\\n    // 出力\n    ___.___(___())\\n// ブロックを閉じる\n___",
+      "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\nimport \\\"___\\\"\\n// 関数を定義\\nfunc ___() {\\n    // 変数を宣言\\n    ___ := ___\\n    // doubleに無名関数を代入\\n    ___ := func() ___ {\\n        // 外側の変数 n を参照\\n        return ___ * ___\\n    // ブロックを閉じる\\n    ___\\n    // 出力\\n    ___.___(___())\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// モジュールを宣言",
           "package main",

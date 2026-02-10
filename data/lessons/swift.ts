@@ -261,7 +261,7 @@ export const swiftData = {
         }
       ],
       "correctCode": "// score に 100 を入れる\\nlet score = 100\\n// > で比較する\\nif score > 80 {\\n    print(\"すごい！\")\\n}",
-      "holeyCode": "// score に 100 を入れる\\nlet ___ = ___\\n// > で比較する\\nif ___ ___ ___ ___\\n    // \"\"\n    ___(___)\\n// ブロックを閉じる\n___",
+      "holeyCode": "// score に 100 を入れる\\nlet ___ = ___\\n// > で比較する\\nif ___ ___ ___ ___\\n    // \"\"\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// score に 100 を入れる",
           "let score = 100",
@@ -324,7 +324,7 @@ export const swiftData = {
         }
       ],
       "correctCode": "let score = 80\\nlet bonus = 10\\n// && で両方の条件をチェック\\nif score >= 70 && bonus > 0 {\\n    print(\"ボーナス合格！\")\\n}",
-      "holeyCode": "// 変数を宣言\nlet ___ = ___\\n// 変数を宣言\nlet ___ = ___\\n// && で両方の条件をチェック\\nif ___ ___ ___ ___ ___ ___ ___ ___\\n    // \"\"\n    ___(___)\\n// ブロックを閉じる\n___",
+      "holeyCode": "// 変数を宣言\\nlet ___ = ___\\n// 変数を宣言\\nlet ___ = ___\\n// && で両方の条件をチェック\\nif ___ ___ ___ ___ ___ ___ ___ ___\\n    // \"\"\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 変数を宣言",
           "let score = 80",

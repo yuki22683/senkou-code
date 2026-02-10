@@ -126,7 +126,7 @@ export const lua2Data = {
         }
       ],
       "correctCode": "-- 配列を作成（1, 2, 3の順）\\nlocal nums = {1, 2, 3}\\n-- 1番目の i にインデックス、2番目の v に値が入る\\nfor i, v in ipairs(nums) do\\n    -- vを表示\\n    print(v)\\nend",
-      "holeyCode": "-- 配列を作成（1, 2, 3の順）\\nlocal ___ = {___, ___, ___}\\n-- 1番目の i にインデックス、2番目の v に値が入る\\nfor ___, ___ in ___(___) ___\\n    -- vを表示\\n    ___(___)\\n-- ブロックを終了\n___",
+      "holeyCode": "-- 配列を作成（1, 2, 3の順）\\nlocal ___ = {___, ___, ___}\\n-- 1番目の i にインデックス、2番目の v に値が入る\\nfor ___, ___ in ___(___) ___\\n    -- vを表示\\n    ___(___)\\n-- ブロックを終了\\n___",
       "correctLines": [
           "-- 配列を作成（1, 2, 3の順）",
           "local nums = {1, 2, 3}",
@@ -175,7 +175,7 @@ export const lua2Data = {
         }
       ],
       "correctCode": "-- テーブルを作成\\nlocal t = {x = 10}\\n-- 1番目の k にキー、2番目の v に値が入る\\nfor k, v in pairs(t) do\\n    -- kとvを表示\\n    print(k, v)\\nend",
-      "holeyCode": "-- テーブルを作成\\nlocal ___ = {___ = ___}\\n-- 1番目の k にキー、2番目の v に値が入る\\nfor ___, ___ in ___(___) ___\\n    -- kとvを表示\\n    ___(___, ___)\\n-- ブロックを終了\n___",
+      "holeyCode": "-- テーブルを作成\\nlocal ___ = {___ = ___}\\n-- 1番目の k にキー、2番目の v に値が入る\\nfor ___, ___ in ___(___) ___\\n    -- kとvを表示\\n    ___(___, ___)\\n-- ブロックを終了\\n___",
       "correctLines": [
           "-- テーブルを作成",
           "local t = {x = 10}",
@@ -224,7 +224,7 @@ export const lua2Data = {
         }
       ],
       "correctCode": "-- functionで関数を定義\\nlocal function double(n)\\n    -- n * 2を返す\\n    return n * 2\\nend\\n-- double(5)を呼び出す\\nprint(double(5))",
-      "holeyCode": "-- functionで関数を定義\\nlocal function ___(___)\\n    -- n * 2を返す\\n    return ___ * ___\\n-- ブロックを終了\n___\\n-- double(5)を呼び出す\\n___(___(___))",
+      "holeyCode": "-- functionで関数を定義\\nlocal function ___(___)\\n    -- n * 2を返す\\n    return ___ * ___\\n-- ブロックを終了\\n___\\n-- double(5)を呼び出す\\n___(___(___))",
       "correctLines": [
           "-- functionで関数を定義",
           "local function double(n)",
@@ -273,7 +273,7 @@ export const lua2Data = {
         }
       ],
       "correctCode": "-- swap関数を定義\\nlocal function swap(a, b)\\n    -- b, aの順で返す\\n    return b, a\\nend\\n-- x, yにswap関数（第1引数がa, 第2引数がb）の結果を代入\\nlocal x, y = swap(1, 2)\\n-- xとyを表示（x, yの順）\\nprint(x, y)\\n",
-      "holeyCode": "-- swap関数を定義\\nlocal function ___(___,  ___)\\n    -- b, aの順で返す\\n    return ___, ___\\n-- ブロックを終了\n___\\n-- swap関数を呼び出し（第1引数に1, 第2引数に2）\\nlocal ___, ___ = ___(___, ___)\\n-- xとyを表示（x, yの順）\\n___(___, ___)\\n",
+      "holeyCode": "-- swap関数を定義\\nlocal function ___(___,  ___)\\n    -- b, aの順で返す\\n    return ___, ___\\n-- ブロックを終了\\n___\\n-- swap関数を呼び出し（第1引数に1, 第2引数に2）\\nlocal ___, ___ = ___(___, ___)\\n-- xとyを表示（x, yの順）\\n___(___, ___)\\n",
       "correctLines": [
           "-- swap関数を定義",
           "local function swap(a, b)",
@@ -328,7 +328,7 @@ export const lua2Data = {
         }
       ],
       "correctCode": "-- objテーブルを作成\\nlocal obj = { x = 5 }\\n-- メソッドを定義\\nfunction obj:getX()\\n    -- selfで自分自身を参照\\n    return self.x\\nend\\n-- getXを呼び出す\\nprint(obj:getX())",
-      "holeyCode": "-- objテーブルを作成\\nlocal ___ = { ___ = ___ }\\n-- メソッドを定義\\nfunction ___:___()\\n    -- selfで自分自身を参照\\n    return ___.___ \\n-- ブロックを終了\n___\\n-- getXを呼び出す\\n___(___:___())",
+      "holeyCode": "-- objテーブルを作成\\nlocal ___ = { ___ = ___ }\\n-- メソッドを定義\\nfunction ___:___()\\n    -- selfで自分自身を参照\\n    return ___.___ \\n-- ブロックを終了\\n___\\n-- getXを呼び出す\\n___(___:___())",
       "correctLines": [
           "-- objテーブルを作成",
           "local obj = { x = 5 }",
@@ -430,7 +430,7 @@ export const lua2Data = {
         }
       ],
       "correctCode": "-- makeAdder関数を定義\\nlocal function makeAdder(n)\\n    -- returnで関数を返す\\n    return function(x)\\n        -- x + nを返す\\n        return x + n\\n    end\\nend\\n-- makeAdder(5)を呼び出す\\nlocal add5 = makeAdder(5)\\n-- add5(10)を呼び出す\\nprint(add5(10))",
-      "holeyCode": "-- makeAdder関数を定義\\nlocal function ___(___)\\n    -- returnで関数を返す\\n    return function(___)\\n        -- x + nを返す\\n        return ___ + ___\\n    -- ブロックを終了\n    ___\\n-- ブロックを終了\n___\\n-- makeAdder(5)を呼び出す\\nlocal ___ = ___(___)\\n-- add5(10)を呼び出す\\n___(___(___))",
+      "holeyCode": "-- makeAdder関数を定義\\nlocal function ___(___)\\n    -- returnで関数を返す\\n    return function(___)\\n        -- x + nを返す\\n        return ___ + ___\\n    -- ブロックを終了\\n    ___\\n-- ブロックを終了\\n___\\n-- makeAdder(5)を呼び出す\\nlocal ___ = ___(___)\\n-- add5(10)を呼び出す\\n___(___(___))",
       "correctLines": [
           "-- makeAdder関数を定義",
           "local function makeAdder(n)",
@@ -491,7 +491,7 @@ export const lua2Data = {
         }
       ],
       "correctCode": "-- createでコルーチンを作成\\nlocal co = coroutine.create(function()\\n    -- helloを表示\\n    print(\"こんにちは\")\\nend)\\n-- resumeでコルーチンを実行\\ncoroutine.resume(co)",
-      "holeyCode": "-- createでコルーチンを作成\\nlocal ___ = ___.___(___()\\n    -- helloを表示\\n    ___(\"___\")\\n-- ブロックを終了\n___)\\n-- resumeでコルーチンを実行\\n___.___(___)",
+      "holeyCode": "-- createでコルーチンを作成\\nlocal ___ = ___.___(___()\\n    -- helloを表示\\n    ___(\"___\")\\n-- ブロックを終了\\n___)\\n-- resumeでコルーチンを実行\\n___.___(___)",
       "correctLines": [
           "-- createでコルーチンを作成",
           "local co = coroutine.create(function()",

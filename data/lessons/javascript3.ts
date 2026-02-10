@@ -142,7 +142,7 @@ export const javascriptData3 = {
         }
       ],
       "correctCode": "// async キーワードで非同期関数を定義\\nasync function getMessage() {\\n  // return で値を返す\\n  return '非同期成功！';\\n}\\n\\n// then でメッセージを出力\\ngetMessage().then(msg => console.log(msg));",
-      "holeyCode": "// async キーワードで非同期関数を定義\\n___ ___ ___() {\\n  // return で値を返す\\n  ___ '___';\\n// ブロックを閉じる\n___\\n___\\n// then でメッセージを出力\\n___().___(___ => ___.___(___));",
+      "holeyCode": "// async キーワードで非同期関数を定義\\n___ ___ ___() {\\n  // return で値を返す\\n  ___ '___';\\n// ブロックを閉じる\\n___\\n___\\n// then でメッセージを出力\\n___().___(___ => ___.___(___));",
       "correctLines": [
           "// async キーワードで非同期関数を定義",
           "async function getMessage() {",
@@ -195,7 +195,7 @@ export const javascriptData3 = {
         }
       ],
       "correctCode": "// awaitでPromiseを待つasync main()関数を定義\\nasync function main() {\\n  // await でPromiseの結果を待つ\\n  const value = await Promise.resolve(100);\\n  // console.log で出力\\n  console.log(value);\\n}\\n\\n// main() で関数を呼び出す\\nmain();",
-      "holeyCode": "// awaitでPromiseを待つasync main()関数を定義\\n___ ___ ___() {\\n  // await でPromiseの結果を待つ\\n  ___ ___ = ___ ___.___(___);\\n  // console.log で出力\\n  ___.___(___);\\n// ブロックを閉じる\n___\\n___\\n// main() で関数を呼び出す\\n___();",
+      "holeyCode": "// awaitでPromiseを待つasync main()関数を定義\\n___ ___ ___() {\\n  // await でPromiseの結果を待つ\\n  ___ ___ = ___ ___.___(___);\\n  // console.log で出力\\n  ___.___(___);\\n// ブロックを閉じる\\n___\\n___\\n// main() で関数を呼び出す\\n___();",
       "correctLines": [
           "// awaitでPromiseを待つasync main()関数を定義",
           "async function main() {",
@@ -253,7 +253,7 @@ export const javascriptData3 = {
         }
       ],
       "correctCode": "// p1 = 10 で解決するPromiseを作成\\nconst p1 = Promise.resolve(10);\\n// p2 = 20 で解決するPromiseを作成\\nconst p2 = Promise.resolve(20);\\n// all で全てのPromiseを待つ\\nPromise.all([p1, p2]).then(nums => {\\n  // nums[0] + nums[1] で合計を計算\\n  console.log(nums[0] + nums[1]);\\n});",
-      "holeyCode": "// p1 = 10 で解決するPromiseを作成\\n___ ___ = ___.___(___);\\n// p2 = 20 で解決するPromiseを作成\\n___ ___ = ___.___(___);\\n// all で全てのPromiseを待つ\\n___.___([___, ___]).___(___ => {\\n  // nums[0] + nums[1] で合計を計算\\n  ___.___(___[___] + ___[___]);\\n// 文を実行\n___);",
+      "holeyCode": "// p1 = 10 で解決するPromiseを作成\\n___ ___ = ___.___(___);\\n// p2 = 20 で解決するPromiseを作成\\n___ ___ = ___.___(___);\\n// all で全てのPromiseを待つ\\n___.___([___, ___]).___(___ => {\\n  // nums[0] + nums[1] で合計を計算\\n  ___.___(___[___] + ___[___]);\\n// 文を実行\\n___);",
       "correctLines": [
           "// p1 = 10 で解決するPromiseを作成",
           "const p1 = Promise.resolve(10);",
@@ -309,7 +309,7 @@ export const javascriptData3 = {
         }
       ],
       "correctCode": "// Dogクラスを定義\\nclass Dog {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  bark() {\\n    // テンプレートリテラルで出力\\n    console.log(`${this.name}: ワン！`);\\n  }\\n}\\n\\n// dogにnew Dog('ポチ')を代入\\nconst dog = new Dog('ポチ');\\n// bark()メソッドを呼び出し\\ndog.bark();",
-      "holeyCode": "// Dogクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\n  ___\\n  // ブロックを開始\n  ___() {\\n    // テンプレートリテラルで出力\\n    ___.___(`${___.___}___`);\\n  // ブロックを閉じる\n  ___\\n// ブロックを閉じる\n___\\n___\\n// dogにnew Dog('ポチ')を代入\\n___ ___ = ___ ___(___);\\n// bark()メソッドを呼び出し\\n___.___();",
+      "holeyCode": "// Dogクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // ブロックを開始\\n  ___() {\\n    // テンプレートリテラルで出力\\n    ___.___(`${___.___}___`);\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// dogにnew Dog('ポチ')を代入\\n___ ___ = ___ ___(___);\\n// bark()メソッドを呼び出し\\n___.___();",
       "correctLines": [
           "// Dogクラスを定義",
           "class Dog {",
@@ -386,7 +386,7 @@ export const javascriptData3 = {
         }
       ],
       "correctCode": "// 親クラスAnimalを定義\\nclass Animal {\\n  // speakメソッドを定義\\n  speak() { console.log('...'); }\\n}\\n\\n// CatクラスがAnimalを継承\\nclass Cat extends Animal {\\n  // speakメソッドをオーバーライド\\n  speak() { console.log('ニャー！'); }\\n}\\n\\n// catにnew Cat()を代入\\nconst cat = new Cat();\\n// speak()を呼び出し\\ncat.speak();",
-      "holeyCode": "// 親クラスAnimalを定義\\n___ ___ {\\n  // speakメソッドを定義\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\n___\\n___\\n// CatクラスがAnimalを継承\\n___ ___ ___ ___ {\\n  // speakメソッドをオーバーライド\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\n___\\n___\\n// catにnew Cat()を代入\\n___ ___ = ___ ___();\\n// speak()を呼び出し\\n___.___();",
+      "holeyCode": "// 親クラスAnimalを定義\\n___ ___ {\\n  // speakメソッドを定義\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// CatクラスがAnimalを継承\\n___ ___ ___ ___ {\\n  // speakメソッドをオーバーライド\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// catにnew Cat()を代入\\n___ ___ = ___ ___();\\n// speak()を呼び出し\\n___.___();",
       "correctLines": [
           "// 親クラスAnimalを定義",
           "class Animal {",
@@ -459,7 +459,7 @@ export const javascriptData3 = {
         }
       ],
       "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n  // static multiplyメソッドを定義\\n  static multiply(a, b) {\\n    // 2つの数を掛けた結果を返す\\n    return a * b;\\n  }\\n}\\n\\n// 3と4を掛けた結果を出力\\nconsole.log(Calculator.multiply(3, 4));",
-      "holeyCode": "// Calculatorクラスを定義\\n___ ___ {\\n  // static multiplyメソッドを定義\\n  ___ ___(___, ___) {\\n    // 2つの数を掛けた結果を返す\\n    ___ ___ * ___;\\n  // ブロックを閉じる\n  ___\\n// ブロックを閉じる\n___\\n___\\n// 3と4を掛けた結果を出力\\n___.___(___.___(___,___));",
+      "holeyCode": "// Calculatorクラスを定義\\n___ ___ {\\n  // static multiplyメソッドを定義\\n  ___ ___(___, ___) {\\n    // 2つの数を掛けた結果を返す\\n    ___ ___ * ___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// 3と4を掛けた結果を出力\\n___.___(___.___(___,___));",
       "correctLines": [
           "// Calculatorクラスを定義",
           "class Calculator {",

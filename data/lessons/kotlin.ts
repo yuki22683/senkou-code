@@ -262,7 +262,7 @@ export const kotlinData = {
         }
       ],
       "correctCode": "// score に 100 を入れる\\nval score = 100\\n// > で比較する\\nif (score > 80) {\\n    println(\"すごい！\")\\n}",
-      "holeyCode": "// score に 100 を入れる\\nval ___ = ___\\n// > で比較する\\nif (___ ___ ___) ___\\n    // 出力\n    ___(\"___\")\\n// ブロックを閉じる\n___",
+      "holeyCode": "// score に 100 を入れる\\nval ___ = ___\\n// > で比較する\\nif (___ ___ ___) ___\\n    // 出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// score に 100 を入れる",
           "val score = 100",
@@ -324,7 +324,7 @@ export const kotlinData = {
         }
       ],
       "correctCode": "val score = 80\\nval bonus = 10\\n// && で両方の条件をチェック\\nif (score >= 70 && bonus > 0) {\\n    println(\"ボーナス合格！\")\\n}",
-      "holeyCode": "// 値を代入\nval ___ = ___\\n// 値を代入\nval ___ = ___\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___) ___\\n    // 出力\n    ___(\"___\")\\n// ブロックを閉じる\n___",
+      "holeyCode": "// 値を代入\\nval ___ = ___\\n// 値を代入\\nval ___ = ___\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___) ___\\n    // 出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 値を代入",
           "val score = 80",

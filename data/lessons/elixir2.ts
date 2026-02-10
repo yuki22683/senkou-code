@@ -266,7 +266,7 @@ export const elixir2Data = {
         }
       ],
       "correctCode": "# 2を入力\\nx = 2\\n# caseでパターンマッチ\\nresult = case x do\\n  1 -> \"one\"\\n  2 -> \"two\"\\n  _ -> \"other\"\\nend\\n# resultを入力\\nIO.puts result",
-      "holeyCode": "# 2を入力\\n___ = ___\\n# caseでパターンマッチ\\n___ = case ___ do\\n  # \"\"\n  ___ -> \"___\"\\n  # \"\"\n  ___ -> \"___\"\\n  # \"\"\n  ___ -> \"___\"\\n# ブロックを終了\n___\\n# resultを入力\\n___.___ ___",
+      "holeyCode": "# 2を入力\\n___ = ___\\n# caseでパターンマッチ\\n___ = case ___ do\\n  # \"\"\\n  ___ -> \"___\"\\n  # \"\"\\n  ___ -> \"___\"\\n  # \"\"\\n  ___ -> \"___\"\\n# ブロックを終了\\n___\\n# resultを入力\\n___.___ ___",
       "correctLines": [
           "# 2を入力",
           "x = 2",
@@ -335,7 +335,7 @@ export const elixir2Data = {
         }
       ],
       "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Calc do\\n  # defで関数を定義\\n  def triple(x), do: x * 3\\nend\\n# 4の3倍を計算して表示\\nIO.puts Calc.triple(4)",
-      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  # defで関数を定義\\n  def ___(___), do: ___ * ___\\n# ブロックを終了\n___\\n# 4の3倍を計算して表示\\n___.___ ___.___(___)",
+      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  # defで関数を定義\\n  def ___(___), do: ___ * ___\\n# ブロックを終了\\n___\\n# 4の3倍を計算して表示\\n___.___ ___.___(___)",
       "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Calc do",
@@ -390,7 +390,7 @@ export const elixir2Data = {
         }
       ],
       "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Math do\\n  def factorial(0), do: 1\\n  # factorialを再帰的に呼び出す\\n  def factorial(n), do: n * factorial(n - 1)\\nend\\n# 5の階乗を計算して表示\\nIO.puts Math.factorial(5)",
-      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  # 関数を定義\n  def ___(___), do: ___\\n  # factorialを再帰的に呼び出す\\n  def ___(___), do: ___ * ___(___ - ___)\\n# ブロックを終了\n___\\n# 5の階乗を計算して表示\\n___.___ ___.___(___)",
+      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  # 関数を定義\\n  def ___(___), do: ___\\n  # factorialを再帰的に呼び出す\\n  def ___(___), do: ___ * ___(___ - ___)\\n# ブロックを終了\\n___\\n# 5の階乗を計算して表示\\n___.___ ___.___(___)",
       "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Math do",
@@ -491,7 +491,7 @@ export const elixir2Data = {
         }
       ],
       "correctCode": "# sendでメッセージを送る\\nsend(self(), {:msg, 42})\\n# receiveでメッセージを受け取る\\nreceive do\\n  {:msg, n} -> IO.puts n\\nend",
-      "holeyCode": "# sendでメッセージを送る\\n___(___(), {:___, ___})\\n# receiveでメッセージを受け取る\\n___ ___\\n  # パターンマッチの分岐\n  {:___, ___} -> ___.___ ___\\n# ブロックを終了\n___",
+      "holeyCode": "# sendでメッセージを送る\\n___(___(), {:___, ___})\\n# receiveでメッセージを受け取る\\n___ ___\\n  # パターンマッチの分岐\\n  {:___, ___} -> ___.___ ___\\n# ブロックを終了\\n___",
       "correctLines": [
           "# sendでメッセージを送る",
           "send(self(), {:msg, 42})",

@@ -111,7 +111,7 @@ export const assembly3Data = {
         }
       ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; rbxに3を入れる\\n  mov rbx, 3\\n  ; rbx(3)と4を掛けて結果をraxへ\\n  imul rax, rbx, 4\\n\\n  ; 結果raxをrdiにコピー\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\n  ___ ___\\n\\n; ラベルを定義\n___:\\n  ; rbxに3を入れる\\n  ___ ___, ___\\n  ; rbx(3)と4を掛けて結果をraxへ\\n  ___ ___, ___, ___\\n\\n  ; 結果raxをrdiにコピー\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\\n  ___ ___\\n\\n; ラベルを定義\\n___:\\n  ; rbxに3を入れる\\n  ___ ___, ___\\n  ; rbx(3)と4を掛けて結果をraxへ\\n  ___ ___, ___, ___\\n\\n  ; 結果raxをrdiにコピー\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -176,7 +176,7 @@ export const assembly3Data = {
         }
       ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに42を入れる\\n  mov rax, 42\\n  ; スタックにraxを保存\\n  push rax\\n  ; スタックからrdiに取り出す\\n  pop rdi\\n\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\n  ___ ___\\n\\n; ラベルを定義\n___:\\n  ; raxに42を入れる\\n  ___ ___, ___\\n  ; スタックにraxを保存\\n  ___ ___\\n  ; スタックからrdiに取り出す\\n  ___ ___\\n\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\\n  ___ ___\\n\\n; ラベルを定義\\n___:\\n  ; raxに42を入れる\\n  ___ ___, ___\\n  ; スタックにraxを保存\\n  ___ ___\\n  ; スタックからrdiに取り出す\\n  ___ ___\\n\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -241,7 +241,7 @@ export const assembly3Data = {
         }
       ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; 数値99をスタックへ\\n  push 99\\n  ; スタックからrdiへ\\n  pop rdi\\n\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\n  ___ ___\\n\\n; ラベルを定義\n___:\\n  ; 数値99をスタックへ\\n  ___ ___\\n  ; スタックからrdiへ\\n  ___ ___\\n\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\\n  ___ ___\\n\\n; ラベルを定義\\n___:\\n  ; 数値99をスタックへ\\n  ___ ___\\n  ; スタックからrdiへ\\n  ___ ___\\n\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -302,7 +302,7 @@ export const assembly3Data = {
         }
       ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに0xFFをセット\\n  mov rax, 0xFF\\n  ; raxと0x0FのビットAND\\n  and rax, 0x0F\\n\\n  ; 結果をrdiへ\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\n  ___ ___\\n\\n; ラベルを定義\n___:\\n  ; raxに0xFFをセット\\n  ___ ___, ___\\n  ; raxと0x0FのビットAND\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\\n  ___ ___\\n\\n; ラベルを定義\\n___:\\n  ; raxに0xFFをセット\\n  ___ ___, ___\\n  ; raxと0x0FのビットAND\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -367,7 +367,7 @@ export const assembly3Data = {
         }
       ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに0x10をセット\\n  mov rax, 0x10\\n  ; raxと0x01のビットOR\\n  or rax, 0x01\\n\\n  ; 結果をrdiへ\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\n  ___ ___\\n\\n; ラベルを定義\n___:\\n  ; raxに0x10をセット\\n  ___ ___, ___\\n  ; raxと0x01のビットOR\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\\n  ___ ___\\n\\n; ラベルを定義\\n___:\\n  ; raxに0x10をセット\\n  ___ ___, ___\\n  ; raxと0x01のビットOR\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -432,7 +432,7 @@ export const assembly3Data = {
         }
       ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに5をセット\\n  mov rax, 5\\n  ; raxを2ビット左シフト\\n  shl rax, 2\\n\\n  ; 結果をrdiへ\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\n  ___ ___\\n\\n; ラベルを定義\n___:\\n  ; raxに5をセット\\n  ___ ___, ___\\n  ; raxを2ビット左シフト\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\\n  ___ ___\\n\\n; ラベルを定義\\n___:\\n  ; raxに5をセット\\n  ___ ___, ___\\n  ; raxを2ビット左シフト\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -497,7 +497,7 @@ export const assembly3Data = {
         }
       ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに20をセット\\n  mov rax, 20\\n  ; raxを1ビット右シフト\\n  shr rax, 1\\n\\n  ; 結果をrdiへ\\n  mov rdi, rax\\n  ; 終了処理\\n  mov rax, 60\\n  ; 実行\\n  syscall",
-      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\n  ___ ___\\n\\n; ラベルを定義\n___:\\n  ; raxに20をセット\\n  ___ ___, ___\\n  ; raxを1ビット右シフト\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\\n  ___ ___\\n\\n; ラベルを定義\\n___:\\n  ; raxに20をセット\\n  ___ ___, ___\\n  ; raxを1ビット右シフト\\n  ___ ___, ___\\n\\n  ; 結果をrdiへ\\n  ___ ___, ___\\n  ; 終了処理\\n  ___ ___, ___\\n  ; 実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -562,7 +562,7 @@ export const assembly3Data = {
         }
       ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに5をセット\\n  mov rax, 5\\n  ; ビット検査(rax AND 1)\\n  test rax, 1\\n  ; 0でなければ(奇数なら)ジャンプ\\n  jnz is_odd\\n  ; 0なら(偶数なら)rdi=0\\n  mov rdi, 0\\n  jmp done\\nis_odd:\\n  ; rdi=1\\n  mov rdi, 1\\ndone:\\n  ; 終了\\n  mov rax, 60\\n  syscall",
-      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\n  ___ ___\\n\\n; ラベルを定義\n___:\\n  ; raxに5をセット\\n  ___ ___, ___\\n  ; ビット検査(rax AND 1)\\n  ___ ___, ___\\n  ; 0でなければ(奇数なら)ジャンプ\\n  ___ ___\\n  ; 0なら(偶数なら)rdi=0\\n  ___ ___, ___\\n  ; 無条件ジャンプ\n  ___ ___\\n; ラベルを定義\n___:\\n  ; rdi=1\\n  ___ ___, ___\\n; ラベルを定義\n___:\\n  ; 終了\\n  ___ ___, ___\\n  ; システムコール実行\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\\n  ___ ___\\n\\n; ラベルを定義\\n___:\\n  ; raxに5をセット\\n  ___ ___, ___\\n  ; ビット検査(rax AND 1)\\n  ___ ___, ___\\n  ; 0でなければ(奇数なら)ジャンプ\\n  ___ ___\\n  ; 0なら(偶数なら)rdi=0\\n  ___ ___, ___\\n  ; 無条件ジャンプ\\n  ___ ___\\n; ラベルを定義\\n___:\\n  ; rdi=1\\n  ___ ___, ___\\n; ラベルを定義\\n___:\\n  ; 終了\\n  ___ ___, ___\\n  ; システムコール実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -645,7 +645,7 @@ export const assembly3Data = {
         }
       ],
       "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに10をセット\\n  mov rax, 10\\n  ; 符号反転(-10になる)\\n  neg rax\\n\\n  ; rdiを0に\\n  xor rdi, rdi\\n  ; 終了\\n  mov rax, 60\\n  syscall",
-      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\n  ___ ___\\n\\n; ラベルを定義\n___:\\n  ; raxに10をセット\\n  ___ ___, ___\\n  ; 符号反転(-10になる)\\n  ___ ___\\n\\n  ; rdiを0に\\n  ___ ___, ___\\n  ; 終了\\n  ___ ___, ___\\n  ; システムコール実行\n  ___",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\\n  ___ ___\\n\\n; ラベルを定義\\n___:\\n  ; raxに10をセット\\n  ___ ___, ___\\n  ; 符号反転(-10になる)\\n  ___ ___\\n\\n  ; rdiを0に\\n  ___ ___, ___\\n  ; 終了\\n  ___ ___, ___\\n  ; システムコール実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",

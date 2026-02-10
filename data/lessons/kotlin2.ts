@@ -398,7 +398,7 @@ export const kotlin2Data = {
         }
       ],
       "correctCode": "// x に 2 を代入する\\nval x = 2\\n// when で分岐する\\nval result = when (x) {\\n    // 1 の場合\\n    1 -> \"one\"\\n    // 2 の場合\\n    2 -> \"two\"\\n    // その他の場合\\n    else -> \"other\"\\n}\\n// result を出力する\\nprintln(result)",
-      "holeyCode": "// x に 2 を代入する\\n___ ___ = ___\\n// when で分岐する\\n___ ___ = when (___) ___\\n    // 1 の場合\\n    ___ -> \"___\"\\n    // 2 の場合\\n    ___ -> \"___\"\\n    // その他の場合\\n    else -> \"___\"\\n// ブロックを閉じる\n___\\n// result を出力する\\n___(___)",
+      "holeyCode": "// x に 2 を代入する\\n___ ___ = ___\\n// when で分岐する\\n___ ___ = when (___) ___\\n    // 1 の場合\\n    ___ -> \"___\"\\n    // 2 の場合\\n    ___ -> \"___\"\\n    // その他の場合\\n    else -> \"___\"\\n// ブロックを閉じる\\n___\\n// result を出力する\\n___(___)",
       "correctLines": [
           "// x に 2 を代入する",
           "val x = 2",

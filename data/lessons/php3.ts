@@ -229,7 +229,7 @@ export const php3Data = {
               }
       ],
       "correctCode": "// $gradeに'A'を代入\\n$grade = 'A';\\n// match($grade)で$messageに結果を代入\\n$message = match($grade) {\\n    // 'A'なら'優秀'を返す\\n    'A' => '優秀',\\n    // 'B'なら'良い'を返す\\n    'B' => '良い',\\n    // それ以外なら'もっと頑張って'を返す\\n    default => 'もっと頑張って'\\n};",
-      "holeyCode": "// $gradeに'A'を代入\\n$___ = '___';\\n// match($grade)で$messageに結果を代入\\n$___ = ___(___) {\\n    // 'A'なら'優秀'を返す\\n    '___' ___ '___',\\n    // 'B'なら'良い'を返す\\n    '___' ___ '___',\\n    // それ以外なら'もっと頑張って'を返す\\n    ___ ___ '___'\\n// ブロックを閉じる\n___",
+      "holeyCode": "// $gradeに'A'を代入\\n$___ = '___';\\n// match($grade)で$messageに結果を代入\\n$___ = ___(___) {\\n    // 'A'なら'優秀'を返す\\n    '___' ___ '___',\\n    // 'B'なら'良い'を返す\\n    '___' ___ '___',\\n    // それ以外なら'もっと頑張って'を返す\\n    ___ ___ '___'\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// $gradeに'A'を代入",
           "$grade = 'A';",
@@ -293,7 +293,7 @@ export const php3Data = {
         }
       ],
       "correctCode": "// functionで関数を定義\\nfunction createUser($name, $age) {\\n    // returnで連想配列を返す\\n    return ['名前' => $name, '年齢' => $age];\\n}\\n// age, nameの順で名前付き引数を指定\\n$user = createUser(age: 30, name: 'アリス');",
-      "holeyCode": "// functionで関数を定義\\n___ ___(___) {\\n    // returnで連想配列を返す\\n    ___ ['___' ___ $___, '___' ___ $___];\\n// ブロックを閉じる\n___\\n// age, nameの順で名前付き引数を指定\\n$___ = ___(___: ___, ___: '___');",
+      "holeyCode": "// functionで関数を定義\\n___ ___(___) {\\n    // returnで連想配列を返す\\n    ___ ['___' ___ $___, '___' ___ $___];\\n// ブロックを閉じる\\n___\\n// age, nameの順で名前付き引数を指定\\n$___ = ___(___: ___, ___: '___');",
       "correctLines": [
           "// functionで関数を定義",
           "function createUser($name, $age) {",
@@ -345,7 +345,7 @@ export const php3Data = {
         }
       ],
       "correctCode": "// traitでトレイトを定義\\ntrait HelloTrait {\\n    // functionでメソッドを定義\\n    public function sayHello() {\\n        // 'こんにちは！'を返す\\n        return 'こんにちは！';\\n    }\\n}\\n// classでクラスを定義\\nclass Greeter {\\n    // useでトレイトを使用\\n    use HelloTrait;\\n}",
-      "holeyCode": "// traitでトレイトを定義\\n___ ___ {\\n    // functionでメソッドを定義\\n    ___ ___ ___() {\\n        // 'こんにちは！'を返す\\n        ___ '___';\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___\\n// classでクラスを定義\\n___ ___ {\\n    // useでトレイトを使用\\n    ___ ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "// traitでトレイトを定義\\n___ ___ {\\n    // functionでメソッドを定義\\n    ___ ___ ___() {\\n        // 'こんにちは！'を返す\\n        ___ '___';\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// classでクラスを定義\\n___ ___ {\\n    // useでトレイトを使用\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// traitでトレイトを定義",
           "trait HelloTrait {",
@@ -422,7 +422,7 @@ export const php3Data = {
         }
       ],
       "correctCode": "// functionで関数を定義\\nfunction rangeGen($n) {\\n    // forでループ\\n    for ($i = 1; $i <= $n; $i++) {\\n        // yieldで値を一つずつ返す\\n        yield $i;\\n    }\\n}",
-      "holeyCode": "// functionで関数を定義\\n___ ___(___) {\\n    // forでループ\\n    ___ ($___ = ___; $___ ___ $___; $___++) {\\n        // yieldで値を一つずつ返す\\n        ___ $___;\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// functionで関数を定義\\n___ ___(___) {\\n    // forでループ\\n    ___ ($___ = ___; $___ ___ $___; $___++) {\\n        // yieldで値を一つずつ返す\\n        ___ $___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// functionで関数を定義",
           "function rangeGen($n) {",
@@ -528,7 +528,7 @@ export const php3Data = {
         }
       ],
       "correctCode": "// classでクラスを定義\\nclass Person {\\n    // __constructでコンストラクタを定義\\n    public function __construct(\\n        // publicでアクセス修飾子\\n        public string $name,\\n        // publicでアクセス修飾子\\n        public int $age\\n    ) {}\\n}",
-      "holeyCode": "// classでクラスを定義\\n___ ___ {\\n    // __constructでコンストラクタを定義\\n    ___ ___ ___(\\n        // publicでアクセス修飾子\\n        ___ ___ $___,\\n        // publicでアクセス修飾子\\n        ___ ___ $___\\n    // 空のコンストラクタ\n    ) ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// classでクラスを定義\\n___ ___ {\\n    // __constructでコンストラクタを定義\\n    ___ ___ ___(\\n        // publicでアクセス修飾子\\n        ___ ___ $___,\\n        // publicでアクセス修飾子\\n        ___ ___ $___\\n    // 空のコンストラクタ\\n    ) ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// classでクラスを定義",
           "class Person {",

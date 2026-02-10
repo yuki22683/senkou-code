@@ -109,7 +109,7 @@ export const c4Data = {
         }
       ],
       "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"データ.txt\", \"w\");\\n    if (fp != NULL) {\\n        fputs(\"Data\\n\", fp);\\n        // fclose(fp)でファイルを閉じる\\n        fclose(fp);\\n        printf(\"Closed\\n\");\\n    }\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\n___ ___() {\\n    // 値を代入\n    ___ *___ = ___(\"___\", \"___\");\\n    // 条件分岐\n    if (___ != ___) {\\n        // 関数を呼び出す\n        ___(\"___\\n// 文を実行\n___\\n        // fclose(fp)でファイルを閉じる\\n        ___(___);\\n        // 出力\n        ___(\"___\\n// 文を実行\n___\\n    // ブロックを閉じる\n    ___\\n    // 値を返す\n    return ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 値を代入\\n    ___ *___ = ___(\"___\", \"___\");\\n    // 条件分岐\\n    if (___ != ___) {\\n        // 関数を呼び出す\\n        ___(\"___\\n// 文を実行\\n___\\n        // fclose(fp)でファイルを閉じる\\n        ___(___);\\n        // 出力\\n        ___(\"___\\n// 文を実行\\n___\\n    // ブロックを閉じる\\n    ___\\n    // 値を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -192,7 +192,7 @@ export const c4Data = {
         }
       ],
       "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"log.txt\", \"w\");\\n    if (fp != NULL) {\\n        // fpにフォーマット文字列と値100を書き込む\\n        fprintf(fp, \"Score: %d\\n\", 100);\\n        fclose(fp);\\n        printf(\"Written\\n\");\\n    }\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\n___ ___() {\\n    // 値を代入\n    ___ *___ = ___(\"___\", \"___\");\\n    // 条件分岐\n    if (___ != ___) {\\n        // fpにフォーマット文字列と値100を書き込む\\n        ___(___,  \"___\\n// 文を実行\n___\\n        // 文を実行\n        ___(___);\\n        // 出力\n        ___(\"___\\n// 文を実行\n___\\n    // ブロックを閉じる\n    ___\\n    // 値を返す\n    return ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 値を代入\\n    ___ *___ = ___(\"___\", \"___\");\\n    // 条件分岐\\n    if (___ != ___) {\\n        // fpにフォーマット文字列と値100を書き込む\\n        ___(___,  \"___\\n// 文を実行\\n___\\n        // 文を実行\\n        ___(___);\\n        // 出力\\n        ___(\"___\\n// 文を実行\\n___\\n    // ブロックを閉じる\\n    ___\\n    // 値を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -275,7 +275,7 @@ export const c4Data = {
         }
       ],
       "correctCode": "#include <stdio.h>\\n#include <string.h>\\n\\nint main() {\\n    char line[100];\\n    FILE *fp = fopen(\"テスト.txt\", \"w\");\\n    fprintf(fp, \"Hello World\\n\");\\n    fclose(fp);\\n    fp = fopen(\"テスト.txt\", \"r\");\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\n    fgets(line, sizeof(line), fp);\\n    line[strcspn(line, \"\\n\")] = 0;\\n    printf(\"%s\\n\", line);\\n    fclose(fp);\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n#___ <___>\\n___\\n// ブロックを開始\n___ ___() {\\n    // 変数を宣言\n    ___ ___[___];\\n    // 値を代入\n    ___ *___ = ___(\"___\", \"___\");\\n    // 出力\n    ___(___,  \"___\\n// 文を実行\n___\\n    // 文を実行\n    ___(___);\\n    // 値を代入\n    ___ = ___(\"___\", \"___\");\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\n    ___(___,  ___(___), ___);\\n    // コードを記述\n    ___[___(___,  \"\\n// 値を代入\n___\\n    // 出力\n    ___(\"___\\n// 文を実行\n___\\n    // 文を実行\n    ___(___);\\n    // 値を返す\n    return ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "#___ <___>\\n#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___[___];\\n    // 値を代入\\n    ___ *___ = ___(\"___\", \"___\");\\n    // 出力\\n    ___(___,  \"___\\n// 文を実行\\n___\\n    // 文を実行\\n    ___(___);\\n    // 値を代入\\n    ___ = ___(\"___\", \"___\");\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\n    ___(___,  ___(___), ___);\\n    // コードを記述\\n    ___[___(___,  \"\\n// 値を代入\\n___\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n___\\n    // 文を実行\\n    ___(___);\\n    // 値を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "#include <string.h>",
@@ -379,7 +379,7 @@ export const c4Data = {
         }
       ],
       "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"pos.txt\", \"w+\");\\n    fputs(\"ABCDEFGHIJ\", fp);\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\n    fseek(fp, 0, SEEK_SET);\\n    printf(\"%c\\n\", fgetc(fp));\\n    fclose(fp);\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\n___ ___() {\\n    // 値を代入\n    ___ *___ = ___(\"___\", \"___\");\\n    // 文を実行\n    ___(\"___\", ___);\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\n    ___(___,  ___,  ___);\\n    // 出力\n    ___(\"___\\n// 文を実行\n___\\n    // 文を実行\n    ___(___);\\n    // 値を返す\n    return ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 値を代入\\n    ___ *___ = ___(\"___\", \"___\");\\n    // 文を実行\\n    ___(\"___\", ___);\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\n    ___(___,  ___,  ___);\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n___\\n    // 文を実行\\n    ___(___);\\n    // 値を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -456,7 +456,7 @@ export const c4Data = {
         }
       ],
       "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"size.txt\", \"w+\");\\n    fputs(\"12345\", fp);\\n    fseek(fp, 0, SEEK_END);\\n    // sizeにftell(fp)を代入\\n    long size = ftell(fp);\\n    printf(\"%ld\\n\", size);\\n    fclose(fp);\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\n___ ___() {\\n    // 値を代入\n    ___ *___ = ___(\"___\", \"___\");\\n    // 文を実行\n    ___(\"___\", ___);\\n    // 文を実行\n    ___(___,  ___,  ___);\\n    // sizeにftell(fp)を代入\\n    ___ ___ = ___(___);\\n    // 出力\n    ___(\"___\\n// 文を実行\n___\\n    // 文を実行\n    ___(___);\\n    // 値を返す\n    return ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 値を代入\\n    ___ *___ = ___(\"___\", \"___\");\\n    // 文を実行\\n    ___(\"___\", ___);\\n    // 文を実行\\n    ___(___,  ___,  ___);\\n    // sizeにftell(fp)を代入\\n    ___ ___ = ___(___);\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n___\\n    // 文を実行\\n    ___(___);\\n    // 値を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -537,7 +537,7 @@ export const c4Data = {
         }
       ],
       "correctCode": "#include <stdio.h>\\n\\n// Day列挙型を定義\\nenum Day { MON, TUE, WED, THU, FRI };\\n\\nint main() {\\n    enum Day today = WED;\\n    printf(\"%d\\n\", today);\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// Day列挙型を定義\\nenum ___ { ___,  ___,  ___,  ___,  ___ };\\n___\\n// ブロックを開始\n___ ___() {\\n    // 値を代入\n    enum ___ ___ = ___;\\n    // 出力\n    ___(\"___\\n// 文を実行\n___\\n    // 値を返す\n    return ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "#___ <___>\\n___\\n// Day列挙型を定義\\nenum ___ { ___,  ___,  ___,  ___,  ___ };\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 値を代入\\n    enum ___ ___ = ___;\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n___\\n    // 値を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -603,7 +603,7 @@ export const c4Data = {
         }
       ],
       "correctCode": "#include <stdio.h>\\n\\n// Value共用体を定義\\nunion Value {\\n    int i;\\n    double d;\\n};\\n\\nint main() {\\n    union Value v;\\n    v.i = 42;\\n    printf(\"%d\\n\", v.i);\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// Value共用体を定義\\nunion ___ {\\n    // 変数を宣言\n    ___ ___;\\n    // 変数を宣言\n    ___ ___;\\n// ブロックを閉じる\n___\\n___\\n// ブロックを開始\n___ ___() {\\n    // 文を実行\n    union ___ ___;\\n    // 値を代入\n    ___.___  = ___;\\n    // 出力\n    ___(\"___\\n// 文を実行\n___\\n    // 値を返す\n    return ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "#___ <___>\\n___\\n// Value共用体を定義\\nunion ___ {\\n    // 変数を宣言\\n    ___ ___;\\n    // 変数を宣言\\n    ___ ___;\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 文を実行\\n    union ___ ___;\\n    // 値を代入\\n    ___.___  = ___;\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n___\\n    // 値を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -685,7 +685,7 @@ export const c4Data = {
         }
       ],
       "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    int x = 100;\\n    int *p = &x;\\n    // ** で二重ポインタを宣言\\n    int **pp = &p;\\n    printf(\"%d\\n\", **pp);\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\n___ ___() {\\n    // 変数を宣言\n    ___ ___ = ___;\\n    // 変数を宣言\n    ___ *___ = &___;\\n    // ** で二重ポインタを宣言\\n    ___ **___ = &___;\\n    // 出力\n    ___(\"___\\n// 文を実行\n___\\n    // 値を返す\n    return ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // 変数を宣言\\n    ___ *___ = &___;\\n    // ** で二重ポインタを宣言\\n    ___ **___ = &___;\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n___\\n    // 値を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -750,7 +750,7 @@ export const c4Data = {
         }
       ],
       "correctCode": "#include <stdio.h>\\n#include <stdarg.h>\\n\\nint sum(int count, ...) {\\n    va_list args;\\n    // va_start で可変長引数を初期化\\n    va_start(args, count);\\n    int total = 0;\\n    for (int i = 0; i < count; i++) {\\n        total += va_arg(args, int);\\n    }\\n    va_end(args);\\n    return total;\\n}\\n\\nint main() {\\n    printf(\"%d\\n\", sum(3, 10, 20, 30));\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n#___ <___>\\n___\\n// ブロックを開始\n___ ___(___  ___,  ...) {\\n    // 文を実行\n    ___ ___;\\n    // va_start で可変長引数を初期化\\n    ___(___,  ___);\\n    // 変数を宣言\n    ___ ___ = ___;\\n    // forループ\n    for (___ ___ = ___; ___ < ___; ___++) {\\n        // 文を実行\n        ___ += ___(___,  ___);\\n    // ブロックを閉じる\n    ___\\n    // 文を実行\n    ___(___);\\n    // 値を返す\n    return ___;\\n// ブロックを閉じる\n___\\n___\\n// ブロックを開始\n___ ___() {\\n    // 出力\n    ___(\"___\\n// 文を実行\n___\\n    // 値を返す\n    return ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "#___ <___>\\n#___ <___>\\n___\\n// ブロックを開始\\n___ ___(___  ___,  ...) {\\n    // 文を実行\\n    ___ ___;\\n    // va_start で可変長引数を初期化\\n    ___(___,  ___);\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // forループ\\n    for (___ ___ = ___; ___ < ___; ___++) {\\n        // 文を実行\\n        ___ += ___(___,  ___);\\n    // ブロックを閉じる\\n    ___\\n    // 文を実行\\n    ___(___);\\n    // 値を返す\\n    return ___;\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 出力\\n    ___(\"___\\n// 文を実行\\n___\\n    // 値を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "#include <stdarg.h>",

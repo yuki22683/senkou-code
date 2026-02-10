@@ -98,7 +98,7 @@ export const cpp2Data = {
         }
       ],
       "correctCode": "#include <iostream>\\nclass Counter {\\npublic:\\n    int count;\\n    // Counterコンストラクタを定義（引数: int c）\\n    Counter(int c) {\\n        // countにcを代入\\n        count = c;\\n    }\\n};\\nint main() {\\n    // cntにCounter(5)を作成\\n    Counter cnt(5);\\n    std::cout << cnt.count << std::endl;\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\n___:\\n    // 変数を宣言\n    int ___;\\n    // Counterコンストラクタを定義（引数: int c）\\n    ___(int ___) {\\n        // countにcを代入\\n        ___ = ___;\\n    }\\n};\\n// ブロックを開始\nint ___() {\\n    // cntにCounter(5)を作成\\n    ___ ___(___);\\n    // 文を実行\n    ___::___ << ___.___ << ___::___;\\n    // 値を返す\n    return ___;\\n}",
+      "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\\n___:\\n    // 変数を宣言\\n    int ___;\\n    // Counterコンストラクタを定義（引数: int c）\\n    ___(int ___) {\\n        // countにcを代入\\n        ___ = ___;\\n    }\\n};\\n// ブロックを開始\\nint ___() {\\n    // cntにCounter(5)を作成\\n    ___ ___(___);\\n    // 文を実行\\n    ___::___ << ___.___ << ___::___;\\n    // 値を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "class Counter {",
@@ -172,7 +172,7 @@ export const cpp2Data = {
         }
       ],
       "correctCode": "#include <iostream>\\nclass Rect {\\npublic:\\n    int w;\\n    int h;\\n    int area() {\\n        // 幅と高さを掛けた面積を返す\\n        return w * h;\\n    }\\n};\\nint main() {\\n    // rにRectオブジェクトを作成\\n    Rect r;\\n    r.w = 3;\\n    r.h = 4;\\n    // 面積を計算して出力\\n    std::cout << r.area() << std::endl;\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\n___:\\n    // 変数を宣言\n    int ___;\\n    // 変数を宣言\n    int ___;\\n    // ブロックを開始\n    int ___() {\\n        // 幅と高さを掛けた面積を返す\\n        return ___ * ___;\\n    }\\n};\\n// ブロックを開始\nint ___() {\\n    // rにRectオブジェクトを作成\\n    ___ ___;\\n    // 値を代入\n    ___.___ = ___;\\n    // 値を代入\n    ___.___ = ___;\\n    // 面積を計算して出力\\n    ___::___ << ___.___() << ___::___;\\n    // 値を返す\n    return ___;\\n}",
+      "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\\n___:\\n    // 変数を宣言\\n    int ___;\\n    // 変数を宣言\\n    int ___;\\n    // ブロックを開始\\n    int ___() {\\n        // 幅と高さを掛けた面積を返す\\n        return ___ * ___;\\n    }\\n};\\n// ブロックを開始\\nint ___() {\\n    // rにRectオブジェクトを作成\\n    ___ ___;\\n    // 値を代入\\n    ___.___ = ___;\\n    // 値を代入\\n    ___.___ = ___;\\n    // 面積を計算して出力\\n    ___::___ << ___.___() << ___::___;\\n    // 値を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "class Rect {",
@@ -258,7 +258,7 @@ export const cpp2Data = {
         }
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    int num = 5;\\n    // & で参照を作る\\n    int& ref = num;\\n    // ref に 100 を代入\\n    ref = 100;\\n    std::cout << num << std::endl;\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\nint ___() {\\n    // 変数を宣言\n    int ___ = ___;\\n    // & で参照を作る\\n    int& ___ = ___;\\n    // ref に 100 を代入\\n    ___ = ___;\\n    // 文を実行\n    ___::___ << ___ << ___::___;\\n    // 値を返す\n    return ___;\\n}",
+      "holeyCode": "#___ <___>\\nint ___() {\\n    // 変数を宣言\\n    int ___ = ___;\\n    // & で参照を作る\\n    int& ___ = ___;\\n    // ref に 100 を代入\\n    ___ = ___;\\n    // 文を実行\\n    ___::___ << ___ << ___::___;\\n    // 値を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -316,7 +316,7 @@ export const cpp2Data = {
         }
       ],
       "correctCode": "#include <iostream>\\nclass Vehicle {\\npublic:\\n    void move() {\\n        std::cout << \"移動中\" << std::endl;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass Car : public Vehicle {\\n};\\nint main() {\\n    Car c;\\n    // 移動メソッドを呼び出す\\n    c.move();\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\n___:\\n    // ブロックを開始\n    void ___() {\\n        // 文を実行\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass ___ : public ___ {\\n};\\n// ブロックを開始\nint ___() {\\n    // 文を実行\n    ___ ___;\\n    // 移動メソッドを呼び出す\\n    ___.___();\\n    // 値を返す\n    return ___;\\n}",
+      "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\\n___:\\n    // ブロックを開始\\n    void ___() {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass ___ : public ___ {\\n};\\n// ブロックを開始\\nint ___() {\\n    // 文を実行\\n    ___ ___;\\n    // 移動メソッドを呼び出す\\n    ___.___();\\n    // 値を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "class Vehicle {",
@@ -392,7 +392,7 @@ export const cpp2Data = {
         }
       ],
       "correctCode": "#include <iostream>\\nclass Shape {\\npublic:\\n    // virtual draw()を定義\\n    virtual void draw() {\\n        std::cout << \"shape\" << std::endl;\\n    }\\n};\\nclass Circle : public Shape {\\npublic:\\n    // overrideでdraw()を上書き\\n    void draw() override {\\n        std::cout << \"circle\" << std::endl;\\n    }\\n};\\nint main() {\\n    Circle c;\\n    // 描画メソッドを呼び出す\\n    c.draw();\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\n___:\\n    // virtual draw()を定義\\n    virtual void ___() {\\n        // 文を実行\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// クラスを定義\nclass ___ : public ___ {\\n// ラベルを定義\n___:\\n    // overrideでdraw()を上書き\\n    void ___() override {\\n        // 文を実行\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// ブロックを開始\nint ___() {\\n    // 文を実行\n    ___ ___;\\n    // 描画メソッドを呼び出す\\n    ___.___();\\n    // 値を返す\n    return ___;\\n}",
+      "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\\n___:\\n    // virtual draw()を定義\\n    virtual void ___() {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// クラスを定義\\nclass ___ : public ___ {\\n// ラベルを定義\\n___:\\n    // overrideでdraw()を上書き\\n    void ___() override {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// ブロックを開始\\nint ___() {\\n    // 文を実行\\n    ___ ___;\\n    // 描画メソッドを呼び出す\\n    ___.___();\\n    // 値を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "class Shape {",
@@ -482,7 +482,7 @@ export const cpp2Data = {
         }
       ],
       "correctCode": "#include <iostream>\\n// 型パラメータTを定義\\ntemplate<typename T>\\nT bigger(T a, T b) {\\n    if (a > b) return a;\\n    return b;\\n}\\nint main() {\\n    // bigger関数を呼び出し（第1引数に3, 第2引数に7）\\n    std::cout << bigger(3, 7) << std::endl;\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n// 型パラメータTを定義\\ntemplate<typename ___>\\n// ブロックを開始\n___ ___(___  ___, ___ ___) {\\n    // 文を実行\n    if (___ > ___) return ___;\\n    // 値を返す\n    return ___;\\n}\\n// ブロックを開始\nint ___() {\\n    // bigger関数を呼び出し（第1引数に3, 第2引数に7）\\n    ___::___ << ___(___, ___) << ___::___;\\n    // 値を返す\n    return ___;\\n}",
+      "holeyCode": "#___ <___>\\n// 型パラメータTを定義\\ntemplate<typename ___>\\n// ブロックを開始\\n___ ___(___  ___, ___ ___) {\\n    // 文を実行\\n    if (___ > ___) return ___;\\n    // 値を返す\\n    return ___;\\n}\\n// ブロックを開始\\nint ___() {\\n    // bigger関数を呼び出し（第1引数に3, 第2引数に7）\\n    ___::___ << ___(___, ___) << ___::___;\\n    // 値を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "// 型パラメータTを定義",
@@ -548,7 +548,7 @@ export const cpp2Data = {
               }
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // { でラムダ本体を開始\\n    auto square = [](int x) {\\n        return x * x;\\n    };\\n    // square(4) でラムダを呼び出し\\n    std::cout << square(4) << std::endl;\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\nint ___() {\\n    // { でラムダ本体を開始\\n    auto ___ = [](int ___) {\\n        // 値を返す\n        return ___ * ___;\\n    };\\n    // square(4) でラムダを呼び出し\\n    ___::___ << ___(___) << ___::___;\\n    // 値を返す\n    return ___;\\n}",
+      "holeyCode": "#___ <___>\\nint ___() {\\n    // { でラムダ本体を開始\\n    auto ___ = [](int ___) {\\n        // 値を返す\\n        return ___ * ___;\\n    };\\n    // square(4) でラムダを呼び出し\\n    ___::___ << ___(___) << ___::___;\\n    // 値を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -604,7 +604,7 @@ export const cpp2Data = {
         }
       ],
       "correctCode": "#include <iostream>\\n#include <memory>\\nint main() {\\n    // make_unique でスマートポインタを作成\\n    auto ptr = std::make_unique<int>(100);\\n    // *ptr で中身にアクセス\\n    std::cout << *ptr << std::endl;\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\n#___ <___>\\nint ___() {\\n    // make_unique でスマートポインタを作成\\n    auto ___ = ___::___<int>(___);\\n    // *ptr で中身にアクセス\\n    ___::___ << *___ << ___::___;\\n    // 値を返す\n    return ___;\\n}",
+      "holeyCode": "#___ <___>\\n#___ <___>\\nint ___() {\\n    // make_unique でスマートポインタを作成\\n    auto ___ = ___::___<int>(___);\\n    // *ptr で中身にアクセス\\n    ___::___ << *___ << ___::___;\\n    // 値を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "#include <memory>",
@@ -656,7 +656,7 @@ export const cpp2Data = {
         }
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    try {\\n        // throw 404で例外を投げる\\n        throw 404;\\n    // catch(int e)で例外を捕まえる\\n    } catch (int e) {\\n        std::cout << e << std::endl;\\n    }\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\nint ___() {\\n    // ブロックを開始\n    try ___\\n        // throw 404で例外を投げる\\n        throw ___;\\n    // catch(int e)で例外を捕まえる\\n    } catch (int ___) {\\n        // 文を実行\n        ___::___ << ___ << ___::___;\\n    }\\n    // 値を返す\n    return ___;\\n}",
+      "holeyCode": "#___ <___>\\nint ___() {\\n    // ブロックを開始\\n    try ___\\n        // throw 404で例外を投げる\\n        throw ___;\\n    // catch(int e)で例外を捕まえる\\n    } catch (int ___) {\\n        // 文を実行\\n        ___::___ << ___ << ___::___;\\n    }\\n    // 値を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "int main() {",

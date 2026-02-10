@@ -93,7 +93,7 @@ export const typescriptData4 = {
         }
       ],
       "correctCode": "// 車の型\\ntype Car = { 運転: () => void };\\n// 船の型\\ntype Boat = { sail: () => void };\\n\\nfunction operate(vehicle: Car | Boat): void {\\n  // in でプロパティの存在をチェック\\n  if ('運転' in vehicle) {\\n    // 車の操作\\n    console.log('運転中');\\n  } else {\\n    // 船の操作\\n    console.log('航海中');\\n  }\\n}\\n\\n// 車を操作\\noperate({ 運転: () => {} });",
-      "holeyCode": "// 車の型\\ntype ___ = { ___: () => ___ };\\n// 船の型\\ntype ___ = { ___: () => ___ };\\n___\\n// ブロックを開始\n___ ___(___: ___ | ___): ___ {\\n  // in でプロパティの存在をチェック\\n  if (___ ___ ___) {\\n    // 車の操作\\n    ___.___(___);\\n  // else分岐\n  } ___ {\\n    // 船の操作\\n    ___.___(___);\\n  // ブロックを閉じる\n  ___\\n// ブロックを閉じる\n___\\n___\\n// 車を操作\\n___({ ___: () => {} });",
+      "holeyCode": "// 車の型\\ntype ___ = { ___: () => ___ };\\n// 船の型\\ntype ___ = { ___: () => ___ };\\n___\\n// ブロックを開始\\n___ ___(___: ___ | ___): ___ {\\n  // in でプロパティの存在をチェック\\n  if (___ ___ ___) {\\n    // 車の操作\\n    ___.___(___);\\n  // else分岐\\n  } ___ {\\n    // 船の操作\\n    ___.___(___);\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// 車を操作\\n___({ ___: () => {} });",
       "correctLines": [
           "// 車の型",
           "type Car = { 運転: () => void };",
@@ -173,7 +173,7 @@ export const typescriptData4 = {
         }
       ],
       "correctCode": "// 成功時の型\\ntype Success = { status: '成功'; data: string };\\n// 失敗時の型\\ntype Failure = { status: '失敗'; error: string };\\n// 結果のユニオン型\\ntype Result = Success | Failure;\\n\\nfunction handle(result: Result): void {\\n  // status で判別プロパティを使う\\n  switch (result.status) {\\n    case '成功':\\n      // データを出力\\n      console.log(result.data);\\n      break;\\n    case '失敗':\\n      // エラーを出力\\n      console.log(result.error);\\n      break;\\n  }\\n}\\n\\n// 成功結果を処理\\nhandle({ status: '成功', data: 'OK' });",
-      "holeyCode": "// 成功時の型\\ntype ___ = { ___: ___; ___: ___ };\\n// 失敗時の型\\ntype ___ = { ___: ___; ___: ___ };\\n// 結果のユニオン型\\ntype ___ = ___ ___ ___;\\n___\\n// ブロックを開始\n___ ___(___: ___): ___ {\\n  // status で判別プロパティを使う\\n  switch (___.___) {\\n    // ケース分岐\n    case ___:\\n      // データを出力\\n      ___.___(___.___)\\n      // 文を実行\n      ___;\\n    // ケース分岐\n    case ___:\\n      // エラーを出力\\n      ___.___(___.___)\\n      // 文を実行\n      ___;\\n  // ブロックを閉じる\n  ___\\n// ブロックを閉じる\n___\\n___\\n// 成功結果を処理\\n___({ ___: ___, ___: ___ });",
+      "holeyCode": "// 成功時の型\\ntype ___ = { ___: ___; ___: ___ };\\n// 失敗時の型\\ntype ___ = { ___: ___; ___: ___ };\\n// 結果のユニオン型\\ntype ___ = ___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___(___: ___): ___ {\\n  // status で判別プロパティを使う\\n  switch (___.___) {\\n    // ケース分岐\\n    case ___:\\n      // データを出力\\n      ___.___(___.___)\\n      // 文を実行\\n      ___;\\n    // ケース分岐\\n    case ___:\\n      // エラーを出力\\n      ___.___(___.___)\\n      // 文を実行\\n      ___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// 成功結果を処理\\n___({ ___: ___, ___: ___ });",
       "correctLines": [
           "// 成功時の型",
           "type Success = { status: '成功'; data: string };",
@@ -269,7 +269,7 @@ export const typescriptData4 = {
         }
       ],
       "correctCode": "// 色のユニオン型\\ntype Color = '赤' | '緑' | '青';\\n\\nfunction getHex(color: Color): string {\\n  switch (color) {\\n    // 赤のカラーコード\\n    case '赤': return '#ff0000';\\n    // 緑のカラーコード\\n    case '緑': return '#00ff00';\\n    // 青のカラーコード\\n    case '青': return '#0000ff';\\n    // 全ケース処理済みの場合\\n    default:\\n      // never で到達不能な型を表す\\n      const _exhaustive: never = color;\\n      // exhaustive変数を返す\\n      return _exhaustive;\\n  }\\n}\\n\\n// 赤のカラーコードを出力\\nconsole.log(getHex('赤'));",
-      "holeyCode": "// 色のユニオン型\\ntype ___ = ___ | ___ ___ ___;\\n___\\n// ブロックを開始\n___ ___(___: ___): ___ {\\n  // switch文\n  switch (___) {\\n    // 赤のカラーコード\\n    case ___: return ___;\\n    // 緑のカラーコード\\n    case ___: return ___;\\n    // 青のカラーコード\\n    case ___: return ___;\\n    // 全ケース処理済みの場合\\n    ___:\\n      // never で到達不能な型を表す\\n      const ___: ___ = ___;\\n      // exhaustive変数を返す\\n      return ___;\\n  // ブロックを閉じる\n  ___\\n// ブロックを閉じる\n___\\n___\\n// 赤のカラーコードを出力\\n___.___(___(___))",
+      "holeyCode": "// 色のユニオン型\\ntype ___ = ___ | ___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___(___: ___): ___ {\\n  // switch文\\n  switch (___) {\\n    // 赤のカラーコード\\n    case ___: return ___;\\n    // 緑のカラーコード\\n    case ___: return ___;\\n    // 青のカラーコード\\n    case ___: return ___;\\n    // 全ケース処理済みの場合\\n    ___:\\n      // never で到達不能な型を表す\\n      const ___: ___ = ___;\\n      // exhaustive変数を返す\\n      return ___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// 赤のカラーコードを出力\\n___.___(___(___))",
       "correctLines": [
           "// 色のユニオン型",
           "type Color = '赤' | '緑' | '青';",
@@ -567,7 +567,7 @@ export const typescriptData4 = {
         }
       ],
       "correctCode": "function greet(name: string, age: number): void {\\n  // テンプレート文字列で出力\\n  console.log(`${name} is ${age}`);\\n}\\n// Parameters で関数の引数型を取得\\ntype GreetParams = Parameters<typeof greet>;\\n// argsに['太郎', 25]を代入\\nconst args: GreetParams = ['太郎', 25];\\n// 引数の配列 args を渡して呼び出し\\ngreet(...args);",
-      "holeyCode": "// ブロックを開始\n___ ___(___: ___, ___: ___): ___ {\\n  // テンプレート文字列で出力\\n  ___.___(___${___} is ${___}___);\\n// ブロックを閉じる\n___\\n// Parameters で関数の引数型を取得\\ntype ___ = ___<typeof ___>;\\n// argsに['太郎', 25]を代入\\nconst ___: ___ = [___, ___];\\n// 引数の配列 args を渡して呼び出し\\n___(___);",
+      "holeyCode": "// ブロックを開始\\n___ ___(___: ___, ___: ___): ___ {\\n  // テンプレート文字列で出力\\n  ___.___(___${___} is ${___}___);\\n// ブロックを閉じる\\n___\\n// Parameters で関数の引数型を取得\\ntype ___ = ___<typeof ___>;\\n// argsに['太郎', 25]を代入\\nconst ___: ___ = [___, ___];\\n// 引数の配列 args を渡して呼び出し\\n___(___);",
       "correctLines": [
           "// ブロックを開始",
           "function greet(name: string, age: number): void {",

@@ -110,7 +110,7 @@ export const php2Data = {
         }
       ],
       "correctCode": "<?php\\n// Counterクラスを定義\\nclass Counter {\\n    // public $countを定義\\n    public $count;\\n    // __construct($c)でコンストラクタを定義\\n    public function __construct($c) {\\n        // $this->countに$cを代入\\n        $this->count = $c;\\n    }\\n}\\n// $cntにnew Counter(5)を代入\\n$cnt = new Counter(5);\\n// $cnt->countを出力\\necho $cnt->count;\\n?>",
-      "holeyCode": "// PHPコード開始タグ\n___\\n// Counterクラスを定義\\n___ ___ {\\n    // public $countを定義\\n    ___ $___;\\n    // __construct($c)でコンストラクタを定義\\n    ___ ___ ___($___) {\\n        // $this->countに$cを代入\\n        $___->___ = $___;\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___\\n// $cntにnew Counter(5)を代入\\n$___ = ___ ___(___);\\n// $cnt->countを出力\\n___ $___->___;\\n// PHPコード終了タグ\n___",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// Counterクラスを定義\\n___ ___ {\\n    // public $countを定義\\n    ___ $___;\\n    // __construct($c)でコンストラクタを定義\\n    ___ ___ ___($___) {\\n        // $this->countに$cを代入\\n        $___->___ = $___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// $cntにnew Counter(5)を代入\\n$___ = ___ ___(___);\\n// $cnt->countを出力\\n___ $___->___;\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "// PHPコード開始タグ",
           "<?php",
@@ -182,7 +182,7 @@ export const php2Data = {
         }
       ],
       "correctCode": "<?php\\n// Vehicleクラスを定義\\nclass Vehicle {\\n    // move()メソッドを定義\\n    public function move() {\\n        // '移動中'を出力\\n        echo '移動中';\\n    }\\n}\\n// CarがVehicleを継承\\nclass Car extends Vehicle { }\\n// $carにnew Car()を代入\\n$car = new Car();\\n// $car->move()を呼び出し\\n$car->move();\\n?>",
-      "holeyCode": "// PHPコード開始タグ\n___\\n// Vehicleクラスを定義\\n___ ___ {\\n    // move()メソッドを定義\\n    ___ ___ ___() {\\n        // '移動中'を出力\\n        ___ '___';\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___\\n// CarがVehicleを継承\\n___ ___ ___ ___ { }\\n// $carにnew Car()を代入\\n$___ = ___ ___();\\n// $car->move()を呼び出し\\n$___->___();\\n// PHPコード終了タグ\n___",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// Vehicleクラスを定義\\n___ ___ {\\n    // move()メソッドを定義\\n    ___ ___ ___() {\\n        // '移動中'を出力\\n        ___ '___';\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// CarがVehicleを継承\\n___ ___ ___ ___ { }\\n// $carにnew Car()を代入\\n$___ = ___ ___();\\n// $car->move()を呼び出し\\n$___->___();\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "// PHPコード開始タグ",
           "<?php",
@@ -254,7 +254,7 @@ export const php2Data = {
         }
       ],
       "correctCode": "<?php\\n// Runnerインターフェースを定義\\ninterface Runner {\\n    // run()メソッドを宣言\\n    public function run();\\n}\\n// RobotがRunnerを実装\\nclass Robot implements Runner {\\n    // run()メソッドを実装\\n    public function run() {\\n        // '実行中'を出力\\n        echo '実行中';\\n    }\\n}\\n// $rにnew Robot()を代入\\n$r = new Robot();\\n// $r->run()を呼び出し\\n$r->run();\\n?>",
-      "holeyCode": "// PHPコード開始タグ\n___\\n// Runnerインターフェースを定義\\n___ ___ {\\n    // run()メソッドを宣言\\n    ___ ___ ___();\\n// ブロックを閉じる\n___\\n// RobotがRunnerを実装\\n___ ___ ___ ___ {\\n    // run()メソッドを実装\\n    ___ ___ ___() {\\n        // '実行中'を出力\\n        ___ '___';\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___\\n// $rにnew Robot()を代入\\n$___ = ___ ___();\\n// $r->run()を呼び出し\\n$___->___();\\n// PHPコード終了タグ\n___",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// Runnerインターフェースを定義\\n___ ___ {\\n    // run()メソッドを宣言\\n    ___ ___ ___();\\n// ブロックを閉じる\\n___\\n// RobotがRunnerを実装\\n___ ___ ___ ___ {\\n    // run()メソッドを実装\\n    ___ ___ ___() {\\n        // '実行中'を出力\\n        ___ '___';\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// $rにnew Robot()を代入\\n$___ = ___ ___();\\n// $r->run()を呼び出し\\n$___->___();\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "// PHPコード開始タグ",
           "<?php",
@@ -334,7 +334,7 @@ export const php2Data = {
         }
       ],
       "correctCode": "<?php\\n// 配列を定義（1, 2, 3）\\n$nums = [1, 2, 3];\\n// array_mapで各要素を変換\\n$squared = array_map(fn($n) => $n * $n, $nums);\\n// print_rで配列を出力\\nprint_r($squared);\\n?>",
-      "holeyCode": "// PHPコード開始タグ\n___\\n// 配列を定義（1, 2, 3）\\n$___ = [___, ___, ___];\\n// array_mapで各要素を変換\\n$___ = ___(___(___) => $___ * $___, $___);\\n// print_rで配列を出力\\n___($___);\\n// PHPコード終了タグ\n___",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// 配列を定義（1, 2, 3）\\n$___ = [___, ___, ___];\\n// array_mapで各要素を変換\\n$___ = ___(___(___) => $___ * $___, $___);\\n// print_rで配列を出力\\n___($___);\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "// PHPコード開始タグ",
           "<?php",
@@ -386,7 +386,7 @@ export const php2Data = {
         }
       ],
       "correctCode": "<?php\\n// $numsに[1, 2, 3, 4, 5]を代入\\n$nums = [1, 2, 3, 4, 5];\\n// array_filterで3以上を抽出し$resultに代入\\n$result = array_filter($nums, fn($n) => $n >= 3);\\n// $resultをprint_rで出力\\nprint_r($result);\\n?>",
-      "holeyCode": "// PHPコード開始タグ\n___\\n// $numsに[1, 2, 3, 4, 5]を代入\\n$___ = [___, ___, ___, ___, ___];\\n// array_filterで3以上を抽出し$resultに代入\\n$___ = ___($___, ___($___) => $___ >= ___);\\n// $resultをprint_rで出力\\n___($___);\\n// PHPコード終了タグ\n___",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// $numsに[1, 2, 3, 4, 5]を代入\\n$___ = [___, ___, ___, ___, ___];\\n// array_filterで3以上を抽出し$resultに代入\\n$___ = ___($___, ___($___) => $___ >= ___);\\n// $resultをprint_rで出力\\n___($___);\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "// PHPコード開始タグ",
           "<?php",
@@ -438,7 +438,7 @@ export const php2Data = {
         }
       ],
       "correctCode": "<?php\\n// nを3倍にする$triple関数を定義\\n$triple = fn($n) => $n * 3;\\n// echoで出力\\necho $triple(7);\\n?>",
-      "holeyCode": "// PHPコード開始タグ\n___\\n// nを3倍にする$triple関数を定義\\n$___ = ___($___) => $___ * ___;\\n// echoで出力\\n___ $___(___);\\n// PHPコード終了タグ\n___",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// nを3倍にする$triple関数を定義\\n$___ = ___($___) => $___ * ___;\\n// echoで出力\\n___ $___(___);\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "// PHPコード開始タグ",
           "<?php",
@@ -486,7 +486,7 @@ export const php2Data = {
         }
       ],
       "correctCode": "<?php\\n// tryで例外を発生させる可能性があるコードを囲む\\ntry {\\n    // throwで例外を投げる\\n    throw new Exception('おっと');\\n// catchで例外を捕捉\\n} catch (Exception $e) {\\n    // echoで出力\\n    echo 'キャッチ';\\n}\\n?>",
-      "holeyCode": "// PHPコード開始タグ\n___\\n// tryで例外を発生させる可能性があるコードを囲む\\n___ {\\n    // throwで例外を投げる\\n    ___ ___ ___('___');\\n// catchで例外を捕捉\\n} ___ (___ $___) {\\n    // echoで出力\\n    ___ '___';\\n// ブロックを閉じる\n___\\n// PHPコード終了タグ\n___",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// tryで例外を発生させる可能性があるコードを囲む\\n___ {\\n    // throwで例外を投げる\\n    ___ ___ ___('___');\\n// catchで例外を捕捉\\n} ___ (___ $___) {\\n    // echoで出力\\n    ___ '___';\\n// ブロックを閉じる\\n___\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "// PHPコード開始タグ",
           "<?php",
@@ -546,7 +546,7 @@ export const php2Data = {
         }
       ],
       "correctCode": "<?php\\n// namespace Appを宣言\\nnamespace App;\\n// Helloクラスを定義\\nclass Hello {\\n    // say()メソッドを定義\\n    public function say() {\\n        // 'こんにちは'を出力\\n        echo 'こんにちは';\\n    }\\n}\\n// $hにnew Hello()を代入\\n$h = new Hello();\\n// $h->say()を呼び出し\\n$h->say();\\n?>",
-      "holeyCode": "// PHPコード開始タグ\n___\\n// namespace Appを宣言\\n___ ___;\\n// Helloクラスを定義\\n___ ___ {\\n    // say()メソッドを定義\\n    ___ ___ ___() {\\n        // 'こんにちは'を出力\\n        ___ '___';\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___\\n// $hにnew Hello()を代入\\n$___ = ___ ___();\\n// $h->say()を呼び出し\\n$___->___();\\n// PHPコード終了タグ\n___",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// namespace Appを宣言\\n___ ___;\\n// Helloクラスを定義\\n___ ___ {\\n    // say()メソッドを定義\\n    ___ ___ ___() {\\n        // 'こんにちは'を出力\\n        ___ '___';\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// $hにnew Hello()を代入\\n$___ = ___ ___();\\n// $h->say()を呼び出し\\n$___->___();\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "// PHPコード開始タグ",
           "<?php",
@@ -618,7 +618,7 @@ export const php2Data = {
         }
       ],
       "correctCode": "<?php\\n// nullを代入\\n$value = null;\\n// ??でnullの場合のデフォルト値を指定\\necho $value ?? 'デフォルト';\\n?>",
-      "holeyCode": "// PHPコード開始タグ\n___\\n// nullを代入\\n$___ = ___;\\n// ??でnullの場合のデフォルト値を指定\\n___ $___ ___ '___';\\n// PHPコード終了タグ\n___",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// nullを代入\\n$___ = ___;\\n// ??でnullの場合のデフォルト値を指定\\n___ $___ ___ '___';\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "// PHPコード開始タグ",
           "<?php",

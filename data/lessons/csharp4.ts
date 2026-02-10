@@ -123,7 +123,7 @@ export const csharp4Data = {
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// 型パラメータに制約を付けるキーワード\\nclass Comparer<T> where T : IComparable<T> {\\n    // Compareメソッドを定義\\n    public int Compare(T a, T b) => a.CompareTo(b);\\n}\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Comparerインスタンスを作成\\n        var c = new Comparer<int>();\\n        // 5と3を比較した結果を表示\\n        Console.WriteLine(c.Compare(5, 3));\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// 型パラメータに制約を付けるキーワード\\n___ ___<___> ___ ___ : ___<___> {\\n    // Compareメソッドを定義\\n    ___ ___ ___(T ___, T ___) => ___.___(___)___\\n// ブロックを閉じる\n___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // Comparerインスタンスを作成\\n        ___ ___ = ___ ___<___>()___\\n        // 5と3を比較した結果を表示\\n        ___.___(___.___(___,___))___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// 型パラメータに制約を付けるキーワード\\n___ ___<___> ___ ___ : ___<___> {\\n    // Compareメソッドを定義\\n    ___ ___ ___(T ___, T ___) => ___.___(___)___\\n// ブロックを閉じる\\n___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // Comparerインスタンスを作成\\n        ___ ___ = ___ ___<___>()___\\n        // 5と3を比較した結果を表示\\n        ___.___(___.___(___,___))___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -201,7 +201,7 @@ export const csharp4Data = {
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // メソッドを参照できる型を定義するキーワード\\n    delegate int MathOp(int x);\\n    \\n    // Doubleメソッドを定義\\n    static int Double(int n) => n * 2;\\n    \\n    // Mainメソッドを定義\\n    static void Main() {\\n        // デリゲートにメソッドを代入\\n        MathOp op = Double;\\n        // op(5を表示\\n        Console.WriteLine(op(5));\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // メソッドを参照できる型を定義するキーワード\\n    ___ ___ ___(___  ___);\\n    ___\\n    // Doubleメソッドを定義\\n    ___ ___ ___(___  ___) => ___ * ___;\\n    ___\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // デリゲートにメソッドを代入\\n        ___ ___ = ___;\\n        // op(5を表示\\n        ___.___(___(___)___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // メソッドを参照できる型を定義するキーワード\\n    ___ ___ ___(___  ___);\\n    ___\\n    // Doubleメソッドを定義\\n    ___ ___ ___(___  ___) => ___ * ___;\\n    ___\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // デリゲートにメソッドを代入\\n        ___ ___ = ___;\\n        // op(5を表示\\n        ___.___(___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -277,7 +277,7 @@ export const csharp4Data = {
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 戻り値を持つ汎用デリゲート型\\n        Func<int, int> triple = x => x * 3;\\n        // triple(7を表示\\n        Console.WriteLine(triple(7));\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // 戻り値を持つ汎用デリゲート型\\n        ___<___, ___> ___ = ___ => ___ * ___;\\n        // triple(7を表示\\n        ___.___(___(___)___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // 戻り値を持つ汎用デリゲート型\\n        ___<___, ___> ___ = ___ => ___ * ___;\\n        // triple(7を表示\\n        ___.___(___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -341,7 +341,7 @@ export const csharp4Data = {
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 戻り値を持たない汎用デリゲート型\\n        Action<string> greet = name => Console.WriteLine($\"こんにちは, {name}!\");\\n        // greet関数（引数\"太郎\"）を呼び出し\\n        greet(\"太郎\");\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // 戻り値を持たない汎用デリゲート型\\n        ___<___> ___ = ___ => ___.___(___\"こんにちは, {___}!\");\\n        // greet関数（引数\"太郎\"）を呼び出し\\n        ___(\"___\")___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // 戻り値を持たない汎用デリゲート型\\n        ___<___> ___ = ___ => ___.___(___\"こんにちは, {___}!\");\\n        // greet関数（引数\"太郎\"）を呼び出し\\n        ___(\"___\")___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -405,7 +405,7 @@ export const csharp4Data = {
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // numsに{1, 2, 3, 4, 5, 6}を代入\\n        var nums = new[] { 1, 2, 3, 4, 5, 6 };\\n        // GroupByでnumsを偶奇でグループ分けしgroupsに代入\\n        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");\\n        // foreachでgroupsをループ\\n        foreach (var g in groups) {\\n            // g.Keyとg.Count()をWriteLineで出力\\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\\n        }\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n// usingでLinq名前空間をインポート\\n___ ___.___ ___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // numsに{1, 2, 3, 4, 5, 6}を代入\\n        ___ ___ = ___[] { ___, ___, ___, ___, ___, ___ };\\n        // GroupByでnumsを偶奇でグループ分けしgroupsに代入\\n        ___ ___ = ___.___(___ => ___ % ___ == ___ ? \"___\" : \"___\");\\n        // foreachでgroupsをループ\\n        ___ (var ___ ___ ___) {\\n            // g.Keyとg.Count()をWriteLineで出力\\n            ___.___(___\"{___.___}: {___.___(___}\");\\n        // ブロックを閉じる\n        ___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n// usingでLinq名前空間をインポート\\n___ ___.___ ___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // numsに{1, 2, 3, 4, 5, 6}を代入\\n        ___ ___ = ___[] { ___, ___, ___, ___, ___, ___ };\\n        // GroupByでnumsを偶奇でグループ分けしgroupsに代入\\n        ___ ___ = ___.___(___ => ___ % ___ == ___ ? \"___\" : \"___\");\\n        // foreachでgroupsをループ\\n        ___ (var ___ ___ ___) {\\n            // g.Keyとg.Count()をWriteLineで出力\\n            ___.___(___\"{___.___}: {___.___(___}\");\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -485,7 +485,7 @@ export const csharp4Data = {
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // sにnullを代入\\n        string? s = null;\\n        // nullでなければアクセスする演算子\\n        int? len = s?.Length;\\n        // null合体演算子でデフォルト値\\n        Console.WriteLine(len ?? 0);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // sにnullを代入\\n        ___? ___ = ___;\\n        // nullでなければアクセスする演算子\\n        ___? ___ = ___?.___;\\n        // null合体演算子でデフォルト値\\n        ___.___(___  ___ ___)___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // sにnullを代入\\n        ___? ___ = ___;\\n        // nullでなければアクセスする演算子\\n        ___? ___ = ___?.___;\\n        // null合体演算子でデフォルト値\\n        ___.___(___  ___ ___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -553,7 +553,7 @@ export const csharp4Data = {
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // valueにnullを代入\\n        string? value = null;\\n        // nullなら右側を返す演算子\\n        string result = value ?? \"デフォルト\";\\n        // resultを表示\\n        Console.WriteLine(result);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // valueにnullを代入\\n        ___? ___ = ___;\\n        // nullなら右側を返す演算子\\n        ___ ___ = ___ ___ \"___\";\\n        // resultを表示\\n        ___.___(___);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // valueにnullを代入\\n        ___? ___ = ___;\\n        // nullなら右側を返す演算子\\n        ___ ___ = ___ ___ \"___\";\\n        // resultを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -621,7 +621,7 @@ export const csharp4Data = {
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// イミュータブルなデータ型を定義するキーワード\\nrecord Point(int X, int Y);\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Pointインスタンスを作成\\n        var p = new Point(3, 4);\\n        // pを表示\\n        Console.WriteLine(p);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// イミュータブルなデータ型を定義するキーワード\\n___ ___(___  ___, ___  ___)___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // Pointインスタンスを作成\\n        ___ ___ = ___ ___(___, ___);\\n        // pを表示\\n        ___.___(___);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// イミュータブルなデータ型を定義するキーワード\\n___ ___(___  ___, ___  ___)___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // Pointインスタンスを作成\\n        ___ ___ = ___ ___(___, ___);\\n        // pを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -691,7 +691,7 @@ export const csharp4Data = {
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Itemクラスを定義\\nclass Item {\\n    // 初期化時のみ値を設定できるアクセサ\\n    public string Name { get; init; }\\n}\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // \"りんご\" を持つ Item インスタンスを作成\\n        var item = new Item { Name = \"りんご\" };\\n        // item.Nameを表示\\n        Console.WriteLine(item.Name);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Itemクラスを定義\\n___ ___ {\\n    // 初期化時のみ値を設定できるアクセサ\\n    ___ ___ ___ { ___; ___; }\\n// ブロックを閉じる\n___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // \"りんご\" を持つ Item インスタンスを作成\\n        ___ ___ = ___ ___ { ___ = \"___\" };\\n        // item.Nameを表示\\n        ___.___(___.___)___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Itemクラスを定義\\n___ ___ {\\n    // 初期化時のみ値を設定できるアクセサ\\n    ___ ___ ___ { ___; ___; }\\n// ブロックを閉じる\\n___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // \"りんご\" を持つ Item インスタンスを作成\\n        ___ ___ = ___ ___ { ___ = \"___\" };\\n        // item.Nameを表示\\n        ___.___(___.___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",

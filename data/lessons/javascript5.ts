@@ -272,7 +272,7 @@ export const javascriptData5 = {
         }
       ],
       "correctCode": "// process関数を定義\\nfunction process() {\\n  // try ブロック\\n  try {\\n    console.log('処理中...');\\n    // throw new Error('エラー！')でエラーを投げる\\n    throw new Error('エラー！');\\n  } catch (e) {\\n    // エラーメッセージを出力\\n    console.log('Caught:', e.message);\\n  // finally で常に実行されるブロック\\n  } finally {\\n    console.log('クリーンアップ完了');\\n  }\\n}\\n// process関数を呼び出し\\nprocess();",
-      "holeyCode": "// process関数を定義\\n___ ___() {\\n  // try ブロック\\n  ___ {\\n    // メソッドを呼び出す\n    ___.___('___');\\n    // throw new Error('エラー！')でエラーを投げる\\n    ___ new ___('___');\\n  // ブロックを開始\n  } ___ (___) {\\n    // エラーメッセージを出力\\n    ___.___('___', ___.___)\\n  // finally で常に実行されるブロック\\n  } ___ {\\n    // メソッドを呼び出す\n    ___.___('___');\\n  // ブロックを閉じる\n  ___\\n// ブロックを閉じる\n___\\n// process関数を呼び出し\\n___();",
+      "holeyCode": "// process関数を定義\\n___ ___() {\\n  // try ブロック\\n  ___ {\\n    // メソッドを呼び出す\\n    ___.___('___');\\n    // throw new Error('エラー！')でエラーを投げる\\n    ___ new ___('___');\\n  // ブロックを開始\\n  } ___ (___) {\\n    // エラーメッセージを出力\\n    ___.___('___', ___.___)\\n  // finally で常に実行されるブロック\\n  } ___ {\\n    // メソッドを呼び出す\\n    ___.___('___');\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n// process関数を呼び出し\\n___();",
       "correctLines": [
           "// process関数を定義",
           "function process() {",
@@ -349,7 +349,7 @@ export const javascriptData5 = {
         }
       ],
       "correctCode": "// extends でErrorクラスを継承\\nclass ValidationError extends Error {\\n  // constructor で初期化\\n  constructor(message) {\\n    // super で親クラスのコンストラクタを呼び出し\\n    super(message);\\n    // this.name にクラス名を設定\\n    this.name = 'Validationエラー';\\n  }\\n}\\n\\n// tryでエラー処理を開始\\ntry {\\n  // throw new ValidationError('無効な入力')でエラーを投げる\\n  throw new ValidationError('無効な入力');\\n// catchでエラーをキャッチ\\n} catch (e) {\\n  // エラー情報を出力\\n  console.log(`${e.name}: ${e.message}`);\\n}",
-      "holeyCode": "// extends でErrorクラスを継承\\n___ ___ ___ ___ {\\n  // constructor で初期化\\n  ___(___) {\\n    // super で親クラスのコンストラクタを呼び出し\\n    ___(___);\\n    // this.name にクラス名を設定\\n    ___.___ = '___';\\n  // ブロックを閉じる\n  ___\\n// ブロックを閉じる\n___\\n___\\n// tryでエラー処理を開始\\n___ {\\n  // throw new ValidationError('無効な入力')でエラーを投げる\\n  ___ ___ ___('___');\\n// catchでエラーをキャッチ\\n} ___ (___) {\\n  // エラー情報を出力\\n  ___.___(`${___.___}: ${___.___}`);\\n// ブロックを閉じる\n___",
+      "holeyCode": "// extends でErrorクラスを継承\\n___ ___ ___ ___ {\\n  // constructor で初期化\\n  ___(___) {\\n    // super で親クラスのコンストラクタを呼び出し\\n    ___(___);\\n    // this.name にクラス名を設定\\n    ___.___ = '___';\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// tryでエラー処理を開始\\n___ {\\n  // throw new ValidationError('無効な入力')でエラーを投げる\\n  ___ ___ ___('___');\\n// catchでエラーをキャッチ\\n} ___ (___) {\\n  // エラー情報を出力\\n  ___.___(`${___.___}: ${___.___}`);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// extends でErrorクラスを継承",
           "class ValidationError extends Error {",
@@ -484,7 +484,7 @@ export const javascriptData5 = {
         }
       ],
       "correctCode": "// privateDataにnew WeakMap()を代入\\nconst privateData = new WeakMap();\\n\\n// Userクラスを定義\\nclass User {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // 秘密データをWeakMapに保存\\n    privateData.set(this, { password: '秘密' });\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  getPassword() {\\n    // WeakMapから秘密データを取得して返す\\n    return privateData.get(this).password;\\n  }\\n}\\n\\n// userにnew User('太郎')を代入\\nconst user = new User('太郎');\\n// パスワードを取得して表示\\nconsole.log(user.getPassword());",
-      "holeyCode": "// privateDataにnew WeakMap()を代入\\n___ ___ = ___ ___();\\n___\\n// Userクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // 秘密データをWeakMapに保存\\n    ___.___(this, { ___: '___' });\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\n  ___\\n  // ブロックを開始\n  ___() {\\n    // WeakMapから秘密データを取得して返す\\n    ___ ___.___(this).___;\\n  // ブロックを閉じる\n  ___\\n// ブロックを閉じる\n___\\n___\\n// userにnew User('太郎')を代入\\n___ ___ = ___ ___('___');\\n// パスワードを取得して表示\\n___.___(___.___());",
+      "holeyCode": "// privateDataにnew WeakMap()を代入\\n___ ___ = ___ ___();\\n___\\n// Userクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // 秘密データをWeakMapに保存\\n    ___.___(this, { ___: '___' });\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // ブロックを開始\\n  ___() {\\n    // WeakMapから秘密データを取得して返す\\n    ___ ___.___(this).___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// userにnew User('太郎')を代入\\n___ ___ = ___ ___('___');\\n// パスワードを取得して表示\\n___.___(___.___());",
       "correctLines": [
           "// privateDataにnew WeakMap()を代入",
           "const privateData = new WeakMap();",
@@ -567,7 +567,7 @@ export const javascriptData5 = {
         }
       ],
       "correctCode": "// ハンドラオブジェクトを定義\\nconst handler = {\\n  // get トラップを定義\\n  get(target, prop) {\\n    // アクセスをログ出力\\n    console.log(`Getting ${prop}`);\\n    // return でプロパティ値を返す\\n    return target[prop];\\n  }\\n};\\n// name: '太郎' を持つオブジェクトの操作をインターセプト\\nconst user = new Proxy({ name: '太郎' }, handler);\\n// name プロパティにアクセス\\nconsole.log(user.name);",
-      "holeyCode": "// ハンドラオブジェクトを定義\\n___ ___ = {\\n  // get トラップを定義\\n  ___(___,___) {\\n    // アクセスをログ出力\\n    ___.___(`Getting ${___}`);\\n    // return でプロパティ値を返す\\n    ___ ___[___];\\n  // ブロックを閉じる\n  ___\\n};\\n// name: '太郎' を持つオブジェクトの操作をインターセプト\\n___ ___ = ___ ___({ ___: '___' }, ___);\\n// name プロパティにアクセス\\n___.___(___.___);",
+      "holeyCode": "// ハンドラオブジェクトを定義\\n___ ___ = {\\n  // get トラップを定義\\n  ___(___,___) {\\n    // アクセスをログ出力\\n    ___.___(`Getting ${___}`);\\n    // return でプロパティ値を返す\\n    ___ ___[___];\\n  // ブロックを閉じる\\n  ___\\n};\\n// name: '太郎' を持つオブジェクトの操作をインターセプト\\n___ ___ = ___ ___({ ___: '___' }, ___);\\n// name プロパティにアクセス\\n___.___(___.___);",
       "correctLines": [
           "// ハンドラオブジェクトを定義",
           "const handler = {",

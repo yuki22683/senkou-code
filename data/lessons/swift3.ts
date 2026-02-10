@@ -294,7 +294,7 @@ export const swift3Data = {
         }
       ],
       "correctCode": "// numsに[1, -2, 3, -4, 5]を代入\\nlet nums = [1, -2, 3, -4, 5]\\n// for-in whereでn>0の要素をループ\\nfor n in nums where n > 0 {\\n    // nをprintで出力\\n    print(n)\\n}",
-      "holeyCode": "// numsに[1, -2, 3, -4, 5]を代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// for-in whereでn>0の要素をループ\\nfor ___ in ___ ___ ___ > ___ {\\n    // nをprintで出力\\n    ___(___)\\n// ブロックを閉じる\n___",
+      "holeyCode": "// numsに[1, -2, 3, -4, 5]を代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// for-in whereでn>0の要素をループ\\nfor ___ in ___ ___ ___ > ___ {\\n    // nをprintで出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// numsに[1, -2, 3, -4, 5]を代入",
           "let nums = [1, -2, 3, -4, 5]",
@@ -344,7 +344,7 @@ export const swift3Data = {
               }
       ],
       "correctCode": "// test関数を定義\\nfunc test() {\\n    // deferでスコープ終了時に実行\\n    defer { print(\"end\") }\\n    // startと出力\\n    print(\"start\")\\n}\\n// test関数を呼び出し\\ntest()",
-      "holeyCode": "// test関数を定義\\nfunc ___() {\\n    // deferでスコープ終了時に実行\\n    ___ { ___(\"___\") }\\n    // startと出力\\n    ___(\"___\")\\n// ブロックを閉じる\n___\\n// test関数を呼び出し\\n___()",
+      "holeyCode": "// test関数を定義\\nfunc ___() {\\n    // deferでスコープ終了時に実行\\n    ___ { ___(\"___\") }\\n    // startと出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___\\n// test関数を呼び出し\\n___()",
       "correctLines": [
           "// test関数を定義",
           "func test() {",
@@ -406,7 +406,7 @@ export const swift3Data = {
         }
       ],
       "correctCode": "// プロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    }\\n}\\n\\n// インスタンスを作成\\nvar s = IntStack()\\n// 要素を追加\\ns.push(10)\\n// itemsを出力\\nprint(s.items)",
-      "holeyCode": "// プロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    ___ ___\\n    // pushメソッドを宣言\\n    mutating func ___(_ ___: ___)\\n// ブロックを閉じる\n___\\n___\\n// Stackに準拠\\nstruct ___: ___ {\\n    // items配列\\n    var ___: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(_ ___: ___) {\\n        // 要素を追加\\n        ___.___(___)\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___\\n___\\n// インスタンスを作成\\nvar ___ = ___()\\n// 要素を追加\\n___.___(___)\\n// itemsを出力\\n___(___.___)",
+      "holeyCode": "// プロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    ___ ___\\n    // pushメソッドを宣言\\n    mutating func ___(_ ___: ___)\\n// ブロックを閉じる\\n___\\n___\\n// Stackに準拠\\nstruct ___: ___ {\\n    // items配列\\n    var ___: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(_ ___: ___) {\\n        // 要素を追加\\n        ___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// インスタンスを作成\\nvar ___ = ___()\\n// 要素を追加\\n___.___(___)\\n// itemsを出力\\n___(___.___)",
       "correctLines": [
           "// プロトコルを定義",
           "protocol Stack {",
@@ -504,7 +504,7 @@ export const swift3Data = {
         }
       ],
       "correctCode": "// エラー型を定義\\nenum MyError: Error { case invalid }\\n\\n// throwsでエラーを投げる可能性を示す\\nfunc check(_ n: Int) throws -> Int {\\n    // 負の場合はエラー\\n    if n < 0 { throw MyError.invalid }\\n    // nを返す\\n    return n\\n}\\n\\n// do-catchでエラー処理\\ndo {\\n    // tryで呼び出し\\n    let v = try check(10)\\n    // vを出力\\n    print(v)\\n} catch {\\n    // エラーを出力\\n    print(\"エラー\")\\n}",
-      "holeyCode": "// エラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// throwsでエラーを投げる可能性を示す\\nfunc ___(_ ___: ___) ___ -> ___ {\\n    // 負の場合はエラー\\n    if ___ < ___ { ___ ___.___ }\\n    // nを返す\\n    return ___\\n// ブロックを閉じる\n___\\n___\\n// do-catchでエラー処理\\n___ {\\n    // tryで呼び出し\\n    let ___ = ___ ___(___)\\n    // vを出力\\n    ___(___)\\n// ブロックを開始\n} ___ {\\n    // エラーを出力\\n    ___(\"___\")\\n// ブロックを閉じる\n___",
+      "holeyCode": "// エラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// throwsでエラーを投げる可能性を示す\\nfunc ___(_ ___: ___) ___ -> ___ {\\n    // 負の場合はエラー\\n    if ___ < ___ { ___ ___.___ }\\n    // nを返す\\n    return ___\\n// ブロックを閉じる\\n___\\n___\\n// do-catchでエラー処理\\n___ {\\n    // tryで呼び出し\\n    let ___ = ___ ___(___)\\n    // vを出力\\n    ___(___)\\n// ブロックを開始\\n} ___ {\\n    // エラーを出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// エラー型を定義",
           "enum MyError: Error { case invalid }",
@@ -646,7 +646,7 @@ export const swift3Data = {
         }
       ],
       "correctCode": "// 構造体を定義\\nstruct Counter {\\n    // countプロパティ\\n    var count = 0\\n    // mutatingで構造体を変更可能に\\n    mutating func increment() {\\n        // countを1増やす\\n        count += 1\\n    }\\n}\\n\\n// インスタンスを作成\\nvar c = Counter()\\n// 1回目のincrementを呼び出し\\nc.increment()\\n// 2回目のincrementを呼び出し\\nc.increment()\\n// countを出力\\nprint(c.count)",
-      "holeyCode": "// 構造体を定義\\nstruct ___ {\\n    // countプロパティ\\n    var ___ = ___\\n    // mutatingで構造体を変更可能に\\n    ___ func ___() {\\n        // countを1増やす\\n        ___ += ___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___\\n___\\n// インスタンスを作成\\nvar ___ = ___()\\n// 1回目のincrementを呼び出し\\n___.___()\\n// 2回目のincrementを呼び出し\\n___.___()\\n// countを出力\\n___(___.___)",
+      "holeyCode": "// 構造体を定義\\nstruct ___ {\\n    // countプロパティ\\n    var ___ = ___\\n    // mutatingで構造体を変更可能に\\n    ___ func ___() {\\n        // countを1増やす\\n        ___ += ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// インスタンスを作成\\nvar ___ = ___()\\n// 1回目のincrementを呼び出し\\n___.___()\\n// 2回目のincrementを呼び出し\\n___.___()\\n// countを出力\\n___(___.___)",
       "correctLines": [
           "// 構造体を定義",
           "struct Counter {",

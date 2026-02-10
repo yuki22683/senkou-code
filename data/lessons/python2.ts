@@ -437,7 +437,7 @@ export const pythonData2 = {
         }
       ],
       "correctCode": "# Catクラスを定義\\nclass Cat:\\n    # meowメソッドを定義\\n    def meow(self):\\n        # 'ニャー！'を表示\\n        print('ニャー！')\\n\\n# インスタンスcatを作って呼び出す\\ncat = Cat()\\ncat.meow()",
-      "holeyCode": "# Catクラスを定義\\n___ ___:\\n    # meowメソッドを定義\\n    ___ ___(___):\\n        # 'ニャー！'を表示\\n        ___('___')\\n\\n# インスタンスcatを作って呼び出す\\n___ = ___()\\n# メソッドを呼び出す\n___.___()",
+      "holeyCode": "# Catクラスを定義\\n___ ___:\\n    # meowメソッドを定義\\n    ___ ___(___):\\n        # 'ニャー！'を表示\\n        ___('___')\\n\\n# インスタンスcatを作って呼び出す\\n___ = ___()\\n# メソッドを呼び出す\\n___.___()",
       "correctLines": [
           "# Catクラスを定義",
           "class Cat:",

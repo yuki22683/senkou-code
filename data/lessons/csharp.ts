@@ -45,13 +45,13 @@ export const csharpData = {
           "content": "# Console.WriteLine（コンソール・ライトライン）\\n\\n画面に文字を出したいときは、`Console.WriteLine()` という命令を使います。\\n\\n**Console** は「画面」、**WriteLine** は「1行書く」という意味です。つまり「画面に1行書いてね」とコンピュータにお願いしているんです。\\n\\n**大事なルール：**\\nC#では、文の最後に必ず `;`（セミコロン）をつけます。これは日本語の「。」と同じ役割です。忘れないようにしましょう！\\n\\n**コード例（文字を出すプログラム）：**\\n```csharp\\nConsole.WriteLine(\"ヤッホー！\");\\n```\\n=> ヤッホー！"
         }
       ],
-      "correctCode": "// ライブラリを読み込む\\nusing System;\\n\\n// クラスを定義\\nclass Program {\\n    // メソッドを定義\\n    static void Main() {\\n        // 画面にメッセージを出す関数\\n        Console.WriteLine(\"Hello, C#!\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// ライブラリを読み込む\\nusing ___;\\n___\\n// クラスを定義\\nclass ___ {\\n    // メソッドを定義\\n    static void ___() {\\n        // 画面にメッセージを出す関数\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// ライブラリを読み込む\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // メソッドを定義\\n    static void Main() {\\n        // 画面にメッセージを出す関数\\n        Console.WriteLine(\"Hello, C#!\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// ライブラリを読み込む\\nusing ___;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // メソッドを定義\\n    static void ___() {\\n        // 画面にメッセージを出す関数\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "using System;",
           "",
-          "// クラスを定義",
+          "// Programクラスを定義",
           "class Program {",
           "    // メソッドを定義",
           "    static void Main() {",
@@ -392,7 +392,7 @@ export const csharpData = {
         }
       ],
       "correctCode": "// scoreに100を入れる\\nint score = 100;\\n// もし80より大きかったら\\nif (score > 80)\\n{\\n    // 「合格！」と表示する\\n    Console.WriteLine(\"合格！\");\\n}",
-      "holeyCode": "// scoreに100を入れる\\n___ ___ = ___;\\n// もし80より大きかったら\\nif (___ ___ ___)\\n// ブロックを開始\n___\\n    // 「合格！」と表示する\\n    ___.___(\"___\");\\n// ブロックを閉じる\n___",
+      "holeyCode": "// scoreに100を入れる\\n___ ___ = ___;\\n// もし80より大きかったら\\nif (___ ___ ___)\\n// ブロックを開始\\n___\\n    // 「合格！」と表示する\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// scoreに100を入れる",
           "int score = 100;",
@@ -452,7 +452,7 @@ export const csharpData = {
         }
       ],
       "correctCode": "// ageに10を入れる\\nint age = 10;\\n// 20歳以上かどうかで分ける\\nif (age >= 20)\\n{\\n    // 「大人」と出力\\n    Console.WriteLine(\"大人\");\\n}\\n// else でそれ以外の場合\\nelse\\n{\\n    // 「子供」と出力\\n    Console.WriteLine(\"子供\");\\n}",
-      "holeyCode": "// ageに10を入れる\\n___ ___ = ___;\\n// 20歳以上かどうかで分ける\\nif (___ ___ ___)\\n// ブロックを開始\n___\\n    // 「大人」と出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\n___\\n// else でそれ以外の場合\\n___\\n// ブロックを開始\n___\\n    // 「子供」と出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ageに10を入れる\\n___ ___ = ___;\\n// 20歳以上かどうかで分ける\\nif (___ ___ ___)\\n// ブロックを開始\\n___\\n    // 「大人」と出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___\\n// else でそれ以外の場合\\n___\\n// ブロックを開始\\n___\\n    // 「子供」と出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ageに10を入れる",
           "int age = 10;",
@@ -529,7 +529,7 @@ export const csharpData = {
         }
       ],
       "correctCode": "// score と bonus を定義\\nint score = 80;\\nint bonus = 10;\\n// && で両方の条件をチェック\\nif (score >= 70 && bonus > 0)\\n{\\n    Console.WriteLine(\"ボーナスあり合格\");\\n}",
-      "holeyCode": "// score と bonus を定義\\n___ ___ = ___;\\n// 変数を宣言\n___ ___ = ___;\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___)\\n// ブロックを開始\n___\\n    // \"\"\n    ___.___(\"___\");\\n// ブロックを閉じる\n___",
+      "holeyCode": "// score と bonus を定義\\n___ ___ = ___;\\n// 変数を宣言\\n___ ___ = ___;\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___)\\n// ブロックを開始\\n___\\n    // \"\"\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// score と bonus を定義",
           "int score = 80;",
@@ -588,7 +588,7 @@ export const csharpData = {
         }
       ],
       "correctCode": "// namesに{\"太郎\", \"花子\"}を代入\\nstring[] names = {\"太郎\", \"花子\"};\\n// 順番に取り出すループ\\nforeach (string name in names)\\n{\\n    // 取り出した名前を表示\\n    Console.WriteLine(name);\\n}",
-      "holeyCode": "// namesに{\"太郎\", \"花子\"}を代入\\n___[] ___ = {\"___\", \"___\"};\\n// 順番に取り出すループ\\nforeach (___ ___ in ___)\\n// ブロックを開始\n___\\n    // 取り出した名前を表示\\n    ___.___(___);\\n// ブロックを閉じる\n___",
+      "holeyCode": "// namesに{\"太郎\", \"花子\"}を代入\\n___[] ___ = {\"___\", \"___\"};\\n// 順番に取り出すループ\\nforeach (___ ___ in ___)\\n// ブロックを開始\\n___\\n    // 取り出した名前を表示\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// namesに{\\\"太郎\\\", \\\"花子\\\"}を代入",
           "string[] names = {\\\"太郎\\\", \\\"花子\\\"};",
@@ -697,7 +697,7 @@ export const csharpData = {
         }
       ],
       "correctCode": "// Greetというメソッドを定義\\nstatic void Greet()\\n{\\n    // こんにちは と表示\\n    Console.WriteLine(\"こんにちは\");\\n}\\n// Greetメソッドを呼び出す\\nGreet();",
-      "holeyCode": "// Greetというメソッドを定義\\nstatic void ___()\\n// ブロックを開始\n___\\n    // こんにちは と表示\\n    ___.___(\"___\");\\n// ブロックを閉じる\n___\\n// Greetメソッドを呼び出す\\n___();",
+      "holeyCode": "// Greetというメソッドを定義\\nstatic void ___()\\n// ブロックを開始\\n___\\n    // こんにちは と表示\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___\\n// Greetメソッドを呼び出す\\n___();",
       "correctLines": [
           "// Greetというメソッドを定義",
           "static void Greet()",

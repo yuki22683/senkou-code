@@ -46,16 +46,16 @@ export const perl3Data = {
         }
       ],
       "correctCode": "# openでファイルを開く\\nopen(my $fh, \">\", \"/tmp/テスト.txt\") or die;\\n# ファイルに「hello」を書き込む\\nprint $fh \"hello\\n\";\\n# ファイルを閉じる\\nclose($fh);\\n# 「written」を出力\\nprint \"written\\n\";",
-      "holeyCode": "# openでファイルを開く\\n___(my $___, \"___\", \"___\") or ___;\\n# ファイルに「hello」を書き込む\\n___ $___ \"___\\\\n\";\\n# ファイルを閉じる\\n___(___);\\n# 「written」を出力\\n___ \"___\\\\n\";",
+      "holeyCode": "# openでファイルを開く\\n___(my $___, \"___\", \"___\") or ___;\\n# ファイルに「hello」を書き込む\\n___ $___ \"___\\n\";\\n# ファイルを閉じる\\n___(___);\\n# 「written」を出力\\n___ \"___\\n\";",
       "correctLines": [
           "# openでファイルを開く",
           "open(my $fh, \\\">\\\", \\\"/tmp/テスト.txt\\\") or die;",
           "# ファイルに「hello」を書き込む",
-          "print $fh \\\"hello\\\\n\\\";",
+          "print $fh \\\"hello\\n\\\";",
           "# ファイルを閉じる",
           "close($fh);",
           "# 「written」を出力",
-          "print \\\"written\\\\n\\\";"
+          "print \\\"written\\n\\\";"
         ],
       "lineHints": [
           null,
@@ -97,16 +97,16 @@ export const perl3Data = {
         }
       ],
       "correctCode": "# openでファイルを開く\\nopen(my $fh, \">\", \"/tmp/テスト2.txt\") or die;\\n# ファイルに「data」を書き込む\\nprint $fh \"data\\n\";\\n# closeでファイルを閉じる\\nclose($fh);\\n# 「closed」を出力\\nprint \"closed\\n\";",
-      "holeyCode": "# openでファイルを開く\\n___(my $___, \\\"___\\\", \\\"___\\\") or ___;\\n# ファイルに「data」を書き込む\\n___ $___ \\\"___\\\\n\\\";\\n# closeでファイルを閉じる\\n___(___);\\n# 「closed」を出力\\n___ \\\"___\\\\n\\\";",
+      "holeyCode": "# openでファイルを開く\\n___(my $___, \\\"___\\\", \\\"___\\\") or ___;\\n# ファイルに「data」を書き込む\\n___ $___ \\\"___\\n\\\";\\n# closeでファイルを閉じる\\n___(___);\\n# 「closed」を出力\\n___ \\\"___\\n\\\";",
       "correctLines": [
           "# openでファイルを開く",
           "open(my $fh, \\\">\\\", \\\"/tmp/テスト2.txt\\\") or die;",
           "# ファイルに「data」を書き込む",
-          "print $fh \\\"data\\\\n\\\";",
+          "print $fh \\\"data\\n\\\";",
           "# closeでファイルを閉じる",
           "close($fh);",
           "# 「closed」を出力",
-          "print \\\"closed\\\\n\\\";"
+          "print \\\"closed\\n\\\";"
         ],
       "lineHints": [
           null,
@@ -148,14 +148,14 @@ export const perl3Data = {
         }
       ],
       "correctCode": "# 値を代入\\nmy $text = \"hello\\n\";\\n# chompで改行を除去\\nchomp($text);\\n# [$text]を出力\\nprint \"[$text]\\n\";",
-      "holeyCode": "# 値を代入\\nmy $___ = \\\"___\\\\n\\\";\\n# chompで改行を除去\\n___(___);\\n# [$text]を出力\\n___ \\\"[$___]\\\\n\\\";",
+      "holeyCode": "# 値を代入\\nmy $___ = \\\"___\\n\\\";\\n# chompで改行を除去\\n___(___);\\n# [$text]を出力\\n___ \\\"[$___]\\n\\\";",
       "correctLines": [
           "# 値を代入",
-          "my $text = \\\"hello\\\\n\\\";",
+          "my $text = \\\"hello\\n\\\";",
           "# chompで改行を除去",
           "chomp($text);",
           "# [$text]を出力",
-          "print \\\"[$text]\\\\n\\\";"
+          "print \\\"[$text]\\n\\\";"
         ],
       "lineHints": [
           null,
@@ -195,14 +195,14 @@ export const perl3Data = {
         }
       ],
       "correctCode": "# 値を代入\\nmy $data = \"りんご:バナナ:さくらんぼ\";\\n# splitで分割\\nmy @fruits = split(/:/, $data);\\n# $fruits[1]を出力\\nprint $fruits[1] . \"\\n\";",
-      "holeyCode": "# 値を代入\\nmy $___ = \\\"___\\\";\\n# splitで分割\\nmy @___ = ___(/___/, $___);\\n# $fruits[1]を出力\\n___ $___[___] . \\\"\\\\n\\\";",
+      "holeyCode": "# 値を代入\\nmy $___ = \\\"___\\\";\\n# splitで分割\\nmy @___ = ___(/___/, $___);\\n# $fruits[1]を出力\\n___ $___[___] . \\\"\\n\\\";",
       "correctLines": [
           "# 値を代入",
           "my $data = \\\"りんご:バナナ:さくらんぼ\\\";",
           "# splitで分割",
           "my @fruits = split(/:/, $data);",
           "# $fruits[1]を出力",
-          "print $fruits[1] . \\\"\\\\n\\\";"
+          "print $fruits[1] . \\\"\\n\\\";"
         ],
       "lineHints": [
           null,
@@ -242,14 +242,14 @@ export const perl3Data = {
         }
       ],
       "correctCode": "# 配列を定義\\nmy @words = (\"hello\", \"world\");\\n# joinで結合\\nmy $sentence = join(\" \", @words);\\n# $sentenceを出力\\nprint \"$sentence\\n\";",
-      "holeyCode": "# 配列を定義\\nmy @___ = (\\\"___\\\", \\\"___\\\");\\n# joinで結合\\nmy $___ = ___(\\\"___\\\", @___);\\n# $sentenceを出力\\n___ \\\"$___\\\\n\\\";",
+      "holeyCode": "# 配列を定義\\nmy @___ = (\\\"___\\\", \\\"___\\\");\\n# joinで結合\\nmy $___ = ___(\\\"___\\\", @___);\\n# $sentenceを出力\\n___ \\\"$___\\n\\\";",
       "correctLines": [
           "# 配列を定義",
           "my @words = (\\\"hello\\\", \\\"world\\\");",
           "# joinで結合",
           "my $sentence = join(\\\" \\\", @words);",
           "# $sentenceを出力",
-          "print \\\"$sentence\\\\n\\\";"
+          "print \\\"$sentence\\n\\\";"
         ],
       "lineHints": [
           null,
@@ -289,14 +289,14 @@ export const perl3Data = {
         }
       ],
       "correctCode": "# 配列を定義\\nmy @nums = (1, 2);\\n# pushで追加\\npush(@nums, 3);\\n# @numsを出力\\nprint \"@nums\\n\";",
-      "holeyCode": "# 配列を定義\\nmy @___ = (___, ___);\\n# pushで追加\\n___(@___, ___);\\n# @numsを出力\\n___ \\\"@___\\\\n\\\";",
+      "holeyCode": "# 配列を定義\\nmy @___ = (___, ___);\\n# pushで追加\\n___(@___, ___);\\n# @numsを出力\\n___ \\\"@___\\n\\\";",
       "correctLines": [
           "# 配列を定義",
           "my @nums = (1, 2);",
           "# pushで追加",
           "push(@nums, 3);",
           "# @numsを出力",
-          "print \\\"@nums\\\\n\\\";"
+          "print \\\"@nums\\n\\\";"
         ],
       "lineHints": [
           null,
@@ -336,14 +336,14 @@ export const perl3Data = {
         }
       ],
       "correctCode": "# 配列を定義\\nmy @nums = (10, 20, 30);\\n# popで取り出す\\nmy $last = pop(@nums);\\n# $lastを出力\\nprint \"$last\\n\";",
-      "holeyCode": "# 配列を定義\\nmy @___ = (___, ___, ___);\\n# popで取り出す\\nmy $___ = ___(@___);\\n# $lastを出力\\n___ \\\"$___\\\\n\\\";",
+      "holeyCode": "# 配列を定義\\nmy @___ = (___, ___, ___);\\n# popで取り出す\\nmy $___ = ___(@___);\\n# $lastを出力\\n___ \\\"$___\\n\\\";",
       "correctLines": [
           "# 配列を定義",
           "my @nums = (10, 20, 30);",
           "# popで取り出す",
           "my $last = pop(@nums);",
           "# $lastを出力",
-          "print \\\"$last\\\\n\\\";"
+          "print \\\"$last\\n\\\";"
         ],
       "lineHints": [
           null,
@@ -383,14 +383,14 @@ export const perl3Data = {
         }
       ],
       "correctCode": "# 配列を定義\\nmy @words = (\"バナナ\", \"りんご\", \"さくらんぼ\");\\n# sortで並べ替え\\nmy @sorted = sort @words;\\n# $sorted[0]を出力\\nprint \"$sorted[0]\\n\";",
-      "holeyCode": "# 配列を定義\\nmy @___ = (\\\"___\\\", \\\"___\\\", \\\"___\\\");\\n# sortで並べ替え\\nmy @___ = ___ @___;\\n# $sorted[0]を出力\\n___ \\\"$___[___]\\\\n\\\";",
+      "holeyCode": "# 配列を定義\\nmy @___ = (\\\"___\\\", \\\"___\\\", \\\"___\\\");\\n# sortで並べ替え\\nmy @___ = ___ @___;\\n# $sorted[0]を出力\\n___ \\\"$___[___]\\n\\\";",
       "correctLines": [
           "# 配列を定義",
           "my @words = (\\\"バナナ\\\", \\\"りんご\\\", \\\"さくらんぼ\\\");",
           "# sortで並べ替え",
           "my @sorted = sort @words;",
           "# $sorted[0]を出力",
-          "print \\\"$sorted[0]\\\\n\\\";"
+          "print \\\"$sorted[0]\\n\\\";"
         ],
       "lineHints": [
           null,
@@ -430,14 +430,14 @@ export const perl3Data = {
         }
       ],
       "correctCode": "# 配列を定義\\nmy @nums = (1, 2, 3);\\n# reverseで逆順に\\nmy @rev = reverse @nums;\\n# @revを出力\\nprint \"@rev\\n\";",
-      "holeyCode": "# 配列を定義\\nmy @___ = (___, ___, ___);\\n# reverseで逆順に\\nmy @___ = ___ @___;\\n# @revを出力\\n___ \\\"@___\\\\n\\\";",
+      "holeyCode": "# 配列を定義\\nmy @___ = (___, ___, ___);\\n# reverseで逆順に\\nmy @___ = ___ @___;\\n# @revを出力\\n___ \\\"@___\\n\\\";",
       "correctLines": [
           "# 配列を定義",
           "my @nums = (1, 2, 3);",
           "# reverseで逆順に",
           "my @rev = reverse @nums;",
           "# @revを出力",
-          "print \\\"@rev\\\\n\\\";"
+          "print \\\"@rev\\n\\\";"
         ],
       "lineHints": [
           null,
@@ -477,14 +477,14 @@ export const perl3Data = {
         }
       ],
       "correctCode": "# 値を代入\\nmy $text = \"Perl\";\\n# lengthで長さを取得\\nmy $len = length($text);\\n# $lenを出力\\nprint \"$len\\n\";",
-      "holeyCode": "# 値を代入\\nmy $___ = \\\"___\\\";\\n# lengthで長さを取得\\nmy $___ = ___($___);\\n# $lenを出力\\n___ \\\"$___\\\\n\\\";",
+      "holeyCode": "# 値を代入\\nmy $___ = \\\"___\\\";\\n# lengthで長さを取得\\nmy $___ = ___($___);\\n# $lenを出力\\n___ \\\"$___\\n\\\";",
       "correctLines": [
           "# 値を代入",
           "my $text = \\\"Perl\\\";",
           "# lengthで長さを取得",
           "my $len = length($text);",
           "# $lenを出力",
-          "print \\\"$len\\\\n\\\";"
+          "print \\\"$len\\n\\\";"
         ],
       "lineHints": [
           null,

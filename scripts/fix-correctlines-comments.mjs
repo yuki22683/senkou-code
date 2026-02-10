@@ -12,6 +12,8 @@ const vaguePatterns = [
   '// 関数を定義',
   '# クラスを定義',
   '// クラスを定義',
+  '# 出力',
+  '// 出力',
 ];
 
 function isCommentLine(line) {

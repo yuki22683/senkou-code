@@ -98,7 +98,7 @@ export const cpp3Data = {
         }
       ],
       "correctCode": "#include <iostream>\\n#include <vector>\\nusing namespace std;\\n\\nint main() {\\n    // numsに{10, 20, 30}を代入\\n    vector<int> nums = {10, 20, 30};\\n    // : で範囲for文\\n    for (int n : nums) {\\n        cout << n << endl;\\n    }\\n    return 0;\\n}",
-      "holeyCode": "// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___ ___ ___;\\n___\\n// ブロックを開始\n___ ___() {\\n    // numsに{10, 20, 30}を代入\\n    ___<___> ___ = {___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) {\\n        // 文を実行\n        ___ << ___ << ___;\\n    // ブロックを閉じる\n    ___\\n    // 値を返す\n    ___ ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // numsに{10, 20, 30}を代入\\n    ___<___> ___ = {___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) {\\n        // 文を実行\\n        ___ << ___ << ___;\\n    // ブロックを閉じる\\n    ___\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -176,7 +176,7 @@ export const cpp3Data = {
         }
       ],
       "correctCode": "#include <iostream>\\nusing namespace std;\\n\\nint main() {\\n    // pにnullptrを代入\\n    int* p = nullptr;\\n    // p == nullptrで比較\\n    if (p == nullptr) {\\n        cout << \"null\" << endl;\\n    }\\n    return 0;\\n}",
-      "holeyCode": "// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___ ___ ___;\\n___\\n// ブロックを開始\n___ ___() {\\n    // pにnullptrを代入\\n    ___* ___ = ___;\\n    // p == nullptrで比較\\n    if (___ == ___) {\\n        // \"\"\n        ___ << \"___\" << ___;\\n    // ブロックを閉じる\n    ___\\n    // 値を返す\n    ___ ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // pにnullptrを代入\\n    ___* ___ = ___;\\n    // p == nullptrで比較\\n    if (___ == ___) {\\n        // \"\"\\n        ___ << \"___\" << ___;\\n    // ブロックを閉じる\\n    ___\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -252,7 +252,7 @@ export const cpp3Data = {
         }
       ],
       "correctCode": "#include <iostream>\\nusing namespace std;\\n\\n// constexpr cube(int x)を定義\\nconstexpr int cube(int x) {\\n    return x * x * x;\\n}\\n\\nint main() {\\n    // valにcube(3)を代入（constexpr）\\n    constexpr int val = cube(3);\\n    cout << val << endl;\\n    return 0;\\n}",
-      "holeyCode": "// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___ ___ ___;\\n___\\n// constexpr cube(int x)を定義\\n___ ___ ___(int ___) {\\n    // 値を返す\n    ___ ___ * ___ * ___;\\n// ブロックを閉じる\n___\\n___\\n// ブロックを開始\n___ ___() {\\n    // valにcube(3)を代入（constexpr）\\n    ___ ___ ___ = ___(___);\\n    // 文を実行\n    ___ << ___ << ___;\\n    // 値を返す\n    ___ ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// constexpr cube(int x)を定義\\n___ ___ ___(int ___) {\\n    // 値を返す\\n    ___ ___ * ___ * ___;\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // valにcube(3)を代入（constexpr）\\n    ___ ___ ___ = ___(___);\\n    // 文を実行\\n    ___ << ___ << ___;\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -334,7 +334,7 @@ export const cpp3Data = {
               }
       ],
       "correctCode": "#include <iostream>\\n#include <vector>\\nusing namespace std;\\n\\nint main() {\\n    // { で初期化子リスト\\n    vector<int> v{1, 2, 3, 4, 5};\\n    // : で範囲for文\\n    for (int n : v) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}",
-      "holeyCode": "// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___ ___ ___;\\n___\\n// ブロックを開始\n___ ___() {\\n    // { で初期化子リスト\\n    ___<___> ___{___, ___, ___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) ___ << ___ << \" \";\\n    // 文を実行\n    ___ << ___;\\n    // 値を返す\n    ___ ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // { で初期化子リスト\\n    ___<___> ___{___, ___, ___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) ___ << ___ << \" \";\\n    // 文を実行\\n    ___ << ___;\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -408,7 +408,7 @@ export const cpp3Data = {
         }
       ],
       "correctCode": "#include <iostream>\\n#include <memory>\\nusing namespace std;\\n\\nint main() {\\n    // make_shared で共有ポインタを作成\\n    auto p = make_shared<int>(100);\\n    // *p で中身にアクセス\\n    cout << *p << endl;\\n    return 0;\\n}",
-      "holeyCode": "// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___ ___ ___;\\n___\\n// ブロックを開始\n___ ___() {\\n    // make_shared で共有ポインタを作成\\n    ___ ___ = ___<___>(___);\\n    // *p で中身にアクセス\\n    ___ << *___ << ___;\\n    // 値を返す\n    ___ ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // make_shared で共有ポインタを作成\\n    ___ ___ = ___<___>(___);\\n    // *p で中身にアクセス\\n    ___ << *___ << ___;\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -483,7 +483,7 @@ export const cpp3Data = {
         }
       ],
       "correctCode": "#include <iostream>\\n#include <string>\\n#include <utility>\\nusing namespace std;\\n\\nint main() {\\n    // s1に\"こんにちは\"を代入\\n    string s1 = \"こんにちは\";\\n    // move で所有権を移動\\n    string s2 = move(s1);\\n    cout << s2 << endl;\\n    return 0;\\n}",
-      "holeyCode": "// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___ ___ ___;\\n___\\n// ブロックを開始\n___ ___() {\\n    // s1に\"こんにちは\"を代入\\n    ___ ___ = \"___\";\\n    // move で所有権を移動\\n    ___ ___ = ___(___);\\n    // 文を実行\n    ___ << ___ << ___;\\n    // 値を返す\n    ___ ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // s1に\"こんにちは\"を代入\\n    ___ ___ = \"___\";\\n    // move で所有権を移動\\n    ___ ___ = ___(___);\\n    // 文を実行\\n    ___ << ___ << ___;\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -565,7 +565,7 @@ export const cpp3Data = {
         }
       ],
       "correctCode": "#include <iostream>\\n#include <optional>\\nusing namespace std;\\n\\nint main() {\\n    // optional で値を保持\\n    optional<int> opt = 42;\\n    // has_value で値の有無をチェック\\n    if (opt.has_value()) {\\n        cout << opt.value() << endl;\\n    }\\n    return 0;\\n}",
-      "holeyCode": "// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___ ___ ___;\\n___\\n// ブロックを開始\n___ ___() {\\n    // optional で値を保持\\n    ___<___> ___ = ___;\\n    // has_value で値の有無をチェック\\n    if (___.___()) {\\n        // 文を実行\n        ___ << ___.___() << ___;\\n    // ブロックを閉じる\n    ___\\n    // 値を返す\n    ___ ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // optional で値を保持\\n    ___<___> ___ = ___;\\n    // has_value で値の有無をチェック\\n    if (___.___()) {\\n        // 文を実行\\n        ___ << ___.___() << ___;\\n    // ブロックを閉じる\\n    ___\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -649,7 +649,7 @@ export const cpp3Data = {
         }
       ],
       "correctCode": "#include <iostream>\\n#include <array>\\nusing namespace std;\\n\\nint main() {\\n    // arrに{10, 20, 30}を代入\\n    array<int, 3> arr = {10, 20, 30};\\n    // : で範囲for文\\n    for (int n : arr) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}",
-      "holeyCode": "// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___ ___ ___;\\n___\\n// ブロックを開始\n___ ___() {\\n    // arrに{10, 20, 30}を代入\\n    ___<___, ___> ___ = {___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) ___ << ___ << \" \";\\n    // 文を実行\n    ___ << ___;\\n    // 値を返す\n    ___ ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // arrに{10, 20, 30}を代入\\n    ___<___, ___> ___ = {___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) ___ << ___ << \" \";\\n    // 文を実行\\n    ___ << ___;\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -728,7 +728,7 @@ export const cpp3Data = {
         }
       ],
       "correctCode": "#include <iostream>\\nusing namespace std;\\n\\nint main() {\\n    // xに5を代入\\n    int x = 5;\\n    // x でコピーキャプチャ\\n    auto f = [x]() { return x * x; };\\n    cout << f() << endl;\\n    return 0;\\n}",
-      "holeyCode": "// ライブラリを読み込む\n___\\n// ライブラリを読み込む\n___ ___ ___;\\n___\\n// ブロックを開始\n___ ___() {\\n    // xに5を代入\\n    ___ ___ = ___;\\n    // x でコピーキャプチャ\\n    ___ ___ = [___]() { return ___ * ___; };\\n    // 文を実行\n    ___ << ___() << ___;\\n    // 値を返す\n    ___ ___;\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // xに5を代入\\n    ___ ___ = ___;\\n    // x でコピーキャプチャ\\n    ___ ___ = [___]() { return ___ * ___; };\\n    // 文を実行\\n    ___ << ___() << ___;\\n    // 値を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",

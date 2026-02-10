@@ -26,13 +26,13 @@ export const javaData3 = {
           "content": "# (引数) -> 処理\\n\\n```java\\n// 引数なし\\n() -> System.out.println(\"Hello\")\\n\\n// 引数1つ（カッコ省略可）\\nx -> x * 2\\n\\n// 引数複数\\n(a, b) -> a + b\\n```"
         }
       ],
-      "correctCode": "// ライブラリを読み込む\\nimport java.util.function.Function;\\n\\n// クラスを定義\\npublic class Main {\\n    // メソッドを定義\\n    public static void main(String[] args) {\\n        // ラムダ式で引数と本体を区切る演算子\\n        Function<Integer, Integer> square = x -> x * x;\\n        // apply でラムダ式を実行する\\n        System.out.println(square.apply(5));\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___.___.;\\n___\\n// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // ラムダ式で引数と本体を区切る演算子\\n        ___<___, ___> ___ = ___ ___ ___ * ___;\\n        // apply でラムダ式を実行する\\n        ___.___.___(___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// ライブラリを読み込む\\nimport java.util.function.Function;\\n\\n// Mainクラスを定義\\npublic class Main {\\n    // メソッドを定義\\n    public static void main(String[] args) {\\n        // ラムダ式で引数と本体を区切る演算子\\n        Function<Integer, Integer> square = x -> x * x;\\n        // apply でラムダ式を実行する\\n        System.out.println(square.apply(5));\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___.___.;\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // ラムダ式で引数と本体を区切る演算子\\n        ___<___, ___> ___ = ___ ___ ___ * ___;\\n        // apply でラムダ式を実行する\\n        ___.___.___(___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "import java.util.function.Function;",
           "",
-          "// クラスを定義",
+          "// Mainクラスを定義",
           "public class Main {",
           "    // メソッドを定義",
           "    public static void main(String[] args) {",
@@ -92,7 +92,7 @@ export const javaData3 = {
         }
       ],
       "correctCode": "import java.util.*;\\nimport java.util.stream.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // numsに[1, 2, 3]を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3);\\n        // コレクションからStreamを作成するメソッド\\n        nums.stream().forEach(System.out::println);\\n    }\\n}",
-      "holeyCode": "// ライブラリを読み込む\nimport ___.___.___\\n// ライブラリを読み込む\nimport ___.___.___.___\\n___\\n// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // numsに[1, 2, 3]を代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // コレクションからStreamを作成するメソッド\\n        ___.___().___(___._________);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n// ライブラリを読み込む\\nimport ___.___.___.___\\n___\\n// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // numsに[1, 2, 3]を代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // コレクションからStreamを作成するメソッド\\n        ___.___().___(___._________);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "import java.util.*;",
@@ -160,7 +160,7 @@ export const javaData3 = {
         }
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // numsに[1, 2, 3]を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3);\\n        nums.stream()\\n            // 各要素を変換するメソッド\\n            .map(n -> n * 10)\\n            .forEach(System.out::println);\\n    }\\n}",
-      "holeyCode": "// ライブラリを読み込む\nimport ___.___.___\\n___\\n// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // numsに[1, 2, 3]を代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // メソッドを呼び出す\n        ___.___()\\n            // 各要素を変換するメソッド\\n            .___(___ ___ ___ * ___)\\n            // 出力\n            .___(___.___________);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // numsに[1, 2, 3]を代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // メソッドを呼び出す\\n        ___.___()\\n            // 各要素を変換するメソッド\\n            .___(___ ___ ___ * ___)\\n            // 出力\\n            .___(___.___________);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "import java.util.*;",
@@ -235,7 +235,7 @@ export const javaData3 = {
         }
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // numsに[1, 2, 3, 4, 5]を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);\\n        nums.stream()\\n            // 条件に合う要素だけを残すメソッド\\n            .filter(n -> n > 2)\\n            .forEach(System.out::println);\\n    }\\n}",
-      "holeyCode": "// ライブラリを読み込む\nimport ___.___.___\\n___\\n// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // numsに[1, 2, 3, 4, 5]を代入\\n        ___<___> ___ = ___.___(___,___, ___,___, ___);\\n        // メソッドを呼び出す\n        ___.___()\\n            // 条件に合う要素だけを残すメソッド\\n            .___(___ ___ ___ > ___)\\n            // 出力\n            .___(___.___________);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // numsに[1, 2, 3, 4, 5]を代入\\n        ___<___> ___ = ___.___(___,___, ___,___, ___);\\n        // メソッドを呼び出す\\n        ___.___()\\n            // 条件に合う要素だけを残すメソッド\\n            .___(___ ___ ___ > ___)\\n            // 出力\\n            .___(___.___________);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "import java.util.*;",
@@ -310,7 +310,7 @@ export const javaData3 = {
         }
       ],
       "correctCode": "import java.util.*;\\nimport java.util.stream.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // numsに[1, 2, 3]を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3);\\n        List<Integer> doubled = nums.stream()\\n            .map(n -> n * 2)\\n            // Streamをコレクションに変換するメソッドとユーティリティクラス\\n            .collect(Collectors.toList());\\n        // println で出力する\\n        System.out.println(doubled);\\n    }\\n}",
-      "holeyCode": "// ライブラリを読み込む\nimport ___.___.___\\n// ライブラリを読み込む\nimport ___.___.___.___\\n___\\n// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // numsに[1, 2, 3]を代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // 値を代入\n        ___<___> ___ = ___.___()\\n            // パターンマッチの分岐\n            .___(___ ___ ___ * ___)\\n            // Streamをコレクションに変換するメソッドとユーティリティクラス\\n            .___(___.___(___\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n// ライブラリを読み込む\\nimport ___.___.___.___\\n___\\n// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // numsに[1, 2, 3]を代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // 値を代入\\n        ___<___> ___ = ___.___()\\n            // パターンマッチの分岐\\n            .___(___ ___ ___ * ___)\\n            // Streamをコレクションに変換するメソッドとユーティリティクラス\\n            .___(___.___(___\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "import java.util.*;",
@@ -393,7 +393,7 @@ export const javaData3 = {
         }
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // numsに[1, 2, 3, 4]を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4);\\n        int product = nums.stream()\\n            // 全要素を1つの値にまとめるメソッド\\n            .reduce(1, (a, b) -> a * b);\\n        // println で出力する\\n        System.out.println(product);\\n    }\\n}",
-      "holeyCode": "// ライブラリを読み込む\nimport ___.___.___\\n___\\n// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // numsに[1, 2, 3, 4]を代入\\n        ___<___> ___ = ___.___(___,___, ___,___);\\n        // 変数を宣言\n        ___ ___ = ___.___()\\n            // 全要素を1つの値にまとめるメソッド\\n            .___(___,(___, ___) ___ ___ * ___);\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // numsに[1, 2, 3, 4]を代入\\n        ___<___> ___ = ___.___(___,___, ___,___);\\n        // 変数を宣言\\n        ___ ___ = ___.___()\\n            // 全要素を1つの値にまとめるメソッド\\n            .___(___,(___, ___) ___ ___ * ___);\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "import java.util.*;",
@@ -468,7 +468,7 @@ export const javaData3 = {
         }
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 値を持つOptionalを作成するメソッド\\n        Optional<String> opt = Optional.of(\"こんにちは\");\\n        // orElse でデフォルト値を指定して取得する\\n        String value = opt.orElse(\"デフォルト\");\\n        // println で出力する\\n        System.out.println(value);\\n    }\\n}",
-      "holeyCode": "// ライブラリを読み込む\nimport ___.___.___\\n___\\n// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // 値を持つOptionalを作成するメソッド\\n        ___<___> ___ = ___.___(\"___\");\\n        // orElse でデフォルト値を指定して取得する\\n        ___ ___ = ___.___\\\"___\");\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // 値を持つOptionalを作成するメソッド\\n        ___<___> ___ = ___.___(\"___\");\\n        // orElse でデフォルト値を指定して取得する\\n        ___ ___ = ___.___\\\"___\");\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "import java.util.*;",
@@ -538,7 +538,7 @@ export const javaData3 = {
         }
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // namesに[\"アリス\", \"ボブ\"]を代入\\n        List<String> names = Arrays.asList(\"アリス\", \"ボブ\");\\n        // メソッド参照を表す演算子\\n        names.forEach(System.out::println);\\n    }\\n}",
-      "holeyCode": "// ライブラリを読み込む\nimport ___.___.___\\n___\\n// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // namesに[\"アリス\", \"ボブ\"]を代入\\n        ___<___> ___ = ___.___(\"___\", \"___\");\\n        // メソッド参照を表す演算子\\n        ___.___(___._________);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // namesに[\"アリス\", \"ボブ\"]を代入\\n        ___<___> ___ = ___.___(\"___\", \"___\");\\n        // メソッド参照を表す演算子\\n        ___.___(___._________);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "import java.util.*;",
@@ -602,7 +602,7 @@ export const javaData3 = {
         }
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // numsに[5, 2, 8, 1]を代入\\n        List<Integer> nums = Arrays.asList(5, 2, 8, 1);\\n        nums.stream()\\n            // 要素を昇順に並べ替えるメソッド\\n            .sorted()\\n            .forEach(System.out::println);\\n    }\\n}",
-      "holeyCode": "// ライブラリを読み込む\nimport ___.___.___\\n___\\n// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // numsに[5, 2, 8, 1]を代入\\n        ___<___> ___ = ___.___(___,___, ___,___);\\n        // メソッドを呼び出す\n        ___.___()\\n            // 要素を昇順に並べ替えるメソッド\\n            .___()\\n            // 出力\n            .___(___.___________);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // numsに[5, 2, 8, 1]を代入\\n        ___<___> ___ = ___.___(___,___, ___,___);\\n        // メソッドを呼び出す\\n        ___.___()\\n            // 要素を昇順に並べ替えるメソッド\\n            .___()\\n            // 出力\\n            .___(___.___________);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "import java.util.*;",
@@ -677,7 +677,7 @@ export const javaData3 = {
         }
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // numsに[1, 1, 2, 2, 3]を代入\\n        List<Integer> nums = Arrays.asList(1, 1, 2, 2, 3);\\n        nums.stream()\\n            // 重複した要素を取り除くメソッド\\n            .distinct()\\n            .forEach(System.out::println);\\n    }\\n}",
-      "holeyCode": "// ライブラリを読み込む\nimport ___.___.___\\n___\\n// クラスを定義\npublic class ___ {\\n    // メソッドを定義\n    public static void ___(___[] ___) {\\n        // numsに[1, 1, 2, 2, 3]を代入\\n        ___<___> ___ = ___.___(___,___,___,___,___);\\n        // メソッドを呼び出す\n        ___.___()\\n            // 重複した要素を取り除くメソッド\\n            .___()\\n            // 出力\n            .___(___.___________);\\n    // ブロックを閉じる\n    ___\\n// ブロックを閉じる\n___",
+      "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// クラスを定義\\npublic class ___ {\\n    // メソッドを定義\\n    public static void ___(___[] ___) {\\n        // numsに[1, 1, 2, 2, 3]を代入\\n        ___<___> ___ = ___.___(___,___,___,___,___);\\n        // メソッドを呼び出す\\n        ___.___()\\n            // 重複した要素を取り除くメソッド\\n            .___()\\n            // 出力\\n            .___(___.___________);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "import java.util.*;",

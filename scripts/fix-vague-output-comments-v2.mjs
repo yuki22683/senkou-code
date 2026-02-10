@@ -1,134 +1,133 @@
-// 「結果を出力」「値を出力」「値を返す」などの曖昧なコメントを具体的に修正
 import fs from 'fs';
 import path from 'path';
 
-const lessonsDir = './data/lessons';
+const dir = 'data/lessons';
+const backslashN = String.fromCharCode(92, 110);
+const backslash = String.fromCharCode(92);
 
-function fixVagueComments(code) {
-  const lines = code.split('\n');
-  const result = [];
-
-  for (let i = 0; i < lines.length; i++) {
-    let line = lines[i];
-    const nextLine = lines[i + 1] || '';
-
-    // 「// 結果を出力」パターン
-    if (line.trim() === '// 結果を出力') {
-      // 次の行から具体的な変数名を抽出
-      const match = nextLine.match(/console\.log\(([^)]+)\)/);
-      if (match) {
-        const varName = match[1].trim();
-        const indent = line.match(/^(\s*)/)[1];
-        line = `${indent}// ${varName} を出力`;
-      }
-    }
-
-    // 「// 値を出力」パターン
-    if (line.trim() === '// 値を出力') {
-      const match = nextLine.match(/print\(([^)]+)\)|println\(([^)]+)\)|console\.log\(([^)]+)\)/);
-      if (match) {
-        const varName = (match[1] || match[2] || match[3]).trim();
-        const indent = line.match(/^(\s*)/)[1];
-        line = `${indent}// ${varName} を出力`;
-      }
-    }
-
-    // 「# 結果を出力」パターン
-    if (line.trim() === '# 結果を出力' || line.trim() === '-- 結果を出力') {
-      const commentChar = line.trim().startsWith('#') ? '#' : '--';
-      const match = nextLine.match(/print\(([^)]+)\)|puts?\s+(.+)/);
-      if (match) {
-        const varName = (match[1] || match[2]).trim();
-        const indent = line.match(/^(\s*)/)[1];
-        line = `${indent}${commentChar} ${varName} を出力`;
-      }
-    }
-
-    // 「// return で値を返す」「-- returnで値を返す」パターン
-    if (/\/\/\s*return\s*で値を返す/.test(line) || /--\s*returnで値を返す/.test(line)) {
-      const match = nextLine.match(/return\s+(.+);?/);
-      if (match) {
-        const returnValue = match[1].trim().replace(/;$/, '');
-        const indent = line.match(/^(\s*)/)[1];
-        const commentChar = line.includes('--') ? '--' : '//';
-        line = `${indent}${commentChar} ${returnValue} を返す`;
-      }
-    }
-
-    result.push(line);
-  }
-
-  return result.join('\n');
+function extractVarName(nextLine) {
+  let m;
+  
+  m = nextLine.match(/(?:printf|fprintf)\s*\([^,]+,\s*(?:"[^"]*"|'[^']*'),?\s*(\w+)/);
+  if (m) return m[1];
+  
+  m = nextLine.match(/println!\s*\([^,]+,\s*(\w+)/);
+  if (m) return m[1];
+  
+  m = nextLine.match(/fmt\.Print\w*\s*\((?:[^,]+,\s*)*(\w+)\s*\)/);
+  if (m) return m[1];
+  
+  m = nextLine.match(/System\.out\.println\s*\(([^)]+)\)/);
+  if (m) return m[1].trim();
+  
+  m = nextLine.match(/Console\.WriteLine\s*\(([^)]+)\)/);
+  if (m) return m[1].trim();
+  
+  m = nextLine.match(/console\.log\s*\(([^)]+)\)/);
+  if (m) return m[1].trim();
+  
+  m = nextLine.match(/print(?:ln)?\s*\(([^)]+)\)/);
+  if (m) return m[1].trim();
+  
+  m = nextLine.match(/echo\s+(\$?\w+)/);
+  if (m) return m[1];
+  
+  return null;
 }
 
-function processFile(filePath) {
-  let content = fs.readFileSync(filePath, 'utf-8');
+fs.readdirSync(dir).filter(f => f.endsWith('.ts')).forEach(file => {
+  const filePath = path.join(dir, file);
+  let content = fs.readFileSync(filePath, 'utf8');
   let modified = false;
+  let count = 0;
 
-  // correctCode、holeyCode、correctLines 内のコメントを修正
-  ['correctCode', 'holeyCode'].forEach(field => {
-    const regex = new RegExp(`("${field}":\\s*")((?:[^"\\\\]|\\\\.)*)(")`,'g');
-    content = content.replace(regex, (match, prefix, code, suffix) => {
-      const decoded = code.replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\\\/g, '\\');
-      const fixed = fixVagueComments(decoded);
-      if (fixed !== decoded) {
-        modified = true;
-        const encoded = fixed.replace(/\\/g, '\\\\').replace(/\n/g, '\\n').replace(/"/g, '\\"');
-        return prefix + encoded + suffix;
-      }
-      return match;
-    });
-  });
+  // Fix correctLines
+  content = content.replace(/"correctLines":\s*\[([^\]]*)\]/g, (match, arrayContent) => {
+    const items = [];
+    let current = '';
+    let inString = false;
+    let escapeNext = false;
 
-  // correctLines の配列も修正
-  const linesRegex = /("correctLines":\s*\[)([\s\S]*?)(\])/g;
-  content = content.replace(linesRegex, (match, prefix, arrayContent, suffix) => {
-    try {
-      const lines = JSON.parse(`[${arrayContent}]`);
-      let changed = false;
+    for (const c of arrayContent) {
+      if (escapeNext) { current += c; escapeNext = false; continue; }
+      if (c === backslash) { current += c; escapeNext = true; continue; }
+      if (c === '"') {
+        if (inString) { items.push(current); current = ''; inString = false; }
+        else { inString = true; }
+      } else if (inString) { current += c; }
+    }
 
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
-        const nextLine = lines[i + 1] || '';
+    let changed = false;
+    for (let i = 0; i < items.length - 1; i++) {
+      const line = items[i].trim();
+      const nextLine = items[i + 1];
 
-        if (line.trim() === '// 結果を出力') {
-          const consoleMatch = nextLine.match(/console\.log\(([^)]+)\)/);
-          if (consoleMatch) {
-            const indent = line.match(/^(\s*)/)[1];
-            lines[i] = `${indent}// ${consoleMatch[1].trim()} を出力`;
-            changed = true;
-          }
+      if (line === '// 出力' || line === '# 出力') {
+        const varName = extractVarName(nextLine);
+        if (varName && !varName.includes('"') && varName.length < 30) {
+          const indent = items[i].match(/^(\s*)/)[1];
+          const prefix = line.includes('//') ? '//' : '#';
+          items[i] = indent + prefix + ' ' + varName + 'を出力';
+          changed = true;
+          count++;
         }
       }
+    }
 
-      if (changed) {
-        modified = true;
-        return prefix + '\n          ' + lines.map(l => JSON.stringify(l)).join(',\n          ') + '\n        ' + suffix;
-      }
-    } catch (e) {
-      // ignore parse errors
+    if (changed) {
+      modified = true;
+      return '"correctLines": [\n          ' + items.map(i => '"' + i + '"').join(',\n          ') + '\n        ]';
     }
     return match;
   });
 
+  // Fix correctCode
+  content = content.replace(/"correctCode":\s*"([^"]*(?:\\"[^"]*)*)"/g, (match, code) => {
+    const lines = code.split(backslashN);
+    let changed = false;
+
+    for (let i = 0; i < lines.length - 1; i++) {
+      const line = lines[i];
+      const trimmed = line.trim();
+      const nextLine = lines[i + 1];
+
+      if (trimmed === '// 出力' || trimmed === '# 出力') {
+        const varName = extractVarName(nextLine);
+        if (varName && !varName.includes('"') && varName.length < 30) {
+          const indent = line.match(/^(\s*)/)[1];
+          const prefix = trimmed.startsWith('//') ? '//' : '#';
+          lines[i] = indent + prefix + ' ' + varName + 'を出力';
+          changed = true;
+        }
+      }
+    }
+
+    if (changed) {
+      modified = true;
+      return '"correctCode": "' + lines.join(backslashN) + '"';
+    }
+    return match;
+  });
+
+  // Fix holeyCode - sync with correctCode
+  content = content.replace(/"holeyCode":\s*"([^"]*(?:\\"[^"]*)*)"/g, (match, code) => {
+    const lines = code.split(backslashN);
+    let changed = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const trimmed = line.trim();
+
+      if (trimmed === '// 出力' || trimmed === '# 出力') {
+        // Keep as-is for now since we need corresponding correctCode info
+      }
+    }
+
+    return match;
+  });
+
   if (modified) {
-    fs.writeFileSync(filePath, content, 'utf-8');
-    return true;
+    fs.writeFileSync(filePath, content);
+    console.log(file + ': Fixed ' + count + ' vague output comments');
   }
-  return false;
-}
-
-const files = fs.readdirSync(lessonsDir).filter(f =>
-  f.endsWith('.ts') && f !== 'index.ts'
-);
-
-let fixedCount = 0;
-for (const file of files) {
-  const filePath = path.join(lessonsDir, file);
-  if (processFile(filePath)) {
-    console.log('Fixed:', file);
-    fixedCount++;
-  }
-}
-
-console.log(`\nTotal: ${fixedCount} files fixed`);
+});
