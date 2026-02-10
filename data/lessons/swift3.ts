@@ -34,6 +34,7 @@ export const swift3Data = {
   "exercises": [
     {
       "title": "Result型",
+      "description": "データの種類（型）について学びます",
       "tutorialSlides": [
         {
           "title": "Result型（リザルトがた）とは？",
@@ -115,6 +116,7 @@ export const swift3Data = {
       },
     {
       "title": "compactMap",
+      "description": "キーと値のペアでデータを管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "compactMap（コンパクトマップ）とは？",
@@ -166,6 +168,7 @@ export const swift3Data = {
       },
     {
       "title": "reduce",
+      "description": "reduceの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "reduce（リデュース）とは？",
@@ -219,6 +222,7 @@ export const swift3Data = {
       },
     {
       "title": "lazy",
+      "description": "lazyの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "lazy（レイジー）とは？",
@@ -270,6 +274,7 @@ export const swift3Data = {
       },
     {
       "title": "where 句",
+      "description": "where 句の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "where（ウェア）とは？",
@@ -321,6 +326,7 @@ export const swift3Data = {
       },
     {
       "title": "defer",
+      "description": "deferの使い方を学びます",
       "tutorialSlides": [
               {
                       "title": "deferとは",
@@ -372,6 +378,7 @@ export const swift3Data = {
       },
     {
       "title": "associatedtype",
+      "description": "データの種類（型）について学びます",
       "tutorialSlides": [
         {
           "title": "associatedtype（アソシエイテッドタイプ）とは？",
@@ -463,6 +470,7 @@ export const swift3Data = {
       },
     {
       "title": "throws と rethrows",
+      "description": "throws と rethrowsの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "throws（スローズ）とは？",
@@ -546,6 +554,7 @@ export const swift3Data = {
       },
     {
       "title": "Set（集合）",
+      "description": "Set（集合）の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Set（セット）とは？",
@@ -597,6 +606,7 @@ export const swift3Data = {
       },
     {
       "title": "mutating",
+      "description": "mutatingの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "mutating（ミューテイティング）とは？",

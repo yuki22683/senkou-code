@@ -34,6 +34,7 @@ export const csharp2Data = {
   "exercises": [
     {
       "title": "クラスの継承",
+      "description": "クラスの機能を引き継ぐ「継承」を学びます",
       "tutorialSlides": [
         {
           "title": "継承（けいしょう）とは？",
@@ -95,6 +96,7 @@ export const csharp2Data = {
       },
     {
       "title": "メソッドのオーバーライド",
+      "description": "メソッドのオーバーライドの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "オーバーライドとは？",
@@ -171,6 +173,7 @@ export const csharp2Data = {
       },
     {
       "title": "インターフェースを使おう",
+      "description": "インターフェースを使おうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "インターフェースとは？",
@@ -241,6 +244,7 @@ export const csharp2Data = {
       },
     {
       "title": "プロパティを使おう",
+      "description": "プロパティを使おうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "プロパティとは？",
@@ -296,6 +300,7 @@ export const csharp2Data = {
       },
     {
       "title": "List<T> を使おう",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "List<T>（リスト）とは？",
@@ -343,6 +348,7 @@ export const csharp2Data = {
       },
     {
       "title": "LINQ - Where で絞り込み",
+      "description": "LINQ - Where で絞り込みの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "LINQ（リンク）とは？",
@@ -392,6 +398,7 @@ export const csharp2Data = {
       },
     {
       "title": "LINQ - Select で変換",
+      "description": "LINQ - Select で変換の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Select（セレクト）とは？",
@@ -441,6 +448,7 @@ export const csharp2Data = {
       },
     {
       "title": "ラムダ式を使おう",
+      "description": "短く書ける無名関数を学びます",
       "tutorialSlides": [
         {
           "title": "ラムダ式（しき）とは？",
@@ -480,6 +488,7 @@ export const csharp2Data = {
       },
     {
       "title": "例外処理 try-catch",
+      "description": "エラーを適切に処理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "例外処理（れいがいしょり）とは？",
@@ -531,6 +540,7 @@ export const csharp2Data = {
       },
     {
       "title": "null条件演算子 ?.",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "null参照（さんしょう）の問題",

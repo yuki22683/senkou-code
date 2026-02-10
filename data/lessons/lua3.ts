@@ -34,6 +34,7 @@ export const lua3Data = {
   "exercises": [
     {
       "title": "pcall でエラーを捕捉",
+      "description": "エラーを適切に処理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "pcall とは？",
@@ -86,6 +87,7 @@ export const lua3Data = {
       },
     {
       "title": "error でエラーを発生",
+      "description": "エラーを適切に処理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "error とは？",
@@ -130,6 +132,7 @@ export const lua3Data = {
       },
     {
       "title": "assert で検証",
+      "description": "assert で検証の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "assert とは？",
@@ -170,6 +173,7 @@ export const lua3Data = {
       },
     {
       "title": "型を確認しよう",
+      "description": "データの種類（型）について学びます",
       "tutorialSlides": [
         {
           "title": "type とは？",
@@ -212,6 +216,7 @@ export const lua3Data = {
       },
     {
       "title": "tostring で文字列に変換",
+      "description": "文字列の操作方法を学びます",
       "tutorialSlides": [
         {
           "title": "tostring とは？",
@@ -254,6 +259,7 @@ export const lua3Data = {
       },
     {
       "title": "tonumber で数値に変換",
+      "description": "tonumber で数値に変換の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "tonumber とは？",
@@ -298,6 +304,7 @@ export const lua3Data = {
       },
     {
       "title": "文字列を連結",
+      "description": "文字列を繋げる方法を学びます",
       "tutorialSlides": [
         {
           "title": "文字列の連結",
@@ -342,6 +349,7 @@ export const lua3Data = {
       },
     {
       "title": "文字列の長さを取得",
+      "description": "文字列の操作方法を学びます",
       "tutorialSlides": [
         {
           "title": "# 演算子",
@@ -384,6 +392,7 @@ export const lua3Data = {
       },
     {
       "title": "条件演算子のパターン",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件式パターン",
@@ -428,6 +437,7 @@ export const lua3Data = {
       },
     {
       "title": "ループを制御しよう",
+      "description": "同じ処理を繰り返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "break とは？",

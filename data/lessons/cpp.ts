@@ -14,6 +14,7 @@ export const cppData = {
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",
+      "description": "画面にメッセージを出しましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "C++（シープラスプラス）とは？",
@@ -57,6 +58,7 @@ export const cppData = {
       },
     {
       "title": "数字を入れる「はこ」",
+      "description": "データを保存する「変数」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
@@ -107,6 +109,7 @@ export const cppData = {
       },
     {
       "title": "コンピュータで計算しましょう",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "計算はコンピュータにお任せ",
@@ -154,6 +157,7 @@ export const cppData = {
       },
     {
       "title": "剰余演算子（%）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "あまりを求める",
@@ -201,6 +205,7 @@ export const cppData = {
       },
     {
       "title": "累算代入演算子（+=、-=）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "中身を増やしたいとき",
@@ -259,6 +264,7 @@ export const cppData = {
       },
     {
       "title": "文字と「はこ」を並べましょう",
+      "description": "データを保存する「変数」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "連結（れんけつ）とは？",
@@ -304,6 +310,7 @@ export const cppData = {
       },
     {
       "title": "自由に伸びる「はこ」vector",
+      "description": "データを保存する「変数」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "動的配列（どうてきはいれつ）とは？",
@@ -355,6 +362,7 @@ export const cppData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
+      "description": "条件によって処理を分ける方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -411,6 +419,7 @@ export const cppData = {
       },
     {
       "title": "ちがう場合はどうしましょう？",
+      "description": "ちがう場合はどうしましょう？の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "それ以外の場合は？",
@@ -472,6 +481,7 @@ export const cppData = {
       },
     {
       "title": "論理演算子（&&、||）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件を組み合わせる",
@@ -532,6 +542,7 @@ export const cppData = {
       },
     {
       "title": "中身を全部出してみましょう",
+      "description": "中身を全部出してみましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
@@ -583,6 +594,7 @@ export const cppData = {
       },
     {
       "title": "名前で探しましょう「じしょ」",
+      "description": "名前で探しましょう「じしょ」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "辞書（じしょ）とは？",
@@ -636,6 +648,7 @@ export const cppData = {
       },
     {
       "title": "自分だけの関数を作りましょう",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",

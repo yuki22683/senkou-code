@@ -26,6 +26,7 @@ export const javascriptData4 = {
   "exercises": [
     {
       "title": "配列のevery",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "every()とは？",
@@ -67,6 +68,7 @@ export const javascriptData4 = {
       },
     {
       "title": "配列のsome",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "some()とは？",
@@ -108,6 +110,7 @@ export const javascriptData4 = {
       },
     {
       "title": "flatMapで展開と変換",
+      "description": "キーと値のペアでデータを管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "flatMap()とは？",
@@ -149,6 +152,7 @@ export const javascriptData4 = {
       },
     {
       "title": "Object.entries",
+      "description": "Object.entriesの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Object.entries()とは？",
@@ -192,6 +196,7 @@ export const javascriptData4 = {
       },
     {
       "title": "Object.fromEntries",
+      "description": "Object.fromEntriesの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Object.fromEntries()とは？",
@@ -233,6 +238,7 @@ export const javascriptData4 = {
       },
     {
       "title": "カリー化",
+      "description": "カリー化の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "カリー化とは？",
@@ -274,6 +280,7 @@ export const javascriptData4 = {
       },
     {
       "title": "関数合成",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "関数合成（かんすうごうせい）とは？",
@@ -323,6 +330,7 @@ export const javascriptData4 = {
       },
     {
       "title": "クロージャでカウンター",
+      "description": "クロージャでカウンターの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "クロージャとは？",
@@ -382,6 +390,7 @@ export const javascriptData4 = {
       },
     {
       "title": "メモ化",
+      "description": "メモ化の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "メモ化とは？",
@@ -449,6 +458,7 @@ export const javascriptData4 = {
       },
     {
       "title": "パイプライン",
+      "description": "パイプラインの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "パイプラインとは？",

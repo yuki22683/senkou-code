@@ -34,6 +34,7 @@ export const perl3Data = {
   "exercises": [
     {
       "title": "ファイルを開こう",
+      "description": "ファイル操作の方法を学びます",
       "tutorialSlides": [
         {
           "title": "open（オープン）とは？",
@@ -78,6 +79,7 @@ export const perl3Data = {
       },
     {
       "title": "ファイルを閉じよう",
+      "description": "ファイル操作の方法を学びます",
       "tutorialSlides": [
         {
           "title": "close（クローズ）とは？",
@@ -122,6 +124,7 @@ export const perl3Data = {
       },
     {
       "title": "chomp で改行を除去",
+      "description": "chomp で改行を除去の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "chomp（チョンプ）とは？",
@@ -164,6 +167,7 @@ export const perl3Data = {
       },
     {
       "title": "split で文字列を分割",
+      "description": "文字列を分割する方法を学びます",
       "tutorialSlides": [
         {
           "title": "split（スプリット）とは？",
@@ -206,6 +210,7 @@ export const perl3Data = {
       },
     {
       "title": "join で配列を結合",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "join（ジョイン）とは？",
@@ -248,6 +253,7 @@ export const perl3Data = {
       },
     {
       "title": "push で配列に追加",
+      "description": "配列に要素を追加する方法を学びます",
       "tutorialSlides": [
         {
           "title": "push（プッシュ）とは？",
@@ -290,6 +296,7 @@ export const perl3Data = {
       },
     {
       "title": "pop で配列から取り出す",
+      "description": "配列から要素を取り出す方法を学びます",
       "tutorialSlides": [
         {
           "title": "pop（ポップ）とは？",
@@ -332,6 +339,7 @@ export const perl3Data = {
       },
     {
       "title": "sort で配列を並べ替え",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "sort（ソート）とは？",
@@ -374,6 +382,7 @@ export const perl3Data = {
       },
     {
       "title": "reverse で配列を逆順に",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "reverse（リバース）とは？",
@@ -416,6 +425,7 @@ export const perl3Data = {
       },
     {
       "title": "length で文字列の長さ",
+      "description": "文字列の操作方法を学びます",
       "tutorialSlides": [
         {
           "title": "length（レングス）とは？",

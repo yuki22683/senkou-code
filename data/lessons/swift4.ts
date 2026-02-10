@@ -34,6 +34,7 @@ export const swift4Data = {
   "exercises": [
     {
       "title": "プロトコルの定義",
+      "description": "プロトコルの定義の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "プロトコルとは？",
@@ -115,6 +116,7 @@ export const swift4Data = {
       },
     {
       "title": "プロトコル拡張",
+      "description": "プロトコル拡張の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "プロトコル拡張（かくちょう）とは？",
@@ -203,6 +205,7 @@ export const swift4Data = {
       },
     {
       "title": "ジェネリック関数",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "ジェネリクスとは？",
@@ -264,6 +267,7 @@ export const swift4Data = {
       },
     {
       "title": "where 制約",
+      "description": "where 制約の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "型に条件をつける",
@@ -325,6 +329,7 @@ export const swift4Data = {
       },
     {
       "title": "Codable でJSON変換",
+      "description": "Codable でJSON変換の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Codable（コーダブル）とは？",
@@ -412,6 +417,7 @@ export const swift4Data = {
       },
     {
       "title": "lazy プロパティ",
+      "description": "lazy プロパティの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "lazy（レイジー）とは？",
@@ -485,6 +491,7 @@ export const swift4Data = {
       },
     {
       "title": "defer 文",
+      "description": "defer 文の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "defer（ディファー）とは？",
@@ -545,6 +552,7 @@ export const swift4Data = {
       },
     {
       "title": "guard 文",
+      "description": "guard 文の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "guard（ガード）とは？",
@@ -618,6 +626,7 @@ export const swift4Data = {
       },
     {
       "title": "associatedtype",
+      "description": "データの種類（型）について学びます",
       "tutorialSlides": [
         {
           "title": "associatedtype（アソシエイテッドタイプ）とは？",
@@ -713,6 +722,7 @@ export const swift4Data = {
       },
     {
       "title": "some キーワード",
+      "description": "some キーワードの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "some（サム）とは？",

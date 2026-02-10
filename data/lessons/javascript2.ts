@@ -30,6 +30,7 @@ export const javascriptData2 = {
   "exercises": [
     {
       "title": "アロー関数",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "アロー関数とは？",
@@ -74,6 +75,7 @@ export const javascriptData2 = {
       },
     {
       "title": "配列のmap",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "mapとは？",
@@ -120,6 +122,7 @@ export const javascriptData2 = {
       },
     {
       "title": "剰余演算子（%）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "剰余演算子（%）とは？",
@@ -162,6 +165,7 @@ export const javascriptData2 = {
       },
     {
       "title": "累算代入演算子（+=、-=）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "累算代入演算子（+=）とは？",
@@ -212,6 +216,7 @@ export const javascriptData2 = {
       },
     {
       "title": "論理演算子（&&、||）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "論理演算子（&&と||）とは？",
@@ -257,6 +262,7 @@ export const javascriptData2 = {
       },
     {
       "title": "配列のfilter",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "filterとは？",
@@ -303,6 +309,7 @@ export const javascriptData2 = {
       },
     {
       "title": "配列のreduce",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "reduceとは？",
@@ -351,6 +358,7 @@ export const javascriptData2 = {
       },
     {
       "title": "分割代入（配列）",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "分割代入（ぶんかつだいにゅう）とは？",
@@ -401,6 +409,7 @@ export const javascriptData2 = {
       },
     {
       "title": "分割代入（オブジェクト）",
+      "description": "キーと値のペアでデータを管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "オブジェクトの分割代入",
@@ -451,6 +460,7 @@ export const javascriptData2 = {
       },
     {
       "title": "スプレッド演算子（配列）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "スプレッド演算子とは？",
@@ -501,6 +511,7 @@ export const javascriptData2 = {
       },
     {
       "title": "三項演算子",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "三項演算子（さんこうえんざんし）とは？",
@@ -547,6 +558,7 @@ export const javascriptData2 = {
       },
     {
       "title": "配列のfind",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "findとは？",
@@ -593,6 +605,7 @@ export const javascriptData2 = {
       },
     {
       "title": "オブジェクトのショートハンド",
+      "description": "キーと値のペアでデータを管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "プロパティのショートハンド",

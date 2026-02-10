@@ -14,6 +14,7 @@ export const cpp2Data = {
   "exercises": [
     {
       "title": "クラスを作ろう",
+      "description": "データと処理をまとめる「クラス」を学びます",
       "tutorialSlides": [
         {
           "title": "クラスとは？",
@@ -75,6 +76,7 @@ export const cpp2Data = {
       },
     {
       "title": "コンストラクタを使おう",
+      "description": "コンストラクタを使おうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "コンストラクタとは？",
@@ -138,6 +140,7 @@ export const cpp2Data = {
       },
     {
       "title": "メンバ関数を作ろう",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "メンバ関数とは？",
@@ -207,6 +210,7 @@ export const cpp2Data = {
       },
     {
       "title": "参照を使おう",
+      "description": "参照を使おうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "参照とは？",
@@ -258,6 +262,7 @@ export const cpp2Data = {
       },
     {
       "title": "継承を学ぼう",
+      "description": "継承を学ぼうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "継承（けいしょう）とは？",
@@ -321,6 +326,7 @@ export const cpp2Data = {
       },
     {
       "title": "仮想関数でオーバーライド",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "オーバーライドとは？",
@@ -394,6 +400,7 @@ export const cpp2Data = {
       },
     {
       "title": "テンプレートを使おう",
+      "description": "テンプレートを使おうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "テンプレートとは？",
@@ -449,6 +456,7 @@ export const cpp2Data = {
       },
     {
       "title": "ラムダ式を使おう",
+      "description": "短く書ける無名関数を学びます",
       "tutorialSlides": [
               {
                       "title": "ラムダ式とは",
@@ -500,6 +508,7 @@ export const cpp2Data = {
       },
     {
       "title": "スマートポインタ unique_ptr",
+      "description": "スマートポインタ unique_ptrの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "スマートポインタとは？",
@@ -549,6 +558,7 @@ export const cpp2Data = {
       },
     {
       "title": "例外処理 try-catch",
+      "description": "エラーを適切に処理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "例外処理（れいがいしょり）とは？",

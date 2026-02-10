@@ -34,6 +34,7 @@ export const phpData = {
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",
+      "description": "画面に文字を表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "PHP（ピーエイチピー）とは？",
@@ -76,6 +77,7 @@ export const phpData = {
       },
     {
       "title": "便利な「はこ」",
+      "description": "データを保存する「変数」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
@@ -122,6 +124,7 @@ export const phpData = {
       },
     {
       "title": "コンピュータで計算しましょう",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "計算はコンピュータにお任（まか）せ",
@@ -167,6 +170,7 @@ export const phpData = {
       },
     {
       "title": "剰余演算子（%）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "あまりを求（もと）める",
@@ -210,6 +214,7 @@ export const phpData = {
       },
     {
       "title": "累算代入演算子（+=、-=）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "累算代入（るいさんだいにゅう）とは？",
@@ -264,6 +269,7 @@ export const phpData = {
       },
     {
       "title": "文章の中に「はこ」を入れましょう",
+      "description": "データを保存する「変数」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "変数展開（へんすうてんかい）とは？",
@@ -310,6 +316,7 @@ export const phpData = {
       },
     {
       "title": "データをならべる「配列」",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）とは？",
@@ -353,6 +360,7 @@ export const phpData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
+      "description": "条件によって処理を分ける方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -402,6 +410,7 @@ export const phpData = {
       },
     {
       "title": "ちがう場合はどうしましょう？",
+      "description": "ちがう場合はどうしましょう？の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "それ以外（いがい）の場合は？",
@@ -462,6 +471,7 @@ export const phpData = {
       },
     {
       "title": "論理演算子（&&、||）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件（じょうけん）を組み合わせる",
@@ -522,6 +532,7 @@ export const phpData = {
       },
     {
       "title": "中身を全部出してみましょう",
+      "description": "中身を全部出してみましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "繰（く）り返し（ループ）とは？",
@@ -567,6 +578,7 @@ export const phpData = {
       },
     {
       "title": "名前で探しましょう「連想配列」",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "連想配列（れんそうはいれつ）とは？",
@@ -608,6 +620,7 @@ export const phpData = {
       },
     {
       "title": "自分だけの関数を作りましょう",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",

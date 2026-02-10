@@ -14,6 +14,7 @@ export const c2Data = {
   "exercises": [
     {
       "title": "ポインタって何？",
+      "description": "ポインタって何？の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "ポインタとは？",
@@ -61,6 +62,7 @@ export const c2Data = {
       },
     {
       "title": "ポインタで値を変える",
+      "description": "ポインタで値を変えるの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "間接的に値を変える",
@@ -110,6 +112,7 @@ export const c2Data = {
       },
     {
       "title": "関数に引数を渡す",
+      "description": "関数に値を渡す方法を学びます",
       "tutorialSlides": [
         {
           "title": "関数の引数とは？",
@@ -159,6 +162,7 @@ export const c2Data = {
       },
     {
       "title": "戻り値のある関数",
+      "description": "関数から値を返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "戻り値とは？",
@@ -210,6 +214,7 @@ export const c2Data = {
       },
     {
       "title": "配列とポインタ",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "配列名はアドレス",
@@ -257,6 +262,7 @@ export const c2Data = {
       },
     {
       "title": "文字列の基本",
+      "description": "文字列の操作方法を学びます",
       "tutorialSlides": [
         {
           "title": "C言語の文字列",
@@ -302,6 +308,7 @@ export const c2Data = {
       },
     {
       "title": "ポインタを関数に渡す",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "参照渡し風のテクニック",
@@ -355,6 +362,7 @@ export const c2Data = {
       },
     {
       "title": "動的メモリ確保 malloc",
+      "description": "動的メモリ確保 mallocの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "動的メモリとは？",
@@ -406,6 +414,7 @@ export const c2Data = {
       },
     {
       "title": "構造体へのポインタ",
+      "description": "構造体へのポインタの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "構造体とポインタ",
@@ -459,6 +468,7 @@ export const c2Data = {
       },
     {
       "title": "列挙型 enum",
+      "description": "データの種類（型）について学びます",
       "tutorialSlides": [
         {
           "title": "列挙型とは？",

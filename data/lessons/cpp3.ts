@@ -14,6 +14,7 @@ export const cpp3Data = {
   "exercises": [
     {
       "title": "auto で型推論",
+      "description": "データの種類（型）について学びます",
       "tutorialSlides": [
         {
           "title": "auto とは？",
@@ -73,6 +74,7 @@ export const cpp3Data = {
       },
     {
       "title": "範囲for文",
+      "description": "同じ処理を繰り返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "範囲for文とは？",
@@ -134,6 +136,7 @@ export const cpp3Data = {
       },
     {
       "title": "nullptr",
+      "description": "nullptrの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "nullptr とは？",
@@ -195,6 +198,7 @@ export const cpp3Data = {
       },
     {
       "title": "constexpr",
+      "description": "constexprの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "constexpr とは？",
@@ -260,6 +264,7 @@ export const cpp3Data = {
       },
     {
       "title": "初期化子リスト",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
               {
                       "title": "初期化子リストとは",
@@ -319,6 +324,7 @@ export const cpp3Data = {
       },
     {
       "title": "shared_ptr",
+      "description": "shared_ptrの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "shared_ptr とは？",
@@ -381,6 +387,7 @@ export const cpp3Data = {
       },
     {
       "title": "std::move",
+      "description": "std::moveの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "move とは？",
@@ -446,6 +453,7 @@ export const cpp3Data = {
       },
     {
       "title": "std::optional",
+      "description": "std::optionalの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "optional とは？",
@@ -513,6 +521,7 @@ export const cpp3Data = {
       },
     {
       "title": "std::array",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "array とは？",
@@ -577,6 +586,7 @@ export const cpp3Data = {
       },
     {
       "title": "ラムダのキャプチャ",
+      "description": "短く書ける無名関数を学びます",
       "tutorialSlides": [
         {
           "title": "キャプチャとは？",

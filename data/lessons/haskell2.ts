@@ -38,6 +38,7 @@ export const haskell2Data = {
   "exercises": [
     {
       "title": "関数を定義しよう",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "関数の定義",
@@ -77,6 +78,7 @@ export const haskell2Data = {
       },
     {
       "title": "型注釈を書こう",
+      "description": "データの種類（型）について学びます",
       "tutorialSlides": [
         {
           "title": "型注釈とは？",
@@ -120,6 +122,7 @@ export const haskell2Data = {
       },
     {
       "title": "リストを使おう",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "リストとは？",
@@ -159,6 +162,7 @@ export const haskell2Data = {
       },
     {
       "title": "map で変換しよう",
+      "description": "キーと値のペアでデータを管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "map とは？",
@@ -194,6 +198,7 @@ export const haskell2Data = {
       },
     {
       "title": "filter で絞り込もう",
+      "description": "filter で絞り込もうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "filter とは？",
@@ -229,6 +234,7 @@ export const haskell2Data = {
       },
     {
       "title": "パターンマッチを使おう",
+      "description": "文字列のパターンマッチングを学びます",
       "tutorialSlides": [
         {
           "title": "パターンマッチとは？",
@@ -276,6 +282,7 @@ export const haskell2Data = {
       },
     {
       "title": "ガードで条件分岐",
+      "description": "条件によって処理を分ける方法を学びます",
       "tutorialSlides": [
         {
           "title": "ガードとは？",
@@ -327,6 +334,7 @@ export const haskell2Data = {
       },
     {
       "title": "ラムダ式を使おう",
+      "description": "短く書ける無名関数を学びます",
       "tutorialSlides": [
         {
           "title": "ラムダ式とは？",
@@ -362,6 +370,7 @@ export const haskell2Data = {
       },
     {
       "title": "リスト内包表記",
+      "description": "1行でリストを作成する便利な書き方を学びます",
       "tutorialSlides": [
         {
           "title": "リスト内包表記とは？",
@@ -397,6 +406,7 @@ export const haskell2Data = {
       },
     {
       "title": "foldr で畳み込み",
+      "description": "foldr で畳み込みの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "foldr とは？",

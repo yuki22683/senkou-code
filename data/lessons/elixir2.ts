@@ -34,6 +34,7 @@ export const elixir2Data = {
   "exercises": [
     {
       "title": "パターンマッチングの基本",
+      "description": "文字列のパターンマッチングを学びます",
       "tutorialSlides": [
         {
           "title": "パターンマッチとは？",
@@ -74,6 +75,7 @@ export const elixir2Data = {
       },
     {
       "title": "リストのパターンマッチ",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "head | tail",
@@ -117,6 +119,7 @@ export const elixir2Data = {
       },
     {
       "title": "パイプ演算子を使おう",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "パイプ演算子とは？",
@@ -163,6 +166,7 @@ export const elixir2Data = {
       },
     {
       "title": "Enum.map で変換",
+      "description": "キーと値のペアでデータを管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "Enum.map とは？",
@@ -206,6 +210,7 @@ export const elixir2Data = {
       },
     {
       "title": "Enum.filter で絞り込み",
+      "description": "Enum.filter で絞り込みの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Enum.filter とは？",
@@ -249,6 +254,7 @@ export const elixir2Data = {
       },
     {
       "title": "case でパターンマッチ",
+      "description": "文字列のパターンマッチングを学びます",
       "tutorialSlides": [
         {
           "title": "case とは？",
@@ -309,6 +315,7 @@ export const elixir2Data = {
       },
     {
       "title": "関数を定義しよう",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "defmodule と def",
@@ -361,6 +368,7 @@ export const elixir2Data = {
       },
     {
       "title": "再帰で計算しよう",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "再帰とは？",
@@ -414,6 +422,7 @@ export const elixir2Data = {
       },
     {
       "title": "プロセスを作ろう",
+      "description": "プロセスを作ろうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "プロセスとは？",
@@ -456,6 +465,7 @@ export const elixir2Data = {
       },
     {
       "title": "メッセージを送ろう",
+      "description": "メッセージを送ろうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "send と receive",

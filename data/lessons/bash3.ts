@@ -34,6 +34,7 @@ export const bash3Data = {
   "exercises": [
     {
       "title": "パイプでコマンドをつなぐ",
+      "description": "パイプでコマンドをつなぐの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "パイプとは？",
@@ -69,6 +70,7 @@ export const bash3Data = {
       },
     {
       "title": "ファイルにリダイレクト",
+      "description": "ファイル操作の方法を学びます",
       "tutorialSlides": [
         {
           "title": "リダイレクトとは？",
@@ -105,6 +107,7 @@ export const bash3Data = {
       },
     {
       "title": "ファイルから読み込む",
+      "description": "ユーザーからの入力を受け取る方法を学びます",
       "tutorialSlides": [
         {
           "title": "入力リダイレクトとは？",
@@ -143,6 +146,7 @@ export const bash3Data = {
       },
     {
       "title": "エラー出力をリダイレクト",
+      "description": "画面に文字を表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "標準エラー出力とは？",
@@ -178,6 +182,7 @@ export const bash3Data = {
       },
     {
       "title": "テストでファイルを確認",
+      "description": "ファイル操作の方法を学びます",
       "tutorialSlides": [
         {
           "title": "ファイルテストとは？",
@@ -219,6 +224,7 @@ export const bash3Data = {
       },
     {
       "title": "xargs でコマンドに渡す",
+      "description": "xargs でコマンドに渡すの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "xargs とは？",
@@ -254,6 +260,7 @@ export const bash3Data = {
       },
     {
       "title": "sed で置換",
+      "description": "sed で置換の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "sed とは？",
@@ -289,6 +296,7 @@ export const bash3Data = {
       },
     {
       "title": "awk でフィールドを抽出",
+      "description": "awk でフィールドを抽出の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "awk とは？",
@@ -324,6 +332,7 @@ export const bash3Data = {
       },
     {
       "title": "sort で並べ替え",
+      "description": "複数の条件を組み合わせる方法を学びます",
       "tutorialSlides": [
         {
           "title": "sort とは？",
@@ -363,6 +372,7 @@ export const bash3Data = {
       },
     {
       "title": "uniq で重複を除去",
+      "description": "uniq で重複を除去の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "uniq とは？",

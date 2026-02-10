@@ -34,6 +34,7 @@ export const swiftData = {
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",
+      "description": "画面にメッセージを出しましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Swift（スウィフト）とは？",
@@ -79,6 +80,7 @@ export const swiftData = {
       },
     {
       "title": "便利な「はこ」変数（へんすう）",
+      "description": "データを保存する「変数」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
@@ -137,6 +139,7 @@ export const swiftData = {
       },
     {
       "title": "剰余演算子（%）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "あまりを求める演算子（えんざんし）",
@@ -179,6 +182,7 @@ export const swiftData = {
       },
     {
       "title": "累算代入演算子（+=、-=）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "累算代入演算子（るいさんだいにゅうえんざんし）とは？",
@@ -235,6 +239,7 @@ export const swiftData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
+      "description": "条件によって処理を分ける方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -293,6 +298,7 @@ export const swiftData = {
       },
     {
       "title": "論理演算子（&&、||）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "論理演算子（ろんりえんざんし）とは？",
@@ -348,6 +354,7 @@ export const swiftData = {
       },
     {
       "title": "たくさんのデータをまとめましょう「配列」",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）とは？",
@@ -404,6 +411,7 @@ export const swiftData = {
       },
     {
       "title": "名前で引き出す「辞書」",
+      "description": "キーと値のペアでデータを管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "辞書（じしょ）とは？",

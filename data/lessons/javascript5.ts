@@ -26,6 +26,7 @@ export const javascriptData5 = {
   "exercises": [
     {
       "title": "正規表現リテラル",
+      "description": "文字列のパターンマッチングを学びます",
       "tutorialSlides": [
         {
           "title": "正規表現（せいきひょうげん）リテラルとは？",
@@ -71,6 +72,7 @@ export const javascriptData5 = {
       },
     {
       "title": "test()メソッド",
+      "description": "test()メソッドの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "test()メソッドとは？",
@@ -112,6 +114,7 @@ export const javascriptData5 = {
       },
     {
       "title": "match()メソッド",
+      "description": "match()メソッドの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "match()メソッドとは？",
@@ -162,6 +165,7 @@ export const javascriptData5 = {
       },
     {
       "title": "replace()メソッド",
+      "description": "replace()メソッドの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "replace()メソッドとは？",
@@ -203,6 +207,7 @@ export const javascriptData5 = {
       },
     {
       "title": "try-catch文",
+      "description": "エラーを適切に処理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "try-catch文とは？",
@@ -259,6 +264,7 @@ export const javascriptData5 = {
       },
     {
       "title": "finally節",
+      "description": "finally節の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "finally節とは？",
@@ -325,6 +331,7 @@ export const javascriptData5 = {
       },
     {
       "title": "カスタムエラー",
+      "description": "エラーを適切に処理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "カスタムエラーとは？",
@@ -397,6 +404,7 @@ export const javascriptData5 = {
       },
     {
       "title": "Symbol",
+      "description": "Symbolの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Symbolとは？",
@@ -452,6 +460,7 @@ export const javascriptData5 = {
       },
     {
       "title": "WeakMap",
+      "description": "キーと値のペアでデータを管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "WeakMapとは？",
@@ -526,6 +535,7 @@ export const javascriptData5 = {
       },
     {
       "title": "Proxy",
+      "description": "Proxyの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Proxyとは？",

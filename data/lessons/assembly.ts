@@ -34,6 +34,7 @@ export const assemblyData = {
   "exercises": [
     {
       "title": "画面にメッセージを出してみましょう",
+      "description": "画面にメッセージを出してみましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "アセンブリ言語とは？",
@@ -127,6 +128,7 @@ export const assemblyData = {
       },
     {
       "title": "違うメッセージを表示しましょう",
+      "description": "画面に文字を表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "文字列の長さ",
@@ -212,6 +214,7 @@ export const assemblyData = {
       },
     {
       "title": "終了コードを返しましょう",
+      "description": "終了コードを返しましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "終了コード",
@@ -266,6 +269,7 @@ export const assemblyData = {
       },
     {
       "title": "数字を足し算しましょう",
+      "description": "数の足し算を行う方法を学びます",
       "tutorialSlides": [
         {
           "title": "add命令（アッド）",
@@ -324,6 +328,7 @@ export const assemblyData = {
       },
     {
       "title": "数字を引き算しましょう",
+      "description": "数の引き算を行う方法を学びます",
       "tutorialSlides": [
         {
           "title": "sub命令（サブ）",
@@ -382,6 +387,7 @@ export const assemblyData = {
       },
     {
       "title": "レジスタ間でコピーしましょう",
+      "description": "レジスタ間でコピーしましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "レジスタ間のコピー",
@@ -436,6 +442,7 @@ export const assemblyData = {
       },
     {
       "title": "値を比較しましょう",
+      "description": "値を比較する方法を学びます",
       "tutorialSlides": [
         {
           "title": "cmp命令（コンペア）",
@@ -492,6 +499,7 @@ export const assemblyData = {
       },
     {
       "title": "条件ジャンプを使いましょう",
+      "description": "条件によって処理を分ける方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件ジャンプ",
@@ -556,6 +564,7 @@ export const assemblyData = {
       },
     {
       "title": "ラベルにジャンプしましょう",
+      "description": "ラベルにジャンプしましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "無条件ジャンプ",
@@ -614,6 +623,7 @@ export const assemblyData = {
       },
     {
       "title": "値を増やしましょう",
+      "description": "値を増やしましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "inc命令（インクリメント）",

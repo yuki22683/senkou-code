@@ -34,6 +34,7 @@ export const rubyData = {
   "exercises": [
     {
       "title": "画面に文字を出してみましょう",
+      "description": "画面に文字を表示する方法を学びます",
       "tutorialSlides": [
         {
           "title": "Ruby（ルビー）とは？",
@@ -70,6 +71,7 @@ export const rubyData = {
       },
     {
       "title": "便利な「はこ」変数（へんすう）",
+      "description": "データを保存する「変数」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
@@ -113,6 +115,7 @@ export const rubyData = {
       },
     {
       "title": "コンピュータで計算しましょう",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "算数とプログラミング",
@@ -165,6 +168,7 @@ export const rubyData = {
       },
     {
       "title": "剰余演算子（%）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "あまりを求（もと）める",
@@ -206,6 +210,7 @@ export const rubyData = {
       },
     {
       "title": "累算代入演算子（+=、-=）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "累算代入（るいさんだいにゅう）とは？",
@@ -258,6 +263,7 @@ export const rubyData = {
       },
     {
       "title": "文章の中に変数を入れましょう",
+      "description": "データを保存する「変数」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "式展開（しきてんかい）とは？",
@@ -301,6 +307,7 @@ export const rubyData = {
       },
     {
       "title": "たくさんのデータをまとめましょう「配列」",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）とは？",
@@ -349,6 +356,7 @@ export const rubyData = {
       },
     {
       "title": "「もし〜なら」で分ける if文",
+      "description": "条件によって処理を分ける方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -405,6 +413,7 @@ export const rubyData = {
       },
     {
       "title": "ちがう場合は？ if-else文",
+      "description": "条件に当てはまらない場合の処理を学びます",
       "tutorialSlides": [
         {
           "title": "else（エルス）とは？",
@@ -471,6 +480,7 @@ export const rubyData = {
       },
     {
       "title": "論理演算子（and, or）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件（じょうけん）を組み合わせる",
@@ -529,6 +539,7 @@ export const rubyData = {
       },
     {
       "title": "ぐるぐる回す each",
+      "description": "ぐるぐる回す eachの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "繰（く）り返し処理（しょり）",
@@ -584,6 +595,7 @@ export const rubyData = {
       },
     {
       "title": "名前で探しましょう「ハッシュ」",
+      "description": "キーと値のペアでデータを管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "ハッシュとは？",
@@ -626,6 +638,7 @@ export const rubyData = {
       },
     {
       "title": "自分だけの関数を作ろう「メソッド」",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "メソッド（関数）とは？",

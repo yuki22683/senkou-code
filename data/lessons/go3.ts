@@ -34,6 +34,7 @@ export const go3Data = {
   "exercises": [
     {
       "title": "ジェネリクスの基本",
+      "description": "ジェネリクスの基本の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "ジェネリクスとは？",
@@ -97,6 +98,7 @@ export const go3Data = {
       },
     {
       "title": "型制約 comparable",
+      "description": "データの種類（型）について学びます",
       "tutorialSlides": [
         {
           "title": "comparable とは？",
@@ -172,6 +174,7 @@ export const go3Data = {
       },
     {
       "title": "make でスライス作成",
+      "description": "make でスライス作成の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "make（メイク）でスライスを作る",
@@ -231,6 +234,7 @@ export const go3Data = {
       },
     {
       "title": "append でスライス結合",
+      "description": "append でスライス結合の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "append とは？",
@@ -288,6 +292,7 @@ export const go3Data = {
       },
     {
       "title": "copy でスライスコピー",
+      "description": "copy でスライスコピーの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "copy とは？",
@@ -347,6 +352,7 @@ export const go3Data = {
       },
     {
       "title": "select で複数チャネル",
+      "description": "select で複数チャネルの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "select（セレクト）とは？",
@@ -418,6 +424,7 @@ export const go3Data = {
       },
     {
       "title": "range で辞書をループ",
+      "description": "同じ処理を繰り返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "辞書の range",
@@ -475,6 +482,7 @@ export const go3Data = {
       },
     {
       "title": "type で新しい型",
+      "description": "データの種類（型）について学びます",
       "tutorialSlides": [
         {
           "title": "型定義",
@@ -532,6 +540,7 @@ export const go3Data = {
       },
     {
       "title": "埋め込み（Embedding）",
+      "description": "埋め込み（Embedding）の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "埋め込みとは？",
@@ -603,6 +612,7 @@ export const go3Data = {
       },
     {
       "title": "panic と recover",
+      "description": "panic と recoverの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "panic（パニック）とは？",

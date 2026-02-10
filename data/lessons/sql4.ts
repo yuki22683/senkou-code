@@ -34,6 +34,7 @@ export const sql4Data = {
   "exercises": [
     {
       "title": "CTE（WITH句）",
+      "description": "CTE（WITH句）の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "CTE（シーティーイー）とは？",
@@ -81,6 +82,7 @@ export const sql4Data = {
       },
     {
       "title": "ROW_NUMBER()",
+      "description": "ROW_NUMBER()の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "ROW_NUMBER（ロウナンバー）とは？",
@@ -130,6 +132,7 @@ export const sql4Data = {
       },
     {
       "title": "RANK()",
+      "description": "RANK()の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "RANK（ランク）とは？",
@@ -179,6 +182,7 @@ export const sql4Data = {
       },
     {
       "title": "SUM() OVER",
+      "description": "SUM() OVERの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "SUM() OVER とは？",
@@ -228,6 +232,7 @@ export const sql4Data = {
       },
     {
       "title": "CASE WHEN",
+      "description": "CASE WHENの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "CASE WHEN とは？",
@@ -269,6 +274,7 @@ export const sql4Data = {
       },
     {
       "title": "COALESCE",
+      "description": "COALESCEの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "COALESCE とは？",
@@ -306,6 +312,7 @@ export const sql4Data = {
       },
     {
       "title": "INSERT 文",
+      "description": "INSERT 文の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "INSERT（インサート）とは？",
@@ -351,6 +358,7 @@ export const sql4Data = {
       },
     {
       "title": "UPDATE 文",
+      "description": "UPDATE 文の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "UPDATE（アップデート）とは？",
@@ -400,6 +408,7 @@ export const sql4Data = {
       },
     {
       "title": "DELETE 文",
+      "description": "DELETE 文の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "DELETE（デリート）とは？",
@@ -449,6 +458,7 @@ export const sql4Data = {
       },
     {
       "title": "GROUP_CONCAT",
+      "description": "GROUP_CONCATの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "GROUP_CONCAT とは？",

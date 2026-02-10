@@ -34,6 +34,7 @@ export const go4Data = {
   "exercises": [
     {
       "title": "sync.Mutex",
+      "description": "sync.Mutexの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Mutex（ミューテックス）とは？",
@@ -105,6 +106,7 @@ export const go4Data = {
       },
     {
       "title": "sync.WaitGroup",
+      "description": "sync.WaitGroupの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "WaitGroup（ウェイトグループ）とは？",
@@ -182,6 +184,7 @@ export const go4Data = {
       },
     {
       "title": "context.Background",
+      "description": "context.Backgroundの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "context（コンテキスト）とは？",
@@ -241,6 +244,7 @@ export const go4Data = {
       },
     {
       "title": "context.WithCancel",
+      "description": "context.WithCancelの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "WithCancel とは？",
@@ -302,6 +306,7 @@ export const go4Data = {
       },
     {
       "title": "time.Duration",
+      "description": "time.Durationの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Duration とは？",
@@ -359,6 +364,7 @@ export const go4Data = {
       },
     {
       "title": "json.Marshal",
+      "description": "json.Marshalの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "json.Marshal（マーシャル）とは？",
@@ -428,6 +434,7 @@ export const go4Data = {
       },
     {
       "title": "json.Unmarshal",
+      "description": "json.Unmarshalの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Unmarshal とは？",
@@ -499,6 +506,7 @@ export const go4Data = {
       },
     {
       "title": "strings パッケージ",
+      "description": "文字列の操作方法を学びます",
       "tutorialSlides": [
         {
           "title": "strings パッケージ",
@@ -560,6 +568,7 @@ export const go4Data = {
       },
     {
       "title": "strconv.Atoi",
+      "description": "strconv.Atoiの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "strconv パッケージ",
@@ -617,6 +626,7 @@ export const go4Data = {
       },
     {
       "title": "os.Args",
+      "description": "os.Argsの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "os.Args とは？",

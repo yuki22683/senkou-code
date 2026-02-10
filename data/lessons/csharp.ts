@@ -34,6 +34,7 @@ export const csharpData = {
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",
+      "description": "画面にメッセージを出しましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "C#（シーシャープ）とは？",
@@ -84,6 +85,7 @@ export const csharpData = {
       },
     {
       "title": "便利な「はこ」変数（へんすう）",
+      "description": "データを保存する「変数」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
@@ -130,6 +132,7 @@ export const csharpData = {
       },
     {
       "title": "コンピュータで計算しましょう",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "数値を扱う",
@@ -184,6 +187,7 @@ export const csharpData = {
       },
     {
       "title": "剰余演算子（%）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "あまりを求める",
@@ -222,6 +226,7 @@ export const csharpData = {
       },
     {
       "title": "累算代入演算子（+=、-=）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "中身を増やしたいとき",
@@ -270,6 +275,7 @@ export const csharpData = {
       },
     {
       "title": "文章の中に変数を入れましょう",
+      "description": "データを保存する「変数」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "文章と変数をドッキング",
@@ -315,6 +321,7 @@ export const csharpData = {
       },
     {
       "title": "たくさんのデータをまとめましょう「配列」",
+      "description": "複数のデータをまとめて管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "配列（はいれつ）とは？",
@@ -361,6 +368,7 @@ export const csharpData = {
       },
     {
       "title": "「もし〜なら」で分ける if文",
+      "description": "条件によって処理を分ける方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -416,6 +424,7 @@ export const csharpData = {
       },
     {
       "title": "ちがう場合は？ if-else文",
+      "description": "条件に当てはまらない場合の処理を学びます",
       "tutorialSlides": [
         {
           "title": "それ以外の場合は？",
@@ -484,6 +493,7 @@ export const csharpData = {
       },
     {
       "title": "論理演算子（&&、||）",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件を組み合わせる",
@@ -534,6 +544,7 @@ export const csharpData = {
       },
     {
       "title": "ぐるぐる回す foreach",
+      "description": "同じ処理を繰り返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "繰り返し処理（ループ）",
@@ -589,6 +600,7 @@ export const csharpData = {
       },
     {
       "title": "名前で探しましょう「Dictionary」",
+      "description": "キーと値のペアでデータを管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "Dictionary（ディクショナリー）とは？",
@@ -637,6 +649,7 @@ export const csharpData = {
       },
     {
       "title": "自分だけの関数を作ろう「メソッド」",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "メソッド（関数）とは？",

@@ -38,6 +38,7 @@ export const bashData = {
   "exercises": [
     {
       "title": "画面にメッセージを出しましょう",
+      "description": "画面にメッセージを出しましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Bash（バッシュ）とは？",
@@ -79,6 +80,7 @@ export const bashData = {
       },
     {
       "title": "便利な「はこ」",
+      "description": "データを保存する「変数」の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "変数（へんすう）とは？",
@@ -125,6 +127,7 @@ export const bashData = {
       },
     {
       "title": "コンピュータで計算しましょう",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "計算はコンピュータにお任せ",
@@ -166,6 +169,7 @@ export const bashData = {
       },
     {
       "title": "「もし〜なら」で分けましょう",
+      "description": "条件によって処理を分ける方法を学びます",
       "tutorialSlides": [
         {
           "title": "条件分岐（じょうけんぶんき）とは？",
@@ -222,6 +226,7 @@ export const bashData = {
       },
     {
       "title": "ちがう場合はどうしましょう？",
+      "description": "ちがう場合はどうしましょう？の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "それ以外の場合は？",
@@ -278,6 +283,7 @@ export const bashData = {
       },
     {
       "title": "中身を全部出してみましょう",
+      "description": "中身を全部出してみましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "繰り返し（ループ）とは？",
@@ -326,6 +332,7 @@ export const bashData = {
       },
     {
       "title": "自分だけの関数を作りましょう",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "関数（かんすう）とは？",

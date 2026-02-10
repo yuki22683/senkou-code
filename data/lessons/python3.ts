@@ -46,6 +46,7 @@ export const pythonData3 = {
   "exercises": [
     {
       "title": "ラムダ式（無名関数）",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "ラムダ式とは？",
@@ -86,6 +87,7 @@ export const pythonData3 = {
       },
     {
       "title": "*args（可変長引数）",
+      "description": "*args（可変長引数）の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "*args とは？",
@@ -143,6 +145,7 @@ export const pythonData3 = {
       },
     {
       "title": "**kwargs（キーワード引数）",
+      "description": "**kwargs（キーワード引数）の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "**kwargs とは？",
@@ -189,6 +192,7 @@ export const pythonData3 = {
       },
     {
       "title": "enumerate で番号付きループ",
+      "description": "同じ処理を繰り返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "enumerate とは？",
@@ -232,6 +236,7 @@ export const pythonData3 = {
       },
     {
       "title": "zip で複数リストを同時にループ",
+      "description": "同じ処理を繰り返す方法を学びます",
       "tutorialSlides": [
         {
           "title": "zip とは？",
@@ -279,6 +284,7 @@ export const pythonData3 = {
       },
     {
       "title": "ジェネレータ（yield）",
+      "description": "値を順番に生成する仕組みを学びます",
       "tutorialSlides": [
         {
           "title": "ジェネレータとは？",
@@ -332,6 +338,7 @@ export const pythonData3 = {
       },
     {
       "title": "ジェネレータ式",
+      "description": "値を順番に生成する仕組みを学びます",
       "tutorialSlides": [
         {
           "title": "ジェネレータ式とは？",
@@ -373,6 +380,7 @@ export const pythonData3 = {
       },
     {
       "title": "デコレータの基本",
+      "description": "関数を拡張する「デコレータ」を学びます",
       "tutorialSlides": [
         {
           "title": "デコレータとは？",
@@ -441,6 +449,7 @@ export const pythonData3 = {
       },
     {
       "title": "any と all",
+      "description": "any と allの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "any とは？",

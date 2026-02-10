@@ -34,6 +34,7 @@ export const assembly3Data = {
   "exercises": [
     {
       "title": "値を減らしましょう",
+      "description": "値を減らしましょうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "dec命令（デクリメント）",
@@ -94,6 +95,7 @@ export const assembly3Data = {
       },
     {
       "title": "掛け算をしましょう",
+      "description": "数の掛け算を行う方法を学びます",
       "tutorialSlides": [
         {
           "title": "imul命令",
@@ -154,6 +156,7 @@ export const assembly3Data = {
       },
     {
       "title": "スタックに保存",
+      "description": "スタックに保存の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "push命令",
@@ -214,6 +217,7 @@ export const assembly3Data = {
       },
     {
       "title": "スタックから取り出す",
+      "description": "スタックから取り出すの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "pop命令",
@@ -270,6 +274,7 @@ export const assembly3Data = {
       },
     {
       "title": "論理AND演算",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "and命令",
@@ -330,6 +335,7 @@ export const assembly3Data = {
       },
     {
       "title": "論理OR演算",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "or命令",
@@ -390,6 +396,7 @@ export const assembly3Data = {
       },
     {
       "title": "左シフト演算",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "shl命令",
@@ -450,6 +457,7 @@ export const assembly3Data = {
       },
     {
       "title": "右シフト演算",
+      "description": "数値の計算方法を学びます",
       "tutorialSlides": [
         {
           "title": "shr命令",
@@ -510,6 +518,7 @@ export const assembly3Data = {
       },
     {
       "title": "test命令で検査",
+      "description": "test命令で検査の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "test命令",
@@ -580,6 +589,7 @@ export const assembly3Data = {
       },
     {
       "title": "neg命令で符号反転",
+      "description": "neg命令で符号反転の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "neg命令",

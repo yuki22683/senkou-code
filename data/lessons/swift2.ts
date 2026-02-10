@@ -34,6 +34,7 @@ export const swift2Data = {
   "exercises": [
     {
       "title": "オプショナルを学ぼう",
+      "description": "オプショナルを学ぼうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "オプショナルとは？",
@@ -87,6 +88,7 @@ export const swift2Data = {
       },
     {
       "title": "オプショナルバインディング",
+      "description": "オプショナルバインディングの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "if let とは？",
@@ -136,6 +138,7 @@ export const swift2Data = {
       },
     {
       "title": "構造体を作ろう",
+      "description": "構造体を作ろうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "構造体（こうぞうたい）とは？",
@@ -197,6 +200,7 @@ export const swift2Data = {
       },
     {
       "title": "クラスを作ろう",
+      "description": "データと処理をまとめる「クラス」を学びます",
       "tutorialSlides": [
         {
           "title": "クラスとは？",
@@ -264,6 +268,7 @@ export const swift2Data = {
       },
     {
       "title": "プロトコルを使おう",
+      "description": "プロトコルを使おうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "プロトコルとは？",
@@ -337,6 +342,7 @@ export const swift2Data = {
       },
     {
       "title": "クロージャを使おう",
+      "description": "クロージャを使おうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "クロージャとは？",
@@ -390,6 +396,7 @@ export const swift2Data = {
       },
     {
       "title": "map で変換しよう",
+      "description": "キーと値のペアでデータを管理する方法を学びます",
       "tutorialSlides": [
         {
           "title": "map（マップ）とは？",
@@ -441,6 +448,7 @@ export const swift2Data = {
       },
     {
       "title": "filter で絞り込もう",
+      "description": "filter で絞り込もうの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "filter（フィルター）とは？",
@@ -488,6 +496,7 @@ export const swift2Data = {
       },
     {
       "title": "guard で早期リターン",
+      "description": "guard で早期リターンの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "guard（ガード）とは？",
@@ -555,6 +564,7 @@ export const swift2Data = {
       },
     {
       "title": "列挙型を使おう",
+      "description": "データの種類（型）について学びます",
       "tutorialSlides": [
         {
           "title": "列挙型（れっきょがた）とは？",

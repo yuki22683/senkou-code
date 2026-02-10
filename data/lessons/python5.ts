@@ -30,6 +30,7 @@ export const pythonData5 = {
   "exercises": [
     {
       "title": "ファイルを開く（with文）",
+      "description": "ファイル操作の方法を学びます",
       "tutorialSlides": [
         {
           "title": "with文でファイルを開く",
@@ -77,6 +78,7 @@ export const pythonData5 = {
       },
     {
       "title": "JSONを読み込む",
+      "description": "ユーザーからの入力を受け取る方法を学びます",
       "tutorialSlides": [
         {
           "title": "json.loads()",
@@ -120,6 +122,7 @@ export const pythonData5 = {
       },
     {
       "title": "正規表現（search）",
+      "description": "文字列のパターンマッチングを学びます",
       "tutorialSlides": [
         {
           "title": "re.search()",
@@ -168,6 +171,7 @@ export const pythonData5 = {
     },
     {
       "title": "collections.Counter",
+      "description": "collections.Counterの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Counterとは？",

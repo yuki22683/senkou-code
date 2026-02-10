@@ -26,6 +26,7 @@ export const javascriptData3 = {
   "exercises": [
     {
       "title": "Promise の基本",
+      "description": "Promise の基本の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Promise（プロミス）とは？",
@@ -77,6 +78,7 @@ export const javascriptData3 = {
       },
     {
       "title": "Promise.resolve",
+      "description": "Promise.resolveの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Promise.resolve とは？",
@@ -126,6 +128,7 @@ export const javascriptData3 = {
       },
     {
       "title": "async 関数",
+      "description": "処理をまとめて再利用する「関数」を学びます",
       "tutorialSlides": [
         {
           "title": "async（アシンク）とは？",
@@ -176,6 +179,7 @@ export const javascriptData3 = {
       },
     {
       "title": "await で待機",
+      "description": "await で待機の使い方を学びます",
       "tutorialSlides": [
         {
           "title": "await（アウェイト）とは？",
@@ -231,6 +235,7 @@ export const javascriptData3 = {
       },
     {
       "title": "Promise.all",
+      "description": "Promise.allの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Promise.all とは？",
@@ -284,6 +289,7 @@ export const javascriptData3 = {
       },
     {
       "title": "クラスの定義",
+      "description": "データと処理をまとめる「クラス」を学びます",
       "tutorialSlides": [
         {
           "title": "class（クラス）とは？",
@@ -352,6 +358,7 @@ export const javascriptData3 = {
       },
     {
       "title": "クラスの継承",
+      "description": "クラスの機能を引き継ぐ「継承」を学びます",
       "tutorialSlides": [
         {
           "title": "extends（継承・けいしょう）とは？",
@@ -420,6 +427,7 @@ export const javascriptData3 = {
       },
     {
       "title": "静的メソッド",
+      "description": "静的メソッドの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "static（スタティック）とは？",
@@ -477,6 +485,7 @@ export const javascriptData3 = {
       },
     {
       "title": "Optional Chaining",
+      "description": "Optional Chainingの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Optional Chaining（オプショナルチェイニング）とは？",
@@ -522,6 +531,7 @@ export const javascriptData3 = {
       },
     {
       "title": "Nullish Coalescing",
+      "description": "Nullish Coalescingの使い方を学びます",
       "tutorialSlides": [
         {
           "title": "Nullish Coalescing（??）とは？",
