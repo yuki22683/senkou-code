@@ -94,8 +94,8 @@ export const csharp4Data = {
       },
     {
       "title": "ジェネリック制約 where",
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// 型パラメータに制約を付けるキーワード\\nclass Comparer<T> where T : IComparable<T> {\\n    // Compareメソッドを定義\\n    public int Compare(T a, T b) => a.CompareTo(b);\\n}\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Comparerインスタンスを作成\\n        var c = new Comparer<int>();\\n        // 比較結果を表示\\n        Console.WriteLine(c.Compare(5, 3));\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// 型パラメータに制約を付けるキーワード\\n___ ___<___> ___ ___ : ___<___> {\\n    // Compareメソッドを定義\\n    ___ ___ ___(T ___, T ___) => ___.___(___)___\\n___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // Comparerインスタンスを作成\\n        ___ ___ = ___ ___<___>()___\\n        // 比較結果を表示\\n        ___.___(___.___(___,___))___\\n    ___\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// 型パラメータに制約を付けるキーワード\\nclass Comparer<T> where T : IComparable<T> {\\n    // Compareメソッドを定義\\n    public int Compare(T a, T b) => a.CompareTo(b);\\n}\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Comparerインスタンスを作成\\n        var c = new Comparer<int>();\\n        // 5と3を比較した結果を表示\\n        Console.WriteLine(c.Compare(5, 3));\\n    }\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// 型パラメータに制約を付けるキーワード\\n___ ___<___> ___ ___ : ___<___> {\\n    // Compareメソッドを定義\\n    ___ ___ ___(T ___, T ___) => ___.___(___)___\\n___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // Comparerインスタンスを作成\\n        ___ ___ = ___ ___<___>()___\\n        // 5と3を比較した結果を表示\\n        ___.___(___.___(___,___))___\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -112,7 +112,7 @@ export const csharp4Data = {
           "    static void Main() {",
           "        // Comparerインスタンスを作成",
           "        var c = new Comparer<int>();",
-          "        // 比較結果を表示",
+          "        // 5と3を比較した結果を表示",
           "        Console.WriteLine(c.Compare(5, 3));",
           "    }",
           "}"

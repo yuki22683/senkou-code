@@ -100,14 +100,14 @@ export const javascriptData5 = {
       },
     {
       "title": "match()メソッド",
-      "correctCode": "// 090-1234-5678 を含む文字列を定義\\nconst text = 'Contact: 090-1234-5678 or 080-9876-5432';\\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\\nconst phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);\\n// 結果を出力\\nconsole.log(phones);",
-      "holeyCode": "// 090-1234-5678 を含む文字列を定義\\n___ ___ = '___';\\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\\n___ ___ = ___.___(/___/___);\\n// 結果を出力\\n___.___(___);",
+      "correctCode": "// 090-1234-5678 を含む文字列を定義\\nconst text = 'Contact: 090-1234-5678 or 080-9876-5432';\\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\\nconst phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);\\n// 抽出した電話番号の配列を出力\\nconsole.log(phones);",
+      "holeyCode": "// 090-1234-5678 を含む文字列を定義\\n___ ___ = '___';\\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\\n___ ___ = ___.___(/___/___);\\n// 抽出した電話番号の配列を出力\\n___.___(___);",
       "correctLines": [
           "// 090-1234-5678 を含む文字列を定義",
           "const text = 'Contact: 090-1234-5678 or 080-9876-5432';",
           "// match() で 090-1234-5678 と 080-9876-5432 を抽出",
           "const phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);",
-          "// 結果を出力",
+          "// 抽出した電話番号の配列を出力",
           "console.log(phones);"
         ],
       "lineHints": [
@@ -144,14 +144,14 @@ export const javascriptData5 = {
       },
     {
       "title": "replace()メソッド",
-      "correctCode": "// 'Hello   World' を定義\\nconst text = 'Hello   World';\\n// replace() で連続する空白を1つの空白に置換\\nconst result = text.replace(/\\s+/g, ' ');\\n// 結果を出力\\nconsole.log(result);",
-      "holeyCode": "// 'Hello   World' を定義\\n___ ___ = '___';\\n// replace() で連続する空白を1つの空白に置換\\n___ ___ = ___.___(/___/___, '___');\\n// 結果を出力\\n___.___(___);",
+      "correctCode": "// 'Hello   World' を定義\\nconst text = 'Hello   World';\\n// replace() で連続する空白を1つの空白に置換\\nconst result = text.replace(/\\s+/g, ' ');\\n// 置換後の文字列を出力\\nconsole.log(result);",
+      "holeyCode": "// 'Hello   World' を定義\\n___ ___ = '___';\\n// replace() で連続する空白を1つの空白に置換\\n___ ___ = ___.___(/___/___, '___');\\n// 置換後の文字列を出力\\n___.___(___);",
       "correctLines": [
           "// 'Hello   World' を定義",
           "const text = 'Hello   World';",
           "// replace() で連続する空白を1つの空白に置換",
           "const result = text.replace(/\\s+/g, ' ');",
-          "// 結果を出力",
+          "// 置換後の文字列を出力",
           "console.log(result);"
         ],
       "lineHints": [
@@ -404,8 +404,8 @@ export const javascriptData5 = {
       },
     {
       "title": "WeakMap",
-      "correctCode": "// privateDataにnew WeakMap()を代入\\nconst privateData = new WeakMap();\\n\\n// Userクラスを定義\\nclass User {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // privateData.set()でデータを設定\\n    privateData.set(this, { password: '秘密' });\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  getPassword() {\\n    // privateData.get()でデータを取得\\n    return privateData.get(this).password;\\n  }\\n}\\n\\n// userにnew User('太郎')を代入\\nconst user = new User('太郎');\\n// getPassword()を呼び出し\\nconsole.log(user.getPassword());",
-      "holeyCode": "// privateDataにnew WeakMap()を代入\\n___ ___ = ___ ___();\\n___\\n// Userクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // privateData.set()でデータを設定\\n    ___.___(this, { ___: '___' });\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  ___\\n  ___() {\\n    // privateData.get()でデータを取得\\n    ___ ___.___(this).___;\\n  ___\\n___\\n___\\n// userにnew User('太郎')を代入\\n___ ___ = ___ ___('___');\\n// getPassword()を呼び出し\\n___.___(___.___());",
+      "correctCode": "// privateDataにnew WeakMap()を代入\\nconst privateData = new WeakMap();\\n\\n// Userクラスを定義\\nclass User {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // 秘密データをWeakMapに保存\\n    privateData.set(this, { password: '秘密' });\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  getPassword() {\\n    // WeakMapから秘密データを取得して返す\\n    return privateData.get(this).password;\\n  }\\n}\\n\\n// userにnew User('太郎')を代入\\nconst user = new User('太郎');\\n// パスワードを取得して表示\\nconsole.log(user.getPassword());",
+      "holeyCode": "// privateDataにnew WeakMap()を代入\\n___ ___ = ___ ___();\\n___\\n// Userクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // 秘密データをWeakMapに保存\\n    ___.___(this, { ___: '___' });\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  ___\\n  ___() {\\n    // WeakMapから秘密データを取得して返す\\n    ___ ___.___(this).___;\\n  ___\\n___\\n___\\n// userにnew User('太郎')を代入\\n___ ___ = ___ ___('___');\\n// パスワードを取得して表示\\n___.___(___.___());",
       "correctLines": [
           "// privateDataにnew WeakMap()を代入",
           "const privateData = new WeakMap();",
@@ -414,20 +414,20 @@ export const javascriptData5 = {
           "class User {",
           "  // constructorでnameを初期化",
           "  constructor(name) {",
-          "    // privateData.set()でデータを設定",
+          "    // 秘密データをWeakMapに保存",
           "    privateData.set(this, { password: '秘密' });",
           "    // this.nameにnameを代入",
           "    this.name = name;",
           "  }",
           "  getPassword() {",
-          "    // privateData.get()でデータを取得",
+          "    // WeakMapから秘密データを取得して返す",
           "    return privateData.get(this).password;",
           "  }",
           "}",
           "",
           "// userにnew User('太郎')を代入",
           "const user = new User('太郎');",
-          "// getPassword()を呼び出し",
+          "// パスワードを取得して表示",
           "console.log(user.getPassword());"
         ],
       "lineHints": [

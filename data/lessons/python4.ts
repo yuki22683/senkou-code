@@ -235,8 +235,8 @@ export const pythonData4 = {
       },
     {
       "title": "@classmethodデコレータ",
-      "correctCode": "# Dogクラスを定義\\nclass Dog:\\n    # 生成された数をカウントするクラス変数を定義\\n    count = 0\\n    \\n    # __init__メソッドを定義\\n    def __init__(self, name):\\n        # 名前を保存\\n        self.name = name\\n        # インスタンスが作られるたびにカウントを増やす\\n        Dog.count += 1\\n    \\n    # @classmethodデコレータ\\n    @classmethod\\n    # get_countメソッドを定義\\n    def get_count(cls):\\n        # クラス変数を参照して返す\\n        return cls.count\\n\\n# Dog('ポチ')を作成しd1に代入\\nd1 = Dog('ポチ')\\n# Dog('ハチ')を作成しd2に代入\\nd2 = Dog('ハチ')\\n# Dog.get_count()を表示\\nprint(Dog.get_count())",
-      "holeyCode": "# Dogクラスを定義\\nclass ___:\\n    # 生成された数をカウントするクラス変数を定義\\n    ___ = ___\\n    ___\\n    # __init__メソッドを定義\\n    def ___(self, ___):\\n        # 名前を保存\\n        self.___ = ___\\n        # インスタンスが作られるたびにカウントを増やす\\n        ___.___ += ___\\n    ___\\n    # @classmethodデコレータ\\n    @___\\n    # get_countメソッドを定義\\n    def ___(___):\\n        # クラス変数を参照して返す\\n        return ___.___\\n___\\n# Dog('ポチ')を作成しd1に代入\\n___ = ___('___')\\n# Dog('ハチ')を作成しd2に代入\\n___ = ___('___')\\n# Dog.get_count()を表示\\n___(___.___())",
+      "correctCode": "# Dogクラスを定義\\nclass Dog:\\n    # 生成された数をカウントするクラス変数を定義\\n    count = 0\\n    \\n    # __init__メソッドを定義\\n    def __init__(self, name):\\n        # 名前を保存\\n        self.name = name\\n        # インスタンスが作られるたびにカウントを増やす\\n        Dog.count += 1\\n    \\n    # @classmethodデコレータ\\n    @classmethod\\n    # get_countメソッドを定義\\n    def get_count(cls):\\n        # クラス変数を参照して返す\\n        return cls.count\\n\\n# Dog('ポチ')を作成しd1に代入\\nd1 = Dog('ポチ')\\n# Dog('ハチ')を作成しd2に代入\\nd2 = Dog('ハチ')\\n# 生成されたDogの数を表示\\nprint(Dog.get_count())",
+      "holeyCode": "# Dogクラスを定義\\nclass ___:\\n    # 生成された数をカウントするクラス変数を定義\\n    ___ = ___\\n    ___\\n    # __init__メソッドを定義\\n    def ___(self, ___):\\n        # 名前を保存\\n        self.___ = ___\\n        # インスタンスが作られるたびにカウントを増やす\\n        ___.___ += ___\\n    ___\\n    # @classmethodデコレータ\\n    @___\\n    # get_countメソッドを定義\\n    def ___(___):\\n        # クラス変数を参照して返す\\n        return ___.___\\n___\\n# Dog('ポチ')を作成しd1に代入\\n___ = ___('___')\\n# Dog('ハチ')を作成しd2に代入\\n___ = ___('___')\\n# 生成されたDogの数を表示\\n___(___.___())",
       "correctLines": [
           "# Dogクラスを定義",
           "class Dog:",
@@ -261,7 +261,7 @@ export const pythonData4 = {
           "d1 = Dog('ポチ')",
           "# Dog('ハチ')を作成しd2に代入",
           "d2 = Dog('ハチ')",
-          "# Dog.get_count()を表示",
+          "# 生成されたDogの数を表示",
           "print(Dog.get_count())"
         ],
       "lineHints": [
@@ -308,8 +308,8 @@ export const pythonData4 = {
       },
     {
       "title": "@staticmethodデコレータ",
-      "correctCode": "# Validatorクラスを定義\\nclass Validator:\\n    # @staticmethodデコレータ\\n    @staticmethod\\n    # is_positiveメソッドを定義\\n    def is_positive(n):\\n        # 0より大きいかどうかを返す\\n        return n > 0\\n\\n# Validator.is_positive(5)の結果を表示\\nprint(Validator.is_positive(5))\\n# Validator.is_positive(-3)の結果を表示\\nprint(Validator.is_positive(-3))",
-      "holeyCode": "# Validatorクラスを定義\\nclass ___:\\n    # @staticmethodデコレータ\\n    @___\\n    # is_positiveメソッドを定義\\n    def ___(___):\\n        # 0より大きいかどうかを返す\\n        return ___ > ___\\n___\\n# Validator.is_positive(5)の結果を表示\\n___(___.___(___))\\n# Validator.is_positive(-3)の結果を表示\\n___(___.___(___)",
+      "correctCode": "# Validatorクラスを定義\\nclass Validator:\\n    # @staticmethodデコレータ\\n    @staticmethod\\n    # is_positiveメソッドを定義\\n    def is_positive(n):\\n        # 0より大きいかどうかを返す\\n        return n > 0\\n\\n# 5が正の数かどうかを表示\\nprint(Validator.is_positive(5))\\n# -3が正の数かどうかを表示\\nprint(Validator.is_positive(-3))",
+      "holeyCode": "# Validatorクラスを定義\\nclass ___:\\n    # @staticmethodデコレータ\\n    @___\\n    # is_positiveメソッドを定義\\n    def ___(___):\\n        # 0より大きいかどうかを返す\\n        return ___ > ___\\n___\\n# 5が正の数かどうかを表示\\n___(___.___(___))\\n# -3が正の数かどうかを表示\\n___(___.___(___)",
       "correctLines": [
           "# Validatorクラスを定義",
           "class Validator:",
@@ -320,9 +320,9 @@ export const pythonData4 = {
           "        # 0より大きいかどうかを返す",
           "        return n > 0",
           "",
-          "# Validator.is_positive(5)の結果を表示",
+          "# 5が正の数かどうかを表示",
           "print(Validator.is_positive(5))",
-          "# Validator.is_positive(-3)の結果を表示",
+          "# -3が正の数かどうかを表示",
           "print(Validator.is_positive(-3))"
         ],
       "lineHints": [
@@ -357,8 +357,8 @@ export const pythonData4 = {
       },
     {
       "title": "抽象基底クラス",
-      "correctCode": "# 抽象クラス関連の機能を読み込み\\nfrom abc import ABC, abstractmethod\\n\\n# 抽象クラスAnimalを定義（ABCを継承）\\nclass Animal(ABC):\\n    # @abstractmethodデコレータ\\n    @abstractmethod\\n    # speakメソッドを定義（処理なし）\\n    def speak(self):\\n        # 抽象メソッドなので処理はなし\\n        pass\\n\\n# Catクラスを定義（Animalを継承）\\nclass Cat(Animal):\\n    # speakメソッドを実装\\n    def speak(self):\\n        # 鳴き声を返す\\n        return 'ニャー'\\n\\n# Catのインスタンスを作成しcatに代入\\ncat = Cat()\\n# cat.speak()の結果を表示\\nprint(cat.speak())",
-      "holeyCode": "# 抽象クラス関連の機能を読み込み\\nfrom ___ import ___, ___\\n___\\n# 抽象クラスAnimalを定義（ABCを継承）\\nclass ___(___):\\n    # @abstractmethodデコレータ\\n    @___\\n    # speakメソッドを定義（処理なし）\\n    def ___(self):\\n        # 抽象メソッドなので処理はなし\\n        ___\\n___\\n# Catクラスを定義（Animalを継承）\\nclass ___(___):\\n    # speakメソッドを実装\\n    def ___(self):\\n        # 鳴き声を返す\\n        return '___'\\n___\\n# Catのインスタンスを作成しcatに代入\\n___ = ___()\\n# cat.speak()の結果を表示\\n___(___.___())",
+      "correctCode": "# 抽象クラス関連の機能を読み込み\\nfrom abc import ABC, abstractmethod\\n\\n# 抽象クラスAnimalを定義（ABCを継承）\\nclass Animal(ABC):\\n    # @abstractmethodデコレータ\\n    @abstractmethod\\n    # speakメソッドを定義（処理なし）\\n    def speak(self):\\n        # 抽象メソッドなので処理はなし\\n        pass\\n\\n# Catクラスを定義（Animalを継承）\\nclass Cat(Animal):\\n    # speakメソッドを実装\\n    def speak(self):\\n        # 鳴き声を返す\\n        return 'ニャー'\\n\\n# Catのインスタンスを作成しcatに代入\\ncat = Cat()\\n# 猫の鳴き声を表示\\nprint(cat.speak())",
+      "holeyCode": "# 抽象クラス関連の機能を読み込み\\nfrom ___ import ___, ___\\n___\\n# 抽象クラスAnimalを定義（ABCを継承）\\nclass ___(___):\\n    # @abstractmethodデコレータ\\n    @___\\n    # speakメソッドを定義（処理なし）\\n    def ___(self):\\n        # 抽象メソッドなので処理はなし\\n        ___\\n___\\n# Catクラスを定義（Animalを継承）\\nclass ___(___):\\n    # speakメソッドを実装\\n    def ___(self):\\n        # 鳴き声を返す\\n        return '___'\\n___\\n# Catのインスタンスを作成しcatに代入\\n___ = ___()\\n# 猫の鳴き声を表示\\n___(___.___())",
       "correctLines": [
           "# 抽象クラス関連の機能を読み込み",
           "from abc import ABC, abstractmethod",
@@ -381,7 +381,7 @@ export const pythonData4 = {
           "",
           "# Catのインスタンスを作成しcatに代入",
           "cat = Cat()",
-          "# cat.speak()の結果を表示",
+          "# 猫の鳴き声を表示",
           "print(cat.speak())"
         ],
       "lineHints": [

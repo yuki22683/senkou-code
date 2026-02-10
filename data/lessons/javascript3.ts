@@ -350,19 +350,19 @@ export const javascriptData3 = {
       },
     {
       "title": "静的メソッド",
-      "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n  // static multiplyメソッドを定義\\n  static multiply(a, b) {\\n    // a * bを返す\\n    return a * b;\\n  }\\n}\\n\\n// Calculator.multiply(3, 4)を出力\\nconsole.log(Calculator.multiply(3, 4));",
-      "holeyCode": "// Calculatorクラスを定義\\n___ ___ {\\n  // static multiplyメソッドを定義\\n  ___ ___(___, ___) {\\n    // a * bを返す\\n    ___ ___ * ___;\\n  ___\\n___\\n___\\n// Calculator.multiply(3, 4)を出力\\n___.___(___.___(___,___));",
+      "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n  // static multiplyメソッドを定義\\n  static multiply(a, b) {\\n    // 2つの数を掛けた結果を返す\\n    return a * b;\\n  }\\n}\\n\\n// 3と4を掛けた結果を出力\\nconsole.log(Calculator.multiply(3, 4));",
+      "holeyCode": "// Calculatorクラスを定義\\n___ ___ {\\n  // static multiplyメソッドを定義\\n  ___ ___(___, ___) {\\n    // 2つの数を掛けた結果を返す\\n    ___ ___ * ___;\\n  ___\\n___\\n___\\n// 3と4を掛けた結果を出力\\n___.___(___.___(___,___));",
       "correctLines": [
           "// Calculatorクラスを定義",
           "class Calculator {",
           "  // static multiplyメソッドを定義",
           "  static multiply(a, b) {",
-          "    // a * bを返す",
+          "    // 2つの数を掛けた結果を返す",
           "    return a * b;",
           "  }",
           "}",
           "",
-          "// Calculator.multiply(3, 4)を出力",
+          "// 3と4を掛けた結果を出力",
           "console.log(Calculator.multiply(3, 4));"
         ],
       "lineHints": [

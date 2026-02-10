@@ -90,12 +90,12 @@ export const pythonData2 = {
     },
     {
       "title": "戻り値（return）",
-      "correctCode": "# 2つの数を足して返すadd関数\\ndef add(a, b):\\n    # 計算結果を返す\\n    return a + b\\n\\n# add関数を呼び出し（第1引数に10, 第2引数に20）\\nresult = add(10, 20)\\nprint(result)",
-      "holeyCode": "# 2つの数を足して返すadd関数\\ndef ___(___, ___):\\n    # 計算結果を返す\\n    ___ ___ + ___\\n\\n# add関数を呼び出し（第1引数に10, 第2引数に20）\\n___ = ___(___, ___)\\n___(___)",
+      "correctCode": "# 2つの数を足して返すadd関数\\ndef add(a, b):\\n    # aとbの和を返す\\n    return a + b\\n\\n# add関数を呼び出し（第1引数に10, 第2引数に20）\\nresult = add(10, 20)\\nprint(result)",
+      "holeyCode": "# 2つの数を足して返すadd関数\\ndef ___(___, ___):\\n    # aとbの和を返す\\n    ___ ___ + ___\\n\\n# add関数を呼び出し（第1引数に10, 第2引数に20）\\n___ = ___(___, ___)\\n___(___)",
       "correctLines": [
         "# 2つの数を足して返すadd関数",
         "def add(a, b):",
-        "    # 計算結果を返す",
+        "    # aとbの和を返す",
         "    return a + b",
         "",
         "# add関数を呼び出し（第1引数に10, 第2引数に20）",

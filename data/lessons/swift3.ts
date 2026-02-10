@@ -134,12 +134,12 @@ export const swift3Data = {
       },
     {
       "title": "reduce",
-      "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet nums = [1, 2, 3, 4, 5]\\n// nums.reduce(1)で積を計算しproductに代入\\nlet product = nums.reduce(1) { $0 * $1 }\\n// productをprintで出力\\nprint(product)",
-      "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// nums.reduce(1)で積を計算しproductに代入\\nlet ___ = ___.___(___) { $___ * $___ }\\n// productをprintで出力\\n___(___)",
+      "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet nums = [1, 2, 3, 4, 5]\\n// 配列の全要素の積を計算\\nlet product = nums.reduce(1) { $0 * $1 }\\n// productをprintで出力\\nprint(product)",
+      "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// 配列の全要素の積を計算\\nlet ___ = ___.___(___) { $___ * $___ }\\n// productをprintで出力\\n___(___)",
       "correctLines": [
           "// numsに[1, 2, 3, 4, 5]を代入",
           "let nums = [1, 2, 3, 4, 5]",
-          "// nums.reduce(1)で積を計算しproductに代入",
+          "// 配列の全要素の積を計算",
           "let product = nums.reduce(1) { $0 * $1 }",
           "// productをprintで出力",
           "print(product)"

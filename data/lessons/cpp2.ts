@@ -118,8 +118,8 @@ export const cpp2Data = {
       },
     {
       "title": "メンバ関数を作ろう",
-      "correctCode": "#include <iostream>\\nclass Rect {\\npublic:\\n    int w;\\n    int h;\\n    int area() {\\n        // w * hを返す\\n        return w * h;\\n    }\\n};\\nint main() {\\n    // rにRectオブジェクトを作成\\n    Rect r;\\n    r.w = 3;\\n    r.h = 4;\\n    // r.area()を出力\\n    std::cout << r.area() << std::endl;\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\nclass ___ {\\n___:\\n    int ___;\\n    int ___;\\n    int ___() {\\n        // w * hを返す\\n        return ___ * ___;\\n    }\\n};\\nint ___() {\\n    // rにRectオブジェクトを作成\\n    ___ ___;\\n    ___.___ = ___;\\n    ___.___ = ___;\\n    // r.area()を出力\\n    ___::___ << ___.___() << ___::___;\\n    return ___;\\n}",
+      "correctCode": "#include <iostream>\\nclass Rect {\\npublic:\\n    int w;\\n    int h;\\n    int area() {\\n        // 幅と高さを掛けた面積を返す\\n        return w * h;\\n    }\\n};\\nint main() {\\n    // rにRectオブジェクトを作成\\n    Rect r;\\n    r.w = 3;\\n    r.h = 4;\\n    // 面積を計算して出力\\n    std::cout << r.area() << std::endl;\\n    return 0;\\n}",
+      "holeyCode": "#___ <___>\\nclass ___ {\\n___:\\n    int ___;\\n    int ___;\\n    int ___() {\\n        // 幅と高さを掛けた面積を返す\\n        return ___ * ___;\\n    }\\n};\\nint ___() {\\n    // rにRectオブジェクトを作成\\n    ___ ___;\\n    ___.___ = ___;\\n    ___.___ = ___;\\n    // 面積を計算して出力\\n    ___::___ << ___.___() << ___::___;\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "class Rect {",
@@ -127,7 +127,7 @@ export const cpp2Data = {
           "    int w;",
           "    int h;",
           "    int area() {",
-          "        // w * hを返す",
+          "        // 幅と高さを掛けた面積を返す",
           "        return w * h;",
           "    }",
           "};",
@@ -136,7 +136,7 @@ export const cpp2Data = {
           "    Rect r;",
           "    r.w = 3;",
           "    r.h = 4;",
-          "    // r.area()を出力",
+          "    // 面積を計算して出力",
           "    std::cout << r.area() << std::endl;",
           "    return 0;",
           "}"
@@ -218,8 +218,8 @@ export const cpp2Data = {
       },
     {
       "title": "継承を学ぼう",
-      "correctCode": "#include <iostream>\\nclass Vehicle {\\npublic:\\n    void move() {\\n        std::cout << \"移動中\" << std::endl;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass Car : public Vehicle {\\n};\\nint main() {\\n    Car c;\\n    // c.move()を呼び出す\\n    c.move();\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\nclass ___ {\\n___:\\n    void ___() {\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass ___ : public ___ {\\n};\\nint ___() {\\n    ___ ___;\\n    // c.move()を呼び出す\\n    ___.___();\\n    return ___;\\n}",
+      "correctCode": "#include <iostream>\\nclass Vehicle {\\npublic:\\n    void move() {\\n        std::cout << \"移動中\" << std::endl;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass Car : public Vehicle {\\n};\\nint main() {\\n    Car c;\\n    // 移動メソッドを呼び出す\\n    c.move();\\n    return 0;\\n}",
+      "holeyCode": "#___ <___>\\nclass ___ {\\n___:\\n    void ___() {\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass ___ : public ___ {\\n};\\nint ___() {\\n    ___ ___;\\n    // 移動メソッドを呼び出す\\n    ___.___();\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "class Vehicle {",
@@ -233,7 +233,7 @@ export const cpp2Data = {
           "};",
           "int main() {",
           "    Car c;",
-          "    // c.move()を呼び出す",
+          "    // 移動メソッドを呼び出す",
           "    c.move();",
           "    return 0;",
           "}"
@@ -271,8 +271,8 @@ export const cpp2Data = {
       },
     {
       "title": "仮想関数でオーバーライド",
-      "correctCode": "#include <iostream>\\nclass Shape {\\npublic:\\n    // virtual draw()を定義\\n    virtual void draw() {\\n        std::cout << \"shape\" << std::endl;\\n    }\\n};\\nclass Circle : public Shape {\\npublic:\\n    // overrideでdraw()を上書き\\n    void draw() override {\\n        std::cout << \"circle\" << std::endl;\\n    }\\n};\\nint main() {\\n    Circle c;\\n    // c.draw()を呼び出す\\n    c.draw();\\n    return 0;\\n}",
-      "holeyCode": "#___ <___>\\nclass ___ {\\n___:\\n    // virtual draw()を定義\\n    virtual void ___() {\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\nclass ___ : public ___ {\\n___:\\n    // overrideでdraw()を上書き\\n    void ___() override {\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\nint ___() {\\n    ___ ___;\\n    // c.draw()を呼び出す\\n    ___.___();\\n    return ___;\\n}",
+      "correctCode": "#include <iostream>\\nclass Shape {\\npublic:\\n    // virtual draw()を定義\\n    virtual void draw() {\\n        std::cout << \"shape\" << std::endl;\\n    }\\n};\\nclass Circle : public Shape {\\npublic:\\n    // overrideでdraw()を上書き\\n    void draw() override {\\n        std::cout << \"circle\" << std::endl;\\n    }\\n};\\nint main() {\\n    Circle c;\\n    // 描画メソッドを呼び出す\\n    c.draw();\\n    return 0;\\n}",
+      "holeyCode": "#___ <___>\\nclass ___ {\\n___:\\n    // virtual draw()を定義\\n    virtual void ___() {\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\nclass ___ : public ___ {\\n___:\\n    // overrideでdraw()を上書き\\n    void ___() override {\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\nint ___() {\\n    ___ ___;\\n    // 描画メソッドを呼び出す\\n    ___.___();\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "class Shape {",
@@ -291,7 +291,7 @@ export const cpp2Data = {
           "};",
           "int main() {",
           "    Circle c;",
-          "    // c.draw()を呼び出す",
+          "    // 描画メソッドを呼び出す",
           "    c.draw();",
           "    return 0;",
           "}"

@@ -317,8 +317,8 @@ export const javaData4 = {
       },
     {
       "title": "Comparable の実装",
-      "correctCode": "import java.util.*;\\n\\n// Comparable を実装して自然順序を定義する\\nclass Score implements Comparable<Score> {\\n    int value;\\n    Score(int v) { value = v; }\\n    public int compareTo(Score other) {\\n        // return で比較結果を返す\\n        return this.value - other.value;\\n    }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // scoresに[Score(80), Score(60)]を代入\\n        List<Score> scores = Arrays.asList(new Score(80), new Score(60));\\n        // sort でソートする\\n        Collections.sort(scores);\\n        // get で要素を取得する\\n        System.out.println(scores.get(0).value);\\n    }\\n}",
-      "holeyCode": "import ___.___.___\\n___\\n// Comparable を実装して自然順序を定義する\\nclass ___ implements ___<___> {\\n    ___ ___;\\n    ___(___ ___) { ___ = ___; }\\n    public ___ ___(___ ___) {\\n        // return で比較結果を返す\\n        return this.___ - ___.___;\\n    ___\\n___\\n___\\npublic class ___ {\\n    public static void ___(___[] ___) {\\n        // scoresに[Score(80), Score(60)]を代入\\n        ___<___> ___ = ___.___(new ___(___), new ___(___));\\n        // sort でソートする\\n        ___.___(___);\\n        // get で要素を取得する\\n        ___.___.___(___.___(___).___)\\n    ___\\n___",
+      "correctCode": "import java.util.*;\\n\\n// Comparable を実装して自然順序を定義する\\nclass Score implements Comparable<Score> {\\n    int value;\\n    Score(int v) { value = v; }\\n    public int compareTo(Score other) {\\n        // 自分と相手のスコアを比較してソート順を決める\\n        return this.value - other.value;\\n    }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // scoresに[Score(80), Score(60)]を代入\\n        List<Score> scores = Arrays.asList(new Score(80), new Score(60));\\n        // sort でソートする\\n        Collections.sort(scores);\\n        // get で要素を取得する\\n        System.out.println(scores.get(0).value);\\n    }\\n}",
+      "holeyCode": "import ___.___.___\\n___\\n// Comparable を実装して自然順序を定義する\\nclass ___ implements ___<___> {\\n    ___ ___;\\n    ___(___ ___) { ___ = ___; }\\n    public ___ ___(___ ___) {\\n        // 自分と相手のスコアを比較してソート順を決める\\n        return this.___ - ___.___;\\n    ___\\n___\\n___\\npublic class ___ {\\n    public static void ___(___[] ___) {\\n        // scoresに[Score(80), Score(60)]を代入\\n        ___<___> ___ = ___.___(new ___(___), new ___(___));\\n        // sort でソートする\\n        ___.___(___);\\n        // get で要素を取得する\\n        ___.___.___(___.___(___).___)\\n    ___\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
@@ -327,7 +327,7 @@ export const javaData4 = {
           "    int value;",
           "    Score(int v) { value = v; }",
           "    public int compareTo(Score other) {",
-          "        // return で比較結果を返す",
+          "        // 自分と相手のスコアを比較してソート順を決める",
           "        return this.value - other.value;",
           "    }",
           "}",

@@ -369,14 +369,14 @@ export const typescriptData = {
       },
     {
       "title": "論理演算子（&&、||）",
-      "correctCode": "// scoreに85を入れる\\nconst score: number = 85;\\n// 80以上 かつ 100以下 ならメッセージを出す\\nif (score >= 80 && score <= 100) {\\n    // 結果を出力\\n    console.log('ごうかく');\\n}",
-      "holeyCode": "// scoreに85を入れる\\nconst ___: ___ = ___;\\n// 80以上 かつ 100以下 ならメッセージを出す\\nif (___ >= ___ ___ ___ <= ___) {\\n    // 結果を出力\\n    ___.___(___);\\n___",
+      "correctCode": "// scoreに85を入れる\\nconst score: number = 85;\\n// 80以上 かつ 100以下 ならメッセージを出す\\nif (score >= 80 && score <= 100) {\\n    // ごうかくと出力\\n    console.log('ごうかく');\\n}",
+      "holeyCode": "// scoreに85を入れる\\nconst ___: ___ = ___;\\n// 80以上 かつ 100以下 ならメッセージを出す\\nif (___ >= ___ ___ ___ <= ___) {\\n    // ごうかくと出力\\n    ___.___(___);\\n___",
       "correctLines": [
           "// scoreに85を入れる",
           "const score: number = 85;",
           "// 80以上 かつ 100以下 ならメッセージを出す",
           "if (score >= 80 && score <= 100) {",
-          "    // 結果を出力",
+          "    // ごうかくと出力",
           "    console.log('ごうかく');",
           "}"
         ],

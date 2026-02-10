@@ -135,12 +135,12 @@ export const elixir3Data = {
       },
     {
       "title": "Enum.reduce",
-      "correctCode": "# numbersに[1, 2, 3, 4, 5]を代入\\nnumbers = [1, 2, 3, 4, 5]\\n# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入\\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)",
-      "holeyCode": "# numbersに[1, 2, 3, 4, 5]を代入\\n___ = [___, ___, ___, ___, ___]\\n# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入\\n___ = ___.___(_____, ___, fn ___, ___ -> ___ + ___ ___)",
+      "correctCode": "# numbersに[1, 2, 3, 4, 5]を代入\\nnumbers = [1, 2, 3, 4, 5]\\n# 配列の全要素の合計を計算\\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)",
+      "holeyCode": "# numbersに[1, 2, 3, 4, 5]を代入\\n___ = [___, ___, ___, ___, ___]\\n# 配列の全要素の合計を計算\\n___ = ___.___(_____, ___, fn ___, ___ -> ___ + ___ ___)",
       "correctLines": [
           "# numbersに[1, 2, 3, 4, 5]を代入",
           "numbers = [1, 2, 3, 4, 5]",
-          "# Enum.reduce(numbers, 0, fn)でsumに畳み込み結果を代入",
+          "# 配列の全要素の合計を計算",
           "sum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)"
         ],
       "lineHints": [

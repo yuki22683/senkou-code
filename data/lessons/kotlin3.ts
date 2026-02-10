@@ -288,14 +288,14 @@ export const kotlin3Data = {
       },
     {
       "title": "also スコープ関数",
-      "correctCode": "// main 関数を定義する\\nfun main() {\\n    // also で副作用を実行してオブジェクトを返す\\n    val num = 42.also {\\n        // 値を出力する\\n        println(\"Value: $it\")\\n    }\\n    // num を出力する\\n    println(num)\\n}",
-      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // also で副作用を実行してオブジェクトを返す\\n    ___ ___ = ___.___ {\\n        // 値を出力する\\n        ___(\"___: $___\")\\n    ___\\n    // num を出力する\\n    ___(___)\\n___",
+      "correctCode": "// main 関数を定義する\\nfun main() {\\n    // also で副作用を実行してオブジェクトを返す\\n    val num = 42.also {\\n        // 「Value: it」の形式で出力\\n        println(\"Value: $it\")\\n    }\\n    // num を出力する\\n    println(num)\\n}",
+      "holeyCode": "// main 関数を定義する\\n___ ___() {\\n    // also で副作用を実行してオブジェクトを返す\\n    ___ ___ = ___.___ {\\n        // 「Value: it」の形式で出力\\n        ___(\"___: $___\")\\n    ___\\n    // num を出力する\\n    ___(___)\\n___",
       "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
           "    // also で副作用を実行してオブジェクトを返す",
           "    val num = 42.also {",
-          "        // 値を出力する",
+          "        // 「Value: it」の形式で出力",
           "        println(\"Value: $it\")",
           "    }",
           "    // num を出力する",

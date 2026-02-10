@@ -567,8 +567,8 @@ export const csharp3Data = {
       },
     {
       "title": "using で自動解放",
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでIO名前空間をインポート\\nusing System.IO;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // usingで自動解放\\n        using var writer = new StringWriter();\\n        // 文字列を書き込む\\n        writer.WriteLine(\"こんにちは\");\\n        // writer.ToString(を表示\\n        Console.WriteLine(writer.ToString().Trim());\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでIO名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // usingで自動解放\\n        using ___ ___ = new ___();\\n        // 文字列を書き込む\\n        ___.___(\"___\");\\n        // writer.ToString(を表示\\n        ___.___(___.___().___());\\n    ___\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでIO名前空間をインポート\\nusing System.IO;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // usingで自動解放\\n        using var writer = new StringWriter();\\n        // 文字列を書き込む\\n        writer.WriteLine(\"こんにちは\");\\n        // 書き込んだ内容を表示\\n        Console.WriteLine(writer.ToString().Trim());\\n    }\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでIO名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // usingで自動解放\\n        using ___ ___ = new ___();\\n        // 文字列を書き込む\\n        ___.___(\"___\");\\n        // 書き込んだ内容を表示\\n        ___.___(___.___().___());\\n    ___\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -583,7 +583,7 @@ export const csharp3Data = {
           "        using var writer = new StringWriter();",
           "        // 文字列を書き込む",
           "        writer.WriteLine(\"こんにちは\");",
-          "        // writer.ToString(を表示",
+          "        // 書き込んだ内容を表示",
           "        Console.WriteLine(writer.ToString().Trim());",
           "    }",
           "}"

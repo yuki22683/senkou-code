@@ -249,15 +249,15 @@ export const elixir2Data = {
       },
     {
       "title": "関数を定義しよう",
-      "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Calc do\\n  # defで関数を定義\\n  def triple(x), do: x * 3\\nend\\n# Calc.triple(4)を入力\\nIO.puts Calc.triple(4)",
-      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  # defで関数を定義\\n  def ___(___), do: ___ * ___\\n___\\n# Calc.triple(4)を入力\\n___.___ ___.___(___)",
+      "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Calc do\\n  # defで関数を定義\\n  def triple(x), do: x * 3\\nend\\n# 4の3倍を計算して表示\\nIO.puts Calc.triple(4)",
+      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  # defで関数を定義\\n  def ___(___), do: ___ * ___\\n___\\n# 4の3倍を計算して表示\\n___.___ ___.___(___)",
       "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Calc do",
           "  # defで関数を定義",
           "  def triple(x), do: x * 3",
           "end",
-          "# Calc.triple(4)を入力",
+          "# 4の3倍を計算して表示",
           "IO.puts Calc.triple(4)"
         ],
       "lineHints": [
@@ -291,8 +291,8 @@ export const elixir2Data = {
       },
     {
       "title": "再帰で計算しよう",
-      "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Math do\\n  def factorial(0), do: 1\\n  # factorialを再帰的に呼び出す\\n  def factorial(n), do: n * factorial(n - 1)\\nend\\n# Math.factorial(5)を入力\\nIO.puts Math.factorial(5)",
-      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  def ___(___), do: ___\\n  # factorialを再帰的に呼び出す\\n  def ___(___), do: ___ * ___(___ - ___)\\n___\\n# Math.factorial(5)を入力\\n___.___ ___.___(___)",
+      "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Math do\\n  def factorial(0), do: 1\\n  # factorialを再帰的に呼び出す\\n  def factorial(n), do: n * factorial(n - 1)\\nend\\n# 5の階乗を計算して表示\\nIO.puts Math.factorial(5)",
+      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  def ___(___), do: ___\\n  # factorialを再帰的に呼び出す\\n  def ___(___), do: ___ * ___(___ - ___)\\n___\\n# 5の階乗を計算して表示\\n___.___ ___.___(___)",
       "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Math do",
@@ -300,7 +300,7 @@ export const elixir2Data = {
           "  # factorialを再帰的に呼び出す",
           "  def factorial(n), do: n * factorial(n - 1)",
           "end",
-          "# Math.factorial(5)を入力",
+          "# 5の階乗を計算して表示",
           "IO.puts Math.factorial(5)"
         ],
       "lineHints": [
