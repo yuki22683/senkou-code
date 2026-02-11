@@ -91,7 +91,7 @@ export const rustData = {
       ],
       "correctCode": "fn main() {\\n    // x に 10 を入れる\\n    let x = 10;\\n    // y に 5 を入れる\\n    let y = 5;\\n    // + でたし算する\\n    println!(\"{}\", x + y);\\n}", "holeyCode": "// main関数を定義\nfn ___ () {\n    // x に 10 を入れる\n    let ___ = ___;\n    // y に 5 を入れる\n    let ___ = ___;\n    // + でたし算する\n    ___!(\\\"___\\\", ___ + ___);\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // x に 10 を入れる",
           "    let x = 10;",
@@ -145,7 +145,7 @@ export const rustData = {
       ],
       "correctCode": "fn main() {\\n    // 10 を 3 で割ったあまりを出力する\\n    println!(\"{}\", 10 % 3);\\n}", "holeyCode": "// main関数を定義\nfn ___ () {\n    // 10 を 3 で割ったあまりを出力する\n    ___!(\\\"___\\\", ___ ___ ___);\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // 10 を 3 で割ったあまりを出力する",
           "    println!(\\\"{}\\\", 10 % 3);",
@@ -191,7 +191,7 @@ export const rustData = {
       ],
       "correctCode": "fn main() {\\n    // mut で変更可能にする\\n    let mut hp = 100;\\n    // += で 20 を足す\\n    hp += 20;\\n    // -= で 50 を引く\\n    hp -= 50;\\n    println!(\"{}\", hp);\\n}", "holeyCode": "// main関数を定義\nfn ___ () {\n    // mut で変更可能にする\n    let mut ___ = ___;\n    // += で 20 を足す\n    ___ += ___;\n    // -= で 50 を引く\n    ___ -= ___;\n    // 出力\n    ___!(\\\"___\\\", ___);\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // mut で変更可能にする",
           "    let mut hp = 100;",
@@ -250,7 +250,7 @@ export const rustData = {
       ],
       "correctCode": "fn main() {\\n    // score に 100 を入れる\\n    let score = 100;\\n    // > で比較する\\n    if score > 80 {\\n        println!(\"すごい！\");\\n    }\\n}", "holeyCode": "// main関数を定義\nfn ___ () {\n    // score に 100 を入れる\n    let ___ = ___;\n    // > で比較する\n    if ___ ___ ___ {\n        // 出力\n        ___!(\\\"___\\\");\n    // ブロックを閉じる\n    ___\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // score に 100 を入れる",
           "    let score = 100;",
@@ -311,7 +311,7 @@ export const rustData = {
       ],
       "correctCode": "fn main() {\\n    let score = 80;\\n    let bonus = 10;\\n    // && で両方の条件をチェック\\n    if score >= 70 && bonus > 0 {\\n        println!(\"ボーナス合格！\");\\n    }\\n}", "holeyCode": "// main関数を定義\nfn ___ () {\n    // 変数を宣言\n    let ___ = ___;\n    // 変数を宣言\n    let ___ = ___;\n    // && で両方の条件をチェック\n    if ___ ___ ___ ___ ___ ___ ___ {\n        // 出力\n        ___!(\\\"___\\\");\n    // ブロックを閉じる\n    ___\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // 変数を宣言",
           "    let score = 80;",
@@ -384,7 +384,7 @@ export const rustData = {
       ],
       "correctCode": "fn main() {\\n    // colors というベクタを作る（'あか', 'あお'の順）\\n    let colors = vec![\"あか\", \"あお\"];\\n    // 2番目のデータ（インデックス1）を出す\\n    println!(\"{}\", colors[1]);\\n}", "holeyCode": "// main関数を定義\nfn ___ () {\n    // colors というベクタを作る（'あか', 'あお'の順）\n    let ___ = ___![\\\"___\\\", \\\"___\\\"];\n    // 2番目のデータ（インデックス1）を出す\n    ___!(\\\"___\\\", ___[___]);\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // colors というベクタを作る（'あか', 'あお'の順）",
           "    let colors = vec![\\\"あか\\\", \\\"あお\\\"];",
@@ -445,7 +445,7 @@ export const rustData = {
       "correctLines": [
           "// ライブラリを読み込む",
           "use std::collections::HashMap;",
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // 辞書を作る（キーは'みかん'、値は'オレンジ'）",
           "    let mut colors = HashMap::new();",

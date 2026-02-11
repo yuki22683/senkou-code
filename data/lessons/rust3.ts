@@ -55,7 +55,7 @@ export const rust3Data = {
           "// ブロックを閉じる",
           "}",
           "",
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // 変数を宣言",
           "    let s = String::from(\\\"Hello\\\");",
@@ -111,7 +111,7 @@ export const rust3Data = {
       ],
       "correctCode": "fn main() {\\n    // |x| でクロージャの引数を定義\\n    let double = |x| x * 2;\\n    println!(\"{}\", double(5));\\n}", "holeyCode": "// main関数を定義\nfn ___() {\n    // |x| でクロージャの引数を定義\n    let ___ = |___| ___ * ___;\n    // 出力\n    ___!(\\\"{}\\\", ___(___));\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // |x| でクロージャの引数を定義",
           "    let double = |x| x * 2;",
@@ -160,7 +160,7 @@ export const rust3Data = {
       ],
       "correctCode": "fn main() {\\n    let nums = vec![1, 2, 3];\\n    // iter でイテレータを取得\\n    for n in nums.iter() {\\n        println!(\"{}\", n);\\n    }\\n}", "holeyCode": "// main関数を定義\nfn ___() {\n    // 変数を宣言\n    let ___ = ___![___, ___, ___];\n    // iter でイテレータを取得\n    for ___ in ___.___() {\n        // 出力\n        ___!(\\\"{}\\\", ___);\n    // ブロックを閉じる\n    ___\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // 変数を宣言",
           "    let nums = vec![1, 2, 3];",
@@ -217,7 +217,7 @@ export const rust3Data = {
       ],
       "correctCode": "fn main() {\\n    let nums = vec![1, 2, 3];\\n    // map で各要素を変換\\n    let squared: Vec<_> = nums.iter().map(|x| x * x).collect();\\n    println!(\"{:?}\", squared);\\n}", "holeyCode": "// main関数を定義\nfn ___() {\n    // 変数を宣言\n    let ___ = ___![___, ___, ___];\n    // map で各要素を変換\n    let ___: ___<_> = ___.___().___(|___| ___ * ___).___();\n    // 出力\n    ___!(\\\"{:?}\\\", ___);\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // 変数を宣言",
           "    let nums = vec![1, 2, 3];",
@@ -270,7 +270,7 @@ export const rust3Data = {
       ],
       "correctCode": "fn main() {\\n    let nums = vec![1, 2, 3, 4, 5];\\n    // filter で条件に合う要素を絞り込む\\n    let big: Vec<_> = nums.iter().filter(|x| **x > 2).collect();\\n    println!(\"{:?}\", big);\\n}", "holeyCode": "// main関数を定義\nfn ___() {\n    // 変数を宣言\n    let ___ = ___![___, ___, ___, ___, ___];\n    // filter で条件に合う要素を絞り込む\n    let ___: ___<_> = ___.___().___(|___| **___ > ___).___();\n    // 出力\n    ___!(\\\"{:?}\\\", ___);\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // 変数を宣言",
           "    let nums = vec![1, 2, 3, 4, 5];",
@@ -323,7 +323,7 @@ export const rust3Data = {
       ],
       "correctCode": "fn main() {\\n    let nums = vec![1, 2, 3, 4];\\n    // fold で畳み込み\\n    let product = nums.iter().fold(1, |acc, x| acc * x);\\n    println!(\"{}\", product);\\n}", "holeyCode": "// main関数を定義\nfn ___() {\n    // 変数を宣言\n    let ___ = ___![___, ___, ___, ___];\n    // fold で畳み込み\n    let ___ = ___.___().___(1, |___, ___| ___ * ___);\n    // 出力\n    ___!(\\\"{}\\\", ___);\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // 変数を宣言",
           "    let nums = vec![1, 2, 3, 4];",
@@ -469,7 +469,7 @@ export const rust3Data = {
       ],
       "correctCode": "fn main() {\\n    let x: Option<i32> = None;\\n    // unwrap_or でデフォルト値を設定\\n    let value = x.unwrap_or(42);\\n    println!(\"{}\", value);\\n}", "holeyCode": "// main関数を定義\nfn ___() {\n    // 変数を宣言\n    let ___: ___<___> = ___;\n    // unwrap_or でデフォルト値を設定\n    let ___ = ___.___(___);\n    // 出力\n    ___!(\\\"{}\\\", ___);\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // 変数を宣言",
           "    let x: Option<i32> = None;",
@@ -522,7 +522,7 @@ export const rust3Data = {
       ],
       "correctCode": "fn main() {\\n    let mut nums = Vec::new();\\n    // push で要素を追加\\n    nums.push(10);\\n    nums.push(20);\\n    println!(\"{:?}\", nums);\\n}", "holeyCode": "// main関数を定義\nfn ___() {\n    // 変数を宣言\n    let mut ___ = ___::___();\n    // push で要素を追加\n    ___.___(___);\n    // メソッドを呼び出す\n    ___.___(___);\n    // 出力\n    ___!(\\\"{:?}\\\", ___);\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // 変数を宣言",
           "    let mut nums = Vec::new();",
@@ -579,7 +579,7 @@ export const rust3Data = {
       ],
       "correctCode": "fn main() {\\n    let s: &str = \"こんにちは\";\\n    // to_string で String に変換\\n    let owned: String = s.to_string();\\n    println!(\"{}\", owned);\\n}", "holeyCode": "// main関数を定義\nfn ___() {\n    // 変数を宣言\n    let ___: ___ = \\\"こんにちは\\\";\n    // to_string で String に変換\n    let ___: ___ = ___.___();\n    // 出力\n    ___!(\\\"{}\\\", ___);\n// ブロックを閉じる\n___",
       "correctLines": [
-          "// 関数を定義",
+          "// main関数を定義",
           "fn main() {",
           "    // 変数を宣言",
           "    let s: &str = \\\"こんにちは\\\";",
