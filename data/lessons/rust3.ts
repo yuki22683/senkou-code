@@ -446,12 +446,13 @@ export const rust3Data = {
           "content": "# 可変参照\\n\\n```rust\\n// mut が必要\\nlet mut v = Vec::new();\\nv.push(1);\\nv.push(2);\\n```"
         }
       ],
-      "correctCode": "fn main() {\\n    let mut nums = Vec::new();\\n    // push で要素を追加\\n    nums.push(10);\\n    nums.push(20);\\n    println!(\"{:?}\", nums);\\n}", "holeyCode": "// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let mut ___ = ___::___();\\n    // push で要素を追加\\n    ___.___(___);\\n    // メソッドを呼び出す\\n    ___.___(___);\\n    // 出力\\n    ___!(\\\"{:?}\\\", ___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "fn main() {\\n    let mut nums = Vec::new();\\n    // push で要素を追加\\n    nums.push(10);\\n    // nums.push(20)を呼び出す\\n    nums.push(20);\\n    println!(\"{:?}\", nums);\\n}", "holeyCode": "// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let mut ___ = ___::___();\\n    // push で要素を追加\\n    ___.___(___);\\n    // nums.push(20)を呼び出す\\n    ___.___(___);\\n    // 出力\\n    ___!(\\\"{:?}\\\", ___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "fn main() {",
           "    let mut nums = Vec::new();",
           "    // push で要素を追加",
           "    nums.push(10);",
+          "    // nums.push(20)を呼び出す",
           "    nums.push(20);",
           "    println!(\"{:?}\", nums);",
           "}"
@@ -463,6 +464,7 @@ export const rust3Data = {
           "",
           null,
           "",
+          null,
           null
         ],
         "candidates": {

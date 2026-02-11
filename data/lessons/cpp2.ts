@@ -269,7 +269,7 @@ export const cpp2Data = {
           "content": "# : public 親クラス\\n\\n子クラス名の後に `: public 親クラス名` と書きます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n// 親クラス（動物）\\nclass Animal {\\npublic:\\n    void eat() { std::cout << \"eating\" << std::endl; }\\n};\\n\\n// 子クラス（犬）- Animalを継承\\nclass Dog : public Animal {\\n    // 何も書かなくても eat() が使える！\\n};\\n\\nDog d;\\nd.eat();  // \"eating\" と表示される（親から継承した機能）\\n```\\n\\n**ポイント：**\\n子クラスは、親クラスの `public` な機能を自動的に使えるようになります。"
         }
       ],
-      "correctCode": "#include <iostream>\\nclass Vehicle {\\npublic:\\n    void move() {\\n        std::cout << \"移動中\" << std::endl;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass Car : public Vehicle {\\n};\\nint main() {\\n    Car c;\\n    // 移動メソッドを呼び出す\\n    c.move();\\n    return 0;\\n}", "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\\n___:\\n    // ブロックを開始\\n    void ___() {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass ___ : public ___ {\\n};\\n// ブロックを開始\\nint ___() {\\n    // 文を実行\\n    ___ ___;\\n    // 移動メソッドを呼び出す\\n    ___.___();\\n    // 0を返す\\n    return ___;\\n}",
+      "correctCode": "#include <iostream>\\nclass Vehicle {\\npublic:\\n    void move() {\\n        std::cout << \"移動中\" << std::endl;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass Car : public Vehicle {\\n};\\nint main() {\\n    Car c;\\n    // c.move()を呼び出す\\n    c.move();\\n    return 0;\\n}", "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\\n___:\\n    // ブロックを開始\\n    void ___() {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass ___ : public ___ {\\n};\\n// ブロックを開始\\nint ___() {\\n    // 文を実行\\n    ___ ___;\\n    // c.move()を呼び出す\\n    ___.___();\\n    // 0を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "class Vehicle {",
@@ -283,7 +283,7 @@ export const cpp2Data = {
           "};",
           "int main() {",
           "    Car c;",
-          "    // 移動メソッドを呼び出す",
+          "    // c.move()を呼び出す",
           "    c.move();",
           "    return 0;",
           "}"
@@ -332,7 +332,7 @@ export const cpp2Data = {
           "content": "# 仮想関数の仕組み\\n\\n親クラスで `virtual` をつけた関数は、子クラスで `override` して上書きできます。\\n\\n**コード例：**\\n```cpp\\nclass Animal {\\npublic:\\n    virtual void speak() { std::cout << \"...\" << std::endl; }\\n};\\nclass Cat : public Animal {\\npublic:\\n    void speak() override { std::cout << \"meow\" << std::endl; }\\n};\\n```"
         }
       ],
-      "correctCode": "#include <iostream>\\nclass Shape {\\npublic:\\n    // virtual draw()を定義\\n    virtual void draw() {\\n        std::cout << \"shape\" << std::endl;\\n    }\\n};\\nclass Circle : public Shape {\\npublic:\\n    // overrideでdraw()を上書き\\n    void draw() override {\\n        std::cout << \"circle\" << std::endl;\\n    }\\n};\\nint main() {\\n    Circle c;\\n    // 描画メソッドを呼び出す\\n    c.draw();\\n    return 0;\\n}", "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\\n___:\\n    // virtual draw()を定義\\n    virtual void ___() {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// Circleクラスを定義\\nclass ___ : public ___ {\\n// ラベルを定義\\n___:\\n    // overrideでdraw()を上書き\\n    void ___() override {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// ブロックを開始\\nint ___() {\\n    // 文を実行\\n    ___ ___;\\n    // 描画メソッドを呼び出す\\n    ___.___();\\n    // 0を返す\\n    return ___;\\n}",
+      "correctCode": "#include <iostream>\\nclass Shape {\\npublic:\\n    // virtual draw()を定義\\n    virtual void draw() {\\n        std::cout << \"shape\" << std::endl;\\n    }\\n};\\nclass Circle : public Shape {\\npublic:\\n    // overrideでdraw()を上書き\\n    void draw() override {\\n        std::cout << \"circle\" << std::endl;\\n    }\\n};\\nint main() {\\n    Circle c;\\n    // c.draw()を呼び出す\\n    c.draw();\\n    return 0;\\n}", "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\\n___:\\n    // virtual draw()を定義\\n    virtual void ___() {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// Circleクラスを定義\\nclass ___ : public ___ {\\n// ラベルを定義\\n___:\\n    // overrideでdraw()を上書き\\n    void ___() override {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// ブロックを開始\\nint ___() {\\n    // 文を実行\\n    ___ ___;\\n    // c.draw()を呼び出す\\n    ___.___();\\n    // 0を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "class Shape {",
@@ -351,7 +351,7 @@ export const cpp2Data = {
           "};",
           "int main() {",
           "    Circle c;",
-          "    // 描画メソッドを呼び出す",
+          "    // c.draw()を呼び出す",
           "    c.draw();",
           "    return 0;",
           "}"

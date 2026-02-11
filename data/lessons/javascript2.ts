@@ -227,13 +227,14 @@ export const javascriptData2 = {
           "content": "# 条件を反転させる\\n\\n`!`（エクスクラメーション）は、true と false を **ひっくり返す** 演算子です。\\n\\n**変換ルール：**\\n- `!true` → `false`\\n- `!false` → `true`\\n\\n**身近なたとえ：**\\n「雨が降っていない」= 「雨が降っている」の反対！\\n\\n**コード例：**\\n```javascript\\nconst isRaining = false;\\n\\nif (!isRaining) {\\n  // isRaining が false なので\\n  // !false → true となり、この中が実行される\\n  console.log('雨は降っていません');\\n}\\n```"
         }
       ],
-      "correctCode": "// 年齢を設定\\nconst age = 25;\\n// 20以上かつ30未満かどうか判定\\nif (age >= 20 && age < 30) {\\n    console.log('20代です');\\n}",
-      "holeyCode": "// 年齢を設定\\nconst ___ = ___;\\n// 20以上かつ30未満かどうか判定\\nif (___ >= ___ ___ ___ < ___) ___\\n    // メソッドを呼び出す\\n    ___.___('___');\\n// ブロックを閉じる\\n___",
+      "correctCode": "// 年齢を設定\\nconst age = 25;\\n// 20以上かつ30未満かどうか判定\\nif (age >= 20 && age < 30) {\\n    // console.log('20代です')を出力\\n    console.log('20代です');\\n}",
+      "holeyCode": "// 年齢を設定\\nconst ___ = ___;\\n// 20以上かつ30未満かどうか判定\\nif (___ >= ___ ___ ___ < ___) ___\\n    // console.log('20代です')を出力\\n    ___.___('___');\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 年齢を設定",
           "const age = 25;",
           "// 20以上かつ30未満かどうか判定",
           "if (age >= 20 && age < 30) {",
+          "    // console.log('20代です')を出力",
           "    console.log('20代です');",
           "}"
         ],
@@ -243,7 +244,8 @@ export const javascriptData2 = {
           null,
           "",
           null,
-          ""
+          "",
+          null
         ],
         "candidates": {
           "operators": [

@@ -671,8 +671,8 @@ export const csharpData = {
           "content": "# メソッドの作り方\\n\\nC#でメソッドを作るときは、`static void` と書いてから、メソッドの名前をつけます。\\n\\n**用語の意味：**\\n- `static`（スタティック）: 「このまま使える」という意味（詳しくは後で学びます）\\n- `void`（ボイド）: 「結果を返さない」という意味（「空っぽ」のイメージ）\\n\\n**コード例（あいさつメソッドを作る）：**\\n```csharp\\n// メソッドを定義（作る）\\nstatic void Greet()\\n{\\n    Console.WriteLine(\"こんにちは\");\\n}\\n\\n// メソッドを呼び出す（使う）\\nGreet();\\n```\\n=> こんにちは\\n\\n**解説：**\\n1. `static void Greet()` でGreetという名前のメソッドを作る\\n2. `{ }` の中に、やりたい処理を書く\\n3. `Greet();` でメソッドを呼び出して実行する"
         }
       ],
-      "correctCode": "// Greetというメソッドを定義\\nstatic void Greet()\\n{\\n    // こんにちは と表示\\n    Console.WriteLine(\"こんにちは\");\\n}\\n// Greetメソッドを呼び出す\\nGreet();",
-      "holeyCode": "// Greetというメソッドを定義\\nstatic void ___()\\n// ブロックを開始\\n___\\n    // こんにちは と表示\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___\\n// Greetメソッドを呼び出す\\n___();",
+      "correctCode": "// Greetというメソッドを定義\\nstatic void Greet()\\n{\\n    // こんにちは と表示\\n    Console.WriteLine(\"こんにちは\");\\n}\\n// Greet()を呼び出す\\nGreet();",
+      "holeyCode": "// Greetというメソッドを定義\\nstatic void ___()\\n// ブロックを開始\\n___\\n    // こんにちは と表示\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___\\n// Greet()を呼び出す\\n___();",
       "correctLines": [
           "// Greetというメソッドを定義",
           "static void Greet()",
@@ -680,7 +680,7 @@ export const csharpData = {
           "    // こんにちは と表示",
           "    Console.WriteLine(\"こんにちは\");",
           "}",
-          "// Greetメソッドを呼び出す",
+          "// Greet()を呼び出す",
           "Greet();"
         ],
       "lineHints": [

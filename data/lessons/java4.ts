@@ -111,7 +111,7 @@ export const javaData4 = {
           "content": "# 型固有のメソッドが使える\\n\\n制限をつけると、その型のメソッドが使えるようになります。\\n\\n**OKな例**\\n```java\\nNumBox<Integer> box = new NumBox<>();\\n// OK: Integer は Number の仲間\\n```\\n\\n**NGな例**\\n```java\\nNumBox<String> box2; \\n// コンパイルエラー！Stringは数字じゃない\\n```\\n\\n**メリット：**\\n- 間違った型を入れるのを防げる\\n- Number系のメソッド（doubleValue など）が使える"
         }
       ],
-      "correctCode": "// extends で型の上限を Number に制限する\\nclass Calculator<T extends Number> {\\n    private T value;\\n    public Calculator(T v) { value = v; }\\n    public double getDouble() { return value.doubleValue(); }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // calcにnew Calculator<>(42)を代入\\n        Calculator<Integer> calc = new Calculator<>(42);\\n        // getDouble メソッドを呼び出す\\n        System.out.println(calc.getDouble());\\n    }\\n}", "holeyCode": "// extends で型の上限を Number に制限する\\nclass ___<___ extends ___> {\\n    // 文を実行\\n    private ___ ___;\\n    // 値を代入\\n    public ___(___ ___) { ___ = ___; }\\n    // ゲッターを定義\\n    public ___ ___() { return ___.___(___; }\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // calcにnew Calculator<>(42)を代入\\n        ___<___> ___ = new ___<>(___);\\n        // getDouble メソッドを呼び出す\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// extends で型の上限を Number に制限する\\nclass Calculator<T extends Number> {\\n    private T value;\\n    public Calculator(T v) { value = v; }\\n    public double getDouble() { return value.doubleValue(); }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // calcにnew Calculator<>(42)を代入\\n        Calculator<Integer> calc = new Calculator<>(42);\\n        // calc.getDouble()の結果を出力\\n        System.out.println(calc.getDouble());\\n    }\\n}", "holeyCode": "// extends で型の上限を Number に制限する\\nclass ___<___ extends ___> {\\n    // 文を実行\\n    private ___ ___;\\n    // 値を代入\\n    public ___(___ ___) { ___ = ___; }\\n    // ゲッターを定義\\n    public ___ ___() { return ___.___(___; }\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // calcにnew Calculator<>(42)を代入\\n        ___<___> ___ = new ___<>(___);\\n        // calc.getDouble()の結果を出力\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// extends で型の上限を Number に制限する",
           "class Calculator<T extends Number> {",
@@ -124,7 +124,7 @@ export const javaData4 = {
           "    public static void main(String[] args) {",
           "        // calcにnew Calculator<>(42)を代入",
           "        Calculator<Integer> calc = new Calculator<>(42);",
-          "        // getDouble メソッドを呼び出す",
+          "        // calc.getDouble()の結果を出力",
           "        System.out.println(calc.getDouble());",
           "    }",
           "}"
@@ -170,7 +170,7 @@ export const javaData4 = {
           "content": "# 上限・下限の指定\\n\\nワイルドカードにも制限をつけられます。\\n\\n**上限を指定：extends**\\n```java\\nList<? extends Number>  // Numberか、その子クラス\\n// Integer, Double などはOK、StringはNG\\n```\\n\\n**下限を指定：super**\\n```java\\nList<? super Integer>  // Integerか、その親クラス\\n// Integer, Number, Object などがOK\\n```\\n\\n**覚え方：**\\n- extends → 「〜以下」（Numberから下）\\n- super → 「〜以上」（Integerから上）"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    // ? で任意の型を表すワイルドカード\\n    public static void printAll(List<?> list) {\\n        for (Object item : list) {\\n            // println で出力する\\n            System.out.println(item);\\n        }\\n    }\\n    public static void main(String[] args) {\\n        // namesに[\"A\", \"B\"]を代入\\n        List<String> names = Arrays.asList(\"A\", \"B\");\\n        // printAll メソッドを呼び出す\\n        printAll(names);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // ? で任意の型を表すワイルドカード\\n    public static void ___(___<___> ___) {\\n        // forループ\\n        for (___ ___ : ___) {\\n            // println で出力する\\n            ___.___.___(___)\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // namesに[\\\"A\\\", \\\"B\\\"]を代入\\n        ___<___> ___ = ___.___(\\\"___\\\", \\\"___\\\");\\n        // printAll メソッドを呼び出す\\n        ___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    // ? で任意の型を表すワイルドカード\\n    public static void printAll(List<?> list) {\\n        for (Object item : list) {\\n            // println で出力する\\n            System.out.println(item);\\n        }\\n    }\\n    public static void main(String[] args) {\\n        // namesに[\"A\", \"B\"]を代入\\n        List<String> names = Arrays.asList(\"A\", \"B\");\\n        // printAll(names)を呼び出す\\n        printAll(names);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // ? で任意の型を表すワイルドカード\\n    public static void ___(___<___> ___) {\\n        // forループ\\n        for (___ ___ : ___) {\\n            // println で出力する\\n            ___.___.___(___)\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // namesに[\\\"A\\\", \\\"B\\\"]を代入\\n        ___<___> ___ = ___.___(\\\"___\\\", \\\"___\\\");\\n        // printAll(names)を呼び出す\\n        ___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
@@ -185,7 +185,7 @@ export const javaData4 = {
           "    public static void main(String[] args) {",
           "        // namesに[\"A\", \"B\"]を代入",
           "        List<String> names = Arrays.asList(\"A\", \"B\");",
-          "        // printAll メソッドを呼び出す",
+          "        // printAll(names)を呼び出す",
           "        printAll(names);",
           "    }",
           "}"

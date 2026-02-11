@@ -25,7 +25,7 @@ export const javaData2 = {
           "content": "# 継承した機能\\n\\n子クラスは親クラスのメソッドをそのまま使えます。犬（Dog）は動物（Animal）なので、「食べる」ことができますね！\\n\\n**コード例：**\\n```java\\nDog dog = new Dog();  // 犬を作る\\ndog.eat();   // 親のメソッド → 「食べる」\\ndog.bark();  // 自分のメソッド → 「ワン！」\\n```\\n\\n**ポイント：** 子クラスは親の機能＋自分だけの機能を持てます。Dogは「食べる」も「ほえる」もできます！"
         }
       ],
-      "correctCode": "// Vehicleクラスを定義\\nclass Vehicle {\\n    // ブロックを開始\\n    void move() {\\n        // \\\"\\\"\\n        System.out.println(\\\"Moving\\\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// CarクラスをVehicleを継承して定義\\nclass Car extends Vehicle {\\n    // ブロックを開始\\n    void honk() {\\n        // \\\"\\\"\\n        System.out.println(\\\"Beep!\\\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// Mainクラスを定義\\nclass Main {\\n    // mainメソッドを定義\\n    public static void main(String[] args) {\\n        // cにnew Car()を代入\\n        Car c = new Car();\\n        // move メソッドを呼び出す\\n        c.move();\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}", "holeyCode": "// Vehicleクラスを定義\\nclass ___ {\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// CarクラスをVehicleを継承して定義\\nclass ___ extends ___ {\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // cにnew Car()を代入\\n        ___ ___ = new ___()___\\n        // move メソッドを呼び出す\\n        ___.___()___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// Vehicleクラスを定義\\nclass Vehicle {\\n    // ブロックを開始\\n    void move() {\\n        // \\\"\\\"\\n        System.out.println(\\\"Moving\\\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// CarクラスをVehicleを継承して定義\\nclass Car extends Vehicle {\\n    // ブロックを開始\\n    void honk() {\\n        // \\\"\\\"\\n        System.out.println(\\\"Beep!\\\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// Mainクラスを定義\\nclass Main {\\n    // mainメソッドを定義\\n    public static void main(String[] args) {\\n        // cにnew Car()を代入\\n        Car c = new Car();\\n        // c.move()を呼び出す\\n        c.move();\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}", "holeyCode": "// Vehicleクラスを定義\\nclass ___ {\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// CarクラスをVehicleを継承して定義\\nclass ___ extends ___ {\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // cにnew Car()を代入\\n        ___ ___ = new ___()___\\n        // c.move()を呼び出す\\n        ___.___()___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Vehicleクラスを定義",
           "class Vehicle {",
@@ -55,7 +55,7 @@ export const javaData2 = {
           "    public static void main(String[] args) {",
           "        // cにnew Car()を代入",
           "        Car c = new Car();",
-          "        // move メソッドを呼び出す",
+          "        // c.move()を呼び出す",
           "        c.move();",
           "    // ブロックを閉じる",
           "    }",
@@ -132,7 +132,7 @@ export const javaData2 = {
           "content": "# 明示的に宣言\\n\\n`@Override`（アット・オーバーライド）は「このメソッドは親のメソッドを上書きしますよ」という印です。\\n\\n**アノテーション** とは、プログラムに追加情報を与える「ふせん」のようなものです。\\n\\n**なぜ使うの？**\\n- 間違いを防げます（スペルミスがあるとエラーで教えてくれる）\\n- コードが読みやすくなります\\n\\n```java\\nclass Cat extends Animal {\\n    @Override  // 「これは上書きです」と宣言\\n    void sound() {  // 親と同じメソッド名\\n        System.out.println(\"ニャー\");\\n    }\\n}\\n```"
         }
       ],
-      "correctCode": "class Shape {\\n    void draw() {\\n        System.out.println(\"Shape\");\\n    }\\n}\\n\\nclass Circle extends Shape {\\n    // @Override でメソッドを上書き宣言する\\n    @Override\\n    void draw() {\\n        System.out.println(\"Circle\");\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // cにnew Circle()を代入\\n        Circle c = new Circle();\\n        // draw メソッドを呼び出す\\n        c.draw();\\n    }\\n}", "holeyCode": "// Shapeクラスを定義\\nclass ___ {\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Circleクラスを定義\\nclass ___ extends ___ {\\n    // @Override でメソッドを上書き宣言する\\n    @___\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Shapeクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // cにnew Circle()を代入\\n        ___ ___ = new ___()___\\n        // draw メソッドを呼び出す\\n        ___.___()___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "class Shape {\\n    void draw() {\\n        System.out.println(\"Shape\");\\n    }\\n}\\n\\nclass Circle extends Shape {\\n    // @Override でメソッドを上書き宣言する\\n    @Override\\n    void draw() {\\n        System.out.println(\"Circle\");\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // cにnew Circle()を代入\\n        Circle c = new Circle();\\n        // c.draw()を呼び出す\\n        c.draw();\\n    }\\n}", "holeyCode": "// Shapeクラスを定義\\nclass ___ {\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Circleクラスを定義\\nclass ___ extends ___ {\\n    // @Override でメソッドを上書き宣言する\\n    @___\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Shapeクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // cにnew Circle()を代入\\n        ___ ___ = new ___()___\\n        // c.draw()を呼び出す\\n        ___.___()___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "class Shape {",
           "    void draw() {",
@@ -152,7 +152,7 @@ export const javaData2 = {
           "    public static void main(String[] args) {",
           "        // cにnew Circle()を代入",
           "        Circle c = new Circle();",
-          "        // draw メソッドを呼び出す",
+          "        // c.draw()を呼び出す",
           "        c.draw();",
           "    }",
           "}"
@@ -190,7 +190,7 @@ export const javaData2 = {
             "public",
             "static"
           ],
-          "others": ["Shape", "draw", "System", "out", "println", "\"Shape\"", ";", "}", "Circle", "Override", "\"Circle\"", "Main", "main", "String", "args", "c", "()", "id", "// @Override でメソッドを上書き宣言する", "void draw() {", "System.out.println(\"Circle\");", "Main {", "/ cにnew Circle", "// draw メソッドを呼び出す"]
+          "others": ["Shape", "draw", "System", "out", "println", "\"Shape\"", ";", "}", "Circle", "Override", "\"Circle\"", "Main", "main", "String", "args", "c", "()", "id", "// @Override でメソッドを上書き宣言する", "void draw() {", "System.out.println(\"Circle\");", "Main {", "/ cにnew Circle", "// c.draw()を呼び出す"]
         },
         "testCases": [
           {
@@ -212,7 +212,7 @@ export const javaData2 = {
           "content": "# 複数実装できる\\n\\nクラスは複数のインターフェースを実装できます。\\n\\n**たとえ話：** 一人の人が「運転免許」と「調理師免許」の両方を持てるように、クラスも複数の約束を守ることができます。\\n\\n```java\\ninterface A { void a(); }  // 約束A\\ninterface B { void b(); }  // 約束B\\n\\nclass C implements A, B {  // 両方の約束を守る\\n    public void a() { }  // 約束Aを実装\\n    public void b() { }  // 約束Bを実装\\n}\\n```\\n\\n**ポイント：** 継承（extends）は1つだけですが、インターフェース（implements）は何個でもOKです！"
         }
       ],
-      "correctCode": "interface Greeting {\\n    void sayHello();\\n}\\n\\n// PersonクラスをGreetingインターフェースを実装して定義\\nclass Person implements Greeting {\\n    public void sayHello() {\\n        System.out.println(\"こんにちは！\");\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // pにnew Person()を代入\\n        Person p = new Person();\\n        // sayHello メソッドを呼び出す\\n        p.sayHello();\\n    }\\n}", "holeyCode": "// インターフェースを定義\\ninterface ___ {\\n    // 文を実行\\n    void ___()___\\n// ブロックを閉じる\\n___\\n___\\n// PersonクラスをGreetingインターフェースを実装して定義\\nclass ___ implements ___ {\\n    // sayHelloメソッドを定義\\n    public void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // pにnew Person()を代入\\n        ___ ___ = new ___()___\\n        // sayHello メソッドを呼び出す\\n        ___.___()___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "interface Greeting {\\n    void sayHello();\\n}\\n\\n// PersonクラスをGreetingインターフェースを実装して定義\\nclass Person implements Greeting {\\n    public void sayHello() {\\n        System.out.println(\"こんにちは！\");\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // pにnew Person()を代入\\n        Person p = new Person();\\n        // p.sayHello()を呼び出す\\n        p.sayHello();\\n    }\\n}", "holeyCode": "// インターフェースを定義\\ninterface ___ {\\n    // 文を実行\\n    void ___()___\\n// ブロックを閉じる\\n___\\n___\\n// PersonクラスをGreetingインターフェースを実装して定義\\nclass ___ implements ___ {\\n    // sayHelloメソッドを定義\\n    public void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // pにnew Person()を代入\\n        ___ ___ = new ___()___\\n        // p.sayHello()を呼び出す\\n        ___.___()___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "interface Greeting {",
           "    void sayHello();",
@@ -229,7 +229,7 @@ export const javaData2 = {
           "    public static void main(String[] args) {",
           "        // pにnew Person()を代入",
           "        Person p = new Person();",
-          "        // sayHello メソッドを呼び出す",
+          "        // p.sayHello()を呼び出す",
           "        p.sayHello();",
           "    }",
           "}"
@@ -289,7 +289,7 @@ export const javaData2 = {
           "content": "# 子クラスで実装必須\\n\\n**抽象メソッド** は中身のないメソッドです。子クラスで**必ず**実装しなければなりません。\\n\\n**たとえ話：** 「動物は音を出す」というルールだけ決めておいて、「どんな音か」は犬や猫に任せる、という感じです。\\n\\n```java\\nclass Dog extends Animal {\\n    void sound() {  // 必ず実装する！\\n        System.out.println(\"ワン！\");\\n    }\\n}\\n```\\n\\n**インターフェースとの違い：**\\n- インターフェース：全部が約束（実装なし）\\n- 抽象クラス：一部は完成、一部は約束"
         }
       ],
-      "correctCode": "// 抽象クラスAnimalを定義\\nabstract class Animal {\\n    abstract void speak();\\n}\\n\\nclass Dog extends Animal {\\n    void speak() {\\n        System.out.println(\"ワン！\");\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // dにnew Dog()を代入\\n        Dog d = new Dog();\\n        // speak メソッドを呼び出す\\n        d.speak();\\n    }\\n}", "holeyCode": "// 抽象クラスAnimalを定義\\nabstract class ___ {\\n    // 文を実行\\n    abstract void ___()___\\n// ブロックを閉じる\\n___\\n___\\n// Dogクラスを定義\\nclass ___ extends ___ {\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // dにnew Dog()を代入\\n        ___ ___ = new ___()___\\n        // speak メソッドを呼び出す\\n        ___.___()___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// 抽象クラスAnimalを定義\\nabstract class Animal {\\n    abstract void speak();\\n}\\n\\nclass Dog extends Animal {\\n    void speak() {\\n        System.out.println(\"ワン！\");\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // dにnew Dog()を代入\\n        Dog d = new Dog();\\n        // d.speak()を呼び出す\\n        d.speak();\\n    }\\n}", "holeyCode": "// 抽象クラスAnimalを定義\\nabstract class ___ {\\n    // 文を実行\\n    abstract void ___()___\\n// ブロックを閉じる\\n___\\n___\\n// Dogクラスを定義\\nclass ___ extends ___ {\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // dにnew Dog()を代入\\n        ___ ___ = new ___()___\\n        // d.speak()を呼び出す\\n        ___.___()___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 抽象クラスAnimalを定義",
           "abstract class Animal {",
@@ -306,7 +306,7 @@ export const javaData2 = {
           "    public static void main(String[] args) {",
           "        // dにnew Dog()を代入",
           "        Dog d = new Dog();",
-          "        // speak メソッドを呼び出す",
+          "        // d.speak()を呼び出す",
           "        d.speak();",
           "    }",
           "}"
@@ -684,7 +684,7 @@ export const javaData2 = {
           "content": "# データを守る\\n\\n**カプセル化** とは、大事なデータを `private` で隠して、メソッド経由でアクセスする方法です。\\n\\n**たとえ話：** 銀行口座の残高は直接変更できません。必ず「入金」「出金」という手続き（メソッド）を通しますよね。それがカプセル化です。\\n\\n```java\\nclass User {\\n    private String name;  // 直接触れないようにする\\n    \\n    public String getName() {  // 取得用のメソッド\\n        return name;\\n    }\\n}\\n```\\n\\n**メリット：** データを勝手に変更されるのを防げます"
         }
       ],
-      "correctCode": "class Item {\\n    // private でフィールドを隠蔽する\\n    private int price;\\n    \\n    public Item(int p) {\\n        // price に値を代入する\\n        price = p;\\n    }\\n    \\n    public int getPrice() {\\n        // priceを返す\\n        return price;\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // itemにnew Item(100)を代入\\n        Item item = new Item(100);\\n        // getPrice メソッドを呼び出す\\n        System.out.println(item.getPrice());\\n    }\\n}", "holeyCode": "// Itemクラスを定義\\nclass ___ {\\n    // private でフィールドを隠蔽する\\n    private ___ ___\\n    ___\\n    // Itemメソッドを定義\\n    public ___(int ___) {\\n        // price に値を代入する\\n        ___ = ___\\n    // ブロックを閉じる\\n    ___\\n    ___\\n    // ゲッターを定義\\n    public ___ ___() {\\n        // priceを返す\\n        return ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Itemクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // itemにnew Item(100)を代入\\n        ___ ___ = new ___(___)___\\n        // getPrice メソッドを呼び出す\\n        ___.___.___(___.___())___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "class Item {\\n    // private でフィールドを隠蔽する\\n    private int price;\\n    \\n    public Item(int p) {\\n        // price に値を代入する\\n        price = p;\\n    }\\n    \\n    public int getPrice() {\\n        // priceを返す\\n        return price;\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // itemにnew Item(100)を代入\\n        Item item = new Item(100);\\n        // item.getPrice()の結果を出力\\n        System.out.println(item.getPrice());\\n    }\\n}", "holeyCode": "// Itemクラスを定義\\nclass ___ {\\n    // private でフィールドを隠蔽する\\n    private ___ ___\\n    ___\\n    // Itemメソッドを定義\\n    public ___(int ___) {\\n        // price に値を代入する\\n        ___ = ___\\n    // ブロックを閉じる\\n    ___\\n    ___\\n    // ゲッターを定義\\n    public ___ ___() {\\n        // priceを返す\\n        return ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Itemクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // itemにnew Item(100)を代入\\n        ___ ___ = new ___(___)___\\n        // item.getPrice()の結果を出力\\n        ___.___.___(___.___())___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "class Item {",
           "    // private でフィールドを隠蔽する",
@@ -705,7 +705,7 @@ export const javaData2 = {
           "    public static void main(String[] args) {",
           "        // itemにnew Item(100)を代入",
           "        Item item = new Item(100);",
-          "        // getPrice メソッドを呼び出す",
+          "        // item.getPrice()の結果を出力",
           "        System.out.println(item.getPrice());",
           "    }",
           "}"
@@ -747,7 +747,7 @@ export const javaData2 = {
             "void",
             "int"
           ],
-          "others": ["Item", "price", ";", "", "p", "}", "getPrice", "Main", "main", "String", "args", "item", "100", "System", "out", "println", "price;", "p;", "public Item(int p) {", "ce = p;", "// priceを返す", "return price;", "// itemにnew Item(100)を代入", "// getPrice メソッドを呼び出す", "System.out.println(item.getPrice());"]
+          "others": ["Item", "price", ";", "", "p", "}", "getPrice", "Main", "main", "String", "args", "item", "100", "System", "out", "println", "price;", "p;", "public Item(int p) {", "ce = p;", "// priceを返す", "return price;", "// itemにnew Item(100)を代入", "// item.getPrice()の結果を出力", "System.out.println(item.getPrice());"]
         },
         "testCases": [
           {
