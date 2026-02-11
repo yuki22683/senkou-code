@@ -18,9 +18,33 @@ const patterns = [
   ['"    // メソッドを定義",\n          "    public static void main(String[] args)"',
    '"    // mainメソッドを定義",\n          "    public static void main(String[] args)"'],
 
-  // C#: static void Main
+  // Java: main with throws IOException
+  ['"    // メソッドを定義",\n          "    public static void main(String[] args) throws IOException {"',
+   '"    // mainメソッドを定義",\n          "    public static void main(String[] args) throws IOException {"'],
+
+  // Java: main with throws Exception
+  ['"    // メソッドを定義",\n          "    public static void main(String[] args) throws Exception {"',
+   '"    // mainメソッドを定義",\n          "    public static void main(String[] args) throws Exception {"'],
+
+  // C#: static void Main (without args)
+  ['"    // メソッドを定義",\n          "    static void Main() {"',
+   '"    // Mainメソッドを定義",\n          "    static void Main() {"'],
+
+  // C#: static void Main (with args)
   ['"    // メソッドを定義",\n          "    static void Main(string[] args)"',
    '"    // Mainメソッドを定義",\n          "    static void Main(string[] args)"'],
+
+  // Java: sayHello method
+  ['"    // メソッドを定義",\n          "    public void sayHello() {"',
+   '"    // sayHelloメソッドを定義",\n          "    public void sayHello() {"'],
+
+  // Java: Item constructor
+  ['"    // メソッドを定義",\n          "    public Item(int p) {"',
+   '"    // Itemコンストラクタを定義",\n          "    public Item(int p) {"'],
+
+  // Java: compareTo method
+  ['"    // メソッドを定義",\n          "    public int compareTo(Score other) {"',
+   '"    // compareToメソッドを定義",\n          "    public int compareTo(Score other) {"'],
 ];
 
 for (const file of files) {

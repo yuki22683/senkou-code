@@ -481,7 +481,7 @@ export const javaData4 = {
           "    int value;",
           "    // 値を代入",
           "    Score(int v) { value = v; }",
-          "    // メソッドを定義",
+          "    // compareToメソッドを定義",
           "    public int compareTo(Score other) {",
           "        // 自分と相手のスコアを比較してソート順を決める",
           "        return this.value - other.value;",

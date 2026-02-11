@@ -52,7 +52,7 @@ export const csharpData = {
           "",
           "// Programクラスを定義",
           "class Program {",
-          "    // メソッドを定義",
+          "    // Mainメソッドを定義",
           "    static void Main() {",
           "        // 画面にメッセージを出す関数",
           "        Console.WriteLine(\\\"Hello, C#!\\\");",
