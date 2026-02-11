@@ -25,7 +25,7 @@ export const cpp3Data = {
           "content": "# 長い型名を省略\\n\\n`auto` は、型名が長くて書くのが大変なときに特に便利です。\\n\\n**イテレータ**（配列の中を順番に見ていくための道具）は型名がとても長いです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nstd::vector<int> v = {1, 2, 3};\\n\\n// auto がないと...\\nstd::vector<int>::iterator it = v.begin();  // 長い！\\n\\n// auto を使うと...\\nauto it = v.begin();  // スッキリ！\\n\\nfor (auto it = v.begin(); it != v.end(); ++it) {\\n    std::cout << *it << std::endl;\\n}\\n```\\n\\n**ポイント：**\\n型が複雑になるほど、`auto` の便利さがわかります！"
         }
       ],
-      "correctCode": "// ライブラリを読み込む\n#include <iostream>\n// ライブラリを読み込む\nusing namespace std;\n\n// ブロックを開始\nint main() {\n    // xに100を代入（auto型推論）\n    auto x = 100;\n    // yに2.5を代入（auto型推論）\n    auto y = 2.5;\n    // 文を実行\n    cout << x * y << endl;\n    // 0を返す\n    return 0;\n// ブロックを閉じる\n}", "holeyCode": "// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___ ___ ___;\n___\n// ブロックを開始\n___ ___() {\n    // xに100を代入（auto型推論）\n    ___ ___ = ___;\n    // yに2.5を代入（auto型推論）\n    ___ ___ = ___;\n    // 文を実行\n    ___ << ___ * ___ << ___;\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "// ライブラリを読み込む\\n#include <iostream>\\n// ライブラリを読み込む\\nusing namespace std;\\n\\n// ブロックを開始\\nint main() {\\n    // xに100を代入（auto型推論）\\n    auto x = 100;\\n    // yに2.5を代入（auto型推論）\\n    auto y = 2.5;\\n    // 文を実行\\n    cout << x * y << endl;\\n    // 0を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // xに100を代入（auto型推論）\\n    ___ ___ = ___;\\n    // yに2.5を代入（auto型推論）\\n    ___ ___ = ___;\\n    // 文を実行\\n    ___ << ___ * ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -96,7 +96,7 @@ export const cpp3Data = {
           "content": "# コピーを避ける書き方\\n\\n通常の範囲for文は、要素を「コピー」して取り出します。大きなデータだとコピーに時間がかかります。\\n\\n**身近な例え：**\\n本を読むとき、毎回コピーを取って読むより、本棚にある本をそのまま読む方が早いですよね。\\n\\n**参照で受け取る書き方：**\\n```cpp\\nfor (const auto& x : v) {\\n    // & をつけると「参照」で受け取る（コピーしない）\\n    // const をつけると「変更しない」という約束\\n    cout << x << endl;\\n}\\n```\\n\\n**使い分け：**\\n- `int x` : 小さいデータ（int, charなど）はコピーでOK\\n- `const auto& x` : 大きいデータ（string, vectorなど）は参照が効率的\\n\\n`auto` を使うと型を自動で判断してくれるので便利です！"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\nusing namespace std;\\n\\nint main() {\\n    // numsに{10, 20, 30}を代入\\n    vector<int> nums = {10, 20, 30};\\n    // : で範囲for文\\n    for (int n : nums) {\\n        cout << n << endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___ ___ ___;\n___\n// ブロックを開始\n___ ___() {\n    // numsに{10, 20, 30}を代入\n    ___<___> ___ = {___, ___, ___};\n    // : で範囲for文\n    for (___ ___ : ___) {\n        // 文を実行\n        ___ << ___ << ___;\n    // ブロックを閉じる\n    ___\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <iostream>\\n#include <vector>\\nusing namespace std;\\n\\nint main() {\\n    // numsに{10, 20, 30}を代入\\n    vector<int> nums = {10, 20, 30};\\n    // : で範囲for文\\n    for (int n : nums) {\\n        cout << n << endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // numsに{10, 20, 30}を代入\\n    ___<___> ___ = {___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) {\\n        // 文を実行\\n        ___ << ___ << ___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -173,7 +173,7 @@ export const cpp3Data = {
           "content": "# なぜ nullptr の方が良いの？\\n\\n古い `NULL` は実は「0」という数字として扱われるため、問題が起きることがあります。\\n\\n**困る例：**\\n```cpp\\nvoid f(int);    // 整数を受け取る関数\\nvoid f(int*);   // ポインタを受け取る関数\\n\\nf(NULL);    // どっちの f() を呼ぶ？→ あいまい！\\nf(nullptr); // f(int*) が呼ばれる → 明確！\\n```\\n\\n**ポイント：**\\n- `NULL` は「0」という数字に見えることがある\\n- `nullptr` は「ポインタ専用のヌル」なので間違いが起きない\\n\\nモダンC++では、必ず `nullptr` を使いましょう！"
         }
       ],
-      "correctCode": "#include <iostream>\\nusing namespace std;\\n\\nint main() {\\n    // pにnullptrを代入\\n    int* p = nullptr;\\n    // p == nullptrで比較\\n    if (p == nullptr) {\\n        cout << \"null\" << endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___ ___ ___;\n___\n// ブロックを開始\n___ ___() {\n    // pにnullptrを代入\n    ___* ___ = ___;\n    // p == nullptrで比較\n    if (___ == ___) {\n        // \\\"\\\"\n        ___ << \\\"___\\\" << ___;\n    // ブロックを閉じる\n    ___\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <iostream>\\nusing namespace std;\\n\\nint main() {\\n    // pにnullptrを代入\\n    int* p = nullptr;\\n    // p == nullptrで比較\\n    if (p == nullptr) {\\n        cout << \"null\" << endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // pにnullptrを代入\\n    ___* ___ = ___;\\n    // p == nullptrで比較\\n    if (___ == ___) {\\n        // \\\"\\\"\\n        ___ << \\\"___\\\" << ___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -248,7 +248,7 @@ export const cpp3Data = {
           "content": "# コンパイル時 vs 実行時\\n\\n`const` と `constexpr` は似ていますが、違いがあります。\\n\\n**比較：**\\n```cpp\\n// const: 実行時に決まってもOK\\nconst int a = getValue();     // 関数を呼んで決まる\\n\\n// constexpr: コンパイル時に決まっていないとダメ\\nconstexpr int b = 10 * 10;    // コンパイル時に100と計算済み\\n```\\n\\n**わかりやすく言うと：**\\n- `const`: 「一度決めたら変えない」（いつ決まるかは問わない）\\n- `constexpr`: 「プログラムを動かす前に決まっている」\\n\\n**メリット：**\\n`constexpr` を使うと、プログラムの実行が速くなり、配列のサイズ指定などにも使えます。"
         }
       ],
-      "correctCode": "#include <iostream>\\nusing namespace std;\\n\\n// constexpr cube(int x)を定義\\nconstexpr int cube(int x) {\\n    return x * x * x;\\n}\\n\\nint main() {\\n    // valにcube(3)を代入（constexpr）\\n    constexpr int val = cube(3);\\n    cout << val << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___ ___ ___;\n___\n// constexpr cube(int x)を定義\n___ ___ ___(int ___) {\n    // x * x * xを返す\n    ___ ___ * ___ * ___;\n// ブロックを閉じる\n___\n___\n// ブロックを開始\n___ ___() {\n    // valにcube(3)を代入（constexpr）\n    ___ ___ ___ = ___(___);\n    // 文を実行\n    ___ << ___ << ___;\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <iostream>\\nusing namespace std;\\n\\n// constexpr cube(int x)を定義\\nconstexpr int cube(int x) {\\n    return x * x * x;\\n}\\n\\nint main() {\\n    // valにcube(3)を代入（constexpr）\\n    constexpr int val = cube(3);\\n    cout << val << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// constexpr cube(int x)を定義\\n___ ___ ___(int ___) {\\n    // x * x * xを返す\\n    ___ ___ * ___ * ___;\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // valにcube(3)を代入（constexpr）\\n    ___ ___ ___ = ___(___);\\n    // 文を実行\\n    ___ << ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -329,7 +329,7 @@ export const cpp3Data = {
                       "content": "# いろいろな使い方\\n\\n```cpp\\n// 構造体\\nstruct Point { int x, y; };\\nPoint p = {3, 4};\\n\\n// 関数の引数\\nvoid f(vector<int> v);\\nf({1, 2, 3});\\n```"
               }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\nusing namespace std;\\n\\nint main() {\\n    // { で初期化子リスト\\n    vector<int> v{1, 2, 3, 4, 5};\\n    // : で範囲for文\\n    for (int n : v) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___ ___ ___;\n___\n// ブロックを開始\n___ ___() {\n    // { で初期化子リスト\n    ___<___> ___{___, ___, ___, ___, ___};\n    // : で範囲for文\n    for (___ ___ : ___) ___ << ___ << \\\" \\\";\n    // 文を実行\n    ___ << ___;\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <iostream>\\n#include <vector>\\nusing namespace std;\\n\\nint main() {\\n    // { で初期化子リスト\\n    vector<int> v{1, 2, 3, 4, 5};\\n    // : で範囲for文\\n    for (int n : v) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // { で初期化子リスト\\n    ___<___> ___{___, ___, ___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) ___ << ___ << \\\" \\\";\\n    // 文を実行\\n    ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -402,7 +402,7 @@ export const cpp3Data = {
           "content": "# make_shared で効率的に作成\\n\\n`shared_ptr` を作るときは、`make_shared` 関数を使うのがオススメです。\\n\\n**身近な例え：**\\n「部品を買ってきて自分で組み立てる」より「完成品を買う」方が楽で効率的ですよね。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n// オススメの書き方\\nauto p = make_shared<int>(100);  // 100という値を持つ共有ポインタ\\n\\n// 非推奨の書き方（動くけど効率が悪い）\\nshared_ptr<int> p(new int(100));\\n```\\n\\n**なぜ make_shared が良いの？**\\n- メモリの確保が1回で済む（効率的）\\n- 例外安全（エラーが起きてもメモリリークしない）\\n- コードがスッキリする\\n\\n`make_shared<型>(初期値)` の形で覚えましょう！"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <memory>\\nusing namespace std;\\n\\nint main() {\\n    // make_shared で共有ポインタを作成\\n    auto p = make_shared<int>(100);\\n    // *p で中身にアクセス\\n    cout << *p << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___ ___ ___;\n___\n// ブロックを開始\n___ ___() {\n    // make_shared で共有ポインタを作成\n    ___ ___ = ___<___>(___);\n    // *p で中身にアクセス\n    ___ << *___ << ___;\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <iostream>\\n#include <memory>\\nusing namespace std;\\n\\nint main() {\\n    // make_shared で共有ポインタを作成\\n    auto p = make_shared<int>(100);\\n    // *p で中身にアクセス\\n    cout << *p << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // make_shared で共有ポインタを作成\\n    ___ ___ = ___<___>(___);\\n    // *p で中身にアクセス\\n    ___ << *___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -476,7 +476,7 @@ export const cpp3Data = {
           "content": "# なぜ move が速いの？\\n\\n大きなデータを扱うとき、`move` はコピーより圧倒的に速いです。\\n\\n**身近な例え：**\\n100冊の本を別の部屋に移したいとき：\\n- **コピー**: 1冊ずつコピー機でコピーして運ぶ（遅い！）\\n- **ムーブ**: 本棚ごと運ぶ（速い！）\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvector<int> v1(1000000);  // 100万個の要素を持つベクター\\n\\n// コピー（遅い）: 100万個の要素を全部コピー\\nvector<int> v2 = v1;\\n\\n// ムーブ（速い）: 内部のポインタだけ移動\\nvector<int> v3 = move(v1);\\n// v1 は空になる\\n```\\n\\n**使いどころ：**\\n- 大きなデータを関数に渡すとき\\n- 元のデータをもう使わないとき\\n- 効率を重視するとき"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <string>\\n#include <utility>\\nusing namespace std;\\n\\nint main() {\\n    // s1に\"こんにちは\"を代入\\n    string s1 = \"こんにちは\";\\n    // move で所有権を移動\\n    string s2 = move(s1);\\n    cout << s2 << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___ ___ ___;\n___\n// ブロックを開始\n___ ___() {\n    // s1に\\\"こんにちは\\\"を代入\n    ___ ___ = \\\"___\\\";\n    // move で所有権を移動\n    ___ ___ = ___(___);\n    // 文を実行\n    ___ << ___ << ___;\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <iostream>\\n#include <string>\\n#include <utility>\\nusing namespace std;\\n\\nint main() {\\n    // s1に\"こんにちは\"を代入\\n    string s1 = \"こんにちは\";\\n    // move で所有権を移動\\n    string s2 = move(s1);\\n    cout << s2 << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // s1に\\\"こんにちは\\\"を代入\\n    ___ ___ = \\\"___\\\";\\n    // move で所有権を移動\\n    ___ ___ = ___(___);\\n    // 文を実行\\n    ___ << ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -557,7 +557,7 @@ export const cpp3Data = {
           "content": "# 値を安全に取り出す方法\\n\\n`optional` の中身を取り出す前に、「値があるか」をチェックします。\\n\\n**身近な例え：**\\nプレゼントの箱を開ける前に、「中身が入っているか」確認してから開けるようなものです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\noptional<int> result = find(v, 5);\\n\\n// 方法1: has_value() でチェック\\nif (result.has_value()) {\\n    cout << result.value() << endl;  // 中身を取り出す\\n}\\n\\n// 方法2: if文で直接チェック（省略形）\\nif (result) {\\n    cout << *result << endl;  // * で中身を取り出す\\n}\\n```\\n\\n**注意：**\\n値がないのに `value()` を呼ぶとエラーになります。必ずチェックしてから使いましょう！"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <optional>\\nusing namespace std;\\n\\nint main() {\\n    // optional で値を保持\\n    optional<int> opt = 42;\\n    // has_value で値の有無をチェック\\n    if (opt.has_value()) {\\n        cout << opt.value() << endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___ ___ ___;\n___\n// ブロックを開始\n___ ___() {\n    // optional で値を保持\n    ___<___> ___ = ___;\n    // has_value で値の有無をチェック\n    if (___.___()) {\n        // 文を実行\n        ___ << ___.___() << ___;\n    // ブロックを閉じる\n    ___\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <iostream>\\n#include <optional>\\nusing namespace std;\\n\\nint main() {\\n    // optional で値を保持\\n    optional<int> opt = 42;\\n    // has_value で値の有無をチェック\\n    if (opt.has_value()) {\\n        cout << opt.value() << endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // optional で値を保持\\n    ___<___> ___ = ___;\\n    // has_value で値の有無をチェック\\n    if (___.___()) {\\n        // 文を実行\\n        ___ << ___.___() << ___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -640,7 +640,7 @@ export const cpp3Data = {
           "content": "# std::array は安全\\n\\n普通の配列（C配列）と比べて、`std::array` は安全な機能がついています。\\n\\n**身近な例え：**\\n普通の配列は「存在しない場所」にアクセスしてもエラーを出してくれません（危険！）。`std::array` は「そこにはないよ！」と教えてくれます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\narray<int, 3> arr = {10, 20, 30};\\n\\n// サイズを聞ける（C配列にはない機能！）\\ncout << arr.size() << endl;  // 3\\n\\n// 安全なアクセス（at を使う）\\narr.at(1);   // OK: 20\\narr.at(10);  // エラー！「範囲外」と教えてくれる\\n\\n// 普通のアクセス（危険）\\narr[10];     // 動くけど何が起こるかわからない...\\n```\\n\\n**オススメ：**\\n- 安全性を重視するなら `at()` を使う\\n- 速度を重視するなら `[]` を使う"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <array>\\nusing namespace std;\\n\\nint main() {\\n    // arrに{10, 20, 30}を代入\\n    array<int, 3> arr = {10, 20, 30};\\n    // : で範囲for文\\n    for (int n : arr) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___ ___ ___;\n___\n// ブロックを開始\n___ ___() {\n    // arrに{10, 20, 30}を代入\n    ___<___, ___> ___ = {___, ___, ___};\n    // : で範囲for文\n    for (___ ___ : ___) ___ << ___ << \\\" \\\";\n    // 文を実行\n    ___ << ___;\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <iostream>\\n#include <array>\\nusing namespace std;\\n\\nint main() {\\n    // arrに{10, 20, 30}を代入\\n    array<int, 3> arr = {10, 20, 30};\\n    // : で範囲for文\\n    for (int n : arr) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // arrに{10, 20, 30}を代入\\n    ___<___, ___> ___ = {___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) ___ << ___ << \\\" \\\";\\n    // 文を実行\\n    ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",
@@ -718,7 +718,7 @@ export const cpp3Data = {
           "content": "# いろいろなキャプチャ方法\\n\\nキャプチャにはいくつかの書き方があります。\\n\\n**身近な例え：**\\n- コピーキャプチャ: 写真を撮って持っていく（元は変わらない）\\n- 参照キャプチャ: リモコンを持っていく（元を直接操作できる）\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nint x = 1, y = 2, z = 3;\\n\\n[x]      // x だけコピーで持ち込む\\n[&x]     // x だけ参照で持ち込む\\n[=]      // 全部コピーで持ち込む\\n[&]      // 全部参照で持ち込む\\n[=, &x]  // 基本コピー、x だけ参照\\n[&, x]   // 基本参照、x だけコピー\\n```\\n\\n**使い分け：**\\n- 値を読むだけ → コピー `[x]`\\n- 値を変更したい → 参照 `[&x]`\\n- たくさんの変数を使う → `[=]` か `[&]`"
         }
       ],
-      "correctCode": "#include <iostream>\\nusing namespace std;\\n\\nint main() {\\n    // xに5を代入\\n    int x = 5;\\n    // x でコピーキャプチャ\\n    auto f = [x]() { return x * x; };\\n    cout << f() << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\n___\n// ライブラリを読み込む\n___ ___ ___;\n___\n// ブロックを開始\n___ ___() {\n    // xに5を代入\n    ___ ___ = ___;\n    // x でコピーキャプチャ\n    ___ ___ = [___]() { return ___ * ___; };\n    // 文を実行\n    ___ << ___() << ___;\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <iostream>\\nusing namespace std;\\n\\nint main() {\\n    // xに5を代入\\n    int x = 5;\\n    // x でコピーキャプチャ\\n    auto f = [x]() { return x * x; };\\n    cout << f() << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // xに5を代入\\n    ___ ___ = ___;\\n    // x でコピーキャプチャ\\n    ___ ___ = [___]() { return ___ * ___; };\\n    // 文を実行\\n    ___ << ___() << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "#include <iostream>",

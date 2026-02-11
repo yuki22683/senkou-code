@@ -45,7 +45,7 @@ export const csharpData = {
           "content": "# Console.WriteLine（コンソール・ライトライン）\\n\\n画面に文字を出したいときは、`Console.WriteLine()` という命令を使います。\\n\\n**Console** は「画面」、**WriteLine** は「1行書く」という意味です。つまり「画面に1行書いてね」とコンピュータにお願いしているんです。\\n\\n**大事なルール：**\\nC#では、文の最後に必ず `;`（セミコロン）をつけます。これは日本語の「。」と同じ役割です。忘れないようにしましょう！\\n\\n**コード例（文字を出すプログラム）：**\\n```csharp\\nConsole.WriteLine(\"ヤッホー！\");\\n```\\n=> ヤッホー！"
         }
       ],
-      "correctCode": "// ライブラリを読み込む\nusing System;\n\n// Programクラスを定義\nclass Program {\n    // Mainメソッドを定義\n    static void Main() {\n        // 画面にメッセージを出す関数\n        Console.WriteLine(\\\"Hello, C#!\\\");\n    // ブロックを閉じる\n    }\n// ブロックを閉じる\n}", "holeyCode": "// ライブラリを読み込む\nusing ___;\n___\n// Programクラスを定義\nclass ___ {\n    // Mainメソッドを定義\n    static void ___() {\n        // 画面にメッセージを出す関数\n        ___.___(\\\"___\\\");\n    // ブロックを閉じる\n    ___\n// ブロックを閉じる\n___",
+      "correctCode": "// ライブラリを読み込む\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 画面にメッセージを出す関数\\n        Console.WriteLine(\\\"Hello, C#!\\\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}", "holeyCode": "// ライブラリを読み込む\\nusing ___;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static void ___() {\\n        // 画面にメッセージを出す関数\\n        ___.___(\\\"___\\\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "using System;",

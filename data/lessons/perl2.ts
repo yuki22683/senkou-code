@@ -366,7 +366,7 @@ export const perl2Data = {
         "candidates": {
           "operators": [
           ],
-          "others": ["(10, 20);", "print", "nums", "@nums", "ref", "1", "\";"]
+          "others": ["(10, 20);", "print", "nums", "@nums", "ref", "1", "\";", "\\@nums"]
         },
         "testCases": [
           {

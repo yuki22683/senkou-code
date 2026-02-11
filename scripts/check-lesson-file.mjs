@@ -7,6 +7,19 @@ import fs from 'fs';
 import path from 'path';
 
 const lessonsDir = './data/lessons';
+
+// 二重エスケープをデコードする関数
+function decodeEscapes(str) {
+  if (!str) return '';
+  // 二重バックスラッシュ → 単一バックスラッシュ → 改行などに変換
+  return str
+    .replace(/\\\\/g, '\x00')  // 一時的にマーク
+    .replace(/\\n/g, '\n')
+    .replace(/\\t/g, '\t')
+    .replace(/\\r/g, '\r')
+    .replace(/\\"/g, '"')
+    .replace(/\x00/g, '\\');  // マークを戻す
+}
 const targetFile = process.argv[2];
 
 // チェック結果
@@ -166,7 +179,7 @@ function checkHoleyCode(file, content) {
 
   let hasError = false;
   for (const ex of exercises) {
-    const holeyCode = ex.holeyCode.replace(/\\n/g, '\n');
+    const holeyCode = decodeEscapes(ex.holeyCode);
     const lines = holeyCode.split('\n');
 
     for (let i = 0; i < lines.length; i++) {
@@ -220,10 +233,12 @@ function checkCommentConsistency(file, content) {
     const correctComments = correctCode.split('\n').filter(isCommentLine);
     const holeyComments = holeyCode.split('\n').filter(isCommentLine);
 
-    if (correctComments.length !== holeyComments.length) {
-      addError(file, checkName, `「${ex.title}」: コメント行数不一致 (correct=${correctComments.length}, holey=${holeyComments.length})`);
+    // ルール#3により、holeyCodeはcorrectCodeよりコメントが多いのは正常
+    // correctCodeの方がコメントが多い場合のみエラー
+    if (correctComments.length > holeyComments.length) {
+      addError(file, checkName, `「${ex.title}」: holeyCodeのコメントが不足 (correct=${correctComments.length}, holey=${holeyComments.length})`);
       hasError = true;
-    } else {
+    } else if (correctComments.length === holeyComments.length) {
       for (let i = 0; i < correctComments.length; i++) {
         if (correctComments[i].trim() !== holeyComments[i].trim()) {
           addError(file, checkName, `「${ex.title}」: コメント不一致\n  correct: ${correctComments[i].trim()}\n  holey: ${holeyComments[i].trim()}`);

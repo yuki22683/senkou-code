@@ -367,7 +367,7 @@ export const bash3Data = {
           "commands": [
             "sort"
           ],
-          "others": ["echo", "-e", "b", "a", "c", "|"]
+          "others": ["echo", "-e", "b", "a", "c", "|", "\"b", "c\\"]
         },
         "testCases": [
           {
@@ -411,7 +411,7 @@ export const bash3Data = {
           "commands": [
             "uniq"
           ],
-          "others": ["echo", "-e", "a", "b", "|"]
+          "others": ["echo", "-e", "a", "b", "|", "\"a", "b\\"]
         },
         "testCases": [
           {

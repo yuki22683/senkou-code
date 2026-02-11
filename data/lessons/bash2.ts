@@ -317,7 +317,7 @@ export const bash2Data = {
         }
       ],
       "correctCode": "# 変数fruitに値を代入\\nfruit=\"りんご\"\\n# fruitの値で分岐\\ncase $fruit in\\n    # りんごの場合\\n    りんご) echo \"赤\";;\\n    # バナナの場合\\n    バナナ) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\nesac",
-      "holeyCode": "# 変数fruitに値を代入\\n___=\"___\"\\n# fruitの値で分岐\\n___ $___ in\\n    # りんごの場合\\n    りんご) ___ \"___\";;\\n    # バナナの場合\\n    ___) ___ \"___\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\n___",
+      "holeyCode": "# 変数fruitに値を代入\\n___=\"___\"\\n# fruitの値で分岐\\n___ $___ in\\n    # りんごの場合\\n    りんご) ___ \"___\";;\\n    # バナナの場合\\n    ___) ___ \"___\";;\\n    # その他の場合\\n    *) ___ \"___\";;\\n___",
       "correctLines": [
           "# 変数fruitに値を代入",
           "fruit=\"りんご\"",
@@ -349,7 +349,7 @@ export const bash2Data = {
             "case",
             "esac"
           ],
-          "others": ["fruit", "りんご", "バナナ", "echo", "赤", "黄色"]
+          "others": ["fruit", "りんご", "バナナ", "echo", "赤", "黄色", "その他"]
         },
         "testCases": [
           {

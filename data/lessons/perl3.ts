@@ -74,7 +74,7 @@ export const perl3Data = {
             "file",
             "read"
           ],
-          "others": ["\"", "close", "print", "fh", "$fh", "die", ";", ">", "/tmp/テスト.txt", "hello\\n", "written\\n", "hello", "written"]
+          "others": ["\"", "close", "print", "fh", "$fh", "die", ";", ">", "/tmp/テスト.txt", "hello\\n", "written\\n", "hello", "written", "hello\\n\";", "# 「written」を出力"]
         },
         "testCases": [
           {
@@ -125,7 +125,7 @@ export const perl3Data = {
             "end",
             "shut"
           ],
-          "others": ["\"", "print", "open", "fh", "$fh", "die", ";", ">", "/tmp/テスト2.txt", "data\\n", "closed\\n", "data", "closed"]
+          "others": ["\"", "print", "open", "fh", "$fh", "die", ";", ">", "/tmp/テスト2.txt", "data\\n", "closed\\n", "data", "closed", "data\\n\";", "# 「closed」を出力"]
         },
         "testCases": [
           {
@@ -172,7 +172,7 @@ export const perl3Data = {
             "trim",
             "strip"
           ],
-          "others": ["text", "$text", "print", "\"", ";", "hello\\n", "[$text]\\n", "hello"]
+          "others": ["text", "$text", "print", "\"", ";", "hello\\n", "[$text]\\n", "hello", "hello\\n\";", "# [$text]を出力"]
         },
         "testCases": [
           {
@@ -241,8 +241,8 @@ export const perl3Data = {
           "content": "# join(区切り文字, @配列)\\n\\n**このコードは何をしているの？**\\n```perl\\nmy @arr = (\"a\", \"b\", \"c\");\\nmy $str = join(\"-\", @arr);\\nprint $str; # a-b-c\\n```\\n\\n**解説：**\\n1. (\"a\", \"b\", \"c\") の配列を `-` でつなげる\\n2. 結果は \"a-b-c\" という文字列\\n\\n**split と join の関係：**\\n- split → 文字列を配列に分解\\n- join → 配列を文字列にまとめる"
         }
       ],
-      "correctCode": "# @wordsに(\\\"hello\\\", \\\"world\\\")を代入\nmy @words = (\\\"hello\\\", \\\"world\\\");\n# joinで結合\nmy $sentence = join(\\\" \\\", @words);\n# $sentenceを出力\nprint \\\"$sentence\n\\\";",
-      "holeyCode": "# @___に(\\\"___\\\", \\\"___\\\")を代入\nmy @___ = (\\\"___\\\", \\\"___\\\");\n# joinで結合\nmy $___ = ___(\\\"___\\\", @___);\n# $sentenceを出力\n___ \\\"$___\n\\\";",
+      "correctCode": "# @wordsに(\\\"hello\\\", \\\"world\\\")を代入\\nmy @words = (\\\"hello\\\", \\\"world\\\");\\n# joinで結合\\nmy $sentence = join(\\\" \\\", @words);\\n# $sentenceを出力\\nprint \\\"$sentence\\n\\\";",
+      "holeyCode": "# @___に(\\\"___\\\", \\\"___\\\")を代入\\nmy @___ = (\\\"___\\\", \\\"___\\\");\\n# joinで結合\\nmy $___ = ___(\\\"___\\\", @___);\\n# $sentenceを出力\\n___ \\\"$___\\n\\\";",
       "correctLines": [
           "# 配列を定義",
           "my @words = (\\\"hello\\\", \\\"world\\\");",
@@ -288,8 +288,8 @@ export const perl3Data = {
           "content": "# push(@配列, 追加する値)\\n\\n**このコードは何をしているの？**\\n```perl\\nmy @arr = (1, 2);\\npush(@arr, 3);\\nprint $arr[2]; # 3\\n```\\n\\n**解説：**\\n1. @arr は (1, 2)\\n2. push で 3 を末尾に追加\\n3. @arr は (1, 2, 3) になる\\n4. `$arr[2]` は 3\\n\\n**複数追加：** `push(@arr, 3, 4, 5)` で一度に複数追加できます。"
         }
       ],
-      "correctCode": "# @numsに(1, 2)を代入\nmy @nums = (1, 2);\n# pushで追加\npush(@nums, 3);\n# @numsを出力\nprint \\\"@nums\n\\\";",
-      "holeyCode": "# @___に(___, ___)を代入\nmy @___ = (___, ___);\n# pushで追加\n___(@___, ___);\n# @numsを出力\n___ \\\"@___\n\\\";",
+      "correctCode": "# @numsに(1, 2)を代入\\nmy @nums = (1, 2);\\n# pushで追加\\npush(@nums, 3);\\n# @numsを出力\\nprint \\\"@nums\\n\\\";",
+      "holeyCode": "# @___に(___, ___)を代入\\nmy @___ = (___, ___);\\n# pushで追加\\n___(@___, ___);\\n# @numsを出力\\n___ \\\"@___\\n\\\";",
       "correctLines": [
           "# 配列を定義",
           "my @nums = (1, 2);",
@@ -335,8 +335,8 @@ export const perl3Data = {
           "content": "# pop(@配列)\\n\\n**このコードは何をしているの？**\\n```perl\\nmy @arr = (1, 2, 3);\\nmy $last = pop(@arr);\\nprint $last; # 3\\n```\\n\\n**解説：**\\n1. @arr は (1, 2, 3)\\n2. pop で末尾の 3 を取り出す\\n3. `$last` に 3 が入る\\n4. @arr は (1, 2) になる\\n\\n**push と pop の関係：**\\n- push → 末尾に追加\\n- pop → 末尾から取り出し"
         }
       ],
-      "correctCode": "# @numsに(10, 20, 30)を代入\nmy @nums = (10, 20, 30);\n# popで取り出す\nmy $last = pop(@nums);\n# $lastを出力\nprint \\\"$last\n\\\";",
-      "holeyCode": "# @___に(___, ___, ___)を代入\nmy @___ = (___, ___, ___);\n# popで取り出す\nmy $___ = ___(@___);\n# $lastを出力\n___ \\\"$___\n\\\";",
+      "correctCode": "# @numsに(10, 20, 30)を代入\\nmy @nums = (10, 20, 30);\\n# popで取り出す\\nmy $last = pop(@nums);\\n# $lastを出力\\nprint \\\"$last\\n\\\";",
+      "holeyCode": "# @___に(___, ___, ___)を代入\\nmy @___ = (___, ___, ___);\\n# popで取り出す\\nmy $___ = ___(@___);\\n# $lastを出力\\n___ \\\"$___\\n\\\";",
       "correctLines": [
           "# 配列を定義",
           "my @nums = (10, 20, 30);",
@@ -382,8 +382,8 @@ export const perl3Data = {
           "content": "# sort @配列\\n\\n**このコードは何をしているの？**\\n```perl\\nmy @sorted = sort @arr;\\nmy @nums = sort { $a <=> $b } @nums;\\n```\\n\\n**解説：**\\n- `sort @arr` → 文字列順に並べ替え\\n- `sort { $a <=> $b } @nums` → 数値順に並べ替え\\n\\n**なぜ数値順は違う書き方？**\\n- デフォルトは文字列比較（\"10\" < \"2\" になる）\\n- `<=>` は数値比較（10 > 2 になる）\\n- `$a` と `$b` は比較する2つの値を表す特別な変数"
         }
       ],
-      "correctCode": "# @wordsに(\\\"バナナ\\\", \\\"りんご\\\", \\\"さくらんぼ\\\")を代入\nmy @words = (\\\"バナナ\\\", \\\"りんご\\\", \\\"さくらんぼ\\\");\n# sortで並べ替え\nmy @sorted = sort @words;\n# $sorted[0]を出力\nprint \\\"$sorted[0]\n\\\";",
-      "holeyCode": "# @___に(\\\"___\\\", \\\"___\\\", \\\"___\\\")を代入\nmy @___ = (\\\"___\\\", \\\"___\\\", \\\"___\\\");\n# sortで並べ替え\nmy @___ = ___ @___;\n# $sorted[0]を出力\n___ \\\"$___[___]\n\\\";",
+      "correctCode": "# @wordsに(\\\"バナナ\\\", \\\"りんご\\\", \\\"さくらんぼ\\\")を代入\\nmy @words = (\\\"バナナ\\\", \\\"りんご\\\", \\\"さくらんぼ\\\");\\n# sortで並べ替え\\nmy @sorted = sort @words;\\n# $sorted[0]を出力\\nprint \\\"$sorted[0]\\n\\\";",
+      "holeyCode": "# @___に(\\\"___\\\", \\\"___\\\", \\\"___\\\")を代入\\nmy @___ = (\\\"___\\\", \\\"___\\\", \\\"___\\\");\\n# sortで並べ替え\\nmy @___ = ___ @___;\\n# $sorted[0]を出力\\n___ \\\"$___[___]\\n\\\";",
       "correctLines": [
           "# 配列を定義",
           "my @words = (\\\"バナナ\\\", \\\"りんご\\\", \\\"さくらんぼ\\\");",
@@ -429,8 +429,8 @@ export const perl3Data = {
           "content": "# reverse @配列 または reverse 文字列\\n\\n**このコードは何をしているの？**\\n```perl\\nmy @rev = reverse @arr;\\nmy $str = reverse \"hello\"; # olleh\\n```\\n\\n**解説：**\\n- `reverse @arr` → 配列を逆順に\\n- `reverse \"hello\"` → 文字列を逆順に（\"olleh\"）\\n\\n**sort と reverse を組み合わせ：**\\n```perl\\nmy @desc = reverse sort @arr;  # 降順\\n```"
         }
       ],
-      "correctCode": "# @numsに(1, 2, 3)を代入\nmy @nums = (1, 2, 3);\n# reverseで逆順に\nmy @rev = reverse @nums;\n# @revを出力\nprint \\\"@rev\n\\\";",
-      "holeyCode": "# @___に(___, ___, ___)を代入\nmy @___ = (___, ___, ___);\n# reverseで逆順に\nmy @___ = ___ @___;\n# @revを出力\n___ \\\"@___\n\\\";",
+      "correctCode": "# @numsに(1, 2, 3)を代入\\nmy @nums = (1, 2, 3);\\n# reverseで逆順に\\nmy @rev = reverse @nums;\\n# @revを出力\\nprint \\\"@rev\\n\\\";",
+      "holeyCode": "# @___に(___, ___, ___)を代入\\nmy @___ = (___, ___, ___);\\n# reverseで逆順に\\nmy @___ = ___ @___;\\n# @revを出力\\n___ \\\"@___\\n\\\";",
       "correctLines": [
           "# 配列を定義",
           "my @nums = (1, 2, 3);",

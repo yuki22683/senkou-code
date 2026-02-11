@@ -121,7 +121,7 @@ export const perlData = {
             "local",
             "var"
           ],
-          "others": ["message", "print", "\";", "Perl"]
+          "others": ["message", "print", "\";", "Perl", "message\\n\";"]
         },
         "testCases": [
           {
@@ -176,7 +176,7 @@ export const perlData = {
             "*",
             "/"
           ],
-          "others": ["a", "b", "sum", "print", "\";", "my", "7", "3"]
+          "others": ["a", "b", "sum", "print", "\";", "my", "7", "3", "sum\\n\";"]
         },
         "testCases": [
           {
@@ -223,7 +223,7 @@ export const perlData = {
             ",",
             "&"
           ],
-          "others": ["greeting", "print", "\";", "my", "Hello,", "Perl!"]
+          "others": ["greeting", "print", "\";", "my", "Hello,", "Perl!", "greeting\\n\";"]
         },
         "testCases": [
           {
@@ -323,7 +323,7 @@ export const perlData = {
             "while",
             "for"
           ],
-          "others": ["score", "==", "print", "}", "\";", "my", "100", "{", "満点！"]
+          "others": ["score", "==", "print", "}", "\";", "my", "100", "{", "満点！", "満点！\\n\";"]
         },
         "testCases": [
           {
@@ -384,7 +384,7 @@ export const perlData = {
             "then",
             "otherwise"
           ],
-          "others": ["num", ">=", "{", "print", "}", "{", "\";", "my", "5", "if", "10", "大きい", "小さい"]
+          "others": ["num", ">=", "{", "print", "}", "{", "\";", "my", "5", "if", "10", "大きい", "小さい", "大きい\\n\";", "# 「小さい」を出力"]
         },
         "testCases": [
           {
@@ -437,7 +437,7 @@ export const perlData = {
             "while",
             "until"
           ],
-          "others": ["animals", "print", "}", "\";", "my", "犬", "猫", "鳥", "animal", "{"]
+          "others": ["animals", "print", "}", "\";", "my", "犬", "猫", "鳥", "animal", "{", "animal\\n\";"]
         },
         "testCases": [
           {
@@ -539,7 +539,7 @@ export const perlData = {
             "function",
             "fn"
           ],
-          "others": ["welcome", "print", "}", "\";", "}", "{", "Welcome!"]
+          "others": ["welcome", "print", "}", "\";", "}", "{", "Welcome!", "Welcome!\\n\";"]
         },
         "testCases": [
           {

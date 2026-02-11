@@ -25,7 +25,7 @@ export const c2Data = {
           "content": "# * を使って宣言します\\n\\n`int *p` のように `*` をつけるとポインタ変数になります。`&x` で x の住所を取得し、`*p` で住所の中身を見ます。\\n\\n**コード例：**\\n```c\\nint x = 10;\\nint *p = &x;      // p に x の住所を入れる\\nprintf(\"%d\\n\", *p); // p が指す中身を表示 → 10\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\nint main() {\\n    int x = 42;\\n    // xのアドレスを取得する演算子\\n    int *p = &x;\\n    printf(\"%d\\n\", *p);\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___ ___() {\n    // 変数を宣言\n    ___ ___ = ___;\n    // xのアドレスを取得する演算子\n    ___ *___ = &___;\n    // 出力\n    ___(\\\"___\\\", *___);\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <stdio.h>\\nint main() {\\n    int x = 42;\\n    // xのアドレスを取得する演算子\\n    int *p = &x;\\n    printf(\"%d\\n\", *p);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // xのアドレスを取得する演算子\\n    ___ *___ = &___;\\n    // 出力\\n    ___(\\\"___\\\", *___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "int main() {",
@@ -80,7 +80,7 @@ export const c2Data = {
           "content": "# * で中身にアクセス\\n\\n`*p` と書くと「p が指している場所の中身」を意味します。読み取りだけでなく、書き込みもできます。\\n\\n**コード例：**\\n```c\\nint x = 5;\\nint *p = &x;\\n*p = 100;  // x が 100 に変わる\\nprintf(\"%d\\n\", x); // 100\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\nint main() {\\n    int n = 10;\\n    int *ptr = &n;\\n    // ptrが指す先の値にアクセスする演算子\\n    *ptr = 99;\\n    printf(\"%d\\n\", n);\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___ ___() {\n    // 変数を宣言\n    ___ ___ = ___;\n    // 変数を宣言\n    ___ *___ = &___;\n    // ptrが指す先の値にアクセスする演算子\n    *___ = ___;\n    ___(\\\"___\\\", ___);\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <stdio.h>\\nint main() {\\n    int n = 10;\\n    int *ptr = &n;\\n    // ptrが指す先の値にアクセスする演算子\\n    *ptr = 99;\\n    printf(\"%d\\n\", n);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // 変数を宣言\\n    ___ *___ = &___;\\n    // ptrが指す先の値にアクセスする演算子\\n    *___ = ___;\\n    ___(\\\"___\\\", ___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "int main() {",
@@ -137,7 +137,7 @@ export const c2Data = {
           "content": "# かっこの中に引数を定義\\n\\n関数名の後の () の中に引数を書きます。型と名前を指定します。\\n\\n**コード例：**\\n```c\\nvoid greet(int age) {\\n    printf(\"%d歳ですね\\n\", age);\\n}\\n\\ngreet(10); // 10歳ですね\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n// show関数の引数numを定義\\nvoid show(int num) {\\n    printf(\"%d\\n\", num);\\n}\\nint main() {\\n    show(25);\\n    return 0;\\n}", "holeyCode": "#___ <___>\n// show関数の引数numを定義\n___ ___(int ___) {\n    // 出力\n    ___(\\\"___\\\", ___);\n// ブロックを閉じる\n___\n// ブロックを開始\n___ ___() {\n    // 文を実行\n    ___(___);\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <stdio.h>\\n// show関数の引数numを定義\\nvoid show(int num) {\\n    printf(\"%d\\n\", num);\\n}\\nint main() {\\n    show(25);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n// show関数の引数numを定義\\n___ ___(int ___) {\\n    // 出力\\n    ___(\\\"___\\\", ___);\\n// ブロックを閉じる\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 文を実行\\n    ___(___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "// show関数の引数numを定義",
@@ -198,7 +198,7 @@ export const c2Data = {
           "content": "# 型を指定して結果を返す\\n\\n関数名の前に戻り値の型を書きます。`void` は戻り値なし、`int` は整数を返します。\\n\\n**コード例：**\\n```c\\nint add(int a, int b) {\\n    return a + b;\\n}\\n\\nint result = add(3, 5); // 8\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\nint double_it(int x) {\\n    // 2倍にした値を返す\\n    return x * 2;\\n}\\nint main() {\\n    int result = double_it(7);\\n    printf(\"%d\\n\", result);\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___ ___(int ___) {\n    // 2倍にした値を返す\n    ___ ___ * ___;\n// ブロックを閉じる\n___\n// ブロックを開始\n___ ___() {\n    // 変数を宣言\n    ___ ___ = ___(___);\n    // 出力\n    ___(\\\"___\\\", ___);\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <stdio.h>\\nint double_it(int x) {\\n    // 2倍にした値を返す\\n    return x * 2;\\n}\\nint main() {\\n    int result = double_it(7);\\n    printf(\"%d\\n\", result);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___ ___(int ___) {\\n    // 2倍にした値を返す\\n    ___ ___ * ___;\\n// ブロックを閉じる\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___(___);\\n    // 出力\\n    ___(\\\"___\\\", ___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "int double_it(int x) {",
@@ -261,7 +261,7 @@ export const c2Data = {
           "content": "# ポインタ演算\\n\\nポインタに数字を足すと、その分だけ先の要素を指します。`*(p + 1)` は `p[1]` と同じです。\\n\\n**コード例：**\\n```c\\nint arr[] = {10, 20, 30};\\nint *p = arr;\\nprintf(\"%d\\n\", *(p + 1)); // 20\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\nint main() {\\n    int arr[] = {5, 15, 25};\\n    // 配列の先頭アドレスを代入\\n    int *p = arr;\\n    printf(\"%d\\n\", *(p + 2));\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___ ___() {\n    // 変数を宣言\n    ___ ___[] = {___, ___, ___};\n    // 配列の先頭アドレスを代入\n    ___ *___ = ___;\n    // 出力\n    ___(\\\"___\\\", *(___ + ___));\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <stdio.h>\\nint main() {\\n    int arr[] = {5, 15, 25};\\n    // 配列の先頭アドレスを代入\\n    int *p = arr;\\n    printf(\"%d\\n\", *(p + 2));\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___[] = {___, ___, ___};\\n    // 配列の先頭アドレスを代入\\n    ___ *___ = ___;\\n    // 出力\\n    ___(\\\"___\\\", *(___ + ___));\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "int main() {",
@@ -316,7 +316,7 @@ export const c2Data = {
           "content": "# %s を使って表示\\n\\n文字列を表示するには `%s` を使います。ダブルクォートで囲んだ文字列は自動的にヌル終端されます。\\n\\n**コード例：**\\n```c\\nchar name[] = \"Taro\";\\nprintf(\"%s\\n\", name); // Taro\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\nint main() {\\n    char msg[] = \"こんにちは\";\\n    // 文字列を表示する書式指定子\\n    printf(\"%s\\n\", msg);\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___ ___() {\n    // \\\"\\\"\n    ___ ___[] = \\\"___\\\";\n    // 文字列を表示する書式指定子\n    ___(\\\"___\\\", ___);\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <stdio.h>\\nint main() {\\n    char msg[] = \"こんにちは\";\\n    // 文字列を表示する書式指定子\\n    printf(\"%s\\n\", msg);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___ ___() {\\n    // \\\"\\\"\\n    ___ ___[] = \\\"___\\\";\\n    // 文字列を表示する書式指定子\\n    ___(\\\"___\\\", ___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "int main() {",
@@ -367,7 +367,7 @@ export const c2Data = {
           "content": "# 関数側でポインタを受け取る\\n\\n関数の引数をポインタにし、呼び出し時に `&` でアドレスを渡します。\\n\\n**コード例：**\\n```c\\nvoid add_ten(int *p) {\\n    *p = *p + 10;\\n}\\n\\nint x = 5;\\nadd_ten(&x);\\nprintf(\"%d\\n\", x); // 15\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\nvoid triple(int *p) {\\n    *p = *p * 3;\\n}\\nint main() {\\n    int val = 4;\\n    // valのアドレスを取得する演算子\\n    triple(&val);\\n    printf(\"%d\\n\", val);\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___ ___(___ *___) {\n    *___ = *___ * ___;\n___\n// ブロックを開始\n___ ___() {\n    // 変数を宣言\n    ___ ___ = ___;\n    // valのアドレスを取得する演算子\n    ___(&___);\n    // 出力\n    ___(\\\"___\\\", ___);\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <stdio.h>\\nvoid triple(int *p) {\\n    *p = *p * 3;\\n}\\nint main() {\\n    int val = 4;\\n    // valのアドレスを取得する演算子\\n    triple(&val);\\n    printf(\"%d\\n\", val);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___ ___(___ *___) {\\n    *___ = *___ * ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // valのアドレスを取得する演算子\\n    ___(&___);\\n    // 出力\\n    ___(\\\"___\\\", ___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "void triple(int *p) {",
@@ -430,7 +430,7 @@ export const c2Data = {
           "content": "# stdlib.h が必要\\n\\n`malloc(サイズ)` でメモリを確保し、ポインタで受け取ります。必ず `free` で解放しましょう。\\n\\n**コード例：**\\n```c\\n#include <stdlib.h>\\nint *p = malloc(sizeof(int));\\n*p = 100;\\nprintf(\"%d\\n\", *p);\\nfree(p);\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n#include <stdlib.h>\\nint main() {\\n    int *p = malloc(sizeof(int));\\n    *p = 50;\\n    printf(\"%d\\n\", *p);\\n    // 確保したメモリを解放する関数\\n    free(p);\\n    return 0;\\n}", "holeyCode": "#___ <___>\n#___ <___>\n___ ___() {\n    // 変数を宣言\n    ___ *___ = ___(sizeof(___));\n    *___ = ___;\n    ___(\\\"___\\\", *___);\n    // 確保したメモリを解放する関数\n    ___(___);\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <stdio.h>\\n#include <stdlib.h>\\nint main() {\\n    int *p = malloc(sizeof(int));\\n    *p = 50;\\n    printf(\"%d\\n\", *p);\\n    // 確保したメモリを解放する関数\\n    free(p);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n#___ <___>\\n___ ___() {\\n    // 変数を宣言\\n    ___ *___ = ___(sizeof(___));\\n    *___ = ___;\\n    ___(\\\"___\\\", *___);\\n    // 確保したメモリを解放する関数\\n    ___(___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "#include <stdlib.h>",
@@ -555,7 +555,7 @@ export const c2Data = {
           "content": "# 値は自動で 0 から割り当て\\n\\nenum で定義した名前には、自動的に 0, 1, 2... と値が割り当てられます。\\n\\n**コード例：**\\n```c\\nenum Color { RED, GREEN, BLUE };\\nenum Color c = GREEN;\\nprintf(\"%d\\n\", c); // 1\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\nenum Day { MON, TUE, WED };\\nint main() {\\n    // 列挙型の変数を宣言するキーワード\\n    enum Day today = WED;\\n    printf(\"%d\\n\", today);\\n    return 0;\\n}", "holeyCode": "#___ <___>\n___ ___ { ___, ___, ___ };\n// ブロックを開始\n___ ___() {\n    // 列挙型の変数を宣言するキーワード\n    ___ ___ ___ = ___;\n    // 出力\n    ___(\\\"___\\\", ___);\n    // 0を返す\n    ___ ___;\n// ブロックを閉じる\n___",
+      "correctCode": "#include <stdio.h>\\nenum Day { MON, TUE, WED };\\nint main() {\\n    // 列挙型の変数を宣言するキーワード\\n    enum Day today = WED;\\n    printf(\"%d\\n\", today);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___ ___ { ___, ___, ___ };\\n// ブロックを開始\\n___ ___() {\\n    // 列挙型の変数を宣言するキーワード\\n    ___ ___ ___ = ___;\\n    // 出力\\n    ___(\\\"___\\\", ___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "enum Day { MON, TUE, WED };",
