@@ -143,7 +143,7 @@ export const haskell2Data = {
         ],
       "lineHints": [
           null,
-          "numsに[1, 2, 3]のリストを代入します。",
+          "1から3までの数値リストをnumsに代入します。",
           null,
           "main関数でhead numsを呼び出して先頭要素を表示します。"
         ],

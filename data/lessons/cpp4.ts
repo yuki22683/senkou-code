@@ -265,7 +265,7 @@ export const cpp4Data = {
           "content": "# 文字列を大文字に変換\\n\\n`transform` は文字列の変換にも使えます。\\n\\n**身近な例え：**\\n「hello」という文字を1文字ずつ大文字スタンプで押し直すイメージです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nstring s = \"hello\";\\n\\n// 各文字を大文字に変換（結果を同じ場所に上書き）\\ntransform(s.begin(), s.end(), s.begin(), ::toupper);\\n//        ↑開始    ↑終了    ↑出力先   ↑変換関数\\n\\ncout << s << endl;  // \"HELLO\"\\n```\\n\\n**ポイント：**\\n- 出力先を元の配列にすれば「上書き」できる\\n- `::toupper` は「大文字に変換」する関数"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <algorithm>\\nusing namespace std;\\n\\nint main() {\\n    // vに{1, 2, 3}を代入\\n    vector<int> v = {1, 2, 3};\\n    // transform で各要素を変換\\n    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });\\n    for (int n : v) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // vに{1, 2, 3}を代入\\n    ___<___> ___ = {___, ___, ___};\\n    // transform で各要素を変換\\n    ___(___.___, ___.___, ___.___, [](___) { ___ ___ * ___; });\\n    // 文を実行\\n    for (___ : ___) ___ << ___ << ___;\\n    // 文を実行\\n    ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <algorithm>\\nusing namespace std;\\n\\nint main() {\\n    // 数値配列（1、2、3）をvに代入\\n    vector<int> v = {1, 2, 3};\\n    // transform で各要素を変換\\n    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });\\n    for (int n : v) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 数値配列（1、2、3）をvに代入\\n    ___<___> ___ = {___, ___, ___};\\n    // transform で各要素を変換\\n    ___(___.___, ___.___, ___.___, [](___) { ___ ___ * ___; });\\n    // 文を実行\\n    for (___ : ___) ___ << ___ << ___;\\n    // 文を実行\\n    ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <vector>",
@@ -273,7 +273,7 @@ export const cpp4Data = {
           "using namespace std;",
           "",
           "int main() {",
-          "    // vに{1, 2, 3}を代入",
+          "    // 数値配列（1、2、3）をvに代入",
           "    vector<int> v = {1, 2, 3};",
           "    // transform で各要素を変換",
           "    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });",
@@ -326,7 +326,7 @@ export const cpp4Data = {
           "content": "# 足し算以外の計算もできる\\n\\n4つ目の引数で「どうやってまとめるか」を指定できます。\\n\\n**身近な例え：**\\n「全部足す」だけでなく「全部かける」「最大値を見つける」など、まとめ方を変えられます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvector<int> v = {1, 2, 3, 4, 5};\\n\\n// 全部かけ算する（初期値は 1）\\nint product = accumulate(v.begin(), v.end(), 1,\\n    [](int a, int b) { return a * b; });\\n// 1 * 1 * 2 * 3 * 4 * 5 = 120\\ncout << product << endl;  // 120\\n```\\n\\n**ポイント：**\\n- 足し算の初期値は `0`（0 + 1 + 2 + ...）\\n- かけ算の初期値は `1`（1 * 1 * 2 * ...）\\n- ラムダ式で好きな計算ができる"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <numeric>\\nusing namespace std;\\n\\nint main() {\\n    // vに{1, 2, 3, 4, 5}を代入\\n    vector<int> v = {1, 2, 3, 4, 5};\\n    // accumulate で要素を集約\\n    int sum = accumulate(v.begin(), v.end(), 0);\\n    cout << sum << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // vに{1, 2, 3, 4, 5}を代入\\n    ___<___> ___ = {___, ___, ___, ___, ___};\\n    // accumulate で要素を集約\\n    ___ ___ = ___(___.___, ___.___, ___);\\n    // 文を実行\\n    ___ << ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <numeric>\\nusing namespace std;\\n\\nint main() {\\n    // 数値配列（1〜5）をvに代入\\n    vector<int> v = {1, 2, 3, 4, 5};\\n    // accumulate で要素を集約\\n    int sum = accumulate(v.begin(), v.end(), 0);\\n    cout << sum << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 数値配列（1〜5）をvに代入\\n    ___<___> ___ = {___, ___, ___, ___, ___};\\n    // accumulate で要素を集約\\n    ___ ___ = ___(___.___, ___.___, ___);\\n    // 文を実行\\n    ___ << ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <vector>",
@@ -334,7 +334,7 @@ export const cpp4Data = {
           "using namespace std;",
           "",
           "int main() {",
-          "    // vに{1, 2, 3, 4, 5}を代入",
+          "    // 数値配列（1〜5）をvに代入",
           "    vector<int> v = {1, 2, 3, 4, 5};",
           "    // accumulate で要素を集約",
           "    int sum = accumulate(v.begin(), v.end(), 0);",
@@ -385,7 +385,7 @@ export const cpp4Data = {
           "content": "# 見つからなかったらどうなる？\\n\\n条件に合う要素が1つもない場合、`end()` が返されます。\\n\\n**身近な例え：**\\n本棚を全部見ても「赤い本」がなかったら、「本棚の外」を指して「なかったよ」と教えてくれます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvector<int> v = {1, 3, 5, 7};  // 偶数がない！\\n\\nauto it = find_if(v.begin(), v.end(),\\n    [](int x) { return x % 2 == 0; });\\n\\n// 見つかったかどうかをチェック\\nif (it != v.end()) {\\n    cout << \"Found: \" << *it << endl;\\n} else {\\n    cout << \"Not found\" << endl;  // これが表示される\\n}\\n```\\n\\n**重要：**\\n必ず `end()` と比較してから使いましょう！"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <algorithm>\\nusing namespace std;\\n\\nint main() {\\n    // vに{1, 2, 3, 4, 5}を代入\\n    vector<int> v = {1, 2, 3, 4, 5};\\n    // find_if で条件に合う要素を検索\\n    auto it = find_if(v.begin(), v.end(), [](int x) { return x > 3; });\\n    cout << *it << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // vに{1, 2, 3, 4, 5}を代入\\n    ___<___> ___ = {___, ___, ___, ___, ___};\\n    // find_if で条件に合う要素を検索\\n    ___ ___ = ___(___.___, ___.___, [](___) { ___ ___ > ___; });\\n    // 文を実行\\n    ___ << ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <algorithm>\\nusing namespace std;\\n\\nint main() {\\n    // 数値配列（1〜5）をvに代入\\n    vector<int> v = {1, 2, 3, 4, 5};\\n    // find_if で条件に合う要素を検索\\n    auto it = find_if(v.begin(), v.end(), [](int x) { return x > 3; });\\n    cout << *it << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 数値配列（1〜5）をvに代入\\n    ___<___> ___ = {___, ___, ___, ___, ___};\\n    // find_if で条件に合う要素を検索\\n    ___ ___ = ___(___.___, ___.___, [](___) { ___ ___ > ___; });\\n    // 文を実行\\n    ___ << ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <vector>",
@@ -393,7 +393,7 @@ export const cpp4Data = {
           "using namespace std;",
           "",
           "int main() {",
-          "    // vに{1, 2, 3, 4, 5}を代入",
+          "    // 数値配列（1〜5）をvに代入",
           "    vector<int> v = {1, 2, 3, 4, 5};",
           "    // find_if で条件に合う要素を検索",
           "    auto it = find_if(v.begin(), v.end(), [](int x) { return x > 3; });",
@@ -444,7 +444,7 @@ export const cpp4Data = {
           "content": "# クラスのオブジェクトを並べ替え\\n\\n自分で作ったクラスのリストも、好きな基準でソートできます。\\n\\n**身近な例え：**\\n名簿を「名前順」で並べるか「年齢順」で並べるか選べるようなものです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nstruct Person {\\n    string name;\\n    int age;\\n};\\n\\nvector<Person> people = {\\n    {\"太郎\", 25}, {\"花子\", 20}, {\"次郎\", 30}\\n};\\n\\n// 年齢で並べ替え（若い順）\\nsort(people.begin(), people.end(),\\n    [](const Person& a, const Person& b) {\\n        return a.age < b.age;  // 年齢が小さい方を前に\\n    });\\n// 結果: 花子(20), 太郎(25), 次郎(30)\\n```\\n\\n`const Person&` で受け取ると、コピーせず効率的に比較できます。"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <algorithm>\\nusing namespace std;\\n\\nint main() {\\n    // vに{3, 1, 4, 1, 5}を代入\\n    vector<int> v = {3, 1, 4, 1, 5};\\n    // sort でソート\\n    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });\\n    for (int n : v) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // vに{3, 1, 4, 1, 5}を代入\\n    ___<___> ___ = {___, ___, ___, ___, ___};\\n    // sort でソート\\n    ___(___.___, ___.___, [](___) { ___ ___ > ___; });\\n    // 文を実行\\n    for (___ : ___) ___ << ___ << ___;\\n    // 文を実行\\n    ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <algorithm>\\nusing namespace std;\\n\\nint main() {\\n    // 数値配列（3、1、4、1、5）をvに代入\\n    vector<int> v = {3, 1, 4, 1, 5};\\n    // sort でソート\\n    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });\\n    for (int n : v) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 数値配列（3、1、4、1、5）をvに代入\\n    ___<___> ___ = {___, ___, ___, ___, ___};\\n    // sort でソート\\n    ___(___.___, ___.___, [](___) { ___ ___ > ___; });\\n    // 文を実行\\n    for (___ : ___) ___ << ___ << ___;\\n    // 文を実行\\n    ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <vector>",
@@ -452,7 +452,7 @@ export const cpp4Data = {
           "using namespace std;",
           "",
           "int main() {",
-          "    // vに{3, 1, 4, 1, 5}を代入",
+          "    // 数値配列（3、1、4、1、5）をvに代入",
           "    vector<int> v = {3, 1, 4, 1, 5};",
           "    // sort でソート",
           "    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });",

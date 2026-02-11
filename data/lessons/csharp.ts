@@ -343,10 +343,10 @@ export const csharpData = {
           "content": "# 配列の作り方と使い方\\n\\n型の後ろに `[]`（角かっこ）をつけると配列になります。\\n\\n**大事なルール：**\\n配列の番号は **0番** から始まります！1番目のデータは「0番」、2番目は「1番」です。\\n\\n**コード例（くだものリストを作る）：**\\n```csharp\\nstring[] fruits = {\"りんご\", \"バナナ\"};\\nConsole.WriteLine(fruits[0]); // \"りんご\" が表示される\\nConsole.WriteLine(fruits[1]); // \"バナナ\" が表示される\\n```\\n\\n**解説：**\\n- `string[]` で「文字の配列」を宣言\\n- `{\"りんご\", \"バナナ\"}` で中身を入れる\\n- `fruits[0]` で1番目（0番）のデータを取り出す"
         }
       ],
-      "correctCode": "// colorsに{\"赤\", \"青\", \"緑\"}を代入\\nstring[] colors = {\"赤\", \"青\", \"緑\"};\\n// 2番目のデータを出す\\nConsole.WriteLine(colors[1]);",
-      "holeyCode": "// colorsに{\"赤\", \"青\", \"緑\"}を代入\\n___[] ___ = {\"___\", \"___\", \"___\"};\\n// 2番目のデータを出す\\n___.___(___[___]);",
+      "correctCode": "// 色配列（赤、青、緑）をcolorsに代入\\nstring[] colors = {\"赤\", \"青\", \"緑\"};\\n// 2番目のデータを出す\\nConsole.WriteLine(colors[1]);",
+      "holeyCode": "// 色配列（赤、青、緑）をcolorsに代入\\n___[] ___ = {\"___\", \"___\", \"___\"};\\n// 2番目のデータを出す\\n___.___(___[___]);",
       "correctLines": [
-          "// colorsに{\"赤\", \"青\", \"緑\"}を代入",
+          "// 色配列（赤、青、緑）をcolorsに代入",
           "string[] colors = {\"赤\", \"青\", \"緑\"};",
           "// 2番目のデータを出す",
           "Console.WriteLine(colors[1]);"
@@ -566,10 +566,10 @@ export const csharpData = {
           "content": "# 配列を順番に処理する\\n\\n配列の中身を最初から最後まで順番に取り出すときは、**foreach**（フォーイーチ）を使うと便利です。「for each」は「それぞれに対して」という意味です。\\n\\n**コード例（名前を順番に表示）：**\\n```csharp\\nstring[] names = {\"太郎\", \"花子\"};\\nforeach (string name in names)\\n{\\n    Console.WriteLine(name);\\n}\\n```\\n=> 太郎\\n=> 花子\\n\\n**解説：**\\n1. `foreach (string name in names)` で「namesの中身を1つずつnameに入れて」と指示\\n2. 1回目のループ：nameに「太郎」が入り、表示される\\n3. 2回目のループ：nameに「花子」が入り、表示される\\n4. 全部終わったらループを抜ける"
         }
       ],
-      "correctCode": "// namesに{\"太郎\", \"花子\"}を代入\\nstring[] names = {\"太郎\", \"花子\"};\\n// 順番に取り出すループ\\nforeach (string name in names)\\n{\\n    // 取り出した名前を表示\\n    Console.WriteLine(name);\\n}",
-      "holeyCode": "// namesに{\"太郎\", \"花子\"}を代入\\n___[] ___ = {\"___\", \"___\"};\\n// 順番に取り出すループ\\nforeach (___ ___ in ___)\\n// ブロックを開始\\n___\\n    // 取り出した名前を表示\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "// 名前配列（太郎、花子）をnamesに代入\\nstring[] names = {\"太郎\", \"花子\"};\\n// 順番に取り出すループ\\nforeach (string name in names)\\n{\\n    // 取り出した名前を表示\\n    Console.WriteLine(name);\\n}",
+      "holeyCode": "// 名前配列（太郎、花子）をnamesに代入\\n___[] ___ = {\"___\", \"___\"};\\n// 順番に取り出すループ\\nforeach (___ ___ in ___)\\n// ブロックを開始\\n___\\n    // 取り出した名前を表示\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// namesに{\"太郎\", \"花子\"}を代入",
+          "// 名前配列（太郎、花子）をnamesに代入",
           "string[] names = {\"太郎\", \"花子\"};",
           "// 順番に取り出すループ",
           "foreach (string name in names)",

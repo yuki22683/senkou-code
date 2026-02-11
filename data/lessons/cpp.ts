@@ -323,13 +323,13 @@ export const cppData = {
           "content": "# 書き方のルール\\n\\n`< >` の中に「何を入れるか」を指定します。\\n- `<int>`: 整数を入れる\\n- `<std::string>`: 文字列を入れる\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n#include <vector>  // vectorを使う準備\\n\\n// 文字列を入れる vector を作る\\nstd::vector<std::string> items = {\"Apple\", \"Orange\"};\\nstd::cout << items[0] << std::endl;  // 0番目を表示\\n```\\n=> Apple と表示されます\\n\\n**ポイント：**\\n- 普通の配列と同じく、番号は0から始まります\\n- `items[0]` は1番目の要素「Apple」です"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <string>\\nint main() {\\n    // fruitsに{\"りんご\", \"バナナ\"}を代入\\n    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    std::cout << fruits[1] << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // fruitsに{\\\"りんご\\\", \\\"バナナ\\\"}を代入\\n    ___::___<___::___> ___ = {\\\"___\\\", \\\"___\\\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    ___::___ << ___[___] << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <string>\\nint main() {\\n    // 果物配列（りんご、バナナ）をfruitsに代入\\n    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    std::cout << fruits[1] << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 果物配列（りんご、バナナ）をfruitsに代入\\n    ___::___<___::___> ___ = {\\\"___\\\", \\\"___\\\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    ___::___ << ___[___] << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <vector>",
           "#include <string>",
           "int main() {",
-          "    // fruitsに{\"りんご\", \"バナナ\"}を代入",
+          "    // 果物配列（りんご、バナナ）をfruitsに代入",
           "    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};",
           "    // 1 と入力（2番目のデータはインデックス1）",
           "    std::cout << fruits[1] << std::endl;",

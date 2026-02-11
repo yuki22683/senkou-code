@@ -355,11 +355,11 @@ export const php2Data = {
           "content": "# 真（true）を返す要素を残す\\n\\n`array_filter(配列, 条件の関数)` の形で使います。\\n\\n**コード例：**\\n```php\\n$nums = [1, 2, 3, 4, 5];\\n$big = array_filter($nums, fn($n) => $n > 3);\\n// [4, 5]\\n```\\n\\n**何をしているの？**\\n1. `$nums = [1, 2, 3, 4, 5]` → 元の配列を用意\\n2. `fn($n) => $n > 3` → 「3より大きい？」という条件\\n3. 各要素をチェック: 1→No, 2→No, 3→No, 4→Yes, 5→Yes\\n4. Yesだった要素だけ残る: [4, 5]\\n\\n**ポイント：**\\n- 第1引数: フィルタしたい配列\\n- 第2引数: 条件を判定する関数\\n- trueを返した要素だけが残る"
         }
       ],
-      "correctCode": "<?php\\n// $numsに[1, 2, 3, 4, 5]を代入\\n$nums = [1, 2, 3, 4, 5];\\n// array_filterで3以上を抽出し$resultに代入\\n$result = array_filter($nums, fn($n) => $n >= 3);\\n// $resultをprint_rで出力\\nprint_r($result);\\n?>",
-      "holeyCode": "// PHPコード開始タグ\\n___\\n// $numsに[1, 2, 3, 4, 5]を代入\\n$___ = [___, ___, ___, ___, ___];\\n// array_filterで3以上を抽出し$resultに代入\\n$___ = ___($___, ___($___) => $___ >= ___);\\n// $resultをprint_rで出力\\n___($___);\\n// PHPコード終了タグ\\n___",
+      "correctCode": "<?php\\n// 数値配列（1〜5）を$numsに代入\\n$nums = [1, 2, 3, 4, 5];\\n// array_filterで3以上を抽出し$resultに代入\\n$result = array_filter($nums, fn($n) => $n >= 3);\\n// $resultをprint_rで出力\\nprint_r($result);\\n?>",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// 数値配列（1〜5）を$numsに代入\\n$___ = [___, ___, ___, ___, ___];\\n// array_filterで3以上を抽出し$resultに代入\\n$___ = ___($___, ___($___) => $___ >= ___);\\n// $resultをprint_rで出力\\n___($___);\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "<?php",
-          "// $numsに[1, 2, 3, 4, 5]を代入",
+          "// 数値配列（1〜5）を$numsに代入",
           "$nums = [1, 2, 3, 4, 5];",
           "// array_filterで3以上を抽出し$resultに代入",
           "$result = array_filter($nums, fn($n) => $n >= 3);",

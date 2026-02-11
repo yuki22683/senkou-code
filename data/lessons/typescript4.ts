@@ -536,8 +536,8 @@ export const typescriptData4 = {
           "content": "# 引数を再利用する\\n\\n既存の関数と同じ引数を使いたいときに便利です。\\n\\n## たとえ話\\n\\n「この関数と同じ材料で、別の料理を作る」ような感じです。引数の型を一から書かなくて済みます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nfunction greet(name: string, age: number): void {\\n  console.log(`${name} is ${age}`);\\n}\\n\\n// 関数の引数の型を取得\\ntype GreetParams = Parameters<typeof greet>;\\n// [string, number]\\n\\n// 同じ型の引数を使える！\\nconst args: GreetParams = ['Taro', 25];\\ngreet(...args);  // 'Taro is 25'\\n```"
         }
       ],
-      "correctCode": "function greet(name: string, age: number): void {\\n  // テンプレート文字列で出力\\n  console.log(`${name} is ${age}`);\\n}\\n// Parameters で関数の引数型を取得\\ntype GreetParams = Parameters<typeof greet>;\\n// argsに['太郎', 25]を代入\\nconst args: GreetParams = ['太郎', 25];\\n// 引数の配列 args を渡して呼び出し\\ngreet(...args);",
-      "holeyCode": "// ブロックを開始\\n___ ___(___: ___, ___: ___): ___ {\\n  // テンプレート文字列で出力\\n  ___.___(___${___} is ${___}___);\\n// ブロックを閉じる\\n___\\n// Parameters で関数の引数型を取得\\ntype ___ = ___<typeof ___>;\\n// argsに['太郎', 25]を代入\\nconst ___: ___ = [___, ___];\\n// 引数の配列 args を渡して呼び出し\\n___(___);",
+      "correctCode": "function greet(name: string, age: number): void {\\n  // テンプレート文字列で出力\\n  console.log(`${name} is ${age}`);\\n}\\n// Parameters で関数の引数型を取得\\ntype GreetParams = Parameters<typeof greet>;\\n// 引数の配列（名前、年齢）をargsに代入\\nconst args: GreetParams = ['太郎', 25];\\n// 引数の配列 args を渡して呼び出し\\ngreet(...args);",
+      "holeyCode": "// ブロックを開始\\n___ ___(___: ___, ___: ___): ___ {\\n  // テンプレート文字列で出力\\n  ___.___(___${___} is ${___}___);\\n// ブロックを閉じる\\n___\\n// Parameters で関数の引数型を取得\\ntype ___ = ___<typeof ___>;\\n// 引数の配列（名前、年齢）をargsに代入\\nconst ___: ___ = [___, ___];\\n// 引数の配列 args を渡して呼び出し\\n___(___);",
       "correctLines": [
           "function greet(name: string, age: number): void {",
           "  // テンプレート文字列で出力",
@@ -545,7 +545,7 @@ export const typescriptData4 = {
           "}",
           "// Parameters で関数の引数型を取得",
           "type GreetParams = Parameters<typeof greet>;",
-          "// argsに['太郎', 25]を代入",
+          "// 引数の配列（名前、年齢）をargsに代入",
           "const args: GreetParams = ['太郎', 25];",
           "// 引数の配列 args を渡して呼び出し",
           "greet(...args);"
@@ -591,15 +591,15 @@ export const typescriptData4 = {
           "content": "# 非同期処理の結果の型\\n\\nWebからデータを取得するなど、非同期処理の結果の型を知りたいときに使います。\\n\\n## たとえ話\\n\\n「この注文をすると、何が届く？」という質問に答えるようなものです。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ntype AsyncResult = Promise<{ data: string }>;\\n\\n// Promiseが解決したら何になる？\\ntype Result = Awaited<AsyncResult>;\\n// { data: string }\\n\\n// 同じ型の変数を作れる\\nconst result: Result = { data: 'success' };\\n```\\n\\nasync/awaitで取得する値の型がわかって便利です！"
         }
       ],
-      "correctCode": "// AsyncResult型を定義\\ntype AsyncResult = Promise<{ data: string }>;\\n// Awaited でPromiseの解決型を取得\\ntype Result = Awaited<AsyncResult>;\\n\\n// resultに{data: '成功'}を代入\\nconst result: Result = { data: '成功' };\\n// データを出力\\nconsole.log(result.data);",
-      "holeyCode": "// AsyncResult型を定義\\ntype ___ = ___<{ ___: ___ }>;\\n// Awaited でPromiseの解決型を取得\\ntype ___ = ___<___>;\\n___\\n// resultに{data: '成功'}を代入\\nconst ___: ___ = { ___: ___ };\\n// データを出力\\n___.___(___.___)\\n",
+      "correctCode": "// AsyncResult型を定義\\ntype AsyncResult = Promise<{ data: string }>;\\n// Awaited でPromiseの解決型を取得\\ntype Result = Awaited<AsyncResult>;\\n\\n// Resultオブジェクト（data:成功）をresultに代入\\nconst result: Result = { data: '成功' };\\n// データを出力\\nconsole.log(result.data);",
+      "holeyCode": "// AsyncResult型を定義\\ntype ___ = ___<{ ___: ___ }>;\\n// Awaited でPromiseの解決型を取得\\ntype ___ = ___<___>;\\n___\\n// Resultオブジェクト（data:成功）をresultに代入\\nconst ___: ___ = { ___: ___ };\\n// データを出力\\n___.___(___.___)\\n",
       "correctLines": [
           "// AsyncResult型を定義",
           "type AsyncResult = Promise<{ data: string }>;",
           "// Awaited でPromiseの解決型を取得",
           "type Result = Awaited<AsyncResult>;",
           "",
-          "// resultに{data: '成功'}を代入",
+          "// Resultオブジェクト（data:成功）をresultに代入",
           "const result: Result = { data: '成功' };",
           "// データを出力",
           "console.log(result.data);"

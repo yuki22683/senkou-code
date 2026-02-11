@@ -156,10 +156,10 @@ export const elixir3Data = {
           "content": "reduceはリストを単一の値に畳み込みます。\\n\\n```elixir\\nsum = Enum.reduce([1, 2, 3, 4], 0, fn x, acc -> x + acc end)\\n# 10\\n\\nproduct = Enum.reduce([1, 2, 3, 4], 1, &(&1 * &2))\\n# 24\\n```"
         }
       ],
-      "correctCode": "# numbersに[1, 2, 3, 4, 5]を代入\\nnumbers = [1, 2, 3, 4, 5]\\n# 配列の全要素の合計を計算\\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)",
-      "holeyCode": "# numbersに[1, 2, 3, 4, 5]を代入\\n___ = [___, ___, ___, ___, ___]\\n# 配列の全要素の合計を計算\\n___ = ___.___(_____, ___, fn ___, ___ -> ___ + ___ ___)",
+      "correctCode": "# 1から5までの数値リストをnumbersに代入\\nnumbers = [1, 2, 3, 4, 5]\\n# 配列の全要素の合計を計算\\nsum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)",
+      "holeyCode": "# 1から5までの数値リストをnumbersに代入\\n___ = [___, ___, ___, ___, ___]\\n# 配列の全要素の合計を計算\\n___ = ___.___(_____, ___, fn ___, ___ -> ___ + ___ ___)",
       "correctLines": [
-          "# numbersに[1, 2, 3, 4, 5]を代入",
+          "# 1から5までの数値リストをnumbersに代入",
           "numbers = [1, 2, 3, 4, 5]",
           "# 配列の全要素の合計を計算",
           "sum = Enum.reduce(numbers, 0, fn x, acc -> x + acc end)"

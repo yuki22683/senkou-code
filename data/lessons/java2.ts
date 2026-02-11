@@ -557,11 +557,11 @@ export const javaData2 = {
           "content": "# コレクションを処理\\n\\n拡張for文は ArrayList（アレイリスト）でも同じように使えます！\\n\\n```java\\nArrayList<String> items = new ArrayList<>();\\nitems.add(\"A\");\\nitems.add(\"B\");\\n\\nfor (String item : items) {  // itemsの中の各itemについて\\n    System.out.println(item);  // A, B が順番に表示\\n}\\n```\\n\\n**ポイント：** 配列でもArrayListでも、書き方は同じです。便利ですね！"
         }
       ],
-      "correctCode": "class Main {\\n    public static void main(String[] args) {\\n        // colorsに{\"R\", \"G\", \"B\"}を代入\\n        String[] colors = {\"R\", \"G\", \"B\"};\\n        // for-eachでcolorsから順番にcに取り出す\\n        for (String c : colors) {\\n            // cをprintlnで出力\\n            System.out.println(c);\\n        }\\n    }\\n}", "holeyCode": "// Mainクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // colorsに{\\\"R\\\", \\\"G\\\", \\\"B\\\"}を代入\\n        ___[] ___ = {___, ___, ___}___\\n        // for-eachでcolorsから順番にcに取り出す\\n        for (___ ___ : ___) {\\n            // cをprintlnで出力\\n            ___.___.___(___)___\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "class Main {\\n    public static void main(String[] args) {\\n        // 色コード配列（R、G、B）をcolorsに代入\\n        String[] colors = {\"R\", \"G\", \"B\"};\\n        // for-eachでcolorsから順番にcに取り出す\\n        for (String c : colors) {\\n            // cをprintlnで出力\\n            System.out.println(c);\\n        }\\n    }\\n}", "holeyCode": "// Mainクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 色コード配列（R、G、B）をcolorsに代入\\n        ___[] ___ = {___, ___, ___}___\\n        // for-eachでcolorsから順番にcに取り出す\\n        for (___ ___ : ___) {\\n            // cをprintlnで出力\\n            ___.___.___(___)___\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "class Main {",
           "    public static void main(String[] args) {",
-          "        // colorsに{\"R\", \"G\", \"B\"}を代入",
+          "        // 色コード配列（R、G、B）をcolorsに代入",
           "        String[] colors = {\"R\", \"G\", \"B\"};",
           "        // for-eachでcolorsから順番にcに取り出す",
           "        for (String c : colors) {",

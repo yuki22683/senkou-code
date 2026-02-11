@@ -318,10 +318,10 @@ export const rubyData = {
           "content": "# インデックス（番号）\\n\\nプログラミングでは、**最初の番号は「0」から数えます**。これを **インデックス** と呼びます。\\n\\n**イメージしてみよう：**\\n| 番号（インデックス） | 0番目 | 1番目 | 2番目 |\\n| --- | --- | --- | --- |\\n| 中身 | りんご | バナナ | みかん |\\n\\n**コード例：**\\n```ruby\\nfruits = ['りんご', 'バナナ', 'みかん']\\nputs fruits[0]\\nputs fruits[1]\\n```\\n\\n=> りんご（1番目）\\n\\n=> バナナ（2番目）\\n\\n**大事なポイント：**\\n- 1番目のデータは `[0]` で取り出す\\n- 2番目のデータは `[1]` で取り出す"
         }
       ],
-      "correctCode": "# colorsに['赤', '青', '緑']を代入\\ncolors = ['赤', '青', '緑']\\n# colors[1]を表示\\nputs colors[1]",
-      "holeyCode": "# colorsに['赤', '青', '緑']を代入\\n___ = ['___', '___', '___']\\n# colors[1]を表示\\n___ ___[___]",
+      "correctCode": "# 色の配列（赤、青、緑）をcolorsに代入\\ncolors = ['赤', '青', '緑']\\n# colors[1]を表示\\nputs colors[1]",
+      "holeyCode": "# 色の配列（赤、青、緑）をcolorsに代入\\n___ = ['___', '___', '___']\\n# colors[1]を表示\\n___ ___[___]",
       "correctLines": [
-          "# colorsに['赤', '青', '緑']を代入",
+          "# 色の配列（赤、青、緑）をcolorsに代入",
           "colors = ['赤', '青', '緑']",
           "# colors[1]を表示",
           "puts colors[1]"
@@ -550,10 +550,10 @@ export const rubyData = {
           "content": "# ブロックで処理を渡す\\n\\n**ブロック** は `do...end` で囲んだ処理のかたまりです。\\n\\n**コード例：**\\n```ruby\\nfruits = ['りんご', 'バナナ']\\nfruits.each do |fruit|\\n  puts fruit\\nend\\n```\\n\\n**何をしているの？**\\n1. `fruits` という配列に「りんご」と「バナナ」が入っている\\n2. `each do |fruit|` → 配列から1つずつ取り出して `fruit` に入れる\\n3. `puts fruit` → 取り出したものを表示\\n4. 全部表示したら終わり\\n\\n**`|fruit|`（パイプで囲む）とは？**\\n- 配列から取り出した1つのデータが入る「一時的なはこ」\\n- これを **ブロック変数** と呼びます"
         }
       ],
-      "correctCode": "# namesに['太郎', '花子']を代入\\nnames = ['太郎', '花子']\\n# eachでnamesをループ\\nnames.each do |name|\\n  # nameを表示\\n  puts name\\nend",
-      "holeyCode": "# namesに['太郎', '花子']を代入\\n___ = ['___', '___']\\n# eachでnamesをループ\\n___.___ do |___|\\n  # nameを表示\\n  ___ ___\\n# ブロックを終了\\n___",
+      "correctCode": "# 名前の配列（太郎、花子）をnamesに代入\\nnames = ['太郎', '花子']\\n# eachでnamesをループ\\nnames.each do |name|\\n  # nameを表示\\n  puts name\\nend",
+      "holeyCode": "# 名前の配列（太郎、花子）をnamesに代入\\n___ = ['___', '___']\\n# eachでnamesをループ\\n___.___ do |___|\\n  # nameを表示\\n  ___ ___\\n# ブロックを終了\\n___",
       "correctLines": [
-          "# namesに['太郎', '花子']を代入",
+          "# 名前の配列（太郎、花子）をnamesに代入",
           "names = ['太郎', '花子']",
           "# eachでnamesをループ",
           "names.each do |name|",

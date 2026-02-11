@@ -301,17 +301,17 @@ export const pythonData = {
           "content": "# 番号で呼び出そう\\n\\nリストの中身を取り出すときは、**「何番目のデータ？」** と番号（**インデックス**）を指定します。\\n\\n**ここで大事なルール！**\\n\\nプログラミングの世界では、**さいしょのデータは「0番」** と数えます。\\n\\n1番目じゃなくて0番から始まるのは最初はふしぎに感じますが、これがプログラミングのルールなのです。\\n\\n**例：** くだものリストから取り出そう！\\n\\n```python\\n# 0番が「りんご」、1番が「バナナ」、2番が「みかん」\\nfruits = ['りんご', 'バナナ', 'みかん']\\nprint(fruits[0])\\n```\\n=> りんご\\n\\n**ポイント：** `[0]` で最初（1番目）のデータ、`[1]` で2番目のデータが取れます！"
         }
       ],
-      "correctCode": "# colorsに['あか', 'あお']を代入\\ncolors = ['あか', 'あお']\\n# colors[1]を表示\\nprint(colors[1])",
-      "holeyCode": "# colorsに['あか', 'あお']を代入\\n___ = ['___', '___']\\n# colors[1]を表示\\n___(___[___])",
+      "correctCode": "# 色の配列（赤、青）をcolorsに代入\\ncolors = ['あか', 'あお']\\n# colors[1]を表示\\nprint(colors[1])",
+      "holeyCode": "# 色の配列（赤、青）をcolorsに代入\\n___ = ['___', '___']\\n# colors[1]を表示\\n___(___[___])",
       "correctLines": [
-          "# colorsに['あか', 'あお']を代入",
+          "# 色の配列（赤、青）をcolorsに代入",
           "colors = ['あか', 'あお']",
           "# colors[1]を表示",
           "print(colors[1])"
         ],
       "lineHints": [
           null,
-          "colorsに['あか', 'あお']を代入します。",
+          "色の配列（赤、青）をcolorsに代入します。",
           null,
           "printでcolors[1]を出力します。"
         ],
@@ -496,10 +496,10 @@ export const pythonData = {
           "content": "# 順番に取り出す魔法\\n\\n`for`（フォー）を使うと、リストから **順番にデータを取り出して** くれます。\\n\\n**例：** 駅の名前を順番に呼ぼう！\\n\\n```python\\nstations = ['東京', '品川', '横浜']\\nfor s in stations:\\n    print(s)\\n```\\n=> 東京\\n=> 品川\\n=> 横浜\\n\\n**何をしているか：**\\n1. `stations` というリストに3つの駅名が入っている\\n2. `for s in stations:` で「リストから1つずつ取り出して `s` に入れる」\\n3. 取り出すたびに `print(s)` が実行される\\n4. 全部取り出し終わったらループ終了！\\n\\n**ポイント：** `s` は取り出したデータを入れる「仮の名前」です。`station` など、わかりやすい名前にするといいですね。"
         }
       ],
-      "correctCode": "# namesに['たろう', 'はなこ']を代入\\nnames = ['たろう', 'はなこ']\\n# forでnamesをループ\\nfor name in names:\\n    # nameを表示\\n    print(name)",
-      "holeyCode": "# namesに['たろう', 'はなこ']を代入\\n___ = ['___', '___']\\n# forでnamesをループ\\n___ ___ ___ ___:\\n    # nameを表示\\n    ___(___)",
+      "correctCode": "# 名前のリスト（太郎、花子）をnamesに代入\\nnames = ['たろう', 'はなこ']\\n# forでnamesをループ\\nfor name in names:\\n    # nameを表示\\n    print(name)",
+      "holeyCode": "# 名前のリスト（太郎、花子）をnamesに代入\\n___ = ['___', '___']\\n# forでnamesをループ\\n___ ___ ___ ___:\\n    # nameを表示\\n    ___(___)",
       "correctLines": [
-          "# namesに['たろう', 'はなこ']を代入",
+          "# 名前のリスト（太郎、花子）をnamesに代入",
           "names = ['たろう', 'はなこ']",
           "# forでnamesをループ",
           "for name in names:",
@@ -508,7 +508,7 @@ export const pythonData = {
         ],
       "lineHints": [
           null,
-          "namesに['たろう', 'はなこ']を代入します。",
+          "名前のリスト（太郎、花子）をnamesに代入します。",
           null,
           "for name in names:でループします。",
           null,

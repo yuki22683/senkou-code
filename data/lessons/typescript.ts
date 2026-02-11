@@ -593,12 +593,12 @@ export const typescriptData = {
           "content": "# type（タイプ）キーワード\\n\\n`type` という言葉を使って、新しいラベルの名前を決められます。これを **タイプエイリアス（型の別名）** と呼びます。\\n\\n## 書き方のポイント\\n\\n`type 名前 = { プロパティ名: 型; ... };` という形で書きます。\\n\\n## コードで書くとこうなるよ\\n\\n下のコードでは、「Pet（ペット）」という新しいラベルを作っています。\\n\\n```typescript\\n// Petという新しいラベルを作る\\ntype Pet = { type: string; name: string };\\n// Petラベルを使って変数を作る\\nconst myPet: Pet = { type: 'いぬ', name: 'ポチ' };\\nconsole.log(myPet.name);\\n```\\n**実行結果：** ポチ"
         }
       ],
-      "correctCode": "// User型を定義（nameはstring）\\ntype User = { name: string };\\n// userに{ name: 'たろう' }を代入\\nconst user: User = { name: 'たろう' };\\n// nameプロパティを出す\\nconsole.log(user.name);",
-      "holeyCode": "// User型を定義（nameはstring）\\ntype ___ = { ___: ___ };\\n// userに{ name: 'たろう' }を代入\\nconst ___: ___ = { ___: '___' };\\n// nameプロパティを出す\\n___.___(___.___);",
+      "correctCode": "// User型を定義（nameはstring）\\ntype User = { name: string };\\n// Userオブジェクト（名前:たろう）をuserに代入\\nconst user: User = { name: 'たろう' };\\n// nameプロパティを出す\\nconsole.log(user.name);",
+      "holeyCode": "// User型を定義（nameはstring）\\ntype ___ = { ___: ___ };\\n// Userオブジェクト（名前:たろう）をuserに代入\\nconst ___: ___ = { ___: '___' };\\n// nameプロパティを出す\\n___.___(___.___);",
       "correctLines": [
           "// User型を定義（nameはstring）",
           "type User = { name: string };",
-          "// userに{ name: 'たろう' }を代入",
+          "// Userオブジェクト（名前:たろう）をuserに代入",
           "const user: User = { name: 'たろう' };",
           "// nameプロパティを出す",
           "console.log(user.name);"

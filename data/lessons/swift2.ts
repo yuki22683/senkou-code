@@ -417,10 +417,10 @@ export const swift2Data = {
           "content": "# 目標\\n\\n配列の各数を2乗（じじょう：同じ数を2回かける）しましょう。\\n\\n- `[1, 2, 3]` → `[1, 4, 9]` に変換\\n- `$0 * $0` で2乗できます"
         }
       ],
-      "correctCode": "// numsに[1, 2, 3]を代入\\nlet nums = [1, 2, 3]\\n// nums.mapで各要素を2乗しsquaredに代入\\nlet squared = nums.map { $0 * $0 }\\n// squaredをprintで出力\\nprint(squared)",
-      "holeyCode": "// numsに[1, 2, 3]を代入\\nlet ___ = ___\\n// nums.mapで各要素を2乗しsquaredに代入\\nlet ___ = ___.___ ___ ___ ___ ___ ___\\n// squaredをprintで出力\\n___(___)",
+      "correctCode": "// 数値配列（1, 2, 3）をnumsに代入\\nlet nums = [1, 2, 3]\\n// nums.mapで各要素を2乗しsquaredに代入\\nlet squared = nums.map { $0 * $0 }\\n// squaredをprintで出力\\nprint(squared)",
+      "holeyCode": "// 数値配列（1, 2, 3）をnumsに代入\\nlet ___ = ___\\n// nums.mapで各要素を2乗しsquaredに代入\\nlet ___ = ___.___ ___ ___ ___ ___ ___\\n// squaredをprintで出力\\n___(___)",
       "correctLines": [
-          "// numsに[1, 2, 3]を代入",
+          "// 数値配列（1, 2, 3）をnumsに代入",
           "let nums = [1, 2, 3]",
           "// nums.mapで各要素を2乗しsquaredに代入",
           "let squared = nums.map { $0 * $0 }",
@@ -429,7 +429,7 @@ export const swift2Data = {
         ],
       "lineHints": [
           null,
-          "numsに[1, 2, 3]を代入します。",
+          "数値配列（1, 2, 3）をnumsに代入します。",
           null,
           "nums.map { $0 * $0 }で各要素を2乗します。",
           null,
@@ -465,10 +465,10 @@ export const swift2Data = {
           "content": "# 目標\\n\\n配列から3以上の数だけを取り出しましょう。\\n\\n- `[1, 2, 3, 4, 5]` から\\n- 3以上（`$0 >= 3`）のものを残す\\n- 結果は `[3, 4, 5]` になるはず"
         }
       ],
-      "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet nums = [1, 2, 3, 4, 5]\\n// nums.filterで3以上を抽出しresultに代入\\nlet result = nums.filter { $0 >= 3 }\\n// resultをprintで出力\\nprint(result)",
-      "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet ___ = ___\\n// nums.filterで3以上を抽出しresultに代入\\nlet ___ = ___.___ ___ ___ ___ ___ ___\\n// resultをprintで出力\\n___(___)",
+      "correctCode": "// 数値配列（1〜5）をnumsに代入\\nlet nums = [1, 2, 3, 4, 5]\\n// nums.filterで3以上を抽出しresultに代入\\nlet result = nums.filter { $0 >= 3 }\\n// resultをprintで出力\\nprint(result)",
+      "holeyCode": "// 数値配列（1〜5）をnumsに代入\\nlet ___ = ___\\n// nums.filterで3以上を抽出しresultに代入\\nlet ___ = ___.___ ___ ___ ___ ___ ___\\n// resultをprintで出力\\n___(___)",
       "correctLines": [
-          "// numsに[1, 2, 3, 4, 5]を代入",
+          "// 数値配列（1〜5）をnumsに代入",
           "let nums = [1, 2, 3, 4, 5]",
           "// nums.filterで3以上を抽出しresultに代入",
           "let result = nums.filter { $0 >= 3 }",
@@ -477,7 +477,7 @@ export const swift2Data = {
         ],
       "lineHints": [
           null,
-          "numsに[1, 2, 3, 4, 5]を代入します。",
+          "数値配列（1〜5）をnumsに代入します。",
           null,
           "nums.filter { $0 >= 3 }で3以上を抽出します。",
           null,

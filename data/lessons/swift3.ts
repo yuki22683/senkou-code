@@ -135,10 +135,10 @@ export const swift3Data = {
           "content": "# 目標\\n\\n文字列の配列から、数値に変換できるものだけを取り出しましょう。\\n\\n- `[\"1\", \"a\", \"2\", \"b\", \"3\"]` を\\n- compactMapで `[1, 2, 3]` に変換\\n\\n「a」や「b」は数値に変換できないので、自動的に除外されます。"
         }
       ],
-      "correctCode": "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入\\nlet nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\\n// nums.compactMapでInt変換しintsに代入\\nlet ints = nums.compactMap { Int($0) }\\n// intsをprintで出力\\nprint(ints)",
-      "holeyCode": "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入\\nlet ___ = [\"___\", \"___\", \"___\", \"___\", \"___\"]\\n// nums.compactMapでInt変換しintsに代入\\nlet ___ = ___.___ { ___($___) }\\n// intsをprintで出力\\n___(___)",
+      "correctCode": "// 文字列配列（数字と文字が混在）をnumsに代入\\nlet nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]\\n// nums.compactMapでInt変換しintsに代入\\nlet ints = nums.compactMap { Int($0) }\\n// intsをprintで出力\\nprint(ints)",
+      "holeyCode": "// 文字列配列（数字と文字が混在）をnumsに代入\\nlet ___ = [\"___\", \"___\", \"___\", \"___\", \"___\"]\\n// nums.compactMapでInt変換しintsに代入\\nlet ___ = ___.___ { ___($___) }\\n// intsをprintで出力\\n___(___)",
       "correctLines": [
-          "// numsに[\"1\", \"a\", \"2\", \"b\", \"3\"]を代入",
+          "// 文字列配列（数字と文字が混在）をnumsに代入",
           "let nums = [\"1\", \"a\", \"2\", \"b\", \"3\"]",
           "// nums.compactMapでInt変換しintsに代入",
           "let ints = nums.compactMap { Int($0) }",
@@ -191,10 +191,10 @@ export const swift3Data = {
           "content": "# 目標\\n\\n配列の全要素をかけ算して、積を求めましょう。\\n\\n- `[1, 2, 3, 4, 5]` の全要素をかける\\n- 初期値は `1`（かけ算なので）\\n- 結果は `120`（1*2*3*4*5）になるはず"
         }
       ],
-      "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet nums = [1, 2, 3, 4, 5]\\n// 配列の全要素の積を計算\\nlet product = nums.reduce(1) { $0 * $1 }\\n// productをprintで出力\\nprint(product)",
-      "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// 配列の全要素の積を計算\\nlet ___ = ___.___(___) { $___ * $___ }\\n// productをprintで出力\\n___(___)",
+      "correctCode": "// 数値配列（1〜5）をnumsに代入\\nlet nums = [1, 2, 3, 4, 5]\\n// 配列の全要素の積を計算\\nlet product = nums.reduce(1) { $0 * $1 }\\n// productをprintで出力\\nprint(product)",
+      "holeyCode": "// 数値配列（1〜5）をnumsに代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// 配列の全要素の積を計算\\nlet ___ = ___.___(___) { $___ * $___ }\\n// productをprintで出力\\n___(___)",
       "correctLines": [
-          "// numsに[1, 2, 3, 4, 5]を代入",
+          "// 数値配列（1〜5）をnumsに代入",
           "let nums = [1, 2, 3, 4, 5]",
           "// 配列の全要素の積を計算",
           "let product = nums.reduce(1) { $0 * $1 }",
@@ -241,10 +241,10 @@ export const swift3Data = {
           "content": "# 目標\\n\\nlazyを使って、配列の最初の要素だけを10倍しましょう。\\n\\n1. 配列に `.lazy` をつける\\n2. `.map { $0 * 10 }` で10倍\\n3. `.first!` で最初の1つを取得\\n\\n結果は `10`（1 * 10）になります。"
         }
       ],
-      "correctCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet nums = [1, 2, 3, 4, 5]\\n// nums.lazy.mapで最初の要素*10をresultに代入\\nlet result = nums.lazy.map { $0 * 10 }.first!\\n// resultをprintで出力\\nprint(result)",
-      "holeyCode": "// numsに[1, 2, 3, 4, 5]を代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// nums.lazy.mapで最初の要素*10をresultに代入\\nlet ___ = ___.___.map { $___ * ___ }.___!\\n// resultをprintで出力\\n___(___)",
+      "correctCode": "// 数値配列（1〜5）をnumsに代入\\nlet nums = [1, 2, 3, 4, 5]\\n// nums.lazy.mapで最初の要素*10をresultに代入\\nlet result = nums.lazy.map { $0 * 10 }.first!\\n// resultをprintで出力\\nprint(result)",
+      "holeyCode": "// 数値配列（1〜5）をnumsに代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// nums.lazy.mapで最初の要素*10をresultに代入\\nlet ___ = ___.___.map { $___ * ___ }.___!\\n// resultをprintで出力\\n___(___)",
       "correctLines": [
-          "// numsに[1, 2, 3, 4, 5]を代入",
+          "// 数値配列（1〜5）をnumsに代入",
           "let nums = [1, 2, 3, 4, 5]",
           "// nums.lazy.mapで最初の要素*10をresultに代入",
           "let result = nums.lazy.map { $0 * 10 }.first!",
@@ -293,10 +293,10 @@ export const swift3Data = {
           "content": "# 目標\\n\\n配列の中から、正の数（0より大きい数）だけを表示しましょう。\\n\\n- `[1, -2, 3, -4, 5]` の中から\\n- `where n > 0` で正の数だけ選ぶ\\n- 結果は `1, 3, 5` が表示される"
         }
       ],
-      "correctCode": "// numsに[1, -2, 3, -4, 5]を代入\\nlet nums = [1, -2, 3, -4, 5]\\n// for-in whereでn>0の要素をループ\\nfor n in nums where n > 0 {\\n    // nをprintで出力\\n    print(n)\\n}",
-      "holeyCode": "// numsに[1, -2, 3, -4, 5]を代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// for-in whereでn>0の要素をループ\\nfor ___ in ___ ___ ___ > ___ {\\n    // nをprintで出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// 数値配列（正負が交互）をnumsに代入\\nlet nums = [1, -2, 3, -4, 5]\\n// for-in whereでn>0の要素をループ\\nfor n in nums where n > 0 {\\n    // nをprintで出力\\n    print(n)\\n}",
+      "holeyCode": "// 数値配列（正負が交互）をnumsに代入\\nlet ___ = [___, ___, ___, ___, ___]\\n// for-in whereでn>0の要素をループ\\nfor ___ in ___ ___ ___ > ___ {\\n    // nをprintで出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// numsに[1, -2, 3, -4, 5]を代入",
+          "// 数値配列（正負が交互）をnumsに代入",
           "let nums = [1, -2, 3, -4, 5]",
           "// for-in whereでn>0の要素をループ",
           "for n in nums where n > 0 {",

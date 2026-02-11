@@ -96,14 +96,14 @@ export const cpp3Data = {
           "content": "# コピーを避ける書き方\\n\\n通常の範囲for文は、要素を「コピー」して取り出します。大きなデータだとコピーに時間がかかります。\\n\\n**身近な例え：**\\n本を読むとき、毎回コピーを取って読むより、本棚にある本をそのまま読む方が早いですよね。\\n\\n**参照で受け取る書き方：**\\n```cpp\\nfor (const auto& x : v) {\\n    // & をつけると「参照」で受け取る（コピーしない）\\n    // const をつけると「変更しない」という約束\\n    cout << x << endl;\\n}\\n```\\n\\n**使い分け：**\\n- `int x` : 小さいデータ（int, charなど）はコピーでOK\\n- `const auto& x` : 大きいデータ（string, vectorなど）は参照が効率的\\n\\n`auto` を使うと型を自動で判断してくれるので便利です！"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\nusing namespace std;\\n\\nint main() {\\n    // numsに{10, 20, 30}を代入\\n    vector<int> nums = {10, 20, 30};\\n    // : で範囲for文\\n    for (int n : nums) {\\n        cout << n << endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // numsに{10, 20, 30}を代入\\n    ___<___> ___ = {___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) {\\n        // 文を実行\\n        ___ << ___ << ___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <iostream>\\n#include <vector>\\nusing namespace std;\\n\\nint main() {\\n    // 数値配列（10、20、30）をnumsに代入\\n    vector<int> nums = {10, 20, 30};\\n    // : で範囲for文\\n    for (int n : nums) {\\n        cout << n << endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 数値配列（10、20、30）をnumsに代入\\n    ___<___> ___ = {___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) {\\n        // 文を実行\\n        ___ << ___ << ___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <vector>",
           "using namespace std;",
           "",
           "int main() {",
-          "    // numsに{10, 20, 30}を代入",
+          "    // 数値配列（10、20、30）をnumsに代入",
           "    vector<int> nums = {10, 20, 30};",
           "    // : で範囲for文",
           "    for (int n : nums) {",
@@ -135,7 +135,7 @@ export const cpp3Data = {
             "for",
             "return"
           ],
-          "others": ["vector", "std", "main", "10", "20", "30", "n", "endl", "}", "0", "#include <iostream>", "#include <vector>", "nums", "cout", "// numsに{10, 20, 30}を代入", "vector<int> nums = {10, 20, 30};"]
+          "others": ["vector", "std", "main", "10", "20", "30", "n", "endl", "}", "0", "#include <iostream>", "#include <vector>", "nums", "cout", "// 数値配列（10、20、30）をnumsに代入", "vector<int> nums = {10, 20, 30};"]
         },
         "testCases": [
           {
@@ -536,14 +536,14 @@ export const cpp3Data = {
           "content": "# std::array は安全\\n\\n普通の配列（C配列）と比べて、`std::array` は安全な機能がついています。\\n\\n**身近な例え：**\\n普通の配列は「存在しない場所」にアクセスしてもエラーを出してくれません（危険！）。`std::array` は「そこにはないよ！」と教えてくれます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\narray<int, 3> arr = {10, 20, 30};\\n\\n// サイズを聞ける（C配列にはない機能！）\\ncout << arr.size() << endl;  // 3\\n\\n// 安全なアクセス（at を使う）\\narr.at(1);   // OK: 20\\narr.at(10);  // エラー！「範囲外」と教えてくれる\\n\\n// 普通のアクセス（危険）\\narr[10];     // 動くけど何が起こるかわからない...\\n```\\n\\n**オススメ：**\\n- 安全性を重視するなら `at()` を使う\\n- 速度を重視するなら `[]` を使う"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <array>\\nusing namespace std;\\n\\nint main() {\\n    // arrに{10, 20, 30}を代入\\n    array<int, 3> arr = {10, 20, 30};\\n    // : で範囲for文\\n    for (int n : arr) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // arrに{10, 20, 30}を代入\\n    ___<___, ___> ___ = {___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) ___ << ___ << \\\" \\\";\\n    // 文を実行\\n    ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <iostream>\\n#include <array>\\nusing namespace std;\\n\\nint main() {\\n    // 数値配列（10、20、30）をarrに代入\\n    array<int, 3> arr = {10, 20, 30};\\n    // : で範囲for文\\n    for (int n : arr) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 数値配列（10、20、30）をarrに代入\\n    ___<___, ___> ___ = {___, ___, ___};\\n    // : で範囲for文\\n    for (___ ___ : ___) ___ << ___ << \\\" \\\";\\n    // 文を実行\\n    ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <array>",
           "using namespace std;",
           "",
           "int main() {",
-          "    // arrに{10, 20, 30}を代入",
+          "    // 数値配列（10、20、30）をarrに代入",
           "    array<int, 3> arr = {10, 20, 30};",
           "    // : で範囲for文",
           "    for (int n : arr) cout << n << \" \";",
@@ -578,7 +578,7 @@ export const cpp3Data = {
             "for",
             "return"
           ],
-          "others": ["std", "main", "3", "10", "20", "30", "n", "endl", "0", "}", "#include <iostream>", "#include <array>", "arr", "cout", "// arrに{10, 20, 30}を代入", "array<int, 3> arr = {10, 20, 30};", "return 0;"]
+          "others": ["std", "main", "3", "10", "20", "30", "n", "endl", "0", "}", "#include <iostream>", "#include <array>", "arr", "cout", "// 数値配列（10、20、30）をarrに代入", "array<int, 3> arr = {10, 20, 30};", "return 0;"]
         },
         "testCases": [
           {

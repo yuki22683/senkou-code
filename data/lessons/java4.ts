@@ -170,7 +170,7 @@ export const javaData4 = {
           "content": "# 上限・下限の指定\\n\\nワイルドカードにも制限をつけられます。\\n\\n**上限を指定：extends**\\n```java\\nList<? extends Number>  // Numberか、その子クラス\\n// Integer, Double などはOK、StringはNG\\n```\\n\\n**下限を指定：super**\\n```java\\nList<? super Integer>  // Integerか、その親クラス\\n// Integer, Number, Object などがOK\\n```\\n\\n**覚え方：**\\n- extends → 「〜以下」（Numberから下）\\n- super → 「〜以上」（Integerから上）"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    // ? で任意の型を表すワイルドカード\\n    public static void printAll(List<?> list) {\\n        for (Object item : list) {\\n            // println で出力する\\n            System.out.println(item);\\n        }\\n    }\\n    public static void main(String[] args) {\\n        // namesに[\"A\", \"B\"]を代入\\n        List<String> names = Arrays.asList(\"A\", \"B\");\\n        // printAll(names)を呼び出す\\n        printAll(names);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // ? で任意の型を表すワイルドカード\\n    public static void ___(___<___> ___) {\\n        // forループ\\n        for (___ ___ : ___) {\\n            // println で出力する\\n            ___.___.___(___)\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // namesに[\\\"A\\\", \\\"B\\\"]を代入\\n        ___<___> ___ = ___.___(\\\"___\\\", \\\"___\\\");\\n        // printAll(names)を呼び出す\\n        ___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    // ? で任意の型を表すワイルドカード\\n    public static void printAll(List<?> list) {\\n        for (Object item : list) {\\n            // println で出力する\\n            System.out.println(item);\\n        }\\n    }\\n    public static void main(String[] args) {\\n        // 名前リスト（A、B）をnamesに代入\\n        List<String> names = Arrays.asList(\"A\", \"B\");\\n        // printAll(names)を呼び出す\\n        printAll(names);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // ? で任意の型を表すワイルドカード\\n    public static void ___(___<___> ___) {\\n        // forループ\\n        for (___ ___ : ___) {\\n            // println で出力する\\n            ___.___.___(___)\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 名前リスト（A、B）をnamesに代入\\n        ___<___> ___ = ___.___(\\\"___\\\", \\\"___\\\");\\n        // printAll(names)を呼び出す\\n        ___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
@@ -183,7 +183,7 @@ export const javaData4 = {
           "        }",
           "    }",
           "    public static void main(String[] args) {",
-          "        // namesに[\"A\", \"B\"]を代入",
+          "        // 名前リスト（A、B）をnamesに代入",
           "        List<String> names = Arrays.asList(\"A\", \"B\");",
           "        // printAll(names)を呼び出す",
           "        printAll(names);",
@@ -353,13 +353,13 @@ export const javaData4 = {
           "content": "# Comparatorの作成方法\\n\\nいろいろな比較方法を簡単に作れます。\\n\\n**自然順序**\\n```java\\nComparator.naturalOrder()  // あいうえお順、数字なら小さい順\\n```\\n\\n**逆順**\\n```java\\nComparator.reverseOrder()  // 自然順序の逆\\n```\\n\\n**特定の値で比較**\\n```java\\nComparator.comparing(Person::getName)  // 名前で比較\\nComparator.comparing(Person::getAge)   // 年齢で比較\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // wordsに[\"猫\", \"a\", \"elephant\"]を代入\\n        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));\\n        // comparing でプロパティを基準に比較する\\n        words.sort(Comparator.comparing(String::length));\\n        // println で出力する\\n        System.out.println(words);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // wordsに[\\\"猫\\\", \\\"a\\\", \\\"elephant\\\"]を代入\\n        ___<___> ___ = new ___<>(___.___(\\\"___\\\", \\\"___\\\", \\\"___\\\"));\\n        // comparing でプロパティを基準に比較する\\n        ___.___(___.___(___::___));\\n        // println で出力する\\n        ___.___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 単語リスト（猫、a、elephant）をwordsに代入\\n        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));\\n        // comparing でプロパティを基準に比較する\\n        words.sort(Comparator.comparing(String::length));\\n        // println で出力する\\n        System.out.println(words);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 単語リスト（猫、a、elephant）をwordsに代入\\n        ___<___> ___ = new ___<>(___.___(\\\"___\\\", \\\"___\\\", \\\"___\\\"));\\n        // comparing でプロパティを基準に比較する\\n        ___.___(___.___(___::___));\\n        // println で出力する\\n        ___.___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // wordsに[\"猫\", \"a\", \"elephant\"]を代入",
+          "        // 単語リスト（猫、a、elephant）をwordsに代入",
           "        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));",
           "        // comparing でプロパティを基準に比較する",
           "        words.sort(Comparator.comparing(String::length));",
@@ -406,7 +406,7 @@ export const javaData4 = {
           "content": "# 戻り値の意味\\n\\n`compareTo` メソッドは、比較結果を数字で返します。\\n\\n**ルール：**\\n- `this < other` → マイナスの数を返す（自分が先）\\n- `this == other` → 0を返す（同じ順番）\\n- `this > other` → プラスの数を返す（相手が先）\\n\\n**例：年齢で比較する場合**\\n```java\\nreturn this.age - other.age;\\n// 25 - 30 = -5 （マイナス→自分が先）\\n// 30 - 30 = 0  （0→同じ）\\n// 35 - 30 = 5  （プラス→相手が先）\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\n// Comparable を実装して自然順序を定義する\\nclass Score implements Comparable<Score> {\\n    int value;\\n    Score(int v) { value = v; }\\n    public int compareTo(Score other) {\\n        // 自分と相手のスコアを比較してソート順を決める\\n        return this.value - other.value;\\n    }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // scoresに[Score(80), Score(60)]を代入\\n        List<Score> scores = Arrays.asList(new Score(80), new Score(60));\\n        // sort でソートする\\n        Collections.sort(scores);\\n        // get で要素を取得する\\n        System.out.println(scores.get(0).value);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Comparable を実装して自然順序を定義する\\nclass ___ implements ___<___> {\\n    // 変数を宣言\\n    ___ ___;\\n    // 値を代入\\n    ___(___ ___) { ___ = ___; }\\n    // compareToメソッドを定義\\n    public ___ ___(___ ___) {\\n        // 自分と相手のスコアを比較してソート順を決める\\n        return this.___ - ___.___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // scoresに[Score(80), Score(60)]を代入\\n        ___<___> ___ = ___.___(new ___(___), new ___(___));\\n        // sort でソートする\\n        ___.___(___);\\n        // get で要素を取得する\\n        ___.___.___(___.___(___).___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.util.*;\\n\\n// Comparable を実装して自然順序を定義する\\nclass Score implements Comparable<Score> {\\n    int value;\\n    Score(int v) { value = v; }\\n    public int compareTo(Score other) {\\n        // 自分と相手のスコアを比較してソート順を決める\\n        return this.value - other.value;\\n    }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // スコアリスト（80点、60点）をscoresに代入\\n        List<Score> scores = Arrays.asList(new Score(80), new Score(60));\\n        // sort でソートする\\n        Collections.sort(scores);\\n        // get で要素を取得する\\n        System.out.println(scores.get(0).value);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Comparable を実装して自然順序を定義する\\nclass ___ implements ___<___> {\\n    // 変数を宣言\\n    ___ ___;\\n    // 値を代入\\n    ___(___ ___) { ___ = ___; }\\n    // compareToメソッドを定義\\n    public ___ ___(___ ___) {\\n        // 自分と相手のスコアを比較してソート順を決める\\n        return this.___ - ___.___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // スコアリスト（80点、60点）をscoresに代入\\n        ___<___> ___ = ___.___(new ___(___), new ___(___));\\n        // sort でソートする\\n        ___.___(___);\\n        // get で要素を取得する\\n        ___.___.___(___.___(___).___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
@@ -422,7 +422,7 @@ export const javaData4 = {
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // scoresに[Score(80), Score(60)]を代入",
+          "        // スコアリスト（80点、60点）をscoresに代入",
           "        List<Score> scores = Arrays.asList(new Score(80), new Score(60));",
           "        // sort でソートする",
           "        Collections.sort(scores);",
@@ -457,7 +457,7 @@ export const javaData4 = {
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Score", "Comparable", "int", "value", "v", "compareTo", "other", "this", "}", "", "Main", "main", "String", "args", "List", "scores", "Arrays", "asList", "new", "80", "60", "Collections", "sort", "System", "out", "println", "get", "0", ";", "*;", "ther", "// Comparable を実装して自然順序を定義する", "t", "public", "int compareTo(Score other) {", "return this.value - other.value;", "// scoresに[Score(80), Score(60)]を代入", "// sort でソートする", "Collections.sort(scores);", "m.out.println(scores.get(0).value);"]
+          "others": ["java", "util", "*", "Score", "Comparable", "int", "value", "v", "compareTo", "other", "this", "}", "", "Main", "main", "String", "args", "List", "scores", "Arrays", "asList", "new", "80", "60", "Collections", "sort", "System", "out", "println", "get", "0", ";", "*;", "ther", "// Comparable を実装して自然順序を定義する", "t", "public", "int compareTo(Score other) {", "return this.value - other.value;", "// スコアリスト（80点、60点）をscoresに代入", "// sort でソートする", "Collections.sort(scores);", "m.out.println(scores.get(0).value);"]
         },
         "testCases": [
           {

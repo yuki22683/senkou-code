@@ -258,8 +258,8 @@ export const typescriptData2 = {
           "content": "# 安全なコード\\n\\n「絶対に変更されたくない値」を守れます。例えば、ユーザーのIDは変わってはいけませんよね。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ninterface User {\\n    readonly id: number;  // IDは変更禁止\\n    name: string;         // 名前は変更OK\\n}\\n\\nconst user: User = { id: 1, name: 'Taro' };\\nuser.name = 'Jiro';  // OK! 名前は変えられる\\nuser.id = 2;         // エラー！ IDは変えられない\\n```\\n\\nこうやって、大切なデータを間違って変更してしまうのを防げます！"
         }
       ],
-      "correctCode": "// idは読み取り専用\\ninterface Item {\\n    // readonly で読み取り専用に\\n    readonly id: number;\\n    // 名前プロパティの型\\n    name: string;\\n}\\n\\n// itemに{id: 1, name: 'りんご'}を代入\\nconst item: Item = { id: 1, name: 'りんご' };\\n// idを出力\\nconsole.log(item.id);",
-      "holeyCode": "// idは読み取り専用\\ninterface ___ {\\n    // readonly で読み取り専用に\\n    readonly ___: ___;\\n    // 名前プロパティの型\\n    ___: ___;\\n}\\n\\n// itemに{id: 1, name: 'りんご'}を代入\\nconst ___: ___ = { ___: ___, ___: '___' };\\n// idを出力\\n___.___(___.___);",
+      "correctCode": "// idは読み取り専用\\ninterface Item {\\n    // readonly で読み取り専用に\\n    readonly id: number;\\n    // 名前プロパティの型\\n    name: string;\\n}\\n\\n// Itemオブジェクト（id:1、名前:りんご）をitemに代入\\nconst item: Item = { id: 1, name: 'りんご' };\\n// idを出力\\nconsole.log(item.id);",
+      "holeyCode": "// idは読み取り専用\\ninterface ___ {\\n    // readonly で読み取り専用に\\n    readonly ___: ___;\\n    // 名前プロパティの型\\n    ___: ___;\\n}\\n\\n// Itemオブジェクト（id:1、名前:りんご）をitemに代入\\nconst ___: ___ = { ___: ___, ___: '___' };\\n// idを出力\\n___.___(___.___);",
       "correctLines": [
           "// idは読み取り専用",
           "interface Item {",
@@ -269,7 +269,7 @@ export const typescriptData2 = {
           "    name: string;",
           "}",
           "",
-          "// itemに{id: 1, name: 'りんご'}を代入",
+          "// Itemオブジェクト（id:1、名前:りんご）をitemに代入",
           "const item: Item = { id: 1, name: 'りんご' };",
           "// idを出力",
           "console.log(item.id);"
@@ -537,8 +537,8 @@ export const typescriptData2 = {
           "content": "# 複数から継承\\n\\n複数のインターフェースを組み合わせることもできます。カンマ（,）で区切って書きます。\\n\\n## たとえ話\\n\\n「歌える」という能力と「踊れる」という能力があるとします。「アイドル」は両方の能力を持っていますよね！\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ninterface A { a: string; }  // Aの特徴\\ninterface B { b: number; }  // Bの特徴\\n\\n// AとBの両方を継承\\ninterface C extends A, B {\\n    c: boolean;  // Cだけの特徴\\n}\\n\\nconst obj: C = { a: 'hi', b: 1, c: true };\\n// a, b, c すべて必要！\\n```"
         }
       ],
-      "correctCode": "// 基本のインターフェース\\ninterface Base {\\n    // idプロパティの型\\n    id: number;\\n}\\n\\n// extends でインターフェースを拡張\\ninterface User extends Base {\\n    // 名前プロパティの型\\n    name: string;\\n}\\n\\n// uに{id: 1, name: '太郎'}を代入\\nconst u: User = { id: 1, name: '太郎' };\\n// 名前を出力\\nconsole.log(u.name);",
-      "holeyCode": "// 基本のインターフェース\\ninterface ___ {\\n    // idプロパティの型\\n    ___: ___;\\n}\\n\\n// extends でインターフェースを拡張\\ninterface ___ extends ___ {\\n    // 名前プロパティの型\\n    ___: ___;\\n}\\n\\n// uに{id: 1, name: '太郎'}を代入\\nconst ___: ___ = { ___: ___, ___: '___' };\\n// 名前を出力\\n___.___(___.___);",
+      "correctCode": "// 基本のインターフェース\\ninterface Base {\\n    // idプロパティの型\\n    id: number;\\n}\\n\\n// extends でインターフェースを拡張\\ninterface User extends Base {\\n    // 名前プロパティの型\\n    name: string;\\n}\\n\\n// Userオブジェクト（id:1、名前:太郎）をuに代入\\nconst u: User = { id: 1, name: '太郎' };\\n// 名前を出力\\nconsole.log(u.name);",
+      "holeyCode": "// 基本のインターフェース\\ninterface ___ {\\n    // idプロパティの型\\n    ___: ___;\\n}\\n\\n// extends でインターフェースを拡張\\ninterface ___ extends ___ {\\n    // 名前プロパティの型\\n    ___: ___;\\n}\\n\\n// Userオブジェクト（id:1、名前:太郎）をuに代入\\nconst ___: ___ = { ___: ___, ___: '___' };\\n// 名前を出力\\n___.___(___.___);",
       "correctLines": [
           "// 基本のインターフェース",
           "interface Base {",
@@ -552,7 +552,7 @@ export const typescriptData2 = {
           "    name: string;",
           "}",
           "",
-          "// uに{id: 1, name: '太郎'}を代入",
+          "// Userオブジェクト（id:1、名前:太郎）をuに代入",
           "const u: User = { id: 1, name: '太郎' };",
           "// 名前を出力",
           "console.log(u.name);"

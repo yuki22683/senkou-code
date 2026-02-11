@@ -27,7 +27,7 @@ export const typescriptData3 = {
           "content": "# 部分的な更新に便利\\n\\nデータの一部だけを更新したいときに便利です。全項目を毎回指定しなくていいのです！\\n\\n## たとえ話\\n\\nプロフィールの「名前だけ変えたい」「年齢だけ変えたい」というとき、変えたい項目だけ指定できます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nfunction updateUser(user: User, updates: Partial<User>) {\\n  return { ...user, ...updates };\\n}\\n\\n// 名前だけ更新、ageは省略OK！\\nupdateUser(user, { name: 'Bob' });\\n```"
         }
       ],
-      "correctCode": "// インターフェースを定義\\ninterface Config {\\n  // ホスト名の型\\n  host: string;\\n  // ポート番号の型\\n  port: number;\\n// ブロックを閉じる\\n}\\n// Partial で全プロパティをオプショナルに\\nfunction update(config: Config, patch: Partial<Config>): Config {\\n  // { ...config, ...patch }を返す\\n  return { ...config, ...patch };\\n// ブロックを閉じる\\n}\\n\\n// cfgに{host: 'localhost', port: 3000}を代入\\nconst cfg = { host: 'localhost', port: 3000 };\\n// 更新してポートを出力\\nconsole.log(update(cfg, { port: 8080 }).port);", "holeyCode": "// インターフェースを定義\\ninterface ___ {\\n  // ホスト名の型\\n  ___: ___;\\n  // ポート番号の型\\n  ___: ___;\\n// ブロックを閉じる\\n___\\n// Partial で全プロパティをオプショナルに\\nfunction ___(___: ___, ___: ___<___>): ___ {\\n  // { ...config, ...patch }を返す\\n  return { ...___, ...___ };\\n// ブロックを閉じる\\n___\\n___\\n// cfgに{host: 'localhost', port: 3000}を代入\\nconst ___ = { ___: '___', ___: ___ };\\n// 更新してポートを出力\\n___.___(___(___, { ___: ___ }).___);",
+      "correctCode": "// インターフェースを定義\\ninterface Config {\\n  // ホスト名の型\\n  host: string;\\n  // ポート番号の型\\n  port: number;\\n// ブロックを閉じる\\n}\\n// Partial で全プロパティをオプショナルに\\nfunction update(config: Config, patch: Partial<Config>): Config {\\n  // { ...config, ...patch }を返す\\n  return { ...config, ...patch };\\n// ブロックを閉じる\\n}\\n\\n// 設定オブジェクト（host、port）をcfgに代入\\nconst cfg = { host: 'localhost', port: 3000 };\\n// 更新してポートを出力\\nconsole.log(update(cfg, { port: 8080 }).port);", "holeyCode": "// インターフェースを定義\\ninterface ___ {\\n  // ホスト名の型\\n  ___: ___;\\n  // ポート番号の型\\n  ___: ___;\\n// ブロックを閉じる\\n___\\n// Partial で全プロパティをオプショナルに\\nfunction ___(___: ___, ___: ___<___>): ___ {\\n  // { ...config, ...patch }を返す\\n  return { ...___, ...___ };\\n// ブロックを閉じる\\n___\\n___\\n// 設定オブジェクト（host、port）をcfgに代入\\nconst ___ = { ___: '___', ___: ___ };\\n// 更新してポートを出力\\n___.___(___(___, { ___: ___ }).___);",
       "correctLines": [
           "// インターフェースを定義",
           "interface Config {",
@@ -44,7 +44,7 @@ export const typescriptData3 = {
           "// ブロックを閉じる",
           "}",
           "",
-          "// cfgに{host: 'localhost', port: 3000}を代入",
+          "// 設定オブジェクト（host、port）をcfgに代入",
           "const cfg = { host: 'localhost', port: 3000 };",
           "// 更新してポートを出力",
           "console.log(update(cfg, { port: 8080 }).port);"
@@ -352,8 +352,8 @@ export const typescriptData3 = {
           "content": "# 型を二重管理しない\\n\\n関数の戻り値と同じ型を使いたいとき、わざわざ別の場所で型を定義しなくて済みます。\\n\\n## たとえ話\\n\\n料理のレシピを変えたら、自動で「完成品の説明」も変わってほしいですよね。ReturnTypeなら、関数を変えれば型も自動で変わります！\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\n// 関数の戻り値から型を自動取得\\ntype Result = ReturnType<typeof fetchData>;\\n\\nfunction processResult(result: Result) {\\n  // 関数の戻り値と同じ型が使える！\\n}\\n```\\n\\nこれで型の書き忘れや不一致を防げます。"
         }
       ],
-      "correctCode": "function createPoint() {\\n  // 座標オブジェクトを返す\\n  return { x: 10, y: 20 };\\n}\\n// ReturnType で戻り値の型を取得\\ntype Point = ReturnType<typeof createPoint>;\\n\\n// pに{x: 5, y: 15}を代入\\nconst p: Point = { x: 5, y: 15 };\\n// 座標の合計を出力\\nconsole.log(p.x + p.y);",
-      "holeyCode": "// ブロックを開始\\nfunction ___() {\\n  // 座標オブジェクトを返す\\n  return { ___: ___, ___: ___ };\\n// ブロックを閉じる\\n___\\n// ReturnType で戻り値の型を取得\\ntype ___ = ___<typeof ___>;\\n___\\n// pに{x: 5, y: 15}を代入\\nconst ___: ___ = { ___: ___, ___: ___ };\\n// 座標の合計を出力\\n___.___(___.___+___.___);",
+      "correctCode": "function createPoint() {\\n  // 座標オブジェクトを返す\\n  return { x: 10, y: 20 };\\n}\\n// ReturnType で戻り値の型を取得\\ntype Point = ReturnType<typeof createPoint>;\\n\\n// Pointオブジェクト（x:5、y:15）をpに代入\\nconst p: Point = { x: 5, y: 15 };\\n// 座標の合計を出力\\nconsole.log(p.x + p.y);",
+      "holeyCode": "// ブロックを開始\\nfunction ___() {\\n  // 座標オブジェクトを返す\\n  return { ___: ___, ___: ___ };\\n// ブロックを閉じる\\n___\\n// ReturnType で戻り値の型を取得\\ntype ___ = ___<typeof ___>;\\n___\\n// Pointオブジェクト（x:5、y:15）をpに代入\\nconst ___: ___ = { ___: ___, ___: ___ };\\n// 座標の合計を出力\\n___.___(___.___+___.___);",
       "correctLines": [
           "function createPoint() {",
           "  // 座標オブジェクトを返す",
@@ -362,7 +362,7 @@ export const typescriptData3 = {
           "// ReturnType で戻り値の型を取得",
           "type Point = ReturnType<typeof createPoint>;",
           "",
-          "// pに{x: 5, y: 15}を代入",
+          "// Pointオブジェクト（x:5、y:15）をpに代入",
           "const p: Point = { x: 5, y: 15 };",
           "// 座標の合計を出力",
           "console.log(p.x + p.y);"
@@ -532,8 +532,8 @@ export const typescriptData3 = {
           "content": "# 動的アクセスを型安全に\\n\\nkeyofを使うと、「存在するキーだけ使える」という安全な関数が作れます。\\n\\n## たとえ話\\n\\nロッカーを開けるとき、「存在する番号」しか使えませんよね。keyofで「存在するキー」だけを許可できます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nfunction getValue<T, K extends keyof T>(obj: T, key: K): T[K] {\\n  return obj[key];\\n}\\n\\nconst user = { id: 1, name: 'Alice' };\\ngetValue(user, 'name'); // OK! 'name'は存在する\\ngetValue(user, 'age');  // エラー！ 'age'は存在しない\\n```\\n\\n存在しないキーを使おうとするとエラーで教えてくれます！"
         }
       ],
-      "correctCode": "interface Person {\\n  // 名前の型\\n  name: string;\\n  // 年齢の型\\n  age: number;\\n}\\n// keyof でオブジェクトのキーを取得\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\n  // キーで値を取得して返す\\n  return p[key];\\n}\\n\\n// personに{name: 'ボブ', age: 30}を代入\\nconst person = { name: 'ボブ', age: 30 };\\n// 名前を取得して出力\\nconsole.log(getProperty(person, 'name'));",
-      "holeyCode": "// インターフェースを定義\\ninterface ___ {\\n  // 名前の型\\n  ___: ___;\\n  // 年齢の型\\n  ___: ___;\\n// ブロックを閉じる\\n___\\n// keyof でオブジェクトのキーを取得\\nfunction ___<___ extends keyof ___>(___: ___, ___: ___) {\\n  // キーで値を取得して返す\\n  return ___[___];\\n// ブロックを閉じる\\n___\\n___\\n// personに{name: 'ボブ', age: 30}を代入\\nconst ___ = { ___: '___', ___: ___ };\\n// 名前を取得して出力\\n___.___(___(___, '___'));",
+      "correctCode": "interface Person {\\n  // 名前の型\\n  name: string;\\n  // 年齢の型\\n  age: number;\\n}\\n// keyof でオブジェクトのキーを取得\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\n  // キーで値を取得して返す\\n  return p[key];\\n}\\n\\n// Personオブジェクト（名前:ボブ、年齢:30）をpersonに代入\\nconst person = { name: 'ボブ', age: 30 };\\n// 名前を取得して出力\\nconsole.log(getProperty(person, 'name'));",
+      "holeyCode": "// インターフェースを定義\\ninterface ___ {\\n  // 名前の型\\n  ___: ___;\\n  // 年齢の型\\n  ___: ___;\\n// ブロックを閉じる\\n___\\n// keyof でオブジェクトのキーを取得\\nfunction ___<___ extends keyof ___>(___: ___, ___: ___) {\\n  // キーで値を取得して返す\\n  return ___[___];\\n// ブロックを閉じる\\n___\\n___\\n// Personオブジェクト（名前:ボブ、年齢:30）をpersonに代入\\nconst ___ = { ___: '___', ___: ___ };\\n// 名前を取得して出力\\n___.___(___(___, '___'));",
       "correctLines": [
           "interface Person {",
           "  // 名前の型",
@@ -547,7 +547,7 @@ export const typescriptData3 = {
           "  return p[key];",
           "}",
           "",
-          "// personに{name: 'ボブ', age: 30}を代入",
+          "// Personオブジェクト（名前:ボブ、年齢:30）をpersonに代入",
           "const person = { name: 'ボブ', age: 30 };",
           "// 名前を取得して出力",
           "console.log(getProperty(person, 'name'));"
