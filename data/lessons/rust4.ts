@@ -46,7 +46,7 @@ export const rust4Data = {
         }
       ],
       "correctCode": "// Speakトレイトを定義\\ntrait Speak {\\n    // パターンマッチの分岐\\n    fn speak(&self) -> String;\\n// ブロックを閉じる\\n}\\n\\n// 文を実行\\nstruct Dog;\\n\\n// 実装ブロックを開始\\nimpl Speak for Dog {\\n    // speak関数を定義\\n    fn speak(&self) -> String {\\n        // \\\"\\\"\\n        String::from(\\\"ワン！\\\")\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// main関数を定義\\nfn main() {\\n    // 変数を宣言\\n    let dog = Dog;\\n    // 出力\\n    println!(\\\"{}\\\", dog.speak());\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    // パターンマッチの分岐\\n    fn ___(&___) -> ___;\\n// ブロックを閉じる\\n___\\n___\\n// 文を実行\\nstruct ___;\\n___\\n// 実装ブロックを開始\\nimpl ___ for ___ {\\n    // ___関数を定義\\n    fn ___(&___) -> ___ {\\n        // \\\"\\\"\\n        ___::___(\\\"___\\\")\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___;\\n    // 出力\\n    ___!(\\\"{}\\\", ___.___());\\n// ブロックを閉じる\\n___",
+      "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    // パターンマッチの分岐\\n    fn ___(&___) -> ___;\\n// ブロックを閉じる\\n___\\n___\\n// 文を実行\\nstruct ___;\\n___\\n// 実装ブロックを開始\\nimpl ___ for ___ {\\n    // speak関数を定義\\n    fn ___(&___) -> ___ {\\n        // \\\"\\\"\\n        ___::___(\\\"___\\\")\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___;\\n    // 出力\\n    ___!(\\\"{}\\\", ___.___());\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Speakトレイトを定義",
           "trait Speak {",
@@ -60,7 +60,7 @@ export const rust4Data = {
           "",
           "// 実装ブロックを開始",
           "impl Speak for Dog {",
-          "    // 関数を定義",
+          "    // speak関数を定義",
           "    fn speak(&self) -> String {",
           "        // \\\"\\\"",
           "        String::from(\\\"ワン！\\\")",
