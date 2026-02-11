@@ -436,8 +436,8 @@ export const pythonData2 = {
           "content": "# 設計図からモノを作ろう！\\n\\n設計図（クラス）から実際に作られたモノを **インスタンス**（または **オブジェクト**）と呼びます。\\n\\nクラス名の後ろに `()` をつけると、インスタンスが作られます。\\n\\n**例：** 犬を作って吠えさせよう！\\n\\n```python\\nclass Dog:\\n    def bark(self):\\n        print('ワン！')\\n\\ndog = Dog()  # インスタンス作成\\ndog.bark()\\n```\\n\\n=> ワン！\\n\\n**何をしているか：**\\n1. `Dog()` で犬のインスタンス（実体）を作る\\n2. 作った犬を `dog` という変数に入れる\\n3. `dog.bark()` で犬に「吠える」という動作をさせる\\n\\n**ポイント：** 同じ設計図から、たくさんの犬を作ることができます！"
         }
       ],
-      "correctCode": "# Catクラスを定義\\nclass Cat:\\n    # meowメソッドを定義\\n    def meow(self):\\n        # 'ニャー！'を表示\\n        print('ニャー！')\\n\\n# インスタンスcatを作って呼び出す\\ncat = Cat()\\ncat.meow()",
-      "holeyCode": "# Catクラスを定義\\n___ ___:\\n    # meowメソッドを定義\\n    ___ ___(___):\\n        # 'ニャー！'を表示\\n        ___('___')\\n\\n# インスタンスcatを作って呼び出す\\n___ = ___()\\n# cat.meow()を呼び出す\\n___.___()",
+      "correctCode": "# Catクラスを定義\\nclass Cat:\\n    # meowメソッドを定義\\n    def meow(self):\\n        # 'ニャー！'を表示\\n        print('ニャー！')\\n\\n# インスタンスcatを作って呼び出す\\ncat = Cat()\\n# catでmeowメソッドを実行して鳴き声を出力\\ncat.meow()",
+      "holeyCode": "# Catクラスを定義\\n___ ___:\\n    # meowメソッドを定義\\n    ___ ___(___):\\n        # 'ニャー！'を表示\\n        ___('___')\\n\\n# インスタンスcatを作って呼び出す\\n___ = ___()\\n# catでmeowメソッドを実行して鳴き声を出力\\n___.___()",
       "correctLines": [
           "# Catクラスを定義",
           "class Cat:",
@@ -448,6 +448,7 @@ export const pythonData2 = {
           "",
           "# インスタンスcatを作って呼び出す",
           "cat = Cat()",
+          "# catでmeowメソッドを実行して鳴き声を出力",
           "cat.meow()"
         ],
       "lineHints": [
@@ -460,7 +461,8 @@ export const pythonData2 = {
           null,
           null,
           "",
-          null
+          null,
+          ""
         ],
       "candidates": {
         "keywords": ["class", "def"],

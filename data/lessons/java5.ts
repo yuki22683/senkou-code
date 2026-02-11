@@ -605,14 +605,14 @@ export const javaData5 = {
           "content": "# 順番にキャッチ\\n\\n例外の種類ごとに違う処理をしたい場合は、catchを複数書きます。\\n\\n```java\\ntry {\\n    // 処理\\n} catch (FileNotFoundException e) {\\n    // ファイルがない場合の処理\\n} catch (IOException e) {\\n    // その他の入出力エラーの処理\\n}\\n```\\n\\n**大事なルール：** 具体的な例外を先に、一般的な例外を後に書きます。\\n\\n**なぜ？** 先に一般的なものを書くと、具体的なものまでキャッチされてしまい、区別できなくなるからです"
         }
       ],
-      "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        try {\\n            // null を代入する\\n            String s = null;\\n            // s.length()を呼び出す\\n            s.length();\\n        // | で複数の例外をまとめてキャッチする\\n        } catch (NullPointerException | ArrayIndexOutOfBoundsException e) {\\n            // println で出力する\\n            System.out.println(\"Caught\");\\n        }\\n    }\\n}", "holeyCode": "// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // ブロックを開始\\n        ___ {\\n            // null を代入する\\n            ___ ___ = ___;\\n            // s.length()を呼び出す\\n            ___.___()___\\n        // | で複数の例外をまとめてキャッチする\\n        } ___ (___ ___ ___ ___) {\\n            // println で出力する\\n            ___.___.___(___)___\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "public class Main {\\n    public static void main(String[] args) {\\n        try {\\n            // null を代入する\\n            String s = null;\\n            // sのlengthメソッドで長さを取得（NullPointerExceptionが発生）\\n            s.length();\\n        // | で複数の例外をまとめてキャッチする\\n        } catch (NullPointerException | ArrayIndexOutOfBoundsException e) {\\n            // println で出力する\\n            System.out.println(\"Caught\");\\n        }\\n    }\\n}", "holeyCode": "// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // ブロックを開始\\n        ___ {\\n            // null を代入する\\n            ___ ___ = ___;\\n            // sのlengthメソッドで長さを取得（NullPointerExceptionが発生）\\n            ___.___()___\\n        // | で複数の例外をまとめてキャッチする\\n        } ___ (___ ___ ___ ___) {\\n            // println で出力する\\n            ___.___.___(___)___\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "public class Main {",
           "    public static void main(String[] args) {",
           "        try {",
           "            // null を代入する",
           "            String s = null;",
-          "            // s.length()を呼び出す",
+          "            // sのlengthメソッドで長さを取得（NullPointerExceptionが発生）",
           "            s.length();",
           "        // | で複数の例外をまとめてキャッチする",
           "        } catch (NullPointerException | ArrayIndexOutOfBoundsException e) {",

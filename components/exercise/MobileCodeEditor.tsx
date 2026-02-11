@@ -545,12 +545,15 @@ export function MobileCodeEditor({
 
         // 全行が正解と一致しているか確認
         const originalLines = initialCode.split("\n");
-        const allLinesCorrect = newFullLines.every((line, i) => {
-          const correctLine = correctLines[i];
-          // correctLineがundefinedの場合はその行をスキップ（正解とみなす）
-          if (correctLine === undefined) return true;
-          // 編集対象行でない場合もスキップ（正解とみなす）
+        // 両方の配列の長さの最大値でイテレート（データ不整合対策）
+        const maxLength = Math.max(correctLines.length, originalLines.length);
+        const allLinesCorrect = Array.from({ length: maxLength }).every((_, i) => {
+          // 編集対象行でない場合はスキップ（正解とみなす）
           if (!isEditableLine(originalLines, i, commentPrefix)) return true;
+          const line = newFullLines[i] ?? "";
+          const correctLine = correctLines[i];
+          // correctLineがない場合、編集対象行なら未完了（データ不整合だが安全側に倒す）
+          if (!correctLine) return false;
           return matchesCorrectLine(line, correctLine, language);
         });
 
@@ -647,12 +650,15 @@ export function MobileCodeEditor({
 
           // 全行が正解と一致しているか確認
           const originalLines = initialCode.split("\n");
-          const allLinesCorrect = newFullLines.every((line, i) => {
-            const correctLine = correctLines[i];
-            // correctLineがundefinedの場合はその行をスキップ（正解とみなす）
-            if (correctLine === undefined) return true;
-            // 編集対象行でない場合もスキップ（正解とみなす）
+          // 両方の配列の長さの最大値でイテレート（データ不整合対策）
+          const maxLength = Math.max(correctLines.length, originalLines.length);
+          const allLinesCorrect = Array.from({ length: maxLength }).every((_, i) => {
+            // 編集対象行でない場合はスキップ（正解とみなす）
             if (!isEditableLine(originalLines, i, commentPrefix)) return true;
+            const line = newFullLines[i] ?? "";
+            const correctLine = correctLines[i];
+            // correctLineがない場合、編集対象行なら未完了（データ不整合だが安全側に倒す）
+            if (!correctLine) return false;
             return matchesCorrectLine(line, correctLine, language);
           });
 

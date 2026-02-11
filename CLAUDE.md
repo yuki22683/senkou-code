@@ -1206,9 +1206,19 @@
   - `correctLine && matchesCorrectLine(...)` → undefined の場合チェックマークが表示されない
 - **正しいパターン3**:
   - `!correctLine || matchesCorrectLine(...)` → undefined は正解扱いでチェックマーク表示
-- **禁止パターン4（allLinesCorrect判定）**:
+- **禁止パターン4（allLinesCorrect判定 - isEditable）**:
   - 全行ループで `isEditable` チェックなし → 編集対象でない行（コメント行等）も判定対象になり、データ不整合で false になる
 - **正しいパターン4**:
   - `if (!isEditableLine(originalLines, i, commentPrefix)) return true;` → 編集対象行のみ判定
+- **禁止パターン5（allLinesCorrect判定 - イテレート対象）**:
+  - `newFullLines.every()` や `correctLines.every()` 単独 → 配列長が異なる場合、短い方しかチェックされない
+- **正しいパターン5**:
+  - `const maxLength = Math.max(correctLines.length, originalLines.length);`
+  - `Array.from({ length: maxLength }).every((_, i) => { ... })` → 両方の配列の最大長でイテレート
+  - `correctLine` がない編集対象行は `return false;`（安全側に倒す）
+- **禁止パターン6（データ不整合）**:
+  - `holeyCode` と `correctLines` の行数が異なる → 最後の行がチェックされずに完了判定
+- **正しいパターン6**:
+  - `holeyCode`、`correctCode`、`correctLines`、`lineHints` の行数を必ず一致させる
 - **影響箇所**: `handleInsert`、`handleDelete`、チェックマーク表示、`allLinesCorrect`判定
-- **症状**: 最後の行で正解を入力しても正解判定されない、チェックマークが表示されない、コンソール表示・正解演出がされない
+- **症状**: 最後の行で正解を入力しても正解判定されない、チェックマークが表示されない、コンソール表示・正解演出がされない、途中の行で完了判定される

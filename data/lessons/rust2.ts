@@ -460,7 +460,7 @@ export const rust2Data = {
           "content": "# 約束を作って、守る\\n\\n1. `trait` で「約束」を定義\\n2. `impl トレイト for 型` で「約束を守る」実装をする\\n\\n**コード例：**\\n```rust\\n// 1. トレイト（約束）を定義\\ntrait Speak {\\n    fn speak(&self);  // 鳴くメソッドを持つ約束\\n}\\n\\n// 2. Dog構造体がトレイトを実装\\nstruct Dog;\\nimpl Speak for Dog {\\n    fn speak(&self) {\\n        println!(\"ワン！\");\\n    }\\n}\\n```\\n\\n「DogはSpeakができる」ということになります。"
         }
       ],
-      "correctCode": "// Speakトレイトを定義\\ntrait Speak {\\n    fn speak(&self);\\n}\\nstruct Dog;\\nimpl Speak for Dog {\\n    fn speak(&self) {\\n        println!(\"ワン！\");\\n    }\\n}\\nfn main() {\\n    let d = Dog;\\n    // d.speak()を呼び出す\\n    d.speak();\\n}", "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    // 文を実行\\n    fn ___(&___);\\n// ブロックを閉じる\\n___\\n// 文を実行\\nstruct ___;\\n// 実装ブロックを開始\\nimpl ___ for ___ {\\n    // speak関数を定義\\n    fn ___(&___) {\\n        // 出力\\n        ___!(\\\"ワン！\\\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___;\\n    // d.speak()を呼び出す\\n    ___.___();\\n// ブロックを閉じる\\n___",
+      "correctCode": "// Speakトレイトを定義\\ntrait Speak {\\n    fn speak(&self);\\n}\\nstruct Dog;\\nimpl Speak for Dog {\\n    fn speak(&self) {\\n        println!(\"ワン！\");\\n    }\\n}\\nfn main() {\\n    let d = Dog;\\n    // dでspeakメソッドを実行して鳴き声を出力\\n    d.speak();\\n}", "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    // 文を実行\\n    fn ___(&___);\\n// ブロックを閉じる\\n___\\n// 文を実行\\nstruct ___;\\n// 実装ブロックを開始\\nimpl ___ for ___ {\\n    // speak関数を定義\\n    fn ___(&___) {\\n        // 出力\\n        ___!(\\\"ワン！\\\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___;\\n    // dでspeakメソッドを実行して鳴き声を出力\\n    ___.___();\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Speakトレイトを定義",
           "trait Speak {",
@@ -474,7 +474,7 @@ export const rust2Data = {
           "}",
           "fn main() {",
           "    let d = Dog;",
-          "    // d.speak()を呼び出す",
+          "    // dでspeakメソッドを実行して鳴き声を出力",
           "    d.speak();",
           "}"
         ],
