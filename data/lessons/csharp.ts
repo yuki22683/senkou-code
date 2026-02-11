@@ -343,25 +343,25 @@ export const csharpData = {
           "content": "# 配列の作り方と使い方\\n\\n型の後ろに `[]`（角かっこ）をつけると配列になります。\\n\\n**大事なルール：**\\n配列の番号は **0番** から始まります！1番目のデータは「0番」、2番目は「1番」です。\\n\\n**コード例（くだものリストを作る）：**\\n```csharp\\nstring[] fruits = {\"りんご\", \"バナナ\"};\\nConsole.WriteLine(fruits[0]); // \"りんご\" が表示される\\nConsole.WriteLine(fruits[1]); // \"バナナ\" が表示される\\n```\\n\\n**解説：**\\n- `string[]` で「文字の配列」を宣言\\n- `{\"りんご\", \"バナナ\"}` で中身を入れる\\n- `fruits[0]` で1番目（0番）のデータを取り出す"
         }
       ],
-      "correctCode": "// 色配列（赤、青、緑）をcolorsに代入\\nstring[] colors = {\"赤\", \"青\", \"緑\"};\\n// 2番目のデータを出す\\nConsole.WriteLine(colors[1]);",
-      "holeyCode": "// 色配列（赤、青、緑）をcolorsに代入\\n___[] ___ = {\"___\", \"___\", \"___\"};\\n// 2番目のデータを出す\\n___.___(___[___]);",
+      "correctCode": "// 色配列（あか、あお、みどり）をcolorsに代入\\nstring[] colors = {\"あか\", \"あお\", \"みどり\"};\\n// 2番目のデータを出す\\nConsole.WriteLine(colors[1]);",
+      "holeyCode": "// 色配列（あか、あお、みどり）をcolorsに代入\\n___[] ___ = {\"___\", \"___\", \"___\"};\\n// 2番目のデータを出す\\n___.___(___[___]);",
       "correctLines": [
-          "// 色配列（赤、青、緑）をcolorsに代入",
-          "string[] colors = {\"赤\", \"青\", \"緑\"};",
+          "// 色配列（あか、あお、みどり）をcolorsに代入",
+          "string[] colors = {\"あか\", \"あお\", \"みどり\"};",
           "// 2番目のデータを出す",
           "Console.WriteLine(colors[1]);"
         ],
       "lineHints": [
           null,
-          "string[]型の変数colorsに{\"赤\", \"青\", \"緑\"}を代入します。",
+          "string[]型の変数colorsに色の配列（あか、あお、みどり）を代入します。",
           null,
           "Console.WriteLineでcolors[1]（2番目の要素）を出力します。"
         ],
         "candidates": {
           "strings": [
-            "赤",
-            "青",
-            "緑"
+            "あか",
+            "あお",
+            "みどり"
           ],
           "numbers": [
             "0",
@@ -373,7 +373,7 @@ export const csharpData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "青\\n"
+            "expected_output": "あお\\n"
           }
         ]
       },

@@ -318,17 +318,17 @@ export const rubyData = {
           "content": "# インデックス（番号）\\n\\nプログラミングでは、**最初の番号は「0」から数えます**。これを **インデックス** と呼びます。\\n\\n**イメージしてみよう：**\\n| 番号（インデックス） | 0番目 | 1番目 | 2番目 |\\n| --- | --- | --- | --- |\\n| 中身 | りんご | バナナ | みかん |\\n\\n**コード例：**\\n```ruby\\nfruits = ['りんご', 'バナナ', 'みかん']\\nputs fruits[0]\\nputs fruits[1]\\n```\\n\\n=> りんご（1番目）\\n\\n=> バナナ（2番目）\\n\\n**大事なポイント：**\\n- 1番目のデータは `[0]` で取り出す\\n- 2番目のデータは `[1]` で取り出す"
         }
       ],
-      "correctCode": "# 色の配列（赤、青、緑）をcolorsに代入\\ncolors = ['赤', '青', '緑']\\n# colors[1]を表示\\nputs colors[1]",
-      "holeyCode": "# 色の配列（赤、青、緑）をcolorsに代入\\n___ = ['___', '___', '___']\\n# colors[1]を表示\\n___ ___[___]",
+      "correctCode": "# 色の配列（あか、あお、みどり）をcolorsに代入\\ncolors = ['あか', 'あお', 'みどり']\\n# colors[1]を表示\\nputs colors[1]",
+      "holeyCode": "# 色の配列（あか、あお、みどり）をcolorsに代入\\n___ = ['___', '___', '___']\\n# colors[1]を表示\\n___ ___[___]",
       "correctLines": [
-          "# 色の配列（赤、青、緑）をcolorsに代入",
-          "colors = ['赤', '青', '緑']",
+          "# 色の配列（あか、あお、みどり）をcolorsに代入",
+          "colors = ['あか', 'あお', 'みどり']",
           "# colors[1]を表示",
           "puts colors[1]"
         ],
       "lineHints": [
           null,
-          "配列colorsに赤、青、緑の順で入力します。",
+          "配列colorsにあか、あお、みどりの順で入力します。",
           null,
           "putsでcolors[1]（2番目の要素）を表示します。"
         ],
@@ -336,9 +336,9 @@ export const rubyData = {
           "keywords": ["puts"],
           "variables": ["colors"],
           "strings": [
-            "赤",
-            "青",
-            "緑"
+            "あか",
+            "あお",
+            "みどり"
           ],
           "numbers": [
             "0",
@@ -350,7 +350,7 @@ export const rubyData = {
         "testCases": [
           {
             "input": "",
-            "expected_output": "青\\n"
+            "expected_output": "あお\\n"
           }
         ]
       },

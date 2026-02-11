@@ -246,20 +246,20 @@ export const typescriptData4 = {
           "content": "# 処理し忘れを防ぐ\\n\\nswitch文のdefaultでnever型を使うと、全ケースを処理したかチェックできます。\\n\\n## たとえ話\\n\\n「赤・青・緑」の3色を処理するとき、もし「青」を忘れていたらエラーで教えてくれます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ntype Color = 'red' | 'blue';\\n\\nfunction handle(c: Color) {\\n  switch (c) {\\n    case 'red': return '#ff0000';\\n    case 'blue': return '#0000ff';\\n    default:\\n      // 全ケース処理済みなら、ここには来ない\\n      const _check: never = c;\\n      return _check;\\n  }\\n}\\n```\\n\\n新しい色を追加したとき、処理を忘れるとエラーになります！"
         }
       ],
-      "correctCode": "// 色のユニオン型\\ntype Color = '赤' | '緑' | '青';\\n\\nfunction getHex(color: Color): string {\\n  switch (color) {\\n    // 赤のカラーコード\\n    case '赤': return '#ff0000';\\n    // 緑のカラーコード\\n    case '緑': return '#00ff00';\\n    // 青のカラーコード\\n    case '青': return '#0000ff';\\n    // 全ケース処理済みの場合\\n    default:\\n      // never で到達不能な型を表す\\n      const _exhaustive: never = color;\\n      // exhaustive変数を返す\\n      return _exhaustive;\\n  }\\n}\\n\\n// 赤のカラーコードを出力\\nconsole.log(getHex('赤'));",
-      "holeyCode": "// 色のユニオン型\\ntype ___ = ___ | ___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___(___: ___): ___ {\\n  // switch文\\n  switch (___) {\\n    // 赤のカラーコード\\n    case ___: return ___;\\n    // 緑のカラーコード\\n    case ___: return ___;\\n    // 青のカラーコード\\n    case ___: return ___;\\n    // 全ケース処理済みの場合\\n    ___:\\n      // never で到達不能な型を表す\\n      const ___: ___ = ___;\\n      // exhaustive変数を返す\\n      return ___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// 赤のカラーコードを出力\\n___.___(___(___))",
+      "correctCode": "// 色のユニオン型\\ntype Color = 'あか' | 'みどり' | 'あお';\\n\\nfunction getHex(color: Color): string {\\n  switch (color) {\\n    // あかのカラーコード\\n    case 'あか': return '#ff0000';\\n    // みどりのカラーコード\\n    case 'みどり': return '#00ff00';\\n    // あおのカラーコード\\n    case 'あお': return '#0000ff';\\n    // 全ケース処理済みの場合\\n    default:\\n      // never で到達不能な型を表す\\n      const _exhaustive: never = color;\\n      // exhaustive変数を返す\\n      return _exhaustive;\\n  }\\n}\\n\\n// あかのカラーコードを出力\\nconsole.log(getHex('あか'));",
+      "holeyCode": "// 色のユニオン型\\ntype ___ = ___ | ___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___(___: ___): ___ {\\n  // switch文\\n  switch (___) {\\n    // あかのカラーコード\\n    case ___: return ___;\\n    // みどりのカラーコード\\n    case ___: return ___;\\n    // あおのカラーコード\\n    case ___: return ___;\\n    // 全ケース処理済みの場合\\n    ___:\\n      // never で到達不能な型を表す\\n      const ___: ___ = ___;\\n      // exhaustive変数を返す\\n      return ___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// あかのカラーコードを出力\\n___.___(___(___))",
       "correctLines": [
           "// 色のユニオン型",
-          "type Color = '赤' | '緑' | '青';",
+          "type Color = 'あか' | 'みどり' | 'あお';",
           "",
           "function getHex(color: Color): string {",
           "  switch (color) {",
-          "    // 赤のカラーコード",
-          "    case '赤': return '#ff0000';",
-          "    // 緑のカラーコード",
-          "    case '緑': return '#00ff00';",
-          "    // 青のカラーコード",
-          "    case '青': return '#0000ff';",
+          "    // あかのカラーコード",
+          "    case 'あか': return '#ff0000';",
+          "    // みどりのカラーコード",
+          "    case 'みどり': return '#00ff00';",
+          "    // あおのカラーコード",
+          "    case 'あお': return '#0000ff';",
           "    // 全ケース処理済みの場合",
           "    default:",
           "      // never で到達不能な型を表す",
@@ -269,8 +269,8 @@ export const typescriptData4 = {
           "  }",
           "}",
           "",
-          "// 赤のカラーコードを出力",
-          "console.log(getHex('赤'));"
+          "// あかのカラーコードを出力",
+          "console.log(getHex('あか'));"
         ],
       "lineHints": [
           null,
@@ -306,7 +306,7 @@ export const typescriptData4 = {
             "return",
             "default"
           ],
-          "others": ["Color", "'赤'", "'緑'", "'青'", "|", "getHex", "color", "string", "'#ff0000'", "'#00ff00'", "'#0000ff'", "_exhaustive", "never", "}", "console", "log"]
+          "others": ["Color", "'あか'", "'みどり'", "'あお'", "|", "getHex", "color", "string", "'#ff0000'", "'#00ff00'", "'#0000ff'", "_exhaustive", "never", "}", "console", "log"]
         },
         "testCases": [
           {

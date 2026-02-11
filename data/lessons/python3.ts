@@ -203,11 +203,11 @@ export const pythonData3 = {
           "content": "# start で開始番号を変えられる！\\n\\nデフォルトでは0から始まりますが、`start=1` で **1から始める** こともできます。\\n\\n人間は「1番目、2番目...」と数えることが多いですよね。そんなときに便利です！\\n\\n**例：** 1番目から始めよう！\\n\\n```python\\nfruits = ['apple', 'banana', 'cherry']\\nfor i, fruit in enumerate(fruits, start=1):\\n    print(f'{i}番目: {fruit}')\\n```\\n=> 1番目: apple\\n=> 2番目: banana\\n=> 3番目: cherry\\n\\n**何をしているか：**\\n- `start=1` で開始番号を1に設定\\n- ループするたびに番号が1ずつ増える\\n\\n**ポイント：** `start` を使わないと0から始まります！"
         }
       ],
-      "correctCode": "# 赤、緑、青の3色を含むリストを作成\\ncolors = ['赤', '緑', '青']\\n# 1番目の i に番号、2番目の color に要素が入る\\nfor i, color in enumerate(colors):\\n    # 「番号: 色」の形式で画面に出力\\n    print(f'{i}: {color}')",
-      "holeyCode": "# 赤、緑、青の3色を含むリストを作成\\n___ = ['___', '___', '___']\\n# 1番目の i に番号、2番目の color に要素が入る\\nfor ___, ___ in ___(___):\\n    # 「番号: 色」の形式で画面に出力\\n    ___(f'{___}: {___}')",
+      "correctCode": "# あか、みどり、あおの3色を含むリストを作成\\ncolors = ['あか', 'みどり', 'あお']\\n# 1番目の i に番号、2番目の color に要素が入る\\nfor i, color in enumerate(colors):\\n    # 「番号: 色」の形式で画面に出力\\n    print(f'{i}: {color}')",
+      "holeyCode": "# あか、みどり、あおの3色を含むリストを作成\\n___ = ['___', '___', '___']\\n# 1番目の i に番号、2番目の color に要素が入る\\nfor ___, ___ in ___(___):\\n    # 「番号: 色」の形式で画面に出力\\n    ___(f'{___}: {___}')",
       "correctLines": [
-          "# 赤、緑、青の3色を含むリストを作成",
-          "colors = ['赤', '緑', '青']",
+          "# あか、みどり、あおの3色を含むリストを作成",
+          "colors = ['あか', 'みどり', 'あお']",
           "# 1番目の i に番号、2番目の color に要素が入る",
           "for i, color in enumerate(colors):",
           "    # 「番号: 色」の形式で画面に出力",
@@ -225,12 +225,12 @@ export const pythonData3 = {
           "functions": [
             "enumerate"
           ],
-          "others": ["colors", "赤", "緑", "青", "i", "color", "print"]
+          "others": ["colors", "あか", "みどり", "あお", "i", "color", "print"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "0: 赤\\n1: 緑\\n2: 青\\n"
+            "expected_output": "0: あか\\n1: みどり\\n2: あお\\n"
           }
         ]
       },

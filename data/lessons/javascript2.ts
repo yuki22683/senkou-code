@@ -371,11 +371,11 @@ export const javascriptData2 = {
           "content": "# 関数の戻り値にも使える！\\n\\n関数が配列を返すとき、分割代入を使うと一度に受け取れます。\\n\\n**コード例：**\\n```javascript\\nfunction getPoint() {\\n    return [10, 20];\\n}\\n\\n// 戻り値を一度に受け取る\\nconst [x, y] = getPoint();\\nconsole.log(x); // 10\\nconsole.log(y); // 20\\n```\\n\\n**ポイント：**\\n左側の `[ ]` の中に、受け取りたい変数名を順番に書きます。"
         }
       ],
-      "correctCode": "// ['赤', '緑', '青'] から値を取り出す\\nconst colors = ['赤', '緑', '青'];\\n// second で2番目の要素を受け取る\\nconst [first, second] = colors;\\n// firstを表示\\nconsole.log(first);\\n// secondを表示\\nconsole.log(second);",
-      "holeyCode": "// ['赤', '緑', '青'] から値を取り出す\\nconst ___ = ['___', '___', '___'];\\n// second で2番目の要素を受け取る\\nconst [___, ___] = ___;\\n// firstを表示\\n___.___(___)___\\n// secondを表示\\n___.___(___)___",
+      "correctCode": "// 色の配列（あか、みどり、あお）から値を取り出す\\nconst colors = ['あか', 'みどり', 'あお'];\\n// second で2番目の要素を受け取る\\nconst [first, second] = colors;\\n// firstを表示\\nconsole.log(first);\\n// secondを表示\\nconsole.log(second);",
+      "holeyCode": "// 色の配列（あか、みどり、あお）から値を取り出す\\nconst ___ = ['___', '___', '___'];\\n// second で2番目の要素を受け取る\\nconst [___, ___] = ___;\\n// firstを表示\\n___.___(___)___\\n// secondを表示\\n___.___(___)___",
       "correctLines": [
-          "// ['赤', '緑', '青'] から値を取り出す",
-          "const colors = ['赤', '緑', '青'];",
+          "// 色の配列（あか、みどり、あお）から値を取り出す",
+          "const colors = ['あか', 'みどり', 'あお'];",
           "// second で2番目の要素を受け取る",
           "const [first, second] = colors;",
           "// firstを表示",
@@ -385,7 +385,7 @@ export const javascriptData2 = {
         ],
       "lineHints": [
           null,
-          "['赤', '緑', '青'] の配列を作ります。",
+          "色の配列（あか、みどり、あお）を作ります。",
           null,
           "2番目の変数名は `second` です。",
           null,
@@ -400,12 +400,12 @@ export const javascriptData2 = {
             "last",
             "next"
           ],
-          "others": ["赤", "緑", "青", "first", "colors", "console", "log", ";"]
+          "others": ["あか", "みどり", "あお", "first", "colors", "console", "log", ";"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "赤\\n緑\\n"
+            "expected_output": "あか\\nみどり\\n"
           }
         ]
       },

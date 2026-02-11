@@ -310,7 +310,7 @@ export const bash2Data = {
           "content": "# パターン) 処理;;\\n\\n`;;` で各パターンの処理を終えます。`*` はその他すべてです。\\n\\n**コード例：**\\n```bash\\ncase $x in\\n    1) echo \"one\";;\\n    2) echo \"two\";;\\n    *) echo \"other\";;\\nesac\\n```"
         }
       ],
-      "correctCode": "# 変数fruitに値を代入\\nfruit=\"りんご\"\\n# fruitの値で分岐\\ncase $fruit in\\n    # りんごの場合\\n    りんご) echo \"赤\";;\\n    # バナナの場合\\n    バナナ) echo \"黄色\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\nesac",
+      "correctCode": "# 変数fruitに値を代入\\nfruit=\"りんご\"\\n# fruitの値で分岐\\ncase $fruit in\\n    # りんごの場合\\n    りんご) echo \"あか\";;\\n    # バナナの場合\\n    バナナ) echo \"きいろ\";;\\n    # その他の場合\\n    *) echo \"その他\";;\\nesac",
       "holeyCode": "# 変数fruitに値を代入\\n___=\"___\"\\n# fruitの値で分岐\\n___ $___ in\\n    # りんごの場合\\n    りんご) ___ \"___\";;\\n    # バナナの場合\\n    ___) ___ \"___\";;\\n    # その他の場合\\n    *) ___ \"___\";;\\n___",
       "correctLines": [
           "# 変数fruitに値を代入",
@@ -318,9 +318,9 @@ export const bash2Data = {
           "# fruitの値で分岐",
           "case $fruit in",
           "    # りんごの場合",
-          "    りんご) echo \"赤\";;",
+          "    りんご) echo \"あか\";;",
           "    # バナナの場合",
-          "    バナナ) echo \"黄色\";;",
+          "    バナナ) echo \"きいろ\";;",
           "    # その他の場合",
           "    *) echo \"その他\";;",
           "esac"
@@ -343,12 +343,12 @@ export const bash2Data = {
             "case",
             "esac"
           ],
-          "others": ["fruit", "りんご", "バナナ", "echo", "赤", "黄色", "その他"]
+          "others": ["fruit", "りんご", "バナナ", "echo", "あか", "きいろ", "その他"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "赤\\n"
+            "expected_output": "あか\\n"
           }
         ]
       },

@@ -459,11 +459,11 @@ export const perlData = {
           "content": "# 目標\\n\\nハッシュ `%fruit` に `color => '赤'` を入れて、colorの値を表示しましょう。\\n\\n**ヒント：** 1つの値を取り出すときは `$` を使います。\\n```perl\\n$fruit{color}  # \"赤\"\\n```"
         }
       ],
-      "correctCode": "# ハッシュを作る\\nmy %fruit = (\"color\" => \"赤\");\\n# $fruit{color}を出力\\nprint \"$fruit{color}\\n\";",
+      "correctCode": "# ハッシュを作る\\nmy %fruit = (\"color\" => \"あか\");\\n# $fruit{color}を出力\\nprint \"$fruit{color}\\n\";",
       "holeyCode": "# ハッシュを作る\\n___ %___ = (\"___\" ___ \"___\");\\n# $fruit{color}を出力\\n___ \"$___{___}\\n\";",
       "correctLines": [
           "# ハッシュを作る",
-          "my %fruit = (\"color\" => \"赤\");",
+          "my %fruit = (\"color\" => \"あか\");",
           "# $fruit{color}を出力",
           "print \"$fruit{color}\\n\";"
         ],
@@ -480,12 +480,12 @@ export const perlData = {
             "@fruit",
             "$fruit"
           ],
-          "others": ["color", "print", "my", "\";", "fruit", "=>", "赤"]
+          "others": ["color", "print", "my", "\";", "fruit", "=>", "あか"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "赤\\n"
+            "expected_output": "あか\\n"
           }
         ]
       },
