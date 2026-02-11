@@ -30,7 +30,7 @@ export const javaData = {
       "correctLines": [
           "// Mainクラスを定義",
           "public class Main {",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // Hello, Java! と出力する",
           "        System.out.println(\\\"Hello, Java!\\\");",
@@ -84,7 +84,7 @@ export const javaData = {
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // 文字列 Java を代入する",
           "        String name = \\\"Java\\\";",
@@ -145,7 +145,7 @@ export const javaData = {
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // x に 10 を代入する",
           "        int x = 10;",
@@ -212,7 +212,7 @@ export const javaData = {
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // 10 を 3 で割ったあまりを出力する",
           "        System.out.println(10 % 3);",
@@ -270,7 +270,7 @@ export const javaData = {
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // hp に 100 を入れる",
           "        int hp = 100;",
@@ -344,7 +344,7 @@ export const javaData = {
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // age というはこに 10 を入れる",
           "        int age = 10;",
@@ -409,7 +409,7 @@ export const javaData = {
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // \\\"あか\\\", \\\"あお\\\" の順で配列を作る",
           "        String[] colors = {\\\"あか\\\", \\\"あお\\\"};",
@@ -471,7 +471,7 @@ export const javaData = {
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // score に 100 を入れる",
           "        int score = 100;",
@@ -544,7 +544,7 @@ export const javaData = {
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // age に 10 を入れる",
           "        int age = 10;",
@@ -629,7 +629,7 @@ export const javaData = {
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // score と bonus を定義する",
           "        int score = 80;",
@@ -712,7 +712,7 @@ export const javaData = {
       "correctLines": [
           "// クラスを定義",
           "public class Main {",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // 配列を作る",
           "        String[] names = {\\\"たろう\\\", \\\"はなこ\\\"};",
@@ -782,7 +782,7 @@ export const javaData = {
           "import java.util.HashMap;",
           "// クラスを定義",
           "public class Main {",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // new HashMap で作る",
           "        HashMap<String, String> user = new HashMap<>();",
@@ -854,7 +854,7 @@ export const javaData = {
           "        System.out.println(\\\"こんにちは\\\");",
           "    // ブロックを閉じる",
           "    }",
-          "    // メソッドを定義",
+          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // greet メソッドを呼び出す",
           "        greet();",

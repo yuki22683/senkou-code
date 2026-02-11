@@ -22,8 +22,10 @@
   6. `node scripts/fix-correctlines-comments.mjs` - correctLinesのコメント修正
   7. `node scripts/fix-all-vague-comments-v3.mjs` - holeyCode内の複雑な曖昧コメント修正
   8. `node scripts/fix-all-vague-final.mjs` - correctCode/holeyCode両方の残り曖昧コメント修正
-  9. `node scripts/fix-candidates-correct.mjs` - 選択肢不足を自動修正（ルール#34参照）
-  10. `node scripts/check-linehints-giveaway.mjs` - 答えをそのまま教えるヒントがないかチェック（ルール#5参照）
+  9. `node scripts/fix-main-function-comments.mjs` - main関数の曖昧コメント修正（Go/Rust）
+  10. `node scripts/fix-method-comments-safe.mjs` - Javaのmainメソッドコメント修正（correctLines）
+  11. `node scripts/fix-candidates-correct.mjs` - 選択肢不足を自動修正（ルール#34参照）
+  12. `node scripts/check-linehints-giveaway.mjs` - 答えをそのまま教えるヒントがないかチェック（ルール#5参照）
 - **注意**：`translate-string-literals.mjs` は使用禁止（ルール#55参照）
 - index.tsのケーシング修正（Java3→java3, C2→c2など）も再適用が必要
 - **注意**：`fix-holey-v2.mjs` は使用禁止（ルール#24参照）
