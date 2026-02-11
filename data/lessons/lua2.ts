@@ -97,7 +97,7 @@ export const lua2Data = {
           null,
           "numsに10, 20, 30を格納した配列を作成します。",
           null,
-          "printでnums[2]を表示します。"
+          "printで2番目の要素（20）を表示します。"
         ],
         "candidates": {
           "numbers": [

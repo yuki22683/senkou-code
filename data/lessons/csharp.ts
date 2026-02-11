@@ -636,9 +636,9 @@ export const csharpData = {
           null,
           "var型の変数fruitsにDictionary<string, string>を作成します。",
           null,
-          "fruits[\"みかん\"]に\"オレンジ\"を代入します。",
+          "キー「みかん」に値「オレンジ」を代入します。",
           null,
-          "Console.WriteLineでfruits[\"みかん\"]の値を出力します。"
+          "Console.WriteLineでキー「みかん」の値を出力します。"
         ],
         "candidates": {
           "types": [
