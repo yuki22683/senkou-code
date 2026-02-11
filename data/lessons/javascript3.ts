@@ -192,8 +192,8 @@ export const javascriptData3 = {
           "content": "# async 関数の中でしか使えない！\\n\\n**重要なルール：**\\n`await` は必ず `async` 関数の中で使います。\\n\\n**なぜ？**\\n「待つ」という行為は、約束を返す関数の中でないとできないからです。\\n\\n**コード例：**\\n```javascript\\nasync function fetchData() {\\n  // 1. データを取得（待つ）\\n  const data = await fetch('/api');\\n  // 2. JSONに変換（待つ）\\n  const json = await data.json();\\n  // 3. 結果を返す\\n  return json;\\n}\\n```\\n\\n**ポイント：**\\n`await` を使うと、上から順番に実行されるので読みやすい！"
         }
       ],
-      "correctCode": "// awaitでPromiseを待つasync main()関数を定義\\nasync function main() {\\n  // await でPromiseの結果を待つ\\n  const value = await Promise.resolve(100);\\n  // console.log で出力\\n  console.log(value);\\n}\\n\\n// main() で関数を呼び出す\\nmain();",
-      "holeyCode": "// awaitでPromiseを待つasync main()関数を定義\\n___ ___ ___() {\\n  // await でPromiseの結果を待つ\\n  ___ ___ = ___ ___.___(___);\\n  // console.log で出力\\n  ___.___(___);\\n// ブロックを閉じる\\n___\\n___\\n// main() で関数を呼び出す\\n___();",
+      "correctCode": "// awaitでPromiseを待つasync main()関数を定義\\nasync function main() {\\n  // await でPromiseの結果を待つ\\n  const value = await Promise.resolve(100);\\n  // console.log で出力\\n  console.log(value);\\n}\\n\\n// main()を呼び出す\\nmain();",
+      "holeyCode": "// awaitでPromiseを待つasync main()関数を定義\\n___ ___ ___() {\\n  // await でPromiseの結果を待つ\\n  ___ ___ = ___ ___.___(___);\\n  // console.log で出力\\n  ___.___(___);\\n// ブロックを閉じる\\n___\\n___\\n// main()を呼び出す\\n___();",
       "correctLines": [
           "// awaitでPromiseを待つasync main()関数を定義",
           "async function main() {",
@@ -203,7 +203,7 @@ export const javascriptData3 = {
           "  console.log(value);",
           "}",
           "",
-          "// main() で関数を呼び出す",
+          "// main()を呼び出す",
           "main();"
         ],
       "lineHints": [
@@ -226,7 +226,7 @@ export const javascriptData3 = {
             "const",
             "function"
           ],
-          "others": ["main", "value", "Promise", "resolve", "100", "console", "log", "}", "", "// main() で関数を呼び出す"]
+          "others": ["main", "value", "Promise", "resolve", "100", "console", "log", "}", "", "// main()を呼び出す"]
         },
         "testCases": [
           {

@@ -343,15 +343,15 @@ export const bashData = {
           "content": "# 名前() { } で定義\\n\\n**コード例：**\\n```bash\\naisatsu() {\\n    echo \"こんにちは\"\\n}\\n\\naisatsu  # 呼び出し\\n```\\n\\n**このコードは何をしているの？**\\n1. `aisatsu`という関数を作る（中身は「こんにちは」を表示）\\n2. `aisatsu` と書くだけで実行できる"
         }
       ],
-      "correctCode": "# greet関数を定義\\ngreet() {\\n    # 「こんにちは」と表示\\n    echo \"こんにちは\"\\n}\\n# greetで関数を呼び出す\\ngreet",
-      "holeyCode": "# greet関数を定義\\n___() {\\n    # 「こんにちは」と表示\\n    ___ \\\"___\\\"\\n// ブロックを閉じる\\n___\\n# greetで関数を呼び出す\\n___",
+      "correctCode": "# greet関数を定義\\ngreet() {\\n    # 「こんにちは」と表示\\n    echo \"こんにちは\"\\n}\\n# greetを呼び出す\\ngreet",
+      "holeyCode": "# greet関数を定義\\n___() {\\n    # 「こんにちは」と表示\\n    ___ \\\"___\\\"\\n// ブロックを閉じる\\n___\\n# greetを呼び出す\\n___",
       "correctLines": [
           "# greet関数を定義",
           "greet() {",
           "    # 「こんにちは」と表示",
           "    echo \"こんにちは\"",
           "}",
-          "# greetで関数を呼び出す",
+          "# greetを呼び出す",
           "greet"
         ],
       "lineHints": [
@@ -367,7 +367,7 @@ export const bashData = {
           "functions": [
             "greet"
           ],
-          "others": ["}", "こんにちは", "echo", "# greetで関数を呼び出す"]
+          "others": ["}", "こんにちは", "echo", "# greetを呼び出す"]
         },
         "testCases": [
           {

@@ -658,7 +658,7 @@ export const goData = {
           "content": "# func（ファンク）で関数を作る\\n\\n`func`（ファンク）というキーワードの後に名前をつけて、関数を作ります。\\n\\n**コード例：**\\n```go\\n// sayHello という関数を作る\\nfunc sayHello() {\\n    fmt.Println(\"こんにちは\")\\n}\\n\\nfunc main() {\\n    sayHello()  // 関数を呼び出す\\n    sayHello()  // 何回でも使える！\\n}\\n```\\n\\n**書き方：**\\n1. `func 関数名()` で関数を定義\\n2. `{ }` の中にやりたい処理を書く\\n3. 使うときは `関数名()` で呼び出す\\n\\n`()` は「関数を呼び出すよ」という合図です。"
         }
       ],
-      "correctCode": "package main\\nimport \"fmt\"\\nfunc greet() {\\n    fmt.Println(\"こんにちは\")\\n}\\nfunc main() {\\n    // greet 関数を呼び出す\\n    greet()\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// greet関数を定義\\nfunc ___ () {\\n    // パッケージをインポート\\n    ___.___(\\\"___\\\")\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfunc ___ () {\\n    // greet 関数を呼び出す\\n    ___()\\n// ブロックを閉じる\\n___",
+      "correctCode": "package main\\nimport \"fmt\"\\nfunc greet() {\\n    fmt.Println(\"こんにちは\")\\n}\\nfunc main() {\\n    // greet()を呼び出す\\n    greet()\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// greet関数を定義\\nfunc ___ () {\\n    // パッケージをインポート\\n    ___.___(\\\"___\\\")\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfunc ___ () {\\n    // greet()を呼び出す\\n    ___()\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -666,7 +666,7 @@ export const goData = {
           "    fmt.Println(\"こんにちは\")",
           "}",
           "func main() {",
-          "    // greet 関数を呼び出す",
+          "    // greet()を呼び出す",
           "    greet()",
           "}"
         ],
