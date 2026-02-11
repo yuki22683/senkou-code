@@ -496,10 +496,10 @@ export const pythonData = {
           "content": "# 順番に取り出す魔法\\n\\n`for`（フォー）を使うと、リストから **順番にデータを取り出して** くれます。\\n\\n**例：** 駅の名前を順番に呼ぼう！\\n\\n```python\\nstations = ['東京', '品川', '横浜']\\nfor s in stations:\\n    print(s)\\n```\\n=> 東京\\n=> 品川\\n=> 横浜\\n\\n**何をしているか：**\\n1. `stations` というリストに3つの駅名が入っている\\n2. `for s in stations:` で「リストから1つずつ取り出して `s` に入れる」\\n3. 取り出すたびに `print(s)` が実行される\\n4. 全部取り出し終わったらループ終了！\\n\\n**ポイント：** `s` は取り出したデータを入れる「仮の名前」です。`station` など、わかりやすい名前にするといいですね。"
         }
       ],
-      "correctCode": "# 名前のリスト（太郎、花子）をnamesに代入\\nnames = ['たろう', 'はなこ']\\n# forでnamesをループ\\nfor name in names:\\n    # nameを表示\\n    print(name)",
-      "holeyCode": "# 名前のリスト（太郎、花子）をnamesに代入\\n___ = ['___', '___']\\n# forでnamesをループ\\n___ ___ ___ ___:\\n    # nameを表示\\n    ___(___)",
+      "correctCode": "# 名前のリスト（たろう、はなこ）をnamesに代入\\nnames = ['たろう', 'はなこ']\\n# forでnamesをループ\\nfor name in names:\\n    # nameを表示\\n    print(name)",
+      "holeyCode": "# 名前のリスト（たろう、はなこ）をnamesに代入\\n___ = ['___', '___']\\n# forでnamesをループ\\n___ ___ ___ ___:\\n    # nameを表示\\n    ___(___)",
       "correctLines": [
-          "# 名前のリスト（太郎、花子）をnamesに代入",
+          "# 名前のリスト（たろう、はなこ）をnamesに代入",
           "names = ['たろう', 'はなこ']",
           "# forでnamesをループ",
           "for name in names:",
@@ -508,7 +508,7 @@ export const pythonData = {
         ],
       "lineHints": [
           null,
-          "名前のリスト（太郎、花子）をnamesに代入します。",
+          "名前のリスト（たろう、はなこ）をnamesに代入します。",
           null,
           "for name in names:でループします。",
           null,
