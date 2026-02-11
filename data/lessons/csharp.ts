@@ -397,11 +397,9 @@ export const csharpData = {
           "int score = 100;",
           "// もし80より大きかったら",
           "if (score > 80)",
-          "// ブロックを開始",
           "{",
           "    // 「合格！」と表示する",
-          "    Console.WriteLine(\\\"合格！\\\");",
-          "// ブロックを閉じる",
+          "    Console.WriteLine(\"合格！\");",
           "}"
         ],
       "lineHints": [
@@ -412,9 +410,7 @@ export const csharpData = {
           null,
           "",
           null,
-          "\\\"\\\"",
-          null,
-          ""
+          "\\\"\\\""
         ],
         "candidates": {
           "keywords": [
@@ -428,7 +424,7 @@ export const csharpData = {
           "strings": [
             "合格！"
           ],
-          "others": ["int", "score", ">", "{", "Console", "WriteLine", "}"]
+          "others": ["int", "score", ">", "{", "Console", "WriteLine", "}", "// 「合格！」と表示する"]
         },
         "testCases": [
           {
@@ -457,19 +453,15 @@ export const csharpData = {
           "int age = 10;",
           "// 20歳以上かどうかで分ける",
           "if (age >= 20)",
-          "// ブロックを開始",
           "{",
           "    // 「大人」と出力",
-          "    Console.WriteLine(\\\"大人\\\");",
-          "// ブロックを閉じる",
+          "    Console.WriteLine(\"大人\");",
           "}",
           "// else でそれ以外の場合",
           "else",
-          "// ブロックを開始",
           "{",
           "    // 「子供」と出力",
-          "    Console.WriteLine(\\\"子供\\\");",
-          "// ブロックを閉じる",
+          "    Console.WriteLine(\"子供\");",
           "}"
         ],
       "lineHints": [
@@ -486,10 +478,6 @@ export const csharpData = {
           null,
           "",
           null,
-          "",
-          null,
-          "\\\"\\\"",
-          null,
           ""
         ],
         "candidates": {
@@ -505,7 +493,7 @@ export const csharpData = {
             "大人",
             "子供"
           ],
-          "others": ["int", "age", ">=", "{", "Console", "WriteLine", "}", "else"]
+          "others": ["int", "age", ">=", "{", "Console", "WriteLine", "}", "else", "// 「大人」と出力", "// 「子供」と出力"]
         },
         "testCases": [
           {
@@ -532,15 +520,11 @@ export const csharpData = {
       "correctLines": [
           "// score と bonus を定義",
           "int score = 80;",
-          "// 変数を宣言",
           "int bonus = 10;",
           "// && で両方の条件をチェック",
           "if (score >= 70 && bonus > 0)",
-          "// ブロックを開始",
           "{",
-          "    // \\\"\\\"",
-          "    Console.WriteLine(\\\"ボーナスあり合格\\\");",
-          "// ブロックを閉じる",
+          "    Console.WriteLine(\"ボーナスあり合格\");",
           "}"
         ],
       "lineHints": [
@@ -551,10 +535,6 @@ export const csharpData = {
           null,
           "",
           null,
-          "",
-          null,
-          "\\\"\\\"",
-          null,
           ""
         ],
         "candidates": {
@@ -564,7 +544,7 @@ export const csharpData = {
             ">=",
             ">"
           ],
-          "others": ["int", "score", "bonus", "80", "10", "70", "0", "{", "Console", "WriteLine", "ボーナスあり合格", "}"]
+          "others": ["int", "score", "bonus", "80", "10", "70", "0", "{", "Console", "WriteLine", "ボーナスあり合格", "}", "//", "方の条件をチェック"]
         },
         "testCases": [
           {
@@ -589,22 +569,18 @@ export const csharpData = {
       "correctCode": "// namesに{\"太郎\", \"花子\"}を代入\\nstring[] names = {\"太郎\", \"花子\"};\\n// 順番に取り出すループ\\nforeach (string name in names)\\n{\\n    // 取り出した名前を表示\\n    Console.WriteLine(name);\\n}",
       "holeyCode": "// namesに{\"太郎\", \"花子\"}を代入\\n___[] ___ = {\"___\", \"___\"};\\n// 順番に取り出すループ\\nforeach (___ ___ in ___)\\n// ブロックを開始\\n___\\n    // 取り出した名前を表示\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// namesに{\\\"太郎\\\", \\\"花子\\\"}を代入",
-          "string[] names = {\\\"太郎\\\", \\\"花子\\\"};",
+          "// namesに{\"太郎\", \"花子\"}を代入",
+          "string[] names = {\"太郎\", \"花子\"};",
           "// 順番に取り出すループ",
           "foreach (string name in names)",
-          "// ブロックを開始",
           "{",
           "    // 取り出した名前を表示",
           "    Console.WriteLine(name);",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
           "\\\"\\\"\\\"\\\"",
-          null,
-          "",
           null,
           "",
           null,
@@ -624,7 +600,7 @@ export const csharpData = {
             "太郎",
             "花子"
           ],
-          "others": ["string", "names", "{", "Console", "WriteLine", "}"]
+          "others": ["string", "names", "{", "Console", "WriteLine", "}", "// 取り出した名前を表示"]
         },
         "testCases": [
           {
@@ -700,11 +676,9 @@ export const csharpData = {
       "correctLines": [
           "// Greetというメソッドを定義",
           "static void Greet()",
-          "// ブロックを開始",
           "{",
           "    // こんにちは と表示",
-          "    Console.WriteLine(\\\"こんにちは\\\");",
-          "// ブロックを閉じる",
+          "    Console.WriteLine(\"こんにちは\");",
           "}",
           "// Greetメソッドを呼び出す",
           "Greet();"
@@ -716,8 +690,6 @@ export const csharpData = {
           "",
           null,
           "\\\"\\\"",
-          null,
-          "",
           null,
           ""
         ],
@@ -732,7 +704,7 @@ export const csharpData = {
           "strings": [
             "こんにちは"
           ],
-          "others": ["{", "Console", "WriteLine", "}"]
+          "others": ["{", "Console", "WriteLine", "}", "// こんにちは と表示", "Greet();"]
         },
         "testCases": [
           {

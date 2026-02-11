@@ -33,7 +33,7 @@ export const cppData = {
           "int main() {",
           "    // こんにちは, C++! と入力",
           "    std::cout << \\\"こんにちは, C++!\\\" << std::endl;",
-          "    // 値を返す",
+          "    // 0を返す",
           "    return 0;",
           "// ブロックを閉じる",
           "}"
@@ -78,24 +78,16 @@ export const cppData = {
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // 10 と入力\\n    int x = 10;\\n    // x と入力\\n    std::cout << x << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 10 と入力\\n    ___ ___ = ___;\\n    // x と入力\\n    ___::___ << ___ << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "#include <iostream>",
-          "// ブロックを開始",
           "int main() {",
           "    // 10 と入力",
           "    int x = 10;",
           "    // x と入力",
           "    std::cout << x << std::endl;",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -112,7 +104,7 @@ export const cppData = {
           "numbers": [
             "10"
           ],
-          "others": ["10;", "main", "0", "}", "#include <iostream>", "int", "std", "cout", "endl", "return"]
+          "others": ["10;", "main", "0", "}", "#include <iostream>", "int", "std", "cout", "endl", "return", "int main() {", "int x = 10;", "std::cout", "<<", "<< std::endl"]
         },
         "testCases": [
           {
@@ -136,28 +128,16 @@ export const cppData = {
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    int a = 5;\\n    int b = 3;\\n    // + でたし算\\n    std::cout << a + b << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // + でたし算\\n    ___::___ << ___ ___ ___ << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "#include <iostream>",
-          "// ブロックを開始",
           "int main() {",
-          "    // 変数を宣言",
           "    int a = 5;",
-          "    // 変数を宣言",
           "    int b = 3;",
           "    // + でたし算",
           "    std::cout << a + b << std::endl;",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -171,7 +151,7 @@ export const cppData = {
           "operators": [
             "+"
           ],
-          "others": ["main", "5", "3", "endl", "0", "}", "#include <iostream>", "int", "std", "cout", "a", "b", "return"]
+          "others": ["main", "5", "3", "endl", "0", "}", "#include <iostream>", "int", "std", "cout", "a", "b", "return", "int main() {", "int b = 3;", "std::cout", "<<", "+ b << std::endl"]
         },
         "testCases": [
           {
@@ -195,22 +175,14 @@ export const cppData = {
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // 10 を 3 で割ったあまりを出力する\\n    std::cout << 10 % 3 << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 10 を 3 で割ったあまりを出力する\\n    ___::___ << ___ ___ ___ << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "#include <iostream>",
-          "// ブロックを開始",
           "int main() {",
           "    // 10 を 3 で割ったあまりを出力する",
           "    std::cout << 10 % 3 << std::endl;",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -226,7 +198,7 @@ export const cppData = {
             "*",
             "/"
           ],
-          "others": ["main", "10", "0", "}", "#include <iostream>", "int", "std", "cout", "endl", "3", "return"]
+          "others": ["main", "10", "0", "}", "#include <iostream>", "int", "std", "cout", "endl", "3", "return", "int main() {", "std::cout << 10 % 3 << std::endl;"]
         },
         "testCases": [
           {
@@ -250,9 +222,7 @@ export const cppData = {
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに50を入れる\\n    int score = 50;\\n    // 10点プラスする\\n    score += 10;\\n    // scoreを表示\\n    std::cout << score << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // scoreに50を入れる\\n    ___ ___ = ___;\\n    // 10点プラスする\\n    ___ ___ ___;\\n    // scoreを表示\\n    ___::___ << ___ << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "#include <iostream>",
-          "// ブロックを開始",
           "int main() {",
           "    // scoreに50を入れる",
           "    int score = 50;",
@@ -260,16 +230,10 @@ export const cppData = {
           "    score += 10;",
           "    // scoreを表示",
           "    std::cout << score << std::endl;",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -292,7 +256,7 @@ export const cppData = {
             "50",
             "10"
           ],
-          "others": ["50;", "main", "score", "0", "}", "#include <iostream>", "int", "std", "cout", "endl", "return"]
+          "others": ["50;", "main", "score", "0", "}", "#include <iostream>", "int", "std", "cout", "endl", "return", "int main() {", "int score = 50;", "std::cout", "<<", "score << std::endl"]
         },
         "testCases": [
           {
@@ -316,17 +280,12 @@ export const cppData = {
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    int age = 10;\\n    // age と入力\\n    std::cout << \"私は\" << age << \"歳です.\" << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // age と入力\\n    ___::___ << ___ << ___ << ___ << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "#include <iostream>",
-          "// ブロックを開始",
           "int main() {",
-          "    // 変数を宣言",
           "    int age = 10;",
           "    // age と入力",
-          "    std::cout << \\\"私は\\\" << age << \\\"歳です.\\\" << std::endl;",
-          "    // 値を返す",
+          "    std::cout << \"私は\" << age << \"歳です.\" << std::endl;",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -336,18 +295,13 @@ export const cppData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "variables": [
             "age"
           ],
-          "others": ["main", "10", "0", "}", "\"私は\"", "#include <iostream>", "int", "std", "cout", "endl", "return", "\"歳です.\""]
+          "others": ["main", "10", "0", "}", "\"私は\"", "#include <iostream>", "int", "std", "cout", "endl", "return", "\"歳です.\"", "int main() {", "// age と入力", "0;"]
         },
         "testCases": [
           {
@@ -371,30 +325,18 @@ export const cppData = {
       ],
       "correctCode": "#include <iostream>\\n#include <vector>\\n#include <string>\\nint main() {\\n    // fruitsに{\"りんご\", \"バナナ\"}を代入\\n    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    std::cout << fruits[1] << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // fruitsに{\\\"りんご\\\", \\\"バナナ\\\"}を代入\\n    ___::___<___::___> ___ = {\\\"___\\\", \\\"___\\\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    ___::___ << ___[___] << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "#include <iostream>",
-          "// ライブラリを読み込む",
           "#include <vector>",
-          "// ライブラリを読み込む",
           "#include <string>",
-          "// ブロックを開始",
           "int main() {",
-          "    // fruitsに{\\\"りんご\\\", \\\"バナナ\\\"}を代入",
-          "    std::vector<std::string> fruits = {\\\"りんご\\\", \\\"バナナ\\\"};",
+          "    // fruitsに{\"りんご\", \"バナナ\"}を代入",
+          "    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};",
           "    // 1 と入力（2番目のデータはインデックス1）",
           "    std::cout << fruits[1] << std::endl;",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -410,7 +352,7 @@ export const cppData = {
           "numbers": [
             "1"
           ],
-          "others": ["main", "りんご", "バナナ", "0", "}", "#include <iostream>", "#include <vector>", "#include <string>", "int", "std", "cout", "endl", "return", "vector", "string", "fruits"]
+          "others": ["main", "りんご", "バナナ", "0", "}", "#include <iostream>", "#include <vector>", "#include <string>", "int", "std", "cout", "endl", "return", "vector", "string", "fruits", "int main() {", "std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};", "std::cout << fruits[1] << std::endl;"]
         },
         "testCases": [
           {
@@ -434,21 +376,16 @@ export const cppData = {
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに100を入れる\\n    int score = 100;\\n    // > で「より大きい」を比較\\n    if (score > 80) {\\n        // '完璧' と入力\\n        std::cout << \"完璧\" << std::endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // scoreに100を入れる\\n    ___ ___ = ___;\\n    // > で「より大きい」を比較\\n    ___ (___ ___ ___) {\\n        // '完璧' と入力\\n        ___::___ << ___ << ___::___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "#include <iostream>",
-          "// ブロックを開始",
           "int main() {",
           "    // scoreに100を入れる",
           "    int score = 100;",
           "    // > で「より大きい」を比較",
           "    if (score > 80) {",
           "        // '完璧' と入力",
-          "        std::cout << \\\"完璧\\\" << std::endl;",
-          "    // ブロックを閉じる",
+          "        std::cout << \"完璧\" << std::endl;",
           "    }",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -462,12 +399,7 @@ export const cppData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
@@ -476,7 +408,7 @@ export const cppData = {
           "strings": [
             "完璧"
           ],
-          "others": ["100;", "main", "100", "\"完璧\"", "}", "0", "#include <iostream>", "int", "std", "cout", "endl", "return", "if", "score", "80"]
+          "others": ["100;", "main", "100", "\"完璧\"", "}", "0", "#include <iostream>", "int", "std", "cout", "endl", "return", "if", "score", "80", "int main() {", "int score = 100;", "(score", "80) {", "std::cout << \"完璧\" << std::endl;", "rn 0;"]
         },
         "testCases": [
           {
@@ -500,25 +432,20 @@ export const cppData = {
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // ageに10を入れる\\n    int age = 10;\\n    // 20以上かを比較する演算子\\n    if (age >= 20) {\\n        // 20歳以上のときのメッセージ（'大人'）\\n        std::cout << \"大人\" << std::endl;\\n    // elseで20歳未満の場合の処理\\n    } else {\\n        // それ以外のメッセージ（'未成年'）\\n        std::cout << \"未成年\" << std::endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // ageに10を入れる\\n    ___ ___ = ___;\\n    // 20以上かを比較する演算子\\n    ___ (___ ___ ___) {\\n        // 20歳以上のときのメッセージ（'大人'）\\n        ___::___ << ___ << ___::___;\\n    // elseで20歳未満の場合の処理\\n    } ___ {\\n        // それ以外のメッセージ（'未成年'）\\n        ___::___ << ___ << ___::___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "#include <iostream>",
-          "// ブロックを開始",
           "int main() {",
           "    // ageに10を入れる",
           "    int age = 10;",
           "    // 20以上かを比較する演算子",
           "    if (age >= 20) {",
           "        // 20歳以上のときのメッセージ（'大人'）",
-          "        std::cout << \\\"大人\\\" << std::endl;",
+          "        std::cout << \"大人\" << std::endl;",
           "    // elseで20歳未満の場合の処理",
           "    } else {",
           "        // それ以外のメッセージ（'未成年'）",
-          "        std::cout << \\\"未成年\\\" << std::endl;",
-          "    // ブロックを閉じる",
+          "        std::cout << \"未成年\" << std::endl;",
           "    }",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -536,18 +463,13 @@ export const cppData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
             "else"
           ],
-          "others": ["10;", ">=", "main", "10", "}", "0", "\"大人\"", "\"未成年\"", "#include <iostream>", "int", "std", "cout", "endl", "return", "if", "age", "20"]
+          "others": ["10;", ">=", "main", "10", "}", "0", "\"大人\"", "\"未成年\"", "#include <iostream>", "int", "std", "cout", "endl", "return", "if", "age", "20", "int main() {", "int age = 10;", "(age", "20) {", "std::cout << \"大人\" << std::endl;", "se {", "rn 0;"]
         },
         "testCases": [
           {
@@ -571,21 +493,16 @@ export const cppData = {
       ],
       "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに85を入れる\\n    int score = 85;\\n    // 80以上 かつ 100以下 ならメッセージを出す\\n    if (score >= 80 && score <= 100) {\\n        // 「合格」と出力\\n        std::cout << \"合格\" << std::endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // scoreに85を入れる\\n    ___ ___ = ___;\\n    // 80以上 かつ 100以下 ならメッセージを出す\\n    ___ (___ ___ ___ ___ ___ ___ ___) {\\n        // 「合格」と出力\\n        ___::___ << ___ << ___::___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "#include <iostream>",
-          "// ブロックを開始",
           "int main() {",
           "    // scoreに85を入れる",
           "    int score = 85;",
           "    // 80以上 かつ 100以下 ならメッセージを出す",
           "    if (score >= 80 && score <= 100) {",
           "        // 「合格」と出力",
-          "        std::cout << \\\"合格\\\" << std::endl;",
-          "    // ブロックを閉じる",
+          "        std::cout << \"合格\" << std::endl;",
           "    }",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -599,12 +516,7 @@ export const cppData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
@@ -617,7 +529,7 @@ export const cppData = {
           "strings": [
 
           ],
-          "others": ["85;", "main", "80", "}", "0", "\"合格\"", "#include <iostream>", "int", "std", "cout", "endl", "return", "if", "score", ">=", "<=", "100"]
+          "others": ["85;", "main", "80", "}", "0", "\"合格\"", "#include <iostream>", "int", "std", "cout", "endl", "return", "if", "score", ">=", "<=", "100", "int main() {", "int score = 85;", "(score", "80 && score <= 100) {", "std::cout", "<<", "std::endl;", "rn 0;"]
         },
         "testCases": [
           {
@@ -641,34 +553,18 @@ export const cppData = {
       ],
       "correctCode": "#include <iostream>\\n#include <vector>\\nint main() {\\n    std::vector<int> nums = {1, 2, 3};\\n    // numsの各要素をnに代入して繰り返し\\n    for (int n : nums) {\\n        std::cout << n << std::endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 値を代入\\n    ___::___<___> ___ = {___, ___, ___};\\n    // numsの各要素をnに代入して繰り返し\\n    ___ (___ ___ : ___) {\\n        // 文を実行\\n        ___::___ << ___ << ___::___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "#include <iostream>",
-          "// ライブラリを読み込む",
           "#include <vector>",
-          "// ブロックを開始",
           "int main() {",
-          "    // 値を代入",
           "    std::vector<int> nums = {1, 2, 3};",
           "    // numsの各要素をnに代入して繰り返し",
           "    for (int n : nums) {",
-          "        // 文を実行",
           "        std::cout << n << std::endl;",
-          "    // ブロックを閉じる",
           "    }",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -684,7 +580,7 @@ export const cppData = {
           "variables": [
             "nums"
           ],
-          "others": ["main", "1", "n", "}", "0", "#include <iostream>", "#include <vector>", "int", "std", "cout", "endl", "return", "for", "vector", "2", "3"]
+          "others": ["main", "1", "n", "}", "0", "#include <iostream>", "#include <vector>", "int", "std", "cout", "endl", "return", "for", "vector", "2", "3", "std::vector<int> nums = {1, 2, 3};"]
         },
         "testCases": [
           {
@@ -708,23 +604,16 @@ export const cppData = {
       ],
       "correctCode": "#include <iostream>\\n#include <map>\\n#include <string>\\nint main() {\\n    std::map<std::string, int> scores;\\n    // 'Math' と入力（キー名）\\n    scores[\"Math\"] = 90;\\n    // 'Math' と入力（同じキー名）\\n    std::cout << scores[\"Math\"] << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 文を実行\\n    ___::___<___::___, ___> ___;\\n    // 'Math' と入力（キー名）\\n    ___[\\\"___\\\"] = ___;\\n    // 'Math' と入力（同じキー名）\\n    ___::___ << ___[\\\"___\\\"] << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "#include <iostream>",
-          "// ライブラリを読み込む",
           "#include <map>",
-          "// ライブラリを読み込む",
           "#include <string>",
-          "// ブロックを開始",
           "int main() {",
-          "    // 文を実行",
           "    std::map<std::string, int> scores;",
           "    // 'Math' と入力（キー名）",
-          "    scores[\\\"Math\\\"] = 90;",
+          "    scores[\"Math\"] = 90;",
           "    // 'Math' と入力（同じキー名）",
-          "    std::cout << scores[\\\"Math\\\"] << std::endl;",
-          "    // 値を返す",
+          "    std::cout << scores[\"Math\"] << std::endl;",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -738,20 +627,13 @@ export const cppData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "\\\"\\\"",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "strings": [
             "Math"
           ],
-          "others": ["main", "scores", "0", "}", "#include <iostream>", "#include <map>", "#include <string>", "int", "std", "cout", "endl", "return", "map", "string", "90"]
+          "others": ["main", "scores", "0", "}", "#include <iostream>", "#include <map>", "#include <string>", "int", "std", "cout", "endl", "return", "map", "string", "90", "int main() {", "// 'Math' と入力（キー名）", "// 'Math' と入力（同じキー名）", "return 0;"]
         },
         "testCases": [
           {
@@ -775,21 +657,14 @@ export const cppData = {
       ],
       "correctCode": "#include <iostream>\\nvoid greet() {\\n    std::cout << \"こんにちは\" << std::endl;\\n}\\nint main() {\\n    // greet()を呼び出す\\n    greet();\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 文を実行\\n    ___::___ << ___ << ___::___;\\n// ブロックを閉じる\\n___\\n// ブロックを開始\\n___ ___() {\\n    // greet()を呼び出す\\n    ___();\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "#include <iostream>",
-          "// ブロックを開始",
           "void greet() {",
-          "    // 文を実行",
-          "    std::cout << \\\"こんにちは\\\" << std::endl;",
-          "// ブロックを閉じる",
+          "    std::cout << \"こんにちは\" << std::endl;",
           "}",
-          "// ブロックを開始",
           "int main() {",
           "    // greet()を呼び出す",
           "    greet();",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -801,20 +676,13 @@ export const cppData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [
             "greet"
           ],
-          "others": ["}", "main", "0", "\"こんにちは\"", "#include <iostream>", "void", "int", "std", "cout", "endl", "return"]
+          "others": ["}", "main", "0", "\"こんにちは\"", "#include <iostream>", "void", "int", "std", "cout", "endl", "return", "void greet() {", "// greet()を呼び出す", "return 0;"]
         },
         "testCases": [
           {

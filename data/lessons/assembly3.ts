@@ -115,10 +115,8 @@ export const assembly3Data = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; rbxに3を入れる",
           "  mov rbx, 3",
@@ -148,12 +146,10 @@ export const assembly3Data = {
           null,
           "",
           null,
-          "",
-          null,
           ""
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rbx", "3", "imul", "rax", "4", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rbx", "3", "imul", "rax", "4", "rdi", "60", "syscall", "mov rbx, 3", "rbx, 4", ";", "結果raxをrdiにコピー"]
         },
         "testCases": [
           {
@@ -180,10 +176,8 @@ export const assembly3Data = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; raxに42を入れる",
           "  mov rax, 42",
@@ -213,12 +207,10 @@ export const assembly3Data = {
           "",
           null,
           null,
-          "",
-          null,
           ""
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "42", "push", "pop", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "42", "push", "pop", "rdi", "60", "syscall", "mov rax, 42", ";", "終了処理"]
         },
         "testCases": [
           {
@@ -245,10 +237,8 @@ export const assembly3Data = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; 数値99をスタックへ",
           "  push 99",
@@ -274,12 +264,10 @@ export const assembly3Data = {
           "",
           null,
           null,
-          "",
-          null,
           ""
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "push", "99", "pop", "rdi", "mov", "rax", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "push", "99", "pop", "rdi", "mov", "rax", "60", "syscall", "push 99", ";", "終了処理"]
         },
         "testCases": [
           {
@@ -306,10 +294,8 @@ export const assembly3Data = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; raxに0xFFをセット",
           "  mov rax, 0xFF",
@@ -339,12 +325,10 @@ export const assembly3Data = {
           null,
           "",
           null,
-          "",
-          null,
           ""
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "0xFF", "and", "0x0F", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "0xFF", "and", "0x0F", "rdi", "60", "syscall", "mov rax, 0xFF", ";", "結果をrdiへ"]
         },
         "testCases": [
           {
@@ -371,10 +355,8 @@ export const assembly3Data = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; raxに0x10をセット",
           "  mov rax, 0x10",
@@ -404,12 +386,10 @@ export const assembly3Data = {
           null,
           "",
           null,
-          "",
-          null,
           ""
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "0x10", "or", "0x01", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "0x10", "or", "0x01", "rdi", "60", "syscall", "mov rax, 0x10", ";", "結果をrdiへ"]
         },
         "testCases": [
           {
@@ -436,10 +416,8 @@ export const assembly3Data = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; raxに5をセット",
           "  mov rax, 5",
@@ -469,12 +447,10 @@ export const assembly3Data = {
           null,
           "",
           null,
-          "",
-          null,
           ""
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "5", "shl", "2", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "5", "shl", "2", "rdi", "60", "syscall", "mov rax, 5", ";", "結果をrdiへ"]
         },
         "testCases": [
           {
@@ -501,10 +477,8 @@ export const assembly3Data = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; raxに20をセット",
           "  mov rax, 20",
@@ -534,12 +508,10 @@ export const assembly3Data = {
           null,
           "",
           null,
-          "",
-          null,
           ""
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "20", "shr", "1", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "20", "shr", "1", "rdi", "60", "syscall", "mov rax, 20", ";", "結果をrdiへ"]
         },
         "testCases": [
           {
@@ -566,10 +538,8 @@ export const assembly3Data = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; raxに5をセット",
           "  mov rax, 5",
@@ -579,17 +549,13 @@ export const assembly3Data = {
           "  jnz is_odd",
           "  ; 0なら(偶数なら)rdi=0",
           "  mov rdi, 0",
-          "  ; 無条件ジャンプ",
           "  jmp done",
-          "; ラベルを定義",
           "is_odd:",
           "  ; rdi=1",
           "  mov rdi, 1",
-          "; ラベルを定義",
           "done:",
           "  ; 終了",
           "  mov rax, 60",
-          "  ; システムコール実行",
           "  syscall"
         ],
       "lineHints": [
@@ -613,16 +579,10 @@ export const assembly3Data = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
           ""
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "5", "test", "1", "jnz", "is_odd", "rdi", "0", "jmp", "done", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "5", "test", "1", "jnz", "is_odd", "rdi", "0", "jmp", "done", "60", "syscall", "mov rax, 5", "rdi, 0", "_odd:", "rdi, 1", "; 終了"]
         },
         "testCases": [
           {
@@ -649,10 +609,8 @@ export const assembly3Data = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; raxに10をセット",
           "  mov rax, 10",
@@ -663,7 +621,6 @@ export const assembly3Data = {
           "  xor rdi, rdi",
           "  ; 終了",
           "  mov rax, 60",
-          "  ; システムコール実行",
           "  syscall"
         ],
       "lineHints": [
@@ -681,13 +638,10 @@ export const assembly3Data = {
           null,
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "10", "neg", "xor", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "10", "neg", "xor", "rdi", "60", "syscall", "mov rax, 10", ";", "rdiを0に"]
         },
         "testCases": [
           {

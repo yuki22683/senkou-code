@@ -29,20 +29,13 @@ export const c3Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// 変数を宣言",
           "int square(int x) { return x * x; }",
           "",
-          "// ブロックを開始",
           "int main() {",
           "    // 関数ポインタを宣言する記法",
           "    int (*fp)(int) = square;",
-          "    // 出力",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", fp(5));",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", fp(5));",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -55,21 +48,14 @@ export const c3Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "variables": [
             "fp",
             "x"
           ],
-          "others": ["include", "stdio.h", "int", "square", "return", "*", "main", "%d\\n", "5", "0", "}", "printf", "%d"]
+          "others": ["include", "stdio.h", "int", "square", "return", "*", "main", "%d\\n", "5", "0", "}", "printf", "%d", "int main() {"]
         },
         "testCases": [
           {
@@ -95,29 +81,18 @@ export const c3Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// ブロックを開始",
           "void apply(int n, void (*f)(int)) {",
           "    // 引数で受け取った関数ポインタを呼び出す",
           "    f(n);",
-          "// ブロックを閉じる",
           "}",
           "",
-          "// ブロックを開始",
           "void show(int x) {",
-          "    // 出力",
-          "    printf(\\\"Value: %d",
-          "// 文を実行",
-          "\\\", x);",
-          "// ブロックを閉じる",
+          "    printf(\"Value: %d\\n\", x);",
           "}",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 文を実行",
           "    apply(42, show);",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -135,17 +110,6 @@ export const c3Data = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
           ""
         ],
         "candidates": {
@@ -154,7 +118,7 @@ export const c3Data = {
             "n",
             "x"
           ],
-          "others": ["include", "stdio.h", "void", "int", "apply", "show", "main", "printf", "Value: %d\\n", "42", "return", "0", "}", "Value: %d"]
+          "others": ["include", "stdio.h", "void", "int", "apply", "show", "main", "printf", "Value: %d\\n", "42", "return", "0", "}", "Value: %d", "// 引数で受け取った関数ポインタを呼び出す", "void show(int x) {", "printf(\"Value: %d\\n\", x);", "2, show);"]
         },
         "testCases": [
           {
@@ -180,19 +144,12 @@ export const c3Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 変数を宣言",
           "    int a = 12;  // 1100",
-          "    // 変数を宣言",
           "    int b = 10;  // 1010",
           "    // 両方のビットが1の場合のみ1になる演算子",
-          "    printf(\\\\\\\"%d",
-          "// コードを記述",
-          "\\\\\\\", a & b);  // 8 (1000)",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", a & b);  // 8 (1000)",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -204,14 +161,7 @@ export const c3Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
@@ -219,7 +169,7 @@ export const c3Data = {
             "|",
             "^"
           ],
-          "others": ["include", "stdio.h", "int", "main", "a", "b", "12", "10", "printf", "%d\\n", "return", "0", "}", "%d", "\"%d", "& b"]
+          "others": ["include", "stdio.h", "int", "main", "a", "b", "12", "10", "printf", "%d\\n", "return", "0", "}", "%d", "\"%d", "& b", "int a = 12;  // 1100", "//", "両方のビットが1の場合のみ1になる演算子", "0;"]
         },
         "testCases": [
           {
@@ -245,19 +195,12 @@ export const c3Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 変数を宣言",
           "    int a = 12;  // 1100",
-          "    // 変数を宣言",
           "    int b = 10;  // 1010",
           "    // どちらかのビットが1なら1になる演算子",
-          "    printf(\\\\\\\"%d",
-          "// コードを記述",
-          "\\\\\\\", a | b);  // 14 (1110)",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", a | b);  // 14 (1110)",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -269,14 +212,7 @@ export const c3Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
@@ -284,7 +220,7 @@ export const c3Data = {
             "&",
             "^"
           ],
-          "others": ["include", "stdio.h", "int", "main", "a", "b", "12", "10", "printf", "%d\\n", "return", "0", "}", "%d", "\"%d", "| b"]
+          "others": ["include", "stdio.h", "int", "main", "a", "b", "12", "10", "printf", "%d\\n", "return", "0", "}", "%d", "\"%d", "| b", "int a = 12;  // 1100", "//", "どちらかのビットが1なら1になる演算子", "0;"]
         },
         "testCases": [
           {
@@ -310,28 +246,16 @@ export const c3Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 変数を宣言",
           "    int x = 3;",
           "    // ビットを左に移動する演算子",
-          "    printf(\\\\\\\"%d",
-          "// コードを記述",
-          "\\\\\\\", x << 2);  // 12",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", x << 2);  // 12",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           "",
           null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -345,7 +269,7 @@ export const c3Data = {
             ">>",
             "<"
           ],
-          "others": ["include", "stdio.h", "int", "main", "x", "3", "2", "printf", "%d\\n", "return", "0", "}", "%d", "\"%d", "<< 2"]
+          "others": ["include", "stdio.h", "int", "main", "x", "3", "2", "printf", "%d\\n", "return", "0", "}", "%d", "\"%d", "<< 2", "int x = 3;", "printf(\"%d\\n\",", "2)"]
         },
         "testCases": [
           {
@@ -371,19 +295,12 @@ export const c3Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 変数を宣言",
           "    int arr[] = {10, 20, 30};",
           "    // 型や変数のバイト数を取得する演算子",
           "    int count = sizeof(arr) / sizeof(arr[0]);",
-          "    // 出力",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", count);",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", count);",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -395,14 +312,7 @@ export const c3Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -410,7 +320,7 @@ export const c3Data = {
             "strlen",
             "length"
           ],
-          "others": ["include", "stdio.h", "int", "main", "arr", "10", "20", "30", "count", "0", "printf", "%d\\n", "return", "}", "%d"]
+          "others": ["include", "stdio.h", "int", "main", "arr", "10", "20", "30", "count", "0", "printf", "%d\\n", "return", "}", "%d", "int arr[] = {10, 20, 30};", "count = sizeof(arr) / sizeof(arr", "0;"]
         },
         "testCases": [
           {
@@ -439,17 +349,10 @@ export const c3Data = {
           "// int型にNumberという別名をつける",
           "typedef int Number;",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 値を代入",
           "    Number x = 100;",
-          "    // 出力",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", x);",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", x);",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -462,14 +365,7 @@ export const c3Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -477,7 +373,7 @@ export const c3Data = {
             "define",
             "alias"
           ],
-          "others": ["include", "stdio.h", "int", "Number", "main", "x", "100", "printf", "%d\\n", "return", "0", "}", "%d"]
+          "others": ["include", "stdio.h", "int", "Number", "main", "x", "100", "printf", "%d\\n", "return", "0", "}", "%d", "Number x = 100;", "0;"]
         },
         "testCases": [
           {
@@ -505,22 +401,13 @@ export const c3Data = {
           "",
           "// ポインタの指す先を読み取り専用にする",
           "void show(const int *p) {",
-          "    // 出力",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", *p);",
-          "// ブロックを閉じる",
+          "    printf(\"%d\\n\", *p);",
           "}",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 変数を宣言",
           "    int x = 42;",
-          "    // 文を実行",
           "    show(&x);",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -535,16 +422,7 @@ export const c3Data = {
           null,
           "",
           null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -552,7 +430,7 @@ export const c3Data = {
             "static",
             "volatile"
           ],
-          "others": ["include", "stdio.h", "void", "int", "show", "p", "main", "x", "42", "printf", "%d\\n", "return", "0", "}", "%d"]
+          "others": ["include", "stdio.h", "void", "int", "show", "p", "main", "x", "42", "printf", "%d\\n", "return", "0", "}", "%d", "main(", "show(&x);", "return 0;"]
         },
         "testCases": [
           {
@@ -578,30 +456,18 @@ export const c3Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// ブロックを開始",
           "void counter() {",
           "    // 呼び出し間で値を保持するstatic変数",
           "    static int count = 0;",
-          "    // 文を実行",
           "    count++;",
-          "    // 出力",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", count);",
-          "// ブロックを閉じる",
+          "    printf(\"%d\\n\", count);",
           "}",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 文を実行",
           "    counter();",
-          "    // 文を実行",
           "    counter();",
-          "    // 文を実行",
           "    counter();",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -619,19 +485,7 @@ export const c3Data = {
           "",
           null,
           "",
-          null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -639,7 +493,7 @@ export const c3Data = {
             "const",
             "extern"
           ],
-          "others": ["include", "stdio.h", "void", "int", "counter", "count", "0", "main", "printf", "%d\\n", "return", "}", "%d"]
+          "others": ["include", "stdio.h", "void", "int", "counter", "count", "0", "main", "printf", "%d\\n", "return", "}", "%d", "// 呼び出し間で値を保持するstatic変数", "count++;", "{", "counter(", "return 0;"]
         },
         "testCases": [
           {
@@ -668,15 +522,9 @@ export const c3Data = {
           "// DOUBLEマクロを定義する",
           "#define DOUBLE(x) ((x) * 2)",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 出力",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", DOUBLE(7));",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", DOUBLE(7));",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -685,12 +533,6 @@ export const c3Data = {
           null,
           "",
           null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,

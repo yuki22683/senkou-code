@@ -144,20 +144,13 @@ export const rust4Data = {
           "// derive でトレイトを自動実装",
           "#[derive(Debug)]",
           "struct User {",
-          "    // フィールドを定義",
           "    name: String,",
-          "    // フィールドを定義",
           "    age: u32,",
-          "// ブロックを閉じる",
           "}",
           "",
-          "// main関数を定義",
           "fn main() {",
-          "    // \\\\\\\"\\\\\\\"",
-          "    let user = User { name: String::from(\\\\\\\"アリス\\\\\\\"), age: 30 };",
-          "    // 出力",
-          "    println!(\\\\\\\"{:?}\\\\\\\", user);",
-          "// ブロックを閉じる",
+          "    let user = User { name: String::from(\"アリス\"), age: 30 };",
+          "    println!(\"{:?}\", user);",
           "}"
         ],
       "lineHints": [
@@ -171,14 +164,7 @@ export const rust4Data = {
           null,
           "",
           null,
-          null,
-          "",
-          null,
-          "\\\\\\\"\\\\\\\"",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "attributes": [
@@ -210,13 +196,10 @@ export const rust4Data = {
       ],
       "correctCode": "fn main() {\\n    // Box::new でヒープに格納\\n    let x = Box::new(42);\\n    println!(\"{}\", *x);\\n}", "holeyCode": "// main関数を定義\\nfn ___() {\\n    // Box::new でヒープに格納\\n    let ___ = ___::___(___);\\n    // 出力\\n    ___!(\\\"{}\\\", *___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// main関数を定義",
           "fn main() {",
           "    // Box::new でヒープに格納",
           "    let x = Box::new(42);",
-          "    // 出力",
-          "    println!(\\\"{}\\\", *x);",
-          "// ブロックを閉じる",
+          "    println!(\"{}\", *x);",
           "}"
         ],
       "lineHints": [
@@ -224,10 +207,7 @@ export const rust4Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "types": [
@@ -259,18 +239,13 @@ export const rust4Data = {
       ],
       "correctCode": "use std::rc::Rc;\\n\\nfn main() {\\n    let a = Rc::new(String::from(\"こんにちは\"));\\n    // clone で参照カウントを増やす\\n    let b = Rc::clone(&a);\\n    println!(\"{} {}\", a, b);\\n}", "holeyCode": "// ライブラリを読み込む\\nuse ___::___::___;\\n___\\n// main関数を定義\\nfn ___() {\\n    // \\\"\\\"\\n    let ___ = ___::___(___::___(\\\"___\\\"));\\n    // clone で参照カウントを増やす\\n    let ___ = ___::___(&___);\\n    // 出力\\n    ___!(\\\"{} {}\\\", ___, ___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "use std::rc::Rc;",
           "",
-          "// main関数を定義",
           "fn main() {",
-          "    // \\\"\\\"",
-          "    let a = Rc::new(String::from(\\\"こんにちは\\\"));",
+          "    let a = Rc::new(String::from(\"こんにちは\"));",
           "    // clone で参照カウントを増やす",
           "    let b = Rc::clone(&a);",
-          "    // 出力",
-          "    println!(\\\"{} {}\\\", a, b);",
-          "// ブロックを閉じる",
+          "    println!(\"{} {}\", a, b);",
           "}"
         ],
       "lineHints": [
@@ -281,12 +256,7 @@ export const rust4Data = {
           "",
           null,
           "\\\"\\\"",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "methods": [
@@ -319,20 +289,14 @@ export const rust4Data = {
       ],
       "correctCode": "use std::collections::HashMap;\\n\\nfn main() {\\n    let mut map = HashMap::new();\\n    // insert でキーと値を追加\\n    map.insert(\"a\", 1);\\n    map.insert(\"b\", 2);\\n    println!(\"{:?}\", map.get(\"a\"));\\n}", "holeyCode": "// ライブラリを読み込む\\nuse ___::___::___;\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let mut ___ = ___::___();\\n    // insert でキーと値を追加\\n    ___.___(\\\"___\\\", ___);\\n    // \\\"\\\"\\\"\\\"\\n    ___.___(\\\"___\\\", ___);\\n    // \\\"\\\"\\n    ___!(\\\"{:?}\\\", ___.___(\\\"___\\\"));\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "use std::collections::HashMap;",
           "",
-          "// main関数を定義",
           "fn main() {",
-          "    // 変数を宣言",
           "    let mut map = HashMap::new();",
           "    // insert でキーと値を追加",
-          "    map.insert(\\\"a\\\", 1);",
-          "    // \\\"\\\"\\\"\\\"",
-          "    map.insert(\\\"b\\\", 2);",
-          "    // \\\"\\\"",
-          "    println!(\\\"{:?}\\\", map.get(\\\"a\\\"));",
-          "// ブロックを閉じる",
+          "    map.insert(\"a\", 1);",
+          "    map.insert(\"b\", 2);",
+          "    println!(\"{:?}\", map.get(\"a\"));",
           "}"
         ],
       "lineHints": [
@@ -344,13 +308,7 @@ export const rust4Data = {
           null,
           "",
           null,
-          "\\\"\\\"\\\"\\\"",
-          null,
-          "\\\"\\\"\\\"\\\"",
-          null,
-          "\\\"\\\"",
-          null,
-          ""
+          "\\\"\\\"\\\"\\\""
         ],
         "candidates": {
           "methods": [
@@ -387,19 +345,12 @@ export const rust4Data = {
           "// HashSet をインポート",
           "use std::collections::HashSet;",
           "",
-          "// main関数を定義",
           "fn main() {",
-          "    // 変数を宣言",
           "    let mut set = HashSet::new();",
-          "    // メソッドを呼び出す",
           "    set.insert(1);",
-          "    // メソッドを呼び出す",
           "    set.insert(2);",
-          "    // メソッドを呼び出す",
           "    set.insert(1);",
-          "    // 出力",
-          "    println!(\\\"{}\\\", set.len());",
-          "// ブロックを閉じる",
+          "    println!(\"{}\", set.len());",
           "}"
         ],
       "lineHints": [
@@ -412,14 +363,7 @@ export const rust4Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "types": [
@@ -451,19 +395,13 @@ export const rust4Data = {
       ],
       "correctCode": "fn main() {\\n    let num = 7;\\n    match num {\\n        // if でマッチガードを追加\\n        n if n % 2 == 0 => println!(\"偶数\"),\\n        _ => println!(\"奇数\"),\\n    }\\n}", "holeyCode": "// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___;\\n    // パターンマッチ\\n    match ___ {\\n        // if でマッチガードを追加\\n        ___ if ___ % ___ == ___ => ___!(\\\"___\\\"),\\n        // \\\"\\\"\\n        ___ => ___!(\\\"___\\\"),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// main関数を定義",
           "fn main() {",
-          "    // 変数を宣言",
           "    let num = 7;",
-          "    // パターンマッチ",
           "    match num {",
           "        // if でマッチガードを追加",
-          "        n if n % 2 == 0 => println!(\\\"偶数\\\"),",
-          "        // \\\"\\\"",
-          "        _ => println!(\\\"奇数\\\"),",
-          "    // ブロックを閉じる",
+          "        n if n % 2 == 0 => println!(\"偶数\"),",
+          "        _ => println!(\"奇数\"),",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -474,13 +412,7 @@ export const rust4Data = {
           null,
           "",
           null,
-          "\\\"\\\"",
-          null,
-          "\\\"\\\"",
-          null,
-          "",
-          null,
-          ""
+          "\\\"\\\""
         ],
         "candidates": {
           "keywords": [
@@ -517,20 +449,13 @@ export const rust4Data = {
       "correctLines": [
           "// impl でトレイトを実装する型を返す",
           "fn doubles(n: i32) -> impl Iterator<Item = i32> {",
-          "    // イテレータ処理",
           "    (0..n).map(|x| x * 2)",
-          "// ブロックを閉じる",
           "}",
           "",
-          "// main関数を定義",
           "fn main() {",
-          "    // forループ",
           "    for x in doubles(3) {",
-          "        // 出力",
-          "        println!(\\\\\\\"{}\\\\\\\", x);",
-          "    // ブロックを閉じる",
+          "        println!(\"{}\", x);",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -543,14 +468,7 @@ export const rust4Data = {
           null,
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -585,13 +503,10 @@ export const rust4Data = {
       ],
       "correctCode": "fn main() {\\n    // collect で Vec に変換\\n    let nums: Vec<i32> = (1..=5).collect();\\n    println!(\"{:?}\", nums);\\n}", "holeyCode": "// main関数を定義\\nfn ___() {\\n    // collect で Vec に変換\\n    let ___: ___<___> = (___..=___).___();\\n    // 出力\\n    ___!(\\\"{:?}\\\", ___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// main関数を定義",
           "fn main() {",
           "    // collect で Vec に変換",
           "    let nums: Vec<i32> = (1..=5).collect();",
-          "    // 出力",
-          "    println!(\\\"{:?}\\\", nums);",
-          "// ブロックを閉じる",
+          "    println!(\"{:?}\", nums);",
           "}"
         ],
       "lineHints": [
@@ -599,10 +514,7 @@ export const rust4Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "methods": [
@@ -634,17 +546,12 @@ export const rust4Data = {
       ],
       "correctCode": "fn main() {\\n    let items = vec![\"a\", \"b\", \"c\"];\\n    // 1番目の i にインデックス、2番目の item に要素が入る\\n    for (i, item) in items.iter().enumerate() {\\n        println!(\"{}: {}\", i, item);\\n    }\\n}", "holeyCode": "// main関数を定義\\nfn ___() {\\n    // \\\"\\\"\\\"\\\"\\\"\\\"\\n    let ___ = ___![\\\"___\\\", \\\"___\\\", \\\"___\\\"];\\n    // 1番目の i にインデックス、2番目の item に要素が入る\\n    for (___, ___) in ___.___().___() {\\n        // 出力\\n        ___!(\\\"{}: {}\\\", ___, ___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// main関数を定義",
           "fn main() {",
-          "    // \\\"\\\"\\\"\\\"\\\"\\\"",
-          "    let items = vec![\\\"a\\\", \\\"b\\\", \\\"c\\\"];",
+          "    let items = vec![\"a\", \"b\", \"c\"];",
           "    // 1番目の i にインデックス、2番目の item に要素が入る",
           "    for (i, item) in items.iter().enumerate() {",
-          "        // 出力",
-          "        println!(\\\"{}: {}\\\", i, item);",
-          "    // ブロックを閉じる",
+          "        println!(\"{}: {}\", i, item);",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -654,12 +561,7 @@ export const rust4Data = {
           "\\\"\\\"\\\"\\\"\\\"\\\"",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "methods": [

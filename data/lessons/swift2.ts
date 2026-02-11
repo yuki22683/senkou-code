@@ -114,7 +114,6 @@ export const swift2Data = {
           "if let n = val {",
           "    // nを出力",
           "    print(n)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -124,8 +123,7 @@ export const swift2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -170,7 +168,6 @@ export const swift2Data = {
           "    var width: Int",
           "    // heightプロパティ",
           "    var height: Int",
-          "// ブロックを閉じる",
           "}",
           "// インスタンスを作成",
           "let r = Rect(width: 3, height: 4)",
@@ -188,8 +185,7 @@ export const swift2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -236,12 +232,10 @@ export const swift2Data = {
           "    init(name: String) {",
           "        // selfで自身のプロパティにアクセス",
           "        self.name = name",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}",
           "// インスタンスを作成",
-          "let cat = Cat(name: \\\"タマ\\\")",
+          "let cat = Cat(name: \"タマ\")",
           "// nameを出力",
           "print(cat.name)"
         ],
@@ -259,9 +253,7 @@ export const swift2Data = {
           null,
           "",
           null,
-          "\\\"\\\"",
-          null,
-          ""
+          "\\\"\\\""
         ],
         "candidates": {
           "keywords": [
@@ -304,17 +296,14 @@ export const swift2Data = {
           "protocol Speaker {",
           "    // speakメソッドを宣言",
           "    func speak()",
-          "// ブロックを閉じる",
           "}",
           "// Speakerに準拠",
           "struct Dog: Speaker {",
           "    // speakメソッドを実装",
           "    func speak() {",
           "        // ワン！と出力",
-          "        print(\\\"ワン！\\\")",
-          "    // ブロックを閉じる",
+          "        print(\"ワン！\")",
           "    }",
-          "// ブロックを閉じる",
           "}",
           "// インスタンスを作成",
           "let d = Dog()",
@@ -338,10 +327,7 @@ export const swift2Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -384,7 +370,6 @@ export const swift2Data = {
           "let double = { (n: Int) in",
           "    // n * 2を返す",
           "    return n * 2",
-          "// ブロックを閉じる",
           "}",
           "// doubleを呼び出し",
           "print(double(5))"
@@ -396,8 +381,7 @@ export const swift2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -541,14 +525,12 @@ export const swift2Data = {
           "    // guardで早期リターン",
           "    guard let n = val else {",
           "        // nilと出力",
-          "        print(\\\"nil\\\")",
+          "        print(\"nil\")",
           "        // 早期リターン",
           "        return",
-          "    // ブロックを閉じる",
           "    }",
           "    // nを出力",
           "    print(n)",
-          "// ブロックを閉じる",
           "}",
           "// check関数を呼び出し（引数10）",
           "check(10)"
@@ -560,8 +542,6 @@ export const swift2Data = {
           "",
           null,
           "\\\"\\\"",
-          null,
-          "",
           null,
           "",
           null,
@@ -612,25 +592,20 @@ export const swift2Data = {
           "enum Color {",
           "    // caseでケースを定義",
           "    case red, green, blue",
-          "// ブロックを閉じる",
           "}",
           "// Color.redを代入",
           "let c = Color.red",
           "// switchでパターンマッチ",
           "switch c {",
-          "// ケース分岐",
           "case .red:",
           "    // 赤色を出力",
-          "    print(\\\\\\\"赤\\\\\\\")",
-          "// ケース分岐",
+          "    print(\"赤\")",
           "case .green:",
           "    // 緑色を出力",
-          "    print(\\\\\\\"緑\\\\\\\")",
-          "// ケース分岐",
+          "    print(\"緑\")",
           "case .blue:",
           "    // 青色を出力",
-          "    print(\\\\\\\"青\\\\\\\")",
-          "// ブロックを閉じる",
+          "    print(\"青\")",
           "}"
         ],
       "lineHints": [
@@ -652,12 +627,7 @@ export const swift2Data = {
           "",
           null,
           "\\\\\\\"\\\\\\\"",
-          null,
-          "",
-          null,
-          "\\\\\\\"\\\\\\\"",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [

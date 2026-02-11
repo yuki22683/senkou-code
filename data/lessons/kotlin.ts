@@ -268,14 +268,10 @@ export const kotlinData = {
           "val score = 100",
           "// > で比較する",
           "if (score > 80) {",
-          "    // 出力",
-          "    println(\\\"すごい！\\\")",
-          "// ブロックを閉じる",
+          "    println(\"すごい！\")",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -326,22 +322,14 @@ export const kotlinData = {
       "correctCode": "val score = 80\\nval bonus = 10\\n// && で両方の条件をチェック\\nif (score >= 70 && bonus > 0) {\\n    println(\"ボーナス合格！\")\\n}",
       "holeyCode": "// 値を代入\\nval ___ = ___\\n// 値を代入\\nval ___ = ___\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___) ___\\n    // 出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 値を代入",
           "val score = 80",
-          "// 値を代入",
           "val bonus = 10",
           "// && で両方の条件をチェック",
           "if (score >= 70 && bonus > 0) {",
-          "    // 出力",
-          "    println(\\\"ボーナス合格！\\\")",
-          "// ブロックを閉じる",
+          "    println(\"ボーナス合格！\")",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -356,7 +344,7 @@ export const kotlinData = {
             "&",
             "|"
           ],
-          "others": ["score", "bonus", "80", "10", "70", "0", "println", "}", "{", "ボーナス合格！", ">=", ">"]
+          "others": ["score", "bonus", "80", "10", "70", "0", "println", "}", "{", "ボーナス合格！", ">=", ">", "70 && bonus > 0) {"]
         },
         "testCases": [
           {

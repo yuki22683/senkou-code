@@ -241,7 +241,6 @@ export const php3Data = {
           "    'B' => '良い',",
           "    // それ以外なら'もっと頑張って'を返す",
           "    default => 'もっと頑張って'",
-          "// ブロックを閉じる",
           "};"
         ],
       "lineHints": [
@@ -255,8 +254,7 @@ export const php3Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -299,7 +297,6 @@ export const php3Data = {
           "function createUser($name, $age) {",
           "    // returnで連想配列を返す",
           "    return ['名前' => $name, '年齢' => $age];",
-          "// ブロックを閉じる",
           "}",
           "// age, nameの順で名前付き引数を指定",
           "$user = createUser(age: 30, name: 'アリス');"
@@ -311,8 +308,7 @@ export const php3Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -353,15 +349,12 @@ export const php3Data = {
           "    public function sayHello() {",
           "        // 'こんにちは！'を返す",
           "        return 'こんにちは！';",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}",
           "// classでクラスを定義",
           "class Greeter {",
           "    // useでトレイトを使用",
           "    use HelloTrait;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -377,10 +370,7 @@ export const php3Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -430,14 +420,10 @@ export const php3Data = {
           "    for ($i = 1; $i <= $n; $i++) {",
           "        // yieldで値を一つずつ返す",
           "        yield $i;",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -538,14 +524,10 @@ export const php3Data = {
           "        public string $name,",
           "        // publicでアクセス修飾子",
           "        public int $age",
-          "    // 空のコンストラクタ",
           "    ) {}",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,

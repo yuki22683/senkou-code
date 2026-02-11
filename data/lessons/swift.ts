@@ -267,9 +267,7 @@ export const swiftData = {
           "let score = 100",
           "// > で比較する",
           "if score > 80 {",
-          "    // \\\"\\\"",
-          "    print(\\\"すごい！\\\")",
-          "// ブロックを閉じる",
+          "    print(\"すごい！\")",
           "}"
         ],
       "lineHints": [
@@ -278,9 +276,7 @@ export const swiftData = {
           null,
           "",
           null,
-          "\\\"\\\"",
-          null,
-          ""
+          "\\\"\\\""
         ],
         "candidates": {
           "numbers": [
@@ -326,15 +322,11 @@ export const swiftData = {
       "correctCode": "let score = 80\\nlet bonus = 10\\n// && で両方の条件をチェック\\nif score >= 70 && bonus > 0 {\\n    print(\"ボーナス合格！\")\\n}",
       "holeyCode": "// 変数を宣言\\nlet ___ = ___\\n// 変数を宣言\\nlet ___ = ___\\n// && で両方の条件をチェック\\nif ___ ___ ___ ___ ___ ___ ___ ___\\n    // \"\"\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 変数を宣言",
           "let score = 80",
-          "// 変数を宣言",
           "let bonus = 10",
           "// && で両方の条件をチェック",
           "if score >= 70 && bonus > 0 {",
-          "    // \\\"\\\"",
-          "    print(\\\"ボーナス合格！\\\")",
-          "// ブロックを閉じる",
+          "    print(\"ボーナス合格！\")",
           "}"
         ],
       "lineHints": [
@@ -342,10 +334,6 @@ export const swiftData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "\\\"\\\"",
           null,
           ""
         ],

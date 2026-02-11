@@ -169,7 +169,6 @@ export const bash2Data = {
           "add() {",
           "    # 引数1と引数2を足して表示",
           "    echo $(($1 + $2))",
-          "// ブロックを閉じる",
           "}",
           "# 3と5を引数に渡して呼び出す",
           "add 3 5"
@@ -181,15 +180,14 @@ export const bash2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "variables": [
             "$1",
             "$2"
           ],
-          "others": ["add", "3", "5", "}", "echo"]
+          "others": ["add", "3", "5", "}", "echo", "# 3と5を引数に渡して呼び出す"]
         },
         "testCases": [
           {
@@ -218,7 +216,6 @@ export const bash2Data = {
           "square() {",
           "    # 引数を2乗する",
           "    echo $(($1 * $1))",
-          "// ブロックを閉じる",
           "}",
           "# 関数の出力をresultに格納",
           "result=$(square 4)",
@@ -234,14 +231,13 @@ export const bash2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
             "*"
           ],
-          "others": ["square", "$1", "echo", "}", "result", "4", "$result"]
+          "others": ["square", "$1", "echo", "}", "result", "4", "$result", "# 関数の出力をresultに格納", "# $resultを表示"]
         },
         "testCases": [
           {
@@ -274,7 +270,6 @@ export const bash2Data = {
           "    echo $i",
           "    # iを1増やす",
           "    i=$((i + 1))",
-          "// ループを終了",
           "done"
         ],
       "lineHints": [
@@ -286,8 +281,7 @@ export const bash2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -449,11 +443,8 @@ export const bash2Data = {
       "correctLines": [
           "# ENDラベルまでをcatに渡す",
           "cat <<END",
-          "// 列挙値",
           "Hello",
-          "// 列挙値",
           "World",
-          "// 列挙値",
           "END"
         ],
       "lineHints": [
@@ -461,10 +452,7 @@ export const bash2Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [

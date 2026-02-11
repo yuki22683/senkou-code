@@ -448,7 +448,6 @@ export const pythonData2 = {
           "",
           "# インスタンスcatを作って呼び出す",
           "cat = Cat()",
-          "# メソッドを呼び出す",
           "cat.meow()"
         ],
       "lineHints": [
@@ -461,8 +460,7 @@ export const pythonData2 = {
           null,
           null,
           "",
-          null,
-          ""
+          null
         ],
       "candidates": {
         "keywords": ["class", "def"],

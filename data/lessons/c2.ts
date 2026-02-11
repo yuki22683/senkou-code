@@ -29,23 +29,15 @@ export const c2Data = {
       "correctLines": [
           "#include <stdio.h>",
           "int main() {",
-          "    // 変数を宣言",
           "    int x = 42;",
           "    // xのアドレスを取得する演算子",
           "    int *p = &x;",
-          "    // 出力",
-          "    printf(\\\"%d\\n\\\", *p);",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", *p);",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           "",
-          "",
-          null,
-          "",
-          null,
           "",
           null,
           "",
@@ -58,7 +50,7 @@ export const c2Data = {
           "operators": [
             "&"
           ],
-          "others": ["include", "stdio.h", "int", "main", "x", "42", "p", "printf", "%d\\n", "return", "0", "}", "%d"]
+          "others": ["include", "stdio.h", "int", "main", "x", "42", "p", "printf", "%d\\n", "return", "0", "}", "%d", "//", "xのアドレスを取得する演算子", "printf(\"%d\\n\",", "p);"]
         },
         "testCases": [
           {
@@ -84,16 +76,12 @@ export const c2Data = {
       "correctLines": [
           "#include <stdio.h>",
           "int main() {",
-          "    // 変数を宣言",
           "    int n = 10;",
-          "    // 変数を宣言",
           "    int *ptr = &n;",
           "    // ptrが指す先の値にアクセスする演算子",
           "    *ptr = 99;",
-          "    printf(\\\"%d\\n\\\", n);",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", n);",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -105,17 +93,13 @@ export const c2Data = {
           "",
           null,
           "",
-          "",
-          null,
-          "",
-          null,
           ""
         ],
         "candidates": {
           "operators": [
             "&"
           ],
-          "others": ["include", "stdio.h", "int", "main", "n", "10", "ptr", "99", "printf", "%d\\n", "return", "0", "}", "%d"]
+          "others": ["include", "stdio.h", "int", "main", "n", "10", "ptr", "99", "printf", "%d\\n", "return", "0", "}", "%d", "*ptr", "&n"]
         },
         "testCases": [
           {
@@ -142,26 +126,14 @@ export const c2Data = {
           "#include <stdio.h>",
           "// show関数の引数numを定義",
           "void show(int num) {",
-          "    // 出力",
-          "    printf(\\\"%d\\n\\\", num);",
-          "// ブロックを閉じる",
+          "    printf(\"%d\\n\", num);",
           "}",
-          "// ブロックを開始",
           "int main() {",
-          "    // 文を実行",
           "    show(25);",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
           "",
           null,
           "",
@@ -176,7 +148,7 @@ export const c2Data = {
           "variables": [
             "num"
           ],
-          "others": ["include", "stdio.h", "void", "show", "int", "printf", "%d\\n", "}", "main", "25", "return", "0", "%d"]
+          "others": ["include", "stdio.h", "void", "show", "int", "printf", "%d\\n", "}", "main", "25", "return", "0", "%d", "show(25);"]
         },
         "testCases": [
           {
@@ -204,27 +176,15 @@ export const c2Data = {
           "int double_it(int x) {",
           "    // 2倍にした値を返す",
           "    return x * 2;",
-          "// ブロックを閉じる",
           "}",
-          "// ブロックを開始",
           "int main() {",
-          "    // 変数を宣言",
           "    int result = double_it(7);",
-          "    // 出力",
-          "    printf(\\\"%d\\n\\\", result);",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", result);",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           "",
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
           "",
           null,
           "",
@@ -239,7 +199,7 @@ export const c2Data = {
           "keywords": [
             "return"
           ],
-          "others": ["include", "stdio.h", "int", "double_it", "x", "2", "}", "main", "result", "7", "printf", "%d\\n", "0", "%d"]
+          "others": ["include", "stdio.h", "int", "double_it", "x", "2", "}", "main", "result", "7", "printf", "%d\\n", "0", "%d", "int main() {"]
         },
         "testCases": [
           {
@@ -265,23 +225,15 @@ export const c2Data = {
       "correctLines": [
           "#include <stdio.h>",
           "int main() {",
-          "    // 変数を宣言",
           "    int arr[] = {5, 15, 25};",
           "    // 配列の先頭アドレスを代入",
           "    int *p = arr;",
-          "    // 出力",
-          "    printf(\\\"%d\\n\\\", *(p + 2));",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", *(p + 2));",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           "",
-          "",
-          null,
-          "",
-          null,
           "",
           null,
           "",
@@ -294,7 +246,7 @@ export const c2Data = {
           "variables": [
             "arr", "p"
           ],
-          "others": ["include", "stdio.h", "int", "main", "5", "15", "25", "printf", "%d\\n", "2", "return", "0", "}", "%d"]
+          "others": ["include", "stdio.h", "int", "main", "5", "15", "25", "printf", "%d\\n", "2", "return", "0", "}", "%d", "//", "配列の先頭アドレスを代入", "printf(\"%d\\n\",", "(p", "2))"]
         },
         "testCases": [
           {
@@ -320,13 +272,10 @@ export const c2Data = {
       "correctLines": [
           "#include <stdio.h>",
           "int main() {",
-          "    // \\\"\\\"",
-          "    char msg[] = \\\"こんにちは\\\";",
+          "    char msg[] = \"こんにちは\";",
           "    // 文字列を表示する書式指定子",
-          "    printf(\\\"%s\\n\\\", msg);",
-          "    // 値を返す",
+          "    printf(\"%s\\n\", msg);",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -336,16 +285,13 @@ export const c2Data = {
           "\\\"\\\"",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "strings": [
             "こんにちは"
           ],
-          "others": ["include", "stdio.h", "int", "main", "char", "msg", "printf", "%s\\n", "return", "0", "}", "%s"]
+          "others": ["include", "stdio.h", "int", "main", "char", "msg", "printf", "%s\\n", "return", "0", "}", "%s", "//", "文字列を表示する書式指定子", "return 0;"]
         },
         "testCases": [
           {
@@ -373,17 +319,12 @@ export const c2Data = {
           "void triple(int *p) {",
           "    *p = *p * 3;",
           "}",
-          "// ブロックを開始",
           "int main() {",
-          "    // 変数を宣言",
           "    int val = 4;",
           "    // valのアドレスを取得する演算子",
           "    triple(&val);",
-          "    // 出力",
-          "    printf(\\\"%d\\n\\\", val);",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", val);",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -397,18 +338,13 @@ export const c2Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
             "&"
           ],
-          "others": ["include", "stdio.h", "void", "triple", "int", "p", "3", "}", "main", "val", "4", "printf", "%d\\n", "return", "0", "%d"]
+          "others": ["include", "stdio.h", "void", "triple", "int", "p", "3", "}", "main", "val", "4", "printf", "%d\\n", "return", "0", "%d", "int val = 4;", "triple(&val);", "return 0;"]
         },
         "testCases": [
           {
@@ -435,15 +371,12 @@ export const c2Data = {
           "#include <stdio.h>",
           "#include <stdlib.h>",
           "int main() {",
-          "    // 変数を宣言",
           "    int *p = malloc(sizeof(int));",
           "    *p = 50;",
-          "    printf(\\\"%d\\n\\\", *p);",
+          "    printf(\"%d\\n\", *p);",
           "    // 確保したメモリを解放する関数",
           "    free(p);",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -456,16 +389,13 @@ export const c2Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [
             "malloc", "free"
           ],
-          "others": ["include", "stdio.h", "stdlib.h", "int", "main", "p", "50", "printf", "%d\\n", "return", "0", "}", "%d"]
+          "others": ["include", "stdio.h", "stdlib.h", "int", "main", "p", "50", "printf", "%d\\n", "return", "0", "}", "%d", "*p", ";", "// 確保したメモリを解放する関数", "return 0;"]
         },
         "testCases": [
           {
@@ -492,21 +422,14 @@ export const c2Data = {
       "correctLines": [
           "#include <stdio.h>",
           "struct Item {",
-          "    // 変数を宣言",
           "    int price;",
-          "// ブロックを閉じる",
           "};",
-          "// ブロックを開始",
           "int main() {",
-          "    // 値を代入",
           "    struct Item item = {200};",
-          "    // 値を代入",
           "    struct Item *p = &item;",
           "    // ポインタからメンバにアクセスする演算子",
-          "    printf(\\\"%d\\n\\\", p->price);",
-          "    // 0を返す",
+          "    printf(\"%d\\n\", p->price);",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -520,20 +443,13 @@ export const c2Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
             "struct"
           ],
-          "others": ["include", "stdio.h", "Item", "int", "price", "};", "main", "item", "200", "p", "printf", "%d\\n", "return", "0", "}", "%d"]
+          "others": ["include", "stdio.h", "Item", "int", "price", "};", "main", "item", "200", "p", "printf", "%d\\n", "return", "0", "}", "%d", "struct Item item = {200};", "// ポインタからメンバにアクセスする演算子", "0;"]
         },
         "testCases": [
           {
@@ -559,23 +475,15 @@ export const c2Data = {
       "correctLines": [
           "#include <stdio.h>",
           "enum Day { MON, TUE, WED };",
-          "// ブロックを開始",
           "int main() {",
           "    // 列挙型の変数を宣言するキーワード",
           "    enum Day today = WED;",
-          "    // 出力",
-          "    printf(\\\"%d\\n\\\", today);",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", today);",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           "",
-          "",
-          null,
-          "",
-          null,
           "",
           null,
           "",
@@ -588,7 +496,7 @@ export const c2Data = {
           "keywords": [
             "enum"
           ],
-          "others": ["include", "stdio.h", "Day", "MON", "TUE", "WED", "int", "main", "today", "printf", "%d\\n", "return", "0", "}", "%d"]
+          "others": ["include", "stdio.h", "Day", "MON", "TUE", "WED", "int", "main", "today", "printf", "%d\\n", "return", "0", "}", "%d", "// 列挙型の変数を宣言するキーワード", "printf(\"%d\\n\",", "today);"]
         },
         "testCases": [
           {

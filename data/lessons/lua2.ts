@@ -134,7 +134,6 @@ export const lua2Data = {
           "for i, v in ipairs(nums) do",
           "    -- vを表示",
           "    print(v)",
-          "-- ブロックを終了",
           "end"
         ],
       "lineHints": [
@@ -144,8 +143,7 @@ export const lua2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [
@@ -183,7 +181,6 @@ export const lua2Data = {
           "for k, v in pairs(t) do",
           "    -- kとvを表示",
           "    print(k, v)",
-          "-- ブロックを終了",
           "end"
         ],
       "lineHints": [
@@ -193,8 +190,7 @@ export const lua2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [
@@ -230,7 +226,6 @@ export const lua2Data = {
           "local function double(n)",
           "    -- n * 2を返す",
           "    return n * 2",
-          "-- ブロックを終了",
           "end",
           "-- double(5)を呼び出す",
           "print(double(5))"
@@ -242,8 +237,7 @@ export const lua2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -279,7 +273,6 @@ export const lua2Data = {
           "local function swap(a, b)",
           "    -- b, aの順で返す",
           "    return b, a",
-          "-- ブロックを終了",
           "end",
           "-- x, yにswap関数（第1引数がa, 第2引数がb）の結果を代入",
           "local x, y = swap(1, 2)",
@@ -297,8 +290,7 @@ export const lua2Data = {
           null,
           "",
           null,
-          "",
-          null
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -336,7 +328,6 @@ export const lua2Data = {
           "function obj:getX()",
           "    -- selfで自分自身を参照",
           "    return self.x",
-          "-- ブロックを終了",
           "end",
           "-- getXを呼び出す",
           "print(obj:getX())"
@@ -350,8 +341,7 @@ export const lua2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -438,9 +428,7 @@ export const lua2Data = {
           "    return function(x)",
           "        -- x + nを返す",
           "        return x + n",
-          "    -- ブロックを終了",
           "    end",
-          "-- ブロックを終了",
           "end",
           "-- makeAdder(5)を呼び出す",
           "local add5 = makeAdder(5)",
@@ -448,8 +436,6 @@ export const lua2Data = {
           "print(add5(10))"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -496,8 +482,7 @@ export const lua2Data = {
           "-- createでコルーチンを作成",
           "local co = coroutine.create(function()",
           "    -- helloを表示",
-          "    print(\\\"こんにちは\\\")",
-          "-- ブロックを終了",
+          "    print(\"こんにちは\")",
           "end)",
           "-- resumeでコルーチンを実行",
           "coroutine.resume(co)"
@@ -509,8 +494,7 @@ export const lua2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [

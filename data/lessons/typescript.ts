@@ -353,7 +353,6 @@ export const typescriptData = {
           "if (isAdult) {",
           "    // メッセージ（'おとなです'）",
           "    console.log('おとなです');",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -363,8 +362,7 @@ export const typescriptData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "variables": [
@@ -415,7 +413,6 @@ export const typescriptData = {
           "} else {",
           "    // それ以外の場合（'ざんねん'）",
           "    console.log('ざんねん');",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -429,8 +426,7 @@ export const typescriptData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "variables": [
@@ -485,7 +481,6 @@ export const typescriptData = {
           "if (score >= 80 && score <= 100) {",
           "    // ごうかくと出力",
           "    console.log('ごうかく');",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -495,8 +490,7 @@ export const typescriptData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "variables": [
@@ -551,14 +545,10 @@ export const typescriptData = {
           "const names: string[] = ['たろう', 'はなこ'];",
           "// 順番にループする",
           "for (const name of names) {",
-          "    // メソッドを呼び出す",
           "    console.log(name);",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -659,16 +649,12 @@ export const typescriptData = {
       "correctLines": [
           "// 受け取るデータのラベルを指定する",
           "function greet(name: string) {",
-          "    // メソッドを呼び出す",
           "    console.log(`こんにちは、${name}`);",
-          "// ブロックを閉じる",
           "}",
           "// 関数を実行する",
           "greet('TypeScript');"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -716,16 +702,12 @@ export const typescriptData = {
       "correctLines": [
           "// 何も返さないときに使うラベル",
           "function showDate(): void {",
-          "    // メソッドを呼び出す",
           "    console.log('今日の日付');",
-          "// ブロックを閉じる",
           "}",
           "// 関数を実行する",
           "showDate();"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,

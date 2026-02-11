@@ -278,21 +278,16 @@ export const javascriptData5 = {
           "function process() {",
           "  // try ブロック",
           "  try {",
-          "    // メソッドを呼び出す",
           "    console.log('処理中...');",
           "    // throw new Error('エラー！')でエラーを投げる",
           "    throw new Error('エラー！');",
-          "  // ブロックを開始",
           "  } catch (e) {",
           "    // エラーメッセージを出力",
           "    console.log('Caught:', e.message);",
           "  // finally で常に実行されるブロック",
           "  } finally {",
-          "    // メソッドを呼び出す",
           "    console.log('クリーンアップ完了');",
-          "  // ブロックを閉じる",
           "  }",
-          "// ブロックを閉じる",
           "}",
           "// process関数を呼び出し",
           "process();"
@@ -314,12 +309,7 @@ export const javascriptData5 = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -330,7 +320,7 @@ export const javascriptData5 = {
             "throw",
             "new"
           ],
-          "others": ["process", "console", "log", "処理中...", "Error", "エラー！", "e", "Caught:", "message", "クリーンアップ完了", "}", ";"]
+          "others": ["process", "console", "log", "処理中...", "Error", "エラー！", "e", "Caught:", "message", "クリーンアップ完了", "}", ";", "// throw new Error('エラー！')でエラーを投げる", "{", "console.log('Caught:',", ".message", "finally {", "rocess関数を呼び出し"]
         },
         "testCases": [
           {
@@ -359,9 +349,7 @@ export const javascriptData5 = {
           "    super(message);",
           "    // this.name にクラス名を設定",
           "    this.name = 'Validationエラー';",
-          "  // ブロックを閉じる",
           "  }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// tryでエラー処理を開始",
@@ -372,7 +360,6 @@ export const javascriptData5 = {
           "} catch (e) {",
           "  // エラー情報を出力",
           "  console.log(`${e.name}: ${e.message}`);",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -395,10 +382,7 @@ export const javascriptData5 = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -409,7 +393,7 @@ export const javascriptData5 = {
             "throw",
             "new"
           ],
-          "others": ["ValidationError", "Error", "constructor", "message", "super", "this", "name", "Validationエラー", "無効な入力", "e", "console", "log", "}"]
+          "others": ["ValidationError", "Error", "constructor", "message", "super", "this", "name", "Validationエラー", "無効な入力", "e", "console", "log", "}", "// tryでエラー処理を開始", "try {", "(e)", "{", "console.log(`${e.name}:", "{e.message}`"]
         },
         "testCases": [
           {
@@ -497,15 +481,11 @@ export const javascriptData5 = {
           "    privateData.set(this, { password: '秘密' });",
           "    // this.nameにnameを代入",
           "    this.name = name;",
-          "  // ブロックを閉じる",
           "  }",
-          "  // ブロックを開始",
           "  getPassword() {",
           "    // WeakMapから秘密データを取得して返す",
           "    return privateData.get(this).password;",
-          "  // ブロックを閉じる",
           "  }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// userにnew User('太郎')を代入",
@@ -535,11 +515,7 @@ export const javascriptData5 = {
           "",
           null,
           "",
-          null,
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -548,7 +524,7 @@ export const javascriptData5 = {
             "new",
             "return"
           ],
-          "others": ["privateData", "WeakMap", "User", "constructor", "name", "set", "password", "秘密", "this", "getPassword", "get", "user", "太郎", "console", "log", "}"]
+          "others": ["privateData", "WeakMap", "User", "constructor", "name", "set", "password", "秘密", "this", "getPassword", "get", "user", "太郎", "console", "log", "}", "getPassword() {", "return privateData.get", "userにnew User('太郎')を代入", "// パスワードを取得して表示", "console.log(user.getPassword());"]
         },
         "testCases": [
           {
@@ -577,7 +553,6 @@ export const javascriptData5 = {
           "    console.log(`Getting ${prop}`);",
           "    // return でプロパティ値を返す",
           "    return target[prop];",
-          "  // ブロックを閉じる",
           "  }",
           "};",
           "// name: '太郎' を持つオブジェクトの操作をインターセプト",
@@ -599,8 +574,7 @@ export const javascriptData5 = {
           null,
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -608,7 +582,7 @@ export const javascriptData5 = {
             "new",
             "return"
           ],
-          "others": ["handler", "get", "target", "prop", "console", "log", "Proxy", "user", "name", "太郎", "}"]
+          "others": ["handler", "get", "target", "prop", "console", "log", "Proxy", "user", "name", "太郎", "}", "//", "パティにアクセス"]
         },
         "testCases": [
           {

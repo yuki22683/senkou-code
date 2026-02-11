@@ -290,7 +290,6 @@ export const javascriptData = {
           "if (score > 80) {",
           "    // 「ごうかく！」と表示する",
           "    console.log('ごうかく！');",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -300,8 +299,7 @@ export const javascriptData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "variables": [
@@ -355,7 +353,6 @@ export const javascriptData = {
           "} else {",
           "    // それ以外の場合（'こども'）",
           "    console.log('こども');",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -369,8 +366,7 @@ export const javascriptData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "variables": [
@@ -421,7 +417,6 @@ export const javascriptData = {
           "for (const name of names) {",
           "    // 取り出した名前を表示",
           "    console.log(name);",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -431,8 +426,7 @@ export const javascriptData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "variables": [
@@ -522,7 +516,6 @@ export const javascriptData = {
           "function greet() {",
           "    // 'こんにちは'と表示",
           "    console.log('こんにちは');",
-          "// ブロックを閉じる",
           "}",
           "// 関数を動かす",
           "greet();"
@@ -534,8 +527,7 @@ export const javascriptData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [
@@ -545,7 +537,7 @@ export const javascriptData = {
           "strings": [
             "こんにちは"
           ],
-          "others": ["console", "log", "}", "'こんにちは'"]
+          "others": ["console", "log", "}", "'こんにちは'", "// 関数を動かす"]
         },
         "testCases": [
           {

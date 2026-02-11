@@ -57,13 +57,9 @@ export const perlData = {
       "holeyCode": "# printで出力\\n___ \"___\\n# 文を実行\\n___",
       "correctLines": [
           "# printで出力",
-          "print \\\"Hello, World!",
-          "# 文を実行",
-          "\\\";"
+          "print \"Hello, World!\\n# 文を実行\\n\";"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           ""
         ],
@@ -206,9 +202,9 @@ export const perlData = {
       "holeyCode": "# 文字をつなげる\\n___ $___ = \"___\" ___ \"___\";\\n# $greetingを出力\\n___ \"$___\\n\";",
       "correctLines": [
           "# 文字をつなげる",
-          "my $greeting = \\\"Hello, \\\" . \\\"Perl!\\\";",
+          "my $greeting = \"Hello, \" . \"Perl!\";",
           "# $greetingを出力",
-          "print \\\"$greeting\\n\\\";"
+          "print \"$greeting\\n\";"
         ],
       "lineHints": [
           null,
@@ -253,9 +249,9 @@ export const perlData = {
       "holeyCode": "# 配列を作る\\n___ @___ = (\"___\", \"___\", \"___\");\\n# $fruits[0]を出力\\n___ \"$___[___]\\n\";",
       "correctLines": [
           "# 配列を作る",
-          "my @fruits = (\\\"りんご\\\", \\\"みかん\\\", \\\"ぶどう\\\");",
+          "my @fruits = (\"りんご\", \"みかん\", \"ぶどう\");",
           "# $fruits[0]を出力",
-          "print \\\"$fruits[0]\\n\\\";"
+          "print \"$fruits[0]\\n\";"
         ],
       "lineHints": [
           null,
@@ -304,7 +300,7 @@ export const perlData = {
           "# もしスコアが100なら",
           "if ($score == 100) {",
           "  # 「満点！」を出力",
-          "  print \\\"満点！\\n\\\";",
+          "  print \"満点！\\n\";",
           "}"
         ],
       "lineHints": [
@@ -357,11 +353,11 @@ export const perlData = {
           "# もし$numが10以上なら",
           "if ($num >= 10) {",
           "  # 「大きい」を出力",
-          "  print \\\"大きい\\n\\\";",
+          "  print \"大きい\\n\";",
           "# そうでなければ",
           "} else {",
           "  # 「小さい」を出力",
-          "  print \\\"小さい\\n\\\";",
+          "  print \"小さい\\n\";",
           "}"
         ],
       "lineHints": [
@@ -414,11 +410,11 @@ export const perlData = {
       "holeyCode": "# 配列をループ\\n___ @___ = (\"___\", \"___\", \"___\");\\n# 配列の各要素について繰り返す\\n___ ___ $___ (@___) ___\\n  # $animalを出力\\n  ___ \"$___\\n\";\\n___",
       "correctLines": [
           "# 配列をループ",
-          "my @animals = (\\\"犬\\\", \\\"猫\\\", \\\"鳥\\\");",
+          "my @animals = (\"犬\", \"猫\", \"鳥\");",
           "# 配列の各要素について繰り返す",
           "foreach my $animal (@animals) {",
           "  # $animalを出力",
-          "  print \\\"$animal\\n\\\";",
+          "  print \"$animal\\n\";",
           "}"
         ],
       "lineHints": [
@@ -467,9 +463,9 @@ export const perlData = {
       "holeyCode": "# ハッシュを作る\\n___ %___ = (\"___\" ___ \"___\");\\n# $fruit{color}を出力\\n___ \"$___{___}\\n\";",
       "correctLines": [
           "# ハッシュを作る",
-          "my %fruit = (\\\"color\\\" => \\\"赤\\\");",
+          "my %fruit = (\"color\" => \"赤\");",
           "# $fruit{color}を出力",
-          "print \\\"$fruit{color}\\n\\\";"
+          "print \"$fruit{color}\\n\";"
         ],
       "lineHints": [
           null,
@@ -516,7 +512,7 @@ export const perlData = {
           "# サブルーチンを定義",
           "sub welcome {",
           "  # 「Welcome!」を出力",
-          "  print \\\"Welcome!\\n\\\";",
+          "  print \"Welcome!\\n\";",
           "}",
           "",
           "# 呼び出し",

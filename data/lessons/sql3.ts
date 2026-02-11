@@ -327,7 +327,6 @@ export const sql3Data = {
           "  SELECT 1 UNION ALL",
           "  -- 異なるデータを追加",
           "  SELECT 2",
-          "-- 関数呼び出しを閉じる",
           ");"
         ],
       "lineHints": [
@@ -339,8 +338,7 @@ export const sql3Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [

@@ -122,15 +122,13 @@ export const bash3Data = {
       "holeyCode": "# in.txtを作成してから読み込む\\n___ \"___\" ___ ___\\n// コードを記述\\n___ ___ ___ ___",
       "correctLines": [
           "# in.txtを作成してから読み込む",
-          "echo \\\"line1\\\" > /tmp/in.txt",
-          "// コードを記述",
+          "echo \"line1\" > /tmp/in.txt",
           "wc -l < /tmp/in.txt"
         ],
       "lineHints": [
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
@@ -349,25 +347,17 @@ export const bash3Data = {
       "holeyCode": "# 複数行出力を並べ替える\\n___ ___ \"___\\n// \\n___\\n// パイプライン処理\\n___\" ___ ___",
       "correctLines": [
           "# 複数行出力を並べ替える",
-          "echo -e \\\\\\\"b",
-          "// \\\\\\\\",
-          "a",
-          "// パイプライン処理",
-          "c\\\\\\\" | sort"
+          "echo -e \"b\\na\\nc\" | sort"
         ],
       "lineHints": [
           null,
-          "\\\\\\\\",
-          null,
-          "\\\\\\\\",
-          null,
-          ""
+          "\\\\\\\\"
         ],
         "candidates": {
           "commands": [
             "sort"
           ],
-          "others": ["echo", "-e", "b", "a", "c", "|", "\"b", "c\\"]
+          "others": ["echo", "-e", "b", "a", "c", "|", "\"b", "c\\", "b\\na\\nc\" | sort"]
         },
         "testCases": [
           {
@@ -393,17 +383,9 @@ export const bash3Data = {
       "holeyCode": "# 重複をuniqで取り除く\\n___ ___ \"___\\n// \\n___\\n// パイプライン処理\\n___\" ___ ___",
       "correctLines": [
           "# 重複をuniqで取り除く",
-          "echo -e \\\\\\\"a",
-          "// \\\\\\\\",
-          "a",
-          "// パイプライン処理",
-          "b\\\\\\\" | uniq"
+          "echo -e \"a\\na\\nb\" | uniq"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "\\\\\\\\",
           null,
           ""
         ],
@@ -411,7 +393,7 @@ export const bash3Data = {
           "commands": [
             "uniq"
           ],
-          "others": ["echo", "-e", "a", "b", "|", "\"a", "b\\"]
+          "others": ["echo", "-e", "a", "b", "|", "\"a", "b\\", "a\\na\\nb\" | uniq"]
         },
         "testCases": [
           {

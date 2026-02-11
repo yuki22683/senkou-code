@@ -300,14 +300,11 @@ export const elixir3Data = {
           "def process(map) do",
           "  # withでパターンマッチを連鎖",
           "  with {:ok, name} <- Map.fetch(map, :name),",
-          "       # タプルを返す",
           "       {:ok, age} <- Map.fetch(map, :age) do",
-          "    # タプルを返す",
-          "    {:ok, \\\\\\\"#{name} is #{age}歳です\\\\\\\"}",
+          "    {:ok, \"#{name} is #{age}歳です\"}",
           "  # elseでエラー処理",
           "  else",
-          "    # パターンマッチの分岐",
-          "    :error -> {:error, \\\\\\\"Missing field\\\\\\\"}",
+          "    :error -> {:error, \"Missing field\"}",
           "  # endでブロックを閉じる",
           "  end",
           "# endで関数を閉じる",
@@ -326,10 +323,7 @@ export const elixir3Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -339,7 +333,7 @@ export const elixir3Data = {
             "end",
             "do"
           ],
-          "others": ["process", "map", "ok", "name", "Map", "fetch", ":name", ":age", "age", "#{name} is #{age}歳です", ":error", "error", "Missing field", ":ok"]
+          "others": ["process", "map", "ok", "name", "Map", "fetch", ":name", ":age", "age", "#{name} is #{age}歳です", ":error", "error", "Missing field", ":ok", "\"#{name", "#{age}歳です\"}", "e", "# endでブロックを閉じる", "dで関数を閉じる"]
         },
         "testCases": [
           {
@@ -407,8 +401,7 @@ export const elixir3Data = {
           "defimpl Describable, for: Map do",
           "  # defで関数を定義",
           "  def describe(map) do",
-          "    # パッケージをインポート",
-          "    \\\"Map with #{map_size(map)} keys\\\"",
+          "    \"Map with #{map_size(map)} keys\"",
           "  # endで関数を閉じる",
           "  end",
           "# endでブロックを閉じる",
@@ -423,8 +416,7 @@ export const elixir3Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -434,7 +426,7 @@ export const elixir3Data = {
             "do",
             "for"
           ],
-          "others": ["Describable", "Map", "describe", "map", "Map with #{map_size(map)} keys"]
+          "others": ["Describable", "Map", "describe", "map", "Map with #{map_size(map)} keys", "ndで関数を閉じる", "endでブロックを閉じる"]
         },
         "testCases": [
           {

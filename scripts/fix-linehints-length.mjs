@@ -5,77 +5,110 @@ const lessonsDir = './data/lessons';
 const files = fs.readdirSync(lessonsDir).filter(f => f.endsWith('.ts') && f !== 'index.ts');
 
 let totalFixed = 0;
-let totalIssues = 0;
+
+function findArrayEnd(content, startIdx) {
+  let bracketCount = 1;
+  let i = startIdx;
+  let inString = false;
+  let escapeNext = false;
+
+  while (i < content.length && bracketCount > 0) {
+    const c = content[i];
+    if (escapeNext) { escapeNext = false; i++; continue; }
+    if (c === '\\') { escapeNext = true; i++; continue; }
+    if (c === '"' && !inString) inString = true;
+    else if (c === '"' && inString) inString = false;
+    else if (!inString) {
+      if (c === '[') bracketCount++;
+      else if (c === ']') bracketCount--;
+    }
+    i++;
+  }
+  return i;
+}
+
+function parseArray(arrayContent) {
+  const items = [];
+  let current = '';
+  let inString = false;
+  let escapeNext = false;
+  let depth = 0;
+
+  for (let i = 0; i < arrayContent.length; i++) {
+    const c = arrayContent[i];
+    if (escapeNext) { current += c; escapeNext = false; continue; }
+    if (c === '\\') { current += c; escapeNext = true; continue; }
+    if (c === '"' && depth === 0) { inString = !inString; current += c; continue; }
+    if (!inString) {
+      if (c === '[' || c === '{') depth++;
+      else if (c === ']' || c === '}') depth--;
+      else if (c === ',' && depth === 0) { items.push(current.trim()); current = ''; continue; }
+    }
+    current += c;
+  }
+  if (current.trim()) items.push(current.trim());
+  return items;
+}
 
 for (const file of files) {
   const filePath = path.join(lessonsDir, file);
-  let content = fs.readFileSync(filePath, 'utf-8');
-  let modified = false;
+  let content = fs.readFileSync(filePath, 'utf8');
+  let fixCount = 0;
 
-  // Match exercise blocks with all three fields
-  const exerciseRegex = /("holeyCode":\s*")((?:[^"\\]|\\.)*?)("\s*,\s*"correctLines":\s*)(\[[\s\S]*?\])(\s*,\s*"lineHints":\s*)(\[[\s\S]*?\])/g;
+  let searchPos = 0;
+  const replacements = [];
 
-  content = content.replace(exerciseRegex, (match, p1, holeyCodeRaw, p3, correctLinesJson, p5, lineHintsJson) => {
-    try {
-      // Decode holeyCode - handle both \\n and \n
-      const holeyCode = holeyCodeRaw
-        .replace(/\\\\n/g, '\n')
-        .replace(/\\n/g, '\n')
-        .replace(/\\"/g, '"')
-        .replace(/\\\\/g, '\\');
-      const holeyLines = holeyCode.split('\n');
+  while (true) {
+    const correctLinesMarker = '"correctLines": [';
+    const correctLinesIdx = content.indexOf(correctLinesMarker, searchPos);
+    if (correctLinesIdx === -1) break;
 
-      // Parse correctLines and lineHints
-      const correctLines = JSON.parse(correctLinesJson);
-      let lineHints = JSON.parse(lineHintsJson);
+    const correctLinesContentStart = correctLinesIdx + correctLinesMarker.length;
+    const correctLinesEnd = findArrayEnd(content, correctLinesContentStart);
+    const correctLinesContent = content.substring(correctLinesContentStart, correctLinesEnd - 1);
+    const correctLines = parseArray(correctLinesContent);
 
-      const targetLength = correctLines.length;
-
-      if (lineHints.length === targetLength) {
-        return match; // Already correct
-      }
-
-      totalIssues++;
-
-      // Create new lineHints array
-      const newHints = [];
-      for (let i = 0; i < targetLength; i++) {
-        const holeyLine = holeyLines[i] || '';
-        const hasHole = holeyLine.includes('___');
-
-        // Try to find a hint for this line
-        let hint = null;
-        if (i < lineHints.length && lineHints[i] !== null) {
-          hint = lineHints[i];
-        }
-
-        // Only keep hint if line has a hole
-        if (hasHole && hint) {
-          newHints.push(hint);
-        } else {
-          newHints.push(null);
-        }
-      }
-
-      modified = true;
-
-      // Format the new hints JSON to match original style
-      const newHintsJson = JSON.stringify(newHints, null, 10)
-        .replace(/\n/g, '\n          ');
-
-      return p1 + holeyCodeRaw + p3 + correctLinesJson + p5 + newHintsJson;
-    } catch (e) {
-      console.log(`  ${file}: Parse error - ${e.message}`);
-      return match;
+    const lineHintsMarker = '"lineHints": [';
+    const lineHintsIdx = content.indexOf(lineHintsMarker, correctLinesEnd);
+    if (lineHintsIdx === -1 || lineHintsIdx - correctLinesEnd > 500) {
+      searchPos = correctLinesEnd;
+      continue;
     }
-  });
 
-  if (modified) {
-    fs.writeFileSync(filePath, content, 'utf-8');
-    console.log(`Fixed: ${file}`);
-    totalFixed++;
+    const lineHintsContentStart = lineHintsIdx + lineHintsMarker.length;
+    const lineHintsEnd = findArrayEnd(content, lineHintsContentStart);
+    const lineHintsContent = content.substring(lineHintsContentStart, lineHintsEnd - 1);
+    const lineHints = parseArray(lineHintsContent);
+
+    if (correctLines.length !== lineHints.length) {
+      let newLineHints;
+      if (correctLines.length < lineHints.length) {
+        newLineHints = lineHints.slice(0, correctLines.length);
+      } else {
+        newLineHints = [...lineHints];
+        while (newLineHints.length < correctLines.length) {
+          newLineHints.push('null');
+        }
+      }
+
+      const newLineHintsStr = '"lineHints": [\n          ' + newLineHints.join(',\n          ') + '\n        ]';
+      replacements.push({ start: lineHintsIdx, end: lineHintsEnd, newValue: newLineHintsStr });
+    }
+
+    searchPos = lineHintsEnd;
+  }
+
+  for (let i = replacements.length - 1; i >= 0; i--) {
+    const r = replacements[i];
+    content = content.substring(0, r.start) + r.newValue + content.substring(r.end);
+    fixCount++;
+  }
+
+  if (fixCount > 0) {
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(file + ': Fixed ' + fixCount + ' lineHints arrays');
+    totalFixed += fixCount;
   }
 }
 
-console.log(`\nTotal files fixed: ${totalFixed}`);
-console.log(`Total issues addressed: ${totalIssues}`);
+console.log('\nTotal: ' + totalFixed + ' fixes');

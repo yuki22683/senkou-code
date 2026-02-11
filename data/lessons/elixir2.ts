@@ -272,13 +272,9 @@ export const elixir2Data = {
           "x = 2",
           "# caseでパターンマッチ",
           "result = case x do",
-          "  # \\\"\\\"",
-          "  1 -> \\\"one\\\"",
-          "  # \\\"\\\"",
-          "  2 -> \\\"two\\\"",
-          "  # \\\"\\\"",
-          "  _ -> \\\"other\\\"",
-          "# ブロックを終了",
+          "  1 -> \"one\"",
+          "  2 -> \"two\"",
+          "  _ -> \"other\"",
           "end",
           "# resultを入力",
           "IO.puts result"
@@ -293,11 +289,7 @@ export const elixir2Data = {
           null,
           "\\\"\\\"",
           null,
-          "\\\"\\\"",
-          null,
-          "",
-          null,
-          ""
+          "\\\"\\\""
         ],
         "candidates": {
           "numbers": [
@@ -312,7 +304,7 @@ export const elixir2Data = {
             "x",
             "_"
           ],
-          "others": ["one", "two", "other", "IO", "puts", "end"]
+          "others": ["one", "two", "other", "IO", "puts", "end", "d", ".puts", "lt"]
         },
         "testCases": [
           {
@@ -341,7 +333,6 @@ export const elixir2Data = {
           "defmodule Calc do",
           "  # defで関数を定義",
           "  def triple(x), do: x * 3",
-          "# ブロックを終了",
           "end",
           "# 4の3倍を計算して表示",
           "IO.puts Calc.triple(4)"
@@ -353,8 +344,7 @@ export const elixir2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -367,7 +357,7 @@ export const elixir2Data = {
           "variables": [
             "x"
           ],
-          "others": ["Calc", "3", "4", "IO", "puts", "end"]
+          "others": ["Calc", "3", "4", "IO", "puts", "end", "# 4の3倍を計算して表示"]
         },
         "testCases": [
           {
@@ -393,18 +383,14 @@ export const elixir2Data = {
       "correctLines": [
           "# defmoduleでモジュールを定義",
           "defmodule Math do",
-          "  # 関数を定義",
           "  def factorial(0), do: 1",
           "  # factorialを再帰的に呼び出す",
           "  def factorial(n), do: n * factorial(n - 1)",
-          "# ブロックを終了",
           "end",
           "# 5の階乗を計算して表示",
           "IO.puts Math.factorial(5)"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -424,7 +410,7 @@ export const elixir2Data = {
           "variables": [
             "n"
           ],
-          "others": ["Math", "0", "1", "5", "IO", "puts", "end"]
+          "others": ["Math", "0", "1", "5", "IO", "puts", "end", "ctorialを再帰的に呼び出す", "IO.puts Math.factorial(5)"]
         },
         "testCases": [
           {
@@ -496,14 +482,10 @@ export const elixir2Data = {
           "send(self(), {:msg, 42})",
           "# receiveでメッセージを受け取る",
           "receive do",
-          "  # パターンマッチの分岐",
           "  {:msg, n} -> IO.puts n",
-          "# ブロックを終了",
           "end"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,

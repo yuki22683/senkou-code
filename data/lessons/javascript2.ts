@@ -234,14 +234,10 @@ export const javascriptData2 = {
           "const age = 25;",
           "// 20以上かつ30未満かどうか判定",
           "if (age >= 20 && age < 30) {",
-          "    // メソッドを呼び出す",
           "    console.log('20代です');",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,

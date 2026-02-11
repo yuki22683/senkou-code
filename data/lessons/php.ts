@@ -51,7 +51,7 @@ export const phpData = {
           "// PHPコード開始タグ",
           "<?php",
           "  // 画面にメッセージを出す関数",
-          "  echo \\\"Hello, PHP!\\\";",
+          "  echo \"Hello, PHP!\";",
           "// PHPコード終了タグ",
           "?>"
         ],
@@ -95,18 +95,14 @@ export const phpData = {
       "correctCode": "<?php\\n  // x というはこに 10 を入れる\\n  $x = 10;\\n  // $x の中身を表示する\\n  echo $x;\\n?>",
       "holeyCode": "// PHPコード開始タグ\\n___\\n  // x というはこに 10 を入れる\\n  $___ = ___;\\n  // $x の中身を表示する\\n  ___ $___;\\n// PHPコード終了タグ\\n___",
       "correctLines": [
-          "// PHPコード開始タグ",
           "<?php",
           "  // x というはこに 10 を入れる",
           "  $x = 10;",
           "  // $x の中身を表示する",
           "  echo $x;",
-          "// PHPコード終了タグ",
           "?>"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -146,15 +142,12 @@ export const phpData = {
       "correctCode": "<?php\\n  // はこに数字を入れる\\n  $a = 5;\\n  $b = 3;\\n  // たし算した結果を表示する\\n  echo $a + $b;\\n?>",
       "holeyCode": "// PHPコード開始タグ\\n___\\n  // はこに数字を入れる\\n  $___ = ___;\\n  // 値を代入\\n  $___ = ___;\\n  // たし算した結果を表示する\\n  ___ ___ + $___;\\n// PHPコード終了タグ\\n___",
       "correctLines": [
-          "// PHPコード開始タグ",
           "<?php",
           "  // はこに数字を入れる",
           "  $a = 5;",
-          "  // 値を代入",
           "  $b = 3;",
           "  // たし算した結果を表示する",
           "  echo $a + $b;",
-          "// PHPコード終了タグ",
           "?>"
         ],
       "lineHints": [
@@ -164,10 +157,7 @@ export const phpData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
@@ -198,16 +188,12 @@ export const phpData = {
       "correctCode": "<?php\\n  // 10 を 3 で割ったあまりを出力する\\n  echo 10 % 3;\\n?>",
       "holeyCode": "// PHPコード開始タグ\\n___\\n  // 10 を 3 で割ったあまりを出力する\\n  ___ ___ ___ ___;\\n// PHPコード終了タグ\\n___",
       "correctLines": [
-          "// PHPコード開始タグ",
           "<?php",
           "  // 10 を 3 で割ったあまりを出力する",
           "  echo 10 % 3;",
-          "// PHPコード終了タグ",
           "?>"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -246,7 +232,6 @@ export const phpData = {
       "correctCode": "<?php\\n  // scoreに50を入れる\\n  $score = 50;\\n  // 10点プラスする\\n  $score += 10;\\n  // score;を表示\\n  echo $score;\\n?>",
       "holeyCode": "// PHPコード開始タグ\\n___\\n  // scoreに50を入れる\\n  $___ = ___;\\n  // 10点プラスする\\n  $___ ___ ___;\\n  // score;を表示\\n  ___ $___;\\n// PHPコード終了タグ\\n___",
       "correctLines": [
-          "// PHPコード開始タグ",
           "<?php",
           "  // scoreに50を入れる",
           "  $score = 50;",
@@ -254,12 +239,9 @@ export const phpData = {
           "  $score += 10;",
           "  // score;を表示",
           "  echo $score;",
-          "// PHPコード終了タグ",
           "?>"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -305,18 +287,14 @@ export const phpData = {
       "correctCode": "<?php\\n  // ageに20を入れる\\n  $age = 20;\\n  // $ageを文章に埋め込んで表示する\\n  echo \"I am $age years old.\";\\n?>",
       "holeyCode": "// PHPコード開始タグ\\n___\\n  // ageに20を入れる\\n  $___ = ___;\\n  // $ageを文章に埋め込んで表示する\\n  ___ \"___\";\\n// PHPコード終了タグ\\n___",
       "correctLines": [
-          "// PHPコード開始タグ",
           "<?php",
           "  // ageに20を入れる",
           "  $age = 20;",
           "  // $ageを文章に埋め込んで表示する",
-          "  echo \\\"I am $age years old.\\\";",
-          "// PHPコード終了タグ",
+          "  echo \"I am $age years old.\";",
           "?>"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -356,18 +334,14 @@ export const phpData = {
       "correctCode": "<?php\\n  // 配列を作る\\n  $fruits = ['りんご', 'バナナ'];\\n  // 2番目のデータを表示する\\n  echo $fruits[1];\\n?>",
       "holeyCode": "// PHPコード開始タグ\\n___\\n  // 配列を作る\\n  $___ = [___];\\n  // 2番目のデータを表示する\\n  ___ $___[___];\\n// PHPコード終了タグ\\n___",
       "correctLines": [
-          "// PHPコード開始タグ",
           "<?php",
           "  // 配列を作る",
           "  $fruits = ['りんご', 'バナナ'];",
           "  // 2番目のデータを表示する",
           "  echo $fruits[1];",
-          "// PHPコード終了タグ",
           "?>"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -404,17 +378,14 @@ export const phpData = {
       "correctCode": "<?php\\n  // scoreに100を入れる\\n  $score = 100;\\n  // >で大きいか比較\\n  if ($score > 80) {\\n    // メッセージ（'大変良い'）\\n    echo \"大変良い\";\\n  }\\n?>",
       "holeyCode": "// PHPコード開始タグ\\n___\\n  // scoreに100を入れる\\n  $___ = ___;\\n  // >で大きいか比較\\n  if ($___ ___ ___) ___\\n    // メッセージ（'大変良い'）\\n    ___ \"___\";\\n  // ブロックを閉じる\\n  ___\\n// PHPコード終了タグ\\n___",
       "correctLines": [
-          "// PHPコード開始タグ",
           "<?php",
           "  // scoreに100を入れる",
           "  $score = 100;",
           "  // >で大きいか比較",
           "  if ($score > 80) {",
           "    // メッセージ（'大変良い'）",
-          "    echo \\\"大変良い\\\";",
-          "  // ブロックを閉じる",
+          "    echo \"大変良い\";",
           "  }",
-          "// PHPコード終了タグ",
           "?>"
         ],
       "lineHints": [
@@ -426,10 +397,7 @@ export const phpData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
@@ -460,21 +428,18 @@ export const phpData = {
       "correctCode": "<?php\\n  // ageに18を入れる\\n  $age = 18;\\n  // 20以上かを比較する演算子\\n  if ($age >= 20) {\\n    // 20歳以上のときのメッセージ（'大人'）\\n    echo \"大人\";\\n  // elseで「そうでなければ」\\n  } else {\\n    // それ以外のメッセージ（'未成年'）\\n    echo \"未成年\";\\n  }\\n?>",
       "holeyCode": "// PHPコード開始タグ\\n___\\n  // ageに18を入れる\\n  $___ = ___;\\n  // 20以上かを比較する演算子\\n  if ($___ ___ ___) ___\\n    // 20歳以上のときのメッセージ（'大人'）\\n    ___ \"___\";\\n  // elseで「そうでなければ」\\n  ___ ___ ___\\n    // それ以外のメッセージ（'未成年'）\\n    ___ \"___\";\\n  // ブロックを閉じる\\n  ___\\n// PHPコード終了タグ\\n___",
       "correctLines": [
-          "// PHPコード開始タグ",
           "<?php",
           "  // ageに18を入れる",
           "  $age = 18;",
           "  // 20以上かを比較する演算子",
           "  if ($age >= 20) {",
           "    // 20歳以上のときのメッセージ（'大人'）",
-          "    echo \\\"大人\\\";",
+          "    echo \"大人\";",
           "  // elseで「そうでなければ」",
           "  } else {",
           "    // それ以外のメッセージ（'未成年'）",
-          "    echo \\\"未成年\\\";",
-          "  // ブロックを閉じる",
+          "    echo \"未成年\";",
           "  }",
-          "// PHPコード終了タグ",
           "?>"
         ],
       "lineHints": [
@@ -490,10 +455,7 @@ export const phpData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -527,17 +489,14 @@ export const phpData = {
       "correctCode": "<?php\\n  // scoreに85を入れる\\n  $score = 85;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($score >= 80 && $score <= 100) {\\n    // 合格と出力\\n    echo \"合格\";\\n  }\\n?>",
       "holeyCode": "// PHPコード開始タグ\\n___\\n  // scoreに85を入れる\\n  $___ = ___;\\n  // 80以上 かつ 100以下 ならメッセージを出す\\n  if ($___ ___ ___ ___ $___ ___ ___) ___\\n    // 合格と出力\\n    ___ \"___\";\\n  // ブロックを閉じる\\n  ___\\n// PHPコード終了タグ\\n___",
       "correctLines": [
-          "// PHPコード開始タグ",
           "<?php",
           "  // scoreに85を入れる",
           "  $score = 85;",
           "  // 80以上 かつ 100以下 ならメッセージを出す",
           "  if ($score >= 80 && $score <= 100) {",
           "    // 合格と出力",
-          "    echo \\\"合格\\\";",
-          "  // ブロックを閉じる",
+          "    echo \"合格\";",
           "  }",
-          "// PHPコード終了タグ",
           "?>"
         ],
       "lineHints": [
@@ -549,10 +508,7 @@ export const phpData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
@@ -594,17 +550,12 @@ export const phpData = {
       "correctCode": "<?php\\n  $nums = [1, 2, 3];\\n  // asで各要素を取り出す\\n  foreach ($nums as $n) {\\n    echo $n;\\n  }\\n?>",
       "holeyCode": "// PHPコード開始タグ\\n___\\n  // 値を代入\\n  $___ = [___];\\n  // asで各要素を取り出す\\n  foreach ($___ ___ $___) ___\\n    // 出力\\n    ___ $___;\\n  // ブロックを閉じる\\n  ___\\n// PHPコード終了タグ\\n___",
       "correctLines": [
-          "// PHPコード開始タグ",
           "<?php",
-          "  // 値を代入",
           "  $nums = [1, 2, 3];",
           "  // asで各要素を取り出す",
           "  foreach ($nums as $n) {",
-          "    // 出力",
           "    echo $n;",
-          "  // ブロックを閉じる",
           "  }",
-          "// PHPコード終了タグ",
           "?>"
         ],
       "lineHints": [
@@ -614,12 +565,7 @@ export const phpData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -650,13 +596,10 @@ export const phpData = {
       "correctCode": "<?php\\n  $user = ['名前' => 'アリス'];\\n  // nameでキーを指定してアクセス\\n  echo $user['名前'];\\n?>",
       "holeyCode": "// PHPコード開始タグ\\n___\\n  // 値を代入\\n  $___ = [___];\\n  // nameでキーを指定してアクセス\\n  ___ $___['___'];\\n// PHPコード終了タグ\\n___",
       "correctLines": [
-          "// PHPコード開始タグ",
           "<?php",
-          "  // 値を代入",
           "  $user = ['名前' => 'アリス'];",
           "  // nameでキーを指定してアクセス",
           "  echo $user['名前'];",
-          "// PHPコード終了タグ",
           "?>"
         ],
       "lineHints": [
@@ -664,10 +607,7 @@ export const phpData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "strings": [
@@ -698,17 +638,12 @@ export const phpData = {
       "correctCode": "<?php\\n  function greet() {\\n    echo \"こんにちは\";\\n  }\\n  // 関数を実行する\\n  greet();\\n?>",
       "holeyCode": "// PHPコード開始タグ\\n___\\n  // ブロックを開始\\n  function ___() ___\\n    // 出力\\n    ___ \"___\";\\n  // ブロックを閉じる\\n  ___\\n  // 関数を実行する\\n  ___();\\n// PHPコード終了タグ\\n___",
       "correctLines": [
-          "// PHPコード開始タグ",
           "<?php",
-          "  // ブロックを開始",
           "  function greet() {",
-          "    // 出力",
-          "    echo \\\"こんにちは\\\";",
-          "  // ブロックを閉じる",
+          "    echo \"こんにちは\";",
           "  }",
           "  // 関数を実行する",
           "  greet();",
-          "// PHPコード終了タグ",
           "?>"
         ],
       "lineHints": [
@@ -718,12 +653,7 @@ export const phpData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [

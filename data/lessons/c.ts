@@ -34,12 +34,9 @@ export const cData = {
           "// mainはプログラムのエントリーポイント",
           "int main() {",
           "    // Hello, World!を表示する",
-          "    printf(\\\"Hello, World!",
-          "// 文を実行",
-          "\\\");",
+          "    printf(\"Hello, World!\\n\");",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -51,10 +48,7 @@ export const cData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
       "candidates": {
         "functions": [
@@ -63,7 +57,7 @@ export const cData = {
         "strings": [
           "Hello, World!"
         ],
-        "others": ["stdio.h", "main", "0", "\");", "}", "include", "int"]
+        "others": ["stdio.h", "main", "0", "\");", "}", "include", "int", "Hello, World!\\n\");", "return 0;"]
       },
       "testCases": [
         {
@@ -96,12 +90,9 @@ export const cData = {
           "    // xに10を代入する",
           "    int x = 10;",
           "    // xの値を表示する",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", x);",
+          "    printf(\"%d\\n\", x);",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -115,13 +106,10 @@ export const cData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
       "candidates": {
-        "others": ["stdio.h", "main", "10", "x", "0", "printf", "\", x);", "}", "include", "int", "%d"]
+        "others": ["stdio.h", "main", "10", "x", "0", "printf", "\", x);", "}", "include", "int", "%d", "%d\\n\", x);", "return 0;"]
       },
       "testCases": [
         {
@@ -156,12 +144,9 @@ export const cData = {
           "    // bに3を代入する",
           "    int b = 3;",
           "    // a - bの結果を表示する",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", a - b);",
+          "    printf(\"%d\\n\", a - b);",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -177,10 +162,7 @@ export const cData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
       "candidates": {
         "operators": [
@@ -189,7 +171,7 @@ export const cData = {
           "*",
           "/"
         ],
-        "others": ["stdio.h", "main", "10", "3", "0", "printf", "\", a - b);", "}", "include", "int", "a", "b", "%d"]
+        "others": ["stdio.h", "main", "10", "3", "0", "printf", "\", a - b);", "}", "include", "int", "a", "b", "%d", "%d\\n\", a - b);", "return 0;"]
       },
       "testCases": [
         {
@@ -220,12 +202,9 @@ export const cData = {
           "// mainはプログラムのエントリーポイント",
           "int main() {",
           "    // 10 % 3の結果を表示する",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", 10 % 3);",
+          "    printf(\"%d\\n\", 10 % 3);",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -237,10 +216,7 @@ export const cData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
       "candidates": {
         "operators": [
@@ -249,7 +225,7 @@ export const cData = {
           "*",
           "+"
         ],
-        "others": ["stdio.h", "main", "0", "printf", "\", 10 % 3);", "}", "include", "int", "%d"]
+        "others": ["stdio.h", "main", "0", "printf", "\", 10 % 3);", "}", "include", "int", "%d", "%d\\n\", 10 % 3);", "return 0;"]
       },
       "testCases": [
         {
@@ -284,12 +260,9 @@ export const cData = {
           "    // scoreに10を加算する",
           "    score += 10;",
           "    // scoreの値を表示する",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", score);",
+          "    printf(\"%d\\n\", score);",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -305,10 +278,7 @@ export const cData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
       "candidates": {
         "operators": [
@@ -317,7 +287,7 @@ export const cData = {
           "*=",
           "/="
         ],
-        "others": ["stdio.h", "main", "80", "score", "0", "10", "printf", "\", score);", "}", "include", "int", "%d"]
+        "others": ["stdio.h", "main", "80", "score", "0", "10", "printf", "\", score);", "}", "include", "int", "%d", "%d\\n\", score);", "return 0;"]
       },
       "testCases": [
         {
@@ -350,12 +320,9 @@ export const cData = {
           "    // ageに12を代入する",
           "    int age = 12;",
           "    // 「私は12歳です」と表示する",
-          "    printf(\\\"私は %d 歳です",
-          "// 文を実行",
-          "\\\", age);",
+          "    printf(\"私は %d 歳です\\n\", age);",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -369,13 +336,10 @@ export const cData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
       "candidates": {
-        "others": ["stdio.h", "main", "12", "age", "0", "printf", "\", age);", "}", "include", "int", "私は %d 歳です"]
+        "others": ["stdio.h", "main", "12", "age", "0", "printf", "\", age);", "}", "include", "int", "私は %d 歳です", "私は %d 歳です\\n\", age);", "return 0;"]
       },
       "testCases": [
         {
@@ -408,12 +372,9 @@ export const cData = {
           "    // 配列numsを初期化する",
           "    int nums[3] = {10, 20, 30};",
           "    // nums[1]を表示する（インデックス1は20）",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", nums[1]);",
+          "    printf(\"%d\\n\", nums[1]);",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -427,10 +388,7 @@ export const cData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
       "candidates": {
         "numbers": [
@@ -438,7 +396,7 @@ export const cData = {
           "1",
           "2"
         ],
-        "others": ["stdio.h", "main", "3", "printf", "\", nums[1]);", "}", "include", "int", "nums", "10", "20", "30", "%d"]
+        "others": ["stdio.h", "main", "3", "printf", "\", nums[1]);", "}", "include", "int", "nums", "10", "20", "30", "%d", "%d\\n\", nums[1]);", "return 0;"]
       },
       "testCases": [
         {
@@ -472,15 +430,10 @@ export const cData = {
           "    int score = 85;",
           "    // scoreが80以上なら合格と表示する",
           "    if (score >= 80) {",
-          "        // 出力",
-          "        printf(\\\"合格",
-          "// 文を実行",
-          "\\\");",
-          "    // ブロックを閉じる",
+          "        printf(\"合格\\n\");",
           "    }",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -496,12 +449,7 @@ export const cData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
       "candidates": {
         "keywords": [
@@ -509,7 +457,7 @@ export const cData = {
           "else",
           "while"
         ],
-        "others": ["stdio.h", "main", "85", "0", ">=", "printf", "\");", "}", "include", "int", "score", "80", "合格"]
+        "others": ["stdio.h", "main", "85", "0", ">=", "printf", "\");", "}", "include", "int", "score", "80", "合格", "return 0;"]
       },
       "testCases": [
         {
@@ -543,21 +491,12 @@ export const cData = {
           "    int x = 10;",
           "    // xが5より大きいか判定する",
           "    if (x > 5) {",
-          "        // 出力",
-          "        printf(\\\"大きい",
-          "// 文を実行",
-          "\\\");",
-          "    // else分岐",
+          "        printf(\"大きい\\n\");",
           "    } else {",
-          "        // 出力",
-          "        printf(\\\"小さい",
-          "// 文を実行",
-          "\\\");",
-          "    // ブロックを閉じる",
+          "        printf(\"小さい\\n\");",
           "    }",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -575,16 +514,7 @@ export const cData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
       "candidates": {
         "keywords": [
@@ -592,7 +522,7 @@ export const cData = {
           "if",
           "elif"
         ],
-        "others": ["stdio.h", "main", "10", "0", ">", "printf", "\");", "}", "{", "include", "int", "x", "5", "大きい", "小さい"]
+        "others": ["stdio.h", "main", "10", "0", ">", "printf", "\");", "}", "{", "include", "int", "x", "5", "大きい", "小さい", "se {", "return"]
       },
       "testCases": [
         {
@@ -626,15 +556,10 @@ export const cData = {
           "    int score = 85;",
           "    // scoreが80以上かつ100以下なら合格と表示する",
           "    if (score >= 80 && score <= 100) {",
-          "        // 出力",
-          "        printf(\\\"合格",
-          "// 文を実行",
-          "\\\");",
-          "    // ブロックを閉じる",
+          "        printf(\"合格\\n\");",
           "    }",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -650,12 +575,7 @@ export const cData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
       "candidates": {
         "operators": [
@@ -663,7 +583,7 @@ export const cData = {
           "||",
           "!"
         ],
-        "others": ["stdio.h", "main", "85", "0", "80", "100", "printf", "\");", "}", "include", "int", "score", "合格"]
+        "others": ["stdio.h", "main", "85", "0", "80", "100", "printf", "\");", "}", "include", "int", "score", "合格", "return 0;"]
       },
       "testCases": [
         {
@@ -696,21 +616,13 @@ export const cData = {
           "    // iが0から2までループする",
           "    for (int i = 0; i < 3; i++) {",
           "        // iの値を表示する",
-          "        printf(\\\"%d",
-          "// 文を実行",
-          "\\\", i);",
-          "    // ブロックを閉じる",
+          "        printf(\"%d\\n\", i);",
           "    }",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -730,7 +642,7 @@ export const cData = {
           "while",
           "do"
         ],
-        "others": ["stdio.h", "main", "i", "0", "3", "printf", "\", i);", "}", "include", "int", "%d"]
+        "others": ["stdio.h", "main", "i", "0", "3", "printf", "\", i);", "}", "include", "int", "%d", "%d\\n\", i);", "// 正常終了を示す0を返す"]
       },
       "testCases": [
         {
@@ -760,11 +672,8 @@ export const cData = {
           "#include <stdio.h>",
           "// Point構造体を定義する",
           "struct Point {",
-          "    // 変数を宣言",
           "    int x;",
-          "    // 変数を宣言",
           "    int y;",
-          "// ブロックを閉じる",
           "};",
           "// mainはプログラムのエントリーポイント",
           "int main() {",
@@ -773,12 +682,9 @@ export const cData = {
           "    // p.xに10を代入する",
           "    p.x = 10;",
           "    // p.xの値を表示する",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", p.x);",
+          "    printf(\"%d\\n\", p.x);",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -799,16 +705,10 @@ export const cData = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
           ""
         ],
       "candidates": {
-        "others": ["stdio.h", "main", "p", "10", "x", "0", "Point", "y", "};", "printf", "\", p.x);", "}", "include", "int", "%d"]
+        "others": ["stdio.h", "main", "p", "10", "x", "0", "Point", "y", "};", "printf", "\", p.x);", "}", "include", "int", "%d", "ainはプログラムのエントリーポイント", "// Point型の変数pを作成する", "// p.xに10を代入する", "値を表示する", "// 正常終了を示す0を返す"]
       },
       "testCases": [
         {
@@ -839,10 +739,7 @@ export const cData = {
           "// greet関数を定義する",
           "void greet() {",
           "    // Helloと表示する",
-          "    printf(\\\"Hello",
-          "// 文を実行",
-          "\\\");",
-          "// ブロックを閉じる",
+          "    printf(\"Hello\\n\");",
           "}",
           "// mainはプログラムのエントリーポイント",
           "int main() {",
@@ -850,7 +747,6 @@ export const cData = {
           "    greet();",
           "    // 正常終了を示す0を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -867,14 +763,10 @@ export const cData = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
           ""
         ],
       "candidates": {
-        "others": ["stdio.h", "greet", "0", "printf", "\");", "}", "main", "include", "int", "void", "Hello"]
+        "others": ["stdio.h", "greet", "0", "printf", "\");", "}", "main", "include", "int", "void", "Hello", "Hello\\n\");", "// mainはプログラムのエントリーポイント", "// greet関数を呼び出す", "// 正常終了を示す0を返す"]
       },
       "testCases": [
         {

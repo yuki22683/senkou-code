@@ -376,7 +376,6 @@ export const rubyData = {
           "if score > 80",
           "  # 「合格！」と表示する",
           "  puts '合格！'",
-          "# ブロックを終了",
           "end"
         ],
       "lineHints": [
@@ -386,8 +385,7 @@ export const rubyData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -439,7 +437,6 @@ export const rubyData = {
           "else",
           "  # 「子供」と表示",
           "  puts '子供'",
-          "# ブロックを終了",
           "end"
         ],
       "lineHints": [
@@ -453,8 +450,7 @@ export const rubyData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -504,7 +500,6 @@ export const rubyData = {
           "if score >= 80 and score <= 100",
           "  # 「合格！」と表示",
           "  puts '合格！'",
-          "# ブロックを終了",
           "end"
         ],
       "lineHints": [
@@ -514,8 +509,7 @@ export const rubyData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -565,7 +559,6 @@ export const rubyData = {
           "names.each do |name|",
           "  # nameを表示",
           "  puts name",
-          "# ブロックを終了",
           "end"
         ],
       "lineHints": [
@@ -575,8 +568,7 @@ export const rubyData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": ["do", "end"],
@@ -664,7 +656,6 @@ export const rubyData = {
           "def greet",
           "  # こんにちは と表示",
           "  puts 'こんにちは'",
-          "# ブロックを終了",
           "end",
           "# greetメソッドを呼び出す",
           "greet"
@@ -676,8 +667,7 @@ export const rubyData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [

@@ -51,11 +51,11 @@ export const goData = {
           "// モジュールを宣言",
           "package main",
           "// パッケージをインポート",
-          "import \\\"fmt\\\"",
+          "import \"fmt\"",
           "// main関数を定義",
           "func main() {",
           "    // こんにちは, Go! と表示する",
-          "    fmt.Println(\\\"こんにちは, Go!\\\")",
+          "    fmt.Println(\"こんにちは, Go!\")",
           "// ブロックを閉じる",
           "}"
         ],
@@ -99,24 +99,16 @@ export const goData = {
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // x に 10 を代入する\\n    x := 10\\n    // x を表示する\\n    fmt.Println(x)\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// main関数を定義\\nfunc ___ () {\\n    // x に 10 を代入する\\n    ___ := ___\\n    // x を表示する\\n    ___.___(___) \\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
-          "// main関数を定義",
+          "import \"fmt\"",
           "func main() {",
           "    // x に 10 を代入する",
           "    x := 10",
           "    // x を表示する",
           "    fmt.Println(x)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -133,7 +125,7 @@ export const goData = {
           "numbers": [
             "10"
           ],
-          "others": ["main", "fmt", "main()", "Println", "}", "import"]
+          "others": ["main", "fmt", "main()", "Println", "}", "import", "fmt\"", "// x に 10 を代入する", "/"]
         },
         "testCases": [
           {
@@ -157,19 +149,14 @@ export const goData = {
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // はこに数字を入れる\\n    a := 4\\n    b := 3\\n    // * でかけ算する\\n    fmt.Println(a * b)\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// main関数を定義\\nfunc ___ () {\\n    // はこに数字を入れる\\n    ___ := ___\\n    // 変数を宣言\\n    ___ := ___\\n    // * でかけ算する\\n    ___.___(___  ___ ___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
-          "// main関数を定義",
+          "import \"fmt\"",
           "func main() {",
           "    // はこに数字を入れる",
           "    a := 4",
-          "    // 変数を宣言",
           "    b := 3",
           "    // * でかけ算する",
           "    fmt.Println(a * b)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -181,18 +168,13 @@ export const goData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
             "*"
           ],
-          "others": ["main", "fmt", "main()", "a", "b", "Println", "}", "import", "4", "3"]
+          "others": ["main", "fmt", "main()", "a", "b", "Println", "}", "import", "4", "3", "fmt\"", "// はこに数字を入れる", "fmt.Println(a", ")"]
         },
         "testCases": [
           {
@@ -216,22 +198,14 @@ export const goData = {
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // 10 を 3 で割ったあまりを出力する\\n    fmt.Println(10 % 3)\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// main関数を定義\\nfunc ___ () {\\n    // 10 を 3 で割ったあまりを出力する\\n    ___.___(___  ___ ___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
-          "// main関数を定義",
+          "import \"fmt\"",
           "func main() {",
           "    // 10 を 3 で割ったあまりを出力する",
           "    fmt.Println(10 % 3)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -246,7 +220,7 @@ export const goData = {
             "*",
             "-"
           ],
-          "others": ["main", "fmt", "main()", "Println", "}", "import", "10", "3"]
+          "others": ["main", "fmt", "main()", "Println", "}", "import", "10", "3", "fmt\"", "// 10 を 3 で割ったあまりを出力する"]
         },
         "testCases": [
           {
@@ -270,30 +244,18 @@ export const goData = {
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    hp := 100\\n    // += で 20 を足す\\n    hp += 20\\n    // -= で 50 を引く\\n    hp -= 50\\n    fmt.Println(hp)\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// main関数を定義\\nfunc ___ () {\\n    // 変数を宣言\\n    ___ := ___\\n    // += で 20 を足す\\n    ___ += ___\\n    // -= で 50 を引く\\n    ___ -= ___\\n    // 出力\\n    ___.___(___) \\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
-          "// main関数を定義",
+          "import \"fmt\"",
           "func main() {",
-          "    // 変数を宣言",
           "    hp := 100",
           "    // += で 20 を足す",
           "    hp += 20",
           "    // -= で 50 を引く",
           "    hp -= 50",
-          "    // 出力",
           "    fmt.Println(hp)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -312,7 +274,7 @@ export const goData = {
             "*=",
             "/="
           ],
-          "others": ["main", "fmt", "main()", "hp", "20", "50", "Println", "}", "import", "100"]
+          "others": ["main", "fmt", "main()", "hp", "20", "50", "Println", "}", "import", "100", "fmt\"", "hp := 100", "p"]
         },
         "testCases": [
           {
@@ -336,24 +298,16 @@ export const goData = {
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // ageに10を入れる\\n    age := 10\\n    // age を埋め込む\\n    fmt.Printf(\"I am %d years old.\\n\", age)\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// main関数を定義\\nfunc ___ () {\\n    // ageに10を入れる\\n    ___ := ___\\n    // age を埋め込む\\n    ___.___(___ ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
-          "// main関数を定義",
+          "import \"fmt\"",
           "func main() {",
           "    // ageに10を入れる",
           "    age := 10",
           "    // age を埋め込む",
-          "    fmt.Printf(\\\"I am %d years old.\\n\\\", age)",
-          "// ブロックを閉じる",
+          "    fmt.Printf(\"I am %d years old.\\n\", age)",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -367,7 +321,7 @@ export const goData = {
           "variables": [
             "age"
           ],
-          "others": ["main", "fmt", "main()", "Printf", "}", "import", "10", "\"I am %d years old.\\n\", age)", "\"I", "am %d years old.\\n\", age)"]
+          "others": ["main", "fmt", "main()", "Printf", "}", "import", "10", "\"I am %d years old.\\n\", age)", "\"I", "am %d years old.\\n\", age)", "fmt\"", "// ageに10を入れる", "/"]
         },
         "testCases": [
           {
@@ -391,17 +345,12 @@ export const goData = {
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    nums := []int{10, 20}\\n    // インデックス 1 で2番目を取得\\n    fmt.Println(nums[1])\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// main関数を定義\\nfunc ___ () {\\n    // 変数を宣言\\n    ___ := []___  {___, ___}\\n    // インデックス 1 で2番目を取得\\n    ___.___(___[___])\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
-          "// main関数を定義",
+          "import \"fmt\"",
           "func main() {",
-          "    // 変数を宣言",
           "    nums := []int{10, 20}",
           "    // インデックス 1 で2番目を取得",
           "    fmt.Println(nums[1])",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -411,18 +360,13 @@ export const goData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "numbers": [
             "1", "10", "20"
           ],
-          "others": ["main", "fmt", "main()", "nums", "Println", "}", "import", "int", "int{10,"]
+          "others": ["main", "fmt", "main()", "nums", "Println", "}", "import", "int", "int{10,", "fmt\"", "nums := []int{10, 20}", "mt.Println(nums[1])"]
         },
         "testCases": [
           {
@@ -446,21 +390,16 @@ export const goData = {
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // scoreに100を入れる\\n    score := 100\\n    // > で比較する\\n    if score > 80 {\\n        // Great と表示する\\n        fmt.Println(\"すごい\")\\n    }\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// main関数を定義\\nfunc ___ () {\\n    // scoreに100を入れる\\n    ___ := ___\\n    // > で比較する\\n    if ___ ___ ___ {\\n        // Great と表示する\\n        ___.___(\\\"___\\\")\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
-          "// main関数を定義",
+          "import \"fmt\"",
           "func main() {",
           "    // scoreに100を入れる",
           "    score := 100",
           "    // > で比較する",
           "    if score > 80 {",
           "        // Great と表示する",
-          "        fmt.Println(\\\"すごい\\\")",
-          "    // ブロックを閉じる",
+          "        fmt.Println(\"すごい\")",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -474,12 +413,7 @@ export const goData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
@@ -488,7 +422,7 @@ export const goData = {
           "strings": [
             "すごい"
           ],
-          "others": ["100", "main", "fmt", "main()", "score", "Println", "}", "import", "80"]
+          "others": ["100", "main", "fmt", "main()", "score", "Println", "}", "import", "80", "fmt\"", "// scoreに100を入れる", "/", "// Great と表示する"]
         },
         "testCases": [
           {
@@ -512,25 +446,20 @@ export const goData = {
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // xに5を入れる\\n    x := 5\\n    // 10より大きいかを比較する演算子\\n    if x > 10 {\\n        // 10より大きいときのメッセージ（'大きい'）\\n        fmt.Println(\"大きい\")\\n    // elseで10以下の場合の処理\\n    } else {\\n        // それ以外のメッセージ（'小さい'）\\n        fmt.Println(\"小さい\")\\n    }\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// main関数を定義\\nfunc ___ () {\\n    // xに5を入れる\\n    ___ := ___\\n    // 10より大きいかを比較する演算子\\n    if ___ ___ ___ {\\n        // 10より大きいときのメッセージ（'大きい'）\\n        ___.___(\\\"___\\\")\\n    // elseで10以下の場合の処理\\n    } ___ {\\n        // それ以外のメッセージ（'小さい'）\\n        ___.___(\\\"___\\\")\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
-          "// main関数を定義",
+          "import \"fmt\"",
           "func main() {",
           "    // xに5を入れる",
           "    x := 5",
           "    // 10より大きいかを比較する演算子",
           "    if x > 10 {",
           "        // 10より大きいときのメッセージ（'大きい'）",
-          "        fmt.Println(\\\"大きい\\\")",
+          "        fmt.Println(\"大きい\")",
           "    // elseで10以下の場合の処理",
           "    } else {",
           "        // それ以外のメッセージ（'小さい'）",
-          "        fmt.Println(\\\"小さい\\\")",
-          "    // ブロックを閉じる",
+          "        fmt.Println(\"小さい\")",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -548,18 +477,13 @@ export const goData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
             "else"
           ],
-          "others": ["5", ">", "大きい", "小さい", "main", "fmt", "main()", "x", "Println", "}", "import", "10"]
+          "others": ["5", ">", "大きい", "小さい", "main", "fmt", "main()", "x", "Println", "}", "import", "10", "fmt\"", "// xに5を入れる", "/", "// 10より大きいときのメッセージ（'大きい'）", "elseで10以下の場合の処理", "// それ以外のメッセージ（'小さい'）"]
         },
         "testCases": [
           {
@@ -583,34 +507,18 @@ export const goData = {
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    score := 80\\n    bonus := 10\\n    // && で両方の条件をチェック\\n    if score >= 70 && bonus > 0 {\\n        fmt.Println(\"ボーナス合格！\")\\n    }\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// main関数を定義\\nfunc ___ () {\\n    // 変数を宣言\\n    ___ := ___\\n    // 変数を宣言\\n    ___ := ___\\n    // && で両方の条件をチェック\\n    if ___ ___ ___ && ___ ___ ___ {\\n        // パッケージをインポート\\n        ___.___(\\\"___\\\")\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
-          "// main関数を定義",
+          "import \"fmt\"",
           "func main() {",
-          "    // 変数を宣言",
           "    score := 80",
-          "    // 変数を宣言",
           "    bonus := 10",
           "    // && で両方の条件をチェック",
           "    if score >= 70 && bonus > 0 {",
-          "        // パッケージをインポート",
-          "        fmt.Println(\\\"ボーナス合格！\\\")",
-          "    // ブロックを閉じる",
+          "        fmt.Println(\"ボーナス合格！\")",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -631,7 +539,7 @@ export const goData = {
             ">=",
             ">"
           ],
-          "others": ["main", "fmt", "main()", "score", "bonus", "Println", "}", "import", "80", "10", "70", "0", "ボーナス合格！"]
+          "others": ["main", "fmt", "main()", "score", "bonus", "Println", "}", "import", "80", "10", "70", "0", "ボーナス合格！", "fmt\"", "score := 80", "/", "fmt.Println(\"ボーナス合格！\")"]
         },
         "testCases": [
           {
@@ -655,21 +563,14 @@ export const goData = {
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    nums := []int{1, 2, 3}\\n    // range で全要素をループ\\n    for _, n := range nums {\\n        fmt.Println(n)\\n    }\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// main関数を定義\\nfunc ___ () {\\n    // 変数を宣言\\n    ___ := []___  {___, ___, ___}\\n    // range で全要素をループ\\n    for ___, ___ := ___ ___ {\\n        // 出力\\n        ___.___(___) \\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
-          "// main関数を定義",
+          "import \"fmt\"",
           "func main() {",
-          "    // 変数を宣言",
           "    nums := []int{1, 2, 3}",
           "    // range で全要素をループ",
           "    for _, n := range nums {",
-          "        // 出力",
           "        fmt.Println(n)",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -681,20 +582,13 @@ export const goData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
             "range"
           ],
-          "others": ["main", "fmt", "main()", "nums", "Println", "}", "import", "int", "1", "2", "3", "_", "n", "int{1,", "3}"]
+          "others": ["main", "fmt", "main()", "nums", "Println", "}", "import", "int", "1", "2", "3", "_", "n", "int{1,", "3}", "fmt\"", "nums := []int{1, 2, 3}", "or"]
         },
         "testCases": [
           {
@@ -718,17 +612,13 @@ export const goData = {
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc main() {\\n    // string をキーの型に指定\\n    scores := map[string]int{\"Math\": 90}\\n    // 'Math' をキーに指定\\n    fmt.Println(scores[\"Math\"])\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// main関数を定義\\nfunc ___ () {\\n    // string をキーの型に指定\\n    ___ := ___[___]___  {\\\"___\\\": ___}\\n    // 'Math' をキーに指定\\n    ___.___(___[\\\"___\\\"])\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
-          "// main関数を定義",
+          "import \"fmt\"",
           "func main() {",
           "    // string をキーの型に指定",
-          "    scores := map[string]int{\\\"Math\\\": 90}",
+          "    scores := map[string]int{\"Math\": 90}",
           "    // 'Math' をキーに指定",
-          "    fmt.Println(scores[\\\"Math\\\"])",
-          "// ブロックを閉じる",
+          "    fmt.Println(scores[\"Math\"])",
           "}"
         ],
       "lineHints": [
@@ -739,18 +629,14 @@ export const goData = {
           null,
           "",
           null,
-          "\\\"\\\"",
-          null,
-          "\\\"\\\"",
-          null,
-          ""
+          "\\\"\\\""
         ],
         "candidates": {
           "strings": [
             "string",
             "Math"
           ],
-          "others": ["main", "fmt", "main()", "scores", "Println", "}", "import", "map", "int", "90", "int{\"Math\":"]
+          "others": ["main", "fmt", "main()", "scores", "Println", "}", "import", "map", "int", "90", "int{\"Math\":", "fmt\"", "// string をキーの型に指定", "/"]
         },
         "testCases": [
           {
@@ -774,21 +660,14 @@ export const goData = {
       ],
       "correctCode": "package main\\nimport \"fmt\"\\nfunc greet() {\\n    fmt.Println(\"こんにちは\")\\n}\\nfunc main() {\\n    // greet 関数を呼び出す\\n    greet()\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\n___ \\\"___\\\"\\n// greet関数を定義\\nfunc ___ () {\\n    // パッケージをインポート\\n    ___.___(\\\"___\\\")\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfunc ___ () {\\n    // greet 関数を呼び出す\\n    ___()\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
-          "// greet関数を定義",
+          "import \"fmt\"",
           "func greet() {",
-          "    // パッケージをインポート",
-          "    fmt.Println(\\\"こんにちは\\\")",
-          "// ブロックを閉じる",
+          "    fmt.Println(\"こんにちは\")",
           "}",
-          "// main関数を定義",
           "func main() {",
           "    // greet 関数を呼び出す",
           "    greet()",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -800,20 +679,13 @@ export const goData = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [
             "greet"
           ],
-          "others": ["main", "fmt", "greet()", "Println", "}", "main()", "import", "こんにちは"]
+          "others": ["main", "fmt", "greet()", "Println", "}", "main()", "import", "こんにちは", "fmt\"", "fmt.Println("]
         },
         "testCases": [
           {

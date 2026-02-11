@@ -31,20 +31,15 @@ export const cpp2Data = {
           "#include <string>",
           "// Catクラスを定義",
           "class Cat {",
-          "// ラベルを定義",
           "public:",
           "    // nameをstring型で定義",
           "    std::string name;",
           "};",
-          "// ブロックを開始",
           "int main() {",
           "    // cにCatオブジェクトを作成",
           "    Cat c;",
-          "    // 値を代入",
-          "    c.name = \\\"タマ\\\";",
-          "    // 文を実行",
+          "    c.name = \"タマ\";",
           "    std::cout << c.name << std::endl;",
-          "    // 値を返す",
           "    return 0;",
           "}"
         ],
@@ -63,18 +58,13 @@ export const cpp2Data = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null
+          ""
         ],
         "candidates": {
           "keywords": [
             "class"
           ],
-          "others": ["string", "Cat", "public", "name", "};", "main", "c", "endl", "0", "}", "タマ", "#include <___>", "#include <___>", "};", "#include <iostream>", "#include <string>", "std", "cout"]
+          "others": ["string", "Cat", "public", "name", "};", "main", "c", "endl", "0", "}", "タマ", "#include <___>", "#include <___>", "};", "#include <iostream>", "#include <string>", "std", "cout", "// nameをstring型で定義", "Cat c;", "std::cout", "<< c.name << std::endl"]
         },
         "testCases": [
           {
@@ -100,9 +90,7 @@ export const cpp2Data = {
       "correctLines": [
           "#include <iostream>",
           "class Counter {",
-          "// ラベルを定義",
           "public:",
-          "    // 変数を宣言",
           "    int count;",
           "    // Counterコンストラクタを定義（引数: int c）",
           "    Counter(int c) {",
@@ -110,13 +98,10 @@ export const cpp2Data = {
           "        count = c;",
           "    }",
           "};",
-          "// ブロックを開始",
           "int main() {",
           "    // cntにCounter(5)を作成",
           "    Counter cnt(5);",
-          "    // 文を実行",
           "    std::cout << cnt.count << std::endl;",
-          "    // 値を返す",
           "    return 0;",
           "}"
         ],
@@ -136,18 +121,13 @@ export const cpp2Data = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null
+          ""
         ],
         "candidates": {
           "functions": [
             "Counter"
           ],
-          "others": ["count", "5", "public", "c", "}", "};", "main", "endl", "0", "#include <iostream>", "#include <iostream>", "}", "};", "cnt", "std", "cout"]
+          "others": ["count", "5", "public", "c", "}", "};", "main", "endl", "0", "#include <iostream>", "#include <iostream>", "}", "};", "cnt", "std", "cout", "int count;", "ter(int c) {", "count = c;", "std::cout << cnt.count << std::endl;"]
         },
         "testCases": [
           {
@@ -173,29 +153,21 @@ export const cpp2Data = {
       "correctLines": [
           "#include <iostream>",
           "class Rect {",
-          "// ラベルを定義",
           "public:",
-          "    // 変数を宣言",
           "    int w;",
-          "    // 変数を宣言",
           "    int h;",
-          "    // ブロックを開始",
           "    int area() {",
           "        // 幅と高さを掛けた面積を返す",
           "        return w * h;",
           "    }",
           "};",
-          "// ブロックを開始",
           "int main() {",
           "    // rにRectオブジェクトを作成",
           "    Rect r;",
-          "    // 値を代入",
           "    r.w = 3;",
-          "    // 値を代入",
           "    r.h = 4;",
           "    // 面積を計算して出力",
           "    std::cout << r.area() << std::endl;",
-          "    // 値を返す",
           "    return 0;",
           "}"
         ],
@@ -218,21 +190,13 @@ export const cpp2Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null
         ],
         "candidates": {
           "operators": [
             "*"
           ],
-          "others": ["Rect", "area", "public", "w", "h", "}", "};", "main", "r", "3", "4", "endl", "0", "#include <iostream>", "#include <iostream>", "}", "};", "std", "cout"]
+          "others": ["Rect", "area", "public", "w", "h", "}", "};", "main", "r", "3", "4", "endl", "0", "#include <iostream>", "#include <iostream>", "}", "};", "std", "cout", "int w;", "area() {", "return w * h", "ジェクトを作成", "// 面積を計算して出力", "return"]
         },
         "testCases": [
           {
@@ -258,15 +222,12 @@ export const cpp2Data = {
       "correctLines": [
           "#include <iostream>",
           "int main() {",
-          "    // 変数を宣言",
           "    int num = 5;",
           "    // & で参照を作る",
           "    int& ref = num;",
           "    // ref に 100 を代入",
           "    ref = 100;",
-          "    // 文を実行",
           "    std::cout << num << std::endl;",
-          "    // 値を返す",
           "    return 0;",
           "}"
         ],
@@ -280,16 +241,13 @@ export const cpp2Data = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null
+          ""
         ],
         "candidates": {
           "operators": [
             "&"
           ],
-          "others": ["100", "main", "5", "num", "0", "}", "#include <iostream>", "#include <iostream>", "ref", "std", "cout", "endl"]
+          "others": ["100", "main", "5", "num", "0", "}", "#include <iostream>", "#include <iostream>", "ref", "std", "cout", "endl", "照を作る", "f", "100 を代入", "std::cout", "num << std::endl"]
         },
         "testCases": [
           {
@@ -315,24 +273,18 @@ export const cpp2Data = {
       "correctLines": [
           "#include <iostream>",
           "class Vehicle {",
-          "// ラベルを定義",
           "public:",
-          "    // ブロックを開始",
           "    void move() {",
-          "        // 文を実行",
-          "        std::cout << \\\"移動中\\\" << std::endl;",
+          "        std::cout << \"移動中\" << std::endl;",
           "    }",
           "};",
           "// CarクラスをVehicleから継承",
           "class Car : public Vehicle {",
           "};",
-          "// ブロックを開始",
           "int main() {",
-          "    // 文を実行",
           "    Car c;",
           "    // 移動メソッドを呼び出す",
           "    c.move();",
-          "    // 値を返す",
           "    return 0;",
           "}"
         ],
@@ -352,19 +304,13 @@ export const cpp2Data = {
           null,
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null
         ],
         "candidates": {
           "keywords": [
             "public"
           ],
-          "others": ["move", "Vehicle", "\"moving\"", "}", "};", "Car", "main", "c", "0", "\"移動中\"", "#include <iostream>", "#include <iostream>", "}", "};", "std", "cout", "移動中", "endl"]
+          "others": ["move", "Vehicle", "\"moving\"", "}", "};", "Car", "main", "c", "0", "\"移動中\"", "#include <iostream>", "#include <iostream>", "}", "};", "std", "cout", "移動中", "endl", "void move() {", "スをVehicleから継承", "r", "return 0;"]
         },
         "testCases": [
           {
@@ -390,31 +336,23 @@ export const cpp2Data = {
       "correctLines": [
           "#include <iostream>",
           "class Shape {",
-          "// ラベルを定義",
           "public:",
           "    // virtual draw()を定義",
           "    virtual void draw() {",
-          "        // 文を実行",
-          "        std::cout << \\\"shape\\\" << std::endl;",
+          "        std::cout << \"shape\" << std::endl;",
           "    }",
           "};",
-          "// クラスを定義",
           "class Circle : public Shape {",
-          "// ラベルを定義",
           "public:",
           "    // overrideでdraw()を上書き",
           "    void draw() override {",
-          "        // 文を実行",
-          "        std::cout << \\\"circle\\\" << std::endl;",
+          "        std::cout << \"circle\" << std::endl;",
           "    }",
           "};",
-          "// ブロックを開始",
           "int main() {",
-          "    // 文を実行",
           "    Circle c;",
           "    // 描画メソッドを呼び出す",
           "    c.draw();",
-          "    // 値を返す",
           "    return 0;",
           "}"
         ],
@@ -439,21 +377,13 @@ export const cpp2Data = {
           "",
           null,
           null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null
         ],
         "candidates": {
           "keywords": [
             "virtual"
           ],
-          "others": ["override", "draw", "Shape", "public", "\"shape\"", "}", "};", "Circle", "\"circle\"", "main", "c", "0", "#include <iostream>", "#include <iostream>", "}", "};", "std", "cout", "shape", "endl", "circle"]
+          "others": ["override", "draw", "Shape", "public", "\"shape\"", "}", "};", "Circle", "\"circle\"", "main", "c", "0", "#include <iostream>", "#include <iostream>", "}", "};", "std", "cout", "shape", "endl", "circle", "// virtual draw()を定義", "<< \"shape\" << std::endl;", "id", "erride", ") {", "画メソッドを呼び出す"]
         },
         "testCases": [
           {
@@ -480,18 +410,13 @@ export const cpp2Data = {
           "#include <iostream>",
           "// 型パラメータTを定義",
           "template<typename T>",
-          "// ブロックを開始",
           "T bigger(T a, T b) {",
-          "    // 文を実行",
           "    if (a > b) return a;",
-          "    // 値を返す",
           "    return b;",
           "}",
-          "// ブロックを開始",
           "int main() {",
           "    // bigger関数を呼び出し（第1引数に3, 第2引数に7）",
           "    std::cout << bigger(3, 7) << std::endl;",
-          "    // 値を返す",
           "    return 0;",
           "}"
         ],
@@ -507,18 +432,13 @@ export const cpp2Data = {
           "",
           null,
           null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null
+          ""
         ],
         "candidates": {
           "variables": [
             "T"
           ],
-          "others": ["bigger", "b", "a", "}", "main", "3", "7", "0", "#include <iostream>", "#include <iostream>", "}", "std", "cout", "endl"]
+          "others": ["bigger", "b", "a", "}", "main", "3", "7", "0", "#include <iostream>", "#include <iostream>", "}", "std", "cout", "endl", "if", "b) return a;", "er関数を呼び出し（第1引数に3, 第2引数に7）"]
         },
         "testCases": [
           {
@@ -546,12 +466,10 @@ export const cpp2Data = {
           "int main() {",
           "    // { でラムダ本体を開始",
           "    auto square = [](int x) {",
-          "        // 値を返す",
           "        return x * x;",
           "    };",
           "    // square(4) でラムダを呼び出し",
           "    std::cout << square(4) << std::endl;",
-          "    // 値を返す",
           "    return 0;",
           "}"
         ],
@@ -565,15 +483,13 @@ export const cpp2Data = {
           null,
           null,
           "",
-          null,
-          "",
           null
         ],
         "candidates": {
           "operators": [
             "{"
           ],
-          "others": ["square", "main", "x", "};", "4", "0", "}", "#include <___>", "#include <___>", "#include <iostream>", "std", "cout", "endl"]
+          "others": ["square", "main", "x", "};", "4", "0", "}", "#include <___>", "#include <___>", "#include <iostream>", "std", "cout", "endl", "return 0;"]
         },
         "testCases": [
           {
@@ -604,7 +520,6 @@ export const cpp2Data = {
           "    auto ptr = std::make_unique<int>(100);",
           "    // *ptr で中身にアクセス",
           "    std::cout << *ptr << std::endl;",
-          "    // 値を返す",
           "    return 0;",
           "}"
         ],
@@ -617,8 +532,7 @@ export const cpp2Data = {
           null,
           "",
           null,
-          "",
-          null
+          ""
         ],
         "candidates": {
           "functions": [
@@ -650,16 +564,13 @@ export const cpp2Data = {
       "correctLines": [
           "#include <iostream>",
           "int main() {",
-          "    // ブロックを開始",
           "    try {",
           "        // throw 404で例外を投げる",
           "        throw 404;",
           "    // catch(int e)で例外を捕まえる",
           "    } catch (int e) {",
-          "        // 文を実行",
           "        std::cout << e << std::endl;",
           "    }",
-          "    // 値を返す",
           "    return 0;",
           "}"
         ],
@@ -674,16 +585,13 @@ export const cpp2Data = {
           "",
           null,
           "",
-          null,
-          null,
-          "",
           null
         ],
         "candidates": {
           "keywords": [
             "throw"
           ],
-          "others": ["catch", "main", "try", "404", "e", "{", "}", "0", "#include <iostream>", "#include <iostream>", "}", "std", "cout", "endl"]
+          "others": ["catch", "main", "try", "404", "e", "{", "}", "0", "#include <iostream>", "#include <iostream>", "}", "std", "cout", "endl", "// throw 404で例外を投げる", "nt e)で例外を捕まえる", "<< e << std::endl;", "rn 0;"]
         },
         "testCases": [
           {

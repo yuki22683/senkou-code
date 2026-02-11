@@ -62,8 +62,8 @@ export const csharp4Data = {
           "class Program {",
           "    // Mainメソッドを定義",
           "    static void Main() {",
-          "        // \\\"こんにちは\\\" を持つ Container インスタンスを作成",
-          "        var c = new Container<string> { Item = \\\"こんにちは\\\" };",
+          "        // \"こんにちは\" を持つ Container インスタンスを作成",
+          "        var c = new Container<string> { Item = \"こんにちは\" };",
           "        // c.Itemを表示",
           "        Console.WriteLine(c.Item);",
           "    // ブロックを閉じる",
@@ -132,7 +132,6 @@ export const csharp4Data = {
           "class Comparer<T> where T : IComparable<T> {",
           "    // Compareメソッドを定義",
           "    public int Compare(T a, T b) => a.CompareTo(b);",
-          "// ブロックを閉じる",
           "}",
           "",
           "// Programクラスを定義",
@@ -143,9 +142,7 @@ export const csharp4Data = {
           "        var c = new Comparer<int>();",
           "        // 5と3を比較した結果を表示",
           "        Console.WriteLine(c.Compare(5, 3));",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -167,9 +164,6 @@ export const csharp4Data = {
           "",
           null,
           "",
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -178,7 +172,7 @@ export const csharp4Data = {
             "when",
             "if"
           ],
-          "others": ["using", "System", "class", "Comparer", "T", "IComparable", "public", "int", "Compare", "a", "b", "CompareTo", ";", "Program", "static", "void", "Main", "var", "c", "new", "Console", "WriteLine", "5", "3", "}", ""]
+          "others": ["using", "System", "class", "Comparer", "T", "IComparable", "public", "int", "Compare", "a", "b", "CompareTo", ";", "Program", "static", "void", "Main", "var", "c", "new", "Console", "WriteLine", "5", "3", "}", "", "// Programクラスを定義", "// Comparerインスタンスを作成", "//", "5と3を比較した結果を表示"]
         },
         "testCases": [
           {
@@ -220,9 +214,7 @@ export const csharp4Data = {
           "        MathOp op = Double;",
           "        // op(5を表示",
           "        Console.WriteLine(op(5));",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -243,8 +235,6 @@ export const csharp4Data = {
           "",
           null,
           "",
-          null,
-          null,
           null,
           null
         ],
@@ -290,9 +280,7 @@ export const csharp4Data = {
           "        Func<int, int> triple = x => x * 3;",
           "        // triple(7を表示",
           "        Console.WriteLine(triple(7));",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -307,8 +295,6 @@ export const csharp4Data = {
           "",
           null,
           "",
-          null,
-          null,
           null,
           null
         ],
@@ -351,12 +337,10 @@ export const csharp4Data = {
           "    // Mainメソッドを定義",
           "    static void Main() {",
           "        // 戻り値を持たない汎用デリゲート型",
-          "        Action<string> greet = name => Console.WriteLine($\\\"こんにちは, {name}!\\\");",
-          "        // greet関数（引数\\\"太郎\\\"）を呼び出し",
-          "        greet(\\\"太郎\\\");",
-          "    // ブロックを閉じる",
+          "        Action<string> greet = name => Console.WriteLine($\"こんにちは, {name}!\");",
+          "        // greet関数（引数\"太郎\"）を呼び出し",
+          "        greet(\"太郎\");",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -371,8 +355,6 @@ export const csharp4Data = {
           "",
           null,
           "\\\"\\\"",
-          null,
-          null,
           null,
           null
         ],
@@ -419,16 +401,13 @@ export const csharp4Data = {
           "        // numsに{1, 2, 3, 4, 5, 6}を代入",
           "        var nums = new[] { 1, 2, 3, 4, 5, 6 };",
           "        // GroupByでnumsを偶奇でグループ分けしgroupsに代入",
-          "        var groups = nums.GroupBy(n => n % 2 == 0 ? \\\"even\\\" : \\\"odd\\\");",
+          "        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");",
           "        // foreachでgroupsをループ",
           "        foreach (var g in groups) {",
           "            // g.Keyとg.Count()をWriteLineで出力",
-          "            Console.WriteLine($\\\"{g.Key}: {g.Count()}\\\");",
-          "        // ブロックを閉じる",
+          "            Console.WriteLine($\"{g.Key}: {g.Count()}\");",
           "        }",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -449,9 +428,6 @@ export const csharp4Data = {
           "",
           null,
           "",
-          null,
-          null,
-          null,
           null,
           null,
           null
@@ -500,9 +476,7 @@ export const csharp4Data = {
           "        int? len = s?.Length;",
           "        // null合体演算子でデフォルト値",
           "        Console.WriteLine(len ?? 0);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -519,8 +493,6 @@ export const csharp4Data = {
           "",
           null,
           "",
-          null,
-          null,
           null,
           null
         ],
@@ -565,12 +537,10 @@ export const csharp4Data = {
           "        // valueにnullを代入",
           "        string? value = null;",
           "        // nullなら右側を返す演算子",
-          "        string result = value ?? \\\"デフォルト\\\";",
+          "        string result = value ?? \"デフォルト\";",
           "        // resultを表示",
           "        Console.WriteLine(result);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -587,8 +557,6 @@ export const csharp4Data = {
           "\\\"\\\"",
           null,
           "",
-          null,
-          null,
           null,
           null
         ],
@@ -637,9 +605,7 @@ export const csharp4Data = {
           "        var p = new Point(3, 4);",
           "        // pを表示",
           "        Console.WriteLine(p);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -657,8 +623,6 @@ export const csharp4Data = {
           "",
           null,
           "",
-          null,
-          null,
           null,
           null
         ],
@@ -700,20 +664,17 @@ export const csharp4Data = {
           "class Item {",
           "    // 初期化時のみ値を設定できるアクセサ",
           "    public string Name { get; init; }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// Programクラスを定義",
           "class Program {",
           "    // Mainメソッドを定義",
           "    static void Main() {",
-          "        // \\\"りんご\\\" を持つ Item インスタンスを作成",
-          "        var item = new Item { Name = \\\"りんご\\\" };",
+          "        // \"りんご\" を持つ Item インスタンスを作成",
+          "        var item = new Item { Name = \"りんご\" };",
           "        // item.Nameを表示",
           "        Console.WriteLine(item.Name);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -735,9 +696,6 @@ export const csharp4Data = {
           "",
           null,
           "",
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
@@ -746,7 +704,7 @@ export const csharp4Data = {
             "set",
             "private set"
           ],
-          "others": ["using", "System", "class", "Item", "public", "string", "Name", "get", "Program", "static", "void", "Main", "var", "item", "new", "りんご", "Console", "WriteLine", ";", "}"]
+          "others": ["using", "System", "class", "Item", "public", "string", "Name", "get", "Program", "static", "void", "Main", "var", "item", "new", "りんご", "Console", "WriteLine", ";", "}", "// Programクラスを定義", "// \"りんご\" を持つ Item インスタンスを作成", "//", "item.Nameを表示"]
         },
         "testCases": [
           {

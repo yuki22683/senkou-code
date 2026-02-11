@@ -67,8 +67,8 @@ export const kotlin3Data = {
           "suspend fun getMessage(): String {",
           "    // 100ミリ秒待機する",
           "    delay(100)",
-          "    // \\\"Hello\\\" を返す",
-          "    return \\\"こんにちは\\\"",
+          "    // \"Hello\" を返す",
+          "    return \"こんにちは\"",
           "// ブロックを閉じる",
           "}",
           "",
@@ -154,7 +154,6 @@ export const kotlin3Data = {
           "        .toList()",
           "    // nums を出力する",
           "    println(nums)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -168,8 +167,7 @@ export const kotlin3Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [
@@ -218,14 +216,12 @@ export const kotlin3Data = {
           "inline fun repeat(times: Int, action: (Int) -> Unit) {",
           "    // 0 から times まで繰り返す",
           "    for (i in 0 until times) action(i)",
-          "// ブロックを閉じる",
           "}",
           "",
           "// main 関数を定義する",
           "fun main() {",
           "    // repeat関数を呼び出し（引数3）",
           "    repeat(3) { println(it) }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -236,8 +232,6 @@ export const kotlin3Data = {
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,
@@ -293,16 +287,14 @@ export const kotlin3Data = {
           "inline fun <reified T> checkType(value: Any): Boolean {",
           "    // value が T 型かチェックする",
           "    return value is T",
-          "// ブロックを閉じる",
           "}",
           "",
           "// main 関数を定義する",
           "fun main() {",
           "    // String 型かチェックする",
-          "    println(checkType<String>(\\\"テスト\\\"))",
+          "    println(checkType<String>(\"テスト\"))",
           "    // Int 型かチェックする",
-          "    println(checkType<Int>(\\\"テスト\\\"))",
-          "// ブロックを閉じる",
+          "    println(checkType<Int>(\"テスト\"))",
           "}"
         ],
       "lineHints": [
@@ -313,8 +305,6 @@ export const kotlin3Data = {
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,
@@ -368,29 +358,25 @@ export const kotlin3Data = {
       "holeyCode": "// data class を定義する\\n___ ___ ___(var ___: ___ = \"\", var ___: ___ = ___)\\n___\\n// main 関数を定義する\\n___ ___() {\\n    // apply で設定してオブジェクトを返す\\n    ___ ___ = ___().___ {\\n        // hostを設定する\\n        ___ = \"___\"\\n        // portを設定する\\n        ___ = ___\\n    // ブロックを閉じる\\n    ___\\n    // cfg を出力する\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// data class を定義する",
-          "data class Config(var host: String = \\\"\\\", var port: Int = 0)",
+          "data class Config(var host: String = \"\", var port: Int = 0)",
           "",
           "// main 関数を定義する",
           "fun main() {",
           "    // apply で設定してオブジェクトを返す",
           "    val cfg = Config().apply {",
           "        // hostを設定する",
-          "        host = \\\"localhost\\\"",
+          "        host = \"localhost\"",
           "        // portを設定する",
           "        port = 8080",
-          "    // ブロックを閉じる",
           "    }",
           "    // cfg を出力する",
           "    println(cfg)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,
@@ -452,17 +438,13 @@ export const kotlin3Data = {
           "    // also で副作用を実行してオブジェクトを返す",
           "    val num = 42.also {",
           "        // 「Value: it」の形式で出力",
-          "        println(\\\"Value: $it\\\")",
-          "    // ブロックを閉じる",
+          "        println(\"Value: $it\")",
           "    }",
           "    // num を出力する",
           "    println(num)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -520,19 +502,15 @@ export const kotlin3Data = {
           "// main 関数を定義する",
           "fun main() {",
           "    // run でブロックを実行して結果を返す",
-          "    val result = \\\"Hello World\\\".run {",
+          "    val result = \"Hello World\".run {",
           "        // スペースで分割してサイズを取得する",
-          "        split(\\\" \\\").size",
-          "    // ブロックを閉じる",
+          "        split(\" \").size",
           "    }",
           "    // result を出力する",
           "    println(result)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -593,7 +571,6 @@ export const kotlin3Data = {
           "    val num = 10.takeIf { it > 5 }",
           "    // num を出力する",
           "    println(num)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -603,8 +580,7 @@ export const kotlin3Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "methods": [
@@ -657,7 +633,6 @@ export const kotlin3Data = {
           "    val grouped = nums.groupBy { it % 2 }",
           "    // grouped を出力する",
           "    println(grouped)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -669,8 +644,7 @@ export const kotlin3Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "methods": [
@@ -723,7 +697,6 @@ export const kotlin3Data = {
           "    val product = nums.fold(1) { acc, n -> acc * n }",
           "    // product を出力する",
           "    println(product)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -735,8 +708,7 @@ export const kotlin3Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "methods": [

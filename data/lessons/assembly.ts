@@ -145,7 +145,7 @@ export const assemblyData = {
           "; データセクションを宣言",
           "section .data",
           "  ; 表示したい文字列を定義",
-          "  msg db \\\"Hi\\\", 0xA",
+          "  msg db \"Hi\", 0xA",
           "",
           "; テキストセクションを宣言",
           "section .text",
@@ -167,9 +167,7 @@ export const assemblyData = {
           "",
           "  ; 終了処理",
           "  mov rax, 60",
-          "  ; XOR演算（ゼロクリア）",
           "  xor rdi, rdi",
-          "  ; システムコール実行",
           "  syscall"
         ],
       "lineHints": [
@@ -196,8 +194,6 @@ export const assemblyData = {
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,
@@ -289,10 +285,8 @@ export const assemblyData = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; raxに10を入れる",
           "  mov rax, 10",
@@ -303,7 +297,6 @@ export const assemblyData = {
           "  mov rdi, rax",
           "  ; 終了処理",
           "  mov rax, 60",
-          "  ; システムコール実行",
           "  syscall"
         ],
       "lineHints": [
@@ -321,13 +314,10 @@ export const assemblyData = {
           null,
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "10", "add", "5", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "10", "add", "5", "rdi", "60", "syscall", "mov rax, 10", ";", "結果raxをrdiにコピー"]
         },
         "testCases": [
           {
@@ -354,10 +344,8 @@ export const assemblyData = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; raxに20を入れる",
           "  mov rax, 20",
@@ -368,7 +356,6 @@ export const assemblyData = {
           "  mov rdi, rax",
           "  ; 終了処理",
           "  mov rax, 60",
-          "  ; システムコール実行",
           "  syscall"
         ],
       "lineHints": [
@@ -386,13 +373,10 @@ export const assemblyData = {
           null,
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "20", "sub", "8", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "20", "sub", "8", "rdi", "60", "syscall", "mov rax, 20", ";", "結果raxをrdiにコピー"]
         },
         "testCases": [
           {
@@ -419,10 +403,8 @@ export const assemblyData = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; raxに25を入れる",
           "  mov rax, 25",
@@ -431,7 +413,6 @@ export const assemblyData = {
           "",
           "  ; 終了処理",
           "  mov rax, 60",
-          "  ; システムコール実行",
           "  syscall"
         ],
       "lineHints": [
@@ -447,13 +428,10 @@ export const assemblyData = {
           null,
           "",
           null,
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "25", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "25", "rdi", "60", "syscall", "mov rax, 25", ";", "終了処理"]
         },
         "testCases": [
           {
@@ -480,10 +458,8 @@ export const assemblyData = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; raxに5を入れる",
           "  mov rax, 5",
@@ -492,9 +468,7 @@ export const assemblyData = {
           "",
           "  ; 終了処理",
           "  mov rax, 60",
-          "  ; XOR演算（ゼロクリア）",
           "  xor rdi, rdi",
-          "  ; システムコール実行",
           "  syscall"
         ],
       "lineHints": [
@@ -511,14 +485,10 @@ export const assemblyData = {
           "",
           null,
           null,
-          "",
-          null,
-          "",
-          null,
           ""
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "5", "cmp", "10", "60", "xor", "rdi", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "5", "cmp", "10", "60", "xor", "rdi", "syscall", "mov rax, 5", ";", "終了処理"]
         },
         "testCases": [
           {
@@ -545,32 +515,21 @@ export const assemblyData = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
-          "  ; 値を転送",
           "  mov rax, 5",
-          "  ; 値を比較",
           "  cmp rax, 5",
           "  ; 等しければequalへジャンプ",
           "  je equal",
-          "  ; 値を転送",
           "  mov rdi, 1",
-          "  ; 無条件ジャンプ",
           "  jmp done",
           "",
-          "; ラベルを定義",
           "equal:",
-          "  ; 値を転送",
           "  mov rdi, 0",
           "",
-          "; ラベルを定義",
           "done:",
-          "  ; 値を転送",
           "  mov rax, 60",
-          "  ; システムコール実行",
           "  syscall"
         ],
       "lineHints": [
@@ -591,21 +550,10 @@ export const assemblyData = {
           "",
           null,
           "",
-          null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "5", "cmp", "je", "equal", "rdi", "1", "jmp", "done", "0", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "5", "cmp", "je", "equal", "rdi", "1", "jmp", "done", "0", "60", "syscall", "cmp rax, 5", "ual:", "rax, 60"]
         },
         "testCases": [
           {
@@ -632,26 +580,18 @@ export const assemblyData = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; doneに直接ジャンプ",
           "  jmp done",
           "",
-          "; ラベルを定義",
           "skip:",
-          "  ; 値を転送",
           "  mov rdi, 1",
           "",
-          "; ラベルを定義",
           "done:",
-          "  ; XOR演算（ゼロクリア）",
           "  xor rdi, rdi",
-          "  ; 値を転送",
           "  mov rax, 60",
-          "  ; システムコール実行",
           "  syscall"
         ],
       "lineHints": [
@@ -669,18 +609,10 @@ export const assemblyData = {
           "",
           null,
           "",
-          null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "jmp", "done", "skip", "mov", "rdi", "1", "xor", "rax", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "jmp", "done", "skip", "mov", "rdi", "1", "xor", "rax", "60", "syscall", "jmp done", "ip:"]
         },
         "testCases": [
           {
@@ -707,10 +639,8 @@ export const assemblyData = {
       "correctLines": [
           "; テキストセクション",
           "section .text",
-          "  ; グローバルシンボルを宣言",
           "  global _start",
           "",
-          "; ラベルを定義",
           "_start:",
           "  ; raxに9を入れる",
           "  mov rax, 9",
@@ -721,7 +651,6 @@ export const assemblyData = {
           "  mov rdi, rax",
           "  ; 終了処理",
           "  mov rax, 60",
-          "  ; システムコール実行",
           "  syscall"
         ],
       "lineHints": [
@@ -739,13 +668,10 @@ export const assemblyData = {
           null,
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
-          "others": ["section", "text", "global", "_start", "mov", "rax", "9", "inc", "rdi", "60", "syscall"]
+          "others": ["section", "text", "global", "_start", "mov", "rax", "9", "inc", "rdi", "60", "syscall", "mov rax, 9", ";", "結果raxをrdiにコピー"]
         },
         "testCases": [
           {

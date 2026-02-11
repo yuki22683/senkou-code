@@ -168,7 +168,6 @@ export const javascriptData4 = {
           "for (const [key, value] of Object.entries(user)) {",
           "  // テンプレートリテラルで出力",
           "  console.log(`${key}: ${value}`);",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -178,8 +177,7 @@ export const javascriptData4 = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -348,7 +346,6 @@ export const javascriptData4 = {
           "  let count = 0;",
           "  // ++ でインクリメントして返す",
           "  return () => ++count;",
-          "// ブロックを閉じる",
           "}",
           "// カウンターを作成",
           "const counter = createCounter();",
@@ -374,8 +371,7 @@ export const javascriptData4 = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -383,7 +379,7 @@ export const javascriptData4 = {
             "--",
             "+="
           ],
-          "others": ["createCounter", "count", "0", "++count", "++count;", "counter", "console", "log", "}"]
+          "others": ["createCounter", "count", "0", "++count", "++count;", "counter", "console", "log", "}", "// カウンターを作成", "の呼び出し", "// 2回目の呼び出し", "// 3回目の呼び出し"]
         },
         "testCases": [
           {
@@ -408,25 +404,20 @@ export const javascriptData4 = {
           "function memoize(fn) {",
           "  // cacheに{}を代入",
           "  const cache = {};",
-          "  // ブロックを開始",
           "  return (x) => {",
           "    // in でオブジェクトにキーが存在するかチェック",
           "    if (!(x in cache)) {",
           "      // キャッシュに結果を保存",
           "      cache[x] = fn(x);",
-          "    // ブロックを閉じる",
           "    }",
           "    // return でキャッシュから返す",
           "    return cache[x];",
-          "  // ブロックを閉じる",
           "  };",
-          "// ブロックを閉じる",
           "}",
           "// メモ化されたsquare関数を作成",
           "const square = memoize(x => x * x);",
           "// square(5)を出力",
           "console.log(square(5));",
-          "// メソッドを呼び出す",
           "console.log(square(5));"
         ],
       "lineHints": [
@@ -448,12 +439,7 @@ export const javascriptData4 = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -461,7 +447,7 @@ export const javascriptData4 = {
             "of",
             "has"
           ],
-          "others": ["memoize", "fn", "cache", "{}", "x", "*", "square", "5", "console", "log", "}", "};"]
+          "others": ["memoize", "fn", "cache", "{}", "x", "*", "square", "5", "console", "log", "}", "};", "でオブジェクトにキーが存在するかチェック", "ャッシュに結果を保存", "return cache[x];", "nst square = memoize(x => x * x);", "console.log(square(5));"]
         },
         "testCases": [
           {
@@ -495,7 +481,6 @@ export const javascriptData4 = {
           "  x => x * 2,",
           "  // -3 する関数",
           "  x => x - 3",
-          "// 関数呼び出しを閉じる",
           ");",
           "// process(5)を出力",
           "console.log(process(5));"
@@ -516,8 +501,7 @@ export const javascriptData4 = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -525,7 +509,7 @@ export const javascriptData4 = {
             "map",
             "filter"
           ],
-          "others": ["pipe", "fns", "x", "v", "f", "+", "*", "-", "1", "2", "3", "5", "process", "console", "log", "", ");"]
+          "others": ["pipe", "fns", "x", "v", "f", "+", "*", "-", "1", "2", "3", "5", "process", "console", "log", "", ");", "// process(5)を出力"]
         },
         "testCases": [
           {

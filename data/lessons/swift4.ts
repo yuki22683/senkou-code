@@ -68,7 +68,7 @@ export const swift4Data = {
           "    // speakメソッドを実装",
           "    func speak() -> String {",
           "        // Woof!を返す",
-          "        return \\\"ワン！\\\"",
+          "        return \"ワン！\"",
           "    // ブロックを閉じる",
           "    }",
           "// ブロックを閉じる",
@@ -148,21 +148,18 @@ export const swift4Data = {
           "protocol Identifiable {",
           "    // idプロパティを宣言",
           "    var id: Int { get }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// extensionでプロトコルを拡張",
           "extension Identifiable {",
           "    // デフォルト実装",
-          "    func display() { print(\\\"ID: \\\\(id)\\\") }",
-          "// ブロックを閉じる",
+          "    func display() { print(\"ID: \\(id)\") }",
           "}",
           "",
           "// Identifiableに準拠",
           "struct User: Identifiable {",
           "    // idプロパティ",
           "    var id: Int",
-          "// ブロックを閉じる",
           "}",
           "",
           "// インスタンスを作成",
@@ -192,10 +189,7 @@ export const swift4Data = {
           null,
           "",
           null,
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -243,7 +237,6 @@ export const swift4Data = {
           "func first<T>(_ array: [T]) -> T? {",
           "    // array.firstを返す",
           "    return array.first",
-          "// ブロックを閉じる",
           "}",
           "",
           "// numsに[10, 20, 30]を代入",
@@ -261,8 +254,7 @@ export const swift4Data = {
           null,
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -307,7 +299,6 @@ export const swift4Data = {
           "func maximum<T: Comparable>(_ a: T, _ b: T) -> T {",
           "    // 大きい方を返す",
           "    return a > b ? a : b",
-          "// ブロックを閉じる",
           "}",
           "",
           "// maximum関数を呼び出し（第1引数に5, 第2引数に3）",
@@ -321,8 +312,7 @@ export const swift4Data = {
           null,
           "",
           null,
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -374,20 +364,17 @@ export const swift4Data = {
           "struct Item: Codable {",
           "    // nameプロパティ",
           "    var name: String",
-          "// ブロックを閉じる",
           "}",
           "",
           "// インスタンスを作成",
-          "let item = Item(name: \\\"りんご\\\")",
+          "let item = Item(name: \"りんご\")",
           "// エンコーダを作成",
           "let encoder = JSONEncoder()",
           "// JSONに変換",
           "if let data = try? encoder.encode(item),",
-          "   // ブロックを開始",
           "   let json = String(data: data, encoding: .utf8) {",
           "    // JSONを出力",
           "    print(json)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -409,10 +396,7 @@ export const swift4Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -466,12 +450,10 @@ export const swift4Data = {
           "    // lazyで遅延初期化",
           "    lazy var result: Int = {",
           "        // 計算中と出力",
-          "        print(\\\\\\\"計算中...\\\\\\\")",
+          "        print(\"計算中...\")",
           "        // 100を返す",
           "        return 100",
-          "    // クロージャを閉じて実行",
           "    }()",
-          "// ブロックを閉じる",
           "}",
           "",
           "// インスタンスを作成",
@@ -493,8 +475,6 @@ export const swift4Data = {
           null,
           "",
           null,
-          null,
-          "",
           null,
           ""
         ],
@@ -542,10 +522,9 @@ export const swift4Data = {
           "// test関数を定義",
           "func test() {",
           "    // deferでスコープ終了時に実行",
-          "    defer { print(\\\"end\\\") }",
+          "    defer { print(\"end\") }",
           "    // startと出力",
-          "    print(\\\"start\\\")",
-          "// ブロックを閉じる",
+          "    print(\"start\")",
           "}",
           "",
           "// test関数を呼び出し",
@@ -561,8 +540,7 @@ export const swift4Data = {
           null,
           "",
           null,
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -607,14 +585,12 @@ export const swift4Data = {
           "    // guardで早期リターン",
           "    guard let n = num else {",
           "        // nilと出力",
-          "        print(\\\"nil\\\")",
+          "        print(\"nil\")",
           "        // 早期リターン",
           "        return",
-          "    // ブロックを閉じる",
           "    }",
           "    // n * 2を出力",
           "    print(n * 2)",
-          "// ブロックを閉じる",
           "}",
           "",
           "// check関数を呼び出し（引数5）",
@@ -635,9 +611,7 @@ export const swift4Data = {
           "",
           null,
           "",
-          null,
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -686,7 +660,6 @@ export const swift4Data = {
           "    associatedtype Element",
           "    // pushメソッドを宣言",
           "    mutating func push(_ item: Element)",
-          "// ブロックを閉じる",
           "}",
           "",
           "// Stackに準拠",
@@ -697,9 +670,7 @@ export const swift4Data = {
           "    mutating func push(_ item: Int) {",
           "        // 要素を追加",
           "        items.append(item)",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// インスタンスを作成",
@@ -734,10 +705,7 @@ export const swift4Data = {
           null,
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -786,7 +754,6 @@ export const swift4Data = {
           "func makeCollection() -> some Collection {",
           "    // 配列を返す",
           "    return [1, 2, 3]",
-          "// ブロックを閉じる",
           "}",
           "",
           "// cにmakeCollection関数の結果を代入",
@@ -804,8 +771,7 @@ export const swift4Data = {
           null,
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [

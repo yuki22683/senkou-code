@@ -49,13 +49,11 @@ export const perl2Data = {
       "holeyCode": "# 変数に文字列を代入\\nmy $___=___\\n# =~でパターンマッチング（iで大文字小文字を無視）\\nif (___=~/___/___) {\\n    # printで出力\\n    ___\\n# 文を実行\\n___\\n# ブロックを閉じる\\n___",
       "correctLines": [
           "# 変数に文字列を代入",
-          "my $text = \\\"Hello World\\\";",
+          "my $text = \"Hello World\";",
           "# =~でパターンマッチング（iで大文字小文字を無視）",
           "if ($text =~ /world/i) {",
           "    # printで出力",
-          "    print \\\"found",
-          "# 文を実行",
-          "\\\";",
+          "    print \"found\\n# 文を実行\\n\";",
           "# ブロックを閉じる",
           "}"
         ],
@@ -66,8 +64,6 @@ export const perl2Data = {
           "",
           null,
           "\\\"",
-          null,
-          "",
           null,
           ""
         ],
@@ -101,13 +97,11 @@ export const perl2Data = {
       "holeyCode": "# 変数に文字列を代入\\nmy $___=___\\n# sで置換\\n$___=~ s/___/___/;\\n# printで出力\\n___\\n# 文を実行\\n___",
       "correctLines": [
           "# 変数に文字列を代入",
-          "my $text = \\\"cat\\\";",
+          "my $text = \"cat\";",
           "# sで置換",
           "$text =~ s/cat/dog/;",
           "# printで出力",
-          "print \\\"$text",
-          "# 文を実行",
-          "\\\";"
+          "print \"$text\\n\";"
         ],
       "lineHints": [
           null,
@@ -115,9 +109,7 @@ export const perl2Data = {
           null,
           "",
           null,
-          "\\\"",
-          null,
-          ""
+          "\\\""
         ],
         "candidates": {
           "keywords": [
@@ -149,17 +141,13 @@ export const perl2Data = {
       "holeyCode": "# @で配列を宣言\\nmy @___=___\\n# printで出力\\n___ $___[___] . \"\\n# 文を実行\\n___",
       "correctLines": [
           "# @で配列を宣言",
-          "my @fruits = (\\\"りんご\\\", \\\"バナナ\\\");",
+          "my @fruits = (\"りんご\", \"バナナ\");",
           "# printで出力",
-          "print $fruits[1] . \\\"",
-          "# 文を実行",
-          "\\\";"
+          "print $fruits[1] . \"\\n\";"
         ],
       "lineHints": [
           null,
           "\\\"\\\"\\\"\\\"",
-          null,
-          "",
           null,
           ""
         ],
@@ -193,19 +181,15 @@ export const perl2Data = {
       "holeyCode": "# %でハッシュを宣言\\nmy %___=___\\n# printで出力\\n___ $___{___} . \"\\n# 文を実行\\n___",
       "correctLines": [
           "# %でハッシュを宣言",
-          "my %scores = (\\\"math\\\" => 90);",
+          "my %scores = (\"math\" => 90);",
           "# printで出力",
-          "print $scores{\\\"math\\\"} . \\\"",
-          "# 文を実行",
-          "\\\";"
+          "print $scores{\"math\"} . \"\\n\";"
         ],
       "lineHints": [
           null,
           "\\\"\\\"",
           null,
-          "\\\"\\\"\\\"\\\"",
-          null,
-          ""
+          "\\\"\\\"\\\"\\\""
         ],
         "candidates": {
           "operators": [
@@ -241,10 +225,7 @@ export const perl2Data = {
           "# foreachで各要素を処理",
           "foreach my $n (@nums) {",
           "    # printで出力",
-          "    print \\\"$n",
-          "# 文を実行",
-          "\\\";",
-          "# ブロックを閉じる",
+          "    print \"$n\\n\";",
           "}"
         ],
       "lineHints": [
@@ -254,10 +235,7 @@ export const perl2Data = {
           "",
           null,
           "\\\"",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -294,12 +272,9 @@ export const perl2Data = {
           "    my $n = shift;",
           "    # returnで戻り値を返す",
           "    return $n * 2;",
-          "# ブロックを閉じる",
           "}",
           "# printで出力",
-          "print double(5) . \\\"",
-          "# 文を実行",
-          "\\\";"
+          "print double(5) . \"\\n\";"
         ],
       "lineHints": [
           null,
@@ -310,10 +285,7 @@ export const perl2Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -346,20 +318,16 @@ export const perl2Data = {
       "correctLines": [
           "# 配列を宣言（10, 20）",
           "my @nums = (10, 20);",
-          "# \\\\でリファレンスを作成",
-          "my $ref = \\\\@nums;",
+          "# \\でリファレンスを作成",
+          "my $ref = \\@nums;",
           "# printで出力",
-          "print $ref->[1] . \\\"",
-          "# 文を実行",
-          "\\\";"
+          "print $ref->[1] . \"\\n\";"
         ],
       "lineHints": [
           null,
           "",
           null,
           "\\\\",
-          null,
-          "",
           null,
           ""
         ],
@@ -394,13 +362,9 @@ export const perl2Data = {
           "# [で無名配列を作成",
           "my $ref = [5, 10, 15];",
           "# printで出力",
-          "print $ref->[2] . \\\"",
-          "# 文を実行",
-          "\\\";"
+          "print $ref->[2] . \"\\n\";"
         ],
       "lineHints": [
-          null,
-          "",
           null,
           "",
           null,
@@ -440,9 +404,7 @@ export const perl2Data = {
           "# mapで各要素を変換",
           "my @squared = map { $_ * $_ } @nums;",
           "# printで出力",
-          "print \\\"@squared",
-          "# 文を実行",
-          "\\\";"
+          "print \"@squared\\n\";"
         ],
       "lineHints": [
           null,
@@ -450,9 +412,7 @@ export const perl2Data = {
           null,
           "",
           null,
-          "\\\"",
-          null,
-          ""
+          "\\\""
         ],
         "candidates": {
           "functions": [
@@ -488,9 +448,7 @@ export const perl2Data = {
           "# grepで条件に合う要素を抽出",
           "my @result = grep { $_ >= 3 } @nums;",
           "# printで出力",
-          "print \\\"@result",
-          "# 文を実行",
-          "\\\";"
+          "print \"@result\\n\";"
         ],
       "lineHints": [
           null,
@@ -498,9 +456,7 @@ export const perl2Data = {
           null,
           "",
           null,
-          "\\\"",
-          null,
-          ""
+          "\\\""
         ],
         "candidates": {
           "functions": [

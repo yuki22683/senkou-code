@@ -75,7 +75,7 @@ export const swift3Data = {
           "// 成功の場合",
           "case .success(let v): print(v)",
           "// 失敗の場合",
-          "case .failure(_): print(\\\"エラー\\\")",
+          "case .failure(_): print(\"エラー\")",
           "// ブロックを閉じる",
           "}"
         ],
@@ -302,7 +302,6 @@ export const swift3Data = {
           "for n in nums where n > 0 {",
           "    // nをprintで出力",
           "    print(n)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -312,8 +311,7 @@ export const swift3Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -349,10 +347,9 @@ export const swift3Data = {
           "// test関数を定義",
           "func test() {",
           "    // deferでスコープ終了時に実行",
-          "    defer { print(\\\"end\\\") }",
+          "    defer { print(\"end\") }",
           "    // startと出力",
-          "    print(\\\"start\\\")",
-          "// ブロックを閉じる",
+          "    print(\"start\")",
           "}",
           "// test関数を呼び出し",
           "test()"
@@ -366,8 +363,7 @@ export const swift3Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -414,7 +410,6 @@ export const swift3Data = {
           "    associatedtype Element",
           "    // pushメソッドを宣言",
           "    mutating func push(_ item: Element)",
-          "// ブロックを閉じる",
           "}",
           "",
           "// Stackに準拠",
@@ -425,9 +420,7 @@ export const swift3Data = {
           "    mutating func push(_ item: Int) {",
           "        // 要素を追加",
           "        items.append(item)",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// インスタンスを作成",
@@ -462,10 +455,7 @@ export const swift3Data = {
           null,
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -515,7 +505,6 @@ export const swift3Data = {
           "    if n < 0 { throw MyError.invalid }",
           "    // nを返す",
           "    return n",
-          "// ブロックを閉じる",
           "}",
           "",
           "// do-catchでエラー処理",
@@ -524,11 +513,9 @@ export const swift3Data = {
           "    let v = try check(10)",
           "    // vを出力",
           "    print(v)",
-          "// ブロックを開始",
           "} catch {",
           "    // エラーを出力",
-          "    print(\\\"エラー\\\")",
-          "// ブロックを閉じる",
+          "    print(\"エラー\")",
           "}"
         ],
       "lineHints": [
@@ -552,10 +539,7 @@ export const swift3Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -656,9 +640,7 @@ export const swift3Data = {
           "    mutating func increment() {",
           "        // countを1増やす",
           "        count += 1",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// インスタンスを作成",
@@ -684,8 +666,6 @@ export const swift3Data = {
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,

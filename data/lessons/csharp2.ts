@@ -53,7 +53,7 @@ export const csharp2Data = {
           "    // Moveメソッドを定義",
           "    public void Move() {",
           "        // 画面に出力",
-          "        Console.WriteLine(\\\"移動中\\\");",
+          "        Console.WriteLine(\"移動中\");",
           "    // ブロックを閉じる",
           "    }",
           "// ブロックを閉じる",
@@ -119,20 +119,16 @@ export const csharp2Data = {
           "    // virtualで仮想メソッド",
           "    public virtual void Draw() {",
           "        // 画面に出力",
-          "        Console.WriteLine(\\\"shape\\\");",
-          "    // ブロックを閉じる",
+          "        Console.WriteLine(\"shape\");",
           "    }",
-          "// ブロックを閉じる",
           "}",
           "// Shapeを継承",
           "class Circle : Shape {",
           "    // overrideで親メソッドを上書き",
           "    public override void Draw() {",
           "        // 画面に出力",
-          "        Console.WriteLine(\\\"circle\\\");",
-          "    // ブロックを閉じる",
+          "        Console.WriteLine(\"circle\");",
           "    }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// Circleインスタンスを作成",
@@ -161,11 +157,7 @@ export const csharp2Data = {
           "",
           null,
           "",
-          null,
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -174,7 +166,7 @@ export const csharp2Data = {
           "operators": [
             ":"
           ],
-          "others": ["Console", "WriteLine", "shape", "circle", "Draw", "Shape", "}", "Circle", "c"]
+          "others": ["Console", "WriteLine", "shape", "circle", "Draw", "Shape", "}", "Circle", "c", "class Circle : Shape {", "blic", "erride", "ircleインスタンスを作成", "// Drawメソッドを呼び出し"]
         },
         "testCases": [
           {
@@ -203,17 +195,14 @@ export const csharp2Data = {
           "interface IRunner {",
           "    // Runメソッドを宣言",
           "    void Run();",
-          "// ブロックを閉じる",
           "}",
           "// IRunnerを実装",
           "class Robot : IRunner {",
           "    // Runメソッドを実装",
           "    public void Run() {",
           "        // 画面に出力",
-          "        Console.WriteLine(\\\"running\\\");",
-          "    // ブロックを閉じる",
+          "        Console.WriteLine(\"running\");",
           "    }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// Robotインスタンスを作成",
@@ -239,10 +228,7 @@ export const csharp2Data = {
           null,
           "",
           null,
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -251,7 +237,7 @@ export const csharp2Data = {
           "operators": [
             ":"
           ],
-          "others": ["Console", "WriteLine", "running", "Run", "IRunner", "}", "Robot", "r"]
+          "others": ["Console", "WriteLine", "running", "Run", "IRunner", "}", "Robot", "r", "// IRunnerを実装", "nメソッドを実装", "Robot r = new Robot();"]
         },
         "testCases": [
           {
@@ -280,7 +266,6 @@ export const csharp2Data = {
           "class Item {",
           "    // getで値を取得",
           "    public int Price { get; set; }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// Itemインスタンスを作成",
@@ -302,14 +287,13 @@ export const csharp2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
             "get"
           ],
-          "others": ["Console", "WriteLine", "Price", "Item", "set", "}", "500", "item", "Price);"]
+          "others": ["Console", "WriteLine", "Price", "Item", "set", "}", "500", "item", "Price);", "//", "Priceに値を設定", "// Priceを表示"]
         },
         "testCases": [
           {
@@ -390,7 +374,6 @@ export const csharp2Data = {
           "foreach (var n in result) {",
           "    // 画面に出力",
           "    Console.WriteLine(n);",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -402,8 +385,7 @@ export const csharp2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [
@@ -442,7 +424,6 @@ export const csharp2Data = {
           "foreach (var n in squared) {",
           "    // 画面に出力",
           "    Console.WriteLine(n);",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -454,8 +435,7 @@ export const csharp2Data = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [
@@ -529,12 +509,11 @@ export const csharp2Data = {
           "// tryで例外処理を開始",
           "try {",
           "    // 例外を投げる",
-          "    throw new Exception(\\\"oops\\\");",
+          "    throw new Exception(\"oops\");",
           "// catchで例外を捕捉",
           "} catch (Exception e) {",
           "    // 画面に出力",
-          "    Console.WriteLine(\\\"caught\\\");",
-          "// ブロックを閉じる",
+          "    Console.WriteLine(\"caught\");",
           "}"
         ],
       "lineHints": [
@@ -546,8 +525,7 @@ export const csharp2Data = {
           "",
           null,
           "\\\"\\\"",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [

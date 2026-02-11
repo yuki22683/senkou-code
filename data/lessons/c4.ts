@@ -29,44 +29,20 @@ export const c4Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // fpにfopen(\\\"test.txt\\\", \\\"w\\\")を代入",
-          "    FILE *fp = fopen(\\\"テスト.txt\\\", \\\"w\\\");",
-          "    // 条件分岐",
+          "    // fpにfopen(\"test.txt\", \"w\")を代入",
+          "    FILE *fp = fopen(\"テスト.txt\", \"w\");",
           "    if (fp != NULL) {",
-          "        // 出力",
-          "        fprintf(fp, \\\"Hello",
-          "// 文を実行",
-          "\\\");",
-          "        // 文を実行",
+          "        fprintf(fp, \"Hello\\n\");",
           "        fclose(fp);",
-          "        // 出力",
-          "        printf(\\\"Done",
-          "// 文を実行",
-          "\\\");",
-          "    // ブロックを閉じる",
+          "        printf(\"Done\\n\");",
           "    }",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           "",
           null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -85,7 +61,7 @@ export const c4Data = {
             "fprintf",
             "printf"
           ],
-          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "テスト.txt", "w", "NULL", "Hello", "\");", "Done", "}", "0", "ello"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "テスト.txt", "w", "NULL", "Hello", "\");", "Done", "}", "0", "ello", "// fpにfopen", "if", "NULL) {", "fclose(fp);"]
         },
         "testCases": [
           {
@@ -111,44 +87,20 @@ export const c4Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 値を代入",
-          "    FILE *fp = fopen(\\\"データ.txt\\\", \\\"w\\\");",
-          "    // 条件分岐",
+          "    FILE *fp = fopen(\"データ.txt\", \"w\");",
           "    if (fp != NULL) {",
-          "        // 関数を呼び出す",
-          "        fputs(\\\"Data",
-          "// 文を実行",
-          "\\\", fp);",
+          "        fputs(\"Data\\n\", fp);",
           "        // fclose(fp)でファイルを閉じる",
           "        fclose(fp);",
-          "        // 出力",
-          "        printf(\\\"Closed",
-          "// 文を実行",
-          "\\\");",
-          "    // ブロックを閉じる",
+          "        printf(\"Closed\\n\");",
           "    }",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           "",
           null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -167,7 +119,7 @@ export const c4Data = {
             "fputs",
             "printf"
           ],
-          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "データ.txt", "w", "NULL", "Data", "\", fp);", "Closed", "\");", "}", "0"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "データ.txt", "w", "NULL", "Data", "\", fp);", "Closed", "\");", "}", "0", "FILE *fp = fopen", "puts", "p);", "fclose(fp);"]
         },
         "testCases": [
           {
@@ -193,44 +145,20 @@ export const c4Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 値を代入",
-          "    FILE *fp = fopen(\\\"log.txt\\\", \\\"w\\\");",
-          "    // 条件分岐",
+          "    FILE *fp = fopen(\"log.txt\", \"w\");",
           "    if (fp != NULL) {",
           "        // fpにフォーマット文字列と値100を書き込む",
-          "        fprintf(fp, \\\"Score: %d",
-          "// 文を実行",
-          "\\\", 100);",
-          "        // 文を実行",
+          "        fprintf(fp, \"Score: %d\\n\", 100);",
           "        fclose(fp);",
-          "        // 出力",
-          "        printf(\\\"Written",
-          "// 文を実行",
-          "\\\");",
-          "    // ブロックを閉じる",
+          "        printf(\"Written\\n\");",
           "    }",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           "",
           null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -249,7 +177,7 @@ export const c4Data = {
             "fprintf",
             "printf"
           ],
-          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "log.txt", "w", "NULL", "Score: %d", "\", 100);", "Written", "\");", "}", "0", "core: %d"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "log.txt", "w", "NULL", "Score: %d", "\", 100);", "Written", "\");", "}", "0", "core: %d", "FILE *fp = fopen", "/ fpにフォーマット文字列と値100を書き込む", "fclose(fp);"]
         },
         "testCases": [
           {
@@ -276,35 +204,18 @@ export const c4Data = {
           "#include <stdio.h>",
           "#include <string.h>",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 変数を宣言",
           "    char line[100];",
-          "    // 値を代入",
-          "    FILE *fp = fopen(\\\\\\\"テスト.txt\\\\\\\", \\\\\\\"w\\\\\\\");",
-          "    // 出力",
-          "    fprintf(fp, \\\\\\\"Hello World",
-          "// 文を実行",
-          "\\\\\\\");",
-          "    // 文を実行",
+          "    FILE *fp = fopen(\"テスト.txt\", \"w\");",
+          "    fprintf(fp, \"Hello World\\n\");",
           "    fclose(fp);",
-          "    // 値を代入",
-          "    fp = fopen(\\\\\\\"テスト.txt\\\\\\\", \\\\\\\"r\\\\\\\");",
+          "    fp = fopen(\"テスト.txt\", \"r\");",
           "    // fgets(line, sizeof(line), fp)で1行読み込む",
           "    fgets(line, sizeof(line), fp);",
-          "    // コードを記述",
-          "    line[strcspn(line, \\\\\\\"",
-          "// 値を代入",
-          "\\\\\\\")] = 0;",
-          "    // 出力",
-          "    printf(\\\\\\\"%s",
-          "// 文を実行",
-          "\\\\\\\", line);",
-          "    // 文を実行",
+          "    line[strcspn(line, \"\\n\")] = 0;",
+          "    printf(\"%s\\n\", line);",
           "    fclose(fp);",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -323,24 +234,7 @@ export const c4Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [
@@ -352,7 +246,7 @@ export const c4Data = {
             "strcspn",
             "sizeof"
           ],
-          "others": ["include", "stdio.h", "string.h", "", "int", "main", "char", "line", "100", "FILE", "fp", "テスト.txt", "w", "Hello World", "\");", "r", "\")] = 0;", "%s", "\", line);", "0", "}", "ello World", "izeof"]
+          "others": ["include", "stdio.h", "string.h", "", "int", "main", "char", "line", "100", "FILE", "fp", "テスト.txt", "w", "Hello World", "\");", "r", "\")] = 0;", "%s", "\", line);", "0", "}", "ello World", "izeof", "char line[100];", "fprintf(fp,", "\"Hello World\\n\");", "pen", "zeof(line), fp);", "printf(\"%s\\n\", line);", "return 0;"]
         },
         "testCases": [
           {
@@ -378,23 +272,14 @@ export const c4Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 値を代入",
-          "    FILE *fp = fopen(\\\"pos.txt\\\", \\\"w+\\\");",
-          "    // 文を実行",
-          "    fputs(\\\"ABCDEFGHIJ\\\", fp);",
+          "    FILE *fp = fopen(\"pos.txt\", \"w+\");",
+          "    fputs(\"ABCDEFGHIJ\", fp);",
           "    // fseek(fp, 0, SEEK_SET)で先頭に移動",
           "    fseek(fp, 0, SEEK_SET);",
-          "    // 出力",
-          "    printf(\\\"%c",
-          "// 文を実行",
-          "\\\", fgetc(fp));",
-          "    // 文を実行",
+          "    printf(\"%c\\n\", fgetc(fp));",
           "    fclose(fp);",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -408,16 +293,7 @@ export const c4Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [
@@ -428,7 +304,7 @@ export const c4Data = {
             "fgetc",
             "printf"
           ],
-          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "pos.txt", "w+", "ABCDEFGHIJ", "0", "SEEK_SET", "%c", "\", fgetc(fp));", "}", "EEK_SET"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "pos.txt", "w+", "ABCDEFGHIJ", "0", "SEEK_SET", "%c", "\", fgetc(fp));", "}", "EEK_SET", "FILE *fp = fopen", "//", "seek(fp,", "SEEK_SET)で先頭に移動", "fgetc(fp", "return 0;"]
         },
         "testCases": [
           {
@@ -454,40 +330,20 @@ export const c4Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 値を代入",
-          "    FILE *fp = fopen(\\\"size.txt\\\", \\\"w+\\\");",
-          "    // 文を実行",
-          "    fputs(\\\"12345\\\", fp);",
-          "    // 文を実行",
+          "    FILE *fp = fopen(\"size.txt\", \"w+\");",
+          "    fputs(\"12345\", fp);",
           "    fseek(fp, 0, SEEK_END);",
           "    // sizeにftell(fp)を代入",
           "    long size = ftell(fp);",
-          "    // 出力",
-          "    printf(\\\"%ld",
-          "// 文を実行",
-          "\\\", size);",
-          "    // 文を実行",
+          "    printf(\"%ld\\n\", size);",
           "    fclose(fp);",
-          "    // 値を返す",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           "",
           null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null,
           "",
           null,
@@ -508,7 +364,7 @@ export const c4Data = {
             "ftell",
             "printf"
           ],
-          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "size.txt", "w+", "12345", "0", "SEEK_END", "long", "size", "%ld", "\", size);", "}", "EEK_END"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "size.txt", "w+", "12345", "0", "SEEK_END", "long", "size", "%ld", "\", size);", "}", "EEK_END", "FILE *fp = fopen", "fseek(fp,", ",", "EK_END);", "long size = ftell", "p);", "fp);"]
         },
         "testCases": [
           {
@@ -537,17 +393,10 @@ export const c4Data = {
           "// Day列挙型を定義",
           "enum Day { MON, TUE, WED, THU, FRI };",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 値を代入",
           "    enum Day today = WED;",
-          "    // 出力",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", today);",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", today);",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -560,20 +409,13 @@ export const c4Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
             "enum"
           ],
-          "others": ["include", "stdio.h", "", "Day", "MON", "TUE", "WED", "THU", "FRI", "int", "main", "today", "%d", "\", today);", "0", "}", "UE", "ED", "HU", "RI", "printf"]
+          "others": ["include", "stdio.h", "", "Day", "MON", "TUE", "WED", "THU", "FRI", "int", "main", "today", "%d", "\", today);", "0", "}", "UE", "ED", "HU", "RI", "printf", "enum Day today = WED;", "n", "0;"]
         },
         "testCases": [
           {
@@ -601,26 +443,15 @@ export const c4Data = {
           "",
           "// Value共用体を定義",
           "union Value {",
-          "    // 変数を宣言",
           "    int i;",
-          "    // 変数を宣言",
           "    double d;",
-          "// ブロックを閉じる",
           "};",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 文を実行",
           "    union Value v;",
-          "    // 値を代入",
           "    v.i = 42;",
-          "    // 出力",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", v.i);",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", v.i);",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -637,24 +468,13 @@ export const c4Data = {
           null,
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
             "union"
           ],
-          "others": ["include", "stdio.h", "", "Value", "int", "i", "double", "d", "};", "main", "v", "42", "printf", "%d", "\", v.i);", "0", "}", "2"]
+          "others": ["include", "stdio.h", "", "Value", "int", "i", "double", "d", "};", "main", "v", "42", "printf", "%d", "\", v.i);", "0", "}", "2", "union Value v;", "v.i = 42;", "return 0;"]
         },
         "testCases": [
           {
@@ -680,21 +500,13 @@ export const c4Data = {
       "correctLines": [
           "#include <stdio.h>",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 変数を宣言",
           "    int x = 100;",
-          "    // 変数を宣言",
           "    int *p = &x;",
           "    // ** で二重ポインタを宣言",
           "    int **pp = &p;",
-          "    // 出力",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", **pp);",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", **pp);",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -707,18 +519,10 @@ export const c4Data = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
           ""
         ],
         "candidates": {
-          "others": ["include", "stdio.h", "", "int", "main", "x", "100", "p", "pp", "printf", "%d", "\", **pp);", "0", "}"]
+          "others": ["include", "stdio.h", "", "int", "main", "x", "100", "p", "pp", "printf", "%d", "\", **pp);", "0", "}", "int x = 100;", "//", "**", "重ポインタを宣言", "printf(\"%d\\n\",", "*pp);"]
         },
         "testCases": [
           {
@@ -745,36 +549,21 @@ export const c4Data = {
           "#include <stdio.h>",
           "#include <stdarg.h>",
           "",
-          "// ブロックを開始",
           "int sum(int count, ...) {",
-          "    // 文を実行",
           "    va_list args;",
           "    // va_start で可変長引数を初期化",
           "    va_start(args, count);",
-          "    // 変数を宣言",
           "    int total = 0;",
-          "    // forループ",
           "    for (int i = 0; i < count; i++) {",
-          "        // 文を実行",
           "        total += va_arg(args, int);",
-          "    // ブロックを閉じる",
           "    }",
-          "    // 文を実行",
           "    va_end(args);",
-          "    // 値を返す",
           "    return total;",
-          "// ブロックを閉じる",
           "}",
           "",
-          "// ブロックを開始",
           "int main() {",
-          "    // 出力",
-          "    printf(\\\"%d",
-          "// 文を実行",
-          "\\\", sum(3, 10, 20, 30));",
-          "    // 値を返す",
+          "    printf(\"%d\\n\", sum(3, 10, 20, 30));",
           "    return 0;",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -796,21 +585,6 @@ export const c4Data = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
           ""
         ],
         "candidates": {
@@ -819,7 +593,7 @@ export const c4Data = {
             "va_arg",
             "va_end"
           ],
-          "others": ["include", "stdio.h", "stdarg.h", "", "int", "sum", "count", "va_list", "args", "total", "0", "i", "}", "main", "printf", "%d", "\", sum(3, 10, 20, 30));", "ount", "nt"]
+          "others": ["include", "stdio.h", "stdarg.h", "", "int", "sum", "count", "va_list", "args", "total", "0", "i", "}", "main", "printf", "%d", "\", sum(3, 10, 20, 30));", "ount", "nt", "va_list args;", "va_start(args,", "count)", "for", "int i = 0; i < count; i++) {", "n", "total;", "printf(\"%d\\n\", sum(3, 10, 20, 30));"]
         },
         "testCases": [
           {

@@ -143,7 +143,6 @@ export const bashData = {
       "correctLines": [
           "# 変数a, bに数字を入れる",
           "a=5",
-          "// コードを記述",
           "b=3",
           "# $(( )) を使ってたし算の結果を表示",
           "echo $((a+b))"
@@ -153,14 +152,13 @@ export const bashData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "operators": [
             "+"
           ],
-          "others": ["a", "b", "echo", "5", "3"]
+          "others": ["a", "b", "echo", "5", "3", "# $(( )) を使ってたし算の結果を表示"]
         },
         "testCases": [
           {
@@ -247,12 +245,11 @@ export const bashData = {
           "# 20以上か判定",
           "if [ $age -ge 20 ]; then",
           "    # 「大人」と表示",
-          "    echo \\\"大人\\\"",
+          "    echo \"大人\"",
           "# それ以外の場合",
           "else",
           "    # 「未成年」と表示",
-          "    echo \\\"未成年\\\"",
-          "// if文を終了",
+          "    echo \"未成年\"",
           "fi"
         ],
       "lineHints": [
@@ -266,8 +263,7 @@ export const bashData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -302,12 +298,11 @@ export const bashData = {
       "holeyCode": "# 配列namesを定義\\n___=(\\\"___\\\" \\\"___\\\")\\n# 配列の全要素をループ\\n___ ___ ___ \\\"___\\\"; ___\\n    # 名前を表示\\n    ___ $___\\n// ループを終了\\n___",
       "correctLines": [
           "# 配列namesを定義",
-          "names=(\\\"アリス\\\" \\\"ボブ\\\")",
+          "names=(\"アリス\" \"ボブ\")",
           "# 配列の全要素をループ",
-          "for name in \\\"${names[@]}\\\"; do",
+          "for name in \"${names[@]}\"; do",
           "    # 名前を表示",
           "    echo $name",
-          "// ループを終了",
           "done"
         ],
       "lineHints": [
@@ -317,8 +312,7 @@ export const bashData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -355,8 +349,7 @@ export const bashData = {
           "# greet関数を定義",
           "greet() {",
           "    # 「こんにちは」と表示",
-          "    echo \\\"こんにちは\\\"",
-          "// ブロックを閉じる",
+          "    echo \"こんにちは\"",
           "}",
           "# greetで関数を呼び出す",
           "greet"
@@ -368,14 +361,13 @@ export const bashData = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "functions": [
             "greet"
           ],
-          "others": ["}", "こんにちは", "echo"]
+          "others": ["}", "こんにちは", "echo", "# greetで関数を呼び出す"]
         },
         "testCases": [
           {

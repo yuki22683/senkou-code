@@ -163,7 +163,6 @@ export const kotlin4Data = {
           "    fun increment() { count++ }",
           "    // get 関数を定義する",
           "    fun get() = count",
-          "// ブロックを閉じる",
           "}",
           "",
           "// main 関数を定義する",
@@ -174,7 +173,6 @@ export const kotlin4Data = {
           "    Counter.increment()",
           "    // get を出力する",
           "    println(Counter.get())",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -196,9 +194,7 @@ export const kotlin4Data = {
           null,
           "",
           null,
-          "",
-          null,
-          null
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -250,24 +246,21 @@ export const kotlin4Data = {
           "class Config {",
           "    // valueをlazyで遅延初期化",
           "    val value: Int by lazy {",
-          "        // \\\"Init\\\" を出力する",
-          "        println(\\\"Init\\\")",
+          "        // \"Init\" を出力する",
+          "        println(\"Init\")",
           "        // 42 を返す",
           "        42",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// main 関数を定義する",
           "fun main() {",
           "    // Config のインスタンスを作成する",
           "    val c = Config()",
-          "    // \\\"Created\\\" を出力する",
-          "    println(\\\"Created\\\")",
+          "    // \"Created\" を出力する",
+          "    println(\"Created\")",
           "    // c.value を出力する",
           "    println(c.value)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -290,9 +283,6 @@ export const kotlin4Data = {
           "",
           null,
           "\\\"\\\"",
-          null,
-          "",
-          null,
           null
         ],
         "candidates": {
@@ -349,7 +339,6 @@ export const kotlin4Data = {
           "    ",
           "    // setup 関数を定義する",
           "    fun setup(c: String) { config = c }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// main 関数を定義する",
@@ -357,10 +346,9 @@ export const kotlin4Data = {
           "    // Service のインスタンスを作成する",
           "    val s = Service()",
           "    // setup を呼び出す",
-          "    s.setup(\\\"OK\\\")",
+          "    s.setup(\"OK\")",
           "    // s.config を出力する",
           "    println(s.config)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -381,9 +369,7 @@ export const kotlin4Data = {
           null,
           "\\\"\\\"",
           null,
-          "",
-          null,
-          null
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -438,16 +424,13 @@ export const kotlin4Data = {
           "    for (i in 0 until times) {",
           "        // action を呼び出す",
           "        action(i)",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// main 関数を定義する",
           "fun main() {",
           "    // repeat関数を呼び出し（引数3）",
           "    repeat(3) { println(it) }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -464,9 +447,6 @@ export const kotlin4Data = {
           null,
           null,
           "",
-          null,
-          "",
-          null,
           null
         ],
         "candidates": {
@@ -519,15 +499,13 @@ export const kotlin4Data = {
           "// typeOf関数をreifiedで定義",
           "inline fun <reified T> typeOf(): String {",
           "    // 型名を返す",
-          "    return T::class.simpleName ?: \\\"Unknown\\\"",
-          "// ブロックを閉じる",
+          "    return T::class.simpleName ?: \"Unknown\"",
           "}",
           "",
           "// main 関数を定義する",
           "fun main() {",
           "    // typeOf<String>() を出力する",
           "    println(typeOf<String>())",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -541,9 +519,7 @@ export const kotlin4Data = {
           null,
           "",
           null,
-          "",
-          null,
-          null
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -598,7 +574,6 @@ export const kotlin4Data = {
           "    println(4.isEven())",
           "    // 7.isEven() を出力する",
           "    println(7.isEven())",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -611,7 +586,6 @@ export const kotlin4Data = {
           "",
           null,
           "",
-          null,
           null
         ],
         "candidates": {
@@ -658,15 +632,13 @@ export const kotlin4Data = {
       "correctLines": [
           "// main 関数を定義する",
           "fun main() {",
-          "    // letで\\\"hello\\\"を大文字に変換",
-          "    val result = \\\"hello\\\".let {",
+          "    // letで\"hello\"を大文字に変換",
+          "    val result = \"hello\".let {",
           "        // 大文字に変換する",
           "        it.uppercase()",
-          "    // ブロックを閉じる",
           "    }",
           "    // result を出力する",
           "    println(result)",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -679,9 +651,7 @@ export const kotlin4Data = {
           null,
           null,
           null,
-          "",
-          null,
-          null
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -726,21 +696,19 @@ export const kotlin4Data = {
       "holeyCode": "// data class を定義する\\ndata class ___(var ___: ___ = \"\", var ___: ___ = ___)\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // apply でオブジェクトを設定する\\n    val ___ = ___().___ {\\n        // hostに\"localhost\"、portに8080を設定\\n        ___ = \"___\"\\n        // port を設定する\\n        ___ = ___\\n    // ブロックを閉じる\\n    ___\\n    // config を出力する\\n    ___(\"${___.___}:${___.___}\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// data class を定義する",
-          "data class Config(var host: String = \\\"\\\", var port: Int = 0)",
+          "data class Config(var host: String = \"\", var port: Int = 0)",
           "",
           "// main 関数を定義する",
           "fun main() {",
           "    // apply でオブジェクトを設定する",
           "    val config = Config().apply {",
-          "        // hostに\\\"localhost\\\"、portに8080を設定",
-          "        host = \\\"localhost\\\"",
+          "        // hostに\"localhost\"、portに8080を設定",
+          "        host = \"localhost\"",
           "        // port を設定する",
           "        port = 8080",
-          "    // ブロックを閉じる",
           "    }",
           "    // config を出力する",
-          "    println(\\\"${config.host}:${config.port}\\\")",
-          "// ブロックを閉じる",
+          "    println(\"${config.host}:${config.port}\")",
           "}"
         ],
       "lineHints": [
@@ -758,9 +726,7 @@ export const kotlin4Data = {
           null,
           null,
           null,
-          "\\\"\\\"",
-          null,
-          null
+          "\\\"\\\""
         ],
         "candidates": {
           "keywords": [
@@ -814,14 +780,12 @@ export const kotlin4Data = {
           "fun printAll(items: StringList) {",
           "    // forEach で各要素を出力する",
           "    items.forEach { println(it) }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// main 関数を定義する",
           "fun main() {",
           "    // printAll を呼び出す",
-          "    printAll(listOf(\\\"A\\\", \\\"B\\\", \\\"C\\\"))",
-          "// ブロックを閉じる",
+          "    printAll(listOf(\"A\", \"B\", \"C\"))",
           "}"
         ],
       "lineHints": [
@@ -838,9 +802,7 @@ export const kotlin4Data = {
           null,
           "",
           null,
-          "\\\"\\\"\\\"\\\"\\\"\\\"",
-          null,
-          null
+          "\\\"\\\"\\\"\\\"\\\"\\\""
         ],
         "candidates": {
           "keywords": [

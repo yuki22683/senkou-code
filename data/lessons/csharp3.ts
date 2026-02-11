@@ -147,11 +147,9 @@ export const csharp3Data = {
           "        var nums = new[] { 3, 1, 4, 1, 5 };",
           "        // OrderByでソート",
           "        var sorted = nums.OrderBy(x => x);",
-          "        // Joinで \\\",\\\" を区切り文字として結果を表示",
-          "        Console.WriteLine(string.Join(\\\",\\\", sorted));",
-          "    // ブロックを閉じる",
+          "        // Joinで \",\" を区切り文字として結果を表示",
+          "        Console.WriteLine(string.Join(\",\", sorted));",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -160,8 +158,6 @@ export const csharp3Data = {
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,
@@ -221,9 +217,7 @@ export const csharp3Data = {
           "        var result = nums.FirstOrDefault();",
           "        // resultを表示",
           "        Console.WriteLine(result);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -232,8 +226,6 @@ export const csharp3Data = {
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,
@@ -293,9 +285,7 @@ export const csharp3Data = {
           "        var allPositive = nums.All(x => x > 0);",
           "        // allPositiveを表示",
           "        Console.WriteLine(allPositive);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -304,8 +294,6 @@ export const csharp3Data = {
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,
@@ -365,9 +353,7 @@ export const csharp3Data = {
           "        var total = nums.Sum();",
           "        // totalを表示",
           "        Console.WriteLine(total);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -376,8 +362,6 @@ export const csharp3Data = {
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,
@@ -434,18 +418,15 @@ export const csharp3Data = {
           "        // switchでnを分岐しresultに代入",
           "        var result = n switch {",
           "            // 1の場合",
-          "            1 => \\\"one\\\",",
+          "            1 => \"one\",",
           "            // 2の場合",
-          "            2 => \\\"two\\\",",
+          "            2 => \"two\",",
           "            // その他の場合",
-          "            _ => \\\"other\\\"",
-          "        // ブロックを閉じる",
+          "            _ => \"other\"",
           "        };",
           "        // resultをWriteLineで出力",
           "        Console.WriteLine(result);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -470,10 +451,7 @@ export const csharp3Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -481,7 +459,7 @@ export const csharp3Data = {
             "match",
             "case"
           ],
-          "others": ["System", "Program", "void", "Main", "int", "n", "2", "result", "1", "one", "two", "_", "other", "};", "Console", "WriteLine", "}", ""]
+          "others": ["System", "Program", "void", "Main", "int", "n", "2", "result", "1", "one", "two", "_", "other", "};", "Console", "WriteLine", "}", "", "// resultをWriteLineで出力"]
         },
         "testCases": [
           {
@@ -517,15 +495,13 @@ export const csharp3Data = {
           "    static void Main() {",
           "        // Dictionaryでキーと値の辞書",
           "        var dict = new Dictionary<string, int>();",
-          "        // キー\\\"a\\\"に値を設定",
-          "        dict[\\\"a\\\"] = 1;",
-          "        // キー\\\"b\\\"に値を設定",
-          "        dict[\\\"b\\\"] = 2;",
-          "        // キー\\\"a\\\"の値を表示",
-          "        Console.WriteLine(dict[\\\"a\\\"]);",
-          "    // ブロックを閉じる",
+          "        // キー\"a\"に値を設定",
+          "        dict[\"a\"] = 1;",
+          "        // キー\"b\"に値を設定",
+          "        dict[\"b\"] = 2;",
+          "        // キー\"a\"の値を表示",
+          "        Console.WriteLine(dict[\"a\"]);",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -534,8 +510,6 @@ export const csharp3Data = {
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,
@@ -594,18 +568,14 @@ export const csharp3Data = {
           "        // 変数yを定義",
           "        var y = 20;",
           "        // $で文字列補間",
-          "        Console.WriteLine($\\\"Sum: {x + y}\\\");",
-          "    // ブロックを閉じる",
+          "        Console.WriteLine($\"Sum: {x + y}\");",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,
@@ -664,9 +634,7 @@ export const csharp3Data = {
           "        var p = new Point(10, 20);",
           "        // pを表示",
           "        Console.WriteLine(p);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -676,8 +644,6 @@ export const csharp3Data = {
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,
@@ -732,12 +698,10 @@ export const csharp3Data = {
           "        // usingで自動解放",
           "        using var writer = new StringWriter();",
           "        // 文字列を書き込む",
-          "        writer.WriteLine(\\\"こんにちは\\\");",
+          "        writer.WriteLine(\"こんにちは\");",
           "        // 書き込んだ内容を表示",
           "        Console.WriteLine(writer.ToString().Trim());",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -746,8 +710,6 @@ export const csharp3Data = {
           null,
           "",
           null,
-          null,
-          "",
           null,
           "",
           null,

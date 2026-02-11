@@ -148,7 +148,6 @@ export const javascriptData3 = {
           "async function getMessage() {",
           "  // return で値を返す",
           "  return '非同期成功！';",
-          "// ブロックを閉じる",
           "}",
           "",
           "// then でメッセージを出力",
@@ -162,8 +161,7 @@ export const javascriptData3 = {
           null,
           "",
           null,
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -172,7 +170,7 @@ export const javascriptData3 = {
             "function",
             "return"
           ],
-          "others": ["getMessage", "then", "msg", "console", "log", "非同期成功！", "}", ""]
+          "others": ["getMessage", "then", "msg", "console", "log", "非同期成功！", "}", "", "// then でメッセージを出力"]
         },
         "testCases": [
           {
@@ -203,7 +201,6 @@ export const javascriptData3 = {
           "  const value = await Promise.resolve(100);",
           "  // console.log で出力",
           "  console.log(value);",
-          "// ブロックを閉じる",
           "}",
           "",
           "// main() で関数を呼び出す",
@@ -219,8 +216,7 @@ export const javascriptData3 = {
           null,
           "",
           null,
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -230,7 +226,7 @@ export const javascriptData3 = {
             "const",
             "function"
           ],
-          "others": ["main", "value", "Promise", "resolve", "100", "console", "log", "}", ""]
+          "others": ["main", "value", "Promise", "resolve", "100", "console", "log", "}", "", "// main() で関数を呼び出す"]
         },
         "testCases": [
           {
@@ -263,7 +259,6 @@ export const javascriptData3 = {
           "Promise.all([p1, p2]).then(nums => {",
           "  // nums[0] + nums[1] で合計を計算",
           "  console.log(nums[0] + nums[1]);",
-          "// 文を実行",
           "});"
         ],
       "lineHints": [
@@ -275,8 +270,7 @@ export const javascriptData3 = {
           "",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "methods": [
@@ -317,15 +311,11 @@ export const javascriptData3 = {
           "  constructor(name) {",
           "    // this.nameにnameを代入",
           "    this.name = name;",
-          "  // ブロックを閉じる",
           "  }",
-          "  // ブロックを開始",
           "  bark() {",
           "    // テンプレートリテラルで出力",
           "    console.log(`${this.name}: ワン！`);",
-          "  // ブロックを閉じる",
           "  }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// dogにnew Dog('ポチ')を代入",
@@ -350,11 +340,7 @@ export const javascriptData3 = {
           "",
           null,
           "",
-          null,
-          null,
-          "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -363,7 +349,7 @@ export const javascriptData3 = {
             "const",
             "new"
           ],
-          "others": ["Dog", "constructor", "name", "this", "bark", "console", "log", ": ワン！", "'ポチ'", "dog", "}", ""]
+          "others": ["Dog", "constructor", "name", "this", "bark", "console", "log", ": ワン！", "'ポチ'", "dog", "}", "", "bark() {", "console.log", "dogにnew Dog('ポチ')を代入", "// bark()メソッドを呼び出し", "dog.bark();"]
         },
         "testCases": [
           {
@@ -392,14 +378,12 @@ export const javascriptData3 = {
           "class Animal {",
           "  // speakメソッドを定義",
           "  speak() { console.log('...'); }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// CatクラスがAnimalを継承",
           "class Cat extends Animal {",
           "  // speakメソッドをオーバーライド",
           "  speak() { console.log('ニャー！'); }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// catにnew Cat()を代入",
@@ -423,8 +407,6 @@ export const javascriptData3 = {
           "",
           null,
           null,
-          "",
-          null,
           ""
         ],
         "candidates": {
@@ -436,7 +418,7 @@ export const javascriptData3 = {
             "const",
             "new"
           ],
-          "others": ["Animal", "Cat", "speak", "console", "log", "'...'", "'ニャー！'", "cat", "}", ""]
+          "others": ["Animal", "Cat", "speak", "console", "log", "'...'", "'ニャー！'", "cat", "}", "", "// CatクラスがAnimalを継承", "//", "speakメソッドをオーバーライド", "// catにnew Cat()を代入", "const cat = new Cat();", "cat.speak();"]
         },
         "testCases": [
           {
@@ -467,9 +449,7 @@ export const javascriptData3 = {
           "  static multiply(a, b) {",
           "    // 2つの数を掛けた結果を返す",
           "    return a * b;",
-          "  // ブロックを閉じる",
           "  }",
-          "// ブロックを閉じる",
           "}",
           "",
           "// 3と4を掛けた結果を出力",
@@ -486,9 +466,7 @@ export const javascriptData3 = {
           "",
           null,
           "",
-          null,
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
@@ -498,7 +476,7 @@ export const javascriptData3 = {
             "class",
             "return"
           ],
-          "others": ["Calculator", "multiply", "a", "b", "console", "log", "3", "4", "}", ""]
+          "others": ["Calculator", "multiply", "a", "b", "console", "log", "3", "4", "}", "", "// 3と4を掛けた結果を出力", "console.log(Calculator.multiply(3, 4));"]
         },
         "testCases": [
           {

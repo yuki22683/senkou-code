@@ -52,7 +52,7 @@ export const go3Data = {
           "package main",
           "",
           "// パッケージをインポート",
-          "import \\\"fmt\\\"",
+          "import \"fmt\"",
           "",
           "// any で任意の型を受け入れる",
           "func First[T any](slice []T) T {",
@@ -64,7 +64,7 @@ export const go3Data = {
           "func main() {",
           "    // 10, 20, 30 でスライスを初期化",
           "    nums := []int{10, 20, 30}",
-          "    // 出力",
+          "    // 「First(nums」を出力",
           "    fmt.Println(First(nums))",
           "}"
         ],
@@ -119,11 +119,9 @@ export const go3Data = {
       ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\n// comparable で比較可能な型に制限\\nfunc IndexOf[T comparable](slice []T, v T) int {\\n    // range でスライスをイテレート\\n    for i, x := range slice {\\n        // == で比較\\n        if x == v {\\n            return i\\n        }\\n    }\\n    return -1\\n}\\n\\nfunc main() {\\n    // \"a\", \"b\", \"c\" でスライスを初期化\\n    names := []string{\"a\", \"b\", \"c\"}\\n    fmt.Println(IndexOf(names, \"b\"))\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// パッケージをインポート\\n___ \\\"___\\\"\\n\\n// comparable で比較可能な型に制限\\nfunc ___[___ ___](___ []___, ___ ___) ___ {\\n    // range でスライスをイテレート\\n    for ___, ___ := range ___ {\\n        // == で比較\\n        if ___ == ___ {\\n            // iを返す\\n            return ___\\n        }\\n    }\\n    // -1を返す\\n    return -___\\n}\\n\\n// main関数を定義\\nfunc ___() {\\n    // \\\"a\\\", \\\"b\\\", \\\"c\\\" でスライスを初期化\\n    ___ := []___{\\\"\\\",  \\\"___\\\", \\\"___\\\"}\\n    // パッケージをインポート\\n    ___.___(___(___, \\\"___\\\"))\\n}",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
           "",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
+          "import \"fmt\"",
           "",
           "// comparable で比較可能な型に制限",
           "func IndexOf[T comparable](slice []T, v T) int {",
@@ -131,20 +129,16 @@ export const go3Data = {
           "    for i, x := range slice {",
           "        // == で比較",
           "        if x == v {",
-          "            // 値を返す",
           "            return i",
           "        }",
           "    }",
-          "    // 値を返す",
           "    return -1",
           "}",
           "",
-          "// main関数を定義",
           "func main() {",
-          "    // \\\"a\\\", \\\"b\\\", \\\"c\\\" でスライスを初期化",
-          "    names := []string{\\\"a\\\", \\\"b\\\", \\\"c\\\"}",
-          "    // パッケージをインポート",
-          "    fmt.Println(IndexOf(names, \\\"b\\\"))",
+          "    // \"a\", \"b\", \"c\" でスライスを初期化",
+          "    names := []string{\"a\", \"b\", \"c\"}",
+          "    fmt.Println(IndexOf(names, \"b\"))",
           "}"
         ],
       "lineHints": [
@@ -168,12 +162,6 @@ export const go3Data = {
           "",
           null,
           null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null
         ],
         "candidates": {
@@ -182,7 +170,7 @@ export const go3Data = {
             "any",
             "ordered"
           ],
-          "others": ["main", "import", "fmt", "IndexOf", "T", "slice", "v", "int", "i", "x", "1", "names", "string", "a", "b", "c", "Println"]
+          "others": ["main", "import", "fmt", "IndexOf", "T", "slice", "v", "int", "i", "x", "1", "names", "string", "a", "b", "c", "Println", "//", "omparable で比較可能な型に制限", "or i, x := range slice {", "if x == v {", "\"b\", \"c\" でスライスを初期化"]
         },
         "testCases": [
           {
@@ -206,23 +194,17 @@ export const go3Data = {
       ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    // numsにmake([]int, 3)を代入\\n    nums := make([]int, 3)\\n    // インデックス 0 に 10 を代入\\n    nums[0] = 10\\n    nums[1] = 20\\n    nums[2] = 30\\n    fmt.Println(nums)\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// パッケージをインポート\\n___ \\\"___\\\"\\n\\n// main関数を定義\\nfunc ___() {\\n    // numsにmake([]int, 3)を代入\\n    ___ := ___([]___, ___)\\n    // インデックス 0 に 10 を代入\\n    ___[___] = ___\\n    // 値を代入\\n    ___[___] = ___\\n    // 値を代入\\n    ___[___] = ___\\n    // 出力\\n    ___.___(___\\n}",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
           "",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
+          "import \"fmt\"",
           "",
-          "// main関数を定義",
           "func main() {",
           "    // numsにmake([]int, 3)を代入",
           "    nums := make([]int, 3)",
           "    // インデックス 0 に 10 を代入",
           "    nums[0] = 10",
-          "    // 値を代入",
           "    nums[1] = 20",
-          "    // 値を代入",
           "    nums[2] = 30",
-          "    // 出力",
           "    fmt.Println(nums)",
           "}"
         ],
@@ -239,12 +221,6 @@ export const go3Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null
         ],
         "candidates": {
@@ -253,7 +229,7 @@ export const go3Data = {
             "new",
             "create"
           ],
-          "others": ["main", "import", "fmt", "nums", "int", "3", "0", "10", "1", "20", "2", "30", "Println", "nums)"]
+          "others": ["main", "import", "fmt", "nums", "int", "3", "0", "10", "1", "20", "2", "30", "Println", "nums)", "func", "ain() {", "/ インデックス 0 に 10 を代入", "nums[1]", "fmt.Println(nums)"]
         },
         "testCases": [
           {
@@ -277,21 +253,16 @@ export const go3Data = {
       ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    // スライスを初期化\\n    a := []int{1, 2}\\n    b := []int{3, 4}\\n    // ... でスライスを展開\\n    c := append(a, b...)\\n    fmt.Println(c)\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// パッケージをインポート\\n___ \\\"___\\\"\\n\\n// main関数を定義\\nfunc ___() {\\n    // スライスを初期化\\n    ___ := []___{___, ___}\\n    // 変数を宣言\\n    ___ := []___{___, ___}\\n    // ... でスライスを展開\\n    ___ := ___(___, ___...)\\n    // 出力\\n    ___.___(___\\n}",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
           "",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
+          "import \"fmt\"",
           "",
-          "// main関数を定義",
           "func main() {",
           "    // スライスを初期化",
           "    a := []int{1, 2}",
-          "    // 変数を宣言",
           "    b := []int{3, 4}",
           "    // ... でスライスを展開",
           "    c := append(a, b...)",
-          "    // 出力",
           "    fmt.Println(c)",
           "}"
         ],
@@ -307,12 +278,7 @@ export const go3Data = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null
+          ""
         ],
         "candidates": {
           "operators": [
@@ -320,7 +286,7 @@ export const go3Data = {
             "..",
             ","
           ],
-          "others": ["main", "import", "fmt", "a", "b", "c", "int", "1", "2", "3", "4", "append", "Println", "c)"]
+          "others": ["main", "import", "fmt", "a", "b", "c", "int", "1", "2", "3", "4", "append", "Println", "c)", "func", "ain() {", ":= []int{3, 4}", "pend(a, b...)"]
         },
         "testCases": [
           {
@@ -344,13 +310,10 @@ export const go3Data = {
       ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    // コピー元のスライス (10, 20, 30)\\n    src := []int{10, 20, 30}\\n    // dstにmake([]int, len(src))を代入\\n    dst := make([]int, len(src))\\n    // copy でスライスをコピー\\n    copy(dst, src)\\n    fmt.Println(dst)\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// パッケージをインポート\\n___ \\\"___\\\"\\n\\n// main関数を定義\\nfunc ___() {\\n    // コピー元のスライス (10, 20, 30)\\n    ___ := []___{___, ___, ___}\\n    // dstにmake([]int, len(src))を代入\\n    ___ := ___([]___, ___(___))\\n    // copy でスライスをコピー\\n    ___(___, ___)\\n    // 出力\\n    ___.___(___\\n}",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
           "",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
+          "import \"fmt\"",
           "",
-          "// main関数を定義",
           "func main() {",
           "    // コピー元のスライス (10, 20, 30)",
           "    src := []int{10, 20, 30}",
@@ -358,7 +321,6 @@ export const go3Data = {
           "    dst := make([]int, len(src))",
           "    // copy でスライスをコピー",
           "    copy(dst, src)",
-          "    // 出力",
           "    fmt.Println(dst)",
           "}"
         ],
@@ -375,10 +337,6 @@ export const go3Data = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          "",
           null
         ],
         "candidates": {
@@ -387,7 +345,7 @@ export const go3Data = {
             "clone",
             "dup"
           ],
-          "others": ["main", "import", "fmt", "src", "dst", "int", "10", "20", "30", "make", "len", "Println", "dst)"]
+          "others": ["main", "import", "fmt", "src", "dst", "int", "10", "20", "30", "make", "len", "Println", "dst)", "func", "ain() {", "/ dstにmake", "//", "でスライスをコピー", "fmt.Println(dst)"]
         },
         "testCases": [
           {
@@ -411,32 +369,23 @@ export const go3Data = {
       ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    // バッファ付きチャネルを作成\\n    ch1 := make(chan int, 1)\\n    ch2 := make(chan int, 1)\\n    // チャネルに値を送信\\n    ch1 <- 10\\n    \\n    // select で複数チャネルを待機\\n    select {\\n    case v := <-ch1:\\n        fmt.Println(v)\\n    case v := <-ch2:\\n        fmt.Println(v)\\n    }\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// パッケージをインポート\\n___ \\\"___\\\"\\n\\n// main関数を定義\\nfunc ___() {\\n    // バッファ付きチャネルを作成\\n    ___ := ___(___ ___, ___)\\n    // 変数を宣言\\n    ___ := ___(___ ___, ___)\\n    // チャネルに値を送信\\n    ___ <- ___\\n    \\n    // select で複数チャネルを待機\\n    ___ ___\\n    // 変数を宣言\\n    case ___ := <-___:\\n        // 出力\\n        ___.___(___\\n    // 変数を宣言\\n    case ___ := <-___:\\n        // 出力\\n        ___.___(___\\n    // ブロックを閉じる\\n    ___\\n}",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
           "",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
+          "import \"fmt\"",
           "",
-          "// main関数を定義",
           "func main() {",
           "    // バッファ付きチャネルを作成",
           "    ch1 := make(chan int, 1)",
-          "    // 変数を宣言",
           "    ch2 := make(chan int, 1)",
           "    // チャネルに値を送信",
           "    ch1 <- 10",
           "    ",
           "    // select で複数チャネルを待機",
           "    select {",
-          "    // 変数を宣言",
           "    case v := <-ch1:",
-          "        // 出力",
           "        fmt.Println(v)",
-          "    // 変数を宣言",
           "    case v := <-ch2:",
-          "        // 出力",
           "        fmt.Println(v)",
-          "    // ブロックを閉じる",
           "    }",
           "}"
         ],
@@ -459,16 +408,7 @@ export const go3Data = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -476,7 +416,7 @@ export const go3Data = {
             "switch",
             "case"
           ],
-          "others": ["main", "import", "fmt", "ch1", "ch2", "make", "chan", "int", "1", "10", "v", "Println", "v)", "{", "}"]
+          "others": ["main", "import", "fmt", "ch1", "ch2", "make", "chan", "int", "1", "10", "v", "Println", "v)", "{", "}", "func", "ain() {", "h2 := make", "//", "ect で複数チャネルを待機", "= <-ch1:", "fmt.Println(v)"]
         },
         "testCases": [
           {
@@ -500,19 +440,16 @@ export const go3Data = {
       ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    // マップを初期化 (math: 90, english: 85)\\n    scores := map[string]int{\"math\": 90, \"english\": 85}\\n    // range で辞書をイテレート\\n    for k, v := range scores {\\n        // 「k, v」を出力\\n        fmt.Println(k, v)\\n    }\\n}", "holeyCode": "// パッケージを宣言\\npackage ___\\n\\n// ライブラリを読み込む\\n___ \\\"___\\\"\\n\\n// main関数を定義\\nfunc ___() {\\n    // マップを初期化 (math: 90, english: 85)\\n    ___ := ___[___]___{\\\"___\\\": ___, \\\"___\\\": ___}\\n    // range で辞書をイテレート\\n    for ___, ___ := range ___ {\\n        // 出力\\n        ___.___(___, ___)\\n    }\\n}",
       "correctLines": [
-          "// パッケージを宣言",
           "package main",
           "",
-          "// ライブラリを読み込む",
           "import \"fmt\"",
           "",
-          "// main関数を定義",
           "func main() {",
           "    // マップを初期化 (math: 90, english: 85)",
           "    scores := map[string]int{\"math\": 90, \"english\": 85}",
           "    // range で辞書をイテレート",
           "    for k, v := range scores {",
-          "        // 出力",
+          "        // 「k, v」を出力",
           "        fmt.Println(k, v)",
           "    }",
           "}"
@@ -530,9 +467,6 @@ export const go3Data = {
           "scoresにstring-intのマップを代入します。",
           null,
           "for-rangeでscoresをイテレートします。",
-          null,
-          "fmt.Printlnでキーと値を出力します。",
-          null,
           null
         ],
         "candidates": {
@@ -541,7 +475,7 @@ export const go3Data = {
             "in",
             "each"
           ],
-          "others": ["main", "import", "fmt", "scores", "map", "string", "int", "math", "90", "english", "85", "k", "v", "Printf", "%s", "%d", "%d\\n\", k, v)", "}", "Println"]
+          "others": ["main", "import", "fmt", "scores", "map", "string", "int", "math", "90", "english", "85", "k", "v", "Printf", "%s", "%d", "%d\\n\", k, v)", "}", "Println", "func", "ain() {", "/ range で辞書をイテレート", "// 「k, v」を出力"]
         },
         "testCases": [
           {
@@ -565,20 +499,16 @@ export const go3Data = {
       ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\n// Age型を定義\\ntype Age int\\n\\nfunc main() {\\n    // ageに25を代入\\n    var age Age = 25\\n    fmt.Println(age)\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// パッケージをインポート\\n___ \\\"___\\\"\\n\\n// Age型を定義\\ntype ___ ___\\n\\n// main関数を定義\\nfunc ___() {\\n    // ageに25を代入\\n    var ___ ___ = ___\\n    // 出力\\n    ___.___(___\\n}",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
           "",
-          "// パッケージをインポート",
-          "import \\\"fmt\\\"",
+          "import \"fmt\"",
           "",
           "// Age型を定義",
           "type Age int",
           "",
-          "// main関数を定義",
           "func main() {",
           "    // ageに25を代入",
           "    var age Age = 25",
-          "    // 出力",
           "    fmt.Println(age)",
           "}"
         ],
@@ -594,10 +524,6 @@ export const go3Data = {
           null,
           null,
           "",
-          null,
-          "",
-          null,
-          "",
           null
         ],
         "candidates": {
@@ -606,7 +532,7 @@ export const go3Data = {
             "var",
             "const"
           ],
-          "others": ["main", "import", "fmt", "Age", "int", "age", "25", "Println", "age)"]
+          "others": ["main", "import", "fmt", "Age", "int", "age", "25", "Println", "age)", "//", "ge型を定義", "main()", "{", "mt.Println"]
         },
         "testCases": [
           {
@@ -630,31 +556,23 @@ export const go3Data = {
       ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\ntype Base struct {\\n    Value int\\n}\\n\\ntype Extended struct {\\n    // Base を埋め込む\\n    Base\\n    Extra string\\n}\\n\\nfunc main() {\\n    // 埋め込み構造体を初期化\\n    e := Extended{Base: Base{Value: 100}, Extra: \"テスト\"}\\n    fmt.Println(e.Value)\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// パッケージをインポート\\n___ \\\"___\\\"\\n\\n// ブロックを開始\\ntype ___ struct {\\n    // フィールドを定義\\n    ___ ___\\n}\\n\\n// ブロックを開始\\ntype ___ struct {\\n    // Base を埋め込む\\n    ___\\n    // フィールドを定義\\n    ___ ___\\n}\\n\\n// main関数を定義\\nfunc ___() {\\n    // 埋め込み構造体を初期化\\n    ___ := ___{___: ___{___: ___}, ___: \\\"___\\\"}\\n    // 出力\\n    ___.___(___.___)\\n}",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
           "",
-          "// パッケージをインポート",
-          "import \\\\\\\"fmt\\\\\\\"",
+          "import \"fmt\"",
           "",
-          "// ブロックを開始",
           "type Base struct {",
-          "    // フィールドを定義",
           "    Value int",
           "}",
           "",
-          "// ブロックを開始",
           "type Extended struct {",
           "    // Base を埋め込む",
           "    Base",
-          "    // フィールドを定義",
           "    Extra string",
           "}",
           "",
-          "// main関数を定義",
           "func main() {",
           "    // 埋め込み構造体を初期化",
-          "    e := Extended{Base: Base{Value: 100}, Extra: \\\\\\\"テスト\\\\\\\"}",
-          "    // 出力",
+          "    e := Extended{Base: Base{Value: 100}, Extra: \"テスト\"}",
           "    fmt.Println(e.Value)",
           "}"
         ],
@@ -677,14 +595,6 @@ export const go3Data = {
           "",
           null,
           "",
-          null,
-          null,
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
           null
         ],
         "candidates": {
@@ -693,7 +603,7 @@ export const go3Data = {
             "*Base",
             "base Base"
           ],
-          "others": ["main", "import", "fmt", "struct", "Value", "int", "Extended", "Extra", "string", "e", "100", "テスト", "Println"]
+          "others": ["main", "import", "fmt", "struct", "Value", "int", "Extended", "Extra", "string", "e", "100", "テスト", "Println", "type", "ase struct {", "//", "Base を埋め込む", "// 埋め込み構造体を初期化", "fmt.Println(e.Value)"]
         },
         "testCases": [
           {
@@ -717,25 +627,19 @@ export const go3Data = {
       ],
       "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    defer func() {\\n        // recover でパニックを捕捉\\n        if r := recover(); r != nil {\\n            fmt.Println(\"caught\")\\n        }\\n    }()\\n    // panic でパニックを発生\\n    panic(\"エラー\")\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// パッケージをインポート\\n___ \\\"___\\\"\\n\\n// main関数を定義\\nfunc ___() {\\n    // defer文\\n    defer ___() {\\n        // recover でパニックを捕捉\\n        if ___ := ___(); ___ != ___ {\\n            // \\\"\\\"\\n            ___.___(\\\"___\\\")\\n        }\\n    // クロージャを閉じて実行\\n    ___()\\n    // panic でパニックを発生\\n    ___(\\\"___\\\")\\n}",
       "correctLines": [
-          "// モジュールを宣言",
           "package main",
           "",
-          "// パッケージをインポート",
-          "import \\\\\\\"fmt\\\\\\\"",
+          "import \"fmt\"",
           "",
-          "// main関数を定義",
           "func main() {",
-          "    // defer文",
           "    defer func() {",
           "        // recover でパニックを捕捉",
           "        if r := recover(); r != nil {",
-          "            // \\\\\\\"\\\\\\\"",
-          "            fmt.Println(\\\\\\\"caught\\\\\\\")",
+          "            fmt.Println(\"caught\")",
           "        }",
-          "    // クロージャを閉じて実行",
           "    }()",
           "    // panic でパニックを発生",
-          "    panic(\\\\\\\"エラー\\\\\\\")",
+          "    panic(\"エラー\")",
           "}"
         ],
       "lineHints": [
@@ -752,13 +656,7 @@ export const go3Data = {
           null,
           "",
           null,
-          "\\\\\\\"\\\\\\\"",
-          null,
-          null,
-          "",
-          null,
-          "\\\\\\\"\\\\\\\"",
-          null
+          "\\\\\\\"\\\\\\\""
         ],
         "candidates": {
           "functions": [
@@ -766,7 +664,7 @@ export const go3Data = {
             "catch",
             "handle"
           ],
-          "others": ["main", "import", "fmt", "func", "r", "nil", "Println", "caught", "panic", "エラー", "}"]
+          "others": ["main", "import", "fmt", "func", "r", "nil", "Println", "caught", "panic", "エラー", "}", "ain() {", "if r := recover", "c", "ックを発生"]
         },
         "testCases": [
           {

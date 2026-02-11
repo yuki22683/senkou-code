@@ -115,26 +115,18 @@ export const javaData4 = {
       "correctLines": [
           "// extends で型の上限を Number に制限する",
           "class Calculator<T extends Number> {",
-          "    // 文を実行",
           "    private T value;",
-          "    // 値を代入",
           "    public Calculator(T v) { value = v; }",
-          "    // ゲッターを定義",
           "    public double getDouble() { return value.doubleValue(); }",
-          "// ブロックを閉じる",
           "}",
           "",
-          "// クラスを定義",
           "public class Main {",
-          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // calcにnew Calculator<>(42)を代入",
           "        Calculator<Integer> calc = new Calculator<>(42);",
           "        // getDouble メソッドを呼び出す",
           "        System.out.println(calc.getDouble());",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -152,19 +144,11 @@ export const javaData4 = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          null,
-          null,
-          null
+          ""
         ],
         "candidates": {
           "keywords": [],
-          "others": ["Calculator", "T", "Number", "value", "v", "double", "getDouble", "doubleValue", ")", "}", "", "Main", "main", "String", "args", "Integer", "calc", "new", "42", "System", "out", "println"]
+          "others": ["Calculator", "T", "Number", "value", "v", "double", "getDouble", "doubleValue", ")", "}", "", "Main", "main", "String", "args", "Integer", "calc", "new", "42", "System", "out", "println", "alculator(T", "v) { value = v", "s", "Main {", "// calcにnew Calculator<>(42)を代入", "Calculator<Integer> calc = new Calculator<>(42);", "m.out.println(calc.getDouble());"]
         },
         "testCases": [
           {
@@ -188,30 +172,22 @@ export const javaData4 = {
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    // ? で任意の型を表すワイルドカード\\n    public static void printAll(List<?> list) {\\n        for (Object item : list) {\\n            // println で出力する\\n            System.out.println(item);\\n        }\\n    }\\n    public static void main(String[] args) {\\n        // namesに[\"A\", \"B\"]を代入\\n        List<String> names = Arrays.asList(\"A\", \"B\");\\n        // printAll メソッドを呼び出す\\n        printAll(names);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // ? で任意の型を表すワイルドカード\\n    public static void ___(___<___> ___) {\\n        // forループ\\n        for (___ ___ : ___) {\\n            // println で出力する\\n            ___.___.___(___)\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // namesに[\\\"A\\\", \\\"B\\\"]を代入\\n        ___<___> ___ = ___.___(\\\"___\\\", \\\"___\\\");\\n        // printAll メソッドを呼び出す\\n        ___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "import java.util.*;",
           "",
-          "// クラスを定義",
           "public class Main {",
           "    // ? で任意の型を表すワイルドカード",
           "    public static void printAll(List<?> list) {",
-          "        // forループ",
           "        for (Object item : list) {",
           "            // println で出力する",
           "            System.out.println(item);",
-          "        // ブロックを閉じる",
           "        }",
-          "    // ブロックを閉じる",
           "    }",
-          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
-          "        // namesに[\\\"A\\\", \\\"B\\\"]を代入",
-          "        List<String> names = Arrays.asList(\\\"A\\\", \\\"B\\\");",
+          "        // namesに[\"A\", \"B\"]を代入",
+          "        List<String> names = Arrays.asList(\"A\", \"B\");",
           "        // printAll メソッドを呼び出す",
           "        printAll(names);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -231,19 +207,11 @@ export const javaData4 = {
           null,
           null,
           null,
-          "",
-          null,
-          "\\\"\\\"\\\"\\\"",
-          null,
-          "",
-          null,
-          null,
-          null,
-          null
+          ""
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Main", "printAll", "List", "?", "list", "Object", "item", "System", "out", "println", ";", "}", "", "main", "String", "args", "names", "Arrays", "asList", "A", "B", "*;"]
+          "others": ["java", "util", "*", "Main", "printAll", "List", "?", "list", "Object", "item", "System", "out", "println", ";", "}", "", "main", "String", "args", "names", "Arrays", "asList", "A", "B", "*;", "public class Main {", "atic", "で出力する", "tatic void main(String[] args) {", "List<String> names = Arrays.asList(\"A\", \"B\");", "printAll(names);"]
         },
         "testCases": [
           {
@@ -267,24 +235,19 @@ export const javaData4 = {
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // scoresにnew HashMap<>()を代入\\n        Map<String, Integer> scores = new HashMap<>();\\n        // put でキーと値を追加する\\n        scores.put(\"Math\", 90);\\n        // put でキーと値を追加する\\n        scores.put(\"English\", 85);\\n        // get で値を取得する\\n        System.out.println(scores.get(\"Math\"));\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // scoresにnew HashMap<>()を代入\\n        ___<___, ___> ___ = new ___<>();\\n        // put でキーと値を追加する\\n        ___.___(\\\"___\\\", ___);\\n        // put でキーと値を追加する\\n        ___.___(\\\"___\\\", ___);\\n        // get で値を取得する\\n        ___.___.___(___.___( \\\"___\\\"));\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "import java.util.*;",
           "",
-          "// クラスを定義",
           "public class Main {",
-          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // scoresにnew HashMap<>()を代入",
           "        Map<String, Integer> scores = new HashMap<>();",
           "        // put でキーと値を追加する",
-          "        scores.put(\\\"Math\\\", 90);",
+          "        scores.put(\"Math\", 90);",
           "        // put でキーと値を追加する",
-          "        scores.put(\\\"English\\\", 85);",
+          "        scores.put(\"English\", 85);",
           "        // get で値を取得する",
-          "        System.out.println(scores.get(\\\"Math\\\"));",
-          "    // ブロックを閉じる",
+          "        System.out.println(scores.get(\"Math\"));",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -301,16 +264,11 @@ export const javaData4 = {
           "\\\"\\\"",
           null,
           "\\\"\\\"",
-          null,
-          "\\\"\\\"",
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Main", "main", "String", "args", "Map", "Integer", "scores", "new", "HashMap", "put", "Math", "90", "English", "85", "System", "out", "println", "get", "}", "", "*;", "get(\"Math\"));", "ath"]
+          "others": ["java", "util", "*", "Main", "main", "String", "args", "Map", "Integer", "scores", "new", "HashMap", "put", "Math", "90", "English", "85", "System", "out", "println", "get", "}", "", "*;", "get(\"Math\"));", "ath", "public class Main {", "oresにnew", "する", "// put でキーと値を追加する", "// get で値を取得する"]
         },
         "testCases": [
           {
@@ -334,28 +292,22 @@ export const javaData4 = {
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // mapにnew HashMap<>()を代入\\n        Map<String, Integer> map = new HashMap<>();\\n        // put でキーと値を追加する\\n        map.put(\"A\", 1);\\n        // put でキーと値を追加する\\n        map.put(\"B\", 2);\\n        // entrySet でエントリを取得する\\n        for (Map.Entry<String, Integer> e : map.entrySet()) {\\n            // getKey でキーを取得する\\n            System.out.println(e.getKey());\\n        }\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // mapにnew HashMap<>()を代入\\n        ___<___, ___> ___ = new ___<>();\\n        // put でキーと値を追加する\\n        ___.___(\\\"___\\\", ___);\\n        // put でキーと値を追加する\\n        ___.___(\\\"___\\\", ___);\\n        // entrySet でエントリを取得する\\n        for (___.___ <___, ___> ___ : ___.___()) {\\n            // getKey でキーを取得する\\n            ___.___.___(___.___());\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "import java.util.*;",
           "",
-          "// クラスを定義",
           "public class Main {",
-          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // mapにnew HashMap<>()を代入",
           "        Map<String, Integer> map = new HashMap<>();",
           "        // put でキーと値を追加する",
-          "        map.put(\\\"A\\\", 1);",
+          "        map.put(\"A\", 1);",
           "        // put でキーと値を追加する",
-          "        map.put(\\\"B\\\", 2);",
+          "        map.put(\"B\", 2);",
           "        // entrySet でエントリを取得する",
           "        for (Map.Entry<String, Integer> e : map.entrySet()) {",
           "            // getKey でキーを取得する",
           "            System.out.println(e.getKey());",
-          "        // ブロックを閉じる",
           "        }",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -375,17 +327,11 @@ export const javaData4 = {
           null,
           "",
           null,
-          "",
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          ""
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Main", "main", "String", "args", "Map", "Integer", "map", "new", "HashMap", "put", "A", "1", "B", "2", "Entry", "e", "entrySet", "System", "out", "println", "getKey", "}", "", "*;", "Entry<String,", "nteger> e : map.entrySet()) {"]
+          "others": ["java", "util", "*", "Main", "main", "String", "args", "Map", "Integer", "map", "new", "HashMap", "put", "A", "1", "B", "2", "Entry", "e", "entrySet", "System", "out", "println", "getKey", "}", "", "*;", "Entry<String,", "nteger> e : map.entrySet()) {", "public class Main {", "pにnew", "する", "// put でキーと値を追加する", "// entrySet でエントリを取得する", "// getKey でキーを取得する"]
         },
         "testCases": [
           {
@@ -409,22 +355,17 @@ export const javaData4 = {
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // wordsに[\"猫\", \"a\", \"elephant\"]を代入\\n        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));\\n        // comparing でプロパティを基準に比較する\\n        words.sort(Comparator.comparing(String::length));\\n        // println で出力する\\n        System.out.println(words);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // wordsに[\\\"猫\\\", \\\"a\\\", \\\"elephant\\\"]を代入\\n        ___<___> ___ = new ___<>(___.___(\\\"___\\\", \\\"___\\\", \\\"___\\\"));\\n        // comparing でプロパティを基準に比較する\\n        ___.___(___.___(___::___));\\n        // println で出力する\\n        ___.___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "import java.util.*;",
           "",
-          "// クラスを定義",
           "public class Main {",
-          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
-          "        // wordsに[\\\"猫\\\", \\\"a\\\", \\\"elephant\\\"]を代入",
-          "        List<String> words = new ArrayList<>(Arrays.asList(\\\"猫\\\", \\\"a\\\", \\\"elephant\\\"));",
+          "        // wordsに[\"猫\", \"a\", \"elephant\"]を代入",
+          "        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));",
           "        // comparing でプロパティを基準に比較する",
           "        words.sort(Comparator.comparing(String::length));",
           "        // println で出力する",
           "        System.out.println(words);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -439,16 +380,11 @@ export const javaData4 = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Main", "main", "String", "args", "List", "words", "new", "ArrayList", "Arrays", "asList", "猫", "a", "elephant", "sort", "Comparator", "comparing", "length", "System", "out", "println", ";", "}", "", "*;"]
+          "others": ["java", "util", "*", "Main", "main", "String", "args", "List", "words", "new", "ArrayList", "Arrays", "asList", "猫", "a", "elephant", "sort", "Comparator", "comparing", "length", "System", "out", "println", ";", "}", "", "*;", "public class Main {", "rdsに[\"猫\",", "ロパティを基準に比較する", "// println で出力する"]
         },
         "testCases": [
           {
@@ -472,27 +408,19 @@ export const javaData4 = {
       ],
       "correctCode": "import java.util.*;\\n\\n// Comparable を実装して自然順序を定義する\\nclass Score implements Comparable<Score> {\\n    int value;\\n    Score(int v) { value = v; }\\n    public int compareTo(Score other) {\\n        // 自分と相手のスコアを比較してソート順を決める\\n        return this.value - other.value;\\n    }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // scoresに[Score(80), Score(60)]を代入\\n        List<Score> scores = Arrays.asList(new Score(80), new Score(60));\\n        // sort でソートする\\n        Collections.sort(scores);\\n        // get で要素を取得する\\n        System.out.println(scores.get(0).value);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Comparable を実装して自然順序を定義する\\nclass ___ implements ___<___> {\\n    // 変数を宣言\\n    ___ ___;\\n    // 値を代入\\n    ___(___ ___) { ___ = ___; }\\n    // compareToメソッドを定義\\n    public ___ ___(___ ___) {\\n        // 自分と相手のスコアを比較してソート順を決める\\n        return this.___ - ___.___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // scoresに[Score(80), Score(60)]を代入\\n        ___<___> ___ = ___.___(new ___(___), new ___(___));\\n        // sort でソートする\\n        ___.___(___);\\n        // get で要素を取得する\\n        ___.___.___(___.___(___).___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "import java.util.*;",
           "",
           "// Comparable を実装して自然順序を定義する",
           "class Score implements Comparable<Score> {",
-          "    // 変数を宣言",
           "    int value;",
-          "    // 値を代入",
           "    Score(int v) { value = v; }",
-          "    // compareToメソッドを定義",
           "    public int compareTo(Score other) {",
           "        // 自分と相手のスコアを比較してソート順を決める",
           "        return this.value - other.value;",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}",
           "",
-          "// クラスを定義",
           "public class Main {",
-          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // scoresに[Score(80), Score(60)]を代入",
           "        List<Score> scores = Arrays.asList(new Score(80), new Score(60));",
@@ -500,9 +428,7 @@ export const javaData4 = {
           "        Collections.sort(scores);",
           "        // get で要素を取得する",
           "        System.out.println(scores.get(0).value);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -527,21 +453,11 @@ export const javaData4 = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          "",
-          null,
-          null,
-          null,
-          null
+          ""
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Score", "Comparable", "int", "value", "v", "compareTo", "other", "this", "}", "", "Main", "main", "String", "args", "List", "scores", "Arrays", "asList", "new", "80", "60", "Collections", "sort", "System", "out", "println", "get", "0", ";", "*;", "ther"]
+          "others": ["java", "util", "*", "Score", "Comparable", "int", "value", "v", "compareTo", "other", "this", "}", "", "Main", "main", "String", "args", "List", "scores", "Arrays", "asList", "new", "80", "60", "Collections", "sort", "System", "out", "println", "get", "0", ";", "*;", "ther", "// Comparable を実装して自然順序を定義する", "t", "public", "int compareTo(Score other) {", "return this.value - other.value;", "// scoresに[Score(80), Score(60)]を代入", "// sort でソートする", "Collections.sort(scores);", "m.out.println(scores.get(0).value);"]
         },
         "testCases": [
           {
@@ -567,22 +483,16 @@ export const javaData4 = {
       "correctLines": [
           "// Day列挙型を定義",
           "enum Day {",
-          "    // 曜日の列挙値",
           "    MON, TUE, WED, THU, FRI, SAT, SUN",
-          "// ブロックを閉じる",
           "}",
           "",
-          "// クラスを定義",
           "public class Main {",
-          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // Day.MON で列挙値を取得する",
           "        Day today = Day.MON;",
           "        // println で出力する",
           "        System.out.println(today);",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -598,17 +508,11 @@ export const javaData4 = {
           null,
           "",
           null,
-          "",
-          null,
-          "",
-          null,
-          null,
-          null,
-          null
+          ""
         ],
         "candidates": {
           "keywords": [],
-          "others": ["Day", "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN", "}", "", "Main", "main", "String", "args", "today", "System", "out", "println", ";"]
+          "others": ["Day", "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN", "}", "", "Main", "main", "String", "args", "today", "System", "out", "println", ";", "public class Main {", "public static void main(String[] args) {", "oday", "tln", "today);"]
         },
         "testCases": [
           {
@@ -632,24 +536,19 @@ export const javaData4 = {
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // queueにnew LinkedList<>()を代入\\n        Queue<String> queue = new LinkedList<>();\\n        // offer でキューに要素を追加する\\n        queue.offer(\"First\");\\n        // offer でキューに要素を追加する\\n        queue.offer(\"Second\");\\n        // poll で要素を取り出す\\n        System.out.println(queue.poll());\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // queueにnew LinkedList<>()を代入\\n        ___<___> ___ = new ___<>();\\n        // offer でキューに要素を追加する\\n        ___.___(\\\"___\\\");\\n        // offer でキューに要素を追加する\\n        ___.___(\\\"___\\\");\\n        // poll で要素を取り出す\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "import java.util.*;",
           "",
-          "// クラスを定義",
           "public class Main {",
-          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // queueにnew LinkedList<>()を代入",
           "        Queue<String> queue = new LinkedList<>();",
           "        // offer でキューに要素を追加する",
-          "        queue.offer(\\\"First\\\");",
+          "        queue.offer(\"First\");",
           "        // offer でキューに要素を追加する",
-          "        queue.offer(\\\"Second\\\");",
+          "        queue.offer(\"Second\");",
           "        // poll で要素を取り出す",
           "        System.out.println(queue.poll());",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -666,16 +565,11 @@ export const javaData4 = {
           "\\\"\\\"",
           null,
           "\\\"\\\"",
-          null,
-          "",
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Main", "main", "String", "args", "Queue", "queue", "new", "LinkedList", "offer", "First", "Second", "System", "out", "println", "poll", "}", "", "*;"]
+          "others": ["java", "util", "*", "Main", "main", "String", "args", "Queue", "queue", "new", "LinkedList", "offer", "First", "Second", "System", "out", "println", "poll", "}", "", "*;", "public class Main {", "eueにnew", "素を追加する", "// offer でキューに要素を追加する", "// poll で要素を取り出す"]
         },
         "testCases": [
           {
@@ -699,12 +593,9 @@ export const javaData4 = {
       ],
       "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // stackにnew ArrayDeque<>()を代入\\n        Deque<Integer> stack = new ArrayDeque<>();\\n        // push でスタックに積む\\n        stack.push(10);\\n        // push でスタックに積む\\n        stack.push(20);\\n        // pop でスタックから取り出す\\n        System.out.println(stack.pop());\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // stackにnew ArrayDeque<>()を代入\\n        ___<___> ___ = new ___<>();\\n        // push でスタックに積む\\n        ___.___(___);\\n        // push でスタックに積む\\n        ___.___(___);\\n        // pop でスタックから取り出す\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
           "import java.util.*;",
           "",
-          "// クラスを定義",
           "public class Main {",
-          "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
           "        // stackにnew ArrayDeque<>()を代入",
           "        Deque<Integer> stack = new ArrayDeque<>();",
@@ -714,9 +605,7 @@ export const javaData4 = {
           "        stack.push(20);",
           "        // pop でスタックから取り出す",
           "        System.out.println(stack.pop());",
-          "    // ブロックを閉じる",
           "    }",
-          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -733,16 +622,11 @@ export const javaData4 = {
           "",
           null,
           "",
-          null,
-          "",
-          null,
-          null,
-          null,
           null
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Main", "main", "String", "args", "Deque", "Integer", "stack", "new", "ArrayDeque", "push", "10", "20", "System", "out", "println", "pop", "}", "", "*;"]
+          "others": ["java", "util", "*", "Main", "main", "String", "args", "Deque", "Integer", "stack", "new", "ArrayDeque", "push", "10", "20", "System", "out", "println", "pop", "}", "", "*;", "public class Main {", "ackにnew", "む", "// push でスタックに積む", "// pop でスタックから取り出す"]
         },
         "testCases": [
           {

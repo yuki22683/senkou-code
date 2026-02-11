@@ -109,7 +109,6 @@ export const pythonData3 = {
           "    for n in args:",
           "        # より大きい値があれば更新",
           "        if n > max_val:",
-          "            # 値を代入",
           "            max_val = n",
           "    # 最終的な最大値を返す",
           "    return max_val",
@@ -131,8 +130,7 @@ export const pythonData3 = {
           null,
           "",
           null,
-          null,
-          ""
+          null
         ],
         "candidates": {
           "variables": ["args", "n", "max_val"],

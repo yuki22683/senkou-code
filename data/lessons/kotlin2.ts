@@ -405,12 +405,11 @@ export const kotlin2Data = {
           "// when で分岐する",
           "val result = when (x) {",
           "    // 1 の場合",
-          "    1 -> \\\"one\\\"",
+          "    1 -> \"one\"",
           "    // 2 の場合",
-          "    2 -> \\\"two\\\"",
+          "    2 -> \"two\"",
           "    // その他の場合",
-          "    else -> \\\"other\\\"",
-          "// ブロックを閉じる",
+          "    else -> \"other\"",
           "}",
           "// result を出力する",
           "println(result)"
@@ -428,8 +427,7 @@ export const kotlin2Data = {
           "\\\"\\\"",
           null,
           "",
-          null,
-          ""
+          null
         ],
         "candidates": {
           "keywords": [
