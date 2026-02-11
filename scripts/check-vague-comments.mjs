@@ -185,6 +185,40 @@ for (const file of files) {
       }
     }
   }
+
+  // lineHintsをチェック
+  const lineHintsMatches = content.matchAll(/"lineHints":\s*\[([\s\S]*?)\]/g);
+  for (const m of lineHintsMatches) {
+    const hintsStr = m[1];
+    // 各ヒントを抽出（nullと空文字列を除く）
+    const hintMatches = hintsStr.matchAll(/"([^"]+)"/g);
+    for (const hm of hintMatches) {
+      const hint = hm[1];
+      if (!hint || hint === 'null') continue;
+
+      // lineHints用の曖昧パターン（コメント記号なし）
+      const vagueHintPatterns = [
+        /^メソッドを呼び出します。?$/,
+        /^関数を呼び出します。?$/,
+        /^メソッドを実行します。?$/,
+        /^関数を実行します。?$/,
+        /^.*のメソッドを呼び出します。?$/,  // 「インスタンスのメソッドを呼び出します」など
+        /^.*の関数を呼び出します。?$/,
+        /^.*された関数を呼び出します。?$/,  // 「デコレートされた関数を呼び出します」など
+        /^.*の関数を実行します。?$/,
+      ];
+
+      for (const pattern of vagueHintPatterns) {
+        if (pattern.test(hint)) {
+          console.log(`[ERROR] ${file} (lineHints):`);
+          console.log(`  Hint: ${hint}`);
+          console.log('');
+          totalErrors++;
+          break;
+        }
+      }
+    }
+  }
 }
 
 console.log(`\n=== 結果 ===`);

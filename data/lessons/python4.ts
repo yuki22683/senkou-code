@@ -97,7 +97,7 @@ export const pythonData4 = {
           null,
           "クラスのインスタンスを作成して変数に代入します。",
           null,
-          "インスタンスのメソッドを呼び出します。"
+          "car.honk()を呼び出します。"
         ],
         "candidates": {
           "keywords": [

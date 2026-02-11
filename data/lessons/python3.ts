@@ -423,7 +423,7 @@ export const pythonData3 = {
           null,
           "関数呼び出し前にメッセージを表示します。",
           null,
-          "引数として受け取った元の関数を実行します。",
+          "func()を実行します。",
           null,
           "ラッパー関数を返してデコレータを完成させます。",
           null,
@@ -435,7 +435,7 @@ export const pythonData3 = {
           "挨拶メッセージを画面に出力します。",
           null,
           null,
-          "デコレートされた関数を呼び出します。"
+          "greet()を呼び出します。"
         ],
         "candidates": {
           "others": ["show_call", "wrapper", "print", "func", "greet", "関数を呼び出します", "こんにちは！"]
