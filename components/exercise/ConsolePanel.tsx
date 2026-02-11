@@ -18,10 +18,6 @@ interface ConsolePanelProps {
   onRetry?: () => void;
   parsedError?: ParsedError | null;
   correctParsedError?: ParsedError | null;
-  showNextButton?: boolean;
-  nextButtonLabel?: string;
-  onNextClick?: () => void;
-  isNavigating?: boolean;
 }
 
 // ネットワークエラーかどうかを判定
@@ -201,10 +197,6 @@ export function ConsolePanel({
   onRetry,
   parsedError,
   correctParsedError,
-  showNextButton = false,
-  nextButtonLabel = "次の演習へ",
-  onNextClick,
-  isNavigating = false,
 }: ConsolePanelProps) {
   const consoleContentRef = useRef<HTMLDivElement>(null);
   const examplesContentRef = useRef<HTMLDivElement>(null);
@@ -239,16 +231,6 @@ export function ConsolePanel({
             <FileText className="w-4 h-4" />
             見本
           </TabsTrigger>
-          {showNextButton && onNextClick && (
-            <Button
-              onClick={onNextClick}
-              size="sm"
-              className="ml-auto h-8 text-sm"
-              disabled={isNavigating}
-            >
-              {nextButtonLabel}
-            </Button>
-          )}
         </TabsList>
 
         <TabsContent ref={consoleContentRef} value="console" className="flex-1 min-h-0 overflow-auto p-4 mt-0 bg-gray-50">

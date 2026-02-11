@@ -1191,3 +1191,24 @@
   - 0件であることを確認する
 - **修正時の注意**: correctCode、holeyCode、correctLinesの3箇所全てを修正すること
 - **水平展開対象言語**: Python (`#`)、Perl (`#`)、Ruby (`#`)、Bash (`#`)、C/C++/Java/C#/Kotlin/Swift/TypeScript/JavaScript/Go/Rust (`//`)
+
+### 88. correctLines要素がundefinedの場合の防御的処理
+- MobileCodeEditor.tsx で `correctLines[index]` が `undefined` の場合、正解判定や遷移が正しく動作しない問題がある。
+- **禁止パターン1（次行遷移）**:
+  - `if (correctVal && !matchesCorrectLine(...))` → undefined の場合その行がスキップされ遷移しない
+- **正しいパターン1**:
+  - `if (!correctVal || !matchesCorrectLine(...))` → undefined でも停止する
+- **禁止パターン2（正解判定）**:
+  - `if (targetLine && matchesCorrectLine(...))` → undefined の場合、完了判定に到達しない
+- **正しいパターン2**:
+  - `const isCorrect = !targetLine || matchesCorrectLine(...); if (isCorrect) {` → undefined は正解扱いで完了判定に進む
+- **禁止パターン3（チェックマーク）**:
+  - `correctLine && matchesCorrectLine(...)` → undefined の場合チェックマークが表示されない
+- **正しいパターン3**:
+  - `!correctLine || matchesCorrectLine(...)` → undefined は正解扱いでチェックマーク表示
+- **禁止パターン4（allLinesCorrect判定）**:
+  - 全行ループで `isEditable` チェックなし → 編集対象でない行（コメント行等）も判定対象になり、データ不整合で false になる
+- **正しいパターン4**:
+  - `if (!isEditableLine(originalLines, i, commentPrefix)) return true;` → 編集対象行のみ判定
+- **影響箇所**: `handleInsert`、`handleDelete`、チェックマーク表示、`allLinesCorrect`判定
+- **症状**: 最後の行で正解を入力しても正解判定されない、チェックマークが表示されない、コンソール表示・正解演出がされない

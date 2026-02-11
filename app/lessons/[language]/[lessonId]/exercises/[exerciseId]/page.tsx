@@ -572,12 +572,44 @@ export default function ExercisePage() {
                   </span>
                 </div>
 
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild disabled={isNavigating}>
-                    <Button variant="ghost" size="icon" className="h-8 w-8" disabled={isNavigating}>
-                      <MoreHorizontal className="w-5 h-5" />
+                <div className="flex items-center gap-1">
+                  {showNextButton && (
+                    <Button
+                      size="sm"
+                      className="h-8 px-2 text-xs"
+                      disabled={isNavigating}
+                      onClick={handleNextExercise}
+                    >
+                      {celebrationType === "lesson" || celebrationType === "language"
+                        ? "レッスン一覧へ"
+                        : "次の演習へ"}
                     </Button>
-                  </DropdownMenuTrigger>
+                  )}
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="h-8 px-2"
+                    disabled={isNavigating}
+                    onClick={() => {
+                      // 現在のコードと完了状態を一時保存
+                      const savedCodeKey = `exercise_temp_code_${exerciseId}`;
+                      const savedCompletedKey = `exercise_temp_completed_${exerciseId}`;
+                      sessionStorage.setItem(savedCodeKey, code);
+                      sessionStorage.setItem(savedCompletedKey, showNextButton ? "true" : "false");
+                      navigateTo(
+                        `/lessons/${language}/${lessonId}/exercises/${exerciseId}/tutorial`
+                      );
+                    }}
+                  >
+                    <BookOpen className="w-4 h-4 mr-1" />
+                    <span className="text-xs">スライド</span>
+                  </Button>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild disabled={isNavigating}>
+                      <Button variant="ghost" size="icon" className="h-8 w-8" disabled={isNavigating}>
+                        <MoreHorizontal className="w-5 h-5" />
+                      </Button>
+                    </DropdownMenuTrigger>
                   <DropdownMenuContent align="end" className="w-56">
                     <DropdownMenuItem onClick={handleShowAnswer} className="cursor-pointer" disabled={isNavigating}>
                       <CheckCircle2 className="mr-2 h-4 w-4 text-green-600" />
@@ -597,7 +629,8 @@ export default function ExercisePage() {
                       <span>レッスンを中断する</span>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
-                </DropdownMenu>
+                  </DropdownMenu>
+                </div>
               </div>
               <div className="bg-white border rounded-b-lg overflow-hidden flex-1">
                 <MobileCodeEditor
@@ -629,9 +662,9 @@ export default function ExercisePage() {
                 </div>
               </div>
 
-              {/* コンソール + ボタン */}
+              {/* コンソール */}
               <div className="flex flex-col lg:mt-4 overflow-hidden lg:flex-1 min-h-0">
-                <div className="bg-white rounded-t-lg border border-b-0 overflow-hidden lg:flex-1 min-h-0 max-h-[200px] lg:max-h-none">
+                <div className="bg-white rounded-lg border overflow-hidden lg:flex-1 min-h-0 max-h-[200px] lg:max-h-none">
                   <ConsolePanel
                     output={output}
                     error={error}
@@ -650,42 +683,9 @@ export default function ExercisePage() {
                     onRetry={() => handleRunCode()}
                     parsedError={parsedError}
                     correctParsedError={correctParsedError}
-                    showNextButton={showNextButton}
-                    nextButtonLabel={
-                      celebrationType === "lesson" || celebrationType === "language"
-                        ? "レッスン一覧へ"
-                        : "次の演習へ"
-                    }
-                    onNextClick={handleNextExercise}
-                    isNavigating={isNavigating}
                   />
                 </div>
 
-                {/* コンソール下部のボタン */}
-                <div className="bg-white border border-t-0 rounded-b-lg p-3">
-                  <div className="flex items-center gap-2 w-full">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="text-base flex-1"
-                      disabled={isNavigating}
-                      onClick={() => {
-                        // 現在のコードと完了状態を一時保存
-                        const savedCodeKey = `exercise_temp_code_${exerciseId}`;
-                        const savedCompletedKey = `exercise_temp_completed_${exerciseId}`;
-                        sessionStorage.setItem(savedCodeKey, code);
-                        sessionStorage.setItem(savedCompletedKey, showNextButton ? "true" : "false");
-                        navigateTo(
-                          `/lessons/${language}/${lessonId}/exercises/${exerciseId}/tutorial`
-                        );
-                      }}
-                    >
-                      <BookOpen className="w-5 h-5 lg:mr-2" />
-                      <span className="hidden lg:inline">スライドを見る</span>
-                    </Button>
-{/* ヒントボタンは非表示 */}
-                  </div>
-                </div>
               </div>
             </div>
           </div>

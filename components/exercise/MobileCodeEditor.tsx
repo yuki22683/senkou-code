@@ -534,7 +534,9 @@ export function MobileCodeEditor({
       const targetLine = correctLines[cursor.line];
 
       // 正規化した内容で比較（複数正解対応）
-      if (targetLine && matchesCorrectLine(newLineContent, targetLine, language)) {
+      // targetLineがない場合も完了判定に進む（その行は正解扱い）
+      const isCurrentLineCorrect = !targetLine || matchesCorrectLine(newLineContent, targetLine, language);
+      if (isCurrentLineCorrect) {
         // Line completed!
 
         // Check if full code is correct (including this new line)
@@ -542,10 +544,13 @@ export function MobileCodeEditor({
         const newFullCode = newFullLines.join("\n");
 
         // 全行が正解と一致しているか確認
+        const originalLines = initialCode.split("\n");
         const allLinesCorrect = newFullLines.every((line, i) => {
           const correctLine = correctLines[i];
           // correctLineがundefinedの場合はその行をスキップ（正解とみなす）
           if (correctLine === undefined) return true;
+          // 編集対象行でない場合もスキップ（正解とみなす）
+          if (!isEditableLine(originalLines, i, commentPrefix)) return true;
           return matchesCorrectLine(line, correctLine, language);
         });
 
@@ -566,7 +571,8 @@ export function MobileCodeEditor({
              // 編集対象行で、まだ正解と一致していない場合はここに移動
              const currentVal = lines[next];
              const correctVal = correctLines[next];
-             if (correctVal && !matchesCorrectLine(currentVal, correctVal, language)) {
+             // correctValがない場合、または正解と一致していない場合はここに移動
+             if (!correctVal || !matchesCorrectLine(currentVal, correctVal, language)) {
                  break;
              }
              next++;
@@ -630,7 +636,9 @@ export function MobileCodeEditor({
         const targetLine = correctLines[cursor.line];
 
         // 正規化した内容で比較（複数正解対応）
-        if (targetLine && matchesCorrectLine(newLineContent, targetLine, language)) {
+        // targetLineがない場合も完了判定に進む（その行は正解扱い）
+        const isCurrentLineCorrect = !targetLine || matchesCorrectLine(newLineContent, targetLine, language);
+        if (isCurrentLineCorrect) {
           // Line completed!
 
           // Check if full code is correct (including this new line)
@@ -638,10 +646,13 @@ export function MobileCodeEditor({
           const newFullCode = newFullLines.join("\n");
 
           // 全行が正解と一致しているか確認
+          const originalLines = initialCode.split("\n");
           const allLinesCorrect = newFullLines.every((line, i) => {
             const correctLine = correctLines[i];
             // correctLineがundefinedの場合はその行をスキップ（正解とみなす）
             if (correctLine === undefined) return true;
+            // 編集対象行でない場合もスキップ（正解とみなす）
+            if (!isEditableLine(originalLines, i, commentPrefix)) return true;
             return matchesCorrectLine(line, correctLine, language);
           });
 
@@ -650,7 +661,6 @@ export function MobileCodeEditor({
             onRun?.(newFullCode);
           } else {
             // 次の未完成の編集対象行を探す
-            const originalLines = initialCode.split("\n");
             let next = cursor.line + 1;
             while (next < lines.length) {
                // 編集対象行でない場合はスキップ
@@ -662,7 +672,8 @@ export function MobileCodeEditor({
                // 編集対象行で、まだ正解と一致していない場合はここに移動
                const currentVal = lines[next];
                const correctVal = correctLines[next];
-               if (correctVal && !matchesCorrectLine(currentVal, correctVal, language)) {
+               // correctValがない場合、または正解と一致していない場合はここに移動
+               if (!correctVal || !matchesCorrectLine(currentVal, correctVal, language)) {
                    break;
                }
                next++;
@@ -839,7 +850,8 @@ export function MobileCodeEditor({
           // チェックマークを表示する条件：
           // 1. 編集対象行である
           // 2. 現在の入力内容が（正規化して）正解のいずれかと一致している
-          const showCheckmark = isEditable && correctLine && matchesCorrectLine(line, correctLine, language);
+          // correctLineがない場合は正解扱い（データ不備対策）
+          const showCheckmark = isEditable && (!correctLine || matchesCorrectLine(line, correctLine, language));
 
           return (
             <div
