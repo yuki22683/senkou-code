@@ -391,8 +391,8 @@ export const pythonData3 = {
           "content": "# @ で関数に適用しよう！\\n\\n`@デコレータ名` を関数の上に書くだけで適用できます。\\n\\n**例：** デコレータを使ってみよう！\\n\\n```python\\n@my_decorator\\ndef say_hello():\\n    print('Hello!')\\n\\nsay_hello()\\n```\\n=> Before\\n=> Hello!\\n=> After\\n\\n**何をしているか：**\\n1. `@my_decorator` で `say_hello` 関数にデコレータを適用\\n2. `say_hello()` を呼ぶと、まず「Before」が表示される\\n3. 次に元の `say_hello`（「Hello!」）が実行される\\n4. 最後に「After」が表示される\\n\\n**使いどころ：**\\n- ログ（記録）を残したいとき\\n- 実行時間を計りたいとき\\n- 権限チェックをしたいとき"
         }
       ],
-      "correctCode": "# show_callデコレータ関数を定義\\ndef show_call(func):\\n    # 内部関数wrapperを定義\\n    def wrapper():\\n        # 実行前のメッセージを表示\\n        print('関数を呼び出します')\\n        # 本来の関数を実行\\n        func()\\n    # wrapperを返す\\n    return wrapper\\n\\n# @show_callを適用\\n@show_call\\n# greet関数を定義\\ndef greet():\\n    # 'こんにちは！'を表示\\n    print('こんにちは！')\\n\\n# greet関数を実行\\ngreet()",
-      "holeyCode": "# show_callデコレータ関数を定義\\ndef ___(___) :\\n    # 内部関数wrapperを定義\\n    def ___():\\n        # 実行前のメッセージを表示\\n        ___('___')\\n        # 本来の関数を実行\\n        ___()\\n    # wrapperを返す\\n    return ___\\n\\n# @show_callを適用\\n@___\\n# greet関数を定義\\ndef ___():\\n    # 'こんにちは！'を表示\\n    ___('___')\\n\\n# greet関数を実行\\n___()",
+      "correctCode": "# show_callデコレータ関数を定義\\ndef show_call(func):\\n    # 内部関数wrapperを定義\\n    def wrapper():\\n        # 実行前のメッセージを表示\\n        print('関数を呼び出します')\\n        # func()を実行\\n        func()\\n    # wrapperを返す\\n    return wrapper\\n\\n# @show_callを適用\\n@show_call\\n# greet関数を定義\\ndef greet():\\n    # 'こんにちは！'を表示\\n    print('こんにちは！')\\n\\n# greet()を実行\\ngreet()",
+      "holeyCode": "# show_callデコレータ関数を定義\\ndef ___(___) :\\n    # 内部関数wrapperを定義\\n    def ___():\\n        # 実行前のメッセージを表示\\n        ___('___')\\n        # func()を実行\\n        ___()\\n    # wrapperを返す\\n    return ___\\n\\n# @show_callを適用\\n@___\\n# greet関数を定義\\ndef ___():\\n    # 'こんにちは！'を表示\\n    ___('___')\\n\\n# greet()を実行\\n___()",
       "correctLines": [
           "# show_callデコレータ関数を定義",
           "def show_call(func):",
@@ -400,7 +400,7 @@ export const pythonData3 = {
           "    def wrapper():",
           "        # 実行前のメッセージを表示",
           "        print('関数を呼び出します')",
-          "        # 本来の関数を実行",
+          "        # func()を実行",
           "        func()",
           "    # wrapperを返す",
           "    return wrapper",
@@ -412,7 +412,7 @@ export const pythonData3 = {
           "    # 'こんにちは！'を表示",
           "    print('こんにちは！')",
           "",
-          "# greet関数を実行",
+          "# greet()を実行",
           "greet()"
         ],
       "lineHints": [
