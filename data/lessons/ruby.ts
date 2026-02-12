@@ -649,15 +649,15 @@ export const rubyData = {
           "content": "# 関数を作る\\n\\n**書き方：**\\n- `def`（デフ）でメソッドを作り始める\\n- `end`（エンド）で終わる\\n\\n**コード例：**\\n```ruby\\ndef greet\\n  puts 'こんにちは'\\nend\\n\\ngreet\\n```\\n\\n=> こんにちは と表示される\\n\\n**何をしているの？**\\n1. `def greet` → 「greet」という名前のメソッドを作り始める\\n2. `puts 'こんにちは'` → このメソッドがやる処理\\n3. `end` → メソッドの終わり\\n4. `greet` → メソッドを呼び出す（名前を呼ぶだけでOK）\\n\\n**def は「define（定義する）」の略** と覚えましょう。"
         }
       ],
-      "correctCode": "# greetというメソッドを定義\\ndef greet\\n  # こんにちは と表示\\n  puts 'こんにちは'\\nend\\n# greetを呼び出す\\ngreet",
-      "holeyCode": "# greetというメソッドを定義\\ndef ___\\n  # こんにちは と表示\\n  ___ '___'\\n# ブロックを終了\\n___\\n# greetを呼び出す\\n___",
+      "correctCode": "# greetというメソッドを定義\\ndef greet\\n  # こんにちは と表示\\n  puts 'こんにちは'\\nend\\n# greetメソッドを呼び出す\\ngreet",
+      "holeyCode": "# greetというメソッドを定義\\ndef ___\\n  # こんにちは と表示\\n  ___ '___'\\n# ブロックを終了\\n___\\n# greetメソッドを呼び出す\\n___",
       "correctLines": [
           "# greetというメソッドを定義",
           "def greet",
           "  # こんにちは と表示",
           "  puts 'こんにちは'",
           "end",
-          "# greetを呼び出す",
+          "# greetメソッドを呼び出す",
           "greet"
         ],
       "lineHints": [
@@ -681,7 +681,7 @@ export const rubyData = {
           "strings": [
             "こんにちは"
           ],
-          "others": ["puts", "greet", "end", "# greetを呼び出す"]
+          "others": ["puts", "greet", "end", "# greetメソッドを呼び出す"]
         },
         "testCases": [
           {

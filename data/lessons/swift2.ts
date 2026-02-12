@@ -289,8 +289,8 @@ export const swift2Data = {
           "content": "# 目標\\n\\n「話せる」プロトコルを作って、犬に準拠させましょう。\\n\\n1. `Speaker` プロトコルを作る\\n2. `speak()` という関数を宣言\\n3. `Dog` 構造体を `Speaker` に準拠させる\\n4. `speak()` で「woof」と鳴くようにする"
         }
       ],
-      "correctCode": "// protocolでプロトコルを定義\\nprotocol Speaker {\\n    // speakメソッドを宣言\\n    func speak()\\n}\\n// Speakerに準拠\\nstruct Dog: Speaker {\\n    // speakメソッドを実装\\n    func speak() {\\n        // ワン！と出力\\n        print(\"ワン！\")\\n    }\\n}\\n// インスタンスを作成\\nlet d = Dog()\\n// speakを呼び出し\\nd.speak()",
-      "holeyCode": "// protocolでプロトコルを定義\\nprotocol ___ ___\\n    // speakメソッドを宣言\\n    func ___()\\n// ブロックを閉じる\\n___\\n// Speakerに準拠\\nstruct ___: ___ ___\\n    // speakメソッドを実装\\n    func ___() ___\\n        // ワン！と出力\\n        ___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// インスタンスを作成\\nlet ___ = ___()\\n// speakを呼び出し\\n___.___() ",
+      "correctCode": "// protocolでプロトコルを定義\\nprotocol Speaker {\\n    // speakメソッドを宣言\\n    func speak()\\n}\\n// Speakerに準拠\\nstruct Dog: Speaker {\\n    // speakメソッドを実装\\n    func speak() {\\n        // ワン！と出力\\n        print(\"ワン！\")\\n    }\\n}\\n// インスタンスを作成\\nlet d = Dog()\\n// speakメソッドを呼び出す\\nd.speak()",
+      "holeyCode": "// protocolでプロトコルを定義\\nprotocol ___ ___\\n    // speakメソッドを宣言\\n    func ___()\\n// ブロックを閉じる\\n___\\n// Speakerに準拠\\nstruct ___: ___ ___\\n    // speakメソッドを実装\\n    func ___() ___\\n        // ワン！と出力\\n        ___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// インスタンスを作成\\nlet ___ = ___()\\n// speakメソッドを呼び出す\\n___.___() ",
       "correctLines": [
           "// protocolでプロトコルを定義",
           "protocol Speaker {",
@@ -307,7 +307,7 @@ export const swift2Data = {
           "}",
           "// インスタンスを作成",
           "let d = Dog()",
-          "// speakを呼び出し",
+          "// speakメソッドを呼び出す",
           "d.speak()"
         ],
       "lineHints": [
@@ -333,7 +333,7 @@ export const swift2Data = {
           "keywords": [
             "protocol"
           ],
-          "others": ["speak", "Speaker", "\"ワン！\"", "Dog", "}", "print", "d", "{", "// Speakerに準拠", "speakメソッドを実装", "/ ワン！と出力", "ンスタンスを作成", "// speakを呼び出し"]
+          "others": ["speak", "Speaker", "\"ワン！\"", "Dog", "}", "print", "d", "{", "// Speakerに準拠", "speakメソッドを実装", "/ ワン！と出力", "ンスタンスを作成", "// speakメソッドを呼び出す"]
         },
         "testCases": [
           {
@@ -363,15 +363,15 @@ export const swift2Data = {
           "content": "# 目標\\n\\n数を2倍にするクロージャを作りましょう。\\n\\n1. `double` という変数にクロージャを入れる\\n2. 引数 `n` を受け取る\\n3. `n * 2` を返す\\n4. `double(5)` で10と表示されるか確認"
         }
       ],
-      "correctCode": "// inで引数と処理を分ける\\nlet double = { (n: Int) in\\n    // n * 2を返す\\n    return n * 2\\n}\\n// doubleを呼び出し\\nprint(double(5))",
-      "holeyCode": "// inで引数と処理を分ける\\nlet ___ = ___ (___: ___) in\\n    // n * 2を返す\\n    return ___ ___ ___\\n// ブロックを閉じる\\n___\\n// doubleを呼び出し\\n___(___(___))",
+      "correctCode": "// inで引数と処理を分ける\\nlet double = { (n: Int) in\\n    // n * 2を返す\\n    return n * 2\\n}\\n// doubleメソッドを呼び出す\\nprint(double(5))",
+      "holeyCode": "// inで引数と処理を分ける\\nlet ___ = ___ (___: ___) in\\n    // n * 2を返す\\n    return ___ ___ ___\\n// ブロックを閉じる\\n___\\n// doubleメソッドを呼び出す\\n___(___(___))",
       "correctLines": [
           "// inで引数と処理を分ける",
           "let double = { (n: Int) in",
           "    // n * 2を返す",
           "    return n * 2",
           "}",
-          "// doubleを呼び出し",
+          "// doubleメソッドを呼び出す",
           "print(double(5))"
         ],
       "lineHints": [
@@ -387,7 +387,7 @@ export const swift2Data = {
           "keywords": [
             "in"
           ],
-          "others": ["*", "double", "2", "}", "5", "n", "Int", "{", "print", "// doubleを呼び出し"]
+          "others": ["*", "double", "2", "}", "5", "n", "Int", "{", "print", "// doubleメソッドを呼び出す"]
         },
         "testCases": [
           {

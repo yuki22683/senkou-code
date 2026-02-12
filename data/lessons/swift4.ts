@@ -53,8 +53,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\n「話せる」プロトコルを作って、犬に準拠させましょう。\\n\\n1. `Speakable` プロトコルを作る\\n2. `speak()` という関数を宣言\\n3. `Dog` 構造体で準拠を実装\\n4. `speak()` で「Woof!」と返す"
         }
       ],
-      "correctCode": "// protocolでプロトコルを定義\\nprotocol Speakable {\\n    // speakメソッドを宣言\\n    func speak() -> String\\n// ブロックを閉じる\\n}\\n\\n// Speakableに準拠\\nstruct Dog: Speakable {\\n    // speakメソッドを実装\\n    func speak() -> String {\\n        // Woof!を返す\\n        return \"ワン！\"\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nlet dog = Dog()\\n// speakを呼び出し\\nprint(dog.speak())",
-      "holeyCode": "// protocolでプロトコルを定義\\nprotocol ___ {\\n    // speakメソッドを宣言\\n    func ___() -> ___\\n// ブロックを閉じる\\n___\\n\\n// Speakableに準拠\\nstruct ___: ___ {\\n    // speakメソッドを実装\\n    func ___() -> ___ {\\n        // Woof!を返す\\n        return \\\"___\\\"\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nlet ___ = ___()\\n// speakを呼び出し\\n___(___.___()",
+      "correctCode": "// protocolでプロトコルを定義\\nprotocol Speakable {\\n    // speakメソッドを宣言\\n    func speak() -> String\\n// ブロックを閉じる\\n}\\n\\n// Speakableに準拠\\nstruct Dog: Speakable {\\n    // speakメソッドを実装\\n    func speak() -> String {\\n        // Woof!を返す\\n        return \"ワン！\"\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nlet dog = Dog()\\n// speakメソッドを呼び出す\\nprint(dog.speak())",
+      "holeyCode": "// protocolでプロトコルを定義\\nprotocol ___ {\\n    // speakメソッドを宣言\\n    func ___() -> ___\\n// ブロックを閉じる\\n___\\n\\n// Speakableに準拠\\nstruct ___: ___ {\\n    // speakメソッドを実装\\n    func ___() -> ___ {\\n        // Woof!を返す\\n        return \\\"___\\\"\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nlet ___ = ___()\\n// speakメソッドを呼び出す\\n___(___.___()",
       "correctLines": [
           "// protocolでプロトコルを定義",
           "protocol Speakable {",
@@ -76,7 +76,7 @@ export const swift4Data = {
           "",
           "// インスタンスを作成",
           "let dog = Dog()",
-          "// speakを呼び出し",
+          "// speakメソッドを呼び出す",
           "print(dog.speak())"
         ],
       "lineHints": [
@@ -141,8 +141,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\n`Identifiable` プロトコルを作り、extensionでデフォルト機能を追加しましょう。\\n\\n1. `id` プロパティを持つプロトコルを作る\\n2. extensionで `display()` 関数を追加\\n3. `User` 構造体で準拠\\n4. デフォルトの `display()` を使う"
         }
       ],
-      "correctCode": "// プロトコルを定義\\nprotocol Identifiable {\\n    // idプロパティを宣言\\n    var id: Int { get }\\n}\\n\\n// extensionでプロトコルを拡張\\nextension Identifiable {\\n    // デフォルト実装\\n    func display() { print(\"ID: \\(id)\") }\\n}\\n\\n// Identifiableに準拠\\nstruct User: Identifiable {\\n    // idプロパティ\\n    var id: Int\\n}\\n\\n// インスタンスを作成\\nlet user = User(id: 42)\\n// displayを呼び出し\\nuser.display()",
-      "holeyCode": "// プロトコルを定義\\nprotocol ___ {\\n    // idプロパティを宣言\\n    var ___: ___ { ___ }\\n// ブロックを閉じる\\n___\\n\\n// extensionでプロトコルを拡張\\nextension ___ {\\n    // デフォルト実装\\n    func ___() { ___(\\\"___: \\\\(___)\\\") }\\n// ブロックを閉じる\\n___\\n\\n// Identifiableに準拠\\nstruct ___: ___ {\\n    // idプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nlet ___ = ___(___: ___)\\n// displayを呼び出し\\n___.___(",
+      "correctCode": "// プロトコルを定義\\nprotocol Identifiable {\\n    // idプロパティを宣言\\n    var id: Int { get }\\n}\\n\\n// extensionでプロトコルを拡張\\nextension Identifiable {\\n    // デフォルト実装\\n    func display() { print(\"ID: \\(id)\") }\\n}\\n\\n// Identifiableに準拠\\nstruct User: Identifiable {\\n    // idプロパティ\\n    var id: Int\\n}\\n\\n// インスタンスを作成\\nlet user = User(id: 42)\\n// displayメソッドを呼び出す\\nuser.display()",
+      "holeyCode": "// プロトコルを定義\\nprotocol ___ {\\n    // idプロパティを宣言\\n    var ___: ___ { ___ }\\n// ブロックを閉じる\\n___\\n\\n// extensionでプロトコルを拡張\\nextension ___ {\\n    // デフォルト実装\\n    func ___() { ___(\\\"___: \\\\(___)\\\") }\\n// ブロックを閉じる\\n___\\n\\n// Identifiableに準拠\\nstruct ___: ___ {\\n    // idプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nlet ___ = ___(___: ___)\\n// displayメソッドを呼び出す\\n___.___(",
       "correctLines": [
           "// プロトコルを定義",
           "protocol Identifiable {",
@@ -164,7 +164,7 @@ export const swift4Data = {
           "",
           "// インスタンスを作成",
           "let user = User(id: 42)",
-          "// displayを呼び出し",
+          "// displayメソッドを呼び出す",
           "user.display()"
         ],
       "lineHints": [

@@ -463,12 +463,12 @@ export const csharp2Data = {
           "content": "# 基本の形：(引数) => 処理\\n\\n引数が1つなら `()` を省略できます。\\n\\n**コード例（数を2乗する関数）：**\\n```csharp\\n// ラムダ式で関数を定義\\nFunc<int, int> square = x => x * x;\\n\\n// 使う\\nConsole.WriteLine(square(5)); // 25\\n```\\n\\n**解説：**\\n1. `Func<int, int>` は「intを受け取ってintを返す関数」の型\\n2. `x => x * x` は「xを受け取って、x * x を返す」という意味\\n3. `square(5)` で5を渡すと、5 * 5 = 25 が返る\\n\\n**いろいろな書き方：**\\n- `x => x * 2` : xを2倍にする\\n- `(a, b) => a + b` : aとbを足す（引数が複数のとき）\\n- `() => \"Hello\"` : 引数なしで\"Hello\"を返す"
         }
       ],
-      "correctCode": "// =>でラムダ式を定義\\nFunc<int, int> triple = x => x * 3;\\n// tripleを呼び出して表示\\nConsole.WriteLine(triple(7));",
-      "holeyCode": "// =>でラムダ式を定義\\n___<___, ___> ___ = ___ => ___ * ___;\\n// tripleを呼び出して表示\\n___.___(___( ___));",
+      "correctCode": "// =>でラムダ式を定義\\nFunc<int, int> triple = x => x * 3;\\n// tripleメソッドを呼び出して表示\\nConsole.WriteLine(triple(7));",
+      "holeyCode": "// =>でラムダ式を定義\\n___<___, ___> ___ = ___ => ___ * ___;\\n// tripleメソッドを呼び出して表示\\n___.___(___( ___));",
       "correctLines": [
           "// =>でラムダ式を定義",
           "Func<int, int> triple = x => x * 3;",
-          "// tripleを呼び出して表示",
+          "// tripleメソッドを呼び出して表示",
           "Console.WriteLine(triple(7));"
         ],
       "lineHints": [
