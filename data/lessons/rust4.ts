@@ -340,18 +340,18 @@ export const rust4Data = {
           "content": "# 和集合、積集合など\\n\\n```rust\\nset1.union(&set2)\\nset1.intersection(&set2)\\nset1.difference(&set2)\\n```"
         }
       ],
-      "correctCode": "// HashSet をインポート\\nuse std::collections::HashSet;\\n\\nfn main() {\\n    let mut set = HashSet::new();\\n    // set.insert(1)を呼び出す\\n    set.insert(1);\\n    // set.insert(2)を呼び出す\\n    set.insert(2);\\n    // set.insert(1)を呼び出す（重複）\\n    set.insert(1);\\n    println!(\"{}\", set.len());\\n}", "holeyCode": "// HashSet をインポート\\nuse ___::___::___;\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let mut ___ = ___::___();\\n    // set.insert(1)を呼び出す\\n    ___.___(___);\\n    // set.insert(2)を呼び出す\\n    ___.___(___);\\n    // set.insert(1)を呼び出す（重複）\\n    ___.___(___);\\n    // 出力\\n    ___!(\\\"{}\\\", ___.___());\\n// ブロックを閉じる\\n___",
+      "correctCode": "// HashSet をインポート\\nuse std::collections::HashSet;\\n\\nfn main() {\\n    let mut set = HashSet::new();\\n    // insertメソッドで1を追加\\n    set.insert(1);\\n    // insertメソッドで2を追加\\n    set.insert(2);\\n    // insertメソッドで1を追加（重複）\\n    set.insert(1);\\n    println!(\"{}\", set.len());\\n}", "holeyCode": "// HashSet をインポート\\nuse ___::___::___;\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let mut ___ = ___::___();\\n    // insertメソッドで1を追加\\n    ___.___(___);\\n    // insertメソッドで2を追加\\n    ___.___(___);\\n    // insertメソッドで1を追加（重複）\\n    ___.___(___);\\n    // 出力\\n    ___!(\\\"{}\\\", ___.___());\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// HashSet をインポート",
           "use std::collections::HashSet;",
           "",
           "fn main() {",
           "    let mut set = HashSet::new();",
-          "    // set.insert(1)を呼び出す",
+          "    // insertメソッドで1を追加",
           "    set.insert(1);",
-          "    // set.insert(2)を呼び出す",
+          "    // insertメソッドで2を追加",
           "    set.insert(2);",
-          "    // set.insert(1)を呼び出す（重複）",
+          "    // insertメソッドで1を追加（重複）",
           "    set.insert(1);",
           "    println!(\"{}\", set.len());",
           "}"

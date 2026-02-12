@@ -144,10 +144,10 @@ export const rust2Data = {
           "content": "# mut が2か所に必要\\n\\n変更できるようにするには、変数と参照の両方に `mut` が必要です。\\n\\n**コード例：**\\n```rust\\n// 1. 変数を mut で作る\\nlet mut s = String::from(\"hello\");\\n\\n// 2. &mut で可変参照を渡す\\nchange(&mut s);\\n\\nfn change(s: &mut String) {\\n    s.push_str(\" world\");  // 変更できる！\\n}\\n```\\n\\n**ポイント：**\\n- `let mut 変数` で変数を変更可能に\\n- `&mut 変数` で可変参照を作る\\n- 両方ないと変更できない！"
         }
       ],
-      "correctCode": "fn add_world(s: &mut String) {\\n    // s.push_str(\" world\")を呼び出す\\n    s.push_str(\" world\");\\n}\\nfn main() {\\n    // mut で可変変数にする\\n    let mut text = String::from(\"hello\");\\n    add_world(&mut text);\\n    println!(\"{}\", text);\\n}", "holeyCode": "// add_world関数を定義\\nfn ___(___: &mut ___) {\\n    // s.push_str(\" world\")を呼び出す\\n    ___.___(\\\"___\\\");\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfn ___() {\\n    // mut で可変変数にする\\n    let mut ___ = ___::___(\\\"___\\\");\\n    // 文を実行\\n    ___(&mut ___);\\n    // 出力\\n    ___!(\\\"{}\\\", ___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "fn add_world(s: &mut String) {\\n    // push_strメソッドで\" world\"を追加\\n    s.push_str(\" world\");\\n}\\nfn main() {\\n    // mut で可変変数にする\\n    let mut text = String::from(\"hello\");\\n    add_world(&mut text);\\n    println!(\"{}\", text);\\n}", "holeyCode": "// add_world関数を定義\\nfn ___(___: &mut ___) {\\n    // push_strメソッドで\" world\"を追加\\n    ___.___(\\\"___\\\");\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfn ___() {\\n    // mut で可変変数にする\\n    let mut ___ = ___::___(\\\"___\\\");\\n    // 文を実行\\n    ___(&mut ___);\\n    // 出力\\n    ___!(\\\"{}\\\", ___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "fn add_world(s: &mut String) {",
-          "    // s.push_str(\" world\")を呼び出す",
+          "    // push_strメソッドで\" world\"を追加",
           "    s.push_str(\" world\");",
           "}",
           "fn main() {",

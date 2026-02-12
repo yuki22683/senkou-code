@@ -538,14 +538,14 @@ export const typescriptData = {
           "content": "# TypeScriptが自動で予想してくれる\\n\\nTypeScriptはとても賢いので、配列に貼られたラベルを見て、中から取り出したデータの種類も自動で「きっとこれです！」と予想してくれます。\\n\\n## たとえ話\\n\\n「りんご箱」から取り出したものは「りんご」に決まっていますよね。\\n同じように、`string[]`（文字列の配列）から取り出したものは `string`（文字列）だと自動でわかるんです！\\n\\nこれを **型推論** と呼びます。便利ですね！"
         }
       ],
-      "correctCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst names: string[] = ['たろう', 'はなこ'];\\n// 順番にループする\\nfor (const name of names) {\\n    // console.log(name)を出力\\n    console.log(name);\\n}",
-      "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst ___: ___[] = ['___', '___'];\\n// 順番にループする\\nfor (const ___ of ___) {\\n    // console.log(name)を出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst names: string[] = ['たろう', 'はなこ'];\\n// 順番にループする\\nfor (const name of names) {\\n    // nameを出力\\n    console.log(name);\\n}",
+      "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst ___: ___[] = ['___', '___'];\\n// 順番にループする\\nfor (const ___ of ___) {\\n    // nameを出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 配列を作る（'たろう', 'はなこ'の順）",
           "const names: string[] = ['たろう', 'はなこ'];",
           "// 順番にループする",
           "for (const name of names) {",
-          "    // console.log(name)を出力",
+          "    // nameを出力",
           "    console.log(name);",
           "}"
         ],

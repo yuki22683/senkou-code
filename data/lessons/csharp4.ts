@@ -194,8 +194,8 @@ export const csharp4Data = {
           "content": "# Func と Action\\n\\n```csharp\\nFunc<int, int, int> add = (a, b) => a + b;\\nAction<string> print = s => Console.WriteLine(s);\\n```"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // メソッドを参照できる型を定義するキーワード\\n    delegate int MathOp(int x);\\n    \\n    // Doubleメソッドを定義\\n    static int Double(int n) => n * 2;\\n    \\n    // Mainメソッドを定義\\n    static void Main() {\\n        // デリゲートにメソッドを代入\\n        MathOp op = Double;\\n        // op(5を表示\\n        Console.WriteLine(op(5));\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // メソッドを参照できる型を定義するキーワード\\n    ___ ___ ___(___  ___);\\n    ___\\n    // Doubleメソッドを定義\\n    ___ ___ ___(___  ___) => ___ * ___;\\n    ___\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // デリゲートにメソッドを代入\\n        ___ ___ = ___;\\n        // op(5を表示\\n        ___.___(___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // メソッドを参照できる型を定義するキーワード\\n    delegate int MathOp(int x);\\n    \\n    // Doubleメソッドを定義\\n    static int Double(int n) => n * 2;\\n    \\n    // Mainメソッドを定義\\n    static void Main() {\\n        // デリゲートにメソッドを代入\\n        MathOp op = Double;\\n        // op関数を引数5で呼び出して表示\\n        Console.WriteLine(op(5));\\n    }\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // メソッドを参照できる型を定義するキーワード\\n    ___ ___ ___(___  ___);\\n    ___\\n    // Doubleメソッドを定義\\n    ___ ___ ___(___  ___) => ___ * ___;\\n    ___\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // デリゲートにメソッドを代入\\n        ___ ___ = ___;\\n        // op関数を引数5で呼び出して表示\\n        ___.___(___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -212,7 +212,7 @@ export const csharp4Data = {
           "    static void Main() {",
           "        // デリゲートにメソッドを代入",
           "        MathOp op = Double;",
-          "        // op(5を表示",
+          "        // op関数を引数5で呼び出して表示",
           "        Console.WriteLine(op(5));",
           "    }",
           "}"
@@ -266,8 +266,8 @@ export const csharp4Data = {
           "content": "# 型パラメータの意味\\n\\n```csharp\\nFunc<int>           // () => int\\nFunc<int, string>   // (int) => string\\nFunc<int, int, int> // (int, int) => int\\n```"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 戻り値を持つ汎用デリゲート型\\n        Func<int, int> triple = x => x * 3;\\n        // triple(7を表示\\n        Console.WriteLine(triple(7));\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // 戻り値を持つ汎用デリゲート型\\n        ___<___, ___> ___ = ___ => ___ * ___;\\n        // triple(7を表示\\n        ___.___(___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 戻り値を持つ汎用デリゲート型\\n        Func<int, int> triple = x => x * 3;\\n        // triple関数を引数7で呼び出して表示\\n        Console.WriteLine(triple(7));\\n    }\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // 戻り値を持つ汎用デリゲート型\\n        ___<___, ___> ___ = ___ => ___ * ___;\\n        // triple関数を引数7で呼び出して表示\\n        ___.___(___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -278,7 +278,7 @@ export const csharp4Data = {
           "    static void Main() {",
           "        // 戻り値を持つ汎用デリゲート型",
           "        Func<int, int> triple = x => x * 3;",
-          "        // triple(7を表示",
+          "        // triple関数を引数7で呼び出して表示",
           "        Console.WriteLine(triple(7));",
           "    }",
           "}"

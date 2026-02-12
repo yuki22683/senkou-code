@@ -505,7 +505,7 @@ export const cpp4Data = {
           "content": "# よく使う例外の種類\\n\\nC++には、よくあるエラーのための「例外クラス」が用意されています。\\n\\n**身近な例え：**\\n病院の「症状別窓口」のようなものです。「風邪」「怪我」「健康診断」で窓口が違うように、エラーの種類で対応を変えられます。\\n\\n**よく使う例外一覧：**\\n```cpp\\nruntime_error     // 実行時エラー（一般的なエラー）\\nlogic_error       // 論理エラー（プログラムのバグ）\\nout_of_range      // 範囲外アクセス（配列の外を見ようとした）\\ninvalid_argument  // 不正な引数（おかしな値が渡された）\\n```\\n\\n**使い分けの例：**\\n```cpp\\nif (index >= array.size()) {\\n    throw out_of_range(\"インデックスが範囲外です\");\\n}\\nif (age < 0) {\\n    throw invalid_argument(\"年齢は0以上である必要があります\");\\n}\\n```"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <stdexcept>\\nusing namespace std;\\n\\nint main() {\\n    try {\\n        // throw runtime_error(\"Oops!\")で例外を投げる\\n        throw runtime_error(\"Oops!\");\\n    // catch(const exception& e)で例外を捕まえる\\n    } catch (const exception& e) {\\n        cout << e.what() << endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // ブロックを開始\\n    ___ {\\n        // throw runtime_error(\\\"Oops!\\\")で例外を投げる\\n        ___ ___(___);\\n    // catch(const exception& e)で例外を捕まえる\\n    } ___ (___) {\\n        // 文を実行\\n        ___ << ___.___ << ___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <iostream>\\n#include <stdexcept>\\nusing namespace std;\\n\\nint main() {\\n    try {\\n        // runtime_error型の例外\"Oops!\"を投げる\\n        throw runtime_error(\"Oops!\");\\n    // catchでexception型の例外を捕まえる\\n    } catch (const exception& e) {\\n        cout << e.what() << endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // ブロックを開始\\n    ___ {\\n        // throw runtime_error(\\\"Oops!\\\")で例外を投げる\\n        ___ ___(___);\\n    // catchでexception型の例外を捕まえる\\n    } ___ (___) {\\n        // 文を実行\\n        ___ << ___.___ << ___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <iostream>",
           "#include <stdexcept>",
@@ -513,9 +513,9 @@ export const cpp4Data = {
           "",
           "int main() {",
           "    try {",
-          "        // throw runtime_error(\"Oops!\")で例外を投げる",
+          "        // runtime_error型の例外\"Oops!\"を投げる",
           "        throw runtime_error(\"Oops!\");",
-          "    // catch(const exception& e)で例外を捕まえる",
+          "    // catchでexception型の例外を捕まえる",
           "    } catch (const exception& e) {",
           "        cout << e.what() << endl;",
           "    }",
@@ -544,7 +544,7 @@ export const cpp4Data = {
             "raise",
             "error"
           ],
-          "others": ["using", "namespace", "std", "int", "main", "try", "runtime_error", "\\\"Oops!\\\"", "catch", "const exception& e", "cout", "e", "what()", "endl", "}", "return", "0", "#include <iostream>", "#include <stdexcept>", "try {", "// throw runtime_error(\"Oops!\")で例外を投げる", "// catch", "rn", "0;"]
+          "others": ["using", "namespace", "std", "int", "main", "try", "runtime_error", "\\\"Oops!\\\"", "catch", "const exception& e", "cout", "e", "what()", "endl", "}", "return", "0", "#include <iostream>", "#include <stdexcept>", "try {", "// runtime_error型の例外\"Oops!\"を投げる", "// catch", "rn", "0;"]
         },
         "testCases": [
           {

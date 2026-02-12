@@ -57,12 +57,12 @@ export const pythonData3 = {
           "content": "# lambda 引数: 戻り値\\n\\n**書き方：** `lambda 引数: 計算式`\\n\\nラムダ式は `map` や `filter` などの関数と組み合わせると特に便利です。\\n\\n**例：** リストの全ての数を2倍にしよう！\\n\\n```python\\nnums = [1, 2, 3]\\ndoubled = list(map(lambda x: x * 2, nums))\\nprint(doubled)  # [2, 4, 6]\\n```\\n\\n**何をしているか：**\\n1. `nums` は [1, 2, 3] というリスト\\n2. `map()` でリストの各要素に関数を適用する\\n3. `lambda x: x * 2` で「xを2倍にする」関数を定義\\n4. 結果として [2, 4, 6] ができる！\\n\\n**使いどころ：** 1回しか使わない簡単な関数を、わざわざ名前をつけずにサッと作りたいとき！"
         }
       ],
-      "correctCode": "# 2乗を計算するlambda式をsquareに代入\\nsquare = lambda x: x ** 2\\n# square(5)の結果を表示\\nprint(square(5))",
-      "holeyCode": "# 2乗を計算するlambda式をsquareに代入\\n___ = lambda ___: ___ ___ ___\\n# square(5)の結果を表示\\n___(___(___))",
+      "correctCode": "# 2乗を計算するlambda式をsquareに代入\\nsquare = lambda x: x ** 2\\n# square関数を引数5で呼び出して表示\\nprint(square(5))",
+      "holeyCode": "# 2乗を計算するlambda式をsquareに代入\\n___ = lambda ___: ___ ___ ___\\n# square関数を引数5で呼び出して表示\\n___(___(___))",
       "correctLines": [
           "# 2乗を計算するlambda式をsquareに代入",
           "square = lambda x: x ** 2",
-          "# square(5)の結果を表示",
+          "# square関数を引数5で呼び出して表示",
           "print(square(5))"
         ],
       "lineHints": [
@@ -98,8 +98,8 @@ export const pythonData3 = {
           "content": "# 引数名は自由につけられる！\\n\\n`*args` の「args」の部分は、好きな名前に変えてOKです。\\n\\n大事なのは **「*」（アスタリスク）** をつけることです！\\n\\n**例：** みんなにあいさつしよう！\\n\\n```python\\ndef greet(*names):\\n    for name in names:\\n        print(f'Hello, {name}!')\\n\\ngreet('Alice', 'Bob', 'Charlie')\\n```\\n=> Hello, Alice!\\n=> Hello, Bob!\\n=> Hello, Charlie!\\n\\n**何をしているか：**\\n1. `greet('Alice', 'Bob', 'Charlie')` で3人の名前を渡す\\n2. `*names` で全ての名前をまとめて受け取る\\n3. `for` ループで1人ずつあいさつする\\n\\n**使いどころ：** 引数の数が決まっていない関数を作りたいとき！"
         }
       ],
-      "correctCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef find_max(*args):\\n    # 最大値を最初の引数で初期化\\n    max_val = args[0]\\n    # 渡された全ての引数をループで処理\\n    for n in args:\\n        # より大きい値があれば更新\\n        if n > max_val:\\n            max_val = n\\n    # 最終的な最大値を返す\\n    return max_val\\n\\n# find_max(3, 7, 2, 9, 5)の結果を表示\\nprint(find_max(3, 7, 2, 9, 5))",
-      "holeyCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef ___(*___):\\n    # 最大値を最初の引数で初期化\\n    ___ = ___[___]\\n    # 渡された全ての引数をループで処理\\n    for ___ in ___:\\n        # より大きい値があれば更新\\n        if ___ ___ ___:\\n            # 値を代入\\n            ___ = ___\\n    # 最終的な最大値を返す\\n    return ___\\n\\n# find_max(3, 7, 2, 9, 5)の結果を表示\\n___(___(3, 7, 2, 9, 5))",
+      "correctCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef find_max(*args):\\n    # 最大値を最初の引数で初期化\\n    max_val = args[0]\\n    # 渡された全ての引数をループで処理\\n    for n in args:\\n        # より大きい値があれば更新\\n        if n > max_val:\\n            max_val = n\\n    # 最終的な最大値を返す\\n    return max_val\\n\\n# find_max関数を引数3, 7, 2, 9, 5で呼び出して表示\\nprint(find_max(3, 7, 2, 9, 5))",
+      "holeyCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef ___(*___):\\n    # 最大値を最初の引数で初期化\\n    ___ = ___[___]\\n    # 渡された全ての引数をループで処理\\n    for ___ in ___:\\n        # より大きい値があれば更新\\n        if ___ ___ ___:\\n            # 値を代入\\n            ___ = ___\\n    # 最終的な最大値を返す\\n    return ___\\n\\n# find_max関数を引数3, 7, 2, 9, 5で呼び出して表示\\n___(___(3, 7, 2, 9, 5))",
       "correctLines": [
           "# 全ての数値から最大値を求めるfind_max関数を定義",
           "def find_max(*args):",
@@ -113,7 +113,7 @@ export const pythonData3 = {
           "    # 最終的な最大値を返す",
           "    return max_val",
           "",
-          "# find_max(3, 7, 2, 9, 5)の結果を表示",
+          "# find_max関数を引数3, 7, 2, 9, 5で呼び出して表示",
           "print(find_max(3, 7, 2, 9, 5))"
         ],
       "lineHints": [
@@ -295,8 +295,8 @@ export const pythonData3 = {
           "content": "# 大量のデータを効率よく処理！\\n\\nリストは全データを **メモリ（コンピュータの記憶場所）** に保持しますが、ジェネレータは **1つずつ作るのでメモリを節約** できます。\\n\\n**例：** 1億個の数を生成しても大丈夫！\\n\\n```python\\ndef big_range(n):\\n    i = 0\\n    while i < n:\\n        yield i\\n        i += 1\\n```\\n\\n**何をしているか：**\\n- `yield i` で値を1つ返す\\n- 次に呼ばれるまで **一時停止**\\n- 次に呼ばれたら `i += 1` して続きを実行\\n\\n**ポイント：**\\n- `return` は関数を終了して値を返す\\n- `yield` は値を返すけど関数は **一時停止** するだけ（終了しない）\\n\\n**使いどころ：** 大量のデータを扱うとき、メモリを節約したいとき！"
         }
       ],
-      "correctCode": "# 偶数を生成するeven_numbersジェネレータ関数を定義\\ndef even_numbers(n):\\n    # 指定された回数ループ\\n    for i in range(n):\\n        # i * 2（偶数）を返す\\n        yield i * 2\\n\\n# even_numbers(4)から値を取り出して表示\\nfor num in even_numbers(4):\\n    # 取り出した値を表示\\n    print(num)",
-      "holeyCode": "# 偶数を生成するeven_numbersジェネレータ関数を定義\\ndef ___(___):\\n    # 指定された回数ループ\\n    for ___ in ___(___):\\n        # i * 2（偶数）を返す\\n        ___ ___ ___ ___\\n\\n# even_numbers(4)から値を取り出して表示\\nfor ___ in ___(___):\\n    # 取り出した値を表示\\n    ___(___)",
+      "correctCode": "# 偶数を生成するeven_numbersジェネレータ関数を定義\\ndef even_numbers(n):\\n    # 指定された回数ループ\\n    for i in range(n):\\n        # i * 2（偶数）を返す\\n        yield i * 2\\n\\n# even_numbers関数を引数4で呼び出してループ\\nfor num in even_numbers(4):\\n    # 取り出した値を表示\\n    print(num)",
+      "holeyCode": "# 偶数を生成するeven_numbersジェネレータ関数を定義\\ndef ___(___):\\n    # 指定された回数ループ\\n    for ___ in ___(___):\\n        # i * 2（偶数）を返す\\n        ___ ___ ___ ___\\n\\n# even_numbers関数を引数4で呼び出してループ\\nfor ___ in ___(___):\\n    # 取り出した値を表示\\n    ___(___)",
       "correctLines": [
           "# 偶数を生成するeven_numbersジェネレータ関数を定義",
           "def even_numbers(n):",
@@ -305,7 +305,7 @@ export const pythonData3 = {
           "        # i * 2（偶数）を返す",
           "        yield i * 2",
           "",
-          "# even_numbers(4)から値を取り出して表示",
+          "# even_numbers関数を引数4で呼び出してループ",
           "for num in even_numbers(4):",
           "    # 取り出した値を表示",
           "    print(num)"

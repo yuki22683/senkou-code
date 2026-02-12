@@ -684,7 +684,7 @@ export const javaData2 = {
           "content": "# データを守る\\n\\n**カプセル化** とは、大事なデータを `private` で隠して、メソッド経由でアクセスする方法です。\\n\\n**たとえ話：** 銀行口座の残高は直接変更できません。必ず「入金」「出金」という手続き（メソッド）を通しますよね。それがカプセル化です。\\n\\n```java\\nclass User {\\n    private String name;  // 直接触れないようにする\\n    \\n    public String getName() {  // 取得用のメソッド\\n        return name;\\n    }\\n}\\n```\\n\\n**メリット：** データを勝手に変更されるのを防げます"
         }
       ],
-      "correctCode": "class Item {\\n    // private でフィールドを隠蔽する\\n    private int price;\\n    \\n    public Item(int p) {\\n        // price に値を代入する\\n        price = p;\\n    }\\n    \\n    public int getPrice() {\\n        // priceを返す\\n        return price;\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // itemにnew Item(100)を代入\\n        Item item = new Item(100);\\n        // item.getPrice()の結果を出力\\n        System.out.println(item.getPrice());\\n    }\\n}", "holeyCode": "// Itemクラスを定義\\nclass ___ {\\n    // private でフィールドを隠蔽する\\n    private ___ ___\\n    ___\\n    // Itemメソッドを定義\\n    public ___(int ___) {\\n        // price に値を代入する\\n        ___ = ___\\n    // ブロックを閉じる\\n    ___\\n    ___\\n    // ゲッターを定義\\n    public ___ ___() {\\n        // priceを返す\\n        return ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Itemクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // itemにnew Item(100)を代入\\n        ___ ___ = new ___(___)___\\n        // item.getPrice()の結果を出力\\n        ___.___.___(___.___())___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "class Item {\\n    // private でフィールドを隠蔽する\\n    private int price;\\n    \\n    public Item(int p) {\\n        // price に値を代入する\\n        price = p;\\n    }\\n    \\n    public int getPrice() {\\n        // priceを返す\\n        return price;\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // itemにnew Item(100)を代入\\n        Item item = new Item(100);\\n        // itemのgetPriceメソッドの結果を出力\\n        System.out.println(item.getPrice());\\n    }\\n}", "holeyCode": "// Itemクラスを定義\\nclass ___ {\\n    // private でフィールドを隠蔽する\\n    private ___ ___\\n    ___\\n    // Itemメソッドを定義\\n    public ___(int ___) {\\n        // price に値を代入する\\n        ___ = ___\\n    // ブロックを閉じる\\n    ___\\n    ___\\n    // ゲッターを定義\\n    public ___ ___() {\\n        // priceを返す\\n        return ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Itemクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // itemにnew Item(100)を代入\\n        ___ ___ = new ___(___)___\\n        // itemのgetPriceメソッドの結果を出力\\n        ___.___.___(___.___())___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "class Item {",
           "    // private でフィールドを隠蔽する",
@@ -705,7 +705,7 @@ export const javaData2 = {
           "    public static void main(String[] args) {",
           "        // itemにnew Item(100)を代入",
           "        Item item = new Item(100);",
-          "        // item.getPrice()の結果を出力",
+          "        // itemのgetPriceメソッドの結果を出力",
           "        System.out.println(item.getPrice());",
           "    }",
           "}"
@@ -747,7 +747,7 @@ export const javaData2 = {
             "void",
             "int"
           ],
-          "others": ["Item", "price", ";", "", "p", "}", "getPrice", "Main", "main", "String", "args", "item", "100", "System", "out", "println", "price;", "p;", "public Item(int p) {", "ce = p;", "// priceを返す", "return price;", "// itemにnew Item(100)を代入", "// item.getPrice()の結果を出力", "System.out.println(item.getPrice());"]
+          "others": ["Item", "price", ";", "", "p", "}", "getPrice", "Main", "main", "String", "args", "item", "100", "System", "out", "println", "price;", "p;", "public Item(int p) {", "ce = p;", "// priceを返す", "return price;", "// itemにnew Item(100)を代入", "// itemのgetPriceメソッドの結果を出力", "System.out.println(item.getPrice());"]
         },
         "testCases": [
           {

@@ -83,7 +83,7 @@ export const c4Data = {
           "content": "# 必ず閉じる理由\\n\\n**なぜファイルを閉じないといけないの？**\\n\\n1. **バッファ**（一時的な保存場所）の内容が実際にファイルに書き込まれる\\n2. **メモリ**が解放される（パソコンの負担が減る）\\n3. 他のプログラムがそのファイルを使えるようになる\\n\\n**身近な例え：**\\n使った本を返さないと、他の人が読めません。また、本を持ったままだと手がふさがってしまいますよね。\\n\\n**超重要！**\\n`fopen` したら、必ず `fclose` で閉じましょう！これはプログラマーの大切なマナーです。"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"データ.txt\", \"w\");\\n    if (fp != NULL) {\\n        fputs(\"Data\\n\", fp);\\n        // fclose(fp)でファイルを閉じる\\n        fclose(fp);\\n        printf(\"Closed\\n\");\\n    }\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 値を代入\\n    ___ *___ = ___(\\\"___\\\", \\\"___\\\");\\n    // 条件分岐\\n    if (___ != ___) {\\n        // fputs(\"Data\\n\", fp)でファイルに書き込む\\n        ___(\\\"___\\n// 文を実行\\n___\\n        // fclose(fp)でファイルを閉じる\\n        ___(___);\\n        // 出力\\n        ___(\\\"___\\n// 文を実行\\n___\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"データ.txt\", \"w\");\\n    if (fp != NULL) {\\n        fputs(\"Data\\n\", fp);\\n        // fclose関数でファイルを閉じる\\n        fclose(fp);\\n        printf(\"Closed\\n\");\\n    }\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 値を代入\\n    ___ *___ = ___(\\\"___\\\", \\\"___\\\");\\n    // 条件分岐\\n    if (___ != ___) {\\n        // fputs(\"Data\\n\", fp)でファイルに書き込む\\n        ___(\\\"___\\n// 文を実行\\n___\\n        // fclose関数でファイルを閉じる\\n        ___(___);\\n        // 出力\\n        ___(\\\"___\\n// 文を実行\\n___\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -91,7 +91,7 @@ export const c4Data = {
           "    FILE *fp = fopen(\"データ.txt\", \"w\");",
           "    if (fp != NULL) {",
           "        fputs(\"Data\\n\", fp);",
-          "        // fclose(fp)でファイルを閉じる",
+          "        // fclose関数でファイルを閉じる",
           "        fclose(fp);",
           "        printf(\"Closed\\n\");",
           "    }",
@@ -199,7 +199,7 @@ export const c4Data = {
           "content": "# バッファオーバーフロー防止\\n\\n**バッファオーバーフロー**とは、「はこ」に入りきらない量のデータを詰め込もうとして、あふれてしまうことです。\\n\\n**身近な例え：**\\nコップに水を入れすぎると、こぼれてしまいますよね。それと同じです。\\n\\n**安全なコードの書き方：**\\n```c\\nchar buf[100];  // 100文字分の「はこ」\\n// sizeof(buf) を使うと安全！\\nfgets(buf, sizeof(buf), fp);\\n// 最大99文字 + '\\0'（終わりの印）を読む\\n```\\n\\n**ポイント：**\\n`sizeof()` を使うと、「はこ」のサイズを自動で計算してくれるので、あふれる心配がありません。"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n#include <string.h>\\n\\nint main() {\\n    char line[100];\\n    FILE *fp = fopen(\"テスト.txt\", \"w\");\\n    fprintf(fp, \"Hello World\\n\");\\n    fclose(fp);\\n    fp = fopen(\"テスト.txt\", \"r\");\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\n    fgets(line, sizeof(line), fp);\\n    line[strcspn(line, \"\\n\")] = 0;\\n    printf(\"%s\\n\", line);\\n    fclose(fp);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___[___];\\n    // 値を代入\\n    ___ *___ = ___(\\\"___\\\", \\\"___\\\");\\n    // 出力\\n    ___(___,  \\\"___\\n// 文を実行\\n___\\n    // 文を実行\\n    ___(___);\\n    // 値を代入\\n    ___ = ___(\\\"___\\\", \\\"___\\\");\\n    // fgets(line, sizeof(line), fp)で1行読み込む\\n    ___(___,  ___(___), ___);\\n    // コードを記述\\n    ___[___(___,  \\\"\\n// 値を代入\\n___\\n    // 出力\\n    ___(\\\"___\\n// 文を実行\\n___\\n    // 文を実行\\n    ___(___);\\n    // 0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n#include <string.h>\\n\\nint main() {\\n    char line[100];\\n    FILE *fp = fopen(\"テスト.txt\", \"w\");\\n    fprintf(fp, \"Hello World\\n\");\\n    fclose(fp);\\n    fp = fopen(\"テスト.txt\", \"r\");\\n    // fgets関数でfpから1行をlineに読み込む\\n    fgets(line, sizeof(line), fp);\\n    line[strcspn(line, \"\\n\")] = 0;\\n    printf(\"%s\\n\", line);\\n    fclose(fp);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___[___];\\n    // 値を代入\\n    ___ *___ = ___(\\\"___\\\", \\\"___\\\");\\n    // 出力\\n    ___(___,  \\\"___\\n// 文を実行\\n___\\n    // 文を実行\\n    ___(___);\\n    // 値を代入\\n    ___ = ___(\\\"___\\\", \\\"___\\\");\\n    // fgets関数でfpから1行をlineに読み込む\\n    ___(___,  ___(___), ___);\\n    // コードを記述\\n    ___[___(___,  \\\"\\n// 値を代入\\n___\\n    // 出力\\n    ___(\\\"___\\n// 文を実行\\n___\\n    // 文を実行\\n    ___(___);\\n    // 0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "#include <string.h>",
@@ -210,7 +210,7 @@ export const c4Data = {
           "    fprintf(fp, \"Hello World\\n\");",
           "    fclose(fp);",
           "    fp = fopen(\"テスト.txt\", \"r\");",
-          "    // fgets(line, sizeof(line), fp)で1行読み込む",
+          "    // fgets関数でfpから1行をlineに読み込む",
           "    fgets(line, sizeof(line), fp);",
           "    line[strcspn(line, \"\\n\")] = 0;",
           "    printf(\"%s\\n\", line);",
@@ -268,14 +268,14 @@ export const c4Data = {
           "content": "# SEEK定数\\n\\n「どこを基準にして移動するか」を指定する定数があります。\\n\\n**3つの基準位置：**\\n```c\\nSEEK_SET  // ファイルの先頭（一番最初）を基準\\nSEEK_CUR  // 現在いる場所（Current）を基準\\nSEEK_END  // ファイルの末尾（一番最後）を基準\\n```\\n\\n**身近な例え：**\\n- `SEEK_SET`: 「本の最初のページから数えて○ページ目」\\n- `SEEK_CUR`: 「今見ているページから○ページ先」\\n- `SEEK_END`: 「本の最後のページから○ページ戻る」\\n\\n**使用例：**\\n`fseek(fp, 0, SEEK_SET)` → ファイルの先頭に戻る"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"pos.txt\", \"w+\");\\n    fputs(\"ABCDEFGHIJ\", fp);\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\n    fseek(fp, 0, SEEK_SET);\\n    printf(\"%c\\n\", fgetc(fp));\\n    fclose(fp);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 値を代入\\n    ___ *___ = ___(\\\"___\\\", \\\"___\\\");\\n    // 文を実行\\n    ___(\\\"___\\\", ___);\\n    // fseek(fp, 0, SEEK_SET)で先頭に移動\\n    ___(___,  ___,  ___);\\n    // 出力\\n    ___(\\\"___\\n// 文を実行\\n___\\n    // 文を実行\\n    ___(___);\\n    // 0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\nint main() {\\n    FILE *fp = fopen(\"pos.txt\", \"w+\");\\n    fputs(\"ABCDEFGHIJ\", fp);\\n    // fseek関数でファイル先頭に移動\\n    fseek(fp, 0, SEEK_SET);\\n    printf(\"%c\\n\", fgetc(fp));\\n    fclose(fp);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 値を代入\\n    ___ *___ = ___(\\\"___\\\", \\\"___\\\");\\n    // 文を実行\\n    ___(\\\"___\\\", ___);\\n    // fseek関数でファイル先頭に移動\\n    ___(___,  ___,  ___);\\n    // 出力\\n    ___(\\\"___\\n// 文を実行\\n___\\n    // 文を実行\\n    ___(___);\\n    // 0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
           "int main() {",
           "    FILE *fp = fopen(\"pos.txt\", \"w+\");",
           "    fputs(\"ABCDEFGHIJ\", fp);",
-          "    // fseek(fp, 0, SEEK_SET)で先頭に移動",
+          "    // fseek関数でファイル先頭に移動",
           "    fseek(fp, 0, SEEK_SET);",
           "    printf(\"%c\\n\", fgetc(fp));",
           "    fclose(fp);",

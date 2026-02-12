@@ -228,12 +228,12 @@ export const php3Data = {
                       "content": "# match は値を返す\\n\\n```php\\n$grade = match(true) {\\n    $score >= 90 => \"A\",\\n    $score >= 80 => \"B\",\\n    default => \"C\"\\n};\\n```\\n\\nbreakが不要で、値を直接返せます。"
               }
       ],
-      "correctCode": "// $gradeに'A'を代入\\n$grade = 'A';\\n// match($grade)で$messageに結果を代入\\n$message = match($grade) {\\n    // 'A'なら'優秀'を返す\\n    'A' => '優秀',\\n    // 'B'なら'良い'を返す\\n    'B' => '良い',\\n    // それ以外なら'もっと頑張って'を返す\\n    default => 'もっと頑張って'\\n};",
-      "holeyCode": "// $gradeに'A'を代入\\n$___ = '___';\\n// match($grade)で$messageに結果を代入\\n$___ = ___(___) {\\n    // 'A'なら'優秀'を返す\\n    '___' ___ '___',\\n    // 'B'なら'良い'を返す\\n    '___' ___ '___',\\n    // それ以外なら'もっと頑張って'を返す\\n    ___ ___ '___'\\n// ブロックを閉じる\\n___",
+      "correctCode": "// $gradeに'A'を代入\\n$grade = 'A';\\n// match式で$gradeを評価し$messageに結果を代入\\n$message = match($grade) {\\n    // 'A'なら'優秀'を返す\\n    'A' => '優秀',\\n    // 'B'なら'良い'を返す\\n    'B' => '良い',\\n    // それ以外なら'もっと頑張って'を返す\\n    default => 'もっと頑張って'\\n};",
+      "holeyCode": "// $gradeに'A'を代入\\n$___ = '___';\\n// match式で$gradeを評価し$messageに結果を代入\\n$___ = ___(___) {\\n    // 'A'なら'優秀'を返す\\n    '___' ___ '___',\\n    // 'B'なら'良い'を返す\\n    '___' ___ '___',\\n    // それ以外なら'もっと頑張って'を返す\\n    ___ ___ '___'\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// $gradeに'A'を代入",
           "$grade = 'A';",
-          "// match($grade)で$messageに結果を代入",
+          "// match式で$gradeを評価し$messageに結果を代入",
           "$message = match($grade) {",
           "    // 'A'なら'優秀'を返す",
           "    'A' => '優秀',",

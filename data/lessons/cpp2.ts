@@ -560,14 +560,14 @@ export const cpp2Data = {
           "content": "# throw で例外を投げる\\n\\n**基本の形：**\\n- `try { }`: エラーが起きるかもしれない処理\\n- `throw`: エラーを「投げる」\\n- `catch { }`: 投げられたエラーを「捕まえる」\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\ntry {\\n    // エラーを投げる\\n    throw \"error!\";\\n} catch (const char* e) {\\n    // 投げられたエラーを捕まえて処理\\n    std::cout << e << std::endl;\\n}\\n```\\n=> \"error!\" と表示されます\\n\\n**ポイント：**\\n- `throw` でエラーを投げると、すぐに `catch` に移動します\\n- `catch` でエラーに対処した後、プログラムは続行できます"
         }
       ],
-      "correctCode": "#include <iostream>\\nint main() {\\n    try {\\n        // throw 404で例外を投げる\\n        throw 404;\\n    // catch(int e)で例外を捕まえる\\n    } catch (int e) {\\n        std::cout << e << std::endl;\\n    }\\n    return 0;\\n}", "holeyCode": "#___ <___>\\nint ___() {\\n    // ブロックを開始\\n    try ___\\n        // throw 404で例外を投げる\\n        throw ___;\\n    // catch(int e)で例外を捕まえる\\n    } catch (int ___) {\\n        // 文を実行\\n        ___::___ << ___ << ___::___;\\n    }\\n    // 0を返す\\n    return ___;\\n}",
+      "correctCode": "#include <iostream>\\nint main() {\\n    try {\\n        // throw 404で例外を投げる\\n        throw 404;\\n    // catchでint型の例外を捕まえる\\n    } catch (int e) {\\n        std::cout << e << std::endl;\\n    }\\n    return 0;\\n}", "holeyCode": "#___ <___>\\nint ___() {\\n    // ブロックを開始\\n    try ___\\n        // throw 404で例外を投げる\\n        throw ___;\\n    // catchでint型の例外を捕まえる\\n    } catch (int ___) {\\n        // 文を実行\\n        ___::___ << ___ << ___::___;\\n    }\\n    // 0を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "int main() {",
           "    try {",
           "        // throw 404で例外を投げる",
           "        throw 404;",
-          "    // catch(int e)で例外を捕まえる",
+          "    // catchでint型の例外を捕まえる",
           "    } catch (int e) {",
           "        std::cout << e << std::endl;",
           "    }",

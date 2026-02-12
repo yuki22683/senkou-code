@@ -57,8 +57,8 @@ export const pythonData4 = {
           "content": "# 親の能力を子供が受け継ぐ！\\n\\n**継承** とは、既存のクラスの機能を **そのまま引き継いで** 新しいクラスを作ることです。\\n\\n現実世界で考えてみましょう：\\n- **親クラス（Animal）** = 動物の基本的な性質\\n- **子クラス（Dog）** = 動物の性質 + 犬特有の性質\\n\\n犬は「動物」なので、動物の機能は全部持っています。でも、犬だけの特別な機能も追加できます！\\n\\n**例：** 動物クラスを継承して犬クラスを作ろう！\\n\\n```python\\nclass Animal:\\n    def speak(self):\\n        print('...')\\n\\nclass Dog(Animal):  # Animalを継承\\n    def speak(self):\\n        print('Woof!')  # 犬専用の鳴き声\\n```\\n\\n**ポイント：** `class Dog(Animal):` の `(Animal)` で「Animalを継承する」という意味になります。"
         }
       ],
-      "correctCode": "# 親クラスVehicleを定義\\nclass Vehicle:\\n    # __init__メソッドを定義\\n    def __init__(self, brand):\\n        # self.brandにbrandを代入\\n        self.brand = brand\\n\\n# Carクラスを定義（Vehicleを継承）\\nclass Car(Vehicle):\\n    # honkメソッドを定義\\n    def honk(self):\\n        # f'{self.brand} car: Beep!'を表示\\n        print(f'{self.brand} car: Beep!')\\n\\n# Car('トヨタ')のインスタンスを作成しcarに代入\\ncar = Car('トヨタ')\\n# carでhonkメソッドを実行してクラクションを鳴らす\\ncar.honk()",
-      "holeyCode": "# 親クラスVehicleを定義\\nclass ___:\\n    # __init__メソッドを定義\\n    def ___(self, ___):\\n        # self.brandにbrandを代入\\n        self.___ = ___\\n___\\n# Carクラスを定義（Vehicleを継承）\\nclass ___(___):\\n    # honkメソッドを定義\\n    def ___(self):\\n        # f'{self.brand} car: Beep!'を表示\\n        ___(f'{self.___} car: Beep!')\\n___\\n# Car('トヨタ')のインスタンスを作成しcarに代入\\n___ = ___('___')\\n# carでhonkメソッドを実行してクラクションを鳴らす\\n___.___()",
+      "correctCode": "# 親クラスVehicleを定義\\nclass Vehicle:\\n    # __init__メソッドを定義\\n    def __init__(self, brand):\\n        # self.brandにbrandを代入\\n        self.brand = brand\\n\\n# Carクラスを定義（Vehicleを継承）\\nclass Car(Vehicle):\\n    # honkメソッドを定義\\n    def honk(self):\\n        # f'{self.brand} car: Beep!'を表示\\n        print(f'{self.brand} car: Beep!')\\n\\n# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入\\ncar = Car('トヨタ')\\n# carでhonkメソッドを実行してクラクションを鳴らす\\ncar.honk()",
+      "holeyCode": "# 親クラスVehicleを定義\\nclass ___:\\n    # __init__メソッドを定義\\n    def ___(self, ___):\\n        # self.brandにbrandを代入\\n        self.___ = ___\\n___\\n# Carクラスを定義（Vehicleを継承）\\nclass ___(___):\\n    # honkメソッドを定義\\n    def ___(self):\\n        # f'{self.brand} car: Beep!'を表示\\n        ___(f'{self.___} car: Beep!')\\n___\\n# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入\\n___ = ___('___')\\n# carでhonkメソッドを実行してクラクションを鳴らす\\n___.___()",
       "correctLines": [
           "# 親クラスVehicleを定義",
           "class Vehicle:",
@@ -74,7 +74,7 @@ export const pythonData4 = {
           "        # f'{self.brand} car: Beep!'を表示",
           "        print(f'{self.brand} car: Beep!')",
           "",
-          "# Car('トヨタ')のインスタンスを作成しcarに代入",
+          "# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入",
           "car = Car('トヨタ')",
           "# carでhonkメソッドを実行してクラクションを鳴らす",
           "car.honk()"

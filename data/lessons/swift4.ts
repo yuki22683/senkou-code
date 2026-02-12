@@ -230,18 +230,18 @@ export const swift4Data = {
           "content": "# 目標\\n\\n配列の最初の要素を返すジェネリック関数を作りましょう。\\n\\n1. `first<T>` という関数を作る\\n2. `[T]` 型の配列を受け取る\\n3. `T?` 型（オプショナル）を返す\\n4. `[10, 20, 30]` で試して `10` と表示"
         }
       ],
-      "correctCode": "// <T>で型パラメータを定義\\nfunc first<T>(_ array: [T]) -> T? {\\n    // array.firstを返す\\n    return array.first\\n}\\n\\n// 数値配列（10、20、30）をnumsに代入\\nlet nums = [10, 20, 30]\\n// first(nums) ?? 0をprintで出力\\nprint(first(nums) ?? 0)",
-      "holeyCode": "// <T>で型パラメータを定義\\nfunc ___<___>(_ ___: [___]) -> ___? {\\n    // array.firstを返す\\n    return ___.___ \\n// ブロックを閉じる\\n___\\n\\n// 数値配列（10、20、30）をnumsに代入\\nlet ___ = [___, ___, ___]\\n// first(nums) ?? 0をprintで出力\\n___(___(___)  ?? ___)",
+      "correctCode": "// <T>で型パラメータを定義\\nfunc first<T>(_ array: [T]) -> T? {\\n    // 配列の最初の要素を返す\\n    return array.first\\n}\\n\\n// 数値配列（10、20、30）をnumsに代入\\nlet nums = [10, 20, 30]\\n// first関数をnumsを引数に呼び出し、nilの場合は0を出力\\nprint(first(nums) ?? 0)",
+      "holeyCode": "// <T>で型パラメータを定義\\nfunc ___<___>(_ ___: [___]) -> ___? {\\n    // 配列の最初の要素を返す\\n    return ___.___ \\n// ブロックを閉じる\\n___\\n\\n// 数値配列（10、20、30）をnumsに代入\\nlet ___ = [___, ___, ___]\\n// first関数をnumsを引数に呼び出し、nilの場合は0を出力\\n___(___(___)  ?? ___)",
       "correctLines": [
           "// <T>で型パラメータを定義",
           "func first<T>(_ array: [T]) -> T? {",
-          "    // array.firstを返す",
+          "    // 配列の最初の要素を返す",
           "    return array.first",
           "}",
           "",
           "// 数値配列（10、20、30）をnumsに代入",
           "let nums = [10, 20, 30]",
-          "// first(nums) ?? 0をprintで出力",
+          "// first関数をnumsを引数に呼び出し、nilの場合は0を出力",
           "print(first(nums) ?? 0)"
         ],
       "lineHints": [

@@ -214,14 +214,14 @@ export const javascriptData5 = {
           "content": "# エラーを捕まえて対処する\\n\\n**try-catch** は、エラーが起きてもプログラムが止まらないようにする仕組みです。\\n\\n**身近なたとえ：**\\nサッカーのゴールキーパーを想像してください。シュートが来たら（エラーが起きたら）キャッチする！\\n\\n**仕組み：**\\n- `try` ... 「試してみる」処理を書く\\n- `catch` ... エラーが起きたときの処理を書く\\n\\n**コード例：**\\n```javascript\\ntry {\\n  throw new Error('Something went wrong');\\n} catch (e) {\\n  console.log(e.message);  // エラーメッセージを表示\\n}\\n```\\n\\n**ポイント：**\\nエラーが起きても catch で処理すれば、プログラムは続行できます！"
         }
       ],
-      "correctCode": "// try ブロックを開始\\ntry {\\n  // JSON.parse でパース\\n  const result = JSON.parse('不正なJSON');\\n// catch(e)でエラーをキャッチ\\n} catch (e) {\\n  // エラーメッセージを出力\\n  console.log('エラー:', e.message);",
-      "holeyCode": "// try ブロックを開始\\n___ {\\n  // JSON.parse でパース\\n  ___ ___ = ___.___('___');\\n// catch(e)でエラーをキャッチ\\n} ___ (___) {\\n  // エラーメッセージを出力\\n  ___.___('___', ___.___);",
+      "correctCode": "// try ブロックを開始\\ntry {\\n  // JSON.parse でパース\\n  const result = JSON.parse('不正なJSON');\\n// catchでエラーをキャッチ\\n} catch (e) {\\n  // エラーメッセージを出力\\n  console.log('エラー:', e.message);",
+      "holeyCode": "// try ブロックを開始\\n___ {\\n  // JSON.parse でパース\\n  ___ ___ = ___.___('___');\\n// catchでエラーをキャッチ\\n} ___ (___) {\\n  // エラーメッセージを出力\\n  ___.___('___', ___.___);",
       "correctLines": [
           "// try ブロックを開始",
           "try {",
           "  // JSON.parse でパース",
           "  const result = JSON.parse('不正なJSON');",
-          "// catch(e)でエラーをキャッチ",
+          "// catchでエラーをキャッチ",
           "} catch (e) {",
           "  // エラーメッセージを出力",
           "  console.log('エラー:', e.message);"
@@ -271,14 +271,14 @@ export const javascriptData5 = {
           "content": "# 必ず実行される処理\\n\\n**finally** は、エラーが起きても起きなくても **必ず** 実行される部分です。\\n\\n**身近なたとえ：**\\n「試合に勝っても負けても、最後に握手する」というルールのようなものです。\\n\\n**使いどころ：**\\n- ファイルを閉じる処理\\n- データベース接続を切る処理\\n- 「お片付け」的な処理\\n\\n**コード例：**\\n```javascript\\ntry {\\n  // 処理を試す\\n} catch (e) {\\n  // エラーがあれば処理\\n} finally {\\n  // 必ずここを通る！\\n}\\n```"
         }
       ],
-      "correctCode": "// process関数を定義\\nfunction process() {\\n  // try ブロック\\n  try {\\n    // console.log('処理中...')を出力\\n    console.log('処理中...');\\n    // throw new Error('エラー！')でエラーを投げる\\n    throw new Error('エラー！');\\n  } catch (e) {\\n    // エラーメッセージを出力\\n    console.log('Caught:', e.message);\\n  // finally で常に実行されるブロック\\n  } finally {\\n    // console.log('クリーンアップ完了')を出力\\n    console.log('クリーンアップ完了');\\n  }\\n}\\n// process関数を呼び出し\\nprocess();",
-      "holeyCode": "// process関数を定義\\n___ ___() {\\n  // try ブロック\\n  ___ {\\n    // console.log('処理中...')を出力\\n    ___.___('___');\\n    // throw new Error('エラー！')でエラーを投げる\\n    ___ new ___('___');\\n  // ブロックを開始\\n  } ___ (___) {\\n    // エラーメッセージを出力\\n    ___.___('___', ___.___)\\n  // finally で常に実行されるブロック\\n  } ___ {\\n    // console.log('クリーンアップ完了')を出力\\n    ___.___('___');\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n// process関数を呼び出し\\n___();",
+      "correctCode": "// process関数を定義\\nfunction process() {\\n  // try ブロック\\n  try {\\n    // '処理中...'を出力\\n    console.log('処理中...');\\n    // throw new Error('エラー！')でエラーを投げる\\n    throw new Error('エラー！');\\n  } catch (e) {\\n    // エラーメッセージを出力\\n    console.log('Caught:', e.message);\\n  // finally で常に実行されるブロック\\n  } finally {\\n    // 'クリーンアップ完了'を出力\\n    console.log('クリーンアップ完了');\\n  }\\n}\\n// process関数を呼び出し\\nprocess();",
+      "holeyCode": "// process関数を定義\\n___ ___() {\\n  // try ブロック\\n  ___ {\\n    // '処理中...'を出力\\n    ___.___('___');\\n    // throw new Error('エラー！')でエラーを投げる\\n    ___ new ___('___');\\n  // ブロックを開始\\n  } ___ (___) {\\n    // エラーメッセージを出力\\n    ___.___('___', ___.___)\\n  // finally で常に実行されるブロック\\n  } ___ {\\n    // 'クリーンアップ完了'を出力\\n    ___.___('___');\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n// process関数を呼び出し\\n___();",
       "correctLines": [
           "// process関数を定義",
           "function process() {",
           "  // try ブロック",
           "  try {",
-          "    // console.log('処理中...')を出力",
+          "    // '処理中...'を出力",
           "    console.log('処理中...');",
           "    // throw new Error('エラー！')でエラーを投げる",
           "    throw new Error('エラー！');",
@@ -287,7 +287,7 @@ export const javascriptData5 = {
           "    console.log('Caught:', e.message);",
           "  // finally で常に実行されるブロック",
           "  } finally {",
-          "    // console.log('クリーンアップ完了')を出力",
+          "    // 'クリーンアップ完了'を出力",
           "    console.log('クリーンアップ完了');",
           "  }",
           "}",
@@ -415,10 +415,10 @@ export const javascriptData5 = {
           "content": "# 絶対に重複しないユニークな値\\n\\n**Symbol** は、世界に一つだけの「印」を作る機能です。\\n\\n**身近なたとえ：**\\n指紋は人それぞれ違いますよね。Symbol も同じで、作るたびに必ず違う値になります。同じ名前で作っても、中身は別物です！\\n\\n**なぜ使う？**\\n- プロパティ名の衝突を避けられる\\n- 「隠し」プロパティを作れる\\n\\n**コード例：**\\n```javascript\\nconst id = Symbol('id');\\nconst obj = {\\n  [id]: 12345  // [id] で Symbol をキーにする\\n};\\nconsole.log(obj[id]);  // 12345\\n```"
         }
       ],
-      "correctCode": "// Symbol('秘密')でsecretを作成\\nconst secret = Symbol('秘密');\\n// userオブジェクトを作成\\nconst user = {\\n  // nameに'太郎'を設定\\n  name: '太郎',\\n  // 秘密キーにパスワードを設定\\n  [secret]: 'パスワード123'\\n};\\n// ユーザー名を出力\\nconsole.log(user.name);\\n// 秘密キーの値を出力\\nconsole.log(user[secret]);",
-      "holeyCode": "// Symbol('秘密')でsecretを作成\\n___ ___ = ___('___');\\n// userオブジェクトを作成\\n___ ___ = {\\n  // nameに'太郎'を設定\\n  ___: '___',\\n  // 秘密キーにパスワードを設定\\n  [___]: '___'\\n};\\n// ユーザー名を出力\\n___.___(___.___);\\n// 秘密キーの値を出力\\n___.___(___[___]);",
+      "correctCode": "// Symbolで'秘密'という説明のsecretを作成\\nconst secret = Symbol('秘密');\\n// userオブジェクトを作成\\nconst user = {\\n  // nameに'太郎'を設定\\n  name: '太郎',\\n  // 秘密キーにパスワードを設定\\n  [secret]: 'パスワード123'\\n};\\n// ユーザー名を出力\\nconsole.log(user.name);\\n// 秘密キーの値を出力\\nconsole.log(user[secret]);",
+      "holeyCode": "// Symbolで'秘密'という説明のsecretを作成\\n___ ___ = ___('___');\\n// userオブジェクトを作成\\n___ ___ = {\\n  // nameに'太郎'を設定\\n  ___: '___',\\n  // 秘密キーにパスワードを設定\\n  [___]: '___'\\n};\\n// ユーザー名を出力\\n___.___(___.___);\\n// 秘密キーの値を出力\\n___.___(___[___]);",
       "correctLines": [
-          "// Symbol('秘密')でsecretを作成",
+          "// Symbolで'秘密'という説明のsecretを作成",
           "const secret = Symbol('秘密');",
           "// userオブジェクトを作成",
           "const user = {",

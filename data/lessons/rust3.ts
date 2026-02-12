@@ -334,7 +334,7 @@ export const rust3Data = {
           "content": "# 簡潔なエラー処理\\n\\n```rust\\n// ? を使わない場合\\nmatch result {\\n    Ok(v) => v,\\n    Err(e) => return Err(e),\\n}\\n\\n// ? を使う\\nresult?\\n```"
         }
       ],
-      "correctCode": "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {\\n    if b == 0 {\\n        Err(\"ゼロ除算エラー\")\\n    } else {\\n        Ok(a / b)\\n    }\\n}\\n\\nfn calc() -> Result<i32, &'static str> {\\n    // divide(aに10, bに2)を呼び出し、?でエラーを伝播\\n    let x = divide(10, 2)?;\\n    Ok(x * 2)\\n}\\n\\nfn main() {\\n    println!(\"{:?}\", calc());\\n}", "holeyCode": "// divide関数を定義\\nfn ___(___: ___, ___: ___) -> ___<___, &'static ___> {\\n    // 条件分岐\\n    if ___ == ___ {\\n        // Err(\"ゼロ除算エラー\")でエラーを返す\\n        ___(\\\"ゼロ除算エラー\\\")\\n    // else分岐\\n    ___ else ___\\n        // Ok(a / b)で成功値を返す\\n        ___(___ / ___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// calc関数を定義\\nfn ___() -> ___<___, &'static ___> {\\n    // divide(aに10, bに2)を呼び出し、?でエラーを伝播\\n    let ___ = ___(___, ___)?;\\n    // Ok(x * 2)で成功値を返す\\n    ___(___ * ___)\\n// ブロックを閉じる\\n___\\n___\\n// main関数を定義\\nfn ___() {\\n    // 出力\\n    ___!(\\\"{:?}\\\", ___());\\n// ブロックを閉じる\\n___",
+      "correctCode": "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {\\n    if b == 0 {\\n        Err(\"ゼロ除算エラー\")\\n    } else {\\n        Ok(a / b)\\n    }\\n}\\n\\nfn calc() -> Result<i32, &'static str> {\\n    // divide関数を引数10と2で呼び出し、?でエラーを伝播\\n    let x = divide(10, 2)?;\\n    Ok(x * 2)\\n}\\n\\nfn main() {\\n    println!(\"{:?}\", calc());\\n}", "holeyCode": "// divide関数を定義\\nfn ___(___: ___, ___: ___) -> ___<___, &'static ___> {\\n    // 条件分岐\\n    if ___ == ___ {\\n        // Err(\"ゼロ除算エラー\")でエラーを返す\\n        ___(\\\"ゼロ除算エラー\\\")\\n    // else分岐\\n    ___ else ___\\n        // Ok(a / b)で成功値を返す\\n        ___(___ / ___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// calc関数を定義\\nfn ___() -> ___<___, &'static ___> {\\n    // divide関数を引数10と2で呼び出し、?でエラーを伝播\\n    let ___ = ___(___, ___)?;\\n    // Ok(x * 2)で成功値を返す\\n    ___(___ * ___)\\n// ブロックを閉じる\\n___\\n___\\n// main関数を定義\\nfn ___() {\\n    // 出力\\n    ___!(\\\"{:?}\\\", ___());\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {",
           "    if b == 0 {",
@@ -345,7 +345,7 @@ export const rust3Data = {
           "}",
           "",
           "fn calc() -> Result<i32, &'static str> {",
-          "    // divide(aに10, bに2)を呼び出し、?でエラーを伝播",
+          "    // divide関数を引数10と2で呼び出し、?でエラーを伝播",
           "    let x = divide(10, 2)?;",
           "    Ok(x * 2)",
           "}",
@@ -446,13 +446,13 @@ export const rust3Data = {
           "content": "# 可変参照\\n\\n```rust\\n// mut が必要\\nlet mut v = Vec::new();\\nv.push(1);\\nv.push(2);\\n```"
         }
       ],
-      "correctCode": "fn main() {\\n    let mut nums = Vec::new();\\n    // push で要素を追加\\n    nums.push(10);\\n    // nums.push(20)を呼び出す\\n    nums.push(20);\\n    println!(\"{:?}\", nums);\\n}", "holeyCode": "// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let mut ___ = ___::___();\\n    // push で要素を追加\\n    ___.___(___);\\n    // nums.push(20)を呼び出す\\n    ___.___(___);\\n    // 出力\\n    ___!(\\\"{:?}\\\", ___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "fn main() {\\n    let mut nums = Vec::new();\\n    // push で要素を追加\\n    nums.push(10);\\n    // pushメソッドで20を追加\\n    nums.push(20);\\n    println!(\"{:?}\", nums);\\n}", "holeyCode": "// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let mut ___ = ___::___();\\n    // push で要素を追加\\n    ___.___(___);\\n    // pushメソッドで20を追加\\n    ___.___(___);\\n    // 出力\\n    ___!(\\\"{:?}\\\", ___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "fn main() {",
           "    let mut nums = Vec::new();",
           "    // push で要素を追加",
           "    nums.push(10);",
-          "    // nums.push(20)を呼び出す",
+          "    // pushメソッドで20を追加",
           "    nums.push(20);",
           "    println!(\"{:?}\", nums);",
           "}"

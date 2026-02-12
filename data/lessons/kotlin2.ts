@@ -245,12 +245,12 @@ export const kotlin2Data = {
           "content": "# 目標\\n\\n数を2倍にするラムダ式を作りましょう。\\n\\n1. `{ n: Int -> n * 2 }` でラムダ式を作る\\n2. 変数 `double` に入れる\\n3. `double(5)` で呼び出すと 10 になる"
         }
       ],
-      "correctCode": "// nを2倍にするdouble関数を定義\\nval double = { n: Int -> n * 2 }\\n// double(5) を出力する\\nprintln(double(5))",
-      "holeyCode": "// nを2倍にするdouble関数を定義\\n___ ___ = { ___: ___ -> ___ * ___ }\\n// double(5) を出力する\\n___(___(___))",
+      "correctCode": "// nを2倍にするdouble関数を定義\\nval double = { n: Int -> n * 2 }\\n// double関数を引数5で呼び出して出力\\nprintln(double(5))",
+      "holeyCode": "// nを2倍にするdouble関数を定義\\n___ ___ = { ___: ___ -> ___ * ___ }\\n// double関数を引数5で呼び出して出力\\n___(___(___))",
       "correctLines": [
           "// nを2倍にするdouble関数を定義",
           "val double = { n: Int -> n * 2 }",
-          "// double(5) を出力する",
+          "// double関数を引数5で呼び出して出力",
           "println(double(5))"
         ],
       "lineHints": [
