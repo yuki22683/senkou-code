@@ -12,7 +12,7 @@ export const pythonData2 = {
     },
     {
       "title": "戻り値（return）",
-      "content": "`return` を使うと、関数の中で計算した結果を呼び出し元に「返す」ことができます。\\n\\n```python\\ndef add(a, b):\\n    return a + b\\n\\nresult = add(3, 5) # result に 8 が入る\\n```"
+      "content": "`return` を使うと、関数の中で計算した結果を呼び出し元に「返す」ことができます。\\n\\n```python\\ndef multiply(a, b):\\n    return a * b\\n\\nresult = multiply(3, 5) # result に 15 が入る\\n```"
     },
     {
       "title": "リスト内包表記",
@@ -116,7 +116,7 @@ export const pythonData2 = {
       "tutorialSlides": [
         {
           "title": "戻り値とは？",
-          "content": "# 関数から「答え」を返そう！\\n\\n**戻り値** とは、関数が **「計算した結果」を返してくれる値** のことです。\\n\\nたとえば、電卓に「3 + 5」と入力すると「8」という答えが返ってきますよね。\\n\\nそれと同じで、関数も **答えを返す** ことができるのです！\\n\\n**`return`（リターン）** を使うと、関数の中で作った値を **呼び出した場所に返せます**。\\n\\n```python\\ndef add(a, b):\\n    return a + b\\n\\nresult = add(3, 5)  # result に 8 が入る\\n```"
+          "content": "# 関数から「答え」を返そう！\\n\\n**戻り値** とは、関数が **「計算した結果」を返してくれる値** のことです。\\n\\nたとえば、電卓に「3 × 5」と入力すると「15」という答えが返ってきますよね。\\n\\nそれと同じで、関数も **答えを返す** ことができるのです！\\n\\n**`return`（リターン）** を使うと、関数の中で作った値を **呼び出した場所に返せます**。\\n\\n```python\\ndef multiply(a, b):\\n    return a * b\\n\\nresult = multiply(3, 5)  # result に 15 が入る\\n```"
         },
         {
           "title": "return の使い方",
