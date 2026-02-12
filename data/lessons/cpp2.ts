@@ -405,7 +405,7 @@ export const cpp2Data = {
           "content": "# template<typename T>\\n\\n`template<typename T>`（テンプレート・タイプネーム・ティー）と書くと、`T` が「後から決まる型」を表します。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n// T はどんな型にもなれる\\ntemplate<typename T>\\nT add(T a, T b) {\\n    return a + b;\\n}\\n\\n// 使うとき、型が自動で決まる\\nadd(1, 2);       // T = int として動く\\nadd(1.5, 2.5);   // T = double として動く\\n```\\n\\n**ポイント：**\\n- `T` は「型のための変数」のようなもの\\n- 使われるときに、自動で適切な型に置き換わります\\n- 同じコードで、いろいろな型に対応できます！"
         }
       ],
-      "correctCode": "#include <iostream>\\n// 型パラメータTを定義\\ntemplate<typename T>\\nT bigger(T a, T b) {\\n    if (a > b) return a;\\n    return b;\\n}\\nint main() {\\n    // bigger関数を呼び出し（第1引数に3, 第2引数に7）\\n    std::cout << bigger(3, 7) << std::endl;\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n// 型パラメータTを定義\\ntemplate<typename ___>\\n// ブロックを開始\\n___ ___(___  ___, ___ ___) {\\n    // 文を実行\\n    if (___ > ___) return ___;\\n    // bを返す\\n    return ___;\\n}\\n// ブロックを開始\\nint ___() {\\n    // bigger関数を呼び出し（第1引数に3, 第2引数に7）\\n    ___::___ << ___(___, ___) << ___::___;\\n    // bを返す\\n    return ___;\\n}",
+      "correctCode": "#include <iostream>\\n// 型パラメータTを定義\\ntemplate<typename T>\\nT bigger(T a, T b) {\\n    if (a > b) return a;\\n    return b;\\n}\\nint main() {\\n    // bigger関数（第1引数に3, 第2引数に7）を呼び出す\\n    std::cout << bigger(3, 7) << std::endl;\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n// 型パラメータTを定義\\ntemplate<typename ___>\\n// ブロックを開始\\n___ ___(___  ___, ___ ___) {\\n    // 文を実行\\n    if (___ > ___) return ___;\\n    // bを返す\\n    return ___;\\n}\\n// ブロックを開始\\nint ___() {\\n    // bigger関数（第1引数に3, 第2引数に7）を呼び出す\\n    ___::___ << ___(___, ___) << ___::___;\\n    // bを返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "// 型パラメータTを定義",
@@ -415,7 +415,7 @@ export const cpp2Data = {
           "    return b;",
           "}",
           "int main() {",
-          "    // bigger関数を呼び出し（第1引数に3, 第2引数に7）",
+          "    // bigger関数（第1引数に3, 第2引数に7）を呼び出す",
           "    std::cout << bigger(3, 7) << std::endl;",
           "    return 0;",
           "}"
@@ -438,7 +438,7 @@ export const cpp2Data = {
           "variables": [
             "T"
           ],
-          "others": ["bigger", "b", "a", "}", "main", "3", "7", "0", "#include <iostream>", "#include <iostream>", "}", "std", "cout", "endl", "if", "b) return a;", "er関数を呼び出し（第1引数に3, 第2引数に7）"]
+          "others": ["bigger", "b", "a", "}", "main", "3", "7", "0", "#include <iostream>", "#include <iostream>", "}", "std", "cout", "endl", "if", "b) return a;", "er関数（第1引数に3, 第2引数に7）を呼び出す"]
         },
         "testCases": [
           {

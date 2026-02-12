@@ -77,7 +77,7 @@ export const c3Data = {
           "content": "# 柔軟な処理\\n\\n```c\\nvoid print(int x) { printf(\"%d \", x); }\\n\\nint arr[] = {1, 2, 3};\\nprocess(arr, 3, print);  // 1 2 3\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n\\nvoid apply(int n, void (*f)(int)) {\\n    // 引数で受け取った関数ポインタを呼び出す\\n    f(n);\\n}\\n\\nvoid show(int x) {\\n    printf(\"Value: %d\\n\", x);\\n}\\n\\nint main() {\\n    // apply関数を呼び出し（第1引数に42, 第2引数にshow）\\n    apply(42, show);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___(___ ___, ___ (*___)(___)) {\\n    // 引数で受け取った関数ポインタを呼び出す\\n    ___(___);\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___(___ ___) {\\n    // 出力\\n    ___(\\\"___\\n// 文を実行\\n\\\", ___);\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // apply関数を呼び出し（第1引数に42, 第2引数にshow）\\n    ___(___, ___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n\\nvoid apply(int n, void (*f)(int)) {\\n    // 引数で受け取った関数ポインタを呼び出す\\n    f(n);\\n}\\n\\nvoid show(int x) {\\n    printf(\"Value: %d\\n\", x);\\n}\\n\\nint main() {\\n    // apply関数（第1引数に42, 第2引数にshow）を呼び出す\\n    apply(42, show);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n___\\n// ブロックを開始\\n___ ___(___ ___, ___ (*___)(___)) {\\n    // 引数で受け取った関数ポインタを呼び出す\\n    ___(___);\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___(___ ___) {\\n    // 出力\\n    ___(\\\"___\\n// 文を実行\\n\\\", ___);\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // apply関数（第1引数に42, 第2引数にshow）を呼び出す\\n    ___(___, ___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "",
@@ -91,7 +91,7 @@ export const c3Data = {
           "}",
           "",
           "int main() {",
-          "    // apply関数を呼び出し（第1引数に42, 第2引数にshow）",
+          "    // apply関数（第1引数に42, 第2引数にshow）を呼び出す",
           "    apply(42, show);",
           "    return 0;",
           "}"

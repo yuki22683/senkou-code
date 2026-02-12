@@ -566,7 +566,7 @@ export const cpp4Data = {
           "content": "# noexcept をつけると何が良いの？\\n\\n`noexcept` には2つの大きなメリットがあります。\\n\\n**メリット1: プログラムが速くなる**\\n```cpp\\nint add(int a, int b) noexcept {\\n    return a + b;\\n}\\n// コンパイラが「例外処理のコード」を省略できる → 速い！\\n```\\n\\n**メリット2: ムーブが安全に使える**\\n```cpp\\nclass MyClass {\\npublic:\\n    // noexcept をつけると、vectorなどで効率的に使われる\\n    MyClass(MyClass&&) noexcept = default;\\n};\\n```\\n\\n**身近な例え：**\\nレストランで「この料理はアレルギー物質を含みません」と保証されていれば、安心して注文できますよね。`noexcept` も同じで、「エラーは起きません」と保証することで、周りのコードが安心して使えます。\\n\\n**使いどころ：**\\n- 単純な計算（足し算、掛け算など）\\n- ムーブコンストラクタ、ムーブ代入演算子"
         }
       ],
-      "correctCode": "#include <iostream>\\nusing namespace std;\\n\\n// add関数をnoexceptで宣言\\nint add(int a, int b) noexcept {\\n    // + で足し算\\n    return a + b;\\n}\\n\\nint main() {\\n    // add関数を呼び出し（第1引数に10, 第2引数に20）\\n    cout << add(10, 20) << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// add関数をnoexceptで宣言\\n___ ___(___) ___ {\\n    // + で足し算\\n    ___ ___ + ___;\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // add関数を呼び出し（第1引数に10, 第2引数に20）\\n    ___ << ___(___) << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <iostream>\\nusing namespace std;\\n\\n// add関数をnoexceptで宣言\\nint add(int a, int b) noexcept {\\n    // + で足し算\\n    return a + b;\\n}\\n\\nint main() {\\n    // add関数（第1引数に10, 第2引数に20）を呼び出す\\n    cout << add(10, 20) << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// add関数をnoexceptで宣言\\n___ ___(___) ___ {\\n    // + で足し算\\n    ___ ___ + ___;\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // add関数（第1引数に10, 第2引数に20）を呼び出す\\n    ___ << ___(___) << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <iostream>",
           "using namespace std;",
@@ -578,7 +578,7 @@ export const cpp4Data = {
           "}",
           "",
           "int main() {",
-          "    // add関数を呼び出し（第1引数に10, 第2引数に20）",
+          "    // add関数（第1引数に10, 第2引数に20）を呼び出す",
           "    cout << add(10, 20) << endl;",
           "    return 0;",
           "}"
@@ -605,7 +605,7 @@ export const cpp4Data = {
             "nothrow",
             "safe"
           ],
-          "others": ["using", "namespace", "std", "int", "add", "int a, int b", "return", "a", "b", "}", "main", "cout", "10, 20", "endl", "0", "#include <iostream>", "using namespace std;", "//", "add関数をnoexceptで宣言", "int add(int a, int b) noexcept {", "return a + b;", "// add関数を呼び出し（第1引数に10, 第2引数に20）", "cout << add(10, 20) << endl;"]
+          "others": ["using", "namespace", "std", "int", "add", "int a, int b", "return", "a", "b", "}", "main", "cout", "10, 20", "endl", "0", "#include <iostream>", "using namespace std;", "//", "add関数をnoexceptで宣言", "int add(int a, int b) noexcept {", "return a + b;", "// add関数（第1引数に10, 第2引数に20）を呼び出す", "cout << add(10, 20) << endl;"]
         },
         "testCases": [
           {

@@ -292,8 +292,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\n2つの値のうち大きい方を返す関数を作りましょう。\\n\\n1. `maximum<T: Comparable>` という関数を作る\\n2. 2つの引数 `a` と `b` を受け取る\\n3. `a > b` なら `a` を、そうでなければ `b` を返す\\n4. `maximum(5, 3)` で `5` と表示"
         }
       ],
-      "correctCode": "// Comparableで比較可能な型に制限\\nfunc maximum<T: Comparable>(_ a: T, _ b: T) -> T {\\n    // 大きい方を返す\\n    return a > b ? a : b\\n}\\n\\n// maximum関数を呼び出し（第1引数に5, 第2引数に3）\\nprint(maximum(5, 3))",
-      "holeyCode": "// Comparableで比較可能な型に制限\\nfunc ___<___: ___>(_ ___: ___, _ ___: ___) -> ___ {\\n    // 大きい方を返す\\n    return ___ > ___ ? ___ : ___\\n// ブロックを閉じる\\n___\\n\\n// maximum関数を呼び出し（第1引数に5, 第2引数に3）\\n___(___(___, ___))",
+      "correctCode": "// Comparableで比較可能な型に制限\\nfunc maximum<T: Comparable>(_ a: T, _ b: T) -> T {\\n    // 大きい方を返す\\n    return a > b ? a : b\\n}\\n\\n// maximum関数（第1引数に5, 第2引数に3）を呼び出す\\nprint(maximum(5, 3))",
+      "holeyCode": "// Comparableで比較可能な型に制限\\nfunc ___<___: ___>(_ ___: ___, _ ___: ___) -> ___ {\\n    // 大きい方を返す\\n    return ___ > ___ ? ___ : ___\\n// ブロックを閉じる\\n___\\n\\n// maximum関数（第1引数に5, 第2引数に3）を呼び出す\\n___(___(___, ___))",
       "correctLines": [
           "// Comparableで比較可能な型に制限",
           "func maximum<T: Comparable>(_ a: T, _ b: T) -> T {",
@@ -301,7 +301,7 @@ export const swift4Data = {
           "    return a > b ? a : b",
           "}",
           "",
-          "// maximum関数を呼び出し（第1引数に5, 第2引数に3）",
+          "// maximum関数（第1引数に5, 第2引数に3）を呼び出す",
           "print(maximum(5, 3))"
         ],
       "lineHints": [
@@ -577,8 +577,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\nguardでオプショナルをチェックする関数を作りましょう。\\n\\n1. `check` 関数を作る（引数は `Int?`）\\n2. `guard let` で値を取り出す\\n3. nilなら「nil」と表示してreturn\\n4. 値があれば2倍して表示\\n\\n`check(5)` で `10` と表示されます。"
         }
       ],
-      "correctCode": "// check関数を定義\\nfunc check(_ num: Int?) {\\n    // guardで早期リターン\\n    guard let n = num else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    }\\n    // n * 2を出力\\n    print(n * 2)\\n}\\n\\n// check関数を呼び出し（引数5）\\ncheck(5)",
-      "holeyCode": "// check関数を定義\\nfunc ___(___  ___: ___?) {\\n    // guardで早期リターン\\n    guard let ___ = ___ else {\\n        // nilと出力\\n        ___(\\\"___\\\")\\n        // 早期リターン\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // n * 2を出力\\n    ___(___ * ___)\\n// ブロックを閉じる\\n___\\n\\n// check関数を呼び出し（引数5）\\n___(___)",
+      "correctCode": "// check関数を定義\\nfunc check(_ num: Int?) {\\n    // guardで早期リターン\\n    guard let n = num else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    }\\n    // n * 2を出力\\n    print(n * 2)\\n}\\n\\n// check関数（引数5）を呼び出す\\ncheck(5)",
+      "holeyCode": "// check関数を定義\\nfunc ___(___  ___: ___?) {\\n    // guardで早期リターン\\n    guard let ___ = ___ else {\\n        // nilと出力\\n        ___(\\\"___\\\")\\n        // 早期リターン\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // n * 2を出力\\n    ___(___ * ___)\\n// ブロックを閉じる\\n___\\n\\n// check関数（引数5）を呼び出す\\n___(___)",
       "correctLines": [
           "// check関数を定義",
           "func check(_ num: Int?) {",
@@ -593,7 +593,7 @@ export const swift4Data = {
           "    print(n * 2)",
           "}",
           "",
-          "// check関数を呼び出し（引数5）",
+          "// check関数（引数5）を呼び出す",
           "check(5)"
         ],
       "lineHints": [

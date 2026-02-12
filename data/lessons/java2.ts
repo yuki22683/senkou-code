@@ -614,7 +614,7 @@ export const javaData2 = {
           "content": "# ユーティリティに便利\\n\\n**ユーティリティ**（便利ツール）をまとめるのに使います。みんなで共有する道具箱のようなものです。\\n\\n```java\\nclass Utils {\\n    static String upper(String s) {  // 大文字に変換\\n        return s.toUpperCase();\\n    }\\n}\\n\\nUtils.upper(\"hello\");  // \"HELLO\"\\n```\\n\\n**いつ使う？**\\n- 計算だけするメソッド（足し算、引き算など）\\n- 文字列を変換するメソッド\\n- 共通で使う便利機能"
         }
       ],
-      "correctCode": "class Calculator {\\n    // static multiply()を定義\\n    static int multiply(int a, int b) {\\n        // a * b を返す\\n        return a * b;\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // multiply関数を呼び出し（第1引数に4, 第2引数に5）してresultに代入\\n        int result = Calculator.multiply(4, 5);\\n        // println で出力する\\n        System.out.println(result);\\n    }\\n}", "holeyCode": "// Calculatorクラスを定義\\nclass ___ {\\n    // static multiply()を定義\\n    static ___ ___(int ___, int ___) {\\n        // a * b を返す\\n        return ___ * ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Calculatorクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // multiply関数を呼び出し（第1引数に4, 第2引数に5）\\n        ___ ___ = ___.___(___, ___)___\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "class Calculator {\\n    // static multiply()を定義\\n    static int multiply(int a, int b) {\\n        // a * b を返す\\n        return a * b;\\n    }\\n}\\n\\nclass Main {\\n    public static void main(String[] args) {\\n        // multiply関数（第1引数に4, 第2引数に5）を呼び出してresultに代入\\n        int result = Calculator.multiply(4, 5);\\n        // println で出力する\\n        System.out.println(result);\\n    }\\n}", "holeyCode": "// Calculatorクラスを定義\\nclass ___ {\\n    // static multiply()を定義\\n    static ___ ___(int ___, int ___) {\\n        // a * b を返す\\n        return ___ * ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Calculatorクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // multiply関数（第1引数に4, 第2引数に5）を呼び出してresultに代入\\n        ___ ___ = ___.___(___, ___)___\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "class Calculator {",
           "    // static multiply()を定義",
@@ -626,7 +626,7 @@ export const javaData2 = {
           "",
           "class Main {",
           "    public static void main(String[] args) {",
-          "        // multiply関数を呼び出し（第1引数に4, 第2引数に5）してresultに代入",
+          "        // multiply関数（第1引数に4, 第2引数に5）を呼び出してresultに代入",
           "        int result = Calculator.multiply(4, 5);",
           "        // println で出力する",
           "        System.out.println(result);",
@@ -662,7 +662,7 @@ export const javaData2 = {
             "void",
             "int"
           ],
-          "others": ["Calculator", "multiply", "a", "b", ";", "}", "Main", "main", "String", "args", "result", "4", "5", "System", "out", "println", "b;", "* b を返す", "public static void main(String[] args) {", "// multiply関数を呼び出し（第1引数に4, 第2引数に5）してresultに代入"]
+          "others": ["Calculator", "multiply", "a", "b", ";", "}", "Main", "main", "String", "args", "result", "4", "5", "System", "out", "println", "b;", "* b を返す", "public static void main(String[] args) {", "// multiply関数（第1引数に4, 第2引数に5）を呼び出してresultに代入"]
         },
         "testCases": [
           {
