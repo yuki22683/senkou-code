@@ -70,7 +70,7 @@ export const perlData = {
           "strings": [
             "\"Hello, World!\\n\""
           ],
-          "others": ["\";", "Hello, World!"]
+          "others": ["\";", "Hello, World!", "Hello, World!\\n# 文を実行\\n\";"]
         },
         "testCases": [
           {

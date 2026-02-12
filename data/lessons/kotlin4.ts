@@ -205,7 +205,7 @@ export const kotlin4Data = {
             "private",
             "var"
           ],
-          "others": ["Counter", "count", "0", "increment", "get", "main", "println", "}"]
+          "others": ["Counter", "count", "0", "increment", "get", "main", "println", "}", "// main 関数を定義する", "// 1回目の increment を呼び出す", "// 2回目の increment を呼び出す", "// get を出力する"]
         },
         "testCases": [
           {
@@ -295,7 +295,7 @@ export const kotlin4Data = {
             "fun",
             "by"
           ],
-          "others": ["Config", "value", "Int", "println", "Init", "42", "c", "Created", "main", "}"]
+          "others": ["Config", "value", "Int", "println", "Init", "42", "c", "Created", "main", "}", "// main 関数を定義する", "fun main() {", "val c = Config", "tln(\"Created\")", ".value)"]
         },
         "testCases": [
           {
@@ -381,7 +381,7 @@ export const kotlin4Data = {
             "fun",
             "val"
           ],
-          "others": ["Service", "config", "String", "setup", "c", "s", "main", "println", "\"OK\"", "}"]
+          "others": ["Service", "config", "String", "setup", "c", "s", "main", "println", "\"OK\"", "}", "// main 関数を定義する", "// Service のインスタンスを作成する", "etup", "び出す", "// s", "config を出力する"]
         },
         "testCases": [
           {
@@ -459,7 +459,7 @@ export const kotlin4Data = {
             "in",
             "until"
           ],
-          "others": ["repeat", "times", "Int", "action", "Unit", "i", "0", "main", "3", "println", "it", "}"]
+          "others": ["repeat", "times", "Int", "action", "Unit", "i", "0", "main", "3", "println", "it", "}", "// main 関数を定義する", "fun main() {"]
         },
         "testCases": [
           {
@@ -528,7 +528,7 @@ export const kotlin4Data = {
             "fun",
             "return"
           ],
-          "others": ["T", "typeOf", "String", "simpleName", "Unknown", "main", "println", "typeOf<String>()", "}", "typeOf<String>"]
+          "others": ["T", "typeOf", "String", "simpleName", "Unknown", "main", "println", "typeOf<String>()", "}", "typeOf<String>", "// main 関数を定義する", "// typeOf<String>"]
         },
         "testCases": [
           {
@@ -658,7 +658,7 @@ export const kotlin4Data = {
             "fun",
             "val"
           ],
-          "others": ["main", "result", "hello", "let", "it", "uppercase", "()", "println", "}"]
+          "others": ["main", "result", "hello", "let", "it", "uppercase", "()", "println", "}", "// result を出力する"]
         },
         "testCases": [
           {
@@ -736,7 +736,7 @@ export const kotlin4Data = {
             "fun",
             "val"
           ],
-          "others": ["Config", "host", "String", "port", "Int", "0", "main", "config", "apply", "localhost", "8080", "println", "}"]
+          "others": ["Config", "host", "String", "port", "Int", "0", "main", "config", "apply", "localhost", "8080", "println", "}", "// config を出力する"]
         },
         "testCases": [
           {
@@ -809,7 +809,7 @@ export const kotlin4Data = {
             "typealias",
             "fun"
           ],
-          "others": ["StringList", "List", "String", "printAll", "items", "forEach", "println", "it", "main", "listOf", "\"A\"", "\"B\"", "\"C\"", "}"]
+          "others": ["StringList", "List", "String", "printAll", "items", "forEach", "println", "it", "main", "listOf", "\"A\"", "\"B\"", "\"C\"", "}", "// main 関数を定義する", "// printAll を呼び出す"]
         },
         "testCases": [
           {

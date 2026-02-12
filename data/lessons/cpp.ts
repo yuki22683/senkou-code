@@ -655,14 +655,14 @@ export const cppData = {
           "content": "# 関数の定義\\n\\nやりたいことをひとまとめにして、名前をつけることができます。\\n一度作っておけば、呼び出すだけでいつでも動かせます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n// 「sayHello」という関数を作る（定義する）\\nvoid sayHello() {\\n    std::cout << \"ハロー！\" << std::endl;\\n}\\n\\n// mainの中で呼び出し（使う）\\nsayHello();  // これで「ハロー！」と表示される\\n```\\n\\n**用語解説：**\\n- `void`（ボイド）: 「何も返さない」という意味\\n- `()`: 関数名のあとに必ずつける丸かっこ\\n- `{}`: この中に実行したい処理を書く"
         }
       ],
-      "correctCode": "#include <iostream>\\nvoid greet() {\\n    std::cout << \"こんにちは\" << std::endl;\\n}\\nint main() {\\n    // あいさつ関数を呼び出す\\n    greet();\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 文を実行\\n    ___::___ << ___ << ___::___;\\n// ブロックを閉じる\\n___\\n// ブロックを開始\\n___ ___() {\\n    // あいさつ関数を呼び出す\\n    ___();\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <iostream>\\nvoid greet() {\\n    std::cout << \"こんにちは\" << std::endl;\\n}\\nint main() {\\n    // greet関数を呼び出す\\n    greet();\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 文を実行\\n    ___::___ << ___ << ___::___;\\n// ブロックを閉じる\\n___\\n// ブロックを開始\\n___ ___() {\\n    // greet関数を呼び出す\\n    ___();\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <iostream>",
           "void greet() {",
           "    std::cout << \"こんにちは\" << std::endl;",
           "}",
           "int main() {",
-          "    // あいさつ関数を呼び出す",
+          "    // greet関数を呼び出す",
           "    greet();",
           "    return 0;",
           "}"
@@ -682,7 +682,7 @@ export const cppData = {
           "functions": [
             "greet"
           ],
-          "others": ["}", "main", "0", "\"こんにちは\"", "#include <iostream>", "void", "int", "std", "cout", "endl", "return", "void greet() {", "// あいさつ関数を呼び出す", "return 0;"]
+          "others": ["}", "main", "0", "\"こんにちは\"", "#include <iostream>", "void", "int", "std", "cout", "endl", "return", "void greet() {", "// greet関数を呼び出す", "return 0;"]
         },
         "testCases": [
           {

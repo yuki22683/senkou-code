@@ -324,7 +324,7 @@ export const javascriptData5 = {
             "throw",
             "new"
           ],
-          "others": ["process", "console", "log", "処理中...", "Error", "エラー！", "e", "Caught:", "message", "クリーンアップ完了", "}", ";", "// throw new Error('エラー！')でエラーを投げる", "{", "console.log('Caught:',", ".message", "finally {", "rocess関数を呼び出し"]
+          "others": ["process", "console", "log", "処理中...", "Error", "エラー！", "e", "Caught:", "message", "クリーンアップ完了", "}", ";", "// throw new Error('エラー！')でエラーを投げる", "{", "console.log('Caught:',", ".message", "finally {", "rocess関数を呼び出し", "//", "ラーメッセージを出力", "finally で常に実行されるブロック", "process関数を呼び出し"]
         },
         "testCases": [
           {

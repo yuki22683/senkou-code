@@ -150,7 +150,7 @@ export const c2Data = {
           "variables": [
             "num"
           ],
-          "others": ["include", "stdio.h", "void", "show", "int", "printf", "%d\\n", "}", "main", "25", "return", "0", "%d", "show(25);"]
+          "others": ["include", "stdio.h", "void", "show", "int", "printf", "%d\\n", "}", "main", "25", "return", "0", "%d", "show(25);", "// show関数（引数25）を呼び出す", "return 0;"]
         },
         "testCases": [
           {

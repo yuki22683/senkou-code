@@ -269,7 +269,7 @@ export const cpp2Data = {
           "content": "# : public 親クラス\\n\\n子クラス名の後に `: public 親クラス名` と書きます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n// 親クラス（動物）\\nclass Animal {\\npublic:\\n    void eat() { std::cout << \"eating\" << std::endl; }\\n};\\n\\n// 子クラス（犬）- Animalを継承\\nclass Dog : public Animal {\\n    // 何も書かなくても eat() が使える！\\n};\\n\\nDog d;\\nd.eat();  // \"eating\" と表示される（親から継承した機能）\\n```\\n\\n**ポイント：**\\n子クラスは、親クラスの `public` な機能を自動的に使えるようになります。"
         }
       ],
-      "correctCode": "#include <iostream>\\nclass Vehicle {\\npublic:\\n    void move() {\\n        std::cout << \"移動中\" << std::endl;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass Car : public Vehicle {\\n};\\nint main() {\\n    Car c;\\n    // cでmoveメソッドを実行\\n    c.move();\\n    return 0;\\n}", "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\\n___:\\n    // ブロックを開始\\n    void ___() {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass ___ : public ___ {\\n};\\n// ブロックを開始\\nint ___() {\\n    // 文を実行\\n    ___ ___;\\n    // cでmoveメソッドを実行\\n    ___.___();\\n    // 0を返す\\n    return ___;\\n}",
+      "correctCode": "#include <iostream>\\nclass Vehicle {\\npublic:\\n    void move() {\\n        std::cout << \"移動中\" << std::endl;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass Car : public Vehicle {\\n};\\nint main() {\\n    Car c;\\n    // cのmoveメソッドを呼び出す\\n    c.move();\\n    return 0;\\n}", "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\\n___:\\n    // ブロックを開始\\n    void ___() {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// CarクラスをVehicleから継承\\nclass ___ : public ___ {\\n};\\n// ブロックを開始\\nint ___() {\\n    // 文を実行\\n    ___ ___;\\n    // cのmoveメソッドを呼び出す\\n    ___.___();\\n    // 0を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "class Vehicle {",
@@ -283,7 +283,7 @@ export const cpp2Data = {
           "};",
           "int main() {",
           "    Car c;",
-          "    // cでmoveメソッドを実行",
+          "    // cのmoveメソッドを呼び出す",
           "    c.move();",
           "    return 0;",
           "}"
@@ -383,7 +383,7 @@ export const cpp2Data = {
           "keywords": [
             "virtual"
           ],
-          "others": ["override", "draw", "Shape", "public", "\"shape\"", "}", "};", "Circle", "\"circle\"", "main", "c", "0", "#include <iostream>", "#include <iostream>", "}", "};", "std", "cout", "shape", "endl", "circle", "// virtual draw()を定義", "<< \"shape\" << std::endl;", "id", "erride", ") {", "画メソッドを呼び出す"]
+          "others": ["override", "draw", "Shape", "public", "\"shape\"", "}", "};", "Circle", "\"circle\"", "main", "c", "0", "#include <iostream>", "#include <iostream>", "}", "};", "std", "cout", "shape", "endl", "circle", "// virtual draw()を定義", "<< \"shape\" << std::endl;", "id", "erride", ") {", "画メソッドを呼び出す", "でdrawメソッドを実行して描画"]
         },
         "testCases": [
           {

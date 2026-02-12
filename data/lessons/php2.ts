@@ -151,7 +151,7 @@ export const php2Data = {
           "keywords": [
             "class", "public", "function", "new", "echo"
           ],
-          "others": ["<?php", "?>", "}", "Counter", "count", "c", "this", "cnt", "5", "__construct"]
+          "others": ["<?php", "?>", "}", "Counter", "count", "c", "this", "cnt", "5", "__construct", "// Counterクラスを定義", "//", "_construct($c)でコンストラクタを定義", "// $this->countに$cを代入", "cntにnew Counter(5)を代入", "// $cnt->countを出力", ">"]
         },
         "testCases": [
           {
@@ -215,7 +215,7 @@ export const php2Data = {
           "keywords": [
             "class", "public", "function", "echo", "extends", "new"
           ],
-          "others": ["<?php", "?>", "}", "Vehicle", "move", "Car", "car", "移動中"]
+          "others": ["<?php", "?>", "}", "Vehicle", "move", "Car", "car", "移動中", "// Vehicleクラスを定義", "// '移動中'を出力", "arがVehicleを継承", "// $carにnew Car()を代入", "//", "$car->move()を呼び出し", ">"]
         },
         "testCases": [
           {
@@ -285,7 +285,7 @@ export const php2Data = {
           "keywords": [
             "interface", "class", "public", "function", "implements", "echo", "new"
           ],
-          "others": ["<?php", "?>", "}", "Runner", "run", "Robot", "r", "実行中"]
+          "others": ["<?php", "?>", "}", "Runner", "run", "Robot", "r", "実行中", "// Runnerインターフェースを定義", "class Robot implements Runner {", "echo '実行中';", "new Robot();", "$r->run();"]
         },
         "testCases": [
           {
@@ -333,7 +333,7 @@ export const php2Data = {
           "keywords": [
             "fn"
           ],
-          "others": ["<?php", "?>", "nums", "squared", "array_map", "print_r", "n", "$n", "1", "2", "3"]
+          "others": ["<?php", "?>", "nums", "squared", "array_map", "print_r", "n", "$n", "1", "2", "3", "// 配列を定義（1, 2, 3）", "/", "ay_mapで各要素を変換", "int_rで配列を出力"]
         },
         "testCases": [
           {
@@ -381,7 +381,7 @@ export const php2Data = {
           "keywords": [
             "fn"
           ],
-          "others": ["<?php", "?>", "nums", "result", "array_filter", "print_r", "n", "1", "2", "3", "4", "5"]
+          "others": ["<?php", "?>", "nums", "result", "array_filter", "print_r", "n", "1", "2", "3", "4", "5", "// 数値配列（1〜5）を$numsに代入", "/", "ay_filterで3以上を抽出し$resultに代入", "esultをprint_rで出力"]
         },
         "testCases": [
           {
@@ -425,7 +425,7 @@ export const php2Data = {
           "keywords": [
             "fn", "echo"
           ],
-          "others": ["<?php", "?>", "triple", "n", "3", "7"]
+          "others": ["<?php", "?>", "triple", "n", "3", "7", "// nを3倍にする$triple関数を定義", "/", "hoで出力"]
         },
         "testCases": [
           {
@@ -479,7 +479,7 @@ export const php2Data = {
           "keywords": [
             "try", "throw", "new", "catch", "echo"
           ],
-          "others": ["<?php", "?>", "}", "Exception", "e", "おっと", "キャッチ"]
+          "others": ["<?php", "?>", "}", "Exception", "e", "おっと", "キャッチ", "// tryで例外を発生させる可能性があるコードを囲む", "atchで例外を捕捉", "//", "choで出力"]
         },
         "testCases": [
           {
@@ -543,7 +543,7 @@ export const php2Data = {
           "keywords": [
             "namespace", "class", "public", "function", "echo", "new"
           ],
-          "others": ["<?php", "?>", "}", "App", "Hello", "say", "h", "こんにちは"]
+          "others": ["<?php", "?>", "}", "App", "Hello", "say", "h", "こんにちは", "// namespace Appを宣言", "//", "Helloクラスを定義", "// 'こんにちは'を出力", "hにnew Hello()を代入", "// $h->say()を呼び出し", ">"]
         },
         "testCases": [
           {
@@ -590,7 +590,7 @@ export const php2Data = {
           "operators": [
             "??"
           ],
-          "others": ["<?php", "?>", "value", "null", "デフォルト"]
+          "others": ["<?php", "?>", "value", "null", "デフォルト", "// nullを代入", "/", "でnullの場合のデフォルト値を指定"]
         },
         "testCases": [
           {

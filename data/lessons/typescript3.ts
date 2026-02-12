@@ -138,7 +138,7 @@ export const typescriptData3 = {
             "Partial",
             "Readonly"
           ],
-          "others": ["boolean", "debug", "false", "Options", "}", "log", "init", "opts", "verbose", "true", "console"]
+          "others": ["boolean", "debug", "false", "Options", "}", "log", "init", "opts", "verbose", "true", "console", "定の型", "// 詳細出力設定の型", "function init(opts: Required<Options>) {", ".log", "opts.debug);", "init({ debug: true, verbose: false });"]
         },
         "testCases": [
           {
@@ -202,7 +202,7 @@ export const typescriptData3 = {
             "Omit",
             "Extract"
           ],
-          "others": ["number", "string", "りんご", "name", "Product", "}", "log", "id", "price", "ProductName", "item", "console"]
+          "others": ["number", "string", "りんご", "name", "Product", "}", "log", "id", "price", "ProductName", "item", "console", "// 名前の型", "// 価格の型", "type ProductName = Pick<Product, 'name'>;", "名のみを持つオブジェクト", "const item: ProductName = { name: 'りんご' };", "e.log(item.name);"]
         },
         "testCases": [
           {
@@ -266,7 +266,7 @@ export const typescriptData3 = {
             "Pick",
             "Exclude"
           ],
-          "others": ["number", "string", "アリス", "name", "User", "}", "secret", "1", "log", "id", "SafeUser", "user", "console"]
+          "others": ["number", "string", "アリス", "name", "User", "}", "secret", "1", "log", "id", "SafeUser", "user", "console", "// 名前の型", "// 秘密情報の型", "type SafeUser = Omit<User, 'secret'>;", "cretを除いたユーザー", "const user: SafeUser = { id: 1, name: 'アリス' };", "e.log(user.name);"]
         },
         "testCases": [
           {
@@ -330,7 +330,7 @@ export const typescriptData3 = {
             "Map",
             "Object"
           ],
-          "others": ["100", "80", "りんご", "バナナ", "number", "Prices", "};", "log", "Fruit", "prices", "console"]
+          "others": ["100", "80", "りんご", "バナナ", "number", "Prices", "};", "log", "Fruit", "prices", "console", "// りんごの価格を出力"]
         },
         "testCases": [
           {
@@ -386,7 +386,7 @@ export const typescriptData3 = {
             "Parameters",
             "InstanceType"
           ],
-          "others": ["20", "15", "x", "createPoint", "10", "}", "5", "log", "y", "Point", "p", "console"]
+          "others": ["20", "15", "x", "createPoint", "10", "}", "5", "log", "y", "Point", "p", "console", "ジェクトを返す", "type Point = ReturnType<typeof createPoint>;", "intオブジェクト（x:5、y:15）をpに代入", "const p: Point = { x: 5, y: 15 };", "e.log(p.x + p.y);"]
         },
         "testCases": [
           {
@@ -576,7 +576,7 @@ export const typescriptData3 = {
             "typeof",
             "instanceof"
           ],
-          "others": ["string", "number", "key", "30", "name", "Person", "}", "K", "person", "log", "age", "getProperty", "p", "ボブ", "console"]
+          "others": ["string", "number", "key", "30", "name", "Person", "}", "K", "person", "log", "age", "getProperty", "p", "ボブ", "console", "// 年齢の型", "p[key];", "const person = { name: 'ボブ', age: 30 };", "// 名前を取得して出力"]
         },
         "testCases": [
           {
@@ -644,7 +644,7 @@ export const typescriptData3 = {
             "of",
             "from"
           ],
-          "others": ["string", "number", "localhost", "host", "T", "K", "};", "Config", "}", "log", "Optional", "port", "partial", "console"]
+          "others": ["string", "number", "localhost", "host", "T", "K", "};", "Config", "}", "log", "Optional", "port", "partial", "console", "interface Config {", "ring;", "const partial: Optional<Config> = { host: 'localhost' };", "// ホスト名を出力"]
         },
         "testCases": [
           {

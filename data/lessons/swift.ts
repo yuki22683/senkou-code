@@ -345,7 +345,7 @@ export const swiftData = {
             ">",
             "<"
           ],
-          "others": ["score", "bonus", "70", "0", "80", "10", "print", "}", "{", "\"ボーナス合格！\""]
+          "others": ["score", "bonus", "70", "0", "80", "10", "print", "}", "{", "\"ボーナス合格！\"", "core", "70 && bonus > 0 {"]
         },
         "testCases": [
           {

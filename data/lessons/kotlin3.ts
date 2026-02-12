@@ -246,7 +246,7 @@ export const kotlin3Data = {
             "for",
             "in"
           ],
-          "others": ["repeat", "times", "Int", "action", "Unit", "i", "0", "until", "}", "", "main", "3", "println", "it"]
+          "others": ["repeat", "times", "Int", "action", "Unit", "i", "0", "until", "}", "", "main", "3", "println", "it", "// main 関数を定義する", "// repeat関数（引数3）を呼び出す"]
         },
         "testCases": [
           {
@@ -320,7 +320,7 @@ export const kotlin3Data = {
             "return",
             "is"
           ],
-          "others": ["T", "checkType", "value", "Any", "Boolean", "}", "", "main", "println", "String", "テスト", "Int"]
+          "others": ["T", "checkType", "value", "Any", "Boolean", "}", "", "main", "println", "String", "テスト", "Int", "// main 関数を定義する", "// String 型かチェックする", "// Int 型かチェックする"]
         },
         "testCases": [
           {
@@ -396,7 +396,7 @@ export const kotlin3Data = {
             "also",
             "run"
           ],
-          "others": ["data", "class", "Config", "host", "String", "port", "Int", "0", "", "fun", "main", "val", "cfg", "localhost", "8080", "}", "println"]
+          "others": ["data", "class", "Config", "host", "String", "port", "Int", "0", "", "fun", "main", "val", "cfg", "localhost", "8080", "}", "println", "// cfg を出力する"]
         },
         "testCases": [
           {
@@ -462,7 +462,7 @@ export const kotlin3Data = {
             "apply",
             "let"
           ],
-          "others": ["fun", "main", "val", "num", "42", "also", "println", "Value", "it", "}", "}"]
+          "others": ["fun", "main", "val", "num", "42", "also", "println", "Value", "it", "}", "}", "// num を出力する"]
         },
         "testCases": [
           {
@@ -528,7 +528,7 @@ export const kotlin3Data = {
             "let",
             "with"
           ],
-          "others": ["fun", "main", "val", "result", "Hello", "World", "split", " ", "size", "}", "println"]
+          "others": ["fun", "main", "val", "result", "Hello", "World", "split", " ", "size", "}", "println", "// result を出力する"]
         },
         "testCases": [
           {

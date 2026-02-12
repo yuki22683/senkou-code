@@ -318,7 +318,7 @@ export const php3Data = {
           "operators": [
             "=>"
           ],
-          "others": ["createUser", "$name, $age", "名前", "name", "年齢", "age", "user", "30", "アリス", "}"]
+          "others": ["createUser", "$name, $age", "名前", "name", "年齢", "age", "user", "30", "アリス", "}", "// age, nameの順で名前付き引数を指定"]
         },
         "testCases": [
           {
@@ -389,7 +389,7 @@ export const php3Data = {
             "private",
             "protected"
           ],
-          "others": ["HelloTrait", "sayHello", "Greeter", "こんにちは！", "}", "}"]
+          "others": ["HelloTrait", "sayHello", "Greeter", "こんにちは！", "}", "}", "class Greeter {"]
         },
         "testCases": [
           {

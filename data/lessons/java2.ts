@@ -25,7 +25,7 @@ export const javaData2 = {
           "content": "# 継承した機能\\n\\n子クラスは親クラスのメソッドをそのまま使えます。犬（Dog）は動物（Animal）なので、「食べる」ことができますね！\\n\\n**コード例：**\\n```java\\nDog dog = new Dog();  // 犬を作る\\ndog.eat();   // 親のメソッド → 「食べる」\\ndog.bark();  // 自分のメソッド → 「ワン！」\\n```\\n\\n**ポイント：** 子クラスは親の機能＋自分だけの機能を持てます。Dogは「食べる」も「ほえる」もできます！"
         }
       ],
-      "correctCode": "// Vehicleクラスを定義\\nclass Vehicle {\\n    // ブロックを開始\\n    void move() {\\n        // \\\"\\\"\\n        System.out.println(\\\"Moving\\\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// CarクラスをVehicleを継承して定義\\nclass Car extends Vehicle {\\n    // ブロックを開始\\n    void honk() {\\n        // \\\"\\\"\\n        System.out.println(\\\"Beep!\\\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// Mainクラスを定義\\nclass Main {\\n    // mainメソッドを定義\\n    public static void main(String[] args) {\\n        // cにnew Car()を代入\\n        Car c = new Car();\\n        // cでmoveメソッドを実行\\n        c.move();\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}", "holeyCode": "// Vehicleクラスを定義\\nclass ___ {\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// CarクラスをVehicleを継承して定義\\nclass ___ extends ___ {\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // cにnew Car()を代入\\n        ___ ___ = new ___()___\\n        // cでmoveメソッドを実行\\n        ___.___()___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// Vehicleクラスを定義\\nclass Vehicle {\\n    // ブロックを開始\\n    void move() {\\n        // \\\"\\\"\\n        System.out.println(\\\"Moving\\\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// CarクラスをVehicleを継承して定義\\nclass Car extends Vehicle {\\n    // ブロックを開始\\n    void honk() {\\n        // \\\"\\\"\\n        System.out.println(\\\"Beep!\\\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// Mainクラスを定義\\nclass Main {\\n    // mainメソッドを定義\\n    public static void main(String[] args) {\\n        // cにnew Car()を代入\\n        Car c = new Car();\\n        // cのmoveメソッドを呼び出す\\n        c.move();\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}", "holeyCode": "// Vehicleクラスを定義\\nclass ___ {\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// CarクラスをVehicleを継承して定義\\nclass ___ extends ___ {\\n    // ブロックを開始\\n    void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\nclass ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // cにnew Car()を代入\\n        ___ ___ = new ___()___\\n        // cのmoveメソッドを呼び出す\\n        ___.___()___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Vehicleクラスを定義",
           "class Vehicle {",
@@ -55,7 +55,7 @@ export const javaData2 = {
           "    public static void main(String[] args) {",
           "        // cにnew Car()を代入",
           "        Car c = new Car();",
-          "        // cでmoveメソッドを実行",
+          "        // cのmoveメソッドを呼び出す",
           "        c.move();",
           "    // ブロックを閉じる",
           "    }",

@@ -371,7 +371,7 @@ export const swift3Data = {
             "finally",
             "cleanup"
           ],
-          "others": ["test", "print", "end", "start", "}"]
+          "others": ["test", "print", "end", "start", "}", "// test関数を呼び出し"]
         },
         "testCases": [
           {
@@ -463,7 +463,7 @@ export const swift3Data = {
             "typealias",
             "generic"
           ],
-          "others": ["Stack", "Element", "push", "item", "IntStack", "items", "Int", "append", "s", "10", "print", "}", ""]
+          "others": ["Stack", "Element", "push", "item", "IntStack", "items", "Int", "append", "s", "10", "print", "}", "", "// Stackに準拠", "items配列", "ushメソッドを実装", "var s = IntStack()", "// 要素を追加", "temsを出力"]
         },
         "testCases": [
           {
@@ -547,7 +547,7 @@ export const swift3Data = {
             "throw",
             "error"
           ],
-          "others": ["MyError", "Error", "invalid", "check", "n", "Int", "0", "do", "v", "try", "10", "print", "catch", "エラー", "", "}"]
+          "others": ["MyError", "Error", "invalid", "check", "n", "Int", "0", "do", "v", "try", "10", "print", "catch", "エラー", "", "}", "// do-catchでエラー処理", "を出力", "tch {"]
         },
         "testCases": [
           {
@@ -679,7 +679,7 @@ export const swift3Data = {
             "mutable",
             "var"
           ],
-          "others": ["Counter", "count", "0", "increment", "1", "c", "print", "}", ""]
+          "others": ["Counter", "count", "0", "increment", "1", "c", "print", "}", "", "// インスタンスを作成", "var c = Counter()", "crement()", "print(c", "count)"]
         },
         "testCases": [
           {

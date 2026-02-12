@@ -679,7 +679,7 @@ export const typescriptData = {
             "`こんにちは、${name}`",
             "'TypeScript'"
           ],
-          "others": ["console", "}"]
+          "others": ["console", "}", "// あいさつ関数を'TypeScript'で実行"]
         },
         "testCases": [
           {
@@ -701,15 +701,15 @@ export const typescriptData = {
           "content": "# 何も返さないときは void です\\n\\n結果などを「返さない」関数もあります。画面に文字を表示するだけ、など。\\n\\nそんな関数には、`void`（ボイド）というラベルを貼ります。これは「空っぽ」「何もない」という意味です。\\n\\n## コードで書くとこうなるよ\\n\\n下のコードでは、画面にメッセージを表示するだけで、何も返しません。\\n\\n```typescript\\nfunction logger(text: string): void {\\n    console.log(`LOG: ${text}`);\\n}\\nlogger('処理開始');\\n```\\n**実行結果：** LOG: 処理開始\\n\\n関数名のあとの `: void` が「何も返さないよ」という意味です。"
         }
       ],
-      "correctCode": "// 何も返さないときに使うラベル\\nfunction showDate(): void {\\n    // '今日の日付'と出力\\n    console.log('今日の日付');\\n}\\n// 日付表示関数を実行\\nshowDate();",
-      "holeyCode": "// 何も返さないときに使うラベル\\nfunction ___(): ___ {\\n    // '今日の日付'と出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___\\n// 日付表示関数を実行\\n___();",
+      "correctCode": "// 何も返さないときに使うラベル\\nfunction showDate(): void {\\n    // '今日の日付'と出力\\n    console.log('今日の日付');\\n}\\n// showDate関数を呼び出す\\nshowDate();",
+      "holeyCode": "// 何も返さないときに使うラベル\\nfunction ___(): ___ {\\n    // '今日の日付'と出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___\\n// showDate関数を呼び出す\\n___();",
       "correctLines": [
           "// 何も返さないときに使うラベル",
           "function showDate(): void {",
           "    // '今日の日付'と出力",
           "    console.log('今日の日付');",
           "}",
-          "// 日付表示関数を実行",
+          "// showDate関数を呼び出す",
           "showDate();"
         ],
       "lineHints": [
@@ -730,7 +730,7 @@ export const typescriptData = {
             "void",
             "'今日の日付'"
           ],
-          "others": ["console", "}"]
+          "others": ["console", "}", "// showDate関数を呼び出す"]
         },
         "testCases": [
           {

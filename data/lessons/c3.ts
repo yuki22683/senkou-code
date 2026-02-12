@@ -120,7 +120,7 @@ export const c3Data = {
             "n",
             "x"
           ],
-          "others": ["include", "stdio.h", "void", "int", "apply", "show", "main", "printf", "Value: %d\\n", "42", "return", "0", "}", "Value: %d", "// 引数で受け取った関数ポインタを呼び出す", "void show(int x) {", "printf(\"Value: %d\\n\", x);", "2, show);"]
+          "others": ["include", "stdio.h", "void", "int", "apply", "show", "main", "printf", "Value: %d\\n", "42", "return", "0", "}", "Value: %d", "// 引数で受け取った関数ポインタを呼び出す", "void show(int x) {", "printf(\"Value: %d\\n\", x);", "2, show);", "// apply関数（第1引数に42, 第2引数にshow）を呼び出す", "return 0;"]
         },
         "testCases": [
           {

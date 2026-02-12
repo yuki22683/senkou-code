@@ -117,7 +117,7 @@ export const phpData = {
           "numbers": [
             "10"
           ],
-          "others": ["<?php", "echo", "?>"]
+          "others": ["<?php", "echo", "?>", "// x というはこに 10 を入れる", "/", "の中身を表示する"]
         },
         "testCases": [
           {
@@ -163,7 +163,7 @@ export const phpData = {
           "operators": [
             "+"
           ],
-          "others": ["<?php", "a", "5", "b", "3", "echo", "$a", "?>"]
+          "others": ["<?php", "a", "5", "b", "3", "echo", "$a", "?>", "// はこに数字を入れる", "cho", "+ $b"]
         },
         "testCases": [
           {
@@ -207,7 +207,7 @@ export const phpData = {
             "*",
             "/"
           ],
-          "others": ["<?php", "echo", "10", "3", "?>"]
+          "others": ["<?php", "echo", "10", "3", "?>", "// 10 を 3 で割ったあまりを出力する"]
         },
         "testCases": [
           {
@@ -262,7 +262,7 @@ export const phpData = {
             "50",
             "10"
           ],
-          "others": ["<?php", "score", "echo", "?>"]
+          "others": ["<?php", "score", "echo", "?>", "// scoreに50を入れる", "/", "点プラスする", "score;を表示"]
         },
         "testCases": [
           {
@@ -309,7 +309,7 @@ export const phpData = {
           "strings": [
             "I am $age years old."
           ],
-          "others": ["<?php", "20", "echo", "?>"]
+          "others": ["<?php", "20", "echo", "?>", "// ageに20を入れる", "/", "geを文章に埋め込んで表示する"]
         },
         "testCases": [
           {
@@ -353,7 +353,7 @@ export const phpData = {
           "numbers": [
             "1"
           ],
-          "others": ["<?php", "fruits", "'りんご', 'バナナ'", "echo", "?>"]
+          "others": ["<?php", "fruits", "'りんご', 'バナナ'", "echo", "?>", "// 配列を作る", "/", "のデータを表示する"]
         },
         "testCases": [
           {
@@ -403,7 +403,7 @@ export const phpData = {
           "operators": [
             ">"
           ],
-          "others": ["<?php", "score", "100", "80", "{", "echo", "大変良い", "}", "?>"]
+          "others": ["<?php", "score", "100", "80", "{", "echo", "大変良い", "}", "?>", "// scoreに100を入れる", "/", "大きいか比較", "メッセージ（'大変良い'）"]
         },
         "testCases": [
           {
@@ -464,7 +464,7 @@ export const phpData = {
           "operators": [
             ">="
           ],
-          "others": ["<?php", "age", "18", "20", "{", "echo", "大人", "}", "未成年", "?>"]
+          "others": ["<?php", "age", "18", "20", "{", "echo", "大人", "}", "未成年", "?>", "// ageに18を入れる", "/", "以上かを比較する演算子", "20歳以上のときのメッセージ（'大人'）", "lseで「そうでなければ」", "// それ以外のメッセージ（'未成年'）"]
         },
         "testCases": [
           {
@@ -525,7 +525,7 @@ export const phpData = {
           "strings": [
             "合格"
           ],
-          "others": ["<?php", "score", "{", "echo", "}", "?>"]
+          "others": ["<?php", "score", "{", "echo", "}", "?>", "// scoreに85を入れる", "/", "以上 かつ 100以下 ならメッセージを出す", "合格と出力"]
         },
         "testCases": [
           {
@@ -571,7 +571,7 @@ export const phpData = {
           "keywords": [
             "as"
           ],
-          "others": ["<?php", "nums", "1, 2, 3", "n", "{", "echo", "}", "?>"]
+          "others": ["<?php", "nums", "1, 2, 3", "n", "{", "echo", "}", "?>", "$nums = [1, 2, 3];", "oreach", "ums as $n) {"]
         },
         "testCases": [
           {
@@ -613,7 +613,7 @@ export const phpData = {
           "strings": [
             "名前"
           ],
-          "others": ["<?php", "user", "'名前' => 'アリス'", "echo", "?>"]
+          "others": ["<?php", "user", "'名前' => 'アリス'", "echo", "?>", "$user = ['名前' => 'アリス'];", "cho", "er['名前'"]
         },
         "testCases": [
           {
@@ -635,14 +635,14 @@ export const phpData = {
           "content": "# 関数の定義\\n\\n`function` キーワードを使って関数を作ります。\\n\\n**コード例：**\\n```php\\nfunction sayHello() {\\n    echo \"ヤッホー！\";\\n}\\n\\nsayHello(); // 呼び出し\\n```\\n\\n**何をしているの？**\\n1. `function sayHello()` → 「sayHello」という名前の関数を作る\\n2. `{ }` の中に処理を書く\\n3. `sayHello();` → 関数を呼び出す（名前を呼ぶだけでOK）\\n\\n**ポイント：**\\n- `function` は「機能」という意味\\n- 関数名のあとに `()` をつけて呼び出す\\n- 呼び出すと `{ }` の中の処理が実行される"
         }
       ],
-      "correctCode": "<?php\\n  function greet() {\\n    echo \"こんにちは\";\\n  }\\n  // あいさつ関数を実行\\n  greet();\\n?>",
-      "holeyCode": "// PHPコード開始タグ\\n___\\n  // ブロックを開始\\n  function ___() ___\\n    // 出力\\n    ___ \"___\";\\n  // ブロックを閉じる\\n  ___\\n  // あいさつ関数を実行\\n  ___();\\n// PHPコード終了タグ\\n___",
+      "correctCode": "<?php\\n  function greet() {\\n    echo \"こんにちは\";\\n  }\\n  // greet関数を呼び出す\\n  greet();\\n?>",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n  // ブロックを開始\\n  function ___() ___\\n    // 出力\\n    ___ \"___\";\\n  // ブロックを閉じる\\n  ___\\n  // greet関数を呼び出す\\n  ___();\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "<?php",
           "  function greet() {",
           "    echo \"こんにちは\";",
           "  }",
-          "  // あいさつ関数を実行",
+          "  // greet関数を呼び出す",
           "  greet();",
           "?>"
         ],
@@ -662,7 +662,7 @@ export const phpData = {
           "strings": [
             "こんにちは"
           ],
-          "others": ["<?php", "{", "echo", "}", "?>"]
+          "others": ["<?php", "{", "echo", "}", "?>", "function greet() {", "eet();"]
         },
         "testCases": [
           {

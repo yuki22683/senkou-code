@@ -731,8 +731,8 @@ export const cData = {
           "content": "# 手順をまとめる\\n\\nやりたいことをひとまとめにして、名前をつけることができます。\\n一度作っておけば、呼び出すだけでいつでも動かせます。\\n\\n**実際のコードを見てみましょう：**\\n```c\\n// 「aisatsu」という関数を作る（定義する）\\nvoid aisatsu() {\\n    printf(\"ヤッホー\\n\");\\n}\\n\\n// mainの中で呼ぶ（使う）\\naisatsu();  // これで「ヤッホー」と表示される\\n```\\n\\n**ポイント：**\\n- `void`（ボイド）は「何も返さない」という意味です\\n- 関数名のあとに `()` 丸かっこをつけるのがルールです\\n- `{ }` の中に、やりたい処理を書きます"
         }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// greet関数を定義する\\nvoid greet() {\\n    // Helloと表示する\\n    printf(\"Hello\\n\");\\n}\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // あいさつ関数を呼び出す\\n    greet();\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// greet関数を定義する\\n___ ___() {\\n    // Helloと表示する\\n    ___(\"___\\n// 文を実行\\n___\\n// ブロックを閉じる\\n___\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // あいさつ関数を呼び出す\\n    ___();\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// greet関数を定義する\\nvoid greet() {\\n    // Helloと表示する\\n    printf(\"Hello\\n\");\\n}\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // greet関数を呼び出す\\n    greet();\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
+      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// greet関数を定義する\\n___ ___() {\\n    // Helloと表示する\\n    ___(\"___\\n// 文を実行\\n___\\n// ブロックを閉じる\\n___\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // greet関数を呼び出す\\n    ___();\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 標準入出力ライブラリを読み込む",
           "#include <stdio.h>",
@@ -743,7 +743,7 @@ export const cData = {
           "}",
           "// mainはプログラムのエントリーポイント",
           "int main() {",
-          "    // あいさつ関数を呼び出す",
+          "    // greet関数を呼び出す",
           "    greet();",
           "    // 正常終了を示す0を返す",
           "    return 0;",
@@ -766,7 +766,7 @@ export const cData = {
           ""
         ],
       "candidates": {
-        "others": ["stdio.h", "greet", "0", "printf", "\");", "}", "main", "include", "int", "void", "Hello", "Hello\\n\");", "// mainはプログラムのエントリーポイント", "// あいさつ関数を呼び出す", "// 正常終了を示す0を返す"]
+        "others": ["stdio.h", "greet", "0", "printf", "\");", "}", "main", "include", "int", "void", "Hello", "Hello\\n\");", "// mainはプログラムのエントリーポイント", "// greet関数を呼び出す", "// 正常終了を示す0を返す"]
       },
       "testCases": [
         {

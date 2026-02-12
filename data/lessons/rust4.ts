@@ -172,7 +172,7 @@ export const rust4Data = {
             "cfg",
             "allow"
           ],
-          "others": ["Debug", "User", "name", "String", "age", "u32", "}", "main", "user", "from", "アリス", "30", "println"]
+          "others": ["Debug", "User", "name", "String", "age", "u32", "}", "main", "user", "from", "アリス", "30", "println", "let user = User { name: String::from(\"アリス\"), age: 30 };", "println!(\"{:?}\", user);"]
         },
         "testCases": [
           {
@@ -215,7 +215,7 @@ export const rust4Data = {
             "Rc",
             "Arc"
           ],
-          "others": ["main", "x", "new", "42", "println", "}"]
+          "others": ["main", "x", "new", "42", "println", "}", "// Box::new でヒープに格納", "tln!(\"{}\",", ");"]
         },
         "testCases": [
           {
@@ -265,7 +265,7 @@ export const rust4Data = {
             "copy",
             "from"
           ],
-          "others": ["std", "rc", "Rc", "main", "a", "b", "String", "こんにちは", "println", "}"]
+          "others": ["std", "rc", "Rc", "main", "a", "b", "String", "こんにちは", "println", "}", "fn main() {", "// clone で参照カウントを増やす", "tln!(\"{}", "\", a, b);"]
         },
         "testCases": [
           {
@@ -318,7 +318,7 @@ export const rust4Data = {
             "new",
             "get"
           ],
-          "others": ["std", "collections", "HashMap", "main", "map", "a", "b", "1", "2", "println", "}"]
+          "others": ["std", "collections", "HashMap", "main", "map", "a", "b", "1", "2", "println", "}", "fn main() {", "// insert でキーと値を追加", "rt(\"b\",", ";"]
         },
         "testCases": [
           {
@@ -377,7 +377,7 @@ export const rust4Data = {
             "HashMap",
             "BTreeSet"
           ],
-          "others": ["std", "collections", "main", "set", "new", "insert", "1", "2", "println", "len", "}"]
+          "others": ["std", "collections", "main", "set", "new", "insert", "1", "2", "println", "len", "}", "let mut set = HashSet::new", "rt(1);"]
         },
         "testCases": [
           {
@@ -429,7 +429,7 @@ export const rust4Data = {
             "let",
             "fn"
           ],
-          "others": ["main", "num", "7", "n", "2", "0", "println", "偶数", "_", "奇数", "}"]
+          "others": ["main", "num", "7", "n", "2", "0", "println", "偶数", "_", "奇数", "}", "let num = 7;", "//", "でマッチガードを追加", "=>"]
         },
         "testCases": [
           {
@@ -485,7 +485,7 @@ export const rust4Data = {
             "for",
             "in"
           ],
-          "others": ["doubles", "n", "i32", "Iterator", "Item", "0", "map", "|x|", "x", "2", "}", "main", "3", "println"]
+          "others": ["doubles", "n", "i32", "Iterator", "Item", "0", "map", "|x|", "x", "2", "}", "main", "3", "println", "fn main() {", "for x in doubles(3) {"]
         },
         "testCases": [
           {
@@ -528,7 +528,7 @@ export const rust4Data = {
             "into",
             "to_vec"
           ],
-          "others": ["main", "nums", "Vec", "i32", "1", "5", "println", "}"]
+          "others": ["main", "nums", "Vec", "i32", "1", "5", "println", "}", "// collect で Vec に変換", "tln!(\"{", "}\", nums);"]
         },
         "testCases": [
           {
@@ -576,7 +576,7 @@ export const rust4Data = {
             "indexed",
             "iter"
           ],
-          "others": ["main", "items", "vec", "a", "b", "c", "i", "item", "println", "}"]
+          "others": ["main", "items", "vec", "a", "b", "c", "i", "item", "println", "}", "let items = vec![\"a\", \"b\", \"c\"];", "(i,", "em) in items.iter().enumerate() {"]
         },
         "testCases": [
           {

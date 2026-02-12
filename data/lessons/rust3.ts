@@ -130,7 +130,7 @@ export const rust3Data = {
             "(",
             "["
           ],
-          "others": ["main", "double", "x", "2", "println", "5", "}"]
+          "others": ["main", "double", "x", "2", "println", "5", "}", "// |x| でクロージャの引数を定義", "tln!(\"{}\",", "ble(5));"]
         },
         "testCases": [
           {
@@ -177,7 +177,7 @@ export const rust3Data = {
             "into_iter",
             "iter_mut"
           ],
-          "others": ["main", "nums", "vec", "1", "2", "3", "n", "println", "}"]
+          "others": ["main", "nums", "vec", "1", "2", "3", "n", "println", "}", "let nums = vec![1, 2, 3];", "nums.iter() {"]
         },
         "testCases": [
           {
@@ -222,7 +222,7 @@ export const rust3Data = {
             "filter",
             "fold"
           ],
-          "others": ["main", "nums", "vec", "1", "2", "3", "squared", "Vec", "iter", "x", "collect", "println", "}"]
+          "others": ["main", "nums", "vec", "1", "2", "3", "squared", "Vec", "iter", "x", "collect", "println", "}", "let nums = vec![1, 2, 3];", "squared:", "c<_> = nums.iter().map(|x| x * x).collect();"]
         },
         "testCases": [
           {
@@ -267,7 +267,7 @@ export const rust3Data = {
             "map",
             "find"
           ],
-          "others": ["main", "nums", "vec", "1", "2", "3", "4", "5", "big", "Vec", "iter", "x", "collect", "println", "}"]
+          "others": ["main", "nums", "vec", "1", "2", "3", "4", "5", "big", "Vec", "iter", "x", "collect", "println", "}", "let nums = vec![1, 2, 3, 4, 5];", "big:", "c<_> = nums.iter().filter(|x| **x > 2).collect();"]
         },
         "testCases": [
           {
@@ -312,7 +312,7 @@ export const rust3Data = {
             "reduce",
             "sum"
           ],
-          "others": ["main", "nums", "vec", "1", "2", "3", "4", "product", "iter", "acc", "x", "println", "}"]
+          "others": ["main", "nums", "vec", "1", "2", "3", "4", "product", "iter", "acc", "x", "println", "}", "let nums = vec![1, 2, 3, 4];", "nums.iter().fold(1, |acc, x| acc * x);"]
         },
         "testCases": [
           {
@@ -379,7 +379,7 @@ export const rust3Data = {
             "!",
             "."
           ],
-          "others": ["divide", "a", "i32", "b", "Result", "str", "0", "Err", "Ok", "}", "{", "calc", "10", "2", "x", "main", "println", ""]
+          "others": ["divide", "a", "i32", "b", "Result", "str", "0", "Err", "Ok", "}", "{", "calc", "10", "2", "x", "main", "println", "", "if b == 0 {", "lse", "ivide", "aに10,", "Ok(x * 2)", "fn main() {"]
         },
         "testCases": [
           {
@@ -424,7 +424,7 @@ export const rust3Data = {
             "unwrap",
             "expect"
           ],
-          "others": ["main", "x", "Option", "i32", "None", "value", "42", "println", "}"]
+          "others": ["main", "x", "Option", "i32", "None", "value", "42", "println", "}", "let x: Option<i32> = None;", "value = x.unwrap_or(42);"]
         },
         "testCases": [
           {
@@ -473,7 +473,7 @@ export const rust3Data = {
             "append",
             "add"
           ],
-          "others": ["main", "nums", "Vec", "new", "10", "20", "println", "}"]
+          "others": ["main", "nums", "Vec", "new", "10", "20", "println", "}", "let mut nums = Vec::new", "h(10);"]
         },
         "testCases": [
           {
@@ -518,7 +518,7 @@ export const rust3Data = {
             "to_owned",
             "into"
           ],
-          "others": ["main", "s", "&str", "owned", "String", "println", "}"]
+          "others": ["main", "s", "&str", "owned", "String", "println", "}", "let s: &str = \"こんにちは\";"]
         },
         "testCases": [
           {

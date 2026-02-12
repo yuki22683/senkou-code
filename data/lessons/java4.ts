@@ -384,7 +384,7 @@ export const javaData4 = {
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Main", "main", "String", "args", "List", "words", "new", "ArrayList", "Arrays", "asList", "猫", "a", "elephant", "sort", "Comparator", "comparing", "length", "System", "out", "println", ";", "}", "", "*;", "public class Main {", "rdsに[\"猫\",", "ロパティを基準に比較する", "// println で出力する"]
+          "others": ["java", "util", "*", "Main", "main", "String", "args", "List", "words", "new", "ArrayList", "Arrays", "asList", "猫", "a", "elephant", "sort", "Comparator", "comparing", "length", "System", "out", "println", ";", "}", "", "*;", "public class Main {", "rdsに[\"猫\",", "ロパティを基準に比較する", "// println で出力する", "リスト（猫、a、elephant）をwordsに代入"]
         },
         "testCases": [
           {

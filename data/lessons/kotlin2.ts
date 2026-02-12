@@ -433,7 +433,7 @@ export const kotlin2Data = {
           "keywords": [
             "when", "else"
           ],
-          "others": ["2", "1", "one", "two", "other", "println", "x", "}", "result", "val", "{"]
+          "others": ["2", "1", "one", "two", "other", "println", "x", "}", "result", "val", "{", "// result を出力する"]
         },
         "testCases": [
           {

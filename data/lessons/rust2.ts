@@ -122,7 +122,7 @@ export const rust2Data = {
           "operators": [
             "&"
           ],
-          "others": ["print_len", "s", "String", "println", "len", "}", "main", "text", "from"]
+          "others": ["print_len", "s", "String", "println", "len", "}", "main", "text", "from", "println!", "\"{}\", s.len());", "ain() {", "// & で参照を渡す"]
         },
         "testCases": [
           {
@@ -173,7 +173,7 @@ export const rust2Data = {
           "keywords": [
             "mut"
           ],
-          "others": ["add_world", "s", "String", "push_str", "}", "main", "text", "from", "println", " world", "hello", "world"]
+          "others": ["add_world", "s", "String", "push_str", "}", "main", "text", "from", "println", " world", "hello", "world", "// s.push_str", "\" world\")を呼び出す", "// mut で可変変数にする"]
         },
         "testCases": [
           {
@@ -222,7 +222,7 @@ export const rust2Data = {
           "keywords": [
             "struct"
           ],
-          "others": ["Rect", "width", "height", "i32", "}", "main", "r", "3", "4", "println", ", r"]
+          "others": ["Rect", "width", "height", "i32", "}", "main", "r", "3", "4", "println", ", r", "ain() {", "println!(\"{}\", r.width);"]
         },
         "testCases": [
           {
@@ -279,7 +279,7 @@ export const rust2Data = {
           "keywords": [
             "impl"
           ],
-          "others": ["Square", "side", "i32", "}", "area", "self", "5", "main", "s", "println", ", s"]
+          "others": ["Square", "side", "i32", "}", "area", "self", "5", "main", "s", "println", ", s", "e:", "mpl でメソッドを実装", "fn area(&self) -> i32 {", "{", "tln!(\"{}\", s", "area());"]
         },
         "testCases": [
           {
@@ -334,7 +334,7 @@ export const rust2Data = {
           "keywords": [
             "enum", "match"
           ],
-          "others": ["Direction", "Up", "Down", "}", "main", "d", "println"]
+          "others": ["Direction", "Up", "Down", "}", "main", "d", "println", "ain() {", "match d {", "Direction::Down => println!"]
         },
         "testCases": [
           {
@@ -381,7 +381,7 @@ export const rust2Data = {
           "keywords": [
             "match"
           ],
-          "others": ["main", "val", "Option", "i32", "Some", "42", "n", "println", "None", "}", "{}", "none"]
+          "others": ["main", "val", "Option", "i32", "Some", "42", "n", "println", "None", "}", "{}", "none", "// Some で値があることを示す", "h val {", "ne"]
         },
         "testCases": [
           {
@@ -438,7 +438,7 @@ export const rust2Data = {
           "keywords": [
             "if", "return", "match"
           ],
-          "others": ["half", "n", "i32", "Result", "String", "2", "0", "Err", "to_string", "}", "Ok", "main", "10", "v", "println", "e", "odd", "{}"]
+          "others": ["half", "n", "i32", "Result", "String", "2", "0", "Err", "to_string", "}", "Ok", "main", "10", "v", "println", "e", "odd", "{}", "if n % 2 != 0 {", "ain() {", "v)", "println!(\"{}\", v"]
         },
         "testCases": [
           {
@@ -499,7 +499,7 @@ export const rust2Data = {
           "keywords": [
             "trait", "impl", "for", "struct"
           ],
-          "others": ["Speak", "speak", "self", "}", "Dog", "println", "main", "d"]
+          "others": ["Speak", "speak", "self", "}", "Dog", "println", "main", "d", "impl Speak for Dog {", "println!(\"ワン！\")", "d = Dog;", "eak();"]
         },
         "testCases": [
           {
@@ -546,7 +546,7 @@ export const rust2Data = {
           "variables": [
             "T"
           ],
-          "others": ["print_val", "std", "fmt", "Display", "val", "println", "}", "main", "42"]
+          "others": ["print_val", "std", "fmt", "Display", "val", "println", "}", "main", "42", "print_val(42);"]
         },
         "testCases": [
           {

@@ -449,7 +449,7 @@ export const javascriptData4 = {
             "of",
             "has"
           ],
-          "others": ["memoize", "fn", "cache", "{}", "x", "*", "square", "5", "console", "log", "}", "};", "でオブジェクトにキーが存在するかチェック", "ャッシュに結果を保存", "return cache[x];", "nst square = memoize(x => x * x);", "console.log(square(5));"]
+          "others": ["memoize", "fn", "cache", "{}", "x", "*", "square", "5", "console", "log", "}", "};", "でオブジェクトにキーが存在するかチェック", "ャッシュに結果を保存", "return cache[x];", "nst square = memoize(x => x * x);", "console.log(square(5));", "e.log(square(5));"]
         },
         "testCases": [
           {

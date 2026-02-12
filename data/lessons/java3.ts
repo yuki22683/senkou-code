@@ -185,7 +185,7 @@ export const javaData3 = {
             "stream",
             "forEach"
           ],
-          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "n", "->", "*", "10", "System", "out", "::", "println", "}", "", "out::println);", "public class Main {", "msに[1,", ".map(n -> n * 10)"]
+          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "n", "->", "*", "10", "System", "out", "::", "println", "}", "", "out::println);", "public class Main {", "msに[1,", ".map(n -> n * 10)", "リスト（1,", ")でストリームを作成", "// 各要素を変換するメソッド"]
         },
         "testCases": [
           {
@@ -245,7 +245,7 @@ export const javaData3 = {
             "stream",
             "forEach"
           ],
-          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "4", "5", "n", "->", ">", "System", "out", "::", "println", "}", "", "out::println);", "public class Main {", "msに[1,", ".filter(n -> n > 2)"]
+          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "4", "5", "n", "->", ">", "System", "out", "::", "println", "}", "", "out::println);", "public class Main {", "msに[1,", ".filter(n -> n > 2)", "リスト（1〜5）をnumsに代入"]
         },
         "testCases": [
           {
@@ -373,7 +373,7 @@ export const javaData3 = {
             "stream",
             "println"
           ],
-          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "4", "int", "product", "a", "b", "->", "*", "System", "out", ";", "}", "", "(a", "public class Main {", "msに[1,", "ums.stream", ")", ".reduce(1, (a, b) -> a * b);", "System.out.println(product);"]
+          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "4", "int", "product", "a", "b", "->", "*", "System", "out", ";", "}", "", "(a", "public class Main {", "msに[1,", "ums.stream", ")", ".reduce(1, (a, b) -> a * b);", "System.out.println(product);", "リスト（1〜4）をnumsに代入"]
         },
         "testCases": [
           {
@@ -485,7 +485,7 @@ export const javaData3 = {
             "->",
             "."
           ],
-          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "names", "Arrays", "asList", "アリス", "ボブ", "forEach", "System", "out", "println", "}", "", "out::println", "public class Main {", "mesに[\"アリス\","]
+          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "names", "Arrays", "asList", "アリス", "ボブ", "forEach", "System", "out", "println", "}", "", "out::println", "public class Main {", "mesに[\"アリス\",", "リスト（アリス、ボブ）をnamesに代入"]
         },
         "testCases": [
           {
@@ -545,7 +545,7 @@ export const javaData3 = {
             "stream",
             "forEach"
           ],
-          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "5", "2", "8", "1", "System", "out", "::", "println", "}", "", "out::println);", "public class Main {", "msに[5,", ".sorted()"]
+          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "5", "2", "8", "1", "System", "out", "::", "println", "}", "", "out::println);", "public class Main {", "msに[5,", ".sorted()", "リスト（5,"]
         },
         "testCases": [
           {
@@ -605,7 +605,7 @@ export const javaData3 = {
             "stream",
             "forEach"
           ],
-          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "System", "out", "::", "println", "}", "", "out::println);", "public class Main {", "msに[1,", ".distinct()"]
+          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "System", "out", "::", "println", "}", "", "out::println);", "public class Main {", "msに[1,", ".distinct()", "を含む数値リスト（1,"]
         },
         "testCases": [
           {

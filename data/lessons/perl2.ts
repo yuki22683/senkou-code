@@ -71,7 +71,7 @@ export const perl2Data = {
           "operators": [
             "=~"
           ],
-          "others": ["\"Hello World\";", "print \"found", "$text", "text", "world", "world/i", "i", "}", "\";"]
+          "others": ["\"Hello World\";", "print \"found", "$text", "text", "world", "world/i", "i", "}", "\";", "print \"found\\n# 文を実行\\n\";"]
         },
         "testCases": [
           {
@@ -115,7 +115,7 @@ export const perl2Data = {
           "keywords": [
             "s"
           ],
-          "others": ["\"cat\";", "print \"$text", "text", "cat", "dog", "\";"]
+          "others": ["\"cat\";", "print \"$text", "text", "cat", "dog", "\";", "print \"$text\\n\";"]
         },
         "testCases": [
           {
@@ -241,7 +241,7 @@ export const perl2Data = {
           "keywords": [
             "foreach"
           ],
-          "others": ["(1, 2, 3);", "print \"$n", "nums", "n", "}", "\";"]
+          "others": ["(1, 2, 3);", "print \"$n", "nums", "n", "}", "\";", "print \"$n\\n\";"]
         },
         "testCases": [
           {
@@ -291,7 +291,7 @@ export const perl2Data = {
           "keywords": [
             "sub", "return"
           ],
-          "others": ["shift;", "print", "double", "n", "2", "5", "}", "\";"]
+          "others": ["shift;", "print", "double", "n", "2", "5", "}", "\";", "# printで出力"]
         },
         "testCases": [
           {
@@ -361,7 +361,7 @@ export const perl2Data = {
       "correctLines": [
           "# 無名配列（5, 10, 15の順）を作成しrefに代入",
           "my $ref = [5, 10, 15];",
-          "# printで出力",
+          "# 3番目の要素を出力",
           "print $ref->[2] . \"\\n\";"
         ],
       "lineHints": [
@@ -418,7 +418,7 @@ export const perl2Data = {
           "functions": [
             "map"
           ],
-          "others": ["(1, 2, 3);", "print \"@squared", "nums", "@nums", "squared", "_", "_ }", "_ } @nums", "\";"]
+          "others": ["(1, 2, 3);", "print \"@squared", "nums", "@nums", "squared", "_", "_ }", "_ } @nums", "\";", "print \"@squared\\n\";"]
         },
         "testCases": [
           {
@@ -462,7 +462,7 @@ export const perl2Data = {
           "functions": [
             "grep"
           ],
-          "others": ["(1, 2, 3, 4, 5);", "print \"@result", "nums", "@nums", "result", "_", "3", "3 }", "3 } @nums", "p", "\";"]
+          "others": ["(1, 2, 3, 4, 5);", "print \"@result", "nums", "@nums", "result", "_", "3", "3 }", "3 } @nums", "p", "\";", "print \"@result\\n\";"]
         },
         "testCases": [
           {

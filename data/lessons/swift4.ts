@@ -200,7 +200,7 @@ export const swift4Data = {
             "func",
             "let"
           ],
-          "others": ["Identifiable", "Int", "display", "id", "42", "get", "}", "User", "user", "print", "ID", "()", "{"]
+          "others": ["Identifiable", "Int", "display", "id", "42", "get", "}", "User", "user", "print", "ID", "()", "{", "ルト実装", "// Identifiableに準拠", "let user = User(id: 42)"]
         },
         "testCases": [
           {
@@ -262,7 +262,7 @@ export const swift4Data = {
             "return",
             "let"
           ],
-          "others": ["first", "T", "array", "nums", "10", "20", "30", "0", "print", "}", "??"]
+          "others": ["first", "T", "array", "nums", "10", "20", "30", "0", "print", "}", "??", "irst(nums)", "0をprintで出力"]
         },
         "testCases": [
           {
@@ -412,7 +412,7 @@ export const swift4Data = {
             "Encodable",
             "Decodable"
           ],
-          "others": ["Foundation", "Item", "name", "String", "りんご", "item", "encoder", "JSONEncoder", "data", "encode", "json", "encoding", "utf8", "print", "}", "item),"]
+          "others": ["Foundation", "Item", "name", "String", "りんご", "item", "encoder", "JSONEncoder", "data", "encode", "json", "encoding", "utf8", "print", "}", "item),", "ンコーダを作成", "SONに変換", "g(data: data, encoding:", "utf8) {", "nt(json)"]
         },
         "testCases": [
           {
@@ -486,7 +486,7 @@ export const swift4Data = {
             "return",
             "let"
           ],
-          "others": ["Calculator", "result", "Int", "print", "計算中...", "100", "}", "calc", "()", "{", "result)"]
+          "others": ["Calculator", "result", "Int", "print", "計算中...", "100", "}", "calc", "()", "{", "result)", "// インスタンスを作成", "t(calc.result)"]
         },
         "testCases": [
           {
@@ -621,7 +621,7 @@ export const swift4Data = {
             "else",
             "return"
           ],
-          "others": ["check", "_", "num", "Int", "n", "print", "nil", "2", "5", "}", "*", "um"]
+          "others": ["check", "_", "num", "Int", "n", "print", "nil", "2", "5", "}", "*", "um", "// n * 2を出力", "// check関数（引数5）を呼び出す"]
         },
         "testCases": [
           {
@@ -717,7 +717,7 @@ export const swift4Data = {
             "var",
             "let"
           ],
-          "others": ["Stack", "Element", "push", "_", "item", "IntStack", "items", "Int", "append", "10", "stack", "print", "}", "[]", "items)"]
+          "others": ["Stack", "Element", "push", "_", "item", "IntStack", "items", "Int", "append", "10", "stack", "print", "}", "[]", "items)", "items配列", "ushメソッドを実装", "var stack = IntStack()", "temsを出力"]
         },
         "testCases": [
           {
@@ -780,7 +780,7 @@ export const swift4Data = {
             "return",
             "let"
           ],
-          "others": ["makeCollection", "Collection", "1", "2", "3", "c", "print", "count", "}"]
+          "others": ["makeCollection", "Collection", "1", "2", "3", "c", "print", "count", "}", "素数を出力"]
         },
         "testCases": [
           {

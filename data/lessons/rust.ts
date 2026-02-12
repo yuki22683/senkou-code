@@ -121,7 +121,7 @@ export const rustData = {
             "*",
             "/"
           ],
-          "others": ["main()", "x", "y", "println", "}", "{}"]
+          "others": ["main()", "x", "y", "println", "}", "{}", "5 を入れる", "し算する"]
         },
         "testCases": [
           {
@@ -216,7 +216,7 @@ export const rustData = {
             "*=",
             "/="
           ],
-          "others": ["main()", "hp", "println", "}", "{}"]
+          "others": ["main()", "hp", "println", "}", "{}", "す", "//", "で 50 を引く", "println!(\"{}\","]
         },
         "testCases": [
           {
@@ -269,7 +269,7 @@ export const rustData = {
             ">=",
             "<="
           ],
-          "others": ["main()", "score", "println", "}"]
+          "others": ["main()", "score", "println", "}", "較する", "println!(\"すごい！\");"]
         },
         "testCases": [
           {
@@ -326,7 +326,7 @@ export const rustData = {
             ">=",
             ">"
           ],
-          "others": ["main()", "score", "bonus", "println", "}"]
+          "others": ["main()", "score", "bonus", "println", "}", "方の条件をチェック", "println!(\"ボーナス合格！\");"]
         },
         "testCases": [
           {
@@ -381,7 +381,7 @@ export const rustData = {
           "numbers": [
             "1"
           ],
-          "others": ["main()", "}"]
+          "others": ["main()", "}", "番目のデータ（インデックス1）を出す"]
         },
         "testCases": [
           {
@@ -442,7 +442,7 @@ export const rustData = {
             "オレンジ",
             "{}"
           ],
-          "others": ["std", "collections", "HashMap", "main()", "}"]
+          "others": ["std", "collections", "HashMap", "main()", "}", "ain() {", "nsert(\"みかん\",", "レンジ\");", "println!(\"{}\", colors[\"みかん\"]);"]
         },
         "testCases": [
           {

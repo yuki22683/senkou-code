@@ -345,7 +345,7 @@ export const go3Data = {
             "clone",
             "dup"
           ],
-          "others": ["main", "import", "fmt", "src", "dst", "int", "10", "20", "30", "make", "len", "Println", "dst)", "func", "ain() {", "/ dstにmake", "//", "でスライスをコピー", "fmt.Println(dst)"]
+          "others": ["main", "import", "fmt", "src", "dst", "int", "10", "20", "30", "make", "len", "Println", "dst)", "func", "ain() {", "/ dstにmake", "//", "でスライスをコピー", "fmt.Println(dst)", "srcをdstにコピー（第1引数がdst, 第2引数がsrc）"]
         },
         "testCases": [
           {

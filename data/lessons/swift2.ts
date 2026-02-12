@@ -191,7 +191,7 @@ export const swift2Data = {
           "keywords": [
             "struct"
           ],
-          "others": ["width", "height", "Rect", "Int", "}", "r", "{", "3", "4", "print"]
+          "others": ["width", "height", "Rect", "Int", "}", "r", "{", "3", "4", "print", "// インスタンスを作成", "idthを出力"]
         },
         "testCases": [
           {
@@ -259,7 +259,7 @@ export const swift2Data = {
           "keywords": [
             "class"
           ],
-          "others": ["name", "init", "self", "\"タマ\"", "Cat", "String", "}", "cat", "{", "print", ":", "name:"]
+          "others": ["name", "init", "self", "\"タマ\"", "Cat", "String", "}", "cat", "{", "print", ":", "name:", "let cat = Cat(name: \"タマ\")", "t(cat.name)"]
         },
         "testCases": [
           {
@@ -333,7 +333,7 @@ export const swift2Data = {
           "keywords": [
             "protocol"
           ],
-          "others": ["speak", "Speaker", "\"ワン！\"", "Dog", "}", "print", "d", "{"]
+          "others": ["speak", "Speaker", "\"ワン！\"", "Dog", "}", "print", "d", "{", "// Speakerに準拠", "speakメソッドを実装", "/ ワン！と出力", "ンスタンスを作成", "// speakを呼び出し"]
         },
         "testCases": [
           {
@@ -387,7 +387,7 @@ export const swift2Data = {
           "keywords": [
             "in"
           ],
-          "others": ["*", "double", "2", "}", "5", "n", "Int", "{", "print"]
+          "others": ["*", "double", "2", "}", "5", "n", "Int", "{", "print", "// doubleを呼び出し"]
         },
         "testCases": [
           {
@@ -555,7 +555,7 @@ export const swift2Data = {
           "keywords": [
             "guard", "return"
           ],
-          "others": ["check", "\"nil\"", "n", "_", "val", "Int", "print", "}", "10", "{"]
+          "others": ["check", "\"nil\"", "n", "_", "val", "Int", "print", "}", "10", "{", "// nを出力", "check(10)"]
         },
         "testCases": [
           {
@@ -633,7 +633,7 @@ export const swift2Data = {
           "keywords": [
             "enum"
           ],
-          "others": ["red", "c", "green", "blue", "Color", "}", "print", "{", "\"赤\"", "\"緑\"", "\"青\""]
+          "others": ["red", "c", "green", "blue", "Color", "}", "print", "{", "\"赤\"", "\"緑\"", "\"青\"", "// 赤色をcに代入", "witchでパターンマッチ", "ed:", "int(\"赤\")", "// 緑色を出力"]
         },
         "testCases": [
           {

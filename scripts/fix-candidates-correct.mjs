@@ -287,11 +287,11 @@ for (const file of files) {
         execSync(`npx tsc --noEmit "${tempPath}"`, { stdio: 'pipe' });
         // 成功したら元のファイルを更新
         fs.writeFileSync(filePath, newContent);
-        fs.unlinkSync(tempPath);
+        if (fs.existsSync(tempPath)) fs.unlinkSync(tempPath);
         fileFixed++;
         console.log(`  ✓ ${file} exercise ${i + 1}: added ${missing.length} values`);
       } catch (e) {
-        fs.unlinkSync(tempPath);
+        if (fs.existsSync(tempPath)) fs.unlinkSync(tempPath);
         console.log(`  ✗ ${file} exercise ${i + 1}: syntax error, skipped`);
       }
     }

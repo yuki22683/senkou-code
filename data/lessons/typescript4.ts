@@ -142,7 +142,7 @@ export const typescriptData4 = {
             "else",
             "in"
           ],
-          "others": ["Car", "運転", "void", "Boat", "sail", "operate", "vehicle", "'運転'", "console", "log", "'運転中'", "'航海中'", "}", ""]
+          "others": ["Car", "運転", "void", "Boat", "sail", "operate", "vehicle", "'運転'", "console", "log", "'運転中'", "'航海中'", "}", "", "// in でプロパティの存在をチェック", "車の操作", "else {", "console.log('航海中');", "車を操作"]
         },
         "testCases": [
           {
@@ -224,7 +224,7 @@ export const typescriptData4 = {
             "case",
             "break"
           ],
-          "others": ["Success", "status", "'成功'", "data", "string", "Failure", "'失敗'", "error", "Result", "|", "handle", "result", "void", "console", "log", "'OK'", "}"]
+          "others": ["Success", "status", "'成功'", "data", "string", "Failure", "'失敗'", "error", "Result", "|", "handle", "result", "void", "console", "log", "'OK'", "}", "// status で判別プロパティを使う", "成功':", "sole.log(result.data);", "se '失敗':", "console.log(result.error)", "({ status: '成功', data: 'OK' })"]
         },
         "testCases": [
           {
@@ -306,7 +306,7 @@ export const typescriptData4 = {
             "return",
             "default"
           ],
-          "others": ["Color", "'あか'", "'みどり'", "'あお'", "|", "getHex", "color", "string", "'#ff0000'", "'#00ff00'", "'#0000ff'", "_exhaustive", "never", "}", "console", "log"]
+          "others": ["Color", "'あか'", "'みどり'", "'あお'", "|", "getHex", "color", "string", "'#ff0000'", "'#00ff00'", "'#0000ff'", "_exhaustive", "never", "}", "console", "log", "color) {", "あか': return '#ff0000';", "lt", "const _exhaustive", "_exhaustive;", "あかのカラーコードを出力"]
         },
         "testCases": [
           {
@@ -569,7 +569,7 @@ export const typescriptData4 = {
             "const",
             "typeof"
           ],
-          "others": ["greet", "name", "string", "age", "number", "void", "console", "log", "`", "}", "GreetParams", "Parameters", "args", "'太郎'", "25", "...args"]
+          "others": ["greet", "name", "string", "age", "number", "void", "console", "log", "`", "}", "GreetParams", "Parameters", "args", "'太郎'", "25", "...args", "// テンプレート文字列で出力", "type GreetParams = Parameters<typeof greet>;", "gs: GreetParams = ['太郎', 25];", "...args);"]
         },
         "testCases": [
           {

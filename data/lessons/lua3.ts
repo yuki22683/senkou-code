@@ -127,7 +127,7 @@ export const lua3Data = {
             "raise",
             "fail"
           ],
-          "others": ["ok", "msg", "end", "print", "テスト エラー", "pcall", "match", "caught", "not caught", "and", "or"]
+          "others": ["ok", "msg", "end", "print", "テスト エラー", "pcall", "match", "caught", "not caught", "and", "or", "errorでエラーを発生"]
         },
         "testCases": [
           {
@@ -344,7 +344,7 @@ export const lua3Data = {
             "&",
             "||"
           ],
-          "others": ["a", "b", "print", "Lua", "Script"]
+          "others": ["a", "b", "print", "Lua", "Script", "て出力"]
         },
         "testCases": [
           {

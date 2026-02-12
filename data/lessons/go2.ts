@@ -393,7 +393,7 @@ export const go2Data = {
           "keywords": [
             "interface", "struct", "var"
           ],
-          "others": ["main", "fmt", "Speaker", "Speak", "Dog", "d", "Println", "ワン！", "s", "}", "fmt\"", "aker interface {", "/", "インターフェースのメソッドを呼び出す"]
+          "others": ["main", "fmt", "Speaker", "Speak", "Dog", "d", "Println", "ワン！", "s", "}", "fmt\"", "aker interface {", "/", "インターフェースのメソッドを呼び出す", "s.Speak(", "呼び出す"]
         },
         "testCases": [
           {

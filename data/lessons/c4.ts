@@ -119,7 +119,7 @@ export const c4Data = {
             "fputs",
             "printf"
           ],
-          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "データ.txt", "w", "NULL", "Data", "\", fp);", "Closed", "\");", "}", "0", "FILE *fp = fopen", "puts", "p);", "fclose(fp);"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "データ.txt", "w", "NULL", "Data", "\", fp);", "Closed", "\");", "}", "0", "FILE *fp = fopen", "puts", "p);", "fclose(fp);", "rn 0;"]
         },
         "testCases": [
           {

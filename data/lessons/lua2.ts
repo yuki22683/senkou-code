@@ -244,7 +244,7 @@ export const lua2Data = {
             "function", "return"
           ],
           "numbers": ["2", "5"],
-          "others": ["*", "n", "double", "end", "print"]
+          "others": ["*", "n", "double", "end", "print", "-- double(5)を呼び出す"]
         },
         "testCases": [
           {
@@ -297,7 +297,7 @@ export const lua2Data = {
             "return"
           ],
           "numbers": ["1", "2"],
-          "others": ["swap", "x", "y", "a", "b", "end", "print"]
+          "others": ["swap", "x", "y", "a", "b", "end", "print", "-- swap関数（第1引数に1, 第2引数に2）を呼び出してx, yに代入", "を表示（x", "yの順）"]
         },
         "testCases": [
           {
@@ -348,7 +348,7 @@ export const lua2Data = {
             "self", "function", "return"
           ],
           "numbers": ["5"],
-          "others": ["getX", "obj", "x", "end", "print"]
+          "others": ["getX", "obj", "x", "end", "print", "-- getXを呼び出す"]
         },
         "testCases": [
           {
@@ -454,7 +454,7 @@ export const lua2Data = {
             "return", "function"
           ],
           "numbers": ["5", "10"],
-          "others": ["makeAdder", "+", "n", "x", "end", "add5", "print"]
+          "others": ["makeAdder", "+", "n", "x", "end", "add5", "print", "local add5 = makeAdder(5)", "add5(10))"]
         },
         "testCases": [
           {
@@ -500,7 +500,7 @@ export const lua2Data = {
           "functions": [
             "create", "resume"
           ],
-          "others": ["こんにちは", "coroutine", "co", "print", "end", "function"]
+          "others": ["こんにちは", "coroutine", "co", "print", "end", "function", "-- resumeでコルーチンを実行"]
         },
         "testCases": [
           {

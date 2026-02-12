@@ -716,7 +716,7 @@ export const javaData = {
             "\"name\"",
             "\"たろう\""
           ],
-          "others": ["java", "util", "HashMap", ";", "Main", "main", "String", "args", "user", "System", "out", "println", ")", ");", "new", "}", "}\\", "class Main {", "w", "る", "// get でデータを取り出す"]
+          "others": ["java", "util", "HashMap", ";", "Main", "main", "String", "args", "user", "System", "out", "println", ")", ");", "new", "}", "}\\", "class Main {", "w", "る", "// get でデータを取り出す", "に値「たろう」を追加"]
         },
         "testCases": [
           {
@@ -738,7 +738,7 @@ export const javaData = {
           "content": "# 作り方\\n\\nJavaでメソッドを作るときは、`public static void`（パブリック・スタティック・ボイド）という呪文を使います。今は「おまじない」だと思ってそのまま書きましょう！\\n\\n**コード例：** あいさつするメソッドを作ってみよう\\n```java\\n// メソッドを作る（定義する）\\npublic static void aisatsu() {\\n    System.out.println(\"こんにちは！\");\\n}\\n\\n// メソッドを使う（呼び出す）\\naisatsu();  // 「こんにちは！」と表示される\\n```\\n\\n**ポイント：**\\n- メソッド名のあとに `()` をつけて呼び出します\\n- 同じメソッドを何回でも呼び出せます"
         }
       ],
-      "correctCode": "public class Main {\\n    // greet というメソッドを定義する\\n    public static void greet() {\\n        System.out.println(\"こんにちは\");\\n    }\\n    public static void main(String[] args) {\\n        // あいさつメソッドを呼び出す\\n        greet();\\n    }\\n}", "holeyCode": "// Mainクラスを定義\\npublic class ___ {\\n    // greet というメソッドを定義する\\n    public static void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // あいさつメソッドを呼び出す\\n        ___();\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "public class Main {\\n    // greet というメソッドを定義する\\n    public static void greet() {\\n        System.out.println(\"こんにちは\");\\n    }\\n    public static void main(String[] args) {\\n        // greetメソッドを呼び出す\\n        greet();\\n    }\\n}", "holeyCode": "// Mainクラスを定義\\npublic class ___ {\\n    // greet というメソッドを定義する\\n    public static void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // greetメソッドを呼び出す\\n        ___();\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "public class Main {",
           "    // greet というメソッドを定義する",
@@ -746,7 +746,7 @@ export const javaData = {
           "        System.out.println(\"こんにちは\");",
           "    }",
           "    public static void main(String[] args) {",
-          "        // あいさつメソッドを呼び出す",
+          "        // greetメソッドを呼び出す",
           "        greet();",
           "    }",
           "}"

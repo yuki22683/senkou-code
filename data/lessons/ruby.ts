@@ -681,7 +681,7 @@ export const rubyData = {
           "strings": [
             "こんにちは"
           ],
-          "others": ["puts", "greet", "end"]
+          "others": ["puts", "greet", "end", "# greetを呼び出す"]
         },
         "testCases": [
           {
