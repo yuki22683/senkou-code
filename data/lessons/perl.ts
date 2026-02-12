@@ -506,7 +506,7 @@ export const perlData = {
           "content": "# 目標\\n\\n`'Welcome!'` と表示するサブルーチン `welcome` を作って呼び出しましょう。\\n\\n**手順：**\\n1. `sub welcome { ... }` で定義\\n2. `welcome();` で呼び出し"
         }
       ],
-      "correctCode": "# サブルーチンを定義\\nsub welcome {\\n  # 「Welcome!」を出力\\n  print \"Welcome!\\n\";\\n}\\n\\n# 呼び出し\\nwelcome();",
+      "correctCode": "# サブルーチンを定義\\nsub welcome {\\n  # 「Welcome!」を出力\\n  print \"Welcome!\\n\";\\n}\\n\\n# welcomeサブルーチンを呼び出す\\nwelcome();",
       "holeyCode": "# サブルーチンを定義\\n___ ___ ___\\n  # 「Welcome!」を出力\\n  ___ \"___\\n\";\\n___\\n\\n# 呼び出し\\n___();",
       "correctLines": [
           "# サブルーチンを定義",
@@ -515,7 +515,7 @@ export const perlData = {
           "  print \"Welcome!\\n\";",
           "}",
           "",
-          "# 呼び出し",
+          "# welcomeサブルーチンを呼び出す",
           "welcome();"
         ],
       "lineHints": [

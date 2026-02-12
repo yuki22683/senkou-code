@@ -486,15 +486,15 @@ export const swift3Data = {
         },
         {
           "title": "try と do-catch",
-          "content": "# エラーを受け止める\\n\\n```swift\\ndo {\\n    let result = try divide(10, 0)  // tryで呼び出し\\n    print(result)\\n} catch {\\n    print(\"エラー発生: \\(error)\")  // エラーを処理\\n}\\n```\\n\\n- **try**: 「エラーが起きるかも」と覚悟して呼び出す\\n- **do-catch**: エラーが起きたときの処理を書く"
+          "content": "# エラーを受け止める\\n\\n```swift\\ndo {\\n    let result = try divide(10, 0)  // tryでcheck関数を呼び出す\\n    print(result)\\n} catch {\\n    print(\"エラー発生: \\(error)\")  // エラーを処理\\n}\\n```\\n\\n- **try**: 「エラーが起きるかも」と覚悟して呼び出す\\n- **do-catch**: エラーが起きたときの処理を書く"
         },
         {
           "title": "やってみましょう！",
           "content": "# 目標\\n\\n数が負のときにエラーを投げる関数を作りましょう。\\n\\n1. `MyError` エラー型を定義（invalid case）\\n2. `check` 関数を `throws` で作る\\n3. 負の数なら `throw` でエラー\\n4. `try` と `do-catch` で呼び出す"
         }
       ],
-      "correctCode": "// エラー型を定義\\nenum MyError: Error { case invalid }\\n\\n// throwsでエラーを投げる可能性を示す\\nfunc check(_ n: Int) throws -> Int {\\n    // 負の場合はエラー\\n    if n < 0 { throw MyError.invalid }\\n    // nを返す\\n    return n\\n}\\n\\n// do-catchでエラー処理\\ndo {\\n    // tryで呼び出し\\n    let v = try check(10)\\n    // vを出力\\n    print(v)\\n} catch {\\n    // エラーを出力\\n    print(\"エラー\")\\n}",
-      "holeyCode": "// エラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// throwsでエラーを投げる可能性を示す\\nfunc ___(_ ___: ___) ___ -> ___ {\\n    // 負の場合はエラー\\n    if ___ < ___ { ___ ___.___ }\\n    // nを返す\\n    return ___\\n// ブロックを閉じる\\n___\\n___\\n// do-catchでエラー処理\\n___ {\\n    // tryで呼び出し\\n    let ___ = ___ ___(___)\\n    // vを出力\\n    ___(___)\\n// ブロックを開始\\n} ___ {\\n    // エラーを出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___",
+      "correctCode": "// エラー型を定義\\nenum MyError: Error { case invalid }\\n\\n// throwsでエラーを投げる可能性を示す\\nfunc check(_ n: Int) throws -> Int {\\n    // 負の場合はエラー\\n    if n < 0 { throw MyError.invalid }\\n    // nを返す\\n    return n\\n}\\n\\n// do-catchでエラー処理\\ndo {\\n    // tryでcheck関数を呼び出す\\n    let v = try check(10)\\n    // vを出力\\n    print(v)\\n} catch {\\n    // エラーを出力\\n    print(\"エラー\")\\n}",
+      "holeyCode": "// エラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// throwsでエラーを投げる可能性を示す\\nfunc ___(_ ___: ___) ___ -> ___ {\\n    // 負の場合はエラー\\n    if ___ < ___ { ___ ___.___ }\\n    // nを返す\\n    return ___\\n// ブロックを閉じる\\n___\\n___\\n// do-catchでエラー処理\\n___ {\\n    // tryでcheck関数を呼び出す\\n    let ___ = ___ ___(___)\\n    // vを出力\\n    ___(___)\\n// ブロックを開始\\n} ___ {\\n    // エラーを出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// エラー型を定義",
           "enum MyError: Error { case invalid }",
@@ -509,7 +509,7 @@ export const swift3Data = {
           "",
           "// do-catchでエラー処理",
           "do {",
-          "    // tryで呼び出し",
+          "    // tryでcheck関数を呼び出す",
           "    let v = try check(10)",
           "    // vを出力",
           "    print(v)",

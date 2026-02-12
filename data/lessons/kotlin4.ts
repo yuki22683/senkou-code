@@ -329,8 +329,8 @@ export const kotlin4Data = {
           "content": "# 目標\\n\\nlateinitで後から初期化しましょう。\\n\\n1. `lateinit var config: String` を宣言\\n2. `setup()` 関数で値を設定\\n3. `s.setup(\"OK\")` で \"OK\" を設定\\n4. `s.config` を表示"
         }
       ],
-      "correctCode": "// Service クラスを定義する\\nclass Service {\\n    // configをlateinitで宣言\\n    lateinit var config: String\\n    \\n    // setup 関数を定義する\\n    fun setup(c: String) { config = c }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // Service のインスタンスを作成する\\n    val s = Service()\\n    // setup を呼び出す\\n    s.setup(\"OK\")\\n    // s.config を出力する\\n    println(s.config)\\n}",
-      "holeyCode": "// Service クラスを定義する\\nclass ___ {\\n    // configをlateinitで宣言\\n    lateinit var ___: ___\\n    ___\\n    // setup 関数を定義する\\n    fun ___(___: ___) { ___ = ___ }\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // Service のインスタンスを作成する\\n    val ___ = ___()\\n    // setup を呼び出す\\n    ___.___(___)\\n    // s.config を出力する\\n    ___(___.___) \\n// ブロックを閉じる\\n___",
+      "correctCode": "// Service クラスを定義する\\nclass Service {\\n    // configをlateinitで宣言\\n    lateinit var config: String\\n    \\n    // setup 関数を定義する\\n    fun setup(c: String) { config = c }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // Service のインスタンスを作成する\\n    val s = Service()\\n    // setupメソッドを呼び出す\\n    s.setup(\"OK\")\\n    // s.config を出力する\\n    println(s.config)\\n}",
+      "holeyCode": "// Service クラスを定義する\\nclass ___ {\\n    // configをlateinitで宣言\\n    lateinit var ___: ___\\n    ___\\n    // setup 関数を定義する\\n    fun ___(___: ___) { ___ = ___ }\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // Service のインスタンスを作成する\\n    val ___ = ___()\\n    // setupメソッドを呼び出す\\n    ___.___(___)\\n    // s.config を出力する\\n    ___(___.___) \\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Service クラスを定義する",
           "class Service {",
@@ -345,7 +345,7 @@ export const kotlin4Data = {
           "fun main() {",
           "    // Service のインスタンスを作成する",
           "    val s = Service()",
-          "    // setup を呼び出す",
+          "    // setupメソッドを呼び出す",
           "    s.setup(\"OK\")",
           "    // s.config を出力する",
           "    println(s.config)",
@@ -770,8 +770,8 @@ export const kotlin4Data = {
           "content": "# 目標\\n\\ntypealiasで型に別名をつけましょう。\\n\\n1. `typealias StringList = List<String>` を定義\\n2. `printAll(items: StringList)` 関数を作る\\n3. `forEach` で各要素を表示"
         }
       ],
-      "correctCode": "// StringList型エイリアスを定義\\ntypealias StringList = List<String>\\n\\n// printAll 関数を定義する\\nfun printAll(items: StringList) {\\n    // forEach で各要素を出力する\\n    items.forEach { println(it) }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // printAll を呼び出す\\n    printAll(listOf(\"A\", \"B\", \"C\"))\\n}",
-      "holeyCode": "// StringList型エイリアスを定義\\ntypealias ___ = ___<___>\\n___\\n// printAll 関数を定義する\\nfun ___(___: ___) {\\n    // forEach で各要素を出力する\\n    ___.___ { ___(___) }\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // printAll を呼び出す\\n    ___(___(___, ___, ___))\\n// ブロックを閉じる\\n___",
+      "correctCode": "// StringList型エイリアスを定義\\ntypealias StringList = List<String>\\n\\n// printAll 関数を定義する\\nfun printAll(items: StringList) {\\n    // forEach で各要素を出力する\\n    items.forEach { println(it) }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // printAll関数を呼び出す\\n    printAll(listOf(\"A\", \"B\", \"C\"))\\n}",
+      "holeyCode": "// StringList型エイリアスを定義\\ntypealias ___ = ___<___>\\n___\\n// printAll 関数を定義する\\nfun ___(___: ___) {\\n    // forEach で各要素を出力する\\n    ___.___ { ___(___) }\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // printAll関数を呼び出す\\n    ___(___(___, ___, ___))\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// StringList型エイリアスを定義",
           "typealias StringList = List<String>",
@@ -784,7 +784,7 @@ export const kotlin4Data = {
           "",
           "// main 関数を定義する",
           "fun main() {",
-          "    // printAll を呼び出す",
+          "    // printAll関数を呼び出す",
           "    printAll(listOf(\"A\", \"B\", \"C\"))",
           "}"
         ],
@@ -809,7 +809,7 @@ export const kotlin4Data = {
             "typealias",
             "fun"
           ],
-          "others": ["StringList", "List", "String", "printAll", "items", "forEach", "println", "it", "main", "listOf", "\"A\"", "\"B\"", "\"C\"", "}", "// main 関数を定義する", "// printAll を呼び出す"]
+          "others": ["StringList", "List", "String", "printAll", "items", "forEach", "println", "it", "main", "listOf", "\"A\"", "\"B\"", "\"C\"", "}", "// main 関数を定義する", "// printAll関数を呼び出す"]
         },
         "testCases": [
           {
