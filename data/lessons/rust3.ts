@@ -24,7 +24,7 @@ export const rust3Data = {
     },
     {
       "title": "Result型",
-      "content": "エラー処理には `Result` 型を使います。\\n\\n```rust\\nfn divide(a: i32, b: i32) -> Result<i32, String> {\\n    if b == 0 {\\n        Err(String::from(\\\"ゼロ除算\\\"))\\n    } else {\\n        Ok(a / b)\\n    }\\n}\\n```"
+      "content": "エラー処理には `Result` 型を使います。\\n\\n```rust\\nfn sqrt(n: f64) -> Result<f64, String> {\\n    if n < 0.0 {\\n        Err(String::from(\\\"負の数\\\"))\\n    } else {\\n        Ok(n.sqrt())\\n    }\\n}\\n```"
     },
     {
       "title": "? 演算子",

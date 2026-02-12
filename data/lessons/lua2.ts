@@ -16,7 +16,7 @@ export const lua2Data = {
     },
     {
       "title": "関数の定義",
-      "content": "`function` で関数を定義します。\\n\\n```lua\\nlocal function double(n)\\n    return n * 2\\nend\\n\\nprint(double(5))  -- => 10\\n\\n-- 複数の戻り値を返せる\\nlocal function swap(a, b)\\n    return b, a\\nend\\nlocal x, y = swap(1, 2)\\n-- x = 2, y = 1\\n```"
+      "content": "`function` で関数を定義します。\\n\\n```lua\\nlocal function triple(n)\\n    return n * 3\\nend\\n\\nprint(triple(5))  -- => 15\\n\\n-- 複数の戻り値を返せる\\nlocal function divmod(a, b)\\n    return a // b, a % b\\nend\\nlocal q, r = divmod(10, 3)\\n-- q = 3, r = 1\\n```"
     },
     {
       "title": "メソッドの定義",

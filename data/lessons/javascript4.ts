@@ -394,7 +394,7 @@ export const javascriptData4 = {
       "tutorialSlides": [
         {
           "title": "メモ化とは？",
-          "content": "# 計算結果を保存して再利用\\n\\n**メモ化** は、一度計算した結果を保存（キャッシュ）しておき、同じ計算が来たら保存した結果を返す技法です。\\n\\n**身近なたとえ：**\\n「3 × 7 = ?」と聞かれて一度計算したら、メモしておく。次に同じ質問が来たらメモを見て「21」と即答できる！\\n\\n**なぜ便利？**\\n- 重い計算を何度もしなくて済む\\n- 同じ引数での呼び出しが速くなる\\n\\n**仕組み：**\\n```javascript\\nfunction memoize(fn) {\\n  const cache = {};  // 結果を保存する場所\\n  return (x) => {\\n    if (!(x in cache)) {  // まだ計算してない？\\n      cache[x] = fn(x);   // 計算して保存\\n    }\\n    return cache[x];  // 保存した結果を返す\\n  };\\n}\\n```"
+          "content": "# 計算結果を保存して再利用\\n\\n**メモ化** は、一度計算した結果を保存（キャッシュ）しておき、同じ計算が来たら保存した結果を返す技法です。\\n\\n**身近なたとえ：**\\n「3 × 7 = ?」と聞かれて一度計算したら、メモしておく。次に同じ質問が来たらメモを見て「21」と即答できる！\\n\\n**なぜ便利？**\\n- 重い計算を何度もしなくて済む\\n- 同じ引数での呼び出しが速くなる\\n\\n**フィボナッチ数列の例：**\\n```javascript\\nconst memo = {};\\nfunction fib(n) {\\n  if (n in memo) return memo[n];  // 計算済み？\\n  if (n <= 1) return n;\\n  memo[n] = fib(n-1) + fib(n-2);  // 保存\\n  return memo[n];\\n}\\n```\\n\\n**演習では：** 汎用的なmemoize関数を作ってみましょう！"
         }
       ],
       "correctCode": "// memoize関数を定義\\nfunction memoize(fn) {\\n  // 空オブジェクトをcacheに代入\\n  const cache = {};\\n  return (x) => {\\n    // in でオブジェクトにキーが存在するかチェック\\n    if (!(x in cache)) {\\n      // キャッシュに結果を保存\\n      cache[x] = fn(x);\\n    }\\n    // return でキャッシュから返す\\n    return cache[x];\\n  };\\n}\\n// メモ化されたsquare関数を作成\\nconst square = memoize(x => x * x);\\n// 5の2乗を出力\\nconsole.log(square(5));\\n// 5の2乗を再度出力（キャッシュから取得）\\nconsole.log(square(5));",
