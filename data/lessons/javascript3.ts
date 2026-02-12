@@ -371,8 +371,8 @@ export const javascriptData3 = {
           "content": "# 親クラスの処理を呼び出す\\n\\n**super** は「親クラス」のことを指します。親の constructor やメソッドを呼び出せます。\\n\\n**身近なたとえ：**\\n「お母さん（親クラス）がやってくれることは任せて、自分（子クラス）は追加でやる」というイメージです。\\n\\n**コード例：**\\n```javascript\\nclass Cat extends Animal {\\n  constructor(name) {\\n    super();  // 親の constructor を呼ぶ\\n    this.name = name;  // 自分だけの設定を追加\\n  }\\n}\\n```\\n\\n**ポイント：**\\n子クラスの constructor では、最初に `super()` を呼ぶ必要があります！"
         }
       ],
-      "correctCode": "// 親クラスAnimalを定義\\nclass Animal {\\n  // speakメソッドを定義\\n  speak() { console.log('...'); }\\n}\\n\\n// CatクラスがAnimalを継承\\nclass Cat extends Animal {\\n  // speakメソッドをオーバーライド\\n  speak() { console.log('ニャー！'); }\\n}\\n\\n// catにCatインスタンスを代入\\nconst cat = new Cat();\\n// 鳴き声メソッドを呼び出し\\ncat.speak();",
-      "holeyCode": "// 親クラスAnimalを定義\\n___ ___ {\\n  // speakメソッドを定義\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// CatクラスがAnimalを継承\\n___ ___ ___ ___ {\\n  // speakメソッドをオーバーライド\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// catにCatインスタンスを代入\\n___ ___ = ___ ___();\\n// 鳴き声メソッドを呼び出し\\n___.___();",
+      "correctCode": "// 親クラスAnimalを定義\\nclass Animal {\\n  // speakメソッドを定義\\n  speak() { console.log('...'); }\\n}\\n\\n// CatクラスがAnimalを継承\\nclass Cat extends Animal {\\n  // speakメソッドをオーバーライド\\n  speak() { console.log('ニャー！'); }\\n}\\n\\n// catにCatインスタンスを代入\\nconst cat = new Cat();\\n// speakメソッドを呼び出す\\ncat.speak();",
+      "holeyCode": "// 親クラスAnimalを定義\\n___ ___ {\\n  // speakメソッドを定義\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// CatクラスがAnimalを継承\\n___ ___ ___ ___ {\\n  // speakメソッドをオーバーライド\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// catにCatインスタンスを代入\\n___ ___ = ___ ___();\\n// speakメソッドを呼び出す\\n___.___();",
       "correctLines": [
           "// 親クラスAnimalを定義",
           "class Animal {",
@@ -388,7 +388,7 @@ export const javascriptData3 = {
           "",
           "// catにCatインスタンスを代入",
           "const cat = new Cat();",
-          "// 鳴き声メソッドを呼び出し",
+          "// speakメソッドを呼び出す",
           "cat.speak();"
         ],
       "lineHints": [

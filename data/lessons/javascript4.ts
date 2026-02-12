@@ -337,8 +337,8 @@ export const javascriptData4 = {
           "content": "# 状態を「閉じ込める」仕組み\\n\\n**クロージャ** は、関数が「自分が作られた場所の変数」を覚えておく機能です。\\n\\n**身近なたとえ：**\\n秘密の部屋（関数）に宝物（変数）を置いて、その部屋の鍵（内部の関数）だけが宝物にアクセスできる、というイメージです。\\n\\n**なぜ便利？**\\n- 外からは見えない「プライベートな状態」を持てる\\n- カウンターなど「状態を持つ関数」を作れる\\n\\n**コード例：**\\n```javascript\\nfunction createCounter() {\\n  let count = 0;  // この変数は外から見えない\\n  return () => ++count;  // でもこの関数からは見える！\\n}\\nconst counter = createCounter();\\nconsole.log(counter());  // 1\\nconsole.log(counter());  // 2（ちゃんと増える！）\\n```"
         }
       ],
-      "correctCode": "// createCounter関数を定義\\nfunction createCounter() {\\n  // countを0で初期化\\n  let count = 0;\\n  // ++ でインクリメントして返す\\n  return () => ++count;\\n}\\n// カウンターを作成\\nconst counter = createCounter();\\n// 1回目の呼び出し\\nconsole.log(counter());\\n// 2回目の呼び出し\\nconsole.log(counter());\\n// 3回目の呼び出し\\nconsole.log(counter());",
-      "holeyCode": "// createCounter関数を定義\\nfunction ___() {\\n  // countを0で初期化\\n  let ___ = ___;\\n  // ++ でインクリメントして返す\\n  return () => ______;\\n// ブロックを閉じる\\n___\\n// カウンターを作成\\nconst ___ = ___();\\n// 1回目の呼び出し\\n___.___(_());\\n// 2回目の呼び出し\\n___.___(_());\\n// 3回目の呼び出し\\n___.___(_());",
+      "correctCode": "// createCounter関数を定義\\nfunction createCounter() {\\n  // countを0で初期化\\n  let count = 0;\\n  // ++ でインクリメントして返す\\n  return () => ++count;\\n}\\n// カウンターを作成\\nconst counter = createCounter();\\n// counter関数を呼び出し（1回目）\\nconsole.log(counter());\\n// counter関数を呼び出し（2回目）\\nconsole.log(counter());\\n// counter関数を呼び出し（3回目）\\nconsole.log(counter());",
+      "holeyCode": "// createCounter関数を定義\\nfunction ___() {\\n  // countを0で初期化\\n  let ___ = ___;\\n  // ++ でインクリメントして返す\\n  return () => ______;\\n// ブロックを閉じる\\n___\\n// カウンターを作成\\nconst ___ = ___();\\n// counter関数を呼び出し（1回目）\\n___.___(_());\\n// counter関数を呼び出し（2回目）\\n___.___(_());\\n// counter関数を呼び出し（3回目）\\n___.___(_());",
       "correctLines": [
           "// createCounter関数を定義",
           "function createCounter() {",
@@ -349,11 +349,11 @@ export const javascriptData4 = {
           "}",
           "// カウンターを作成",
           "const counter = createCounter();",
-          "// 1回目の呼び出し",
+          "// counter関数を呼び出し（1回目）",
           "console.log(counter());",
-          "// 2回目の呼び出し",
+          "// counter関数を呼び出し（2回目）",
           "console.log(counter());",
-          "// 3回目の呼び出し",
+          "// counter関数を呼び出し（3回目）",
           "console.log(counter());"
         ],
       "lineHints": [
@@ -379,7 +379,7 @@ export const javascriptData4 = {
             "--",
             "+="
           ],
-          "others": ["createCounter", "count", "0", "++count", "++count;", "counter", "console", "log", "}", "// カウンターを作成", "の呼び出し", "// 2回目の呼び出し", "// 3回目の呼び出し"]
+          "others": ["createCounter", "count", "0", "++count", "++count;", "counter", "console", "log", "}", "// カウンターを作成", "の呼び出し", "// counter関数を呼び出し（2回目）", "// counter関数を呼び出し（3回目）"]
         },
         "testCases": [
           {
