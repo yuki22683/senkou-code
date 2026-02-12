@@ -562,17 +562,17 @@ export const kotlin4Data = {
           "content": "# 目標\\n\\nIntに「偶数かどうか」を判定する関数を追加しましょう。\\n\\n1. `fun Int.isEven()` を定義\\n2. `this % 2 == 0` で偶数判定\\n3. `4.isEven()` は true、`7.isEven()` は false"
         }
       ],
-      "correctCode": "// isEven() で拡張関数を定義する\\nfun Int.isEven() = this % 2 == 0\\n\\n// main 関数を定義する\\nfun main() {\\n    // 4.isEven() を出力する\\n    println(4.isEven())\\n    // 7.isEven() を出力する\\n    println(7.isEven())\\n}",
-      "holeyCode": "// isEven() で拡張関数を定義する\\nfun ___.___(___) = ___ % ___ == ___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // 4.isEven() を出力する\\n    ___(___.___())\\n    // 7.isEven() を出力する\\n    ___(___.___())\\n// ブロックを閉じる\\n___",
+      "correctCode": "// isEven拡張関数を定義する\\nfun Int.isEven() = this % 2 == 0\\n\\n// main 関数を定義する\\nfun main() {\\n    // 4のisEvenメソッドの結果を出力\\n    println(4.isEven())\\n    // 7のisEvenメソッドの結果を出力\\n    println(7.isEven())\\n}",
+      "holeyCode": "// isEven拡張関数を定義する\\nfun ___.___(___) = ___ % ___ == ___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // 4のisEvenメソッドの結果を出力\\n    ___(___.___())\\n    // 7のisEvenメソッドの結果を出力\\n    ___(___.___())\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// isEven() で拡張関数を定義する",
+          "// isEven拡張関数を定義する",
           "fun Int.isEven() = this % 2 == 0",
           "",
           "// main 関数を定義する",
           "fun main() {",
-          "    // 4.isEven() を出力する",
+          "    // 4のisEvenメソッドの結果を出力",
           "    println(4.isEven())",
-          "    // 7.isEven() を出力する",
+          "    // 7のisEvenメソッドの結果を出力",
           "    println(7.isEven())",
           "}"
         ],

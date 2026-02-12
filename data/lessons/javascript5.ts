@@ -79,12 +79,12 @@ export const javascriptData5 = {
           "content": "# パターンに合うかチェック\\n\\n**test()** は、文字列がパターンに合うかどうかを true/false で返します。\\n\\n**身近なたとえ：**\\n「この文章に数字は含まれている？」と質問して、「はい」か「いいえ」で答えてもらうイメージです。\\n\\n**よく使う記号：**\\n- `\\d` ... 数字（0-9）\\n- `+` ... 1回以上の繰り返し\\n\\n**コード例：**\\n```javascript\\nconst pattern = /\\d+/;  // 1個以上の数字\\nconsole.log(pattern.test('abc123'));  // true（数字あり）\\nconsole.log(pattern.test('abc'));     // false（数字なし）\\n```"
         }
       ],
-      "correctCode": "// 正規表現パターンを定義\\nconst emailPattern = /\\w+@\\w+\\.\\w+/;\\n// test() で 'test@example.com' をテスト\\nconsole.log(emailPattern.test('test@example.com'));\\n// 無効なメールをテスト\\nconsole.log(emailPattern.test('invalid-email'));",
-      "holeyCode": "// 正規表現パターンを定義\\n___ ___ = /___/;\\n// test() で 'test@example.com' をテスト\\n___.___(___.___('___'));\\n// 無効なメールをテスト\\n___.___(___.___('___'));",
+      "correctCode": "// 正規表現パターンを定義\\nconst emailPattern = /\\w+@\\w+\\.\\w+/;\\n// testメソッドで'test@example.com'をテスト\\nconsole.log(emailPattern.test('test@example.com'));\\n// 無効なメールをテスト\\nconsole.log(emailPattern.test('invalid-email'));",
+      "holeyCode": "// 正規表現パターンを定義\\n___ ___ = /___/;\\n// testメソッドで'test@example.com'をテスト\\n___.___(___.___('___'));\\n// 無効なメールをテスト\\n___.___(___.___('___'));",
       "correctLines": [
           "// 正規表現パターンを定義",
           "const emailPattern = /\\w+@\\w+\\.\\w+/;",
-          "// test() で 'test@example.com' をテスト",
+          "// testメソッドで'test@example.com'をテスト",
           "console.log(emailPattern.test('test@example.com'));",
           "// 無効なメールをテスト",
           "console.log(emailPattern.test('invalid-email'));"
@@ -121,12 +121,12 @@ export const javascriptData5 = {
           "content": "# パターンに合う部分を取り出す\\n\\n**match()** は、パターンに合った部分を配列で返します。\\n\\n**身近なたとえ：**\\n「この文章から数字を全部抜き出して」とお願いするイメージです。\\n\\n**フラグ g について：**\\n`/g` をつけると「全部探す」（global）という意味になります。\\n\\n**コード例：**\\n```javascript\\nconst text = 'I have 3 apples and 5 oranges';\\nconst numbers = text.match(/\\d+/g);\\nconsole.log(numbers);\\n```\\n**実行結果：**\\n```\\n['3', '5']\\n```\\n\\n**ポイント：**\\n見つからなかった場合は `null` が返ります。"
         }
       ],
-      "correctCode": "// 090-1234-5678 を含む文字列を定義\\nconst text = 'Contact: 090-1234-5678 or 080-9876-5432';\\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\\nconst phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);\\n// 抽出した電話番号の配列を出力\\nconsole.log(phones);",
-      "holeyCode": "// 090-1234-5678 を含む文字列を定義\\n___ ___ = '___';\\n// match() で 090-1234-5678 と 080-9876-5432 を抽出\\n___ ___ = ___.___(/___/___);\\n// 抽出した電話番号の配列を出力\\n___.___(___);",
+      "correctCode": "// 090-1234-5678 を含む文字列を定義\\nconst text = 'Contact: 090-1234-5678 or 080-9876-5432';\\n// matchメソッドで電話番号を抽出\\nconst phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);\\n// 抽出した電話番号の配列を出力\\nconsole.log(phones);",
+      "holeyCode": "// 090-1234-5678 を含む文字列を定義\\n___ ___ = '___';\\n// matchメソッドで電話番号を抽出\\n___ ___ = ___.___(/___/___);\\n// 抽出した電話番号の配列を出力\\n___.___(___);",
       "correctLines": [
           "// 090-1234-5678 を含む文字列を定義",
           "const text = 'Contact: 090-1234-5678 or 080-9876-5432';",
-          "// match() で 090-1234-5678 と 080-9876-5432 を抽出",
+          "// matchメソッドで電話番号を抽出",
           "const phones = text.match(/\\d{3}-\\d{4}-\\d{4}/g);",
           "// 抽出した電話番号の配列を出力",
           "console.log(phones);"
@@ -172,12 +172,12 @@ export const javascriptData5 = {
           "content": "# パターンに合う部分を置き換える\\n\\n**replace()** は、パターンに合った部分を別の文字列に置き換えます。\\n\\n**身近なたとえ：**\\n「この文章の『りんご』を全部『みかん』に変えて」とお願いするイメージです。\\n\\n**書き方：**\\n```\\n文字列.replace(/パターン/g, '置き換え後')\\n```\\n\\n**コード例：**\\n```javascript\\nconst text = 'hello world';\\nconst result = text.replace(/world/, 'JavaScript');\\nconsole.log(result);\\n```\\n**実行結果：**\\n```\\nhello JavaScript\\n```"
         }
       ],
-      "correctCode": "// 'Hello   World' を定義\\nconst text = 'Hello   World';\\n// replace() で連続する空白を1つの空白に置換\\nconst result = text.replace(/\\s+/g, ' ');\\n// 置換後の文字列を出力\\nconsole.log(result);",
-      "holeyCode": "// 'Hello   World' を定義\\n___ ___ = '___';\\n// replace() で連続する空白を1つの空白に置換\\n___ ___ = ___.___(/___/___, '___');\\n// 置換後の文字列を出力\\n___.___(___);",
+      "correctCode": "// 'Hello   World' を定義\\nconst text = 'Hello   World';\\n// replaceメソッドで連続する空白を1つの空白に置換\\nconst result = text.replace(/\\s+/g, ' ');\\n// 置換後の文字列を出力\\nconsole.log(result);",
+      "holeyCode": "// 'Hello   World' を定義\\n___ ___ = '___';\\n// replaceメソッドで連続する空白を1つの空白に置換\\n___ ___ = ___.___(/___/___, '___');\\n// 置換後の文字列を出力\\n___.___(___);",
       "correctLines": [
           "// 'Hello   World' を定義",
           "const text = 'Hello   World';",
-          "// replace() で連続する空白を1つの空白に置換",
+          "// replaceメソッドで連続する空白を1つの空白に置換",
           "const result = text.replace(/\\s+/g, ' ');",
           "// 置換後の文字列を出力",
           "console.log(result);"
