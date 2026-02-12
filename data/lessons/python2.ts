@@ -78,15 +78,15 @@ export const pythonData2 = {
           "content": "# 渡しても渡さなくてもOK！\\n\\nデフォルト引数があると、**柔軟に関数を使えます**。\\n\\n**例：** いろんなパターンで呼び出そう！\\n\\n```python\\ndef greet(name='ゲスト'):\\n    print(f'ようこそ、{name}さん！')\\n\\ngreet()        # 何も渡さない\\ngreet('太郎')  # '太郎'を渡す\\n```\\n=> ようこそ、ゲストさん！\\n=> ようこそ、太郎さん！\\n\\n**何をしているか：**\\n- `greet()` → 何も渡していないので、デフォルトの「ゲスト」が使われる\\n- `greet('太郎')` → 「太郎」を渡したので、そちらが使われる\\n\\n**便利なところ：** 毎回値を渡さなくても、よく使う値で動いてくれます！"
         }
       ],
-      "correctCode": "# say_hello関数を定義（nameのデフォルト値は'World'）\\ndef say_hello(name='World'):\\n    # Hello, 名前!と表示\\n    print(f'Hello, {name}!')\\n\\n# 引数なしで呼び出す\\nsay_hello()",
-      "holeyCode": "# say_hello関数を定義（nameのデフォルト値は'World'）\\ndef ___(___='___'):\\n    # Hello, 名前!と表示\\n    ___(f'Hello, {___}!')\\n\\n# 引数なしで呼び出す\\n___()",
+      "correctCode": "# say_hello関数を定義（nameのデフォルト値は'World'）\\ndef say_hello(name='World'):\\n    # Hello, 名前!と表示\\n    print(f'Hello, {name}!')\\n\\n# say_hello関数を引数なしで呼び出す\\nsay_hello()",
+      "holeyCode": "# say_hello関数を定義（nameのデフォルト値は'World'）\\ndef ___(___='___'):\\n    # Hello, 名前!と表示\\n    ___(f'Hello, {___}!')\\n\\n# say_hello関数を引数なしで呼び出す\\n___()",
       "correctLines": [
         "# say_hello関数を定義（nameのデフォルト値は'World'）",
         "def say_hello(name='World'):",
         "    # Hello, 名前!と表示",
         "    print(f'Hello, {name}!')",
         "",
-        "# 引数なしで呼び出す",
+        "# say_hello関数を引数なしで呼び出す",
         "say_hello()"
       ],
       "lineHints": [
