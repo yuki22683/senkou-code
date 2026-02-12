@@ -156,8 +156,8 @@ export const pythonData3 = {
           "content": "# 辞書として扱える！\\n\\n受け取った `kwargs` は **辞書** として使えます。\\n\\n`.items()`, `.keys()`, `.values()` などのメソッドが使えます！\\n\\n**例：** ユーザー情報を作ろう！\\n\\n```python\\ndef create_user(**kwargs):\\n    return kwargs\\n\\nuser = create_user(name='花子', email='hanako@example.com')\\nprint(user['name'])\\n```\\n\\n=> 花子\\n\\n**何をしているか：**\\n1. `create_user(name='花子', email='...')` で名前付き引数を渡す\\n2. `**kwargs` でそれらを辞書として受け取る\\n3. `{'name': '花子', 'email': '...'}` という辞書が返される\\n4. `user['name']` で「花子」が取り出せる！\\n\\n**使いどころ：** 設定項目（オプション）をたくさん渡したいとき！"
         }
       ],
-      "correctCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef print_info(**kwargs):\\n    # 1番目の k にキー、2番目の v に値が入る\\n    for k, v in kwargs.items():\\n        # キーと値をイコールで繋いで表示\\n        print(f'{k} = {v}')\\n\\n# print_info(x=10, y=20)を実行\\nprint_info(x=10, y=20)",
-      "holeyCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef ___(___):\\n    # 1番目の k にキー、2番目の v に値が入る\\n    for ___, ___ in ___.___():\\n        # キーと値をイコールで繋いで表示\\n        ___(f'{___} = {___}')\\n\\n# print_info(x=10, y=20)を実行\\n___(___=___, ___=___)",
+      "correctCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef print_info(**kwargs):\\n    # 1番目の k にキー、2番目の v に値が入る\\n    for k, v in kwargs.items():\\n        # キーと値をイコールで繋いで表示\\n        print(f'{k} = {v}')\\n\\n# 情報表示関数をx=10, y=20で実行\\nprint_info(x=10, y=20)",
+      "holeyCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef ___(___):\\n    # 1番目の k にキー、2番目の v に値が入る\\n    for ___, ___ in ___.___():\\n        # キーと値をイコールで繋いで表示\\n        ___(f'{___} = {___}')\\n\\n# 情報表示関数をx=10, y=20で実行\\n___(___=___, ___=___)",
       "correctLines": [
           "# キーワード引数を受け取って表示するprint_info関数を定義",
           "def print_info(**kwargs):",
@@ -166,7 +166,7 @@ export const pythonData3 = {
           "        # キーと値をイコールで繋いで表示",
           "        print(f'{k} = {v}')",
           "",
-          "# print_info(x=10, y=20)を実行",
+          "# 情報表示関数をx=10, y=20で実行",
           "print_info(x=10, y=20)"
         ],
       "lineHints": [
@@ -391,8 +391,8 @@ export const pythonData3 = {
           "content": "# @ で関数に適用しよう！\\n\\n`@デコレータ名` を関数の上に書くだけで適用できます。\\n\\n**例：** デコレータを使ってみよう！\\n\\n```python\\n@my_decorator\\ndef say_hello():\\n    print('Hello!')\\n\\nsay_hello()\\n```\\n=> Before\\n=> Hello!\\n=> After\\n\\n**何をしているか：**\\n1. `@my_decorator` で `say_hello` 関数にデコレータを適用\\n2. `say_hello()` を呼ぶと、まず「Before」が表示される\\n3. 次に元の `say_hello`（「Hello!」）が実行される\\n4. 最後に「After」が表示される\\n\\n**使いどころ：**\\n- ログ（記録）を残したいとき\\n- 実行時間を計りたいとき\\n- 権限チェックをしたいとき"
         }
       ],
-      "correctCode": "# show_callデコレータ関数を定義\\ndef show_call(func):\\n    # 内部関数wrapperを定義\\n    def wrapper():\\n        # 実行前のメッセージを表示\\n        print('関数を呼び出します')\\n        # func()を実行\\n        func()\\n    # wrapperを返す\\n    return wrapper\\n\\n# @show_callを適用\\n@show_call\\n# greet関数を定義\\ndef greet():\\n    # 'こんにちは！'を表示\\n    print('こんにちは！')\\n\\n# greet()を実行\\ngreet()",
-      "holeyCode": "# show_callデコレータ関数を定義\\ndef ___(___) :\\n    # 内部関数wrapperを定義\\n    def ___():\\n        # 実行前のメッセージを表示\\n        ___('___')\\n        # func()を実行\\n        ___()\\n    # wrapperを返す\\n    return ___\\n\\n# @show_callを適用\\n@___\\n# greet関数を定義\\ndef ___():\\n    # 'こんにちは！'を表示\\n    ___('___')\\n\\n# greet()を実行\\n___()",
+      "correctCode": "# show_callデコレータ関数を定義\\ndef show_call(func):\\n    # 内部関数wrapperを定義\\n    def wrapper():\\n        # 実行前のメッセージを表示\\n        print('関数を呼び出します')\\n        # 渡された関数を実行\\n        func()\\n    # wrapperを返す\\n    return wrapper\\n\\n# @show_callを適用\\n@show_call\\n# greet関数を定義\\ndef greet():\\n    # 'こんにちは！'を表示\\n    print('こんにちは！')\\n\\n# あいさつ関数を実行\\ngreet()",
+      "holeyCode": "# show_callデコレータ関数を定義\\ndef ___(___) :\\n    # 内部関数wrapperを定義\\n    def ___():\\n        # 実行前のメッセージを表示\\n        ___('___')\\n        # 渡された関数を実行\\n        ___()\\n    # wrapperを返す\\n    return ___\\n\\n# @show_callを適用\\n@___\\n# greet関数を定義\\ndef ___():\\n    # 'こんにちは！'を表示\\n    ___('___')\\n\\n# あいさつ関数を実行\\n___()",
       "correctLines": [
           "# show_callデコレータ関数を定義",
           "def show_call(func):",
@@ -400,7 +400,7 @@ export const pythonData3 = {
           "    def wrapper():",
           "        # 実行前のメッセージを表示",
           "        print('関数を呼び出します')",
-          "        # func()を実行",
+          "        # 渡された関数を実行",
           "        func()",
           "    # wrapperを返す",
           "    return wrapper",
@@ -412,7 +412,7 @@ export const pythonData3 = {
           "    # 'こんにちは！'を表示",
           "    print('こんにちは！')",
           "",
-          "# greet()を実行",
+          "# あいさつ関数を実行",
           "greet()"
         ],
       "lineHints": [
@@ -423,7 +423,7 @@ export const pythonData3 = {
           null,
           "関数呼び出し前にメッセージを表示します。",
           null,
-          "func()を実行します。",
+          "引数として受け取った関数を実行します。",
           null,
           "ラッパー関数を返してデコレータを完成させます。",
           null,

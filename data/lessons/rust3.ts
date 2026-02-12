@@ -334,7 +334,7 @@ export const rust3Data = {
           "content": "# 簡潔なエラー処理\\n\\n```rust\\n// ? を使わない場合\\nmatch result {\\n    Ok(v) => v,\\n    Err(e) => return Err(e),\\n}\\n\\n// ? を使う\\nresult?\\n```"
         }
       ],
-      "correctCode": "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {\\n    if b == 0 {\\n        Err(\"ゼロ除算エラー\")\\n    } else {\\n        Ok(a / b)\\n    }\\n}\\n\\nfn calc() -> Result<i32, &'static str> {\\n    // ? でエラーを伝播\\n    let x = divide(10, 2)?;\\n    Ok(x * 2)\\n}\\n\\nfn main() {\\n    println!(\"{:?}\", calc());\\n}", "holeyCode": "// divide関数を定義\\nfn ___(___: ___, ___: ___) -> ___<___, &'static ___> {\\n    // 条件分岐\\n    if ___ == ___ {\\n        // Err(\"ゼロ除算エラー\")でエラーを返す\\n        ___(\\\"ゼロ除算エラー\\\")\\n    // else分岐\\n    ___ else ___\\n        // Ok(a / b)で成功値を返す\\n        ___(___ / ___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// calc関数を定義\\nfn ___() -> ___<___, &'static ___> {\\n    // ? でエラーを伝播\\n    let ___ = ___(___, ___)?;\\n    // Ok(x * 2)で成功値を返す\\n    ___(___ * ___)\\n// ブロックを閉じる\\n___\\n___\\n// main関数を定義\\nfn ___() {\\n    // 出力\\n    ___!(\\\"{:?}\\\", ___());\\n// ブロックを閉じる\\n___",
+      "correctCode": "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {\\n    if b == 0 {\\n        Err(\"ゼロ除算エラー\")\\n    } else {\\n        Ok(a / b)\\n    }\\n}\\n\\nfn calc() -> Result<i32, &'static str> {\\n    // divide(aに10, bに2)を呼び出し、?でエラーを伝播\\n    let x = divide(10, 2)?;\\n    Ok(x * 2)\\n}\\n\\nfn main() {\\n    println!(\"{:?}\", calc());\\n}", "holeyCode": "// divide関数を定義\\nfn ___(___: ___, ___: ___) -> ___<___, &'static ___> {\\n    // 条件分岐\\n    if ___ == ___ {\\n        // Err(\"ゼロ除算エラー\")でエラーを返す\\n        ___(\\\"ゼロ除算エラー\\\")\\n    // else分岐\\n    ___ else ___\\n        // Ok(a / b)で成功値を返す\\n        ___(___ / ___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// calc関数を定義\\nfn ___() -> ___<___, &'static ___> {\\n    // divide(aに10, bに2)を呼び出し、?でエラーを伝播\\n    let ___ = ___(___, ___)?;\\n    // Ok(x * 2)で成功値を返す\\n    ___(___ * ___)\\n// ブロックを閉じる\\n___\\n___\\n// main関数を定義\\nfn ___() {\\n    // 出力\\n    ___!(\\\"{:?}\\\", ___());\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "fn divide(a: i32, b: i32) -> Result<i32, &'static str> {",
           "    if b == 0 {",
@@ -345,7 +345,7 @@ export const rust3Data = {
           "}",
           "",
           "fn calc() -> Result<i32, &'static str> {",
-          "    // ? でエラーを伝播",
+          "    // divide(aに10, bに2)を呼び出し、?でエラーを伝播",
           "    let x = divide(10, 2)?;",
           "    Ok(x * 2)",
           "}",

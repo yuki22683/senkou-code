@@ -680,14 +680,14 @@ export const javaData = {
           "content": "# ちょっと準備が大変かも？\\n\\nJavaで辞書を使うのは少し準備が必要です。3ステップで覚えましょう！\\n\\n**ステップ1：** `import` で道具箱から出してくる\\n**ステップ2：** `new` で新しく作る\\n**ステップ3：** `put`（プット）で中身を入れる\\n\\n**コード例：**\\n```java\\nimport java.util.HashMap;  // ステップ1：道具を準備\\nHashMap<String, String> colors = new HashMap<>();  // ステップ2：辞書を作る\\ncolors.put(\"りんご\", \"あか\");  // ステップ3：データを入れる\\nSystem.out.println(colors.get(\"りんご\"));  // getで取り出す\\n```\\n=> あか"
         }
       ],
-      "correctCode": "import java.util.HashMap;\\npublic class Main {\\n    public static void main(String[] args) {\\n        // new HashMap で作る\\n        HashMap<String, String> user = new HashMap<>();\\n        // put でデータを追加する\\n        user.put(\"name\", \"たろう\");\\n        // get でデータを取り出す\\n        System.out.println(user.get(\"name\"));\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___;\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // new HashMap で作る\\n        ___<___, ___> ___ = new ___<>();\\n        // put でデータを追加する\\n        ___.___(___, ___);\\n        // get でデータを取り出す\\n        ___.___.___(___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.util.HashMap;\\npublic class Main {\\n    public static void main(String[] args) {\\n        // new HashMap で作る\\n        HashMap<String, String> user = new HashMap<>();\\n        // putでキー「name」に値「たろう」を追加\\n        user.put(\"name\", \"たろう\");\\n        // get でデータを取り出す\\n        System.out.println(user.get(\"name\"));\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___;\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // new HashMap で作る\\n        ___<___, ___> ___ = new ___<>();\\n        // putでキー「name」に値「たろう」を追加\\n        ___.___(___, ___);\\n        // get でデータを取り出す\\n        ___.___.___(___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.util.HashMap;",
           "public class Main {",
           "    public static void main(String[] args) {",
           "        // new HashMap で作る",
           "        HashMap<String, String> user = new HashMap<>();",
-          "        // put でデータを追加する",
+          "        // putでキー「name」に値「たろう」を追加",
           "        user.put(\"name\", \"たろう\");",
           "        // get でデータを取り出す",
           "        System.out.println(user.get(\"name\"));",
@@ -738,7 +738,7 @@ export const javaData = {
           "content": "# 作り方\\n\\nJavaでメソッドを作るときは、`public static void`（パブリック・スタティック・ボイド）という呪文を使います。今は「おまじない」だと思ってそのまま書きましょう！\\n\\n**コード例：** あいさつするメソッドを作ってみよう\\n```java\\n// メソッドを作る（定義する）\\npublic static void aisatsu() {\\n    System.out.println(\"こんにちは！\");\\n}\\n\\n// メソッドを使う（呼び出す）\\naisatsu();  // 「こんにちは！」と表示される\\n```\\n\\n**ポイント：**\\n- メソッド名のあとに `()` をつけて呼び出します\\n- 同じメソッドを何回でも呼び出せます"
         }
       ],
-      "correctCode": "public class Main {\\n    // greet というメソッドを定義する\\n    public static void greet() {\\n        System.out.println(\"こんにちは\");\\n    }\\n    public static void main(String[] args) {\\n        // greet()を呼び出す\\n        greet();\\n    }\\n}", "holeyCode": "// Mainクラスを定義\\npublic class ___ {\\n    // greet というメソッドを定義する\\n    public static void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // greet()を呼び出す\\n        ___();\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "public class Main {\\n    // greet というメソッドを定義する\\n    public static void greet() {\\n        System.out.println(\"こんにちは\");\\n    }\\n    public static void main(String[] args) {\\n        // あいさつメソッドを呼び出す\\n        greet();\\n    }\\n}", "holeyCode": "// Mainクラスを定義\\npublic class ___ {\\n    // greet というメソッドを定義する\\n    public static void ___() {\\n        // \\\"\\\"\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // あいさつメソッドを呼び出す\\n        ___();\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "public class Main {",
           "    // greet というメソッドを定義する",
@@ -746,7 +746,7 @@ export const javaData = {
           "        System.out.println(\"こんにちは\");",
           "    }",
           "    public static void main(String[] args) {",
-          "        // greet()を呼び出す",
+          "        // あいさつメソッドを呼び出す",
           "        greet();",
           "    }",
           "}"

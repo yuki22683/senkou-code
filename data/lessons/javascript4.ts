@@ -245,14 +245,14 @@ export const javascriptData4 = {
           "content": "# 引数を1つずつ受け取る関数に変える\\n\\n**カリー化** は、複数の引数を取る関数を、引数を1つずつ受け取る関数に変換する技法です。\\n\\n**身近なたとえ：**\\n「カレー」の語源となった数学者カリー（Curry）さんにちなんで名付けられました。\\n「5を足す関数」「10をかける関数」など、一部の引数を固定した関数を簡単に作れます。\\n\\n**コード例：**\\n```javascript\\n// 普通の書き方：add(5, 3)\\n// カリー化：add(5)(3) と2段階で呼べる\\nconst add = a => b => a + b;\\n\\n// 「5を足す関数」を作る\\nconst add5 = add(5);\\nconsole.log(add5(3));  // 8（5 + 3）\\n```"
         }
       ],
-      "correctCode": "// a*bを返すmultiply関数を定義（カリー化）\\nconst multiply = a => b => a * b;\\n// 部分適用で2倍する関数を作成\\nconst double = multiply(2);\\n// double(5)を出力\\nconsole.log(double(5));",
-      "holeyCode": "// a*bを返すmultiply関数を定義（カリー化）\\nconst ___ = ___ => ___ => ___ ___ ___;\\n// 部分適用で2倍する関数を作成\\nconst ___ = ___(___);\\n// double(5)を出力\\n___.___(___(_));",
+      "correctCode": "// a*bを返すmultiply関数を定義（カリー化）\\nconst multiply = a => b => a * b;\\n// 部分適用で2倍する関数を作成\\nconst double = multiply(2);\\n// 5を2倍した結果を出力\\nconsole.log(double(5));",
+      "holeyCode": "// a*bを返すmultiply関数を定義（カリー化）\\nconst ___ = ___ => ___ => ___ ___ ___;\\n// 部分適用で2倍する関数を作成\\nconst ___ = ___(___);\\n// 5を2倍した結果を出力\\n___.___(___(_));",
       "correctLines": [
           "// a*bを返すmultiply関数を定義（カリー化）",
           "const multiply = a => b => a * b;",
           "// 部分適用で2倍する関数を作成",
           "const double = multiply(2);",
-          "// double(5)を出力",
+          "// 5を2倍した結果を出力",
           "console.log(double(5));"
         ],
       "lineHints": [
@@ -261,7 +261,7 @@ export const javascriptData4 = {
           null,
           "multiply(2) で2倍する関数を作ります。",
           null,
-          "double(5) の結果を出力します。"
+          "5を2倍した結果を出力します。"
         ],
         "candidates": {
           "keywords": [
@@ -287,8 +287,8 @@ export const javascriptData4 = {
           "content": "# 関数を組み合わせて新しい関数を作る\\n\\n**関数合成** は、複数の関数をつなげて、1つの新しい関数を作ることです。\\n\\n**身近なたとえ：**\\n料理で「野菜を切る → 炒める → 味付けする」という手順をまとめて「野菜炒めを作る」という1つの手順にするイメージです。\\n\\n**compose の仕組み：**\\n`compose(f, g)` は「gを実行してから、その結果をfに渡す」という関数を作ります。\\n\\n**コード例：**\\n```javascript\\nconst compose = (f, g) => x => f(g(x));\\nconst double = x => x * 2;     // 2倍にする\\nconst addOne = x => x + 1;     // 1を足す\\n\\n// 「2倍してから1を足す」関数を作る\\nconst doubleThenAdd = compose(addOne, double);\\nconsole.log(doubleThenAdd(5));  // 11（5*2=10, 10+1=11）\\n```"
         }
       ],
-      "correctCode": "// g を先に実行してfに渡す\\nconst compose = (f, g) => x => f(g(x));\\n// 2乗する関数\\nconst square = x => x * x;\\n// 符号を反転する関数\\nconst negate = x => -x;\\n// 関数を合成\\nconst squareThenNegate = compose(negate, square);\\n// squareThenNegate(3)を出力\\nconsole.log(squareThenNegate(3));",
-      "holeyCode": "// g を先に実行してfに渡す\\nconst ___ = (___, ___) => ___ => ___(___(___));\\n// 2乗する関数\\nconst ___ = ___ => ___ ___ ___;\\n// 符号を反転する関数\\nconst ___ = ___ => ______;\\n// 関数を合成\\nconst ___ = ___(___, ___);\\n// squareThenNegate(3)を出力\\n___.___(___(_));",
+      "correctCode": "// g を先に実行してfに渡す\\nconst compose = (f, g) => x => f(g(x));\\n// 2乗する関数\\nconst square = x => x * x;\\n// 符号を反転する関数\\nconst negate = x => -x;\\n// 関数を合成\\nconst squareThenNegate = compose(negate, square);\\n// 3を2乗して符号反転した結果を出力\\nconsole.log(squareThenNegate(3));",
+      "holeyCode": "// g を先に実行してfに渡す\\nconst ___ = (___, ___) => ___ => ___(___(___));\\n// 2乗する関数\\nconst ___ = ___ => ___ ___ ___;\\n// 符号を反転する関数\\nconst ___ = ___ => ______;\\n// 関数を合成\\nconst ___ = ___(___, ___);\\n// 3を2乗して符号反転した結果を出力\\n___.___(___(_));",
       "correctLines": [
           "// g を先に実行してfに渡す",
           "const compose = (f, g) => x => f(g(x));",
@@ -298,7 +298,7 @@ export const javascriptData4 = {
           "const negate = x => -x;",
           "// 関数を合成",
           "const squareThenNegate = compose(negate, square);",
-          "// squareThenNegate(3)を出力",
+          "// 3を2乗して符号反転した結果を出力",
           "console.log(squareThenNegate(3));"
         ],
       "lineHints": [
@@ -397,8 +397,8 @@ export const javascriptData4 = {
           "content": "# 計算結果を保存して再利用\\n\\n**メモ化** は、一度計算した結果を保存（キャッシュ）しておき、同じ計算が来たら保存した結果を返す技法です。\\n\\n**身近なたとえ：**\\n「3 × 7 = ?」と聞かれて一度計算したら、メモしておく。次に同じ質問が来たらメモを見て「21」と即答できる！\\n\\n**なぜ便利？**\\n- 重い計算を何度もしなくて済む\\n- 同じ引数での呼び出しが速くなる\\n\\n**仕組み：**\\n```javascript\\nfunction memoize(fn) {\\n  const cache = {};  // 結果を保存する場所\\n  return (x) => {\\n    if (!(x in cache)) {  // まだ計算してない？\\n      cache[x] = fn(x);   // 計算して保存\\n    }\\n    return cache[x];  // 保存した結果を返す\\n  };\\n}\\n```"
         }
       ],
-      "correctCode": "// memoize関数を定義\\nfunction memoize(fn) {\\n  // 空オブジェクトをcacheに代入\\n  const cache = {};\\n  return (x) => {\\n    // in でオブジェクトにキーが存在するかチェック\\n    if (!(x in cache)) {\\n      // キャッシュに結果を保存\\n      cache[x] = fn(x);\\n    }\\n    // return でキャッシュから返す\\n    return cache[x];\\n  };\\n}\\n// メモ化されたsquare関数を作成\\nconst square = memoize(x => x * x);\\n// square(5)を出力\\nconsole.log(square(5));\\n// square(5)を再度出力（キャッシュから取得）\\nconsole.log(square(5));",
-      "holeyCode": "// memoize関数を定義\\nfunction ___(___) {\\n  // 空オブジェクトをcacheに代入\\n  const ___ = ___;\\n  // ブロックを開始\\n  return (___) => {\\n    // in でオブジェクトにキーが存在するかチェック\\n    if (!(___ in ___)) {\\n      // キャッシュに結果を保存\\n      ___[___] = ___(___);\\n    // ブロックを閉じる\\n    ___\\n    // return でキャッシュから返す\\n    return ___[___];\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n// メモ化されたsquare関数を作成\\nconst ___ = ___(___ => ___ ___ ___);\\n// square(5)を出力\\n___.___(___(___));\\n// square(5)を再度出力（キャッシュから取得）\\n___.___(___(___));",
+      "correctCode": "// memoize関数を定義\\nfunction memoize(fn) {\\n  // 空オブジェクトをcacheに代入\\n  const cache = {};\\n  return (x) => {\\n    // in でオブジェクトにキーが存在するかチェック\\n    if (!(x in cache)) {\\n      // キャッシュに結果を保存\\n      cache[x] = fn(x);\\n    }\\n    // return でキャッシュから返す\\n    return cache[x];\\n  };\\n}\\n// メモ化されたsquare関数を作成\\nconst square = memoize(x => x * x);\\n// 5の2乗を出力\\nconsole.log(square(5));\\n// 5の2乗を再度出力（キャッシュから取得）\\nconsole.log(square(5));",
+      "holeyCode": "// memoize関数を定義\\nfunction ___(___) {\\n  // 空オブジェクトをcacheに代入\\n  const ___ = ___;\\n  // ブロックを開始\\n  return (___) => {\\n    // in でオブジェクトにキーが存在するかチェック\\n    if (!(___ in ___)) {\\n      // キャッシュに結果を保存\\n      ___[___] = ___(___);\\n    // ブロックを閉じる\\n    ___\\n    // return でキャッシュから返す\\n    return ___[___];\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n// メモ化されたsquare関数を作成\\nconst ___ = ___(___ => ___ ___ ___);\\n// 5の2乗を出力\\n___.___(___(___));\\n// 5の2乗を再度出力（キャッシュから取得）\\n___.___(___(___));",
       "correctLines": [
           "// memoize関数を定義",
           "function memoize(fn) {",
@@ -416,9 +416,9 @@ export const javascriptData4 = {
           "}",
           "// メモ化されたsquare関数を作成",
           "const square = memoize(x => x * x);",
-          "// square(5)を出力",
+          "// 5の2乗を出力",
           "console.log(square(5));",
-          "// square(5)を再度出力（キャッシュから取得）",
+          "// 5の2乗を再度出力（キャッシュから取得）",
           "console.log(square(5));"
         ],
       "lineHints": [
@@ -467,8 +467,8 @@ export const javascriptData4 = {
           "content": "# 関数を順番に流す\\n\\n**パイプライン** は、データを複数の関数に順番に通す技法です。\\n\\n**身近なたとえ：**\\n工場の組み立てラインを想像してください。部品が「切る → 磨く → 塗る」と順番に流れていきますよね。パイプラインも同じで、データが関数を順番に通ります。\\n\\n**compose との違い：**\\n- compose：右から左（g → f）\\n- pipe：左から右（f → g）※こっちが直感的！\\n\\n**コード例：**\\n```javascript\\nconst pipe = (...fns) => x =>\\n  fns.reduce((v, f) => f(v), x);\\n\\nconst process = pipe(\\n  x => x * 2,   // 5 * 2 = 10\\n  x => x + 1,   // 10 + 1 = 11\\n  x => x * 3    // 11 * 3 = 33\\n);\\nconsole.log(process(5));  // 33\\n```"
         }
       ],
-      "correctCode": "// pipe関数を定義\\nconst pipe = (...fns) => x =>\\n  // reduce で累積値 v を使って関数を連鎖\\n  fns.reduce((v, f) => f(v), x);\\n\\n// パイプラインで関数を連結\\nconst process = pipe(\\n  // +1 する関数\\n  x => x + 1,\\n  // *2 する関数\\n  x => x * 2,\\n  // -3 する関数\\n  x => x - 3\\n);\\n// process(5)を出力\\nconsole.log(process(5));",
-      "holeyCode": "// pipe関数を定義\\nconst ___ = (...___) => ___ =>\\n  // reduce で累積値 v を使って関数を連鎖\\n  ___.___((___, ___) => ___(_), ___);\\n___\\n// パイプラインで関数を連結\\nconst ___ = ___(\\n  // +1 する関数\\n  ___ => ___ ___ ___,\\n  // *2 する関数\\n  ___ => ___ ___ ___,\\n  // -3 する関数\\n  ___ => ___ ___ ___\\n// 関数呼び出しを閉じる\\n___\\n// process(5)を出力\\n___.___(___(___));",
+      "correctCode": "// pipe関数を定義\\nconst pipe = (...fns) => x =>\\n  // reduce で累積値 v を使って関数を連鎖\\n  fns.reduce((v, f) => f(v), x);\\n\\n// パイプラインで関数を連結\\nconst process = pipe(\\n  // +1 する関数\\n  x => x + 1,\\n  // *2 する関数\\n  x => x * 2,\\n  // -3 する関数\\n  x => x - 3\\n);\\n// 5を処理した結果を出力\\nconsole.log(process(5));",
+      "holeyCode": "// pipe関数を定義\\nconst ___ = (...___) => ___ =>\\n  // reduce で累積値 v を使って関数を連鎖\\n  ___.___((___, ___) => ___(_), ___);\\n___\\n// パイプラインで関数を連結\\nconst ___ = ___(\\n  // +1 する関数\\n  ___ => ___ ___ ___,\\n  // *2 する関数\\n  ___ => ___ ___ ___,\\n  // -3 する関数\\n  ___ => ___ ___ ___\\n// 関数呼び出しを閉じる\\n___\\n// 5を処理した結果を出力\\n___.___(___(___));",
       "correctLines": [
           "// pipe関数を定義",
           "const pipe = (...fns) => x =>",
@@ -484,7 +484,7 @@ export const javascriptData4 = {
           "  // -3 する関数",
           "  x => x - 3",
           ");",
-          "// process(5)を出力",
+          "// 5を処理した結果を出力",
           "console.log(process(5));"
         ],
       "lineHints": [
@@ -511,7 +511,7 @@ export const javascriptData4 = {
             "map",
             "filter"
           ],
-          "others": ["pipe", "fns", "x", "v", "f", "+", "*", "-", "1", "2", "3", "5", "process", "console", "log", "", ");", "// process(5)を出力"]
+          "others": ["pipe", "fns", "x", "v", "f", "+", "*", "-", "1", "2", "3", "5", "process", "console", "log", "", ");", "// 5を処理した結果を出力"]
         },
         "testCases": [
           {

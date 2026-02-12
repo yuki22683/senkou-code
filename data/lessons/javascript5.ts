@@ -415,8 +415,8 @@ export const javascriptData5 = {
           "content": "# 絶対に重複しないユニークな値\\n\\n**Symbol** は、世界に一つだけの「印」を作る機能です。\\n\\n**身近なたとえ：**\\n指紋は人それぞれ違いますよね。Symbol も同じで、作るたびに必ず違う値になります。同じ名前で作っても、中身は別物です！\\n\\n**なぜ使う？**\\n- プロパティ名の衝突を避けられる\\n- 「隠し」プロパティを作れる\\n\\n**コード例：**\\n```javascript\\nconst id = Symbol('id');\\nconst obj = {\\n  [id]: 12345  // [id] で Symbol をキーにする\\n};\\nconsole.log(obj[id]);  // 12345\\n```"
         }
       ],
-      "correctCode": "// Symbol('秘密')でsecretを作成\\nconst secret = Symbol('秘密');\\n// userオブジェクトを作成\\nconst user = {\\n  // nameに'太郎'を設定\\n  name: '太郎',\\n  // [secret]に'パスワード123'を設定\\n  [secret]: 'パスワード123'\\n};\\n// user.nameをconsole.logで出力\\nconsole.log(user.name);\\n// user[secret]をconsole.logで出力\\nconsole.log(user[secret]);",
-      "holeyCode": "// Symbol('秘密')でsecretを作成\\n___ ___ = ___('___');\\n// userオブジェクトを作成\\n___ ___ = {\\n  // nameに'太郎'を設定\\n  ___: '___',\\n  // [secret]に'パスワード123'を設定\\n  [___]: '___'\\n};\\n// user.nameをconsole.logで出力\\n___.___(___.___);\\n// user[secret]をconsole.logで出力\\n___.___(___[___]);",
+      "correctCode": "// Symbol('秘密')でsecretを作成\\nconst secret = Symbol('秘密');\\n// userオブジェクトを作成\\nconst user = {\\n  // nameに'太郎'を設定\\n  name: '太郎',\\n  // 秘密キーにパスワードを設定\\n  [secret]: 'パスワード123'\\n};\\n// ユーザー名を出力\\nconsole.log(user.name);\\n// 秘密キーの値を出力\\nconsole.log(user[secret]);",
+      "holeyCode": "// Symbol('秘密')でsecretを作成\\n___ ___ = ___('___');\\n// userオブジェクトを作成\\n___ ___ = {\\n  // nameに'太郎'を設定\\n  ___: '___',\\n  // 秘密キーにパスワードを設定\\n  [___]: '___'\\n};\\n// ユーザー名を出力\\n___.___(___.___);\\n// 秘密キーの値を出力\\n___.___(___[___]);",
       "correctLines": [
           "// Symbol('秘密')でsecretを作成",
           "const secret = Symbol('秘密');",
@@ -424,12 +424,12 @@ export const javascriptData5 = {
           "const user = {",
           "  // nameに'太郎'を設定",
           "  name: '太郎',",
-          "  // [secret]に'パスワード123'を設定",
+          "  // 秘密キーにパスワードを設定",
           "  [secret]: 'パスワード123'",
           "};",
-          "// user.nameをconsole.logで出力",
+          "// ユーザー名を出力",
           "console.log(user.name);",
-          "// user[secret]をconsole.logで出力",
+          "// 秘密キーの値を出力",
           "console.log(user[secret]);"
         ],
       "lineHints": [

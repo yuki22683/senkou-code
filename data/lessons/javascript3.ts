@@ -192,8 +192,8 @@ export const javascriptData3 = {
           "content": "# async 関数の中でしか使えない！\\n\\n**重要なルール：**\\n`await` は必ず `async` 関数の中で使います。\\n\\n**なぜ？**\\n「待つ」という行為は、約束を返す関数の中でないとできないからです。\\n\\n**コード例：**\\n```javascript\\nasync function fetchData() {\\n  // 1. データを取得（待つ）\\n  const data = await fetch('/api');\\n  // 2. JSONに変換（待つ）\\n  const json = await data.json();\\n  // 3. 結果を返す\\n  return json;\\n}\\n```\\n\\n**ポイント：**\\n`await` を使うと、上から順番に実行されるので読みやすい！"
         }
       ],
-      "correctCode": "// awaitでPromiseを待つasync main()関数を定義\\nasync function main() {\\n  // await でPromiseの結果を待つ\\n  const value = await Promise.resolve(100);\\n  // console.log で出力\\n  console.log(value);\\n}\\n\\n// main()を呼び出す\\nmain();",
-      "holeyCode": "// awaitでPromiseを待つasync main()関数を定義\\n___ ___ ___() {\\n  // await でPromiseの結果を待つ\\n  ___ ___ = ___ ___.___(___);\\n  // console.log で出力\\n  ___.___(___);\\n// ブロックを閉じる\\n___\\n___\\n// main()を呼び出す\\n___();",
+      "correctCode": "// awaitでPromiseを待つasync main()関数を定義\\nasync function main() {\\n  // await でPromiseの結果を待つ\\n  const value = await Promise.resolve(100);\\n  // console.log で出力\\n  console.log(value);\\n}\\n\\n// メイン関数を呼び出す\\nmain();",
+      "holeyCode": "// awaitでPromiseを待つasync main()関数を定義\\n___ ___ ___() {\\n  // await でPromiseの結果を待つ\\n  ___ ___ = ___ ___.___(___);\\n  // console.log で出力\\n  ___.___(___);\\n// ブロックを閉じる\\n___\\n___\\n// メイン関数を呼び出す\\n___();",
       "correctLines": [
           "// awaitでPromiseを待つasync main()関数を定義",
           "async function main() {",
@@ -203,7 +203,7 @@ export const javascriptData3 = {
           "  console.log(value);",
           "}",
           "",
-          "// main()を呼び出す",
+          "// メイン関数を呼び出す",
           "main();"
         ],
       "lineHints": [
@@ -226,7 +226,7 @@ export const javascriptData3 = {
             "const",
             "function"
           ],
-          "others": ["main", "value", "Promise", "resolve", "100", "console", "log", "}", "", "// main()を呼び出す"]
+          "others": ["main", "value", "Promise", "resolve", "100", "console", "log", "}", "", "// メイン関数を呼び出す"]
         },
         "testCases": [
           {
@@ -248,8 +248,8 @@ export const javascriptData3 = {
           "content": "# 同時に実行すると速い！\\n\\n**順番に実行 vs 同時に実行：**\\n- 順番：3秒 + 3秒 = 6秒かかる\\n- 同時：3秒で両方終わる！\\n\\n**コード例：**\\n```javascript\\nasync function fetchAll() {\\n  // 2つのリクエストを同時に実行！\\n  const [users, posts] = await Promise.all([\\n    fetch('/users'),\\n    fetch('/posts')\\n  ]);\\n}\\n```\\n\\n**ポイント：**\\n互いに関係のない処理は、`Promise.all` で同時に実行すると時間短縮できます。"
         }
       ],
-      "correctCode": "// p1 = 10 で解決するPromiseを作成\\nconst p1 = Promise.resolve(10);\\n// p2 = 20 で解決するPromiseを作成\\nconst p2 = Promise.resolve(20);\\n// all で全てのPromiseを待つ\\nPromise.all([p1, p2]).then(nums => {\\n  // nums[0] + nums[1] で合計を計算\\n  console.log(nums[0] + nums[1]);\\n});",
-      "holeyCode": "// p1 = 10 で解決するPromiseを作成\\n___ ___ = ___.___(___);\\n// p2 = 20 で解決するPromiseを作成\\n___ ___ = ___.___(___);\\n// all で全てのPromiseを待つ\\n___.___([___, ___]).___(___ => {\\n  // nums[0] + nums[1] で合計を計算\\n  ___.___(___[___] + ___[___]);\\n// 文を実行\\n___);",
+      "correctCode": "// p1 = 10 で解決するPromiseを作成\\nconst p1 = Promise.resolve(10);\\n// p2 = 20 で解決するPromiseを作成\\nconst p2 = Promise.resolve(20);\\n// all で全てのPromiseを待つ\\nPromise.all([p1, p2]).then(nums => {\\n  // 1番目と2番目の値を足して合計を出力\\n  console.log(nums[0] + nums[1]);\\n});",
+      "holeyCode": "// p1 = 10 で解決するPromiseを作成\\n___ ___ = ___.___(___);\\n// p2 = 20 で解決するPromiseを作成\\n___ ___ = ___.___(___);\\n// all で全てのPromiseを待つ\\n___.___([___, ___]).___(___ => {\\n  // 1番目と2番目の値を足して合計を出力\\n  ___.___(___[___] + ___[___]);\\n// 文を実行\\n___);",
       "correctLines": [
           "// p1 = 10 で解決するPromiseを作成",
           "const p1 = Promise.resolve(10);",
@@ -257,7 +257,7 @@ export const javascriptData3 = {
           "const p2 = Promise.resolve(20);",
           "// all で全てのPromiseを待つ",
           "Promise.all([p1, p2]).then(nums => {",
-          "  // nums[0] + nums[1] で合計を計算",
+          "  // 1番目と2番目の値を足して合計を出力",
           "  console.log(nums[0] + nums[1]);",
           "});"
         ],
@@ -371,8 +371,8 @@ export const javascriptData3 = {
           "content": "# 親クラスの処理を呼び出す\\n\\n**super** は「親クラス」のことを指します。親の constructor やメソッドを呼び出せます。\\n\\n**身近なたとえ：**\\n「お母さん（親クラス）がやってくれることは任せて、自分（子クラス）は追加でやる」というイメージです。\\n\\n**コード例：**\\n```javascript\\nclass Cat extends Animal {\\n  constructor(name) {\\n    super();  // 親の constructor を呼ぶ\\n    this.name = name;  // 自分だけの設定を追加\\n  }\\n}\\n```\\n\\n**ポイント：**\\n子クラスの constructor では、最初に `super()` を呼ぶ必要があります！"
         }
       ],
-      "correctCode": "// 親クラスAnimalを定義\\nclass Animal {\\n  // speakメソッドを定義\\n  speak() { console.log('...'); }\\n}\\n\\n// CatクラスがAnimalを継承\\nclass Cat extends Animal {\\n  // speakメソッドをオーバーライド\\n  speak() { console.log('ニャー！'); }\\n}\\n\\n// catにnew Cat()を代入\\nconst cat = new Cat();\\n// speak()を呼び出し\\ncat.speak();",
-      "holeyCode": "// 親クラスAnimalを定義\\n___ ___ {\\n  // speakメソッドを定義\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// CatクラスがAnimalを継承\\n___ ___ ___ ___ {\\n  // speakメソッドをオーバーライド\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// catにnew Cat()を代入\\n___ ___ = ___ ___();\\n// speak()を呼び出し\\n___.___();",
+      "correctCode": "// 親クラスAnimalを定義\\nclass Animal {\\n  // speakメソッドを定義\\n  speak() { console.log('...'); }\\n}\\n\\n// CatクラスがAnimalを継承\\nclass Cat extends Animal {\\n  // speakメソッドをオーバーライド\\n  speak() { console.log('ニャー！'); }\\n}\\n\\n// catにnew Cat()を代入\\nconst cat = new Cat();\\n// 鳴き声メソッドを呼び出し\\ncat.speak();",
+      "holeyCode": "// 親クラスAnimalを定義\\n___ ___ {\\n  // speakメソッドを定義\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// CatクラスがAnimalを継承\\n___ ___ ___ ___ {\\n  // speakメソッドをオーバーライド\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// catにnew Cat()を代入\\n___ ___ = ___ ___();\\n// 鳴き声メソッドを呼び出し\\n___.___();",
       "correctLines": [
           "// 親クラスAnimalを定義",
           "class Animal {",
@@ -388,7 +388,7 @@ export const javascriptData3 = {
           "",
           "// catにnew Cat()を代入",
           "const cat = new Cat();",
-          "// speak()を呼び出し",
+          "// 鳴き声メソッドを呼び出し",
           "cat.speak();"
         ],
       "lineHints": [

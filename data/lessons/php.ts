@@ -635,14 +635,14 @@ export const phpData = {
           "content": "# 関数の定義\\n\\n`function` キーワードを使って関数を作ります。\\n\\n**コード例：**\\n```php\\nfunction sayHello() {\\n    echo \"ヤッホー！\";\\n}\\n\\nsayHello(); // 呼び出し\\n```\\n\\n**何をしているの？**\\n1. `function sayHello()` → 「sayHello」という名前の関数を作る\\n2. `{ }` の中に処理を書く\\n3. `sayHello();` → 関数を呼び出す（名前を呼ぶだけでOK）\\n\\n**ポイント：**\\n- `function` は「機能」という意味\\n- 関数名のあとに `()` をつけて呼び出す\\n- 呼び出すと `{ }` の中の処理が実行される"
         }
       ],
-      "correctCode": "<?php\\n  function greet() {\\n    echo \"こんにちは\";\\n  }\\n  // greet()を実行\\n  greet();\\n?>",
-      "holeyCode": "// PHPコード開始タグ\\n___\\n  // ブロックを開始\\n  function ___() ___\\n    // 出力\\n    ___ \"___\";\\n  // ブロックを閉じる\\n  ___\\n  // greet()を実行\\n  ___();\\n// PHPコード終了タグ\\n___",
+      "correctCode": "<?php\\n  function greet() {\\n    echo \"こんにちは\";\\n  }\\n  // あいさつ関数を実行\\n  greet();\\n?>",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n  // ブロックを開始\\n  function ___() ___\\n    // 出力\\n    ___ \"___\";\\n  // ブロックを閉じる\\n  ___\\n  // あいさつ関数を実行\\n  ___();\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "<?php",
           "  function greet() {",
           "    echo \"こんにちは\";",
           "  }",
-          "  // greet()を実行",
+          "  // あいさつ関数を実行",
           "  greet();",
           "?>"
         ],

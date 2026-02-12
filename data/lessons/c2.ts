@@ -121,7 +121,7 @@ export const c2Data = {
           "content": "# かっこの中に引数を定義\\n\\n関数名の後の () の中に引数を書きます。型と名前を指定します。\\n\\n**コード例：**\\n```c\\nvoid greet(int age) {\\n    printf(\"%d歳ですね\\n\", age);\\n}\\n\\ngreet(10); // 10歳ですね\\n```"
         }
       ],
-      "correctCode": "#include <stdio.h>\\n// show関数の引数numを定義\\nvoid show(int num) {\\n    printf(\"%d\\n\", num);\\n}\\nint main() {\\n    show(25);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n// show関数の引数numを定義\\n___ ___(int ___) {\\n    // 出力\\n    ___(\\\"___\\\", ___);\\n// ブロックを閉じる\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 文を実行\\n    ___(___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "#include <stdio.h>\\n// show関数の引数numを定義\\nvoid show(int num) {\\n    printf(\"%d\\n\", num);\\n}\\nint main() {\\n    // show関数を呼び出し（引数25）\\n    show(25);\\n    return 0;\\n}", "holeyCode": "#___ <___>\\n// show関数の引数numを定義\\n___ ___(int ___) {\\n    // 出力\\n    ___(\\\"___\\\", ___);\\n// ブロックを閉じる\\n___\\n// ブロックを開始\\n___ ___() {\\n    // show関数を呼び出し（引数25）\\n    ___(___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "#include <stdio.h>",
           "// show関数の引数numを定義",
@@ -129,6 +129,7 @@ export const c2Data = {
           "    printf(\"%d\\n\", num);",
           "}",
           "int main() {",
+          "    // show関数を呼び出し（引数25）",
           "    show(25);",
           "    return 0;",
           "}"
@@ -139,6 +140,7 @@ export const c2Data = {
           "",
           null,
           "",
+          null,
           null,
           "",
           null,

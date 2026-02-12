@@ -617,8 +617,8 @@ export const csharp3Data = {
           "content": "# 元のデータを変えずにコピー\\n\\n`with` を使うと、一部のプロパティだけ変更した**新しいコピー**を作れます。元のデータは変わりません（イミュータブル：不変）。\\n\\n**コード例：**\\n```csharp\\nvar p1 = new Person(\"Alice\", 25);\\nvar p2 = p1 with { Age = 26 };  // 年齢だけ変更\\n\\n// p1 は (\"Alice\", 25) のまま\\n// p2 は (\"Alice\", 26)\\n```\\n\\n**解説：**\\n1. `p1 with { Age = 26 }` で「p1をコピーして、Ageだけ26に変える」\\n2. p1自体は変更されない（不変）\\n3. 新しいオブジェクト p2 が作られる\\n\\n**ポイント：**\\nrecordはデータを安全に扱いたいときに便利！うっかり変更してしまう心配がありません。"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// recordで値型を定義\\nrecord Point(int X, int Y);\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Pointインスタンスを作成\\n        var p = new Point(10, 20);\\n        // pを表示\\n        Console.WriteLine(p);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n___\\n// recordで値型を定義\\n___ ___(int ___, int ___);\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // Pointインスタンスを作成\\n        var ___ = new ___(___, ___);\\n        // pを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// recordで値型を定義\\nrecord Point(int X, int Y);\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Pointインスタンスを作成（X=10, Y=20）\\n        var p = new Point(10, 20);\\n        // pを表示\\n        Console.WriteLine(p);\\n    }\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n___\\n// recordで値型を定義\\n___ ___(int ___, int ___);\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // Pointインスタンスを作成（X=10, Y=20）\\n        var ___ = new ___(___, ___);\\n        // pを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -630,7 +630,7 @@ export const csharp3Data = {
           "class Program {",
           "    // Mainメソッドを定義",
           "    static void Main() {",
-          "        // Pointインスタンスを作成",
+          "        // Pointインスタンスを作成（X=10, Y=20）",
           "        var p = new Point(10, 20);",
           "        // pを表示",
           "        Console.WriteLine(p);",

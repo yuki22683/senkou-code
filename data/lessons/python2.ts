@@ -123,15 +123,15 @@ export const pythonData2 = {
           "content": "# 計算結果を受け取ろう！\\n\\n`return` で返された値は、**変数に入れたり**、**そのまま使ったり** できます。\\n\\n**例：** 2倍にする関数を作ろう！\\n\\n```python\\ndef double(x):\\n    return x * 2\\n\\nprint(double(5))\\n```\\n\\n=> 10\\n\\n**何をしているか：**\\n1. `double(5)` で関数を呼び出す\\n2. 関数の中で `5 * 2 = 10` が計算される\\n3. `return` で 10 が返される\\n4. `print()` がその 10 を表示する！\\n\\n**ポイント：**\\n- `return` を使うと、関数は **答えを返す機械** になります\\n- 返された値は変数に保存したり、そのまま使ったりできます"
         }
       ],
-      "correctCode": "# add関数を定義（第1引数a, 第2引数b）\\ndef add(a, b):\\n    # aとbの和を返す\\n    return a + b\\n\\n# resultにadd関数（第1引数がa, 第2引数がb）の結果を代入\\nresult = add(10, 20)\\n# resultを表示\\nprint(result)",
-      "holeyCode": "# add関数を定義（第1引数a, 第2引数b）\\ndef ___(___, ___):\\n    # aとbの和を返す\\n    ___ ___ + ___\\n\\n# resultにadd関数（第1引数がa, 第2引数がb）の結果を代入\\n___ = ___(___, ___)\\n# resultを表示\\n___(___)",
+      "correctCode": "# add関数を定義（第1引数a, 第2引数b）\\ndef add(a, b):\\n    # aとbの和を返す\\n    return a + b\\n\\n# add関数を呼び出し（第1引数に10, 第2引数に20）してresultに代入\\nresult = add(10, 20)\\n# resultを表示\\nprint(result)",
+      "holeyCode": "# add関数を定義（第1引数a, 第2引数b）\\ndef ___(___, ___):\\n    # aとbの和を返す\\n    ___ ___ + ___\\n\\n# add関数を呼び出し（第1引数に10, 第2引数に20）してresultに代入\\n___ = ___(___, ___)\\n# resultを表示\\n___(___)",
       "correctLines": [
         "# add関数を定義（第1引数a, 第2引数b）",
         "def add(a, b):",
         "    # aとbの和を返す",
         "    return a + b",
         "",
-        "# resultにadd関数（第1引数がa, 第2引数がb）の結果を代入",
+        "# add関数を呼び出し（第1引数に10, 第2引数に20）してresultに代入",
         "result = add(10, 20)",
         "# resultを表示",
         "print(result)"

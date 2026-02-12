@@ -618,8 +618,8 @@ export const javascriptData2 = {
           "content": "# メソッドも短く書ける！\\n\\nオブジェクトの中にメソッド（関数）を書くときも省略できます。\\n\\n**比較してみよう：**\\n```javascript\\nconst obj = {\\n    // 通常の書き方\\n    greet: function() { \\n        console.log('Hi'); \\n    },\\n    \\n    // ショートハンド（: function を省略）\\n    sayBye() { \\n        console.log('Bye'); \\n    }\\n};\\n```\\n\\n**ポイント：**\\n`: function` を省略して、関数名のあとに直接 `()` を書けます。"
         }
       ],
-      "correctCode": "// x = 10, y = 20 をプロパティとして持つオブジェクトを作る\\nconst x = 10;\\n// y = 20\\nconst y = 20;\\n// ショートハンドで x をプロパティとして追加する\\nconst point = { x, y };\\n// point.xを表示\\nconsole.log(point.x);\\n// point.yを表示\\nconsole.log(point.y);",
-      "holeyCode": "// x = 10, y = 20 をプロパティとして持つオブジェクトを作る\\nconst ___ = ___;\\n// y = 20\\nconst ___ = ___;\\n// ショートハンドで x をプロパティとして追加する\\nconst ___ = { ___, ___ };\\n// point.xを表示\\n___.___(___.___)___\\n// point.yを表示\\n___.___(___.___)___",
+      "correctCode": "// x = 10, y = 20 をプロパティとして持つオブジェクトを作る\\nconst x = 10;\\n// y = 20\\nconst y = 20;\\n// ショートハンドで x をプロパティとして追加する\\nconst point = { x, y };\\n// x座標を表示\\nconsole.log(point.x);\\n// y座標を表示\\nconsole.log(point.y);",
+      "holeyCode": "// x = 10, y = 20 をプロパティとして持つオブジェクトを作る\\nconst ___ = ___;\\n// y = 20\\nconst ___ = ___;\\n// ショートハンドで x をプロパティとして追加する\\nconst ___ = { ___, ___ };\\n// x座標を表示\\n___.___(___.___)___\\n// y座標を表示\\n___.___(___.___)___",
       "correctLines": [
           "// x = 10, y = 20 をプロパティとして持つオブジェクトを作る",
           "const x = 10;",
@@ -627,9 +627,9 @@ export const javascriptData2 = {
           "const y = 20;",
           "// ショートハンドで x をプロパティとして追加する",
           "const point = { x, y };",
-          "// point.xを表示",
+          "// x座標を表示",
           "console.log(point.x);",
-          "// point.yを表示",
+          "// y座標を表示",
           "console.log(point.y);"
         ],
       "lineHints": [
@@ -640,9 +640,9 @@ export const javascriptData2 = {
           null,
           "変数名がそのままプロパティ名になる `x` を使います。",
           null,
-          "point.x を出力します。",
+          "x座標を出力します。",
           null,
-          "point.y を出力します。"
+          "y座標を出力します。"
         ],
         "candidates": {
           "variables": [

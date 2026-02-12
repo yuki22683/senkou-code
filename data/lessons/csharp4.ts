@@ -588,8 +588,8 @@ export const csharp4Data = {
           "content": "# 一部を変更したコピー\\n\\n```csharp\\nvar p2 = p with { Age = 31 };\\n```"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// イミュータブルなデータ型を定義するキーワード\\nrecord Point(int X, int Y);\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Pointインスタンスを作成\\n        var p = new Point(3, 4);\\n        // pを表示\\n        Console.WriteLine(p);\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// イミュータブルなデータ型を定義するキーワード\\n___ ___(___  ___, ___  ___)___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // Pointインスタンスを作成\\n        ___ ___ = ___ ___(___, ___);\\n        // pを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// イミュータブルなデータ型を定義するキーワード\\nrecord Point(int X, int Y);\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Pointインスタンスを作成（X=3, Y=4）\\n        var p = new Point(3, 4);\\n        // pを表示\\n        Console.WriteLine(p);\\n    }\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// イミュータブルなデータ型を定義するキーワード\\n___ ___(___  ___, ___  ___)___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // Pointインスタンスを作成（X=3, Y=4）\\n        ___ ___ = ___ ___(___, ___);\\n        // pを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -601,7 +601,7 @@ export const csharp4Data = {
           "class Program {",
           "    // Mainメソッドを定義",
           "    static void Main() {",
-          "        // Pointインスタンスを作成",
+          "        // Pointインスタンスを作成（X=3, Y=4）",
           "        var p = new Point(3, 4);",
           "        // pを表示",
           "        Console.WriteLine(p);",

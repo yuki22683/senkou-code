@@ -646,15 +646,15 @@ export const typescriptData = {
           "content": "# 引数にラベルを貼る\\n\\n関数が受け取るデータのことを **引数** と呼びます。「関数に渡すデータ」と考えてください。\\n\\nTypeScriptでは、この引数にもラベルを貼ることで、「文字以外は渡さないで！」と決めることができます。\\n\\n## コードで書くとこうなるよ\\n\\n下のコードでは、`msg` という引数に `string` ラベルを貼っています。\\n\\n```typescript\\n// 文字列（string）だけを受け取る関数\\nfunction sayHello(msg: string) {\\n    console.log(`メッセージ: ${msg}`);\\n}\\nsayHello('ヤッホー');\\n```\\n**実行結果：** メッセージ: ヤッホー\\n\\nこれで、間違って数字を渡そうとしても、TypeScriptが「文字を渡してね！」と教えてくれます。"
         }
       ],
-      "correctCode": "// 受け取るデータのラベルを指定する\\nfunction greet(name: string) {\\n    // console.log(`こんにちは、${name}`)を出力\\n    console.log(`こんにちは、${name}`);\\n}\\n// greet('TypeScript')を実行\\ngreet('TypeScript');",
-      "holeyCode": "// 受け取るデータのラベルを指定する\\nfunction ___(___: ___) {\\n    // console.log(`こんにちは、${name}`)を出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___\\n// greet('TypeScript')を実行\\n___(___);",
+      "correctCode": "// 受け取るデータのラベルを指定する\\nfunction greet(name: string) {\\n    // 名前付きあいさつを出力\\n    console.log(`こんにちは、${name}`);\\n}\\n// あいさつ関数を'TypeScript'で実行\\ngreet('TypeScript');",
+      "holeyCode": "// 受け取るデータのラベルを指定する\\nfunction ___(___: ___) {\\n    // 名前付きあいさつを出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___\\n// あいさつ関数を'TypeScript'で実行\\n___(___);",
       "correctLines": [
           "// 受け取るデータのラベルを指定する",
           "function greet(name: string) {",
-          "    // console.log(`こんにちは、${name}`)を出力",
+          "    // 名前付きあいさつを出力",
           "    console.log(`こんにちは、${name}`);",
           "}",
-          "// greet('TypeScript')を実行",
+          "// あいさつ関数を'TypeScript'で実行",
           "greet('TypeScript');"
         ],
       "lineHints": [
@@ -701,15 +701,15 @@ export const typescriptData = {
           "content": "# 何も返さないときは void です\\n\\n結果などを「返さない」関数もあります。画面に文字を表示するだけ、など。\\n\\nそんな関数には、`void`（ボイド）というラベルを貼ります。これは「空っぽ」「何もない」という意味です。\\n\\n## コードで書くとこうなるよ\\n\\n下のコードでは、画面にメッセージを表示するだけで、何も返しません。\\n\\n```typescript\\nfunction logger(text: string): void {\\n    console.log(`LOG: ${text}`);\\n}\\nlogger('処理開始');\\n```\\n**実行結果：** LOG: 処理開始\\n\\n関数名のあとの `: void` が「何も返さないよ」という意味です。"
         }
       ],
-      "correctCode": "// 何も返さないときに使うラベル\\nfunction showDate(): void {\\n    // console.log('今日の日付')を出力\\n    console.log('今日の日付');\\n}\\n// showDate()を実行\\nshowDate();",
-      "holeyCode": "// 何も返さないときに使うラベル\\nfunction ___(): ___ {\\n    // console.log('今日の日付')を出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___\\n// showDate()を実行\\n___();",
+      "correctCode": "// 何も返さないときに使うラベル\\nfunction showDate(): void {\\n    // '今日の日付'と出力\\n    console.log('今日の日付');\\n}\\n// 日付表示関数を実行\\nshowDate();",
+      "holeyCode": "// 何も返さないときに使うラベル\\nfunction ___(): ___ {\\n    // '今日の日付'と出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___\\n// 日付表示関数を実行\\n___();",
       "correctLines": [
           "// 何も返さないときに使うラベル",
           "function showDate(): void {",
-          "    // console.log('今日の日付')を出力",
+          "    // '今日の日付'と出力",
           "    console.log('今日の日付');",
           "}",
-          "// showDate()を実行",
+          "// 日付表示関数を実行",
           "showDate();"
         ],
       "lineHints": [

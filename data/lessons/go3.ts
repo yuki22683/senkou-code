@@ -308,7 +308,7 @@ export const go3Data = {
           "content": "# 短い方に合わせる\\n\\n```go\\nsrc := []int{1, 2, 3, 4, 5}\\ndst := make([]int, 3)\\nn := copy(dst, src)  // n = 3\\n// dst = [1, 2, 3]\\n```"
         }
       ],
-      "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    // コピー元のスライス (10, 20, 30)\\n    src := []int{10, 20, 30}\\n    // dstにmake([]int, len(src))を代入\\n    dst := make([]int, len(src))\\n    // copy でスライスをコピー\\n    copy(dst, src)\\n    fmt.Println(dst)\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// パッケージをインポート\\n___ \\\"___\\\"\\n\\n// main関数を定義\\nfunc ___() {\\n    // コピー元のスライス (10, 20, 30)\\n    ___ := []___{___, ___, ___}\\n    // dstにmake([]int, len(src))を代入\\n    ___ := ___([]___, ___(___))\\n    // copy でスライスをコピー\\n    ___(___, ___)\\n    // 出力\\n    ___.___(___\\n}",
+      "correctCode": "package main\\n\\nimport \"fmt\"\\n\\nfunc main() {\\n    // コピー元のスライス (10, 20, 30)\\n    src := []int{10, 20, 30}\\n    // dstにmake([]int, len(src))を代入\\n    dst := make([]int, len(src))\\n    // copyでsrcをdstにコピー（第1引数がdst, 第2引数がsrc）\\n    copy(dst, src)\\n    fmt.Println(dst)\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n\\n// パッケージをインポート\\n___ \\\"___\\\"\\n\\n// main関数を定義\\nfunc ___() {\\n    // コピー元のスライス (10, 20, 30)\\n    ___ := []___{___, ___, ___}\\n    // dstにmake([]int, len(src))を代入\\n    ___ := ___([]___, ___(___))\\n    // copyでsrcをdstにコピー（第1引数がdst, 第2引数がsrc）\\n    ___(___, ___)\\n    // 出力\\n    ___.___(___\\n}",
       "correctLines": [
           "package main",
           "",
@@ -319,7 +319,7 @@ export const go3Data = {
           "    src := []int{10, 20, 30}",
           "    // dstにmake([]int, len(src))を代入",
           "    dst := make([]int, len(src))",
-          "    // copy でスライスをコピー",
+          "    // copyでsrcをdstにコピー（第1引数がdst, 第2引数がsrc）",
           "    copy(dst, src)",
           "    fmt.Println(dst)",
           "}"

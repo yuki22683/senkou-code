@@ -156,14 +156,14 @@ export const javaData5 = {
           "content": "# キャッチか再スロー（投げ渡し）\\n\\nthrowsがついたメソッドを呼ぶ側は、「キャッチする」か「さらに上に投げる」かを選びます。\\n\\n**方法1：自分でキャッチする**\\n```java\\ntry {\\n    readFile();  // 例外が起きるかも\\n} catch (IOException e) {\\n    // 自分で対処する\\n}\\n```\\n\\n**方法2：さらに上に投げる**\\n```java\\npublic void caller() throws IOException {\\n    readFile();  // 自分は対処せず、呼び出し元に任せる\\n}\\n```\\n\\n**たとえ話：** 問題が起きたら「自分で解決する」か「上司に報告する」かの選択です"
         }
       ],
-      "correctCode": "import java.io.*;\\n\\npublic class Main {\\n    // riskyMethod()をthrows Exceptionで宣言\\n    public static void riskyMethod() throws Exception {\\n        // throw new Exception(\"Error!\")で例外をスロー\\n        throw new Exception(\"エラー！\");\\n    }\\n    public static void main(String[] args) {\\n        try {\\n            // riskyMethod を呼び出す\\n            riskyMethod();\\n        } catch (Exception e) {\\n            // println で出力する\\n            System.out.println(\"Caught\");\\n        }\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // riskyMethod()をthrows Exceptionで宣言\\n    public static void ___() throws ___ {\\n        // throw new Exception(\\\"Error!\\\")で例外をスロー\\n        throw new ___(___);\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // ブロックを開始\\n        ___ {\\n            // riskyMethod を呼び出す\\n            ___()___\\n        // ブロックを開始\\n        } ___ (___ ___) {\\n            // println で出力する\\n            ___.___.___(___)___\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.io.*;\\n\\npublic class Main {\\n    // 例外を投げる可能性があるメソッドをthrows Exceptionで宣言\\n    public static void riskyMethod() throws Exception {\\n        // 新しい例外を作成してスロー\\n        throw new Exception(\"エラー！\");\\n    }\\n    public static void main(String[] args) {\\n        try {\\n            // riskyMethod を呼び出す\\n            riskyMethod();\\n        } catch (Exception e) {\\n            // println で出力する\\n            System.out.println(\"Caught\");\\n        }\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // 例外を投げる可能性があるメソッドをthrows Exceptionで宣言\\n    public static void ___() throws ___ {\\n        // throw new Exception(\\\"Error!\\\")で例外をスロー\\n        throw new ___(___);\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // ブロックを開始\\n        ___ {\\n            // riskyMethod を呼び出す\\n            ___()___\\n        // ブロックを開始\\n        } ___ (___ ___) {\\n            // println で出力する\\n            ___.___.___(___)___\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.io.*;",
           "",
           "public class Main {",
-          "    // riskyMethod()をthrows Exceptionで宣言",
+          "    // 例外を投げる可能性があるメソッドをthrows Exceptionで宣言",
           "    public static void riskyMethod() throws Exception {",
-          "        // throw new Exception(\"Error!\")で例外をスロー",
+          "        // 新しい例外を作成してスロー",
           "        throw new Exception(\"エラー！\");",
           "    }",
           "    public static void main(String[] args) {",
