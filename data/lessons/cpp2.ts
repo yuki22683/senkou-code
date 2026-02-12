@@ -332,19 +332,19 @@ export const cpp2Data = {
           "content": "# 仮想関数の仕組み\\n\\n親クラスで `virtual` をつけた関数は、子クラスで `override` して上書きできます。\\n\\n**コード例：**\\n```cpp\\nclass Animal {\\npublic:\\n    virtual void speak() { std::cout << \"...\" << std::endl; }\\n};\\nclass Cat : public Animal {\\npublic:\\n    void speak() override { std::cout << \"meow\" << std::endl; }\\n};\\n```"
         }
       ],
-      "correctCode": "#include <iostream>\\nclass Shape {\\npublic:\\n    // virtual draw()を定義\\n    virtual void draw() {\\n        std::cout << \"shape\" << std::endl;\\n    }\\n};\\nclass Circle : public Shape {\\npublic:\\n    // overrideでdraw()を上書き\\n    void draw() override {\\n        std::cout << \"circle\" << std::endl;\\n    }\\n};\\nint main() {\\n    Circle c;\\n    // cでdrawメソッドを実行して描画\\n    c.draw();\\n    return 0;\\n}", "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\\n___:\\n    // virtual draw()を定義\\n    virtual void ___() {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// Circleクラスを定義\\nclass ___ : public ___ {\\n// ラベルを定義\\n___:\\n    // overrideでdraw()を上書き\\n    void ___() override {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// ブロックを開始\\nint ___() {\\n    // 文を実行\\n    ___ ___;\\n    // cでdrawメソッドを実行して描画\\n    ___.___();\\n    // 0を返す\\n    return ___;\\n}",
+      "correctCode": "#include <iostream>\\nclass Shape {\\npublic:\\n    // virtual drawメソッドを定義\\n    virtual void draw() {\\n        std::cout << \"shape\" << std::endl;\\n    }\\n};\\nclass Circle : public Shape {\\npublic:\\n    // overrideでdrawメソッドを上書き\\n    void draw() override {\\n        std::cout << \"circle\" << std::endl;\\n    }\\n};\\nint main() {\\n    Circle c;\\n    // cでdrawメソッドを実行して描画\\n    c.draw();\\n    return 0;\\n}", "holeyCode": "#___ <___>\\nclass ___ {\\n// ラベルを定義\\n___:\\n    // virtual drawメソッドを定義\\n    virtual void ___() {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// Circleクラスを定義\\nclass ___ : public ___ {\\n// ラベルを定義\\n___:\\n    // overrideでdrawメソッドを上書き\\n    void ___() override {\\n        // 文を実行\\n        ___::___ << \\\"___\\\" << ___::___;\\n    }\\n};\\n// ブロックを開始\\nint ___() {\\n    // 文を実行\\n    ___ ___;\\n    // cでdrawメソッドを実行して描画\\n    ___.___();\\n    // 0を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "class Shape {",
           "public:",
-          "    // virtual draw()を定義",
+          "    // virtual drawメソッドを定義",
           "    virtual void draw() {",
           "        std::cout << \"shape\" << std::endl;",
           "    }",
           "};",
           "class Circle : public Shape {",
           "public:",
-          "    // overrideでdraw()を上書き",
+          "    // overrideでdrawメソッドを上書き",
           "    void draw() override {",
           "        std::cout << \"circle\" << std::endl;",
           "    }",
@@ -383,7 +383,7 @@ export const cpp2Data = {
           "keywords": [
             "virtual"
           ],
-          "others": ["override", "draw", "Shape", "public", "\"shape\"", "}", "};", "Circle", "\"circle\"", "main", "c", "0", "#include <iostream>", "#include <iostream>", "}", "};", "std", "cout", "shape", "endl", "circle", "// virtual draw()を定義", "<< \"shape\" << std::endl;", "id", "erride", ") {", "画メソッドを呼び出す", "でdrawメソッドを実行して描画"]
+          "others": ["override", "draw", "Shape", "public", "\"shape\"", "}", "};", "Circle", "\"circle\"", "main", "c", "0", "#include <iostream>", "#include <iostream>", "}", "};", "std", "cout", "shape", "endl", "circle", "// virtual drawメソッドを定義", "<< \"shape\" << std::endl;", "id", "erride", ") {", "画メソッドを呼び出す", "でdrawメソッドを実行して描画"]
         },
         "testCases": [
           {
@@ -460,7 +460,7 @@ export const cpp2Data = {
                       "content": "# [キャプチャ](引数) { 処理 }\\n\\n```cpp\\n[](int x) { return x * 2; }\\n```\\n\\n- **[]** キャプチャ（外の変数を使う）\\n- **(引数)** 受け取る値\\n- **{ }** 実行する処理"
               }
       ],
-      "correctCode": "#include <iostream>\\nint main() {\\n    // { でラムダ本体を開始\\n    auto square = [](int x) {\\n        return x * x;\\n    };\\n    // square(4) でラムダを呼び出し\\n    std::cout << square(4) << std::endl;\\n    return 0;\\n}", "holeyCode": "#___ <___>\\nint ___() {\\n    // { でラムダ本体を開始\\n    auto ___ = [](int ___) {\\n        // x * xを返す\\n        return ___ * ___;\\n    };\\n    // square(4) でラムダを呼び出し\\n    ___::___ << ___(___) << ___::___;\\n    // 0を返す\\n    return ___;\\n}",
+      "correctCode": "#include <iostream>\\nint main() {\\n    // { でラムダ本体を開始\\n    auto square = [](int x) {\\n        return x * x;\\n    };\\n    // squareを引数4で呼び出し\\n    std::cout << square(4) << std::endl;\\n    return 0;\\n}", "holeyCode": "#___ <___>\\nint ___() {\\n    // { でラムダ本体を開始\\n    auto ___ = [](int ___) {\\n        // xの2乗を返す\\n        return ___ * ___;\\n    };\\n    // squareを引数4で呼び出し\\n    ___::___ << ___(___) << ___::___;\\n    // 0を返す\\n    return ___;\\n}",
       "correctLines": [
           "#include <iostream>",
           "int main() {",
@@ -468,7 +468,7 @@ export const cpp2Data = {
           "    auto square = [](int x) {",
           "        return x * x;",
           "    };",
-          "    // square(4) でラムダを呼び出し",
+          "    // squareを引数4で呼び出し",
           "    std::cout << square(4) << std::endl;",
           "    return 0;",
           "}"

@@ -302,8 +302,8 @@ export const javascriptData3 = {
           "content": "# new で実際のオブジェクトを作る\\n\\n設計図から作った実際のオブジェクトを **インスタンス** と呼びます。\\n\\n**身近なたとえ：**\\n- class（設計図）= たい焼きの型\\n- インスタンス = 実際のたい焼き\\n\\n**コード例：**\\n```javascript\\n// new で Person クラスからインスタンスを作る\\nconst alice = new Person('Alice');\\nalice.greet();\\n```\\n**実行結果：**\\n```\\nHello, Alice!\\n```\\n\\n**ポイント：**\\n`new` をつけて class を呼び出すと、インスタンスが作られます。"
         }
       ],
-      "correctCode": "// Dogクラスを定義\\nclass Dog {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  bark() {\\n    // テンプレートリテラルで出力\\n    console.log(`${this.name}: ワン！`);\\n  }\\n}\\n\\n// dogにnew Dog('ポチ')を代入\\nconst dog = new Dog('ポチ');\\n// bark()メソッドを呼び出し\\ndog.bark();",
-      "holeyCode": "// Dogクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // ブロックを開始\\n  ___() {\\n    // テンプレートリテラルで出力\\n    ___.___(`${___.___}___`);\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// dogにnew Dog('ポチ')を代入\\n___ ___ = ___ ___(___);\\n// bark()メソッドを呼び出し\\n___.___();",
+      "correctCode": "// Dogクラスを定義\\nclass Dog {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  bark() {\\n    // テンプレートリテラルで出力\\n    console.log(`${this.name}: ワン！`);\\n  }\\n}\\n\\n// dogにDogインスタンス（引数'ポチ'）を代入\\nconst dog = new Dog('ポチ');\\n// barkメソッドを呼び出し\\ndog.bark();",
+      "holeyCode": "// Dogクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // ブロックを開始\\n  ___() {\\n    // テンプレートリテラルで出力\\n    ___.___(`${___.___}___`);\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// dogにDogインスタンス（引数'ポチ'）を代入\\n___ ___ = ___ ___(___);\\n// barkメソッドを呼び出し\\n___.___();",
       "correctLines": [
           "// Dogクラスを定義",
           "class Dog {",
@@ -318,9 +318,9 @@ export const javascriptData3 = {
           "  }",
           "}",
           "",
-          "// dogにnew Dog('ポチ')を代入",
+          "// dogにDogインスタンス（引数'ポチ'）を代入",
           "const dog = new Dog('ポチ');",
-          "// bark()メソッドを呼び出し",
+          "// barkメソッドを呼び出し",
           "dog.bark();"
         ],
       "lineHints": [
@@ -349,7 +349,7 @@ export const javascriptData3 = {
             "const",
             "new"
           ],
-          "others": ["Dog", "constructor", "name", "this", "bark", "console", "log", ": ワン！", "'ポチ'", "dog", "}", "", "bark() {", "console.log", "dogにnew Dog('ポチ')を代入", "// bark()メソッドを呼び出し", "dog.bark();"]
+          "others": ["Dog", "constructor", "name", "this", "bark", "console", "log", ": ワン！", "'ポチ'", "dog", "}", "", "bark() {", "console.log", "dogにnew Dog('ポチ')を代入", "// barkメソッドを呼び出し", "dog.bark();", "dogにDogインスタンス（引数'ポチ'）を代入"]
         },
         "testCases": [
           {
@@ -371,8 +371,8 @@ export const javascriptData3 = {
           "content": "# 親クラスの処理を呼び出す\\n\\n**super** は「親クラス」のことを指します。親の constructor やメソッドを呼び出せます。\\n\\n**身近なたとえ：**\\n「お母さん（親クラス）がやってくれることは任せて、自分（子クラス）は追加でやる」というイメージです。\\n\\n**コード例：**\\n```javascript\\nclass Cat extends Animal {\\n  constructor(name) {\\n    super();  // 親の constructor を呼ぶ\\n    this.name = name;  // 自分だけの設定を追加\\n  }\\n}\\n```\\n\\n**ポイント：**\\n子クラスの constructor では、最初に `super()` を呼ぶ必要があります！"
         }
       ],
-      "correctCode": "// 親クラスAnimalを定義\\nclass Animal {\\n  // speakメソッドを定義\\n  speak() { console.log('...'); }\\n}\\n\\n// CatクラスがAnimalを継承\\nclass Cat extends Animal {\\n  // speakメソッドをオーバーライド\\n  speak() { console.log('ニャー！'); }\\n}\\n\\n// catにnew Cat()を代入\\nconst cat = new Cat();\\n// 鳴き声メソッドを呼び出し\\ncat.speak();",
-      "holeyCode": "// 親クラスAnimalを定義\\n___ ___ {\\n  // speakメソッドを定義\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// CatクラスがAnimalを継承\\n___ ___ ___ ___ {\\n  // speakメソッドをオーバーライド\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// catにnew Cat()を代入\\n___ ___ = ___ ___();\\n// 鳴き声メソッドを呼び出し\\n___.___();",
+      "correctCode": "// 親クラスAnimalを定義\\nclass Animal {\\n  // speakメソッドを定義\\n  speak() { console.log('...'); }\\n}\\n\\n// CatクラスがAnimalを継承\\nclass Cat extends Animal {\\n  // speakメソッドをオーバーライド\\n  speak() { console.log('ニャー！'); }\\n}\\n\\n// catにCatインスタンスを代入\\nconst cat = new Cat();\\n// 鳴き声メソッドを呼び出し\\ncat.speak();",
+      "holeyCode": "// 親クラスAnimalを定義\\n___ ___ {\\n  // speakメソッドを定義\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// CatクラスがAnimalを継承\\n___ ___ ___ ___ {\\n  // speakメソッドをオーバーライド\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// catにCatインスタンスを代入\\n___ ___ = ___ ___();\\n// 鳴き声メソッドを呼び出し\\n___.___();",
       "correctLines": [
           "// 親クラスAnimalを定義",
           "class Animal {",
@@ -386,7 +386,7 @@ export const javascriptData3 = {
           "  speak() { console.log('ニャー！'); }",
           "}",
           "",
-          "// catにnew Cat()を代入",
+          "// catにCatインスタンスを代入",
           "const cat = new Cat();",
           "// 鳴き声メソッドを呼び出し",
           "cat.speak();"
@@ -418,7 +418,7 @@ export const javascriptData3 = {
             "const",
             "new"
           ],
-          "others": ["Animal", "Cat", "speak", "console", "log", "'...'", "'ニャー！'", "cat", "}", "", "// CatクラスがAnimalを継承", "//", "speakメソッドをオーバーライド", "// catにnew Cat()を代入", "const cat = new Cat();", "cat.speak();"]
+          "others": ["Animal", "Cat", "speak", "console", "log", "'...'", "'ニャー！'", "cat", "}", "", "// CatクラスがAnimalを継承", "//", "speakメソッドをオーバーライド", "// catにCatインスタンスを代入", "const cat = new Cat();", "cat.speak();"]
         },
         "testCases": [
           {

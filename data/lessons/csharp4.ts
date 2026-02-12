@@ -386,8 +386,8 @@ export const csharp4Data = {
           "content": "# キーと要素\\n\\n```csharp\\n// g.Key でグループのキー\\n// g でグループの要素（IEnumerable）\\n```"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 数値配列（1〜6）をnumsに代入\\n        var nums = new[] { 1, 2, 3, 4, 5, 6 };\\n        // GroupByでnumsを偶奇でグループ分けしgroupsに代入\\n        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");\\n        // foreachでgroupsをループ\\n        foreach (var g in groups) {\\n            // g.Keyとg.Count()をWriteLineで出力\\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\\n        }\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n// usingでLinq名前空間をインポート\\n___ ___.___ ___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // 数値配列（1〜6）をnumsに代入\\n        ___ ___ = ___[] { ___, ___, ___, ___, ___, ___ };\\n        // GroupByでnumsを偶奇でグループ分けしgroupsに代入\\n        ___ ___ = ___.___(___ => ___ % ___ == ___ ? \"___\" : \"___\");\\n        // foreachでgroupsをループ\\n        ___ (var ___ ___ ___) {\\n            // g.Keyとg.Count()をWriteLineで出力\\n            ___.___(___\"{___.___}: {___.___(___}\");\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 数値配列（1〜6）をnumsに代入\\n        var nums = new[] { 1, 2, 3, 4, 5, 6 };\\n        // GroupByでnumsを偶奇でグループ分けしgroupsに代入\\n        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");\\n        // foreachでgroupsをループ\\n        foreach (var g in groups) {\\n            // グループのキーと要素数をWriteLineで出力\\n            Console.WriteLine($\"{g.Key}: {g.Count()}\");\\n        }\\n    }\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n// usingでLinq名前空間をインポート\\n___ ___.___ ___\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // 数値配列（1〜6）をnumsに代入\\n        ___ ___ = ___[] { ___, ___, ___, ___, ___, ___ };\\n        // GroupByでnumsを偶奇でグループ分けしgroupsに代入\\n        ___ ___ = ___.___(___ => ___ % ___ == ___ ? \"___\" : \"___\");\\n        // foreachでgroupsをループ\\n        ___ (var ___ ___ ___) {\\n            // グループのキーと要素数をWriteLineで出力\\n            ___.___(___\"{___.___}: {___.___(___}\");\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -404,7 +404,7 @@ export const csharp4Data = {
           "        var groups = nums.GroupBy(n => n % 2 == 0 ? \"even\" : \"odd\");",
           "        // foreachでgroupsをループ",
           "        foreach (var g in groups) {",
-          "            // g.Keyとg.Count()をWriteLineで出力",
+          "            // グループのキーと要素数をWriteLineで出力",
           "            Console.WriteLine($\"{g.Key}: {g.Count()}\");",
           "        }",
           "    }",

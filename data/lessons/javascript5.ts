@@ -471,10 +471,10 @@ export const javascriptData5 = {
           "content": "# 弱参照のMap\\n\\n**WeakMap** は、オブジェクトをキーにできる特殊な Map です。\\n\\n**「弱参照」って何？**\\nオブジェクトが不要になったら、自動で片付けられる（ガベージコレクション）という意味です。メモリを節約できます！\\n\\n**身近なたとえ：**\\n付箋（メモ）を本に貼るイメージです。本を捨てたら、付箋も一緒に捨てられます。\\n\\n**コード例：**\\n```javascript\\nconst cache = new WeakMap();\\nconst obj = {};\\ncache.set(obj, 'cached value');  // キーはオブジェクト\\nconsole.log(cache.get(obj));     // 'cached value'\\n```\\n\\n**使いどころ：**\\nプライベートなデータを安全に保存したいとき"
         }
       ],
-      "correctCode": "// privateDataにnew WeakMap()を代入\\nconst privateData = new WeakMap();\\n\\n// Userクラスを定義\\nclass User {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // 秘密データをWeakMapに保存\\n    privateData.set(this, { password: '秘密' });\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  getPassword() {\\n    // WeakMapから秘密データを取得して返す\\n    return privateData.get(this).password;\\n  }\\n}\\n\\n// userにnew User('太郎')を代入\\nconst user = new User('太郎');\\n// パスワードを取得して表示\\nconsole.log(user.getPassword());",
-      "holeyCode": "// privateDataにnew WeakMap()を代入\\n___ ___ = ___ ___();\\n___\\n// Userクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // 秘密データをWeakMapに保存\\n    ___.___(this, { ___: '___' });\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // ブロックを開始\\n  ___() {\\n    // WeakMapから秘密データを取得して返す\\n    ___ ___.___(this).___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// userにnew User('太郎')を代入\\n___ ___ = ___ ___('___');\\n// パスワードを取得して表示\\n___.___(___.___());",
+      "correctCode": "// privateDataにWeakMapインスタンスを代入\\nconst privateData = new WeakMap();\\n\\n// Userクラスを定義\\nclass User {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // 秘密データをWeakMapに保存\\n    privateData.set(this, { password: '秘密' });\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  getPassword() {\\n    // WeakMapから秘密データを取得して返す\\n    return privateData.get(this).password;\\n  }\\n}\\n\\n// userにUserインスタンス（引数'太郎'）を代入\\nconst user = new User('太郎');\\n// パスワードを取得して表示\\nconsole.log(user.getPassword());",
+      "holeyCode": "// privateDataにWeakMapインスタンスを代入\\n___ ___ = ___ ___();\\n___\\n// Userクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // 秘密データをWeakMapに保存\\n    ___.___(this, { ___: '___' });\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // ブロックを開始\\n  ___() {\\n    // WeakMapから秘密データを取得して返す\\n    ___ ___.___(this).___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// userにUserインスタンス（引数'太郎'）を代入\\n___ ___ = ___ ___('___');\\n// パスワードを取得して表示\\n___.___(___.___());",
       "correctLines": [
-          "// privateDataにnew WeakMap()を代入",
+          "// privateDataにWeakMapインスタンスを代入",
           "const privateData = new WeakMap();",
           "",
           "// Userクラスを定義",
@@ -492,7 +492,7 @@ export const javascriptData5 = {
           "  }",
           "}",
           "",
-          "// userにnew User('太郎')を代入",
+          "// userにUserインスタンス（引数'太郎'）を代入",
           "const user = new User('太郎');",
           "// パスワードを取得して表示",
           "console.log(user.getPassword());"
@@ -528,7 +528,7 @@ export const javascriptData5 = {
             "new",
             "return"
           ],
-          "others": ["privateData", "WeakMap", "User", "constructor", "name", "set", "password", "秘密", "this", "getPassword", "get", "user", "太郎", "console", "log", "}", "getPassword() {", "return privateData.get", "userにnew User('太郎')を代入", "// パスワードを取得して表示", "console.log(user.getPassword());"]
+          "others": ["privateData", "WeakMap", "User", "constructor", "name", "set", "password", "秘密", "this", "getPassword", "get", "user", "太郎", "console", "log", "}", "getPassword() {", "return privateData.get", "userにnew User('太郎')を代入", "// パスワードを取得して表示", "console.log(user.getPassword());", "userにUserインスタンス（引数'太郎'）を代入"]
         },
         "testCases": [
           {

@@ -289,7 +289,7 @@ export const go2Data = {
           "content": "# レシーバ（受け取り手）を指定\\n\\n`func (r 型) メソッド名()` と書きます。`(r 型)` の部分を「レシーバ（受け取り手）」と呼びます。\\n\\n**コード例：**\\n```go\\n// Rect構造体に Area メソッドを追加\\nfunc (r Rect) Area() int {\\n    return r.W * r.H  // 幅 × 高さ\\n}\\n\\n// 使い方\\nrect := Rect{W: 3, H: 4}\\nfmt.Println(rect.Area())  // 12 が表示される\\n```\\n\\n**読み方：**\\n- `(r Rect)` → 「Rect型のrが」\\n- `Area()` → 「Area というメソッドを持つ」\\n- `r.W * r.H` → 「自分のWとHを使って計算」"
         }
       ],
-      "correctCode": "package main\\nimport \"fmt\"\\ntype Rect struct {\\n    W int\\n    H int\\n}\\nfunc (r Rect) Area() int {\\n    // * でかけ算\\n    return r.W * r.H\\n}\\nfunc main() {\\n    // 構造体を初期化\\n    rect := Rect{W: 3, H: 4}\\n    // rect.Area()を呼び出して表示\\n    fmt.Println(rect.Area())\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\nimport \\\"___\\\"\\n// ブロックを開始\\ntype ___ struct {\\n    // フィールドを定義\\n    ___ ___\\n    // フィールドを定義\\n    ___ ___\\n// ブロックを閉じる\\n___\\n// Area関数を定義\\nfunc (___ ___) ___() ___ {\\n    // * でかけ算\\n    return ___.___ * ___.___\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfunc ___() {\\n    // 構造体を初期化\\n    ___ := ___{ ___: ___, ___: ___}\\n    // rect.Area()を呼び出して表示\\n    ___.___(___.___(  ))\\n// ブロックを閉じる\\n___",
+      "correctCode": "package main\\nimport \"fmt\"\\ntype Rect struct {\\n    W int\\n    H int\\n}\\nfunc (r Rect) Area() int {\\n    // * でかけ算\\n    return r.W * r.H\\n}\\nfunc main() {\\n    // 構造体を初期化\\n    rect := Rect{W: 3, H: 4}\\n    // rectのAreaメソッドを呼び出して表示\\n    fmt.Println(rect.Area())\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\nimport \\\"___\\\"\\n// ブロックを開始\\ntype ___ struct {\\n    // フィールドを定義\\n    ___ ___\\n    // フィールドを定義\\n    ___ ___\\n// ブロックを閉じる\\n___\\n// Area関数を定義\\nfunc (___ ___) ___() ___ {\\n    // * でかけ算\\n    return ___.___ * ___.___\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfunc ___() {\\n    // 構造体を初期化\\n    ___ := ___{ ___: ___, ___: ___}\\n    // rectのAreaメソッドを呼び出して表示\\n    ___.___(___.___(  ))\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -304,7 +304,7 @@ export const go2Data = {
           "func main() {",
           "    // 構造体を初期化",
           "    rect := Rect{W: 3, H: 4}",
-          "    // rect.Area()を呼び出して表示",
+          "    // rectのAreaメソッドを呼び出して表示",
           "    fmt.Println(rect.Area())",
           "}"
         ],
@@ -330,7 +330,7 @@ export const go2Data = {
           "operators": [
             "*"
           ],
-          "others": ["main", "fmt", "Rect", "W", "H", "int", "r", "Area", "rect", "3", "4", "Println", "}", "fmt\"", "t", "//", "* でかけ算", "// 構造体を初期化", "rect.Area(", "呼び出して表示"]
+          "others": ["main", "fmt", "Rect", "W", "H", "int", "r", "Area", "rect", "3", "4", "Println", "}", "fmt\"", "t", "//", "* でかけ算", "// 構造体を初期化", "rect.Area(", "呼び出して表示", "rectのAreaメソッドを呼び出して表示"]
         },
         "testCases": [
           {
@@ -352,7 +352,7 @@ export const go2Data = {
           "content": "# メソッドの名前だけ書く\\n\\nインターフェースには「中身」は書きません。「こういうメソッドがあるはず」という約束だけです。\\n\\n**コード例：**\\n```go\\n// Speaker インターフェースを定義\\ntype Speaker interface {\\n    Speak()  // Speak メソッドを持っている約束\\n}\\n\\n// Dog は Speak() を持つので Speaker として使える\\ntype Dog struct{}\\nfunc (d Dog) Speak() {\\n    fmt.Println(\"ワン！\")\\n}\\n```\\n\\n**ポイント：**\\n- `interface { }` の中にメソッド名だけ書く\\n- そのメソッドを持つ型は自動的にインターフェースを満たす\\n- 「implements」などの宣言は不要（Go言語の特徴！）"
         }
       ],
-      "correctCode": "package main\\nimport \"fmt\"\\n// Speakerインターフェースを定義\\ntype Speaker interface {\\n    Speak()\\n}\\ntype Dog struct{}\\nfunc (d Dog) Speak() {\\n    fmt.Println(\"ワン！\")\\n}\\nfunc main() {\\n    // インターフェース型の変数に代入\\n    var s Speaker = Dog{}\\n    // s.Speak()を呼び出す\\n    s.Speak()\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\nimport \\\"___\\\"\\n// Speakerインターフェースを定義\\ntype ___ interface {\\n    // Speak()メソッドシグネチャ\\n    ___()\\n// ブロックを閉じる\\n___\\n// 空の構造体を定義\\ntype ___ struct{}\\n// Speak関数を定義\\nfunc (___ ___) ___() {\\n    // \\\"\\\"\\n    ___.___(\\\"___\\\")\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfunc ___() {\\n    // インターフェース型の変数に代入\\n    var ___ ___ = ___{}\\n    // s.Speak()を呼び出す\\n    ___.___()\\n// ブロックを閉じる\\n___",
+      "correctCode": "package main\\nimport \"fmt\"\\n// Speakerインターフェースを定義\\ntype Speaker interface {\\n    Speak()\\n}\\ntype Dog struct{}\\nfunc (d Dog) Speak() {\\n    fmt.Println(\"ワン！\")\\n}\\nfunc main() {\\n    // インターフェース型の変数に代入\\n    var s Speaker = Dog{}\\n    // sのSpeakメソッドを呼び出す\\n    s.Speak()\\n}", "holeyCode": "// モジュールを宣言\\npackage ___\\n// パッケージをインポート\\nimport \\\"___\\\"\\n// Speakerインターフェースを定義\\ntype ___ interface {\\n    // Speakメソッドシグネチャ\\n    ___()\\n// ブロックを閉じる\\n___\\n// 空の構造体を定義\\ntype ___ struct{}\\n// Speak関数を定義\\nfunc (___ ___) ___() {\\n    // \\\"\\\"\\n    ___.___(\\\"___\\\")\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfunc ___() {\\n    // インターフェース型の変数に代入\\n    var ___ ___ = ___{}\\n    // sのSpeakメソッドを呼び出す\\n    ___.___()\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "package main",
           "import \"fmt\"",
@@ -367,7 +367,7 @@ export const go2Data = {
           "func main() {",
           "    // インターフェース型の変数に代入",
           "    var s Speaker = Dog{}",
-          "    // s.Speak()を呼び出す",
+          "    // sのSpeakメソッドを呼び出す",
           "    s.Speak()",
           "}"
         ],
@@ -393,7 +393,7 @@ export const go2Data = {
           "keywords": [
             "interface", "struct", "var"
           ],
-          "others": ["main", "fmt", "Speaker", "Speak", "Dog", "d", "Println", "ワン！", "s", "}", "fmt\"", "aker interface {", "/", "インターフェースのメソッドを呼び出す", "s.Speak(", "呼び出す"]
+          "others": ["main", "fmt", "Speaker", "Speak", "Dog", "d", "Println", "ワン！", "s", "}", "fmt\"", "aker interface {", "/", "インターフェースのメソッドを呼び出す", "s.Speak(", "呼び出す", "sのSpeakメソッドを呼び出す"]
         },
         "testCases": [
           {

@@ -424,15 +424,15 @@ export const javaData5 = {
           "content": "# 改行を追加\\n\\n`newLine()`を使うと、改行（次の行に移る）を追加できます。\\n\\n```java\\nbw.write(\"Line1\");  // 1行目を書く\\nbw.newLine();       // 改行！\\nbw.write(\"Line2\");  // 2行目を書く\\n```\\n\\n**結果のファイル：**\\n```\\nLine1\\nLine2\\n```\\n\\n**ポイント：** write() だけでは改行されません。改行したいときは newLine() を使いましょう"
         }
       ],
-      "correctCode": "import java.io.*;\\n\\npublic class Main {\\n    public static void main(String[] args) throws IOException {\\n        // swにnew StringWriter()を代入\\n        StringWriter sw = new StringWriter();\\n        // bwにnew BufferedWriter(sw)を代入\\n        BufferedWriter bw = new BufferedWriter(sw);\\n        // write で文字列を書き込む\\n        bw.write(\"こんにちは\");\\n        // flush でバッファをフラッシュする\\n        bw.flush();\\n        // toString で文字列に変換する\\n        System.out.println(sw.toString());\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) throws ___ {\\n        // swにnew StringWriter()を代入\\n        ___ ___ = new ___()___\\n        // bwにnew BufferedWriter(sw)を代入\\n        ___ ___ = new ___(___);\\n        // write で文字列を書き込む\\n        ___.___(___)___\\n        // flush でバッファをフラッシュする\\n        ___.___()___\\n        // toString で文字列に変換する\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.io.*;\\n\\npublic class Main {\\n    public static void main(String[] args) throws IOException {\\n        // swにStringWriterインスタンスを代入\\n        StringWriter sw = new StringWriter();\\n        // bwにBufferedWriterインスタンス（引数sw）を代入\\n        BufferedWriter bw = new BufferedWriter(sw);\\n        // write で文字列を書き込む\\n        bw.write(\"こんにちは\");\\n        // flush でバッファをフラッシュする\\n        bw.flush();\\n        // toString で文字列に変換する\\n        System.out.println(sw.toString());\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) throws ___ {\\n        // swにStringWriterインスタンスを代入\\n        ___ ___ = new ___()___\\n        // bwにBufferedWriterインスタンス（引数sw）を代入\\n        ___ ___ = new ___(___);\\n        // write で文字列を書き込む\\n        ___.___(___)___\\n        // flush でバッファをフラッシュする\\n        ___.___()___\\n        // toString で文字列に変換する\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.io.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) throws IOException {",
-          "        // swにnew StringWriter()を代入",
+          "        // swにStringWriterインスタンスを代入",
           "        StringWriter sw = new StringWriter();",
-          "        // bwにnew BufferedWriter(sw)を代入",
+          "        // bwにBufferedWriterインスタンス（引数sw）を代入",
           "        BufferedWriter bw = new BufferedWriter(sw);",
           "        // write で文字列を書き込む",
           "        bw.write(\"こんにちは\");",
@@ -466,7 +466,7 @@ export const javaData5 = {
             "throws",
             "new"
           ],
-          "others": ["java", "io", "*;", "", "Main", "main", "String", "args", "IOException", "StringWriter", "sw", ";", "BufferedWriter", "bw", "write", "\"こんにちは\"", "flush", "System", "out", "println", "toString", "}", "public class Main {", "にnew", "redWriter", "sw)を代入", "//", "き込む", "フラッシュする", "// toString で文字列に変換する"]
+          "others": ["java", "io", "*;", "", "Main", "main", "String", "args", "IOException", "StringWriter", "sw", ";", "BufferedWriter", "bw", "write", "\"こんにちは\"", "flush", "System", "out", "println", "toString", "}", "public class Main {", "にnew", "redWriter", "sw)を代入", "//", "き込む", "フラッシュする", "// toString で文字列に変換する", "にStringWriterインスタンスを代入", "riterインスタンス（引数sw）を代入"]
         },
         "testCases": [
           {

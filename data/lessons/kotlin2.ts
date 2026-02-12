@@ -463,19 +463,19 @@ export const kotlin2Data = {
           "content": "# 目標\\n\\nInt型に「2倍にする」関数を追加しましょう。\\n\\n1. `fun Int.double() = this * 2` で拡張関数を定義\\n2. `5.double()` で呼び出す\\n3. 結果は 10 になる"
         }
       ],
-      "correctCode": "// this でレシーバを参照する\\nfun Int.double() = this * 2\\n// 5.double() を出力する\\nprintln(5.double())",
-      "holeyCode": "// this でレシーバを参照する\\nfun ___.___() = this * ___\\n// 5.double() を出力する\\n___(___.___())",
+      "correctCode": "// this でレシーバを参照する\\nfun Int.double() = this * 2\\n// 5のdoubleメソッドを出力する\\nprintln(5.double())",
+      "holeyCode": "// this でレシーバを参照する\\nfun ___.___() = this * ___\\n// 5のdoubleメソッドを出力する\\n___(___.___())",
       "correctLines": [
           "// this でレシーバを参照する",
           "fun Int.double() = this * 2",
-          "// 5.double() を出力する",
+          "// 5のdoubleメソッドを出力する",
           "println(5.double())"
         ],
       "lineHints": [
           null,
           "Int型にdouble拡張関数を定義します。",
           null,
-          "printlnで5.double()を出力します。"
+          "printlnで5のdoubleメソッドを出力します。"
         ],
         "candidates": {
           "keywords": [
