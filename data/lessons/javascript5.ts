@@ -415,10 +415,10 @@ export const javascriptData5 = {
           "content": "# 絶対に重複しないユニークな値\\n\\n**Symbol** は、世界に一つだけの「印」を作る機能です。\\n\\n**身近なたとえ：**\\n指紋は人それぞれ違いますよね。Symbol も同じで、作るたびに必ず違う値になります。同じ名前で作っても、中身は別物です！\\n\\n**なぜ使う？**\\n- プロパティ名の衝突を避けられる\\n- 「隠し」プロパティを作れる\\n\\n**コード例：**\\n```javascript\\nconst id = Symbol('id');\\nconst obj = {\\n  [id]: 12345  // [id] で Symbol をキーにする\\n};\\nconsole.log(obj[id]);  // 12345\\n```"
         }
       ],
-      "correctCode": "// Symbolで'秘密'という説明のsecretを作成\\nconst secret = Symbol('秘密');\\n// userオブジェクトを作成\\nconst user = {\\n  // nameに'太郎'を設定\\n  name: '太郎',\\n  // 秘密キーにパスワードを設定\\n  [secret]: 'パスワード123'\\n};\\n// ユーザー名を出力\\nconsole.log(user.name);\\n// 秘密キーの値を出力\\nconsole.log(user[secret]);",
-      "holeyCode": "// Symbolで'秘密'という説明のsecretを作成\\n___ ___ = ___('___');\\n// userオブジェクトを作成\\n___ ___ = {\\n  // nameに'太郎'を設定\\n  ___: '___',\\n  // 秘密キーにパスワードを設定\\n  [___]: '___'\\n};\\n// ユーザー名を出力\\n___.___(___.___);\\n// 秘密キーの値を出力\\n___.___(___[___]);",
+      "correctCode": "// '秘密'という説明付きのSymbolをsecretに代入\\nconst secret = Symbol('秘密');\\n// userオブジェクトを作成\\nconst user = {\\n  // nameに'太郎'を設定\\n  name: '太郎',\\n  // 秘密キーにパスワードを設定\\n  [secret]: 'パスワード123'\\n};\\n// ユーザー名を出力\\nconsole.log(user.name);\\n// 秘密キーの値を出力\\nconsole.log(user[secret]);",
+      "holeyCode": "// '秘密'という説明付きのSymbolをsecretに代入\\n___ ___ = ___('___');\\n// userオブジェクトを作成\\n___ ___ = {\\n  // nameに'太郎'を設定\\n  ___: '___',\\n  // 秘密キーにパスワードを設定\\n  [___]: '___'\\n};\\n// ユーザー名を出力\\n___.___(___.___);\\n// 秘密キーの値を出力\\n___.___(___[___]);",
       "correctLines": [
-          "// Symbolで'秘密'という説明のsecretを作成",
+          "// '秘密'という説明付きのSymbolをsecretに代入",
           "const secret = Symbol('秘密');",
           "// userオブジェクトを作成",
           "const user = {",
