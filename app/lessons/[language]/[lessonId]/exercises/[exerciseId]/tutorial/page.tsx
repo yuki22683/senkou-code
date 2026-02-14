@@ -230,6 +230,33 @@ export default function TutorialPage() {
                   ),
                   // preタグの無効化（コードブロック用）
                   pre: ({ children }) => <>{children}</>,
+                  // テーブルのスタイリング（枠線付き）
+                  table: ({ children }) => (
+                    <div className="overflow-x-auto my-4 lg:my-6">
+                      <table className="min-w-full border-collapse border border-gray-300 rounded-lg">
+                        {children}
+                      </table>
+                    </div>
+                  ),
+                  thead: ({ children }) => (
+                    <thead className="bg-gray-100">{children}</thead>
+                  ),
+                  tbody: ({ children }) => (
+                    <tbody className="divide-y divide-gray-200">{children}</tbody>
+                  ),
+                  tr: ({ children }) => (
+                    <tr className="border-b border-gray-200">{children}</tr>
+                  ),
+                  th: ({ children }) => (
+                    <th className="px-3 py-2 lg:px-4 lg:py-3 text-left text-sm lg:text-base font-semibold text-gray-800 border border-gray-300 bg-gray-100">
+                      {children}
+                    </th>
+                  ),
+                  td: ({ children }) => (
+                    <td className="px-3 py-2 lg:px-4 lg:py-3 text-sm lg:text-base text-gray-700 border border-gray-300">
+                      {children}
+                    </td>
+                  ),
                 }}
               >
                 {currentSlideData.content.replace(/\\n/g, '\n').replace(/\\\\n/g, '\n')}

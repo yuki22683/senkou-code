@@ -57,8 +57,8 @@ export const pythonData4 = {
           "content": "# 親の能力を子供が受け継ぐ！\\n\\n**継承** とは、既存のクラスの機能を **そのまま引き継いで** 新しいクラスを作ることです。\\n\\n現実世界で考えてみましょう：\\n- **親クラス（Animal）** = 動物の基本的な性質\\n- **子クラス（Dog）** = 動物の性質 + 犬特有の性質\\n\\n犬は「動物」なので、動物の機能は全部持っています。でも、犬だけの特別な機能も追加できます！\\n\\n**例：** 動物クラスを継承して犬クラスを作ろう！\\n\\n```python\\nclass Animal:\\n    def speak(self):\\n        print('...')\\n\\nclass Dog(Animal):  # Animalを継承\\n    def speak(self):\\n        print('Woof!')  # 犬専用の鳴き声\\n```\\n\\n**ポイント：** `class Dog(Animal):` の `(Animal)` で「Animalを継承する」という意味になります。"
         }
       ],
-      "correctCode": "# classで親クラスVehicleを定義\\nclass Vehicle:\\n    # defで__init__メソッドを定義（引数: self, brand）\\n    def __init__(self, brand):\\n        # self.brandにbrandを代入\\n        self.brand = brand\\n\\n# classでCarクラスを定義（Vehicleを継承）\\nclass Car(Vehicle):\\n    # defでhonkメソッドを定義（引数: selfのみ）\\n    def honk(self):\\n        # print関数でself.brandを埋め込んで「(self.brandの値) car: Beep!」形式で出力\\n        print(f'{self.brand} car: Beep!')\\n\\n# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入\\ncar = Car('トヨタ')\\n# carでhonkメソッドを呼び出す\\ncar.honk()",
-      "holeyCode": "# classで親クラスVehicleを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, brand）\\n    def ___(self, ___):\\n        # self.brandにbrandを代入\\n        self.___ = ___\\n\\n# classでCarクラスを定義（Vehicleを継承）\\nclass ___(___):\\n    # defでhonkメソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # print関数でself.brandを埋め込んで「(self.brandの値) car: Beep!」形式で出力\\n        ___(f'{self.___} car: Beep!')\\n\\n# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入\\n___ = ___('___')\\n# carでhonkメソッドを呼び出す\\n___.___()",
+      "correctCode": "# classで親クラスVehicleを定義\\nclass Vehicle:\\n    # defで__init__メソッドを定義（引数: self, brand）\\n    def __init__(self, brand):\\n        # self.brandにbrandを代入\\n        self.brand = brand\\n\\n# classでCarクラスを定義（Vehicleを継承）\\nclass Car(Vehicle):\\n    # defでhonkメソッドを定義（引数: selfのみ）\\n    def honk(self):\\n        # print関数でself.brandを埋め込んで「(self.brandの値) car: Beep!」形式で出力\\n        print(f'{self.brand} car: Beep!')\\n\\n# Carインスタンス（ブランド: トヨタ）をcarに代入\\ncar = Car('トヨタ')\\n# carでhonkメソッドを呼び出す\\ncar.honk()",
+      "holeyCode": "# classで親クラスVehicleを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, brand）\\n    def ___(self, ___):\\n        # self.brandにbrandを代入\\n        self.___ = ___\\n\\n# classでCarクラスを定義（Vehicleを継承）\\nclass ___(___):\\n    # defでhonkメソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # print関数でself.brandを埋め込んで「(self.brandの値) car: Beep!」形式で出力\\n        ___(f'{self.___} car: Beep!')\\n\\n# Carインスタンス（ブランド: トヨタ）をcarに代入\\n___ = ___('___')\\n# carでhonkメソッドを呼び出す\\n___.___()",
       "correctLines": [
           "# classで親クラスVehicleを定義",
           "class Vehicle:",
@@ -74,7 +74,7 @@ export const pythonData4 = {
           "        # print関数でself.brandを埋め込んで「(self.brandの値) car: Beep!」形式で出力",
           "        print(f'{self.brand} car: Beep!')",
           "",
-          "# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入",
+          "# Carインスタンス（ブランド: トヨタ）をcarに代入",
           "car = Car('トヨタ')",
           "# carでhonkメソッドを呼び出す",
           "car.honk()"
@@ -541,8 +541,8 @@ export const pythonData4 = {
           "content": "# オブジェクトの「等しさ」を定義する\\n\\n**__eq__（イコール）** メソッドを定義すると、`==` での **比較方法をカスタマイズ** できます。\\n\\n**たとえ話：** 「同じ」の判断基準を決めるもの。\\n- 2枚のカードが「同じ」とは？ → 数字と絵柄が同じこと！\\n- 2つの座標が「同じ」とは？ → xとyの値が同じこと！\\n\\n**__eq__ がない場合：**\\n同じ内容でも別々に作ったオブジェクトは「別物」として扱われます。\\n\\n**例：** 座標の等しさを判定しよう！\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __eq__(self, other):\\n        return self.x == other.x and self.y == other.y\\n\\np1 = Point(1, 2)\\np2 = Point(1, 2)\\nprint(p1 == p2)  # True（内容が同じ！）\\n```\\n\\n**何をしているか：**\\n1. `__eq__` の引数 `other` は比較相手のオブジェクト\\n2. `self.x == other.x` でx座標を比較\\n3. `and` で両方の条件を満たすかチェック\\n4. `True` か `False` を返す"
         }
       ],
-      "correctCode": "# classでBookクラスを定義\\nclass Book:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # defで__eq__メソッドを定義（引数: self, other）\\n    def __eq__(self, other):\\n        # returnでタイトルと著者の両方が一致するかを返す\\n        return self.title == other.title and self.author == other.author\\n\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook1に代入\\nbook1 = Book('Python入門', '田中')\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook2に代入\\nbook2 = Book('Python入門', '田中')\\n# print関数でbook1とbook2の比較結果を表示\\nprint(book1 == book2)",
-      "holeyCode": "# classでBookクラスを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def ___(self, ___, ___):\\n        # self.titleにtitleを代入\\n        self.___ = ___\\n        # self.authorにauthorを代入\\n        self.___ = ___\\n    \\n    # defで__eq__メソッドを定義（引数: self, other）\\n    def ___(self, ___):\\n        # returnでタイトルと著者の両方が一致するかを返す\\n        return self.___ == ___.___ and self.___ == ___.___\\n\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook1に代入\\n___ = ___('___', '___')\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook2に代入\\n___ = ___('___', '___')\\n# print関数でbook1とbook2の比較結果を表示\\n___(___ == ___)",
+      "correctCode": "# classでBookクラスを定義\\nclass Book:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # defで__eq__メソッドを定義（引数: self, other）\\n    def __eq__(self, other):\\n        # returnでタイトルと著者の両方が一致するかを返す\\n        return self.title == other.title and self.author == other.author\\n\\n# Bookインスタンス（タイトル: Python入門、著者: 田中）をbook1に代入\\nbook1 = Book('Python入門', '田中')\\n# Bookインスタンス（タイトル: Python入門、著者: 田中）をbook2に代入\\nbook2 = Book('Python入門', '田中')\\n# print関数でbook1とbook2の比較結果を表示\\nprint(book1 == book2)",
+      "holeyCode": "# classでBookクラスを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def ___(self, ___, ___):\\n        # self.titleにtitleを代入\\n        self.___ = ___\\n        # self.authorにauthorを代入\\n        self.___ = ___\\n    \\n    # defで__eq__メソッドを定義（引数: self, other）\\n    def ___(self, ___):\\n        # returnでタイトルと著者の両方が一致するかを返す\\n        return self.___ == ___.___ and self.___ == ___.___\\n\\n# Bookインスタンス（タイトル: Python入門、著者: 田中）をbook1に代入\\n___ = ___('___', '___')\\n# Bookインスタンス（タイトル: Python入門、著者: 田中）をbook2に代入\\n___ = ___('___', '___')\\n# print関数でbook1とbook2の比較結果を表示\\n___(___ == ___)",
       "correctLines": [
           "# classでBookクラスを定義",
           "class Book:",
@@ -558,9 +558,9 @@ export const pythonData4 = {
           "        # returnでタイトルと著者の両方が一致するかを返す",
           "        return self.title == other.title and self.author == other.author",
           "",
-          "# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook1に代入",
+          "# Bookインスタンス（タイトル: Python入門、著者: 田中）をbook1に代入",
           "book1 = Book('Python入門', '田中')",
-          "# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook2に代入",
+          "# Bookインスタンス（タイトル: Python入門、著者: 田中）をbook2に代入",
           "book2 = Book('Python入門', '田中')",
           "# print関数でbook1とbook2の比較結果を表示",
           "print(book1 == book2)"
