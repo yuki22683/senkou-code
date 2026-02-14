@@ -1291,4 +1291,4 @@
   - `# print関数でkとvを埋め込んで「(kの値) = (vの値)」形式で出力`
   - `# print関数でiとcolorを埋め込んで「(iの値): (colorの値)」形式で出力`
 - **ポイント**: 埋め込む変数名と、出力文字列内での位置を「(変数名の値)」で明示
-- **チェックコマンド**: `grep -E 'f文字列' data/lessons/*.ts`
+- **チェックコマンド**: `grep -E 'f文字列|f-string' data/lessons/*.ts | grep -v tutorialSlides | grep -v description`

@@ -33,12 +33,12 @@ export const pythonData2 = {
           "content": "# 関数を呼び出すときに材料を渡す\\n\\n関数を使うとき、カッコの中に **値を入れる** と、その値が引数に入ります。\\n\\n**例：** いろんな人にあいさつしよう！\\n\\n```python\\ndef greet(name):\\n    print(f'こんにちは、{name}さん！')\\n\\ngreet('太郎')\\n```\\n=> こんにちは、太郎さん！\\n\\n**何をしているか：**\\n1. `greet('太郎')` で関数を呼び出す\\n2. `'太郎'` という値が `name` に入る\\n3. `f'こんにちは、{name}さん！'` の `{name}` が「太郎」に置き換わる\\n4. 「こんにちは、太郎さん！」と表示される！\\n\\n**便利なところ：** 名前を変えるだけで、いろんな人にあいさつできます！"
         }
       ],
-      "correctCode": "# defでhello関数を定義（引数name）\\ndef hello(name):\\n    # print関数でf-string（こんにちは、{name}！）を表示\\n    print(f'こんにちは、{name}！')\\n\\n# hello関数を引数'Python'で呼び出す\\nhello('Python')",
-      "holeyCode": "# defでhello関数を定義（引数name）\\ndef ___(___):\\n    # print関数でf-string（こんにちは、{name}！）を表示\\n    ___(f'こんにちは、{___}！')\\n\\n# hello関数を引数'Python'で呼び出す\\n___('___')",
+      "correctCode": "# defでhello関数を定義（引数name）\\ndef hello(name):\\n    # print関数でnameを埋め込んで「こんにちは、(nameの値)！」形式で出力\\n    print(f'こんにちは、{name}！')\\n\\n# hello関数を引数'Python'で呼び出す\\nhello('Python')",
+      "holeyCode": "# defでhello関数を定義（引数name）\\ndef ___(___):\\n    # print関数でnameを埋め込んで「こんにちは、(nameの値)！」形式で出力\\n    ___(f'こんにちは、{___}！')\\n\\n# hello関数を引数'Python'で呼び出す\\n___('___')",
       "correctLines": [
         "# defでhello関数を定義（引数name）",
         "def hello(name):",
-        "    # print関数でf-string（こんにちは、{name}！）を表示",
+        "    # print関数でnameを埋め込んで「こんにちは、(nameの値)！」形式で出力",
         "    print(f'こんにちは、{name}！')",
         "",
         "# hello関数を引数'Python'で呼び出す",
@@ -48,7 +48,7 @@ export const pythonData2 = {
         null,
         "hello関数を定義し、引数nameを受け取ります。",
         null,
-        "printでf-stringを出力し、{name}で変数を埋め込みます。",
+        "printでnameを文字列に埋め込んで出力します。",
         null,
         null,
         "hello関数に文字列Pythonを渡して呼び出します。"
@@ -78,12 +78,12 @@ export const pythonData2 = {
           "content": "# 渡しても渡さなくてもOK！\\n\\nデフォルト引数があると、**柔軟に関数を使えます**。\\n\\n**例：** いろんなパターンで呼び出そう！\\n\\n```python\\ndef greet(name='ゲスト'):\\n    print(f'ようこそ、{name}さん！')\\n\\ngreet()        # 何も渡さない\\ngreet('太郎')  # '太郎'を渡す\\n```\\n=> ようこそ、ゲストさん！\\n=> ようこそ、太郎さん！\\n\\n**何をしているか：**\\n- `greet()` → 何も渡していないので、デフォルトの「ゲスト」が使われる\\n- `greet('太郎')` → 「太郎」を渡したので、そちらが使われる\\n\\n**便利なところ：** 毎回値を渡さなくても、よく使う値で動いてくれます！"
         }
       ],
-      "correctCode": "# defでsay_hello関数を定義（引数nameのデフォルト値は'World'）\\ndef say_hello(name='World'):\\n    # print関数でf-string（Hello, {name}!）を表示\\n    print(f'Hello, {name}!')\\n\\n# say_hello関数を引数なしで呼び出す\\nsay_hello()",
-      "holeyCode": "# defでsay_hello関数を定義（引数nameのデフォルト値は'World'）\\ndef ___(___='___'):\\n    # print関数でf-string（Hello, {name}!）を表示\\n    ___(f'Hello, {___}!')\\n\\n# say_hello関数を引数なしで呼び出す\\n___()",
+      "correctCode": "# defでsay_hello関数を定義（引数nameのデフォルト値は'World'）\\ndef say_hello(name='World'):\\n    # print関数でnameを埋め込んで「Hello, (nameの値)!」形式で出力\\n    print(f'Hello, {name}!')\\n\\n# say_hello関数を引数なしで呼び出す\\nsay_hello()",
+      "holeyCode": "# defでsay_hello関数を定義（引数nameのデフォルト値は'World'）\\ndef ___(___='___'):\\n    # print関数でnameを埋め込んで「Hello, (nameの値)!」形式で出力\\n    ___(f'Hello, {___}!')\\n\\n# say_hello関数を引数なしで呼び出す\\n___()",
       "correctLines": [
         "# defでsay_hello関数を定義（引数nameのデフォルト値は'World'）",
         "def say_hello(name='World'):",
-        "    # print関数でf-string（Hello, {name}!）を表示",
+        "    # print関数でnameを埋め込んで「Hello, (nameの値)!」形式で出力",
         "    print(f'Hello, {name}!')",
         "",
         "# say_hello関数を引数なしで呼び出す",
@@ -93,7 +93,7 @@ export const pythonData2 = {
         null,
         "say_hello関数を定義し、引数nameにデフォルト値'World'を設定します。",
         null,
-        "printでf-stringを出力し、{name}で変数を埋め込みます。",
+        "printでnameを文字列に埋め込んで出力します。",
         null,
         null,
         "say_hello関数を引数なしで呼び出します。"

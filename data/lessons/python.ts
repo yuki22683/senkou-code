@@ -255,19 +255,19 @@ export const pythonData = {
           "content": "# f 記号と { }\\n\\n**書き方：**\\n1. 文字のまえに `f` をつける\\n2. `{ }`（ちゅうかっこ）の中に「はこ」の名前を入力する\\n\\nそうすると、魔法のように中身が文章に入ります！\\n\\n**例：** 好きなくだものを紹介しよう！\\n\\n```python\\nfruit = 'りんご'\\nprint(f'私は{fruit}が好きです')\\n```\\n=> 私はりんごが好きです\\n\\n**何をしているか：**\\n1. `fruit` という「はこ」に `'りんご'` が入っている\\n2. `f'私は{fruit}が好きです'` で、`{fruit}` の部分が「りんご」に置き換わる\\n3. 結果として「私はりんごが好きです」と表示される\\n\\n`{ }` の中には、変数の名前をそのまま書くだけでOKです！"
         }
       ],
-      "correctCode": "# ageに10を代入\\nage = 10\\n# print関数でf-string（私は{age}歳です）を出力\\nprint(f'私は{age}歳です')",
-      "holeyCode": "# ageに10を代入\\n___ = ___\\n# print関数でf-string（私は{age}歳です）を出力\\n___(f'私は{___}歳です')",
+      "correctCode": "# ageに10を代入\\nage = 10\\n# print関数でageを埋め込んで「私は(ageの値)歳です」形式で出力\\nprint(f'私は{age}歳です')",
+      "holeyCode": "# ageに10を代入\\n___ = ___\\n# print関数でageを埋め込んで「私は(ageの値)歳です」形式で出力\\n___(f'私は{___}歳です')",
       "correctLines": [
           "# ageに10を代入",
           "age = 10",
-          "# print関数でf-string（私は{age}歳です）を出力",
+          "# print関数でageを埋め込んで「私は(ageの値)歳です」形式で出力",
           "print(f'私は{age}歳です')"
         ],
       "lineHints": [
           null,
           "ageに10を代入します。",
           null,
-          "printでf-stringを使い、{age}に変数を埋め込みます。"
+          "printでageを文字列に埋め込んで出力します。"
         ],
         "candidates": {
           "variables": [
