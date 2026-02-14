@@ -158,12 +158,12 @@ export const pythonData3 = {
           "content": "# 辞書として扱える！\\n\\n受け取った `kwargs` は **辞書** として使えます。\\n\\n`.items()`, `.keys()`, `.values()` などのメソッドが使えます！\\n\\n**例：** ユーザー情報を作ろう！\\n\\n```python\\ndef create_user(**kwargs):\\n    return kwargs\\n\\nuser = create_user(name='花子', email='hanako@example.com')\\nprint(user['name'])\\n```\\n\\n=> 花子\\n\\n**何をしているか：**\\n1. `create_user(name='花子', email='...')` で名前付き引数を渡す\\n2. `**kwargs` でそれらを辞書として受け取る\\n3. `{'name': '花子', 'email': '...'}` という辞書が返される\\n4. `user['name']` で「花子」が取り出せる！\\n\\n**使いどころ：** 設定項目（オプション）をたくさん渡したいとき！"
         }
       ],
-      "correctCode": "# defでprint_info関数を定義（引数**kwargs）\\ndef print_info(**kwargs):\\n    # for k, vでkwargsからitems()でキー・値ペアを取得しループ\\n    for k, v in kwargs.items():\\n        # print関数でf文字列「{k} = {v}」を表示\\n        print(f'{k} = {v}')\\n\\n# print_info関数をキーワード引数（xに10、yに20）で呼び出す\\nprint_info(x=10, y=20)",
-      "holeyCode": "# defでprint_info関数を定義（引数**kwargs）\\ndef ___(___):\\n    # for k, vでkwargsからitems()でキー・値ペアを取得しループ\\n    for ___, ___ in ___.___():\\n        # print関数でf文字列「{k} = {v}」を表示\\n        ___(f'{___} = {___}')\\n\\n# print_info関数をキーワード引数（xに10、yに20）で呼び出す\\n___(___=___, ___=___)",
+      "correctCode": "# defでprint_info関数を定義（引数**kwargs）\\ndef print_info(**kwargs):\\n    # kwargsからitems()でキーkと値vを取得してループ\\n    for k, v in kwargs.items():\\n        # print関数でf文字列「{k} = {v}」を表示\\n        print(f'{k} = {v}')\\n\\n# print_info関数をキーワード引数（xに10、yに20）で呼び出す\\nprint_info(x=10, y=20)",
+      "holeyCode": "# defでprint_info関数を定義（引数**kwargs）\\ndef ___(___):\\n    # kwargsからitems()でキーkと値vを取得してループ\\n    for ___, ___ in ___.___():\\n        # print関数でf文字列「{k} = {v}」を表示\\n        ___(f'{___} = {___}')\\n\\n# print_info関数をキーワード引数（xに10、yに20）で呼び出す\\n___(___=___, ___=___)",
       "correctLines": [
           "# defでprint_info関数を定義（引数**kwargs）",
           "def print_info(**kwargs):",
-          "    # for k, vでkwargsからitems()でキー・値ペアを取得しループ",
+          "    # kwargsからitems()でキーkと値vを取得してループ",
           "    for k, v in kwargs.items():",
           "        # print関数でf文字列「{k} = {v}」を表示",
           "        print(f'{k} = {v}')",
@@ -205,12 +205,12 @@ export const pythonData3 = {
           "content": "# start で開始番号を変えられる！\\n\\nデフォルトでは0から始まりますが、`start=1` で **1から始める** こともできます。\\n\\n人間は「1番目、2番目...」と数えることが多いですよね。そんなときに便利です！\\n\\n**例：** 1番目から始めよう！\\n\\n```python\\nfruits = ['apple', 'banana', 'cherry']\\nfor i, fruit in enumerate(fruits, start=1):\\n    print(f'{i}番目: {fruit}')\\n```\\n=> 1番目: apple\\n=> 2番目: banana\\n=> 3番目: cherry\\n\\n**何をしているか：**\\n- `start=1` で開始番号を1に設定\\n- ループするたびに番号が1ずつ増える\\n\\n**ポイント：** `start` を使わないと0から始まります！"
         }
       ],
-      "correctCode": "# 色配列（あか、みどり、あお）をcolorsに代入\\ncolors = ['あか', 'みどり', 'あお']\\n# for i, colorでcolorsからenumerate()でインデックス・要素を取得しループ\\nfor i, color in enumerate(colors):\\n    # print関数でf文字列「{i}: {color}」を表示\\n    print(f'{i}: {color}')",
-      "holeyCode": "# 色配列（あか、みどり、あお）をcolorsに代入\\n___ = ['___', '___', '___']\\n# for i, colorでcolorsからenumerate()でインデックス・要素を取得しループ\\nfor ___, ___ in ___(___):\\n    # print関数でf文字列「{i}: {color}」を表示\\n    ___(f'{___}: {___}')",
+      "correctCode": "# 色配列（あか、みどり、あお）をcolorsに代入\\ncolors = ['あか', 'みどり', 'あお']\\n# colorsからenumerate()でインデックスiと要素colorを取得しループ\\nfor i, color in enumerate(colors):\\n    # print関数でf文字列「{i}: {color}」を表示\\n    print(f'{i}: {color}')",
+      "holeyCode": "# 色配列（あか、みどり、あお）をcolorsに代入\\n___ = ['___', '___', '___']\\n# colorsからenumerate()でインデックスiと要素colorを取得しループ\\nfor ___, ___ in ___(___):\\n    # print関数でf文字列「{i}: {color}」を表示\\n    ___(f'{___}: {___}')",
       "correctLines": [
           "# 色配列（あか、みどり、あお）をcolorsに代入",
           "colors = ['あか', 'みどり', 'あお']",
-          "# for i, colorでcolorsからenumerate()でインデックス・要素を取得しループ",
+          "# colorsからenumerate()でインデックスiと要素colorを取得しループ",
           "for i, color in enumerate(colors):",
           "    # print関数でf文字列「{i}: {color}」を表示",
           "    print(f'{i}: {color}')"
@@ -249,14 +249,14 @@ export const pythonData3 = {
           "content": "# 短い方に合わせる！\\n\\nリストの長さが違う場合、**短い方に合わせて** ループが終了します。\\n\\n**例：** 長さの違うリストを zip しよう！\\n\\n```python\\na = [1, 2, 3]\\nb = ['x', 'y']\\nprint(list(zip(a, b)))  # [(1, 'x'), (2, 'y')]\\n```\\n\\n**何をしているか：**\\n- `a` は3つ、`b` は2つの要素がある\\n- 短い `b` に合わせて2ペアだけ作られる\\n- 3番目の「3」は相手がいないので含まれない\\n\\n**注意：** はみ出した要素は無視されます！\\n\\n**使いどころ：** 2つ以上のリストを **並行して（同時に）** 処理したいとき！"
         }
       ],
-      "correctCode": "# 英単語配列（a、b、c）をkeysに代入\\nkeys = ['a', 'b', 'c']\\n# 数値配列（1、2、3）をvaluesに代入\\nvalues = [1, 2, 3]\\n# for k, vでzip関数（引数keys, values）から各ペアを取得しループ\\nfor k, v in zip(keys, values):\\n    # print関数でf文字列「{k}: {v}」を表示\\n    print(f'{k}: {v}')",
-      "holeyCode": "# 英単語配列（a、b、c）をkeysに代入\\n___ = ['___', '___', '___']\\n# 数値配列（1、2、3）をvaluesに代入\\n___ = [___, ___, ___]\\n# for k, vでzip関数（引数keys, values）から各ペアを取得しループ\\nfor ___, ___ in ___(___, ___):\\n    # print関数でf文字列「{k}: {v}」を表示\\n    ___(f'{___}: {___}')",
+      "correctCode": "# 英単語配列（a、b、c）をkeysに代入\\nkeys = ['a', 'b', 'c']\\n# 数値配列（1、2、3）をvaluesに代入\\nvalues = [1, 2, 3]\\n# zip関数（引数keys, values）からkとvのペアを取得してループ\\nfor k, v in zip(keys, values):\\n    # print関数でf文字列「{k}: {v}」を表示\\n    print(f'{k}: {v}')",
+      "holeyCode": "# 英単語配列（a、b、c）をkeysに代入\\n___ = ['___', '___', '___']\\n# 数値配列（1、2、3）をvaluesに代入\\n___ = [___, ___, ___]\\n# zip関数（引数keys, values）からkとvのペアを取得してループ\\nfor ___, ___ in ___(___, ___):\\n    # print関数でf文字列「{k}: {v}」を表示\\n    ___(f'{___}: {___}')",
       "correctLines": [
           "# 英単語配列（a、b、c）をkeysに代入",
           "keys = ['a', 'b', 'c']",
           "# 数値配列（1、2、3）をvaluesに代入",
           "values = [1, 2, 3]",
-          "# for k, vでzip関数（引数keys, values）から各ペアを取得しループ",
+          "# zip関数（引数keys, values）からkとvのペアを取得してループ",
           "for k, v in zip(keys, values):",
           "    # print関数でf文字列「{k}: {v}」を表示",
           "    print(f'{k}: {v}')"
@@ -297,8 +297,8 @@ export const pythonData3 = {
           "content": "# 大量のデータを効率よく処理！\\n\\nリストは全データを **メモリ（コンピュータの記憶場所）** に保持しますが、ジェネレータは **1つずつ作るのでメモリを節約** できます。\\n\\n**例：** 1億個の数を生成しても大丈夫！\\n\\n```python\\ndef big_range(n):\\n    i = 0\\n    while i < n:\\n        yield i\\n        i += 1\\n```\\n\\n**何をしているか：**\\n- `yield i` で値を1つ返す\\n- 次に呼ばれるまで **一時停止**\\n- 次に呼ばれたら `i += 1` して続きを実行\\n\\n**ポイント：**\\n- `return` は関数を終了して値を返す\\n- `yield` は値を返すけど関数は **一時停止** するだけ（終了しない）\\n\\n**使いどころ：** 大量のデータを扱うとき、メモリを節約したいとき！"
         }
       ],
-      "correctCode": "# defでeven_numbersジェネレータ関数を定義（引数n）\\ndef even_numbers(n):\\n    # forでiを0からn-1までrange関数でループ\\n    for i in range(n):\\n        # yieldでiの2倍（偶数）を返す\\n        yield i * 2\\n\\n# for numでeven_numbers関数（引数4）の結果をループ\\nfor num in even_numbers(4):\\n    # print関数でnumを表示\\n    print(num)",
-      "holeyCode": "# defでeven_numbersジェネレータ関数を定義（引数n）\\ndef ___(___):\\n    # forでiを0からn-1までrange関数でループ\\n    for ___ in ___(___):\\n        # yieldでiの2倍（偶数）を返す\\n        ___ ___ ___ ___\\n\\n# for numでeven_numbers関数（引数4）の結果をループ\\nfor ___ in ___(___):\\n    # print関数でnumを表示\\n    ___(___)",
+      "correctCode": "# defでeven_numbersジェネレータ関数を定義（引数n）\\ndef even_numbers(n):\\n    # forでiを0からn-1までrange関数でループ\\n    for i in range(n):\\n        # yieldでiの2倍（偶数）を返す\\n        yield i * 2\\n\\n# even_numbers関数（引数4）の各結果をnumに代入してループ\\nfor num in even_numbers(4):\\n    # print関数でnumを表示\\n    print(num)",
+      "holeyCode": "# defでeven_numbersジェネレータ関数を定義（引数n）\\ndef ___(___):\\n    # forでiを0からn-1までrange関数でループ\\n    for ___ in ___(___):\\n        # yieldでiの2倍（偶数）を返す\\n        ___ ___ ___ ___\\n\\n# even_numbers関数（引数4）の各結果をnumに代入してループ\\nfor ___ in ___(___):\\n    # print関数でnumを表示\\n    ___(___)",
       "correctLines": [
           "# defでeven_numbersジェネレータ関数を定義（引数n）",
           "def even_numbers(n):",
@@ -307,7 +307,7 @@ export const pythonData3 = {
           "        # yieldでiの2倍（偶数）を返す",
           "        yield i * 2",
           "",
-          "# for numでeven_numbers関数（引数4）の結果をループ",
+          "# even_numbers関数（引数4）の各結果をnumに代入してループ",
           "for num in even_numbers(4):",
           "    # print関数でnumを表示",
           "    print(num)"
