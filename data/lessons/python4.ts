@@ -58,7 +58,7 @@ export const pythonData4 = {
         }
       ],
       "correctCode": "# classで親クラスVehicleを定義\\nclass Vehicle:\\n    # defで__init__メソッドを定義（引数: self, brand）\\n    def __init__(self, brand):\\n        # self.brandにbrandを代入\\n        self.brand = brand\\n\\n# classでCarクラスを定義（Vehicleを継承）\\nclass Car(Vehicle):\\n    # defでhonkメソッドを定義（引数: selfのみ）\\n    def honk(self):\\n        # print関数でself.brandを埋め込んで「(self.brandの値) car: Beep!」形式で出力\\n        print(f'{self.brand} car: Beep!')\\n\\n# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入\\ncar = Car('トヨタ')\\n# carでhonkメソッドを呼び出す\\ncar.honk()",
-      "holeyCode": "# classで親クラスVehicleを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, brand）\\n    def ___(self, ___):\\n        # self.brandにbrandを代入\\n        self.___ = ___\\n___\\n# classでCarクラスを定義（Vehicleを継承）\\nclass ___(___):\\n    # defでhonkメソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # print関数でself.brandを埋め込んで「(self.brandの値) car: Beep!」形式で出力\\n        ___(f'{self.___} car: Beep!')\\n___\\n# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入\\n___ = ___('___')\\n# carでhonkメソッドを呼び出す\\n___.___()",
+      "holeyCode": "# classで親クラスVehicleを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, brand）\\n    def ___(self, ___):\\n        # self.brandにbrandを代入\\n        self.___ = ___\\n\\n# classでCarクラスを定義（Vehicleを継承）\\nclass ___(___):\\n    # defでhonkメソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # print関数でself.brandを埋め込んで「(self.brandの値) car: Beep!」形式で出力\\n        ___(f'{self.___} car: Beep!')\\n\\n# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入\\n___ = ___('___')\\n# carでhonkメソッドを呼び出す\\n___.___()",
       "correctLines": [
           "# classで親クラスVehicleを定義",
           "class Vehicle:",

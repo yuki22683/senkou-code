@@ -228,12 +228,21 @@ const normalizeCode = (str: string, language: string) => {
 };
 
 // 編集対象の行かどうかを判定するヘルパー関数
-// 条件: 虫食い（___）がある行、またはコメントの次の行
+// 条件: 虫食い（___）がある行、またはコメントの次の行（ただし、その行自体がコメント行や空行の場合は除く）
 const isEditableLine = (lines: string[], index: number, commentPrefix: string): boolean => {
   const line = lines[index] || "";
+  const trimmedLine = line.trim();
+
+  // この行自体がコメント行なら編集対象外
+  if (trimmedLine.startsWith(commentPrefix)) return false;
+
+  // 空行も編集対象外
+  if (trimmedLine === "") return false;
+
   // 虫食い行
   if (line.includes("___")) return true;
-  // コメントの次の行
+
+  // コメントの次の行（コメント/空行チェックは上で済んでいる）
   if (index > 0) {
     const prevLine = lines[index - 1] || "";
     if (prevLine.trim().startsWith(commentPrefix)) return true;
