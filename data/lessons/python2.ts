@@ -308,12 +308,12 @@ export const pythonData2 = {
           "content": "# [式 for 変数 in イテラブル]\\n\\n**イテラブル** とは、リストや range など **繰り返し処理できるもの** のことです。\\n\\n**書き方：** `[ ]` の中に、「**作りたい値の式**」と「**for文**」を書きます。\\n\\n**例：** 0から4の2乗を作ろう！\\n\\n```python\\nsquares = [x ** 2 for x in range(5)]\\nprint(squares)\\n```\\n\\n=> [0, 1, 4, 9, 16]\\n\\n**何をしているか：**\\n1. `range(5)` で 0, 1, 2, 3, 4 を順番に取り出す\\n2. 取り出した数を `x` に入れる\\n3. `x ** 2`（xの2乗）を計算する\\n4. 計算結果をリストに追加していく\\n\\n**ポイント：** 「**何を作るか**」を最初に書いて、「**どこから取り出すか**」をあとに書きます！"
         }
       ],
-      "correctCode": "# 1から5までの数を2倍にしたリストdoubledを作る\\ndoubled = [x * 2 for x in range(1, 6)]\\n# リストを表示\\nprint(doubled)",
-      "holeyCode": "# 1から5までの数を2倍にしたリストdoubledを作る\\n___ = [___ * 2 ___ ___ in ___(___, ___)]\\n# リストを表示\\n___(___)",
+      "correctCode": "# 1から5までの数を2倍にしたリストdoubledを作る\\ndoubled = [x * 2 for x in range(1, 6)]\\n# doubledを表示\\nprint(doubled)",
+      "holeyCode": "# 1から5までの数を2倍にしたリストdoubledを作る\\n___ = [___ * 2 ___ ___ in ___(___, ___)]\\n# doubledを表示\\n___(___)",
       "correctLines": [
         "# 1から5までの数を2倍にしたリストdoubledを作る",
         "doubled = [x * 2 for x in range(1, 6)]",
-        "# リストを表示",
+        "# doubledを表示",
         "print(doubled)"
       ],
       "lineHints": [
@@ -348,12 +348,12 @@ export const pythonData2 = {
           "content": "# [式 for 変数 in イテラブル if 条件]\\n\\n条件を **満たす要素だけ** がリストに入ります。\\n\\n**例：** 短い単語だけを集めよう！\\n\\n```python\\nwords = ['apple', 'banana', 'cherry']\\n# 5文字以下の単語だけ\\nshort = [w for w in words if len(w) <= 5]\\nprint(short)\\n```\\n\\n=> ['apple']\\n\\n**何をしているか：**\\n1. `words` から単語を順番に取り出す\\n2. `len(w) <= 5` で文字数が5以下かチェック\\n3. 条件に合う 'apple'（5文字）だけがリストに入る\\n4. 'banana'（6文字）と 'cherry'（6文字）は含まれない\\n\\n**ポイント：** `if` は最後に書きます！"
         }
       ],
-      "correctCode": "# 1から10で偶数（2の倍数）だけを集めるevensを作る\\nevens = [n for n in range(1, 11) if n % 2 == 0]\\n# リストを表示\\nprint(evens)",
-      "holeyCode": "# 1から10で偶数（2の倍数）だけを集めるevensを作る\\n___ = [___ for ___ in ___(___, ___) ___ ___ % ___ == ___]\\n# リストを表示\\n___(___)",
+      "correctCode": "# 1から10で偶数（2の倍数）だけを集めるevensを作る\\nevens = [n for n in range(1, 11) if n % 2 == 0]\\n# evensを表示\\nprint(evens)",
+      "holeyCode": "# 1から10で偶数（2の倍数）だけを集めるevensを作る\\n___ = [___ for ___ in ___(___, ___) ___ ___ % ___ == ___]\\n# evensを表示\\n___(___)",
       "correctLines": [
         "# 1から10で偶数（2の倍数）だけを集めるevensを作る",
         "evens = [n for n in range(1, 11) if n % 2 == 0]",
-        "# リストを表示",
+        "# evensを表示",
         "print(evens)"
       ],
       "lineHints": [
@@ -388,12 +388,12 @@ export const pythonData2 = {
           "content": "# エラーをキャッチする「安全ネット」\\n\\n**try-except** は、**エラーが起きてもプログラムが止まらないようにする** 仕組みです。\\n\\nサーカスの安全ネットのように、落ちても大丈夫なようにしてくれます！\\n\\n**例：** エラーをキャッチしよう！\\n\\n```python\\ntry:\\n    result = 10 / 0  # エラーが起きる\\nexcept:\\n    print('エラーが発生しました')\\n```\\n=> エラーが発生しました\\n\\n**何をしているか：**\\n1. `try:` の中のコードを実行してみる\\n2. エラーが起きたら `except:` に移動する\\n3. `except:` の中の処理を実行する\\n4. プログラムは止まらずに続く！\\n\\n**ポイント：** `try` は「試す」、`except` は「例外（を処理する）」という意味です。"
         }
       ],
-      "correctCode": "# エラーが起きる可能性のある処理をtryに入れる\\ntry:\\n    # 文字列を数値に変換（エラーになる）\\n    num = int('abc')\\n# エラーが起きたときの処理をexceptに入れる\\nexcept:\\n    # 'エラー'と表示\\n    print('エラー')",
-      "holeyCode": "# エラーが起きる可能性のある処理をtryに入れる\\n___:\\n    # 文字列を数値に変換（エラーになる）\\n    ___ = ___('___')\\n# エラーが起きたときの処理をexceptに入れる\\n___:\\n    # 'エラー'と表示\\n    ___('___')",
+      "correctCode": "# エラーが起きる可能性のある処理をtryに入れる\\ntry:\\n    # numに文字列'abc'をint変換して代入（エラーになる）\\n    num = int('abc')\\n# エラーが起きたときの処理をexceptに入れる\\nexcept:\\n    # 'エラー'と表示\\n    print('エラー')",
+      "holeyCode": "# エラーが起きる可能性のある処理をtryに入れる\\n___:\\n    # numに文字列'abc'をint変換して代入（エラーになる）\\n    ___ = ___('___')\\n# エラーが起きたときの処理をexceptに入れる\\n___:\\n    # 'エラー'と表示\\n    ___('___')",
       "correctLines": [
         "# エラーが起きる可能性のある処理をtryに入れる",
         "try:",
-        "    # 文字列を数値に変換（エラーになる）",
+        "    # numに文字列'abc'をint変換して代入（エラーになる）",
         "    num = int('abc')",
         "# エラーが起きたときの処理をexceptに入れる",
         "except:",

@@ -205,8 +205,8 @@ export const typescriptData2 = {
           "content": "# 読みやすいコードに\\n\\n型エイリアスを使うと、複雑な型に分かりやすい名前をつけられます。\\n\\n## たとえ話\\n\\n「緯度と経度のペア」を毎回 `{ latitude: number; longitude: number; }` と書くのは大変ですよね。\\n「座標」という名前をつけておけば、すっきり書けます！\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ntype Point = {\\n    x: number;\\n    y: number;\\n};\\n\\nconst origin: Point = { x: 0, y: 0 };\\n```\\n\\nこれで何度も同じ型を書かなくて済みますし、コードも読みやすくなります！"
         }
       ],
-      "correctCode": "// type キーワードで型エイリアスを定義\\ntype Score = number;\\n\\n// 数学の点数\\nconst math: Score = 85;\\n// 英語の点数\\nconst english: Score = 90;\\n// 合計を出力\\nconsole.log(math + english);",
-      "holeyCode": "// type キーワードで型エイリアスを定義\\ntype ___ = ___;\\n\\n// 数学の点数\\nconst ___: ___ = ___;\\n// 英語の点数\\nconst ___: ___ = ___;\\n// 合計を出力\\n___.___(___+___);",
+      "correctCode": "// type キーワードで型エイリアスを定義\\ntype Score = number;\\n\\n// 数学の点数\\nconst math: Score = 85;\\n// 英語の点数\\nconst english: Score = 90;\\n// mathとenglishの合計を出力\\nconsole.log(math + english);",
+      "holeyCode": "// type キーワードで型エイリアスを定義\\ntype ___ = ___;\\n\\n// 数学の点数\\nconst ___: ___ = ___;\\n// 英語の点数\\nconst ___: ___ = ___;\\n// mathとenglishの合計を出力\\n___.___(___+___);",
       "correctLines": [
           "// type キーワードで型エイリアスを定義",
           "type Score = number;",
@@ -215,7 +215,7 @@ export const typescriptData2 = {
           "const math: Score = 85;",
           "// 英語の点数",
           "const english: Score = 90;",
-          "// 合計を出力",
+          "// mathとenglishの合計を出力",
           "console.log(math + english);"
         ],
       "lineHints": [

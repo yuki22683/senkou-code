@@ -344,7 +344,7 @@ export const typescriptData = {
           "content": "# boolean（ブーリアン）型\\n\\n`true`（トゥルー：正しい）か `false`（フォルス：間違い）の、どちらかだけを入れられるラベルです。\\n\\n## コードで書くとこうなるよ\\n\\n下のコードでは、「お店が開いているか」をチェックしています。\\n\\n```typescript\\nconst isOpen: boolean = false;  // 開いていない\\nif (!isOpen) {  // もし開いていなければ\\n    console.log('閉まっています');\\n}\\n```\\n**実行結果：** 閉まっています\\n\\n`!`（ビックリマーク）は「〜ではない」という意味です。`!isOpen` は「開いていない」ということですね。"
         }
       ],
-      "correctCode": "// 真偽値（はい/いいえ）を入れるためのラベルを貼る\\nconst isAdult: boolean = true;\\n// もし 正しかったら（trueなら）\\nif (isAdult) {\\n    // メッセージ（'おとなです'）\\n    console.log('おとなです');\\n}",
+      "correctCode": "// 真偽値（はい/いいえ）を入れるためのラベルを貼る\\nconst isAdult: boolean = true;\\n// もし 正しかったら（trueなら）\\nif (isAdult) {\\n    // メッセージ（'おとなです'）\\n    console.log('おとなです');\\n// ブロックを閉じる\\n}",
       "holeyCode": "// 真偽値（はい/いいえ）を入れるためのラベルを貼る\\nconst ___: ___ = ___;\\n// もし 正しかったら（trueなら）\\nif (___) {\\n    // メッセージ（'おとなです'）\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 真偽値（はい/いいえ）を入れるためのラベルを貼る",
@@ -353,6 +353,7 @@ export const typescriptData = {
           "if (isAdult) {",
           "    // メッセージ（'おとなです'）",
           "    console.log('おとなです');",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -362,6 +363,7 @@ export const typescriptData = {
           "",
           null,
           "",
+          null,
           null
         ],
         "candidates": {
@@ -400,7 +402,7 @@ export const typescriptData = {
           "content": "# 条件で分ける\\n\\nJavaScriptと同じように、`if`（イフ：もし）と `else`（エルス：そうでなければ）を使って動きを分けることができます。\\n\\n## コードで書くとこうなるよ\\n\\n下のコードでは、今の時間が午前か午後かをチェックしています。\\n\\n```typescript\\nconst hour: number = 15;  // 15時\\nif (hour < 12) {  // もし12より小さければ\\n    console.log('午前中');\\n} else {  // そうでなければ\\n    console.log('お昼すぎ');\\n}\\n```\\n**実行結果：** お昼すぎ\\n\\n15は12より大きいので、`else` の中が実行されました！"
         }
       ],
-      "correctCode": "// score というはこに 75 を入れる\\nconst score: number = 75;\\n// 80以上かを比較する演算子\\nif (score >= 80) {\\n    // 80点以上のときのメッセージ（'ごうかく'）\\n    console.log('ごうかく');\\n// 「そうでなければ」を表すキーワード\\n} else {\\n    // それ以外の場合（'ざんねん'）\\n    console.log('ざんねん');\\n}",
+      "correctCode": "// score というはこに 75 を入れる\\nconst score: number = 75;\\n// 80以上かを比較する演算子\\nif (score >= 80) {\\n    // 80点以上のときのメッセージ（'ごうかく'）\\n    console.log('ごうかく');\\n// 「そうでなければ」を表すキーワード\\n} else {\\n    // それ以外の場合（'ざんねん'）\\n    console.log('ざんねん');\\n// ブロックを閉じる\\n}",
       "holeyCode": "// score というはこに 75 を入れる\\nconst ___: ___ = ___;\\n// 80以上かを比較する演算子\\nif (___ ___ ___) {\\n    // 80点以上のときのメッセージ（'ごうかく'）\\n    ___.___(___);\\n// 「そうでなければ」を表すキーワード\\n} ___ {\\n    // それ以外の場合（'ざんねん'）\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// score というはこに 75 を入れる",
@@ -413,6 +415,7 @@ export const typescriptData = {
           "} else {",
           "    // それ以外の場合（'ざんねん'）",
           "    console.log('ざんねん');",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -426,6 +429,7 @@ export const typescriptData = {
           "",
           null,
           "",
+          null,
           null
         ],
         "candidates": {
@@ -472,7 +476,7 @@ export const typescriptData = {
           "content": "# 条件の組み合わせ\\n\\n## コードで書くとこうなるよ\\n\\n下のコードでは、「10歳以上、かつ、20歳未満」かどうかをチェックしています。\\n\\n```typescript\\nconst age: number = 15;\\nif (age >= 10 && age < 20) {\\n    console.log('10代です');\\n}\\n```\\n**実行結果：** 10代です\\n\\n15歳は「10以上」であり「20より小さい」ので、両方の条件を満たしています！\\n\\n## まとめ\\n\\n- `&&` は「かつ」：両方の条件を満たすときに true\\n- `||` は「または」：どちらか一方を満たせば true"
         }
       ],
-      "correctCode": "// scoreに85を入れる\\nconst score: number = 85;\\n// 80以上 かつ 100以下 ならメッセージを出す\\nif (score >= 80 && score <= 100) {\\n    // ごうかくと出力\\n    console.log('ごうかく');\\n}",
+      "correctCode": "// scoreに85を入れる\\nconst score: number = 85;\\n// 80以上 かつ 100以下 ならメッセージを出す\\nif (score >= 80 && score <= 100) {\\n    // ごうかくと出力\\n    console.log('ごうかく');\\n// ブロックを閉じる\\n}",
       "holeyCode": "// scoreに85を入れる\\nconst ___: ___ = ___;\\n// 80以上 かつ 100以下 ならメッセージを出す\\nif (___ >= ___ ___ ___ <= ___) {\\n    // ごうかくと出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// scoreに85を入れる",
@@ -481,6 +485,7 @@ export const typescriptData = {
           "if (score >= 80 && score <= 100) {",
           "    // ごうかくと出力",
           "    console.log('ごうかく');",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -490,6 +495,7 @@ export const typescriptData = {
           "",
           null,
           "",
+          null,
           null
         ],
         "candidates": {
@@ -538,7 +544,7 @@ export const typescriptData = {
           "content": "# TypeScriptが自動で予想してくれる\\n\\nTypeScriptはとても賢いので、配列に貼られたラベルを見て、中から取り出したデータの種類も自動で「きっとこれです！」と予想してくれます。\\n\\n## たとえ話\\n\\n「りんご箱」から取り出したものは「りんご」に決まっていますよね。\\n同じように、`string[]`（文字列の配列）から取り出したものは `string`（文字列）だと自動でわかるんです！\\n\\nこれを **型推論** と呼びます。便利ですね！"
         }
       ],
-      "correctCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst names: string[] = ['たろう', 'はなこ'];\\n// 順番にループする\\nfor (const name of names) {\\n    // nameを出力\\n    console.log(name);\\n}",
+      "correctCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst names: string[] = ['たろう', 'はなこ'];\\n// 順番にループする\\nfor (const name of names) {\\n    // nameを出力\\n    console.log(name);\\n// ブロックを閉じる\\n}",
       "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst ___: ___[] = ['___', '___'];\\n// 順番にループする\\nfor (const ___ of ___) {\\n    // nameを出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 配列を作る（'たろう', 'はなこ'の順）",
@@ -547,6 +553,7 @@ export const typescriptData = {
           "for (const name of names) {",
           "    // nameを出力",
           "    console.log(name);",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -556,6 +563,7 @@ export const typescriptData = {
           "",
           null,
           "",
+          null,
           null
         ],
         "candidates": {
@@ -646,13 +654,14 @@ export const typescriptData = {
           "content": "# 引数にラベルを貼る\\n\\n関数が受け取るデータのことを **引数** と呼びます。「関数に渡すデータ」と考えてください。\\n\\nTypeScriptでは、この引数にもラベルを貼ることで、「文字以外は渡さないで！」と決めることができます。\\n\\n## コードで書くとこうなるよ\\n\\n下のコードでは、`msg` という引数に `string` ラベルを貼っています。\\n\\n```typescript\\n// 文字列（string）だけを受け取る関数\\nfunction sayHello(msg: string) {\\n    console.log(`メッセージ: ${msg}`);\\n}\\nsayHello('ヤッホー');\\n```\\n**実行結果：** メッセージ: ヤッホー\\n\\nこれで、間違って数字を渡そうとしても、TypeScriptが「文字を渡してね！」と教えてくれます。"
         }
       ],
-      "correctCode": "// 受け取るデータのラベルを指定する\\nfunction greet(name: string) {\\n    // 名前付きあいさつを出力\\n    console.log(`こんにちは、${name}`);\\n}\\n// あいさつ関数を'TypeScript'で実行\\ngreet('TypeScript');",
+      "correctCode": "// 受け取るデータのラベルを指定する\\nfunction greet(name: string) {\\n    // 名前付きあいさつを出力\\n    console.log(`こんにちは、${name}`);\\n// ブロックを閉じる\\n}\\n// あいさつ関数を'TypeScript'で実行\\ngreet('TypeScript');",
       "holeyCode": "// 受け取るデータのラベルを指定する\\nfunction ___(___: ___) {\\n    // 名前付きあいさつを出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___\\n// あいさつ関数を'TypeScript'で実行\\n___(___);",
       "correctLines": [
           "// 受け取るデータのラベルを指定する",
           "function greet(name: string) {",
           "    // 名前付きあいさつを出力",
           "    console.log(`こんにちは、${name}`);",
+          "// ブロックを閉じる",
           "}",
           "// あいさつ関数を'TypeScript'で実行",
           "greet('TypeScript');"
@@ -663,7 +672,8 @@ export const typescriptData = {
           null,
           "",
           null,
-          "",
+          null,
+          null,
           null
         ],
         "candidates": {
@@ -701,13 +711,14 @@ export const typescriptData = {
           "content": "# 何も返さないときは void です\\n\\n結果などを「返さない」関数もあります。画面に文字を表示するだけ、など。\\n\\nそんな関数には、`void`（ボイド）というラベルを貼ります。これは「空っぽ」「何もない」という意味です。\\n\\n## コードで書くとこうなるよ\\n\\n下のコードでは、画面にメッセージを表示するだけで、何も返しません。\\n\\n```typescript\\nfunction logger(text: string): void {\\n    console.log(`LOG: ${text}`);\\n}\\nlogger('処理開始');\\n```\\n**実行結果：** LOG: 処理開始\\n\\n関数名のあとの `: void` が「何も返さないよ」という意味です。"
         }
       ],
-      "correctCode": "// 何も返さないときに使うラベル\\nfunction showDate(): void {\\n    // '今日の日付'と出力\\n    console.log('今日の日付');\\n}\\n// showDate関数を呼び出す\\nshowDate();",
+      "correctCode": "// 何も返さないときに使うラベル\\nfunction showDate(): void {\\n    // '今日の日付'と出力\\n    console.log('今日の日付');\\n// ブロックを閉じる\\n}\\n// showDate関数を呼び出す\\nshowDate();",
       "holeyCode": "// 何も返さないときに使うラベル\\nfunction ___(): ___ {\\n    // '今日の日付'と出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___\\n// showDate関数を呼び出す\\n___();",
       "correctLines": [
           "// 何も返さないときに使うラベル",
           "function showDate(): void {",
           "    // '今日の日付'と出力",
           "    console.log('今日の日付');",
+          "// ブロックを閉じる",
           "}",
           "// showDate関数を呼び出す",
           "showDate();"
@@ -718,7 +729,8 @@ export const typescriptData = {
           null,
           "",
           null,
-          "",
+          null,
+          null,
           null
         ],
         "candidates": {

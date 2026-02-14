@@ -173,10 +173,10 @@ export const haskell2Data = {
           "content": "# map 関数 リスト\\n\\n関数とリストを渡します。\\n\\n**コード例：**\\n```haskell\\nmap (*2) [1, 2, 3] -- [2, 4, 6]\\n```"
         }
       ],
-      "correctCode": "-- mapで各要素を変換\\nmain = print (map (*2) [1, 2, 3])",
-      "holeyCode": "-- mapで各要素を変換\\n___ = ___ (___ (*___) [___, ___, ___])",
+      "correctCode": "-- リストの各要素を2倍にして出力\\nmain = print (map (*2) [1, 2, 3])",
+      "holeyCode": "-- リストの各要素を2倍にして出力\\n___ = ___ (___ (*___) [___, ___, ___])",
       "correctLines": [
-          "-- mapで各要素を変換",
+          "-- リストの各要素を2倍にして出力",
           "main = print (map (*2) [1, 2, 3])"
         ],
       "lineHints": [

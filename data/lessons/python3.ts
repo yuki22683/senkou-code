@@ -98,22 +98,23 @@ export const pythonData3 = {
           "content": "# 引数名は自由につけられる！\\n\\n`*args` の「args」の部分は、好きな名前に変えてOKです。\\n\\n大事なのは **「*」（アスタリスク）** をつけることです！\\n\\n**例：** みんなにあいさつしよう！\\n\\n```python\\ndef greet(*names):\\n    for name in names:\\n        print(f'Hello, {name}!')\\n\\ngreet('Alice', 'Bob', 'Charlie')\\n```\\n=> Hello, Alice!\\n=> Hello, Bob!\\n=> Hello, Charlie!\\n\\n**何をしているか：**\\n1. `greet('Alice', 'Bob', 'Charlie')` で3人の名前を渡す\\n2. `*names` で全ての名前をまとめて受け取る\\n3. `for` ループで1人ずつあいさつする\\n\\n**使いどころ：** 引数の数が決まっていない関数を作りたいとき！"
         }
       ],
-      "correctCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef find_max(*args):\\n    # 最大値を最初の引数で初期化\\n    max_val = args[0]\\n    # 渡された全ての引数をループで処理\\n    for n in args:\\n        # より大きい値があれば更新\\n        if n > max_val:\\n            max_val = n\\n    # 最終的な最大値を返す\\n    return max_val\\n\\n# find_max関数を引数3, 7, 2, 9, 5で呼び出して表示\\nprint(find_max(3, 7, 2, 9, 5))",
-      "holeyCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef ___(*___):\\n    # 最大値を最初の引数で初期化\\n    ___ = ___[___]\\n    # 渡された全ての引数をループで処理\\n    for ___ in ___:\\n        # より大きい値があれば更新\\n        if ___ ___ ___:\\n            # 値を代入\\n            ___ = ___\\n    # 最終的な最大値を返す\\n    return ___\\n\\n# find_max関数を引数3, 7, 2, 9, 5で呼び出して表示\\n___(___(3, 7, 2, 9, 5))",
+      "correctCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef find_max(*args):\\n    # max_valを最初の引数で初期化\\n    max_val = args[0]\\n    # argsの各要素をnとしてループ\\n    for n in args:\\n        # より大きい値があれば更新\\n        if n > max_val:\\n            # max_valをnで更新\\n            max_val = n\\n    # 最終的な最大値を返す\\n    return max_val\\n\\n# find_max関数（引数に3、7、2、9、5）を呼び出して最大値を表示\\nprint(find_max(3, 7, 2, 9, 5))",
+      "holeyCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef ___(*___):\\n    # max_valを最初の引数で初期化\\n    ___ = ___[___]\\n    # argsの各要素をnとしてループ\\n    for ___ in ___:\\n        # より大きい値があれば更新\\n        if ___ ___ ___:\\n            # max_valをnで更新\\n            ___ = ___\\n    # 最終的な最大値を返す\\n    return ___\\n\\n# find_max関数（引数に3、7、2、9、5）を呼び出して最大値を表示\\n___(___(3, 7, 2, 9, 5))",
       "correctLines": [
           "# 全ての数値から最大値を求めるfind_max関数を定義",
           "def find_max(*args):",
-          "    # 最大値を最初の引数で初期化",
+          "    # max_valを最初の引数で初期化",
           "    max_val = args[0]",
-          "    # 渡された全ての引数をループで処理",
+          "    # argsの各要素をnとしてループ",
           "    for n in args:",
           "        # より大きい値があれば更新",
           "        if n > max_val:",
+          "            # max_valをnで更新",
           "            max_val = n",
           "    # 最終的な最大値を返す",
           "    return max_val",
           "",
-          "# find_max関数を引数3, 7, 2, 9, 5で呼び出して表示",
+          "# find_max関数（引数に3、7、2、9、5）を呼び出して最大値を表示",
           "print(find_max(3, 7, 2, 9, 5))"
         ],
       "lineHints": [
@@ -130,6 +131,7 @@ export const pythonData3 = {
           null,
           "",
           null,
+          "",
           null
         ],
         "candidates": {
@@ -156,17 +158,17 @@ export const pythonData3 = {
           "content": "# 辞書として扱える！\\n\\n受け取った `kwargs` は **辞書** として使えます。\\n\\n`.items()`, `.keys()`, `.values()` などのメソッドが使えます！\\n\\n**例：** ユーザー情報を作ろう！\\n\\n```python\\ndef create_user(**kwargs):\\n    return kwargs\\n\\nuser = create_user(name='花子', email='hanako@example.com')\\nprint(user['name'])\\n```\\n\\n=> 花子\\n\\n**何をしているか：**\\n1. `create_user(name='花子', email='...')` で名前付き引数を渡す\\n2. `**kwargs` でそれらを辞書として受け取る\\n3. `{'name': '花子', 'email': '...'}` という辞書が返される\\n4. `user['name']` で「花子」が取り出せる！\\n\\n**使いどころ：** 設定項目（オプション）をたくさん渡したいとき！"
         }
       ],
-      "correctCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef print_info(**kwargs):\\n    # 1番目の k にキー、2番目の v に値が入る\\n    for k, v in kwargs.items():\\n        # キーと値をイコールで繋いで表示\\n        print(f'{k} = {v}')\\n\\n# 情報表示関数をx=10, y=20で実行\\nprint_info(x=10, y=20)",
-      "holeyCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef ___(___):\\n    # 1番目の k にキー、2番目の v に値が入る\\n    for ___, ___ in ___.___():\\n        # キーと値をイコールで繋いで表示\\n        ___(f'{___} = {___}')\\n\\n# 情報表示関数をx=10, y=20で実行\\n___(___=___, ___=___)",
+      "correctCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef print_info(**kwargs):\\n    # kwargsからitems()でキーk・値vのペアを取得しループ\\n    for k, v in kwargs.items():\\n        # キーと値をイコールで繋いで表示\\n        print(f'{k} = {v}')\\n\\n# print_info関数をキーワード引数（xに10、yに20）で呼び出す\\nprint_info(x=10, y=20)",
+      "holeyCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef ___(___):\\n    # kwargsからitems()でキーk・値vのペアを取得しループ\\n    for ___, ___ in ___.___():\\n        # キーと値をイコールで繋いで表示\\n        ___(f'{___} = {___}')\\n\\n# print_info関数をキーワード引数（xに10、yに20）で呼び出す\\n___(___=___, ___=___)",
       "correctLines": [
           "# キーワード引数を受け取って表示するprint_info関数を定義",
           "def print_info(**kwargs):",
-          "    # 1番目の k にキー、2番目の v に値が入る",
+          "    # kwargsからitems()でキーk・値vのペアを取得しループ",
           "    for k, v in kwargs.items():",
           "        # キーと値をイコールで繋いで表示",
           "        print(f'{k} = {v}')",
           "",
-          "# 情報表示関数をx=10, y=20で実行",
+          "# print_info関数をキーワード引数（xに10、yに20）で呼び出す",
           "print_info(x=10, y=20)"
         ],
       "lineHints": [
@@ -203,12 +205,12 @@ export const pythonData3 = {
           "content": "# start で開始番号を変えられる！\\n\\nデフォルトでは0から始まりますが、`start=1` で **1から始める** こともできます。\\n\\n人間は「1番目、2番目...」と数えることが多いですよね。そんなときに便利です！\\n\\n**例：** 1番目から始めよう！\\n\\n```python\\nfruits = ['apple', 'banana', 'cherry']\\nfor i, fruit in enumerate(fruits, start=1):\\n    print(f'{i}番目: {fruit}')\\n```\\n=> 1番目: apple\\n=> 2番目: banana\\n=> 3番目: cherry\\n\\n**何をしているか：**\\n- `start=1` で開始番号を1に設定\\n- ループするたびに番号が1ずつ増える\\n\\n**ポイント：** `start` を使わないと0から始まります！"
         }
       ],
-      "correctCode": "# あか、みどり、あおの3色を含むリストを作成\\ncolors = ['あか', 'みどり', 'あお']\\n# 1番目の i に番号、2番目の color に要素が入る\\nfor i, color in enumerate(colors):\\n    # 「番号: 色」の形式で画面に出力\\n    print(f'{i}: {color}')",
-      "holeyCode": "# あか、みどり、あおの3色を含むリストを作成\\n___ = ['___', '___', '___']\\n# 1番目の i に番号、2番目の color に要素が入る\\nfor ___, ___ in ___(___):\\n    # 「番号: 色」の形式で画面に出力\\n    ___(f'{___}: {___}')",
+      "correctCode": "# 色配列（あか、みどり、あお）をcolorsに代入\\ncolors = ['あか', 'みどり', 'あお']\\n# colorsからenumerate()でインデックスi・要素colorを取得しループ\\nfor i, color in enumerate(colors):\\n    # 「番号: 色」の形式で画面に出力\\n    print(f'{i}: {color}')",
+      "holeyCode": "# 色配列（あか、みどり、あお）をcolorsに代入\\n___ = ['___', '___', '___']\\n# colorsからenumerate()でインデックスi・要素colorを取得しループ\\nfor ___, ___ in ___(___):\\n    # 「番号: 色」の形式で画面に出力\\n    ___(f'{___}: {___}')",
       "correctLines": [
-          "# あか、みどり、あおの3色を含むリストを作成",
+          "# 色配列（あか、みどり、あお）をcolorsに代入",
           "colors = ['あか', 'みどり', 'あお']",
-          "# 1番目の i に番号、2番目の color に要素が入る",
+          "# colorsからenumerate()でインデックスi・要素colorを取得しループ",
           "for i, color in enumerate(colors):",
           "    # 「番号: 色」の形式で画面に出力",
           "    print(f'{i}: {color}')"
@@ -247,12 +249,12 @@ export const pythonData3 = {
           "content": "# 短い方に合わせる！\\n\\nリストの長さが違う場合、**短い方に合わせて** ループが終了します。\\n\\n**例：** 長さの違うリストを zip しよう！\\n\\n```python\\na = [1, 2, 3]\\nb = ['x', 'y']\\nprint(list(zip(a, b)))  # [(1, 'x'), (2, 'y')]\\n```\\n\\n**何をしているか：**\\n- `a` は3つ、`b` は2つの要素がある\\n- 短い `b` に合わせて2ペアだけ作られる\\n- 3番目の「3」は相手がいないので含まれない\\n\\n**注意：** はみ出した要素は無視されます！\\n\\n**使いどころ：** 2つ以上のリストを **並行して（同時に）** 処理したいとき！"
         }
       ],
-      "correctCode": "# 英単語 a, b, c のリストを定義\\nkeys = ['a', 'b', 'c']\\n# 数値 1, 2, 3 のリストを定義\\nvalues = [1, 2, 3]\\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\\nfor k, v in zip(keys, values):\\n    # 「キー: 値」の形式で画面に出力\\n    print(f'{k}: {v}')",
-      "holeyCode": "# 英単語 a, b, c のリストを定義\\n___ = ['___', '___', '___']\\n# 数値 1, 2, 3 のリストを定義\\n___ = [___, ___, ___]\\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\\nfor ___, ___ in ___(___, ___):\\n    # 「キー: 値」の形式で画面に出力\\n    ___(f'{___}: {___}')",
+      "correctCode": "# 英単語配列（a、b、c）をkeysに代入\\nkeys = ['a', 'b', 'c']\\n# 数値配列（1、2、3）をvaluesに代入\\nvalues = [1, 2, 3]\\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\\nfor k, v in zip(keys, values):\\n    # 「キー: 値」の形式で画面に出力\\n    print(f'{k}: {v}')",
+      "holeyCode": "# 英単語配列（a、b、c）をkeysに代入\\n___ = ['___', '___', '___']\\n# 数値配列（1、2、3）をvaluesに代入\\n___ = [___, ___, ___]\\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\\nfor ___, ___ in ___(___, ___):\\n    # 「キー: 値」の形式で画面に出力\\n    ___(f'{___}: {___}')",
       "correctLines": [
-          "# 英単語 a, b, c のリストを定義",
+          "# 英単語配列（a、b、c）をkeysに代入",
           "keys = ['a', 'b', 'c']",
-          "# 数値 1, 2, 3 のリストを定義",
+          "# 数値配列（1、2、3）をvaluesに代入",
           "values = [1, 2, 3]",
           "# 1番目の k, 2番目の v で、zip の引数も keys, values の順",
           "for k, v in zip(keys, values):",
@@ -349,14 +351,14 @@ export const pythonData3 = {
           "content": "# sum や max と組み合わせると便利！\\n\\n`sum()`（合計）や `max()`（最大値）などの関数に **直接渡す** と効率的です。\\n\\n**例：** 2乗の合計を計算しよう！\\n\\n```python\\ntotal = sum(x**2 for x in range(5))\\nprint(total)\\n```\\n\\n=> 30\\n\\n**何をしているか：**\\n1. `range(5)` で 0, 1, 2, 3, 4 を生成\\n2. 各数を2乗（0, 1, 4, 9, 16）\\n3. `sum()` で合計 → 0+1+4+9+16 = 30\\n\\n**ポイント：** `sum()` に渡すとき、外側のカッコを省略できます！\\n\\n```python\\n# これでOK（カッコを省略）\\nsum(x**2 for x in range(5))\\n\\n# こう書かなくてもいい\\nsum((x**2 for x in range(5)))\\n```"
         }
       ],
-      "correctCode": "# numsにrangeを代入（開始に1, 終了に6）\\nnums = range(1, 6)\\n# ジェネレータ式で各要素の2乗を計算し、その合計を出す\\ntotal = sum(x * x for x in nums)\\n# 合計を表示\\nprint(total)",
-      "holeyCode": "# numsにrangeを代入（開始に1, 終了に6）\\n___ = ___(___, ___)\\n# ジェネレータ式で各要素の2乗を計算し、その合計を出す\\n___ = ___(___ ___ ___ for ___ in ___)\\n# 合計を表示\\n___(___)",
+      "correctCode": "# numsにrangeを代入（開始に1, 終了に6）\\nnums = range(1, 6)\\n# numsの各要素を2乗した合計をtotalに代入\\ntotal = sum(x * x for x in nums)\\n# totalを表示\\nprint(total)",
+      "holeyCode": "# numsにrangeを代入（開始に1, 終了に6）\\n___ = ___(___, ___)\\n# numsの各要素を2乗した合計をtotalに代入\\n___ = ___(___ ___ ___ for ___ in ___)\\n# totalを表示\\n___(___)",
       "correctLines": [
           "# numsにrangeを代入（開始に1, 終了に6）",
           "nums = range(1, 6)",
-          "# ジェネレータ式で各要素の2乗を計算し、その合計を出す",
+          "# numsの各要素を2乗した合計をtotalに代入",
           "total = sum(x * x for x in nums)",
-          "# 合計を表示",
+          "# totalを表示",
           "print(total)"
         ],
       "lineHints": [

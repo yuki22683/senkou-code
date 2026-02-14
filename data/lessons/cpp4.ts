@@ -25,24 +25,24 @@ export const cpp4Data = {
           "content": "# コピーはできない、移動のみ\\n\\n`unique_ptr` は「1人だけ」が鉄則なので、コピーできません。\\n\\n**身近な例え：**\\n映画のチケットをコピーしたら、同じ席に2人座ることになって困りますよね。だからコピーは禁止。でも「渡す」ことはできます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nauto p1 = make_unique<int>(10);  // p1 が所有者\\n\\n// auto p2 = p1;           // エラー！コピーは禁止\\nauto p2 = move(p1);         // OK！p1 から p2 に渡す\\n// p1 はもう使えない（空っぽ）\\n// p2 が新しい所有者\\n```\\n\\n**ポイント：**\\n- コピー（複製）は禁止\\n- ムーブ（移動）はOK\\n- 移動後の元の変数は使わないこと"
         }
       ],
-      "correctCode": "// ライブラリを読み込む\\n#include <iostream>\\n// ライブラリを読み込む\\n#include <memory>\\n// ライブラリを読み込む\\nusing namespace std;\\n\\n// ブロックを開始\\nint main() {\\n    // make_unique で排他的ポインタを作成\\n    auto p = make_unique<int>(99);\\n    // *p で中身にアクセス\\n    cout << *p << endl;\\n    // 0を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // make_unique で排他的ポインタを作成\\n    ___ ___ = ___<___>(___);\\n    // *p で中身にアクセス\\n    ___ << ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <memory>でmemoryを読み込む\\n#include <memory>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // autoでpを宣言しmake_unique<int>(99)で排他的ポインタを作成\\n    auto p = make_unique<int>(99);\\n    // coutで*p（ポインタの中身99）を出力\\n    cout << *p << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <memory>でmemoryを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // autoでpを宣言しmake_unique<int>(99)で排他的ポインタを作成\\n    ___ ___ = ___<___>(___);\\n    // coutで*p（ポインタの中身99）を出力\\n    ___ << ___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
-          "// ライブラリを読み込む",
+          "// #include <memory>でmemoryを読み込む",
           "#include <memory>",
-          "// ライブラリを読み込む",
+          "// using namespace stdで標準名前空間を使用",
           "using namespace std;",
           "",
-          "// ブロックを開始",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // make_unique で排他的ポインタを作成",
+          "    // autoでpを宣言しmake_unique<int>(99)で排他的ポインタを作成",
           "    auto p = make_unique<int>(99);",
-          "    // *p で中身にアクセス",
+          "    // coutで*p（ポインタの中身99）を出力",
           "    cout << *p << endl;",
-          "    // 0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
-          "// ブロックを閉じる",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -92,18 +92,24 @@ export const cpp4Data = {
           "content": "# 中身を取り出す方法\\n\\nvariant から値を取り出すには、「今何が入っているか」をチェックします。\\n\\n**身近な例え：**\\n宝箱を開ける前に「中身は金貨？宝石？」と確認してから取り出すイメージです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvariant<int, string> v = 42;\\n\\n// holds_alternative で「今 int が入っている？」と確認\\nif (holds_alternative<int>(v)) {\\n    cout << get<int>(v) << endl;  // get<int> で int として取り出す\\n}\\n\\n// 間違った型で取り出そうとするとエラー！\\n// get<string>(v);  // 今は int が入っているのでダメ\\n```\\n\\n**ポイント：**\\n- `holds_alternative<型>(v)`: その型が入っているか確認\\n- `get<型>(v)`: その型として取り出す"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <variant>\\nusing namespace std;\\n\\nint main() {\\n    // variant で複数型のうち1つを保持\\n    variant<int, double> v = 3.14;\\n    // get<型> で値を取得\\n    cout << get<double>(v) << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // variant で複数型のうち1つを保持\\n    ___<___, ___> ___ = ___;\\n    // get<型> で値を取得\\n    ___ << ___<___>(___) << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <variant>でvariantを読み込む\\n#include <variant>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // variant<int, double>でvを宣言し3.14を代入\\n    variant<int, double> v = 3.14;\\n    // coutでget<double>(v)で取得した値を出力\\n    cout << get<double>(v) << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <variant>でvariantを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // variant<int, double>でvを宣言し3.14を代入\\n    ___<___, ___> ___ = ___;\\n    // coutでget<double>(v)で取得した値を出力\\n    ___ << ___<___>(___) << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// #include <variant>でvariantを読み込む",
           "#include <variant>",
+          "// using namespace stdで標準名前空間を使用",
           "using namespace std;",
           "",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // variant で複数型のうち1つを保持",
+          "    // variant<int, double>でvを宣言し3.14を代入",
           "    variant<int, double> v = 3.14;",
-          "    // get<型> で値を取得",
+          "    // coutでget<double>(v)で取得した値を出力",
           "    cout << get<double>(v) << endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -114,6 +120,12 @@ export const cpp4Data = {
           null,
           "",
           null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -147,19 +159,26 @@ export const cpp4Data = {
           "content": "# map を便利にループ\\n\\n構造化束縛は、map（辞書）をループするときにとても便利です。\\n\\n**身近な例え：**\\n電話帳を見るとき、「名前」と「電話番号」を同時に読み取れるようなものです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nmap<string, int> m = {{\"りんご\", 100}, {\"バナナ\", 80}};\\n\\n// 昔の書き方（面倒...）\\nfor (auto it = m.begin(); it != m.end(); ++it) {\\n    cout << it->first << \": \" << it->second << endl;\\n}\\n\\n// 構造化束縛を使った書き方（スッキリ！）\\nfor (auto [key, value] : m) {\\n    cout << key << \": \" << value << endl;\\n}\\n// りんご: 100\\n// バナナ: 80\\n```\\n\\nキー（key）と値（value）を別々の変数で受け取れます！"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <tuple>\\nusing namespace std;\\n\\nint main() {\\n    // tにtuple{1, 2.5, \"hi\"}を代入\\n    tuple<int, double, string> t{1, 2.5, \"hi\"};\\n    // auto [a, b, c]でtを分解\\n    auto [a, b, c] = t;\\n    cout << a << \" \" << b << \" \" << c << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // tにtuple{1, 2.5, \\\"hi\\\"}を代入\\n    ___<___, ___, ___> ___{___, ___, ___};\\n    // auto [a, b, c]でtを分解\\n    ___ [___, ___, ___] = ___;\\n    // 文を実行\\n    ___ << ___ << ___ << ___ << ___ << ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <tuple>でtupleを読み込む\\n#include <tuple>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // tuple<int, double, string>でtを宣言し（1, 2.5, \"hi\"）を代入\\n    tuple<int, double, string> t{1, 2.5, \"hi\"};\\n    // auto [a, b, c]でtを構造化束縛して分解\\n    auto [a, b, c] = t;\\n    // coutでa、b、cをスペース区切りで出力\\n    cout << a << \" \" << b << \" \" << c << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <tuple>でtupleを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // tuple<int, double, string>でtを宣言し（1, 2.5, \"hi\"）を代入\\n    ___<___, ___, ___> ___{___, ___, ___};\\n    // auto [a, b, c]でtを構造化束縛して分解\\n    ___ [___, ___, ___] = ___;\\n    // coutでa、b、cをスペース区切りで出力\\n    ___ << ___ << ___ << ___ << ___ << ___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// #include <tuple>でtupleを読み込む",
           "#include <tuple>",
+          "// using namespace stdで標準名前空間を使用",
           "using namespace std;",
           "",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // tにtuple{1, 2.5, \"hi\"}を代入",
+          "    // tuple<int, double, string>でtを宣言し（1, 2.5, \"hi\"）を代入",
           "    tuple<int, double, string> t{1, 2.5, \"hi\"};",
-          "    // auto [a, b, c]でtを分解",
+          "    // auto [a, b, c]でtを構造化束縛して分解",
           "    auto [a, b, c] = t;",
+          "    // coutでa、b、cをスペース区切りで出力",
           "    cout << a << \" \" << b << \" \" << c << endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -174,7 +193,14 @@ export const cpp4Data = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -204,21 +230,29 @@ export const cpp4Data = {
           "content": "# なぜ string_view が便利なの？\\n\\nこれまでの書き方と比べてみましょう。\\n\\n**身近な例え：**\\n写真を見せるとき、「実物の写真」でも「スマホの画面」でも、見る分には同じですよね。string_view は両方受け取れます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n// 方法1: string で受け取る（コピーが発生）\\nvoid f1(string s);     // 毎回コピー = 遅い\\n\\n// 方法2: const string& で受け取る\\nvoid f2(const string& s);  // \"hello\" を渡すと一時オブジェクトが作られる\\n\\n// 方法3: string_view で受け取る（オススメ！）\\nvoid f3(string_view sv);   // コピーなし、どんな文字列もOK！\\n\\nstring s = \"world\";\\nf3(s);        // string型 → OK\\nf3(\"hello\");  // 文字列リテラル → OK\\nf3(\"abc\");    // const char* → OK\\n```\\n\\n関数の引数で「文字列を読むだけ」なら string_view が最適！"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <string_view>\\nusing namespace std;\\n\\n// string_view で文字列ビューを受け取る\\nvoid greet(string_view name) {\\n    cout << \"こんにちは, \" << name << endl;\\n}\\n\\nint main() {\\n    // greet(\"太郎\")を呼び出す\\n    greet(\"太郎\");\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// string_view で文字列ビューを受け取る\\n___ ___(___) {\\n    // 文を実行\\n    ___ << ___ << ___ << ___;\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // greet(\\\"太郎\\\")を呼び出す\\n    ___(___);\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <string_view>でstring_viewを読み込む\\n#include <string_view>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// void greet(string_view name)でgreet関数を定義\\nvoid greet(string_view name) {\\n    // coutで「こんにちは, 」とnameを出力\\n    cout << \"こんにちは, \" << name << endl;\\n// greet関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // greet関数（引数「太郎」）を呼び出す\\n    greet(\"太郎\");\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <string_view>でstring_viewを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// void greet(string_view name)でgreet関数を定義\\n___ ___(___) {\\n    // coutで「こんにちは, 」とnameを出力\\n    ___ << ___ << ___ << ___;\\n// greet関数を閉じる\\n___\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // greet関数（引数「太郎」）を呼び出す\\n    ___(___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// #include <string_view>でstring_viewを読み込む",
           "#include <string_view>",
+          "// using namespace stdで標準名前空間を使用",
           "using namespace std;",
           "",
-          "// string_view で文字列ビューを受け取る",
+          "// void greet(string_view name)でgreet関数を定義",
           "void greet(string_view name) {",
+          "    // coutで「こんにちは, 」とnameを出力",
           "    cout << \"こんにちは, \" << name << endl;",
+          "// greet関数を閉じる",
           "}",
           "",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // greet(\"太郎\")を呼び出す",
+          "    // greet関数（引数「太郎」）を呼び出す",
           "    greet(\"太郎\");",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -235,7 +269,15 @@ export const cpp4Data = {
           "",
           null,
           "",
-          null
+          null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "types": [
@@ -265,21 +307,30 @@ export const cpp4Data = {
           "content": "# 文字列を大文字に変換\\n\\n`transform` は文字列の変換にも使えます。\\n\\n**身近な例え：**\\n「hello」という文字を1文字ずつ大文字スタンプで押し直すイメージです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nstring s = \"hello\";\\n\\n// 各文字を大文字に変換（結果を同じ場所に上書き）\\ntransform(s.begin(), s.end(), s.begin(), ::toupper);\\n//        ↑開始    ↑終了    ↑出力先   ↑変換関数\\n\\ncout << s << endl;  // \"HELLO\"\\n```\\n\\n**ポイント：**\\n- 出力先を元の配列にすれば「上書き」できる\\n- `::toupper` は「大文字に変換」する関数"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <algorithm>\\nusing namespace std;\\n\\nint main() {\\n    // 数値配列（1、2、3）をvに代入\\n    vector<int> v = {1, 2, 3};\\n    // transform で各要素を変換\\n    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });\\n    for (int n : v) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 数値配列（1、2、3）をvに代入\\n    ___<___> ___ = {___, ___, ___};\\n    // transform で各要素を変換\\n    ___(___.___, ___.___, ___.___, [](___) { ___ ___ * ___; });\\n    // 文を実行\\n    for (___ : ___) ___ << ___ << ___;\\n    // 文を実行\\n    ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <vector>でvectorを読み込む\\n#include <vector>\\n// #include <algorithm>でalgorithmを読み込む\\n#include <algorithm>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // vectorで数値配列（1、2、3）をvに代入\\n    vector<int> v = {1, 2, 3};\\n    // transformでvの各要素を10倍に変換\\n    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });\\n    // for int n : vでvの各要素をnに取り出して出力\\n    for (int n : v) cout << n << \" \";\\n    // coutで改行を出力\\n    cout << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <vector>でvectorを読み込む\\n___\\n// #include <algorithm>でalgorithmを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // vectorで数値配列（1、2、3）をvに代入\\n    ___<___> ___ = {___, ___, ___};\\n    // transformでvの各要素を10倍に変換\\n    ___(___.___, ___.___, ___.___, [](___) { ___ ___ * ___; });\\n    // for int n : vでvの各要素をnに取り出して出力\\n    for (___ : ___) ___ << ___ << ___;\\n    // coutで改行を出力\\n    ___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// #include <vector>でvectorを読み込む",
           "#include <vector>",
+          "// #include <algorithm>でalgorithmを読み込む",
           "#include <algorithm>",
+          "// using namespace stdで標準名前空間を使用",
           "using namespace std;",
           "",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // 数値配列（1、2、3）をvに代入",
+          "    // vectorで数値配列（1、2、3）をvに代入",
           "    vector<int> v = {1, 2, 3};",
-          "    // transform で各要素を変換",
+          "    // transformでvの各要素を10倍に変換",
           "    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });",
+          "    // for int n : vでvの各要素をnに取り出して出力",
           "    for (int n : v) cout << n << \" \";",
+          "    // coutで改行を出力",
           "    cout << endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -296,7 +347,16 @@ export const cpp4Data = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "algorithms": [
@@ -304,7 +364,7 @@ export const cpp4Data = {
             "for_each",
             "copy"
           ],
-          "others": ["using", "namespace", "std", "int", "main", "vector", "v", "1", "2", "3", "begin()", "end()", "int x", "return", "x", "10", "int n", "cout", "n", "\\\" \\\"", "endl", "0", "}", "#include <iostream>", "#include <vector>", "#include <algorithm>", ": v", "using namespace std;", "int main() {", "vector<int> v = {1, 2, 3}", "// transform で各要素を変換", "for", "return 0;"]
+          "others": ["using", "namespace", "std", "int", "main", "vector", "v", "1", "2", "3", "begin()", "end()", "int x", "return", "x", "10", "int n", "cout", "n", "\\\" \\\"", "endl", "0", "}", "#include <iostream>", "#include <vector>", "#include <algorithm>", ": v", "using namespace std;", "int main() {", "vector<int> v = {1, 2, 3}", "// vの各要素を10倍に変換", "for", "return 0;"]
         },
         "testCases": [
           {
@@ -326,20 +386,28 @@ export const cpp4Data = {
           "content": "# 足し算以外の計算もできる\\n\\n4つ目の引数で「どうやってまとめるか」を指定できます。\\n\\n**身近な例え：**\\n「全部足す」だけでなく「全部かける」「最大値を見つける」など、まとめ方を変えられます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvector<int> v = {1, 2, 3, 4, 5};\\n\\n// 全部かけ算する（初期値は 1）\\nint product = accumulate(v.begin(), v.end(), 1,\\n    [](int a, int b) { return a * b; });\\n// 1 * 1 * 2 * 3 * 4 * 5 = 120\\ncout << product << endl;  // 120\\n```\\n\\n**ポイント：**\\n- 足し算の初期値は `0`（0 + 1 + 2 + ...）\\n- かけ算の初期値は `1`（1 * 1 * 2 * ...）\\n- ラムダ式で好きな計算ができる"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <numeric>\\nusing namespace std;\\n\\nint main() {\\n    // 数値配列（1〜5）をvに代入\\n    vector<int> v = {1, 2, 3, 4, 5};\\n    // accumulate で要素を集約\\n    int sum = accumulate(v.begin(), v.end(), 0);\\n    cout << sum << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 数値配列（1〜5）をvに代入\\n    ___<___> ___ = {___, ___, ___, ___, ___};\\n    // accumulate で要素を集約\\n    ___ ___ = ___(___.___, ___.___, ___);\\n    // 文を実行\\n    ___ << ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <vector>でvectorを読み込む\\n#include <vector>\\n// #include <numeric>でnumericを読み込む\\n#include <numeric>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // vectorで数値配列（1、2、3、4、5）をvに代入\\n    vector<int> v = {1, 2, 3, 4, 5};\\n    // intでsumを宣言しaccumulateでvの合計（15）を代入\\n    int sum = accumulate(v.begin(), v.end(), 0);\\n    // coutでsumを出力\\n    cout << sum << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <vector>でvectorを読み込む\\n___\\n// #include <numeric>でnumericを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // vectorで数値配列（1、2、3、4、5）をvに代入\\n    ___<___> ___ = {___, ___, ___, ___, ___};\\n    // intでsumを宣言しaccumulateでvの合計（15）を代入\\n    ___ ___ = ___(___.___, ___.___, ___);\\n    // coutでsumを出力\\n    ___ << ___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// #include <vector>でvectorを読み込む",
           "#include <vector>",
+          "// #include <numeric>でnumericを読み込む",
           "#include <numeric>",
+          "// using namespace stdで標準名前空間を使用",
           "using namespace std;",
           "",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // 数値配列（1〜5）をvに代入",
+          "    // vectorで数値配列（1、2、3、4、5）をvに代入",
           "    vector<int> v = {1, 2, 3, 4, 5};",
-          "    // accumulate で要素を集約",
+          "    // intでsumを宣言しaccumulateでvの合計（15）を代入",
           "    int sum = accumulate(v.begin(), v.end(), 0);",
+          "    // coutでsumを出力",
           "    cout << sum << endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -352,6 +420,14 @@ export const cpp4Data = {
           null,
           "",
           null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -385,20 +461,28 @@ export const cpp4Data = {
           "content": "# 見つからなかったらどうなる？\\n\\n条件に合う要素が1つもない場合、`end()` が返されます。\\n\\n**身近な例え：**\\n本棚を全部見ても「赤い本」がなかったら、「本棚の外」を指して「なかったよ」と教えてくれます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvector<int> v = {1, 3, 5, 7};  // 偶数がない！\\n\\nauto it = find_if(v.begin(), v.end(),\\n    [](int x) { return x % 2 == 0; });\\n\\n// 見つかったかどうかをチェック\\nif (it != v.end()) {\\n    cout << \"Found: \" << *it << endl;\\n} else {\\n    cout << \"Not found\" << endl;  // これが表示される\\n}\\n```\\n\\n**重要：**\\n必ず `end()` と比較してから使いましょう！"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <algorithm>\\nusing namespace std;\\n\\nint main() {\\n    // 数値配列（1〜5）をvに代入\\n    vector<int> v = {1, 2, 3, 4, 5};\\n    // find_if で条件に合う要素を検索\\n    auto it = find_if(v.begin(), v.end(), [](int x) { return x > 3; });\\n    cout << *it << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 数値配列（1〜5）をvに代入\\n    ___<___> ___ = {___, ___, ___, ___, ___};\\n    // find_if で条件に合う要素を検索\\n    ___ ___ = ___(___.___, ___.___, [](___) { ___ ___ > ___; });\\n    // 文を実行\\n    ___ << ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <vector>でvectorを読み込む\\n#include <vector>\\n// #include <algorithm>でalgorithmを読み込む\\n#include <algorithm>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // vectorで数値配列（1、2、3、4、5）をvに代入\\n    vector<int> v = {1, 2, 3, 4, 5};\\n    // autoでitを宣言しfind_ifで3より大きい要素（4）を検索\\n    auto it = find_if(v.begin(), v.end(), [](int x) { return x > 3; });\\n    // coutで*it（見つかった要素4）を出力\\n    cout << *it << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <vector>でvectorを読み込む\\n___\\n// #include <algorithm>でalgorithmを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // vectorで数値配列（1、2、3、4、5）をvに代入\\n    ___<___> ___ = {___, ___, ___, ___, ___};\\n    // autoでitを宣言しfind_ifで3より大きい要素（4）を検索\\n    ___ ___ = ___(___.___, ___.___, [](___) { ___ ___ > ___; });\\n    // coutで*it（見つかった要素4）を出力\\n    ___ << ___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// #include <vector>でvectorを読み込む",
           "#include <vector>",
+          "// #include <algorithm>でalgorithmを読み込む",
           "#include <algorithm>",
+          "// using namespace stdで標準名前空間を使用",
           "using namespace std;",
           "",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // 数値配列（1〜5）をvに代入",
+          "    // vectorで数値配列（1、2、3、4、5）をvに代入",
           "    vector<int> v = {1, 2, 3, 4, 5};",
-          "    // find_if で条件に合う要素を検索",
+          "    // autoでitを宣言しfind_ifで3より大きい要素（4）を検索",
           "    auto it = find_if(v.begin(), v.end(), [](int x) { return x > 3; });",
+          "    // coutで*it（見つかった要素4）を出力",
           "    cout << *it << endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -411,6 +495,14 @@ export const cpp4Data = {
           null,
           "",
           null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -444,21 +536,30 @@ export const cpp4Data = {
           "content": "# クラスのオブジェクトを並べ替え\\n\\n自分で作ったクラスのリストも、好きな基準でソートできます。\\n\\n**身近な例え：**\\n名簿を「名前順」で並べるか「年齢順」で並べるか選べるようなものです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nstruct Person {\\n    string name;\\n    int age;\\n};\\n\\nvector<Person> people = {\\n    {\"太郎\", 25}, {\"花子\", 20}, {\"次郎\", 30}\\n};\\n\\n// 年齢で並べ替え（若い順）\\nsort(people.begin(), people.end(),\\n    [](const Person& a, const Person& b) {\\n        return a.age < b.age;  // 年齢が小さい方を前に\\n    });\\n// 結果: 花子(20), 太郎(25), 次郎(30)\\n```\\n\\n`const Person&` で受け取ると、コピーせず効率的に比較できます。"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <algorithm>\\nusing namespace std;\\n\\nint main() {\\n    // 数値配列（3、1、4、1、5）をvに代入\\n    vector<int> v = {3, 1, 4, 1, 5};\\n    // sort でソート\\n    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });\\n    for (int n : v) cout << n << \" \";\\n    cout << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 数値配列（3、1、4、1、5）をvに代入\\n    ___<___> ___ = {___, ___, ___, ___, ___};\\n    // sort でソート\\n    ___(___.___, ___.___, [](___) { ___ ___ > ___; });\\n    // 文を実行\\n    for (___ : ___) ___ << ___ << ___;\\n    // 文を実行\\n    ___ << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <vector>でvectorを読み込む\\n#include <vector>\\n// #include <algorithm>でalgorithmを読み込む\\n#include <algorithm>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // vectorで数値配列（3、1、4、1、5）をvに代入\\n    vector<int> v = {3, 1, 4, 1, 5};\\n    // sortでvを降順（大きい順）にソート\\n    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });\\n    // for int n : vでvの各要素をnに取り出して出力\\n    for (int n : v) cout << n << \" \";\\n    // coutで改行を出力\\n    cout << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <vector>でvectorを読み込む\\n___\\n// #include <algorithm>でalgorithmを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // vectorで数値配列（3、1、4、1、5）をvに代入\\n    ___<___> ___ = {___, ___, ___, ___, ___};\\n    // sortでvを降順（大きい順）にソート\\n    ___(___.___, ___.___, [](___) { ___ ___ > ___; });\\n    // for int n : vでvの各要素をnに取り出して出力\\n    for (___ : ___) ___ << ___ << ___;\\n    // coutで改行を出力\\n    ___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// #include <vector>でvectorを読み込む",
           "#include <vector>",
+          "// #include <algorithm>でalgorithmを読み込む",
           "#include <algorithm>",
+          "// using namespace stdで標準名前空間を使用",
           "using namespace std;",
           "",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // 数値配列（3、1、4、1、5）をvに代入",
+          "    // vectorで数値配列（3、1、4、1、5）をvに代入",
           "    vector<int> v = {3, 1, 4, 1, 5};",
-          "    // sort でソート",
+          "    // sortでvを降順（大きい順）にソート",
           "    sort(v.begin(), v.end(), [](int a, int b) { return a > b; });",
+          "    // for int n : vでvの各要素をnに取り出して出力",
           "    for (int n : v) cout << n << \" \";",
+          "    // coutで改行を出力",
           "    cout << endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -475,7 +576,16 @@ export const cpp4Data = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "algorithms": [
@@ -505,21 +615,30 @@ export const cpp4Data = {
           "content": "# よく使う例外の種類\\n\\nC++には、よくあるエラーのための「例外クラス」が用意されています。\\n\\n**身近な例え：**\\n病院の「症状別窓口」のようなものです。「風邪」「怪我」「健康診断」で窓口が違うように、エラーの種類で対応を変えられます。\\n\\n**よく使う例外一覧：**\\n```cpp\\nruntime_error     // 実行時エラー（一般的なエラー）\\nlogic_error       // 論理エラー（プログラムのバグ）\\nout_of_range      // 範囲外アクセス（配列の外を見ようとした）\\ninvalid_argument  // 不正な引数（おかしな値が渡された）\\n```\\n\\n**使い分けの例：**\\n```cpp\\nif (index >= array.size()) {\\n    throw out_of_range(\"インデックスが範囲外です\");\\n}\\nif (age < 0) {\\n    throw invalid_argument(\"年齢は0以上である必要があります\");\\n}\\n```"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <stdexcept>\\nusing namespace std;\\n\\nint main() {\\n    try {\\n        // runtime_error型の例外\"Oops!\"を投げる\\n        throw runtime_error(\"Oops!\");\\n    // catchでexception型の例外を捕まえる\\n    } catch (const exception& e) {\\n        cout << e.what() << endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// ブロックを開始\\n___ ___() {\\n    // ブロックを開始\\n    ___ {\\n        // throw runtime_error(\\\"Oops!\\\")で例外を投げる\\n        ___ ___(___);\\n    // catchでexception型の例外を捕まえる\\n    } ___ (___) {\\n        // 文を実行\\n        ___ << ___.___ << ___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <stdexcept>でstdexceptを読み込む\\n#include <stdexcept>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // tryで例外が発生しうるブロックを開始\\n    try {\\n        // throwでruntime_error（\"Oops!\"）を投げる\\n        throw runtime_error(\"Oops!\");\\n    // catchでconst exception& eとして例外を捕まえる\\n    } catch (const exception& e) {\\n        // coutでe.what()（エラーメッセージ）を出力\\n        cout << e.what() << endl;\\n    // catch ブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <stdexcept>でstdexceptを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // tryで例外が発生しうるブロックを開始\\n    ___ {\\n        // throwでruntime_error（\"Oops!\"）を投げる\\n        ___ ___(___);\\n    // catchでconst exception& eとして例外を捕まえる\\n    } ___ (___) {\\n        // coutでe.what()（エラーメッセージ）を出力\\n        ___ << ___.___ << ___;\\n    // catchブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// #include <stdexcept>でstdexceptを読み込む",
           "#include <stdexcept>",
+          "// using namespace stdで標準名前空間を使用",
           "using namespace std;",
           "",
+          "// int mainでmain関数を定義",
           "int main() {",
+          "    // tryで例外が発生しうるブロックを開始",
           "    try {",
-          "        // runtime_error型の例外\"Oops!\"を投げる",
+          "        // throwでruntime_error（\"Oops!\"）を投げる",
           "        throw runtime_error(\"Oops!\");",
-          "    // catchでexception型の例外を捕まえる",
+          "    // catchでconst exception& eとして例外を捕まえる",
           "    } catch (const exception& e) {",
+          "        // coutでe.what()（エラーメッセージ）を出力",
           "        cout << e.what() << endl;",
+          "    // catchブロックを閉じる",
           "    }",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -536,7 +655,16 @@ export const cpp4Data = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -566,21 +694,27 @@ export const cpp4Data = {
           "content": "# noexcept をつけると何が良いの？\\n\\n`noexcept` には2つの大きなメリットがあります。\\n\\n**メリット1: プログラムが速くなる**\\n```cpp\\nint add(int a, int b) noexcept {\\n    return a + b;\\n}\\n// コンパイラが「例外処理のコード」を省略できる → 速い！\\n```\\n\\n**メリット2: ムーブが安全に使える**\\n```cpp\\nclass MyClass {\\npublic:\\n    // noexcept をつけると、vectorなどで効率的に使われる\\n    MyClass(MyClass&&) noexcept = default;\\n};\\n```\\n\\n**身近な例え：**\\nレストランで「この料理はアレルギー物質を含みません」と保証されていれば、安心して注文できますよね。`noexcept` も同じで、「エラーは起きません」と保証することで、周りのコードが安心して使えます。\\n\\n**使いどころ：**\\n- 単純な計算（足し算、掛け算など）\\n- ムーブコンストラクタ、ムーブ代入演算子"
         }
       ],
-      "correctCode": "#include <iostream>\\nusing namespace std;\\n\\n// add関数をnoexceptで宣言\\nint add(int a, int b) noexcept {\\n    // + で足し算\\n    return a + b;\\n}\\n\\nint main() {\\n    // add関数（第1引数に10, 第2引数に20）を呼び出す\\n    cout << add(10, 20) << endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___ ___ ___;\\n___\\n// add関数をnoexceptで宣言\\n___ ___(___) ___ {\\n    // + で足し算\\n    ___ ___ + ___;\\n// ブロックを閉じる\\n___\\n___\\n// ブロックを開始\\n___ ___() {\\n    // add関数（第1引数に10, 第2引数に20）を呼び出す\\n    ___ << ___(___) << ___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int add(int a, int b) noexceptでadd関数を定義（例外を投げない）\\nint add(int a, int b) noexcept {\\n    // returnでaとbの和を返す\\n    return a + b;\\n// add関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // coutでadd(10, 20)の結果（30）を出力\\n    cout << add(10, 20) << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int add(int a, int b) noexceptでadd関数を定義（例外を投げない）\\n___ ___(___) ___ {\\n    // returnでaとbの和を返す\\n    ___ ___ + ___;\\n// add関数を閉じる\\n___\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // coutでadd(10, 20)の結果（30）を出力\\n    ___ << ___(___) << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// using namespace stdで標準名前空間を使用",
           "using namespace std;",
           "",
-          "// add関数をnoexceptで宣言",
+          "// int add(int a, int b) noexceptでadd関数を定義（例外を投げない）",
           "int add(int a, int b) noexcept {",
-          "    // + で足し算",
+          "    // returnでaとbの和を返す",
           "    return a + b;",
+          "// add関数を閉じる",
           "}",
           "",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // add関数（第1引数に10, 第2引数に20）を呼び出す",
+          "    // coutでadd(10, 20)の結果（30）を出力",
           "    cout << add(10, 20) << endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -596,6 +730,12 @@ export const cpp4Data = {
           null,
           "",
           null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
           null,
           ""
         ],

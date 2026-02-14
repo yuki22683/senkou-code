@@ -26,22 +26,22 @@ export const javaData3 = {
           "content": "# (引数) -> 処理\\n\\n```java\\n// 引数なし\\n() -> System.out.println(\"Hello\")\\n\\n// 引数1つ（カッコ省略可）\\nx -> x * 2\\n\\n// 引数複数\\n(a, b) -> a + b\\n```"
         }
       ],
-      "correctCode": "// ライブラリを読み込む\\nimport java.util.function.Function;\\n\\n// Mainクラスを定義\\npublic class Main {\\n    // mainメソッドを定義\\n    public static void main(String[] args) {\\n        // ラムダ式で引数と本体を区切る演算子\\n        Function<Integer, Integer> square = x -> x * x;\\n        // apply でラムダ式を実行する\\n        System.out.println(square.apply(5));\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___.___.;\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // ラムダ式で引数と本体を区切る演算子\\n        ___<___, ___> ___ = ___ ___ ___ * ___;\\n        // apply でラムダ式を実行する\\n        ___.___.___(___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// importでjava.util.function.Functionを読み込む\\nimport java.util.function.Function;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Function型のsquareにラムダ式（xの2乗）を代入\\n        Function<Integer, Integer> square = x -> x * x;\\n        // printlnでsquare.apply(5)の結果（25）を出力\\n        System.out.println(square.apply(5));\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.function.Functionを読み込む\\nimport ___.___.___.___.;\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Function型のsquareにラムダ式（xの2乗）を代入\\n        ___<___, ___> ___ = ___ ___ ___ * ___;\\n        // printlnでsquare.apply(5)の結果（25）を出力\\n        ___.___.___(___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
+          "// importでjava.util.function.Functionを読み込む",
           "import java.util.function.Function;",
           "",
-          "// Mainクラスを定義",
+          "// public classでMainクラスを定義",
           "public class Main {",
-          "    // mainメソッドを定義",
+          "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // ラムダ式で引数と本体を区切る演算子",
+          "        // Function型のsquareにラムダ式（xの2乗）を代入",
           "        Function<Integer, Integer> square = x -> x * x;",
-          "        // apply でラムダ式を実行する",
+          "        // printlnでsquare.apply(5)の結果（25）を出力",
           "        System.out.println(square.apply(5));",
-          "    // ブロックを閉じる",
+          "    // mainメソッドを閉じる",
           "    }",
-          "// ブロックを閉じる",
+          "// Mainクラスを閉じる",
           "}"
         ],
       "lineHints": [
@@ -90,18 +90,24 @@ export const javaData3 = {
           "content": "# いろいろな作成方法\\n\\n```java\\n// コレクションから\\nlist.stream()\\n\\n// 配列から\\nArrays.stream(array)\\n\\n// 値から直接\\nStream.of(1, 2, 3)\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\nimport java.util.stream.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 数値リスト（1, 2, 3）をnumsに代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3);\\n        // コレクションからStreamを作成するメソッド\\n        nums.stream().forEach(System.out::println);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n// ライブラリを読み込む\\nimport ___.___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 数値リスト（1, 2, 3）をnumsに代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // コレクションからStreamを作成するメソッド\\n        ___.___().___(___._________);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n// importでjava.util.stream.*を読み込む\\nimport java.util.stream.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // List型のnumsに数値リスト（1、2、3）を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3);\\n        // streamでStream作成しforEachで各要素を出力\\n        nums.stream().forEach(System.out::println);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n// importでjava.util.stream.*を読み込む\\nimport ___.___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // List型のnumsに数値リスト（1、2、3）を代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // streamでStream作成しforEachで各要素を出力\\n        ___.___().___(___._________);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
+          "// importでjava.util.*を読み込む",
           "import java.util.*;",
+          "// importでjava.util.stream.*を読み込む",
           "import java.util.stream.*;",
           "",
+          "// public classでMainクラスを定義",
           "public class Main {",
+          "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // 数値リスト（1, 2, 3）をnumsに代入",
+          "        // List型のnumsに数値リスト（1、2、3）を代入",
           "        List<Integer> nums = Arrays.asList(1, 2, 3);",
-          "        // コレクションからStreamを作成するメソッド",
+          "        // streamでStream作成しforEachで各要素を出力",
           "        nums.stream().forEach(System.out::println);",
+          "    // mainメソッドを閉じる",
           "    }",
+          "// Mainクラスを閉じる",
           "}"
         ],
       "lineHints": [
@@ -110,6 +116,12 @@ export const javaData3 = {
           null,
           "",
           null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -145,20 +157,26 @@ export const javaData3 = {
           "content": "# 異なる型に変換\\n\\n```java\\nList<String> names = Arrays.asList(\"a\", \"bb\", \"ccc\");\\nnames.stream()\\n     .map(String::length)\\n     .forEach(System.out::println);\\n// 1, 2, 3\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 数値リスト（1, 2, 3）をnumsに代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3);\\n        // numsからストリームを作成\\n        nums.stream()\\n            // 各要素を変換するメソッド\\n            .map(n -> n * 10)\\n            .forEach(System.out::println);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 数値リスト（1, 2, 3）をnumsに代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // numsからストリームを作成\\n        ___.___()\\n            // 各要素を変換するメソッド\\n            .___(___ ___ ___ * ___)\\n            // 出力\\n            .___(___.___________);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // List型のnumsに数値リスト（1、2、3）を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3);\\n        // streamでnumsからStreamを作成\\n        nums.stream()\\n            // mapで各要素nを10倍に変換\\n            .map(n -> n * 10)\\n            // forEachで各要素を出力\\n            .forEach(System.out::println);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // List型のnumsに数値リスト（1、2、3）を代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // streamでnumsからStreamを作成\\n        ___.___()\\n            // mapで各要素nを10倍に変換\\n            .___(___ ___ ___ * ___)\\n            // forEachで各要素を出力\\n            .___(___.___________);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
+          "// importでjava.util.*を読み込む",
           "import java.util.*;",
           "",
+          "// public classでMainクラスを定義",
           "public class Main {",
+          "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // 数値リスト（1, 2, 3）をnumsに代入",
+          "        // List型のnumsに数値リスト（1、2、3）を代入",
           "        List<Integer> nums = Arrays.asList(1, 2, 3);",
-          "        // numsからストリームを作成",
+          "        // streamでnumsからStreamを作成",
           "        nums.stream()",
-          "            // 各要素を変換するメソッド",
+          "            // mapで各要素nを10倍に変換",
           "            .map(n -> n * 10)",
+          "            // forEachで各要素を出力",
           "            .forEach(System.out::println);",
+          "    // mainメソッドを閉じる",
           "    }",
+          "// Mainクラスを閉じる",
           "}"
         ],
       "lineHints": [
@@ -174,7 +192,13 @@ export const javaData3 = {
           null,
           "",
           null,
-          null
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -185,7 +209,7 @@ export const javaData3 = {
             "stream",
             "forEach"
           ],
-          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "n", "->", "*", "10", "System", "out", "::", "println", "}", "", "out::println);", "public class Main {", "msに[1,", ".map(n -> n * 10)", "リスト（1,", ")でストリームを作成", "// 各要素を変換するメソッド"]
+          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "n", "->", "*", "10", "System", "out", "::", "println", "}", "", "out::println);", "public class Main {", "msに[1,", ".map(n -> n * 10)", "リスト（1,", ")でストリームを作成", "// 各要素を10倍にするmap"]
         },
         "testCases": [
           {
@@ -207,19 +231,26 @@ export const javaData3 = {
           "content": "# filterを連結\\n\\n```java\\nnums.stream()\\n    .filter(n -> n > 1)\\n    .filter(n -> n < 5)\\n    .forEach(System.out::println);\\n// 2, 3, 4\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 数値リスト（1〜5）をnumsに代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);\\n        nums.stream()\\n            // 条件に合う要素だけを残すメソッド\\n            .filter(n -> n > 2)\\n            .forEach(System.out::println);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 数値リスト（1〜5）をnumsに代入\\n        ___<___> ___ = ___.___(___,___, ___,___, ___);\\n        // numsからストリームを作成\\n        ___.___()\\n            // 条件に合う要素だけを残すメソッド\\n            .___(___ ___ ___ > ___)\\n            // 出力\\n            .___(___.___________);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // List型のnumsに数値リスト（1〜5）を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);\\n        // streamでnumsからStreamを作成\\n        nums.stream()\\n            // filterでn>2の要素だけを残す\\n            .filter(n -> n > 2)\\n            // forEachで各要素を出力\\n            .forEach(System.out::println);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // List型のnumsに数値リスト（1〜5）を代入\\n        ___<___> ___ = ___.___(___,___, ___,___, ___);\\n        // streamでnumsからStreamを作成\\n        ___.___()\\n            // filterでn>2の要素だけを残す\\n            .___(___ ___ ___ > ___)\\n            // forEachで各要素を出力\\n            .___(___.___________);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
+          "// importでjava.util.*を読み込む",
           "import java.util.*;",
           "",
+          "// public classでMainクラスを定義",
           "public class Main {",
+          "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // 数値リスト（1〜5）をnumsに代入",
+          "        // List型のnumsに数値リスト（1〜5）を代入",
           "        List<Integer> nums = Arrays.asList(1, 2, 3, 4, 5);",
+          "        // streamでnumsからStreamを作成",
           "        nums.stream()",
-          "            // 条件に合う要素だけを残すメソッド",
+          "            // filterでn>2の要素だけを残す",
           "            .filter(n -> n > 2)",
+          "            // forEachで各要素を出力",
           "            .forEach(System.out::println);",
+          "    // mainメソッドを閉じる",
           "    }",
+          "// Mainクラスを閉じる",
           "}"
         ],
       "lineHints": [
@@ -234,7 +265,14 @@ export const javaData3 = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -267,22 +305,30 @@ export const javaData3 = {
           "content": "# Collectorsのメソッド\\n\\n```java\\n// リストに\\nCollectors.toList()\\n\\n// セットに\\nCollectors.toSet()\\n\\n// 文字列結合\\nCollectors.joining(\", \")\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\nimport java.util.stream.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 数値リスト（1, 2, 3）をnumsに代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3);\\n        List<Integer> doubled = nums.stream()\\n            .map(n -> n * 2)\\n            // Streamをコレクションに変換するメソッドとユーティリティクラス\\n            .collect(Collectors.toList());\\n        // println で出力する\\n        System.out.println(doubled);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n// ライブラリを読み込む\\nimport ___.___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 数値リスト（1, 2, 3）をnumsに代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // 値を代入\\n        ___<___> ___ = ___.___()\\n            // パターンマッチの分岐\\n            .___(___ ___ ___ * ___)\\n            // Streamをコレクションに変換するメソッドとユーティリティクラス\\n            .___(___.___(___\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n// importでjava.util.stream.*を読み込む\\nimport java.util.stream.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // List型のnumsに数値リスト（1、2、3）を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3);\\n        // List型のdoubledにStream処理結果を代入\\n        List<Integer> doubled = nums.stream()\\n            // mapで各要素nを2倍に変換\\n            .map(n -> n * 2)\\n            // collectでStreamをリストに変換\\n            .collect(Collectors.toList());\\n        // printlnでdoubledを出力\\n        System.out.println(doubled);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n// importでjava.util.stream.*を読み込む\\nimport ___.___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // List型のnumsに数値リスト（1、2、3）を代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // List型のdoubledにStream処理結果を代入\\n        ___<___> ___ = ___.___()\\n            // mapで各要素nを2倍に変換\\n            .___(___ ___ ___ * ___)\\n            // collectでStreamをリストに変換\\n            .___(___.___(___\\n        // printlnでdoubledを出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
+          "// importでjava.util.*を読み込む",
           "import java.util.*;",
+          "// importでjava.util.stream.*を読み込む",
           "import java.util.stream.*;",
           "",
+          "// public classでMainクラスを定義",
           "public class Main {",
+          "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // 数値リスト（1, 2, 3）をnumsに代入",
+          "        // List型のnumsに数値リスト（1、2、3）を代入",
           "        List<Integer> nums = Arrays.asList(1, 2, 3);",
+          "        // List型のdoubledにStream処理結果を代入",
           "        List<Integer> doubled = nums.stream()",
+          "            // mapで各要素nを2倍に変換",
           "            .map(n -> n * 2)",
-          "            // Streamをコレクションに変換するメソッドとユーティリティクラス",
+          "            // collectでStreamをリストに変換",
           "            .collect(Collectors.toList());",
-          "        // println で出力する",
+          "        // printlnでdoubledを出力",
           "        System.out.println(doubled);",
+          "    // mainメソッドを閉じる",
           "    }",
+          "// Mainクラスを閉じる",
           "}"
         ],
       "lineHints": [
@@ -291,6 +337,14 @@ export const javaData3 = {
           null,
           "",
           null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -333,26 +387,38 @@ export const javaData3 = {
           "content": "# 合計、最大値など\\n\\n```java\\n// 合計\\n.reduce(0, Integer::sum)\\n\\n// 積\\n.reduce(1, (a, b) -> a * b)\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 数値リスト（1〜4）をnumsに代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4);\\n        int product = nums.stream()\\n            // 全要素を1つの値にまとめるメソッド\\n            .reduce(1, (a, b) -> a * b);\\n        // println で出力する\\n        System.out.println(product);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 数値リスト（1〜4）をnumsに代入\\n        ___<___> ___ = ___.___(___,___, ___,___);\\n        // 変数を宣言\\n        ___ ___ = ___.___()\\n            // 全要素を1つの値にまとめるメソッド\\n            .___(___,(___, ___) ___ ___ * ___);\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // List型のnumsに数値リスト（1〜4）を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4);\\n        // int型のproductにStream処理結果を代入\\n        int product = nums.stream()\\n            // reduceで初期値1から全要素を掛け算\\n            .reduce(1, (a, b) -> a * b);\\n        // printlnでproductを出力\\n        System.out.println(product);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // List型のnumsに数値リスト（1〜4）を代入\\n        ___<___> ___ = ___.___(___,___, ___,___);\\n        // int型のproductにStream処理結果を代入\\n        ___ ___ = ___.___()\\n            // reduceで初期値1から全要素を掛け算\\n            .___(___,(___, ___) ___ ___ * ___);\\n        // printlnでproductを出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
+          "// importでjava.util.*を読み込む",
           "import java.util.*;",
           "",
+          "// public classでMainクラスを定義",
           "public class Main {",
+          "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // 数値リスト（1〜4）をnumsに代入",
+          "        // List型のnumsに数値リスト（1〜4）を代入",
           "        List<Integer> nums = Arrays.asList(1, 2, 3, 4);",
+          "        // int型のproductにStream処理結果を代入",
           "        int product = nums.stream()",
-          "            // 全要素を1つの値にまとめるメソッド",
+          "            // reduceで初期値1から全要素を掛け算",
           "            .reduce(1, (a, b) -> a * b);",
-          "        // println で出力する",
+          "        // printlnでproductを出力",
           "        System.out.println(product);",
+          "    // mainメソッドを閉じる",
           "    }",
+          "// Mainクラスを閉じる",
           "}"
         ],
       "lineHints": [
           null,
           "",
           null,
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -395,19 +461,24 @@ export const javaData3 = {
           "content": "# 安全に値を取り出す\\n\\n```java\\nOptional<String> opt = Optional.of(\"Hello\");\\n\\n// 値があれば取得、なければデフォルト\\nString s = opt.orElse(\"default\");\\n\\n// 値があれば処理\\nopt.ifPresent(System.out::println);\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 値を持つOptionalを作成するメソッド\\n        Optional<String> opt = Optional.of(\"こんにちは\");\\n        // orElse でデフォルト値を指定して取得する\\n        String value = opt.orElse(\"デフォルト\");\\n        // println で出力する\\n        System.out.println(value);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 値を持つOptionalを作成するメソッド\\n        ___<___> ___ = ___.___(\\\"___\\\");\\n        // orElse でデフォルト値を指定して取得する\\n        ___ ___ = ___.___\\\"___\\\");\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Optional.ofで「こんにちは」を持つOptionalを作成\\n        Optional<String> opt = Optional.of(\"こんにちは\");\\n        // orElseでデフォルト値を指定して値を取得\\n        String value = opt.orElse(\"デフォルト\");\\n        // printlnでvalueを出力\\n        System.out.println(value);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Optional.ofで「こんにちは」を持つOptionalを作成\\n        ___<___> ___ = ___.___(\\\"___\\\");\\n        // orElseでデフォルト値を指定して値を取得\\n        ___ ___ = ___.___\\\"___\\\");\\n        // printlnでvalueを出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
+          "// importでjava.util.*を読み込む",
           "import java.util.*;",
           "",
+          "// public classでMainクラスを定義",
           "public class Main {",
+          "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // 値を持つOptionalを作成するメソッド",
+          "        // Optional.ofで「こんにちは」を持つOptionalを作成",
           "        Optional<String> opt = Optional.of(\"こんにちは\");",
-          "        // orElse でデフォルト値を指定して取得する",
+          "        // orElseでデフォルト値を指定して値を取得",
           "        String value = opt.orElse(\"デフォルト\");",
-          "        // println で出力する",
+          "        // printlnでvalueを出力",
           "        System.out.println(value);",
+          "    // mainメソッドを閉じる",
           "    }",
+          "// Mainクラスを閉じる",
           "}"
         ],
       "lineHints": [
@@ -419,10 +490,15 @@ export const javaData3 = {
           null,
           "",
           null,
-          "\\\"\\\"",
+          "",
           null,
-          "\\\"\\\"",
-          null
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -432,7 +508,7 @@ export const javaData3 = {
             "orElse(",
             "println"
           ],
-          "others": ["java", "util", "*;", "Main", "main", "String", "args", "Optional", "opt", "こんにちは", "value", "デフォルト", "System", "out", ";", "}", "", "public class Main {", "持つOptionalを作成するメソッド", "ト値を指定して取得する", "// println で出力する"]
+          "others": ["java", "util", "*;", "Main", "main", "String", "args", "Optional", "opt", "こんにちは", "value", "デフォルト", "System", "out", ";", "}", ""]
         },
         "testCases": [
           {
@@ -454,17 +530,22 @@ export const javaData3 = {
           "content": "# 4つのパターン\\n\\n```java\\n// スタティックメソッド\\nInteger::parseInt\\n\\n// インスタンスメソッド（特定のオブジェクト）\\nSystem.out::println\\n\\n// インスタンスメソッド（任意のオブジェクト）\\nString::length\\n\\n// コンストラクタ\\nArrayList::new\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 名前リスト（アリス、ボブ）をnamesに代入\\n        List<String> names = Arrays.asList(\"アリス\", \"ボブ\");\\n        // メソッド参照を表す演算子\\n        names.forEach(System.out::println);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 名前リスト（アリス、ボブ）をnamesに代入\\n        ___<___> ___ = ___.___(\\\"___\\\", \\\"___\\\");\\n        // メソッド参照を表す演算子\\n        ___.___(___._________);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // List型のnamesに名前リスト（アリス、ボブ）を代入\\n        List<String> names = Arrays.asList(\"アリス\", \"ボブ\");\\n        // forEachで::を使いprintlnメソッドを参照\\n        names.forEach(System.out::println);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // List型のnamesに名前リスト（アリス、ボブ）を代入\\n        ___<___> ___ = ___.___(\\\"___\\\", \\\"___\\\");\\n        // forEachで::を使いprintlnメソッドを参照\\n        ___.___(___._________);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
+          "// importでjava.util.*を読み込む",
           "import java.util.*;",
           "",
+          "// public classでMainクラスを定義",
           "public class Main {",
+          "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // 名前リスト（アリス、ボブ）をnamesに代入",
+          "        // List型のnamesに名前リスト（アリス、ボブ）を代入",
           "        List<String> names = Arrays.asList(\"アリス\", \"ボブ\");",
-          "        // メソッド参照を表す演算子",
+          "        // forEachで::を使いprintlnメソッドを参照",
           "        names.forEach(System.out::println);",
+          "    // mainメソッドを閉じる",
           "    }",
+          "// Mainクラスを閉じる",
           "}"
         ],
       "lineHints": [
@@ -476,8 +557,13 @@ export const javaData3 = {
           null,
           "",
           null,
-          "\\\"\\\"\\\"\\\"",
-          null
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [
@@ -485,7 +571,7 @@ export const javaData3 = {
             "->",
             "."
           ],
-          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "names", "Arrays", "asList", "アリス", "ボブ", "forEach", "System", "out", "println", "}", "", "out::println", "public class Main {", "mesに[\"アリス\",", "リスト（アリス、ボブ）をnamesに代入"]
+          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "names", "Arrays", "asList", "アリス", "ボブ", "forEach", "System", "out", "println", "}", ""]
         },
         "testCases": [
           {
@@ -507,19 +593,26 @@ export const javaData3 = {
           "content": "# Comparator を指定\\n\\n```java\\n// 逆順\\n.sorted(Comparator.reverseOrder())\\n\\n// 長さでソート\\n.sorted(Comparator.comparing(String::length))\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 数値リスト（5, 2, 8, 1）をnumsに代入\\n        List<Integer> nums = Arrays.asList(5, 2, 8, 1);\\n        nums.stream()\\n            // 要素を昇順に並べ替えるメソッド\\n            .sorted()\\n            .forEach(System.out::println);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 数値リスト（5, 2, 8, 1）をnumsに代入\\n        ___<___> ___ = ___.___(___,___, ___,___);\\n        // numsからストリームを作成\\n        ___.___()\\n            // 要素を昇順に並べ替えるメソッド\\n            .___()\\n            // 出力\\n            .___(___.___________);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // List型のnumsに数値リスト（5、2、8、1）を代入\\n        List<Integer> nums = Arrays.asList(5, 2, 8, 1);\\n        // streamでnumsからStreamを作成\\n        nums.stream()\\n            // sortedで要素を昇順に並べ替え\\n            .sorted()\\n            // forEachで各要素を出力\\n            .forEach(System.out::println);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // List型のnumsに数値リスト（5、2、8、1）を代入\\n        ___<___> ___ = ___.___(___,___, ___,___);\\n        // streamでnumsからStreamを作成\\n        ___.___()\\n            // sortedで要素を昇順に並べ替え\\n            .___()\\n            // forEachで各要素を出力\\n            .___(___.___________);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
+          "// importでjava.util.*を読み込む",
           "import java.util.*;",
           "",
+          "// public classでMainクラスを定義",
           "public class Main {",
+          "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // 数値リスト（5, 2, 8, 1）をnumsに代入",
+          "        // List型のnumsに数値リスト（5、2、8、1）を代入",
           "        List<Integer> nums = Arrays.asList(5, 2, 8, 1);",
+          "        // streamでnumsからStreamを作成",
           "        nums.stream()",
-          "            // 要素を昇順に並べ替えるメソッド",
+          "            // sortedで要素を昇順に並べ替え",
           "            .sorted()",
+          "            // forEachで各要素を出力",
           "            .forEach(System.out::println);",
+          "    // mainメソッドを閉じる",
           "    }",
+          "// Mainクラスを閉じる",
           "}"
         ],
       "lineHints": [
@@ -534,7 +627,14 @@ export const javaData3 = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -567,19 +667,26 @@ export const javaData3 = {
           "content": "# 効率的な処理\\n\\n```java\\nnums.stream()\\n    .filter(n -> n > 0)\\n    .distinct()\\n    .sorted()\\n    .collect(Collectors.toList());\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 重複を含む数値リスト（1, 1, 2, 2, 3）をnumsに代入\\n        List<Integer> nums = Arrays.asList(1, 1, 2, 2, 3);\\n        nums.stream()\\n            // 重複した要素を取り除くメソッド\\n            .distinct()\\n            .forEach(System.out::println);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 重複を含む数値リスト（1, 1, 2, 2, 3）をnumsに代入\\n        ___<___> ___ = ___.___(___,___,___,___,___);\\n        // numsからストリームを作成\\n        ___.___()\\n            // 重複した要素を取り除くメソッド\\n            .___()\\n            // 出力\\n            .___(___.___________);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // List型のnumsに重複数値リスト（1、1、2、2、3）を代入\\n        List<Integer> nums = Arrays.asList(1, 1, 2, 2, 3);\\n        // streamでnumsからStreamを作成\\n        nums.stream()\\n            // distinctで重複要素を除去\\n            .distinct()\\n            // forEachで各要素を出力\\n            .forEach(System.out::println);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // List型のnumsに重複数値リスト（1、1、2、2、3）を代入\\n        ___<___> ___ = ___.___(___,___,___,___,___);\\n        // streamでnumsからStreamを作成\\n        ___.___()\\n            // distinctで重複要素を除去\\n            .___()\\n            // forEachで各要素を出力\\n            .___(___.___________);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
+          "// importでjava.util.*を読み込む",
           "import java.util.*;",
           "",
+          "// public classでMainクラスを定義",
           "public class Main {",
+          "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // 重複を含む数値リスト（1, 1, 2, 2, 3）をnumsに代入",
+          "        // List型のnumsに重複数値リスト（1、1、2、2、3）を代入",
           "        List<Integer> nums = Arrays.asList(1, 1, 2, 2, 3);",
+          "        // streamでnumsからStreamを作成",
           "        nums.stream()",
-          "            // 重複した要素を取り除くメソッド",
+          "            // distinctで重複要素を除去",
           "            .distinct()",
+          "            // forEachで各要素を出力",
           "            .forEach(System.out::println);",
+          "    // mainメソッドを閉じる",
           "    }",
+          "// Mainクラスを閉じる",
           "}"
         ],
       "lineHints": [
@@ -594,7 +701,14 @@ export const javaData3 = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "methods": [
@@ -605,7 +719,7 @@ export const javaData3 = {
             "stream",
             "forEach"
           ],
-          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "System", "out", "::", "println", "}", "", "out::println);", "public class Main {", "msに[1,", ".distinct()", "を含む数値リスト（1,"]
+          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "System", "out", "::", "println", "}", ""]
         },
         "testCases": [
           {

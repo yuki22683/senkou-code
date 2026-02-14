@@ -86,12 +86,12 @@ export const javascriptData2 = {
           "content": "# 元の配列は変わらない！\\n\\n**大事なポイント：**\\n`map` は新しい配列を作って返します。元の配列はそのまま残ります。\\n\\n**書き方：**\\n```\\n配列.map(要素 => 変換処理)\\n```\\n\\n**コード例：**\\n```javascript\\nconst names = ['alice', 'bob'];\\n// 全部大文字に変換\\nconst upper = names.map(n => n.toUpperCase());\\nconsole.log(upper);  // ['ALICE', 'BOB']\\nconsole.log(names);  // ['alice', 'bob']（元のまま！）\\n```"
         }
       ],
-      "correctCode": "// [1, 2, 3] の各要素を3倍にする\\nconst nums = [1, 2, 3];\\n// map メソッドで変換する\\nconst tripled = nums.map(n => n * 3);\\n// tripledを表示\\nconsole.log(tripled);",
-      "holeyCode": "// [1, 2, 3] の各要素を3倍にする\\nconst ___ = [___, ___, ___];\\n// map メソッドで変換する\\nconst ___ = ___.___(___=> ___ * ___);\\n// tripledを表示\\n___.___(___)___",
+      "correctCode": "// [1, 2, 3] の各要素を3倍にする\\nconst nums = [1, 2, 3];\\n// numsの各要素を3倍にしてtripledに代入\\nconst tripled = nums.map(n => n * 3);\\n// tripledを表示\\nconsole.log(tripled);",
+      "holeyCode": "// [1, 2, 3] の各要素を3倍にする\\nconst ___ = [___, ___, ___];\\n// numsの各要素を3倍にしてtripledに代入\\nconst ___ = ___.___(___=> ___ * ___);\\n// tripledを表示\\n___.___(___)___",
       "correctLines": [
           "// [1, 2, 3] の各要素を3倍にする",
           "const nums = [1, 2, 3];",
-          "// map メソッドで変換する",
+          "// numsの各要素を3倍にしてtripledに代入",
           "const tripled = nums.map(n => n * 3);",
           "// tripledを表示",
           "console.log(tripled);"

@@ -104,9 +104,10 @@ export const lua3Data = {
           "content": "# error(メッセージ)\\n\\nエラーメッセージを指定してエラーを発生させます。\\n\\n**コード例：**\\n```lua\\nif x < 0 then\\n    error(\"負の値は許可されません\")\\nend\\n```"
         }
       ],
-      "correctCode": "local ok, msg = pcall(function()\\n    -- errorでエラーを発生\\n    error(\"テスト エラー\")\\nend)\\nprint(msg:match(\"テスト エラー\") and \"caught\" or \"not caught\")",
-      "holeyCode": "-- 値を代入\\nlocal ___, ___ = ___(function()\\n    -- errorでエラーを発生\\n    ___(\"___\")\\n-- ブロックを終了\\n___)\\n-- 出力\\n___(___:___(\"___\") ___ \"___\" ___ \"___\")",
+      "correctCode": "-- okとmsgにpcallの結果を代入\\nlocal ok, msg = pcall(function()\\n    -- errorでエラーを発生\\n    error(\"テスト エラー\")\\nend)\\nprint(msg:match(\"テスト エラー\") and \"caught\" or \"not caught\")",
+      "holeyCode": "-- okとmsgにpcallの結果を代入\\nlocal ___, ___ = ___(function()\\n    -- errorでエラーを発生\\n    ___(\"___\")\\n-- ブロックを終了\\n___)\\n-- 出力\\n___(___:___(\"___\") ___ \"___\" ___ \"___\")",
       "correctLines": [
+          "-- okとmsgにpcallの結果を代入",
           "local ok, msg = pcall(function()",
           "    -- errorでエラーを発生",
           "    error(\"テスト エラー\")",
@@ -117,6 +118,7 @@ export const lua3Data = {
           null,
           "",
           null,
+          "",
           "",
           null
         ],
@@ -233,12 +235,12 @@ export const lua3Data = {
           "content": "# tostring(値)\\n\\n数値やテーブルを文字列に変換できます。\\n\\n**コード例：**\\n```lua\\nprint(tostring(42)) -- \"42\"\\nprint(tostring(true)) -- \"true\"\\n```"
         }
       ],
-      "correctCode": "-- tostringで文字列に変換\\nlocal n = 100\\n-- 文字列に変換して連結\\nprint(\"Value: \" .. tostring(n))",
-      "holeyCode": "-- tostringで文字列に変換\\nlocal ___ = ___\\n-- 文字列に変換して連結\\n___(\"___\" ___ ___(___))",
+      "correctCode": "-- tostringで文字列に変換\\nlocal n = 100\\n-- nを文字列に変換して連結\\nprint(\"Value: \" .. tostring(n))",
+      "holeyCode": "-- tostringで文字列に変換\\nlocal ___ = ___\\n-- nを文字列に変換して連結\\n___(\"___\" ___ ___(___))",
       "correctLines": [
           "-- tostringで文字列に変換",
           "local n = 100",
-          "-- 文字列に変換して連結",
+          "-- nを文字列に変換して連結",
           "print(\"Value: \" .. tostring(n))"
         ],
       "lineHints": [
@@ -276,12 +278,12 @@ export const lua3Data = {
           "content": "# tonumber(文字列)\\n\\n数値として解釈できる文字列を変換します。\\n\\n**コード例：**\\n```lua\\nprint(tonumber(\"42\")) -- 42\\nprint(tonumber(\"abc\")) -- nil\\n```"
         }
       ],
-      "correctCode": "-- tonumberで数値に変換\\nlocal s = \"50\"\\n-- 数値に変換\\nlocal n = tonumber(s)\\nprint(n + 10)",
-      "holeyCode": "-- tonumberで数値に変換\\nlocal ___ = \"___\"\\n-- 数値に変換\\nlocal ___ = ___(___)\\n-- 出力\\n___(___ + ___)",
+      "correctCode": "-- tonumberで数値に変換\\nlocal s = \"50\"\\n-- sを数値に変換してnに代入\\nlocal n = tonumber(s)\\nprint(n + 10)",
+      "holeyCode": "-- tonumberで数値に変換\\nlocal ___ = \"___\"\\n-- sを数値に変換してnに代入\\nlocal ___ = ___(___)\\n-- 出力\\n___(___ + ___)",
       "correctLines": [
           "-- tonumberで数値に変換",
           "local s = \"50\"",
-          "-- 数値に変換",
+          "-- sを数値に変換してnに代入",
           "local n = tonumber(s)",
           "print(n + 10)"
         ],

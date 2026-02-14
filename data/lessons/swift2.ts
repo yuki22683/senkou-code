@@ -105,25 +105,27 @@ export const swift2Data = {
           "content": "# エラーを防げる\\n\\n**強制アンラップ（!）の場合：**\\n```swift\\nvar num: Int? = nil\\nprint(num!)  // エラー！クラッシュする\\n```\\n\\n**if let の場合：**\\n```swift\\nvar num: Int? = nil\\nif let n = num {\\n    print(n)  // 実行されない（安全）\\n}\\n```\\n\\nnilのときは何も起きないので、安全です。"
         }
       ],
-      "correctCode": "// ?でオプショナル型\\nvar val: Int? = 100\\n// letで値を取り出す\\nif let n = val {\\n    // nを出力\\n    print(n)\\n}",
-      "holeyCode": "// ?でオプショナル型\\nvar ___: ___? = ___\\n// letで値を取り出す\\nif let ___ = ___ ___\\n    // nを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// varでvalにInt?型で100を代入\\nvar val: Int? = 100\\n// if letでvalをアンラップしnに代入\\nif let n = val {\\n    // printでnを出力\\n    print(n)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// varでvalにInt?型で100を代入\\nvar ___: ___? = ___\\n// if letでvalをアンラップしnに代入\\nif let ___ = ___ ___\\n    // printでnを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// ?でオプショナル型",
+          "// varでvalにInt?型で100を代入",
           "var val: Int? = 100",
-          "// letで値を取り出す",
+          "// if letでvalをアンラップしnに代入",
           "if let n = val {",
-          "    // nを出力",
+          "    // printでnを出力",
           "    print(n)",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "",
+          "varでvalにInt?型で100を代入します。",
           null,
-          "",
+          "if letで安全にアンラップします。",
           null,
-          "",
-          null
+          "printでnを出力します。",
+          null,
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "keywords": [
@@ -159,7 +161,7 @@ export const swift2Data = {
           "content": "# 目標\\n\\n四角形を表す構造体を作りましょう。\\n\\n1. `Rect` という構造体を作る\\n2. `width`（横幅）と `height`（高さ）を持たせる\\n3. インスタンスを作って `width` を表示する"
         }
       ],
-      "correctCode": "// structで構造体を定義\\nstruct Rect {\\n    // widthプロパティ\\n    var width: Int\\n    // heightプロパティ\\n    var height: Int\\n}\\n// インスタンスを作成\\nlet r = Rect(width: 3, height: 4)\\n// widthを出力\\nprint(r.width)",
+      "correctCode": "// structで構造体を定義\\nstruct Rect {\\n    // widthプロパティ\\n    var width: Int\\n    // heightプロパティ\\n    var height: Int\\n// ブロックを閉じる\\n}\\n// インスタンスを作成\\nlet r = Rect(width: 3, height: 4)\\n// widthを出力\\nprint(r.width)",
       "holeyCode": "// structで構造体を定義\\nstruct ___ ___\\n    // widthプロパティ\\n    var ___: ___\\n    // heightプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n// インスタンスを作成\\nlet ___ = ___(___: ___, ___: ___)\\n// widthを出力\\n___(___.___)",
       "correctLines": [
           "// structで構造体を定義",
@@ -168,6 +170,7 @@ export const swift2Data = {
           "    var width: Int",
           "    // heightプロパティ",
           "    var height: Int",
+          "// ブロックを閉じる",
           "}",
           "// インスタンスを作成",
           "let r = Rect(width: 3, height: 4)",
@@ -185,7 +188,8 @@ export const swift2Data = {
           "",
           null,
           "",
-          null
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -221,7 +225,7 @@ export const swift2Data = {
           "content": "# 目標\\n\\nネコのクラスを作りましょう。\\n\\n1. `Cat` というクラスを作る\\n2. `name` プロパティを持たせる\\n3. `init` で名前を設定できるようにする\\n4. 「Tama」という名前のネコを作って表示する"
         }
       ],
-      "correctCode": "// classでクラスを定義\\nclass Cat {\\n    // nameプロパティ\\n    var name: String\\n    // initでイニシャライザ\\n    init(name: String) {\\n        // selfで自身のプロパティにアクセス\\n        self.name = name\\n    }\\n}\\n// インスタンスを作成\\nlet cat = Cat(name: \"タマ\")\\n// nameを出力\\nprint(cat.name)",
+      "correctCode": "// classでクラスを定義\\nclass Cat {\\n    // nameプロパティ\\n    var name: String\\n    // initでイニシャライザ\\n    init(name: String) {\\n        // selfで自身のプロパティにアクセス\\n        self.name = name\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n// インスタンスを作成\\nlet cat = Cat(name: \"タマ\")\\n// nameを出力\\nprint(cat.name)",
       "holeyCode": "// classでクラスを定義\\nclass ___ ___\\n    // nameプロパティ\\n    var ___: ___\\n    // initでイニシャライザ\\n    ___(___: ___) ___\\n        // selfで自身のプロパティにアクセス\\n        ___.___ = ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// インスタンスを作成\\nlet ___ = ___(___ ___)\\n// nameを出力\\n___(___.___)",
       "correctLines": [
           "// classでクラスを定義",
@@ -232,7 +236,9 @@ export const swift2Data = {
           "    init(name: String) {",
           "        // selfで自身のプロパティにアクセス",
           "        self.name = name",
+          "    // ブロックを閉じる",
           "    }",
+          "// ブロックを閉じる",
           "}",
           "// インスタンスを作成",
           "let cat = Cat(name: \"タマ\")",
@@ -253,7 +259,9 @@ export const swift2Data = {
           null,
           "",
           null,
-          "\\\"\\\""
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -289,13 +297,14 @@ export const swift2Data = {
           "content": "# 目標\\n\\n「話せる」プロトコルを作って、犬に準拠させましょう。\\n\\n1. `Speaker` プロトコルを作る\\n2. `speak()` という関数を宣言\\n3. `Dog` 構造体を `Speaker` に準拠させる\\n4. `speak()` で「woof」と鳴くようにする"
         }
       ],
-      "correctCode": "// protocolでプロトコルを定義\\nprotocol Speaker {\\n    // speakメソッドを宣言\\n    func speak()\\n}\\n// Speakerに準拠\\nstruct Dog: Speaker {\\n    // speakメソッドを実装\\n    func speak() {\\n        // ワン！と出力\\n        print(\"ワン！\")\\n    }\\n}\\n// インスタンスを作成\\nlet d = Dog()\\n// speakメソッドを呼び出す\\nd.speak()",
+      "correctCode": "// protocolでプロトコルを定義\\nprotocol Speaker {\\n    // speakメソッドを宣言\\n    func speak()\\n// ブロックを閉じる\\n}\\n// Speakerに準拠\\nstruct Dog: Speaker {\\n    // speakメソッドを実装\\n    func speak() {\\n        // ワン！と出力\\n        print(\"ワン！\")\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n// インスタンスを作成\\nlet d = Dog()\\n// speakメソッドを呼び出す\\nd.speak()",
       "holeyCode": "// protocolでプロトコルを定義\\nprotocol ___ ___\\n    // speakメソッドを宣言\\n    func ___()\\n// ブロックを閉じる\\n___\\n// Speakerに準拠\\nstruct ___: ___ ___\\n    // speakメソッドを実装\\n    func ___() ___\\n        // ワン！と出力\\n        ___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// インスタンスを作成\\nlet ___ = ___()\\n// speakメソッドを呼び出す\\n___.___() ",
       "correctLines": [
           "// protocolでプロトコルを定義",
           "protocol Speaker {",
           "    // speakメソッドを宣言",
           "    func speak()",
+          "// ブロックを閉じる",
           "}",
           "// Speakerに準拠",
           "struct Dog: Speaker {",
@@ -303,7 +312,9 @@ export const swift2Data = {
           "    func speak() {",
           "        // ワン！と出力",
           "        print(\"ワン！\")",
+          "    // ブロックを閉じる",
           "    }",
+          "// ブロックを閉じる",
           "}",
           "// インスタンスを作成",
           "let d = Dog()",
@@ -322,12 +333,15 @@ export const swift2Data = {
           null,
           "",
           null,
-          "\\\"\\\"",
+          "",
+          null,
+          "",
           null,
           "",
           null,
           "",
-          null
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -363,13 +377,14 @@ export const swift2Data = {
           "content": "# 目標\\n\\n数を2倍にするクロージャを作りましょう。\\n\\n1. `double` という変数にクロージャを入れる\\n2. 引数 `n` を受け取る\\n3. `n * 2` を返す\\n4. `double(5)` で10と表示されるか確認"
         }
       ],
-      "correctCode": "// inで引数と処理を分ける\\nlet double = { (n: Int) in\\n    // n * 2を返す\\n    return n * 2\\n}\\n// doubleメソッドを呼び出す\\nprint(double(5))",
+      "correctCode": "// inで引数と処理を分ける\\nlet double = { (n: Int) in\\n    // n * 2を返す\\n    return n * 2\\n// ブロックを閉じる\\n}\\n// doubleメソッドを呼び出す\\nprint(double(5))",
       "holeyCode": "// inで引数と処理を分ける\\nlet ___ = ___ (___: ___) in\\n    // n * 2を返す\\n    return ___ ___ ___\\n// ブロックを閉じる\\n___\\n// doubleメソッドを呼び出す\\n___(___(___))",
       "correctLines": [
           "// inで引数と処理を分ける",
           "let double = { (n: Int) in",
           "    // n * 2を返す",
           "    return n * 2",
+          "// ブロックを閉じる",
           "}",
           "// doubleメソッドを呼び出す",
           "print(double(5))"
@@ -381,7 +396,8 @@ export const swift2Data = {
           "",
           null,
           "",
-          null
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -517,7 +533,7 @@ export const swift2Data = {
           "content": "# 目標\\n\\nオプショナルの値をguardでチェックする関数を作りましょう。\\n\\n1. `check` 関数を作る\\n2. 引数がnilなら「nil」と表示してreturn\\n3. 値があれば、その値を表示\\n4. `check(10)` で10と表示されるか確認"
         }
       ],
-      "correctCode": "// check関数を定義\\nfunc check(_ val: Int?) {\\n    // guardで早期リターン\\n    guard let n = val else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    }\\n    // nを出力\\n    print(n)\\n}\\n// check関数（引数10）を呼び出す\\ncheck(10)",
+      "correctCode": "// check関数を定義\\nfunc check(_ val: Int?) {\\n    // guardで早期リターン\\n    guard let n = val else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    // ブロックを閉じる\\n    }\\n    // nを出力\\n    print(n)\\n// ブロックを閉じる\\n}\\n// check関数（引数10）を呼び出す\\ncheck(10)",
       "holeyCode": "// check関数を定義\\nfunc ___(___ ___: ___?) ___\\n    // guardで早期リターン\\n    guard let ___ = ___ else ___\\n        // nilと出力\\n        ___(___)\\n        // 早期リターン\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // nを出力\\n    ___(___)\\n// ブロックを閉じる\\n___\\n// check関数（引数10）を呼び出す\\n___(___)",
       "correctLines": [
           "// check関数を定義",
@@ -528,9 +544,11 @@ export const swift2Data = {
           "        print(\"nil\")",
           "        // 早期リターン",
           "        return",
+          "    // ブロックを閉じる",
           "    }",
           "    // nを出力",
           "    print(n)",
+          "// ブロックを閉じる",
           "}",
           "// check関数（引数10）を呼び出す",
           "check(10)"
@@ -541,7 +559,9 @@ export const swift2Data = {
           null,
           "",
           null,
-          "\\\"\\\"",
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -585,27 +605,32 @@ export const swift2Data = {
           "content": "# 目標\\n\\n色の列挙型を作って、switchで判定しましょう。\\n\\n1. `Color` enumを作る（red, green, blue）\\n2. `Color.red` を変数に入れる\\n3. switchで各ケースを判定して色名を表示"
         }
       ],
-      "correctCode": "// enumで列挙型を定義\\nenum Color {\\n    // caseでケースを定義\\n    case red, green, blue\\n}\\n// 赤色をcに代入\\nlet c = Color.red\\n// switchでパターンマッチ\\nswitch c {\\ncase .red:\\n    // 赤色を出力\\n    print(\"赤\")\\ncase .green:\\n    // 緑色を出力\\n    print(\"緑\")\\ncase .blue:\\n    // 青色を出力\\n    print(\"青\")\\n}",
+      "correctCode": "// enumで列挙型を定義\\nenum Color {\\n    // caseでケースを定義\\n    case red, green, blue\\n// ブロックを閉じる\\n}\\n// 赤色をcに代入\\nlet c = Color.red\\n// switchでパターンマッチ\\nswitch c {\\n// ケース分岐\\ncase .red:\\n    // 赤色を出力\\n    print(\"赤\")\\n// ケース分岐\\ncase .green:\\n    // 緑色を出力\\n    print(\"緑\")\\n// ケース分岐\\ncase .blue:\\n    // 青色を出力\\n    print(\"青\")\\n// ブロックを閉じる\\n}",
       "holeyCode": "// enumで列挙型を定義\\nenum ___ ___\\n    // caseでケースを定義\\n    case ___, ___, ___\\n// ブロックを閉じる\\n___\\n// 赤色をcに代入\\nlet ___ = ___.___\\n// switchでパターンマッチ\\nswitch ___ ___\\n// ケース分岐\\ncase .___:\\n    // 赤色を出力\\n    ___(___)\\n// ケース分岐\\ncase .___:\\n    // 緑色を出力\\n    ___(___)\\n// ケース分岐\\ncase .___:\\n    // 青色を出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// enumで列挙型を定義",
           "enum Color {",
           "    // caseでケースを定義",
           "    case red, green, blue",
+          "// ブロックを閉じる",
           "}",
           "// 赤色をcに代入",
           "let c = Color.red",
           "// switchでパターンマッチ",
           "switch c {",
+          "// ケース分岐",
           "case .red:",
           "    // 赤色を出力",
           "    print(\"赤\")",
+          "// ケース分岐",
           "case .green:",
           "    // 緑色を出力",
           "    print(\"緑\")",
+          "// ケース分岐",
           "case .blue:",
           "    // 青色を出力",
           "    print(\"青\")",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -622,12 +647,17 @@ export const swift2Data = {
           null,
           "",
           null,
-          "\\\\\\\"\\\\\\\"",
+          "",
           null,
           "",
           null,
-          "\\\\\\\"\\\\\\\"",
-          null
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

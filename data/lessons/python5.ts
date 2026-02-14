@@ -85,15 +85,15 @@ export const pythonData5 = {
           "content": "# JSON文字列をPythonに変換\\n\\n**JSON（ジェイソン）** とは、データを保存したり送ったりするための **世界共通の書き方** です。\\n\\n**JSONの例：**\\n```json\\n{\"name\": \"Taro\", \"age\": 25}\\n```\\n\\n**json.loads()（ロードエス）** で **JSON文字列をPythonの辞書やリストに変換** できます。\\n\\n**たとえ話：** 外国語（JSON）を日本語（Python）に翻訳するようなものです。\\n\\n**例：** JSON文字列を辞書に変換しよう！\\n\\n```python\\nimport json\\n\\n# JSON形式の文字列\\njson_str = '{\"name\": \"Taro\", \"age\": 25}'\\n# Pythonの辞書に変換\\ndata = json.loads(json_str)\\nprint(data['name'])  # Taro\\n```\\n\\n**何をしているか：**\\n1. `import json` でJSONモジュールを読み込む\\n2. JSON形式の文字列を用意（ダブルクォートを使うのがJSONのルール）\\n3. `json.loads()` で文字列（String）をPythonオブジェクトに変換\\n\\n**ポイント：** `loads` の 's' は **String（文字列）** の意味です。"
         }
       ],
-      "correctCode": "# jsonモジュールをimportする\\nimport json\\n\\n# JSON文字列を用意\\njson_str = '{\"名前\": \"Python\", \"version\": 3.12}'\\n# 辞書に変換\\ndata = json.loads(json_str)\\n# 名前を表示\\nprint(data['名前'])",
-      "holeyCode": "# jsonモジュールをimportする\\nimport ___\\n\\n# JSON文字列を用意\\n___ = '___'\\n# 辞書に変換\\n___ = ___.___(___)\\n# 名前を表示\\n___(___['___'])",
+      "correctCode": "# jsonモジュールをimportする\\nimport json\\n\\n# JSON文字列を用意\\njson_str = '{\"名前\": \"Python\", \"version\": 3.12}'\\n# json_strを辞書に変換してdataに代入\\ndata = json.loads(json_str)\\n# 名前を表示\\nprint(data['名前'])",
+      "holeyCode": "# jsonモジュールをimportする\\nimport ___\\n\\n# JSON文字列を用意\\n___ = '___'\\n# json_strを辞書に変換してdataに代入\\n___ = ___.___(___)\\n# 名前を表示\\n___(___['___'])",
       "correctLines": [
           "# jsonモジュールをimportする",
           "import json",
           "",
           "# JSON文字列を用意",
           "json_str = '{\"名前\": \"Python\", \"version\": 3.12}'",
-          "# 辞書に変換",
+          "# json_strを辞書に変換してdataに代入",
           "data = json.loads(json_str)",
           "# 名前を表示",
           "print(data['名前'])"

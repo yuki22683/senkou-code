@@ -93,12 +93,12 @@ export const ruby2Data = {
           "content": "# 新しい配列を返す\\n\\nブロック `{ }` の中で「どう変換するか」を書きます。\\n\\n**コード例：**\\n```ruby\\n[1, 2, 3].map { |n| n * 2 }\\n```\\n\\n=> [2, 4, 6]\\n\\n**何が起こるの？**\\n1. `[1, 2, 3]` から1つずつ取り出す\\n2. 取り出した数を `n` に入れる\\n3. `n * 2` で2倍にする\\n4. 結果を新しい配列に入れる\\n5. 最終的に `[2, 4, 6]` という新しい配列ができる\\n\\n**each との違い：**\\n- `each` → 処理するだけ（結果を返さない）\\n- `map` → 変換した新しい配列を返す"
         }
       ],
-      "correctCode": "# numsに配列を代入（1, 2, 3）\\nnums = [1, 2, 3]\\n# mapで各要素を変換\\ndoubled = nums.map { |n| n * 2 }\\n# putsで出力\\nputs doubled",
-      "holeyCode": "# numsに配列を代入（1, 2, 3）\\n___ = [___, ___, ___]\\n# mapで各要素を変換\\n___ = ___.map { |___| ___ * ___ }\\n# putsで出力\\n___ ___",
+      "correctCode": "# numsに配列を代入（1, 2, 3）\\nnums = [1, 2, 3]\\n# numsの各要素を2倍にしてdoubledに代入\\ndoubled = nums.map { |n| n * 2 }\\n# putsで出力\\nputs doubled",
+      "holeyCode": "# numsに配列を代入（1, 2, 3）\\n___ = [___, ___, ___]\\n# numsの各要素を2倍にしてdoubledに代入\\n___ = ___.map { |___| ___ * ___ }\\n# putsで出力\\n___ ___",
       "correctLines": [
           "# numsに配列を代入（1, 2, 3）",
           "nums = [1, 2, 3]",
-          "# mapで各要素を変換",
+          "# numsの各要素を2倍にしてdoubledに代入",
           "doubled = nums.map { |n| n * 2 }",
           "# putsで出力",
           "puts doubled"

@@ -396,12 +396,12 @@ export const perl2Data = {
           "content": "# $_ は現在の要素\\n\\n**このコードは何をしているの？**\\n```perl\\nmy @doubled = map { $_ * 2 } (1, 2, 3);\\n# (2, 4, 6)\\n```\\n\\n**解説：**\\n1. (1, 2, 3) の各要素を処理\\n2. `$_` に1が入る → `$_ * 2` = 2\\n3. `$_` に2が入る → `$_ * 2` = 4\\n4. `$_` に3が入る → `$_ * 2` = 6\\n5. 結果 (2, 4, 6) が `@doubled` に入る\\n\\n**$_ とは：** Perlの特別な変数で、「現在処理中の要素」を表します。"
         }
       ],
-      "correctCode": "# 配列を宣言（1, 2, 3）\\nmy @nums = (1, 2, 3);\\n# mapで各要素を変換\\nmy @squared = map { $_ * $_ } @nums;\\n# printで出力\\nprint \"@squared\\n\";",
-      "holeyCode": "# 配列を宣言（1, 2, 3）\\nmy @___=___\\n# mapで各要素を変換\\nmy @___=___ { $___ * $___ } @___;\\n# printで出力\\n___\\n# 文を実行\\n___",
+      "correctCode": "# 配列を宣言（1, 2, 3）\\nmy @nums = (1, 2, 3);\\n# numsの各要素を2乗してsquaredに代入\\nmy @squared = map { $_ * $_ } @nums;\\n# printで出力\\nprint \"@squared\\n\";",
+      "holeyCode": "# 配列を宣言（1, 2, 3）\\nmy @___=___\\n# numsの各要素を2乗してsquaredに代入\\nmy @___=___ { $___ * $___ } @___;\\n# printで出力\\n___\\n# 文を実行\\n___",
       "correctLines": [
           "# 配列を宣言（1, 2, 3）",
           "my @nums = (1, 2, 3);",
-          "# mapで各要素を変換",
+          "# numsの各要素を2乗してsquaredに代入",
           "my @squared = map { $_ * $_ } @nums;",
           "# printで出力",
           "print \"@squared\\n\";"

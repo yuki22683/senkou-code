@@ -390,16 +390,18 @@ export const csharpData = {
           "content": "# if文（イフぶん）の書き方\\n\\nC#では、`if (条件)` のあとに `{ }`（波かっこ）を書いて、その中にやりたいことを入力します。\\n\\n**コード例（点数が80より大きければ合格）：**\\n```csharp\\nint score = 100;\\nif (score > 80)\\n{\\n    Console.WriteLine(\"合格！\");\\n}\\n```\\n\\n**解説：**\\n1. `score > 80` は「scoreが80より大きいか？」という条件\\n2. この条件が正しい（True）なら、`{ }` の中を実行\\n3. 100は80より大きいので「合格！」と表示される\\n\\n**比較の記号：**\\n- `>` : より大きい\\n- `<` : より小さい\\n- `>=` : 以上（同じでもOK）\\n- `<=` : 以下（同じでもOK）"
         }
       ],
-      "correctCode": "// scoreに100を入れる\\nint score = 100;\\n// もし80より大きかったら\\nif (score > 80)\\n{\\n    // 「合格！」と表示する\\n    Console.WriteLine(\"合格！\");\\n}",
+      "correctCode": "// scoreに100を入れる\\nint score = 100;\\n// もし80より大きかったら\\nif (score > 80)\\n// ブロックを開始\\n{\\n    // 「合格！」と表示する\\n    Console.WriteLine(\"合格！\");\\n// ブロックを閉じる\\n}",
       "holeyCode": "// scoreに100を入れる\\n___ ___ = ___;\\n// もし80より大きかったら\\nif (___ ___ ___)\\n// ブロックを開始\\n___\\n    // 「合格！」と表示する\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// scoreに100を入れる",
           "int score = 100;",
           "// もし80より大きかったら",
           "if (score > 80)",
+          "// ブロックを開始",
           "{",
           "    // 「合格！」と表示する",
           "    Console.WriteLine(\"合格！\");",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -410,7 +412,9 @@ export const csharpData = {
           null,
           "",
           null,
-          "\\\"\\\""
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -446,22 +450,26 @@ export const csharpData = {
           "content": "# if-else文の書き方\\n\\n条件にあてはまらなかったときの動きは `else` を使って書きます。\\n\\n**コード例（年齢で大人か子供か判定）：**\\n```csharp\\nint age = 10;\\nif (age >= 20)\\n{\\n    Console.WriteLine(\"大人\");\\n}\\nelse\\n{\\n    Console.WriteLine(\"子供\");\\n}\\n```\\n=> 子供\\n\\n**解説：**\\n1. `age >= 20` は「ageが20以上か？」という条件\\n2. ageは10なので、条件は正しくない（False）\\n3. だから `else` の中の「子供」が表示される"
         }
       ],
-      "correctCode": "// ageに10を入れる\\nint age = 10;\\n// 20歳以上かどうかで分ける\\nif (age >= 20)\\n{\\n    // 「大人」と出力\\n    Console.WriteLine(\"大人\");\\n}\\n// else でそれ以外の場合\\nelse\\n{\\n    // 「子供」と出力\\n    Console.WriteLine(\"子供\");\\n}",
+      "correctCode": "// ageに10を入れる\\nint age = 10;\\n// 20歳以上かどうかで分ける\\nif (age >= 20)\\n// ブロックを開始\\n{\\n    // 「大人」と出力\\n    Console.WriteLine(\"大人\");\\n// ブロックを閉じる\\n}\\n// else でそれ以外の場合\\nelse\\n// ブロックを開始\\n{\\n    // 「子供」と出力\\n    Console.WriteLine(\"子供\");\\n// ブロックを閉じる\\n}",
       "holeyCode": "// ageに10を入れる\\n___ ___ = ___;\\n// 20歳以上かどうかで分ける\\nif (___ ___ ___)\\n// ブロックを開始\\n___\\n    // 「大人」と出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___\\n// else でそれ以外の場合\\n___\\n// ブロックを開始\\n___\\n    // 「子供」と出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ageに10を入れる",
           "int age = 10;",
           "// 20歳以上かどうかで分ける",
           "if (age >= 20)",
+          "// ブロックを開始",
           "{",
           "    // 「大人」と出力",
           "    Console.WriteLine(\"大人\");",
+          "// ブロックを閉じる",
           "}",
           "// else でそれ以外の場合",
           "else",
+          "// ブロックを開始",
           "{",
           "    // 「子供」と出力",
           "    Console.WriteLine(\"子供\");",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -472,7 +480,11 @@ export const csharpData = {
           null,
           "",
           null,
-          "\\\"\\\"",
+          "",
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -515,19 +527,27 @@ export const csharpData = {
           "content": "# 論理演算子の使い方\\n\\n**例1：両方の条件を満たす（かつ）**\\n```csharp\\nif (score >= 80 && attendance >= 90)\\n{\\n    Console.WriteLine(\"優秀！\");\\n}\\n```\\n→ 点数が80以上 **かつ** 出席率が90以上のときだけ「優秀！」と表示\\n\\n**例2：どちらかを満たす（または）**\\n```csharp\\nif (day == \"土曜日\" || day == \"日曜日\")\\n{\\n    Console.WriteLine(\"お休み\");\\n}\\n```\\n→ 土曜日 **または** 日曜日なら「お休み」と表示\\n\\n**ポイント：**\\n- `&&` は両方が正しい（True）ときだけ全体が正しい\\n- `||` はどちらか一方でも正しければ全体が正しい"
         }
       ],
-      "correctCode": "// score と bonus を定義\\nint score = 80;\\nint bonus = 10;\\n// && で両方の条件をチェック\\nif (score >= 70 && bonus > 0)\\n{\\n    Console.WriteLine(\"ボーナスあり合格\");\\n}",
-      "holeyCode": "// score と bonus を定義\\n___ ___ = ___;\\n// 変数を宣言\\n___ ___ = ___;\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___)\\n// ブロックを開始\\n___\\n    // \"\"\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___",
+      "correctCode": "// scoreに点数を代入\\nint score = 80;\\n// bonusにボーナス点を代入\\nint bonus = 10;\\n// && で両方の条件をチェック\\nif (score >= 70 && bonus > 0)\\n// ブロックを開始\\n{\\n    // 「ボーナスあり合格」と表示\\n    Console.WriteLine(\"ボーナスあり合格\");\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// scoreに点数を代入\\n___ ___ = ___;\\n// bonusにボーナス点を代入\\n___ ___ = ___;\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___)\\n// ブロックを開始\\n___\\n    // 「ボーナスあり合格」と表示\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// score と bonus を定義",
+          "// scoreに点数を代入",
           "int score = 80;",
+          "// bonusにボーナス点を代入",
           "int bonus = 10;",
           "// && で両方の条件をチェック",
           "if (score >= 70 && bonus > 0)",
+          "// ブロックを開始",
           "{",
+          "    // 「ボーナスあり合格」と表示",
           "    Console.WriteLine(\"ボーナスあり合格\");",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -566,21 +586,25 @@ export const csharpData = {
           "content": "# 配列を順番に処理する\\n\\n配列の中身を最初から最後まで順番に取り出すときは、**foreach**（フォーイーチ）を使うと便利です。「for each」は「それぞれに対して」という意味です。\\n\\n**コード例（名前を順番に表示）：**\\n```csharp\\nstring[] names = {\"太郎\", \"花子\"};\\nforeach (string name in names)\\n{\\n    Console.WriteLine(name);\\n}\\n```\\n=> 太郎\\n=> 花子\\n\\n**解説：**\\n1. `foreach (string name in names)` で「namesの中身を1つずつnameに入れて」と指示\\n2. 1回目のループ：nameに「太郎」が入り、表示される\\n3. 2回目のループ：nameに「花子」が入り、表示される\\n4. 全部終わったらループを抜ける"
         }
       ],
-      "correctCode": "// 名前配列（太郎、花子）をnamesに代入\\nstring[] names = {\"太郎\", \"花子\"};\\n// 順番に取り出すループ\\nforeach (string name in names)\\n{\\n    // 取り出した名前を表示\\n    Console.WriteLine(name);\\n}",
+      "correctCode": "// 名前配列（太郎、花子）をnamesに代入\\nstring[] names = {\"太郎\", \"花子\"};\\n// 順番に取り出すループ\\nforeach (string name in names)\\n// ブロックを開始\\n{\\n    // 取り出した名前を表示\\n    Console.WriteLine(name);\\n// ブロックを閉じる\\n}",
       "holeyCode": "// 名前配列（太郎、花子）をnamesに代入\\n___[] ___ = {\"___\", \"___\"};\\n// 順番に取り出すループ\\nforeach (___ ___ in ___)\\n// ブロックを開始\\n___\\n    // 取り出した名前を表示\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 名前配列（太郎、花子）をnamesに代入",
           "string[] names = {\"太郎\", \"花子\"};",
           "// 順番に取り出すループ",
           "foreach (string name in names)",
+          "// ブロックを開始",
           "{",
           "    // 取り出した名前を表示",
           "    Console.WriteLine(name);",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "\\\"\\\"\\\"\\\"",
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -671,14 +695,16 @@ export const csharpData = {
           "content": "# メソッドの作り方\\n\\nC#でメソッドを作るときは、`static void` と書いてから、メソッドの名前をつけます。\\n\\n**用語の意味：**\\n- `static`（スタティック）: 「このまま使える」という意味（詳しくは後で学びます）\\n- `void`（ボイド）: 「結果を返さない」という意味（「空っぽ」のイメージ）\\n\\n**コード例（あいさつメソッドを作る）：**\\n```csharp\\n// メソッドを定義（作る）\\nstatic void Greet()\\n{\\n    Console.WriteLine(\"こんにちは\");\\n}\\n\\n// メソッドを呼び出す（使う）\\nGreet();\\n```\\n=> こんにちは\\n\\n**解説：**\\n1. `static void Greet()` でGreetという名前のメソッドを作る\\n2. `{ }` の中に、やりたい処理を書く\\n3. `Greet();` でメソッドを呼び出して実行する"
         }
       ],
-      "correctCode": "// Greetというメソッドを定義\\nstatic void Greet()\\n{\\n    // こんにちは と表示\\n    Console.WriteLine(\"こんにちは\");\\n}\\n// Greetメソッドを呼び出す\\nGreet();",
+      "correctCode": "// Greetというメソッドを定義\\nstatic void Greet()\\n// ブロックを開始\\n{\\n    // こんにちは と表示\\n    Console.WriteLine(\"こんにちは\");\\n// ブロックを閉じる\\n}\\n// Greetメソッドを呼び出す\\nGreet();",
       "holeyCode": "// Greetというメソッドを定義\\nstatic void ___()\\n// ブロックを開始\\n___\\n    // こんにちは と表示\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___\\n// Greetメソッドを呼び出す\\n___();",
       "correctLines": [
           "// Greetというメソッドを定義",
           "static void Greet()",
+          "// ブロックを開始",
           "{",
           "    // こんにちは と表示",
           "    Console.WriteLine(\"こんにちは\");",
+          "// ブロックを閉じる",
           "}",
           "// Greetメソッドを呼び出す",
           "Greet();"
@@ -689,7 +715,9 @@ export const csharpData = {
           null,
           "",
           null,
-          "\\\"\\\"",
+          "",
+          null,
+          "",
           null,
           ""
         ],

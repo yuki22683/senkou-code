@@ -53,10 +53,10 @@ export const swiftData = {
           "content": "# 目標\\n\\n`print()` を使って `Hello, World!` と画面に表示させましょう。\\n\\nこれはプログラミングを始めるときの「おまじない」のようなもので、世界中のプログラマーが最初に書くコードです。\\n\\n**入力するコード：**\\n```swift\\nprint(\"Hello, World!\")\\n```"
         }
       ],
-      "correctCode": "// Hello, World!と出力する関数\\nprint(\"Hello, World!\")",
-      "holeyCode": "// Hello, World!と出力する関数\\n___(___)",
+      "correctCode": "// printで「Hello, World!」を出力\\nprint(\"Hello, World!\")",
+      "holeyCode": "// printで「Hello, World!」を出力\\n___(___)",
       "correctLines": [
-          "// Hello, World!と出力する関数",
+          "// printで「Hello, World!」を出力",
           "print(\"Hello, World!\")"
         ],
       "lineHints": [
@@ -99,14 +99,14 @@ export const swiftData = {
           "content": "# 目標\\n\\n2つの変数を作って、たし算をしてみましょう。\\n\\n1. `x` という変数に `10` を入れる\\n2. `y` という変数に `5` を入れる\\n3. `x + y` の結果を画面に表示する\\n\\n答えは `15` になるはずです。"
         }
       ],
-      "correctCode": "// x に 10 を入れる\\nlet x = 10\\n// y に 5 を入れる\\nlet y = 5\\n// + でたし算する\\nprint(x + y)",
-      "holeyCode": "// x に 10 を入れる\\nlet ___ = ___\\n// y に 5 を入れる\\nlet ___ = ___\\n// + でたし算する\\n___(___ ___ ___)",
+      "correctCode": "// letでxに10を代入\\nlet x = 10\\n// letでyに5を代入\\nlet y = 5\\n// printでx+yを出力\\nprint(x + y)",
+      "holeyCode": "// letでxに10を代入\\nlet ___ = ___\\n// letでyに5を代入\\nlet ___ = ___\\n// printでx+yを出力\\n___(___ ___ ___)",
       "correctLines": [
-          "// x に 10 を入れる",
+          "// letでxに10を代入",
           "let x = 10",
-          "// y に 5 を入れる",
+          "// letでyに5を代入",
           "let y = 5",
-          "// + でたし算する",
+          "// printでx+yを出力",
           "print(x + y)"
         ],
       "lineHints": [
@@ -154,10 +154,10 @@ export const swiftData = {
           "content": "# 目標\\n\\n10を3で割ったあまりを画面に表示しましょう。\\n\\n答えは `1` になるはずです。\\n\\n**ヒント：** `%` 記号を使います。"
         }
       ],
-      "correctCode": "// 10 を 3 で割ったあまりを出力する\\nprint(10 % 3)",
-      "holeyCode": "// 10 を 3 で割ったあまりを出力する\\n___(___ ___ ___)",
+      "correctCode": "// printで10%3（あまり）を出力\\nprint(10 % 3)",
+      "holeyCode": "// printで10%3（あまり）を出力\\n___(___ ___ ___)",
       "correctLines": [
-          "// 10 を 3 で割ったあまりを出力する",
+          "// printで10%3（あまり）を出力",
           "print(10 % 3)"
         ],
       "lineHints": [
@@ -201,16 +201,16 @@ export const swiftData = {
           "content": "# 目標\\n\\n1. `var hp = 100` でHPを100にする\\n2. `+=` を使って20を足す\\n3. `-=` を使って50を引く\\n4. 最後のHPを表示する\\n\\n答えは `70` になるはずです。"
         }
       ],
-      "correctCode": "// var で変更可能な変数を作る\\nvar hp = 100\\n// += で 20 を足す\\nhp += 20\\n// -= で 50 を引く\\nhp -= 50\\n// hpを出力\\nprint(hp)",
-      "holeyCode": "// var で変更可能な変数を作る\\nvar ___ = ___\\n// += で 20 を足す\\n___ ___ ___\\n// -= で 50 を引く\\n___ ___ ___\\n// hpを出力\\n___(___)",
+      "correctCode": "// varでhpに100を代入\\nvar hp = 100\\n// +=でhpに20を加算\\nhp += 20\\n// -=でhpから50を減算\\nhp -= 50\\n// printでhpを出力\\nprint(hp)",
+      "holeyCode": "// varでhpに100を代入\\nvar ___ = ___\\n// +=でhpに20を加算\\n___ ___ ___\\n// -=でhpから50を減算\\n___ ___ ___\\n// printでhpを出力\\n___(___)",
       "correctLines": [
-          "// var で変更可能な変数を作る",
+          "// varでhpに100を代入",
           "var hp = 100",
-          "// += で 20 を足す",
+          "// +=でhpに20を加算",
           "hp += 20",
-          "// -= で 50 を引く",
+          "// -=でhpから50を減算",
           "hp -= 50",
-          "// hpを出力",
+          "// printでhpを出力",
           "print(hp)"
         ],
       "lineHints": [
@@ -260,23 +260,27 @@ export const swiftData = {
           "content": "# 目標\\n\\nスコアが80点より大きいときに「Great!」と表示するプログラムを作りましょう。\\n\\n1. `score` に `100` を入れる\\n2. `if` を使って `score > 80` かチェックする\\n3. 条件が合えば「Great!」と表示する\\n\\nスコアは100点なので、条件に合って「Great!」と表示されます。"
         }
       ],
-      "correctCode": "// score に 100 を入れる\\nlet score = 100\\n// > で比較する\\nif score > 80 {\\n    print(\"すごい！\")\\n}",
-      "holeyCode": "// score に 100 を入れる\\nlet ___ = ___\\n// > で比較する\\nif ___ ___ ___ ___\\n    // \"\"\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// letでscoreに100を代入\\nlet score = 100\\n// ifでscore>80を判定\\nif score > 80 {\\n    // printで「すごい！」を出力\\n    print(\"すごい！\")\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// letでscoreに100を代入\\nlet ___ = ___\\n// ifでscore>80を判定\\nif ___ ___ ___ ___\\n    // printで「すごい！」を出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// score に 100 を入れる",
+          "// letでscoreに100を代入",
           "let score = 100",
-          "// > で比較する",
+          "// ifでscore>80を判定",
           "if score > 80 {",
+          "    // printで「すごい！」を出力",
           "    print(\"すごい！\")",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "",
+          "letでscoreに100を代入します。",
           null,
-          "",
+          "ifでscore>80かチェックします。",
           null,
-          "\\\"\\\""
+          "printで「すごい！」を出力します。",
+          null,
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "numbers": [
@@ -319,23 +323,31 @@ export const swiftData = {
           "content": "# 目標\\n\\nスコアが70以上、かつボーナスが0より大きいときに「Bonus Pass」と表示しましょう。\\n\\n- `score = 80`（70以上なのでOK）\\n- `bonus = 10`（0より大きいのでOK）\\n\\n両方の条件を満たしているので、「Bonus Pass」と表示されます。"
         }
       ],
-      "correctCode": "let score = 80\\nlet bonus = 10\\n// && で両方の条件をチェック\\nif score >= 70 && bonus > 0 {\\n    print(\"ボーナス合格！\")\\n}",
-      "holeyCode": "// 変数を宣言\\nlet ___ = ___\\n// 変数を宣言\\nlet ___ = ___\\n// && で両方の条件をチェック\\nif ___ ___ ___ ___ ___ ___ ___ ___\\n    // \"\"\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// letでscoreに80を代入\\nlet score = 80\\n// letでbonusに10を代入\\nlet bonus = 10\\n// ifで&&を使い両方の条件をチェック\\nif score >= 70 && bonus > 0 {\\n    // printで「ボーナス合格！」を出力\\n    print(\"ボーナス合格！\")\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// letでscoreに80を代入\\nlet ___ = ___\\n// letでbonusに10を代入\\nlet ___ = ___\\n// ifで&&を使い両方の条件をチェック\\nif ___ ___ ___ ___ ___ ___ ___ ___\\n    // printで「ボーナス合格！」を出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
+          "// letでscoreに80を代入",
           "let score = 80",
+          "// letでbonusに10を代入",
           "let bonus = 10",
-          "// && で両方の条件をチェック",
+          "// ifで&&を使い両方の条件をチェック",
           "if score >= 70 && bonus > 0 {",
+          "    // printで「ボーナス合格！」を出力",
           "    print(\"ボーナス合格！\")",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
           null,
-          "",
+          "letでscoreに80を代入します。",
           null,
-          "",
+          "letでbonusに10を代入します。",
           null,
-          ""
+          "ifで&&を使い両方の条件を確認します。",
+          null,
+          "printで「ボーナス合格！」を出力します。",
+          null,
+          "ブロックを閉じます。"
         ],
         "candidates": {
           "operators": [
@@ -375,12 +387,12 @@ export const swiftData = {
           "content": "# 目標\\n\\n色の配列を作って、2番目のデータを取り出しましょう。\\n\\n1. `colors` という配列に「あか」「あお」を入れる\\n2. 2番目のデータ（番号は1）を表示する\\n\\n答えは「あお」になります。\\n\\n**注意：** 2番目のデータは `colors[1]` です（0番から数えるから）。"
         }
       ],
-      "correctCode": "// colors という配列を作る（'あか', 'あお'の順）\\nlet colors = [\"あか\", \"あお\"]\\n// 2番目のデータ（インデックス1）を出す\\nprint(colors[1])",
-      "holeyCode": "// colors という配列を作る（'あか', 'あお'の順）\\nlet ___ = ___\\n// 2番目のデータ（インデックス1）を出す\\n___(___[___])",
+      "correctCode": "// letでcolorsに色配列（あか、あお）を代入\\nlet colors = [\"あか\", \"あお\"]\\n// printでcolors[1]（あお）を出力\\nprint(colors[1])",
+      "holeyCode": "// letでcolorsに色配列（あか、あお）を代入\\nlet ___ = ___\\n// printでcolors[1]（あお）を出力\\n___(___[___])",
       "correctLines": [
-          "// colors という配列を作る（'あか', 'あお'の順）",
+          "// letでcolorsに色配列（あか、あお）を代入",
           "let colors = [\"あか\", \"あお\"]",
-          "// 2番目のデータ（インデックス1）を出す",
+          "// printでcolors[1]（あお）を出力",
           "print(colors[1])"
         ],
       "lineHints": [
@@ -432,12 +444,12 @@ export const swiftData = {
           "content": "# 目標\\n\\nくだものの辞書を作って、色を調べましょう。\\n\\n1. `colors` という辞書を作る\\n2. キーは「みかん」、値は「オレンジ」\\n3. 「みかん」の色を表示する\\n\\n答えは「オレンジ」になります。"
         }
       ],
-      "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\nlet colors = [\"みかん\": \"オレンジ\"]\\n// 中身を出す\\nprint(colors[\"みかん\"]!)",
-      "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\nlet ___ = ___\\n// 中身を出す\\n___(___[___]___)",
+      "correctCode": "// letでcolorsに辞書（みかん:オレンジ）を代入\\nlet colors = [\"みかん\": \"オレンジ\"]\\n// printでcolors[\"みかん\"]!を出力\\nprint(colors[\"みかん\"]!)",
+      "holeyCode": "// letでcolorsに辞書（みかん:オレンジ）を代入\\nlet ___ = ___\\n// printでcolors[\"みかん\"]!を出力\\n___(___[___]___)",
       "correctLines": [
-          "// 辞書を作る（キーは'みかん'、値は'オレンジ'）",
+          "// letでcolorsに辞書（みかん:オレンジ）を代入",
           "let colors = [\"みかん\": \"オレンジ\"]",
-          "// 中身を出す",
+          "// printでcolors[\"みかん\"]!を出力",
           "print(colors[\"みかん\"]!)"
         ],
       "lineHints": [

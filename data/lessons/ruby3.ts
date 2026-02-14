@@ -186,10 +186,10 @@ export const ruby3Data = {
           "content": "# 短くて読みやすいコード\\n\\n**コード例：**\\n```ruby\\n[1, 2, 3].map(&:to_s)\\n```\\n\\n=> ['1', '2', '3']\\n\\n**これは次のコードと同じ意味：**\\n```ruby\\n[1, 2, 3].map { |n| n.to_s }\\n```\\n\\n**何が起こるの？**\\n1. `:to_s` はシンボル（メソッド名）\\n2. `&` をつけると「このメソッドを各要素に適用して」という意味になる\\n3. 各数字に対して `to_s`（文字列に変換）が呼ばれる\\n4. 結果は `['1', '2', '3']`\\n\\n**よく使う例：**\\n- `&:upcase` → 大文字に\\n- `&:downcase` → 小文字に\\n- `&:to_i` → 整数に変換"
         }
       ],
-      "correctCode": "# mapで変換、upcaseで大文字化\\nresult = ['ruby', 'python', 'go'].map(&:upcase)",
-      "holeyCode": "# mapで変換、upcaseで大文字化\\n___ = [___, ___, ___].___(___:___)",
+      "correctCode": "# 配列の各要素を大文字にしてresultに代入\\nresult = ['ruby', 'python', 'go'].map(&:upcase)",
+      "holeyCode": "# 配列の各要素を大文字にしてresultに代入\\n___ = [___, ___, ___].___(___:___)",
       "correctLines": [
-          "# mapで変換、upcaseで大文字化",
+          "# 配列の各要素を大文字にしてresultに代入",
           "result = ['ruby', 'python', 'go'].map(&:upcase)"
         ],
       "lineHints": [

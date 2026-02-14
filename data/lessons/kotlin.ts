@@ -53,10 +53,10 @@ export const kotlinData = {
           "content": "# 目標\\n\\n`println()` を使って `Hello, World!` と画面に表示させましょう。\\n\\nこれはプログラミングを始めるときの「おまじない」のようなもので、世界中のプログラマーが最初に書くコードです。\\n\\n**入力するコード：**\\n```kotlin\\nprintln(\"Hello, World!\")\\n```"
         }
       ],
-      "correctCode": "// println で出力する\\nprintln(\"Hello, World!\")",
-      "holeyCode": "// println で出力する\\n___(\"___\")",
+      "correctCode": "// printlnで「Hello, World!」を出力\\nprintln(\"Hello, World!\")",
+      "holeyCode": "// printlnで「Hello, World!」を出力\\n___(\"___\")",
       "correctLines": [
-          "// println で出力する",
+          "// printlnで「Hello, World!」を出力",
           "println(\"Hello, World!\")"
         ],
       "lineHints": [
@@ -202,16 +202,16 @@ export const kotlinData = {
           "content": "# 目標\\n\\n1. `var hp = 100` でHPを100にする\\n2. `+=` を使って20を足す\\n3. `-=` を使って50を引く\\n4. 最後のHPを表示する\\n\\n答えは `70` になるはずです。"
         }
       ],
-      "correctCode": "// var で変更可能な変数を作る\\nvar hp = 100\\n// += で 20 を足す\\nhp += 20\\n// -= で 50 を引く\\nhp -= 50\\n// hpを出力\\nprintln(hp)",
-      "holeyCode": "// var で変更可能な変数を作る\\nvar ___ = ___\\n// += で 20 を足す\\n___ ___ ___\\n// -= で 50 を引く\\n___ ___ ___\\n// hpを出力\\n___(___)",
+      "correctCode": "// varでhpに100を代入\\nvar hp = 100\\n// +=でhpに20を加算\\nhp += 20\\n// -=でhpから50を減算\\nhp -= 50\\n// printlnでhpを出力\\nprintln(hp)",
+      "holeyCode": "// varでhpに100を代入\\nvar ___ = ___\\n// +=でhpに20を加算\\n___ ___ ___\\n// -=でhpから50を減算\\n___ ___ ___\\n// printlnでhpを出力\\n___(___)",
       "correctLines": [
-          "// var で変更可能な変数を作る",
+          "// varでhpに100を代入",
           "var hp = 100",
-          "// += で 20 を足す",
+          "// +=でhpに20を加算",
           "hp += 20",
-          "// -= で 50 を引く",
+          "// -=でhpから50を減算",
           "hp -= 50",
-          "// hpを出力",
+          "// printlnでhpを出力",
           "println(hp)"
         ],
       "lineHints": [
@@ -261,17 +261,21 @@ export const kotlinData = {
           "content": "# 目標\\n\\nスコアが80点より大きいときに「Great!」と表示するプログラムを作りましょう。\\n\\n1. `score` に `100` を入れる\\n2. `if` を使って `score > 80` かチェックする\\n3. 条件が合えば「Great!」と表示する\\n\\nスコアは100点なので、「Great!」と表示されます。"
         }
       ],
-      "correctCode": "// score に 100 を入れる\\nval score = 100\\n// > で比較する\\nif (score > 80) {\\n    println(\"すごい！\")\\n}",
-      "holeyCode": "// score に 100 を入れる\\nval ___ = ___\\n// > で比較する\\nif (___ ___ ___) ___\\n    // 出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___",
+      "correctCode": "// valでscoreに100を代入\\nval score = 100\\n// ifでscore>80を判定\\nif (score > 80) {\\n    // printlnで「すごい！」を出力\\n    println(\"すごい！\")\\n// ifブロックを閉じる\\n}",
+      "holeyCode": "// valでscoreに100を代入\\nval ___ = ___\\n// ifでscore>80を判定\\nif (___ ___ ___) ___\\n    // printlnで「すごい！」を出力\\n    ___(\"___\")\\n// ifブロックを閉じる\\n___",
       "correctLines": [
-          "// score に 100 を入れる",
+          "// valでscoreに100を代入",
           "val score = 100",
-          "// > で比較する",
+          "// ifでscore>80を判定",
           "if (score > 80) {",
+          "    // printlnで「すごい！」を出力",
           "    println(\"すごい！\")",
+          "// ifブロックを閉じる",
           "}"
         ],
       "lineHints": [
+          null,
+          "",
           null,
           "",
           null,
@@ -319,17 +323,25 @@ export const kotlinData = {
           "content": "# 目標\\n\\nスコアが70以上、かつボーナスが0より大きいときに「Bonus Pass」と表示しましょう。\\n\\n- `score = 80`（70以上なのでOK）\\n- `bonus = 10`（0より大きいのでOK）\\n\\n両方の条件を満たしているので、「Bonus Pass」と表示されます。"
         }
       ],
-      "correctCode": "val score = 80\\nval bonus = 10\\n// && で両方の条件をチェック\\nif (score >= 70 && bonus > 0) {\\n    println(\"ボーナス合格！\")\\n}",
-      "holeyCode": "// 値を代入\\nval ___ = ___\\n// 値を代入\\nval ___ = ___\\n// && で両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___) ___\\n    // 出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___",
+      "correctCode": "// valでscoreに80を代入\\nval score = 80\\n// valでbonusに10を代入\\nval bonus = 10\\n// ifで&&を使い両方の条件をチェック\\nif (score >= 70 && bonus > 0) {\\n    // printlnで「ボーナス合格！」を出力\\n    println(\"ボーナス合格！\")\\n// ifブロックを閉じる\\n}",
+      "holeyCode": "// valでscoreに80を代入\\nval ___ = ___\\n// valでbonusに10を代入\\nval ___ = ___\\n// ifで&&を使い両方の条件をチェック\\nif (___ ___ ___ ___ ___ ___ ___) ___\\n    // printlnで「ボーナス合格！」を出力\\n    ___(\"___\")\\n// ifブロックを閉じる\\n___",
       "correctLines": [
+          "// valでscoreに80を代入",
           "val score = 80",
+          "// valでbonusに10を代入",
           "val bonus = 10",
-          "// && で両方の条件をチェック",
+          "// ifで&&を使い両方の条件をチェック",
           "if (score >= 70 && bonus > 0) {",
+          "    // printlnで「ボーナス合格！」を出力",
           "    println(\"ボーナス合格！\")",
+          "// ifブロックを閉じる",
           "}"
         ],
       "lineHints": [
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -344,7 +356,7 @@ export const kotlinData = {
             "&",
             "|"
           ],
-          "others": ["score", "bonus", "80", "10", "70", "0", "println", "}", "{", "ボーナス合格！", ">=", ">", "70 && bonus > 0) {"]
+          "others": ["score", "bonus", "80", "10", "70", "0", "println", "}", "{", "ボーナス合格！", ">=", ">"]
         },
         "testCases": [
           {
@@ -433,19 +445,19 @@ export const kotlinData = {
           "content": "# 目標\\n\\nくだものの辞書を作って、色を調べましょう。\\n\\n1. `colors` というマップを作る\\n2. キーは「みかん」、値は「オレンジ」\\n3. 「みかん」の色を表示する\\n\\n答えは「オレンジ」になります。"
         }
       ],
-      "correctCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\nval colors = mapOf(\"みかん\" to \"オレンジ\")\\n// 中身を出す\\nprintln(colors[\"みかん\"])",
-      "holeyCode": "// 辞書を作る（キーは'みかん'、値は'オレンジ'）\\nval ___ = ___(\"___\" to \"___\")\\n// 中身を出す\\n___(___[\"___\"])",
+      "correctCode": "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入\\nval colors = mapOf(\"みかん\" to \"オレンジ\")\\n// printlnでcolors[\"みかん\"]を出力\\nprintln(colors[\"みかん\"])",
+      "holeyCode": "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入\\nval ___ = ___(\"___\" to \"___\")\\n// printlnでcolors[\"みかん\"]を出力\\n___(___[\"___\"])",
       "correctLines": [
-          "// 辞書を作る（キーは'みかん'、値は'オレンジ'）",
+          "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入",
           "val colors = mapOf(\"みかん\" to \"オレンジ\")",
-          "// 中身を出す",
+          "// printlnでcolors[\"みかん\"]を出力",
           "println(colors[\"みかん\"])"
         ],
       "lineHints": [
           null,
-          "mapOf関数でcolors辞書を作成します。キー「みかん」に値「オレンジ」を対応付けます。",
+          "",
           null,
-          "println関数でcolors[\"みかん\"]の値を出力します。"
+          ""
         ],
         "candidates": {
           "variables": [

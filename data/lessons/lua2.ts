@@ -125,12 +125,12 @@ export const lua2Data = {
           "content": "# for i, v in ipairs(t)\\n\\nインデックス i と値 v を受け取ります。\\n\\n**コード例：**\\n```lua\\nfor i, v in ipairs({1, 2, 3}) do\\n    print(v)\\nend\\n```"
         }
       ],
-      "correctCode": "-- 配列を作成（1, 2, 3の順）\\nlocal nums = {1, 2, 3}\\n-- 1番目の i にインデックス、2番目の v に値が入る\\nfor i, v in ipairs(nums) do\\n    -- vを表示\\n    print(v)\\nend",
-      "holeyCode": "-- 配列を作成（1, 2, 3の順）\\nlocal ___ = {___, ___, ___}\\n-- 1番目の i にインデックス、2番目の v に値が入る\\nfor ___, ___ in ___(___) ___\\n    -- vを表示\\n    ___(___)\\n-- ブロックを終了\\n___",
+      "correctCode": "-- 配列を作成（1, 2, 3の順）\\nlocal nums = {1, 2, 3}\\n-- numsからipairs()でインデックスi・値vを取得しループ\\nfor i, v in ipairs(nums) do\\n    -- vを表示\\n    print(v)\\nend",
+      "holeyCode": "-- 配列を作成（1, 2, 3の順）\\nlocal ___ = {___, ___, ___}\\n-- numsからipairs()でインデックスi・値vを取得しループ\\nfor ___, ___ in ___(___) ___\\n    -- vを表示\\n    ___(___)\\n-- ブロックを終了\\n___",
       "correctLines": [
           "-- 配列を作成（1, 2, 3の順）",
           "local nums = {1, 2, 3}",
-          "-- 1番目の i にインデックス、2番目の v に値が入る",
+          "-- numsからipairs()でインデックスi・値vを取得しループ",
           "for i, v in ipairs(nums) do",
           "    -- vを表示",
           "    print(v)",
@@ -172,12 +172,12 @@ export const lua2Data = {
           "content": "# for k, v in pairs(t)\\n\\nキー k と値 v を受け取ります。\\n\\n**コード例：**\\n```lua\\nfor k, v in pairs({a = 1, b = 2}) do\\n    print(k, v)\\nend\\n```"
         }
       ],
-      "correctCode": "-- テーブルを作成\\nlocal t = {x = 10}\\n-- 1番目の k にキー、2番目の v に値が入る\\nfor k, v in pairs(t) do\\n    -- kとvを表示\\n    print(k, v)\\nend",
-      "holeyCode": "-- テーブルを作成\\nlocal ___ = {___ = ___}\\n-- 1番目の k にキー、2番目の v に値が入る\\nfor ___, ___ in ___(___) ___\\n    -- kとvを表示\\n    ___(___, ___)\\n-- ブロックを終了\\n___",
+      "correctCode": "-- テーブルを作成\\nlocal t = {x = 10}\\n-- tからpairs()でキーk・値vを取得しループ\\nfor k, v in pairs(t) do\\n    -- kとvを表示\\n    print(k, v)\\nend",
+      "holeyCode": "-- テーブルを作成\\nlocal ___ = {___ = ___}\\n-- tからpairs()でキーk・値vを取得しループ\\nfor ___, ___ in ___(___) ___\\n    -- kとvを表示\\n    ___(___, ___)\\n-- ブロックを終了\\n___",
       "correctLines": [
           "-- テーブルを作成",
           "local t = {x = 10}",
-          "-- 1番目の k にキー、2番目の v に値が入る",
+          "-- tからpairs()でキーk・値vを取得しループ",
           "for k, v in pairs(t) do",
           "    -- kとvを表示",
           "    print(k, v)",
@@ -319,12 +319,12 @@ export const lua2Data = {
           "content": "# : で self を渡す\\n\\n`obj:method()` と呼ぶと、自動で `self` が渡されます。\\n\\n**コード例：**\\n```lua\\nlocal obj = { value = 10 }\\nfunction obj:double()\\n    return self.value * 2\\nend\\n```"
         }
       ],
-      "correctCode": "-- objテーブルを作成\\nlocal obj = { x = 5 }\\n-- メソッドを定義\\nfunction obj:getX()\\n    -- selfで自分自身を参照\\n    return self.x\\nend\\n-- getXを呼び出す\\nprint(obj:getX())",
-      "holeyCode": "-- objテーブルを作成\\nlocal ___ = { ___ = ___ }\\n-- メソッドを定義\\nfunction ___:___()\\n    -- selfで自分自身を参照\\n    return ___.___ \\n-- ブロックを終了\\n___\\n-- getXを呼び出す\\n___(___:___())",
+      "correctCode": "-- objテーブルを作成\\nlocal obj = { x = 5 }\\n-- getXメソッドを定義\\nfunction obj:getX()\\n    -- selfで自分自身を参照\\n    return self.x\\nend\\n-- getXを呼び出す\\nprint(obj:getX())",
+      "holeyCode": "-- objテーブルを作成\\nlocal ___ = { ___ = ___ }\\n-- getXメソッドを定義\\nfunction ___:___()\\n    -- selfで自分自身を参照\\n    return ___.___ \\n-- ブロックを終了\\n___\\n-- getXを呼び出す\\n___(___:___())",
       "correctLines": [
           "-- objテーブルを作成",
           "local obj = { x = 5 }",
-          "-- メソッドを定義",
+          "-- getXメソッドを定義",
           "function obj:getX()",
           "    -- selfで自分自身を参照",
           "    return self.x",

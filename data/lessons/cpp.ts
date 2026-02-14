@@ -25,17 +25,17 @@ export const cppData = {
           "content": "# std::cout（シーアウト）を使おう\\n\\nC++で画面に文字を出すには、`std::cout`（スタンダード・シーアウト）を使います。\\n`cout` は「Character OUTput」（文字を出力）の略です。\\n\\n`<<` という矢印のような記号を使って、文字を画面の方へ送ります。\\n\\n**イメージ：**\\n画面 `<<` \"こんにちは\"\\n（文字が矢印の方向に流れていくイメージ！）\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n#include <iostream>  // 入出力を使う準備\\nint main() {\\n    std::cout << \"C++最高！\" << std::endl;\\n    return 0;\\n}\\n```\\n\\n**用語解説：**\\n- `std::endl`（エンドエル）: 改行して次の行に進む\\n- `#include <iostream>`: 入出力機能を使えるようにする"
         }
       ],
-      "correctCode": "// ライブラリを読み込む\\n#include <iostream>\\n// ブロックを開始\\nint main() {\\n    // こんにちは, C++! と入力\\n    std::cout << \\\"こんにちは, C++!\\\" << std::endl;\\n    // 0を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // こんにちは, C++! と入力\\n    ___::___ << ___ << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // std::coutで「こんにちは, C++!」を出力\\n    std::cout << \\\"こんにちは, C++!\\\" << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // std::coutで「こんにちは, C++!」を出力\\n    ___::___ << ___ << ___::___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
-          "// ライブラリを読み込む",
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
-          "// ブロックを開始",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // こんにちは, C++! と入力",
+          "    // std::coutで「こんにちは, C++!」を出力",
           "    std::cout << \\\"こんにちは, C++!\\\" << std::endl;",
-          "    // 0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
-          "// ブロックを閉じる",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -76,18 +76,26 @@ export const cppData = {
           "content": "# 整数のラベル\\n\\n数字（1, 2, 3 のような整数）を入れたいときは、`int`（イント）というラベルを貼ります。\\n`int` は「Integer」（整数）の略です。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nint age = 20;  // 「age」という名前のはこに20を入れる\\nstd::cout << age << std::endl;  // ageの中身を表示\\n```\\n=> 20 と表示されます\\n\\n**C言語との違い：**\\nC言語では `printf(\"%d\", age)` と書いていましたが、C++では `std::cout << age` とシンプルに書けます！"
         }
       ],
-      "correctCode": "#include <iostream>\\nint main() {\\n    // 10 と入力\\n    int x = 10;\\n    // x と入力\\n    std::cout << x << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 10 と入力\\n    ___ ___ = ___;\\n    // x と入力\\n    ___::___ << ___ << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // int xでxを宣言し10を代入\\n    int x = 10;\\n    // std::coutでxを出力\\n    std::cout << x << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int xでxを宣言し10を代入\\n    ___ ___ = ___;\\n    // std::coutでxを出力\\n    ___::___ << ___ << ___::___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // 10 と入力",
+          "    // int xでxを宣言し10を代入",
           "    int x = 10;",
-          "    // x と入力",
+          "    // std::coutでxを出力",
           "    std::cout << x << std::endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -126,18 +134,30 @@ export const cppData = {
           "content": "# 矢印で送ろう\\n\\n`<<` で繋ぐことで、計算した結果をそのまま画面に出すことができます。\\n\\n**コード例：**\\n```cpp\\nint cookies = 10;\\nint friends = 2;\\n// クッキー ÷ 友達 の結果を画面へ！\\nstd::cout << cookies / friends << std::endl;\\n```\\n=> 5"
         }
       ],
-      "correctCode": "#include <iostream>\\nint main() {\\n    int a = 5;\\n    int b = 3;\\n    // + でたし算\\n    std::cout << a + b << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // + でたし算\\n    ___::___ << ___ ___ ___ << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // int aでaを宣言し5を代入\\n    int a = 5;\\n    // int bでbを宣言し3を代入\\n    int b = 3;\\n    // std::coutで足し算の結果（8）を出力\\n    std::cout << a + b << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int aでaを宣言し5を代入\\n    ___ ___ = ___;\\n    // int bでbを宣言し3を代入\\n    ___ ___ = ___;\\n    // std::coutで足し算の結果（8）を出力\\n    ___::___ << ___ ___ ___ << ___::___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// int mainでmain関数を定義",
           "int main() {",
+          "    // int aでaを宣言し5を代入",
           "    int a = 5;",
+          "    // int bでbを宣言し3を代入",
           "    int b = 3;",
-          "    // + でたし算",
+          "    // std::coutで足し算の結果（8）を出力",
           "    std::cout << a + b << std::endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -173,16 +193,24 @@ export const cppData = {
           "content": "# あまりを計算\\n\\n```cpp\\nstd::cout << 10 % 3 << std::endl;\\n```\\n\\n=> 1\\n10 ÷ 3 は 3 あまり 1 なので、「1」が表示されます。\\n\\n```cpp\\nstd::cout << 8 % 2 << std::endl;\\n```\\n\\n=> 0\\n8 ÷ 2 は 4 あまり 0 なので、「0」になります（割り切れるということです！）"
         }
       ],
-      "correctCode": "#include <iostream>\\nint main() {\\n    // 10 を 3 で割ったあまりを出力する\\n    std::cout << 10 % 3 << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 10 を 3 で割ったあまりを出力する\\n    ___::___ << ___ ___ ___ << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // std::coutで10÷3のあまり（1）を出力\\n    std::cout << 10 % 3 << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // std::coutで10÷3のあまり（1）を出力\\n    ___::___ << ___ ___ ___ << ___::___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // 10 を 3 で割ったあまりを出力する",
+          "    // std::coutで10÷3のあまり（1）を出力",
           "    std::cout << 10 % 3 << std::endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -220,20 +248,28 @@ export const cppData = {
           "content": "# 引き算バージョン\\n\\n`-=` を使えば、「今の数字から引いて保存」ができます。\\n\\n```cpp\\nint x = 10;\\nx -= 3;  // x から 3 を引いて保存\\nstd::cout << x << std::endl;\\n```\\n\\n=> 7"
         }
       ],
-      "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに50を入れる\\n    int score = 50;\\n    // 10点プラスする\\n    score += 10;\\n    // scoreを表示\\n    std::cout << score << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // scoreに50を入れる\\n    ___ ___ = ___;\\n    // 10点プラスする\\n    ___ ___ ___;\\n    // scoreを表示\\n    ___::___ << ___ << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // int scoreでscoreを宣言し50を代入\\n    int score = 50;\\n    // +=でscoreに10を加算\\n    score += 10;\\n    // std::coutでscore（60）を出力\\n    std::cout << score << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int scoreでscoreを宣言し50を代入\\n    ___ ___ = ___;\\n    // +=でscoreに10を加算\\n    ___ ___ ___;\\n    // std::coutでscore（60）を出力\\n    ___::___ << ___ << ___::___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // scoreに50を入れる",
+          "    // int scoreでscoreを宣言し50を代入",
           "    int score = 50;",
-          "    // 10点プラスする",
+          "    // +=でscoreに10を加算",
           "    score += 10;",
-          "    // scoreを表示",
+          "    // std::coutでscore（60）を出力",
           "    std::cout << score << std::endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -278,14 +314,19 @@ export const cppData = {
           "content": "# ガチャンと連結！\\n\\n`<<` を何回も使うことで、文字やはこの中身をどんどん繋げることができます。\\n\\n**コード例：**\\n```cpp\\nint hour = 15;\\nstd::cout << \"今は \" << hour << \" 時です\" << std::endl;\\n```\\n=> 今は 15 時です"
         }
       ],
-      "correctCode": "#include <iostream>\\nint main() {\\n    int age = 10;\\n    // age と入力\\n    std::cout << \"私は\" << age << \"歳です.\" << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 変数を宣言\\n    ___ ___ = ___;\\n    // age と入力\\n    ___::___ << ___ << ___ << ___ << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // int ageでageを宣言し10を代入\\n    int age = 10;\\n    // std::coutで「私は10歳です.」を出力\\n    std::cout << \\\"私は\\\" << age << \\\"歳です.\\\" << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int ageでageを宣言し10を代入\\n    ___ ___ = ___;\\n    // std::coutで「私は10歳です.」を出力\\n    ___::___ << ___ << ___ << ___ << ___::___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// int mainでmain関数を定義",
           "int main() {",
+          "    // int ageでageを宣言し10を代入",
           "    int age = 10;",
-          "    // age と入力",
-          "    std::cout << \"私は\" << age << \"歳です.\" << std::endl;",
+          "    // std::coutで「私は10歳です.」を出力",
+          "    std::cout << \\\"私は\\\" << age << \\\"歳です.\\\" << std::endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -295,7 +336,12 @@ export const cppData = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "variables": [
@@ -323,20 +369,32 @@ export const cppData = {
           "content": "# 書き方のルール\\n\\n`< >` の中に「何を入れるか」を指定します。\\n- `<int>`: 整数を入れる\\n- `<std::string>`: 文字列を入れる\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n#include <vector>  // vectorを使う準備\\n\\n// 文字列を入れる vector を作る\\nstd::vector<std::string> items = {\"Apple\", \"Orange\"};\\nstd::cout << items[0] << std::endl;  // 0番目を表示\\n```\\n=> Apple と表示されます\\n\\n**ポイント：**\\n- 普通の配列と同じく、番号は0から始まります\\n- `items[0]` は1番目の要素「Apple」です"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\n#include <string>\\nint main() {\\n    // 果物配列（りんご、バナナ）をfruitsに代入\\n    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    std::cout << fruits[1] << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 果物配列（りんご、バナナ）をfruitsに代入\\n    ___::___<___::___> ___ = {\\\"___\\\", \\\"___\\\"};\\n    // 1 と入力（2番目のデータはインデックス1）\\n    ___::___ << ___[___] << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <vector>でvectorを読み込む\\n#include <vector>\\n// #include <string>でstringを読み込む\\n#include <string>\\n// int mainでmain関数を定義\\nint main() {\\n    // 文字列vectorで果物配列（りんご、バナナ）をfruitsに代入\\n    std::vector<std::string> fruits = {\\\"りんご\\\", \\\"バナナ\\\"};\\n    // std::coutで2番目の果物（バナナ）を出力\\n    std::cout << fruits[1] << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <vector>でvectorを読み込む\\n___\\n// #include <string>でstringを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // 文字列vectorで果物配列（りんご、バナナ）をfruitsに代入\\n    ___::___<___::___> ___ = {\\\"___\\\", \\\"___\\\"};\\n    // std::coutで2番目の果物（バナナ）を出力\\n    ___::___ << ___[___] << ___::___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// #include <vector>でvectorを読み込む",
           "#include <vector>",
+          "// #include <string>でstringを読み込む",
           "#include <string>",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // 果物配列（りんご、バナナ）をfruitsに代入",
-          "    std::vector<std::string> fruits = {\"りんご\", \"バナナ\"};",
-          "    // 1 と入力（2番目のデータはインデックス1）",
+          "    // 文字列vectorで果物配列（りんご、バナナ）をfruitsに代入",
+          "    std::vector<std::string> fruits = {\\\"りんご\\\", \\\"バナナ\\\"};",
+          "    // std::coutで2番目の果物（バナナ）を出力",
           "    std::cout << fruits[1] << std::endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -374,18 +432,23 @@ export const cppData = {
           "content": "# ( ) と { } を使いましょう\\n\\nC++でも、`if (条件)` のあとに `{ }` を入力して、その中にやりたいことを入力します。\\n\\n**コード例：**\\n```cpp\\nint temp = 30;\\nif (temp > 25) {\\n    std::cout << \"暑いですね\" << std::endl;\\n}"
         }
       ],
-      "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに100を入れる\\n    int score = 100;\\n    // > で「より大きい」を比較\\n    if (score > 80) {\\n        // '完璧' と入力\\n        std::cout << \"完璧\" << std::endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // scoreに100を入れる\\n    ___ ___ = ___;\\n    // > で「より大きい」を比較\\n    ___ (___ ___ ___) {\\n        // '完璧' と入力\\n        ___::___ << ___ << ___::___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // int scoreでscoreを宣言し100を代入\\n    int score = 100;\\n    // ifでscoreが80より大きいか判定\\n    if (score > 80) {\\n        // std::coutで「完璧」を出力\\n        std::cout << \\\"完璧\\\" << std::endl;\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int scoreでscoreを宣言し100を代入\\n    ___ ___ = ___;\\n    // ifでscoreが80より大きいか判定\\n    ___ (___ ___ ___) {\\n        // std::coutで「完璧」を出力\\n        ___::___ << ___ << ___::___;\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // scoreに100を入れる",
+          "    // int scoreでscoreを宣言し100を代入",
           "    int score = 100;",
-          "    // > で「より大きい」を比較",
+          "    // ifでscoreが80より大きいか判定",
           "    if (score > 80) {",
-          "        // '完璧' と入力",
-          "        std::cout << \"完璧\" << std::endl;",
+          "        // std::coutで「完璧」を出力",
+          "        std::cout << \\\"完璧\\\" << std::endl;",
+          "    // ifブロックを閉じる",
           "    }",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -399,7 +462,12 @@ export const cppData = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [
@@ -430,22 +498,27 @@ export const cppData = {
           "content": "# どちらかを選びます\\n\\n条件に当てはまらないときの動きは `else` を使って入力します。\\n\\n**コード例 ：**\\n```cpp\\nint age = 15;\\nif (age >= 20) {\\n    std::cout << \"大人\" << std::endl;\\n} else {\\n    std::cout << \"子供\" << std::endl;\\n}"
                 }
       ],
-      "correctCode": "#include <iostream>\\nint main() {\\n    // ageに10を入れる\\n    int age = 10;\\n    // 20以上かを比較する演算子\\n    if (age >= 20) {\\n        // 20歳以上のときのメッセージ（'大人'）\\n        std::cout << \"大人\" << std::endl;\\n    // elseで20歳未満の場合の処理\\n    } else {\\n        // それ以外のメッセージ（'未成年'）\\n        std::cout << \"未成年\" << std::endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // ageに10を入れる\\n    ___ ___ = ___;\\n    // 20以上かを比較する演算子\\n    ___ (___ ___ ___) {\\n        // 20歳以上のときのメッセージ（'大人'）\\n        ___::___ << ___ << ___::___;\\n    // elseで20歳未満の場合の処理\\n    } ___ {\\n        // それ以外のメッセージ（'未成年'）\\n        ___::___ << ___ << ___::___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // int ageでageを宣言し10を代入\\n    int age = 10;\\n    // ifでageが20以上か判定\\n    if (age >= 20) {\\n        // std::coutで「大人」を出力\\n        std::cout << \\\"大人\\\" << std::endl;\\n    // elseで条件不成立時の処理\\n    } else {\\n        // std::coutで「未成年」を出力\\n        std::cout << \\\"未成年\\\" << std::endl;\\n    // if-elseブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int ageでageを宣言し10を代入\\n    ___ ___ = ___;\\n    // ifでageが20以上か判定\\n    ___ (___ ___ ___) {\\n        // std::coutで「大人」を出力\\n        ___::___ << ___ << ___::___;\\n    // elseで条件不成立時の処理\\n    } ___ {\\n        // std::coutで「未成年」を出力\\n        ___::___ << ___ << ___::___;\\n    // if-elseブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // ageに10を入れる",
+          "    // int ageでageを宣言し10を代入",
           "    int age = 10;",
-          "    // 20以上かを比較する演算子",
+          "    // ifでageが20以上か判定",
           "    if (age >= 20) {",
-          "        // 20歳以上のときのメッセージ（'大人'）",
-          "        std::cout << \"大人\" << std::endl;",
-          "    // elseで20歳未満の場合の処理",
+          "        // std::coutで「大人」を出力",
+          "        std::cout << \\\"大人\\\" << std::endl;",
+          "    // elseで条件不成立時の処理",
           "    } else {",
-          "        // それ以外のメッセージ（'未成年'）",
-          "        std::cout << \"未成年\" << std::endl;",
+          "        // std::coutで「未成年」を出力",
+          "        std::cout << \\\"未成年\\\" << std::endl;",
+          "    // if-elseブロックを閉じる",
           "    }",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -463,7 +536,12 @@ export const cppData = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -491,18 +569,23 @@ export const cppData = {
           "content": "# 条件の合体技\\n\\n```cpp\\nint age = 15;\\nif (age >= 10 && age < 20) {\\n    std::cout << \"10代です\" << std::endl;\\n}\\n```\\n\\n`&&` は「かつ」、`||` は「または」の意味です。"
         }
       ],
-      "correctCode": "#include <iostream>\\nint main() {\\n    // scoreに85を入れる\\n    int score = 85;\\n    // 80以上 かつ 100以下 ならメッセージを出す\\n    if (score >= 80 && score <= 100) {\\n        // 「合格」と出力\\n        std::cout << \"合格\" << std::endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // scoreに85を入れる\\n    ___ ___ = ___;\\n    // 80以上 かつ 100以下 ならメッセージを出す\\n    ___ (___ ___ ___ ___ ___ ___ ___) {\\n        // 「合格」と出力\\n        ___::___ << ___ << ___::___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // int scoreでscoreを宣言し85を代入\\n    int score = 85;\\n    // ifでscoreが80以上かつ100以下か判定\\n    if (score >= 80 && score <= 100) {\\n        // std::coutで「合格」を出力\\n        std::cout << \\\"合格\\\" << std::endl;\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int scoreでscoreを宣言し85を代入\\n    ___ ___ = ___;\\n    // ifでscoreが80以上かつ100以下か判定\\n    ___ (___ ___ ___ ___ ___ ___ ___) {\\n        // std::coutで「合格」を出力\\n        ___::___ << ___ << ___::___;\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // scoreに85を入れる",
+          "    // int scoreでscoreを宣言し85を代入",
           "    int score = 85;",
-          "    // 80以上 かつ 100以下 ならメッセージを出す",
+          "    // ifでscoreが80以上かつ100以下か判定",
           "    if (score >= 80 && score <= 100) {",
-          "        // 「合格」と出力",
-          "        std::cout << \"合格\" << std::endl;",
+          "        // std::coutで「合格」を出力",
+          "        std::cout << \\\"合格\\\" << std::endl;",
+          "    // ifブロックを閉じる",
           "    }",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -516,7 +599,12 @@ export const cppData = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "operators": [
@@ -551,20 +639,36 @@ export const cppData = {
           "content": "# for (変数 : コンテナ)\\n\\nC++には **範囲for文（はんいフォーぶん）** という便利なループがあります。\\n「はこ（配列）」の中に入っているものを、最初から最後まで順番に取り出せます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nstd::vector<std::string> fruits = {\"Apple\", \"Banana\"};\\n// fruits の中身を一つずつ f に入れて繰り返す\\nfor (std::string f : fruits) {\\n    std::cout << f << std::endl;\\n}\\n```\\n=> Apple と Banana が順番に表示されます\\n\\n**読み方：**\\n「fruits の中身を、一つずつ f に入れながら繰り返す」\\n\\n**ポイント：**\\nC言語の `for (int i = 0; i < 2; i++)` より、とても簡単に書けます！"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <vector>\\nint main() {\\n    std::vector<int> nums = {1, 2, 3};\\n    // numsの各要素をnに代入して繰り返し\\n    for (int n : nums) {\\n        std::cout << n << std::endl;\\n    }\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 値を代入\\n    ___::___<___> ___ = {___, ___, ___};\\n    // numsの各要素をnに代入して繰り返し\\n    ___ (___ ___ : ___) {\\n        // 文を実行\\n        ___::___ << ___ << ___::___;\\n    // ブロックを閉じる\\n    ___\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <vector>でvectorを読み込む\\n#include <vector>\\n// int mainでmain関数を定義\\nint main() {\\n    // 整数vectorで配列（1、2、3）をnumsに代入\\n    std::vector<int> nums = {1, 2, 3};\\n    // for範囲ベースでnumsの各要素をnに代入して繰り返し\\n    for (int n : nums) {\\n        // std::coutでnを出力\\n        std::cout << n << std::endl;\\n    // forブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <vector>でvectorを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // 整数vectorで配列（1、2、3）をnumsに代入\\n    ___::___<___> ___ = {___, ___, ___};\\n    // for範囲ベースでnumsの各要素をnに代入して繰り返し\\n    ___ (___ ___ : ___) {\\n        // std::coutでnを出力\\n        ___::___ << ___ << ___::___;\\n    // forブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// #include <vector>でvectorを読み込む",
           "#include <vector>",
+          "// int mainでmain関数を定義",
           "int main() {",
+          "    // 整数vectorで配列（1、2、3）をnumsに代入",
           "    std::vector<int> nums = {1, 2, 3};",
-          "    // numsの各要素をnに代入して繰り返し",
+          "    // for範囲ベースでnumsの各要素をnに代入して繰り返し",
           "    for (int n : nums) {",
+          "        // std::coutでnを出力",
           "        std::cout << n << std::endl;",
+          "    // forブロックを閉じる",
           "    }",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -602,18 +706,25 @@ export const cppData = {
           "content": "# キーと値のペア\\n\\n`map` では「キー（名前）」と「値（データ）」をセットで保存します。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n#include <map>\\n#include <string>\\n\\n// 「文字列」をキーに、「文字列」を値にする辞書\\nstd::map<std::string, std::string> colors;\\ncolors[\"りんご\"] = \"あか\";  // りんご→あか と登録\\nstd::cout << colors[\"りんご\"] << std::endl;\\n```\\n=> あか と表示されます\\n\\n**書き方のルール：**\\n`std::map<キーの型, 値の型>` のように、`< >` の中に2つの型を書きます。\\n\\n**ポイント：**\\n配列は「番号」でアクセスしますが、`map` は「名前（キー）」でアクセスします。"
         }
       ],
-      "correctCode": "#include <iostream>\\n#include <map>\\n#include <string>\\nint main() {\\n    std::map<std::string, int> scores;\\n    // 'Math' と入力（キー名）\\n    scores[\"Math\"] = 90;\\n    // 'Math' と入力（同じキー名）\\n    std::cout << scores[\"Math\"] << std::endl;\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 文を実行\\n    ___::___<___::___, ___> ___;\\n    // 'Math' と入力（キー名）\\n    ___[\\\"___\\\"] = ___;\\n    // 'Math' と入力（同じキー名）\\n    ___::___ << ___[\\\"___\\\"] << ___::___;\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <map>でmapを読み込む\\n#include <map>\\n// #include <string>でstringを読み込む\\n#include <string>\\n// int mainでmain関数を定義\\nint main() {\\n    // 文字列をキー、整数を値とするmap型でscoresを宣言\\n    std::map<std::string, int> scores;\\n    // scoresのキーMathに90を代入\\n    scores[\\\"Math\\\"] = 90;\\n    // std::coutでMathの点数（90）を出力\\n    std::cout << scores[\\\"Math\\\"] << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <map>でmapを読み込む\\n___\\n// #include <string>でstringを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // 文字列をキー、整数を値とするmap型でscoresを宣言\\n    ___::___<___::___, ___> ___;\\n    // scoresのキーMathに90を代入\\n    ___[\\\"___\\\"] = ___;\\n    // std::coutでMathの点数（90）を出力\\n    ___::___ << ___[\\\"___\\\"] << ___::___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// #include <map>でmapを読み込む",
           "#include <map>",
+          "// #include <string>でstringを読み込む",
           "#include <string>",
+          "// int mainでmain関数を定義",
           "int main() {",
+          "    // 文字列をキー、整数を値とするmap型でscoresを宣言",
           "    std::map<std::string, int> scores;",
-          "    // 'Math' と入力（キー名）",
-          "    scores[\"Math\"] = 90;",
-          "    // 'Math' と入力（同じキー名）",
-          "    std::cout << scores[\"Math\"] << std::endl;",
+          "    // scoresのキーMathに90を代入",
+          "    scores[\\\"Math\\\"] = 90;",
+          "    // std::coutでMathの点数（90）を出力",
+          "    std::cout << scores[\\\"Math\\\"] << std::endl;",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -627,7 +738,14 @@ export const cppData = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "strings": [
@@ -655,16 +773,23 @@ export const cppData = {
           "content": "# 関数の定義\\n\\nやりたいことをひとまとめにして、名前をつけることができます。\\n一度作っておけば、呼び出すだけでいつでも動かせます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n// 「sayHello」という関数を作る（定義する）\\nvoid sayHello() {\\n    std::cout << \"ハロー！\" << std::endl;\\n}\\n\\n// mainの中で呼び出し（使う）\\nsayHello();  // これで「ハロー！」と表示される\\n```\\n\\n**用語解説：**\\n- `void`（ボイド）: 「何も返さない」という意味\\n- `()`: 関数名のあとに必ずつける丸かっこ\\n- `{}`: この中に実行したい処理を書く"
         }
       ],
-      "correctCode": "#include <iostream>\\nvoid greet() {\\n    std::cout << \"こんにちは\" << std::endl;\\n}\\nint main() {\\n    // greet関数を呼び出す\\n    greet();\\n    return 0;\\n}", "holeyCode": "// ライブラリを読み込む\\n___\\n// ブロックを開始\\n___ ___() {\\n    // 文を実行\\n    ___::___ << ___ << ___::___;\\n// ブロックを閉じる\\n___\\n// ブロックを開始\\n___ ___() {\\n    // greet関数を呼び出す\\n    ___();\\n    // 0を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// void greetでgreet関数を定義\\nvoid greet() {\\n    // std::coutで「こんにちは」を出力\\n    std::cout << \\\"こんにちは\\\" << std::endl;\\n// greet関数を閉じる\\n}\\n// int mainでmain関数を定義\\nint main() {\\n    // greet関数を呼び出す\\n    greet();\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// void greetでgreet関数を定義\\n___ ___() {\\n    // std::coutで「こんにちは」を出力\\n    ___::___ << ___ << ___::___;\\n// greet関数を閉じる\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // greet関数を呼び出す\\n    ___();\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
+          "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
+          "// void greetでgreet関数を定義",
           "void greet() {",
-          "    std::cout << \"こんにちは\" << std::endl;",
+          "    // std::coutで「こんにちは」を出力",
+          "    std::cout << \\\"こんにちは\\\" << std::endl;",
+          "// greet関数を閉じる",
           "}",
+          "// int mainでmain関数を定義",
           "int main() {",
           "    // greet関数を呼び出す",
           "    greet();",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// main関数を閉じる",
           "}"
         ],
       "lineHints": [
@@ -676,7 +801,14 @@ export const cppData = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "functions": [

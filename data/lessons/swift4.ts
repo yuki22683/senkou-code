@@ -141,25 +141,28 @@ export const swift4Data = {
           "content": "# 目標\\n\\n`Identifiable` プロトコルを作り、extensionでデフォルト機能を追加しましょう。\\n\\n1. `id` プロパティを持つプロトコルを作る\\n2. extensionで `display()` 関数を追加\\n3. `User` 構造体で準拠\\n4. デフォルトの `display()` を使う"
         }
       ],
-      "correctCode": "// プロトコルを定義\\nprotocol Identifiable {\\n    // idプロパティを宣言\\n    var id: Int { get }\\n}\\n\\n// extensionでプロトコルを拡張\\nextension Identifiable {\\n    // デフォルト実装\\n    func display() { print(\"ID: \\(id)\") }\\n}\\n\\n// Identifiableに準拠\\nstruct User: Identifiable {\\n    // idプロパティ\\n    var id: Int\\n}\\n\\n// インスタンスを作成\\nlet user = User(id: 42)\\n// displayメソッドを呼び出す\\nuser.display()",
+      "correctCode": "// プロトコルを定義\\nprotocol Identifiable {\\n    // idプロパティを宣言\\n    var id: Int { get }\\n// ブロックを閉じる\\n}\\n\\n// extensionでプロトコルを拡張\\nextension Identifiable {\\n    // デフォルト実装\\n    func display() { print(\"ID: \\(id)\") }\\n// ブロックを閉じる\\n}\\n\\n// Identifiableに準拠\\nstruct User: Identifiable {\\n    // idプロパティ\\n    var id: Int\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nlet user = User(id: 42)\\n// displayメソッドを呼び出す\\nuser.display()",
       "holeyCode": "// プロトコルを定義\\nprotocol ___ {\\n    // idプロパティを宣言\\n    var ___: ___ { ___ }\\n// ブロックを閉じる\\n___\\n\\n// extensionでプロトコルを拡張\\nextension ___ {\\n    // デフォルト実装\\n    func ___() { ___(\\\"___: \\\\(___)\\\") }\\n// ブロックを閉じる\\n___\\n\\n// Identifiableに準拠\\nstruct ___: ___ {\\n    // idプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nlet ___ = ___(___: ___)\\n// displayメソッドを呼び出す\\n___.___(",
       "correctLines": [
           "// プロトコルを定義",
           "protocol Identifiable {",
           "    // idプロパティを宣言",
           "    var id: Int { get }",
+          "// ブロックを閉じる",
           "}",
           "",
           "// extensionでプロトコルを拡張",
           "extension Identifiable {",
           "    // デフォルト実装",
           "    func display() { print(\"ID: \\(id)\") }",
+          "// ブロックを閉じる",
           "}",
           "",
           "// Identifiableに準拠",
           "struct User: Identifiable {",
           "    // idプロパティ",
           "    var id: Int",
+          "// ブロックを閉じる",
           "}",
           "",
           "// インスタンスを作成",
@@ -189,7 +192,10 @@ export const swift4Data = {
           null,
           "",
           null,
-          null
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -230,13 +236,14 @@ export const swift4Data = {
           "content": "# 目標\\n\\n配列の最初の要素を返すジェネリック関数を作りましょう。\\n\\n1. `first<T>` という関数を作る\\n2. `[T]` 型の配列を受け取る\\n3. `T?` 型（オプショナル）を返す\\n4. `[10, 20, 30]` で試して `10` と表示"
         }
       ],
-      "correctCode": "// <T>で型パラメータを定義\\nfunc first<T>(_ array: [T]) -> T? {\\n    // 配列の最初の要素を返す\\n    return array.first\\n}\\n\\n// 数値配列（10、20、30）をnumsに代入\\nlet nums = [10, 20, 30]\\n// first関数をnumsを引数に呼び出し、nilの場合は0を出力\\nprint(first(nums) ?? 0)",
+      "correctCode": "// <T>で型パラメータを定義\\nfunc first<T>(_ array: [T]) -> T? {\\n    // 配列の最初の要素を返す\\n    return array.first\\n// ブロックを閉じる\\n}\\n\\n// 数値配列（10、20、30）をnumsに代入\\nlet nums = [10, 20, 30]\\n// first関数をnumsを引数に呼び出し、nilの場合は0を出力\\nprint(first(nums) ?? 0)",
       "holeyCode": "// <T>で型パラメータを定義\\nfunc ___<___>(_ ___: [___]) -> ___? {\\n    // 配列の最初の要素を返す\\n    return ___.___ \\n// ブロックを閉じる\\n___\\n\\n// 数値配列（10、20、30）をnumsに代入\\nlet ___ = [___, ___, ___]\\n// first関数をnumsを引数に呼び出し、nilの場合は0を出力\\n___(___(___)  ?? ___)",
       "correctLines": [
           "// <T>で型パラメータを定義",
           "func first<T>(_ array: [T]) -> T? {",
           "    // 配列の最初の要素を返す",
           "    return array.first",
+          "// ブロックを閉じる",
           "}",
           "",
           "// 数値配列（10、20、30）をnumsに代入",
@@ -254,7 +261,8 @@ export const swift4Data = {
           null,
           null,
           "",
-          null
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -292,13 +300,14 @@ export const swift4Data = {
           "content": "# 目標\\n\\n2つの値のうち大きい方を返す関数を作りましょう。\\n\\n1. `maximum<T: Comparable>` という関数を作る\\n2. 2つの引数 `a` と `b` を受け取る\\n3. `a > b` なら `a` を、そうでなければ `b` を返す\\n4. `maximum(5, 3)` で `5` と表示"
         }
       ],
-      "correctCode": "// Comparableで比較可能な型に制限\\nfunc maximum<T: Comparable>(_ a: T, _ b: T) -> T {\\n    // 大きい方を返す\\n    return a > b ? a : b\\n}\\n\\n// maximum関数（第1引数に5, 第2引数に3）を呼び出す\\nprint(maximum(5, 3))",
+      "correctCode": "// Comparableで比較可能な型に制限\\nfunc maximum<T: Comparable>(_ a: T, _ b: T) -> T {\\n    // 大きい方を返す\\n    return a > b ? a : b\\n// ブロックを閉じる\\n}\\n\\n// maximum関数（第1引数に5, 第2引数に3）を呼び出す\\nprint(maximum(5, 3))",
       "holeyCode": "// Comparableで比較可能な型に制限\\nfunc ___<___: ___>(_ ___: ___, _ ___: ___) -> ___ {\\n    // 大きい方を返す\\n    return ___ > ___ ? ___ : ___\\n// ブロックを閉じる\\n___\\n\\n// maximum関数（第1引数に5, 第2引数に3）を呼び出す\\n___(___(___, ___))",
       "correctLines": [
           "// Comparableで比較可能な型に制限",
           "func maximum<T: Comparable>(_ a: T, _ b: T) -> T {",
           "    // 大きい方を返す",
           "    return a > b ? a : b",
+          "// ブロックを閉じる",
           "}",
           "",
           "// maximum関数（第1引数に5, 第2引数に3）を呼び出す",
@@ -312,7 +321,8 @@ export const swift4Data = {
           null,
           "",
           null,
-          null
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -354,8 +364,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\nCodableな構造体を作って、JSONに変換しましょう。\\n\\n1. `Item` 構造体を `Codable` に準拠させる\\n2. `name` プロパティを持たせる\\n3. `JSONEncoder()` でJSONに変換\\n4. 結果を表示する"
         }
       ],
-      "correctCode": "// Foundationをインポート\\nimport Foundation\\n\\n// CodableでJSON変換可能に\\nstruct Item: Codable {\\n    // nameプロパティ\\n    var name: String\\n}\\n\\n// インスタンスを作成\\nlet item = Item(name: \"りんご\")\\n// エンコーダを作成\\nlet encoder = JSONEncoder()\\n// JSONに変換\\nif let data = try? encoder.encode(item),\\n   let json = String(data: data, encoding: .utf8) {\\n    // JSONを出力\\n    print(json)\\n}",
-      "holeyCode": "// Foundationをインポート\\nimport ___\\n\\n// CodableでJSON変換可能に\\nstruct ___: ___ {\\n    // nameプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nlet ___ = ___(___: \\\"___\\\")\\n// エンコーダを作成\\nlet ___ = ___()\\n// JSONに変換\\nif let ___ = try? ___.___(___ ),\\n   // ブロックを開始\\n   let ___ = ___(___: ___, ___: .___) {\\n    // JSONを出力\\n    ___(___) \\n// ブロックを閉じる\\n___",
+      "correctCode": "// Foundationをインポート\\nimport Foundation\\n\\n// CodableでJSON変換可能に\\nstruct Item: Codable {\\n    // nameプロパティ\\n    var name: String\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nlet item = Item(name: \"りんご\")\\n// エンコーダを作成\\nlet encoder = JSONEncoder()\\n// itemをJSONに変換\\nif let data = try? encoder.encode(item),\\n   // ブロックを開始\\n   let json = String(data: data, encoding: .utf8) {\\n    // JSONを出力\\n    print(json)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// Foundationをインポート\\nimport ___\\n\\n// CodableでJSON変換可能に\\nstruct ___: ___ {\\n    // nameプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nlet ___ = ___(___: \\\"___\\\")\\n// エンコーダを作成\\nlet ___ = ___()\\n// itemをJSONに変換\\nif let ___ = try? ___.___(___ ),\\n   // ブロックを開始\\n   let ___ = ___(___: ___, ___: .___) {\\n    // JSONを出力\\n    ___(___) \\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Foundationをインポート",
           "import Foundation",
@@ -364,17 +374,20 @@ export const swift4Data = {
           "struct Item: Codable {",
           "    // nameプロパティ",
           "    var name: String",
+          "// ブロックを閉じる",
           "}",
           "",
           "// インスタンスを作成",
           "let item = Item(name: \"りんご\")",
           "// エンコーダを作成",
           "let encoder = JSONEncoder()",
-          "// JSONに変換",
+          "// itemをJSONに変換",
           "if let data = try? encoder.encode(item),",
+          "   // ブロックを開始",
           "   let json = String(data: data, encoding: .utf8) {",
           "    // JSONを出力",
           "    print(json)",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -396,7 +409,10 @@ export const swift4Data = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -442,7 +458,7 @@ export const swift4Data = {
           "content": "# 目標\\n\\nlazyプロパティを持つクラスを作りましょう。\\n\\n1. `Calculator` クラスを作る\\n2. `lazy var result` を定義\\n3. 初期化時に「Computing...」と表示して100を返す\\n4. インスタンスを作って `result` にアクセス"
         }
       ],
-      "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n    // lazyで遅延初期化\\n    lazy var result: Int = {\\n        // 計算中と出力\\n        print(\"計算中...\")\\n        // 100を返す\\n        return 100\\n    }()\\n}\\n\\n// インスタンスを作成\\nlet calc = Calculator()\\n// resultを出力\\nprint(calc.result)",
+      "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n    // lazyで遅延初期化\\n    lazy var result: Int = {\\n        // 計算中と出力\\n        print(\"計算中...\")\\n        // 100を返す\\n        return 100\\n    // クロージャを閉じて実行\\n    }()\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nlet calc = Calculator()\\n// resultを出力\\nprint(calc.result)",
       "holeyCode": "// Calculatorクラスを定義\\nclass ___ {\\n    // lazyで遅延初期化\\n    lazy var ___: ___ = {\\n        // 計算中と出力\\n        ___(\\\"___\\\")\\n        // 100を返す\\n        return ___\\n    // クロージャを閉じて実行\\n    ___()\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nlet ___ = ___()\\n// resultを出力\\n___(___.___ )",
       "correctLines": [
           "// Calculatorクラスを定義",
@@ -453,7 +469,9 @@ export const swift4Data = {
           "        print(\"計算中...\")",
           "        // 100を返す",
           "        return 100",
+          "    // クロージャを閉じて実行",
           "    }()",
+          "// ブロックを閉じる",
           "}",
           "",
           "// インスタンスを作成",
@@ -475,6 +493,8 @@ export const swift4Data = {
           null,
           "",
           null,
+          null,
+          "",
           null,
           ""
         ],
@@ -516,7 +536,7 @@ export const swift4Data = {
           "content": "# 目標\\n\\ndeferを使って「start」の後に「end」と表示する関数を作りましょう。\\n\\n1. `test` 関数を作る\\n2. `defer { print(\"end\") }` を書く\\n3. `print(\"start\")` を書く\\n\\n「start」→「end」の順に表示されます。"
         }
       ],
-      "correctCode": "// test関数を定義\\nfunc test() {\\n    // deferでスコープ終了時に実行\\n    defer { print(\"end\") }\\n    // startと出力\\n    print(\"start\")\\n}\\n\\n// test関数を呼び出し\\ntest()",
+      "correctCode": "// test関数を定義\\nfunc test() {\\n    // deferでスコープ終了時に実行\\n    defer { print(\"end\") }\\n    // startと出力\\n    print(\"start\")\\n// ブロックを閉じる\\n}\\n\\n// test関数を呼び出し\\ntest()",
       "holeyCode": "// test関数を定義\\nfunc ___() {\\n    // deferでスコープ終了時に実行\\n    defer { ___(\\\"___\\\") }\\n    // startと出力\\n    ___(\\\"___\\\")\\n// ブロックを閉じる\\n___\\n\\n// test関数を呼び出し\\n___()",
       "correctLines": [
           "// test関数を定義",
@@ -525,6 +545,7 @@ export const swift4Data = {
           "    defer { print(\"end\") }",
           "    // startと出力",
           "    print(\"start\")",
+          "// ブロックを閉じる",
           "}",
           "",
           "// test関数を呼び出し",
@@ -540,7 +561,8 @@ export const swift4Data = {
           null,
           "",
           null,
-          null
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -577,7 +599,7 @@ export const swift4Data = {
           "content": "# 目標\\n\\nguardでオプショナルをチェックする関数を作りましょう。\\n\\n1. `check` 関数を作る（引数は `Int?`）\\n2. `guard let` で値を取り出す\\n3. nilなら「nil」と表示してreturn\\n4. 値があれば2倍して表示\\n\\n`check(5)` で `10` と表示されます。"
         }
       ],
-      "correctCode": "// check関数を定義\\nfunc check(_ num: Int?) {\\n    // guardで早期リターン\\n    guard let n = num else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    }\\n    // n * 2を出力\\n    print(n * 2)\\n}\\n\\n// check関数（引数5）を呼び出す\\ncheck(5)",
+      "correctCode": "// check関数を定義\\nfunc check(_ num: Int?) {\\n    // guardで早期リターン\\n    guard let n = num else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    // ブロックを閉じる\\n    }\\n    // n * 2を出力\\n    print(n * 2)\\n// ブロックを閉じる\\n}\\n\\n// check関数（引数5）を呼び出す\\ncheck(5)",
       "holeyCode": "// check関数を定義\\nfunc ___(___  ___: ___?) {\\n    // guardで早期リターン\\n    guard let ___ = ___ else {\\n        // nilと出力\\n        ___(\\\"___\\\")\\n        // 早期リターン\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // n * 2を出力\\n    ___(___ * ___)\\n// ブロックを閉じる\\n___\\n\\n// check関数（引数5）を呼び出す\\n___(___)",
       "correctLines": [
           "// check関数を定義",
@@ -588,9 +610,11 @@ export const swift4Data = {
           "        print(\"nil\")",
           "        // 早期リターン",
           "        return",
+          "    // ブロックを閉じる",
           "    }",
           "    // n * 2を出力",
           "    print(n * 2)",
+          "// ブロックを閉じる",
           "}",
           "",
           "// check関数（引数5）を呼び出す",
@@ -611,7 +635,9 @@ export const swift4Data = {
           "",
           null,
           "",
-          null
+          null,
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -651,7 +677,7 @@ export const swift4Data = {
           "content": "# 目標\\n\\nスタック（積み重ね）のプロトコルを作りましょう。\\n\\n1. `Stack` プロトコルに `associatedtype Element` を定義\\n2. `push` メソッドを宣言\\n3. `IntStack` 構造体で準拠を実装\\n4. 10をpushしてitemsを表示"
         }
       ],
-      "correctCode": "// プロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    }\\n}\\n\\n// インスタンスを作成\\nvar stack = IntStack()\\n// 要素を追加\\nstack.push(10)\\n// itemsを出力\\nprint(stack.items)",
+      "correctCode": "// プロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n// ブロックを閉じる\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nvar stack = IntStack()\\n// 要素を追加\\nstack.push(10)\\n// itemsを出力\\nprint(stack.items)",
       "holeyCode": "// プロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    associatedtype ___\\n    // pushメソッドを宣言\\n    mutating func ___(___ ___: ___)\\n// ブロックを閉じる\\n___\\n\\n// Stackに準拠\\nstruct ___: ___ {\\n    // items配列\\n    var ___: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(___ ___: ___) {\\n        // 要素を追加\\n        ___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nvar ___ = ___()\\n// 要素を追加\\n___.___(___) \\n// itemsを出力\\n___(___.___ )",
       "correctLines": [
           "// プロトコルを定義",
@@ -660,6 +686,7 @@ export const swift4Data = {
           "    associatedtype Element",
           "    // pushメソッドを宣言",
           "    mutating func push(_ item: Element)",
+          "// ブロックを閉じる",
           "}",
           "",
           "// Stackに準拠",
@@ -670,7 +697,9 @@ export const swift4Data = {
           "    mutating func push(_ item: Int) {",
           "        // 要素を追加",
           "        items.append(item)",
+          "    // ブロックを閉じる",
           "    }",
+          "// ブロックを閉じる",
           "}",
           "",
           "// インスタンスを作成",
@@ -705,7 +734,10 @@ export const swift4Data = {
           null,
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [
@@ -747,16 +779,17 @@ export const swift4Data = {
           "content": "# 目標\\n\\nsome を使って、具体的な型を隠して返す関数を作りましょう。\\n\\n1. `makeCollection` 関数を作る\\n2. 戻り値を `some Collection` にする\\n3. `[1, 2, 3]` を返す\\n4. `.count` で要素数を表示"
         }
       ],
-      "correctCode": "// someで不透明な型を返す\\nfunc makeCollection() -> some Collection {\\n    // 配列を返す\\n    return [1, 2, 3]\\n}\\n\\n// cにmakeCollection関数の結果を代入\\nlet c = makeCollection()\\n// 要素数を出力\\nprint(c.count)",
+      "correctCode": "// someで不透明な型を返す\\nfunc makeCollection() -> some Collection {\\n    // 配列を返す\\n    return [1, 2, 3]\\n// ブロックを閉じる\\n}\\n\\n// makeCollection関数を呼び出し\\nlet c = makeCollection()\\n// 要素数を出力\\nprint(c.count)",
       "holeyCode": "// someで不透明な型を返す\\nfunc ___() -> some ___ {\\n    // 配列を返す\\n    return [___, ___, ___]\\n// ブロックを閉じる\\n___\\n\\n// makeCollection関数を呼び出し\\nlet ___ = ___()\\n// 要素数を出力\\n___(___.___)",
       "correctLines": [
           "// someで不透明な型を返す",
           "func makeCollection() -> some Collection {",
           "    // 配列を返す",
           "    return [1, 2, 3]",
+          "// ブロックを閉じる",
           "}",
           "",
-          "// cにmakeCollection関数の結果を代入",
+          "// makeCollection関数を呼び出し",
           "let c = makeCollection()",
           "// 要素数を出力",
           "print(c.count)"
@@ -771,7 +804,8 @@ export const swift4Data = {
           null,
           null,
           "",
-          null
+          null,
+          ""
         ],
         "candidates": {
           "keywords": [

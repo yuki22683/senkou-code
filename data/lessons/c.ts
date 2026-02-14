@@ -26,17 +26,18 @@ export const cData = {
           "content": "# 最初に書く「おまじない」\\n\\nC言語を動かすには、必ず書かなければいけない「お約束」があります。\\n\\n**1. `#include <stdio.h>`（インクルード・スタンダード・アイオー・エイチ）：**\\n「画面に文字を出す道具」を用意する呪文です。図書館から本を借りてくるようなイメージです！\\n\\n**2. `int main() { ... }`（イント・メイン）：**\\n「ここからプログラムが始まりますよ！」という合図です。本の「第1章」のようなものです。\\n\\n**実際のコードを見てみましょう：**\\n```c\\n#include <stdio.h>\\nint main() {\\n    printf(\"C言語は楽しい！\\n\");\\n    return 0;\\n}\\n```\\n\\n`printf`（プリントエフ）は「画面に文字を表示してね」という命令です。\\n`return 0`（リターン・ゼロ）は「うまくいきました！」という報告です。\\n\\nこの形を覚えてしまいましょう！"
         }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // Hello, World!を表示する\\n    printf(\"Hello, World!\\n\");\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // Hello, World!を表示する\\n    ___(\"___\\n// 文を実行\\n___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // printfで「Hello, World!」を出力\\n    printf(\"Hello, World!\\n\");\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // printfで「Hello, World!」を出力\\n    ___(\"___\");\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // Hello, World!を表示する",
+          "    // printfで「Hello, World!」を出力",
           "    printf(\"Hello, World!\\n\");",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -48,7 +49,8 @@ export const cData = {
           "",
           null,
           "",
-          null
+          null,
+          ""
         ],
       "candidates": {
         "functions": [
@@ -80,19 +82,20 @@ export const cData = {
                       "content": "# 変数を宣言して使おう\\n\\n**やること：**\\n1. 箱の種類（int）を書く\\n2. 箱の名前を決める\\n3. = で値を入れる\\n\\n```c\\nint age = 12;\\nprintf(\"%d\", age);  // 12と表示\\n```"
               }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // xに10を代入する\\n    int x = 10;\\n    // xの値を表示する\\n    printf(\"%d\\n\", x);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // xに10を代入する\\n    ___ ___ = ___;\\n    // xの値を表示する\\n    ___(\"___\\n// 文を実行\\n___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int xでxを宣言し10を代入\\n    int x = 10;\\n    // printfでxを出力\\n    printf(\"%d\\n\", x);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int xでxを宣言し10を代入\\n    ___ ___ = ___;\\n    // printfでxを出力\\n    ___(\"___\", ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // xに10を代入する",
+          "    // int xでxを宣言し10を代入",
           "    int x = 10;",
-          "    // xの値を表示する",
+          "    // printfでxを出力",
           "    printf(\"%d\\n\", x);",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -106,7 +109,8 @@ export const cData = {
           "",
           null,
           "",
-          null
+          null,
+          ""
         ],
       "candidates": {
         "others": ["stdio.h", "main", "10", "x", "0", "printf", "\", x);", "}", "include", "int", "%d", "%d\\n\", x);", "return 0;"]
@@ -132,21 +136,22 @@ export const cData = {
                       "content": "# % で余り\\n\\n```go\\nx := 7 % 3  // 7÷3の余り = 1\\n```\\n\\n偶数・奇数の判定に便利！"
               }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // aに10を代入する\\n    int a = 10;\\n    // bに3を代入する\\n    int b = 3;\\n    // a - bの結果を表示する\\n    printf(\"%d\\n\", a - b);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // aに10を代入する\\n    ___ ___ = ___;\\n    // bに3を代入する\\n    ___ ___ = ___;\\n    // a - bの結果を表示する\\n    ___(\"___\\n// 文を実行\\n___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int aでaを宣言し10を代入\\n    int a = 10;\\n    // int bでbを宣言し3を代入\\n    int b = 3;\\n    // printfでa - bの結果（7）を出力\\n    printf(\"%d\\n\", a - b);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int aでaを宣言し10を代入\\n    ___ ___ = ___;\\n    // int bでbを宣言し3を代入\\n    ___ ___ = ___;\\n    // printfでa - bの結果（7）を出力\\n    ___(\"___\", ___ ___ ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // aに10を代入する",
+          "    // int aでaを宣言し10を代入",
           "    int a = 10;",
-          "    // bに3を代入する",
+          "    // int bでbを宣言し3を代入",
           "    int b = 3;",
-          "    // a - bの結果を表示する",
+          "    // printfでa - bの結果（7）を出力",
           "    printf(\"%d\\n\", a - b);",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -162,7 +167,8 @@ export const cData = {
           "",
           null,
           "",
-          null
+          null,
+          ""
         ],
       "candidates": {
         "operators": [
@@ -194,17 +200,18 @@ export const cData = {
                       "content": "# 偶数・奇数を調べよう\\n\\n```c\\nint n = 5;\\nif (n % 2 == 0) {\\n    // 偶数\\n} else {\\n    // 奇数\\n}\\n```\\n\\n2で割った余りが0なら偶数です！"
               }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // 10 % 3の結果を表示する\\n    printf(\"%d\\n\", 10 % 3);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // 10 % 3の結果を表示する\\n    ___(\"___\\n// 文を実行\\n___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // printfで10 % 3の結果（1）を出力\\n    printf(\"%d\\n\", 10 % 3);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // printfで10 % 3の結果（1）を出力\\n    ___(\"___\", ___ ___ ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // 10 % 3の結果を表示する",
+          "    // printfで10 % 3の結果（1）を出力",
           "    printf(\"%d\\n\", 10 % 3);",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -216,7 +223,8 @@ export const cData = {
           "",
           null,
           "",
-          null
+          null,
+          ""
         ],
       "candidates": {
         "operators": [
@@ -248,21 +256,22 @@ export const cData = {
                       "content": "# +=、-=、*=、/=\\n\\n```c\\nint x = 10;\\nx += 5;   // x = 15\\nx -= 3;   // x = 12\\nx *= 2;   // x = 24\\nx /= 4;   // x = 6\\n```\\n\\nコードが短くなって便利！"
               }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // scoreに80を代入する\\n    int score = 80;\\n    // scoreに10を加算する\\n    score += 10;\\n    // scoreの値を表示する\\n    printf(\"%d\\n\", score);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // scoreに80を代入する\\n    ___ ___ = ___;\\n    // scoreに10を加算する\\n    ___ ___ ___;\\n    // scoreの値を表示する\\n    ___(\"___\\n// 文を実行\\n___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int scoreでscoreを宣言し80を代入\\n    int score = 80;\\n    // +=でscoreに10を加算\\n    score += 10;\\n    // printfでscoreを出力\\n    printf(\"%d\\n\", score);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int scoreでscoreを宣言し80を代入\\n    ___ ___ = ___;\\n    // +=でscoreに10を加算\\n    ___ ___ ___;\\n    // printfでscoreを出力\\n    ___(\"___\", ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // scoreに80を代入する",
+          "    // int scoreでscoreを宣言し80を代入",
           "    int score = 80;",
-          "    // scoreに10を加算する",
+          "    // +=でscoreに10を加算",
           "    score += 10;",
-          "    // scoreの値を表示する",
+          "    // printfでscoreを出力",
           "    printf(\"%d\\n\", score);",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -278,7 +287,8 @@ export const cData = {
           "",
           null,
           "",
-          null
+          null,
+          ""
         ],
       "candidates": {
         "operators": [
@@ -310,19 +320,20 @@ export const cData = {
                       "content": "# %s、%d、%v\\n\\n- **%s** 文字列\\n- **%d** 整数\\n- **%v** 何でも表示\\n\\n```go\\nfmt.Printf(\"%s は %d 歳\", name, age)\\n```"
               }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // ageに12を代入する\\n    int age = 12;\\n    // 「私は12歳です」と表示する\\n    printf(\"私は %d 歳です\\n\", age);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // ageに12を代入する\\n    ___ ___ = ___;\\n    // 「私は12歳です」と表示する\\n    ___(\"___\\n// 文を実行\\n___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int ageでageを宣言し12を代入\\n    int age = 12;\\n    // printfでageを使って「私は12歳です」を出力\\n    printf(\"私は %d 歳です\\n\", age);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int ageでageを宣言し12を代入\\n    ___ ___ = ___;\\n    // printfでageを使って「私は12歳です」を出力\\n    ___(\"___\", ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // ageに12を代入する",
+          "    // int ageでageを宣言し12を代入",
           "    int age = 12;",
-          "    // 「私は12歳です」と表示する",
+          "    // printfでageを使って「私は12歳です」を出力",
           "    printf(\"私は %d 歳です\\n\", age);",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -336,7 +347,8 @@ export const cData = {
           "",
           null,
           "",
-          null
+          null,
+          ""
         ],
       "candidates": {
         "others": ["stdio.h", "main", "12", "age", "0", "printf", "\", age);", "}", "include", "int", "私は %d 歳です", "私は %d 歳です\\n\", age);", "return 0;"]
@@ -362,19 +374,20 @@ export const cData = {
                       "content": "# 番号（インデックス）でアクセス\\n\\n配列は0番目から始まります。\\n\\n```c\\nint a[3] = {10, 20, 30};\\nprintf(\"%d\", a[0]);  // 10\\nprintf(\"%d\", a[1]);  // 20\\n```"
               }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // 配列numsを初期化する\\n    int nums[3] = {10, 20, 30};\\n    // 2番目の数（20）を表示する\\n    printf(\"%d\\n\", nums[1]);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // 配列numsを初期化する\\n    ___ ___[___] = {___, ___, ___};\\n    // 2番目の数（20）を表示する\\n    ___(\"___\\n// 文を実行\\n___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int nums[3]で配列numsを宣言し（10、20、30）で初期化\\n    int nums[3] = {10, 20, 30};\\n    // printfでnums[1]（インデックス1の要素20）を出力\\n    printf(\"%d\\n\", nums[1]);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int nums[3]で配列numsを宣言し（10、20、30）で初期化\\n    ___ ___[___] = {___, ___, ___};\\n    // printfでnums[1]（インデックス1の要素20）を出力\\n    ___(\"___\", ___[___]);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // 配列numsを初期化する",
+          "    // int nums[3]で配列numsを宣言し（10、20、30）で初期化",
           "    int nums[3] = {10, 20, 30};",
-          "    // 2番目の数（20）を表示する",
+          "    // printfでnums[1]（インデックス1の要素20）を出力",
           "    printf(\"%d\\n\", nums[1]);",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -388,7 +401,8 @@ export const cData = {
           "",
           null,
           "",
-          null
+          null,
+          ""
         ],
       "candidates": {
         "numbers": [
@@ -419,21 +433,24 @@ export const cData = {
           "content": "# if（イフ）の使い方\\n\\n`if`（イフ）は英語で「もし」という意味です。\\n\\nC言語では、`if (条件)` のあとに `{ }` 波かっこを書いて、その中に「条件が正しいときにやること」を書きます。\\n\\n**比較に使う記号：**\\n- `>` : より大きい\\n- `<` : より小さい\\n- `>=` : 以上\\n- `<=` : 以下\\n- `==` : 等しい（等号が2つ！）\\n\\n**実際のコードを見てみましょう：**\\n```c\\nint temp = 35;  // 気温を35度とする\\nif (temp > 30) {  // もし気温が30より大きければ\\n    printf(\"暑い！\\n\");  // 「暑い！」と表示\\n}\\n```\\n\\n気温が30度より高いので、「暑い！」と表示されます。"
         }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // scoreに85を代入する\\n    int score = 85;\\n    // scoreが80以上なら合格と表示する\\n    if (score >= 80) {\\n        printf(\"合格\\n\");\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // scoreに85を代入する\\n    ___ ___ = ___;\\n    // scoreが80以上なら合格と表示する\\n    if (___ ___ ___) {\\n        // 出力\\n        ___(\"___\\n// 文を実行\\n___\\n    // ブロックを閉じる\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int scoreでscoreを宣言し85を代入\\n    int score = 85;\\n    // ifでscoreが80以上か判定\\n    if (score >= 80) {\\n        // printfで「合格」を出力\\n        printf(\"合格\\n\");\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int scoreでscoreを宣言し85を代入\\n    ___ ___ = ___;\\n    // ifでscoreが80以上か判定\\n    ___ (___ ___ ___) {\\n        // printfで「合格」を出力\\n        ___(\"___\");\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // scoreに85を代入する",
+          "    // int scoreでscoreを宣言し85を代入",
           "    int score = 85;",
-          "    // scoreが80以上なら合格と表示する",
+          "    // ifでscoreが80以上か判定",
           "    if (score >= 80) {",
+          "        // printfで「合格」を出力",
           "        printf(\"合格\\n\");",
+          "    // ifブロックを閉じる",
           "    }",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -449,7 +466,10 @@ export const cData = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          ""
         ],
       "candidates": {
         "keywords": [
@@ -480,23 +500,28 @@ export const cData = {
                       "content": "# 2つの道\\n\\n```java\\nif (score >= 60) {\\n    System.out.println(\"合格\");\\n} else {\\n    System.out.println(\"不合格\");\\n}\\n```\\n\\n条件によって実行する処理を分けられます。"
               }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // xに10を代入する\\n    int x = 10;\\n    // xが5より大きいか判定する\\n    if (x > 5) {\\n        printf(\"大きい\\n\");\\n    } else {\\n        printf(\"小さい\\n\");\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // xに10を代入する\\n    ___ ___ = ___;\\n    // xが5より大きいか判定する\\n    if (___ ___ ___) {\\n        // 出力\\n        ___(\"___\\n// 文を実行\\n___\\n    // else分岐\\n    ___ else ___\\n        // 出力\\n        ___(\"___\\n// 文を実行\\n___\\n    // ブロックを閉じる\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int xでxを宣言し10を代入\\n    int x = 10;\\n    // ifでxが5より大きいか判定\\n    if (x > 5) {\\n        // printfで「大きい」を出力\\n        printf(\"大きい\\n\");\\n    // elseで条件を満たさない場合\\n    } else {\\n        // printfで「小さい」を出力\\n        printf(\"小さい\\n\");\\n    // if-elseブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int xでxを宣言し10を代入\\n    ___ ___ = ___;\\n    // ifでxが5より大きいか判定\\n    ___ (___ ___ ___) {\\n        // printfで「大きい」を出力\\n        ___(\"___\");\\n    // elseで条件を満たさない場合\\n    } ___ {\\n        // printfで「小さい」を出力\\n        ___(\"___\");\\n    // if-elseブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // xに10を代入する",
+          "    // int xでxを宣言し10を代入",
           "    int x = 10;",
-          "    // xが5より大きいか判定する",
+          "    // ifでxが5より大きいか判定",
           "    if (x > 5) {",
+          "        // printfで「大きい」を出力",
           "        printf(\"大きい\\n\");",
+          "    // elseで条件を満たさない場合",
           "    } else {",
+          "        // printfで「小さい」を出力",
           "        printf(\"小さい\\n\");",
+          "    // if-elseブロックを閉じる",
           "    }",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -514,7 +539,12 @@ export const cData = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          "",
+          null,
+          ""
         ],
       "candidates": {
         "keywords": [
@@ -545,21 +575,24 @@ export const cData = {
                       "content": "# && と ||\\n\\n```c\\n// 両方の条件を満たす\\nif (age >= 18 && age <= 65) {\\n    // 働ける年齢\\n}\\n\\n// どちらかを満たす\\nif (day == 6 || day == 0) {\\n    // 週末\\n}\\n```"
               }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // scoreに85を代入する\\n    int score = 85;\\n    // scoreが80以上かつ100以下なら合格と表示する\\n    if (score >= 80 && score <= 100) {\\n        printf(\"合格\\n\");\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // scoreに85を代入する\\n    ___ ___ = ___;\\n    // scoreが80以上かつ100以下なら合格と表示する\\n    if (___ >= ___ && ___ <= ___) {\\n        // 出力\\n        ___(\"___\\n// 文を実行\\n___\\n    // ブロックを閉じる\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int scoreでscoreを宣言し85を代入\\n    int score = 85;\\n    // ifと&&でscoreが80以上かつ100以下か判定\\n    if (score >= 80 && score <= 100) {\\n        // printfで「合格」を出力\\n        printf(\"合格\\n\");\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int scoreでscoreを宣言し85を代入\\n    ___ ___ = ___;\\n    // ifと&&でscoreが80以上かつ100以下か判定\\n    ___ (___ >= ___ ___ ___ <= ___) {\\n        // printfで「合格」を出力\\n        ___(\"___\");\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // scoreに85を代入する",
+          "    // int scoreでscoreを宣言し85を代入",
           "    int score = 85;",
-          "    // scoreが80以上かつ100以下なら合格と表示する",
+          "    // ifと&&でscoreが80以上かつ100以下か判定",
           "    if (score >= 80 && score <= 100) {",
+          "        // printfで「合格」を出力",
           "        printf(\"合格\\n\");",
+          "    // ifブロックを閉じる",
           "    }",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
@@ -575,7 +608,10 @@ export const cData = {
           "",
           null,
           "",
-          null
+          null,
+          "",
+          null,
+          ""
         ],
       "candidates": {
         "operators": [
@@ -606,23 +642,27 @@ export const cData = {
                       "content": "# 初期化・条件・更新\\n\\n```c\\nfor (初期化; 条件; 更新) {\\n    // 繰り返す処理\\n}\\n```\\n\\n1. **初期化**: カウンタを設定\\n2. **条件**: 続ける条件\\n3. **更新**: 1回ごとの変化"
               }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // iが0から2までループする\\n    for (int i = 0; i < 3; i++) {\\n        // iの値を表示する\\n        printf(\"%d\\n\", i);\\n    }\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // iが0から2までループする\\n    for (___ ___ = ___; ___ < ___; ___++) {\\n        // iの値を表示する\\n        ___(\"___\\n// 文を実行\\n___\\n    // ブロックを閉じる\\n    ___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // forでiを0から2までループ（i < 3）\\n    for (int i = 0; i < 3; i++) {\\n        // printfでiを出力\\n        printf(\"%d\\n\", i);\\n    // forブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // forでiを0から2までループ（i < 3）\\n    ___ (___ ___ = ___; ___ < ___; ___++) {\\n        // printfでiを出力\\n        ___(\"___\", ___);\\n    // forブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // iが0から2までループする",
+          "    // forでiを0から2までループ（i < 3）",
           "    for (int i = 0; i < 3; i++) {",
-          "        // iの値を表示する",
+          "        // printfでiを出力",
           "        printf(\"%d\\n\", i);",
+          "    // forブロックを閉じる",
           "    }",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
+          null,
+          "",
           null,
           "",
           null,
@@ -665,29 +705,37 @@ export const cData = {
                       "content": "# 構造体変数を作る\\n\\n```c\\nstruct Person p;\\np.age = 12;\\nstrcpy(p.name, \"太郎\");\\n\\nprintf(\"%s\", p.name);  // 太郎\\n```\\n\\nドット(.)でメンバにアクセス！"
               }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// Point構造体を定義する\\nstruct Point {\\n    int x;\\n    int y;\\n};\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // Point型の変数pを作成する\\n    struct Point p;\\n    // p.xに10を代入する\\n    p.x = 10;\\n    // p.xの値を表示する\\n    printf(\"%d\\n\", p.x);\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// Point構造体を定義する\\nstruct ___ {\\n    // 変数を宣言\\n    ___ ___;\\n    // 変数を宣言\\n    ___ ___;\\n// ブロックを閉じる\\n___\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // Point型の変数pを作成する\\n    struct ___ ___;\\n    // p.xに10を代入する\\n    ___.___= ___;\\n    // p.xの値を表示する\\n    ___(\"___\\n// 文を実行\\n___\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// struct PointでPoint構造体を定義\\nstruct Point {\\n    // int xでxメンバを宣言\\n    int x;\\n    // int yでyメンバを宣言\\n    int y;\\n// 構造体定義を閉じる\\n};\\n// int mainでmain関数を定義\\nint main() {\\n    // struct Point pでPoint型の変数pを宣言\\n    struct Point p;\\n    // p.xに10を代入\\n    p.x = 10;\\n    // printfでp.xを出力\\n    printf(\"%d\\n\", p.x);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// struct PointでPoint構造体を定義\\n___ ___ {\\n    // int xでxメンバを宣言\\n    ___ ___;\\n    // int yでyメンバを宣言\\n    ___ ___;\\n// 構造体定義を閉じる\\n___;\\n// int mainでmain関数を定義\\n___ ___() {\\n    // struct Point pでPoint型の変数pを宣言\\n    ___ ___ ___;\\n    // p.xに10を代入\\n    ___.___ = ___;\\n    // printfでp.xを出力\\n    ___(\"___\", ___.___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// Point構造体を定義する",
+          "// struct PointでPoint構造体を定義",
           "struct Point {",
+          "    // int xでxメンバを宣言",
           "    int x;",
+          "    // int yでyメンバを宣言",
           "    int y;",
+          "// 構造体定義を閉じる",
           "};",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
-          "    // Point型の変数pを作成する",
+          "    // struct Point pでPoint型の変数pを宣言",
           "    struct Point p;",
-          "    // p.xに10を代入する",
+          "    // p.xに10を代入",
           "    p.x = 10;",
-          "    // p.xの値を表示する",
+          "    // printfでp.xを出力",
           "    printf(\"%d\\n\", p.x);",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
+          null,
+          "",
+          null,
+          "",
           null,
           "",
           null,
@@ -731,25 +779,29 @@ export const cData = {
           "content": "# 手順をまとめる\\n\\nやりたいことをひとまとめにして、名前をつけることができます。\\n一度作っておけば、呼び出すだけでいつでも動かせます。\\n\\n**実際のコードを見てみましょう：**\\n```c\\n// 「aisatsu」という関数を作る（定義する）\\nvoid aisatsu() {\\n    printf(\"ヤッホー\\n\");\\n}\\n\\n// mainの中で呼ぶ（使う）\\naisatsu();  // これで「ヤッホー」と表示される\\n```\\n\\n**ポイント：**\\n- `void`（ボイド）は「何も返さない」という意味です\\n- 関数名のあとに `()` 丸かっこをつけるのがルールです\\n- `{ }` の中に、やりたい処理を書きます"
         }
       ],
-      "correctCode": "// 標準入出力ライブラリを読み込む\\n#include <stdio.h>\\n// greet関数を定義する\\nvoid greet() {\\n    // Helloと表示する\\n    printf(\"Hello\\n\");\\n}\\n// mainはプログラムのエントリーポイント\\nint main() {\\n    // greet関数を呼び出す\\n    greet();\\n    // 正常終了を示す0を返す\\n    return 0;\\n}",
-      "holeyCode": "// 標準入出力ライブラリを読み込む\\n#___ <___>\\n// greet関数を定義する\\n___ ___() {\\n    // Helloと表示する\\n    ___(\"___\\n// 文を実行\\n___\\n// ブロックを閉じる\\n___\\n// mainはプログラムのエントリーポイント\\n___ ___() {\\n    // greet関数を呼び出す\\n    ___();\\n    // 正常終了を示す0を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// void greetでgreet関数を定義\\nvoid greet() {\\n    // printfで「Hello」を出力\\n    printf(\"Hello\\n\");\\n// greet関数を閉じる\\n}\\n// int mainでmain関数を定義\\nint main() {\\n    // greet関数を呼び出す\\n    greet();\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// void greetでgreet関数を定義\\n___ ___() {\\n    // printfで「Hello」を出力\\n    ___(\"___\");\\n// greet関数を閉じる\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // greet関数を呼び出す\\n    ___();\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 標準入出力ライブラリを読み込む",
+          "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
-          "// greet関数を定義する",
+          "// void greetでgreet関数を定義",
           "void greet() {",
-          "    // Helloと表示する",
+          "    // printfで「Hello」を出力",
           "    printf(\"Hello\\n\");",
+          "// greet関数を閉じる",
           "}",
-          "// mainはプログラムのエントリーポイント",
+          "// int mainでmain関数を定義",
           "int main() {",
           "    // greet関数を呼び出す",
           "    greet();",
-          "    // 正常終了を示す0を返す",
+          "    // return 0で正常終了を返す",
           "    return 0;",
+          "// ブロックを閉じる",
           "}"
         ],
       "lineHints": [
+          null,
+          "",
           null,
           "",
           null,

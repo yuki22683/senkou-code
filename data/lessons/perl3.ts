@@ -147,10 +147,10 @@ export const perl3Data = {
           "content": "# chomp($変数)\\n\\n**このコードは何をしているの？**\\n```perl\\nmy $line = \"hello\\n\";\\nchomp($line);\\nprint $line; # hello\\n```\\n\\n**解説：**\\n1. `$line` に \"hello\\n\"（改行付き）を入れる\\n2. `chomp($line)` で末尾の `\\n` を除去\\n3. `$line` は \"hello\" になる\\n\\n**ポイント：** chompは変数の中身を直接変更します。戻り値は使いません。"
         }
       ],
-      "correctCode": "# 値を代入\\nmy $text = \"hello\\n\";\\n# chompで改行を除去\\nchomp($text);\\n# [$text]を出力\\nprint \"[$text]\\n\";",
-      "holeyCode": "# 値を代入\\nmy $___ = \\\"___\\n\\\";\\n# chompで改行を除去\\n___(___);\\n# [$text]を出力\\n___ \\\"[$___]\\n\\\";",
+      "correctCode": "# $textに改行付き文字列を代入\\nmy $text = \"hello\\n\";\\n# chompで改行を除去\\nchomp($text);\\n# [$text]を出力\\nprint \"[$text]\\n\";",
+      "holeyCode": "# $textに改行付き文字列を代入\\nmy $___ = \\\"___\\n\\\";\\n# chompで改行を除去\\n___(___);\\n# [$text]を出力\\n___ \\\"[$___]\\n\\\";",
       "correctLines": [
-          "# 値を代入",
+          "# $textに改行付き文字列を代入",
           "my $text = \"hello\\n\";",
           "# chompで改行を除去",
           "chomp($text);",
@@ -194,10 +194,10 @@ export const perl3Data = {
           "content": "# split(/区切り/, 文字列)\\n\\n**このコードは何をしているの？**\\n```perl\\nmy @parts = split(/,/, \"a,b,c\");\\nprint $parts[1]; # b\\n```\\n\\n**解説：**\\n1. \"a,b,c\" をカンマ `,` で分割\\n2. 結果は (\"a\", \"b\", \"c\") の配列\\n3. `$parts[1]` で2番目の要素 \"b\" を取得\\n\\n**区切り文字いろいろ：**\\n- `/,/` → カンマで分割\\n- `/::/` → コロンで分割\\n- `/\\s+/` → 空白で分割"
         }
       ],
-      "correctCode": "# 値を代入\\nmy $data = \"りんご:バナナ:さくらんぼ\";\\n# splitで分割\\nmy @fruits = split(/:/, $data);\\n# 2番目の果物（バナナ）を出力\\nprint $fruits[1] . \"\\n\";",
-      "holeyCode": "# 値を代入\\nmy $___ = \\\"___\\\";\\n# splitで分割\\nmy @___ = ___(/___/, $___);\\n# 2番目の果物（バナナ）を出力\\n___ $___[___] . \\\"\\n\\\";",
+      "correctCode": "# $dataに果物名をコロン区切りで代入\\nmy $data = \"りんご:バナナ:さくらんぼ\";\\n# splitで分割\\nmy @fruits = split(/:/, $data);\\n# 2番目の果物（バナナ）を出力\\nprint $fruits[1] . \"\\n\";",
+      "holeyCode": "# $dataに果物名をコロン区切りで代入\\nmy $___ = \\\"___\\\";\\n# splitで分割\\nmy @___ = ___(/___/, $___);\\n# 2番目の果物（バナナ）を出力\\n___ $___[___] . \\\"\\n\\\";",
       "correctLines": [
-          "# 値を代入",
+          "# $dataに果物名をコロン区切りで代入",
           "my $data = \"りんご:バナナ:さくらんぼ\";",
           "# splitで分割",
           "my @fruits = split(/:/, $data);",
@@ -476,10 +476,10 @@ export const perl3Data = {
           "content": "# length(文字列)\\n\\n**このコードは何をしているの？**\\n```perl\\nmy $len = length(\"hello\");\\nprint $len; # 5\\n```\\n\\n**解説：**\\n1. \"hello\" の文字数を数える\\n2. 結果は 5\\n3. `$len` に 5 が入る\\n\\n**配列の要素数を知りたいとき：**\\n- 配列は `scalar(@arr)` または `@arr` を数値として使う\\n- `length` は文字列専用です"
         }
       ],
-      "correctCode": "# 値を代入\\nmy $text = \"Perl\";\\n# lengthで長さを取得\\nmy $len = length($text);\\n# $lenを出力\\nprint \"$len\\n\";",
-      "holeyCode": "# 値を代入\\nmy $___ = \\\"___\\\";\\n# lengthで長さを取得\\nmy $___ = ___($___);\\n# $lenを出力\\n___ \\\"$___\\n\\\";",
+      "correctCode": "# $textに言語名を代入\\nmy $text = \"Perl\";\\n# lengthで長さを取得\\nmy $len = length($text);\\n# $lenを出力\\nprint \"$len\\n\";",
+      "holeyCode": "# $textに言語名を代入\\nmy $___ = \\\"___\\\";\\n# lengthで長さを取得\\nmy $___ = ___($___);\\n# $lenを出力\\n___ \\\"$___\\n\\\";",
       "correctLines": [
-          "# 値を代入",
+          "# $textに言語名を代入",
           "my $text = \"Perl\";",
           "# lengthで長さを取得",
           "my $len = length($text);",

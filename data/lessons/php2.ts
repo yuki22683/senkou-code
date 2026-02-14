@@ -307,13 +307,13 @@ export const php2Data = {
           "content": "# コールバック関数を渡す\\n\\n`array_map(関数, 配列)` の形で使います。\\n\\n**コード例：**\\n```php\\n$nums = [1, 2, 3];\\n$doubled = array_map(fn($n) => $n * 2, $nums);\\n// [2, 4, 6]\\n```\\n\\n**何をしているの？**\\n1. `$nums = [1, 2, 3]` → 元の配列を用意\\n2. `fn($n) => $n * 2` → 「2倍にする」という処理を定義\\n3. `array_map(...)` → 各要素に処理を適用\\n4. 結果: [2, 4, 6] という新しい配列ができる\\n\\n**ポイント：**\\n- 第1引数: 処理する関数\\n- 第2引数: 処理したい配列\\n- 元の配列 `$nums` は変わらない"
         }
       ],
-      "correctCode": "<?php\\n// 配列を定義（1, 2, 3）\\n$nums = [1, 2, 3];\\n// array_mapで各要素を変換\\n$squared = array_map(fn($n) => $n * $n, $nums);\\n// print_rで配列を出力\\nprint_r($squared);\\n?>",
-      "holeyCode": "// PHPコード開始タグ\\n___\\n// 配列を定義（1, 2, 3）\\n$___ = [___, ___, ___];\\n// array_mapで各要素を変換\\n$___ = ___(___(___) => $___ * $___, $___);\\n// print_rで配列を出力\\n___($___);\\n// PHPコード終了タグ\\n___",
+      "correctCode": "<?php\\n// 数値配列（1、2、3）を$numsに代入\\n$nums = [1, 2, 3];\\n// numsの各要素を2乗してsquaredに代入\\n$squared = array_map(fn($n) => $n * $n, $nums);\\n// print_rで配列を出力\\nprint_r($squared);\\n?>",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// 数値配列（1、2、3）を$numsに代入\\n$___ = [___, ___, ___];\\n// numsの各要素を2乗してsquaredに代入\\n$___ = ___(___(___) => $___ * $___, $___);\\n// print_rで配列を出力\\n___($___);\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "<?php",
-          "// 配列を定義（1, 2, 3）",
+          "// 数値配列（1、2、3）を$numsに代入",
           "$nums = [1, 2, 3];",
-          "// array_mapで各要素を変換",
+          "// numsの各要素を2乗してsquaredに代入",
           "$squared = array_map(fn($n) => $n * $n, $nums);",
           "// print_rで配列を出力",
           "print_r($squared);",
@@ -333,7 +333,7 @@ export const php2Data = {
           "keywords": [
             "fn"
           ],
-          "others": ["<?php", "?>", "nums", "squared", "array_map", "print_r", "n", "$n", "1", "2", "3", "// 配列を定義（1, 2, 3）", "/", "ay_mapで各要素を変換", "int_rで配列を出力"]
+          "others": ["<?php", "?>", "nums", "squared", "array_map", "print_r", "n", "$n", "1", "2", "3", "// 数値配列（1、2、3）を$numsに代入", "/", "numsの各要素を2乗してsquaredに代入", "int_rで配列を出力"]
         },
         "testCases": [
           {

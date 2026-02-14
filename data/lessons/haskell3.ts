@@ -25,15 +25,15 @@ export const haskell3Data = {
           "content": "map関数はリストの各要素に関数を適用し、新しいリストを返します。\\n\\n```haskell\\n-- map :: (a -> b) -> [a] -> [b]\\ndoubled = map (*2) [1, 2, 3]\\n-- 結果: [2, 4, 6]\\n\\nuppers = map toUpper \"hello\"\\n-- 結果: \"HELLO\"\\n```"
         }
       ],
-      "correctCode": "-- Intを入力\\ndouble :: Int -> Int\\n-- *で掛け算\\ndouble x = x * 2\\n\\n-- 各要素に関数を適用してリストを変換する関数\\ndoubled = map double [1, 2, 3, 4, 5]",
-      "holeyCode": "-- Intを入力\\n___ :: ___ -> ___\\n-- *で掛け算\\n___ ___ = ___ ___ ___\\n___\\n-- 各要素に関数を適用してリストを変換する関数\\n___ = ___ ___ [___, ___, ___, ___, ___]",
+      "correctCode": "-- Intを入力\\ndouble :: Int -> Int\\n-- *で掛け算\\ndouble x = x * 2\\n\\n-- リストにdouble関数を適用してdoubledに代入\\ndoubled = map double [1, 2, 3, 4, 5]",
+      "holeyCode": "-- Intを入力\\n___ :: ___ -> ___\\n-- *で掛け算\\n___ ___ = ___ ___ ___\\n___\\n-- リストにdouble関数を適用してdoubledに代入\\n___ = ___ ___ [___, ___, ___, ___, ___]",
       "correctLines": [
           "-- Intを入力",
           "double :: Int -> Int",
           "-- *で掛け算",
           "double x = x * 2",
           "",
-          "-- 各要素に関数を適用してリストを変換する関数",
+          "-- リストにdouble関数を適用してdoubledに代入",
           "doubled = map double [1, 2, 3, 4, 5]"
         ],
       "lineHints": [

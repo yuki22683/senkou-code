@@ -45,16 +45,16 @@ export const rust2Data = {
           "content": "# 所有権は「移動」する\\n\\n変数を別の変数に代入すると、所有権が **移動（ムーブ）** します。元の変数は使えなくなります。\\n\\n**コード例：**\\n```rust\\nlet s1 = String::from(\"hello\");  // s1 が持ち主\\nlet s2 = s1;  // 所有権が s2 に移動！\\n// ↓ s1 はもう使えない（エラーになる）\\n// println!(\"{}\", s1);  // ダメ！\\nprintln!(\"{}\", s2);  // OK！\\n```\\n\\n**イメージ：**\\nおもちゃを友だちにあげたら、自分はもう使えない。これがムーブです。"
         }
       ],
-      "correctCode": "// main関数を定義\\nfn main() {\\n    // 変数を宣言\\n    let s1 = String::from(\"こんにちは\");\\n    // s1 の所有権を移動\\n    let s2 = s1;\\n    // 出力\\n    println!(\"{}\", s2);\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___::___(\"こんにちは\");\\n    // s1 の所有権を移動\\n    let ___ = ___;\\n    // 出力\\n    ___!(\"{}\", ___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fnでmain関数を定義\\nfn main() {\\n    // letとString::fromでs1に文字列を作成\\n    let s1 = String::from(\"こんにちは\");\\n    // letでs2にs1の所有権を移動\\n    let s2 = s1;\\n    // println!でs2を出力\\n    println!(\"{}\", s2);\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// fnでmain関数を定義\\nfn ___() {\\n    // letとString::fromでs1に文字列を作成\\n    let ___ = ___::___(\"こんにちは\");\\n    // letでs2にs1の所有権を移動\\n    let ___ = ___;\\n    // println!でs2を出力\\n    ___!(\"{}\", ___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// main関数を定義",
+          "// fnでmain関数を定義",
           "fn main() {",
-          "    // 変数を宣言",
+          "    // letとString::fromでs1に文字列を作成",
           "    let s1 = String::from(\"こんにちは\");",
-          "    // s1 の所有権を移動",
+          "    // letでs2にs1の所有権を移動",
           "    let s2 = s1;",
-          "    // 出力",
+          "    // println!でs2を出力",
           "    println!(\"{}\", s2);",
           "// ブロックを閉じる",
           "}"
@@ -97,14 +97,17 @@ export const rust2Data = {
           "content": "# 関数に借りてもらう\\n\\n関数にデータを渡すとき、`&` をつけると「借りる」形になります。元の変数はそのまま使い続けられます。\\n\\n**コード例：**\\n```rust\\nfn calc_len(s: &String) -> usize {\\n    s.len()  // 長さを返す\\n}\\n\\nfn main() {\\n    let text = String::from(\"hello\");\\n    let len = calc_len(&text);  // textを貸す\\n    // text はまだ使える！\\n    println!(\"{}の長さは{}\", text, len);\\n}\\n```\\n\\n`&String` は「Stringを借りる」という意味です。"
         }
       ],
-      "correctCode": "fn print_len(s: &String) {\\n    println!(\"{}\", s.len());\\n}\\nfn main() {\\n    let text = String::from(\"こんにちは\");\\n    // & で参照を渡す\\n    print_len(&text);\\n}", "holeyCode": "// print_len関数を定義\\nfn ___(___: &___) {\\n    // 出力\\n    ___!(\\\"{}\\\", ___.___());\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___::___(\\\"こんにちは\\\");\\n    // & で参照を渡す\\n    ___(&___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fnでprint_len関数を定義（引数s: &String）\\nfn print_len(s: &String) {\\n    // println!でs.len()を出力\\n    println!(\"{}\", s.len());\\n}\\nfn main() {\\n    // letとString::fromでtextに文字列を作成\\n    let text = String::from(\"こんにちは\");\\n    // &でtextの参照をprint_lenに渡す\\n    print_len(&text);\\n}", "holeyCode": "// fnでprint_len関数を定義（引数s: &String）\\nfn ___(___: &___) {\\n    // println!でs.len()を出力\\n    ___!(\\\"{}\\\", ___.___());\\n// ブロックを閉じる\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // letとString::fromでtextに文字列を作成\\n    let ___ = ___::___(\\\"こんにちは\\\");\\n    // &でtextの参照をprint_lenに渡す\\n    ___(&___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
+          "// fnでprint_len関数を定義（引数s: &String）",
           "fn print_len(s: &String) {",
+          "    // println!でs.len()を出力",
           "    println!(\"{}\", s.len());",
           "}",
           "fn main() {",
+          "    // letとString::fromでtextに文字列を作成",
           "    let text = String::from(\"こんにちは\");",
-          "    // & で参照を渡す",
+          "    // &でtextの参照をprint_lenに渡す",
           "    print_len(&text);",
           "}"
         ],
@@ -116,6 +119,7 @@ export const rust2Data = {
           null,
           "",
           null,
+          "",
           ""
         ],
         "candidates": {
@@ -144,16 +148,19 @@ export const rust2Data = {
           "content": "# mut が2か所に必要\\n\\n変更できるようにするには、変数と参照の両方に `mut` が必要です。\\n\\n**コード例：**\\n```rust\\n// 1. 変数を mut で作る\\nlet mut s = String::from(\"hello\");\\n\\n// 2. &mut で可変参照を渡す\\nchange(&mut s);\\n\\nfn change(s: &mut String) {\\n    s.push_str(\" world\");  // 変更できる！\\n}\\n```\\n\\n**ポイント：**\\n- `let mut 変数` で変数を変更可能に\\n- `&mut 変数` で可変参照を作る\\n- 両方ないと変更できない！"
         }
       ],
-      "correctCode": "fn add_world(s: &mut String) {\\n    // push_strメソッドで\" world\"を追加\\n    s.push_str(\" world\");\\n}\\nfn main() {\\n    // mut で可変変数にする\\n    let mut text = String::from(\"hello\");\\n    add_world(&mut text);\\n    println!(\"{}\", text);\\n}", "holeyCode": "// add_world関数を定義\\nfn ___(___: &mut ___) {\\n    // push_strメソッドで\" world\"を追加\\n    ___.___(\\\"___\\\");\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfn ___() {\\n    // mut で可変変数にする\\n    let mut ___ = ___::___(\\\"___\\\");\\n    // 文を実行\\n    ___(&mut ___);\\n    // 出力\\n    ___!(\\\"{}\\\", ___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fnでadd_world関数を定義（引数s: &mut String）\\nfn add_world(s: &mut String) {\\n    // push_strでsに\" world\"を追加\\n    s.push_str(\" world\");\\n}\\nfn main() {\\n    // let mutでtextを可変変数として初期化\\n    let mut text = String::from(\"hello\");\\n    // add_worldに&mut textを渡して呼び出す\\n    add_world(&mut text);\\n    // println!でtextを出力\\n    println!(\"{}\", text);\\n}", "holeyCode": "// fnでadd_world関数を定義（引数s: &mut String）\\nfn ___(___: &mut ___) {\\n    // push_strでsに\" world\"を追加\\n    ___.___(\\\"___\\\");\\n// ブロックを閉じる\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // let mutでtextを可変変数として初期化\\n    let mut ___ = ___::___(\\\"___\\\");\\n    // add_worldに&mut textを渡して呼び出す\\n    ___(&mut ___);\\n    // println!でtextを出力\\n    ___!(\\\"{}\\\", ___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
+          "// fnでadd_world関数を定義（引数s: &mut String）",
           "fn add_world(s: &mut String) {",
-          "    // push_strメソッドで\" world\"を追加",
+          "    // push_strでsに\" world\"を追加",
           "    s.push_str(\" world\");",
           "}",
           "fn main() {",
-          "    // mut で可変変数にする",
+          "    // let mutでtextを可変変数として初期化",
           "    let mut text = String::from(\"hello\");",
+          "    // add_worldに&mut textを渡して呼び出す",
           "    add_world(&mut text);",
+          "    // println!でtextを出力",
           "    println!(\"{}\", text);",
           "}"
         ],
@@ -195,15 +202,19 @@ export const rust2Data = {
           "content": "# struct キーワードで定義\\n\\n`struct 名前 { フィールド }` で構造体を定義します。フィールドには名前と型を書きます。\\n\\n**コード例：**\\n```rust\\n// Point 構造体を定義\\nstruct Point {\\n    x: i32,  // xフィールド（整数）\\n    y: i32,  // yフィールド（整数）\\n}\\n\\n// 使い方\\nlet p = Point { x: 10, y: 20 };\\nprintln!(\"x={}, y={}\", p.x, p.y);\\n```\\n\\n**ポイント：**\\n- `struct 名前` で構造体を作る\\n- `{ フィールド名: 型 }` でどんなデータを持つか決める\\n- `.フィールド名` でアクセス"
         }
       ],
-      "correctCode": "// Rect構造体を定義\\nstruct Rect {\\n    width: i32,\\n    height: i32,\\n}\\nfn main() {\\n    let r = Rect { width: 3, height: 4 };\\n    println!(\"{}\", r.width);\\n}", "holeyCode": "// Rect構造体を定義\\nstruct ___ {\\n    // フィールドを定義\\n    ___: ___,\\n    // フィールドを定義\\n    ___: ___,\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___ { ___: ___, ___: ___ };\\n    // 出力\\n    ___!(\\\"{}\\\", ___.___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "// structでRect構造体を定義\\nstruct Rect {\\n    // widthフィールド（i32型）\\n    width: i32,\\n    // heightフィールド（i32型）\\n    height: i32,\\n}\\nfn main() {\\n    // letでrにRectを作成（width=3, height=4）\\n    let r = Rect { width: 3, height: 4 };\\n    // println!でr.widthを出力\\n    println!(\"{}\", r.width);\\n}", "holeyCode": "// structでRect構造体を定義\\nstruct ___ {\\n    // widthフィールド（i32型）\\n    ___: ___,\\n    // heightフィールド（i32型）\\n    ___: ___,\\n// ブロックを閉じる\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // letでrにRectを作成（width=3, height=4）\\n    let ___ = ___ { ___: ___, ___: ___ };\\n    // println!でr.widthを出力\\n    ___!(\\\"{}\\\", ___.___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// Rect構造体を定義",
+          "// structでRect構造体を定義",
           "struct Rect {",
+          "    // widthフィールド（i32型）",
           "    width: i32,",
+          "    // heightフィールド（i32型）",
           "    height: i32,",
           "}",
           "fn main() {",
+          "    // letでrにRectを作成（width=3, height=4）",
           "    let r = Rect { width: 3, height: 4 };",
+          "    // println!でr.widthを出力",
           "    println!(\"{}\", r.width);",
           "}"
         ],
@@ -244,19 +255,25 @@ export const rust2Data = {
           "content": "# &self を使う\\n\\nメソッドの最初の引数は `&self` です。\\n\\n**コード例：**\\n```rust\\nimpl Rect {\\n    fn area(&self) -> i32 {\\n        self.width * self.height\\n    }\\n}\\n```"
         }
       ],
-      "correctCode": "struct Square {\\n    side: i32,\\n}\\n// impl でメソッドを実装\\nimpl Square {\\n    fn area(&self) -> i32 {\\n        self.side * self.side\\n    }\\n}\\nfn main() {\\n    let s = Square { side: 5 };\\n    println!(\"{}\", s.area());\\n}", "holeyCode": "// 構造体を定義\\nstruct ___ {\\n    // フィールドを定義\\n    ___: ___,\\n// ブロックを閉じる\\n___\\n// impl でメソッドを実装\\nimpl ___ {\\n    // area関数を定義\\n    fn ___(&___) -> ___ {\\n        // コードを記述\\n        ___.___ * ___.___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___ { ___: ___ };\\n    // 出力\\n    ___!(\\\"{}\\\", ___.___());\\n// ブロックを閉じる\\n___",
+      "correctCode": "// structでSquare構造体を定義\\nstruct Square {\\n    // sideフィールド（i32型）\\n    side: i32,\\n}\\n// implでSquareにメソッドを実装\\nimpl Square {\\n    // fnでareaメソッドを定義（&selfを受け取りi32を返す）\\n    fn area(&self) -> i32 {\\n        // self.side * self.sideを返す\\n        self.side * self.side\\n    }\\n}\\nfn main() {\\n    // letでsにSquareを作成（side=5）\\n    let s = Square { side: 5 };\\n    // println!でs.area()を出力\\n    println!(\"{}\", s.area());\\n}", "holeyCode": "// structでSquare構造体を定義\\nstruct ___ {\\n    // sideフィールド（i32型）\\n    ___: ___,\\n// ブロックを閉じる\\n___\\n// implでSquareにメソッドを実装\\nimpl ___ {\\n    // fnでareaメソッドを定義（&selfを受け取りi32を返す）\\n    fn ___(&___) -> ___ {\\n        // self.side * self.sideを返す\\n        ___.___ * ___.___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // letでsにSquareを作成（side=5）\\n    let ___ = ___ { ___: ___ };\\n    // println!でs.area()を出力\\n    ___!(\\\"{}\\\", ___.___());\\n// ブロックを閉じる\\n___",
       "correctLines": [
+          "// structでSquare構造体を定義",
           "struct Square {",
+          "    // sideフィールド（i32型）",
           "    side: i32,",
           "}",
-          "// impl でメソッドを実装",
+          "// implでSquareにメソッドを実装",
           "impl Square {",
+          "    // fnでareaメソッドを定義（&selfを受け取りi32を返す）",
           "    fn area(&self) -> i32 {",
+          "        // self.side * self.sideを返す",
           "        self.side * self.side",
           "    }",
           "}",
           "fn main() {",
+          "    // letでsにSquareを作成（side=5）",
           "    let s = Square { side: 5 };",
+          "    // println!でs.area()を出力",
           "    println!(\"{}\", s.area());",
           "}"
         ],
@@ -301,17 +318,23 @@ export const rust2Data = {
           "content": "# バリアントを列挙\\n\\n`enum 名前 { バリアント1, バリアント2, ... }` で定義します。\\n\\n**コード例：**\\n```rust\\nenum Color {\\n    Red,\\n    Green,\\n    Blue,\\n}\\nlet c = Color::Red;\\n```"
         }
       ],
-      "correctCode": "// Direction列挙型を定義\\nenum Direction {\\n    Up,\\n    Down,\\n}\\nfn main() {\\n    let d = Direction::Up;\\n    match d {\\n        Direction::Up => println!(\"上\"),\\n        Direction::Down => println!(\"下\"),\\n    }\\n}", "holeyCode": "// Direction列挙型を定義\\nenum ___ {\\n    // 列挙値\\n    ___,\\n    // 列挙値\\n    ___,\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___::___;\\n    // パターンマッチ\\n    match ___ {\\n        // 出力\\n        ___::___ => ___!(\\\"上\\\"),\\n        // 出力\\n        ___::___ => ___!(\\\"下\\\"),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// enumでDirection列挙型を定義\\nenum Direction {\\n    // Upバリアント\\n    Up,\\n    // Downバリアント\\n    Down,\\n}\\nfn main() {\\n    // letでdにDirection::Upを代入\\n    let d = Direction::Up;\\n    // matchでdをパターンマッチ\\n    match d {\\n        // Upなら「上」を出力\\n        Direction::Up => println!(\"上\"),\\n        // Downなら「下」を出力\\n        Direction::Down => println!(\"下\"),\\n    }\\n}", "holeyCode": "// enumでDirection列挙型を定義\\nenum ___ {\\n    // Upバリアント\\n    ___,\\n    // Downバリアント\\n    ___,\\n// ブロックを閉じる\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // letでdにDirection::Upを代入\\n    let ___ = ___::___;\\n    // matchでdをパターンマッチ\\n    match ___ {\\n        // Upなら「上」を出力\\n        ___::___ => ___!(\\\"上\\\"),\\n        // Downなら「下」を出力\\n        ___::___ => ___!(\\\"下\\\"),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// Direction列挙型を定義",
+          "// enumでDirection列挙型を定義",
           "enum Direction {",
+          "    // Upバリアント",
           "    Up,",
+          "    // Downバリアント",
           "    Down,",
           "}",
           "fn main() {",
+          "    // letでdにDirection::Upを代入",
           "    let d = Direction::Up;",
+          "    // matchでdをパターンマッチ",
           "    match d {",
+          "        // Upなら「上」を出力",
           "        Direction::Up => println!(\"上\"),",
+          "        // Downなら「下」を出力",
           "        Direction::Down => println!(\"下\"),",
           "    }",
           "}"
@@ -356,13 +379,16 @@ export const rust2Data = {
           "content": "# match で安全に取り出す\\n\\n`match` を使って「ある場合」と「ない場合」で処理を分けます。\\n\\n**コード例：**\\n```rust\\nlet x: Option<i32> = Some(5);  // 値あり\\n\\nmatch x {\\n    Some(n) => println!(\"値は{}です\", n),  // 5\\n    None => println!(\"値がありません\"),\\n}\\n```\\n\\n**なぜ安全？**\\n- `null` のように「あるつもりでアクセスしたら無かった」エラーが起きない\\n- 「ない場合」の処理を書かないとコンパイルエラーになる\\n- 強制的に両方のケースを考えることになる！"
         }
       ],
-      "correctCode": "fn main() {\\n    // Some で値があることを示す\\n    let val: Option<i32> = Some(42);\\n    match val {\\n        Some(n) => println!(\"{}\", n),\\n        None => println!(\"none\"),\\n    }\\n}", "holeyCode": "// main関数を定義\\nfn ___() {\\n    // Some で値があることを示す\\n    let ___: ___<___> = ___(___);\\n    // パターンマッチ\\n    match ___ {\\n        // 出力\\n        ___(___) => ___!(\\\"___\\\", ___),\\n        // \\\"\\\"\\n        ___ => ___!(\\\"___\\\"),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "fn main() {\\n    // letでvalにSome(42)を代入（Option<i32>型）\\n    let val: Option<i32> = Some(42);\\n    // matchでvalをパターンマッチ\\n    match val {\\n        // Some(n)ならnを出力\\n        Some(n) => println!(\"{}\", n),\\n        // Noneなら\"none\"を出力\\n        None => println!(\"none\"),\\n    }\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___() {\\n    // letでvalにSome(42)を代入（Option<i32>型）\\n    let ___: ___<___> = ___(___);\\n    // matchでvalをパターンマッチ\\n    match ___ {\\n        // Some(n)ならnを出力\\n        ___(___) => ___!(\\\"___\\\", ___),\\n        // Noneなら\"none\"を出力\\n        ___ => ___!(\\\"___\\\"),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "fn main() {",
-          "    // Some で値があることを示す",
+          "    // letでvalにSome(42)を代入（Option<i32>型）",
           "    let val: Option<i32> = Some(42);",
+          "    // matchでvalをパターンマッチ",
           "    match val {",
+          "        // Some(n)ならnを出力",
           "        Some(n) => println!(\"{}\", n),",
+          "        // Noneなら\"none\"を出力",
           "        None => println!(\"none\"),",
           "    }",
           "}"
@@ -403,18 +429,24 @@ export const rust2Data = {
           "content": "# match で成功と失敗を分ける\\n\\n`match` で「成功したら」「失敗したら」の処理を書き分けます。\\n\\n**コード例：**\\n```rust\\nfn divide(a: i32, b: i32) -> Result<i32, String> {\\n    if b == 0 {\\n        return Err(\"0で割れません\".to_string());\\n    }\\n    Ok(a / b)  // 成功なら答えを返す\\n}\\n\\nmatch divide(10, 2) {\\n    Ok(v) => println!(\"答えは{}\", v),\\n    Err(e) => println!(\"エラー: {}\", e),\\n}\\n```\\n\\n**ポイント：**\\n- `Ok(値)` で成功を返す\\n- `Err(エラー)` で失敗を返す"
         }
       ],
-      "correctCode": "fn half(n: i32) -> Result<i32, String> {\\n    if n % 2 != 0 {\\n        return Err(\"odd\".to_string());\\n    }\\n    // Ok で成功を返す\\n    Ok(n / 2)\\n}\\nfn main() {\\n    match half(10) {\\n        Ok(v) => println!(\"{}\", v),\\n        Err(e) => println!(\"{}\", e),\\n    }\\n}", "holeyCode": "// half関数を定義\\nfn ___(___: ___) -> ___<___, ___> {\\n    // 条件分岐\\n    if ___ % ___ != ___ {\\n        // \\\"\\\"\\n        return ___(\\\"___\\\".___());\\n    // ブロックを閉じる\\n    ___\\n    // Ok で成功を返す\\n    ___(___ / ___)\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfn ___() {\\n    // パターンマッチ\\n    match ___(___) {\\n        // 出力\\n        ___(___) => ___!(\\\"___\\\", ___),\\n        // 出力\\n        ___(___) => ___!(\\\"___\\\", ___),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fnでhalf関数を定義（n: i32を受け取りResult<i32, String>を返す）\\nfn half(n: i32) -> Result<i32, String> {\\n    // ifでnが奇数か判定\\n    if n % 2 != 0 {\\n        // Errで\"odd\"エラーを返す\\n        return Err(\"odd\".to_string());\\n    }\\n    // Okでn/2を返す\\n    Ok(n / 2)\\n}\\nfn main() {\\n    // matchでhalf(10)をパターンマッチ\\n    match half(10) {\\n        // Ok(v)ならvを出力\\n        Ok(v) => println!(\"{}\", v),\\n        // Err(e)ならeを出力\\n        Err(e) => println!(\"{}\", e),\\n    }\\n}", "holeyCode": "// fnでhalf関数を定義（n: i32を受け取りResult<i32, String>を返す）\\nfn ___(___: ___) -> ___<___, ___> {\\n    // ifでnが奇数か判定\\n    if ___ % ___ != ___ {\\n        // Errで\"odd\"エラーを返す\\n        return ___(\\\"___\\\".___());\\n    // ブロックを閉じる\\n    ___\\n    // Okでn/2を返す\\n    ___(___ / ___)\\n// ブロックを閉じる\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // matchでhalf(10)をパターンマッチ\\n    match ___(___) {\\n        // Ok(v)ならvを出力\\n        ___(___) => ___!(\\\"___\\\", ___),\\n        // Err(e)ならeを出力\\n        ___(___) => ___!(\\\"___\\\", ___),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
+          "// fnでhalf関数を定義（n: i32を受け取りResult<i32, String>を返す）",
           "fn half(n: i32) -> Result<i32, String> {",
+          "    // ifでnが奇数か判定",
           "    if n % 2 != 0 {",
+          "        // Errで\"odd\"エラーを返す",
           "        return Err(\"odd\".to_string());",
           "    }",
-          "    // Ok で成功を返す",
+          "    // Okでn/2を返す",
           "    Ok(n / 2)",
           "}",
           "fn main() {",
+          "    // matchでhalf(10)をパターンマッチ",
           "    match half(10) {",
+          "        // Ok(v)ならvを出力",
           "        Ok(v) => println!(\"{}\", v),",
+          "        // Err(e)ならeを出力",
           "        Err(e) => println!(\"{}\", e),",
           "    }",
           "}"
@@ -460,21 +492,27 @@ export const rust2Data = {
           "content": "# 約束を作って、守る\\n\\n1. `trait` で「約束」を定義\\n2. `impl トレイト for 型` で「約束を守る」実装をする\\n\\n**コード例：**\\n```rust\\n// 1. トレイト（約束）を定義\\ntrait Speak {\\n    fn speak(&self);  // 鳴くメソッドを持つ約束\\n}\\n\\n// 2. Dog構造体がトレイトを実装\\nstruct Dog;\\nimpl Speak for Dog {\\n    fn speak(&self) {\\n        println!(\"ワン！\");\\n    }\\n}\\n```\\n\\n「DogはSpeakができる」ということになります。"
         }
       ],
-      "correctCode": "// Speakトレイトを定義\\ntrait Speak {\\n    fn speak(&self);\\n}\\nstruct Dog;\\nimpl Speak for Dog {\\n    fn speak(&self) {\\n        println!(\"ワン！\");\\n    }\\n}\\nfn main() {\\n    let d = Dog;\\n    // dでspeakメソッドを実行して鳴き声を出力\\n    d.speak();\\n}", "holeyCode": "// Speakトレイトを定義\\ntrait ___ {\\n    // 文を実行\\n    fn ___(&___);\\n// ブロックを閉じる\\n___\\n// 文を実行\\nstruct ___;\\n// 実装ブロックを開始\\nimpl ___ for ___ {\\n    // speak関数を定義\\n    fn ___(&___) {\\n        // 出力\\n        ___!(\\\"ワン！\\\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfn ___() {\\n    // 変数を宣言\\n    let ___ = ___;\\n    // dでspeakメソッドを実行して鳴き声を出力\\n    ___.___();\\n// ブロックを閉じる\\n___",
+      "correctCode": "// traitでSpeakトレイトを定義\\ntrait Speak {\\n    // fnでspeakメソッドを宣言（&selfを受け取る）\\n    fn speak(&self);\\n}\\n// structでDog構造体を定義\\nstruct Dog;\\n// implでDogにSpeakを実装\\nimpl Speak for Dog {\\n    // fnでspeakメソッドを定義\\n    fn speak(&self) {\\n        // println!で「ワン！」を出力\\n        println!(\"ワン！\");\\n    }\\n}\\nfn main() {\\n    // letでdにDogを代入\\n    let d = Dog;\\n    // d.speak()でspeakメソッドを呼び出して鳴き声を出力\\n    d.speak();\\n}", "holeyCode": "// traitでSpeakトレイトを定義\\ntrait ___ {\\n    // fnでspeakメソッドを宣言（&selfを受け取る）\\n    fn ___(&___);\\n// ブロックを閉じる\\n___\\n// structでDog構造体を定義\\nstruct ___;\\n// implでDogにSpeakを実装\\nimpl ___ for ___ {\\n    // fnでspeakメソッドを定義\\n    fn ___(&___) {\\n        // println!で「ワン！」を出力\\n        ___!(\\\"ワン！\\\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // letでdにDogを代入\\n    let ___ = ___;\\n    // d.speak()でspeakメソッドを呼び出して鳴き声を出力\\n    ___.___();\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// Speakトレイトを定義",
+          "// traitでSpeakトレイトを定義",
           "trait Speak {",
+          "    // fnでspeakメソッドを宣言（&selfを受け取る）",
           "    fn speak(&self);",
           "}",
+          "// structでDog構造体を定義",
           "struct Dog;",
+          "// implでDogにSpeakを実装",
           "impl Speak for Dog {",
+          "    // fnでspeakメソッドを定義",
           "    fn speak(&self) {",
+          "        // println!で「ワン！」を出力",
           "        println!(\"ワン！\");",
           "    }",
           "}",
           "fn main() {",
+          "    // letでdにDogを代入",
           "    let d = Dog;",
-          "    // dでspeakメソッドを実行して鳴き声を出力",
+          "    // d.speak()でspeakメソッドを呼び出して鳴き声を出力",
           "    d.speak();",
           "}"
         ],
@@ -521,14 +559,17 @@ export const rust2Data = {
           "content": "# <T> で型を「あとで決める」\\n\\n関数名の後に `<T>` をつけて、`T` を「型」として使います。\\n\\n**コード例：**\\n```rust\\n// Tはどんな型でもOK\\nfn first<T>(arr: &[T]) -> &T {\\n    &arr[0]  // 最初の要素を返す\\n}\\n\\n// 使い方\\nfirst(&[1, 2, 3]);         // Tはi32\\nfirst(&[\"a\", \"b\", \"c\"]);   // Tは&str\\n```\\n\\n**読み方：**\\n- `<T>` → 「Tという名前の型を使うよ」\\n- `T` は慣習で「Type（型）」の頭文字\\n- 複数の型が必要なら `<T, U>` のように書く"
         }
       ],
-      "correctCode": "// T を型パラメータとして使う\\nfn print_val<T: std::fmt::Display>(val: T) {\\n    println!(\"{}\", val);\\n}\\nfn main() {\\n    print_val(42);\\n    print_val(\"こんにちは\");\\n}", "holeyCode": "// T を型パラメータとして使う\\nfn ___<___: ___::___::___>(___: ___) {\\n    // 出力\\n    ___!(\\\"{}\\\", ___);\\n// ブロックを閉じる\\n___\\n// main関数を定義\\nfn ___() {\\n    // 出力\\n    ___(___);\\n    // \\\"\\\"\\n    ___(\\\"こんにちは\\\");\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fnでprint_val関数を定義（ジェネリック型T: Display）\\nfn print_val<T: std::fmt::Display>(val: T) {\\n    // println!でvalを出力\\n    println!(\"{}\", val);\\n}\\nfn main() {\\n    // print_valに42を渡して出力\\n    print_val(42);\\n    // print_valに文字列を渡して出力\\n    print_val(\"こんにちは\");\\n}", "holeyCode": "// fnでprint_val関数を定義（ジェネリック型T: Display）\\nfn ___<___: ___::___::___>(___: ___) {\\n    // println!でvalを出力\\n    ___!(\\\"{}\\\", ___);\\n// ブロックを閉じる\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // print_valに42を渡して出力\\n    ___(___);\\n    // print_valに文字列を渡して出力\\n    ___(\\\"こんにちは\\\");\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// T を型パラメータとして使う",
+          "// fnでprint_val関数を定義（ジェネリック型T: Display）",
           "fn print_val<T: std::fmt::Display>(val: T) {",
+          "    // println!でvalを出力",
           "    println!(\"{}\", val);",
           "}",
           "fn main() {",
+          "    // print_valに42を渡して出力",
           "    print_val(42);",
+          "    // print_valに文字列を渡して出力",
           "    print_val(\"こんにちは\");",
           "}"
         ],

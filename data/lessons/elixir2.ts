@@ -177,10 +177,10 @@ export const elixir2Data = {
           "content": "# 無名関数を渡す\\n\\n`fn x -> x * 2 end` のような無名関数を渡します。\\n\\n**コード例：**\\n```elixir\\nEnum.map([1, 2, 3], fn x -> x * 2 end)\\n# [2, 4, 6]\\n```"
         }
       ],
-      "correctCode": "# mapで各要素を変換\\nresult = Enum.map([1, 2, 3], fn x -> x * x end)\\n# resultを入力\\nIO.inspect result",
-      "holeyCode": "# mapで各要素を変換\\n___ = ___.___([___, ___, ___], fn ___ -> ___ * ___ end)\\n# resultを入力\\n___.___ ___",
+      "correctCode": "# 配列の各要素を2乗してresultに代入\\nresult = Enum.map([1, 2, 3], fn x -> x * x end)\\n# resultを入力\\nIO.inspect result",
+      "holeyCode": "# 配列の各要素を2乗してresultに代入\\n___ = ___.___([___, ___, ___], fn ___ -> ___ * ___ end)\\n# resultを入力\\n___.___ ___",
       "correctLines": [
-          "# mapで各要素を変換",
+          "# 配列の各要素を2乗してresultに代入",
           "result = Enum.map([1, 2, 3], fn x -> x * x end)",
           "# resultを入力",
           "IO.inspect result"
