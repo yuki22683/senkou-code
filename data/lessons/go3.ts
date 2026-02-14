@@ -204,7 +204,7 @@ export const go3Data = {
           "content": "# 速くて効率的になる\\n\\nスライスに `append` で要素を追加していくと、容量が足りなくなるたびに新しい場所を確保し直します。これは時間がかかります。\\n\\n**make で先に場所を確保：**\\n```go\\n// 最初から100個分の場所を確保\\nresult := make([]int, 0, 100)\\n\\nfor i := 0; i < 100; i++ {\\n    result = append(result, i)  // 場所の確保し直しが不要！\\n}\\n```\\n\\n「100個追加する」とわかっているなら、先に100個分の場所を用意しておく方が効率的です。"
         }
       ],
-      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でnumsに長さ3のint型スライスを作成して代入\\n    nums := make([]int, 3)\\n    // nums[0]に10を代入\\n    nums[0] = 10\\n    // nums[1]に20を代入\\n    nums[1] = 20\\n    // nums[2]に30を代入\\n    nums[2] = 30\\n    // fmt.Printlnでnumsを出力\\n    fmt.Println(nums)\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n\\n// func mainでmain関数を定義\\nfunc ___() {\\n    // :=でnumsに長さ3のint型スライスを作成して代入\\n    ___ := ___([]___, ___)\\n    // nums[0]に10を代入\\n    ___[___] = ___\\n    // nums[1]に20を代入\\n    ___[___] = ___\\n    // nums[2]に30を代入\\n    ___[___] = ___\\n    // fmt.Printlnでnumsを出力\\n    ___.___(___\\n// ブロックを閉じる\\n}",
+      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でnumsに長さ3のint型スライスを作成して代入\\n    nums := make([]int, 3)\\n    // numsのインデックス0に10を代入\\n    nums[0] = 10\\n    // numsのインデックス1に20を代入\\n    nums[1] = 20\\n    // numsのインデックス2に30を代入\\n    nums[2] = 30\\n    // fmt.Printlnでnumsを出力\\n    fmt.Println(nums)\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n\\n// func mainでmain関数を定義\\nfunc ___() {\\n    // :=でnumsに長さ3のint型スライスを作成して代入\\n    ___ := ___([]___, ___)\\n    // numsのインデックス0に10を代入\\n    ___[___] = ___\\n    // numsのインデックス1に20を代入\\n    ___[___] = ___\\n    // numsのインデックス2に30を代入\\n    ___[___] = ___\\n    // fmt.Printlnでnumsを出力\\n    ___.___(___\\n// ブロックを閉じる\\n}",
       "correctLines": [
           "// package mainでモジュールを宣言",
           "package main",
@@ -216,11 +216,11 @@ export const go3Data = {
           "func main() {",
           "    // :=でnumsに長さ3のint型スライスを作成して代入",
           "    nums := make([]int, 3)",
-          "    // nums[0]に10を代入",
+          "    // numsのインデックス0に10を代入",
           "    nums[0] = 10",
-          "    // nums[1]に20を代入",
+          "    // numsのインデックス1に20を代入",
           "    nums[1] = 20",
-          "    // nums[2]に30を代入",
+          "    // numsのインデックス2に30を代入",
           "    nums[2] = 30",
           "    // fmt.Printlnでnumsを出力",
           "    fmt.Println(nums)",

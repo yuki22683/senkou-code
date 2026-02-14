@@ -45,7 +45,7 @@ export const go2Data = {
           "content": "# カッコで複数の型を指定\\n\\n戻り値の型を `(型1, 型2)` のように、かっこで囲んで書きます。\\n\\n**コード例：**\\n```go\\n// わり算の答えとあまりを両方返す関数\\nfunc divide(a, b int) (int, int) {\\n    return a / b, a % b  // 2つの値を返す\\n}\\n\\n// 2つの変数で受け取る\\nq, r := divide(10, 3)\\n// q=3（答え）, r=1（あまり）\\n```\\n\\n**ポイント：**\\n- `return` のあとにカンマで区切って複数の値を書く\\n- 受け取るときもカンマで区切った変数で受ける"
         }
       ],
-      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func minmaxで2つの整数を受け取り2つの整数を返す関数を定義\\nfunc minmax(a, b int) (int, int) {\\n    // ifでaがbより小さいか判定\\n    if a < b {\\n        // a, bの順でreturn\\n        return a, b\\n    }\\n    // b, aの順でreturn\\n    return b, a\\n}\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でmin, maxにminmax(5, 3)の戻り値を代入\\n    min, max := minmax(5, 3)\\n    // fmt.Printlnでminとmaxを出力\\n    fmt.Println(min, max)\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \\\"___\\\"\\n// func minmaxで2つの整数を受け取り2つの整数を返す関数を定義\\nfunc ___(___,  ___ ___) (___, ___) {\\n    // ifでaがbより小さいか判定\\n    if ___ < ___ {\\n        // a, bの順でreturn\\n        return ___, ___\\n    // ブロックを閉じる\\n    ___\\n    // b, aの順でreturn\\n    return ___, ___\\n// ブロックを閉じる\\n___\\n// func mainでmain関数を定義\\nfunc ___() {\\n    // :=でmin, maxにminmax(5, 3)の戻り値を代入\\n    ___, ___ := ___(___, ___)\\n    // fmt.Printlnでminとmaxを出力\\n    ___.___(___,  ___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func minmaxで2つの整数を受け取り2つの整数を返す関数を定義\\nfunc minmax(a, b int) (int, int) {\\n    // ifでaがbより小さいか判定\\n    if a < b {\\n        // a, bの順でreturn\\n        return a, b\\n    }\\n    // b, aの順でreturn\\n    return b, a\\n}\\n// func mainでmain関数を定義\\nfunc main() {\\n    // minmax関数（引数5と3）の戻り値をmin, maxに代入\\n    min, max := minmax(5, 3)\\n    // fmt.Printlnでminとmaxを出力\\n    fmt.Println(min, max)\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \\\"___\\\"\\n// func minmaxで2つの整数を受け取り2つの整数を返す関数を定義\\nfunc ___(___,  ___ ___) (___, ___) {\\n    // ifでaがbより小さいか判定\\n    if ___ < ___ {\\n        // a, bの順でreturn\\n        return ___, ___\\n    // ブロックを閉じる\\n    ___\\n    // b, aの順でreturn\\n    return ___, ___\\n// ブロックを閉じる\\n___\\n// func mainでmain関数を定義\\nfunc ___() {\\n    // minmax関数（引数5と3）の戻り値をmin, maxに代入\\n    ___, ___ := ___(___, ___)\\n    // fmt.Printlnでminとmaxを出力\\n    ___.___(___,  ___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// package mainでモジュールを宣言",
           "package main",
@@ -63,7 +63,7 @@ export const go2Data = {
           "}",
           "// func mainでmain関数を定義",
           "func main() {",
-          "    // :=でmin, maxにminmax(5, 3)の戻り値を代入",
+          "    // minmax関数（引数5と3）の戻り値をmin, maxに代入",
           "    min, max := minmax(5, 3)",
           "    // fmt.Printlnでminとmaxを出力",
           "    fmt.Println(min, max)",

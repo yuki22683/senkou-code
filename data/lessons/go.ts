@@ -150,7 +150,7 @@ export const goData = {
                       "content": "# % で余り\\n\\n```go\\nx := 7 % 3  // 7÷3の余り = 1\\n```\\n\\n偶数・奇数の判定に便利！"
               }
       ],
-      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でaに4を代入\\n    a := 4\\n    // :=でbに3を代入\\n    b := 3\\n    // fmt.Printlnでa * bの結果を出力\\n    fmt.Println(a * b)\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // :=でaに4を代入\\n    ___ := ___\\n    // :=でbに3を代入\\n    ___ := ___\\n    // fmt.Printlnでa * bの結果を出力\\n    ___.___(___  ___ ___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でaに4を代入\\n    a := 4\\n    // :=でbに3を代入\\n    b := 3\\n    // aとbの積を出力\\n    fmt.Println(a * b)\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // :=でaに4を代入\\n    ___ := ___\\n    // :=でbに3を代入\\n    ___ := ___\\n    // aとbの積を出力\\n    ___.___(___  ___ ___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// package mainでモジュールを宣言",
           "package main",
@@ -162,7 +162,7 @@ export const goData = {
           "    a := 4",
           "    // :=でbに3を代入",
           "    b := 3",
-          "    // fmt.Printlnでa * bの結果を出力",
+          "    // aとbの積を出力",
           "    fmt.Println(a * b)",
           "}"
         ],
@@ -203,7 +203,7 @@ export const goData = {
           "content": "# 便利な使い方：偶数と奇数\\n\\n`%` を使うと、数が偶数か奇数かを調べられます。\\n\\n**考え方：**\\n- 2で割ってあまりが **0** → 偶数（2, 4, 6, 8...）\\n- 2で割ってあまりが **1** → 奇数（1, 3, 5, 7...）\\n\\n```go\\nn := 7\\nif n % 2 == 1 {\\n    fmt.Println(\"奇数\")  // 7÷2=3あまり1 なので奇数！\\n}\\n```\\n\\nゲームで「1つおきに色を変える」などに使えます！"
         }
       ],
-      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // fmt.Printlnで10 % 3（あまり）を出力\\n    fmt.Println(10 % 3)\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // fmt.Printlnで10 % 3（あまり）を出力\\n    ___.___(___  ___ ___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // 10を3で割った余りを出力\\n    fmt.Println(10 % 3)\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // 10を3で割った余りを出力\\n    ___.___(___  ___ ___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// package mainでモジュールを宣言",
           "package main",
@@ -211,7 +211,7 @@ export const goData = {
           "import \"fmt\"",
           "// func mainでmain関数を定義",
           "func main() {",
-          "    // fmt.Printlnで10 % 3（あまり）を出力",
+          "    // 10を3で割った余りを出力",
           "    fmt.Println(10 % 3)",
           "}"
         ],
@@ -361,7 +361,7 @@ export const goData = {
           "content": "# [ ]（角かっこ）で取り出す\\n\\nスライスの中身を取り出すときは、`[番号]` で何番目かを指定します。\\n\\n**大事なルール：番号は「0」からスタート！**\\n- 1番目のデータ → `[0]`\\n- 2番目のデータ → `[1]`\\n- 3番目のデータ → `[2]`\\n\\n**コード例：**\\n```go\\nitems := []int{100, 200, 300}\\n//            ↑0番  ↑1番  ↑2番\\nfmt.Println(items[0]) // 100 が表示されます\\nfmt.Println(items[1]) // 200 が表示されます\\n```\\n\\nプログラミングでは「0から数える」のが世界共通のルールです！"
         }
       ],
-      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でnumsに整数スライス（10、20）を代入\\n    nums := []int{10, 20}\\n    // fmt.Printlnでnums[1]（2番目の要素）を出力\\n    fmt.Println(nums[1])\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // :=でnumsに整数スライス（10、20）を代入\\n    ___ := []___  {___, ___}\\n    // fmt.Printlnでnums[1]（2番目の要素）を出力\\n    ___.___(___[___])\\n// ブロックを閉じる\\n___",
+      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でnumsに整数スライス（10、20）を代入\\n    nums := []int{10, 20}\\n    // numsの2番目の要素を出力\\n    fmt.Println(nums[1])\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // :=でnumsに整数スライス（10、20）を代入\\n    ___ := []___  {___, ___}\\n    // numsの2番目の要素を出力\\n    ___.___(___[___])\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// package mainでモジュールを宣言",
           "package main",
@@ -371,7 +371,7 @@ export const goData = {
           "func main() {",
           "    // :=でnumsに整数スライス（10、20）を代入",
           "    nums := []int{10, 20}",
-          "    // fmt.Printlnでnums[1]（2番目の要素）を出力",
+          "    // numsの2番目の要素を出力",
           "    fmt.Println(nums[1])",
           "}"
         ],
@@ -649,7 +649,7 @@ export const goData = {
           "content": "# 名前で取り出す\\n\\nMapでは「名前（キー）」と「データ（値）」をセットで保存します。取り出すときは名前を指定するだけ！\\n\\n**コード例：**\\n```go\\n// りんご→あか、バナナ→きいろ のペアを作る\\ncolors := map[string]string{\\n    \"りんご\": \"あか\",\\n    \"バナナ\": \"きいろ\",\\n}\\nfmt.Println(colors[\"りんご\"])  // あか が表示される\\n```\\n\\n**書き方のポイント：**\\n- `map[キーの種類]値の種類` で型を決める\\n- `{\"キー\": \"値\"}` でデータを入れる\\n- `マップ名[\"キー\"]` で取り出す"
         }
       ],
-      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でscoresにmap[string]int型のマップ（Mathに90）を代入\\n    scores := map[string]int{\"Math\": 90}\\n    // fmt.Printlnでscores[\"Math\"]の値を出力\\n    fmt.Println(scores[\"Math\"])\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // :=でscoresにmap[string]int型のマップ（Mathに90）を代入\\n    ___ := ___[___]___  {\\\"___\\\": ___}\\n    // fmt.Printlnでscores[\"Math\"]の値を出力\\n    ___.___(___[\\\"___\\\"])\\n// ブロックを閉じる\\n___",
+      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // scoresに文字列キー整数値型マップ（Mathに90）を代入\\n    scores := map[string]int{\"Math\": 90}\\n    // scoresのMathキーの値を出力\\n    fmt.Println(scores[\"Math\"])\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // scoresに文字列キー整数値型マップ（Mathに90）を代入\\n    ___ := ___[___]___  {\\\"___\\\": ___}\\n    // scoresのMathキーの値を出力\\n    ___.___(___[\\\"___\\\"])\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// package mainでモジュールを宣言",
           "package main",
@@ -657,9 +657,9 @@ export const goData = {
           "import \"fmt\"",
           "// func mainでmain関数を定義",
           "func main() {",
-          "    // :=でscoresにmap[string]int型のマップ（Mathに90）を代入",
+          "    // scoresに文字列キー整数値型マップ（Mathに90）を代入",
           "    scores := map[string]int{\"Math\": 90}",
-          "    // fmt.Printlnでscores[\"Math\"]の値を出力",
+          "    // scoresのMathキーの値を出力",
           "    fmt.Println(scores[\"Math\"])",
           "}"
         ],

@@ -37,19 +37,19 @@ export const pythonData5 = {
           "content": "# 安全にファイルを扱う\\n\\n**with文（ウィズぶん）** を使うと、**ファイルが自動的に閉じられます**。\\n\\n**たとえ話：** 冷蔵庫（ファイル）を開けたら、使い終わったら必ず閉める必要があります。\\n- with文なし: 自分で閉めないといけない（忘れるとトラブル！）\\n- with文あり: 自動で閉まる（安心！）\\n\\n**ファイルを開くときのモード：**\\n- `'r'` = 読み込み（Read）モード\\n- `'w'` = 書き込み（Write）モード（上書き）\\n- `'a'` = 追記（Append）モード\\n\\n**例：** ファイルを読み込もう！\\n\\n```python\\nwith open('file.txt', 'r') as f:\\n    content = f.read()  # 全部読む\\n    print(content)\\n# ← ここでファイルは自動で閉じられる！\\n```\\n\\n**何をしているか：**\\n1. `open('file.txt', 'r')` でファイルを読み込みモードで開く\\n2. `as f` でファイルオブジェクトを `f` という名前で使う\\n3. `f.read()` でファイルの中身を全部読む\\n4. `with` のブロックを抜けたら自動でファイルが閉じる"
         }
       ],
-      "correctCode": "# ファイル名を変数に保存\\nfilename = 'テスト.txt'\\n# 書き込みモードでファイルを開く\\nwith open(filename, 'w') as f:\\n    # テキストを書き込む\\n    f.write('こんにちは, Python!')\\n\\n# 読み込みモードでファイルを開く\\nwith open(filename, 'r') as f:\\n    # 内容を読み込んで表示\\n    print(f.read())",
-      "holeyCode": "# ファイル名を変数に保存\\n___ = '___'\\n# 書き込みモードでファイルを開く\\nwith ___(___,  '___') as ___:\\n    # テキストを書き込む\\n    ___.___('___')\\n\\n# 読み込みモードでファイルを開く\\nwith ___(___, '___') as ___:\\n    # 内容を読み込んで表示\\n    ___(___.___())",
+      "correctCode": "# filenameに'テスト.txt'を代入\\nfilename = 'テスト.txt'\\n# withでfilenameを書き込みモードで開きfに代入\\nwith open(filename, 'w') as f:\\n    # fのwriteメソッドで「こんにちは, Python!」を書き込む\\n    f.write('こんにちは, Python!')\\n\\n# withでfilenameを読み込みモードで開きfに代入\\nwith open(filename, 'r') as f:\\n    # print関数でfのreadメソッドの結果を表示\\n    print(f.read())",
+      "holeyCode": "# filenameに'テスト.txt'を代入\\n___ = '___'\\n# withでfilenameを書き込みモードで開きfに代入\\nwith ___(___,  '___') as ___:\\n    # fのwriteメソッドで「こんにちは, Python!」を書き込む\\n    ___.___('___')\\n\\n# withでfilenameを読み込みモードで開きfに代入\\nwith ___(___, '___') as ___:\\n    # print関数でfのreadメソッドの結果を表示\\n    ___(___.___())",
       "correctLines": [
-          "# ファイル名を変数に保存",
+          "# filenameに'テスト.txt'を代入",
           "filename = 'テスト.txt'",
-          "# 書き込みモードでファイルを開く",
+          "# withでfilenameを書き込みモードで開きfに代入",
           "with open(filename, 'w') as f:",
-          "    # テキストを書き込む",
+          "    # fのwriteメソッドで「こんにちは, Python!」を書き込む",
           "    f.write('こんにちは, Python!')",
           "",
-          "# 読み込みモードでファイルを開く",
+          "# withでfilenameを読み込みモードで開きfに代入",
           "with open(filename, 'r') as f:",
-          "    # 内容を読み込んで表示",
+          "    # print関数でfのreadメソッドの結果を表示",
           "    print(f.read())"
         ],
       "lineHints": [

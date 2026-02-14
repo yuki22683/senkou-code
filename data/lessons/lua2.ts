@@ -219,15 +219,15 @@ export const lua2Data = {
           "content": "# return で値を返す\\n\\n`return` で値を返します。\\n\\n**コード例：**\\n```lua\\nlocal function add(a, b)\\n    return a + b\\nend\\n```"
         }
       ],
-      "correctCode": "-- functionで関数を定義\\nlocal function double(n)\\n    -- n * 2を返す\\n    return n * 2\\nend\\n-- double(5)を呼び出す\\nprint(double(5))",
-      "holeyCode": "-- functionで関数を定義\\nlocal function ___(___)\\n    -- n * 2を返す\\n    return ___ * ___\\n-- ブロックを終了\\n___\\n-- double(5)を呼び出す\\n___(___(___))",
+      "correctCode": "-- functionで関数を定義\\nlocal function double(n)\\n    -- nの2倍を返す\\n    return n * 2\\nend\\n-- double関数（引数5）を呼び出す\\nprint(double(5))",
+      "holeyCode": "-- functionで関数を定義\\nlocal function ___(___)\\n    -- nの2倍を返す\\n    return ___ * ___\\n-- ブロックを終了\\n___\\n-- double関数（引数5）を呼び出す\\n___(___(___))",
       "correctLines": [
           "-- functionで関数を定義",
           "local function double(n)",
-          "    -- n * 2を返す",
+          "    -- nの2倍を返す",
           "    return n * 2",
           "end",
-          "-- double(5)を呼び出す",
+          "-- double関数（引数5）を呼び出す",
           "print(double(5))"
         ],
       "lineHints": [
@@ -244,7 +244,7 @@ export const lua2Data = {
             "function", "return"
           ],
           "numbers": ["2", "5"],
-          "others": ["*", "n", "double", "end", "print", "-- double(5)を呼び出す"]
+          "others": ["*", "n", "double", "end", "print", "-- double関数（引数5）を呼び出す"]
         },
         "testCases": [
           {
@@ -370,8 +370,8 @@ export const lua2Data = {
           "content": "# メタテーブルを設定\\n\\n`setmetatable(t, mt)` でメタテーブルを設定します。\\n\\n**コード例：**\\n```lua\\nlocal mt = { __add = function(a, b) ... end }\\nsetmetatable(t, mt)\\n```"
         }
       ],
-      "correctCode": "-- 空のテーブルを作成\\nlocal t = {}\\n-- メタテーブルを作成\\nlocal mt = { __index = { x = 10 } }\\n-- setmetatableでメタテーブルを設定\\nsetmetatable(t, mt)\\n-- t.xを表示\\nprint(t.x)",
-      "holeyCode": "-- 空のテーブルを作成\\nlocal ___ = {}\\n-- メタテーブルを作成\\nlocal ___ = { ___ = { ___ = ___ } }\\n-- setmetatableでメタテーブルを設定\\n___(___, ___)\\n-- t.xを表示\\n___(___.___)",
+      "correctCode": "-- 空のテーブルを作成\\nlocal t = {}\\n-- メタテーブルを作成\\nlocal mt = { __index = { x = 10 } }\\n-- setmetatableでメタテーブルを設定\\nsetmetatable(t, mt)\\n-- tのxを表示\\nprint(t.x)",
+      "holeyCode": "-- 空のテーブルを作成\\nlocal ___ = {}\\n-- メタテーブルを作成\\nlocal ___ = { ___ = { ___ = ___ } }\\n-- setmetatableでメタテーブルを設定\\n___(___, ___)\\n-- tのxを表示\\n___(___.___)",
       "correctLines": [
           "-- 空のテーブルを作成",
           "local t = {}",
@@ -379,7 +379,7 @@ export const lua2Data = {
           "local mt = { __index = { x = 10 } }",
           "-- setmetatableでメタテーブルを設定",
           "setmetatable(t, mt)",
-          "-- t.xを表示",
+          "-- tのxを表示",
           "print(t.x)"
         ],
       "lineHints": [

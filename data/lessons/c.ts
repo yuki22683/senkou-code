@@ -136,8 +136,8 @@ export const cData = {
                       "content": "# % で余り\\n\\n```go\\nx := 7 % 3  // 7÷3の余り = 1\\n```\\n\\n偶数・奇数の判定に便利！"
               }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int aでaを宣言し10を代入\\n    int a = 10;\\n    // int bでbを宣言し3を代入\\n    int b = 3;\\n    // printfでa - bの結果（7）を出力\\n    printf(\"%d\\n\", a - b);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int aでaを宣言し10を代入\\n    ___ ___ = ___;\\n    // int bでbを宣言し3を代入\\n    ___ ___ = ___;\\n    // printfでa - bの結果（7）を出力\\n    ___(\"___\", ___ ___ ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int aでaを宣言し10を代入\\n    int a = 10;\\n    // int bでbを宣言し3を代入\\n    int b = 3;\\n    // printfでaからbを引いた結果（7）を出力\\n    printf(\"%d\\n\", a - b);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int aでaを宣言し10を代入\\n    ___ ___ = ___;\\n    // int bでbを宣言し3を代入\\n    ___ ___ = ___;\\n    // printfでaからbを引いた結果（7）を出力\\n    ___(\"___\", ___ ___ ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -147,7 +147,7 @@ export const cData = {
           "    int a = 10;",
           "    // int bでbを宣言し3を代入",
           "    int b = 3;",
-          "    // printfでa - bの結果（7）を出力",
+          "    // printfでaからbを引いた結果（7）を出力",
           "    printf(\"%d\\n\", a - b);",
           "    // return 0で正常終了を返す",
           "    return 0;",
@@ -200,14 +200,14 @@ export const cData = {
                       "content": "# 偶数・奇数を調べよう\\n\\n```c\\nint n = 5;\\nif (n % 2 == 0) {\\n    // 偶数\\n} else {\\n    // 奇数\\n}\\n```\\n\\n2で割った余りが0なら偶数です！"
               }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // printfで10 % 3の結果（1）を出力\\n    printf(\"%d\\n\", 10 % 3);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // printfで10 % 3の結果（1）を出力\\n    ___(\"___\", ___ ___ ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // printfで10を3で割った余り（1）を出力\\n    printf(\"%d\\n\", 10 % 3);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // printfで10を3で割った余り（1）を出力\\n    ___(\"___\", ___ ___ ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
           "// int mainでmain関数を定義",
           "int main() {",
-          "    // printfで10 % 3の結果（1）を出力",
+          "    // printfで10を3で割った余り（1）を出力",
           "    printf(\"%d\\n\", 10 % 3);",
           "    // return 0で正常終了を返す",
           "    return 0;",
@@ -374,8 +374,8 @@ export const cData = {
                       "content": "# 番号（インデックス）でアクセス\\n\\n配列は0番目から始まります。\\n\\n```c\\nint a[3] = {10, 20, 30};\\nprintf(\"%d\", a[0]);  // 10\\nprintf(\"%d\", a[1]);  // 20\\n```"
               }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int nums[3]で配列numsを宣言し（10、20、30）で初期化\\n    int nums[3] = {10, 20, 30};\\n    // printfでnums[1]（インデックス1の要素20）を出力\\n    printf(\"%d\\n\", nums[1]);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int nums[3]で配列numsを宣言し（10、20、30）で初期化\\n    ___ ___[___] = {___, ___, ___};\\n    // printfでnums[1]（インデックス1の要素20）を出力\\n    ___(\"___\", ___[___]);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int nums[3]で配列numsを宣言し（10、20、30）で初期化\\n    int nums[3] = {10, 20, 30};\\n    // printfでnumsのインデックス1の要素（20）を出力\\n    printf(\"%d\\n\", nums[1]);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int nums[3]で配列numsを宣言し（10、20、30）で初期化\\n    ___ ___[___] = {___, ___, ___};\\n    // printfでnumsのインデックス1の要素（20）を出力\\n    ___(\"___\", ___[___]);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -383,7 +383,7 @@ export const cData = {
           "int main() {",
           "    // int nums[3]で配列numsを宣言し（10、20、30）で初期化",
           "    int nums[3] = {10, 20, 30};",
-          "    // printfでnums[1]（インデックス1の要素20）を出力",
+          "    // printfでnumsのインデックス1の要素（20）を出力",
           "    printf(\"%d\\n\", nums[1]);",
           "    // return 0で正常終了を返す",
           "    return 0;",
@@ -705,8 +705,8 @@ export const cData = {
                       "content": "# 構造体変数を作る\\n\\n```c\\nstruct Person p;\\np.age = 12;\\nstrcpy(p.name, \"太郎\");\\n\\nprintf(\"%s\", p.name);  // 太郎\\n```\\n\\nドット(.)でメンバにアクセス！"
               }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// struct PointでPoint構造体を定義\\nstruct Point {\\n    // int xでxメンバを宣言\\n    int x;\\n    // int yでyメンバを宣言\\n    int y;\\n// 構造体定義を閉じる\\n};\\n// int mainでmain関数を定義\\nint main() {\\n    // struct Point pでPoint型の変数pを宣言\\n    struct Point p;\\n    // p.xに10を代入\\n    p.x = 10;\\n    // printfでp.xを出力\\n    printf(\"%d\\n\", p.x);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// struct PointでPoint構造体を定義\\n___ ___ {\\n    // int xでxメンバを宣言\\n    ___ ___;\\n    // int yでyメンバを宣言\\n    ___ ___;\\n// 構造体定義を閉じる\\n___;\\n// int mainでmain関数を定義\\n___ ___() {\\n    // struct Point pでPoint型の変数pを宣言\\n    ___ ___ ___;\\n    // p.xに10を代入\\n    ___.___ = ___;\\n    // printfでp.xを出力\\n    ___(\"___\", ___.___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// struct PointでPoint構造体を定義\\nstruct Point {\\n    // int xでxメンバを宣言\\n    int x;\\n    // int yでyメンバを宣言\\n    int y;\\n// 構造体定義を閉じる\\n};\\n// int mainでmain関数を定義\\nint main() {\\n    // struct Point pでPoint型の変数pを宣言\\n    struct Point p;\\n    // pのxメンバに10を代入\\n    p.x = 10;\\n    // printfでpのxメンバを出力\\n    printf(\"%d\\n\", p.x);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// struct PointでPoint構造体を定義\\n___ ___ {\\n    // int xでxメンバを宣言\\n    ___ ___;\\n    // int yでyメンバを宣言\\n    ___ ___;\\n// 構造体定義を閉じる\\n___;\\n// int mainでmain関数を定義\\n___ ___() {\\n    // struct Point pでPoint型の変数pを宣言\\n    ___ ___ ___;\\n    // pのxメンバに10を代入\\n    ___.___ = ___;\\n    // printfでpのxメンバを出力\\n    ___(\"___\", ___.___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -722,9 +722,9 @@ export const cData = {
           "int main() {",
           "    // struct Point pでPoint型の変数pを宣言",
           "    struct Point p;",
-          "    // p.xに10を代入",
+          "    // pのxメンバに10を代入",
           "    p.x = 10;",
-          "    // printfでp.xを出力",
+          "    // printfでpのxメンバを出力",
           "    printf(\"%d\\n\", p.x);",
           "    // return 0で正常終了を返す",
           "    return 0;",
@@ -756,7 +756,7 @@ export const cData = {
           ""
         ],
       "candidates": {
-        "others": ["stdio.h", "main", "p", "10", "x", "0", "Point", "y", "};", "printf", "\", p.x);", "}", "include", "int", "%d", "ainはプログラムのエントリーポイント", "// Point型の変数pを作成する", "// p.xに10を代入する", "値を表示する", "// 正常終了を示す0を返す"]
+        "others": ["stdio.h", "main", "p", "10", "x", "0", "Point", "y", "};", "printf", "\", p.x);", "}", "include", "int", "%d", "ainはプログラムのエントリーポイント", "// Point型の変数pを作成する", "// pのxメンバに10を代入する", "値を表示する", "// 正常終了を示す0を返す"]
       },
       "testCases": [
         {

@@ -445,12 +445,12 @@ export const kotlinData = {
           "content": "# 目標\\n\\nくだものの辞書を作って、色を調べましょう。\\n\\n1. `colors` というマップを作る\\n2. キーは「みかん」、値は「オレンジ」\\n3. 「みかん」の色を表示する\\n\\n答えは「オレンジ」になります。"
         }
       ],
-      "correctCode": "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入\\nval colors = mapOf(\"みかん\" to \"オレンジ\")\\n// printlnでcolors[\"みかん\"]を出力\\nprintln(colors[\"みかん\"])",
-      "holeyCode": "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入\\nval ___ = ___(\"___\" to \"___\")\\n// printlnでcolors[\"みかん\"]を出力\\n___(___[\"___\"])",
+      "correctCode": "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入\\nval colors = mapOf(\"みかん\" to \"オレンジ\")\\n// colorsのみかんキーの値を出力\\nprintln(colors[\"みかん\"])",
+      "holeyCode": "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入\\nval ___ = ___(\"___\" to \"___\")\\n// colorsのみかんキーの値を出力\\n___(___[\"___\"])",
       "correctLines": [
           "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入",
           "val colors = mapOf(\"みかん\" to \"オレンジ\")",
-          "// printlnでcolors[\"みかん\"]を出力",
+          "// colorsのみかんキーの値を出力",
           "println(colors[\"みかん\"])"
         ],
       "lineHints": [

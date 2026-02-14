@@ -133,10 +133,10 @@ export const haskell2Data = {
           "content": "# head と tail\\n\\n`head` で先頭、`tail` で残りを取得します。\\n\\n**コード例：**\\n```haskell\\nhead [1, 2, 3] -- 1\\ntail [1, 2, 3] -- [2, 3]\\n```"
         }
       ],
-      "correctCode": "-- [1, 2, 3]を入力\\nnums = [1, 2, 3]\\n-- headで先頭要素を取得\\nmain = print (head nums)",
-      "holeyCode": "-- [1, 2, 3]を入力\\n___ = [___, ___, ___]\\n-- headで先頭要素を取得\\n___ = ___ (___ ___)",
+      "correctCode": "-- 数値リスト（1、2、3）をnumsに代入\\nnums = [1, 2, 3]\\n-- headで先頭要素を取得\\nmain = print (head nums)",
+      "holeyCode": "-- 数値リスト（1、2、3）をnumsに代入\\n___ = [___, ___, ___]\\n-- headで先頭要素を取得\\n___ = ___ (___ ___)",
       "correctLines": [
-          "-- [1, 2, 3]を入力",
+          "-- 数値リスト（1、2、3）をnumsに代入",
           "nums = [1, 2, 3]",
           "-- headで先頭要素を取得",
           "main = print (head nums)"

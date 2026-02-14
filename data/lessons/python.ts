@@ -33,10 +33,10 @@ export const pythonData = {
           "content": "# print（プリント）を使ってみよう\\n\\n画面に文字を出したいときは、`print()` という **魔法の言葉**（これを「関数」と呼びます）を使います。\\n\\n**関数** というのは、コンピュータへの「おねがいカード」のようなものです。\\n\\n**書き方：** カッコの中に、出したい文字を入れます。\\n\\n```python\\nprint('こんにちは！')\\n```\\n\\n**だいじなルール：**\\n文字を出すときは、ちょんちょん `'` （**クォート**、または **シングルクォート** と呼びます）で文字を囲んでください。\\n\\nこれは「ここからここまでが文字だよ」とコンピュータに教えるためのしるしです。"
         }
       ],
-      "correctCode": "# 画面に「Hello, World!」と出す関数\\nprint('Hello, World!')",
-      "holeyCode": "# 画面に「Hello, World!」と出す関数\\n___('Hello, World!')",
+      "correctCode": "# print関数で「Hello, World!」と出力\\nprint('Hello, World!')",
+      "holeyCode": "# print関数で「Hello, World!」と出力\\n___('Hello, World!')",
       "correctLines": [
-          "# 画面に「Hello, World!」と出す関数",
+          "# print関数で「Hello, World!」と出力",
           "print('Hello, World!')"
         ],
       "lineHints": [
@@ -71,12 +71,12 @@ export const pythonData = {
           "content": "# =（イコール）の使い方\\n\\n算数では「同じ」という意味の `=`（イコール）ですが、プログラミングでは **「右のものを左のはこに入れる」** という意味になります。\\n\\nこれを **代入** と呼びます。\\n\\n**例：** りんごをしまってみよう！\\n\\n```python\\nfruit = 'りんご'\\nprint(fruit)\\n```\\n=> りんご\\n\\n**何をしているか：**\\n1. `fruit`（フルーツ）という名前のはこを作る\\n2. そこに `'りんご'` という文字を入れる\\n3. `print(fruit)` ではこの中身を画面に出す\\n\\nこれだけで、`fruit` という名前のはこに `'りんご'` がしまわれ、画面に表示されました！"
         }
       ],
-      "correctCode": "# nameというはこに 'Python' を入れる\\nname = 'Python'\\n# はこの中身を画面に出す\\nprint(name)",
-      "holeyCode": "# nameというはこに 'Python' を入れる\\n___ = '___'\\n# はこの中身を画面に出す\\n___(___)",
+      "correctCode": "# nameに文字列'Python'を代入\\nname = 'Python'\\n# print関数でnameを画面に出す\\nprint(name)",
+      "holeyCode": "# nameに文字列'Python'を代入\\n___ = '___'\\n# print関数でnameを画面に出す\\n___(___)",
       "correctLines": [
-          "# nameというはこに 'Python' を入れる",
+          "# nameに文字列'Python'を代入",
           "name = 'Python'",
-          "# はこの中身を画面に出す",
+          "# print関数でnameを画面に出す",
           "print(name)"
         ],
       "lineHints": [
@@ -116,14 +116,14 @@ export const pythonData = {
           "content": "# 四則演算\\n\\n**四則演算** とは、たし算・ひき算・かけ算・わり算の4つの計算のことです。\\n\\nPythonでは、こんな記号（**演算子**）を使って計算をします。\\n\\n- **+** : たし算\\n- **-** : ひき算\\n- **\\*** : かけ算※ キーボードの「*」を使います\\n- **/** : わり算\\n\\n**例：** クッキーを分けてみよう！\\n\\n```python\\ncookies = 10\\nfriends = 2\\nprint(cookies / friends)\\n```\\n=> 5.0\\n\\n**何をしているか：**\\n- 10枚のクッキーを2人で分けると、1人5枚になりました！\\n- `.0` がついているのは、わり算の答えは小数で出るからです。"
         }
       ],
-      "correctCode": "# xというはこに 10 を入れる\\nx = 10\\n# yというはこに 5 を入れる\\ny = 5\\n# x と y をたした答えを出す\\nprint(x + y)",
-      "holeyCode": "# xというはこに 10 を入れる\\n___ = ___\\n# yというはこに 5 を入れる\\n___ = ___\\n# x と y をたした答えを出す\\n___(___ + ___)",
+      "correctCode": "# xに10を代入\\nx = 10\\n# yに5を代入\\ny = 5\\n# print関数でxとyの和を出力\\nprint(x + y)",
+      "holeyCode": "# xに10を代入\\n___ = ___\\n# yに5を代入\\n___ = ___\\n# print関数でxとyの和を出力\\n___(___ + ___)",
       "correctLines": [
-          "# xというはこに 10 を入れる",
+          "# xに10を代入",
           "x = 10",
-          "# yというはこに 5 を入れる",
+          "# yに5を代入",
           "y = 5",
-          "# x と y をたした答えを出す",
+          "# print関数でxとyの和を出力",
           "print(x + y)"
         ],
       "lineHints": [
@@ -171,10 +171,10 @@ export const pythonData = {
           "content": "# あまりを計算してみよう\\n\\n**例1：** 10 ÷ 3 のあまりは？\\n\\n```python\\nprint(10 % 3)\\n```\\n\\n=> 1\\n\\n10 ÷ 3 は **3 あまり 1** なので、「1」が表示されます。\\n\\n**例2：** 8 ÷ 2 のあまりは？\\n\\n```python\\nprint(8 % 2)\\n```\\n\\n=> 0\\n\\n8 ÷ 2 は **4 あまり 0** なので、「0」になります。\\n\\n**ポイント：** あまりが「0」ということは、割り切れたということです！"
         }
       ],
-      "correctCode": "# 10 を 3 で割ったあまりを出力する\\nprint(10 % 3)",
-      "holeyCode": "# 10 を 3 で割ったあまりを出力する\\n___(10 % 3)",
+      "correctCode": "# print関数で10を3で割った余りを出力\\nprint(10 % 3)",
+      "holeyCode": "# print関数で10を3で割った余りを出力\\n___(10 % 3)",
       "correctLines": [
-          "# 10 を 3 で割ったあまりを出力する",
+          "# print関数で10を3で割った余りを出力",
           "print(10 % 3)"
         ],
       "lineHints": [
@@ -211,14 +211,14 @@ export const pythonData = {
           "content": "# 引き算バージョン\\n\\n`-=`（マイナスイコール）を使えば、**「今の数字から引いて保存」** ができます。\\n\\n**例：** おこづかいを使ったよ！\\n\\n```python\\nx = 10\\nx -= 3  # x から 3 を引いて保存\\nprint(x)\\n```\\n\\n=> 7\\n\\n**何をしているか：**\\n1. 最初は `x` に 10 が入っている\\n2. `x -= 3` で 3 を引く（10 - 3 = 7）\\n3. 結果の 7 が `x` に保存される\\n\\n**まとめ：**\\n- `+=` は「足してから保存」\\n- `-=` は「引いてから保存」"
         }
       ],
-      "correctCode": "# scoreに50を入れる\\nscore = 50\\n# 10点プラスする\\nscore += 10\\n# scoreを表示\\nprint(score)",
-      "holeyCode": "# scoreに50を入れる\\n___ = ___\\n# 10点プラスする\\n___ ___ ___\\n# scoreを表示\\n___(___)",
+      "correctCode": "# scoreに50を代入\\nscore = 50\\n# scoreに+=演算子で10を加算\\nscore += 10\\n# print関数でscoreを表示\\nprint(score)",
+      "holeyCode": "# scoreに50を代入\\n___ = ___\\n# scoreに+=演算子で10を加算\\n___ ___ ___\\n# print関数でscoreを表示\\n___(___)",
       "correctLines": [
-          "# scoreに50を入れる",
+          "# scoreに50を代入",
           "score = 50",
-          "# 10点プラスする",
+          "# scoreに+=演算子で10を加算",
           "score += 10",
-          "# scoreを表示",
+          "# print関数でscoreを表示",
           "print(score)"
         ],
       "lineHints": [
@@ -255,12 +255,12 @@ export const pythonData = {
           "content": "# f 記号と { }\\n\\n**書き方：**\\n1. 文字のまえに `f` をつける\\n2. `{ }`（ちゅうかっこ）の中に「はこ」の名前を入力する\\n\\nそうすると、魔法のように中身が文章に入ります！\\n\\n**例：** 好きなくだものを紹介しよう！\\n\\n```python\\nfruit = 'りんご'\\nprint(f'私は{fruit}が好きです')\\n```\\n=> 私はりんごが好きです\\n\\n**何をしているか：**\\n1. `fruit` という「はこ」に `'りんご'` が入っている\\n2. `f'私は{fruit}が好きです'` で、`{fruit}` の部分が「りんご」に置き換わる\\n3. 結果として「私はりんごが好きです」と表示される\\n\\n`{ }` の中には、変数の名前をそのまま書くだけでOKです！"
         }
       ],
-      "correctCode": "# ageというはこに 10 を入れる\\nage = 10\\n# f-stringを使ってメッセージを出す\\nprint(f'私は{age}歳です')",
-      "holeyCode": "# ageというはこに 10 を入れる\\n___ = ___\\n# f-stringを使ってメッセージを出す\\n___(f'私は{___}歳です')",
+      "correctCode": "# ageに10を代入\\nage = 10\\n# print関数でf-string（私は{age}歳です）を出力\\nprint(f'私は{age}歳です')",
+      "holeyCode": "# ageに10を代入\\n___ = ___\\n# print関数でf-string（私は{age}歳です）を出力\\n___(f'私は{___}歳です')",
       "correctLines": [
-          "# ageというはこに 10 を入れる",
+          "# ageに10を代入",
           "age = 10",
-          "# f-stringを使ってメッセージを出す",
+          "# print関数でf-string（私は{age}歳です）を出力",
           "print(f'私は{age}歳です')"
         ],
       "lineHints": [
@@ -301,12 +301,12 @@ export const pythonData = {
           "content": "# 番号で呼び出そう\\n\\nリストの中身を取り出すときは、**「何番目のデータ？」** と番号（**インデックス**）を指定します。\\n\\n**ここで大事なルール！**\\n\\nプログラミングの世界では、**さいしょのデータは「0番」** と数えます。\\n\\n1番目じゃなくて0番から始まるのは最初はふしぎに感じますが、これがプログラミングのルールなのです。\\n\\n**例：** くだものリストから取り出そう！\\n\\n```python\\n# 0番が「りんご」、1番が「バナナ」、2番が「みかん」\\nfruits = ['りんご', 'バナナ', 'みかん']\\nprint(fruits[0])\\n```\\n=> りんご\\n\\n**ポイント：** `[0]` で最初（1番目）のデータ、`[1]` で2番目のデータが取れます！"
         }
       ],
-      "correctCode": "# 色の配列（あか、あお）をcolorsに代入\\ncolors = ['あか', 'あお']\\n# 2番目の色（あお）を表示\\nprint(colors[1])",
-      "holeyCode": "# 色の配列（あか、あお）をcolorsに代入\\n___ = ['___', '___']\\n# 2番目の色（あお）を表示\\n___(___[___])",
+      "correctCode": "# 色の配列（あか、あお）をcolorsに代入\\ncolors = ['あか', 'あお']\\n# print関数でcolorsのインデックス1（あお）を表示\\nprint(colors[1])",
+      "holeyCode": "# 色の配列（あか、あお）をcolorsに代入\\n___ = ['___', '___']\\n# print関数でcolorsのインデックス1（あお）を表示\\n___(___[___])",
       "correctLines": [
           "# 色の配列（あか、あお）をcolorsに代入",
           "colors = ['あか', 'あお']",
-          "# 2番目の色（あお）を表示",
+          "# print関数でcolorsのインデックス1（あお）を表示",
           "print(colors[1])"
         ],
       "lineHints": [
@@ -350,14 +350,14 @@ export const pythonData = {
           "content": "# if（イフ）の使い方\\n\\n**if**（イフ）は英語で「もし」という意味です。\\n\\n`if` という言葉のあとに **条件** を書きます。\\nその条件が正しければ、その下の指示を実行してくれます。\\n\\n**例：** 今日は暑いかな？\\n\\n```python\\ntemperature = 30\\nif temperature >= 25:\\n    print('今日はあついですね')\\n```\\n=> 今日はあついですね\\n\\n**何をしているか：**\\n1. `temperature`（気温）に 30 を入れる\\n2. `if temperature >= 25:` で「もし気温が25度以上なら」と条件を書く\\n3. 30度は25度以上なので、メッセージが表示される！\\n\\n**大事なポイント：** 条件のあとには `:`（コロン）を忘れずに！"
         }
       ],
-      "correctCode": "# score に 100 を入れる\\nscore = 100\\n# もし 80 より大きかったら\\nif score > 80:\\n    # 「ごうかく！」と表示する\\n    print('ごうかく！')",
-      "holeyCode": "# score に 100 を入れる\\n___ = ___\\n# もし 80 より大きかったら\\n___ ___ ___ ___:\\n    # 「ごうかく！」と表示する\\n    ___('___')",
+      "correctCode": "# scoreに100を代入\\nscore = 100\\n# ifでscoreが80より大きいか判定\\nif score > 80:\\n    # print関数で「ごうかく！」と表示\\n    print('ごうかく！')",
+      "holeyCode": "# scoreに100を代入\\n___ = ___\\n# ifでscoreが80より大きいか判定\\n___ ___ ___ ___:\\n    # print関数で「ごうかく！」と表示\\n    ___('___')",
       "correctLines": [
-          "# score に 100 を入れる",
+          "# scoreに100を代入",
           "score = 100",
-          "# もし 80 より大きかったら",
+          "# ifでscoreが80より大きいか判定",
           "if score > 80:",
-          "    # 「ごうかく！」と表示する",
+          "    # print関数で「ごうかく！」と表示",
           "    print('ごうかく！')"
         ],
       "lineHints": [
@@ -396,18 +396,18 @@ export const pythonData = {
           "content": "# どっちか片方だけ実行される\\n\\n**例：** お買い物ができるかな？\\n\\n```python\\nmoney = 500\\nif money >= 1000:\\n    print('買えます！')\\nelse:\\n    print('お金が足りません')\\n```\\n=> お金が足りません\\n\\n**何をしているか：**\\n1. `money`（お金）に 500 を入れる\\n2. `if money >= 1000:` で「もし1000円以上なら」とチェック\\n3. 500円は1000円より少ないので、条件に合わない\\n4. `else:` のほう（お金が足りません）が選ばれる！\\n\\n**ポイント：** `if` と `else` は、どちらか片方だけが実行されます。両方は実行されません！"
         }
       ],
-      "correctCode": "# age に 10 を入れる\\nage = 10\\n# 20以上かを比較する演算子\\nif age >= 20:\\n    # 20歳以上のときのメッセージ（'おとな'）\\n    print('おとな')\\n# 「そうでなければ」のキーワード\\nelse:\\n    # それ以外の場合（'こども'）\\n    print('こども')",
-      "holeyCode": "# age に 10 を入れる\\n___ = ___\\n# 20以上かを比較する演算子\\n___ ___ ___ ___:\\n    # 20歳以上のときのメッセージ（'おとな'）\\n    ___('___')\\n# 「そうでなければ」のキーワード\\n___:\\n    # それ以外の場合（'こども'）\\n    ___('___')",
+      "correctCode": "# ageに10を代入\\nage = 10\\n# ifでageが20以上か判定\\nif age >= 20:\\n    # print関数で「おとな」と表示\\n    print('おとな')\\n# elseで条件を満たさない場合\\nelse:\\n    # print関数で「こども」と表示\\n    print('こども')",
+      "holeyCode": "# ageに10を代入\\n___ = ___\\n# ifでageが20以上か判定\\n___ ___ ___ ___:\\n    # print関数で「おとな」と表示\\n    ___('___')\\n# elseで条件を満たさない場合\\n___:\\n    # print関数で「こども」と表示\\n    ___('___')",
       "correctLines": [
-          "# age に 10 を入れる",
+          "# ageに10を代入",
           "age = 10",
-          "# 20以上かを比較する演算子",
+          "# ifでageが20以上か判定",
           "if age >= 20:",
-          "    # 20歳以上のときのメッセージ（'おとな'）",
+          "    # print関数で「おとな」と表示",
           "    print('おとな')",
-          "# 「そうでなければ」のキーワード",
+          "# elseで条件を満たさない場合",
           "else:",
-          "    # それ以外の場合（'こども'）",
+          "    # print関数で「こども」と表示",
           "    print('こども')"
         ],
       "lineHints": [
@@ -450,14 +450,14 @@ export const pythonData = {
           "content": "# 条件の合体技\\n\\n**例：** 10代かどうかチェックしよう！\\n\\n```python\\nage = 15\\n# 10以上、かつ、20より小さい\\nif age >= 10 and age < 20:\\n    print('10代です')\\n```\\n=> 10代です\\n\\n**何をしているか：**\\n1. `age` に 15 を入れる\\n2. `age >= 10` → 15は10以上なので OK\\n3. `age < 20` → 15は20より小さいので OK\\n4. **両方OK** なので、「10代です」と表示される！\\n\\n**ポイント：**\\n- `and` は両方の条件が OK のときだけ True（正しい）\\n- `or` はどちらか一方が OK なら True（正しい）"
         }
       ],
-      "correctCode": "# scoreに85を入れる\\nscore = 85\\n# 80以上 かつ 100以下 ならメッセージを出す\\nif score >= 80 and score <= 100:\\n    # 「ごうかく！」と出力\\n    print('ごうかく！')",
-      "holeyCode": "# scoreに85を入れる\\n___ = ___\\n# 80以上 かつ 100以下 ならメッセージを出す\\n___ ___ ___ ___ ___ ___ ___ ___:\\n    # 「ごうかく！」と出力\\n    ___('___')",
+      "correctCode": "# scoreに85を代入\\nscore = 85\\n# ifでscoreが80以上かつ100以下か判定\\nif score >= 80 and score <= 100:\\n    # print関数で「ごうかく！」と出力\\n    print('ごうかく！')",
+      "holeyCode": "# scoreに85を代入\\n___ = ___\\n# ifでscoreが80以上かつ100以下か判定\\n___ ___ ___ ___ ___ ___ ___ ___:\\n    # print関数で「ごうかく！」と出力\\n    ___('___')",
       "correctLines": [
-          "# scoreに85を入れる",
+          "# scoreに85を代入",
           "score = 85",
-          "# 80以上 かつ 100以下 ならメッセージを出す",
+          "# ifでscoreが80以上かつ100以下か判定",
           "if score >= 80 and score <= 100:",
-          "    # 「ごうかく！」と出力",
+          "    # print関数で「ごうかく！」と出力",
           "    print('ごうかく！')"
         ],
       "lineHints": [
@@ -496,14 +496,14 @@ export const pythonData = {
           "content": "# 順番に取り出す魔法\\n\\n`for`（フォー）を使うと、リストから **順番にデータを取り出して** くれます。\\n\\n**例：** 駅の名前を順番に呼ぼう！\\n\\n```python\\nstations = ['東京', '品川', '横浜']\\nfor s in stations:\\n    print(s)\\n```\\n=> 東京\\n=> 品川\\n=> 横浜\\n\\n**何をしているか：**\\n1. `stations` というリストに3つの駅名が入っている\\n2. `for s in stations:` で「リストから1つずつ取り出して `s` に入れる」\\n3. 取り出すたびに `print(s)` が実行される\\n4. 全部取り出し終わったらループ終了！\\n\\n**ポイント：** `s` は取り出したデータを入れる「仮の名前」です。`station` など、わかりやすい名前にするといいですね。"
         }
       ],
-      "correctCode": "# 名前のリスト（たろう、はなこ）をnamesに代入\\nnames = ['たろう', 'はなこ']\\n# forでnamesをループ\\nfor name in names:\\n    # nameを表示\\n    print(name)",
-      "holeyCode": "# 名前のリスト（たろう、はなこ）をnamesに代入\\n___ = ['___', '___']\\n# forでnamesをループ\\n___ ___ ___ ___:\\n    # nameを表示\\n    ___(___)",
+      "correctCode": "# 名前のリスト（たろう、はなこ）をnamesに代入\\nnames = ['たろう', 'はなこ']\\n# forでnamesの各要素をnameに代入してループ\\nfor name in names:\\n    # print関数でnameを表示\\n    print(name)",
+      "holeyCode": "# 名前のリスト（たろう、はなこ）をnamesに代入\\n___ = ['___', '___']\\n# forでnamesの各要素をnameに代入してループ\\n___ ___ ___ ___:\\n    # print関数でnameを表示\\n    ___(___)",
       "correctLines": [
           "# 名前のリスト（たろう、はなこ）をnamesに代入",
           "names = ['たろう', 'はなこ']",
-          "# forでnamesをループ",
+          "# forでnamesの各要素をnameに代入してループ",
           "for name in names:",
-          "    # nameを表示",
+          "    # print関数でnameを表示",
           "    print(name)"
         ],
       "lineHints": [
@@ -540,12 +540,12 @@ export const pythonData = {
           "content": "# キー : 値\\n\\n**書き方：** `{ }` の中に、`キーワード: データ` の形で書きます。\\n\\n**例：** くだものの色を調べよう！\\n\\n```python\\ncolors = {'りんご': 'あか', 'バナナ': 'きいろ'}\\nprint(colors['りんご'])\\n```\\n=> あか\\n\\n**何をしているか：**\\n1. `colors` という辞書を作る\\n2. 「りんご」には「あか」、「バナナ」には「きいろ」を登録\\n3. `colors['りんご']` で「りんごに対応するデータ」を取り出す\\n4. 「あか」が表示される！\\n\\n**用語：**\\n- **キー（key）** = 探すときの「名前」（りんご、バナナ）\\n- **値（value）** = その名前に対応する「データ」（あか、きいろ）"
         }
       ],
-      "correctCode": "# 辞書（みかん→オレンジ）をcolorsに代入\\ncolors = {'みかん': 'オレンジ'}\\n# みかんの色を表示\\nprint(colors['みかん'])",
-      "holeyCode": "# 辞書（みかん→オレンジ）をcolorsに代入\\n___ = {'___': '___'}\\n# みかんの色を表示\\n___(___['___'])",
+      "correctCode": "# 辞書（みかん→オレンジ）をcolorsに代入\\ncolors = {'みかん': 'オレンジ'}\\n# print関数でcolorsのキー「みかん」の値を表示\\nprint(colors['みかん'])",
+      "holeyCode": "# 辞書（みかん→オレンジ）をcolorsに代入\\n___ = {'___': '___'}\\n# print関数でcolorsのキー「みかん」の値を表示\\n___(___['___'])",
       "correctLines": [
           "# 辞書（みかん→オレンジ）をcolorsに代入",
           "colors = {'みかん': 'オレンジ'}",
-          "# みかんの色を表示",
+          "# print関数でcolorsのキー「みかん」の値を表示",
           "print(colors['みかん'])"
         ],
       "lineHints": [
@@ -586,12 +586,12 @@ export const pythonData = {
           "content": "# def（デフ）で名前をつける\\n\\n関数を新しく作ることを **定義する** と言います。\\n\\n`def`（define＝定義する、の略）を使います。\\n\\n**例：** あいさつ関数を作ろう！\\n\\n```python\\ndef aisatsu():\\n    print('こんにちは！')\\n\\naisatsu()  # これで関数が動きます！\\n```\\n=> こんにちは！\\n\\n**何をしているか：**\\n1. `def aisatsu():` で「aisatsu」という名前の関数を作る\\n2. その中に `print('こんにちは！')` を書いておく\\n3. `aisatsu()` と呼ぶと、中身の処理が実行される！\\n\\n**ポイント：**\\n- 関数名のあとに `()` と `:` を忘れずに！\\n- 関数の中身は **スペースを入れて（インデント）** 書きます"
         }
       ],
-      "correctCode": "# greet という関数を定義する（'こんにちは'と表示）\\ndef greet():\\n    # 'こんにちは'と表示\\n    print('こんにちは')\\n# greet関数を呼び出す\\ngreet()",
-      "holeyCode": "# greet という関数を定義する（'こんにちは'と表示）\\n___ ___():\\n    # 'こんにちは'と表示\\n    ___('___')\\n# greet関数を呼び出す\\n___()",
+      "correctCode": "# defでgreet関数を定義（「こんにちは」と表示）\\ndef greet():\\n    # print関数で「こんにちは」と表示\\n    print('こんにちは')\\n# greet関数を呼び出す\\ngreet()",
+      "holeyCode": "# defでgreet関数を定義（「こんにちは」と表示）\\n___ ___():\\n    # print関数で「こんにちは」と表示\\n    ___('___')\\n# greet関数を呼び出す\\n___()",
       "correctLines": [
-          "# greet という関数を定義する（'こんにちは'と表示）",
+          "# defでgreet関数を定義（「こんにちは」と表示）",
           "def greet():",
-          "    # 'こんにちは'と表示",
+          "    # print関数で「こんにちは」と表示",
           "    print('こんにちは')",
           "# greet関数を呼び出す",
           "greet()"

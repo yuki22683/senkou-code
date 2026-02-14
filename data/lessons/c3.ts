@@ -25,19 +25,19 @@ export const c3Data = {
           "content": "# 関数を変数として扱う\\n\\n```c\\nint (*fp)(int, int) = add;\\nint result = fp(2, 3);  // 5\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int squareでsquare関数（引数int x）を定義しx*xを返す\\nint square(int x) { return x * x; }\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int (*fp)(int)で関数ポインタfpを宣言しsquareを代入\\n    int (*fp)(int) = square;\\n    // printfでfp(5)（squareに5を渡した結果25）を出力\\n    printf(\"%d\\n\", fp(5));\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int squareでsquare関数（引数int x）を定義しx*xを返す\\n___ ___(___ ___) { ___ ___ * ___; }\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int (*fp)(int)で関数ポインタfpを宣言しsquareを代入\\n    ___ (*___)(___) = ___;\\n    // printfでfp(5)（squareに5を渡した結果25）を出力\\n    ___(\\\"___\\\", ___(___));\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int squareでsquare関数（引数int x）を定義しxの2乗を返す\\nint square(int x) { return x * x; }\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int (*fp)(int)で関数ポインタfpを宣言しsquareを代入\\n    int (*fp)(int) = square;\\n    // printfで関数ポインタfpに5を渡した結果（25）を出力\\n    printf(\"%d\\n\", fp(5));\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int squareでsquare関数（引数int x）を定義しxの2乗を返す\\n___ ___(___ ___) { ___ ___ * ___; }\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int (*fp)(int)で関数ポインタfpを宣言しsquareを代入\\n    ___ (*___)(___) = ___;\\n    // printfで関数ポインタfpに5を渡した結果（25）を出力\\n    ___(\\\"___\\\", ___(___));\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
           "",
-          "// int squareでsquare関数（引数int x）を定義しx*xを返す",
+          "// int squareでsquare関数（引数int x）を定義しxの2乗を返す",
           "int square(int x) { return x * x; }",
           "",
           "// int mainでmain関数を定義",
           "int main() {",
           "    // int (*fp)(int)で関数ポインタfpを宣言しsquareを代入",
           "    int (*fp)(int) = square;",
-          "    // printfでfp(5)（squareに5を渡した結果25）を出力",
+          "    // printfで関数ポインタfpに5を渡した結果（25）を出力",
           "    printf(\"%d\\n\", fp(5));",
           "    // return 0で正常終了を返す",
           "    return 0;",
@@ -89,14 +89,14 @@ export const c3Data = {
           "content": "# 柔軟な処理\\n\\n```c\\nvoid print(int x) { printf(\"%d \", x); }\\n\\nint arr[] = {1, 2, 3};\\nprocess(arr, 3, print);  // 1 2 3\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// void applyでapply関数（引数int nと関数ポインタf）を定義\\nvoid apply(int n, void (*f)(int)) {\\n    // f(n)で関数ポインタfにnを渡して呼び出す\\n    f(n);\\n// apply関数を閉じる\\n}\\n\\n// void showでshow関数（引数int x）を定義\\nvoid show(int x) {\\n    // printfで「Value: x」の形式でxを出力\\n    printf(\"Value: %d\\n\", x);\\n// show関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // apply関数（第1引数に42, 第2引数にshow）を呼び出す\\n    apply(42, show);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// void applyでapply関数（引数int nと関数ポインタf）を定義\\n___ ___(___ ___, ___ (*___)(___)) {\\n    // f(n)で関数ポインタfにnを渡して呼び出す\\n    ___(___);\\n// apply関数を閉じる\\n___\\n\\n// void showでshow関数（引数int x）を定義\\n___ ___(___ ___) {\\n    // printfで「Value: x」の形式でxを出力\\n    ___(\\\"___\\\", ___);\\n// show関数を閉じる\\n___\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // apply関数（第1引数に42, 第2引数にshow）を呼び出す\\n    ___(___, ___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// void applyでapply関数（引数int nと関数ポインタf）を定義\\nvoid apply(int n, void (*f)(int)) {\\n    // 関数ポインタfにnを渡して呼び出す\\n    f(n);\\n// apply関数を閉じる\\n}\\n\\n// void showでshow関数（引数int x）を定義\\nvoid show(int x) {\\n    // printfで「Value: x」の形式でxを出力\\n    printf(\"Value: %d\\n\", x);\\n// show関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // apply関数（第1引数に42, 第2引数にshow）を呼び出す\\n    apply(42, show);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// void applyでapply関数（引数int nと関数ポインタf）を定義\\n___ ___(___ ___, ___ (*___)(___)) {\\n    // 関数ポインタfにnを渡して呼び出す\\n    ___(___);\\n// apply関数を閉じる\\n___\\n\\n// void showでshow関数（引数int x）を定義\\n___ ___(___ ___) {\\n    // printfで「Value: x」の形式でxを出力\\n    ___(\\\"___\\\", ___);\\n// show関数を閉じる\\n___\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // apply関数（第1引数に42, 第2引数にshow）を呼び出す\\n    ___(___, ___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
           "",
           "// void applyでapply関数（引数int nと関数ポインタf）を定義",
           "void apply(int n, void (*f)(int)) {",
-          "    // f(n)で関数ポインタfにnを渡して呼び出す",
+          "    // 関数ポインタfにnを渡して呼び出す",
           "    f(n);",
           "// apply関数を閉じる",
           "}",
@@ -172,7 +172,7 @@ export const c3Data = {
           "content": "# 特定ビットの抽出\\n\\n```c\\n// 下位4ビットだけ取得\\nint x = 0xAB;  // 10101011\\nint low4 = x & 0x0F;  // 00001011 = 11\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int aでaを宣言し12（2進数1100）を代入\\n    int a = 12;  // 1100\\n    // int bでbを宣言し10（2進数1010）を代入\\n    int b = 10;  // 1010\\n    // printfでa & b（ビットAND結果8）を出力\\n    printf(\"%d\\n\", a & b);  // 8 (1000)\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int aでaを宣言し12（2進数1100）を代入\\n    ___ ___ = ___;  // 1100\\n    // int bでbを宣言し10（2進数1010）を代入\\n    ___ ___ = ___;  // 1010\\n    // printfでa & b（ビットAND結果8）を出力\\n    ___(\\\"___\\\", ___ ___ ___);  // 8 (1000)\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int aでaを宣言し12（2進数1100）を代入\\n    int a = 12;  // 1100\\n    // int bでbを宣言し10（2進数1010）を代入\\n    int b = 10;  // 1010\\n    // printfでaとbのビットAND結果（8）を出力\\n    printf(\"%d\\n\", a & b);  // 8 (1000)\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int aでaを宣言し12（2進数1100）を代入\\n    ___ ___ = ___;  // 1100\\n    // int bでbを宣言し10（2進数1010）を代入\\n    ___ ___ = ___;  // 1010\\n    // printfでaとbのビットAND結果（8）を出力\\n    ___(\\\"___\\\", ___ ___ ___);  // 8 (1000)\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -183,7 +183,7 @@ export const c3Data = {
           "    int a = 12;  // 1100",
           "    // int bでbを宣言し10（2進数1010）を代入",
           "    int b = 10;  // 1010",
-          "    // printfでa & b（ビットAND結果8）を出力",
+          "    // printfでaとbのビットAND結果（8）を出力",
           "    printf(\"%d\\n\", a & b);  // 8 (1000)",
           "    // return 0で正常終了を返す",
           "    return 0;",
@@ -235,7 +235,7 @@ export const c3Data = {
           "content": "# ビットを立てる\\n\\n```c\\nint flags = 0;\\nflags |= 0x01;  // フラグ1をON\\nflags |= 0x04;  // フラグ3をON\\n// flags = 0x05 (0101)\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int aでaを宣言し12（2進数1100）を代入\\n    int a = 12;  // 1100\\n    // int bでbを宣言し10（2進数1010）を代入\\n    int b = 10;  // 1010\\n    // printfでa | b（ビットOR結果14）を出力\\n    printf(\"%d\\n\", a | b);  // 14 (1110)\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int aでaを宣言し12（2進数1100）を代入\\n    ___ ___ = ___;  // 1100\\n    // int bでbを宣言し10（2進数1010）を代入\\n    ___ ___ = ___;  // 1010\\n    // printfでa | b（ビットOR結果14）を出力\\n    ___(\\\"___\\\", ___ ___ ___);  // 14 (1110)\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int aでaを宣言し12（2進数1100）を代入\\n    int a = 12;  // 1100\\n    // int bでbを宣言し10（2進数1010）を代入\\n    int b = 10;  // 1010\\n    // printfでaとbのビットOR結果（14）を出力\\n    printf(\"%d\\n\", a | b);  // 14 (1110)\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int aでaを宣言し12（2進数1100）を代入\\n    ___ ___ = ___;  // 1100\\n    // int bでbを宣言し10（2進数1010）を代入\\n    ___ ___ = ___;  // 1010\\n    // printfでaとbのビットOR結果（14）を出力\\n    ___(\\\"___\\\", ___ ___ ___);  // 14 (1110)\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -246,7 +246,7 @@ export const c3Data = {
           "    int a = 12;  // 1100",
           "    // int bでbを宣言し10（2進数1010）を代入",
           "    int b = 10;  // 1010",
-          "    // printfでa | b（ビットOR結果14）を出力",
+          "    // printfでaとbのビットOR結果（14）を出力",
           "    printf(\"%d\\n\", a | b);  // 14 (1110)",
           "    // return 0で正常終了を返す",
           "    return 0;",
@@ -298,7 +298,7 @@ export const c3Data = {
           "content": "# 掛け算・割り算の代わり\\n\\n```c\\n// 左シフト = 2倍\\n5 << 1;  // 10\\n\\n// 右シフト = 2で割る\\n8 >> 1;  // 4\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int xでxを宣言し3を代入\\n    int x = 3;\\n    // printfでx << 2（3を左に2ビットシフトした結果12）を出力\\n    printf(\"%d\\n\", x << 2);  // 12\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int xでxを宣言し3を代入\\n    ___ ___ = ___;\\n    // printfでx << 2（3を左に2ビットシフトした結果12）を出力\\n    ___(\\\"___\\\", ___ ___ ___);  // 12\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int xでxを宣言し3を代入\\n    int x = 3;\\n    // printfでxを左に2ビットシフトした結果（12）を出力\\n    printf(\"%d\\n\", x << 2);  // 12\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int xでxを宣言し3を代入\\n    ___ ___ = ___;\\n    // printfでxを左に2ビットシフトした結果（12）を出力\\n    ___(\\\"___\\\", ___ ___ ___);  // 12\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -307,7 +307,7 @@ export const c3Data = {
           "int main() {",
           "    // int xでxを宣言し3を代入",
           "    int x = 3;",
-          "    // printfでx << 2（3を左に2ビットシフトした結果12）を出力",
+          "    // printfでxを左に2ビットシフトした結果（12）を出力",
           "    printf(\"%d\\n\", x << 2);  // 12",
           "    // return 0で正常終了を返す",
           "    return 0;",
@@ -357,7 +357,7 @@ export const c3Data = {
           "content": "# 配列の要素数を計算\\n\\n```c\\nint arr[] = {1, 2, 3, 4, 5};\\nint count = sizeof(arr) / sizeof(arr[0]);\\n// count = 5\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int arr[]で配列arrを宣言し（10、20、30）で初期化\\n    int arr[] = {10, 20, 30};\\n    // int countでsizeof(arr)/sizeof(arr[0])で要素数を計算しcountに代入\\n    int count = sizeof(arr) / sizeof(arr[0]);\\n    // printfでcount（要素数3）を出力\\n    printf(\"%d\\n\", count);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int arr[]で配列arrを宣言し（10、20、30）で初期化\\n    ___ ___[] = {___, ___, ___};\\n    // int countでsizeof(arr)/sizeof(arr[0])で要素数を計算しcountに代入\\n    ___ ___ = ___(___) / ___(___[___]);\\n    // printfでcount（要素数3）を出力\\n    ___(\\\"___\\\", ___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int arr[]で配列arrを宣言し（10、20、30）で初期化\\n    int arr[] = {10, 20, 30};\\n    // int countでarrの全体サイズを先頭要素サイズで割り要素数を計算しcountに代入\\n    int count = sizeof(arr) / sizeof(arr[0]);\\n    // printfでcount（要素数3）を出力\\n    printf(\"%d\\n\", count);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int arr[]で配列arrを宣言し（10、20、30）で初期化\\n    ___ ___[] = {___, ___, ___};\\n    // int countでarrの全体サイズを先頭要素サイズで割り要素数を計算しcountに代入\\n    ___ ___ = ___(___) / ___(___[___]);\\n    // printfでcount（要素数3）を出力\\n    ___(\\\"___\\\", ___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -366,7 +366,7 @@ export const c3Data = {
           "int main() {",
           "    // int arr[]で配列arrを宣言し（10、20、30）で初期化",
           "    int arr[] = {10, 20, 30};",
-          "    // int countでsizeof(arr)/sizeof(arr[0])で要素数を計算しcountに代入",
+          "    // int countでarrの全体サイズを先頭要素サイズで割り要素数を計算しcountに代入",
           "    int count = sizeof(arr) / sizeof(arr[0]);",
           "    // printfでcount（要素数3）を出力",
           "    printf(\"%d\\n\", count);",
@@ -485,14 +485,14 @@ export const c3Data = {
           "content": "# 安全な関数引数\\n\\n```c\\nvoid print(const char *str) {\\n    // str の中身は変更できない\\n    printf(\"%s\\n\", str);\\n}\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// void showでshow関数（引数const int *p）を定義\\nvoid show(const int *p) {\\n    // printfで*p（pが指す値）を出力\\n    printf(\"%d\\n\", *p);\\n// show関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int xでxを宣言し42を代入\\n    int x = 42;\\n    // show関数（引数&x）を呼び出す\\n    show(&x);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// void showでshow関数（引数const int *p）を定義\\n___ ___(___ ___ *___) {\\n    // printfで*p（pが指す値）を出力\\n    ___(\\\"___\\\", *___);\\n// show関数を閉じる\\n___\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int xでxを宣言し42を代入\\n    ___ ___ = ___;\\n    // show関数（引数&x）を呼び出す\\n    ___(&___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// void showでshow関数（引数const int *p）を定義\\nvoid show(const int *p) {\\n    // printfでpが指す値を出力\\n    printf(\"%d\\n\", *p);\\n// show関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int xでxを宣言し42を代入\\n    int x = 42;\\n    // show関数（引数&x）を呼び出す\\n    show(&x);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// void showでshow関数（引数const int *p）を定義\\n___ ___(___ ___ *___) {\\n    // printfでpが指す値を出力\\n    ___(\\\"___\\\", *___);\\n// show関数を閉じる\\n___\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int xでxを宣言し42を代入\\n    ___ ___ = ___;\\n    // show関数（引数&x）を呼び出す\\n    ___(&___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
           "",
           "// void showでshow関数（引数const int *p）を定義",
           "void show(const int *p) {",
-          "    // printfで*p（pが指す値）を出力",
+          "    // printfでpが指す値を出力",
           "    printf(\"%d\\n\", *p);",
           "// show関数を閉じる",
           "}",
@@ -643,7 +643,7 @@ export const c3Data = {
           "content": "# 引数を取るマクロ\\n\\n```c\\n#define SQUARE(x) ((x) * (x))\\n\\nint result = SQUARE(5);  // 25\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// #define DOUBLE(x)でxを2倍するマクロを定義\\n#define DOUBLE(x) ((x) * 2)\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // printfでDOUBLE(7)（7の2倍14）を出力\\n    printf(\"%d\\n\", DOUBLE(7));\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// #define DOUBLE(x)でxを2倍するマクロを定義\\n#___ ___(___) ((___)  * ___)\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // printfでDOUBLE(7)（7の2倍14）を出力\\n    ___(\\\"___\\\", ___(___));\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// #define DOUBLE(x)でxを2倍するマクロを定義\\n#define DOUBLE(x) ((x) * 2)\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // printfでDOUBLEマクロに7を渡した結果（14）を出力\\n    printf(\"%d\\n\", DOUBLE(7));\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// #define DOUBLE(x)でxを2倍するマクロを定義\\n#___ ___(___) ((___)  * ___)\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // printfでDOUBLEマクロに7を渡した結果（14）を出力\\n    ___(\\\"___\\\", ___(___));\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -653,7 +653,7 @@ export const c3Data = {
           "",
           "// int mainでmain関数を定義",
           "int main() {",
-          "    // printfでDOUBLE(7)（7の2倍14）を出力",
+          "    // printfでDOUBLEマクロに7を渡した結果（14）を出力",
           "    printf(\"%d\\n\", DOUBLE(7));",
           "    // return 0で正常終了を返す",
           "    return 0;",

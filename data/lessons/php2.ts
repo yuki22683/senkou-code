@@ -45,8 +45,8 @@ export const php2Data = {
           "content": "# class キーワードで作る\\n\\n`class 名前 { }` で定義します。`new` でインスタンス（実体）を作成します。\\n\\n**コード例：**\\n```php\\nclass Dog {\\n    public $name;\\n}\\n$dog = new Dog();\\n```\\n\\n**何をしているの？**\\n1. `class Dog { }` → Dogという名前のクラスを作る\\n2. `public $name;` → nameというデータ（プロパティ）を持たせる\\n3. `new Dog()` → Dogクラスから実際のオブジェクトを作る\\n\\n**public とは？**\\n- 「外からアクセスできる」という意味\\n- プロパティやメソッドの前につける"
         }
       ],
-      "correctCode": "// PHPコード開始タグ\\n<?php\\n// Catクラスを定義\\nclass Cat {\\n    // public $nameを定義\\n    public $name;\\n// ブロックを閉じる\\n}\\n// $catにCatインスタンスを代入\\n$cat = new Cat();\\n// $cat->nameに'タマ'を代入\\n$cat->name = 'タマ';\\n// $cat->nameを出力\\necho $cat->name;\\n// PHPコード終了タグ\\n?>",
-      "holeyCode": "// PHPコード開始タグ\\n___\\n// Catクラスを定義\\n___ ___ {\\n    // public $nameを定義\\n    ___ $___;\\n// ブロックを閉じる\\n___\\n// $catにCatインスタンスを代入\\n$___ = ___ ___();\\n// $cat->nameに'タマ'を代入\\n$___->___ = '___';\\n// $cat->nameを出力\\n___ $___->___;\\n// PHPコード終了タグ\\n___",
+      "correctCode": "// PHPコード開始タグ\\n<?php\\n// Catクラスを定義\\nclass Cat {\\n    // public $nameを定義\\n    public $name;\\n// ブロックを閉じる\\n}\\n// $catにCatインスタンスを代入\\n$cat = new Cat();\\n// $catのnameプロパティに'タマ'を代入\\n$cat->name = 'タマ';\\n// $catのnameプロパティを出力\\necho $cat->name;\\n// PHPコード終了タグ\\n?>",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// Catクラスを定義\\n___ ___ {\\n    // public $nameを定義\\n    ___ $___;\\n// ブロックを閉じる\\n___\\n// $catにCatインスタンスを代入\\n$___ = ___ ___();\\n// $catのnameプロパティに'タマ'を代入\\n$___->___ = '___';\\n// $catのnameプロパティを出力\\n___ $___->___;\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "// PHPコード開始タグ",
           "<?php",
@@ -58,9 +58,9 @@ export const php2Data = {
           "}",
           "// $catにCatインスタンスを代入",
           "$cat = new Cat();",
-          "// $cat->nameに'タマ'を代入",
+          "// $catのnameプロパティに'タマ'を代入",
           "$cat->name = 'タマ';",
-          "// $cat->nameを出力",
+          "// $catのnameプロパティを出力",
           "echo $cat->name;",
           "// PHPコード終了タグ",
           "?>"
@@ -109,23 +109,23 @@ export const php2Data = {
           "content": "# 初期値を設定\\n\\n`__construct` で初期化処理を行います。\\n\\n**コード例：**\\n```php\\nclass Box {\\n    public function __construct($size) {\\n        $this->size = $size;\\n    }\\n}\\n$box = new Box(10);\\n```\\n\\n**何をしているの？**\\n1. `new Box(10)` → Boxオブジェクトを作成、10を渡す\\n2. `__construct($size)` が自動で呼ばれる（$sizeに10が入る）\\n3. `$this->size = $size` → オブジェクトのsizeプロパティに保存\\n\\n**$this とは？**\\n- 「自分自身」を指す特別な変数\\n- クラスの中で「自分のデータ」にアクセスするときに使う"
         }
       ],
-      "correctCode": "<?php\\n// Counterクラスを定義\\nclass Counter {\\n    // public $countを定義\\n    public $count;\\n    // __construct($c)でコンストラクタを定義\\n    public function __construct($c) {\\n        // $this->countに$cを代入\\n        $this->count = $c;\\n    }\\n}\\n// $cntにnew Counter(5)を代入\\n$cnt = new Counter(5);\\n// $cnt->countを出力\\necho $cnt->count;\\n?>",
-      "holeyCode": "// PHPコード開始タグ\\n___\\n// Counterクラスを定義\\n___ ___ {\\n    // public $countを定義\\n    ___ $___;\\n    // __construct($c)でコンストラクタを定義\\n    ___ ___ ___($___) {\\n        // $this->countに$cを代入\\n        $___->___ = $___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// $cntにnew Counter(5)を代入\\n$___ = ___ ___(___);\\n// $cnt->countを出力\\n___ $___->___;\\n// PHPコード終了タグ\\n___",
+      "correctCode": "<?php\\n// Counterクラスを定義\\nclass Counter {\\n    // public $countを定義\\n    public $count;\\n    // __constructコンストラクタ（引数$c）を定義\\n    public function __construct($c) {\\n        // 自身のcountプロパティに$cを代入\\n        $this->count = $c;\\n    }\\n}\\n// $cntにCounterインスタンス（引数5）を代入\\n$cnt = new Counter(5);\\n// $cntのcountプロパティを出力\\necho $cnt->count;\\n?>",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// Counterクラスを定義\\n___ ___ {\\n    // public $countを定義\\n    ___ $___;\\n    // __constructコンストラクタ（引数$c）を定義\\n    ___ ___ ___($___) {\\n        // 自身のcountプロパティに$cを代入\\n        $___->___ = $___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// $cntにCounterインスタンス（引数5）を代入\\n$___ = ___ ___(___);\\n// $cntのcountプロパティを出力\\n___ $___->___;\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "<?php",
           "// Counterクラスを定義",
           "class Counter {",
           "    // public $countを定義",
           "    public $count;",
-          "    // __construct($c)でコンストラクタを定義",
+          "    // __constructコンストラクタ（引数$c）を定義",
           "    public function __construct($c) {",
-          "        // $this->countに$cを代入",
+          "        // 自身のcountプロパティに$cを代入",
           "        $this->count = $c;",
           "    }",
           "}",
-          "// $cntにnew Counter(5)を代入",
+          "// $cntにCounterインスタンス（引数5）を代入",
           "$cnt = new Counter(5);",
-          "// $cnt->countを出力",
+          "// $cntのcountプロパティを出力",
           "echo $cnt->count;",
           "?>"
         ],
@@ -151,7 +151,7 @@ export const php2Data = {
           "keywords": [
             "class", "public", "function", "new", "echo"
           ],
-          "others": ["<?php", "?>", "}", "Counter", "count", "c", "this", "cnt", "5", "__construct", "// Counterクラスを定義", "//", "_construct($c)でコンストラクタを定義", "// $this->countに$cを代入", "cntにnew Counter(5)を代入", "// $cnt->countを出力", ">"]
+          "others": ["<?php", "?>", "}", "Counter", "count", "c", "this", "cnt", "5", "__construct", "// Counterクラスを定義", "//", "_construct($c)でコンストラクタを定義", "// 自身のcountプロパティに$cを代入", "cntにnew Counter(5)を代入", "// $cntのcountプロパティを出力", ">"]
         },
         "testCases": [
           {

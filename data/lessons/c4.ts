@@ -348,7 +348,7 @@ export const c4Data = {
           "content": "# SEEK定数\\n\\n「どこを基準にして移動するか」を指定する定数があります。\\n\\n**3つの基準位置：**\\n```c\\nSEEK_SET  // ファイルの先頭（一番最初）を基準\\nSEEK_CUR  // 現在いる場所（Current）を基準\\nSEEK_END  // ファイルの末尾（一番最後）を基準\\n```\\n\\n**身近な例え：**\\n- `SEEK_SET`: 「本の最初のページから数えて○ページ目」\\n- `SEEK_CUR`: 「今見ているページから○ページ先」\\n- `SEEK_END`: 「本の最後のページから○ページ戻る」\\n\\n**使用例：**\\n`fseek(fp, 0, SEEK_SET)` → ファイルの先頭に戻る"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // FILE *fpでfopen(「pos.txt」を読み書きモード)の結果を代入\\n    FILE *fp = fopen(\"pos.txt\", \"w+\");\\n    // fputsでfpに「ABCDEFGHIJ」を書き込む\\n    fputs(\"ABCDEFGHIJ\", fp);\\n    // fseekでfpの位置を先頭（SEEK_SET）に移動\\n    fseek(fp, 0, SEEK_SET);\\n    // printfでfgetc(fp)（先頭のA）を出力\\n    printf(\"%c\\n\", fgetc(fp));\\n    // fcloseでfpを閉じる\\n    fclose(fp);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // FILE *fpでfopen(「pos.txt」を読み書きモード)の結果を代入\\n    ___ *___ = ___(\\\"___\\\", \\\"___\\\");\\n    // fputsでfpに「ABCDEFGHIJ」を書き込む\\n    ___(\\\"___\\\", ___);\\n    // fseekでfpの位置を先頭（SEEK_SET）に移動\\n    ___(___,  ___,  ___);\\n    // printfでfgetc(fp)（先頭のA）を出力\\n    ___(\\\"___\\\", ___(___));\\n    // fcloseでfpを閉じる\\n    ___(___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // FILE *fpでfopen(「pos.txt」を読み書きモード)の結果を代入\\n    FILE *fp = fopen(\"pos.txt\", \"w+\");\\n    // fputsでfpに「ABCDEFGHIJ」を書き込む\\n    fputs(\"ABCDEFGHIJ\", fp);\\n    // fseekでfpの位置を先頭（SEEK_SET）に移動\\n    fseek(fp, 0, SEEK_SET);\\n    // printfでfpから1文字取得した結果（先頭のA）を出力\\n    printf(\"%c\\n\", fgetc(fp));\\n    // fcloseでfpを閉じる\\n    fclose(fp);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // FILE *fpでfopen(「pos.txt」を読み書きモード)の結果を代入\\n    ___ *___ = ___(\\\"___\\\", \\\"___\\\");\\n    // fputsでfpに「ABCDEFGHIJ」を書き込む\\n    ___(\\\"___\\\", ___);\\n    // fseekでfpの位置を先頭（SEEK_SET）に移動\\n    ___(___,  ___,  ___);\\n    // printfでfpから1文字取得した結果（先頭のA）を出力\\n    ___(\\\"___\\\", ___(___));\\n    // fcloseでfpを閉じる\\n    ___(___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -361,7 +361,7 @@ export const c4Data = {
           "    fputs(\"ABCDEFGHIJ\", fp);",
           "    // fseekでfpの位置を先頭（SEEK_SET）に移動",
           "    fseek(fp, 0, SEEK_SET);",
-          "    // printfでfgetc(fp)（先頭のA）を出力",
+          "    // printfでfpから1文字取得した結果（先頭のA）を出力",
           "    printf(\"%c\\n\", fgetc(fp));",
           "    // fcloseでfpを閉じる",
           "    fclose(fp);",
@@ -422,7 +422,7 @@ export const c4Data = {
           "content": "# ファイルの大きさを調べる\\n\\n`ftell` と `fseek` を組み合わせると、ファイルの大きさ（サイズ）を調べることができます。\\n\\n**仕組み：**\\n1. ファイルの最後に移動する\\n2. そこが「先頭から何バイト目か」を調べる → それがファイルサイズ！\\n\\n**実際のコードを見てみましょう：**\\n```c\\nfseek(fp, 0, SEEK_END);   // ファイルの最後に移動\\nlong size = ftell(fp);     // 今いる位置 = ファイルサイズ\\nfseek(fp, 0, SEEK_SET);   // 先頭に戻る\\n```\\n\\n**身近な例え：**\\n本の最後のページを開いて、そのページ番号を見れば、全部で何ページあるかわかりますよね。それと同じです！"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // FILE *fpでfopen(「size.txt」を読み書きモード)の結果を代入\\n    FILE *fp = fopen(\"size.txt\", \"w+\");\\n    // fputsでfpに「12345」を書き込む\\n    fputs(\"12345\", fp);\\n    // fseekでfpの位置を末尾（SEEK_END）に移動\\n    fseek(fp, 0, SEEK_END);\\n    // long sizeでftell(fp)（ファイルサイズ5）を代入\\n    long size = ftell(fp);\\n    // printfでsizeを出力\\n    printf(\"%ld\\n\", size);\\n    // fcloseでfpを閉じる\\n    fclose(fp);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // FILE *fpでfopen(「size.txt」を読み書きモード)の結果を代入\\n    ___ *___ = ___(\\\"___\\\", \\\"___\\\");\\n    // fputsでfpに「12345」を書き込む\\n    ___(\\\"___\\\", ___);\\n    // fseekでfpの位置を末尾（SEEK_END）に移動\\n    ___(___,  ___,  ___);\\n    // long sizeでftell(fp)（ファイルサイズ5）を代入\\n    ___ ___ = ___(___);\\n    // printfでsizeを出力\\n    ___(\\\"___\\\", ___);\\n    // fcloseでfpを閉じる\\n    ___(___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // FILE *fpでfopen(「size.txt」を読み書きモード)の結果を代入\\n    FILE *fp = fopen(\"size.txt\", \"w+\");\\n    // fputsでfpに「12345」を書き込む\\n    fputs(\"12345\", fp);\\n    // fseekでfpの位置を末尾（SEEK_END）に移動\\n    fseek(fp, 0, SEEK_END);\\n    // long sizeでfpの現在位置（ファイルサイズ5）を代入\\n    long size = ftell(fp);\\n    // printfでsizeを出力\\n    printf(\"%ld\\n\", size);\\n    // fcloseでfpを閉じる\\n    fclose(fp);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // FILE *fpでfopen(「size.txt」を読み書きモード)の結果を代入\\n    ___ *___ = ___(\\\"___\\\", \\\"___\\\");\\n    // fputsでfpに「12345」を書き込む\\n    ___(\\\"___\\\", ___);\\n    // fseekでfpの位置を末尾（SEEK_END）に移動\\n    ___(___,  ___,  ___);\\n    // long sizeでfpの現在位置（ファイルサイズ5）を代入\\n    ___ ___ = ___(___);\\n    // printfでsizeを出力\\n    ___(\\\"___\\\", ___);\\n    // fcloseでfpを閉じる\\n    ___(___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -435,7 +435,7 @@ export const c4Data = {
           "    fputs(\"12345\", fp);",
           "    // fseekでfpの位置を末尾（SEEK_END）に移動",
           "    fseek(fp, 0, SEEK_END);",
-          "    // long sizeでftell(fp)（ファイルサイズ5）を代入",
+          "    // long sizeでfpの現在位置（ファイルサイズ5）を代入",
           "    long size = ftell(fp);",
           "    // printfでsizeを出力",
           "    printf(\"%ld\\n\", size);",
@@ -642,7 +642,7 @@ export const c4Data = {
           "content": "# 関数でポインタを変更したいとき\\n\\n関数の中でポインタ自体を変更したいときに二重ポインタを使います。\\n\\n**実際のコードを見てみましょう：**\\n```c\\nvoid allocate(int **pp) {\\n    // ポインタが指す先を変更\\n    *pp = malloc(sizeof(int));\\n}\\n\\nint *p;       // まだどこも指していない\\nallocate(&p); // pにメモリを割り当て\\n```\\n\\n**なぜ二重ポインタが必要？**\\n普通のポインタを渡すと「コピー」が渡されるので、関数の中で変更しても元のポインタは変わりません。\\n二重ポインタを使うと、元のポインタ自体を変更できます。\\n\\n**身近な例え：**\\n「住所メモを新しいメモに書き換えたい」とき、メモの「置き場所」を教えてもらう必要があります。"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int xでxを宣言し100を代入\\n    int x = 100;\\n    // int *pでポインタpを宣言し&xでxのアドレスを代入\\n    int *p = &x;\\n    // int **ppで二重ポインタppを宣言し&pでpのアドレスを代入\\n    int **pp = &p;\\n    // printfで**pp（ppが指すポインタが指す値100）を出力\\n    printf(\"%d\\n\", **pp);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int xでxを宣言し100を代入\\n    ___ ___ = ___;\\n    // int *pでポインタpを宣言し&xでxのアドレスを代入\\n    ___ *___ = &___;\\n    // int **ppで二重ポインタppを宣言し&pでpのアドレスを代入\\n    ___ **___ = &___;\\n    // printfで**pp（ppが指すポインタが指す値100）を出力\\n    ___(\\\"___\\\", **___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // int xでxを宣言し100を代入\\n    int x = 100;\\n    // int *pでポインタpを宣言し&xでxのアドレスを代入\\n    int *p = &x;\\n    // int **ppで二重ポインタppを宣言し&pでpのアドレスを代入\\n    int **pp = &p;\\n    // printfでppが指すポインタが指す値（100）を出力\\n    printf(\"%d\\n\", **pp);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int xでxを宣言し100を代入\\n    ___ ___ = ___;\\n    // int *pでポインタpを宣言し&xでxのアドレスを代入\\n    ___ *___ = &___;\\n    // int **ppで二重ポインタppを宣言し&pでpのアドレスを代入\\n    ___ **___ = &___;\\n    // printfでppが指すポインタが指す値（100）を出力\\n    ___(\\\"___\\\", **___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -655,7 +655,7 @@ export const c4Data = {
           "    int *p = &x;",
           "    // int **ppで二重ポインタppを宣言し&pでpのアドレスを代入",
           "    int **pp = &p;",
-          "    // printfで**pp（ppが指すポインタが指す値100）を出力",
+          "    // printfでppが指すポインタが指す値（100）を出力",
           "    printf(\"%d\\n\", **pp);",
           "    // return 0で正常終了を返す",
           "    return 0;",
@@ -704,7 +704,7 @@ export const c4Data = {
           "content": "# 引数を1つずつ取り出す\\n\\n可変長引数を扱うための **マクロ**（便利な道具）があります。\\n\\n**3つのマクロ：**\\n```c\\nva_list args;              // 引数リストを入れる変数\\nva_start(args, count);     // 初期化（最後の固定引数を指定）\\nint n = va_arg(args, int); // 1つ取り出す（型を指定）\\nva_end(args);              // 終了処理\\n```\\n\\n**身近な例え：**\\n- `va_list`: 引数を入れた「袋」\\n- `va_start`: 袋を開ける\\n- `va_arg`: 袋から1つ取り出す\\n- `va_end`: 袋を閉じる\\n\\n**ポイント：**\\n`va_arg` で取り出すとき、その引数の**型**（int や double など）を指定する必要があります。"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// #includeでstdarg.hを読み込む\\n#include <stdarg.h>\\n\\n// int sumでsum関数（引数int countと可変長引数）を定義\\nint sum(int count, ...) {\\n    // va_list argsで引数リストargsを宣言\\n    va_list args;\\n    // va_startでargsをcountで初期化\\n    va_start(args, count);\\n    // int totalでtotalを宣言し0を代入\\n    int total = 0;\\n    // forでiを0からcount-1までループ\\n    for (int i = 0; i < count; i++) {\\n        // total += va_arg(args, int)でargsから整数を取得しtotalに加算\\n        total += va_arg(args, int);\\n    // forブロックを閉じる\\n    }\\n    // va_endでargsを終了処理\\n    va_end(args);\\n    // returnでtotalを返す\\n    return total;\\n// sum関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // printfでsum(3, 10, 20, 30)の結果60を出力\\n    printf(\"%d\\n\", sum(3, 10, 20, 30));\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// #includeでstdarg.hを読み込む\\n#___ <___>\\n\\n// int sumでsum関数（引数int countと可変長引数）を定義\\n___ ___(___  ___,  ...) {\\n    // va_list argsで引数リストargsを宣言\\n    ___ ___;\\n    // va_startでargsをcountで初期化\\n    ___(___,  ___);\\n    // int totalでtotalを宣言し0を代入\\n    ___ ___ = ___;\\n    // forでiを0からcount-1までループ\\n    ___ (___ ___ = ___; ___ < ___; ___++) {\\n        // total += va_arg(args, int)でargsから整数を取得しtotalに加算\\n        ___ += ___(___,  ___);\\n    // forブロックを閉じる\\n    ___\\n    // va_endでargsを終了処理\\n    ___(___);\\n    // returnでtotalを返す\\n    ___ ___;\\n// sum関数を閉じる\\n___\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // printfでsum(3, 10, 20, 30)の結果60を出力\\n    ___(\\\"___\\\", ___(___, ___, ___, ___));\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// #includeでstdarg.hを読み込む\\n#include <stdarg.h>\\n\\n// int sumでsum関数（引数int countと可変長引数）を定義\\nint sum(int count, ...) {\\n    // va_list argsで引数リストargsを宣言\\n    va_list args;\\n    // va_startでargsをcountで初期化\\n    va_start(args, count);\\n    // int totalでtotalを宣言し0を代入\\n    int total = 0;\\n    // forでiを0からcount-1までループ\\n    for (int i = 0; i < count; i++) {\\n        // totalにva_argでargsから取得した整数を加算\\n        total += va_arg(args, int);\\n    // forブロックを閉じる\\n    }\\n    // va_endでargsを終了処理\\n    va_end(args);\\n    // returnでtotalを返す\\n    return total;\\n// sum関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // printfでsum関数（引数3、10、20、30）の結果（60）を出力\\n    printf(\"%d\\n\", sum(3, 10, 20, 30));\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// #includeでstdarg.hを読み込む\\n#___ <___>\\n\\n// int sumでsum関数（引数int countと可変長引数）を定義\\n___ ___(___  ___,  ...) {\\n    // va_list argsで引数リストargsを宣言\\n    ___ ___;\\n    // va_startでargsをcountで初期化\\n    ___(___,  ___);\\n    // int totalでtotalを宣言し0を代入\\n    ___ ___ = ___;\\n    // forでiを0からcount-1までループ\\n    ___ (___ ___ = ___; ___ < ___; ___++) {\\n        // totalにva_argでargsから取得した整数を加算\\n        ___ += ___(___,  ___);\\n    // forブロックを閉じる\\n    ___\\n    // va_endでargsを終了処理\\n    ___(___);\\n    // returnでtotalを返す\\n    ___ ___;\\n// sum関数を閉じる\\n___\\n\\n// int mainでmain関数を定義\\n___ ___() {\\n    // printfでsum関数（引数3、10、20、30）の結果（60）を出力\\n    ___(\\\"___\\\", ___(___, ___, ___, ___));\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -721,7 +721,7 @@ export const c4Data = {
           "    int total = 0;",
           "    // forでiを0からcount-1までループ",
           "    for (int i = 0; i < count; i++) {",
-          "        // total += va_arg(args, int)でargsから整数を取得しtotalに加算",
+          "        // totalにva_argでargsから取得した整数を加算",
           "        total += va_arg(args, int);",
           "    // forブロックを閉じる",
           "    }",
@@ -734,7 +734,7 @@ export const c4Data = {
           "",
           "// int mainでmain関数を定義",
           "int main() {",
-          "    // printfでsum(3, 10, 20, 30)の結果60を出力",
+          "    // printfでsum関数（引数3、10、20、30）の結果（60）を出力",
           "    printf(\"%d\\n\", sum(3, 10, 20, 30));",
           "    // return 0で正常終了を返す",
           "    return 0;",

@@ -57,15 +57,15 @@ export const kotlin3Data = {
           "content": "# 目標\\n\\nsuspend関数を作って呼び出しましょう。\\n\\n1. `suspend fun getMessage()` を定義\\n2. `delay(100)` で100ミリ秒待機\\n3. `\"Hello\"` を返す\\n4. `runBlocking` の中で呼び出して表示"
         }
       ],
-      "correctCode": "// coroutinesをインポート\\nimport kotlinx.coroutines.*\\n\\n// suspend funでgetMessage関数を定義\\nsuspend fun getMessage(): String {\\n    // delay(100)で100ミリ秒待機\\n    delay(100)\\n    // 「こんにちは」を返す\\n    return \"こんにちは\"\\n// ブロックを閉じる\\n}\\n\\n// fun main()をrunBlockingで定義\\nfun main() = runBlocking {\\n    // printlnでgetMessage()を出力\\n    println(getMessage())\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// coroutinesをインポート\\n___ ___.___.___\\n___\\n// suspend funでgetMessage関数を定義\\n___ ___ ___(): ___ {\\n    // delay(100)で100ミリ秒待機\\n    ___(___)\\n    // 「こんにちは」を返す\\n    ___ \"___\"\\n// ブロックを閉じる\\n___\\n___\\n// fun main()をrunBlockingで定義\\n___ ___() = ___ {\\n    // printlnでgetMessage()を出力\\n    ___(___(___))\\n// ブロックを閉じる\\n___",
+      "correctCode": "// coroutinesをインポート\\nimport kotlinx.coroutines.*\\n\\n// suspend funでgetMessage関数を定義\\nsuspend fun getMessage(): String {\\n    // delay関数（引数100）で100ミリ秒待機\\n    delay(100)\\n    // 「こんにちは」を返す\\n    return \"こんにちは\"\\n// ブロックを閉じる\\n}\\n\\n// fun main()をrunBlockingで定義\\nfun main() = runBlocking {\\n    // printlnでgetMessage()を出力\\n    println(getMessage())\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// coroutinesをインポート\\n___ ___.___.___\\n___\\n// suspend funでgetMessage関数を定義\\n___ ___ ___(): ___ {\\n    // delay関数（引数100）で100ミリ秒待機\\n    ___(___)\\n    // 「こんにちは」を返す\\n    ___ \"___\"\\n// ブロックを閉じる\\n___\\n___\\n// fun main()をrunBlockingで定義\\n___ ___() = ___ {\\n    // printlnでgetMessage()を出力\\n    ___(___(___))\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// coroutinesをインポート",
           "import kotlinx.coroutines.*",
           "",
           "// suspend funでgetMessage関数を定義",
           "suspend fun getMessage(): String {",
-          "    // delay(100)で100ミリ秒待機",
+          "    // delay関数（引数100）で100ミリ秒待機",
           "    delay(100)",
           "    // 「こんにちは」を返す",
           "    return \"こんにちは\"",
@@ -141,16 +141,16 @@ export const kotlin3Data = {
           "content": "# 目標\\n\\n2倍ずつ増えるシーケンスを作りましょう。\\n\\n1. `generateSequence(1) { it * 2 }` で開始\\n2. `.take(4)` で4つ取る\\n3. `.toList()` でリストに変換\\n4. 結果は `[1, 2, 4, 8]` になる"
         }
       ],
-      "correctCode": "// fun main()でmain関数を定義\\nfun main() {\\n    // generateSequence(1)で無限シーケンスを生成\\n    val nums = generateSequence(1) { it * 2 }\\n        // take(4)で4つ取得\\n        .take(4)\\n        // toList()でリストに変換\\n        .toList()\\n    // printlnでnumsを出力\\n    println(nums)\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// fun main()でmain関数を定義\\n___ ___() {\\n    // generateSequence(1)で無限シーケンスを生成\\n    ___ ___ = ___(___) { ___ * ___ }\\n        // take(4)で4つ取得\\n        .___(___)\\n        // toList()でリストに変換\\n        .___()\\n    // printlnでnumsを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fun main()でmain関数を定義\\nfun main() {\\n    // generateSequence関数（初期値1）で無限シーケンスを生成\\n    val nums = generateSequence(1) { it * 2 }\\n        // take関数で4つ取得\\n        .take(4)\\n        // toListでリストに変換\\n        .toList()\\n    // printlnでnumsを出力\\n    println(nums)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// fun main()でmain関数を定義\\n___ ___() {\\n    // generateSequence関数（初期値1）で無限シーケンスを生成\\n    ___ ___ = ___(___) { ___ * ___ }\\n        // take関数で4つ取得\\n        .___(___)\\n        // toListでリストに変換\\n        .___()\\n    // printlnでnumsを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// fun main()でmain関数を定義",
           "fun main() {",
-          "    // generateSequence(1)で無限シーケンスを生成",
+          "    // generateSequence関数（初期値1）で無限シーケンスを生成",
           "    val nums = generateSequence(1) { it * 2 }",
-          "        // take(4)で4つ取得",
+          "        // take関数で4つ取得",
           "        .take(4)",
-          "        // toList()でリストに変換",
+          "        // toListでリストに変換",
           "        .toList()",
           "    // printlnでnumsを出力",
           "    println(nums)",
@@ -211,8 +211,8 @@ export const kotlin3Data = {
           "content": "# 目標\\n\\ninline関数を作ってみましょう。\\n\\n1. `inline fun repeat(times: Int, action: (Int) -> Unit)` を定義\\n2. `for` ループで action を呼び出す\\n3. `repeat(3) { println(it) }` で0, 1, 2を表示"
         }
       ],
-      "correctCode": "// inline funでrepeat関数を定義\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\n    // for inで0からtimesまで繰り返す\\n    for (i in 0 until times) action(i)\\n// ブロックを閉じる\\n}\\n\\n// fun main()でmain関数を定義\\nfun main() {\\n    // repeat(3)でラムダを3回実行\\n    repeat(3) { println(it) }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// inline funでrepeat関数を定義\\n___ ___ ___(___: ___, ___: (___) -> ___) {\\n    // for inで0からtimesまで繰り返す\\n    for (___ in ___ ___ ___) ___(___)\\n// ブロックを閉じる\\n___\\n___\\n// fun main()でmain関数を定義\\n___ ___() {\\n    // repeat(3)でラムダを3回実行\\n    ___(___) { ___(___) }\\n// ブロックを閉じる\\n___",
+      "correctCode": "// inline funでrepeat関数を定義\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\n    // for inで0からtimesまで繰り返す\\n    for (i in 0 until times) action(i)\\n// ブロックを閉じる\\n}\\n\\n// fun main()でmain関数を定義\\nfun main() {\\n    // repeat関数（引数3）でラムダを3回実行\\n    repeat(3) { println(it) }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// inline funでrepeat関数を定義\\n___ ___ ___(___: ___, ___: (___) -> ___) {\\n    // for inで0からtimesまで繰り返す\\n    for (___ in ___ ___ ___) ___(___)\\n// ブロックを閉じる\\n___\\n___\\n// fun main()でmain関数を定義\\n___ ___() {\\n    // repeat関数（引数3）でラムダを3回実行\\n    ___(___) { ___(___) }\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// inline funでrepeat関数を定義",
           "inline fun repeat(times: Int, action: (Int) -> Unit) {",
@@ -223,7 +223,7 @@ export const kotlin3Data = {
           "",
           "// fun main()でmain関数を定義",
           "fun main() {",
-          "    // repeat(3)でラムダを3回実行",
+          "    // repeat関数（引数3）でラムダを3回実行",
           "    repeat(3) { println(it) }",
           "// ブロックを閉じる",
           "}"
@@ -364,15 +364,15 @@ export const kotlin3Data = {
           "content": "# 目標\\n\\napplyでConfigを設定しましょう。\\n\\n1. `Config()` で新しいオブジェクトを作る\\n2. `.apply { }` で設定する\\n3. `host` を \"localhost\" に\\n4. `port` を 8080 に"
         }
       ],
-      "correctCode": "// data classでConfigを定義\\ndata class Config(var host: String = \"\", var port: Int = 0)\\n\\n// fun main()でmain関数を定義\\nfun main() {\\n    // Config().applyで設定してcfgに代入\\n    val cfg = Config().apply {\\n        // hostに\"localhost\"を設定\\n        host = \"localhost\"\\n        // portに8080を設定\\n        port = 8080\\n    // applyブロックを閉じる\\n    }\\n    // printlnでcfgを出力\\n    println(cfg)\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// data classでConfigを定義\\n___ ___ ___(var ___: ___ = \"\", var ___: ___ = ___)\\n___\\n// fun main()でmain関数を定義\\n___ ___() {\\n    // Config().applyで設定してcfgに代入\\n    ___ ___ = ___().___ {\\n        // hostに\"localhost\"を設定\\n        ___ = \"___\"\\n        // portに8080を設定\\n        ___ = ___\\n    // applyブロックを閉じる\\n    ___\\n    // printlnでcfgを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// data classでConfigを定義\\ndata class Config(var host: String = \"\", var port: Int = 0)\\n\\n// fun main()でmain関数を定義\\nfun main() {\\n    // Configインスタンスをapplyで設定しcfgに代入\\n    val cfg = Config().apply {\\n        // hostに\"localhost\"を設定\\n        host = \"localhost\"\\n        // portに8080を設定\\n        port = 8080\\n    // applyブロックを閉じる\\n    }\\n    // printlnでcfgを出力\\n    println(cfg)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// data classでConfigを定義\\n___ ___ ___(var ___: ___ = \"\", var ___: ___ = ___)\\n___\\n// fun main()でmain関数を定義\\n___ ___() {\\n    // Configインスタンスをapplyで設定しcfgに代入\\n    ___ ___ = ___().___ {\\n        // hostに\"localhost\"を設定\\n        ___ = \"___\"\\n        // portに8080を設定\\n        ___ = ___\\n    // applyブロックを閉じる\\n    ___\\n    // printlnでcfgを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// data classでConfigを定義",
           "data class Config(var host: String = \"\", var port: Int = 0)",
           "",
           "// fun main()でmain関数を定義",
           "fun main() {",
-          "    // Config().applyで設定してcfgに代入",
+          "    // Configインスタンスをapplyで設定しcfgに代入",
           "    val cfg = Config().apply {",
           "        // hostに\"localhost\"を設定",
           "        host = \"localhost\"",
@@ -444,12 +444,12 @@ export const kotlin3Data = {
           "content": "# 目標\\n\\nalsoで値を確認しましょう。\\n\\n1. `42.also { }` で42に対して処理する\\n2. `println(\"Value: $it\")` でログ出力\\n3. 結果の num は 42 のまま"
         }
       ],
-      "correctCode": "// fun main()でmain関数を定義\\nfun main() {\\n    // 42.alsoで副作用を実行しnumに代入\\n    val num = 42.also {\\n        // printlnで「Value: $it」を出力\\n        println(\"Value: $it\")\\n    // alsoブロックを閉じる\\n    }\\n    // printlnでnumを出力\\n    println(num)\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// fun main()でmain関数を定義\\n___ ___() {\\n    // 42.alsoで副作用を実行しnumに代入\\n    ___ ___ = ___.___ {\\n        // printlnで「Value: $it」を出力\\n        ___(\"___: $___\")\\n    // alsoブロックを閉じる\\n    ___\\n    // printlnでnumを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fun main()でmain関数を定義\\nfun main() {\\n    // 42にalsoで副作用を実行しnumに代入\\n    val num = 42.also {\\n        // printlnで「Value: $it」を出力\\n        println(\"Value: $it\")\\n    // alsoブロックを閉じる\\n    }\\n    // printlnでnumを出力\\n    println(num)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// fun main()でmain関数を定義\\n___ ___() {\\n    // 42にalsoで副作用を実行しnumに代入\\n    ___ ___ = ___.___ {\\n        // printlnで「Value: $it」を出力\\n        ___(\"___: $___\")\\n    // alsoブロックを閉じる\\n    ___\\n    // printlnでnumを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// fun main()でmain関数を定義",
           "fun main() {",
-          "    // 42.alsoで副作用を実行しnumに代入",
+          "    // 42にalsoで副作用を実行しnumに代入",
           "    val num = 42.also {",
           "        // printlnで「Value: $it」を出力",
           "        println(\"Value: $it\")",
@@ -514,14 +514,14 @@ export const kotlin3Data = {
           "content": "# 目標\\n\\nrunで文字列を分割して単語数を数えましょう。\\n\\n1. `\"Hello World\".run { }` を使う\\n2. `split(\" \")` でスペースで分割\\n3. `.size` で要素数を取得\\n4. 結果は 2 になる"
         }
       ],
-      "correctCode": "// fun main()でmain関数を定義\\nfun main() {\\n    // \"Hello World\".runでブロックを実行しresultに代入\\n    val result = \"Hello World\".run {\\n        // split(\" \").sizeで単語数を取得\\n        split(\" \").size\\n    // runブロックを閉じる\\n    }\\n    // printlnでresultを出力\\n    println(result)\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// fun main()でmain関数を定義\\n___ ___() {\\n    // \"Hello World\".runでブロックを実行しresultに代入\\n    ___ ___ = \"___ ___\".___ {\\n        // split(\" \").sizeで単語数を取得\\n        ___(\"___\").___\\n    // runブロックを閉じる\\n    ___\\n    // printlnでresultを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fun main()でmain関数を定義\\nfun main() {\\n    // 文字列にrunでブロックを実行しresultに代入\\n    val result = \"Hello World\".run {\\n        // splitでスペース区切りしsizeで単語数を取得\\n        split(\" \").size\\n    // runブロックを閉じる\\n    }\\n    // printlnでresultを出力\\n    println(result)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// fun main()でmain関数を定義\\n___ ___() {\\n    // 文字列にrunでブロックを実行しresultに代入\\n    ___ ___ = \"___ ___\".___ {\\n        // splitでスペース区切りしsizeで単語数を取得\\n        ___(\"___\").___\\n    // runブロックを閉じる\\n    ___\\n    // printlnでresultを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// fun main()でmain関数を定義",
           "fun main() {",
-          "    // \"Hello World\".runでブロックを実行しresultに代入",
+          "    // 文字列にrunでブロックを実行しresultに代入",
           "    val result = \"Hello World\".run {",
-          "        // split(\" \").sizeで単語数を取得",
+          "        // splitでスペース区切りしsizeで単語数を取得",
           "        split(\" \").size",
           "    // runブロックを閉じる",
           "    }",
@@ -584,12 +584,12 @@ export const kotlin3Data = {
           "content": "# 目標\\n\\ntakeIfで条件付きの値を取得しましょう。\\n\\n1. `10.takeIf { it > 5 }` を実行\\n2. 10は5より大きいので条件を満たす\\n3. 結果は 10 になる（nullではない）"
         }
       ],
-      "correctCode": "// fun main()でmain関数を定義\\nfun main() {\\n    // 10.takeIfでit>5ならnumに10を代入\\n    val num = 10.takeIf { it > 5 }\\n    // printlnでnumを出力\\n    println(num)\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// fun main()でmain関数を定義\\n___ ___() {\\n    // 10.takeIfでit>5ならnumに10を代入\\n    ___ ___ = ___.___ { ___ > ___ }\\n    // printlnでnumを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fun main()でmain関数を定義\\nfun main() {\\n    // 10にtakeIfで5より大きければnumに代入\\n    val num = 10.takeIf { it > 5 }\\n    // printlnでnumを出力\\n    println(num)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// fun main()でmain関数を定義\\n___ ___() {\\n    // 10にtakeIfで5より大きければnumに代入\\n    ___ ___ = ___.___ { ___ > ___ }\\n    // printlnでnumを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// fun main()でmain関数を定義",
           "fun main() {",
-          "    // 10.takeIfでit>5ならnumに10を代入",
+          "    // 10にtakeIfで5より大きければnumに代入",
           "    val num = 10.takeIf { it > 5 }",
           "    // printlnでnumを出力",
           "    println(num)",
@@ -646,14 +646,14 @@ export const kotlin3Data = {
           "content": "# 目標\\n\\n数を偶数・奇数でグループ分けしましょう。\\n\\n1. `listOf(1, 2, 3, 4, 5)` でリストを作る\\n2. `.groupBy { it % 2 }` でグループ化\\n3. 結果は `{1=[1, 3, 5], 0=[2, 4]}` になる"
         }
       ],
-      "correctCode": "// fun main()でmain関数を定義\\nfun main() {\\n    // valでnumsにlistOf(1〜5)を代入\\n    val nums = listOf(1, 2, 3, 4, 5)\\n    // nums.groupByでit%2でグループ化しgroupedに代入\\n    val grouped = nums.groupBy { it % 2 }\\n    // printlnでgroupedを出力\\n    println(grouped)\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// fun main()でmain関数を定義\\n___ ___() {\\n    // valでnumsにlistOf(1〜5)を代入\\n    ___ ___ = ___(___,___, ___,___, ___)\\n    // nums.groupByでit%2でグループ化しgroupedに代入\\n    ___ ___ = ___.___ { ___ % ___ }\\n    // printlnでgroupedを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fun main()でmain関数を定義\\nfun main() {\\n    // valでnumsにlistOf(1〜5)を代入\\n    val nums = listOf(1, 2, 3, 4, 5)\\n    // numsをgroupByで偶奇でグループ化しgroupedに代入\\n    val grouped = nums.groupBy { it % 2 }\\n    // printlnでgroupedを出力\\n    println(grouped)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// fun main()でmain関数を定義\\n___ ___() {\\n    // valでnumsにlistOf(1〜5)を代入\\n    ___ ___ = ___(___,___, ___,___, ___)\\n    // numsをgroupByで偶奇でグループ化しgroupedに代入\\n    ___ ___ = ___.___ { ___ % ___ }\\n    // printlnでgroupedを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// fun main()でmain関数を定義",
           "fun main() {",
           "    // valでnumsにlistOf(1〜5)を代入",
           "    val nums = listOf(1, 2, 3, 4, 5)",
-          "    // nums.groupByでit%2でグループ化しgroupedに代入",
+          "    // numsをgroupByで偶奇でグループ化しgroupedに代入",
           "    val grouped = nums.groupBy { it % 2 }",
           "    // printlnでgroupedを出力",
           "    println(grouped)",
@@ -712,14 +712,14 @@ export const kotlin3Data = {
           "content": "# 目標\\n\\nfoldで1から4までの積を計算しましょう。\\n\\n1. `listOf(1, 2, 3, 4)` でリストを作る\\n2. `.fold(1) { acc, n -> acc * n }` で掛け算\\n3. 結果は 24 (= 1 * 2 * 3 * 4) になる"
         }
       ],
-      "correctCode": "// fun main()でmain関数を定義\\nfun main() {\\n    // valでnumsにlistOf(1〜4)を代入\\n    val nums = listOf(1, 2, 3, 4)\\n    // nums.fold(1)でacc*nを畳み込みproductに代入\\n    val product = nums.fold(1) { acc, n -> acc * n }\\n    // printlnでproductを出力\\n    println(product)\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// fun main()でmain関数を定義\\n___ ___() {\\n    // valでnumsにlistOf(1〜4)を代入\\n    ___ ___ = ___(___,___, ___,___)\\n    // nums.fold(1)でacc*nを畳み込みproductに代入\\n    ___ ___ = ___.___(___) { ___,___ -> ___ * ___ }\\n    // printlnでproductを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fun main()でmain関数を定義\\nfun main() {\\n    // valでnumsにlistOf(1〜4)を代入\\n    val nums = listOf(1, 2, 3, 4)\\n    // numsをfold（初期値1）でaccとnの積を畳み込みproductに代入\\n    val product = nums.fold(1) { acc, n -> acc * n }\\n    // printlnでproductを出力\\n    println(product)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// fun main()でmain関数を定義\\n___ ___() {\\n    // valでnumsにlistOf(1〜4)を代入\\n    ___ ___ = ___(___,___, ___,___)\\n    // numsをfold（初期値1）でaccとnの積を畳み込みproductに代入\\n    ___ ___ = ___.___(___) { ___,___ -> ___ * ___ }\\n    // printlnでproductを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// fun main()でmain関数を定義",
           "fun main() {",
           "    // valでnumsにlistOf(1〜4)を代入",
           "    val nums = listOf(1, 2, 3, 4)",
-          "    // nums.fold(1)でacc*nを畳み込みproductに代入",
+          "    // numsをfold（初期値1）でaccとnの積を畳み込みproductに代入",
           "    val product = nums.fold(1) { acc, n -> acc * n }",
           "    // printlnでproductを出力",
           "    println(product)",

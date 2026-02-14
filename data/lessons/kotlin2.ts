@@ -345,12 +345,12 @@ export const kotlin2Data = {
           "content": "# 目標\\n\\nリストから3以上の数だけを取り出しましょう。\\n\\n1. `listOf(1, 2, 3, 4, 5)` でリストを作る\\n2. `.filter { it >= 3 }` で3以上を抽出\\n3. 結果は `[3, 4, 5]` になる"
         }
       ],
-      "correctCode": "// valでnumsにlistOf（1〜5）を代入\\nval nums = listOf(1, 2, 3, 4, 5)\\n// filterでit>=3をresultに代入\\nval result = nums.filter { it >= 3 }\\n// printlnでresultを出力\\nprintln(result)",
-      "holeyCode": "// valでnumsにlistOf（1〜5）を代入\\n___ ___ = ___(___,  ___,  ___,  ___,  ___)\\n// filterでit>=3をresultに代入\\n___ ___ = ___.___ { ___ >= ___ }\\n// printlnでresultを出力\\n___(___)",
+      "correctCode": "// valでnumsにlistOf（1〜5）を代入\\nval nums = listOf(1, 2, 3, 4, 5)\\n// filterで3以上を抽出しresultに代入\\nval result = nums.filter { it >= 3 }\\n// printlnでresultを出力\\nprintln(result)",
+      "holeyCode": "// valでnumsにlistOf（1〜5）を代入\\n___ ___ = ___(___,  ___,  ___,  ___,  ___)\\n// filterで3以上を抽出しresultに代入\\n___ ___ = ___.___ { ___ >= ___ }\\n// printlnでresultを出力\\n___(___)",
       "correctLines": [
           "// valでnumsにlistOf（1〜5）を代入",
           "val nums = listOf(1, 2, 3, 4, 5)",
-          "// filterでit>=3をresultに代入",
+          "// filterで3以上を抽出しresultに代入",
           "val result = nums.filter { it >= 3 }",
           "// printlnでresultを出力",
           "println(result)"
@@ -465,12 +465,12 @@ export const kotlin2Data = {
           "content": "# 目標\\n\\nInt型に「2倍にする」関数を追加しましょう。\\n\\n1. `fun Int.double() = this * 2` で拡張関数を定義\\n2. `5.double()` で呼び出す\\n3. 結果は 10 になる"
         }
       ],
-      "correctCode": "// fun Int.double()でInt型にdouble拡張関数を定義\\nfun Int.double() = this * 2\\n// printlnで5.double()を出力\\nprintln(5.double())",
-      "holeyCode": "// fun Int.double()でInt型にdouble拡張関数を定義\\nfun ___.___() = ___ * ___\\n// printlnで5.double()を出力\\n___(___.___())",
+      "correctCode": "// Int型にdouble拡張関数を定義\\nfun Int.double() = this * 2\\n// 5のdoubleメソッドを呼び出して出力\\nprintln(5.double())",
+      "holeyCode": "// Int型にdouble拡張関数を定義\\nfun ___.___() = ___ * ___\\n// 5のdoubleメソッドを呼び出して出力\\n___(___.___())",
       "correctLines": [
-          "// fun Int.double()でInt型にdouble拡張関数を定義",
+          "// Int型にdouble拡張関数を定義",
           "fun Int.double() = this * 2",
-          "// printlnで5.double()を出力",
+          "// 5のdoubleメソッドを呼び出して出力",
           "println(5.double())"
         ],
       "lineHints": [

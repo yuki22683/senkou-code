@@ -26,7 +26,7 @@ export const javaData4 = {
           "content": "# 型を指定して使う\\n\\n使うときに `<>` の中に具体的な型を書きます。\\n\\n**文字列用の箱**\\n```java\\nBox<String> box = new Box<>();  // String専用の箱\\nbox.set(\"Hello\");  // 文字列を入れる\\nString s = box.get();  // 文字列で取り出せる（キャスト不要！）\\n```\\n\\n**数字用の箱**\\n```java\\nBox<Integer> numBox = new Box<>();  // Integer専用の箱\\nnumBox.set(42);  // 数字を入れる\\n```\\n\\n**メリット：** 間違った型を入れようとするとエラーで教えてくれます"
         }
       ],
-      "correctCode": "// ライブラリを読み込む\\nimport java.util.*;\\n\\n// <T> で型パラメータを定義する\\nclass Box<T> {\\n    // 文を実行\\n    private T value;\\n    // setメソッドを定義\\n    public void set(T v) { value = v; }\\n    // ゲッターを定義\\n    public T get() { return value; }\\n// ブロックを閉じる\\n}\\n\\n// Mainクラスを定義\\npublic class Main {\\n    // mainメソッドを定義\\n    public static void main(String[] args) {\\n        // boxにnew Box<>()を代入\\n        Box<String> box = new Box<>();\\n        // set で値を設定する\\n        box.set(\\\"Java\\\");\\n        // get で値を取得して出力する\\n        System.out.println(box.get());\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// <T> で型パラメータを定義する\\nclass ___<___> {\\n    // 文を実行\\n    private ___ ___;\\n    // setメソッドを定義\\n    public void ___(___  ___) { ___ = ___; }\\n    // ゲッターを定義\\n    public ___ ___() { return ___; }\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // boxにnew Box<>()を代入\\n        ___<___> ___ = new ___<>();\\n        // set で値を設定する\\n        ___.___(\\\"___\\\");\\n        // get で値を取得して出力する\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// ライブラリを読み込む\\nimport java.util.*;\\n\\n// <T> で型パラメータを定義する\\nclass Box<T> {\\n    // 文を実行\\n    private T value;\\n    // setメソッドを定義\\n    public void set(T v) { value = v; }\\n    // ゲッターを定義\\n    public T get() { return value; }\\n// ブロックを閉じる\\n}\\n\\n// Mainクラスを定義\\npublic class Main {\\n    // mainメソッドを定義\\n    public static void main(String[] args) {\\n        // boxに新しいBoxインスタンスを代入\\n        Box<String> box = new Box<>();\\n        // set で値を設定する\\n        box.set(\\\"Java\\\");\\n        // get で値を取得して出力する\\n        System.out.println(box.get());\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// <T> で型パラメータを定義する\\nclass ___<___> {\\n    // 文を実行\\n    private ___ ___;\\n    // setメソッドを定義\\n    public void ___(___  ___) { ___ = ___; }\\n    // ゲッターを定義\\n    public ___ ___() { return ___; }\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // boxに新しいBoxインスタンスを代入\\n        ___<___> ___ = new ___<>();\\n        // set で値を設定する\\n        ___.___(\\\"___\\\");\\n        // get で値を取得して出力する\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ライブラリを読み込む",
           "import java.util.*;",
@@ -46,7 +46,7 @@ export const javaData4 = {
           "public class Main {",
           "    // mainメソッドを定義",
           "    public static void main(String[] args) {",
-          "        // boxにnew Box<>()を代入",
+          "        // boxに新しいBoxインスタンスを代入",
           "        Box<String> box = new Box<>();",
           "        // set で値を設定する",
           "        box.set(\\\"Java\\\");",
@@ -111,7 +111,7 @@ export const javaData4 = {
           "content": "# 型固有のメソッドが使える\\n\\n制限をつけると、その型のメソッドが使えるようになります。\\n\\n**OKな例**\\n```java\\nNumBox<Integer> box = new NumBox<>();\\n// OK: Integer は Number の仲間\\n```\\n\\n**NGな例**\\n```java\\nNumBox<String> box2; \\n// コンパイルエラー！Stringは数字じゃない\\n```\\n\\n**メリット：**\\n- 間違った型を入れるのを防げる\\n- Number系のメソッド（doubleValue など）が使える"
         }
       ],
-      "correctCode": "// extends で型の上限を Number に制限する\\nclass Calculator<T extends Number> {\\n    private T value;\\n    public Calculator(T v) { value = v; }\\n    public double getDouble() { return value.doubleValue(); }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // calcにnew Calculator<>(42)を代入\\n        Calculator<Integer> calc = new Calculator<>(42);\\n        // calcのgetDoubleメソッドの結果を出力\\n        System.out.println(calc.getDouble());\\n    }\\n}", "holeyCode": "// extends で型の上限を Number に制限する\\nclass ___<___ extends ___> {\\n    // 文を実行\\n    private ___ ___;\\n    // コンストラクタを定義\\n    public ___(___ ___) { ___ = ___; }\\n    // ゲッターを定義\\n    public ___ ___() { return ___.___(___; }\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // calcにnew Calculator<>(42)を代入\\n        ___<___> ___ = new ___<>(___);\\n        // calcのgetDoubleメソッドの結果を出力\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// extends で型の上限を Number に制限する\\nclass Calculator<T extends Number> {\\n    private T value;\\n    public Calculator(T v) { value = v; }\\n    public double getDouble() { return value.doubleValue(); }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // calcに新しいCalculatorインスタンス（引数42）を代入\\n        Calculator<Integer> calc = new Calculator<>(42);\\n        // calcのgetDoubleメソッドの結果を出力\\n        System.out.println(calc.getDouble());\\n    }\\n}", "holeyCode": "// extends で型の上限を Number に制限する\\nclass ___<___ extends ___> {\\n    // 文を実行\\n    private ___ ___;\\n    // コンストラクタを定義\\n    public ___(___ ___) { ___ = ___; }\\n    // ゲッターを定義\\n    public ___ ___() { return ___.___(___; }\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // calcに新しいCalculatorインスタンス（引数42）を代入\\n        ___<___> ___ = new ___<>(___);\\n        // calcのgetDoubleメソッドの結果を出力\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// extends で型の上限を Number に制限する",
           "class Calculator<T extends Number> {",
@@ -122,7 +122,7 @@ export const javaData4 = {
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // calcにnew Calculator<>(42)を代入",
+          "        // calcに新しいCalculatorインスタンス（引数42）を代入",
           "        Calculator<Integer> calc = new Calculator<>(42);",
           "        // calcのgetDoubleメソッドの結果を出力",
           "        System.out.println(calc.getDouble());",
@@ -148,7 +148,7 @@ export const javaData4 = {
         ],
         "candidates": {
           "keywords": [],
-          "others": ["Calculator", "T", "Number", "value", "v", "double", "getDouble", "doubleValue", ")", "}", "", "Main", "main", "String", "args", "Integer", "calc", "new", "42", "System", "out", "println", "alculator(T", "v) { value = v", "s", "Main {", "// calcにnew Calculator<>(42)を代入", "Calculator<Integer> calc = new Calculator<>(42);", "m.out.println(calc.getDouble());"]
+          "others": ["Calculator", "T", "Number", "value", "v", "double", "getDouble", "doubleValue", ")", "}", "", "Main", "main", "String", "args", "Integer", "calc", "new", "42", "System", "out", "println", "alculator(T", "v) { value = v", "s", "Main {", "// calcに新しいCalculatorインスタンス（引数42）を代入", "Calculator<Integer> calc = new Calculator<>(42);", "m.out.println(calc.getDouble());"]
         },
         "testCases": [
           {
@@ -233,13 +233,13 @@ export const javaData4 = {
           "content": "# よく使うメソッド\\n\\nMapにはたくさん便利なメソッドがあります。\\n\\n**キーがあるかチェック**\\n```java\\nages.containsKey(\"Alice\"); // true（Aliceはいる）\\n```\\n\\n**なければデフォルト値を使う**\\n```java\\nages.getOrDefault(\"Carol\", 0); // Carolがいないので0を返す\\n```\\n\\n**全部のキー・値を取得**\\n```java\\nages.keySet(); // [Alice, Bob]（全ての名前）\\nages.values(); // [25, 30]（全ての年齢）\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // scoresにnew HashMap<>()を代入\\n        Map<String, Integer> scores = new HashMap<>();\\n        // put でキーと値を追加する\\n        scores.put(\"Math\", 90);\\n        // put でキーと値を追加する\\n        scores.put(\"English\", 85);\\n        // get で値を取得する\\n        System.out.println(scores.get(\"Math\"));\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // scoresにnew HashMap<>()を代入\\n        ___<___, ___> ___ = new ___<>();\\n        // put でキーと値を追加する\\n        ___.___(\\\"___\\\", ___);\\n        // put でキーと値を追加する\\n        ___.___(\\\"___\\\", ___);\\n        // get で値を取得する\\n        ___.___.___(___.___( \\\"___\\\"));\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // scoresに新しいHashMapインスタンスを代入\\n        Map<String, Integer> scores = new HashMap<>();\\n        // put でキーと値を追加する\\n        scores.put(\"Math\", 90);\\n        // put でキーと値を追加する\\n        scores.put(\"English\", 85);\\n        // get で値を取得する\\n        System.out.println(scores.get(\"Math\"));\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // scoresに新しいHashMapインスタンスを代入\\n        ___<___, ___> ___ = new ___<>();\\n        // put でキーと値を追加する\\n        ___.___(\\\"___\\\", ___);\\n        // put でキーと値を追加する\\n        ___.___(\\\"___\\\", ___);\\n        // get で値を取得する\\n        ___.___.___(___.___( \\\"___\\\"));\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // scoresにnew HashMap<>()を代入",
+          "        // scoresに新しいHashMapインスタンスを代入",
           "        Map<String, Integer> scores = new HashMap<>();",
           "        // put でキーと値を追加する",
           "        scores.put(\"Math\", 90);",
@@ -290,13 +290,13 @@ export const javaData4 = {
           "content": "# Java 8以降の書き方\\n\\nもっと短く書けるforEachメソッドもあります。ラムダ式と組み合わせて使います。\\n\\n```java\\nmap.forEach((key, value) -> {\\n    System.out.println(key + \": \" + value);\\n});\\n```\\n\\n**何をしているの？**\\n- 「keyとvalueを受け取って、それを表示する」という処理を全ペアに対して実行します\\n\\n**どちらを使う？**\\n- entrySet：古いJavaでも動く\\n- forEach：短くて読みやすい（Java 8以降）"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // mapにnew HashMap<>()を代入\\n        Map<String, Integer> map = new HashMap<>();\\n        // put でキーと値を追加する\\n        map.put(\"A\", 1);\\n        // put でキーと値を追加する\\n        map.put(\"B\", 2);\\n        // entrySet でエントリを取得する\\n        for (Map.Entry<String, Integer> e : map.entrySet()) {\\n            // getKey でキーを取得する\\n            System.out.println(e.getKey());\\n        }\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // mapにnew HashMap<>()を代入\\n        ___<___, ___> ___ = new ___<>();\\n        // put でキーと値を追加する\\n        ___.___(\\\"___\\\", ___);\\n        // put でキーと値を追加する\\n        ___.___(\\\"___\\\", ___);\\n        // entrySet でエントリを取得する\\n        for (___.___ <___, ___> ___ : ___.___()) {\\n            // getKey でキーを取得する\\n            ___.___.___(___.___());\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // mapに新しいHashMapインスタンスを代入\\n        Map<String, Integer> map = new HashMap<>();\\n        // put でキーと値を追加する\\n        map.put(\"A\", 1);\\n        // put でキーと値を追加する\\n        map.put(\"B\", 2);\\n        // entrySet でエントリを取得する\\n        for (Map.Entry<String, Integer> e : map.entrySet()) {\\n            // getKey でキーを取得する\\n            System.out.println(e.getKey());\\n        }\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // mapに新しいHashMapインスタンスを代入\\n        ___<___, ___> ___ = new ___<>();\\n        // put でキーと値を追加する\\n        ___.___(\\\"___\\\", ___);\\n        // put でキーと値を追加する\\n        ___.___(\\\"___\\\", ___);\\n        // entrySet でエントリを取得する\\n        for (___.___ <___, ___> ___ : ___.___()) {\\n            // getKey でキーを取得する\\n            ___.___.___(___.___());\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // mapにnew HashMap<>()を代入",
+          "        // mapに新しいHashMapインスタンスを代入",
           "        Map<String, Integer> map = new HashMap<>();",
           "        // put でキーと値を追加する",
           "        map.put(\"A\", 1);",
@@ -479,7 +479,7 @@ export const javaData4 = {
           "content": "# 型安全で明確\\n\\nEnumを使うと、間違った値を入れることができなくなります。\\n\\n**switch文で使える**\\n```java\\nswitch (color) {\\n    case RED: System.out.println(\"赤\"); break;\\n    case GREEN: System.out.println(\"緑\"); break;\\n    case BLUE: System.out.println(\"青\"); break;\\n}\\n```\\n\\n**全ての値を取得**\\n```java\\nColor.values()  // [RED, GREEN, BLUE]\\n```\\n\\n**メリット：** 「PURPRE」のようなタイプミスがあるとエラーになるので、間違いを防げます！"
         }
       ],
-      "correctCode": "// Day列挙型を定義\\nenum Day {\\n    MON, TUE, WED, THU, FRI, SAT, SUN\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // Day.MON で列挙値を取得する\\n        Day today = Day.MON;\\n        // println で出力する\\n        System.out.println(today);\\n    }\\n}", "holeyCode": "// Day列挙型を定義\\nenum ___ {\\n    // 曜日の列挙値\\n    ___, ___, ___, ___, ___, ___, ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // Day.MON で列挙値を取得する\\n        ___ ___ = ___.___;\\n        // println で出力する\\n        ___.___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// Day列挙型を定義\\nenum Day {\\n    MON, TUE, WED, THU, FRI, SAT, SUN\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // DayのMON列挙値をtodayに代入\\n        Day today = Day.MON;\\n        // println で出力する\\n        System.out.println(today);\\n    }\\n}", "holeyCode": "// Day列挙型を定義\\nenum ___ {\\n    // 曜日の列挙値\\n    ___, ___, ___, ___, ___, ___, ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // DayのMON列挙値をtodayに代入\\n        ___ ___ = ___.___;\\n        // println で出力する\\n        ___.___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Day列挙型を定義",
           "enum Day {",
@@ -488,7 +488,7 @@ export const javaData4 = {
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // Day.MON で列挙値を取得する",
+          "        // DayのMON列挙値をtodayに代入",
           "        Day today = Day.MON;",
           "        // println で出力する",
           "        System.out.println(today);",
@@ -534,13 +534,13 @@ export const javaData4 = {
           "content": "# よく使うメソッド\\n\\n**offer（オファー）：列に追加**\\n```java\\noffer(e)  // 列の最後に並ぶ\\n```\\n\\n**poll（ポール）：先頭を取り出す**\\n```java\\npoll()    // 列の先頭から出る（空ならnull）\\n```\\n\\n**peek（ピーク）：先頭を見る（出ない）**\\n```java\\npeek()    // 次は誰？と確認するだけ（列からは出ない）\\n```\\n\\n**覚え方：** 行列に並ぶ(offer)→出る(poll)→確認する(peek)"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // queueにnew LinkedList<>()を代入\\n        Queue<String> queue = new LinkedList<>();\\n        // offer でキューに要素を追加する\\n        queue.offer(\"First\");\\n        // offer でキューに要素を追加する\\n        queue.offer(\"Second\");\\n        // poll で要素を取り出す\\n        System.out.println(queue.poll());\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // queueにnew LinkedList<>()を代入\\n        ___<___> ___ = new ___<>();\\n        // offer でキューに要素を追加する\\n        ___.___(\\\"___\\\");\\n        // offer でキューに要素を追加する\\n        ___.___(\\\"___\\\");\\n        // poll で要素を取り出す\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // queueに新しいLinkedListインスタンスを代入\\n        Queue<String> queue = new LinkedList<>();\\n        // offer でキューに要素を追加する\\n        queue.offer(\"First\");\\n        // offer でキューに要素を追加する\\n        queue.offer(\"Second\");\\n        // poll で要素を取り出す\\n        System.out.println(queue.poll());\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // queueに新しいLinkedListインスタンスを代入\\n        ___<___> ___ = new ___<>();\\n        // offer でキューに要素を追加する\\n        ___.___(\\\"___\\\");\\n        // offer でキューに要素を追加する\\n        ___.___(\\\"___\\\");\\n        // poll で要素を取り出す\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // queueにnew LinkedList<>()を代入",
+          "        // queueに新しいLinkedListインスタンスを代入",
           "        Queue<String> queue = new LinkedList<>();",
           "        // offer でキューに要素を追加する",
           "        queue.offer(\"First\");",
@@ -591,13 +591,13 @@ export const javaData4 = {
           "content": "# 後入れ先出し（LIFO：ライフォー）\\n\\nDequeは**スタック**としても使えます。「最後に入れたものが最初に出る」構造です。\\n\\n**たとえ話：** お皿を積み重ねたイメージです。最後に置いたお皿が一番上にあるので、最初に取れますよね。\\n\\n```java\\nDeque<Integer> stack = new ArrayDeque<>();\\nstack.push(1);  // 1を積む\\nstack.push(2);  // 2を積む（1の上に）\\nstack.pop();    // 2を取り出す（一番上だから）\\n```\\n\\n**覚え方：**\\n- Queue（キュー）→ FIFO（先入れ先出し）：行列\\n- Stack（スタック）→ LIFO（後入れ先出し）：積み重ね"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // stackにnew ArrayDeque<>()を代入\\n        Deque<Integer> stack = new ArrayDeque<>();\\n        // push でスタックに積む\\n        stack.push(10);\\n        // push でスタックに積む\\n        stack.push(20);\\n        // pop でスタックから取り出す\\n        System.out.println(stack.pop());\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // stackにnew ArrayDeque<>()を代入\\n        ___<___> ___ = new ___<>();\\n        // push でスタックに積む\\n        ___.___(___);\\n        // push でスタックに積む\\n        ___.___(___);\\n        // pop でスタックから取り出す\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // stackに新しいArrayDequeインスタンスを代入\\n        Deque<Integer> stack = new ArrayDeque<>();\\n        // push でスタックに積む\\n        stack.push(10);\\n        // push でスタックに積む\\n        stack.push(20);\\n        // pop でスタックから取り出す\\n        System.out.println(stack.pop());\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // stackに新しいArrayDequeインスタンスを代入\\n        ___<___> ___ = new ___<>();\\n        // push でスタックに積む\\n        ___.___(___);\\n        // push でスタックに積む\\n        ___.___(___);\\n        // pop でスタックから取り出す\\n        ___.___.___(___.___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // stackにnew ArrayDeque<>()を代入",
+          "        // stackに新しいArrayDequeインスタンスを代入",
           "        Deque<Integer> stack = new ArrayDeque<>();",
           "        // push でスタックに積む",
           "        stack.push(10);",

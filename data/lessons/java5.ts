@@ -227,7 +227,7 @@ export const javaData5 = {
           "content": "# throw（スロー）で投げる\\n\\n`throw`（スロー＝投げる）を使って、自分で例外を発生させられます。\\n\\n**コード例：** 年齢がマイナスならエラーにする\\n```java\\nif (age < 0) {\\n    throw new MyException(\"年齢は正の数です\");\\n}\\n```\\n\\n**何が起きる？**\\n1. 年齢が0より小さいかチェック\\n2. 小さければ例外を「投げる」\\n3. どこかでcatchされるまで上に伝わる\\n\\n**注意：** throw は「投げる」、throws は「投げるかもしれないと宣言」で違います"
         }
       ],
-      "correctCode": "// extends で Exception を継承する\\nclass InvalidAgeException extends Exception {\\n    public InvalidAgeException(String msg) {\\n        // super で親クラスのコンストラクタを呼び出す\\n        super(msg);\\n    }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        try {\\n            // throw new InvalidAgeException(\"Invalid\")で例外をスロー\\n            throw new InvalidAgeException(\"Invalid\");\\n        } catch (InvalidAgeException e) {\\n            // getMessage でメッセージを取得する\\n            System.out.println(e.getMessage());\\n        }\\n    }\\n}", "holeyCode": "// extends で Exception を継承する\\nclass ___ extends ___ {\\n    // InvalidAgeExceptionコンストラクタを定義\\n    public ___(___  ___) {\\n        // super で親クラスのコンストラクタを呼び出す\\n        ___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // ブロックを開始\\n        ___ {\\n            // throw new InvalidAgeException(\\\"Invalid\\\")で例外をスロー\\n            throw new ___(___);\\n        // ブロックを開始\\n        } ___ (___ ___) {\\n            // getMessage でメッセージを取得する\\n            ___.___.___(___.___());\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// extends で Exception を継承する\\nclass InvalidAgeException extends Exception {\\n    public InvalidAgeException(String msg) {\\n        // super で親クラスのコンストラクタを呼び出す\\n        super(msg);\\n    }\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        try {\\n            // InvalidAgeException（メッセージ「Invalid」）をスロー\\n            throw new InvalidAgeException(\"Invalid\");\\n        } catch (InvalidAgeException e) {\\n            // getMessage でメッセージを取得する\\n            System.out.println(e.getMessage());\\n        }\\n    }\\n}", "holeyCode": "// extends で Exception を継承する\\nclass ___ extends ___ {\\n    // InvalidAgeExceptionコンストラクタを定義\\n    public ___(___  ___) {\\n        // super で親クラスのコンストラクタを呼び出す\\n        ___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // ブロックを開始\\n        ___ {\\n            // throw new InvalidAgeException(\\\"Invalid\\\")で例外をスロー\\n            throw new ___(___);\\n        // ブロックを開始\\n        } ___ (___ ___) {\\n            // getMessage でメッセージを取得する\\n            ___.___.___(___.___());\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// extends で Exception を継承する",
           "class InvalidAgeException extends Exception {",
@@ -240,7 +240,7 @@ export const javaData5 = {
           "public class Main {",
           "    public static void main(String[] args) {",
           "        try {",
-          "            // throw new InvalidAgeException(\"Invalid\")で例外をスロー",
+          "            // InvalidAgeException（メッセージ「Invalid」）をスロー",
           "            throw new InvalidAgeException(\"Invalid\");",
           "        } catch (InvalidAgeException e) {",
           "            // getMessage でメッセージを取得する",
@@ -362,14 +362,14 @@ export const javaData5 = {
           "content": "# ループで読み込み\\n\\nファイルの全部の行を読みたいときは、whileループを使います。\\n\\n```java\\nString line;\\nwhile ((line = br.readLine()) != null) {  // 読めなくなるまで\\n    System.out.println(line);  // 1行ずつ表示\\n}\\n```\\n\\n**何が起きている？**\\n1. `readLine()` で1行読む\\n2. 読めたら表示して、次の行へ\\n3. 読めなくなったら（null）ループ終了\\n\\n**ポイント：** readLine() は行がなくなると null を返します"
         }
       ],
-      "correctCode": "import java.io.*;\\n\\npublic class Main {\\n    public static void main(String[] args) throws IOException {\\n        String content = \"Line1\\nLine2\";\\n        // brにnew BufferedReader(new StringReader(content))を代入\\n        BufferedReader br = new BufferedReader(new StringReader(content));\\n        // readLine で1行ずつ読み込む\\n        String line = br.readLine();\\n        // println で出力する\\n        System.out.println(line);\\n        // close でリソースを閉じる\\n        br.close();\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) throws ___ {\\n        // \\\"\\n        ___ ___ = ___\\n// \\\"\\n___;\\n        // brにnew BufferedReader(new StringReader(content))を代入\\n        ___ ___ = new ___(new ___(___));\\n        // readLine で1行ずつ読み込む\\n        ___ ___ = ___.___();\\n        // println で出力する\\n        ___.___.___(___)___\\n        // close でリソースを閉じる\\n        ___.___()___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.io.*;\\n\\npublic class Main {\\n    public static void main(String[] args) throws IOException {\\n        String content = \"Line1\\nLine2\";\\n        // brに新しいBufferedReader（引数にcontentのStringReader）を代入\\n        BufferedReader br = new BufferedReader(new StringReader(content));\\n        // readLine で1行ずつ読み込む\\n        String line = br.readLine();\\n        // println で出力する\\n        System.out.println(line);\\n        // close でリソースを閉じる\\n        br.close();\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) throws ___ {\\n        // \\\"\\n        ___ ___ = ___\\n// \\\"\\n___;\\n        // brに新しいBufferedReader（引数にcontentのStringReader）を代入\\n        ___ ___ = new ___(new ___(___));\\n        // readLine で1行ずつ読み込む\\n        ___ ___ = ___.___();\\n        // println で出力する\\n        ___.___.___(___)___\\n        // close でリソースを閉じる\\n        ___.___()___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.io.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) throws IOException {",
           "        String content = \"Line1\\nLine2\";",
-          "        // brにnew BufferedReader(new StringReader(content))を代入",
+          "        // brに新しいBufferedReader（引数にcontentのStringReader）を代入",
           "        BufferedReader br = new BufferedReader(new StringReader(content));",
           "        // readLine で1行ずつ読み込む",
           "        String line = br.readLine();",
@@ -488,13 +488,13 @@ export const javaData5 = {
           "content": "# 便利なメソッド\\n\\n読み込みたいデータの種類によって、使うメソッドが違います。\\n\\n**数字を読む**\\n```java\\nnextInt()    // 整数（1, 2, 3 など）\\nnextDouble() // 小数（1.5, 3.14 など）\\n```\\n\\n**文字を読む**\\n```java\\nnext()       // 単語1つ（空白で区切り）\\nnextLine()   // 1行まるごと\\n```\\n\\n**まだ読めるかチェック**\\n```java\\nhasNext()    // 次のデータがあるか？\\n```\\n\\n**覚え方：** next〇〇 で「次の〇〇を読む」です"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // scにnew Scanner(\"42 こんにちは\")を代入\\n        Scanner sc = new Scanner(\"42 こんにちは\");\\n        // nextInt で整数を読み込む\\n        int num = sc.nextInt();\\n        // next で文字列を読み込む\\n        String word = sc.next();\\n        // println で出力する\\n        System.out.println(num + \" \" + word);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // scにnew Scanner(\\\"42 こんにちは\\\")を代入\\n        ___ ___ = new ___(___);\\n        // nextInt で整数を読み込む\\n        int ___ = ___.___();\\n        // next で文字列を読み込む\\n        ___ ___ = ___.___();\\n        // println で出力する\\n        ___.___.___(___ + ___ + ___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // scに新しいScanner（引数「42 こんにちは」）を代入\\n        Scanner sc = new Scanner(\"42 こんにちは\");\\n        // nextInt で整数を読み込む\\n        int num = sc.nextInt();\\n        // next で文字列を読み込む\\n        String word = sc.next();\\n        // println で出力する\\n        System.out.println(num + \" \" + word);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // scにnew Scanner(\\\"42 こんにちは\\\")を代入\\n        ___ ___ = new ___(___);\\n        // nextInt で整数を読み込む\\n        int ___ = ___.___();\\n        // next で文字列を読み込む\\n        ___ ___ = ___.___();\\n        // println で出力する\\n        ___.___.___(___ + ___ + ___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) {",
-          "        // scにnew Scanner(\"42 こんにちは\")を代入",
+          "        // scに新しいScanner（引数「42 こんにちは」）を代入",
           "        Scanner sc = new Scanner(\"42 こんにちは\");",
           "        // nextInt で整数を読み込む",
           "        int num = sc.nextInt();",
@@ -548,14 +548,14 @@ export const javaData5 = {
           "content": "# Files クラスのメソッド\\n\\nFilesクラスには便利なメソッドがたくさんあります。\\n\\n**読み込み**\\n```java\\nFiles.readAllLines(path)  // 全行をリストで取得\\nFiles.readString(path)    // 全内容を文字列で取得\\n```\\n\\n**書き込み**\\n```java\\nFiles.write(path, lines)  // リストの内容を書き込み\\n```\\n\\n**チェック**\\n```java\\nFiles.exists(path)        // ファイルがあるか確認\\n```\\n\\n**メリット：** 1行で読み書きできて、とても便利！"
         }
       ],
-      "correctCode": "import java.nio.file.*;\\nimport java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) throws Exception {\\n        // pathにPaths.get(\".\")を代入\\n        Path path = Paths.get(\".\");\\n        // exists でファイルの存在を確認する\\n        boolean exists = Files.exists(path);\\n        // println で出力する\\n        System.out.println(exists);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___.___.___\\n// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) throws ___ {\\n        // pathにPaths.get(\\\".\\\")を代入\\n        ___ ___ = ___.___(___)___\\n        // exists でファイルの存在を確認する\\n        ___ ___ = ___.___(___);\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.nio.file.*;\\nimport java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) throws Exception {\\n        // pathにカレントディレクトリ「.」のPathを代入\\n        Path path = Paths.get(\".\");\\n        // exists でファイルの存在を確認する\\n        boolean exists = Files.exists(path);\\n        // println で出力する\\n        System.out.println(exists);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___.___.___\\n// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) throws ___ {\\n        // pathにPaths.get(\\\".\\\")を代入\\n        ___ ___ = ___.___(___)___\\n        // exists でファイルの存在を確認する\\n        ___ ___ = ___.___(___);\\n        // println で出力する\\n        ___.___.___(___)___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.nio.file.*;",
           "import java.util.*;",
           "",
           "public class Main {",
           "    public static void main(String[] args) throws Exception {",
-          "        // pathにPaths.get(\".\")を代入",
+          "        // pathにカレントディレクトリ「.」のPathを代入",
           "        Path path = Paths.get(\".\");",
           "        // exists でファイルの存在を確認する",
           "        boolean exists = Files.exists(path);",

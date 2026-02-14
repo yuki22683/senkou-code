@@ -33,15 +33,15 @@ export const pythonData2 = {
           "content": "# 関数を呼び出すときに材料を渡す\\n\\n関数を使うとき、カッコの中に **値を入れる** と、その値が引数に入ります。\\n\\n**例：** いろんな人にあいさつしよう！\\n\\n```python\\ndef greet(name):\\n    print(f'こんにちは、{name}さん！')\\n\\ngreet('太郎')\\n```\\n=> こんにちは、太郎さん！\\n\\n**何をしているか：**\\n1. `greet('太郎')` で関数を呼び出す\\n2. `'太郎'` という値が `name` に入る\\n3. `f'こんにちは、{name}さん！'` の `{name}` が「太郎」に置き換わる\\n4. 「こんにちは、太郎さん！」と表示される！\\n\\n**便利なところ：** 名前を変えるだけで、いろんな人にあいさつできます！"
         }
       ],
-      "correctCode": "# 名前を受け取ってあいさつする関数\\ndef hello(name):\\n    # f-stringで名前を表示\\n    print(f'こんにちは、{name}！')\\n\\n# hello関数を'Python'で呼び出す\\nhello('Python')",
-      "holeyCode": "# 名前を受け取ってあいさつする関数\\ndef ___(___):\\n    # f-stringで名前を表示\\n    ___(f'こんにちは、{___}！')\\n\\n# hello関数を'Python'で呼び出す\\n___('___')",
+      "correctCode": "# defでhello関数を定義（引数name）\\ndef hello(name):\\n    # print関数でf-string（こんにちは、{name}！）を表示\\n    print(f'こんにちは、{name}！')\\n\\n# hello関数を引数'Python'で呼び出す\\nhello('Python')",
+      "holeyCode": "# defでhello関数を定義（引数name）\\ndef ___(___):\\n    # print関数でf-string（こんにちは、{name}！）を表示\\n    ___(f'こんにちは、{___}！')\\n\\n# hello関数を引数'Python'で呼び出す\\n___('___')",
       "correctLines": [
-        "# 名前を受け取ってあいさつする関数",
+        "# defでhello関数を定義（引数name）",
         "def hello(name):",
-        "    # f-stringで名前を表示",
+        "    # print関数でf-string（こんにちは、{name}！）を表示",
         "    print(f'こんにちは、{name}！')",
         "",
-        "# hello関数を'Python'で呼び出す",
+        "# hello関数を引数'Python'で呼び出す",
         "hello('Python')"
       ],
       "lineHints": [
@@ -78,12 +78,12 @@ export const pythonData2 = {
           "content": "# 渡しても渡さなくてもOK！\\n\\nデフォルト引数があると、**柔軟に関数を使えます**。\\n\\n**例：** いろんなパターンで呼び出そう！\\n\\n```python\\ndef greet(name='ゲスト'):\\n    print(f'ようこそ、{name}さん！')\\n\\ngreet()        # 何も渡さない\\ngreet('太郎')  # '太郎'を渡す\\n```\\n=> ようこそ、ゲストさん！\\n=> ようこそ、太郎さん！\\n\\n**何をしているか：**\\n- `greet()` → 何も渡していないので、デフォルトの「ゲスト」が使われる\\n- `greet('太郎')` → 「太郎」を渡したので、そちらが使われる\\n\\n**便利なところ：** 毎回値を渡さなくても、よく使う値で動いてくれます！"
         }
       ],
-      "correctCode": "# say_hello関数を定義（nameのデフォルト値は'World'）\\ndef say_hello(name='World'):\\n    # Hello, 名前!と表示\\n    print(f'Hello, {name}!')\\n\\n# say_hello関数を引数なしで呼び出す\\nsay_hello()",
-      "holeyCode": "# say_hello関数を定義（nameのデフォルト値は'World'）\\ndef ___(___='___'):\\n    # Hello, 名前!と表示\\n    ___(f'Hello, {___}!')\\n\\n# say_hello関数を引数なしで呼び出す\\n___()",
+      "correctCode": "# defでsay_hello関数を定義（引数nameのデフォルト値は'World'）\\ndef say_hello(name='World'):\\n    # print関数でf-string（Hello, {name}!）を表示\\n    print(f'Hello, {name}!')\\n\\n# say_hello関数を引数なしで呼び出す\\nsay_hello()",
+      "holeyCode": "# defでsay_hello関数を定義（引数nameのデフォルト値は'World'）\\ndef ___(___='___'):\\n    # print関数でf-string（Hello, {name}!）を表示\\n    ___(f'Hello, {___}!')\\n\\n# say_hello関数を引数なしで呼び出す\\n___()",
       "correctLines": [
-        "# say_hello関数を定義（nameのデフォルト値は'World'）",
+        "# defでsay_hello関数を定義（引数nameのデフォルト値は'World'）",
         "def say_hello(name='World'):",
-        "    # Hello, 名前!と表示",
+        "    # print関数でf-string（Hello, {name}!）を表示",
         "    print(f'Hello, {name}!')",
         "",
         "# say_hello関数を引数なしで呼び出す",
@@ -123,17 +123,17 @@ export const pythonData2 = {
           "content": "# 計算結果を受け取ろう！\\n\\n`return` で返された値は、**変数に入れたり**、**そのまま使ったり** できます。\\n\\n**例：** 2倍にする関数を作ろう！\\n\\n```python\\ndef double(x):\\n    return x * 2\\n\\nprint(double(5))\\n```\\n\\n=> 10\\n\\n**何をしているか：**\\n1. `double(5)` で関数を呼び出す\\n2. 関数の中で `5 * 2 = 10` が計算される\\n3. `return` で 10 が返される\\n4. `print()` がその 10 を表示する！\\n\\n**ポイント：**\\n- `return` を使うと、関数は **答えを返す機械** になります\\n- 返された値は変数に保存したり、そのまま使ったりできます"
         }
       ],
-      "correctCode": "# add関数を定義（第1引数a, 第2引数b）\\ndef add(a, b):\\n    # aとbの和を返す\\n    return a + b\\n\\n# add関数（第1引数に10, 第2引数に20）を呼び出してresultに代入\\nresult = add(10, 20)\\n# resultを表示\\nprint(result)",
-      "holeyCode": "# add関数を定義（第1引数a, 第2引数b）\\ndef ___(___, ___):\\n    # aとbの和を返す\\n    ___ ___ + ___\\n\\n# add関数（第1引数に10, 第2引数に20）を呼び出してresultに代入\\n___ = ___(___, ___)\\n# resultを表示\\n___(___)",
+      "correctCode": "# defでadd関数を定義（第1引数a, 第2引数b）\\ndef add(a, b):\\n    # returnでaとbの和を返す\\n    return a + b\\n\\n# add関数（第1引数に10, 第2引数に20）を呼び出してresultに代入\\nresult = add(10, 20)\\n# print関数でresultを表示\\nprint(result)",
+      "holeyCode": "# defでadd関数を定義（第1引数a, 第2引数b）\\ndef ___(___, ___):\\n    # returnでaとbの和を返す\\n    ___ ___ + ___\\n\\n# add関数（第1引数に10, 第2引数に20）を呼び出してresultに代入\\n___ = ___(___, ___)\\n# print関数でresultを表示\\n___(___)",
       "correctLines": [
-        "# add関数を定義（第1引数a, 第2引数b）",
+        "# defでadd関数を定義（第1引数a, 第2引数b）",
         "def add(a, b):",
-        "    # aとbの和を返す",
+        "    # returnでaとbの和を返す",
         "    return a + b",
         "",
         "# add関数（第1引数に10, 第2引数に20）を呼び出してresultに代入",
         "result = add(10, 20)",
-        "# resultを表示",
+        "# print関数でresultを表示",
         "print(result)"
       ],
       "lineHints": [
@@ -173,19 +173,19 @@ export const pythonData2 = {
           "content": "# 複数の値を別々の変数に入れよう！\\n\\n返ってきた複数の値を、**別々の変数で受け取れます**。\\n\\n**例：** 最小値と最大値を調べよう！\\n\\n```python\\ndef min_max(numbers):\\n    return min(numbers), max(numbers)\\n\\nsmallest, largest = min_max([3, 1, 4])\\nprint(smallest)\\nprint(largest)\\n```\\n\\n=> 1\\n\\n=> 4\\n\\n**何をしているか：**\\n1. `min_max([3, 1, 4])` でリスト [3, 1, 4] を渡す\\n2. 関数が最小値 1 と最大値 4 を返す\\n3. `smallest, largest` で2つの変数に **同時に代入**\\n4. それぞれの値を表示！\\n\\n**ポイント：** 受け取る変数の数と、返す値の数は **同じ** にしましょう！"
         }
       ],
-      "correctCode": "# 2つの値を返すcalc関数\\ndef calc(x):\\n    # x+1, x*2の順で返す\\n    return x + 1, x * 2\\n\\n# 2つの変数a, bで受け取る\\na, b = calc(5)\\n# aを出力\\nprint(a)\\n# bを出力\\nprint(b)",
-      "holeyCode": "# 2つの値を返すcalc関数\\ndef ___(___):\\n    # x+1, x*2の順で返す\\n    ___ ___ + 1, ___ ___ 2\\n\\n# 2つの変数a, bで受け取る\\n___, ___ = ___(___)\\n# aを出力\\n___(___)\\n# bを出力\\n___(___)",
+      "correctCode": "# defでcalc関数を定義（引数x、2つの値を返す）\\ndef calc(x):\\n    # returnでxに1を足した値とxを2倍した値の順で返す\\n    return x + 1, x * 2\\n\\n# 変数a, bでcalc関数（引数5）の戻り値を受け取る\\na, b = calc(5)\\n# print関数でaを出力\\nprint(a)\\n# print関数でbを出力\\nprint(b)",
+      "holeyCode": "# defでcalc関数を定義（引数x、2つの値を返す）\\ndef ___(___):\\n    # returnでxに1を足した値とxを2倍した値の順で返す\\n    ___ ___ + 1, ___ ___ 2\\n\\n# 変数a, bでcalc関数（引数5）の戻り値を受け取る\\n___, ___ = ___(___)\\n# print関数でaを出力\\n___(___)\\n# print関数でbを出力\\n___(___)",
       "correctLines": [
-          "# 2つの値を返すcalc関数",
+          "# defでcalc関数を定義（引数x、2つの値を返す）",
           "def calc(x):",
-          "    # x+1, x*2の順で返す",
+          "    # returnでxに1を足した値とxを2倍した値の順で返す",
           "    return x + 1, x * 2",
           "",
-          "# 2つの変数a, bで受け取る",
+          "# 変数a, bでcalc関数（引数5）の戻り値を受け取る",
           "a, b = calc(5)",
-          "# aを出力",
+          "# print関数でaを出力",
           "print(a)",
-          "# bを出力",
+          "# print関数でbを出力",
           "print(b)"
         ],
       "lineHints": [
@@ -228,12 +228,12 @@ export const pythonData2 = {
           "content": "# 開始と終了を指定しよう！\\n\\n`[開始:終了]` で、開始位置から **終了位置の手前まで** を取り出します。\\n\\n**注意：** 終了位置の文字は **含まれません**！\\n\\n**例：** いろんな切り取り方をしよう！\\n\\n```python\\ntext = 'Hello'\\nprint(text[1:4])\\nprint(text[:3])\\nprint(text[2:])\\n```\\n\\n=> 'ell'\\n\\n=> 'Hel' (最初から)\\n\\n=> 'llo' (最後まで)\\n\\n**何をしているか：**\\n- `text[1:4]` → 1番目から4番目の手前まで = 'ell'\\n- `text[:3]` → 最初（0番目）から3番目の手前まで = 'Hel'\\n- `text[2:]` → 2番目から最後まで = 'llo'\\n\\n**ポイント：** 開始を省略すると「最初から」、終了を省略すると「最後まで」になります！"
         }
       ],
-      "correctCode": "# wordに'Python'を代入\\nword = 'Python'\\n# 最初の2文字（インデックス0から2の手前まで）を表示\\nprint(word[0:2])",
-      "holeyCode": "# wordに'Python'を代入\\n___ = '___'\\n# 最初の2文字（インデックス0から2の手前まで）を表示\\n___(___[___:___])",
+      "correctCode": "# wordに文字列'Python'を代入\\nword = 'Python'\\n# print関数でwordのスライス（インデックス0から2の手前まで）を表示\\nprint(word[0:2])",
+      "holeyCode": "# wordに文字列'Python'を代入\\n___ = '___'\\n# print関数でwordのスライス（インデックス0から2の手前まで）を表示\\n___(___[___:___])",
       "correctLines": [
-        "# wordに'Python'を代入",
+        "# wordに文字列'Python'を代入",
         "word = 'Python'",
-        "# 最初の2文字（インデックス0から2の手前まで）を表示",
+        "# print関数でwordのスライス（インデックス0から2の手前まで）を表示",
         "print(word[0:2])"
       ],
       "lineHints": [
@@ -268,12 +268,12 @@ export const pythonData2 = {
           "content": "# 開始と終了を指定しよう！\\n\\n**いろんな書き方ができます：**\\n\\n```python\\nrange(5)        # 0, 1, 2, 3, 4（0から始まって5個）\\nrange(1, 6)     # 1, 2, 3, 4, 5（1から6の手前まで）\\nrange(0, 10, 2) # 0, 2, 4, 6, 8（2ずつ増える）\\n```\\n\\n**書き方の解説：**\\n- `range(終了)` → 0から「終了の手前」まで\\n- `range(開始, 終了)` → 「開始」から「終了の手前」まで\\n- `range(開始, 終了, 増える量)` → 指定した量ずつ増える\\n\\n**例：** 1から5までカウントしたい！\\n\\n```python\\nfor i in range(1, 6):\\n    print(i)\\n```\\n=> 1, 2, 3, 4, 5\\n\\n**ポイント：** 終了の数は **含まれない** ので注意！"
         }
       ],
-      "correctCode": "# 1から5までの数を順番に表示\\nfor i in range(1, 6):\\n    # 変数iを出力\\n    print(i)",
-      "holeyCode": "# 1から5までの数を順番に表示\\n___ ___ ___ ___(___, ___):\\n    # 変数iを出力\\n    ___(___)",
+      "correctCode": "# forでiを1から5までrange関数でループ\\nfor i in range(1, 6):\\n    # print関数でiを出力\\n    print(i)",
+      "holeyCode": "# forでiを1から5までrange関数でループ\\n___ ___ ___ ___(___, ___):\\n    # print関数でiを出力\\n    ___(___)",
       "correctLines": [
-        "# 1から5までの数を順番に表示",
+        "# forでiを1から5までrange関数でループ",
         "for i in range(1, 6):",
-        "    # 変数iを出力",
+        "    # print関数でiを出力",
         "    print(i)"
       ],
       "lineHints": [
@@ -308,12 +308,12 @@ export const pythonData2 = {
           "content": "# [式 for 変数 in イテラブル]\\n\\n**イテラブル** とは、リストや range など **繰り返し処理できるもの** のことです。\\n\\n**書き方：** `[ ]` の中に、「**作りたい値の式**」と「**for文**」を書きます。\\n\\n**例：** 0から4の2乗を作ろう！\\n\\n```python\\nsquares = [x ** 2 for x in range(5)]\\nprint(squares)\\n```\\n\\n=> [0, 1, 4, 9, 16]\\n\\n**何をしているか：**\\n1. `range(5)` で 0, 1, 2, 3, 4 を順番に取り出す\\n2. 取り出した数を `x` に入れる\\n3. `x ** 2`（xの2乗）を計算する\\n4. 計算結果をリストに追加していく\\n\\n**ポイント：** 「**何を作るか**」を最初に書いて、「**どこから取り出すか**」をあとに書きます！"
         }
       ],
-      "correctCode": "# 1から5までの数を2倍にしたリストdoubledを作る\\ndoubled = [x * 2 for x in range(1, 6)]\\n# doubledを表示\\nprint(doubled)",
-      "holeyCode": "# 1から5までの数を2倍にしたリストdoubledを作る\\n___ = [___ * 2 ___ ___ in ___(___, ___)]\\n# doubledを表示\\n___(___)",
+      "correctCode": "# リスト内包表記でxを1から5までループしxを2倍した値をdoubledに代入\\ndoubled = [x * 2 for x in range(1, 6)]\\n# print関数でdoubledを表示\\nprint(doubled)",
+      "holeyCode": "# リスト内包表記でxを1から5までループしxを2倍した値をdoubledに代入\\n___ = [___ * 2 ___ ___ in ___(___, ___)]\\n# print関数でdoubledを表示\\n___(___)",
       "correctLines": [
-        "# 1から5までの数を2倍にしたリストdoubledを作る",
+        "# リスト内包表記でxを1から5までループしxを2倍した値をdoubledに代入",
         "doubled = [x * 2 for x in range(1, 6)]",
-        "# doubledを表示",
+        "# print関数でdoubledを表示",
         "print(doubled)"
       ],
       "lineHints": [
@@ -348,12 +348,12 @@ export const pythonData2 = {
           "content": "# [式 for 変数 in イテラブル if 条件]\\n\\n条件を **満たす要素だけ** がリストに入ります。\\n\\n**例：** 短い単語だけを集めよう！\\n\\n```python\\nwords = ['apple', 'banana', 'cherry']\\n# 5文字以下の単語だけ\\nshort = [w for w in words if len(w) <= 5]\\nprint(short)\\n```\\n\\n=> ['apple']\\n\\n**何をしているか：**\\n1. `words` から単語を順番に取り出す\\n2. `len(w) <= 5` で文字数が5以下かチェック\\n3. 条件に合う 'apple'（5文字）だけがリストに入る\\n4. 'banana'（6文字）と 'cherry'（6文字）は含まれない\\n\\n**ポイント：** `if` は最後に書きます！"
         }
       ],
-      "correctCode": "# 1から10で偶数（2の倍数）だけを集めるevensを作る\\nevens = [n for n in range(1, 11) if n % 2 == 0]\\n# evensを表示\\nprint(evens)",
-      "holeyCode": "# 1から10で偶数（2の倍数）だけを集めるevensを作る\\n___ = [___ for ___ in ___(___, ___) ___ ___ % ___ == ___]\\n# evensを表示\\n___(___)",
+      "correctCode": "# 条件付きリスト内包表記でnを1から10までループし偶数（nを2で割った余りが0）だけをevensに代入\\nevens = [n for n in range(1, 11) if n % 2 == 0]\\n# print関数でevensを表示\\nprint(evens)",
+      "holeyCode": "# 条件付きリスト内包表記でnを1から10までループし偶数（nを2で割った余りが0）だけをevensに代入\\n___ = [___ for ___ in ___(___, ___) ___ ___ % ___ == ___]\\n# print関数でevensを表示\\n___(___)",
       "correctLines": [
-        "# 1から10で偶数（2の倍数）だけを集めるevensを作る",
+        "# 条件付きリスト内包表記でnを1から10までループし偶数（nを2で割った余りが0）だけをevensに代入",
         "evens = [n for n in range(1, 11) if n % 2 == 0]",
-        "# evensを表示",
+        "# print関数でevensを表示",
         "print(evens)"
       ],
       "lineHints": [
@@ -388,16 +388,16 @@ export const pythonData2 = {
           "content": "# エラーをキャッチする「安全ネット」\\n\\n**try-except** は、**エラーが起きてもプログラムが止まらないようにする** 仕組みです。\\n\\nサーカスの安全ネットのように、落ちても大丈夫なようにしてくれます！\\n\\n**例：** エラーをキャッチしよう！\\n\\n```python\\ntry:\\n    result = 10 / 0  # エラーが起きる\\nexcept:\\n    print('エラーが発生しました')\\n```\\n=> エラーが発生しました\\n\\n**何をしているか：**\\n1. `try:` の中のコードを実行してみる\\n2. エラーが起きたら `except:` に移動する\\n3. `except:` の中の処理を実行する\\n4. プログラムは止まらずに続く！\\n\\n**ポイント：** `try` は「試す」、`except` は「例外（を処理する）」という意味です。"
         }
       ],
-      "correctCode": "# エラーが起きる可能性のある処理をtryに入れる\\ntry:\\n    # numに文字列'abc'をint変換して代入（エラーになる）\\n    num = int('abc')\\n# エラーが起きたときの処理をexceptに入れる\\nexcept:\\n    # 'エラー'と表示\\n    print('エラー')",
-      "holeyCode": "# エラーが起きる可能性のある処理をtryに入れる\\n___:\\n    # numに文字列'abc'をint変換して代入（エラーになる）\\n    ___ = ___('___')\\n# エラーが起きたときの処理をexceptに入れる\\n___:\\n    # 'エラー'と表示\\n    ___('___')",
+      "correctCode": "# tryブロックでエラーが起きる可能性のある処理を囲む\\ntry:\\n    # numに文字列'abc'をint関数で変換して代入（エラーになる）\\n    num = int('abc')\\n# exceptブロックでエラー発生時の処理を定義\\nexcept:\\n    # print関数で'エラー'と表示\\n    print('エラー')",
+      "holeyCode": "# tryブロックでエラーが起きる可能性のある処理を囲む\\n___:\\n    # numに文字列'abc'をint関数で変換して代入（エラーになる）\\n    ___ = ___('___')\\n# exceptブロックでエラー発生時の処理を定義\\n___:\\n    # print関数で'エラー'と表示\\n    ___('___')",
       "correctLines": [
-        "# エラーが起きる可能性のある処理をtryに入れる",
+        "# tryブロックでエラーが起きる可能性のある処理を囲む",
         "try:",
-        "    # numに文字列'abc'をint変換して代入（エラーになる）",
+        "    # numに文字列'abc'をint関数で変換して代入（エラーになる）",
         "    num = int('abc')",
-        "# エラーが起きたときの処理をexceptに入れる",
+        "# exceptブロックでエラー発生時の処理を定義",
         "except:",
-        "    # 'エラー'と表示",
+        "    # print関数で'エラー'と表示",
         "    print('エラー')"
       ],
       "lineHints": [
@@ -436,19 +436,19 @@ export const pythonData2 = {
           "content": "# 設計図からモノを作ろう！\\n\\n設計図（クラス）から実際に作られたモノを **インスタンス**（または **オブジェクト**）と呼びます。\\n\\nクラス名の後ろに `()` をつけると、インスタンスが作られます。\\n\\n**例：** 犬を作って吠えさせよう！\\n\\n```python\\nclass Dog:\\n    def bark(self):\\n        print('ワン！')\\n\\ndog = Dog()  # インスタンス作成\\ndog.bark()\\n```\\n\\n=> ワン！\\n\\n**何をしているか：**\\n1. `Dog()` で犬のインスタンス（実体）を作る\\n2. 作った犬を `dog` という変数に入れる\\n3. `dog.bark()` で犬に「吠える」という動作をさせる\\n\\n**ポイント：** 同じ設計図から、たくさんの犬を作ることができます！"
         }
       ],
-      "correctCode": "# Catクラスを定義\\nclass Cat:\\n    # meowメソッドを定義\\n    def meow(self):\\n        # 'ニャー！'を表示\\n        print('ニャー！')\\n\\n# catにCatインスタンスを代入\\ncat = Cat()\\n# catでmeowメソッドを実行して鳴き声を出力\\ncat.meow()",
-      "holeyCode": "# Catクラスを定義\\n___ ___:\\n    # meowメソッドを定義\\n    ___ ___(___):\\n        # 'ニャー！'を表示\\n        ___('___')\\n\\n# catにCatインスタンスを代入\\n___ = ___()\\n# catでmeowメソッドを実行して鳴き声を出力\\n___.___()",
+      "correctCode": "# classでCatクラスを定義\\nclass Cat:\\n    # defでmeowメソッドを定義（引数self）\\n    def meow(self):\\n        # print関数で'ニャー！'を表示\\n        print('ニャー！')\\n\\n# catにCatインスタンスを代入\\ncat = Cat()\\n# catのmeowメソッドを呼び出して鳴き声を出力\\ncat.meow()",
+      "holeyCode": "# classでCatクラスを定義\\n___ ___:\\n    # defでmeowメソッドを定義（引数self）\\n    ___ ___(___):\\n        # print関数で'ニャー！'を表示\\n        ___('___')\\n\\n# catにCatインスタンスを代入\\n___ = ___()\\n# catのmeowメソッドを呼び出して鳴き声を出力\\n___.___()",
       "correctLines": [
-          "# Catクラスを定義",
+          "# classでCatクラスを定義",
           "class Cat:",
-          "    # meowメソッドを定義",
+          "    # defでmeowメソッドを定義（引数self）",
           "    def meow(self):",
-          "        # 'ニャー！'を表示",
+          "        # print関数で'ニャー！'を表示",
           "        print('ニャー！')",
           "",
           "# catにCatインスタンスを代入",
           "cat = Cat()",
-          "# catでmeowメソッドを実行して鳴き声を出力",
+          "# catのmeowメソッドを呼び出して鳴き声を出力",
           "cat.meow()"
         ],
       "lineHints": [

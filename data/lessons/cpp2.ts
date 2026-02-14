@@ -25,7 +25,7 @@ export const cpp2Data = {
           "content": "# class キーワード\\n\\n`class`（クラス）を使ってクラスを定義します。\\n`public:`（パブリック）の下に、外から使える部分を書きます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nclass Dog {       // Dogという設計図を作る\\npublic:           // ここから下は外から使える\\n    std::string name;  // 名前を入れる場所\\n};\\n\\n// 設計図から実際の犬を作る\\nDog d;            // dという犬を作成\\nd.name = \"Pochi\"; // 名前をつける\\n```\\n\\n**用語解説：**\\n- `public`: 公開という意味。外からアクセスできる\\n- `.`（ドット）: オブジェクトの中身にアクセスする記号"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <string>でstringを読み込む\\n#include <string>\\n// class CatでCatクラスを定義\\nclass Cat {\\n// publicで公開アクセスを宣言\\npublic:\\n    // std::string nameでnameメンバを宣言\\n    std::string name;\\n// クラス定義を閉じる\\n};\\n// int mainでmain関数を定義\\nint main() {\\n    // Cat cでCatオブジェクトcを作成\\n    Cat c;\\n    // c.nameに「タマ」を代入\\n    c.name = \\\"タマ\\\";\\n    // std::coutで猫の名前（タマ）を出力\\n    std::cout << c.name << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n#___ <___>\\n// #include <string>でstringを読み込む\\n#___ <___>\\n// class CatでCatクラスを定義\\nclass ___ {\\n// publicで公開アクセスを宣言\\n___:\\n    // std::string nameでnameメンバを宣言\\n    ___::___ ___;\\n// クラス定義を閉じる\\n___;\\n// int mainでmain関数を定義\\nint ___() {\\n    // Cat cでCatオブジェクトcを作成\\n    ___ ___;\\n    // c.nameに「タマ」を代入\\n    ___.___= \\\"___\\\";\\n    // std::coutで猫の名前（タマ）を出力\\n    ___::___ << ___.___<< ___::___;\\n    // return 0で正常終了を返す\\n    return ___;\\n// main関数を閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <string>でstringを読み込む\\n#include <string>\\n// class CatでCatクラスを定義\\nclass Cat {\\n// publicで公開アクセスを宣言\\npublic:\\n    // std::string nameでnameメンバを宣言\\n    std::string name;\\n// クラス定義を閉じる\\n};\\n// int mainでmain関数を定義\\nint main() {\\n    // Cat cでCatオブジェクトcを作成\\n    Cat c;\\n    // cのnameメンバに「タマ」を代入\\n    c.name = \\\"タマ\\\";\\n    // std::coutで猫の名前（タマ）を出力\\n    std::cout << c.name << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n#___ <___>\\n// #include <string>でstringを読み込む\\n#___ <___>\\n// class CatでCatクラスを定義\\nclass ___ {\\n// publicで公開アクセスを宣言\\n___:\\n    // std::string nameでnameメンバを宣言\\n    ___::___ ___;\\n// クラス定義を閉じる\\n___;\\n// int mainでmain関数を定義\\nint ___() {\\n    // Cat cでCatオブジェクトcを作成\\n    ___ ___;\\n    // cのnameメンバに「タマ」を代入\\n    ___.___= \\\"___\\\";\\n    // std::coutで猫の名前（タマ）を出力\\n    ___::___ << ___.___<< ___::___;\\n    // return 0で正常終了を返す\\n    return ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
@@ -43,7 +43,7 @@ export const cpp2Data = {
           "int main() {",
           "    // Cat cでCatオブジェクトcを作成",
           "    Cat c;",
-          "    // c.nameに「タマ」を代入",
+          "    // cのnameメンバに「タマ」を代入",
           "    c.name = \\\"タマ\\\";",
           "    // std::coutで猫の名前（タマ）を出力",
           "    std::cout << c.name << std::endl;",
@@ -187,7 +187,7 @@ export const cpp2Data = {
           "content": "# クラスの中に関数を書く\\n\\nクラス定義の中に関数を書くと、そのクラスのメンバ関数になります。\\n\\n**コード例：**\\n```cpp\\nclass Circle {\\npublic:\\n    int radius;\\n    int area() {\\n        return radius * radius * 3;\\n    }\\n};\\n```"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// class RectでRectクラスを定義\\nclass Rect {\\n// publicで公開アクセスを宣言\\npublic:\\n    // int wで幅メンバwを宣言\\n    int w;\\n    // int hで高さメンバhを宣言\\n    int h;\\n    // int areaで面積計算メソッドを定義\\n    int area() {\\n        // wとhを掛けた面積を返す\\n        return w * h;\\n    // areaメソッドを閉じる\\n    }\\n// クラス定義を閉じる\\n};\\n// int mainでmain関数を定義\\nint main() {\\n    // Rect rでRectオブジェクトrを作成\\n    Rect r;\\n    // r.wに幅3を代入\\n    r.w = 3;\\n    // r.hに高さ4を代入\\n    r.h = 4;\\n    // std::coutで面積（12）を出力\\n    std::cout << r.area() << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n#___ <___>\\n// class RectでRectクラスを定義\\nclass ___ {\\n// publicで公開アクセスを宣言\\n___:\\n    // int wで幅メンバwを宣言\\n    int ___;\\n    // int hで高さメンバhを宣言\\n    int ___;\\n    // int areaで面積計算メソッドを定義\\n    int ___() {\\n        // wとhを掛けた面積を返す\\n        return ___ * ___;\\n    // areaメソッドを閉じる\\n    ___\\n// クラス定義を閉じる\\n___;\\n// int mainでmain関数を定義\\nint ___() {\\n    // Rect rでRectオブジェクトrを作成\\n    ___ ___;\\n    // r.wに幅3を代入\\n    ___.___ = ___;\\n    // r.hに高さ4を代入\\n    ___.___ = ___;\\n    // std::coutで面積（12）を出力\\n    ___::___ << ___.___() << ___::___;\\n    // return 0で正常終了を返す\\n    return ___;\\n// main関数を閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// class RectでRectクラスを定義\\nclass Rect {\\n// publicで公開アクセスを宣言\\npublic:\\n    // int wで幅メンバwを宣言\\n    int w;\\n    // int hで高さメンバhを宣言\\n    int h;\\n    // int areaで面積計算メソッドを定義\\n    int area() {\\n        // wとhを掛けた面積を返す\\n        return w * h;\\n    // areaメソッドを閉じる\\n    }\\n// クラス定義を閉じる\\n};\\n// int mainでmain関数を定義\\nint main() {\\n    // Rect rでRectオブジェクトrを作成\\n    Rect r;\\n    // rのwメンバに幅3を代入\\n    r.w = 3;\\n    // rのhメンバに高さ4を代入\\n    r.h = 4;\\n    // std::coutで面積（12）を出力\\n    std::cout << r.area() << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n#___ <___>\\n// class RectでRectクラスを定義\\nclass ___ {\\n// publicで公開アクセスを宣言\\n___:\\n    // int wで幅メンバwを宣言\\n    int ___;\\n    // int hで高さメンバhを宣言\\n    int ___;\\n    // int areaで面積計算メソッドを定義\\n    int ___() {\\n        // wとhを掛けた面積を返す\\n        return ___ * ___;\\n    // areaメソッドを閉じる\\n    ___\\n// クラス定義を閉じる\\n___;\\n// int mainでmain関数を定義\\nint ___() {\\n    // Rect rでRectオブジェクトrを作成\\n    ___ ___;\\n    // rのwメンバに幅3を代入\\n    ___.___ = ___;\\n    // rのhメンバに高さ4を代入\\n    ___.___ = ___;\\n    // std::coutで面積（12）を出力\\n    ___::___ << ___.___() << ___::___;\\n    // return 0で正常終了を返す\\n    return ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
@@ -211,9 +211,9 @@ export const cpp2Data = {
           "int main() {",
           "    // Rect rでRectオブジェクトrを作成",
           "    Rect r;",
-          "    // r.wに幅3を代入",
+          "    // rのwメンバに幅3を代入",
           "    r.w = 3;",
-          "    // r.hに高さ4を代入",
+          "    // rのhメンバに高さ4を代入",
           "    r.h = 4;",
           "    // std::coutで面積（12）を出力",
           "    std::cout << r.area() << std::endl;",
@@ -669,7 +669,7 @@ export const cpp2Data = {
           "content": "# std::make_unique\\n\\n`std::make_unique<型>()` でスマートポインタを作ります。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n#include <memory>  // スマートポインタを使う準備\\n\\n// 整数を入れるスマートポインタを作る\\nauto p = std::make_unique<int>(42);\\n\\n// 中身を見る（*をつける）\\nstd::cout << *p << std::endl; // 42\\n\\n// ここでブロックを抜けると、自動でメモリが解放される！\\n```\\n\\n**用語解説：**\\n- `unique_ptr`: 1つのポインタだけが所有する（独占）\\n- **スコープを抜ける**: `{ }` の外に出ること\\n- 自動解放なので、`delete` を書く必要がない！"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <memory>でmemoryを読み込む\\n#include <memory>\\n// int mainでmain関数を定義\\nint main() {\\n    // auto ptrでmake_unique<int>(100)でスマートポインタを作成\\n    auto ptr = std::make_unique<int>(100);\\n    // std::coutで*ptrの中身（100）を出力\\n    std::cout << *ptr << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n#___ <___>\\n// #include <memory>でmemoryを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\nint ___() {\\n    // auto ptrでmake_unique<int>(100)でスマートポインタを作成\\n    auto ___ = ___::___<int>(___);\\n    // std::coutで*ptrの中身（100）を出力\\n    ___::___ << *___ << ___::___;\\n    // return 0で正常終了を返す\\n    return ___;\\n// main関数を閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <memory>でmemoryを読み込む\\n#include <memory>\\n// int mainでmain関数を定義\\nint main() {\\n    // auto ptrでmake_unique<int>(100)でスマートポインタを作成\\n    auto ptr = std::make_unique<int>(100);\\n    // std::coutでptrが指す値（100）を出力\\n    std::cout << *ptr << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n#___ <___>\\n// #include <memory>でmemoryを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\nint ___() {\\n    // auto ptrでmake_unique<int>(100)でスマートポインタを作成\\n    auto ___ = ___::___<int>(___);\\n    // std::coutでptrが指す値（100）を出力\\n    ___::___ << *___ << ___::___;\\n    // return 0で正常終了を返す\\n    return ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
@@ -679,7 +679,7 @@ export const cpp2Data = {
           "int main() {",
           "    // auto ptrでmake_unique<int>(100)でスマートポインタを作成",
           "    auto ptr = std::make_unique<int>(100);",
-          "    // std::coutで*ptrの中身（100）を出力",
+          "    // std::coutでptrが指す値（100）を出力",
           "    std::cout << *ptr << std::endl;",
           "    // return 0で正常終了を返す",
           "    return 0;",

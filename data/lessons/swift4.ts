@@ -599,8 +599,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\nguardでオプショナルをチェックする関数を作りましょう。\\n\\n1. `check` 関数を作る（引数は `Int?`）\\n2. `guard let` で値を取り出す\\n3. nilなら「nil」と表示してreturn\\n4. 値があれば2倍して表示\\n\\n`check(5)` で `10` と表示されます。"
         }
       ],
-      "correctCode": "// check関数を定義\\nfunc check(_ num: Int?) {\\n    // guardで早期リターン\\n    guard let n = num else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    // ブロックを閉じる\\n    }\\n    // n * 2を出力\\n    print(n * 2)\\n// ブロックを閉じる\\n}\\n\\n// check関数（引数5）を呼び出す\\ncheck(5)",
-      "holeyCode": "// check関数を定義\\nfunc ___(___  ___: ___?) {\\n    // guardで早期リターン\\n    guard let ___ = ___ else {\\n        // nilと出力\\n        ___(\\\"___\\\")\\n        // 早期リターン\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // n * 2を出力\\n    ___(___ * ___)\\n// ブロックを閉じる\\n___\\n\\n// check関数（引数5）を呼び出す\\n___(___)",
+      "correctCode": "// check関数を定義\\nfunc check(_ num: Int?) {\\n    // guardで早期リターン\\n    guard let n = num else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    // ブロックを閉じる\\n    }\\n    // nの2倍を出力\\n    print(n * 2)\\n// ブロックを閉じる\\n}\\n\\n// check関数（引数5）を呼び出す\\ncheck(5)",
+      "holeyCode": "// check関数を定義\\nfunc ___(___  ___: ___?) {\\n    // guardで早期リターン\\n    guard let ___ = ___ else {\\n        // nilと出力\\n        ___(\\\"___\\\")\\n        // 早期リターン\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // nの2倍を出力\\n    ___(___ * ___)\\n// ブロックを閉じる\\n___\\n\\n// check関数（引数5）を呼び出す\\n___(___)",
       "correctLines": [
           "// check関数を定義",
           "func check(_ num: Int?) {",
@@ -612,7 +612,7 @@ export const swift4Data = {
           "        return",
           "    // ブロックを閉じる",
           "    }",
-          "    // n * 2を出力",
+          "    // nの2倍を出力",
           "    print(n * 2)",
           "// ブロックを閉じる",
           "}",
@@ -647,7 +647,7 @@ export const swift4Data = {
             "else",
             "return"
           ],
-          "others": ["check", "_", "num", "Int", "n", "print", "nil", "2", "5", "}", "*", "um", "// n * 2を出力", "// check関数（引数5）を呼び出す"]
+          "others": ["check", "_", "num", "Int", "n", "print", "nil", "2", "5", "}", "*", "um", "// nの2倍を出力", "// check関数（引数5）を呼び出す"]
         },
         "testCases": [
           {

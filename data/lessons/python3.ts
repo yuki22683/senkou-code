@@ -57,12 +57,12 @@ export const pythonData3 = {
           "content": "# lambda 引数: 戻り値\\n\\n**書き方：** `lambda 引数: 計算式`\\n\\nラムダ式は `map` や `filter` などの関数と組み合わせると特に便利です。\\n\\n**例：** リストの全ての数を2倍にしよう！\\n\\n```python\\nnums = [1, 2, 3]\\ndoubled = list(map(lambda x: x * 2, nums))\\nprint(doubled)  # [2, 4, 6]\\n```\\n\\n**何をしているか：**\\n1. `nums` は [1, 2, 3] というリスト\\n2. `map()` でリストの各要素に関数を適用する\\n3. `lambda x: x * 2` で「xを2倍にする」関数を定義\\n4. 結果として [2, 4, 6] ができる！\\n\\n**使いどころ：** 1回しか使わない簡単な関数を、わざわざ名前をつけずにサッと作りたいとき！"
         }
       ],
-      "correctCode": "# 2乗を計算するlambda式をsquareに代入\\nsquare = lambda x: x ** 2\\n# square関数を引数5で呼び出して表示\\nprint(square(5))",
-      "holeyCode": "# 2乗を計算するlambda式をsquareに代入\\n___ = lambda ___: ___ ___ ___\\n# square関数を引数5で呼び出して表示\\n___(___(___))",
+      "correctCode": "# 引数xの2乗を計算するlambda式をsquareに代入\\nsquare = lambda x: x ** 2\\n# print関数でsquare関数を引数5で呼び出した結果を表示\\nprint(square(5))",
+      "holeyCode": "# 引数xの2乗を計算するlambda式をsquareに代入\\n___ = lambda ___: ___ ___ ___\\n# print関数でsquare関数を引数5で呼び出した結果を表示\\n___(___(___))",
       "correctLines": [
-          "# 2乗を計算するlambda式をsquareに代入",
+          "# 引数xの2乗を計算するlambda式をsquareに代入",
           "square = lambda x: x ** 2",
-          "# square関数を引数5で呼び出して表示",
+          "# print関数でsquare関数を引数5で呼び出した結果を表示",
           "print(square(5))"
         ],
       "lineHints": [
@@ -98,23 +98,23 @@ export const pythonData3 = {
           "content": "# 引数名は自由につけられる！\\n\\n`*args` の「args」の部分は、好きな名前に変えてOKです。\\n\\n大事なのは **「*」（アスタリスク）** をつけることです！\\n\\n**例：** みんなにあいさつしよう！\\n\\n```python\\ndef greet(*names):\\n    for name in names:\\n        print(f'Hello, {name}!')\\n\\ngreet('Alice', 'Bob', 'Charlie')\\n```\\n=> Hello, Alice!\\n=> Hello, Bob!\\n=> Hello, Charlie!\\n\\n**何をしているか：**\\n1. `greet('Alice', 'Bob', 'Charlie')` で3人の名前を渡す\\n2. `*names` で全ての名前をまとめて受け取る\\n3. `for` ループで1人ずつあいさつする\\n\\n**使いどころ：** 引数の数が決まっていない関数を作りたいとき！"
         }
       ],
-      "correctCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef find_max(*args):\\n    # max_valを最初の引数で初期化\\n    max_val = args[0]\\n    # argsの各要素をnとしてループ\\n    for n in args:\\n        # より大きい値があれば更新\\n        if n > max_val:\\n            # max_valをnで更新\\n            max_val = n\\n    # 最終的な最大値を返す\\n    return max_val\\n\\n# find_max関数（引数に3、7、2、9、5）を呼び出して最大値を表示\\nprint(find_max(3, 7, 2, 9, 5))",
-      "holeyCode": "# 全ての数値から最大値を求めるfind_max関数を定義\\ndef ___(*___):\\n    # max_valを最初の引数で初期化\\n    ___ = ___[___]\\n    # argsの各要素をnとしてループ\\n    for ___ in ___:\\n        # より大きい値があれば更新\\n        if ___ ___ ___:\\n            # max_valをnで更新\\n            ___ = ___\\n    # 最終的な最大値を返す\\n    return ___\\n\\n# find_max関数（引数に3、7、2、9、5）を呼び出して最大値を表示\\n___(___(3, 7, 2, 9, 5))",
+      "correctCode": "# defでfind_max関数を定義（引数*args）\\ndef find_max(*args):\\n    # argsのインデックス0をmax_valに代入\\n    max_val = args[0]\\n    # forでargsの各要素をnに代入してループ\\n    for n in args:\\n        # ifでnがmax_valより大きい場合\\n        if n > max_val:\\n            # max_valにnを代入\\n            max_val = n\\n    # returnでmax_valを返す\\n    return max_val\\n\\n# print関数でfind_max関数（引数3、7、2、9、5）の結果を表示\\nprint(find_max(3, 7, 2, 9, 5))",
+      "holeyCode": "# defでfind_max関数を定義（引数*args）\\ndef ___(*___):\\n    # argsのインデックス0をmax_valに代入\\n    ___ = ___[___]\\n    # forでargsの各要素をnに代入してループ\\n    for ___ in ___:\\n        # ifでnがmax_valより大きい場合\\n        if ___ ___ ___:\\n            # max_valにnを代入\\n            ___ = ___\\n    # returnでmax_valを返す\\n    return ___\\n\\n# print関数でfind_max関数（引数3、7、2、9、5）の結果を表示\\n___(___(3, 7, 2, 9, 5))",
       "correctLines": [
-          "# 全ての数値から最大値を求めるfind_max関数を定義",
+          "# defでfind_max関数を定義（引数*args）",
           "def find_max(*args):",
-          "    # max_valを最初の引数で初期化",
+          "    # argsのインデックス0をmax_valに代入",
           "    max_val = args[0]",
-          "    # argsの各要素をnとしてループ",
+          "    # forでargsの各要素をnに代入してループ",
           "    for n in args:",
-          "        # より大きい値があれば更新",
+          "        # ifでnがmax_valより大きい場合",
           "        if n > max_val:",
-          "            # max_valをnで更新",
+          "            # max_valにnを代入",
           "            max_val = n",
-          "    # 最終的な最大値を返す",
+          "    # returnでmax_valを返す",
           "    return max_val",
           "",
-          "# find_max関数（引数に3、7、2、9、5）を呼び出して最大値を表示",
+          "# print関数でfind_max関数（引数3、7、2、9、5）の結果を表示",
           "print(find_max(3, 7, 2, 9, 5))"
         ],
       "lineHints": [
@@ -158,14 +158,14 @@ export const pythonData3 = {
           "content": "# 辞書として扱える！\\n\\n受け取った `kwargs` は **辞書** として使えます。\\n\\n`.items()`, `.keys()`, `.values()` などのメソッドが使えます！\\n\\n**例：** ユーザー情報を作ろう！\\n\\n```python\\ndef create_user(**kwargs):\\n    return kwargs\\n\\nuser = create_user(name='花子', email='hanako@example.com')\\nprint(user['name'])\\n```\\n\\n=> 花子\\n\\n**何をしているか：**\\n1. `create_user(name='花子', email='...')` で名前付き引数を渡す\\n2. `**kwargs` でそれらを辞書として受け取る\\n3. `{'name': '花子', 'email': '...'}` という辞書が返される\\n4. `user['name']` で「花子」が取り出せる！\\n\\n**使いどころ：** 設定項目（オプション）をたくさん渡したいとき！"
         }
       ],
-      "correctCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef print_info(**kwargs):\\n    # kwargsからitems()でキーk・値vのペアを取得しループ\\n    for k, v in kwargs.items():\\n        # キーと値をイコールで繋いで表示\\n        print(f'{k} = {v}')\\n\\n# print_info関数をキーワード引数（xに10、yに20）で呼び出す\\nprint_info(x=10, y=20)",
-      "holeyCode": "# キーワード引数を受け取って表示するprint_info関数を定義\\ndef ___(___):\\n    # kwargsからitems()でキーk・値vのペアを取得しループ\\n    for ___, ___ in ___.___():\\n        # キーと値をイコールで繋いで表示\\n        ___(f'{___} = {___}')\\n\\n# print_info関数をキーワード引数（xに10、yに20）で呼び出す\\n___(___=___, ___=___)",
+      "correctCode": "# defでprint_info関数を定義（引数**kwargs）\\ndef print_info(**kwargs):\\n    # for k, vでkwargsからitems()でキー・値ペアを取得しループ\\n    for k, v in kwargs.items():\\n        # print関数でf文字列「{k} = {v}」を表示\\n        print(f'{k} = {v}')\\n\\n# print_info関数をキーワード引数（xに10、yに20）で呼び出す\\nprint_info(x=10, y=20)",
+      "holeyCode": "# defでprint_info関数を定義（引数**kwargs）\\ndef ___(___):\\n    # for k, vでkwargsからitems()でキー・値ペアを取得しループ\\n    for ___, ___ in ___.___():\\n        # print関数でf文字列「{k} = {v}」を表示\\n        ___(f'{___} = {___}')\\n\\n# print_info関数をキーワード引数（xに10、yに20）で呼び出す\\n___(___=___, ___=___)",
       "correctLines": [
-          "# キーワード引数を受け取って表示するprint_info関数を定義",
+          "# defでprint_info関数を定義（引数**kwargs）",
           "def print_info(**kwargs):",
-          "    # kwargsからitems()でキーk・値vのペアを取得しループ",
+          "    # for k, vでkwargsからitems()でキー・値ペアを取得しループ",
           "    for k, v in kwargs.items():",
-          "        # キーと値をイコールで繋いで表示",
+          "        # print関数でf文字列「{k} = {v}」を表示",
           "        print(f'{k} = {v}')",
           "",
           "# print_info関数をキーワード引数（xに10、yに20）で呼び出す",
@@ -205,14 +205,14 @@ export const pythonData3 = {
           "content": "# start で開始番号を変えられる！\\n\\nデフォルトでは0から始まりますが、`start=1` で **1から始める** こともできます。\\n\\n人間は「1番目、2番目...」と数えることが多いですよね。そんなときに便利です！\\n\\n**例：** 1番目から始めよう！\\n\\n```python\\nfruits = ['apple', 'banana', 'cherry']\\nfor i, fruit in enumerate(fruits, start=1):\\n    print(f'{i}番目: {fruit}')\\n```\\n=> 1番目: apple\\n=> 2番目: banana\\n=> 3番目: cherry\\n\\n**何をしているか：**\\n- `start=1` で開始番号を1に設定\\n- ループするたびに番号が1ずつ増える\\n\\n**ポイント：** `start` を使わないと0から始まります！"
         }
       ],
-      "correctCode": "# 色配列（あか、みどり、あお）をcolorsに代入\\ncolors = ['あか', 'みどり', 'あお']\\n# colorsからenumerate()でインデックスi・要素colorを取得しループ\\nfor i, color in enumerate(colors):\\n    # 「番号: 色」の形式で画面に出力\\n    print(f'{i}: {color}')",
-      "holeyCode": "# 色配列（あか、みどり、あお）をcolorsに代入\\n___ = ['___', '___', '___']\\n# colorsからenumerate()でインデックスi・要素colorを取得しループ\\nfor ___, ___ in ___(___):\\n    # 「番号: 色」の形式で画面に出力\\n    ___(f'{___}: {___}')",
+      "correctCode": "# 色配列（あか、みどり、あお）をcolorsに代入\\ncolors = ['あか', 'みどり', 'あお']\\n# for i, colorでcolorsからenumerate()でインデックス・要素を取得しループ\\nfor i, color in enumerate(colors):\\n    # print関数でf文字列「{i}: {color}」を表示\\n    print(f'{i}: {color}')",
+      "holeyCode": "# 色配列（あか、みどり、あお）をcolorsに代入\\n___ = ['___', '___', '___']\\n# for i, colorでcolorsからenumerate()でインデックス・要素を取得しループ\\nfor ___, ___ in ___(___):\\n    # print関数でf文字列「{i}: {color}」を表示\\n    ___(f'{___}: {___}')",
       "correctLines": [
           "# 色配列（あか、みどり、あお）をcolorsに代入",
           "colors = ['あか', 'みどり', 'あお']",
-          "# colorsからenumerate()でインデックスi・要素colorを取得しループ",
+          "# for i, colorでcolorsからenumerate()でインデックス・要素を取得しループ",
           "for i, color in enumerate(colors):",
-          "    # 「番号: 色」の形式で画面に出力",
+          "    # print関数でf文字列「{i}: {color}」を表示",
           "    print(f'{i}: {color}')"
         ],
       "lineHints": [
@@ -249,16 +249,16 @@ export const pythonData3 = {
           "content": "# 短い方に合わせる！\\n\\nリストの長さが違う場合、**短い方に合わせて** ループが終了します。\\n\\n**例：** 長さの違うリストを zip しよう！\\n\\n```python\\na = [1, 2, 3]\\nb = ['x', 'y']\\nprint(list(zip(a, b)))  # [(1, 'x'), (2, 'y')]\\n```\\n\\n**何をしているか：**\\n- `a` は3つ、`b` は2つの要素がある\\n- 短い `b` に合わせて2ペアだけ作られる\\n- 3番目の「3」は相手がいないので含まれない\\n\\n**注意：** はみ出した要素は無視されます！\\n\\n**使いどころ：** 2つ以上のリストを **並行して（同時に）** 処理したいとき！"
         }
       ],
-      "correctCode": "# 英単語配列（a、b、c）をkeysに代入\\nkeys = ['a', 'b', 'c']\\n# 数値配列（1、2、3）をvaluesに代入\\nvalues = [1, 2, 3]\\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\\nfor k, v in zip(keys, values):\\n    # 「キー: 値」の形式で画面に出力\\n    print(f'{k}: {v}')",
-      "holeyCode": "# 英単語配列（a、b、c）をkeysに代入\\n___ = ['___', '___', '___']\\n# 数値配列（1、2、3）をvaluesに代入\\n___ = [___, ___, ___]\\n# 1番目の k, 2番目の v で、zip の引数も keys, values の順\\nfor ___, ___ in ___(___, ___):\\n    # 「キー: 値」の形式で画面に出力\\n    ___(f'{___}: {___}')",
+      "correctCode": "# 英単語配列（a、b、c）をkeysに代入\\nkeys = ['a', 'b', 'c']\\n# 数値配列（1、2、3）をvaluesに代入\\nvalues = [1, 2, 3]\\n# for k, vでzip関数（引数keys, values）から各ペアを取得しループ\\nfor k, v in zip(keys, values):\\n    # print関数でf文字列「{k}: {v}」を表示\\n    print(f'{k}: {v}')",
+      "holeyCode": "# 英単語配列（a、b、c）をkeysに代入\\n___ = ['___', '___', '___']\\n# 数値配列（1、2、3）をvaluesに代入\\n___ = [___, ___, ___]\\n# for k, vでzip関数（引数keys, values）から各ペアを取得しループ\\nfor ___, ___ in ___(___, ___):\\n    # print関数でf文字列「{k}: {v}」を表示\\n    ___(f'{___}: {___}')",
       "correctLines": [
           "# 英単語配列（a、b、c）をkeysに代入",
           "keys = ['a', 'b', 'c']",
           "# 数値配列（1、2、3）をvaluesに代入",
           "values = [1, 2, 3]",
-          "# 1番目の k, 2番目の v で、zip の引数も keys, values の順",
+          "# for k, vでzip関数（引数keys, values）から各ペアを取得しループ",
           "for k, v in zip(keys, values):",
-          "    # 「キー: 値」の形式で画面に出力",
+          "    # print関数でf文字列「{k}: {v}」を表示",
           "    print(f'{k}: {v}')"
         ],
       "lineHints": [
@@ -297,19 +297,19 @@ export const pythonData3 = {
           "content": "# 大量のデータを効率よく処理！\\n\\nリストは全データを **メモリ（コンピュータの記憶場所）** に保持しますが、ジェネレータは **1つずつ作るのでメモリを節約** できます。\\n\\n**例：** 1億個の数を生成しても大丈夫！\\n\\n```python\\ndef big_range(n):\\n    i = 0\\n    while i < n:\\n        yield i\\n        i += 1\\n```\\n\\n**何をしているか：**\\n- `yield i` で値を1つ返す\\n- 次に呼ばれるまで **一時停止**\\n- 次に呼ばれたら `i += 1` して続きを実行\\n\\n**ポイント：**\\n- `return` は関数を終了して値を返す\\n- `yield` は値を返すけど関数は **一時停止** するだけ（終了しない）\\n\\n**使いどころ：** 大量のデータを扱うとき、メモリを節約したいとき！"
         }
       ],
-      "correctCode": "# 偶数を生成するeven_numbersジェネレータ関数を定義\\ndef even_numbers(n):\\n    # 指定された回数ループ\\n    for i in range(n):\\n        # i * 2（偶数）を返す\\n        yield i * 2\\n\\n# even_numbers関数を引数4で呼び出してループ\\nfor num in even_numbers(4):\\n    # 取り出した値を表示\\n    print(num)",
-      "holeyCode": "# 偶数を生成するeven_numbersジェネレータ関数を定義\\ndef ___(___):\\n    # 指定された回数ループ\\n    for ___ in ___(___):\\n        # i * 2（偶数）を返す\\n        ___ ___ ___ ___\\n\\n# even_numbers関数を引数4で呼び出してループ\\nfor ___ in ___(___):\\n    # 取り出した値を表示\\n    ___(___)",
+      "correctCode": "# defでeven_numbersジェネレータ関数を定義（引数n）\\ndef even_numbers(n):\\n    # forでiを0からn-1までrange関数でループ\\n    for i in range(n):\\n        # yieldでiの2倍（偶数）を返す\\n        yield i * 2\\n\\n# for numでeven_numbers関数（引数4）の結果をループ\\nfor num in even_numbers(4):\\n    # print関数でnumを表示\\n    print(num)",
+      "holeyCode": "# defでeven_numbersジェネレータ関数を定義（引数n）\\ndef ___(___):\\n    # forでiを0からn-1までrange関数でループ\\n    for ___ in ___(___):\\n        # yieldでiの2倍（偶数）を返す\\n        ___ ___ ___ ___\\n\\n# for numでeven_numbers関数（引数4）の結果をループ\\nfor ___ in ___(___):\\n    # print関数でnumを表示\\n    ___(___)",
       "correctLines": [
-          "# 偶数を生成するeven_numbersジェネレータ関数を定義",
+          "# defでeven_numbersジェネレータ関数を定義（引数n）",
           "def even_numbers(n):",
-          "    # 指定された回数ループ",
+          "    # forでiを0からn-1までrange関数でループ",
           "    for i in range(n):",
-          "        # i * 2（偶数）を返す",
+          "        # yieldでiの2倍（偶数）を返す",
           "        yield i * 2",
           "",
-          "# even_numbers関数を引数4で呼び出してループ",
+          "# for numでeven_numbers関数（引数4）の結果をループ",
           "for num in even_numbers(4):",
-          "    # 取り出した値を表示",
+          "    # print関数でnumを表示",
           "    print(num)"
         ],
       "lineHints": [
@@ -351,14 +351,14 @@ export const pythonData3 = {
           "content": "# sum や max と組み合わせると便利！\\n\\n`sum()`（合計）や `max()`（最大値）などの関数に **直接渡す** と効率的です。\\n\\n**例：** 2乗の合計を計算しよう！\\n\\n```python\\ntotal = sum(x**2 for x in range(5))\\nprint(total)\\n```\\n\\n=> 30\\n\\n**何をしているか：**\\n1. `range(5)` で 0, 1, 2, 3, 4 を生成\\n2. 各数を2乗（0, 1, 4, 9, 16）\\n3. `sum()` で合計 → 0+1+4+9+16 = 30\\n\\n**ポイント：** `sum()` に渡すとき、外側のカッコを省略できます！\\n\\n```python\\n# これでOK（カッコを省略）\\nsum(x**2 for x in range(5))\\n\\n# こう書かなくてもいい\\nsum((x**2 for x in range(5)))\\n```"
         }
       ],
-      "correctCode": "# numsにrangeを代入（開始に1, 終了に6）\\nnums = range(1, 6)\\n# numsの各要素を2乗した合計をtotalに代入\\ntotal = sum(x * x for x in nums)\\n# totalを表示\\nprint(total)",
-      "holeyCode": "# numsにrangeを代入（開始に1, 終了に6）\\n___ = ___(___, ___)\\n# numsの各要素を2乗した合計をtotalに代入\\n___ = ___(___ ___ ___ for ___ in ___)\\n# totalを表示\\n___(___)",
+      "correctCode": "# numsにrange関数（引数1、6）を代入\\nnums = range(1, 6)\\n# sum関数でnumsの各xを2乗した合計をtotalに代入（ジェネレータ式）\\ntotal = sum(x * x for x in nums)\\n# print関数でtotalを表示\\nprint(total)",
+      "holeyCode": "# numsにrange関数（引数1、6）を代入\\n___ = ___(___, ___)\\n# sum関数でnumsの各xを2乗した合計をtotalに代入（ジェネレータ式）\\n___ = ___(___ ___ ___ for ___ in ___)\\n# print関数でtotalを表示\\n___(___)",
       "correctLines": [
-          "# numsにrangeを代入（開始に1, 終了に6）",
+          "# numsにrange関数（引数1、6）を代入",
           "nums = range(1, 6)",
-          "# numsの各要素を2乗した合計をtotalに代入",
+          "# sum関数でnumsの各xを2乗した合計をtotalに代入（ジェネレータ式）",
           "total = sum(x * x for x in nums)",
-          "# totalを表示",
+          "# print関数でtotalを表示",
           "print(total)"
         ],
       "lineHints": [
@@ -393,25 +393,25 @@ export const pythonData3 = {
           "content": "# @ で関数に適用しよう！\\n\\n`@デコレータ名` を関数の上に書くだけで適用できます。\\n\\n**例：** デコレータを使ってみよう！\\n\\n```python\\n@my_decorator\\ndef say_hello():\\n    print('Hello!')\\n\\nsay_hello()\\n```\\n=> Before\\n=> Hello!\\n=> After\\n\\n**何をしているか：**\\n1. `@my_decorator` で `say_hello` 関数にデコレータを適用\\n2. `say_hello()` を呼ぶと、まず「Before」が表示される\\n3. 次に元の `say_hello`（「Hello!」）が実行される\\n4. 最後に「After」が表示される\\n\\n**使いどころ：**\\n- ログ（記録）を残したいとき\\n- 実行時間を計りたいとき\\n- 権限チェックをしたいとき"
         }
       ],
-      "correctCode": "# show_callデコレータ関数を定義\\ndef show_call(func):\\n    # 内部関数wrapperを定義\\n    def wrapper():\\n        # 実行前のメッセージを表示\\n        print('関数を呼び出します')\\n        # func関数を呼び出す\\n        func()\\n    # wrapperを返す\\n    return wrapper\\n\\n# @show_callを適用\\n@show_call\\n# greet関数を定義\\ndef greet():\\n    # 'こんにちは！'を表示\\n    print('こんにちは！')\\n\\n# greet関数を呼び出す\\ngreet()",
-      "holeyCode": "# show_callデコレータ関数を定義\\ndef ___(___) :\\n    # 内部関数wrapperを定義\\n    def ___():\\n        # 実行前のメッセージを表示\\n        ___('___')\\n        # func関数を呼び出す\\n        ___()\\n    # wrapperを返す\\n    return ___\\n\\n# @show_callを適用\\n@___\\n# greet関数を定義\\ndef ___():\\n    # 'こんにちは！'を表示\\n    ___('___')\\n\\n# greet関数を呼び出す\\n___()",
+      "correctCode": "# defでshow_callデコレータ関数を定義（引数func）\\ndef show_call(func):\\n    # defで内部関数wrapperを定義\\n    def wrapper():\\n        # print関数で「関数を呼び出します」を表示\\n        print('関数を呼び出します')\\n        # func関数を呼び出す\\n        func()\\n    # returnでwrapperを返す\\n    return wrapper\\n\\n# @show_callを適用\\n@show_call\\n# defでgreet関数を定義\\ndef greet():\\n    # print関数で「こんにちは！」を表示\\n    print('こんにちは！')\\n\\n# greet関数を呼び出す\\ngreet()",
+      "holeyCode": "# defでshow_callデコレータ関数を定義（引数func）\\ndef ___(___) :\\n    # defで内部関数wrapperを定義\\n    def ___():\\n        # print関数で「関数を呼び出します」を表示\\n        ___('___')\\n        # func関数を呼び出す\\n        ___()\\n    # returnでwrapperを返す\\n    return ___\\n\\n# @show_callを適用\\n@___\\n# defでgreet関数を定義\\ndef ___():\\n    # print関数で「こんにちは！」を表示\\n    ___('___')\\n\\n# greet関数を呼び出す\\n___()",
       "correctLines": [
-          "# show_callデコレータ関数を定義",
+          "# defでshow_callデコレータ関数を定義（引数func）",
           "def show_call(func):",
-          "    # 内部関数wrapperを定義",
+          "    # defで内部関数wrapperを定義",
           "    def wrapper():",
-          "        # 実行前のメッセージを表示",
+          "        # print関数で「関数を呼び出します」を表示",
           "        print('関数を呼び出します')",
           "        # func関数を呼び出す",
           "        func()",
-          "    # wrapperを返す",
+          "    # returnでwrapperを返す",
           "    return wrapper",
           "",
           "# @show_callを適用",
           "@show_call",
-          "# greet関数を定義",
+          "# defでgreet関数を定義",
           "def greet():",
-          "    # 'こんにちは！'を表示",
+          "    # print関数で「こんにちは！」を表示",
           "    print('こんにちは！')",
           "",
           "# greet関数を呼び出す",
@@ -462,14 +462,14 @@ export const pythonData3 = {
           "content": "# 「全部OKならOK！」をチェック\\n\\n**all（オール）** は、リストの **全てが True のときだけ True** を返します。\\n\\n「all」は「全て」という意味です。「全部当てはまる？」とチェックします。\\n\\n**例：** 全員合格かチェック！\\n\\n```python\\nnums = [1, 2, 3]\\nprint(all(nums))\\n\\n# 全部0より大きい？\\nprint(all(x > 0 for x in [1, 2, 3]))\\nprint(all(x > 0 for x in [1, -1, 3]))\\n```\\n\\n=> True（全部0以外）\\n\\n=> True\\n\\n=> False（-1がNG）\\n\\n**any vs all の違い：**\\n- **any** = 1つでも True なら True（「または」的）\\n- **all** = 全部 True なら True（「かつ」的）"
         }
       ],
-      "correctCode": "# 1から5までの数値リストを作成\\nnums = [1, 2, 3, 4, 5]\\n# 全要素が0より大きいか判定する関数を使用\\nresult = all(x > 0 for x in nums)\\n# 判定結果を画面に表示\\nprint(result)",
-      "holeyCode": "# 1から5までの数値リストを作成\\n___ = [___, ___, ___, ___, ___]\\n# 全要素が0より大きいか判定する関数を使用\\n___ = ___(___ ___ ___ for ___ in ___)\\n# 判定結果を画面に表示\\n___(___)",
+      "correctCode": "# 数値配列（1、2、3、4、5）をnumsに代入\\nnums = [1, 2, 3, 4, 5]\\n# all関数でnumsの各要素xが0より大きいか判定しresultに代入\\nresult = all(x > 0 for x in nums)\\n# print関数でresultを表示\\nprint(result)",
+      "holeyCode": "# 数値配列（1、2、3、4、5）をnumsに代入\\n___ = [___, ___, ___, ___, ___]\\n# all関数でnumsの各要素xが0より大きいか判定しresultに代入\\n___ = ___(___ ___ ___ for ___ in ___)\\n# print関数でresultを表示\\n___(___)",
       "correctLines": [
-          "# 1から5までの数値リストを作成",
+          "# 数値配列（1、2、3、4、5）をnumsに代入",
           "nums = [1, 2, 3, 4, 5]",
-          "# 全要素が0より大きいか判定する関数を使用",
+          "# all関数でnumsの各要素xが0より大きいか判定しresultに代入",
           "result = all(x > 0 for x in nums)",
-          "# 判定結果を画面に表示",
+          "# print関数でresultを表示",
           "print(result)"
         ],
       "lineHints": [

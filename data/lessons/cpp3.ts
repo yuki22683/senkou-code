@@ -402,7 +402,7 @@ export const cpp3Data = {
           "content": "# make_shared で効率的に作成\\n\\n`shared_ptr` を作るときは、`make_shared` 関数を使うのがオススメです。\\n\\n**身近な例え：**\\n「部品を買ってきて自分で組み立てる」より「完成品を買う」方が楽で効率的ですよね。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n// オススメの書き方\\nauto p = make_shared<int>(100);  // 100という値を持つ共有ポインタ\\n\\n// 非推奨の書き方（動くけど効率が悪い）\\nshared_ptr<int> p(new int(100));\\n```\\n\\n**なぜ make_shared が良いの？**\\n- メモリの確保が1回で済む（効率的）\\n- 例外安全（エラーが起きてもメモリリークしない）\\n- コードがスッキリする\\n\\n`make_shared<型>(初期値)` の形で覚えましょう！"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <memory>でmemoryを読み込む\\n#include <memory>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // autoでpを宣言しmake_shared<int>(100)で共有ポインタを作成\\n    auto p = make_shared<int>(100);\\n    // coutで*p（ポインタの中身100）を出力\\n    cout << *p << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <memory>でmemoryを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // autoでpを宣言しmake_shared<int>(100)で共有ポインタを作成\\n    ___ ___ = ___<___>(___);\\n    // coutで*p（ポインタの中身100）を出力\\n    ___ << *___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <memory>でmemoryを読み込む\\n#include <memory>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // autoでpを宣言しmake_shared<int>(100)で共有ポインタを作成\\n    auto p = make_shared<int>(100);\\n    // coutでpが指す値（100）を出力\\n    cout << *p << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <memory>でmemoryを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // autoでpを宣言しmake_shared<int>(100)で共有ポインタを作成\\n    ___ ___ = ___<___>(___);\\n    // coutでpが指す値（100）を出力\\n    ___ << *___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
@@ -415,7 +415,7 @@ export const cpp3Data = {
           "int main() {",
           "    // autoでpを宣言しmake_shared<int>(100)で共有ポインタを作成",
           "    auto p = make_shared<int>(100);",
-          "    // coutで*p（ポインタの中身100）を出力",
+          "    // coutでpが指す値（100）を出力",
           "    cout << *p << endl;",
           "    // return 0で正常終了を返す",
           "    return 0;",
@@ -557,7 +557,7 @@ export const cpp3Data = {
           "content": "# 値を安全に取り出す方法\\n\\n`optional` の中身を取り出す前に、「値があるか」をチェックします。\\n\\n**身近な例え：**\\nプレゼントの箱を開ける前に、「中身が入っているか」確認してから開けるようなものです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\noptional<int> result = find(v, 5);\\n\\n// 方法1: has_value() でチェック\\nif (result.has_value()) {\\n    cout << result.value() << endl;  // 中身を取り出す\\n}\\n\\n// 方法2: if文で直接チェック（省略形）\\nif (result) {\\n    cout << *result << endl;  // * で中身を取り出す\\n}\\n```\\n\\n**注意：**\\n値がないのに `value()` を呼ぶとエラーになります。必ずチェックしてから使いましょう！"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <optional>でoptionalを読み込む\\n#include <optional>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // optional<int>でoptを宣言し42を代入\\n    optional<int> opt = 42;\\n    // if opt.has_value()でoptに値があるか判定\\n    if (opt.has_value()) {\\n        // coutでopt.value()（中身42）を出力\\n        cout << opt.value() << endl;\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <optional>でoptionalを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // optional<int>でoptを宣言し42を代入\\n    ___<___> ___ = ___;\\n    // if opt.has_value()でoptに値があるか判定\\n    if (___.___()) {\\n        // coutでopt.value()（中身42）を出力\\n        ___ << ___.___() << ___;\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <optional>でoptionalを読み込む\\n#include <optional>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // optional<int>でoptを宣言し42を代入\\n    optional<int> opt = 42;\\n    // if opt.has_value()でoptに値があるか判定\\n    if (opt.has_value()) {\\n        // coutでoptの中身（42）を出力\\n        cout << opt.value() << endl;\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <optional>でoptionalを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // optional<int>でoptを宣言し42を代入\\n    ___<___> ___ = ___;\\n    // if opt.has_value()でoptに値があるか判定\\n    if (___.___()) {\\n        // coutでoptの中身（42）を出力\\n        ___ << ___.___() << ___;\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
@@ -572,7 +572,7 @@ export const cpp3Data = {
           "    optional<int> opt = 42;",
           "    // if opt.has_value()でoptに値があるか判定",
           "    if (opt.has_value()) {",
-          "        // coutでopt.value()（中身42）を出力",
+          "        // coutでoptの中身（42）を出力",
           "        cout << opt.value() << endl;",
           "    // ifブロックを閉じる",
           "    }",

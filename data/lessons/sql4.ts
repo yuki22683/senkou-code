@@ -471,10 +471,10 @@ export const sql4Data = {
           "content": "# デフォルトはカンマ\\n\\n```sql\\nGROUP_CONCAT(name, '-')  -- ハイフン区切り\\n```"
         }
       ],
-      "correctCode": "-- SELECT GROUP_CONCAT と入力して値を結合\\nSELECT GROUP_CONCAT(val, '-') FROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
-      "holeyCode": "-- SELECT GROUP_CONCAT と入力して値を結合\\nSELECT ___(___, '___') FROM (SELECT '___' AS ___ UNION SELECT '___' UNION SELECT '___');",
+      "correctCode": "-- GROUP_CONCAT関数で値を結合\\nSELECT GROUP_CONCAT(val, '-') FROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');",
+      "holeyCode": "-- GROUP_CONCAT関数で値を結合\\nSELECT ___(___, '___') FROM (SELECT '___' AS ___ UNION SELECT '___' UNION SELECT '___');",
       "correctLines": [
-          "-- SELECT GROUP_CONCAT と入力して値を結合",
+          "-- GROUP_CONCAT関数で値を結合",
           "SELECT GROUP_CONCAT(val, '-') FROM (SELECT 'A' AS val UNION SELECT 'B' UNION SELECT 'C');"
         ],
       "lineHints": [

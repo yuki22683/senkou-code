@@ -388,10 +388,10 @@ export const sql2Data = {
           "content": "**コード例：**\\n```sql\\nSELECT CASE\\n  WHEN score >= 80 THEN 'A'\\n  WHEN score >= 60 THEN 'B'\\n  ELSE 'C'\\nEND FROM scores;\\n```\\n\\n**このコードは何をしているの？**\\n- 80点以上 → 'A'を返す\\n- 60点以上 → 'B'を返す\\n- それ以外 → 'C'を返す"
         }
       ],
-      "correctCode": "-- SELECT CASE と入力して条件分岐\\nSELECT CASE\\n  -- 条件を指定\\n  WHEN 85 >= 80 THEN '合格'\\n  -- それ以外の場合\\n  ELSE '失敗'\\n-- ENDで終了\\nEND;",
-      "holeyCode": "-- SELECT CASE と入力して条件分岐\\n___ ___\\n  -- 条件を指定\\n  ___ ___ >= ___ ___ '___'\\n  -- それ以外の場合\\n  ___ '___'\\n-- ENDで終了\\n___;",
+      "correctCode": "-- CASE式で条件分岐を開始\\nSELECT CASE\\n  -- 条件を指定\\n  WHEN 85 >= 80 THEN '合格'\\n  -- それ以外の場合\\n  ELSE '失敗'\\n-- ENDで終了\\nEND;",
+      "holeyCode": "-- CASE式で条件分岐を開始\\n___ ___\\n  -- 条件を指定\\n  ___ ___ >= ___ ___ '___'\\n  -- それ以外の場合\\n  ___ '___'\\n-- ENDで終了\\n___;",
       "correctLines": [
-          "-- SELECT CASE と入力して条件分岐",
+          "-- CASE式で条件分岐を開始",
           "SELECT CASE",
           "  -- 条件を指定",
           "  WHEN 85 >= 80 THEN '合格'",

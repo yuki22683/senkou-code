@@ -209,8 +209,8 @@ export const bash2Data = {
           "content": "# $(関数) で取得\\n\\n`result=$(関数)` で関数の出力を受け取ります。\\n\\n**コード例：**\\n```bash\\ndouble() {\\n    echo $(($1 * 2))\\n}\\nresult=$(double 5)\\necho $result # 10\\n```"
         }
       ],
-      "correctCode": "# square関数を定義\\nsquare() {\\n    # 引数を2乗する\\n    echo $(($1 * $1))\\n}\\n# 関数の出力をresultに格納\\nresult=$(square 4)\\n# $resultを表示\\necho $result",
-      "holeyCode": "# square関数を定義\\n___() {\\n    # 引数を2乗する\\n    ___ $((___ * ___))\\n// ブロックを閉じる\\n___\\n# 関数の出力をresultに格納\\n___=$(___ ___)\\n# $resultを表示\\n___ $___",
+      "correctCode": "# square関数を定義\\nsquare() {\\n    # 引数を2乗する\\n    echo $(($1 * $1))\\n}\\n# 関数の出力をresultに格納\\nresult=$(square 4)\\n# resultを表示\\necho $result",
+      "holeyCode": "# square関数を定義\\n___() {\\n    # 引数を2乗する\\n    ___ $((___ * ___))\\n// ブロックを閉じる\\n___\\n# 関数の出力をresultに格納\\n___=$(___ ___)\\n# resultを表示\\n___ $___",
       "correctLines": [
           "# square関数を定義",
           "square() {",
@@ -219,7 +219,7 @@ export const bash2Data = {
           "}",
           "# 関数の出力をresultに格納",
           "result=$(square 4)",
-          "# $resultを表示",
+          "# resultを表示",
           "echo $result"
         ],
       "lineHints": [
@@ -237,7 +237,7 @@ export const bash2Data = {
           "operators": [
             "*"
           ],
-          "others": ["square", "$1", "echo", "}", "result", "4", "$result", "# 関数の出力をresultに格納", "# $resultを表示"]
+          "others": ["square", "$1", "echo", "}", "result", "4", "$result", "# 関数の出力をresultに格納", "# resultを表示"]
         },
         "testCases": [
           {
@@ -365,12 +365,12 @@ export const bash2Data = {
           "content": "# $(コマンド)\\n\\n任意のコマンドの出力を取得できます。\\n\\n**コード例：**\\n```bash\\ntoday=$(date +%Y-%m-%d)\\necho $today\\n```"
         }
       ],
-      "correctCode": "# 出力を変数filesに格納\\nfiles=$(echo \"テスト\")\\n# $filesの内容を表示\\necho \"Files: $files\"",
-      "holeyCode": "# 出力を変数filesに格納\\n___=$(___ \"___\")\\n# $filesの内容を表示\\n___ \"___: $___\"",
+      "correctCode": "# 出力を変数filesに格納\\nfiles=$(echo \"テスト\")\\n# filesの内容を表示\\necho \"Files: $files\"",
+      "holeyCode": "# 出力を変数filesに格納\\n___=$(___ \"___\")\\n# filesの内容を表示\\n___ \"___: $___\"",
       "correctLines": [
           "# 出力を変数filesに格納",
           "files=$(echo \"テスト\")",
-          "# $filesの内容を表示",
+          "# filesの内容を表示",
           "echo \"Files: $files\""
         ],
       "lineHints": [

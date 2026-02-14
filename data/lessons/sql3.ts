@@ -316,10 +316,10 @@ export const sql3Data = {
           "content": "# SELECT DISTINCT 列名\\n\\n**コード例：**\\n```sql\\nSELECT DISTINCT category FROM products;\\n```\\n\\n**このコードは何をしているの？**\\n- productsテーブルのカテゴリ一覧を\\n- 重複なしで取得します"
         }
       ],
-      "correctCode": "-- SELECT DISTINCT と入力して重複除去\\nSELECT DISTINCT n FROM (\\n  -- データを作成\\n  SELECT 1 AS n UNION ALL\\n  -- 重複データを追加\\n  SELECT 1 UNION ALL\\n  -- 異なるデータを追加\\n  SELECT 2\\n);",
-      "holeyCode": "-- SELECT DISTINCT と入力して重複除去\\n___ ___ ___ ___ (\\n  -- データを作成\\n  ___ ___ AS ___ ___ ___\\n  -- 重複データを追加\\n  ___ ___ ___ ___\\n  -- 異なるデータを追加\\n  ___ ___\\n-- 関数呼び出しを閉じる\\n___",
+      "correctCode": "-- DISTINCT句で重複を除去\\nSELECT DISTINCT n FROM (\\n  -- データを作成\\n  SELECT 1 AS n UNION ALL\\n  -- 重複データを追加\\n  SELECT 1 UNION ALL\\n  -- 異なるデータを追加\\n  SELECT 2\\n);",
+      "holeyCode": "-- DISTINCT句で重複を除去\\n___ ___ ___ ___ (\\n  -- データを作成\\n  ___ ___ AS ___ ___ ___\\n  -- 重複データを追加\\n  ___ ___ ___ ___\\n  -- 異なるデータを追加\\n  ___ ___\\n-- 関数呼び出しを閉じる\\n___",
       "correctLines": [
-          "-- SELECT DISTINCT と入力して重複除去",
+          "-- DISTINCT句で重複を除去",
           "SELECT DISTINCT n FROM (",
           "  -- データを作成",
           "  SELECT 1 AS n UNION ALL",

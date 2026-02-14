@@ -367,14 +367,14 @@ export const ruby2Data = {
           "content": "# < で継承する\\n\\n`<`（小なり記号）を使って親クラスを指定します。\\n\\n**コード例：**\\n```ruby\\nclass Animal\\n  def speak\\n    puts 'sound'\\n  end\\nend\\n\\nclass Dog < Animal\\nend\\n\\ndog = Dog.new\\ndog.speak\\n```\\n\\n=> sound（親のメソッドが使える！）\\n\\n**何が起こるの？**\\n1. `Animal` クラスに `speak` メソッドがある\\n2. `Dog < Animal` → DogはAnimalを継承\\n3. Dogは自分で `speak` を作らなくても、Animalの `speak` が使える\\n\\n**子クラスは親クラスの機能を全部受け継ぎます。**"
         }
       ],
-      "correctCode": "# classでクラスを定義\\nclass Vehicle\\n  # moveを定義\\n  def move\\n    # movingを出力\\n    puts '移動中'\\n  # endで終了\\n  end\\n# endで終了\\nend\\n# <で親クラスを継承\\nclass Car < Vehicle\\n# endで終了\\nend\\n# carにインスタンスを代入\\ncar = Car.new\\n# moveメソッドを呼び出す\\ncar.move",
-      "holeyCode": "# classでクラスを定義\\nclass ___\\n  # moveを定義\\n  def ___\\n    # movingを出力\\n    ___ '___'\\n  # endで終了\\n  ___\\n# endで終了\\n___\\n# <で親クラスを継承\\nclass ___ < ___\\n# endで終了\\n___\\n# carにインスタンスを代入\\n___ = ___.___ \\n# moveメソッドを呼び出す\\n___.___",
+      "correctCode": "# classでクラスを定義\\nclass Vehicle\\n  # moveを定義\\n  def move\\n    # 「移動中」を出力\\n    puts '移動中'\\n  # endで終了\\n  end\\n# endで終了\\nend\\n# <で親クラスを継承\\nclass Car < Vehicle\\n# endで終了\\nend\\n# carにインスタンスを代入\\ncar = Car.new\\n# moveメソッドを呼び出す\\ncar.move",
+      "holeyCode": "# classでクラスを定義\\nclass ___\\n  # moveを定義\\n  def ___\\n    # 「移動中」を出力\\n    ___ '___'\\n  # endで終了\\n  ___\\n# endで終了\\n___\\n# <で親クラスを継承\\nclass ___ < ___\\n# endで終了\\n___\\n# carにインスタンスを代入\\n___ = ___.___ \\n# moveメソッドを呼び出す\\n___.___",
       "correctLines": [
           "# classでクラスを定義",
           "class Vehicle",
           "  # moveを定義",
           "  def move",
-          "    # movingを出力",
+          "    # 「移動中」を出力",
           "    puts '移動中'",
           "  # endで終了",
           "  end",
@@ -435,14 +435,14 @@ export const ruby2Data = {
           "content": "# モジュールを取り込む\\n\\nクラス内で `include モジュール名` と書くと、そのモジュールのメソッドが使えるようになります。これを **ミックスイン** と呼びます。\\n\\n**コード例：**\\n```ruby\\nmodule Greet\\n  def hello\\n    puts 'hello'\\n  end\\nend\\n\\nclass Person\\n  include Greet\\nend\\n\\nperson = Person.new\\nperson.hello\\n```\\n\\n=> hello\\n\\n**何が起こるの？**\\n1. `Greet` モジュールに `hello` メソッドがある\\n2. `include Greet` → PersonクラスにGreetを取り込む\\n3. Personのインスタンスで `hello` が使えるようになる\\n\\n**継承は1つのクラスからだけ**ですが、**モジュールは複数取り込める**ので柔軟です。"
         }
       ],
-      "correctCode": "# moduleでモジュールを定義\\nmodule Speakable\\n  # speakを定義\\n  def speak\\n    # speakingを出力\\n    puts '話し中'\\n  # endで終了\\n  end\\n# endで終了\\nend\\n# classでクラスを定義\\nclass Robot\\n  # includeでモジュールを取り込み\\n  include Speakable\\n# endで終了\\nend\\n# robotにインスタンスを代入\\nrobot = Robot.new\\n# speakメソッドを呼び出す\\nrobot.speak",
-      "holeyCode": "# moduleでモジュールを定義\\nmodule ___\\n  # speakを定義\\n  def ___\\n    # speakingを出力\\n    ___ '___'\\n  # endで終了\\n  ___\\n# endで終了\\n___\\n# classでクラスを定義\\nclass ___\\n  # includeでモジュールを取り込み\\n  ___ ___\\n# endで終了\\n___\\n# robotにインスタンスを代入\\n___ = ___.___ \\n# speakメソッドを呼び出す\\n___.___",
+      "correctCode": "# moduleでモジュールを定義\\nmodule Speakable\\n  # speakを定義\\n  def speak\\n    # 「話し中」を出力\\n    puts '話し中'\\n  # endで終了\\n  end\\n# endで終了\\nend\\n# classでクラスを定義\\nclass Robot\\n  # includeでモジュールを取り込み\\n  include Speakable\\n# endで終了\\nend\\n# robotにインスタンスを代入\\nrobot = Robot.new\\n# speakメソッドを呼び出す\\nrobot.speak",
+      "holeyCode": "# moduleでモジュールを定義\\nmodule ___\\n  # speakを定義\\n  def ___\\n    # 「話し中」を出力\\n    ___ '___'\\n  # endで終了\\n  ___\\n# endで終了\\n___\\n# classでクラスを定義\\nclass ___\\n  # includeでモジュールを取り込み\\n  ___ ___\\n# endで終了\\n___\\n# robotにインスタンスを代入\\n___ = ___.___ \\n# speakメソッドを呼び出す\\n___.___",
       "correctLines": [
           "# moduleでモジュールを定義",
           "module Speakable",
           "  # speakを定義",
           "  def speak",
-          "    # speakingを出力",
+          "    # 「話し中」を出力",
           "    puts '話し中'",
           "  # endで終了",
           "  end",
@@ -507,8 +507,8 @@ export const ruby2Data = {
           "content": "# エラーを捕まえる\\n\\n`begin` ブロックでエラーが起きると、`rescue` ブロックが実行されます。\\n\\n**コード例：**\\n```ruby\\nbegin\\n  1 / 0  # ゼロで割るとエラー！\\nrescue => e\\n  puts 'Error!'\\nend\\n```\\n\\n**何が起こるの？**\\n1. `begin` の中の処理を試す\\n2. `1 / 0` → ゼロで割れない！エラー発生！\\n3. `rescue` に飛ぶ（エラーをキャッチ）\\n4. 「Error!」と表示される\\n5. プログラムは止まらずに続く\\n\\n**`=> e` とは？**\\n- エラーの情報を変数 `e` に入れる\\n- `e.message` でエラーメッセージを見られる"
         }
       ],
-      "correctCode": "# beginで開始\\nbegin\\n  # raiseでエラーを発生\\n  raise 'おっと'\\n# rescueで例外を捕捉\\nrescue => e\\n  # caughtを出力\\n  puts 'キャッチ'\\n# endで終了\\nend",
-      "holeyCode": "# beginで開始\\n___\\n  # raiseでエラーを発生\\n  ___ '___'\\n# rescueで例外を捕捉\\n___ => ___\\n  # caughtを出力\\n  ___ '___'\\n# endで終了\\n___",
+      "correctCode": "# beginで開始\\nbegin\\n  # raiseでエラーを発生\\n  raise 'おっと'\\n# rescueで例外を捕捉\\nrescue => e\\n  # 「キャッチ」を出力\\n  puts 'キャッチ'\\n# endで終了\\nend",
+      "holeyCode": "# beginで開始\\n___\\n  # raiseでエラーを発生\\n  ___ '___'\\n# rescueで例外を捕捉\\n___ => ___\\n  # 「キャッチ」を出力\\n  ___ '___'\\n# endで終了\\n___",
       "correctLines": [
           "# beginで開始",
           "begin",
@@ -516,7 +516,7 @@ export const ruby2Data = {
           "  raise 'おっと'",
           "# rescueで例外を捕捉",
           "rescue => e",
-          "  # caughtを出力",
+          "  # 「キャッチ」を出力",
           "  puts 'キャッチ'",
           "# endで終了",
           "end"

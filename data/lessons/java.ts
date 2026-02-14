@@ -340,7 +340,7 @@ export const javaData = {
           "content": "# ガチャンと合体！\\n\\n文字と文字、文字と数字を `+` でつなぐと、ひとつの長い文章になります。\\n\\n**コード例：** 天気を表示してみましょう\\n```java\\nString weather = \"はれ\";  // 天気を変数に入れる\\nSystem.out.println(\"明日は\" + weather + \"です\");  // つなげて表示\\n```\\n=> 明日ははれです\\n\\n**何が起きているの？**\\n1. 「明日は」という文字\\n2. weatherの中身「はれ」\\n3. 「です」という文字\\n\\nこの3つが `+` でつながって「明日ははれです」になります！"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のageに10を代入\\n        int age = 10;\\n        // printlnで'私は'+age+'歳です'を連結して出力\\n        System.out.println(\\\"私は\\\" + age + \\\"歳です\\\");\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のageに10を代入\\n        ___ ___ = ___;\\n        // printlnで'私は'+age+'歳です'を連結して出力\\n        ___.___.___(___ ___ ___ ___ ___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のageに10を代入\\n        int age = 10;\\n        // printlnで「私は」とageと「歳です」を連結して出力\\n        System.out.println(\\\"私は\\\" + age + \\\"歳です\\\");\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のageに10を代入\\n        ___ ___ = ___;\\n        // printlnで「私は」とageと「歳です」を連結して出力\\n        ___.___.___(___ ___ ___ ___ ___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
@@ -348,7 +348,7 @@ export const javaData = {
           "    public static void main(String[] args) {",
           "        // int型のageに10を代入",
           "        int age = 10;",
-          "        // printlnで'私は'+age+'歳です'を連結して出力",
+          "        // printlnで「私は」とageと「歳です」を連結して出力",
           "        System.out.println(\\\"私は\\\" + age + \\\"歳です\\\");",
           "    // mainメソッドを閉じる",
           "    }",

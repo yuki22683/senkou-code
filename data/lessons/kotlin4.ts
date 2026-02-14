@@ -57,8 +57,8 @@ export const kotlin4Data = {
           "content": "# 目標\\n\\n図形の面積を計算するsealed classを作りましょう。\\n\\n1. `sealed class Shape` を定義\\n2. `Circle` と `Rectangle` を継承させる\\n3. `when` ですべてのケースを処理\\n4. 円の面積は 3.14 * r * r"
         }
       ],
-      "correctCode": "// Shapeをsealed classで定義\\nsealed class Shape\\n// Circle クラスを定義する\\nclass Circle(val radius: Double) : Shape()\\n// Rectangle クラスを定義する\\nclass Rectangle(val w: Double, val h: Double) : Shape()\\n\\n// 面積を計算する関数\\nfun area(s: Shape): Double = when (s) {\\n    // Circle の場合 (radius * radius)\\n    is Circle -> 3.14 * s.radius * s.radius\\n    // Rectangle の場合 (w * h)\\n    is Rectangle -> s.w * s.h\\n// ブロックを閉じる\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // area を出力する\\n    println(area(Circle(2.0)))\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// Shapeをsealed classで定義\\nsealed class ___\\n// Circle クラスを定義する\\nclass ___(val ___: ___) : ___()\\n// Rectangle クラスを定義する\\nclass ___(val ___: ___, val ___: ___) : ___()\\n___\\n// 面積を計算する関数\\nfun ___(___: ___): ___ = when (___) {\\n    // Circle の場合 (radius * radius)\\n    is ___ -> ___ * ___.___ * ___.___\\n    // Rectangle の場合 (w * h)\\n    is ___ -> ___.___ * ___.___\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // area を出力する\\n    ___(___(___(___)))\\n// ブロックを閉じる\\n___",
+      "correctCode": "// Shapeをsealed classで定義\\nsealed class Shape\\n// Circle クラスを定義する\\nclass Circle(val radius: Double) : Shape()\\n// Rectangle クラスを定義する\\nclass Rectangle(val w: Double, val h: Double) : Shape()\\n\\n// 面積を計算する関数\\nfun area(s: Shape): Double = when (s) {\\n    // Circleの場合（半径の2乗を計算）\\n    is Circle -> 3.14 * s.radius * s.radius\\n    // Rectangleの場合（幅と高さの積を計算）\\n    is Rectangle -> s.w * s.h\\n// ブロックを閉じる\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // area を出力する\\n    println(area(Circle(2.0)))\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// Shapeをsealed classで定義\\nsealed class ___\\n// Circle クラスを定義する\\nclass ___(val ___: ___) : ___()\\n// Rectangle クラスを定義する\\nclass ___(val ___: ___, val ___: ___) : ___()\\n___\\n// 面積を計算する関数\\nfun ___(___: ___): ___ = when (___) {\\n    // Circleの場合（半径の2乗を計算）\\n    is ___ -> ___ * ___.___ * ___.___\\n    // Rectangleの場合（幅と高さの積を計算）\\n    is ___ -> ___.___ * ___.___\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // area を出力する\\n    ___(___(___(___)))\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Shapeをsealed classで定義",
           "sealed class Shape",
@@ -69,9 +69,9 @@ export const kotlin4Data = {
           "",
           "// 面積を計算する関数",
           "fun area(s: Shape): Double = when (s) {",
-          "    // Circle の場合 (radius * radius)",
+          "    // Circleの場合（半径の2乗を計算）",
           "    is Circle -> 3.14 * s.radius * s.radius",
-          "    // Rectangle の場合 (w * h)",
+          "    // Rectangleの場合（幅と高さの積を計算）",
           "    is Rectangle -> s.w * s.h",
           "// ブロックを閉じる",
           "}",
@@ -239,8 +239,8 @@ export const kotlin4Data = {
           "content": "# 目標\\n\\nby lazyで遅延初期化を体験しましょう。\\n\\n1. `val value: Int by lazy { }` を定義\\n2. 中で \"Init\" を表示して 42 を返す\\n3. \"Created\" → \"Init\" → \"42\" の順で表示される"
         }
       ],
-      "correctCode": "// Config クラスを定義する\\nclass Config {\\n    // valueをlazyで遅延初期化\\n    val value: Int by lazy {\\n        // \"Init\" を出力する\\n        println(\"Init\")\\n        // 42 を返す\\n        42\\n    }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // Config のインスタンスを作成する\\n    val c = Config()\\n    // \"Created\" を出力する\\n    println(\"Created\")\\n    // c.value を出力する\\n    println(c.value)\\n}",
-      "holeyCode": "// Config クラスを定義する\\nclass ___ {\\n    // valueをlazyで遅延初期化\\n    val ___: ___ by ___ {\\n        // \"Init\" を出力する\\n        ___(\"___\")\\n        // 42 を返す\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // Config のインスタンスを作成する\\n    val ___ = ___()\\n    // \"Created\" を出力する\\n    ___(\"___\")\\n    // c.value を出力する\\n    ___(___.___) \\n// ブロックを閉じる\\n___",
+      "correctCode": "// Config クラスを定義する\\nclass Config {\\n    // valueをlazyで遅延初期化\\n    val value: Int by lazy {\\n        // \"Init\" を出力する\\n        println(\"Init\")\\n        // 42 を返す\\n        42\\n    }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // Config のインスタンスを作成する\\n    val c = Config()\\n    // \"Created\" を出力する\\n    println(\"Created\")\\n    // cのvalueを出力する\\n    println(c.value)\\n}",
+      "holeyCode": "// Config クラスを定義する\\nclass ___ {\\n    // valueをlazyで遅延初期化\\n    val ___: ___ by ___ {\\n        // \"Init\" を出力する\\n        ___(\"___\")\\n        // 42 を返す\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // Config のインスタンスを作成する\\n    val ___ = ___()\\n    // \"Created\" を出力する\\n    ___(\"___\")\\n    // cのvalueを出力する\\n    ___(___.___) \\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Config クラスを定義する",
           "class Config {",
@@ -259,7 +259,7 @@ export const kotlin4Data = {
           "    val c = Config()",
           "    // \"Created\" を出力する",
           "    println(\"Created\")",
-          "    // c.value を出力する",
+          "    // cのvalueを出力する",
           "    println(c.value)",
           "}"
         ],
@@ -329,8 +329,8 @@ export const kotlin4Data = {
           "content": "# 目標\\n\\nlateinitで後から初期化しましょう。\\n\\n1. `lateinit var config: String` を宣言\\n2. `setup()` 関数で値を設定\\n3. `s.setup(\"OK\")` で \"OK\" を設定\\n4. `s.config` を表示"
         }
       ],
-      "correctCode": "// Service クラスを定義する\\nclass Service {\\n    // configをlateinitで宣言\\n    lateinit var config: String\\n    \\n    // setup 関数を定義する\\n    fun setup(c: String) { config = c }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // Service のインスタンスを作成する\\n    val s = Service()\\n    // setupメソッドを呼び出す\\n    s.setup(\"OK\")\\n    // s.config を出力する\\n    println(s.config)\\n}",
-      "holeyCode": "// Service クラスを定義する\\nclass ___ {\\n    // configをlateinitで宣言\\n    lateinit var ___: ___\\n    ___\\n    // setup 関数を定義する\\n    fun ___(___: ___) { ___ = ___ }\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // Service のインスタンスを作成する\\n    val ___ = ___()\\n    // setupメソッドを呼び出す\\n    ___.___(___)\\n    // s.config を出力する\\n    ___(___.___) \\n// ブロックを閉じる\\n___",
+      "correctCode": "// Service クラスを定義する\\nclass Service {\\n    // configをlateinitで宣言\\n    lateinit var config: String\\n    \\n    // setup 関数を定義する\\n    fun setup(c: String) { config = c }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // Service のインスタンスを作成する\\n    val s = Service()\\n    // setupメソッドを呼び出す\\n    s.setup(\"OK\")\\n    // sのconfigを出力する\\n    println(s.config)\\n}",
+      "holeyCode": "// Service クラスを定義する\\nclass ___ {\\n    // configをlateinitで宣言\\n    lateinit var ___: ___\\n    ___\\n    // setup 関数を定義する\\n    fun ___(___: ___) { ___ = ___ }\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // Service のインスタンスを作成する\\n    val ___ = ___()\\n    // setupメソッドを呼び出す\\n    ___.___(___)\\n    // sのconfigを出力する\\n    ___(___.___) \\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Service クラスを定義する",
           "class Service {",
@@ -347,7 +347,7 @@ export const kotlin4Data = {
           "    val s = Service()",
           "    // setupメソッドを呼び出す",
           "    s.setup(\"OK\")",
-          "    // s.config を出力する",
+          "    // sのconfigを出力する",
           "    println(s.config)",
           "}"
         ],
@@ -493,8 +493,8 @@ export const kotlin4Data = {
           "content": "# 目標\\n\\n型名を返す関数を作りましょう。\\n\\n1. `inline fun <reified T> typeOf()` を定義\\n2. `T::class.simpleName` で型名を取得\\n3. `typeOf<String>()` は \"String\" を返す"
         }
       ],
-      "correctCode": "// typeOf関数をreifiedで定義\\ninline fun <reified T> typeOf(): String {\\n    // 型名を返す\\n    return T::class.simpleName ?: \"Unknown\"\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // typeOf<String>() を出力する\\n    println(typeOf<String>())\\n}",
-      "holeyCode": "// typeOf関数をreifiedで定義\\ninline fun <reified ___> ___(): ___ {\\n    // 型名を返す\\n    return ___::class.___ ?: \"___\"\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // typeOf<String>() を出力する\\n    ___(___(___))\\n// ブロックを閉じる\\n___",
+      "correctCode": "// typeOf関数をreifiedで定義\\ninline fun <reified T> typeOf(): String {\\n    // 型名を返す\\n    return T::class.simpleName ?: \"Unknown\"\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // typeOf関数（String型）を呼び出して出力\\n    println(typeOf<String>())\\n}",
+      "holeyCode": "// typeOf関数をreifiedで定義\\ninline fun <reified ___> ___(): ___ {\\n    // 型名を返す\\n    return ___::class.___ ?: \"___\"\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // typeOf関数（String型）を呼び出して出力\\n    ___(___(___))\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// typeOf関数をreifiedで定義",
           "inline fun <reified T> typeOf(): String {",
@@ -504,7 +504,7 @@ export const kotlin4Data = {
           "",
           "// main 関数を定義する",
           "fun main() {",
-          "    // typeOf<String>() を出力する",
+          "    // typeOf関数（String型）を呼び出して出力",
           "    println(typeOf<String>())",
           "}"
         ],

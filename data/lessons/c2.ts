@@ -25,7 +25,7 @@ export const c2Data = {
           "content": "# * を使って宣言します\\n\\n`int *p` のように `*` をつけるとポインタ変数になります。`&x` で x の住所を取得し、`*p` で住所の中身を見ます。\\n\\n**コード例：**\\n```c\\nint x = 10;\\nint *p = &x;      // p に x の住所を入れる\\nprintf(\"%d\\n\", *p); // p が指す中身を表示 → 10\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int xでxを宣言し42を代入\\n    int x = 42;\\n    // int *pでポインタpを宣言し&xでxのアドレスを代入\\n    int *p = &x;\\n    // printfで*p（pが指す値）を出力\\n    printf(\"%d\\n\", *p);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int xでxを宣言し42を代入\\n    ___ ___ = ___;\\n    // int *pでポインタpを宣言し&xでxのアドレスを代入\\n    ___ *___ = ______;\\n    // printfで*p（pが指す値）を出力\\n    ___(\"___\", *___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int xでxを宣言し42を代入\\n    int x = 42;\\n    // int *pでポインタpを宣言し&xでxのアドレスを代入\\n    int *p = &x;\\n    // printfでpが指す値を出力\\n    printf(\"%d\\n\", *p);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int xでxを宣言し42を代入\\n    ___ ___ = ___;\\n    // int *pでポインタpを宣言し&xでxのアドレスを代入\\n    ___ *___ = ______;\\n    // printfでpが指す値を出力\\n    ___(\"___\", *___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -35,7 +35,7 @@ export const c2Data = {
           "    int x = 42;",
           "    // int *pでポインタpを宣言し&xでxのアドレスを代入",
           "    int *p = &x;",
-          "    // printfで*p（pが指す値）を出力",
+          "    // printfでpが指す値を出力",
           "    printf(\"%d\\n\", *p);",
           "    // return 0で正常終了を返す",
           "    return 0;",
@@ -84,7 +84,7 @@ export const c2Data = {
           "content": "# * で中身にアクセス\\n\\n`*p` と書くと「p が指している場所の中身」を意味します。読み取りだけでなく、書き込みもできます。\\n\\n**コード例：**\\n```c\\nint x = 5;\\nint *p = &x;\\n*p = 100;  // x が 100 に変わる\\nprintf(\"%d\\n\", x); // 100\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int nでnを宣言し10を代入\\n    int n = 10;\\n    // int *ptrでポインタptrを宣言し&nでnのアドレスを代入\\n    int *ptr = &n;\\n    // *ptrでptrが指す先に99を代入\\n    *ptr = 99;\\n    // printfでnを出力\\n    printf(\"%d\\n\", n);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int nでnを宣言し10を代入\\n    ___ ___ = ___;\\n    // int *ptrでポインタptrを宣言し&nでnのアドレスを代入\\n    ___ *___ = ______;\\n    // *ptrでptrが指す先に99を代入\\n    *___ = ___;\\n    // printfでnを出力\\n    ___(\"___\", ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int nでnを宣言し10を代入\\n    int n = 10;\\n    // int *ptrでポインタptrを宣言し&nでnのアドレスを代入\\n    int *ptr = &n;\\n    // ptrが指す先に99を代入\\n    *ptr = 99;\\n    // printfでnを出力\\n    printf(\"%d\\n\", n);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int nでnを宣言し10を代入\\n    ___ ___ = ___;\\n    // int *ptrでポインタptrを宣言し&nでnのアドレスを代入\\n    ___ *___ = ______;\\n    // ptrが指す先に99を代入\\n    *___ = ___;\\n    // printfでnを出力\\n    ___(\"___\", ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -94,7 +94,7 @@ export const c2Data = {
           "    int n = 10;",
           "    // int *ptrでポインタptrを宣言し&nでnのアドレスを代入",
           "    int *ptr = &n;",
-          "    // *ptrでptrが指す先に99を代入",
+          "    // ptrが指す先に99を代入",
           "    *ptr = 99;",
           "    // printfでnを出力",
           "    printf(\"%d\\n\", n);",
@@ -210,19 +210,19 @@ export const c2Data = {
           "content": "# 型を指定して結果を返す\\n\\n関数名の前に戻り値の型を書きます。`void` は戻り値なし、`int` は整数を返します。\\n\\n**コード例：**\\n```c\\nint add(int a, int b) {\\n    return a + b;\\n}\\n\\nint result = add(3, 5); // 8\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int double_itでdouble_it関数（引数int x）を定義\\nint double_it(int x) {\\n    // returnでx * 2を返す\\n    return x * 2;\\n// double_it関数を閉じる\\n}\\n// int mainでmain関数を定義\\nint main() {\\n    // int resultでdouble_it(7)の結果を代入\\n    int result = double_it(7);\\n    // printfでresultを出力\\n    printf(\"%d\\n\", result);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int double_itでdouble_it関数（引数int x）を定義\\n___ ___(___ ___) {\\n    // returnでx * 2を返す\\n    ___ ___ * ___;\\n// double_it関数を閉じる\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int resultでdouble_it(7)の結果を代入\\n    ___ ___ = ___(___);\\n    // printfでresultを出力\\n    ___(\"___\", ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int double_itでdouble_it関数（引数int x）を定義\\nint double_it(int x) {\\n    // returnでxを2倍した値を返す\\n    return x * 2;\\n// double_it関数を閉じる\\n}\\n// int mainでmain関数を定義\\nint main() {\\n    // int resultにdouble_it関数（引数7）の結果を代入\\n    int result = double_it(7);\\n    // printfでresultを出力\\n    printf(\"%d\\n\", result);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int double_itでdouble_it関数（引数int x）を定義\\n___ ___(___ ___) {\\n    // returnでxを2倍した値を返す\\n    ___ ___ * ___;\\n// double_it関数を閉じる\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int resultにdouble_it関数（引数7）の結果を代入\\n    ___ ___ = ___(___);\\n    // printfでresultを出力\\n    ___(\"___\", ___);\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
           "// int double_itでdouble_it関数（引数int x）を定義",
           "int double_it(int x) {",
-          "    // returnでx * 2を返す",
+          "    // returnでxを2倍した値を返す",
           "    return x * 2;",
           "// double_it関数を閉じる",
           "}",
           "// int mainでmain関数を定義",
           "int main() {",
-          "    // int resultでdouble_it(7)の結果を代入",
+          "    // int resultにdouble_it関数（引数7）の結果を代入",
           "    int result = double_it(7);",
           "    // printfでresultを出力",
           "    printf(\"%d\\n\", result);",
@@ -277,7 +277,7 @@ export const c2Data = {
           "content": "# ポインタ演算\\n\\nポインタに数字を足すと、その分だけ先の要素を指します。`*(p + 1)` は `p[1]` と同じです。\\n\\n**コード例：**\\n```c\\nint arr[] = {10, 20, 30};\\nint *p = arr;\\nprintf(\"%d\\n\", *(p + 1)); // 20\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int arr[]で配列arrを宣言し（5、15、25）で初期化\\n    int arr[] = {5, 15, 25};\\n    // int *pでポインタpを宣言しarrの先頭アドレスを代入\\n    int *p = arr;\\n    // printfで*(p + 2)（インデックス2の要素25）を出力\\n    printf(\"%d\\n\", *(p + 2));\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int arr[]で配列arrを宣言し（5、15、25）で初期化\\n    ___ ___[] = {___, ___, ___};\\n    // int *pでポインタpを宣言しarrの先頭アドレスを代入\\n    ___ *___ = ___;\\n    // printfで*(p + 2)（インデックス2の要素25）を出力\\n    ___(\"___\", *(___ + ___));\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int arr[]で配列arrを宣言し（5、15、25）で初期化\\n    int arr[] = {5, 15, 25};\\n    // int *pでポインタpを宣言しarrの先頭アドレスを代入\\n    int *p = arr;\\n    // printfでpの2つ先の要素（インデックス2、値25）を出力\\n    printf(\"%d\\n\", *(p + 2));\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int arr[]で配列arrを宣言し（5、15、25）で初期化\\n    ___ ___[] = {___, ___, ___};\\n    // int *pでポインタpを宣言しarrの先頭アドレスを代入\\n    ___ *___ = ___;\\n    // printfでpの2つ先の要素（インデックス2、値25）を出力\\n    ___(\"___\", *(___ + ___));\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -287,7 +287,7 @@ export const c2Data = {
           "    int arr[] = {5, 15, 25};",
           "    // int *pでポインタpを宣言しarrの先頭アドレスを代入",
           "    int *p = arr;",
-          "    // printfで*(p + 2)（インデックス2の要素25）を出力",
+          "    // printfでpの2つ先の要素（インデックス2、値25）を出力",
           "    printf(\"%d\\n\", *(p + 2));",
           "    // return 0で正常終了を返す",
           "    return 0;",
@@ -391,13 +391,13 @@ export const c2Data = {
           "content": "# 関数側でポインタを受け取る\\n\\n関数の引数をポインタにし、呼び出し時に `&` でアドレスを渡します。\\n\\n**コード例：**\\n```c\\nvoid add_ten(int *p) {\\n    *p = *p + 10;\\n}\\n\\nint x = 5;\\nadd_ten(&x);\\nprintf(\"%d\\n\", x); // 15\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// void tripleでtriple関数（引数int *p）を定義\\nvoid triple(int *p) {\\n    // *pでpが指す値を3倍にして代入\\n    *p = *p * 3;\\n// triple関数を閉じる\\n}\\n// int mainでmain関数を定義\\nint main() {\\n    // int valでvalを宣言し4を代入\\n    int val = 4;\\n    // triple関数（引数&val）を呼び出す\\n    triple(&val);\\n    // printfでvalを出力\\n    printf(\"%d\\n\", val);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// void tripleでtriple関数（引数int *p）を定義\\n___ ___(___ *___) {\\n    // *pでpが指す値を3倍にして代入\\n    *___ = *___ * ___;\\n// triple関数を閉じる\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int valでvalを宣言し4を代入\\n    ___ ___ = ___;\\n    // triple関数（引数&val）を呼び出す\\n    ___(&___);\\n    // printfでvalを出力\\n    ___(\\\"___\\\", ___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// void tripleでtriple関数（引数int *p）を定義\\nvoid triple(int *p) {\\n    // pが指す値を3倍にして代入\\n    *p = *p * 3;\\n// triple関数を閉じる\\n}\\n// int mainでmain関数を定義\\nint main() {\\n    // int valでvalを宣言し4を代入\\n    int val = 4;\\n    // triple関数（引数valのアドレス）を呼び出す\\n    triple(&val);\\n    // printfでvalを出力\\n    printf(\"%d\\n\", val);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// void tripleでtriple関数（引数int *p）を定義\\n___ ___(___ *___) {\\n    // pが指す値を3倍にして代入\\n    *___ = *___ * ___;\\n// triple関数を閉じる\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int valでvalを宣言し4を代入\\n    ___ ___ = ___;\\n    // triple関数（引数valのアドレス）を呼び出す\\n    ___(&___);\\n    // printfでvalを出力\\n    ___(\\\"___\\\", ___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
           "// void tripleでtriple関数（引数int *p）を定義",
           "void triple(int *p) {",
-          "    // *pでpが指す値を3倍にして代入",
+          "    // pが指す値を3倍にして代入",
           "    *p = *p * 3;",
           "// triple関数を閉じる",
           "}",
@@ -405,7 +405,7 @@ export const c2Data = {
           "int main() {",
           "    // int valでvalを宣言し4を代入",
           "    int val = 4;",
-          "    // triple関数（引数&val）を呼び出す",
+          "    // triple関数（引数valのアドレス）を呼び出す",
           "    triple(&val);",
           "    // printfでvalを出力",
           "    printf(\"%d\\n\", val);",
@@ -462,7 +462,7 @@ export const c2Data = {
           "content": "# stdlib.h が必要\\n\\n`malloc(サイズ)` でメモリを確保し、ポインタで受け取ります。必ず `free` で解放しましょう。\\n\\n**コード例：**\\n```c\\n#include <stdlib.h>\\nint *p = malloc(sizeof(int));\\n*p = 100;\\nprintf(\"%d\\n\", *p);\\nfree(p);\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// #includeでstdlib.hを読み込む\\n#include <stdlib.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int *pでポインタpを宣言しmallocでint型サイズのメモリを確保\\n    int *p = malloc(sizeof(int));\\n    // *pでpが指す先に50を代入\\n    *p = 50;\\n    // printfで*p（pが指す値）を出力\\n    printf(\"%d\\n\", *p);\\n    // freeでpのメモリを解放\\n    free(p);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// #includeでstdlib.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int *pでポインタpを宣言しmallocでint型サイズのメモリを確保\\n    ___ *___ = ___(___(___));\\n    // *pでpが指す先に50を代入\\n    *___ = ___;\\n    // printfで*p（pが指す値）を出力\\n    ___(\\\"___\\\", *___);\\n    // freeでpのメモリを解放\\n    ___(___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// #includeでstdlib.hを読み込む\\n#include <stdlib.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int *pでポインタpを宣言しmallocでint型サイズのメモリを確保\\n    int *p = malloc(sizeof(int));\\n    // pが指す先に50を代入\\n    *p = 50;\\n    // printfでpが指す値を出力\\n    printf(\"%d\\n\", *p);\\n    // freeでpのメモリを解放\\n    free(p);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}", "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// #includeでstdlib.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int *pでポインタpを宣言しmallocでint型サイズのメモリを確保\\n    ___ *___ = ___(___(___));\\n    // pが指す先に50を代入\\n    *___ = ___;\\n    // printfでpが指す値を出力\\n    ___(\\\"___\\\", *___);\\n    // freeでpのメモリを解放\\n    ___(___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -472,9 +472,9 @@ export const c2Data = {
           "int main() {",
           "    // int *pでポインタpを宣言しmallocでint型サイズのメモリを確保",
           "    int *p = malloc(sizeof(int));",
-          "    // *pでpが指す先に50を代入",
+          "    // pが指す先に50を代入",
           "    *p = 50;",
-          "    // printfで*p（pが指す値）を出力",
+          "    // printfでpが指す値を出力",
           "    printf(\"%d\\n\", *p);",
           "    // freeでpのメモリを解放",
           "    free(p);",
@@ -529,8 +529,8 @@ export const c2Data = {
           "content": "# ポインタからメンバにアクセス\\n\\n構造体ポインタからメンバにアクセスするには `->` を使います。`(*p).x` と `p->x` は同じ意味です。\\n\\n**コード例：**\\n```c\\nstruct Point { int x; int y; };\\nstruct Point pt = {3, 4};\\nstruct Point *p = &pt;\\nprintf(\"%d\\n\", p->x); // 3\\n```"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// struct ItemでItem構造体を定義\\nstruct Item {\\n    // int priceでpriceメンバを宣言\\n    int price;\\n// 構造体定義を閉じる\\n};\\n// int mainでmain関数を定義\\nint main() {\\n    // struct Item itemでitemを宣言し価格200で初期化\\n    struct Item item = {200};\\n    // struct Item *pでポインタpを宣言し&itemでitemのアドレスを代入\\n    struct Item *p = &item;\\n    // printfでp->price（ポインタからpriceメンバ）を出力\\n    printf(\"%d\\n\", p->price);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// struct ItemでItem構造体を定義\\n___ ___ {\\n    // int priceでpriceメンバを宣言\\n    ___ ___;\\n// 構造体定義を閉じる\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // struct Item itemでitemを宣言し価格200で初期化\\n    ___ ___ ___ = {___};\\n    // struct Item *pでポインタpを宣言し&itemでitemのアドレスを代入\\n    ___ ___ *___ = &___;\\n    // printfでp->price（ポインタからpriceメンバ）を出力\\n    ___(\\\"___\\\", ___->___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// struct ItemでItem構造体を定義\\nstruct Item {\\n    // int priceでpriceメンバを宣言\\n    int price;\\n// 構造体定義を閉じる\\n};\\n// int mainでmain関数を定義\\nint main() {\\n    // struct Item itemでitemを宣言し価格200で初期化\\n    struct Item item = {200};\\n    // struct Item *pでポインタpを宣言し&itemでitemのアドレスを代入\\n    struct Item *p = &item;\\n    // printfでpのpriceメンバを出力\\n    printf(\"%d\\n\", p->price);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// struct ItemでItem構造体を定義\\n___ ___ {\\n    // int priceでpriceメンバを宣言\\n    ___ ___;\\n// 構造体定義を閉じる\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // struct Item itemでitemを宣言し価格200で初期化\\n    ___ ___ ___ = {___};\\n    // struct Item *pでポインタpを宣言し&itemでitemのアドレスを代入\\n    ___ ___ *___ = &___;\\n    // printfでpのpriceメンバを出力\\n    ___(\\\"___\\\", ___->___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -546,7 +546,7 @@ export const c2Data = {
           "    struct Item item = {200};",
           "    // struct Item *pでポインタpを宣言し&itemでitemのアドレスを代入",
           "    struct Item *p = &item;",
-          "    // printfでp->price（ポインタからpriceメンバ）を出力",
+          "    // printfでpのpriceメンバを出力",
           "    printf(\"%d\\n\", p->price);",
           "    // return 0で正常終了を返す",
           "    return 0;",

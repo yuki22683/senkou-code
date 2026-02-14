@@ -99,14 +99,14 @@ export const swiftData = {
           "content": "# 目標\\n\\n2つの変数を作って、たし算をしてみましょう。\\n\\n1. `x` という変数に `10` を入れる\\n2. `y` という変数に `5` を入れる\\n3. `x + y` の結果を画面に表示する\\n\\n答えは `15` になるはずです。"
         }
       ],
-      "correctCode": "// letでxに10を代入\\nlet x = 10\\n// letでyに5を代入\\nlet y = 5\\n// printでx+yを出力\\nprint(x + y)",
-      "holeyCode": "// letでxに10を代入\\nlet ___ = ___\\n// letでyに5を代入\\nlet ___ = ___\\n// printでx+yを出力\\n___(___ ___ ___)",
+      "correctCode": "// letでxに10を代入\\nlet x = 10\\n// letでyに5を代入\\nlet y = 5\\n// xとyの和を出力\\nprint(x + y)",
+      "holeyCode": "// letでxに10を代入\\nlet ___ = ___\\n// letでyに5を代入\\nlet ___ = ___\\n// xとyの和を出力\\n___(___ ___ ___)",
       "correctLines": [
           "// letでxに10を代入",
           "let x = 10",
           "// letでyに5を代入",
           "let y = 5",
-          "// printでx+yを出力",
+          "// xとyの和を出力",
           "print(x + y)"
         ],
       "lineHints": [
@@ -387,12 +387,12 @@ export const swiftData = {
           "content": "# 目標\\n\\n色の配列を作って、2番目のデータを取り出しましょう。\\n\\n1. `colors` という配列に「あか」「あお」を入れる\\n2. 2番目のデータ（番号は1）を表示する\\n\\n答えは「あお」になります。\\n\\n**注意：** 2番目のデータは `colors[1]` です（0番から数えるから）。"
         }
       ],
-      "correctCode": "// letでcolorsに色配列（あか、あお）を代入\\nlet colors = [\"あか\", \"あお\"]\\n// printでcolors[1]（あお）を出力\\nprint(colors[1])",
-      "holeyCode": "// letでcolorsに色配列（あか、あお）を代入\\nlet ___ = ___\\n// printでcolors[1]（あお）を出力\\n___(___[___])",
+      "correctCode": "// letでcolorsに色配列（あか、あお）を代入\\nlet colors = [\"あか\", \"あお\"]\\n// colorsのインデックス1（あお）を出力\\nprint(colors[1])",
+      "holeyCode": "// letでcolorsに色配列（あか、あお）を代入\\nlet ___ = ___\\n// colorsのインデックス1（あお）を出力\\n___(___[___])",
       "correctLines": [
           "// letでcolorsに色配列（あか、あお）を代入",
           "let colors = [\"あか\", \"あお\"]",
-          "// printでcolors[1]（あお）を出力",
+          "// colorsのインデックス1（あお）を出力",
           "print(colors[1])"
         ],
       "lineHints": [
@@ -444,12 +444,12 @@ export const swiftData = {
           "content": "# 目標\\n\\nくだものの辞書を作って、色を調べましょう。\\n\\n1. `colors` という辞書を作る\\n2. キーは「みかん」、値は「オレンジ」\\n3. 「みかん」の色を表示する\\n\\n答えは「オレンジ」になります。"
         }
       ],
-      "correctCode": "// letでcolorsに辞書（みかん:オレンジ）を代入\\nlet colors = [\"みかん\": \"オレンジ\"]\\n// printでcolors[\"みかん\"]!を出力\\nprint(colors[\"みかん\"]!)",
-      "holeyCode": "// letでcolorsに辞書（みかん:オレンジ）を代入\\nlet ___ = ___\\n// printでcolors[\"みかん\"]!を出力\\n___(___[___]___)",
+      "correctCode": "// letでcolorsに辞書（みかん:オレンジ）を代入\\nlet colors = [\"みかん\": \"オレンジ\"]\\n// colorsのみかんキーの値を出力\\nprint(colors[\"みかん\"]!)",
+      "holeyCode": "// letでcolorsに辞書（みかん:オレンジ）を代入\\nlet ___ = ___\\n// colorsのみかんキーの値を出力\\n___(___[___]___)",
       "correctLines": [
           "// letでcolorsに辞書（みかん:オレンジ）を代入",
           "let colors = [\"みかん\": \"オレンジ\"]",
-          "// printでcolors[\"みかん\"]!を出力",
+          "// colorsのみかんキーの値を出力",
           "print(colors[\"みかん\"]!)"
         ],
       "lineHints": [

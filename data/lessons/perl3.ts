@@ -241,10 +241,10 @@ export const perl3Data = {
           "content": "# join(区切り文字, @配列)\\n\\n**このコードは何をしているの？**\\n```perl\\nmy @arr = (\"a\", \"b\", \"c\");\\nmy $str = join(\"-\", @arr);\\nprint $str; # a-b-c\\n```\\n\\n**解説：**\\n1. (\"a\", \"b\", \"c\") の配列を `-` でつなげる\\n2. 結果は \"a-b-c\" という文字列\\n\\n**split と join の関係：**\\n- split → 文字列を配列に分解\\n- join → 配列を文字列にまとめる"
         }
       ],
-      "correctCode": "# @wordsに(\\\"hello\\\", \\\"world\\\")を代入\\nmy @words = (\\\"hello\\\", \\\"world\\\");\\n# joinで結合\\nmy $sentence = join(\\\" \\\", @words);\\n# $sentenceを出力\\nprint \\\"$sentence\\n\\\";",
-      "holeyCode": "# @wordsに(\\\"hello\\\", \\\"world\\\")を代入\\nmy @___ = (\\\"___\\\", \\\"___\\\");\\n# joinで結合\\nmy $___ = ___(\\\"___\\\", @___);\\n# $sentenceを出力\\n___ \\\"$___\\n\\\";",
+      "correctCode": "# wordsに文字列配列（hello、world）を代入\\nmy @words = (\\\"hello\\\", \\\"world\\\");\\n# joinで結合\\nmy $sentence = join(\\\" \\\", @words);\\n# $sentenceを出力\\nprint \\\"$sentence\\n\\\";",
+      "holeyCode": "# wordsに文字列配列（hello、world）を代入\\nmy @___ = (\\\"___\\\", \\\"___\\\");\\n# joinで結合\\nmy $___ = ___(\\\"___\\\", @___);\\n# $sentenceを出力\\n___ \\\"$___\\n\\\";",
       "correctLines": [
-          "# @wordsに(\\\"hello\\\", \\\"world\\\")を代入",
+          "# wordsに文字列配列（hello、world）を代入",
           "my @words = (\\\"hello\\\", \\\"world\\\");",
           "# joinで結合",
           "my $sentence = join(\\\" \\\", @words);",
