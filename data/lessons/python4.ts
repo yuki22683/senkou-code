@@ -124,7 +124,7 @@ export const pythonData4 = {
         }
       ],
       "correctCode": "# classで親クラスPersonを定義\\nclass Person:\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n\\n# classでStudentクラスを定義（Personを継承）\\nclass Student(Person):\\n    # defで__init__メソッドを定義（引数: self, name, grade）\\n    def __init__(self, name, grade):\\n        # super().__init__でnameを渡して親クラスを初期化\\n        super().__init__(name)\\n        # self.gradeにgradeを代入\\n        self.grade = grade\\n\\n# Studentを作成（名前に'太郎', 学年に3）しsに代入\\ns = Student('太郎', 3)\\n# print関数でs.nameとs.gradeを埋め込んで「(s.nameの値) is in grade (s.gradeの値)」形式で出力\\nprint(f'{s.name} is in grade {s.grade}')",
-      "holeyCode": "# classで親クラスPersonを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def ___(self, ___):\\n        # self.nameにnameを代入\\n        self.___ = ___\\n___\\n# classでStudentクラスを定義（Personを継承）\\nclass ___(___):\\n    # defで__init__メソッドを定義（引数: self, name, grade）\\n    def ___(self, ___, ___):\\n        # super().__init__でnameを渡して親クラスを初期化\\n        ___().___(___)\\n        # self.gradeにgradeを代入\\n        self.___ = ___\\n___\\n# Studentを作成（名前に'太郎', 学年に3）しsに代入\\n___ = ___('___', ___)\\n# print関数でs.nameとs.gradeを埋め込んで「(s.nameの値) is in grade (s.gradeの値)」形式で出力\\n___(f'{___.___} is in grade {___.___}')",
+      "holeyCode": "# classで親クラスPersonを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def ___(self, ___):\\n        # self.nameにnameを代入\\n        self.___ = ___\\n\\n# classでStudentクラスを定義（Personを継承）\\nclass ___(___):\\n    # defで__init__メソッドを定義（引数: self, name, grade）\\n    def ___(self, ___, ___):\\n        # super().__init__でnameを渡して親クラスを初期化\\n        ___().___(___)\\n        # self.gradeにgradeを代入\\n        self.___ = ___\\n\\n# Studentを作成（名前に'太郎', 学年に3）しsに代入\\n___ = ___('___', ___)\\n# print関数でs.nameとs.gradeを埋め込んで「(s.nameの値) is in grade (s.gradeの値)」形式で出力\\n___(f'{___.___} is in grade {___.___}')",
       "correctLines": [
           "# classで親クラスPersonを定義",
           "class Person:",
@@ -344,7 +344,7 @@ export const pythonData4 = {
         }
       ],
       "correctCode": "# classでValidatorクラスを定義\\nclass Validator:\\n    # @staticmethodデコレータ\\n    @staticmethod\\n    # defでis_positiveメソッドを定義（引数: nのみ）\\n    def is_positive(n):\\n        # returnでnが0より大きいかを返す\\n        return n > 0\\n\\n# print関数でValidatorのis_positiveメソッド（引数5）の結果を表示\\nprint(Validator.is_positive(5))\\n# print関数でValidatorのis_positiveメソッド（引数-3）の結果を表示\\nprint(Validator.is_positive(-3))",
-      "holeyCode": "# classでValidatorクラスを定義\\nclass ___:\\n    # @staticmethodデコレータ\\n    @___\\n    # defでis_positiveメソッドを定義（引数: nのみ）\\n    def ___(___):\\n        # returnでnが0より大きいかを返す\\n        return ___ > ___\\n___\\n# print関数でValidatorのis_positiveメソッド（引数5）の結果を表示\\n___(___.___(___))\\n# print関数でValidatorのis_positiveメソッド（引数-3）の結果を表示\\n___(___.___(___)",
+      "holeyCode": "# classでValidatorクラスを定義\\nclass ___:\\n    # @staticmethodデコレータ\\n    @___\\n    # defでis_positiveメソッドを定義（引数: nのみ）\\n    def ___(___):\\n        # returnでnが0より大きいかを返す\\n        return ___ > ___\\n\\n# print関数でValidatorのis_positiveメソッド（引数5）の結果を表示\\n___(___.___(___))\\n# print関数でValidatorのis_positiveメソッド（引数-3）の結果を表示\\n___(___.___(___)",
       "correctLines": [
           "# classでValidatorクラスを定義",
           "class Validator:",
@@ -400,7 +400,7 @@ export const pythonData4 = {
         }
       ],
       "correctCode": "# abcモジュールからABCとabstractmethodをインポート\\nfrom abc import ABC, abstractmethod\\n\\n# classで抽象クラスAnimalを定義（ABCを継承）\\nclass Animal(ABC):\\n    # @abstractmethodデコレータ\\n    @abstractmethod\\n    # defでspeakメソッドを定義（引数: selfのみ）\\n    def speak(self):\\n        # passで処理なしを示す\\n        pass\\n\\n# classでCatクラスを定義（Animalを継承）\\nclass Cat(Animal):\\n    # defでspeakメソッドを実装（引数: selfのみ）\\n    def speak(self):\\n        # returnで'ニャー'を返す\\n        return 'ニャー'\\n\\n# Catインスタンスを作成しcatに代入\\ncat = Cat()\\n# print関数でcatのspeakメソッドの結果を表示\\nprint(cat.speak())",
-      "holeyCode": "# abcモジュールからABCとabstractmethodをインポート\\nfrom ___ import ___, ___\\n___\\n# classで抽象クラスAnimalを定義（ABCを継承）\\nclass ___(___):\\n    # @abstractmethodデコレータ\\n    @___\\n    # defでspeakメソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # passで処理なしを示す\\n        ___\\n___\\n# classでCatクラスを定義（Animalを継承）\\nclass ___(___):\\n    # defでspeakメソッドを実装（引数: selfのみ）\\n    def ___(self):\\n        # returnで'ニャー'を返す\\n        return '___'\\n___\\n# Catインスタンスを作成しcatに代入\\n___ = ___()\\n# print関数でcatのspeakメソッドの結果を表示\\n___(___.___())",
+      "holeyCode": "# abcモジュールからABCとabstractmethodをインポート\\nfrom ___ import ___, ___\\n\\n# classで抽象クラスAnimalを定義（ABCを継承）\\nclass ___(___):\\n    # @abstractmethodデコレータ\\n    @___\\n    # defでspeakメソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # passで処理なしを示す\\n        ___\\n\\n# classでCatクラスを定義（Animalを継承）\\nclass ___(___):\\n    # defでspeakメソッドを実装（引数: selfのみ）\\n    def ___(self):\\n        # returnで'ニャー'を返す\\n        return '___'\\n\\n# Catインスタンスを作成しcatに代入\\n___ = ___()\\n# print関数でcatのspeakメソッドの結果を表示\\n___(___.___())",
       "correctLines": [
           "# abcモジュールからABCとabstractmethodをインポート",
           "from abc import ABC, abstractmethod",
@@ -476,7 +476,7 @@ export const pythonData4 = {
         }
       ],
       "correctCode": "# classでBookクラスを定義\\nclass Book:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # defで__str__メソッドを定義（引数: selfのみ）\\n    def __str__(self):\\n        # returnでself.titleとself.authorを埋め込んで「(self.titleの値) by (self.authorの値)」形式で返す\\n        return f'{self.title} by {self.author}'\\n\\n# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入\\nbook = Book('Pythonガイド', '太郎')\\n# print関数でbookを表示\\nprint(book)",
-      "holeyCode": "# classでBookクラスを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def ___(self, ___, ___):\\n        # self.titleにtitleを代入\\n        self.___ = ___\\n        # self.authorにauthorを代入\\n        self.___ = ___\\n    ___\\n    # defで__str__メソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # returnでself.titleとself.authorを埋め込んで「(self.titleの値) by (self.authorの値)」形式で返す\\n        return f'{self.___} by {self.___}'\\n___\\n# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入\\n___ = ___('___', '___')\\n# print関数でbookを表示\\n___(___)",
+      "holeyCode": "# classでBookクラスを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def ___(self, ___, ___):\\n        # self.titleにtitleを代入\\n        self.___ = ___\\n        # self.authorにauthorを代入\\n        self.___ = ___\\n    \\n    # defで__str__メソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # returnでself.titleとself.authorを埋め込んで「(self.titleの値) by (self.authorの値)」形式で返す\\n        return f'{self.___} by {self.___}'\\n\\n# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入\\n___ = ___('___', '___')\\n# print関数でbookを表示\\n___(___)",
       "correctLines": [
           "# classでBookクラスを定義",
           "class Book:",
@@ -542,7 +542,7 @@ export const pythonData4 = {
         }
       ],
       "correctCode": "# classでBookクラスを定義\\nclass Book:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # defで__eq__メソッドを定義（引数: self, other）\\n    def __eq__(self, other):\\n        # returnでタイトルと著者の両方が一致するかを返す\\n        return self.title == other.title and self.author == other.author\\n\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook1に代入\\nbook1 = Book('Python入門', '田中')\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook2に代入\\nbook2 = Book('Python入門', '田中')\\n# print関数でbook1とbook2の比較結果を表示\\nprint(book1 == book2)",
-      "holeyCode": "# classでBookクラスを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def ___(self, ___, ___):\\n        # self.titleにtitleを代入\\n        self.___ = ___\\n        # self.authorにauthorを代入\\n        self.___ = ___\\n    ___\\n    # defで__eq__メソッドを定義（引数: self, other）\\n    def ___(self, ___):\\n        # returnでタイトルと著者の両方が一致するかを返す\\n        return self.___ == ___.___ and self.___ == ___.___\\n___\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook1に代入\\n___ = ___('___', '___')\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook2に代入\\n___ = ___('___', '___')\\n# print関数でbook1とbook2の比較結果を表示\\n___(___ == ___)",
+      "holeyCode": "# classでBookクラスを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def ___(self, ___, ___):\\n        # self.titleにtitleを代入\\n        self.___ = ___\\n        # self.authorにauthorを代入\\n        self.___ = ___\\n    \\n    # defで__eq__メソッドを定義（引数: self, other）\\n    def ___(self, ___):\\n        # returnでタイトルと著者の両方が一致するかを返す\\n        return self.___ == ___.___ and self.___ == ___.___\\n\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook1に代入\\n___ = ___('___', '___')\\n# Bookを作成（タイトルに'Python入門', 著者に'田中'）しbook2に代入\\n___ = ___('___', '___')\\n# print関数でbook1とbook2の比較結果を表示\\n___(___ == ___)",
       "correctLines": [
           "# classでBookクラスを定義",
           "class Book:",
@@ -612,7 +612,7 @@ export const pythonData4 = {
         }
       ],
       "correctCode": "# classでTeamクラスを定義\\nclass Team:\\n    # defで__init__メソッドを定義（引数: self, members）\\n    def __init__(self, members):\\n        # self.membersにmembersを代入\\n        self.members = members\\n    \\n    # defで__len__メソッドを定義（引数: selfのみ）\\n    def __len__(self):\\n        # returnでself.membersの長さを返す\\n        return len(self.members)\\n\\n# Team（アリス、ボブ、チャーリーの順）をteamに代入\\nteam = Team(['アリス', 'ボブ', 'チャーリー'])\\n# print関数でteamの長さを表示\\nprint(len(team))",
-      "holeyCode": "# classでTeamクラスを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, members）\\n    def ___(self, ___):\\n        # self.membersにmembersを代入\\n        self.___ = ___\\n    ___\\n    # defで__len__メソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # returnでself.membersの長さを返す\\n        return ___(self.___)\\n___\\n# Team（アリス、ボブ、チャーリーの順）をteamに代入\\n___ = ___(['___', '___', '___'])\\n# print関数でteamの長さを表示\\n___(___(___)",
+      "holeyCode": "# classでTeamクラスを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, members）\\n    def ___(self, ___):\\n        # self.membersにmembersを代入\\n        self.___ = ___\\n    \\n    # defで__len__メソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # returnでself.membersの長さを返す\\n        return ___(self.___)\\n\\n# Team（アリス、ボブ、チャーリーの順）をteamに代入\\n___ = ___(['___', '___', '___'])\\n# print関数でteamの長さを表示\\n___(___(___)",
       "correctLines": [
           "# classでTeamクラスを定義",
           "class Team:",
@@ -674,7 +674,7 @@ export const pythonData4 = {
         }
       ],
       "correctCode": "# dataclassesモジュールからdataclassをインポート\\nfrom dataclasses import dataclass\\n\\n# @dataclassデコレータ\\n@dataclass\\n# classでPersonクラスを定義\\nclass Person:\\n    # name属性を型strで定義\\n    name: str\\n    # age属性を型intで定義\\n    age: int\\n\\n# Personを作成（名前に'太郎', 年齢に25）しpに代入\\np = Person('太郎', 25)\\n# print関数でpを表示\\nprint(p)",
-      "holeyCode": "# dataclassesモジュールからdataclassをインポート\\nfrom ___ import ___\\n___\\n# @dataclassデコレータ\\n@___\\n# classでPersonクラスを定義\\nclass ___:\\n    # name属性を型strで定義\\n    ___: ___\\n    # age属性を型intで定義\\n    ___: ___\\n___\\n# Personを作成（名前に'太郎', 年齢に25）しpに代入\\n___ = ___('___', ___)\\n# print関数でpを表示\\n___(___)",
+      "holeyCode": "# dataclassesモジュールからdataclassをインポート\\nfrom ___ import ___\\n\\n# @dataclassデコレータ\\n@___\\n# classでPersonクラスを定義\\nclass ___:\\n    # name属性を型strで定義\\n    ___: ___\\n    # age属性を型intで定義\\n    ___: ___\\n\\n# Personを作成（名前に'太郎', 年齢に25）しpに代入\\n___ = ___('___', ___)\\n# print関数でpを表示\\n___(___)",
       "correctLines": [
           "# dataclassesモジュールからdataclassをインポート",
           "from dataclasses import dataclass",
