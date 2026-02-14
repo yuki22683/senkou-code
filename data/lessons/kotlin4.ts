@@ -58,8 +58,7 @@ export const kotlin4Data = {
         }
       ],
       "correctCode": "// Shapeをsealed classで定義\\nsealed class Shape\\n// Circle クラスを定義する\\nclass Circle(val radius: Double) : Shape()\\n// Rectangle クラスを定義する\\nclass Rectangle(val w: Double, val h: Double) : Shape()\\n\\n// 面積を計算する関数\\nfun area(s: Shape): Double = when (s) {\\n    // Circleの場合（半径の2乗を計算）\\n    is Circle -> 3.14 * s.radius * s.radius\\n    // Rectangleの場合（幅と高さの積を計算）\\n    is Rectangle -> s.w * s.h\\n// ブロックを閉じる\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // area を出力する\\n    println(area(Circle(2.0)))\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// Shapeをsealed classで定義\\nsealed class ___\\n// Circle クラスを定義する\\nclass ___(val ___: ___) : ___()\\n// Rectangle クラスを定義する\\nclass ___(val ___: ___, val ___: ___) : ___()\\n___\\n// 面積を計算する関数\\nfun ___(___: ___): ___ = when (___) {\\n    // Circleの場合（半径の2乗を計算）\\n    is ___ -> ___ * ___.___ * ___.___\\n    // Rectangleの場合（幅と高さの積を計算）\\n    is ___ -> ___.___ * ___.___\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // area を出力する\\n    ___(___(___(___)))\\n// ブロックを閉じる\\n___",
-      "correctLines": [
+      "holeyCode": "// Shapeをsealed classで定義\\nsealed class ___\\n// Circle クラスを定義する\\nclass ___(val ___: ___) : ___()\\n// Rectangle クラスを定義する\\nclass ___(val ___: ___, val ___: ___) : ___()\\n\n// 面積を計算する関数\\nfun ___(___: ___): ___ = when (___) {\\n    // Circleの場合（半径の2乗を計算）\\n    is ___ -> ___ * ___.___ * ___.___\\n    // Rectangleの場合（幅と高さの積を計算）\\n    is ___ -> ___.___ * ___.___\\n// ブロックを閉じる\\n___\\n\n// main 関数を定義する\\nfun ___() {\\n    // area を出力する\\n    ___(___(___(___)))\\n// ブロックを閉じる\\n___", "correctLines": [
           "// Shapeをsealed classで定義",
           "sealed class Shape",
           "// Circle クラスを定義する",

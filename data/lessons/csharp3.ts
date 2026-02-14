@@ -46,8 +46,7 @@ export const csharp3Data = {
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでTasks名前空間をインポート\\nusing System.Threading.Tasks;\\n\\n// Programクラスを定義\\nclass Program {\\n    // async Taskでエントリーポイント\\n    static async Task Main() {\\n        // awaitで非同期処理を待機\\n        var result = await CalculateAsync(5);\\n        // resultを表示\\n        Console.WriteLine(result);\\n    // ブロックを閉じる\\n    }\\n    \\n    // 整数を返す非同期メソッドを定義\\n    static async Task<int> CalculateAsync(int n) {\\n        // 遅延を待機\\n        await Task.Delay(100);\\n        // nの2乗を返す\\n        return n * n;\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでTasks名前空間をインポート\\nusing ___.___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // async Taskでエントリーポイント\\n    static ___ ___ ___() {\\n        // awaitで非同期処理を待機\\n        var ___ = ___ ___(___);\\n        // resultを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n    ___\\n    // 整数を返す非同期メソッドを定義\\n    static ___ ___<___> ___(int ___) {\\n        // 遅延を待機\\n        ___ ___.___(___)___\\n        // nの2乗を返す\\n        return ___ * ___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
-      "correctLines": [
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでTasks名前空間をインポート\\nusing ___.___.____;\\n\n// Programクラスを定義\\nclass ___ {\\n    // async Taskでエントリーポイント\\n    static ___ ___ ___() {\\n        // awaitで非同期処理を待機\\n        var ___ = ___ ___(___);\\n        // resultを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n    \n    // 整数を返す非同期メソッドを定義\\n    static ___ ___<___> ___(int ___) {\\n        // 遅延を待機\\n        ___ ___.___(___)___\\n        // nの2乗を返す\\n        return ___ * ___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___", "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
           "// usingでTasks名前空間をインポート",
@@ -648,8 +647,7 @@ export const csharp3Data = {
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// recordで値型を定義\\nrecord Point(int X, int Y);\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Pointインスタンスを作成（X=10, Y=20）\\n        var p = new Point(10, 20);\\n        // pを表示\\n        Console.WriteLine(p);\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n___\\n// recordで値型を定義\\n___ ___(int ___, int ___);\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // Pointインスタンスを作成（X=10, Y=20）\\n        var ___ = new ___(___, ___);\\n        // pを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
-      "correctLines": [
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n\n// recordで値型を定義\\n___ ___(int ___, int ___);\\n\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // Pointインスタンスを作成（X=10, Y=20）\\n        var ___ = new ___(___, ___);\\n        // pを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___", "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
           "",

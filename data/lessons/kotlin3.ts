@@ -212,8 +212,7 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// inline funでrepeat関数を定義\\ninline fun repeat(times: Int, action: (Int) -> Unit) {\\n    // for inで0からtimesまで繰り返す\\n    for (i in 0 until times) action(i)\\n// ブロックを閉じる\\n}\\n\\n// fun main()でmain関数を定義\\nfun main() {\\n    // repeat関数（引数3）でラムダを3回実行\\n    repeat(3) { println(it) }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// inline funでrepeat関数を定義\\n___ ___ ___(___: ___, ___: (___) -> ___) {\\n    // for inで0からtimesまで繰り返す\\n    for (___ in ___ ___ ___) ___(___)\\n// ブロックを閉じる\\n___\\n___\\n// fun main()でmain関数を定義\\n___ ___() {\\n    // repeat関数（引数3）でラムダを3回実行\\n    ___(___) { ___(___) }\\n// ブロックを閉じる\\n___",
-      "correctLines": [
+      "holeyCode": "// inline funでrepeat関数を定義\\n___ ___ ___(___: ___, ___: (___) -> ___) {\\n    // for inで0からtimesまで繰り返す\\n    for (___ in ___ ___ ___) ___(___)\\n// ブロックを閉じる\\n___\\n\n// fun main()でmain関数を定義\\n___ ___() {\\n    // repeat関数（引数3）でラムダを3回実行\\n    ___(___) { ___(___) }\\n// ブロックを閉じる\\n___", "correctLines": [
           "// inline funでrepeat関数を定義",
           "inline fun repeat(times: Int, action: (Int) -> Unit) {",
           "    // for inで0からtimesまで繰り返す",

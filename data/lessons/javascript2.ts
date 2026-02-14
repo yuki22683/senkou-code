@@ -42,8 +42,7 @@ export const javascriptData2 = {
         }
       ],
       "correctCode": "// xの2乗を返すsquare関数を定義\\nconst square = x => x * x;\\n\\n// 使ってみる（引数は5）\\nconsole.log(square(5));",
-      "holeyCode": "// xの2乗を返すsquare関数を定義\\nconst ___ = ___ => ___ * ___;\\n___\\n// 使ってみる（引数は5）\\n___.___(___(___));",
-      "correctLines": [
+      "holeyCode": "// xの2乗を返すsquare関数を定義\\nconst ___ = ___ => ___ * ___;\\n\n// 使ってみる（引数は5）\\n___.___(___(___));", "correctLines": [
           "// xの2乗を返すsquare関数を定義",
           "const square = x => x * x;",
           "",

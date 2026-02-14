@@ -38,8 +38,7 @@ export const javascriptData3 = {
         }
       ],
       "correctCode": "// Promise コンストラクタで作成\\nconst p = new Promise((resolve) => {\\n  // 'こんにちは Promise!' で解決\\n  resolve('こんにちは Promise!');\\n// 文を実行\\n});\\n\\n// then でコールバックを登録\\np.then(msg => console.log(msg));",
-      "holeyCode": "// Promise コンストラクタで作成\\n___ ___ = ___ ___((___) => {\\n  // 'こんにちは Promise!' で解決\\n  ___('___');\\n// 文を実行\\n___\\n___\\n// then でコールバックを登録\\n___.___(___ => ___.___(___));",
-      "correctLines": [
+      "holeyCode": "// Promise コンストラクタで作成\\n___ ___ = ___ ___((___) => {\\n  // 'こんにちは Promise!' で解決\\n  ___('___');\\n// 文を実行\\n___\\n\n// then でコールバックを登録\\n___.___(___ => ___.___(___));", "correctLines": [
           "// Promise コンストラクタで作成",
           "const p = new Promise((resolve) => {",
           "  // 'こんにちは Promise!' で解決",

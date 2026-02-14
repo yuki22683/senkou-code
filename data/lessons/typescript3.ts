@@ -475,8 +475,7 @@ export const typescriptData3 = {
         }
       ],
       "correctCode": "// infer で型を推論して抽出\\ntype Unwrap<T> = T extends Promise<infer U> ? U : T;\\n\\n// Promise<string>をアンラップ\\ntype A = Unwrap<Promise<string>>;\\n// numberはそのまま\\ntype B = Unwrap<number>;\\n\\n// aに文字列を代入\\nconst a: A = 'こんにちは';\\n// bに数値を代入\\nconst b: B = 42;\\n// aとbを出力\\nconsole.log(a, b);",
-      "holeyCode": "// infer で型を推論して抽出\\ntype ___<___> = ___ extends ___<infer ___> ? ___ : ___;\\n___\\n// Promise<string>をアンラップ\\ntype ___ = ___<___<___>>;\\n// numberはそのまま\\ntype ___ = ___<___>;\\n___\\n// aに文字列を代入\\nconst ___: ___ = '___';\\n// bに数値を代入\\nconst ___: ___ = ___;\\n// aとbを出力\\n___.___(___,___);",
-      "correctLines": [
+      "holeyCode": "// infer で型を推論して抽出\\ntype ___<___> = ___ extends ___<infer ___> ? ___ : ___;\\n\n// Promise<string>をアンラップ\\ntype ___ = ___<___<___>>;\\n// numberはそのまま\\ntype ___ = ___<___>;\\n\n// aに文字列を代入\\nconst ___: ___ = '___';\\n// bに数値を代入\\nconst ___: ___ = ___;\\n// aとbを出力\\n___.___(___,___);", "correctLines": [
           "// infer で型を推論して抽出",
           "type Unwrap<T> = T extends Promise<infer U> ? U : T;",
           "",
