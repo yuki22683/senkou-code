@@ -123,8 +123,8 @@ export const pythonData4 = {
           "content": "# 親クラスのメソッドを呼び出そう！\\n\\n**super（スーパー）** を使うと、**親クラスのメソッドを呼び出す** ことができます。\\n\\n「super」は「上の」という意味です。継承で「上にいる」親クラスを指します。\\n\\n**なぜ必要？**\\n\\n子クラスで `__init__` を作ると、親の `__init__` が上書きされてしまいます。\\n親の初期化処理も使いたいときは、`super().__init__()` で親の処理を呼び出します。\\n\\n**例：** 親と子の初期化を両方実行しよう！\\n\\n```python\\nclass Parent:\\n    def __init__(self, name):\\n        self.name = name\\n\\nclass Child(Parent):\\n    def __init__(self, name, age):\\n        super().__init__(name)  # 親の初期化を呼ぶ\\n        self.age = age          # 子だけの追加\\n```\\n\\n**ポイント：** `super().__init__(name)` で親クラスの `__init__` を実行しています。"
         }
       ],
-      "correctCode": "# classで親クラスPersonを定義\\nclass Person:\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n\\n# classでStudentクラスを定義（Personを継承）\\nclass Student(Person):\\n    # defで__init__メソッドを定義（引数: self, name, grade）\\n    def __init__(self, name, grade):\\n        # super().__init__でnameを渡して親クラスを初期化\\n        super().__init__(name)\\n        # self.gradeにgradeを代入\\n        self.grade = grade\\n\\n# Studentを作成（名前に'太郎', 学年に3）しsに代入\\ns = Student('太郎', 3)\\n# print関数でs.nameとs.gradeを埋め込んで「(s.nameの値) is in grade (s.gradeの値)」形式で出力\\nprint(f'{s.name} is in grade {s.grade}')",
-      "holeyCode": "# classで親クラスPersonを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def ___(self, ___):\\n        # self.nameにnameを代入\\n        self.___ = ___\\n\\n# classでStudentクラスを定義（Personを継承）\\nclass ___(___):\\n    # defで__init__メソッドを定義（引数: self, name, grade）\\n    def ___(self, ___, ___):\\n        # super().__init__でnameを渡して親クラスを初期化\\n        ___().___(___)\\n        # self.gradeにgradeを代入\\n        self.___ = ___\\n\\n# Studentを作成（名前に'太郎', 学年に3）しsに代入\\n___ = ___('___', ___)\\n# print関数でs.nameとs.gradeを埋め込んで「(s.nameの値) is in grade (s.gradeの値)」形式で出力\\n___(f'{___.___} is in grade {___.___}')",
+      "correctCode": "# classで親クラスPersonを定義\\nclass Person:\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n\\n# classでStudentクラスを定義（Personを継承）\\nclass Student(Person):\\n    # defで__init__メソッドを定義（引数: self, name, grade）\\n    def __init__(self, name, grade):\\n        # 親クラスの初期化メソッドにnameを渡す\\n        super().__init__(name)\\n        # self.gradeにgradeを代入\\n        self.grade = grade\\n\\n# Studentインスタンス（名前: 太郎、学年: 3）をsに代入\\ns = Student('太郎', 3)\\n# print関数でs.nameとs.gradeを埋め込んで「(s.nameの値) is in grade (s.gradeの値)」形式で出力\\nprint(f'{s.name} is in grade {s.grade}')",
+      "holeyCode": "# classで親クラスPersonを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def ___(self, ___):\\n        # self.nameにnameを代入\\n        self.___ = ___\\n\\n# classでStudentクラスを定義（Personを継承）\\nclass ___(___):\\n    # defで__init__メソッドを定義（引数: self, name, grade）\\n    def ___(self, ___, ___):\\n        # 親クラスの初期化メソッドにnameを渡す\\n        ___().___(___)\\n        # self.gradeにgradeを代入\\n        self.___ = ___\\n\\n# Studentインスタンス（名前: 太郎、学年: 3）をsに代入\\n___ = ___('___', ___)\\n# print関数でs.nameとs.gradeを埋め込んで「(s.nameの値) is in grade (s.gradeの値)」形式で出力\\n___(f'{___.___} is in grade {___.___}')",
       "correctLines": [
           "# classで親クラスPersonを定義",
           "class Person:",
@@ -137,12 +137,12 @@ export const pythonData4 = {
           "class Student(Person):",
           "    # defで__init__メソッドを定義（引数: self, name, grade）",
           "    def __init__(self, name, grade):",
-          "        # super().__init__でnameを渡して親クラスを初期化",
+          "        # 親クラスの初期化メソッドにnameを渡す",
           "        super().__init__(name)",
           "        # self.gradeにgradeを代入",
           "        self.grade = grade",
           "",
-          "# Studentを作成（名前に'太郎', 学年に3）しsに代入",
+          "# Studentインスタンス（名前: 太郎、学年: 3）をsに代入",
           "s = Student('太郎', 3)",
           "# print関数でs.nameとs.gradeを埋め込んで「(s.nameの値) is in grade (s.gradeの値)」形式で出力",
           "print(f'{s.name} is in grade {s.grade}')"
@@ -263,8 +263,8 @@ export const pythonData4 = {
           "content": "# クラス全体に関わるメソッド\\n\\n**@classmethod（クラスメソッド）** は、**インスタンスではなくクラス自体** に対して動作するメソッドを定義します。\\n\\n**普通のメソッドとの違い：**\\n- 普通のメソッド: `self`（インスタンス自身）を受け取る\\n- クラスメソッド: `cls`（クラス自体）を受け取る\\n\\n**たとえ話：** \\n- 普通のメソッド = 「この犬」の情報を扱う\\n- クラスメソッド = 「犬という種類全体」の情報を扱う\\n\\n**例：** 作られた犬の総数を数えよう！\\n\\n```python\\nclass Counter:\\n    count = 0  # クラス変数（全インスタンス共通）\\n    \\n    @classmethod\\n    def increment(cls):\\n        cls.count += 1  # クラス変数を操作\\n```\\n\\n**何をしているか：**\\n1. `count = 0` はクラス変数（設計図にある共通データ）\\n2. `@classmethod` でクラスメソッドを定義\\n3. `cls.count` でクラス変数にアクセスして操作"
         }
       ],
-      "correctCode": "# classでDogクラスを定義\\nclass Dog:\\n    # クラス変数countを0で初期化\\n    count = 0\\n    \\n    # defで__init__メソッドを定義（引数: self, name）\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n        # Dogのクラス変数countに1を加算\\n        Dog.count += 1\\n    \\n    # @classmethodデコレータ\\n    @classmethod\\n    # defでget_countメソッドを定義（引数: clsのみ）\\n    def get_count(cls):\\n        # returnでclsのcount属性を返す\\n        return cls.count\\n\\n# Dog（名前に'ポチ'）をd1に代入\\nd1 = Dog('ポチ')\\n# Dog（名前に'ハチ'）をd2に代入\\nd2 = Dog('ハチ')\\n# print関数でDogクラスのget_countメソッドの結果を表示\\nprint(Dog.get_count())",
-      "holeyCode": "# classでDogクラスを定義\\nclass ___:\\n    # クラス変数countを0で初期化\\n    ___ = ___\\n    ___\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def ___(self, ___):\\n        # self.nameにnameを代入\\n        self.___ = ___\\n        # Dogのクラス変数countに1を加算\\n        ___.___ += ___\\n    ___\\n    # @classmethodデコレータ\\n    @___\\n    # defでget_countメソッドを定義（引数: clsのみ）\\n    def ___(___):\\n        # returnでclsのcount属性を返す\\n        return ___.___\\n___\\n# Dog（名前に'ポチ'）をd1に代入\\n___ = ___('___')\\n# Dog（名前に'ハチ'）をd2に代入\\n___ = ___('___')\\n# print関数でDogクラスのget_countメソッドの結果を表示\\n___(___.___())",
+      "correctCode": "# classでDogクラスを定義\\nclass Dog:\\n    # クラス変数countを0で初期化\\n    count = 0\\n    \\n    # defで__init__メソッドを定義（引数: self, name）\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n        # Dogのクラス変数countに1を加算\\n        Dog.count += 1\\n    \\n    # @classmethodデコレータ\\n    @classmethod\\n    # defでget_countメソッドを定義（引数: clsのみ）\\n    def get_count(cls):\\n        # returnでclsのcount属性を返す\\n        return cls.count\\n\\n# Dogインスタンス（名前: ポチ）をd1に代入\\nd1 = Dog('ポチ')\\n# Dogインスタンス（名前: ハチ）をd2に代入\\nd2 = Dog('ハチ')\\n# print関数でDogクラスのget_countメソッドの結果を表示\\nprint(Dog.get_count())",
+      "holeyCode": "# classでDogクラスを定義\\nclass ___:\\n    # クラス変数countを0で初期化\\n    ___ = ___\\n    ___\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def ___(self, ___):\\n        # self.nameにnameを代入\\n        self.___ = ___\\n        # Dogのクラス変数countに1を加算\\n        ___.___ += ___\\n    ___\\n    # @classmethodデコレータ\\n    @___\\n    # defでget_countメソッドを定義（引数: clsのみ）\\n    def ___(___):\\n        # returnでclsのcount属性を返す\\n        return ___.___\\n___\\n# Dogインスタンス（名前: ポチ）をd1に代入\\n___ = ___('___')\\n# Dogインスタンス（名前: ハチ）をd2に代入\\n___ = ___('___')\\n# print関数でDogクラスのget_countメソッドの結果を表示\\n___(___.___())",
       "correctLines": [
           "# classでDogクラスを定義",
           "class Dog:",
@@ -285,9 +285,9 @@ export const pythonData4 = {
           "        # returnでclsのcount属性を返す",
           "        return cls.count",
           "",
-          "# Dog（名前に'ポチ'）をd1に代入",
+          "# Dogインスタンス（名前: ポチ）をd1に代入",
           "d1 = Dog('ポチ')",
-          "# Dog（名前に'ハチ'）をd2に代入",
+          "# Dogインスタンス（名前: ハチ）をd2に代入",
           "d2 = Dog('ハチ')",
           "# print関数でDogクラスのget_countメソッドの結果を表示",
           "print(Dog.get_count())"
@@ -475,8 +475,8 @@ export const pythonData4 = {
           "content": "# オブジェクトを「文字列」で表す\\n\\n**__str__（ストリング）** メソッドを定義すると、`print()` や `str()` での **表示をカスタマイズ** できます。\\n\\n**たとえ話：** 自己紹介カードのようなもの。\\n- `__str__` がないとき: 「私はメモリの0x12345番地にいる何か」\\n- `__str__` があるとき: 「私は太郎です、25歳です」\\n\\n**例：** 座標を見やすく表示しよう！\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __str__(self):\\n        return f'Point({self.x}, {self.y})'\\n\\np = Point(3, 4)\\nprint(p)  # Point(3, 4)  ← 見やすい！\\n```\\n\\n**何をしているか：**\\n1. `__str__` は「特殊メソッド」（アンダーバー2つで囲まれた特別なメソッド）\\n2. `print(p)` すると自動的に `__str__` が呼ばれる\\n3. `return` で返した文字列がそのまま表示される\\n\\n**ポイント：** `__str__` がないと `<__main__.Point object at 0x...>` のような分かりにくい表示になります。"
         }
       ],
-      "correctCode": "# classでBookクラスを定義\\nclass Book:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # defで__str__メソッドを定義（引数: selfのみ）\\n    def __str__(self):\\n        # returnでself.titleとself.authorを埋め込んで「(self.titleの値) by (self.authorの値)」形式で返す\\n        return f'{self.title} by {self.author}'\\n\\n# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入\\nbook = Book('Pythonガイド', '太郎')\\n# print関数でbookを表示\\nprint(book)",
-      "holeyCode": "# classでBookクラスを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def ___(self, ___, ___):\\n        # self.titleにtitleを代入\\n        self.___ = ___\\n        # self.authorにauthorを代入\\n        self.___ = ___\\n    \\n    # defで__str__メソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # returnでself.titleとself.authorを埋め込んで「(self.titleの値) by (self.authorの値)」形式で返す\\n        return f'{self.___} by {self.___}'\\n\\n# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入\\n___ = ___('___', '___')\\n# print関数でbookを表示\\n___(___)",
+      "correctCode": "# classでBookクラスを定義\\nclass Book:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # defで__str__メソッドを定義（引数: selfのみ）\\n    def __str__(self):\\n        # returnでself.titleとself.authorを埋め込んで「(self.titleの値) by (self.authorの値)」形式で返す\\n        return f'{self.title} by {self.author}'\\n\\n# Bookインスタンス（タイトル: Pythonガイド、著者: 太郎）をbookに代入\\nbook = Book('Pythonガイド', '太郎')\\n# print関数でbookを表示\\nprint(book)",
+      "holeyCode": "# classでBookクラスを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def ___(self, ___, ___):\\n        # self.titleにtitleを代入\\n        self.___ = ___\\n        # self.authorにauthorを代入\\n        self.___ = ___\\n    \\n    # defで__str__メソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # returnでself.titleとself.authorを埋め込んで「(self.titleの値) by (self.authorの値)」形式で返す\\n        return f'{self.___} by {self.___}'\\n\\n# Bookインスタンス（タイトル: Pythonガイド、著者: 太郎）をbookに代入\\n___ = ___('___', '___')\\n# print関数でbookを表示\\n___(___)",
       "correctLines": [
           "# classでBookクラスを定義",
           "class Book:",
@@ -492,7 +492,7 @@ export const pythonData4 = {
           "        # returnでself.titleとself.authorを埋め込んで「(self.titleの値) by (self.authorの値)」形式で返す",
           "        return f'{self.title} by {self.author}'",
           "",
-          "# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入",
+          "# Bookインスタンス（タイトル: Pythonガイド、著者: 太郎）をbookに代入",
           "book = Book('Pythonガイド', '太郎')",
           "# print関数でbookを表示",
           "print(book)"
@@ -673,8 +673,8 @@ export const pythonData4 = {
           "content": "# データ用クラスを「簡単」に定義！\\n\\n**@dataclass（データクラス）** を使うと、**`__init__` や `__repr__` が自動で作られます！**\\n\\n**たとえ話：** 住所録のカードのようなもの。\\n- 普通のクラス: 「名前欄」「住所欄」を1つずつ手作りする\\n- データクラス: 「名前」「住所」と書くだけで自動的にカードが完成！\\n\\n**普通のクラス vs データクラス：**\\n\\n```python\\n# 普通のクラス（たくさん書く必要あり）\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n\\n# データクラス（シンプル！）\\n@dataclass\\nclass Point:\\n    x: int\\n    y: int\\n```\\n\\n**自動で作られるもの：**\\n- `__init__`: 初期化メソッド\\n- `__repr__`: 表示用メソッド（`Point(x=3, y=4)` のように表示）\\n- `__eq__`: 等価比較メソッド\\n\\n**何をしているか：**\\n1. `from dataclasses import dataclass` でインポート\\n2. `@dataclass` をクラスの上に書く\\n3. `変数名: 型` の形式で属性を定義\\n4. `__init__` を書かなくても自動で作られる！"
         }
       ],
-      "correctCode": "# dataclassesモジュールからdataclassをインポート\\nfrom dataclasses import dataclass\\n\\n# @dataclassデコレータ\\n@dataclass\\n# classでPersonクラスを定義\\nclass Person:\\n    # name属性を型strで定義\\n    name: str\\n    # age属性を型intで定義\\n    age: int\\n\\n# Personを作成（名前に'太郎', 年齢に25）しpに代入\\np = Person('太郎', 25)\\n# print関数でpを表示\\nprint(p)",
-      "holeyCode": "# dataclassesモジュールからdataclassをインポート\\nfrom ___ import ___\\n\\n# @dataclassデコレータ\\n@___\\n# classでPersonクラスを定義\\nclass ___:\\n    # name属性を型strで定義\\n    ___: ___\\n    # age属性を型intで定義\\n    ___: ___\\n\\n# Personを作成（名前に'太郎', 年齢に25）しpに代入\\n___ = ___('___', ___)\\n# print関数でpを表示\\n___(___)",
+      "correctCode": "# dataclassesモジュールからdataclassをインポート\\nfrom dataclasses import dataclass\\n\\n# @dataclassデコレータ\\n@dataclass\\n# classでPersonクラスを定義\\nclass Person:\\n    # name属性を型strで定義\\n    name: str\\n    # age属性を型intで定義\\n    age: int\\n\\n# Personインスタンス（名前: 太郎、年齢: 25）をpに代入\\np = Person('太郎', 25)\\n# print関数でpを表示\\nprint(p)",
+      "holeyCode": "# dataclassesモジュールからdataclassをインポート\\nfrom ___ import ___\\n\\n# @dataclassデコレータ\\n@___\\n# classでPersonクラスを定義\\nclass ___:\\n    # name属性を型strで定義\\n    ___: ___\\n    # age属性を型intで定義\\n    ___: ___\\n\\n# Personインスタンス（名前: 太郎、年齢: 25）をpに代入\\n___ = ___('___', ___)\\n# print関数でpを表示\\n___(___)",
       "correctLines": [
           "# dataclassesモジュールからdataclassをインポート",
           "from dataclasses import dataclass",
@@ -688,7 +688,7 @@ export const pythonData4 = {
           "    # age属性を型intで定義",
           "    age: int",
           "",
-          "# Personを作成（名前に'太郎', 年齢に25）しpに代入",
+          "# Personインスタンス（名前: 太郎、年齢: 25）をpに代入",
           "p = Person('太郎', 25)",
           "# print関数でpを表示",
           "print(p)"
