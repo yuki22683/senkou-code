@@ -478,10 +478,6 @@ export function MobileCodeEditor({
     }
   }, [cursor.line, correctLines, initialCode, language]);
 
-  // 行が変わったときにクリック状態をリセット
-  useEffect(() => {
-    setClickedButtonIdx(null);
-  }, [cursor.line]);
 
   // シャッフル済みの行配列をメモ化（suggestionsが変わったときだけ再計算）
   const shuffledRows = useMemo(() => {
