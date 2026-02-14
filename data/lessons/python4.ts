@@ -57,8 +57,8 @@ export const pythonData4 = {
           "content": "# 親の能力を子供が受け継ぐ！\\n\\n**継承** とは、既存のクラスの機能を **そのまま引き継いで** 新しいクラスを作ることです。\\n\\n現実世界で考えてみましょう：\\n- **親クラス（Animal）** = 動物の基本的な性質\\n- **子クラス（Dog）** = 動物の性質 + 犬特有の性質\\n\\n犬は「動物」なので、動物の機能は全部持っています。でも、犬だけの特別な機能も追加できます！\\n\\n**例：** 動物クラスを継承して犬クラスを作ろう！\\n\\n```python\\nclass Animal:\\n    def speak(self):\\n        print('...')\\n\\nclass Dog(Animal):  # Animalを継承\\n    def speak(self):\\n        print('Woof!')  # 犬専用の鳴き声\\n```\\n\\n**ポイント：** `class Dog(Animal):` の `(Animal)` で「Animalを継承する」という意味になります。"
         }
       ],
-      "correctCode": "# classで親クラスVehicleを定義\\nclass Vehicle:\\n    # defで__init__メソッドを定義（引数: self, brand）\\n    def __init__(self, brand):\\n        # self.brandにbrandを代入\\n        self.brand = brand\\n\\n# classでCarクラスを定義（Vehicleを継承）\\nclass Car(Vehicle):\\n    # defでhonkメソッドを定義（引数: selfのみ）\\n    def honk(self):\\n        # print関数でf文字列「{self.brand} car: Beep!」を表示\\n        print(f'{self.brand} car: Beep!')\\n\\n# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入\\ncar = Car('トヨタ')\\n# carでhonkメソッドを呼び出す\\ncar.honk()",
-      "holeyCode": "# classで親クラスVehicleを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, brand）\\n    def ___(self, ___):\\n        # self.brandにbrandを代入\\n        self.___ = ___\\n___\\n# classでCarクラスを定義（Vehicleを継承）\\nclass ___(___):\\n    # defでhonkメソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # print関数でf文字列「{self.brand} car: Beep!」を表示\\n        ___(f'{self.___} car: Beep!')\\n___\\n# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入\\n___ = ___('___')\\n# carでhonkメソッドを呼び出す\\n___.___()",
+      "correctCode": "# classで親クラスVehicleを定義\\nclass Vehicle:\\n    # defで__init__メソッドを定義（引数: self, brand）\\n    def __init__(self, brand):\\n        # self.brandにbrandを代入\\n        self.brand = brand\\n\\n# classでCarクラスを定義（Vehicleを継承）\\nclass Car(Vehicle):\\n    # defでhonkメソッドを定義（引数: selfのみ）\\n    def honk(self):\\n        # print関数で「ブランド名 car: Beep!」形式で出力\\n        print(f'{self.brand} car: Beep!')\\n\\n# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入\\ncar = Car('トヨタ')\\n# carでhonkメソッドを呼び出す\\ncar.honk()",
+      "holeyCode": "# classで親クラスVehicleを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, brand）\\n    def ___(self, ___):\\n        # self.brandにbrandを代入\\n        self.___ = ___\\n___\\n# classでCarクラスを定義（Vehicleを継承）\\nclass ___(___):\\n    # defでhonkメソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # print関数で「ブランド名 car: Beep!」形式で出力\\n        ___(f'{self.___} car: Beep!')\\n___\\n# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入\\n___ = ___('___')\\n# carでhonkメソッドを呼び出す\\n___.___()",
       "correctLines": [
           "# classで親クラスVehicleを定義",
           "class Vehicle:",
@@ -71,7 +71,7 @@ export const pythonData4 = {
           "class Car(Vehicle):",
           "    # defでhonkメソッドを定義（引数: selfのみ）",
           "    def honk(self):",
-          "        # print関数でf文字列「{self.brand} car: Beep!」を表示",
+          "        # print関数で「ブランド名 car: Beep!」形式で出力",
           "        print(f'{self.brand} car: Beep!')",
           "",
           "# Carインスタンス（ブランド名'トヨタ'）を作成しcarに代入",
@@ -123,8 +123,8 @@ export const pythonData4 = {
           "content": "# 親クラスのメソッドを呼び出そう！\\n\\n**super（スーパー）** を使うと、**親クラスのメソッドを呼び出す** ことができます。\\n\\n「super」は「上の」という意味です。継承で「上にいる」親クラスを指します。\\n\\n**なぜ必要？**\\n\\n子クラスで `__init__` を作ると、親の `__init__` が上書きされてしまいます。\\n親の初期化処理も使いたいときは、`super().__init__()` で親の処理を呼び出します。\\n\\n**例：** 親と子の初期化を両方実行しよう！\\n\\n```python\\nclass Parent:\\n    def __init__(self, name):\\n        self.name = name\\n\\nclass Child(Parent):\\n    def __init__(self, name, age):\\n        super().__init__(name)  # 親の初期化を呼ぶ\\n        self.age = age          # 子だけの追加\\n```\\n\\n**ポイント：** `super().__init__(name)` で親クラスの `__init__` を実行しています。"
         }
       ],
-      "correctCode": "# classで親クラスPersonを定義\\nclass Person:\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n\\n# classでStudentクラスを定義（Personを継承）\\nclass Student(Person):\\n    # defで__init__メソッドを定義（引数: self, name, grade）\\n    def __init__(self, name, grade):\\n        # super().__init__でnameを渡して親クラスを初期化\\n        super().__init__(name)\\n        # self.gradeにgradeを代入\\n        self.grade = grade\\n\\n# Studentを作成（名前に'太郎', 学年に3）しsに代入\\ns = Student('太郎', 3)\\n# print関数でf文字列「{s.name} is in grade {s.grade}」を表示\\nprint(f'{s.name} is in grade {s.grade}')",
-      "holeyCode": "# classで親クラスPersonを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def ___(self, ___):\\n        # self.nameにnameを代入\\n        self.___ = ___\\n___\\n# classでStudentクラスを定義（Personを継承）\\nclass ___(___):\\n    # defで__init__メソッドを定義（引数: self, name, grade）\\n    def ___(self, ___, ___):\\n        # super().__init__でnameを渡して親クラスを初期化\\n        ___().___(___)\\n        # self.gradeにgradeを代入\\n        self.___ = ___\\n___\\n# Studentを作成（名前に'太郎', 学年に3）しsに代入\\n___ = ___('___', ___)\\n# print関数でf文字列「{s.name} is in grade {s.grade}」を表示\\n___(f'{___.___} is in grade {___.___}')",
+      "correctCode": "# classで親クラスPersonを定義\\nclass Person:\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def __init__(self, name):\\n        # self.nameにnameを代入\\n        self.name = name\\n\\n# classでStudentクラスを定義（Personを継承）\\nclass Student(Person):\\n    # defで__init__メソッドを定義（引数: self, name, grade）\\n    def __init__(self, name, grade):\\n        # super().__init__でnameを渡して親クラスを初期化\\n        super().__init__(name)\\n        # self.gradeにgradeを代入\\n        self.grade = grade\\n\\n# Studentを作成（名前に'太郎', 学年に3）しsに代入\\ns = Student('太郎', 3)\\n# print関数で「名前 is in grade 学年」形式で出力\\nprint(f'{s.name} is in grade {s.grade}')",
+      "holeyCode": "# classで親クラスPersonを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, name）\\n    def ___(self, ___):\\n        # self.nameにnameを代入\\n        self.___ = ___\\n___\\n# classでStudentクラスを定義（Personを継承）\\nclass ___(___):\\n    # defで__init__メソッドを定義（引数: self, name, grade）\\n    def ___(self, ___, ___):\\n        # super().__init__でnameを渡して親クラスを初期化\\n        ___().___(___)\\n        # self.gradeにgradeを代入\\n        self.___ = ___\\n___\\n# Studentを作成（名前に'太郎', 学年に3）しsに代入\\n___ = ___('___', ___)\\n# print関数で「名前 is in grade 学年」形式で出力\\n___(f'{___.___} is in grade {___.___}')",
       "correctLines": [
           "# classで親クラスPersonを定義",
           "class Person:",
@@ -144,7 +144,7 @@ export const pythonData4 = {
           "",
           "# Studentを作成（名前に'太郎', 学年に3）しsに代入",
           "s = Student('太郎', 3)",
-          "# print関数でf文字列「{s.name} is in grade {s.grade}」を表示",
+          "# print関数で「名前 is in grade 学年」形式で出力",
           "print(f'{s.name} is in grade {s.grade}')"
         ],
       "lineHints": [
@@ -475,8 +475,8 @@ export const pythonData4 = {
           "content": "# オブジェクトを「文字列」で表す\\n\\n**__str__（ストリング）** メソッドを定義すると、`print()` や `str()` での **表示をカスタマイズ** できます。\\n\\n**たとえ話：** 自己紹介カードのようなもの。\\n- `__str__` がないとき: 「私はメモリの0x12345番地にいる何か」\\n- `__str__` があるとき: 「私は太郎です、25歳です」\\n\\n**例：** 座標を見やすく表示しよう！\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __str__(self):\\n        return f'Point({self.x}, {self.y})'\\n\\np = Point(3, 4)\\nprint(p)  # Point(3, 4)  ← 見やすい！\\n```\\n\\n**何をしているか：**\\n1. `__str__` は「特殊メソッド」（アンダーバー2つで囲まれた特別なメソッド）\\n2. `print(p)` すると自動的に `__str__` が呼ばれる\\n3. `return` で返した文字列がそのまま表示される\\n\\n**ポイント：** `__str__` がないと `<__main__.Point object at 0x...>` のような分かりにくい表示になります。"
         }
       ],
-      "correctCode": "# classでBookクラスを定義\\nclass Book:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # defで__str__メソッドを定義（引数: selfのみ）\\n    def __str__(self):\\n        # returnでf文字列「{self.title} by {self.author}」を返す\\n        return f'{self.title} by {self.author}'\\n\\n# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入\\nbook = Book('Pythonガイド', '太郎')\\n# print関数でbookを表示\\nprint(book)",
-      "holeyCode": "# classでBookクラスを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def ___(self, ___, ___):\\n        # self.titleにtitleを代入\\n        self.___ = ___\\n        # self.authorにauthorを代入\\n        self.___ = ___\\n    ___\\n    # defで__str__メソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # returnでf文字列「{self.title} by {self.author}」を返す\\n        return f'{self.___} by {self.___}'\\n___\\n# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入\\n___ = ___('___', '___')\\n# print関数でbookを表示\\n___(___)",
+      "correctCode": "# classでBookクラスを定義\\nclass Book:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # defで__str__メソッドを定義（引数: selfのみ）\\n    def __str__(self):\\n        # returnで「タイトル by 著者」形式の文字列を返す\\n        return f'{self.title} by {self.author}'\\n\\n# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入\\nbook = Book('Pythonガイド', '太郎')\\n# print関数でbookを表示\\nprint(book)",
+      "holeyCode": "# classでBookクラスを定義\\nclass ___:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def ___(self, ___, ___):\\n        # self.titleにtitleを代入\\n        self.___ = ___\\n        # self.authorにauthorを代入\\n        self.___ = ___\\n    ___\\n    # defで__str__メソッドを定義（引数: selfのみ）\\n    def ___(self):\\n        # returnで「タイトル by 著者」形式の文字列を返す\\n        return f'{self.___} by {self.___}'\\n___\\n# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入\\n___ = ___('___', '___')\\n# print関数でbookを表示\\n___(___)",
       "correctLines": [
           "# classでBookクラスを定義",
           "class Book:",
@@ -489,7 +489,7 @@ export const pythonData4 = {
           "    ",
           "    # defで__str__メソッドを定義（引数: selfのみ）",
           "    def __str__(self):",
-          "        # returnでf文字列「{self.title} by {self.author}」を返す",
+          "        # returnで「タイトル by 著者」形式の文字列を返す",
           "        return f'{self.title} by {self.author}'",
           "",
           "# Bookを作成（タイトルに'Pythonガイド', 著者に'太郎'）しbookに代入",
