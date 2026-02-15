@@ -326,8 +326,8 @@ export const csharp4Data = {
           "content": "# 戻り値がない場合\\n\\n```csharp\\nAction<int, int> log = (a, b) => {\\n    Console.WriteLine($\"{a} + {b}\");\\n};\\n```"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 戻り値を持たない汎用デリゲート型\\n        Action<string> greet = name => Console.WriteLine($\"こんにちは, {name}!\");\\n        // greet関数（引数\"太郎\"）を呼び出し\\n        greet(\"太郎\");\\n    }\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // 戻り値を持たない汎用デリゲート型\\n        ___<___> ___ = ___ => ___.___(___\"こんにちは, {___}!\");\\n        // greet関数（引数\"太郎\"）を呼び出し\\n        ___(\"___\")___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 戻り値を持たない汎用デリゲート型\\n        Action<string> greet = name => Console.WriteLine($\"こんにちは, {name}!\");\\n        // greet関数（引数\"たろう\"）を呼び出し\\n        greet(\"たろう\");\\n    }\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\n___ ___;\\n___\\n// Programクラスを定義\\n___ ___ {\\n    // Mainメソッドを定義\\n    ___ ___ ___() {\\n        // 戻り値を持たない汎用デリゲート型\\n        ___<___> ___ = ___ => ___.___(___\"こんにちは, {___}!\");\\n        // greet関数（引数\"たろう\"）を呼び出し\\n        ___(\"___\")___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -338,8 +338,8 @@ export const csharp4Data = {
           "    static void Main() {",
           "        // 戻り値を持たない汎用デリゲート型",
           "        Action<string> greet = name => Console.WriteLine($\"こんにちは, {name}!\");",
-          "        // greet関数（引数\"太郎\"）を呼び出し",
-          "        greet(\"太郎\");",
+          "        // greet関数（引数\"たろう\"）を呼び出し",
+          "        greet(\"たろう\");",
           "    }",
           "}"
         ],
@@ -364,12 +364,12 @@ export const csharp4Data = {
             "Func",
             "Predicate"
           ],
-          "others": ["using", "System", "class", "Program", "static", "void", "Main", "string", "greet", "name", "Console", "WriteLine", "$", "太郎", ";", "}"]
+          "others": ["using", "System", "class", "Program", "static", "void", "Main", "string", "greet", "name", "Console", "WriteLine", "$", "たろう", ";", "}"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは, 太郎!\\n"
+            "expected_output": "こんにちは, たろう!\\n"
           }
         ]
       },
@@ -704,7 +704,7 @@ export const csharp4Data = {
             "set",
             "private set"
           ],
-          "others": ["using", "System", "class", "Item", "public", "string", "Name", "get", "Program", "static", "void", "Main", "var", "item", "new", "りんご", "Console", "WriteLine", ";", "}", "// Programクラスを定義", "// \"りんご\" を持つ Item インスタンスを作成", "//", "item.Nameを表示"]
+          "others": ["using", "System", "class", "Item", "public", "string", "Name", "get", "Program", "static", "void", "Main", "var", "item", "new", "りんご", "Console", "WriteLine", ";", "}", "// Programクラスを定義", "// \"りんご\" を持つ Item インスタンスを作成", "//", "item.Nameを表示", "itemのNameプロパティを表示"]
         },
         "testCases": [
           {

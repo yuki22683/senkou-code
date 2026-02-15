@@ -649,7 +649,7 @@ export const javaData2 = {
             "static",
             "void"
           ],
-          "others": ["java", "util", "ArrayList;", "Main", "main", "String", "args", "ArrayList", "items", ";", "add", "\"あ\"", "\"い\"", "System", "out", "println", "get", "0", "))", "}"]
+          "others": ["java", "util", "ArrayList;", "Main", "main", "String", "args", "ArrayList", "items", ";", "add", "\"あ\"", "\"い\"", "System", "out", "println", "get", "0", "))", "}", ");"]
         },
         "testCases": [
           {
@@ -800,7 +800,7 @@ export const javaData2 = {
             "void",
             "int"
           ],
-          "others": ["Calculator", "multiply", "a", "b", ";", "}", "Main", "main", "String", "args", "result", "4", "5", "System", "out", "println"]
+          "others": ["Calculator", "multiply", "a", "b", ";", "}", "Main", "main", "String", "args", "result", "4", "5", "System", "out", "println", "b;"]
         },
         "testCases": [
           {
@@ -905,7 +905,7 @@ export const javaData2 = {
             "void",
             "int"
           ],
-          "others": ["Item", "price", ";", "p", "}", "getPrice", "Main", "main", "String", "args", "item", "100", "System", "out", "println"]
+          "others": ["Item", "price", ";", "p", "}", "getPrice", "Main", "main", "String", "args", "item", "100", "System", "out", "println", "price;", "p;"]
         },
         "testCases": [
           {

@@ -228,7 +228,7 @@ export const cpp4Data = {
           "content": "# なぜ string_view が便利なの？\\n\\nこれまでの書き方と比べてみましょう。\\n\\n**身近な例え：**\\n写真を見せるとき、「実物の写真」でも「スマホの画面」でも、見る分には同じですよね。string_view は両方受け取れます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\n// 方法1: string で受け取る（コピーが発生）\\nvoid f1(string s);     // 毎回コピー = 遅い\\n\\n// 方法2: const string& で受け取る\\nvoid f2(const string& s);  // \"hello\" を渡すと一時オブジェクトが作られる\\n\\n// 方法3: string_view で受け取る（オススメ！）\\nvoid f3(string_view sv);   // コピーなし、どんな文字列もOK！\\n\\nstring s = \"world\";\\nf3(s);        // string型 → OK\\nf3(\"hello\");  // 文字列リテラル → OK\\nf3(\"abc\");    // const char* → OK\\n```\\n\\n関数の引数で「文字列を読むだけ」なら string_view が最適！"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <string_view>でstring_viewを読み込む\\n#include <string_view>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// void greet(string_view name)でgreet関数を定義\\nvoid greet(string_view name) {\\n    // coutで「こんにちは, 」とnameを出力\\n    cout << \"こんにちは, \" << name << endl;\\n// greet関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // greet関数（引数「太郎」）を呼び出す\\n    greet(\"太郎\");\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <string_view>でstring_viewを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// void greet(string_view name)でgreet関数を定義\\n___ ___(___) {\\n    // coutで「こんにちは, 」とnameを出力\\n    ___ << ___ << ___ << ___;\\n// greet関数を閉じる\\n___\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // greet関数（引数「太郎」）を呼び出す\\n    ___(___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <string_view>でstring_viewを読み込む\\n#include <string_view>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// void greet(string_view name)でgreet関数を定義\\nvoid greet(string_view name) {\\n    // coutで「こんにちは, 」とnameを出力\\n    cout << \"こんにちは, \" << name << endl;\\n// greet関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // greet関数（引数「たろう」）を呼び出す\\n    greet(\"たろう\");\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <string_view>でstring_viewを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// void greet(string_view name)でgreet関数を定義\\n___ ___(___) {\\n    // coutで「こんにちは, 」とnameを出力\\n    ___ << ___ << ___ << ___;\\n// greet関数を閉じる\\n___\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // greet関数（引数「たろう」）を呼び出す\\n    ___(___);\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
@@ -246,8 +246,8 @@ export const cpp4Data = {
           "",
           "// int mainでmain関数を定義",
           "int main() {",
-          "    // greet関数（引数「太郎」）を呼び出す",
-          "    greet(\"太郎\");",
+          "    // greet関数（引数「たろう」）を呼び出す",
+          "    greet(\"たろう\");",
           "    // return 0で正常終了を返す",
           "    return 0;",
           "// main関数を閉じる",
@@ -283,12 +283,12 @@ export const cpp4Data = {
             "string",
             "const char*"
           ],
-          "others": ["using", "namespace", "std", "void", "greet", "string_view name", "cout", "\\\"こんにちは, \\\"", "name", "endl", "}", "int", "main", "\\\"太郎\\\"", "return", "0", "#include <iostream>", "#include <string_view>", "\"こんにちは,", "<", "e << endl", "greet(string_view", "name) {", "cout << \"こんにちは, \" << name << endl;", "//", "et(\"太郎\")を呼び出す", "return 0;"]
+          "others": ["using", "namespace", "std", "void", "greet", "string_view name", "cout", "\\\"こんにちは, \\\"", "name", "endl", "}", "int", "main", "\\\"たろう\\\"", "return", "0", "#include <iostream>", "#include <string_view>", "\"こんにちは,", "<", "e << endl", "greet(string_view", "name) {", "cout << \"こんにちは, \" << name << endl;", "//", "et(\"たろう\")を呼び出す", "return 0;"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "こんにちは, 太郎\\n"
+            "expected_output": "こんにちは, たろう\\n"
           }
         ]
       },

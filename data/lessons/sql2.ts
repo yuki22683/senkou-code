@@ -394,7 +394,7 @@ export const sql2Data = {
           "-- CASE式で条件分岐を開始",
           "SELECT CASE",
           "  -- 条件を指定",
-          "  WHEN 85 >= 80 THEN '合格'",
+          "  WHEN 85 >= 80 THEN 'ごうかく'",
           "  -- それ以外の場合",
           "  ELSE '失敗'",
           "-- ENDで終了",
@@ -414,12 +414,12 @@ export const sql2Data = {
           "keywords": [
             "SELECT", "CASE", "WHEN", "THEN", "ELSE", "END"
           ],
-          "others": ["85", "80", "合格", "失敗"]
+          "others": ["85", "80", "ごうかく", "失敗"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "合格\\n"
+            "expected_output": "ごうかく\\n"
           }
         ]
       },

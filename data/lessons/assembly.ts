@@ -2,7 +2,7 @@ export const assemblyData = {
   "language": "assembly",
   "lessonId": "assembly-1",
   "lessonTitle": "Assembly (アセンブリ) に挑戦！",
-  "lessonDescription": "コンピュータの「脳みそ」に直接、短い暗号で指示を出す「アセンブリ言語」のきほんを学びましょう。コンピュータがどうやって動いているのか、その秘密がわかります。",
+  "lessonDescription": "コンピュータの「脳みそ」に直接、短い暗号で指示を出す「アセンブリ言語」のきほんを学びましょう。コンピュータがどうやって動いているのか、そのひみつがわかります。",
   "lessonDifficulty": "medium",
   "lessonOrder": 1,
   "tutorialSlides": [

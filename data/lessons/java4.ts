@@ -268,7 +268,7 @@ export const javaData4 = {
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Main", "main", "String", "args", "Map", "Integer", "scores", "new", "HashMap", "put", "Math", "90", "English", "85", "System", "out", "println", "get", "}", "", "*;", "get(\"Math\"));", "ath", "public class Main {", "oresにnew", "する", "// put でキーと値を追加する", "// get で値を取得する"]
+          "others": ["java", "util", "*", "Main", "main", "String", "args", "Map", "Integer", "scores", "new", "HashMap", "put", "Math", "90", "English", "85", "System", "out", "println", "get", "}", "", "*;", "get(\"Math\"));", "ath", "public class Main {", "oresにnew", "する", "// put でキーと値を追加する", "// get で値を取得する", "oresに新しいHashMapインスタンスを代入"]
         },
         "testCases": [
           {
@@ -331,7 +331,7 @@ export const javaData4 = {
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Main", "main", "String", "args", "Map", "Integer", "map", "new", "HashMap", "put", "A", "1", "B", "2", "Entry", "e", "entrySet", "System", "out", "println", "getKey", "}", "", "*;", "Entry<String,", "nteger> e : map.entrySet()) {", "public class Main {", "pにnew", "する", "// put でキーと値を追加する", "// entrySet でエントリを取得する", "// getKey でキーを取得する"]
+          "others": ["java", "util", "*", "Main", "main", "String", "args", "Map", "Integer", "map", "new", "HashMap", "put", "A", "1", "B", "2", "Entry", "e", "entrySet", "System", "out", "println", "getKey", "}", "", "*;", "Entry<String,", "nteger> e : map.entrySet()) {", "public class Main {", "pにnew", "する", "// put でキーと値を追加する", "// entrySet でエントリを取得する", "// getKey でキーを取得する", "pに新しいHashMapインスタンスを代入"]
         },
         "testCases": [
           {
@@ -569,7 +569,7 @@ export const javaData4 = {
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Main", "main", "String", "args", "Queue", "queue", "new", "LinkedList", "offer", "First", "Second", "System", "out", "println", "poll", "}", "", "*;", "public class Main {", "eueにnew", "素を追加する", "// offer でキューに要素を追加する", "// poll で要素を取り出す"]
+          "others": ["java", "util", "*", "Main", "main", "String", "args", "Queue", "queue", "new", "LinkedList", "offer", "First", "Second", "System", "out", "println", "poll", "}", "", "*;", "public class Main {", "eueにnew", "素を追加する", "// offer でキューに要素を追加する", "// poll で要素を取り出す", "eueに新しいLinkedListインスタンスを代入"]
         },
         "testCases": [
           {
@@ -626,7 +626,7 @@ export const javaData4 = {
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Main", "main", "String", "args", "Deque", "Integer", "stack", "new", "ArrayDeque", "push", "10", "20", "System", "out", "println", "pop", "}", "", "*;", "public class Main {", "ackにnew", "む", "// push でスタックに積む", "// pop でスタックから取り出す"]
+          "others": ["java", "util", "*", "Main", "main", "String", "args", "Deque", "Integer", "stack", "new", "ArrayDeque", "push", "10", "20", "System", "out", "println", "pop", "}", "", "*;", "public class Main {", "ackにnew", "む", "// push でスタックに積む", "// pop でスタックから取り出す", "ackに新しいArrayDequeインスタンスを代入"]
         },
         "testCases": [
           {

@@ -304,7 +304,7 @@ export const pythonData3 = {
           "def even_numbers(n):",
           "    # forでiを0からn-1までrange関数でループ",
           "    for i in range(n):",
-          "        # yieldでiの2倍（偶数）を返す",
+          "        # yieldでiの2倍（ぐうすう）を返す",
           "        yield i * 2",
           "",
           "# even_numbers関数（引数4）の各結果をnumに代入してループ",

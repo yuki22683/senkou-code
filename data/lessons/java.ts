@@ -625,7 +625,7 @@ export const javaData = {
           "content": "# 使い分け\\n\\n**例1：両方の条件を満たす（かつ）**\\n```java\\n// 点数80点以上、かつ、出席率90%以上なら...\\nif (score >= 80 && attendance >= 90) {\\n    System.out.println(\"優秀！\");\\n}\\n```\\n\\n**例2：どちらかを満たす（または）**\\n```java\\n// 土曜日、または、日曜日なら...\\nif (day == \"土曜日\" || day == \"日曜日\") {\\n    System.out.println(\"お休み\");\\n}\\n```\\n\\n**覚え方：**\\n- `&&` → 「**かつ**」両方必要\\n- `||` → 「**または**」どちらか1つでOK"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のscoreに80を代入\\n        int score = 80;\\n        // int型のbonusに10を代入\\n        int bonus = 10;\\n        // ifと&&でscoreが70以上かつbonusが0より大きいか判定\\n        if (score >= 70 && bonus > 0) {\\n            // printlnで'ボーナスあり合格'を出力\\n            System.out.println(\\\"ボーナスあり合格\\\");\\n        // ifブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のscoreに80を代入\\n        ___ ___ = ___;\\n        // int型のbonusに10を代入\\n        ___ ___ = ___;\\n        // ifと&&でscoreが70以上かつbonusが0より大きいか判定\\n        if (___ >= ___ ___ ___ > ___) {\\n            // printlnで'ボーナスあり合格'を出力\\n            ___.___.___(___);\\n        // ifブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のscoreに80を代入\\n        int score = 80;\\n        // int型のbonusに10を代入\\n        int bonus = 10;\\n        // ifと&&でscoreが70以上かつbonusが0より大きいか判定\\n        if (score >= 70 && bonus > 0) {\\n            // printlnで'ボーナスありごうかく'を出力\\n            System.out.println(\\\"ボーナスありごうかく\\\");\\n        // ifブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のscoreに80を代入\\n        ___ ___ = ___;\\n        // int型のbonusに10を代入\\n        ___ ___ = ___;\\n        // ifと&&でscoreが70以上かつbonusが0より大きいか判定\\n        if (___ >= ___ ___ ___ > ___) {\\n            // printlnで'ボーナスありごうかく'を出力\\n            ___.___.___(___);\\n        // ifブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
@@ -637,8 +637,8 @@ export const javaData = {
           "        int bonus = 10;",
           "        // ifと&&でscoreが70以上かつbonusが0より大きいか判定",
           "        if (score >= 70 && bonus > 0) {",
-          "            // printlnで'ボーナスあり合格'を出力",
-          "            System.out.println(\\\"ボーナスあり合格\\\");",
+          "            // printlnで'ボーナスありごうかく'を出力",
+          "            System.out.println(\\\"ボーナスありごうかく\\\");",
           "        // ifブロックを閉じる",
           "        }",
           "    // mainメソッドを閉じる",
@@ -684,14 +684,14 @@ export const javaData = {
             "0"
           ],
           "strings": [
-            "\"ボーナスあり合格\""
+            "\"ボーナスありごうかく\""
           ],
-          "others": ["Main", "main", "String", "args", "int", "System", "out", "println", "}", "}\\", "atic", "//", "方の条件をチェックする", "System.out.println(\"ボーナスあり合格\")"]
+          "others": ["Main", "main", "String", "args", "int", "System", "out", "println", "}", "}\\", "atic", "//", "方の条件をチェックする", "System.out.println(\"ボーナスありごうかく\")"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "ボーナスあり合格\\n"
+            "expected_output": "ボーナスありごうかく\\n"
           }
         ]
       },

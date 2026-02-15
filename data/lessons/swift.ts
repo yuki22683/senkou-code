@@ -332,8 +332,8 @@ export const swiftData = {
           "let bonus = 10",
           "// ifで&&を使い両方の条件をチェック",
           "if score >= 70 && bonus > 0 {",
-          "    // printで「ボーナス合格！」を出力",
-          "    print(\"ボーナス合格！\")",
+          "    // printで「ボーナスごうかく！」を出力",
+          "    print(\"ボーナスごうかく！\")",
           "// ブロックを閉じる",
           "}"
         ],
@@ -357,12 +357,12 @@ export const swiftData = {
             ">",
             "<"
           ],
-          "others": ["score", "bonus", "70", "0", "80", "10", "print", "}", "{", "\"ボーナス合格！\"", "core", "70 && bonus > 0 {"]
+          "others": ["score", "bonus", "70", "0", "80", "10", "print", "}", "{", "\"ボーナスごうかく！\"", "core", "70 && bonus > 0 {"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "ボーナス合格！\\n"
+            "expected_output": "ボーナスごうかく！\\n"
           }
         ]
       },

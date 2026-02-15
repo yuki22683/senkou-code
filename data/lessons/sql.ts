@@ -182,7 +182,7 @@ export const sqlData = {
       "holeyCode": "-- 名前と年齢を表示\\nSELECT '___' AS ___, ___ AS ___;",
       "correctLines": [
           "-- 名前と年齢を表示",
-          "SELECT '太郎' AS name, 10 AS age;"
+          "SELECT 'たろう' AS name, 10 AS age;"
         ],
       "lineHints": [
           null,
@@ -194,12 +194,12 @@ export const sqlData = {
             ";",
             ":"
           ],
-          "others": ["太郎", "name", "10", "age"]
+          "others": ["たろう", "name", "10", "age"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "太郎|10\\n"
+            "expected_output": "たろう|10\\n"
           }
         ]
       },

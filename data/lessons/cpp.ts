@@ -498,7 +498,7 @@ export const cppData = {
           "content": "# どちらかを選びます\\n\\n条件に当てはまらないときの動きは `else` を使って入力します。\\n\\n**コード例 ：**\\n```cpp\\nint age = 15;\\nif (age >= 20) {\\n    std::cout << \"大人\" << std::endl;\\n} else {\\n    std::cout << \"子供\" << std::endl;\\n}"
                 }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // int ageでageを宣言し10を代入\\n    int age = 10;\\n    // ifでageが20以上か判定\\n    if (age >= 20) {\\n        // std::coutで「大人」を出力\\n        std::cout << \\\"大人\\\" << std::endl;\\n    // elseで条件不成立時の処理\\n    } else {\\n        // std::coutで「未成年」を出力\\n        std::cout << \\\"未成年\\\" << std::endl;\\n    // if-elseブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int ageでageを宣言し10を代入\\n    ___ ___ = ___;\\n    // ifでageが20以上か判定\\n    ___ (___ ___ ___) {\\n        // std::coutで「大人」を出力\\n        ___::___ << ___ << ___::___;\\n    // elseで条件不成立時の処理\\n    } ___ {\\n        // std::coutで「未成年」を出力\\n        ___::___ << ___ << ___::___;\\n    // if-elseブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // int ageでageを宣言し10を代入\\n    int age = 10;\\n    // ifでageが20以上か判定\\n    if (age >= 20) {\\n        // std::coutで「おとな」を出力\\n        std::cout << \\\"おとな\\\" << std::endl;\\n    // elseで条件不成立時の処理\\n    } else {\\n        // std::coutで「みせいねん」を出力\\n        std::cout << \\\"みせいねん\\\" << std::endl;\\n    // if-elseブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int ageでageを宣言し10を代入\\n    ___ ___ = ___;\\n    // ifでageが20以上か判定\\n    ___ (___ ___ ___) {\\n        // std::coutで「おとな」を出力\\n        ___::___ << ___ << ___::___;\\n    // elseで条件不成立時の処理\\n    } ___ {\\n        // std::coutで「みせいねん」を出力\\n        ___::___ << ___ << ___::___;\\n    // if-elseブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
@@ -508,12 +508,12 @@ export const cppData = {
           "    int age = 10;",
           "    // ifでageが20以上か判定",
           "    if (age >= 20) {",
-          "        // std::coutで「大人」を出力",
-          "        std::cout << \\\"大人\\\" << std::endl;",
+          "        // std::coutで「おとな」を出力",
+          "        std::cout << \\\"おとな\\\" << std::endl;",
           "    // elseで条件不成立時の処理",
           "    } else {",
-          "        // std::coutで「未成年」を出力",
-          "        std::cout << \\\"未成年\\\" << std::endl;",
+          "        // std::coutで「みせいねん」を出力",
+          "        std::cout << \\\"みせいねん\\\" << std::endl;",
           "    // if-elseブロックを閉じる",
           "    }",
           "    // return 0で正常終了を返す",
@@ -547,12 +547,12 @@ export const cppData = {
           "keywords": [
             "else"
           ],
-          "others": ["10;", ">=", "main", "10", "}", "0", "\"大人\"", "\"未成年\"", "#include <iostream>", "int", "std", "cout", "endl", "return", "if", "age", "20", "int main() {", "int age = 10;", "(age", "20) {", "std::cout << \"大人\" << std::endl;", "se {", "rn 0;"]
+          "others": ["10;", ">=", "main", "10", "}", "0", "\"おとな\"", "\"みせいねん\"", "#include <iostream>", "int", "std", "cout", "endl", "return", "if", "age", "20", "int main() {", "int age = 10;", "(age", "20) {", "std::cout << \"おとな\" << std::endl;", "se {", "rn 0;"]
         },
         "testCases": [
           {
              "input": "",
-            "expected_output": "未成年\\n"
+            "expected_output": "みせいねん\\n"
           }
         ]
       },
@@ -569,7 +569,7 @@ export const cppData = {
           "content": "# 条件の合体技\\n\\n```cpp\\nint age = 15;\\nif (age >= 10 && age < 20) {\\n    std::cout << \"10代です\" << std::endl;\\n}\\n```\\n\\n`&&` は「かつ」、`||` は「または」の意味です。"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // int scoreでscoreを宣言し85を代入\\n    int score = 85;\\n    // ifでscoreが80以上かつ100以下か判定\\n    if (score >= 80 && score <= 100) {\\n        // std::coutで「合格」を出力\\n        std::cout << \\\"合格\\\" << std::endl;\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int scoreでscoreを宣言し85を代入\\n    ___ ___ = ___;\\n    // ifでscoreが80以上かつ100以下か判定\\n    ___ (___ ___ ___ ___ ___ ___ ___) {\\n        // std::coutで「合格」を出力\\n        ___::___ << ___ << ___::___;\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // int scoreでscoreを宣言し85を代入\\n    int score = 85;\\n    // ifでscoreが80以上かつ100以下か判定\\n    if (score >= 80 && score <= 100) {\\n        // std::coutで「ごうかく」を出力\\n        std::cout << \\\"ごうかく\\\" << std::endl;\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int scoreでscoreを宣言し85を代入\\n    ___ ___ = ___;\\n    // ifでscoreが80以上かつ100以下か判定\\n    ___ (___ ___ ___ ___ ___ ___ ___) {\\n        // std::coutで「ごうかく」を出力\\n        ___::___ << ___ << ___::___;\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
@@ -579,8 +579,8 @@ export const cppData = {
           "    int score = 85;",
           "    // ifでscoreが80以上かつ100以下か判定",
           "    if (score >= 80 && score <= 100) {",
-          "        // std::coutで「合格」を出力",
-          "        std::cout << \\\"合格\\\" << std::endl;",
+          "        // std::coutで「ごうかく」を出力",
+          "        std::cout << \\\"ごうかく\\\" << std::endl;",
           "    // ifブロックを閉じる",
           "    }",
           "    // return 0で正常終了を返す",
@@ -617,12 +617,12 @@ export const cppData = {
           "strings": [
 
           ],
-          "others": ["85;", "main", "80", "}", "0", "\"合格\"", "#include <iostream>", "int", "std", "cout", "endl", "return", "if", "score", ">=", "<=", "100", "int main() {", "int score = 85;", "(score", "80 && score <= 100) {", "std::cout", "<<", "std::endl;", "rn 0;"]
+          "others": ["85;", "main", "80", "}", "0", "\"ごうかく\"", "#include <iostream>", "int", "std", "cout", "endl", "return", "if", "score", ">=", "<=", "100", "int main() {", "int score = 85;", "(score", "80 && score <= 100) {", "std::cout", "<<", "std::endl;", "rn 0;"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "合格\\n"
+            "expected_output": "ごうかく\\n"
           }
         ]
       },

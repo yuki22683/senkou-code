@@ -374,8 +374,8 @@ export const rubyData = {
           "score = 100",
           "# もし80より大きかったら",
           "if score > 80",
-          "  # 「合格！」と表示する",
-          "  puts '合格！'",
+          "  # 「ごうかく！」と表示する",
+          "  puts 'ごうかく！'",
           "end"
         ],
       "lineHints": [
@@ -400,14 +400,14 @@ export const rubyData = {
           ],
           "operators": [">", "<", ">=", "<="],
           "strings": [
-            "合格！"
+            "ごうかく！"
           ],
           "others": ["puts", "end", "score"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "合格！\\n"
+            "expected_output": "ごうかく！\\n"
           }
         ]
       },
@@ -431,12 +431,12 @@ export const rubyData = {
           "age = 10",
           "# 20歳以上かどうかで分ける",
           "if age >= 20",
-          "  # 「大人」と表示",
-          "  puts '大人'",
+          "  # 「おとな」と表示",
+          "  puts 'おとな'",
           "# else でそれ以外の場合",
           "else",
-          "  # 「子供」と表示",
-          "  puts '子供'",
+          "  # 「こども」と表示",
+          "  puts 'こども'",
           "end"
         ],
       "lineHints": [
@@ -466,15 +466,15 @@ export const rubyData = {
           ],
           "operators": [">=", "<=", ">", "<"],
           "strings": [
-            "大人",
-            "子供"
+            "おとな",
+            "こども"
           ],
           "others": [">=", "puts", "end", "age"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "子供\\n"
+            "expected_output": "こども\\n"
           }
         ]
       },
@@ -498,8 +498,8 @@ export const rubyData = {
           "score = 85",
           "# 80以上 かつ 100以下 ならメッセージを出す",
           "if score >= 80 and score <= 100",
-          "  # 「合格！」と表示",
-          "  puts '合格！'",
+          "  # 「ごうかく！」と表示",
+          "  puts 'ごうかく！'",
           "end"
         ],
       "lineHints": [
@@ -526,14 +526,14 @@ export const rubyData = {
           ],
           "operators": [">=", "<=", ">", "<"],
           "strings": [
-            "合格！"
+            "ごうかく！"
           ],
           "others": ["puts", "end", "score"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "合格！\\n"
+            "expected_output": "ごうかく！\\n"
           }
         ]
       },
@@ -554,7 +554,7 @@ export const rubyData = {
       "holeyCode": "# 名前の配列（太郎、花子）をnamesに代入\\n___ = ['___', '___']\\n# eachでnamesをループ\\n___.___ do |___|\\n  # nameを表示\\n  ___ ___\\n# ブロックを終了\\n___",
       "correctLines": [
           "# 名前の配列（太郎、花子）をnamesに代入",
-          "names = ['太郎', '花子']",
+          "names = ['たろう', 'はなこ']",
           "# eachでnamesをループ",
           "names.each do |name|",
           "  # nameを表示",
@@ -581,15 +581,15 @@ export const rubyData = {
             "name"
           ],
           "strings": [
-            "太郎",
-            "花子"
+            "たろう",
+            "はなこ"
           ],
           "others": ["puts", "end"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "太郎\\n花子\\n"
+            "expected_output": "たろう\\nはなこ\\n"
           }
         ]
       },

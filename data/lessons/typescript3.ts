@@ -233,7 +233,7 @@ export const typescriptData3 = {
           "  id: number;",
           "  // 名前の型",
           "  name: string;",
-          "  // 秘密情報の型",
+          "  // ひみつ情報の型",
           "  secret: string;",
           "}",
           "// Omit で秘密情報を除外",

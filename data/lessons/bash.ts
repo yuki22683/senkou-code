@@ -244,12 +244,12 @@ export const bashData = {
           "age=18",
           "# 20以上か判定",
           "if [ $age -ge 20 ]; then",
-          "    # 「大人」と表示",
-          "    echo \"大人\"",
+          "    # 「おとな」と表示",
+          "    echo \"おとな\"",
           "# それ以外の場合",
           "else",
-          "    # 「未成年」と表示",
-          "    echo \"未成年\"",
+          "    # 「みせいねん」と表示",
+          "    echo \"みせいねん\"",
           "fi"
         ],
       "lineHints": [
@@ -272,12 +272,12 @@ export const bashData = {
             "if",
             "then"
           ],
-          "others": ["age", "-ge", "大人", "未成年", "20", "18", "echo"]
+          "others": ["age", "-ge", "おとな", "みせいねん", "20", "18", "echo"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "未成年\\n"
+            "expected_output": "みせいねん\\n"
           }
         ]
       },

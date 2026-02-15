@@ -121,7 +121,7 @@ export const rustData = {
             "*",
             "/"
           ],
-          "others": ["main()", "x", "y", "println", "}", "{}", "5 を入れる", "し算する"]
+          "others": ["main()", "x", "y", "println", "}", "{}", "5 を入れる", "し算する", "etでyに5を代入", "とyの和を出力"]
         },
         "testCases": [
           {
@@ -217,7 +217,7 @@ export const rustData = {
             "*=",
             "/="
           ],
-          "others": ["main()", "hp", "println", "}", "{}", "す", "//", "で 50 を引く", "println!(\"{}\","]
+          "others": ["main()", "hp", "println", "}", "{}", "す", "//", "で 50 を引く", "println!(\"{}\",", "に20を足す", "hpから50を引く", "ntln!でhpを出力"]
         },
         "testCases": [
           {
@@ -271,7 +271,7 @@ export const rustData = {
             ">=",
             "<="
           ],
-          "others": ["main()", "score", "println", "}", "較する", "println!(\"すごい！\");"]
+          "others": ["main()", "score", "println", "}", "較する", "println!(\"すごい！\");", "fでscoreが80より大きいか判定", "//", "println!で「すごい！」を出力"]
         },
         "testCases": [
           {
@@ -289,7 +289,7 @@ export const rustData = {
           "content": "# 論理演算子\\n\\n2つ以上の条件を組み合わせたいときに使う記号です。\\n\\n**2つの記号：**\\n- `&&`（アンドアンド）：「かつ」＝ **両方とも** 正しいとき\\n- `||`（オアオア）：「または」＝ **どちらか** 正しいとき\\n\\n**身近な例：**\\n- 遊園地：「18歳以上 **かつ** チケットあり」なら乗れる\\n- おやつ：「宿題終わった **または** お手伝いした」ならOK\\n\\n**コード例：**\\n```rust\\nif score >= 70 && bonus > 0 {\\n    // 70点以上 かつ ボーナスあり → 合格！\\n    println!(\"合格！\");\\n}\\n```"
         }
       ],
-      "correctCode": "fn main() {\\n    // letでscoreに80を代入\\n    let score = 80;\\n    // letでbonusに10を代入\\n    let bonus = 10;\\n    // ifと&&でscoreが70以上かつbonusが0より大きいか判定\\n    if score >= 70 && bonus > 0 {\\n        // println!で「ボーナス合格！」を出力\\n        println!(\"ボーナス合格！\");\\n    }\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___ () {\\n    // letでscoreに80を代入\\n    let ___ = ___;\\n    // letでbonusに10を代入\\n    let ___ = ___;\\n    // ifと&&でscoreが70以上かつbonusが0より大きいか判定\\n    if ___ ___ ___ ___ ___ ___ ___ {\\n        // println!で「ボーナス合格！」を出力\\n        ___!(\\\"___\\\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "fn main() {\\n    // letでscoreに80を代入\\n    let score = 80;\\n    // letでbonusに10を代入\\n    let bonus = 10;\\n    // ifと&&でscoreが70以上かつbonusが0より大きいか判定\\n    if score >= 70 && bonus > 0 {\\n        // println!で「ボーナスごうかく！」を出力\\n        println!(\"ボーナスごうかく！\");\\n    }\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___ () {\\n    // letでscoreに80を代入\\n    let ___ = ___;\\n    // letでbonusに10を代入\\n    let ___ = ___;\\n    // ifと&&でscoreが70以上かつbonusが0より大きいか判定\\n    if ___ ___ ___ ___ ___ ___ ___ {\\n        // println!で「ボーナスごうかく！」を出力\\n        ___!(\\\"___\\\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "fn main() {",
           "    // letでscoreに80を代入",
@@ -298,8 +298,8 @@ export const rustData = {
           "    let bonus = 10;",
           "    // ifと&&でscoreが70以上かつbonusが0より大きいか判定",
           "    if score >= 70 && bonus > 0 {",
-          "        // println!で「ボーナス合格！」を出力",
-          "        println!(\"ボーナス合格！\");",
+          "        // println!で「ボーナスごうかく！」を出力",
+          "        println!(\"ボーナスごうかく！\");",
           "    }",
           "}"
         ],
@@ -321,7 +321,7 @@ export const rustData = {
             "0"
           ],
           "strings": [
-            "ボーナス合格！"
+            "ボーナスごうかく！"
           ],
           "operators": [
             "&&",
@@ -331,12 +331,12 @@ export const rustData = {
             ">=",
             ">"
           ],
-          "others": ["main()", "score", "bonus", "println", "}", "方の条件をチェック", "println!(\"ボーナス合格！\");"]
+          "others": ["main()", "score", "bonus", "println", "}", "方の条件をチェック", "println!(\"ボーナスごうかく！\");", "etでbonusに10を代入", "fと&&でscoreが70以上かつbonusが0より大きいか判定", "//", "println!で「ボーナスごうかく！」を出力"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "ボーナス合格！\\n"
+            "expected_output": "ボーナスごうかく！\\n"
           }
         ]
       },
@@ -386,7 +386,7 @@ export const rustData = {
           "numbers": [
             "1"
           ],
-          "others": ["main()", "}", "番目のデータ（インデックス1）を出す"]
+          "others": ["main()", "}", "番目のデータ（インデックス1）を出す", "olorsのインデックス1（あお）を出力"]
         },
         "testCases": [
           {
@@ -448,7 +448,7 @@ export const rustData = {
             "オレンジ",
             "{}"
           ],
-          "others": ["std", "collections", "HashMap", "main()", "}", "ain() {", "nsert(\"みかん\",", "レンジ\");", "println!(\"{}\", colors[\"みかん\"]);"]
+          "others": ["std", "collections", "HashMap", "main()", "}", "ain() {", "nsert(\"みかん\",", "レンジ\");", "println!(\"{}\", colors[\"みかん\"]);", "tでみかん=オレンジを追加", "// colorsのみかんキーの値を出力"]
         },
         "testCases": [
           {

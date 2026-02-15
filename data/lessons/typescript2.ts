@@ -537,7 +537,7 @@ export const typescriptData2 = {
           "content": "# 複数から継承\\n\\n複数のインターフェースを組み合わせることもできます。カンマ（,）で区切って書きます。\\n\\n## たとえ話\\n\\n「歌える」という能力と「踊れる」という能力があるとします。「アイドル」は両方の能力を持っていますよね！\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ninterface A { a: string; }  // Aの特徴\\ninterface B { b: number; }  // Bの特徴\\n\\n// AとBの両方を継承\\ninterface C extends A, B {\\n    c: boolean;  // Cだけの特徴\\n}\\n\\nconst obj: C = { a: 'hi', b: 1, c: true };\\n// a, b, c すべて必要！\\n```"
         }
       ],
-      "correctCode": "// 基本のインターフェース\\ninterface Base {\\n    // idプロパティの型\\n    id: number;\\n}\\n\\n// extends でインターフェースを拡張\\ninterface User extends Base {\\n    // 名前プロパティの型\\n    name: string;\\n}\\n\\n// Userオブジェクト（id:1、名前:太郎）をuに代入\\nconst u: User = { id: 1, name: '太郎' };\\n// 名前を出力\\nconsole.log(u.name);",
+      "correctCode": "// 基本のインターフェース\\ninterface Base {\\n    // idプロパティの型\\n    id: number;\\n}\\n\\n// extends でインターフェースを拡張\\ninterface User extends Base {\\n    // 名前プロパティの型\\n    name: string;\\n}\\n\\n// Userオブジェクト（id:1、名前:たろう）をuに代入\\nconst u: User = { id: 1, name: 'たろう' };\\n// 名前を出力\\nconsole.log(u.name);",
       "holeyCode": "// 基本のインターフェース\\ninterface ___ {\\n    // idプロパティの型\\n    ___: ___;\\n}\\n\\n// extends でインターフェースを拡張\\ninterface ___ extends ___ {\\n    // 名前プロパティの型\\n    ___: ___;\\n}\\n\\n// Userオブジェクト（id:1、名前:太郎）をuに代入\\nconst ___: ___ = { ___: ___, ___: '___' };\\n// 名前を出力\\n___.___(___.___);",
       "correctLines": [
           "// 基本のインターフェース",
@@ -553,7 +553,7 @@ export const typescriptData2 = {
           "}",
           "",
           "// Userオブジェクト（id:1、名前:太郎）をuに代入",
-          "const u: User = { id: 1, name: '太郎' };",
+          "const u: User = { id: 1, name: 'たろう' };",
           "// 名前を出力",
           "console.log(u.name);"
         ],
@@ -582,12 +582,12 @@ export const typescriptData2 = {
             "with",
             "include"
           ],
-          "others": ["Base", "User", "u", "id", "name", "number", "string", "1", "太郎", "console", "log", "}"]
+          "others": ["Base", "User", "u", "id", "name", "number", "string", "1", "たろう", "console", "log", "}"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "太郎\\n"
+            "expected_output": "たろう\\n"
           }
         ]
       }

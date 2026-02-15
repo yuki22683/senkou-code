@@ -233,7 +233,7 @@ export const cData = {
           "*",
           "+"
         ],
-        "others": ["stdio.h", "main", "0", "printf", "\", 10 % 3);", "}", "include", "int", "%d", "%d\\n\", 10 % 3);", "return 0;"]
+        "others": ["stdio.h", "main", "0", "printf", "\", 10 % 3);", "}", "include", "int", "%d", "%d\\n\", 10 % 3);", "return 0;", "10", "3"]
       },
       "testCases": [
         {
@@ -433,8 +433,8 @@ export const cData = {
           "content": "# if（イフ）の使い方\\n\\n`if`（イフ）は英語で「もし」という意味です。\\n\\nC言語では、`if (条件)` のあとに `{ }` 波かっこを書いて、その中に「条件が正しいときにやること」を書きます。\\n\\n**比較に使う記号：**\\n- `>` : より大きい\\n- `<` : より小さい\\n- `>=` : 以上\\n- `<=` : 以下\\n- `==` : 等しい（等号が2つ！）\\n\\n**実際のコードを見てみましょう：**\\n```c\\nint temp = 35;  // 気温を35度とする\\nif (temp > 30) {  // もし気温が30より大きければ\\n    printf(\"暑い！\\n\");  // 「暑い！」と表示\\n}\\n```\\n\\n気温が30度より高いので、「暑い！」と表示されます。"
         }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int scoreでscoreを宣言し85を代入\\n    int score = 85;\\n    // ifでscoreが80以上か判定\\n    if (score >= 80) {\\n        // printfで「合格」を出力\\n        printf(\"合格\\n\");\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int scoreでscoreを宣言し85を代入\\n    ___ ___ = ___;\\n    // ifでscoreが80以上か判定\\n    ___ (___ ___ ___) {\\n        // printfで「合格」を出力\\n        ___(\"___\");\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int scoreでscoreを宣言し85を代入\\n    int score = 85;\\n    // ifでscoreが80以上か判定\\n    if (score >= 80) {\\n        // printfで「ごうかく」を出力\\n        printf(\"ごうかく\\n\");\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int scoreでscoreを宣言し85を代入\\n    ___ ___ = ___;\\n    // ifでscoreが80以上か判定\\n    ___ (___ ___ ___) {\\n        // printfで「ごうかく」を出力\\n        ___(\"___\");\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -444,8 +444,8 @@ export const cData = {
           "    int score = 85;",
           "    // ifでscoreが80以上か判定",
           "    if (score >= 80) {",
-          "        // printfで「合格」を出力",
-          "        printf(\"合格\\n\");",
+          "        // printfで「ごうかく」を出力",
+          "        printf(\"ごうかく\\n\");",
           "    // ifブロックを閉じる",
           "    }",
           "    // return 0で正常終了を返す",
@@ -477,12 +477,12 @@ export const cData = {
           "else",
           "while"
         ],
-        "others": ["stdio.h", "main", "85", "0", ">=", "printf", "\");", "}", "include", "int", "score", "80", "合格", "return 0;"]
+        "others": ["stdio.h", "main", "85", "0", ">=", "printf", "\");", "}", "include", "int", "score", "80", "ごうかく", "return 0;"]
       },
       "testCases": [
         {
           "input": "",
-          "expected_output": "合格\\n"
+          "expected_output": "ごうかく\\n"
         }
       ],
       "initialDisplayMode": "holey"
@@ -575,8 +575,8 @@ export const cData = {
                       "content": "# && と ||\\n\\n```c\\n// 両方の条件を満たす\\nif (age >= 18 && age <= 65) {\\n    // 働ける年齢\\n}\\n\\n// どちらかを満たす\\nif (day == 6 || day == 0) {\\n    // 週末\\n}\\n```"
               }
       ],
-      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int scoreでscoreを宣言し85を代入\\n    int score = 85;\\n    // ifと&&でscoreが80以上かつ100以下か判定\\n    if (score >= 80 && score <= 100) {\\n        // printfで「合格」を出力\\n        printf(\"合格\\n\");\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int scoreでscoreを宣言し85を代入\\n    ___ ___ = ___;\\n    // ifと&&でscoreが80以上かつ100以下か判定\\n    ___ (___ >= ___ ___ ___ <= ___) {\\n        // printfで「合格」を出力\\n        ___(\"___\");\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int scoreでscoreを宣言し85を代入\\n    int score = 85;\\n    // ifと&&でscoreが80以上かつ100以下か判定\\n    if (score >= 80 && score <= 100) {\\n        // printfで「ごうかく」を出力\\n        printf(\"ごうかく\\n\");\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// #includeでstdio.hを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\n___ ___() {\\n    // int scoreでscoreを宣言し85を代入\\n    ___ ___ = ___;\\n    // ifと&&でscoreが80以上かつ100以下か判定\\n    ___ (___ >= ___ ___ ___ <= ___) {\\n        // printfで「ごうかく」を出力\\n        ___(\"___\");\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    return ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// #includeでstdio.hを読み込む",
           "#include <stdio.h>",
@@ -586,8 +586,8 @@ export const cData = {
           "    int score = 85;",
           "    // ifと&&でscoreが80以上かつ100以下か判定",
           "    if (score >= 80 && score <= 100) {",
-          "        // printfで「合格」を出力",
-          "        printf(\"合格\\n\");",
+          "        // printfで「ごうかく」を出力",
+          "        printf(\"ごうかく\\n\");",
           "    // ifブロックを閉じる",
           "    }",
           "    // return 0で正常終了を返す",
@@ -619,12 +619,12 @@ export const cData = {
           "||",
           "!"
         ],
-        "others": ["stdio.h", "main", "85", "0", "80", "100", "printf", "\");", "}", "include", "int", "score", "合格", "return 0;"]
+        "others": ["stdio.h", "main", "85", "0", "80", "100", "printf", "\");", "}", "include", "int", "score", "ごうかく", "return 0;", "if"]
       },
       "testCases": [
         {
           "input": "",
-          "expected_output": "合格\\n"
+          "expected_output": "ごうかく\\n"
         }
       ],
       "initialDisplayMode": "holey"
@@ -756,7 +756,7 @@ export const cData = {
           ""
         ],
       "candidates": {
-        "others": ["stdio.h", "main", "p", "10", "x", "0", "Point", "y", "};", "printf", "\", p.x);", "}", "include", "int", "%d", "ainはプログラムのエントリーポイント", "// Point型の変数pを作成する", "// pのxメンバに10を代入する", "値を表示する", "// 正常終了を示す0を返す"]
+        "others": ["stdio.h", "main", "p", "10", "x", "0", "Point", "y", "};", "printf", "\", p.x);", "}", "include", "int", "%d", "ainはプログラムのエントリーポイント", "// Point型の変数pを作成する", "// pのxメンバに10を代入する", "値を表示する", "// 正常終了を示す0を返す", "struct"]
       },
       "testCases": [
         {

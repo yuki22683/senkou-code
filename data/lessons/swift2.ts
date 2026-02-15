@@ -605,8 +605,8 @@ export const swift2Data = {
           "content": "# 目標\\n\\n色の列挙型を作って、switchで判定しましょう。\\n\\n1. `Color` enumを作る（red, green, blue）\\n2. `Color.red` を変数に入れる\\n3. switchで各ケースを判定して色名を表示"
         }
       ],
-      "correctCode": "// enumで列挙型を定義\\nenum Color {\\n    // caseでケースを定義\\n    case red, green, blue\\n// ブロックを閉じる\\n}\\n// 赤色をcに代入\\nlet c = Color.red\\n// switchでパターンマッチ\\nswitch c {\\n// ケース分岐\\ncase .red:\\n    // 赤色を出力\\n    print(\"赤\")\\n// ケース分岐\\ncase .green:\\n    // 緑色を出力\\n    print(\"緑\")\\n// ケース分岐\\ncase .blue:\\n    // 青色を出力\\n    print(\"青\")\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// enumで列挙型を定義\\nenum ___ ___\\n    // caseでケースを定義\\n    case ___, ___, ___\\n// ブロックを閉じる\\n___\\n// 赤色をcに代入\\nlet ___ = ___.___\\n// switchでパターンマッチ\\nswitch ___ ___\\n// ケース分岐\\ncase .___:\\n    // 赤色を出力\\n    ___(___)\\n// ケース分岐\\ncase .___:\\n    // 緑色を出力\\n    ___(___)\\n// ケース分岐\\ncase .___:\\n    // 青色を出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// enumで列挙型を定義\\nenum Color {\\n    // caseでケースを定義\\n    case red, green, blue\\n// ブロックを閉じる\\n}\\n// 赤色をcに代入\\nlet c = Color.red\\n// switchでパターンマッチ\\nswitch c {\\n// ケース分岐\\ncase .red:\\n    // 赤色を出力\\n    print(\"あか\")\\n// ケース分岐\\ncase .green:\\n    // みどり色を出力\\n    print(\"みどり\")\\n// ケース分岐\\ncase .blue:\\n    // あお色を出力\\n    print(\"あお\")\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// enumで列挙型を定義\\nenum ___ ___\\n    // caseでケースを定義\\n    case ___, ___, ___\\n// ブロックを閉じる\\n___\\n// 赤色をcに代入\\nlet ___ = ___.___\\n// switchでパターンマッチ\\nswitch ___ ___\\n// ケース分岐\\ncase .___:\\n    // 赤色を出力\\n    ___(___)\\n// ケース分岐\\ncase .___:\\n    // みどり色を出力\\n    ___(___)\\n// ケース分岐\\ncase .___:\\n    // あお色を出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// enumで列挙型を定義",
           "enum Color {",
@@ -620,16 +620,16 @@ export const swift2Data = {
           "switch c {",
           "// ケース分岐",
           "case .red:",
-          "    // 赤色を出力",
-          "    print(\"赤\")",
+          "    // あか色を出力",
+          "    print(\"あか\")",
           "// ケース分岐",
           "case .green:",
-          "    // 緑色を出力",
-          "    print(\"緑\")",
+          "    // みどり色を出力",
+          "    print(\"みどり\")",
           "// ケース分岐",
           "case .blue:",
-          "    // 青色を出力",
-          "    print(\"青\")",
+          "    // あお色を出力",
+          "    print(\"あお\")",
           "// ブロックを閉じる",
           "}"
         ],
@@ -663,12 +663,12 @@ export const swift2Data = {
           "keywords": [
             "enum"
           ],
-          "others": ["red", "c", "green", "blue", "Color", "}", "print", "{", "\"赤\"", "\"緑\"", "\"青\"", "// 赤色をcに代入", "witchでパターンマッチ", "ed:", "int(\"赤\")", "// 緑色を出力"]
+          "others": ["red", "c", "green", "blue", "Color", "}", "print", "{", "\"あか\"", "\"みどり\"", "\"あお\"", "// 赤色をcに代入", "witchでパターンマッチ", "ed:", "int(\"あか\")", "// 緑色を出力"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "赤\\n"
+            "expected_output": "あか\\n"
           }
         ]
       }

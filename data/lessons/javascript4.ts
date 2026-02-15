@@ -163,7 +163,7 @@ export const javascriptData4 = {
       "holeyCode": "// name: '太郎', age: 25 のオブジェクトを定義\\nconst ___ = { ___: ___, ___: ___ };\\n// entries でキーと値のペアを取得\\nfor (const [___, ___] of ___.___(___)) {\\n  // テンプレートリテラルで出力\\n  ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// name: '太郎', age: 25 のオブジェクトを定義",
-          "const user = { name: '太郎', age: 25 };",
+          "const user = { name: 'たろう', age: 25 };",
           "// entries でキーと値のペアを取得",
           "for (const [key, value] of Object.entries(user)) {",
           "  // テンプレートリテラルで出力",
@@ -185,12 +185,12 @@ export const javascriptData4 = {
             "keys",
             "values"
           ],
-          "others": ["user", "name", "'太郎'", "age", "25", "key", "value", "Object", "`${key}: ${value}`", "console", "log", "}"]
+          "others": ["user", "name", "'たろう'", "age", "25", "key", "value", "Object", "`${key}: ${value}`", "console", "log", "}"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "name: 太郎\\nage: 25\\n"
+            "expected_output": "name: たろう\\nage: 25\\n"
           }
         ]
       },
@@ -379,7 +379,7 @@ export const javascriptData4 = {
             "--",
             "+="
           ],
-          "others": ["createCounter", "count", "0", "++count", "++count;", "counter", "console", "log", "}", "// カウンターを作成", "の呼び出し", "// counter関数を呼び出し（2回目）", "// counter関数を呼び出し（3回目）"]
+          "others": ["createCounter", "count", "0", "++count", "++count;", "counter", "console", "log", "}", "// カウンターを作成", "の呼び出し", "// counter関数を呼び出し（2回目）", "// counter関数を呼び出し（3回目）", "nter関数を呼び出し（1回目）"]
         },
         "testCases": [
           {

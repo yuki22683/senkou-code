@@ -533,7 +533,7 @@ export const goData = {
           "content": "# どっちを使う？\\n\\n**&&（かつ）：両方とも正しいとき**\\n```go\\nif score >= 70 && bonus > 0 {\\n    // 70点以上「かつ」ボーナスあり\\n    fmt.Println(\"合格！\")\\n}\\n```\\n\\n**||（または）：どちらか1つでも正しいとき**\\n```go\\nif isHoliday || isWeekend {\\n    // 祝日「または」週末\\n    fmt.Println(\"お休み！\")\\n}\\n```\\n\\n**覚え方：**\\n- `&&` → 「A **と** B」両方必要\\n- `||` → 「A **か** B」どっちかでOK"
         }
       ],
-      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でscoreに80を代入\\n    score := 80\\n    // :=でbonusに10を代入\\n    bonus := 10\\n    // ifで&&（かつ）を使って両方の条件をチェック\\n    if score >= 70 && bonus > 0 {\\n        // fmt.Printlnで\"ボーナス合格！\"を出力\\n        fmt.Println(\"ボーナス合格！\")\\n    }\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // :=でscoreに80を代入\\n    ___ := ___\\n    // :=でbonusに10を代入\\n    ___ := ___\\n    // ifで&&（かつ）を使って両方の条件をチェック\\n    if ___ ___ ___ && ___ ___ ___ {\\n        // fmt.Printlnで\"ボーナス合格！\"を出力\\n        ___.___(\\\"___\\\")\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でscoreに80を代入\\n    score := 80\\n    // :=でbonusに10を代入\\n    bonus := 10\\n    // ifで&&（かつ）を使って両方の条件をチェック\\n    if score >= 70 && bonus > 0 {\\n        // fmt.Printlnで\"ボーナスごうかく！\"を出力\\n        fmt.Println(\"ボーナスごうかく！\")\\n    }\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // :=でscoreに80を代入\\n    ___ := ___\\n    // :=でbonusに10を代入\\n    ___ := ___\\n    // ifで&&（かつ）を使って両方の条件をチェック\\n    if ___ ___ ___ && ___ ___ ___ {\\n        // fmt.Printlnで\"ボーナスごうかく！\"を出力\\n        ___.___(\\\"___\\\")\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// package mainでモジュールを宣言",
           "package main",
@@ -547,8 +547,8 @@ export const goData = {
           "    bonus := 10",
           "    // ifで&&（かつ）を使って両方の条件をチェック",
           "    if score >= 70 && bonus > 0 {",
-          "        // fmt.Printlnで\"ボーナス合格！\"を出力",
-          "        fmt.Println(\"ボーナス合格！\")",
+          "        // fmt.Printlnで\"ボーナスごうかく！\"を出力",
+          "        fmt.Println(\"ボーナスごうかく！\")",
           "    }",
           "}"
         ],
@@ -573,12 +573,12 @@ export const goData = {
             ">=",
             ">"
           ],
-          "others": ["main", "fmt", "main()", "score", "bonus", "Println", "}", "import", "80", "10", "70", "0", "ボーナス合格！", "fmt\"", "score := 80", "/", "fmt.Println(\"ボーナス合格！\")"]
+          "others": ["main", "fmt", "main()", "score", "bonus", "Println", "}", "import", "80", "10", "70", "0", "ボーナスごうかく！", "fmt\"", "score := 80", "/", "fmt.Println(\"ボーナスごうかく！\")"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "ボーナス合格！\\n"
+            "expected_output": "ボーナスごうかく！\\n"
           }
         ]
       },
@@ -732,7 +732,7 @@ export const goData = {
           "functions": [
             "greet"
           ],
-          "others": ["main", "fmt", "greet()", "Println", "}", "main()", "import", "こんにちは", "fmt\"", "fmt.Println("]
+          "others": ["main", "fmt", "greet()", "Println", "}", "main()", "import", "こんにちは", "fmt\"", "fmt.Println(", "// func mainでmain関数を定義", "/"]
         },
         "testCases": [
           {

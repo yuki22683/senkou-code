@@ -85,7 +85,7 @@ export const rust3Data = {
             "'b",
             "'static"
           ],
-          "others": ["first", "s", "str", "1", "}", "main", "String", "from", "println", "&s", "", "a", "Hello"]
+          "others": ["first", "s", "str", "1", "}", "main", "String", "from", "println", "&s", "", "a", "Hello", "// fnでmain関数を定義", "// letとString::fromでsに\"Hello\"を作成", "irst関数（引数sの参照）の結果を出力"]
         },
         "testCases": [
           {
@@ -400,7 +400,7 @@ export const rust3Data = {
             "!",
             "."
           ],
-          "others": ["divide", "a", "i32", "b", "Result", "str", "0", "Err", "Ok", "}", "{", "calc", "10", "2", "x", "main", "println", "", "if b == 0 {", "lse", "ivide", "aに10,", "Ok(x * 2)", "fn main() {"]
+          "others": ["divide", "a", "i32", "b", "Result", "str", "0", "Err", "Ok", "}", "{", "calc", "10", "2", "x", "main", "println", "", "if b == 0 {", "lse", "ivide", "aに10,", "Ok(x * 2)", "fn main() {", "// fnでcalc関数を定義（戻り値Result型）", "fn calc() -> Result<i32, &'static str> {", "let x = divide", ")?;", "2)", "// println!でcalc()の結果を出力"]
         },
         "testCases": [
           {

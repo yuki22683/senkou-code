@@ -533,8 +533,8 @@ export const assembly3Data = {
           "content": "# test 先, 元\\n\\n特定のビットが立っているか確認するのに使います。\\n\\n```asm\\ntest rax, 1  ; 最下位ビットをチェック\\njnz odd      ; 0でなければジャンプ\\n```"
         }
       ],
-      "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに5をセット\\n  mov rax, 5\\n  ; ビット検査(rax AND 1)\\n  test rax, 1\\n  ; 0でなければ(奇数なら)ジャンプ\\n  jnz is_odd\\n  ; 0なら(偶数なら)rdi=0\\n  mov rdi, 0\\n  jmp done\\nis_odd:\\n  ; rdi=1\\n  mov rdi, 1\\ndone:\\n  ; 終了\\n  mov rax, 60\\n  syscall",
-      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\\n  ___ ___\\n\\n; ラベルを定義\\n___:\\n  ; raxに5をセット\\n  ___ ___, ___\\n  ; ビット検査(rax AND 1)\\n  ___ ___, ___\\n  ; 0でなければ(奇数なら)ジャンプ\\n  ___ ___\\n  ; 0なら(偶数なら)rdi=0\\n  ___ ___, ___\\n  ; 無条件ジャンプ\\n  ___ ___\\n; ラベルを定義\\n___:\\n  ; rdi=1\\n  ___ ___, ___\\n; ラベルを定義\\n___:\\n  ; 終了\\n  ___ ___, ___\\n  ; システムコール実行\\n  ___",
+      "correctCode": "; テキストセクション\\nsection .text\\n  global _start\\n\\n_start:\\n  ; raxに5をセット\\n  mov rax, 5\\n  ; ビット検査(rax AND 1)\\n  test rax, 1\\n  ; 0でなければ(きすうなら)ジャンプ\\n  jnz is_odd\\n  ; 0なら(ぐうすうなら)rdi=0\\n  mov rdi, 0\\n  jmp done\\nis_odd:\\n  ; rdi=1\\n  mov rdi, 1\\ndone:\\n  ; 終了\\n  mov rax, 60\\n  syscall",
+      "holeyCode": "; テキストセクション\\n___ .___\\n  ; グローバルシンボルを宣言\\n  ___ ___\\n\\n; ラベルを定義\\n___:\\n  ; raxに5をセット\\n  ___ ___, ___\\n  ; ビット検査(rax AND 1)\\n  ___ ___, ___\\n  ; 0でなければ(きすうなら)ジャンプ\\n  ___ ___\\n  ; 0なら(ぐうすうなら)rdi=0\\n  ___ ___, ___\\n  ; 無条件ジャンプ\\n  ___ ___\\n; ラベルを定義\\n___:\\n  ; rdi=1\\n  ___ ___, ___\\n; ラベルを定義\\n___:\\n  ; 終了\\n  ___ ___, ___\\n  ; システムコール実行\\n  ___",
       "correctLines": [
           "; テキストセクション",
           "section .text",
@@ -545,9 +545,9 @@ export const assembly3Data = {
           "  mov rax, 5",
           "  ; ビット検査(rax AND 1)",
           "  test rax, 1",
-          "  ; 0でなければ(奇数なら)ジャンプ",
+          "  ; 0でなければ(きすうなら)ジャンプ",
           "  jnz is_odd",
-          "  ; 0なら(偶数なら)rdi=0",
+          "  ; 0なら(ぐうすうなら)rdi=0",
           "  mov rdi, 0",
           "  jmp done",
           "is_odd:",

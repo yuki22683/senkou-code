@@ -380,7 +380,7 @@ export const kotlin4Data = {
             "fun",
             "val"
           ],
-          "others": ["Service", "config", "String", "setup", "c", "s", "main", "println", "\"OK\"", "}", "// main 関数を定義する", "// Service のインスタンスを作成する", "etup", "び出す", "// s", "config を出力する"]
+          "others": ["Service", "config", "String", "setup", "c", "s", "main", "println", "\"OK\"", "}", "// main 関数を定義する", "// Service のインスタンスを作成する", "etup", "び出す", "// s", "config を出力する", "etupメソッドを呼び出す", "// sのconfigを出力する"]
         },
         "testCases": [
           {
@@ -527,7 +527,7 @@ export const kotlin4Data = {
             "fun",
             "return"
           ],
-          "others": ["T", "typeOf", "String", "simpleName", "Unknown", "main", "println", "typeOf<String>()", "}", "typeOf<String>", "// main 関数を定義する", "// typeOf<String>"]
+          "others": ["T", "typeOf", "String", "simpleName", "Unknown", "main", "println", "typeOf<String>()", "}", "typeOf<String>", "// main 関数を定義する", "// typeOf<String>", "// typeOf関数（String型）を呼び出して出力"]
         },
         "testCases": [
           {

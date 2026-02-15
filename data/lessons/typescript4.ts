@@ -526,7 +526,7 @@ export const typescriptData4 = {
           "content": "# 引数を再利用する\\n\\n既存の関数と同じ引数を使いたいときに便利です。\\n\\n## たとえ話\\n\\n「この関数と同じ材料で、別の料理を作る」ような感じです。引数の型を一から書かなくて済みます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nfunction greet(name: string, age: number): void {\\n  console.log(`${name} is ${age}`);\\n}\\n\\n// 関数の引数の型を取得\\ntype GreetParams = Parameters<typeof greet>;\\n// [string, number]\\n\\n// 同じ型の引数を使える！\\nconst args: GreetParams = ['Taro', 25];\\ngreet(...args);  // 'Taro is 25'\\n```"
         }
       ],
-      "correctCode": "// 名前と年齢を表示する関数を定義\\nfunction greet(name: string, age: number): void {\\n  // テンプレート文字列で出力\\n  console.log(`${name} is ${age}`);\\n}\\n\\n// Parametersで関数の引数型を取得\\ntype GreetParams = Parameters<typeof greet>;\\n// 引数の配列（'太郎', 25）をargsに代入\\nconst args: GreetParams = ['太郎', 25];\\n// greet関数をargsを展開して呼び出す\\ngreet(...args);",
+      "correctCode": "// 名前と年齢を表示する関数を定義\\nfunction greet(name: string, age: number): void {\\n  // テンプレート文字列で出力\\n  console.log(`${name} is ${age}`);\\n}\\n\\n// Parametersで関数の引数型を取得\\ntype GreetParams = Parameters<typeof greet>;\\n// 引数の配列（'たろう', 25）をargsに代入\\nconst args: GreetParams = ['たろう', 25];\\n// greet関数をargsを展開して呼び出す\\ngreet(...args);",
       "holeyCode": "// 名前と年齢を表示する関数を定義\\n___ ___(___: ___, ___: ___): ___ {\\n  // テンプレート文字列で出力\\n  ___.___(___${___} is ${___}___);\\n}\\n\\n// Parametersで関数の引数型を取得\\ntype ___ = ___<typeof ___>;\\n// 引数の配列（'太郎', 25）をargsに代入\\nconst ___: ___ = [___, ___];\\n// greet関数をargsを展開して呼び出す\\n___(___);",
       "correctLines": [
           "// 名前と年齢を表示する関数を定義",
@@ -538,7 +538,7 @@ export const typescriptData4 = {
           "// Parametersで関数の引数型を取得",
           "type GreetParams = Parameters<typeof greet>;",
           "// 引数の配列（'太郎', 25）をargsに代入",
-          "const args: GreetParams = ['太郎', 25];",
+          "const args: GreetParams = ['たろう', 25];",
           "// greet関数をargsを展開して呼び出す",
           "greet(...args);"
         ],
@@ -563,12 +563,12 @@ export const typescriptData4 = {
             "const",
             "typeof"
           ],
-          "others": ["greet", "name", "string", "age", "number", "void", "console", "log", "`", "}", "GreetParams", "Parameters", "args", "'太郎'", "25", "...args", "// テンプレート文字列で出力", "type GreetParams = Parameters<typeof greet>;", "gs: GreetParams = ['太郎', 25];", "...args);"]
+          "others": ["greet", "name", "string", "age", "number", "void", "console", "log", "`", "}", "GreetParams", "Parameters", "args", "'たろう'", "25", "...args", "// テンプレート文字列で出力", "type GreetParams = Parameters<typeof greet>;", "gs: GreetParams = ['たろう', 25];", "...args);"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "太郎 is 25\\n"
+            "expected_output": "たろう is 25\\n"
           }
         ]
       },

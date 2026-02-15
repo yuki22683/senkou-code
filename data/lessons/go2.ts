@@ -90,7 +90,7 @@ export const go2Data = {
           "keywords": [
             "return", "if"
           ],
-          "others": ["main", "fmt", "minmax", "a", "b", "int", "min", "max", "5", "3", "Println", "}", "ax", "fmt\"", "< b {", "return a, b", "b,", "順で返す", "// minmax関数（第1引数に5, 第2引数に3）を呼び出してmin, maxに代入", "ntln(min", "max)"]
+          "others": ["main", "fmt", "minmax", "a", "b", "int", "min", "max", "5", "3", "Println", "}", "ax", "fmt\"", "< b {", "return a, b", "b,", "順で返す", "// minmax関数（第1引数に5, 第2引数に3）を呼び出してmin, maxに代入", "ntln(min", "max)", "// b, aの順でreturn", "func main() {", "in, max := minmax", "fmt.Println(min"]
         },
         "testCases": [
           {

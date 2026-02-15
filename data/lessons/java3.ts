@@ -571,7 +571,7 @@ export const javaData3 = {
             "->",
             "."
           ],
-          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "names", "Arrays", "asList", "アリス", "ボブ", "forEach", "System", "out", "println", "}", ""]
+          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "names", "Arrays", "asList", "アリス", "ボブ", "forEach", "System", "out", "println", "}", "", "out::println"]
         },
         "testCases": [
           {
@@ -719,7 +719,7 @@ export const javaData3 = {
             "stream",
             "forEach"
           ],
-          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "System", "out", "::", "println", "}", ""]
+          "others": ["java", "util", "*;", "Main", "main", "String", "args", "List", "Integer", "nums", "Arrays", "1", "2", "3", "System", "out", "::", "println", "}", "", "out::println);"]
         },
         "testCases": [
           {

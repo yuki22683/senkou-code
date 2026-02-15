@@ -126,7 +126,7 @@ export const rust2Data = {
           "operators": [
             "&"
           ],
-          "others": ["print_len", "s", "String", "println", "len", "}", "main", "text", "from", "println!", "\"{}\", s.len());", "ain() {", "// & で参照を渡す"]
+          "others": ["print_len", "s", "String", "println", "len", "}", "main", "text", "from", "println!", "\"{}\", s.len());", "ain() {", "// & で参照を渡す", "fn main() {", "let text = String::from", "t_len(&text);"]
         },
         "testCases": [
           {
@@ -180,7 +180,7 @@ export const rust2Data = {
           "keywords": [
             "mut"
           ],
-          "others": ["add_world", "s", "String", "push_str", "}", "main", "text", "from", "println", " world", "hello", "world", "// s.push_str", "\" world\")を呼び出す", "// mut で可変変数にする"]
+          "others": ["add_world", "s", "String", "push_str", "}", "main", "text", "from", "println", " world", "hello", "world", "// s.push_str", "\" world\")を呼び出す", "// mut で可変変数にする", "fn main() {", "let mut text = String::from", "d(&mut", "xt);", "println!"]
         },
         "testCases": [
           {
@@ -233,7 +233,7 @@ export const rust2Data = {
           "keywords": [
             "struct"
           ],
-          "others": ["Rect", "width", "height", "i32", "}", "main", "r", "3", "4", "println", ", r", "ain() {", "println!(\"{}\", r.width);"]
+          "others": ["Rect", "width", "height", "i32", "}", "main", "r", "3", "4", "println", ", r", "ain() {", "println!(\"{}\", r.width);", "fn main() {", "let r = Rect { width: 3, height: 4 };", "tln!(\"{}\",", "width);"]
         },
         "testCases": [
           {
@@ -296,7 +296,7 @@ export const rust2Data = {
           "keywords": [
             "impl"
           ],
-          "others": ["Square", "side", "i32", "}", "area", "self", "5", "main", "s", "println", ", s", "e:", "mpl でメソッドを実装", "fn area(&self) -> i32 {", "{", "tln!(\"{}\", s", "area());"]
+          "others": ["Square", "side", "i32", "}", "area", "self", "5", "main", "s", "println", ", s", "e:", "mpl でメソッドを実装", "fn area(&self) -> i32 {", "{", "tln!(\"{}\", s", "area());", "// implでSquareにメソッドを実装", "/", "// sideの2乗を返す", "ain() {", "let s = Square { side: 5 };", "println!"]
         },
         "testCases": [
           {
@@ -357,7 +357,7 @@ export const rust2Data = {
           "keywords": [
             "enum", "match"
           ],
-          "others": ["Direction", "Up", "Down", "}", "main", "d", "println", "ain() {", "match d {", "Direction::Down => println!"]
+          "others": ["Direction", "Up", "Down", "}", "main", "d", "println", "ain() {", "match d {", "Direction::Down => println!", "fn main() {", "let d = Direction::Up;", "h", "{", "rection::Up"]
         },
         "testCases": [
           {
@@ -407,7 +407,7 @@ export const rust2Data = {
           "keywords": [
             "match"
           ],
-          "others": ["main", "val", "Option", "i32", "Some", "42", "n", "println", "None", "}", "{}", "none", "// Some で値があることを示す", "h val {", "ne"]
+          "others": ["main", "val", "Option", "i32", "Some", "42", "n", "println", "None", "}", "{}", "none", "// Some で値があることを示す", "h val {", "ne", "// letでvalにSome", "atchでvalをパターンマッチ", "// Noneなら\"none\"を出力"]
         },
         "testCases": [
           {
@@ -433,7 +433,7 @@ export const rust2Data = {
       "correctLines": [
           "// fnでhalf関数を定義（n: i32を受け取りResult<i32, String>を返す）",
           "fn half(n: i32) -> Result<i32, String> {",
-          "    // ifでnが奇数か判定",
+          "    // ifでnがきすうか判定",
           "    if n % 2 != 0 {",
           "        // Errで\"odd\"エラーを返す",
           "        return Err(\"odd\".to_string());",
@@ -470,7 +470,7 @@ export const rust2Data = {
           "keywords": [
             "if", "return", "match"
           ],
-          "others": ["half", "n", "i32", "Result", "String", "2", "0", "Err", "to_string", "}", "Ok", "main", "10", "v", "println", "e", "odd", "{}", "if n % 2 != 0 {", "ain() {", "v)", "println!(\"{}\", v"]
+          "others": ["half", "n", "i32", "Result", "String", "2", "0", "Err", "to_string", "}", "Ok", "main", "10", "v", "println", "e", "odd", "{}", "if n % 2 != 0 {", "ain() {", "v)", "println!(\"{}\", v", "// Okでn/2を返す", "// matchでhalf(10)をパターンマッチ", "// Ok"]
         },
         "testCases": [
           {
@@ -537,7 +537,7 @@ export const rust2Data = {
           "keywords": [
             "trait", "impl", "for", "struct"
           ],
-          "others": ["Speak", "speak", "self", "}", "Dog", "println", "main", "d", "impl Speak for Dog {", "println!(\"ワン！\")", "d = Dog;", "eak();"]
+          "others": ["Speak", "speak", "self", "}", "Dog", "println", "main", "d", "impl Speak for Dog {", "println!(\"ワン！\")", "d = Dog;", "eak();", "// structでDog構造体を定義", "でDogにSpeakを実装", "/", "peakメソッドを定義", "// println!で「ワン！」を出力", "ain() {", "let d = Dog;", "d.speak"]
         },
         "testCases": [
           {
@@ -587,7 +587,7 @@ export const rust2Data = {
           "variables": [
             "T"
           ],
-          "others": ["print_val", "std", "fmt", "Display", "val", "println", "}", "main", "42", "print_val(42);"]
+          "others": ["print_val", "std", "fmt", "Display", "val", "println", "}", "main", "42", "print_val(42);", "fn main() {", "\"こんにちは\""]
         },
         "testCases": [
           {

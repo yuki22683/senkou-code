@@ -415,16 +415,16 @@ export const javascriptData5 = {
           "content": "# 絶対に重複しないユニークな値\\n\\n**Symbol** は、世界に一つだけの「印」を作る機能です。\\n\\n**身近なたとえ：**\\n指紋は人それぞれ違いますよね。Symbol も同じで、作るたびに必ず違う値になります。同じ名前で作っても、中身は別物です！\\n\\n**なぜ使う？**\\n- プロパティ名の衝突を避けられる\\n- 「隠し」プロパティを作れる\\n\\n**コード例：**\\n```javascript\\nconst id = Symbol('id');\\nconst obj = {\\n  [id]: 12345  // [id] で Symbol をキーにする\\n};\\nconsole.log(obj[id]);  // 12345\\n```"
         }
       ],
-      "correctCode": "// Symbol関数を引数'秘密'で呼び出しsecretに代入\\nconst secret = Symbol('秘密');\\n// userオブジェクトを作成\\nconst user = {\\n  // nameに'太郎'を設定\\n  name: '太郎',\\n  // 秘密キーにパスワードを設定\\n  [secret]: 'パスワード123'\\n};\\n// ユーザー名を出力\\nconsole.log(user.name);\\n// 秘密キーの値を出力\\nconsole.log(user[secret]);",
-      "holeyCode": "// Symbol関数を引数'秘密'で呼び出しsecretに代入\\n___ ___ = ___('___');\\n// userオブジェクトを作成\\n___ ___ = {\\n  // nameに'太郎'を設定\\n  ___: '___',\\n  // 秘密キーにパスワードを設定\\n  [___]: '___'\\n};\\n// ユーザー名を出力\\n___.___(___.___);\\n// 秘密キーの値を出力\\n___.___(___[___]);",
+      "correctCode": "// Symbol関数を引数'秘密'で呼び出しsecretに代入\\nconst secret = Symbol('秘密');\\n// userオブジェクトを作成\\nconst user = {\\n  // nameに'太郎'を設定\\n  name: '太郎',\\n  // 秘密キーにパスワードを設定\\n  [secret]: 'パスワード123'\\n};\\n// ユーザー名を出力\\nconsole.log(user.name);\\n// ひみつキーの値を出力\\nconsole.log(user[secret]);",
+      "holeyCode": "// Symbol関数を引数'秘密'で呼び出しsecretに代入\\n___ ___ = ___('___');\\n// userオブジェクトを作成\\n___ ___ = {\\n  // nameに'太郎'を設定\\n  ___: '___',\\n  // 秘密キーにパスワードを設定\\n  [___]: '___'\\n};\\n// ユーザー名を出力\\n___.___(___.___);\\n// ひみつキーの値を出力\\n___.___(___[___]);",
       "correctLines": [
           "// Symbol関数を引数'秘密'で呼び出しsecretに代入",
-          "const secret = Symbol('秘密');",
+          "const secret = Symbol('ひみつ');",
           "// userオブジェクトを作成",
           "const user = {",
-          "  // nameに'太郎'を設定",
-          "  name: '太郎',",
-          "  // 秘密キーにパスワードを設定",
+          "  // nameに'たろう'を設定",
+          "  name: 'たろう',",
+          "  // ひみつキーにパスワードを設定",
           "  [secret]: 'パスワード123'",
           "};",
           "// ユーザー名を出力",
@@ -453,12 +453,12 @@ export const javascriptData5 = {
             "let",
             "var"
           ],
-          "others": ["secret", "Symbol", "秘密", "user", "name", "太郎", "パスワード123", "console", "log"]
+          "others": ["secret", "Symbol", "ひみつ", "user", "name", "たろう", "パスワード123", "console", "log"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "太郎\\nパスワード123\\n"
+            "expected_output": "たろう\\nパスワード123\\n"
           }
         ]
       },
@@ -471,8 +471,8 @@ export const javascriptData5 = {
           "content": "# 弱参照のMap\\n\\n**WeakMap** は、オブジェクトをキーにできる特殊な Map です。\\n\\n**「弱参照」って何？**\\nオブジェクトが不要になったら、自動で片付けられる（ガベージコレクション）という意味です。メモリを節約できます！\\n\\n**身近なたとえ：**\\n付箋（メモ）を本に貼るイメージです。本を捨てたら、付箋も一緒に捨てられます。\\n\\n**コード例：**\\n```javascript\\nconst cache = new WeakMap();\\nconst obj = {};\\ncache.set(obj, 'cached value');  // キーはオブジェクト\\nconsole.log(cache.get(obj));     // 'cached value'\\n```\\n\\n**使いどころ：**\\nプライベートなデータを安全に保存したいとき"
         }
       ],
-      "correctCode": "// privateDataにWeakMapインスタンスを代入\\nconst privateData = new WeakMap();\\n\\n// Userクラスを定義\\nclass User {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // 秘密データをWeakMapに保存\\n    privateData.set(this, { password: '秘密' });\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  getPassword() {\\n    // WeakMapから秘密データを取得して返す\\n    return privateData.get(this).password;\\n  }\\n}\\n\\n// userにUserインスタンス（引数'太郎'）を代入\\nconst user = new User('太郎');\\n// パスワードを取得して表示\\nconsole.log(user.getPassword());",
-      "holeyCode": "// privateDataにWeakMapインスタンスを代入\\n___ ___ = ___ ___();\\n___\\n// Userクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // 秘密データをWeakMapに保存\\n    ___.___(this, { ___: '___' });\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // ブロックを開始\\n  ___() {\\n    // WeakMapから秘密データを取得して返す\\n    ___ ___.___(this).___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// userにUserインスタンス（引数'太郎'）を代入\\n___ ___ = ___ ___('___');\\n// パスワードを取得して表示\\n___.___(___.___());",
+      "correctCode": "// privateDataにWeakMapインスタンスを代入\\nconst privateData = new WeakMap();\\n\\n// Userクラスを定義\\nclass User {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // 秘密データをWeakMapに保存\\n    privateData.set(this, { password: 'ひみつ' });\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  getPassword() {\\n    // WeakMapからひみつデータを取得して返す\\n    return privateData.get(this).password;\\n  }\\n}\\n\\n// userにUserインスタンス（引数'たろう'）を代入\\nconst user = new User('たろう');\\n// パスワードを取得して表示\\nconsole.log(user.getPassword());",
+      "holeyCode": "// privateDataにWeakMapインスタンスを代入\\n___ ___ = ___ ___();\\n___\\n// Userクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // 秘密データをWeakMapに保存\\n    ___.___(this, { ___: '___' });\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // ブロックを開始\\n  ___() {\\n    // WeakMapからひみつデータを取得して返す\\n    ___ ___.___(this).___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// userにUserインスタンス（引数'たろう'）を代入\\n___ ___ = ___ ___('___');\\n// パスワードを取得して表示\\n___.___(___.___());",
       "correctLines": [
           "// privateDataにWeakMapインスタンスを代入",
           "const privateData = new WeakMap();",
@@ -481,19 +481,19 @@ export const javascriptData5 = {
           "class User {",
           "  // constructorでnameを初期化",
           "  constructor(name) {",
-          "    // 秘密データをWeakMapに保存",
-          "    privateData.set(this, { password: '秘密' });",
+          "    // ひみつデータをWeakMapに保存",
+          "    privateData.set(this, { password: 'ひみつ' });",
           "    // this.nameにnameを代入",
           "    this.name = name;",
           "  }",
           "  getPassword() {",
-          "    // WeakMapから秘密データを取得して返す",
+          "    // WeakMapからひみつデータを取得して返す",
           "    return privateData.get(this).password;",
           "  }",
           "}",
           "",
-          "// userにUserインスタンス（引数'太郎'）を代入",
-          "const user = new User('太郎');",
+          "// userにUserインスタンス（引数'たろう'）を代入",
+          "const user = new User('たろう');",
           "// パスワードを取得して表示",
           "console.log(user.getPassword());"
         ],
@@ -528,12 +528,12 @@ export const javascriptData5 = {
             "new",
             "return"
           ],
-          "others": ["privateData", "WeakMap", "User", "constructor", "name", "set", "password", "秘密", "this", "getPassword", "get", "user", "太郎", "console", "log", "}", "getPassword() {", "return privateData.get", "userにnew User('太郎')を代入", "// パスワードを取得して表示", "console.log(user.getPassword());", "userにUserインスタンス（引数'太郎'）を代入"]
+          "others": ["privateData", "WeakMap", "User", "constructor", "name", "set", "password", "ひみつ", "this", "getPassword", "get", "user", "たろう", "console", "log", "}", "getPassword() {", "return privateData.get", "userにnew User('たろう')を代入", "// パスワードを取得して表示", "console.log(user.getPassword());", "userにUserインスタンス（引数'たろう'）を代入", "userにUserインスタンス（引数'たろう'）を代入"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "秘密\\n"
+            "expected_output": "ひみつ\\n"
           }
         ]
       },
@@ -546,8 +546,8 @@ export const javascriptData5 = {
           "content": "# 操作を「横取り」する\\n\\n**Proxy** は、オブジェクトへの操作を途中でキャッチして、カスタマイズできる機能です。\\n\\n**身近なたとえ：**\\n「受付係」を想像してください。お客さん（コード）が社員（オブジェクト）に会いたいとき、受付係が間に入って「名前を聞く」「記録を残す」などができます。\\n\\n**できること：**\\n- プロパティにアクセスしたときの処理を変える\\n- 存在しないプロパティに「デフォルト値」を返す\\n- アクセスをログに残す\\n\\n**コード例：**\\n```javascript\\nconst handler = {\\n  get(target, prop) {\\n    // ない場合は 'not found' を返す\\n    return prop in target ? target[prop] : 'not found';\\n  }\\n};\\nconst obj = new Proxy({}, handler);\\n```"
         }
       ],
-      "correctCode": "// ハンドラオブジェクトを定義\\nconst handler = {\\n  // get トラップを定義\\n  get(target, prop) {\\n    // アクセスをログ出力\\n    console.log(`Getting ${prop}`);\\n    // return でプロパティ値を返す\\n    return target[prop];\\n  }\\n};\\n// name: '太郎' を持つオブジェクトの操作をインターセプト\\nconst user = new Proxy({ name: '太郎' }, handler);\\n// name プロパティにアクセス\\nconsole.log(user.name);",
-      "holeyCode": "// ハンドラオブジェクトを定義\\n___ ___ = {\\n  // get トラップを定義\\n  ___(___,___) {\\n    // アクセスをログ出力\\n    ___.___(`Getting ${___}`);\\n    // return でプロパティ値を返す\\n    ___ ___[___];\\n  // ブロックを閉じる\\n  ___\\n};\\n// name: '太郎' を持つオブジェクトの操作をインターセプト\\n___ ___ = ___ ___({ ___: '___' }, ___);\\n// name プロパティにアクセス\\n___.___(___.___);",
+      "correctCode": "// ハンドラオブジェクトを定義\\nconst handler = {\\n  // get トラップを定義\\n  get(target, prop) {\\n    // アクセスをログ出力\\n    console.log(`Getting ${prop}`);\\n    // return でプロパティ値を返す\\n    return target[prop];\\n  }\\n};\\n// name: 'たろう' を持つオブジェクトの操作をインターセプト\\nconst user = new Proxy({ name: 'たろう' }, handler);\\n// name プロパティにアクセス\\nconsole.log(user.name);",
+      "holeyCode": "// ハンドラオブジェクトを定義\\n___ ___ = {\\n  // get トラップを定義\\n  ___(___,___) {\\n    // アクセスをログ出力\\n    ___.___(`Getting ${___}`);\\n    // return でプロパティ値を返す\\n    ___ ___[___];\\n  // ブロックを閉じる\\n  ___\\n};\\n// name: 'たろう' を持つオブジェクトの操作をインターセプト\\n___ ___ = ___ ___({ ___: '___' }, ___);\\n// name プロパティにアクセス\\n___.___(___.___);",
       "correctLines": [
           "// ハンドラオブジェクトを定義",
           "const handler = {",
@@ -560,7 +560,7 @@ export const javascriptData5 = {
           "  }",
           "};",
           "// name: '太郎' を持つオブジェクトの操作をインターセプト",
-          "const user = new Proxy({ name: '太郎' }, handler);",
+          "const user = new Proxy({ name: 'たろう' }, handler);",
           "// name プロパティにアクセス",
           "console.log(user.name);"
         ],
@@ -586,12 +586,12 @@ export const javascriptData5 = {
             "new",
             "return"
           ],
-          "others": ["handler", "get", "target", "prop", "console", "log", "Proxy", "user", "name", "太郎", "}", "//", "パティにアクセス"]
+          "others": ["handler", "get", "target", "prop", "console", "log", "Proxy", "user", "name", "たろう", "}", "//", "パティにアクセス"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "Getting name\\n太郎\\n"
+            "expected_output": "Getting name\\nたろう\\n"
           }
         ]
       }

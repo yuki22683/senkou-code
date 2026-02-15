@@ -79,7 +79,7 @@ export const c4Data = {
             "fprintf",
             "printf"
           ],
-          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "テスト.txt", "w", "NULL", "Hello", "\");", "Done", "}", "0", "ello", "// fpにfopen", "if", "NULL) {", "fclose(fp);"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "テスト.txt", "w", "NULL", "Hello", "\");", "Done", "}", "0", "ello", "// fpにfopen", "if", "NULL) {", "fclose(fp);", "return"]
         },
         "testCases": [
           {
@@ -155,7 +155,7 @@ export const c4Data = {
             "fputs",
             "printf"
           ],
-          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "データ.txt", "w", "NULL", "Data", "\", fp);", "Closed", "\");", "}", "0", "FILE *fp = fopen", "puts", "p);", "fclose(fp);", "rn 0;"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "データ.txt", "w", "NULL", "Data", "\", fp);", "Closed", "\");", "}", "0", "FILE *fp = fopen", "puts", "p);", "fclose(fp);", "rn 0;", "if", "return"]
         },
         "testCases": [
           {
@@ -231,7 +231,7 @@ export const c4Data = {
             "fprintf",
             "printf"
           ],
-          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "log.txt", "w", "NULL", "Score: %d", "\", 100);", "Written", "\");", "}", "0", "core: %d", "FILE *fp = fopen", "/ fpにフォーマット文字列と値100を書き込む", "fclose(fp);"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "log.txt", "w", "NULL", "Score: %d", "\", 100);", "Written", "\");", "}", "0", "core: %d", "FILE *fp = fopen", "/ fpにフォーマット文字列と値100を書き込む", "fclose(fp);", "if", "100", "return"]
         },
         "testCases": [
           {
@@ -326,7 +326,7 @@ export const c4Data = {
             "strcspn",
             "sizeof"
           ],
-          "others": ["include", "stdio.h", "string.h", "", "int", "main", "char", "line", "100", "FILE", "fp", "テスト.txt", "w", "Hello World", "\");", "r", "\")] = 0;", "%s", "\", line);", "0", "}", "ello World", "izeof", "char line[100];", "fprintf(fp,", "\"Hello World\\n\");", "pen", "zeof(line), fp);", "printf(\"%s\\n\", line);", "return 0;"]
+          "others": ["include", "stdio.h", "string.h", "", "int", "main", "char", "line", "100", "FILE", "fp", "テスト.txt", "w", "Hello World", "\");", "r", "\")] = 0;", "%s", "\", line);", "0", "}", "ello World", "izeof", "char line[100];", "fprintf(fp,", "\"Hello World\\n\");", "pen", "zeof(line), fp);", "printf(\"%s\\n\", line);", "return 0;", "return"]
         },
         "testCases": [
           {
@@ -400,7 +400,7 @@ export const c4Data = {
             "fgetc",
             "printf"
           ],
-          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "pos.txt", "w+", "ABCDEFGHIJ", "0", "SEEK_SET", "%c", "\", fgetc(fp));", "}", "EEK_SET", "FILE *fp = fopen", "//", "seek(fp,", "SEEK_SET)で先頭に移動", "fgetc(fp", "return 0;"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "pos.txt", "w+", "ABCDEFGHIJ", "0", "SEEK_SET", "%c", "\", fgetc(fp));", "}", "EEK_SET", "FILE *fp = fopen", "//", "seek(fp,", "SEEK_SET)で先頭に移動", "fgetc(fp", "return 0;", "return"]
         },
         "testCases": [
           {
@@ -478,7 +478,7 @@ export const c4Data = {
             "ftell",
             "printf"
           ],
-          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "size.txt", "w+", "12345", "0", "SEEK_END", "long", "size", "%ld", "\", size);", "}", "EEK_END", "FILE *fp = fopen", "fseek(fp,", ",", "EK_END);", "long size = ftell", "p);", "fp);"]
+          "others": ["include", "stdio.h", "", "int", "main", "FILE", "fp", "size.txt", "w+", "12345", "0", "SEEK_END", "long", "size", "%ld", "\", size);", "}", "EEK_END", "FILE *fp = fopen", "fseek(fp,", ",", "EK_END);", "long size = ftell", "p);", "fp);", "return"]
         },
         "testCases": [
           {
@@ -541,7 +541,7 @@ export const c4Data = {
           "keywords": [
             "enum"
           ],
-          "others": ["include", "stdio.h", "", "Day", "MON", "TUE", "WED", "THU", "FRI", "int", "main", "today", "%d", "\", today);", "0", "}", "UE", "ED", "HU", "RI", "printf", "enum Day today = WED;", "n", "0;"]
+          "others": ["include", "stdio.h", "", "Day", "MON", "TUE", "WED", "THU", "FRI", "int", "main", "today", "%d", "\", today);", "0", "}", "UE", "ED", "HU", "RI", "printf", "enum Day today = WED;", "n", "0;", "return"]
         },
         "testCases": [
           {
@@ -620,7 +620,7 @@ export const c4Data = {
           "keywords": [
             "union"
           ],
-          "others": ["include", "stdio.h", "", "Value", "int", "i", "double", "d", "};", "main", "v", "42", "printf", "%d", "\", v.i);", "0", "}", "2", "union Value v;", "v.i = 42;", "return 0;"]
+          "others": ["include", "stdio.h", "", "Value", "int", "i", "double", "d", "};", "main", "v", "42", "printf", "%d", "\", v.i);", "0", "}", "2", "union Value v;", "v.i = 42;", "return 0;", "return"]
         },
         "testCases": [
           {
@@ -682,7 +682,7 @@ export const c4Data = {
           ""
         ],
         "candidates": {
-          "others": ["include", "stdio.h", "", "int", "main", "x", "100", "p", "pp", "printf", "%d", "\", **pp);", "0", "}", "int x = 100;", "//", "**", "重ポインタを宣言", "printf(\"%d\\n\",", "*pp);"]
+          "others": ["include", "stdio.h", "", "int", "main", "x", "100", "p", "pp", "printf", "%d", "\", **pp);", "0", "}", "int x = 100;", "//", "**", "重ポインタを宣言", "printf(\"%d\\n\",", "*pp);", "return"]
         },
         "testCases": [
           {
@@ -783,7 +783,7 @@ export const c4Data = {
             "va_arg",
             "va_end"
           ],
-          "others": ["include", "stdio.h", "stdarg.h", "", "int", "sum", "count", "va_list", "args", "total", "0", "i", "}", "main", "printf", "%d", "\", sum(3, 10, 20, 30));", "ount", "nt", "va_list args;", "va_start(args,", "count)", "for", "int i = 0; i < count; i++) {", "n", "total;", "printf(\"%d\\n\", sum(3, 10, 20, 30));"]
+          "others": ["include", "stdio.h", "stdarg.h", "", "int", "sum", "count", "va_list", "args", "total", "0", "i", "}", "main", "printf", "%d", "\", sum(3, 10, 20, 30));", "ount", "nt", "va_list args;", "va_start(args,", "count)", "for", "int i = 0; i < count; i++) {", "n", "total;", "printf(\"%d\\n\", sum(3, 10, 20, 30));", "return", "3", "10", "20", "30"]
         },
         "testCases": [
           {

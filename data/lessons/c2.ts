@@ -62,7 +62,7 @@ export const c2Data = {
           "operators": [
             "&"
           ],
-          "others": ["include", "stdio.h", "int", "main", "x", "42", "p", "printf", "%d\\n", "return", "0", "}", "%d", "//", "xのアドレスを取得する演算子", "printf(\"%d\\n\",", "p);"]
+          "others": ["include", "stdio.h", "int", "main", "x", "42", "p", "printf", "%d\\n", "return", "0", "}", "%d", "//", "xのアドレスを取得する演算子", "printf(\"%d\\n\",", "p);", "&x"]
         },
         "testCases": [
           {
@@ -507,7 +507,7 @@ export const c2Data = {
           "functions": [
             "malloc", "free"
           ],
-          "others": ["include", "stdio.h", "stdlib.h", "int", "main", "p", "50", "printf", "%d\\n", "return", "0", "}", "%d", "*p", ";", "// 確保したメモリを解放する関数", "return 0;"]
+          "others": ["include", "stdio.h", "stdlib.h", "int", "main", "p", "50", "printf", "%d\\n", "return", "0", "}", "%d", "*p", ";", "// 確保したメモリを解放する関数", "return 0;", "sizeof"]
         },
         "testCases": [
           {

@@ -113,7 +113,7 @@ export const rust4Data = {
             "fn",
             "let"
           ],
-          "others": ["Speak", "speak", "self", "String", "}", "Dog", "from", "ワン！", "main", "dog", "println", "{"]
+          "others": ["Speak", "speak", "self", "String", "}", "Dog", "from", "ワン！", "main", "dog", "println", "{", "// structでDog構造体を定義", "// implでDogにSpeakトレイトを実装", "/", "peakメソッドを実装", "// String::fromで\"ワン！\"を返す", "fn main() {", "// letでdogにDogインスタンスを代入", "// dogのspeakメソッドを呼び出して出力"]
         },
         "testCases": [
           {
@@ -174,7 +174,7 @@ export const rust4Data = {
             "cfg",
             "allow"
           ],
-          "others": ["Debug", "User", "name", "String", "age", "u32", "}", "main", "user", "from", "アリス", "30", "println", "let user = User { name: String::from(\"アリス\"), age: 30 };", "println!(\"{:?}\", user);"]
+          "others": ["Debug", "User", "name", "String", "age", "u32", "}", "main", "user", "from", "アリス", "30", "println", "let user = User { name: String::from(\"アリス\"), age: 30 };", "println!(\"{:?}\", user);", "// fnでmain関数を定義", "// letでuserにUserインスタンスを作成（nameに\"アリス\"、ageに30）", "rintln!でuserをデバッグ出力"]
         },
         "testCases": [
           {
@@ -415,7 +415,7 @@ export const rust4Data = {
           "content": "# 複雑な条件分岐\\n\\n```rust\\nmatch Some(5) {\\n    Some(x) if x % 2 == 0 => println!(\"even\"),\\n    Some(x) => println!(\"odd: {}\", x),\\n    None => println!(\"none\"),\\n}\\n```"
         }
       ],
-      "correctCode": "// fnでmain関数を定義\\nfn main() {\\n    // letでnumに7を代入\\n    let num = 7;\\n    // matchでnumをパターンマッチ\\n    match num {\\n        // n % 2 == 0（偶数）の場合にマッチ\\n        n if n % 2 == 0 => println!(\"偶数\"),\\n        // その他全て（奇数）にマッチ\\n        _ => println!(\"奇数\"),\\n    }\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___() {\\n    // letでnumに7を代入\\n    let ___ = ___;\\n    // matchでnumをパターンマッチ\\n    match ___ {\\n        // n % 2 == 0（偶数）の場合にマッチ\\n        ___ if ___ % ___ == ___ => ___!(\\\"___\\\"),\\n        // その他全て（奇数）にマッチ\\n        ___ => ___!(\\\"___\\\"),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fnでmain関数を定義\\nfn main() {\\n    // letでnumに7を代入\\n    let num = 7;\\n    // matchでnumをパターンマッチ\\n    match num {\\n        // n % 2 == 0（偶数）の場合にマッチ\\n        n if n % 2 == 0 => println!(\"偶数\"),\\n        // その他全て（きすう）にマッチ\\n        _ => println!(\"きすう\"),\\n    }\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___() {\\n    // letでnumに7を代入\\n    let ___ = ___;\\n    // matchでnumをパターンマッチ\\n    match ___ {\\n        // n % 2 == 0（偶数）の場合にマッチ\\n        ___ if ___ % ___ == ___ => ___!(\\\"___\\\"),\\n        // その他全て（きすう）にマッチ\\n        ___ => ___!(\\\"___\\\"),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// fnでmain関数を定義",
           "fn main() {",
@@ -423,10 +423,10 @@ export const rust4Data = {
           "    let num = 7;",
           "    // matchでnumをパターンマッチ",
           "    match num {",
-          "        // n % 2 == 0（偶数）の場合にマッチ",
-          "        n if n % 2 == 0 => println!(\"偶数\"),",
-          "        // その他全て（奇数）にマッチ",
-          "        _ => println!(\"奇数\"),",
+          "        // n % 2 == 0（ぐうすう）の場合にマッチ",
+          "        n if n % 2 == 0 => println!(\"ぐうすう\"),",
+          "        // その他全て（きすう）にマッチ",
+          "        _ => println!(\"きすう\"),",
           "    }",
           "}"
         ],
@@ -449,12 +449,12 @@ export const rust4Data = {
             "let",
             "fn"
           ],
-          "others": ["main", "num", "7", "n", "2", "0", "println", "偶数", "_", "奇数", "}", "let num = 7;", "//", "でマッチガードを追加", "=>"]
+          "others": ["main", "num", "7", "n", "2", "0", "println", "ぐうすう", "_", "きすう", "}", "let num = 7;", "//", "でマッチガードを追加", "=>"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "奇数\\n"
+            "expected_output": "きすう\\n"
           }
         ]
       },
@@ -509,7 +509,7 @@ export const rust4Data = {
             "for",
             "in"
           ],
-          "others": ["doubles", "n", "i32", "Iterator", "Item", "0", "map", "|x|", "x", "2", "}", "main", "3", "println", "fn main() {", "for x in doubles(3) {"]
+          "others": ["doubles", "n", "i32", "Iterator", "Item", "0", "map", "|x|", "x", "2", "}", "main", "3", "println", "fn main() {", "for x in doubles(3) {", "// fnでmain関数を定義", "// for inでdoubles", "//", "ntln!でxを出力"]
         },
         "testCases": [
           {

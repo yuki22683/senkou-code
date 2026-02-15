@@ -2,7 +2,7 @@ export const kotlinData = {
   "language": "kotlin",
   "lessonId": "kotlin-1",
   "lessonTitle": "Kotlin (コトリン) に挑戦！",
-  "lessonDescription": "Android（アンドロイド）スマホのアプリ作りなどで大人気の言葉「Kotlin（コトリン）」のきほんを学びましょう。新しくて使いやすい機能がたくさんあります。",
+  "lessonDescription": "Android（アンドロイド）スマホのアプリ作りなどでおとな気の言葉「Kotlin（コトリン）」のきほんを学びましょう。新しくて使いやすい機能がたくさんあります。",
   "lessonDifficulty": "easy",
   "lessonOrder": 1,
   "tutorialSlides": [
@@ -332,8 +332,8 @@ export const kotlinData = {
           "val bonus = 10",
           "// ifで&&を使い両方の条件をチェック",
           "if (score >= 70 && bonus > 0) {",
-          "    // printlnで「ボーナス合格！」を出力",
-          "    println(\"ボーナス合格！\")",
+          "    // printlnで「ボーナスごうかく！」を出力",
+          "    println(\"ボーナスごうかく！\")",
           "// ifブロックを閉じる",
           "}"
         ],
@@ -356,12 +356,12 @@ export const kotlinData = {
             "&",
             "|"
           ],
-          "others": ["score", "bonus", "80", "10", "70", "0", "println", "}", "{", "ボーナス合格！", ">=", ">"]
+          "others": ["score", "bonus", "80", "10", "70", "0", "println", "}", "{", "ボーナスごうかく！", ">=", ">"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "ボーナス合格！\\n"
+            "expected_output": "ボーナスごうかく！\\n"
           }
         ]
       },

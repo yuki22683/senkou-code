@@ -399,8 +399,8 @@ export const csharpData = {
           "if (score > 80)",
           "// ブロックを開始",
           "{",
-          "    // 「合格！」と表示する",
-          "    Console.WriteLine(\"合格！\");",
+          "    // 「ごうかく！」と表示する",
+          "    Console.WriteLine(\"ごうかく！\");",
           "// ブロックを閉じる",
           "}"
         ],
@@ -426,14 +426,14 @@ export const csharpData = {
             "80"
           ],
           "strings": [
-            "合格！"
+            "ごうかく！"
           ],
           "others": ["int", "score", ">", "{", "Console", "WriteLine", "}", "// 「合格！」と表示する"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "合格！\\n"
+            "expected_output": "ごうかく！\\n"
           }
         ]
       },
@@ -450,8 +450,8 @@ export const csharpData = {
           "content": "# if-else文の書き方\\n\\n条件にあてはまらなかったときの動きは `else` を使って書きます。\\n\\n**コード例（年齢で大人か子供か判定）：**\\n```csharp\\nint age = 10;\\nif (age >= 20)\\n{\\n    Console.WriteLine(\"大人\");\\n}\\nelse\\n{\\n    Console.WriteLine(\"子供\");\\n}\\n```\\n=> 子供\\n\\n**解説：**\\n1. `age >= 20` は「ageが20以上か？」という条件\\n2. ageは10なので、条件は正しくない（False）\\n3. だから `else` の中の「子供」が表示される"
         }
       ],
-      "correctCode": "// ageに10を入れる\\nint age = 10;\\n// 20歳以上かどうかで分ける\\nif (age >= 20)\\n// ブロックを開始\\n{\\n    // 「大人」と出力\\n    Console.WriteLine(\"大人\");\\n// ブロックを閉じる\\n}\\n// else でそれ以外の場合\\nelse\\n// ブロックを開始\\n{\\n    // 「子供」と出力\\n    Console.WriteLine(\"子供\");\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// ageに10を入れる\\n___ ___ = ___;\\n// 20歳以上かどうかで分ける\\nif (___ ___ ___)\\n// ブロックを開始\\n___\\n    // 「大人」と出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___\\n// else でそれ以外の場合\\n___\\n// ブロックを開始\\n___\\n    // 「子供」と出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___",
+      "correctCode": "// ageに10を入れる\\nint age = 10;\\n// 20歳以上かどうかで分ける\\nif (age >= 20)\\n// ブロックを開始\\n{\\n    // 「大人」と出力\\n    Console.WriteLine(\"大人\");\\n// ブロックを閉じる\\n}\\n// else でそれ以外の場合\\nelse\\n// ブロックを開始\\n{\\n    // 「こども」と出力\\n    Console.WriteLine(\"こども\");\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// ageに10を入れる\\n___ ___ = ___;\\n// 20歳以上かどうかで分ける\\nif (___ ___ ___)\\n// ブロックを開始\\n___\\n    // 「大人」と出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___\\n// else でそれ以外の場合\\n___\\n// ブロックを開始\\n___\\n    // 「こども」と出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ageに10を入れる",
           "int age = 10;",
@@ -459,16 +459,16 @@ export const csharpData = {
           "if (age >= 20)",
           "// ブロックを開始",
           "{",
-          "    // 「大人」と出力",
-          "    Console.WriteLine(\"大人\");",
+          "    // 「おとな」と出力",
+          "    Console.WriteLine(\"おとな\");",
           "// ブロックを閉じる",
           "}",
           "// else でそれ以外の場合",
           "else",
           "// ブロックを開始",
           "{",
-          "    // 「子供」と出力",
-          "    Console.WriteLine(\"子供\");",
+          "    // 「こども」と出力",
+          "    Console.WriteLine(\"こども\");",
           "// ブロックを閉じる",
           "}"
         ],
@@ -502,15 +502,15 @@ export const csharpData = {
             "20"
           ],
           "strings": [
-            "大人",
-            "子供"
+            "おとな",
+            "こども"
           ],
           "others": ["int", "age", ">=", "{", "Console", "WriteLine", "}", "else", "// 「大人」と出力", "// 「子供」と出力"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "子供\\n"
+            "expected_output": "こども\\n"
           }
         ]
       },
@@ -538,8 +538,8 @@ export const csharpData = {
           "if (score >= 70 && bonus > 0)",
           "// ブロックを開始",
           "{",
-          "    // 「ボーナスあり合格」と表示",
-          "    Console.WriteLine(\"ボーナスあり合格\");",
+          "    // 「ボーナスありごうかく」と表示",
+          "    Console.WriteLine(\"ボーナスありごうかく\");",
           "// ブロックを閉じる",
           "}"
         ],
@@ -564,12 +564,12 @@ export const csharpData = {
             ">=",
             ">"
           ],
-          "others": ["int", "score", "bonus", "80", "10", "70", "0", "{", "Console", "WriteLine", "ボーナスあり合格", "}", "//", "方の条件をチェック"]
+          "others": ["int", "score", "bonus", "80", "10", "70", "0", "{", "Console", "WriteLine", "ボーナスありごうかく", "}", "//", "方の条件をチェック"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "ボーナスあり合格\\n"
+            "expected_output": "ボーナスありごうかく\\n"
           }
         ]
       },
@@ -590,7 +590,7 @@ export const csharpData = {
       "holeyCode": "// 名前配列（太郎、花子）をnamesに代入\\n___[] ___ = {\"___\", \"___\"};\\n// 順番に取り出すループ\\nforeach (___ ___ in ___)\\n// ブロックを開始\\n___\\n    // 取り出した名前を表示\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// 名前配列（太郎、花子）をnamesに代入",
-          "string[] names = {\"太郎\", \"花子\"};",
+          "string[] names = {\"たろう\", \"はなこ\"};",
           "// 順番に取り出すループ",
           "foreach (string name in names)",
           "// ブロックを開始",
@@ -621,15 +621,15 @@ export const csharpData = {
             "name"
           ],
           "strings": [
-            "太郎",
-            "花子"
+            "たろう",
+            "はなこ"
           ],
           "others": ["string", "names", "{", "Console", "WriteLine", "}", "// 取り出した名前を表示"]
         },
         "testCases": [
           {
             "input": "",
-            "expected_output": "太郎\\n花子\\n"
+            "expected_output": "たろう\\nはなこ\\n"
           }
         ]
       },

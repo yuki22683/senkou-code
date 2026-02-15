@@ -151,7 +151,7 @@ export const php2Data = {
           "keywords": [
             "class", "public", "function", "new", "echo"
           ],
-          "others": ["<?php", "?>", "}", "Counter", "count", "c", "this", "cnt", "5", "__construct", "// Counterクラスを定義", "//", "_construct($c)でコンストラクタを定義", "// 自身のcountプロパティに$cを代入", "cntにnew Counter(5)を代入", "// $cntのcountプロパティを出力", ">"]
+          "others": ["<?php", "?>", "}", "Counter", "count", "c", "this", "cnt", "5", "__construct", "// Counterクラスを定義", "//", "_construct($c)でコンストラクタを定義", "// 自身のcountプロパティに$cを代入", "cntにnew Counter(5)を代入", "// $cntのcountプロパティを出力", ">", "_constructコンストラクタ（引数$c）を定義", "cntにCounterインスタンス（引数5）を代入"]
         },
         "testCases": [
           {
@@ -333,7 +333,7 @@ export const php2Data = {
           "keywords": [
             "fn"
           ],
-          "others": ["<?php", "?>", "nums", "squared", "array_map", "print_r", "n", "$n", "1", "2", "3", "// 数値配列（1、2、3）を$numsに代入", "/", "numsの各要素を2乗してsquaredに代入", "int_rで配列を出力"]
+          "others": ["<?php", "?>", "nums", "squared", "array_map", "print_r", "n", "$n", "1", "2", "3", "// 数値配列（1、2、3）を$numsに代入", "/", "numsの各要素を2乗してsquaredに代入", "int_rで配列を出力", "sの各要素を2乗してsquaredに代入"]
         },
         "testCases": [
           {

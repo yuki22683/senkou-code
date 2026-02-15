@@ -526,7 +526,7 @@ export const javaData5 = {
             "new",
             "int"
           ],
-          "others": ["java", "util", "*;", "", "Main", "main", "String", "args", "Scanner", "sc", "\"42 こんにちは\"", "num", "nextInt", "word", "next", "System", "out", "println", "\" \"", "}", "\"", "+ word", "public class Main {", "にnew", "読み込む", "//", "み込む", "rintln", "力する"]
+          "others": ["java", "util", "*;", "", "Main", "main", "String", "args", "Scanner", "sc", "\"42 こんにちは\"", "num", "nextInt", "word", "next", "System", "out", "println", "\" \"", "}", "\"", "+ word", "public class Main {", "にnew", "読み込む", "//", "み込む", "rintln", "力する", "に新しいScanner（引数「42"]
         },
         "testCases": [
           {

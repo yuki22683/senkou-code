@@ -416,6 +416,11 @@ export function MobileCodeEditor({
     };
   }, []);
 
+  // 行が変わった時にボタンの選択状態をリセット
+  useEffect(() => {
+    setClickedButtonIdx(null);
+  }, [cursor.line]);
+
   useEffect(() => {
     if (!correctLines || correctLines.length === 0) return;
 
