@@ -206,6 +206,34 @@ async function seedDatabase() {
   console.log('✅ Database seeding completed!');
   console.log(`   ${totalLessons} lessons created`);
   console.log(`   ${totalExercises} exercises created`);
+
+  // 重複演習チェック
+  console.log('\nChecking for duplicate exercises...');
+  const { data: allExercises, error: checkError } = await supabase
+    .from('exercises')
+    .select('title, lesson_id');
+
+  if (checkError) {
+    console.error('❌ Error checking duplicates:', checkError.message);
+  } else {
+    const counts = new Map<string, number>();
+    for (const ex of allExercises) {
+      const key = `${ex.lesson_id}:${ex.title}`;
+      counts.set(key, (counts.get(key) || 0) + 1);
+    }
+    const duplicates = [...counts.entries()].filter(([_, count]) => count > 1);
+
+    if (duplicates.length === 0) {
+      console.log('✅ No duplicate exercises found');
+    } else {
+      console.log('❌ Duplicate exercises found:');
+      for (const [key, count] of duplicates) {
+        console.log(`   ${key} (${count} duplicates)`);
+      }
+      console.log('\n⚠️  Run: npx ts-node scripts/delete-exercise.ts "タイトル"');
+      console.log('   Then re-run: npm run seed:db');
+    }
+  }
 }
 
 // スクリプト実行
