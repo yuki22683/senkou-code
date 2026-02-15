@@ -41,10 +41,10 @@ export const elixir3Data = {
           "content": "構造体はキーが決まった辞書です。defstructで定義します。\\n\\n```elixir\\ndefmodule User do\\n  defstruct name: \"\", age: 0\\nend\\n\\nuser = %User{name: \"Alice\", age: 25}\\nuser.name  # \"Alice\"\\n```"
         }
       ],
-      "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Person do\\n  # defstructで構造体を定義\\n  defstruct name: \"\", email: \"\"\\n# endでモジュールを閉じる\\nend\\n\\n# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成\\nperson = %Person{name: \"ボブ\", email: \"bob@example.com\"}",
-      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ ___\\n  # defstructで構造体を定義\\n  defstruct ___: \"___\", ___: \"___\"\\n# endでモジュールを閉じる\\n___\\n___\\n# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成\\n___ = %____{___: \"___\", ___: \"___\"}",
+      "correctCode": "# defmoduleでPersonモジュールを定義\\ndefmodule Person do\\n  # defstructで構造体を定義\\n  defstruct name: \"\", email: \"\"\\n# endでモジュールを閉じる\\nend\\n\\n# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成\\nperson = %Person{name: \"ボブ\", email: \"bob@example.com\"}",
+      "holeyCode": "# defmoduleでPersonモジュールを定義\\ndefmodule ___ ___\\n  # defstructで構造体を定義\\n  defstruct ___: \"___\", ___: \"___\"\\n# endでモジュールを閉じる\\n___\\n___\\n# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成\\n___ = %____{___: \"___\", ___: \"___\"}",
       "correctLines": [
-          "# defmoduleでモジュールを定義",
+          "# defmoduleでPersonモジュールを定義",
           "defmodule Person do",
           "  # defstructで構造体を定義",
           "  defstruct name: \"\", email: \"\"",
@@ -93,10 +93,10 @@ export const elixir3Data = {
           "content": "構造体は辞書と同様に更新できます。\\n\\n```elixir\\nuser = %User{name: \"Alice\", age: 25}\\nupdated = %{user | age: 26}\\n# %User{name: \"Alice\", age: 26}\\n\\n# Map.putも使える\\nupdated2 = Map.put(user, :age, 27)\\n```"
         }
       ],
-      "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Product do\\n  # defstructで構造体を定義\\n  defstruct name: \"\", price: 0\\n# endでモジュールを閉じる\\nend\\n\\n# nameに\"Book\"、priceに1000を指定して構造体を作成\\nproduct = %Product{name: \"Book\", price: 1000}\\n# |で辞書を更新（priceを1200に）\\nupdated = %{product | price: 1200}",
-      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ ___\\n  # defstructで構造体を定義\\n  defstruct ___: \"___\", ___: ___\\n# endでモジュールを閉じる\\n___\\n___\\n# nameに\"Book\"、priceに1000を指定して構造体を作成\\n___ = %____{___: \"___\", ___: ___}\\n# |で辞書を更新（priceを1200に）\\n___ = %{___ | ___: ___}",
+      "correctCode": "# defmoduleでProductモジュールを定義\\ndefmodule Product do\\n  # defstructで構造体を定義\\n  defstruct name: \"\", price: 0\\n# endでモジュールを閉じる\\nend\\n\\n# nameに\"Book\"、priceに1000を指定して構造体を作成\\nproduct = %Product{name: \"Book\", price: 1000}\\n# |で辞書を更新（priceを1200に）\\nupdated = %{product | price: 1200}",
+      "holeyCode": "# defmoduleでProductモジュールを定義\\ndefmodule ___ ___\\n  # defstructで構造体を定義\\n  defstruct ___: \"___\", ___: ___\\n# endでモジュールを閉じる\\n___\\n___\\n# nameに\"Book\"、priceに1000を指定して構造体を作成\\n___ = %____{___: \"___\", ___: ___}\\n# |で辞書を更新（priceを1200に）\\n___ = %{___ | ___: ___}",
       "correctLines": [
-          "# defmoduleでモジュールを定義",
+          "# defmoduleでProductモジュールを定義",
           "defmodule Product do",
           "  # defstructで構造体を定義",
           "  defstruct name: \"\", price: 0",
@@ -293,10 +293,10 @@ export const elixir3Data = {
           "content": "with式は複数のパターンマッチを連鎖させ、すべて成功した場合のみdoブロックを実行します。\\n\\n```elixir\\nwith {:ok, file} <- File.read(\"test.txt\"),\\n     {:ok, json} <- Jason.decode(file) do\\n  {:ok, json}\\nelse\\n  {:error, reason} -> {:error, reason}\\nend\\n```"
         }
       ],
-      "correctCode": "# defで関数を定義\\ndef process(map) do\\n  # withでパターンマッチを連鎖\\n  with {:ok, name} <- Map.fetch(map, :name),\\n       {:ok, age} <- Map.fetch(map, :age) do\\n    {:ok, \"#{name} is #{age}歳です\"}\\n  # elseでエラー処理\\n  else\\n    :error -> {:error, \"Missing field\"}\\n  # endでブロックを閉じる\\n  end\\n# endで関数を閉じる\\nend",
-      "holeyCode": "# defで関数を定義\\ndef ___(___)___\\n  # withでパターンマッチを連鎖\\n  with {___, ___} <- ___.___(___, ___),\\n       # タプルを返す\\n       {___, ___} <- ___.___(___, ___) ___\\n    # タプルを返す\\n    {___, \"___\"}\\n  # elseでエラー処理\\n  ___\\n    # パターンマッチの分岐\\n    ___ -> {___, \"___\"}\\n  # endでブロックを閉じる\\n  ___\\n# endで関数を閉じる\\n___",
+      "correctCode": "# defでprocess関数を定義\\ndef process(map) do\\n  # withでパターンマッチを連鎖\\n  with {:ok, name} <- Map.fetch(map, :name),\\n       {:ok, age} <- Map.fetch(map, :age) do\\n    {:ok, \"#{name} is #{age}歳です\"}\\n  # elseでエラー処理\\n  else\\n    :error -> {:error, \"Missing field\"}\\n  # endでブロックを閉じる\\n  end\\n# endで関数を閉じる\\nend",
+      "holeyCode": "# defでprocess関数を定義\\ndef ___(___)___\\n  # withでパターンマッチを連鎖\\n  with {___, ___} <- ___.___(___, ___),\\n       # タプルを返す\\n       {___, ___} <- ___.___(___, ___) ___\\n    # タプルを返す\\n    {___, \"___\"}\\n  # elseでエラー処理\\n  ___\\n    # パターンマッチの分岐\\n    ___ -> {___, \"___\"}\\n  # endでブロックを閉じる\\n  ___\\n# endで関数を閉じる\\n___",
       "correctLines": [
-          "# defで関数を定義",
+          "# defでprocess関数を定義",
           "def process(map) do",
           "  # withでパターンマッチを連鎖",
           "  with {:ok, name} <- Map.fetch(map, :name),",
@@ -351,10 +351,10 @@ export const elixir3Data = {
           "content": "プロトコルはポリモーフィズムを実現します。\\n\\n```elixir\\ndefprotocol Stringify do\\n  def to_string(data)\\nend\\n\\ndefimpl Stringify, for: Integer do\\n  def to_string(num), do: Integer.to_string(num)\\nend\\n```"
         }
       ],
-      "correctCode": "# defprotocolでプロトコルを定義\\ndefprotocol Describable do\\n  # defで関数を宣言\\n  def describe(data)\\n# endでプロトコルを閉じる\\nend",
-      "holeyCode": "# defprotocolでプロトコルを定義\\ndefprotocol ___ ___\\n  # defで関数を宣言\\n  def ___(_____)\\n# endでプロトコルを閉じる\\n___",
+      "correctCode": "# defprotocolでDescribableプロトコルを定義\\ndefprotocol Describable do\\n  # defで関数を宣言\\n  def describe(data)\\n# endでプロトコルを閉じる\\nend",
+      "holeyCode": "# defprotocolでDescribableプロトコルを定義\\ndefprotocol ___ ___\\n  # defで関数を宣言\\n  def ___(_____)\\n# endでプロトコルを閉じる\\n___",
       "correctLines": [
-          "# defprotocolでプロトコルを定義",
+          "# defprotocolでDescribableプロトコルを定義",
           "defprotocol Describable do",
           "  # defで関数を宣言",
           "  def describe(data)",
@@ -394,12 +394,12 @@ export const elixir3Data = {
           "content": "defimplで特定の型にプロトコルを実装します。\\n\\n```elixir\\ndefimpl Stringify, for: List do\\n  def to_string(list) do\\n    Enum.join(list, \", \")\\n  end\\nend\\n\\nStringify.to_string([1, 2, 3])  # \"1, 2, 3\"\\n```"
         }
       ],
-      "correctCode": "# defimplでプロトコルを実装\\ndefimpl Describable, for: Map do\\n  # defで関数を定義\\n  def describe(map) do\\n    \"Map with #{map_size(map)} keys\"\\n  # endで関数を閉じる\\n  end\\n# endでブロックを閉じる\\nend",
-      "holeyCode": "# defimplでプロトコルを実装\\ndefimpl ___, for: ___ ___\\n  # defで関数を定義\\n  def ___(___) ___\\n    # パッケージをインポート\\n    \"___\"\\n  # endで関数を閉じる\\n  ___\\n# endでブロックを閉じる\\n___",
+      "correctCode": "# defimplでプロトコルを実装\\ndefimpl Describable, for: Map do\\n  # defでdescribe関数を定義\\n  def describe(map) do\\n    \"Map with #{map_size(map)} keys\"\\n  # endで関数を閉じる\\n  end\\n# endでブロックを閉じる\\nend",
+      "holeyCode": "# defimplでプロトコルを実装\\ndefimpl ___, for: ___ ___\\n  # defでdescribe関数を定義\\n  def ___(___) ___\\n    # パッケージをインポート\\n    \"___\"\\n  # endで関数を閉じる\\n  ___\\n# endでブロックを閉じる\\n___",
       "correctLines": [
           "# defimplでプロトコルを実装",
           "defimpl Describable, for: Map do",
-          "  # defで関数を定義",
+          "  # defでdescribe関数を定義",
           "  def describe(map) do",
           "    \"Map with #{map_size(map)} keys\"",
           "  # endで関数を閉じる",

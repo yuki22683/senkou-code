@@ -936,6 +936,8 @@ export function MobileCodeEditor({
             </div>
           );
         })}
+        {/* スマホ表示時のみ最後のコード行の下に空白行を表示 */}
+        <div className="h-6 lg:hidden" />
       </div>
 
       <div

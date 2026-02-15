@@ -53,10 +53,10 @@ export const swift3Data = {
           "content": "# 目標\\n\\n数が負（マイナス）なら失敗、そうでなければ成功を返す関数を作りましょう。\\n\\n1. `MyError` というエラー型を定義\\n2. `check` 関数を作る\\n3. 負の数なら `.failure`、そうでなければ `.success` を返す"
         }
       ],
-      "correctCode": "// エラー型を定義\\nenum MyError: Error { case negative }\\n\\n// check関数を定義\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.negative) }\\n    // successで成功を返す\\n    return .success(n)\\n// ブロックを閉じる\\n}\\n\\n// resultにcheck関数（引数10）の結果を代入\\nlet result = check(10)\\n// switchでパターンマッチ\\nswitch result {\\n// 成功の場合\\ncase .success(let v): print(v)\\n// 失敗の場合\\ncase .failure(_): print(\"エラー\")\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// エラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// check関数を定義\\nfunc ___(_ ___: ___) -> ___<___, ___> {\\n    // 負の場合は失敗\\n    if ___ < ___ { return .___(.___) }\\n    // successで成功を返す\\n    return .___(___)\\n// ブロックを閉じる\\n___\\n___\\n// resultにcheck関数（引数10）の結果を代入\\nlet ___ = ___(___)\\n// switchでパターンマッチ\\nswitch ___ {\\n// 成功の場合\\ncase .___(let ___): ___(___)\\n// 失敗の場合\\ncase .___(_): ___(\"___\")\\n// ブロックを閉じる\\n___",
+      "correctCode": "// enumでMyErrorエラー型を定義\\nenum MyError: Error { case negative }\\n\\n// check関数を定義\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.negative) }\\n    // successで成功を返す\\n    return .success(n)\\n// ブロックを閉じる\\n}\\n\\n// resultにcheck関数（引数10）の結果を代入\\nlet result = check(10)\\n// switchでパターンマッチ\\nswitch result {\\n// 成功の場合\\ncase .success(let v): print(v)\\n// 失敗の場合\\ncase .failure(_): print(\"エラー\")\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// enumでMyErrorエラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// check関数を定義\\nfunc ___(_ ___: ___) -> ___<___, ___> {\\n    // 負の場合は失敗\\n    if ___ < ___ { return .___(.___) }\\n    // successで成功を返す\\n    return .___(___)\\n// ブロックを閉じる\\n___\\n___\\n// resultにcheck関数（引数10）の結果を代入\\nlet ___ = ___(___)\\n// switchでパターンマッチ\\nswitch ___ {\\n// 成功の場合\\ncase .___(let ___): ___(___)\\n// 失敗の場合\\ncase .___(_): ___(\"___\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// エラー型を定義",
+          "// enumでMyErrorエラー型を定義",
           "enum MyError: Error { case negative }",
           "",
           "// check関数を定義",
@@ -405,10 +405,10 @@ export const swift3Data = {
           "content": "# 目標\\n\\nスタック（積み重ね）のプロトコルを作りましょう。\\n\\n1. `Stack` プロトコルを作る\\n2. `associatedtype Element` を宣言\\n3. `push` メソッドを宣言\\n4. `IntStack` 構造体で準拠を実装"
         }
       ],
-      "correctCode": "// プロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n// ブロックを閉じる\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nvar s = IntStack()\\n// 要素を追加\\ns.push(10)\\n// itemsを出力\\nprint(s.items)",
-      "holeyCode": "// プロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    ___ ___\\n    // pushメソッドを宣言\\n    mutating func ___(_ ___: ___)\\n// ブロックを閉じる\\n___\\n___\\n// Stackに準拠\\nstruct ___: ___ {\\n    // items配列\\n    var ___: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(_ ___: ___) {\\n        // 要素を追加\\n        ___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// インスタンスを作成\\nvar ___ = ___()\\n// 要素を追加\\n___.___(___)\\n// itemsを出力\\n___(___.___)",
+      "correctCode": "// protocolでStackプロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n// ブロックを閉じる\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// IntStackインスタンスをsに代入\\nvar s = IntStack()\\n// 要素を追加\\ns.push(10)\\n// itemsを出力\\nprint(s.items)",
+      "holeyCode": "// protocolでStackプロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    ___ ___\\n    // pushメソッドを宣言\\n    mutating func ___(_ ___: ___)\\n// ブロックを閉じる\\n___\\n___\\n// Stackに準拠\\nstruct ___: ___ {\\n    // items配列\\n    var ___: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(_ ___: ___) {\\n        // 要素を追加\\n        ___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// IntStackインスタンスをsに代入\\nvar ___ = ___()\\n// 要素を追加\\n___.___(___)\\n// itemsを出力\\n___(___.___)",
       "correctLines": [
-          "// プロトコルを定義",
+          "// protocolでStackプロトコルを定義",
           "protocol Stack {",
           "    // associatedtypeで関連型を定義",
           "    associatedtype Element",
@@ -430,7 +430,7 @@ export const swift3Data = {
           "// ブロックを閉じる",
           "}",
           "",
-          "// インスタンスを作成",
+          "// IntStackインスタンスをsに代入",
           "var s = IntStack()",
           "// 要素を追加",
           "s.push(10)",
@@ -503,10 +503,10 @@ export const swift3Data = {
           "content": "# 目標\\n\\n数が負のときにエラーを投げる関数を作りましょう。\\n\\n1. `MyError` エラー型を定義（invalid case）\\n2. `check` 関数を `throws` で作る\\n3. 負の数なら `throw` でエラー\\n4. `try` と `do-catch` で呼び出す"
         }
       ],
-      "correctCode": "// エラー型を定義\\nenum MyError: Error { case invalid }\\n\\n// throwsでエラーを投げる可能性を示す\\nfunc check(_ n: Int) throws -> Int {\\n    // 負の場合はエラー\\n    if n < 0 { throw MyError.invalid }\\n    // nを返す\\n    return n\\n// ブロックを閉じる\\n}\\n\\n// do-catchでエラー処理\\ndo {\\n    // tryでcheck関数を呼び出す\\n    let v = try check(10)\\n    // vを出力\\n    print(v)\\n// ブロックを開始\\n} catch {\\n    // エラーを出力\\n    print(\"エラー\")\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// エラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// throwsでエラーを投げる可能性を示す\\nfunc ___(_ ___: ___) ___ -> ___ {\\n    // 負の場合はエラー\\n    if ___ < ___ { ___ ___.___ }\\n    // nを返す\\n    return ___\\n// ブロックを閉じる\\n___\\n___\\n// do-catchでエラー処理\\n___ {\\n    // tryでcheck関数を呼び出す\\n    let ___ = ___ ___(___)\\n    // vを出力\\n    ___(___)\\n// ブロックを開始\\n} ___ {\\n    // エラーを出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___",
+      "correctCode": "// enumでMyErrorエラー型を定義\\nenum MyError: Error { case invalid }\\n\\n// throwsでエラーを投げる可能性を示す\\nfunc check(_ n: Int) throws -> Int {\\n    // 負の場合はエラー\\n    if n < 0 { throw MyError.invalid }\\n    // nを返す\\n    return n\\n// ブロックを閉じる\\n}\\n\\n// do-catchでエラー処理\\ndo {\\n    // tryでcheck関数を呼び出す\\n    let v = try check(10)\\n    // vを出力\\n    print(v)\\n// ブロックを開始\\n} catch {\\n    // エラーを出力\\n    print(\"エラー\")\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// enumでMyErrorエラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// throwsでエラーを投げる可能性を示す\\nfunc ___(_ ___: ___) ___ -> ___ {\\n    // 負の場合はエラー\\n    if ___ < ___ { ___ ___.___ }\\n    // nを返す\\n    return ___\\n// ブロックを閉じる\\n___\\n___\\n// do-catchでエラー処理\\n___ {\\n    // tryでcheck関数を呼び出す\\n    let ___ = ___ ___(___)\\n    // vを出力\\n    ___(___)\\n// ブロックを開始\\n} ___ {\\n    // エラーを出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// エラー型を定義",
+          "// enumでMyErrorエラー型を定義",
           "enum MyError: Error { case invalid }",
           "",
           "// throwsでエラーを投げる可能性を示す",
@@ -645,9 +645,9 @@ export const swift3Data = {
           "content": "# 目標\\n\\nカウンターの構造体を作って、数を増やせるようにしましょう。\\n\\n1. `Counter` 構造体を作る\\n2. `count` プロパティを持つ\\n3. `mutating func increment()` で1増やす\\n4. 2回呼び出して `2` と表示されるか確認"
         }
       ],
-      "correctCode": "// 構造体を定義\\nstruct Counter {\\n    // countプロパティ\\n    var count = 0\\n    // mutatingで構造体を変更可能に\\n    mutating func increment() {\\n        // countを1増やす\\n        count += 1\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nvar c = Counter()\\n// 1回目のincrementを呼び出し\\nc.increment()\\n// 2回目のincrementを呼び出し\\nc.increment()\\n// countを出力\\nprint(c.count)",
-      "holeyCode": "// 構造体を定義\\nstruct ___ {\\n    // countプロパティ\\n    var ___ = ___\\n    // mutatingで構造体を変更可能に\\n    ___ func ___() {\\n        // countを1増やす\\n        ___ += ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\n// インスタンスを作成\\nvar ___ = ___()\\n// 1回目のincrementを呼び出し\\n___.___()\\n// 2回目のincrementを呼び出し\\n___.___()\\n// countを出力\\n___(___.___)", "correctLines": [
-          "// 構造体を定義",
+      "correctCode": "// structでCounter構造体を定義\\nstruct Counter {\\n    // countプロパティ\\n    var count = 0\\n    // mutatingで構造体を変更可能に\\n    mutating func increment() {\\n        // countを1増やす\\n        count += 1\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// Counterインスタンスをcに代入\\nvar c = Counter()\\n// 1回目のincrementを呼び出し\\nc.increment()\\n// 2回目のincrementを呼び出し\\nc.increment()\\n// countを出力\\nprint(c.count)",
+      "holeyCode": "// structでCounter構造体を定義\\nstruct ___ {\\n    // countプロパティ\\n    var ___ = ___\\n    // mutatingで構造体を変更可能に\\n    ___ func ___() {\\n        // countを1増やす\\n        ___ += ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\n// Counterインスタンスをcに代入\\nvar ___ = ___()\\n// 1回目のincrementを呼び出し\\n___.___()\\n// 2回目のincrementを呼び出し\\n___.___()\\n// countを出力\\n___(___.___)", "correctLines": [
+          "// structでCounter構造体を定義",
           "struct Counter {",
           "    // countプロパティ",
           "    var count = 0",
@@ -660,7 +660,7 @@ export const swift3Data = {
           "// ブロックを閉じる",
           "}",
           "",
-          "// インスタンスを作成",
+          "// Counterインスタンスをcに代入",
           "var c = Counter()",
           "// 1回目のincrementを呼び出し",
           "c.increment()",

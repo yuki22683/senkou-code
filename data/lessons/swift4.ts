@@ -53,10 +53,10 @@ export const swift4Data = {
           "content": "# 目標\\n\\n「話せる」プロトコルを作って、犬に準拠させましょう。\\n\\n1. `Speakable` プロトコルを作る\\n2. `speak()` という関数を宣言\\n3. `Dog` 構造体で準拠を実装\\n4. `speak()` で「Woof!」と返す"
         }
       ],
-      "correctCode": "// protocolでプロトコルを定義\\nprotocol Speakable {\\n    // speakメソッドを宣言\\n    func speak() -> String\\n// ブロックを閉じる\\n}\\n\\n// Speakableに準拠\\nstruct Dog: Speakable {\\n    // speakメソッドを実装\\n    func speak() -> String {\\n        // Woof!を返す\\n        return \"ワン！\"\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nlet dog = Dog()\\n// speakメソッドを呼び出す\\nprint(dog.speak())",
-      "holeyCode": "// protocolでプロトコルを定義\\nprotocol ___ {\\n    // speakメソッドを宣言\\n    func ___() -> ___\\n// ブロックを閉じる\\n___\\n\\n// Speakableに準拠\\nstruct ___: ___ {\\n    // speakメソッドを実装\\n    func ___() -> ___ {\\n        // Woof!を返す\\n        return \\\"___\\\"\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nlet ___ = ___()\\n// speakメソッドを呼び出す\\n___(___.___()",
+      "correctCode": "// protocolでSpeakableプロトコルを定義\\nprotocol Speakable {\\n    // speakメソッドを宣言\\n    func speak() -> String\\n// ブロックを閉じる\\n}\\n\\n// Speakableに準拠\\nstruct Dog: Speakable {\\n    // speakメソッドを実装\\n    func speak() -> String {\\n        // Woof!を返す\\n        return \"ワン！\"\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// Dogインスタンスをdogに代入\\nlet dog = Dog()\\n// speakメソッドを呼び出す\\nprint(dog.speak())",
+      "holeyCode": "// protocolでSpeakableプロトコルを定義\\nprotocol ___ {\\n    // speakメソッドを宣言\\n    func ___() -> ___\\n// ブロックを閉じる\\n___\\n\\n// Speakableに準拠\\nstruct ___: ___ {\\n    // speakメソッドを実装\\n    func ___() -> ___ {\\n        // Woof!を返す\\n        return \\\"___\\\"\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// Dogインスタンスをdogに代入\\nlet ___ = ___()\\n// speakメソッドを呼び出す\\n___(___.___()",
       "correctLines": [
-          "// protocolでプロトコルを定義",
+          "// protocolでSpeakableプロトコルを定義",
           "protocol Speakable {",
           "    // speakメソッドを宣言",
           "    func speak() -> String",
@@ -74,7 +74,7 @@ export const swift4Data = {
           "// ブロックを閉じる",
           "}",
           "",
-          "// インスタンスを作成",
+          "// Dogインスタンスをdogに代入",
           "let dog = Dog()",
           "// speakメソッドを呼び出す",
           "print(dog.speak())"
@@ -141,10 +141,10 @@ export const swift4Data = {
           "content": "# 目標\\n\\n`Identifiable` プロトコルを作り、extensionでデフォルト機能を追加しましょう。\\n\\n1. `id` プロパティを持つプロトコルを作る\\n2. extensionで `display()` 関数を追加\\n3. `User` 構造体で準拠\\n4. デフォルトの `display()` を使う"
         }
       ],
-      "correctCode": "// プロトコルを定義\\nprotocol Identifiable {\\n    // idプロパティを宣言\\n    var id: Int { get }\\n// ブロックを閉じる\\n}\\n\\n// extensionでプロトコルを拡張\\nextension Identifiable {\\n    // デフォルト実装\\n    func display() { print(\"ID: \\(id)\") }\\n// ブロックを閉じる\\n}\\n\\n// Identifiableに準拠\\nstruct User: Identifiable {\\n    // idプロパティ\\n    var id: Int\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nlet user = User(id: 42)\\n// displayメソッドを呼び出す\\nuser.display()",
-      "holeyCode": "// プロトコルを定義\\nprotocol ___ {\\n    // idプロパティを宣言\\n    var ___: ___ { ___ }\\n// ブロックを閉じる\\n___\\n\\n// extensionでプロトコルを拡張\\nextension ___ {\\n    // デフォルト実装\\n    func ___() { ___(\\\"___: \\\\(___)\\\") }\\n// ブロックを閉じる\\n___\\n\\n// Identifiableに準拠\\nstruct ___: ___ {\\n    // idプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nlet ___ = ___(___: ___)\\n// displayメソッドを呼び出す\\n___.___(",
+      "correctCode": "// protocolでIdentifiableプロトコルを定義\\nprotocol Identifiable {\\n    // idプロパティを宣言\\n    var id: Int { get }\\n// ブロックを閉じる\\n}\\n\\n// extensionでプロトコルを拡張\\nextension Identifiable {\\n    // デフォルト実装\\n    func display() { print(\"ID: \\(id)\") }\\n// ブロックを閉じる\\n}\\n\\n// Identifiableに準拠\\nstruct User: Identifiable {\\n    // idプロパティ\\n    var id: Int\\n// ブロックを閉じる\\n}\\n\\n// Userインスタンス（id:42）をuserに代入\\nlet user = User(id: 42)\\n// displayメソッドを呼び出す\\nuser.display()",
+      "holeyCode": "// protocolでIdentifiableプロトコルを定義\\nprotocol ___ {\\n    // idプロパティを宣言\\n    var ___: ___ { ___ }\\n// ブロックを閉じる\\n___\\n\\n// extensionでプロトコルを拡張\\nextension ___ {\\n    // デフォルト実装\\n    func ___() { ___(\\\"___: \\\\(___)\\\") }\\n// ブロックを閉じる\\n___\\n\\n// Identifiableに準拠\\nstruct ___: ___ {\\n    // idプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n\\n// Userインスタンス（id:42）をuserに代入\\nlet ___ = ___(___: ___)\\n// displayメソッドを呼び出す\\n___.___(",
       "correctLines": [
-          "// プロトコルを定義",
+          "// protocolでIdentifiableプロトコルを定義",
           "protocol Identifiable {",
           "    // idプロパティを宣言",
           "    var id: Int { get }",
@@ -165,7 +165,7 @@ export const swift4Data = {
           "// ブロックを閉じる",
           "}",
           "",
-          "// インスタンスを作成",
+          "// Userインスタンス（id:42）をuserに代入",
           "let user = User(id: 42)",
           "// displayメソッドを呼び出す",
           "user.display()"
@@ -364,8 +364,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\nCodableな構造体を作って、JSONに変換しましょう。\\n\\n1. `Item` 構造体を `Codable` に準拠させる\\n2. `name` プロパティを持たせる\\n3. `JSONEncoder()` でJSONに変換\\n4. 結果を表示する"
         }
       ],
-      "correctCode": "// Foundationをインポート\\nimport Foundation\\n\\n// CodableでJSON変換可能に\\nstruct Item: Codable {\\n    // nameプロパティ\\n    var name: String\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nlet item = Item(name: \"りんご\")\\n// エンコーダを作成\\nlet encoder = JSONEncoder()\\n// itemをJSONに変換\\nif let data = try? encoder.encode(item),\\n   // ブロックを開始\\n   let json = String(data: data, encoding: .utf8) {\\n    // JSONを出力\\n    print(json)\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// Foundationをインポート\\nimport ___\\n\\n// CodableでJSON変換可能に\\nstruct ___: ___ {\\n    // nameプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nlet ___ = ___(___: \\\"___\\\")\\n// エンコーダを作成\\nlet ___ = ___()\\n// itemをJSONに変換\\nif let ___ = try? ___.___(___ ),\\n   // ブロックを開始\\n   let ___ = ___(___: ___, ___: .___) {\\n    // JSONを出力\\n    ___(___) \\n// ブロックを閉じる\\n___",
+      "correctCode": "// Foundationをインポート\\nimport Foundation\\n\\n// CodableでJSON変換可能に\\nstruct Item: Codable {\\n    // nameプロパティ\\n    var name: String\\n// ブロックを閉じる\\n}\\n\\n// Itemインスタンスをitemに代入\\nlet item = Item(name: \"りんご\")\\n// エンコーダを作成\\nlet encoder = JSONEncoder()\\n// itemをJSONに変換\\nif let data = try? encoder.encode(item),\\n   // ブロックを開始\\n   let json = String(data: data, encoding: .utf8) {\\n    // JSONを出力\\n    print(json)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// Foundationをインポート\\nimport ___\\n\\n// CodableでJSON変換可能に\\nstruct ___: ___ {\\n    // nameプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n\\n// Itemインスタンスをitemに代入\\nlet ___ = ___(___: \\\"___\\\")\\n// エンコーダを作成\\nlet ___ = ___()\\n// itemをJSONに変換\\nif let ___ = try? ___.___(___ ),\\n   // ブロックを開始\\n   let ___ = ___(___: ___, ___: .___) {\\n    // JSONを出力\\n    ___(___) \\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Foundationをインポート",
           "import Foundation",
@@ -377,7 +377,7 @@ export const swift4Data = {
           "// ブロックを閉じる",
           "}",
           "",
-          "// インスタンスを作成",
+          "// Itemインスタンスをitemに代入",
           "let item = Item(name: \"りんご\")",
           "// エンコーダを作成",
           "let encoder = JSONEncoder()",
@@ -458,8 +458,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\nlazyプロパティを持つクラスを作りましょう。\\n\\n1. `Calculator` クラスを作る\\n2. `lazy var result` を定義\\n3. 初期化時に「Computing...」と表示して100を返す\\n4. インスタンスを作って `result` にアクセス"
         }
       ],
-      "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n    // lazyで遅延初期化\\n    lazy var result: Int = {\\n        // 計算中と出力\\n        print(\"計算中...\")\\n        // 100を返す\\n        return 100\\n    // クロージャを閉じて実行\\n    }()\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nlet calc = Calculator()\\n// resultを出力\\nprint(calc.result)",
-      "holeyCode": "// Calculatorクラスを定義\\nclass ___ {\\n    // lazyで遅延初期化\\n    lazy var ___: ___ = {\\n        // 計算中と出力\\n        ___(\\\"___\\\")\\n        // 100を返す\\n        return ___\\n    // クロージャを閉じて実行\\n    ___()\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nlet ___ = ___()\\n// resultを出力\\n___(___.___ )",
+      "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n    // lazyで遅延初期化\\n    lazy var result: Int = {\\n        // 計算中と出力\\n        print(\"計算中...\")\\n        // 100を返す\\n        return 100\\n    // クロージャを閉じて実行\\n    }()\\n// ブロックを閉じる\\n}\\n\\n// Calculatorインスタンスをcalcに代入\\nlet calc = Calculator()\\n// resultを出力\\nprint(calc.result)",
+      "holeyCode": "// Calculatorクラスを定義\\nclass ___ {\\n    // lazyで遅延初期化\\n    lazy var ___: ___ = {\\n        // 計算中と出力\\n        ___(\\\"___\\\")\\n        // 100を返す\\n        return ___\\n    // クロージャを閉じて実行\\n    ___()\\n// ブロックを閉じる\\n___\\n\\n// Calculatorインスタンスをcalcに代入\\nlet ___ = ___()\\n// resultを出力\\n___(___.___ )",
       "correctLines": [
           "// Calculatorクラスを定義",
           "class Calculator {",
@@ -474,7 +474,7 @@ export const swift4Data = {
           "// ブロックを閉じる",
           "}",
           "",
-          "// インスタンスを作成",
+          "// Calculatorインスタンスをcalcに代入",
           "let calc = Calculator()",
           "// resultを出力",
           "print(calc.result)"
@@ -677,10 +677,10 @@ export const swift4Data = {
           "content": "# 目標\\n\\nスタック（積み重ね）のプロトコルを作りましょう。\\n\\n1. `Stack` プロトコルに `associatedtype Element` を定義\\n2. `push` メソッドを宣言\\n3. `IntStack` 構造体で準拠を実装\\n4. 10をpushしてitemsを表示"
         }
       ],
-      "correctCode": "// プロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n// ブロックを閉じる\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// インスタンスを作成\\nvar stack = IntStack()\\n// 要素を追加\\nstack.push(10)\\n// itemsを出力\\nprint(stack.items)",
-      "holeyCode": "// プロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    associatedtype ___\\n    // pushメソッドを宣言\\n    mutating func ___(___ ___: ___)\\n// ブロックを閉じる\\n___\\n\\n// Stackに準拠\\nstruct ___: ___ {\\n    // items配列\\n    var ___: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(___ ___: ___) {\\n        // 要素を追加\\n        ___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// インスタンスを作成\\nvar ___ = ___()\\n// 要素を追加\\n___.___(___) \\n// itemsを出力\\n___(___.___ )",
+      "correctCode": "// protocolでStackプロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n// ブロックを閉じる\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// IntStackインスタンスをstackに代入\\nvar stack = IntStack()\\n// 要素を追加\\nstack.push(10)\\n// itemsを出力\\nprint(stack.items)",
+      "holeyCode": "// protocolでStackプロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    associatedtype ___\\n    // pushメソッドを宣言\\n    mutating func ___(___ ___: ___)\\n// ブロックを閉じる\\n___\\n\\n// Stackに準拠\\nstruct ___: ___ {\\n    // items配列\\n    var ___: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(___ ___: ___) {\\n        // 要素を追加\\n        ___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// IntStackインスタンスをstackに代入\\nvar ___ = ___()\\n// 要素を追加\\n___.___(___) \\n// itemsを出力\\n___(___.___ )",
       "correctLines": [
-          "// プロトコルを定義",
+          "// protocolでStackプロトコルを定義",
           "protocol Stack {",
           "    // associatedtypeで関連型を定義",
           "    associatedtype Element",
@@ -702,7 +702,7 @@ export const swift4Data = {
           "// ブロックを閉じる",
           "}",
           "",
-          "// インスタンスを作成",
+          "// IntStackインスタンスをstackに代入",
           "var stack = IntStack()",
           "// 要素を追加",
           "stack.push(10)",

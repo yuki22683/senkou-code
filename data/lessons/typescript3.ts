@@ -354,10 +354,10 @@ export const typescriptData3 = {
           "content": "# 型を二重管理しない\\n\\n関数の戻り値と同じ型を使いたいとき、わざわざ別の場所で型を定義しなくて済みます。\\n\\n## たとえ話\\n\\n料理のレシピを変えたら、自動で「完成品の説明」も変わってほしいですよね。ReturnTypeなら、関数を変えれば型も自動で変わります！\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\n// 関数の戻り値から型を自動取得\\ntype Result = ReturnType<typeof fetchData>;\\n\\nfunction processResult(result: Result) {\\n  // 関数の戻り値と同じ型が使える！\\n}\\n```\\n\\nこれで型の書き忘れや不一致を防げます。"
         }
       ],
-      "correctCode": "// 座標を作成する関数を定義\\nfunction createPoint() {\\n  // x:10、y:20の座標を返す\\n  return { x: 10, y: 20 };\\n}\\n// ReturnTypeで戻り値の型を取得\\ntype Point = ReturnType<typeof createPoint>;\\n\\n// 新しい座標（x:5、y:15）を作成\\nconst p: Point = { x: 5, y: 15 };\\n// 座標の合計を出力\\nconsole.log(p.x + p.y);",
-      "holeyCode": "// 座標を作成する関数を定義\\nfunction ___() {\\n  // x:10、y:20の座標を返す\\n  return { ___: ___, ___: ___ };\\n}\\n// ReturnTypeで戻り値の型を取得\\ntype ___ = ___<typeof ___>;\\n\\n// 新しい座標（x:5、y:15）を作成\\nconst ___: ___ = { ___: ___, ___: ___ };\\n// 座標の合計を出力\\n___.___(___.___+___.___);",
+      "correctCode": "// createPoint関数（座標を作成）を定義\\nfunction createPoint() {\\n  // x:10、y:20の座標を返す\\n  return { x: 10, y: 20 };\\n}\\n// ReturnTypeで戻り値の型を取得\\ntype Point = ReturnType<typeof createPoint>;\\n\\n// 新しい座標（x:5、y:15）を作成\\nconst p: Point = { x: 5, y: 15 };\\n// 座標の合計を出力\\nconsole.log(p.x + p.y);",
+      "holeyCode": "// createPoint関数（座標を作成）を定義\\nfunction ___() {\\n  // x:10、y:20の座標を返す\\n  return { ___: ___, ___: ___ };\\n}\\n// ReturnTypeで戻り値の型を取得\\ntype ___ = ___<typeof ___>;\\n\\n// 新しい座標（x:5、y:15）を作成\\nconst ___: ___ = { ___: ___, ___: ___ };\\n// 座標の合計を出力\\n___.___(___.___+___.___);",
       "correctLines": [
-          "// 座標を作成する関数を定義",
+          "// createPoint関数（座標を作成）を定義",
           "function createPoint() {",
           "  // x:10、y:20の座標を返す",
           "  return { x: 10, y: 20 };",
@@ -535,8 +535,8 @@ export const typescriptData3 = {
           "content": "# 動的アクセスを型安全に\\n\\nkeyofを使うと、「存在するキーだけ使える」という安全な関数が作れます。\\n\\n## たとえ話\\n\\nロッカーを開けるとき、「存在する番号」しか使えませんよね。keyofで「存在するキー」だけを許可できます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nfunction getValue<T, K extends keyof T>(obj: T, key: K): T[K] {\\n  return obj[key];\\n}\\n\\nconst user = { id: 1, name: 'Alice' };\\ngetValue(user, 'name'); // OK! 'name'は存在する\\ngetValue(user, 'age');  // エラー！ 'age'は存在しない\\n```\\n\\n存在しないキーを使おうとするとエラーで教えてくれます！"
         }
       ],
-      "correctCode": "// 人物情報の型を定義\\ninterface Person {\\n  // 名前の型\\n  name: string;\\n  // 年齢の型\\n  age: number;\\n}\\n// 指定したキーの値を取得する関数を定義\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\n  // キーに対応する値を返す\\n  return p[key];\\n}\\n\\n// 人物データ（ボブ、30歳）を作成\\nconst person = { name: 'ボブ', age: 30 };\\n// 名前を取得して出力\\nconsole.log(getProperty(person, 'name'));",
-      "holeyCode": "// 人物情報の型を定義\\ninterface ___ {\\n  // 名前の型\\n  ___: ___;\\n  // 年齢の型\\n  ___: ___;\\n}\\n// 指定したキーの値を取得する関数を定義\\nfunction ___<___ extends keyof ___>(___: ___, ___: ___) {\\n  // キーに対応する値を返す\\n  return ___[___];\\n}\\n\\n// 人物データ（ボブ、30歳）を作成\\nconst ___ = { ___: '___', ___: ___ };\\n// 名前を取得して出力\\n___.___(___(___, '___'));",
+      "correctCode": "// 人物情報の型を定義\\ninterface Person {\\n  // 名前の型\\n  name: string;\\n  // 年齢の型\\n  age: number;\\n}\\n// getProperty関数（指定キーの値を取得）を定義\\nfunction getProperty<K extends keyof Person>(p: Person, key: K) {\\n  // キーに対応する値を返す\\n  return p[key];\\n}\\n\\n// 人物データ（ボブ、30歳）を作成\\nconst person = { name: 'ボブ', age: 30 };\\n// 名前を取得して出力\\nconsole.log(getProperty(person, 'name'));",
+      "holeyCode": "// 人物情報の型を定義\\ninterface ___ {\\n  // 名前の型\\n  ___: ___;\\n  // 年齢の型\\n  ___: ___;\\n}\\n// getProperty関数（指定キーの値を取得）を定義\\nfunction ___<___ extends keyof ___>(___: ___, ___: ___) {\\n  // キーに対応する値を返す\\n  return ___[___];\\n}\\n\\n// 人物データ（ボブ、30歳）を作成\\nconst ___ = { ___: '___', ___: ___ };\\n// 名前を取得して出力\\n___.___(___(___, '___'));",
       "correctLines": [
           "// 人物情報の型を定義",
           "interface Person {",
@@ -545,7 +545,7 @@ export const typescriptData3 = {
           "  // 年齢の型",
           "  age: number;",
           "}",
-          "// 指定したキーの値を取得する関数を定義",
+          "// getProperty関数（指定キーの値を取得）を定義",
           "function getProperty<K extends keyof Person>(p: Person, key: K) {",
           "  // キーに対応する値を返す",
           "  return p[key];",

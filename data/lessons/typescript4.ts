@@ -26,10 +26,10 @@ export const typescriptData4 = {
           "content": "# 安全に型を使う\\n\\n型ガードでチェックした後は、TypeScriptがその型として扱ってくれるので、安全にメソッドなどを使えます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nfunction isString(x: unknown): x is string {\\n  return typeof x === 'string';\\n}\\n\\nconst value: unknown = 'hello';\\n\\nif (isString(value)) {\\n  // ここではvalueはstring型！\\n  console.log(value.toUpperCase());\\n  // 文字列のメソッドが使える！\\n}\\n```"
         }
       ],
-      "correctCode": "// 数値かどうか判定する型ガードを定義\\nfunction isNumber(x: unknown): x is number {\\n  // typeofで型をチェック\\n  return typeof x === 'number';\\n}\\n\\n// unknown型の値\\nconst value: unknown = 42;\\n// 型ガードで数値かチェック\\nif (isNumber(value)) {\\n  // 数値として2倍を計算\\n  console.log(value * 2);\\n}",
-      "holeyCode": "// 数値かどうか判定する型ガードを定義\\n___ ___(___: ___): ___ ___ ___ {\\n  // typeofで型をチェック\\n  return typeof ___ === ___;\\n}\\n\\n// unknown型の値\\nconst ___: ___ = ___;\\n// 型ガードで数値かチェック\\nif (___(___)) {\\n  // 数値として2倍を計算\\n  ___.___(___ * ___);\\n}",
+      "correctCode": "// isNumber型ガード関数を定義\\nfunction isNumber(x: unknown): x is number {\\n  // typeofで型をチェック\\n  return typeof x === 'number';\\n}\\n\\n// unknown型の値\\nconst value: unknown = 42;\\n// 型ガードで数値かチェック\\nif (isNumber(value)) {\\n  // 数値として2倍を計算\\n  console.log(value * 2);\\n}",
+      "holeyCode": "// isNumber型ガード関数を定義\\n___ ___(___: ___): ___ ___ ___ {\\n  // typeofで型をチェック\\n  return typeof ___ === ___;\\n}\\n\\n// unknown型の値\\nconst ___: ___ = ___;\\n// 型ガードで数値かチェック\\nif (___(___)) {\\n  // 数値として2倍を計算\\n  ___.___(___ * ___);\\n}",
       "correctLines": [
-          "// 数値かどうか判定する型ガードを定義",
+          "// isNumber型ガード関数を定義",
           "function isNumber(x: unknown): x is number {",
           "  // typeofで型をチェック",
           "  return typeof x === 'number';",
@@ -88,15 +88,15 @@ export const typescriptData4 = {
           "content": "# 書き方のポイント\\n\\n`'プロパティ名' in オブジェクト` という形で書きます。\\n\\n## 注意点\\n\\n- プロパティ名は文字列（クォートで囲む）\\n- 存在すればtrue、なければfalseが返る\\n\\n## たとえ話\\n\\n「このオブジェクトに○○という項目はある？」と聞いているようなものです。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nconst obj = { name: 'Taro', age: 10 };\\n\\nif ('age' in obj) {\\n  console.log('ageがあります！');\\n}\\n```"
         }
       ],
-      "correctCode": "// 車の型\\ntype Car = { 運転: () => void };\\n// 船の型\\ntype Boat = { sail: () => void };\\n\\n// 乗り物を操作する関数を定義\\nfunction operate(vehicle: Car | Boat): void {\\n  // 運転プロパティがあれば車\\n  if ('運転' in vehicle) {\\n    // 車なので運転する\\n    console.log('運転中');\\n  } else {\\n    // 船なので航海する\\n    console.log('航海中');\\n  }\\n}\\n\\n// 車を操作\\noperate({ 運転: () => {} });",
-      "holeyCode": "// 車の型\\ntype ___ = { ___: () => ___ };\\n// 船の型\\ntype ___ = { ___: () => ___ };\\n\\n// 乗り物を操作する関数を定義\\n___ ___(___: ___ | ___): ___ {\\n  // 運転プロパティがあれば車\\n  if (___ ___ ___) {\\n    // 車なので運転する\\n    ___.___(___);\\n  } ___ {\\n    // 船なので航海する\\n    ___.___(___);\\n  }\\n}\\n\\n// 車を操作\\n___({ ___: () => {} });",
+      "correctCode": "// 車の型\\ntype Car = { 運転: () => void };\\n// 船の型\\ntype Boat = { sail: () => void };\\n\\n// operate関数（乗り物を操作）を定義\\nfunction operate(vehicle: Car | Boat): void {\\n  // 運転プロパティがあれば車\\n  if ('運転' in vehicle) {\\n    // 車なので運転する\\n    console.log('運転中');\\n  } else {\\n    // 船なので航海する\\n    console.log('航海中');\\n  }\\n}\\n\\n// 車を操作\\noperate({ 運転: () => {} });",
+      "holeyCode": "// 車の型\\ntype ___ = { ___: () => ___ };\\n// 船の型\\ntype ___ = { ___: () => ___ };\\n\\n// operate関数（乗り物を操作）を定義\\n___ ___(___: ___ | ___): ___ {\\n  // 運転プロパティがあれば車\\n  if (___ ___ ___) {\\n    // 車なので運転する\\n    ___.___(___);\\n  } ___ {\\n    // 船なので航海する\\n    ___.___(___);\\n  }\\n}\\n\\n// 車を操作\\n___({ ___: () => {} });",
       "correctLines": [
           "// 車の型",
           "type Car = { 運転: () => void };",
           "// 船の型",
           "type Boat = { sail: () => void };",
           "",
-          "// 乗り物を操作する関数を定義",
+          "// operate関数（乗り物を操作）を定義",
           "function operate(vehicle: Car | Boat): void {",
           "  // 運転プロパティがあれば車",
           "  if ('運転' in vehicle) {",
@@ -162,8 +162,8 @@ export const typescriptData4 = {
           "content": "# なぜ便利なの？\\n\\n判別プロパティ（kindなど）を見れば、TypeScriptがその型だと自動で理解してくれます。\\n\\n## メリット\\n\\n1. **switch文で簡単に分岐できる**\\n2. **各caseで正しいプロパティが使える**\\n3. **漏れがあるとエラーで教えてくれる**\\n\\n## たとえ話\\n\\n「円」と「四角」では使えるプロパティが違います。kindを見て判別すれば、円なら「radius」、四角なら「size」が使えると自動でわかります！"
         }
       ],
-      "correctCode": "// 成功時の型\\ntype Success = { status: '成功'; data: string };\\n// 失敗時の型\\ntype Failure = { status: '失敗'; error: string };\\n// 結果のユニオン型\\ntype Result = Success | Failure;\\n\\n// 結果を処理する関数を定義\\nfunction handle(result: Result): void {\\n  // statusで成功/失敗を判別\\n  switch (result.status) {\\n    case '成功':\\n      // 成功データを出力\\n      console.log(result.data);\\n      break;\\n    case '失敗':\\n      // エラー内容を出力\\n      console.log(result.error);\\n      break;\\n  }\\n}\\n\\n// 成功結果を処理\\nhandle({ status: '成功', data: 'OK' });",
-      "holeyCode": "// 成功時の型\\ntype ___ = { ___: ___; ___: ___ };\\n// 失敗時の型\\ntype ___ = { ___: ___; ___: ___ };\\n// 結果のユニオン型\\ntype ___ = ___ ___ ___;\\n\\n// 結果を処理する関数を定義\\n___ ___(___: ___): ___ {\\n  // statusで成功/失敗を判別\\n  switch (___.___) {\\n    case ___:\\n      // 成功データを出力\\n      ___.___(___.___)\\n      ___;\\n    case ___:\\n      // エラー内容を出力\\n      ___.___(___.___)\\n      ___;\\n  }\\n}\\n\\n// 成功結果を処理\\n___({ ___: ___, ___: ___ });",
+      "correctCode": "// 成功時の型\\ntype Success = { status: '成功'; data: string };\\n// 失敗時の型\\ntype Failure = { status: '失敗'; error: string };\\n// 結果のユニオン型\\ntype Result = Success | Failure;\\n\\n// handle関数（結果を処理）を定義\\nfunction handle(result: Result): void {\\n  // statusで成功/失敗を判別\\n  switch (result.status) {\\n    case '成功':\\n      // 成功データを出力\\n      console.log(result.data);\\n      break;\\n    case '失敗':\\n      // エラー内容を出力\\n      console.log(result.error);\\n      break;\\n  }\\n}\\n\\n// 成功結果を処理\\nhandle({ status: '成功', data: 'OK' });",
+      "holeyCode": "// 成功時の型\\ntype ___ = { ___: ___; ___: ___ };\\n// 失敗時の型\\ntype ___ = { ___: ___; ___: ___ };\\n// 結果のユニオン型\\ntype ___ = ___ ___ ___;\\n\\n// handle関数（結果を処理）を定義\\n___ ___(___: ___): ___ {\\n  // statusで成功/失敗を判別\\n  switch (___.___) {\\n    case ___:\\n      // 成功データを出力\\n      ___.___(___.___)\\n      ___;\\n    case ___:\\n      // エラー内容を出力\\n      ___.___(___.___)\\n      ___;\\n  }\\n}\\n\\n// 成功結果を処理\\n___({ ___: ___, ___: ___ });",
       "correctLines": [
           "// 成功時の型",
           "type Success = { status: '成功'; data: string };",
@@ -172,7 +172,7 @@ export const typescriptData4 = {
           "// 結果のユニオン型",
           "type Result = Success | Failure;",
           "",
-          "// 結果を処理する関数を定義",
+          "// handle関数（結果を処理）を定義",
           "function handle(result: Result): void {",
           "  // statusで成功/失敗を判別",
           "  switch (result.status) {",
@@ -246,13 +246,13 @@ export const typescriptData4 = {
           "content": "# 処理し忘れを防ぐ\\n\\nswitch文のdefaultでnever型を使うと、全ケースを処理したかチェックできます。\\n\\n## たとえ話\\n\\n「赤・青・緑」の3色を処理するとき、もし「青」を忘れていたらエラーで教えてくれます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\ntype Color = 'red' | 'blue';\\n\\nfunction handle(c: Color) {\\n  switch (c) {\\n    case 'red': return '#ff0000';\\n    case 'blue': return '#0000ff';\\n    default:\\n      // 全ケース処理済みなら、ここには来ない\\n      const _check: never = c;\\n      return _check;\\n  }\\n}\\n```\\n\\n新しい色を追加したとき、処理を忘れるとエラーになります！"
         }
       ],
-      "correctCode": "// 色のユニオン型\\ntype Color = 'あか' | 'みどり' | 'あお';\\n\\n// 色をカラーコードに変換する関数を定義\\nfunction getHex(color: Color): string {\\n  // 色ごとにカラーコードを返す\\n  switch (color) {\\n    case 'あか': return '#ff0000';\\n    case 'みどり': return '#00ff00';\\n    case 'あお': return '#0000ff';\\n    default:\\n      // 全ケース処理済みなら到達しない\\n      const _exhaustive: never = color;\\n      return _exhaustive;\\n  }\\n}\\n\\n// あかのカラーコードを出力\\nconsole.log(getHex('あか'));",
-      "holeyCode": "// 色のユニオン型\\ntype ___ = ___ | ___ ___ ___;\\n\\n// 色をカラーコードに変換する関数を定義\\n___ ___(___: ___): ___ {\\n  // 色ごとにカラーコードを返す\\n  switch (___) {\\n    case ___: return ___;\\n    case ___: return ___;\\n    case ___: return ___;\\n    ___:\\n      // 全ケース処理済みなら到達しない\\n      const ___: ___ = ___;\\n      return ___;\\n  }\\n}\\n\\n// あかのカラーコードを出力\\n___.___(___(___))",
+      "correctCode": "// 色のユニオン型\\ntype Color = 'あか' | 'みどり' | 'あお';\\n\\n// getHex関数（色をカラーコードに変換）を定義\\nfunction getHex(color: Color): string {\\n  // 色ごとにカラーコードを返す\\n  switch (color) {\\n    case 'あか': return '#ff0000';\\n    case 'みどり': return '#00ff00';\\n    case 'あお': return '#0000ff';\\n    default:\\n      // 全ケース処理済みなら到達しない\\n      const _exhaustive: never = color;\\n      return _exhaustive;\\n  }\\n}\\n\\n// あかのカラーコードを出力\\nconsole.log(getHex('あか'));",
+      "holeyCode": "// 色のユニオン型\\ntype ___ = ___ | ___ ___ ___;\\n\\n// getHex関数（色をカラーコードに変換）を定義\\n___ ___(___: ___): ___ {\\n  // 色ごとにカラーコードを返す\\n  switch (___) {\\n    case ___: return ___;\\n    case ___: return ___;\\n    case ___: return ___;\\n    ___:\\n      // 全ケース処理済みなら到達しない\\n      const ___: ___ = ___;\\n      return ___;\\n  }\\n}\\n\\n// あかのカラーコードを出力\\n___.___(___(___))",
       "correctLines": [
           "// 色のユニオン型",
           "type Color = 'あか' | 'みどり' | 'あお';",
           "",
-          "// 色をカラーコードに変換する関数を定義",
+          "// getHex関数（色をカラーコードに変換）を定義",
           "function getHex(color: Color): string {",
           "  // 色ごとにカラーコードを返す",
           "  switch (color) {",
@@ -526,10 +526,10 @@ export const typescriptData4 = {
           "content": "# 引数を再利用する\\n\\n既存の関数と同じ引数を使いたいときに便利です。\\n\\n## たとえ話\\n\\n「この関数と同じ材料で、別の料理を作る」ような感じです。引数の型を一から書かなくて済みます。\\n\\n## コードで書くとこうなるよ\\n\\n```typescript\\nfunction greet(name: string, age: number): void {\\n  console.log(`${name} is ${age}`);\\n}\\n\\n// 関数の引数の型を取得\\ntype GreetParams = Parameters<typeof greet>;\\n// [string, number]\\n\\n// 同じ型の引数を使える！\\nconst args: GreetParams = ['Taro', 25];\\ngreet(...args);  // 'Taro is 25'\\n```"
         }
       ],
-      "correctCode": "// 名前と年齢を表示する関数を定義\\nfunction greet(name: string, age: number): void {\\n  // テンプレート文字列で出力\\n  console.log(`${name} is ${age}`);\\n}\\n\\n// Parametersで関数の引数型を取得\\ntype GreetParams = Parameters<typeof greet>;\\n// 引数の配列（'たろう', 25）をargsに代入\\nconst args: GreetParams = ['たろう', 25];\\n// greet関数をargsを展開して呼び出す\\ngreet(...args);",
-      "holeyCode": "// 名前と年齢を表示する関数を定義\\n___ ___(___: ___, ___: ___): ___ {\\n  // テンプレート文字列で出力\\n  ___.___(___${___} is ${___}___);\\n}\\n\\n// Parametersで関数の引数型を取得\\ntype ___ = ___<typeof ___>;\\n// 引数の配列（'太郎', 25）をargsに代入\\nconst ___: ___ = [___, ___];\\n// greet関数をargsを展開して呼び出す\\n___(___);",
+      "correctCode": "// greet関数（名前と年齢を表示）を定義\\nfunction greet(name: string, age: number): void {\\n  // テンプレート文字列で出力\\n  console.log(`${name} is ${age}`);\\n}\\n\\n// Parametersで関数の引数型を取得\\ntype GreetParams = Parameters<typeof greet>;\\n// 引数の配列（'たろう', 25）をargsに代入\\nconst args: GreetParams = ['たろう', 25];\\n// greet関数をargsを展開して呼び出す\\ngreet(...args);",
+      "holeyCode": "// greet関数（名前と年齢を表示）を定義\\n___ ___(___: ___, ___: ___): ___ {\\n  // テンプレート文字列で出力\\n  ___.___(___${___} is ${___}___);\\n}\\n\\n// Parametersで関数の引数型を取得\\ntype ___ = ___<typeof ___>;\\n// 引数の配列（'太郎', 25）をargsに代入\\nconst ___: ___ = [___, ___];\\n// greet関数をargsを展開して呼び出す\\n___(___);",
       "correctLines": [
-          "// 名前と年齢を表示する関数を定義",
+          "// greet関数（名前と年齢を表示）を定義",
           "function greet(name: string, age: number): void {",
           "  // テンプレート文字列で出力",
           "  console.log(`${name} is ${age}`);",

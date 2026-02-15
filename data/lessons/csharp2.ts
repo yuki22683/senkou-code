@@ -196,10 +196,10 @@ export const csharp2Data = {
           "content": "# interfaceキーワードで定義する\\n\\n`interface` で定義し、クラスで実装（じっそう：実際に中身を作る）します。\\n\\n**命名ルール：**\\n名前は `I`（アイ）から始めるのがC#のお約束です（例：IGreeter、IRunner）\\n\\n**コード例（あいさつインターフェース）：**\\n```csharp\\n// インターフェースを定義\\ninterface IGreeter {\\n    void Greet();  // 中身は書かない（約束だけ）\\n}\\n\\n// インターフェースを実装\\nclass Person : IGreeter {\\n    public void Greet() {\\n        Console.WriteLine(\"Hello!\");\\n    }\\n}\\n```\\n\\n**解説：**\\n1. `interface IGreeter` で「Greet()を持つこと」という約束を定義\\n2. `Person : IGreeter` で「Personはこの約束を守る」と宣言\\n3. Person は必ず `Greet()` を実装しないとエラーになる"
         }
       ],
-      "correctCode": "// interfaceでインターフェースを定義\\ninterface IRunner {\\n    // Runメソッドを宣言\\n    void Run();\\n// ブロックを閉じる\\n}\\n// IRunnerを実装\\nclass Robot : IRunner {\\n    // Runメソッドを実装\\n    public void Run() {\\n        // 画面に出力\\n        Console.WriteLine(\"running\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// Robotインスタンスを作成\\nRobot r = new Robot();\\n// Runメソッドを呼び出し\\nr.Run();",
-      "holeyCode": "// interfaceでインターフェースを定義\\ninterface ___ {\\n    // Runメソッドを宣言\\n    void ___();\\n// ブロックを閉じる\\n___\\n// IRunnerを実装\\nclass ___ : ___ {\\n    // Runメソッドを実装\\n    public void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// Robotインスタンスを作成\\n___ ___ = new ___();\\n// Runメソッドを呼び出し\\n___.___();",
+      "correctCode": "// interfaceでIRunnerインターフェースを定義\\ninterface IRunner {\\n    // Runメソッドを宣言\\n    void Run();\\n// ブロックを閉じる\\n}\\n// IRunnerを実装\\nclass Robot : IRunner {\\n    // Runメソッドを実装\\n    public void Run() {\\n        // 画面に出力\\n        Console.WriteLine(\"running\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// Robotインスタンスを作成\\nRobot r = new Robot();\\n// Runメソッドを呼び出し\\nr.Run();",
+      "holeyCode": "// interfaceでIRunnerインターフェースを定義\\ninterface ___ {\\n    // Runメソッドを宣言\\n    void ___();\\n// ブロックを閉じる\\n___\\n// IRunnerを実装\\nclass ___ : ___ {\\n    // Runメソッドを実装\\n    public void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// Robotインスタンスを作成\\n___ ___ = new ___();\\n// Runメソッドを呼び出し\\n___.___();",
       "correctLines": [
-          "// interfaceでインターフェースを定義",
+          "// interfaceでIRunnerインターフェースを定義",
           "interface IRunner {",
           "    // Runメソッドを宣言",
           "    void Run();",

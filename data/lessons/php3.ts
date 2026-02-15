@@ -290,10 +290,10 @@ export const php3Data = {
           "content": "# 引数名: 値 の形式\\n\\n`関数(引数名: 値)` で指定します。\\n\\n**コード例：**\\n```php\\nfunction greet($name, $greeting) {\\n    return \"$greeting, $name!\";\\n}\\necho greet(greeting: 'Hi', name: 'Alice');\\n// Hi, Alice!\\n```\\n\\n**何をしているの？**\\n1. `greet($name, $greeting)` → 普通は name, greeting の順\\n2. `greeting: 'Hi'` → greetingに'Hi'を入れる\\n3. `name: 'Alice'` → nameに'Alice'を入れる\\n4. 順番が逆でもOK！名前で指定してるから\\n\\n**ポイント：**\\n- `引数名:` と値をセットで書く\\n- 順番を気にしなくていい\\n- 何を渡しているか一目瞭然"
         }
       ],
-      "correctCode": "// functionで関数を定義\\nfunction createUser($name, $age) {\\n    // returnで連想配列を返す\\n    return ['名前' => $name, '年齢' => $age];\\n}\\n// age, nameの順で名前付き引数を指定\\n$user = createUser(age: 30, name: 'アリス');",
-      "holeyCode": "// functionで関数を定義\\n___ ___(___) {\\n    // returnで連想配列を返す\\n    ___ ['___' ___ $___, '___' ___ $___];\\n// ブロックを閉じる\\n___\\n// age, nameの順で名前付き引数を指定\\n$___ = ___(___: ___, ___: '___');",
+      "correctCode": "// functionでcreateUser関数を定義\\nfunction createUser($name, $age) {\\n    // returnで連想配列を返す\\n    return ['名前' => $name, '年齢' => $age];\\n}\\n// age, nameの順で名前付き引数を指定\\n$user = createUser(age: 30, name: 'アリス');",
+      "holeyCode": "// functionでcreateUser関数を定義\\n___ ___(___) {\\n    // returnで連想配列を返す\\n    ___ ['___' ___ $___, '___' ___ $___];\\n// ブロックを閉じる\\n___\\n// age, nameの順で名前付き引数を指定\\n$___ = ___(___: ___, ___: '___');",
       "correctLines": [
-          "// functionで関数を定義",
+          "// functionでcreateUser関数を定義",
           "function createUser($name, $age) {",
           "    // returnで連想配列を返す",
           "    return ['名前' => $name, '年齢' => $age];",
@@ -340,18 +340,18 @@ export const php3Data = {
           "content": "# trait と use\\n\\n`trait` で定義し、`use` でクラスに組み込みます。\\n\\n**コード例：**\\n```php\\ntrait Greetable {\\n    public function greet() {\\n        return 'Hello!';\\n    }\\n}\\n\\nclass Person {\\n    use Greetable;\\n}\\n```\\n\\n**何をしているの？**\\n1. `trait Greetable` → 「Greetable」という名前のトレイトを作る\\n2. `public function greet()` → greetメソッドを定義\\n3. `use Greetable;` → Personクラスにトレイトを組み込む\\n4. PersonでもgreetメソッドがつかえるようになU！\\n\\n**ポイント：**\\n- `trait` = 共有パーツの定義\\n- `use` = そのパーツを使う宣言\\n- 複数のトレイトを `use` できる"
         }
       ],
-      "correctCode": "// traitでトレイトを定義\\ntrait HelloTrait {\\n    // functionでメソッドを定義\\n    public function sayHello() {\\n        // 'こんにちは！'を返す\\n        return 'こんにちは！';\\n    }\\n}\\n// classでクラスを定義\\nclass Greeter {\\n    // useでトレイトを使用\\n    use HelloTrait;\\n}",
-      "holeyCode": "// traitでトレイトを定義\\n___ ___ {\\n    // functionでメソッドを定義\\n    ___ ___ ___() {\\n        // 'こんにちは！'を返す\\n        ___ '___';\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// classでクラスを定義\\n___ ___ {\\n    // useでトレイトを使用\\n    ___ ___;\\n// ブロックを閉じる\\n___",
+      "correctCode": "// traitでHelloTraitトレイトを定義\\ntrait HelloTrait {\\n    // functionでsayHelloメソッドを定義\\n    public function sayHello() {\\n        // 'こんにちは！'を返す\\n        return 'こんにちは！';\\n    }\\n}\\n// classでGreeterクラスを定義\\nclass Greeter {\\n    // useでトレイトを使用\\n    use HelloTrait;\\n}",
+      "holeyCode": "// traitでHelloTraitトレイトを定義\\n___ ___ {\\n    // functionでsayHelloメソッドを定義\\n    ___ ___ ___() {\\n        // 'こんにちは！'を返す\\n        ___ '___';\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// classでGreeterクラスを定義\\n___ ___ {\\n    // useでトレイトを使用\\n    ___ ___;\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// traitでトレイトを定義",
+          "// traitでHelloTraitトレイトを定義",
           "trait HelloTrait {",
-          "    // functionでメソッドを定義",
+          "    // functionでsayHelloメソッドを定義",
           "    public function sayHello() {",
           "        // 'こんにちは！'を返す",
           "        return 'こんにちは！';",
           "    }",
           "}",
-          "// classでクラスを定義",
+          "// classでGreeterクラスを定義",
           "class Greeter {",
           "    // useでトレイトを使用",
           "    use HelloTrait;",
@@ -411,10 +411,10 @@ export const php3Data = {
           "content": "# yield で値を1つずつ返す\\n\\n`yield` を使うと、その関数はジェネレータになります。\\n\\n**コード例：**\\n```php\\nfunction countTo($n) {\\n    for ($i = 1; $i <= $n; $i++) {\\n        yield $i;\\n    }\\n}\\n```\\n\\n**何をしているの？**\\n1. `countTo(3)` を呼ぶ\\n2. 1回目: `yield 1` → 1を返して一時停止\\n3. 2回目: `yield 2` → 2を返して一時停止\\n4. 3回目: `yield 3` → 3を返して一時停止\\n5. 終わり\\n\\n**returnとの違い：**\\n- return: 値を返したら終わり\\n- yield: 値を返しても、続きから再開できる\\n\\n**ポイント：**\\n- yield = 「一時的に値を渡す」\\n- foreach で1つずつ取り出せる"
         }
       ],
-      "correctCode": "// functionで関数を定義\\nfunction rangeGen($n) {\\n    // forでループ\\n    for ($i = 1; $i <= $n; $i++) {\\n        // yieldで値を一つずつ返す\\n        yield $i;\\n    }\\n}",
-      "holeyCode": "// functionで関数を定義\\n___ ___(___) {\\n    // forでループ\\n    ___ ($___ = ___; $___ ___ $___; $___++) {\\n        // yieldで値を一つずつ返す\\n        ___ $___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// functionでrangeGen関数を定義\\nfunction rangeGen($n) {\\n    // forでループ\\n    for ($i = 1; $i <= $n; $i++) {\\n        // yieldで値を一つずつ返す\\n        yield $i;\\n    }\\n}",
+      "holeyCode": "// functionでrangeGen関数を定義\\n___ ___(___) {\\n    // forでループ\\n    ___ ($___ = ___; $___ ___ $___; $___++) {\\n        // yieldで値を一つずつ返す\\n        ___ $___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// functionで関数を定義",
+          "// functionでrangeGen関数を定義",
           "function rangeGen($n) {",
           "    // forでループ",
           "    for ($i = 1; $i <= $n; $i++) {",
@@ -513,10 +513,10 @@ export const php3Data = {
           "content": "# コンストラクタの引数にアクセス修飾子\\n\\n引数の前に `public` などをつけると、自動でプロパティになります。\\n\\n**コード例：**\\n```php\\nclass Person {\\n    public function __construct(\\n        public string $name,\\n        public int $age\\n    ) {}\\n}\\n```\\n\\n**普通の書き方との比較：**\\n```php\\n// 普通（長い）\\nclass Person {\\n    public string $name;\\n    public int $age;\\n    public function __construct($name, $age) {\\n        $this->name = $name;\\n        $this->age = $age;\\n    }\\n}\\n\\n// 昇格（短い）- 上のコード例と同じ動き！\\n```\\n\\n**ポイント：**\\n- 引数に `public`、`private`、`protected` をつける\\n- それだけでプロパティの宣言と代入が完了\\n- コンストラクタの中身が `{}` だけでOK"
         }
       ],
-      "correctCode": "// classでクラスを定義\\nclass Person {\\n    // __constructでコンストラクタを定義\\n    public function __construct(\\n        // publicでアクセス修飾子\\n        public string $name,\\n        // publicでアクセス修飾子\\n        public int $age\\n    ) {}\\n}",
-      "holeyCode": "// classでクラスを定義\\n___ ___ {\\n    // __constructでコンストラクタを定義\\n    ___ ___ ___(\\n        // publicでアクセス修飾子\\n        ___ ___ $___,\\n        // publicでアクセス修飾子\\n        ___ ___ $___\\n    // 空のコンストラクタ\\n    ) ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// classでPersonクラスを定義\\nclass Person {\\n    // __constructでコンストラクタを定義\\n    public function __construct(\\n        // publicでアクセス修飾子\\n        public string $name,\\n        // publicでアクセス修飾子\\n        public int $age\\n    ) {}\\n}",
+      "holeyCode": "// classでPersonクラスを定義\\n___ ___ {\\n    // __constructでコンストラクタを定義\\n    ___ ___ ___(\\n        // publicでアクセス修飾子\\n        ___ ___ $___,\\n        // publicでアクセス修飾子\\n        ___ ___ $___\\n    // 空のコンストラクタ\\n    ) ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// classでクラスを定義",
+          "// classでPersonクラスを定義",
           "class Person {",
           "    // __constructでコンストラクタを定義",
           "    public function __construct(",

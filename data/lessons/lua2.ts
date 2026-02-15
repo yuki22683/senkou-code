@@ -219,10 +219,10 @@ export const lua2Data = {
           "content": "# return で値を返す\\n\\n`return` で値を返します。\\n\\n**コード例：**\\n```lua\\nlocal function add(a, b)\\n    return a + b\\nend\\n```"
         }
       ],
-      "correctCode": "-- functionで関数を定義\\nlocal function double(n)\\n    -- nの2倍を返す\\n    return n * 2\\nend\\n-- double関数（引数5）を呼び出す\\nprint(double(5))",
-      "holeyCode": "-- functionで関数を定義\\nlocal function ___(___)\\n    -- nの2倍を返す\\n    return ___ * ___\\n-- ブロックを終了\\n___\\n-- double関数（引数5）を呼び出す\\n___(___(___))",
+      "correctCode": "-- functionでdouble関数を定義\\nlocal function double(n)\\n    -- nの2倍を返す\\n    return n * 2\\nend\\n-- double関数（引数5）を呼び出す\\nprint(double(5))",
+      "holeyCode": "-- functionでdouble関数を定義\\nlocal function ___(___)\\n    -- nの2倍を返す\\n    return ___ * ___\\n-- ブロックを終了\\n___\\n-- double関数（引数5）を呼び出す\\n___(___(___))",
       "correctLines": [
-          "-- functionで関数を定義",
+          "-- functionでdouble関数を定義",
           "local function double(n)",
           "    -- nの2倍を返す",
           "    return n * 2",

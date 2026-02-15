@@ -326,12 +326,12 @@ export const elixir2Data = {
           "content": "# def 関数名 do ... end\\n\\nパターンマッチを使った複数の関数定義もできます。\\n\\n**コード例：**\\n```elixir\\ndefmodule Math do\\n  def double(x), do: x * 2\\nend\\n```"
         }
       ],
-      "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Calc do\\n  # defで関数を定義\\n  def triple(x), do: x * 3\\nend\\n# 4の3倍を計算して表示\\nIO.puts Calc.triple(4)",
-      "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  # defで関数を定義\\n  def ___(___), do: ___ * ___\\n# ブロックを終了\\n___\\n# 4の3倍を計算して表示\\n___.___ ___.___(___)",
+      "correctCode": "# defmoduleでCalcモジュールを定義\\ndefmodule Calc do\\n  # defでtriple関数を定義\\n  def triple(x), do: x * 3\\nend\\n# 4の3倍を計算して表示\\nIO.puts Calc.triple(4)",
+      "holeyCode": "# defmoduleでCalcモジュールを定義\\ndefmodule ___ do\\n  # defでtriple関数を定義\\n  def ___(___), do: ___ * ___\\n# ブロックを終了\\n___\\n# 4の3倍を計算して表示\\n___.___ ___.___(___)",
       "correctLines": [
-          "# defmoduleでモジュールを定義",
+          "# defmoduleでCalcモジュールを定義",
           "defmodule Calc do",
-          "  # defで関数を定義",
+          "  # defでtriple関数を定義",
           "  def triple(x), do: x * 3",
           "end",
           "# 4の3倍を計算して表示",
@@ -379,9 +379,9 @@ export const elixir2Data = {
           "content": "# 終了条件を忘れずに\\n\\n必ず終了条件を設定します。\\n\\n**コード例：**\\n```elixir\\ndef sum(0), do: 0\\ndef sum(n), do: n + sum(n - 1)\\n```"
         }
       ],
-      "correctCode": "# defmoduleでモジュールを定義\\ndefmodule Math do\\n  def factorial(0), do: 1\\n  # factorialを再帰的に呼び出す\\n  def factorial(n), do: n * factorial(n - 1)\\nend\\n# 5の階乗を計算して表示\\nIO.puts Math.factorial(5)", "holeyCode": "# defmoduleでモジュールを定義\\ndefmodule ___ do\\n  # factorial関数を定義\\n  def ___(___), do: ___\\n  # factorialを再帰的に呼び出す\\n  def ___(___), do: ___ * ___(___ - ___)\\n# ブロックを終了\\n___\\n# 5の階乗を計算して表示\\n___.___ ___.___(___)",
+      "correctCode": "# defmoduleでMathモジュールを定義\\ndefmodule Math do\\n  def factorial(0), do: 1\\n  # factorialを再帰的に呼び出す\\n  def factorial(n), do: n * factorial(n - 1)\\nend\\n# 5の階乗を計算して表示\\nIO.puts Math.factorial(5)", "holeyCode": "# defmoduleでMathモジュールを定義\\ndefmodule ___ do\\n  # factorial関数を定義\\n  def ___(___), do: ___\\n  # factorialを再帰的に呼び出す\\n  def ___(___), do: ___ * ___(___ - ___)\\n# ブロックを終了\\n___\\n# 5の階乗を計算して表示\\n___.___ ___.___(___)",
       "correctLines": [
-          "# defmoduleでモジュールを定義",
+          "# defmoduleでMathモジュールを定義",
           "defmodule Math do",
           "  def factorial(0), do: 1",
           "  # factorialを再帰的に呼び出す",

@@ -45,10 +45,10 @@ export const ruby3Data = {
           "content": "# ブロックを実行する\\n\\n**コード例：**\\n```ruby\\ndef greet\\n  yield\\nend\\n\\ngreet { puts 'こんにちは' }\\n```\\n\\n=> こんにちは\\n\\n**何が起こるの？**\\n1. `greet` メソッドを呼ぶ\\n2. `{ puts 'こんにちは' }` というブロックを渡す\\n3. メソッド内の `yield` に到達\\n4. 渡されたブロックが実行される\\n5. 「こんにちは」と表示される\\n\\n**ポイント：**\\n- ブロックの内容を変えれば、同じメソッドで違う処理ができる\\n- `yield` は何回でも呼べる（その度にブロックが実行される）"
         }
       ],
-      "correctCode": "# defでメソッドを定義\\ndef twice\\n  # yieldでブロックを実行\\n  yield\\n  # yieldでブロックを実行\\n  yield\\n# endで終了\\nend",
-      "holeyCode": "# defでメソッドを定義\\ndef ___\\n  # yieldでブロックを実行\\n  ___\\n  # yieldでブロックを実行\\n  ___\\n# endで終了\\n___",
+      "correctCode": "# defでtwiceメソッドを定義\\ndef twice\\n  # yieldでブロックを実行\\n  yield\\n  # yieldでブロックを実行\\n  yield\\n# endで終了\\nend",
+      "holeyCode": "# defでtwiceメソッドを定義\\ndef ___\\n  # yieldでブロックを実行\\n  ___\\n  # yieldでブロックを実行\\n  ___\\n# endで終了\\n___",
       "correctLines": [
-          "# defでメソッドを定義",
+          "# defでtwiceメソッドを定義",
           "def twice",
           "  # yieldでブロックを実行",
           "  yield",
@@ -364,10 +364,10 @@ export const ruby3Data = {
           "content": "# 存在しないメソッドを捕まえる\\n\\n**コード例：**\\n```ruby\\nclass MyClass\\n  def method_missing(name, *args)\\n    puts \"#{name} が呼ばれました\"\\n  end\\nend\\n\\nobj = MyClass.new\\nobj.hello\\nobj.foo \\n```\\n\\n=> hello が呼ばれました\\n\\n=> foo が呼ばれました\\n\\n**何が起こるの？**\\n1. `obj.hello` を呼ぶ\\n2. `hello` メソッドは定義されていない\\n3. `method_missing` が代わりに実行される\\n4. `name` には `:hello` が入る\\n\\n**引数の意味：**\\n- `name` → 呼ばれたメソッド名（シンボル）\\n- `*args` → 渡された引数\\n\\n**注意：** 便利ですが、使いすぎるとデバッグが難しくなります。"
         }
       ],
-      "correctCode": "# classでクラスを定義\\nclass FlexibleClass\\n  # method_missingで未定義メソッドを捕捉\\n  def method_missing(name, *args)\\n    # nameでメソッド名を参照\\n    \"Unknown method: #{name}\"\\n  # endで終了\\n  end\\n# endで終了\\nend",
-      "holeyCode": "# classでクラスを定義\\n___ ___\\n  # method_missingで未定義メソッドを捕捉\\n  ___ ___(___, ___)\\n    # nameでメソッド名を参照\\n    ___\\n  # endで終了\\n  ___\\n# endで終了\\n___",
+      "correctCode": "# classでFlexibleClassクラスを定義\\nclass FlexibleClass\\n  # method_missingで未定義メソッドを捕捉\\n  def method_missing(name, *args)\\n    # nameでメソッド名を参照\\n    \"Unknown method: #{name}\"\\n  # endで終了\\n  end\\n# endで終了\\nend",
+      "holeyCode": "# classでFlexibleClassクラスを定義\\n___ ___\\n  # method_missingで未定義メソッドを捕捉\\n  ___ ___(___, ___)\\n    # nameでメソッド名を参照\\n    ___\\n  # endで終了\\n  ___\\n# endで終了\\n___",
       "correctLines": [
-          "# classでクラスを定義",
+          "# classでFlexibleClassクラスを定義",
           "class FlexibleClass",
           "  # method_missingで未定義メソッドを捕捉",
           "  def method_missing(name, *args)",

@@ -263,10 +263,10 @@ export const perl2Data = {
           "content": "# @_ から1つずつ取り出す\\n\\n**このコードは何をしているの？**\\n```perl\\nsub greet {\\n    my $name = shift;\\n    print \"Hello, $name\\n\";\\n}\\ngreet(\"Taro\");\\n```\\n\\n**解説：**\\n1. `greet(\"Taro\")` で \"Taro\" が `@_` に入る\\n2. `shift` で `@_` の先頭を取り出す\\n3. `$name` に \"Taro\" が入る\\n4. \"Hello, Taro\" と表示\\n\\n**shift とは：** 配列の先頭を取り出すコマンド。`shift @_` の略です。"
         }
       ],
-      "correctCode": "# subでサブルーチンを定義\\nsub double {\\n    # shiftで引数を取得\\n    my $n = shift;\\n    # returnで戻り値を返す\\n    return $n * 2;\\n}\\n# printで出力\\nprint double(5) . \"\\n\";",
-      "holeyCode": "# subでサブルーチンを定義\\nsub ___ {\\n    # shiftで引数を取得\\n    my $___=___\\n    # returnで戻り値を返す\\n    return $___ * ___;\\n# ブロックを閉じる\\n___\\n# printで出力\\n___ ___(___) . \"\\n# 文を実行\\n___",
+      "correctCode": "# subでdoubleサブルーチンを定義\\nsub double {\\n    # shiftで引数を取得\\n    my $n = shift;\\n    # returnで戻り値を返す\\n    return $n * 2;\\n}\\n# printで出力\\nprint double(5) . \"\\n\";",
+      "holeyCode": "# subでdoubleサブルーチンを定義\\nsub ___ {\\n    # shiftで引数を取得\\n    my $___=___\\n    # returnで戻り値を返す\\n    return $___ * ___;\\n# ブロックを閉じる\\n___\\n# printで出力\\n___ ___(___) . \"\\n# 文を実行\\n___",
       "correctLines": [
-          "# subでサブルーチンを定義",
+          "# subでdoubleサブルーチンを定義",
           "sub double {",
           "    # shiftで引数を取得",
           "    my $n = shift;",

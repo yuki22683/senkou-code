@@ -161,10 +161,10 @@ export const swift2Data = {
           "content": "# 目標\\n\\n四角形を表す構造体を作りましょう。\\n\\n1. `Rect` という構造体を作る\\n2. `width`（横幅）と `height`（高さ）を持たせる\\n3. インスタンスを作って `width` を表示する"
         }
       ],
-      "correctCode": "// structで構造体を定義\\nstruct Rect {\\n    // widthプロパティ\\n    var width: Int\\n    // heightプロパティ\\n    var height: Int\\n// ブロックを閉じる\\n}\\n// インスタンスを作成\\nlet r = Rect(width: 3, height: 4)\\n// widthを出力\\nprint(r.width)",
-      "holeyCode": "// structで構造体を定義\\nstruct ___ ___\\n    // widthプロパティ\\n    var ___: ___\\n    // heightプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n// インスタンスを作成\\nlet ___ = ___(___: ___, ___: ___)\\n// widthを出力\\n___(___.___)",
+      "correctCode": "// structでRect構造体を定義\\nstruct Rect {\\n    // widthプロパティ\\n    var width: Int\\n    // heightプロパティ\\n    var height: Int\\n// ブロックを閉じる\\n}\\n// Rectインスタンスをrに代入\\nlet r = Rect(width: 3, height: 4)\\n// widthを出力\\nprint(r.width)",
+      "holeyCode": "// structでRect構造体を定義\\nstruct ___ ___\\n    // widthプロパティ\\n    var ___: ___\\n    // heightプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n// Rectインスタンスをrに代入\\nlet ___ = ___(___: ___, ___: ___)\\n// widthを出力\\n___(___.___)",
       "correctLines": [
-          "// structで構造体を定義",
+          "// structでRect構造体を定義",
           "struct Rect {",
           "    // widthプロパティ",
           "    var width: Int",
@@ -172,7 +172,7 @@ export const swift2Data = {
           "    var height: Int",
           "// ブロックを閉じる",
           "}",
-          "// インスタンスを作成",
+          "// Rectインスタンスをrに代入",
           "let r = Rect(width: 3, height: 4)",
           "// widthを出力",
           "print(r.width)"
@@ -225,10 +225,10 @@ export const swift2Data = {
           "content": "# 目標\\n\\nネコのクラスを作りましょう。\\n\\n1. `Cat` というクラスを作る\\n2. `name` プロパティを持たせる\\n3. `init` で名前を設定できるようにする\\n4. 「Tama」という名前のネコを作って表示する"
         }
       ],
-      "correctCode": "// classでクラスを定義\\nclass Cat {\\n    // nameプロパティ\\n    var name: String\\n    // initでイニシャライザ\\n    init(name: String) {\\n        // selfで自身のプロパティにアクセス\\n        self.name = name\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n// インスタンスを作成\\nlet cat = Cat(name: \"タマ\")\\n// nameを出力\\nprint(cat.name)",
-      "holeyCode": "// classでクラスを定義\\nclass ___ ___\\n    // nameプロパティ\\n    var ___: ___\\n    // initでイニシャライザ\\n    ___(___: ___) ___\\n        // selfで自身のプロパティにアクセス\\n        ___.___ = ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// インスタンスを作成\\nlet ___ = ___(___ ___)\\n// nameを出力\\n___(___.___)",
+      "correctCode": "// classでCatクラスを定義\\nclass Cat {\\n    // nameプロパティ\\n    var name: String\\n    // initでイニシャライザ\\n    init(name: String) {\\n        // selfで自身のプロパティにアクセス\\n        self.name = name\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n// Catインスタンスをcatに代入\\nlet cat = Cat(name: \"タマ\")\\n// nameを出力\\nprint(cat.name)",
+      "holeyCode": "// classでCatクラスを定義\\nclass ___ ___\\n    // nameプロパティ\\n    var ___: ___\\n    // initでイニシャライザ\\n    ___(___: ___) ___\\n        // selfで自身のプロパティにアクセス\\n        ___.___ = ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// Catインスタンスをcatに代入\\nlet ___ = ___(___ ___)\\n// nameを出力\\n___(___.___)",
       "correctLines": [
-          "// classでクラスを定義",
+          "// classでCatクラスを定義",
           "class Cat {",
           "    // nameプロパティ",
           "    var name: String",
@@ -240,7 +240,7 @@ export const swift2Data = {
           "    }",
           "// ブロックを閉じる",
           "}",
-          "// インスタンスを作成",
+          "// Catインスタンスをcatに代入",
           "let cat = Cat(name: \"タマ\")",
           "// nameを出力",
           "print(cat.name)"
@@ -297,10 +297,10 @@ export const swift2Data = {
           "content": "# 目標\\n\\n「話せる」プロトコルを作って、犬に準拠させましょう。\\n\\n1. `Speaker` プロトコルを作る\\n2. `speak()` という関数を宣言\\n3. `Dog` 構造体を `Speaker` に準拠させる\\n4. `speak()` で「woof」と鳴くようにする"
         }
       ],
-      "correctCode": "// protocolでプロトコルを定義\\nprotocol Speaker {\\n    // speakメソッドを宣言\\n    func speak()\\n// ブロックを閉じる\\n}\\n// Speakerに準拠\\nstruct Dog: Speaker {\\n    // speakメソッドを実装\\n    func speak() {\\n        // ワン！と出力\\n        print(\"ワン！\")\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n// インスタンスを作成\\nlet d = Dog()\\n// speakメソッドを呼び出す\\nd.speak()",
-      "holeyCode": "// protocolでプロトコルを定義\\nprotocol ___ ___\\n    // speakメソッドを宣言\\n    func ___()\\n// ブロックを閉じる\\n___\\n// Speakerに準拠\\nstruct ___: ___ ___\\n    // speakメソッドを実装\\n    func ___() ___\\n        // ワン！と出力\\n        ___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// インスタンスを作成\\nlet ___ = ___()\\n// speakメソッドを呼び出す\\n___.___() ",
+      "correctCode": "// protocolでSpeakerプロトコルを定義\\nprotocol Speaker {\\n    // speakメソッドを宣言\\n    func speak()\\n// ブロックを閉じる\\n}\\n// Speakerに準拠\\nstruct Dog: Speaker {\\n    // speakメソッドを実装\\n    func speak() {\\n        // ワン！と出力\\n        print(\"ワン！\")\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n// Dogインスタンスをdに代入\\nlet d = Dog()\\n// speakメソッドを呼び出す\\nd.speak()",
+      "holeyCode": "// protocolでSpeakerプロトコルを定義\\nprotocol ___ ___\\n    // speakメソッドを宣言\\n    func ___()\\n// ブロックを閉じる\\n___\\n// Speakerに準拠\\nstruct ___: ___ ___\\n    // speakメソッドを実装\\n    func ___() ___\\n        // ワン！と出力\\n        ___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// Dogインスタンスをdに代入\\nlet ___ = ___()\\n// speakメソッドを呼び出す\\n___.___() ",
       "correctLines": [
-          "// protocolでプロトコルを定義",
+          "// protocolでSpeakerプロトコルを定義",
           "protocol Speaker {",
           "    // speakメソッドを宣言",
           "    func speak()",
@@ -316,7 +316,7 @@ export const swift2Data = {
           "    }",
           "// ブロックを閉じる",
           "}",
-          "// インスタンスを作成",
+          "// Dogインスタンスをdに代入",
           "let d = Dog()",
           "// speakメソッドを呼び出す",
           "d.speak()"
@@ -605,10 +605,10 @@ export const swift2Data = {
           "content": "# 目標\\n\\n色の列挙型を作って、switchで判定しましょう。\\n\\n1. `Color` enumを作る（red, green, blue）\\n2. `Color.red` を変数に入れる\\n3. switchで各ケースを判定して色名を表示"
         }
       ],
-      "correctCode": "// enumで列挙型を定義\\nenum Color {\\n    // caseでケースを定義\\n    case red, green, blue\\n// ブロックを閉じる\\n}\\n// 赤色をcに代入\\nlet c = Color.red\\n// switchでパターンマッチ\\nswitch c {\\n// ケース分岐\\ncase .red:\\n    // 赤色を出力\\n    print(\"あか\")\\n// ケース分岐\\ncase .green:\\n    // みどり色を出力\\n    print(\"みどり\")\\n// ケース分岐\\ncase .blue:\\n    // あお色を出力\\n    print(\"あお\")\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// enumで列挙型を定義\\nenum ___ ___\\n    // caseでケースを定義\\n    case ___, ___, ___\\n// ブロックを閉じる\\n___\\n// 赤色をcに代入\\nlet ___ = ___.___\\n// switchでパターンマッチ\\nswitch ___ ___\\n// ケース分岐\\ncase .___:\\n    // 赤色を出力\\n    ___(___)\\n// ケース分岐\\ncase .___:\\n    // みどり色を出力\\n    ___(___)\\n// ケース分岐\\ncase .___:\\n    // あお色を出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// enumでColor列挙型を定義\\nenum Color {\\n    // caseでケースを定義\\n    case red, green, blue\\n// ブロックを閉じる\\n}\\n// 赤色をcに代入\\nlet c = Color.red\\n// switchでパターンマッチ\\nswitch c {\\n// ケース分岐\\ncase .red:\\n    // 赤色を出力\\n    print(\"あか\")\\n// ケース分岐\\ncase .green:\\n    // みどり色を出力\\n    print(\"みどり\")\\n// ケース分岐\\ncase .blue:\\n    // あお色を出力\\n    print(\"あお\")\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// enumでColor列挙型を定義\\nenum ___ ___\\n    // caseでケースを定義\\n    case ___, ___, ___\\n// ブロックを閉じる\\n___\\n// 赤色をcに代入\\nlet ___ = ___.___\\n// switchでパターンマッチ\\nswitch ___ ___\\n// ケース分岐\\ncase .___:\\n    // 赤色を出力\\n    ___(___)\\n// ケース分岐\\ncase .___:\\n    // みどり色を出力\\n    ___(___)\\n// ケース分岐\\ncase .___:\\n    // あお色を出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// enumで列挙型を定義",
+          "// enumでColor列挙型を定義",
           "enum Color {",
           "    // caseでケースを定義",
           "    case red, green, blue",
