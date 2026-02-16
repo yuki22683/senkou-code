@@ -49,10 +49,10 @@ export const luaData = {
           "content": "# メッセージを表示\\n\\n**このコードは何をしているの？**\\n```lua\\nprint(\"Hello, Lua!\")\\n```\\n\\n**解説：**\\n1. `print` で画面に出力\\n2. `\"Hello, Lua!\"` が表示される\\n\\n**Luaの特徴：** 他の言語と比べてシンプル！余計な記号がほとんどありません。"
         }
       ],
-      "correctCode": "-- こんにちは, Lua!を表示\\nprint(\"こんにちは, Lua!\")",
-      "holeyCode": "-- こんにちは, Lua!を表示\\n___(\"___\")",
+      "correctCode": "-- printでこんにちは, Lua!を表示\\nprint(\"こんにちは, Lua!\")",
+      "holeyCode": "-- printでこんにちは, Lua!を表示\\n___(\"___\")",
       "correctLines": [
-          "-- こんにちは, Lua!を表示",
+          "-- printでこんにちは, Lua!を表示",
           "print(\"こんにちは, Lua!\")"
         ],
       "lineHints": [

@@ -49,10 +49,10 @@ export const haskellData = {
           "content": "# putStrLn 関数\\n\\n画面に文字を出して改行したいときは、`putStrLn` と入力して、そのあとに `\" \"` で囲んだ文字を続けます。\\n\\n**コード例：**\\n```haskell\\nmain = putStrLn \"Hello, Haskell!\"\\n```"
         }
       ],
-      "correctCode": "-- Welcome to FP!を表示\\nmain = putStrLn \"Welcome to FP!\"",
-      "holeyCode": "-- Welcome to FP!を表示\\n___ = ___ \"___\"",
+      "correctCode": "-- putStrLnでWelcome to FP!を表示\\nmain = putStrLn \"Welcome to FP!\"",
+      "holeyCode": "-- putStrLnでWelcome to FP!を表示\\n___ = ___ \"___\"",
       "correctLines": [
-          "-- Welcome to FP!を表示",
+          "-- putStrLnでWelcome to FP!を表示",
           "main = putStrLn \"Welcome to FP!\""
         ],
       "lineHints": [

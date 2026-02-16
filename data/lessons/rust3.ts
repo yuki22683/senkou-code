@@ -45,8 +45,8 @@ export const rust3Data = {
           "content": "# 危険なバグを防ぐ\\n\\n**ダングリング参照** という危険なバグがあります。これは「もう存在しないデータ」を指し続けている参照のことです。\\n\\n**例：**\\n```rust\\nfn longest<'a>(x: &'a str, y: &'a str) -> &'a str {\\n    if x.len() > y.len() { x } else { y }\\n}\\n```\\n\\n**`'a` の意味：**\\n- 引数 `x` と `y` は同じライフタイム `'a` を持つ\\n- 戻り値も同じライフタイム `'a` を持つ\\n- つまり「xとyが両方有効な間、戻り値も有効」という約束\\n\\nRustはこれを自動でチェックしてくれます！"
         }
       ],
-      "correctCode": "// fnでfirst関数を定義（ライフタイム'aを使用）\\nfn first<'a>(s: &'a str) -> &'a str {\\n    // sの先頭1文字のスライスを返す\\n    &s[..1]\\n}\\n\\n// fnでmain関数を定義\\nfn main() {\\n    // letとString::fromでsに\"Hello\"を作成\\n    let s = String::from(\"Hello\");\\n    // first関数（引数sの参照）の結果を出力\\n    println!(\"{}\", first(&s));\\n}",
-      "holeyCode": "// fnでfirst関数を定義（ライフタイム'aを使用）\\nfn ___<'___>(___: &'___ ___) -> &'___ ___ {\\n    // sの先頭1文字のスライスを返す\\n    &___[..___]\\n// ブロックを閉じる\\n___\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // letとString::fromでsに\"Hello\"を作成\\n    let ___ = ___::___(\"___\");\\n    // first関数（引数sの参照）の結果を出力\\n    ___!(\"{}\", ___(___));\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fnでfirst関数を定義（ライフタイム'aを使用）\\nfn first<'a>(s: &'a str) -> &'a str {\\n    // sの先頭1文字のスライスを返す\\n    &s[..1]\\n}\\n\\n// fnでmain関数を定義\\nfn main() {\\n    // letとString::fromでsに\"Hello\"を作成\\n    let s = String::from(\"Hello\");\\n    // println!でfirst関数（引数sの参照）の結果を出力\\n    println!(\"{}\", first(&s));\\n}",
+      "holeyCode": "// fnでfirst関数を定義（ライフタイム'aを使用）\\nfn ___<'___>(___: &'___ ___) -> &'___ ___ {\\n    // sの先頭1文字のスライスを返す\\n    &___[..___]\\n// ブロックを閉じる\\n___\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // letとString::fromでsに\"Hello\"を作成\\n    let ___ = ___::___(\"___\");\\n    // println!でfirst関数（引数sの参照）の結果を出力\\n    ___!(\"{}\", ___(___));\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// fnでfirst関数を定義（ライフタイム'aを使用）",
           "fn first<'a>(s: &'a str) -> &'a str {",
@@ -58,7 +58,7 @@ export const rust3Data = {
           "fn main() {",
           "    // letとString::fromでsに\"Hello\"を作成",
           "    let s = String::from(\"Hello\");",
-          "    // first関数（引数sの参照）の結果を出力",
+          "    // println!でfirst関数（引数sの参照）の結果を出力",
           "    println!(\"{}\", first(&s));",
           "}"
         ],
@@ -107,13 +107,13 @@ export const rust3Data = {
           "content": "# | | で引数を囲む\\n\\nクロージャは `|引数| 処理` という形で書きます。`||` は「パイプ」と呼ばれます。\\n\\n**いろいろな書き方：**\\n```rust\\n// 引数なし\\n|| println!(\"Hello\")\\n\\n// 引数あり\\n|x, y| x + y\\n\\n// 複数行のブロック\\n|x| {\\n    let y = x * 2;\\n    y + 1\\n}\\n```\\n\\n**ポイント：**\\n- 引数を `| |` で囲む（関数の `()` の代わり）\\n- 型は省略できることが多い（Rustが推測してくれる）"
         }
       ],
-      "correctCode": "// fnでmain関数を定義\\nfn main() {\\n    // letでdoubleクロージャを定義（|x|で引数、x*2を返す）\\n    let double = |x| x * 2;\\n    // double関数（引数5）の結果を出力\\n    println!(\"{}\", double(5));\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___() {\\n    // letでdoubleクロージャを定義（|x|で引数、x*2を返す）\\n    let ___ = |___| ___ * ___;\\n    // double関数（引数5）の結果を出力\\n    ___!(\\\"{}\\\", ___(___));\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fnでmain関数を定義\\nfn main() {\\n    // letでdoubleクロージャを定義（|x|で引数、x*2を返す）\\n    let double = |x| x * 2;\\n    // println!でdouble関数（引数5）の結果を出力\\n    println!(\"{}\", double(5));\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___() {\\n    // letでdoubleクロージャを定義（|x|で引数、x*2を返す）\\n    let ___ = |___| ___ * ___;\\n    // println!でdouble関数（引数5）の結果を出力\\n    ___!(\\\"{}\\\", ___(___));\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// fnでmain関数を定義",
           "fn main() {",
           "    // letでdoubleクロージャを定義（|x|で引数、x*2を返す）",
           "    let double = |x| x * 2;",
-          "    // double関数（引数5）の結果を出力",
+          "    // println!でdouble関数（引数5）の結果を出力",
           "    println!(\"{}\", double(5));",
           "}"
         ],

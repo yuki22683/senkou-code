@@ -96,12 +96,12 @@ export const perlData = {
           "content": "# 目標\\n\\n変数 `$message` に `\"Perl\"` を入れて、それを表示しましょう。\\n\\n**ポイント：** `print` の中で変数を使うと、中身が表示されます。\\n```perl\\nprint \"$message\\n\";  # Perlと表示される\\n```"
         }
       ],
-      "correctCode": "# 変数に文字を入れる\\nmy $message = \"Perl\";\\n# $messageを出力\\nprint \"$message\\n\";",
-      "holeyCode": "# 変数に文字を入れる\\n___ $___ = \\\"___\\\";\\n# $messageを出力\\n___ \\\"$___\\n\\\";",
+      "correctCode": "# 変数に文字を入れる\\nmy $message = \"Perl\";\\n# printで$messageを出力\\nprint \"$message\\n\";",
+      "holeyCode": "# 変数に文字を入れる\\n___ $___ = \\\"___\\\";\\n# printで$messageを出力\\n___ \\\"$___\\n\\\";",
       "correctLines": [
           "# 変数に文字を入れる",
           "my $message = \"Perl\";",
-          "# $messageを出力",
+          "# printで$messageを出力",
           "print \"$message\\n\";"
         ],
       "lineHints": [
@@ -143,8 +143,8 @@ export const perlData = {
           "content": "# 目標\\n\\n`$a` に7、`$b` に3を入れて、足し算の結果を `$sum` に入れて表示しましょう。\\n\\n**ヒント：** 変数同士の計算もできます！\\n```perl\\nmy $sum = $a + $b;  # 7 + 3 = 10\\n```"
         }
       ],
-      "correctCode": "# $aに最初の数を代入\\nmy $a = 7;\\n# $bに2番目の数を代入\\nmy $b = 3;\\n# 2つの変数を足し算する\\nmy $sum = $a + $b;\\n# $sumを出力\\nprint \"$sum\\n\";",
-      "holeyCode": "# $aに最初の数を代入\\n___ $___ = ___;\\n# $bに2番目の数を代入\\n___ $___ = ___;\\n# 2つの変数を足し算する\\n___ $___ = $___ ___ $___;\\n# $sumを出力\\n___ \\\"$___\\n\\\";",
+      "correctCode": "# $aに最初の数を代入\\nmy $a = 7;\\n# $bに2番目の数を代入\\nmy $b = 3;\\n# 2つの変数を足し算する\\nmy $sum = $a + $b;\\n# printで$sumを出力\\nprint \"$sum\\n\";",
+      "holeyCode": "# $aに最初の数を代入\\n___ $___ = ___;\\n# $bに2番目の数を代入\\n___ $___ = ___;\\n# 2つの変数を足し算する\\n___ $___ = $___ ___ $___;\\n# printで$sumを出力\\n___ \\\"$___\\n\\\";",
       "correctLines": [
           "# $aに最初の数を代入",
           "my $a = 7;",
@@ -152,7 +152,7 @@ export const perlData = {
           "my $b = 3;",
           "# 2つの変数を足し算する",
           "my $sum = $a + $b;",
-          "# $sumを出力",
+          "# printで$sumを出力",
           "print \"$sum\\n\";"
         ],
       "lineHints": [
@@ -198,12 +198,12 @@ export const perlData = {
           "content": "# 目標\\n\\n`\"Hello, \"` と `\"Perl!\"` をつなげて表示しましょう。\\n\\n**ヒント：** `.` を使って2つの文字列をつなげます。\\n```perl\\n\"Hello, \" . \"Perl!\"  # Hello, Perl!\\n```"
         }
       ],
-      "correctCode": "# 文字をつなげる\\nmy $greeting = \"Hello, \" . \"Perl!\";\\n# $greetingを出力\\nprint \"$greeting\\n\";",
-      "holeyCode": "# 文字をつなげる\\n___ $___ = \"___\" ___ \"___\";\\n# $greetingを出力\\n___ \"$___\\n\";",
+      "correctCode": "# 文字をつなげる\\nmy $greeting = \"Hello, \" . \"Perl!\";\\n# printで$greetingを出力\\nprint \"$greeting\\n\";",
+      "holeyCode": "# 文字をつなげる\\n___ $___ = \"___\" ___ \"___\";\\n# printで$greetingを出力\\n___ \"$___\\n\";",
       "correctLines": [
           "# 文字をつなげる",
           "my $greeting = \"Hello, \" . \"Perl!\";",
-          "# $greetingを出力",
+          "# printで$greetingを出力",
           "print \"$greeting\\n\";"
         ],
       "lineHints": [
@@ -245,12 +245,12 @@ export const perlData = {
           "content": "# $配列名[番号] で取り出す\\n\\n配列から1つの値を取り出すときは `$` を使います（1つの値だから）。\\n\\n**番号（インデックス）：**\\n```\\n@fruits = (\"りんご\", \"みかん\", \"ぶどう\")\\n           [0]        [1]       [2]\\n```\\n\\n**注意：** 番号は **0から** 始まります！\\n\\n**目標：** `@fruits` の最初の要素を表示しましょう。"
         }
       ],
-      "correctCode": "# 配列を作る\\nmy @fruits = (\"りんご\", \"みかん\", \"ぶどう\");\\n# 1番目の果物（りんご）を出力\\nprint \"$fruits[0]\\n\";",
-      "holeyCode": "# 配列を作る\\n___ @___ = (\"___\", \"___\", \"___\");\\n# 1番目の果物（りんご）を出力\\n___ \"$___[___]\\n\";",
+      "correctCode": "# 配列を作る\\nmy @fruits = (\"りんご\", \"みかん\", \"ぶどう\");\\n# printで1番目の果物（りんご）を出力\\nprint \"$fruits[0]\\n\";",
+      "holeyCode": "# 配列を作る\\n___ @___ = (\"___\", \"___\", \"___\");\\n# printで1番目の果物（りんご）を出力\\n___ \"$___[___]\\n\";",
       "correctLines": [
           "# 配列を作る",
           "my @fruits = (\"りんご\", \"みかん\", \"ぶどう\");",
-          "# 1番目の果物（りんご）を出力",
+          "# printで1番目の果物（りんご）を出力",
           "print \"$fruits[0]\\n\";"
         ],
       "lineHints": [
@@ -292,14 +292,14 @@ export const perlData = {
           "content": "# 目標\\n\\n`$score` が100のとき、`'満点！'` と表示しましょう。\\n\\n**ヒント：** 「等しい」は `==` を使います（`=` は代入なので注意！）\\n```perl\\nif ($score == 100) { ... }\\n```"
         }
       ],
-      "correctCode": "# 条件分岐\\nmy $score = 100;\\n# もしスコアが100なら\\nif ($score == 100) {\\n  # 「満点！」を出力\\n  print \"満点！\\n\";\\n}",
-      "holeyCode": "# 条件分岐\\n___ $___ = ___;\\n# もしスコアが100なら\\n___ ($___ ___ ___) ___\\n  # 「満点！」を出力\\n  ___ \"___\\n\";\\n___",
+      "correctCode": "# 条件分岐\\nmy $score = 100;\\n# もしスコアが100なら\\nif ($score == 100) {\\n  # printで「満点！」を出力\\n  print \"満点！\\n\";\\n}",
+      "holeyCode": "# 条件分岐\\n___ $___ = ___;\\n# もしスコアが100なら\\n___ ($___ ___ ___) ___\\n  # printで「満点！」を出力\\n  ___ \"___\\n\";\\n___",
       "correctLines": [
           "# 条件分岐",
           "my $score = 100;",
           "# もしスコアが100なら",
           "if ($score == 100) {",
-          "  # 「満点！」を出力",
+          "  # printで「満点！」を出力",
           "  print \"満点！\\n\";",
           "}"
         ],
@@ -345,18 +345,18 @@ export const perlData = {
           "content": "# 目標\\n\\n`$num` が10以上なら `'大きい'`、そうでなければ `'小さい'` と表示しましょう。\\n\\n**ヒント：** `$num = 5` なので、10以上ではありません。「小さい」が表示されるはずです。"
         }
       ],
-      "correctCode": "# if-else\\nmy $num = 5;\\n# もし$numが10以上なら\\nif ($num >= 10) {\\n  # 「大きい」を出力\\n  print \"大きい\\n\";\\n# そうでなければ\\n} else {\\n  # 「小さい」を出力\\n  print \"小さい\\n\";\\n}",
-      "holeyCode": "# if-else\\n___ $___ = ___;\\n# もし$numが10以上なら\\n___ ($___ ___ ___) ___\\n  # 「大きい」を出力\\n  ___ \"___\\n\";\\n# そうでなければ\\n___ ___ ___\\n  # 「小さい」を出力\\n  ___ \"___\\n\";\\n___",
+      "correctCode": "# if-else\\nmy $num = 5;\\n# もし$numが10以上なら\\nif ($num >= 10) {\\n  # printで「大きい」を出力\\n  print \"大きい\\n\";\\n# そうでなければ\\n} else {\\n  # printで「小さい」を出力\\n  print \"小さい\\n\";\\n}",
+      "holeyCode": "# if-else\\n___ $___ = ___;\\n# もし$numが10以上なら\\n___ ($___ ___ ___) ___\\n  # printで「大きい」を出力\\n  ___ \"___\\n\";\\n# そうでなければ\\n___ ___ ___\\n  # printで「小さい」を出力\\n  ___ \"___\\n\";\\n___",
       "correctLines": [
           "# if-else",
           "my $num = 5;",
           "# もし$numが10以上なら",
           "if ($num >= 10) {",
-          "  # 「大きい」を出力",
+          "  # printで「大きい」を出力",
           "  print \"大きい\\n\";",
           "# そうでなければ",
           "} else {",
-          "  # 「小さい」を出力",
+          "  # printで「小さい」を出力",
           "  print \"小さい\\n\";",
           "}"
         ],
@@ -380,7 +380,7 @@ export const perlData = {
             "then",
             "otherwise"
           ],
-          "others": ["num", ">=", "{", "print", "}", "{", "\";", "my", "5", "if", "10", "大きい", "小さい", "大きい\\n\";", "# 「小さい」を出力"]
+          "others": ["num", ">=", "{", "print", "}", "{", "\";", "my", "5", "if", "10", "大きい", "小さい", "大きい\\n\";", "# printで「小さい」を出力"]
         },
         "testCases": [
           {
@@ -406,14 +406,14 @@ export const perlData = {
           "content": "# 目標\\n\\n配列 `@animals` の動物を順番に表示しましょう。\\n\\n**期待される結果：**\\n```\\n犬\\n猫\\n鳥\\n```"
         }
       ],
-      "correctCode": "# 配列をループ\\nmy @animals = (\"犬\", \"猫\", \"鳥\");\\n# 配列の各要素について繰り返す\\nforeach my $animal (@animals) {\\n  # $animalを出力\\n  print \"$animal\\n\";\\n}",
-      "holeyCode": "# 配列をループ\\n___ @___ = (\"___\", \"___\", \"___\");\\n# 配列の各要素について繰り返す\\n___ ___ $___ (@___) ___\\n  # $animalを出力\\n  ___ \"$___\\n\";\\n___",
+      "correctCode": "# 配列をループ\\nmy @animals = (\"犬\", \"猫\", \"鳥\");\\n# 配列の各要素について繰り返す\\nforeach my $animal (@animals) {\\n  # printで$animalを出力\\n  print \"$animal\\n\";\\n}",
+      "holeyCode": "# 配列をループ\\n___ @___ = (\"___\", \"___\", \"___\");\\n# 配列の各要素について繰り返す\\n___ ___ $___ (@___) ___\\n  # printで$animalを出力\\n  ___ \"$___\\n\";\\n___",
       "correctLines": [
           "# 配列をループ",
           "my @animals = (\"犬\", \"猫\", \"鳥\");",
           "# 配列の各要素について繰り返す",
           "foreach my $animal (@animals) {",
-          "  # $animalを出力",
+          "  # printで$animalを出力",
           "  print \"$animal\\n\";",
           "}"
         ],
@@ -459,12 +459,12 @@ export const perlData = {
           "content": "# 目標\\n\\nハッシュ `%fruit` に `color => '赤'` を入れて、colorの値を表示しましょう。\\n\\n**ヒント：** 1つの値を取り出すときは `$` を使います。\\n```perl\\n$fruit{color}  # \"赤\"\\n```"
         }
       ],
-      "correctCode": "# ハッシュを作る\\nmy %fruit = (\"color\" => \"あか\");\\n# fruitのcolorキーの値を出力\\nprint \"$fruit{color}\\n\";",
-      "holeyCode": "# ハッシュを作る\\n___ %___ = (\"___\" ___ \"___\");\\n# fruitのcolorキーの値を出力\\n___ \"$___{___}\\n\";",
+      "correctCode": "# ハッシュを作る\\nmy %fruit = (\"color\" => \"あか\");\\n# printでfruitのcolorキーの値を出力\\nprint \"$fruit{color}\\n\";",
+      "holeyCode": "# ハッシュを作る\\n___ %___ = (\"___\" ___ \"___\");\\n# printでfruitのcolorキーの値を出力\\n___ \"$___{___}\\n\";",
       "correctLines": [
           "# ハッシュを作る",
           "my %fruit = (\"color\" => \"あか\");",
-          "# fruitのcolorキーの値を出力",
+          "# printでfruitのcolorキーの値を出力",
           "print \"$fruit{color}\\n\";"
         ],
       "lineHints": [
@@ -506,12 +506,12 @@ export const perlData = {
           "content": "# 目標\\n\\n`'Welcome!'` と表示するサブルーチン `welcome` を作って呼び出しましょう。\\n\\n**手順：**\\n1. `sub welcome { ... }` で定義\\n2. `welcome();` で呼び出し"
         }
       ],
-      "correctCode": "# subでwelcomeサブルーチンを定義\\nsub welcome {\\n  # 「Welcome!」を出力\\n  print \"Welcome!\\n\";\\n}\\n\\n# welcomeサブルーチンを呼び出す\\nwelcome();",
-      "holeyCode": "# subでwelcomeサブルーチンを定義\\n___ ___ ___\\n  # 「Welcome!」を出力\\n  ___ \"___\\n\";\\n___\\n\\n# welcomeサブルーチンを呼び出す\\n___();",
+      "correctCode": "# subでwelcomeサブルーチンを定義\\nsub welcome {\\n  # printで「Welcome!」を出力\\n  print \"Welcome!\\n\";\\n}\\n\\n# welcomeサブルーチンを呼び出す\\nwelcome();",
+      "holeyCode": "# subでwelcomeサブルーチンを定義\\n___ ___ ___\\n  # printで「Welcome!」を出力\\n  ___ \"___\\n\";\\n___\\n\\n# welcomeサブルーチンを呼び出す\\n___();",
       "correctLines": [
           "# subでwelcomeサブルーチンを定義",
           "sub welcome {",
-          "  # 「Welcome!」を出力",
+          "  # printで「Welcome!」を出力",
           "  print \"Welcome!\\n\";",
           "}",
           "",

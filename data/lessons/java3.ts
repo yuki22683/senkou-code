@@ -26,7 +26,7 @@ export const javaData3 = {
           "content": "# (引数) -> 処理\\n\\n```java\\n// 引数なし\\n() -> System.out.println(\"Hello\")\\n\\n// 引数1つ（カッコ省略可）\\nx -> x * 2\\n\\n// 引数複数\\n(a, b) -> a + b\\n```"
         }
       ],
-      "correctCode": "// importでjava.util.function.Functionを読み込む\\nimport java.util.function.Function;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Function型のsquareにラムダ式（xの2乗）を代入\\n        Function<Integer, Integer> square = x -> x * x;\\n        // printlnでsquareに5を適用した結果（25）を出力\\n        System.out.println(square.apply(5));\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.function.Functionを読み込む\\nimport ___.___.___.___.;\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Function型のsquareにラムダ式（xの2乗）を代入\\n        ___<___, ___> ___ = ___ ___ ___ * ___;\\n        // printlnでsquareに5を適用した結果（25）を出力\\n        ___.___.___(___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// importでjava.util.function.Functionを読み込む\\nimport java.util.function.Function;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Function型のsquareにラムダ式（xの2乗）を代入\\n        Function<Integer, Integer> square = x -> x * x;\\n        // Systemのoutのprintlnでsquareに5を適用した結果（25）を出力\\n        System.out.println(square.apply(5));\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.function.Functionを読み込む\\nimport ___.___.___.___.;\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Function型のsquareにラムダ式（xの2乗）を代入\\n        ___<___, ___> ___ = ___ ___ ___ * ___;\\n        // Systemのoutのprintlnでsquareに5を適用した結果（25）を出力\\n        ___.___.___(___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// importでjava.util.function.Functionを読み込む",
           "import java.util.function.Function;",
@@ -37,7 +37,7 @@ export const javaData3 = {
           "    public static void main(String[] args) {",
           "        // Function型のsquareにラムダ式（xの2乗）を代入",
           "        Function<Integer, Integer> square = x -> x * x;",
-          "        // printlnでsquareに5を適用した結果（25）を出力",
+          "        // Systemのoutのprintlnでsquareに5を適用した結果（25）を出力",
           "        System.out.println(square.apply(5));",
           "    // mainメソッドを閉じる",
           "    }",
@@ -305,7 +305,7 @@ export const javaData3 = {
           "content": "# Collectorsのメソッド\\n\\n```java\\n// リストに\\nCollectors.toList()\\n\\n// セットに\\nCollectors.toSet()\\n\\n// 文字列結合\\nCollectors.joining(\", \")\\n```"
         }
       ],
-      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n// importでjava.util.stream.*を読み込む\\nimport java.util.stream.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // List型のnumsに数値リスト（1、2、3）を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3);\\n        // List型のdoubledにStream処理結果を代入\\n        List<Integer> doubled = nums.stream()\\n            // mapで各要素nを2倍に変換\\n            .map(n -> n * 2)\\n            // collectでStreamをリストに変換\\n            .collect(Collectors.toList());\\n        // printlnでdoubledを出力\\n        System.out.println(doubled);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n// importでjava.util.stream.*を読み込む\\nimport ___.___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // List型のnumsに数値リスト（1、2、3）を代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // List型のdoubledにStream処理結果を代入\\n        ___<___> ___ = ___.___()\\n            // mapで各要素nを2倍に変換\\n            .___(___ ___ ___ * ___)\\n            // collectでStreamをリストに変換\\n            .___(___.___(___\\n        // printlnでdoubledを出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n// importでjava.util.stream.*を読み込む\\nimport java.util.stream.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // List型のnumsに数値リスト（1、2、3）を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3);\\n        // List型のdoubledにStream処理結果を代入\\n        List<Integer> doubled = nums.stream()\\n            // mapで各要素nを2倍に変換\\n            .map(n -> n * 2)\\n            // collectでStreamをリストに変換\\n            .collect(Collectors.toList());\\n        // Systemのoutのprintlnでdoubledを出力\\n        System.out.println(doubled);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n// importでjava.util.stream.*を読み込む\\nimport ___.___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // List型のnumsに数値リスト（1、2、3）を代入\\n        ___<___> ___ = ___.___(___,___, ___);\\n        // List型のdoubledにStream処理結果を代入\\n        ___<___> ___ = ___.___()\\n            // mapで各要素nを2倍に変換\\n            .___(___ ___ ___ * ___)\\n            // collectでStreamをリストに変換\\n            .___(___.___(___\\n        // Systemのoutのprintlnでdoubledを出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// importでjava.util.*を読み込む",
           "import java.util.*;",
@@ -324,7 +324,7 @@ export const javaData3 = {
           "            .map(n -> n * 2)",
           "            // collectでStreamをリストに変換",
           "            .collect(Collectors.toList());",
-          "        // printlnでdoubledを出力",
+          "        // Systemのoutのprintlnでdoubledを出力",
           "        System.out.println(doubled);",
           "    // mainメソッドを閉じる",
           "    }",
@@ -387,7 +387,7 @@ export const javaData3 = {
           "content": "# 合計、最大値など\\n\\n```java\\n// 合計\\n.reduce(0, Integer::sum)\\n\\n// 積\\n.reduce(1, (a, b) -> a * b)\\n```"
         }
       ],
-      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // List型のnumsに数値リスト（1〜4）を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4);\\n        // int型のproductにStream処理結果を代入\\n        int product = nums.stream()\\n            // reduceで初期値1から全要素を掛け算\\n            .reduce(1, (a, b) -> a * b);\\n        // printlnでproductを出力\\n        System.out.println(product);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // List型のnumsに数値リスト（1〜4）を代入\\n        ___<___> ___ = ___.___(___,___, ___,___);\\n        // int型のproductにStream処理結果を代入\\n        ___ ___ = ___.___()\\n            // reduceで初期値1から全要素を掛け算\\n            .___(___,(___, ___) ___ ___ * ___);\\n        // printlnでproductを出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // List型のnumsに数値リスト（1〜4）を代入\\n        List<Integer> nums = Arrays.asList(1, 2, 3, 4);\\n        // int型のproductにStream処理結果を代入\\n        int product = nums.stream()\\n            // reduceで初期値1から全要素を掛け算\\n            .reduce(1, (a, b) -> a * b);\\n        // Systemのoutのprintlnでproductを出力\\n        System.out.println(product);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // List型のnumsに数値リスト（1〜4）を代入\\n        ___<___> ___ = ___.___(___,___, ___,___);\\n        // int型のproductにStream処理結果を代入\\n        ___ ___ = ___.___()\\n            // reduceで初期値1から全要素を掛け算\\n            .___(___,(___, ___) ___ ___ * ___);\\n        // Systemのoutのprintlnでproductを出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// importでjava.util.*を読み込む",
           "import java.util.*;",
@@ -402,7 +402,7 @@ export const javaData3 = {
           "        int product = nums.stream()",
           "            // reduceで初期値1から全要素を掛け算",
           "            .reduce(1, (a, b) -> a * b);",
-          "        // printlnでproductを出力",
+          "        // Systemのoutのprintlnでproductを出力",
           "        System.out.println(product);",
           "    // mainメソッドを閉じる",
           "    }",
@@ -461,7 +461,7 @@ export const javaData3 = {
           "content": "# 安全に値を取り出す\\n\\n```java\\nOptional<String> opt = Optional.of(\"Hello\");\\n\\n// 値があれば取得、なければデフォルト\\nString s = opt.orElse(\"default\");\\n\\n// 値があれば処理\\nopt.ifPresent(System.out::println);\\n```"
         }
       ],
-      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Optional.ofで「こんにちは」を持つOptionalを作成\\n        Optional<String> opt = Optional.of(\"こんにちは\");\\n        // orElseでデフォルト値を指定して値を取得\\n        String value = opt.orElse(\"デフォルト\");\\n        // printlnでvalueを出力\\n        System.out.println(value);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Optional.ofで「こんにちは」を持つOptionalを作成\\n        ___<___> ___ = ___.___(\\\"___\\\");\\n        // orElseでデフォルト値を指定して値を取得\\n        ___ ___ = ___.___\\\"___\\\");\\n        // printlnでvalueを出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// importでjava.util.*を読み込む\\nimport java.util.*;\\n\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Optional.ofで「こんにちは」を持つOptionalを作成\\n        Optional<String> opt = Optional.of(\"こんにちは\");\\n        // orElseでデフォルト値を指定して値を取得\\n        String value = opt.orElse(\"デフォルト\");\\n        // Systemのoutのprintlnでvalueを出力\\n        System.out.println(value);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.*を読み込む\\nimport ___.___.___\\n___\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Optional.ofで「こんにちは」を持つOptionalを作成\\n        ___<___> ___ = ___.___(\\\"___\\\");\\n        // orElseでデフォルト値を指定して値を取得\\n        ___ ___ = ___.___\\\"___\\\");\\n        // Systemのoutのprintlnでvalueを出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// importでjava.util.*を読み込む",
           "import java.util.*;",
@@ -474,7 +474,7 @@ export const javaData3 = {
           "        Optional<String> opt = Optional.of(\"こんにちは\");",
           "        // orElseでデフォルト値を指定して値を取得",
           "        String value = opt.orElse(\"デフォルト\");",
-          "        // printlnでvalueを出力",
+          "        // Systemのoutのprintlnでvalueを出力",
           "        System.out.println(value);",
           "    // mainメソッドを閉じる",
           "    }",

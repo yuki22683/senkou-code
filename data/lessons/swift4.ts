@@ -364,8 +364,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\nCodableな構造体を作って、JSONに変換しましょう。\\n\\n1. `Item` 構造体を `Codable` に準拠させる\\n2. `name` プロパティを持たせる\\n3. `JSONEncoder()` でJSONに変換\\n4. 結果を表示する"
         }
       ],
-      "correctCode": "// Foundationをインポート\\nimport Foundation\\n\\n// CodableでJSON変換可能に\\nstruct Item: Codable {\\n    // nameプロパティ\\n    var name: String\\n// ブロックを閉じる\\n}\\n\\n// Itemインスタンスをitemに代入\\nlet item = Item(name: \"りんご\")\\n// エンコーダを作成\\nlet encoder = JSONEncoder()\\n// itemをJSONに変換\\nif let data = try? encoder.encode(item),\\n   // ブロックを開始\\n   let json = String(data: data, encoding: .utf8) {\\n    // JSONを出力\\n    print(json)\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// Foundationをインポート\\nimport ___\\n\\n// CodableでJSON変換可能に\\nstruct ___: ___ {\\n    // nameプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n\\n// Itemインスタンスをitemに代入\\nlet ___ = ___(___: \\\"___\\\")\\n// エンコーダを作成\\nlet ___ = ___()\\n// itemをJSONに変換\\nif let ___ = try? ___.___(___ ),\\n   // ブロックを開始\\n   let ___ = ___(___: ___, ___: .___) {\\n    // JSONを出力\\n    ___(___) \\n// ブロックを閉じる\\n___",
+      "correctCode": "// Foundationをインポート\\nimport Foundation\\n\\n// CodableでJSON変換可能に\\nstruct Item: Codable {\\n    // nameプロパティ\\n    var name: String\\n// ブロックを閉じる\\n}\\n\\n// Itemインスタンスをitemに代入\\nlet item = Item(name: \"りんご\")\\n// エンコーダを作成\\nlet encoder = JSONEncoder()\\n// itemをJSONに変換\\nif let data = try? encoder.encode(item),\\n   // ブロックを開始\\n   let json = String(data: data, encoding: .utf8) {\\n    // printでJSONを出力\\n    print(json)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// Foundationをインポート\\nimport ___\\n\\n// CodableでJSON変換可能に\\nstruct ___: ___ {\\n    // nameプロパティ\\n    var ___: ___\\n// ブロックを閉じる\\n___\\n\\n// Itemインスタンスをitemに代入\\nlet ___ = ___(___: \\\"___\\\")\\n// エンコーダを作成\\nlet ___ = ___()\\n// itemをJSONに変換\\nif let ___ = try? ___.___(___ ),\\n   // ブロックを開始\\n   let ___ = ___(___: ___, ___: .___) {\\n    // printでJSONを出力\\n    ___(___) \\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Foundationをインポート",
           "import Foundation",
@@ -385,7 +385,7 @@ export const swift4Data = {
           "if let data = try? encoder.encode(item),",
           "   // ブロックを開始",
           "   let json = String(data: data, encoding: .utf8) {",
-          "    // JSONを出力",
+          "    // printでJSONを出力",
           "    print(json)",
           "// ブロックを閉じる",
           "}"
@@ -458,8 +458,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\nlazyプロパティを持つクラスを作りましょう。\\n\\n1. `Calculator` クラスを作る\\n2. `lazy var result` を定義\\n3. 初期化時に「Computing...」と表示して100を返す\\n4. インスタンスを作って `result` にアクセス"
         }
       ],
-      "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n    // lazyで遅延初期化\\n    lazy var result: Int = {\\n        // 計算中と出力\\n        print(\"計算中...\")\\n        // 100を返す\\n        return 100\\n    // クロージャを閉じて実行\\n    }()\\n// ブロックを閉じる\\n}\\n\\n// Calculatorインスタンスをcalcに代入\\nlet calc = Calculator()\\n// resultを出力\\nprint(calc.result)",
-      "holeyCode": "// Calculatorクラスを定義\\nclass ___ {\\n    // lazyで遅延初期化\\n    lazy var ___: ___ = {\\n        // 計算中と出力\\n        ___(\\\"___\\\")\\n        // 100を返す\\n        return ___\\n    // クロージャを閉じて実行\\n    ___()\\n// ブロックを閉じる\\n___\\n\\n// Calculatorインスタンスをcalcに代入\\nlet ___ = ___()\\n// resultを出力\\n___(___.___ )",
+      "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n    // lazyで遅延初期化\\n    lazy var result: Int = {\\n        // 計算中と出力\\n        print(\"計算中...\")\\n        // 100を返す\\n        return 100\\n    // クロージャを閉じて実行\\n    }()\\n// ブロックを閉じる\\n}\\n\\n// Calculatorインスタンスをcalcに代入\\nlet calc = Calculator()\\n// printでresultを出力\\nprint(calc.result)",
+      "holeyCode": "// Calculatorクラスを定義\\nclass ___ {\\n    // lazyで遅延初期化\\n    lazy var ___: ___ = {\\n        // 計算中と出力\\n        ___(\\\"___\\\")\\n        // 100を返す\\n        return ___\\n    // クロージャを閉じて実行\\n    ___()\\n// ブロックを閉じる\\n___\\n\\n// Calculatorインスタンスをcalcに代入\\nlet ___ = ___()\\n// printでresultを出力\\n___(___.___ )",
       "correctLines": [
           "// Calculatorクラスを定義",
           "class Calculator {",
@@ -476,7 +476,7 @@ export const swift4Data = {
           "",
           "// Calculatorインスタンスをcalcに代入",
           "let calc = Calculator()",
-          "// resultを出力",
+          "// printでresultを出力",
           "print(calc.result)"
         ],
       "lineHints": [
@@ -599,8 +599,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\nguardでオプショナルをチェックする関数を作りましょう。\\n\\n1. `check` 関数を作る（引数は `Int?`）\\n2. `guard let` で値を取り出す\\n3. nilなら「nil」と表示してreturn\\n4. 値があれば2倍して表示\\n\\n`check(5)` で `10` と表示されます。"
         }
       ],
-      "correctCode": "// check関数を定義\\nfunc check(_ num: Int?) {\\n    // guardで早期リターン\\n    guard let n = num else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    // ブロックを閉じる\\n    }\\n    // nの2倍を出力\\n    print(n * 2)\\n// ブロックを閉じる\\n}\\n\\n// check関数（引数5）を呼び出す\\ncheck(5)",
-      "holeyCode": "// check関数を定義\\nfunc ___(___  ___: ___?) {\\n    // guardで早期リターン\\n    guard let ___ = ___ else {\\n        // nilと出力\\n        ___(\\\"___\\\")\\n        // 早期リターン\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // nの2倍を出力\\n    ___(___ * ___)\\n// ブロックを閉じる\\n___\\n\\n// check関数（引数5）を呼び出す\\n___(___)",
+      "correctCode": "// check関数を定義\\nfunc check(_ num: Int?) {\\n    // guardで早期リターン\\n    guard let n = num else {\\n        // nilと出力\\n        print(\"nil\")\\n        // 早期リターン\\n        return\\n    // ブロックを閉じる\\n    }\\n    // printでnの2倍を出力\\n    print(n * 2)\\n// ブロックを閉じる\\n}\\n\\n// check関数（引数5）を呼び出す\\ncheck(5)",
+      "holeyCode": "// check関数を定義\\nfunc ___(___  ___: ___?) {\\n    // guardで早期リターン\\n    guard let ___ = ___ else {\\n        // nilと出力\\n        ___(\\\"___\\\")\\n        // 早期リターン\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // printでnの2倍を出力\\n    ___(___ * ___)\\n// ブロックを閉じる\\n___\\n\\n// check関数（引数5）を呼び出す\\n___(___)",
       "correctLines": [
           "// check関数を定義",
           "func check(_ num: Int?) {",
@@ -612,7 +612,7 @@ export const swift4Data = {
           "        return",
           "    // ブロックを閉じる",
           "    }",
-          "    // nの2倍を出力",
+          "    // printでnの2倍を出力",
           "    print(n * 2)",
           "// ブロックを閉じる",
           "}",
@@ -647,7 +647,7 @@ export const swift4Data = {
             "else",
             "return"
           ],
-          "others": ["check", "_", "num", "Int", "n", "print", "nil", "2", "5", "}", "*", "um", "// nの2倍を出力", "// check関数（引数5）を呼び出す"]
+          "others": ["check", "_", "num", "Int", "n", "print", "nil", "2", "5", "}", "*", "um", "// printでnの2倍を出力", "// check関数（引数5）を呼び出す"]
         },
         "testCases": [
           {
@@ -677,8 +677,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\nスタック（積み重ね）のプロトコルを作りましょう。\\n\\n1. `Stack` プロトコルに `associatedtype Element` を定義\\n2. `push` メソッドを宣言\\n3. `IntStack` 構造体で準拠を実装\\n4. 10をpushしてitemsを表示"
         }
       ],
-      "correctCode": "// protocolでStackプロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n// ブロックを閉じる\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// IntStackインスタンスをstackに代入\\nvar stack = IntStack()\\n// 要素を追加\\nstack.push(10)\\n// itemsを出力\\nprint(stack.items)",
-      "holeyCode": "// protocolでStackプロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    associatedtype ___\\n    // pushメソッドを宣言\\n    mutating func ___(___ ___: ___)\\n// ブロックを閉じる\\n___\\n\\n// Stackに準拠\\nstruct ___: ___ {\\n    // items配列\\n    var ___: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(___ ___: ___) {\\n        // 要素を追加\\n        ___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// IntStackインスタンスをstackに代入\\nvar ___ = ___()\\n// 要素を追加\\n___.___(___) \\n// itemsを出力\\n___(___.___ )",
+      "correctCode": "// protocolでStackプロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n// ブロックを閉じる\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// IntStackインスタンスをstackに代入\\nvar stack = IntStack()\\n// 要素を追加\\nstack.push(10)\\n// printでitemsを出力\\nprint(stack.items)",
+      "holeyCode": "// protocolでStackプロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    associatedtype ___\\n    // pushメソッドを宣言\\n    mutating func ___(___ ___: ___)\\n// ブロックを閉じる\\n___\\n\\n// Stackに準拠\\nstruct ___: ___ {\\n    // items配列\\n    var ___: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(___ ___: ___) {\\n        // 要素を追加\\n        ___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// IntStackインスタンスをstackに代入\\nvar ___ = ___()\\n// 要素を追加\\n___.___(___) \\n// printでitemsを出力\\n___(___.___ )",
       "correctLines": [
           "// protocolでStackプロトコルを定義",
           "protocol Stack {",
@@ -706,7 +706,7 @@ export const swift4Data = {
           "var stack = IntStack()",
           "// 要素を追加",
           "stack.push(10)",
-          "// itemsを出力",
+          "// printでitemsを出力",
           "print(stack.items)"
         ],
       "lineHints": [
@@ -779,8 +779,8 @@ export const swift4Data = {
           "content": "# 目標\\n\\nsome を使って、具体的な型を隠して返す関数を作りましょう。\\n\\n1. `makeCollection` 関数を作る\\n2. 戻り値を `some Collection` にする\\n3. `[1, 2, 3]` を返す\\n4. `.count` で要素数を表示"
         }
       ],
-      "correctCode": "// someで不透明な型を返す\\nfunc makeCollection() -> some Collection {\\n    // 配列を返す\\n    return [1, 2, 3]\\n// ブロックを閉じる\\n}\\n\\n// makeCollection関数を呼び出し\\nlet c = makeCollection()\\n// 要素数を出力\\nprint(c.count)",
-      "holeyCode": "// someで不透明な型を返す\\nfunc ___() -> some ___ {\\n    // 配列を返す\\n    return [___, ___, ___]\\n// ブロックを閉じる\\n___\\n\\n// makeCollection関数を呼び出し\\nlet ___ = ___()\\n// 要素数を出力\\n___(___.___)",
+      "correctCode": "// someで不透明な型を返す\\nfunc makeCollection() -> some Collection {\\n    // 配列を返す\\n    return [1, 2, 3]\\n// ブロックを閉じる\\n}\\n\\n// makeCollection関数を呼び出し\\nlet c = makeCollection()\\n// printで要素数を出力\\nprint(c.count)",
+      "holeyCode": "// someで不透明な型を返す\\nfunc ___() -> some ___ {\\n    // 配列を返す\\n    return [___, ___, ___]\\n// ブロックを閉じる\\n___\\n\\n// makeCollection関数を呼び出し\\nlet ___ = ___()\\n// printで要素数を出力\\n___(___.___)",
       "correctLines": [
           "// someで不透明な型を返す",
           "func makeCollection() -> some Collection {",
@@ -791,7 +791,7 @@ export const swift4Data = {
           "",
           "// makeCollection関数を呼び出し",
           "let c = makeCollection()",
-          "// 要素数を出力",
+          "// printで要素数を出力",
           "print(c.count)"
         ],
       "lineHints": [

@@ -89,14 +89,14 @@ export const rustData = {
           "content": "# 四則演算\\n\\nRustでも算数と同じ記号で計算ができます。\\n\\n**4つの基本記号：**\\n- **+**（プラス）: たし算\\n- **-**（マイナス）: ひき算\\n- **\\***（アスタリスク）: かけ算（×の代わり）\\n- **/**（スラッシュ）: わり算（÷の代わり）\\n\\n**コード例：**\\n```rust\\nlet a = 10;\\nlet b = 5;\\nprintln!(\"{}\", a + b);  // 15 と表示される\\n```\\n\\n`println!` の `{}` は「ここに値を入れてね」という目印です。"
         }
       ],
-      "correctCode": "fn main() {\\n    // letでxに10を代入\\n    let x = 10;\\n    // letでyに5を代入\\n    let y = 5;\\n    // xとyの和を出力\\n    println!(\"{}\", x + y);\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___ () {\\n    // letでxに10を代入\\n    let ___ = ___;\\n    // letでyに5を代入\\n    let ___ = ___;\\n    // xとyの和を出力\\n    ___!(\\\"___\\\", ___ + ___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "fn main() {\\n    // letでxに10を代入\\n    let x = 10;\\n    // letでyに5を代入\\n    let y = 5;\\n    // println!でxとyの和を出力\\n    println!(\"{}\", x + y);\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___ () {\\n    // letでxに10を代入\\n    let ___ = ___;\\n    // letでyに5を代入\\n    let ___ = ___;\\n    // println!でxとyの和を出力\\n    ___!(\\\"___\\\", ___ + ___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "fn main() {",
           "    // letでxに10を代入",
           "    let x = 10;",
           "    // letでyに5を代入",
           "    let y = 5;",
-          "    // xとyの和を出力",
+          "    // println!でxとyの和を出力",
           "    println!(\"{}\", x + y);",
           "}"
         ],
@@ -353,12 +353,12 @@ export const rustData = {
           "content": "# [ ]で番号を指定して取り出す\\n\\n`[番号]` で何番目のデータか指定して取り出せます。\\n\\n**大事なルール：番号は「0」から！**\\n- 1番目 → `[0]`\\n- 2番目 → `[1]`\\n- 3番目 → `[2]`\\n\\n**コード例：**\\n```rust\\nlet fruits = vec![\"りんご\", \"バナナ\", \"みかん\"];\\n//                  ↑0番    ↑1番     ↑2番\\nprintln!(\"{}\", fruits[0]);  // りんご\\nprintln!(\"{}\", fruits[1]);  // バナナ\\n```\\n\\nプログラミングでは「0から数える」のが世界共通のルールです！"
         }
       ],
-      "correctCode": "fn main() {\\n    // letとvec!でcolorsに色配列（あか、あお）を作成\\n    let colors = vec![\"あか\", \"あお\"];\\n    // colorsのインデックス1（あお）を出力\\n    println!(\"{}\", colors[1]);\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___ () {\\n    // letとvec!でcolorsに色配列（あか、あお）を作成\\n    let ___ = ___![\\\"___\\\", \\\"___\\\"];\\n    // colorsのインデックス1（あお）を出力\\n    ___!(\\\"___\\\", ___[___]);\\n// ブロックを閉じる\\n___",
+      "correctCode": "fn main() {\\n    // letとvec!でcolorsに色配列（あか、あお）を作成\\n    let colors = vec![\"あか\", \"あお\"];\\n    // println!でcolorsのインデックス1（あお）を出力\\n    println!(\"{}\", colors[1]);\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___ () {\\n    // letとvec!でcolorsに色配列（あか、あお）を作成\\n    let ___ = ___![\\\"___\\\", \\\"___\\\"];\\n    // println!でcolorsのインデックス1（あお）を出力\\n    ___!(\\\"___\\\", ___[___]);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "fn main() {",
           "    // letとvec!でcolorsに色配列（あか、あお）を作成",
           "    let colors = vec![\"あか\", \"あお\"];",
-          "    // colorsのインデックス1（あお）を出力",
+          "    // println!でcolorsのインデックス1（あお）を出力",
           "    println!(\"{}\", colors[1]);",
           "}"
         ],
@@ -408,7 +408,7 @@ export const rustData = {
           "content": "# 名前（キー）で取り出す\\n\\n辞書に入れたデータは、名前（キー）を指定して取り出せます。\\n\\n**コード例：**\\n```rust\\nuse std::collections::HashMap;\\nfn main() {\\n    let mut fruits = HashMap::new();\\n    fruits.insert(\"りんご\", \"あか\");  // 追加\\n    fruits.insert(\"バナナ\", \"きいろ\");  // 追加\\n    \\n    println!(\"{}\", fruits[\"りんご\"]);  // あか と表示\\n}\\n```\\n\\n**ポイント：**\\n- `insert(名前, データ)` で追加\\n- `辞書[名前]` で取り出し\\n- 番号ではなく「名前」で探せるのが便利！"
         }
       ],
-      "correctCode": "// useでHashMapを読み込む\\nuse std::collections::HashMap;\\nfn main() {\\n    // let mutでcolorsをHashMap::new()で初期化\\n    let mut colors = HashMap::new();\\n    // insertでみかん=オレンジを追加\\n    colors.insert(\"みかん\", \"オレンジ\");\\n    // colorsのみかんキーの値を出力\\n    println!(\"{}\", colors[\"みかん\"]);\\n}", "holeyCode": "// useでHashMapを読み込む\\nuse ___::___::___;\\n// fnでmain関数を定義\\nfn ___ () {\\n    // let mutでcolorsをHashMap::new()で初期化\\n    let mut ___ = ___::___();\\n    // insertでみかん=オレンジを追加\\n    ___.___(\\\"___\\\", \\\"___\\\");\\n    // colorsのみかんキーの値を出力\\n    ___!(\\\"___\\\", ___[\\\"___\\\"]);\\n// ブロックを閉じる\\n___",
+      "correctCode": "// useでHashMapを読み込む\\nuse std::collections::HashMap;\\nfn main() {\\n    // let mutでcolorsをHashMap::new()で初期化\\n    let mut colors = HashMap::new();\\n    // insertでみかん=オレンジを追加\\n    colors.insert(\"みかん\", \"オレンジ\");\\n    // println!でcolorsのみかんキーの値を出力\\n    println!(\"{}\", colors[\"みかん\"]);\\n}", "holeyCode": "// useでHashMapを読み込む\\nuse ___::___::___;\\n// fnでmain関数を定義\\nfn ___ () {\\n    // let mutでcolorsをHashMap::new()で初期化\\n    let mut ___ = ___::___();\\n    // insertでみかん=オレンジを追加\\n    ___.___(\\\"___\\\", \\\"___\\\");\\n    // println!でcolorsのみかんキーの値を出力\\n    ___!(\\\"___\\\", ___[\\\"___\\\"]);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// useでHashMapを読み込む",
           "use std::collections::HashMap;",
@@ -417,7 +417,7 @@ export const rustData = {
           "    let mut colors = HashMap::new();",
           "    // insertでみかん=オレンジを追加",
           "    colors.insert(\"みかん\", \"オレンジ\");",
-          "    // colorsのみかんキーの値を出力",
+          "    // println!でcolorsのみかんキーの値を出力",
           "    println!(\"{}\", colors[\"みかん\"]);",
           "}"
         ],
@@ -448,7 +448,7 @@ export const rustData = {
             "オレンジ",
             "{}"
           ],
-          "others": ["std", "collections", "HashMap", "main()", "}", "ain() {", "nsert(\"みかん\",", "レンジ\");", "println!(\"{}\", colors[\"みかん\"]);", "tでみかん=オレンジを追加", "// colorsのみかんキーの値を出力"]
+          "others": ["std", "collections", "HashMap", "main()", "}", "ain() {", "nsert(\"みかん\",", "レンジ\");", "println!(\"{}\", colors[\"みかん\"]);", "tでみかん=オレンジを追加", "// println!でcolorsのみかんキーの値を出力"]
         },
         "testCases": [
           {

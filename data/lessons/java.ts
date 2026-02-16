@@ -26,13 +26,13 @@ export const javaData = {
           "content": "# 最初に書く「おまじない」\\n\\nJavaでプログラムを書くときは、必ず書かなければいけない「お約束」があります。\\n\\n**たとえ話：** 手紙を書くときに「拝啓」から始めるように、Javaにも決まった書き出しがあるんです。\\n\\n```java\\npublic class Main {\\n    public static void main(String[] args) {\\n        // ここにやりたいことを書くよ！\\n    }\\n}\\n```\\n\\n**何をしているの？**\\n- `public class Main` → プログラムに「Main」という名前をつけています\\n- `public static void main` → 「ここからスタート！」という合図です\\n\\n画面に文字を出したいときは、`System.out.println(\"出したい文字\");` と書きます。長いですね！でも、これがJavaの流儀なんです。"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // printlnで'Hello, Java!'を出力\\n        System.out.println(\\\"Hello, Java!\\\");\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // printlnで'Hello, Java!'を出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Systemのoutのprintlnで'Hello, Java!'を出力\\n        System.out.println(\\\"Hello, Java!\\\");\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Systemのoutのprintlnで'Hello, Java!'を出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
           "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // printlnで'Hello, Java!'を出力",
+          "        // Systemのoutのprintlnで'Hello, Java!'を出力",
           "        System.out.println(\\\"Hello, Java!\\\");",
           "    // mainメソッドを閉じる",
           "    }",
@@ -80,7 +80,7 @@ export const javaData = {
           "content": "# String（ストリング）ラベル\\n\\nJavaでは、はこを作るときに「このはこには何を入れますか？」と聞かれます。\\n\\n**たとえ話：** おもちゃ箱には「おもちゃ」、本棚には「本」と書いてあるように、Javaの変数にも「何を入れるか」を教えてあげる必要があります。\\n\\n「文字を入れたい！」というときは、`String`（ストリング＝文字列という意味）というラベルを使います。**Sが大文字** なので気をつけてくださいね！\\n\\n**コード例：** 下のコードが何をしているか見てみましょう\\n```java\\nString animal = \"いぬ\";  // 「animal」という名前の箱に「いぬ」を入れる\\nSystem.out.println(animal);  // 箱の中身を画面に出す\\n```\\n=> いぬ"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // String型のnameに'Java'を代入\\n        String name = \\\"Java\\\";\\n        // printlnでnameを出力\\n        System.out.println(name);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // String型のnameに'Java'を代入\\n        ___ ___ = ___;\\n        // printlnでnameを出力\\n        ___.___.___(___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // String型のnameに'Java'を代入\\n        String name = \\\"Java\\\";\\n        // Systemのoutのprintlnでnameを出力\\n        System.out.println(name);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // String型のnameに'Java'を代入\\n        ___ ___ = ___;\\n        // Systemのoutのprintlnでnameを出力\\n        ___.___.___(___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
@@ -88,7 +88,7 @@ export const javaData = {
           "    public static void main(String[] args) {",
           "        // String型のnameに'Java'を代入",
           "        String name = \\\"Java\\\";",
-          "        // printlnでnameを出力",
+          "        // Systemのoutのprintlnでnameを出力",
           "        System.out.println(name);",
           "    // mainメソッドを閉じる",
           "    }",
@@ -141,7 +141,7 @@ export const javaData = {
           "content": "# 計算もできます\\n\\n`int` のはこに入れた数字は、たし算やひき算ができます。コンピュータは計算がとっても得意なんです！\\n\\n**コード例：** りんごとみかんの値段を足してみましょう\\n```java\\nint apple = 100;   // りんごは100円\\nint orange = 50;   // みかんは50円\\nSystem.out.println(apple + orange);  // 合計を表示\\n```\\n=> 150\\n\\n`+` を使うと、変数どうしを足し算できます。"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のxに10を代入\\n        int x = 10;\\n        // int型のyに3を代入\\n        int y = 3;\\n        // printlnでxからyを引いた結果（7）を出力\\n        System.out.println(x - y);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のxに10を代入\\n        ___ ___ = ___;\\n        // int型のyに3を代入\\n        ___ ___ = ___;\\n        // printlnでxからyを引いた結果（7）を出力\\n        ___.___.___(___ ___ ___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のxに10を代入\\n        int x = 10;\\n        // int型のyに3を代入\\n        int y = 3;\\n        // Systemのoutのprintlnでxからyを引いた結果（7）を出力\\n        System.out.println(x - y);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のxに10を代入\\n        ___ ___ = ___;\\n        // int型のyに3を代入\\n        ___ ___ = ___;\\n        // Systemのoutのprintlnでxからyを引いた結果（7）を出力\\n        ___.___.___(___ ___ ___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
@@ -151,7 +151,7 @@ export const javaData = {
           "        int x = 10;",
           "        // int型のyに3を代入",
           "        int y = 3;",
-          "        // printlnでxからyを引いた結果（7）を出力",
+          "        // Systemのoutのprintlnでxからyを引いた結果（7）を出力",
           "        System.out.println(x - y);",
           "    // mainメソッドを閉じる",
           "    }",
@@ -208,13 +208,13 @@ export const javaData = {
           "content": "# あまりを計算してみよう\\n\\n**例1：あまりが出る場合**\\n```java\\nSystem.out.println(10 % 3);  // 結果: 1\\n```\\n10 ÷ 3 = 3 あまり **1** なので、「1」が表示されます。\\n\\n**例2：割り切れる場合**\\n```java\\nSystem.out.println(8 % 2);   // 結果: 0\\n```\\n8 ÷ 2 = 4 あまり **0** なので、「0」になります。\\n\\n**ポイント：** あまりが0なら「割り切れる」ということです！偶数かどうかの判定などに使えます。"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // printlnで10を3で割った余り（1）を出力\\n        System.out.println(10 % 3);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // printlnで10を3で割った余り（1）を出力\\n        ___.___.___(___ ___ ___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Systemのoutのprintlnで10を3で割った余り（1）を出力\\n        System.out.println(10 % 3);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Systemのoutのprintlnで10を3で割った余り（1）を出力\\n        ___.___.___(___ ___ ___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
           "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // printlnで10を3で割った余り（1）を出力",
+          "        // Systemのoutのprintlnで10を3で割った余り（1）を出力",
           "        System.out.println(10 % 3);",
           "    // mainメソッドを閉じる",
           "    }",
@@ -266,7 +266,7 @@ export const javaData = {
           "content": "# 引き算バージョン\\n\\n`-=` を使えば、「今の数字から引いて保存」ができます。\\n\\n**たとえ話：** ゲームでダメージを受けてHP（体力）が減るときに使えます！\\n\\n**コード例：**\\n```java\\nint hp = 100;   // 最初のHP（体力）は100\\nhp -= 30;       // 30のダメージを受けた！\\n// hp は 70 になる\\n```\\n\\n**ほかにも：**\\n- `*=` → かけ算して保存\\n- `/=` → 割り算して保存"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のhpに100を代入\\n        int hp = 100;\\n        // +=でhpに20を加算\\n        hp += 20;\\n        // -=でhpから50を減算\\n        hp -= 50;\\n        // printlnでhp（70）を出力\\n        System.out.println(hp);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のhpに100を代入\\n        ___ ___ = ___;\\n        // +=でhpに20を加算\\n        ___ ___ ___;\\n        // -=でhpから50を減算\\n        ___ ___ ___;\\n        // printlnでhp（70）を出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のhpに100を代入\\n        int hp = 100;\\n        // +=でhpに20を加算\\n        hp += 20;\\n        // -=でhpから50を減算\\n        hp -= 50;\\n        // Systemのoutのprintlnでhp（70）を出力\\n        System.out.println(hp);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のhpに100を代入\\n        ___ ___ = ___;\\n        // +=でhpに20を加算\\n        ___ ___ ___;\\n        // -=でhpから50を減算\\n        ___ ___ ___;\\n        // Systemのoutのprintlnでhp（70）を出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
@@ -278,7 +278,7 @@ export const javaData = {
           "        hp += 20;",
           "        // -=でhpから50を減算",
           "        hp -= 50;",
-          "        // printlnでhp（70）を出力",
+          "        // Systemのoutのprintlnでhp（70）を出力",
           "        System.out.println(hp);",
           "    // mainメソッドを閉じる",
           "    }",
@@ -340,7 +340,7 @@ export const javaData = {
           "content": "# ガチャンと合体！\\n\\n文字と文字、文字と数字を `+` でつなぐと、ひとつの長い文章になります。\\n\\n**コード例：** 天気を表示してみましょう\\n```java\\nString weather = \"はれ\";  // 天気を変数に入れる\\nSystem.out.println(\"明日は\" + weather + \"です\");  // つなげて表示\\n```\\n=> 明日ははれです\\n\\n**何が起きているの？**\\n1. 「明日は」という文字\\n2. weatherの中身「はれ」\\n3. 「です」という文字\\n\\nこの3つが `+` でつながって「明日ははれです」になります！"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のageに10を代入\\n        int age = 10;\\n        // printlnで「私は」とageと「歳です」を連結して出力\\n        System.out.println(\\\"私は\\\" + age + \\\"歳です\\\");\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のageに10を代入\\n        ___ ___ = ___;\\n        // printlnで「私は」とageと「歳です」を連結して出力\\n        ___.___.___(___ ___ ___ ___ ___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のageに10を代入\\n        int age = 10;\\n        // Systemのoutのprintlnで「私は」とageと「歳です」を連結して出力\\n        System.out.println(\\\"私は\\\" + age + \\\"歳です\\\");\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のageに10を代入\\n        ___ ___ = ___;\\n        // Systemのoutのprintlnで「私は」とageと「歳です」を連結して出力\\n        ___.___.___(___ ___ ___ ___ ___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
@@ -348,7 +348,7 @@ export const javaData = {
           "    public static void main(String[] args) {",
           "        // int型のageに10を代入",
           "        int age = 10;",
-          "        // printlnで「私は」とageと「歳です」を連結して出力",
+          "        // Systemのoutのprintlnで「私は」とageと「歳です」を連結して出力",
           "        System.out.println(\\\"私は\\\" + age + \\\"歳です\\\");",
           "    // mainメソッドを閉じる",
           "    }",
@@ -405,7 +405,7 @@ export const javaData = {
           "content": "# { } を使って作りましょう\\n\\n`String[]` のように、ラベルの後ろに `[]`（角カッコ）をつけると配列になります。\\n\\n**大事なルール：** 配列の番号は **0番から** 始まります！1番からではないので注意してね。\\n\\n**コード例：**\\n```java\\nString[] items = {\"おにぎり\", \"パン\"};\\n//                  0番目      1番目\\nSystem.out.println(items[0]); // \"おにぎり\" が表示されます\\nSystem.out.println(items[1]); // \"パン\" が表示されます\\n```\\n\\n**覚え方：** コンピュータは0から数えるのが好きなんです！"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // String[]型のcolorsに色配列（あか、あお）を代入\\n        String[] colors = {\\\"あか\\\", \\\"あお\\\"};\\n        // printlnでcolorsの2番目（あお）を出力\\n        System.out.println(colors[1]);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // String[]型のcolorsに色配列（あか、あお）を代入\\n        ___[] ___ = {___, ___};\\n        // printlnでcolorsの2番目（あお）を出力\\n        ___.___.___(___[___]);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // String[]型のcolorsに色配列（あか、あお）を代入\\n        String[] colors = {\\\"あか\\\", \\\"あお\\\"};\\n        // Systemのoutのprintlnでcolorsの2番目（あお）を出力\\n        System.out.println(colors[1]);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // String[]型のcolorsに色配列（あか、あお）を代入\\n        ___[] ___ = {___, ___};\\n        // Systemのoutのprintlnでcolorsの2番目（あお）を出力\\n        ___.___.___(___[___]);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
@@ -413,7 +413,7 @@ export const javaData = {
           "    public static void main(String[] args) {",
           "        // String[]型のcolorsに色配列（あか、あお）を代入",
           "        String[] colors = {\\\"あか\\\", \\\"あお\\\"};",
-          "        // printlnでcolorsの2番目（あお）を出力",
+          "        // Systemのoutのprintlnでcolorsの2番目（あお）を出力",
           "        System.out.println(colors[1]);",
           "    // mainメソッドを閉じる",
           "    }",
@@ -467,7 +467,7 @@ export const javaData = {
           "content": "# if（イフ）の使い方\\n\\n`if` は英語で「もし」という意味です。Javaでは、`if (条件)` のあとに `{ }` を書いて、その中にやりたいことを書きます。\\n\\n**コード例：** 値段が1000円より高いかチェックしてみよう\\n```java\\nint price = 1200;  // 値段は1200円\\nif (price > 1000) {  // もし1000円より高いなら...\\n    System.out.println(\"ちょっと高いかも？\");\\n}\\n```\\n\\n**ポイント：**\\n- `>` は「より大きい」という意味\\n- 条件が正しいときだけ `{ }` の中が実行されます"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のscoreに100を代入\\n        int score = 100;\\n        // ifでscoreが80より大きいか判定\\n        if (score > 80) {\\n            // printlnで'ごうかく！'を出力\\n            System.out.println(\\\"ごうかく！\\\");\\n        // ifブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のscoreに100を代入\\n        ___ ___ = ___;\\n        // ifでscoreが80より大きいか判定\\n        if (___ ___ ___) {\\n            // printlnで'ごうかく！'を出力\\n            ___.___.___(___);\\n        // ifブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のscoreに100を代入\\n        int score = 100;\\n        // ifでscoreが80より大きいか判定\\n        if (score > 80) {\\n            // Systemのoutのprintlnで'ごうかく！'を出力\\n            System.out.println(\\\"ごうかく！\\\");\\n        // ifブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のscoreに100を代入\\n        ___ ___ = ___;\\n        // ifでscoreが80より大きいか判定\\n        if (___ ___ ___) {\\n            // Systemのoutのprintlnで'ごうかく！'を出力\\n            ___.___.___(___);\\n        // ifブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
@@ -477,7 +477,7 @@ export const javaData = {
           "        int score = 100;",
           "        // ifでscoreが80より大きいか判定",
           "        if (score > 80) {",
-          "        // printlnで'ごうかく！'を出力",
+          "        // Systemのoutのprintlnで'ごうかく！'を出力",
           "            System.out.println(\\\"ごうかく！\\\");",
           "        // ifブロックを閉じる",
           "        }",
@@ -540,7 +540,7 @@ export const javaData = {
                       "content": "# 2つの道\\n\\n```java\\nif (score >= 60) {\\n    System.out.println(\"合格\");\\n} else {\\n    System.out.println(\"不合格\");\\n}\\n```\\n\\n条件によって実行する処理を分けられます。"
               }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のageに10を代入\\n        int age = 10;\\n        // ifでageが20以上か判定\\n        if (age >= 20) {\\n            // printlnで'おとな'を出力\\n            System.out.println(\\\"おとな\\\");\\n        // elseでそれ以外の場合\\n        } else {\\n            // printlnで'こども'を出力\\n            System.out.println(\\\"こども\\\");\\n        // if-elseブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のageに10を代入\\n        ___ ___ = ___;\\n        // ifでageが20以上か判定\\n        if (___ ___ ___) {\\n            // printlnで'おとな'を出力\\n            ___.___.___(___);\\n        // elseでそれ以外の場合\\n        ___ else ___\\n            // printlnで'こども'を出力\\n            ___.___.___(___);\\n        // if-elseブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のageに10を代入\\n        int age = 10;\\n        // ifでageが20以上か判定\\n        if (age >= 20) {\\n            // Systemのoutのprintlnで'おとな'を出力\\n            System.out.println(\\\"おとな\\\");\\n        // elseでそれ以外の場合\\n        } else {\\n            // Systemのoutのprintlnで'こども'を出力\\n            System.out.println(\\\"こども\\\");\\n        // if-elseブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のageに10を代入\\n        ___ ___ = ___;\\n        // ifでageが20以上か判定\\n        if (___ ___ ___) {\\n            // Systemのoutのprintlnで'おとな'を出力\\n            ___.___.___(___);\\n        // elseでそれ以外の場合\\n        ___ else ___\\n            // Systemのoutのprintlnで'こども'を出力\\n            ___.___.___(___);\\n        // if-elseブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
@@ -550,11 +550,11 @@ export const javaData = {
           "        int age = 10;",
           "        // ifでageが20以上か判定",
           "        if (age >= 20) {",
-          "            // printlnで'おとな'を出力",
+          "            // Systemのoutのprintlnで'おとな'を出力",
           "            System.out.println(\\\"おとな\\\");",
           "        // elseでそれ以外の場合",
           "        } else {",
-          "            // printlnで'こども'を出力",
+          "            // Systemのoutのprintlnで'こども'を出力",
           "            System.out.println(\\\"こども\\\");",
           "        // if-elseブロックを閉じる",
           "        }",
@@ -625,7 +625,7 @@ export const javaData = {
           "content": "# 使い分け\\n\\n**例1：両方の条件を満たす（かつ）**\\n```java\\n// 点数80点以上、かつ、出席率90%以上なら...\\nif (score >= 80 && attendance >= 90) {\\n    System.out.println(\"優秀！\");\\n}\\n```\\n\\n**例2：どちらかを満たす（または）**\\n```java\\n// 土曜日、または、日曜日なら...\\nif (day == \"土曜日\" || day == \"日曜日\") {\\n    System.out.println(\"お休み\");\\n}\\n```\\n\\n**覚え方：**\\n- `&&` → 「**かつ**」両方必要\\n- `||` → 「**または**」どちらか1つでOK"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のscoreに80を代入\\n        int score = 80;\\n        // int型のbonusに10を代入\\n        int bonus = 10;\\n        // ifと&&でscoreが70以上かつbonusが0より大きいか判定\\n        if (score >= 70 && bonus > 0) {\\n            // printlnで'ボーナスありごうかく'を出力\\n            System.out.println(\\\"ボーナスありごうかく\\\");\\n        // ifブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のscoreに80を代入\\n        ___ ___ = ___;\\n        // int型のbonusに10を代入\\n        ___ ___ = ___;\\n        // ifと&&でscoreが70以上かつbonusが0より大きいか判定\\n        if (___ >= ___ ___ ___ > ___) {\\n            // printlnで'ボーナスありごうかく'を出力\\n            ___.___.___(___);\\n        // ifブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のscoreに80を代入\\n        int score = 80;\\n        // int型のbonusに10を代入\\n        int bonus = 10;\\n        // ifと&&でscoreが70以上かつbonusが0より大きいか判定\\n        if (score >= 70 && bonus > 0) {\\n            // Systemのoutのprintlnで'ボーナスありごうかく'を出力\\n            System.out.println(\\\"ボーナスありごうかく\\\");\\n        // ifブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のscoreに80を代入\\n        ___ ___ = ___;\\n        // int型のbonusに10を代入\\n        ___ ___ = ___;\\n        // ifと&&でscoreが70以上かつbonusが0より大きいか判定\\n        if (___ >= ___ ___ ___ > ___) {\\n            // Systemのoutのprintlnで'ボーナスありごうかく'を出力\\n            ___.___.___(___);\\n        // ifブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
@@ -637,7 +637,7 @@ export const javaData = {
           "        int bonus = 10;",
           "        // ifと&&でscoreが70以上かつbonusが0より大きいか判定",
           "        if (score >= 70 && bonus > 0) {",
-          "            // printlnで'ボーナスありごうかく'を出力",
+          "            // Systemのoutのprintlnで'ボーナスありごうかく'を出力",
           "            System.out.println(\\\"ボーナスありごうかく\\\");",
           "        // ifブロックを閉じる",
           "        }",
@@ -708,7 +708,7 @@ export const javaData = {
           "content": "# 全部まとめて取り出す\\n\\n配列の中身を最初から最後まで順番に取り出すときは、**拡張for文（かくちょうフォーぶん）** が便利です。\\n\\n`:`（コロン）を使うのがJavaの面白いところです。「〜の中から」という意味だと思ってください。\\n\\n**コード例：**\\n```java\\nString[] names = {\"たろう\", \"はなこ\"};\\nfor (String name : names) {  // namesの中から順番に取り出してnameに入れる\\n    System.out.println(name);  // 取り出した名前を表示\\n}\\n```\\n=> たろう\\n=> はなこ\\n\\n**読み方：** 「namesの中の各nameについて」"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // String[]型のnamesに名前配列（たろう、はなこ）を代入\\n        String[] names = {\\\"たろう\\\", \\\"はなこ\\\"};\\n        // 拡張forでnamesから各nameを取り出す\\n        for (String name : names) {\\n            // printlnでnameを出力\\n            System.out.println(name);\\n        // forブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // String[]型のnamesに名前配列（たろう、はなこ）を代入\\n        ___[] ___ = {___, ___};\\n        // 拡張forでnamesから各nameを取り出す\\n        for (___ ___ : ___) {\\n            // printlnでnameを出力\\n            ___.___.___(___);\\n        // forブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // String[]型のnamesに名前配列（たろう、はなこ）を代入\\n        String[] names = {\\\"たろう\\\", \\\"はなこ\\\"};\\n        // 拡張forでnamesから各nameを取り出す\\n        for (String name : names) {\\n            // Systemのoutのprintlnでnameを出力\\n            System.out.println(name);\\n        // forブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // String[]型のnamesに名前配列（たろう、はなこ）を代入\\n        ___[] ___ = {___, ___};\\n        // 拡張forでnamesから各nameを取り出す\\n        for (___ ___ : ___) {\\n            // Systemのoutのprintlnでnameを出力\\n            ___.___.___(___);\\n        // forブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
@@ -718,7 +718,7 @@ export const javaData = {
           "        String[] names = {\\\"たろう\\\", \\\"はなこ\\\"};",
           "        // 拡張forでnamesから各nameを取り出す",
           "        for (String name : names) {",
-          "            // printlnでnameを出力",
+          "            // Systemのoutのprintlnでnameを出力",
           "            System.out.println(name);",
           "        // forブロックを閉じる",
           "        }",
@@ -776,7 +776,7 @@ export const javaData = {
           "content": "# ちょっと準備が大変かも？\\n\\nJavaで辞書を使うのは少し準備が必要です。3ステップで覚えましょう！\\n\\n**ステップ1：** `import` で道具箱から出してくる\\n**ステップ2：** `new` で新しく作る\\n**ステップ3：** `put`（プット）で中身を入れる\\n\\n**コード例：**\\n```java\\nimport java.util.HashMap;  // ステップ1：道具を準備\\nHashMap<String, String> colors = new HashMap<>();  // ステップ2：辞書を作る\\ncolors.put(\"りんご\", \"あか\");  // ステップ3：データを入れる\\nSystem.out.println(colors.get(\"りんご\"));  // getで取り出す\\n```\\n=> あか"
         }
       ],
-      "correctCode": "// importでjava.util.HashMapを読み込む\\nimport java.util.HashMap;\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // HashMap<String,String>型のuserをnewで作成\\n        HashMap<String, String> user = new HashMap<>();\\n        // putでキー'name'に値'たろう'を追加\\n        user.put(\\\"name\\\", \\\"たろう\\\");\\n        // printlnでgetを使いキー'name'の値を出力\\n        System.out.println(user.get(\\\"name\\\"));\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.HashMapを読み込む\\nimport ___.___.___;\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // HashMap<String,String>型のuserをnewで作成\\n        ___<___, ___> ___ = new ___<>();\\n        // putでキー'name'に値'たろう'を追加\\n        ___.___(___, ___);\\n        // printlnでgetを使いキー'name'の値を出力\\n        ___.___.___(___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// importでjava.util.HashMapを読み込む\\nimport java.util.HashMap;\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // HashMap<String,String>型のuserをnewで作成\\n        HashMap<String, String> user = new HashMap<>();\\n        // putでキー'name'に値'たろう'を追加\\n        user.put(\\\"name\\\", \\\"たろう\\\");\\n        // Systemのoutのprintlnでgetを使いキー'name'の値を出力\\n        System.out.println(user.get(\\\"name\\\"));\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.HashMapを読み込む\\nimport ___.___.___;\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // HashMap<String,String>型のuserをnewで作成\\n        ___<___, ___> ___ = new ___<>();\\n        // putでキー'name'に値'たろう'を追加\\n        ___.___(___, ___);\\n        // Systemのoutのprintlnでgetを使いキー'name'の値を出力\\n        ___.___.___(___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// importでjava.util.HashMapを読み込む",
           "import java.util.HashMap;",
@@ -788,7 +788,7 @@ export const javaData = {
           "        HashMap<String, String> user = new HashMap<>();",
           "        // putでキー'name'に値'たろう'を追加",
           "        user.put(\\\"name\\\", \\\"たろう\\\");",
-          "        // printlnでgetを使いキー'name'の値を出力",
+          "        // Systemのoutのprintlnでgetを使いキー'name'の値を出力",
           "        System.out.println(user.get(\\\"name\\\"));",
           "    // mainメソッドを閉じる",
           "    }",
@@ -844,13 +844,13 @@ export const javaData = {
           "content": "# 作り方\\n\\nJavaでメソッドを作るときは、`public static void`（パブリック・スタティック・ボイド）という呪文を使います。今は「おまじない」だと思ってそのまま書きましょう！\\n\\n**コード例：** あいさつするメソッドを作ってみよう\\n```java\\n// メソッドを作る（定義する）\\npublic static void aisatsu() {\\n    System.out.println(\"こんにちは！\");\\n}\\n\\n// メソッドを使う（呼び出す）\\naisatsu();  // 「こんにちは！」と表示される\\n```\\n\\n**ポイント：**\\n- メソッド名のあとに `()` をつけて呼び出します\\n- 同じメソッドを何回でも呼び出せます"
         }
       ],
-      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void greetでgreetメソッドを定義\\n    public static void greet() {\\n        // printlnで'こんにちは'を出力\\n        System.out.println(\\\"こんにちは\\\");\\n    // greetメソッドを閉じる\\n    }\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // greetメソッドを呼び出す\\n        greet();\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void greetでgreetメソッドを定義\\n    public static void ___() {\\n        // printlnで'こんにちは'を出力\\n        ___.___.___(___)___\\n    // greetメソッドを閉じる\\n    ___\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // greetメソッドを呼び出す\\n        ___();\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void greetでgreetメソッドを定義\\n    public static void greet() {\\n        // Systemのoutのprintlnで'こんにちは'を出力\\n        System.out.println(\\\"こんにちは\\\");\\n    // greetメソッドを閉じる\\n    }\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // greetメソッドを呼び出す\\n        greet();\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void greetでgreetメソッドを定義\\n    public static void ___() {\\n        // Systemのoutのprintlnで'こんにちは'を出力\\n        ___.___.___(___)___\\n    // greetメソッドを閉じる\\n    ___\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // greetメソッドを呼び出す\\n        ___();\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// public classでMainクラスを定義",
           "public class Main {",
           "    // public static void greetでgreetメソッドを定義",
           "    public static void greet() {",
-          "        // printlnで'こんにちは'を出力",
+          "        // Systemのoutのprintlnで'こんにちは'を出力",
           "        System.out.println(\\\"こんにちは\\\");",
           "    // greetメソッドを閉じる",
           "    }",

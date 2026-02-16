@@ -45,8 +45,8 @@ export const php2Data = {
           "content": "# class キーワードで作る\\n\\n`class 名前 { }` で定義します。`new` でインスタンス（実体）を作成します。\\n\\n**コード例：**\\n```php\\nclass Dog {\\n    public $name;\\n}\\n$dog = new Dog();\\n```\\n\\n**何をしているの？**\\n1. `class Dog { }` → Dogという名前のクラスを作る\\n2. `public $name;` → nameというデータ（プロパティ）を持たせる\\n3. `new Dog()` → Dogクラスから実際のオブジェクトを作る\\n\\n**public とは？**\\n- 「外からアクセスできる」という意味\\n- プロパティやメソッドの前につける"
         }
       ],
-      "correctCode": "// PHPコード開始タグ\\n<?php\\n// Catクラスを定義\\nclass Cat {\\n    // public $nameを定義\\n    public $name;\\n// ブロックを閉じる\\n}\\n// $catにCatインスタンスを代入\\n$cat = new Cat();\\n// $catのnameプロパティに'タマ'を代入\\n$cat->name = 'タマ';\\n// $catのnameプロパティを出力\\necho $cat->name;\\n// PHPコード終了タグ\\n?>",
-      "holeyCode": "// PHPコード開始タグ\\n___\\n// Catクラスを定義\\n___ ___ {\\n    // public $nameを定義\\n    ___ $___;\\n// ブロックを閉じる\\n___\\n// $catにCatインスタンスを代入\\n$___ = ___ ___();\\n// $catのnameプロパティに'タマ'を代入\\n$___->___ = '___';\\n// $catのnameプロパティを出力\\n___ $___->___;\\n// PHPコード終了タグ\\n___",
+      "correctCode": "// PHPコード開始タグ\\n<?php\\n// Catクラスを定義\\nclass Cat {\\n    // public $nameを定義\\n    public $name;\\n// ブロックを閉じる\\n}\\n// $catにCatインスタンスを代入\\n$cat = new Cat();\\n// $catのnameプロパティに'タマ'を代入\\n$cat->name = 'タマ';\\n// echoで$catのnameプロパティを出力\\necho $cat->name;\\n// PHPコード終了タグ\\n?>",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// Catクラスを定義\\n___ ___ {\\n    // public $nameを定義\\n    ___ $___;\\n// ブロックを閉じる\\n___\\n// $catにCatインスタンスを代入\\n$___ = ___ ___();\\n// $catのnameプロパティに'タマ'を代入\\n$___->___ = '___';\\n// echoで$catのnameプロパティを出力\\n___ $___->___;\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "// PHPコード開始タグ",
           "<?php",
@@ -60,7 +60,7 @@ export const php2Data = {
           "$cat = new Cat();",
           "// $catのnameプロパティに'タマ'を代入",
           "$cat->name = 'タマ';",
-          "// $catのnameプロパティを出力",
+          "// echoで$catのnameプロパティを出力",
           "echo $cat->name;",
           "// PHPコード終了タグ",
           "?>"
@@ -109,8 +109,8 @@ export const php2Data = {
           "content": "# 初期値を設定\\n\\n`__construct` で初期化処理を行います。\\n\\n**コード例：**\\n```php\\nclass Box {\\n    public function __construct($size) {\\n        $this->size = $size;\\n    }\\n}\\n$box = new Box(10);\\n```\\n\\n**何をしているの？**\\n1. `new Box(10)` → Boxオブジェクトを作成、10を渡す\\n2. `__construct($size)` が自動で呼ばれる（$sizeに10が入る）\\n3. `$this->size = $size` → オブジェクトのsizeプロパティに保存\\n\\n**$this とは？**\\n- 「自分自身」を指す特別な変数\\n- クラスの中で「自分のデータ」にアクセスするときに使う"
         }
       ],
-      "correctCode": "<?php\\n// Counterクラスを定義\\nclass Counter {\\n    // public $countを定義\\n    public $count;\\n    // __constructコンストラクタ（引数$c）を定義\\n    public function __construct($c) {\\n        // 自身のcountプロパティに$cを代入\\n        $this->count = $c;\\n    }\\n}\\n// $cntにCounterインスタンス（引数5）を代入\\n$cnt = new Counter(5);\\n// $cntのcountプロパティを出力\\necho $cnt->count;\\n?>",
-      "holeyCode": "// PHPコード開始タグ\\n___\\n// Counterクラスを定義\\n___ ___ {\\n    // public $countを定義\\n    ___ $___;\\n    // __constructコンストラクタ（引数$c）を定義\\n    ___ ___ ___($___) {\\n        // 自身のcountプロパティに$cを代入\\n        $___->___ = $___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// $cntにCounterインスタンス（引数5）を代入\\n$___ = ___ ___(___);\\n// $cntのcountプロパティを出力\\n___ $___->___;\\n// PHPコード終了タグ\\n___",
+      "correctCode": "<?php\\n// Counterクラスを定義\\nclass Counter {\\n    // public $countを定義\\n    public $count;\\n    // __constructコンストラクタ（引数$c）を定義\\n    public function __construct($c) {\\n        // 自身のcountプロパティに$cを代入\\n        $this->count = $c;\\n    }\\n}\\n// $cntにCounterインスタンス（引数5）を代入\\n$cnt = new Counter(5);\\n// echoで$cntのcountプロパティを出力\\necho $cnt->count;\\n?>",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// Counterクラスを定義\\n___ ___ {\\n    // public $countを定義\\n    ___ $___;\\n    // __constructコンストラクタ（引数$c）を定義\\n    ___ ___ ___($___) {\\n        // 自身のcountプロパティに$cを代入\\n        $___->___ = $___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// $cntにCounterインスタンス（引数5）を代入\\n$___ = ___ ___(___);\\n// echoで$cntのcountプロパティを出力\\n___ $___->___;\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "<?php",
           "// Counterクラスを定義",
@@ -125,7 +125,7 @@ export const php2Data = {
           "}",
           "// $cntにCounterインスタンス（引数5）を代入",
           "$cnt = new Counter(5);",
-          "// $cntのcountプロパティを出力",
+          "// echoで$cntのcountプロパティを出力",
           "echo $cnt->count;",
           "?>"
         ],
@@ -151,7 +151,7 @@ export const php2Data = {
           "keywords": [
             "class", "public", "function", "new", "echo"
           ],
-          "others": ["<?php", "?>", "}", "Counter", "count", "c", "this", "cnt", "5", "__construct", "// Counterクラスを定義", "//", "_construct($c)でコンストラクタを定義", "// 自身のcountプロパティに$cを代入", "cntにnew Counter(5)を代入", "// $cntのcountプロパティを出力", ">", "_constructコンストラクタ（引数$c）を定義", "cntにCounterインスタンス（引数5）を代入"]
+          "others": ["<?php", "?>", "}", "Counter", "count", "c", "this", "cnt", "5", "__construct", "// Counterクラスを定義", "//", "_construct($c)でコンストラクタを定義", "// 自身のcountプロパティに$cを代入", "cntにnew Counter(5)を代入", "// echoで$cntのcountプロパティを出力", ">", "_constructコンストラクタ（引数$c）を定義", "cntにCounterインスタンス（引数5）を代入"]
         },
         "testCases": [
           {
@@ -173,15 +173,15 @@ export const php2Data = {
           "content": "# 親クラスを拡張\\n\\n`extends`（エクステンズ）キーワードで親クラスを指定します。子クラスは親クラスのメソッドを使えます。\\n\\n**コード例：**\\n```php\\nclass Animal {\\n    public function eat() { echo 'eating'; }\\n}\\nclass Dog extends Animal { }\\n\\n$dog = new Dog();\\n$dog->eat();\\n```\\n\\n=> eating（親のメソッドが使える！）\\n\\n**何が起こるの？**\\n1. `Animal` クラスに `eat` メソッドがある\\n2. `Dog extends Animal` → DogはAnimalを継承\\n3. Dogは自分で `eat` を作らなくても、Animalの `eat` が使える\\n\\n**extends = 「拡張する」** という意味です。"
         }
       ],
-      "correctCode": "<?php\\n// Vehicleクラスを定義\\nclass Vehicle {\\n    // moveメソッドを定義\\n    public function move() {\\n        // '移動中'を出力\\n        echo '移動中';\\n    }\\n}\\n// CarがVehicleを継承\\nclass Car extends Vehicle { }\\n// $carにCarインスタンスを代入\\n$car = new Car();\\n// $carのmoveメソッドを呼び出し\\n$car->move();\\n?>",
-      "holeyCode": "// PHPコード開始タグ\\n___\\n// Vehicleクラスを定義\\n___ ___ {\\n    // moveメソッドを定義\\n    ___ ___ ___() {\\n        // '移動中'を出力\\n        ___ '___';\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// CarがVehicleを継承\\n___ ___ ___ ___ { }\\n// $carにCarインスタンスを代入\\n$___ = ___ ___();\\n// $carのmoveメソッドを呼び出し\\n$___->___();\\n// PHPコード終了タグ\\n___",
+      "correctCode": "<?php\\n// Vehicleクラスを定義\\nclass Vehicle {\\n    // moveメソッドを定義\\n    public function move() {\\n        // echoで'移動中'を出力\\n        echo '移動中';\\n    }\\n}\\n// CarがVehicleを継承\\nclass Car extends Vehicle { }\\n// $carにCarインスタンスを代入\\n$car = new Car();\\n// $carのmoveメソッドを呼び出し\\n$car->move();\\n?>",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// Vehicleクラスを定義\\n___ ___ {\\n    // moveメソッドを定義\\n    ___ ___ ___() {\\n        // echoで'移動中'を出力\\n        ___ '___';\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// CarがVehicleを継承\\n___ ___ ___ ___ { }\\n// $carにCarインスタンスを代入\\n$___ = ___ ___();\\n// $carのmoveメソッドを呼び出し\\n$___->___();\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "<?php",
           "// Vehicleクラスを定義",
           "class Vehicle {",
           "    // moveメソッドを定義",
           "    public function move() {",
-          "        // '移動中'を出力",
+          "        // echoで'移動中'を出力",
           "        echo '移動中';",
           "    }",
           "}",
@@ -215,7 +215,7 @@ export const php2Data = {
           "keywords": [
             "class", "public", "function", "echo", "extends", "new"
           ],
-          "others": ["<?php", "?>", "}", "Vehicle", "move", "Car", "car", "移動中", "// Vehicleクラスを定義", "// '移動中'を出力", "arがVehicleを継承", "// $carにCarインスタンスを代入", "//", "$carのmoveメソッドを呼び出し", ">"]
+          "others": ["<?php", "?>", "}", "Vehicle", "move", "Car", "car", "移動中", "// Vehicleクラスを定義", "// echoで'移動中'を出力", "arがVehicleを継承", "// $carにCarインスタンスを代入", "//", "$carのmoveメソッドを呼び出し", ">"]
         },
         "testCases": [
           {
@@ -237,8 +237,8 @@ export const php2Data = {
           "content": "# 約束を守る\\n\\n`interface`（インターフェース）で約束を定義し、`implements`（インプリメンツ）で「その約束を守ります」と宣言します。\\n\\n**コード例：**\\n```php\\ninterface Greet {\\n    public function hello();\\n}\\nclass Person implements Greet {\\n    public function hello() { echo 'hi'; }\\n}\\n```\\n\\n**何をしているの？**\\n1. `interface Greet` → 「helloメソッドを持つこと」という約束を作る\\n2. `class Person implements Greet` → Personは「Greetの約束を守る」と宣言\\n3. `public function hello()` → 約束通りhelloメソッドを作る（作らないとエラー！）\\n\\n**ポイント：**\\n- interface = 「約束」の定義\\n- implements = 「約束を守る」という宣言"
         }
       ],
-      "correctCode": "<?php\\n// Runnerインターフェースを定義\\ninterface Runner {\\n    // runメソッドを宣言\\n    public function run();\\n}\\n// RobotがRunnerを実装\\nclass Robot implements Runner {\\n    // runメソッドを実装\\n    public function run() {\\n        // '実行中'を出力\\n        echo '実行中';\\n    }\\n}\\n// $rにRobotインスタンスを代入\\n$r = new Robot();\\n// $rのrunメソッドを呼び出し\\n$r->run();\\n?>",
-      "holeyCode": "// PHPコード開始タグ\\n___\\n// Runnerインターフェースを定義\\n___ ___ {\\n    // runメソッドを宣言\\n    ___ ___ ___();\\n// ブロックを閉じる\\n___\\n// RobotがRunnerを実装\\n___ ___ ___ ___ {\\n    // runメソッドを実装\\n    ___ ___ ___() {\\n        // '実行中'を出力\\n        ___ '___';\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// $rにRobotインスタンスを代入\\n$___ = ___ ___();\\n// $rのrunメソッドを呼び出し\\n$___->___();\\n// PHPコード終了タグ\\n___",
+      "correctCode": "<?php\\n// Runnerインターフェースを定義\\ninterface Runner {\\n    // runメソッドを宣言\\n    public function run();\\n}\\n// RobotがRunnerを実装\\nclass Robot implements Runner {\\n    // runメソッドを実装\\n    public function run() {\\n        // echoで'実行中'を出力\\n        echo '実行中';\\n    }\\n}\\n// $rにRobotインスタンスを代入\\n$r = new Robot();\\n// $rのrunメソッドを呼び出し\\n$r->run();\\n?>",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// Runnerインターフェースを定義\\n___ ___ {\\n    // runメソッドを宣言\\n    ___ ___ ___();\\n// ブロックを閉じる\\n___\\n// RobotがRunnerを実装\\n___ ___ ___ ___ {\\n    // runメソッドを実装\\n    ___ ___ ___() {\\n        // echoで'実行中'を出力\\n        ___ '___';\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// $rにRobotインスタンスを代入\\n$___ = ___ ___();\\n// $rのrunメソッドを呼び出し\\n$___->___();\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "<?php",
           "// Runnerインターフェースを定義",
@@ -250,7 +250,7 @@ export const php2Data = {
           "class Robot implements Runner {",
           "    // runメソッドを実装",
           "    public function run() {",
-          "        // '実行中'を出力",
+          "        // echoで'実行中'を出力",
           "        echo '実行中';",
           "    }",
           "}",
@@ -501,8 +501,8 @@ export const php2Data = {
           "content": "# namespace キーワード\\n\\nファイルの先頭で `namespace`（ネームスペース）を宣言します。\\n\\n**コード例：**\\n```php\\nnamespace App\\Models;\\nclass User { }\\n```\\n\\n**何をしているの？**\\n1. `namespace App\\Models;` → 「App\\Models」というグループに所属\\n2. `class User { }` → このUserクラスは「App\\Models\\User」になる\\n\\n**別のファイルにも同じ名前があったら？**\\n```php\\n// ファイル1: App\\Models\\User\\n// ファイル2: App\\Admin\\User\\n// → 違うグループだから衝突しない！\\n```\\n\\n**ポイント：**\\n- `\\`（バックスラッシュ）でグループを区切る\\n- 「フォルダ」のような階層構造が作れる"
         }
       ],
-      "correctCode": "<?php\\n// namespace Appを宣言\\nnamespace App;\\n// Helloクラスを定義\\nclass Hello {\\n    // sayメソッドを定義\\n    public function say() {\\n        // 'こんにちは'を出力\\n        echo 'こんにちは';\\n    }\\n}\\n// $hにHelloインスタンスを代入\\n$h = new Hello();\\n// $hのsayメソッドを呼び出し\\n$h->say();\\n?>",
-      "holeyCode": "// PHPコード開始タグ\\n___\\n// namespace Appを宣言\\n___ ___;\\n// Helloクラスを定義\\n___ ___ {\\n    // sayメソッドを定義\\n    ___ ___ ___() {\\n        // 'こんにちは'を出力\\n        ___ '___';\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// $hにHelloインスタンスを代入\\n$___ = ___ ___();\\n// $hのsayメソッドを呼び出し\\n$___->___();\\n// PHPコード終了タグ\\n___",
+      "correctCode": "<?php\\n// namespace Appを宣言\\nnamespace App;\\n// Helloクラスを定義\\nclass Hello {\\n    // sayメソッドを定義\\n    public function say() {\\n        // echoで'こんにちは'を出力\\n        echo 'こんにちは';\\n    }\\n}\\n// $hにHelloインスタンスを代入\\n$h = new Hello();\\n// $hのsayメソッドを呼び出し\\n$h->say();\\n?>",
+      "holeyCode": "// PHPコード開始タグ\\n___\\n// namespace Appを宣言\\n___ ___;\\n// Helloクラスを定義\\n___ ___ {\\n    // sayメソッドを定義\\n    ___ ___ ___() {\\n        // echoで'こんにちは'を出力\\n        ___ '___';\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// $hにHelloインスタンスを代入\\n$___ = ___ ___();\\n// $hのsayメソッドを呼び出し\\n$___->___();\\n// PHPコード終了タグ\\n___",
       "correctLines": [
           "<?php",
           "// namespace Appを宣言",
@@ -511,7 +511,7 @@ export const php2Data = {
           "class Hello {",
           "    // sayメソッドを定義",
           "    public function say() {",
-          "        // 'こんにちは'を出力",
+          "        // echoで'こんにちは'を出力",
           "        echo 'こんにちは';",
           "    }",
           "}",
@@ -543,7 +543,7 @@ export const php2Data = {
           "keywords": [
             "namespace", "class", "public", "function", "echo", "new"
           ],
-          "others": ["<?php", "?>", "}", "App", "Hello", "say", "h", "こんにちは", "// namespace Appを宣言", "//", "Helloクラスを定義", "// 'こんにちは'を出力", "$hにHelloインスタンスを代入", "// $hのsayメソッドを呼び出し", ">", "hにHelloインスタンスを代入"]
+          "others": ["<?php", "?>", "}", "App", "Hello", "say", "h", "こんにちは", "// namespace Appを宣言", "//", "Helloクラスを定義", "// echoで'こんにちは'を出力", "$hにHelloインスタンスを代入", "// $hのsayメソッドを呼び出し", ">", "hにHelloインスタンスを代入"]
         },
         "testCases": [
           {

@@ -129,19 +129,19 @@ export const pythonData5 = {
           "content": "# パターンを検索\\n\\n**正規表現** とは、文字の **パターン（形）** を表す特別な書き方です。\\n\\n**たとえ話：** 「3桁の数字」「@が入ったメールアドレス」のような「形」で文字を探せます。\\n\\n**re.search()（サーチ）** で **文字列の中からパターンに合う部分を探します**。\\n\\n**よく使う記号：**\\n- `\\d` = 数字1文字（0-9）\\n- `\\w` = 英数字1文字（a-z, A-Z, 0-9, _）\\n- `+` = 1回以上の繰り返し\\n- `{3}` = ちょうど3回\\n\\n**例：** メールアドレスを探そう！\\n\\n```python\\nimport re\\n\\ntext = 'my email is test@example.com'\\nmatch = re.search(r'\\w+@\\w+\\.\\w+', text)\\nif match:\\n    print(match.group())  # test@example.com\\n```\\n\\n**何をしているか：**\\n1. `import re` で正規表現モジュールを読み込む\\n2. `re.search(パターン, 文字列)` で検索\\n3. 見つかったら `match` オブジェクトが返る\\n4. `match.group()` で一致した文字列を取得\\n\\n**ポイント：** パターンの前に `r` をつけると、`\\` をそのまま使えます。"
         }
       ],
-      "correctCode": "# 正規表現モジュールをインポート\\nimport re\\n\\n# textに電話番号を含む文字列を代入\\ntext = 'Call me at 090-1234-5678'\\n# 3桁-4桁-4桁の数字パターンを検索\\nmatch = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)\\n# 見つかった場合\\nif match:\\n    # 見つかった電話番号を表示\\n    print(match.group())",
-      "holeyCode": "# 正規表現モジュールをインポート\\nimport ___\\n\\n# textに電話番号を含む文字列を代入\\n___ = '___'\\n# 3桁-4桁-4桁の数字パターンを検索\\n___ = ___.___(___, ___)\\n# 見つかった場合\\nif ___:\\n    # 見つかった電話番号を表示\\n    ___(___.___())",
+      "correctCode": "# 正規表現モジュールをインポート\\nimport re\\n\\n# textに電話番号を含む文字列を代入\\ntext = 'Call me at 090-1234-5678'\\n# textからre.searchで3桁-4桁-4桁パターンを検索しmatchに代入\\nmatch = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)\\n# matchがある場合\\nif match:\\n    # printでmatchのgroupメソッドから一致した電話番号を表示\\n    print(match.group())",
+      "holeyCode": "# 正規表現モジュールをインポート\\nimport ___\\n\\n# textに電話番号を含む文字列を代入\\n___ = '___'\\n# textからre.searchで3桁-4桁-4桁パターンを検索しmatchに代入\\n___ = ___.___(___, ___)\\n# matchがある場合\\nif ___:\\n    # printでmatchのgroupメソッドから一致した電話番号を表示\\n    ___(___.___())",
       "correctLines": [
           "# 正規表現モジュールをインポート",
           "import re",
           "",
           "# textに電話番号を含む文字列を代入",
           "text = 'Call me at 090-1234-5678'",
-          "# 3桁-4桁-4桁の数字パターンを検索",
+          "# textからre.searchで3桁-4桁-4桁パターンを検索しmatchに代入",
           "match = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)",
-          "# 見つかった場合",
+          "# matchがある場合",
           "if match:",
-          "    # 見つかった電話番号を表示",
+          "    # printでmatchのgroupメソッドから一致した電話番号を表示",
           "    print(match.group())"
         ],
       "lineHints": [

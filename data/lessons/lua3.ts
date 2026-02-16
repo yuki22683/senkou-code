@@ -192,12 +192,12 @@ export const lua3Data = {
           "content": "# 主な型\\n\\n- `\"nil\"`, `\"boolean\"`, `\"number\"`, `\"string\"`, `\"table\"`, `\"function\"`\\n\\n**コード例：**\\n```lua\\nprint(type(42)) -- number\\nprint(type({})) -- table\\n```"
         }
       ],
-      "correctCode": "-- typeで型を確認\\nlocal t = {}\\n-- 型を出力\\nprint(type(t))",
-      "holeyCode": "-- typeで型を確認\\nlocal ___ = ___\\n-- 型を出力\\n___(___(___))",
+      "correctCode": "-- typeで型を確認\\nlocal t = {}\\n-- printで型を出力\\nprint(type(t))",
+      "holeyCode": "-- typeで型を確認\\nlocal ___ = ___\\n-- printで型を出力\\n___(___(___))",
       "correctLines": [
           "-- typeで型を確認",
           "local t = {}",
-          "-- 型を出力",
+          "-- printで型を出力",
           "print(type(t))"
         ],
       "lineHints": [
@@ -368,12 +368,12 @@ export const lua3Data = {
           "content": "# #文字列 / #テーブル\\n\\n文字列のバイト数や配列の要素数を返します。\\n\\n**コード例：**\\n```lua\\nprint(#\"hello\") -- 5\\nprint(#{1, 2, 3}) -- 3\\n```"
         }
       ],
-      "correctCode": "-- #で長さを取得\\nlocal s = \"Lua\"\\n-- 長さを出力\\nprint(#s)",
-      "holeyCode": "-- #で長さを取得\\nlocal ___ = \"___\"\\n-- 長さを出力\\n___(___)",
+      "correctCode": "-- #で長さを取得\\nlocal s = \"Lua\"\\n-- printで長さを出力\\nprint(#s)",
+      "holeyCode": "-- #で長さを取得\\nlocal ___ = \"___\"\\n-- printで長さを出力\\n___(___)",
       "correctLines": [
           "-- #で長さを取得",
           "local s = \"Lua\"",
-          "-- 長さを出力",
+          "-- printで長さを出力",
           "print(#s)"
         ],
       "lineHints": [

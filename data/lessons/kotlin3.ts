@@ -57,8 +57,8 @@ export const kotlin3Data = {
           "content": "# 目標\\n\\nsuspend関数を作って呼び出しましょう。\\n\\n1. `suspend fun getMessage()` を定義\\n2. `delay(100)` で100ミリ秒待機\\n3. `\"Hello\"` を返す\\n4. `runBlocking` の中で呼び出して表示"
         }
       ],
-      "correctCode": "// coroutinesをインポート\\nimport kotlinx.coroutines.*\\n\\n// suspend funでgetMessage関数を定義\\nsuspend fun getMessage(): String {\\n    // delay関数（引数100）で100ミリ秒待機\\n    delay(100)\\n    // 「こんにちは」を返す\\n    return \"こんにちは\"\\n// ブロックを閉じる\\n}\\n\\n// fun main()をrunBlockingで定義\\nfun main() = runBlocking {\\n    // printlnでgetMessage()を出力\\n    println(getMessage())\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// coroutinesをインポート\\n___ ___.___.___\\n___\\n// suspend funでgetMessage関数を定義\\n___ ___ ___(): ___ {\\n    // delay関数（引数100）で100ミリ秒待機\\n    ___(___)\\n    // 「こんにちは」を返す\\n    ___ \"___\"\\n// ブロックを閉じる\\n___\\n___\\n// fun main()をrunBlockingで定義\\n___ ___() = ___ {\\n    // printlnでgetMessage()を出力\\n    ___(___(___))\\n// ブロックを閉じる\\n___",
+      "correctCode": "// coroutinesをインポート\\nimport kotlinx.coroutines.*\\n\\n// suspend funでgetMessage関数を定義\\nsuspend fun getMessage(): String {\\n    // delay関数（引数100）で100ミリ秒待機\\n    delay(100)\\n    // 「こんにちは」を返す\\n    return \"こんにちは\"\\n// ブロックを閉じる\\n}\\n\\n// fun main()をrunBlockingで定義\\nfun main() = runBlocking {\\n    // printlnでgetMessage関数の結果を出力\\n    println(getMessage())\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// coroutinesをインポート\\n___ ___.___.___\\n___\\n// suspend funでgetMessage関数を定義\\n___ ___ ___(): ___ {\\n    // delay関数（引数100）で100ミリ秒待機\\n    ___(___)\\n    // 「こんにちは」を返す\\n    ___ \"___\"\\n// ブロックを閉じる\\n___\\n___\\n// fun main()をrunBlockingで定義\\n___ ___() = ___ {\\n    // printlnでgetMessage関数の結果を出力\\n    ___(___(___))\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// coroutinesをインポート",
           "import kotlinx.coroutines.*",
@@ -74,7 +74,7 @@ export const kotlin3Data = {
           "",
           "// fun main()をrunBlockingで定義",
           "fun main() = runBlocking {",
-          "    // printlnでgetMessage()を出力",
+          "    // printlnでgetMessage関数の結果を出力",
           "    println(getMessage())",
           "// ブロックを閉じる",
           "}"

@@ -535,7 +535,7 @@ export const go4Data = {
           "content": "# & を忘れずに\\n\\n```go\\njson.Unmarshal(data, &result)  // OK\\njson.Unmarshal(data, result)   // NG\\n```"
         }
       ],
-      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n\\n// import (でインポートブロックを開始\\nimport (\\n    // encoding/jsonパッケージをインポート\\n    \"encoding/json\"\\n    // fmtパッケージをインポート\\n    \"fmt\"\\n// インポートブロックを閉じる\\n)\\n\\n// type ItemでItem構造体を定義\\ntype Item struct {\\n    // Nameフィールド（string型、JSONタグname）を定義\\n    Name string `json:\"name\"`\\n// 構造体定義を閉じる\\n}\\n\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でdataにJSON文字列のバイト列を代入\\n    data := []byte(`{\"name\":\"Banana\"}`)\\n    // varでitemにItem型を宣言\\n    var item Item\\n    // json.Unmarshalでdataをitemにパース\\n    json.Unmarshal(data, &item)\\n    // itemのNameフィールドを出力\\n    fmt.Println(item.Name)\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n\\n// import (でインポートブロックを開始\\nimport ___\\n    // encoding/jsonパッケージをインポート\\n    \\\"___\\\"\\n    // fmtパッケージをインポート\\n    \\\"___\\\"\\n// インポートブロックを閉じる\\n___\\n\\n// type ItemでItem構造体を定義\\ntype ___ struct ___\\n    // Nameフィールド（string型、JSONタグname）を定義\\n    ___ ___ `json:\\\"___\\\"`\\n// 構造体定義を閉じる\\n___\\n\\n// func mainでmain関数を定義\\nfunc ___() ___\\n    // :=でdataにJSON文字列のバイト列を代入\\n    ___ := []___(`{\\\"___\\\":\\\"___\\\"}`)\\n    // varでitemにItem型を宣言\\n    var ___ ___\\n    // json.Unmarshalでdataをitemにパース\\n    ___.___(___, &___)\\n    // itemのNameフィールドを出力\\n    ___.___(___.___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n\\n// import (でインポートブロックを開始\\nimport (\\n    // encoding/jsonパッケージをインポート\\n    \"encoding/json\"\\n    // fmtパッケージをインポート\\n    \"fmt\"\\n// インポートブロックを閉じる\\n)\\n\\n// type ItemでItem構造体を定義\\ntype Item struct {\\n    // Nameフィールド（string型、JSONタグname）を定義\\n    Name string `json:\"name\"`\\n// 構造体定義を閉じる\\n}\\n\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でdataにJSON文字列のバイト列を代入\\n    data := []byte(`{\"name\":\"Banana\"}`)\\n    // varでitemにItem型を宣言\\n    var item Item\\n    // json.Unmarshalでdataをitemにパース\\n    json.Unmarshal(data, &item)\\n    // fmt.PrintlnでitemのNameフィールドを出力\\n    fmt.Println(item.Name)\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n\\n// import (でインポートブロックを開始\\nimport ___\\n    // encoding/jsonパッケージをインポート\\n    \\\"___\\\"\\n    // fmtパッケージをインポート\\n    \\\"___\\\"\\n// インポートブロックを閉じる\\n___\\n\\n// type ItemでItem構造体を定義\\ntype ___ struct ___\\n    // Nameフィールド（string型、JSONタグname）を定義\\n    ___ ___ `json:\\\"___\\\"`\\n// 構造体定義を閉じる\\n___\\n\\n// func mainでmain関数を定義\\nfunc ___() ___\\n    // :=でdataにJSON文字列のバイト列を代入\\n    ___ := []___(`{\\\"___\\\":\\\"___\\\"}`)\\n    // varでitemにItem型を宣言\\n    var ___ ___\\n    // json.Unmarshalでdataをitemにパース\\n    ___.___(___, &___)\\n    // fmt.PrintlnでitemのNameフィールドを出力\\n    ___.___(___.___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// package mainでモジュールを宣言",
           "package main",
@@ -564,7 +564,7 @@ export const go4Data = {
           "    var item Item",
           "    // json.Unmarshalでdataをitemにパース",
           "    json.Unmarshal(data, &item)",
-          "    // itemのNameフィールドを出力",
+          "    // fmt.PrintlnでitemのNameフィールドを出力",
           "    fmt.Println(item.Name)",
           "// ブロックを閉じる",
           "}"
@@ -630,7 +630,7 @@ export const go4Data = {
           "content": "# 変換と検索\\n\\n```go\\nstrings.ToUpper(s)\\nstrings.ToLower(s)\\nstrings.TrimSpace(s)\\nstrings.Replace(s, \"old\", \"new\", -1)\\n```"
         }
       ],
-      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n\\n// import (でインポートブロックを開始\\nimport (\\n    // fmtパッケージをインポート\\n    \"fmt\"\\n    // stringsパッケージをインポート\\n    \"strings\"\\n// インポートブロックを閉じる\\n)\\n\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でsに\"hello,world\"を代入\\n    s := \"hello,world\"\\n    // :=でpartsにstrings.Splitでsをカンマで分割した結果を代入\\n    parts := strings.Split(s, \",\")\\n    // partsのインデックス0を出力\\n    fmt.Println(parts[0])\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n\\n// import (でインポートブロックを開始\\nimport ___\\n    // fmtパッケージをインポート\\n    \\\"___\\\"\\n    // stringsパッケージをインポート\\n    \\\"___\\\"\\n// インポートブロックを閉じる\\n___\\n\\n// func mainでmain関数を定義\\nfunc ___() ___\\n    // :=でsに\"hello,world\"を代入\\n    ___ := \\\"___\\\"\\n    // :=でpartsにstrings.Splitでsをカンマで分割した結果を代入\\n    ___ := ___.___(___, \\\",\\\")\\n    // partsのインデックス0を出力\\n    ___.___(___[___])\\n// ブロックを閉じる\\n___",
+      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n\\n// import (でインポートブロックを開始\\nimport (\\n    // fmtパッケージをインポート\\n    \"fmt\"\\n    // stringsパッケージをインポート\\n    \"strings\"\\n// インポートブロックを閉じる\\n)\\n\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でsに\"hello,world\"を代入\\n    s := \"hello,world\"\\n    // :=でpartsにstrings.Splitでsをカンマで分割した結果を代入\\n    parts := strings.Split(s, \",\")\\n    // fmt.Printlnでpartsのインデックス0を出力\\n    fmt.Println(parts[0])\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n\\n// import (でインポートブロックを開始\\nimport ___\\n    // fmtパッケージをインポート\\n    \\\"___\\\"\\n    // stringsパッケージをインポート\\n    \\\"___\\\"\\n// インポートブロックを閉じる\\n___\\n\\n// func mainでmain関数を定義\\nfunc ___() ___\\n    // :=でsに\"hello,world\"を代入\\n    ___ := \\\"___\\\"\\n    // :=でpartsにstrings.Splitでsをカンマで分割した結果を代入\\n    ___ := ___.___(___, \\\",\\\")\\n    // fmt.Printlnでpartsのインデックス0を出力\\n    ___.___(___[___])\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// package mainでモジュールを宣言",
           "package main",
@@ -650,7 +650,7 @@ export const go4Data = {
           "    s := \"hello,world\"",
           "    // :=でpartsにstrings.Splitでsをカンマで分割した結果を代入",
           "    parts := strings.Split(s, \",\")",
-          "    // partsのインデックス0を出力",
+          "    // fmt.Printlnでpartsのインデックス0を出力",
           "    fmt.Println(parts[0])",
           "// ブロックを閉じる",
           "}"
@@ -707,7 +707,7 @@ export const go4Data = {
           "content": "# 数値から文字列\\n\\n```go\\ns := strconv.Itoa(123)  // \"123\"\\n```"
         }
       ],
-      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n\\n// import (でインポートブロックを開始\\nimport (\\n    // fmtパッケージをインポート\\n    \"fmt\"\\n    // strconvパッケージをインポート\\n    \"strconv\"\\n// インポートブロックを閉じる\\n)\\n\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でnumにstrconv.Atoiで\"42\"を整数変換した結果を代入\\n    num, _ := strconv.Atoi(\"42\")\\n    // numの2倍を出力\\n    fmt.Println(num * 2)\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n\\n// import (でインポートブロックを開始\\nimport ___\\n    // fmtパッケージをインポート\\n    \\\"___\\\"\\n    // strconvパッケージをインポート\\n    \\\"___\\\"\\n// インポートブロックを閉じる\\n___\\n\\n// func mainでmain関数を定義\\nfunc ___() ___\\n    // :=でnumにstrconv.Atoiで\"42\"を整数変換した結果を代入\\n    ___, _ := ___.___(\\\"\\\")\\n    // numの2倍を出力\\n    ___.___(___ * ___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// package mainでモジュールを宣言\\npackage main\\n\\n// import (でインポートブロックを開始\\nimport (\\n    // fmtパッケージをインポート\\n    \"fmt\"\\n    // strconvパッケージをインポート\\n    \"strconv\"\\n// インポートブロックを閉じる\\n)\\n\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でnumにstrconv.Atoiで\"42\"を整数変換した結果を代入\\n    num, _ := strconv.Atoi(\"42\")\\n    // fmt.Printlnでnumの2倍を出力\\n    fmt.Println(num * 2)\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n\\n// import (でインポートブロックを開始\\nimport ___\\n    // fmtパッケージをインポート\\n    \\\"___\\\"\\n    // strconvパッケージをインポート\\n    \\\"___\\\"\\n// インポートブロックを閉じる\\n___\\n\\n// func mainでmain関数を定義\\nfunc ___() ___\\n    // :=でnumにstrconv.Atoiで\"42\"を整数変換した結果を代入\\n    ___, _ := ___.___(\\\"\\\")\\n    // fmt.Printlnでnumの2倍を出力\\n    ___.___(___ * ___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// package mainでモジュールを宣言",
           "package main",
@@ -725,7 +725,7 @@ export const go4Data = {
           "func main() {",
           "    // :=でnumにstrconv.Atoiで\"42\"を整数変換した結果を代入",
           "    num, _ := strconv.Atoi(\"42\")",
-          "    // numの2倍を出力",
+          "    // fmt.Printlnでnumの2倍を出力",
           "    fmt.Println(num * 2)",
           "// ブロックを閉じる",
           "}"

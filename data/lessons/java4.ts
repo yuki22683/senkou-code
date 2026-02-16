@@ -170,7 +170,7 @@ export const javaData4 = {
           "content": "# 上限・下限の指定\\n\\nワイルドカードにも制限をつけられます。\\n\\n**上限を指定：extends**\\n```java\\nList<? extends Number>  // Numberか、その子クラス\\n// Integer, Double などはOK、StringはNG\\n```\\n\\n**下限を指定：super**\\n```java\\nList<? super Integer>  // Integerか、その親クラス\\n// Integer, Number, Object などがOK\\n```\\n\\n**覚え方：**\\n- extends → 「〜以下」（Numberから下）\\n- super → 「〜以上」（Integerから上）"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    // ? で任意の型を表すワイルドカード\\n    public static void printAll(List<?> list) {\\n        for (Object item : list) {\\n            // println で出力する\\n            System.out.println(item);\\n        }\\n    }\\n    public static void main(String[] args) {\\n        // 名前リスト（A、B）をnamesに代入\\n        List<String> names = Arrays.asList(\"A\", \"B\");\\n        // printAll関数をnamesを引数に呼び出す\\n        printAll(names);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // ? で任意の型を表すワイルドカード\\n    public static void ___(___<___> ___) {\\n        // forループ\\n        for (___ ___ : ___) {\\n            // println で出力する\\n            ___.___.___(___)\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 名前リスト（A、B）をnamesに代入\\n        ___<___> ___ = ___.___(\\\"___\\\", \\\"___\\\");\\n        // printAll関数をnamesを引数に呼び出す\\n        ___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    // ? で任意の型を表すワイルドカード\\n    public static void printAll(List<?> list) {\\n        for (Object item : list) {\\n            // Systemのoutのprintlnで出力する\\n            System.out.println(item);\\n        }\\n    }\\n    public static void main(String[] args) {\\n        // 名前リスト（A、B）をnamesに代入\\n        List<String> names = Arrays.asList(\"A\", \"B\");\\n        // printAll関数をnamesを引数に呼び出す\\n        printAll(names);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // ? で任意の型を表すワイルドカード\\n    public static void ___(___<___> ___) {\\n        // forループ\\n        for (___ ___ : ___) {\\n            // Systemのoutのprintlnで出力する\\n            ___.___.___(___)\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 名前リスト（A、B）をnamesに代入\\n        ___<___> ___ = ___.___(\\\"___\\\", \\\"___\\\");\\n        // printAll関数をnamesを引数に呼び出す\\n        ___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
@@ -178,7 +178,7 @@ export const javaData4 = {
           "    // ? で任意の型を表すワイルドカード",
           "    public static void printAll(List<?> list) {",
           "        for (Object item : list) {",
-          "            // println で出力する",
+          "            // Systemのoutのprintlnで出力する",
           "            System.out.println(item);",
           "        }",
           "    }",
@@ -353,7 +353,7 @@ export const javaData4 = {
           "content": "# Comparatorの作成方法\\n\\nいろいろな比較方法を簡単に作れます。\\n\\n**自然順序**\\n```java\\nComparator.naturalOrder()  // あいうえお順、数字なら小さい順\\n```\\n\\n**逆順**\\n```java\\nComparator.reverseOrder()  // 自然順序の逆\\n```\\n\\n**特定の値で比較**\\n```java\\nComparator.comparing(Person::getName)  // 名前で比較\\nComparator.comparing(Person::getAge)   // 年齢で比較\\n```"
         }
       ],
-      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 単語リスト（猫、a、elephant）をwordsに代入\\n        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));\\n        // comparing でプロパティを基準に比較する\\n        words.sort(Comparator.comparing(String::length));\\n        // println で出力する\\n        System.out.println(words);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 単語リスト（猫、a、elephant）をwordsに代入\\n        ___<___> ___ = new ___<>(___.___(\\\"___\\\", \\\"___\\\", \\\"___\\\"));\\n        // comparing でプロパティを基準に比較する\\n        ___.___(___.___(___::___));\\n        // println で出力する\\n        ___.___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "import java.util.*;\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // 単語リスト（猫、a、elephant）をwordsに代入\\n        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));\\n        // comparing でプロパティを基準に比較する\\n        words.sort(Comparator.comparing(String::length));\\n        // Systemのoutのprintlnで出力する\\n        System.out.println(words);\\n    }\\n}", "holeyCode": "// ライブラリを読み込む\\nimport ___.___.___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // 単語リスト（猫、a、elephant）をwordsに代入\\n        ___<___> ___ = new ___<>(___.___(\\\"___\\\", \\\"___\\\", \\\"___\\\"));\\n        // comparing でプロパティを基準に比較する\\n        ___.___(___.___(___::___));\\n        // Systemのoutのprintlnで出力する\\n        ___.___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "import java.util.*;",
           "",
@@ -363,7 +363,7 @@ export const javaData4 = {
           "        List<String> words = new ArrayList<>(Arrays.asList(\"猫\", \"a\", \"elephant\"));",
           "        // comparing でプロパティを基準に比較する",
           "        words.sort(Comparator.comparing(String::length));",
-          "        // println で出力する",
+          "        // Systemのoutのprintlnで出力する",
           "        System.out.println(words);",
           "    }",
           "}"
@@ -384,7 +384,7 @@ export const javaData4 = {
         ],
         "candidates": {
           "keywords": [],
-          "others": ["java", "util", "*", "Main", "main", "String", "args", "List", "words", "new", "ArrayList", "Arrays", "asList", "猫", "a", "elephant", "sort", "Comparator", "comparing", "length", "System", "out", "println", ";", "}", "", "*;", "public class Main {", "rdsに[\"猫\",", "ロパティを基準に比較する", "// println で出力する", "リスト（猫、a、elephant）をwordsに代入"]
+          "others": ["java", "util", "*", "Main", "main", "String", "args", "List", "words", "new", "ArrayList", "Arrays", "asList", "猫", "a", "elephant", "sort", "Comparator", "comparing", "length", "System", "out", "println", ";", "}", "", "*;", "public class Main {", "rdsに[\"猫\",", "ロパティを基準に比較する", "// Systemのoutのprintlnで出力する", "リスト（猫、a、elephant）をwordsに代入"]
         },
         "testCases": [
           {
@@ -479,7 +479,7 @@ export const javaData4 = {
           "content": "# 型安全で明確\\n\\nEnumを使うと、間違った値を入れることができなくなります。\\n\\n**switch文で使える**\\n```java\\nswitch (color) {\\n    case RED: System.out.println(\"赤\"); break;\\n    case GREEN: System.out.println(\"緑\"); break;\\n    case BLUE: System.out.println(\"青\"); break;\\n}\\n```\\n\\n**全ての値を取得**\\n```java\\nColor.values()  // [RED, GREEN, BLUE]\\n```\\n\\n**メリット：** 「PURPRE」のようなタイプミスがあるとエラーになるので、間違いを防げます！"
         }
       ],
-      "correctCode": "// Day列挙型を定義\\nenum Day {\\n    MON, TUE, WED, THU, FRI, SAT, SUN\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // DayのMON列挙値をtodayに代入\\n        Day today = Day.MON;\\n        // println で出力する\\n        System.out.println(today);\\n    }\\n}", "holeyCode": "// Day列挙型を定義\\nenum ___ {\\n    // 曜日の列挙値\\n    ___, ___, ___, ___, ___, ___, ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // DayのMON列挙値をtodayに代入\\n        ___ ___ = ___.___;\\n        // println で出力する\\n        ___.___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// Day列挙型を定義\\nenum Day {\\n    MON, TUE, WED, THU, FRI, SAT, SUN\\n}\\n\\npublic class Main {\\n    public static void main(String[] args) {\\n        // DayのMON列挙値をtodayに代入\\n        Day today = Day.MON;\\n        // Systemのoutのprintlnで出力する\\n        System.out.println(today);\\n    }\\n}", "holeyCode": "// Day列挙型を定義\\nenum ___ {\\n    // 曜日の列挙値\\n    ___, ___, ___, ___, ___, ___, ___\\n// ブロックを閉じる\\n___\\n___\\n// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // DayのMON列挙値をtodayに代入\\n        ___ ___ = ___.___;\\n        // Systemのoutのprintlnで出力する\\n        ___.___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Day列挙型を定義",
           "enum Day {",
@@ -490,7 +490,7 @@ export const javaData4 = {
           "    public static void main(String[] args) {",
           "        // DayのMON列挙値をtodayに代入",
           "        Day today = Day.MON;",
-          "        // println で出力する",
+          "        // Systemのoutのprintlnで出力する",
           "        System.out.println(today);",
           "    }",
           "}"

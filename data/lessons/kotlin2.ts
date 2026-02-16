@@ -53,14 +53,14 @@ export const kotlin2Data = {
           "content": "# 目標\\n\\nnullable型の変数を作り、nullチェックしてから表示しましょう。\\n\\n1. `Int?` 型の変数 `num` に 42 を入れる\\n2. `if` で null でないかチェック\\n3. null でなければ表示する"
         }
       ],
-      "correctCode": "// ? で nullable 型にする\\nvar num: Int? = 42\\n// null チェックをする\\nif (num != null) {\\n    // num を出力する\\n    println(num)\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// ? で nullable 型にする\\nvar ___: ___? = ___\\n// null チェックをする\\nif (___ != ___) ___\\n    // num を出力する\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// ? で nullable 型にする\\nvar num: Int? = 42\\n// null チェックをする\\nif (num != null) {\\n    // printlnでnumを出力\\n    println(num)\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// ? で nullable 型にする\\nvar ___: ___? = ___\\n// null チェックをする\\nif (___ != ___) ___\\n    // printlnでnumを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// ? で nullable 型にする",
           "var num: Int? = 42",
           "// null チェックをする",
           "if (num != null) {",
-          "    // num を出力する",
+          "    // printlnでnumを出力",
           "    println(num)",
           "// ブロックを閉じる",
           "}"

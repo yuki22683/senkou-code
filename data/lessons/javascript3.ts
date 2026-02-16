@@ -37,16 +37,16 @@ export const javascriptData3 = {
           "content": "# 約束が届いたときの処理\\n\\n**then（ゼン）** は「約束が届いたらこれをする」という意味です。\\n\\n**書き方：**\\n- `.then()` ：成功したときの処理\\n- `.catch()` ：失敗したときの処理\\n\\n**コード例：**\\n```javascript\\npromise\\n  .then(result => console.log(result))   // 成功！\\n  .catch(error => console.log(error));   // エラー時\\n```\\n\\n**ピザの例でいうと：**\\n- `.then()` ：ピザが届いたら食べる\\n- `.catch()` ：届かなかったらお店に電話する"
         }
       ],
-      "correctCode": "// Promise コンストラクタで作成\\nconst p = new Promise((resolve) => {\\n  // 'こんにちは Promise!' で解決\\n  resolve('こんにちは Promise!');\\n// 文を実行\\n});\\n\\n// then でコールバックを登録\\np.then(msg => console.log(msg));",
-      "holeyCode": "// Promise コンストラクタで作成\\n___ ___ = ___ ___((___) => {\\n  // 'こんにちは Promise!' で解決\\n  ___('___');\\n// 文を実行\\n___\\n\n// then でコールバックを登録\\n___.___(___ => ___.___(___));", "correctLines": [
-          "// Promise コンストラクタで作成",
+      "correctCode": "// pにnew Promiseでresolveを引数にPromiseを作成\\nconst p = new Promise((resolve) => {\\n  // resolveで'こんにちは Promise!'を渡して解決\\n  resolve('こんにちは Promise!');\\n// Promiseの処理を閉じる\\n});\\n\\n// pのthenメソッドでmsgをconsoleのlogで表示\\np.then(msg => console.log(msg));",
+      "holeyCode": "// pにnew Promiseでresolveを引数にPromiseを作成\\n___ ___ = ___ ___((___) => {\\n  // resolveで'こんにちは Promise!'を渡して解決\\n  ___('___');\\n// Promiseの処理を閉じる\\n___\\n\\n// pのthenメソッドでmsgをconsoleのlogで表示\\n___.___(___ => ___.___(___));", "correctLines": [
+          "// pにnew Promiseでresolveを引数にPromiseを作成",
           "const p = new Promise((resolve) => {",
-          "  // 'こんにちは Promise!' で解決",
+          "  // resolveで'こんにちは Promise!'を渡して解決",
           "  resolve('こんにちは Promise!');",
-          "// 文を実行",
+          "// Promiseの処理を閉じる",
           "});",
           "",
-          "// then でコールバックを登録",
+          "// pのthenメソッドでmsgをconsoleのlogで表示",
           "p.then(msg => console.log(msg));"
         ],
       "lineHints": [
@@ -90,12 +90,12 @@ export const javascriptData3 = {
           "content": "# 同じ形式で扱いたいとき\\n\\n**こんなときに便利：**\\nキャッシュ（保存済みデータ）があるときはすぐ返し、ないときはサーバーから取得する、という場合に両方を Promise として統一できます。\\n\\n**コード例：**\\n```javascript\\nfunction getData(useCache) {\\n  if (useCache) {\\n    // すぐに返す\\n    return Promise.resolve(cachedData);\\n  }\\n  // サーバーから取得（時間かかる）\\n  return fetch('/api/data');\\n}\\n```\\n\\n**ポイント：**\\n両方とも Promise なので、同じように `.then()` で受け取れる！"
         }
       ],
-      "correctCode": "// resolve で即座に解決するPromise\\nPromise.resolve(42)\\n  // then で結果を処理\\n  .then(n => console.log(n * 2));",
-      "holeyCode": "// resolve で即座に解決するPromise\\n___.___(___) \\n  // then で結果を処理\\n  .___(___ => ___.___(___*___));",
+      "correctCode": "// Promiseのresolveメソッドで42を即座に解決\\nPromise.resolve(42)\\n  // thenメソッドでnを2倍にしてconsoleのlogで表示\\n  .then(n => console.log(n * 2));",
+      "holeyCode": "// Promiseのresolveメソッドで42を即座に解決\\n___.___(___) \\n  // thenメソッドでnを2倍にしてconsoleのlogで表示\\n  .___(___ => ___.___(___*___));",
       "correctLines": [
-          "// resolve で即座に解決するPromise",
+          "// Promiseのresolveメソッドで42を即座に解決",
           "Promise.resolve(42)",
-          "  // then で結果を処理",
+          "  // thenメソッドでnを2倍にしてconsoleのlogで表示",
           "  .then(n => console.log(n * 2));"
         ],
       "lineHints": [
@@ -140,16 +140,16 @@ export const javascriptData3 = {
           "content": "# 戻り値は自動で Promise になる！\\n\\n普通に値を `return` するだけで、Promise として扱えます。\\n\\n**コード例：**\\n```javascript\\nasync function getData() {\\n  return { name: 'Alice' };\\n}\\n\\n// 普通のオブジェクトを返しているけど...\\n// Promise として扱える！\\ngetData().then(data => console.log(data.name));\\n```\\n**実行結果：**\\n```\\nAlice\\n```"
         }
       ],
-      "correctCode": "// async キーワードで非同期関数を定義\\nasync function getMessage() {\\n  // return で値を返す\\n  return '非同期成功！';\\n}\\n\\n// then でメッセージを出力\\ngetMessage().then(msg => console.log(msg));",
-      "holeyCode": "// async キーワードで非同期関数を定義\\n___ ___ ___() {\\n  // return で値を返す\\n  ___ '___';\\n// ブロックを閉じる\\n___\\n___\\n// then でメッセージを出力\\n___().___(___ => ___.___(___));",
+      "correctCode": "// asyncキーワードでgetMessage関数を定義\\nasync function getMessage() {\\n  // returnで'非同期成功！'を返す\\n  return '非同期成功！';\\n}\\n\\n// getMessageのthenメソッドでmsgをconsoleのlogで表示\\ngetMessage().then(msg => console.log(msg));",
+      "holeyCode": "// asyncキーワードでgetMessage関数を定義\\n___ ___ ___() {\\n  // returnで'非同期成功！'を返す\\n  ___ '___';\\n// ブロックを閉じる\\n___\\n___\\n// getMessageのthenメソッドでmsgをconsoleのlogで表示\\n___().___(___ => ___.___(___));",
       "correctLines": [
-          "// async キーワードで非同期関数を定義",
+          "// asyncキーワードでgetMessage関数を定義",
           "async function getMessage() {",
-          "  // return で値を返す",
+          "  // returnで'非同期成功！'を返す",
           "  return '非同期成功！';",
           "}",
           "",
-          "// then でメッセージを出力",
+          "// getMessageのthenメソッドでmsgをconsoleのlogで表示",
           "getMessage().then(msg => console.log(msg));"
         ],
       "lineHints": [
@@ -191,14 +191,14 @@ export const javascriptData3 = {
           "content": "# async 関数の中でしか使えない！\\n\\n**重要なルール：**\\n`await` は必ず `async` 関数の中で使います。\\n\\n**なぜ？**\\n「待つ」という行為は、約束を返す関数の中でないとできないからです。\\n\\n**コード例：**\\n```javascript\\nasync function fetchData() {\\n  // 1. データを取得（待つ）\\n  const data = await fetch('/api');\\n  // 2. JSONに変換（待つ）\\n  const json = await data.json();\\n  // 3. 結果を返す\\n  return json;\\n}\\n```\\n\\n**ポイント：**\\n`await` を使うと、上から順番に実行されるので読みやすい！"
         }
       ],
-      "correctCode": "// awaitでPromiseを待つasync main()関数を定義\\nasync function main() {\\n  // await でPromiseの結果を待つ\\n  const value = await Promise.resolve(100);\\n  // console.log で出力\\n  console.log(value);\\n}\\n\\n// main関数を呼び出す\\nmain();",
-      "holeyCode": "// awaitでPromiseを待つasync main()関数を定義\\n___ ___ ___() {\\n  // await でPromiseの結果を待つ\\n  ___ ___ = ___ ___.___(___);\\n  // console.log で出力\\n  ___.___(___);\\n// ブロックを閉じる\\n___\\n___\\n// main関数を呼び出す\\n___();",
+      "correctCode": "// asyncキーワードでmain関数を定義\\nasync function main() {\\n  // awaitでPromiseのresolveメソッド（引数100）の結果をvalueに代入\\n  const value = await Promise.resolve(100);\\n  // consoleのlogメソッドでvalueを表示\\n  console.log(value);\\n}\\n\\n// main関数を呼び出す\\nmain();",
+      "holeyCode": "// asyncキーワードでmain関数を定義\\n___ ___ ___() {\\n  // awaitでPromiseのresolveメソッド（引数100）の結果をvalueに代入\\n  ___ ___ = ___ ___.___(___);\\n  // consoleのlogメソッドでvalueを表示\\n  ___.___(___);\\n// ブロックを閉じる\\n___\\n___\\n// main関数を呼び出す\\n___();",
       "correctLines": [
-          "// awaitでPromiseを待つasync main()関数を定義",
+          "// asyncキーワードでmain関数を定義",
           "async function main() {",
-          "  // await でPromiseの結果を待つ",
+          "  // awaitでPromiseのresolveメソッド（引数100）の結果をvalueに代入",
           "  const value = await Promise.resolve(100);",
-          "  // console.log で出力",
+          "  // consoleのlogメソッドでvalueを表示",
           "  console.log(value);",
           "}",
           "",
@@ -247,16 +247,16 @@ export const javascriptData3 = {
           "content": "# 同時に実行すると速い！\\n\\n**順番に実行 vs 同時に実行：**\\n- 順番：3秒 + 3秒 = 6秒かかる\\n- 同時：3秒で両方終わる！\\n\\n**コード例：**\\n```javascript\\nasync function fetchAll() {\\n  // 2つのリクエストを同時に実行！\\n  const [users, posts] = await Promise.all([\\n    fetch('/users'),\\n    fetch('/posts')\\n  ]);\\n}\\n```\\n\\n**ポイント：**\\n互いに関係のない処理は、`Promise.all` で同時に実行すると時間短縮できます。"
         }
       ],
-      "correctCode": "// p1 = 10 で解決するPromiseを作成\\nconst p1 = Promise.resolve(10);\\n// p2 = 20 で解決するPromiseを作成\\nconst p2 = Promise.resolve(20);\\n// all で全てのPromiseを待つ\\nPromise.all([p1, p2]).then(nums => {\\n  // 1番目と2番目の値を足して合計を出力\\n  console.log(nums[0] + nums[1]);\\n});",
-      "holeyCode": "// p1 = 10 で解決するPromiseを作成\\n___ ___ = ___.___(___);\\n// p2 = 20 で解決するPromiseを作成\\n___ ___ = ___.___(___);\\n// all で全てのPromiseを待つ\\n___.___([___, ___]).___(___ => {\\n  // 1番目と2番目の値を足して合計を出力\\n  ___.___(___[___] + ___[___]);\\n// 文を実行\\n___);",
+      "correctCode": "// p1にPromiseのresolveメソッド（引数10）で即時解決を代入\\nconst p1 = Promise.resolve(10);\\n// p2にPromiseのresolveメソッド（引数20）で即時解決を代入\\nconst p2 = Promise.resolve(20);\\n// Promise.allでp1とp2を待ち、thenでnumsを受け取る\\nPromise.all([p1, p2]).then(nums => {\\n  // consoleのlogメソッドでnumsのインデックス0と1を足して表示\\n  console.log(nums[0] + nums[1]);\\n});",
+      "holeyCode": "// p1にPromiseのresolveメソッド（引数10）で即時解決を代入\\n___ ___ = ___.___(___);\\n// p2にPromiseのresolveメソッド（引数20）で即時解決を代入\\n___ ___ = ___.___(___);\\n// Promise.allでp1とp2を待ち、thenでnumsを受け取る\\n___.___([___, ___]).___(___ => {\\n  // consoleのlogメソッドでnumsのインデックス0と1を足して表示\\n  ___.___(___[___] + ___[___]);\\n// 文を実行\\n___);",
       "correctLines": [
-          "// p1 = 10 で解決するPromiseを作成",
+          "// p1にPromiseのresolveメソッド（引数10）で即時解決を代入",
           "const p1 = Promise.resolve(10);",
-          "// p2 = 20 で解決するPromiseを作成",
+          "// p2にPromiseのresolveメソッド（引数20）で即時解決を代入",
           "const p2 = Promise.resolve(20);",
-          "// all で全てのPromiseを待つ",
+          "// Promise.allでp1とp2を待ち、thenでnumsを受け取る",
           "Promise.all([p1, p2]).then(nums => {",
-          "  // 1番目と2番目の値を足して合計を出力",
+          "  // consoleのlogメソッドでnumsのインデックス0と1を足して表示",
           "  console.log(nums[0] + nums[1]);",
           "});"
         ],
@@ -301,25 +301,26 @@ export const javascriptData3 = {
           "content": "# new で実際のオブジェクトを作る\\n\\n設計図から作った実際のオブジェクトを **インスタンス** と呼びます。\\n\\n**身近なたとえ：**\\n- class（設計図）= たい焼きの型\\n- インスタンス = 実際のたい焼き\\n\\n**コード例：**\\n```javascript\\n// new で Person クラスからインスタンスを作る\\nconst alice = new Person('Alice');\\nalice.greet();\\n```\\n**実行結果：**\\n```\\nHello, Alice!\\n```\\n\\n**ポイント：**\\n`new` をつけて class を呼び出すと、インスタンスが作られます。"
         }
       ],
-      "correctCode": "// Dogクラスを定義\\nclass Dog {\\n  // constructorでnameを初期化\\n  constructor(name) {\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  bark() {\\n    // テンプレートリテラルで出力\\n    console.log(`${this.name}: ワン！`);\\n  }\\n}\\n\\n// dogにDogインスタンス（引数'ポチ'）を代入\\nconst dog = new Dog('ポチ');\\n// barkメソッドを呼び出し\\ndog.bark();",
-      "holeyCode": "// Dogクラスを定義\\n___ ___ {\\n  // constructorでnameを初期化\\n  ___(___) {\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // ブロックを開始\\n  ___() {\\n    // テンプレートリテラルで出力\\n    ___.___(`${___.___}___`);\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// dogにDogインスタンス（引数'ポチ'）を代入\\n___ ___ = ___ ___(___);\\n// barkメソッドを呼び出し\\n___.___();",
+      "correctCode": "// Dogクラスを定義\\nclass Dog {\\n  // constructorメソッドでnameを引数に初期化\\n  constructor(name) {\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  // barkメソッドを定義\\n  bark() {\\n    // consoleのlogメソッドでthis.nameと': ワン！'を表示\\n    console.log(`${this.name}: ワン！`);\\n  }\\n}\\n\\n// dogにnew Dogで引数'ポチ'のインスタンスを代入\\nconst dog = new Dog('ポチ');\\n// dogのbarkメソッドを呼び出す\\ndog.bark();",
+      "holeyCode": "// Dogクラスを定義\\n___ ___ {\\n  // constructorメソッドでnameを引数に初期化\\n  ___(___) {\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // barkメソッドを定義\\n  ___() {\\n    // consoleのlogメソッドでthis.nameと': ワン！'を表示\\n    ___.___(`${___.___}___`);\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// dogにnew Dogで引数'ポチ'のインスタンスを代入\\n___ ___ = ___ ___(___);\\n// dogのbarkメソッドを呼び出す\\n___.___();",
       "correctLines": [
           "// Dogクラスを定義",
           "class Dog {",
-          "  // constructorでnameを初期化",
+          "  // constructorメソッドでnameを引数に初期化",
           "  constructor(name) {",
           "    // this.nameにnameを代入",
           "    this.name = name;",
           "  }",
+          "  // barkメソッドを定義",
           "  bark() {",
-          "    // テンプレートリテラルで出力",
+          "    // consoleのlogメソッドでthis.nameと': ワン！'を表示",
           "    console.log(`${this.name}: ワン！`);",
           "  }",
           "}",
           "",
-          "// dogにDogインスタンス（引数'ポチ'）を代入",
+          "// dogにnew Dogで引数'ポチ'のインスタンスを代入",
           "const dog = new Dog('ポチ');",
-          "// barkメソッドを呼び出し",
+          "// dogのbarkメソッドを呼び出す",
           "dog.bark();"
         ],
       "lineHints": [
@@ -370,24 +371,24 @@ export const javascriptData3 = {
           "content": "# 親クラスの処理を呼び出す\\n\\n**super** は「親クラス」のことを指します。親の constructor やメソッドを呼び出せます。\\n\\n**身近なたとえ：**\\n「お母さん（親クラス）がやってくれることは任せて、自分（子クラス）は追加でやる」というイメージです。\\n\\n**コード例：**\\n```javascript\\nclass Cat extends Animal {\\n  constructor(name) {\\n    super();  // 親の constructor を呼ぶ\\n    this.name = name;  // 自分だけの設定を追加\\n  }\\n}\\n```\\n\\n**ポイント：**\\n子クラスの constructor では、最初に `super()` を呼ぶ必要があります！"
         }
       ],
-      "correctCode": "// 親クラスAnimalを定義\\nclass Animal {\\n  // speakメソッドを定義\\n  speak() { console.log('...'); }\\n}\\n\\n// CatクラスがAnimalを継承\\nclass Cat extends Animal {\\n  // speakメソッドをオーバーライド\\n  speak() { console.log('ニャー！'); }\\n}\\n\\n// catにCatインスタンスを代入\\nconst cat = new Cat();\\n// speakメソッドを呼び出す\\ncat.speak();",
-      "holeyCode": "// 親クラスAnimalを定義\\n___ ___ {\\n  // speakメソッドを定義\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// CatクラスがAnimalを継承\\n___ ___ ___ ___ {\\n  // speakメソッドをオーバーライド\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// catにCatインスタンスを代入\\n___ ___ = ___ ___();\\n// speakメソッドを呼び出す\\n___.___();",
+      "correctCode": "// 親クラスAnimalを定義\\nclass Animal {\\n  // speakメソッドでconsoleのlogで'...'を表示\\n  speak() { console.log('...'); }\\n}\\n\\n// CatクラスがextendsでAnimalを継承\\nclass Cat extends Animal {\\n  // speakメソッドをオーバーライドしてconsoleのlogで'ニャー！'を表示\\n  speak() { console.log('ニャー！'); }\\n}\\n\\n// catにnew Catのインスタンスを代入\\nconst cat = new Cat();\\n// catのspeakメソッドを呼び出す\\ncat.speak();",
+      "holeyCode": "// 親クラスAnimalを定義\\n___ ___ {\\n  // speakメソッドでconsoleのlogで'...'を表示\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// CatクラスがextendsでAnimalを継承\\n___ ___ ___ ___ {\\n  // speakメソッドをオーバーライドしてconsoleのlogで'ニャー！'を表示\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// catにnew Catのインスタンスを代入\\n___ ___ = ___ ___();\\n// catのspeakメソッドを呼び出す\\n___.___();",
       "correctLines": [
           "// 親クラスAnimalを定義",
           "class Animal {",
-          "  // speakメソッドを定義",
+          "  // speakメソッドでconsoleのlogで'...'を表示",
           "  speak() { console.log('...'); }",
           "}",
           "",
-          "// CatクラスがAnimalを継承",
+          "// CatクラスがextendsでAnimalを継承",
           "class Cat extends Animal {",
-          "  // speakメソッドをオーバーライド",
+          "  // speakメソッドをオーバーライドしてconsoleのlogで'ニャー！'を表示",
           "  speak() { console.log('ニャー！'); }",
           "}",
           "",
-          "// catにCatインスタンスを代入",
+          "// catにnew Catのインスタンスを代入",
           "const cat = new Cat();",
-          "// speakメソッドを呼び出す",
+          "// catのspeakメソッドを呼び出す",
           "cat.speak();"
         ],
       "lineHints": [
@@ -439,19 +440,19 @@ export const javascriptData3 = {
           "content": "# ユーティリティ関数として便利\\n\\n**ユーティリティ関数** = よく使う便利な機能をまとめた関数\\n\\n**こんなときに使う：**\\n- 計算ツール（足し算、掛け算など）\\n- 日付の処理（今日の日付を取得など）\\n- データの変換\\n\\n**コード例：**\\n```javascript\\nclass DateUtil {\\n  static today() {\\n    return new Date().toLocaleDateString();\\n  }\\n}\\n\\n// 今日の日付を取得\\nconsole.log(DateUtil.today());\\n```\\n\\n**ポイント：**\\nインスタンスごとに違う値を持つ必要がない処理に使います。"
         }
       ],
-      "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n  // static multiplyメソッドを定義\\n  static multiply(a, b) {\\n    // 2つの数を掛けた結果を返す\\n    return a * b;\\n  }\\n}\\n\\n// 3と4を掛けた結果を出力\\nconsole.log(Calculator.multiply(3, 4));",
-      "holeyCode": "// Calculatorクラスを定義\\n___ ___ {\\n  // static multiplyメソッドを定義\\n  ___ ___(___, ___) {\\n    // 2つの数を掛けた結果を返す\\n    ___ ___ * ___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// 3と4を掛けた結果を出力\\n___.___(___.___(___,___));",
+      "correctCode": "// Calculatorクラスを定義\\nclass Calculator {\\n  // staticキーワードでmultiplyメソッドを定義（引数a、b）\\n  static multiply(a, b) {\\n    // returnでaとbを掛けた結果を返す\\n    return a * b;\\n  }\\n}\\n\\n// consoleのlogでCalculatorのmultiplyメソッド（引数3、4）の結果を表示\\nconsole.log(Calculator.multiply(3, 4));",
+      "holeyCode": "// Calculatorクラスを定義\\n___ ___ {\\n  // staticキーワードでmultiplyメソッドを定義（引数a、b）\\n  ___ ___(___, ___) {\\n    // returnでaとbを掛けた結果を返す\\n    ___ ___ * ___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// consoleのlogでCalculatorのmultiplyメソッド（引数3、4）の結果を表示\\n___.___(___.___(___,___));",
       "correctLines": [
           "// Calculatorクラスを定義",
           "class Calculator {",
-          "  // static multiplyメソッドを定義",
+          "  // staticキーワードでmultiplyメソッドを定義（引数a、b）",
           "  static multiply(a, b) {",
-          "    // 2つの数を掛けた結果を返す",
+          "    // returnでaとbを掛けた結果を返す",
           "    return a * b;",
           "  }",
           "}",
           "",
-          "// 3と4を掛けた結果を出力",
+          "// consoleのlogでCalculatorのmultiplyメソッド（引数3、4）の結果を表示",
           "console.log(Calculator.multiply(3, 4));"
         ],
       "lineHints": [

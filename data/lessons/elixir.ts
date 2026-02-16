@@ -49,10 +49,10 @@ export const elixirData = {
           "content": "# メッセージを表示します\\n\\n画面に文字を出したいときは、`IO.puts` と入力して、そのあとに表示したい文字を続けます。\\n\\n**コード例：**\\n```elixir\\nIO.puts \\\"Hello, Elixir!\\\"\\n```"
         }
       ],
-      "correctCode": "# こんにちは, Elixir!を表示\\nIO.puts \"こんにちは, Elixir!\"",
-      "holeyCode": "# こんにちは, Elixir!を表示\\n___.___ \"___\"",
+      "correctCode": "# IO.putsでこんにちは, Elixir!を表示\\nIO.puts \"こんにちは, Elixir!\"",
+      "holeyCode": "# IO.putsでこんにちは, Elixir!を表示\\n___.___ \"___\"",
       "correctLines": [
-          "# こんにちは, Elixir!を表示",
+          "# IO.putsでこんにちは, Elixir!を表示",
           "IO.puts \"こんにちは, Elixir!\""
         ],
       "lineHints": [

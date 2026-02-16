@@ -691,7 +691,7 @@ export const cpp4Data = {
           "content": "# noexcept をつけると何が良いの？\\n\\n`noexcept` には2つの大きなメリットがあります。\\n\\n**メリット1: プログラムが速くなる**\\n```cpp\\nint add(int a, int b) noexcept {\\n    return a + b;\\n}\\n// コンパイラが「例外処理のコード」を省略できる → 速い！\\n```\\n\\n**メリット2: ムーブが安全に使える**\\n```cpp\\nclass MyClass {\\npublic:\\n    // noexcept をつけると、vectorなどで効率的に使われる\\n    MyClass(MyClass&&) noexcept = default;\\n};\\n```\\n\\n**身近な例え：**\\nレストランで「この料理はアレルギー物質を含みません」と保証されていれば、安心して注文できますよね。`noexcept` も同じで、「エラーは起きません」と保証することで、周りのコードが安心して使えます。\\n\\n**使いどころ：**\\n- 単純な計算（足し算、掛け算など）\\n- ムーブコンストラクタ、ムーブ代入演算子"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int add(int a, int b) noexceptでadd関数を定義（例外を投げない）\\nint add(int a, int b) noexcept {\\n    // returnでaとbの和を返す\\n    return a + b;\\n// add関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // coutでadd(10, 20)の結果（30）を出力\\n    cout << add(10, 20) << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n\n// int add(int a, int b) noexceptでadd関数を定義（例外を投げない）\\n___ ___(___) ___ {\\n    // returnでaとbの和を返す\\n    ___ ___ + ___;\\n// add関数を閉じる\\n___\\n\n// int mainでmain関数を定義\\n___ ___() {\\n    // coutでadd(10, 20)の結果（30）を出力\\n    ___ << ___(___) << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___", "correctLines": [
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int add(int a, int b) noexceptでadd関数を定義（例外を投げない）\\nint add(int a, int b) noexcept {\\n    // returnでaとbの和を返す\\n    return a + b;\\n// add関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // coutでadd関数（第1引数に10、第2引数に20）の結果（30）を出力\\n    cout << add(10, 20) << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n\n// int add(int a, int b) noexceptでadd関数を定義（例外を投げない）\\n___ ___(___) ___ {\\n    // returnでaとbの和を返す\\n    ___ ___ + ___;\\n// add関数を閉じる\\n___\\n\n// int mainでmain関数を定義\\n___ ___() {\\n    // coutでadd関数（第1引数に10、第2引数に20）の結果（30）を出力\\n    ___ << ___(___) << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___", "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
           "// using namespace stdで標準名前空間を使用",
@@ -706,7 +706,7 @@ export const cpp4Data = {
           "",
           "// int mainでmain関数を定義",
           "int main() {",
-          "    // coutでadd(10, 20)の結果（30）を出力",
+          "    // coutでadd関数（第1引数に10、第2引数に20）の結果（30）を出力",
           "    cout << add(10, 20) << endl;",
           "    // return 0で正常終了を返す",
           "    return 0;",

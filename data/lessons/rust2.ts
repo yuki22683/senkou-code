@@ -97,11 +97,11 @@ export const rust2Data = {
           "content": "# 関数に借りてもらう\\n\\n関数にデータを渡すとき、`&` をつけると「借りる」形になります。元の変数はそのまま使い続けられます。\\n\\n**コード例：**\\n```rust\\nfn calc_len(s: &String) -> usize {\\n    s.len()  // 長さを返す\\n}\\n\\nfn main() {\\n    let text = String::from(\"hello\");\\n    let len = calc_len(&text);  // textを貸す\\n    // text はまだ使える！\\n    println!(\"{}の長さは{}\", text, len);\\n}\\n```\\n\\n`&String` は「Stringを借りる」という意味です。"
         }
       ],
-      "correctCode": "// fnでprint_len関数を定義（引数s: &String）\\nfn print_len(s: &String) {\\n    // sの長さを出力\\n    println!(\"{}\", s.len());\\n}\\nfn main() {\\n    // letとString::fromでtextに文字列を作成\\n    let text = String::from(\"こんにちは\");\\n    // &でtextの参照をprint_lenに渡す\\n    print_len(&text);\\n}", "holeyCode": "// fnでprint_len関数を定義（引数s: &String）\\nfn ___(___: &___) {\\n    // sの長さを出力\\n    ___!(\\\"{}\\\", ___.___());\\n// ブロックを閉じる\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // letとString::fromでtextに文字列を作成\\n    let ___ = ___::___(\\\"こんにちは\\\");\\n    // &でtextの参照をprint_lenに渡す\\n    ___(&___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fnでprint_len関数を定義（引数s: &String）\\nfn print_len(s: &String) {\\n    // println!でsの長さを出力\\n    println!(\"{}\", s.len());\\n}\\nfn main() {\\n    // letとString::fromでtextに文字列を作成\\n    let text = String::from(\"こんにちは\");\\n    // &でtextの参照をprint_lenに渡す\\n    print_len(&text);\\n}", "holeyCode": "// fnでprint_len関数を定義（引数s: &String）\\nfn ___(___: &___) {\\n    // println!でsの長さを出力\\n    ___!(\\\"{}\\\", ___.___());\\n// ブロックを閉じる\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // letとString::fromでtextに文字列を作成\\n    let ___ = ___::___(\\\"こんにちは\\\");\\n    // &でtextの参照をprint_lenに渡す\\n    ___(&___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// fnでprint_len関数を定義（引数s: &String）",
           "fn print_len(s: &String) {",
-          "    // sの長さを出力",
+          "    // println!でsの長さを出力",
           "    println!(\"{}\", s.len());",
           "}",
           "fn main() {",
@@ -379,14 +379,14 @@ export const rust2Data = {
           "content": "# match で安全に取り出す\\n\\n`match` を使って「ある場合」と「ない場合」で処理を分けます。\\n\\n**コード例：**\\n```rust\\nlet x: Option<i32> = Some(5);  // 値あり\\n\\nmatch x {\\n    Some(n) => println!(\"値は{}です\", n),  // 5\\n    None => println!(\"値がありません\"),\\n}\\n```\\n\\n**なぜ安全？**\\n- `null` のように「あるつもりでアクセスしたら無かった」エラーが起きない\\n- 「ない場合」の処理を書かないとコンパイルエラーになる\\n- 強制的に両方のケースを考えることになる！"
         }
       ],
-      "correctCode": "fn main() {\\n    // letでvalにSome(42)を代入（Option<i32>型）\\n    let val: Option<i32> = Some(42);\\n    // matchでvalをパターンマッチ\\n    match val {\\n        // Some(n)ならnを出力\\n        Some(n) => println!(\"{}\", n),\\n        // Noneなら\"none\"を出力\\n        None => println!(\"none\"),\\n    }\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___() {\\n    // letでvalにSome(42)を代入（Option<i32>型）\\n    let ___: ___<___> = ___(___);\\n    // matchでvalをパターンマッチ\\n    match ___ {\\n        // Some(n)ならnを出力\\n        ___(___) => ___!(\\\"___\\\", ___),\\n        // Noneなら\"none\"を出力\\n        ___ => ___!(\\\"___\\\"),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "fn main() {\\n    // letでvalにSome値（中身42）を代入（Option<i32>型）\\n    let val: Option<i32> = Some(42);\\n    // matchでvalをパターンマッチ\\n    match val {\\n        // Someパターン（変数n）ならnを出力\\n        Some(n) => println!(\"{}\", n),\\n        // Noneなら\"none\"を出力\\n        None => println!(\"none\"),\\n    }\\n}", "holeyCode": "// fnでmain関数を定義\\nfn ___() {\\n    // letでvalにSome値（中身42）を代入（Option<i32>型）\\n    let ___: ___<___> = ___(___);\\n    // matchでvalをパターンマッチ\\n    match ___ {\\n        // Someパターン（変数n）ならnを出力\\n        ___(___) => ___!(\\\"___\\\", ___),\\n        // Noneなら\"none\"を出力\\n        ___ => ___!(\\\"___\\\"),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "fn main() {",
-          "    // letでvalにSome(42)を代入（Option<i32>型）",
+          "    // letでvalにSome値（中身42）を代入（Option<i32>型）",
           "    let val: Option<i32> = Some(42);",
           "    // matchでvalをパターンマッチ",
           "    match val {",
-          "        // Some(n)ならnを出力",
+          "        // Someパターン（変数n）ならnを出力",
           "        Some(n) => println!(\"{}\", n),",
           "        // Noneなら\"none\"を出力",
           "        None => println!(\"none\"),",
@@ -429,7 +429,7 @@ export const rust2Data = {
           "content": "# match で成功と失敗を分ける\\n\\n`match` で「成功したら」「失敗したら」の処理を書き分けます。\\n\\n**コード例：**\\n```rust\\nfn divide(a: i32, b: i32) -> Result<i32, String> {\\n    if b == 0 {\\n        return Err(\"0で割れません\".to_string());\\n    }\\n    Ok(a / b)  // 成功なら答えを返す\\n}\\n\\nmatch divide(10, 2) {\\n    Ok(v) => println!(\"答えは{}\", v),\\n    Err(e) => println!(\"エラー: {}\", e),\\n}\\n```\\n\\n**ポイント：**\\n- `Ok(値)` で成功を返す\\n- `Err(エラー)` で失敗を返す"
         }
       ],
-      "correctCode": "// fnでhalf関数を定義（n: i32を受け取りResult<i32, String>を返す）\\nfn half(n: i32) -> Result<i32, String> {\\n    // ifでnが奇数か判定\\n    if n % 2 != 0 {\\n        // Errで\"odd\"エラーを返す\\n        return Err(\"odd\".to_string());\\n    }\\n    // Okでn/2を返す\\n    Ok(n / 2)\\n}\\nfn main() {\\n    // matchでhalf(10)をパターンマッチ\\n    match half(10) {\\n        // Ok(v)ならvを出力\\n        Ok(v) => println!(\"{}\", v),\\n        // Err(e)ならeを出力\\n        Err(e) => println!(\"{}\", e),\\n    }\\n}", "holeyCode": "// fnでhalf関数を定義（n: i32を受け取りResult<i32, String>を返す）\\nfn ___(___: ___) -> ___<___, ___> {\\n    // ifでnが奇数か判定\\n    if ___ % ___ != ___ {\\n        // Errで\"odd\"エラーを返す\\n        return ___(\\\"___\\\".___());\\n    // ブロックを閉じる\\n    ___\\n    // Okでn/2を返す\\n    ___(___ / ___)\\n// ブロックを閉じる\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // matchでhalf(10)をパターンマッチ\\n    match ___(___) {\\n        // Ok(v)ならvを出力\\n        ___(___) => ___!(\\\"___\\\", ___),\\n        // Err(e)ならeを出力\\n        ___(___) => ___!(\\\"___\\\", ___),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// fnでhalf関数を定義（n: i32を受け取りResult<i32, String>を返す）\\nfn half(n: i32) -> Result<i32, String> {\\n    // ifでnが奇数か判定\\n    if n % 2 != 0 {\\n        // Errで\"odd\"エラーを返す\\n        return Err(\"odd\".to_string());\\n    }\\n    // Okでn/2を返す\\n    Ok(n / 2)\\n}\\nfn main() {\\n    // matchでhalf関数（引数10）の結果をパターンマッチ\\n    match half(10) {\\n        // Okパターン（変数v）ならvを出力\\n        Ok(v) => println!(\"{}\", v),\\n        // Errパターン（変数e）ならeを出力\\n        Err(e) => println!(\"{}\", e),\\n    }\\n}", "holeyCode": "// fnでhalf関数を定義（n: i32を受け取りResult<i32, String>を返す）\\nfn ___(___: ___) -> ___<___, ___> {\\n    // ifでnが奇数か判定\\n    if ___ % ___ != ___ {\\n        // Errで\"odd\"エラーを返す\\n        return ___(\\\"___\\\".___());\\n    // ブロックを閉じる\\n    ___\\n    // Okでn/2を返す\\n    ___(___ / ___)\\n// ブロックを閉じる\\n___\\n// fnでmain関数を定義\\nfn ___() {\\n    // matchでhalf関数（引数10）の結果をパターンマッチ\\n    match ___(___) {\\n        // Okパターン（変数v）ならvを出力\\n        ___(___) => ___!(\\\"___\\\", ___),\\n        // Errパターン（変数e）ならeを出力\\n        ___(___) => ___!(\\\"___\\\", ___),\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// fnでhalf関数を定義（n: i32を受け取りResult<i32, String>を返す）",
           "fn half(n: i32) -> Result<i32, String> {",
@@ -442,11 +442,11 @@ export const rust2Data = {
           "    Ok(n / 2)",
           "}",
           "fn main() {",
-          "    // matchでhalf(10)をパターンマッチ",
+          "    // matchでhalf関数（引数10）の結果をパターンマッチ",
           "    match half(10) {",
-          "        // Ok(v)ならvを出力",
+          "        // Okパターン（変数v）ならvを出力",
           "        Ok(v) => println!(\"{}\", v),",
-          "        // Err(e)ならeを出力",
+          "        // Errパターン（変数e）ならeを出力",
           "        Err(e) => println!(\"{}\", e),",
           "    }",
           "}"
@@ -470,7 +470,7 @@ export const rust2Data = {
           "keywords": [
             "if", "return", "match"
           ],
-          "others": ["half", "n", "i32", "Result", "String", "2", "0", "Err", "to_string", "}", "Ok", "main", "10", "v", "println", "e", "odd", "{}", "if n % 2 != 0 {", "ain() {", "v)", "println!(\"{}\", v", "// Okでn/2を返す", "// matchでhalf(10)をパターンマッチ", "// Ok"]
+          "others": ["half", "n", "i32", "Result", "String", "2", "0", "Err", "to_string", "}", "Ok", "main", "10", "v", "println", "e", "odd", "{}", "if n % 2 != 0 {", "ain() {", "v)", "println!(\"{}\", v", "// Okでn/2を返す", "// matchでhalf関数（引数10）の結果をパターンマッチ", "// Ok"]
         },
         "testCases": [
           {

@@ -25,13 +25,13 @@ export const javaData2 = {
           "content": "# 継承した機能\\n\\n子クラスは親クラスのメソッドをそのまま使えます。犬（Dog）は動物（Animal）なので、「食べる」ことができますね！\\n\\n**コード例：**\\n```java\\nDog dog = new Dog();  // 犬を作る\\ndog.eat();   // 親のメソッド → 「食べる」\\ndog.bark();  // 自分のメソッド → 「ワン！」\\n```\\n\\n**ポイント：** 子クラスは親の機能＋自分だけの機能を持てます。Dogは「食べる」も「ほえる」もできます！"
         }
       ],
-      "correctCode": "// classでVehicleクラスを定義\\nclass Vehicle {\\n    // void moveでmoveメソッドを定義\\n    void move() {\\n        // printlnで'いどう'を出力\\n        System.out.println(\\\"いどう\\\");\\n    // moveメソッドを閉じる\\n    }\\n// Vehicleクラスを閉じる\\n}\\n\\n// extendsでCarクラスをVehicleから継承\\nclass Car extends Vehicle {\\n    // void honkでhonkメソッドを定義\\n    void honk() {\\n        // printlnで'プップー！'を出力\\n        System.out.println(\\\"プップー！\\\");\\n    // honkメソッドを閉じる\\n    }\\n// Carクラスを閉じる\\n}\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Car型のcにnew Car()を代入\\n        Car c = new Car();\\n        // cのmoveメソッドを呼び出す\\n        c.move();\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでVehicleクラスを定義\\nclass ___ {\\n    // void moveでmoveメソッドを定義\\n    void ___() {\\n        // printlnで'いどう'を出力\\n        ___.___.___(___)___\\n    // moveメソッドを閉じる\\n    ___\\n// Vehicleクラスを閉じる\\n___\\n___\\n// extendsでCarクラスをVehicleから継承\\nclass ___ extends ___ {\\n    // void honkでhonkメソッドを定義\\n    void ___() {\\n        // printlnで'プップー！'を出力\\n        ___.___.___(___)___\\n    // honkメソッドを閉じる\\n    ___\\n// Carクラスを閉じる\\n___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Car型のcにnew Car()を代入\\n        ___ ___ = new ___()___\\n        // cのmoveメソッドを呼び出す\\n        ___.___()___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// classでVehicleクラスを定義\\nclass Vehicle {\\n    // void moveでmoveメソッドを定義\\n    void move() {\\n        // Systemのoutのprintlnで'いどう'を出力\\n        System.out.println(\\\"いどう\\\");\\n    // moveメソッドを閉じる\\n    }\\n// Vehicleクラスを閉じる\\n}\\n\\n// extendsでCarクラスをVehicleから継承\\nclass Car extends Vehicle {\\n    // void honkでhonkメソッドを定義\\n    void honk() {\\n        // Systemのoutのprintlnで'プップー！'を出力\\n        System.out.println(\\\"プップー！\\\");\\n    // honkメソッドを閉じる\\n    }\\n// Carクラスを閉じる\\n}\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Car型のcに新しいCarインスタンスを代入\\n        Car c = new Car();\\n        // cのmoveメソッドを呼び出す\\n        c.move();\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでVehicleクラスを定義\\nclass ___ {\\n    // void moveでmoveメソッドを定義\\n    void ___() {\\n        // Systemのoutのprintlnで'いどう'を出力\\n        ___.___.___(___)___\\n    // moveメソッドを閉じる\\n    ___\\n// Vehicleクラスを閉じる\\n___\\n___\\n// extendsでCarクラスをVehicleから継承\\nclass ___ extends ___ {\\n    // void honkでhonkメソッドを定義\\n    void ___() {\\n        // Systemのoutのprintlnで'プップー！'を出力\\n        ___.___.___(___)___\\n    // honkメソッドを閉じる\\n    ___\\n// Carクラスを閉じる\\n___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Car型のcに新しいCarインスタンスを代入\\n        ___ ___ = new ___()___\\n        // cのmoveメソッドを呼び出す\\n        ___.___()___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// classでVehicleクラスを定義",
           "class Vehicle {",
           "    // void moveでmoveメソッドを定義",
           "    void move() {",
-          "        // printlnで'いどう'を出力",
+          "        // Systemのoutのprintlnで'いどう'を出力",
           "        System.out.println(\\\"いどう\\\");",
           "    // moveメソッドを閉じる",
           "    }",
@@ -42,7 +42,7 @@ export const javaData2 = {
           "class Car extends Vehicle {",
           "    // void honkでhonkメソッドを定義",
           "    void honk() {",
-          "        // printlnで'プップー！'を出力",
+          "        // Systemのoutのprintlnで'プップー！'を出力",
           "        System.out.println(\\\"プップー！\\\");",
           "    // honkメソッドを閉じる",
           "    }",
@@ -53,7 +53,7 @@ export const javaData2 = {
           "class Main {",
           "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // Car型のcにnew Car()を代入",
+          "        // Car型のcに新しいCarインスタンスを代入",
           "        Car c = new Car();",
           "        // cのmoveメソッドを呼び出す",
           "        c.move();",
@@ -132,13 +132,13 @@ export const javaData2 = {
           "content": "# 明示的に宣言\\n\\n`@Override`（アット・オーバーライド）は「このメソッドは親のメソッドを上書きしますよ」という印です。\\n\\n**アノテーション** とは、プログラムに追加情報を与える「ふせん」のようなものです。\\n\\n**なぜ使うの？**\\n- 間違いを防げます（スペルミスがあるとエラーで教えてくれる）\\n- コードが読みやすくなります\\n\\n```java\\nclass Cat extends Animal {\\n    @Override  // 「これは上書きです」と宣言\\n    void sound() {  // 親と同じメソッド名\\n        System.out.println(\"ニャー\");\\n    }\\n}\\n```"
         }
       ],
-      "correctCode": "// classでShapeクラスを定義\\nclass Shape {\\n    // void drawでdrawメソッドを定義\\n    void draw() {\\n        // printlnで'けい'を出力\\n        System.out.println(\\\"けい\\\");\\n    // drawメソッドを閉じる\\n    }\\n// Shapeクラスを閉じる\\n}\\n\\n// extendsでCircleクラスをShapeから継承\\nclass Circle extends Shape {\\n    // @Overrideでメソッドを上書き宣言\\n    @Override\\n    // void drawでdrawメソッドをオーバーライド\\n    void draw() {\\n        // printlnで'まる'を出力\\n        System.out.println(\\\"まる\\\");\\n    // drawメソッドを閉じる\\n    }\\n// Circleクラスを閉じる\\n}\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Circle型のcにnew Circle()を代入\\n        Circle c = new Circle();\\n        // cのdrawメソッドを呼び出す\\n        c.draw();\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでShapeクラスを定義\\nclass ___ {\\n    // void drawでdrawメソッドを定義\\n    void ___() {\\n        // printlnで'けい'を出力\\n        ___.___.___(___)___\\n    // drawメソッドを閉じる\\n    ___\\n// Shapeクラスを閉じる\\n___\\n___\\n// extendsでCircleクラスをShapeから継承\\nclass ___ extends ___ {\\n    // @Overrideでメソッドを上書き宣言\\n    @___\\n    // void drawでdrawメソッドをオーバーライド\\n    void ___() {\\n        // printlnで'まる'を出力\\n        ___.___.___(___)___\\n    // drawメソッドを閉じる\\n    ___\\n// Circleクラスを閉じる\\n___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Circle型のcにnew Circle()を代入\\n        ___ ___ = new ___()___\\n        // cのdrawメソッドを呼び出す\\n        ___.___()___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// classでShapeクラスを定義\\nclass Shape {\\n    // void drawでdrawメソッドを定義\\n    void draw() {\\n        // Systemのoutのprintlnで'けい'を出力\\n        System.out.println(\\\"けい\\\");\\n    // drawメソッドを閉じる\\n    }\\n// Shapeクラスを閉じる\\n}\\n\\n// extendsでCircleクラスをShapeから継承\\nclass Circle extends Shape {\\n    // @Overrideでメソッドを上書き宣言\\n    @Override\\n    // void drawでdrawメソッドをオーバーライド\\n    void draw() {\\n        // Systemのoutのprintlnで'まる'を出力\\n        System.out.println(\\\"まる\\\");\\n    // drawメソッドを閉じる\\n    }\\n// Circleクラスを閉じる\\n}\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Circle型のcに新しいCircleインスタンスを代入\\n        Circle c = new Circle();\\n        // cのdrawメソッドを呼び出す\\n        c.draw();\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでShapeクラスを定義\\nclass ___ {\\n    // void drawでdrawメソッドを定義\\n    void ___() {\\n        // Systemのoutのprintlnで'けい'を出力\\n        ___.___.___(___)___\\n    // drawメソッドを閉じる\\n    ___\\n// Shapeクラスを閉じる\\n___\\n___\\n// extendsでCircleクラスをShapeから継承\\nclass ___ extends ___ {\\n    // @Overrideでメソッドを上書き宣言\\n    @___\\n    // void drawでdrawメソッドをオーバーライド\\n    void ___() {\\n        // Systemのoutのprintlnで'まる'を出力\\n        ___.___.___(___)___\\n    // drawメソッドを閉じる\\n    ___\\n// Circleクラスを閉じる\\n___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Circle型のcに新しいCircleインスタンスを代入\\n        ___ ___ = new ___()___\\n        // cのdrawメソッドを呼び出す\\n        ___.___()___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// classでShapeクラスを定義",
           "class Shape {",
           "    // void drawでdrawメソッドを定義",
           "    void draw() {",
-          "        // printlnで'けい'を出力",
+          "        // Systemのoutのprintlnで'けい'を出力",
           "        System.out.println(\\\"けい\\\");",
           "    // drawメソッドを閉じる",
           "    }",
@@ -151,7 +151,7 @@ export const javaData2 = {
           "    @Override",
           "    // void drawでdrawメソッドをオーバーライド",
           "    void draw() {",
-          "        // printlnで'まる'を出力",
+          "        // Systemのoutのprintlnで'まる'を出力",
           "        System.out.println(\\\"まる\\\");",
           "    // drawメソッドを閉じる",
           "    }",
@@ -162,7 +162,7 @@ export const javaData2 = {
           "class Main {",
           "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // Circle型のcにnew Circle()を代入",
+          "        // Circle型のcに新しいCircleインスタンスを代入",
           "        Circle c = new Circle();",
           "        // cのdrawメソッドを呼び出す",
           "        c.draw();",
@@ -240,7 +240,7 @@ export const javaData2 = {
           "content": "# 複数実装できる\\n\\nクラスは複数のインターフェースを実装できます。\\n\\n**たとえ話：** 一人の人が「運転免許」と「調理師免許」の両方を持てるように、クラスも複数の約束を守ることができます。\\n\\n```java\\ninterface A { void a(); }  // 約束A\\ninterface B { void b(); }  // 約束B\\n\\nclass C implements A, B {  // 両方の約束を守る\\n    public void a() { }  // 約束Aを実装\\n    public void b() { }  // 約束Bを実装\\n}\\n```\\n\\n**ポイント：** 継承（extends）は1つだけですが、インターフェース（implements）は何個でもOKです！"
         }
       ],
-      "correctCode": "// interfaceでGreetingインターフェースを定義\\ninterface Greeting {\\n    // void sayHelloでメソッドを宣言\\n    void sayHello();\\n// Greetingインターフェースを閉じる\\n}\\n\\n// implementsでPersonクラスにGreetingを実装\\nclass Person implements Greeting {\\n    // public void sayHelloでsayHelloメソッドを実装\\n    public void sayHello() {\\n        // printlnで'こんにちは！'を出力\\n        System.out.println(\\\"こんにちは！\\\");\\n    // sayHelloメソッドを閉じる\\n    }\\n// Personクラスを閉じる\\n}\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Person型のpにnew Person()を代入\\n        Person p = new Person();\\n        // pのsayHelloメソッドを呼び出す\\n        p.sayHello();\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// interfaceでGreetingインターフェースを定義\\ninterface ___ {\\n    // void sayHelloでメソッドを宣言\\n    void ___()___\\n// Greetingインターフェースを閉じる\\n___\\n___\\n// implementsでPersonクラスにGreetingを実装\\nclass ___ implements ___ {\\n    // public void sayHelloでsayHelloメソッドを実装\\n    public void ___() {\\n        // printlnで'こんにちは！'を出力\\n        ___.___.___(___)___\\n    // sayHelloメソッドを閉じる\\n    ___\\n// Personクラスを閉じる\\n___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Person型のpにnew Person()を代入\\n        ___ ___ = new ___()___\\n        // pのsayHelloメソッドを呼び出す\\n        ___.___()___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// interfaceでGreetingインターフェースを定義\\ninterface Greeting {\\n    // void sayHelloでメソッドを宣言\\n    void sayHello();\\n// Greetingインターフェースを閉じる\\n}\\n\\n// implementsでPersonクラスにGreetingを実装\\nclass Person implements Greeting {\\n    // public void sayHelloでsayHelloメソッドを実装\\n    public void sayHello() {\\n        // Systemのoutのprintlnで'こんにちは！'を出力\\n        System.out.println(\\\"こんにちは！\\\");\\n    // sayHelloメソッドを閉じる\\n    }\\n// Personクラスを閉じる\\n}\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Person型のpに新しいPersonインスタンスを代入\\n        Person p = new Person();\\n        // pのsayHelloメソッドを呼び出す\\n        p.sayHello();\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// interfaceでGreetingインターフェースを定義\\ninterface ___ {\\n    // void sayHelloでメソッドを宣言\\n    void ___()___\\n// Greetingインターフェースを閉じる\\n___\\n___\\n// implementsでPersonクラスにGreetingを実装\\nclass ___ implements ___ {\\n    // public void sayHelloでsayHelloメソッドを実装\\n    public void ___() {\\n        // Systemのoutのprintlnで'こんにちは！'を出力\\n        ___.___.___(___)___\\n    // sayHelloメソッドを閉じる\\n    ___\\n// Personクラスを閉じる\\n___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Person型のpに新しいPersonインスタンスを代入\\n        ___ ___ = new ___()___\\n        // pのsayHelloメソッドを呼び出す\\n        ___.___()___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// interfaceでGreetingインターフェースを定義",
           "interface Greeting {",
@@ -253,7 +253,7 @@ export const javaData2 = {
           "class Person implements Greeting {",
           "    // public void sayHelloでsayHelloメソッドを実装",
           "    public void sayHello() {",
-          "        // printlnで'こんにちは！'を出力",
+          "        // Systemのoutのprintlnで'こんにちは！'を出力",
           "        System.out.println(\\\"こんにちは！\\\");",
           "    // sayHelloメソッドを閉じる",
           "    }",
@@ -264,7 +264,7 @@ export const javaData2 = {
           "class Main {",
           "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // Person型のpにnew Person()を代入",
+          "        // Person型のpに新しいPersonインスタンスを代入",
           "        Person p = new Person();",
           "        // pのsayHelloメソッドを呼び出す",
           "        p.sayHello();",
@@ -339,7 +339,7 @@ export const javaData2 = {
           "content": "# 子クラスで実装必須\\n\\n**抽象メソッド** は中身のないメソッドです。子クラスで**必ず**実装しなければなりません。\\n\\n**たとえ話：** 「動物は音を出す」というルールだけ決めておいて、「どんな音か」は犬や猫に任せる、という感じです。\\n\\n```java\\nclass Dog extends Animal {\\n    void sound() {  // 必ず実装する！\\n        System.out.println(\"ワン！\");\\n    }\\n}\\n```\\n\\n**インターフェースとの違い：**\\n- インターフェース：全部が約束（実装なし）\\n- 抽象クラス：一部は完成、一部は約束"
         }
       ],
-      "correctCode": "// abstract classでAnimal抽象クラスを定義\\nabstract class Animal {\\n    // abstract voidでspeak抽象メソッドを宣言\\n    abstract void speak();\\n// Animalクラスを閉じる\\n}\\n\\n// extendsでDogクラスをAnimalから継承\\nclass Dog extends Animal {\\n    // void speakでspeakメソッドを実装\\n    void speak() {\\n        // printlnで'ワン！'を出力\\n        System.out.println(\\\"ワン！\\\");\\n    // speakメソッドを閉じる\\n    }\\n// Dogクラスを閉じる\\n}\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Dog型のdにnew Dog()を代入\\n        Dog d = new Dog();\\n        // dのspeakメソッドを呼び出す\\n        d.speak();\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// abstract classでAnimal抽象クラスを定義\\nabstract class ___ {\\n    // abstract voidでspeak抽象メソッドを宣言\\n    abstract void ___()___\\n// Animalクラスを閉じる\\n___\\n___\\n// extendsでDogクラスをAnimalから継承\\nclass ___ extends ___ {\\n    // void speakでspeakメソッドを実装\\n    void ___() {\\n        // printlnで'ワン！'を出力\\n        ___.___.___(___)___\\n    // speakメソッドを閉じる\\n    ___\\n// Dogクラスを閉じる\\n___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Dog型のdにnew Dog()を代入\\n        ___ ___ = new ___()___\\n        // dのspeakメソッドを呼び出す\\n        ___.___()___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// abstract classでAnimal抽象クラスを定義\\nabstract class Animal {\\n    // abstract voidでspeak抽象メソッドを宣言\\n    abstract void speak();\\n// Animalクラスを閉じる\\n}\\n\\n// extendsでDogクラスをAnimalから継承\\nclass Dog extends Animal {\\n    // void speakでspeakメソッドを実装\\n    void speak() {\\n        // Systemのoutのprintlnで'ワン！'を出力\\n        System.out.println(\\\"ワン！\\\");\\n    // speakメソッドを閉じる\\n    }\\n// Dogクラスを閉じる\\n}\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Dog型のdに新しいDogインスタンスを代入\\n        Dog d = new Dog();\\n        // dのspeakメソッドを呼び出す\\n        d.speak();\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// abstract classでAnimal抽象クラスを定義\\nabstract class ___ {\\n    // abstract voidでspeak抽象メソッドを宣言\\n    abstract void ___()___\\n// Animalクラスを閉じる\\n___\\n___\\n// extendsでDogクラスをAnimalから継承\\nclass ___ extends ___ {\\n    // void speakでspeakメソッドを実装\\n    void ___() {\\n        // Systemのoutのprintlnで'ワン！'を出力\\n        ___.___.___(___)___\\n    // speakメソッドを閉じる\\n    ___\\n// Dogクラスを閉じる\\n___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Dog型のdに新しいDogインスタンスを代入\\n        ___ ___ = new ___()___\\n        // dのspeakメソッドを呼び出す\\n        ___.___()___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// abstract classでAnimal抽象クラスを定義",
           "abstract class Animal {",
@@ -352,7 +352,7 @@ export const javaData2 = {
           "class Dog extends Animal {",
           "    // void speakでspeakメソッドを実装",
           "    void speak() {",
-          "        // printlnで'ワン！'を出力",
+          "        // Systemのoutのprintlnで'ワン！'を出力",
           "        System.out.println(\\\"ワン！\\\");",
           "    // speakメソッドを閉じる",
           "    }",
@@ -363,7 +363,7 @@ export const javaData2 = {
           "class Main {",
           "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // Dog型のdにnew Dog()を代入",
+          "        // Dog型のdに新しいDogインスタンスを代入",
           "        Dog d = new Dog();",
           "        // dのspeakメソッドを呼び出す",
           "        d.speak();",
@@ -438,7 +438,7 @@ export const javaData2 = {
           "content": "# エラーをキャッチ\\n\\n**try-catch**（トライ・キャッチ）を使うと、例外をキャッチ（捕まえる）して対処できます。\\n\\n**たとえ話：** サーカスの網のように、落ちてきた（例外が起きた）ときに受け止めてくれます。\\n\\n```java\\ntry {  // 「試してみる」ブロック\\n    int result = 10 / 0;  // 0で割ると例外！\\n} catch (Exception e) {  // 「捕まえる」ブロック\\n    System.out.println(\"エラー発生\");  // 対処する\\n}\\n```\\n\\n**ポイント：** try の中で問題が起きたら、catch の中が実行されます"
         }
       ],
-      "correctCode": "// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // tryで例外発生時の処理を開始\\n        try {\\n            // int型のxにparseIntで'あいう'を整数変換（失敗する）\\n            int x = Integer.parseInt(\\\"あいう\\\");\\n        // catchでException型のeを受け取る\\n        } catch (Exception e) {\\n            // printlnで'エラー'を出力\\n            System.out.println(\\\"エラー\\\");\\n        // try-catchブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // tryで例外発生時の処理を開始\\n        try ___\\n            // int型のxにparseIntで'あいう'を整数変換（失敗する）\\n            ___ ___ = ___.___(___)___\\n        // catchでException型のeを受け取る\\n        ___ catch (___ ___) {\\n            // printlnで'エラー'を出力\\n            ___.___.___(___)___\\n        // try-catchブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // tryで例外発生時の処理を開始\\n        try {\\n            // int型のxにparseIntで'あいう'を整数変換（失敗する）\\n            int x = Integer.parseInt(\\\"あいう\\\");\\n        // catchでException型のeを受け取る\\n        } catch (Exception e) {\\n            // Systemのoutのprintlnで'エラー'を出力\\n            System.out.println(\\\"エラー\\\");\\n        // try-catchブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // tryで例外発生時の処理を開始\\n        try ___\\n            // int型のxにparseIntで'あいう'を整数変換（失敗する）\\n            ___ ___ = ___.___(___)___\\n        // catchでException型のeを受け取る\\n        ___ catch (___ ___) {\\n            // Systemのoutのprintlnで'エラー'を出力\\n            ___.___.___(___)___\\n        // try-catchブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// classでMainクラスを定義",
           "class Main {",
@@ -450,7 +450,7 @@ export const javaData2 = {
           "            int x = Integer.parseInt(\\\"あいう\\\");",
           "        // catchでException型のeを受け取る",
           "        } catch (Exception e) {",
-          "            // printlnで'エラー'を出力",
+          "            // Systemのoutのprintlnで'エラー'を出力",
           "            System.out.println(\\\"エラー\\\");",
           "        // try-catchブロックを閉じる",
           "        }",
@@ -513,7 +513,7 @@ export const javaData2 = {
           "content": "# 後片付け処理\\n\\nファイルを閉じる、接続を切断するなどの後片付けに使います。\\n\\n**たとえ話：** 本を読み終わったら本棚に戻す、電気を使ったら消す、というように「終わったら必ずやること」を書きます。\\n\\n```java\\ntry {\\n    // ファイルを開いて操作する\\n} finally {\\n    // ファイルを閉じる（必ず実行）\\n    System.out.println(\"Clean up\");\\n}\\n```\\n\\n**ポイント：** finally があれば、エラーが起きても後片付けを忘れません！"
         }
       ],
-      "correctCode": "// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // tryで処理を開始\\n        try {\\n            // printlnで'しっこう'を出力\\n            System.out.println(\\\"しっこう\\\");\\n        // catchでException型のeを受け取る\\n        } catch (Exception e) {\\n            // printlnで'エラー'を出力\\n            System.out.println(\\\"エラー\\\");\\n        // finallyで必ず実行する処理\\n        } finally {\\n            // printlnで'おわり'を出力\\n            System.out.println(\\\"おわり\\\");\\n        // try-catch-finallyブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // tryで処理を開始\\n        try ___\\n            // printlnで'しっこう'を出力\\n            ___.___.___(___)___\\n        // catchでException型のeを受け取る\\n        ___ catch (___ ___) {\\n            // printlnで'エラー'を出力\\n            ___.___.___(___)___\\n        // finallyで必ず実行する処理\\n        ___ finally ___\\n            // printlnで'おわり'を出力\\n            ___.___.___(___)___\\n        // try-catch-finallyブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // tryで処理を開始\\n        try {\\n            // Systemのoutのprintlnで'しっこう'を出力\\n            System.out.println(\\\"しっこう\\\");\\n        // catchでException型のeを受け取る\\n        } catch (Exception e) {\\n            // Systemのoutのprintlnで'エラー'を出力\\n            System.out.println(\\\"エラー\\\");\\n        // finallyで必ず実行する処理\\n        } finally {\\n            // Systemのoutのprintlnで'おわり'を出力\\n            System.out.println(\\\"おわり\\\");\\n        // try-catch-finallyブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // tryで処理を開始\\n        try ___\\n            // Systemのoutのprintlnで'しっこう'を出力\\n            ___.___.___(___)___\\n        // catchでException型のeを受け取る\\n        ___ catch (___ ___) {\\n            // Systemのoutのprintlnで'エラー'を出力\\n            ___.___.___(___)___\\n        // finallyで必ず実行する処理\\n        ___ finally ___\\n            // Systemのoutのprintlnで'おわり'を出力\\n            ___.___.___(___)___\\n        // try-catch-finallyブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// classでMainクラスを定義",
           "class Main {",
@@ -521,15 +521,15 @@ export const javaData2 = {
           "    public static void main(String[] args) {",
           "        // tryで処理を開始",
           "        try {",
-          "            // printlnで'しっこう'を出力",
+          "            // Systemのoutのprintlnで'しっこう'を出力",
           "            System.out.println(\\\"しっこう\\\");",
           "        // catchでException型のeを受け取る",
           "        } catch (Exception e) {",
-          "            // printlnで'エラー'を出力",
+          "            // Systemのoutのprintlnで'エラー'を出力",
           "            System.out.println(\\\"エラー\\\");",
           "        // finallyで必ず実行する処理",
           "        } finally {",
-          "            // printlnで'おわり'を出力",
+          "            // Systemのoutのprintlnで'おわり'を出力",
           "            System.out.println(\\\"おわり\\\");",
           "        // try-catch-finallyブロックを閉じる",
           "        }",
@@ -597,7 +597,7 @@ export const javaData2 = {
           "content": "# 追加・取得・削除\\n\\nArrayListでよく使うメソッドを覚えましょう！\\n\\n```java\\nArrayList<Integer> nums = new ArrayList<>();\\nnums.add(10);       // 追加 → [10]\\nnums.add(20);       // 追加 → [10, 20]\\nnums.get(0);        // 取得 → 10（0番目を取り出す）\\nnums.remove(0);     // 削除 → [20]（0番目を消す）\\nnums.size();        // サイズ → 1（今何個あるか）\\n```\\n\\n**覚え方：**\\n- `add`（アド）= 追加する\\n- `get`（ゲット）= 取得する\\n- `remove`（リムーブ）= 削除する\\n- `size`（サイズ）= 大きさ"
         }
       ],
-      "correctCode": "// importでjava.util.ArrayListを読み込む\\nimport java.util.ArrayList;\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // ArrayList<String>型のitemsをnewで作成\\n        ArrayList<String> items = new ArrayList<>();\\n        // addで'あ'を追加\\n        items.add(\\\"あ\\\");\\n        // addで'い'を追加\\n        items.add(\\\"い\\\");\\n        // printlnでgetを使い最初の要素（あ）を出力\\n        System.out.println(items.get(0));\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.ArrayListを読み込む\\nimport ___.___.___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // ArrayList<String>型のitemsをnewで作成\\n        ___<___> ___ = new ___<>()___\\n        // addで'あ'を追加\\n        ___.___(___)___\\n        // addで'い'を追加\\n        ___.___(___)___\\n        // printlnでgetを使い最初の要素（あ）を出力\\n        ___.___.___(___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// importでjava.util.ArrayListを読み込む\\nimport java.util.ArrayList;\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // ArrayList<String>型のitemsをnewで作成\\n        ArrayList<String> items = new ArrayList<>();\\n        // addで'あ'を追加\\n        items.add(\\\"あ\\\");\\n        // addで'い'を追加\\n        items.add(\\\"い\\\");\\n        // Systemのoutのprintlnでgetを使い最初の要素（あ）を出力\\n        System.out.println(items.get(0));\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.ArrayListを読み込む\\nimport ___.___.___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // ArrayList<String>型のitemsをnewで作成\\n        ___<___> ___ = new ___<>()___\\n        // addで'あ'を追加\\n        ___.___(___)___\\n        // addで'い'を追加\\n        ___.___(___)___\\n        // Systemのoutのprintlnでgetを使い最初の要素（あ）を出力\\n        ___.___.___(___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// importでjava.util.ArrayListを読み込む",
           "import java.util.ArrayList;",
@@ -612,7 +612,7 @@ export const javaData2 = {
           "        items.add(\\\"あ\\\");",
           "        // addで'い'を追加",
           "        items.add(\\\"い\\\");",
-          "        // printlnでgetを使い最初の要素（あ）を出力",
+          "        // Systemのoutのprintlnでgetを使い最初の要素（あ）を出力",
           "        System.out.println(items.get(0));",
           "    // mainメソッドを閉じる",
           "    }",
@@ -671,7 +671,7 @@ export const javaData2 = {
           "content": "# コレクションを処理\\n\\n拡張for文は ArrayList（アレイリスト）でも同じように使えます！\\n\\n```java\\nArrayList<String> items = new ArrayList<>();\\nitems.add(\"A\");\\nitems.add(\"B\");\\n\\nfor (String item : items) {  // itemsの中の各itemについて\\n    System.out.println(item);  // A, B が順番に表示\\n}\\n```\\n\\n**ポイント：** 配列でもArrayListでも、書き方は同じです。便利ですね！"
         }
       ],
-      "correctCode": "// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // String[]型のcolorsに色配列（あか、あお、みどり）を代入\\n        String[] colors = {\\\"あか\\\", \\\"あお\\\", \\\"みどり\\\"};\\n        // 拡張forでcolorsから各cを取り出す\\n        for (String c : colors) {\\n            // printlnでcを出力\\n            System.out.println(c);\\n        // forブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // String[]型のcolorsに色配列（あか、あお、みどり）を代入\\n        ___[] ___ = {___, ___, ___}___\\n        // 拡張forでcolorsから各cを取り出す\\n        for (___ ___ : ___) {\\n            // printlnでcを出力\\n            ___.___.___(___)___\\n        // forブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // String[]型のcolorsに色配列（あか、あお、みどり）を代入\\n        String[] colors = {\\\"あか\\\", \\\"あお\\\", \\\"みどり\\\"};\\n        // 拡張forでcolorsから各cを取り出す\\n        for (String c : colors) {\\n            // Systemのoutのprintlnでcを出力\\n            System.out.println(c);\\n        // forブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // String[]型のcolorsに色配列（あか、あお、みどり）を代入\\n        ___[] ___ = {___, ___, ___}___\\n        // 拡張forでcolorsから各cを取り出す\\n        for (___ ___ : ___) {\\n            // Systemのoutのprintlnでcを出力\\n            ___.___.___(___)___\\n        // forブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// classでMainクラスを定義",
           "class Main {",
@@ -681,7 +681,7 @@ export const javaData2 = {
           "        String[] colors = {\\\"あか\\\", \\\"あお\\\", \\\"みどり\\\"};",
           "        // 拡張forでcolorsから各cを取り出す",
           "        for (String c : colors) {",
-          "            // printlnでcを出力",
+          "            // Systemのoutのprintlnでcを出力",
           "            System.out.println(c);",
           "        // forブロックを閉じる",
           "        }",
@@ -738,7 +738,7 @@ export const javaData2 = {
           "content": "# ユーティリティに便利\\n\\n**ユーティリティ**（便利ツール）をまとめるのに使います。みんなで共有する道具箱のようなものです。\\n\\n```java\\nclass Utils {\\n    static String upper(String s) {  // 大文字に変換\\n        return s.toUpperCase();\\n    }\\n}\\n\\nUtils.upper(\"hello\");  // \"HELLO\"\\n```\\n\\n**いつ使う？**\\n- 計算だけするメソッド（足し算、引き算など）\\n- 文字列を変換するメソッド\\n- 共通で使う便利機能"
         }
       ],
-      "correctCode": "// classでCalculatorクラスを定義\\nclass Calculator {\\n    // static int multiplyでstaticメソッドを定義（引数int a, int b）\\n    static int multiply(int a, int b) {\\n        // returnでaとbの積を返す\\n        return a * b;\\n    // multiplyメソッドを閉じる\\n    }\\n// Calculatorクラスを閉じる\\n}\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のresultにmultiply（引数4と5）の結果を代入\\n        int result = Calculator.multiply(4, 5);\\n        // printlnでresult（20）を出力\\n        System.out.println(result);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでCalculatorクラスを定義\\nclass ___ {\\n    // static int multiplyでstaticメソッドを定義（引数int a, int b）\\n    static ___ ___(int ___, int ___) {\\n        // returnでaとbの積を返す\\n        return ___ * ___\\n    // multiplyメソッドを閉じる\\n    ___\\n// Calculatorクラスを閉じる\\n___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のresultにmultiply（引数4と5）の結果を代入\\n        ___ ___ = ___.___(___, ___)___\\n        // printlnでresult（20）を出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// classでCalculatorクラスを定義\\nclass Calculator {\\n    // static int multiplyでstaticメソッドを定義（引数int a, int b）\\n    static int multiply(int a, int b) {\\n        // returnでaとbの積を返す\\n        return a * b;\\n    // multiplyメソッドを閉じる\\n    }\\n// Calculatorクラスを閉じる\\n}\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のresultにmultiply（引数4と5）の結果を代入\\n        int result = Calculator.multiply(4, 5);\\n        // Systemのoutのprintlnでresult（20）を出力\\n        System.out.println(result);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでCalculatorクラスを定義\\nclass ___ {\\n    // static int multiplyでstaticメソッドを定義（引数int a, int b）\\n    static ___ ___(int ___, int ___) {\\n        // returnでaとbの積を返す\\n        return ___ * ___\\n    // multiplyメソッドを閉じる\\n    ___\\n// Calculatorクラスを閉じる\\n___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のresultにmultiply（引数4と5）の結果を代入\\n        ___ ___ = ___.___(___, ___)___\\n        // Systemのoutのprintlnでresult（20）を出力\\n        ___.___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// classでCalculatorクラスを定義",
           "class Calculator {",
@@ -757,7 +757,7 @@ export const javaData2 = {
           "    public static void main(String[] args) {",
           "        // int型のresultにmultiply（引数4と5）の結果を代入",
           "        int result = Calculator.multiply(4, 5);",
-          "        // printlnでresult（20）を出力",
+          "        // Systemのoutのprintlnでresult（20）を出力",
           "        System.out.println(result);",
           "    // mainメソッドを閉じる",
           "    }",
@@ -822,7 +822,7 @@ export const javaData2 = {
           "content": "# データを守る\\n\\n**カプセル化** とは、大事なデータを `private` で隠して、メソッド経由でアクセスする方法です。\\n\\n**たとえ話：** 銀行口座の残高は直接変更できません。必ず「入金」「出金」という手続き（メソッド）を通しますよね。それがカプセル化です。\\n\\n```java\\nclass User {\\n    private String name;  // 直接触れないようにする\\n    \\n    public String getName() {  // 取得用のメソッド\\n        return name;\\n    }\\n}\\n```\\n\\n**メリット：** データを勝手に変更されるのを防げます"
         }
       ],
-      "correctCode": "// classでItemクラスを定義\\nclass Item {\\n    // private int priceでpriceフィールドを隠蔽\\n    private int price;\\n\\n    // public Itemでコンストラクタを定義（引数int p）\\n    public Item(int p) {\\n        // priceにpを代入\\n        price = p;\\n    // コンストラクタを閉じる\\n    }\\n\\n    // public int getPriceでゲッターを定義\\n    public int getPrice() {\\n        // returnでpriceを返す\\n        return price;\\n    // getPriceメソッドを閉じる\\n    }\\n// Itemクラスを閉じる\\n}\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Item型のitemにnew Item(100)を代入\\n        Item item = new Item(100);\\n        // printlnでgetPriceの結果（100）を出力\\n        System.out.println(item.getPrice());\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでItemクラスを定義\\nclass ___ {\\n    // private int priceでpriceフィールドを隠蔽\\n    private ___ ___\\n___\\n    // public Itemでコンストラクタを定義（引数int p）\\n    public ___(int ___) {\\n        // priceにpを代入\\n        ___ = ___\\n    // コンストラクタを閉じる\\n    ___\\n___\\n    // public int getPriceでゲッターを定義\\n    public ___ ___() {\\n        // returnでpriceを返す\\n        return ___\\n    // getPriceメソッドを閉じる\\n    ___\\n// Itemクラスを閉じる\\n___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Item型のitemにnew Item(100)を代入\\n        ___ ___ = new ___(___)___\\n        // printlnでgetPriceの結果（100）を出力\\n        ___.___.___(___.___())___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
+      "correctCode": "// classでItemクラスを定義\\nclass Item {\\n    // private int priceでpriceフィールドを隠蔽\\n    private int price;\\n\\n    // public Itemでコンストラクタを定義（引数int p）\\n    public Item(int p) {\\n        // priceにpを代入\\n        price = p;\\n    // コンストラクタを閉じる\\n    }\\n\\n    // public int getPriceでゲッターを定義\\n    public int getPrice() {\\n        // returnでpriceを返す\\n        return price;\\n    // getPriceメソッドを閉じる\\n    }\\n// Itemクラスを閉じる\\n}\\n\\n// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Item型のitemに新しいItemインスタンス（引数100）を代入\\n        Item item = new Item(100);\\n        // SystemのoutのprintlnでgetPriceの結果（100）を出力\\n        System.out.println(item.getPrice());\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでItemクラスを定義\\nclass ___ {\\n    // private int priceでpriceフィールドを隠蔽\\n    private ___ ___\\n___\\n    // public Itemでコンストラクタを定義（引数int p）\\n    public ___(int ___) {\\n        // priceにpを代入\\n        ___ = ___\\n    // コンストラクタを閉じる\\n    ___\\n___\\n    // public int getPriceでゲッターを定義\\n    public ___ ___() {\\n        // returnでpriceを返す\\n        return ___\\n    // getPriceメソッドを閉じる\\n    ___\\n// Itemクラスを閉じる\\n___\\n___\\n// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Item型のitemに新しいItemインスタンス（引数100）を代入\\n        ___ ___ = new ___(___)___\\n        // SystemのoutのprintlnでgetPriceの結果（100）を出力\\n        ___.___.___(___.___())___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
       "correctLines": [
           "// classでItemクラスを定義",
           "class Item {",
@@ -849,9 +849,9 @@ export const javaData2 = {
           "class Main {",
           "    // public static void mainでエントリーポイントを定義",
           "    public static void main(String[] args) {",
-          "        // Item型のitemにnew Item(100)を代入",
+          "        // Item型のitemに新しいItemインスタンス（引数100）を代入",
           "        Item item = new Item(100);",
-          "        // printlnでgetPriceの結果（100）を出力",
+          "        // SystemのoutのprintlnでgetPriceの結果（100）を出力",
           "        System.out.println(item.getPrice());",
           "    // mainメソッドを閉じる",
           "    }",

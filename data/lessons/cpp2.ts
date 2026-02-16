@@ -104,7 +104,7 @@ export const cpp2Data = {
           "content": "# クラス名と同じ名前\\n\\nコンストラクタには特別なルールがあります：\\n1. **クラス名と同じ名前**にする\\n2. **戻り値の型を書かない**（voidも書かない）\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nclass Box {\\npublic:\\n    int size;        // サイズを入れる場所\\n    Box(int s) {     // コンストラクタ（クラス名と同じ）\\n        size = s;    // 受け取った値で初期化\\n    }\\n};\\n\\nBox b(10);  // Boxを作ると同時にsize=10で初期化！\\n```\\n\\n**ポイント：**\\n`Box b(10)` と書くと、コンストラクタが自動で呼ばれ、size に 10 が入ります。"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// class CounterでCounterクラスを定義\\nclass Counter {\\n// publicで公開アクセスを宣言\\npublic:\\n    // int countでcountメンバを宣言\\n    int count;\\n    // Counterコンストラクタを定義（引数: int c）\\n    Counter(int c) {\\n        // countにcを代入\\n        count = c;\\n    // コンストラクタを閉じる\\n    }\\n// クラス定義を閉じる\\n};\\n// int mainでmain関数を定義\\nint main() {\\n    // Counter cnt(5)でcntを初期値5で作成\\n    Counter cnt(5);\\n    // std::coutでカウント値（5）を出力\\n    std::cout << cnt.count << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n#___ <___>\\n// class CounterでCounterクラスを定義\\nclass ___ {\\n// publicで公開アクセスを宣言\\n___:\\n    // int countでcountメンバを宣言\\n    int ___;\\n    // Counterコンストラクタを定義（引数: int c）\\n    ___(int ___) {\\n        // countにcを代入\\n        ___ = ___;\\n    // コンストラクタを閉じる\\n    ___\\n// クラス定義を閉じる\\n___;\\n// int mainでmain関数を定義\\nint ___() {\\n    // Counter cnt(5)でcntを初期値5で作成\\n    ___ ___(___);\\n    // std::coutでカウント値（5）を出力\\n    ___::___ << ___.___ << ___::___;\\n    // return 0で正常終了を返す\\n    return ___;\\n// main関数を閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// class CounterでCounterクラスを定義\\nclass Counter {\\n// publicで公開アクセスを宣言\\npublic:\\n    // int countでcountメンバを宣言\\n    int count;\\n    // Counterコンストラクタを定義（引数: int c）\\n    Counter(int c) {\\n        // countにcを代入\\n        count = c;\\n    // コンストラクタを閉じる\\n    }\\n// クラス定義を閉じる\\n};\\n// int mainでmain関数を定義\\nint main() {\\n    // Counter型のcntを初期値5で作成\\n    Counter cnt(5);\\n    // std::coutでカウント値（5）を出力\\n    std::cout << cnt.count << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n#___ <___>\\n// class CounterでCounterクラスを定義\\nclass ___ {\\n// publicで公開アクセスを宣言\\n___:\\n    // int countでcountメンバを宣言\\n    int ___;\\n    // Counterコンストラクタを定義（引数: int c）\\n    ___(int ___) {\\n        // countにcを代入\\n        ___ = ___;\\n    // コンストラクタを閉じる\\n    ___\\n// クラス定義を閉じる\\n___;\\n// int mainでmain関数を定義\\nint ___() {\\n    // Counter型のcntを初期値5で作成\\n    ___ ___(___);\\n    // std::coutでカウント値（5）を出力\\n    ___::___ << ___.___ << ___::___;\\n    // return 0で正常終了を返す\\n    return ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
@@ -124,7 +124,7 @@ export const cpp2Data = {
           "};",
           "// int mainでmain関数を定義",
           "int main() {",
-          "    // Counter cnt(5)でcntを初期値5で作成",
+          "    // Counter型のcntを初期値5で作成",
           "    Counter cnt(5);",
           "    // std::coutでカウント値（5）を出力",
           "    std::cout << cnt.count << std::endl;",
@@ -606,7 +606,7 @@ export const cpp2Data = {
                       "content": "# [キャプチャ](引数) { 処理 }\\n\\n```cpp\\n[](int x) { return x * 2; }\\n```\\n\\n- **[]** キャプチャ（外の変数を使う）\\n- **(引数)** 受け取る値\\n- **{ }** 実行する処理"
               }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // autoでラムダ式squareを定義（引数xの2乗を返す）\\n    auto square = [](int x) {\\n        // xの2乗を返す\\n        return x * x;\\n    // ラムダを閉じる\\n    };\\n    // std::coutでsquare(4)の結果（16）を出力\\n    std::cout << square(4) << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\nint ___() {\\n    // autoでラムダ式squareを定義（引数xの2乗を返す）\\n    auto ___ = [](int ___) {\\n        // xの2乗を返す\\n        return ___ * ___;\\n    // ラムダを閉じる\\n    ___;\\n    // std::coutでsquare(4)の結果（16）を出力\\n    ___::___ << ___(___) << ___::___;\\n    // return 0で正常終了を返す\\n    return ___;\\n// main関数を閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// int mainでmain関数を定義\\nint main() {\\n    // autoでラムダ式squareを定義（引数xの2乗を返す）\\n    auto square = [](int x) {\\n        // xの2乗を返す\\n        return x * x;\\n    // ラムダを閉じる\\n    };\\n    // std::coutでsquare関数（引数4）の結果（16）を出力\\n    std::cout << square(4) << std::endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n#___ <___>\\n// int mainでmain関数を定義\\nint ___() {\\n    // autoでラムダ式squareを定義（引数xの2乗を返す）\\n    auto ___ = [](int ___) {\\n        // xの2乗を返す\\n        return ___ * ___;\\n    // ラムダを閉じる\\n    ___;\\n    // std::coutでsquare関数（引数4）の結果（16）を出力\\n    ___::___ << ___(___) << ___::___;\\n    // return 0で正常終了を返す\\n    return ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
@@ -618,7 +618,7 @@ export const cpp2Data = {
           "        return x * x;",
           "    // ラムダを閉じる",
           "    };",
-          "    // std::coutでsquare(4)の結果（16）を出力",
+          "    // std::coutでsquare関数（引数4）の結果（16）を出力",
           "    std::cout << square(4) << std::endl;",
           "    // return 0で正常終了を返す",
           "    return 0;",

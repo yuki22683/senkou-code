@@ -125,14 +125,14 @@ export const lua2Data = {
           "content": "# for i, v in ipairs(t)\\n\\nインデックス i と値 v を受け取ります。\\n\\n**コード例：**\\n```lua\\nfor i, v in ipairs({1, 2, 3}) do\\n    print(v)\\nend\\n```"
         }
       ],
-      "correctCode": "-- 配列を作成（1, 2, 3の順）\\nlocal nums = {1, 2, 3}\\n-- numsからipairs()でインデックスi・値vを取得しループ\\nfor i, v in ipairs(nums) do\\n    -- vを表示\\n    print(v)\\nend",
-      "holeyCode": "-- 配列を作成（1, 2, 3の順）\\nlocal ___ = {___, ___, ___}\\n-- numsからipairs()でインデックスi・値vを取得しループ\\nfor ___, ___ in ___(___) ___\\n    -- vを表示\\n    ___(___)\\n-- ブロックを終了\\n___",
+      "correctCode": "-- 配列を作成（1, 2, 3の順）\\nlocal nums = {1, 2, 3}\\n-- numsからipairs()でインデックスi・値vを取得しループ\\nfor i, v in ipairs(nums) do\\n    -- printでvを表示\\n    print(v)\\nend",
+      "holeyCode": "-- 配列を作成（1, 2, 3の順）\\nlocal ___ = {___, ___, ___}\\n-- numsからipairs()でインデックスi・値vを取得しループ\\nfor ___, ___ in ___(___) ___\\n    -- printでvを表示\\n    ___(___)\\n-- ブロックを終了\\n___",
       "correctLines": [
           "-- 配列を作成（1, 2, 3の順）",
           "local nums = {1, 2, 3}",
           "-- numsからipairs()でインデックスi・値vを取得しループ",
           "for i, v in ipairs(nums) do",
-          "    -- vを表示",
+          "    -- printでvを表示",
           "    print(v)",
           "end"
         ],
@@ -172,14 +172,14 @@ export const lua2Data = {
           "content": "# for k, v in pairs(t)\\n\\nキー k と値 v を受け取ります。\\n\\n**コード例：**\\n```lua\\nfor k, v in pairs({a = 1, b = 2}) do\\n    print(k, v)\\nend\\n```"
         }
       ],
-      "correctCode": "-- テーブルを作成\\nlocal t = {x = 10}\\n-- tからpairs()でキーk・値vを取得しループ\\nfor k, v in pairs(t) do\\n    -- kとvを表示\\n    print(k, v)\\nend",
-      "holeyCode": "-- テーブルを作成\\nlocal ___ = {___ = ___}\\n-- tからpairs()でキーk・値vを取得しループ\\nfor ___, ___ in ___(___) ___\\n    -- kとvを表示\\n    ___(___, ___)\\n-- ブロックを終了\\n___",
+      "correctCode": "-- テーブルを作成\\nlocal t = {x = 10}\\n-- tからpairs()でキーk・値vを取得しループ\\nfor k, v in pairs(t) do\\n    -- printでkとvを表示\\n    print(k, v)\\nend",
+      "holeyCode": "-- テーブルを作成\\nlocal ___ = {___ = ___}\\n-- tからpairs()でキーk・値vを取得しループ\\nfor ___, ___ in ___(___) ___\\n    -- printでkとvを表示\\n    ___(___, ___)\\n-- ブロックを終了\\n___",
       "correctLines": [
           "-- テーブルを作成",
           "local t = {x = 10}",
           "-- tからpairs()でキーk・値vを取得しループ",
           "for k, v in pairs(t) do",
-          "    -- kとvを表示",
+          "    -- printでkとvを表示",
           "    print(k, v)",
           "end"
         ],
@@ -370,8 +370,8 @@ export const lua2Data = {
           "content": "# メタテーブルを設定\\n\\n`setmetatable(t, mt)` でメタテーブルを設定します。\\n\\n**コード例：**\\n```lua\\nlocal mt = { __add = function(a, b) ... end }\\nsetmetatable(t, mt)\\n```"
         }
       ],
-      "correctCode": "-- 空のテーブルを作成\\nlocal t = {}\\n-- メタテーブルを作成\\nlocal mt = { __index = { x = 10 } }\\n-- setmetatableでメタテーブルを設定\\nsetmetatable(t, mt)\\n-- tのxを表示\\nprint(t.x)",
-      "holeyCode": "-- 空のテーブルを作成\\nlocal ___ = {}\\n-- メタテーブルを作成\\nlocal ___ = { ___ = { ___ = ___ } }\\n-- setmetatableでメタテーブルを設定\\n___(___, ___)\\n-- tのxを表示\\n___(___.___)",
+      "correctCode": "-- 空のテーブルを作成\\nlocal t = {}\\n-- メタテーブルを作成\\nlocal mt = { __index = { x = 10 } }\\n-- setmetatableでメタテーブルを設定\\nsetmetatable(t, mt)\\n-- printでtのxを表示\\nprint(t.x)",
+      "holeyCode": "-- 空のテーブルを作成\\nlocal ___ = {}\\n-- メタテーブルを作成\\nlocal ___ = { ___ = { ___ = ___ } }\\n-- setmetatableでメタテーブルを設定\\n___(___, ___)\\n-- printでtのxを表示\\n___(___.___)",
       "correctLines": [
           "-- 空のテーブルを作成",
           "local t = {}",
@@ -379,7 +379,7 @@ export const lua2Data = {
           "local mt = { __index = { x = 10 } }",
           "-- setmetatableでメタテーブルを設定",
           "setmetatable(t, mt)",
-          "-- tのxを表示",
+          "-- printでtのxを表示",
           "print(t.x)"
         ],
       "lineHints": [
@@ -419,8 +419,8 @@ export const lua2Data = {
           "content": "# 状態を保持\\n\\nクロージャを使って状態を保持できます。\\n\\n**コード例：**\\n```lua\\nlocal function counter()\\n    local count = 0\\n    return function()\\n        count = count + 1\\n        return count\\n    end\\nend\\n```"
         }
       ],
-      "correctCode": "-- makeAdder関数を定義\\nlocal function makeAdder(n)\\n    -- returnで関数を返す\\n    return function(x)\\n        -- x + nを返す\\n        return x + n\\n    end\\nend\\n-- makeAdder(5)を呼び出す\\nlocal add5 = makeAdder(5)\\n-- add5(10)を呼び出す\\nprint(add5(10))",
-      "holeyCode": "-- makeAdder関数を定義\\nlocal function ___(___)\\n    -- returnで関数を返す\\n    return function(___)\\n        -- x + nを返す\\n        return ___ + ___\\n    -- ブロックを終了\\n    ___\\n-- ブロックを終了\\n___\\n-- makeAdder(5)を呼び出す\\nlocal ___ = ___(___)\\n-- add5(10)を呼び出す\\n___(___(___))",
+      "correctCode": "-- makeAdder関数を定義\\nlocal function makeAdder(n)\\n    -- returnで関数を返す\\n    return function(x)\\n        -- x + nを返す\\n        return x + n\\n    end\\nend\\n-- makeAdder関数（引数5）を呼び出す\\nlocal add5 = makeAdder(5)\\n-- add5関数（引数10）の結果を出力\\nprint(add5(10))",
+      "holeyCode": "-- makeAdder関数を定義\\nlocal function ___(___)\\n    -- returnで関数を返す\\n    return function(___)\\n        -- x + nを返す\\n        return ___ + ___\\n    -- ブロックを終了\\n    ___\\n-- ブロックを終了\\n___\\n-- makeAdder関数（引数5）を呼び出す\\nlocal ___ = ___(___)\\n-- add5関数（引数10）の結果を出力\\n___(___(___))",
       "correctLines": [
           "-- makeAdder関数を定義",
           "local function makeAdder(n)",
@@ -430,9 +430,9 @@ export const lua2Data = {
           "        return x + n",
           "    end",
           "end",
-          "-- makeAdder(5)を呼び出す",
+          "-- makeAdder関数（引数5）を呼び出す",
           "local add5 = makeAdder(5)",
-          "-- add5(10)を呼び出す",
+          "-- add5関数（引数10）の結果を出力",
           "print(add5(10))"
         ],
       "lineHints": [
@@ -476,12 +476,12 @@ export const lua2Data = {
           "content": "# 基本の使い方\\n\\n`create` で作成、`resume` で実行、`yield` で中断します。\\n\\n**コード例：**\\n```lua\\nlocal co = coroutine.create(function()\\n    print(\"start\")\\n    coroutine.yield()\\n    print(\"end\")\\nend)\\n```"
         }
       ],
-      "correctCode": "-- createでコルーチンを作成\\nlocal co = coroutine.create(function()\\n    -- helloを表示\\n    print(\"こんにちは\")\\nend)\\n-- resumeでコルーチンを実行\\ncoroutine.resume(co)",
-      "holeyCode": "-- createでコルーチンを作成\\nlocal ___ = ___.___(___()\\n    -- helloを表示\\n    ___(\"___\")\\n-- ブロックを終了\\n___)\\n-- resumeでコルーチンを実行\\n___.___(___)",
+      "correctCode": "-- createでコルーチンを作成\\nlocal co = coroutine.create(function()\\n    -- printで「こんにちは」を表示\\n    print(\"こんにちは\")\\nend)\\n-- resumeでコルーチンを実行\\ncoroutine.resume(co)",
+      "holeyCode": "-- createでコルーチンを作成\\nlocal ___ = ___.___(___()\\n    -- printで「こんにちは」を表示\\n    ___(\"___\")\\n-- ブロックを終了\\n___)\\n-- resumeでコルーチンを実行\\n___.___(___)",
       "correctLines": [
           "-- createでコルーチンを作成",
           "local co = coroutine.create(function()",
-          "    -- helloを表示",
+          "    -- printで「こんにちは」を表示",
           "    print(\"こんにちは\")",
           "end)",
           "-- resumeでコルーチンを実行",

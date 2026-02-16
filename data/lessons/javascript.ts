@@ -45,10 +45,10 @@ export const javascriptData = {
           "content": "# console.log（コンソール・ログ）って何？\\n\\n「出力」とは、コンピュータに文字や数字を画面に出してもらうことです。\\n\\n`console.log()` は、**「カッコの中身を画面に出して！」** とお願いする命令です。\\n\\n**書き方のルール：**\\n1. 文字は `'` か `\"` で囲む（シングルクォート または ダブルクォート）\\n2. 文の最後には `;`（セミコロン）をつける\\n\\n**コード例：**\\n```javascript\\nconsole.log('JavaScript楽しい！');\\n```\\n\\n**実行結果：**\\n```\\nJavaScript楽しい！\\n```"
         }
       ],
-      "correctCode": "// 画面に「Hello, JavaScript!」と出す関数\\nconsole.log('Hello, JavaScript!');",
-      "holeyCode": "// 画面に「Hello, JavaScript!」と出す関数\\n___.___('___');",
+      "correctCode": "// consoleのlogメソッドで「Hello, JavaScript!」を表示\\nconsole.log('Hello, JavaScript!');",
+      "holeyCode": "// consoleのlogメソッドで「Hello, JavaScript!」を表示\\n___.___('___');",
       "correctLines": [
-          "// 画面に「Hello, JavaScript!」と出す関数",
+          "// consoleのlogメソッドで「Hello, JavaScript!」を表示",
           "console.log('Hello, JavaScript!');"
         ],
       "lineHints": [
@@ -84,12 +84,12 @@ export const javascriptData = {
           "content": "# const（コンスト）の使い方\\n\\n`const` は「一度入れたら変えない」という約束の「はこ」を作る言葉です。\\n\\n**書き方：**\\n```\\nconst はこの名前 = 入れたいもの;\\n```\\n\\n**ポイント：**\\n- `=`（イコール）は「右のものを左のはこに入れる」という意味\\n- 算数の「等しい」とは違うので注意！\\n\\n**コード例：**\\n```javascript\\nconst fruit = 'りんご';\\nconsole.log(fruit);\\n```\\n**実行結果：**\\n```\\nりんご\\n```"
         }
       ],
-      "correctCode": "// nameに'JavaScript'を代入\\nconst name = 'JavaScript';\\n// はこの中身を出す\\nconsole.log(name);",
-      "holeyCode": "// nameに'JavaScript'を代入\\nconst ___ = '___';\\n// はこの中身を出す\\n___.___(___);",
+      "correctCode": "// nameに'JavaScript'を代入\\nconst name = 'JavaScript';\\n// consoleのlogメソッドでnameを表示\\nconsole.log(name);",
+      "holeyCode": "// nameに'JavaScript'を代入\\nconst ___ = '___';\\n// consoleのlogメソッドでnameを表示\\n___.___(___);",
       "correctLines": [
           "// nameに'JavaScript'を代入",
           "const name = 'JavaScript';",
-          "// はこの中身を出す",
+          "// consoleのlogメソッドでnameを表示",
           "console.log(name);"
         ],
       "lineHints": [
@@ -130,14 +130,14 @@ export const javascriptData = {
           "content": "# 算数と同じ記号を使います\\n\\n計算に使う記号のことを **演算子** と呼びます。\\n\\n| 記号 | 意味 | 例 |\\n|:---:|:---:|:---:|\\n| **+** | たし算 | 3 + 2 = 5 |\\n| **-** | ひき算 | 5 - 2 = 3 |\\n| **\\*** | かけ算 | 4 * 3 = 12 |\\n| **/** | わり算 | 10 / 2 = 5 |\\n\\n**コード例：**\\n```javascript\\nconst a = 20;\\nconst b = 10;\\nconsole.log(a - b);  // 20 - 10 の答え\\n```\\n**実行結果：**\\n```\\n10\\n```"
         }
       ],
-      "correctCode": "// xに10を入れる\\nconst x = 10;\\n// yに5を入れる\\nconst y = 5;\\n// x + y を表示する\\nconsole.log(x + y);",
-      "holeyCode": "// xに10を入れる\\nconst ___ = ___;\\n// yに5を入れる\\nconst ___ = ___;\\n// x + y を表示する\\n___.___(___ + ___);",
+      "correctCode": "// xに10を入れる\\nconst x = 10;\\n// yに5を入れる\\nconst y = 5;\\n// consoleのlogメソッドでxとyの足し算結果を表示\\nconsole.log(x + y);",
+      "holeyCode": "// xに10を入れる\\nconst ___ = ___;\\n// yに5を入れる\\nconst ___ = ___;\\n// consoleのlogメソッドでxとyの足し算結果を表示\\n___.___(___ + ___);",
       "correctLines": [
           "// xに10を入れる",
           "const x = 10;",
           "// yに5を入れる",
           "const y = 5;",
-          "// x + y を表示する",
+          "// consoleのlogメソッドでxとyの足し算結果を表示",
           "console.log(x + y);"
         ],
       "lineHints": [
@@ -185,12 +185,12 @@ export const javascriptData = {
           "content": "# 書き方を覚えよう\\n\\n**2つのルール：**\\n1. 文章全体を ``` ` ```（バッククォート）で囲む\\n2. 変数を入れたい場所に `${変数名}` と書く\\n\\n**バッククォートの場所：**\\nキーボードの左上、Escキーの下あたりにあります。\\n\\n**コード例：**\\n```javascript\\nconst weather = 'はれ';\\nconsole.log(`明日は${weather}です`);\\n```\\n\\n**実行結果：**\\n```\\n明日ははれです\\n```\\n\\n`${weather}` の部分が `はれ` に置き換わりました！"
         }
       ],
-      "correctCode": "// age というはこに 10 を入れる\\nconst age = 10;\\n// 文章の中に age の中身を入れる\\nconsole.log(`私は${age}歳です`);",
-      "holeyCode": "// age というはこに 10 を入れる\\nconst ___ = ___;\\n// 文章の中に age の中身を入れる\\n___.___(`私は${___}歳です`);",
+      "correctCode": "// ageに10を代入\\nconst age = 10;\\n// consoleのlogメソッドでテンプレートリテラルにageを埋め込んで表示\\nconsole.log(`私は${age}歳です`);",
+      "holeyCode": "// ageに10を代入\\nconst ___ = ___;\\n// consoleのlogメソッドでテンプレートリテラルにageを埋め込んで表示\\n___.___(`私は${___}歳です`);",
       "correctLines": [
-          "// age というはこに 10 を入れる",
+          "// ageに10を代入",
           "const age = 10;",
-          "// 文章の中に age の中身を入れる",
+          "// consoleのlogメソッドでテンプレートリテラルにageを埋め込んで表示",
           "console.log(`私は${age}歳です`);"
         ],
       "lineHints": [
@@ -231,12 +231,12 @@ export const javascriptData = {
           "content": "# 配列の使い方\\n\\n**作り方：** `[ ]` の中にデータを `,` で区切って入れる\\n**取り出し方：** `配列名[番号]` で指定する\\n\\n**重要なルール：**\\nプログラミングでは、最初のデータは **「0番」** から数えます！\\n\\n| 番号 | 0 | 1 |\\n|:---:|:---:|:---:|\\n| 中身 | りんご | みかん |\\n\\n**コード例：**\\n```javascript\\nconst fruits = ['りんご', 'みかん'];\\nconsole.log(fruits[0]);  // 0番目を取り出す\\n```\\n**実行結果：**\\n```\\nりんご\\n```"
         }
       ],
-      "correctCode": "// 色の配列（あか、あお）をcolorsに代入\\nconst colors = ['あか', 'あお'];\\n// 2番目のデータ（インデックス1）を出す\\nconsole.log(colors[1]);",
-      "holeyCode": "// 色の配列（あか、あお）をcolorsに代入\\nconst ___ = ['___', '___'];\\n// 2番目のデータ（インデックス1）を出す\\n___.___(___);",
+      "correctCode": "// 色の配列（あか、あお）をcolorsに代入\\nconst colors = ['あか', 'あお'];\\n// consoleのlogメソッドでcolorsのインデックス1を表示\\nconsole.log(colors[1]);",
+      "holeyCode": "// 色の配列（あか、あお）をcolorsに代入\\nconst ___ = ['___', '___'];\\n// consoleのlogメソッドでcolorsのインデックス1を表示\\n___.___(___);",
       "correctLines": [
           "// 色の配列（あか、あお）をcolorsに代入",
           "const colors = ['あか', 'あお'];",
-          "// 2番目のデータ（インデックス1）を出す",
+          "// consoleのlogメソッドでcolorsのインデックス1を表示",
           "console.log(colors[1]);"
         ],
       "lineHints": [
@@ -281,14 +281,14 @@ export const javascriptData = {
           "content": "# if文の書き方\\n\\n**書き方：**\\n```\\nif (条件) {\\n  条件に合ったときの処理\\n}\\n```\\n\\n**記号の説明：**\\n- `( )` ... 条件を入れるカッコ\\n- `{ }` ... 処理を入れるなみカッコ\\n- `>` ... 「より大きい」を表す記号\\n\\n**コード例：**\\n```javascript\\nconst price = 1200;\\nif (price > 1000) {\\n  console.log('ちょっと高いかも');\\n}\\n```\\n**実行結果：** 1200 > 1000 は正しいので...\\n```\\nちょっと高いかも\\n```"
         }
       ],
-      "correctCode": "// score に 100 を入れる\\nconst score = 100;\\n// もし 80 より大きかったら\\nif (score > 80) {\\n    // 「ごうかく！」と表示する\\n    console.log('ごうかく！');\\n}",
-      "holeyCode": "// score に 100 を入れる\\nconst ___ = ___;\\n// もし 80 より大きかったら\\nif (___ ___ ___) {\\n    // 「ごうかく！」と表示する\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "// scoreに100を代入\\nconst score = 100;\\n// scoreが80より大きい場合\\nif (score > 80) {\\n    // consoleのlogメソッドで「ごうかく！」を表示\\n    console.log('ごうかく！');\\n}",
+      "holeyCode": "// scoreに100を代入\\nconst ___ = ___;\\n// scoreが80より大きい場合\\nif (___ ___ ___) {\\n    // consoleのlogメソッドで「ごうかく！」を表示\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// score に 100 を入れる",
+          "// scoreに100を代入",
           "const score = 100;",
-          "// もし 80 より大きかったら",
+          "// scoreが80より大きい場合",
           "if (score > 80) {",
-          "    // 「ごうかく！」と表示する",
+          "    // consoleのlogメソッドで「ごうかく！」を表示",
           "    console.log('ごうかく！');",
           "}"
         ],
@@ -340,18 +340,18 @@ export const javascriptData = {
           "content": "# if-else文の書き方\\n\\n**書き方：**\\n```\\nif (条件) {\\n  条件に合ったとき\\n} else {\\n  条件に合わなかったとき\\n}\\n```\\n\\n**道が2つに分かれるイメージです！**\\n\\n**コード例：**\\n```javascript\\nconst time = 15;\\nif (time < 12) {\\n  console.log('午前中');\\n} else {\\n  console.log('お昼すぎ');\\n}\\n```\\n**実行結果：** 15 < 12 は正しくないので else の方へ...\\n```\\nお昼すぎ\\n```"
         }
       ],
-      "correctCode": "// age に 10 を入れる\\nconst age = 10;\\n// 20以上かを比較する演算子\\nif (age >= 20) {\\n    // 20歳以上のときのメッセージ（'おとな'）\\n    console.log('おとな');\\n// 「そうでなければ」を表すキーワード\\n} else {\\n    // それ以外の場合（'こども'）\\n    console.log('こども');\\n}",
-      "holeyCode": "// age に 10 を入れる\\nconst ___ = ___;\\n// 20以上かを比較する演算子\\nif (___ ___ ___) {\\n    // 20歳以上のときのメッセージ（'おとな'）\\n    ___.___(___);\\n// 「そうでなければ」を表すキーワード\\n} ___ {\\n    // それ以外の場合（'こども'）\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "// ageに10を代入\\nconst age = 10;\\n// ageが20以上かを>=演算子で判定\\nif (age >= 20) {\\n    // consoleのlogメソッドで「おとな」を表示\\n    console.log('おとな');\\n// elseキーワードでそうでない場合\\n} else {\\n    // consoleのlogメソッドで「こども」を表示\\n    console.log('こども');\\n}",
+      "holeyCode": "// ageに10を代入\\nconst ___ = ___;\\n// ageが20以上かを>=演算子で判定\\nif (___ ___ ___) {\\n    // consoleのlogメソッドで「おとな」を表示\\n    ___.___(___);\\n// elseキーワードでそうでない場合\\n} ___ {\\n    // consoleのlogメソッドで「こども」を表示\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// age に 10 を入れる",
+          "// ageに10を代入",
           "const age = 10;",
-          "// 20以上かを比較する演算子",
+          "// ageが20以上かを>=演算子で判定",
           "if (age >= 20) {",
-          "    // 20歳以上のときのメッセージ（'おとな'）",
+          "    // consoleのlogメソッドで「おとな」を表示",
           "    console.log('おとな');",
-          "// 「そうでなければ」を表すキーワード",
+          "// elseキーワードでそうでない場合",
           "} else {",
-          "    // それ以外の場合（'こども'）",
+          "    // consoleのlogメソッドで「こども」を表示",
           "    console.log('こども');",
           "}"
         ],
@@ -408,14 +408,14 @@ export const javascriptData = {
           "content": "# for...of の書き方\\n\\n`for...of` は配列の中身を **一つずつ取り出して処理** します。\\n\\n**書き方：**\\n```\\nfor (const 取り出した要素 of 配列) {\\n  くりかえす処理\\n}\\n```\\n\\n**ポイント：**\\n- `of` は「〜の中から」という意味\\n- 配列の最初から最後まで自動でくりかえす\\n\\n**コード例：**\\n```javascript\\nconst items = ['おにぎり', 'パン'];\\nfor (const item of items) {\\n  console.log(item);\\n}\\n```\\n**実行結果：**\\n```\\nおにぎり\\nパン\\n```"
         }
       ],
-      "correctCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst names = ['たろう', 'はなこ'];\\n// 順番に取り出すループ\\nfor (const name of names) {\\n    // 取り出した名前を表示\\n    console.log(name);\\n}",
-      "holeyCode": "// 配列を作る（'たろう', 'はなこ'の順）\\nconst ___ = ['___', '___'];\\n// 順番に取り出すループ\\nfor (const ___ of ___) {\\n    // 取り出した名前を表示\\n    ___.___(___)\\n// ブロックを閉じる\\n___",
+      "correctCode": "// namesに配列（'たろう', 'はなこ'の順）を代入\\nconst names = ['たろう', 'はなこ'];\\n// namesからnameにfor...ofで取り出してループ\\nfor (const name of names) {\\n    // consoleのlogメソッドでnameを表示\\n    console.log(name);\\n}",
+      "holeyCode": "// namesに配列（'たろう', 'はなこ'の順）を代入\\nconst ___ = ['___', '___'];\\n// namesからnameにfor...ofで取り出してループ\\nfor (const ___ of ___) {\\n    // consoleのlogメソッドでnameを表示\\n    ___.___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
-          "// 配列を作る（'たろう', 'はなこ'の順）",
+          "// namesに配列（'たろう', 'はなこ'の順）を代入",
           "const names = ['たろう', 'はなこ'];",
-          "// 順番に取り出すループ",
+          "// namesからnameにfor...ofで取り出してループ",
           "for (const name of names) {",
-          "    // 取り出した名前を表示",
+          "    // consoleのlogメソッドでnameを表示",
           "    console.log(name);",
           "}"
         ],
@@ -462,12 +462,12 @@ export const javascriptData = {
           "content": "# { } でまとめて、. で取り出す\\n\\n**作り方：**\\n`{ 名前: 値, 名前: 値 }` のように `{ }` で囲みます。\\n名前と値のセットを **プロパティ** と呼びます。\\n\\n**取り出し方：**\\n`.`（ドット）をつなげて `オブジェクト名.プロパティ名` で取り出します。\\n\\n**コード例：**\\n```javascript\\nconst colors = { りんご: 'あか', バナナ: 'きいろ' };\\nconsole.log(colors.りんご);\\n```\\n**実行結果：**\\n```\\nあか\\n```"
         }
       ],
-      "correctCode": "// オブジェクトを作る（nameは'たろう'）\\nconst user = { name: 'たろう' };\\n// nameプロパティを取り出す\\nconsole.log(user.name);",
-      "holeyCode": "// オブジェクトを作る（nameは'たろう'）\\nconst ___ = { ___: '___' };\\n// nameプロパティを取り出す\\n___.___(___.___);",
+      "correctCode": "// userにオブジェクト（nameは'たろう'）を代入\\nconst user = { name: 'たろう' };\\n// consoleのlogメソッドでuserのnameプロパティを表示\\nconsole.log(user.name);",
+      "holeyCode": "// userにオブジェクト（nameは'たろう'）を代入\\nconst ___ = { ___: '___' };\\n// consoleのlogメソッドでuserのnameプロパティを表示\\n___.___(___.___);",
       "correctLines": [
-          "// オブジェクトを作る（nameは'たろう'）",
+          "// userにオブジェクト（nameは'たろう'）を代入",
           "const user = { name: 'たろう' };",
-          "// nameプロパティを取り出す",
+          "// consoleのlogメソッドでuserのnameプロパティを表示",
           "console.log(user.name);"
         ],
       "lineHints": [
@@ -509,15 +509,15 @@ export const javascriptData = {
           "content": "# function の書き方\\n\\n**関数の作り方（定義）：**\\n```\\nfunction 関数名() {\\n  やりたい処理\\n}\\n```\\n\\n**関数の使い方（呼び出し）：**\\n```\\n関数名();\\n```\\n\\n**コード例：**\\n```javascript\\n// 関数を作る（定義）\\nfunction sayHello() {\\n  console.log('ヤッホー！');\\n}\\n\\n// 関数を使う（呼び出し）\\nsayHello();\\n```\\n**実行結果：**\\n```\\nヤッホー！\\n```"
         }
       ],
-      "correctCode": "// greet という関数を定義する（'こんにちは'と表示）\\nfunction greet() {\\n    // 'こんにちは'と表示\\n    console.log('こんにちは');\\n}\\n// 関数を動かす\\ngreet();",
-      "holeyCode": "// greet という関数を定義する（'こんにちは'と表示）\\nfunction ___() {\\n    // 'こんにちは'と表示\\n    ___.___(___);\\n// ブロックを閉じる\\n___\\n// 関数を動かす\\n___();",
+      "correctCode": "// greet関数を定義\\nfunction greet() {\\n    // consoleのlogメソッドで「こんにちは」を表示\\n    console.log('こんにちは');\\n}\\n// greet関数を呼び出す\\ngreet();",
+      "holeyCode": "// greet関数を定義\\nfunction ___() {\\n    // consoleのlogメソッドで「こんにちは」を表示\\n    ___.___(___);\\n// ブロックを閉じる\\n___\\n// greet関数を呼び出す\\n___();",
       "correctLines": [
-          "// greet という関数を定義する（'こんにちは'と表示）",
+          "// greet関数を定義",
           "function greet() {",
-          "    // 'こんにちは'と表示",
+          "    // consoleのlogメソッドで「こんにちは」を表示",
           "    console.log('こんにちは');",
           "}",
-          "// 関数を動かす",
+          "// greet関数を呼び出す",
           "greet();"
         ],
       "lineHints": [

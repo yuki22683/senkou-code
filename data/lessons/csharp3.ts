@@ -45,8 +45,8 @@ export const csharp3Data = {
           "content": "# 非同期メソッドの戻り値の型\\n\\n非同期メソッドは**Task**（タスク）という型を返します。Taskは「処理中」か「完了」かを表す「約束」のようなものです。\\n\\n**戻り値のパターン：**\\n```csharp\\n// 戻り値なし（voidの代わり）\\nasync Task DoWorkAsync()\\n\\n// 値を返す（Task<型>）\\nasync Task<int> GetValueAsync()\\n\\n// イベントハンドラ用（特殊）\\nasync void OnClick()\\n```\\n\\n**コード例：**\\n```csharp\\nasync Task<string> GetDataAsync() {\\n    await Task.Delay(1000);  // 1秒待つ\\n    return \"Done!\";          // 結果を返す\\n}\\n```\\n\\n**ポイント：**\\n- asyncメソッドの中でawaitを使う\\n- awaitで待っている間、他の処理が進められる"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでTasks名前空間をインポート\\nusing System.Threading.Tasks;\\n\\n// Programクラスを定義\\nclass Program {\\n    // async Taskでエントリーポイント\\n    static async Task Main() {\\n        // awaitで非同期処理を待機\\n        var result = await CalculateAsync(5);\\n        // resultを表示\\n        Console.WriteLine(result);\\n    // ブロックを閉じる\\n    }\\n    \\n    // 整数を返す非同期メソッドを定義\\n    static async Task<int> CalculateAsync(int n) {\\n        // 遅延を待機\\n        await Task.Delay(100);\\n        // nの2乗を返す\\n        return n * n;\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでTasks名前空間をインポート\\nusing ___.___.____;\\n\n// Programクラスを定義\\nclass ___ {\\n    // async Taskでエントリーポイント\\n    static ___ ___ ___() {\\n        // awaitで非同期処理を待機\\n        var ___ = ___ ___(___);\\n        // resultを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n    \n    // 整数を返す非同期メソッドを定義\\n    static ___ ___<___> ___(int ___) {\\n        // 遅延を待機\\n        ___ ___.___(___)___\\n        // nの2乗を返す\\n        return ___ * ___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___", "correctLines": [
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでTasks名前空間をインポート\\nusing System.Threading.Tasks;\\n\\n// Programクラスを定義\\nclass Program {\\n    // async Taskでエントリーポイント\\n    static async Task Main() {\\n        // awaitで非同期処理を待機\\n        var result = await CalculateAsync(5);\\n        // ConsoleのWriteLineでresultを出力\\n        Console.WriteLine(result);\\n    // ブロックを閉じる\\n    }\\n    \\n    // 整数を返す非同期メソッドを定義\\n    static async Task<int> CalculateAsync(int n) {\\n        // 遅延を待機\\n        await Task.Delay(100);\\n        // nの2乗を返す\\n        return n * n;\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでTasks名前空間をインポート\\nusing ___.___.____;\\n\n// Programクラスを定義\\nclass ___ {\\n    // async Taskでエントリーポイント\\n    static ___ ___ ___() {\\n        // awaitで非同期処理を待機\\n        var ___ = ___ ___(___);\\n        // ConsoleのWriteLineでresultを出力\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n    \n    // 整数を返す非同期メソッドを定義\\n    static ___ ___<___> ___(int ___) {\\n        // 遅延を待機\\n        ___ ___.___(___)___\\n        // nの2乗を返す\\n        return ___ * ___;\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___", "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
           "// usingでTasks名前空間をインポート",
@@ -58,7 +58,7 @@ export const csharp3Data = {
           "    static async Task Main() {",
           "        // awaitで非同期処理を待機",
           "        var result = await CalculateAsync(5);",
-          "        // resultを表示",
+          "        // ConsoleのWriteLineでresultを出力",
           "        Console.WriteLine(result);",
           "    // ブロックを閉じる",
           "    }",
@@ -130,8 +130,8 @@ export const csharp3Data = {
           "content": "# OrderByDescending（大きい順）\\n\\n**降順**は「大きい順」のことです。`OrderByDescending`（オーダーバイ・ディセンディング）を使います。\\n\\n**昇順と降順の違い：**\\n- `OrderBy` : 1, 2, 3, 4, 5（小さい順）\\n- `OrderByDescending` : 5, 4, 3, 2, 1（大きい順）\\n\\n**コード例：**\\n```csharp\\nvar nums = new[] { 3, 1, 4, 1, 5 };\\n\\n// 昇順（小さい順）\\nvar asc = nums.OrderBy(x => x);      // 1,1,3,4,5\\n\\n// 降順（大きい順）\\nvar desc = nums.OrderByDescending(x => x);  // 5,4,3,1,1\\n```"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 3 を含む配列を定義\\n        var nums = new[] { 3, 1, 4, 1, 5 };\\n        // OrderByでソート\\n        var sorted = nums.OrderBy(x => x);\\n        // Joinで \",\" を区切り文字として結果を表示\\n        Console.WriteLine(string.Join(\",\", sorted));\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 3 を含む配列を定義\\n        var ___ = new[] { ___, ___, ___, ___, ___ };\\n        // OrderByでソート\\n        var ___ = ___.___(___ => ___);\\n        // Joinで \",\" を区切り文字として結果を表示\\n        ___.___(___.___(\"___\", ___));\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 3 を含む配列を定義\\n        var nums = new[] { 3, 1, 4, 1, 5 };\\n        // OrderByでソート\\n        var sorted = nums.OrderBy(x => x);\\n        // ConsoleのWriteLineでJoin（区切り文字\",\"）の結果を出力\\n        Console.WriteLine(string.Join(\",\", sorted));\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 3 を含む配列を定義\\n        var ___ = new[] { ___, ___, ___, ___, ___ };\\n        // OrderByでソート\\n        var ___ = ___.___(___ => ___);\\n        // ConsoleのWriteLineでJoin（区切り文字\",\"）の結果を出力\\n        ___.___(___.___(\"___\", ___));\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -146,7 +146,7 @@ export const csharp3Data = {
           "        var nums = new[] { 3, 1, 4, 1, 5 };",
           "        // OrderByでソート",
           "        var sorted = nums.OrderBy(x => x);",
-          "        // Joinで \",\" を区切り文字として結果を表示",
+          "        // ConsoleのWriteLineでJoin（区切り文字\",\"）の結果を出力",
           "        Console.WriteLine(string.Join(\",\", sorted));",
           "    // ブロックを閉じる",
           "    }",
@@ -202,8 +202,8 @@ export const csharp3Data = {
           "content": "# 条件を指定して最初の要素を取得\\n\\n`First()` や `FirstOrDefault()` には条件を指定することもできます。\\n\\n**コード例（最初の偶数を取得）：**\\n```csharp\\nvar nums = new[] { 1, 3, 4, 6, 7 };\\nvar even = nums.First(x => x % 2 == 0);  // 4\\n```\\n\\n**解説：**\\n1. `x => x % 2 == 0` は「2で割ったあまりが0（＝偶数）」という条件\\n2. 条件に合う最初の要素「4」が返される\\n\\n**デフォルト値の種類：**\\n- int : 0\\n- string : null\\n- bool : false"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 空の配列を定義\\n        var nums = new int[] {};\\n        // FirstOrDefaultで空の場合はデフォルト値\\n        var result = nums.FirstOrDefault();\\n        // resultを表示\\n        Console.WriteLine(result);\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 空の配列を定義\\n        var ___ = new ___[] {};\\n        // FirstOrDefaultで空の場合はデフォルト値\\n        var ___ = ___.___();\\n        // resultを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 空の配列を定義\\n        var nums = new int[] {};\\n        // FirstOrDefaultで空の場合はデフォルト値\\n        var result = nums.FirstOrDefault();\\n        // ConsoleのWriteLineでresultを出力\\n        Console.WriteLine(result);\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 空の配列を定義\\n        var ___ = new ___[] {};\\n        // FirstOrDefaultで空の場合はデフォルト値\\n        var ___ = ___.___();\\n        // ConsoleのWriteLineでresultを出力\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -218,7 +218,7 @@ export const csharp3Data = {
           "        var nums = new int[] {};",
           "        // FirstOrDefaultで空の場合はデフォルト値",
           "        var result = nums.FirstOrDefault();",
-          "        // resultを表示",
+          "        // ConsoleのWriteLineでresultを出力",
           "        Console.WriteLine(result);",
           "    // ブロックを閉じる",
           "    }",
@@ -274,8 +274,8 @@ export const csharp3Data = {
           "content": "# 全ての要素が条件を満たすか確認\\n\\n**All**（オール）は「**全ての**要素が条件を満たすか？」をチェックします。全部満たせばtrue、1つでも満たさなければfalseです。\\n\\n**身近な例え：**\\n「クラス**全員**が宿題を出しましたか？」という質問と同じです。全員出していれば「はい」、1人でも出していなければ「いいえ」です。\\n\\n**コード例（全部プラスの数か確認）：**\\n```csharp\\nvar nums = new[] { 1, 2, 3 };\\nbool allPositive = nums.All(x => x > 0);  // true\\n```\\n\\n**Any と All の違い：**\\n- Any : 1つでもOKなら true\\n- All : 全部OKなら true"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 1 を含む配列を定義\\n        var nums = new[] { 1, 2, 3, 4, 5 };\\n        // Allで全要素が条件を満たすかチェック\\n        var allPositive = nums.All(x => x > 0);\\n        // allPositiveを表示\\n        Console.WriteLine(allPositive);\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 1 を含む配列を定義\\n        var ___ = new[] { ___, ___, ___, ___, ___ };\\n        // Allで全要素が条件を満たすかチェック\\n        var ___ = ___.___(___ => ___ > ___);\\n        // allPositiveを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 1 を含む配列を定義\\n        var nums = new[] { 1, 2, 3, 4, 5 };\\n        // Allで全要素が条件を満たすかチェック\\n        var allPositive = nums.All(x => x > 0);\\n        // ConsoleのWriteLineでallPositiveを出力\\n        Console.WriteLine(allPositive);\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 1 を含む配列を定義\\n        var ___ = new[] { ___, ___, ___, ___, ___ };\\n        // Allで全要素が条件を満たすかチェック\\n        var ___ = ___.___(___ => ___ > ___);\\n        // ConsoleのWriteLineでallPositiveを出力\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -290,7 +290,7 @@ export const csharp3Data = {
           "        var nums = new[] { 1, 2, 3, 4, 5 };",
           "        // Allで全要素が条件を満たすかチェック",
           "        var allPositive = nums.All(x => x > 0);",
-          "        // allPositiveを表示",
+          "        // ConsoleのWriteLineでallPositiveを出力",
           "        Console.WriteLine(allPositive);",
           "    // ブロックを閉じる",
           "    }",
@@ -346,8 +346,8 @@ export const csharp3Data = {
           "content": "# 平均値を出す\\n\\n**Average**（アベレージ）は、全ての要素の「平均」を返します。\\n\\n**身近な例え：**\\nクラス全員のテストの点数を足して、人数で割って平均点を出すのと同じです。\\n\\n**コード例：**\\n```csharp\\nvar nums = new[] { 10, 20, 30 };\\nvar avg = nums.Average();  // 20.0\\n```\\n\\n**ポイント：**\\n- Averageの結果は小数（double型）で返される\\n- 空のコレクションでAverageを呼ぶとエラーになる\\n\\n**その他の集計メソッド：**\\n- `Sum()` : 合計\\n- `Average()` : 平均\\n- `Max()` : 最大値\\n- `Min()` : 最小値\\n- `Count()` : 要素数"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 10 を含む配列を定義\\n        var nums = new[] { 10, 20, 30 };\\n        // Sumで合計を計算\\n        var total = nums.Sum();\\n        // totalを表示\\n        Console.WriteLine(total);\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 10 を含む配列を定義\\n        var ___ = new[] { ___, ___, ___ };\\n        // Sumで合計を計算\\n        var ___ = ___.___();\\n        // totalを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでLinq名前空間をインポート\\nusing System.Linq;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // 10 を含む配列を定義\\n        var nums = new[] { 10, 20, 30 };\\n        // Sumで合計を計算\\n        var total = nums.Sum();\\n        // ConsoleのWriteLineでtotalを出力\\n        Console.WriteLine(total);\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでLinq名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // 10 を含む配列を定義\\n        var ___ = new[] { ___, ___, ___ };\\n        // Sumで合計を計算\\n        var ___ = ___.___();\\n        // ConsoleのWriteLineでtotalを出力\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -362,7 +362,7 @@ export const csharp3Data = {
           "        var nums = new[] { 10, 20, 30 };",
           "        // Sumで合計を計算",
           "        var total = nums.Sum();",
-          "        // totalを表示",
+          "        // ConsoleのWriteLineでtotalを出力",
           "        Console.WriteLine(total);",
           "    // ブロックを閉じる",
           "    }",
@@ -502,8 +502,8 @@ export const csharp3Data = {
           "content": "# TryGetValue（トライゲットバリュー）\\n\\n存在しないキーでアクセスするとエラーになります。`TryGetValue` を使うと安全に取得できます。\\n\\n**コード例：**\\n```csharp\\n// 安全に値を取得\\nif (dict.TryGetValue(\"apple\", out var price)) {\\n    Console.WriteLine(price);  // あったら表示\\n} else {\\n    Console.WriteLine(\"見つかりません\");\\n}\\n```\\n\\n**解説：**\\n- `TryGetValue` は「キーがあればtrue、なければfalse」を返す\\n- `out var price` で、見つかった値を `price` に入れる\\n- エラーにならず、安全にキーの有無をチェックできる\\n\\n**ポイント：**\\n`dict[\"存在しないキー\"]` はエラー！`TryGetValue` なら安全。"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでCollections.Generic名前空間をインポート\\nusing System.Collections.Generic;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Dictionaryでキーと値の辞書\\n        var dict = new Dictionary<string, int>();\\n        // キー\"a\"に値を設定\\n        dict[\"a\"] = 1;\\n        // キー\"b\"に値を設定\\n        dict[\"b\"] = 2;\\n        // キー\"a\"の値を表示\\n        Console.WriteLine(dict[\"a\"]);\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでCollections.Generic名前空間をインポート\\nusing ___.___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // Dictionaryでキーと値の辞書\\n        var ___ = new ___<___, ___>();\\n        // キー\"a\"に値を設定\\n        ___[\"___\"] = ___;\\n        // キー\"b\"に値を設定\\n        ___[\"___\"] = ___;\\n        // キー\"a\"の値を表示\\n        ___.___(___[\"___\"]);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでCollections.Generic名前空間をインポート\\nusing System.Collections.Generic;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Dictionaryでキーと値の辞書\\n        var dict = new Dictionary<string, int>();\\n        // キー\"a\"に値を設定\\n        dict[\"a\"] = 1;\\n        // キー\"b\"に値を設定\\n        dict[\"b\"] = 2;\\n        // ConsoleのWriteLineでdictのキー「a」の値を出力\\n        Console.WriteLine(dict[\"a\"]);\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでCollections.Generic名前空間をインポート\\nusing ___.___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // Dictionaryでキーと値の辞書\\n        var ___ = new ___<___, ___>();\\n        // キー\"a\"に値を設定\\n        ___[\"___\"] = ___;\\n        // キー\"b\"に値を設定\\n        ___[\"___\"] = ___;\\n        // ConsoleのWriteLineでdictのキー「a」の値を出力\\n        ___.___(___[\"___\"]);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -520,7 +520,7 @@ export const csharp3Data = {
           "        dict[\"a\"] = 1;",
           "        // キー\"b\"に値を設定",
           "        dict[\"b\"] = 2;",
-          "        // キー\"a\"の値を表示",
+          "        // ConsoleのWriteLineでdictのキー「a」の値を出力",
           "        Console.WriteLine(dict[\"a\"]);",
           "    // ブロックを閉じる",
           "    }",
@@ -646,8 +646,8 @@ export const csharp3Data = {
           "content": "# 元のデータを変えずにコピー\\n\\n`with` を使うと、一部のプロパティだけ変更した**新しいコピー**を作れます。元のデータは変わりません（イミュータブル：不変）。\\n\\n**コード例：**\\n```csharp\\nvar p1 = new Person(\"Alice\", 25);\\nvar p2 = p1 with { Age = 26 };  // 年齢だけ変更\\n\\n// p1 は (\"Alice\", 25) のまま\\n// p2 は (\"Alice\", 26)\\n```\\n\\n**解説：**\\n1. `p1 with { Age = 26 }` で「p1をコピーして、Ageだけ26に変える」\\n2. p1自体は変更されない（不変）\\n3. 新しいオブジェクト p2 が作られる\\n\\n**ポイント：**\\nrecordはデータを安全に扱いたいときに便利！うっかり変更してしまう心配がありません。"
         }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// recordで値型を定義\\nrecord Point(int X, int Y);\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Pointインスタンスを作成（X=10, Y=20）\\n        var p = new Point(10, 20);\\n        // pを表示\\n        Console.WriteLine(p);\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n\n// recordで値型を定義\\n___ ___(int ___, int ___);\\n\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // Pointインスタンスを作成（X=10, Y=20）\\n        var ___ = new ___(___, ___);\\n        // pを表示\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___", "correctLines": [
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n\\n// recordで値型を定義\\nrecord Point(int X, int Y);\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Pointインスタンスを作成（X=10, Y=20）\\n        var p = new Point(10, 20);\\n        // ConsoleのWriteLineでpを出力\\n        Console.WriteLine(p);\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n\n// recordで値型を定義\\n___ ___(int ___, int ___);\\n\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // Pointインスタンスを作成（X=10, Y=20）\\n        var ___ = new ___(___, ___);\\n        // ConsoleのWriteLineでpを出力\\n        ___.___(___);\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___", "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
           "",
@@ -660,7 +660,7 @@ export const csharp3Data = {
           "    static void Main() {",
           "        // Pointインスタンスを作成（X=10, Y=20）",
           "        var p = new Point(10, 20);",
-          "        // pを表示",
+          "        // ConsoleのWriteLineでpを出力",
           "        Console.WriteLine(p);",
           "    // ブロックを閉じる",
           "    }",
@@ -715,8 +715,8 @@ export const csharp3Data = {
                       "content": "# C# 8.0以降の書き方\\n\\n```csharp\\nusing var file = File.OpenRead(\"test.txt\");\\n// ファイルを使う\\n// スコープを抜けると自動解放\\n```\\n\\n波括弧なしで書けます！"
               }
       ],
-      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでIO名前空間をインポート\\nusing System.IO;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // usingで自動解放\\n        using var writer = new StringWriter();\\n        // 文字列を書き込む\\n        writer.WriteLine(\"こんにちは\");\\n        // 書き込んだ内容を表示\\n        Console.WriteLine(writer.ToString().Trim());\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでIO名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // usingで自動解放\\n        using ___ ___ = new ___();\\n        // 文字列を書き込む\\n        ___.___(\"___\");\\n        // 書き込んだ内容を表示\\n        ___.___(___.___().___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
+      "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでIO名前空間をインポート\\nusing System.IO;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // usingで自動解放\\n        using var writer = new StringWriter();\\n        // 文字列を書き込む\\n        writer.WriteLine(\"こんにちは\");\\n        // ConsoleのWriteLineで書き込んだ内容を出力\\n        Console.WriteLine(writer.ToString().Trim());\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// usingでSystem名前空間をインポート\\nusing ___;\\n// usingでIO名前空間をインポート\\nusing ___.____;\\n___\\n// Programクラスを定義\\nclass ___ {\\n    // Mainメソッドを定義\\n    static ___ ___() {\\n        // usingで自動解放\\n        using ___ ___ = new ___();\\n        // 文字列を書き込む\\n        ___.___(\"___\");\\n        // ConsoleのWriteLineで書き込んだ内容を出力\\n        ___.___(___.___().___());\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// usingでSystem名前空間をインポート",
           "using System;",
@@ -731,7 +731,7 @@ export const csharp3Data = {
           "        using var writer = new StringWriter();",
           "        // 文字列を書き込む",
           "        writer.WriteLine(\"こんにちは\");",
-          "        // 書き込んだ内容を表示",
+          "        // ConsoleのWriteLineで書き込んだ内容を出力",
           "        Console.WriteLine(writer.ToString().Trim());",
           "    // ブロックを閉じる",
           "    }",

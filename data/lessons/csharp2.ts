@@ -45,14 +45,14 @@ export const csharp2Data = {
           "content": "# コロン「:」で継承を表す\\n\\n子クラスを作るときは、クラス名の後に `: 親クラス名` と書きます。\\n\\n**コード例（動物クラスを継承）：**\\n```csharp\\n// 親クラス：動物\\nclass Animal {\\n    public void Eat() {\\n        Console.WriteLine(\"eating\");\\n    }\\n}\\n\\n// 子クラス：犬（Animalを継承）\\nclass Dog : Animal { }\\n```\\n\\n**解説：**\\n1. `Animal` クラスに `Eat()` メソッドを定義\\n2. `Dog : Animal` で「DogはAnimalを継承する」と宣言\\n3. Dog は何も書かなくても、自動的に `Eat()` が使える！\\n\\nこれが継承の力です。親クラスの機能を、子クラスがそのまま使えます。"
         }
       ],
-      "correctCode": "// Vehicleクラスを定義\\nclass Vehicle {\\n    // Moveメソッドを定義\\n    public void Move() {\\n        // 画面に出力\\n        Console.WriteLine(\"移動中\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n// :で継承\\nclass Car : Vehicle { }\\n\\n// Carインスタンスを作成\\nCar c = new Car();\\n// Moveメソッドを呼び出し\\nc.Move();",
-      "holeyCode": "// Vehicleクラスを定義\\nclass ___ {\\n    // Moveメソッドを定義\\n    public void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// :で継承\\nclass ___ : ___ { }\\n\\n// Carインスタンスを作成\\n___ ___ = new ___();\\n// Moveメソッドを呼び出し\\n___.___();",
+      "correctCode": "// Vehicleクラスを定義\\nclass Vehicle {\\n    // Moveメソッドを定義\\n    public void Move() {\\n        // ConsoleのWriteLineで\"移動中\"を出力\\n        Console.WriteLine(\"移動中\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n// :で継承\\nclass Car : Vehicle { }\\n\\n// Carインスタンスを作成\\nCar c = new Car();\\n// cのMoveメソッドを呼び出し\\nc.Move();",
+      "holeyCode": "// Vehicleクラスを定義\\nclass ___ {\\n    // Moveメソッドを定義\\n    public void ___() {\\n        // ConsoleのWriteLineで\"移動中\"を出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// :で継承\\nclass ___ : ___ { }\\n\\n// Carインスタンスを作成\\n___ ___ = new ___();\\n// cのMoveメソッドを呼び出し\\n___.___();",
       "correctLines": [
           "// Vehicleクラスを定義",
           "class Vehicle {",
           "    // Moveメソッドを定義",
           "    public void Move() {",
-          "        // 画面に出力",
+          "        // ConsoleのWriteLineで\"移動中\"を出力",
           "        Console.WriteLine(\"移動中\");",
           "    // ブロックを閉じる",
           "    }",
@@ -63,7 +63,7 @@ export const csharp2Data = {
           "",
           "// Carインスタンスを作成",
           "Car c = new Car();",
-          "// Moveメソッドを呼び出し",
+          "// cのMoveメソッドを呼び出し",
           "c.Move();"
         ],
       "lineHints": [
@@ -111,14 +111,14 @@ export const csharp2Data = {
           "content": "# 仮想メソッド（かそうメソッド）の仕組み\\n\\n親クラスで `virtual` をつけたメソッドは、子クラスで `override` して上書きできます。\\n\\n**コード例（動物の鳴き声を変える）：**\\n```csharp\\n// 親クラス\\nclass Animal {\\n    public virtual void Speak() {\\n        Console.WriteLine(\"...\");\\n    }\\n}\\n\\n// 子クラス：猫\\nclass Cat : Animal {\\n    public override void Speak() {\\n        Console.WriteLine(\"meow\");\\n    }\\n}\\n```\\n\\n**解説：**\\n1. 親の `Speak()` に `virtual` をつけて「上書きOK」にする\\n2. 子クラスで `override` をつけて、違う動きを定義する\\n3. Cat の `Speak()` を呼ぶと「meow」と表示される！"
         }
       ],
-      "correctCode": "// Shapeクラスを定義\\nclass Shape {\\n    // virtualで仮想メソッド\\n    public virtual void Draw() {\\n        // 画面に出力\\n        Console.WriteLine(\"shape\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n// Shapeを継承\\nclass Circle : Shape {\\n    // overrideで親メソッドを上書き\\n    public override void Draw() {\\n        // 画面に出力\\n        Console.WriteLine(\"circle\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// Circleインスタンスを作成\\nCircle c = new Circle();\\n// Drawメソッドを呼び出し\\nc.Draw();",
-      "holeyCode": "// Shapeクラスを定義\\nclass ___ {\\n    // virtualで仮想メソッド\\n    public virtual void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// Shapeを継承\\nclass ___ : ___ {\\n    // overrideで親メソッドを上書き\\n    public override void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// Circleインスタンスを作成\\n___ ___ = new ___();\\n// Drawメソッドを呼び出し\\n___.___();",
+      "correctCode": "// Shapeクラスを定義\\nclass Shape {\\n    // virtualでDrawメソッドを定義\\n    public virtual void Draw() {\\n        // ConsoleのWriteLineで\"shape\"を出力\\n        Console.WriteLine(\"shape\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n// Shapeを継承\\nclass Circle : Shape {\\n    // overrideでDrawメソッドを上書き\\n    public override void Draw() {\\n        // ConsoleのWriteLineで\"circle\"を出力\\n        Console.WriteLine(\"circle\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// Circleインスタンスを作成\\nCircle c = new Circle();\\n// cのDrawメソッドを呼び出し\\nc.Draw();",
+      "holeyCode": "// Shapeクラスを定義\\nclass ___ {\\n    // virtualでDrawメソッドを定義\\n    public virtual void ___() {\\n        // ConsoleのWriteLineで\"shape\"を出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n// Shapeを継承\\nclass ___ : ___ {\\n    // overrideでDrawメソッドを上書き\\n    public override void ___() {\\n        // ConsoleのWriteLineで\"circle\"を出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// Circleインスタンスを作成\\n___ ___ = new ___();\\n// cのDrawメソッドを呼び出し\\n___.___();",
       "correctLines": [
           "// Shapeクラスを定義",
           "class Shape {",
-          "    // virtualで仮想メソッド",
+          "    // virtualでDrawメソッドを定義",
           "    public virtual void Draw() {",
-          "        // 画面に出力",
+          "        // ConsoleのWriteLineで\"shape\"を出力",
           "        Console.WriteLine(\"shape\");",
           "    // ブロックを閉じる",
           "    }",
@@ -126,9 +126,9 @@ export const csharp2Data = {
           "}",
           "// Shapeを継承",
           "class Circle : Shape {",
-          "    // overrideで親メソッドを上書き",
+          "    // overrideでDrawメソッドを上書き",
           "    public override void Draw() {",
-          "        // 画面に出力",
+          "        // ConsoleのWriteLineで\"circle\"を出力",
           "        Console.WriteLine(\"circle\");",
           "    // ブロックを閉じる",
           "    }",
@@ -137,7 +137,7 @@ export const csharp2Data = {
           "",
           "// Circleインスタンスを作成",
           "Circle c = new Circle();",
-          "// Drawメソッドを呼び出し",
+          "// cのDrawメソッドを呼び出し",
           "c.Draw();"
         ],
       "lineHints": [
@@ -196,8 +196,8 @@ export const csharp2Data = {
           "content": "# interfaceキーワードで定義する\\n\\n`interface` で定義し、クラスで実装（じっそう：実際に中身を作る）します。\\n\\n**命名ルール：**\\n名前は `I`（アイ）から始めるのがC#のお約束です（例：IGreeter、IRunner）\\n\\n**コード例（あいさつインターフェース）：**\\n```csharp\\n// インターフェースを定義\\ninterface IGreeter {\\n    void Greet();  // 中身は書かない（約束だけ）\\n}\\n\\n// インターフェースを実装\\nclass Person : IGreeter {\\n    public void Greet() {\\n        Console.WriteLine(\"Hello!\");\\n    }\\n}\\n```\\n\\n**解説：**\\n1. `interface IGreeter` で「Greet()を持つこと」という約束を定義\\n2. `Person : IGreeter` で「Personはこの約束を守る」と宣言\\n3. Person は必ず `Greet()` を実装しないとエラーになる"
         }
       ],
-      "correctCode": "// interfaceでIRunnerインターフェースを定義\\ninterface IRunner {\\n    // Runメソッドを宣言\\n    void Run();\\n// ブロックを閉じる\\n}\\n// IRunnerを実装\\nclass Robot : IRunner {\\n    // Runメソッドを実装\\n    public void Run() {\\n        // 画面に出力\\n        Console.WriteLine(\"running\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// Robotインスタンスを作成\\nRobot r = new Robot();\\n// Runメソッドを呼び出し\\nr.Run();",
-      "holeyCode": "// interfaceでIRunnerインターフェースを定義\\ninterface ___ {\\n    // Runメソッドを宣言\\n    void ___();\\n// ブロックを閉じる\\n___\\n// IRunnerを実装\\nclass ___ : ___ {\\n    // Runメソッドを実装\\n    public void ___() {\\n        // 画面に出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// Robotインスタンスを作成\\n___ ___ = new ___();\\n// Runメソッドを呼び出し\\n___.___();",
+      "correctCode": "// interfaceでIRunnerインターフェースを定義\\ninterface IRunner {\\n    // Runメソッドを宣言\\n    void Run();\\n// ブロックを閉じる\\n}\\n// IRunnerを実装\\nclass Robot : IRunner {\\n    // Runメソッドを実装\\n    public void Run() {\\n        // ConsoleのWriteLineで\"running\"を出力\\n        Console.WriteLine(\"running\");\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// Robotインスタンスを作成\\nRobot r = new Robot();\\n// rのRunメソッドを呼び出し\\nr.Run();",
+      "holeyCode": "// interfaceでIRunnerインターフェースを定義\\ninterface ___ {\\n    // Runメソッドを宣言\\n    void ___();\\n// ブロックを閉じる\\n___\\n// IRunnerを実装\\nclass ___ : ___ {\\n    // Runメソッドを実装\\n    public void ___() {\\n        // ConsoleのWriteLineで\"running\"を出力\\n        ___.___(\"___\");\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// Robotインスタンスを作成\\n___ ___ = new ___();\\n// rのRunメソッドを呼び出し\\n___.___();",
       "correctLines": [
           "// interfaceでIRunnerインターフェースを定義",
           "interface IRunner {",
@@ -209,7 +209,7 @@ export const csharp2Data = {
           "class Robot : IRunner {",
           "    // Runメソッドを実装",
           "    public void Run() {",
-          "        // 画面に出力",
+          "        // ConsoleのWriteLineで\"running\"を出力",
           "        Console.WriteLine(\"running\");",
           "    // ブロックを閉じる",
           "    }",
@@ -218,7 +218,7 @@ export const csharp2Data = {
           "",
           "// Robotインスタンスを作成",
           "Robot r = new Robot();",
-          "// Runメソッドを呼び出し",
+          "// rのRunメソッドを呼び出し",
           "r.Run();"
         ],
       "lineHints": [
@@ -273,21 +273,21 @@ export const csharp2Data = {
           "content": "# { get; set; } で簡単に作る\\n\\n`{ get; set; }` と書くだけで、シンプルなプロパティが作れます。これを「自動プロパティ」と呼びます。\\n\\n**コード例（名前を持つPersonクラス）：**\\n```csharp\\nclass Person {\\n    public string Name { get; set; }\\n}\\n\\nPerson p = new Person();\\np.Name = \"Taro\";           // set で値を設定\\nConsole.WriteLine(p.Name); // get で値を取得\\n```\\n=> Taro\\n\\n**解説：**\\n1. `string Name { get; set; }` で「名前」プロパティを定義\\n2. `p.Name = \"Taro\"` で値を設定（setが動く）\\n3. `p.Name` で値を取得（getが動く）\\n\\n**ポイント：**\\n変数のように使えるけど、実は裏でgetとsetが動いています！"
         }
       ],
-      "correctCode": "// Itemクラスを定義\\nclass Item {\\n    // getで値を取得\\n    public int Price { get; set; }\\n// ブロックを閉じる\\n}\\n\\n// Itemインスタンスを作成\\nItem item = new Item();\\n// Priceに値を設定\\nitem.Price = 500;\\n// Priceを表示\\nConsole.WriteLine(item.Price);",
-      "holeyCode": "// Itemクラスを定義\\nclass ___ {\\n    // getで値を取得\\n    public int ___ { get; ___; }\\n// ブロックを閉じる\\n___\\n\\n// Itemインスタンスを作成\\n___ ___ = new ___();\\n// Priceに値を設定\\n___.___ = ___;\\n// Priceを表示\\n___.___(___.___ );",
+      "correctCode": "// Itemクラスを定義\\nclass Item {\\n    // get/setでPriceプロパティを定義\\n    public int Price { get; set; }\\n// ブロックを閉じる\\n}\\n\\n// Itemインスタンスを作成\\nItem item = new Item();\\n// itemのPriceに500を設定\\nitem.Price = 500;\\n// ConsoleのWriteLineでitem.Priceを出力\\nConsole.WriteLine(item.Price);",
+      "holeyCode": "// Itemクラスを定義\\nclass ___ {\\n    // get/setでPriceプロパティを定義\\n    public int ___ { get; ___; }\\n// ブロックを閉じる\\n___\\n\\n// Itemインスタンスを作成\\n___ ___ = new ___();\\n// itemのPriceに500を設定\\n___.___ = ___;\\n// ConsoleのWriteLineでitem.Priceを出力\\n___.___(___.___ );",
       "correctLines": [
           "// Itemクラスを定義",
           "class Item {",
-          "    // getで値を取得",
+          "    // get/setでPriceプロパティを定義",
           "    public int Price { get; set; }",
           "// ブロックを閉じる",
           "}",
           "",
           "// Itemインスタンスを作成",
           "Item item = new Item();",
-          "// Priceに値を設定",
+          "// itemのPriceに500を設定",
           "item.Price = 500;",
-          "// Priceを表示",
+          "// ConsoleのWriteLineでitem.Priceを出力",
           "Console.WriteLine(item.Price);"
         ],
       "lineHints": [
@@ -331,16 +331,16 @@ export const csharp2Data = {
           "content": "# Add（アッド）で要素を追加\\n\\n`Add()` メソッドで要素を追加し、配列と同じように `[番号]` でアクセスします。\\n\\n**コード例（くだものリストを作る）：**\\n```csharp\\n// 文字列のListを作る\\nList<string> fruits = new List<string>();\\n\\n// 要素を追加\\nfruits.Add(\"Apple\");   // 0番目\\nfruits.Add(\"Banana\");  // 1番目\\n\\n// アクセス\\nConsole.WriteLine(fruits[0]); // Apple\\nConsole.WriteLine(fruits[1]); // Banana\\n```\\n\\n**よく使うメソッド：**\\n- `Add(値)` : 末尾に追加\\n- `Remove(値)` : 値を削除\\n- `Count` : 要素数を取得"
         }
       ],
-      "correctCode": "// int型のListを作成\\nList<int> nums = new List<int>();\\n// Addで要素を追加\\nnums.Add(10);\\n// 2つ目の要素も追加\\nnums.Add(20);\\n// インデックス1の要素を表示\\nConsole.WriteLine(nums[1]);",
-      "holeyCode": "// int型のListを作成\\n___<___> ___ = new ___<___>();\\n// Addで要素を追加\\n___.___(___);\\n// 2つ目の要素も追加\\n___.___(___);\\n// インデックス1の要素を表示\\n___.___(___[___]);",
+      "correctCode": "// int型のListを作成\\nList<int> nums = new List<int>();\\n// numsにAddで10を追加\\nnums.Add(10);\\n// numsにAddで20を追加\\nnums.Add(20);\\n// ConsoleのWriteLineでnumsの2番目の要素を出力\\nConsole.WriteLine(nums[1]);",
+      "holeyCode": "// int型のListを作成\\n___<___> ___ = new ___<___>();\\n// numsにAddで10を追加\\n___.___(___);\\n// numsにAddで20を追加\\n___.___(___);\\n// ConsoleのWriteLineでnumsの2番目の要素を出力\\n___.___(___[___]);",
       "correctLines": [
           "// int型のListを作成",
           "List<int> nums = new List<int>();",
-          "// Addで要素を追加",
+          "// numsにAddで10を追加",
           "nums.Add(10);",
-          "// 2つ目の要素も追加",
+          "// numsにAddで20を追加",
           "nums.Add(20);",
-          "// インデックス1の要素を表示",
+          "// ConsoleのWriteLineでnumsの2番目の要素を出力",
           "Console.WriteLine(nums[1]);"
         ],
       "lineHints": [
@@ -379,16 +379,16 @@ export const csharp2Data = {
           "content": "# 条件に合う要素だけを取り出す\\n\\n`Where()` を使って、条件を満たす要素だけを取り出せます。\\n\\n**コード例（3より大きい数だけ取り出す）：**\\n```csharp\\nList<int> nums = new List<int> {1, 2, 3, 4, 5};\\nvar big = nums.Where(n => n > 3);\\nforeach (var n in big) {\\n    Console.WriteLine(n); // 4, 5\\n}\\n```\\n\\n**解説：**\\n1. `nums.Where(n => n > 3)` で「3より大きい」という条件で絞り込み\\n2. `n => n > 3` はラムダ式（後で詳しく学びます）で、各要素をチェックする\\n3. 条件を満たす 4 と 5 だけが残る\\n\\n**`=>` って何？：**\\n「〜するもの」という意味で、`n => n > 3` は「nが3より大きいかチェックする」と読みます。"
         }
       ],
-      "correctCode": "// int型のListを作成\\nList<int> nums = new List<int> {1, 5, 10, 15, 20};\\n// Whereで条件に合う要素を抽出\\nvar result = nums.Where(n => n >= 10);\\n// foreachでループ\\nforeach (var n in result) {\\n    // 画面に出力\\n    Console.WriteLine(n);\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// int型のListを作成\\n___<___> ___ = new ___<___> {___, ___, ___, ___, ___};\\n// Whereで条件に合う要素を抽出\\nvar ___ = ___.___(___=> ___ >= ___);\\n// foreachでループ\\nforeach (var ___ in ___) {\\n    // 画面に出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "// int型のListを作成\\nList<int> nums = new List<int> {1, 5, 10, 15, 20};\\n// numsからWhereで10以上の要素を抽出しresultに代入\\nvar result = nums.Where(n => n >= 10);\\n// foreachでresultをループ\\nforeach (var n in result) {\\n    // ConsoleのWriteLineでnを出力\\n    Console.WriteLine(n);\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// int型のListを作成\\n___<___> ___ = new ___<___> {___, ___, ___, ___, ___};\\n// numsからWhereで10以上の要素を抽出しresultに代入\\nvar ___ = ___.___(___=> ___ >= ___);\\n// foreachでresultをループ\\nforeach (var ___ in ___) {\\n    // ConsoleのWriteLineでnを出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// int型のListを作成",
           "List<int> nums = new List<int> {1, 5, 10, 15, 20};",
-          "// Whereで条件に合う要素を抽出",
+          "// numsからWhereで10以上の要素を抽出しresultに代入",
           "var result = nums.Where(n => n >= 10);",
-          "// foreachでループ",
+          "// foreachでresultをループ",
           "foreach (var n in result) {",
-          "    // 画面に出力",
+          "    // ConsoleのWriteLineでnを出力",
           "    Console.WriteLine(n);",
           "// ブロックを閉じる",
           "}"
@@ -431,16 +431,16 @@ export const csharp2Data = {
           "content": "# 各要素を加工する\\n\\n`Select()` で各要素に処理を適用し、新しいコレクションを作ります。\\n\\n**コード例（すべての数を2倍にする）：**\\n```csharp\\nList<int> nums = new List<int> {1, 2, 3};\\nvar doubled = nums.Select(n => n * 2);\\n// 結果: 2, 4, 6\\n```\\n\\n**解説：**\\n1. `nums.Select(n => n * 2)` で「各要素を2倍にする」と指示\\n2. 1 → 2、2 → 4、3 → 6 と変換される\\n3. 元のnumsは変わらず、新しいコレクションが作られる\\n\\n**ポイント：**\\n元のデータは変わらない！変換した結果が新しく作られます。"
         }
       ],
-      "correctCode": "// int型のListを作成\\nList<int> nums = new List<int> {1, 2, 3};\\n// numsの各要素を2乗してsquaredに代入\\nvar squared = nums.Select(n => n * n);\\n// foreachでループ\\nforeach (var n in squared) {\\n    // 画面に出力\\n    Console.WriteLine(n);\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// int型のListを作成\\n___<___> ___ = new ___<___> {___, ___, ___};\\n// numsの各要素を2乗してsquaredに代入\\nvar ___ = ___.___(___=> ___ * ___);\\n// foreachでループ\\nforeach (var ___ in ___) {\\n    // 画面に出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
+      "correctCode": "// int型のListを作成\\nList<int> nums = new List<int> {1, 2, 3};\\n// numsの各要素をSelectで2乗してsquaredに代入\\nvar squared = nums.Select(n => n * n);\\n// foreachでsquaredをループ\\nforeach (var n in squared) {\\n    // ConsoleのWriteLineでnを出力\\n    Console.WriteLine(n);\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// int型のListを作成\\n___<___> ___ = new ___<___> {___, ___, ___};\\n// numsの各要素をSelectで2乗してsquaredに代入\\nvar ___ = ___.___(___=> ___ * ___);\\n// foreachでsquaredをループ\\nforeach (var ___ in ___) {\\n    // ConsoleのWriteLineでnを出力\\n    ___.___(___);\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// int型のListを作成",
           "List<int> nums = new List<int> {1, 2, 3};",
-          "// numsの各要素を2乗してsquaredに代入",
+          "// numsの各要素をSelectで2乗してsquaredに代入",
           "var squared = nums.Select(n => n * n);",
-          "// foreachでループ",
+          "// foreachでsquaredをループ",
           "foreach (var n in squared) {",
-          "    // 画面に出力",
+          "    // ConsoleのWriteLineでnを出力",
           "    Console.WriteLine(n);",
           "// ブロックを閉じる",
           "}"
@@ -483,12 +483,12 @@ export const csharp2Data = {
           "content": "# 基本の形：(引数) => 処理\\n\\n引数が1つなら `()` を省略できます。\\n\\n**コード例（数を2乗する関数）：**\\n```csharp\\n// ラムダ式で関数を定義\\nFunc<int, int> square = x => x * x;\\n\\n// 使う\\nConsole.WriteLine(square(5)); // 25\\n```\\n\\n**解説：**\\n1. `Func<int, int>` は「intを受け取ってintを返す関数」の型\\n2. `x => x * x` は「xを受け取って、x * x を返す」という意味\\n3. `square(5)` で5を渡すと、5 * 5 = 25 が返る\\n\\n**いろいろな書き方：**\\n- `x => x * 2` : xを2倍にする\\n- `(a, b) => a + b` : aとbを足す（引数が複数のとき）\\n- `() => \"Hello\"` : 引数なしで\"Hello\"を返す"
         }
       ],
-      "correctCode": "// =>でラムダ式を定義\\nFunc<int, int> triple = x => x * 3;\\n// tripleメソッドを呼び出して表示\\nConsole.WriteLine(triple(7));",
-      "holeyCode": "// =>でラムダ式を定義\\n___<___, ___> ___ = ___ => ___ * ___;\\n// tripleメソッドを呼び出して表示\\n___.___(___( ___));",
+      "correctCode": "// =>でtripleラムダ式を定義\\nFunc<int, int> triple = x => x * 3;\\n// ConsoleのWriteLineでtriple関数（引数7）の結果を出力\\nConsole.WriteLine(triple(7));",
+      "holeyCode": "// =>でtripleラムダ式を定義\\n___<___, ___> ___ = ___ => ___ * ___;\\n// ConsoleのWriteLineでtriple関数（引数7）の結果を出力\\n___.___(___( ___));",
       "correctLines": [
-          "// =>でラムダ式を定義",
+          "// =>でtripleラムダ式を定義",
           "Func<int, int> triple = x => x * 3;",
-          "// tripleメソッドを呼び出して表示",
+          "// ConsoleのWriteLineでtriple関数（引数7）の結果を出力",
           "Console.WriteLine(triple(7));"
         ],
       "lineHints": [
@@ -523,16 +523,16 @@ export const csharp2Data = {
           "content": "# try で試し、catch で捕まえる\\n\\n`try`（トライ：試す）ブロックで処理を実行し、エラーは `catch`（キャッチ：捕まえる）で捕まえます。\\n\\n**コード例（数字に変換できないとき）：**\\n```csharp\\ntry {\\n    // \"abc\" は数字に変換できない！\\n    int x = int.Parse(\"abc\");\\n} catch (Exception e) {\\n    // エラーが起きたらここに来る\\n    Console.WriteLine(\"Error!\");\\n}\\n```\\n=> Error!\\n\\n**解説：**\\n1. `try { }` の中で「エラーが起きるかもしれない処理」を実行\\n2. エラーが起きたら、すぐに `catch { }` に移動\\n3. `catch` の中でエラーへの対処を書く\\n4. プログラムはクラッシュせずに続行できる"
         }
       ],
-      "correctCode": "// tryで例外処理を開始\\ntry {\\n    // 例外を投げる\\n    throw new Exception(\"oops\");\\n// catchで例外を捕捉\\n} catch (Exception e) {\\n    // 画面に出力\\n    Console.WriteLine(\"caught\");\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// tryで例外処理を開始\\n___ {\\n    // 例外を投げる\\n    ___ new ___(\"___\");\\n// catchで例外を捕捉\\n} ___ (___ ___) {\\n    // 画面に出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___",
+      "correctCode": "// tryで例外処理を開始\\ntry {\\n    // throwでException(\"oops\")を投げる\\n    throw new Exception(\"oops\");\\n// catchで例外を捕捉\\n} catch (Exception e) {\\n    // ConsoleのWriteLineで\"caught\"を出力\\n    Console.WriteLine(\"caught\");\\n// ブロックを閉じる\\n}",
+      "holeyCode": "// tryで例外処理を開始\\n___ {\\n    // throwでException(\"oops\")を投げる\\n    ___ new ___(\"___\");\\n// catchで例外を捕捉\\n} ___ (___ ___) {\\n    // ConsoleのWriteLineで\"caught\"を出力\\n    ___.___(\"___\");\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// tryで例外処理を開始",
           "try {",
-          "    // 例外を投げる",
+          "    // throwでException(\"oops\")を投げる",
           "    throw new Exception(\"oops\");",
           "// catchで例外を捕捉",
           "} catch (Exception e) {",
-          "    // 画面に出力",
+          "    // ConsoleのWriteLineで\"caught\"を出力",
           "    Console.WriteLine(\"caught\");",
           "// ブロックを閉じる",
           "}"
@@ -577,14 +577,14 @@ export const csharp2Data = {
           "content": "# null なら null を返す\\n\\n`?.`（クエスチョンドット）は、左側が `null` なら `null` を返し、そうでなければメンバにアクセスします。\\n\\n**コード例（文字列の長さを安全に取得）：**\\n```csharp\\nstring name = null;\\nint? len = name?.Length; // null（エラーにならない！）\\n\\nstring name2 = \"Hello\";\\nint? len2 = name2?.Length; // 5\\n```\\n\\n**解説：**\\n1. `name` が null なので、普通に `.Length` を使うとエラー\\n2. `name?.Length` なら、nullのときはnullを返して終わり\\n3. エラーを起こさず安全に処理できる\\n\\n**ポイント：**\\n結果が null になる可能性があるので、`int?`（null許容型）で受け取ります。"
         }
       ],
-      "correctCode": "// textに挨拶文を代入\\nstring text = \"こんにちは\";\\n// ?.でnull安全にアクセス\\nint? length = text?.Length;\\n// 画面に出力\\nConsole.WriteLine(length);",
-      "holeyCode": "// textに挨拶文を代入\\n___ ___ = \"___\";\\n// ?.でnull安全にアクセス\\nint? ___ = ___?.___;\\n// 画面に出力\\n___.___(___);",
+      "correctCode": "// textに\"こんにちは\"を代入\\nstring text = \"こんにちは\";\\n// ?.でtextのLengthにnull安全にアクセスしlengthに代入\\nint? length = text?.Length;\\n// ConsoleのWriteLineでlengthを出力\\nConsole.WriteLine(length);",
+      "holeyCode": "// textに\"こんにちは\"を代入\\n___ ___ = \"___\";\\n// ?.でtextのLengthにnull安全にアクセスしlengthに代入\\nint? ___ = ___?.___;\\n// ConsoleのWriteLineでlengthを出力\\n___.___(___);",
       "correctLines": [
-          "// textに挨拶文を代入",
+          "// textに\"こんにちは\"を代入",
           "string text = \"こんにちは\";",
-          "// ?.でnull安全にアクセス",
+          "// ?.でtextのLengthにnull安全にアクセスしlengthに代入",
           "int? length = text?.Length;",
-          "// 画面に出力",
+          "// ConsoleのWriteLineでlengthを出力",
           "Console.WriteLine(length);"
         ],
       "lineHints": [

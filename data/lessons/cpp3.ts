@@ -246,7 +246,7 @@ export const cpp3Data = {
           "content": "# コンパイル時 vs 実行時\\n\\n`const` と `constexpr` は似ていますが、違いがあります。\\n\\n**比較：**\\n```cpp\\n// const: 実行時に決まってもOK\\nconst int a = getValue();     // 関数を呼んで決まる\\n\\n// constexpr: コンパイル時に決まっていないとダメ\\nconstexpr int b = 10 * 10;    // コンパイル時に100と計算済み\\n```\\n\\n**わかりやすく言うと：**\\n- `const`: 「一度決めたら変えない」（いつ決まるかは問わない）\\n- `constexpr`: 「プログラムを動かす前に決まっている」\\n\\n**メリット：**\\n`constexpr` を使うと、プログラムの実行が速くなり、配列のサイズ指定などにも使えます。"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// constexpr int cubeでコンパイル時計算関数cubeを定義\\nconstexpr int cube(int x) {\\n    // returnでxの3乗を返す\\n    return x * x * x;\\n// cube関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // constexpr intでvalを宣言しcube(3)の結果（27）を代入\\n    constexpr int val = cube(3);\\n    // coutでvalを出力\\n    cout << val << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n\n// constexpr int cubeでコンパイル時計算関数cubeを定義\\n___ ___ ___(int ___) {\\n    // returnでxの3乗を返す\\n    ___ ___ * ___ * ___;\\n// cube関数を閉じる\\n___\\n\n// int mainでmain関数を定義\\n___ ___() {\\n    // constexpr intでvalを宣言しcube(3)の結果（27）を代入\\n    ___ ___ ___ = ___(___);\\n    // coutでvalを出力\\n    ___ << ___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___", "correctLines": [
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// constexpr int cubeでコンパイル時計算関数cubeを定義\\nconstexpr int cube(int x) {\\n    // returnでxの3乗を返す\\n    return x * x * x;\\n// cube関数を閉じる\\n}\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // constexpr intでvalを宣言しcube関数（引数3）の結果（27）を代入\\n    constexpr int val = cube(3);\\n    // coutでvalを出力\\n    cout << val << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n\n// constexpr int cubeでコンパイル時計算関数cubeを定義\\n___ ___ ___(int ___) {\\n    // returnでxの3乗を返す\\n    ___ ___ * ___ * ___;\\n// cube関数を閉じる\\n___\\n\n// int mainでmain関数を定義\\n___ ___() {\\n    // constexpr intでvalを宣言しcube関数（引数3）の結果（27）を代入\\n    ___ ___ ___ = ___(___);\\n    // coutでvalを出力\\n    ___ << ___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___", "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
           "// using namespace stdで標準名前空間を使用",
@@ -261,7 +261,7 @@ export const cpp3Data = {
           "",
           "// int mainでmain関数を定義",
           "int main() {",
-          "    // constexpr intでvalを宣言しcube(3)の結果（27）を代入",
+          "    // constexpr intでvalを宣言しcube関数（引数3）の結果（27）を代入",
           "    constexpr int val = cube(3);",
           "    // coutでvalを出力",
           "    cout << val << endl;",
@@ -472,7 +472,7 @@ export const cpp3Data = {
           "content": "# なぜ move が速いの？\\n\\n大きなデータを扱うとき、`move` はコピーより圧倒的に速いです。\\n\\n**身近な例え：**\\n100冊の本を別の部屋に移したいとき：\\n- **コピー**: 1冊ずつコピー機でコピーして運ぶ（遅い！）\\n- **ムーブ**: 本棚ごと運ぶ（速い！）\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvector<int> v1(1000000);  // 100万個の要素を持つベクター\\n\\n// コピー（遅い）: 100万個の要素を全部コピー\\nvector<int> v2 = v1;\\n\\n// ムーブ（速い）: 内部のポインタだけ移動\\nvector<int> v3 = move(v1);\\n// v1 は空になる\\n```\\n\\n**使いどころ：**\\n- 大きなデータを関数に渡すとき\\n- 元のデータをもう使わないとき\\n- 効率を重視するとき"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <string>でstringを読み込む\\n#include <string>\\n// #include <utility>でutilityを読み込む\\n#include <utility>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // stringでs1を宣言し「こんにちは」を代入\\n    string s1 = \"こんにちは\";\\n    // stringでs2を宣言しmove(s1)で所有権を移動\\n    string s2 = move(s1);\\n    // coutでs2を出力\\n    cout << s2 << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <string>でstringを読み込む\\n___\\n// #include <utility>でutilityを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // stringでs1を宣言し「こんにちは」を代入\\n    ___ ___ = \\\"___\\\";\\n    // stringでs2を宣言しmove(s1)で所有権を移動\\n    ___ ___ = ___(___);\\n    // coutでs2を出力\\n    ___ << ___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <string>でstringを読み込む\\n#include <string>\\n// #include <utility>でutilityを読み込む\\n#include <utility>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // stringでs1を宣言し「こんにちは」を代入\\n    string s1 = \"こんにちは\";\\n    // stringでs2を宣言しmove関数（引数s1）で所有権を移動\\n    string s2 = move(s1);\\n    // coutでs2を出力\\n    cout << s2 << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <string>でstringを読み込む\\n___\\n// #include <utility>でutilityを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // stringでs1を宣言し「こんにちは」を代入\\n    ___ ___ = \\\"___\\\";\\n    // stringでs2を宣言しmove関数（引数s1）で所有権を移動\\n    ___ ___ = ___(___);\\n    // coutでs2を出力\\n    ___ << ___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
@@ -487,7 +487,7 @@ export const cpp3Data = {
           "int main() {",
           "    // stringでs1を宣言し「こんにちは」を代入",
           "    string s1 = \"こんにちは\";",
-          "    // stringでs2を宣言しmove(s1)で所有権を移動",
+          "    // stringでs2を宣言しmove関数（引数s1）で所有権を移動",
           "    string s2 = move(s1);",
           "    // coutでs2を出力",
           "    cout << s2 << endl;",
@@ -553,7 +553,7 @@ export const cpp3Data = {
           "content": "# 値を安全に取り出す方法\\n\\n`optional` の中身を取り出す前に、「値があるか」をチェックします。\\n\\n**身近な例え：**\\nプレゼントの箱を開ける前に、「中身が入っているか」確認してから開けるようなものです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\noptional<int> result = find(v, 5);\\n\\n// 方法1: has_value() でチェック\\nif (result.has_value()) {\\n    cout << result.value() << endl;  // 中身を取り出す\\n}\\n\\n// 方法2: if文で直接チェック（省略形）\\nif (result) {\\n    cout << *result << endl;  // * で中身を取り出す\\n}\\n```\\n\\n**注意：**\\n値がないのに `value()` を呼ぶとエラーになります。必ずチェックしてから使いましょう！"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <optional>でoptionalを読み込む\\n#include <optional>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // optional<int>でoptを宣言し42を代入\\n    optional<int> opt = 42;\\n    // if opt.has_value()でoptに値があるか判定\\n    if (opt.has_value()) {\\n        // coutでoptの中身（42）を出力\\n        cout << opt.value() << endl;\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <optional>でoptionalを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n\n// int mainでmain関数を定義\\n___ ___() {\\n    // optional<int>でoptを宣言し42を代入\\n    ___<___> ___ = ___;\\n    // if opt.has_value()でoptに値があるか判定\\n    if (___.___()) {\\n        // coutでoptの中身（42）を出力\\n        ___ << ___.___() << ___;\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___", "correctLines": [
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <optional>でoptionalを読み込む\\n#include <optional>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // optional<int>でoptを宣言し42を代入\\n    optional<int> opt = 42;\\n    // ifでoptのhas_valueメソッドで値があるか判定\\n    if (opt.has_value()) {\\n        // coutでoptの中身（42）を出力\\n        cout << opt.value() << endl;\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <optional>でoptionalを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n\n// int mainでmain関数を定義\\n___ ___() {\\n    // optional<int>でoptを宣言し42を代入\\n    ___<___> ___ = ___;\\n    // ifでoptのhas_valueメソッドで値があるか判定\\n    if (___.___()) {\\n        // coutでoptの中身（42）を出力\\n        ___ << ___.___() << ___;\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___", "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
           "// #include <optional>でoptionalを読み込む",
@@ -565,7 +565,7 @@ export const cpp3Data = {
           "int main() {",
           "    // optional<int>でoptを宣言し42を代入",
           "    optional<int> opt = 42;",
-          "    // if opt.has_value()でoptに値があるか判定",
+          "    // ifでoptのhas_valueメソッドで値があるか判定",
           "    if (opt.has_value()) {",
           "        // coutでoptの中身（42）を出力",
           "        cout << opt.value() << endl;",
@@ -713,7 +713,7 @@ export const cpp3Data = {
           "content": "# いろいろなキャプチャ方法\\n\\nキャプチャにはいくつかの書き方があります。\\n\\n**身近な例え：**\\n- コピーキャプチャ: 写真を撮って持っていく（元は変わらない）\\n- 参照キャプチャ: リモコンを持っていく（元を直接操作できる）\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nint x = 1, y = 2, z = 3;\\n\\n[x]      // x だけコピーで持ち込む\\n[&x]     // x だけ参照で持ち込む\\n[=]      // 全部コピーで持ち込む\\n[&]      // 全部参照で持ち込む\\n[=, &x]  // 基本コピー、x だけ参照\\n[&, x]   // 基本参照、x だけコピー\\n```\\n\\n**使い分け：**\\n- 値を読むだけ → コピー `[x]`\\n- 値を変更したい → 参照 `[&x]`\\n- たくさんの変数を使う → `[=]` か `[&]`"
         }
       ],
-      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // intでxを宣言し5を代入\\n    int x = 5;\\n    // autoでfを宣言し[x]でコピーキャプチャしたラムダを代入\\n    auto f = [x]() { return x * x; };\\n    // coutでf()の結果（25）を出力\\n    cout << f() << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // intでxを宣言し5を代入\\n    ___ ___ = ___;\\n    // autoでfを宣言し[x]でコピーキャプチャしたラムダを代入\\n    ___ ___ = [___]() { return ___ * ___; };\\n    // coutでf()の結果（25）を出力\\n    ___ << ___() << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
+      "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // intでxを宣言し5を代入\\n    int x = 5;\\n    // autoでfを宣言し[x]でコピーキャプチャしたラムダを代入\\n    auto f = [x]() { return x * x; };\\n    // coutでf関数の結果（25）を出力\\n    cout << f() << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n___\\n// int mainでmain関数を定義\\n___ ___() {\\n    // intでxを宣言し5を代入\\n    ___ ___ = ___;\\n    // autoでfを宣言し[x]でコピーキャプチャしたラムダを代入\\n    ___ ___ = [___]() { return ___ * ___; };\\n    // coutでf関数の結果（25）を出力\\n    ___ << ___() << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
       "correctLines": [
           "// #include <iostream>でiostreamを読み込む",
           "#include <iostream>",
@@ -726,7 +726,7 @@ export const cpp3Data = {
           "    int x = 5;",
           "    // autoでfを宣言し[x]でコピーキャプチャしたラムダを代入",
           "    auto f = [x]() { return x * x; };",
-          "    // coutでf()の結果（25）を出力",
+          "    // coutでf関数の結果（25）を出力",
           "    cout << f() << endl;",
           "    // return 0で正常終了を返す",
           "    return 0;",

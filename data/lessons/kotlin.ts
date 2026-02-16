@@ -155,10 +155,10 @@ export const kotlinData = {
           "content": "# 目標\\n\\n10を3で割ったあまりを画面に表示しましょう。\\n\\n答えは `1` になるはずです。\\n\\n**ヒント：** `%` 記号を使います。"
         }
       ],
-      "correctCode": "// 10 を 3 で割ったあまりを出力する\\nprintln(10 % 3)",
-      "holeyCode": "// 10 を 3 で割ったあまりを出力する\\n___(___ ___ ___)",
+      "correctCode": "// printlnで10を3で割ったあまりを出力\\nprintln(10 % 3)",
+      "holeyCode": "// printlnで10を3で割ったあまりを出力\\n___(___ ___ ___)",
       "correctLines": [
-          "// 10 を 3 で割ったあまりを出力する",
+          "// printlnで10を3で割ったあまりを出力",
           "println(10 % 3)"
         ],
       "lineHints": [
@@ -445,12 +445,12 @@ export const kotlinData = {
           "content": "# 目標\\n\\nくだものの辞書を作って、色を調べましょう。\\n\\n1. `colors` というマップを作る\\n2. キーは「みかん」、値は「オレンジ」\\n3. 「みかん」の色を表示する\\n\\n答えは「オレンジ」になります。"
         }
       ],
-      "correctCode": "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入\\nval colors = mapOf(\"みかん\" to \"オレンジ\")\\n// colorsのみかんキーの値を出力\\nprintln(colors[\"みかん\"])",
-      "holeyCode": "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入\\nval ___ = ___(\"___\" to \"___\")\\n// colorsのみかんキーの値を出力\\n___(___[\"___\"])",
+      "correctCode": "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入\\nval colors = mapOf(\"みかん\" to \"オレンジ\")\\n// printlnでcolorsのみかんキーの値を出力\\nprintln(colors[\"みかん\"])",
+      "holeyCode": "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入\\nval ___ = ___(\"___\" to \"___\")\\n// printlnでcolorsのみかんキーの値を出力\\n___(___[\"___\"])",
       "correctLines": [
           "// valでcolorsにmapOf（キー「みかん」、値「オレンジ」）を代入",
           "val colors = mapOf(\"みかん\" to \"オレンジ\")",
-          "// colorsのみかんキーの値を出力",
+          "// printlnでcolorsのみかんキーの値を出力",
           "println(colors[\"みかん\"])"
         ],
       "lineHints": [
