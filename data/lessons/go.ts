@@ -20,7 +20,7 @@ export const goData = {
     },
     {
       "title": "計算する",
-      "content": "Go言語では数字を計算できます。\\n\\n```go\\na := 5\\nb := 3\\nfmt.Println(a + b)  // 8\\nfmt.Println(a * b)  // 15\\nfmt.Println(10 % 3) // 1（あまり）\\n```\\n\\n`+`（足す）、`-`（引く）、`*`（かける）、`/`（割る）、`%`（あまり）が使えます。"
+      "content": "Go言語では数字を計算できます。\\n\\n```go\\na := 5\\nb := 3\\nfmt.Println(a + b)\\nfmt.Println(a * b)\\nfmt.Println(10 % 3)\\n```\\n\\n=> 8\\n=> 15\\n=> 1（あまり）\\n\\n`+`（足す）、`-`（引く）、`*`（かける）、`/`（割る）、`%`（あまり）が使えます。"
     },
     {
       "title": "条件分岐 if文",
@@ -28,7 +28,7 @@ export const goData = {
     },
     {
       "title": "スライスとマップ",
-      "content": "複数のデータをまとめて扱えます。\\n\\n**スライス**（配列のようなもの）:\\n```go\\nnums := []int{1, 2, 3}\\nfmt.Println(nums[0]) // 1\\n```\\n\\n**マップ**（辞書のようなもの）:\\n```go\\nscores := map[string]int{\\\"Math\\\": 90}\\nfmt.Println(scores[\\\"Math\\\"]) // 90\\n```"
+      "content": "複数のデータをまとめて扱えます。\\n\\n**スライス**（配列のようなもの）:\\n```go\\nnums := []int{1, 2, 3}\\nfmt.Println(nums[0])\\n```\\n\\n=> 1\\n\\n**マップ**（辞書のようなもの）:\\n```go\\nscores := map[string]int{\\\"Math\\\": 90}\\nfmt.Println(scores[\\\"Math\\\"])\\n```\\n\\n=> 90"
     }
   ],
   "exercises": [
@@ -94,7 +94,7 @@ export const goData = {
               },
               {
                       "title": "変数の使い方",
-                      "content": "# 値を入れて使おう\\n\\n```go\\nx := 10\\nx = 20  // 値を変える\\nfmt.Println(x)  // 20\\n```\\n\\n一度作った変数は = で値を変えられます。"
+                      "content": "# 値を入れて使おう\\n\\n```go\\nx := 10\\nx = 20  // 値を変える\\nfmt.Println(x)\\n```\\n\\n=> 20\\n\\n一度作った変数は = で値を変えられます。"
               }
       ],
       "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でxに10を代入\\n    x := 10\\n    // fmt.Printlnでxを出力\\n    fmt.Println(x)\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // :=でxに10を代入\\n    ___ := ___\\n    // fmt.Printlnでxを出力\\n    ___.___(___) \\n// ブロックを閉じる\\n___",
@@ -196,7 +196,7 @@ export const goData = {
       "tutorialSlides": [
         {
           "title": "あまりを求める",
-          "content": "# 剰余演算子「%」\\n\\n`%`（パーセント記号）は、割り算の **「あまり」** を計算する特別な記号です。\\n\\n**わかりやすい例：**\\n- 10このアメを3人で分けると？\\n- 1人3こずつで、**1こあまる**\\n- これを `10 % 3` と書くと、答えは `1`\\n\\n```go\\nfmt.Println(10 % 3)  // 1（あまり1）\\nfmt.Println(8 % 4)   // 0（割り切れる！あまりなし）\\n```\\n\\n割り切れるときは「0」になります。"
+          "content": "# 剰余演算子「%」\\n\\n`%`（パーセント記号）は、割り算の **「あまり」** を計算する特別な記号です。\\n\\n**わかりやすい例：**\\n- 10このアメを3人で分けると？\\n- 1人3こずつで、**1こあまる**\\n- これを `10 % 3` と書くと、答えは `1`\\n\\n```go\\nfmt.Println(10 % 3)\\nfmt.Println(8 % 4)\\n```\\n\\n=> 1（あまり1）\\n=> 0（割り切れる！あまりなし）\\n\\n割り切れるときは「0」になります。"
         },
         {
           "title": "偶数・奇数の判定",

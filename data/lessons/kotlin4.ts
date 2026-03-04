@@ -16,7 +16,7 @@ export const kotlin4Data = {
     },
     {
       "title": "by lazy（遅延初期化）",
-      "content": "`by lazy` を使うと、最初に使われるまで初期化を遅らせます。\\n\\n```kotlin\\nclass Config {\\n    val data: String by lazy {\\n        println(\"初期化中...\")\\n        \"設定データ\"\\n    }\\n}\\n\\nval c = Config()\\nprintln(\"インスタンス作成完了\")\\nprintln(c.data)  // ここで初期化\\nprintln(c.data)  // 2回目はキャッシュ\\n```\\n\\n重い初期化処理を必要になるまで遅らせられます。"
+      "content": "`by lazy` を使うと、最初に使われるまで初期化を遅らせます。\\n\\n```kotlin\\nclass Config {\\n    val data: String by lazy {\\n        println(\"初期化中...\")\\n        \"設定データ\"\\n    }\\n}\\n\\nval c = Config()\\nprintln(\"インスタンス作成完了\")\\nprintln(c.data)\\nprintln(c.data)\\n```\\n\\n=> ここで初期化\\n=> 2回目はキャッシュ\\n\\n重い初期化処理を必要になるまで遅らせられます。"
     },
     {
       "title": "lateinit（後から初期化）",

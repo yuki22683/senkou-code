@@ -98,7 +98,7 @@ export const kotlin2Data = {
         },
         {
           "title": "?. の動き",
-          "content": "# nullなら処理をスキップ\\n\\n```kotlin\\nval name: String? = \"hello\"\\nprintln(name?.length)  // 5（helloの文字数）\\n\\nval empty: String? = null\\nprintln(empty?.length)  // null（エラーにならない）\\n```\\n\\n左側がnullのときは、プロパティにアクセスせずnullを返します。"
+          "content": "# nullなら処理をスキップ\\n\\n```kotlin\\nval name: String? = \"hello\"\\nprintln(name?.length)\\n\\nval empty: String? = null\\nprintln(empty?.length)  // null（エラーにならない）\\n```\\n\\n=> 5（helloの文字数）\\n\\n左側がnullのときは、プロパティにアクセスせずnullを返します。"
         },
         {
           "title": "やってみましょう！",
@@ -238,7 +238,7 @@ export const kotlin2Data = {
         },
         {
           "title": "ラムダ式を使ってみよう",
-          "content": "# 変数に入れて呼び出す\\n\\nラムダ式は変数に入れて、関数のように呼び出せます。\\n\\n```kotlin\\nval add = { a: Int, b: Int -> a + b }\\nprintln(add(2, 3))  // 5\\n```\\n\\n`add(2, 3)` で「2と3を足す」処理が実行されます。"
+          "content": "# 変数に入れて呼び出す\\n\\nラムダ式は変数に入れて、関数のように呼び出せます。\\n\\n```kotlin\\nval add = { a: Int, b: Int -> a + b }\\nprintln(add(2, 3))\\n```\\n\\n=> 5\\n\\n`add(2, 3)` で「2と3を足す」処理が実行されます。"
         },
         {
           "title": "やってみましょう！",

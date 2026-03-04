@@ -8,8 +8,8 @@ export const cpp3Data = {
   "tutorialSlides": [
     { "title": "autoで型推論", "content": "# コンパイラに型を任せる\\n\\n```cpp\\nauto x = 42;        // int型と自動判断\\nauto pi = 3.14;     // double型と自動判断\\nauto name = \\\"Alice\\\"; // const char*型\\n```\\n\\n型を書く手間が省けてコードがスッキリ！" },
     { "title": "範囲for文", "content": "# シンプルなループ\\n\\n```cpp\\nvector<int> v = {1, 2, 3};\\nfor (int x : v) {\\n    cout << x << endl;\\n}\\n```\\n\\n`:` は「〜の中から」という意味です。\\n`const auto&`で効率的に参照できます。" },
-    { "title": "ラムダ式", "content": "# 簡潔な関数の書き方\\n\\n```cpp\\nauto add = [](int a, int b) { return a + b; };\\ncout << add(2, 3) << endl;  // 5\\n```\\n\\n`[]`の中にキャプチャ、`()`の中に引数を書きます。" },
-    { "title": "スマートポインタ", "content": "# 自動でメモリ管理\\n\\n```cpp\\nauto p = make_unique<int>(42);\\ncout << *p << endl;  // 42\\n// スコープを出ると自動でメモリ解放！\\n```\\n\\n`unique_ptr`: 1人だけが所有\\n`shared_ptr`: 複数で共有" }
+    { "title": "ラムダ式", "content": "# 簡潔な関数の書き方\\n\\n```cpp\\nauto add = [](int a, int b) { return a + b; };\\ncout << add(2, 3) << endl;\\n```\\n\\n=> 5\\n\\n`[]`の中にキャプチャ、`()`の中に引数を書きます。" },
+    { "title": "スマートポインタ", "content": "# 自動でメモリ管理\\n\\n```cpp\\nauto p = make_unique<int>(42);\\ncout << *p << endl;\\n// スコープを出ると自動でメモリ解放！\\n```\\n\\n=> 42\\n\\n`unique_ptr`: 1人だけが所有\\n`shared_ptr`: 複数で共有" }
   ],
   "exercises": [
     {
@@ -88,7 +88,7 @@ export const cpp3Data = {
       "tutorialSlides": [
         {
           "title": "範囲for文とは？",
-          "content": "# シンプルなループ構文\\n\\nC++11の **範囲for文** を使うと、配列やベクターの中身を簡単に1つずつ取り出せます。\\n\\n**身近な例え：**\\nお菓子の箱から順番にお菓子を取り出すイメージです。「箱の中のお菓子を1つずつ取り出して食べる」のように、配列の中の値を1つずつ取り出して処理できます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvector<int> v = {1, 2, 3};  // 数字が入った箱を作る\\nfor (int x : v) {            // 箱から1つずつ取り出す\\n    cout << x << endl;       // 取り出した数字を表示\\n}\\n// 出力: 1, 2, 3 が順番に表示される\\n```\\n\\n**ポイント：**\\n`:` は「〜の中から」という意味だと覚えましょう！"
+          "content": "# シンプルなループ構文\\n\\nC++11の **範囲for文** を使うと、配列やベクターの中身を簡単に1つずつ取り出せます。\\n\\n**身近な例え：**\\nお菓子の箱から順番にお菓子を取り出すイメージです。「箱の中のお菓子を1つずつ取り出して食べる」のように、配列の中の値を1つずつ取り出して処理できます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvector<int> v = {1, 2, 3};  // 数字が入った箱を作る\\nfor (int x : v) {            // 箱から1つずつ取り出す\\n    cout << x << endl;\\n}\\n// 出力: 1, 2, 3 が順番に表示される\\n```\\n\\n=> 取り出した数字を表示\\n\\n**ポイント：**\\n`:` は「〜の中から」という意味だと覚えましょう！"
         },
         {
           "title": "参照で受け取る",
@@ -550,7 +550,7 @@ export const cpp3Data = {
         },
         {
           "title": "値の取得",
-          "content": "# 値を安全に取り出す方法\\n\\n`optional` の中身を取り出す前に、「値があるか」をチェックします。\\n\\n**身近な例え：**\\nプレゼントの箱を開ける前に、「中身が入っているか」確認してから開けるようなものです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\noptional<int> result = find(v, 5);\\n\\n// 方法1: has_value() でチェック\\nif (result.has_value()) {\\n    cout << result.value() << endl;  // 中身を取り出す\\n}\\n\\n// 方法2: if文で直接チェック（省略形）\\nif (result) {\\n    cout << *result << endl;  // * で中身を取り出す\\n}\\n```\\n\\n**注意：**\\n値がないのに `value()` を呼ぶとエラーになります。必ずチェックしてから使いましょう！"
+          "content": "# 値を安全に取り出す方法\\n\\n`optional` の中身を取り出す前に、「値があるか」をチェックします。\\n\\n**身近な例え：**\\nプレゼントの箱を開ける前に、「中身が入っているか」確認してから開けるようなものです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\noptional<int> result = find(v, 5);\\n\\n// 方法1: has_value() でチェック\\nif (result.has_value()) {\\n    cout << result.value() << endl;\\n}\\n\\n// 方法2: if文で直接チェック（省略形）\\nif (result) {\\n    cout << *result << endl;  // * で中身を取り出す\\n}\\n```\\n\\n=> 中身を取り出す\\n\\n**注意：**\\n値がないのに `value()` を呼ぶとエラーになります。必ずチェックしてから使いましょう！"
         }
       ],
       "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <optional>でoptionalを読み込む\\n#include <optional>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // optional<int>でoptを宣言し42を代入\\n    optional<int> opt = 42;\\n    // ifでoptのhas_valueメソッドで値があるか判定\\n    if (opt.has_value()) {\\n        // coutでoptの中身（42）を出力\\n        cout << opt.value() << endl;\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <optional>でoptionalを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n\n// int mainでmain関数を定義\\n___ ___() {\\n    // optional<int>でoptを宣言し42を代入\\n    ___<___> ___ = ___;\\n    // ifでoptのhas_valueメソッドで値があるか判定\\n    if (___.___()) {\\n        // coutでoptの中身（42）を出力\\n        ___ << ___.___() << ___;\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___", "correctLines": [
@@ -628,11 +628,11 @@ export const cpp3Data = {
       "tutorialSlides": [
         {
           "title": "array とは？",
-          "content": "# 固定長の安全な配列\\n\\n**std::array**（アレイ）は、サイズが固定された配列です。普通のC言語の配列より安全で便利な機能がついています。\\n\\n**身近な例え：**\\n「3つ入りの卵パック」のようなものです。最初から3個入りと決まっていて、後から変えられません。でも「何個入りか」を聞くことができます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\narray<int, 5> arr = {1, 2, 3, 4, 5};\\n//     ↑型  ↑サイズ（5個入り）\\n\\ncout << arr.size() << endl;  // 5（サイズを取得できる！）\\ncout << arr[0] << endl;      // 1（最初の要素）\\n```\\n\\n**ポイント：**\\n`<型, サイズ>` の形式で、サイズは最初に決めます。"
+          "content": "# 固定長の安全な配列\\n\\n**std::array**（アレイ）は、サイズが固定された配列です。普通のC言語の配列より安全で便利な機能がついています。\\n\\n**身近な例え：**\\n「3つ入りの卵パック」のようなものです。最初から3個入りと決まっていて、後から変えられません。でも「何個入りか」を聞くことができます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\narray<int, 5> arr = {1, 2, 3, 4, 5};\\n//     ↑型  ↑サイズ（5個入り）\\n\\ncout << arr.size() << endl;\\ncout << arr[0] << endl;\\n```\\n\\n=> 5（サイズを取得できる！）\\n=> 1（最初の要素）\\n\\n**ポイント：**\\n`<型, サイズ>` の形式で、サイズは最初に決めます。"
         },
         {
           "title": "C配列との違い",
-          "content": "# std::array は安全\\n\\n普通の配列（C配列）と比べて、`std::array` は安全な機能がついています。\\n\\n**身近な例え：**\\n普通の配列は「存在しない場所」にアクセスしてもエラーを出してくれません（危険！）。`std::array` は「そこにはないよ！」と教えてくれます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\narray<int, 3> arr = {10, 20, 30};\\n\\n// サイズを聞ける（C配列にはない機能！）\\ncout << arr.size() << endl;  // 3\\n\\n// 安全なアクセス（at を使う）\\narr.at(1);   // OK: 20\\narr.at(10);  // エラー！「範囲外」と教えてくれる\\n\\n// 普通のアクセス（危険）\\narr[10];     // 動くけど何が起こるかわからない...\\n```\\n\\n**オススメ：**\\n- 安全性を重視するなら `at()` を使う\\n- 速度を重視するなら `[]` を使う"
+          "content": "# std::array は安全\\n\\n普通の配列（C配列）と比べて、`std::array` は安全な機能がついています。\\n\\n**身近な例え：**\\n普通の配列は「存在しない場所」にアクセスしてもエラーを出してくれません（危険！）。`std::array` は「そこにはないよ！」と教えてくれます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\narray<int, 3> arr = {10, 20, 30};\\n\\n// サイズを聞ける（C配列にはない機能！）\\ncout << arr.size() << endl;\\n\\n// 安全なアクセス（at を使う）\\narr.at(1);   // OK: 20\\narr.at(10);  // エラー！「範囲外」と教えてくれる\\n\\n// 普通のアクセス（危険）\\narr[10];     // 動くけど何が起こるかわからない...\\n```\\n\\n=> 3\\n\\n**オススメ：**\\n- 安全性を重視するなら `at()` を使う\\n- 速度を重視するなら `[]` を使う"
         }
       ],
       "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <array>でarrayを読み込む\\n#include <array>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // array<int, 3>で数値配列（10、20、30）をarrに代入\\n    array<int, 3> arr = {10, 20, 30};\\n    // for int n : arrでarrの各要素をnに取り出して出力\\n    for (int n : arr) cout << n << \" \";\\n    // coutで改行を出力\\n    cout << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <array>でarrayを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n\n// int mainでmain関数を定義\\n___ ___() {\\n    // array<int, 3>で数値配列（10、20、30）をarrに代入\\n    ___<___, ___> ___ = {___, ___, ___};\\n    // for int n : arrでarrの各要素をnに取り出して出力\\n    for (___ ___ : ___) ___ << ___ << \\\" \\\";\\n    // coutで改行を出力\\n    ___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
@@ -706,7 +706,7 @@ export const cpp3Data = {
       "tutorialSlides": [
         {
           "title": "キャプチャとは？",
-          "content": "# ラムダ式で外の変数を使う方法\\n\\n**キャプチャ**とは、ラムダ式（その場で作る小さな関数）の中で「外にある変数」を使えるようにする機能です。\\n\\n**身近な例え：**\\nお弁当箱に「おかず」を詰めて持っていくイメージです。外にあるもの（変数）をラムダ式の中に「持ち込む」ことができます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nint x = 10;  // 外にある変数\\n\\n// [x] で x をラムダの中に持ち込む（コピー）\\nauto f = [x]() { return x * 2; };  \\ncout << f() << endl;  // 20\\n\\n// [&x] で x を参照で持ち込む（元の変数を直接操作）\\nauto g = [&x]() { x++; };  \\ng();  // x が 11 になる\\n```\\n\\n**ポイント：**\\n`[]` の中に変数名を書くと、その変数を使えるようになります。"
+          "content": "# ラムダ式で外の変数を使う方法\\n\\n**キャプチャ**とは、ラムダ式（その場で作る小さな関数）の中で「外にある変数」を使えるようにする機能です。\\n\\n**身近な例え：**\\nお弁当箱に「おかず」を詰めて持っていくイメージです。外にあるもの（変数）をラムダ式の中に「持ち込む」ことができます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nint x = 10;  // 外にある変数\\n\\n// [x] で x をラムダの中に持ち込む（コピー）\\nauto f = [x]() { return x * 2; };  \\ncout << f() << endl;\\n\\n// [&x] で x を参照で持ち込む（元の変数を直接操作）\\nauto g = [&x]() { x++; };  \\ng();  // x が 11 になる\\n```\\n\\n=> 20\\n\\n**ポイント：**\\n`[]` の中に変数名を書くと、その変数を使えるようになります。"
         },
         {
           "title": "キャプチャの種類",

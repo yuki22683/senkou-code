@@ -12,7 +12,7 @@ export const bash2Data = {
     },
     {
       "title": "文字列の長さ ${#変数}",
-      "content": "`#` を変数名の前につけると、**文字列の長さ**を取得できます。\\n\\n```bash\\ntext=\"Hello\"\\necho ${#text}  # 5\\n```\\n\\n配列の場合は要素数を返します。"
+      "content": "`#` を変数名の前につけると、**文字列の長さ**を取得できます。\\n\\n```bash\\ntext=\"Hello\"\\necho ${#text}\\n```\\n\\n=> 5\\n\\n配列の場合は要素数を返します。"
     },
     {
       "title": "文字列の部分取得",
@@ -79,7 +79,7 @@ export const bash2Data = {
         },
         {
           "title": "長さの取得",
-          "content": "# 文字数を返す\\n\\n配列の場合は要素数を返します。\\n\\n**コード例：**\\n```bash\\ntext=\"Hello\"\\necho ${#text} # 5\\n```"
+          "content": "# 文字数を返す\\n\\n配列の場合は要素数を返します。\\n\\n**コード例：**\\n```bash\\ntext=\"Hello\"\\necho ${#text}\\n```\\n\\n=> 5"
         }
       ],
       "correctCode": "# 変数wordに文字列を代入\\nword=\"Bash\"\\n# 文字列の長さを表示\\necho ${#word}",
@@ -206,7 +206,7 @@ export const bash2Data = {
         },
         {
           "title": "値の受け取り",
-          "content": "# $(関数) で取得\\n\\n`result=$(関数)` で関数の出力を受け取ります。\\n\\n**コード例：**\\n```bash\\ndouble() {\\n    echo $(($1 * 2))\\n}\\nresult=$(double 5)\\necho $result # 10\\n```"
+          "content": "# $(関数) で取得\\n\\n`result=$(関数)` で関数の出力を受け取ります。\\n\\n**コード例：**\\n```bash\\ndouble() {\\n    echo $(($1 * 2))\\n}\\nresult=$(double 5)\\necho $result\\n```\\n\\n=> 10"
         }
       ],
       "correctCode": "# square関数を定義\\nsquare() {\\n    # 引数を2乗する\\n    echo $(($1 * $1))\\n}\\n# 関数の出力をresultに格納\\nresult=$(square 4)\\n# resultを表示\\necho $result",

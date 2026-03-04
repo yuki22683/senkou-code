@@ -371,7 +371,7 @@ export const cData = {
               },
               {
                       "title": "配列の使い方",
-                      "content": "# 番号（インデックス）でアクセス\\n\\n配列は0番目から始まります。\\n\\n```c\\nint a[3] = {10, 20, 30};\\nprintf(\"%d\", a[0]);  // 10\\nprintf(\"%d\", a[1]);  // 20\\n```"
+                      "content": "# 番号（インデックス）でアクセス\\n\\n配列は0番目から始まります。\\n\\n```c\\nint a[3] = {10, 20, 30};\\nprintf(\"%d\", a[0]);\\nprintf(\"%d\", a[1]);\\n```\\n\\n=> 10\\n=> 20"
               }
       ],
       "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int nums[3]で配列numsを宣言し（10、20、30）で初期化\\n    int nums[3] = {10, 20, 30};\\n    // printfでnumsのインデックス1の要素（20）を出力\\n    printf(\"%d\\n\", nums[1]);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",
@@ -702,7 +702,7 @@ export const cData = {
               },
               {
                       "title": "構造体の使い方",
-                      "content": "# 構造体変数を作る\\n\\n```c\\nstruct Person p;\\np.age = 12;\\nstrcpy(p.name, \"太郎\");\\n\\nprintf(\"%s\", p.name);  // 太郎\\n```\\n\\nドット(.)でメンバにアクセス！"
+                      "content": "# 構造体変数を作る\\n\\n```c\\nstruct Person p;\\np.age = 12;\\nstrcpy(p.name, \"太郎\");\\n\\nprintf(\"%s\", p.name);\\n```\\n\\n=> 太郎\\n\\nドット(.)でメンバにアクセス！"
               }
       ],
       "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// struct PointでPoint構造体を定義\\nstruct Point {\\n    // int xでxメンバを宣言\\n    int x;\\n    // int yでyメンバを宣言\\n    int y;\\n// 構造体定義を閉じる\\n};\\n// int mainでmain関数を定義\\nint main() {\\n    // struct Point pでPoint型の変数pを宣言\\n    struct Point p;\\n    // pのxメンバに10を代入\\n    p.x = 10;\\n    // printfでpのxメンバを出力\\n    printf(\"%d\\n\", p.x);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",

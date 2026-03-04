@@ -499,7 +499,7 @@ export const csharp3Data = {
         },
         {
           "title": "安全に値を取得する",
-          "content": "# TryGetValue（トライゲットバリュー）\\n\\n存在しないキーでアクセスするとエラーになります。`TryGetValue` を使うと安全に取得できます。\\n\\n**コード例：**\\n```csharp\\n// 安全に値を取得\\nif (dict.TryGetValue(\"apple\", out var price)) {\\n    Console.WriteLine(price);  // あったら表示\\n} else {\\n    Console.WriteLine(\"見つかりません\");\\n}\\n```\\n\\n**解説：**\\n- `TryGetValue` は「キーがあればtrue、なければfalse」を返す\\n- `out var price` で、見つかった値を `price` に入れる\\n- エラーにならず、安全にキーの有無をチェックできる\\n\\n**ポイント：**\\n`dict[\"存在しないキー\"]` はエラー！`TryGetValue` なら安全。"
+          "content": "# TryGetValue（トライゲットバリュー）\\n\\n存在しないキーでアクセスするとエラーになります。`TryGetValue` を使うと安全に取得できます。\\n\\n**コード例：**\\n```csharp\\n// 安全に値を取得\\nif (dict.TryGetValue(\"apple\", out var price)) {\\n    Console.WriteLine(price);\\n} else {\\n    Console.WriteLine(\"見つかりません\");\\n}\\n```\\n\\n=> あったら表示\\n\\n**解説：**\\n- `TryGetValue` は「キーがあればtrue、なければfalse」を返す\\n- `out var price` で、見つかった値を `price` に入れる\\n- エラーにならず、安全にキーの有無をチェックできる\\n\\n**ポイント：**\\n`dict[\"存在しないキー\"]` はエラー！`TryGetValue` なら安全。"
         }
       ],
       "correctCode": "// usingでSystem名前空間をインポート\\nusing System;\\n// usingでCollections.Generic名前空間をインポート\\nusing System.Collections.Generic;\\n\\n// Programクラスを定義\\nclass Program {\\n    // Mainメソッドを定義\\n    static void Main() {\\n        // Dictionaryでキーと値の辞書\\n        var dict = new Dictionary<string, int>();\\n        // キー\"a\"に値を設定\\n        dict[\"a\"] = 1;\\n        // キー\"b\"に値を設定\\n        dict[\"b\"] = 2;\\n        // ConsoleのWriteLineでdictのキー「a」の値を出力\\n        Console.WriteLine(dict[\"a\"]);\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}",

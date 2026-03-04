@@ -12,7 +12,7 @@ export const go2Data = {
     },
     {
       "title": "構造体 struct",
-      "content": "**構造体**は、複数のデータをまとめて扱えます。\\n\\n```go\\ntype Person struct {\\n    Name string\\n    Age  int\\n}\\n\\np := Person{Name: \\\"太郎\\\", Age: 20}\\nfmt.Println(p.Name) // 太郎\\n```\\n\\n`type 名前 struct { }` で定義します。"
+      "content": "**構造体**は、複数のデータをまとめて扱えます。\\n\\n```go\\ntype Person struct {\\n    Name string\\n    Age  int\\n}\\n\\np := Person{Name: \\\"太郎\\\", Age: 20}\\nfmt.Println(p.Name)\\n```\\n\\n=> 太郎\\n\\n`type 名前 struct { }` で定義します。"
     },
     {
       "title": "メソッド",
@@ -467,7 +467,7 @@ export const go2Data = {
         },
         {
           "title": "defer の使い方",
-          "content": "# 書いた瞬間ではなく、最後に実行\\n\\n`defer` をつけた文は、その行を通り過ぎても実行されず、関数が終わるときに実行されます。\\n\\n**コード例：**\\n```go\\nfunc main() {\\n    defer fmt.Println(\"last\")   // あとで実行\\n    fmt.Println(\"first\")        // 先に実行\\n}\\n// 出力: first → last\\n```\\n\\n**実行の流れ：**\\n1. `defer` の行を通る → 「lastを表示」を予約\\n2. 「first」を表示\\n3. 関数が終わる → 予約していた「last」を表示\\n\\n`defer` は「関数の出口で必ず実行」と覚えましょう！"
+          "content": "# 書いた瞬間ではなく、最後に実行\\n\\n`defer` をつけた文は、その行を通り過ぎても実行されず、関数が終わるときに実行されます。\\n\\n**コード例：**\\n```go\\nfunc main() {\\n    defer fmt.Println(\"last\")   // あとで実行\\n    fmt.Println(\"first\")\\n}\\n// 出力: first → last\\n```\\n\\n=> 先に実行\\n\\n**実行の流れ：**\\n1. `defer` の行を通る → 「lastを表示」を予約\\n2. 「first」を表示\\n3. 関数が終わる → 予約していた「last」を表示\\n\\n`defer` は「関数の出口で必ず実行」と覚えましょう！"
         }
       ],
       "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // deferで関数終了時に「end」を出力するよう予約\\n    defer fmt.Println(\"end\")\\n    // fmt.Printlnで「start」を出力（先に実行される）\\n    fmt.Println(\"start\")\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___() {\\n    // deferで関数終了時に「end」を出力するよう予約\\n    defer ___.___(\\\"___\\\")\\n    // fmt.Printlnで「start」を出力（先に実行される）\\n    ___.___(\\\"___\\\")\\n// ブロックを閉じる\\n___",
@@ -651,7 +651,7 @@ export const go2Data = {
         },
         {
           "title": "クロージャ：外の変数を使える",
-          "content": "# 周りの変数を「覚えている」関数\\n\\n無名関数は、自分の外側にある変数を使うことができます。この仕組みを **クロージャ** と呼びます。\\n\\n**コード例：**\\n```go\\nx := 10\\nfn := func() int {\\n    return x * 2  // 外側の x を使っている！\\n}\\nfmt.Println(fn())  // 20\\n```\\n\\n**イメージ：**\\n無名関数が作られたとき、周りの変数を「写真に撮って覚えておく」ようなものです。\\n\\n**使いどころ：**\\n- カウンターを作る\\n- 設定を保持したまま何度も使う関数\\n- ゴルーチンで外のデータを使う"
+          "content": "# 周りの変数を「覚えている」関数\\n\\n無名関数は、自分の外側にある変数を使うことができます。この仕組みを **クロージャ** と呼びます。\\n\\n**コード例：**\\n```go\\nx := 10\\nfn := func() int {\\n    return x * 2  // 外側の x を使っている！\\n}\\nfmt.Println(fn())\\n```\\n\\n=> 20\\n\\n**イメージ：**\\n無名関数が作られたとき、周りの変数を「写真に撮って覚えておく」ようなものです。\\n\\n**使いどころ：**\\n- カウンターを作る\\n- 設定を保持したまま何度も使う関数\\n- ゴルーチンで外のデータを使う"
         }
       ],
       "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でnに5を代入\\n    n := 5\\n    // :=でdoubleにintを返す無名関数を代入\\n    double := func() int {\\n        // 外側の変数nを2倍して返す\\n        return n * 2\\n    // ブロックを閉じる\\n    }\\n    // fmt.Printlnでdoubleを呼び出した結果を出力\\n    fmt.Println(double())\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___() {\\n    // :=でnに5を代入\\n    ___ := ___\\n    // :=でdoubleにintを返す無名関数を代入\\n    ___ := func() ___ {\\n        // 外側の変数nを2倍して返す\\n        return ___ * ___\\n    // ブロックを閉じる\\n    ___\\n    // fmt.Printlnでdoubleを呼び出した結果を出力\\n    ___.___(___())\\n// ブロックを閉じる\\n___",

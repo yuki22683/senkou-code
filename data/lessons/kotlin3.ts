@@ -436,7 +436,7 @@ export const kotlin3Data = {
         },
         {
           "title": "also は自分自身を返す",
-          "content": "# 元のオブジェクトがそのまま返る\\n\\n```kotlin\\nval num = 42.also {\\n    println(\"Value: $it\")\\n}\\nprintln(num)  // 42\\n```\\n\\n`{ }` の中で何をしても、返されるのは元のオブジェクト（42）です。"
+          "content": "# 元のオブジェクトがそのまま返る\\n\\n```kotlin\\nval num = 42.also {\\n    println(\"Value: $it\")\\n}\\nprintln(num)\\n```\\n\\n=> 42\\n\\n`{ }` の中で何をしても、返されるのは元のオブジェクト（42）です。"
         },
         {
           "title": "やってみましょう！",
@@ -506,7 +506,7 @@ export const kotlin3Data = {
         },
         {
           "title": "run の戻り値",
-          "content": "# 最後の式が戻り値\\n\\n```kotlin\\nval result = \"Hello World\".run {\\n    split(\" \").size  // スペースで分割して数を数える\\n}\\nprintln(result)  // 2\\n```\\n\\n`split(\" \")` で [\"Hello\", \"World\"] に分割、`.size` で 2 を取得。"
+          "content": "# 最後の式が戻り値\\n\\n```kotlin\\nval result = \"Hello World\".run {\\n    split(\" \").size  // スペースで分割して数を数える\\n}\\nprintln(result)\\n```\\n\\n=> 2\\n\\n`split(\" \")` で [\"Hello\", \"World\"] に分割、`.size` で 2 を取得。"
         },
         {
           "title": "やってみましょう！",

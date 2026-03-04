@@ -24,7 +24,7 @@ export const swift3Data = {
     },
     {
       "title": "クロージャ",
-      "content": "**クロージャ**は名前のない関数です。\\n\\n```swift\\nlet add = { (a: Int, b: Int) -> Int in\\n    return a + b\\n}\\nprint(add(2, 3)) // 5\\n```"
+      "content": "**クロージャ**は名前のない関数です。\\n\\n```swift\\nlet add = { (a: Int, b: Int) -> Int in\\n    return a + b\\n}\\nprint(add(2, 3))\\n```\\n\\n=> 5"
     },
     {
       "title": "async/await",
@@ -286,7 +286,7 @@ export const swift3Data = {
         },
         {
           "title": "for文で使う",
-          "content": "# 条件に合う要素だけ処理\\n\\n```swift\\nlet nums = [1, -2, 3, -4, 5]\\n\\n// whereで条件を追加\\nfor n in nums where n > 0 {\\n    print(n)  // 1, 3, 5 だけ表示\\n}\\n```\\n\\n負の数はスキップして、正の数だけ処理されます。"
+          "content": "# 条件に合う要素だけ処理\\n\\n```swift\\nlet nums = [1, -2, 3, -4, 5]\\n\\n// whereで条件を追加\\nfor n in nums where n > 0 {\\n    print(n)\\n}\\n```\\n\\n=> 1, 3, 5\\n\\n負の数はスキップして、正の数だけ処理されます。"
         },
         {
           "title": "やってみましょう！",
@@ -582,7 +582,7 @@ export const swift3Data = {
         },
         {
           "title": "Setの特徴",
-          "content": "# 重複が自動的に除かれる\\n\\n```swift\\nvar set: Set = [1, 2, 2, 3, 3, 3]\\nprint(set.count)  // 3（重複は1つになる）\\n// setの中身は {1, 2, 3}\\n```\\n\\n2を2回、3を3回入れても、それぞれ1つずつになります。"
+          "content": "# 重複が自動的に除かれる\\n\\n```swift\\nvar set: Set = [1, 2, 2, 3, 3, 3]\\nprint(set.count)\\n// setの中身は {1, 2, 3}\\n```\\n\\n=> 3（重複は1つになる）\\n\\n2を2回、3を3回入れても、それぞれ1つずつになります。"
         },
         {
           "title": "集合演算",

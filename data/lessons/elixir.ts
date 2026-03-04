@@ -20,7 +20,7 @@ export const elixirData = {
     },
     {
       "title": "計算する",
-      "content": "Elixirでは数字を計算できます。\\n\\n```elixir\\na = 5\\nb = 3\\nIO.puts a + b  # 8\\nIO.puts rem(10, 3) # 1（あまり）\\n```\\n\\n`#` から後ろはコメント（メモ）です。あまりは `rem` 関数を使います。"
+      "content": "Elixirでは数字を計算できます。\\n\\n```elixir\\na = 5\\nb = 3\\nIO.puts a + b\\nIO.puts rem(10, 3)\\n```\\n\\n=> 8\\n=> 1（あまり）\\n\\n`#` から後ろはコメント（メモ）です。あまりは `rem` 関数を使います。"
     },
     {
       "title": "条件分岐 if文",

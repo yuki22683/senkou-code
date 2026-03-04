@@ -77,7 +77,7 @@ export const javaData = {
         },
         {
           "title": "はこに「ラベル」を貼ろう",
-          "content": "# String（ストリング）ラベル\\n\\nJavaでは、はこを作るときに「このはこには何を入れますか？」と聞かれます。\\n\\n**たとえ話：** おもちゃ箱には「おもちゃ」、本棚には「本」と書いてあるように、Javaの変数にも「何を入れるか」を教えてあげる必要があります。\\n\\n「文字を入れたい！」というときは、`String`（ストリング＝文字列という意味）というラベルを使います。**Sが大文字** なので気をつけてくださいね！\\n\\n**コード例：** 下のコードが何をしているか見てみましょう\\n```java\\nString animal = \"いぬ\";  // 「animal」という名前の箱に「いぬ」を入れる\\nSystem.out.println(animal);  // 箱の中身を画面に出す\\n```\\n=> いぬ"
+          "content": "# String（ストリング）ラベル\\n\\nJavaでは、はこを作るときに「このはこには何を入れますか？」と聞かれます。\\n\\n**たとえ話：** おもちゃ箱には「おもちゃ」、本棚には「本」と書いてあるように、Javaの変数にも「何を入れるか」を教えてあげる必要があります。\\n\\n「文字を入れたい！」というときは、`String`（ストリング＝文字列という意味）というラベルを使います。**Sが大文字** なので気をつけてくださいね！\\n\\n**コード例：** 下のコードが何をしているか見てみましょう\\n```java\\nString animal = \"いぬ\";  // 「animal」という名前の箱に「いぬ」を入れる\\nSystem.out.println(animal);\\n```\\n\\n=> 箱の中身を画面に出す\\n=> いぬ"
         }
       ],
       "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // String型のnameに'Java'を代入\\n        String name = \\\"Java\\\";\\n        // Systemのoutのprintlnでnameを出力\\n        System.out.println(name);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // String型のnameに'Java'を代入\\n        ___ ___ = ___;\\n        // Systemのoutのprintlnでnameを出力\\n        ___.___.___(___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
@@ -138,7 +138,7 @@ export const javaData = {
         },
         {
           "title": "計算してみよう",
-          "content": "# 計算もできます\\n\\n`int` のはこに入れた数字は、たし算やひき算ができます。コンピュータは計算がとっても得意なんです！\\n\\n**コード例：** りんごとみかんの値段を足してみましょう\\n```java\\nint apple = 100;   // りんごは100円\\nint orange = 50;   // みかんは50円\\nSystem.out.println(apple + orange);  // 合計を表示\\n```\\n=> 150\\n\\n`+` を使うと、変数どうしを足し算できます。"
+          "content": "# 計算もできます\\n\\n`int` のはこに入れた数字は、たし算やひき算ができます。コンピュータは計算がとっても得意なんです！\\n\\n**コード例：** りんごとみかんの値段を足してみましょう\\n```java\\nint apple = 100;   // りんごは100円\\nint orange = 50;   // みかんは50円\\nSystem.out.println(apple + orange);\\n```\\n\\n=> 合計を表示\\n=> 150\\n\\n`+` を使うと、変数どうしを足し算できます。"
         }
       ],
       "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のxに10を代入\\n        int x = 10;\\n        // int型のyに3を代入\\n        int y = 3;\\n        // Systemのoutのprintlnでxからyを引いた結果（7）を出力\\n        System.out.println(x - y);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のxに10を代入\\n        ___ ___ = ___;\\n        // int型のyに3を代入\\n        ___ ___ = ___;\\n        // Systemのoutのprintlnでxからyを引いた結果（7）を出力\\n        ___.___.___(___ ___ ___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
@@ -337,7 +337,7 @@ export const javaData = {
         },
         {
           "title": "プラスでつなげましょう",
-          "content": "# ガチャンと合体！\\n\\n文字と文字、文字と数字を `+` でつなぐと、ひとつの長い文章になります。\\n\\n**コード例：** 天気を表示してみましょう\\n```java\\nString weather = \"はれ\";  // 天気を変数に入れる\\nSystem.out.println(\"明日は\" + weather + \"です\");  // つなげて表示\\n```\\n=> 明日ははれです\\n\\n**何が起きているの？**\\n1. 「明日は」という文字\\n2. weatherの中身「はれ」\\n3. 「です」という文字\\n\\nこの3つが `+` でつながって「明日ははれです」になります！"
+          "content": "# ガチャンと合体！\\n\\n文字と文字、文字と数字を `+` でつなぐと、ひとつの長い文章になります。\\n\\n**コード例：** 天気を表示してみましょう\\n```java\\nString weather = \"はれ\";  // 天気を変数に入れる\\nSystem.out.println(\"明日は\" + weather + \"です\");\\n```\\n\\n=> つなげて表示\\n=> 明日ははれです\\n\\n**何が起きているの？**\\n1. 「明日は」という文字\\n2. weatherの中身「はれ」\\n3. 「です」という文字\\n\\nこの3つが `+` でつながって「明日ははれです」になります！"
         }
       ],
       "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // int型のageに10を代入\\n        int age = 10;\\n        // Systemのoutのprintlnで「私は」とageと「歳です」を連結して出力\\n        System.out.println(\\\"私は\\\" + age + \\\"歳です\\\");\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // int型のageに10を代入\\n        ___ ___ = ___;\\n        // Systemのoutのprintlnで「私は」とageと「歳です」を連結して出力\\n        ___.___.___(___ ___ ___ ___ ___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
@@ -705,7 +705,7 @@ export const javaData = {
         },
         {
           "title": "くりかえし（拡張for）",
-          "content": "# 全部まとめて取り出す\\n\\n配列の中身を最初から最後まで順番に取り出すときは、**拡張for文（かくちょうフォーぶん）** が便利です。\\n\\n`:`（コロン）を使うのがJavaの面白いところです。「〜の中から」という意味だと思ってください。\\n\\n**コード例：**\\n```java\\nString[] names = {\"たろう\", \"はなこ\"};\\nfor (String name : names) {  // namesの中から順番に取り出してnameに入れる\\n    System.out.println(name);  // 取り出した名前を表示\\n}\\n```\\n=> たろう\\n=> はなこ\\n\\n**読み方：** 「namesの中の各nameについて」"
+          "content": "# 全部まとめて取り出す\\n\\n配列の中身を最初から最後まで順番に取り出すときは、**拡張for文（かくちょうフォーぶん）** が便利です。\\n\\n`:`（コロン）を使うのがJavaの面白いところです。「〜の中から」という意味だと思ってください。\\n\\n**コード例：**\\n```java\\nString[] names = {\"たろう\", \"はなこ\"};\\nfor (String name : names) {  // namesの中から順番に取り出してnameに入れる\\n    System.out.println(name);\\n}\\n```\\n\\n=> 取り出した名前を表示\\n=> たろう\\n=> はなこ\\n\\n**読み方：** 「namesの中の各nameについて」"
         }
       ],
       "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // String[]型のnamesに名前配列（たろう、はなこ）を代入\\n        String[] names = {\\\"たろう\\\", \\\"はなこ\\\"};\\n        // 拡張forでnamesから各nameを取り出す\\n        for (String name : names) {\\n            // Systemのoutのprintlnでnameを出力\\n            System.out.println(name);\\n        // forブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // String[]型のnamesに名前配列（たろう、はなこ）を代入\\n        ___[] ___ = {___, ___};\\n        // 拡張forでnamesから各nameを取り出す\\n        for (___ ___ : ___) {\\n            // Systemのoutのprintlnでnameを出力\\n            ___.___.___(___);\\n        // forブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",

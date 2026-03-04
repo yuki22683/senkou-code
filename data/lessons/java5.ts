@@ -23,7 +23,7 @@ export const javaData5 = {
         },
         {
           "title": "try-catch（トライ・キャッチ）",
-          "content": "# 例外をキャッチ\\n\\n**try-catch** を使うと、例外をキャッチ（捕まえて）対処できます。\\n\\n**たとえ話：** サーカスの安全ネットのように、落ちても（エラーが起きても）受け止めてくれます。\\n\\n```java\\ntry {  // 「試す」ブロック\\n    int x = 10 / 0;  // 0で割る→例外！\\n} catch (ArithmeticException e) {  // 「捕まえる」ブロック\\n    System.out.println(\"エラー!\");  // 対処する\\n}\\n```\\n\\n**ポイント：** tryの中で例外が起きたら、catchの中が実行されます"
+          "content": "# 例外をキャッチ\\n\\n**try-catch** を使うと、例外をキャッチ（捕まえて）対処できます。\\n\\n**たとえ話：** サーカスの安全ネットのように、落ちても（エラーが起きても）受け止めてくれます。\\n\\n```java\\ntry {  // 「試す」ブロック\\n    int x = 10 / 0;  // 0で割る→例外！\\n} catch (ArithmeticException e) {  // 「捕まえる」ブロック\\n    System.out.println(\"エラー!\");\\n}\\n```\\n\\n=> 対処する\\n\\n**ポイント：** tryの中で例外が起きたら、catchの中が実行されます"
         }
       ],
       "correctCode": "// Mainクラスを定義\\npublic class Main {\\n    // mainメソッドを定義\\n    public static void main(String[] args) {\\n        // tryで例外をキャッチする準備\\n        try {\\n            // 0で割ると例外が発生する\\n            int result = 10 / 0;\\n        // ブロックを開始\\n        } catch (ArithmeticException e) {\\n            // Systemのoutのprintlnでエラーメッセージを出力する\\n            System.out.println(\\\"エラー\\\");\\n        // ブロックを閉じる\\n        }\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}", "holeyCode": "// Mainクラスを定義\\npublic class ___ {\\n    // mainメソッドを定義\\n    public static void ___(___[] ___) {\\n        // tryで例外をキャッチする準備\\n        ___ {\\n            // 0で割ると例外が発生する\\n            int ___ = ___ / ___;\\n        // ブロックを開始\\n        } ___ (___ ___) {\\n            // Systemのoutのprintlnでエラーメッセージを出力する\\n            ___.___.___(___)___\\n        // ブロックを閉じる\\n        ___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___",

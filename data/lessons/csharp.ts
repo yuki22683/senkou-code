@@ -20,7 +20,7 @@ export const csharpData = {
     },
     {
       "title": "計算する",
-      "content": "C#では数字を計算できます。\\n\\n```csharp\\nint a = 5;\\nint b = 3;\\nConsole.WriteLine(a + b);  // 8\\nConsole.WriteLine(10 % 3); // 1（あまり）\\n```\\n\\n`//` から後ろはコメントです。"
+      "content": "C#では数字を計算できます。\\n\\n```csharp\\nint a = 5;\\nint b = 3;\\nConsole.WriteLine(a + b);\\nConsole.WriteLine(10 % 3);\\n```\\n\\n=> 8\\n=> 1（あまり）\\n\\n`//` から後ろはコメントです。"
     },
     {
       "title": "条件分岐 if文",

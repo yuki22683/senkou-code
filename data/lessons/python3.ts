@@ -8,11 +8,11 @@ export const pythonData3 = {
   "tutorialSlides": [
     {
       "title": "短い関数 ラムダ式",
-      "content": "名前をつけずに1行で書ける関数を**ラムダ式**（無名関数）と呼びます。\\n\\n```python\\nadd = lambda x, y: x + y\\nprint(add(10, 5)) # 15\\n```\\n\\n`lambda 引数: 処理` の形式で書き、簡単な処理をサッと書きたいときに便利です。"
+      "content": "名前をつけずに1行で書ける関数を**ラムダ式**（無名関数）と呼びます。\\n\\n```python\\nadd = lambda x, y: x + y\\nprint(add(10, 5))\\n```\\n\\n=> 15\\n\\n`lambda 引数: 処理` の形式で書き、簡単な処理をサッと書きたいときに便利です。"
     },
     {
       "title": "*args 可変長引数",
-      "content": "関数に**いくつでも引数を渡せる**ようにするには `*args` を使います。\\n\\n```python\\ndef total(*args):\\n    result = 0\\n    for n in args:\\n        result += n\\n    return result\\n\\nprint(total(1, 2, 3))  # 6\\nprint(total(10, 20))   # 30\\n```\\n\\n`*args` はタプルとして受け取られ、ループで1つずつ取り出せます。"
+      "content": "関数に**いくつでも引数を渡せる**ようにするには `*args` を使います。\\n\\n```python\\ndef total(*args):\\n    result = 0\\n    for n in args:\\n        result += n\\n    return result\\n\\nprint(total(1, 2, 3))\\nprint(total(10, 20))\\n```\\n\\n=> 6\\n=> 30\\n\\n`*args` はタプルとして受け取られ、ループで1つずつ取り出せます。"
     },
     {
       "title": "**kwargs キーワード引数",
@@ -28,7 +28,7 @@ export const pythonData3 = {
     },
     {
       "title": "ジェネレータ yield",
-      "content": "`return` の代わりに `yield` を使うと、値を**1つずつ返す**関数（ジェネレータ）が作れます。\\n\\n```python\\ndef countdown(n):\\n    while n > 0:\\n        yield n\\n        n -= 1\\n\\nfor num in countdown(3):\\n    print(num)  # 3, 2, 1\\n```\\n\\n大量のデータを扱うときもメモリを節約できます。"
+      "content": "`return` の代わりに `yield` を使うと、値を**1つずつ返す**関数（ジェネレータ）が作れます。\\n\\n```python\\ndef countdown(n):\\n    while n > 0:\\n        yield n\\n        n -= 1\\n\\nfor num in countdown(3):\\n    print(num)\\n```\\n\\n=> 3, 2, 1\\n\\n大量のデータを扱うときもメモリを節約できます。"
     },
     {
       "title": "ジェネレータ式",
@@ -290,7 +290,7 @@ export const pythonData3 = {
       "tutorialSlides": [
         {
           "title": "ジェネレータとは？",
-          "content": "# 値を「1つずつ」作る工場！\\n\\n**ジェネレータ** とは、値を **一度に全部作らず、必要なときに1つずつ生成する** 特別な関数です。\\n\\nたとえば、パン工場で1000個のパンを作るとき：\\n- **リスト** = 1000個全部作ってから渡す（場所をたくさん使う）\\n- **ジェネレータ** = 1個作って渡す、1個作って渡す...（場所を節約）\\n\\n**yield（イールド）** キーワードを使って定義します。「yield」は「生み出す」という意味です。\\n\\n**例：** 数を1つずつ生成しよう！\\n\\n```python\\ndef count_up(n):\\n    for i in range(n):\\n        yield i\\n\\nfor num in count_up(3):\\n    print(num)  # 0, 1, 2\\n```"
+          "content": "# 値を「1つずつ」作る工場！\\n\\n**ジェネレータ** とは、値を **一度に全部作らず、必要なときに1つずつ生成する** 特別な関数です。\\n\\nたとえば、パン工場で1000個のパンを作るとき：\\n- **リスト** = 1000個全部作ってから渡す（場所をたくさん使う）\\n- **ジェネレータ** = 1個作って渡す、1個作って渡す...（場所を節約）\\n\\n**yield（イールド）** キーワードを使って定義します。「yield」は「生み出す」という意味です。\\n\\n**例：** 数を1つずつ生成しよう！\\n\\n```python\\ndef count_up(n):\\n    for i in range(n):\\n        yield i\\n\\nfor num in count_up(3):\\n    print(num)\\n```\\n\\n=> 0, 1, 2"
         },
         {
           "title": "ジェネレータの利点",
@@ -386,7 +386,7 @@ export const pythonData3 = {
       "tutorialSlides": [
         {
           "title": "デコレータとは？",
-          "content": "# 関数を「飾り付け」しよう！\\n\\n**デコレータ** は、関数に **追加の機能をつける** 仕組みです。\\n\\n「デコレーション」は「飾り付け」という意味ですね。ケーキにクリームで飾りをつけるように、関数に機能を追加します！\\n\\n**例：** 関数の前後にメッセージを追加！\\n\\n```python\\ndef my_decorator(func):\\n    def wrapper():\\n        print('Before')  # 前に追加\\n        func()           # 元の関数を実行\\n        print('After')   # 後に追加\\n    return wrapper\\n\\n@my_decorator\\ndef say_hello():\\n    print('Hello!')\\n```\\n\\n**仕組み：**\\n- デコレータは「関数を受け取って、新しい関数を返す関数」\\n- 元の関数を「包んで」、追加の処理をつける"
+          "content": "# 関数を「飾り付け」しよう！\\n\\n**デコレータ** は、関数に **追加の機能をつける** 仕組みです。\\n\\n「デコレーション」は「飾り付け」という意味ですね。ケーキにクリームで飾りをつけるように、関数に機能を追加します！\\n\\n**例：** 関数の前後にメッセージを追加！\\n\\n```python\\ndef my_decorator(func):\\n    def wrapper():\\n        print('Before')\\n        func()           # 元の関数を実行\\n        print('After')\\n    return wrapper\\n\\n@my_decorator\\ndef say_hello():\\n    print('Hello!')\\n```\\n\\n=> 前に追加\\n=> 後に追加\\n\\n**仕組み：**\\n- デコレータは「関数を受け取って、新しい関数を返す関数」\\n- 元の関数を「包んで」、追加の処理をつける"
         },
         {
           "title": "デコレータの使い方",

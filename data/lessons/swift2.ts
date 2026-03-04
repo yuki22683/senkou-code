@@ -12,11 +12,11 @@ export const swift2Data = {
     },
     {
       "title": "アンラップ",
-      "content": "オプショナルから値を取り出すには**アンラップ**します。\\n\\n```swift\\nvar num: Int? = 42\\nif num != nil {\\n    print(num!) // 強制アンラップ\\n}\\n```\\n\\n`!` で強制アンラップしますが、nilだとエラーになります。"
+      "content": "オプショナルから値を取り出すには**アンラップ**します。\\n\\n```swift\\nvar num: Int? = 42\\nif num != nil {\\n    print(num!)\\n}\\n```\\n\\n=> 強制アンラップ\\n\\n`!` で強制アンラップしますが、nilだとエラーになります。"
     },
     {
       "title": "オプショナルバインディング",
-      "content": "安全にアンラップするには `if let` を使います。\\n\\n```swift\\nvar num: Int? = 42\\nif let value = num {\\n    print(value) // 安全にアンラップ\\n}\\n```\\n\\n値があれば `value` に代入されます。"
+      "content": "安全にアンラップするには `if let` を使います。\\n\\n```swift\\nvar num: Int? = 42\\nif let value = num {\\n    print(value)\\n}\\n```\\n\\n=> 安全にアンラップ\\n\\n値があれば `value` に代入されます。"
     },
     {
       "title": "クラス",
@@ -28,7 +28,7 @@ export const swift2Data = {
     },
     {
       "title": "拡張（extension）",
-      "content": "`extension` で既存の型に機能を追加できます。\\n\\n```swift\\nextension Int {\\n    var doubled: Int {\\n        return self * 2\\n    }\\n}\\nprint(5.doubled) // 10\\n```"
+      "content": "`extension` で既存の型に機能を追加できます。\\n\\n```swift\\nextension Int {\\n    var doubled: Int {\\n        return self * 2\\n    }\\n}\\nprint(5.doubled)\\n```\\n\\n=> 10"
     }
   ],
   "exercises": [
@@ -50,7 +50,7 @@ export const swift2Data = {
         },
         {
           "title": "アンラップとは？",
-          "content": "# 包みを開けて中身を取り出す\\n\\nオプショナルは「箱に入った状態」なので、中身を使うには **アンラップ（包みを開ける）** が必要です。\\n\\n`!` をつけると強制的に開けられます。\\n\\n```swift\\nvar num: Int? = 42\\nprint(num!)  // 42（箱を開けて中身を表示）\\n```\\n\\n**注意：** nilのとき`!`を使うとエラーになります。"
+          "content": "# 包みを開けて中身を取り出す\\n\\nオプショナルは「箱に入った状態」なので、中身を使うには **アンラップ（包みを開ける）** が必要です。\\n\\n`!` をつけると強制的に開けられます。\\n\\n```swift\\nvar num: Int? = 42\\nprint(num!)\\n```\\n\\n=> 42（箱を開けて中身を表示）\\n\\n**注意：** nilのとき`!`を使うとエラーになります。"
         }
       ],
       "correctCode": "// ?でオプショナル型\\nvar num: Int? = 42\\n// nilチェック\\nif num != nil {\\n    // !でアンラップ\\n    print(num!)\\n// ブロックを閉じる\\n}",
@@ -154,7 +154,7 @@ export const swift2Data = {
         },
         {
           "title": "構造体を使う",
-          "content": "# インスタンスを作る\\n\\n構造体から実際のデータを作ることを **インスタンス化** と言います。\\n\\n```swift\\nlet p = Point(x: 3, y: 4)\\nprint(p.x)  // 3\\nprint(p.y)  // 4\\n```\\n\\n`Point(x: 3, y: 4)` で、x=3、y=4の点を作っています。`.`（ドット）で各データにアクセスできます。"
+          "content": "# インスタンスを作る\\n\\n構造体から実際のデータを作ることを **インスタンス化** と言います。\\n\\n```swift\\nlet p = Point(x: 3, y: 4)\\nprint(p.x)\\nprint(p.y)\\n```\\n\\n=> 3\\n=> 4\\n\\n`Point(x: 3, y: 4)` で、x=3、y=4の点を作っています。`.`（ドット）で各データにアクセスできます。"
         },
         {
           "title": "やってみましょう！",
@@ -290,7 +290,7 @@ export const swift2Data = {
         },
         {
           "title": "プロトコルに準拠する",
-          "content": "# : プロトコル名 で準拠を宣言\\n\\n```swift\\nstruct Person: Greet {  // Greetに準拠\\n    func hello() {\\n        print(\"こんにちは\")  // 中身を実装\\n    }\\n}\\n```\\n\\n「準拠」とは、約束を守ることです。\\n\\nプロトコルで宣言された関数の中身を、実際に書きます。"
+          "content": "# : プロトコル名 で準拠を宣言\\n\\n```swift\\nstruct Person: Greet {  // Greetに準拠\\n    func hello() {\\n        print(\"こんにちは\")\\n    }\\n}\\n```\\n\\n=> 中身を実装\\n\\n「準拠」とは、約束を守ることです。\\n\\nプロトコルで宣言された関数の中身を、実際に書きます。"
         },
         {
           "title": "やってみましょう！",
@@ -370,7 +370,7 @@ export const swift2Data = {
         },
         {
           "title": "クロージャの例",
-          "content": "# 変数に入れて使う\\n\\n```swift\\nlet add = { (a: Int, b: Int) in\\n    return a + b\\n}\\nprint(add(2, 3))  // 5\\n```\\n\\n`add` という変数に「2つの数を足す」クロージャを入れています。\\n\\n`add(2, 3)` で普通の関数のように呼び出せます。"
+          "content": "# 変数に入れて使う\\n\\n```swift\\nlet add = { (a: Int, b: Int) in\\n    return a + b\\n}\\nprint(add(2, 3))\\n```\\n\\n=> 5\\n\\n`add` という変数に「2つの数を足す」クロージャを入れています。\\n\\n`add(2, 3)` で普通の関数のように呼び出せます。"
         },
         {
           "title": "やってみましょう！",
@@ -526,7 +526,7 @@ export const swift2Data = {
         },
         {
           "title": "guard let でオプショナルを開く",
-          "content": "# nilなら即リターン\\n\\n```swift\\nfunc check(_ val: Int?) {\\n    guard let n = val else {\\n        print(\"nil\")  // 値がないときの処理\\n        return        // 関数から出る\\n    }\\n    print(n)  // 値があるとき、nが使える\\n}\\n```\\n\\n**if let** と違い、取り出した変数 `n` を関数全体で使えるのがポイントです。"
+          "content": "# nilなら即リターン\\n\\n```swift\\nfunc check(_ val: Int?) {\\n    guard let n = val else {\\n        print(\"nil\")\\n        return        // 関数から出る\\n    }\\n    print(n)  // 値があるとき、nが使える\\n}\\n```\\n\\n=> 値がないときの処理\\n\\n**if let** と違い、取り出した変数 `n` を関数全体で使えるのがポイントです。"
         },
         {
           "title": "やってみましょう！",

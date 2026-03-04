@@ -20,7 +20,7 @@ export const phpData = {
     },
     {
       "title": "計算する",
-      "content": "PHPでは数字を計算できます。\\n\\n```php\\n<?php\\n  $a = 5;\\n  $b = 3;\\n  echo $a + $b;  // 8\\n  echo 10 % 3;   // 1（あまり）\\n?>\\n```\\n\\n`//` から後ろはコメント（メモ）です。"
+      "content": "PHPでは数字を計算できます。\\n\\n```php\\n<?php\\n  $a = 5;\\n  $b = 3;\\n  echo $a + $b;\\n  echo 10 % 3;\\n?>\\n```\\n\\n=> 8\\n=> 1（あまり）\\n\\n`//` から後ろはコメント（メモ）です。"
     },
     {
       "title": "条件分岐 if文",

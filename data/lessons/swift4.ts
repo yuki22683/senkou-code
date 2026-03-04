@@ -588,7 +588,7 @@ export const swift4Data = {
         },
         {
           "title": "guard の書き方",
-          "content": "# guard 条件 else { 脱出 }\\n\\n```swift\\nfunc check(_ value: Int?) {\\n    guard let v = value else {\\n        print(\"値がない\")  // 条件を満たさない\\n        return  // 関数から出る\\n    }\\n    print(v)  // 条件を満たす場合\\n}\\n```"
+          "content": "# guard 条件 else { 脱出 }\\n\\n```swift\\nfunc check(_ value: Int?) {\\n    guard let v = value else {\\n        print(\"値がない\")\\n        return  // 関数から出る\\n    }\\n    print(v)\\n}\\n```\\n\\n=> 条件を満たさない\\n=> 条件を満たす場合"
         },
         {
           "title": "if let との違い",

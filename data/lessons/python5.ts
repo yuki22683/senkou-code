@@ -24,7 +24,7 @@ export const pythonData5 = {
     },
     {
       "title": "collections.Counter",
-      "content": "**Counter** で**要素の出現回数**を簡単にカウントできます。\\n\\n```python\\nfrom collections import Counter\\n\\nwords = ['apple', 'banana', 'apple']\\ncount = Counter(words)\\nprint(count['apple'])  # 2\\n\\n# 多い順に取得\\nprint(count.most_common(2))\\n# [('apple', 2), ('banana', 1)]\\n```\\n\\n文字列を渡すと1文字ずつカウントします。"
+      "content": "**Counter** で**要素の出現回数**を簡単にカウントできます。\\n\\n```python\\nfrom collections import Counter\\n\\nwords = ['apple', 'banana', 'apple']\\ncount = Counter(words)\\nprint(count['apple'])\\n\\n# 多い順に取得\\nprint(count.most_common(2))\\n# [('apple', 2), ('banana', 1)]\\n```\\n\\n=> 2\\n\\n文字列を渡すと1文字ずつカウントします。"
     }
   ],
   "exercises": [
@@ -175,7 +175,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "Counterとは？",
-          "content": "# 要素を数える\\n\\n**Counter（カウンター）** を使うと、**要素の出現回数を簡単にカウント** できます。\\n\\n**たとえ話：** クラスで「好きな果物」アンケートを取って、りんごが何票、バナナが何票...と数えるようなものです。\\n\\n**例：** 果物の出現回数を数えよう！\\n\\n```python\\nfrom collections import Counter\\n\\nwords = ['apple', 'banana', 'apple', 'cherry']\\ncount = Counter(words)\\nprint(count['apple'])  # 2（appleは2回出てきた）\\nprint(count['banana']) # 1\\n```\\n\\n**何をしているか：**\\n1. `from collections import Counter` でインポート\\n2. `Counter(リスト)` でカウント開始\\n3. `count['apple']` で「apple」の出現回数を取得\\n\\n**便利なメソッド：**\\n- `count.most_common(3)`: 多い順に3つ取得\\n- `count.total()`: 全要素の合計数\\n\\n**ポイント：** 文字列を渡すと、1文字ずつカウントします！"
+          "content": "# 要素を数える\\n\\n**Counter（カウンター）** を使うと、**要素の出現回数を簡単にカウント** できます。\\n\\n**たとえ話：** クラスで「好きな果物」アンケートを取って、りんごが何票、バナナが何票...と数えるようなものです。\\n\\n**例：** 果物の出現回数を数えよう！\\n\\n```python\\nfrom collections import Counter\\n\\nwords = ['apple', 'banana', 'apple', 'cherry']\\ncount = Counter(words)\\nprint(count['apple'])\\nprint(count['banana'])\\n```\\n\\n=> 2（appleは2回出てきた）\\n=> 1\\n\\n**何をしているか：**\\n1. `from collections import Counter` でインポート\\n2. `Counter(リスト)` でカウント開始\\n3. `count['apple']` で「apple」の出現回数を取得\\n\\n**便利なメソッド：**\\n- `count.most_common(3)`: 多い順に3つ取得\\n- `count.total()`: 全要素の合計数\\n\\n**ポイント：** 文字列を渡すと、1文字ずつカウントします！"
         }
       ],
       "correctCode": "# Counterクラスをインポート\\nfrom collections import Counter\\n\\n# textに'hello world'を代入\\ntext = 'hello world'\\n# textの各文字をカウントしてcountに代入\\ncount = Counter(text)\\n# 出現回数が多い順に3つ表示\\nprint(count.most_common(3))",
@@ -357,7 +357,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "itertools.chain()",
-          "content": "# イテラブルを連結\\n\\n**chain()（チェーン）** を使うと、**複数のリストやイテラブルを1つにつなげて** 処理できます。\\n\\n**たとえ話：** 電車の連結のようなもの。複数の車両（リスト）をつなげて1つの長い電車にします。\\n\\n**リストの `+` との違い：**\\n- `a + b`: 新しいリストを作る（メモリを使う）\\n- `chain(a, b)`: つなげて順番に取り出す（メモリに優しい）\\n\\n**例：** 2つのリストをつなげてループしよう！\\n\\n```python\\nfrom itertools import chain\\n\\na = [1, 2, 3]\\nb = [4, 5, 6]\\nfor x in chain(a, b):\\n    print(x)  # 1 2 3 4 5 6 の順に出力\\n```\\n\\n**何をしているか：**\\n1. `from itertools import chain` でインポート\\n2. `chain(a, b)` で2つのリストを連結\\n3. `for` ループで1つずつ取り出せる\\n4. `list(chain(a, b))` でリストに変換も可能\\n\\n**ポイント：** 3つ以上も連結可能！ `chain(a, b, c, d, ...)` のように書けます。"
+          "content": "# イテラブルを連結\\n\\n**chain()（チェーン）** を使うと、**複数のリストやイテラブルを1つにつなげて** 処理できます。\\n\\n**たとえ話：** 電車の連結のようなもの。複数の車両（リスト）をつなげて1つの長い電車にします。\\n\\n**リストの `+` との違い：**\\n- `a + b`: 新しいリストを作る（メモリを使う）\\n- `chain(a, b)`: つなげて順番に取り出す（メモリに優しい）\\n\\n**例：** 2つのリストをつなげてループしよう！\\n\\n```python\\nfrom itertools import chain\\n\\na = [1, 2, 3]\\nb = [4, 5, 6]\\nfor x in chain(a, b):\\n    print(x)\\n```\\n\\n=> 1, 2, 3, 4, 5, 6\\n\\n**何をしているか：**\\n1. `from itertools import chain` でインポート\\n2. `chain(a, b)` で2つのリストを連結\\n3. `for` ループで1つずつ取り出せる\\n4. `list(chain(a, b))` でリストに変換も可能\\n\\n**ポイント：** 3つ以上も連結可能！ `chain(a, b, c, d, ...)` のように書けます。"
         }
       ],
       "correctCode": "# chain関数をインポート\\nfrom itertools import chain\\n\\n# list1に[1, 2, 3]を代入\\nlist1 = [1, 2, 3]\\n# list2に[4, 5, 6]を代入\\nlist2 = [4, 5, 6]\\n# chain(list1, list2)をlist()でリスト化しresultに代入\\nresult = list(chain(list1, list2))\\n# resultをprintで出力\\nprint(result)",

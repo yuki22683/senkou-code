@@ -16,7 +16,7 @@ export const pythonData4 = {
     },
     {
       "title": "@propertyデコレータ",
-      "content": "**@property** を使うと、**メソッドを属性のようにアクセス**できます。\\n\\n- 普通のメソッド: `c.area()` ← 括弧が必要\\n- プロパティ: `c.area` ← 括弧なしで呼べる\\n\\n```python\\nclass Circle:\\n    def __init__(self, radius):\\n        self._radius = radius\\n    \\n    @property\\n    def area(self):\\n        return 3.14 * self._radius ** 2\\n\\nc = Circle(5)\\nprint(c.area)  # 78.5（括弧なし）\\n```"
+      "content": "**@property** を使うと、**メソッドを属性のようにアクセス**できます。\\n\\n- 普通のメソッド: `c.area()` ← 括弧が必要\\n- プロパティ: `c.area` ← 括弧なしで呼べる\\n\\n```python\\nclass Circle:\\n    def __init__(self, radius):\\n        self._radius = radius\\n    \\n    @property\\n    def area(self):\\n        return 3.14 * self._radius ** 2\\n\\nc = Circle(5)\\nprint(c.area)\\n```\\n\\n=> 78.5（括弧なし）"
     },
     {
       "title": "@classmethodデコレータ",
@@ -24,7 +24,7 @@ export const pythonData4 = {
     },
     {
       "title": "@staticmethodデコレータ",
-      "content": "**@staticmethod** は、**self も cls も必要としない**メソッドです。\\n\\n| メソッド種類 | 第一引数 | 用途 |\\n|------------|---------|------|\\n| 普通のメソッド | `self` | インスタンスのデータを扱う |\\n| クラスメソッド | `cls` | クラス全体のデータを扱う |\\n| 静的メソッド | なし | 独立した処理を行う |\\n\\n```python\\nclass Math:\\n    @staticmethod\\n    def add(a, b):\\n        return a + b\\n\\nprint(Math.add(3, 5))  # 8\\n```"
+      "content": "**@staticmethod** は、**self も cls も必要としない**メソッドです。\\n\\n| メソッド種類 | 第一引数 | 用途 |\\n|------------|---------|------|\\n| 普通のメソッド | `self` | インスタンスのデータを扱う |\\n| クラスメソッド | `cls` | クラス全体のデータを扱う |\\n| 静的メソッド | なし | 独立した処理を行う |\\n\\n```python\\nclass Math:\\n    @staticmethod\\n    def add(a, b):\\n        return a + b\\n\\nprint(Math.add(3, 5))\\n```\\n\\n=> 8"
     },
     {
       "title": "抽象クラス（ABC）",
@@ -40,7 +40,7 @@ export const pythonData4 = {
     },
     {
       "title": "__len__メソッド",
-      "content": "**__len__** を定義すると、`len()` 関数で**オブジェクトの長さ**を取得できます。\\n\\n```python\\nclass Playlist:\\n    def __init__(self, songs):\\n        self.songs = songs\\n    \\n    def __len__(self):\\n        return len(self.songs)\\n\\npl = Playlist(['A', 'B', 'C'])\\nprint(len(pl))  # 3\\n```\\n\\n`__len__` は必ず**整数（int）**を返す必要があります。"
+      "content": "**__len__** を定義すると、`len()` 関数で**オブジェクトの長さ**を取得できます。\\n\\n```python\\nclass Playlist:\\n    def __init__(self, songs):\\n        self.songs = songs\\n    \\n    def __len__(self):\\n        return len(self.songs)\\n\\npl = Playlist(['A', 'B', 'C'])\\nprint(len(pl))\\n```\\n\\n=> 3\\n\\n`__len__` は必ず**整数（int）**を返す必要があります。"
     },
     {
       "title": "@dataclassデコレータ",
@@ -54,7 +54,7 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "継承とは？",
-          "content": "# 親の能力を子供が受け継ぐ！\\n\\n**継承** とは、既存のクラスの機能を **そのまま引き継いで** 新しいクラスを作ることです。\\n\\n現実世界で考えてみましょう：\\n- **親クラス（Animal）** = 動物の基本的な性質\\n- **子クラス（Dog）** = 動物の性質 + 犬特有の性質\\n\\n犬は「動物」なので、動物の機能は全部持っています。でも、犬だけの特別な機能も追加できます！\\n\\n**例：** 動物クラスを継承して犬クラスを作ろう！\\n\\n```python\\nclass Animal:\\n    def speak(self):\\n        print('...')\\n\\nclass Dog(Animal):  # Animalを継承\\n    def speak(self):\\n        print('Woof!')  # 犬専用の鳴き声\\n```\\n\\n**ポイント：** `class Dog(Animal):` の `(Animal)` で「Animalを継承する」という意味になります。"
+          "content": "# 親の能力を子供が受け継ぐ！\\n\\n**継承** とは、既存のクラスの機能を **そのまま引き継いで** 新しいクラスを作ることです。\\n\\n現実世界で考えてみましょう：\\n- **親クラス（Animal）** = 動物の基本的な性質\\n- **子クラス（Dog）** = 動物の性質 + 犬特有の性質\\n\\n犬は「動物」なので、動物の機能は全部持っています。でも、犬だけの特別な機能も追加できます！\\n\\n**例：** 動物クラスを継承して犬クラスを作ろう！\\n\\n```python\\nclass Animal:\\n    def speak(self):\\n        print('...')\\n\\nclass Dog(Animal):  # Animalを継承\\n    def speak(self):\\n        print('Woof!')\\n```\\n\\n=> 犬専用の鳴き声\\n\\n**ポイント：** `class Dog(Animal):` の `(Animal)` で「Animalを継承する」という意味になります。"
         }
       ],
       "correctCode": "# classで親クラスVehicleを定義\\nclass Vehicle:\\n    # defで__init__メソッドを定義（引数: self, brand）\\n    def __init__(self, brand):\\n        # self.brandにbrandを代入\\n        self.brand = brand\\n\\n# classでCarクラスを定義（Vehicleを継承）\\nclass Car(Vehicle):\\n    # defでhonkメソッドを定義（引数: selfのみ）\\n    def honk(self):\\n        # print関数でself.brandを埋め込んで「(self.brandの値) car: Beep!」形式で出力\\n        print(f'{self.brand} car: Beep!')\\n\\n# Carインスタンス（ブランド: トヨタ）をcarに代入\\ncar = Car('トヨタ')\\n# carでhonkメソッドを呼び出す\\ncar.honk()",
@@ -190,7 +190,7 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "@propertyとは？",
-          "content": "# メソッドを「属性」のように使う\\n\\n**@property（プロパティ）** というデコレータを使うと、**メソッド（関数）を属性のようにアクセス** できるようになります。\\n\\n**普通のメソッドとの違い：**\\n- 普通のメソッド: `c.area()` ← **括弧が必要**\\n- プロパティ: `c.area` ← **括弧なしで呼べる！**\\n\\n**たとえ話：** 電卓の「=」ボタンを押さなくても、数字を見るだけで答えが分かる感じです。\\n\\n**例：** 円の面積を括弧なしで取得しよう！\\n\\n```python\\nclass Circle:\\n    def __init__(self, radius):\\n        self._radius = radius\\n    \\n    @property\\n    def area(self):\\n        return 3.14 * self._radius ** 2\\n\\nc = Circle(5)\\nprint(c.area)  # 78.5 (括弧なし！)\\n```\\n\\n**何をしているか：**\\n1. `@property` をメソッドの上に書く\\n2. `area` メソッドが属性のように使える\\n3. `c.area` で面積が計算されて返ってくる"
+          "content": "# メソッドを「属性」のように使う\\n\\n**@property（プロパティ）** というデコレータを使うと、**メソッド（関数）を属性のようにアクセス** できるようになります。\\n\\n**普通のメソッドとの違い：**\\n- 普通のメソッド: `c.area()` ← **括弧が必要**\\n- プロパティ: `c.area` ← **括弧なしで呼べる！**\\n\\n**たとえ話：** 電卓の「=」ボタンを押さなくても、数字を見るだけで答えが分かる感じです。\\n\\n**例：** 円の面積を括弧なしで取得しよう！\\n\\n```python\\nclass Circle:\\n    def __init__(self, radius):\\n        self._radius = radius\\n    \\n    @property\\n    def area(self):\\n        return 3.14 * self._radius ** 2\\n\\nc = Circle(5)\\nprint(c.area)\\n```\\n\\n=> 78.5（括弧なし！）\\n\\n**何をしているか：**\\n1. `@property` をメソッドの上に書く\\n2. `area` メソッドが属性のように使える\\n3. `c.area` で面積が計算されて返ってくる"
         }
       ],
       "correctCode": "# classでRectangleクラスを定義\\nclass Rectangle:\\n    # defで__init__メソッドを定義（引数: self, width, height）\\n    def __init__(self, width, height):\\n        # self.widthにwidthを代入\\n        self.width = width\\n        # self.heightにheightを代入\\n        self.height = height\\n    \\n    # @propertyデコレータ\\n    @property\\n    # defでareaメソッドを定義（引数: selfのみ）\\n    def area(self):\\n        # returnでself.widthとself.heightの積を返す\\n        return self.width * self.height\\n\\n# Rectangleを作成（幅に4, 高さに5）しrに代入\\nr = Rectangle(4, 5)\\n# print関数でr.areaを表示\\nprint(r.area)",
@@ -340,7 +340,7 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "@staticmethodとは？",
-          "content": "# インスタンスに依存しないメソッド\\n\\n**@staticmethod（静的メソッド）** は、**self も cls も必要としない** メソッドを定義します。\\n\\n**3つのメソッドの比較：**\\n| メソッド種類 | 第一引数 | 用途 |\\n|------------|---------|------|\\n| 普通のメソッド | `self` | インスタンスのデータを扱う |\\n| クラスメソッド | `cls` | クラス全体のデータを扱う |\\n| 静的メソッド | なし | 独立した処理を行う |\\n\\n**たとえ話：** クラスの「便利な道具箱」に入っている関数。クラスに関係ある処理だけど、クラスやインスタンスのデータは使わない。\\n\\n**例：** 計算だけする便利なメソッド！\\n\\n```python\\nclass Math:\\n    @staticmethod\\n    def add(a, b):\\n        return a + b\\n\\nprint(Math.add(3, 5))  # 8\\n```\\n\\n**何をしているか：**\\n1. `@staticmethod` でデコレートする\\n2. `self` や `cls` は書かない\\n3. `Math.add(3, 5)` でクラスから直接呼び出せる"
+          "content": "# インスタンスに依存しないメソッド\\n\\n**@staticmethod（静的メソッド）** は、**self も cls も必要としない** メソッドを定義します。\\n\\n**3つのメソッドの比較：**\\n| メソッド種類 | 第一引数 | 用途 |\\n|------------|---------|------|\\n| 普通のメソッド | `self` | インスタンスのデータを扱う |\\n| クラスメソッド | `cls` | クラス全体のデータを扱う |\\n| 静的メソッド | なし | 独立した処理を行う |\\n\\n**たとえ話：** クラスの「便利な道具箱」に入っている関数。クラスに関係ある処理だけど、クラスやインスタンスのデータは使わない。\\n\\n**例：** 計算だけする便利なメソッド！\\n\\n```python\\nclass Math:\\n    @staticmethod\\n    def add(a, b):\\n        return a + b\\n\\nprint(Math.add(3, 5))\\n```\\n\\n=> 8\\n\\n**何をしているか：**\\n1. `@staticmethod` でデコレートする\\n2. `self` や `cls` は書かない\\n3. `Math.add(3, 5)` でクラスから直接呼び出せる"
         }
       ],
       "correctCode": "# classでValidatorクラスを定義\\nclass Validator:\\n    # @staticmethodデコレータ\\n    @staticmethod\\n    # defでis_positiveメソッドを定義（引数: nのみ）\\n    def is_positive(n):\\n        # returnでnが0より大きいかを返す\\n        return n > 0\\n\\n# print関数でValidatorのis_positiveメソッド（引数5）の結果を表示\\nprint(Validator.is_positive(5))\\n# print関数でValidatorのis_positiveメソッド（引数-3）の結果を表示\\nprint(Validator.is_positive(-3))",
@@ -608,7 +608,7 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "__len__とは？",
-          "content": "# `len()` を使えるようにする\\n\\n**__len__（レングス）** メソッドを定義すると、`len()` 関数で **オブジェクトの「長さ」や「数」** を取得できるようになります。\\n\\n**たとえ話：** 「何個入ってる？」と聞かれたときの答え方を教えるもの。\\n- プレイリストの長さ → 曲の数\\n- チームの長さ → メンバーの数\\n- 買い物かごの長さ → 商品の数\\n\\n**例：** プレイリストの曲数を取得しよう！\\n\\n```python\\nclass Playlist:\\n    def __init__(self, songs):\\n        self.songs = songs\\n    \\n    def __len__(self):\\n        return len(self.songs)\\n\\npl = Playlist(['A', 'B', 'C'])\\nprint(len(pl))  # 3\\n```\\n\\n**何をしているか：**\\n1. `__len__` メソッドを定義\\n2. `self.songs` リストの長さを返す\\n3. `len(pl)` で自動的に `__len__` が呼ばれる\\n\\n**ポイント：** `__len__` は必ず **整数（int）** を返す必要があります。"
+          "content": "# `len()` を使えるようにする\\n\\n**__len__（レングス）** メソッドを定義すると、`len()` 関数で **オブジェクトの「長さ」や「数」** を取得できるようになります。\\n\\n**たとえ話：** 「何個入ってる？」と聞かれたときの答え方を教えるもの。\\n- プレイリストの長さ → 曲の数\\n- チームの長さ → メンバーの数\\n- 買い物かごの長さ → 商品の数\\n\\n**例：** プレイリストの曲数を取得しよう！\\n\\n```python\\nclass Playlist:\\n    def __init__(self, songs):\\n        self.songs = songs\\n    \\n    def __len__(self):\\n        return len(self.songs)\\n\\npl = Playlist(['A', 'B', 'C'])\\nprint(len(pl))\\n```\\n\\n=> 3\\n\\n**何をしているか：**\\n1. `__len__` メソッドを定義\\n2. `self.songs` リストの長さを返す\\n3. `len(pl)` で自動的に `__len__` が呼ばれる\\n\\n**ポイント：** `__len__` は必ず **整数（int）** を返す必要があります。"
         }
       ],
       "correctCode": "# classでTeamクラスを定義\\nclass Team:\\n    # defで__init__メソッドを定義（引数: self, members）\\n    def __init__(self, members):\\n        # self.membersにmembersを代入\\n        self.members = members\\n    \\n    # defで__len__メソッドを定義（引数: selfのみ）\\n    def __len__(self):\\n        # returnでself.membersの長さを返す\\n        return len(self.members)\\n\\n# Team（アリス、ボブ、チャーリーの順）をteamに代入\\nteam = Team(['アリス', 'ボブ', 'チャーリー'])\\n# print関数でteamの長さを表示\\nprint(len(team))",

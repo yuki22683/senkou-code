@@ -8,11 +8,11 @@ export const bash3Data = {
   "tutorialSlides": [
     {
       "title": "パイプ |",
-      "content": "**パイプ** `|` は、コマンドの出力を次のコマンドの入力に渡します。\\n\\n```bash\\necho \"hello world\" | wc -w  # 2（単語数）\\necho \"hello\" | tr 'a-z' 'A-Z'  # HELLO\\n```\\n\\nパイプは何個でもつなげられます。"
+      "content": "**パイプ** `|` は、コマンドの出力を次のコマンドの入力に渡します。\\n\\n```bash\\necho \"hello world\" | wc -w\\necho \"hello\" | tr 'a-z' 'A-Z'  # HELLO\\n```\\n\\n=> 2（単語数）\\n\\nパイプは何個でもつなげられます。"
     },
     {
       "title": "リダイレクト > と >>",
-      "content": "コマンドの結果をファイルに保存します。\\n\\n- `>` : 上書き（新規作成）\\n- `>>` : 追記\\n\\n```bash\\necho \"hello\" > file.txt   # 上書き\\necho \"world\" >> file.txt  # 追記\\n```"
+      "content": "コマンドの結果をファイルに保存します。\\n\\n- `>` : 上書き（新規作成）\\n- `>>` : 追記\\n\\n```bash\\necho \"hello\" > file.txt\\necho \"world\" >> file.txt\\n```\\n\\n=> 上書き\\n=> 追記"
     },
     {
       "title": "入力リダイレクト <",
