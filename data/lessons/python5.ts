@@ -312,19 +312,19 @@ export const pythonData5 = {
           "content": "# デフォルト値を持つ辞書\\n\\n**defaultdict（デフォルトディクト）** を使うと、**存在しないキーにアクセスしてもエラーにならない** 辞書が作れます。\\n\\n**普通の辞書の問題：**\\n```python\\nd = {}\\nd['a'] += 1  # エラー！キー'a'が存在しない\\n```\\n\\n**defaultdictなら：**\\n```python\\nd = defaultdict(int)\\nd['a'] += 1  # OK！自動で 0 が入る\\n```\\n\\n**たとえ話：** ゲームのスコアボード。新しいプレイヤーが参加すると、自動で「0点」からスタートできます。\\n\\n**デフォルト値の種類：**\\n- `defaultdict(int)`: 数値 `0` がデフォルト\\n- `defaultdict(list)`: 空のリスト `[]` がデフォルト\\n- `defaultdict(str)`: 空の文字列 `''` がデフォルト\\n\\n**何をしているか：**\\n1. `defaultdict(型)` でデフォルト値の型を指定\\n2. 存在しないキーにアクセスすると自動でデフォルト値が入る\\n3. その後は普通の辞書と同じように使える\\n\\n**ポイント：** キーの存在確認が不要になり、コードがシンプルになります！"
         }
       ],
-      "correctCode": "# defaultdictクラスをインポート\\nfrom collections import defaultdict\\n\\n# dにdefaultdict(list)を代入\\nd = defaultdict(list)\\n# d['くだもの']に'りんご'をappend\\nd['くだもの'].append('りんご')\\n# d['くだもの']に'バナナ'をappend\\nd['くだもの'].append('バナナ')\\n# d['くだもの']をprintで出力\\nprint(d['くだもの'])",
-      "holeyCode": "# defaultdictクラスをインポート\\nfrom ___ import ___\\n\\n# dにdefaultdict(list)を代入\\n___ = ___(list)\\n# d['くだもの']に'りんご'をappend\\n___['___'].___('___')\\n# d['くだもの']に'バナナ'をappend\\n___['___'].___('___')\\n# d['くだもの']をprintで出力\\n___(___['___'])",
+      "correctCode": "# defaultdictクラスをインポート\\nfrom collections import defaultdict\\n\\n# dにデフォルト値が空リストの辞書を代入\\nd = defaultdict(list)\\n# dのくだものキーにりんごを追加\\nd['くだもの'].append('りんご')\\n# dのくだものキーにバナナを追加\\nd['くだもの'].append('バナナ')\\n# dのくだものリストを表示\\nprint(d['くだもの'])",
+      "holeyCode": "# defaultdictクラスをインポート\\nfrom ___ import ___\\n\\n# dにデフォルト値が空リストの辞書を代入\\n___ = ___(list)\\n# dのくだものキーにりんごを追加\\n___['___'].___('___')\\n# dのくだものキーにバナナを追加\\n___['___'].___('___')\\n# dのくだものリストを表示\\n___(___['___'])",
       "correctLines": [
         "# defaultdictクラスをインポート",
         "from collections import defaultdict",
         "",
-        "# dにdefaultdict(list)を代入",
+        "# dにデフォルト値が空リストの辞書を代入",
         "d = defaultdict(list)",
-        "# d['くだもの']に'りんご'をappend",
+        "# dのくだものキーにりんごを追加",
         "d['くだもの'].append('りんご')",
-        "# d['くだもの']に'バナナ'をappend",
+        "# dのくだものキーにバナナを追加",
         "d['くだもの'].append('バナナ')",
-        "# d['くだもの']をprintで出力",
+        "# dのくだものリストを表示",
         "print(d['くだもの'])"
       ],
       "lineHints": [
