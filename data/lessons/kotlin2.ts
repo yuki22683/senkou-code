@@ -46,7 +46,7 @@ export const kotlin2Data = {
         },
         {
           "title": "nullチェック",
-          "content": "# nullでないか確認してから使う\\n\\n```kotlin\\nvar num: Int? = 42\\nif (num != null) {\\n    println(num)  // nullでないことが確定\\n}\\n```\\n\\n`!=` は「等しくない」という意味。`num != null` は「numがnullでないなら」という条件です。"
+          "content": "# nullでないか確認してから使う\\n\\n```kotlin\\nvar num: Int? = 42\\nif (num != null) {\\n    println(num)\\n}\\n```\\n\\n=> nullでないことが確定\\n\\n`!=` は「等しくない」という意味。`num != null` は「numがnullでないなら」という条件です。"
         },
         {
           "title": "やってみましょう！",
@@ -98,7 +98,7 @@ export const kotlin2Data = {
         },
         {
           "title": "?. の動き",
-          "content": "# nullなら処理をスキップ\\n\\n```kotlin\\nval name: String? = \"hello\"\\nprintln(name?.length)\\n\\nval empty: String? = null\\nprintln(empty?.length)  // null（エラーにならない）\\n```\\n\\n=> 5（helloの文字数）\\n\\n左側がnullのときは、プロパティにアクセスせずnullを返します。"
+          "content": "# nullなら処理をスキップ\\n\\n```kotlin\\nval name: String? = \"hello\"\\nprintln(name?.length)\\n\\nval empty: String? = null\\nprintln(empty?.length)\\n```\\n\\n=> null（エラーにならない）\\n\\n=> 5（helloの文字数）\\n\\n左側がnullのときは、プロパティにアクセスせずnullを返します。"
         },
         {
           "title": "やってみましょう！",
@@ -142,7 +142,7 @@ export const kotlin2Data = {
         },
         {
           "title": "?: の動き",
-          "content": "# nullなら代替値を使う\\n\\n```kotlin\\nval name: String? = null\\nprintln(name ?: \"Guest\")  // Guest（nameがnullなので）\\n\\nval name2: String? = \"Taro\"\\nprintln(name2 ?: \"Guest\")  // Taro（nullでないので）\\n```\\n\\n`a ?: b` は「aがnullでなければa、nullならb」という意味です。"
+          "content": "# nullなら代替値を使う\\n\\n```kotlin\\nval name: String? = null\\nprintln(name ?: \"Guest\")\\n\\nval name2: String? = \"Taro\"\\nprintln(name2 ?: \"Guest\")\\n```\\n\\n=> Guest（nameがnullなので）\\n=> Taro（nullでないので）\\n\\n`a ?: b` は「aがnullでなければa、nullならb」という意味です。"
         },
         {
           "title": "やってみましょう！",
@@ -186,7 +186,7 @@ export const kotlin2Data = {
         },
         {
           "title": "data class の作り方",
-          "content": "# data をつけるだけ\\n\\n`class` の前に **data** をつけると、データクラスになります。\\n\\n```kotlin\\ndata class User(val name: String, val age: Int)\\n\\nval u = User(\"Taro\", 20)\\nprintln(u)  // User(name=Taro, age=20)\\n```\\n\\n中身が見やすく表示されるのが特徴です。"
+          "content": "# data をつけるだけ\\n\\n`class` の前に **data** をつけると、データクラスになります。\\n\\n```kotlin\\ndata class User(val name: String, val age: Int)\\n\\nval u = User(\"Taro\", 20)\\nprintln(u)\\n```\\n\\n=> User(name=Taro, age=20)\\n\\n中身が見やすく表示されるのが特徴です。"
         },
         {
           "title": "やってみましょう！",
@@ -286,7 +286,7 @@ export const kotlin2Data = {
         },
         {
           "title": "map を使ってみよう",
-          "content": "# リストの各要素を変換\\n\\n```kotlin\\nval nums = listOf(1, 2, 3)\\nval doubled = nums.map { it * 2 }\\nprintln(doubled)  // [2, 4, 6]\\n```\\n\\n1は2に、2は4に、3は6に変換されます。元のリストは変わりません。"
+          "content": "# リストの各要素を変換\\n\\n```kotlin\\nval nums = listOf(1, 2, 3)\\nval doubled = nums.map { it * 2 }\\nprintln(doubled)\\n```\\n\\n=> [2, 4, 6]\\n\\n1は2に、2は4に、3は6に変換されます。元のリストは変わりません。"
         },
         {
           "title": "やってみましょう！",
@@ -338,7 +338,7 @@ export const kotlin2Data = {
         },
         {
           "title": "filter を使ってみよう",
-          "content": "# 条件に合う要素を抽出\\n\\n```kotlin\\nval nums = listOf(1, 2, 3, 4, 5)\\nval result = nums.filter { it >= 3 }\\nprintln(result)  // [3, 4, 5]\\n```\\n\\n`>=` は「以上」という意味。3以上のものだけ残します。"
+          "content": "# 条件に合う要素を抽出\\n\\n```kotlin\\nval nums = listOf(1, 2, 3, 4, 5)\\nval result = nums.filter { it >= 3 }\\nprintln(result)\\n```\\n\\n=> [3, 4, 5]\\n\\n`>=` は「以上」という意味。3以上のものだけ残します。"
         },
         {
           "title": "やってみましょう！",

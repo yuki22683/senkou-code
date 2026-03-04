@@ -32,11 +32,11 @@ export const pythonData4 = {
     },
     {
       "title": "__str__メソッド",
-      "content": "**__str__** を定義すると、`print()` での**表示をカスタマイズ**できます。\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __str__(self):\\n        return f'Point({self.x}, {self.y})'\\n\\np = Point(3, 4)\\nprint(p)  # Point(3, 4)\\n```\\n\\n`__str__` がないと `<Point object at 0x...>` のような分かりにくい表示になります。"
+      "content": "**__str__** を定義すると、`print()` での**表示をカスタマイズ**できます。\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __str__(self):\\n        return f'Point({self.x}, {self.y})'\\n\\np = Point(3, 4)\\nprint(p)\\n```\\n\\n=> Point(3, 4)\\n\\n`__str__` がないと `<Point object at 0x...>` のような分かりにくい表示になります。"
     },
     {
       "title": "__eq__メソッド",
-      "content": "**__eq__** を定義すると、`==` での**比較方法をカスタマイズ**できます。\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __eq__(self, other):\\n        return self.x == other.x and self.y == other.y\\n\\np1 = Point(1, 2)\\np2 = Point(1, 2)\\nprint(p1 == p2)  # True\\n```\\n\\n引数 `other` は比較相手のオブジェクトです。"
+      "content": "**__eq__** を定義すると、`==` での**比較方法をカスタマイズ**できます。\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __eq__(self, other):\\n        return self.x == other.x and self.y == other.y\\n\\np1 = Point(1, 2)\\np2 = Point(1, 2)\\nprint(p1 == p2)\\n```\\n\\n=> True\\n\\n引数 `other` は比較相手のオブジェクトです。"
     },
     {
       "title": "__len__メソッド",
@@ -472,7 +472,7 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "__str__とは？",
-          "content": "# オブジェクトを「文字列」で表す\\n\\n**__str__（ストリング）** メソッドを定義すると、`print()` や `str()` での **表示をカスタマイズ** できます。\\n\\n**たとえ話：** 自己紹介カードのようなもの。\\n- `__str__` がないとき: 「私はメモリの0x12345番地にいる何か」\\n- `__str__` があるとき: 「私は太郎です、25歳です」\\n\\n**例：** 座標を見やすく表示しよう！\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __str__(self):\\n        return f'Point({self.x}, {self.y})'\\n\\np = Point(3, 4)\\nprint(p)  # Point(3, 4)  ← 見やすい！\\n```\\n\\n**何をしているか：**\\n1. `__str__` は「特殊メソッド」（アンダーバー2つで囲まれた特別なメソッド）\\n2. `print(p)` すると自動的に `__str__` が呼ばれる\\n3. `return` で返した文字列がそのまま表示される\\n\\n**ポイント：** `__str__` がないと `<__main__.Point object at 0x...>` のような分かりにくい表示になります。"
+          "content": "# オブジェクトを「文字列」で表す\\n\\n**__str__（ストリング）** メソッドを定義すると、`print()` や `str()` での **表示をカスタマイズ** できます。\\n\\n**たとえ話：** 自己紹介カードのようなもの。\\n- `__str__` がないとき: 「私はメモリの0x12345番地にいる何か」\\n- `__str__` があるとき: 「私は太郎です、25歳です」\\n\\n**例：** 座標を見やすく表示しよう！\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __str__(self):\\n        return f'Point({self.x}, {self.y})'\\n\\np = Point(3, 4)\\nprint(p)\\n```\\n\\n=> Point(3, 4)  ← 見やすい！\\n\\n**何をしているか：**\\n1. `__str__` は「特殊メソッド」（アンダーバー2つで囲まれた特別なメソッド）\\n2. `print(p)` すると自動的に `__str__` が呼ばれる\\n3. `return` で返した文字列がそのまま表示される\\n\\n**ポイント：** `__str__` がないと `<__main__.Point object at 0x...>` のような分かりにくい表示になります。"
         }
       ],
       "correctCode": "# classでBookクラスを定義\\nclass Book:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # defで__str__メソッドを定義（引数: selfのみ）\\n    def __str__(self):\\n        # returnでself.titleとself.authorを埋め込んで「(self.titleの値) by (self.authorの値)」形式で返す\\n        return f'{self.title} by {self.author}'\\n\\n# Bookインスタンス（タイトル: Pythonガイド、著者: たろう）をbookに代入\\nbook = Book('Pythonガイド', 'たろう')\\n# print関数でbookを表示\\nprint(book)",
@@ -538,7 +538,7 @@ export const pythonData4 = {
       "tutorialSlides": [
         {
           "title": "__eq__とは？",
-          "content": "# オブジェクトの「等しさ」を定義する\\n\\n**__eq__（イコール）** メソッドを定義すると、`==` での **比較方法をカスタマイズ** できます。\\n\\n**たとえ話：** 「同じ」の判断基準を決めるもの。\\n- 2枚のカードが「同じ」とは？ → 数字と絵柄が同じこと！\\n- 2つの座標が「同じ」とは？ → xとyの値が同じこと！\\n\\n**__eq__ がない場合：**\\n同じ内容でも別々に作ったオブジェクトは「別物」として扱われます。\\n\\n**例：** 座標の等しさを判定しよう！\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __eq__(self, other):\\n        return self.x == other.x and self.y == other.y\\n\\np1 = Point(1, 2)\\np2 = Point(1, 2)\\nprint(p1 == p2)  # True（内容が同じ！）\\n```\\n\\n**何をしているか：**\\n1. `__eq__` の引数 `other` は比較相手のオブジェクト\\n2. `self.x == other.x` でx座標を比較\\n3. `and` で両方の条件を満たすかチェック\\n4. `True` か `False` を返す"
+          "content": "# オブジェクトの「等しさ」を定義する\\n\\n**__eq__（イコール）** メソッドを定義すると、`==` での **比較方法をカスタマイズ** できます。\\n\\n**たとえ話：** 「同じ」の判断基準を決めるもの。\\n- 2枚のカードが「同じ」とは？ → 数字と絵柄が同じこと！\\n- 2つの座標が「同じ」とは？ → xとyの値が同じこと！\\n\\n**__eq__ がない場合：**\\n同じ内容でも別々に作ったオブジェクトは「別物」として扱われます。\\n\\n**例：** 座標の等しさを判定しよう！\\n\\n```python\\nclass Point:\\n    def __init__(self, x, y):\\n        self.x = x\\n        self.y = y\\n    \\n    def __eq__(self, other):\\n        return self.x == other.x and self.y == other.y\\n\\np1 = Point(1, 2)\\np2 = Point(1, 2)\\nprint(p1 == p2)\\n```\\n\\n=> True（内容が同じ！）\\n\\n**何をしているか：**\\n1. `__eq__` の引数 `other` は比較相手のオブジェクト\\n2. `self.x == other.x` でx座標を比較\\n3. `and` で両方の条件を満たすかチェック\\n4. `True` か `False` を返す"
         }
       ],
       "correctCode": "# classでBookクラスを定義\\nclass Book:\\n    # defで__init__メソッドを定義（引数: self, title, author）\\n    def __init__(self, title, author):\\n        # self.titleにtitleを代入\\n        self.title = title\\n        # self.authorにauthorを代入\\n        self.author = author\\n    \\n    # defで__eq__メソッドを定義（引数: self, other）\\n    def __eq__(self, other):\\n        # returnでタイトルと著者の両方が一致するかを返す\\n        return self.title == other.title and self.author == other.author\\n\\n# Bookインスタンス（タイトル: Python入門、著者: 田中）をbook1に代入\\nbook1 = Book('Python入門', '田中')\\n# Bookインスタンス（タイトル: Python入門、著者: 田中）をbook2に代入\\nbook2 = Book('Python入門', '田中')\\n# print関数でbook1とbook2の比較結果を表示\\nprint(book1 == book2)",

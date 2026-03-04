@@ -38,7 +38,7 @@ export const go3Data = {
       "tutorialSlides": [
         {
           "title": "ジェネリクスとは？",
-          "content": "# どんな型でも使える「万能関数」\\n\\n**ジェネリクス** は、型（数字、文字など）を後から決められる仕組みです。同じ処理を色々な型で使い回せます。\\n\\n**たとえば：**\\n- 数字のリストから最初の要素を取る\\n- 文字列のリストから最初の要素を取る\\n\\n両方とも「最初を取る」という同じ処理なのに、型が違うだけで別の関数を書くのは大変ですよね？\\n\\n**ジェネリクスを使うと：**\\n```go\\nfunc Print[T any](v T) {\\n    fmt.Println(v)  // Tは何の型でもOK\\n}\\nPrint(42)       // 数字でもOK\\nPrint(\"hello\")  // 文字でもOK\\n```"
+          "content": "# どんな型でも使える「万能関数」\\n\\n**ジェネリクス** は、型（数字、文字など）を後から決められる仕組みです。同じ処理を色々な型で使い回せます。\\n\\n**たとえば：**\\n- 数字のリストから最初の要素を取る\\n- 文字列のリストから最初の要素を取る\\n\\n両方とも「最初を取る」という同じ処理なのに、型が違うだけで別の関数を書くのは大変ですよね？\\n\\n**ジェネリクスを使うと：**\\n```go\\nfunc Print[T any](v T) {\\n    fmt.Println(v)\\n}\\nPrint(42)       // 数字でもOK\\nPrint(\"hello\")  // 文字でもOK\\n```\\n\\n=> Tは何の型でもOK"
         },
         {
           "title": "型制約",
@@ -116,7 +116,7 @@ export const go3Data = {
         },
         {
           "title": "使用例",
-          "content": "# 要素の検索\\n\\n```go\\nnums := []int{1, 2, 3}\\nfmt.Println(Contains(nums, 2))  // true\\nfmt.Println(Contains(nums, 5))  // false\\n```"
+          "content": "# 要素の検索\\n\\n```go\\nnums := []int{1, 2, 3}\\nfmt.Println(Contains(nums, 2))\\nfmt.Println(Contains(nums, 5))\\n```\\n\\n=> true\\n=> false"
         }
       ],
       "correctCode": "// package mainでモジュールを宣言\\npackage main\\n\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n\\n// func IndexOfでジェネリック関数を定義（型制約comparable）\\nfunc IndexOf[T comparable](slice []T, v T) int {\\n    // for rangeでsliceをイテレート（インデックスi、要素x）\\n    for i, x := range slice {\\n        // ifでxとvが等しいか判定\\n        if x == v {\\n            // iを返す\\n            return i\\n        // ブロックを閉じる\\n        }\\n    // ブロックを閉じる\\n    }\\n    // 見つからなかった場合-1を返す\\n    return -1\\n// ブロックを閉じる\\n}\\n\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でnamesにstring型スライス（「a」「b」「c」）を代入\\n    names := []string{\"a\", \"b\", \"c\"}\\n    // fmt.PrintlnでIndexOf関数にnamesと「b」を渡した結果を出力\\n    fmt.Println(IndexOf(names, \"b\"))\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n\\n// func IndexOfでジェネリック関数を定義（型制約comparable）\\nfunc ___[___ ___](___ []___, ___ ___) ___ {\\n    // for rangeでsliceをイテレート（インデックスi、要素x）\\n    for ___, ___ := range ___ {\\n        // ifでxとvが等しいか判定\\n        if ___ == ___ {\\n            // iを返す\\n            return ___\\n        // ブロックを閉じる\\n        }\\n    // ブロックを閉じる\\n    }\\n    // 見つからなかった場合-1を返す\\n    return -___\\n// ブロックを閉じる\\n}\\n\\n// func mainでmain関数を定義\\nfunc ___() {\\n    // :=でnamesにstring型スライス（「a」「b」「c」）を代入\\n    ___ := []___{\\\"\",  \\\"___\\\", \\\"___\\\"}\\n    // fmt.PrintlnでIndexOf関数にnamesと「b」を渡した結果を出力\\n    ___.___(___(___, \\\"___\\\"))\\n// ブロックを閉じる\\n}",
@@ -394,7 +394,7 @@ export const go3Data = {
         },
         {
           "title": "default で待たない",
-          "content": "# すぐに次に進む方法\\n\\n`default` をつけると、どのチャネルもすぐに受信できない場合に待たずに進めます。\\n\\n**コード例：**\\n```go\\nselect {\\ncase v := <-ch:\\n    fmt.Println(\"受信:\", v)\\ndefault:\\n    fmt.Println(\"データがない！\")  // 待たずにここが実行される\\n}\\n```\\n\\n**使いどころ：**\\n- データがあれば処理、なければ別のことをする\\n- プログラムを止めたくないとき"
+          "content": "# すぐに次に進む方法\\n\\n`default` をつけると、どのチャネルもすぐに受信できない場合に待たずに進めます。\\n\\n**コード例：**\\n```go\\nselect {\\ncase v := <-ch:\\n    fmt.Println(\"受信:\", v)\\ndefault:\\n    fmt.Println(\"データがない！\")\\n}\\n```\\n\\n=> 待たずにここが実行される\\n\\n**使いどころ：**\\n- データがあれば処理、なければ別のことをする\\n- プログラムを止めたくないとき"
         }
       ],
       "correctCode": "// package mainでモジュールを宣言\\npackage main\\n\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でch1にバッファサイズ1のint型チャネルを作成して代入\\n    ch1 := make(chan int, 1)\\n    // :=でch2にバッファサイズ1のint型チャネルを作成して代入\\n    ch2 := make(chan int, 1)\\n    // ch1に10を送信\\n    ch1 <- 10\\n    \\n    // selectで複数チャネルからの受信を待機\\n    select {\\n    // ch1から受信した場合vに代入\\n    case v := <-ch1:\\n        // fmt.Printlnでvを出力\\n        fmt.Println(v)\\n    // ch2から受信した場合vに代入\\n    case v := <-ch2:\\n        // fmt.Printlnでvを出力\\n        fmt.Println(v)\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n\\n// func mainでmain関数を定義\\nfunc ___() {\\n    // :=でch1にバッファサイズ1のint型チャネルを作成して代入\\n    ___ := ___(___ ___, ___)\\n    // :=でch2にバッファサイズ1のint型チャネルを作成して代入\\n    ___ := ___(___ ___, ___)\\n    // ch1に10を送信\\n    ___ <- ___\\n    \\n    // selectで複数チャネルからの受信を待機\\n    ___ ___\\n    // ch1から受信した場合vに代入\\n    case ___ := <-___:\\n        // fmt.Printlnでvを出力\\n        ___.___(___\\n    // ch2から受信した場合vに代入\\n    case ___ := <-___:\\n        // fmt.Printlnでvを出力\\n        ___.___(___\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n}",
@@ -601,7 +601,7 @@ export const go3Data = {
         },
         {
           "title": "フィールドへのアクセス",
-          "content": "# 直接アクセス可能\\n\\n```go\\ne := Employee{Person: Person{Name: \"Alice\"}, ID: 1}\\nfmt.Println(e.Name)  // Alice（直接アクセス）\\n```"
+          "content": "# 直接アクセス可能\\n\\n```go\\ne := Employee{Person: Person{Name: \"Alice\"}, ID: 1}\\nfmt.Println(e.Name)\\n```\\n\\n=> Alice（直接アクセス）"
         }
       ],
       "correctCode": "// package mainでモジュールを宣言\\npackage main\\n\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n\\n// type Base structでBase構造体を定義\\ntype Base struct {\\n    // ValueフィールドをInt型で定義\\n    Value int\\n// ブロックを閉じる\\n}\\n\\n// type Extended structでExtended構造体を定義\\ntype Extended struct {\\n    // Base構造体を埋め込む\\n    Base\\n    // ExtraフィールドをString型で定義\\n    Extra string\\n// ブロックを閉じる\\n}\\n\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でeにExtended（BaseのValueに100、Extraに「テスト」）を代入\\n    e := Extended{Base: Base{Value: 100}, Extra: \"テスト\"}\\n    // fmt.PrintlnでeのValueフィールドを出力\\n    fmt.Println(e.Value)\\n// ブロックを閉じる\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n\\n// type Base structでBase構造体を定義\\ntype ___ struct {\\n    // ValueフィールドをInt型で定義\\n    ___ ___\\n// ブロックを閉じる\\n}\\n\\n// type Extended structでExtended構造体を定義\\ntype ___ struct {\\n    // Base構造体を埋め込む\\n    ___\\n    // ExtraフィールドをString型で定義\\n    ___ ___\\n// ブロックを閉じる\\n}\\n\\n// func mainでmain関数を定義\\nfunc ___() {\\n    // :=でeにExtended（BaseのValueに100、Extraに「テスト」）を代入\\n    ___ := ___{___: ___{___: ___}, ___: \\\"___\\\"}\\n    // fmt.PrintlnでeのValueフィールドを出力\\n    ___.___(___.___)\\n// ブロックを閉じる\\n}",

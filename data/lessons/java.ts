@@ -205,7 +205,7 @@ export const javaData = {
         },
         {
           "title": "% の使い方",
-          "content": "# あまりを計算してみよう\\n\\n**例1：あまりが出る場合**\\n```java\\nSystem.out.println(10 % 3);  // 結果: 1\\n```\\n10 ÷ 3 = 3 あまり **1** なので、「1」が表示されます。\\n\\n**例2：割り切れる場合**\\n```java\\nSystem.out.println(8 % 2);   // 結果: 0\\n```\\n8 ÷ 2 = 4 あまり **0** なので、「0」になります。\\n\\n**ポイント：** あまりが0なら「割り切れる」ということです！偶数かどうかの判定などに使えます。"
+          "content": "# あまりを計算してみよう\\n\\n**例1：あまりが出る場合**\\n```java\\nSystem.out.println(10 % 3);\\n```\\n\\n=> 結果: 1\\n10 ÷ 3 = 3 あまり **1** なので、「1」が表示されます。\\n\\n**例2：割り切れる場合**\\n```java\\nSystem.out.println(8 % 2);\\n```\\n\\n=> 結果: 0\\n8 ÷ 2 = 4 あまり **0** なので、「0」になります。\\n\\n**ポイント：** あまりが0なら「割り切れる」ということです！偶数かどうかの判定などに使えます。"
         }
       ],
       "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // Systemのoutのprintlnで10を3で割った余り（1）を出力\\n        System.out.println(10 % 3);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // Systemのoutのprintlnで10を3で割った余り（1）を出力\\n        ___.___.___(___ ___ ___);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
@@ -402,7 +402,7 @@ export const javaData = {
         },
         {
           "title": "データの番号は 0 から！",
-          "content": "# { } を使って作りましょう\\n\\n`String[]` のように、ラベルの後ろに `[]`（角カッコ）をつけると配列になります。\\n\\n**大事なルール：** 配列の番号は **0番から** 始まります！1番からではないので注意してね。\\n\\n**コード例：**\\n```java\\nString[] items = {\"おにぎり\", \"パン\"};\\n//                  0番目      1番目\\nSystem.out.println(items[0]); // \"おにぎり\" が表示されます\\nSystem.out.println(items[1]); // \"パン\" が表示されます\\n```\\n\\n**覚え方：** コンピュータは0から数えるのが好きなんです！"
+          "content": "# { } を使って作りましょう\\n\\n`String[]` のように、ラベルの後ろに `[]`（角カッコ）をつけると配列になります。\\n\\n**大事なルール：** 配列の番号は **0番から** 始まります！1番からではないので注意してね。\\n\\n**コード例：**\\n```java\\nString[] items = {\"おにぎり\", \"パン\"};\\n//                  0番目      1番目\\nSystem.out.println(items[0]);\\nSystem.out.println(items[1]);\\n```\\n\\n=> \"おにぎり\" が表示されます\\n=> \"パン\" が表示されます\\n\\n**覚え方：** コンピュータは0から数えるのが好きなんです！"
         }
       ],
       "correctCode": "// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // String[]型のcolorsに色配列（あか、あお）を代入\\n        String[] colors = {\\\"あか\\\", \\\"あお\\\"};\\n        // Systemのoutのprintlnでcolorsの2番目（あお）を出力\\n        System.out.println(colors[1]);\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // String[]型のcolorsに色配列（あか、あお）を代入\\n        ___[] ___ = {___, ___};\\n        // Systemのoutのprintlnでcolorsの2番目（あお）を出力\\n        ___.___.___(___[___]);\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",
@@ -773,7 +773,7 @@ export const javaData = {
         },
         {
           "title": "HashMapの使い方",
-          "content": "# ちょっと準備が大変かも？\\n\\nJavaで辞書を使うのは少し準備が必要です。3ステップで覚えましょう！\\n\\n**ステップ1：** `import` で道具箱から出してくる\\n**ステップ2：** `new` で新しく作る\\n**ステップ3：** `put`（プット）で中身を入れる\\n\\n**コード例：**\\n```java\\nimport java.util.HashMap;  // ステップ1：道具を準備\\nHashMap<String, String> colors = new HashMap<>();  // ステップ2：辞書を作る\\ncolors.put(\"りんご\", \"あか\");  // ステップ3：データを入れる\\nSystem.out.println(colors.get(\"りんご\"));  // getで取り出す\\n```\\n=> あか"
+          "content": "# ちょっと準備が大変かも？\\n\\nJavaで辞書を使うのは少し準備が必要です。3ステップで覚えましょう！\\n\\n**ステップ1：** `import` で道具箱から出してくる\\n**ステップ2：** `new` で新しく作る\\n**ステップ3：** `put`（プット）で中身を入れる\\n\\n**コード例：**\\n```java\\nimport java.util.HashMap;  // ステップ1：道具を準備\\nHashMap<String, String> colors = new HashMap<>();  // ステップ2：辞書を作る\\ncolors.put(\"りんご\", \"あか\");  // ステップ3：データを入れる\\nSystem.out.println(colors.get(\"りんご\"));\\n```\\n\\n=> getで取り出す\\n=> あか"
         }
       ],
       "correctCode": "// importでjava.util.HashMapを読み込む\\nimport java.util.HashMap;\\n// public classでMainクラスを定義\\npublic class Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // HashMap<String,String>型のuserをnewで作成\\n        HashMap<String, String> user = new HashMap<>();\\n        // putでキー'name'に値'たろう'を追加\\n        user.put(\\\"name\\\", \\\"たろう\\\");\\n        // Systemのoutのprintlnでgetを使いキー'name'の値を出力\\n        System.out.println(user.get(\\\"name\\\"));\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// importでjava.util.HashMapを読み込む\\nimport ___.___.___;\\n// public classでMainクラスを定義\\npublic class ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // HashMap<String,String>型のuserをnewで作成\\n        ___<___, ___> ___ = new ___<>();\\n        // putでキー'name'に値'たろう'を追加\\n        ___.___(___, ___);\\n        // Systemのoutのprintlnでgetを使いキー'name'の値を出力\\n        ___.___.___(___.___(___)___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",

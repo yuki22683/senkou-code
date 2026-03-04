@@ -40,7 +40,7 @@ export const pythonData3 = {
     },
     {
       "title": "any と all",
-      "content": "リストの要素をまとめてチェックする関数です。\\n\\n```python\\nnums = [1, 2, 3, 4, 5]\\n\\n# 全てが条件を満たすか\\nprint(all(x > 0 for x in nums))  # True\\n\\n# どれか1つでも満たすか\\nprint(any(x > 4 for x in nums))  # True\\n```\\n\\n`all` は「全部」、`any` は「どれか1つでも」を判定します。"
+      "content": "リストの要素をまとめてチェックする関数です。\\n\\n```python\\nnums = [1, 2, 3, 4, 5]\\n\\n# 全てが条件を満たすか\\nprint(all(x > 0 for x in nums))\\n\\n# どれか1つでも満たすか\\nprint(any(x > 4 for x in nums))\\n```\\n\\n=> True\\n=> True\\n\\n`all` は「全部」、`any` は「どれか1つでも」を判定します。"
     }
   ],
   "exercises": [
@@ -54,7 +54,7 @@ export const pythonData3 = {
         },
         {
           "title": "ラムダ式の使い方",
-          "content": "# lambda 引数: 戻り値\\n\\n**書き方：** `lambda 引数: 計算式`\\n\\nラムダ式は `map` や `filter` などの関数と組み合わせると特に便利です。\\n\\n**例：** リストの全ての数を2倍にしよう！\\n\\n```python\\nnums = [1, 2, 3]\\ndoubled = list(map(lambda x: x * 2, nums))\\nprint(doubled)  # [2, 4, 6]\\n```\\n\\n**何をしているか：**\\n1. `nums` は [1, 2, 3] というリスト\\n2. `map()` でリストの各要素に関数を適用する\\n3. `lambda x: x * 2` で「xを2倍にする」関数を定義\\n4. 結果として [2, 4, 6] ができる！\\n\\n**使いどころ：** 1回しか使わない簡単な関数を、わざわざ名前をつけずにサッと作りたいとき！"
+          "content": "# lambda 引数: 戻り値\\n\\n**書き方：** `lambda 引数: 計算式`\\n\\nラムダ式は `map` や `filter` などの関数と組み合わせると特に便利です。\\n\\n**例：** リストの全ての数を2倍にしよう！\\n\\n```python\\nnums = [1, 2, 3]\\ndoubled = list(map(lambda x: x * 2, nums))\\nprint(doubled)\\n```\\n\\n=> [2, 4, 6]\\n\\n**何をしているか：**\\n1. `nums` は [1, 2, 3] というリスト\\n2. `map()` でリストの各要素に関数を適用する\\n3. `lambda x: x * 2` で「xを2倍にする」関数を定義\\n4. 結果として [2, 4, 6] ができる！\\n\\n**使いどころ：** 1回しか使わない簡単な関数を、わざわざ名前をつけずにサッと作りたいとき！"
         }
       ],
       "correctCode": "# 引数xの2乗を計算するlambda式をsquareに代入\\nsquare = lambda x: x ** 2\\n# print関数でsquare関数を引数5で呼び出した結果を表示\\nprint(square(5))",
@@ -246,7 +246,7 @@ export const pythonData3 = {
         },
         {
           "title": "zip の使い方",
-          "content": "# 短い方に合わせる！\\n\\nリストの長さが違う場合、**短い方に合わせて** ループが終了します。\\n\\n**例：** 長さの違うリストを zip しよう！\\n\\n```python\\na = [1, 2, 3]\\nb = ['x', 'y']\\nprint(list(zip(a, b)))  # [(1, 'x'), (2, 'y')]\\n```\\n\\n**何をしているか：**\\n- `a` は3つ、`b` は2つの要素がある\\n- 短い `b` に合わせて2ペアだけ作られる\\n- 3番目の「3」は相手がいないので含まれない\\n\\n**注意：** はみ出した要素は無視されます！\\n\\n**使いどころ：** 2つ以上のリストを **並行して（同時に）** 処理したいとき！"
+          "content": "# 短い方に合わせる！\\n\\nリストの長さが違う場合、**短い方に合わせて** ループが終了します。\\n\\n**例：** 長さの違うリストを zip しよう！\\n\\n```python\\na = [1, 2, 3]\\nb = ['x', 'y']\\nprint(list(zip(a, b)))\\n```\\n\\n=> [(1, 'x'), (2, 'y')]\\n\\n**何をしているか：**\\n- `a` は3つ、`b` は2つの要素がある\\n- 短い `b` に合わせて2ペアだけ作られる\\n- 3番目の「3」は相手がいないので含まれない\\n\\n**注意：** はみ出した要素は無視されます！\\n\\n**使いどころ：** 2つ以上のリストを **並行して（同時に）** 処理したいとき！"
         }
       ],
       "correctCode": "# 英単語配列（a、b、c）をkeysに代入\\nkeys = ['a', 'b', 'c']\\n# 数値配列（1、2、3）をvaluesに代入\\nvalues = [1, 2, 3]\\n# zip関数（引数keys, values）からkとvのペアを取得してループ\\nfor k, v in zip(keys, values):\\n    # print関数でkとvを埋め込んで「(kの値): (vの値)」形式で出力\\n    print(f'{k}: {v}')",

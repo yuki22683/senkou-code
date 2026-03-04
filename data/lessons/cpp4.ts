@@ -18,7 +18,7 @@ export const cpp4Data = {
       "tutorialSlides": [
         {
           "title": "unique_ptr とは？",
-          "content": "# 排他的所有権のスマートポインタ\\n\\n**unique_ptr**（ユニークポインタ）は、「1人だけが持てる」スマートポインタです。\\n\\n**身近な例え：**\\n映画のチケットのようなものです。1枚のチケットは1人しか持てません。他の人に渡したら、自分は映画を見られなくなります。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nauto p = make_unique<int>(42);  // 42という値を持つ専用のポインタ\\ncout << *p << endl;             // 42と表示される\\n// ここでスコープを出ると、自動でメモリが解放される！\\n```\\n\\n**メリット：**\\n- `delete` を書き忘れてもメモリリークしない\\n- 誰が所有者かが明確"
+          "content": "# 排他的所有権のスマートポインタ\\n\\n**unique_ptr**（ユニークポインタ）は、「1人だけが持てる」スマートポインタです。\\n\\n**身近な例え：**\\n映画のチケットのようなものです。1枚のチケットは1人しか持てません。他の人に渡したら、自分は映画を見られなくなります。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nauto p = make_unique<int>(42);  // 42という値を持つ専用のポインタ\\ncout << *p << endl;\\n// ここでスコープを出ると、自動でメモリが解放される！\\n```\\n\\n=> 42と表示される\\n\\n**メリット：**\\n- `delete` を書き忘れてもメモリリークしない\\n- 誰が所有者かが明確"
         },
         {
           "title": "コピー不可",
@@ -88,7 +88,7 @@ export const cpp4Data = {
         },
         {
           "title": "値の取得",
-          "content": "# 中身を取り出す方法\\n\\nvariant から値を取り出すには、「今何が入っているか」をチェックします。\\n\\n**身近な例え：**\\n宝箱を開ける前に「中身は金貨？宝石？」と確認してから取り出すイメージです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvariant<int, string> v = 42;\\n\\n// holds_alternative で「今 int が入っている？」と確認\\nif (holds_alternative<int>(v)) {\\n    cout << get<int>(v) << endl;  // get<int> で int として取り出す\\n}\\n\\n// 間違った型で取り出そうとするとエラー！\\n// get<string>(v);  // 今は int が入っているのでダメ\\n```\\n\\n**ポイント：**\\n- `holds_alternative<型>(v)`: その型が入っているか確認\\n- `get<型>(v)`: その型として取り出す"
+          "content": "# 中身を取り出す方法\\n\\nvariant から値を取り出すには、「今何が入っているか」をチェックします。\\n\\n**身近な例え：**\\n宝箱を開ける前に「中身は金貨？宝石？」と確認してから取り出すイメージです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvariant<int, string> v = 42;\\n\\n// holds_alternative で「今 int が入っている？」と確認\\nif (holds_alternative<int>(v)) {\\n    cout << get<int>(v) << endl;\\n}\\n\\n// 間違った型で取り出そうとするとエラー！\\n// get<string>(v);  // 今は int が入っているのでダメ\\n```\\n\\n=> get<int> で int として取り出す\\n\\n**ポイント：**\\n- `holds_alternative<型>(v)`: その型が入っているか確認\\n- `get<型>(v)`: その型として取り出す"
         }
       ],
       "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <variant>でvariantを読み込む\\n#include <variant>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // variant<int, double>でvを宣言し3.14を代入\\n    variant<int, double> v = 3.14;\\n    // coutでvのdouble値（3.14）を出力\\n    cout << get<double>(v) << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <variant>でvariantを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n\n// int mainでmain関数を定義\\n___ ___() {\\n    // variant<int, double>でvを宣言し3.14を代入\\n    ___<___, ___> ___ = ___;\\n    // coutでvのdouble値（3.14）を出力\\n    ___ << ___<___>(___) << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___", "correctLines": [
@@ -150,7 +150,7 @@ export const cpp4Data = {
       "tutorialSlides": [
         {
           "title": "構造化束縛とは？",
-          "content": "# 複数の値を一度に受け取る\\n\\n**構造化束縛**は、まとまったデータを一度にバラバラの変数に分けて受け取る機能です。\\n\\n**身近な例え：**\\nプレゼント袋から「お菓子」「おもちゃ」「カード」を一気に取り出して、それぞれ別の箱に入れるイメージです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\npair<int, string> p = {1, \"hello\"};  // 数字と文字列のペア\\n\\n// 構造化束縛で一度に受け取る\\nauto [num, str] = p;\\n//    ↑    ↑\\n//    1   \"hello\" がそれぞれ入る\\n\\ncout << num << \", \" << str << endl;  // 1, hello\\n```\\n\\n**ポイント：**\\n`auto [変数1, 変数2, ...] = データ;` の形で書きます。"
+          "content": "# 複数の値を一度に受け取る\\n\\n**構造化束縛**は、まとまったデータを一度にバラバラの変数に分けて受け取る機能です。\\n\\n**身近な例え：**\\nプレゼント袋から「お菓子」「おもちゃ」「カード」を一気に取り出して、それぞれ別の箱に入れるイメージです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\npair<int, string> p = {1, \"hello\"};  // 数字と文字列のペア\\n\\n// 構造化束縛で一度に受け取る\\nauto [num, str] = p;\\n//    ↑    ↑\\n//    1   \"hello\" がそれぞれ入る\\n\\ncout << num << \", \" << str << endl;\\n```\\n\\n=> 1, hello\\n\\n**ポイント：**\\n`auto [変数1, 変数2, ...] = データ;` の形で書きます。"
         },
         {
           "title": "mapのイテレーション",
@@ -221,7 +221,7 @@ export const cpp4Data = {
       "tutorialSlides": [
         {
           "title": "string_view とは？",
-          "content": "# 文字列への軽量ビュー\\n\\n**string_view**（ストリングビュー）は、文字列を「コピーせずに見る」ための型です。\\n\\n**身近な例え：**\\n図書館で本を「借りる」代わりに「その場で読む」ようなものです。本をコピーしないので速くて効率的！\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvoid print(string_view sv) {  // 文字列をコピーせずに受け取る\\n    cout << sv << endl;\\n}\\n\\nprint(\"hello\");  // 文字列リテラルもOK\\nstring s = \"world\";\\nprint(s);        // string型もOK\\n```\\n\\n**メリット：**\\nどんな種類の文字列でも、コピーなしで受け取れます！"
+          "content": "# 文字列への軽量ビュー\\n\\n**string_view**（ストリングビュー）は、文字列を「コピーせずに見る」ための型です。\\n\\n**身近な例え：**\\n図書館で本を「借りる」代わりに「その場で読む」ようなものです。本をコピーしないので速くて効率的！\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nvoid print(string_view sv) {  // 文字列をコピーせずに受け取る\\n    cout << sv << endl;\\n}\\n\\nprint(\"hello\");\\nstring s = \"world\";\\nprint(s);\\n```\\n\\n=> 文字列リテラルもOK\\n=> string型もOK\\n\\n**メリット：**\\nどんな種類の文字列でも、コピーなしで受け取れます！"
         },
         {
           "title": "メリット",
@@ -302,7 +302,7 @@ export const cpp4Data = {
         },
         {
           "title": "使用例",
-          "content": "# 文字列を大文字に変換\\n\\n`transform` は文字列の変換にも使えます。\\n\\n**身近な例え：**\\n「hello」という文字を1文字ずつ大文字スタンプで押し直すイメージです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nstring s = \"hello\";\\n\\n// 各文字を大文字に変換（結果を同じ場所に上書き）\\ntransform(s.begin(), s.end(), s.begin(), ::toupper);\\n//        ↑開始    ↑終了    ↑出力先   ↑変換関数\\n\\ncout << s << endl;  // \"HELLO\"\\n```\\n\\n**ポイント：**\\n- 出力先を元の配列にすれば「上書き」できる\\n- `::toupper` は「大文字に変換」する関数"
+          "content": "# 文字列を大文字に変換\\n\\n`transform` は文字列の変換にも使えます。\\n\\n**身近な例え：**\\n「hello」という文字を1文字ずつ大文字スタンプで押し直すイメージです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nstring s = \"hello\";\\n\\n// 各文字を大文字に変換（結果を同じ場所に上書き）\\ntransform(s.begin(), s.end(), s.begin(), ::toupper);\\n//        ↑開始    ↑終了    ↑出力先   ↑変換関数\\n\\ncout << s << endl;\\n```\\n\\n=> \"HELLO\"\\n\\n**ポイント：**\\n- 出力先を元の配列にすれば「上書き」できる\\n- `::toupper` は「大文字に変換」する関数"
         }
       ],
       "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <vector>でvectorを読み込む\\n#include <vector>\\n// #include <algorithm>でalgorithmを読み込む\\n#include <algorithm>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // vectorで数値配列（1、2、3）をvに代入\\n    vector<int> v = {1, 2, 3};\\n    // transformでvの各要素を10倍に変換\\n    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * 10; });\\n    // for int n : vでvの各要素をnに取り出して出力\\n    for (int n : v) cout << n << \" \";\\n    // coutで改行を出力\\n    cout << endl;\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <vector>でvectorを読み込む\\n___\\n// #include <algorithm>でalgorithmを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n\n// int mainでmain関数を定義\\n___ ___() {\\n    // vectorで数値配列（1、2、3）をvに代入\\n    ___<___> ___ = {___, ___, ___};\\n    // transformでvの各要素を10倍に変換\\n    ___(___.___, ___.___, ___.___, [](___) { ___ ___ * ___; });\\n    // for int n : vでvの各要素をnに取り出して出力\\n    for (___ : ___) ___ << ___ << ___;\\n    // coutで改行を出力\\n    ___ << ___;\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___",
@@ -605,7 +605,7 @@ export const cpp4Data = {
       "tutorialSlides": [
         {
           "title": "例外処理",
-          "content": "# try-catch でエラーを安全に処理\\n\\n**例外処理**は、プログラムでエラーが起きたときに安全に対処する仕組みです。\\n\\n**身近な例え：**\\nサーカスの綱渡りで、落ちたときに備えて「セーフティネット」を張っておくようなものです。エラーが起きても、プログラムがクラッシュせずに済みます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\ntry {                                // ここで危険な処理をする\\n    throw runtime_error(\"Error!\");   // エラーを「投げる」\\n} catch (const exception& e) {       // エラーを「捕まえる」\\n    cout << e.what() << endl;        // エラーメッセージを表示\\n}\\n// プログラムは続行できる！\\n```\\n\\n**用語解説：**\\n- `throw`: エラーを投げる\\n- `catch`: エラーを捕まえる\\n- `e.what()`: エラーメッセージを取得"
+          "content": "# try-catch でエラーを安全に処理\\n\\n**例外処理**は、プログラムでエラーが起きたときに安全に対処する仕組みです。\\n\\n**身近な例え：**\\nサーカスの綱渡りで、落ちたときに備えて「セーフティネット」を張っておくようなものです。エラーが起きても、プログラムがクラッシュせずに済みます。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\ntry {                                // ここで危険な処理をする\\n    throw runtime_error(\"Error!\");   // エラーを「投げる」\\n} catch (const exception& e) {       // エラーを「捕まえる」\\n    cout << e.what() << endl;\\n}\\n// プログラムは続行できる！\\n```\\n\\n=> エラーメッセージを表示\\n\\n**用語解説：**\\n- `throw`: エラーを投げる\\n- `catch`: エラーを捕まえる\\n- `e.what()`: エラーメッセージを取得"
         },
         {
           "title": "標準例外",

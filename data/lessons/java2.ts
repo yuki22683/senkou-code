@@ -431,7 +431,7 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "例外とは？",
-          "content": "# プログラムの問題\\n\\n**例外** とは、プログラム実行中に起きる「予期しない問題」のことです。\\n\\n**たとえ話：** 料理中に「砂糖がない！」と気づくようなものです。レシピ通りに進められなくなりますよね。\\n\\n```java\\nint[] arr = {1, 2, 3};  // 3つしかデータがない\\nSystem.out.println(arr[10]);  // 10番目？そんなのない！→例外！\\n```\\n\\n例外が起きるとプログラムが止まってしまいます。でも、対処法があります！"
+          "content": "# プログラムの問題\\n\\n**例外** とは、プログラム実行中に起きる「予期しない問題」のことです。\\n\\n**たとえ話：** 料理中に「砂糖がない！」と気づくようなものです。レシピ通りに進められなくなりますよね。\\n\\n```java\\nint[] arr = {1, 2, 3};  // 3つしかデータがない\\nSystem.out.println(arr[10]);\\n```\\n\\n=> 10番目？そんなのない！→例外！\\n\\n例外が起きるとプログラムが止まってしまいます。でも、対処法があります！"
         },
         {
           "title": "try-catchで対処",
@@ -664,11 +664,11 @@ export const javaData2 = {
       "tutorialSlides": [
         {
           "title": "拡張for文（かくちょうフォーぶん）とは？",
-          "content": "# 簡単な繰り返し\\n\\n**拡張for文** を使うと、配列やリストの全部の要素を簡単に処理できます。\\n\\n**たとえ話：** 「このカゴの中の果物を**全部**洗ってください」というように、「全部を順番に処理する」ときに使います。\\n\\n```java\\nint[] nums = {1, 2, 3};\\nfor (int n : nums) {  // 「numsの中の各nについて」\\n    System.out.println(n);  // 1, 2, 3 が順番に表示される\\n}\\n```\\n\\n**読み方：** `:`（コロン）は「〜の中から」と読みましょう"
+          "content": "# 簡単な繰り返し\\n\\n**拡張for文** を使うと、配列やリストの全部の要素を簡単に処理できます。\\n\\n**たとえ話：** 「このカゴの中の果物を**全部**洗ってください」というように、「全部を順番に処理する」ときに使います。\\n\\n```java\\nint[] nums = {1, 2, 3};\\nfor (int n : nums) {  // 「numsの中の各nについて」\\n    System.out.println(n);\\n}\\n```\\n\\n=> 1, 2, 3 が順番に表示される\\n\\n**読み方：** `:`（コロン）は「〜の中から」と読みましょう"
         },
         {
           "title": "ArrayListでも使える",
-          "content": "# コレクションを処理\\n\\n拡張for文は ArrayList（アレイリスト）でも同じように使えます！\\n\\n```java\\nArrayList<String> items = new ArrayList<>();\\nitems.add(\"A\");\\nitems.add(\"B\");\\n\\nfor (String item : items) {  // itemsの中の各itemについて\\n    System.out.println(item);  // A, B が順番に表示\\n}\\n```\\n\\n**ポイント：** 配列でもArrayListでも、書き方は同じです。便利ですね！"
+          "content": "# コレクションを処理\\n\\n拡張for文は ArrayList（アレイリスト）でも同じように使えます！\\n\\n```java\\nArrayList<String> items = new ArrayList<>();\\nitems.add(\"A\");\\nitems.add(\"B\");\\n\\nfor (String item : items) {  // itemsの中の各itemについて\\n    System.out.println(item);\\n}\\n```\\n\\n=> A, B が順番に表示\\n\\n**ポイント：** 配列でもArrayListでも、書き方は同じです。便利ですね！"
         }
       ],
       "correctCode": "// classでMainクラスを定義\\nclass Main {\\n    // public static void mainでエントリーポイントを定義\\n    public static void main(String[] args) {\\n        // String[]型のcolorsに色配列（あか、あお、みどり）を代入\\n        String[] colors = {\\\"あか\\\", \\\"あお\\\", \\\"みどり\\\"};\\n        // 拡張forでcolorsから各cを取り出す\\n        for (String c : colors) {\\n            // Systemのoutのprintlnでcを出力\\n            System.out.println(c);\\n        // forブロックを閉じる\\n        }\\n    // mainメソッドを閉じる\\n    }\\n// Mainクラスを閉じる\\n}", "holeyCode": "// classでMainクラスを定義\\nclass ___ {\\n    // public static void mainでエントリーポイントを定義\\n    public static void ___(___[] ___) {\\n        // String[]型のcolorsに色配列（あか、あお、みどり）を代入\\n        ___[] ___ = {___, ___, ___}___\\n        // 拡張forでcolorsから各cを取り出す\\n        for (___ ___ : ___) {\\n            // Systemのoutのprintlnでcを出力\\n            ___.___.___(___)___\\n        // forブロックを閉じる\\n        ___\\n    // mainメソッドを閉じる\\n    ___\\n// Mainクラスを閉じる\\n___",

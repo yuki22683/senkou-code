@@ -98,11 +98,11 @@ export const swift2Data = {
         },
         {
           "title": "if let の書き方",
-          "content": "# 値があれば取り出す\\n\\n```swift\\nif let 新しい変数名 = オプショナル変数 {\\n    // 値があるときの処理\\n}\\n```\\n\\n**コード例：**\\n```swift\\nvar name: String? = \"Taro\"\\nif let n = name {\\n    print(n)  // \"Taro\"と表示される\\n}\\n```\\n\\n`name` に値があれば `n` に取り出して使えます。nilなら `{ }` の中は実行されません。"
+          "content": "# 値があれば取り出す\\n\\n```swift\\nif let 新しい変数名 = オプショナル変数 {\\n    // 値があるときの処理\\n}\\n```\\n\\n**コード例：**\\n```swift\\nvar name: String? = \"Taro\"\\nif let n = name {\\n    print(n)\\n}\\n```\\n\\n=> \"Taro\"と表示される\\n\\n`name` に値があれば `n` に取り出して使えます。nilなら `{ }` の中は実行されません。"
         },
         {
           "title": "if let が安全な理由",
-          "content": "# エラーを防げる\\n\\n**強制アンラップ（!）の場合：**\\n```swift\\nvar num: Int? = nil\\nprint(num!)  // エラー！クラッシュする\\n```\\n\\n**if let の場合：**\\n```swift\\nvar num: Int? = nil\\nif let n = num {\\n    print(n)  // 実行されない（安全）\\n}\\n```\\n\\nnilのときは何も起きないので、安全です。"
+          "content": "# エラーを防げる\\n\\n**強制アンラップ（!）の場合：**\\n```swift\\nvar num: Int? = nil\\nprint(num!)\\n```\\n\\n=> エラー！クラッシュする\\n\\n**if let の場合：**\\n```swift\\nvar num: Int? = nil\\nif let n = num {\\n    print(n)\\n}\\n```\\n\\n=> 実行されない（安全）\\n\\nnilのときは何も起きないので、安全です。"
         }
       ],
       "correctCode": "// varでvalにInt?型で100を代入\\nvar val: Int? = 100\\n// if letでvalをアンラップしnに代入\\nif let n = val {\\n    // printでnを出力\\n    print(n)\\n// ブロックを閉じる\\n}",
@@ -526,7 +526,7 @@ export const swift2Data = {
         },
         {
           "title": "guard let でオプショナルを開く",
-          "content": "# nilなら即リターン\\n\\n```swift\\nfunc check(_ val: Int?) {\\n    guard let n = val else {\\n        print(\"nil\")\\n        return        // 関数から出る\\n    }\\n    print(n)  // 値があるとき、nが使える\\n}\\n```\\n\\n=> 値がないときの処理\\n\\n**if let** と違い、取り出した変数 `n` を関数全体で使えるのがポイントです。"
+          "content": "# nilなら即リターン\\n\\n```swift\\nfunc check(_ val: Int?) {\\n    guard let n = val else {\\n        print(\"nil\")\\n        return        // 関数から出る\\n    }\\n    print(n)\\n}\\n```\\n\\n=> 値があるとき、nが使える\\n\\n=> 値がないときの処理\\n\\n**if let** と違い、取り出した変数 `n` を関数全体で使えるのがポイントです。"
         },
         {
           "title": "やってみましょう！",

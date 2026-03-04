@@ -270,7 +270,7 @@ export const csharp2Data = {
         },
         {
           "title": "自動プロパティ",
-          "content": "# { get; set; } で簡単に作る\\n\\n`{ get; set; }` と書くだけで、シンプルなプロパティが作れます。これを「自動プロパティ」と呼びます。\\n\\n**コード例（名前を持つPersonクラス）：**\\n```csharp\\nclass Person {\\n    public string Name { get; set; }\\n}\\n\\nPerson p = new Person();\\np.Name = \"Taro\";           // set で値を設定\\nConsole.WriteLine(p.Name); // get で値を取得\\n```\\n=> Taro\\n\\n**解説：**\\n1. `string Name { get; set; }` で「名前」プロパティを定義\\n2. `p.Name = \"Taro\"` で値を設定（setが動く）\\n3. `p.Name` で値を取得（getが動く）\\n\\n**ポイント：**\\n変数のように使えるけど、実は裏でgetとsetが動いています！"
+          "content": "# { get; set; } で簡単に作る\\n\\n`{ get; set; }` と書くだけで、シンプルなプロパティが作れます。これを「自動プロパティ」と呼びます。\\n\\n**コード例（名前を持つPersonクラス）：**\\n```csharp\\nclass Person {\\n    public string Name { get; set; }\\n}\\n\\nPerson p = new Person();\\np.Name = \"Taro\";           // set で値を設定\\nConsole.WriteLine(p.Name);\\n```\\n\\n=> get で値を取得\\n=> Taro\\n\\n**解説：**\\n1. `string Name { get; set; }` で「名前」プロパティを定義\\n2. `p.Name = \"Taro\"` で値を設定（setが動く）\\n3. `p.Name` で値を取得（getが動く）\\n\\n**ポイント：**\\n変数のように使えるけど、実は裏でgetとsetが動いています！"
         }
       ],
       "correctCode": "// Itemクラスを定義\\nclass Item {\\n    // get/setでPriceプロパティを定義\\n    public int Price { get; set; }\\n// ブロックを閉じる\\n}\\n\\n// Itemインスタンスを作成\\nItem item = new Item();\\n// itemのPriceに500を設定\\nitem.Price = 500;\\n// ConsoleのWriteLineでitem.Priceを出力\\nConsole.WriteLine(item.Price);",
@@ -328,7 +328,7 @@ export const csharp2Data = {
         },
         {
           "title": "List の使い方",
-          "content": "# Add（アッド）で要素を追加\\n\\n`Add()` メソッドで要素を追加し、配列と同じように `[番号]` でアクセスします。\\n\\n**コード例（くだものリストを作る）：**\\n```csharp\\n// 文字列のListを作る\\nList<string> fruits = new List<string>();\\n\\n// 要素を追加\\nfruits.Add(\"Apple\");   // 0番目\\nfruits.Add(\"Banana\");  // 1番目\\n\\n// アクセス\\nConsole.WriteLine(fruits[0]); // Apple\\nConsole.WriteLine(fruits[1]); // Banana\\n```\\n\\n**よく使うメソッド：**\\n- `Add(値)` : 末尾に追加\\n- `Remove(値)` : 値を削除\\n- `Count` : 要素数を取得"
+          "content": "# Add（アッド）で要素を追加\\n\\n`Add()` メソッドで要素を追加し、配列と同じように `[番号]` でアクセスします。\\n\\n**コード例（くだものリストを作る）：**\\n```csharp\\n// 文字列のListを作る\\nList<string> fruits = new List<string>();\\n\\n// 要素を追加\\nfruits.Add(\"Apple\");   // 0番目\\nfruits.Add(\"Banana\");  // 1番目\\n\\n// アクセス\\nConsole.WriteLine(fruits[0]);\\nConsole.WriteLine(fruits[1]);\\n```\\n\\n=> Apple\\n=> Banana\\n\\n**よく使うメソッド：**\\n- `Add(値)` : 末尾に追加\\n- `Remove(値)` : 値を削除\\n- `Count` : 要素数を取得"
         }
       ],
       "correctCode": "// int型のListを作成\\nList<int> nums = new List<int>();\\n// numsにAddで10を追加\\nnums.Add(10);\\n// numsにAddで20を追加\\nnums.Add(20);\\n// ConsoleのWriteLineでnumsの2番目の要素を出力\\nConsole.WriteLine(nums[1]);",
@@ -376,7 +376,7 @@ export const csharp2Data = {
         },
         {
           "title": "Where（ウェア）でフィルタリング",
-          "content": "# 条件に合う要素だけを取り出す\\n\\n`Where()` を使って、条件を満たす要素だけを取り出せます。\\n\\n**コード例（3より大きい数だけ取り出す）：**\\n```csharp\\nList<int> nums = new List<int> {1, 2, 3, 4, 5};\\nvar big = nums.Where(n => n > 3);\\nforeach (var n in big) {\\n    Console.WriteLine(n); // 4, 5\\n}\\n```\\n\\n**解説：**\\n1. `nums.Where(n => n > 3)` で「3より大きい」という条件で絞り込み\\n2. `n => n > 3` はラムダ式（後で詳しく学びます）で、各要素をチェックする\\n3. 条件を満たす 4 と 5 だけが残る\\n\\n**`=>` って何？：**\\n「〜するもの」という意味で、`n => n > 3` は「nが3より大きいかチェックする」と読みます。"
+          "content": "# 条件に合う要素だけを取り出す\\n\\n`Where()` を使って、条件を満たす要素だけを取り出せます。\\n\\n**コード例（3より大きい数だけ取り出す）：**\\n```csharp\\nList<int> nums = new List<int> {1, 2, 3, 4, 5};\\nvar big = nums.Where(n => n > 3);\\nforeach (var n in big) {\\n    Console.WriteLine(n);\\n}\\n```\\n\\n=> 4, 5\\n\\n**解説：**\\n1. `nums.Where(n => n > 3)` で「3より大きい」という条件で絞り込み\\n2. `n => n > 3` はラムダ式（後で詳しく学びます）で、各要素をチェックする\\n3. 条件を満たす 4 と 5 だけが残る\\n\\n**`=>` って何？：**\\n「〜するもの」という意味で、`n => n > 3` は「nが3より大きいかチェックする」と読みます。"
         }
       ],
       "correctCode": "// int型のListを作成\\nList<int> nums = new List<int> {1, 5, 10, 15, 20};\\n// numsからWhereで10以上の要素を抽出しresultに代入\\nvar result = nums.Where(n => n >= 10);\\n// foreachでresultをループ\\nforeach (var n in result) {\\n    // ConsoleのWriteLineでnを出力\\n    Console.WriteLine(n);\\n// ブロックを閉じる\\n}",

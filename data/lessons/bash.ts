@@ -16,7 +16,7 @@ export const bashData = {
     },
     {
       "title": "変数",
-      "content": "データを保存する「はこ」が**変数**です。\\n\\n**注意:** `=` の前後にスペースを入れないこと！\\n\\n```bash\\nname=\"Bash\"    # OK\\nname = \"Bash\"  # エラー！\\n```\\n\\n中身を取り出すには `$` をつけます。\\n\\n```bash\\necho $name  # Bash\\n```"
+      "content": "データを保存する「はこ」が**変数**です。\\n\\n**注意:** `=` の前後にスペースを入れないこと！\\n\\n```bash\\nname=\"Bash\"    # OK\\nname = \"Bash\"  # エラー！\\n```\\n\\n中身を取り出すには `$` をつけます。\\n\\n```bash\\necho $name\\n```\\n\\n=> Bash"
     },
     {
       "title": "計算する $(( ))",

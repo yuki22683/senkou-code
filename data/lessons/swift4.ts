@@ -229,7 +229,7 @@ export const swift4Data = {
         },
         {
           "title": "型推論で自動決定",
-          "content": "# 使うときに型が決まる\\n\\n```swift\\nlet nums = [10, 20, 30]\\nprint(first(nums) ?? 0)  // TはIntと推論\\n\\nlet words = [\"a\", \"b\", \"c\"]\\nprint(first(words) ?? \"\")  // TはStringと推論\\n```\\n\\n渡したデータの型を見て、自動的に `T` の型が決まります。"
+          "content": "# 使うときに型が決まる\\n\\n```swift\\nlet nums = [10, 20, 30]\\nprint(first(nums) ?? 0)\\n\\nlet words = [\"a\", \"b\", \"c\"]\\nprint(first(words) ?? \"\")\\n```\\n\\n=> TはIntと推論\\n=> TはStringと推論\\n\\n渡したデータの型を見て、自動的に `T` の型が決まります。"
         },
         {
           "title": "やってみましょう！",
@@ -447,7 +447,7 @@ export const swift4Data = {
         },
         {
           "title": "lazy プロパティの書き方",
-          "content": "# lazy var で宣言\\n\\n```swift\\nclass Calculator {\\n    lazy var result: Int = {\\n        print(\"計算中...\")  // 初めてアクセスしたとき実行\\n        return 100\\n    }()\\n}\\n```\\n\\n最後の `()` は「このクロージャを実行する」という意味です。"
+          "content": "# lazy var で宣言\\n\\n```swift\\nclass Calculator {\\n    lazy var result: Int = {\\n        print(\"計算中...\")\\n        return 100\\n    }()\\n}\\n```\\n\\n=> 初めてアクセスしたとき実行\\n\\n最後の `()` は「このクロージャを実行する」という意味です。"
         },
         {
           "title": "lazy が便利な場面",
@@ -592,7 +592,7 @@ export const swift4Data = {
         },
         {
           "title": "if let との違い",
-          "content": "# 取り出した値のスコープ\\n\\n**if let** では取り出した値は `{ }` の中だけで使えます。\\n\\n**guard let** では取り出した値は関数全体で使えます。\\n\\n```swift\\nguard let x = opt else { return }\\nprint(x)  // guardの後でもxが使える！\\n```"
+          "content": "# 取り出した値のスコープ\\n\\n**if let** では取り出した値は `{ }` の中だけで使えます。\\n\\n**guard let** では取り出した値は関数全体で使えます。\\n\\n```swift\\nguard let x = opt else { return }\\nprint(x)\\n```\\n\\n=> guardの後でもxが使える！"
         },
         {
           "title": "やってみましょう！",

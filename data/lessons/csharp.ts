@@ -12,7 +12,7 @@ export const csharpData = {
     },
     {
       "title": "画面に文字を出す",
-      "content": "C#で画面に文字を出すには `Console.WriteLine` を使います。\\n\\n```csharp\\nConsole.WriteLine(\\\"Hello, C#!\\\");\\n```\\n\\n`Console` はコンソール（画面）を操作するクラスです。"
+      "content": "C#で画面に文字を出すには `Console.WriteLine` を使います。\\n\\n```csharp\\nConsole.WriteLine(\\\"Hello, C\\n```\\n\\n=> !\\\");\\n\\n`Console` はコンソール（画面）を操作するクラスです。"
     },
     {
       "title": "変数を使う",
@@ -340,7 +340,7 @@ export const csharpData = {
         },
         {
           "title": "データの番号は 0 から！",
-          "content": "# 配列の作り方と使い方\\n\\n型の後ろに `[]`（角かっこ）をつけると配列になります。\\n\\n**大事なルール：**\\n配列の番号は **0番** から始まります！1番目のデータは「0番」、2番目は「1番」です。\\n\\n**コード例（くだものリストを作る）：**\\n```csharp\\nstring[] fruits = {\"りんご\", \"バナナ\"};\\nConsole.WriteLine(fruits[0]); // \"りんご\" が表示される\\nConsole.WriteLine(fruits[1]); // \"バナナ\" が表示される\\n```\\n\\n**解説：**\\n- `string[]` で「文字の配列」を宣言\\n- `{\"りんご\", \"バナナ\"}` で中身を入れる\\n- `fruits[0]` で1番目（0番）のデータを取り出す"
+          "content": "# 配列の作り方と使い方\\n\\n型の後ろに `[]`（角かっこ）をつけると配列になります。\\n\\n**大事なルール：**\\n配列の番号は **0番** から始まります！1番目のデータは「0番」、2番目は「1番」です。\\n\\n**コード例（くだものリストを作る）：**\\n```csharp\\nstring[] fruits = {\"りんご\", \"バナナ\"};\\nConsole.WriteLine(fruits[0]);\\nConsole.WriteLine(fruits[1]);\\n```\\n\\n=> \"りんご\" が表示される\\n=> \"バナナ\" が表示される\\n\\n**解説：**\\n- `string[]` で「文字の配列」を宣言\\n- `{\"りんご\", \"バナナ\"}` で中身を入れる\\n- `fruits[0]` で1番目（0番）のデータを取り出す"
         }
       ],
       "correctCode": "// 色配列（あか、あお、みどり）をcolorsに代入\\nstring[] colors = {\"あか\", \"あお\", \"みどり\"};\\n// ConsoleのWriteLineでcolors[1]（あお）を出力\\nConsole.WriteLine(colors[1]);",

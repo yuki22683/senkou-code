@@ -639,7 +639,7 @@ export const csharp3Data = {
       "tutorialSlides": [
         {
           "title": "record（レコード）型とは？",
-          "content": "# 値で比較できるデータ型\\n\\nC# 9.0で追加された**record**（レコード）は、データを簡潔に定義できる特別な型です。\\n\\n**classとの違い：**\\n- class : 同じ内容でも、別々に作ったら「違うもの」と判定される（参照で比較）\\n- record : 中身が同じなら「同じもの」と判定される（値で比較）\\n\\n**コード例：**\\n```csharp\\nrecord Person(string Name, int Age);\\n\\nvar p1 = new Person(\"Alice\", 25);\\nvar p2 = new Person(\"Alice\", 25);\\nConsole.WriteLine(p1 == p2);  // True！\\n```\\n\\n**身近な例え：**\\n「住所が同じなら同じ家」と判断するようなものです。別々に書いた住所でも、内容が同じなら「同じ」と見なします。"
+          "content": "# 値で比較できるデータ型\\n\\nC# 9.0で追加された**record**（レコード）は、データを簡潔に定義できる特別な型です。\\n\\n**classとの違い：**\\n- class : 同じ内容でも、別々に作ったら「違うもの」と判定される（参照で比較）\\n- record : 中身が同じなら「同じもの」と判定される（値で比較）\\n\\n**コード例：**\\n```csharp\\nrecord Person(string Name, int Age);\\n\\nvar p1 = new Person(\"Alice\", 25);\\nvar p2 = new Person(\"Alice\", 25);\\nConsole.WriteLine(p1 == p2);\\n```\\n\\n=> True！\\n\\n**身近な例え：**\\n「住所が同じなら同じ家」と判断するようなものです。別々に書いた住所でも、内容が同じなら「同じ」と見なします。"
         },
         {
           "title": "with（ウィズ）で一部だけ変更",

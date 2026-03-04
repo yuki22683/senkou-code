@@ -12,7 +12,7 @@ export const pythonData5 = {
     },
     {
       "title": "JSONデータの扱い",
-      "content": "JSON形式のデータは `json` モジュールで変換できます。\\n\\n```python\\nimport json\\n\\n# JSON文字列 → Python辞書\\ndata = json.loads('{\"name\": \"Python\"}'）\\nprint(data['name'])  # Python\\n\\n# Python辞書 → JSON文字列\\njson_str = json.dumps(data)\\n```"
+      "content": "JSON形式のデータは `json` モジュールで変換できます。\\n\\n```python\\nimport json\\n\\n# JSON文字列 → Python辞書\\ndata = json.loads('{\"name\": \"Python\"}'）\\nprint(data['name'])\\n\\n# Python辞書 → JSON文字列\\njson_str = json.dumps(data)\\n```\\n\\n=> Python"
     },
     {
       "title": "正規表現の基本",
@@ -20,7 +20,7 @@ export const pythonData5 = {
     },
     {
       "title": "re.search と re.findall",
-      "content": "**re.search()** は最初の1つ、**re.findall()** は全部を取得します。\\n\\n```python\\nimport re\\ntext = 'a@b.com and c@d.com'\\n\\n# 最初の1つだけ\\nmatch = re.search(r'\\w+@\\w+', text)\\nprint(match.group())  # a@b\\n\\n# 全部リストで取得\\nall = re.findall(r'\\w+@\\w+', text)\\nprint(all)  # ['a@b', 'c@d']\\n```"
+      "content": "**re.search()** は最初の1つ、**re.findall()** は全部を取得します。\\n\\n```python\\nimport re\\ntext = 'a@b.com and c@d.com'\\n\\n# 最初の1つだけ\\nmatch = re.search(r'\\w+@\\w+', text)\\nprint(match.group())\\n\\n# 全部リストで取得\\nall = re.findall(r'\\w+@\\w+', text)\\nprint(all)\\n```\\n\\n=> a@b\\n=> ['a@b', 'c@d']"
     },
     {
       "title": "collections.Counter",
@@ -82,7 +82,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "json.loads()",
-          "content": "# JSON文字列をPythonに変換\\n\\n**JSON（ジェイソン）** とは、データを保存したり送ったりするための **世界共通の書き方** です。\\n\\n**JSONの例：**\\n```json\\n{\"name\": \"Taro\", \"age\": 25}\\n```\\n\\n**json.loads()（ロードエス）** で **JSON文字列をPythonの辞書やリストに変換** できます。\\n\\n**たとえ話：** 外国語（JSON）を日本語（Python）に翻訳するようなものです。\\n\\n**例：** JSON文字列を辞書に変換しよう！\\n\\n```python\\nimport json\\n\\n# JSON形式の文字列\\njson_str = '{\"name\": \"Taro\", \"age\": 25}'\\n# Pythonの辞書に変換\\ndata = json.loads(json_str)\\nprint(data['name'])  # Taro\\n```\\n\\n**何をしているか：**\\n1. `import json` でJSONモジュールを読み込む\\n2. JSON形式の文字列を用意（ダブルクォートを使うのがJSONのルール）\\n3. `json.loads()` で文字列（String）をPythonオブジェクトに変換\\n\\n**ポイント：** `loads` の 's' は **String（文字列）** の意味です。"
+          "content": "# JSON文字列をPythonに変換\\n\\n**JSON（ジェイソン）** とは、データを保存したり送ったりするための **世界共通の書き方** です。\\n\\n**JSONの例：**\\n```json\\n{\"name\": \"Taro\", \"age\": 25}\\n```\\n\\n**json.loads()（ロードエス）** で **JSON文字列をPythonの辞書やリストに変換** できます。\\n\\n**たとえ話：** 外国語（JSON）を日本語（Python）に翻訳するようなものです。\\n\\n**例：** JSON文字列を辞書に変換しよう！\\n\\n```python\\nimport json\\n\\n# JSON形式の文字列\\njson_str = '{\"name\": \"Taro\", \"age\": 25}'\\n# Pythonの辞書に変換\\ndata = json.loads(json_str)\\nprint(data['name'])\\n```\\n\\n=> Taro\\n\\n**何をしているか：**\\n1. `import json` でJSONモジュールを読み込む\\n2. JSON形式の文字列を用意（ダブルクォートを使うのがJSONのルール）\\n3. `json.loads()` で文字列（String）をPythonオブジェクトに変換\\n\\n**ポイント：** `loads` の 's' は **String（文字列）** の意味です。"
         }
       ],
       "correctCode": "# jsonモジュールをimportする\\nimport json\\n\\n# json_strに言語名（Python）とバージョン（3.12）を持つJSON文字列を代入\\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\\n# json_strを辞書に変換してdataに代入\\ndata = json.loads(json_str)\\n# data辞書の'name'キーの値を表示\\nprint(data['name'])",
@@ -126,7 +126,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "re.search()",
-          "content": "# パターンを検索\\n\\n**正規表現** とは、文字の **パターン（形）** を表す特別な書き方です。\\n\\n**たとえ話：** 「3桁の数字」「@が入ったメールアドレス」のような「形」で文字を探せます。\\n\\n**re.search()（サーチ）** で **文字列の中からパターンに合う部分を探します**。\\n\\n**よく使う記号：**\\n- `\\d` = 数字1文字（0-9）\\n- `\\w` = 英数字1文字（a-z, A-Z, 0-9, _）\\n- `+` = 1回以上の繰り返し\\n- `{3}` = ちょうど3回\\n\\n**例：** メールアドレスを探そう！\\n\\n```python\\nimport re\\n\\ntext = 'my email is test@example.com'\\nmatch = re.search(r'\\w+@\\w+\\.\\w+', text)\\nif match:\\n    print(match.group())  # test@example.com\\n```\\n\\n**何をしているか：**\\n1. `import re` で正規表現モジュールを読み込む\\n2. `re.search(パターン, 文字列)` で検索\\n3. 見つかったら `match` オブジェクトが返る\\n4. `match.group()` で一致した文字列を取得\\n\\n**ポイント：** パターンの前に `r` をつけると、`\\` をそのまま使えます。"
+          "content": "# パターンを検索\\n\\n**正規表現** とは、文字の **パターン（形）** を表す特別な書き方です。\\n\\n**たとえ話：** 「3桁の数字」「@が入ったメールアドレス」のような「形」で文字を探せます。\\n\\n**re.search()（サーチ）** で **文字列の中からパターンに合う部分を探します**。\\n\\n**よく使う記号：**\\n- `\\d` = 数字1文字（0-9）\\n- `\\w` = 英数字1文字（a-z, A-Z, 0-9, _）\\n- `+` = 1回以上の繰り返し\\n- `{3}` = ちょうど3回\\n\\n**例：** メールアドレスを探そう！\\n\\n```python\\nimport re\\n\\ntext = 'my email is test@example.com'\\nmatch = re.search(r'\\w+@\\w+\\.\\w+', text)\\nif match:\\n    print(match.group())\\n```\\n\\n=> test@example.com\\n\\n**何をしているか：**\\n1. `import re` で正規表現モジュールを読み込む\\n2. `re.search(パターン, 文字列)` で検索\\n3. 見つかったら `match` オブジェクトが返る\\n4. `match.group()` で一致した文字列を取得\\n\\n**ポイント：** パターンの前に `r` をつけると、`\\` をそのまま使えます。"
         }
       ],
       "correctCode": "# 正規表現モジュールをインポート\\nimport re\\n\\n# textに電話番号を含む文字列を代入\\ntext = 'Call me at 090-1234-5678'\\n# textからre.searchで3桁-4桁-4桁パターンを検索しmatchに代入\\nmatch = re.search(r'\\d{3}-\\d{4}-\\d{4}', text)\\n# matchがある場合\\nif match:\\n    # printでmatchのgroupメソッドから一致した電話番号を表示\\n    print(match.group())",
@@ -219,7 +219,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "re.findall()",
-          "content": "# 全ての一致を取得\\n\\n**re.findall()（ファインドオール）** で **パターンに一致する全ての部分をリストで取得** できます。\\n\\n**searchとの違い：**\\n- `search`: 最初に見つかった1つだけ\\n- `findall`: 全部見つけてリストにする\\n\\n**たとえ話：** 文章の中から「数字」を全部探し出すイメージです。\\n\\n**例：** 文章の中の全ての数字を取り出そう！\\n\\n```python\\nimport re\\n\\ntext = 'りんご3個とみかん5個'\\nnumbers = re.findall(r'\\d+', text)\\nprint(numbers)  # ['3', '5']\\n```\\n\\n**パターン `\\d+` の意味：**\\n- `\\d` = 数字1文字（0-9）\\n- `+` = 1回以上の繰り返し\\n- つまり「1桁以上の数字」にマッチ\\n\\n**何をしているか：**\\n1. `re.findall(パターン, 文字列)` で全て検索\\n2. 見つかった全ての部分がリストで返ってくる\\n3. 見つからない場合は空のリスト `[]` が返る\\n\\n**ポイント：** `findall` は常にリストを返すので、`if` でチェックしなくてもOK！"
+          "content": "# 全ての一致を取得\\n\\n**re.findall()（ファインドオール）** で **パターンに一致する全ての部分をリストで取得** できます。\\n\\n**searchとの違い：**\\n- `search`: 最初に見つかった1つだけ\\n- `findall`: 全部見つけてリストにする\\n\\n**たとえ話：** 文章の中から「数字」を全部探し出すイメージです。\\n\\n**例：** 文章の中の全ての数字を取り出そう！\\n\\n```python\\nimport re\\n\\ntext = 'りんご3個とみかん5個'\\nnumbers = re.findall(r'\\d+', text)\\nprint(numbers)\\n```\\n\\n=> ['3', '5']\\n\\n**パターン `\\d+` の意味：**\\n- `\\d` = 数字1文字（0-9）\\n- `+` = 1回以上の繰り返し\\n- つまり「1桁以上の数字」にマッチ\\n\\n**何をしているか：**\\n1. `re.findall(パターン, 文字列)` で全て検索\\n2. 見つかった全ての部分がリストで返ってくる\\n3. 見つからない場合は空のリスト `[]` が返る\\n\\n**ポイント：** `findall` は常にリストを返すので、`if` でチェックしなくてもOK！"
         }
       ],
       "correctCode": "# 正規表現モジュールをインポート\\nimport re\\n\\n# textに'email1@test.com and email2@test.com'を代入\\ntext = 'email1@test.com and email2@test.com'\\n# 正規表現のfindallでtextからメールアドレスを全検索しemailsに代入\\nemails = re.findall(r'\\w+@\\w+\\.\\w+', text)\\n# emailsをprintで出力\\nprint(emails)",
@@ -264,7 +264,7 @@ export const pythonData5 = {
       "tutorialSlides": [
         {
           "title": "re.sub()",
-          "content": "# パターンを置換\\n\\n**re.sub()（サブスティテュート）** で **パターンに一致する部分を別の文字に置き換え** られます。\\n\\n**たとえ話：** 文章の中の「犬」を全部「猫」に置き換えるような処理です。\\n\\n**書き方：** `re.sub(パターン, 置換後, 文字列)`\\n\\n**例：** 数字を「many」に置き換えよう！\\n\\n```python\\nimport re\\n\\ntext = 'りんご3個'\\nresult = re.sub(r'\\d+', 'many', text)\\nprint(result)  # りんごmany個\\n```\\n\\n**パターン `\\d+` の意味：**\\n- `\\d` = 数字1文字（0-9）\\n- `+` = 1回以上の繰り返し\\n- つまり「1桁以上の数字」にマッチ\\n\\n**何をしているか：**\\n1. `re.sub(パターン, 置換後, 文字列)` で置換\\n2. 全ての一致箇所が置き換わる\\n\\n**便利な使い方：**\\n- 余分な空白を1つにまとめる: `re.sub(r'\\s+', ' ', text)`\\n  - `\\s` = 空白文字（スペース、タブ、改行）\\n  - `\\s+` = 1つ以上の連続した空白\\n- 数字を消す: `re.sub(r'\\d+', '', text)`\\n\\n**ポイント：** 元の文字列は変わらず、新しい文字列が返ってきます。"
+          "content": "# パターンを置換\\n\\n**re.sub()（サブスティテュート）** で **パターンに一致する部分を別の文字に置き換え** られます。\\n\\n**たとえ話：** 文章の中の「犬」を全部「猫」に置き換えるような処理です。\\n\\n**書き方：** `re.sub(パターン, 置換後, 文字列)`\\n\\n**例：** 数字を「many」に置き換えよう！\\n\\n```python\\nimport re\\n\\ntext = 'りんご3個'\\nresult = re.sub(r'\\d+', 'many', text)\\nprint(result)\\n```\\n\\n=> りんごmany個\\n\\n**パターン `\\d+` の意味：**\\n- `\\d` = 数字1文字（0-9）\\n- `+` = 1回以上の繰り返し\\n- つまり「1桁以上の数字」にマッチ\\n\\n**何をしているか：**\\n1. `re.sub(パターン, 置換後, 文字列)` で置換\\n2. 全ての一致箇所が置き換わる\\n\\n**便利な使い方：**\\n- 余分な空白を1つにまとめる: `re.sub(r'\\s+', ' ', text)`\\n  - `\\s` = 空白文字（スペース、タブ、改行）\\n  - `\\s+` = 1つ以上の連続した空白\\n- 数字を消す: `re.sub(r'\\d+', '', text)`\\n\\n**ポイント：** 元の文字列は変わらず、新しい文字列が返ってきます。"
         }
       ],
       "correctCode": "# 正規表現モジュールをインポート\\nimport re\\n\\n# textに'hello  world Python'を代入\\ntext = 'hello  world Python'\\n# 正規表現のsubでtextの連続空白を単一空白に置換しresultに代入\\nresult = re.sub(r'\\s+', ' ', text)\\n# resultをprintで出力\\nprint(result)",

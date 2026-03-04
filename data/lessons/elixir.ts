@@ -28,7 +28,7 @@ export const elixirData = {
     },
     {
       "title": "リストとマップ",
-      "content": "複数のデータをまとめて扱えます。\\n\\n**リスト**:\\n```elixir\\ncolors = [\\\"赤\\\", \\\"青\\\"]\\nIO.puts hd(colors) # 赤（先頭）\\n```\\n\\n**マップ**（辞書）:\\n```elixir\\nuser = %{name: \\\"太郎\\\"}\\nIO.puts user.name\\n```"
+      "content": "複数のデータをまとめて扱えます。\\n\\n**リスト**:\\n```elixir\\ncolors = [\\\"赤\\\", \\\"青\\\"]\\nIO.puts hd(colors)\\n```\\n\\n=> 赤（先頭）\\n\\n**マップ**（辞書）:\\n```elixir\\nuser = %{name: \\\"太郎\\\"}\\nIO.puts user.name\\n```"
     }
   ],
   "exercises": [

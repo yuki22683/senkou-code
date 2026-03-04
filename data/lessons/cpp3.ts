@@ -164,7 +164,7 @@ export const cpp3Data = {
       "tutorialSlides": [
         {
           "title": "nullptr とは？",
-          "content": "# 型安全なヌル\\n\\n**nullptr**（ヌルポインタ）は、「どこも指していないポインタ」を表す特別な値です。\\n\\n**身近な例え：**\\n住所録に「住所なし」と書きたいとき、空欄にするより「なし」と明記した方が明確ですよね。`nullptr` は「このポインタはどこも指していません」と明示するための値です。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nint* p = nullptr;  // pはどこも指していない\\nif (p == nullptr) {\\n    cout << \"null\" << endl;  // nullと表示される\\n}\\n```\\n\\nC++11からは、古い `NULL` より `nullptr` を使うのが推奨されています。"
+          "content": "# 型安全なヌル\\n\\n**nullptr**（ヌルポインタ）は、「どこも指していないポインタ」を表す特別な値です。\\n\\n**身近な例え：**\\n住所録に「住所なし」と書きたいとき、空欄にするより「なし」と明記した方が明確ですよね。`nullptr` は「このポインタはどこも指していません」と明示するための値です。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nint* p = nullptr;  // pはどこも指していない\\nif (p == nullptr) {\\n    cout << \"null\" << endl;\\n}\\n```\\n\\n=> nullと表示される\\n\\nC++11からは、古い `NULL` より `nullptr` を使うのが推奨されています。"
         },
         {
           "title": "NULL との違い",
@@ -465,7 +465,7 @@ export const cpp3Data = {
       "tutorialSlides": [
         {
           "title": "move とは？",
-          "content": "# 所有権の移動\\n\\n**std::move**（ムーブ）は、データの「所有権」を別の変数に移す機能です。\\n\\n**身近な例え：**\\n引っ越しのようなものです。家具を「コピー」して新しい家に置くのではなく、元の家から「そのまま運び出す」ので速くて効率的。でも元の家は空っぽになります。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nstring s1 = \"Hello\";       // s1 に \"Hello\" が入っている\\nstring s2 = move(s1);      // s1 の中身を s2 に移動！\\n// s1 は空っぽになる\\n// s2 に \"Hello\" が入っている\\ncout << s2 << endl;        // \"Hello\" と表示される\\n```\\n\\n**ポイント：**\\n`move` した後の変数（s1）は使わないようにしましょう。"
+          "content": "# 所有権の移動\\n\\n**std::move**（ムーブ）は、データの「所有権」を別の変数に移す機能です。\\n\\n**身近な例え：**\\n引っ越しのようなものです。家具を「コピー」して新しい家に置くのではなく、元の家から「そのまま運び出す」ので速くて効率的。でも元の家は空っぽになります。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\nstring s1 = \"Hello\";       // s1 に \"Hello\" が入っている\\nstring s2 = move(s1);      // s1 の中身を s2 に移動！\\n// s1 は空っぽになる\\n// s2 に \"Hello\" が入っている\\ncout << s2 << endl;\\n```\\n\\n=> \"Hello\" と表示される\\n\\n**ポイント：**\\n`move` した後の変数（s1）は使わないようにしましょう。"
         },
         {
           "title": "コピーより効率的",
@@ -550,7 +550,7 @@ export const cpp3Data = {
         },
         {
           "title": "値の取得",
-          "content": "# 値を安全に取り出す方法\\n\\n`optional` の中身を取り出す前に、「値があるか」をチェックします。\\n\\n**身近な例え：**\\nプレゼントの箱を開ける前に、「中身が入っているか」確認してから開けるようなものです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\noptional<int> result = find(v, 5);\\n\\n// 方法1: has_value() でチェック\\nif (result.has_value()) {\\n    cout << result.value() << endl;\\n}\\n\\n// 方法2: if文で直接チェック（省略形）\\nif (result) {\\n    cout << *result << endl;  // * で中身を取り出す\\n}\\n```\\n\\n=> 中身を取り出す\\n\\n**注意：**\\n値がないのに `value()` を呼ぶとエラーになります。必ずチェックしてから使いましょう！"
+          "content": "# 値を安全に取り出す方法\\n\\n`optional` の中身を取り出す前に、「値があるか」をチェックします。\\n\\n**身近な例え：**\\nプレゼントの箱を開ける前に、「中身が入っているか」確認してから開けるようなものです。\\n\\n**実際のコードを見てみましょう：**\\n```cpp\\noptional<int> result = find(v, 5);\\n\\n// 方法1: has_value() でチェック\\nif (result.has_value()) {\\n    cout << result.value() << endl;\\n}\\n\\n// 方法2: if文で直接チェック（省略形）\\nif (result) {\\n    cout << *result << endl;\\n}\\n```\\n\\n=> * で中身を取り出す\\n\\n=> 中身を取り出す\\n\\n**注意：**\\n値がないのに `value()` を呼ぶとエラーになります。必ずチェックしてから使いましょう！"
         }
       ],
       "correctCode": "// #include <iostream>でiostreamを読み込む\\n#include <iostream>\\n// #include <optional>でoptionalを読み込む\\n#include <optional>\\n// using namespace stdで標準名前空間を使用\\nusing namespace std;\\n\\n// int mainでmain関数を定義\\nint main() {\\n    // optional<int>でoptを宣言し42を代入\\n    optional<int> opt = 42;\\n    // ifでoptのhas_valueメソッドで値があるか判定\\n    if (opt.has_value()) {\\n        // coutでoptの中身（42）を出力\\n        cout << opt.value() << endl;\\n    // ifブロックを閉じる\\n    }\\n    // return 0で正常終了を返す\\n    return 0;\\n// main関数を閉じる\\n}", "holeyCode": "// #include <iostream>でiostreamを読み込む\\n___\\n// #include <optional>でoptionalを読み込む\\n___\\n// using namespace stdで標準名前空間を使用\\n___ ___ ___;\\n\n// int mainでmain関数を定義\\n___ ___() {\\n    // optional<int>でoptを宣言し42を代入\\n    ___<___> ___ = ___;\\n    // ifでoptのhas_valueメソッドで値があるか判定\\n    if (___.___()) {\\n        // coutでoptの中身（42）を出力\\n        ___ << ___.___() << ___;\\n    // ifブロックを閉じる\\n    ___\\n    // return 0で正常終了を返す\\n    ___ ___;\\n// main関数を閉じる\\n___", "correctLines": [

@@ -8,15 +8,15 @@ export const bash2Data = {
   "tutorialSlides": [
     {
       "title": "配列",
-      "content": "複数の値を格納できる**配列**を作るには `( )` を使います。\\n\\n```bash\\narr=(\"a\" \"b\" \"c\")\\necho ${arr[0]}  # a\\necho ${arr[1]}  # b\\n```\\n\\nインデックスは 0 から始まります。`${arr[@]}` で全要素を取得できます。"
+      "content": "複数の値を格納できる**配列**を作るには `( )` を使います。\\n\\n```bash\\narr=(\"a\" \"b\" \"c\")\\necho ${arr[0]}\\necho ${arr[1]}\\n```\\n\\n=> a\\n=> b\\n\\nインデックスは 0 から始まります。`${arr[@]}` で全要素を取得できます。"
     },
     {
       "title": "文字列の長さ ${#変数}",
-      "content": "`#` を変数名の前につけると、**文字列の長さ**を取得できます。\\n\\n```bash\\ntext=\"Hello\"\\necho ${#text}\\n```\\n\\n=> 5\\n\\n配列の場合は要素数を返します。"
+      "content": "`#` を変数名の前につけると、**文字列の長さ**を取得できます。\\n\\n```bash\\ntext=\"Hello\"\\necho ${\\n```\\n\\n=> text}\\n\\n=> 5\\n\\n配列の場合は要素数を返します。"
     },
     {
       "title": "文字列の部分取得",
-      "content": "`${変数:開始:長さ}` で**部分文字列**を取り出せます。\\n\\n```bash\\ntext=\"Hello World\"\\necho ${text:0:5}   # Hello\\necho ${text:6:5}   # World\\n```\\n\\n開始位置は0から数えます。"
+      "content": "`${変数:開始:長さ}` で**部分文字列**を取り出せます。\\n\\n```bash\\ntext=\"Hello World\"\\necho ${text:0:5}\\necho ${text:6:5}\\n```\\n\\n=> Hello\\n=> World\\n\\n開始位置は0から数えます。"
     },
     {
       "title": "関数の定義",
@@ -24,7 +24,7 @@ export const bash2Data = {
     },
     {
       "title": "コマンド置換 $()",
-      "content": "コマンドの出力を変数に入れるには `$( )` を使います。\\n\\n```bash\\nresult=$(echo \"Hello\")\\necho $result  # Hello\\n```\\n\\n関数の戻り値もこの方法で取得します。"
+      "content": "コマンドの出力を変数に入れるには `$( )` を使います。\\n\\n```bash\\nresult=$(echo \"Hello\")\\necho $result\\n```\\n\\n=> Hello\\n\\n関数の戻り値もこの方法で取得します。"
     }
   ],
   "exercises": [
@@ -38,7 +38,7 @@ export const bash2Data = {
         },
         {
           "title": "配列の使い方",
-          "content": "# ${配列[番号]} でアクセス\\n\\n`${配列[@]}` ですべての要素を取得できます。\\n\\n**コード例：**\\n```bash\\narr=(\"a\" \"b\" \"c\")\\necho ${arr[1]} # b\\n```"
+          "content": "# ${配列[番号]} でアクセス\\n\\n`${配列[@]}` ですべての要素を取得できます。\\n\\n**コード例：**\\n```bash\\narr=(\"a\" \"b\" \"c\")\\necho ${arr[1]}\\n```\\n\\n=> b"
         }
       ],
       "correctCode": "# 配列numsを定義\\nnums=(10 20 30)\\n# インデックス2（3つ目の要素）にアクセス\\necho ${nums[2]}",
@@ -79,7 +79,7 @@ export const bash2Data = {
         },
         {
           "title": "長さの取得",
-          "content": "# 文字数を返す\\n\\n配列の場合は要素数を返します。\\n\\n**コード例：**\\n```bash\\ntext=\"Hello\"\\necho ${#text}\\n```\\n\\n=> 5"
+          "content": "# 文字数を返す\\n\\n配列の場合は要素数を返します。\\n\\n**コード例：**\\n```bash\\ntext=\"Hello\"\\necho ${\\n```\\n\\n=> text}\\n\\n=> 5"
         }
       ],
       "correctCode": "# 変数wordに文字列を代入\\nword=\"Bash\"\\n# 文字列の長さを表示\\necho ${#word}",
@@ -119,7 +119,7 @@ export const bash2Data = {
         },
         {
           "title": "スライス",
-          "content": "# 位置は0から\\n\\n開始位置は0から数えます。\\n\\n**コード例：**\\n```bash\\ntext=\"Hello World\"\\necho ${text:0:5} # Hello\\n```"
+          "content": "# 位置は0から\\n\\n開始位置は0から数えます。\\n\\n**コード例：**\\n```bash\\ntext=\"Hello World\"\\necho ${text:0:5}\\n```\\n\\n=> Hello"
         }
       ],
       "correctCode": "# 変数textに文字列を代入\\ntext=\"Hello World\"\\n# インデックス6から5文字分を取得\\necho ${text:6:5}",

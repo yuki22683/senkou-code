@@ -496,7 +496,7 @@ export const swift3Data = {
         },
         {
           "title": "try と do-catch",
-          "content": "# エラーを受け止める\\n\\n```swift\\ndo {\\n    let result = try divide(10, 0)  // tryでcheck関数を呼び出す\\n    print(result)\\n} catch {\\n    print(\"エラー発生: \\(error)\")  // エラーを処理\\n}\\n```\\n\\n- **try**: 「エラーが起きるかも」と覚悟して呼び出す\\n- **do-catch**: エラーが起きたときの処理を書く"
+          "content": "# エラーを受け止める\\n\\n```swift\\ndo {\\n    let result = try divide(10, 0)  // tryでcheck関数を呼び出す\\n    print(result)\\n} catch {\\n    print(\"エラー発生: \\(error)\")\\n}\\n```\\n\\n=> エラーを処理\\n\\n- **try**: 「エラーが起きるかも」と覚悟して呼び出す\\n- **do-catch**: エラーが起きたときの処理を書く"
         },
         {
           "title": "やってみましょう！",

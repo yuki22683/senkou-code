@@ -140,7 +140,7 @@ export const php3Data = {
         },
         {
           "title": "?? の使い方",
-          "content": "# シンプルな null チェック\\n\\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\\n\\n**コード例：**\\n```php\\n$name = null;\\n$displayName = $name ?? 'Anonymous';\\necho $displayName;  // Anonymous\\n```\\n\\n**何をしているの？**\\n1. `$name = null` → 名前は空っぽ\\n2. `$name ?? 'Anonymous'` → nullかチェック\\n3. null なので → 'Anonymous' を返す\\n\\n**値があるときは？**\\n```php\\n$name = 'Taro';\\necho $name ?? 'Anonymous';  // Taro（nullじゃないので$nameを使う）\\n```\\n\\n**ポイント：**\\n- 左が null → 右を返す\\n- 左が null じゃない → 左をそのまま返す"
+          "content": "# シンプルな null チェック\\n\\n`$a ?? $b` は、`$a` が null なら `$b` を返します。\\n\\n**コード例：**\\n```php\\n$name = null;\\n$displayName = $name ?? 'Anonymous';\\necho $displayName;\\n```\\n\\n=> Anonymous\\n\\n**何をしているの？**\\n1. `$name = null` → 名前は空っぽ\\n2. `$name ?? 'Anonymous'` → nullかチェック\\n3. null なので → 'Anonymous' を返す\\n\\n**値があるときは？**\\n```php\\n$name = 'Taro';\\necho $name ?? 'Anonymous';\\n```\\n\\n=> Taro（nullじゃないので$nameを使う）\\n\\n**ポイント：**\\n- 左が null → 右を返す\\n- 左が null じゃない → 左をそのまま返す"
         }
       ],
       "correctCode": "// nullを代入\\n$name = null;\\n// ??でNull合体演算子\\n$result = $name ?? 'ゲスト';",

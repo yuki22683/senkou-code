@@ -79,7 +79,7 @@ export const cData = {
               },
               {
                       "title": "変数の使い方",
-                      "content": "# 変数を宣言して使おう\\n\\n**やること：**\\n1. 箱の種類（int）を書く\\n2. 箱の名前を決める\\n3. = で値を入れる\\n\\n```c\\nint age = 12;\\nprintf(\"%d\", age);  // 12と表示\\n```"
+                      "content": "# 変数を宣言して使おう\\n\\n**やること：**\\n1. 箱の種類（int）を書く\\n2. 箱の名前を決める\\n3. = で値を入れる\\n\\n```c\\nint age = 12;\\nprintf(\"%d\", age);\\n```\\n\\n=> 12と表示"
               }
       ],
       "correctCode": "// #includeでstdio.hを読み込む\\n#include <stdio.h>\\n// int mainでmain関数を定義\\nint main() {\\n    // int xでxを宣言し10を代入\\n    int x = 10;\\n    // printfでxを出力\\n    printf(\"%d\\n\", x);\\n    // return 0で正常終了を返す\\n    return 0;\\n// ブロックを閉じる\\n}",

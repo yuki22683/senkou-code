@@ -223,11 +223,11 @@ export const kotlin4Data = {
         },
         {
           "title": "by lazy の仕組み",
-          "content": "# 最初のアクセスで初期化\\n\\n```kotlin\\nval data: String by lazy {\\n    println(\"Loading...\")  // 最初のアクセス時に実行\\n    \"Data\"                 // この値が代入される\\n}\\n```\\n\\n2回目以降は、すでに計算された値がそのまま使われます。"
+          "content": "# 最初のアクセスで初期化\\n\\n```kotlin\\nval data: String by lazy {\\n    println(\"Loading...\")\\n    \"Data\"                 // この値が代入される\\n}\\n```\\n\\n=> 最初のアクセス時に実行\\n\\n2回目以降は、すでに計算された値がそのまま使われます。"
         },
         {
           "title": "by lazy の例",
-          "content": "# 順番を確認しよう\\n\\n```kotlin\\nclass Config {\\n    val value: Int by lazy {\\n        println(\"Init\")\\n        42\\n    }\\n}\\n\\nval c = Config()      // まだ初期化されない\\nprintln(\"Created\")    // \"Created\" が表示\\nprintln(c.value)      // ここで \"Init\" → \"42\" が表示\\n```"
+          "content": "# 順番を確認しよう\\n\\n```kotlin\\nclass Config {\\n    val value: Int by lazy {\\n        println(\"Init\")\\n        42\\n    }\\n}\\n\\nval c = Config()      // まだ初期化されない\\nprintln(\"Created\")\\nprintln(c.value)\\n```\\n\\n=> \"Created\" が表示\\n=> ここで \"Init\" → \"42\" が表示"
         },
         {
           "title": "by lazy の利点",
@@ -611,11 +611,11 @@ export const kotlin4Data = {
         },
         {
           "title": "let の使い方",
-          "content": "# it で値を使う\\n\\n```kotlin\\nval result = \"hello\".let {\\n    it.uppercase()  // 大文字に変換\\n}\\nprintln(result)  // \"HELLO\"\\n```\\n\\n`{ }` の中で `it` として値を使えます。\\n\\n最後の式が戻り値になります。"
+          "content": "# it で値を使う\\n\\n```kotlin\\nval result = \"hello\".let {\\n    it.uppercase()  // 大文字に変換\\n}\\nprintln(result)\\n```\\n\\n=> \"HELLO\"\\n\\n`{ }` の中で `it` として値を使えます。\\n\\n最後の式が戻り値になります。"
         },
         {
           "title": "null チェックと組み合わせ",
-          "content": "# ?.let でnullでないときだけ処理\\n\\n```kotlin\\nval name: String? = \"Taro\"\\nname?.let {\\n    println(it)  // nameがnullでないときだけ実行\\n}\\n```\\n\\n`?.let` は「nullでなければ処理する」というパターンです。"
+          "content": "# ?.let でnullでないときだけ処理\\n\\n```kotlin\\nval name: String? = \"Taro\"\\nname?.let {\\n    println(it)\\n}\\n```\\n\\n=> nameがnullでないときだけ実行\\n\\n`?.let` は「nullでなければ処理する」というパターンです。"
         },
         {
           "title": "let と他のスコープ関数の違い",

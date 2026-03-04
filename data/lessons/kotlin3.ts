@@ -356,7 +356,7 @@ export const kotlin3Data = {
         },
         {
           "title": "apply は自分自身を返す",
-          "content": "# 設定したオブジェクトがそのまま返る\\n\\n```kotlin\\nval cfg = Config().apply {\\n    host = \"localhost\"\\n}\\nprintln(cfg)  // Config(host=localhost, port=0)\\n```\\n\\n`apply` の結果は設定されたオブジェクト自体です。\\n\\nこれが `let` との違いです（letはラムダの戻り値を返す）。"
+          "content": "# 設定したオブジェクトがそのまま返る\\n\\n```kotlin\\nval cfg = Config().apply {\\n    host = \"localhost\"\\n}\\nprintln(cfg)\\n```\\n\\n=> Config(host=localhost, port=0)\\n\\n`apply` の結果は設定されたオブジェクト自体です。\\n\\nこれが `let` との違いです（letはラムダの戻り値を返す）。"
         },
         {
           "title": "やってみましょう！",
@@ -428,7 +428,7 @@ export const kotlin3Data = {
         },
         {
           "title": "also の中では it が使える",
-          "content": "# it でオブジェクトにアクセス\\n\\n`also { }` の中では、対象のオブジェクトを `it` で参照します。\\n\\n```kotlin\\nval num = 42.also {\\n    println(\"Value: $it\")  // it は 42\\n}\\n```\\n\\n`apply` との違いは、`this` ではなく `it` を使うことです。"
+          "content": "# it でオブジェクトにアクセス\\n\\n`also { }` の中では、対象のオブジェクトを `it` で参照します。\\n\\n```kotlin\\nval num = 42.also {\\n    println(\"Value: $it\")\\n}\\n```\\n\\n=> it は 42\\n\\n`apply` との違いは、`this` ではなく `it` を使うことです。"
         },
         {
           "title": "also でログを出力",
@@ -498,7 +498,7 @@ export const kotlin3Data = {
         },
         {
           "title": "run の中では this が使える",
-          "content": "# this でオブジェクトにアクセス\\n\\n```kotlin\\nval length = \"Hello\".run {\\n    println(this)  // Hello\\n    length         // 戻り値は5\\n}\\n```\\n\\n`{ }` の最後の式が戻り値になります。\\n\\n`this` は省略できるので `length` だけでOKです。"
+          "content": "# this でオブジェクトにアクセス\\n\\n```kotlin\\nval length = \"Hello\".run {\\n    println(this)\\n    length         // 戻り値は5\\n}\\n```\\n\\n=> Hello\\n\\n`{ }` の最後の式が戻り値になります。\\n\\n`this` は省略できるので `length` だけでOKです。"
         },
         {
           "title": "run で計算をまとめる",

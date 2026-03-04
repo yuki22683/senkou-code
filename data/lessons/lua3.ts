@@ -20,7 +20,7 @@ export const lua3Data = {
     },
     {
       "title": "文字列操作",
-      "content": "`..` で文字列を連結し、`#` で長さを取得します。\\n\\n```lua\\nlocal a = \"Lua\"\\nlocal b = \"Script\"\\nprint(a .. b)  -- => LuaScript\\n\\nlocal s = \"Lua\"\\nprint(#s)  -- => 3\\n```\\n\\n`string.sub`、`string.find`、`string.match` なども使えます。"
+      "content": "`..` で文字列を連結し、`#` で長さを取得します。\\n\\n```lua\\nlocal a = \"Lua\"\\nlocal b = \"Script\"\\nprint(a .. b)  -- => LuaScript\\n\\nlocal s = \"Lua\"\\nprint(\\n```\\n\\n=> s)  -- => 3\\n\\n`string.sub`、`string.find`、`string.match` なども使えます。"
     },
     {
       "title": "条件演算子のパターン",
@@ -365,7 +365,7 @@ export const lua3Data = {
         },
         {
           "title": "# の使い方",
-          "content": "# #文字列 / #テーブル\\n\\n文字列のバイト数や配列の要素数を返します。\\n\\n**コード例：**\\n```lua\\nprint(#\"hello\") -- 5\\nprint(#{1, 2, 3}) -- 3\\n```"
+          "content": "# #文字列 / #テーブル\\n\\n文字列のバイト数や配列の要素数を返します。\\n\\n**コード例：**\\n```lua\\nprint(\\nprint(\\n```\\n\\n=> \"hello\") -- 5\\n=> {1, 2, 3}) -- 3"
         }
       ],
       "correctCode": "-- #で長さを取得\\nlocal s = \"Lua\"\\n-- printで長さを出力\\nprint(#s)",

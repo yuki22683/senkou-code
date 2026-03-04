@@ -88,8 +88,8 @@ function fixOutputFormat(content, filename) {
           continue;
         }
 
-        // // 数値 パターンをチェック
-        let m = line.match(/^(.*?)\s*\/\/\s*(\d+(?:（[^）]+）)?)\s*$/);
+        // // コメント パターンをチェック（全てのコメントを対象）
+        let m = line.match(/^(.*?)\s*\/\/\s*(.+?)\s*$/);
         if (m) {
           newLines.push(m[1]);
           outputs.push(m[2]);
@@ -97,26 +97,8 @@ function fixOutputFormat(content, filename) {
           continue;
         }
 
-        // // 日本語短文 パターンをチェック (最大10文字)
-        m = line.match(/^(.*?)\s*\/\/\s*([ぁ-んァ-ン一-龥]{1,10})\s*$/);
-        if (m) {
-          newLines.push(m[1]);
-          outputs.push(m[2]);
-          fixed++;
-          continue;
-        }
-
-        // # 数値 パターンをチェック (Pythonなど)
-        m = line.match(/^(.*?)\s*#\s*(\d+(?:（[^）]+）)?)\s*$/);
-        if (m) {
-          newLines.push(m[1]);
-          outputs.push(m[2]);
-          fixed++;
-          continue;
-        }
-
-        // # 日本語短文 パターンをチェック
-        m = line.match(/^(.*?)\s*#\s*([ぁ-んァ-ン一-龥]{1,10})\s*$/);
+        // # コメント パターンをチェック（全てのコメントを対象）
+        m = line.match(/^(.*?)\s*#\s*(.+?)\s*$/);
         if (m) {
           newLines.push(m[1]);
           outputs.push(m[2]);

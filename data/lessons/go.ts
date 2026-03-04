@@ -200,7 +200,7 @@ export const goData = {
         },
         {
           "title": "偶数・奇数の判定",
-          "content": "# 便利な使い方：偶数と奇数\\n\\n`%` を使うと、数が偶数か奇数かを調べられます。\\n\\n**考え方：**\\n- 2で割ってあまりが **0** → 偶数（2, 4, 6, 8...）\\n- 2で割ってあまりが **1** → 奇数（1, 3, 5, 7...）\\n\\n```go\\nn := 7\\nif n % 2 == 1 {\\n    fmt.Println(\"奇数\")  // 7÷2=3あまり1 なので奇数！\\n}\\n```\\n\\nゲームで「1つおきに色を変える」などに使えます！"
+          "content": "# 便利な使い方：偶数と奇数\\n\\n`%` を使うと、数が偶数か奇数かを調べられます。\\n\\n**考え方：**\\n- 2で割ってあまりが **0** → 偶数（2, 4, 6, 8...）\\n- 2で割ってあまりが **1** → 奇数（1, 3, 5, 7...）\\n\\n```go\\nn := 7\\nif n % 2 == 1 {\\n    fmt.Println(\"奇数\")\\n}\\n```\\n\\n=> 7÷2=3あまり1 なので奇数！\\n\\nゲームで「1つおきに色を変える」などに使えます！"
         }
       ],
       "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // fmt.Printlnで10 % 3の結果を出力\\n    fmt.Println(10 % 3)\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // fmt.Printlnで10 % 3の結果を出力\\n    ___.___(___  ___ ___)\\n// ブロックを閉じる\\n___",
@@ -358,7 +358,7 @@ export const goData = {
         },
         {
           "title": "データの番号は「0」から！",
-          "content": "# [ ]（角かっこ）で取り出す\\n\\nスライスの中身を取り出すときは、`[番号]` で何番目かを指定します。\\n\\n**大事なルール：番号は「0」からスタート！**\\n- 1番目のデータ → `[0]`\\n- 2番目のデータ → `[1]`\\n- 3番目のデータ → `[2]`\\n\\n**コード例：**\\n```go\\nitems := []int{100, 200, 300}\\n//            ↑0番  ↑1番  ↑2番\\nfmt.Println(items[0]) // 100 が表示されます\\nfmt.Println(items[1]) // 200 が表示されます\\n```\\n\\nプログラミングでは「0から数える」のが世界共通のルールです！"
+          "content": "# [ ]（角かっこ）で取り出す\\n\\nスライスの中身を取り出すときは、`[番号]` で何番目かを指定します。\\n\\n**大事なルール：番号は「0」からスタート！**\\n- 1番目のデータ → `[0]`\\n- 2番目のデータ → `[1]`\\n- 3番目のデータ → `[2]`\\n\\n**コード例：**\\n```go\\nitems := []int{100, 200, 300}\\n//            ↑0番  ↑1番  ↑2番\\nfmt.Println(items[0])\\nfmt.Println(items[1])\\n```\\n\\n=> 100 が表示されます\\n=> 200 が表示されます\\n\\nプログラミングでは「0から数える」のが世界共通のルールです！"
         }
       ],
       "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // :=でnumsに整数スライス（10、20）を代入\\n    nums := []int{10, 20}\\n    // fmt.Printlnでnumsの2番目の要素を出力\\n    fmt.Println(nums[1])\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // :=でnumsに整数スライス（10、20）を代入\\n    ___ := []___  {___, ___}\\n    // fmt.Printlnでnumsの2番目の要素を出力\\n    ___.___(___[___])\\n// ブロックを閉じる\\n___",
@@ -646,7 +646,7 @@ export const goData = {
         },
         {
           "title": "Mapの使いかた",
-          "content": "# 名前で取り出す\\n\\nMapでは「名前（キー）」と「データ（値）」をセットで保存します。取り出すときは名前を指定するだけ！\\n\\n**コード例：**\\n```go\\n// りんご→あか、バナナ→きいろ のペアを作る\\ncolors := map[string]string{\\n    \"りんご\": \"あか\",\\n    \"バナナ\": \"きいろ\",\\n}\\nfmt.Println(colors[\"りんご\"])  // あか が表示される\\n```\\n\\n**書き方のポイント：**\\n- `map[キーの種類]値の種類` で型を決める\\n- `{\"キー\": \"値\"}` でデータを入れる\\n- `マップ名[\"キー\"]` で取り出す"
+          "content": "# 名前で取り出す\\n\\nMapでは「名前（キー）」と「データ（値）」をセットで保存します。取り出すときは名前を指定するだけ！\\n\\n**コード例：**\\n```go\\n// りんご→あか、バナナ→きいろ のペアを作る\\ncolors := map[string]string{\\n    \"りんご\": \"あか\",\\n    \"バナナ\": \"きいろ\",\\n}\\nfmt.Println(colors[\"りんご\"])\\n```\\n\\n=> あか が表示される\\n\\n**書き方のポイント：**\\n- `map[キーの種類]値の種類` で型を決める\\n- `{\"キー\": \"値\"}` でデータを入れる\\n- `マップ名[\"キー\"]` で取り出す"
         }
       ],
       "correctCode": "// package mainでモジュールを宣言\\npackage main\\n// import \"fmt\"でfmtパッケージをインポート\\nimport \"fmt\"\\n// func mainでmain関数を定義\\nfunc main() {\\n    // scoresに文字列キー整数値型マップ（Mathに90）を代入\\n    scores := map[string]int{\"Math\": 90}\\n    // fmt.Printlnでscoresのキー「Math」の値を出力\\n    fmt.Println(scores[\"Math\"])\\n}", "holeyCode": "// package mainでモジュールを宣言\\npackage ___\\n// import \"fmt\"でfmtパッケージをインポート\\n___ \\\"___\\\"\\n// func mainでmain関数を定義\\nfunc ___ () {\\n    // scoresに文字列キー整数値型マップ（Mathに90）を代入\\n    ___ := ___[___]___  {\\\"___\\\": ___}\\n    // fmt.Printlnでscoresのキー「Math」の値を出力\\n    ___.___(___[\\\"___\\\"])\\n// ブロックを閉じる\\n___",

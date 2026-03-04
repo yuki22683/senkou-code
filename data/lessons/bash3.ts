@@ -8,7 +8,7 @@ export const bash3Data = {
   "tutorialSlides": [
     {
       "title": "パイプ |",
-      "content": "**パイプ** `|` は、コマンドの出力を次のコマンドの入力に渡します。\\n\\n```bash\\necho \"hello world\" | wc -w\\necho \"hello\" | tr 'a-z' 'A-Z'  # HELLO\\n```\\n\\n=> 2（単語数）\\n\\nパイプは何個でもつなげられます。"
+      "content": "**パイプ** `|` は、コマンドの出力を次のコマンドの入力に渡します。\\n\\n```bash\\necho \"hello world\" | wc -w\\necho \"hello\" | tr 'a-z' 'A-Z'\\n```\\n\\n=> HELLO\\n\\n=> 2（単語数）\\n\\nパイプは何個でもつなげられます。"
     },
     {
       "title": "リダイレクト > と >>",
