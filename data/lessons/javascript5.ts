@@ -12,7 +12,7 @@ export const javascriptData5 = {
     },
     {
       "title": "正規表現メソッド",
-      "content": "文字列の検索・置換ができます。\\n\\n```javascript\\n'hello world'.match(/\\\\w+/g);\\n// => ['hello', 'world']\\n\\n'hello'.replace(/l/g, 'L');\\n// => 'heLLo'\\n```"
+      "content": "文字列の検索・置換ができます。\\n\\n```javascript\\n'hello world'.match(/\\w+/g);\\n// => ['hello', 'world']\\n\\n'hello'.replace(/l/g, 'L');\\n// => 'heLLo'\\n```"
     },
     {
       "title": "try-catch",
@@ -472,7 +472,7 @@ export const javascriptData5 = {
         }
       ],
       "correctCode": "// privateDataにWeakMapインスタンスを代入\\nconst privateData = new WeakMap();\\n\\n// Userクラスを定義\\nclass User {\\n  // constructorでnameを受け取り初期化\\n  constructor(name) {\\n    // ひみつデータをWeakMapに保存\\n    privateData.set(this, { password: 'ひみつ' });\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  getPassword() {\\n    // WeakMapからひみつデータを取得して返す\\n    return privateData.get(this).password;\\n  }\\n}\\n\\n// userにUserインスタンス（引数'たろう'）を代入\\nconst user = new User('たろう');\\n// consoleのlogメソッドでuserのgetPasswordメソッドの結果を表示\\nconsole.log(user.getPassword());",
-      "holeyCode": "// privateDataにWeakMapインスタンスを代入\\n___ ___ = ___ ___();\\n___\\n// Userクラスを定義\\n___ ___ {\\n  // constructorでnameを受け取り初期化\\n  ___(___) {\\n    // ひみつデータをWeakMapに保存\\n    ___.___(this, { ___: '___' });\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // ブロックを開始\\n  ___() {\\n    // WeakMapからひみつデータを取得して返す\\n    ___ ___.___(this).___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// userにUserインスタンス（引数'たろう'）を代入\\n___ ___ = ___ ___('___');\\n// consoleのlogメソッドでuserのgetPasswordメソッドの結果を表示\\n___.___(___.___());",
+      "holeyCode": "// privateDataにWeakMapインスタンスを代入\\n___ ___ = ___ ___();\\n\n// Userクラスを定義\\n___ ___ {\\n  // constructorでnameを受け取り初期化\\n  ___(___) {\\n    // ひみつデータをWeakMapに保存\\n    ___.___(this, { ___: '___' });\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // ブロックを開始\\n  ___() {\\n    // WeakMapからひみつデータを取得して返す\\n    ___ ___.___(this).___;\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// userにUserインスタンス（引数'たろう'）を代入\\n___ ___ = ___ ___('___');\\n// consoleのlogメソッドでuserのgetPasswordメソッドの結果を表示\\n___.___(___.___());",
       "correctLines": [
           "// privateDataにWeakMapインスタンスを代入",
           "const privateData = new WeakMap();",

@@ -54,7 +54,7 @@ export const swift3Data = {
         }
       ],
       "correctCode": "// enumでMyErrorエラー型を定義\\nenum MyError: Error { case negative }\\n\\n// check関数を定義\\nfunc check(_ n: Int) -> Result<Int, MyError> {\\n    // 負の場合は失敗\\n    if n < 0 { return .failure(.negative) }\\n    // successで成功を返す\\n    return .success(n)\\n// ブロックを閉じる\\n}\\n\\n// resultにcheck関数（引数10）の結果を代入\\nlet result = check(10)\\n// switchでパターンマッチ\\nswitch result {\\n// 成功の場合\\ncase .success(let v): print(v)\\n// 失敗の場合\\ncase .failure(_): print(\"エラー\")\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// enumでMyErrorエラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// check関数を定義\\nfunc ___(_ ___: ___) -> ___<___, ___> {\\n    // 負の場合は失敗\\n    if ___ < ___ { return .___(.___) }\\n    // successで成功を返す\\n    return .___(___)\\n// ブロックを閉じる\\n___\\n___\\n// resultにcheck関数（引数10）の結果を代入\\nlet ___ = ___(___)\\n// switchでパターンマッチ\\nswitch ___ {\\n// 成功の場合\\ncase .___(let ___): ___(___)\\n// 失敗の場合\\ncase .___(_): ___(\"___\")\\n// ブロックを閉じる\\n___",
+      "holeyCode": "// enumでMyErrorエラー型を定義\\nenum ___: ___ { case ___ }\\n\n// check関数を定義\\nfunc ___(_ ___: ___) -> ___<___, ___> {\\n    // 負の場合は失敗\\n    if ___ < ___ { return .___(.___) }\\n    // successで成功を返す\\n    return .___(___)\\n// ブロックを閉じる\\n___\\n\n// resultにcheck関数（引数10）の結果を代入\\nlet ___ = ___(___)\\n// switchでパターンマッチ\\nswitch ___ {\\n// 成功の場合\\ncase .___(let ___): ___(___)\\n// 失敗の場合\\ncase .___(_): ___(\"___\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// enumでMyErrorエラー型を定義",
           "enum MyError: Error { case negative }",
@@ -406,7 +406,7 @@ export const swift3Data = {
         }
       ],
       "correctCode": "// protocolでStackプロトコルを定義\\nprotocol Stack {\\n    // associatedtypeで関連型を定義\\n    associatedtype Element\\n    // pushメソッドを宣言\\n    mutating func push(_ item: Element)\\n// ブロックを閉じる\\n}\\n\\n// Stackに準拠\\nstruct IntStack: Stack {\\n    // items配列\\n    var items: [Int] = []\\n    // pushメソッドを実装\\n    mutating func push(_ item: Int) {\\n        // 要素を追加\\n        items.append(item)\\n    // ブロックを閉じる\\n    }\\n// ブロックを閉じる\\n}\\n\\n// IntStackインスタンスをsに代入\\nvar s = IntStack()\\n// 要素を追加\\ns.push(10)\\n// printでitemsを出力\\nprint(s.items)",
-      "holeyCode": "// protocolでStackプロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    ___ ___\\n    // pushメソッドを宣言\\n    mutating func ___(_ ___: ___)\\n// ブロックを閉じる\\n___\\n___\\n// Stackに準拠\\nstruct ___: ___ {\\n    // items配列\\n    var ___: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(_ ___: ___) {\\n        // 要素を追加\\n        ___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n___\\n// IntStackインスタンスをsに代入\\nvar ___ = ___()\\n// 要素を追加\\n___.___(___)\\n// printでitemsを出力\\n___(___.___)",
+      "holeyCode": "// protocolでStackプロトコルを定義\\nprotocol ___ {\\n    // associatedtypeで関連型を定義\\n    ___ ___\\n    // pushメソッドを宣言\\n    mutating func ___(_ ___: ___)\\n// ブロックを閉じる\\n___\\n\\n// Stackに準拠\\nstruct ___: ___ {\\n    // items配列\\n    var ___: [___] = []\\n    // pushメソッドを実装\\n    mutating func ___(_ ___: ___) {\\n        // 要素を追加\\n        ___.___(___)\\n    // ブロックを閉じる\\n    ___\\n// ブロックを閉じる\\n___\\n\\n// IntStackインスタンスをsに代入\\nvar ___ = ___()\\n// 要素を追加\\n___.___(___)\\n// printでitemsを出力\\n___(___.___)",
       "correctLines": [
           "// protocolでStackプロトコルを定義",
           "protocol Stack {",
@@ -504,7 +504,7 @@ export const swift3Data = {
         }
       ],
       "correctCode": "// enumでMyErrorエラー型を定義\\nenum MyError: Error { case invalid }\\n\\n// throwsでエラーを投げる可能性を示す\\nfunc check(_ n: Int) throws -> Int {\\n    // 負の場合はエラー\\n    if n < 0 { throw MyError.invalid }\\n    // nを返す\\n    return n\\n// ブロックを閉じる\\n}\\n\\n// do-catchでエラー処理\\ndo {\\n    // tryでcheck関数を呼び出す\\n    let v = try check(10)\\n    // printでvを出力\\n    print(v)\\n// ブロックを開始\\n} catch {\\n    // printでエラーを出力\\n    print(\"エラー\")\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// enumでMyErrorエラー型を定義\\nenum ___: ___ { case ___ }\\n___\\n// throwsでエラーを投げる可能性を示す\\nfunc ___(_ ___: ___) ___ -> ___ {\\n    // 負の場合はエラー\\n    if ___ < ___ { ___ ___.___ }\\n    // nを返す\\n    return ___\\n// ブロックを閉じる\\n___\\n___\\n// do-catchでエラー処理\\n___ {\\n    // tryでcheck関数を呼び出す\\n    let ___ = ___ ___(___)\\n    // printでvを出力\\n    ___(___)\\n// ブロックを開始\\n} ___ {\\n    // printでエラーを出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___",
+      "holeyCode": "// enumでMyErrorエラー型を定義\\nenum ___: ___ { case ___ }\\n\n// throwsでエラーを投げる可能性を示す\\nfunc ___(_ ___: ___) ___ -> ___ {\\n    // 負の場合はエラー\\n    if ___ < ___ { ___ ___.___ }\\n    // nを返す\\n    return ___\\n// ブロックを閉じる\\n___\\n\n// do-catchでエラー処理\\n___ {\\n    // tryでcheck関数を呼び出す\\n    let ___ = ___ ___(___)\\n    // printでvを出力\\n    ___(___)\\n// ブロックを開始\\n} ___ {\\n    // printでエラーを出力\\n    ___(\"___\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// enumでMyErrorエラー型を定義",
           "enum MyError: Error { case invalid }",

@@ -26,6 +26,7 @@
   10. `node scripts/fix-method-comments-safe.mjs` - Javaのmainメソッドコメント修正（correctLines）
   11. `node scripts/fix-candidates-correct.mjs` - 選択肢不足を自動修正（ルール#34参照）
   12. `node scripts/check-linehints-giveaway.mjs` - 答えをそのまま教えるヒントがないかチェック（ルール#5参照）
+  13. `node scripts/fix-holey-empty-lines.mjs` - holeyCodeの空行に___がある場合を修正（ルール#93、#97参照）
 - **注意**：`translate-string-literals.mjs` は使用禁止（ルール#55参照）
 - index.tsのケーシング修正（Java3→java3, C2→c2など）も再適用が必要
 - **注意**：`fix-holey-v2.mjs` は使用禁止（ルール#24参照）
@@ -318,9 +319,20 @@
   4. `node scripts/check-tutorial-exercise-similarity.mjs` → 問題なし
   5. 英語文字列チェック → 0件（ルール#25参照）
      - コマンド: `grep -rn '"Pass"\|"Great\|"woof\|"meow\|"Big"\|"Small"\|"up"\|"down"\|"even"\|"odd"\|"Bonus' data/lessons/*.ts | grep -v 'すごい\|合格\|ボーナス\|ワン\|ニャー\|大きい\|小さい\|上\|下\|偶数\|奇数\|不合格\|even?\|"others":\|"functions":'`
+  5a. 「hello world」翻訳チェック → 0件（ルール#25参照）
+     - コマンド: `grep -rn "こんにちは.*世界\|世界.*こんにちは" data/lessons/*.ts`
+     - 「hello world」は万国共通のプログラミング用語であり、翻訳禁止
+  5b. コード形式コメントチェック → 0件（ルール#11参照）
+     - コマンド: `grep -rn '"# [a-z_]*\.[a-z_]*()' data/lessons/*.ts | grep -v tutorialSlides | grep -v content`
+     - `モジュール.メソッド()`形式のコメントは禁止（例: `# re.sub()で〜` → `# 正規表現のsubで〜`）
+  5c. 正規表現エスケープチェック → 0件（ルール#101参照）
+     - コマンド: `node scripts/check-regex-escapes.mjs`
+     - 4つのバックスラッシュ（ファイル内で`\\\\`）は過剰エスケープ。2つ（`\\`）が正しい
+     - 例: `r'\\\\s+'` → `r'\\s+'`に修正（画面で`\s+`と表示される）
   6. `node scripts/check-candidates-final.mjs` → 0件（ルール#33参照）
   7. `npm run seed:db` → 成功
   7a. `npx ts-node scripts/check-db-duplicates.ts` → 重複演習なし（ルール#94参照）
+  7b. `npx ts-node scripts/check-holey-empty-final.ts` → DB上の空行問題なし（ルール#93, #97, #100参照）
   8. **【手動確認】** tutorialSlidesで新しい専門用語を使う際、説明前に使っていないか確認（ルール#27参照）
      - 特に「○○や△△が自動で作られます」のような羅列パターンに注意
      - 確認コマンド: `grep -E "が自動で作られ|が自動的に" data/lessons/*.ts`
@@ -1353,3 +1365,129 @@
   2. `npm run seed:db` で正しいデータを再投入
   3. 再度 `check-db-duplicates.ts` で確認
 - **特に注意すべき状況**: 演習の順序変更、演習の削除、レッスン構造の変更後
+
+### 95. JSONキーは英語で統一する
+- `correctCode`、`holeyCode`、`correctLines`内のJSONリテラルのキー名は**英語**で統一すること。
+- **禁止パターン**:
+  - `'{\"名前\": \"Python\", \"version\": 3.12}'` → 日本語と英語が混在
+  - `'{\"年齢\": 25}'` → 日本語キー
+- **正しいパターン**:
+  - `'{\"name\": \"Python\", \"version\": 3.12}'` → 英語で統一
+  - `'{\"age\": 25}'` → 英語キー
+- **理由**: JSONは国際標準フォーマットであり、キー名に日本語を使うと他の言語やツールとの互換性が低下する。また、学習者が実際の開発で使う形式と異なる習慣が身についてしまう。
+
+### 96. 変数定義のコメントは代入内容を具体的に記述する
+- 変数に値を代入する行の上のコメントは、**代入する値の具体的な内容（キーの値も含む）**を含めること。
+- **禁止パターン**:
+  - `# json_strにJSON文字列を代入` → 何のJSONか不明
+  - `# json_strにnameキーとversionキーを持つJSON文字列を代入` → キーの値が不明
+  - `# dataに辞書を代入` → 何の辞書か不明
+  - `# configに設定を代入` → 何の設定か不明
+- **正しいパターン**:
+  - `# json_strに言語名（Python）とバージョン（3.12）を持つJSON文字列を代入` → キーの値が具体的
+  - `# dataにユーザー情報（名前='たろう'、年齢=25）を持つ辞書を代入` → 値が具体的
+  - `# configにデバッグモード（true）とタイムアウト値（30）を持つ設定を代入` → 値が具体的
+- **重要**: コードをそのまま書くのではなく、値の意味を日本語で説明しつつ具体的な値を括弧内に示す
+- **チェック方法**: コメントを読んだだけで、次の行に何を入力すべきか一意に特定できるか確認する
+
+### 97. holeyCodeの空行は空のままにする
+- `holeyCode`内の空行（correctLinesが`""`の行）には`___`を含めないこと。
+- 空行はそのまま`\\n\\n`（2つの改行）で表現する。
+- **禁止パターン**:
+  - `\\nimport ___\\n___\\n# コメント` → 空行に`___`がある
+- **正しいパターン**:
+  - `\\nimport ___\\n\\n# コメント` → 空行は空のまま
+- **理由**: 空行に`___`があると、その行が編集対象として認識され、カーソルが空行に移動してしまう。
+- **チェックスクリプト**: `node scripts/check-holey-empty-lines.mjs`（ルール#93のスクリプトを使用）
+
+### 98. 空行にチェックマークを表示しない
+- MobileCodeEditor.tsxのチェックマーク表示条件で、`correctLine`が空文字列の場合はチェックマークを表示しないこと。
+- **問題のあるコード**:
+  ```javascript
+  const showCheckmark = isEditable && (!correctLine || matchesCorrectLine(...));
+  // !correctLine = !"" = true となり、isEditableがtrueならチェックマークが表示されてしまう
+  ```
+- **正しいコード**:
+  ```javascript
+  const showCheckmark = isEditable && trimmedTarget !== "" && (correctLine === undefined || matchesCorrectLine(...));
+  // trimmedTarget !== "" で空行を明示的に除外
+  ```
+- **理由**: `!""` は `true` になるため、空行でも `isEditable && true` と評価され、チェックマークが表示されてしまう。`trimmedTarget !== ""` で空行を明示的に除外する必要がある。
+
+### 99. カーソル移動時に空行をスキップする
+- MobileCodeEditor.tsxのカーソル移動ロジック（handleInsert、handleDelete）で、次の編集対象行を探す際に**空行（correctLinesが空文字列の行）をスキップ**すること。
+- **問題のあるコード**:
+  ```javascript
+  // 次の未完成行を探す
+  while (next < lines.length) {
+    if (!isEditableLine(...)) { next++; continue; }
+    // 空行チェックがない！
+    if (!matchesCorrectLine(...)) break;
+    next++;
+  }
+  ```
+- **正しいコード**:
+  ```javascript
+  while (next < lines.length) {
+    if (!isEditableLine(originalLines, next, commentPrefix)) {
+      next++;
+      continue;
+    }
+    // 空行（正解が空文字列）もスキップ
+    const correctLineForNext = correctLines[next];
+    if (correctLineForNext !== undefined && getFirstCorrectAnswer(correctLineForNext).trim() === "") {
+      next++;
+      continue;
+    }
+    // 編集対象行で、まだ正解と一致していない場合はここに移動
+    const currentVal = lines[next];
+    const correctVal = correctLines[next];
+    if (!correctVal || !matchesCorrectLine(currentVal, correctVal, language)) {
+      break;
+    }
+    next++;
+  }
+  ```
+- **理由**: `isEditableLine`は空行を非編集対象として判定するが、カーソル移動ロジックでcorrectLinesの空文字列を明示的にスキップしないと、データの不整合がある場合にカーソルが空行に移動してしまう。
+- **適用箇所**: `handleInsert`内のカーソル移動ロジックと`handleDelete`内のカーソル移動ロジックの両方
+
+### 100. DB上のholeyCodeと空行の整合性をチェックする
+- `npm run seed:db` 後は、**DB上のholeyCodeが正しく保存されているか必ず検証**すること。
+- **チェックスクリプト**: `npx ts-node scripts/check-holey-empty-final.ts`
+- **検出する問題**:
+  - correctLinesが空行`""`だがholeyCodeの対応行に`___`が含まれている
+  - 空行が`\n`（1バックスラッシュ+n）で表現されている（正しくは`\\n`）
+- **問題が発生する原因**:
+  - holeyCodeを手動で作成する際、空行を`___`にしてしまう
+  - コメント行（例: `// ブロックを閉じる`）をholeyCodeに追加したがcorrectLinesには追加しなかった
+  - エスケープシーケンスの不整合（`\n`と`\\n`の混在）
+- **症状**: 空行に最初からチェックマークが表示される
+- **修正方法**:
+  1. 該当ファイルのholeyCodeを確認し、correctLinesの空行に対応する位置を特定
+  2. `___`を削除するか、余分なコメント行を削除
+  3. `\\n\\n`（正しい空行）になっているか確認
+  4. `npm run seed:db`で再反映
+  5. 再度チェックスクリプトで0件を確認
+- **水平展開**: 今回の修正で以下のファイルで同様の問題が発見・修正された
+  - python5.ts（正規表現findall/sub, defaultdict, chain）
+  - typescript3.ts（条件型）
+  - rust3.ts（ライフタイムの基本）
+  - rust4.ts（derive属性）
+  - swift3.ts（associatedtype）
+
+### 101. 正規表現パターンのバックスラッシュエスケープ
+- レッスンファイル内の正規表現パターン（`r'\s+'`、`/\w+/g`等）は、**TypeScriptファイル内で2つのバックスラッシュ**（`\\`）で記述すること。
+- **エスケープレベルの理解**:
+  - ファイル内: `\\s` (2バックスラッシュ) → 画面表示: `\s` (1バックスラッシュ) ✅正しい
+  - ファイル内: `\\\\s` (4バックスラッシュ) → 画面表示: `\\s` (2バックスラッシュ) ❌過剰エスケープ
+- **禁止パターン**:
+  - `r'\\\\s+'` → 画面で `r'\\s+'` と表示されてしまう
+  - `r'\\\\w+@\\\\w+'` → 画面で `r'\\w+@\\w+'` と表示されてしまう
+  - `/\\\\w+/g` → 画面で `/\\w+/g` と表示されてしまう
+- **正しいパターン**:
+  - `r'\\s+'` → 画面で `r'\s+'` と表示される
+  - `r'\\w+@\\w+'` → 画面で `r'\w+@\\w+'` と表示される
+  - `/\\w+/g` → 画面で `/\w+/g` と表示される
+- **対象言語**: Python (`r'...'`)、JavaScript/TypeScript (`/.../`)、Perl (`/.../`)、Ruby (`/.../`)
+- **チェックスクリプト**: `node scripts/check-regex-escapes.mjs`
+- **水平展開済みファイル**: python5.ts、javascript5.ts

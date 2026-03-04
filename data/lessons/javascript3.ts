@@ -141,7 +141,7 @@ export const javascriptData3 = {
         }
       ],
       "correctCode": "// asyncキーワードでgetMessage関数を定義\\nasync function getMessage() {\\n  // returnで'非同期成功！'を返す\\n  return '非同期成功！';\\n}\\n\\n// getMessageのthenメソッドでmsgをconsoleのlogで表示\\ngetMessage().then(msg => console.log(msg));",
-      "holeyCode": "// asyncキーワードでgetMessage関数を定義\\n___ ___ ___() {\\n  // returnで'非同期成功！'を返す\\n  ___ '___';\\n// ブロックを閉じる\\n___\\n___\\n// getMessageのthenメソッドでmsgをconsoleのlogで表示\\n___().___(___ => ___.___(___));",
+      "holeyCode": "// asyncキーワードでgetMessage関数を定義\\n___ ___ ___() {\\n  // returnで'非同期成功！'を返す\\n  ___ '___';\\n// ブロックを閉じる\\n\n___\\n// getMessageのthenメソッドでmsgをconsoleのlogで表示\\n___().___(___ => ___.___(___));",
       "correctLines": [
           "// asyncキーワードでgetMessage関数を定義",
           "async function getMessage() {",
@@ -192,7 +192,7 @@ export const javascriptData3 = {
         }
       ],
       "correctCode": "// asyncキーワードでmain関数を定義\\nasync function main() {\\n  // awaitでPromiseのresolveメソッド（引数100）の結果をvalueに代入\\n  const value = await Promise.resolve(100);\\n  // consoleのlogメソッドでvalueを表示\\n  console.log(value);\\n}\\n\\n// main関数を呼び出す\\nmain();",
-      "holeyCode": "// asyncキーワードでmain関数を定義\\n___ ___ ___() {\\n  // awaitでPromiseのresolveメソッド（引数100）の結果をvalueに代入\\n  ___ ___ = ___ ___.___(___);\\n  // consoleのlogメソッドでvalueを表示\\n  ___.___(___);\\n// ブロックを閉じる\\n___\\n___\\n// main関数を呼び出す\\n___();",
+      "holeyCode": "// asyncキーワードでmain関数を定義\\n___ ___ ___() {\\n  // awaitでPromiseのresolveメソッド（引数100）の結果をvalueに代入\\n  ___ ___ = ___ ___.___(___);\\n  // consoleのlogメソッドでvalueを表示\\n  ___.___(___);\\n// ブロックを閉じる\\n\n___\\n// main関数を呼び出す\\n___();",
       "correctLines": [
           "// asyncキーワードでmain関数を定義",
           "async function main() {",
@@ -302,7 +302,7 @@ export const javascriptData3 = {
         }
       ],
       "correctCode": "// Dogクラスを定義\\nclass Dog {\\n  // constructorメソッドでnameを引数に初期化\\n  constructor(name) {\\n    // this.nameにnameを代入\\n    this.name = name;\\n  }\\n  // barkメソッドを定義\\n  bark() {\\n    // consoleのlogメソッドでthis.nameと': ワン！'を表示\\n    console.log(`${this.name}: ワン！`);\\n  }\\n}\\n\\n// dogにnew Dogで引数'ポチ'のインスタンスを代入\\nconst dog = new Dog('ポチ');\\n// dogのbarkメソッドを呼び出す\\ndog.bark();",
-      "holeyCode": "// Dogクラスを定義\\n___ ___ {\\n  // constructorメソッドでnameを引数に初期化\\n  ___(___) {\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // barkメソッドを定義\\n  ___() {\\n    // consoleのlogメソッドでthis.nameと': ワン！'を表示\\n    ___.___(`${___.___}___`);\\n  // ブロックを閉じる\\n  ___\\n// ブロックを閉じる\\n___\\n___\\n// dogにnew Dogで引数'ポチ'のインスタンスを代入\\n___ ___ = ___ ___(___);\\n// dogのbarkメソッドを呼び出す\\n___.___();",
+      "holeyCode": "// Dogクラスを定義\\n___ ___ {\\n  // constructorメソッドでnameを引数に初期化\\n  ___(___) {\\n    // this.nameにnameを代入\\n    ___.___ = ___;\\n  // ブロックを閉じる\\n  ___\\n  // barkメソッドを定義\\n  ___() {\\n    // consoleのlogメソッドでthis.nameと': ワン！'を表示\\n    ___.___(`${___.___}___`);\\n  // ブロックを閉じる\\n\n// ブロックを閉じる\\n___\\n___\\n// dogにnew Dogで引数'ポチ'のインスタンスを代入\\n___ ___ = ___ ___(___);\\n// dogのbarkメソッドを呼び出す\\n___.___();",
       "correctLines": [
           "// Dogクラスを定義",
           "class Dog {",
@@ -372,7 +372,7 @@ export const javascriptData3 = {
         }
       ],
       "correctCode": "// 親クラスAnimalを定義\\nclass Animal {\\n  // speakメソッドでconsoleのlogで'...'を表示\\n  speak() { console.log('...'); }\\n}\\n\\n// CatクラスがextendsでAnimalを継承\\nclass Cat extends Animal {\\n  // speakメソッドをオーバーライドしてconsoleのlogで'ニャー！'を表示\\n  speak() { console.log('ニャー！'); }\\n}\\n\\n// catにnew Catのインスタンスを代入\\nconst cat = new Cat();\\n// catのspeakメソッドを呼び出す\\ncat.speak();",
-      "holeyCode": "// 親クラスAnimalを定義\\n___ ___ {\\n  // speakメソッドでconsoleのlogで'...'を表示\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// CatクラスがextendsでAnimalを継承\\n___ ___ ___ ___ {\\n  // speakメソッドをオーバーライドしてconsoleのlogで'ニャー！'を表示\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// catにnew Catのインスタンスを代入\\n___ ___ = ___ ___();\\n// catのspeakメソッドを呼び出す\\n___.___();",
+      "holeyCode": "// 親クラスAnimalを定義\\n___ ___ {\\n  // speakメソッドでconsoleのlogで'...'を表示\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n\n___\\n// CatクラスがextendsでAnimalを継承\\n___ ___ ___ ___ {\\n  // speakメソッドをオーバーライドしてconsoleのlogで'ニャー！'を表示\\n  ___() { ___.___(___); }\\n// ブロックを閉じる\\n___\\n___\\n// catにnew Catのインスタンスを代入\\n___ ___ = ___ ___();\\n// catのspeakメソッドを呼び出す\\n___.___();",
       "correctLines": [
           "// 親クラスAnimalを定義",
           "class Animal {",

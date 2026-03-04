@@ -26,7 +26,7 @@ export const haskell3Data = {
         }
       ],
       "correctCode": "-- Intを入力\\ndouble :: Int -> Int\\n-- *で掛け算\\ndouble x = x * 2\\n\\n-- リストにdouble関数を適用してdoubledに代入\\ndoubled = map double [1, 2, 3, 4, 5]",
-      "holeyCode": "-- Intを入力\\n___ :: ___ -> ___\\n-- *で掛け算\\n___ ___ = ___ ___ ___\\n___\\n-- リストにdouble関数を適用してdoubledに代入\\n___ = ___ ___ [___, ___, ___, ___, ___]",
+      "holeyCode": "-- Intを入力\\n___ :: ___ -> ___\\n-- *で掛け算\\n___ ___ = ___ ___ ___\\n\n-- リストにdouble関数を適用してdoubledに代入\\n___ = ___ ___ [___, ___, ___, ___, ___]",
       "correctLines": [
           "-- Intを入力",
           "double :: Int -> Int",
@@ -71,7 +71,7 @@ export const haskell3Data = {
         }
       ],
       "correctCode": "-- Boolを入力\\nisEven :: Int -> Bool\\n-- ==で等価比較\\nisEven x = x `mod` 2 == 0\\n\\n-- 条件を満たす要素だけを抽出する関数\\nevens = filter isEven [1, 2, 3, 4, 5, 6]",
-      "holeyCode": "-- Boolを入力\\n___ :: ___ -> ___\\n-- ==で等価比較\\n___ ___ = ___ `___` ___ ___ ___\\n___\\n-- 条件を満たす要素だけを抽出する関数\\n___ = ___ ___ [___, ___, ___, ___, ___, ___]",
+      "holeyCode": "-- Boolを入力\\n___ :: ___ -> ___\\n-- ==で等価比較\\n___ ___ = ___ `___` ___ ___ ___\\n\n-- 条件を満たす要素だけを抽出する関数\\n___ = ___ ___ [___, ___, ___, ___, ___, ___]",
       "correctLines": [
           "-- Boolを入力",
           "isEven :: Int -> Bool",

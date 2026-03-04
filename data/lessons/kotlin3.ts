@@ -58,7 +58,7 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// coroutinesをインポート\\nimport kotlinx.coroutines.*\\n\\n// suspend funでgetMessage関数を定義\\nsuspend fun getMessage(): String {\\n    // delay関数（引数100）で100ミリ秒待機\\n    delay(100)\\n    // 「こんにちは」を返す\\n    return \"こんにちは\"\\n// ブロックを閉じる\\n}\\n\\n// fun main()をrunBlockingで定義\\nfun main() = runBlocking {\\n    // printlnでgetMessage関数の結果を出力\\n    println(getMessage())\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// coroutinesをインポート\\n___ ___.___.___\\n___\\n// suspend funでgetMessage関数を定義\\n___ ___ ___(): ___ {\\n    // delay関数（引数100）で100ミリ秒待機\\n    ___(___)\\n    // 「こんにちは」を返す\\n    ___ \"___\"\\n// ブロックを閉じる\\n___\\n___\\n// fun main()をrunBlockingで定義\\n___ ___() = ___ {\\n    // printlnでgetMessage関数の結果を出力\\n    ___(___(___))\\n// ブロックを閉じる\\n___",
+      "holeyCode": "// coroutinesをインポート\\n___ ___.___.___\\n\n// suspend funでgetMessage関数を定義\\n___ ___ ___(): ___ {\\n    // delay関数（引数100）で100ミリ秒待機\\n    ___(___)\\n    // 「こんにちは」を返す\\n    ___ \"___\"\\n// ブロックを閉じる\\n___\\n\n// fun main()をrunBlockingで定義\\n___ ___() = ___ {\\n    // printlnでgetMessage関数の結果を出力\\n    ___(___(___))\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// coroutinesをインポート",
           "import kotlinx.coroutines.*",
@@ -286,7 +286,7 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// inline fun <reified T>でcheckType関数を定義\\ninline fun <reified T> checkType(value: Any): Boolean {\\n    // return value is Tで型チェック\\n    return value is T\\n// ブロックを閉じる\\n}\\n\\n// fun main()でmain関数を定義\\nfun main() {\\n    // checkType<String>でString型かチェック\\n    println(checkType<String>(\"テスト\"))\\n    // checkType<Int>でInt型かチェック\\n    println(checkType<Int>(\"テスト\"))\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// inline fun <reified T>でcheckType関数を定義\\n___ ___ <___ ___> ___(___: ___): ___ {\\n    // return value is Tで型チェック\\n    ___ ___ ___ ___\\n// ブロックを閉じる\\n___\\n___\\n// fun main()でmain関数を定義\\n___ ___() {\\n    // checkType<String>でString型かチェック\\n    ___(___<___>(\"___\"))\\n    // checkType<Int>でInt型かチェック\\n    ___(___<___>(\"___\"))\\n// ブロックを閉じる\\n___",
+      "holeyCode": "// inline fun <reified T>でcheckType関数を定義\\n___ ___ <___ ___> ___(___: ___): ___ {\\n    // return value is Tで型チェック\\n    ___ ___ ___ ___\\n// ブロックを閉じる\\n___\\n\n// fun main()でmain関数を定義\\n___ ___() {\\n    // checkType<String>でString型かチェック\\n    ___(___<___>(\"___\"))\\n    // checkType<Int>でInt型かチェック\\n    ___(___<___>(\"___\"))\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// inline fun <reified T>でcheckType関数を定義",
           "inline fun <reified T> checkType(value: Any): Boolean {",
@@ -364,7 +364,7 @@ export const kotlin3Data = {
         }
       ],
       "correctCode": "// data classでConfigを定義\\ndata class Config(var host: String = \"\", var port: Int = 0)\\n\\n// fun main()でmain関数を定義\\nfun main() {\\n    // Configインスタンスをapplyで設定しcfgに代入\\n    val cfg = Config().apply {\\n        // hostに\"localhost\"を設定\\n        host = \"localhost\"\\n        // portに8080を設定\\n        port = 8080\\n    // applyブロックを閉じる\\n    }\\n    // printlnでcfgを出力\\n    println(cfg)\\n// ブロックを閉じる\\n}",
-      "holeyCode": "// data classでConfigを定義\\n___ ___ ___(var ___: ___ = \"\", var ___: ___ = ___)\\n___\\n// fun main()でmain関数を定義\\n___ ___() {\\n    // Configインスタンスをapplyで設定しcfgに代入\\n    ___ ___ = ___().___ {\\n        // hostに\"localhost\"を設定\\n        ___ = \"___\"\\n        // portに8080を設定\\n        ___ = ___\\n    // applyブロックを閉じる\\n    ___\\n    // printlnでcfgを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
+      "holeyCode": "// data classでConfigを定義\\n___ ___ ___(var ___: ___ = \"\", var ___: ___ = ___)\\n\n// fun main()でmain関数を定義\\n___ ___() {\\n    // Configインスタンスをapplyで設定しcfgに代入\\n    ___ ___ = ___().___ {\\n        // hostに\"localhost\"を設定\\n        ___ = \"___\"\\n        // portに8080を設定\\n        ___ = ___\\n    // applyブロックを閉じる\\n    ___\\n    // printlnでcfgを出力\\n    ___(___)\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// data classでConfigを定義",
           "data class Config(var host: String = \"\", var port: Int = 0)",

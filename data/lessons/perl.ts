@@ -507,7 +507,7 @@ export const perlData = {
         }
       ],
       "correctCode": "# subでwelcomeサブルーチンを定義\\nsub welcome {\\n  # printで「Welcome!」を出力\\n  print \"Welcome!\\n\";\\n}\\n\\n# welcomeサブルーチンを呼び出す\\nwelcome();",
-      "holeyCode": "# subでwelcomeサブルーチンを定義\\n___ ___ ___\\n  # printで「Welcome!」を出力\\n  ___ \"___\\n\";\\n___\\n\\n# welcomeサブルーチンを呼び出す\\n___();",
+      "holeyCode": "# subでwelcomeサブルーチンを定義\\n___ ___ ___\\n  # printで「Welcome!」を出力\\n  ___ \"___\\n\";\\n\n\\n# welcomeサブルーチンを呼び出す\\n___();",
       "correctLines": [
           "# subでwelcomeサブルーチンを定義",
           "sub welcome {",

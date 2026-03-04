@@ -413,7 +413,7 @@ export const typescriptData3 = {
         }
       ],
       "correctCode": "// IsArray条件型を定義\\ntype IsArray<T> = T extends any[] ? true : false;\\n\\n// 配列型をチェック\\ntype A = IsArray<number[]>;\\n// 非配列型をチェック\\ntype B = IsArray<string>;\\n\\n// aに配列判定結果trueを代入\\nconst a: A = true;\\n// bに非配列判定結果falseを代入\\nconst b: B = false;\\n// consoleのlogメソッドでaとbを表示\\nconsole.log(a, b);",
-      "holeyCode": "// IsArray条件型を定義\\ntype ___<___> = ___ extends ___[] ? ___ : ___;\\n___\\n// 配列型をチェック\\ntype ___ = ___<___[]>;\\n// 非配列型をチェック\\ntype ___ = ___<___>;\\n___\\n// aに配列判定結果trueを代入\\nconst ___: ___ = ___;\\n// bに非配列判定結果falseを代入\\nconst ___: ___ = ___;\\n// consoleのlogメソッドでaとbを表示\\n___.___(___,___);",
+      "holeyCode": "// IsArray条件型を定義\\ntype ___<___> = ___ extends ___[] ? ___ : ___;\\n\\n// 配列型をチェック\\ntype ___ = ___<___[]>;\\n// 非配列型をチェック\\ntype ___ = ___<___>;\\n\\n// aに配列判定結果trueを代入\\nconst ___: ___ = ___;\\n// bに非配列判定結果falseを代入\\nconst ___: ___ = ___;\\n// consoleのlogメソッドでaとbを表示\\n___.___(___,___);",
       "correctLines": [
           "// IsArray条件型を定義",
           "type IsArray<T> = T extends any[] ? true : false;",

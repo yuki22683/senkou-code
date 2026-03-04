@@ -586,7 +586,7 @@ export const typescriptData4 = {
         }
       ],
       "correctCode": "// AsyncResult型を定義\\ntype AsyncResult = Promise<{ data: string }>;\\n// Awaited でPromiseの解決型を取得\\ntype Result = Awaited<AsyncResult>;\\n\\n// Resultオブジェクト（data:成功）をresultに代入\\nconst result: Result = { data: '成功' };\\n// consoleのlogメソッドでresult.dataを表示\\nconsole.log(result.data);",
-      "holeyCode": "// AsyncResult型を定義\\ntype ___ = ___<{ ___: ___ }>;\\n// Awaited でPromiseの解決型を取得\\ntype ___ = ___<___>;\\n___\\n// Resultオブジェクト（data:成功）をresultに代入\\nconst ___: ___ = { ___: ___ };\\n// consoleのlogメソッドでresult.dataを表示\\n___.___(___.___)\\n",
+      "holeyCode": "// AsyncResult型を定義\\ntype ___ = ___<{ ___: ___ }>;\\n// Awaited でPromiseの解決型を取得\\ntype ___ = ___<___>;\\n\n// Resultオブジェクト（data:成功）をresultに代入\\nconst ___: ___ = { ___: ___ };\\n// consoleのlogメソッドでresult.dataを表示\\n___.___(___.___)\\n",
       "correctLines": [
           "// AsyncResult型を定義",
           "type AsyncResult = Promise<{ data: string }>;",

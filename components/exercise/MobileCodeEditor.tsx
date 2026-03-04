@@ -581,6 +581,13 @@ export function MobileCodeEditor({
                continue;
              }
 
+             // 空行（正解が空文字列）もスキップ
+             const correctLineForNext = correctLines[next];
+             if (correctLineForNext !== undefined && getFirstCorrectAnswer(correctLineForNext).trim() === "") {
+               next++;
+               continue;
+             }
+
              // 編集対象行で、まだ正解と一致していない場合はここに移動
              const currentVal = lines[next];
              const correctVal = correctLines[next];
@@ -681,6 +688,13 @@ export function MobileCodeEditor({
             while (next < lines.length) {
                // 編集対象行でない場合はスキップ
                if (!isEditableLine(originalLines, next, commentPrefix)) {
+                 next++;
+                 continue;
+               }
+
+               // 空行（正解が空文字列）もスキップ
+               const correctLineForNext = correctLines[next];
+               if (correctLineForNext !== undefined && getFirstCorrectAnswer(correctLineForNext).trim() === "") {
                  next++;
                  continue;
                }
@@ -865,9 +879,10 @@ export function MobileCodeEditor({
 
           // チェックマークを表示する条件：
           // 1. 編集対象行である
-          // 2. 現在の入力内容が（正規化して）正解のいずれかと一致している
-          // correctLineがない場合は正解扱い（データ不備対策）
-          const showCheckmark = isEditable && (!correctLine || matchesCorrectLine(line, correctLine, language));
+          // 2. 正解が空行ではない（空行にはチェックマークを表示しない）
+          // 3. 現在の入力内容が（正規化して）正解のいずれかと一致している
+          // correctLineがundefinedの場合は正解扱い（データ不備対策）、ただし空文字列は除外
+          const showCheckmark = isEditable && trimmedTarget !== "" && (correctLine === undefined || matchesCorrectLine(line, correctLine, language));
 
           return (
             <div

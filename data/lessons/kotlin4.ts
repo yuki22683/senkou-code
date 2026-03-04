@@ -152,7 +152,7 @@ export const kotlin4Data = {
         }
       ],
       "correctCode": "// Counterシングルトンを定義\\nobject Counter {\\n    // count を初期化する\\n    private var count = 0\\n    // increment 関数を定義する\\n    fun increment() { count++ }\\n    // get 関数を定義する\\n    fun get() = count\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // 1回目の increment を呼び出す\\n    Counter.increment()\\n    // 2回目の increment を呼び出す\\n    Counter.increment()\\n    // printlnでgetを出力\\n    println(Counter.get())\\n}",
-      "holeyCode": "// Counterシングルトンを定義\\nobject ___ {\\n    // count を初期化する\\n    private var ___ = ___\\n    // increment 関数を定義する\\n    fun ___() { ___++ }\\n    // get 関数を定義する\\n    fun ___() = ___\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // 1回目の increment を呼び出す\\n    ___.___()\\n    // 2回目の increment を呼び出す\\n    ___.___()\\n    // printlnでgetを出力\\n    ___(___.___())\\n// ブロックを閉じる\\n___",
+      "holeyCode": "// Counterシングルトンを定義\\nobject ___ {\\n    // count を初期化する\\n    private var ___ = ___\\n    // increment 関数を定義する\\n    fun ___() { ___++ }\\n    // get 関数を定義する\\n    fun ___() = ___\\n// ブロックを閉じる\\n\n___\\n// main 関数を定義する\\nfun ___() {\\n    // 1回目の increment を呼び出す\\n    ___.___()\\n    // 2回目の increment を呼び出す\\n    ___.___()\\n    // printlnでgetを出力\\n    ___(___.___())\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Counterシングルトンを定義",
           "object Counter {",
@@ -329,7 +329,7 @@ export const kotlin4Data = {
         }
       ],
       "correctCode": "// Service クラスを定義する\\nclass Service {\\n    // configをlateinitで宣言\\n    lateinit var config: String\\n    \\n    // setup 関数を定義する\\n    fun setup(c: String) { config = c }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // Service のインスタンスを作成する\\n    val s = Service()\\n    // setupメソッドを呼び出す\\n    s.setup(\"OK\")\\n    // printlnでsのconfigを出力\\n    println(s.config)\\n}",
-      "holeyCode": "// Service クラスを定義する\\nclass ___ {\\n    // configをlateinitで宣言\\n    lateinit var ___: ___\\n    ___\\n    // setup 関数を定義する\\n    fun ___(___: ___) { ___ = ___ }\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // Service のインスタンスを作成する\\n    val ___ = ___()\\n    // setupメソッドを呼び出す\\n    ___.___(___)\\n    // printlnでsのconfigを出力\\n    ___(___.___) \\n// ブロックを閉じる\\n___",
+      "holeyCode": "// Service クラスを定義する\\nclass ___ {\\n    // configをlateinitで宣言\\n    lateinit var ___: ___\\n    ___\\n    // setup 関数を定義する\\n    fun ___(___: ___) { ___ = ___ }\\n// ブロックを閉じる\\n\n___\\n// main 関数を定義する\\nfun ___() {\\n    // Service のインスタンスを作成する\\n    val ___ = ___()\\n    // setupメソッドを呼び出す\\n    ___.___(___)\\n    // printlnでsのconfigを出力\\n    ___(___.___) \\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// Service クラスを定義する",
           "class Service {",
@@ -493,7 +493,7 @@ export const kotlin4Data = {
         }
       ],
       "correctCode": "// typeOf関数をreifiedで定義\\ninline fun <reified T> typeOf(): String {\\n    // 型名を返す\\n    return T::class.simpleName ?: \"Unknown\"\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // typeOf関数（String型）を呼び出して出力\\n    println(typeOf<String>())\\n}",
-      "holeyCode": "// typeOf関数をreifiedで定義\\ninline fun <reified ___> ___(): ___ {\\n    // 型名を返す\\n    return ___::class.___ ?: \"___\"\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // typeOf関数（String型）を呼び出して出力\\n    ___(___(___))\\n// ブロックを閉じる\\n___",
+      "holeyCode": "// typeOf関数をreifiedで定義\\ninline fun <reified ___> ___(): ___ {\\n    // 型名を返す\\n    return ___::class.___ ?: \"___\"\\n// ブロックを閉じる\\n\n___\\n// main 関数を定義する\\nfun ___() {\\n    // typeOf関数（String型）を呼び出して出力\\n    ___(___(___))\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// typeOf関数をreifiedで定義",
           "inline fun <reified T> typeOf(): String {",
@@ -562,7 +562,7 @@ export const kotlin4Data = {
         }
       ],
       "correctCode": "// isEven拡張関数を定義する\\nfun Int.isEven() = this % 2 == 0\\n\\n// main 関数を定義する\\nfun main() {\\n    // 4のisEvenメソッドの結果を出力\\n    println(4.isEven())\\n    // 7のisEvenメソッドの結果を出力\\n    println(7.isEven())\\n}",
-      "holeyCode": "// isEven拡張関数を定義する\\nfun ___.___(___) = ___ % ___ == ___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // 4のisEvenメソッドの結果を出力\\n    ___(___.___())\\n    // 7のisEvenメソッドの結果を出力\\n    ___(___.___())\\n// ブロックを閉じる\\n___",
+      "holeyCode": "// isEven拡張関数を定義する\\nfun ___.___(___) = ___ % ___ == ___\\n\n// main 関数を定義する\\nfun ___() {\\n    // 4のisEvenメソッドの結果を出力\\n    ___(___.___())\\n    // 7のisEvenメソッドの結果を出力\\n    ___(___.___())\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// isEven拡張関数を定義する",
           "fun Int.isEven() = this % 2 == 0",
@@ -692,7 +692,7 @@ export const kotlin4Data = {
         }
       ],
       "correctCode": "// data class を定義する\\ndata class Config(var host: String = \"\", var port: Int = 0)\\n\\n// main 関数を定義する\\nfun main() {\\n    // apply でオブジェクトを設定する\\n    val config = Config().apply {\\n        // hostに\"localhost\"、portに8080を設定\\n        host = \"localhost\"\\n        // port を設定する\\n        port = 8080\\n    }\\n    // printlnでconfigを出力\\n    println(\"${config.host}:${config.port}\")\\n}",
-      "holeyCode": "// data class を定義する\\ndata class ___(var ___: ___ = \"\", var ___: ___ = ___)\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // apply でオブジェクトを設定する\\n    val ___ = ___().___ {\\n        // hostに\"localhost\"、portに8080を設定\\n        ___ = \"___\"\\n        // port を設定する\\n        ___ = ___\\n    // ブロックを閉じる\\n    ___\\n    // printlnでconfigを出力\\n    ___(\"${___.___}:${___.___}\")\\n// ブロックを閉じる\\n___",
+      "holeyCode": "// data class を定義する\\ndata class ___(var ___: ___ = \"\", var ___: ___ = ___)\\n\n// main 関数を定義する\\nfun ___() {\\n    // apply でオブジェクトを設定する\\n    val ___ = ___().___ {\\n        // hostに\"localhost\"、portに8080を設定\\n        ___ = \"___\"\\n        // port を設定する\\n        ___ = ___\\n    // ブロックを閉じる\\n    ___\\n    // printlnでconfigを出力\\n    ___(\"${___.___}:${___.___}\")\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// data class を定義する",
           "data class Config(var host: String = \"\", var port: Int = 0)",
@@ -770,7 +770,7 @@ export const kotlin4Data = {
         }
       ],
       "correctCode": "// StringList型エイリアスを定義\\ntypealias StringList = List<String>\\n\\n// printAll 関数を定義する\\nfun printAll(items: StringList) {\\n    // forEach で各要素を出力する\\n    items.forEach { println(it) }\\n}\\n\\n// main 関数を定義する\\nfun main() {\\n    // printAll関数を呼び出す\\n    printAll(listOf(\"A\", \"B\", \"C\"))\\n}",
-      "holeyCode": "// StringList型エイリアスを定義\\ntypealias ___ = ___<___>\\n___\\n// printAll 関数を定義する\\nfun ___(___: ___) {\\n    // forEach で各要素を出力する\\n    ___.___ { ___(___) }\\n// ブロックを閉じる\\n___\\n___\\n// main 関数を定義する\\nfun ___() {\\n    // printAll関数を呼び出す\\n    ___(___(___, ___, ___))\\n// ブロックを閉じる\\n___",
+      "holeyCode": "// StringList型エイリアスを定義\\ntypealias ___ = ___<___>\\n\n// printAll 関数を定義する\\nfun ___(___: ___) {\\n    // forEach で各要素を出力する\\n    ___.___ { ___(___) }\\n// ブロックを閉じる\\n\n___\\n// main 関数を定義する\\nfun ___() {\\n    // printAll関数を呼び出す\\n    ___(___(___, ___, ___))\\n// ブロックを閉じる\\n___",
       "correctLines": [
           "// StringList型エイリアスを定義",
           "typealias StringList = List<String>",

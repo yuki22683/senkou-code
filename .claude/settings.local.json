@@ -16,7 +16,8 @@
       "Bash(npx tsc:*)",
       "Bash(ls:*)",
       "Bash(npx ts-node:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(done)"
     ]
   }
 }

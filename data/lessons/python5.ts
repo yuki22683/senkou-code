@@ -85,18 +85,18 @@ export const pythonData5 = {
           "content": "# JSON文字列をPythonに変換\\n\\n**JSON（ジェイソン）** とは、データを保存したり送ったりするための **世界共通の書き方** です。\\n\\n**JSONの例：**\\n```json\\n{\"name\": \"Taro\", \"age\": 25}\\n```\\n\\n**json.loads()（ロードエス）** で **JSON文字列をPythonの辞書やリストに変換** できます。\\n\\n**たとえ話：** 外国語（JSON）を日本語（Python）に翻訳するようなものです。\\n\\n**例：** JSON文字列を辞書に変換しよう！\\n\\n```python\\nimport json\\n\\n# JSON形式の文字列\\njson_str = '{\"name\": \"Taro\", \"age\": 25}'\\n# Pythonの辞書に変換\\ndata = json.loads(json_str)\\nprint(data['name'])  # Taro\\n```\\n\\n**何をしているか：**\\n1. `import json` でJSONモジュールを読み込む\\n2. JSON形式の文字列を用意（ダブルクォートを使うのがJSONのルール）\\n3. `json.loads()` で文字列（String）をPythonオブジェクトに変換\\n\\n**ポイント：** `loads` の 's' は **String（文字列）** の意味です。"
         }
       ],
-      "correctCode": "# jsonモジュールをimportする\\nimport json\\n\\n# json_strにJSON文字列を代入\\njson_str = '{\"名前\": \"Python\", \"version\": 3.12}'\\n# json_strを辞書に変換してdataに代入\\ndata = json.loads(json_str)\\n# data辞書の'名前'キーの値を表示\\nprint(data['名前'])",
-      "holeyCode": "# jsonモジュールをimportする\\nimport ___\\n\\n# json_strにJSON文字列を代入\\n___ = '___'\\n# json_strを辞書に変換してdataに代入\\n___ = ___.___(___)\\n# data辞書の'名前'キーの値を表示\\n___(___['___'])",
+      "correctCode": "# jsonモジュールをimportする\\nimport json\\n\\n# json_strに言語名（Python）とバージョン（3.12）を持つJSON文字列を代入\\njson_str = '{\"name\": \"Python\", \"version\": 3.12}'\\n# json_strを辞書に変換してdataに代入\\ndata = json.loads(json_str)\\n# data辞書の'name'キーの値を表示\\nprint(data['name'])",
+      "holeyCode": "# jsonモジュールをimportする\\nimport ___\\n\\n# json_strに言語名（Python）とバージョン（3.12）を持つJSON文字列を代入\\n___ = '___'\\n# json_strを辞書に変換してdataに代入\\n___ = ___.___(___)\\n# data辞書の'name'キーの値を表示\\n___(___['___'])",
       "correctLines": [
           "# jsonモジュールをimportする",
           "import json",
           "",
-          "# json_strにJSON文字列を代入",
-          "json_str = '{\"名前\": \"Python\", \"version\": 3.12}'",
+          "# json_strに言語名（Python）とバージョン（3.12）を持つJSON文字列を代入",
+          "json_str = '{\"name\": \"Python\", \"version\": 3.12}'",
           "# json_strを辞書に変換してdataに代入",
           "data = json.loads(json_str)",
-          "# data辞書の'名前'キーの値を表示",
-          "print(data['名前'])"
+          "# data辞書の'name'キーの値を表示",
+          "print(data['name'])"
         ],
       "lineHints": [
           null,
@@ -111,7 +111,7 @@ export const pythonData5 = {
         ],
         "candidates": {
           "keywords": ["json", "loads"],
-          "others": ["json_str", "print", "data", "{\"名前\": \"Python\", \"version\": 3.12}", "名前"]
+          "others": ["json_str", "print", "data", "{\"name\": \"Python\", \"version\": 3.12}", "name"]
         },
         "testCases": [
           {
@@ -212,6 +212,192 @@ export const pythonData5 = {
             "expected_output": "[('l', 3), ('o', 2), ('h', 1)]\\n"
           }
         ]
-      }
+      },
+    {
+      "title": "正規表現（findall）",
+      "description": "パターンに一致する全ての部分を取得しましょう。",
+      "tutorialSlides": [
+        {
+          "title": "re.findall()",
+          "content": "# 全ての一致を取得\\n\\n**re.findall()（ファインドオール）** で **パターンに一致する全ての部分をリストで取得** できます。\\n\\n**searchとの違い：**\\n- `search`: 最初に見つかった1つだけ\\n- `findall`: 全部見つけてリストにする\\n\\n**たとえ話：** 文章の中から「数字」を全部探し出すイメージです。\\n\\n**例：** 文章の中の全ての数字を取り出そう！\\n\\n```python\\nimport re\\n\\ntext = 'りんご3個とみかん5個'\\nnumbers = re.findall(r'\\d+', text)\\nprint(numbers)  # ['3', '5']\\n```\\n\\n**パターン `\\d+` の意味：**\\n- `\\d` = 数字1文字（0-9）\\n- `+` = 1回以上の繰り返し\\n- つまり「1桁以上の数字」にマッチ\\n\\n**何をしているか：**\\n1. `re.findall(パターン, 文字列)` で全て検索\\n2. 見つかった全ての部分がリストで返ってくる\\n3. 見つからない場合は空のリスト `[]` が返る\\n\\n**ポイント：** `findall` は常にリストを返すので、`if` でチェックしなくてもOK！"
+        }
+      ],
+      "correctCode": "# 正規表現モジュールをインポート\\nimport re\\n\\n# textに'email1@test.com and email2@test.com'を代入\\ntext = 'email1@test.com and email2@test.com'\\n# 正規表現のfindallでtextからメールアドレスを全検索しemailsに代入\\nemails = re.findall(r'\\w+@\\w+\\.\\w+', text)\\n# emailsをprintで出力\\nprint(emails)",
+      "holeyCode": "# 正規表現モジュールをインポート\\nimport ___\\n\\n# textに'email1@test.com and email2@test.com'を代入\\n___ = '___'\\n# 正規表現のfindallでtextからメールアドレスを全検索しemailsに代入\\n___ = ___.___(___, ___)\\n# emailsをprintで出力\\n___(___)",
+      "correctLines": [
+        "# 正規表現モジュールをインポート",
+        "import re",
+        "",
+        "# textに'email1@test.com and email2@test.com'を代入",
+        "text = 'email1@test.com and email2@test.com'",
+        "# 正規表現のfindallでtextからメールアドレスを全検索しemailsに代入",
+        "emails = re.findall(r'\\w+@\\w+\\.\\w+', text)",
+        "# emailsをprintで出力",
+        "print(emails)"
+      ],
+      "lineHints": [
+        null,
+        "re モジュールをインポートします。",
+        null,
+        null,
+        "変数textと、メールアドレスを含む文字列を指定します。",
+        null,
+        "変数emails、reモジュール、findallメソッド、正規表現パターン、変数textを指定します。",
+        null,
+        "print関数と変数emailsを指定します。"
+      ],
+      "candidates": {
+        "keywords": ["re", "findall"],
+        "variables": ["emails", "text"],
+        "others": ["r'\\w+@\\w+\\.\\w+'", "print", "email1@test.com and email2@test.com"]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "['email1@test.com', 'email2@test.com']\\n"
+        }
+      ]
+    },
+    {
+      "title": "正規表現（sub）",
+      "description": "パターンに一致する部分を置換しましょう。",
+      "tutorialSlides": [
+        {
+          "title": "re.sub()",
+          "content": "# パターンを置換\\n\\n**re.sub()（サブスティテュート）** で **パターンに一致する部分を別の文字に置き換え** られます。\\n\\n**たとえ話：** 文章の中の「犬」を全部「猫」に置き換えるような処理です。\\n\\n**書き方：** `re.sub(パターン, 置換後, 文字列)`\\n\\n**例：** 数字を「many」に置き換えよう！\\n\\n```python\\nimport re\\n\\ntext = 'りんご3個'\\nresult = re.sub(r'\\d+', 'many', text)\\nprint(result)  # りんごmany個\\n```\\n\\n**パターン `\\d+` の意味：**\\n- `\\d` = 数字1文字（0-9）\\n- `+` = 1回以上の繰り返し\\n- つまり「1桁以上の数字」にマッチ\\n\\n**何をしているか：**\\n1. `re.sub(パターン, 置換後, 文字列)` で置換\\n2. 全ての一致箇所が置き換わる\\n\\n**便利な使い方：**\\n- 余分な空白を1つにまとめる: `re.sub(r'\\s+', ' ', text)`\\n  - `\\s` = 空白文字（スペース、タブ、改行）\\n  - `\\s+` = 1つ以上の連続した空白\\n- 数字を消す: `re.sub(r'\\d+', '', text)`\\n\\n**ポイント：** 元の文字列は変わらず、新しい文字列が返ってきます。"
+        }
+      ],
+      "correctCode": "# 正規表現モジュールをインポート\\nimport re\\n\\n# textに'hello  world Python'を代入\\ntext = 'hello  world Python'\\n# 正規表現のsubでtextの連続空白を単一空白に置換しresultに代入\\nresult = re.sub(r'\\s+', ' ', text)\\n# resultをprintで出力\\nprint(result)",
+      "holeyCode": "# 正規表現モジュールをインポート\\nimport ___\\n\\n# textに'hello  world Python'を代入\\n___ = '___'\\n# 正規表現のsubでtextの連続空白を単一空白に置換しresultに代入\\n___ = ___.___(___, ___, ___)\\n# resultをprintで出力\\n___(___)",
+      "correctLines": [
+        "# 正規表現モジュールをインポート",
+        "import re",
+        "",
+        "# textに'hello  world Python'を代入",
+        "text = 'hello  world Python'",
+        "# 正規表現のsubでtextの連続空白を単一空白に置換しresultに代入",
+        "result = re.sub(r'\\s+', ' ', text)",
+        "# resultをprintで出力",
+        "print(result)"
+      ],
+      "lineHints": [
+        null,
+        "re モジュールをインポートします。",
+        null,
+        null,
+        "変数textと、連続した空白を含む文字列を指定します。",
+        null,
+        "変数result、reモジュール、subメソッド、正規表現パターン、置換文字列、変数textを指定します。",
+        null,
+        "print関数と変数resultを指定します。"
+      ],
+      "candidates": {
+        "keywords": ["re", "sub"],
+        "variables": ["result", "text"],
+        "others": ["r'\\s+'", "' '", "print", "hello  world Python"]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "hello world Python\\n"
+        }
+      ]
+    },
+    {
+      "title": "collections.defaultdict",
+      "description": "デフォルト値を持つ辞書を使いましょう。",
+      "tutorialSlides": [
+        {
+          "title": "defaultdictとは？",
+          "content": "# デフォルト値を持つ辞書\\n\\n**defaultdict（デフォルトディクト）** を使うと、**存在しないキーにアクセスしてもエラーにならない** 辞書が作れます。\\n\\n**普通の辞書の問題：**\\n```python\\nd = {}\\nd['a'] += 1  # エラー！キー'a'が存在しない\\n```\\n\\n**defaultdictなら：**\\n```python\\nd = defaultdict(int)\\nd['a'] += 1  # OK！自動で 0 が入る\\n```\\n\\n**たとえ話：** ゲームのスコアボード。新しいプレイヤーが参加すると、自動で「0点」からスタートできます。\\n\\n**デフォルト値の種類：**\\n- `defaultdict(int)`: 数値 `0` がデフォルト\\n- `defaultdict(list)`: 空のリスト `[]` がデフォルト\\n- `defaultdict(str)`: 空の文字列 `''` がデフォルト\\n\\n**何をしているか：**\\n1. `defaultdict(型)` でデフォルト値の型を指定\\n2. 存在しないキーにアクセスすると自動でデフォルト値が入る\\n3. その後は普通の辞書と同じように使える\\n\\n**ポイント：** キーの存在確認が不要になり、コードがシンプルになります！"
+        }
+      ],
+      "correctCode": "# defaultdictクラスをインポート\\nfrom collections import defaultdict\\n\\n# dにdefaultdict(list)を代入\\nd = defaultdict(list)\\n# d['くだもの']に'りんご'をappend\\nd['くだもの'].append('りんご')\\n# d['くだもの']に'バナナ'をappend\\nd['くだもの'].append('バナナ')\\n# d['くだもの']をprintで出力\\nprint(d['くだもの'])",
+      "holeyCode": "# defaultdictクラスをインポート\\nfrom ___ import ___\\n\\n# dにdefaultdict(list)を代入\\n___ = ___(list)\\n# d['くだもの']に'りんご'をappend\\n___['___'].___('___')\\n# d['くだもの']に'バナナ'をappend\\n___['___'].___('___')\\n# d['くだもの']をprintで出力\\n___(___['___'])",
+      "correctLines": [
+        "# defaultdictクラスをインポート",
+        "from collections import defaultdict",
+        "",
+        "# dにdefaultdict(list)を代入",
+        "d = defaultdict(list)",
+        "# d['くだもの']に'りんご'をappend",
+        "d['くだもの'].append('りんご')",
+        "# d['くだもの']に'バナナ'をappend",
+        "d['くだもの'].append('バナナ')",
+        "# d['くだもの']をprintで出力",
+        "print(d['くだもの'])"
+      ],
+      "lineHints": [
+        null,
+        "collections モジュールから defaultdict クラスをインポートします。",
+        null,
+        null,
+        "変数dと、defaultdict(list)を指定します。",
+        null,
+        "変数d、キー'くだもの'、appendメソッド、'りんご'を指定します。",
+        null,
+        "変数d、キー'くだもの'、appendメソッド、'バナナ'を指定します。",
+        null,
+        "print関数、変数d、キー'くだもの'を指定します。"
+      ],
+      "candidates": {
+        "keywords": ["collections", "defaultdict"],
+        "others": ["d", "list", "くだもの", "append", "りんご", "バナナ", "print"]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "['りんご', 'バナナ']\\n"
+        }
+      ]
+    },
+    {
+      "title": "itertools.chain",
+      "description": "複数のイテラブルを連結しましょう。",
+      "tutorialSlides": [
+        {
+          "title": "itertools.chain()",
+          "content": "# イテラブルを連結\\n\\n**chain()（チェーン）** を使うと、**複数のリストやイテラブルを1つにつなげて** 処理できます。\\n\\n**たとえ話：** 電車の連結のようなもの。複数の車両（リスト）をつなげて1つの長い電車にします。\\n\\n**リストの `+` との違い：**\\n- `a + b`: 新しいリストを作る（メモリを使う）\\n- `chain(a, b)`: つなげて順番に取り出す（メモリに優しい）\\n\\n**例：** 2つのリストをつなげてループしよう！\\n\\n```python\\nfrom itertools import chain\\n\\na = [1, 2, 3]\\nb = [4, 5, 6]\\nfor x in chain(a, b):\\n    print(x)  # 1 2 3 4 5 6 の順に出力\\n```\\n\\n**何をしているか：**\\n1. `from itertools import chain` でインポート\\n2. `chain(a, b)` で2つのリストを連結\\n3. `for` ループで1つずつ取り出せる\\n4. `list(chain(a, b))` でリストに変換も可能\\n\\n**ポイント：** 3つ以上も連結可能！ `chain(a, b, c, d, ...)` のように書けます。"
+        }
+      ],
+      "correctCode": "# chain関数をインポート\\nfrom itertools import chain\\n\\n# list1に[1, 2, 3]を代入\\nlist1 = [1, 2, 3]\\n# list2に[4, 5, 6]を代入\\nlist2 = [4, 5, 6]\\n# chain(list1, list2)をlist()でリスト化しresultに代入\\nresult = list(chain(list1, list2))\\n# resultをprintで出力\\nprint(result)",
+      "holeyCode": "# chain関数をインポート\\nfrom ___ import ___\\n\\n# list1に[1, 2, 3]を代入\\n___ = [___, ___, ___]\\n# list2に[4, 5, 6]を代入\\n___ = [___, ___, ___]\\n# chain(list1, list2)をlist()でリスト化しresultに代入\\n___ = ___(___(___, ___))\\n# resultをprintで出力\\n___(___)",
+      "correctLines": [
+        "# chain関数をインポート",
+        "from itertools import chain",
+        "",
+        "# list1に[1, 2, 3]を代入",
+        "list1 = [1, 2, 3]",
+        "# list2に[4, 5, 6]を代入",
+        "list2 = [4, 5, 6]",
+        "# chain(list1, list2)をlist()でリスト化しresultに代入",
+        "result = list(chain(list1, list2))",
+        "# resultをprintで出力",
+        "print(result)"
+      ],
+      "lineHints": [
+        null,
+        "itertools モジュールから chain 関数をインポートします。",
+        null,
+        null,
+        "変数list1と、1, 2, 3を含むリストを指定します。",
+        null,
+        "変数list2と、4, 5, 6を含むリストを指定します。",
+        null,
+        "変数result、list関数、chain関数、変数list1、変数list2を指定します。",
+        null,
+        "print関数と変数resultを指定します。"
+      ],
+      "candidates": {
+        "keywords": ["itertools", "chain"],
+        "others": ["list1", "list2", "result", "list", "1", "2", "3", "4", "5", "6", "print"]
+      },
+      "testCases": [
+        {
+          "input": "",
+          "expected_output": "[1, 2, 3, 4, 5, 6]\\n"
+        }
+      ]
+    }
   ]
 };

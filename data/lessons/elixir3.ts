@@ -42,7 +42,7 @@ export const elixir3Data = {
         }
       ],
       "correctCode": "# defmoduleでPersonモジュールを定義\\ndefmodule Person do\\n  # defstructで構造体を定義\\n  defstruct name: \"\", email: \"\"\\n# endでモジュールを閉じる\\nend\\n\\n# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成\\nperson = %Person{name: \"ボブ\", email: \"bob@example.com\"}",
-      "holeyCode": "# defmoduleでPersonモジュールを定義\\ndefmodule ___ ___\\n  # defstructで構造体を定義\\n  defstruct ___: \"___\", ___: \"___\"\\n# endでモジュールを閉じる\\n___\\n___\\n# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成\\n___ = %____{___: \"___\", ___: \"___\"}",
+      "holeyCode": "# defmoduleでPersonモジュールを定義\\ndefmodule ___ ___\\n  # defstructで構造体を定義\\n  defstruct ___: \"___\", ___: \"___\"\\n# endでモジュールを閉じる\\n___\\n\n# nameに\"ボブ\"、emailに\"bob@example.com\"を指定して構造体を作成\\n___ = %____{___: \"___\", ___: \"___\"}",
       "correctLines": [
           "# defmoduleでPersonモジュールを定義",
           "defmodule Person do",
@@ -94,7 +94,7 @@ export const elixir3Data = {
         }
       ],
       "correctCode": "# defmoduleでProductモジュールを定義\\ndefmodule Product do\\n  # defstructで構造体を定義\\n  defstruct name: \"\", price: 0\\n# endでモジュールを閉じる\\nend\\n\\n# nameに\"Book\"、priceに1000を指定して構造体を作成\\nproduct = %Product{name: \"Book\", price: 1000}\\n# |で辞書を更新（priceを1200に）\\nupdated = %{product | price: 1200}",
-      "holeyCode": "# defmoduleでProductモジュールを定義\\ndefmodule ___ ___\\n  # defstructで構造体を定義\\n  defstruct ___: \"___\", ___: ___\\n# endでモジュールを閉じる\\n___\\n___\\n# nameに\"Book\"、priceに1000を指定して構造体を作成\\n___ = %____{___: \"___\", ___: ___}\\n# |で辞書を更新（priceを1200に）\\n___ = %{___ | ___: ___}",
+      "holeyCode": "# defmoduleでProductモジュールを定義\\ndefmodule ___ ___\\n  # defstructで構造体を定義\\n  defstruct ___: \"___\", ___: ___\\n# endでモジュールを閉じる\\n___\\n\n# nameに\"Book\"、priceに1000を指定して構造体を作成\\n___ = %____{___: \"___\", ___: ___}\\n# |で辞書を更新（priceを1200に）\\n___ = %{___ | ___: ___}",
       "correctLines": [
           "# defmoduleでProductモジュールを定義",
           "defmodule Product do",

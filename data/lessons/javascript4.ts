@@ -468,7 +468,7 @@ export const javascriptData4 = {
         }
       ],
       "correctCode": "// pipe関数を定義\\nconst pipe = (...fns) => x =>\\n  // fnsのreduceメソッドで関数を連鎖（累積値v、関数f）\\n  fns.reduce((v, f) => f(v), x);\\n\\n// pipe関数で複数の関数を連結しprocessに代入\\nconst process = pipe(\\n  // xに1を足す関数\\n  x => x + 1,\\n  // xを2倍する関数\\n  x => x * 2,\\n  // xから3を引く関数\\n  x => x - 3\\n);\\n// consoleのlogメソッドでprocess関数（引数5）の結果を表示\\nconsole.log(process(5));",
-      "holeyCode": "// pipe関数を定義\\nconst ___ = (...___) => ___ =>\\n  // fnsのreduceメソッドで関数を連鎖（累積値v、関数f）\\n  ___.___((___, ___) => ___(_), ___);\\n___\\n// pipe関数で複数の関数を連結しprocessに代入\\nconst ___ = ___(\\n  // xに1を足す関数\\n  ___ => ___ ___ ___,\\n  // xを2倍する関数\\n  ___ => ___ ___ ___,\\n  // xから3を引く関数\\n  ___ => ___ ___ ___\\n// 関数呼び出しを閉じる\\n___\\n// consoleのlogメソッドでprocess関数（引数5）の結果を表示\\n___.___(___(___));",
+      "holeyCode": "// pipe関数を定義\\nconst ___ = (...___) => ___ =>\\n  // fnsのreduceメソッドで関数を連鎖（累積値v、関数f）\\n  ___.___((___, ___) => ___(_), ___);\\n\n// pipe関数で複数の関数を連結しprocessに代入\\nconst ___ = ___(\\n  // xに1を足す関数\\n  ___ => ___ ___ ___,\\n  // xを2倍する関数\\n  ___ => ___ ___ ___,\\n  // xから3を引く関数\\n  ___ => ___ ___ ___\\n// 関数呼び出しを閉じる\\n___\\n// consoleのlogメソッドでprocess関数（引数5）の結果を表示\\n___.___(___(___));",
       "correctLines": [
           "// pipe関数を定義",
           "const pipe = (...fns) => x =>",
