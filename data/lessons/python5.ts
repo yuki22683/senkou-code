@@ -360,17 +360,17 @@ export const pythonData5 = {
           "content": "# イテラブルを連結\\n\\n**chain()（チェーン）** を使うと、**複数のリストやイテラブルを1つにつなげて** 処理できます。\\n\\n**たとえ話：** 電車の連結のようなもの。複数の車両（リスト）をつなげて1つの長い電車にします。\\n\\n**リストの `+` との違い：**\\n- `a + b`: 新しいリストを作る（メモリを使う）\\n- `chain(a, b)`: つなげて順番に取り出す（メモリに優しい）\\n\\n**例：** 2つのリストをつなげてループしよう！\\n\\n```python\\nfrom itertools import chain\\n\\na = [1, 2, 3]\\nb = [4, 5, 6]\\nfor x in chain(a, b):\\n    print(x)\\n```\\n\\n=> 1, 2, 3, 4, 5, 6\\n\\n**何をしているか：**\\n1. `from itertools import chain` でインポート\\n2. `chain(a, b)` で2つのリストを連結\\n3. `for` ループで1つずつ取り出せる\\n4. `list(chain(a, b))` でリストに変換も可能\\n\\n**ポイント：** 3つ以上も連結可能！ `chain(a, b, c, d, ...)` のように書けます。"
         }
       ],
-      "correctCode": "# chain関数をインポート\\nfrom itertools import chain\\n\\n# list1に[1, 2, 3]を代入\\nlist1 = [1, 2, 3]\\n# list2に[4, 5, 6]を代入\\nlist2 = [4, 5, 6]\\n# chain(list1, list2)をlist()でリスト化しresultに代入\\nresult = list(chain(list1, list2))\\n# resultをprintで出力\\nprint(result)",
-      "holeyCode": "# chain関数をインポート\\nfrom ___ import ___\\n\\n# list1に[1, 2, 3]を代入\\n___ = [___, ___, ___]\\n# list2に[4, 5, 6]を代入\\n___ = [___, ___, ___]\\n# chain(list1, list2)をlist()でリスト化しresultに代入\\n___ = ___(___(___, ___))\\n# resultをprintで出力\\n___(___)",
+      "correctCode": "# chain関数をインポート\\nfrom itertools import chain\\n\\n# list1に数値配列（1、2、3）を代入\\nlist1 = [1, 2, 3]\\n# list2に数値配列（4、5、6）を代入\\nlist2 = [4, 5, 6]\\n# list1とlist2をchainで連結し、リスト化してresultに代入\\nresult = list(chain(list1, list2))\\n# resultをprintで出力\\nprint(result)",
+      "holeyCode": "# chain関数をインポート\\nfrom ___ import ___\\n\\n# list1に数値配列（1、2、3）を代入\\n___ = [___, ___, ___]\\n# list2に数値配列（4、5、6）を代入\\n___ = [___, ___, ___]\\n# list1とlist2をchainで連結し、リスト化してresultに代入\\n___ = ___(___(___, ___))\\n# resultをprintで出力\\n___(___)",
       "correctLines": [
         "# chain関数をインポート",
         "from itertools import chain",
         "",
-        "# list1に[1, 2, 3]を代入",
+        "# list1に数値配列（1、2、3）を代入",
         "list1 = [1, 2, 3]",
-        "# list2に[4, 5, 6]を代入",
+        "# list2に数値配列（4、5、6）を代入",
         "list2 = [4, 5, 6]",
-        "# chain(list1, list2)をlist()でリスト化しresultに代入",
+        "# list1とlist2をchainで連結し、リスト化してresultに代入",
         "result = list(chain(list1, list2))",
         "# resultをprintで出力",
         "print(result)"
